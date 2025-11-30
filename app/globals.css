@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Color System - Earth Tones */
+  --color-earth-50: #f8f6f3;
+  --color-earth-100: #ede8e1;
+  --color-earth-200: #dcd2c3;
+  --color-earth-300: #c5b59f;
+  --color-earth-400: #b09880;
+  --color-earth-500: #9d7f66;
+  --color-earth-600: #8a6c57;
+  --color-earth-700: #72584a;
+  --color-earth-800: #5f4a3f;
+  --color-earth-900: #4f3e35;
+
+  /* Color System - Deep Blue */
+  --color-deep-50: #f0f4f8;
+  --color-deep-100: #d9e3ed;
+  --color-deep-200: #b3c7db;
+  --color-deep-300: #8ca6c4;
+  --color-deep-400: #6685ac;
+  --color-deep-500: #4d6d94;
+  --color-deep-600: #3d5777;
+  --color-deep-700: #2f425b;
+  --color-deep-800: #1f2c3e;
+  --color-deep-900: #0f1621;
+
+  /* Accent */
+  --color-frequency: #ff6b35;
+
+  /* Typography */
+  --font-serif: var(--font-lora);
+  --font-sans: var(--font-inter);
+
+  /* Spacing for reading */
+  --reading-max-width: 65ch;
+}
+
+@layer base {
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Optimize text rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Headings use serif font */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+  }
+
+  /* Reading-optimized paragraphs */
+  article p {
+    max-width: var(--reading-max-width);
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Focus visible for accessibility */
+  *:focus-visible {
+    outline: 2px solid var(--color-frequency);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Reading container */
+  .reading-container {
+    max-width: var(--reading-max-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Animated gradient background */
+  .gradient-bg {
+    background: linear-gradient(
+      135deg,
+      var(--color-earth-200),
+      var(--color-deep-300),
+      var(--color-earth-300),
+      var(--color-deep-400)
+    );
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
