@@ -1,0 +1,15 @@
+{
+  "number": 1,
+  "title": "Radio Silence",
+  "publishedAt": "2025-01-01T00:00:00Z",
+  "theme": "Sintonizando frecuencias entre el silencio y el sonido",
+  "description": "La primera transmisión de Curiana Radio explora el espacio entre el silencio y el sonido, navegando por paisajes sonoros experimentales, narrativas sobre tecnología ancestral, y reflexiones sobre la escucha consciente.",
+  "spotifyPlaylistId": "",
+  "backgroundColors": {
+    "start": "#dcd2c3",
+    "middle1": "#8ca6c4",
+    "middle2": "#c5b59f",
+    "end": "#6685ac"
+  },
+  "ogImage": "/images/editions/01/og-image.jpg"
+}
