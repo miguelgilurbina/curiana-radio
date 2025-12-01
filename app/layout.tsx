@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Lora } from "next/font/google";
 import "./globals.css";
+import Navigation from "@/components/layout/Navigation";
+import Footer from "@/components/layout/Footer";
+import Background from "@/components/layout/Background";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,8 +35,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${inter.variable} ${lora.variable}`}>
-      <body className="font-sans antialiased bg-earth-50 text-earth-900">
-        {children}
+      <body className="font-sans antialiased">
+        <Background>
+          <Navigation />
+          <main className="pt-16">
+            {children}
+          </main>
+          <Footer />
+        </Background>
       </body>
     </html>
   );

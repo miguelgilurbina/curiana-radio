@@ -1,20 +1,44 @@
+import { Heading, BodyText } from "@/components/ui/Typography";
+import FrequencyBadge from "@/components/ui/FrequencyBadge";
+
 export default function Home() {
   return (
-    <main className="min-h-screen gradient-bg flex items-center justify-center p-8">
-      <div className="text-center animate-fade-in">
-        <h1 className="text-6xl md:text-8xl font-serif text-deep-900 mb-4">
+    <div className="min-h-screen flex items-center justify-center p-8">
+      <div className="max-w-4xl mx-auto text-center animate-fade-in">
+        {/* Main Title */}
+        <Heading level={1} className="mb-6">
           Curiana Radio
-        </h1>
-        <p className="text-2xl md:text-3xl text-deep-700 mb-6">
-          88.8 FM
-        </p>
-        <p className="text-lg text-earth-700 max-w-2xl mx-auto mb-8">
-          Transmisión Cultural desde Abya Yala
-        </p>
-        <div className="inline-block px-6 py-3 border-2 border-frequency text-frequency font-sans text-sm tracking-wider hover:bg-frequency hover:text-white transition-colors cursor-pointer">
-          PRÓXIMAMENTE
+        </Heading>
+
+        {/* Frequency Badge */}
+        <div className="flex justify-center mb-8">
+          <FrequencyBadge size="lg" />
         </div>
+
+        {/* Tagline */}
+        <BodyText size="lg" className="mb-12 text-center mx-auto">
+          Transmisión Cultural desde Abya Yala
+        </BodyText>
+
+        {/* Description */}
+        <div className="mb-12 space-y-4">
+          <BodyText className="text-center mx-auto">
+            Una experiencia de newsletter cultural presentada como páginas web inmersivas.
+            Cada edición mensual combina música curada, narrativa experimental, visuales generados por IA
+            y reflexiones sobre tecnología y cultura.
+          </BodyText>
+        </div>
+
+        {/* Coming Soon Badge */}
+        <div className="inline-block px-8 py-4 border-2 border-frequency text-frequency font-sans text-sm tracking-[0.2em] uppercase hover:bg-frequency hover:text-white transition-all duration-300 cursor-pointer">
+          Próximamente
+        </div>
+
+        {/* Subtle hint */}
+        <p className="mt-12 text-sm text-earth-600 font-sans italic">
+          Sintoniza la frecuencia. La primera transmisión está por comenzar.
+        </p>
       </div>
-    </main>
+    </div>
   );
 }
