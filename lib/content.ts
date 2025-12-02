@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { serialize } from 'next-mdx-remote/serialize';
 import type { EditionMetadata, SectionContent, Edition, ArchiveItem } from '@/types';
 
 const CONTENT_DIR = path.join(process.cwd(), 'content', 'editions');
@@ -55,17 +54,10 @@ async function loadSection(
     const fileContent = fs.readFileSync(sectionPath, 'utf-8');
     const { content, data } = matter(fileContent);
 
-    // Serialize MDX content
-    const mdxSource = await serialize(content, {
-      mdxOptions: {
-        development: process.env.NODE_ENV === 'development',
-      },
-      scope: data,
-    });
-
+    // Return raw MDX content for RSC rendering
     return {
       type: sectionName as any,
-      mdxSource,
+      mdxSource: content, // Raw MDX string for next-mdx-remote/rsc
       frontmatter: data,
     };
   } catch (error) {
