@@ -10,6 +10,12 @@ const CONTENT_DIR = path.join(process.cwd(), 'content', 'editions');
  */
 export function getAllEditionSlugs(): string[] {
   try {
+    // Check if content directory exists
+    if (!fs.existsSync(CONTENT_DIR)) {
+      console.error(`Content directory does not exist: ${CONTENT_DIR}`);
+      return [];
+    }
+
     const editions = fs.readdirSync(CONTENT_DIR);
     return editions.filter((edition) => {
       const editionPath = path.join(CONTENT_DIR, edition);

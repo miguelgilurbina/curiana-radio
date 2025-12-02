@@ -16,9 +16,9 @@ const components = {
 };
 
 interface EditionPageProps {
-  params: {
+  params: Promise<{
     edition: string;
-  };
+  }>;
 }
 
 // Generate static params for all editions
@@ -29,9 +29,13 @@ export async function generateStaticParams() {
   }));
 }
 
+// Enable dynamic params for editions not in generateStaticParams
+export const dynamicParams = true;
+
 // Generate metadata for SEO
 export async function generateMetadata({ params }: EditionPageProps): Promise<Metadata> {
-  const edition = await getEditionBySlug(params.edition);
+  const { edition: slug } = await params;
+  const edition = await getEditionBySlug(slug);
 
   if (!edition) {
     return {
@@ -53,7 +57,8 @@ export async function generateMetadata({ params }: EditionPageProps): Promise<Me
 }
 
 export default async function EditionPage({ params }: EditionPageProps) {
-  const edition = await getEditionBySlug(params.edition);
+  const { edition: slug } = await params;
+  const edition = await getEditionBySlug(slug);
 
   if (!edition) {
     notFound();
