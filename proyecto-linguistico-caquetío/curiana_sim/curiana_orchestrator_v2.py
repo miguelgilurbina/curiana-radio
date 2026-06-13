@@ -34,8 +34,15 @@ from curiana_lexicon import (
     LexicoComunitario,
     vocabulario_para_agente,
     prompt_lexico_activo,
+    score_linguistico,
+    prompt_rescate_linguistico,
+    VOCABULARIO_BASE,
 )
 from curiana_observer import ObserverAgent
+from curiana_social import (
+    DifusionLexica,
+    prompt_rasgos_dialectales,
+)
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -105,6 +112,17 @@ class AgentMemory:
 # LLAMADA A AGENTE (con léxico inyectado)
 # ══════════════════════════════════════════════════════════════════════
 
+def _invoke(client: anthropic.Anthropic, system: str, user_message: str) -> str:
+    """Una llamada cruda al modelo del agente."""
+    resp = client.messages.create(
+        model=MODEL,
+        max_tokens=MAX_TOKENS_AGENT,
+        system=system,
+        messages=[{"role": "user", "content": user_message}],
+    )
+    return resp.content[0].text.strip()
+
+
 def call_agent(
     client: anthropic.Anthropic,
     agent_name: str,
@@ -113,12 +131,14 @@ def call_agent(
     observer: ObserverAgent,
     user_message: str,
     agent_memory: Optional[str] = None,
+    difusion: Optional[DifusionLexica] = None,
 ) -> str:
     agent = ALL_AGENTS.get(agent_name)
     if not agent:
         return f"[Agente '{agent_name}' no encontrado]"
 
     tier = agent.get("tier", 2)
+    etnia = agent.get("etnia", "caquetío")
 
     # System prompt base del agente
     if tier == 3:
@@ -143,11 +163,30 @@ def call_agent(
     # Feedback lingüístico si el agente tuvo score bajo
     feedback = observer.feedback_para_agente(agent_name)
 
+    # Rasgos dialectales según etnia (L2 con sintaxis propia, insulares, etc.)
+    rasgos = prompt_rasgos_dialectales(etnia)
+
+    # Contagio: palabras que el agente "ha oído" de gente que respeta
+    sugerencia_contagio = ""
+    if difusion is not None:
+        sugs = difusion.sugerencias_para(agent_name, lexico=lexico)
+        if sugs:
+            txt = "; ".join(f"{f} = {s}" if s else f for f, s in sugs)
+            sugerencia_contagio = (
+                f"[Has oído estas palabras nuevas en boca de gente que respetas; "
+                f"empléalas si encajan]: {txt}"
+            )
+
     # Ensamblado del system prompt
-    # Orden: persona → identidad lingüística → mundo → léxico → memoria → refuerzo
-    system_parts = [base_prompt, "---", _IDENTIDAD_LINGUISTICA, "---", world_context, f"[Tu ubicación]: {ubicacion}"]
+    # Orden: persona → identidad lingüística → dialecto → mundo → léxico → contagio → memoria → refuerzo
+    system_parts = [base_prompt, "---", _IDENTIDAD_LINGUISTICA]
+    if rasgos:
+        system_parts.append(rasgos)
+    system_parts += ["---", world_context, f"[Tu ubicación]: {ubicacion}"]
     if bloque_lexico:
         system_parts.append(bloque_lexico)
+    if sugerencia_contagio:
+        system_parts.append(sugerencia_contagio)
     if agent_memory:
         system_parts.append(f"[Tu memoria reciente]: {agent_memory}")
     if feedback:
@@ -155,13 +194,24 @@ def call_agent(
 
     system = "\n".join(system_parts)
 
-    response = client.messages.create(
-        model=MODEL,
-        max_tokens=MAX_TOKENS_AGENT,
-        system=system,
-        messages=[{"role": "user", "content": user_message}],
-    )
-    return response.content[0].text.strip()
+    # 1ª pasada
+    response = _invoke(client, system, user_message)
+
+    # ── RESCATE INTRA-TURNO (auditoría §3.4): si la densidad es baja, un único
+    #    reintento que re-expresa la respuesta fallida en caquetío real ──
+    metr = score_linguistico(response, lexico)
+    if metr["score"] < 5.0:
+        rescate = prompt_rescate_linguistico(
+            response, metr["score"], metr.get("espanol_funcional", 0)
+        )
+        try:
+            response2 = _invoke(client, system, user_message + "\n\n" + rescate)
+            if score_linguistico(response2, lexico)["score"] > metr["score"]:
+                response = response2
+        except Exception:
+            pass  # ante fallo de red, conserva la 1ª respuesta
+
+    return response
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -236,6 +286,7 @@ def run_turn(
     verbose: bool = True,
     db=None,
     run_id: Optional[str] = None,
+    difusion: Optional[DifusionLexica] = None,
 ) -> list[dict]:
     interactions = []
 
@@ -294,7 +345,8 @@ def run_turn(
 
         mem = memory.get(agent_name)
         response = call_agent(
-            client, agent_name, state, lexico, observer, stimulus, mem
+            client, agent_name, state, lexico, observer, stimulus, mem,
+            difusion=difusion,
         )
 
         interactions.append({
@@ -318,6 +370,15 @@ def run_turn(
 
         # Detectar adopciones de palabras propuestas por otros
         observer.procesar_adopciones(response, agent_name, state.turno)
+
+        # Contagio: propagar exposición de las palabras emergentes que usó este
+        # agente (no las del vocabulario base) a sus vecinos sociales.
+        if difusion is not None:
+            for forma in getattr(registro, "palabras_caquetias", []):
+                if forma not in VOCABULARIO_BASE:
+                    difusion.propagar_uso(forma, agent_name, state)
+            for neo in getattr(registro, "neologismos_extraidos", []):
+                difusion.propagar_uso(neo.forma, agent_name, state)
 
         # Persistir en Supabase
         if db and run_id and turn_id:
@@ -416,6 +477,9 @@ def interactive_mode(client: anthropic.Anthropic):
     except Exception:
         observer = ObserverAgent(client, lexico)
 
+    # Difusión léxica (contagio sociolingüístico) — persiste durante todo el run
+    difusion = DifusionLexica()
+
     # Inicializar DB (gracefully degraded si no hay Supabase)
     db = get_db()
     run_id = db.create_run(model=MODEL, config={"mode": "interactive"})
@@ -432,7 +496,8 @@ def interactive_mode(client: anthropic.Anthropic):
             break
 
         if not user_input:
-            run_turn(client, state, memory, lexico, observer, db=db, run_id=run_id)
+            run_turn(client, state, memory, lexico, observer, db=db, run_id=run_id,
+                     difusion=difusion)
         elif user_input.lower() == "salir":
             break
         elif user_input.lower() == "estado":
@@ -454,7 +519,7 @@ def interactive_mode(client: anthropic.Anthropic):
                     msg = input(f"  ¿Qué le dices a {agent_name}? > ").strip()
                     response = call_agent(
                         client, agent_name, state, lexico, observer, msg,
-                        memory.get(agent_name)
+                        memory.get(agent_name), difusion=difusion
                     )
                     print(f"\n  [{agent_name}]: {response}\n")
                     observer.analizar(
@@ -485,6 +550,7 @@ def interactive_mode(client: anthropic.Anthropic):
             run_turn(
                 client, state, memory, lexico, observer,
                 user_input=user_input, db=db, run_id=run_id,
+                difusion=difusion,
             )
 
     # Guardar todo
@@ -525,6 +591,7 @@ def auto_mode(
     memory = AgentMemory()
     lexico = LexicoComunitario.load()
     observer = ObserverAgent(client, lexico)
+    difusion = DifusionLexica()
 
     # Inicializar DB (CurianaDB real o CurianaDBMock si no está configurada)
     db = get_db()
@@ -549,6 +616,7 @@ def auto_mode(
         run_turn(
             client, state, memory, lexico, observer,
             verbose=verbose, db=db, run_id=run_id,
+            difusion=difusion,
         )
 
         # Reporte al final de cada día

@@ -934,6 +934,27 @@ def prompt_refuerzo(score: float, palabras_usadas: list) -> str:
         )
 
 
+def prompt_rescate_linguistico(texto_fallido: str, score: float,
+                               espanol_funcional: int = 0) -> str:
+    """Prompt de SEGUNDA pasada (regeneración intra-turno) cuando score < 5.0.
+    Se inyecta como user message de un reintento — pide RE-EXPRESAR, no continuar.
+    (Auditoría Opus §3.4)"""
+    return f"""Tu respuesta anterior tuvo demasiado español (score {score}/10,
+{espanol_funcional} palabras españolas). Como hablante NATIVO de caquetío, esto
+no debería pasar.
+
+TU RESPUESTA ANTERIOR (a corregir):
+"{texto_fallido}"
+
+REEXPRÉSALA AHORA en caquetío real:
+  - Cada verbo lleva -ka / -ni / -da.
+  - Cada "el/la/un/en/de/que/y/para/muy/estoy/voy" desaparece o se vuelve caquetío.
+  - Lo que no tengas, lo CREAS: [forma: raíz+sufijo = significado].
+  - Glosa española solo entre paréntesis al final.
+
+Devuelve SOLO la versión corregida. Empieza con un pronombre o un verbo caquetío."""
+
+
 # ══════════════════════════════════════════════════════════════════════
 # VII. UTILIDADES
 # ══════════════════════════════════════════════════════════════════════
