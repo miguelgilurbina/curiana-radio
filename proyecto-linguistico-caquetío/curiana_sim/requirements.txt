@@ -1,0 +1,18 @@
+# ══════════════════════════════════════════════
+# CURIANA — Dependencias Python (versiones pinneadas)
+# Probado con Python 3.10
+# Instala con:  pip install -r requirements.txt
+# ══════════════════════════════════════════════
+
+# Anthropic — obligatorio (motor LLM, claude-haiku-4-5)
+anthropic==0.109.1
+
+# Supabase — opcional (persistencia PostgreSQL).
+# Sin esto la simulación corre en modo local JSON (CurianaDBMock).
+supabase==2.31.0
+
+# LangSmith — opcional (tracing automático de llamadas LLM)
+langsmith==0.8.15
+
+# Carga de variables desde .env
+python-dotenv==1.2.2

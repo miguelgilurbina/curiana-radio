@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #1C1510;
+  --surface: #2A1F14;
+  --border: #4A3520;
+  --text: #F5EDD6;
+  --muted: #9C8A6E;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Georgia', serif;
+}
+
+/* Scrollbar mínima */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* Recharts tooltip */
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  background: #2A1F14 !important;
+  border: 1px solid #4A3520 !important;
+  color: #F5EDD6 !important;
+}

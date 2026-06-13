@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Entornos y secretos
+.env
+*.env
+.env.local
+.env*.local
+
+# Persistencia de simulación (se regenera al correr)
+curiana_state.json
+curiana_memory.json
+curiana_lexico.json
+curiana_observer.json
+curiana_linguistica.csv
+curiana_neologismos.csv
+data/
+
+# Node / Next (dashboard)
+node_modules/
+.next/
+out/
+.vercel

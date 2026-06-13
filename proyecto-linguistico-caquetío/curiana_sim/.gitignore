@@ -1,0 +1,20 @@
+# Persistencia de simulación (se regeneran al correr)
+curiana_state.json
+curiana_memory.json
+curiana_lexico.json
+curiana_observer.json
+curiana_linguistica.csv
+curiana_neologismos.csv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# API keys
+.env
+*.env
+
+# Data generada
+data/

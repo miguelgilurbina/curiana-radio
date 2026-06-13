@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__PDF_Tools_-_Fill__Sign__Merge__Split__Extract__get_pdf_info"
+    ]
+  }
+}
