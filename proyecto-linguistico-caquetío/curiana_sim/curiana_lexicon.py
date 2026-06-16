@@ -740,15 +740,18 @@ def extraer_neologismos_del_texto(
         componentes = match.group(2).strip()
         significado = match.group(3).strip()
 
+        # Elegir el afijo de MAYOR longitud que case (evita que "-ana" gane sobre
+        # "-bana" por orden de dict — auditoría Opus B6). Sufijo tiene prioridad
+        # sobre prefijo si ambos casan.
         regla = "desconocida"
-        for sufijo in TODAS_LAS_REGLAS:
-            if sufijo.startswith("-") and forma.endswith(sufijo[1:]):
-                regla = sufijo
-                break
-        for prefijo in TODAS_LAS_REGLAS:
-            if not prefijo.startswith("-") and forma.startswith(prefijo.rstrip("-")):
-                regla = prefijo
-                break
+        suf_match = [s for s in TODAS_LAS_REGLAS
+                     if s.startswith("-") and forma.endswith(s[1:])]
+        pre_match = [p for p in TODAS_LAS_REGLAS
+                     if not p.startswith("-") and forma.startswith(p.rstrip("-"))]
+        if suf_match:
+            regla = max(suf_match, key=len)
+        elif pre_match:
+            regla = max(pre_match, key=len)
 
         neo = Neologismo(
             turno=turno, dia=dia, autor=autor,
