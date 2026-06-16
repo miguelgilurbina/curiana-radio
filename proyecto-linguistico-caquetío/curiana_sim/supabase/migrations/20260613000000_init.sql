@@ -235,3 +235,15 @@ SELECT
 FROM word_uses wu
 GROUP BY wu.run_id, wu.agent_name, wu.word, wu.source_language
 ORDER BY wu.run_id, wu.agent_name, use_count DESC;
+
+-- ─────────────────────────────────────────────────────────────────────
+-- GRANTS para los roles del Data API (el Supabase local nuevo NO los
+-- auto-otorga). El service_role escribe desde el backend Python; anon /
+-- authenticated solo leen (las policies RLS controlan el acceso por fila).
+-- ─────────────────────────────────────────────────────────────────────
+GRANT USAGE ON SCHEMA public TO anon, authenticated, service_role;
+GRANT ALL    ON ALL TABLES    IN SCHEMA public TO service_role;
+GRANT ALL    ON ALL SEQUENCES IN SCHEMA public TO service_role;
+GRANT SELECT ON ALL TABLES    IN SCHEMA public TO anon, authenticated;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL    ON TABLES TO service_role;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO anon, authenticated;
