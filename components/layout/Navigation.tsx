@@ -71,6 +71,14 @@ export default function Navigation({ editionNumber }: NavigationProps) {
                 Archivo
               </Link>
 
+              {/* Simulador Link */}
+              <Link
+                href="/simulador"
+                className="text-sm font-sans text-deep-700 hover:text-frequency transition-colors tracking-wide uppercase"
+              >
+                Simulador
+              </Link>
+
               {/* About Link (optional) */}
               <Link
                 href="/sobre"
