@@ -1,7 +1,16 @@
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+// Fallback build-safe: si las env vars no están (p. ej. deploy antes de conectar
+// la integración Supabase), no rompemos el build — el simulador muestra estado
+// vacío hasta que NEXT_PUBLIC_SUPABASE_URL / _ANON_KEY existan en el entorno.
+const supabaseUrl =
+  process.env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder.supabase.co";
+const supabaseAnonKey =
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "public-anon-placeholder";
+
+export const supabaseConfigured = Boolean(
+  process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+);
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
