@@ -3,13 +3,13 @@
 import { useEffect, useState } from "react";
 import { supabase, LANG_COLORS } from "@/lib/supabase";
 import type { LexiconEntry } from "@/lib/supabase";
+import { Card, Overline, Skeleton } from "@/components/simulador/ui";
 
 const CATEGORIES = ["todos", "sust", "v_raiz", "pron", "num", "part", "adj", "interr", "topón", "título"];
-const LANG_FILTERS = ["todos", "caquetío", "wayunaiki", "lokono", "taíno", "arahuacano"];
+const LANG_FILTERS = ["caquetío", "wayunaiki", "lokono", "taíno", "arahuacano"];
 
 export default function LexiconPage() {
   const [entries, setEntries] = useState<LexiconEntry[]>([]);
-  const [filtered, setFiltered] = useState<LexiconEntry[]>([]);
   const [search, setSearch] = useState("");
   const [catFilter, setCatFilter] = useState("todos");
   const [langFilter, setLangFilter] = useState("todos");
@@ -22,182 +22,133 @@ export default function LexiconPage() {
       .order("word")
       .then(({ data }) => {
         setEntries((data as LexiconEntry[]) ?? []);
-        setFiltered((data as LexiconEntry[]) ?? []);
         setLoading(false);
       });
   }, []);
 
-  useEffect(() => {
-    let result = entries;
+  const filtered = entries.filter((e) => {
     if (search.trim()) {
       const q = search.toLowerCase();
-      result = result.filter(
-        (e) =>
-          e.word.toLowerCase().includes(q) ||
-          e.meaning.toLowerCase().includes(q)
-      );
+      if (!e.word.toLowerCase().includes(q) && !e.meaning.toLowerCase().includes(q)) return false;
     }
-    if (catFilter !== "todos") {
-      result = result.filter((e) => e.category === catFilter);
-    }
-    if (langFilter !== "todos") {
-      result = result.filter((e) => e.source_language === langFilter);
-    }
-    setFiltered(result);
-  }, [search, catFilter, langFilter, entries]);
+    if (catFilter !== "todos" && e.category !== catFilter) return false;
+    if (langFilter !== "todos" && e.source_language !== langFilter) return false;
+    return true;
+  });
 
-  // Distribución por lengua
-  const distribution = LANG_FILTERS.slice(1).map((lang) => ({
+  const distribution = LANG_FILTERS.map((lang) => ({
     lang,
     count: entries.filter((e) => e.source_language === lang).length,
-    color: LANG_COLORS[lang] ?? "#9C8A6E",
+    color: LANG_COLORS[lang] ?? "#9d7f66",
   }));
 
   return (
-    <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold" style={{ color: "#C47A2B" }}>
+    <div>
+      <header className="mb-6">
+        <Overline>Vocabulario base</Overline>
+        <h2 className="mt-1 font-serif text-2xl md:text-3xl font-semibold text-deep-900">
           Léxico Caquetío-Arahuacano
-        </h1>
-        <p className="text-sm mt-1" style={{ color: "#9C8A6E" }}>
-          {entries.length} palabras · vocabulario base del simulador
+        </h2>
+        <p className="mt-1 font-sans text-sm text-earth-600">
+          {entries.length} palabras reconstruidas a partir de fuentes coloniales y lenguas arawak hermanas.
         </p>
+      </header>
+
+      {/* Distribución por lengua (filtro) */}
+      <div className="mb-4 flex flex-wrap gap-2">
+        {distribution.map(({ lang, count, color }) => {
+          const active = langFilter === lang;
+          return (
+            <button
+              key={lang}
+              onClick={() => setLangFilter(active ? "todos" : lang)}
+              className="rounded-full border px-3 py-1.5 font-sans text-sm transition-colors"
+              style={{
+                background: active ? `${color}1a` : "transparent",
+                borderColor: active ? color : "#dcd2c3",
+                color: active ? color : "#72584a",
+              }}
+            >
+              <span className="mr-1.5 inline-block h-2 w-2 rounded-full align-middle" style={{ background: color }} />
+              {lang} · {count}
+            </button>
+          );
+        })}
       </div>
 
-      {/* Distribución */}
-      <div className="flex gap-3 flex-wrap">
-        {distribution.map(({ lang, count, color }) => (
-          <div
-            key={lang}
-            className="rounded px-3 py-2 text-sm cursor-pointer"
-            style={{
-              background: langFilter === lang ? color + "33" : "#2A1F14",
-              border: `1px solid ${langFilter === lang ? color : "#4A3520"}`,
-              color: langFilter === lang ? color : "#9C8A6E",
-            }}
-            onClick={() => setLangFilter(langFilter === lang ? "todos" : lang)}
-          >
-            {lang} · {count}
-          </div>
-        ))}
-      </div>
-
-      {/* Filtros */}
-      <div className="flex gap-3 flex-wrap">
+      {/* Búsqueda + categoría */}
+      <div className="mb-5 flex flex-wrap gap-3">
         <input
           type="text"
-          placeholder="Buscar palabra o significado..."
+          placeholder="Buscar palabra o significado…"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="rounded px-3 py-2 text-sm flex-1 min-w-48"
-          style={{
-            background: "#2A1F14",
-            border: "1px solid #4A3520",
-            color: "#F5EDD6",
-            outline: "none",
-          }}
+          className="min-w-[12rem] flex-1 rounded-lg border border-earth-200 bg-earth-50/80 px-3.5 py-2 font-sans text-sm text-deep-900 placeholder:text-earth-400 outline-none focus:border-frequency"
         />
         <select
           value={catFilter}
           onChange={(e) => setCatFilter(e.target.value)}
-          className="rounded px-3 py-2 text-sm"
-          style={{
-            background: "#2A1F14",
-            border: "1px solid #4A3520",
-            color: "#F5EDD6",
-          }}
+          className="rounded-lg border border-earth-200 bg-earth-50/80 px-3 py-2 font-sans text-sm text-deep-800 outline-none focus:border-frequency"
         >
           {CATEGORIES.map((c) => (
-            <option key={c} value={c}>
-              {c}
-            </option>
+            <option key={c} value={c}>{c}</option>
           ))}
         </select>
       </div>
 
-      {/* Tabla */}
       {loading ? (
-        <div className="text-center py-16" style={{ color: "#9C8A6E" }}>
-          Cargando léxico...
-        </div>
+        <Card className="p-4">
+          {Array.from({ length: 8 }).map((_, i) => (
+            <div key={i} className="flex gap-4 py-2.5">
+              <Skeleton className="h-4 w-24" />
+              <Skeleton className="h-4 flex-1" />
+              <Skeleton className="h-4 w-16" />
+            </div>
+          ))}
+        </Card>
       ) : (
-        <div
-          className="rounded-lg overflow-hidden"
-          style={{ border: "1px solid #4A3520" }}
-        >
-          <table className="w-full text-sm">
-            <thead>
-              <tr style={{ background: "#2A1F14", borderBottom: "1px solid #4A3520" }}>
-                <th className="text-left px-4 py-3" style={{ color: "#9C8A6E" }}>
-                  Palabra
-                </th>
-                <th className="text-left px-4 py-3" style={{ color: "#9C8A6E" }}>
-                  Significado
-                </th>
-                <th className="text-left px-4 py-3" style={{ color: "#9C8A6E" }}>
-                  Categoría
-                </th>
-                <th className="text-left px-4 py-3" style={{ color: "#9C8A6E" }}>
-                  Lengua fuente
-                </th>
-                <th className="text-left px-4 py-3" style={{ color: "#9C8A6E" }}>
-                  Atestiguado
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {filtered.map((entry, i) => {
-                const color = LANG_COLORS[entry.source_language] ?? "#9C8A6E";
-                return (
-                  <tr
-                    key={entry.id}
-                    style={{
-                      background: i % 2 === 0 ? "#1C1510" : "#2A1F14",
-                      borderBottom: "1px solid #4A352033",
-                    }}
-                  >
-                    <td className="px-4 py-2.5 font-bold" style={{ color: "#C47A2B" }}>
-                      {entry.word}
-                    </td>
-                    <td className="px-4 py-2.5" style={{ color: "#F5EDD6" }}>
-                      {entry.meaning}
-                    </td>
-                    <td className="px-4 py-2.5">
-                      <span
-                        className="text-xs px-1.5 py-0.5 rounded"
-                        style={{ background: "#4A352055", color: "#9C8A6E" }}
-                      >
-                        {entry.category}
-                      </span>
-                    </td>
-                    <td className="px-4 py-2.5">
-                      <span
-                        className="text-xs px-1.5 py-0.5 rounded"
-                        style={{ background: color + "22", color }}
-                      >
-                        {entry.source_language}
-                      </span>
-                    </td>
-                    <td className="px-4 py-2.5 text-xs" style={{ color: "#9C8A6E" }}>
-                      {entry.attested ? "✓" : "—"}
+        <Card className="overflow-hidden p-0">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left">
+              <thead>
+                <tr className="border-b border-earth-200 bg-earth-100/50">
+                  {["Palabra", "Significado", "Categoría", "Lengua fuente", "Atest."].map((h) => (
+                    <th key={h} className="px-4 py-3 font-sans text-[0.7rem] font-medium uppercase tracking-wider text-earth-600">
+                      {h}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {filtered.map((entry) => {
+                  const color = LANG_COLORS[entry.source_language] ?? "#9d7f66";
+                  return (
+                    <tr key={entry.id} className="border-b border-earth-200/50 transition-colors hover:bg-earth-100/40">
+                      <td className="px-4 py-2.5 font-serif font-semibold text-frequency">{entry.word}</td>
+                      <td className="px-4 py-2.5 font-sans text-sm text-deep-800">{entry.meaning}</td>
+                      <td className="px-4 py-2.5">
+                        <span className="rounded bg-earth-100 px-1.5 py-0.5 font-sans text-xs text-earth-600">{entry.category}</span>
+                      </td>
+                      <td className="px-4 py-2.5">
+                        <span className="rounded px-1.5 py-0.5 font-sans text-xs" style={{ background: `${color}1a`, color }}>
+                          {entry.source_language}
+                        </span>
+                      </td>
+                      <td className="px-4 py-2.5 font-sans text-xs text-earth-500">{entry.attested ? "✓" : "—"}</td>
+                    </tr>
+                  );
+                })}
+                {filtered.length === 0 && (
+                  <tr>
+                    <td colSpan={5} className="px-4 py-10 text-center font-sans text-sm text-earth-500">
+                      Sin resultados para esa búsqueda.
                     </td>
                   </tr>
-                );
-              })}
-              {filtered.length === 0 && (
-                <tr>
-                  <td
-                    colSpan={5}
-                    className="px-4 py-8 text-center"
-                    style={{ color: "#9C8A6E" }}
-                  >
-                    Sin resultados para esa búsqueda.
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
-        </div>
+                )}
+              </tbody>
+            </table>
+          </div>
+        </Card>
       )}
     </div>
   );

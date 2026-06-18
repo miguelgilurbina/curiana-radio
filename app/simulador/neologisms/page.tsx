@@ -3,25 +3,14 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import type { Neologism } from "@/lib/supabase";
+import { Card, Overline, LangPill, Skeleton, EmptyState } from "@/components/simulador/ui";
 
-const STATUS_COLORS: Record<string, string> = {
-  propuesto: "#6D8A9E",
-  adoptado:  "#2E7D4F",
-  rechazado: "#B04040",
-  ignorado:  "#4A3520",
+const STATUS: Record<string, { label: string; color: string }> = {
+  propuesto: { label: "propuesto", color: "#6D8A9E" },
+  adoptado: { label: "adoptado", color: "#2E7D4F" },
+  rechazado: { label: "rechazado", color: "#B04040" },
+  ignorado: { label: "ignorado", color: "#9d7f66" },
 };
-
-function StatusPill({ status }: { status: string }) {
-  const color = STATUS_COLORS[status] ?? "#9C8A6E";
-  return (
-    <span
-      className="text-xs px-2 py-0.5 rounded-full"
-      style={{ background: color + "22", color, border: `1px solid ${color}44` }}
-    >
-      {status}
-    </span>
-  );
-}
 
 export default function NeologismsPage() {
   const [neos, setNeos] = useState<Neologism[]>([]);
@@ -29,7 +18,6 @@ export default function NeologismsPage() {
   const [statusFilter, setStatusFilter] = useState("todos");
 
   useEffect(() => {
-    // Último run
     supabase
       .from("simulation_runs")
       .select("id")
@@ -41,152 +29,102 @@ export default function NeologismsPage() {
           return;
         }
         const runId = runs[0].id;
-
-        supabase
-          .from("neologisms")
-          .select("*")
-          .eq("run_id", runId)
-          .order("proposed_day")
-          .then(({ data }) => {
-            setNeos((data as Neologism[]) ?? []);
-            setLoading(false);
-          });
-
-        // Real-time
+        const fetchNeos = () =>
+          supabase
+            .from("neologisms")
+            .select("*")
+            .eq("run_id", runId)
+            .order("proposed_day")
+            .then(({ data }) => setNeos((data as Neologism[]) ?? []));
+        fetchNeos().then(() => setLoading(false));
         supabase
           .channel("neos-page")
-          .on(
-            "postgres_changes",
-            { event: "*", schema: "public", table: "neologisms" },
-            () => {
-              supabase
-                .from("neologisms")
-                .select("*")
-                .eq("run_id", runId)
-                .order("proposed_day")
-                .then(({ data }) => setNeos((data as Neologism[]) ?? []));
-            }
-          )
+          .on("postgres_changes", { event: "*", schema: "public", table: "neologisms" }, () => fetchNeos())
           .subscribe();
       });
   }, []);
 
-  const filtered =
-    statusFilter === "todos"
-      ? neos
-      : neos.filter((n) => n.status === statusFilter);
-
+  const filtered = statusFilter === "todos" ? neos : neos.filter((n) => n.status === statusFilter);
   const counts = {
     total: neos.length,
     propuesto: neos.filter((n) => n.status === "propuesto").length,
-    adoptado:  neos.filter((n) => n.status === "adoptado").length,
+    adoptado: neos.filter((n) => n.status === "adoptado").length,
     rechazado: neos.filter((n) => n.status === "rechazado").length,
   };
 
   return (
-    <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold" style={{ color: "#C47A2B" }}>
-          Neologismos
-        </h1>
-        <p className="text-sm mt-1" style={{ color: "#9C8A6E" }}>
-          Palabras inventadas durante la simulación
+    <div>
+      <header className="mb-6">
+        <Overline>Léxico emergente</Overline>
+        <h2 className="mt-1 font-serif text-2xl md:text-3xl font-semibold text-deep-900">Neologismos</h2>
+        <p className="mt-1 font-sans text-sm text-earth-600">
+          Palabras que los agentes inventan con sus propios morfemas. La comunidad las adopta cuando dos hablantes distintos las usan.
         </p>
-      </div>
+      </header>
 
-      {/* Contadores */}
-      <div className="flex gap-3 flex-wrap">
-        {(["todos", "propuesto", "adoptado", "rechazado"] as const).map(
-          (s) => {
-            const count =
-              s === "todos"
-                ? counts.total
-                : counts[s as keyof typeof counts];
-            const color = s === "todos" ? "#C47A2B" : STATUS_COLORS[s];
-            return (
-              <button
-                key={s}
-                onClick={() => setStatusFilter(s)}
-                className="rounded px-3 py-2 text-sm transition-colors"
-                style={{
-                  background:
-                    statusFilter === s ? color + "33" : "#2A1F14",
-                  border: `1px solid ${statusFilter === s ? color : "#4A3520"}`,
-                  color: statusFilter === s ? color : "#9C8A6E",
-                  cursor: "pointer",
-                }}
-              >
-                {s} · {count}
-              </button>
-            );
-          }
-        )}
+      <div className="mb-6 flex flex-wrap gap-2">
+        {(["todos", "propuesto", "adoptado", "rechazado"] as const).map((s) => {
+          const count = s === "todos" ? counts.total : counts[s as keyof typeof counts];
+          const color = s === "todos" ? "#C47A2B" : STATUS[s].color;
+          const active = statusFilter === s;
+          return (
+            <button
+              key={s}
+              onClick={() => setStatusFilter(s)}
+              className="rounded-full border px-3 py-1.5 font-sans text-sm transition-colors"
+              style={{
+                background: active ? `${color}1a` : "transparent",
+                borderColor: active ? color : "#dcd2c3",
+                color: active ? color : "#72584a",
+              }}
+            >
+              {s} · {count}
+            </button>
+          );
+        })}
       </div>
 
       {loading ? (
-        <div className="text-center py-16" style={{ color: "#9C8A6E" }}>
-          Cargando neologismos...
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <Card key={i} className="p-4">
+              <Skeleton className="h-5 w-28" />
+              <Skeleton className="mt-3 h-4 w-full" />
+              <Skeleton className="mt-2 h-3 w-2/3" />
+            </Card>
+          ))}
         </div>
       ) : filtered.length === 0 ? (
-        <div className="text-center py-16" style={{ color: "#9C8A6E" }}>
-          {neos.length === 0
-            ? "Sin neologismos aún. Los agentes los crean durante la simulación."
-            : "Sin neologismos con ese filtro."}
-        </div>
+        <EmptyState
+          title={neos.length === 0 ? "Sin neologismos todavía" : "Sin neologismos con ese filtro"}
+          hint={neos.length === 0 ? "Los agentes los acuñan durante la simulación." : undefined}
+        />
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filtered.map((neo) => (
-            <div
-              key={neo.id}
-              className="rounded-lg p-4 space-y-2"
-              style={{
-                background: "#2A1F14",
-                border: `1px solid ${STATUS_COLORS[neo.status] + "44"}`,
-              }}
-            >
-              {/* Forma */}
-              <div className="flex items-start justify-between gap-2">
-                <span className="text-xl font-bold" style={{ color: "#C47A2B" }}>
-                  [{neo.form}]
-                </span>
-                <StatusPill status={neo.status} />
-              </div>
-
-              {/* Significado */}
-              <p className="text-sm" style={{ color: "#F5EDD6" }}>
-                {neo.meaning}
-              </p>
-
-              {/* Componentes */}
-              {neo.components && (
-                <p className="text-xs font-mono" style={{ color: "#9C8A6E" }}>
-                  {neo.components}
-                </p>
-              )}
-
-              {/* Regla morfológica */}
-              {neo.morphological_rule && neo.morphological_rule !== "desconocida" && (
-                <span
-                  className="inline-block text-xs px-1.5 py-0.5 rounded"
-                  style={{ background: "#5B4FCF22", color: "#5B4FCF" }}
-                >
-                  {neo.morphological_rule}
-                </span>
-              )}
-
-              {/* Footer */}
-              <div className="text-xs pt-1 border-t" style={{ color: "#9C8A6E", borderColor: "#4A3520" }}>
-                Propuesto por{" "}
-                <span style={{ color: "#C47A2B" }}>{neo.proposed_by}</span>
-                {" "}· día {neo.proposed_day}
-                {neo.adopted_by && neo.adopted_by.length > 0 && (
-                  <div className="mt-0.5">
-                    Adoptado por: {neo.adopted_by.join(", ")}
-                  </div>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {filtered.map((neo) => {
+            const st = STATUS[neo.status] ?? STATUS.propuesto;
+            return (
+              <Card key={neo.id} className="flex flex-col p-4 transition-shadow hover:shadow-md">
+                <div className="flex items-start justify-between gap-2">
+                  <span className="font-serif text-xl font-semibold text-frequency">{neo.form}</span>
+                  <LangPill color={st.color}>{st.label}</LangPill>
+                </div>
+                <p className="mt-2 font-sans text-sm text-deep-800">{neo.meaning}</p>
+                {neo.components && <p className="mt-1.5 font-mono text-xs text-earth-500">{neo.components}</p>}
+                {neo.morphological_rule && neo.morphological_rule !== "desconocida" && (
+                  <span className="mt-2 inline-block w-fit rounded px-1.5 py-0.5 font-sans text-xs" style={{ background: "#5B4FCF1a", color: "#5B4FCF" }}>
+                    regla {neo.morphological_rule}
+                  </span>
                 )}
-              </div>
-            </div>
-          ))}
+                <div className="mt-3 border-t border-earth-200/70 pt-2 font-sans text-xs text-earth-500">
+                  Propuesto por <span className="text-earth-700">{neo.proposed_by}</span> · día {neo.proposed_day}
+                  {neo.adopted_by && neo.adopted_by.length > 0 && (
+                    <div className="mt-0.5">Adoptado por: {neo.adopted_by.join(", ")}</div>
+                  )}
+                </div>
+              </Card>
+            );
+          })}
         </div>
       )}
     </div>

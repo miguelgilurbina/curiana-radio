@@ -1,8 +1,9 @@
-import Link from "next/link";
 import type { Metadata } from "next";
+import { Overline } from "@/components/simulador/ui";
+import SubNav from "@/components/simulador/SubNav";
 
 export const metadata: Metadata = {
-  title: "Curiana — Emergencia Lingüística Caquetía",
+  title: "Simulador — Emergencia Lingüística Caquetía | Curiana Radio",
   description:
     "Simulación multi-agente de la lengua Caquetío-Arahuacana · Golfete de Coro · Siglo XIV-XV",
 };
@@ -12,36 +13,18 @@ export default function SimuladorLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Contenedor opaco oscuro: cubre el fondo claro del shell de la radio y da
-  // al simulador su identidad visual propia (paleta caquetía).
   return (
-    <div style={{ background: "#1C1510", color: "#F5EDD6", minHeight: "100vh" }}>
-      <div
-        className="flex items-center gap-6 px-6 py-3 text-sm flex-wrap"
-        style={{ borderBottom: "1px solid #4A3520", background: "#2A1F14" }}
-      >
-        <span className="font-bold tracking-wide" style={{ color: "#C47A2B" }}>
-          ◈ CURIANA · Simulador
-        </span>
-        <Link href="/simulador" style={{ color: "#F5EDD6" }} className="hover:opacity-80 transition-opacity">
-          Dashboard
-        </Link>
-        <Link href="/simulador/lexicon" style={{ color: "#F5EDD6" }} className="hover:opacity-80 transition-opacity">
-          Léxico
-        </Link>
-        <Link href="/simulador/neologisms" style={{ color: "#F5EDD6" }} className="hover:opacity-80 transition-opacity">
-          Neologismos
-        </Link>
-        <Link
-          href="/"
-          className="ml-auto text-xs hover:opacity-80 transition-opacity"
-          style={{ color: "#9C8A6E" }}
-        >
-          ← Volver a Curiana Radio
-        </Link>
+    <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-24 pt-8 animate-fade-in">
+      <header className="mb-6">
+        <Overline>Laboratorio lingüístico · 88.8 FM</Overline>
+        <h1 className="mt-1 font-serif text-3xl md:text-4xl font-bold text-deep-900">
+          Simulador Caquetío
+        </h1>
+      </header>
+      <div className="mb-8">
+        <SubNav />
       </div>
-
-      <main className="p-6 max-w-7xl mx-auto">{children}</main>
+      {children}
     </div>
   );
 }

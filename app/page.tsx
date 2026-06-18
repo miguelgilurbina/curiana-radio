@@ -58,6 +58,30 @@ export default async function Home() {
           </div>
         )}
 
+        {/* Simulador — Laboratorio lingüístico */}
+        <div className="mb-8 p-8 border-2 border-earth-200 rounded-lg hover:border-frequency transition-colors">
+          <div className="text-sm font-sans tracking-[0.2em] uppercase text-earth-600 mb-2">
+            Laboratorio lingüístico
+          </div>
+          <Heading level={2} className="mb-2">
+            Emergencia Lingüística Caquetía
+          </Heading>
+          <p className="text-deep-700 font-serif italic mb-4">
+            Una lengua arahuacana renace, palabra por palabra
+          </p>
+          <BodyText className="mb-6">
+            Sesenta personajes del pueblo Caquetío conversan en su lengua reconstruida, inventan
+            palabras y dejan que su deriva lingüística emerja. Observa la simulación multi-agente
+            en tiempo real.
+          </BodyText>
+          <Link
+            href="/simulador"
+            className="inline-block px-8 py-4 border-2 border-frequency text-frequency font-sans text-sm tracking-[0.2em] uppercase hover:bg-frequency hover:text-white transition-all duration-300"
+          >
+            Entrar al Simulador
+          </Link>
+        </div>
+
         {/* Archive Link */}
         <div className="mt-8">
           <Link
