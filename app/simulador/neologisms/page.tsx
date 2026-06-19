@@ -4,13 +4,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import type { Neologism } from "@/lib/supabase";
 import { Card, Overline, LangPill, Skeleton, EmptyState } from "@/components/simulador/ui";
-
-const STATUS: Record<string, { label: string; color: string }> = {
-  propuesto: { label: "propuesto", color: "#6D8A9E" },
-  adoptado: { label: "adoptado", color: "#2E7D4F" },
-  rechazado: { label: "rechazado", color: "#B04040" },
-  ignorado: { label: "ignorado", color: "#9d7f66" },
-};
+import { NEO_STATUS as STATUS } from "@/lib/sim-theme";
 
 export default function NeologismsPage() {
   const [neos, setNeos] = useState<Neologism[]>([]);

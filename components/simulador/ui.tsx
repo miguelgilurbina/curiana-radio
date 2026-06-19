@@ -1,15 +1,10 @@
 // Primitivas de UI del Simulador — lenguaje editorial de Curiana Radio
 // (tonos tierra / azul profundo, serif Lora en títulos, acento frequency).
+// Los colores salen de la única fuente de verdad: lib/sim-theme.ts
 import type { ReactNode, CSSProperties } from "react";
+import { scoreColor } from "@/lib/sim-theme";
 
-// ── Lenguas fuente: etiqueta + color canónico ─────────────────────────
-export const LANGS = [
-  { key: "caquetío", label: "Caquetío", color: "#C47A2B" },
-  { key: "wayunaiki", label: "Wayunaiki", color: "#2E7D4F" },
-  { key: "lokono", label: "Lokono", color: "#5B4FCF" },
-  { key: "taíno", label: "Taíno", color: "#B04040" },
-  { key: "arahuacano", label: "Arahuacano", color: "#6D8A9E" },
-] as const;
+export { LANGS } from "@/lib/sim-theme";
 
 // ── Superficie / tarjeta ──────────────────────────────────────────────
 export function Card({
@@ -66,7 +61,7 @@ export function StatCard({
 // ── Barra de score 0–10 ───────────────────────────────────────────────
 export function ScoreGauge({ score, width = 96 }: { score: number; width?: number }) {
   const pct = Math.max(0, Math.min(10, score)) * 10;
-  const hue = score >= 7 ? "#2E7D4F" : score >= 5 ? "#C47A2B" : "#B04040";
+  const hue = scoreColor(score);
   return (
     <div className="flex items-center gap-2" title={`${score.toFixed(1)} / 10`}>
       <div className="h-1.5 rounded-full bg-earth-200 overflow-hidden" style={{ width }}>

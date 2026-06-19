@@ -20,15 +20,9 @@ import {
   EmptyState,
   LANGS,
 } from "@/components/simulador/ui";
+import { NEO_STATUS } from "@/lib/sim-theme";
 
 // ── Tarjeta de neologismo ─────────────────────────────────────────────
-const NEO_STATUS: Record<string, { label: string; color: string }> = {
-  propuesto: { label: "propuesto", color: "#6D8A9E" },
-  adoptado: { label: "adoptado", color: "#2E7D4F" },
-  rechazado: { label: "rechazado", color: "#B04040" },
-  ignorado: { label: "ignorado", color: "#9d7f66" },
-};
-
 function NeoCard({ neo }: { neo: Neologism }) {
   const st = NEO_STATUS[neo.status] ?? NEO_STATUS.propuesto;
   return (

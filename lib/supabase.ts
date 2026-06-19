@@ -99,11 +99,5 @@ export interface LanguageDriftRow {
 }
 
 // ── Colores canónicos por lengua ──────────────────────────────────────
-
-export const LANG_COLORS: Record<string, string> = {
-  caquetío:   "#C47A2B",
-  wayunaiki:  "#2E7D4F",
-  lokono:     "#5B4FCF",
-  taíno:      "#B04040",
-  arahuacano: "#6D8A9E",
-};
+// Fuente única de verdad: lib/sim-theme.ts
+export { LANG_COLORS } from "./sim-theme";
