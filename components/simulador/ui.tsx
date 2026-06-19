@@ -18,7 +18,7 @@ export function Card({
 }) {
   return (
     <div
-      className={`rounded-2xl border border-earth-200/70 bg-earth-50/80 backdrop-blur-sm shadow-sm ${className}`}
+      className={`sim-card rounded-2xl border border-earth-200/70 bg-earth-50/80 backdrop-blur-sm ${className}`}
       style={style}
     >
       {children}
@@ -48,7 +48,7 @@ export function StatCard({
   accent?: string;
 }) {
   return (
-    <Card className="p-5 transition-shadow hover:shadow-md">
+    <Card className="p-5 sim-card-hover">
       <Overline>{label}</Overline>
       <div className="mt-2 font-serif text-3xl md:text-4xl font-semibold leading-none" style={{ color: accent }}>
         {value}

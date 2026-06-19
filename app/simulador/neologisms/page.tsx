@@ -98,7 +98,7 @@ export default function NeologismsPage() {
           {filtered.map((neo) => {
             const st = STATUS[neo.status] ?? STATUS.propuesto;
             return (
-              <Card key={neo.id} className="flex flex-col p-4 transition-shadow hover:shadow-md">
+              <Card key={neo.id} className="flex flex-col p-4 sim-card-hover">
                 <div className="flex items-start justify-between gap-2">
                   <span className="font-serif text-xl font-semibold text-frequency">{neo.form}</span>
                   <LangPill color={st.color}>{st.label}</LangPill>

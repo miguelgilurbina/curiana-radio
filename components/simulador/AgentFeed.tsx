@@ -50,7 +50,7 @@ export default function AgentFeed({ responses }: Props) {
   return (
     <div className="flex max-h-[560px] flex-col gap-3 overflow-y-auto pr-1">
       {responses.map((r) => (
-        <Card key={r.id} className="p-4 transition-shadow hover:shadow-md">
+        <Card key={r.id} className="p-4 sim-card-hover">
           <div className="flex items-start justify-between gap-3">
             <div className="min-w-0">
               <div className="flex flex-wrap items-center gap-2">
