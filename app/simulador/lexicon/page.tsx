@@ -85,6 +85,15 @@ export default function LexiconPage() {
           onChange={(e) => setSearch(e.target.value)}
           className="min-w-[12rem] flex-1 rounded-lg border border-earth-200 bg-earth-50/80 px-3.5 py-2 font-sans text-sm text-deep-900 placeholder:text-earth-400 outline-none focus:border-frequency"
         />
+        {search && (
+          <button
+            onClick={() => setSearch("")}
+            className="rounded-lg border border-earth-200 px-3 py-2 font-sans text-sm text-earth-600 transition-colors hover:text-deep-800"
+            aria-label="Limpiar búsqueda"
+          >
+            Limpiar
+          </button>
+        )}
         <select
           value={catFilter}
           onChange={(e) => setCatFilter(e.target.value)}
@@ -95,6 +104,12 @@ export default function LexiconPage() {
           ))}
         </select>
       </div>
+
+      {!loading && (
+        <p className="mb-3 font-sans text-xs text-earth-500">
+          Mostrando {filtered.length} de {entries.length} palabras
+        </p>
+      )}
 
       {loading ? (
         <Card className="p-4">
