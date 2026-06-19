@@ -20,6 +20,13 @@ from typing import Optional
 
 import anthropic
 
+# Cargar variables de entorno desde curiana_sim/.env (Supabase + Anthropic)
+try:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
+except ImportError:
+    pass
+
 from curiana_database import get_anthropic_client, get_db
 from curiana_agents import ALL_AGENTS, AGENTS_T1, AGENTS_T2, AGENTS_T3
 from curiana_state import (
