@@ -72,6 +72,42 @@ export function ScoreGauge({ score, width = 96 }: { score: number; width?: numbe
   );
 }
 
+// ── Avatar de agente (iniciales, color determinista) ──────────────────
+const AVATAR_COLORS = ["#C47A2B", "#2E7D4F", "#5B4FCF", "#B04040", "#6D8A9E", "#3d5777", "#8a6c57"];
+
+export function Avatar({ name, size = 34 }: { name: string; size?: number }) {
+  const clean = (name || "?").replace(/[^\p{L}]/gu, " ").trim();
+  const parts = clean.split(/\s+/);
+  const initials = (parts.length > 1 ? parts[0][0] + parts[1][0] : clean.slice(0, 2)).toUpperCase();
+  let h = 0;
+  for (let i = 0; i < name.length; i++) h = (h * 31 + name.charCodeAt(i)) >>> 0;
+  const color = AVATAR_COLORS[h % AVATAR_COLORS.length];
+  return (
+    <span
+      aria-hidden="true"
+      className="inline-flex shrink-0 items-center justify-center rounded-full font-serif font-semibold"
+      style={{ width: size, height: size, background: `${color}1f`, color, fontSize: size * 0.4 }}
+    >
+      {initials}
+    </span>
+  );
+}
+
+// ── Tiempo relativo ("hace 2 min") ────────────────────────────────────
+export function relativeTime(iso?: string): string {
+  if (!iso) return "";
+  const d = new Date(iso).getTime();
+  if (Number.isNaN(d)) return "";
+  const s = Math.max(0, Math.round((Date.now() - d) / 1000));
+  if (s < 45) return "ahora";
+  const m = Math.round(s / 60);
+  if (m < 60) return `hace ${m} min`;
+  const h = Math.round(m / 60);
+  if (h < 24) return `hace ${h} h`;
+  const dd = Math.round(h / 24);
+  return `hace ${dd} d`;
+}
+
 // ── Pill de lengua / etiqueta de color ────────────────────────────────
 export function LangPill({ color, children }: { color: string; children: ReactNode }) {
   return (

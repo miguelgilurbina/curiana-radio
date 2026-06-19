@@ -1,7 +1,7 @@
 "use client";
 
 import type { AgentResponse } from "@/lib/supabase";
-import { Card, ScoreGauge, LangPill, LANGS } from "@/components/simulador/ui";
+import { Card, ScoreGauge, LangPill, Avatar, relativeTime, LANGS } from "@/components/simulador/ui";
 
 interface Props {
   responses: AgentResponse[];
@@ -50,21 +50,28 @@ export default function AgentFeed({ responses }: Props) {
   return (
     <div className="flex max-h-[560px] flex-col gap-3 overflow-y-auto pr-1">
       {responses.map((r) => (
-        <Card key={r.id} className="p-4 sim-card-hover">
-          <div className="flex items-start justify-between gap-3">
-            <div className="min-w-0">
-              <div className="flex flex-wrap items-center gap-2">
+        <Card key={r.id} className="p-4 sim-card-hover animate-fade-in">
+          <div className="flex items-start gap-3">
+            <Avatar name={r.agent_name} />
+            <div className="min-w-0 flex-1">
+              <div className="flex items-center justify-between gap-2">
                 <span className="font-serif text-base font-semibold text-deep-900">{r.agent_name}</span>
-                <span className="rounded-full bg-earth-100 px-2 py-0.5 font-sans text-[0.7rem] text-earth-600">
-                  {TIER_LABEL[r.tier] ?? "Agente"}
-                </span>
-                <span className="font-sans text-[0.7rem] uppercase tracking-wide text-earth-500">{r.ethnicity}</span>
+                <ScoreGauge score={r.score} width={72} />
+              </div>
+              <div className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 font-sans text-[0.7rem] text-earth-500">
+                <span className="rounded-full bg-earth-100 px-1.5 py-0.5 text-earth-600">{TIER_LABEL[r.tier] ?? "Agente"}</span>
+                <span className="uppercase tracking-wide">{r.ethnicity}</span>
+                {relativeTime(r.created_at) && (
+                  <>
+                    <span className="text-earth-300">·</span>
+                    <span>{relativeTime(r.created_at)}</span>
+                  </>
+                )}
               </div>
             </div>
-            <ScoreGauge score={r.score} />
           </div>
 
-          <p className="mt-2.5 font-serif text-[0.95rem] leading-relaxed text-deep-800">
+          <p className="mt-3 font-serif text-[0.95rem] leading-relaxed text-deep-800">
             {r.response_text}
           </p>
 
