@@ -2,10 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "curiana-dashboard",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["--prefix", "curiana_dashboard", "run", "dev", "--", "-p", "3005"],
-      "port": 3005
+      "name": "curiana-radio",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-lc", "cd .. && npm run dev -- -p 3012"],
+      "port": 3012
     }
   ]
 }
