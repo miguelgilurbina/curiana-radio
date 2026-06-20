@@ -1,9 +1,38 @@
 "use client";
 
 import type { AgentResponse } from "@/lib/supabase";
+import { LANG_COLORS } from "@/lib/supabase";
+import HighlightedText, { type LexiconLookup } from "@/components/HighlightedText";
 
 interface Props {
   responses: AgentResponse[];
+  lexicon: Map<string, LexiconLookup>;
+}
+
+function Legend() {
+  const langs = Object.entries(LANG_COLORS);
+  return (
+    <div
+      className="flex items-center gap-3 flex-wrap text-xs mb-3 px-3 py-2 rounded"
+      style={{ background: "#2A1F1488", color: "#9C8A6E", border: "1px solid #4A352055" }}
+    >
+      <span>Pasa el mouse sobre una palabra resaltada para ver su lengua y significado:</span>
+      {langs.map(([lang, color]) => (
+        <span key={lang} className="flex items-center gap-1">
+          <span
+            className="w-2 h-2 rounded-full inline-block"
+            style={{ background: color }}
+          />
+          <span style={{ color }}>{lang}</span>
+        </span>
+      ))}
+      <span className="flex items-center gap-1">
+        <span className="w-2 h-2 rounded-full inline-block" style={{ background: "#C9A876" }} />
+        <span style={{ color: "#C9A876" }}>afijo gramatical</span>
+      </span>
+      <span style={{ color: "#6B5B45" }}>· gris = español / no reconocido</span>
+    </div>
+  );
 }
 
 const TIER_LABEL: Record<number, string> = {
@@ -31,7 +60,7 @@ function LangBar({ response }: { response: AgentResponse }) {
     { label: "W", pct: response.pct_wayunaiki,  color: "#2E7D4F", title: "Wayunaiki" },
     { label: "L", pct: response.pct_lokono,     color: "#5B4FCF", title: "Lokono" },
     { label: "T", pct: response.pct_taino,      color: "#B04040", title: "Taíno" },
-    { label: "A", pct: response.pct_arahuacano, color: "#6D8A9E", title: "Arahuacano" },
+    { label: "A", pct: response.pct_proto_arahuaco, color: "#6D8A9E", title: "Proto-arahuaco" },
   ].filter((l) => l.pct > 0);
 
   return (
@@ -50,7 +79,7 @@ function LangBar({ response }: { response: AgentResponse }) {
   );
 }
 
-export default function AgentFeed({ responses }: Props) {
+export default function AgentFeed({ responses, lexicon }: Props) {
   if (responses.length === 0) {
     return (
       <div
@@ -63,7 +92,8 @@ export default function AgentFeed({ responses }: Props) {
   }
 
   return (
-    <div className="flex flex-col gap-3 max-h-[520px] overflow-y-auto pr-1">
+    <div className="flex flex-col gap-3 max-h-[560px] overflow-y-auto pr-1">
+      <Legend />
       {responses.map((r) => (
         <div
           key={r.id}
@@ -89,10 +119,8 @@ export default function AgentFeed({ responses }: Props) {
             <ScoreBar score={r.score} />
           </div>
 
-          {/* Texto de la respuesta */}
-          <p className="text-sm leading-relaxed" style={{ color: "#F5EDD6" }}>
-            {r.response_text}
-          </p>
+          {/* Texto de la respuesta, con palabras/afijos resaltados por lengua */}
+          <HighlightedText text={r.response_text} lexicon={lexicon} />
 
           {/* Composición lingüística */}
           <LangBar response={r} />

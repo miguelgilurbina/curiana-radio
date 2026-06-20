@@ -21,7 +21,7 @@ const LANGS = [
   { key: "avg_wayunaiki",  label: "Wayunaiki",  color: "#2E7D4F" },
   { key: "avg_lokono",     label: "Lokono",     color: "#5B4FCF" },
   { key: "avg_taino",      label: "Taíno",      color: "#B04040" },
-  { key: "avg_arahuacano", label: "Arahuacano", color: "#6D8A9E" },
+  { key: "avg_proto_arahuaco", label: "Proto-arahuaco", color: "#6D8A9E" },
 ];
 
 export default function LanguageDriftChart({ data }: Props) {
@@ -35,7 +35,7 @@ export default function LanguageDriftChart({ data }: Props) {
     avg_wayunaiki:  +(row.avg_wayunaiki  * 100).toFixed(1),
     avg_lokono:     +(row.avg_lokono     * 100).toFixed(1),
     avg_taino:      +(row.avg_taino      * 100).toFixed(1),
-    avg_arahuacano: +(row.avg_arahuacano * 100).toFixed(1),
+    avg_proto_arahuaco: +(row.avg_proto_arahuaco * 100).toFixed(1),
     avg_score:      row.avg_score,
   }));
 

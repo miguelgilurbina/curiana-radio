@@ -14,7 +14,7 @@ const config: Config = {
         wayunaiki:  "#2E7D4F",
         lokono:     "#5B4FCF",
         taino:      "#B04040",
-        arahuacano: "#6D8A9E",
+        "proto-arahuaco": "#6D8A9E",
         arena:      "#F5EDD6",
         oscuro:     "#1C1510",
       },

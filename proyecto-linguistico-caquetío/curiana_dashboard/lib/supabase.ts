@@ -42,7 +42,7 @@ export interface AgentResponse {
   pct_wayunaiki: number;
   pct_lokono: number;
   pct_taino: number;
-  pct_arahuacano: number;
+  pct_proto_arahuaco: number;
   aspects_used: string[];
   words_used: string[];
   neologisms_proposed: number;
@@ -84,7 +84,7 @@ export interface LanguageDriftRow {
   avg_wayunaiki: number;
   avg_lokono: number;
   avg_taino: number;
-  avg_arahuacano: number;
+  avg_proto_arahuaco: number;
   avg_score: number;
   agents_active: number;
 }
@@ -96,5 +96,5 @@ export const LANG_COLORS: Record<string, string> = {
   wayunaiki:  "#2E7D4F",
   lokono:     "#5B4FCF",
   taíno:      "#B04040",
-  arahuacano: "#6D8A9E",
+  "proto-arahuaco": "#6D8A9E",
 };

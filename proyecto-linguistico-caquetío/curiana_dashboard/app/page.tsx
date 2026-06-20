@@ -1,15 +1,17 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useMemo } from "react";
 import { supabase } from "@/lib/supabase";
 import type {
   SimulationRun,
   AgentResponse,
   LanguageDriftRow,
   Neologism,
+  LexiconEntry,
 } from "@/lib/supabase";
 import LanguageDriftChart from "@/components/LanguageDriftChart";
 import AgentFeed from "@/components/AgentFeed";
+import type { LexiconLookup } from "@/components/HighlightedText";
 
 // ── Stat card ─────────────────────────────────────────────────────────
 function StatCard({
@@ -87,6 +89,9 @@ export default function DashboardPage() {
   const [driftData, setDriftData] = useState<LanguageDriftRow[]>([]);
   const [responses, setResponses] = useState<AgentResponse[]>([]);
   const [neologisms, setNeologisms] = useState<Neologism[]>([]);
+  const [lexiconEntries, setLexiconEntries] = useState<
+    Pick<LexiconEntry, "word" | "meaning" | "source_language">[]
+  >([]);
   const [loading, setLoading] = useState(true);
   const [liveStatus, setLiveStatus] = useState<"connecting" | "live" | "off">(
     "connecting"
@@ -138,9 +143,29 @@ export default function DashboardPage() {
     setLoading(false);
   }, []);
 
+  // ── Lexicon completo (para resaltar palabras por lengua en el feed) ─
+  const loadLexicon = useCallback(async () => {
+    const { data } = await supabase.from("lexicon").select("word, meaning, source_language");
+    setLexiconEntries(
+      (data as Pick<LexiconEntry, "word" | "meaning" | "source_language">[]) ?? []
+    );
+  }, []);
+
+  const lexiconMap = useMemo(() => {
+    const map = new Map<string, LexiconLookup>();
+    for (const entry of lexiconEntries) {
+      map.set(entry.word.toLowerCase(), {
+        source_language: entry.source_language,
+        meaning: entry.meaning,
+      });
+    }
+    return map;
+  }, [lexiconEntries]);
+
   // ── Real-time subscriptions ───────────────────────────────────────
   useEffect(() => {
     loadRun();
+    loadLexicon();
 
     const channel = supabase
       .channel("curiana-realtime")
@@ -193,7 +218,7 @@ export default function DashboardPage() {
     return () => {
       supabase.removeChannel(channel);
     };
-  }, [loadRun, run]);
+  }, [loadRun, loadLexicon, run]);
 
   // ── Stats derivadas ───────────────────────────────────────────────
   const avgScore =
@@ -340,7 +365,7 @@ export default function DashboardPage() {
               (últimas 30, en tiempo real)
             </span>
           </h2>
-          <AgentFeed responses={responses} />
+          <AgentFeed responses={responses} lexicon={lexiconMap} />
         </div>
 
         {/* Neologismos */}

@@ -5,7 +5,7 @@ import { supabase, LANG_COLORS } from "@/lib/supabase";
 import type { LexiconEntry } from "@/lib/supabase";
 
 const CATEGORIES = ["todos", "sust", "v_raiz", "pron", "num", "part", "adj", "interr", "topón", "título"];
-const LANG_FILTERS = ["todos", "caquetío", "wayunaiki", "lokono", "taíno", "arahuacano"];
+const LANG_FILTERS = ["todos", "caquetío", "wayunaiki", "lokono", "taíno", "proto-arahuaco"];
 
 export default function LexiconPage() {
   const [entries, setEntries] = useState<LexiconEntry[]>([]);
