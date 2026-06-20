@@ -1,15 +1,9 @@
 {
-  "number": 1,
-  "title": "Radio Silence",
-  "publishedAt": "2025-01-01T00:00:00Z",
-  "theme": "Sintonizando frecuencias entre el silencio y el sonido",
-  "description": "La primera transmisión de Curiana Radio explora el espacio entre el silencio y el sonido, navegando por paisajes sonoros experimentales, narrativas sobre tecnología ancestral, y reflexiones sobre la escucha consciente.",
-  "spotifyPlaylistId": "37i9dQZF1DXd9rSDyQguIk",
-  "backgroundColors": {
-    "start": "#dcd2c3",
-    "middle1": "#8ca6c4",
-    "middle2": "#c5b59f",
-    "end": "#6685ac"
-  },
+  "number": "01",
+  "title": "La Frecuencia Perdida",
+  "publishedAt": "2024-03-01",
+  "theme": "Sintonía Ancestral y Silencio Digital",
+  "description": "Una exploración sobre la tecnología de la escucha, desde los sonidos de los Caquetíos hasta la IA contemporánea.",
+  "spotifyPlaylistId": "3XhOiOcdPfckIbXQt6zYBD",
   "ogImage": "/images/editions/01/og-image.jpg"
 }

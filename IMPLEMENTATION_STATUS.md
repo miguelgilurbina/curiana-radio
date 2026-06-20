@@ -163,10 +163,12 @@ This document tracks the completion status of all phases from the PROJECT_PLAN.m
 - [x] SEO infrastructure in place
 - [x] Error handling implemented
 - [x] Loading states added
+- [x] **Sintra Persona Activated**: Documented in `SINTRA_MANIFESTO.md`
+- [x] **Visual Plan Defined**: Assets mapped in `VISUAL_ASSETS_PLAN.md`
 
 **Pending Before Launch**:
-- [ ] Create actual Spotify playlist and replace placeholder ID
-- [ ] Add AI-generated images to edition assets
+- [x] Create actual Spotify playlist and replace placeholder ID (Done for Ed #01)
+- [ ] Generate AI images per `VISUAL_ASSETS_PLAN.md` and add to `public/images/editions/01/`
 - [ ] Create OG image for social sharing
 - [ ] Configure custom domain (if applicable)
 - [ ] Deploy to Vercel
