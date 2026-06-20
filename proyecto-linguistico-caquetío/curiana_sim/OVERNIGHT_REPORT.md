@@ -27,7 +27,7 @@ el dashboard funcionando contra datos reales. Todo verificado **sin** la
 - `npm run build` ✓ (6/6 páginas). Dev server verificado en http://localhost:3005.
 - DOM confirmado: la home muestra *"Run 50b0ae2f · Score promedio 7.53 · Neologismos adoptados 2 de 3"*,
   el **drift chart** (recharts, % apilado por lengua fuente D1T1→D3T5) y el **feed de agentes**.
-- `/lexicon` muestra las 146 palabras con su desglose (21 wayunaiki · 41 lokono · 57 taíno · 11 arahuacano · 16 caquetío).
+- `/lexicon` muestra las 146 palabras con su desglose (21 wayunaiki · 41 lokono · 57 taíno · 11 arahuaco · 16 caquetío).
 - `.env.local` apunta al Supabase local (anon key + URL 54321).
 
 ### Pruebas automatizadas

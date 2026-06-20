@@ -9,7 +9,7 @@
 > (2) la recuperación erudita venezolana de los siglos XIX–XX (Lisandro Alvarado, *Glosario de voces
 > indígenas de Venezuela*, 1921; Pedro Manuel Arcaya, *Estudio sobre los caquetíos*, 1920;
 > Alfredo Jahn, *Los aborígenes del occidente de Venezuela*, 1927); y (3) la arqueología y la
-> lingüística comparada arahuacana (cf. Oliver 1989; Zavala Reyes 2015 para el léxico).
+> lingüística comparada arahuaca (cf. Oliver 1989; Zavala Reyes 2015 para el léxico).
 >
 > Las crónicas describen a los Caquetíos **ya en contacto y en guerra** con los españoles, no en su
 > vida cotidiana intacta. Por eso, mucho de lo que sigue está marcado **[reconstruido]** (inferencia
@@ -24,9 +24,9 @@
 
 ---
 
-## 1. Cosmología arahuacana
+## 1. Cosmología arahuaca
 
-La cosmovisión caquetía es **arahuacana**: comparte una matriz profunda con los Wayuu de la Guajira,
+La cosmovisión caquetía es **arahuaca**: comparte una matriz profunda con los Wayuu de la Guajira,
 los Lokono de las Guayanas y los Taínos de las Antillas. No es una religión de templos y dogmas, sino
 un tejido de relaciones entre los vivos, los muertos, los espíritus de la naturaleza y las fuerzas del
 cielo.
@@ -47,7 +47,7 @@ la misma función.** **[reconstruido]** El Sol (*kali*) y la Luna (*kasha*) orde
 (*kaya*) es a la vez bendición (siembra) y amenaza (tormenta).
 
 ### Espíritus dueños y el mundo poblado
-**[reconstruido]** Para la mente arahuacana, los lugares y los recursos tienen *dueños* espirituales:
+**[reconstruido]** Para la mente arahuaca, los lugares y los recursos tienen *dueños* espirituales:
 el mar, los bancos de peces, el manglar, la sal, los animales de caza. Por eso el pescador pide
 permiso antes de botar la canoa (ver al agente Bagre-ko) y la recolectora respeta ciertas plantas. No
 es superstición decorativa: es una **ética de relación** con un mundo que no se considera materia
@@ -162,7 +162,7 @@ trae un aviso.
 
 ## 5. El rol de la lengua
 
-La lengua caquetía es **arahuacana** (emparentada con el wayuunaiki, el lokono y el taíno) y, en la
+La lengua caquetía es **arahuaca** (emparentada con el wayuunaiki, el lokono y el taíno) y, en la
 Curiana, es **mucho más que un medio de comunicación: es identidad y frontera.** El que no habla la
 lengua es, literalmente, **ma-anüiki** ("sin habla"): un extranjero incomprensible. Hablar bien
 caquetío marca quién pertenece.
@@ -267,7 +267,7 @@ genealogía y derecho oral, y una lengua que la propia comunidad sigue ampliando
 - Jahn, Alfredo. *Los aborígenes del occidente de Venezuela* (1927).
 - Oliver, José R. (1989) — arqueología y etnohistoria del área caquetía/arahuaca del noroccidente.
 - Zavala Reyes (2015) — recopilación léxica caquetía empleada en la simulación.
-- Comparanda arahuacanos vivos: wayuunaiki (Guajira), lokono (Guayanas), taíno (Antillas), garífuna —
+- Comparanda arahuacos vivos: wayuunaiki (Guajira), lokono (Guayanas), taíno (Antillas), garífuna —
   base de las reconstrucciones marcadas **[reconstruido]**.
 
 *Marcas: **[reconstruido]** = inferencia razonada desde fuentes y pueblos hermanos; **[hipótesis]** =

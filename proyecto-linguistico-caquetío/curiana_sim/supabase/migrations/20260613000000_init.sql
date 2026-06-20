@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS lexicon (
   meaning        TEXT NOT NULL,
   category       TEXT,                        -- sust, v_raiz, pron, num, part, adj, interr, topón, título
   source_language TEXT NOT NULL DEFAULT 'desconocido',
-                                              -- caquetío | wayunaiki | lokono | taíno | arahuacano
+                                              -- caquetío | wayunaiki | lokono | taíno | proto-arahuaco
   attested       BOOLEAN DEFAULT FALSE,       -- documentado en fuentes coloniales (Zavala, Jahn, Alvarado)
   source_ref     TEXT,                        -- "Zavala Reyes 2015", "Wayunaiki (Álvarez 2017)", etc.
   cognates       TEXT[],                      -- formas cognadas en otras lenguas

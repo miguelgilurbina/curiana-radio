@@ -83,12 +83,12 @@ OBSERVER_SYSTEM = """Eres el Observador Lingüístico de la simulación comunita
 Tu trabajo es analizar respuestas de agentes y producir reportes sobre la evolución del lenguaje.
 
 La Curiana es un asentamiento caquetío del Golfete de Coro, Venezuela, siglo XIV-XV.
-Los agentes hablan caquetío-arahuacano. Tu trabajo es medir la densidad y pureza de su caquetío
+Los agentes hablan caquetío-arahuaco. Tu trabajo es medir la densidad y pureza de su caquetío
 y detectar fugas al español. Nuevas palabras pueden surgir cuando los agentes las crean productivamente
 usando reglas morfológicas.
 
 Tu análisis debe ser:
-- PRECISO: solo marca como caquetío lo que claramente viene del vocabulario arahuacano
+- PRECISO: solo marca como caquetío lo que claramente viene del vocabulario arahuaco
 - EMPÁTICO: entiende el contexto cultural de cada interacción
 - CIENTÍFICO: piensa como un lingüista de campo que observa emergencia lingüística
 
@@ -175,7 +175,7 @@ class ObserverAgent:
     ) -> Optional[dict]:
         """
         Análisis enriquecido: valida si los neologismos son morfológicamente
-        coherentes con las reglas arahuacanas.
+        coherentes con las reglas arahuacas.
         """
         neos_str = "\n".join(
             f"  [{n.forma}: {n.componentes} = {n.significado}]"
@@ -188,7 +188,7 @@ Propuso estas palabras nuevas:
 {neos_str}
 
 Analiza si cada neologismo:
-1. Es morfológicamente coherente con las reglas arahuacanas (prefijos/sufijos conocidos)
+1. Es morfológicamente coherente con las reglas arahuacas (prefijos/sufijos conocidos)
 2. Tiene sentido semántico en contexto caquetío
 3. Podría ser adoptada por la comunidad
 

@@ -3,7 +3,7 @@
 **Auditor:** Ingeniería multi-agente + lingüística computacional
 **Fecha:** 2026-06-13
 **Alcance:** `curiana_lexicon.py`, `curiana_orchestrator_v2.py`, `curiana_observer.py`, `curiana_agents.py`, `curiana_state.py`
-**Objetivo del sistema:** maximizar el % de vocabulario caquetío-arahuacano en las respuestas de 60 agentes Haiku, con morfología activa (`-ka`, `-ni`, `-da`).
+**Objetivo del sistema:** maximizar el % de vocabulario caquetío-arahuaco en las respuestas de 60 agentes Haiku, con morfología activa (`-ka`, `-ni`, `-da`).
 
 ---
 
@@ -219,9 +219,9 @@ Antes de tocar los generadores: **eliminar la coletilla "Responde en español...
 - Tawaka: → `"Hablas en caquetío, con energía y prospectivo (-da). Glosa mínima entre paréntesis."`
 
 Patrón general (aplicable por script):
-`"Responde en español ...."` → `"Respondes en caquetío-arahuacano. Español solo como glosa entre paréntesis al final."`
+`"Responde en español ...."` → `"Respondes en caquetío-arahuaco. Español solo como glosa entre paréntesis al final."`
 
-También corregir `OBSERVER_SYSTEM`: cambiar *"Los agentes hablan en español con interferencia caquetía"* por *"Los agentes hablan caquetío-arahuacano; tu trabajo es medir su densidad y pureza, detectando fugas al español."*
+También corregir `OBSERVER_SYSTEM`: cambiar *"Los agentes hablan en español con interferencia caquetía"* por *"Los agentes hablan caquetío-arahuaco; tu trabajo es medir su densidad y pureza, detectando fugas al español."*
 
 ### 3.1 `prompt_reglas_breve()` — versión mejorada
 
@@ -257,7 +257,7 @@ Mantener el bloque de vocabulario y morfología (es bueno), pero **endurecer la 
 def prompt_reglas_completo() -> str:
     # ... (mismas variables pronombres/v_raiz/naturaleza/... que el original) ...
     return f"""[IDENTIDAD LINGÜÍSTICA — INNEGOCIABLE]
-El caquetío-arahuacano es tu ÚNICA lengua de pensamiento. El español es ruido
+El caquetío-arahuaco es tu ÚNICA lengua de pensamiento. El español es ruido
 forastero que apenas reconoces. Si una palabra española se te escapa, la
 reemplazas: por una raíz conocida, o por una palabra que CREAS con tus morfemas.
 
@@ -620,7 +620,7 @@ with open("curiana_agents.py", encoding="utf-8") as f:
 # Reemplaza cualquier cierre "Responde en español ...." por orientación caquetía.
 src = re.sub(
     r'Responde en espa(?:ñ|n)ol[^"]*?\.',
-    'Respondes en caquetío-arahuacano; español solo como glosa entre paréntesis al final.',
+    'Respondes en caquetío-arahuaco; español solo como glosa entre paréntesis al final.',
     src,
 )
 with open("curiana_agents.py", "w", encoding="utf-8") as f:
@@ -630,8 +630,8 @@ with open("curiana_agents.py", "w", encoding="utf-8") as f:
 with open("curiana_observer.py", encoding="utf-8") as f:
     obs = f.read()
 obs = obs.replace(
-    "Los agentes hablan en español con interferencia caquetía, y están aprendiendo a usar más vocabulario\nde la lengua arahuacana.",
-    "Los agentes hablan caquetío-arahuacano. Tu trabajo es medir la densidad y pureza\nde su caquetío y detectar fugas al español.",
+    "Los agentes hablan en español con interferencia caquetía, y están aprendiendo a usar más vocabulario\nde la lengua arahuaca.",
+    "Los agentes hablan caquetío-arahuaco. Tu trabajo es medir la densidad y pureza\nde su caquetío y detectar fugas al español.",
 )
 with open("curiana_observer.py", "w", encoding="utf-8") as f:
     f.write(obs)

@@ -1,6 +1,6 @@
 # Curiana — Simulador de Emergencia Lingüística Caquetía
 
-Proyecto de investigación + experimento computacional: una simulación multi-agente donde 60 personajes históricos (pueblo Caquetío, Golfete de Coro, Venezuela, siglos XIV-XV) hablan en caquetío-arahuacano reconstruido. Los agentes evolucionan el idioma en tiempo real: inventan palabras, adoptan neologismos de otros, y su "deriva lingüística" queda registrada en Supabase y visualizada en un dashboard Next.js.
+Proyecto de investigación + experimento computacional: una simulación multi-agente donde 60 personajes históricos (pueblo Caquetío, Golfete de Coro, Venezuela, siglos XIV-XV) hablan en caquetío-arahuaco reconstruido. Los agentes evolucionan el idioma en tiempo real: inventan palabras, adoptan neologismos de otros, y su "deriva lingüística" queda registrada en Supabase y visualizada en un dashboard Next.js.
 
 ## Stack
 
@@ -88,7 +88,7 @@ En `curiana_orchestrator_v2.py::run_turn()`, los `getattr` para guardar en Supab
 - `neo.regla` → debería ser `neo.regla_aplicada` (o el nombre real en Neologismo)
 Esto hace que `aspects_used` y la regla morfológica siempre se guarden vacíos en Supabase.
 
-## Morfología caquetío-arahuacana
+## Morfología caquetío-arahuaca
 
 ```
 Orden: pronombre + verbo-aspecto + complemento

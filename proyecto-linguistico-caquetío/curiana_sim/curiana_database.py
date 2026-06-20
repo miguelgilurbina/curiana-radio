@@ -66,7 +66,7 @@ def normalize_source_language(fuente: str) -> str:
     wayunaiki / wayunaiki-cogn                          → "wayunaiki"
     lokono / garifuna / lokono/garifuna                 → "lokono"
     taíno / taíno/caribe                                → "taíno"
-    arahuacano / proto-arawakan / proto-arahuaco / ...  → "proto-arahuaco"
+    arahuaco / proto-arawakan / proto-arahuaco / ...  → "proto-arahuaco"
     """
     f = fuente.lower()
     if "caquetio" in f or "caquetío" in f:

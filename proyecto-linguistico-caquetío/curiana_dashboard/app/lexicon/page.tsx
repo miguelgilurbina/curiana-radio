@@ -57,7 +57,7 @@ export default function LexiconPage() {
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-bold" style={{ color: "#C47A2B" }}>
-          Léxico Caquetío-Arahuacano
+          Léxico Caquetío-Arahuaco
         </h1>
         <p className="text-sm mt-1" style={{ color: "#9C8A6E" }}>
           {entries.length} palabras · vocabulario base del simulador

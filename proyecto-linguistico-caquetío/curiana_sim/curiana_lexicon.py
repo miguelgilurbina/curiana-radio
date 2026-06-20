@@ -1,13 +1,13 @@
 """
 CURIANA — Motor Léxico y Morfológico
 =====================================
-Motor de reglas morfológicas arahuacanas para la simulación de
+Motor de reglas morfológicas arahuacas para la simulación de
 emergencia lingüística en la comunidad caquetía de Curiana.
 
 Basado en:
   - Vocabulario caquetío atestiguado (Zavala Reyes 2015, Jahn 1927, Alvarado 1921)
   - Morfología Wayunaiki (Álvarez 2017; Goulet & Jusayú 1978; Mansen & Mansen 1984)
-  - Cognados arahuacanos: Lokono, Taíno, Garifuna
+  - Cognados arahuacos: Lokono, Taíno, Garifuna
   - Topónimos venezolanos como evidencia morfológica
 
 Principio central:
@@ -45,7 +45,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "manaure":    {"sig": "título laudatorio del señor principal",          "cat": "título","fuente": "caquetío"},
     "curiana":    {"sig": "territorio de los caquetíos / lugar del cardón", "cat": "topón", "fuente": "caquetío"},
 
-    # ── Arahuacano compartido (cognados en Wayunaiki, Lokono, Taíno) ──
+    # ── Arahuaco compartido (cognados en Wayunaiki, Lokono, Taíno) ──
     "wayuu":      {"sig": "persona, gente, ser humano",                     "cat": "sust",  "fuente": "wayunaiki"},
     "anüiki":     {"sig": "habla, palabra, lengua",                         "cat": "sust",  "fuente": "wayunaiki"},
     "anasa":      {"sig": "bueno, bien, bello (< anasü Wayunaiki)",         "cat": "adj",   "fuente": "wayunaiki-cogn"},
@@ -60,18 +60,18 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "pienchi":    {"sig": "cuatro (numeral)",                               "cat": "num",   "fuente": "wayunaiki"},
     "jarai":      {"sig": "cinco (numeral)",                                "cat": "num",   "fuente": "wayunaiki"},
 
-    # ── Taíno (familia arahuacana, préstamos a todas las lenguas caribeñas) ──
+    # ── Taíno (familia arahuaca, préstamos a todas las lenguas caribeñas) ──
     "hamaca":     {"sig": "red colgante para dormir",                       "cat": "sust",  "fuente": "taíno"},
     "canoa":      {"sig": "embarcación excavada en tronco",                 "cat": "sust",  "fuente": "taíno"},
     "cacique":    {"sig": "jefe, señor principal de la comunidad",          "cat": "sust",  "fuente": "taíno"},
     "maíz":       {"sig": "planta de maíz, grano principal",               "cat": "sust",  "fuente": "taíno"},
     "yuca":       {"sig": "tubérculo, mandioca amarga o dulce",             "cat": "sust",  "fuente": "taíno", "notas": "Tno. yuca; cognado Lokono mariti", "categoria": "flora"},
-    "batata":     {"sig": "camote, tubérculo dulce",                        "cat": "sust",  "fuente": "taíno", "notas": "Tno. batata; arahuacano del área caribeña", "categoria": "flora"},
+    "batata":     {"sig": "camote, tubérculo dulce",                        "cat": "sust",  "fuente": "taíno", "notas": "Tno. batata; arahuaco del área caribeña", "categoria": "flora"},
     "bohío":      {"sig": "casa comunal, choza redonda con techo cónico",   "cat": "sust",  "fuente": "taíno"},
     "conuco":     {"sig": "huerto familiar, parcela cultivada",             "cat": "sust",  "fuente": "taíno"},
     "iguana":     {"sig": "lagarto grande, iguana",                         "cat": "sust",  "fuente": "taíno/caribe"},
 
-    # ── Raíces verbales arahuacanas (reconstruidas por comparación) ────
+    # ── Raíces verbales arahuacas (reconstruidas por comparación) ────
     "naa":        {"sig": "ir, moverse hacia",                              "cat": "v_raiz","fuente": "proto-arahuaco"},
     "waa":        {"sig": "venir, aproximarse",                             "cat": "v_raiz","fuente": "proto-arahuaco"},
     "kaa":        {"sig": "estar, existir, ser (cópula)",                   "cat": "v_raiz","fuente": "proto-arahuaco"},
@@ -88,7 +88,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "cudan":      {"sig": "servir, estar al servicio de",                   "cat": "v_raiz","fuente": "caquetío-atestiguado"},
     "cuté":       {"sig": "a usted, para usted (dativo formal)",            "cat": "pron",  "fuente": "caquetío-atestiguado"},
 
-    # ── Verbos arahuacanos (cognados Lokono / Wayunaiki / Garifuna) ────
+    # ── Verbos arahuacos (cognados Lokono / Wayunaiki / Garifuna) ────
     "wana":       {"sig": "ver, observar, mirar",                           "cat": "v_raiz","fuente": "lokono/wayunaiki"},
     "suna":       {"sig": "dormir, reposar, descansar",                     "cat": "v_raiz","fuente": "lokono/proto-arawakan"},
     "masa":       {"sig": "comer, alimentarse",                             "cat": "v_raiz","fuente": "lokono/garifuna"},
@@ -100,7 +100,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "raka":       {"sig": "querer, desear, necesitar",                      "cat": "v_raiz","fuente": "lokono/garifuna"},
     "rua":        {"sig": "cargar, transportar, llevar",                    "cat": "v_raiz","fuente": "proto-arawakan"},
 
-    # ── Naturaleza (cognados arahuacanos) ─────────────────────────────
+    # ── Naturaleza (cognados arahuacos) ─────────────────────────────
     "duna":       {"sig": "agua (corriente, bebible)",                      "cat": "sust",  "fuente": "garifuna/lokono"},
     "amana":      {"sig": "fuego, lumbre, brasa",                           "cat": "sust",  "fuente": "proto-arawakan"},
     "kali":       {"sig": "sol",                                            "cat": "sust",  "fuente": "lokono/garifuna"},
@@ -167,7 +167,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "kürara":     {"sig": "cuerda, soga, fibra trenzada",                   "cat": "sust",  "fuente": "lokono/proto-arawakan"},
     "shukua":     {"sig": "remo, pala para impulsar la canoa",              "cat": "sust",  "fuente": "lokono/garifuna"},
 
-    # ── Intercambio y comercio (raíces y cognados arahuacanos) ─────────
+    # ── Intercambio y comercio (raíces y cognados arahuacos) ─────────
     "siwa":       {"sig": "sal de comercio (< proto-arawakan *siwa)",       "cat": "sust",  "fuente": "proto-arawakan/lokono"},
     "tüma":       {"sig": "perla, cuenta brillante del mar",                "cat": "sust",  "fuente": "lokono/proto-arawakan"},
     "karükera":   {"sig": "oro, metal amarillo (caona-cogn)",               "cat": "sust",  "fuente": "taíno/lokono"},
@@ -184,7 +184,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "wabarsure":  {"sig": "alma colectiva, espíritu del pueblo (wa+barsure)","cat": "sust", "fuente": "caquetío"},
     "mawari":     {"sig": "espíritu maligno, sombra del monte",             "cat": "sust",  "fuente": "lokono/proto-arawakan"},
 
-    # ── Flora local (cognados arahuacanos y atestiguado) ───────────────
+    # ── Flora local (cognados arahuacos y atestiguado) ───────────────
     "mankaba":    {"sig": "manglar, bosque de raíces en agua salobre",      "cat": "sust",  "fuente": "lokono/proto-arawakan"},
     "marawa":     {"sig": "palma, palmera de cogollo y fibra",              "cat": "sust",  "fuente": "lokono/garifuna"},
     "kasiripa":   {"sig": "yuca brava, mandioca para casabe",               "cat": "sust",  "fuente": "lokono/garifuna"},
@@ -192,7 +192,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "yuri":       {"sig": "tabaco, hoja sagrada del piache",                "cat": "sust",  "fuente": "lokono/proto-arawakan"},
     "kukuisa":    {"sig": "cocuiza, agave de fibra para cuerda",            "cat": "sust",  "fuente": "caquetío/topónimo"},
 
-    # ── Fauna (cognados arahuacanos) ───────────────────────────────────
+    # ── Fauna (cognados arahuacos) ───────────────────────────────────
     "hikoteya":   {"sig": "tortuga, galápago de agua y tierra",            "cat": "sust",  "fuente": "lokono/garifuna"},
     "kaiwa":      {"sig": "caimán, lagarto grande de río",                  "cat": "sust",  "fuente": "lokono/proto-arawakan"},
     "tokoko":     {"sig": "flamenco o ibis, ave roja de la laguna",        "cat": "sust",  "fuente": "lokono/garifuna"},
@@ -208,7 +208,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "jashichi":   {"sig": "rabia, ira, enojo (< jashichi Wayunaiki)",       "cat": "sust",  "fuente": "wayunaiki-cogn"},
     "japü":       {"sig": "vergüenza, pudor, sonrojo",                      "cat": "sust",  "fuente": "wayunaiki/lokono"},
 
-    # ── Tiempo y clima (cognados arahuacanos y derivados locales) ──────
+    # ── Tiempo y clima (cognados arahuacos y derivados locales) ──────
     "joutai":     {"sig": "viento, corriente de aire (< joutai Wayunaiki)", "cat": "sust",  "fuente": "wayunaiki-cogn"},
     "kayawara":   {"sig": "tormenta, lluvia con viento fuerte (kaya+wara)", "cat": "sust",  "fuente": "lokono/proto-arawakan"},
     "haborü":     {"sig": "marejada, oleaje grande del mar (habo+rü)",      "cat": "sust",  "fuente": "lokono/garifuna"},
@@ -287,13 +287,13 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "guanepe":    {"sig": "cesto para cargar niños",                       "cat": "sust",  "fuente": "caquetío-atestiguado"},
     "na":         {"sig": "como, semejante a (partícula comparativa)",     "cat": "part",  "fuente": "caquetío-atestiguado"},
 
-    # ── Expansión taíno (préstamos arahuacanos del área caribeña) ──────
+    # ── Expansión taíno (préstamos arahuacos del área caribeña) ──────
     "maisi":      {"es": "maíz (Zea mays)", "fuente": "taíno", "notas": "Tno. maisi → español maíz; cognado Lokono mariti", "categoria": "flora"},
     "aji":        {"es": "ají, chile (Capsicum spp.)", "fuente": "taíno", "notas": "Tno. ají → español ají; venezolanismo activo", "categoria": "flora"},
     "papaya":     {"es": "papaya, lechosa (Carica papaya)", "fuente": "taíno", "notas": "Tno. papaya → español papaya", "categoria": "flora"},
     "guayaba":    {"es": "guayaba (Psidium guajava)", "fuente": "taíno", "notas": "Tno. guayaba → español guayaba", "categoria": "flora"},
-    "tabako":     {"es": "tabaco (Nicotiana tabacum), pipa ceremonial", "fuente": "taíno", "notas": "Tno. tabaco; ritual chamánico arahuacano", "categoria": "ritual"},
-    "cazabi":     {"es": "cazabe, pan de yuca, torta de mandioca", "fuente": "taíno", "notas": "Tno. cazabi → español cazabe; alimento base arahuacano", "categoria": "alimentacion"},
+    "tabako":     {"es": "tabaco (Nicotiana tabacum), pipa ceremonial", "fuente": "taíno", "notas": "Tno. tabaco; ritual chamánico arahuaco", "categoria": "ritual"},
+    "cazabi":     {"es": "cazabe, pan de yuca, torta de mandioca", "fuente": "taíno", "notas": "Tno. cazabi → español cazabe; alimento base arahuaco", "categoria": "alimentacion"},
     "bohio":      {"es": "bohío, casa redonda de varas y palma", "fuente": "taíno", "notas": "Tno. bohío; cognado caquetío probable *kali", "categoria": "arquitectura"},
     "caney":      {"es": "caney, bohío rectangular del cacique", "fuente": "taíno", "notas": "Tno. caney; vivienda del jefe diferenciada", "categoria": "arquitectura"},
     "batey":      {"es": "batey, plaza central del poblado, cancha de juego ritual", "fuente": "taíno", "notas": "Tno. batey; espacio ritual comunitario", "categoria": "arquitectura"},
@@ -301,20 +301,20 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "piragua":    {"es": "piragua, canoa grande de un palo", "fuente": "taíno", "notas": "Tno. piragua → español piragua", "categoria": "navegacion"},
     "iwana":      {"es": "iguana (Iguana iguana)", "fuente": "taíno", "notas": "Tno. higuana → español iguana; Lokono iwana", "categoria": "fauna"},
     "manati":     {"es": "manatí (Trichechus manatus), vaca marina", "fuente": "taíno", "notas": "Tno. manatí; animal del Golfete de Coro", "categoria": "fauna"},
-    "hutia":      {"es": "jutía, roedor grande (Capromys spp.)", "fuente": "taíno", "notas": "Tno. hutía; fuente proteica arahuacana del Caribe", "categoria": "fauna"},
+    "hutia":      {"es": "jutía, roedor grande (Capromys spp.)", "fuente": "taíno", "notas": "Tno. hutía; fuente proteica arahuaca del Caribe", "categoria": "fauna"},
     "guabina":    {"es": "guabina, pez de agua dulce (Hoplias malabaricus)", "fuente": "taíno", "notas": "Tno. guabina; pez de ríos y lagunas costeras", "categoria": "fauna"},
-    "cobo":       {"es": "cobo, caracol marino gigante (Strombus gigas), trompeta ritual", "fuente": "taíno", "notas": "Tno. cobo; objeto de intercambio arahuacano", "categoria": "fauna"},
-    "cemi":       {"es": "cemí, ídolo sagrado, espíritu materializado", "fuente": "taíno", "notas": "Tno. cemí; objeto ritual de poder arahuacano", "categoria": "cosmos"},
-    "areito":     {"es": "areíto, danza ritual narrativa, celebración colectiva", "fuente": "taíno", "notas": "Tno. areíto; práctica arahuacana de memoria oral danzada", "categoria": "ritual"},
+    "cobo":       {"es": "cobo, caracol marino gigante (Strombus gigas), trompeta ritual", "fuente": "taíno", "notas": "Tno. cobo; objeto de intercambio arahuaco", "categoria": "fauna"},
+    "cemi":       {"es": "cemí, ídolo sagrado, espíritu materializado", "fuente": "taíno", "notas": "Tno. cemí; objeto ritual de poder arahuaco", "categoria": "cosmos"},
+    "areito":     {"es": "areíto, danza ritual narrativa, celebración colectiva", "fuente": "taíno", "notas": "Tno. areíto; práctica arahuaca de memoria oral danzada", "categoria": "ritual"},
     "bejique":    {"es": "bejique, chamán taíno, mediador ritual", "fuente": "taíno", "notas": "Tno. bejique; cognado de piache (Lokono piaye)", "categoria": "cosmos"},
-    "huracan":    {"es": "huracán, espíritu del viento destructor, ciclón", "fuente": "taíno", "notas": "Tno. hurakán → español huracán; ser sobrenatural arahuacano", "categoria": "cosmos"},
+    "huracan":    {"es": "huracán, espíritu del viento destructor, ciclón", "fuente": "taíno", "notas": "Tno. hurakán → español huracán; ser sobrenatural arahuaco", "categoria": "cosmos"},
     "maboya":     {"es": "maboya, espíritu maligno nocturno", "fuente": "taíno", "notas": "Tno. maboya; equivalente al buio en cosmología caquetía", "categoria": "cosmos"},
-    "guanin":     {"es": "guanín, aleación de oro y cobre, metal sagrado", "fuente": "taíno", "notas": "Tno. guanín; metal de alto prestigio en redes arahuacanas", "categoria": "comercio"},
+    "guanin":     {"es": "guanín, aleación de oro y cobre, metal sagrado", "fuente": "taíno", "notas": "Tno. guanín; metal de alto prestigio en redes arahuacas", "categoria": "comercio"},
     "cacike":     {"es": "cacique, jefe político-ritual del grupo", "fuente": "taíno", "notas": "Tno. cacique → español cacique; equivalente al manaure caquetío", "categoria": "jerarquia"},
-    "naboria":    {"es": "naboría, servidor permanente, trabajador dependiente del cacique", "fuente": "taíno", "notas": "Tno. naboría; clase social arahuacana", "categoria": "jerarquia"},
+    "naboria":    {"es": "naboría, servidor permanente, trabajador dependiente del cacique", "fuente": "taíno", "notas": "Tno. naboría; clase social arahuaca", "categoria": "jerarquia"},
     "nitaino":    {"es": "nitaíno, noble, principal, hombre de rango", "fuente": "taíno", "notas": "Tno. nitaíno; clase intermedia entre cacique y naboría", "categoria": "jerarquia"},
-    "dujo":       {"es": "dujo, asiento de madera tallado del cacique", "fuente": "taíno", "notas": "Tno. dujo; trono ritual arahuacano", "categoria": "utiles"},
-    "macana":     {"es": "macana, garrote de madera dura, arma de combate", "fuente": "taíno", "notas": "Tno. macana; arma arahuacana; análoga al poporo caquetío", "categoria": "armas"},
+    "dujo":       {"es": "dujo, asiento de madera tallado del cacique", "fuente": "taíno", "notas": "Tno. dujo; trono ritual arahuaco", "categoria": "utiles"},
+    "macana":     {"es": "macana, garrote de madera dura, arma de combate", "fuente": "taíno", "notas": "Tno. macana; arma arahuaca; análoga al poporo caquetío", "categoria": "armas"},
     "cayo":       {"es": "cayo, islote bajo y arenoso, escollo costero", "fuente": "taíno", "notas": "Tno. cayo → español cayo; rasgos costeros del Golfete", "categoria": "geografia"},
     "manigua":    {"es": "manigua, matorral denso, monte bajo", "fuente": "taíno", "notas": "Tno. manigua; vegetación de transición sabana-bosque", "categoria": "geografia"},
     "bixa":       {"es": "bija, onoto, achiote (Bixa orellana), pigmento corporal rojo", "fuente": "taíno", "notas": "Tno. bixa/bija; pigmento ritual rojo; análogo al bariki caquetío", "categoria": "materiales"},
@@ -330,15 +330,15 @@ VOCABULARIO_BASE: dict[str, dict] = {
     # de "mar" se registra bajo "baraha" para no romper esas dependencias.
     "baraha":     {"es": "mar, agua extensa (forma Lokono)", "fuente": "lokono", "notas": "Lokono bara (mar); cognado de para- caquetío. Distinto de 'bara' (río) ya presente en el lexicon", "categoria": "geografia"},
     "koïa":       {"es": "tierra, suelo (forma Lokono)", "fuente": "lokono", "notas": "Lokono koïa; cognado de cúa/kuya caquetío", "categoria": "geografia"},
-    "balli":      {"es": "árbol, madera (forma Lokono)", "fuente": "lokono", "notas": "Lokono balli; raíz dendrológica arahuacana", "categoria": "flora"},
+    "balli":      {"es": "árbol, madera (forma Lokono)", "fuente": "lokono", "notas": "Lokono balli; raíz dendrológica arahuaca", "categoria": "flora"},
     "kannoa":     {"es": "canoa (forma Lokono con -n final nominal)", "fuente": "lokono", "notas": "Lokono kannoa; Lokono añade -n final a sustantivos vs. canoa taíno", "categoria": "navegacion"},
     "annaka":     {"es": "nagua, falda (forma Lokono)", "fuente": "lokono", "notas": "Lokono annaka; cognado de Tno. nagua", "categoria": "vestimenta"},
     "hamaha":     {"es": "hamaca (forma Lokono)", "fuente": "lokono", "notas": "Lokono hamaha; cognado de maure caquetío y Tno. hamaca", "categoria": "utiles"},
-    "kaiman":     {"es": "caimán (Caiman crocodilus)", "fuente": "lokono", "notas": "Lokono kaiman → español caimán; arahuacano universal", "categoria": "fauna"},
+    "kaiman":     {"es": "caimán (Caiman crocodilus)", "fuente": "lokono", "notas": "Lokono kaiman → español caimán; arahuaco universal", "categoria": "fauna"},
     "adda":       {"es": "árbol específico (raíz Lokono)", "fuente": "lokono", "notas": "Lokono adda; cognado del morfema ada- en topónimo caquetío Adabacoa", "categoria": "flora"},
     "tutu":       {"es": "río, corriente de agua (forma Lokono)", "fuente": "lokono", "notas": "Lokono tutu; cognado posible del topónimo Tuy", "categoria": "geografia"},
-    "wayü":       {"es": "gente libre, pueblo propio (wa- nuestro + -yú gente)", "fuente": "lokono", "notas": "Raíz pan-arahuacana; base del autónimo Wayunaiki", "categoria": "parentesco"},
-    "alijuna":    {"es": "forastero, ajeno, no-arahuacano", "fuente": "lokono", "notas": "Jahn 1927; Way. moderno alijúna; frontera identitaria del grupo", "categoria": "parentesco"},
+    "wayü":       {"es": "gente libre, pueblo propio (wa- nuestro + -yú gente)", "fuente": "lokono", "notas": "Raíz pan-arahuaca; base del autónimo Wayunaiki", "categoria": "parentesco"},
+    "alijuna":    {"es": "forastero, ajeno, no-arahuaco", "fuente": "lokono", "notas": "Jahn 1927; Way. moderno alijúna; frontera identitaria del grupo", "categoria": "parentesco"},
 }
 
 
@@ -794,7 +794,7 @@ def prompt_reglas_completo() -> str:
     numerales = "wanee (1) · piama (2) · apünüin (3) · pienchi (4) · jarai (5)"
 
     return f"""[IDENTIDAD LINGÜÍSTICA — FUNDAMENTAL]:
-El caquetío-arahuacano es TU lengua materna. La única con la que piensas.
+El caquetío-arahuaco es TU lengua materna. La única con la que piensas.
 El español es una lengua forastera que apenas entiendes. NO es tu lengua de base.
 
 CUANDO HABLAS:

@@ -64,7 +64,7 @@ MAX_TOKENS_DIRECTOR = 600
 # Este es el pivot central: cambia "español con interferencia caquetía"
 # a "caquetío como lengua materna, español como glosa opcional"
 _IDENTIDAD_LINGUISTICA = """[TU LENGUA MATERNA ES EL CAQUETÍO]:
-Piensas y sientes en caquetío-arahuacano. El español es una lengua forastera.
+Piensas y sientes en caquetío-arahuaco. El español es una lengua forastera.
 HABLA EN CAQUETÍO: pronombre + verbo-aspecto + complemento caquetío.
 Si te falta una palabra, créala con los morfemas que tienes. Escríbela [entre corchetes].
 Glosa al español solo entre paréntesis, al final, si es imprescindible.

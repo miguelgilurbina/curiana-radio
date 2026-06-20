@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Curiana — Emergencia Lingüística Caquetía",
   description:
-    "Simulación multi-agente de la lengua Caquetío-Arahuacana · Golfete de Coro · Siglo XIV-XV",
+    "Simulación multi-agente de la lengua Caquetío-Arahuaca · Golfete de Coro · Siglo XIV-XV",
 };
 
 export default function RootLayout({

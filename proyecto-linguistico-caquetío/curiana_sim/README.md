@@ -10,7 +10,7 @@ pre-contacto europeo en la **Curiana** (Golfete de Coro, Falcón, Venezuela, sig
 XIV–XV), poblada por 60 agentes LLM (claude-haiku-4-5).
 
 El objetivo no es la narrativa sino el **lenguaje**. Los agentes hablan caquetío
-(arahuacano) como lengua materna, con el español solo como glosa. Cuando enfrentan
+(arahuaco) como lengua materna, con el español solo como glosa. Cuando enfrentan
 un vacío léxico, aplican reglas morfológicas reales (basadas en wayunaiki, lokono,
 taíno) para **acuñar palabras nuevas**. Un Observer lingüístico analiza cada turno,
 puntúa la densidad caquetía, detecta neologismos y registra cuándo una palabra nueva
@@ -148,9 +148,9 @@ Director narra el cierre del turno
 ## El léxico caquetío
 
 **Vocabulario base: 93 palabras** — caquetío atestiguado (Zavala 2015, Jahn 1927,
-Alvarado 1921) + cognados arahuacanos (wayunaiki, taíno, lokono, garifuna). Cada
+Alvarado 1921) + cognados arahuacos (wayunaiki, taíno, lokono, garifuna). Cada
 entrada lleva su `fuente`, que `curiana_database.py` normaliza a 5 categorías
-canónicas: `caquetío`, `wayunaiki`, `lokono`, `taíno`, `arahuacano`.
+canónicas: `caquetío`, `wayunaiki`, `lokono`, `taíno`, `arahuaco`.
 
 Palabras clave: `barsure` (alma) · `buco` (represa) · `biro` (sal) · `chiriguare`
 (gavilán) · `maure` (algodón) · `urari` (curare) · `piache` (chamán) · `arima` (pez) ·
