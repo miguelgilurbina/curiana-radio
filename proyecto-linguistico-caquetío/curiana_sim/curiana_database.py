@@ -22,6 +22,15 @@ import json
 from typing import Optional
 from datetime import datetime, timezone
 
+# Carga curiana_sim/.env para que las credenciales (Supabase, Anthropic,
+# LangSmith) estén disponibles al invocar este módulo directamente
+# (p.ej. `python curiana_database.py seed`), no solo vía el orquestador.
+try:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
+except ImportError:
+    pass
+
 import anthropic
 
 # ── Supabase ──────────────────────────────────────────────────────────
