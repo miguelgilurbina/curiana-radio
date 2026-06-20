@@ -203,7 +203,8 @@ CREATE POLICY "public read phrase_etymologies" ON phrase_etymologies FOR SELECT 
 -- VISTA: language_drift_by_turn
 --    Promedio de composición lingüística por turno (para el chart principal).
 -- ─────────────────────────────────────────────────────────────────────
-CREATE OR REPLACE VIEW language_drift_by_turn AS
+CREATE OR REPLACE VIEW language_drift_by_turn
+WITH (security_invoker = true) AS
 SELECT
   t.run_id,
   t.day,
@@ -226,7 +227,8 @@ ORDER BY t.run_id, t.day, t.turn_num;
 -- VISTA: top_words_by_agent
 --    Palabras más usadas por cada agente (para los perfiles).
 -- ─────────────────────────────────────────────────────────────────────
-CREATE OR REPLACE VIEW top_words_by_agent AS
+CREATE OR REPLACE VIEW top_words_by_agent
+WITH (security_invoker = true) AS
 SELECT
   wu.run_id,
   wu.agent_name,
