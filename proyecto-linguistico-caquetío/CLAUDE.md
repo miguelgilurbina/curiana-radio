@@ -44,6 +44,14 @@ NEXT_PUBLIC_SUPABASE_URL=...
 NEXT_PUBLIC_SUPABASE_ANON_KEY=...
 ```
 
+> ⚠️ **Carga de `.env` en scripts Python:** cada entrypoint que se corra
+> directo (`python curiana_xxx.py ...`) debe cargar `curiana_sim/.env` por sí
+> mismo — leer `os.environ` no basta. `curiana_orchestrator_v2.py` y
+> `curiana_database.py` ya lo hacen con `load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))`
+> al inicio del módulo. Si agregas un nuevo `__main__` (p.ej. en
+> `curiana_observer.py`), copia ese mismo bloque o fallará con
+> "Faltan SUPABASE_URL o SUPABASE_SERVICE_KEY".
+
 ## Comandos clave
 
 ```bash
