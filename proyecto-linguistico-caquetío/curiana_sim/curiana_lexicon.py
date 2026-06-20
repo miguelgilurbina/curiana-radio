@@ -266,7 +266,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "jai":        {"sig": "oír, escuchar",                                 "cat": "v_raiz","fuente": "caquetío-atestiguado"},
     "jaguey":     {"sig": "estancar, represar, crear charco artificial",   "cat": "v_raiz","fuente": "caquetío-atestiguado"},
     "jacuque":    {"sig": "regar, irrigar",                                "cat": "v_raiz","fuente": "caquetío-atestiguado"},
-    "pana":       {"es": "uno",                                            "fuente": "caquetío-atestiguado", "notas": "Pedro Manuel Arcaya; Zavala Reyes 2015", "categoria": "numerales"},
+    "pana":       {"sig": "uno",                                           "cat": "num",   "fuente": "caquetío-atestiguado", "notas": "Pedro Manuel Arcaya; Zavala Reyes 2015", "categoria": "numerales"},
     "gudamuen":   {"sig": "dos",                                           "cat": "num",   "fuente": "caquetío-atestiguado"},
     "sabuenen":   {"sig": "tres",                                          "cat": "num",   "fuente": "caquetío-atestiguado"},
     "catarí":     {"sig": "cuatro",                                        "cat": "num",   "fuente": "caquetío-atestiguado"},
@@ -340,6 +340,30 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "wayü":       {"es": "gente libre, pueblo propio (wa- nuestro + -yú gente)", "fuente": "lokono", "notas": "Raíz pan-arahuacana; base del autónimo Wayunaiki", "categoria": "parentesco"},
     "alijuna":    {"es": "forastero, ajeno, no-arahuacano", "fuente": "lokono", "notas": "Jahn 1927; Way. moderno alijúna; frontera identitaria del grupo", "categoria": "parentesco"},
 }
+
+
+# ── Canonicalización de esquema ───────────────────────────────────────
+# Las entradas de expansión (taíno, lokono, atestiguadas) se escribieron con
+# dos convenciones de claves. Normalizamos in-place para que TODOS los
+# consumidores (seed a Supabase, generadores de prompts, observer, tests)
+# vean un esquema único:
+#
+#   sig       → glosa en español (significado)            [obligatorio]
+#   cat       → categoría gramatical: sust/v_raiz/num/...  [obligatorio]
+#   fuente    → origen lingüístico                         [obligatorio]
+#   categoria → dominio semántico opcional (flora, cosmos, comercio, ...)
+#   notas     → procedencia/fuente bibliográfica opcional
+#
+# Antes, algunas entradas usaban "es" en vez de "sig" y omitían "cat"
+# (trayendo solo "categoria", un eje distinto). Eso hacía que el seed
+# guardara POS y dominio semántico mezclados en la columna lexicon.category.
+for _forma, _entrada in VOCABULARIO_BASE.items():
+    if "es" in _entrada and "sig" not in _entrada:
+        _entrada["sig"] = _entrada.pop("es")
+    # POS por defecto: las entradas de expansión sin "cat" son sustantivos
+    # (los verbos y numerales sí declaran su "cat" explícitamente).
+    _entrada.setdefault("cat", "sust")
+del _forma, _entrada
 
 
 # ══════════════════════════════════════════════════════════════════════

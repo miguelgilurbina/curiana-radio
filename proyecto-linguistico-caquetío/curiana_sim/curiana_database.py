@@ -181,8 +181,12 @@ class CurianaDB:
             fuente = data.get("fuente", "desconocido")
             rows.append({
                 "word": word,
-                "meaning": data.get("sig") or data.get("es", ""),
-                "category": data.get("cat") or data.get("categoria", ""),
+                # Tras la canonicalización en curiana_lexicon, "sig" y "cat"
+                # están siempre presentes. "categoria" es el dominio semántico
+                # opcional (eje distinto a "cat", la categoría gramatical).
+                "meaning": data.get("sig", ""),
+                "category": data.get("cat", ""),
+                "semantic_domain": data.get("categoria"),
                 "source_language": normalize_source_language(fuente),
                 "attested": "atestiguado" in fuente or fuente == "caquetío-atestiguado",
                 "source_ref": fuente,

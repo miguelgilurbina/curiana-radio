@@ -15,7 +15,8 @@ CREATE TABLE IF NOT EXISTS lexicon (
   id             UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
   word           TEXT NOT NULL UNIQUE,
   meaning        TEXT NOT NULL,
-  category       TEXT,                        -- sust, v_raiz, pron, num, part, adj, interr, topón, título
+  category       TEXT,                        -- categoría gramatical (POS): sust, v_raiz, pron, num, part, adj, interr, topón, título
+  semantic_domain TEXT,                        -- dominio semántico: flora, fauna, cosmos, comercio, ritual, geografia, ...
   source_language TEXT NOT NULL DEFAULT 'desconocido',
                                               -- caquetío | wayunaiki | lokono | taíno | proto-arahuaco
   attested       BOOLEAN DEFAULT FALSE,       -- documentado en fuentes coloniales (Zavala, Jahn, Alvarado)

@@ -4,6 +4,11 @@
 ALTER TABLE agent_responses
   RENAME COLUMN pct_arahuacano TO pct_proto_arahuaco;
 
+-- Nueva columna: dominio semántico del léxico (eje distinto a category/POS).
+-- Poblada por seed_lexicon() desde el campo "categoria" de VOCABULARIO_BASE.
+ALTER TABLE lexicon
+  ADD COLUMN IF NOT EXISTS semantic_domain TEXT;
+
 DROP VIEW IF EXISTS language_drift_by_turn;
 CREATE VIEW language_drift_by_turn AS
 SELECT
