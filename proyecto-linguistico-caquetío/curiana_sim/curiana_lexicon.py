@@ -29,12 +29,12 @@ from typing import Optional
 VOCABULARIO_BASE: dict[str, dict] = {
 
     # ── Caquetío atestiguado (fuentes coloniales y arqueológicas) ──────
-    "barsure":    {"sig": "alma, esencia vital, fuerza interior",          "cat": "sust",  "fuente": "caquetío"},
+    "barsure":    {"sig": "alma, esencia vital, fuerza interior",          "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Angulo Molina; Zavala Reyes 2015", "categoria": "cosmos"},
     "buco":       {"sig": "represa, presa de agua, reservorio",             "cat": "sust",  "fuente": "caquetío"},
-    "biro":       {"sig": "sal",                                            "cat": "sust",  "fuente": "caquetío"},
+    "biro":       {"sig": "sal",                                            "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015 (Angulo Molina); recurso estratégico Coro", "categoria": "comercio"},
     "chiriguare": {"sig": "gavilán, ave rapaz grande",                      "cat": "sust",  "fuente": "caquetío"},
     "maure":      {"sig": "fibra de algodón, hilo para tejer",              "cat": "sust",  "fuente": "caquetío"},
-    "urari":      {"sig": "veneno/medicina vegetal (curare)",               "cat": "sust",  "fuente": "caquetío"},
+    "urari":      {"sig": "veneno/medicina vegetal (curare)",               "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015 (AM); artículo de comercio", "categoria": "comercio"},
     "corie":      {"sig": "choza, habitación, espacio propio",              "cat": "sust",  "fuente": "caquetío"},
     "saruro":     {"sig": "árbol saruro (frutos pequeños)",                 "cat": "sust",  "fuente": "caquetío"},
     "tuqueque":   {"sig": "lagartija pequeña, gecko",                       "cat": "sust",  "fuente": "caquetío"},
@@ -65,20 +65,20 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "canoa":      {"sig": "embarcación excavada en tronco",                 "cat": "sust",  "fuente": "taíno"},
     "cacique":    {"sig": "jefe, señor principal de la comunidad",          "cat": "sust",  "fuente": "taíno"},
     "maíz":       {"sig": "planta de maíz, grano principal",               "cat": "sust",  "fuente": "taíno"},
-    "yuca":       {"sig": "tubérculo, mandioca amarga o dulce",             "cat": "sust",  "fuente": "arahuacano"},
-    "batata":     {"sig": "camote, tubérculo dulce",                        "cat": "sust",  "fuente": "taíno"},
+    "yuca":       {"sig": "tubérculo, mandioca amarga o dulce",             "cat": "sust",  "fuente": "taíno", "notas": "Tno. yuca; cognado Lokono mariti", "categoria": "flora"},
+    "batata":     {"sig": "camote, tubérculo dulce",                        "cat": "sust",  "fuente": "taíno", "notas": "Tno. batata; arahuacano del área caribeña", "categoria": "flora"},
     "bohío":      {"sig": "casa comunal, choza redonda con techo cónico",   "cat": "sust",  "fuente": "taíno"},
     "conuco":     {"sig": "huerto familiar, parcela cultivada",             "cat": "sust",  "fuente": "taíno"},
     "iguana":     {"sig": "lagarto grande, iguana",                         "cat": "sust",  "fuente": "taíno/caribe"},
 
     # ── Raíces verbales arahuacanas (reconstruidas por comparación) ────
-    "naa":        {"sig": "ir, moverse hacia",                              "cat": "v_raiz","fuente": "arahuacano"},
-    "waa":        {"sig": "venir, aproximarse",                             "cat": "v_raiz","fuente": "arahuacano"},
-    "kaa":        {"sig": "estar, existir, ser (cópula)",                   "cat": "v_raiz","fuente": "arahuacano"},
-    "paa":        {"sig": "dar, ofrecer, transferir",                       "cat": "v_raiz","fuente": "arahuacano"},
-    "maa":        {"sig": "decir, hablar, comunicar",                       "cat": "v_raiz","fuente": "arahuacano"},
-    "taa":        {"sig": "tomar, coger, recibir",                          "cat": "v_raiz","fuente": "arahuacano"},
-    "chaa":       {"sig": "hacer, construir, crear",                        "cat": "v_raiz","fuente": "arahuacano"},
+    "naa":        {"sig": "ir, moverse hacia",                              "cat": "v_raiz","fuente": "proto-arahuaco"},
+    "waa":        {"sig": "venir, aproximarse",                             "cat": "v_raiz","fuente": "proto-arahuaco"},
+    "kaa":        {"sig": "estar, existir, ser (cópula)",                   "cat": "v_raiz","fuente": "proto-arahuaco"},
+    "paa":        {"sig": "dar, ofrecer, transferir",                       "cat": "v_raiz","fuente": "proto-arahuaco"},
+    "maa":        {"sig": "decir, hablar, comunicar",                       "cat": "v_raiz","fuente": "proto-arahuaco"},
+    "taa":        {"sig": "tomar, coger, recibir",                          "cat": "v_raiz","fuente": "proto-arahuaco"},
+    "chaa":       {"sig": "hacer, construir, crear",                        "cat": "v_raiz","fuente": "proto-arahuaco"},
 
     # ── Única frase Caquetía atestiguada ──────────────────────────────
     # "Chacamba cudanga" = ¿Cómo está usted? (saludo)
@@ -94,7 +94,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "masa":       {"sig": "comer, alimentarse",                             "cat": "v_raiz","fuente": "lokono/garifuna"},
     "awa":        {"sig": "beber, tomar líquido",                           "cat": "v_raiz","fuente": "proto-arawakan"},
     "kira":       {"sig": "escuchar, oír, atender",                         "cat": "v_raiz","fuente": "wayunaiki/lokono"},
-    "pana":       {"sig": "saber, conocer, entender",                       "cat": "v_raiz","fuente": "lokono/garifuna"},
+    "panaa":      {"sig": "saber, conocer, entender",                       "cat": "v_raiz","fuente": "lokono/garifuna"},
     "naba":       {"sig": "pensar, reflexionar, meditar",                   "cat": "v_raiz","fuente": "lokono/wayunaiki"},
     "kono":       {"sig": "sembrar, plantar, cultivar",                     "cat": "v_raiz","fuente": "lokono/taíno"},
     "raka":       {"sig": "querer, desear, necesitar",                      "cat": "v_raiz","fuente": "lokono/garifuna"},
@@ -215,6 +215,130 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "madunaka":   {"sig": "sequía, tiempo sin agua (ma+duna)",              "cat": "sust",  "fuente": "proto-arawakan"},
     "habobrisa":  {"sig": "brisa del golfete, viento suave del mar",        "cat": "sust",  "fuente": "lokono/garifuna"},
     # (fin de entradas nuevas — expansión a 146 palabras)
+
+    # ── Expansión atestiguada — fuentes coloniales (Galeotto Cey, Oviedo y Valdés,
+    #    Las Casas, Arellano Moreno, Zavala Reyes 2015, Van Buurt 2014, Gatschet 1885) ──
+    "ateri":      {"sig": "hombre, varón",                                  "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "iero":       {"sig": "mujer",                                          "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "humocaro":   {"sig": "mujer bella, hermosa",                           "cat": "adj",   "fuente": "caquetío-atestiguado"},
+    "cazi":       {"sig": "sol",                                            "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "cati":       {"sig": "luna",                                           "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "apana":      {"sig": "una luna (unidad de tiempo ~30 días)",           "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "buiamati":   {"sig": "dos lunas (unidad de tiempo ~60 días)",          "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "cazebo":     {"sig": "poniente, oeste",                                "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "cazicure":   {"sig": "levante, este",                                  "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "diao":       {"sig": "señor, jefe de segundo orden",                   "cat": "título","fuente": "caquetío-atestiguado"},
+    "guaitiao":   {"sig": "amigo ritual, aliado de alianza",                "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "datihao":    {"sig": "padrino de cautivo, el que presta su nombre al esclavo", "cat": "sust", "fuente": "caquetío-atestiguado"},
+    "uriacoa":    {"sig": "título del cacique mayor de Curiana/Coro",       "cat": "título","fuente": "caquetío-atestiguado"},
+    "tata":       {"sig": "padre, papá",                                   "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "dare":       {"sig": "diente; hijo (extensión metafórica)",            "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "sawaka":     {"sig": "inframundo, reino de los muertos",               "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "paro":       {"sig": "río, cauce simple",                              "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "cari":       {"sig": "orilla del mar, costa",                         "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "rao":        {"sig": "arena, arenal costero",                         "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "barici":     {"sig": "agua turbia, tierras coloradas rojizas",         "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "pariri":     {"sig": "pantano, ciénaga",                              "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "tarica":     {"sig": "laguna, espejo de agua interior",               "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "güique":     {"sig": "río navegable, cauce ancho",                    "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "quidi":      {"sig": "sierra, serranía, cerro largo",                 "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "borojo":     {"sig": "salina, lago salado de Coro",                   "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "ucibo":      {"sig": "cuenta de piedra, chaquira",                    "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "buriche":    {"sig": "licor fermentado, chicha de maíz",              "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "buko":       {"sig": "canal de riego, acequia, presa",                "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "gua":        {"sig": "conuco, heredad, terreno cercado cultivado",    "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "duraboa":    {"sig": "conuco sembrado, parcela en producción",        "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "tabri":      {"sig": "siembra, plantación en proceso",                "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "tebe":       {"sig": "lugar de cultivo, campo agrícola",              "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "amaca":      {"sig": "sitio de moler maíz, área de procesamiento",    "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "urapa":      {"sig": "sitio de cría de animales, corral",             "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "garabal":    {"sig": "tierra de crianza, pastizal",                   "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "kunuku":     {"sig": "parcela de cultivo, conuco insular (ABC)",      "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "cazá":       {"sig": "puche de maíz, atole",                         "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "mazato":     {"sig": "bebida de harinas fermentada",                  "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "cumaragua":  {"sig": "ciruela, espuma rosada (Spondias mombin)",      "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "auyama":     {"sig": "auyama, calabaza (Cucurbita maxima)",           "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "bajarí":     {"sig": "recorrer, caminar",                             "cat": "v_raiz","fuente": "caquetío-atestiguado"},
+    "bureche":    {"sig": "hacer, realizar, fabricar",                     "cat": "v_raiz","fuente": "caquetío-atestiguado"},
+    "eroa":       {"sig": "empezar, crear, originar",                      "cat": "v_raiz","fuente": "caquetío-atestiguado"},
+    "güere":      {"sig": "dar, entregar, ofrecer",                        "cat": "v_raiz","fuente": "caquetío-atestiguado"},
+    "jacura":     {"sig": "guardar, conservar, custodiar",                 "cat": "v_raiz","fuente": "caquetío-atestiguado"},
+    "jai":        {"sig": "oír, escuchar",                                 "cat": "v_raiz","fuente": "caquetío-atestiguado"},
+    "jaguey":     {"sig": "estancar, represar, crear charco artificial",   "cat": "v_raiz","fuente": "caquetío-atestiguado"},
+    "jacuque":    {"sig": "regar, irrigar",                                "cat": "v_raiz","fuente": "caquetío-atestiguado"},
+    "pana":       {"es": "uno",                                            "fuente": "caquetío-atestiguado", "notas": "Pedro Manuel Arcaya; Zavala Reyes 2015", "categoria": "numerales"},
+    "gudamuen":   {"sig": "dos",                                           "cat": "num",   "fuente": "caquetío-atestiguado"},
+    "sabuenen":   {"sig": "tres",                                          "cat": "num",   "fuente": "caquetío-atestiguado"},
+    "catarí":     {"sig": "cuatro",                                        "cat": "num",   "fuente": "caquetío-atestiguado"},
+    "kama":       {"sig": "tapir, danta (Tapirus terrestris)",             "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "koke":       {"sig": "bachaco, hormiga grande (Atta spp.)",           "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "cachicamo":  {"sig": "armadillo (Dasypus novemcinctus)",              "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "caduchi":    {"sig": "fruto del cardón (Cereus spp.)",                "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "kadushi":    {"sig": "cactus columnar (Cereus hexagonus)",            "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "tara":       {"sig": "venado, ciervo (Odocoileus virginianus)",       "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "warawara":   {"sig": "buitre, zamuro (Cathartes curasoica)",          "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "watapana":   {"sig": "árbol dividivi (Caesalpinia coriaria)",         "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "chogogo":    {"sig": "flamingo rosado (Phoenicopterus ruber)",        "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "chuchubi":   {"sig": "sinsonte tropical (Mimus gilvus)",              "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "bariki":     {"sig": "tierra colorada, pigmento encarnado, pintura corporal", "cat": "sust", "fuente": "caquetío-atestiguado"},
+    "mene":       {"sig": "sustancia que brota de la tierra (petróleo, resina)",   "cat": "sust", "fuente": "caquetío-atestiguado"},
+    "poporo":     {"sig": "maza-porra, arma de combate ceremonial",        "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "ture":       {"sig": "vasija, utensilio de barro",                    "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "guanepe":    {"sig": "cesto para cargar niños",                       "cat": "sust",  "fuente": "caquetío-atestiguado"},
+    "na":         {"sig": "como, semejante a (partícula comparativa)",     "cat": "part",  "fuente": "caquetío-atestiguado"},
+
+    # ── Expansión taíno (préstamos arahuacanos del área caribeña) ──────
+    "maisi":      {"es": "maíz (Zea mays)", "fuente": "taíno", "notas": "Tno. maisi → español maíz; cognado Lokono mariti", "categoria": "flora"},
+    "aji":        {"es": "ají, chile (Capsicum spp.)", "fuente": "taíno", "notas": "Tno. ají → español ají; venezolanismo activo", "categoria": "flora"},
+    "papaya":     {"es": "papaya, lechosa (Carica papaya)", "fuente": "taíno", "notas": "Tno. papaya → español papaya", "categoria": "flora"},
+    "guayaba":    {"es": "guayaba (Psidium guajava)", "fuente": "taíno", "notas": "Tno. guayaba → español guayaba", "categoria": "flora"},
+    "tabako":     {"es": "tabaco (Nicotiana tabacum), pipa ceremonial", "fuente": "taíno", "notas": "Tno. tabaco; ritual chamánico arahuacano", "categoria": "ritual"},
+    "cazabi":     {"es": "cazabe, pan de yuca, torta de mandioca", "fuente": "taíno", "notas": "Tno. cazabi → español cazabe; alimento base arahuacano", "categoria": "alimentacion"},
+    "bohio":      {"es": "bohío, casa redonda de varas y palma", "fuente": "taíno", "notas": "Tno. bohío; cognado caquetío probable *kali", "categoria": "arquitectura"},
+    "caney":      {"es": "caney, bohío rectangular del cacique", "fuente": "taíno", "notas": "Tno. caney; vivienda del jefe diferenciada", "categoria": "arquitectura"},
+    "batey":      {"es": "batey, plaza central del poblado, cancha de juego ritual", "fuente": "taíno", "notas": "Tno. batey; espacio ritual comunitario", "categoria": "arquitectura"},
+    "nagua":      {"es": "nagua, falda de algodón de mujer", "fuente": "taíno", "notas": "Tno. nagua → español enagua; Lokono annaka", "categoria": "vestimenta"},
+    "piragua":    {"es": "piragua, canoa grande de un palo", "fuente": "taíno", "notas": "Tno. piragua → español piragua", "categoria": "navegacion"},
+    "iwana":      {"es": "iguana (Iguana iguana)", "fuente": "taíno", "notas": "Tno. higuana → español iguana; Lokono iwana", "categoria": "fauna"},
+    "manati":     {"es": "manatí (Trichechus manatus), vaca marina", "fuente": "taíno", "notas": "Tno. manatí; animal del Golfete de Coro", "categoria": "fauna"},
+    "hutia":      {"es": "jutía, roedor grande (Capromys spp.)", "fuente": "taíno", "notas": "Tno. hutía; fuente proteica arahuacana del Caribe", "categoria": "fauna"},
+    "guabina":    {"es": "guabina, pez de agua dulce (Hoplias malabaricus)", "fuente": "taíno", "notas": "Tno. guabina; pez de ríos y lagunas costeras", "categoria": "fauna"},
+    "cobo":       {"es": "cobo, caracol marino gigante (Strombus gigas), trompeta ritual", "fuente": "taíno", "notas": "Tno. cobo; objeto de intercambio arahuacano", "categoria": "fauna"},
+    "cemi":       {"es": "cemí, ídolo sagrado, espíritu materializado", "fuente": "taíno", "notas": "Tno. cemí; objeto ritual de poder arahuacano", "categoria": "cosmos"},
+    "areito":     {"es": "areíto, danza ritual narrativa, celebración colectiva", "fuente": "taíno", "notas": "Tno. areíto; práctica arahuacana de memoria oral danzada", "categoria": "ritual"},
+    "bejique":    {"es": "bejique, chamán taíno, mediador ritual", "fuente": "taíno", "notas": "Tno. bejique; cognado de piache (Lokono piaye)", "categoria": "cosmos"},
+    "huracan":    {"es": "huracán, espíritu del viento destructor, ciclón", "fuente": "taíno", "notas": "Tno. hurakán → español huracán; ser sobrenatural arahuacano", "categoria": "cosmos"},
+    "maboya":     {"es": "maboya, espíritu maligno nocturno", "fuente": "taíno", "notas": "Tno. maboya; equivalente al buio en cosmología caquetía", "categoria": "cosmos"},
+    "guanin":     {"es": "guanín, aleación de oro y cobre, metal sagrado", "fuente": "taíno", "notas": "Tno. guanín; metal de alto prestigio en redes arahuacanas", "categoria": "comercio"},
+    "cacike":     {"es": "cacique, jefe político-ritual del grupo", "fuente": "taíno", "notas": "Tno. cacique → español cacique; equivalente al manaure caquetío", "categoria": "jerarquia"},
+    "naboria":    {"es": "naboría, servidor permanente, trabajador dependiente del cacique", "fuente": "taíno", "notas": "Tno. naboría; clase social arahuacana", "categoria": "jerarquia"},
+    "nitaino":    {"es": "nitaíno, noble, principal, hombre de rango", "fuente": "taíno", "notas": "Tno. nitaíno; clase intermedia entre cacique y naboría", "categoria": "jerarquia"},
+    "dujo":       {"es": "dujo, asiento de madera tallado del cacique", "fuente": "taíno", "notas": "Tno. dujo; trono ritual arahuacano", "categoria": "utiles"},
+    "macana":     {"es": "macana, garrote de madera dura, arma de combate", "fuente": "taíno", "notas": "Tno. macana; arma arahuacana; análoga al poporo caquetío", "categoria": "armas"},
+    "cayo":       {"es": "cayo, islote bajo y arenoso, escollo costero", "fuente": "taíno", "notas": "Tno. cayo → español cayo; rasgos costeros del Golfete", "categoria": "geografia"},
+    "manigua":    {"es": "manigua, matorral denso, monte bajo", "fuente": "taíno", "notas": "Tno. manigua; vegetación de transición sabana-bosque", "categoria": "geografia"},
+    "bixa":       {"es": "bija, onoto, achiote (Bixa orellana), pigmento corporal rojo", "fuente": "taíno", "notas": "Tno. bixa/bija; pigmento ritual rojo; análogo al bariki caquetío", "categoria": "materiales"},
+    "hayo":       {"es": "hayo, coca (Erythroxylum coca), hoja masticada ritual", "fuente": "taíno", "notas": "Tno. hayo; estimulante de uso ritual; documentado en Oviedo", "categoria": "ritual"},
+
+    # ── Expansión lokono ─────────────────────────────────────────────────
+    "hadalli":    {"es": "sol (forma Lokono)", "fuente": "lokono", "notas": "Lokono hadalli; cognado de cazi caquetío; raíz proto-arahuaca *kadali", "categoria": "cosmos"},
+    "katsi":      {"es": "luna (forma Lokono)", "fuente": "lokono", "notas": "Lokono katsi; cognado de cati caquetío", "categoria": "cosmos"},
+    "piaye":      {"es": "chamán, curandero (forma Lokono)", "fuente": "lokono", "notas": "Lokono piaye; cognado de piache (caquetío vía Rivero 1728)", "categoria": "cosmos"},
+    # Nota de desambiguación: "bara" ya existe en VOCABULARIO_BASE con el sentido
+    # "río, corriente fluvial" (carga semántica usada en tests y prompts de ejemplo:
+    # test_quick.py, test_pipeline.py, curiana_orchestrator_v2.py). El cognado Lokono
+    # de "mar" se registra bajo "baraha" para no romper esas dependencias.
+    "baraha":     {"es": "mar, agua extensa (forma Lokono)", "fuente": "lokono", "notas": "Lokono bara (mar); cognado de para- caquetío. Distinto de 'bara' (río) ya presente en el lexicon", "categoria": "geografia"},
+    "koïa":       {"es": "tierra, suelo (forma Lokono)", "fuente": "lokono", "notas": "Lokono koïa; cognado de cúa/kuya caquetío", "categoria": "geografia"},
+    "balli":      {"es": "árbol, madera (forma Lokono)", "fuente": "lokono", "notas": "Lokono balli; raíz dendrológica arahuacana", "categoria": "flora"},
+    "kannoa":     {"es": "canoa (forma Lokono con -n final nominal)", "fuente": "lokono", "notas": "Lokono kannoa; Lokono añade -n final a sustantivos vs. canoa taíno", "categoria": "navegacion"},
+    "annaka":     {"es": "nagua, falda (forma Lokono)", "fuente": "lokono", "notas": "Lokono annaka; cognado de Tno. nagua", "categoria": "vestimenta"},
+    "hamaha":     {"es": "hamaca (forma Lokono)", "fuente": "lokono", "notas": "Lokono hamaha; cognado de maure caquetío y Tno. hamaca", "categoria": "utiles"},
+    "kaiman":     {"es": "caimán (Caiman crocodilus)", "fuente": "lokono", "notas": "Lokono kaiman → español caimán; arahuacano universal", "categoria": "fauna"},
+    "adda":       {"es": "árbol específico (raíz Lokono)", "fuente": "lokono", "notas": "Lokono adda; cognado del morfema ada- en topónimo caquetío Adabacoa", "categoria": "flora"},
+    "tutu":       {"es": "río, corriente de agua (forma Lokono)", "fuente": "lokono", "notas": "Lokono tutu; cognado posible del topónimo Tuy", "categoria": "geografia"},
+    "wayü":       {"es": "gente libre, pueblo propio (wa- nuestro + -yú gente)", "fuente": "lokono", "notas": "Raíz pan-arahuacana; base del autónimo Wayunaiki", "categoria": "parentesco"},
+    "alijuna":    {"es": "forastero, ajeno, no-arahuacano", "fuente": "lokono", "notas": "Jahn 1927; Way. moderno alijúna; frontera identitaria del grupo", "categoria": "parentesco"},
 }
 
 
@@ -482,7 +606,8 @@ class LexicoComunitario:
     def significado(self, palabra: str) -> Optional[str]:
         p = palabra.lower().strip()
         if p in VOCABULARIO_BASE:
-            return VOCABULARIO_BASE[p]["sig"]
+            entrada = VOCABULARIO_BASE[p]
+            return entrada.get("sig") or entrada.get("es")
         if p in self._lexico:
             return self._lexico[p]["significado"]
         return None
@@ -631,7 +756,7 @@ def prompt_reglas_completo() -> str:
     pronombres = "taya (yo) · pia (tú) · nüma (él/ella) · waya (nosotros) · naya (ellos)"
     v_raiz = ("naa (ir) · waa (venir) · kaa (ser/estar) · paa (dar) · maa (hablar) · taa (tomar) · "
               "chaa (hacer/construir) · wana (ver) · suna (dormir) · masa (comer) · awa (beber) · "
-              "kira (escuchar) · pana (saber) · naba (pensar) · kono (sembrar) · raka (querer) · rua (cargar)")
+              "kira (escuchar) · panaa (saber) · naba (pensar) · kono (sembrar) · raka (querer) · rua (cargar)")
     naturaleza = ("duna (agua) · amana (fuego) · kali (sol) · kasha (luna) · kaya (lluvia) · "
                   "kuru (árbol) · arima (pez) · habo (mar) · bara (río) · dali (tierra) · suka (noche) · "
                   "sima (cerro) · kapua (amanecer)")
@@ -905,7 +1030,7 @@ def prompt_refuerzo(score: float, palabras_usadas: list) -> str:
     if score >= 7.0:
         return ""
 
-    verbos = [p for p in ["wana","suna","masa","awa","kira","pana","naba","naa","maa","kaa"] if p not in palabras_usadas]
+    verbos = [p for p in ["wana","suna","masa","awa","kira","panaa","naba","naa","maa","kaa"] if p not in palabras_usadas]
     conect = [p for p in ["ka","mara","saa","naka","kashi","wara","yama","puna"] if p not in palabras_usadas]
     sust   = [p for p in ["barsure","duna","amana","arima","kali","suka","bara","kuru"] if p not in palabras_usadas]
     sug_verbos = ", ".join(verbos[:4]) if verbos else "wana, suna, masa, kira"
@@ -1002,7 +1127,7 @@ if __name__ == "__main__":
 
     cats = {}
     for k, v in VOCABULARIO_BASE.items():
-        c = v.get("cat", "?")
+        c = v.get("cat") or v.get("categoria") or "?"
         cats[c] = cats.get(c, 0) + 1
     for cat, n in sorted(cats.items()):
         print(f"  {cat:12} {n}")

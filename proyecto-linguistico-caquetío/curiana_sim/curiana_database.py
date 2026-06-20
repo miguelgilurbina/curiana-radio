@@ -47,7 +47,7 @@ except ImportError:
 
 # Mapeo de los valores de "fuente" en VOCABULARIO_BASE a 5 categorías canónicas.
 # Estas mismas categorías se usan en las columnas pct_* de agent_responses.
-LANG_CATEGORIES = ("caquetío", "wayunaiki", "lokono", "taíno", "arahuacano")
+LANG_CATEGORIES = ("caquetío", "wayunaiki", "lokono", "taíno", "proto-arahuaco")
 
 def normalize_source_language(fuente: str) -> str:
     """
@@ -57,7 +57,7 @@ def normalize_source_language(fuente: str) -> str:
     wayunaiki / wayunaiki-cogn                          → "wayunaiki"
     lokono / garifuna / lokono/garifuna                 → "lokono"
     taíno / taíno/caribe                                → "taíno"
-    arahuacano / proto-arawakan / ...                   → "arahuacano"
+    arahuacano / proto-arawakan / proto-arahuaco / ...  → "proto-arahuaco"
     """
     f = fuente.lower()
     if "caquetio" in f or "caquetío" in f:
@@ -68,8 +68,8 @@ def normalize_source_language(fuente: str) -> str:
         return "taíno"
     if "lokono" in f or "garifuna" in f:
         return "lokono"
-    # proto-arawakan, arahuacano, reconstructed
-    return "arahuacano"
+    # proto-arawakan, proto-arahuaco, reconstructed
+    return "proto-arahuaco"
 
 
 def language_composition(words_used: list[str]) -> dict[str, float]:
@@ -79,7 +79,7 @@ def language_composition(words_used: list[str]) -> dict[str, float]:
 
     Ejemplo:
         {"caquetío": 0.42, "wayunaiki": 0.33, "lokono": 0.15,
-         "taíno": 0.06, "arahuacano": 0.04}
+         "taíno": 0.06, "proto-arahuaco": 0.04}
     """
     from curiana_lexicon import VOCABULARIO_BASE
 
@@ -181,8 +181,8 @@ class CurianaDB:
             fuente = data.get("fuente", "desconocido")
             rows.append({
                 "word": word,
-                "meaning": data.get("sig", ""),
-                "category": data.get("cat", ""),
+                "meaning": data.get("sig") or data.get("es", ""),
+                "category": data.get("cat") or data.get("categoria", ""),
                 "source_language": normalize_source_language(fuente),
                 "attested": "atestiguado" in fuente or fuente == "caquetío-atestiguado",
                 "source_ref": fuente,
@@ -289,7 +289,7 @@ class CurianaDB:
             "pct_wayunaiki":  comp.get("wayunaiki",  0.0),
             "pct_lokono":     comp.get("lokono",      0.0),
             "pct_taino":      comp.get("taíno",       0.0),
-            "pct_arahuacano": comp.get("arahuacano",  0.0),
+            "pct_proto_arahuaco": comp.get("proto-arahuaco", 0.0),
             "aspects_used":   aspects_used,
             "words_used":     words_used,
             "neologisms_proposed": neologisms_proposed,

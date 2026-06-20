@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS lexicon (
   meaning        TEXT NOT NULL,
   category       TEXT,                        -- sust, v_raiz, pron, num, part, adj, interr, topón, título
   source_language TEXT NOT NULL DEFAULT 'desconocido',
-                                              -- caquetío | wayunaiki | lokono | taíno | arahuacano
+                                              -- caquetío | wayunaiki | lokono | taíno | proto-arahuaco
   attested       BOOLEAN DEFAULT FALSE,       -- documentado en fuentes coloniales (Zavala, Jahn, Alvarado)
   source_ref     TEXT,                        -- "Zavala Reyes 2015", "Wayunaiki (Álvarez 2017)", etc.
   cognates       TEXT[],                      -- formas cognadas en otras lenguas
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS agent_responses (
   pct_wayunaiki  FLOAT DEFAULT 0,
   pct_lokono     FLOAT DEFAULT 0,
   pct_taino      FLOAT DEFAULT 0,
-  pct_arahuacano FLOAT DEFAULT 0,             -- proto-arawakan / compartido
+  pct_proto_arahuaco FLOAT DEFAULT 0,         -- proto-arawakan / compartido
 
   -- Morfología activa
   aspects_used   TEXT[],                      -- completivo | continuativo | prospectivo
@@ -213,7 +213,7 @@ SELECT
   ROUND(AVG(ar.pct_wayunaiki)::NUMERIC,  3) AS avg_wayunaiki,
   ROUND(AVG(ar.pct_lokono)::NUMERIC,     3) AS avg_lokono,
   ROUND(AVG(ar.pct_taino)::NUMERIC,      3) AS avg_taino,
-  ROUND(AVG(ar.pct_arahuacano)::NUMERIC, 3) AS avg_arahuacano,
+  ROUND(AVG(ar.pct_proto_arahuaco)::NUMERIC, 3) AS avg_proto_arahuaco,
   ROUND(AVG(ar.score)::NUMERIC,          2) AS avg_score,
   COUNT(ar.id)                              AS agents_active
 FROM turns t

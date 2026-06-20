@@ -58,7 +58,7 @@ GUION = [
         ("Buio-sha", "caquetía", 1,
          "Taya suna-ka sima-bana. Nüma maa-ni wara. Wa-barsure raka-da."),
         ("Chiriguare", "caquetío", 1,
-         "Taya pana-ka perimetro-ana. Naya wana-ni. Ka mara taya kira-da."),
+         "Taya panaa-ka perimetro-ana. Naya wana-ni. Ka mara taya kira-da."),
     ]),
     (2, 4, "tarde", "seca", None, [
         ("Manaure", "caquetío", 1,
