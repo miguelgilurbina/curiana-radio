@@ -21,7 +21,7 @@ function Composition({ response }: { response: AgentResponse }) {
     { key: "wayunaiki", pct: response.pct_wayunaiki },
     { key: "lokono", pct: response.pct_lokono },
     { key: "taíno", pct: response.pct_taino },
-    { key: "arahuacano", pct: response.pct_arahuacano },
+    { key: "proto-arahuaco", pct: response.pct_proto_arahuaco },
   ].filter((p) => p.pct > 0);
   if (parts.length === 0) return null;
   return (

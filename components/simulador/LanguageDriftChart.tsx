@@ -21,7 +21,7 @@ const SERIES = [
   { key: "avg_wayunaiki", lang: LANGS[1] },
   { key: "avg_lokono", lang: LANGS[2] },
   { key: "avg_taino", lang: LANGS[3] },
-  { key: "avg_arahuacano", lang: LANGS[4] },
+  { key: "avg_proto_arahuaco", lang: LANGS[4] },
 ];
 
 export default function LanguageDriftChart({ data }: Props) {
@@ -31,7 +31,7 @@ export default function LanguageDriftChart({ data }: Props) {
     avg_wayunaiki: +(row.avg_wayunaiki * 100).toFixed(1),
     avg_lokono: +(row.avg_lokono * 100).toFixed(1),
     avg_taino: +(row.avg_taino * 100).toFixed(1),
-    avg_arahuacano: +(row.avg_arahuacano * 100).toFixed(1),
+    avg_proto_arahuaco: +(row.avg_proto_arahuaco * 100).toFixed(1),
   }));
 
   if (chartData.length === 0) {

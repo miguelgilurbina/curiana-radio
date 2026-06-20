@@ -5,7 +5,7 @@ import SubNav from "@/components/simulador/SubNav";
 export const metadata: Metadata = {
   title: "Simulador — Emergencia Lingüística Caquetía | Curiana Radio",
   description:
-    "Simulación multi-agente de la lengua Caquetío-Arahuacana · Golfete de Coro · Siglo XIV-XV",
+    "Simulación multi-agente de la lengua Caquetío-Arahuaco · Golfete de Coro · Siglo XIV-XV",
 };
 
 export default function SimuladorLayout({

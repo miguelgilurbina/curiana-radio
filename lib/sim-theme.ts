@@ -32,7 +32,7 @@ export const LANGS = [
   { key: "wayunaiki", label: "Wayunaiki", color: "#2E7D4F" }, // verde golfete
   { key: "lokono", label: "Lokono", color: "#5B4FCF" }, // violeta
   { key: "taíno", label: "Taíno", color: "#B04040" }, // siena rojo
-  { key: "arahuacano", label: "Arahuacano", color: "#6D8A9E" }, // azul pizarra
+  { key: "proto-arahuaco", label: "Proto-arahuaco", color: "#6D8A9E" }, // azul pizarra
 ] as const;
 
 export const LANG_COLORS: Record<string, string> = Object.fromEntries(

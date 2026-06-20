@@ -64,7 +64,7 @@ Se usan como utilidades Tailwind (`text-earth-600`, `bg-earth-50`, `text-frequen
 
 | Grupo | Tokens | Nota |
 |-------|--------|------|
-| **Lenguas** (`LANGS`) | caquetío `#C47A2B` · wayunaiki `#2E7D4F` · lokono `#5B4FCF` · taíno `#B04040` · arahuacano `#6D8A9E` | colores de DATOS; el orden = pila del chart |
+| **Lenguas** (`LANGS`) | caquetío `#C47A2B` · wayunaiki `#2E7D4F` · lokono `#5B4FCF` · taíno `#B04040` · proto-arahuaco `#6D8A9E` | colores de DATOS; el orden = pila del chart |
 | **Estados neologismo** (`NEO_STATUS`) | propuesto `#6D8A9E` · adoptado `#2E7D4F` · rechazado `#B04040` · ignorado `#9d7f66` | |
 | **Semánticos** (`SEMANTIC`) | success `#2E7D4F` · warning `#C47A2B` · danger `#B04040` | usados por `scoreColor()` |
 
@@ -118,7 +118,7 @@ Primitivas del simulador en `components/simulador/ui.tsx`:
 - Español neutro, cálido, culto sin ser solemne.
 - Títulos evocadores ("Voces de la Curiana", "Palabras nuevas"); labels
   funcionales y cortos.
-- Respetar la lengua: *caquetío-arahuacano*, *Golfete de Coro*, s. XIV–XV.
+- Respetar la lengua: *caquetío-arahuaco*, *Golfete de Coro*, s. XIV–XV.
 
 ---
 

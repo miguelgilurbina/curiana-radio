@@ -6,7 +6,7 @@ import type { LexiconEntry } from "@/lib/supabase";
 import { Card, Overline, Skeleton } from "@/components/simulador/ui";
 
 const CATEGORIES = ["todos", "sust", "v_raiz", "pron", "num", "part", "adj", "interr", "topón", "título"];
-const LANG_FILTERS = ["caquetío", "wayunaiki", "lokono", "taíno", "arahuacano"];
+const LANG_FILTERS = ["caquetío", "wayunaiki", "lokono", "taíno", "proto-arahuaco"];
 
 export default function LexiconPage() {
   const [entries, setEntries] = useState<LexiconEntry[]>([]);
@@ -47,7 +47,7 @@ export default function LexiconPage() {
       <header className="mb-6">
         <Overline>Vocabulario base</Overline>
         <h2 className="mt-1 font-serif text-2xl md:text-3xl font-semibold text-deep-900">
-          Léxico Caquetío-Arahuacano
+          Léxico Caquetío-Arahuaco
         </h2>
         <p className="mt-1 font-sans text-sm text-earth-600">
           {entries.length} palabras reconstruidas a partir de fuentes coloniales y lenguas arawak hermanas.

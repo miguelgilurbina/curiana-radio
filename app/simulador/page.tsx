@@ -133,7 +133,7 @@ export default function DashboardPage() {
     <Card className="mb-8 p-6 md:p-8">
       <Overline>Qué estás viendo</Overline>
       <p className="mt-3 font-serif text-xl md:text-2xl leading-snug text-deep-900">
-        Sesenta personajes del pueblo Caquetío conversan en su lengua arahuacana reconstruida.
+        Sesenta personajes del pueblo Caquetío conversan en su lengua arahuaco reconstruida.
       </p>
       <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-earth-700">
         Cada turno, agentes guiados por un modelo de lenguaje hablan, inventan palabras y adoptan

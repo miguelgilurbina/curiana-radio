@@ -67,7 +67,7 @@ export default async function Home() {
             Emergencia Lingüística Caquetía
           </Heading>
           <p className="text-deep-700 font-serif italic mb-4">
-            Una lengua arahuacana renace, palabra por palabra
+            Una lengua arahuaco renace, palabra por palabra
           </p>
           <BodyText className="mb-6">
             Sesenta personajes del pueblo Caquetío conversan en su lengua reconstruida, inventan
