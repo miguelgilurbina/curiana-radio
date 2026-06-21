@@ -47,38 +47,38 @@ VOCABULARIO_BASE: dict[str, dict] = {
 
     # ── Arahuaco compartido (cognados en Wayunaiki, Lokono, Taíno) ──
     "wayuu":      {"sig": "persona, gente, ser humano",                     "cat": "sust",  "fuente": "wayunaiki"},
-    "anüiki":     {"sig": "habla, palabra, lengua",                         "cat": "sust",  "fuente": "wayunaiki"},
+    "anüiki":     {"sig": "habla, palabra, lengua",                         "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki", "fuente": "caquetío-reconstruido"},
     "anasa":      {"sig": "bueno, bien, bello (< anasü Wayunaiki)",         "cat": "adj",   "fuente": "wayunaiki-cogn"},
-    "taya":       {"sig": "yo (1ra persona singular)",                      "cat": "pron",  "fuente": "wayunaiki-cogn"},
-    "waya":       {"sig": "nosotros (1ra persona plural)",                  "cat": "pron",  "fuente": "wayunaiki-cogn"},
-    "pia":        {"sig": "tú (2da persona singular)",                      "cat": "pron",  "fuente": "wayunaiki-cogn"},
-    "nüma":       {"sig": "él/ella (pronombre 3ra persona)",                "cat": "pron",  "fuente": "wayunaiki-cogn"},
-    "naya":       {"sig": "ellos, ellas (3ra persona plural)",              "cat": "pron",  "fuente": "wayunaiki-cogn"},
-    "wanee":      {"sig": "uno (numeral)",                                  "cat": "num",   "fuente": "wayunaiki"},
-    "piama":      {"sig": "dos (numeral)",                                  "cat": "num",   "fuente": "wayunaiki"},
-    "apünüin":    {"sig": "tres (numeral)",                                 "cat": "num",   "fuente": "wayunaiki"},
-    "pienchi":    {"sig": "cuatro (numeral)",                               "cat": "num",   "fuente": "wayunaiki"},
-    "jarai":      {"sig": "cinco (numeral)",                                "cat": "num",   "fuente": "wayunaiki"},
+    "taya":       {"sig": "yo (1ra persona singular)",                      "cat": "pron",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn", "fuente": "caquetío-reconstruido"},
+    "waya":       {"sig": "nosotros (1ra persona plural)",                  "cat": "pron",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn", "fuente": "caquetío-reconstruido"},
+    "pia":        {"sig": "tú (2da persona singular)",                      "cat": "pron",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn", "fuente": "caquetío-reconstruido"},
+    "nüma":       {"sig": "él/ella (pronombre 3ra persona)",                "cat": "pron",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn", "fuente": "caquetío-reconstruido"},
+    "naya":       {"sig": "ellos, ellas (3ra persona plural)",              "cat": "pron",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn", "fuente": "caquetío-reconstruido"},
+    "wanee":      {"sig": "uno (numeral)",                                  "cat": "num",   "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki", "fuente": "caquetío-reconstruido"},
+    "piama":      {"sig": "dos (numeral)",                                  "cat": "num",   "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki", "fuente": "caquetío-reconstruido"},
+    "apünüin":    {"sig": "tres (numeral)",                                 "cat": "num",   "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki", "fuente": "caquetío-reconstruido"},
+    "pienchi":    {"sig": "cuatro (numeral)",                               "cat": "num",   "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki", "fuente": "caquetío-reconstruido"},
+    "jarai":      {"sig": "cinco (numeral)",                                "cat": "num",   "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki", "fuente": "caquetío-reconstruido"},
 
     # ── Taíno (familia arahuaca, préstamos a todas las lenguas caribeñas) ──
-    "hamaca":     {"sig": "red colgante para dormir",                       "cat": "sust",  "fuente": "taíno"},
-    "canoa":      {"sig": "embarcación excavada en tronco",                 "cat": "sust",  "fuente": "taíno"},
+    "hamaca":     {"sig": "red colgante para dormir",                       "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en taíno", "fuente": "caquetío-reconstruido"},
+    "canoa":      {"sig": "embarcación excavada en tronco",                 "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en taíno", "fuente": "caquetío-reconstruido"},
     "cacique":    {"sig": "jefe, señor principal de la comunidad",          "cat": "sust",  "fuente": "taíno"},
     "maíz":       {"sig": "planta de maíz, grano principal",               "cat": "sust",  "fuente": "taíno"},
     "yuca":       {"sig": "tubérculo, mandioca amarga o dulce",             "cat": "sust",  "fuente": "taíno", "notas": "Tno. yuca; cognado Lokono mariti", "categoria": "flora"},
     "batata":     {"sig": "camote, tubérculo dulce",                        "cat": "sust",  "fuente": "taíno", "notas": "Tno. batata; arahuaco del área caribeña", "categoria": "flora"},
     "bohío":      {"sig": "casa comunal, choza redonda con techo cónico",   "cat": "sust",  "fuente": "taíno"},
-    "conuco":     {"sig": "huerto familiar, parcela cultivada",             "cat": "sust",  "fuente": "taíno"},
+    "conuco":     {"sig": "huerto familiar, parcela cultivada",             "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en taíno", "fuente": "caquetío-reconstruido"},
     "iguana":     {"sig": "lagarto grande, iguana",                         "cat": "sust",  "fuente": "taíno/caribe"},
 
     # ── Raíces verbales arahuacas (reconstruidas por comparación) ────
-    "naa":        {"sig": "ir, moverse hacia",                              "cat": "v_raiz","fuente": "proto-arahuaco"},
-    "waa":        {"sig": "venir, aproximarse",                             "cat": "v_raiz","fuente": "proto-arahuaco"},
-    "kaa":        {"sig": "estar, existir, ser (cópula)",                   "cat": "v_raiz","fuente": "proto-arahuaco"},
-    "paa":        {"sig": "dar, ofrecer, transferir",                       "cat": "v_raiz","fuente": "proto-arahuaco"},
-    "maa":        {"sig": "decir, hablar, comunicar",                       "cat": "v_raiz","fuente": "proto-arahuaco"},
-    "taa":        {"sig": "tomar, coger, recibir",                          "cat": "v_raiz","fuente": "proto-arahuaco"},
-    "chaa":       {"sig": "hacer, construir, crear",                        "cat": "v_raiz","fuente": "proto-arahuaco"},
+    "naa":        {"sig": "ir, moverse hacia",                              "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arahuaco", "fuente": "caquetío-reconstruido"},
+    "waa":        {"sig": "venir, aproximarse",                             "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arahuaco", "fuente": "caquetío-reconstruido"},
+    "kaa":        {"sig": "estar, existir, ser (cópula)",                   "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arahuaco", "fuente": "caquetío-reconstruido"},
+    "paa":        {"sig": "dar, ofrecer, transferir",                       "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arahuaco", "fuente": "caquetío-reconstruido"},
+    "maa":        {"sig": "decir, hablar, comunicar",                       "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arahuaco", "fuente": "caquetío-reconstruido"},
+    "taa":        {"sig": "tomar, coger, recibir",                          "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arahuaco", "fuente": "caquetío-reconstruido"},
+    "chaa":       {"sig": "hacer, construir, crear",                        "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arahuaco", "fuente": "caquetío-reconstruido"},
 
     # ── Única frase Caquetía atestiguada ──────────────────────────────
     # "Chacamba cudanga" = ¿Cómo está usted? (saludo)
@@ -89,59 +89,59 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "cuté":       {"sig": "a usted, para usted (dativo formal)",            "cat": "pron",  "fuente": "caquetío-atestiguado"},
 
     # ── Verbos arahuacos (cognados Lokono / Wayunaiki / Garifuna) ────
-    "wana":       {"sig": "ver, observar, mirar",                           "cat": "v_raiz","fuente": "lokono/wayunaiki"},
-    "suna":       {"sig": "dormir, reposar, descansar",                     "cat": "v_raiz","fuente": "lokono/proto-arawakan"},
-    "masa":       {"sig": "comer, alimentarse",                             "cat": "v_raiz","fuente": "lokono/garifuna"},
-    "awa":        {"sig": "beber, tomar líquido",                           "cat": "v_raiz","fuente": "proto-arawakan"},
-    "kira":       {"sig": "escuchar, oír, atender",                         "cat": "v_raiz","fuente": "wayunaiki/lokono"},
-    "panaa":      {"sig": "saber, conocer, entender",                       "cat": "v_raiz","fuente": "lokono/garifuna"},
-    "naba":       {"sig": "pensar, reflexionar, meditar",                   "cat": "v_raiz","fuente": "lokono/wayunaiki"},
-    "kono":       {"sig": "sembrar, plantar, cultivar",                     "cat": "v_raiz","fuente": "lokono/taíno"},
-    "raka":       {"sig": "querer, desear, necesitar",                      "cat": "v_raiz","fuente": "lokono/garifuna"},
-    "rua":        {"sig": "cargar, transportar, llevar",                    "cat": "v_raiz","fuente": "proto-arawakan"},
+    "wana":       {"sig": "ver, observar, mirar",                           "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en lokono/wayunaiki", "fuente": "caquetío-reconstruido"},
+    "suna":       {"sig": "dormir, reposar, descansar",                     "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en lokono/proto-arawakan", "fuente": "caquetío-reconstruido"},
+    "masa":       {"sig": "comer, alimentarse",                             "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
+    "awa":        {"sig": "beber, tomar líquido",                           "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arawakan", "fuente": "caquetío-reconstruido"},
+    "kira":       {"sig": "escuchar, oír, atender",                         "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en wayunaiki/lokono", "fuente": "caquetío-reconstruido"},
+    "panaa":      {"sig": "saber, conocer, entender",                       "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
+    "naba":       {"sig": "pensar, reflexionar, meditar",                   "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en lokono/wayunaiki", "fuente": "caquetío-reconstruido"},
+    "kono":       {"sig": "sembrar, plantar, cultivar",                     "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en lokono/taíno", "fuente": "caquetío-reconstruido"},
+    "raka":       {"sig": "querer, desear, necesitar",                      "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
+    "rua":        {"sig": "cargar, transportar, llevar",                    "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arawakan", "fuente": "caquetío-reconstruido"},
 
     # ── Naturaleza (cognados arahuacos) ─────────────────────────────
-    "duna":       {"sig": "agua (corriente, bebible)",                      "cat": "sust",  "fuente": "garifuna/lokono"},
-    "amana":      {"sig": "fuego, lumbre, brasa",                           "cat": "sust",  "fuente": "proto-arawakan"},
-    "kali":       {"sig": "sol",                                            "cat": "sust",  "fuente": "lokono/garifuna"},
-    "kasha":      {"sig": "luna",                                           "cat": "sust",  "fuente": "wayunaiki/lokono"},
-    "kaya":       {"sig": "lluvia, agua del cielo",                         "cat": "sust",  "fuente": "lokono (juya-cogn)"},
-    "kuru":       {"sig": "árbol, madera, tronco",                          "cat": "sust",  "fuente": "lokono/proto-arawakan"},
-    "arima":      {"sig": "pez, pescado",                                   "cat": "sust",  "fuente": "lokono/garifuna"},
-    "habo":       {"sig": "mar, océano, aguas grandes",                     "cat": "sust",  "fuente": "lokono/garifuna"},
-    "dali":       {"sig": "tierra, suelo, polvo",                           "cat": "sust",  "fuente": "garifuna/proto-arawakan"},
-    "suka":       {"sig": "noche, oscuridad",                               "cat": "sust",  "fuente": "lokono/proto-arawakan"},
-    "bara":       {"sig": "río, corriente fluvial",                         "cat": "sust",  "fuente": "proto-arawakan/topónimo"},
-    "sima":       {"sig": "cerro, montaña, elevación",                      "cat": "sust",  "fuente": "lokono/topónimo (Barquisimeto)"},
+    "duna":       {"sig": "agua (corriente, bebible)",                      "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en garifuna/lokono", "fuente": "caquetío-reconstruido"},
+    "amana":      {"sig": "fuego, lumbre, brasa",                           "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en proto-arawakan", "fuente": "caquetío-reconstruido"},
+    "kali":       {"sig": "sol",                                            "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
+    "kasha":      {"sig": "luna",                                           "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki/lokono", "fuente": "caquetío-reconstruido"},
+    "kaya":       {"sig": "lluvia, agua del cielo",                         "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono (juya-cogn)", "fuente": "caquetío-reconstruido"},
+    "kuru":       {"sig": "árbol, madera, tronco",                          "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/proto-arawakan", "fuente": "caquetío-reconstruido"},
+    "arima":      {"sig": "pez, pescado",                                   "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
+    "habo":       {"sig": "mar, océano, aguas grandes",                     "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
+    "dali":       {"sig": "tierra, suelo, polvo",                           "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en garifuna/proto-arawakan", "fuente": "caquetío-reconstruido"},
+    "suka":       {"sig": "noche, oscuridad",                               "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/proto-arawakan", "fuente": "caquetío-reconstruido"},
+    "bara":       {"sig": "río, corriente fluvial",                         "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en proto-arawakan/topónimo", "fuente": "caquetío-reconstruido"},
+    "sima":       {"sig": "cerro, montaña, elevación",                      "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/topónimo (Barquisimeto)", "fuente": "caquetío-reconstruido"},
 
     # ── Personas y parentesco ──────────────────────────────────────────
-    "ama":        {"sig": "madre, mujer que nutre y da origen",             "cat": "sust",  "fuente": "proto-arawakan universal"},
-    "baba":       {"sig": "padre, hombre que protege",                      "cat": "sust",  "fuente": "lokono/garifuna"},
-    "buri":       {"sig": "hijo, hija, criatura, descendiente",             "cat": "sust",  "fuente": "lokono/garifuna"},
-    "nomi":       {"sig": "hombre adulto (no título)",                      "cat": "sust",  "fuente": "lokono/garifuna"},
-    "wari":       {"sig": "mujer adulta (no título)",                       "cat": "sust",  "fuente": "lokono/proto-arawakan"},
-    "wanü":       {"sig": "anciano, mayor, persona de saber acumulado",     "cat": "sust",  "fuente": "wayunaiki-cogn"},
-    "pütchi":     {"sig": "mensaje, palabra sagrada, voz del espíritu",     "cat": "sust",  "fuente": "wayunaiki"},
+    "ama":        {"sig": "madre, mujer que nutre y da origen",             "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en proto-arawakan universal", "fuente": "caquetío-reconstruido"},
+    "baba":       {"sig": "padre, hombre que protege",                      "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
+    "buri":       {"sig": "hijo, hija, criatura, descendiente",             "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
+    "nomi":       {"sig": "hombre adulto (no título)",                      "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
+    "wari":       {"sig": "mujer adulta (no título)",                       "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/proto-arawakan", "fuente": "caquetío-reconstruido"},
+    "wanü":       {"sig": "anciano, mayor, persona de saber acumulado",     "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn", "fuente": "caquetío-reconstruido"},
+    "pütchi":     {"sig": "mensaje, palabra sagrada, voz del espíritu",     "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki", "fuente": "caquetío-reconstruido"},
 
     # ── Cuerpo ──────────────────────────────────────────────────────────
-    "kabo":       {"sig": "cabeza, mente, lo alto de",                      "cat": "sust",  "fuente": "lokono/proto-arawakan"},
-    "nii":        {"sig": "ojo, mirada, visión",                            "cat": "sust",  "fuente": "lokono-cogn"},
-    "bari":       {"sig": "vientre, barriga, interior del cuerpo",          "cat": "sust",  "fuente": "lokono/proto-arawakan"},
-    "arua":       {"sig": "alimento, comida, sustento (raíz de 'arawak')",  "cat": "sust",  "fuente": "lokono/proto-arawakan"},
-    "kapua":      {"sig": "amanecer, alba, primera luz del día",            "cat": "sust",  "fuente": "wayunaiki-cogn"},
-    "tüshi":      {"sig": "frío, temperatura baja",                         "cat": "adj",   "fuente": "wayunaiki-cogn"},
+    "kabo":       {"sig": "cabeza, mente, lo alto de",                      "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/proto-arawakan", "fuente": "caquetío-reconstruido"},
+    "nii":        {"sig": "ojo, mirada, visión",                            "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono-cogn", "fuente": "caquetío-reconstruido"},
+    "bari":       {"sig": "vientre, barriga, interior del cuerpo",          "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/proto-arawakan", "fuente": "caquetío-reconstruido"},
+    "arua":       {"sig": "alimento, comida, sustento (raíz de 'arawak')",  "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/proto-arawakan", "fuente": "caquetío-reconstruido"},
+    "kapua":      {"sig": "amanecer, alba, primera luz del día",            "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn", "fuente": "caquetío-reconstruido"},
+    "tüshi":      {"sig": "frío, temperatura baja",                         "cat": "adj",   "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn", "fuente": "caquetío-reconstruido"},
 
     # ── Partículas y conectores ────────────────────────────────────────
     # (permiten construir frases más complejas sin recurrir al español)
-    "ka":         {"sig": "y, también, además, con (conector aditivo)",     "cat": "part",  "fuente": "proto-arawakan"},
-    "mara":       {"sig": "pero, sin embargo, aunque (contraste)",          "cat": "part",  "fuente": "lokono/garifuna"},
-    "saa":        {"sig": "si, cuando, al momento de (condicional/temp.)",  "cat": "part",  "fuente": "lokono"},
-    "naka":       {"sig": "después, luego, más tarde (temporal posterior)", "cat": "part",  "fuente": "lokono"},
-    "puna":       {"sig": "antes, ya, primero (temporal anterior)",         "cat": "part",  "fuente": "lokono"},
-    "kashi":      {"sig": "ahora, en este momento (temporal presente)",     "cat": "part",  "fuente": "wayunaiki-cogn"},
-    "wara":       {"sig": "muy, mucho, bastante (intensificador)",          "cat": "part",  "fuente": "lokono/garifuna"},
-    "sulu":       {"sig": "adentro, dentro de, en el interior de",         "cat": "part",  "fuente": "wayunaiki"},
-    "yama":       {"sig": "aquí, en este lugar (deíctico proximal)",        "cat": "part",  "fuente": "wayunaiki-cogn"},
+    "ka":         {"sig": "y, también, además, con (conector aditivo)",     "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en proto-arawakan", "fuente": "caquetío-reconstruido"},
+    "mara":       {"sig": "pero, sin embargo, aunque (contraste)",          "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
+    "saa":        {"sig": "si, cuando, al momento de (condicional/temp.)",  "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en lokono", "fuente": "caquetío-reconstruido"},
+    "naka":       {"sig": "después, luego, más tarde (temporal posterior)", "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en lokono", "fuente": "caquetío-reconstruido"},
+    "puna":       {"sig": "antes, ya, primero (temporal anterior)",         "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en lokono", "fuente": "caquetío-reconstruido"},
+    "kashi":      {"sig": "ahora, en este momento (temporal presente)",     "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn", "fuente": "caquetío-reconstruido"},
+    "wara":       {"sig": "muy, mucho, bastante (intensificador)",          "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
+    "sulu":       {"sig": "adentro, dentro de, en el interior de",         "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki", "fuente": "caquetío-reconstruido"},
+    "yama":       {"sig": "aquí, en este lugar (deíctico proximal)",        "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn", "fuente": "caquetío-reconstruido"},
     "kana-pa":    {"sig": "allá, en ese lugar lejano (deíctico distal)",    "cat": "part",  "fuente": "lokono"},
 
     # ── Colores (cognados Wayunaiki / Lokono / proto-arawakan) ─────────
@@ -482,7 +482,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     },
     "bana": {
         "es": "hígado",
-        "fuente": "lokono",
+        "notas": "núcleo fundacional, forma justificada por cognado en lokono", "fuente": "caquetío-reconstruido",
         "notas": "Lok. bana; 'hígado'; bana-ha (forma generalizada); Pet 1987",
         "categoria": "cuerpo"
     },
@@ -952,7 +952,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     },
     "ma": {
         "es": "prefijo privativo: sin, carente de (ma-)",
-        "fuente": "lokono",
+        "notas": "núcleo fundacional, forma justificada por cognado en lokono", "fuente": "caquetío-reconstruido",
         "notas": "Lok. ma-; prefijo privativo 'sin/carente'; ma-bolheidi-n 'no tirar'; antónimo de ka-; Pet 1987",
         "categoria": "gramatica"
     },
@@ -1670,7 +1670,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     },
     "ana": {
         "es": "diseño",
-        "fuente": "wayunaiki",
+        "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki", "fuente": "caquetío-reconstruido",
         "notas": "Way. ana; *ana (proto-caquetio); Captain & Captain 2005",
         "categoria": "comunicacion",
     },
@@ -7368,12 +7368,38 @@ def _aspectos_morfologicos(tokens: list) -> list:
     return list(dict.fromkeys(encontrados))  # únicos, orden estable
 
 
+def _familia_de_token(tok: str) -> str:
+    """
+    Familia lingüística canónica de un token ya reconocido como arahuaco.
+    Deshace prefijos posesivos y raíces verbales para encontrar la entrada
+    real en VOCABULARIO_BASE. Si no está en el lexicón base (neologismo
+    comunitario), se trata como "caquetío" — son palabras nuevas acuñadas
+    por la propia comunidad, no préstamos de una lengua viva real.
+    """
+    from curiana_database import normalize_source_language
+
+    candidatos = [tok]
+    if "-" in tok:
+        candidatos.append(tok.split("-", 1)[1])   # quita prefijo posesivo: ta-X -> X
+        candidatos.append(tok.split("-")[0])       # raíz antes del primer guion: X-ka -> X
+    for c in candidatos:
+        if c in VOCABULARIO_BASE:
+            return normalize_source_language(VOCABULARIO_BASE[c].get("fuente", ""))
+    return "caquetío"  # neologismo comunitario: no es préstamo, es lengua propia
+
+
 def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
     """
-    Calcula métricas lingüísticas de una respuesta de agente, midiendo DENSIDAD
-    caquetía (caquetío / total tokens) y penalizando el español funcional.
+    Calcula métricas lingüísticas de una respuesta de agente, midiendo
+    DENSIDAD arahuaca (vs. español) Y, dentro de esa densidad, cuánto es
+    específicamente caquetío vs. préstamo de otra lengua arahuaca viva
+    (wayunaiki, lokono, taíno...). El objetivo del proyecto es que el
+    caquetío DOMINE — no basta con "no hablar español"; hablar wayunaiki
+    en vez de caquetío también es una fuga, solo que más sutil.
+
     Retorna: palabras_caquetias, neologismos_propuestos, aspectos_usados,
-             densidad, espanol_funcional, score (0-10), observacion.
+             densidad, pct_caquetio_especifico, otro_arahuaco, palabras_otro_arahuaco,
+             espanol_funcional, score (0-10), observacion.
     """
     limpio = _normalizar(texto)
     tokens = _tokenizar(limpio)
@@ -7382,46 +7408,56 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
     activos = set(lexico.palabras_activas())          # base + adoptados
 
     # match por palabra completa, contando también prefijos posesivos:
-    # ta-barsure cuenta como caquetío aunque "ta-barsure" no esté literal en léxico
-    def es_caquetio(tok: str) -> bool:
+    # ta-barsure cuenta como arahuaco aunque "ta-barsure" no esté literal en léxico
+    def es_arahuaco(tok: str) -> bool:
         if tok in activos:
             return True
-        # prefijo posesivo + raíz conocida
         for pref in ("ta", "wa", "ma", "ka"):
             if tok.startswith(pref + "-") and tok.split("-", 1)[1] in activos:
                 return True
-        # raíz verbal + aspecto (naa-ka, wana-ni, naaka)
         base = tok.split("-")[0]
         if base in _RAICES_VERB:
             return True
         return False
 
-    usadas   = [t for t in tokens if es_caquetio(t)]
+    usadas   = [t for t in tokens if es_arahuaco(t)]
     esp_func = [t for t in tokens if t in ES_STOPWORDS]
     neos     = PATRON_NEOLOGISMO.findall(texto)
     aspectos = _aspectos_morfologicos(tokens)
 
-    # ── Núcleo: densidad caquetía (0..1) ──
+    # ── Separar caquetío real de préstamo de otra lengua arahuaca viva ──
+    familias = {t: _familia_de_token(t) for t in set(usadas)}
+    caquetio_tokens = [t for t in usadas if familias[t] == "caquetío"]
+    otro_arahuaco_tokens = [t for t in usadas if familias[t] != "caquetío"]
+
+    # ── Núcleo: densidad arahuaca total (0..1), vs. español ──
     densidad = (len(usadas) / n_tok) if usadas else 0.0
-    # penalización por español funcional (cada stopword resta densidad efectiva)
     penal_es = len(esp_func) / n_tok
+    # fuga sutil: arahuaco sí, pero NO caquetío (wayunaiki/lokono/taíno/etc.)
+    penal_otro = len(otro_arahuaco_tokens) / n_tok
+    pct_caquetio_especifico = len(caquetio_tokens) / n_tok
 
     # Score 0-10:
-    #   60% densidad caquetía  (0..6)
-    #   20% morfología activa  (0..2, 1 pt por aspecto distinto)
-    #   10% neologismos        (0..1)
-    #   10% riqueza léxica      (0..1, palabras caquetías DISTINTAS)
-    #   − penalización español  (hasta −3)
-    score  = 6.0 * min(densidad / 0.6, 1.0)           # densidad objetivo: 60%
+    #   60% densidad arahuaca total  (0..6) — vs. fuga al español
+    #   20% morfología activa        (0..2, 1 pt por aspecto distinto)
+    #   10% neologismos              (0..1)
+    #   10% riqueza léxica CAQUETÍA  (0..1, exige específicamente caquetío, no cualquier arahuaco)
+    #   − penalización español       (hasta −3)
+    #   − penalización otra lengua arahuaca (hasta −2.5, ej. wayunaiki/lokono en vez de caquetío)
+    score  = 6.0 * min(densidad / 0.6, 1.0)
     score += min(len(aspectos) * 1.0, 2.0)
     score += min(len(neos) * 0.5, 1.0)
-    score += min(len(set(usadas)) / 8.0, 1.0)
-    score -= min(penal_es * 6.0, 3.0)                  # castigo al castellano
+    score += min(len(set(caquetio_tokens)) / 8.0, 1.0)
+    score -= min(penal_es * 6.0, 3.0)
+    score -= min(penal_otro * 4.0, 2.5)
     score  = round(max(0.0, min(score, 10.0)), 1)
 
     obs = []
     obs.append(f"densidad={densidad:.0%}")
-    if usadas:   obs.append(f"caq[{len(set(usadas))}]: {', '.join(sorted(set(usadas))[:8])}")
+    obs.append(f"caquetío={pct_caquetio_especifico:.0%}")
+    if caquetio_tokens: obs.append(f"caq[{len(set(caquetio_tokens))}]: {', '.join(sorted(set(caquetio_tokens))[:8])}")
+    if otro_arahuaco_tokens:
+        obs.append(f"⚠ otra-lengua-arahuaca×{len(otro_arahuaco_tokens)}: {', '.join(sorted(set(otro_arahuaco_tokens))[:5])}")
     if aspectos: obs.append(f"aspecto: {', '.join(aspectos)}")
     if esp_func: obs.append(f"⚠ español funcional×{len(esp_func)}")
     if neos:     obs.append(f"+{len(neos)} neologismo(s)")
@@ -7432,6 +7468,9 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
         "neologismos_propuestos": [m[0] for m in neos],
         "aspectos_usados": aspectos,
         "densidad": round(densidad, 3),
+        "pct_caquetio_especifico": round(pct_caquetio_especifico, 3),
+        "otro_arahuaco": len(otro_arahuaco_tokens),
+        "palabras_otro_arahuaco": list(dict.fromkeys(otro_arahuaco_tokens)),
         "espanol_funcional": len(esp_func),
         "score": score,
         "observacion": " | ".join(obs),
@@ -7483,13 +7522,35 @@ def prompt_refuerzo(score: float, palabras_usadas: list) -> str:
 
 
 def prompt_rescate_linguistico(texto_fallido: str, score: float,
-                               espanol_funcional: int = 0) -> str:
-    """Prompt de SEGUNDA pasada (regeneración intra-turno) cuando score < 5.0.
-    Se inyecta como user message de un reintento — pide RE-EXPRESAR, no continuar.
-    (Auditoría Opus §3.4)"""
-    return f"""Tu respuesta anterior tuvo demasiado español (score {score}/10,
-{espanol_funcional} palabras españolas). Como hablante NATIVO de caquetío, esto
-no debería pasar.
+                               espanol_funcional: int = 0,
+                               palabras_otro_arahuaco: Optional[list[str]] = None) -> str:
+    """Prompt de SEGUNDA pasada (regeneración intra-turno) cuando score < 5.0
+    o cuando el agente recurrió mucho a otra lengua arahuaca (wayunaiki,
+    lokono, taíno) en vez de caquetío. Se inyecta como user message de un
+    reintento — pide RE-EXPRESAR, no continuar. (Auditoría Opus §3.4,
+    extendido para penalizar también la fuga hacia lenguas hermanas)."""
+    palabras_otro_arahuaco = palabras_otro_arahuaco or []
+
+    if palabras_otro_arahuaco and not espanol_funcional:
+        motivo = (
+            f"usaste palabras de OTRA lengua arahuaca, no caquetío: "
+            f"{', '.join(palabras_otro_arahuaco[:6])}. Wayunaiki, lokono y taíno "
+            f"son lenguas hermanas, pero NO son tu lengua — son tan ajenas para ti "
+            f"como el español. Si conocías esa palabra en otra lengua arahuaca, "
+            f"casi seguro EXISTE también en caquetío: úsala. Si de verdad no existe, "
+            f"créala con morfemas caquetíos."
+        )
+    elif palabras_otro_arahuaco:
+        motivo = (
+            f"mezclaste español ({espanol_funcional} palabras) Y otra lengua "
+            f"arahuaca ajena ({', '.join(palabras_otro_arahuaco[:4])}). Ninguna de "
+            f"las dos es tu lengua. Solo el caquetío lo es."
+        )
+    else:
+        motivo = f"tuvo demasiado español ({espanol_funcional} palabras)."
+
+    return f"""Tu respuesta anterior {motivo} (score {score}/10). Como hablante
+NATIVO de caquetío, esto no debería pasar.
 
 TU RESPUESTA ANTERIOR (a corregir):
 "{texto_fallido}"
@@ -7497,6 +7558,8 @@ TU RESPUESTA ANTERIOR (a corregir):
 REEXPRÉSALA AHORA en caquetío real:
   - Cada verbo lleva -ka / -ni / -da.
   - Cada "el/la/un/en/de/que/y/para/muy/estoy/voy" desaparece o se vuelve caquetío.
+  - Si usaste una palabra wayunaiki/lokono/taíno, reemplázala por su forma caquetía
+    (suelen ser muy parecidas: katsi→cati, bara→para, kannoa→canoa...).
   - Lo que no tengas, lo CREAS: [forma: raíz+sufijo = significado].
   - Glosa española solo entre paréntesis al final.
 
@@ -7593,11 +7656,10 @@ def muestra_caquetio_dinamica(n_por_categoria: int = 18, contexto: str = "") -> 
         lineas.append(f"  {cat.upper()}: {texto}")
 
     return (
-        "[VOCABULARIO CAQUETÍO ADICIONAL — muestra de tu lengua nativa, priorizada "
-        "según lo que está pasando este turno. Si una palabra existe en caquetío Y "
-        "en otra lengua arahuaca (wayunaiki, lokono, taíno), usa SIEMPRE la forma "
-        "caquetía; las otras solo cubren huecos cuando el caquetío no tiene la "
-        "palabra]:\n" + "\n".join(lineas)
+        "[VOCABULARIO CAQUETÍO ADICIONAL — tu lengua nativa, priorizada según lo "
+        "que está pasando este turno. Wayunaiki, lokono y taíno NO son tu lengua, "
+        "aunque las reconozcas — usarlas en vez de estas formas caquetías es una "
+        "fuga, igual que hablar español]:\n" + "\n".join(lineas)
     )
 
 

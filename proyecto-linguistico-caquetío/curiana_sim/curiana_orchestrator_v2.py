@@ -70,9 +70,15 @@ Si te falta una palabra, créala con los morfemas que tienes. Escríbela [entre 
 Glosa al español solo entre paréntesis, al final, si es imprescindible.
 EJEMPLO: "Taya wana-ka arima wara bara-bana. Ta-barsure naba-ni. [kali-bana: kali+-bana = orilla de luz]."
 NO empieces con "Estoy..." ni "El sol..." — empieza con "Taya..." o "Nüma..." o directamente con el verbo.
-PRIORIDAD DE LENGUA: el caquetío es tu lengua, no una más entre varias. Si conoces una palabra
-caquetía para algo, úsala SIEMPRE antes que su equivalente en wayunaiki, lokono o taíno — esas
-lenguas hermanas solo llenan huecos cuando el caquetío no tiene la palabra."""
+PRIORIDAD DE LENGUA — ESTO ES UN ERROR GRAVE, NO UNA PREFERENCIA:
+Wayunaiki, lokono, taíno y garífuna son TAN AJENAS para ti como el español. Son lenguas
+de otros pueblos, no la tuya, aunque sean primas del caquetío y tú sepas reconocerlas.
+Si alguna vez "se te escapa" una palabra wayunaiki, lokono o taína porque la conoces de
+oídas, eso es una fuga lingüística — exactamente igual de grave que decir una palabra en
+español. Antes de usar una palabra de otra lengua arahuaca, pregúntate: ¿existe en
+caquetío? Casi siempre SÍ (kati, para, kanoa, hamaca... todas tienen forma caquetía).
+Solo si de verdad no existe, créala con morfemas caquetíos — nunca tomes prestada la
+forma de la lengua vecina."""
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -210,16 +216,23 @@ def call_agent(
     # 1ª pasada
     response = _invoke(client, system, user_message)
 
-    # ── RESCATE INTRA-TURNO (auditoría §3.4): si la densidad es baja, un único
-    #    reintento que re-expresa la respuesta fallida en caquetío real ──
+    # ── RESCATE INTRA-TURNO (auditoría §3.4, extendido): un único reintento
+    #    si la densidad es baja (español) O si el agente recurrió mucho a
+    #    otra lengua arahuaca (wayunaiki/lokono/taíno) en vez de caquetío —
+    #    esa fuga es más sutil que el español pero igual de indeseada, el
+    #    objetivo es que el caquetío DOMINE, no solo "no hablar español" ──
     metr = score_linguistico(response, lexico)
-    if metr["score"] < 5.0:
+    fuga_otra_lengua = metr.get("otro_arahuaco", 0) >= 3 and metr.get("pct_caquetio_especifico", 1) < 0.3
+    if metr["score"] < 5.0 or fuga_otra_lengua:
         rescate = prompt_rescate_linguistico(
-            response, metr["score"], metr.get("espanol_funcional", 0)
+            response, metr["score"], metr.get("espanol_funcional", 0),
+            metr.get("palabras_otro_arahuaco"),
         )
         try:
             response2 = _invoke(client, system, user_message + "\n\n" + rescate)
-            if score_linguistico(response2, lexico)["score"] > metr["score"]:
+            metr2 = score_linguistico(response2, lexico)
+            mejor = metr2["score"] > metr["score"] or metr2.get("pct_caquetio_especifico", 0) > metr.get("pct_caquetio_especifico", 0)
+            if mejor:
                 response = response2
         except Exception:
             pass  # ante fallo de red, conserva la 1ª respuesta
