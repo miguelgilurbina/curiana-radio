@@ -52,6 +52,9 @@ class RegistroInteraccion:
     observacion: str = ""
     # Neologismos extraídos (objetos completos)
     neologismos_extraidos: list = field(default_factory=list)
+    # Id de la fila en Supabase (agent_responses), si se persistió. Permite
+    # enlazar citas curadas con su respuesta original sin reconsultar la DB.
+    response_id: Optional[str] = None
 
     def to_dict(self) -> dict:
         d = asdict(self)
@@ -420,6 +423,143 @@ Escribe como un lingüista apasionado que ha vivido este año junto a la comunid
             return header + reporte + "\n"
         except Exception as e:
             return f"\n[Observer — reporte anual falló: {e}]\n"
+
+    # ── Curación de perfiles (Pista 1: antes vivía aparte en
+    #    curiana_perfilador.py; es la misma voz analítica que ya hace el
+    #    scoring por turno, solo que ahora también cura al cierre del run) ──
+
+    def analizar_agente_curado(self, agente: str) -> Optional[dict]:
+        """
+        Análisis narrativo curado de UN agente: rol en la comunidad, resumen
+        de su arco, y hasta 5 frases célebres con justificación e impacto.
+        Usa el historial que el propio Observer ya tiene en memoria — no
+        hace falta reconsultar Supabase para los datos de entrada.
+
+        Retorna None si el agente no tiene historial o si el análisis falla.
+        """
+        registros = [r for r in self._historial if r.agente == agente]
+        if not registros:
+            return None
+
+        intervenciones = "\n".join(
+            f"[día {r.dia}, turno {r.turno}, score {r.score}] {r.texto}"
+            for r in registros
+        )
+
+        from curiana_agents import get_agent
+        descripcion = get_agent(agente).get("descripcion", "")
+
+        prompt = f"""Eres un analista literario especializado en la lengua caquetía reconstruida.
+Vas a analizar las intervenciones de UN personaje de una simulación multi-agente
+ambientada en la Curiana (Golfete de Coro, siglo XIV-XV).
+
+PERSONAJE: {agente}
+Descripción narrativa: {descripcion}
+
+INTERVENCIONES (día/turno, score de densidad lingüística 0-10, texto):
+{intervenciones}
+
+Tu tarea:
+1. Resume en 2-3 frases el "arco" de este personaje durante la simulación: cómo
+   habló, qué lo distingue lingüísticamente, algún momento notable.
+2. Define su rol en la comunidad en una frase corta (ej. "Señor de la Curiana y piache").
+3. Elige hasta 5 frases célebres (las más originales, reveladoras del personaje,
+   con mayor densidad caquetía, o que introdujeron/adoptaron un neologismo).
+   Para cada una da una justificación breve (1 frase) y un impacto_score (0-10).
+
+Responde SOLO con JSON válido, sin texto adicional, con esta forma exacta:
+{{
+  "rol_comunidad": "...",
+  "resumen_arco": "...",
+  "quotes": [
+    {{"dia": <int o null>, "turno": <int o null>, "quote": "...", "justificacion": "...", "impacto_score": <float 0-10>}}
+  ]
+}}
+"""
+
+        try:
+            resp = self.client.messages.create(
+                model="claude-haiku-4-5-20251001",
+                max_tokens=1024,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            raw = "".join(b.text for b in resp.content if hasattr(b, "text")).strip()
+            if raw.startswith("```"):
+                raw = raw.split("```")[1]
+                if raw.startswith("json"):
+                    raw = raw[4:]
+            analisis = json.loads(raw)
+        except Exception as e:
+            print(f"  ⚠  {agente}: análisis curado falló ({e})")
+            return None
+
+        scores = [r.score for r in registros]
+        analisis["total_respuestas"] = len(registros)
+        analisis["avg_score"] = round(sum(scores) / len(scores), 2) if scores else None
+        analisis["neologismos_propuestos"] = sum(len(r.neologismos_extraidos) for r in registros)
+
+        # Mapear (día, turno) -> response_id para enlazar cada cita con su fila real
+        response_by_turno = {(r.dia, r.turno): r.response_id for r in registros}
+        for q in analisis.get("quotes", []):
+            q["response_id"] = response_by_turno.get((q.get("dia"), q.get("turno")))
+
+        return analisis
+
+    def generar_perfiles_curados(self, db, run_id: str, min_respuestas: int = 1) -> int:
+        """
+        Corre analizar_agente_curado() para cada agente con historial en este
+        run y persiste el resultado en Supabase (agent_profiles + agent_quotes).
+        Retorna cuántos perfiles se generaron con éxito.
+        """
+        from curiana_agents import get_agent
+
+        agentes = sorted({r.agente for r in self._historial})
+        adoptados_por_autor: dict[str, int] = {}
+        for neo in self.lexico.neologismos_adoptados():
+            adoptados_por_autor[neo.autor] = adoptados_por_autor.get(neo.autor, 0) + 1
+
+        ok = 0
+        for agente in agentes:
+            n_registros = len([r for r in self._historial if r.agente == agente])
+            if n_registros < min_respuestas:
+                continue
+
+            analisis = self.analizar_agente_curado(agente)
+            if not analisis:
+                continue
+
+            agent_def = get_agent(agente)
+            profile_id = db.save_agent_profile(
+                run_id=run_id,
+                agent_name=agente,
+                tier=agent_def.get("tier", 0),
+                rol_comunidad=analisis.get("rol_comunidad", ""),
+                resumen_arco=analisis.get("resumen_arco", ""),
+                total_respuestas=analisis["total_respuestas"],
+                avg_score=analisis["avg_score"],
+                neologismos_propuestos=analisis["neologismos_propuestos"],
+                neologismos_adoptados=adoptados_por_autor.get(agente, 0),
+            )
+            db.clear_agent_quotes(profile_id)
+
+            for q in analisis.get("quotes", []):
+                db.save_agent_quote(
+                    profile_id=profile_id,
+                    run_id=run_id,
+                    agent_name=agente,
+                    quote=q.get("quote", ""),
+                    justificacion=q.get("justificacion", ""),
+                    impacto_score=q.get("impacto_score", 0),
+                    response_id=q.get("response_id"),
+                    day=q.get("dia"),
+                    turn_num=q.get("turno"),
+                )
+
+            print(f"  ✓ {agente}: perfil curado ({analisis['total_respuestas']} respuestas, "
+                  f"{len(analisis.get('quotes', []))} frases)")
+            ok += 1
+
+        return ok
 
     # ── Exportación ───────────────────────────────────────────────────
 

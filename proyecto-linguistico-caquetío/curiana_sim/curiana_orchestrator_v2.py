@@ -414,6 +414,7 @@ def run_turn(
                     aspects_used=aspects_used,
                     neologisms_proposed=neo_count,
                 )
+                registro.response_id = response_id
 
                 # Persistir neologismos propuestos
                 for neo in neos:
@@ -588,6 +589,7 @@ def auto_mode(
     turnos: int,
     reporte_anual: bool = False,
     verbose: bool = True,
+    perfiles: bool = False,
 ):
     """
     Corre N turnos automáticamente.
@@ -675,6 +677,13 @@ def auto_mode(
     if reporte_anual:
         print(observer.reporte_anual_llm(anio_simulado))
 
+    if perfiles and hasattr(db, "client"):
+        print(f"\n{'─'*60}")
+        print("  Generando perfiles curados por agente (Observer)...")
+        n = observer.generar_perfiles_curados(db, run_id)
+        print(f"  ✓ {n} perfil(es) curado(s) generado(s).")
+        print(f"{'─'*60}")
+
 
 # ══════════════════════════════════════════════════════════════════════
 # ENTRY POINT
@@ -700,17 +709,24 @@ if __name__ == "__main__":
         "--silencioso", action="store_true",
         help="Solo mostrar reportes, no cada interacción individual."
     )
+    parser.add_argument(
+        "--perfiles", action="store_true",
+        help="Al terminar, generar perfiles curados por agente (rol, arco, "
+             "frases célebres) vía el Observer y guardarlos en Supabase."
+    )
     args = parser.parse_args()
 
     client = get_client()
 
     if args.anio:
-        auto_mode(client, 240, reporte_anual=True, verbose=not args.silencioso)
+        auto_mode(client, 240, reporte_anual=True, verbose=not args.silencioso,
+                   perfiles=args.perfiles)
     elif args.auto > 0:
         auto_mode(
             client, args.auto,
             reporte_anual=args.reporte,
-            verbose=not args.silencioso
+            verbose=not args.silencioso,
+            perfiles=args.perfiles,
         )
     else:
         interactive_mode(client)

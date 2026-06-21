@@ -448,6 +448,82 @@ class CurianaDB:
         )
         return result.data or []
 
+    # ── Perfiles de agentes ───────────────────────────────────────────
+
+    def get_agent_responses(self, run_id: str, agent_name: str) -> list[dict]:
+        """Todas las respuestas de un agente en un run, ordenadas cronológicamente."""
+        result = (
+            self.client.table("agent_responses")
+            .select("id, response_text, score, words_used, neologisms_proposed, turn_id")
+            .eq("run_id", run_id)
+            .eq("agent_name", agent_name)
+            .order("created_at")
+            .execute()
+        )
+        return result.data or []
+
+    def save_agent_profile(
+        self,
+        run_id: str,
+        agent_name: str,
+        tier: int,
+        rol_comunidad: str,
+        resumen_arco: str,
+        total_respuestas: int,
+        avg_score: Optional[float],
+        neologismos_propuestos: int,
+        neologismos_adoptados: int,
+    ) -> str:
+        """Crea o actualiza el perfil narrativo de un agente para un run. Retorna profile_id."""
+        row = {
+            "run_id": run_id,
+            "agent_name": agent_name,
+            "tier": tier,
+            "rol_comunidad": rol_comunidad,
+            "resumen_arco": resumen_arco,
+            "total_respuestas": total_respuestas,
+            "avg_score": avg_score,
+            "neologismos_propuestos": neologismos_propuestos,
+            "neologismos_adoptados": neologismos_adoptados,
+        }
+        result = (
+            self.client.table("agent_profiles")
+            .upsert(row, on_conflict="run_id,agent_name")
+            .execute()
+        )
+        return result.data[0]["id"]
+
+    def clear_agent_quotes(self, profile_id: str):
+        """Borra las frases previas de un perfil antes de regenerarlas."""
+        self.client.table("agent_quotes").delete().eq("profile_id", profile_id).execute()
+
+    def save_agent_quote(
+        self,
+        profile_id: str,
+        run_id: str,
+        agent_name: str,
+        quote: str,
+        justificacion: str,
+        impacto_score: float,
+        response_id: Optional[str] = None,
+        day: Optional[int] = None,
+        turn_num: Optional[int] = None,
+    ) -> str:
+        """Guarda una frase célebre curada por el agente analista."""
+        row = {
+            "profile_id": profile_id,
+            "run_id": run_id,
+            "agent_name": agent_name,
+            "quote": quote,
+            "justificacion": justificacion,
+            "impacto_score": impacto_score,
+            "response_id": response_id,
+            "day": day,
+            "turn_num": turn_num,
+        }
+        result = self.client.table("agent_quotes").insert(row).execute()
+        return result.data[0]["id"]
+
 
 # ══════════════════════════════════════════════════════════════════════
 # MODO DEGRADADO (sin Supabase)
@@ -473,6 +549,12 @@ class CurianaDBMock:
     def latest_run(self): return None
     def language_drift(self, *a): return []
     def adopted_neologisms(self, *a): return []
+    def get_agent_responses(self, *a, **kw): return []
+    def save_agent_profile(self, *a, **kw) -> str:
+        import uuid; return str(uuid.uuid4())
+    def clear_agent_quotes(self, *a, **kw): pass
+    def save_agent_quote(self, *a, **kw) -> str:
+        import uuid; return str(uuid.uuid4())
 
 
 def get_db() -> "CurianaDB | CurianaDBMock":
