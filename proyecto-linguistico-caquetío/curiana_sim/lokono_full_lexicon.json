@@ -1,0 +1,1148 @@
+{
+  "adali": {
+    "es": "sol (forma alternativa, sin h- prostética)",
+    "fuente": "lokono",
+    "notas": "Lok. adali; variante de hadali; artículo li [+masc]; cognado de cazi/cali caquetío; *kali (proto-arahuaco); Goeje 1928",
+    "categoria": "cosmos"
+  },
+  "oniabo": {
+    "es": "agua, cuerpo de agua",
+    "fuente": "lokono",
+    "notas": "Lok. oniabo; artículo to [NH]; forma compleja oni+abo; cf. Lok. tuna (río); Brinton 1871; Goeje 1928",
+    "categoria": "geografia"
+  },
+  "oni": {
+    "es": "lluvia",
+    "fuente": "lokono",
+    "notas": "Lok. oni; 'lluvia'; raíz *uni arahuacana; cf. oniabo (agua); Goeje 1928",
+    "categoria": "cosmos"
+  },
+  "buru": {
+    "es": "cielo, firmamento",
+    "fuente": "lokono",
+    "notas": "Lok. buru; 'cielo/firmamento'; cf. Wayuu seru (cielo); raíz arahuacana *buri; Goeje 1928",
+    "categoria": "cosmos"
+  },
+  "kolokon": {
+    "es": "en el fuego, en la luz (postposición)",
+    "fuente": "lokono",
+    "notas": "Lok. kolokon; postposición locativa 'en fuego o luz'; hadali kolokon 'en el sol'; Pet 1987",
+    "categoria": "cosmos"
+  },
+  "siba": {
+    "es": "piedra, roca",
+    "fuente": "lokono",
+    "notas": "Lok. siba; artículo to [NH]; siba-be 'piedras'; cognado con iba/kiba (Carib.); Brinton 1871; Goeje 1928",
+    "categoria": "geografia"
+  },
+  "boro": {
+    "es": "aldea, pueblo, asentamiento",
+    "fuente": "lokono",
+    "notas": "Lok. boro; 'aldea/asentamiento arahuacano'; cf. topónimos Venezuela con -boro/-buro; Goeje 1928",
+    "categoria": "geografia"
+  },
+  "ori": {
+    "es": "cerro, colina, montaña",
+    "fuente": "lokono",
+    "notas": "Lok. ori; 'cerro/colina'; raíz arahuacana *ari montaña; cf. Oriente en topónimos; Goeje 1928",
+    "categoria": "geografia"
+  },
+  "kabojan": {
+    "es": "conuco, milpa, terreno de cultivo",
+    "fuente": "lokono",
+    "notas": "Lok. kabojan; 'conuco/terreno de cultivo'; ly-kabojan 'su conuco'; cognado del caquetío 'conuco' (del arahuacano); Pet 1987",
+    "categoria": "geografia"
+  },
+  "kairi": {
+    "es": "isla, territorio insular",
+    "fuente": "lokono",
+    "notas": "Lok. kairi; 'isla'; raíz *kairi pan-arahuacana; topónimo Trinidad (Cairi caquetío); Brinton 1871",
+    "categoria": "geografia"
+  },
+  "khabo": {
+    "es": "mano",
+    "fuente": "lokono",
+    "notas": "Lok. khabo; 'mano'; da-khabo 'mi mano'; khabo-ho (forma generalizada); Pet 1987",
+    "categoria": "cuerpo"
+  },
+  "dyna": {
+    "es": "brazo",
+    "fuente": "lokono",
+    "notas": "Lok. dyna; 'brazo'; da-dyna 'mi brazo'; ada dyna 'rama de árbol (brazo del árbol)'; Pet 1987",
+    "categoria": "cuerpo"
+  },
+  "bana": {
+    "es": "hígado",
+    "fuente": "lokono",
+    "notas": "Lok. bana; 'hígado'; bana-ha (forma generalizada); Pet 1987",
+    "categoria": "cuerpo"
+  },
+  "yda": {
+    "es": "piel, corteza (de árbol)",
+    "fuente": "lokono",
+    "notas": "Lok. yda; 'piel/corteza'; ada yda 'corteza del árbol'; metáfora piel=corteza pan-arahuacana; Pet 1987",
+    "categoria": "cuerpo"
+  },
+  "aithi": {
+    "es": "hijo (término de parentesco inalienable)",
+    "fuente": "lokono",
+    "notas": "Lok. aithi; 'hijo'; l-aithi 'su hijo'; inalienable — siempre posesivo; Pet 1987",
+    "categoria": "parentesco"
+  },
+  "kabadaro": {
+    "es": "jaguar, yaguareté",
+    "fuente": "lokono",
+    "notas": "Lok. kabadaro; 'jaguar'; artículo li [+masc fuerte]; préstamo del caribe insular en Lokono; Goeje 1928; Pet 1987",
+    "categoria": "fauna"
+  },
+  "hikolhi": {
+    "es": "tortuga (animal de buen augurio)",
+    "fuente": "lokono",
+    "notas": "Lok. hikolhi; 'tortuga'; tratado como [+masc] por ser animal apreciado; Goeje 1928; Pet 1987",
+    "categoria": "fauna"
+  },
+  "kodibio": {
+    "es": "pájaro (forma genérica)",
+    "fuente": "lokono",
+    "notas": "Lok. kodibio; 'pájaro'; to kodibio; to kodibio-be 'los pájaros'; Pet 1987",
+    "categoria": "fauna"
+  },
+  "foro": {
+    "es": "pájaro, ave (forma alternativa)",
+    "fuente": "lokono",
+    "notas": "Lok. foro; 'pájaro/ave'; forma alternativa de kodibio en dialectos del Demerara; Brinton 1871; Goeje 1928",
+    "categoria": "fauna"
+  },
+  "kama": {
+    "es": "danta, tapir (Tapirus terrestris)",
+    "fuente": "lokono",
+    "notas": "Lok. kama; 'tapir/danta'; cf. firo-bero (apelativo tapir 'cosa grande'); raíz arahuacana; Goeje 1928",
+    "categoria": "fauna"
+  },
+  "achi": {
+    "es": "ají, pimienta (Capsicum sp.)",
+    "fuente": "lokono",
+    "notas": "Lok. achi; 'ají/pimienta'; raíz *achi arahuacana universal; venezolanismo ají del mismo origen; Brinton 1871",
+    "categoria": "flora"
+  },
+  "mariti": {
+    "es": "maíz (Zea mays)",
+    "fuente": "lokono",
+    "notas": "Lok. mariti; 'maíz'; cf. mazato (chicha de maíz, Caq.); raíz *maiti arahuacana; Brinton 1871",
+    "categoria": "flora"
+  },
+  "malhisi": {
+    "es": "maíz (forma alternativa Surinam)",
+    "fuente": "lokono",
+    "notas": "Lok. malhisi; 'maíz' (dialectal Surinam/Guyana); cf. mariti; Pet 1987",
+    "categoria": "flora"
+  },
+  "yuka": {
+    "es": "yuca, mandioca (Manihot esculenta)",
+    "fuente": "lokono",
+    "notas": "Lok. yuka; 'yuca/mandioca'; raíz *yuka pan-arahuacana; venezolanismo 'yuca' de este origen; Goeje 1928",
+    "categoria": "flora"
+  },
+  "kasabi": {
+    "es": "casabe, pan de yuca",
+    "fuente": "lokono",
+    "notas": "Lok. kasabi; 'casabe/pan de yuca'; cognado de casabe (caquetío, taíno); raíz *kasabi pan-arahuacana; Goeje 1928",
+    "categoria": "alimentos"
+  },
+  "amana": {
+    "es": "piña (Ananas comosus)",
+    "fuente": "lokono",
+    "notas": "Lok. amana; 'piña'; raíz *nana ~ *amana arahuacana; cf. Guaraní nana; Goeje 1928; Brinton 1871",
+    "categoria": "flora"
+  },
+  "kasiri": {
+    "es": "chicha, bebida fermentada de yuca",
+    "fuente": "lokono",
+    "notas": "Lok. kasiri; 'chicha/bebida fermentada'; raíz *kasiri pan-arahuacana; cognado en Wayuu kasira; Goeje 1928",
+    "categoria": "alimentos"
+  },
+  "khotaha": {
+    "es": "carne, presa de caza",
+    "fuente": "lokono",
+    "notas": "Lok. khotaha; 'carne/presa'; cf. Caq. registro de términos de caza; Pet 1987",
+    "categoria": "alimentos"
+  },
+  "semaara": {
+    "es": "flecha",
+    "fuente": "lokono",
+    "notas": "Lok. semaara; 'flecha'; cf. Caq. saeta/flecha (registros coloniales); Brinton 1871",
+    "categoria": "utiles"
+  },
+  "anikho": {
+    "es": "pertenencias, bienes personales",
+    "fuente": "lokono",
+    "notas": "Lok. anikho; 'pertenencias/bienes'; d-anikho 'mis pertenencias'; inalienable; Pet 1987",
+    "categoria": "utiles"
+  },
+  "bode": {
+    "es": "anzuelo de pesca",
+    "fuente": "lokono",
+    "notas": "Lok. bode; 'anzuelo'; bode-he (forma generalizada); de bode 'mi anzuelo'; da-bode-da-bo 'estoy pescando'; Pet 1987",
+    "categoria": "utiles"
+  },
+  "lokono": {
+    "es": "persona arahuaca, miembro del pueblo Lokono",
+    "fuente": "lokono",
+    "notas": "Lok. lokono; autónimo arahuacano 'persona/gente nuestra'; base del étnico Lokono/Arawak; cognado con kakythi; Goeje 1928",
+    "categoria": "parentesco"
+  },
+  "wadili": {
+    "es": "hombre, varón (forma genérica de sexo masculino)",
+    "fuente": "lokono",
+    "notas": "Lok. wadili; 'hombre/varón'; li wadili 'el hombre'; [+masc]; también para animales machos; Pet 1987",
+    "categoria": "parentesco"
+  },
+  "hiaro": {
+    "es": "mujer, hembra (forma genérica de sexo femenino)",
+    "fuente": "lokono",
+    "notas": "Lok. hiaro; 'mujer/hembra'; to hiaro 'la mujer'; [NM]; también para animales hembras; Pet 1987",
+    "categoria": "parentesco"
+  },
+  "kakythi": {
+    "es": "hombre adulto arahuacano",
+    "fuente": "lokono",
+    "notas": "Lok. kakythi; 'hombre adulto' [+masc +human]; kakythi-non 'los hombres'; base de kakythinon 'pueblo'; Taylor 1977; Pet 1987",
+    "categoria": "parentesco"
+  },
+  "kakythinon": {
+    "es": "pueblo, gente arahuacana",
+    "fuente": "lokono",
+    "notas": "Lok. kakythinon; 'pueblo/gente'; na kakythinon 'la gente'; plural de kakythi; cognado posible con 'caquetío'; Pet 1987",
+    "categoria": "parentesco"
+  },
+  "ibili": {
+    "es": "niño, infante (sin distinción de género)",
+    "fuente": "lokono",
+    "notas": "Lok. ibili; 'niño/infante'; ibili-non 'niños'; tratado como [+human] independiente del grupo; Pet 1987",
+    "categoria": "parentesco"
+  },
+  "eretho": {
+    "es": "esposa (término inalienable)",
+    "fuente": "lokono",
+    "notas": "Lok. eretho; 'esposa'; da-eretho 'mi esposa'; inalienable, siempre posesivo; Pet 1987",
+    "categoria": "parentesco"
+  },
+  "rethi": {
+    "es": "esposo (término inalienable)",
+    "fuente": "lokono",
+    "notas": "Lok. rethi; 'esposo'; da-rethi 'mi esposo'; inalienable, siempre posesivo; Pet 1987",
+    "categoria": "parentesco"
+  },
+  "dalli": {
+    "es": "padre (mi padre, forma poseída)",
+    "fuente": "lokono",
+    "notas": "Lok. dalli; 'mi padre'; da-thi (forma morfológica); cf. Brinton 1871 ilta/dalli; cognado con tata (Caq.); Brinton 1871",
+    "categoria": "parentesco"
+  },
+  "ahati": {
+    "es": "compañero, aliado, amigo ceremonial",
+    "fuente": "lokono",
+    "notas": "Lok. ahati; 'compañero/aliado'; cf. guaitiao (ritual de amistad interétnica caquetío); Brinton 1871",
+    "categoria": "parentesco"
+  },
+  "okithi": {
+    "es": "hermano menor (visto por el mayor)",
+    "fuente": "lokono",
+    "notas": "Lok. okithi; 'hermano menor' [+masc]; d-okithi 'mi hermano menor'; Pet 1987",
+    "categoria": "parentesco"
+  },
+  "okitho": {
+    "es": "hermana menor (vista por la mayor)",
+    "fuente": "lokono",
+    "notas": "Lok. okitho; 'hermana menor' [NM]; d-okitho 'mi hermana menor'; Pet 1987",
+    "categoria": "parentesco"
+  },
+  "bokithi": {
+    "es": "hermano mayor (visto por el menor)",
+    "fuente": "lokono",
+    "notas": "Lok. bokithi; 'hermano mayor'; da-bokithi 'mi hermano mayor'; Pet 1987",
+    "categoria": "parentesco"
+  },
+  "Adajali": {
+    "es": "Dios, ser supremo (literalmente: el que vive arriba)",
+    "fuente": "lokono",
+    "notas": "Lok. Adajali; 'Dios/ser supremo'; de ajomyn-thi 'el que es alto'; Adajali boko = 'libro de Dios/Biblia'; Pet 1987",
+    "categoria": "ritual"
+  },
+  "piayeman": {
+    "es": "curandero aprendiz, asistente del chamán",
+    "fuente": "lokono",
+    "notas": "Lok. piayeman; derivado de piaye (chamán); forma con sufijo de agente -man; Goeje 1928",
+    "categoria": "ritual"
+  },
+  "dykhyn": {
+    "es": "ver, percibir visualmente",
+    "fuente": "lokono",
+    "notas": "Lok. dykhyn; 'ver'; li wadili dykha siba-be 'el hombre vio las piedras'; Pet 1987",
+    "categoria": "verbos"
+  },
+  "kanabyn": {
+    "es": "oír, escuchar",
+    "fuente": "lokono",
+    "notas": "Lok. kanabyn; 'oír/escuchar'; to hiaro kanaba-fa to kodibio-be khonan 'la mujer escuchará a los pájaros'; Pet 1987",
+    "categoria": "verbos"
+  },
+  "faryn": {
+    "es": "matar, dar muerte",
+    "fuente": "lokono",
+    "notas": "Lok. faryn; 'matar'; li fary-fa aba kabadaro 'él matará un jaguar'; intransitiviza en a-stem: fara 'pelear'; Pet 1987",
+    "categoria": "verbos"
+  },
+  "sikin": {
+    "es": "dar, poner",
+    "fuente": "lokono",
+    "notas": "Lok. sikin; 'dar/poner'; da-siki-fa no thy-myn 'yo se lo daré a ella'; ditransitivo; Pet 1987",
+    "categoria": "verbos"
+  },
+  "khin": {
+    "es": "comer",
+    "fuente": "lokono",
+    "notas": "Lok. khin; 'comer'; khesia 'comida' (nominalización WH.OBJ); raíz arahuacana universal; Pet 1987",
+    "categoria": "verbos"
+  },
+  "ythyn": {
+    "es": "beber",
+    "fuente": "lokono",
+    "notas": "Lok. ythyn; 'beber'; ythysia 'bebida' (nominalización); kathysia 'tener bebida'; Pet 1987",
+    "categoria": "verbos"
+  },
+  "osyn": {
+    "es": "ir, caminar, desplazarse",
+    "fuente": "lokono",
+    "notas": "Lok. osyn; 'ir/caminar'; l-osy-fa 'él irá'; osy-n (forma citación); Pet 1987",
+    "categoria": "verbos"
+  },
+  "andyn": {
+    "es": "llegar, arribar",
+    "fuente": "lokono",
+    "notas": "Lok. andyn; 'llegar/arribar'; andyn vs. andan 'tocar/sentir' (par básico/a-stem); Pet 1987",
+    "categoria": "verbos"
+  },
+  "dian": {
+    "es": "hablar, decir",
+    "fuente": "lokono",
+    "notas": "Lok. dian; 'hablar/decir'; dia-thi 'hablante' (agent nominalizer -thi); Lokono Dian = 'habla Lokono'; Pet 1987",
+    "categoria": "verbos"
+  },
+  "simakyn": {
+    "es": "llamar (a alguien)",
+    "fuente": "lokono",
+    "notas": "Lok. simakyn; 'llamar'; da-simaka-bo 'estoy llamando'; simakan 'gritar, clamar'; Pet 1987",
+    "categoria": "verbos"
+  },
+  "bokon": {
+    "es": "cocinar, hervir",
+    "fuente": "lokono",
+    "notas": "Lok. bokon; 'cocinar/hervir'; bokonoa 'ser cocinado/hervirse' (pasivo/reflexivo); Pet 1987",
+    "categoria": "verbos"
+  },
+  "thimin": {
+    "es": "nadar, cruzar a nado",
+    "fuente": "lokono",
+    "notas": "Lok. thimin; 'nadar'; thiman 'cruzar (a nado/río)'; par básico/a-stem; Pet 1987",
+    "categoria": "verbos"
+  },
+  "boratyn": {
+    "es": "ayudar, salvar",
+    "fuente": "lokono",
+    "notas": "Lok. boratyn; 'ayudar/salvar'; borata-lhin 'el que ayuda/salvado'; sufijo habitual -lhin; Pet 1987",
+    "categoria": "verbos"
+  },
+  "fatadyn": {
+    "es": "golpear, pegar",
+    "fuente": "lokono",
+    "notas": "Lok. fatadyn; 'golpear/pegar'; fatada-n (a-stem): 'andar golpeando'; thy-fatady-fa to kalhina 'ella golpeará la gallina'; Pet 1987",
+    "categoria": "verbos"
+  },
+  "mithadan": {
+    "es": "ridiculizar, burlarse",
+    "fuente": "lokono",
+    "notas": "Lok. mithadan; 'ridiculizar/burlarse'; na-mithada-fa da-khonan 'ellos se burlarán de mí'; Pet 1987",
+    "categoria": "verbos"
+  },
+  "sokon": {
+    "es": "cortar (con machete o hacha)",
+    "fuente": "lokono",
+    "notas": "Lok. sokon; 'cortar'; da-sokoa 'me cortaron / me corté'; oa-stem = pasivo/reflexivo; Pet 1987",
+    "categoria": "verbos"
+  },
+  "wadan": {
+    "es": "buscar, procurar",
+    "fuente": "lokono",
+    "notas": "Lok. wadan; 'buscar'; cf. Wayuu wada (caminar buscando); raíz arahuacana; Pet 1987",
+    "categoria": "verbos"
+  },
+  "malhitan": {
+    "es": "crear, hacer (algo nuevo)",
+    "fuente": "lokono",
+    "notas": "Lok. malhitan; 'crear/hacer'; malhita-thi 'el creador'; usado en contexto cosmogónico; Pet 1987",
+    "categoria": "verbos"
+  },
+  "firo": {
+    "es": "grande, de gran tamaño",
+    "fuente": "lokono",
+    "notas": "Lok. firo; 'grande'; firo-ka no 'es grande'; firo-bero 'cosa grande = tapir'; Pet 1987",
+    "categoria": "adjetivos"
+  },
+  "firobero": {
+    "es": "tapir, danta (literalmente: la cosa grande)",
+    "fuente": "lokono",
+    "notas": "Lok. firo-bero; 'tapir' (lit. 'cosa grande'); derivado de firo + -bero nominalizador NH; Pet 1987",
+    "categoria": "fauna"
+  },
+  "siri": {
+    "es": "pequeño, de tamaño reducido",
+    "fuente": "lokono",
+    "notas": "Lok. siri; 'pequeño'; cf. Wayuu -chi (diminutivo); antónimo de firo; Goeje 1928",
+    "categoria": "adjetivos"
+  },
+  "hehen": {
+    "es": "amarillo",
+    "fuente": "lokono",
+    "notas": "Lok. hehen; 'amarillo'; hehe-thi 'el amarillo' (nominalización); Pet 1987",
+    "categoria": "adjetivos"
+  },
+  "mahoro": {
+    "es": "blanco, claro",
+    "fuente": "lokono",
+    "notas": "Lok. mahoro; 'blanco/claro'; raíz *mahoro arahuacana; Goeje 1928",
+    "categoria": "adjetivos"
+  },
+  "siwi": {
+    "es": "negro, oscuro",
+    "fuente": "lokono",
+    "notas": "Lok. siwi; 'negro/oscuro'; raíz arahuacana; Goeje 1928",
+    "categoria": "adjetivos"
+  },
+  "roodi": {
+    "es": "rojo, colorado",
+    "fuente": "lokono",
+    "notas": "Lok. roodi; 'rojo'; raíz arahuacana; Goeje 1928",
+    "categoria": "adjetivos"
+  },
+  "joho": {
+    "es": "muchos, numeroso",
+    "fuente": "lokono",
+    "notas": "Lok. joho; 'muchos/numeroso'; cuantificador indefinido; Pet 1987",
+    "categoria": "adjetivos"
+  },
+  "de": {
+    "es": "yo (pronombre libre 1sg)",
+    "fuente": "lokono",
+    "notas": "Lok. de; '1SG pronombre libre'; da- como prefijo verbal/posesivo; de bode 'mi anzuelo'; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "bi": {
+    "es": "tú (pronombre libre 2sg)",
+    "fuente": "lokono",
+    "notas": "Lok. bi; '2SG pronombre libre'; by- como prefijo verbal/posesivo; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "we": {
+    "es": "nosotros (pronombre libre 1pl)",
+    "fuente": "lokono",
+    "notas": "Lok. we; '1PL pronombre libre'; wa- como prefijo verbal/posesivo; wa-karobo-n 'nuestro plato'; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "li": {
+    "es": "artículo masculino humano (3sg masc)",
+    "fuente": "lokono",
+    "notas": "Lok. li; artículo [+masc +humano]; li wadili 'el hombre'; ly- como prefijo verbal; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "to": {
+    "es": "artículo no-masculino / no-humano (3sg NM/NH)",
+    "fuente": "lokono",
+    "notas": "Lok. to; artículo [NM/NH]; to hiaro 'la mujer'; to oniabo 'el agua'; thy- como prefijo verbal; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "na": {
+    "es": "artículo plural humano (3pl)",
+    "fuente": "lokono",
+    "notas": "Lok. na; artículo [+humano plural]; na kakythinon 'la gente'; na- como prefijo verbal 3pl; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "non": {
+    "es": "sufijo plural humano (-non)",
+    "fuente": "lokono",
+    "notas": "Lok. -non; sufijo plural [+humano]; kakythi-non 'hombres'; ibili-non 'niños'; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "be": {
+    "es": "sufijo plural general (-be)",
+    "fuente": "lokono",
+    "notas": "Lok. -be; sufijo plural [+/-humano]; siba-be 'piedras'; wadili-be 'hombres (grupo)'; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "fa": {
+    "es": "sufijo de futuro (-fa/-ha)",
+    "fuente": "lokono",
+    "notas": "Lok. -fa/-ha; 'futuro'; l-osy-fa 'él irá'; da-siki-fa 'yo daré'; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "bo": {
+    "es": "sufijo continuativo / presente progresivo (-bo)",
+    "fuente": "lokono",
+    "notas": "Lok. -bo; 'continuativo/progresivo'; li wadili dalhida-bo 'el hombre está corriendo'; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "ka": {
+    "es": "prefijo atributivo: tener, ser provisto de (ka-)",
+    "fuente": "lokono",
+    "notas": "Lok. ka-; prefijo atributivo 'tener/ser provisto'; ka-sikoa 'tener casa'; ka-thysia 'tener bebida'; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "ma": {
+    "es": "prefijo privativo: sin, carente de (ma-)",
+    "fuente": "lokono",
+    "notas": "Lok. ma-; prefijo privativo 'sin/carente'; ma-bolheidi-n 'no tirar'; antónimo de ka-; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "koana": {
+    "es": "sufijo nominalizador instrumental: cosa que hace X (-koana)",
+    "fuente": "lokono",
+    "notas": "Lok. -koana; nominalizador instrumental 'cosa que hace X'; dalhidi-koana 'vehículo'; da-dalhidi-koana 'mi auto'; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "waja": {
+    "es": "solo, por sí mismo (sufijo reflexivo -waja)",
+    "fuente": "lokono",
+    "notas": "Lok. -waja; 'reflexivo/solo'; ly-soka ly-waja 'él se cortó solo'; influencia holandés/sranan tongo en Surinam; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "oma": {
+    "es": "con (postposición comitativa: en compañía de)",
+    "fuente": "lokono",
+    "notas": "Lok. oma; 'con (acompañamiento)'; li fara-fa to kabadaro oma 'él peleará con el jaguar'; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "myn": {
+    "es": "a, para (postposición benefactiva/direccional)",
+    "fuente": "lokono",
+    "notas": "Lok. myn; 'a/para'; da-siki-fa no thy-myn 'yo se lo daré a ella'; ly-myn 'a él'; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "khonan": {
+    "es": "sobre, acerca de, de (postposición temática)",
+    "fuente": "lokono",
+    "notas": "Lok. khonan; 'sobre/acerca de/de'; na-mithada-fa da-khonan 'se burlarán de mí'; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "loko": {
+    "es": "dentro de (postposición interior para objetos huecos/sólidos)",
+    "fuente": "lokono",
+    "notas": "Lok. loko; 'dentro de'; postposición de clase espacial: hueco/sólido; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "diako": {
+    "es": "encima de, sobre (postposición de superficie superior)",
+    "fuente": "lokono",
+    "notas": "Lok. diako; 'encima de/sobre'; postposición que requiere referente con superficie; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "nro": {
+    "es": "hacia (sufijo direccional -nro)",
+    "fuente": "lokono",
+    "notas": "Lok. -nro; 'hacia'; da-sika-fa no bahy-nro 'la llevaré hacia casa'; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "aba": {
+    "es": "uno, un (numeral y artículo indefinido)",
+    "fuente": "lokono",
+    "notas": "Lok. aba; 'uno/un'; aba sikoa 'una casa'; aba-li 'un hombre'; cognado *aba pan-arahuacano; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "bian": {
+    "es": "dos (numeral)",
+    "fuente": "lokono",
+    "notas": "Lok. bian; 'dos'; bian sikoa 'dos casas'; bian-ninon 'dos personas'; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "kabyn": {
+    "es": "tres (numeral)",
+    "fuente": "lokono",
+    "notas": "Lok. kabyn; 'tres'; kabyn wadili-non 'tres hombres'; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "bithi": {
+    "es": "cuatro (numeral)",
+    "fuente": "lokono",
+    "notas": "Lok. bithi; 'cuatro'; bithi hiaro-non 'cuatro mujeres'; bithi-ka-kothi-bero 'cuadrúpedo = auto'; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "ama": {
+    "es": "qué (interrogativo)",
+    "fuente": "lokono",
+    "notas": "Lok. ama; 'qué'; interrogativo de cosa/evento; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "alikan": {
+    "es": "quién (interrogativo)",
+    "fuente": "lokono",
+    "notas": "Lok. alikan; 'quién'; interrogativo de persona [+humano]; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "kho": {
+    "es": "no, negación (partícula negativa)",
+    "fuente": "lokono",
+    "notas": "Lok. kho; 'no/negación'; partícula negativa verbal; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "ken": {
+    "es": "y (conjunción copulativa)",
+    "fuente": "lokono",
+    "notas": "Lok. ken; 'y'; conjunción coordinante; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "hibin": {
+    "es": "ya, de ya (aspecto completivo)",
+    "fuente": "lokono",
+    "notas": "Lok. hibin; 'ya'; marcador de completitud/aspecto; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "lhin": {
+    "es": "sufijo de agente habitual / profesión (-lhin)",
+    "fuente": "lokono",
+    "notas": "Lok. -lhin; nominalizador agentivo habitual; borata-lhin 'el que salva'; jokara-lhin 'vendedor'; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "thi": {
+    "es": "sufijo relativizador de sujeto masculino (-thi)",
+    "fuente": "lokono",
+    "notas": "Lok. -thi; WH.SUBJ relativizador [+masc]; li wadili dykha-thi 'el hombre que vio'; kaky-thi 'el que vive = hombre'; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "sia": {
+    "es": "sufijo relativizador de objeto (-sia)",
+    "fuente": "lokono",
+    "notas": "Lok. -sia; WH.OBJ relativizador; khin→khesia 'comida'; ythyn→ythysia 'bebida'; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "doma": {
+    "es": "porque, a causa de (postposición causal)",
+    "fuente": "lokono",
+    "notas": "Lok. doma; 'porque/a causa de'; li doma da-fatadoa 'a causa de él me golpearon'; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "falhetho": {
+    "es": "forastero blanco, europeo (literalmente: hombre de otro tipo)",
+    "fuente": "lokono",
+    "notas": "Lok. falhetho; 'hombre blanco/europeo'; [+masc -humano=arahuacano]; cf. alijuna (Wayuu para no-arahuacano); Pet 1987",
+    "categoria": "parentesco"
+  },
+  "liko": {
+    "es": "nuestro (posesivo 1pl, poseído)",
+    "fuente": "lokono",
+    "notas": "Lok. liko- / wa-; '1PL posesivo'; wa-karobo 'nuestro plato'; wa-kali 'nuestra casa'; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "kaly": {
+    "es": "casa (forma poseída: nu-kali = mi casa)",
+    "fuente": "lokono",
+    "notas": "Lok. kaly/kali; 'casa (poseída)'; nu-kali 'mi casa'; forma poseída de sikoa; Goeje 1928; Brinton 1871",
+    "categoria": "utiles"
+  },
+  "mothi": {
+    "es": "mañana (tiempo futuro próximo)",
+    "fuente": "lokono",
+    "notas": "Lok. mothi; 'mañana'; adverbio temporal; Pet 1987",
+    "categoria": "tiempo"
+  },
+  "jon": {
+    "es": "allá, allí (adverbio demostrativo distal)",
+    "fuente": "lokono",
+    "notas": "Lok. jon; 'allá/allí'; marcador deíctico de lugar distal; Pet 1987",
+    "categoria": "gramatica"
+  },
+  "khesia": {
+    "es": "comida (nominalización de comer)",
+    "fuente": "lokono",
+    "notas": "Lok. khesia; 'comida'; nominalización de khin 'comer' con -sia (WH.OBJ); Pet 1987",
+    "categoria": "alimentos"
+  },
+  "ythysia": {
+    "es": "bebida (nominalización de beber)",
+    "fuente": "lokono",
+    "notas": "Lok. ythysia; 'bebida'; nominalización de ythyn 'beber' con -sia; kathysia 'tener bebida'; Pet 1987",
+    "categoria": "alimentos"
+  },
+  "kasikoali": {
+    "es": "dueño, propietario (literalmente: el que tiene casa)",
+    "fuente": "lokono",
+    "notas": "Lok. kasikoali; 'dueño/propietario'; de kasikoa (ka- + sikoa) + -li [+masc agentivo]; Pet 1987",
+    "categoria": "jerarquia"
+  },
+  "diakothi": {
+    "es": "jefe, el que está encima (título)",
+    "fuente": "lokono",
+    "notas": "Lok. diakothi; 'jefe' (lit. 'el que está encima'); diako (encima) + -thi (agent masc); cf. Caq. cacique; Goeje 1928",
+    "categoria": "jerarquia"
+  },
+  "jawade": {
+    "es": "zarigüeya, zorro chucha (Didelphis marsupialis)",
+    "fuente": "lokono",
+    "notas": "Lok. jawade; 'zarigüeya/opossum'; protagonista de fábula 'La tortuga y la zarigüeya'; Goeje 1928",
+    "categoria": "fauna"
+  },
+  "bokolawro": {
+    "es": "trogón, pájaro sagrado (Trogon viridis)",
+    "fuente": "lokono",
+    "notas": "Lok. bokolawro; 'trogón' — pájaro sagrado; se sienta de espaldas al comer (tabú); Goeje 1928",
+    "categoria": "fauna"
+  },
+  "bimiti": {
+    "es": "colibrí, picaflor (Trochilidae)",
+    "fuente": "lokono",
+    "notas": "Lok. bimiti; 'colibrí/picaflor'; contraste con el perezoso trogón en fábula arahuacana; Goeje 1928",
+    "categoria": "fauna"
+  },
+  "hobo": {
+    "es": "jobillo, ciruela de huesito (Spondias lutea)",
+    "fuente": "lokono",
+    "notas": "Lok. hobo; 'Spondias lutea' (ciruela tropical); árbol del cuento 'La tortuga y la zarigüeya'; Goeje 1928",
+    "categoria": "flora"
+  },
+  "karowa": {
+    "es": "maguey, cabuya, agave (Agave sp.)",
+    "fuente": "lokono",
+    "notas": "Lok. karowa; 'agave/maguey'; planta de fibra; en texto 'karowa otoro' = pie/base del agave; Goeje 1928",
+    "categoria": "flora"
+  },
+  "kasakabo": {
+    "es": "día (unidad de tiempo)",
+    "fuente": "lokono",
+    "notas": "Lok. kasakabo; 'día'; kasakabo-be 'días' (plural NH); joho kasakabo 'muchos días'; Goeje 1928",
+    "categoria": "tiempo"
+  },
+  "makowa": {
+    "es": "animal (genérico)",
+    "fuente": "lokono",
+    "notas": "Lok. makowa; 'animal (genérico)'; makowa-ron 'animales (con postposición)'; Goeje 1928",
+    "categoria": "fauna"
+  },
+  "hammusia": {
+    "es": "hambre, estado de inanición",
+    "fuente": "lokono",
+    "notas": "Lok. hammusia; 'hambre'; cf. Pet 1987 fonasia 'to be hungry'; Goeje 1928",
+    "categoria": "sentimientos"
+  },
+  "kijadoma": {
+    "es": "por eso, por tanto, por esa razón",
+    "fuente": "lokono",
+    "notas": "Lok. kijadoma; 'por eso/por tanto'; conector causal discursivo; cf. doma (postposición causal); Goeje 1928",
+    "categoria": "gramatica"
+  },
+  "abon": {
+    "es": "debajo de, bajo (postposición locativa inferior)",
+    "fuente": "lokono",
+    "notas": "Lok. abon; 'debajo de/bajo'; hobo abon 'bajo el árbol de jobillo'; postposición espacial inferior; Goeje 1928",
+    "categoria": "gramatica"
+  },
+  "awothiki": {
+    "es": "encontrar, hallar",
+    "fuente": "lokono",
+    "notas": "Lok. awothiki; 'encontrar/hallar'; awothiki-ren baikya 'encontró fruto'; Goeje 1928",
+    "categoria": "verbos"
+  },
+  "baikya": {
+    "es": "fruta, fruto maduro",
+    "fuente": "lokono",
+    "notas": "Lok. baikya; 'fruta/fruto'; baikya-da 'fruta caída'; contexto alimenticio arahuacano; Goeje 1928",
+    "categoria": "flora"
+  },
+  "ansi": {
+    "es": "fuerza vital, energía de vida",
+    "fuente": "lokono",
+    "notas": "Lok. ansi; 'fuerza vital/energía'; tata-ansi 'recuperar fuerza'; cf. concepto arahuacano de anima; Goeje 1928",
+    "categoria": "ritual"
+  },
+  "adija": {
+    "es": "hablar, decir; palabra, discurso",
+    "fuente": "lokono",
+    "notas": "Lok. adija; 'hablar/decir'; adija-kien 'habló de nuevo'; cf. dian (otra raíz para hablar); Goeje 1928",
+    "categoria": "verbos"
+  },
+  "wakili": {
+    "es": "persona, ser humano (forma arcaica de lokono)",
+    "fuente": "lokono",
+    "notas": "Lok. wakili; 'persona/ser humano'; wakili-be 'personas'; forma arcaica en cuentos; cf. lokono (autónimo moderno); Goeje 1928",
+    "categoria": "parentesco"
+  },
+  "mabberie": {
+    "es": "mosca, moscas de carroña",
+    "fuente": "lokono",
+    "notas": "Lok. mabberie; 'mosca/moscas'; mabberie-ron 'solo moscas'; plural inherente; Goeje 1928",
+    "categoria": "fauna"
+  },
+  "alla": {
+    "es": "banco, asiento ceremonial (símbolo de autoridad)",
+    "fuente": "lokono",
+    "notas": "Lok. alla; 'banco/asiento ceremonial'; d-alla-nnijawa 'mi propio banco'; signo de distinción social arahuacano; Goeje 1928",
+    "categoria": "ritual"
+  },
+  "baleta": {
+    "es": "querer sentarse, desear (verbo desiderativo)",
+    "fuente": "lokono",
+    "notas": "Lok. baleta; 'querer sentarse/desear'; baleta-ti-rro 'solo quiero sentarme'; sufijo desiderativo -ti; Goeje 1928",
+    "categoria": "verbos"
+  },
+  "itti": {
+    "es": "padre (forma atestiguada 1800, Schultz)",
+    "fuente": "lokono",
+    "notas": "Lok. itti; 'padre'; datti 'mi padre'; cf. pilplii (De Laet 1598); cognado Taíno taita; Brinton 1871",
+    "categoria": "parentesco"
+  },
+  "pilplii": {
+    "es": "padre (forma arcaica, De Laet 1598)",
+    "fuente": "lokono",
+    "notas": "Lok. pilplii; 'padre' (forma más antigua, De Laet ca.1598); cf. itti (Schultz 1800); Brinton 1871",
+    "categoria": "parentesco"
+  },
+  "uju": {
+    "es": "madre",
+    "fuente": "lokono",
+    "notas": "Lok. uju; 'madre'; daiju 'mi madre'; waijunattu 'nuestra madre'; Brinton 1871; cf. De Laet saeckee (1598)",
+    "categoria": "parentesco"
+  },
+  "waseye": {
+    "es": "cabeza",
+    "fuente": "lokono",
+    "notas": "Lok. waseye; 'cabeza'; wa- = prefijo 'nuestro/mi' + seye; Schultz 1800; Brinton 1871",
+    "categoria": "cuerpo"
+  },
+  "wadihy": {
+    "es": "oído, oreja",
+    "fuente": "lokono",
+    "notas": "Lok. wadihy; 'oído/oreja'; wa- posesivo + dihy; Schultz 1800; Brinton 1871",
+    "categoria": "cuerpo"
+  },
+  "wakusi": {
+    "es": "ojo",
+    "fuente": "lokono",
+    "notas": "Lok. wakusi; 'ojo'; wa- posesivo + kusi; Schultz 1800; Brinton 1871",
+    "categoria": "cuerpo"
+  },
+  "wasiri": {
+    "es": "nariz",
+    "fuente": "lokono",
+    "notas": "Lok. wasiri; 'nariz'; wa- posesivo + siri; Schultz 1800; Brinton 1871",
+    "categoria": "cuerpo"
+  },
+  "daliroko": {
+    "es": "boca",
+    "fuente": "lokono",
+    "notas": "Lok. daliroko; 'boca'; da- posesivo + liroko; cf. da-eretho (esposa) — da- posesivo 1sg; Brinton 1871",
+    "categoria": "cuerpo"
+  },
+  "dari": {
+    "es": "dientes",
+    "fuente": "lokono",
+    "notas": "Lok. dari; 'dientes'; forma plural inherente; cognado Taíno dari (idéntico); Brinton 1871",
+    "categoria": "cuerpo"
+  },
+  "dakuty": {
+    "es": "pies, patas",
+    "fuente": "lokono",
+    "notas": "Lok. dakuty; 'pies'; da- posesivo + kuty; cf. Pet 1987 kothi (pie en compuesto bithi-ka-kothi-bero); Brinton 1871",
+    "categoria": "cuerpo"
+  },
+  "ukku": {
+    "es": "corazón, centro vital",
+    "fuente": "lokono",
+    "notas": "Lok. ukku; 'corazón'; base de ukkurahu (familia) e iikuahu (persona); Brinton 1871",
+    "categoria": "cuerpo"
+  },
+  "akkabu": {
+    "es": "mano (forma alternativa, usada en numerales)",
+    "fuente": "lokono",
+    "notas": "Lok. akkabu; 'mano'; base de abbatekkabe (cinco = una mano); cf. khabo (Pet 1987); Brinton 1871",
+    "categoria": "cuerpo"
+  },
+  "lukku": {
+    "es": "hombre, persona arahuacana (autónimo masculino)",
+    "fuente": "lokono",
+    "notas": "Lok. lukku; 'hombre/persona'; lukkunu 'el pueblo Lokono'; Lucayos = lukku+kairi 'hombres de las islas'; Brinton 1871",
+    "categoria": "parentesco"
+  },
+  "lukkunu": {
+    "es": "el pueblo Lokono (autónimo colectivo)",
+    "fuente": "lokono",
+    "notas": "Lok. lukkunu; autónimo colectivo 'nosotros los hombres'; cf. lokono; Brinton 1871: 'They call themselves simply lukkunu, men'",
+    "categoria": "parentesco"
+  },
+  "ukkurahu": {
+    "es": "familia, tribu, grupo de origen común",
+    "fuente": "lokono",
+    "notas": "Lok. ukkurahu; 'familia/tribu'; de ukku (corazón) + rahu (sufijo colectivo?); Brinton 1871",
+    "categoria": "parentesco"
+  },
+  "iikuahu": {
+    "es": "persona (literalmente: aquel cuyo corazón late)",
+    "fuente": "lokono",
+    "notas": "Lok. iikuahu; 'persona'; de ukku (corazón); lit. 'one whose heart beats'; concepto arahuacano de persona; Brinton 1871",
+    "categoria": "parentesco"
+  },
+  "eyeri": {
+    "es": "hombres arahuacanos isleños (etnónimo caribeño)",
+    "fuente": "lokono",
+    "notas": "Lok. eyeri; 'hombres arahuacanos isleños'; base de Siboneyes (siba+eyeri = 'hombres de las rocas'); Brinton 1871",
+    "categoria": "parentesco"
+  },
+  "itime": {
+    "es": "pez, pescado",
+    "fuente": "lokono",
+    "notas": "Lok. itime; 'pez/pescado'; singular y plural idénticos; raíz arahuacana; Brinton 1871",
+    "categoria": "fauna"
+  },
+  "iuli": {
+    "es": "tabaco (Nicotiana tabacum)",
+    "fuente": "lokono",
+    "notas": "Lok. iuli; 'tabaco'; planta ritual arahuacana; venezolanismo 'tabaco' via Taíno/arahuacano; Brinton 1871",
+    "categoria": "flora"
+  },
+  "haikahu": {
+    "es": "muerte, lo que pasa",
+    "fuente": "lokono",
+    "notas": "Lok. haikahu; 'muerte'; de haikaikan 'pasar/transcurrir'; auhakit 'matrimonio' (la muchacha ha pasado); Brinton 1871",
+    "categoria": "ritual"
+  },
+  "kassaku": {
+    "es": "firmamento, bóveda celeste",
+    "fuente": "lokono",
+    "notas": "Lok. kassaku; 'firmamento'; de kassan (estar embarazada) — el cielo como vientre cósmico; Brinton 1871",
+    "categoria": "cosmos"
+  },
+  "kassahubehu": {
+    "es": "el cielo, el día (literalmente: casa del firmamento)",
+    "fuente": "lokono",
+    "notas": "Lok. kassahu behu; 'el cielo/el día'; kassahu (firmamento) + behu (casa); Brinton 1871",
+    "categoria": "cosmos"
+  },
+  "waya": {
+    "es": "arcilla, barro (material de cerámica)",
+    "fuente": "lokono",
+    "notas": "Lok. waya; 'arcilla/barro'; material de alfarería arahuacana; Brinton 1871",
+    "categoria": "utiles"
+  },
+  "nohin": {
+    "es": "rojo (forma alternativa)",
+    "fuente": "lokono",
+    "notas": "Lok. nohin; 'rojo'; cognado Taíno hobin (metal rojizo = oro?); cf. Brinton 1871 = tinte rojo ritual",
+    "categoria": "adjetivos"
+  },
+  "aijumun": {
+    "es": "arriba, en lo alto (adverbio espacial vertical)",
+    "fuente": "lokono",
+    "notas": "Lok. aijumun; 'arriba/en lo alto'; cognado Taíno huilio (altura); base de Adajali 'Dios' (ajomyn-thi); Brinton 1871",
+    "categoria": "gramatica"
+  },
+  "barrahakoa": {
+    "es": "barbacoa, lugar de almacenamiento de provisiones",
+    "fuente": "lokono",
+    "notas": "Lok. barrahakoa; lit. 'lugar donde se guarda comida'; origen del venezolanismo/americanismo 'barbacoa'; Brinton 1871",
+    "categoria": "utiles"
+  },
+  "kassiquan": {
+    "es": "ser dueño de casa; de donde viene 'cacique'",
+    "fuente": "lokono",
+    "notas": "Lok. kassiquan; 'ser dueño de casa'; de ussequa/iissiqua (casa); origen del Taíno casique → español cacique; Brinton 1871",
+    "categoria": "jerarquia"
+  },
+  "wakaijaru": {
+    "es": "sin valor, sucio, inútil",
+    "fuente": "lokono",
+    "notas": "Lok. wakaijaru; 'sin valor/sucio'; cf. Taíno guaoxeri (clase sin rango); Brinton 1871",
+    "categoria": "adjetivos"
+  },
+  "ukkurahu2": {
+    "es": "pus (secreción del cuerpo enfermo)",
+    "fuente": "lokono",
+    "notas": "Lok. ukkurahu; segunda acepción: 'pus'; homónimo de 'familia'; raíz ukku (corazón/centro) aplicada al cuerpo enfermo; Brinton 1871",
+    "categoria": "cuerpo"
+  },
+  "erne": {
+    "es": "desembocadura de río, frente de costa",
+    "fuente": "lokono",
+    "notas": "Lok. erne / uime; 'desembocadura de río/frente de costa'; cognado Taíno cimu/simu; Brinton 1871",
+    "categoria": "geografia"
+  },
+  "kubakanan": {
+    "es": "antepasados, ancestros",
+    "fuente": "lokono",
+    "notas": "Lok. kubakanan; 'antepasados/ancestros'; kuba- (tiempo pasado) + annakan (centro); lit. 'los del centro pasado'; Brinton 1871",
+    "categoria": "parentesco"
+  },
+  "kuba": {
+    "es": "signo de tiempo pasado (prefijo/sufijo temporal)",
+    "fuente": "lokono",
+    "notas": "Lok. kuba-/-kuba; 'tiempo pasado indefinido'; dayahaddakuba 'yo caminé (hace tiempo)'; Brinton 1871",
+    "categoria": "gramatica"
+  },
+  "sallaban": {
+    "es": "sabana, llanura (terreno plano y liso)",
+    "fuente": "lokono",
+    "notas": "Lok. sallaban; 'llano/sabana'; cognado Taíno sabana; origen del venezolanismo/americanismo 'sabana'; Brinton 1871",
+    "categoria": "geografia"
+  },
+  "una": {
+    "es": "tinte negro (de una planta específica)",
+    "fuente": "lokono",
+    "notas": "Lok. una; 'tinte negro'; de donde laimatun 'teñir de negro'; uso ritual en pintura corporal arahuacana; Brinton 1871",
+    "categoria": "ritual"
+  },
+  "haikaikan": {
+    "es": "pasar, transcurrir, morir (verbo de paso)",
+    "fuente": "lokono",
+    "notas": "Lok. haikaikan; 'pasar/transcurrir'; base de haikahu (muerte) y auhakit (matrimonio: 'la que ha pasado'); Brinton 1871",
+    "categoria": "verbos"
+  },
+  "kassan": {
+    "es": "estar embarazada",
+    "fuente": "lokono",
+    "notas": "Lok. kassan; 'estar embarazada'; base de kassaku (firmamento = 'la que está preñada'); metáfora cosmológica; Brinton 1871",
+    "categoria": "verbos"
+  },
+  "ayahaddin": {
+    "es": "caminar, andar",
+    "fuente": "lokono",
+    "notas": "Lok. ayahaddin; 'caminar/andar'; paradigma verbal completo en Brinton 1871; cf. osyn (ir); Brinton 1871",
+    "categoria": "verbos"
+  },
+  "aririn": {
+    "es": "nombrar, recitar; cantar ritualmente",
+    "fuente": "lokono",
+    "notas": "Lok. aririn; 'nombrar/recitar/cantar'; cognado Taíno areito (canto ritual ceremonial); Brinton 1871",
+    "categoria": "verbos"
+  },
+  "aparrun": {
+    "es": "matar (forma alternativa)",
+    "fuente": "lokono",
+    "notas": "Lok. aparrun; 'matar'; apparahun 'muerto'; cognado Taíno operito (muerto); cf. faryn (Pet 1987); Brinton 1871",
+    "categoria": "verbos"
+  },
+  "keretin": {
+    "es": "casarse (forma del punto de vista femenino)",
+    "fuente": "lokono",
+    "notas": "Lok. keretin; 'casarse (forma fem.)'; kerejun 'casarse (forma masc.)'; distinción de género en verbo matrimonial; Brinton 1871",
+    "categoria": "verbos"
+  },
+  "nuddan": {
+    "es": "verse bien, estar firme (verbo de buen aspecto)",
+    "fuente": "lokono",
+    "notas": "Lok. nuddan; 'verse bien/estar firme'; cognado Taíno nitainos (pequeños jefes: 'los de buen aspecto'); Brinton 1871",
+    "categoria": "verbos"
+  },
+  "manin": {
+    "es": "estar ileso, ser invicto, no haber sido tocado",
+    "fuente": "lokono",
+    "notas": "Lok. manin; 'estar ileso/invicto'; manikade 'estoy ileso'; cognado Taíno manicato (invicto); Brinton 1871",
+    "categoria": "verbos"
+  },
+  "biama": {
+    "es": "dos (forma Brinton 1871, variante de bian)",
+    "fuente": "lokono",
+    "notas": "Lok. biama; 'dos'; biamannu 'dos (plural)'; cf. bian (Pet 1987); Brinton 1871",
+    "categoria": "gramatica"
+  },
+  "kabbuhin": {
+    "es": "tres (forma Brinton 1871, variante de kabyn)",
+    "fuente": "lokono",
+    "notas": "Lok. kabbuhin; 'tres'; kabbuhinihnu 'tres (plural)'; cf. kabyn (Pet 1987); Brinton 1871",
+    "categoria": "gramatica"
+  },
+  "bibiti": {
+    "es": "cuatro (forma Brinton 1871, variante de bithi)",
+    "fuente": "lokono",
+    "notas": "Lok. bibiti; 'cuatro'; bibitinu 'cuatro (plural)'; cf. bithi (Pet 1987); Brinton 1871",
+    "categoria": "gramatica"
+  },
+  "abbatekkabe": {
+    "es": "cinco (literalmente: una mano = abba + akkabu)",
+    "fuente": "lokono",
+    "notas": "Lok. abbatekkabe; 'cinco'; compuesto de abba (uno) + akkabu (mano); sistema vigesimal arahuacano; Brinton 1871",
+    "categoria": "gramatica"
+  },
+  "biamantekabbe": {
+    "es": "diez (literalmente: dos manos = biama + akkabu)",
+    "fuente": "lokono",
+    "notas": "Lok. biamantekabbe; 'diez'; compuesto de biama (dos) + akkabu (manos); base del sistema vigesimal; Brinton 1871",
+    "categoria": "gramatica"
+  },
+  "abbalukku": {
+    "es": "veinte (literalmente: un hombre = manos y pies)",
+    "fuente": "lokono",
+    "notas": "Lok. abba lukku; 'veinte'; abba (uno) + lukku (hombre = 20 dedos); numeral vigesimal arahuacano; Brinton 1871",
+    "categoria": "gramatica"
+  },
+  "dduria": {
+    "es": "que, más que (partícula comparativa)",
+    "fuente": "lokono",
+    "notas": "Lok. dduria; 'que/más que'; Bokkia ussó dduria = 'tú eres mejor que yo'; Brinton 1871",
+    "categoria": "gramatica"
+  },
+  "bute": {
+    "es": "ahora (marcador de presente inmediato)",
+    "fuente": "lokono",
+    "notas": "Lok. bute; 'ahora'; marcador de tiempo presente en Actos 14:11 (texto Lokono de 1799); Brinton 1871",
+    "categoria": "gramatica"
+  },
+  "bisufix": {
+    "es": "sufijo de pasado reciente (-bi: hoy)",
+    "fuente": "lokono",
+    "notas": "Lok. -bi; sufijo verbal de pasado reciente (hoy); dayahaddibi 'caminé hoy'; Brinton 1871",
+    "categoria": "gramatica"
+  },
+  "biinasufix": {
+    "es": "sufijo de pasado próximo (-biina: ayer)",
+    "fuente": "lokono",
+    "notas": "Lok. -biina; sufijo verbal de pasado próximo (ayer); dayahaddibiina 'caminé ayer'; Brinton 1871",
+    "categoria": "gramatica"
+  },
+  "semett": {
+    "es": "sacerdote, adivino, hechicero (espiritu ritual)",
+    "fuente": "lokono",
+    "notas": "Lok. semett; 'sacerdote/adivino/hechicero'; cognado Taíno semi (divinidades/espíritus); Brinton 1871",
+    "categoria": "ritual"
+  },
+  "akkicyaha": {
+    "es": "espíritu del ser vivo (alma vital)",
+    "fuente": "lokono",
+    "notas": "Lok. akkicyaha; 'espíritu del ser vivo'; cognado Taíno goeiz (espíritu personal); concepto arahuacano del alma; Brinton 1871",
+    "categoria": "ritual"
+  },
+  "akkuyaha": {
+    "es": "seres vivos; máscaras rituales que los representan",
+    "fuente": "lokono",
+    "notas": "Lok. akkuyaha; 'seres vivos / máscaras rituales'; cognado Taíno guayzas; Brinton 1871",
+    "categoria": "ritual"
+  },
+  "dulluhu": {
+    "es": "asiento bajo ceremonial (hahlah)",
+    "fuente": "lokono",
+    "notas": "Lok. dulluhu/durruhu; 'asiento bajo ceremonial'; cognado Taíno duhos; usado por piaye/piai en rituales; Brinton 1871",
+    "categoria": "ritual"
+  },
+  "habba": {
+    "es": "cesta, canasto, cestería",
+    "fuente": "lokono",
+    "notas": "Lok. habba; 'cesta/canasto'; cognado Taíno haba; artesanía arahuacana de fibra vegetal; Brinton 1871",
+    "categoria": "utiles"
+  },
+  "annakan": {
+    "es": "centro, punto medio (concepto espacial)",
+    "fuente": "lokono",
+    "notas": "Lok. annakan; 'centro/punto medio'; cognado Taíno nacan; Cubanacan = kuba+annakan (centro del pasado); Brinton 1871",
+    "categoria": "gramatica"
+  },
+  "maran": {
+    "es": "ser pequeño, ser pobre (adjetivo-verbo estativo)",
+    "fuente": "lokono",
+    "notas": "Lok. maran; 'ser pequeño/pobre'; aparece en topónimos: Marien (Cuba); Brinton 1871",
+    "categoria": "adjetivos"
+  }
+}

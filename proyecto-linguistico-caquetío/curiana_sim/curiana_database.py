@@ -56,17 +56,21 @@ except ImportError:
 
 # Mapeo de los valores de "fuente" en VOCABULARIO_BASE a 5 categorías canónicas.
 # Estas mismas categorías se usan en las columnas pct_* de agent_responses.
-LANG_CATEGORIES = ("caquetío", "wayunaiki", "lokono", "taíno", "proto-arahuaco")
+LANG_CATEGORIES = ("caquetío", "wayunaiki", "lokono", "taíno", "proto-arahuaco",
+                    "kalinago", "kalinago-caribe-overlay", "jirajaroide-contacto")
 
 def normalize_source_language(fuente: str) -> str:
     """
-    Convierte el campo 'fuente' del lexicón a una de las 5 categorías canónicas.
+    Convierte el campo 'fuente' del lexicón a una de las 8 categorías canónicas.
 
     caquetío / caquetío-atestiguado / caquetío/topónimo → "caquetío"
     wayunaiki / wayunaiki-cogn                          → "wayunaiki"
     lokono / garifuna / lokono/garifuna                 → "lokono"
     taíno / taíno/caribe                                → "taíno"
-    arahuaco / proto-arawakan / proto-arahuaco / ...  → "proto-arahuaco"
+    arahuaco / proto-arawakan / proto-arahuaco / ...    → "proto-arahuaco"
+    kalinago-caribe-overlay                             → "kalinago-caribe-overlay"
+    kalinago                                            → "kalinago"
+    jirajaroide-contacto                                → "jirajaroide-contacto"
     """
     f = fuente.lower()
     if "caquetio" in f or "caquetío" in f:
@@ -77,6 +81,12 @@ def normalize_source_language(fuente: str) -> str:
         return "taíno"
     if "lokono" in f or "garifuna" in f:
         return "lokono"
+    if "jirajaroide" in f:
+        return "jirajaroide-contacto"
+    if "kalinago-caribe-overlay" in f:
+        return "kalinago-caribe-overlay"
+    if "kalinago" in f:
+        return "kalinago"
     # proto-arawakan, proto-arahuaco, reconstructed
     return "proto-arahuaco"
 

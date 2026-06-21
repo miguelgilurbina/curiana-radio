@@ -1,0 +1,152 @@
+{
+  "kali": {
+    "es": "sol",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *kali; atestiguada en 3 lenguas: CQ: cazi, WY: kai, LK: adali; Payne (1991), Brinton (1871)",
+    "categoria": "cosmos"
+  },
+  "kati": {
+    "es": "luna",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *kati; atestiguada en 3 lenguas: CQ: cati, WY: kachi, LK: katsi; Payne (1991), Brinton (1871)",
+    "categoria": "cosmos"
+  },
+  "para": {
+    "es": "mar, agua extensa",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *para; atestiguada en 4 lenguas: CQ: para, WY: palaa, LK: bara, TN: bagua; Payne (1991), Brinton (1871)",
+    "categoria": "geografia"
+  },
+  "kanoa": {
+    "es": "canoa, embarcación",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *kanoa; atestiguada en 3 lenguas: CQ: canoa, LK: kannoa, TN: canoa; Payne (1991), Brinton (1871)",
+    "categoria": "utiles"
+  },
+  "hamaka": {
+    "es": "hamaca, cama colgante",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *hamaka; atestiguada en 3 lenguas: CQ: hamaca, LK: hamaha, TN: hamaca; Payne (1991), Brinton (1871)",
+    "categoria": "utiles"
+  },
+  "kasabi": {
+    "es": "casabe, pan de yuca",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *kasabi; atestiguada en 3 lenguas: CQ: casabe, LK: kasabi, TN: casabe; Payne (1991), Brinton (1871)",
+    "categoria": "flora"
+  },
+  "piay": {
+    "es": "chamán, curandero, piache",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *piay; atestiguada en 3 lenguas: CQ: piache, LK: piaye, TN: bejique; Payne (1991), Brinton (1871)",
+    "categoria": "ritual"
+  },
+  "iwana": {
+    "es": "iguana (Iguana iguana)",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *iwana; atestiguada en 3 lenguas: WY: iwana, LK: iwana, TN: higuana; Payne (1991), Brinton (1871)",
+    "categoria": "fauna"
+  },
+  "kaiman": {
+    "es": "caimán (Caiman crocodilus)",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *kaiman; atestiguada en 2 lenguas: LK: kaiman, TN: caiman; Payne (1991), Brinton (1871)",
+    "categoria": "fauna"
+  },
+  "siba": {
+    "es": "piedra, roca",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *siba; atestiguada en 2 lenguas: LK: siba, TN: siba; Payne (1991), Brinton (1871)",
+    "categoria": "cuerpo"
+  },
+  "kairi": {
+    "es": "isla, cayo",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *kairi; atestiguada en 3 lenguas: CQ: cairi, LK: kairi, TN: cai; Payne (1991), Brinton (1871)",
+    "categoria": "geografia"
+  },
+  "yuka": {
+    "es": "yuca, mandioca (Manihot esculenta)",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *yuka; atestiguada en 3 lenguas: CQ: yuca, LK: yuka, TN: yuca; Payne (1991), Brinton (1871)",
+    "categoria": "flora"
+  },
+  "marisi": {
+    "es": "maíz (Zea mays)",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *marisi; atestiguada en 2 lenguas: LK: marisi, TN: maisi; Payne (1991), Brinton (1871)",
+    "categoria": "flora"
+  },
+  "achi": {
+    "es": "ají, pimienta (Capsicum sp.)",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *achi; atestiguada en 2 lenguas: LK: achi, TN: aji; Payne (1991), Brinton (1871)",
+    "categoria": "flora"
+  },
+  "iuli": {
+    "es": "tabaco (Nicotiana tabacum)",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *iuli; atestiguada en 2 lenguas: LK: iuli, TN: cohiba; Payne (1991), Brinton (1871)",
+    "categoria": "flora"
+  },
+  "sallaba": {
+    "es": "sabana, llanura",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *sallaba; atestiguada en 2 lenguas: LK: sallaban, TN: sabana; Payne (1991), Brinton (1871)",
+    "categoria": "geografia"
+  },
+  "barrahakoa": {
+    "es": "barbacoa, parrilla, lugar de provisiones",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *barraha-koa; atestiguada en 2 lenguas: LK: barrahakoa, TN: barbacoa; Payne (1991), Brinton (1871)",
+    "categoria": "cosmos"
+  },
+  "lokono": {
+    "es": "persona arahuaca, gente propia",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *lokono; atestiguada en 4 lenguas: CQ: caquetio, WY: wayuu, LK: lokono, TN: taino; Payne (1991), Brinton (1871)",
+    "categoria": "cosmos"
+  },
+  "isikoa": {
+    "es": "casa, vivienda",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *isikoa; atestiguada en 2 lenguas: LK: sikoa, TN: bohio; Payne (1991), Brinton (1871)",
+    "categoria": "utiles"
+  },
+  "tuna": {
+    "es": "agua, río",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *tuna; atestiguada en 4 lenguas: CQ: tuy, WY: wuin, LK: tuna, TN: tuna; Payne (1991), Brinton (1871)",
+    "categoria": "geografia"
+  },
+  "itti": {
+    "es": "padre",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *itti; atestiguada en 3 lenguas: CQ: tata, LK: itti, TN: taita; Payne (1991), Brinton (1871)",
+    "categoria": "parentesco"
+  },
+  "aba": {
+    "es": "uno, un",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *aba; atestiguada en 2 lenguas: WY: aba, LK: abba; Payne (1991), Brinton (1871)",
+    "categoria": "gramatica"
+  },
+  "biama": {
+    "es": "dos",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *biama; atestiguada en 2 lenguas: LK: biama, TN: yamosa; Payne (1991), Brinton (1871)",
+    "categoria": "gramatica"
+  },
+  "ma": {
+    "es": "no, negación (prefijo)",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *ma; atestiguada en 3 lenguas: WY: ma, LK: ma, TN: mayani; Payne (1991), Brinton (1871)",
+    "categoria": "gramatica"
+  },
+  "kassaku": {
+    "es": "firmamento, bóveda celeste",
+    "fuente": "proto-arahuaco",
+    "notas": "Proto-arahuaco *kassaku; atestiguada en 2 lenguas: WY: siruma, LK: kassaku; Payne (1991), Brinton (1871)",
+    "categoria": "cosmos"
+  }
+}
