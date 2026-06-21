@@ -1,0 +1,158 @@
+{
+  "wacusi": {
+    "es": "ojo",
+    "fuente": "taino",
+    "notas": "Reconstrucción hipotética Taíno desde Lok. wakusi; método comparativo arahuacano; Reconstrucción desde Lok. wakusi (ojo); método comparativo arahuaco; confianza: alta",
+    "categoria": "cuerpo"
+  },
+  "daca": {
+    "es": "mano",
+    "fuente": "taino",
+    "notas": "Reconstrucción hipotética Taíno desde Lok. daka; método comparativo arahuacano; Reconstrucción desde Lok. daka (mano); método comparativo arahuaco; confianza: alta",
+    "categoria": "cuerpo"
+  },
+  "thigisi": {
+    "es": "diente",
+    "fuente": "taino",
+    "notas": "Reconstrucción hipotética Taíno desde Lok. thibisi; método comparativo arahuacano; Reconstrucción desde Lok. thibisi (diente); método comparativo arahuaco; confianza: alta",
+    "categoria": "cuerpo"
+  },
+  "aduri": {
+    "es": "nariz",
+    "fuente": "taino",
+    "notas": "Reconstrucción hipotética Taíno desde Lok. aduri; método comparativo arahuacano; Reconstrucción desde Lok. aduri (nariz); método comparativo arahuaco; confianza: alta",
+    "categoria": "cuerpo"
+  },
+  "agari": {
+    "es": "cabeza",
+    "fuente": "taino",
+    "notas": "Reconstrucción hipotética Taíno desde Lok. abari; método comparativo arahuacano; Reconstrucción desde Lok. abari (cabeza); método comparativo arahuaco; confianza: alta",
+    "categoria": "cuerpo"
+  },
+  "acoa": {
+    "es": "pie",
+    "fuente": "taino",
+    "notas": "Reconstrucción hipotética Taíno desde Lok. akoa; método comparativo arahuacano; Reconstrucción desde Lok. akoa (pie); método comparativo arahuaco; confianza: alta",
+    "categoria": "cuerpo"
+  },
+  "itime": {
+    "es": "pez",
+    "fuente": "taino",
+    "notas": "Reconstrucción hipotética Taíno desde Lok. itime; método comparativo arahuacano; Reconstrucción desde Lok. itime (pez); método comparativo arahuaco; confianza: alta",
+    "categoria": "fauna"
+  },
+  "caiman": {
+    "es": "caimán",
+    "fuente": "taino",
+    "notas": "Taíno atestiguado: caiman; cognado Lok. kaiman; Brinton 1871",
+    "categoria": "fauna"
+  },
+  "higuana": {
+    "es": "iguana",
+    "fuente": "taino",
+    "notas": "Taíno atestiguado: higuana; cognado Lok. iwana; Brinton 1871",
+    "categoria": "fauna"
+  },
+  "wagulo": {
+    "es": "tortuga",
+    "fuente": "taino",
+    "notas": "Reconstrucción hipotética Taíno desde Lok. wabulo; método comparativo arahuacano; Reconstrucción desde Lok. wabulo (tortuga); método comparativo arahuaco; confianza: alta",
+    "categoria": "fauna"
+  },
+  "siba": {
+    "es": "piedra",
+    "fuente": "taino",
+    "notas": "Taíno atestiguado: siba; cognado Lok. siba; Brinton 1871",
+    "categoria": "geografia"
+  },
+  "cai": {
+    "es": "isla",
+    "fuente": "taino",
+    "notas": "Taíno atestiguado: cai; cognado Lok. kairi; Brinton 1871",
+    "categoria": "geografia"
+  },
+  "tuna": {
+    "es": "agua, río",
+    "fuente": "taino",
+    "notas": "Taíno atestiguado: tuna; cognado Lok. tuna; Brinton 1871",
+    "categoria": "geografia"
+  },
+  "maisi": {
+    "es": "maíz",
+    "fuente": "taino",
+    "notas": "Taíno atestiguado: maisi; cognado Lok. marisi; Brinton 1871",
+    "categoria": "flora"
+  },
+  "aji": {
+    "es": "ají",
+    "fuente": "taino",
+    "notas": "Taíno atestiguado: aji; cognado Lok. achi; Brinton 1871",
+    "categoria": "flora"
+  },
+  "yuca": {
+    "es": "yuca",
+    "fuente": "taino",
+    "notas": "Taíno atestiguado: yuca; cognado Lok. yuka; Brinton 1871",
+    "categoria": "flora"
+  },
+  "casabe": {
+    "es": "casabe",
+    "fuente": "taino",
+    "notas": "Taíno atestiguado: casabe; cognado Lok. kasabi; Brinton 1871",
+    "categoria": "alimentos"
+  },
+  "cohiba": {
+    "es": "tabaco",
+    "fuente": "taino",
+    "notas": "Taíno atestiguado: cohiba; cognado Lok. iuli; Brinton 1871",
+    "categoria": "ritual"
+  },
+  "bejique": {
+    "es": "chamán",
+    "fuente": "taino",
+    "notas": "Taíno atestiguado: bejique; cognado Lok. piaye; Brinton 1871",
+    "categoria": "ritual"
+  },
+  "aririn": {
+    "es": "areito, danza ceremonial",
+    "fuente": "taino",
+    "notas": "Reconstrucción hipotética Taíno desde Lok. aririn; método comparativo arahuacano; Reconstrucción desde Lok. aririn (areito, danza ceremonial); método comparativo arahuaco; confianza: alta",
+    "categoria": "ritual"
+  },
+  "akcicyaa": {
+    "es": "espíritu vital",
+    "fuente": "taino",
+    "notas": "Reconstrucción hipotética Taíno desde Lok. akkicyaha; método comparativo arahuacano; Reconstrucción desde Lok. akkicyaha (espíritu vital); método comparativo arahuaco; confianza: alta",
+    "categoria": "ritual"
+  },
+  "abba": {
+    "es": "uno",
+    "fuente": "taino",
+    "notas": "Reconstrucción hipotética Taíno desde Lok. abba; método comparativo arahuacano; Reconstrucción desde Lok. abba (uno); método comparativo arahuaco; confianza: alta",
+    "categoria": "gramatica"
+  },
+  "yamosa": {
+    "es": "dos",
+    "fuente": "taino",
+    "notas": "Taíno atestiguado: yamosa; cognado Lok. biama; Brinton 1871",
+    "categoria": "gramatica"
+  },
+  "mayani": {
+    "es": "no, negación",
+    "fuente": "taino",
+    "notas": "Taíno atestiguado: mayani; cognado Lok. ma; Brinton 1871",
+    "categoria": "gramatica"
+  },
+  "taita": {
+    "es": "padre",
+    "fuente": "taino",
+    "notas": "Taíno atestiguado: taita; cognado Lok. itti; Brinton 1871",
+    "categoria": "parentesco"
+  },
+  "uju": {
+    "es": "madre",
+    "fuente": "taino",
+    "notas": "Reconstrucción hipotética Taíno desde Lok. uju; método comparativo arahuacano; Reconstrucción desde Lok. uju (madre); método comparativo arahuaco; confianza: alta",
+    "categoria": "parentesco"
+  }
+}

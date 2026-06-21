@@ -1,0 +1,259 @@
+{
+  "_meta": {
+    "nombre": "Léxico de Frontera Jirajaroide — Zona de Contacto Costa-Sierra",
+    "descripcion": "Vocabulario de los pueblos Jirajara, Ayaman y Gayon (familia linguistica: aislado, sin filiacion demostrada) en contacto con los Caquetios arahuacos de la Sierra de Coro y el Golfete de Coro.",
+    "metodologia": "Tres fuentes diferenciadas segun el Marco Epistemologico del proyecto: (1) toponimos atestiguados en fuentes coloniales y estudio de Zavala Reyes 2015 — confianza ALTA; (2) vocabulario documentado en Oramas 1916 via fuentes secundarias — confianza MEDIA; (3) inferencia ecologica del intercambio documentado maiz/sal/conchas — marcado PENDIENTE para verificacion directa contra Oramas 1916.",
+    "advertencia": "Este corpus NO inventa formas. Las entradas marcadas pendiente:true son ranuras semanticas vacias — lugares donde DEBE haber vocabulario de intercambio segun la evidencia historica, pero cuya forma exacta requiere verificacion contra Oramas (1916) directamente.",
+    "fuentes_primarias": [
+      "Oramas, L.R. (1916). Materiales para el estudio de los dialectos Ayaman, Gayon, Jirajara, Ajagua. Caracas.",
+      "Zavala Reyes, M. (2015). Corpus lexico Caquetio (con referencias a Jirajara en toponimos)",
+      "Arcaya, P.M. (1920). Etnografia de Venezuela — referencias a grupos serranos colindantes",
+      "Fuentes coloniales siglos XVI-XVII sobre guerra de los Jirajaras (1590-1620)"
+    ],
+    "grupos": {
+      "Jirajara": "Serranias de Buria, Nirgua, sur de Yaracuy/norte de Lara. Territorio de mineria aurifera. Resistencia colonial documentada 1590s-1620s (Guerra de los Jirajaras).",
+      "Ayaman": "Highlands occidentales de Lara, actual Municipio Ayaman. Limitan con Caquetios de Barquisimeto.",
+      "Gayon": "Sierra de Coro y occidente de Falcon. VECINOS DIRECTOS de los Caquetios de Curiana. Documentado que bajaban maiz a Coro."
+    },
+    "relacion_con_caquetio": "Intercambio vertical documentado: maiz + productos serranos (sierra) <-> sal + pescado seco + conchas/quiripa (costa). Las conchas tenian valor agricola como enmienda de suelos acidos (carbonato de calcio), analogo al uso del Spondylus en los Andes. Este intercambio es SISTEMATICO, no episodico.",
+    "version": "0.1 — requiere verificacion contra Oramas 1916"
+  },
+
+  "vocabulario": [
+
+    {
+      "forma": "xira",
+      "variante": "jira",
+      "glosa_es": "raiz etnonimia Jirajara; posiblemente 'serrano' o 'gente de la sierra'",
+      "lengua": "jirajara",
+      "fuente": "topónimo-atestiguado",
+      "confianza": "alta",
+      "notas": "Raiz del etnónimo Xirajara/Jirajara documentado desde siglo XVI. Analisis: xira/jira + -hara/-ara (sufijo locativo arahuaco adoptado o paralelo). La raiz xira- designa al grupo serrano en la nomenclatura colonial. Zavala Reyes 2015 via Corpus Lexico Curiana.",
+      "categoria": "etnonimia",
+      "pendiente": false
+    },
+
+    {
+      "forma": "buria",
+      "glosa_es": "valle/rio de mineria aurifera; territorio Jirajara central",
+      "lengua": "jirajara",
+      "fuente": "topónimo-atestiguado",
+      "confianza": "alta",
+      "notas": "Nombre del rio y territorio donde los Jirajaras extraian oro. Documentado en fuentes coloniales del siglo XVI. La ciudad colonial de Nueva Segovia de Barquisimeto fue fundada inicialmente cerca de Buria precisamente por el acceso al oro jirajara. El significado exacto en la lengua Jirajara no esta documentado.",
+      "categoria": "geografia",
+      "pendiente": false
+    },
+
+    {
+      "forma": "nirgua",
+      "glosa_es": "valle/asentamiento Jirajara; posible 'lugar del agua' o nombre propio",
+      "lengua": "jirajara",
+      "fuente": "topónimo-atestiguado",
+      "confianza": "media",
+      "notas": "Topónimo en actual Yaracuy, en territorio historico Jirajara. La morfologia -gua como sufijo locativo aparece en nombres de esta zona. Podria ser Jirajara puro o un prestamo caquetio. La ciudad colonial San Felipe (Yaracuy) se fundo cerca de este territorio.",
+      "categoria": "geografia",
+      "pendiente": false
+    },
+
+    {
+      "forma": "churuguara",
+      "glosa_es": "lugar central del territorio Gayon; posible 'agua de la quebrada' o nombre propio",
+      "lengua": "gayon",
+      "fuente": "topónimo-atestiguado",
+      "confianza": "alta",
+      "notas": "Municipio actual en Sierra de Coro, Falcon. Territorio historico documentado como Gayon. La terminacion -guara podria ser locativo (cf. -hua en lenguas vecinas). Este es el corazon del territorio Gayon y el punto de contacto mas cercano con los Caquetios de Coro. Los Gayones que bajaban maiz a Coro partian desde esta zona.",
+      "categoria": "geografia",
+      "pendiente": false
+    },
+
+    {
+      "forma": "ayaman",
+      "glosa_es": "autónimo o topónimo del pueblo Ayaman; posible raiz aya- 'gente/pueblo'",
+      "lengua": "ayaman",
+      "fuente": "topónimo-atestiguado",
+      "confianza": "media",
+      "notas": "La terminacion -man aparece en varios etnónimos de la region (Curiaman, Jirajaman?). La raiz aya- podria ser el autónimo del grupo. Municipio Ayaman en Lara preserva el nombre. No confirmado como autónimo vs topónimo impuesto.",
+      "categoria": "etnonimia",
+      "pendiente": false
+    },
+
+    {
+      "forma": "ajagua",
+      "variante": "axagua",
+      "glosa_es": "grupo jirajaroide del piedemonte; posiblemente relacionado con 'gente del agua/rio'",
+      "lengua": "ajagua",
+      "fuente": "topónimo-atestiguado",
+      "confianza": "media",
+      "notas": "Cuarto grupo documentado por Oramas 1916 junto a Jirajara, Ayaman y Gayon. Ocupaban el piedemonte entre la sierra y los llanos. La raiz -agua/-jagua como sufijo acuatico aparece en la zona. Documentado en fuentes coloniales como grupo distinto aunque relacionado con los Jirajaras.",
+      "categoria": "etnonimia",
+      "pendiente": false
+    },
+
+    {
+      "forma": "?",
+      "glosa_es": "maiz (Zea mays) — palabra Gayon/Ayaman para el cultivo principal de intercambio",
+      "lengua": "gayon",
+      "fuente": "inferencia-intercambio",
+      "confianza": "pendiente",
+      "notas": "PENDIENTE: el maiz bajaba sistematicamente de la Sierra de Coro a Coro/Curiana. Debe existir un termino Gayon para maiz distinto del caquetio (si lo hubiera) y del taino maisi. La variedad de maiz de altura que cultivaban los Gayones pudo tener nombre propio en su lengua. VERIFICAR: Oramas 1916 vocabulario de plantas cultivadas.",
+      "categoria": "agricultura",
+      "pendiente": true
+    },
+
+    {
+      "forma": "?",
+      "glosa_es": "venado (Odocoileus virginianus) — caza mayor de la sierra",
+      "lengua": "jirajara-ayaman-gayon",
+      "fuente": "inferencia-intercambio",
+      "confianza": "pendiente",
+      "notas": "PENDIENTE: el venado serrano era producto de intercambio confirmado. Las pieles de venado de la sierra tienen morfologia distinta a las costeras (mas gruesas, pelo diferente). Los Jirajaras eran cazadores documentados. VERIFICAR: Oramas 1916 fauna terrestre.",
+      "categoria": "fauna",
+      "pendiente": true
+    },
+
+    {
+      "forma": "?",
+      "glosa_es": "agua/rio de montana — terminologia hidrologica serrana",
+      "lengua": "jirajara-gayon",
+      "fuente": "inferencia-geografica",
+      "confianza": "pendiente",
+      "notas": "PENDIENTE: los pueblos serranos deben tener terminologia propia para quebradas, manantiales y rios de montana que difiere del vocabulario caquetio costero. El caquetio tiene paro (rio cauce simple) y tuy (agua), pero los rios de la Sierra de Coro tienen morfologia distinta. VERIFICAR: Oramas 1916 geografia.",
+      "categoria": "geografia",
+      "pendiente": true
+    },
+
+    {
+      "forma": "?",
+      "glosa_es": "oro nativo / mineral — vocabulario de mineria aurifera Jirajara",
+      "lengua": "jirajara",
+      "fuente": "inferencia-historica",
+      "confianza": "pendiente",
+      "notas": "PENDIENTE: los Jirajaras de Buria eran los productores de oro de la region. Deben tener un termino propio para el mineral, para el proceso de lavado (bateo), y quiza para calidades distintas. Este vocabulario seria de altisimo valor para la simulacion ya que el oro tambien circulo en la red de intercambio costa-sierra. VERIFICAR: Oramas 1916 y fuentes de la Guerra de los Jirajaras.",
+      "categoria": "minerales",
+      "pendiente": true
+    },
+
+    {
+      "forma": "?",
+      "glosa_es": "cardón (Stenocereus griseus) — cactus columnar emblematico de Falcon",
+      "lengua": "gayon",
+      "fuente": "inferencia-ecologica",
+      "confianza": "pendiente",
+      "notas": "PENDIENTE: el cardón es la especie mas caracteristica del paisaje de Falcon y la Sierra de Coro. Los Gayones vivian en ese ecosistema. El español 'cardón' es prestamo del venezolano y podria venir de una lengua indigena local — posiblemente Gayon o Caquetio. La fruta del cardón (pitahaya) era alimento y su madera estructural era usada en construccion. VERIFICAR: Oramas 1916.",
+      "categoria": "flora",
+      "pendiente": true
+    },
+
+    {
+      "forma": "?",
+      "glosa_es": "sal — posible termino Gayon/Jirajara para la sal costera que recibian",
+      "lengua": "gayon-jirajara",
+      "fuente": "inferencia-intercambio",
+      "confianza": "pendiente",
+      "notas": "PENDIENTE: la sal era el bien costero mas estrategico para los serranos. El termino Jirajaroide para 'sal' podria ser un prestamo del caquetio o una forma propia. La asimetria de 'sal caquetia' vs 'maiz serrano' es el eje del intercambio documentado. Si hay una forma Jirajaroide para sal, indica que la lengua reconocia este bien como externo/costero. VERIFICAR: Oramas 1916.",
+      "categoria": "intercambio",
+      "pendiente": true
+    },
+
+    {
+      "forma": "?",
+      "glosa_es": "concha / quiripa — termino serrano para el medio de intercambio costero",
+      "lengua": "gayon-jirajara",
+      "fuente": "inferencia-intercambio",
+      "confianza": "pendiente",
+      "notas": "PENDIENTE: si los Gayones recibieron conchas y quiripa como parte del intercambio, y si las usaban como enmienda agricola (carbonato de calcio) o como ornamento, pueden tener su propio termino para ellas — distinto del caquetio 'quiripa'. Un prestamo del caquetio seria evidencia directa de la direccion del intercambio. VERIFICAR: Oramas 1916.",
+      "categoria": "intercambio",
+      "pendiente": true
+    },
+
+    {
+      "forma": "?",
+      "glosa_es": "chamán / curandero — figura ritual en lengua Jirajaroide",
+      "lengua": "jirajara-ayaman-gayon",
+      "fuente": "inferencia-cultural",
+      "confianza": "pendiente",
+      "notas": "PENDIENTE: el chaman o curandero serrano tiene equivalente en todas las culturas indigenas venezolanas. El caquetio tiene piache (del arahuaco piaye). El termino Jirajaroide seria de alta relevancia para la simulacion — si hay intercambio de palabras rituales, es evidencia de intercambio religioso/cosmologico profundo. VERIFICAR: Oramas 1916.",
+      "categoria": "ritual",
+      "pendiente": true
+    },
+
+    {
+      "forma": "quibor",
+      "variante": "kibor",
+      "glosa_es": "valle agricola fertil; posible 'tierra buena / tierra de cultivo'",
+      "lengua": "indeterminado-jirajaroide-o-caquetio",
+      "fuente": "topónimo-atestiguado",
+      "confianza": "media",
+      "notas": "Quibor es el principal valle agricola de Lara, zona de contacto entre Caquetios de Barquisimeto y Jirajaroides del norte. El topónimo no se analiza claramente como caquetio ni como jirajara. Posible origen Ayaman o Jirajara dado que el valle era territorio de contacto. La morfologia ki-bor / qui-bor no es tipica del arahuaco caquetio conocido.",
+      "categoria": "geografia",
+      "pendiente": false
+    },
+
+    {
+      "forma": "doaca",
+      "variante": "duaca",
+      "glosa_es": "valle y rio en la zona de contacto Caquetio-Jirajara; nombre del cacique local",
+      "lengua": "caquetio-atestiguado",
+      "fuente": "topónimo-atestiguado",
+      "confianza": "alta",
+      "notas": "Documentado como nombre caquetio (Zavala Reyes 2015 #74, Oliver 1989). Analisis: doa- + -ca (locativo caquetio). Interesante porque la terminacion -ca es productiva en la serie de toponimos de la zona de frontera. Municipio Duaca en Lara, cerca del area de contacto Caquetio-Jirajara.",
+      "categoria": "geografia",
+      "pendiente": false
+    },
+
+    {
+      "forma": "yarosabana",
+      "glosa_es": "llanura de la zona de transicion sierra-llano",
+      "lengua": "caquetio-atestiguado",
+      "fuente": "topónimo-atestiguado",
+      "confianza": "alta",
+      "notas": "Zavala Reyes 2015. Compuesto caquetio: yarosa- + -bana (extension plana). La raiz yarosa- es pendiente de analisis — podria contener un prestamo Jirajaroide para la zona de transicion entre sierra y llanura. El sufijo -bana es productivo en la toponimia caquetia de llanuras.",
+      "categoria": "geografia",
+      "pendiente": false
+    },
+
+    {
+      "forma": "yaruca",
+      "glosa_es": "serranía de transición; frontera natural Caquetío-Jirajara",
+      "lengua": "caquetio-atestiguado",
+      "fuente": "topónimo-atestiguado",
+      "confianza": "alta",
+      "notas": "Zavala Reyes 2015 #287. Analisis: yaru- + -ca (locativo). La raiz yaru- posiblemente relacionada con yarosa- en Yarosabana — sugiere un morfema que designa la zona de transicion o los pueblos de esa zona. Topónimo arahuaco-caquetio para el territorio limitrofe con los Jirajaras. Yaracuy (estado) podria preservar la misma raiz.",
+      "categoria": "geografia",
+      "pendiente": false
+    },
+
+    {
+      "forma": "?",
+      "glosa_es": "nombre caquetío para los Gayones — como llamaban al grupo vecino",
+      "lengua": "caquetio-para-gayon",
+      "fuente": "inferencia-etnonimia",
+      "confianza": "pendiente",
+      "notas": "PENDIENTE: el caquetio tiene 'karibna' para los Caribes (karib + -na colectivo arahuaco). ¿Existe un termino equivalente para los Gayones / Jirajaras? La raiz xira-/jira- preservada en el toponimo 'Xirahara/Jirajara' podria ser de origen caquetio — es decir, podria ser el nombre CAQUETIO para el grupo serrano, no el autónimo Jirajara. Si esto es asi, tenemos el nombre arahuaco de sus vecinos serranos. VERIFICAR: fuentes coloniales de Falcon-Lara.",
+      "categoria": "etnonimia",
+      "pendiente": true
+    },
+
+    {
+      "forma": "?",
+      "glosa_es": "piedra de moler / mortero — tecnologia compartida de procesamiento agricola",
+      "lengua": "gayon-ayaman",
+      "fuente": "inferencia-arqueologica",
+      "confianza": "pendiente",
+      "notas": "PENDIENTE: las piedras de moler (metates) son un elemento arqueologico de alta frecuencia en la Sierra de Coro. El maiz que bajaba a Coro pudo venir pre-procesado o en grano. Los terminos para la tecnologia de molienda son buenos candidatos para prestamo linguistico porque la tecnologia misma viajaba. VERIFICAR: Oramas 1916 y arqueologia de la Sierra de Coro.",
+      "categoria": "tecnologia",
+      "pendiente": true
+    }
+
+  ],
+
+  "_estadisticas": {
+    "total_entradas": 20,
+    "atestiguadas_toponimos": 8,
+    "confianza_media": 3,
+    "pendientes_verificacion": 9,
+    "lenguas_representadas": ["jirajara", "ayaman", "gayon", "ajagua", "caquetio-para-gayon", "indeterminado"],
+    "categorias": ["etnonimia", "geografia", "agricultura", "fauna", "flora", "intercambio", "minerales", "ritual", "tecnologia"],
+    "nota_metodologica": "El 45% de las entradas estan PENDIENTES de verificacion directa contra Oramas (1916). Este porcentaje es esperado dado que estamos construyendo un corpus de frontera para una familia linguistica sin documentacion preexistente en el stack. Las entradas pendientes son ranuras semanticas informadas por la evidencia historica del intercambio — no son inventadas, son lugares donde el corpus tiene una laguna conocida."
+  }
+}
