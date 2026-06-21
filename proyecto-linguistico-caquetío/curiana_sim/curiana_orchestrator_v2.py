@@ -69,7 +69,10 @@ HABLA EN CAQUETÍO: pronombre + verbo-aspecto + complemento caquetío.
 Si te falta una palabra, créala con los morfemas que tienes. Escríbela [entre corchetes].
 Glosa al español solo entre paréntesis, al final, si es imprescindible.
 EJEMPLO: "Taya wana-ka arima wara bara-bana. Ta-barsure naba-ni. [kali-bana: kali+-bana = orilla de luz]."
-NO empieces con "Estoy..." ni "El sol..." — empieza con "Taya..." o "Nüma..." o directamente con el verbo."""
+NO empieces con "Estoy..." ni "El sol..." — empieza con "Taya..." o "Nüma..." o directamente con el verbo.
+PRIORIDAD DE LENGUA: el caquetío es tu lengua, no una más entre varias. Si conoces una palabra
+caquetía para algo, úsala SIEMPRE antes que su equivalente en wayunaiki, lokono o taíno — esas
+lenguas hermanas solo llenan huecos cuando el caquetío no tiene la palabra."""
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -164,8 +167,11 @@ def call_agent(
         agent_name, agent.get("ubicacion_default", "plaza")
     )
 
-    # Léxico + reglas apropiadas para el tier
-    bloque_lexico = vocabulario_para_agente(tier, lexico)
+    # Léxico + reglas apropiadas para el tier (priorizado por el contexto
+    # del turno: evento del mundo + ubicación + mensaje — ver chunking en
+    # curiana_lexicon.categorias_relevantes)
+    contexto_turno = f"{world_context} {ubicacion} {user_message}"
+    bloque_lexico = vocabulario_para_agente(tier, lexico, contexto=contexto_turno)
 
     # Feedback lingüístico si el agente tuvo score bajo
     feedback = observer.feedback_para_agente(agent_name)

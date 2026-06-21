@@ -1,0 +1,6745 @@
+[
+  {
+    "proto_caquetio": "*pian",
+    "confianza": "media",
+    "candidatos": [
+      "pian",
+      "piama"
+    ],
+    "nota": "Lok. bian → pian; Way. piama → piama",
+    "glosa": "dos (numeral)",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": "bian",
+      "wayunaiki": "piama",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*cabyn",
+    "confianza": "media",
+    "candidatos": [
+      "cabyn",
+      "abunuin"
+    ],
+    "nota": "Lok. kabyn → cabyn; Way. apünüin → abunuin",
+    "glosa": "tres (numeral)",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": "kabyn",
+      "wayunaiki": "apünüin",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*pithi",
+    "confianza": "media",
+    "candidatos": [
+      "pithi",
+      "pienchi"
+    ],
+    "nota": "Lok. bithi → pithi; Way. pienchi → pienchi",
+    "glosa": "cuatro (numeral)",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": "bithi",
+      "wayunaiki": "pienchi",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*peyiche",
+    "confianza": "media",
+    "candidatos": [
+      "peyiche"
+    ],
+    "nota": "Taíno bejique → peyiche",
+    "glosa": "bejique, chamán taíno, mediador ritual",
+    "categoria": "cosmos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": null,
+      "taíno": "bejique"
+    }
+  },
+  {
+    "proto_caquetio": "*adali",
+    "confianza": "media",
+    "candidatos": [
+      "adali"
+    ],
+    "nota": "Lok. hadalli → adali",
+    "glosa": "sol (forma lokono)",
+    "categoria": "cosmos",
+    "fuentes_usadas": {
+      "lokono": "hadalli",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*cati",
+    "confianza": "media",
+    "candidatos": [
+      "cati"
+    ],
+    "nota": "Lok. katsi → cati",
+    "glosa": "luna (forma lokono)",
+    "categoria": "cosmos",
+    "fuentes_usadas": {
+      "lokono": "katsi",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*piache",
+    "confianza": "media",
+    "candidatos": [
+      "piache"
+    ],
+    "nota": "Lok. piaye → piache",
+    "glosa": "chamán, curandero (forma lokono)",
+    "categoria": "cosmos",
+    "fuentes_usadas": {
+      "lokono": "piaye",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*paraca",
+    "confianza": "media",
+    "candidatos": [
+      "paraca"
+    ],
+    "nota": "Lok. baraha → paraca",
+    "glosa": "mar, agua extensa (forma lokono)",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": "baraha",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*coïa",
+    "confianza": "media",
+    "candidatos": [
+      "coïa"
+    ],
+    "nota": "Lok. koïa → coïa",
+    "glosa": "tierra, suelo (forma lokono)",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": "koïa",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*puru",
+    "confianza": "media",
+    "candidatos": [
+      "puru"
+    ],
+    "nota": "Lok. buru → puru",
+    "glosa": "cielo, firmamento",
+    "categoria": "cosmos",
+    "fuentes_usadas": {
+      "lokono": "buru",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*cassacu",
+    "confianza": "media",
+    "candidatos": [
+      "cassacu"
+    ],
+    "nota": "Lok. kassaku → cassacu",
+    "glosa": "firmamento, bóveda celeste",
+    "categoria": "cosmos",
+    "fuentes_usadas": {
+      "lokono": "kassaku",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*colocon",
+    "confianza": "media",
+    "candidatos": [
+      "colocon"
+    ],
+    "nota": "Lok. kolokon → colocon",
+    "glosa": "en el fuego, en la luz (postposición)",
+    "categoria": "cosmos",
+    "fuentes_usadas": {
+      "lokono": "kolokon",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*pana",
+    "confianza": "media",
+    "candidatos": [
+      "pana"
+    ],
+    "nota": "Lok. bana → pana",
+    "glosa": "hígado",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": "bana",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*tacuty",
+    "confianza": "media",
+    "candidatos": [
+      "tacuty"
+    ],
+    "nota": "Lok. dakuty → tacuty",
+    "glosa": "pies, patas",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": "dakuty",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*anucu",
+    "confianza": "media",
+    "candidatos": [
+      "taliroco",
+      "anucu"
+    ],
+    "nota": "Lok. daliroko → taliroco; Way. aanükü → anucu",
+    "glosa": "boca",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": "daliroko",
+      "wayunaiki": "aanükü",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*tari",
+    "confianza": "media",
+    "candidatos": [
+      "tari"
+    ],
+    "nota": "Lok. dari → tari",
+    "glosa": "dientes",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": "dari",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ucu",
+    "confianza": "media",
+    "candidatos": [
+      "ucu"
+    ],
+    "nota": "Lok. ukku → ucu",
+    "glosa": "corazón, centro vital",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": "ukku",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ucurahu2",
+    "confianza": "media",
+    "candidatos": [
+      "ucurahu2"
+    ],
+    "nota": "Lok. ukkurahu2 → ucurahu2",
+    "glosa": "pus (secreción del cuerpo enfermo)",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": "ukkurahu2",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eichi",
+    "confianza": "media",
+    "candidatos": [
+      "wasiri",
+      "eichi",
+      "aduri"
+    ],
+    "nota": "Lok. wasiri → wasiri; Way. e'ichi → eichi; Taíno aduri → aduri",
+    "glosa": "nariz",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": "wasiri",
+      "wayunaiki": "e'ichi",
+      "taíno": "aduri"
+    }
+  },
+  {
+    "proto_caquetio": "*poro",
+    "confianza": "media",
+    "candidatos": [
+      "poro"
+    ],
+    "nota": "Lok. boro → poro",
+    "glosa": "aldea, pueblo, asentamiento",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": "boro",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*capojan",
+    "confianza": "media",
+    "candidatos": [
+      "capojan"
+    ],
+    "nota": "Lok. kabojan → capojan",
+    "glosa": "conuco, milpa, terreno de cultivo",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": "kabojan",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*cairi",
+    "confianza": "media",
+    "candidatos": [
+      "cairi"
+    ],
+    "nota": "Lok. kairi → cairi",
+    "glosa": "isla, territorio insular",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": "kairi",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*oniapo",
+    "confianza": "media",
+    "candidatos": [
+      "oniapo"
+    ],
+    "nota": "Lok. oniabo → oniapo",
+    "glosa": "agua, cuerpo de agua",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": "oniabo",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*salapan",
+    "confianza": "media",
+    "candidatos": [
+      "salapan"
+    ],
+    "nota": "Lok. sallaban → salapan",
+    "glosa": "sabana, llanura (terreno plano y liso)",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": "sallaban",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*sipa",
+    "confianza": "media",
+    "candidatos": [
+      "sipa"
+    ],
+    "nota": "Lok. siba → sipa",
+    "glosa": "piedra, roca",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": "siba",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*apa",
+    "confianza": "media",
+    "candidatos": [
+      "apa"
+    ],
+    "nota": "Lok. aba → apa",
+    "glosa": "uno, un (numeral y artículo indefinido)",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": "aba",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*alican",
+    "confianza": "media",
+    "candidatos": [
+      "alican"
+    ],
+    "nota": "Lok. alikan → alican",
+    "glosa": "quién (interrogativo)",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": "alikan",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*anacan",
+    "confianza": "media",
+    "candidatos": [
+      "anacan"
+    ],
+    "nota": "Lok. annakan → anacan",
+    "glosa": "centro, punto medio (concepto espacial)",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": "annakan",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*pe",
+    "confianza": "media",
+    "candidatos": [
+      "pe"
+    ],
+    "nota": "Lok. be → pe",
+    "glosa": "sufijo plural general (-be)",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": "be",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*pi",
+    "confianza": "media",
+    "candidatos": [
+      "pi"
+    ],
+    "nota": "Lok. bi → pi",
+    "glosa": "tú (pronombre libre 2sg)",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": "bi",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*piinasufix",
+    "confianza": "media",
+    "candidatos": [
+      "piinasufix"
+    ],
+    "nota": "Lok. biinasufix → piinasufix",
+    "glosa": "sufijo de pasado próximo (-biina: ayer)",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": "biinasufix",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*pisufix",
+    "confianza": "media",
+    "candidatos": [
+      "pisufix"
+    ],
+    "nota": "Lok. bisufix → pisufix",
+    "glosa": "sufijo de pasado reciente (-bi: hoy)",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": "bisufix",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*pute",
+    "confianza": "media",
+    "candidatos": [
+      "pute"
+    ],
+    "nota": "Lok. bute → pute",
+    "glosa": "ahora (marcador de presente inmediato)",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": "bute",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*te",
+    "confianza": "media",
+    "candidatos": [
+      "te"
+    ],
+    "nota": "Lok. de → te",
+    "glosa": "yo (pronombre libre 1sg)",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": "de",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*toma",
+    "confianza": "media",
+    "candidatos": [
+      "toma"
+    ],
+    "nota": "Lok. doma → toma",
+    "glosa": "porque, a causa de (postposición causal)",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": "doma",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ipin",
+    "confianza": "media",
+    "candidatos": [
+      "ipin"
+    ],
+    "nota": "Lok. hibin → ipin",
+    "glosa": "ya, de ya (aspecto completivo)",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": "hibin",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*cen",
+    "confianza": "media",
+    "candidatos": [
+      "cen"
+    ],
+    "nota": "Lok. ken → cen",
+    "glosa": "y (conjunción copulativa)",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": "ken",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*cijadoma",
+    "confianza": "media",
+    "candidatos": [
+      "cijadoma"
+    ],
+    "nota": "Lok. kijadoma → cijadoma",
+    "glosa": "por eso, por tanto, por esa razón",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": "kijadoma",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*lico",
+    "confianza": "media",
+    "candidatos": [
+      "lico"
+    ],
+    "nota": "Lok. liko → lico",
+    "glosa": "nuestro (posesivo 1pl, poseído)",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": "liko",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*pocithi",
+    "confianza": "media",
+    "candidatos": [
+      "pocithi"
+    ],
+    "nota": "Lok. bokithi → pocithi",
+    "glosa": "hermano mayor (visto por el menor)",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": "bokithi",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*tali",
+    "confianza": "media",
+    "candidatos": [
+      "tali"
+    ],
+    "nota": "Lok. dalli → tali",
+    "glosa": "padre (mi padre, forma poseída)",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": "dalli",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ipili",
+    "confianza": "media",
+    "candidatos": [
+      "ipili"
+    ],
+    "nota": "Lok. ibili → ipili",
+    "glosa": "niño, infante (sin distinción de género)",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": "ibili",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*cakythi",
+    "confianza": "media",
+    "candidatos": [
+      "cakythi"
+    ],
+    "nota": "Lok. kakythi → cakythi",
+    "glosa": "hombre adulto arahuacano",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": "kakythi",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*cakythinon",
+    "confianza": "media",
+    "candidatos": [
+      "cakythinon"
+    ],
+    "nota": "Lok. kakythinon → cakythinon",
+    "glosa": "pueblo, gente arahuacana",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": "kakythinon",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*cupacanan",
+    "confianza": "media",
+    "candidatos": [
+      "cupacanan"
+    ],
+    "nota": "Lok. kubakanan → cupacanan",
+    "glosa": "antepasados, ancestros",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": "kubakanan",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*lucunu",
+    "confianza": "media",
+    "candidatos": [
+      "lucunu"
+    ],
+    "nota": "Lok. lukkunu → lucunu",
+    "glosa": "el pueblo lokono (autónimo colectivo)",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": "lukkunu",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ocithi",
+    "confianza": "media",
+    "candidatos": [
+      "ocithi"
+    ],
+    "nota": "Lok. okithi → ocithi",
+    "glosa": "hermano menor (visto por el mayor)",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": "okithi",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ocitho",
+    "confianza": "media",
+    "candidatos": [
+      "ocitho"
+    ],
+    "nota": "Lok. okitho → ocitho",
+    "glosa": "hermana menor (vista por la mayor)",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": "okitho",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ucurahu",
+    "confianza": "media",
+    "candidatos": [
+      "ucurahu"
+    ],
+    "nota": "Lok. ukkurahu → ucurahu",
+    "glosa": "familia, tribu, grupo de origen común",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": "ukkurahu",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*awothici",
+    "confianza": "media",
+    "candidatos": [
+      "awothici"
+    ],
+    "nota": "Lok. awothiki → awothici",
+    "glosa": "encontrar, hallar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": "awothiki",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*pocon",
+    "confianza": "media",
+    "candidatos": [
+      "pocon"
+    ],
+    "nota": "Lok. bokon → pocon",
+    "glosa": "cocinar, hervir",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": "bokon",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*poratyn",
+    "confianza": "media",
+    "candidatos": [
+      "poratyn"
+    ],
+    "nota": "Lok. boratyn → poratyn",
+    "glosa": "ayudar, salvar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": "boratyn",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*tian",
+    "confianza": "media",
+    "candidatos": [
+      "tian"
+    ],
+    "nota": "Lok. dian → tian",
+    "glosa": "hablar, decir",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": "dian",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayata",
+    "confianza": "media",
+    "candidatos": [
+      "fatadyn",
+      "ayata"
+    ],
+    "nota": "Lok. fatadyn → fatadyn; Way. ajataa → ayata",
+    "glosa": "golpear, pegar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": "fatadyn",
+      "wayunaiki": "ajataa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*cassan",
+    "confianza": "media",
+    "candidatos": [
+      "cassan"
+    ],
+    "nota": "Lok. kassan → cassan",
+    "glosa": "estar embarazada",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": "kassan",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*sicin",
+    "confianza": "media",
+    "candidatos": [
+      "sicin"
+    ],
+    "nota": "Lok. sikin → sicin",
+    "glosa": "dar, poner",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": "sikin",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*socon",
+    "confianza": "media",
+    "candidatos": [
+      "socon"
+    ],
+    "nota": "Lok. sokon → socon",
+    "glosa": "cortar (con machete o hacha)",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": "sokon",
+      "wayunaiki": null,
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aayula",
+    "confianza": "media",
+    "candidatos": [
+      "aayula"
+    ],
+    "nota": "Way. aa'ayula → aayula",
+    "glosa": "calor, temperatura",
+    "categoria": "cosmos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aa'ayula",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*amusain",
+    "confianza": "media",
+    "candidatos": [
+      "amusain"
+    ],
+    "nota": "Way. amüsain → amusain",
+    "glosa": "humo",
+    "categoria": "cosmos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "amüsain",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aturula",
+    "confianza": "media",
+    "candidatos": [
+      "aturula"
+    ],
+    "nota": "Way. atürüla → aturula",
+    "glosa": "trueno, paso",
+    "categoria": "cosmos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "atürüla",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*auarala",
+    "confianza": "media",
+    "candidatos": [
+      "auarala"
+    ],
+    "nota": "Way. awarala → auarala",
+    "glosa": "luz",
+    "categoria": "cosmos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "awarala",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aya",
+    "confianza": "media",
+    "candidatos": [
+      "aya"
+    ],
+    "nota": "Way. ayaa → aya",
+    "glosa": "relámpago",
+    "categoria": "cosmos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ayaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*emiouchi",
+    "confianza": "media",
+    "candidatos": [
+      "emiouchi"
+    ],
+    "nota": "Way. eemioushi → emiouchi",
+    "glosa": "sombra",
+    "categoria": "cosmos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "eemioushi",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*olotsu",
+    "confianza": "media",
+    "candidatos": [
+      "olotsu"
+    ],
+    "nota": "Way. jolotsü → olotsu",
+    "glosa": "estrella",
+    "categoria": "cosmos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "jolotsü",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*caspoluin",
+    "confianza": "media",
+    "candidatos": [
+      "caspoluin"
+    ],
+    "nota": "Way. kaspolüin → caspoluin",
+    "glosa": "arco iris",
+    "categoria": "cosmos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "kaspolüin",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*catcousu",
+    "confianza": "media",
+    "candidatos": [
+      "catcousu"
+    ],
+    "nota": "Way. katkousü → catcousu",
+    "glosa": "arma de fuego",
+    "categoria": "cosmos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "katkousü",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*palii",
+    "confianza": "media",
+    "candidatos": [
+      "palii"
+    ],
+    "nota": "Way. pali'i → palii",
+    "glosa": "ceniza",
+    "categoria": "cosmos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "pali'i",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*piyuuchi",
+    "confianza": "media",
+    "candidatos": [
+      "piyuuchi"
+    ],
+    "nota": "Way. piyuushi → piyuuchi",
+    "glosa": "oscuridad",
+    "categoria": "cosmos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "piyuushi",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*balatchi",
+    "confianza": "media",
+    "candidatos": [
+      "balatchi"
+    ],
+    "nota": "Way. walatshi → balatchi",
+    "glosa": "calor atmosférico",
+    "categoria": "cosmos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "walatshi",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*bauai",
+    "confianza": "media",
+    "candidatos": [
+      "bauai"
+    ],
+    "nota": "Way. wawai → bauai",
+    "glosa": "viento (de tempestad)",
+    "categoria": "cosmos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "wawai",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*auala",
+    "confianza": "media",
+    "candidatos": [
+      "auala"
+    ],
+    "nota": "Way. a'wala → auala",
+    "glosa": "cabello",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'wala",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*auiira",
+    "confianza": "media",
+    "candidatos": [
+      "auiira"
+    ],
+    "nota": "Way. a'wiira → auiira",
+    "glosa": "lágrima",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'wiira",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aluuain",
+    "confianza": "media",
+    "candidatos": [
+      "aluuain"
+    ],
+    "nota": "Way. aaluwain → aluuain",
+    "glosa": "tobillo",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aaluwain",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achaa",
+    "confianza": "media",
+    "candidatos": [
+      "achaa"
+    ],
+    "nota": "Way. acha'a → achaa",
+    "glosa": "excremento",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "acha'a",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achee",
+    "confianza": "media",
+    "candidatos": [
+      "achee"
+    ],
+    "nota": "Way. ache'e → achee",
+    "glosa": "oreja, oído",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ache'e",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achebu",
+    "confianza": "media",
+    "candidatos": [
+      "achebu"
+    ],
+    "nota": "Way. achepü → achebu",
+    "glosa": "pintura para la cara",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "achepü",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayapcii",
+    "confianza": "media",
+    "candidatos": [
+      "ayapcii"
+    ],
+    "nota": "Way. ajapkii → ayapcii",
+    "glosa": "muñeca",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ajapkii",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aluuuain",
+    "confianza": "media",
+    "candidatos": [
+      "aluuuain"
+    ],
+    "nota": "Way. aluuwain → aluuuain",
+    "glosa": "pecho",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aluuwain",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*amulira",
+    "confianza": "media",
+    "candidatos": [
+      "amulira"
+    ],
+    "nota": "Way. amülira → amulira",
+    "glosa": "vello",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "amülira",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*abachera",
+    "confianza": "media",
+    "candidatos": [
+      "abachera"
+    ],
+    "nota": "Way. apachera → abachera",
+    "glosa": "dedo (del pie)",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "apachera",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*abatou",
+    "confianza": "media",
+    "candidatos": [
+      "abatou"
+    ],
+    "nota": "Way. apato'u → abatou",
+    "glosa": "uña, garra, pezuña",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "apato'u",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*abuu",
+    "confianza": "media",
+    "candidatos": [
+      "abuu"
+    ],
+    "nota": "Way. apü'ü → abuu",
+    "glosa": "muslo",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "apü'ü",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*asabu",
+    "confianza": "media",
+    "candidatos": [
+      "asabu"
+    ],
+    "nota": "Way. asapü → asabu",
+    "glosa": "espalda, columna",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "asapü",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aseeruu",
+    "confianza": "media",
+    "candidatos": [
+      "aseeruu"
+    ],
+    "nota": "Way. ase'eru'u → aseeruu",
+    "glosa": "mitad, cintura",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ase'eru'u",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*asibala",
+    "confianza": "media",
+    "candidatos": [
+      "asibala"
+    ],
+    "nota": "Way. asipala → asibala",
+    "glosa": "cicatriz",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "asipala",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*atuna",
+    "confianza": "media",
+    "candidatos": [
+      "atuna"
+    ],
+    "nota": "Way. atüna → atuna",
+    "glosa": "brazo, ala",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "atüna",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aua",
+    "confianza": "media",
+    "candidatos": [
+      "aua"
+    ],
+    "nota": "Way. awaa → aua",
+    "glosa": "saliva",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "awaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*auala",
+    "confianza": "media",
+    "candidatos": [
+      "auala"
+    ],
+    "nota": "Way. awala → auala",
+    "glosa": "hermano, -na",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "awala",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aualainse",
+    "confianza": "media",
+    "candidatos": [
+      "aualainse"
+    ],
+    "nota": "Way. awalainse → aualainse",
+    "glosa": "mandíbula, quijada",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "awalainse",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aualabaa",
+    "confianza": "media",
+    "candidatos": [
+      "aualabaa"
+    ],
+    "nota": "Way. awalapa'a → aualabaa",
+    "glosa": "mejilla",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "awalapa'a",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aye",
+    "confianza": "media",
+    "candidatos": [
+      "aye"
+    ],
+    "nota": "Way. ayee → aye",
+    "glosa": "lengua",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ayee",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayulain",
+    "confianza": "media",
+    "candidatos": [
+      "ayulain"
+    ],
+    "nota": "Way. ayülain → ayulain",
+    "glosa": "intestino, tripa",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ayülain",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eiima",
+    "confianza": "media",
+    "candidatos": [
+      "eiima"
+    ],
+    "nota": "Way. e'iima → eiima",
+    "glosa": "barba",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "e'iima",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eiruu",
+    "confianza": "media",
+    "candidatos": [
+      "eiruu"
+    ],
+    "nota": "Way. e'iru'u → eiruu",
+    "glosa": "punta",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "e'iru'u",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eiyeise",
+    "confianza": "media",
+    "candidatos": [
+      "eiyeise"
+    ],
+    "nota": "Way. e'iyeise → eiyeise",
+    "glosa": "barbilla",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "e'iyeise",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eyuu",
+    "confianza": "media",
+    "candidatos": [
+      "eyuu"
+    ],
+    "nota": "Way. eejuu → eyuu",
+    "glosa": "olor",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "eejuu",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eibuse",
+    "confianza": "media",
+    "candidatos": [
+      "eibuse"
+    ],
+    "nota": "Way. eipüse → eibuse",
+    "glosa": "hueso",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "eipüse",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ecia",
+    "confianza": "media",
+    "candidatos": [
+      "ecia"
+    ],
+    "nota": "Way. ekia → ecia",
+    "glosa": "mano derecha",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ekia",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eciicholoin",
+    "confianza": "media",
+    "candidatos": [
+      "eciicholoin"
+    ],
+    "nota": "Way. ekiisholoin → eciicholoin",
+    "glosa": "cerebro, seso",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ekiisholoin",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ebee",
+    "confianza": "media",
+    "candidatos": [
+      "ebee"
+    ],
+    "nota": "Way. epe'e → ebee",
+    "glosa": "mano izquierda",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "epe'e",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*euein",
+    "confianza": "media",
+    "candidatos": [
+      "euein"
+    ],
+    "nota": "Way. ewein → euein",
+    "glosa": "lunar",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ewein",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*calabuchou",
+    "confianza": "media",
+    "candidatos": [
+      "calabuchou"
+    ],
+    "nota": "Way. ka'lapücho'u → calabuchou",
+    "glosa": "ave cucarachero",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ka'lapücho'u",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*carai",
+    "confianza": "media",
+    "candidatos": [
+      "carai"
+    ],
+    "nota": "Way. kaarai → carai",
+    "glosa": "alcaraván (dara)",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "kaarai",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*calecale",
+    "confianza": "media",
+    "candidatos": [
+      "calecale"
+    ],
+    "nota": "Way. kalekale → calecale",
+    "glosa": "perico (cara sucia)",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "kalekale",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*casiba",
+    "confianza": "media",
+    "candidatos": [
+      "casiba"
+    ],
+    "nota": "Way. kasipa → casiba",
+    "glosa": "ciempiés",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "kasipa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*mayayulu",
+    "confianza": "media",
+    "candidatos": [
+      "mayayulu"
+    ],
+    "nota": "Way. majayülü → mayayulu",
+    "glosa": "señorita, joven (mujer)",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "majayülü",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*mabui",
+    "confianza": "media",
+    "candidatos": [
+      "mabui"
+    ],
+    "nota": "Way. mapüi → mabui",
+    "glosa": "piojo",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "mapüi",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*oulucu",
+    "confianza": "media",
+    "candidatos": [
+      "oulucu"
+    ],
+    "nota": "Way. o'uluku → oulucu",
+    "glosa": "miembro",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "o'uluku",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*oubuna",
+    "confianza": "media",
+    "candidatos": [
+      "oubuna"
+    ],
+    "nota": "Way. o'upünaa → oubuna",
+    "glosa": "cara, rostro",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "o'upünaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*outala",
+    "confianza": "media",
+    "candidatos": [
+      "outala"
+    ],
+    "nota": "Way. o'utala → outala",
+    "glosa": "cáscara",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "o'utala",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*omocoin",
+    "confianza": "media",
+    "candidatos": [
+      "omocoin"
+    ],
+    "nota": "Way. omokoin → omocoin",
+    "glosa": "espuma",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "omokoin",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*balachi",
+    "confianza": "media",
+    "candidatos": [
+      "balachi"
+    ],
+    "nota": "Way. walashi → balachi",
+    "glosa": "pelo",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "walashi",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*yoi",
+    "confianza": "media",
+    "candidatos": [
+      "yoi"
+    ],
+    "nota": "Way. yooi → yoi",
+    "glosa": "llaga, infección",
+    "categoria": "cuerpo",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "yooi",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayuna",
+    "confianza": "media",
+    "candidatos": [
+      "ayuna"
+    ],
+    "nota": "Way. aajuna → ayuna",
+    "glosa": "cubierta, techo",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aajuna",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*anoi",
+    "confianza": "media",
+    "candidatos": [
+      "anoi"
+    ],
+    "nota": "Way. anooi → anoi",
+    "glosa": "terreno despejado",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "anooi",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*abule",
+    "confianza": "media",
+    "candidatos": [
+      "abule"
+    ],
+    "nota": "Way. apülee → abule",
+    "glosa": "lugar, sitio, puesto",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "apülee",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*abuna",
+    "confianza": "media",
+    "candidatos": [
+      "abuna"
+    ],
+    "nota": "Way. apüna → abuna",
+    "glosa": "camino, sendero",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "apüna",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*asebu",
+    "confianza": "media",
+    "candidatos": [
+      "asebu"
+    ],
+    "nota": "Way. asepü → asebu",
+    "glosa": "pared",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "asepü",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*atuu",
+    "confianza": "media",
+    "candidatos": [
+      "atuu"
+    ],
+    "nota": "Way. atu'u → atuu",
+    "glosa": "superficie interior",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "atu'u",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*iba",
+    "confianza": "media",
+    "candidatos": [
+      "iba"
+    ],
+    "nota": "Way. ipa → iba",
+    "glosa": "piedra",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ipa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*culala",
+    "confianza": "media",
+    "candidatos": [
+      "culala"
+    ],
+    "nota": "Way. kulaala → culala",
+    "glosa": "corral",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "kulaala",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*la",
+    "confianza": "media",
+    "candidatos": [
+      "la"
+    ],
+    "nota": "Way. laa → la",
+    "glosa": "jagüey",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "laa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*luuobu",
+    "confianza": "media",
+    "candidatos": [
+      "luuobu"
+    ],
+    "nota": "Way. luwopu → luuobu",
+    "glosa": "arroyo",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "luwopu",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*maraya",
+    "confianza": "media",
+    "candidatos": [
+      "maraya"
+    ],
+    "nota": "Way. maraaja → maraya",
+    "glosa": "vidrio",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "maraaja",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*miirocu",
+    "confianza": "media",
+    "candidatos": [
+      "miirocu"
+    ],
+    "nota": "Way. miiroku → miirocu",
+    "glosa": "sitio donde hay",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "miiroku",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*moyuui",
+    "confianza": "media",
+    "candidatos": [
+      "moyuui"
+    ],
+    "nota": "Way. mojuui → moyuui",
+    "glosa": "monte (vegetación)",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "mojuui",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*namuna",
+    "confianza": "media",
+    "candidatos": [
+      "namuna"
+    ],
+    "nota": "Way. namüna → namuna",
+    "glosa": "loma, cerro",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "namüna",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*puattou",
+    "confianza": "media",
+    "candidatos": [
+      "puattou"
+    ],
+    "nota": "Way. puatto'u → puattou",
+    "glosa": "puerta",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "puatto'u",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*boolu",
+    "confianza": "media",
+    "candidatos": [
+      "boolu"
+    ],
+    "nota": "Way. wo'olu → boolu",
+    "glosa": "mochila para el cinturón bosque, monte",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "wo'olu",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*buin",
+    "confianza": "media",
+    "candidatos": [
+      "buin"
+    ],
+    "nota": "Way. wüin → buin",
+    "glosa": "agua",
+    "categoria": "geografia",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "wüin",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aaca",
+    "confianza": "media",
+    "candidatos": [
+      "aaca"
+    ],
+    "nota": "Way. a'aka → aaca",
+    "glosa": "entre",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'aka",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aatou",
+    "confianza": "media",
+    "candidatos": [
+      "aatou"
+    ],
+    "nota": "Way. a'ato'u → aatou",
+    "glosa": "al lado de",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'ato'u",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*autpaa",
+    "confianza": "media",
+    "candidatos": [
+      "autpaa"
+    ],
+    "nota": "Way. a'ütpa'a → autpaa",
+    "glosa": "al lado de, junto a",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'ütpa'a",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*au",
+    "confianza": "media",
+    "candidatos": [
+      "au"
+    ],
+    "nota": "Way. aa'u → au",
+    "glosa": "en",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aa'u",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achin",
+    "confianza": "media",
+    "candidatos": [
+      "achin"
+    ],
+    "nota": "Way. aashin → achin",
+    "glosa": "según",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aashin",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achiciye",
+    "confianza": "media",
+    "candidatos": [
+      "achiciye"
+    ],
+    "nota": "Way. achikijee → achiciye",
+    "glosa": "después de",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "achikijee",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achiciruu",
+    "confianza": "media",
+    "candidatos": [
+      "achiciruu"
+    ],
+    "nota": "Way. achikiru'u → achiciruu",
+    "glosa": "después de la salida aikkaa",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "achikiru'u",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*airuu",
+    "confianza": "media",
+    "candidatos": [
+      "airuu"
+    ],
+    "nota": "Way. airu'u → airuu",
+    "glosa": "en la horqueta de, entre",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "airu'u",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*acaisaa",
+    "confianza": "media",
+    "candidatos": [
+      "acaisaa"
+    ],
+    "nota": "Way. akaisa'a → acaisaa",
+    "glosa": "pero, sin embargo",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "akaisa'a",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aleeruu",
+    "confianza": "media",
+    "candidatos": [
+      "aleeruu"
+    ],
+    "nota": "Way. ale'eru'u → aleeruu",
+    "glosa": "en el vientre de",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ale'eru'u",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aluu",
+    "confianza": "media",
+    "candidatos": [
+      "aluu"
+    ],
+    "nota": "Way. alu'u → aluu",
+    "glosa": "dentro de, en",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "alu'u",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aluuyasaa",
+    "confianza": "media",
+    "candidatos": [
+      "aluuyasaa"
+    ],
+    "nota": "Way. alu'ujasa'a → aluuyasaa",
+    "glosa": "pero",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "alu'ujasa'a",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*amaichici",
+    "confianza": "media",
+    "candidatos": [
+      "amaichici"
+    ],
+    "nota": "Way. ama'ichiki → amaichici",
+    "glosa": "antes",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ama'ichiki",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*amainruu",
+    "confianza": "media",
+    "candidatos": [
+      "amainruu"
+    ],
+    "nota": "Way. ama'inru'u → amainruu",
+    "glosa": "mientras",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ama'inru'u",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*amuin",
+    "confianza": "media",
+    "candidatos": [
+      "amuin"
+    ],
+    "nota": "Way. amüin → amuin",
+    "glosa": "a, para",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "amüin",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*anainje",
+    "confianza": "media",
+    "candidatos": [
+      "anainje"
+    ],
+    "nota": "Way. anainjee → anainje",
+    "glosa": "de, por",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "anainjee",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*anainmuin",
+    "confianza": "media",
+    "candidatos": [
+      "anainmuin"
+    ],
+    "nota": "Way. anainmüin → anainmuin",
+    "glosa": "a, hacia",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "anainmüin",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*abulabuna",
+    "confianza": "media",
+    "candidatos": [
+      "abulabuna"
+    ],
+    "nota": "Way. apülapünaa → abulabuna",
+    "glosa": "antes de",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "apülapünaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*abulerua",
+    "confianza": "media",
+    "candidatos": [
+      "abulerua"
+    ],
+    "nota": "Way. apüleerua → abulerua",
+    "glosa": "delante de",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "apüleerua",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*atuma",
+    "confianza": "media",
+    "candidatos": [
+      "atuma"
+    ],
+    "nota": "Way. atüma → atuma",
+    "glosa": "por",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "atüma",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eibaye",
+    "confianza": "media",
+    "candidatos": [
+      "eibaye"
+    ],
+    "nota": "Way. e'ipajee → eibaye",
+    "glosa": "en respuesta a",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "e'ipajee",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*einaluu",
+    "confianza": "media",
+    "candidatos": [
+      "einaluu"
+    ],
+    "nota": "Way. einalu'u → einaluu",
+    "glosa": "en el fondo de, en el ekiisa",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "einalu'u",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*erocu",
+    "confianza": "media",
+    "candidatos": [
+      "erocu"
+    ],
+    "nota": "Way. eroku → erocu",
+    "glosa": "en (un líquido)",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "eroku",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*alia",
+    "confianza": "media",
+    "candidatos": [
+      "alia"
+    ],
+    "nota": "Way. jalia → alia",
+    "glosa": "¡cuidado!",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "jalia",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ouya",
+    "confianza": "media",
+    "candidatos": [
+      "ouya"
+    ],
+    "nota": "Way. joo'uya → ouya",
+    "glosa": "vámonos",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "joo'uya",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*catei",
+    "confianza": "media",
+    "candidatos": [
+      "catei"
+    ],
+    "nota": "Way. kaatei → catei",
+    "glosa": "¡oiga! ka'i",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "kaatei",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*outpuna",
+    "confianza": "media",
+    "candidatos": [
+      "outpuna"
+    ],
+    "nota": "Way. o'utpünaa → outpuna",
+    "glosa": "durante",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "o'utpünaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*oyuuna",
+    "confianza": "media",
+    "candidatos": [
+      "oyuuna"
+    ],
+    "nota": "Way. ojuuna → oyuuna",
+    "glosa": "a escondidas",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ojuuna",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*oubuna",
+    "confianza": "media",
+    "candidatos": [
+      "oubuna"
+    ],
+    "nota": "Way. oupünaa → oubuna",
+    "glosa": "debajo de",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "oupünaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*chiale",
+    "confianza": "media",
+    "candidatos": [
+      "chiale"
+    ],
+    "nota": "Way. shiale → chiale",
+    "glosa": "o ella",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "shiale",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*baneereeya",
+    "confianza": "media",
+    "candidatos": [
+      "baneereeya"
+    ],
+    "nota": "Way. wane'ere'eya → baneereeya",
+    "glosa": "no hasta que",
+    "categoria": "gramatica",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "wane'ere'eya",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*auayuuse",
+    "confianza": "media",
+    "candidatos": [
+      "auayuuse"
+    ],
+    "nota": "Way. a'wayuuse → auayuuse",
+    "glosa": "esposo, -a",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'wayuuse",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aui",
+    "confianza": "media",
+    "candidatos": [
+      "aui"
+    ],
+    "nota": "Way. a'üi → aui",
+    "glosa": "suegro (de mujer)",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'üi",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aulu",
+    "confianza": "media",
+    "candidatos": [
+      "aulu"
+    ],
+    "nota": "Way. a'ülü → aulu",
+    "glosa": "suegra (de mujer)",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'ülü",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aunu",
+    "confianza": "media",
+    "candidatos": [
+      "aunu"
+    ],
+    "nota": "Way. a'ünüü → aunu",
+    "glosa": "enemigo, -ga",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'ünüü",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*airu",
+    "confianza": "media",
+    "candidatos": [
+      "airu"
+    ],
+    "nota": "Way. aa'irü → airu",
+    "glosa": "tía (materna)",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aa'irü",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achoniru",
+    "confianza": "media",
+    "candidatos": [
+      "achoniru"
+    ],
+    "nota": "Way. achon'irü → achoniru",
+    "glosa": "sobrino, -na",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "achon'irü",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*alechi",
+    "confianza": "media",
+    "candidatos": [
+      "alechi"
+    ],
+    "nota": "Way. aleshi → alechi",
+    "glosa": "cuñado (de mujer)",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aleshi",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aluin",
+    "confianza": "media",
+    "candidatos": [
+      "aluin"
+    ],
+    "nota": "Way. alüin → aluin",
+    "glosa": "nieto, -ta",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "alüin",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aluinyuu",
+    "confianza": "media",
+    "candidatos": [
+      "aluinyuu"
+    ],
+    "nota": "Way. alüinyuu → aluinyuu",
+    "glosa": "cuñada (de varón)",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "alüinyuu",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*amurayuin",
+    "confianza": "media",
+    "candidatos": [
+      "amurayuin"
+    ],
+    "nota": "Way. amüraajüin → amurayuin",
+    "glosa": "novio, -via",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "amüraajüin",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*abuchi",
+    "confianza": "media",
+    "candidatos": [
+      "abuchi"
+    ],
+    "nota": "Way. apüshi → abuchi",
+    "glosa": "familia, pariente",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "apüshi",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achi",
+    "confianza": "media",
+    "candidatos": [
+      "achi",
+      "taita"
+    ],
+    "nota": "Way. ashi → achi; Taíno taita → taita",
+    "glosa": "padre",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ashi",
+      "taíno": "taita"
+    }
+  },
+  {
+    "proto_caquetio": "*achimia",
+    "confianza": "media",
+    "candidatos": [
+      "achimia"
+    ],
+    "nota": "Way. ashimia → achimia",
+    "glosa": "suegro (de varón)",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ashimia",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achiyachi",
+    "confianza": "media",
+    "candidatos": [
+      "achiyachi"
+    ],
+    "nota": "Way. ashiyaashi → achiyachi",
+    "glosa": "padrastro",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ashiyaashi",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achunuu",
+    "confianza": "media",
+    "candidatos": [
+      "achunuu"
+    ],
+    "nota": "Way. ashunuu → achunuu",
+    "glosa": "hermana menor (de varón)",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ashunuu",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*atuuchi",
+    "confianza": "media",
+    "candidatos": [
+      "atuuchi"
+    ],
+    "nota": "Way. atuushi → atuuchi",
+    "glosa": "abuelo",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "atuushi",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*atunayutu",
+    "confianza": "media",
+    "candidatos": [
+      "atunayutu"
+    ],
+    "nota": "Way. atünajutü → atunayutu",
+    "glosa": "amigo, -ga",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "atünajutü",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eeru",
+    "confianza": "media",
+    "candidatos": [
+      "eeru"
+    ],
+    "nota": "Way. e'erü → eeru",
+    "glosa": "cuñada (de mujer)",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "e'erü",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eiruma",
+    "confianza": "media",
+    "candidatos": [
+      "eiruma"
+    ],
+    "nota": "Way. e'iruma → eiruma",
+    "glosa": "primogénito, -ta",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "e'iruma",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eruin",
+    "confianza": "media",
+    "candidatos": [
+      "eruin"
+    ],
+    "nota": "Way. eerüin → eruin",
+    "glosa": "esposa",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "eerüin",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eiyasu",
+    "confianza": "media",
+    "candidatos": [
+      "eiyasu"
+    ],
+    "nota": "Way. eiyaasü → eiyasu",
+    "glosa": "madrastra",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "eiyaasü",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*emechi",
+    "confianza": "media",
+    "candidatos": [
+      "emechi"
+    ],
+    "nota": "Way. emeshi → emechi",
+    "glosa": "suegra (de varón)",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "emeshi",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*machon",
+    "confianza": "media",
+    "candidatos": [
+      "machon"
+    ],
+    "nota": "Way. maachon → machon",
+    "glosa": "mamá, abuela",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "maachon",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ouliuou",
+    "confianza": "media",
+    "candidatos": [
+      "ouliuou"
+    ],
+    "nota": "Way. oo'uliwo'u → ouliuou",
+    "glosa": "descendiente",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "oo'uliwo'u",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*chale",
+    "confianza": "media",
+    "candidatos": [
+      "chale"
+    ],
+    "nota": "Way. shale → chale",
+    "glosa": "último hijo, última hija",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "shale",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*tata",
+    "confianza": "media",
+    "candidatos": [
+      "tata"
+    ],
+    "nota": "Way. taata → tata",
+    "glosa": "papá, abuelo",
+    "categoria": "parentesco",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "taata",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aaya",
+    "confianza": "media",
+    "candidatos": [
+      "aaya"
+    ],
+    "nota": "Way. a'ajaa → aaya",
+    "glosa": "quemar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'ajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aaliyaua",
+    "confianza": "media",
+    "candidatos": [
+      "aaliyaua"
+    ],
+    "nota": "Way. a'alijawaa → aaliyaua",
+    "glosa": "estar de parto",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'alijawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aana",
+    "confianza": "media",
+    "candidatos": [
+      "aana"
+    ],
+    "nota": "Way. a'anaa → aana",
+    "glosa": "armar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'anaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aanaua",
+    "confianza": "media",
+    "candidatos": [
+      "aanaua"
+    ],
+    "nota": "Way. a'anawaa → aanaua",
+    "glosa": "aakkuuaaippa",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'anawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aata",
+    "confianza": "media",
+    "candidatos": [
+      "aata"
+    ],
+    "nota": "Way. a'ataa → aata",
+    "glosa": "a'anawaa",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'ataa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aatabaya",
+    "confianza": "media",
+    "candidatos": [
+      "aatabaya"
+    ],
+    "nota": "Way. a'atapajaa → aatabaya",
+    "glosa": "esperar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'atapajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achucuta",
+    "confianza": "media",
+    "candidatos": [
+      "achucuta"
+    ],
+    "nota": "Way. a'chükütaa → achucuta",
+    "glosa": "pisar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'chükütaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aktutayaua",
+    "confianza": "media",
+    "candidatos": [
+      "aktutayaua"
+    ],
+    "nota": "Way. a'ktütajawaa → aktutayaua",
+    "glosa": "sufrir un ataque",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'ktütajawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*auaya",
+    "confianza": "media",
+    "candidatos": [
+      "auaya"
+    ],
+    "nota": "Way. a'waajaa → auaya",
+    "glosa": "alabar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'waajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*auata",
+    "confianza": "media",
+    "candidatos": [
+      "auata"
+    ],
+    "nota": "Way. a'waataa → auata",
+    "glosa": "gritar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'waataa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*auataua",
+    "confianza": "media",
+    "candidatos": [
+      "auataua"
+    ],
+    "nota": "Way. a'waatawaa → auataua",
+    "glosa": "jactarse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'waatawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aualacaya",
+    "confianza": "media",
+    "candidatos": [
+      "aualacaya"
+    ],
+    "nota": "Way. a'walakajaa → aualacaya",
+    "glosa": "dispersar, esparcir",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'walakajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*auanayaua",
+    "confianza": "media",
+    "candidatos": [
+      "auanayaua"
+    ],
+    "nota": "Way. a'wanajawaa → auanayaua",
+    "glosa": "cambiar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'wanajawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayata",
+    "confianza": "media",
+    "candidatos": [
+      "ayata"
+    ],
+    "nota": "Way. a'yaataa → ayata",
+    "glosa": "pegar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'yaataa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayalaya",
+    "confianza": "media",
+    "candidatos": [
+      "ayalaya"
+    ],
+    "nota": "Way. a'yalajaa → ayalaya",
+    "glosa": "llorar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'yalajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayabuya",
+    "confianza": "media",
+    "candidatos": [
+      "ayabuya"
+    ],
+    "nota": "Way. a'yapüjaa → ayabuya",
+    "glosa": "coser",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'yapüjaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*auluya",
+    "confianza": "media",
+    "candidatos": [
+      "auluya"
+    ],
+    "nota": "Way. a'ülüjaa → auluya",
+    "glosa": "regañar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'ülüjaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*auluyiraua",
+    "confianza": "media",
+    "candidatos": [
+      "auluyiraua"
+    ],
+    "nota": "Way. a'ülüjirawaa → auluyiraua",
+    "glosa": "discutir",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'ülüjirawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aurulaua",
+    "confianza": "media",
+    "candidatos": [
+      "aurulaua"
+    ],
+    "nota": "Way. a'ürülawaa → aurulaua",
+    "glosa": "odiar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "a'ürülawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ainra",
+    "confianza": "media",
+    "candidatos": [
+      "ainra"
+    ],
+    "nota": "Way. aa'inraa → ainra",
+    "glosa": "hacer",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aa'inraa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ainyaya",
+    "confianza": "media",
+    "candidatos": [
+      "ainyaya"
+    ],
+    "nota": "Way. aa'inyajaa → ainyaya",
+    "glosa": "colgar una hamaca",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aa'inyajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*acata",
+    "confianza": "media",
+    "candidatos": [
+      "acata"
+    ],
+    "nota": "Way. aakataa → acata",
+    "glosa": "quitar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aakataa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*amuya",
+    "confianza": "media",
+    "candidatos": [
+      "amuya"
+    ],
+    "nota": "Way. aamüjaa → amuya",
+    "glosa": "ayunar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aamüjaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*abaua",
+    "confianza": "media",
+    "candidatos": [
+      "abaua"
+    ],
+    "nota": "Way. aapawaa → abaua",
+    "glosa": "tomar, coger",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aapawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achichiyaua",
+    "confianza": "media",
+    "candidatos": [
+      "achichiyaua"
+    ],
+    "nota": "Way. aashichijawaa → achichiyaua",
+    "glosa": "enojarse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aashichijawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*auala",
+    "confianza": "media",
+    "candidatos": [
+      "auala"
+    ],
+    "nota": "Way. aawalaa → auala",
+    "glosa": "aflojar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aawalaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aualaua",
+    "confianza": "media",
+    "candidatos": [
+      "aualaua"
+    ],
+    "nota": "Way. aawalawaa → aualaua",
+    "glosa": "aliviarse, mejorarse (fuego)",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aawalawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achayaua",
+    "confianza": "media",
+    "candidatos": [
+      "achayaua"
+    ],
+    "nota": "Way. achajawaa → achayaua",
+    "glosa": "buscar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "achajawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achechera",
+    "confianza": "media",
+    "candidatos": [
+      "achechera"
+    ],
+    "nota": "Way. achecheraa → achechera",
+    "glosa": "apretar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "achecheraa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achiyira",
+    "confianza": "media",
+    "candidatos": [
+      "achiyira"
+    ],
+    "nota": "Way. achijiraa → achiyira",
+    "glosa": "despertar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "achijiraa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achiyiraua",
+    "confianza": "media",
+    "candidatos": [
+      "achiyiraua"
+    ],
+    "nota": "Way. achijirawaa → achiyiraua",
+    "glosa": "despertarse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "achijirawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achicu",
+    "confianza": "media",
+    "candidatos": [
+      "achicu"
+    ],
+    "nota": "Way. achikü → achicu",
+    "glosa": "soltar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "achikü",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achita",
+    "confianza": "media",
+    "candidatos": [
+      "achita"
+    ],
+    "nota": "Way. achitaa → achita",
+    "glosa": "martillar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "achitaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achula",
+    "confianza": "media",
+    "candidatos": [
+      "achula"
+    ],
+    "nota": "Way. achu'laa → achula",
+    "glosa": "besar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "achu'laa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achumaya",
+    "confianza": "media",
+    "candidatos": [
+      "achumaya"
+    ],
+    "nota": "Way. achumajaa → achumaya",
+    "glosa": "estar aiwaa",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "achumajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achunta",
+    "confianza": "media",
+    "candidatos": [
+      "achunta"
+    ],
+    "nota": "Way. achuntaa → achunta",
+    "glosa": "pedir",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "achuntaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aikcalaua",
+    "confianza": "media",
+    "candidatos": [
+      "aikcalaua"
+    ],
+    "nota": "Way. aikkalawaa → aikcalaua",
+    "glosa": "sentarse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aikkalawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayaita",
+    "confianza": "media",
+    "candidatos": [
+      "ayaita"
+    ],
+    "nota": "Way. aja'itaa → ayaita",
+    "glosa": "recoger agua",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aja'itaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayalayaua",
+    "confianza": "media",
+    "candidatos": [
+      "ayalayaua"
+    ],
+    "nota": "Way. aja'lajawaa → ayalayaua",
+    "glosa": "terminarse, agotarse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aja'lajawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayalayeera",
+    "confianza": "media",
+    "candidatos": [
+      "ayalayeera"
+    ],
+    "nota": "Way. aja'laje'eraa → ayalayeera",
+    "glosa": "agotar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aja'laje'eraa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayatta",
+    "confianza": "media",
+    "candidatos": [
+      "ayatta"
+    ],
+    "nota": "Way. aja'ttaa → ayatta",
+    "glosa": "terminarse, acabarse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aja'ttaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayabuluuua",
+    "confianza": "media",
+    "candidatos": [
+      "ayabuluuua"
+    ],
+    "nota": "Way. ajapulu'uwaa → ayabuluuua",
+    "glosa": "estar a cargo de",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ajapulu'uwaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayaraitta",
+    "confianza": "media",
+    "candidatos": [
+      "ayaraitta"
+    ],
+    "nota": "Way. ajaraittaa → ayaraitta",
+    "glosa": "halar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ajaraittaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayuitta",
+    "confianza": "media",
+    "candidatos": [
+      "ayuitta"
+    ],
+    "nota": "Way. ajuittaa → ayuitta",
+    "glosa": "salir",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ajuittaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayuittira",
+    "confianza": "media",
+    "candidatos": [
+      "ayuittira"
+    ],
+    "nota": "Way. ajuittiraa → ayuittira",
+    "glosa": "sacar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ajuittiraa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayuyaua",
+    "confianza": "media",
+    "candidatos": [
+      "ayuyaua"
+    ],
+    "nota": "Way. ajujawaa → ayuyaua",
+    "glosa": "bostezar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ajujawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayurulaya",
+    "confianza": "media",
+    "candidatos": [
+      "ayurulaya"
+    ],
+    "nota": "Way. ajurulajaa → ayurulaya",
+    "glosa": "revolver",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ajurulajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayuta",
+    "confianza": "media",
+    "candidatos": [
+      "ayuta"
+    ],
+    "nota": "Way. ajutaa → ayuta",
+    "glosa": "tirar, lanzar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ajutaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayutuua",
+    "confianza": "media",
+    "candidatos": [
+      "ayutuua"
+    ],
+    "nota": "Way. ajutuwaa → ayutuua",
+    "glosa": "caerse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ajutuwaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*acachera",
+    "confianza": "media",
+    "candidatos": [
+      "acachera"
+    ],
+    "nota": "Way. akacheraa → acachera",
+    "glosa": "colgar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "akacheraa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*acaiya",
+    "confianza": "media",
+    "candidatos": [
+      "acaiya"
+    ],
+    "nota": "Way. akaijaa → acaiya",
+    "glosa": "fumar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "akaijaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*acaluuya",
+    "confianza": "media",
+    "candidatos": [
+      "acaluuya"
+    ],
+    "nota": "Way. akalu'ujaa → acaluuya",
+    "glosa": "llenar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "akalu'ujaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*acanaya",
+    "confianza": "media",
+    "candidatos": [
+      "acanaya"
+    ],
+    "nota": "Way. akanajaa → acanaya",
+    "glosa": "ganar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "akanajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*acatala",
+    "confianza": "media",
+    "candidatos": [
+      "acatala"
+    ],
+    "nota": "Way. akatalaa → acatala",
+    "glosa": "separar, apartar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "akatalaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*acatalaua",
+    "confianza": "media",
+    "candidatos": [
+      "acatalaua"
+    ],
+    "nota": "Way. akatalawaa → acatalaua",
+    "glosa": "apartarse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "akatalawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*acotchaya",
+    "confianza": "media",
+    "candidatos": [
+      "acotchaya"
+    ],
+    "nota": "Way. akotchajaa → acotchaya",
+    "glosa": "ajurulajaa",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "akotchajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*acurula",
+    "confianza": "media",
+    "candidatos": [
+      "acurula"
+    ],
+    "nota": "Way. akurulaa → acurula",
+    "glosa": "tener frío",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "akurulaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*acutcuyaua",
+    "confianza": "media",
+    "candidatos": [
+      "acutcuyaua"
+    ],
+    "nota": "Way. akutkujawaa → acutcuyaua",
+    "glosa": "temblar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "akutkujawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*acunula",
+    "confianza": "media",
+    "candidatos": [
+      "acunula"
+    ],
+    "nota": "Way. akünülaa → acunula",
+    "glosa": "masticar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "akünülaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*alabaya",
+    "confianza": "media",
+    "candidatos": [
+      "alabaya"
+    ],
+    "nota": "Way. alapajaa → alabaya",
+    "glosa": "lamentar la muerte de",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "alapajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aleua",
+    "confianza": "media",
+    "candidatos": [
+      "aleua"
+    ],
+    "nota": "Way. aleewaa → aleua",
+    "glosa": "tener amistad",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aleewaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aleraya",
+    "confianza": "media",
+    "candidatos": [
+      "aleraya"
+    ],
+    "nota": "Way. alerajaa → aleraya",
+    "glosa": "sentir asco por",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "alerajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aliichaya",
+    "confianza": "media",
+    "candidatos": [
+      "aliichaya"
+    ],
+    "nota": "Way. aliichajaa → aliichaya",
+    "glosa": "ordeñar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aliichajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aliicayaua",
+    "confianza": "media",
+    "candidatos": [
+      "aliicayaua"
+    ],
+    "nota": "Way. aliikajawaa → aliicayaua",
+    "glosa": "subir, subirse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aliikajawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aluuya",
+    "confianza": "media",
+    "candidatos": [
+      "aluuya"
+    ],
+    "nota": "Way. alü'üjaa → aluuya",
+    "glosa": "llevar, cargar, traer",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "alü'üjaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aluya",
+    "confianza": "media",
+    "candidatos": [
+      "aluya"
+    ],
+    "nota": "Way. alüjaa → aluya",
+    "glosa": "rastrear",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "alüjaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ama",
+    "confianza": "media",
+    "candidatos": [
+      "ama"
+    ],
+    "nota": "Way. amaa → ama",
+    "glosa": "equivocarse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "amaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*amausiya",
+    "confianza": "media",
+    "candidatos": [
+      "amausiya"
+    ],
+    "nota": "Way. amaüsijaa → amausiya",
+    "glosa": "domar, amansar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "amaüsijaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*amoyuya",
+    "confianza": "media",
+    "candidatos": [
+      "amoyuya"
+    ],
+    "nota": "Way. amojujaa → amoyuya",
+    "glosa": "dañar, perjudicar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "amojujaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*amuliaya",
+    "confianza": "media",
+    "candidatos": [
+      "amuliaya"
+    ],
+    "nota": "Way. amüliajaa → amuliaya",
+    "glosa": "compadecerse de",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "amüliajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*amuloulii",
+    "confianza": "media",
+    "candidatos": [
+      "amuloulii"
+    ],
+    "nota": "Way. amüloulii → amuloulii",
+    "glosa": "perderse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "amüloulii",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*amuscheya",
+    "confianza": "media",
+    "candidatos": [
+      "amuscheya"
+    ],
+    "nota": "Way. amüschejaa → amuscheya",
+    "glosa": "atragantarse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "amüschejaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*anachonba",
+    "confianza": "media",
+    "candidatos": [
+      "anachonba"
+    ],
+    "nota": "Way. anachonwaa → anachonba",
+    "glosa": "ser bonito, -ta",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "anachonwaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*anaya",
+    "confianza": "media",
+    "candidatos": [
+      "anaya"
+    ],
+    "nota": "Way. anajaa → anaya",
+    "glosa": "mirar, observar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "anajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*anaca",
+    "confianza": "media",
+    "candidatos": [
+      "anaca"
+    ],
+    "nota": "Way. anakaa → anaca",
+    "glosa": "alumbrar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "anakaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*analaua",
+    "confianza": "media",
+    "candidatos": [
+      "analaua"
+    ],
+    "nota": "Way. analawaa → analaua",
+    "glosa": "averiguar qué es",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "analawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*analu",
+    "confianza": "media",
+    "candidatos": [
+      "analu"
+    ],
+    "nota": "Way. analüü → analu",
+    "glosa": "estar mejor de salud",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "analüü",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aneca",
+    "confianza": "media",
+    "candidatos": [
+      "aneca"
+    ],
+    "nota": "Way. aneekaa → aneca",
+    "glosa": "escoger",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aneekaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*anoukta",
+    "confianza": "media",
+    "candidatos": [
+      "anoukta"
+    ],
+    "nota": "Way. anouktaa → anoukta",
+    "glosa": "corregir, arreglar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "anouktaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*antira",
+    "confianza": "media",
+    "candidatos": [
+      "antira"
+    ],
+    "nota": "Way. antiraa → antira",
+    "glosa": "traer",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "antiraa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*abalalaya",
+    "confianza": "media",
+    "candidatos": [
+      "abalalaya"
+    ],
+    "nota": "Way. apalaalajaa → abalalaya",
+    "glosa": "ir de compras",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "apalaalajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*abalanayaua",
+    "confianza": "media",
+    "candidatos": [
+      "abalanayaua"
+    ],
+    "nota": "Way. apalanajawaa → abalanayaua",
+    "glosa": "fluir",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "apalanajawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*abaliraya",
+    "confianza": "media",
+    "candidatos": [
+      "abaliraya"
+    ],
+    "nota": "Way. apalirajaa → abaliraya",
+    "glosa": "mezclar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "apalirajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*abanabaya",
+    "confianza": "media",
+    "candidatos": [
+      "abanabaya"
+    ],
+    "nota": "Way. apanapajaa → abanabaya",
+    "glosa": "encontrarse con una",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "apanapajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*abantayaua",
+    "confianza": "media",
+    "candidatos": [
+      "abantayaua"
+    ],
+    "nota": "Way. apantajawaa → abantayaua",
+    "glosa": "irse corriendo",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "apantajawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*abasiayaua",
+    "confianza": "media",
+    "candidatos": [
+      "abasiayaua"
+    ],
+    "nota": "Way. apasiajawaa → abasiayaua",
+    "glosa": "hacer una visita",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "apasiajawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*abula",
+    "confianza": "media",
+    "candidatos": [
+      "abula"
+    ],
+    "nota": "Way. apüla → abula",
+    "glosa": "ser",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "apüla",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*abulaya",
+    "confianza": "media",
+    "candidatos": [
+      "abulaya"
+    ],
+    "nota": "Way. apülajaa → abulaya",
+    "glosa": "prohibir",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "apülajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*abunaya",
+    "confianza": "media",
+    "candidatos": [
+      "abunaya"
+    ],
+    "nota": "Way. apünajaa → abunaya",
+    "glosa": "sembrar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "apünajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*abuta",
+    "confianza": "media",
+    "candidatos": [
+      "abuta"
+    ],
+    "nota": "Way. apütaa → abuta",
+    "glosa": "dejar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "apütaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aralaya",
+    "confianza": "media",
+    "candidatos": [
+      "aralaya"
+    ],
+    "nota": "Way. aralajaa → aralaya",
+    "glosa": "dejar en remojo",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aralajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*asalaya",
+    "confianza": "media",
+    "candidatos": [
+      "asalaya"
+    ],
+    "nota": "Way. asalajaa → asalaya",
+    "glosa": "afilar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "asalajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achaualaua",
+    "confianza": "media",
+    "candidatos": [
+      "achaualaua"
+    ],
+    "nota": "Way. asha'walawaa → achaualaua",
+    "glosa": "ponerse de pie",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "asha'walawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achaitta",
+    "confianza": "media",
+    "candidatos": [
+      "achaitta"
+    ],
+    "nota": "Way. ashaittaa → achaitta",
+    "glosa": "jugar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ashaittaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achabataua",
+    "confianza": "media",
+    "candidatos": [
+      "achabataua"
+    ],
+    "nota": "Way. ashapatawaa → achabataua",
+    "glosa": "preocuparse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ashapatawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achata",
+    "confianza": "media",
+    "candidatos": [
+      "achata"
+    ],
+    "nota": "Way. ashataa → achata",
+    "glosa": "sanar (una herida)",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ashataa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*acheeyiraua",
+    "confianza": "media",
+    "candidatos": [
+      "acheeyiraua"
+    ],
+    "nota": "Way. ashe'ejirawaa → acheeyiraua",
+    "glosa": "pelear con puños",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ashe'ejirawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*acheeta",
+    "confianza": "media",
+    "candidatos": [
+      "acheeta"
+    ],
+    "nota": "Way. ashe'etaa → acheeta",
+    "glosa": "golpear, patear",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ashe'etaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achiita",
+    "confianza": "media",
+    "candidatos": [
+      "achiita"
+    ],
+    "nota": "Way. ashiitaa → achiita",
+    "glosa": "orinar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ashiitaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achiyaua",
+    "confianza": "media",
+    "candidatos": [
+      "achiyaua"
+    ],
+    "nota": "Way. ashijawaa → achiyaua",
+    "glosa": "lavar (ropa)",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ashijawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achuta",
+    "confianza": "media",
+    "candidatos": [
+      "achuta"
+    ],
+    "nota": "Way. ashutaa → achuta",
+    "glosa": "meterse, entrar a la",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ashutaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*asiiyayaua",
+    "confianza": "media",
+    "candidatos": [
+      "asiiyayaua"
+    ],
+    "nota": "Way. asiiyajawaa → asiiyayaua",
+    "glosa": "ensillar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "asiiyajawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*asiya",
+    "confianza": "media",
+    "candidatos": [
+      "asiya"
+    ],
+    "nota": "Way. asijaa → asiya",
+    "glosa": "asar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "asijaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*asiraya",
+    "confianza": "media",
+    "candidatos": [
+      "asiraya"
+    ],
+    "nota": "Way. asirajaa → asiraya",
+    "glosa": "reirse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "asirajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*asiranayaua",
+    "confianza": "media",
+    "candidatos": [
+      "asiranayaua"
+    ],
+    "nota": "Way. asiranajawaa → asiranayaua",
+    "glosa": "resbalarse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "asiranajawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*asiuata",
+    "confianza": "media",
+    "candidatos": [
+      "asiuata"
+    ],
+    "nota": "Way. asiwataa → asiuata",
+    "glosa": "desatar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "asiwataa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*asoukta",
+    "confianza": "media",
+    "candidatos": [
+      "asoukta"
+    ],
+    "nota": "Way. asouktaa → asoukta",
+    "glosa": "responder",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "asouktaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*asuca",
+    "confianza": "media",
+    "candidatos": [
+      "asuca"
+    ],
+    "nota": "Way. asukaa → asuca",
+    "glosa": "recoger leña",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "asukaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*asuuta",
+    "confianza": "media",
+    "candidatos": [
+      "asuuta"
+    ],
+    "nota": "Way. asü'ütaa → asuuta",
+    "glosa": "arrancar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "asü'ütaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*asucuita",
+    "confianza": "media",
+    "candidatos": [
+      "asucuita"
+    ],
+    "nota": "Way. asüküitaa → asucuita",
+    "glosa": "rasgarse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "asüküitaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*atamaua",
+    "confianza": "media",
+    "candidatos": [
+      "atamaua"
+    ],
+    "nota": "Way. atamawaa → atamaua",
+    "glosa": "levantarse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "atamawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*atauyaua",
+    "confianza": "media",
+    "candidatos": [
+      "atauyaua"
+    ],
+    "nota": "Way. ataüjawaa → atauyaua",
+    "glosa": "violar (a una mujer)",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ataüjawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*atcaua",
+    "confianza": "media",
+    "candidatos": [
+      "atcaua"
+    ],
+    "nota": "Way. atkawaa → atcaua",
+    "glosa": "pelear",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "atkawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*atpaya",
+    "confianza": "media",
+    "candidatos": [
+      "atpaya"
+    ],
+    "nota": "Way. atpajaa → atpaya",
+    "glosa": "recolectar (alimento)",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "atpajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*atuya",
+    "confianza": "media",
+    "candidatos": [
+      "atuya"
+    ],
+    "nota": "Way. atüjaa → atuya",
+    "glosa": "saber",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "atüjaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*atucaua",
+    "confianza": "media",
+    "candidatos": [
+      "atucaua"
+    ],
+    "nota": "Way. atükawaa → atucaua",
+    "glosa": "atascarse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "atükawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*atutuya",
+    "confianza": "media",
+    "candidatos": [
+      "atutuya"
+    ],
+    "nota": "Way. atütüjaa → atutuya",
+    "glosa": "animar, ayolojo",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "atütüjaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*auayaua",
+    "confianza": "media",
+    "candidatos": [
+      "auayaua"
+    ],
+    "nota": "Way. awajawaa → auayaua",
+    "glosa": "rajarse, partirse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "awajawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*auareya",
+    "confianza": "media",
+    "candidatos": [
+      "auareya"
+    ],
+    "nota": "Way. awareejaa → auareya",
+    "glosa": "barrer",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "awareejaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*auataua",
+    "confianza": "media",
+    "candidatos": [
+      "auataua"
+    ],
+    "nota": "Way. awatawaa → auataua",
+    "glosa": "correr",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "awatawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayauata",
+    "confianza": "media",
+    "candidatos": [
+      "ayauata"
+    ],
+    "nota": "Way. ayaawataa → ayauata",
+    "glosa": "reconocer",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ayaawataa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayalera",
+    "confianza": "media",
+    "candidatos": [
+      "ayalera"
+    ],
+    "nota": "Way. ayaleraa → ayalera",
+    "glosa": "levantar, alzar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ayaleraa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayouyiraua",
+    "confianza": "media",
+    "candidatos": [
+      "ayouyiraua"
+    ],
+    "nota": "Way. ayoujirawaa → ayouyiraua",
+    "glosa": "competir",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ayoujirawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayounja",
+    "confianza": "media",
+    "candidatos": [
+      "ayounja"
+    ],
+    "nota": "Way. ayounjaa → ayounja",
+    "glosa": "azotar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ayounjaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayuyaua",
+    "confianza": "media",
+    "candidatos": [
+      "ayuyaua"
+    ],
+    "nota": "Way. ayüüjawaa → ayuyaua",
+    "glosa": "moler",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ayüüjawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*auya",
+    "confianza": "media",
+    "candidatos": [
+      "auya"
+    ],
+    "nota": "Way. aüjaa → auya",
+    "glosa": "cortar (el pelo), afeitar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aüjaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*auyaua",
+    "confianza": "media",
+    "candidatos": [
+      "auyaua"
+    ],
+    "nota": "Way. aüjawaa → auyaua",
+    "glosa": "matar (ganado)",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aüjawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aurula",
+    "confianza": "media",
+    "candidatos": [
+      "aurula"
+    ],
+    "nota": "Way. aürülaa → aurula",
+    "glosa": "estar flaco, -ca",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "aürülaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eiiya",
+    "confianza": "media",
+    "candidatos": [
+      "eiiya"
+    ],
+    "nota": "Way. e'iijaa → eiiya",
+    "glosa": "tener diarrea",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "e'iijaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eiita",
+    "confianza": "media",
+    "candidatos": [
+      "eiita"
+    ],
+    "nota": "Way. e'iitaa → eiita",
+    "glosa": "defecar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "e'iitaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eica",
+    "confianza": "media",
+    "candidatos": [
+      "eica"
+    ],
+    "nota": "Way. e'ikaa → eica",
+    "glosa": "enseñar, instruir",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "e'ikaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eicayaua",
+    "confianza": "media",
+    "candidatos": [
+      "eicayaua"
+    ],
+    "nota": "Way. e'ikajawaa → eicayaua",
+    "glosa": "llevar y dejar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "e'ikajawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eicaua",
+    "confianza": "media",
+    "candidatos": [
+      "eicaua"
+    ],
+    "nota": "Way. e'ikawaa → eicaua",
+    "glosa": "estar herido, -da",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "e'ikawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eina",
+    "confianza": "media",
+    "candidatos": [
+      "eina"
+    ],
+    "nota": "Way. e'inaa → eina",
+    "glosa": "tejer con aguja",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "e'inaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eibunaua",
+    "confianza": "media",
+    "candidatos": [
+      "eibunaua"
+    ],
+    "nota": "Way. e'ipünawaa → eibunaua",
+    "glosa": "llevar y dejar de",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "e'ipünawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eita",
+    "confianza": "media",
+    "candidatos": [
+      "eita"
+    ],
+    "nota": "Way. e'itaa → eita",
+    "glosa": "aportar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "e'itaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eitaua",
+    "confianza": "media",
+    "candidatos": [
+      "eitaua"
+    ],
+    "nota": "Way. e'itawaa → eitaua",
+    "glosa": "poner, meter",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "e'itawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eraya",
+    "confianza": "media",
+    "candidatos": [
+      "eraya"
+    ],
+    "nota": "Way. e'raajaa → eraya",
+    "glosa": "conocer",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "e'raajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eraya",
+    "confianza": "media",
+    "candidatos": [
+      "eraya"
+    ],
+    "nota": "Way. e'rajaa → eraya",
+    "glosa": "mirar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "e'rajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eirataua",
+    "confianza": "media",
+    "candidatos": [
+      "eirataua"
+    ],
+    "nota": "Way. ee'iratawaa → eirataua",
+    "glosa": "cambiar de esposo, -sa",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ee'iratawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eua",
+    "confianza": "media",
+    "candidatos": [
+      "eua"
+    ],
+    "nota": "Way. eewaa → eua",
+    "glosa": "haber, existir",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "eewaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*euaua",
+    "confianza": "media",
+    "candidatos": [
+      "euaua"
+    ],
+    "nota": "Way. eewawaa → euaua",
+    "glosa": "accidentarse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "eewawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eimalaua",
+    "confianza": "media",
+    "candidatos": [
+      "eimalaua"
+    ],
+    "nota": "Way. eimalawaa → eimalaua",
+    "glosa": "ekiipala n",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "eimalawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eibira",
+    "confianza": "media",
+    "candidatos": [
+      "eibira"
+    ],
+    "nota": "Way. eipiraa → eibira",
+    "glosa": "perseguir",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "eipiraa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eisalaua",
+    "confianza": "media",
+    "candidatos": [
+      "eisalaua"
+    ],
+    "nota": "Way. eisalawaa → eisalaua",
+    "glosa": "acostarse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "eisalawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eitaya",
+    "confianza": "media",
+    "candidatos": [
+      "eitaya"
+    ],
+    "nota": "Way. eitajaa → eitaya",
+    "glosa": "repartir",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "eitajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eiteera",
+    "confianza": "media",
+    "candidatos": [
+      "eiteera"
+    ],
+    "nota": "Way. eite'eraa → eiteera",
+    "glosa": "devolver",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "eite'eraa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eiyaya",
+    "confianza": "media",
+    "candidatos": [
+      "eiyaya"
+    ],
+    "nota": "Way. eiyajaa → eiyaya",
+    "glosa": "curar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "eiyajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eyeyeraua",
+    "confianza": "media",
+    "candidatos": [
+      "eyeyeraua"
+    ],
+    "nota": "Way. ejejerawaa → eyeyeraua",
+    "glosa": "cuchichear, secretear",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ejejerawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eyemplo",
+    "confianza": "media",
+    "candidatos": [
+      "eyemplo"
+    ],
+    "nota": "Way. ejemplo → eyemplo",
+    "glosa": "estar cerrado, -da",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ejemplo",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eyeta",
+    "confianza": "media",
+    "candidatos": [
+      "eyeta"
+    ],
+    "nota": "Way. ejetaa → eyeta",
+    "glosa": "escupir",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ejetaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eyita",
+    "confianza": "media",
+    "candidatos": [
+      "eyita"
+    ],
+    "nota": "Way. ejitaa → eyita",
+    "glosa": "verter (polvos o granos)",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ejitaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eyittaua",
+    "confianza": "media",
+    "candidatos": [
+      "eyittaua"
+    ],
+    "nota": "Way. ejittawaa → eyittaua",
+    "glosa": "atar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ejittawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eceroyira",
+    "confianza": "media",
+    "candidatos": [
+      "eceroyira"
+    ],
+    "nota": "Way. ekerojiraa → eceroyira",
+    "glosa": "meter",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ekerojiraa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ecii",
+    "confianza": "media",
+    "candidatos": [
+      "ecii"
+    ],
+    "nota": "Way. ekii → ecii",
+    "glosa": "dolerle la cabeza",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ekii",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eciraya",
+    "confianza": "media",
+    "candidatos": [
+      "eciraya"
+    ],
+    "nota": "Way. ekirajaa → eciraya",
+    "glosa": "enseñar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ekirajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*emeerayaua",
+    "confianza": "media",
+    "candidatos": [
+      "emeerayaua"
+    ],
+    "nota": "Way. eme'erajawaa → emeerayaua",
+    "glosa": "bromear",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "eme'erajawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ebeyaua",
+    "confianza": "media",
+    "candidatos": [
+      "ebeyaua"
+    ],
+    "nota": "Way. epejawaa → ebeyaua",
+    "glosa": "prender, encender",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "epejawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ebetta",
+    "confianza": "media",
+    "candidatos": [
+      "ebetta"
+    ],
+    "nota": "Way. epettaa → ebetta",
+    "glosa": "tocar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "epettaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ebiraya",
+    "confianza": "media",
+    "candidatos": [
+      "ebiraya"
+    ],
+    "nota": "Way. epirajaa → ebiraya",
+    "glosa": "llenar, inflar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "epirajaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*eueta",
+    "confianza": "media",
+    "candidatos": [
+      "eueta"
+    ],
+    "nota": "Way. eweetaa → eueta",
+    "glosa": "salir a la vista, aparecer",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "eweetaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*euiiya",
+    "confianza": "media",
+    "candidatos": [
+      "euiiya"
+    ],
+    "nota": "Way. ewiijaa → euiiya",
+    "glosa": "silbar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ewiijaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*iche",
+    "confianza": "media",
+    "candidatos": [
+      "iche"
+    ],
+    "nota": "Way. ichee → iche",
+    "glosa": "estar tenso, -sa",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ichee",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*icha",
+    "confianza": "media",
+    "candidatos": [
+      "icha"
+    ],
+    "nota": "Way. ishaa → icha",
+    "glosa": "sufrir una quemadura",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ishaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ita",
+    "confianza": "media",
+    "candidatos": [
+      "ita"
+    ],
+    "nota": "Way. itaa → ita",
+    "glosa": "secarse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "itaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*iua",
+    "confianza": "media",
+    "candidatos": [
+      "iua"
+    ],
+    "nota": "Way. iwaa → iua",
+    "glosa": "ser prostituta",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "iwaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aiyaua",
+    "confianza": "media",
+    "candidatos": [
+      "aiyaua"
+    ],
+    "nota": "Way. ja'ijawaa → aiyaua",
+    "glosa": "faltar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ja'ijawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aiua",
+    "confianza": "media",
+    "candidatos": [
+      "aiua"
+    ],
+    "nota": "Way. ja'iwaa → aiua",
+    "glosa": "estar caliente",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ja'iwaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aya",
+    "confianza": "media",
+    "candidatos": [
+      "aya"
+    ],
+    "nota": "Way. ja'yaa → aya",
+    "glosa": "aparecer",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ja'yaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ayumuu",
+    "confianza": "media",
+    "candidatos": [
+      "ayumuu"
+    ],
+    "nota": "Way. ja'yumuu → ayumuu",
+    "glosa": "estar bien",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ja'yumuu",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ala",
+    "confianza": "media",
+    "candidatos": [
+      "ala"
+    ],
+    "nota": "Way. jalaa → ala",
+    "glosa": "dónde estar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "jalaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*amama",
+    "confianza": "media",
+    "candidatos": [
+      "amama"
+    ],
+    "nota": "Way. jamaamaa → amama",
+    "glosa": "ser liviano, -na",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "jamaamaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*abulii",
+    "confianza": "media",
+    "candidatos": [
+      "abulii"
+    ],
+    "nota": "Way. japülii → abulii",
+    "glosa": "tener vergüenza",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "japülii",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*achuuua",
+    "confianza": "media",
+    "candidatos": [
+      "achuuua"
+    ],
+    "nota": "Way. jashü'üwaa → achuuua",
+    "glosa": "ser agrio, -a",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "jashü'üwaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*auaaua",
+    "confianza": "media",
+    "candidatos": [
+      "auaaua"
+    ],
+    "nota": "Way. jawa'awaa → auaaua",
+    "glosa": "estar flojo, -ja",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "jawa'awaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*auata",
+    "confianza": "media",
+    "candidatos": [
+      "auata"
+    ],
+    "nota": "Way. jawataa → auata",
+    "glosa": "ser pesado, -da",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "jawataa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*aya",
+    "confianza": "media",
+    "candidatos": [
+      "aya"
+    ],
+    "nota": "Way. jayaa → aya",
+    "glosa": "ser barato, -ta",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "jayaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*yeue",
+    "confianza": "media",
+    "candidatos": [
+      "yeue"
+    ],
+    "nota": "Way. je'wee → yeue",
+    "glosa": "estar maduro, -ra",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "je'wee",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*yemeta",
+    "confianza": "media",
+    "candidatos": [
+      "yemeta"
+    ],
+    "nota": "Way. jemetaa → yemeta",
+    "glosa": "ser sabroso, -sa",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "jemetaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*yera",
+    "confianza": "media",
+    "candidatos": [
+      "yera"
+    ],
+    "nota": "Way. jera → yera",
+    "glosa": "cuánto ser",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "jera",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*yerula",
+    "confianza": "media",
+    "candidatos": [
+      "yerula"
+    ],
+    "nota": "Way. jerulaa → yerula",
+    "glosa": "ser ancho, -cha",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "jerulaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*oloto",
+    "confianza": "media",
+    "candidatos": [
+      "oloto"
+    ],
+    "nota": "Way. jolotoo → oloto",
+    "glosa": "tener ampolla",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "jolotoo",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*oso",
+    "confianza": "media",
+    "candidatos": [
+      "oso"
+    ],
+    "nota": "Way. josoo → oso",
+    "glosa": "estar seco, -ca",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "josoo",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ota",
+    "confianza": "media",
+    "candidatos": [
+      "ota"
+    ],
+    "nota": "Way. jotaa → ota",
+    "glosa": "arder",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "jotaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*oyoto",
+    "confianza": "media",
+    "candidatos": [
+      "oyoto"
+    ],
+    "nota": "Way. joyotoo → oyoto",
+    "glosa": "estar sentado, -da",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "joyotoo",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*utata",
+    "confianza": "media",
+    "candidatos": [
+      "utata"
+    ],
+    "nota": "Way. jutataa → utata",
+    "glosa": "estar abierto, -ta",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "jutataa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*cauayuuse",
+    "confianza": "media",
+    "candidatos": [
+      "cauayuuse"
+    ],
+    "nota": "Way. ka'wayuusee → cauayuuse",
+    "glosa": "tener esposo, -sa",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ka'wayuusee",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*cayata",
+    "confianza": "media",
+    "candidatos": [
+      "cayata"
+    ],
+    "nota": "Way. ka'yataa → cayata",
+    "glosa": "estar un poco retirado",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ka'yataa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*cainjala",
+    "confianza": "media",
+    "candidatos": [
+      "cainjala"
+    ],
+    "nota": "Way. kaainjalaa → cainjala",
+    "glosa": "causar daño, pecar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "kaainjalaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*cacheta",
+    "confianza": "media",
+    "candidatos": [
+      "cacheta"
+    ],
+    "nota": "Way. kachetaa → cacheta",
+    "glosa": "estar colgado, -da",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "kachetaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*cacua",
+    "confianza": "media",
+    "candidatos": [
+      "cacua"
+    ],
+    "nota": "Way. kakuaa → cacua",
+    "glosa": "ser veloz (andando)",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "kakuaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*caluuua",
+    "confianza": "media",
+    "candidatos": [
+      "caluuua"
+    ],
+    "nota": "Way. kalu'uwaa → caluuua",
+    "glosa": "contener",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "kalu'uwaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*canulia",
+    "confianza": "media",
+    "candidatos": [
+      "canulia"
+    ],
+    "nota": "Way. kanüliaa → canulia",
+    "glosa": "ser llamado, -da",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "kanüliaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*cabu",
+    "confianza": "media",
+    "candidatos": [
+      "cabu"
+    ],
+    "nota": "Way. kapüü → cabu",
+    "glosa": "estar atado, -da",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "kapüü",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*casa",
+    "confianza": "media",
+    "candidatos": [
+      "casa"
+    ],
+    "nota": "Way. kasaa → casa",
+    "glosa": "tener filo",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "kasaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*catchinba",
+    "confianza": "media",
+    "candidatos": [
+      "catchinba"
+    ],
+    "nota": "Way. katchinwaa → catchinba",
+    "glosa": "ser fuerte",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "katchinwaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*cena",
+    "confianza": "media",
+    "candidatos": [
+      "cena"
+    ],
+    "nota": "Way. keenaa → cena",
+    "glosa": "derramarse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "keenaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*cisaua",
+    "confianza": "media",
+    "candidatos": [
+      "cisaua"
+    ],
+    "nota": "Way. kisaawaa → cisaua",
+    "glosa": "estar guisado, -da",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "kisaawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*cooyoua",
+    "confianza": "media",
+    "candidatos": [
+      "cooyoua"
+    ],
+    "nota": "Way. ko'oyowaa → cooyoua",
+    "glosa": "ser redondo, -da",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ko'oyowaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*couta",
+    "confianza": "media",
+    "candidatos": [
+      "couta"
+    ],
+    "nota": "Way. ko'utaa → couta",
+    "glosa": "estar callado, -da",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ko'utaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*coyuta",
+    "confianza": "media",
+    "candidatos": [
+      "coyuta"
+    ],
+    "nota": "Way. kojutaa → coyuta",
+    "glosa": "ser caro, -ra",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "kojutaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*coya",
+    "confianza": "media",
+    "candidatos": [
+      "coya"
+    ],
+    "nota": "Way. koojaa → coya",
+    "glosa": "pincharse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "koojaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*laualaua",
+    "confianza": "media",
+    "candidatos": [
+      "laualaua"
+    ],
+    "nota": "Way. la'walawaa → laualaua",
+    "glosa": "ser flexible",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "la'walawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*lemta",
+    "confianza": "media",
+    "candidatos": [
+      "lemta"
+    ],
+    "nota": "Way. lemtaa → lemta",
+    "glosa": "arrastrarse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "lemtaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*lota",
+    "confianza": "media",
+    "candidatos": [
+      "lota"
+    ],
+    "nota": "Way. lotaa → lota",
+    "glosa": "ser recto, -ta",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "lotaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*mainba",
+    "confianza": "media",
+    "candidatos": [
+      "mainba"
+    ],
+    "nota": "Way. maa'inwaa → mainba",
+    "glosa": "ser necio, -cia",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "maa'inwaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*macheeua",
+    "confianza": "media",
+    "candidatos": [
+      "macheeua"
+    ],
+    "nota": "Way. mache'ewaa → macheeua",
+    "glosa": "ser sordo, -da",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "mache'ewaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*maitta",
+    "confianza": "media",
+    "candidatos": [
+      "maitta"
+    ],
+    "nota": "Way. maittaa → maitta",
+    "glosa": "estar en calma el tiempo",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "maittaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*mamainna",
+    "confianza": "media",
+    "candidatos": [
+      "mamainna"
+    ],
+    "nota": "Way. mamainnaa → mamainna",
+    "glosa": "ser loco, -ca",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "mamainnaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*mabuleua",
+    "confianza": "media",
+    "candidatos": [
+      "mabuleua"
+    ],
+    "nota": "Way. mapülewaa → mabuleua",
+    "glosa": "ser fácil",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "mapülewaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*maralu",
+    "confianza": "media",
+    "candidatos": [
+      "maralu"
+    ],
+    "nota": "Way. maralüü → maralu",
+    "glosa": "ser estéril",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "maralüü",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*mariiya",
+    "confianza": "media",
+    "candidatos": [
+      "mariiya"
+    ],
+    "nota": "Way. mariiyaa → mariiya",
+    "glosa": "ser amarillo, -lla",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "mariiyaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*matsuinba",
+    "confianza": "media",
+    "candidatos": [
+      "matsuinba"
+    ],
+    "nota": "Way. matsüinwaa → matsuinba",
+    "glosa": "estar sin fuerza",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "matsüinwaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*miyasu",
+    "confianza": "media",
+    "candidatos": [
+      "miyasu"
+    ],
+    "nota": "Way. miyaasüü → miyasu",
+    "glosa": "tener sed",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "miyaasüü",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*moluu",
+    "confianza": "media",
+    "candidatos": [
+      "moluu"
+    ],
+    "nota": "Way. mmoluu → moluu",
+    "glosa": "tener 2",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "mmoluu",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*mouu",
+    "confianza": "media",
+    "candidatos": [
+      "mouu"
+    ],
+    "nota": "Way. mo'uu → mouu",
+    "glosa": "ser ciego, -ga",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "mo'uu",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*mutsiiya",
+    "confianza": "media",
+    "candidatos": [
+      "mutsiiya"
+    ],
+    "nota": "Way. mütsiiyaa → mutsiiya",
+    "glosa": "ser negro, -gra",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "mütsiiyaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ootoyoua",
+    "confianza": "media",
+    "candidatos": [
+      "ootoyoua"
+    ],
+    "nota": "Way. o'otojowaa → ootoyoua",
+    "glosa": "sacudir",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "o'otojowaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ootoua",
+    "confianza": "media",
+    "candidatos": [
+      "ootoua"
+    ],
+    "nota": "Way. o'otowaa → ootoua",
+    "glosa": "montar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "o'otowaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*otta",
+    "confianza": "media",
+    "candidatos": [
+      "otta"
+    ],
+    "nota": "Way. o'ttaa → otta",
+    "glosa": "aterrizar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "o'ttaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*otteera",
+    "confianza": "media",
+    "candidatos": [
+      "otteera"
+    ],
+    "nota": "Way. o'tte'eraa → otteera",
+    "glosa": "hacer pasar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "o'tte'eraa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ouliya",
+    "confianza": "media",
+    "candidatos": [
+      "ouliya"
+    ],
+    "nota": "Way. o'ulijaa → ouliya",
+    "glosa": "cargar (a un niño)",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "o'ulijaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ounira",
+    "confianza": "media",
+    "candidatos": [
+      "ounira"
+    ],
+    "nota": "Way. o'uniraa → ounira",
+    "glosa": "llevar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "o'uniraa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*oyoto",
+    "confianza": "media",
+    "candidatos": [
+      "oyoto"
+    ],
+    "nota": "Way. o'yotoo → oyoto",
+    "glosa": "verter (un líquido)",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "o'yotoo",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*oyotoua",
+    "confianza": "media",
+    "candidatos": [
+      "oyotoua"
+    ],
+    "nota": "Way. o'yotowaa → oyotoua",
+    "glosa": "cortar (con cuchillo, abdomen)",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "o'yotowaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*oyoita",
+    "confianza": "media",
+    "candidatos": [
+      "oyoita"
+    ],
+    "nota": "Way. ojoitaa → oyoita",
+    "glosa": "enterrar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ojoitaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*oyotta",
+    "confianza": "media",
+    "candidatos": [
+      "oyotta"
+    ],
+    "nota": "Way. ojottaa → oyotta",
+    "glosa": "morder",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ojottaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*oyununtaua",
+    "confianza": "media",
+    "candidatos": [
+      "oyununtaua"
+    ],
+    "nota": "Way. ojununtawaa → oyununtaua",
+    "glosa": "o'ktaa",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ojununtawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*oyutta",
+    "confianza": "media",
+    "candidatos": [
+      "oyutta"
+    ],
+    "nota": "Way. ojuttaa → oyutta",
+    "glosa": "caer",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ojuttaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*oyuttira",
+    "confianza": "media",
+    "candidatos": [
+      "oyuttira"
+    ],
+    "nota": "Way. ojuttiraa → oyuttira",
+    "glosa": "derribar, 2",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ojuttiraa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ocoolo",
+    "confianza": "media",
+    "candidatos": [
+      "ocoolo"
+    ],
+    "nota": "Way. oko'oloo → ocoolo",
+    "glosa": "envolver",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "oko'oloo",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ocoloyo",
+    "confianza": "media",
+    "candidatos": [
+      "ocoloyo"
+    ],
+    "nota": "Way. okolojoo → ocoloyo",
+    "glosa": "llevar regalo",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "okolojoo",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*oui",
+    "confianza": "media",
+    "candidatos": [
+      "oui"
+    ],
+    "nota": "Way. oo'ui → oui",
+    "glosa": "tropezar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "oo'ui",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*oyo",
+    "confianza": "media",
+    "candidatos": [
+      "oyo"
+    ],
+    "nota": "Way. oojoo → oyo",
+    "glosa": "raspar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "oojoo",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*onoyo",
+    "confianza": "media",
+    "candidatos": [
+      "onoyo"
+    ],
+    "nota": "Way. oonojoo → onoyo",
+    "glosa": "toser",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "oonojoo",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*otoyo",
+    "confianza": "media",
+    "candidatos": [
+      "otoyo"
+    ],
+    "nota": "Way. ootojoo → otoyo",
+    "glosa": "perforar",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ootojoo",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*oboloyo",
+    "confianza": "media",
+    "candidatos": [
+      "oboloyo"
+    ],
+    "nota": "Way. opoolojoo → oboloyo",
+    "glosa": "hervir",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "opoolojoo",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ochoyo",
+    "confianza": "media",
+    "candidatos": [
+      "ochoyo"
+    ],
+    "nota": "Way. oshojoo → ochoyo",
+    "glosa": "desollar, pelar, curandero, -ra",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "oshojoo",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ounjula",
+    "confianza": "media",
+    "candidatos": [
+      "ounjula"
+    ],
+    "nota": "Way. ounjulaa → ounjula",
+    "glosa": "esconder",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ounjulaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ounjulaua",
+    "confianza": "media",
+    "candidatos": [
+      "ounjulaua"
+    ],
+    "nota": "Way. ounjulawaa → ounjulaua",
+    "glosa": "esconderse",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ounjulawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ourula",
+    "confianza": "media",
+    "candidatos": [
+      "ourula"
+    ],
+    "nota": "Way. ourulaa → ourula",
+    "glosa": "estar hinchado, -da",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ourulaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ouchuua",
+    "confianza": "media",
+    "candidatos": [
+      "ouchuua"
+    ],
+    "nota": "Way. oushuwaa → ouchuua",
+    "glosa": "tener fiebre",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "oushuwaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*ouyanta",
+    "confianza": "media",
+    "candidatos": [
+      "ouyanta"
+    ],
+    "nota": "Way. ouyantaa → ouyanta",
+    "glosa": "volver",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "ouyantaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*painba",
+    "confianza": "media",
+    "candidatos": [
+      "painba"
+    ],
+    "nota": "Way. paa'inwaa → painba",
+    "glosa": "estar de acuerdo",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "paa'inwaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*palaua",
+    "confianza": "media",
+    "candidatos": [
+      "palaua"
+    ],
+    "nota": "Way. palawaa → palaua",
+    "glosa": "ser salado, -da",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "palawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*paliraua",
+    "confianza": "media",
+    "candidatos": [
+      "paliraua"
+    ],
+    "nota": "Way. palirawaa → paliraua",
+    "glosa": "estar mezclado, -da",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "palirawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*pansaua",
+    "confianza": "media",
+    "candidatos": [
+      "pansaua"
+    ],
+    "nota": "Way. pansawaa → pansaua",
+    "glosa": "estar derecho, -cha",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "pansawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*peye",
+    "confianza": "media",
+    "candidatos": [
+      "peye"
+    ],
+    "nota": "Way. pejee → peye",
+    "glosa": "estar cerca",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "pejee",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*pera",
+    "confianza": "media",
+    "candidatos": [
+      "pera"
+    ],
+    "nota": "Way. peraa → pera",
+    "glosa": "ser mocho, -cha",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "peraa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*pula",
+    "confianza": "media",
+    "candidatos": [
+      "pula"
+    ],
+    "nota": "Way. pülaa → pula",
+    "glosa": "ser poderoso, -sa",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "pülaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*puresa",
+    "confianza": "media",
+    "candidatos": [
+      "puresa"
+    ],
+    "nota": "Way. püreesaa → puresa",
+    "glosa": "estar preso, -sa",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "püreesaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*chocota",
+    "confianza": "media",
+    "candidatos": [
+      "chocota"
+    ],
+    "nota": "Way. shokotaa → chocota",
+    "glosa": "ser curvo, -va",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "shokotaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*chotta",
+    "confianza": "media",
+    "candidatos": [
+      "chotta"
+    ],
+    "nota": "Way. shottaa → chotta",
+    "glosa": "gotear",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "shottaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*sirasira",
+    "confianza": "media",
+    "candidatos": [
+      "sirasira"
+    ],
+    "nota": "Way. sirasiraa → sirasira",
+    "glosa": "ser liso, -sa",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "sirasiraa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*bauata",
+    "confianza": "media",
+    "candidatos": [
+      "bauata"
+    ],
+    "nota": "Way. waawataa → bauata",
+    "glosa": "soplar (el viento)",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "waawataa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*balaua",
+    "confianza": "media",
+    "candidatos": [
+      "balaua"
+    ],
+    "nota": "Way. walawaa → balaua",
+    "glosa": "estar pagado, -da",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "walawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*banaua",
+    "confianza": "media",
+    "candidatos": [
+      "banaua"
+    ],
+    "nota": "Way. wanaawaa → banaua",
+    "glosa": "ser lo mismo, ser",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "wanaawaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*buinsira",
+    "confianza": "media",
+    "candidatos": [
+      "buinsira"
+    ],
+    "nota": "Way. wüinsiraa → buinsira",
+    "glosa": "ahogarse (en agua)",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "wüinsiraa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*buitta",
+    "confianza": "media",
+    "candidatos": [
+      "buitta"
+    ],
+    "nota": "Way. wüittaa → buitta",
+    "glosa": "ser azul, ser verde",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "wüittaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*yalayala",
+    "confianza": "media",
+    "candidatos": [
+      "yalayala"
+    ],
+    "nota": "Way. yalayalaa → yalayala",
+    "glosa": "ser áspero, -ra",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "yalayalaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*yarutta",
+    "confianza": "media",
+    "candidatos": [
+      "yarutta"
+    ],
+    "nota": "Way. yarüttaa → yarutta",
+    "glosa": "estar sucio",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "yarüttaa",
+      "taíno": null
+    }
+  },
+  {
+    "proto_caquetio": "*yocuta",
+    "confianza": "media",
+    "candidatos": [
+      "yocuta"
+    ],
+    "nota": "Way. yokutaa → yocuta",
+    "glosa": "estar apagado, -da",
+    "categoria": "verbos",
+    "fuentes_usadas": {
+      "lokono": null,
+      "wayunaiki": "yokutaa",
+      "taíno": null
+    }
+  }
+]
