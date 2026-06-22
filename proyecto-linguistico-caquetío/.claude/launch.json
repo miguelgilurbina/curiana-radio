@@ -6,6 +6,13 @@
       "runtimeExecutable": "bash",
       "runtimeArgs": ["-lc", "cd .. && npm run dev -- -p 3012"],
       "port": 3012
+    },
+    {
+      "name": "curiana-dashboard",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-lc", "cd curiana_dashboard && npm run dev"],
+      "port": 3000,
+      "autoPort": true
     }
   ]
 }

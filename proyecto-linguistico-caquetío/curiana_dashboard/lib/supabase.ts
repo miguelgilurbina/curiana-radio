@@ -97,4 +97,8 @@ export const LANG_COLORS: Record<string, string> = {
   lokono:     "#5B4FCF",
   taíno:      "#B04040",
   "proto-arahuaco": "#6D8A9E",
+  kalinago:   "#3D9B8F",
+  "kalinago-caribe-overlay": "#A8542E",
+  "jirajaroide-contacto": "#7A6B8F",
+  "hipotético-no-verificado": "#C9A227",
 };

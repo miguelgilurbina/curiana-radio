@@ -5,7 +5,10 @@ import { supabase, LANG_COLORS } from "@/lib/supabase";
 import type { LexiconEntry } from "@/lib/supabase";
 
 const CATEGORIES = ["todos", "sust", "v_raiz", "pron", "num", "part", "adj", "interr", "topón", "título"];
-const LANG_FILTERS = ["todos", "caquetío", "wayunaiki", "lokono", "taíno", "proto-arahuaco"];
+const LANG_FILTERS = [
+  "todos", "caquetío", "wayunaiki", "lokono", "taíno", "proto-arahuaco",
+  "kalinago", "kalinago-caribe-overlay", "jirajaroide-contacto", "hipotético-no-verificado",
+];
 
 export default function LexiconPage() {
   const [entries, setEntries] = useState<LexiconEntry[]>([]);
@@ -16,15 +19,28 @@ export default function LexiconPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    supabase
-      .from("lexicon")
-      .select("*")
-      .order("word")
-      .then(({ data }) => {
-        setEntries((data as LexiconEntry[]) ?? []);
-        setFiltered((data as LexiconEntry[]) ?? []);
-        setLoading(false);
-      });
+    // PostgREST limita cada respuesta a max_rows (1000, ver supabase/config.toml).
+    // El lexicón ya supera eso, así que paginamos hasta agotar los resultados.
+    async function loadAll() {
+      const todas: LexiconEntry[] = [];
+      const PAGE = 1000;
+      let desde = 0;
+      while (true) {
+        const { data } = await supabase
+          .from("lexicon")
+          .select("*")
+          .order("word")
+          .range(desde, desde + PAGE - 1);
+        const pagina = (data as LexiconEntry[]) ?? [];
+        todas.push(...pagina);
+        if (pagina.length < PAGE) break;
+        desde += PAGE;
+      }
+      setEntries(todas);
+      setFiltered(todas);
+      setLoading(false);
+    }
+    loadAll();
   }, []);
 
   useEffect(() => {
