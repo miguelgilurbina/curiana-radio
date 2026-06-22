@@ -480,7 +480,10 @@ Responde SOLO con JSON válido, sin texto adicional, con esta forma exacta:
         try:
             resp = self.client.messages.create(
                 model="claude-haiku-4-5-20251001",
-                max_tokens=1024,
+                # 1024 no alcanzaba para agentes con muchas intervenciones
+                # (ej. protagonistas con 20+ respuestas): el JSON se cortaba
+                # a mitad de la última cita, rompiendo el parseo.
+                max_tokens=2048,
                 messages=[{"role": "user", "content": prompt}],
             )
             raw = "".join(b.text for b in resp.content if hasattr(b, "text")).strip()
