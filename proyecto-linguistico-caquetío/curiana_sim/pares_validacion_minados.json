@@ -1,0 +1,57 @@
+[
+  {
+    "glosa": "sal",
+    "origen_codigo": "WY",
+    "forma_origen": "ichii",
+    "fuente_origen": "wayunaiki",
+    "forma_cq_real": "biro",
+    "fuente_cq": "caquetío-atestiguado",
+    "forma_predicha": "ichii",
+    "distancia": 5,
+    "exacto": false
+  },
+  {
+    "glosa": "mujer",
+    "origen_codigo": "WY",
+    "forma_origen": "jierü",
+    "fuente_origen": "wayunaiki",
+    "forma_cq_real": "iero",
+    "fuente_cq": "caquetío-atestiguado",
+    "forma_predicha": "yieru",
+    "distancia": 2,
+    "exacto": false
+  },
+  {
+    "glosa": "oír, escuchar",
+    "origen_codigo": "LK",
+    "forma_origen": "kanabyn",
+    "fuente_origen": "lokono",
+    "forma_cq_real": "jai",
+    "fuente_cq": "caquetío-atestiguado",
+    "forma_predicha": "canabyn",
+    "distancia": 6,
+    "exacto": false
+  },
+  {
+    "glosa": "uno",
+    "origen_codigo": "TN",
+    "forma_origen": "abba",
+    "fuente_origen": "taino",
+    "forma_cq_real": "pana",
+    "fuente_cq": "caquetío-atestiguado",
+    "forma_predicha": "abba",
+    "distancia": 3,
+    "exacto": false
+  },
+  {
+    "glosa": "dos",
+    "origen_codigo": "TN",
+    "forma_origen": "yamosa",
+    "fuente_origen": "taino",
+    "forma_cq_real": "gudamuen",
+    "fuente_cq": "caquetío-atestiguado",
+    "forma_predicha": "yamosa",
+    "distancia": 6,
+    "exacto": false
+  }
+]

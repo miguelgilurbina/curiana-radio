@@ -492,13 +492,17 @@ REGLAS_LK_TN = [
     (r"ts",            "s",     "R2: ts Lokono → s Taíno"),
     (r"^h(?=[aeiou])", "h",     "R3: h- se mantiene en Taíno"),
     (r"ye$",           "ique",  "R4: -ye → -ique (sufijo chamánico)"),
-    (r"(?<=[aeiou])b(?=[aeiou])", "g", "R5: b intervocal → g en TN"),
-    (r"k(?=[aeiou])",  "c",     "R6: k → c"),
-    (r"nn",            "n",     "R7: nn → n"),
-    (r"ll",            "l",     "R8: ll → l"),
-    (r"on$",           "on",    "R9: -on se mantiene"),
-    (r"ba$",           "ba",    "R10: -ba se mantiene"),
-    (r"ha$",           "a",     "R11: -ha → -a (pierde sufijo -ha)"),
+    # R5 "b intervocal → g" ELIMINADA: contradicha por dato real (Las Casas/
+    # Brinton 1871, siba "piedra" = LK siba = TN siba, sin cambio). Ver
+    # minar_pares_validacion.py / PARES_VALIDACION para la evidencia.
+    (r"bb",            "b",     "R5: bb (geminada) → b (Brinton 1871: habba 'cesta' → haba)"),
+    (r"(?<=[aeiou])h(?=[aeiou])", "c", "R6: h intervocálica → c (Brinton 1871: hamaha → hamaca)"),
+    (r"k(?=[aeiou])",  "c",     "R7: k → c"),
+    (r"nn",            "n",     "R8: nn → n"),
+    (r"ll",            "l",     "R9: ll → l"),
+    (r"on$",           "on",    "R10: -on se mantiene"),
+    (r"ba$",           "ba",    "R11: -ba se mantiene"),
+    (r"ha$",           "a",     "R12: -ha → -a (pierde sufijo -ha)"),
 ]
 
 # --- TN → LK ---
@@ -845,6 +849,17 @@ PARES_VALIDACION = [
     ("kasabi",  "LK", "KL", "kasabi",  "casabe LK→KL"),
     ("tuna",    "LK", "KL", "duna",    "agua LK→KL"),
     ("kassaku", "LK", "KL", "kasaku",  "cielo LK→KL"),
+    # — pares LK→TN con fuente externa real (Brinton 1871, citando Las Casas,
+    #   Oviedo y Pedro Mártir — no son datos de nuestro propio corpus) —
+    #   ver fuentes_caquetios/Brinton_1871_texto.txt, "Vocabulary of the
+    #   Ancient Language of the Great Antilles", pp. 11-14.
+    #   2/6 (piaye→bejique, kairi→cayo) NO calzan con las reglas actuales:
+    #   Brinton los da como equivalentes semánticos, pero el cambio fonético
+    #   no es una sustitución regular simple — quedan sin regla, no forzados.
+    ("kannoa",  "LK", "TN", "canoa",   "canoa (Brinton 1871, p.12)"),
+    ("siba",    "LK", "TN", "siba",    "piedra (Brinton 1871, p.13, sin cambio)"),
+    ("hamaha",  "LK", "TN", "hamaca",  "hamaca (Brinton 1871, p.12)"),
+    ("habba",   "LK", "TN", "haba",    "cesta (Brinton 1871, p.11, < Las Casas Hist. Gen. lib. iii, cap. 21)"),
 ]
 
 def validar():
