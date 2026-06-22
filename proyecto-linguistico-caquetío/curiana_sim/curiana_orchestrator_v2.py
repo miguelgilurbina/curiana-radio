@@ -395,7 +395,7 @@ def run_turn(
         )
 
         # Detectar adopciones de palabras propuestas por otros
-        observer.procesar_adopciones(response, agent_name, state.turno)
+        neos_oficializados = observer.procesar_adopciones(response, agent_name, state.turno)
 
         # Contagio: propagar exposición de las palabras emergentes que usó este
         # agente (no las del vocabulario base) a sus vecinos sociales.
@@ -444,6 +444,21 @@ def run_turn(
                         )
                     except Exception:
                         pass  # No interrumpir por neologismo fallido
+
+                # Sincronizar adopciones oficializadas este turno (antes solo
+                # se actualizaba el LexicoComunitario en memoria; Supabase
+                # quedaba con status="propuesto" para siempre)
+                for neo_oficial in neos_oficializados:
+                    try:
+                        db.update_neologism_status(
+                            form=neo_oficial.forma,
+                            run_id=run_id,
+                            status="adoptado",
+                            adopted_by=neo_oficial.adoptado_por,
+                            adopted_turn_id=turn_id,
+                        )
+                    except Exception:
+                        pass
 
             except Exception as e:
                 if verbose:

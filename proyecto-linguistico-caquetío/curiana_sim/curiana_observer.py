@@ -216,15 +216,21 @@ Responde en JSON:
 
     # ── Detección de adopciones/rechazos ─────────────────────────────
 
-    def procesar_adopciones(self, texto: str, agente: str, turno: int):
+    def procesar_adopciones(self, texto: str, agente: str, turno: int) -> list:
         """
         Detecta si un agente usó palabras propuestas por otros,
-        registrándolo como adopción.
+        registrándolo como adopción. Retorna los Neologismo que se
+        OFICIALIZARON recién (2do adoptante distinto) en esta llamada, para
+        que el caller pueda sincronizar su estado con Supabase.
         """
         texto_lower = texto.lower()
+        oficializados = []
         for neo in self.lexico.neologismos_pendientes():
             if neo.forma in texto_lower and neo.autor != agente:
-                self.lexico.adoptar(neo.forma, agente, turno)
+                resultado = self.lexico.adoptar(neo.forma, agente, turno)
+                if resultado is not None:
+                    oficializados.append(resultado)
+        return oficializados
 
     # ── Feedback para próximo turno ───────────────────────────────────
 
