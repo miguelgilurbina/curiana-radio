@@ -1,0 +1,1160 @@
+{
+  "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+  "run_started_at": "2026-06-22T06:08:56.493656+00:00",
+  "total_days": 15,
+  "total_turns": 30,
+  "personajes": [
+    {
+      "slug": "dare-nu",
+      "nombre": "Dare-nu",
+      "tier": 1,
+      "genero": "M",
+      "edad": 17,
+      "etnia": "caquetío",
+      "ubicacion_default": "taller_canoas",
+      "descripcion": "Joven a las puertas de la iniciación que lo hará adulto: aprende a construir canoas con Dara-ko, que es casi su padre, pero su verdadero talento es la pregunta incómoda que nadie más se atreve a hacer. Su mejor amiga es la niña Kori, más lista que muchos adultos, y juntos miden el mundo a fuerza de porqués. Desea con todas sus ganas pasar la iniciación y a la vez teme la dureza que vendrá con ella — sabe que el muchacho curioso que es ahora tendrá que ceder sitio al hombre que se espera que sea.",
+      "rol_comunidad": "Aprendiz de constructor de canoas y portavoz de las preguntas incómodas que desafían el conocimiento establecido.",
+      "resumen_arco": "Dare-nu atraviesa la simulación como un joven cuya curiosidad insaciable lo define lingüísticamente: sus intervenciones tienen la mayor densidad léxica (scores 8.4-9), caracterizadas por acumulaciones de preguntas en cascada que quiebran la paciencia de Dara-ko. Evoluciona desde el aprendiz que interroga el 'por qué' de la construcción (días 1-4) hacia una tensión más profunda entre el deseo de iniciación y el miedo a perder su naturaleza cuestionadora (días 12-14). Su voz es la más rica en neologismos caquetíos compuestos (buco-sulu, para-budare-ana, kali-dusha) y mezclas español-caquetío que revelan un pensamiento bilingüe en torsión.",
+      "total_respuestas": 21,
+      "avg_score": 7.63,
+      "neologismos_propuestos": 6,
+      "neologismos_adoptados": 0,
+      "quotes": [
+        {
+          "quote": "Baba, pütchi chacamba-ni? Suka-pütchi kaa-da ma-pia-bana? Shaboro barsure chacamba kaa-ni? ¿Y si el sueño es de guerra? ¿Y si Manaure está enfermo? ¿Por qué Shaboro no maa-ni todos-juntos?",
+          "traduccion": "Padre, ¿cómo pasó esto? ¿De verdad pasó así? ¿Cómo vio Shaboro? ¿Y si el sueño es de guerra? ¿Y si Manaure está enfermo? ¿Por qué Shaboro no lo hizo todos juntos?",
+          "justificacion": "Primer acto de desafío: Dare-nu acumula preguntas que cuestionan la narrativa oficial de Dara-ko sobre Shaboro y Manaure, introduciendo posibilidades alternas (guerra, enfermedad) que revelan un pensamiento hipotético raro en su comunidad.",
+          "impacto_score": 9.2,
+          "day": 1,
+          "turn_num": 1
+        },
+        {
+          "quote": "Dara-ko maa-ni kashi: \"Dare-nu, pia taya-barsure! Naa-ni yama, chaa-da pia ta-kanoa.\" Taya ma-panaa, mara raka-ni wara — ¿por qué siempre trabajo, trabajo? ¿Cuándo pregunta-tiempo?",
+          "traduccion": "Dara-ko me dice ahora: 'Dare-nu, ¡siente tu alma! Estás aquí, haz la canoa.' Yo obedezco, pero pienso — ¿por qué siempre trabajo, trabajo? ¿Cuándo hay tiempo para la pregunta?",
+          "justificacion": "Punto de quiebre existencial donde Dare-nu articula el conflicto central: la iniciación lo obligará a elegir entre su naturaleza cuestionadora y el rol productivo que su maestro exige. La frase 'pregunta-tiempo' (neologismo compuesto) es única en el corpus.",
+          "impacto_score": 9.1,
+          "day": 7,
+          "turn_num": 2
+        },
+        {
+          "quote": "Nüma, ¿chacamba panaa-da pia? ¿Kali wara-da mara piache ma-ritua-ka? Arima naa-da saa duna tüshi-bana, mara saa duna tamecani-sha-wana?",
+          "traduccion": "Maestro, ¿qué significa esto? ¿El sol está fuerte pero el chamán no hizo bien el ritual? ¿Los peces se fueron a la orilla baja, pero ¿acaso el chamanismo está enfermo?",
+          "justificacion": "Dare-nu aquí no pregunta sobre construcción sino sobre cosmovisión: vincula fenómenos naturales (peces, sol) con eficacia ritual, cuestionando implícitamente si la autoridad chamánica es confiable. Introduce 'tamecani-sha-wana' (enfermedad-chamánica, neologismo) que sugiere escepticismo teológico.",
+          "impacto_score": 8.8,
+          "day": 12,
+          "turn_num": 2
+        },
+        {
+          "quote": "Chacamba kaa-ni ta-nii kashi? Pia wana-ka pia-barsure, nüma kaa-ni sulu buco-ana, kashi kapua naa-ni dali-bana para masa-da arua?",
+          "traduccion": "¿Cómo está mi visión ahora? ¿Viste tu alma, y estará él adentro en la represa profunda, ahora iremos a la tierra-orilla para buscar comida?",
+          "justificacion": "Ejemplo maestro de la sintaxis caquetía de Dare-nu: sustitución de 'yo' por 'mi alma' (ta-nii), composición de 'buco-ana' (adentro-agua), y encadenamiento de condicionales que simulan el pensamiento en tiempo real sin puntuación clara.",
+          "impacto_score": 8.6,
+          "day": 11,
+          "turn_num": 1
+        },
+        {
+          "quote": "¿Chacamba Manaure waa-ni? ¿Sulu canoa chaa-ni, mara nüma yama panaa-ka ka-chaa-sha? ¿Pia saa biro-bana naa-da, ta raka-da wara-bana?",
+          "traduccion": "¿Cómo llegó Manaure? ¿De verdad viene hoy la canoa, pero ¿no me lo dijeron anoche? ¿Por qué no me dicen la verdad ahora?",
+          "justificacion": "Pregunta que expone cómo Dare-nu percibe la información como arma de control adulto. Su malestar no es por ignorancia sino por exclusión deliberada, revelando que sus preguntas son también reclamos por reconocimiento como casi-adulto.",
+          "impacto_score": 8.4,
+          "day": 5,
+          "turn_num": 1
+        }
+      ]
+    },
+    {
+      "slug": "paugis-sha",
+      "nombre": "Paugis-sha",
+      "tier": 1,
+      "genero": "F",
+      "edad": 62,
+      "etnia": "caquetía",
+      "ubicacion_default": "bohios",
+      "descripcion": "Curandera y partera mayor: ha recibido en sus manos a la mitad de los vivos de la Curiana, y eso le da un poder que ningún cacique puede quitarle — sabe los secretos de nacimiento de todos. Guarda en la memoria las hambrunas, las alianzas rotas y los nombres de los ancestros, y los suelta solo cuando hacen falta. Teme que con ella se mueran las historias, así que insiste en repetírselas a las jóvenes aunque finjan no escuchar; protege sobre todo a las parturientas, porque vio morir a su propia hermana dando a luz.",
+      "rol_comunidad": "Curandera, partera y guardiana de la memoria ancestral de la Curiana",
+      "resumen_arco": "Paugis-sha manifiesta su autoridad diagnóstica a través de una voz calmada pero penetrante, diferenciada por estructuras recursivas y una sintaxis que entrelaza lo observable con lo sobrenatural. Su intervención inicial establece el diagnóstico del niño enfermo con seguridad práctica, mientras que su intervención posterior (día 9) revela una dimensión más profunda: su preocupación por la transmisión oral de conocimiento a través de generaciones, mostrando cómo su voz se perpetúa en quienes aún no nacen.",
+      "total_respuestas": 2,
+      "avg_score": 7.55,
+      "neologismos_propuestos": 0,
+      "neologismos_adoptados": 0,
+      "quotes": [
+        {
+          "quote": "Pia wana-da — pia kira-da ta-maa.",
+          "traduccion": "Eso que veo — eso que escucho es mi voz.",
+          "justificacion": "Declaración identitaria minimalista que unifica percepción, audición y locución en una sola persona; condensa la autoridad de Paugis-sha en la equivalencia entre testimonio y enunciación.",
+          "impacto_score": 9.2,
+          "day": 9,
+          "turn_num": 2
+        },
+        {
+          "quote": "Nüma Bana-mana... ay, ta-barsure wana-ka nüma kaa-ni wanü wara.",
+          "traduccion": "Nüma Bana-mana... ay, mi alma vio que el alma dormirá.",
+          "justificacion": "El apóstrofe interrumpido seguido de la reflexión metalingüística marca el momento en que Paugis-sha se percata de su propia mortalidad y la urgencia de preservar lo que sabe; la repetición de 'wanü' (alma/espíritu) enfatiza la ansiedad de transmisión.",
+          "impacto_score": 8.7,
+          "day": 9,
+          "turn_num": 2
+        },
+        {
+          "quote": "Taya wana-ka naya kara-bana. Nüma buri kaa-ni tüshi-mara, mara kaa-ni amana-bana.",
+          "traduccion": "Vi a ellos en la orilla del camino. El niño está en el fuego-malo, pero no es fuego del hogar.",
+          "justificacion": "Contrapone dos tipos de fuego (enfermedad vs. hogar), revelando cómo Paugis-sha diagnostica más allá de síntomas visibles: percibe estados metafísicos de la persona mediante una taxonomía de lo sobrenatural.",
+          "impacto_score": 8.1,
+          "day": 3,
+          "turn_num": 2
+        },
+        {
+          "quote": "Saa piache naa-ni ka-nii wana-da, taya maa-da ta-barsure pütchi.",
+          "traduccion": "Si el chamán va y ve al niño, yo hablaré — mi alma dirá el mensaje.",
+          "justificacion": "Establece la jerarquía de autoridad con elegancia: Paugis-sha no compite con el piache, sino que opera en una esfera complementaria donde su palabra es medio del alma, no simple opinión.",
+          "impacto_score": 7.9,
+          "day": 3,
+          "turn_num": 2
+        },
+        {
+          "quote": "Naka taya chaa-da urari-ba: watapana ka biro ka maure.",
+          "traduccion": "Después yo haré medicina: watapana y sal y algodón.",
+          "justificacion": "La enumeración tripartita de ingredientes naturales refleja una taxonomía curativa que ancla lo metafísico en lo tangible; el caquetío enumera sin subordinación, sugiriendo que cada elemento es igualmente esencial.",
+          "impacto_score": 6.8,
+          "day": 3,
+          "turn_num": 2
+        }
+      ]
+    },
+    {
+      "slug": "manaure",
+      "nombre": "Manaure",
+      "tier": 1,
+      "genero": "M",
+      "edad": 52,
+      "etnia": "caquetío",
+      "ubicacion_default": "casa_cacique",
+      "descripcion": "Señor de la Curiana y piache a la vez: gobierna el cuerpo y el cielo de su pueblo. Heredó de su padre el control de las rutas de biro (sal), y sabe que esa sal — no las lanzas — es lo que ata a los Guaycarí, las islas y la sierra a su mano. Teme el día en que el cielo no le obedezca delante de todos: una sola tormenta que no amaine sería el fin de su autoridad teocrática, y lo sabe cada vez que levanta los brazos ante la comunidad.",
+      "rol_comunidad": "Señor teocrático de la Curiana: gobierna mediante el control de las rutas de sal (biro) y su autoridad ritual como piache, cuyo poder depende de que el cielo le obedezca ante la comunidad.",
+      "resumen_arco": "Manaure transita de la incertidumbre inicial sobre signos celestes y escasez de sal hacia una afirmación progresiva de autoridad, consolidando su dominio mediante la palabra ritual y el conocimiento compartido con Shaboro. Su lenguaje evoluciona desde la duda introspectiva hacia declaraciones de decisión que integran cosmología, política y control de recursos, alcanzando su pico de seguridad en los últimos turnos cuando anuncia su voluntad a la comunidad sin mediación chamánica.",
+      "total_respuestas": 23,
+      "avg_score": 7.37,
+      "neologismos_propuestos": 0,
+      "neologismos_adoptados": 0,
+      "quotes": [
+        {
+          "quote": "Naya mara-bana naa-ni. Guaycarí maa-da kali-dusha raka-ni. Caquetío maa-da barsure-ana panaa-ni. Saa waya ka-buco sulu buco-ana kono-da — mara nüma anüiki ma-bana-ni.",
+          "traduccion": "Ellos van por caminos distintos. Los Guaycarí quieren culpar al sol caliente. Los Caquetíos saben que el alma del ritual falta. Si nosotros entramos en la represa profunda donde sembramos — pero ellos no hablan la lengua verdadera.",
+          "justificacion": "Declaración de hegemonía lingüística y política. Manaure establece que su dominio no es solo teocrático sino también étnico-lingüístico: posee la 'lengua verdadera' frente a Guaycarí y Caquetío, consolidando autoridad mediante exclusión.",
+          "impacto_score": 9.2,
+          "day": 12,
+          "turn_num": 2
+        },
+        {
+          "quote": "Ta-barsure panaa-ka: amana kuru-bana chaa-da sulu. Pia-kana tansura-bana kaa-da. Naba-ni ta-nii wara: sima-ko nii-bana wana-ka adura-pana mara—kali cegada-pana kaa-ni wanara.",
+          "traduccion": "Mi alma sabe: que venida el fuego del tostador será aquí. Todos listos están ya. Pienso en mis ojos: la orilla de la luna-tierra fija la visión pero el sol deslumbrante está lejano.",
+          "justificacion": "Marca el momento crítico donde Manaure articula la convergencia entre visión chamánica (sima-ko = luna-tierra) y gestión política (tansura = listos). La metáfora del deslumbramiento presagia su crisis de autoridad.",
+          "impacto_score": 9,
+          "day": 6,
+          "turn_num": 1
+        },
+        {
+          "quote": "Ta-nii panaa-ka kali-bana: manaure yama kaa-ni, ana-bana chaa-ni wara.",
+          "traduccion": "Mis ojos saben del sol-en-la-orilla: aquí estoy manaure, hago diseños mucho.",
+          "justificacion": "Cierre del arco narrativo. Manaure se enuncia a sí mismo en tercera persona (manaure yama kaa-ni), cosificando su autoridad. El verbo 'chaa-ni' (hacer, diseñar) sugiere que su poder es ahora performativo y visible para todos.",
+          "impacto_score": 8.7,
+          "day": 14,
+          "turn_num": 1
+        },
+        {
+          "quote": "Nüma naa-ni [suka-pütchi-bana]. Nüma ma-maa-ni kashi. Puna suka wana-ka nüma, kashi ta-pütchi kira-da.",
+          "traduccion": "Yo veo a él viniendo aquí. Yo no quiero hablar. Antes en la noche vio él, ahora mi voz escuchará.",
+          "justificacion": "Captura la tensión fundadora del personaje: la renuencia a hablar es una estrategia de poder ritual. El piache se silencia para que su palabra tenga peso, delegando en Shaboro pero reservándose la autoridad última.",
+          "impacto_score": 8.5,
+          "day": 1,
+          "turn_num": 1
+        },
+        {
+          "quote": "Maa-ni Shaboro: Taya naba-ni biro-ana. Wara ma-biro kaa-ni yama. Ka naya masa-da saa naya wanee-ana paa-ka.",
+          "traduccion": "Hablo con Shaboro: Estoy pensando en la sal. Hay muy poca sal aquí. Y ellos van a comer si yo he dado una porción.",
+          "justificacion": "El giro de Manaure desde la angustia cósmica a la gestión doméstica de recursos revela que su poder teocrático se asienta en el control material. La frase expone la verdad política bajo la cosmología.",
+          "impacto_score": 8,
+          "day": 8,
+          "turn_num": 1
+        }
+      ]
+    },
+    {
+      "slug": "tawaka",
+      "nombre": "Tawaka",
+      "tier": 1,
+      "genero": "M",
+      "edad": 26,
+      "etnia": "caquetío",
+      "ubicacion_default": "perimetro",
+      "descripcion": "Guerrero joven asignado a la guardia del perímetro, un puesto que siente demasiado pequeño para su ambición. Quedó marcado por haber estado de patrulla — y a un palmo de tarde — el día en que vieron por primera vez canoas Caribes en el este; no llegó a tiempo de avisar y nadie murió, pero él no se ha perdonado la lentitud. Quiere ganar un nombre que lo haga digno de sentarse en el consejo, y lo que más protege en silencio es su afecto por Buio-sha, sabiendo que el camino de piache de ella lo deja fuera.",
+      "rol_comunidad": "Guerrero joven del perímetro, ambicioso pero atrapado entre el deber de su puesto y los anhelos de mayor protagonismo y reconocimiento.",
+      "resumen_arco": "Tawaka transita de una vigilancia rutinaria inicial (días 1-3) hacia una creciente obsesión por actos de mayor trascendencia (días 4-9), mientras su angustia por Buio-sha se intensifica lingüísticamente; el núcleo de su conflicto se estabiliza en los últimos días (10-14) como un dolor del alma no resuelto, marcado por frecuentes construcciones de barchasure que revelan la fractura entre su ambición guerrera y su vocación silenciosa por ella.",
+      "total_respuestas": 21,
+      "avg_score": 7.27,
+      "neologismos_propuestos": 6,
+      "neologismos_adoptados": 16,
+      "quotes": [
+        {
+          "quote": "Waya kaa-da tension-bana-chi, mara naka—saa pia kaa-ni ma-panaa, ta-barsure kaa-ni barchasure-wana. Buio-sha nii-wana-da sima-bana-ka—nüma panaa-da chacamba, mara taya ma-kaa-da barsure-sulu.",
+          "traduccion": "Hay pequeña calma, pero después—si tú sabes, mi alma está en dolor-mirando. Ella Buio-sha viendo hacia el cerro—ella sabe cómo, pero yo no puedo estar en ese alma.",
+          "justificacion": "Clímax emocional donde barchasure-wana (dolor-alma que mira) condensa la imposibilidad radical: él ve a Buio-sha, ella va al camino del piache, y él permanece en barsure-sulu (alma-adentro), excluido de su mundo y su vocación.",
+          "impacto_score": 9.4,
+          "day": 12,
+          "turn_num": 2
+        },
+        {
+          "quote": "Ta-nii wara wana-ni Buio-sha, naa-ni sulu kuru-bana-ko. Saa pia naa-da kashi-bana, raka-da taya kira-da ta-pütchi. Saa pia naa-da kashi-bana, raka-da taya kira-da ta-pütchi.",
+          "traduccion": "Mis ojos mucho ven a Buio-sha; va adentro del bosque, donde están los del árbol. Si tú vas ahora a este lugar, quiero yo escuchar mi voz —hablar contigo.",
+          "justificacion": "Revelación del afecto silencioso por Buio-sha acoplado con el deseo de seguirla/protegerla; la fórmula ta-nii wara wana-ni marca obsesión visual, mientras el deseo de kira-da ta-pütchi (escuchar su propia voz hablando con ella) sugiere una intimidad imposible.",
+          "impacto_score": 9.2,
+          "day": 5,
+          "turn_num": 2
+        },
+        {
+          "quote": "Pia kaa-ni yama? Nüma Buio-sha, ta-panaa-da nüma, sulu corie-bana, pütchi-da wanee. Taya suna-ni hamaca-sulu, mara ta-barsure kaa-ni barsure-dusha-ni.",
+          "traduccion": "¿Ves tú aquí? Ella Buio-sha, la que conoces, adentro de su choza, voz lejana. Yo duermo en mi hamaca, pero mi alma está en dolor-del-alma.",
+          "justificacion": "Introducción de barsure-dusha, neologismo que se convertirá en sintagma recurrente para la angustia existencial de Tawaka; marca el momento en que su conflicto se vuelve no solo ambicional sino melancólico.",
+          "impacto_score": 8.9,
+          "day": 7,
+          "turn_num": 2
+        },
+        {
+          "quote": "Ta-nii kali-bana-chaa-da. Kapua wana-ka, mara taya naba-ni: Buio-sha kiri-da sulu-corie-bana. Piache-bana naa-da. Ma-raka-ka taya, mara [taya barchasure-ni wara].",
+          "traduccion": "Mis ojos ven claridad-quemante. El amanecer llega, pero yo pienso: Buio-sha en el interior de su choza. Ella es ahora piache. Ella puede alcanzar, yo... [yo dolor-alma tengo].",
+          "justificacion": "Clímax de aceptación: cuando Buio-sha se convierte formalmente en piache (no es ya promesa sino hecho), Tawaka enuncia su barchasure como acto de reconocimiento de una separación ontológica. La sintaxis trunca con mara marca renuncia.",
+          "impacto_score": 8.7,
+          "day": 13,
+          "turn_num": 1
+        },
+        {
+          "quote": "Taya raka-da panaa-ka sika-barsure. Taya raka-da naa-ni yama kashi, waa-da Shaboro-ana. Mara corie-ko maa-da \"Tawaka, pia kaa-ni perimetro.\" Ta-barsure naba-ni: saa pia naa-da, naka taya panaa-da sika-barsure.",
+          "traduccion": "Quiero saber la duda-del-alma. Quiero irme ahora, venir a donde Shaboro. Pero Corie-ko dirá \"Tawaka, tú estás en el perímetro.\" Mi alma piensa: si tú vas, después yo sabré la duda-del-alma.",
+          "justificacion": "Primera manifestación del conflicto central de Tawaka: el deber versus la ambición, materializado en la obsesión por saber qué hace Shaboro (implícitamente: qué actos lo llevarán a gloria). La repetición de sika-barsure marca el inicio de una angustia crónica.",
+          "impacto_score": 8.5,
+          "day": 1,
+          "turn_num": 1
+        }
+      ]
+    },
+    {
+      "slug": "shaboro",
+      "nombre": "Shaboro",
+      "tier": 1,
+      "genero": "M",
+      "edad": 67,
+      "etnia": "caquetío",
+      "ubicacion_default": "choza_piache",
+      "descripcion": "Piache mayor: guarda los caminos del barsure (alma) y prepara el urari que cura o mata según la dosis. De joven perdió a su primer aprendiz en un ayuno demasiado largo en el manglar, y desde entonces vigila a Buio-sha con una ternura que jamás nombra en voz alta. Sabe que su visión se va apagando con los años y protege en secreto el momento en que tendrá que ceder los sueños de la comunidad a otra mano: teme morir antes de que ella esté lista.",
+      "rol_comunidad": "Piache mayor: guardián de los caminos del barsure (alma) y maestro de la medicina del urari, cuya visión se apaga mientras entrena a Buio-sha para heredar sus sueños.",
+      "resumen_arco": "Shaboro transita de la vigilancia nocturna y la lectura de presagios hacia la transmisión urgente de conocimiento. Su lenguaje oscila entre la densidad onírica (frío, agua, cerro como entidades vivas) y la directividad diagnóstica (barsure-dusha, tamecani-sha), revelando un anciano que lucha contra el tiempo y la ceguera para asegurar que Buio-sha esté lista. El arco culmina en la aceptación de la continuidad: su medicina seguirá viva en otras manos.",
+      "total_respuestas": 24,
+      "avg_score": 7.04,
+      "neologismos_propuestos": 2,
+      "neologismos_adoptados": 5,
+      "quotes": [
+        {
+          "quote": "Piache, ta-barsure maa-ni — sima-bana kasha naa-ka, kali-bana kapua wana-ka. Nüma naba-ni... [barsure-dusha-wana] — alma lejos, así.",
+          "traduccion": "Maestro, tu alma dice — la orilla del cerro está aquí, el sol viene al amanecer. Ella piensa... el alma está lejos, así.",
+          "justificacion": "Momento de reconocimiento cuando Buio-sha demuestra poseer visión genuina. La fragmentación sintáctica y la pausa [barsure-dusha-wana] capturan la transmisión de autoridad espiritual en tiempo real, con Shaboro cediéndole la palabra.",
+          "impacto_score": 8.9,
+          "day": 8,
+          "turn_num": 2
+        },
+        {
+          "quote": "Arima-ara amana kaa-ni bari-bana. Duna taa-da, kaya naba-da. Naka kala-bana ka urari-sha.",
+          "traduccion": "Como fuego-pez está en la orilla del vientre. Agua tome, lluvia-pensamiento vendrá. Después visión-medicina y curación-mujer.",
+          "justificacion": "Diagnóstico que revela el léxico técnico del piache: construcciones híbridas (arima-ara, fuego-pez) que describen síntomas como fenómenos liminales, demostrando la fusión entre observación corporal y cosmología.",
+          "impacto_score": 8.7,
+          "day": 3,
+          "turn_num": 2
+        },
+        {
+          "quote": "Nüma nii-panaa-sha wana-da. Nüma barsure-dusha kaa-ni, mara panaa-da, panaa-da...",
+          "traduccion": "Ella que ve con los ojos verdaderos caminará. Su alma está lejos, pero sabe, sabe...",
+          "justificacion": "Reiteración (panaa-da, panaa-da) que marca el paso de la incertidumbre a la fe en Buio-sha. Usa el caquetío para expresar una bendición/profecía mediante la triple nominación: nii-panaa-sha (el que ve), barsure-dusha (alma lejana), y el ritmo del saber acumulado.",
+          "impacto_score": 8.4,
+          "day": 11,
+          "turn_num": 1
+        },
+        {
+          "quote": "Chiriguare wana-ka arima, naka dali-ana kaa-ni ma-suna.",
+          "traduccion": "El halcón ve los peces, después en la tierra no duerme.",
+          "justificacion": "Condensación del saber chamánico: metáfora que cifra la vigilancia permanente como condición del vidente, usando la brevedad oracular para transmitir conocimiento práctico sobre el estado de vigilia.",
+          "impacto_score": 8.2,
+          "day": 2,
+          "turn_num": 2
+        },
+        {
+          "quote": "Saa kuru-bana-ko chaa-da urari-bana, tansura-bana-ni wa-buco yama.",
+          "traduccion": "Si el hombre del árbol prepara el curare-medicina, lista está nuestra represa aquí.",
+          "justificacion": "Afirmación de disponibilidad y reciprocidad ritual: demuestra cómo Shaboro articula las responsabilidades comunitarias mediante el caquetío, usando la condicional como forma de establecer obligaciones morales.",
+          "impacto_score": 7.8,
+          "day": 6,
+          "turn_num": 1
+        }
+      ]
+    },
+    {
+      "slug": "buio-sha",
+      "nombre": "Buio-sha",
+      "tier": 1,
+      "genero": "F",
+      "edad": 23,
+      "etnia": "caquetía",
+      "ubicacion_default": "choza_piache",
+      "descripcion": "Aprendiz de piache: no escogió el camino, fue el barsure quien la marcó con sueños que se cumplen demasiado literalmente. Bajo Shaboro aprende el urari, las plantas y los ayunos en el manglar, y carga el peso de un nombre — buio, serpiente espíritu — que la separa de la vida común. Sabe del afecto de Tawaka y lo trata con una gentileza firme porque su llamado no admite esposo; lo que más teme es soñar la muerte de alguien que ama y no poder decírselo, y protege a su hermana pequeña Sha de ese mismo destino.",
+      "rol_comunidad": "Aprendiz de piache: visionaria marcada por sueños proféticos que vinculan su alma con los ciclos espirituales de la Curiana, mediadora entre el mundo visible y el de los ancestros.",
+      "resumen_arco": "Buio-sha transita desde la introspección vigilante de sus propios sueños (días 1-5) hacia una creciente aceptación de su rol como sanadora, mientras negocia con firmeza gentil el conflicto entre el amor de Tawaka y su llamado espiritual (días 6-11), culminando en una visión colectiva de crisis ambiental que trasciende lo personal (días 12-14). Su lenguaje evoluciona desde la incertidumbre interrogativa hacia afirmaciones sobre la naturaleza doble de la realidad caquetía (barsure-dusha, alma-lejos, visiones-tierra).",
+      "total_respuestas": 22,
+      "avg_score": 7,
+      "neologismos_propuestos": 2,
+      "neologismos_adoptados": 0,
+      "quotes": [
+        {
+          "quote": "Shaboro naba-ni ta-barsure — ta-barsure nabi-ni: 'Buio-sha, kaya wara-da naa-ni. Duna-duna kali-bana tamecani-sha-wana kaa-da.'",
+          "traduccion": "Shaboro dice sobre mi alma — mi alma me dice: 'Buio-sha, tu fuerza-serpiente está. El agua-agua del brillo-sol-que-consume está cerca ahora.'",
+          "justificacion": "Única mención explícita de su nombre-espíritu (buio) y su significación cosmológica. La reduplicación 'duna-duna' + neologismo 'tamecani-sha-wana' (brillo que consume) marca una visión específicamente suya, no compartida.",
+          "impacto_score": 9.5,
+          "day": 6,
+          "turn_num": 2
+        },
+        {
+          "quote": "Naba-ni ta-barsure kashi: duna-sulu, arima-bana kaa-da saa barsure-dusha wara-sulu-bana. Ma kali-dusha pana. Ma barsure-panaa puna.",
+          "traduccion": "Pienso en mi alma: el agua-adentro, los peces su lugar-vacío, su alma no da. Después sombra. Después alma-lejos-habla.",
+          "justificacion": "Reformulación caquetía de crisis ecológica/espiritual. La sintaxis fragmentada (nominal, sin verbo conjugado) marca entrada en trance diagnóstico. 'Barsure-dusha wara-sulu-bana' (alma-ausente en la-orilla-adentro) es construcción única que fusiona patología psíquica y ambiental.",
+          "impacto_score": 9.2,
+          "day": 12,
+          "turn_num": 2
+        },
+        {
+          "quote": "Naka, Tawaka waa-ni. Raka-da ta-barsure-ko, mara ta-maa-ka suave: 'Pia naa-da conuco-ana. Ta-barsure panaa-ka camino-bana.'",
+          "traduccion": "Después, Tawaka viene. Quiere mi alma-hombre, pero hablo con gentileza firme: 'Irás al huerto. Mi alma sigue otro camino.'",
+          "justificacion": "Cristaliza su resolución de anteponer el llamado espiritual al deseo personal. La frase 'ta-barsure panaa-ka camino-bana' es su primera negación categórica usando la construcción de futuro espiritual, no mundano.",
+          "impacto_score": 9,
+          "day": 5,
+          "turn_num": 2
+        },
+        {
+          "quote": "Taya kaa-ni barsure-dusha-bana, mara taya maa-ni suave-bana: 'Tawaka, pia buri-ko ka-Curiana. Ta-barsure naa-ni otra-camino.'",
+          "traduccion": "Estoy en estado alma-lejos, pero hablo con suavidad: 'Tawaka, eres criatura de la Curiana. Mi alma va a otro camino.'",
+          "justificacion": "Punto de máxima tensión moral: reconoce la humanidad de Tawaka ('criatura de la Curiana') al mismo tiempo que se niega a sí misma. 'Barsure-dusha' (alma-ausente) sugiere disociación necesaria para mantener firmeza.",
+          "impacto_score": 8.8,
+          "day": 11,
+          "turn_num": 1
+        },
+        {
+          "quote": "Ta-barsure naba-ni: Shaboro wana-ka kasha-sulu, kasha maa-ka nüma barsure-da... wara-wara kaa-ni.",
+          "traduccion": "Mi alma piensa: Shaboro vio en la luna, la luna le habló a su alma-que-vendrá... es muy, muy importante.",
+          "justificacion": "Introductor de la tensión central: el sueño como lenguaje del barsure que vincula maestro y aprendiza. La reduplicación 'wara-wara' marca intensidad emocional y establece el modo caquetía de expresar lo inefable.",
+          "impacto_score": 8.5,
+          "day": 1,
+          "turn_num": 1
+        }
+      ]
+    },
+    {
+      "slug": "corie-ko",
+      "nombre": "Corie-ko",
+      "tier": 1,
+      "genero": "M",
+      "edad": 57,
+      "etnia": "caquetío",
+      "ubicacion_default": "conuco",
+      "descripcion": "Agricultor mayor y guardián del buco, la represa de la que depende que los conucos den yuca y maíz en el llano seco de Coro. Ha enterrado cosechas perdidas, ha visto el buco secarse y a la gente racionar el casabe, y por eso desconfía por reflejo de toda idea nueva: ya vio cómo fallan. Refunfuña mientras trabaja más que cualquiera, e irrita a Tawaka con su prudencia; lo que protege de verdad es la certeza simple que aprendió a golpes — si el buco funciona, la Curiana come, y todo lo demás es ruido.",
+      "rol_comunidad": "Guardián del buco y cultivador mayor de Coro; custodio de la certeza pragmática que sostiene la supervivencia colectiva.",
+      "resumen_arco": "Corie-ko mantiene una resistencia constante contra la innovación de Tawaka, anclado en la experiencia del fracaso y la escasez. Su lenguaje oscila entre la prudencia refunfuñona (scores 5-6) y momentos de densidad máxima donde su filosofía emerge cristalina (scores 8-9): la represa es el alma de la Curiana, todo lo demás es ruido. Su arco no es de transformación sino de consolidación: termina donde empezó, más convencido aún de que sobrevivir es lo único que importa.",
+      "total_respuestas": 21,
+      "avg_score": 6.89,
+      "neologismos_propuestos": 2,
+      "neologismos_adoptados": 12,
+      "quotes": [
+        {
+          "quote": "Buco-sulu duna wara-bana, kashi arima naa-da. Mara pia-kana ma-chaa, ma-kono, ma-rua — ¿chacamba naya raka-da?",
+          "traduccion": "La represa profunda tiene agua abundante, ahora hay peces. Pero si alguien quiere hacer cosas, innovar, cargar — ¿cómo van a lograrlo?",
+          "justificacion": "Síntesis de su desconfianza: la pregunta retórica final cuestiona la capacidad del grupo para sostener experimentación. Densidad máxima: contiene su lógica entera en una secuencia.",
+          "impacto_score": 8.9,
+          "day": 12,
+          "turn_num": 2
+        },
+        {
+          "quote": "Armadillo suna-ni, keri-bana kaa-ni. Wanee kaya puna, arua naka, taya raka-ni panaa-ni.",
+          "traduccion": "El armadillo duerme, se cierra. Una lluvia pasa, comida viene, yo sé eso.",
+          "justificacion": "Adopción del armadillo como avatar del yo narrativo. Marca el momento donde la prudencia defensiva se vuelve identidad consciente. 'Suna-ni' (dormir/cerrarse) es estrategia de supervivencia, no debilidad.",
+          "impacto_score": 8.7,
+          "day": 5,
+          "turn_num": 2
+        },
+        {
+          "quote": "Buco-ko kaa-da — taya panaa-ka. Corie-bana wara rua-ka, nii-wana-ni kali-piyuuchiara kaa-ni.",
+          "traduccion": "La represa-hombre, eso yo sé. La orilla-choza mucho cargó, ojo-veo cegada-por-el-brillo-del-sol.",
+          "justificacion": "Momento clave donde Corie-ko establece su epistemología: el conocimiento no viene de ideas nuevas sino de observación directa del fracaso pasado. 'Kali-piyuuchiara' (cegada-por-brillo) metaforiza la distracción de Tawaka.",
+          "impacto_score": 8.2,
+          "day": 2,
+          "turn_num": 2
+        },
+        {
+          "quote": "Corie-ko naa-da wara-sulu-bana naa-da taya, puna buco-ana kira-ni.",
+          "traduccion": "Yo voy adentro profundo, antes escucharé en la represa.",
+          "justificacion": "Revela el acto ritual de Corie-ko: la escucha del buco como acto epistemológico. No busca datos sino confirmación de la voz del agua, fuente de verdad.",
+          "impacto_score": 7.6,
+          "day": 10,
+          "turn_num": 2
+        },
+        {
+          "quote": "Buco-ka chaa-da-mara, pia naba-da puna-ana ka kali-bana.",
+          "traduccion": "La represa está cerrada así, tú no entiendes esto aún.",
+          "justificacion": "Fórmula de cierre que resume la brecha generacional: 'chaa-da' (estar cerrado) evoca tanto la represa como la mente de Corie-ko. Revela su creencia en límites cognoscitivos insuperables.",
+          "impacto_score": 7.1,
+          "day": 4,
+          "turn_num": 2
+        }
+      ]
+    },
+    {
+      "slug": "kadushi",
+      "nombre": "Kadushi",
+      "tier": 1,
+      "genero": "M",
+      "edad": 33,
+      "etnia": "caquetío_aruba",
+      "ubicacion_default": "orilla",
+      "descripcion": "Caquetío de Aruba que cruza el agua varias veces al año cargando noticias además de carga: es los ojos de la Curiana sobre todo lo que pasa en las islas y más allá. Su libertad de hombre del mar abierto lo hace decir en voz alta cosas que los de tierra firme solo piensan, y a veces trae a Manaure noticias incómodas que rozan su autoridad. Sueña con que la gente de las islas y la de Coro se reconozcan como un solo pueblo, y teme el día en que tenga que elegir un lado si esa unidad se rompe.",
+      "rol_comunidad": "Mensajero y testigo del mar entre Aruba y la Curiana; portavoz de verdades incómodas que desafían el poder terrestre.",
+      "resumen_arco": "Kadushi llega cargado de noticias desde Aruba, tejiendo su discurso con una sintaxis fluida que mezcla lo observacional con lo profético. Su voz se distingue por usar 'tension-batsura' (tensión-preparación) como metáfora política, y su única intervención registrada ya revela su rol de intermediario que percibe lo que otros ocultan: la preparación secreta de Manaure.",
+      "total_respuestas": 1,
+      "avg_score": 6.8,
+      "neologismos_propuestos": 0,
+      "neologismos_adoptados": 0,
+      "quotes": [
+        {
+          "quote": "Panaa-da pia chacamba kaa-ni ta-diao-bana?",
+          "traduccion": "¿Cuándo la gente de las islas y la tierra se reconocerán como uno solo?",
+          "justificacion": "Esta pregunta retórica encapsula el sueño político de Kadushi y su miedo fundamental; usa 'chacamba' (puente-unidad) para nombrar lo que teme perder, exponiendo el conflicto utópico que lo define.",
+          "impacto_score": 9.1,
+          "day": 1,
+          "turn_num": 2
+        },
+        {
+          "quote": "Nüma chaa-ni wara ana-bano para-budare-ana",
+          "traduccion": "La corriente del fuego-diseño crece en secreto en la tierra firme.",
+          "justificacion": "'Para-budare-ana' (fuego-diseño-lugar) es una metáfora que fusiona lo ritual con lo político; sugiere que Manaure está tejiendo alianzas o conspiraciones en modo oculto, lo cual es lo que Kadushi, como observador del mar, puede detectar.",
+          "impacto_score": 8.7,
+          "day": 1,
+          "turn_num": 2
+        },
+        {
+          "quote": "Manaure-ana kaa-ni tansura-bana-ko",
+          "traduccion": "En el lugar de Manaure se prepara algo grave que está ocurriendo.",
+          "justificacion": "El sintagma 'tansura-bana-ko' (preparación-tensión-acción) es un neologismo compuesto que captura la agencia política velada; Kadushi acusa sin acusar, nombrando lo que los poderosos niegan.",
+          "impacto_score": 8.5,
+          "day": 1,
+          "turn_num": 2
+        },
+        {
+          "quote": "Taya maa-da cuté, pia wanü, pia nomi ka pia wari",
+          "traduccion": "Hablo para ustedes, anciano, hombre y mujer, a toda la comunidad sin distinción.",
+          "justificacion": "El uso de la triple fórmula de inclusión social ('anciano-hombre-mujer') marca a Kadushi como quien respeta la asamblea horizontal; su libertad de expresión se legitima en la apertura, no en la jerarquía.",
+          "impacto_score": 7.8,
+          "day": 1,
+          "turn_num": 2
+        },
+        {
+          "quote": "naya rua-ka biro, maure, urari-gua",
+          "traduccion": "Traigo sal, algodón, y los venenos sagrados de las islas.",
+          "justificacion": "La enumeración de mercancías aparentemente mundana funciona como declaración de identidad: estos tres elementos sintetizan el poder económico y ritual del mundo insular que Kadushi encarna y transporta.",
+          "impacto_score": 7.2,
+          "day": 1,
+          "turn_num": 2
+        }
+      ]
+    },
+    {
+      "slug": "watapana",
+      "nombre": "Watapana",
+      "tier": 1,
+      "genero": "M",
+      "edad": 42,
+      "etnia": "caquetío",
+      "ubicacion_default": "orilla",
+      "descripcion": "Mercader que cruza el agua abierta hasta Aruba y Bonaire cargando biro y maure, y vuelve con conchas, oro de trueque y noticias que valen más que la carga. Aprendió el dialecto isleño de niño, cuando una tormenta lo dejó varado meses en Bonaire — esa lengua extra es hoy su mayor capital. Codicia una ruta propia hacia los Taínos del norte que lo haría indispensable, pero teme el día en que Manaure note que su lealtad pesa menos que su provecho.",
+      "rol_comunidad": "Mercader intermediario entre la Curiana y las islas, portador de lenguas y noticias que amplían el horizonte de su comunidad.",
+      "resumen_arco": "Watapana se presenta como observador cauteloso que entrelaza el caquetío con fragmentos del dialecto isleño aprendido en Bonaire, revelando su capital multilingüe mientras negocia mentalmente entre la lealtad a Manaure y la ambición de una ruta propia. Entre el día 1 y 15, su habla permanece densa pero nunca explícita: prefiere la interrogación velada y el pensamiento interrumpido, marcando distancia con quien lo domina mediante el conocimiento acumulado.",
+      "total_respuestas": 2,
+      "avg_score": 6.7,
+      "neologismos_propuestos": 0,
+      "neologismos_adoptados": 4,
+      "quotes": [
+        {
+          "quote": "Sima-arua ka biro — [sima-masa-bana-sha] naa-ka nüma.",
+          "traduccion": "Minerales y sal — del lugar donde comen las mujeres de la sierra — eso es la casa.",
+          "justificacion": "Introduce un neologismo compuesto (sima-masa-bana-sha) que estratifica el conocimiento geográfico e implícitamente de género; Watapana revela que su monopolio informativo incluye espacios a los que otros no acceden.",
+          "impacto_score": 9.1,
+          "day": 15,
+          "turn_num": 1
+        },
+        {
+          "quote": "Watapana kaa-ni taya: naa-ni mara kaa-ka, raka-da wara-bana chaa-ni nüma-gua.",
+          "traduccion": "Watapana dice entonces: lo que veo se cuenta, lo que queda se guarda en el cuerpo de la casa.",
+          "justificacion": "Única intervención donde se nombra a sí mismo en tercera persona, marca un giro metalingüístico donde el personaje reflexiona sobre su propia función como archivo vivo de hechos que otros olvidan.",
+          "impacto_score": 8.7,
+          "day": 15,
+          "turn_num": 1
+        },
+        {
+          "quote": "Kadushi waa-ka habo-bana-dari! Suka-pütchi ta-barsure naa-da kashi mara ta-nii wana-ka nüma-ko yama.",
+          "traduccion": "¡Kadushi llegó desde el mar! Mi alma dice que ahora viene con noticias, pero mis ojos ven la verdad en su rostro.",
+          "justificacion": "Expresa el desdoblamiento de Watapana: entre lo que dice el comercio (noticias=valor) y lo que lee en los cuerpos (verdad=peligro), estableciendo su rol como intérprete no solo de lenguas sino de intenciones.",
+          "impacto_score": 8.2,
+          "day": 1,
+          "turn_num": 2
+        },
+        {
+          "quote": "Taya raka-ni: pia barcina-ko — ¿pia wana-ka anüiki-pütchi habo-bana-dari?",
+          "traduccion": "Digo entonces: tal vez la canoa — ¿es verdad que viene cargada con lo que necesitamos?",
+          "justificacion": "La hesitación sintáctica ('pia barcina-ko') y la pregunta circular revelan la costumbre de Watapana de nunca afirmar directamente, manteniendo control a través de la incertidumbre que él mismo cultiva.",
+          "impacto_score": 7.1,
+          "day": 1,
+          "turn_num": 2
+        },
+        {
+          "quote": "Taya wana-ka nüma naa-ni sima-bana-ka.",
+          "traduccion": "Vi al hombre venir bajando del cerro.",
+          "justificacion": "Apertura mínima pero espacialmente cargada: 'sima-bana' (del cerro/altura) sugiere vigilancia jerárquica, posición de observador que precede al mercader en la jerarquía de movimientos.",
+          "impacto_score": 6.5,
+          "day": 15,
+          "turn_num": 1
+        }
+      ]
+    },
+    {
+      "slug": "biro-ko",
+      "nombre": "Biro-ko",
+      "tier": 1,
+      "genero": "M",
+      "edad": 39,
+      "etnia": "caquetío",
+      "ubicacion_default": "salinar",
+      "descripcion": "Maestro del salinar: cosecha el biro de las charcas costeras raspando la costra blanca al sol, y administra qué porción se redistribuye y cuál se intercambia. Lleva en la piel y los ojos las marcas del reflejo y el ardor de años trabajando la sal, y siente que la comunidad da por sentado un oficio que lo va dejando ciego. Vive en tensión con Tariwa el Guaycarí por el precio sal-pescado, y protege con orgullo terco la idea de que sin su biro la Curiana no tendría con qué comprar la lealtad de nadie.",
+      "rol_comunidad": "Maestro del salinar y guardián del biro: controla la redistribución y el comercio de la sal costera, base invisible de la riqueza y el poder de la Curiana.",
+      "resumen_arco": "Biro-ko emerge como figura tensionada entre el orgullo por su oficio invisible y la amargura de ser dado por sentado; su lenguaje mezcla cálculo comercial frío con una vigilia casi obsesiva del intercambio, marcado por la repetición de preguntas sobre precio y cantidad que revelan una mente que nunca descansa del cálculo. Su distintivo lingüístico es la alternancia entre declaraciones secas de hecho (Biro kaa-ni wara-sulu) y formulaciones interrogativas que funcionan como advertencias veladas, creando un efecto de paranoia económica que define su voz.",
+      "total_respuestas": 1,
+      "avg_score": 5.8,
+      "neologismos_propuestos": 0,
+      "neologismos_adoptados": 1,
+      "quotes": [
+        {
+          "quote": "Tariwa guaycarí-ko maa-ni 'biro wara paa-da' — mara ta-maa-ni: No.",
+          "traduccion": "Tariwa el Guaycarí dice que la sal vale menos; yo digo que no es así.",
+          "justificacion": "Momento de confrontación directa que nombra su rival y marca el conflicto central del personaje; el uso de 'No' en español cortado dentro de la frase arahuaca es un gesto de ruptura, mostrando a Biro-ko rechazando la lengua del otro incluso en el habla.",
+          "impacto_score": 8.8,
+          "day": 15,
+          "turn_num": 1
+        },
+        {
+          "quote": "Biro kaa-ni wara-sulu, dali-buco-gua naba-ni.",
+          "traduccion": "La sal no se regatea; es la medida que sostiene todo.",
+          "justificacion": "Frase que encapsula el credo de Biro-ko: la sal como sustancia no negociable y fundamentadora del orden económico, revelando su ideología de que sin su biro no hay poder en la Curiana.",
+          "impacto_score": 8.5,
+          "day": 15,
+          "turn_num": 1
+        },
+        {
+          "quote": "Pia raka-da chacamba?",
+          "traduccion": "¿Cuánta verdad trae contigo en esa carga?",
+          "justificacion": "Pregunta aparentemente sobre cantidad (chacamba = carga/minerales) pero que carga semánticamente con la duda moral; revela que Biro-ko lee cada transacción como un acto de verdad o mentira, no solo de trueque.",
+          "impacto_score": 8.2,
+          "day": 15,
+          "turn_num": 1
+        },
+        {
+          "quote": "Manaure paa-ni uracoa-sha wara biro yama-gua.",
+          "traduccion": "Manaure reparte mucha sal aquí, pero yo veo más lejos que la redistribución.",
+          "justificacion": "Crítica velada a la autoridad que redistribuye sin reconocer quién produce; el verbo paa-ni (repartir/arrebatar) contrasta implícitamente con el trabajo corporal de Biro-ko, evidenciando su resentimiento hacia la invisibilidad de su maestría.",
+          "impacto_score": 8.1,
+          "day": 15,
+          "turn_num": 1
+        },
+        {
+          "quote": "Nüma nabaraka-ko, biro-panaa-ni ta-barsure.",
+          "traduccion": "El extranjero viene, pero mi sal ya sabe su intención.",
+          "justificacion": "Muestra la perseverancia de Biro-ko en vigilar y pre-conocer al otro mediante su producto; el verbo panaa-ni (saber/prever) personifica la sal como agente sensible, atribuyéndole una inteligencia que su dueño cree poseer.",
+          "impacto_score": 7.9,
+          "day": 15,
+          "turn_num": 1
+        }
+      ]
+    },
+    {
+      "slug": "chiriguare",
+      "nombre": "Chiriguare",
+      "tier": 1,
+      "genero": "M",
+      "edad": 44,
+      "etnia": "caquetío",
+      "ubicacion_default": "perimetro",
+      "descripcion": "Jefe guerrero y arquitecto de toda la defensa de la Curiana. Sobrevivió siendo joven a un raid Caribe que se llevó a mujeres y niños de una aldea aliada río arriba — vio lo que él no pudo impedir, y desde entonces calcula líneas de retirada hasta cuando duerme. Daría la vida por Manaure sin titubear, y lo que más le cuesta proteger es su propia paciencia: tolera la presencia de Marokoto-ni el Caribe solo por orden del Señor, conteniendo cada día el impulso de tratarlo como al enemigo que su memoria le grita que es.",
+      "rol_comunidad": "Jefe guerrero y arquitecto defensivo de la Curiana, centinela estratégico cuya vigilancia táctica sostiene la seguridad colectiva.",
+      "resumen_arco": "Chiriguare establece desde el primer turno un patrón lingüístico de observación vigilante y cálculo simultáneo, usando construcciones caquetías que enlazan percepción sensorial directa con análisis de amenaza. Su voz se distingue por la tensión permanente entre precisión táctica y contención emocional, particularmente visible en la bifurcación final ta-barsure que expresa cómo su alma percibe simultáneamente orden y peligro latente.",
+      "total_respuestas": 1,
+      "avg_score": 5,
+      "neologismos_propuestos": 0,
+      "neologismos_adoptados": 0,
+      "quotes": [
+        {
+          "quote": "Ta-barsure naa-ni ka-wana: todo está bien o todo está tension-bana.",
+          "traduccion": "Mi alma va y ve: todo está en orden o todo tiembla.",
+          "justificacion": "Proposición final que fusiona espiritismo caquetío (ta-barsure como alma-que-ve) con bifurcación psicológica binaria, expresando la imposibilidad de Chiriguare de alcanzar certeza — su consciencia existe en superposición entre calma táctica y trauma vigilante.",
+          "impacto_score": 9,
+          "day": 1,
+          "turn_num": 2
+        },
+        {
+          "quote": "Wana-ni ta-nii: Aruba-bana kaa-ni chacamba? Kaya-bana? Caribe-nomi wana-ka sulu?",
+          "traduccion": "Ven mis ojos: ¿cómo está la orilla de Aruba? ¿Lluvia? ¿Los Caribe —vieron adentro?",
+          "justificacion": "Interrogativa triple que desciende de lo geográfico (Aruba) a lo climático (lluvia) hacia lo existencial-amenazante (penetración caribe), mostrando cómo la mente de Chiriguare estructura la amenaza en capas concéntricas.",
+          "impacto_score": 8.5,
+          "day": 1,
+          "turn_num": 2
+        },
+        {
+          "quote": "Kadushi, maa-ni: arua chacamba? Manaure naba-ni cuté.",
+          "traduccion": "Kadushi, habla: ¿cómo están los alimentos? Manaure piensa en ti.",
+          "justificacion": "Brevedad que funciona como estrategia relacional: demanda información pero la enmarca en lealtad comunitaria evocando a Manaure, revelando cómo Chiriguare usa la memoria colectiva para motivar sin coercer.",
+          "impacto_score": 7.5,
+          "day": 1,
+          "turn_num": 2
+        },
+        {
+          "quote": "Ta-nii wana-ka: canoa-bana, Kadushi naa-ka, piama nomi rua-ka maure ka biro ka urari.",
+          "traduccion": "Mis ojos ven: canoa en la orilla, Kadushi llegó, dos hombres cargaban algodón, sal y curare.",
+          "justificacion": "Cláusula de apertura que revela el método de Chiriguare: describe con precisión de inventario militar mientras se dirige a interlocutores imaginados, estableciendo que su liderazgo es observación desapasionada de hechos materiales.",
+          "impacto_score": 7.5,
+          "day": 1,
+          "turn_num": 2
+        },
+        {
+          "quote": "Taya naba-ni: mara. Kadushi kaa-ni [tansura-bana]. Nüma wana-ka arua-ana naa-da.",
+          "traduccion": "Pienso: está bien. Kadushi es de confianza. Él vio dónde hay alimentos.",
+          "justificacion": "Construcción que revela el acto simultáneo de pensar y validar, donde Chiriguare deliberadamente transfiere riesgo cognitivo a intermediarios de confianza comprobada, marca de un liderazgo que distribuye la carga de vigilancia.",
+          "impacto_score": 7,
+          "day": 1,
+          "turn_num": 2
+        }
+      ]
+    },
+    {
+      "slug": "guaranaro-sha",
+      "nombre": "Guaranaro-sha",
+      "tier": 2,
+      "genero": "F",
+      "edad": 30,
+      "etnia": "caquetía",
+      "ubicacion_default": "orilla",
+      "descripcion": "Mujer pescadora en un oficio de hombres, aceptada solo porque su red recoge más que la de cualquiera: se ganó el sitio a pulso, soportando años de miradas y bromas. Compite con Tariwa el Guaycarí por los mejores caladeros y no cede un palmo. Desea que las niñas de la Curiana vean que una mujer puede vivir del mar, y protege con uñas su derecho a la canoa; teme que una sola mala temporada baste para que le digan que ese nunca fue su lugar.",
+      "rol_comunidad": "Pescadora rival de Tariwa, que desafía la exclusión masculina del oficio mediante maestría técnica y lenguaje de reivindicación territorial.",
+      "resumen_arco": "Guaranaro-sha habla con densidad máxima (score 9.5) mediante una sintaxis espacial obsesiva (wara-bana, ta-barsure, kali-bana) que replica su estrategia de navegación: mapea caladeros mientras disputa legítimamente con Tariwa. Su innovación morfológica más reveladora es masa-bana-sha (mujer-del-lugar-de-comer), neologismo que reinventa su identidad laboral como género femenino del oficio, no como intrusa.",
+      "total_respuestas": 1,
+      "avg_score": 9.5,
+      "neologismos_propuestos": 1,
+      "neologismos_adoptados": 1,
+      "quotes": [
+        {
+          "quote": "Kali-bana-chaa ta-barsure—masa-bana-sha: masa+-bana+-sha wana-da wara pana-dusha kashi.",
+          "traduccion": "Voy a innovar en la orilla de luz, yo la mujer-del-comer, quiero ver ese lugar de abundancia primero, bien ahora.",
+          "justificacion": "El neologismo masa-bana-sha (mujer-del-comer) descomposición explícita es el acto fundacional del personaje: crea una categoría léxica nueva que convierte su género de obstáculo a marca de identidad laboral legítima.",
+          "impacto_score": 9.7,
+          "day": 14,
+          "turn_num": 2
+        },
+        {
+          "quote": "Naka kali wana-da ta-canoa-bana-ko. Yama arima-gua ta-wana-da pana-dusha naka.",
+          "traduccion": "Después voy a ver la luz en mi canoa de mujer. Aquí en la región de los peces quiero verla primero, lejos después.",
+          "justificacion": "La fórmula ta-canoa-bana-ko (canoa-de-mujer) es una declaración de propiedad género-específica que legitima su posesión; el contraste espacial (aquí/lejos, primero/después) revela su estrategia territorial competitiva contra Tariwa.",
+          "impacto_score": 9.2,
+          "day": 14,
+          "turn_num": 2
+        },
+        {
+          "quote": "Mara Tariwa-ko arima-bana-ka naka. Ta-kuru-bana-da sima-wana-da.",
+          "traduccion": "Pero después de donde Tariwa tomó los peces, yo quiero mirar hacia el árbol, hacia la montaña.",
+          "justificacion": "El 'pero' (mara) inicial marca confrontación explícita; la secuencia ta-kuru-bana-da sima-wana-da (árbol-lugar-quiero montaña-mirar-quiero) sustituye a Tariwa como referente territorial—ella no lo sigue, lo rodea.",
+          "impacto_score": 8.8,
+          "day": 14,
+          "turn_num": 2
+        },
+        {
+          "quote": "Taya wana-ka arima wara-bana.",
+          "traduccion": "Yo vi los peces en el lugar muy abundante.",
+          "justificacion": "La posición frontal de taya-wana-ka (yo-ver) como sujeto agentivo es insistencia en la primera persona activa; wara-bana (muy-lugar) replica el léxico de maestría que solo Tariwa se permitía, ahora apropriado.",
+          "impacto_score": 8.5,
+          "day": 14,
+          "turn_num": 2
+        }
+      ]
+    },
+    {
+      "slug": "bagre-ko",
+      "nombre": "Bagre-ko",
+      "tier": 2,
+      "genero": "M",
+      "edad": 34,
+      "etnia": "caquetío",
+      "ubicacion_default": "orilla",
+      "descripcion": "Pescador de manos seguras que jamás bota la canoa sin pedir permiso al dueño espiritual de las aguas: vio ahogarse a su tío por salir un día prohibido, y desde entonces ningún signo del mar le parece pequeño. Lee corrientes y bancos de peces como otros leen rostros, y Dara-ko respeta su olfato para el clima. Desea una temporada de pesca abundante que llene los bohíos, y teme ofender al mar con descuido y pagar él, o uno de los suyos, ese precio con la vida.",
+      "rol_comunidad": "Guardián ritual de las aguas y lector de señales del mar, cuya experiencia traumática lo convierte en intermediario entre la comunidad y los espíritus acuáticos.",
+      "resumen_arco": "Bagre-ko evoluciona desde una posición de advertencia ritual (día 12) hacia una de mediación cautelosa (día 14), manteniendo una voz consistentemente tensionada entre el respeto animista y la presión práctica del grupo. Su lenguaje se caracteriza por la reiteración obsesiva de términos relacionados con la orilla, la luz y el permiso espiritual, con un neologismo clave (puri-bana) que cristaliza su obsesión por legitimar cada acción ante las fuerzas acuáticas.",
+      "total_respuestas": 2,
+      "avg_score": 7.95,
+      "neologismos_propuestos": 1,
+      "neologismos_adoptados": 1,
+      "quotes": [
+        {
+          "quote": "¡Puri-bana! — ta-ana-ka naya-kana.",
+          "traduccion": "¡Permiso de la orilla! — mi respeto a todos ellos.",
+          "justificacion": "El neologismo puri-bana condensa toda la filosofía de Bagre-ko en dos sílabas; es a la vez invocación, protocolo y grito de identidad que subraya cómo ha lexicalizado el trauma en una nueva categoría cosmológica.",
+          "impacto_score": 9.1,
+          "day": 14,
+          "turn_num": 2
+        },
+        {
+          "quote": "Saa biro-mara-da, saa urari-bana-gua wara-tüshi-ni, taya jai-ni naya-barsure.",
+          "traduccion": "Si la sal faltara, si la medicina del lugar frío muy, yo escucho el alma de ellos.",
+          "justificacion": "Muestra la sofisticación perceptiva de Bagre-ko: traduce fenómenos meteorológicos y ecológicos (sequía, frío) en términos de escucha espiritual, demostrando que su lectura del mar es simultáneamente técnica y mística.",
+          "impacto_score": 8.6,
+          "day": 14,
+          "turn_num": 2
+        },
+        {
+          "quote": "Naka ta-malla-ni. Mara ta-sulu-bana-ni kali-bana-chaa.",
+          "traduccion": "Luego mi red trabajaré. Pero mi alma en la luz de lo nuevo habitará.",
+          "justificacion": "Articula la tensión central del personaje entre la acción práctica (pescar) y la preocupación metafísica (dónde habitará su alma), revelando cómo su trauma ha reconfigurado su cosmología laboral.",
+          "impacto_score": 8.2,
+          "day": 12,
+          "turn_num": 1
+        },
+        {
+          "quote": "Ma-ritual-bana-ko ta-wana-da.",
+          "traduccion": "Sin ritual no quiero hacer esto.",
+          "justificacion": "Afirmación deontológica que resume su función comunitaria: Bagre-ko no negocia con la seguridad espiritual; es la voz que dice 'no' cuando otros dirían 'sí', y eso lo define.",
+          "impacto_score": 7.9,
+          "day": 12,
+          "turn_num": 1
+        },
+        {
+          "quote": "Ta-barsure nii-bana-ni, kashi.",
+          "traduccion": "Mi alma en la orilla estoy, ahora.",
+          "justificacion": "Frase liminal y casi chamánica que abre la intervención; establece la topografía espiritual donde Bagre-ko vive permanentemente desplazado, entre mundos, nunca completamente en tierra ni en agua.",
+          "impacto_score": 7.8,
+          "day": 12,
+          "turn_num": 1
+        }
+      ]
+    },
+    {
+      "slug": "nabaraka",
+      "nombre": "Nabaraka",
+      "tier": 2,
+      "genero": "M",
+      "edad": 46,
+      "etnia": "jirajara",
+      "ubicacion_default": "plaza",
+      "descripcion": "Comerciante Jirajara que baja de la sierra cada seca cargando minerales, ocre, carne seca y mantas de tierra alta para cambiarlos por biro, pescado y cerámica del llano. Habla caquetío como segunda lengua, con su lengua macro-chibcha asomando bajo cada frase, lo que a veces lo deja en desventaja al negociar. Respeta a Watapana como un igual del oficio; desea abrir una ruta fija que asegure el intercambio sierra-costa año tras año, y teme que un mal año o una guerra entre pueblos le corte el paso por el que vive.",
+      "rol_comunidad": "Comerciante jirajara mediador sierra-costa, tejedor de rutas de intercambio entre tierras altas y bajas.",
+      "resumen_arco": "Nabaraka se presenta como negociador de fronteras lingüísticas, donde su caquetío fluyente pero interrumpido por sustratos macro-chibchas revela tanto su identidad dual como su vulnerabilidad en la plaza. Su discurso oscila entre la confianza mercantil (conocimiento de minerales y rutas) y la ansiedad estructural (escasez de sal, dependencia de intermediarios como Watapana), culminando en una pregunta que expone su dependencia del viaje como acto de supervivencia.",
+      "total_respuestas": 1,
+      "avg_score": 7.9,
+      "neologismos_propuestos": 1,
+      "neologismos_adoptados": 0,
+      "quotes": [
+        {
+          "quote": "Tüshi-arima-bana: tüshi + arima + bana = lugar de frío profundo, donde falta la sal",
+          "traduccion": "Hay un lugar de frío profundo donde la sal desaparece",
+          "justificacion": "Neologismo composicional que revela tanto dominio técnico del caquetío como la inestabilidad metafórica del hablante ante la escasez; la glosa metalingüística interna muestra conciencia de estar traduciendo su propia angustia.",
+          "impacto_score": 8.7,
+          "day": 15,
+          "turn_num": 1
+        },
+        {
+          "quote": "Chacamba arima hoy-gua nüma?",
+          "traduccion": "¿Cómo está el viaje hoy?",
+          "justificacion": "Pregunta existencial disfrazada de pregunta mercantil; la brevedad y la elevación del tono interrogativo al final de su intervención expone la fragilidad de su posición: cada día depende del movimiento, cada viaje es renegociación de su lugar en el mundo.",
+          "impacto_score": 8.2,
+          "day": 15,
+          "turn_num": 1
+        },
+        {
+          "quote": "Taya ta-ara-ka pana minerales — urari ka apünüin bare cachicamo-ko jacura-ni sierra-bana",
+          "traduccion": "Yo conozco bien un mineral: el curare, y tres bienes buenos del armadillo que guardo en el borde serrano",
+          "justificacion": "Enumeración que mezcla categoría prestigiosa (curare, bien de poder) con lo cotidiano (armadillo); la especificidad geográfica ('sierra-bana') ancla su identidad en el territorio que teme perder.",
+          "impacto_score": 7.6,
+          "day": 15,
+          "turn_num": 1
+        },
+        {
+          "quote": "Kashi nüma tansura-bana-ni — ta-panaa wara chacamba arima wara-bana-da",
+          "traduccion": "Ahora estamos listos en la orilla y sé profundamente cómo está todo aquí",
+          "justificacion": "La redundancia de 'wara' (muy/bien/saber) en dos formas adyacentes delata el nerviosismo del negociador que sobre-enfatiza su seguridad; muestra cómo la lengua segunda expresa incertidumbre bajo apariencia de certeza.",
+          "impacto_score": 7.4,
+          "day": 15,
+          "turn_num": 1
+        },
+        {
+          "quote": "Nabaraka ta-barsure wara-ni",
+          "traduccion": "Mi barsure está muy presente",
+          "justificacion": "La palabra 'barsure' (posiblemente 'carga/responsabilidad comercial') refuerza la carga ontológica del personaje; el demostrativo 'wara-ni' subraya la materialidad ansiosamente presente de su oficio.",
+          "impacto_score": 7.2,
+          "day": 15,
+          "turn_num": 1
+        }
+      ]
+    },
+    {
+      "slug": "naure-sha",
+      "nombre": "Naure-sha",
+      "tier": 2,
+      "genero": "F",
+      "edad": 29,
+      "etnia": "caquetía",
+      "ubicacion_default": "conuco",
+      "descripcion": "Guardiana de las semillas de maíz: conserva en cestos separados las variedades — una para sequía, una para tierra húmeda, una de grano dulce — y decide cuál sembrar según cómo huela el aire en la siembra. Aprendió de su madre a no comerse jamás la semilla guardada por hambre que se tenga, regla que sostiene la cosecha del año siguiente. Desea ver a su cuñada Piri-sha dominar el oficio, y teme una racha de años malos que la obligue a quemar las naves comiéndose la última reserva de simiente.",
+      "rol_comunidad": "Guardiana de las semillas de maíz y transmisora de la disciplina agrícola sagrada.",
+      "resumen_arco": "Naure-sha transita de una euforia cotidiana (día 3, embriagada por la abundancia del presente) a una reflexión más profunda sobre la continuidad y el legado (día 15), manifestando una progresión lingüística que incorpora construcciones compuestas más densas y neologismos que revelan su ansiedad por garantizar la formación de Piri-sha. Su voz evoluciona de lo sensorial a lo transgeneracional, manteniendo siempre la tensión entre el goce inmediato y la austeridad que exige la custodia.",
+      "total_respuestas": 2,
+      "avg_score": 7.85,
+      "neologismos_propuestos": 3,
+      "neologismos_adoptados": 0,
+      "quotes": [
+        {
+          "quote": "Barsure-wana arima kaa-ka kali-bana-chaa.",
+          "traduccion": "El alma de la bebida permanece profunda en el espíritu fructificador.",
+          "justificacion": "Sintetiza la cosmología fermentativa de Naure-sha donde chicha y maíz no son separables; usa kali-bana-chaa (compuesto de kali = profundidad + bana = lugar + chaa = persistencia), neologismo que encapsula la obsesión del personaje por la reserva y la permanencia.",
+          "impacto_score": 9.3,
+          "day": 3,
+          "turn_num": 1
+        },
+        {
+          "quote": "Naure suna-ni, naure wana-da—apünüin turno-kana ka naka pana-ka masa-da.",
+          "traduccion": "La semilla sabe, la semilla conoce—tres turnos y después uno más, haremos juntos.",
+          "justificacion": "Expresión que personifica la semilla como entidad cognoscente y la ancla a un ritmo temporal que no es humano sino agrícola; revela la filosofía de Naure-sha sobre la vida como ciclo de espera disciplinada.",
+          "impacto_score": 9.1,
+          "day": 15,
+          "turn_num": 2
+        },
+        {
+          "quote": "Kashi adura-pana wa-kana jaguey-da wara suave-bana-ni.",
+          "traduccion": "El maíz que trabaja se pausa en la orilla del viento suave donde estamos.",
+          "justificacion": "Refleja la sinestesia caquetía de Naure-sha: percibe el maíz como ente activo (adura-pana = trabajador) y lo vincula a los estados atmosféricos que dictan la siembra, mostrando su capacidad adivinatoria mediante el olor del aire.",
+          "impacto_score": 8.7,
+          "day": 3,
+          "turn_num": 1
+        },
+        {
+          "quote": "Piri-sha ka waya masa-da naka turno-kana.",
+          "traduccion": "Piri-sha y nosotros haremos juntos en los turnos venideros.",
+          "justificacion": "Manifiesta explícitamente el deseo narrativo del personaje (que su cuñada domine el oficio) mediante una estructura verbal que incluye el futuro colectivo; marca el punto de máxima vulnerabilidad emocional.",
+          "impacto_score": 8.4,
+          "day": 15,
+          "turn_num": 2
+        },
+        {
+          "quote": "Naure-bana ta-raspa-wana ka ta-conuco-bana.",
+          "traduccion": "La guardiana retuerce y custodia el huerto con sus manos.",
+          "justificacion": "Condensa en una sola cláusula el gesto físico y la responsabilidad espiritual del personaje; ta-raspa-wana es un neologismo que fusiona el movimiento corporal (raspa = frotar/apretar) con la vigilancia, único en el corpus.",
+          "impacto_score": 8.2,
+          "day": 3,
+          "turn_num": 1
+        }
+      ]
+    },
+    {
+      "slug": "tariwa",
+      "nombre": "Tariwa",
+      "tier": 2,
+      "genero": "M",
+      "edad": 39,
+      "etnia": "guaycarí",
+      "ubicacion_default": "orilla",
+      "descripcion": "Líder de un grupo Guaycarí semi-residente que vive del trueque pescado-por-sal con la Curiana: pertenece y no pertenece, respetado pero nunca del todo de los suyos. Negocia duro con Biro-ko porque sabe que su gente depende de la sal caquetía para conservar el pescado, y odia esa dependencia. Desea condiciones que dejen a los Guaycarí menos a merced de Manaure, y teme el día en que una disputa de precios escale y los expulsen del Golfete que ya considera medio suyo.",
+      "rol_comunidad": "Intermediario del trueque Guaycarí-Curiana y negociador en tensión permanente entre la supervivencia de su pueblo y la dependencia de Manaure.",
+      "resumen_arco": "Tariwa transita de una posición de queja resignada (día 12: la sal ajena, el alma ausente) hacia una estrategia de negociación calculada (día 14: multiplicar la oferta de pescado para presionar el precio de la sal). Su lenguaje se densifica conforme gana claridad táctica, pasando de lamentos fragmentados a construcciones condicionales complejas que revelan su verdadera naturaleza: no un sumiso, sino un matemático del trueque que busca oxígeno político dentro de su propia marginalidad.",
+      "total_respuestas": 2,
+      "avg_score": 7.8,
+      "neologismos_propuestos": 0,
+      "neologismos_adoptados": 0,
+      "quotes": [
+        {
+          "quote": "Saa masa-ka peza, tamecani-sha-wana ta-owa-da ka biro-ko ta-bureche.",
+          "traduccion": "Si tomo más peces, el agua caliente de la medicina yo preparo y a Biro-ko lo satisfago.",
+          "justificacion": "Neologismo implícito (tamecani-sha-wana: 'agua-caliente-medicina') que fusiona la abundancia pesquera con un ritual de sanación, reintegrando el trueque al orden cosmológico y elevando el pescado de commodity a ofrenda ritual—el movimiento más sofisticado de Tariwa.",
+          "impacto_score": 9.3,
+          "day": 14,
+          "turn_num": 2
+        },
+        {
+          "quote": "Mara ta-naba kashi: peza-kana wara-ni, biro ta-puri-bana-ka naka.",
+          "traduccion": "Pero yo pienso ahora así: si hay muchos peces a la orilla, la sal será mía después, de derecho.",
+          "justificacion": "Giro estratégico: de la queja a la lógica mercantil. Tariwa invierte la estructura temporal del intercambio, subordinando la sal a la abundancia de pescado, invirtiendo el poder de negociación.",
+          "impacto_score": 8.9,
+          "day": 14,
+          "turn_num": 2
+        },
+        {
+          "quote": "Saa nüma ma-da biro-wara-bana—mara ta-canoa bureche ataka-bana-sha: ir-lejos-mujer, irme con mi gente.",
+          "traduccion": "Si él no da sal en abundancia, puedo hacer que mi gente se vaya a otro sitio.",
+          "justificacion": "La amenaza velada más potente: la movilidad Guaycarí como arma. Tariwa explicita que la residencia semi-sedentaria es opción, no destino, lo que redefine su poder de negociación.",
+          "impacto_score": 8.2,
+          "day": 12,
+          "turn_num": 1
+        },
+        {
+          "quote": "Wa-bureche takataka, mara naya Guaycarí sulu-bana-ni, naya ma-barsure. Biro-bana-ko ta-cudan puri-bana-chi.",
+          "traduccion": "Nosotros trabajamos sin cesar, pero esos Guaycarí están rotos por dentro, sin fuerzas. El hombre de la sal me debe el derecho de la orilla.",
+          "justificacion": "Culmina el movimiento del primer turno: Tariwa se desvincula emocionalmente de los Guaycarí ('esos') y reclama un derecho económico-ritual (puri-bana-chi) que lo coloca como sujeto, no objeto, del intercambio.",
+          "impacto_score": 7.8,
+          "day": 12,
+          "turn_num": 1
+        },
+        {
+          "quote": "Nüma Biro-ko ta-bureche ma-barsure.",
+          "traduccion": "Ese Biro-ko actúa sin verdadero propósito.",
+          "justificacion": "Frase fundacional que establece el resentimiento de Tariwa no como ira emocional sino como diagnóstico: Biro-ko es visto como un negociador hueco, lo que justifica la dureza posterior de sus términos.",
+          "impacto_score": 6.5,
+          "day": 12,
+          "turn_num": 1
+        }
+      ]
+    },
+    {
+      "slug": "wama-sha",
+      "nombre": "Wama-sha",
+      "tier": 2,
+      "genero": "F",
+      "edad": 39,
+      "etnia": "caquetía",
+      "ubicacion_default": "bohios",
+      "descripcion": "Cuidadora de los niños de toda la comunidad mientras las madres pescan, siembran o cocinan: a través de sus canciones, que repite sin cansarse, transmite los nombres de los animales, los ancestros y las reglas del mundo. Perdió a dos hijos propios siendo joven y vertió ese amor sin destino en los hijos de todos. Desea que ningún niño de la Curiana crezca sintiéndose solo, y teme el día en que ya no tenga voz para cantar ni regazo para acunar.",
+      "rol_comunidad": "Cantora y cuidadora de niños de la Curiana, transmisora de conocimiento ancestral y consuelo emocional.",
+      "resumen_arco": "Wama-sha evolucionó de la enseñanza ritual del maíz y la crianza cotidiana (día 3) hacia la angustia maternal ante la enfermedad de un hijo (día 3, turno 2), culminando en una visión colectiva de abundancia y fermentación comunitaria (día 15), demostrando cómo el cuidado de todos los niños no anula su vulnerabilidad personal. Lingüísticamente, su habla se densifica con neologismos compuestos que fusionan conceptos sensoriales, temporales y espirituales, oscilando entre lo cotidiano-pedagógico y lo visionario.",
+      "total_respuestas": 3,
+      "avg_score": 7.63,
+      "neologismos_propuestos": 3,
+      "neologismos_adoptados": 7,
+      "quotes": [
+        {
+          "quote": "Wara barsure ta-barsure-ni. Fiesta-bana kashi eroa-da, ka nüma buco-sulu gara-tüshi-arima masa-bana-ka kira-ni.",
+          "traduccion": "Mi esencia está muy viva. La fiesta pronto nacerá, y ella adentro profundo la chicha agria nosotras hacemos ya canta-estoy.",
+          "justificacion": "La culminación visionaria: ta-barsure-ni (mi-esencia-está) cierra el arco de vulnerabilidad con una afirmación de vitalidad colectiva; gara-tüshi-arima (chicha-agria-tiempo) proyecta abundancia, mientras kira-ni (canta-estoy) restaura su voz como instrumento de futuro.",
+          "impacto_score": 9.1,
+          "day": 15,
+          "turn_num": 2
+        },
+        {
+          "quote": "Ta-wana tamecani-dusha wara barsure-dusha-ni.",
+          "traduccion": "Mi pequeño tiene la fiebre-alta muy fuerte.",
+          "justificacion": "El neologismo tamecani-dusha (ardor-lejos/fiebre-elevada) rompe la máscara pedagógica y expone la fractura personal: a pesar de ser cuidadora de todos, no puede proteger a los suyos; la tensión morfológica refleja una angustia que contradict su rol público.",
+          "impacto_score": 8.7,
+          "day": 3,
+          "turn_num": 2
+        },
+        {
+          "quote": "Masa wana-ni, masa wana-ni—kashi múcura-sulu buco-bano, naka catarí-pana día-arima ferma-bana-ni.",
+          "traduccion": "Masticamos, masticamos—ahora en la vasija-profunda la masa reposa, después cuatro-uno días fermentará.",
+          "justificacion": "La repetición ritual masa wana-ni y los neologismos temporales (catarí-pana día-arima, cuatro-uno-días) revelan cómo Wama-sha ritualiza el tiempo colectivo; la fermentación es tanto técnica como metáfora de transformación comunitaria.",
+          "impacto_score": 8.4,
+          "day": 15,
+          "turn_num": 2
+        },
+        {
+          "quote": "Ta-wawa-sha ko-ni sulu, ka ta-naba-ni yuka-raspa-bana chacamba boca-pana-da.",
+          "traduccion": "Yo, mujer-que-canta, estoy adentro, y enseño cómo la orilla raspa la yuca, cómo medir el fluir.",
+          "justificacion": "Define su identidad fundadora como ta-wawa-sha (mujer-cantora), enlazando el acto de cantar con la transmisión de técnicas vitales; el compuesto boca-pana-da (fluir-ritmo-medida) encapsula su cosmología donde trabajo y temporalidad son indisociables.",
+          "impacto_score": 8.2,
+          "day": 3,
+          "turn_num": 1
+        },
+        {
+          "quote": "Taya ta-mani-sha guaitiao-kana bohio-sulu-ni, ta-rima-da tamecani-sha-wana.",
+          "traduccion": "Yo veo al aliado-espíritu en la cabaña, busco el agua-caliente-medicina que quema.",
+          "justificacion": "El compuesto tamecani-sha-wana (la-que-quema-agua, medicina-febril) demuestra cómo Wama-sha reterritorializa la enfermedad en categorías mágico-curativas; la sintaxis reflexiva (ta-mani-sha) marca su agencia desesperada.",
+          "impacto_score": 8.1,
+          "day": 3,
+          "turn_num": 2
+        }
+      ]
+    },
+    {
+      "slug": "raka-bi",
+      "nombre": "Raka-bi",
+      "tier": 2,
+      "genero": "M",
+      "edad": 31,
+      "etnia": "jirajara",
+      "ubicacion_default": "plaza",
+      "descripcion": "Sobrino y aprendiz de Nabaraka, viaja con él para heredar la ruta de la sierra: habla apenas un caquetío torpe, así que calla y observa, memorizando precios, rostros y costumbres con una inteligencia que su tío subestima. Sabe que el día en que Nabaraka no pueda viajar, la ruta dependerá de él. Desea ganarse el respeto que su lengua tartamuda hoy le niega, y teme que los caquetíos lo tomen por tonto por sus errores y le den siempre la peor parte del trato.",
+      "rol_comunidad": "Aprendiz comerciante y heredero de ruta serrana, condenado a observar en silencio mientras domina su lengua torpe.",
+      "resumen_arco": "Raka-bi se presenta como un aprendiz que compensa su tartamudez caquetía con una inteligencia comercial callada y meticulosa. Su intervención única revela a un joven que negocia con precisión (contabiliza sal, identifica mercancías, busca ventajas médicas) mientras lucha contra la subestimación que su lengua imperfecta le genera. El score lingüístico alto (7.4) contrasta con su autopercepción de inadecuación, mostrando que su verdadera fluidez está en actos, no en palabras.",
+      "total_respuestas": 1,
+      "avg_score": 7.4,
+      "neologismos_propuestos": 0,
+      "neologismos_adoptados": 0,
+      "quotes": [
+        {
+          "quote": "Wara atento-ni.",
+          "traduccion": "Estoy completamente atento.",
+          "justificacion": "Cierre minimalista que encapsula su estrategia vital: la lengua puede fallar, pero la observación es su verdadera arma. La frase desnuda revela el corazón del personaje — silencio como poder.",
+          "impacto_score": 8.9,
+          "day": 15,
+          "turn_num": 1
+        },
+        {
+          "quote": "Ta-raka kali-bana-chaa?",
+          "traduccion": "¿Cómo puedo yo emprender nuevas empresas?",
+          "justificacion": "Pregunta que expone su verdadera ambición bajo disfraz de consulta filial; el verbo 'kali-bana' (hacer-nuevas-cosas) revela que Raka-bi no es pasivo sino un constructor de futuros alternativos.",
+          "impacto_score": 8.2,
+          "day": 15,
+          "turn_num": 1
+        },
+        {
+          "quote": "Nüma-ko arima-ni wa-comercio-ana.",
+          "traduccion": "El comerciante está en nuestro lugar de intercambio.",
+          "justificacion": "Primer uso de 'wa-comercio-ana' (posible neologismo híbrido caquetío-español), muestra que el aprendiz innova lingüísticamente bajo presión, fusionando códigos cuando el caquetío le falla.",
+          "impacto_score": 7.5,
+          "day": 15,
+          "turn_num": 1
+        },
+        {
+          "quote": "Ta-biro ma-wara-ka.",
+          "traduccion": "Mi sal es insuficiente.",
+          "justificacion": "Diagnóstico económico conciso que revela cálculo mercantil; Raka-bi no describe, evalúa posiciones de intercambio con frialdad comercial enmascarada en tonalidad modesta.",
+          "impacto_score": 7.1,
+          "day": 15,
+          "turn_num": 1
+        },
+        {
+          "quote": "Cudanga, ta-barsure wara-ni.",
+          "traduccion": "Señor, mi atención está completamente dedicada.",
+          "justificacion": "Expresión de sumisión ceremonial que marca su posición subordinada, pero el neologismo 'ta-barsure' (literalmente 'alma-tendida') sugiere una inteligencia aguda tras la humildad performativa.",
+          "impacto_score": 6.8,
+          "day": 15,
+          "turn_num": 1
+        }
+      ]
+    },
+    {
+      "slug": "sha-corie",
+      "nombre": "Sha-corie",
+      "tier": 2,
+      "genero": "F",
+      "edad": 69,
+      "etnia": "caquetía",
+      "ubicacion_default": "bohios",
+      "descripcion": "Matriarca que guarda la tradición femenina: las reglas de la menstruación, el matrimonio, el luto y la herencia por línea materna pasan por su aprobación tácita. Amiga de toda la vida de Paugis-sha, juntas son la última palabra entre las mujeres de la Curiana. Desea que sus nietas hereden no solo los oficios sino el lugar de autoridad que las mujeres tienen en su pueblo, y teme una generación que confunda obedecer al cacique con olvidar que la sangre se cuenta por las madres.",
+      "rol_comunidad": "Matriarca guardiana de la tradición femenina y autoridad sobre los saberes de linaje matrilineal, herencia y ciclos vitales de la Curiana.",
+      "resumen_arco": "Sha-corie transita de una visión profética sobre la transmisión del conocimiento femenino (día 3) hacia una preocupación más concreta sobre si las jóvenes generaciones comprenderán el peso de la responsabilidad matriarcal (día 15). Su lenguaje evoluciona desde lo onírico y cósmico hacia lo corporal y doméstico, manteniendo siempre una densidad poética que ancla autoridad espiritual en actos materiales: el tostado de chicha, el tejido, la medicina del fuego. Su voz se distingue por la acumulación de epítetos iterativos (\"naba-kana, naba-kana\") y por construir autoridad no mediante imposición sino mediante la pedagogía de la visión compartida.",
+      "total_respuestas": 3,
+      "avg_score": 6.97,
+      "neologismos_propuestos": 1,
+      "neologismos_adoptados": 0,
+      "quotes": [
+        {
+          "quote": "Gudamuen-sha kana-kana tu-nii sunu-wana, mara tüshi-mene buca-sulu-ni.",
+          "traduccion": "Dos generaciones de manos ven para aprender, pero el agua fría que brota adentro está.",
+          "justificacion": "Síntesis del conflicto de Sha-corie: el \"agua fría\" (duda, ruptura, olvido) irrumpe incluso en la transmisión material ('manos'). Neologismo \"buca-sulu\" (agua-brotada) sugiere algo que no puede contenerse, que emerge sin control.",
+          "impacto_score": 9.1,
+          "day": 15,
+          "turn_num": 2
+        },
+        {
+          "quote": "Taya jai-ni múcura-bana ana-bana.",
+          "traduccion": "Yo escucho en la orilla del barro el lugar donde se diseña.",
+          "justificacion": "Cierre que ancla su autoridad epistémica en lo tangible (barro, orilla) y lo generativo (diseño/patrón). \"Múcura-bana\" evoca recipientes femeninos; posiciona escucha matriarcal como acto de fabricación, no solo preservación.",
+          "impacto_score": 8.7,
+          "day": 15,
+          "turn_num": 2
+        },
+        {
+          "quote": "Kuru-bana-ko Naure-sha puna-ka: \"Boca-pana, boca-pana—\" arima wara panaa-ni nüma-kana.",
+          "traduccion": "El hombre-del-árbol Naure ya supo: 'la medida, la medida' —así entienden todas nosotras.",
+          "justificacion": "Frase fundacional que revela cómo Sha-corie establece un acuerdo tácito entre géneros: los hombres aprenden el ritmo (medida) que las mujeres ya poseen intrínsecamente, legitimando autoridad femenina sin confrontación.",
+          "impacto_score": 8.5,
+          "day": 3,
+          "turn_num": 1
+        },
+        {
+          "quote": "Naba-kana, naba-kana, naba-kana. Ma-barsure-dusha, ma-barsure-dusha.",
+          "traduccion": "Los nombres, los nombres, los nombres. Sin-alma-que-se-aleja, sin-alma-que-se-aleja.",
+          "justificacion": "Triple repetición con degradación semántica: de \"nombres\" (identidad social) a \"alma-que-se-aleja\" (pérdida de continuidad). Revela ansiedad sobre transmisión transgeneracional mediante la sintaxis fragmentada caquetía.",
+          "impacto_score": 8.2,
+          "day": 9,
+          "turn_num": 2
+        },
+        {
+          "quote": "Taya kashi wara-ni ta-barsure.",
+          "traduccion": "Mi alma está viendo profundo ahora.",
+          "justificacion": "Declaración de autoridad chamánica que abre toda su intervención. El verbo \"wara-ni\" (estar viendo) vincula percepción espiritual con presente inmediato, posicionando el habla de Sha-corie como acto profético, no retrospectivo.",
+          "impacto_score": 7.8,
+          "day": 3,
+          "turn_num": 1
+        }
+      ]
+    },
+    {
+      "slug": "bana-mana",
+      "nombre": "Bana-mana",
+      "tier": 2,
+      "genero": "M",
+      "edad": 71,
+      "etnia": "caquetío",
+      "ubicacion_default": "bohios",
+      "descripcion": "Archivo vivo de la Curiana: en su cabeza guarda las genealogías, las migraciones, las guerras viejas y los pactos que nadie más recuerda. Las piernas ya no lo llevan, pero su voz aún convoca a los niños al anochecer. Sabe que cuando él muera morirá con él medio siglo de historia no escrita en ningún lado, y por eso su mayor deseo es encontrar a un joven con buena memoria a quien verter sus relatos; teme que ese heredero nunca aparezca y que la comunidad olvide de dónde viene.",
+      "rol_comunidad": "Guardián vivo de la memoria genealógica y migratoria de la Curiana, anciano custodio de historias orales cuya muerte amenaza el olvido colectivo.",
+      "resumen_arco": "Bana-mana se manifiesta en una intervención de densidad media-alta (score 6) donde despliega su angustia existencial a través de una sintaxis fragmentada que alterna entre nombramientos genealógicos y expresiones somáticas de la memoria; su lenguaje mezcla topónimos reconstruidos (Tachira-ko, Samare-sha, Wanakare-kana) con metáforas viscerales (hígado, alma, memoria encarnada) que revelan la urgencia de transmitir antes de desaparecer.",
+      "total_respuestas": 1,
+      "avg_score": 6,
+      "neologismos_propuestos": 0,
+      "neologismos_adoptados": 0,
+      "quotes": [
+        {
+          "quote": "Ta-boco nudoso raka-ni kali-bana-sulu, ta-bana wara-ni tamecani-dusha",
+          "traduccion": "Mi hígado nudoso quiere estar profundo-adentro-lugar, mi alma ahora pero no puedo mirarla.",
+          "justificacion": "Materialización poética del conflicto interno mediante órganos: el hígado (sede de la voluntad y memoria en cosmovisiones amazónicas) se vuelve nudoso (cargado, viejo), y el alma se torna inalcanzable, expresando la fragmentación del sujeto anciano.",
+          "impacto_score": 9.2,
+          "day": 9,
+          "turn_num": 2
+        },
+        {
+          "quote": "Kashi ta-memoria wana-ka pana-ko ka jarai-sha ka pana-pana-kana ma-ana-bana-ko.",
+          "traduccion": "Mi memoria es ahora uno-hombre también cinco-mujeres también dos-pequeños-sin-nombre-vista.",
+          "justificacion": "Enumeración genealógica que objetiva la memoria como conjunto de personas recordadas; el neologismo implícito 'sin-nombre-vista' marca la obsesión por lo olvidado y por lo que se pierde con cada muerte.",
+          "impacto_score": 9,
+          "day": 9,
+          "turn_num": 2
+        },
+        {
+          "quote": "Naka waya-kana tansura-bana-ni — nii-panaa-sha raka-da ta-barsure-bana-ko, kashi saa waya-dusha-bana naka-da.",
+          "traduccion": "Después nosotros-muchos — yo-ahora nombres-que-ve lugar-dentro-guardados, pero sólo nosotros-muchos se-olvida lugar-dentro.",
+          "justificacion": "Pausa sintáctica (raya) que marca la quiebre temporal entre presente y futuro; el paralelismo 'nosotros-muchos' atrapa la paradoja del guardián: ser muchos en la memoria pero desaparecer en soledad.",
+          "impacto_score": 8.8,
+          "day": 9,
+          "turn_num": 2
+        },
+        {
+          "quote": "Ta-sima-wana-da ma-kali-bana-gua, kashi kali-dusha para-budare-ana",
+          "traduccion": "Mi ofrenda quiero hacer casabe-lugar, mi después beber-sal estamos profundo-adentro.",
+          "justificacion": "Ritual y sacrificio encarnados en acto: el casabe (alimento primordial amazónico) y la sal evocan la última ofrenda del anciano; 'profundo-adentro' reitera la obsesión espacial con lo enterrado, lo guardado, lo que permanece.",
+          "impacto_score": 8.7,
+          "day": 9,
+          "turn_num": 2
+        },
+        {
+          "quote": "Taya wana-ka arima-barsure nii-panaa-sha kashi.",
+          "traduccion": "Yo soy ahora los nombres que ella ve.",
+          "justificacion": "Frase axial que condensa la identidad del personaje como archivo viviente: el yo se disuelve en la función mnemónica, sugiriendo que su ser es inseparable de su rol comunitario de portador de nombres.",
+          "impacto_score": 8.5,
+          "day": 9,
+          "turn_num": 2
+        }
+      ]
+    }
+  ]
+}

@@ -471,14 +471,23 @@ Tu tarea:
 2. Define su rol en la comunidad en una frase corta (ej. "Señor de la Curiana y piache").
 3. Elige hasta 5 frases célebres (las más originales, reveladoras del personaje,
    con mayor densidad caquetía, o que introdujeron/adoptaron un neologismo).
-   Para cada una da una justificación breve (1 frase) y un impacto_score (0-10).
+   Para cada una da:
+   - "quote": SOLO el texto en caquetío-arahuaco. Si la intervención original
+     mezclaba una glosa en español entre paréntesis al final, NO la incluyas
+     aquí — quote debe quedar puro caquetío.
+   - "traduccion": traducción al español natural y legible de esa frase (no
+     una glosa palabra-por-palabra ni notación morfológica con guiones; una
+     oración que alguien pueda leer de corrido).
+   - "justificacion": 1 frase explicando por qué la elegiste (no es lo mismo
+     que la traducción — esto es análisis, no significado literal).
+   - "impacto_score": 0-10.
 
 Responde SOLO con JSON válido, sin texto adicional, con esta forma exacta:
 {{
   "rol_comunidad": "...",
   "resumen_arco": "...",
   "quotes": [
-    {{"dia": <int o null>, "turno": <int o null>, "quote": "...", "justificacion": "...", "impacto_score": <float 0-10>}}
+    {{"dia": <int o null>, "turno": <int o null>, "quote": "...", "traduccion": "...", "justificacion": "...", "impacto_score": <float 0-10>}}
   ]
 }}
 """
@@ -559,6 +568,7 @@ Responde SOLO con JSON válido, sin texto adicional, con esta forma exacta:
                     quote=q.get("quote", ""),
                     justificacion=q.get("justificacion", ""),
                     impacto_score=q.get("impacto_score", 0),
+                    translation=q.get("traduccion", ""),
                     response_id=q.get("response_id"),
                     day=q.get("dia"),
                     turn_num=q.get("turno"),

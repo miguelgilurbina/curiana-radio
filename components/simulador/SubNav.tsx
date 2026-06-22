@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 const TABS = [
   { href: "/simulador", label: "Resumen" },
+  { href: "/simulador/personajes", label: "Personajes" },
   { href: "/simulador/lexicon", label: "Léxico" },
   { href: "/simulador/neologisms", label: "Neologismos" },
 ];
@@ -14,7 +15,7 @@ export default function SubNav() {
   return (
     <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 border-b border-earth-200/70">
       {TABS.map((t) => {
-        const active = pathname === t.href;
+        const active = t.href === "/simulador" ? pathname === t.href : pathname?.startsWith(t.href);
         return (
           <Link
             key={t.href}
