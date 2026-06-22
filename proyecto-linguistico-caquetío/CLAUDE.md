@@ -6,22 +6,35 @@ Proyecto de investigación + experimento computacional: una simulación multi-ag
 
 ```
 curiana_sim/        → Python 3.11+ (simulación)
-  curiana_lexicon.py      → vocabulario de 146 palabras + reglas morfológicas + prompts
+  curiana_lexicon.py      → vocabulario de 1703 palabras + reglas morfológicas + prompts
+                            (muestra_caquetio_dinamica() prioriza caquetío por chunking contextual)
   curiana_agents.py       → 60 agentes históricos en 3 tiers (caciques, adultos, jóvenes)
   curiana_orchestrator_v2.py → orquestador principal (Claude Haiku por agente)
   curiana_observer.py     → análisis lingüístico + scoring 0-10 + detección de neologismos
+                            + curación de perfiles de fin de run (analizar_agente_curado(),
+                            generar_perfiles_curados() → agent_profiles/agent_quotes)
+  curiana_social.py       → contagio léxico entre agentes (DifusionLexica: prestigio +
+                            grafo social + exposición acumulada) + variación dialectal por etnia
   curiana_state.py        → estado del mundo (día, estación, eventos, locaciones)
   curiana_database.py     → Supabase client + LangSmith wrapper + language_composition()
-  supabase_schema.sql     → schema completo PostgreSQL (7 tablas + vistas + RLS)
+                            + normalize_source_language() (9 categorías, ver abajo)
+  arahuaco_comparative.py → método comparativo (transducir, COGNADOS, reconstruir_caquetio)
+  supabase/migrations/    → schema versionado (init + fixes; supabase_schema.sql es referencia)
 
 curiana_dashboard/  → Next.js 14 + Tailwind + Recharts + Supabase JS
   app/page.tsx            → dashboard en tiempo real (Supabase real-time subscriptions)
-  app/lexicon/page.tsx    → explorador del léxico (146 palabras con filtros)
+  app/lexicon/page.tsx    → explorador del léxico (1703 palabras, 9 categorías, paginado)
   app/neologisms/page.tsx → palabras inventadas por los agentes (propuesto/adoptado/rechazado)
   components/LanguageDriftChart.tsx → area chart de composición lingüística por turno
   components/AgentFeed.tsx          → feed en vivo de respuestas de agentes
-  lib/supabase.ts         → cliente Supabase + tipos TypeScript
+  lib/supabase.ts         → cliente Supabase + tipos TypeScript + LANG_COLORS (9 categorías)
 ```
+
+> ⚠️ **Queries a la tabla `lexicon`:** PostgREST limita cada respuesta a
+> `max_rows` (1000, ver `supabase/config.toml`). Con 1703 palabras, cualquier
+> query nueva sobre `lexicon` sin `.range()` se trunca silenciosamente.
+> Pagina con `.range(desde, desde+999)` hasta que la página devuelta tenga
+> menos de 1000 filas (ver `loadLexicon()` en `app/page.tsx` o `app/lexicon/page.tsx`).
 
 ## Modelo LLM
 
@@ -29,19 +42,35 @@ curiana_dashboard/  → Next.js 14 + Tailwind + Recharts + Supabase JS
 
 ## Variables de entorno
 
+> ⚠️ **Supabase: correr en LOCAL por defecto (Docker), no en cloud.** El
+> proyecto cloud llegó a 8.17 GB de egress (límite del plan Free: 5 GB) por
+> el dashboard público con `realtime` + el patrón de tráfico típico de
+> `*.vercel.app` (escaneo automático). El proyecto Vercel se borró por esa
+> razón. Hasta decidir un reemplazo (Vercel con Deployment Protection, VPS
+> propio, etc.), todo el trabajo de desarrollo/simulación corre contra
+> Supabase local:
+> ```bash
+> cd curiana_sim && supabase start   # levanta Docker; ver supabase/config.toml
+>                                     # (puertos 64321-64329, no los default
+>                                     # 54321-54329, para no chocar con otros
+>                                     # proyectos Supabase locales)
+> ```
+> `curiana_sim/.env` ya tiene ambos bloques (local activo, cloud comentado)
+> — para volver a cloud, intercambiar qué bloque está comentado.
+
 ```bash
 # curiana_sim/.env  (ver .env.example)
 ANTHROPIC_API_KEY=sk-ant-...       # obligatorio
-SUPABASE_URL=https://xxx.supabase.co  # opcional (sin esto corre en modo JSON local)
-SUPABASE_SERVICE_KEY=eyJ...           # service_role key (NO el anon key)
+SUPABASE_URL=http://127.0.0.1:64321   # local (supabase start). Sin esto, modo JSON local.
+SUPABASE_SERVICE_KEY=eyJ...           # service_role key local (ver `supabase status`)
 LANGSMITH_API_KEY=ls__...             # opcional
 LANGSMITH_PROJECT=curiana             # opcional
 ```
 
 ```bash
 # curiana_dashboard/.env.local  (ver .env.local.example)
-NEXT_PUBLIC_SUPABASE_URL=...
-NEXT_PUBLIC_SUPABASE_ANON_KEY=...
+NEXT_PUBLIC_SUPABASE_URL=http://127.0.0.1:64321
+NEXT_PUBLIC_SUPABASE_ANON_KEY=...     # anon key local (ver `supabase status`)
 ```
 
 > ⚠️ **Carga de `.env` en scripts Python:** cada entrypoint que se corra
@@ -59,34 +88,74 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=...
 cd curiana_sim
 pip install -r requirements.txt
 python test_quick.py          # verifica el stack sin API keys (debe dar 8/8 OK)
-python curiana_database.py seed  # siembra las 146 palabras en Supabase
+supabase start                 # levanta Supabase local (ver nota de egress arriba)
+python curiana_database.py seed  # siembra las 1703 palabras en Supabase
 
 # Correr simulación
 python curiana_orchestrator_v2.py                    # modo interactivo
 python curiana_orchestrator_v2.py --auto 10          # 10 turnos automáticos
 python curiana_orchestrator_v2.py --auto 240 --anio  # 1 año simulado
+python curiana_orchestrator_v2.py --auto 30 --perfiles --reporte
+  # --perfiles: genera perfiles curados por agente al cerrar el run
+  #             (rol, arco narrativo, frases célebres → agent_profiles/agent_quotes)
+  # --reporte:  reporte anual LLM al completar cada año simulado
 
 # Dashboard
 cd curiana_dashboard
 npm install
 npm run dev          # http://localhost:3000
-npx vercel           # deploy a Vercel
+npx vercel           # deploy a Vercel — ⚠️ ver nota de egress: activar
+                      # Deployment Protection antes de desplegar a producción
 ```
 
-## Bugs críticos a corregir (de la auditoría Opus — ver AUDITORIA_OPUS.md)
+## Metodología del lexicón y validación
 
-### BUG 1 — CRÍTICO: system_prompts dicen "Responde en español"
-En `curiana_agents.py`, casi todos los `system_prompt` de los agentes terminan con "Responde en español...". Esto anula el bloque `_IDENTIDAD_LINGUISTICA` del orquestador. **Es la causa raíz #1 de que los agentes hablen español.** Hay que remover esa instrucción de todos los prompts.
+El lexicón distingue 9 categorías de `fuente` (ver `normalize_source_language()`
+en `curiana_database.py`), porque "caquetío" mezclaba históricamente dato real
+con especulación sin marcar:
 
-### BUG 2: score_linguistico() mide mal
-La función actual hace substring match (encuentra "ka" dentro de "Tawaka") y nunca penaliza el español. Ver `AUDITORIA_OPUS.md` §2 para la versión mejorada con tokenización real y penalización.
+- **`caquetío-atestiguado`** (75) — dato histórico real, citable a crónicas
+  coloniales (Galeotto Cey, Oviedo, Las Casas) y trabajo académico (Zavala
+  Reyes 2015, Oliver 1989, Jahn 1927).
+- **`caquetío-reconstruido`** (82: 12 base + 2 topónimo + 68 núcleo
+  fundacional) — vocabulario de trabajo del proyecto: pronombres, numerales,
+  verbos básicos que `prompt_reglas_completo()`/`breve()` presentan a los
+  agentes desde el día 1. No siempre atestiguado, pero es la lengua de la
+  simulación, no un préstamo.
+- **`hipotético-no-verificado`** (441) — palabras generadas por
+  `reconstruir_caquetio_gaps.py` transduciendo fonológicamente CUALQUIER
+  palabra wayunaiki/lokono/taíno con la misma glosa, **sin verificar
+  cognación real** contra `COGNADOS` (el único set curado, 37 entradas). La
+  minería de pares objetivos (`minar_pares_validacion.py`) mostró ~80% de
+  fallos contra datos reales. No cuentan como caquetío para scoring ni se
+  muestran a los agentes — quedan en el lexicón para revisión futura, no
+  se descartaron.
+- **wayunaiki (781), lokono (228), taíno (57), proto-arahuaco (9), kalinago
+  (19), kalinago-caribe-overlay (4), jirajaroide-contacto (7)** — lenguas
+  hermanas/de contacto, tratadas como tan ajenas como el español para
+  scoring (ver siguiente sección).
 
-### BUG 3: Field names incorrectos en el orquestador
-En `curiana_orchestrator_v2.py::run_turn()`, los `getattr` para guardar en Supabase usan nombres de campo incorrectos:
-- `registro.palabras_caquetias` → verificar el nombre real en `curiana_observer.py`
-- `registro.aspectos_detectados` → verificar el nombre real
-- `neo.regla` → debería ser `neo.regla_aplicada` (o el nombre real en Neologismo)
-Esto hace que `aspects_used` y la regla morfológica siempre se guarden vacíos en Supabase.
+**Para fortalecer la Capa 2 (reconstrucción con base real):** minar más
+fuentes publicadas con `fuentes_caquetios/*.pdf` (ya minado: Brinton 1871,
+que dio 4 pares LK-TN reales y corrigió un bug en `REGLAS_LK_TN`; *no* dio
+resultado: Perea Alonso 1942, que es gramática Lokono pura, no comparativa
+entre lenguas arahuacas). `arahuaco_comparative.py::validar()` corre la
+suite de validación (18 pares al momento de escribir esto).
+
+## Scoring lingüístico (`score_linguistico()` en `curiana_lexicon.py`)
+
+El objetivo del proyecto es que el caquetío **domine**, no solo que se evite
+el español. `score_linguistico()` penaliza dos fugas distintas:
+1. Español funcional (`el/la/de/que/...`) — penalización fuerte (hasta −3).
+2. Otra lengua arahuaca viva (wayunaiki/lokono/taíno) en vez de su forma
+   caquetía — penalización moderada (hasta −2.5), vía `_familia_de_token()`.
+
+El rescate intra-turno (`curiana_orchestrator_v2.py::call_agent()`) dispara
+reintento tanto por score bajo como por fuga a otra lengua arahuaca
+(`otro_arahuaco >= 3` y `pct_caquetio_especifico < 0.3`).
+
+Verificado en runs reales contra Supabase local: caquetío pasó de ~27% a
+~91-93% del output tras estos cambios + retaguear el núcleo fundacional.
 
 ## Morfología caquetío-arahuaca
 
@@ -105,23 +174,35 @@ Neologismos: agentes proponen [forma: componentes = significado]
 simulation_runs → turns → agent_responses → word_uses
                                           → neologisms
                        → phrase_etymologies
+                       → agent_profiles → agent_quotes   (perfiles curados, --perfiles)
 lexicon  (seed desde VOCABULARIO_BASE)
 ```
 
-Real-time en Supabase: `agent_responses`, `turns`, `neologisms` publicados en `supabase_realtime`.
+Real-time en Supabase: `agent_responses`, `turns`, `neologisms`, `agent_profiles`,
+`agent_quotes` publicados en `supabase_realtime`.
 
 ## Próximos pasos del proyecto
 
-1. Corregir los 3 bugs arriba antes de cualquier otra cosa
-2. Leer `AUDITORIA_OPUS.md` — tiene código Python listo para los fixes
-3. Implementar `curiana_social.py` — contagio lingüístico entre agentes (ver §5 de la auditoría)
-4. Deploy Vercel del dashboard
-5. Correr una simulación de 240 turnos (1 año) y analizar la deriva lingüística
+1. Analizar los datos de la simulación larga ya corrida (ver
+   `agent_profiles`/`agent_quotes` y `language_drift_by_turn` en Supabase
+   local) — este era el objetivo original: simular, documentar, analizar.
+2. Decidir qué mostrar públicamente (la página debe mostrar el proyecto en
+   sí, curado — no necesariamente todos los datos crudos).
+3. Decidir el reemplazo del proyecto Supabase cloud borrado (ver nota de
+   egress arriba) antes de cualquier deploy público del dashboard.
+4. Seguir fortaleciendo la Capa 2 minando más fuentes publicadas (ver
+   sección de metodología arriba) si se quiere reconstruir más caquetío
+   con base real, en vez de dejar las 441 `hipotético-no-verificado` sin usar.
 
-## Archivos de referencia generados esta sesión
+## Archivos de referencia
 
-- `AUDITORIA_OPUS.md` — auditoría técnica completa (687 líneas, código incluido)
-- `CULTURA_CAQUETIA.md` — enciclopedia etnográfica precolonial (cosmología, economía, ritual)
-- `test_quick.py` — test suite sin API keys (8/8 tests)
-- `requirements.txt` — dependencias pinneadas
-- `.env.example` — template de variables de entorno
+- `IDEA_PERFILES_AGENTES.md` — diseño de la sección de perfiles de agentes
+  (rol, arco narrativo, frases célebres) y su implementación.
+- `test_quick.py` — test suite sin API keys (debe dar 8/8 OK).
+- `requirements.txt` — dependencias pinneadas.
+- `.env.example` / `.env.local.example` — templates de variables de entorno.
+- `curiana_sim/minar_pares_validacion.py` — mina el propio corpus para
+  pares de validación objetivos (caquetío atestiguado + cognado hermano).
+- `curiana_sim/retag_nucleo_fundacional.py` /
+  `retag_reconstruccion_no_verificada.py` — scripts de corrección de
+  etiquetado del lexicón (documentan por qué quedó como quedó).
