@@ -7052,8 +7052,12 @@ class LexicoComunitario:
                 "dia": neo.dia,
             }
 
-    def adoptar(self, forma: str, agente: str, turno: int):
-        """Un agente adopta una palabra propuesta."""
+    def adoptar(self, forma: str, agente: str, turno: int) -> Optional["Neologismo"]:
+        """
+        Un agente adopta una palabra propuesta. Retorna el Neologismo si la
+        adopción se OFICIALIZA recién en esta llamada (2do adoptante distinto),
+        o None si no hubo transición (para que el caller sepa cuándo sincronizar
+        el estado con Supabase sin tener que diffear él mismo)."""
         for neo in self._neologismos:
             if neo.forma == forma and neo.estado == "propuesto":
                 if agente not in neo.adoptado_por:
@@ -7067,7 +7071,9 @@ class LexicoComunitario:
                         "autor": neo.autor,
                         "dia": neo.dia,
                     }
+                    return neo
                 break
+        return None
 
     def rechazar(self, forma: str, agente: str, turno: int):
         """Un agente rechaza o ignora activamente una palabra propuesta."""
