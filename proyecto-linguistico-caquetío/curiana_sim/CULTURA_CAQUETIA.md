@@ -53,6 +53,29 @@ permiso antes de botar la canoa (ver al agente Bagre-ko) y la recolectora respet
 es superstición decorativa: es una **ética de relación** con un mundo que no se considera materia
 inerte sino una red de seres con voluntad.
 
+### Fuerzas en tensión: sequía-viento y lluvia-fecundidad
+**[reconstruido, por analogía wayuu — la lengua hermana más documentada y más pesada en el lexicón]**
+Los wayuu de la Guajira, vecinos lingüísticos más cercanos, conciben esta misma polaridad
+seca/lluvia como dos fuerzas con nombre y voluntad propia, no solo clima: **Pulowi**, fuerza
+femenina de la sequía y el viento, ligada a lugares concretos de la península (tiene
+residencias); y **Juyá** ("Lluvia"), amo de las aguas del cielo, fecundidad, el que hace
+germinar la semilla. No son buena/mala — son dos fuerzas que se alternan y a veces conviven,
+igual que el Tiempo de Viento y el Tiempo de Siembra de la Curiana (§2). Junto a ellas, los
+**Wanülüü** — espíritus maléficos de apariencia humana que hieren de noche — sirven de fuente de
+desgracia inexplicada (mala pesca, enfermedad) sin necesidad de un villano literal.
+
+Los wayuu sitúan además el sueño en un reino propio, **Lapü**: el alma (*aa'in*) lo recorre
+mientras el cuerpo duerme, y lo soñado pesa tanto como lo vivido. El piache wayuu —mayormente
+mujer— media con los espíritus *a través del sueño*: cura, atrae lluvia, prevé el futuro. Esto no
+es una capa nueva sobre Shaboro y Buio-sha — es la misma lógica que ya tienen ("lee sueños",
+"sueños proféticos") con nombre y marco propios.
+
+**Importante:** estos nombres (Pulowi, Juyá, Wanülüü, Lapü) son wayuu, no caquetíos — se citan
+como la fuente de la analogía, no se les inventa una forma caquetía aquí. Si la simulación
+funciona como debería, es un piache, en algún turno, quien acuña
+`[forma: componentes = significado]` para el concepto — esa acuñación es el dato interesante,
+no algo que el canon deba entregar ya resuelto.
+
 ### Los ancestros
 Los muertos no se van del todo. **[reconstruido, con base en patrón arahuaco y caribe]** Se guardan los
 huesos de los mayores y se les ofrenda comida y bebida; recordar sus nombres es mantenerlos presentes.
@@ -269,6 +292,9 @@ genealogía y derecho oral, y una lengua que la propia comunidad sigue ampliando
 - Zavala Reyes (2015) — recopilación léxica caquetía empleada en la simulación.
 - Comparanda arahuacos vivos: wayuunaiki (Guajira), lokono (Guayanas), taíno (Antillas), garífuna —
   base de las reconstrucciones marcadas **[reconstruido]**.
+- Mitología wayuu (Pulowi, Juyá, Wanülüü, Lapü): "Mitología Wayúu: Religión Wayúu" (lisbet52.blogspot.com);
+  "Pulowi, deidad mítica femenina de los Wayúu" (ADEPAC); "Mitología Wayúu (6): Pulowi, la muerte, la
+  sequía y la oscuridad" (albazero.wordpress.com).
 
 *Marcas: **[reconstruido]** = inferencia razonada desde fuentes y pueblos hermanos; **[hipótesis]** =
 especulación plausible no atestiguada. Todo lo demás cuenta con apoyo documental o es nota de diseño.*
