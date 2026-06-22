@@ -144,11 +144,25 @@ export default function DashboardPage() {
   }, []);
 
   // ── Lexicon completo (para resaltar palabras por lengua en el feed) ─
+  // PostgREST limita cada respuesta a max_rows (1000, ver supabase/config.toml);
+  // el lexicón ya supera eso, así que paginamos hasta agotar los resultados.
   const loadLexicon = useCallback(async () => {
-    const { data } = await supabase.from("lexicon").select("word, meaning, source_language");
-    setLexiconEntries(
-      (data as Pick<LexiconEntry, "word" | "meaning" | "source_language">[]) ?? []
-    );
+    type LexiconLite = Pick<LexiconEntry, "word" | "meaning" | "source_language">;
+    const todas: LexiconLite[] = [];
+    const PAGE = 1000;
+    let desde = 0;
+    while (true) {
+      const { data } = await supabase
+        .from("lexicon")
+        .select("word, meaning, source_language")
+        .order("word")
+        .range(desde, desde + PAGE - 1);
+      const pagina = (data as LexiconLite[]) ?? [];
+      todas.push(...pagina);
+      if (pagina.length < PAGE) break;
+      desde += PAGE;
+    }
+    setLexiconEntries(todas);
   }, []);
 
   const lexiconMap = useMemo(() => {
