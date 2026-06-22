@@ -57,11 +57,12 @@ except ImportError:
 # Mapeo de los valores de "fuente" en VOCABULARIO_BASE a 5 categorías canónicas.
 # Estas mismas categorías se usan en las columnas pct_* de agent_responses.
 LANG_CATEGORIES = ("caquetío", "wayunaiki", "lokono", "taíno", "proto-arahuaco",
-                    "kalinago", "kalinago-caribe-overlay", "jirajaroide-contacto")
+                    "kalinago", "kalinago-caribe-overlay", "jirajaroide-contacto",
+                    "hipotético-no-verificado")
 
 def normalize_source_language(fuente: str) -> str:
     """
-    Convierte el campo 'fuente' del lexicón a una de las 8 categorías canónicas.
+    Convierte el campo 'fuente' del lexicón a una de las 9 categorías canónicas.
 
     caquetío / caquetío-atestiguado / caquetío/topónimo → "caquetío"
     wayunaiki / wayunaiki-cogn                          → "wayunaiki"
@@ -71,8 +72,13 @@ def normalize_source_language(fuente: str) -> str:
     kalinago-caribe-overlay                             → "kalinago-caribe-overlay"
     kalinago                                            → "kalinago"
     jirajaroide-contacto                                → "jirajaroide-contacto"
+    hipotético-no-verificado                            → "hipotético-no-verificado"
+        (transducción fonológica sin verificar cognación real contra COGNADOS;
+         ver minar_pares_validacion.py — no cuenta como caquetío para scoring)
     """
     f = fuente.lower()
+    if "no-verificado" in f or "no verificado" in f:
+        return "hipotético-no-verificado"
     if "caquetio" in f or "caquetío" in f:
         return "caquetío"
     if "wayunaiki" in f or "wayuu" in f:
