@@ -1,0 +1,667 @@
+{
+  "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+  "neologismos": [
+    {
+      "id": "05cb92e4-338d-4e32-933c-d542dfe2e084",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "adura-pana",
+      "components": "adura+-pana",
+      "meaning": "ritmo-trabajo, compás-de-vida",
+      "morphological_rule": "-ana",
+      "proposed_by": "Wama-sha",
+      "proposed_turn_id": "c26e16c6-2add-4276-bb0c-18d1e212c4d3",
+      "proposed_day": 3,
+      "status": "propuesto",
+      "adopted_by": null,
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:13:19.980181+00:00",
+      "destacado": {
+        "quote": "Ta-barsure panaa-ka: amana kuru-bana chaa-da sulu. Pia-kana tansura-bana kaa-da. Naba-ni ta-nii wara: sima-ko nii-bana wana-ka adura-pana mara—kali cegada-pana kaa-ni wanara.",
+        "traduccion": "Mi alma sabe: que venida el fuego del tostador será aquí. Todos listos están ya. Pienso en mis ojos: la orilla de la luna-tierra fija la visión pero el sol deslumbrante está lejano.",
+        "impacto_score": 9,
+        "agente": "Manaure",
+        "agente_slug": "manaure"
+      }
+    },
+    {
+      "id": "a109d9ac-176c-4cbe-90e0-987afb1f6ff1",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "palo-bani",
+      "components": "palo+bani",
+      "meaning": "astilla-nuevo",
+      "morphological_rule": "-ni",
+      "proposed_by": "Dare-nu",
+      "proposed_turn_id": "b6023e3d-6052-42db-9b80-b6602eaf13f4",
+      "proposed_day": 4,
+      "status": "propuesto",
+      "adopted_by": null,
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:14:49.477893+00:00",
+      "destacado": null
+    },
+    {
+      "id": "68d5c0be-9dbd-4a22-aa02-240a151704f1",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "madera-bana",
+      "components": "madera+bana",
+      "meaning": "orilla de los árboles",
+      "morphological_rule": "-bana",
+      "proposed_by": "Dare-nu",
+      "proposed_turn_id": "4800c9b2-aa9f-4846-9470-0065af5a3bed",
+      "proposed_day": 9,
+      "status": "propuesto",
+      "adopted_by": null,
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:22:02.741988+00:00",
+      "destacado": null
+    },
+    {
+      "id": "19d9fa56-589a-4797-b258-62e2ad98cd01",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "pez-bueno",
+      "components": "arima-kaa",
+      "meaning": "pez verdadero",
+      "morphological_rule": "desconocida",
+      "proposed_by": "Dare-nu",
+      "proposed_turn_id": "4800c9b2-aa9f-4846-9470-0065af5a3bed",
+      "proposed_day": 9,
+      "status": "propuesto",
+      "adopted_by": null,
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:22:02.745647+00:00",
+      "destacado": null
+    },
+    {
+      "id": "3e98d3fe-6d2d-4262-be52-a5cef4394a87",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "suusu-dusha",
+      "components": "suusu+-dusha",
+      "meaning": "voz-lejos",
+      "morphological_rule": "-sha",
+      "proposed_by": "Sha-corie",
+      "proposed_turn_id": "de4261c3-b927-4321-a586-e6126070ab23",
+      "proposed_day": 9,
+      "status": "propuesto",
+      "adopted_by": null,
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:22:41.662045+00:00",
+      "destacado": null
+    },
+    {
+      "id": "b71c89fd-99a6-464a-99be-eb7a6e258829",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "kuru-bana-ko",
+      "components": "kuru + bana + ko",
+      "meaning": "del hombre del árbol, de la planta",
+      "morphological_rule": "-ko",
+      "proposed_by": "Naure-sha",
+      "proposed_turn_id": "810b0852-35c3-477b-af02-87c01a583a0a",
+      "proposed_day": 3,
+      "status": "adoptado",
+      "adopted_by": [
+        "Sha-corie",
+        "Buio-sha"
+      ],
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:12:27.285321+00:00",
+      "destacado": {
+        "quote": "Ta-nii wara wana-ni Buio-sha, naa-ni sulu kuru-bana-ko. Saa pia naa-da kashi-bana, raka-da taya kira-da ta-pütchi. Saa pia naa-da kashi-bana, raka-da taya kira-da ta-pütchi.",
+        "traduccion": "Mis ojos mucho ven a Buio-sha; va adentro del bosque, donde están los del árbol. Si tú vas ahora a este lugar, quiero yo escuchar mi voz —hablar contigo.",
+        "impacto_score": 9.2,
+        "agente": "Tawaka",
+        "agente_slug": "tawaka"
+      }
+    },
+    {
+      "id": "5de602b3-7e7c-435d-b438-53b642d8e371",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "boca-pana",
+      "components": "boca + pana",
+      "meaning": "boca-uno = el fluir, la medida",
+      "morphological_rule": "-ana",
+      "proposed_by": "Naure-sha",
+      "proposed_turn_id": "810b0852-35c3-477b-af02-87c01a583a0a",
+      "proposed_day": 3,
+      "status": "adoptado",
+      "adopted_by": [
+        "Wama-sha",
+        "Sha-corie"
+      ],
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:12:27.289276+00:00",
+      "destacado": {
+        "quote": "Kuru-bana-ko Naure-sha puna-ka: \"Boca-pana, boca-pana—\" arima wara panaa-ni nüma-kana.",
+        "traduccion": "El hombre-del-árbol Naure ya supo: 'la medida, la medida' —así entienden todas nosotras.",
+        "impacto_score": 8.5,
+        "agente": "Sha-corie",
+        "agente_slug": "sha-corie"
+      }
+    },
+    {
+      "id": "db915aa8-48c9-47ec-80d1-9c3bd518ea5e",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "tamecani-sha-wana",
+      "components": "tamecani+-sha+-wana",
+      "meaning": "la-que-quema-agua, agua-caliente-medicina",
+      "morphological_rule": "-ana",
+      "proposed_by": "Wama-sha",
+      "proposed_turn_id": "c26e16c6-2add-4276-bb0c-18d1e212c4d3",
+      "proposed_day": 3,
+      "status": "adoptado",
+      "adopted_by": [
+        "Dare-nu",
+        "Manaure"
+      ],
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:13:19.977124+00:00",
+      "destacado": {
+        "quote": "Shaboro naba-ni ta-barsure — ta-barsure nabi-ni: 'Buio-sha, kaya wara-da naa-ni. Duna-duna kali-bana tamecani-sha-wana kaa-da.'",
+        "traduccion": "Shaboro dice sobre mi alma — mi alma me dice: 'Buio-sha, tu fuerza-serpiente está. El agua-agua del brillo-sol-que-consume está cerca ahora.'",
+        "impacto_score": 9.5,
+        "agente": "Buio-sha",
+        "agente_slug": "buio-sha"
+      }
+    },
+    {
+      "id": "8a6ca693-f504-4456-ae1b-2654729ec0f7",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "tension-bana-chi",
+      "components": "tension+bana+chi",
+      "meaning": "calma-pequeña-estado",
+      "morphological_rule": "desconocida",
+      "proposed_by": "Tawaka",
+      "proposed_turn_id": "ec6c3945-4753-40e4-ba31-3bdfb0d7c977",
+      "proposed_day": 7,
+      "status": "adoptado",
+      "adopted_by": [
+        "Shaboro",
+        "Corie-ko"
+      ],
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:18:15.068181+00:00",
+      "destacado": {
+        "quote": "Waya kaa-da tension-bana-chi, mara naka—saa pia kaa-ni ma-panaa, ta-barsure kaa-ni barchasure-wana. Buio-sha nii-wana-da sima-bana-ka—nüma panaa-da chacamba, mara taya ma-kaa-da barsure-sulu.",
+        "traduccion": "Hay pequeña calma, pero después—si tú sabes, mi alma está en dolor-mirando. Ella Buio-sha viendo hacia el cerro—ella sabe cómo, pero yo no puedo estar en ese alma.",
+        "impacto_score": 9.4,
+        "agente": "Tawaka",
+        "agente_slug": "tawaka"
+      }
+    },
+    {
+      "id": "6b4b561b-947f-4567-99ce-5e8e037e1648",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "wara-sulu-bana",
+      "components": "wara+sulu+bana",
+      "meaning": "profundo-adentro-lugar",
+      "morphological_rule": "-bana",
+      "proposed_by": "Tawaka",
+      "proposed_turn_id": "ec6c3945-4753-40e4-ba31-3bdfb0d7c977",
+      "proposed_day": 7,
+      "status": "adoptado",
+      "adopted_by": [
+        "Dare-nu",
+        "Corie-ko"
+      ],
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:18:15.072142+00:00",
+      "destacado": {
+        "quote": "Naba-ni ta-barsure kashi: duna-sulu, arima-bana kaa-da saa barsure-dusha wara-sulu-bana. Ma kali-dusha pana. Ma barsure-panaa puna.",
+        "traduccion": "Pienso en mi alma: el agua-adentro, los peces su lugar-vacío, su alma no da. Después sombra. Después alma-lejos-habla.",
+        "impacto_score": 9.2,
+        "agente": "Buio-sha",
+        "agente_slug": "buio-sha"
+      }
+    },
+    {
+      "id": "8a1125b7-0e06-4b6b-bb02-3200d60c04fb",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "kali-dusha",
+      "components": "kali + dusha",
+      "meaning": "luz-lejos, sombra",
+      "morphological_rule": "-sha",
+      "proposed_by": "Dare-nu",
+      "proposed_turn_id": "c6ea570e-f0a0-4b0b-8e84-766cde87ac5c",
+      "proposed_day": 7,
+      "status": "adoptado",
+      "adopted_by": [
+        "Buio-sha",
+        "Tawaka"
+      ],
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:19:15.86618+00:00",
+      "destacado": {
+        "quote": "Naya mara-bana naa-ni. Guaycarí maa-da kali-dusha raka-ni. Caquetío maa-da barsure-ana panaa-ni. Saa waya ka-buco sulu buco-ana kono-da — mara nüma anüiki ma-bana-ni.",
+        "traduccion": "Ellos van por caminos distintos. Los Guaycarí quieren culpar al sol caliente. Los Caquetíos saben que el alma del ritual falta. Si nosotros entramos en la represa profunda donde sembramos — pero ellos no hablan la lengua verdadera.",
+        "impacto_score": 9.2,
+        "agente": "Manaure",
+        "agente_slug": "manaure"
+      }
+    },
+    {
+      "id": "ee1d15e7-a4f8-4709-a99b-73ca298b8966",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "buco-sulu",
+      "components": "buco + sulu",
+      "meaning": "profundo-adentro",
+      "morphological_rule": "desconocida",
+      "proposed_by": "Dare-nu",
+      "proposed_turn_id": "c6ea570e-f0a0-4b0b-8e84-766cde87ac5c",
+      "proposed_day": 7,
+      "status": "adoptado",
+      "adopted_by": [
+        "Manaure",
+        "Buio-sha"
+      ],
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:19:15.869695+00:00",
+      "destacado": {
+        "quote": "Wara barsure ta-barsure-ni. Fiesta-bana kashi eroa-da, ka nüma buco-sulu gara-tüshi-arima masa-bana-ka kira-ni.",
+        "traduccion": "Mi esencia está muy viva. La fiesta pronto nacerá, y ella adentro profundo la chicha agria nosotras hacemos ya canta-estoy.",
+        "impacto_score": 9.1,
+        "agente": "Wama-sha",
+        "agente_slug": "wama-sha"
+      }
+    },
+    {
+      "id": "bddc202d-1bdf-4cf7-8227-deaf0de89beb",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "ana-bana",
+      "components": "ana + bana",
+      "meaning": "diseño-lugar",
+      "morphological_rule": "-bana",
+      "proposed_by": "Dare-nu",
+      "proposed_turn_id": "c6ea570e-f0a0-4b0b-8e84-766cde87ac5c",
+      "proposed_day": 7,
+      "status": "adoptado",
+      "adopted_by": [
+        "Shaboro",
+        "Tawaka"
+      ],
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:19:15.873252+00:00",
+      "destacado": {
+        "quote": "Kashi ta-memoria wana-ka pana-ko ka jarai-sha ka pana-pana-kana ma-ana-bana-ko.",
+        "traduccion": "Mi memoria es ahora uno-hombre también cinco-mujeres también dos-pequeños-sin-nombre-vista.",
+        "impacto_score": 9,
+        "agente": "Bana-mana",
+        "agente_slug": "bana-mana"
+      }
+    },
+    {
+      "id": "fa9fa964-63e1-4069-b900-37ad1a069181",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "nii-panaa-sha",
+      "components": "panaa+sha",
+      "meaning": "ella-que-sabe-ver",
+      "morphological_rule": "-sha",
+      "proposed_by": "Shaboro",
+      "proposed_turn_id": "3b560fdb-733b-4b3b-9790-86db2f832c97",
+      "proposed_day": 8,
+      "status": "adoptado",
+      "adopted_by": [
+        "Buio-sha",
+        "Dare-nu"
+      ],
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:20:36.901913+00:00",
+      "destacado": {
+        "quote": "Naka waya-kana tansura-bana-ni — nii-panaa-sha raka-da ta-barsure-bana-ko, kashi saa waya-dusha-bana naka-da.",
+        "traduccion": "Después nosotros-muchos — yo-ahora nombres-que-ve lugar-dentro-guardados, pero sólo nosotros-muchos se-olvida lugar-dentro.",
+        "impacto_score": 8.8,
+        "agente": "Bana-mana",
+        "agente_slug": "bana-mana"
+      }
+    },
+    {
+      "id": "9a66324a-4e5c-4676-ad3b-e164699270cb",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "tüshi-wana",
+      "components": "tüshi + wana",
+      "meaning": "ver-el-frío",
+      "morphological_rule": "-ana",
+      "proposed_by": "Buio-sha",
+      "proposed_turn_id": "5ca7d993-58fa-46bd-8161-b2393208981a",
+      "proposed_day": 10,
+      "status": "adoptado",
+      "adopted_by": [
+        "Tawaka",
+        "Shaboro"
+      ],
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:23:18.767839+00:00",
+      "destacado": null
+    },
+    {
+      "id": "719f55c2-b16a-46f0-a2df-733ac86be1f1",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "barchasure",
+      "components": "barsure+cha",
+      "meaning": "dolor-del-alma",
+      "morphological_rule": "desconocida",
+      "proposed_by": "Tawaka",
+      "proposed_turn_id": "1f0c929d-0cda-457a-95c0-1365609290fb",
+      "proposed_day": 11,
+      "status": "adoptado",
+      "adopted_by": [
+        "Dare-nu",
+        "Sha-corie"
+      ],
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:25:11.152172+00:00",
+      "destacado": {
+        "quote": "Waya kaa-da tension-bana-chi, mara naka—saa pia kaa-ni ma-panaa, ta-barsure kaa-ni barchasure-wana. Buio-sha nii-wana-da sima-bana-ka—nüma panaa-da chacamba, mara taya ma-kaa-da barsure-sulu.",
+        "traduccion": "Hay pequeña calma, pero después—si tú sabes, mi alma está en dolor-mirando. Ella Buio-sha viendo hacia el cerro—ella sabe cómo, pero yo no puedo estar en ese alma.",
+        "impacto_score": 9.4,
+        "agente": "Tawaka",
+        "agente_slug": "tawaka"
+      }
+    },
+    {
+      "id": "78839faa-1232-48ec-b552-6843c11ec3ac",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "kali-bana-chaa",
+      "components": "kali+bana+chaa",
+      "meaning": "hacer-en-orilla-del-sol, innovar",
+      "morphological_rule": "ka-",
+      "proposed_by": "Corie-ko",
+      "proposed_turn_id": "1f0c929d-0cda-457a-95c0-1365609290fb",
+      "proposed_day": 11,
+      "status": "adoptado",
+      "adopted_by": [
+        "Buio-sha",
+        "Tawaka"
+      ],
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:25:31.879949+00:00",
+      "destacado": {
+        "quote": "Kali-bana-chaa ta-barsure—masa-bana-sha: masa+-bana+-sha wana-da wara pana-dusha kashi.",
+        "traduccion": "Voy a innovar en la orilla de luz, yo la mujer-del-comer, quiero ver ese lugar de abundancia primero, bien ahora.",
+        "impacto_score": 9.7,
+        "agente": "Guaranaro-sha",
+        "agente_slug": "guaranaro-sha"
+      }
+    },
+    {
+      "id": "22875078-c2ea-4a74-a909-18cec4170d61",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "koka-arua",
+      "components": "koka+-arua",
+      "meaning": "hoja-medicina",
+      "morphological_rule": "desconocida",
+      "proposed_by": "Shaboro",
+      "proposed_turn_id": "52c5afa6-3498-46a9-ab85-d43b81a90a43",
+      "proposed_day": 13,
+      "status": "propuesto",
+      "adopted_by": null,
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:27:56.568555+00:00",
+      "destacado": null
+    },
+    {
+      "id": "d920b5bc-981e-4065-9ec1-51d5cbf7fd16",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "kali-bana-chaa",
+      "components": "kali+-bana+-chaa",
+      "meaning": "hacer-cosas-nuevas-en-la-luz",
+      "morphological_rule": "ka-",
+      "proposed_by": "Corie-ko",
+      "proposed_turn_id": "abe593e5-87e4-4a1d-af16-446a4daae575",
+      "proposed_day": 11,
+      "status": "adoptado",
+      "adopted_by": [
+        "Buio-sha",
+        "Tawaka"
+      ],
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:26:20.475415+00:00",
+      "destacado": {
+        "quote": "Kali-bana-chaa ta-barsure—masa-bana-sha: masa+-bana+-sha wana-da wara pana-dusha kashi.",
+        "traduccion": "Voy a innovar en la orilla de luz, yo la mujer-del-comer, quiero ver ese lugar de abundancia primero, bien ahora.",
+        "impacto_score": 9.7,
+        "agente": "Guaranaro-sha",
+        "agente_slug": "guaranaro-sha"
+      }
+    },
+    {
+      "id": "5691e44b-766f-47d0-a99f-d99f09e225e7",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "puri-bana",
+      "components": "puri+-bana",
+      "meaning": "orilla-del-permiso",
+      "morphological_rule": "-bana",
+      "proposed_by": "Bagre-ko",
+      "proposed_turn_id": "8b82fe0a-4944-4e24-95c6-4925cada1167",
+      "proposed_day": 12,
+      "status": "adoptado",
+      "adopted_by": [
+        "Tariwa",
+        "Dare-nu"
+      ],
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:26:30.317995+00:00",
+      "destacado": {
+        "quote": "¡Puri-bana! — ta-ana-ka naya-kana.",
+        "traduccion": "¡Permiso de la orilla! — mi respeto a todos ellos.",
+        "impacto_score": 9.1,
+        "agente": "Bagre-ko",
+        "agente_slug": "bagre-ko"
+      }
+    },
+    {
+      "id": "42d19b52-12ae-4d73-a641-61741da207a0",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "tüshi-mene",
+      "components": "tüshi + mene",
+      "meaning": "agua-fría-brotada",
+      "morphological_rule": "desconocida",
+      "proposed_by": "Buio-sha",
+      "proposed_turn_id": "a54f4935-af64-40ff-99d9-082e6554c650",
+      "proposed_day": 12,
+      "status": "adoptado",
+      "adopted_by": [
+        "Manaure",
+        "Corie-ko"
+      ],
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:27:17.975119+00:00",
+      "destacado": {
+        "quote": "Gudamuen-sha kana-kana tu-nii sunu-wana, mara tüshi-mene buca-sulu-ni.",
+        "traduccion": "Dos generaciones de manos ven para aprender, pero el agua fría que brota adentro está.",
+        "impacto_score": 9.1,
+        "agente": "Sha-corie",
+        "agente_slug": "sha-corie"
+      }
+    },
+    {
+      "id": "bba4fdbe-747f-4003-8bc9-13b2fc663009",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "ma-tüshi",
+      "components": "ma+tüshi",
+      "meaning": "sin peces, vacío",
+      "morphological_rule": "ma-",
+      "proposed_by": "Tawaka",
+      "proposed_turn_id": "52c5afa6-3498-46a9-ab85-d43b81a90a43",
+      "proposed_day": 13,
+      "status": "propuesto",
+      "adopted_by": null,
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:28:11.386592+00:00",
+      "destacado": null
+    },
+    {
+      "id": "01a851a7-1844-4816-93f2-d53568475987",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "tüshi-arima-bana",
+      "components": "tüshi + arima + bana",
+      "meaning": "lugar de frío profundo, donde falta la sal",
+      "morphological_rule": "-bana",
+      "proposed_by": "Nabaraka",
+      "proposed_turn_id": "d35156ad-f01a-4f0e-8657-431d1dc7c9f1",
+      "proposed_day": 15,
+      "status": "propuesto",
+      "adopted_by": null,
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:30:46.606708+00:00",
+      "destacado": {
+        "quote": "Tüshi-arima-bana: tüshi + arima + bana = lugar de frío profundo, donde falta la sal",
+        "traduccion": "Hay un lugar de frío profundo donde la sal desaparece",
+        "impacto_score": 8.7,
+        "agente": "Nabaraka",
+        "agente_slug": "nabaraka"
+      }
+    },
+    {
+      "id": "30589753-f05a-42d6-9e0e-ae5240dc3f28",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "suave-bana-ni",
+      "components": "suave + bana + ni",
+      "meaning": "en la orilla del viento suave, estamos",
+      "morphological_rule": "-ni",
+      "proposed_by": "Naure-sha",
+      "proposed_turn_id": "810b0852-35c3-477b-af02-87c01a583a0a",
+      "proposed_day": 3,
+      "status": "adoptado",
+      "adopted_by": [
+        "Sha-corie",
+        "Wama-sha"
+      ],
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:12:27.280586+00:00",
+      "destacado": {
+        "quote": "Kashi adura-pana wa-kana jaguey-da wara suave-bana-ni.",
+        "traduccion": "El maíz que trabaja se pausa en la orilla del viento suave donde estamos.",
+        "impacto_score": 8.7,
+        "agente": "Naure-sha",
+        "agente_slug": "naure-sha"
+      }
+    },
+    {
+      "id": "f6b2b554-6486-42a2-8999-ad34c4b03107",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "tamecani-dusha",
+      "components": "tamecani+-dusha",
+      "meaning": "ardor-lejos, fiebre-alto",
+      "morphological_rule": "-sha",
+      "proposed_by": "Wama-sha",
+      "proposed_turn_id": "c26e16c6-2add-4276-bb0c-18d1e212c4d3",
+      "proposed_day": 3,
+      "status": "adoptado",
+      "adopted_by": [
+        "Shaboro",
+        "Manaure"
+      ],
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:13:19.973922+00:00",
+      "destacado": {
+        "quote": "Ta-boco nudoso raka-ni kali-bana-sulu, ta-bana wara-ni tamecani-dusha",
+        "traduccion": "Mi hígado nudoso quiere estar profundo-adentro-lugar, mi alma ahora pero no puedo mirarla.",
+        "impacto_score": 9.2,
+        "agente": "Bana-mana",
+        "agente_slug": "bana-mana"
+      }
+    },
+    {
+      "id": "7fcd6d28-2439-40e4-a4ed-f7060252115e",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "tansura-bana-ni",
+      "components": "tansura+bana+ni",
+      "meaning": "listos-orilla-estamos",
+      "morphological_rule": "-ni",
+      "proposed_by": "Tawaka",
+      "proposed_turn_id": "ec6c3945-4753-40e4-ba31-3bdfb0d7c977",
+      "proposed_day": 7,
+      "status": "adoptado",
+      "adopted_by": [
+        "Shaboro",
+        "Corie-ko"
+      ],
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:18:15.075683+00:00",
+      "destacado": {
+        "quote": "Naka waya-kana tansura-bana-ni — nii-panaa-sha raka-da ta-barsure-bana-ko, kashi saa waya-dusha-bana naka-da.",
+        "traduccion": "Después nosotros-muchos — yo-ahora nombres-que-ve lugar-dentro-guardados, pero sólo nosotros-muchos se-olvida lugar-dentro.",
+        "impacto_score": 8.8,
+        "agente": "Bana-mana",
+        "agente_slug": "bana-mana"
+      }
+    },
+    {
+      "id": "2c54ef45-2296-4fff-9f40-2d8167a9451e",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "sima-wana-da",
+      "components": "sima+-wana+-da",
+      "meaning": "mirar-hacia-el-cerro",
+      "morphological_rule": "-da",
+      "proposed_by": "Tawaka",
+      "proposed_turn_id": "4800c9b2-aa9f-4846-9470-0065af5a3bed",
+      "proposed_day": 9,
+      "status": "adoptado",
+      "adopted_by": [
+        "Bana-mana",
+        "Corie-ko"
+      ],
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:21:55.677998+00:00",
+      "destacado": {
+        "quote": "Mara Tariwa-ko arima-bana-ka naka. Ta-kuru-bana-da sima-wana-da.",
+        "traduccion": "Pero después de donde Tariwa tomó los peces, yo quiero mirar hacia el árbol, hacia la montaña.",
+        "impacto_score": 8.8,
+        "agente": "Guaranaro-sha",
+        "agente_slug": "guaranaro-sha"
+      }
+    },
+    {
+      "id": "65693d91-a394-4c03-a650-9598142887a5",
+      "run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
+      "form": "masa-bana-sha",
+      "components": "masa+-bana+-sha",
+      "meaning": "lugar-de-comer-mujer",
+      "morphological_rule": "-sha",
+      "proposed_by": "Guaranaro-sha",
+      "proposed_turn_id": "665b2441-7379-4fd4-8b7a-4ff8a87f19e8",
+      "proposed_day": 14,
+      "status": "adoptado",
+      "adopted_by": [
+        "Watapana",
+        "Sha-corie"
+      ],
+      "adopted_turn_id": null,
+      "rejected_by": null,
+      "created_at": "2026-06-22T06:30:37.442725+00:00",
+      "destacado": {
+        "quote": "Kali-bana-chaa ta-barsure—masa-bana-sha: masa+-bana+-sha wana-da wara pana-dusha kashi.",
+        "traduccion": "Voy a innovar en la orilla de luz, yo la mujer-del-comer, quiero ver ese lugar de abundancia primero, bien ahora.",
+        "impacto_score": 9.7,
+        "agente": "Guaranaro-sha",
+        "agente_slug": "guaranaro-sha"
+      }
+    }
+  ]
+}
