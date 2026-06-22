@@ -21,10 +21,16 @@ curación de perfiles, y contagio léxico social.
 | Composición — lokono | 3.1% |
 | Composición — taíno | 0.2% |
 | Composición — proto-arahuaco | 0.8% |
-| Neologismos propuestos (en memoria) | 89 |
-| Neologismos adoptados (2+ agentes distintos) | 72 |
+| Neologismos propuestos — Supabase, `run_id` real (*) | 28 |
+| Neologismos adoptados — Supabase, `run_id` real (*) | 20 |
 | Perfiles curados generados | 20/20 |
 | Frases curadas | 99 |
+
+(*) Corregido — el reporte original de esta sección decía "89 propuestos
+/ 72 adoptados", leído de `lexico.reporte_linguistico()` en memoria al
+final del run. Esa cifra resultó estar contaminada por sesiones previas
+(ver "Hallazgo pendiente — resuelto" más abajo); 28/20 son los conteos
+reales en Supabase filtrados por este `run_id`.
 
 El objetivo explícito de la sesión — "que el caquetío domine, ~70%+" — se
 cumple con margen amplio. La fuga a otras lenguas arahuacas vivas
@@ -70,27 +76,50 @@ El propio proceso de analizar el run reveló dos bugs reales, no hipotéticos:
    Subido a 2048; los 4 perfiles (Manaure, Dare-nu, Naure-sha, Buio-sha) se
    regeneraron correctamente reconstruyendo el historial desde Supabase.
 2. **Adopción de neologismos nunca sincronizada con Supabase** —
-   `LexicoComunitario.adoptar()` marcaba 72/89 neologismos como "adoptado"
-   en memoria, pero `db.update_neologism_status()` nunca se llamaba desde
-   el orquestador. Todo quedaba en `status="propuesto"` para siempre.
-   Corregido y reparado retroactivamente (20/27 neologismos en Supabase
-   pasaron a `adoptado`).
+   `LexicoComunitario.adoptar()` marcaba neologismos como "adoptado" en
+   memoria, pero `db.update_neologism_status()` nunca se llamaba desde el
+   orquestador. Todo quedaba en `status="propuesto"` para siempre.
+   Corregido y reparado retroactivamente: 20/28 neologismos de este run en
+   Supabase pasaron a `adoptado` (las cifras "72/89" del commit original
+   incluían el arrastre histórico descrito abajo; el conteo real de este
+   run es 20/28).
 
-## Hallazgo pendiente (no resuelto)
+## Hallazgo pendiente — resuelto (no era pérdida de datos)
 
-De los **89 neologismos** que `LexicoComunitario` registró en memoria
-durante el run, solo **28 llegaron a `db.save_neologism()`** en Supabase —
-**52 nunca se persistieron en absoluto** (no es un problema de status, son
-filas que no existen). Hipótesis de causa: el patrón de extracción
-`PATRON_NEOLOGISMO` busca el formato explícito `[forma: componentes =
-significado]` en el texto; probablemente solo calza la *primera* vez que
-un agente lo escribe así — usos posteriores de la misma forma, ya
-"sabida", no repiten el formato y no vuelven a intentar guardarse. Esto
-afecta cualquier análisis cuantitativo sobre el *volumen* total de
-neologismos (aunque no afecta los perfiles curados, que usan el texto
-completo de las respuestas, no la tabla `neologisms`). Requiere revisar
-`curiana_observer.py::analizar()` y el flujo de extracción antes de
-decidir un fix — queda para otra sesión.
+Investigación de seguimiento (2026-06-22): la hipótesis de arriba era
+incorrecta. Se reconstruyeron los neologismos re-aplicando
+`extraer_neologismos_del_texto()` directamente sobre los 155
+`response_text` ya guardados en Supabase para este `run_id` — el mismo
+texto, byte a byte, que alimentó al extractor durante el run real (no hay
+mutación entre `observer.analizar(texto=response, ...)` y
+`db.save_agent_response(response_text=response, ...)`). Resultado: **28
+neologismos**, exactamente los mismos 28 que existen en la tabla
+`neologisms`. Cero faltantes. El extractor (regex determinista) y
+`db.save_neologism()` funcionaron correctamente las 28 veces — no hubo
+ningún `except Exception: pass` silencioso de por medio.
+
+La causa real: `auto_mode()` (el código detrás de `--auto N`) inicializaba
+`lexico = LexicoComunitario.load()`, que **resume el archivo global
+`curiana_lexico.json`** (no versionado, compartido entre sesiones) en vez
+de arrancar en blanco — a diferencia de `state`, `memory` y `observer`, que
+sí arrancan frescos en esa misma función. El run de 30 turnos heredó así
+~61 neologismos acumulados de sesiones anteriores (pruebas interactivas,
+`test_pipeline.py`, runs cortos previos), y `lexico.reporte_linguistico()`
+—la fuente del "89 propuestos / 72 adoptados" reportado arriba— contó ese
+total acumulado de **todas las sesiones históricas**, no el de este run.
+Es decir: la tabla de métricas de este documento (líneas 24-25) compara
+una cifra *acumulada de por vida* contra una cifra *de este run en
+Supabase* — no son la misma unidad de medida. Los **28 neologismos en
+Supabase, con `run_id` correcto, son la cifra real de este run**.
+
+**Fix aplicado:** `curiana_orchestrator_v2.py::auto_mode()` ahora usa
+`lexico = LexicoComunitario()` (arranque limpio), igual que `state` y
+`memory`. Esto también importa para la *calidad* de la simulación, no solo
+para el reporte final: `palabras_activas()` (vocabulario que se ofrece a
+los agentes y que cuenta como "caquetío" en `score_linguistico()`) incluía
+hasta ahora cualquier neologismo adoptado en sesiones de prueba anteriores,
+sin relación con el run actual. Cada `--auto N` corre ahora con vocabulario
+comunitario aislado, igual que ya ocurre con el `run_id` en Supabase.
 
 ## Recomendaciones para la simulación de 1 año (`--auto 240 --anio`)
 
@@ -99,7 +128,8 @@ decidir un fix — queda para otra sesión.
    ya corregido).
 2. A este ritmo (~45 min para 30 turnos + perfiles), 240 turnos tomarían
    varias horas — planificar como tarea en background, no interactiva.
-3. Antes de la corrida de 1 año, vale la pena investigar el hallazgo
-   pendiente de arriba (neologismos no persistidos), ya que a mayor escala
-   esa pérdida de datos crece proporcionalmente y afectaría más al análisis
-   de "qué palabras prendieron y cuáles no".
+3. ~~Antes de la corrida de 1 año, investigar el hallazgo pendiente de
+   arriba~~ — resuelto: no había pérdida de datos, sino contaminación de
+   `lexico.reporte_linguistico()` por estado acumulado entre sesiones. Con
+   el fix aplicado (`auto_mode()` arranca `LexicoComunitario()` en blanco),
+   el run de 1 año queda libre de este artefacto desde el primer turno.

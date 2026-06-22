@@ -632,7 +632,7 @@ def auto_mode(
     """
     state = estado_inicial_test()
     memory = AgentMemory()
-    lexico = LexicoComunitario.load()
+    lexico = LexicoComunitario()
     observer = ObserverAgent(client, lexico)
     difusion = DifusionLexica()
 
