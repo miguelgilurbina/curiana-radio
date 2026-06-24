@@ -22,6 +22,10 @@ const LANG_COLORS: Record<string, string> = {
 };
 const LANG_FILTERS = Object.keys(LANG_COLORS);
 
+// Cupo de filas renderizadas por consulta -- una sola fuente de verdad para
+// el slice de la tabla y los dos mensajes que lo describen.
+const FILA_LIMITE = 500;
+
 export default function LexiconFilter({ palabras }: { palabras: PalabraLexicon[] }) {
   const [search, setSearch] = useState("");
   const [catFilter, setCatFilter] = useState("todos");
@@ -95,7 +99,8 @@ export default function LexiconFilter({ palabras }: { palabras: PalabraLexicon[]
       </div>
 
       <p className="mb-3 font-sans text-xs text-earth-500">
-        Mostrando {filtered.length} de {palabras.length} palabras
+        Mostrando {Math.min(filtered.length, FILA_LIMITE)} de {filtered.length} resultados
+        {filtered.length !== palabras.length && ` (de ${palabras.length} palabras en total)`}
       </p>
 
       <Card className="overflow-hidden p-0">
@@ -111,7 +116,7 @@ export default function LexiconFilter({ palabras }: { palabras: PalabraLexicon[]
               </tr>
             </thead>
             <tbody>
-              {filtered.slice(0, 500).map((entry) => {
+              {filtered.slice(0, FILA_LIMITE).map((entry) => {
                 const color = LANG_COLORS[entry.source_language] ?? "#9d7f66";
                 return (
                   <tr key={entry.id} className="border-b border-earth-200/50 transition-colors hover:bg-earth-100/40">
@@ -139,9 +144,9 @@ export default function LexiconFilter({ palabras }: { palabras: PalabraLexicon[]
             </tbody>
           </table>
         </div>
-        {filtered.length > 500 && (
+        {filtered.length > FILA_LIMITE && (
           <p className="border-t border-earth-200/70 px-4 py-3 font-sans text-xs text-earth-500">
-            Mostrando las primeras 500 — afina la búsqueda o el filtro para ver más.
+            Mostrando las primeras {FILA_LIMITE} — afina la búsqueda o el filtro para ver más.
           </p>
         )}
       </Card>
