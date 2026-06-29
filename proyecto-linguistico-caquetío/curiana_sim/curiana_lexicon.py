@@ -6865,27 +6865,60 @@ RAICES_ESPANOLAS = {
     "lluvia", "nube", "estrella", "humo", "ceniza", "ramo", "monte", "selva",
 }
 
-# ⚠️ LIMITACIÓN CONOCIDA: este blocklist es heurístico (whack-a-mole). Atrapa
-# las raíces españolas frecuentes pero NO toda forma castellana novedosa que un
-# LLM pueda acuñar. Una solución completa necesitaría una lista de palabras
-# españolas (p.ej. wordfreq) o un filtro fonotáctico caquetío — pendiente. El
-# riesgo real es acotado: solo los neologismos ADOPTADOS (2 agentes) se fijan en
-# la koiné, y una raíz española suelta rara vez se propaga; las no reusadas
-# decaen en el CampoLexico.
+# Marcadores ortográficos fuertes del español, ausentes del caquetío:
+# rr/ll geminadas, qu, ñ, x, y vocales con tilde aguda (caquetío usa ü, no á/é…).
+_MARCADORES_ES = re.compile(r"rr|ll|qu|ñ|x|[áéíóú]")
+
+# Bigramas que aparecen en el caquetío real (atestiguado+reconstruido). Se computa
+# perezosamente (evita import circular con curiana_database al cargar el módulo).
+_CAQ_BIGRAMS: Optional[set] = None
+_AFIJOS_NEO: Optional[set] = None
+
+
+def _caq_bigrams() -> set:
+    global _CAQ_BIGRAMS, _AFIJOS_NEO
+    if _CAQ_BIGRAMS is None:
+        from curiana_database import normalize_source_language
+        bg = set()
+        for palabra, datos in VOCABULARIO_BASE.items():
+            if normalize_source_language(datos.get("fuente", "")) == "caquetío":
+                w = palabra.lower()
+                bg |= {w[i:i+2] for i in range(len(w) - 1)}
+        _CAQ_BIGRAMS = bg
+        _AFIJOS_NEO = {a.strip("-").lower() for a in TODAS_LAS_REGLAS}
+    return _CAQ_BIGRAMS
+
+
+def _componente_espanol(comp: str) -> bool:
+    """True si un componente de neologismo delata origen español. Combina:
+    (1) blocklist de raíces frecuentes, (2) marcadores ortográficos español-only,
+    (3) ≥2 bigramas ausentes del caquetío (un solo bigrama raro se tolera para no
+    bloquear combinaciones caquetías novedosas — p.ej. 'kale')."""
+    c = comp.strip(" *-").lower()
+    caq = _caq_bigrams()
+    if not c or len(c) <= 2 or c in _AFIJOS_NEO:
+        return False
+    if c in ES_STOPWORDS or c in RAICES_ESPANOLAS:
+        return True
+    if _MARCADORES_ES.search(c):
+        return True
+    bad = sum(1 for i in range(len(c) - 1) if c[i:i+2] not in caq)
+    return bad >= 2
 
 
 def neologismo_valido(forma: str, componentes: str = "") -> bool:
-    """True si la FORMA del neologismo no contiene raíces/stopwords españolas.
-    Solo se chequea la forma (la palabra acuñada): el campo `componentes` es la
-    explicación del agente y va naturalmente en español ('mirar-hacia-el-cerro'),
-    así que chequearlo daría falsos positivos. Filtro para que la koiné no fije
-    préstamos castellanos disfrazados de palabra acuñada (suave-bana-ni, etc.).
-    `componentes` se acepta por compatibilidad de firma pero no se inspecciona."""
-    for parte in re.split(r"[-+\s,;]+", (forma or "").lower()):
-        parte = parte.strip(" *").strip()
-        if parte and (parte in ES_STOPWORDS or parte in RAICES_ESPANOLAS):
-            return False
-    return True
+    """True si la FORMA del neologismo no delata origen español en ninguno de sus
+    componentes (separados por guion). Solo se chequea la forma acuñada; el campo
+    `componentes` va en español como explicación del agente, así que no se
+    inspecciona. Filtro de tres capas (blocklist + marcadores ortográficos +
+    fonotáctica por bigramas caquetíos) para que la koiné no fije préstamos
+    castellanos disfrazados (suave-bana-ni, carrera-kata, guardia-bana, etc.).
+
+    Validado contra los 28 neologismos caquetíos adoptados del run f8ef263d:
+    cero falsos positivos; bloquea los ofensores observados."""
+    return not any(
+        _componente_espanol(p) for p in re.split(r"[-+\s,;]+", (forma or ""))
+    )
 
 
 def extraer_neologismos_del_texto(

@@ -13,10 +13,45 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 
 | Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |
 |---|---|---|---|---|---|---|
-| 06-29 | `f8ef263d` | 30 / 15 | 28 | 7.5 | **99%** | **Primer run koiné** — convergencia confirmada |
+| 06-29 | `9bb920eb` | 60 / 30 | 32 | 7.5 | **99%** | **Run largo** — población constante, métrica persistida, convergencia −44% |
+| 06-29 | `f8ef263d` | 30 / 15 | 28 | 7.5 | **99%** | Primer run koiné — convergencia confirmada |
 | 06-22 | `2e729f3f` | 30 / 15 | 20 | 7.2 | 92% | Primer run largo calibrado (ver `ANALISIS_RUN_30T_2026-06-22.md`) |
 | 06-29 | `8a4f9da4` | 2 / 1 | 7 | 7.1 | 100% | smoke de persistencia (descartable) |
 | 06-21 | `bdead490` y otros | 1–2 | 6–13 | 6–7 | 8–31% | runs de desarrollo pre-calibración (baseline) |
+
+---
+
+## 2026-06-29 · Run `9bb920eb` — Run largo (60T / 30 días)
+
+**Comando:** `python curiana_orchestrator_v2.py --auto 60 --perfiles`
+**Contexto:** primer run con los arreglos posteriores al run koiné: población
+constante (`PARTICIPANTES_KOINE`, 24 agentes rotados por ventana), métrica de
+convergencia persistida (`koine_metrics`) y compuerta de neologismos fonotáctica.
+
+### Convergencia: limpia y −44% (confirmada por dos métricas)
+
+- **`koine_metrics` persistida** (población real, recomputable desde la tabla):
+  `día 1: 0.6465 → día 30: 0.3898` (−40%). Con población constante desde el día
+  16 (32 agentes), el tramo final es **monótono** — desaparece el repunte del
+  medio que confundía el run anterior.
+- **Cohorte fijo** (19 agentes activos desde el día ≤3, recomputado desde
+  `word_uses`): `0.5467 → 0.3047` (**−44.3%**), monótona, sin bumps. El cohorte
+  es ahora 19 agentes (vs 7 en el run de 30T) gracias a la población constante.
+
+### Léxico y neologismos
+
+- Caquetío **99%**, score 7.45, 295 respuestas, **32 agentes** (6 etnias).
+- **40 neologismos adoptados** (vs 28 en el run de 30T), 6 propuestos.
+- **0 formas con marcador español** — la compuerta fonotáctica funcionó en
+  producción. Adoptados limpios: `tüshi-bana`, `chaa-bana-ni`, `naba-ana-bana`,
+  `nii-bana-da`, `katu-puri-bana`, `paa-bana-da`…
+
+### Pendiente
+
+- **Fijación por competencia de variantes** (DISENO_KOINE §6): la adopción sigue
+  siendo "2 agentes la usan → adoptada", sin resolver qué variante *gana* un
+  significado cuando compiten. Todos los adoptados tienen exactamente 2
+  adoptantes. Es el próximo mecanismo de koiné a implementar.
 
 ---
 
