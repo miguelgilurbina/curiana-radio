@@ -40,7 +40,9 @@ todavía un mecanismo de transmisión** — es una escena suelta.
 3. **Memoria que no se cae del rolling buffer.** `AgentMemory` hoy es una
    lista corta que rota. Lo visto/oído en un rito necesita un segundo
    compartimento que no expira — para que alguien pueda referenciarlo
-   turnos, días o años después.
+   turnos, días o años después. → Este compartimento es el `IdiolectoAgente`
+   diseñado en [`DISENO_KOINE.md`](DISENO_KOINE.md) §5: lo que arraiga en la
+   memoria larga es lo que se fija en la koiné.
 4. **El Observer registra el rito como evento propio**, no como una
    respuesta más: quién lo ofició, qué concepto cargaba, qué neologismo (si
    alguno) se acuñó ahí. Tabla nueva, paralela a `neologisms`.
