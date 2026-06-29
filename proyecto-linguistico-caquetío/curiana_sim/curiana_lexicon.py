@@ -6843,16 +6843,35 @@ PATRON_NEOLOGISMO = re.compile(
 # Raíces castellanas frecuentes con equivalente caquetío; si un componente del
 # neologismo es una de estas (o una stopword), delata fuga.
 RAICES_ESPANOLAS = {
-    "suave", "tension", "tensión", "calma", "boca", "fuerte", "fuerza",
-    "nuevo", "nueva", "viejo", "vieja", "agua", "fuego", "tierra", "viento",
-    "sol", "luna", "mar", "cielo", "medida", "fluir", "diseno", "diseño",
-    "profundo", "profunda", "listo", "listos", "permiso", "dolor", "alma",
-    "casa", "gente", "dios", "espiritu", "espíritu", "sombra", "luz", "noche",
-    "dia", "día", "camino", "corazon", "corazón", "sangre", "muerte", "vida",
-    "amor", "miedo", "hijo", "hija", "madre", "padre", "hombre", "mujer",
-    "comer", "beber", "dormir", "hablar", "pensar", "mirar", "grande",
-    "pequeno", "pequeño", "bueno", "buena", "malo", "mala", "rio", "río",
+    # núcleo observado en runs (suave-bana-ni, tension-bana-chi, boca-pana,
+    # carrera-kata, guardia-bana, lanza-sara, temblor-bana, bañu-kaa)
+    "suave", "tension", "tensión", "calma", "boca", "carrera", "guardia",
+    "lanza", "temblor", "bañu", "baño", "bano",
+    # adjetivos/verbos/sustantivos castellanos frecuentes con equivalente caquetío
+    "fuerte", "fuerza", "nuevo", "nueva", "viejo", "vieja", "agua", "fuego",
+    "tierra", "viento", "sol", "luna", "mar", "cielo", "medida", "fluir",
+    "diseno", "diseño", "profundo", "profunda", "listo", "listos", "permiso",
+    "dolor", "alma", "casa", "gente", "dios", "espiritu", "espíritu", "sombra",
+    "luz", "noche", "dia", "día", "camino", "corazon", "corazón", "sangre",
+    "muerte", "vida", "amor", "miedo", "hijo", "hija", "madre", "padre",
+    "hombre", "mujer", "comer", "beber", "dormir", "hablar", "pensar", "mirar",
+    "grande", "pequeno", "pequeño", "bueno", "buena", "malo", "mala", "rio",
+    "río", "guerra", "batalla", "pesca", "red", "tormenta", "trueno", "rayo",
+    "piedra", "palo", "flecha", "arco", "canto", "danza", "baile", "sueno",
+    "sueño", "vision", "visión", "voz", "grito", "fiesta", "cosecha", "semilla",
+    "raiz", "raíz", "rama", "hoja", "flor", "fruto", "cueva", "valle", "costa",
+    "arena", "ola", "marea", "viaje", "ruta", "carga", "peso", "poder", "paz",
+    "comida", "bebida", "cuerpo", "cabeza", "mano", "ojo", "pie", "diente",
+    "lluvia", "nube", "estrella", "humo", "ceniza", "ramo", "monte", "selva",
 }
+
+# ⚠️ LIMITACIÓN CONOCIDA: este blocklist es heurístico (whack-a-mole). Atrapa
+# las raíces españolas frecuentes pero NO toda forma castellana novedosa que un
+# LLM pueda acuñar. Una solución completa necesitaría una lista de palabras
+# españolas (p.ej. wordfreq) o un filtro fonotáctico caquetío — pendiente. El
+# riesgo real es acotado: solo los neologismos ADOPTADOS (2 agentes) se fijan en
+# la koiné, y una raíz española suelta rara vez se propaga; las no reusadas
+# decaen en el CampoLexico.
 
 
 def neologismo_valido(forma: str, componentes: str = "") -> bool:
