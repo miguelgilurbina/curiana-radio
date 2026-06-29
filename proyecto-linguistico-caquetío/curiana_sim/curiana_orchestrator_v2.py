@@ -50,6 +50,14 @@ from curiana_social import (
     DifusionLexica,
     prompt_rasgos_dialectales,
 )
+from curiana_koine import (
+    IdiolectoAgente,
+    CampoLexico,
+    emocionar_de,
+    prompt_emocionar,
+    prompt_idiolecto,
+    distancia_idiolectal,
+)
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -59,6 +67,17 @@ from curiana_social import (
 MODEL = "claude-haiku-4-5-20251001"
 MAX_TOKENS_AGENT = 500      # Espacio para frases en caquetío + glosa + neologismos
 MAX_TOKENS_DIRECTOR = 600
+
+# Koiné: pool de agentes foráneos/de contacto y periféricos que se rotan a la
+# escena cada turno. Sin esto solo hablan ~6 caquetíos nucleares y no hay
+# contacto dialectal — la mezcla que después se asienta en koiné. Se filtra a
+# los que existen en ALL_AGENTS al primer uso (run_turn).
+_KOINE_ROTACION = [
+    "Tariwa", "Kawa-ni", "Piru-sha", "Tari-ko", "Wata-ni",   # guaycarí
+    "Nabaraka", "Raka-bi", "Chorota",                          # jirajara/gayón
+    "Marokoto-ni", "Kadushi",                                  # caribe / insular
+    "Watapana", "Dara-ko", "Biro-ko", "Paugis-sha",           # caquetíos periféricos
+]
 
 # Constante de identidad lingüística — inyectada en TODOS los agentes
 # Este es el pivot central: cambia "español con interferencia caquetía"
@@ -148,6 +167,7 @@ def call_agent(
     user_message: str,
     agent_memory: Optional[str] = None,
     difusion: Optional[DifusionLexica] = None,
+    idiolectos: Optional[dict] = None,
 ) -> str:
     agent = ALL_AGENTS.get(agent_name)
     if not agent:
@@ -199,6 +219,9 @@ def call_agent(
     # Ensamblado del system prompt
     # Orden: persona → identidad lingüística → dialecto → mundo → léxico → contagio → memoria → refuerzo
     system_parts = [base_prompt, "---", _IDENTIDAD_LINGUISTICA]
+    # Emocionar (Maturana): disposición que moldea CÓMO lenguajea — semilla de
+    # idiolecto. Va junto a la identidad lingüística.
+    system_parts.append(prompt_emocionar(agent_name, etnia))
     if rasgos:
         system_parts.append(rasgos)
     system_parts += ["---", world_context, f"[Tu ubicación]: {ubicacion}"]
@@ -206,6 +229,12 @@ def call_agent(
         system_parts.append(bloque_lexico)
     if sugerencia_contagio:
         system_parts.append(sugerencia_contagio)
+    # Idiolecto acumulado (entrenchment): "tu manera de hablar" derivada del
+    # perfil de frecuencia del agente. Reemplaza/enriquece la memoria cruda.
+    if idiolectos is not None and agent_name in idiolectos:
+        bloque_idio = prompt_idiolecto(idiolectos[agent_name])
+        if bloque_idio:
+            system_parts.append(bloque_idio)
     if agent_memory:
         system_parts.append(f"[Tu memoria reciente]: {agent_memory}")
     if feedback:
@@ -313,6 +342,8 @@ def run_turn(
     db=None,
     run_id: Optional[str] = None,
     difusion: Optional[DifusionLexica] = None,
+    idiolectos: Optional[dict] = None,
+    campo: Optional[CampoLexico] = None,
 ) -> list[dict]:
     interactions = []
 
@@ -342,7 +373,16 @@ def run_turn(
             if a in ALL_AGENTS and a not in ("toda_la_comunidad", "guerreros")
         ] or state.agentes_en_escena[:5]
     else:
-        agentes_activos = state.agentes_en_escena
+        # Koiné: base de escena + rotación de foráneos/periféricos para que el
+        # contacto dialectal ocurra (se intercalan para sobrevivir el slice [:6]).
+        base = list(state.agentes_en_escena)
+        pool = [a for a in _KOINE_ROTACION if a in ALL_AGENTS]
+        if pool:
+            k = state.turno % len(pool)
+            foraneos = [pool[k], pool[(k + 1) % len(pool)]]
+            agentes_activos = base[:4] + foraneos
+        else:
+            agentes_activos = base
 
     if verbose:
         print(f"\n{'='*60}")
@@ -372,7 +412,7 @@ def run_turn(
         mem = memory.get(agent_name)
         response = call_agent(
             client, agent_name, state, lexico, observer, stimulus, mem,
-            difusion=difusion,
+            difusion=difusion, idiolectos=idiolectos,
         )
 
         interactions.append({
@@ -405,6 +445,19 @@ def run_turn(
                     difusion.propagar_uso(forma, agent_name, state)
             for neo in getattr(registro, "neologismos_extraidos", []):
                 difusion.propagar_uso(neo.forma, agent_name, state)
+
+        # Koiné: actualizar idiolecto del agente (entrenchment) y campo léxico
+        # comunitario (frecuencia para muestreo + métrica de convergencia).
+        formas_usadas = getattr(registro, "palabras_caquetias", [])
+        neos_turno = getattr(registro, "neologismos_extraidos", [])
+        if idiolectos is not None:
+            if agent_name not in idiolectos:
+                idiolectos[agent_name] = IdiolectoAgente(
+                    agent_name, emocionar_de(agent_name, agent.get("etnia")))
+            idiolectos[agent_name].registrar(formas_usadas, neos_turno)
+        if campo is not None:
+            campo.registrar(formas_usadas)
+            campo.registrar([n.forma for n in neos_turno])
 
         # Persistir en Supabase
         if db and run_id and turn_id:
@@ -487,6 +540,8 @@ def run_turn(
         print(observer.reporte_turno(state.dia, state.turno))
 
     # 6. Avanzar estado
+    if campo is not None:
+        campo.decaer()  # recambio léxico: formas no usadas pierden peso
     state.avanzar_turno()
 
     return interactions
@@ -522,6 +577,13 @@ def interactive_mode(client: anthropic.Anthropic):
     # Difusión léxica (contagio sociolingüístico) — persiste durante todo el run
     difusion = DifusionLexica()
 
+    # Koiné: idiolecto por agente + campo léxico (ver auto_mode)
+    idiolectos = {
+        nm: IdiolectoAgente(nm, emocionar_de(nm, a.get("etnia")))
+        for nm, a in ALL_AGENTS.items()
+    }
+    campo = CampoLexico()
+
     # Inicializar DB (gracefully degraded si no hay Supabase)
     db = get_db()
     run_id = db.create_run(model=MODEL, config={"mode": "interactive"})
@@ -539,7 +601,7 @@ def interactive_mode(client: anthropic.Anthropic):
 
         if not user_input:
             run_turn(client, state, memory, lexico, observer, db=db, run_id=run_id,
-                     difusion=difusion)
+                     difusion=difusion, idiolectos=idiolectos, campo=campo)
         elif user_input.lower() == "salir":
             break
         elif user_input.lower() == "estado":
@@ -561,7 +623,8 @@ def interactive_mode(client: anthropic.Anthropic):
                     msg = input(f"  ¿Qué le dices a {agent_name}? > ").strip()
                     response = call_agent(
                         client, agent_name, state, lexico, observer, msg,
-                        memory.get(agent_name), difusion=difusion
+                        memory.get(agent_name), difusion=difusion,
+                        idiolectos=idiolectos,
                     )
                     print(f"\n  [{agent_name}]: {response}\n")
                     observer.analizar(
@@ -592,7 +655,7 @@ def interactive_mode(client: anthropic.Anthropic):
             run_turn(
                 client, state, memory, lexico, observer,
                 user_input=user_input, db=db, run_id=run_id,
-                difusion=difusion,
+                difusion=difusion, idiolectos=idiolectos, campo=campo,
             )
 
     # Guardar todo
@@ -636,6 +699,16 @@ def auto_mode(
     observer = ObserverAgent(client, lexico)
     difusion = DifusionLexica()
 
+    # Koiné: idiolecto por agente (pre-cargado con su emocionar → divergencia
+    # inicial) + campo léxico comunitario + serie temporal de distancia
+    # idiolectal (la métrica de convergencia: debe CONTRAERSE).
+    idiolectos = {
+        nm: IdiolectoAgente(nm, emocionar_de(nm, a.get("etnia")))
+        for nm, a in ALL_AGENTS.items()
+    }
+    campo = CampoLexico()
+    serie_distancia: list[tuple[int, float]] = []
+
     # Inicializar DB (CurianaDB real o CurianaDBMock si no está configurada)
     db = get_db()
     run_id = db.create_run(
@@ -659,14 +732,18 @@ def auto_mode(
         run_turn(
             client, state, memory, lexico, observer,
             verbose=verbose, db=db, run_id=run_id,
-            difusion=difusion,
+            difusion=difusion, idiolectos=idiolectos, campo=campo,
         )
 
         # Reporte al final de cada día
         if state.turno == 1 and state.dia > 1:  # acaba de cambiar de día
             dia_terminado = state.dia - 1
+            dist = distancia_idiolectal(idiolectos)
+            serie_distancia.append((dia_terminado, dist))
             if verbose:
                 print(observer.reporte_dia(dia_terminado))
+                print(f"  ◇ Koiné — distancia idiolectal media: {dist} "
+                      f"(↓ = converge hacia koiné)")
 
         # Detección de cambio de estación
         if state.estacion != estacion_anterior:
@@ -701,6 +778,22 @@ def auto_mode(
     for agente, score in observer.ranking_linguistico()[:8]:
         bar = "█" * int(score) + "░" * (10 - int(score))
         print(f"    {agente:15} {bar} {score:.1f}/10")
+
+    # ── Resumen koiné: ¿convergió la lengua? ──
+    print(f"\n{'─'*60}")
+    print("  KOINÉ — convergencia (distancia idiolectal media por día)")
+    print(f"{'─'*60}")
+    if serie_distancia:
+        traj = " → ".join(f"D{d}:{v}" for d, v in serie_distancia)
+        print(f"  {traj}")
+        d_ini = serie_distancia[0][1]
+        d_fin = serie_distancia[-1][1]
+        veredicto = ("CONVERGE ✓ (la koiné se forma)" if d_fin < d_ini
+                     else "NO converge ✗ (sin koineización)")
+        print(f"  Inicio {d_ini} → Fin {d_fin}  →  {veredicto}")
+    print("\n  Diccionario koiné emergente (formas más extendidas):")
+    for forma, peso in campo.top(15):
+        print(f"    {forma:18} {peso:.1f}")
 
     if reporte_anual:
         print(observer.reporte_anual_llm(anio_simulado))
