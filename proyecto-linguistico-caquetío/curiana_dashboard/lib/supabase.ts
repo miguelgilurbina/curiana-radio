@@ -100,5 +100,4 @@ export const LANG_COLORS: Record<string, string> = {
   kalinago:   "#3D9B8F",
   "kalinago-caribe-overlay": "#A8542E",
   "jirajaroide-contacto": "#7A6B8F",
-  "hipotético-no-verificado": "#C9A227",
 };
