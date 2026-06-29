@@ -393,6 +393,16 @@ class CurianaDB:
             "form", form
         ).eq("run_id", run_id).execute()
 
+    # ── Koiné metrics ─────────────────────────────────────────────────
+
+    def save_koine_metric(self, run_id: str, day: int, distance: float, n_agents: int):
+        """Persiste la distancia idiolectal media de un día (métrica de
+        convergencia). Upsert por (run_id, day) para ser idempotente."""
+        self.client.table("koine_metrics").upsert(
+            {"run_id": run_id, "day": day, "distance": distance, "n_agents": n_agents},
+            on_conflict="run_id,day",
+        ).execute()
+
     # ── Phrase etymologies ────────────────────────────────────────────
 
     def save_phrase_etymology(
@@ -553,6 +563,7 @@ class CurianaDBMock:
     def save_neologism(self, *a, **kw) -> str:
         import uuid; return str(uuid.uuid4())
     def update_neologism_status(self, *a, **kw): pass
+    def save_koine_metric(self, *a, **kw): pass
     def save_phrase_etymology(self, *a, **kw): pass
     def latest_run(self): return None
     def language_drift(self, *a): return []

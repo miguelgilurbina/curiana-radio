@@ -68,15 +68,23 @@ MODEL = "claude-haiku-4-5-20251001"
 MAX_TOKENS_AGENT = 500      # Espacio para frases en caquetío + glosa + neologismos
 MAX_TOKENS_DIRECTOR = 600
 
-# Koiné: pool de agentes foráneos/de contacto y periféricos que se rotan a la
-# escena cada turno. Sin esto solo hablan ~6 caquetíos nucleares y no hay
-# contacto dialectal — la mezcla que después se asienta en koiné. Se filtra a
-# los que existen en ALL_AGENTS al primer uso (run_turn).
-_KOINE_ROTACION = [
-    "Tariwa", "Kawa-ni", "Piru-sha", "Tari-ko", "Wata-ni",   # guaycarí
-    "Nabaraka", "Raka-bi", "Chorota",                          # jirajara/gayón
-    "Marokoto-ni", "Kadushi",                                  # caribe / insular
-    "Watapana", "Dara-ko", "Biro-ko", "Paugis-sha",           # caquetíos periféricos
+# Koiné: roster FIJO de participantes (población constante desde el día 1). Se
+# rota una ventana sobre este roster cada turno, de modo que todos hablan en los
+# primeros ~2 días — a diferencia de la entrada gradual anterior, que inflaba la
+# distancia idiolectal en el medio del run y confundía la métrica de convergencia.
+# Mezcla caquetíos nucleares + periféricos + foráneos/de contacto (la mezcla que
+# se asienta en koiné). Se filtra a los existentes en ALL_AGENTS al usarse.
+PARTICIPANTES_KOINE = [
+    # caquetíos nucleares (formadores de norma)
+    "Manaure", "Shaboro", "Nubiri-sha", "Buio-sha", "Tawaka", "Dare-nu",
+    "Corie-ko", "Paugis-sha",
+    # caquetíos periféricos
+    "Watapana", "Dara-ko", "Biro-ko", "Saruro-sha", "Chiriguare",
+    # contacto insular / caribe
+    "Kadushi", "Marokoto-ni",
+    # foráneos (aportantes de la mezcla)
+    "Tariwa", "Kawa-ni", "Piru-sha", "Tari-ko", "Wata-ni",
+    "Nabaraka", "Raka-bi", "Chorota",
 ]
 
 # Constante de identidad lingüística — inyectada en TODOS los agentes
@@ -373,16 +381,14 @@ def run_turn(
             if a in ALL_AGENTS and a not in ("toda_la_comunidad", "guerreros")
         ] or state.agentes_en_escena[:5]
     else:
-        # Koiné: base de escena + rotación de foráneos/periféricos para que el
-        # contacto dialectal ocurra (se intercalan para sobrevivir el slice [:6]).
-        base = list(state.agentes_en_escena)
-        pool = [a for a in _KOINE_ROTACION if a in ALL_AGENTS]
-        if pool:
-            k = state.turno % len(pool)
-            foraneos = [pool[k], pool[(k + 1) % len(pool)]]
-            agentes_activos = base[:4] + foraneos
+        # Koiné: ventana rotatoria de 6 sobre el roster FIJO de participantes,
+        # avanzando 6 por turno → todos hablan en ~2 días (población constante).
+        roster = [a for a in PARTICIPANTES_KOINE if a in ALL_AGENTS]
+        if roster:
+            k = (state.turno * 6) % len(roster)
+            agentes_activos = [roster[(k + i) % len(roster)] for i in range(6)]
         else:
-            agentes_activos = base
+            agentes_activos = state.agentes_en_escena
 
     if verbose:
         print(f"\n{'='*60}")
@@ -708,6 +714,7 @@ def auto_mode(
     }
     campo = CampoLexico()
     serie_distancia: list[tuple[int, float]] = []
+    participantes: set[str] = set()   # agentes que REALMENTE hablaron (para la métrica)
 
     # Inicializar DB (CurianaDB real o CurianaDBMock si no está configurada)
     db = get_db()
@@ -729,21 +736,28 @@ def auto_mode(
     print(f"{'='*60}\n")
 
     for t in range(turnos):
-        run_turn(
+        interactions = run_turn(
             client, state, memory, lexico, observer,
             verbose=verbose, db=db, run_id=run_id,
             difusion=difusion, idiolectos=idiolectos, campo=campo,
         )
+        participantes.update(i["agent"] for i in interactions)
 
         # Reporte al final de cada día
         if state.turno == 1 and state.dia > 1:  # acaba de cambiar de día
             dia_terminado = state.dia - 1
-            dist = distancia_idiolectal(idiolectos)
+            # Distancia medida SOLO sobre quienes hablaron (población real)
+            dist = distancia_idiolectal(idiolectos, solo=participantes)
             serie_distancia.append((dia_terminado, dist))
+            if db and run_id:
+                try:
+                    db.save_koine_metric(run_id, dia_terminado, dist, len(participantes))
+                except Exception:
+                    pass
             if verbose:
                 print(observer.reporte_dia(dia_terminado))
-                print(f"  ◇ Koiné — distancia idiolectal media: {dist} "
-                      f"(↓ = converge hacia koiné)")
+                print(f"  ◇ Koiné — distancia idiolectal ({len(participantes)} agentes): "
+                      f"{dist}  (↓ = converge hacia koiné)")
 
         # Detección de cambio de estación
         if state.estacion != estacion_anterior:

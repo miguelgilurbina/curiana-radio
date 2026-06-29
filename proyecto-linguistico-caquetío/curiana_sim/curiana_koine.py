@@ -251,16 +251,21 @@ def _coseno(a: Counter, b: Counter) -> float:
     return num / (na * nb) if na and nb else 0.0
 
 
-def distancia_idiolectal(idiolectos: dict[str, "IdiolectoAgente"], min_formas: int = 5) -> float:
+def distancia_idiolectal(idiolectos: dict[str, "IdiolectoAgente"], min_formas: int = 5,
+                         solo: Optional[set] = None) -> float:
     """Distancia idiolectal media (1 - coseno) entre pares de agentes activos.
 
     Es la firma de la koineización: DEBE CONTRAERSE en el tiempo. Solo se
-    consideran agentes con vocabulario suficiente (min_formas), para no medir
-    ruido de agentes que apenas hablaron.
+    consideran agentes con vocabulario suficiente (min_formas).
+
+    `solo`: si se pasa un conjunto de nombres, restringe la medición a esos
+    agentes (los que REALMENTE hablaron) — clave porque los idiolectos se
+    pre-cargan con formas-semilla para los 60 agentes, y medir sobre todos
+    diluiría la señal con vectores estáticos de quienes nunca participaron.
     """
     vectores = [
-        idio.vector() for idio in idiolectos.values()
-        if len(idio.vector()) >= min_formas
+        idio.vector() for nombre, idio in idiolectos.items()
+        if (solo is None or nombre in solo) and len(idio.vector()) >= min_formas
     ]
     if len(vectores) < 2:
         return 0.0
