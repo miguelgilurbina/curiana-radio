@@ -6836,6 +6836,39 @@ PATRON_NEOLOGISMO = re.compile(
 )
 
 
+# ── Compuerta de calidad de neologismos (guardarraíl de la koiné) ──
+# Sin esto, el refuerzo por frecuencia FIJA y propaga basura española
+# (suave-bana-ni, tension-bana-chi, boca-pana se adoptaron en runs previos)
+# tan eficientemente como los aciertos. Se rechazan ANTES de poder competir.
+# Raíces castellanas frecuentes con equivalente caquetío; si un componente del
+# neologismo es una de estas (o una stopword), delata fuga.
+RAICES_ESPANOLAS = {
+    "suave", "tension", "tensión", "calma", "boca", "fuerte", "fuerza",
+    "nuevo", "nueva", "viejo", "vieja", "agua", "fuego", "tierra", "viento",
+    "sol", "luna", "mar", "cielo", "medida", "fluir", "diseno", "diseño",
+    "profundo", "profunda", "listo", "listos", "permiso", "dolor", "alma",
+    "casa", "gente", "dios", "espiritu", "espíritu", "sombra", "luz", "noche",
+    "dia", "día", "camino", "corazon", "corazón", "sangre", "muerte", "vida",
+    "amor", "miedo", "hijo", "hija", "madre", "padre", "hombre", "mujer",
+    "comer", "beber", "dormir", "hablar", "pensar", "mirar", "grande",
+    "pequeno", "pequeño", "bueno", "buena", "malo", "mala", "rio", "río",
+}
+
+
+def neologismo_valido(forma: str, componentes: str = "") -> bool:
+    """True si la FORMA del neologismo no contiene raíces/stopwords españolas.
+    Solo se chequea la forma (la palabra acuñada): el campo `componentes` es la
+    explicación del agente y va naturalmente en español ('mirar-hacia-el-cerro'),
+    así que chequearlo daría falsos positivos. Filtro para que la koiné no fije
+    préstamos castellanos disfrazados de palabra acuñada (suave-bana-ni, etc.).
+    `componentes` se acepta por compatibilidad de firma pero no se inspecciona."""
+    for parte in re.split(r"[-+\s,;]+", (forma or "").lower()):
+        parte = parte.strip(" *").strip()
+        if parte and (parte in ES_STOPWORDS or parte in RAICES_ESPANOLAS):
+            return False
+    return True
+
+
 def extraer_neologismos_del_texto(
     texto: str,
     autor: str,
@@ -6848,6 +6881,11 @@ def extraer_neologismos_del_texto(
         forma = match.group(1).strip().lower()
         componentes = match.group(2).strip()
         significado = match.group(3).strip()
+
+        # Compuerta de calidad: descartar neologismos con raíz española antes
+        # de que entren a competir/fijarse en la koiné (suave-bana-ni, etc.).
+        if not neologismo_valido(forma, componentes):
+            continue
 
         # Elegir el afijo de MAYOR longitud que case (evita que "-ana" gane sobre
         # "-bana" por orden de dict — auditoría Opus B6). Sufijo tiene prioridad
@@ -6990,13 +7028,36 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
             return True
         return False
 
-    usadas   = [t for t in tokens if es_arahuaco(t)]
-    esp_func = [t for t in tokens if t in ES_STOPWORDS]
+    # Homógrafos español/caquetío: misma forma, distinta lengua. "para" =
+    # español "for" vs caquetío "para" (mar), palabra central de la cultura
+    # marina caquetía. Se desambiguan por CONTEXTO en vez de sacrificar el
+    # caquetío: si un vecino inmediato es arahuaco, es la palabra caquetía;
+    # si está rodeada de español, es la preposición.
+    HOMOGRAFOS_CAQ = {"para"}
+
+    usadas = []
+    esp_func = []
+    for i, t in enumerate(tokens):
+        if t in HOMOGRAFOS_CAQ and t in activos:
+            ventana = tokens[max(0, i - 1):i] + tokens[i + 1:i + 2]
+            if any((v not in ES_STOPWORDS) and es_arahuaco(v) for v in ventana):
+                usadas.append(t)       # vecino arahuaco → palabra caquetía (mar)
+            else:
+                esp_func.append(t)     # rodeada de español → preposición
+        elif es_arahuaco(t):
+            usadas.append(t)
+        elif t in ES_STOPWORDS:
+            esp_func.append(t)
     neos     = PATRON_NEOLOGISMO.findall(texto)
     aspectos = _aspectos_morfologicos(tokens)
 
     # ── Separar caquetío real de préstamo de otra lengua arahuaca viva ──
     familias = {t: _familia_de_token(t) for t in set(usadas)}
+    # El homógrafo, cuando el contexto lo resolvió como caquetío, ES caquetío
+    # (no proto-arahuaco): "para"=mar es léxico caquetío central, no préstamo.
+    for h in HOMOGRAFOS_CAQ:
+        if h in familias:
+            familias[h] = "caquetío"
     caquetio_tokens = [t for t in usadas if familias[t] == "caquetío"]
     otro_arahuaco_tokens = [t for t in usadas if familias[t] != "caquetío"]
 
