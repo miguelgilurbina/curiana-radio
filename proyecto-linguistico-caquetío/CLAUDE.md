@@ -51,11 +51,10 @@ curiana_dashboard/  → Next.js 14 + Tailwind + Recharts + Supabase JS
 > Supabase local:
 > ```bash
 > cd curiana_sim && supabase start   # levanta Docker; ver supabase/config.toml
->                                     # (puertos default 54321-54329; tras
->                                     # `supabase start` PostgREST a veces no
->                                     # recarga el cache de esquema → usar
->                                     # `docker exec -i supabase_db_curiana_sim
->                                     #  psql -U postgres -d postgres` directo)
+>                                     # (puertos 64321-64329, NO los default
+>                                     #  54321-54329: esos los usan otros
+>                                     #  proyectos supabase locales como
+>                                     #  fintech.benditaia.cl. API=64321 DB=64322)
 > ```
 > `curiana_sim/.env` ya tiene ambos bloques (local activo, cloud comentado)
 > — para volver a cloud, intercambiar qué bloque está comentado.
@@ -63,7 +62,7 @@ curiana_dashboard/  → Next.js 14 + Tailwind + Recharts + Supabase JS
 ```bash
 # curiana_sim/.env  (ver .env.example)
 ANTHROPIC_API_KEY=sk-ant-...       # obligatorio
-SUPABASE_URL=http://127.0.0.1:54321   # local (supabase start). Sin esto, modo JSON local.
+SUPABASE_URL=http://127.0.0.1:64321   # local (supabase start). Sin esto, modo JSON local.
 SUPABASE_SERVICE_KEY=eyJ...           # service_role key local (ver `supabase status`)
 LANGSMITH_API_KEY=ls__...             # opcional
 LANGSMITH_PROJECT=curiana             # opcional
@@ -71,7 +70,7 @@ LANGSMITH_PROJECT=curiana             # opcional
 
 ```bash
 # curiana_dashboard/.env.local  (ver .env.local.example)
-NEXT_PUBLIC_SUPABASE_URL=http://127.0.0.1:54321
+NEXT_PUBLIC_SUPABASE_URL=http://127.0.0.1:64321
 NEXT_PUBLIC_SUPABASE_ANON_KEY=...     # anon key local (ver `supabase status`)
 ```
 
