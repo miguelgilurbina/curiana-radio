@@ -6,7 +6,7 @@ Proyecto de investigación + experimento computacional: una simulación multi-ag
 
 ```
 curiana_sim/        → Python 3.11+ (simulación)
-  curiana_lexicon.py      → vocabulario de 1703 palabras + reglas morfológicas + prompts
+  curiana_lexicon.py      → vocabulario de 1262 palabras (activas; 441 hipotéticas aisladas en lexicon_candidatos.py) + reglas morfológicas + prompts
                             (muestra_caquetio_dinamica() prioriza caquetío por chunking contextual)
   curiana_agents.py       → 60 agentes históricos en 3 tiers (caciques, adultos, jóvenes)
   curiana_orchestrator_v2.py → orquestador principal (Claude Haiku por agente)
@@ -17,21 +17,21 @@ curiana_sim/        → Python 3.11+ (simulación)
                             grafo social + exposición acumulada) + variación dialectal por etnia
   curiana_state.py        → estado del mundo (día, estación, eventos, locaciones)
   curiana_database.py     → Supabase client + LangSmith wrapper + language_composition()
-                            + normalize_source_language() (9 categorías, ver abajo)
+                            + normalize_source_language() (8 categorías activas, ver abajo)
   arahuaco_comparative.py → método comparativo (transducir, COGNADOS, reconstruir_caquetio)
   supabase/migrations/    → schema versionado (init + fixes; supabase_schema.sql es referencia)
 
 curiana_dashboard/  → Next.js 14 + Tailwind + Recharts + Supabase JS
   app/page.tsx            → dashboard en tiempo real (Supabase real-time subscriptions)
-  app/lexicon/page.tsx    → explorador del léxico (1703 palabras, 9 categorías, paginado)
+  app/lexicon/page.tsx    → explorador del léxico (1262 palabras, 8 categorías, paginado)
   app/neologisms/page.tsx → palabras inventadas por los agentes (propuesto/adoptado/rechazado)
   components/LanguageDriftChart.tsx → area chart de composición lingüística por turno
   components/AgentFeed.tsx          → feed en vivo de respuestas de agentes
-  lib/supabase.ts         → cliente Supabase + tipos TypeScript + LANG_COLORS (9 categorías)
+  lib/supabase.ts         → cliente Supabase + tipos TypeScript + LANG_COLORS (8 categorías)
 ```
 
 > ⚠️ **Queries a la tabla `lexicon`:** PostgREST limita cada respuesta a
-> `max_rows` (1000, ver `supabase/config.toml`). Con 1703 palabras, cualquier
+> `max_rows` (1000, ver `supabase/config.toml`). Con 1262 palabras, cualquier
 > query nueva sobre `lexicon` sin `.range()` se trunca silenciosamente.
 > Pagina con `.range(desde, desde+999)` hasta que la página devuelta tenga
 > menos de 1000 filas (ver `loadLexicon()` en `app/page.tsx` o `app/lexicon/page.tsx`).
@@ -51,9 +51,11 @@ curiana_dashboard/  → Next.js 14 + Tailwind + Recharts + Supabase JS
 > Supabase local:
 > ```bash
 > cd curiana_sim && supabase start   # levanta Docker; ver supabase/config.toml
->                                     # (puertos 64321-64329, no los default
->                                     # 54321-54329, para no chocar con otros
->                                     # proyectos Supabase locales)
+>                                     # (puertos default 54321-54329; tras
+>                                     # `supabase start` PostgREST a veces no
+>                                     # recarga el cache de esquema → usar
+>                                     # `docker exec -i supabase_db_curiana_sim
+>                                     #  psql -U postgres -d postgres` directo)
 > ```
 > `curiana_sim/.env` ya tiene ambos bloques (local activo, cloud comentado)
 > — para volver a cloud, intercambiar qué bloque está comentado.
@@ -61,7 +63,7 @@ curiana_dashboard/  → Next.js 14 + Tailwind + Recharts + Supabase JS
 ```bash
 # curiana_sim/.env  (ver .env.example)
 ANTHROPIC_API_KEY=sk-ant-...       # obligatorio
-SUPABASE_URL=http://127.0.0.1:64321   # local (supabase start). Sin esto, modo JSON local.
+SUPABASE_URL=http://127.0.0.1:54321   # local (supabase start). Sin esto, modo JSON local.
 SUPABASE_SERVICE_KEY=eyJ...           # service_role key local (ver `supabase status`)
 LANGSMITH_API_KEY=ls__...             # opcional
 LANGSMITH_PROJECT=curiana             # opcional
@@ -69,7 +71,7 @@ LANGSMITH_PROJECT=curiana             # opcional
 
 ```bash
 # curiana_dashboard/.env.local  (ver .env.local.example)
-NEXT_PUBLIC_SUPABASE_URL=http://127.0.0.1:64321
+NEXT_PUBLIC_SUPABASE_URL=http://127.0.0.1:54321
 NEXT_PUBLIC_SUPABASE_ANON_KEY=...     # anon key local (ver `supabase status`)
 ```
 
@@ -89,7 +91,7 @@ cd curiana_sim
 pip install -r requirements.txt
 python test_quick.py          # verifica el stack sin API keys (debe dar 8/8 OK)
 supabase start                 # levanta Supabase local (ver nota de egress arriba)
-python curiana_database.py seed  # siembra las 1703 palabras en Supabase
+python curiana_database.py seed  # siembra las 1262 palabras activas en Supabase
 
 # Correr simulación
 python curiana_orchestrator_v2.py                    # modo interactivo
@@ -110,7 +112,7 @@ npx vercel           # deploy a Vercel — ⚠️ ver nota de egress: activar
 
 ## Metodología del lexicón y validación
 
-El lexicón distingue 9 categorías de `fuente` (ver `normalize_source_language()`
+El lexicón activo distingue 8 categorías de `fuente` (ver `normalize_source_language()`
 en `curiana_database.py`), porque "caquetío" mezclaba históricamente dato real
 con especulación sin marcar:
 
@@ -122,14 +124,17 @@ con especulación sin marcar:
   verbos básicos que `prompt_reglas_completo()`/`breve()` presentan a los
   agentes desde el día 1. No siempre atestiguado, pero es la lengua de la
   simulación, no un préstamo.
-- **`hipotético-no-verificado`** (441) — palabras generadas por
-  `reconstruir_caquetio_gaps.py` transduciendo fonológicamente CUALQUIER
-  palabra wayunaiki/lokono/taíno con la misma glosa, **sin verificar
-  cognación real** contra `COGNADOS` (el único set curado, 37 entradas). La
-  minería de pares objetivos (`minar_pares_validacion.py`) mostró ~80% de
-  fallos contra datos reales. No cuentan como caquetío para scoring ni se
-  muestran a los agentes — quedan en el lexicón para revisión futura, no
-  se descartaron.
+- **`hipotético-no-verificado`** (441) — **AISLADAS del léxico activo**
+  (2026-06-28) a `curiana_sim/lexicon_candidatos.py` (`CANDIDATOS_NO_VERIFICADOS`).
+  Palabras generadas por `reconstruir_caquetio_gaps.py` transduciendo
+  fonológicamente CUALQUIER palabra wayunaiki/lokono/taíno con la misma glosa,
+  **sin verificar cognación real** contra `COGNADOS` (el único set curado, 37
+  entradas). La minería de pares objetivos (`minar_pares_validacion.py`) mostró
+  ~80% de fallos contra datos reales. Estando en `VOCABULARIO_BASE` producían
+  falsos positivos en `score_linguistico` (el "la"/"para" español matcheaba
+  contra entradas hipotéticas), así que se sacaron del léxico y de Supabase. No
+  se importan ni se siembran; quedan como material para una futura validación
+  sistemática.
 - **wayunaiki (781), lokono (228), taíno (57), proto-arahuaco (9), kalinago
   (19), kalinago-caribe-overlay (4), jirajaroide-contacto (7)** — lenguas
   hermanas/de contacto, tratadas como tan ajenas como el español para
@@ -192,7 +197,8 @@ Real-time en Supabase: `agent_responses`, `turns`, `neologisms`, `agent_profiles
    egress arriba) antes de cualquier deploy público del dashboard.
 4. Seguir fortaleciendo la Capa 2 minando más fuentes publicadas (ver
    sección de metodología arriba) si se quiere reconstruir más caquetío
-   con base real, en vez de dejar las 441 `hipotético-no-verificado` sin usar.
+   con base real, validando las 441 `hipotético-no-verificado` ya aisladas en
+   `lexicon_candidatos.py` (minar fuentes y conservar solo las que pasen).
 
 ## Archivos de referencia
 
