@@ -6974,6 +6974,12 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
     # match por palabra completa, contando también prefijos posesivos:
     # ta-barsure cuenta como arahuaco aunque "ta-barsure" no esté literal en léxico
     def es_arahuaco(tok: str) -> bool:
+        # Prioridad del español: una stopword castellana NUNCA cuenta como
+        # arahuaco, aunque colisione con una entrada del léxico (de->lokono,
+        # una->lokono, para->proto-arahuaco). Evita el doble conteo que las
+        # hacía sumar densidad Y penalizar a la vez.
+        if tok in ES_STOPWORDS:
+            return False
         if tok in activos:
             return True
         for pref in ("ta", "wa", "ma", "ka"):
