@@ -403,6 +403,18 @@ class CurianaDB:
             on_conflict="run_id,day",
         ).execute()
 
+    def save_koine_lexicon(self, run_id: str, concepto_id: str, descripcion: str,
+                           form: str, fijada_dia: int,
+                           soporte: Optional[float] = None, n_variantes: Optional[int] = None):
+        """Persiste una entrada del diccionario koiné (forma fijada por
+        competencia para un referente nuevo). Upsert por (run_id, concepto_id)."""
+        self.client.table("koine_lexicon").upsert(
+            {"run_id": run_id, "concepto_id": concepto_id, "descripcion": descripcion,
+             "form": form, "fijada_dia": fijada_dia, "soporte": soporte,
+             "n_variantes": n_variantes},
+            on_conflict="run_id,concepto_id",
+        ).execute()
+
     # ── Phrase etymologies ────────────────────────────────────────────
 
     def save_phrase_etymology(
@@ -564,6 +576,7 @@ class CurianaDBMock:
         import uuid; return str(uuid.uuid4())
     def update_neologism_status(self, *a, **kw): pass
     def save_koine_metric(self, *a, **kw): pass
+    def save_koine_lexicon(self, *a, **kw): pass
     def save_phrase_etymology(self, *a, **kw): pass
     def latest_run(self): return None
     def language_drift(self, *a): return []

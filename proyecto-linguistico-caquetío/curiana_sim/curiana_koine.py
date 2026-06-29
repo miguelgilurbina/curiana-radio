@@ -302,6 +302,135 @@ def prompt_idiolecto(idio: "IdiolectoAgente") -> str:
 
 
 # ══════════════════════════════════════════════════════════════════════
+# VI. FIJACIÓN POR COMPETENCIA — la koiné selecciona un nombre por concepto
+# ══════════════════════════════════════════════════════════════════════
+# Hallazgo (run 9bb920eb): la competencia NO ocurre sola — cada agente acuña
+# para un concepto distinto, así que no hay variantes rivales que fijar. Una
+# koiné, en cambio, nace de una NECESIDAD REFERENCIAL COMPARTIDA: aparece algo
+# nuevo que VARIOS deben nombrar, cada uno propone, y la comunidad fija una
+# forma. Por eso la fijación viene en dos piezas: (a) inducir la competencia con
+# "eventos de nombramiento" (REFERENTES_NOVEDOSOS), y (b) resolverla aquí.
+
+# Referentes sin palabra caquetía: cosas nuevas (contacto, novedad natural) que
+# la comunidad necesita nombrar. Cada uno dispara una competencia.
+REFERENTES_NOVEDOSOS: list[dict] = [
+    {"id": "cuentas_vidrio", "desc": "unas cuentas brillantes y duras que un mercader trajo de tierras lejanas, nunca vistas aquí"},
+    {"id": "cometa",         "desc": "una estrella con cola que cruza el cielo varias noches seguidas"},
+    {"id": "eclipse",        "desc": "el sol se oscurece en pleno día y luego vuelve, como si algo lo cubriera"},
+    {"id": "fiebre_manchas", "desc": "una fiebre nueva que llena la piel de manchas, que ningún piache había visto"},
+    {"id": "metal_amarillo", "desc": "un trozo de metal amarillo y pesado, distinto del oro conocido, llegado por trueque"},
+    {"id": "bestia_orilla",  "desc": "un animal enorme nunca visto, varado y muerto en la orilla del golfete"},
+    {"id": "marea_roja",     "desc": "el agua del golfete se tiñe de rojo durante días y mata a los peces"},
+    {"id": "tambor_caribe",  "desc": "un tambor de los caribe con un sonido grave y distinto a los nuestros"},
+    {"id": "planta_quema",   "desc": "una planta nueva que cura la herida pero quema la boca al probarla"},
+    {"id": "cuenta_insular", "desc": "una forma de contar el valor del trueque que enseñó el mensajero de las islas"},
+]
+
+
+class CompetenciaLexica:
+    """Acumula soporte (frecuencia × prestigio) de las formas rivales que
+    compiten por un MISMO concepto nuevo, y fija una como entrada koiné cuando
+    domina su concepto por encima de un umbral."""
+
+    def __init__(self, umbral_fijacion: float = 0.55, soporte_minimo: float = 3.0):
+        # concepto_id -> {desc, variantes: Counter(forma->soporte), fijada, fijada_dia}
+        self.referentes: dict[str, dict] = {}
+        self._forma2concepto: dict[str, str] = {}
+        self.umbral = umbral_fijacion
+        self.soporte_min = soporte_minimo
+
+    def _prestigio(self, agente: str) -> float:
+        try:
+            from curiana_social import prestigio_de
+            return prestigio_de(agente)
+        except Exception:
+            return 0.3
+
+    def activar(self, concepto_id: str, desc: str):
+        self.referentes.setdefault(concepto_id, {
+            "desc": desc, "variantes": Counter(), "fijada": None, "fijada_dia": None})
+
+    def proponer(self, concepto_id: str, forma: str, agente: str):
+        """Un agente acuña `forma` para `concepto_id` en un evento de nombramiento."""
+        ref = self.referentes.get(concepto_id)
+        if ref is None or ref["fijada"] or not forma:
+            return
+        ref["variantes"][forma] += 1.0 + self._prestigio(agente)
+        self._forma2concepto[forma.lower()] = concepto_id
+
+    def registrar_uso(self, forma: str, agente: str):
+        """Reuso posterior de una forma en competencia → suma soporte (más leve
+        que proponer). Es lo que hace que una variante gane sobre las otras."""
+        cid = self._forma2concepto.get((forma or "").lower())
+        if not cid:
+            return
+        ref = self.referentes[cid]
+        if ref["fijada"]:
+            return
+        ref["variantes"][forma] += 0.5 + self._prestigio(agente)
+
+    def evaluar_fijacion(self, dia: int) -> list[tuple[str, str]]:
+        """Fija las competencias donde una variante domina. Devuelve las recién
+        fijadas [(concepto_id, forma)]."""
+        nuevas = []
+        for cid, ref in self.referentes.items():
+            if ref["fijada"] or len(ref["variantes"]) < 2:
+                continue
+            total = sum(ref["variantes"].values())
+            forma, sup = ref["variantes"].most_common(1)[0]
+            if total >= self.soporte_min and sup / total >= self.umbral:
+                ref["fijada"] = forma
+                ref["fijada_dia"] = dia
+                nuevas.append((cid, forma))
+        return nuevas
+
+    def activas(self) -> dict[str, dict]:
+        return {cid: ref for cid, ref in self.referentes.items()
+                if not ref["fijada"] and ref["variantes"]}
+
+    def prompt_competencias(self, top: int = 4) -> str:
+        """Surface las competencias abiertas para que los agentes REUSEN una
+        forma rival en vez de inventar otra — así una se impone."""
+        lineas = []
+        for ref in self.activas().values():
+            formas = [f for f, _ in ref["variantes"].most_common(top)]
+            if formas:
+                lineas.append(f"{ref['desc']} → {', '.join(formas)}")
+        if not lineas:
+            return ""
+        return ("[La comunidad aún busca nombre para cosas nuevas. Si hablas de "
+                "alguna, ELIGE una de las formas que ya circulan, no inventes otra]:\n  "
+                + "\n  ".join(lineas))
+
+    def diccionario_koine(self) -> dict[str, dict]:
+        """{concepto_id: {desc, forma, dia, soporte, n_variantes}} de las fijadas."""
+        out = {}
+        for cid, ref in self.referentes.items():
+            if ref["fijada"]:
+                out[cid] = {
+                    "desc": ref["desc"], "forma": ref["fijada"],
+                    "dia": ref["fijada_dia"],
+                    "soporte": round(ref["variantes"][ref["fijada"]], 2),
+                    "n_variantes": len(ref["variantes"]),
+                }
+        return out
+
+    def reporte(self) -> str:
+        lines = ["\n  ── KOINÉ — fijación por competencia ──"]
+        fijadas = self.diccionario_koine()
+        lines.append(f"  Conceptos nombrados: {len(self.referentes)} | "
+                     f"fijados: {len(fijadas)} | en disputa: {len(self.activas())}")
+        for cid, d in fijadas.items():
+            lines.append(f"    ✓ {d['desc'][:42]:42} → {d['forma']}  "
+                         f"(de {d['n_variantes']} variantes, día {d['dia']})")
+        for cid, ref in self.activas().items():
+            top = ref["variantes"].most_common(3)
+            comp = ", ".join(f"{f}({s:.1f})" for f, s in top)
+            lines.append(f"    … {ref['desc'][:42]:42} ⚔ {comp}")
+        return "\n".join(lines)
+
+
+# ══════════════════════════════════════════════════════════════════════
 # Smoke test
 # ══════════════════════════════════════════════════════════════════════
 
@@ -332,4 +461,18 @@ if __name__ == "__main__":
     campo.registrar(comunes)
     campo.registrar(["taya", "para"])
     print(f"\n  campo léxico top: {campo.top(4)}")
+
+    # ── competencia: 3 agentes acuñan rivales para un concepto; uno gana ──
+    comp = CompetenciaLexica(soporte_minimo=2.0)
+    comp.activar("cometa", "estrella con cola")
+    comp.proponer("cometa", "kali-dusha", "Manaure")   # cacique, prestigio alto
+    comp.proponer("cometa", "suka-wana", "Tariwa")      # foráneo, prestigio bajo
+    comp.proponer("cometa", "kali-rua", "Kawa-ni")
+    # reuso: la forma del prestigioso se propaga
+    for _ in range(4):
+        comp.registrar_uso("kali-dusha", "Shaboro")
+    fij = comp.evaluar_fijacion(dia=5)
+    print(f"  competencia 'cometa' fijada: {fij}")
+    assert any(f == "kali-dusha" for _, f in fij), "debería ganar la forma del prestigioso reusada"
+    print(f"  diccionario koiné: {comp.diccionario_koine()}")
     print("  ✓ smoke test OK")

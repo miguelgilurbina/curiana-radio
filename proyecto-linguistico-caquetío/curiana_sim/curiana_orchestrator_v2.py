@@ -53,6 +53,8 @@ from curiana_social import (
 from curiana_koine import (
     IdiolectoAgente,
     CampoLexico,
+    CompetenciaLexica,
+    REFERENTES_NOVEDOSOS,
     emocionar_de,
     prompt_emocionar,
     prompt_idiolecto,
@@ -176,6 +178,7 @@ def call_agent(
     agent_memory: Optional[str] = None,
     difusion: Optional[DifusionLexica] = None,
     idiolectos: Optional[dict] = None,
+    competencia: Optional["CompetenciaLexica"] = None,
 ) -> str:
     agent = ALL_AGENTS.get(agent_name)
     if not agent:
@@ -237,6 +240,12 @@ def call_agent(
         system_parts.append(bloque_lexico)
     if sugerencia_contagio:
         system_parts.append(sugerencia_contagio)
+    # Competencias léxicas abiertas: empuja a reusar una forma rival que ya
+    # circula (en vez de inventar otra) → una se impone y se fija en la koiné.
+    if competencia is not None:
+        bloque_comp = competencia.prompt_competencias()
+        if bloque_comp:
+            system_parts.append(bloque_comp)
     # Idiolecto acumulado (entrenchment): "tu manera de hablar" derivada del
     # perfil de frecuencia del agente. Reemplaza/enriquece la memoria cruda.
     if idiolectos is not None and agent_name in idiolectos:
@@ -352,8 +361,18 @@ def run_turn(
     difusion: Optional[DifusionLexica] = None,
     idiolectos: Optional[dict] = None,
     campo: Optional[CampoLexico] = None,
+    competencia: Optional[CompetenciaLexica] = None,
+    naming_referente: Optional[dict] = None,
 ) -> list[dict]:
     interactions = []
+
+    # Evento de nombramiento: aparece un referente sin palabra caquetía y se
+    # presenta a TODOS los agentes activos este turno → acuñan formas rivales
+    # para el MISMO concepto (induce la competencia que la koiné luego fija).
+    naming_concepto: Optional[str] = None
+    if naming_referente and competencia is not None:
+        naming_concepto = naming_referente["id"]
+        competencia.activar(naming_concepto, naming_referente["desc"])
 
     # 0. Registrar turno en DB
     turn_id: Optional[str] = None
@@ -399,7 +418,16 @@ def run_turn(
         print(f"{'='*60}\n")
 
     # 2. Estímulo del turno
-    if user_input:
+    if naming_concepto:
+        stimulus = (
+            f"[ALGO NUEVO EN LA CURIANA]: {naming_referente['desc']}. "
+            f"Esto no tiene nombre en caquetío todavía. Nómbralo TÚ con morfemas "
+            f"caquetíos y dilo: [forma: componentes = significado]. Reacciona a la "
+            f"cosa nueva y nómbrala."
+        )
+        if verbose:
+            print(f"  ✦ NOMBRAMIENTO: {naming_referente['desc'][:60]}")
+    elif user_input:
         stimulus = user_input
     elif state.evento_del_turno:
         stimulus = f"[Situación]: {state.evento_del_turno}. ¿Cómo reaccionas?"
@@ -418,7 +446,7 @@ def run_turn(
         mem = memory.get(agent_name)
         response = call_agent(
             client, agent_name, state, lexico, observer, stimulus, mem,
-            difusion=difusion, idiolectos=idiolectos,
+            difusion=difusion, idiolectos=idiolectos, competencia=competencia,
         )
 
         interactions.append({
@@ -451,6 +479,18 @@ def run_turn(
                     difusion.propagar_uso(forma, agent_name, state)
             for neo in getattr(registro, "neologismos_extraidos", []):
                 difusion.propagar_uso(neo.forma, agent_name, state)
+
+        # Competencia léxica: en un turno de nombramiento, las formas acuñadas
+        # son variantes rivales del concepto presentado. En cualquier turno, el
+        # reuso de una forma ya en competencia le suma soporte (la hace ganar).
+        if competencia is not None:
+            for neo in getattr(registro, "neologismos_extraidos", []):
+                if naming_concepto:
+                    competencia.proponer(naming_concepto, neo.forma, agent_name)
+                else:
+                    competencia.registrar_uso(neo.forma, agent_name)
+            for forma in getattr(registro, "palabras_caquetias", []):
+                competencia.registrar_uso(forma, agent_name)
 
         # Koiné: actualizar idiolecto del agente (entrenchment) y campo léxico
         # comunitario (frecuencia para muestreo + métrica de convergencia).
@@ -589,6 +629,7 @@ def interactive_mode(client: anthropic.Anthropic):
         for nm, a in ALL_AGENTS.items()
     }
     campo = CampoLexico()
+    competencia = CompetenciaLexica()
 
     # Inicializar DB (gracefully degraded si no hay Supabase)
     db = get_db()
@@ -607,7 +648,8 @@ def interactive_mode(client: anthropic.Anthropic):
 
         if not user_input:
             run_turn(client, state, memory, lexico, observer, db=db, run_id=run_id,
-                     difusion=difusion, idiolectos=idiolectos, campo=campo)
+                     difusion=difusion, idiolectos=idiolectos, campo=campo,
+                     competencia=competencia)
         elif user_input.lower() == "salir":
             break
         elif user_input.lower() == "estado":
@@ -662,6 +704,7 @@ def interactive_mode(client: anthropic.Anthropic):
                 client, state, memory, lexico, observer,
                 user_input=user_input, db=db, run_id=run_id,
                 difusion=difusion, idiolectos=idiolectos, campo=campo,
+                competencia=competencia,
             )
 
     # Guardar todo
@@ -716,6 +759,13 @@ def auto_mode(
     serie_distancia: list[tuple[int, float]] = []
     participantes: set[str] = set()   # agentes que REALMENTE hablaron (para la métrica)
 
+    # Koiné: competencia léxica (fijación por significado). Cada ~4 turnos se
+    # introduce un referente novedoso sin nombre → varios agentes acuñan formas
+    # rivales → la comunidad fija una por frecuencia × prestigio.
+    competencia = CompetenciaLexica()
+    cadencia_nombramiento = 4
+    referentes_pendientes = list(REFERENTES_NOVEDOSOS)
+
     # Inicializar DB (CurianaDB real o CurianaDBMock si no está configurada)
     db = get_db()
     run_id = db.create_run(
@@ -736,10 +786,16 @@ def auto_mode(
     print(f"{'='*60}\n")
 
     for t in range(turnos):
+        # ¿Toca evento de nombramiento? (cada `cadencia` turnos, si quedan referentes)
+        naming_referente = None
+        if referentes_pendientes and t > 0 and t % cadencia_nombramiento == 0:
+            naming_referente = referentes_pendientes.pop(0)
+
         interactions = run_turn(
             client, state, memory, lexico, observer,
             verbose=verbose, db=db, run_id=run_id,
             difusion=difusion, idiolectos=idiolectos, campo=campo,
+            competencia=competencia, naming_referente=naming_referente,
         )
         participantes.update(i["agent"] for i in interactions)
 
@@ -749,15 +805,23 @@ def auto_mode(
             # Distancia medida SOLO sobre quienes hablaron (población real)
             dist = distancia_idiolectal(idiolectos, solo=participantes)
             serie_distancia.append((dia_terminado, dist))
+            # Evaluar fijación de competencias léxicas del día
+            fijadas = competencia.evaluar_fijacion(dia_terminado)
             if db and run_id:
                 try:
                     db.save_koine_metric(run_id, dia_terminado, dist, len(participantes))
+                    for cid, forma in fijadas:
+                        d = competencia.diccionario_koine().get(cid, {})
+                        db.save_koine_lexicon(run_id, cid, d.get("desc", ""), forma,
+                                              dia_terminado, d.get("soporte"), d.get("n_variantes"))
                 except Exception:
                     pass
             if verbose:
                 print(observer.reporte_dia(dia_terminado))
                 print(f"  ◇ Koiné — distancia idiolectal ({len(participantes)} agentes): "
                       f"{dist}  (↓ = converge hacia koiné)")
+                for cid, forma in fijadas:
+                    print(f"  ◆ Koiné fija: '{cid}' → {forma}")
 
         # Detección de cambio de estación
         if state.estacion != estacion_anterior:
@@ -808,6 +872,9 @@ def auto_mode(
     print("\n  Diccionario koiné emergente (formas más extendidas):")
     for forma, peso in campo.top(15):
         print(f"    {forma:18} {peso:.1f}")
+
+    # ── Fijación por competencia: el diccionario koiné de conceptos nuevos ──
+    print(competencia.reporte())
 
     if reporte_anual:
         print(observer.reporte_anual_llm(anio_simulado))
