@@ -124,17 +124,30 @@ entrenchment: lo que dijiste, lo repetís → deriva individual que compone.
 - **Decaimiento**: formas no usadas en N turnos pierden peso → recambio léxico
   (deja que cosas mueran).
 
-### Competencia y fijación de variantes
-Hoy la adopción es "2 agentes la usan → adoptada", sin resolver competencia.
-Una koiné se forma cuando **variantes que compiten por el mismo significado
-colapsan a una**:
+### Competencia y fijación de variantes  ✅ IMPLEMENTADO (`CompetenciaLexica`)
 
-- Agrupar neologismos/formas por **significado** (glosa).
-- Cuando hay >1 variante para una glosa, compiten por `frecuencia × prestigio`.
-- Los agentes de prestigio (Manaure, Shaboro, Nubiri-sha) **anclan la norma**
-  hacia el caquetío: su uso amplifica la variante.
-- Una variante se declara **fijada** cuando domina su glosa por un umbral de
-  turnos. El conjunto de variantes fijadas = el diccionario de la koiné.
+> **Hallazgo (run 9bb920eb):** la competencia NO ocurre sola. Agrupar por glosa
+> dio CERO competencia — cada agente acuña para un concepto distinto (46
+> neologismos → 46 conceptos). Una koiné nace de una **necesidad referencial
+> compartida**: algo nuevo que VARIOS deben nombrar. Por eso la fijación vino en
+> dos piezas, no una.
+
+**(1) Inductor — eventos de nombramiento.** `REFERENTES_NOVEDOSOS` (10 cosas sin
+palabra caquetía: cuentas de vidrio, cometa, eclipse, metal amarillo, marea
+roja, bestia varada…). Cada ~4 turnos el orquestador presenta un referente a
+TODOS los agentes activos con el mismo `concepto_id` → acuñan formas rivales
+para el MISMO concepto.
+
+**(2) `CompetenciaLexica` — resolución.**
+- Cada variante acumula soporte = `frecuencia × prestigio` de quienes la usan
+  (`proponer` al acuñar, `registrar_uso` al reusar; los agentes de prestigio
+  anclan la norma).
+- `prompt_competencias()` surface las competencias abiertas en el prompt →
+  empuja a REUSAR una forma rival en vez de inventar otra (así una se impone).
+- Una variante se **fija** cuando domina su concepto (≥55% del soporte, soporte
+  mínimo). El conjunto de fijadas = el **diccionario koiné**, persistido en
+  `koine_lexicon`.
+- Validado (run dd1d0c9c): `cuentas_vidrio` → `kali-pica` fijada de 3 rivales.
 
 ### Guardarraíl (prerrequisito, no opcional)
 Si se refuerza frecuencia sin filtrar, la koiné fija basura española
@@ -175,14 +188,16 @@ corpus de topónimos reales del territorio.
 
 ## 9. Orden de implementación
 
-1. `EMOCIONAR` por agente (tier 1 primero) + inyección en el prompt.
-2. `IdiolectoAgente` + `CampoLexico` (estado por run) + pre-carga desde el emocionar.
-3. Inyección "tu manera de hablar" (reemplaza los snippets).
-4. Muestreo ponderado por frecuencia + decaimiento.
-5. Competencia/fijación de variantes por glosa.
-6. Métricas (distancia idiolectal, fijación) + persistencia.
-7. Activar agentes foráneos/periféricos en el loop.
-8. (Prerrequisito de calidad) compuerta de neologismos.
+1. ✅ `EMOCIONAR` por agente + inyección en el prompt.
+2. ✅ `IdiolectoAgente` + `CampoLexico` (estado por run) + pre-carga desde el emocionar.
+3. ✅ Inyección "tu manera de hablar" (reemplaza los snippets).
+4. ⏳ Muestreo ponderado por frecuencia + decaimiento (`CampoLexico` listo; falta
+   conectar los pesos a `muestra_caquetio_dinamica`).
+5. ✅ Competencia/fijación — vía eventos de nombramiento (no por glosa; ver §6).
+6. ✅ Métricas (distancia idiolectal + fijación) + persistencia (`koine_metrics`,
+   `koine_lexicon`).
+7. ✅ Población constante de participantes en el loop (`PARTICIPANTES_KOINE`).
+8. ✅ Compuerta de neologismos (fonotáctica: blocklist + marcadores + bigramas).
 
 ## 10. Referencias
 

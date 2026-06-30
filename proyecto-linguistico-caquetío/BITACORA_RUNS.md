@@ -13,11 +13,56 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 
 | Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |
 |---|---|---|---|---|---|---|
-| 06-29 | `9bb920eb` | 60 / 30 | 32 | 7.5 | **99%** | **Run largo** — población constante, métrica persistida, convergencia −44% |
+| 06-29 | `20091e1f` | 57 / 29 | 30 | 7.4 | **99%** | **Fijación por competencia** — diccionario koiné de 7 conceptos |
+| 06-29 | `9bb920eb` | 60 / 30 | 32 | 7.5 | **99%** | Run largo — población constante, métrica persistida, convergencia −44% |
 | 06-29 | `f8ef263d` | 30 / 15 | 28 | 7.5 | **99%** | Primer run koiné — convergencia confirmada |
 | 06-22 | `2e729f3f` | 30 / 15 | 20 | 7.2 | 92% | Primer run largo calibrado (ver `ANALISIS_RUN_30T_2026-06-22.md`) |
 | 06-29 | `8a4f9da4` | 2 / 1 | 7 | 7.1 | 100% | smoke de persistencia (descartable) |
 | 06-21 | `bdead490` y otros | 1–2 | 6–13 | 6–7 | 8–31% | runs de desarrollo pre-calibración (baseline) |
+
+---
+
+## 2026-06-29 · Run `20091e1f` — Fijación por competencia
+
+**Comando:** `python curiana_orchestrator_v2.py --auto 60 --perfiles` (el proceso
+se cortó en el turno 57/60 por teardown de sesión; analíticamente completo —
+llegó al día 29).
+**Contexto:** primer run con el motor de **fijación por competencia** (eventos
+de nombramiento + `CompetenciaLexica`).
+
+### El diccionario koiné emergente (7 conceptos fijados)
+
+La pieza que faltaba: la koiné ahora **selecciona un nombre por concepto** a
+partir de variantes rivales. Persistido en `koine_lexicon`:
+
+| concepto | forma koiné fijada | (significado) | de N rivales | día |
+|---|---|---|---|---|
+| eclipse | **`ma-kali-bana`** | "orilla donde falta el sol" | 4 | 10 |
+| cometa | **`kali-subo`** | "luz que corre" | 3 | 5 |
+| metal amarillo | **`sulu-pana`** | | 3 | 14 |
+| fiebre con manchas | `ka-bari-tüshi-kali` | | 2 | 9 |
+| tambor caribe | `mana-koto` | | 2 | 17 |
+| marea roja | `duna-kali-biji` | | 2 | 18 |
+| planta que quema | `tüshi-mana-bana` | | 2 | 20 |
+
+**La competencia es genuina:** para "cometa", Paugis-sha y Corie-ko acuñaron
+`kali-subo` de forma **independiente** → convergieron. Para "eclipse" compitieron
+`ma-kali`, `kali-suka`, `kali-suka-biji` y `ma-kali-bana`; ganó la última por
+reuso convergente. Formas morfológicamente caquetías y semánticamente poéticas.
+3 de 10 referentes quedaron en disputa (no toda competencia resuelve — realista).
+
+### Resto
+
+- Caquetío **99%**, score 7.4, 30 agentes, **41 neologismos adoptados**.
+- Convergencia (koine_metrics): `0.6325 → 0.3509` (**−45%**), monótona.
+- Compuerta fonotáctica: sin fugas españolas.
+
+### Pendiente
+
+- Muestreo ponderado por frecuencia (conectar `CampoLexico` a
+  `muestra_caquetio_dinamica`) — único ⏳ del diseño koiné.
+- El diccionario koiné (`koine_lexicon`) es ahora el **insumo de la fase de
+  topónimos**: un topónimo es un referente compartido que necesita nombre.
 
 ---
 
