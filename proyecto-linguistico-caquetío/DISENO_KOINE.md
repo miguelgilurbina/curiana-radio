@@ -191,8 +191,9 @@ corpus de topónimos reales del territorio.
 1. ✅ `EMOCIONAR` por agente + inyección en el prompt.
 2. ✅ `IdiolectoAgente` + `CampoLexico` (estado por run) + pre-carga desde el emocionar.
 3. ✅ Inyección "tu manera de hablar" (reemplaza los snippets).
-4. ⏳ Muestreo ponderado por frecuencia + decaimiento (`CampoLexico` listo; falta
-   conectar los pesos a `muestra_caquetio_dinamica`).
+4. ✅ Muestreo ponderado por frecuencia + decaimiento (`CampoLexico.pesos` →
+   `muestra_caquetio_dinamica`, Efraimidis-Spirakis con base 1.0 para mantener
+   exploración → rich-get-richer).
 5. ✅ Competencia/fijación — vía eventos de nombramiento (no por glosa; ver §6).
 6. ✅ Métricas (distancia idiolectal + fijación) + persistencia (`koine_metrics`,
    `koine_lexicon`).

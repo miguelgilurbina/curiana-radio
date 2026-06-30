@@ -179,6 +179,7 @@ def call_agent(
     difusion: Optional[DifusionLexica] = None,
     idiolectos: Optional[dict] = None,
     competencia: Optional["CompetenciaLexica"] = None,
+    campo: Optional[CampoLexico] = None,
 ) -> str:
     agent = ALL_AGENTS.get(agent_name)
     if not agent:
@@ -208,7 +209,10 @@ def call_agent(
     # del turno: evento del mundo + ubicación + mensaje — ver chunking en
     # curiana_lexicon.categorias_relevantes)
     contexto_turno = f"{world_context} {ubicacion} {user_message}"
-    bloque_lexico = vocabulario_para_agente(tier, lexico, contexto=contexto_turno)
+    pesos_campo = campo.pesos if campo is not None else None
+    bloque_lexico = vocabulario_para_agente(
+        tier, lexico, contexto=contexto_turno, pesos=pesos_campo
+    )
 
     # Feedback lingüístico si el agente tuvo score bajo
     feedback = observer.feedback_para_agente(agent_name)
@@ -447,6 +451,7 @@ def run_turn(
         response = call_agent(
             client, agent_name, state, lexico, observer, stimulus, mem,
             difusion=difusion, idiolectos=idiolectos, competencia=competencia,
+            campo=campo,
         )
 
         interactions.append({
