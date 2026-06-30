@@ -7297,7 +7297,25 @@ def categorias_relevantes(contexto: str, max_extra: int = 4) -> set[str]:
     return set(encontradas[:max_extra])
 
 
-def muestra_caquetio_dinamica(n_por_categoria: int = 18, contexto: str = "") -> str:
+def _muestra_ponderada(opciones, n, pesos):
+    """Muestreo SIN reemplazo ponderado por frecuencia comunitaria
+    (Efraimidis-Spirakis): peso = 1.0 (base, mantiene exploración de formas
+    nuevas) + peso del CampoLexico. Las formas más usadas por la comunidad
+    aparecen más en la muestra → se refuerzan (rich-get-richer → curvas S).
+    Sin `pesos`, cae al muestreo uniforme de siempre."""
+    import random as _random
+    n = min(n, len(opciones))
+    if not pesos:
+        return _random.sample(opciones, n)
+    def clave(item):
+        w = 1.0 + max(0.0, float(pesos.get(item[0], 0.0)))
+        u = _random.random() or 1e-12
+        return u ** (1.0 / w)
+    return sorted(opciones, key=clave, reverse=True)[:n]
+
+
+def muestra_caquetio_dinamica(n_por_categoria: int = 18, contexto: str = "",
+                              pesos: "Optional[dict]" = None) -> str:
     """
     Muestra rotativa de vocabulario caquetío (atestiguado + reconstruido),
     agrupada por categoría semántica. Si se pasa `contexto` (evento del
@@ -7306,13 +7324,17 @@ def muestra_caquetio_dinamica(n_por_categoria: int = 18, contexto: str = "") -> 
     (chunking barato: prioriza lo que el agente probablemente necesite
     decir este turno, en vez de mandar todo el lexicón parejo siempre).
 
+    `pesos` (opcional, del CampoLexico): frecuencia comunitaria por forma. Si
+    se pasa, la muestra dentro de cada categoría se pondera por esa frecuencia
+    (las formas que la comunidad usa más se muestran más → se afianzan). Es el
+    muestreo rich-get-richer del diseño koiné.
+
     Solo entran palabras normalizadas a la familia "caquetío" (incluye
     caquetío-atestiguado y caquetío-reconstruido) — wayunaiki/lokono/taíno
     quedan fuera de esta muestra a propósito: son de respaldo, no la
     prioridad.
     """
     from curiana_database import normalize_source_language
-    import random as _random
 
     por_categoria: dict[str, list[tuple[str, str]]] = {}
     for palabra, datos in VOCABULARIO_BASE.items():
@@ -7334,7 +7356,7 @@ def muestra_caquetio_dinamica(n_por_categoria: int = 18, contexto: str = "") -> 
     for cat in sorted(por_categoria):
         opciones = por_categoria[cat]
         n = n_por_categoria if (not contexto or cat in relevantes) else goteo
-        muestra = _random.sample(opciones, min(n, len(opciones)))
+        muestra = _muestra_ponderada(opciones, n, pesos)
         texto = " · ".join(f"{p} ({s})" for p, s in muestra)
         lineas.append(f"  {cat.upper()}: {texto}")
 
@@ -7346,7 +7368,8 @@ def muestra_caquetio_dinamica(n_por_categoria: int = 18, contexto: str = "") -> 
     )
 
 
-def vocabulario_para_agente(tier: int, lexico: "LexicoComunitario", contexto: str = "") -> str:
+def vocabulario_para_agente(tier: int, lexico: "LexicoComunitario", contexto: str = "",
+                            pesos: "Optional[dict]" = None) -> str:
     """
     Genera el bloque de léxico + reglas apropiado para cada tier.
     Tier I: completo con identidad nativa. Tier II: breve. Tier III: solo sufijos.
@@ -7354,6 +7377,8 @@ def vocabulario_para_agente(tier: int, lexico: "LexicoComunitario", contexto: st
     `contexto` (opcional): texto del turno (evento del mundo + ubicación +
     mensaje al agente) usado para priorizar qué categorías del lexicón
     mostrar en grande (chunking por palabras clave, ver categorias_relevantes).
+    `pesos` (opcional, del CampoLexico): pondera la muestra por frecuencia
+    comunitaria (rich-get-richer; ver muestra_caquetio_dinamica).
     """
     lexico_activo = prompt_lexico_activo(lexico)
     pendientes = prompt_pendientes_evaluacion(lexico)
@@ -7375,7 +7400,7 @@ def vocabulario_para_agente(tier: int, lexico: "LexicoComunitario", contexto: st
     partes = [base]
     if tier <= 2:
         muestra = muestra_caquetio_dinamica(
-            n_por_categoria=20 if tier == 1 else 12, contexto=contexto
+            n_por_categoria=20 if tier == 1 else 12, contexto=contexto, pesos=pesos
         )
         if muestra:
             partes.append(muestra)
