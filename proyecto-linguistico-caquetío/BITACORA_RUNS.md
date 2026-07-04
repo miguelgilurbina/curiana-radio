@@ -9,10 +9,21 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 > psql -U postgres -d postgres`. La distancia idiolectal se recomputa desde
 > `word_uses` (join con `turns` para el día — `word_uses.day` quedó sin poblar).
 
+> ⚠️ **Corrección metodológica (2026-07-04):** la "convergencia" reportada en
+> runs previos usa la distancia idiolectal ACUMULADA, que converge en parte
+> por mera acumulación del vocabulario base compartido (artefacto matemático).
+> Desde 07-04 `koine_metrics` guarda además `distance_ventana` (habla reciente
+> real) y `distance_emergente` (solo formas emergentes), y existe `--ablacion`
+> para runs de control sin las inyecciones de prompt que empujan la
+> convergencia. En los smokes de verificación (`b0cbb3b8`), la acumulada
+> "convergía" mientras ventana y emergente divergían — las cifras de
+> convergencia históricas deben releerse con esa reserva. Ver DISENO_KOINE.md §7.
+
 ## Registro
 
 | Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |
 |---|---|---|---|---|---|---|
+| 07-04 | `b0cbb3b8` + `2d4e67ad` | 4 / 2 c/u | 15-16 | ~7.5 | 99% | smokes de la métrica corregida (normal + `--ablacion`, descartables) |
 | 06-29 | `20091e1f` | 57 / 29 | 30 | 7.4 | **99%** | **Fijación por competencia** — diccionario koiné de 7 conceptos |
 | 06-29 | `9bb920eb` | 60 / 30 | 32 | 7.5 | **99%** | Run largo — población constante, métrica persistida, convergencia −44% |
 | 06-29 | `f8ef263d` | 30 / 15 | 28 | 7.5 | **99%** | Primer run koiné — convergencia confirmada |

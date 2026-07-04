@@ -216,18 +216,27 @@ Responde en JSON:
 
     # ── Detección de adopciones/rechazos ─────────────────────────────
 
-    def procesar_adopciones(self, texto: str, agente: str, turno: int) -> list:
+    def procesar_adopciones(self, texto: str, agente: str, turno: int,
+                            dia: Optional[int] = None) -> list:
         """
         Detecta si un agente usó palabras propuestas por otros,
         registrándolo como adopción. Retorna los Neologismo que se
         OFICIALIZARON recién (2do adoptante distinto) en esta llamada, para
         que el caller pueda sincronizar su estado con Supabase.
+
+        El match exige frontera de palabra: 'kali-ni' NO cuenta dentro de
+        'kali-nima' (con substring, las formas cortas generaban adopciones
+        falsas). Guion y letras (incl. ü/acentos) son parte de la palabra.
         """
+        import re
         texto_lower = texto.lower()
         oficializados = []
         for neo in self.lexico.neologismos_pendientes():
-            if neo.forma in texto_lower and neo.autor != agente:
-                resultado = self.lexico.adoptar(neo.forma, agente, turno)
+            if neo.autor == agente:
+                continue
+            patron = r"(?<![\w\-])" + re.escape(neo.forma) + r"(?![\w\-])"
+            if re.search(patron, texto_lower):
+                resultado = self.lexico.adoptar(neo.forma, agente, turno, dia=dia)
                 if resultado is not None:
                     oficializados.append(resultado)
         return oficializados
@@ -316,7 +325,7 @@ Responde en JSON:
                 lines.append(f"    [{neo.forma}] = {neo.significado}  (por {neo.autor})")
 
         adoptadas_hoy = [n for n in self.lexico.neologismos_adoptados()
-                         if n.dia == dia]
+                         if (n.dia_resolucion or n.dia) == dia]
         if adoptadas_hoy:
             lines.append(f"\n  ✓ Adoptadas hoy ({len(adoptadas_hoy)}):")
             for neo in adoptadas_hoy:
@@ -347,8 +356,11 @@ Responde en JSON:
         )
 
         neos_estacion = [n for r in registros for n in r.neologismos_extraidos]
+        # Adoptadas DURANTE esta estación: por día de adopción (dia_resolucion),
+        # no de propuesta — antes se atribuían a la estación equivocada.
+        dias_estacion = {r.dia for r in registros}
         adoptadas = [n for n in self.lexico.neologismos_adoptados()
-                     if any(r.dia == n.dia and r.estacion == estacion for r in registros)]
+                     if (n.dia_resolucion or n.dia) in dias_estacion]
 
         nombre_est = "Seca (viento + pesca)" if estacion == "seca" else "Lluvias (siembra + ritual)"
 

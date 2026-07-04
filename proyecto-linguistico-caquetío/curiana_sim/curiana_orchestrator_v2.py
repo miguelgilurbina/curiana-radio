@@ -16,6 +16,7 @@ import sys
 import json
 import random
 import argparse
+from collections import Counter
 from typing import Optional
 
 import anthropic
@@ -69,6 +70,10 @@ from curiana_koine import (
 MODEL = "claude-haiku-4-5-20251001"
 MAX_TOKENS_AGENT = 500      # Espacio para frases en caquetío + glosa + neologismos
 MAX_TOKENS_DIRECTOR = 600
+
+# Vocabulario heredado: se excluye de la métrica de convergencia "emergente"
+# (la koiné se juega en las formas nuevas, no en el léxico base compartido).
+_FORMAS_BASE = frozenset(VOCABULARIO_BASE)
 
 # Koiné: roster FIJO de participantes (población constante desde el día 1). Se
 # rota una ventana sobre este roster cada turno, de modo que todos hablan en los
@@ -180,6 +185,7 @@ def call_agent(
     idiolectos: Optional[dict] = None,
     competencia: Optional["CompetenciaLexica"] = None,
     campo: Optional[CampoLexico] = None,
+    ablacion: bool = False,
 ) -> str:
     agent = ALL_AGENTS.get(agent_name)
     if not agent:
@@ -208,8 +214,14 @@ def call_agent(
     # Léxico + reglas apropiadas para el tier (priorizado por el contexto
     # del turno: evento del mundo + ubicación + mensaje — ver chunking en
     # curiana_lexicon.categorias_relevantes)
+    # Ablación (run de control): se apagan las tres inyecciones que EMPUJAN
+    # la convergencia desde el prompt — muestreo rich-get-richer (pesos),
+    # sugerencias de contagio y competencias abiertas. La medición (observer,
+    # difusión, competencia como registro) sigue intacta: la diferencia entre
+    # un run normal y uno --ablacion es cuánta convergencia es emergente vs.
+    # inducida por el andamiaje.
     contexto_turno = f"{world_context} {ubicacion} {user_message}"
-    pesos_campo = campo.pesos if campo is not None else None
+    pesos_campo = campo.pesos if (campo is not None and not ablacion) else None
     bloque_lexico = vocabulario_para_agente(
         tier, lexico, contexto=contexto_turno, pesos=pesos_campo
     )
@@ -222,7 +234,7 @@ def call_agent(
 
     # Contagio: palabras que el agente "ha oído" de gente que respeta
     sugerencia_contagio = ""
-    if difusion is not None:
+    if difusion is not None and not ablacion:
         sugs = difusion.sugerencias_para(agent_name, lexico=lexico)
         if sugs:
             txt = "; ".join(f"{f} = {s}" if s else f for f, s in sugs)
@@ -246,7 +258,7 @@ def call_agent(
         system_parts.append(sugerencia_contagio)
     # Competencias léxicas abiertas: empuja a reusar una forma rival que ya
     # circula (en vez de inventar otra) → una se impone y se fija en la koiné.
-    if competencia is not None:
+    if competencia is not None and not ablacion:
         bloque_comp = competencia.prompt_competencias()
         if bloque_comp:
             system_parts.append(bloque_comp)
@@ -320,10 +332,7 @@ Escribe el cierre narrativo del turno (2-3 oraciones)."""
     return resp.content[0].text.strip()
 
 
-def director_select_event(
-    client: anthropic.Anthropic,
-    state: ComunidadState,
-) -> Optional[dict]:
+def director_select_event(state: ComunidadState) -> Optional[dict]:
     prob = 0.3
     if state.nivel_tension == "alto":
         prob += 0.2
@@ -367,8 +376,12 @@ def run_turn(
     campo: Optional[CampoLexico] = None,
     competencia: Optional[CompetenciaLexica] = None,
     naming_referente: Optional[dict] = None,
+    ablacion: bool = False,
+    db_fallos: Optional[Counter] = None,
 ) -> list[dict]:
     interactions = []
+    if db_fallos is None:
+        db_fallos = Counter()  # descartable si el caller no lo pidió
 
     # Evento de nombramiento: aparece un referente sin palabra caquetía y se
     # presenta a TODOS los agentes activos este turno → acuñan formas rivales
@@ -391,11 +404,12 @@ def run_turn(
                 event_description=state.evento_del_turno or None,
             )
         except Exception as e:
+            db_fallos["turns"] += 1
             if verbose:
                 print(f"  ⚠ DB turn error: {e}")
 
     # 1. Director: ¿hay evento?
-    evento = director_select_event(client, state)
+    evento = director_select_event(state)
     if evento:
         state.evento_del_turno = evento["descripcion"]
         state.eventos_activos = [evento["id"]]
@@ -451,7 +465,7 @@ def run_turn(
         response = call_agent(
             client, agent_name, state, lexico, observer, stimulus, mem,
             difusion=difusion, idiolectos=idiolectos, competencia=competencia,
-            campo=campo,
+            campo=campo, ablacion=ablacion,
         )
 
         interactions.append({
@@ -474,7 +488,8 @@ def run_turn(
         )
 
         # Detectar adopciones de palabras propuestas por otros
-        neos_oficializados = observer.procesar_adopciones(response, agent_name, state.turno)
+        neos_oficializados = observer.procesar_adopciones(
+            response, agent_name, state.turno, dia=state.dia)
 
         # Contagio: propagar exposición de las palabras emergentes que usó este
         # agente (no las del vocabulario base) a sus vecinos sociales.
@@ -547,7 +562,9 @@ def run_turn(
                             morphological_rule=getattr(neo, "regla_aplicada", "desconocida"),
                         )
                     except Exception:
-                        pass  # No interrumpir por neologismo fallido
+                        # No interrumpir por neologismo fallido, pero contarlo:
+                        # perder escrituras en silencio corrompe el análisis.
+                        db_fallos["neologisms"] += 1
 
                 # Sincronizar adopciones oficializadas este turno (antes solo
                 # se actualizaba el LexicoComunitario en memoria; Supabase
@@ -562,9 +579,10 @@ def run_turn(
                             adopted_turn_id=turn_id,
                         )
                     except Exception:
-                        pass
+                        db_fallos["neologism_status"] += 1
 
             except Exception as e:
+                db_fallos["agent_responses"] += 1
                 if verbose:
                     print(f"  ⚠ DB agent error ({agent_name}): {e}")
 
@@ -635,6 +653,7 @@ def interactive_mode(client: anthropic.Anthropic):
     }
     campo = CampoLexico()
     competencia = CompetenciaLexica()
+    db_fallos: Counter = Counter()
 
     # Inicializar DB (gracefully degraded si no hay Supabase)
     db = get_db()
@@ -654,7 +673,7 @@ def interactive_mode(client: anthropic.Anthropic):
         if not user_input:
             run_turn(client, state, memory, lexico, observer, db=db, run_id=run_id,
                      difusion=difusion, idiolectos=idiolectos, campo=campo,
-                     competencia=competencia)
+                     competencia=competencia, db_fallos=db_fallos)
         elif user_input.lower() == "salir":
             break
         elif user_input.lower() == "estado":
@@ -709,7 +728,7 @@ def interactive_mode(client: anthropic.Anthropic):
                 client, state, memory, lexico, observer,
                 user_input=user_input, db=db, run_id=run_id,
                 difusion=difusion, idiolectos=idiolectos, campo=campo,
-                competencia=competencia,
+                competencia=competencia, db_fallos=db_fallos,
             )
 
     # Guardar todo
@@ -722,6 +741,9 @@ def interactive_mode(client: anthropic.Anthropic):
 
     # Cerrar run
     db.end_run(run_id, total_turns=state.turno, total_days=state.dia)
+    if db_fallos:
+        print(f"  ⚠ {sum(db_fallos.values())} escritura(s) a DB fallaron: "
+              + ", ".join(f"{t}×{n}" for t, n in db_fallos.most_common()))
     print("  Guardado. ¡Hasta la próxima jornada en la Curiana!")
 
 
@@ -735,10 +757,16 @@ def auto_mode(
     reporte_anual: bool = False,
     verbose: bool = True,
     perfiles: bool = False,
+    ablacion: bool = False,
 ):
     """
     Corre N turnos automáticamente.
     Genera reportes al final de cada día, estación y año simulado.
+
+    ablacion=True → run de CONTROL: se apagan las inyecciones de prompt que
+    empujan la convergencia (contagio, competencias abiertas, muestreo
+    ponderado). Comparar un run normal contra su ablación separa la
+    convergencia emergente de la inducida por el andamiaje.
 
     Mapeo temporal:
         1 turno = media jornada
@@ -761,8 +789,12 @@ def auto_mode(
         for nm, a in ALL_AGENTS.items()
     }
     campo = CampoLexico()
-    serie_distancia: list[tuple[int, float]] = []
+    # (dia, acumulada, ventana, emergente) — la acumulada se conserva por
+    # compatibilidad histórica; la señal científica es ventana/emergente
+    # (la acumulada converge por mera acumulación del vocabulario base).
+    serie_distancia: list[tuple[int, Optional[float], Optional[float], Optional[float]]] = []
     participantes: set[str] = set()   # agentes que REALMENTE hablaron (para la métrica)
+    db_fallos: Counter = Counter()    # escrituras a Supabase que fallaron, por tabla
 
     # Koiné: competencia léxica (fijación por significado). Cada ~4 turnos se
     # introduce un referente novedoso sin nombre → varios agentes acuñan formas
@@ -775,7 +807,7 @@ def auto_mode(
     db = get_db()
     run_id = db.create_run(
         model=MODEL,
-        config={"max_turns": turnos, "mode": "auto"},
+        config={"max_turns": turnos, "mode": "auto", "ablacion": ablacion},
     )
     # Re-crear cliente con run_id para que LangSmith use el proyecto correcto
     client = get_client(run_id)
@@ -788,6 +820,8 @@ def auto_mode(
     print(f"  CURIANA — Modo Automático: {turnos} turnos")
     print(f"  ({turnos // 2} días simulados · {turnos // 240} año(s) aprox.)")
     print(f"  Run ID: {run_id[:8]}...")
+    if ablacion:
+        print("  ⚗ ABLACIÓN: sin contagio, sin competencias en prompt, sin muestreo ponderado")
     print(f"{'='*60}\n")
 
     for t in range(turnos):
@@ -801,30 +835,43 @@ def auto_mode(
             verbose=verbose, db=db, run_id=run_id,
             difusion=difusion, idiolectos=idiolectos, campo=campo,
             competencia=competencia, naming_referente=naming_referente,
+            ablacion=ablacion, db_fallos=db_fallos,
         )
         participantes.update(i["agent"] for i in interactions)
 
         # Reporte al final de cada día
         if state.turno == 1 and state.dia > 1:  # acaba de cambiar de día
             dia_terminado = state.dia - 1
-            # Distancia medida SOLO sobre quienes hablaron (población real)
+            # Distancia medida SOLO sobre quienes hablaron (población real).
+            # Tres lecturas: acumulada (histórica, sesgada a converger por
+            # acumulación del vocabulario base), ventana (habla reciente real)
+            # y emergente (ventana sin vocabulario base: solo neologismos).
             dist = distancia_idiolectal(idiolectos, solo=participantes)
-            serie_distancia.append((dia_terminado, dist))
+            dist_vent = distancia_idiolectal(idiolectos, solo=participantes, ventana=True)
+            dist_emer = distancia_idiolectal(idiolectos, solo=participantes,
+                                             ventana=True, excluir=_FORMAS_BASE,
+                                             min_formas=3)
+            serie_distancia.append((dia_terminado, dist, dist_vent, dist_emer))
             # Evaluar fijación de competencias léxicas del día
             fijadas = competencia.evaluar_fijacion(dia_terminado)
             if db and run_id:
                 try:
-                    db.save_koine_metric(run_id, dia_terminado, dist, len(participantes))
+                    db.save_koine_metric(run_id, dia_terminado, dist or 0.0,
+                                         len(participantes),
+                                         distance_ventana=dist_vent,
+                                         distance_emergente=dist_emer)
                     for cid, forma in fijadas:
                         d = competencia.diccionario_koine().get(cid, {})
                         db.save_koine_lexicon(run_id, cid, d.get("desc", ""), forma,
                                               dia_terminado, d.get("soporte"), d.get("n_variantes"))
                 except Exception:
-                    pass
+                    db_fallos["koine_metrics"] += 1
             if verbose:
                 print(observer.reporte_dia(dia_terminado))
+                fmt = lambda v: "s/d" if v is None else v
                 print(f"  ◇ Koiné — distancia idiolectal ({len(participantes)} agentes): "
-                      f"{dist}  (↓ = converge hacia koiné)")
+                      f"acumulada={fmt(dist)} · ventana={fmt(dist_vent)} · "
+                      f"emergente={fmt(dist_emer)}  (↓ = converge)")
                 for cid, forma in fijadas:
                     print(f"  ◆ Koiné fija: '{cid}' → {forma}")
 
@@ -865,21 +912,41 @@ def auto_mode(
     # ── Resumen koiné: ¿convergió la lengua? ──
     print(f"\n{'─'*60}")
     print("  KOINÉ — convergencia (distancia idiolectal media por día)")
+    if ablacion:
+        print("  ⚗ RUN DE ABLACIÓN (control sin inyecciones de convergencia)")
     print(f"{'─'*60}")
     if serie_distancia:
-        traj = " → ".join(f"D{d}:{v}" for d, v in serie_distancia)
-        print(f"  {traj}")
-        d_ini = serie_distancia[0][1]
-        d_fin = serie_distancia[-1][1]
-        veredicto = ("CONVERGE ✓ (la koiné se forma)" if d_fin < d_ini
-                     else "NO converge ✗ (sin koineización)")
-        print(f"  Inicio {d_ini} → Fin {d_fin}  →  {veredicto}")
+        fmt = lambda v: "s/d" if v is None else v
+        for etiqueta, idx in (("acumulada", 1), ("ventana  ", 2), ("emergente", 3)):
+            traj = " → ".join(f"D{p[0]}:{fmt(p[idx])}" for p in serie_distancia)
+            print(f"  {etiqueta}: {traj}")
+        # Veredicto sobre la métrica MÁS EXIGENTE con datos suficientes:
+        # emergente > ventana > acumulada (la acumulada converge casi siempre
+        # por acumulación del vocabulario base — no es evidencia por sí sola).
+        for etiqueta, idx in (("emergente", 3), ("ventana", 2), ("acumulada", 1)):
+            puntos = [(p[0], p[idx]) for p in serie_distancia if p[idx] is not None]
+            if len(puntos) >= 2:
+                d_ini, d_fin = puntos[0][1], puntos[-1][1]
+                veredicto = ("CONVERGE ✓ (la koiné se forma)" if d_fin < d_ini
+                             else "NO converge ✗ (sin koineización)")
+                print(f"  Veredicto [{etiqueta}]: inicio {d_ini} → fin {d_fin}  →  {veredicto}")
+                break
+        else:
+            print("  Veredicto: datos insuficientes (ningún par de días comparable)")
     print("\n  Diccionario koiné emergente (formas más extendidas):")
     for forma, peso in campo.top(15):
         print(f"    {forma:18} {peso:.1f}")
 
     # ── Fijación por competencia: el diccionario koiné de conceptos nuevos ──
     print(competencia.reporte())
+
+    # ── Integridad de datos: escrituras a Supabase que fallaron ──
+    if db_fallos:
+        total_fallos = sum(db_fallos.values())
+        print(f"\n  ⚠ PERSISTENCIA INCOMPLETA: {total_fallos} escritura(s) a DB fallaron")
+        for tabla, n in db_fallos.most_common():
+            print(f"      {tabla}: {n}")
+        print("    Los análisis sobre Supabase de este run pueden estar incompletos.")
 
     if reporte_anual:
         print(observer.reporte_anual_llm(anio_simulado))
@@ -921,19 +988,27 @@ if __name__ == "__main__":
         help="Al terminar, generar perfiles curados por agente (rol, arco, "
              "frases célebres) vía el Observer y guardarlos en Supabase."
     )
+    parser.add_argument(
+        "--ablacion", action="store_true",
+        help="Run de CONTROL: apaga las inyecciones de prompt que empujan la "
+             "convergencia (sugerencias de contagio, competencias abiertas, "
+             "muestreo ponderado por frecuencia). Comparar contra un run normal "
+             "separa la convergencia emergente de la inducida por el andamiaje."
+    )
     args = parser.parse_args()
 
     client = get_client()
 
     if args.anio:
         auto_mode(client, 240, reporte_anual=True, verbose=not args.silencioso,
-                   perfiles=args.perfiles)
+                   perfiles=args.perfiles, ablacion=args.ablacion)
     elif args.auto > 0:
         auto_mode(
             client, args.auto,
             reporte_anual=args.reporte,
             verbose=not args.silencioso,
             perfiles=args.perfiles,
+            ablacion=args.ablacion,
         )
     else:
         interactive_mode(client)
