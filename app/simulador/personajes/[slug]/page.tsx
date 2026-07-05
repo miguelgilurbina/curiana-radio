@@ -2,7 +2,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getAllPersonajes, getPersonajeBySlug } from "@/lib/personajes";
-import { Card, Overline, Avatar, ScoreGauge, StatCard } from "@/components/simulador/ui";
+import { getRunActivo } from "@/lib/editorial";
+import { Overline, Avatar, ScoreGauge } from "@/components/simulador/ui";
+import { DataAside } from "@/components/simulador/prose";
+import { EVENTO_TIPOS } from "@/lib/sim-theme";
 
 interface PersonajePageProps {
   params: Promise<{ slug: string }>;
@@ -34,114 +37,179 @@ export default async function PersonajePage({ params }: PersonajePageProps) {
   const anterior = personajes[(idx - 1 + personajes.length) % personajes.length];
   const siguiente = personajes[(idx + 1) % personajes.length];
 
+  // Apariciones en la cronología curada del run activo
+  const run = getRunActivo();
+  const apariciones = run.epocas.flatMap((epoca) =>
+    epoca.eventos
+      .filter((ev) => ev.personaje === slug)
+      .map((ev) => ({ ...ev, epocaId: epoca.id, epocaTitulo: epoca.titulo }))
+  );
+
+  const [heroQuote, ...restoQuotes] = p.quotes;
+
   return (
-    <div>
+    <article className="mx-auto max-w-[720px]">
       <Link
         href="/simulador/personajes"
-        className="font-sans text-sm text-earth-600 hover:text-frequency transition-colors"
+        className="font-sans text-sm text-earth-600 transition-colors hover:text-frequency"
       >
         ← Personajes
       </Link>
 
-      {/* Encabezado */}
-      <header className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-5">
-        <Avatar name={p.nombre} size={64} />
+      {/* Encabezado de la ficha */}
+      <header className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-5">
+        <Avatar name={p.nombre} size={72} />
         <div className="min-w-0">
-          <h1 className="font-serif text-3xl md:text-4xl font-bold text-deep-900">{p.nombre}</h1>
+          <h1 className="font-serif text-3xl font-bold text-deep-900 md:text-4xl">{p.nombre}</h1>
           <p className="mt-1 font-sans text-sm text-earth-500">
             {[p.etnia, p.edad ? `${p.edad} años` : null, p.ubicacion_default?.replaceAll("_", " ")]
               .filter(Boolean)
               .join(" · ")}
           </p>
           {p.rol_comunidad && (
-            <p className="mt-2 max-w-reading font-serif text-lg italic text-deep-800">{p.rol_comunidad}</p>
+            <p className="mt-2 max-w-reading font-serif text-lg italic leading-snug text-earth-700">
+              {p.rol_comunidad}
+            </p>
           )}
         </div>
       </header>
 
-      {/* Stats */}
-      <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
-        <StatCard label="Intervenciones" value={p.total_respuestas} sub="en este run" accent="#3d5777" />
-        <StatCard
-          label="Score promedio"
-          value={p.avg_score != null ? p.avg_score.toFixed(1) : "—"}
-          sub="densidad lingüística / 10"
-          accent="#2E7D4F"
-        />
-        <StatCard label="Palabras propuestas" value={p.neologismos_propuestos} accent="#C47A2B" />
-        <StatCard label="Palabras adoptadas" value={p.neologismos_adoptados} sub="por la comunidad" accent="#5B4FCF" />
-      </div>
+      {/* Su voz, primero */}
+      {heroQuote && (
+        <blockquote className="mt-8 border-l-[3px] border-frequency pl-5 md:pl-7">
+          <p className="font-serif text-2xl italic leading-snug text-deep-900 md:text-3xl">
+            {heroQuote.quote}
+          </p>
+          {heroQuote.traduccion && (
+            <p className="mt-2 font-sans text-sm leading-relaxed text-earth-600">{heroQuote.traduccion}</p>
+          )}
+          {heroQuote.day != null && (
+            <p className="mt-2 font-sans text-xs text-earth-500">día {heroQuote.day}</p>
+          )}
+        </blockquote>
+      )}
 
-      {/* Biografía + arco */}
-      <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
-        {p.descripcion && (
-          <Card className="p-5 md:p-6">
-            <Overline>Quién es</Overline>
-            <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-earth-700">
-              {p.descripcion}
-            </p>
-          </Card>
-        )}
-        {p.resumen_arco && (
-          <Card className="p-5 md:p-6">
-            <Overline>Su arco en esta simulación</Overline>
-            <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-earth-700">
-              {p.resumen_arco}
-            </p>
-          </Card>
-        )}
-      </div>
+      <DataAside
+        items={[
+          { label: "Intervenciones", value: p.total_respuestas, sub: "en esta edición" },
+          { label: "Score promedio", value: p.avg_score != null ? p.avg_score.toFixed(1) : "—", sub: "densidad lingüística / 10" },
+          { label: "Propuestas", value: p.neologismos_propuestos, sub: "palabras nuevas" },
+          { label: "Adoptadas", value: p.neologismos_adoptados, sub: "por la comunidad" },
+        ]}
+      />
 
-      {/* Frases curadas */}
-      {p.quotes.length > 0 && (
-        <div className="mt-8">
-          <div className="mb-3 flex items-baseline justify-between">
-            <h2 className="font-serif text-xl font-semibold text-deep-900">Frases</h2>
-            <Overline>{p.quotes.length} curadas</Overline>
+      {/* Biografía y arco, como lectura corrida */}
+      {p.descripcion && (
+        <section className="mt-8">
+          <Overline>Quién es</Overline>
+          <p className="mt-2 max-w-reading font-sans text-[0.95rem] leading-relaxed text-earth-700">
+            {p.descripcion}
+          </p>
+        </section>
+      )}
+      {p.resumen_arco && (
+        <section className="mt-8">
+          <Overline>Su arco en esta edición</Overline>
+          <p className="mt-2 max-w-reading font-sans text-[0.95rem] leading-relaxed text-earth-700">
+            {p.resumen_arco}
+          </p>
+        </section>
+      )}
+
+      {/* Cruce con la cronología curada */}
+      {apariciones.length > 0 && (
+        <section className="mt-8">
+          <Overline>En la cronología</Overline>
+          <ol className="mt-3">
+            {apariciones.map((ev, i) => {
+              const tipo = EVENTO_TIPOS[ev.tipo];
+              return (
+                <li key={i} className="relative border-l border-earth-200 pl-5 pb-5 last:pb-0">
+                  <span
+                    aria-hidden="true"
+                    className="absolute -left-[4.5px] top-1.5 h-2 w-2 rounded-full"
+                    style={{ background: tipo.color }}
+                  />
+                  <div className="flex flex-wrap items-center gap-2 font-sans text-xs text-earth-500">
+                    <span className="tabular-nums font-medium text-earth-600">Día {ev.dia}</span>
+                    <span
+                      className="inline-flex items-center rounded-full px-2 py-0.5 font-medium"
+                      style={{ background: `${tipo.color}1a`, color: tipo.color, border: `1px solid ${tipo.color}33` }}
+                    >
+                      {tipo.label}
+                    </span>
+                  </div>
+                  {ev.forma && (
+                    <p className="mt-1 font-serif text-lg font-semibold text-frequency">{ev.forma}</p>
+                  )}
+                  {ev.nota && (
+                    <p className="mt-1 max-w-reading font-sans text-sm leading-relaxed text-earth-700">
+                      {ev.nota}
+                    </p>
+                  )}
+                  <Link
+                    href={`/simulador#epoca-${ev.epocaId}`}
+                    className="mt-1 inline-block font-sans text-xs text-earth-500 transition-colors hover:text-frequency"
+                  >
+                    ver en «{ev.epocaTitulo}» →
+                  </Link>
+                </li>
+              );
+            })}
+          </ol>
+        </section>
+      )}
+
+      {/* El resto de sus frases curadas */}
+      {restoQuotes.length > 0 && (
+        <section className="mt-10">
+          <div className="flex items-baseline justify-between">
+            <h2 className="font-serif text-xl font-semibold text-deep-900">Más frases</h2>
+            <Overline>{restoQuotes.length} curadas</Overline>
           </div>
-          <div className="flex flex-col gap-4">
-            {p.quotes.map((q, i) => (
-              <Card key={i} className="p-5">
-                {/* Caquetío — la voz, tratamiento editorial */}
+          <div className="mt-2">
+            {restoQuotes.map((q, i) => (
+              <div key={i} className="border-t border-earth-200/70 py-6 first:border-t-0">
                 <blockquote className="border-l-[3px] border-frequency pl-4">
-                  <p className="font-serif text-2xl md:text-[1.75rem] italic leading-snug text-deep-900">
+                  <p className="font-serif text-xl italic leading-snug text-deep-900 md:text-2xl">
                     {q.quote}
                   </p>
                 </blockquote>
-
-                {/* Traducción — para leer, sin adorno */}
                 {q.traduccion && (
                   <p className="mt-2 pl-[19px] font-sans text-[0.95rem] leading-relaxed text-earth-600">
                     {q.traduccion}
                   </p>
                 )}
-
-                {/* Justificación del analista */}
                 {q.justificacion && (
                   <p className="mt-3 max-w-reading font-sans text-sm leading-relaxed text-earth-500">
                     {q.justificacion}
                   </p>
                 )}
-
-                <div className="mt-3 flex flex-wrap items-center gap-3 border-t border-earth-200/70 pt-3 font-sans text-xs text-earth-500">
+                <div className="mt-3 flex flex-wrap items-center gap-3 font-sans text-xs text-earth-500">
                   {q.day != null && <span>día {q.day}</span>}
                   {q.impacto_score != null && <ScoreGauge score={q.impacto_score} width={56} />}
                 </div>
-              </Card>
+              </div>
             ))}
           </div>
-        </div>
+        </section>
       )}
 
       {/* Navegación entre personajes */}
-      <div className="mt-10 flex items-center justify-between border-t border-earth-200/70 pt-6 font-sans text-sm">
-        <Link href={`/simulador/personajes/${anterior.slug}`} className="text-earth-600 hover:text-frequency transition-colors">
+      <div className="mt-12 flex items-center justify-between border-t border-earth-200/70 pt-6 font-sans text-sm">
+        <Link
+          href={`/simulador/personajes/${anterior.slug}`}
+          className="text-earth-600 transition-colors hover:text-frequency"
+        >
           ← {anterior.nombre}
         </Link>
-        <Link href={`/simulador/personajes/${siguiente.slug}`} className="text-earth-600 hover:text-frequency transition-colors">
+        <Link
+          href={`/simulador/personajes/${siguiente.slug}`}
+          className="text-earth-600 transition-colors hover:text-frequency"
+        >
           {siguiente.nombre} →
         </Link>
       </div>
-    </div>
+    </article>
   );
 }
