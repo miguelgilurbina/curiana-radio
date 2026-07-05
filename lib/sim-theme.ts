@@ -47,6 +47,14 @@ export const NEO_STATUS: Record<string, { label: string; color: string }> = {
   ignorado: { label: "ignorado", color: "#9d7f66" },
 };
 
+// ── Eventos editoriales (cronología de runs) ──────────────────────────
+export const EVENTO_TIPOS: Record<string, { label: string; color: string }> = {
+  neologismo_adoptado: { label: "palabra adoptada", color: "#2E7D4F" },
+  neologismo_propuesto: { label: "palabra propuesta", color: "#6D8A9E" },
+  hito_deriva: { label: "hito de deriva", color: "#C47A2B" },
+  momento: { label: "momento", color: "#5B4FCF" },
+};
+
 // ── Semánticos (feedback) ─────────────────────────────────────────────
 export const SEMANTIC = {
   success: "#2E7D4F",
