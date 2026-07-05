@@ -1,139 +1,165 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { getRunActivo, getRunsPublicados } from "@/lib/editorial";
+import { getManaureFragment } from "@/lib/manaure";
 import { getResumen } from "@/lib/resumen";
 import { getAllPersonajes } from "@/lib/personajes";
-import { getNeologismos } from "@/lib/neologismos";
+import ManaureVoice from "@/components/simulador/ManaureVoice";
 import LanguageDriftChart from "@/components/simulador/LanguageDriftChart";
-import { Card, StatCard, Overline, Avatar, EmptyState } from "@/components/simulador/ui";
+import { Epoca, EventoItem, DataAside } from "@/components/simulador/prose";
+import { Overline, EmptyState } from "@/components/simulador/ui";
 
-export default function ResumenPage() {
+export function generateMetadata(): Metadata {
+  const run = getRunActivo();
+  return {
+    title: `${run.titulo} — Simulador Caquetío | Curiana Radio`,
+    description: run.subtitulo,
+  };
+}
+
+const ANEXOS = [
+  { href: "/simulador/personajes", label: "Personajes", desc: "Las veinte voces curadas del run y sus arcos." },
+  { href: "/simulador/lexicon", label: "Léxico", desc: "El vocabulario reconstruido, palabra por palabra." },
+  { href: "/simulador/neologisms", label: "Neologismos", desc: "Todas las palabras inventadas: las que prendieron y las que no." },
+];
+
+export default function SimuladorPage() {
+  const runs = getRunsPublicados();
+  const run = getRunActivo();
   const resumen = getResumen();
-  const personajes = getAllPersonajes();
-  const neologismos = getNeologismos();
+  const nombrePorSlug = new Map(getAllPersonajes().map((p) => [p.slug, p.nombre]));
 
-  const Intro = (
-    <Card className="mb-8 p-6 md:p-8">
-      <Overline>Qué estás viendo</Overline>
-      <p className="mt-3 font-serif text-xl md:text-2xl leading-snug text-deep-900">
-        Sesenta personajes del pueblo Caquetío conversan en su lengua arahuaco reconstruida.
-      </p>
-      <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-earth-700">
-        Esto es lo que encontramos en la primera simulación curada: agentes guiados por un modelo
-        de lenguaje hablan, inventan palabras y adoptan las de otros. Su{" "}
-        <span className="text-deep-800 font-medium">deriva lingüística</span> —cuánto caquetío
-        usan, qué neologismos arraigan— quedó medida y graficada turno a turno.
-        Golfete de Coro, Venezuela · siglos XIV-XV.
-      </p>
-    </Card>
-  );
+  const hero = run.manaure_hero ? getManaureFragment(run.manaure_hero) : null;
+  const derivaVoz = run.deriva?.manaure ? getManaureFragment(run.deriva.manaure) : null;
+  const cierre = run.manaure_cierre ? getManaureFragment(run.manaure_cierre) : null;
 
-  if (!resumen) {
-    return (
-      <div>
-        {Intro}
-        <EmptyState
-          title="Aún no hay un run curado"
-          hint="Corre export_resumen_seed.py tras una simulación con --perfiles."
-        />
-      </div>
-    );
-  }
-
-  const pctCaquetio = resumen.pct_caquetio_final != null ? `${Math.round(resumen.pct_caquetio_final * 100)}%` : "—";
-
-  const momentos = personajes
-    .flatMap((p) => p.quotes.map((q) => ({ ...q, agente: p.nombre, slug: p.slug })))
-    .filter((q) => q.impacto_score != null)
-    .sort((a, b) => (b.impacto_score ?? 0) - (a.impacto_score ?? 0))
-    .slice(0, 4);
-
-  // dedupe por cita: misma razón que en /simulador/neologisms -- una sola
-  // frase puede declarar varios neologismos a la vez.
-  const vistas = new Set<string>();
-  const palabrasDestacadas = neologismos
-    .filter((n) => n.destacado)
-    .sort((a, b) => (b.destacado!.impacto_score ?? 0) - (a.destacado!.impacto_score ?? 0))
-    .filter((n) => {
-      if (vistas.has(n.destacado!.quote)) return false;
-      vistas.add(n.destacado!.quote);
-      return true;
-    })
-    .slice(0, 3);
+  const pctCaquetio =
+    resumen?.pct_caquetio_final != null ? `${Math.round(resumen.pct_caquetio_final * 100)}%` : "—";
 
   return (
-    <div>
-      <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <Overline>Run curado</Overline>
-          <div className="mt-1 font-sans text-sm text-earth-600">
-            <code className="rounded bg-earth-100 px-1.5 py-0.5 text-earth-700">{resumen.run_id.slice(0, 8)}</code>
+    <article className="mx-auto max-w-[720px]">
+      {/* Índice de ediciones: hoy una, la arquitectura lista para varias */}
+      <div className="mb-6 flex flex-wrap items-center gap-2">
+        <Overline>Ediciones</Overline>
+        {runs.map((r, i) => (
+          <span
+            key={r.id}
+            className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-sans text-xs ${
+              r.id === run.id
+                ? "bg-deep-800 text-earth-50"
+                : "border border-earth-200 text-earth-600"
+            }`}
+          >
+            <span className="tabular-nums">{String(i + 1).padStart(2, "0")}</span>
+            {r.fecha}
+          </span>
+        ))}
+      </div>
+
+      {/* Cabecera del run activo */}
+      <header>
+        <h2 className="font-serif text-3xl font-bold leading-tight text-deep-900 md:text-4xl">
+          {run.titulo}
+        </h2>
+        {run.subtitulo && (
+          <p className="mt-3 max-w-reading font-serif text-lg italic leading-snug text-earth-700">
+            {run.subtitulo}
+          </p>
+        )}
+        {resumen && (
+          <p className="mt-3 font-sans text-sm text-earth-600">
+            <code className="rounded bg-earth-100 px-1.5 py-0.5 text-earth-700">
+              {resumen.run_id.slice(0, 8)}
+            </code>
             <span className="mx-2 text-earth-300">·</span>
             {resumen.model}
             <span className="mx-2 text-earth-300">·</span>
             {new Date(resumen.started_at).toLocaleDateString("es-VE", { dateStyle: "long" })}
-          </div>
-        </div>
-      </div>
+          </p>
+        )}
+      </header>
 
-      {Intro}
+      {hero && <ManaureVoice fragment={hero} variant="hero" />}
 
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-        <StatCard label="Días simulados" value={resumen.total_days ?? 0} sub={`${resumen.total_turns ?? 0} turnos`} accent="#2f425b" />
-        <StatCard label="Score promedio" value={resumen.avg_score?.toFixed(2) ?? "—"} sub="densidad lingüística / 10" accent="#2E7D4F" />
-        <StatCard label="% Caquetío" value={pctCaquetio} sub="último turno" accent="#C47A2B" />
-        <StatCard label="Neologismos adoptados" value={resumen.total_adoptados} sub={`de ${resumen.total_neologismos} propuestos`} accent="#5B4FCF" />
-      </div>
+      {!resumen ? (
+        <EmptyState
+          title="Aún no hay un run curado"
+          hint="Corre export_resumen_seed.py tras una simulación con --perfiles."
+        />
+      ) : (
+        <>
+          <DataAside
+            items={[
+              { label: "Días simulados", value: resumen.total_days ?? 0, sub: `${resumen.total_turns ?? 0} turnos` },
+              { label: "Score promedio", value: resumen.avg_score?.toFixed(2) ?? "—", sub: "densidad lingüística / 10" },
+              { label: "% Caquetío", value: pctCaquetio, sub: "último turno" },
+              { label: "Adoptados", value: resumen.total_adoptados, sub: `de ${resumen.total_neologismos} propuestos` },
+            ]}
+          />
 
-      <Card className="mt-6 p-5 md:p-6">
-        <Overline>Deriva lingüística</Overline>
-        <h2 className="mt-1 font-serif text-xl font-semibold text-deep-900">Composición por turno</h2>
-        <div className="mt-4">
-          <LanguageDriftChart data={resumen.drift} />
-        </div>
-      </Card>
+          {/* La historia, época por época */}
+          {run.epocas.map((epoca) => {
+            const voz = epoca.manaure ? getManaureFragment(epoca.manaure) : null;
+            return (
+              <Epoca key={epoca.id} epoca={epoca}>
+                {voz && <ManaureVoice fragment={voz} />}
+                {epoca.eventos.length > 0 && (
+                  <ol className="mt-6">
+                    {epoca.eventos.map((ev, i) => (
+                      <EventoItem
+                        key={i}
+                        evento={ev}
+                        personajeNombre={ev.personaje ? nombrePorSlug.get(ev.personaje) : undefined}
+                      />
+                    ))}
+                  </ol>
+                )}
+              </Epoca>
+            );
+          })}
 
-      <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-3">
-        <div className="lg:col-span-2">
-          <div className="mb-3 flex items-baseline justify-between">
-            <h2 className="font-serif text-xl font-semibold text-deep-900">Momentos destacados</h2>
-            <Link href="/simulador/personajes" className="font-sans text-xs text-earth-500 hover:text-frequency transition-colors">
-              ver todos los personajes →
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {momentos.map((m, i) => (
-              <Link key={i} href={`/simulador/personajes/${m.slug}`}>
-                <Card className="h-full p-4 sim-card-hover">
-                  <div className="flex items-center gap-2">
-                    <Avatar name={m.agente} size={28} />
-                    <span className="font-sans text-sm text-earth-600">{m.agente}</span>
-                  </div>
-                  <p className="mt-3 font-serif text-lg italic leading-snug text-deep-900">{m.quote}</p>
-                  {m.traduccion && <p className="mt-2 font-sans text-sm text-earth-600">{m.traduccion}</p>}
-                </Card>
+          {/* La deriva, medida — el chart embebido en la narrativa */}
+          <section id="deriva" className="mt-14 scroll-mt-24">
+            <Overline>La marea, medida</Overline>
+            <h2 className="mt-1 font-serif text-2xl font-semibold text-deep-900 md:text-3xl">
+              Composición de la lengua, turno a turno
+            </h2>
+            {derivaVoz && <ManaureVoice fragment={derivaVoz} />}
+            {run.deriva?.nota && (
+              <p className="mb-4 max-w-reading font-sans text-[0.95rem] leading-relaxed text-earth-700">
+                {run.deriva.nota}
+              </p>
+            )}
+            <LanguageDriftChart data={resumen.drift} />
+          </section>
+
+          {cierre && <ManaureVoice fragment={cierre} />}
+        </>
+      )}
+
+      {/* Anexos: la wiki de referencia detrás de la historia */}
+      <footer className="mt-14 border-t border-earth-200/70 pt-8">
+        <Overline>Seguir explorando</Overline>
+        <ul className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          {ANEXOS.map((a) => (
+            <li key={a.href}>
+              <Link href={a.href} className="group block">
+                <span className="font-serif text-lg font-semibold text-deep-900 transition-colors group-hover:text-frequency">
+                  {a.label} →
+                </span>
+                <span className="mt-1 block font-sans text-sm leading-relaxed text-earth-600">{a.desc}</span>
               </Link>
-            ))}
-          </div>
-        </div>
-        <div>
-          <div className="mb-3 flex items-baseline justify-between">
-            <h2 className="font-serif text-xl font-semibold text-deep-900">Palabras que prendieron</h2>
-            <Link href="/simulador/neologisms" className="font-sans text-xs text-earth-500 hover:text-frequency transition-colors">
-              ver todas →
-            </Link>
-          </div>
-          <div className="flex flex-col gap-3">
-            {palabrasDestacadas.map((n) => (
-              <Card key={n.id} className="p-3.5">
-                <span className="font-serif text-lg font-semibold text-frequency">{n.form}</span>
-                <p className="mt-1 font-sans text-sm text-deep-800">{n.meaning}</p>
-                <p className="mt-1.5 font-sans text-xs text-earth-500">
-                  acuñó {n.proposed_by} · día {n.proposed_day}
-                </p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
+            </li>
+          ))}
+        </ul>
+
+        <p className="mt-10 max-w-reading font-sans text-xs leading-relaxed text-earth-500">
+          Sobre este contenido: las voces del narrador y de Manaure son reconstrucción editorial
+          hipotética, escrita para esta publicación. Los datos — palabras, adopciones, deriva — salen
+          de la simulación tal cual ocurrieron. El caquetío de los fragmentos usa la morfología
+          documentada del proyecto y se marca siempre con su grado de certeza.
+        </p>
+      </footer>
+    </article>
   );
 }
