@@ -23,6 +23,7 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 
 | Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |
 |---|---|---|---|---|---|---|
+| 07-06 | `038d7b9d` + `bdc54134` | 60 / 30 c/u | 38 / 34 | 7.3 | **99%** | **Experimento normal vs. ablación** — emergente −17.9% vs −6.6%: la koiné sobrevive parcialmente sin andamiaje |
 | 07-04 | `b0cbb3b8` + `2d4e67ad` | 4 / 2 c/u | 15-16 | ~7.5 | 99% | smokes de la métrica corregida (normal + `--ablacion`, descartables) |
 | 06-29 | `20091e1f` | 57 / 29 | 30 | 7.4 | **99%** | **Fijación por competencia** — diccionario koiné de 7 conceptos |
 | 06-29 | `9bb920eb` | 60 / 30 | 32 | 7.5 | **99%** | Run largo — población constante, métrica persistida, convergencia −44% |
@@ -33,7 +34,56 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 
 ---
 
-## 2026-06-29 · Run `20091e1f` — Fijación por competencia
+## 2026-07-06 · Runs `038d7b9d` (normal) + `bdc54134` (ablación) — El experimento de control
+
+**Comandos:** `python curiana_orchestrator_v2.py --auto 60` y `--auto 60 --ablacion`,
+misma configuración, corridos el mismo día en secuencia. Runs bien apareados:
+300 vs 294 respuestas, score 7.31 vs 7.30, caquetío 99.1% vs 99.7%, 0 fallos de DB.
+
+**Pregunta:** ¿cuánta convergencia sobrevive sin las tres inyecciones de prompt
+(sugerencias de contagio, competencias abiertas, muestreo ponderado)? Si la
+ablación converge igual, la koineización era andamiaje, no emergencia.
+
+### Resultado (distancia idiolectal, día 1 → día 30)
+
+| Lectura | Normal `038d7b9d` | Ablación `bdc54134` | Diferencia |
+|---|---|---|---|
+| **emergente** (la exigente) | 0.6997 → 0.5746 (**−17.9%**) | 0.6957 → 0.6499 (**−6.6%**) | **2.7×** más convergencia con andamiaje |
+| ventana | 0.5631 → 0.4243 (−24.6%) | 0.5704 → 0.4573 (−19.8%) | moderada |
+| acumulada | 0.6331 → 0.3536 (−44.1%) | 0.6317 → 0.3751 (−40.6%) | **casi nula** — confirma el artefacto |
+| fijación (conceptos) | **6/10** fijados | 4/10 fijados | |
+| neologismos adoptados | 63 | 39 | |
+
+### Lectura
+
+- **La evidencia de koineización emergente existe y es la diferencia:** en la
+  lectura emergente el run normal converge 2.7× más que su control. La
+  acumulada, en cambio, es casi idéntica en ambos (−44% vs −41%) — converge
+  por acumulación del léxico base compartido sin importar el mecanismo, tal
+  como diagnosticó la corrección metodológica del 07-04.
+- **Forma de las curvas:** la ablación cae los primeros ~7 días (esa parte es
+  intrínseca al mundo compartido, no al andamiaje) y luego se **aplana en
+  ~0.64–0.65 desde el día ~16**, con leve subida al final. La normal muestra
+  un rebote (días 12–17, entrada de formas nuevas) y **sigue convergiendo**
+  hasta 0.575. El andamiaje no solo acelera: sostiene la convergencia después
+  del equilibrio inicial.
+- ⚠️ **El veredicto impreso de la ablación dice "CONVERGE ✓"** porque compara
+  inicio vs fin de forma naive (−6.6% es negativo). Es correcto pero engañoso
+  leído solo: la trayectoria es plateau, no convergencia sostenida. El
+  veredicto binario debería considerar la pendiente reciente, no solo los
+  extremos — anotado como ajuste pendiente.
+- **La ablación aún fija conceptos (4/10):** los eventos de nombramiento
+  siguen ocurriendo (solo se apagan las inyecciones de prompt), así que hay
+  fijación residual genuina — los agentes reusan variantes que oyeron en el
+  diálogo mismo. Eso es la señal emergente "pura" más interesante del run.
+
+### Implicaciones para calibración (punto 3 del plan)
+
+Con −17.9% en 30 días y 4/10 conceptos aún en disputa en el run normal, la
+cadencia de nombramientos y los umbrales de fijación se ven razonables — la
+competencia no resuelve trivialmente. Si se quiere más señal por run: más días
+antes que más presión (la pendiente emergente del normal seguía negativa al
+día 30).
 
 **Comando:** `python curiana_orchestrator_v2.py --auto 60 --perfiles` (el proceso
 se cortó en el turno 57/60 por teardown de sesión; analíticamente completo —
