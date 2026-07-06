@@ -114,9 +114,15 @@
     letter-spacing: -0.01em;
   }
 
-  /* Display editorial de revista (titulares, headwords, nameplate) */
+  /* Display editorial de revista (titulares, headwords, nameplate).
+     Configuración firma de Fraunces: WONK activo (glifos irregulares de
+     estilo antiguo), SOFT crisp (terminales afiladas, tono de crónica seria)
+     y opsz automático — a mayor tamaño, más contraste dramático. Los ejes no
+     nombrados (wght, ital) siguen bajo control de font-weight/font-style. */
   .sim-display {
     font-family: var(--sim-display);
+    font-optical-sizing: auto;
+    font-variation-settings: "SOFT" 0, "WONK" 1;
   }
 
   /* Filete doble de prensa: línea gruesa + línea fina */
