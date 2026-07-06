@@ -37,6 +37,39 @@ function inicial(word: string): string {
   return ch ? ch[0].toUpperCase() : "·";
 }
 
+function Paginacion({
+  paginaActual,
+  totalPaginas,
+  setPagina,
+}: {
+  paginaActual: number;
+  totalPaginas: number;
+  setPagina: (n: number) => void;
+}) {
+  if (totalPaginas <= 1) return null;
+  return (
+    <div className="flex items-center justify-between border-t border-(--sim-rule) py-3 font-sans text-sm">
+      <button
+        onClick={() => setPagina(Math.max(0, paginaActual - 1))}
+        disabled={paginaActual === 0}
+        className="text-(--sim-ink-soft) transition-colors hover:text-(--sim-fuego) disabled:cursor-default disabled:text-(--sim-rule)"
+      >
+        ← anterior
+      </button>
+      <span className="font-sans text-xs tabular-nums text-(--sim-ink-faint)">
+        página {paginaActual + 1} de {totalPaginas}
+      </span>
+      <button
+        onClick={() => setPagina(Math.min(totalPaginas - 1, paginaActual + 1))}
+        disabled={paginaActual >= totalPaginas - 1}
+        className="text-(--sim-ink-soft) transition-colors hover:text-(--sim-fuego) disabled:cursor-default disabled:text-(--sim-rule)"
+      >
+        siguiente →
+      </button>
+    </div>
+  );
+}
+
 export default function LexiconDiccionario({ palabras }: { palabras: EntradaDiccionario[] }) {
   const [search, setSearch] = useState("");
   const [langFilter, setLangFilter] = useState("todos");
@@ -83,29 +116,6 @@ export default function LexiconDiccionario({ palabras }: { palabras: EntradaDicc
     fn();
     setPagina(0);
   };
-
-  const Paginacion = () =>
-    totalPaginas > 1 ? (
-      <div className="flex items-center justify-between border-t border-(--sim-rule) py-3 font-sans text-sm">
-        <button
-          onClick={() => setPagina(Math.max(0, paginaActual - 1))}
-          disabled={paginaActual === 0}
-          className="text-(--sim-ink-soft) transition-colors hover:text-(--sim-fuego) disabled:cursor-default disabled:text-(--sim-rule)"
-        >
-          ← anterior
-        </button>
-        <span className="font-sans text-xs tabular-nums text-(--sim-ink-faint)">
-          página {paginaActual + 1} de {totalPaginas}
-        </span>
-        <button
-          onClick={() => setPagina(Math.min(totalPaginas - 1, paginaActual + 1))}
-          disabled={paginaActual >= totalPaginas - 1}
-          className="text-(--sim-ink-soft) transition-colors hover:text-(--sim-fuego) disabled:cursor-default disabled:text-(--sim-rule)"
-        >
-          siguiente →
-        </button>
-      </div>
-    ) : null;
 
   return (
     <div>
@@ -217,7 +227,11 @@ export default function LexiconDiccionario({ palabras }: { palabras: EntradaDicc
               </dl>
             </section>
           ))}
-          <Paginacion />
+          <Paginacion
+            paginaActual={paginaActual}
+            totalPaginas={totalPaginas}
+            setPagina={setPagina}
+          />
         </>
       )}
     </div>

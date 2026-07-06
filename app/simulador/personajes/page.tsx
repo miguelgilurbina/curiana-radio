@@ -37,7 +37,7 @@ function EntradaPersonaje({ p }: { p: Personaje }) {
           </p>
           {quote && (
             <p className="mt-2 line-clamp-2 font-serif text-[0.95rem] italic text-(--sim-ink)">
-              "{quote.quote}"
+              &ldquo;{quote.quote}&rdquo;
             </p>
           )}
         </div>

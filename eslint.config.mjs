@@ -15,6 +15,16 @@ const config = [
   },
   ...coreWebVitals,
   ...typescript,
+  {
+    // Honrar el prefijo `_` y el patrón omit-via-rest ({ id: _id, ...rest }):
+    // variables deliberadamente descartadas no deben marcarse como sin usar.
+    rules: {
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        { argsIgnorePattern: "^_", varsIgnorePattern: "^_", ignoreRestSiblings: true },
+      ],
+    },
+  },
 ];
 
 export default config;

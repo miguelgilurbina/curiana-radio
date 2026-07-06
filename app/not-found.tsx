@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 const SABIDURIA_ANCESTRAL = [
   "El viento no borra, reescribe. Tu error es un nuevo borrador.",
@@ -15,28 +15,6 @@ const SABIDURIA_ANCESTRAL = [
   "Lo que fue invisibilizado vuelve a brotar aquí.",
   "Has llegado al borde del mapa. Aquí comienzan los dragones (y los burros)."
 ];
-
-const BURRO_ASCII = `
-      /\_/\
-     ( o.o )
-      > ^ <
-     /     \
-    (       )
-    (___)___)
-`;
-
-// O una versión más "de perfil" mirando al usuario
-const BURRO_PERFIL = `
-        _  _ 
-       ( \/ ) 
-        \  / 
-        /  \    //
-       /    \__//
-      /      \ /
-     /   _    |
-    (   / \   |
-     \_/   \_/
-`;
 
 // Versión Minimalista Desierto
 const PAISAJE_ASCII = `
@@ -60,15 +38,19 @@ export default function GlobalNotFound() {
   const [mensaje, setMensaje] = useState<string>("");
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-    seleccionarSabiduria();
-  }, []);
-
-  const seleccionarSabiduria = () => {
+  const seleccionarSabiduria = useCallback(() => {
     const indice = Math.floor(Math.random() * SABIDURIA_ANCESTRAL.length);
     setMensaje(SABIDURIA_ANCESTRAL[indice]);
-  };
+  }, []);
+
+  useEffect(() => {
+    // Randomización client-only: el mensaje sale de Math.random(), que no puede
+    // correr en SSR sin provocar hydration mismatch. Fijar el estado tras el
+    // montaje es intencional aquí (no es estado derivable en render).
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMounted(true);
+    seleccionarSabiduria();
+  }, [seleccionarSabiduria]);
 
   const handleSeguirPerdido = () => {
     // Pequeña animación de recarga "mental"
@@ -98,7 +80,7 @@ export default function GlobalNotFound() {
             404
           </h1>
           <p className="text-frequency text-sm tracking-widest uppercase">
-            // Ruta del Extravío
+            {'// Ruta del Extravío'}
           </p>
         </header>
 
@@ -116,7 +98,7 @@ export default function GlobalNotFound() {
         <div className="space-y-6 text-left min-h-[120px]">
           <div className="h-px w-12 bg-frequency mb-6"></div>
           <p className="text-xl md:text-2xl text-earth-50 font-serif italic leading-relaxed">
-            "{mensaje}"
+            &ldquo;{mensaje}&rdquo;
           </p>
         </div>
 
