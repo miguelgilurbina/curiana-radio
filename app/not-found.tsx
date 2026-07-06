@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 const SABIDURIA_ANCESTRAL = [
   "El viento no borra, reescribe. Tu error es un nuevo borrador.",
@@ -60,15 +60,19 @@ export default function GlobalNotFound() {
   const [mensaje, setMensaje] = useState<string>("");
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-    seleccionarSabiduria();
-  }, []);
-
-  const seleccionarSabiduria = () => {
+  const seleccionarSabiduria = useCallback(() => {
     const indice = Math.floor(Math.random() * SABIDURIA_ANCESTRAL.length);
     setMensaje(SABIDURIA_ANCESTRAL[indice]);
-  };
+  }, []);
+
+  useEffect(() => {
+    // Randomización client-only: el mensaje sale de Math.random(), que no puede
+    // correr en SSR sin provocar hydration mismatch. Fijar el estado tras el
+    // montaje es intencional aquí (no es estado derivable en render).
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMounted(true);
+    seleccionarSabiduria();
+  }, [seleccionarSabiduria]);
 
   const handleSeguirPerdido = () => {
     // Pequeña animación de recarga "mental"
