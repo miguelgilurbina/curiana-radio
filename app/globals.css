@@ -52,6 +52,7 @@
   --sim-rubrica: #8f3b26; /* tinta roja seca — lo editorial */
   --sim-fuego: #a05a10; /* la voz caquetía — pariente del ocre del chart */
   --sim-mono: ui-monospace, "Cascadia Mono", "Consolas", monospace;
+  --sim-display: var(--font-fraunces), var(--font-lora), Georgia, serif;
 }
 
 @layer base {
@@ -111,6 +112,35 @@
   .sim-mono {
     font-family: var(--sim-mono);
     letter-spacing: -0.01em;
+  }
+
+  /* Display editorial de revista (titulares, headwords, nameplate) */
+  .sim-display {
+    font-family: var(--sim-display);
+  }
+
+  /* Filete doble de prensa: línea gruesa + línea fina */
+  .sim-double-rule {
+    height: 6px;
+    border-top: 3px solid var(--sim-ink);
+    border-bottom: 1px solid var(--sim-ink);
+  }
+
+  /* Pull-quote de revista: comilla colgante gigante en rúbrica */
+  .sim-pullquote {
+    position: relative;
+  }
+  .sim-pullquote::before {
+    content: "«";
+    position: absolute;
+    left: -0.14em;
+    top: -0.32em;
+    font-family: var(--sim-display);
+    font-size: 3.4em;
+    line-height: 1;
+    color: var(--sim-rubrica);
+    opacity: 0.55;
+    pointer-events: none;
   }
 
   /* La crónica se sigue escribiendo */

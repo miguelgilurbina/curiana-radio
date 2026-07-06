@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Lora } from "next/font/google";
+import { Inter, Lora, Fraunces } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
@@ -14,6 +14,14 @@ const inter = Inter({
 const lora = Lora({
   subsets: ["latin"],
   variable: "--font-lora",
+  display: "swap",
+});
+
+// Display editorial del simulador (titulares del tema cronista); el resto
+// de la radio no la usa.
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
   display: "swap",
 });
 
@@ -34,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${inter.variable} ${lora.variable}`}>
+    <html lang="es" className={`${inter.variable} ${lora.variable} ${fraunces.variable}`}>
       <body className="font-sans antialiased">
         <Background>
           <Navigation />
