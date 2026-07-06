@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import type { EditionMetadata, SectionContent, Edition, ArchiveItem } from '@/types';
+import type { EditionMetadata, SectionType, SectionContent, Edition, ArchiveItem } from '@/types';
 
 const CONTENT_DIR = path.join(process.cwd(), 'content', 'editions');
 
@@ -62,7 +62,7 @@ async function loadSection(
 
     // Return raw MDX content for RSC rendering
     return {
-      type: sectionName as any,
+      type: sectionName as SectionType,
       mdxSource: content, // Raw MDX string for next-mdx-remote/rsc
       frontmatter: data,
     };

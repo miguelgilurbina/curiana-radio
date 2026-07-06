@@ -5,15 +5,16 @@ import { getEditionBySlug, getAllEditionSlugs } from '@/lib/content';
 import Navigation from '@/components/layout/Navigation';
 import { Heading, BodyText, Quote, Caption, SectionTitle } from '@/components/ui/Typography';
 import type { Metadata } from 'next';
+import type { ComponentProps } from 'react';
 
 // MDX components mapping
 const components = {
-  h1: (props: any) => <Heading level={1} {...props} />,
-  h2: (props: any) => <Heading level={2} {...props} />,
-  h3: (props: any) => <Heading level={3} {...props} />,
-  h4: (props: any) => <Heading level={4} {...props} />,
-  p: (props: any) => <BodyText {...props} />,
-  blockquote: (props: any) => <Quote {...props} />,
+  h1: (props: ComponentProps<'h1'>) => <Heading level={1} className={props.className}>{props.children}</Heading>,
+  h2: (props: ComponentProps<'h2'>) => <Heading level={2} className={props.className}>{props.children}</Heading>,
+  h3: (props: ComponentProps<'h3'>) => <Heading level={3} className={props.className}>{props.children}</Heading>,
+  h4: (props: ComponentProps<'h4'>) => <Heading level={4} className={props.className}>{props.children}</Heading>,
+  p: (props: ComponentProps<'p'>) => <BodyText className={props.className}>{props.children}</BodyText>,
+  blockquote: (props: ComponentProps<'blockquote'>) => <Quote className={props.className}>{props.children}</Quote>,
 };
 
 interface EditionPageProps {

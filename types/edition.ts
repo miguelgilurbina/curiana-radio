@@ -65,8 +65,8 @@ export interface RabbitHole {
  */
 export interface SectionContent {
   type: SectionType;
-  mdxSource: any; // MDX compiled source from next-mdx-remote
-  frontmatter?: Record<string, any>;
+  mdxSource: string; // Raw MDX string; next-mdx-remote/rsc lo compila al renderizar
+  frontmatter?: Record<string, unknown>;
   rabbitHole?: RabbitHole;
 }
 
