@@ -6,7 +6,7 @@ import { getResumen } from "@/lib/resumen";
 import { getAllPersonajes } from "@/lib/personajes";
 import ManaureVoice from "@/components/simulador/ManaureVoice";
 import LanguageDriftChart from "@/components/simulador/LanguageDriftChart";
-import { Epoca, EventoItem, DataAside } from "@/components/simulador/prose";
+import { Epoca, EventoItem, DataAside, Asterismo } from "@/components/simulador/prose";
 import { Overline, EmptyState } from "@/components/simulador/ui";
 
 export function generateMetadata(): Metadata {
@@ -46,8 +46,8 @@ export default function SimuladorPage() {
             key={r.id}
             className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-sans text-xs ${
               r.id === run.id
-                ? "bg-deep-800 text-earth-50"
-                : "border border-earth-200 text-earth-600"
+                ? "bg-(--sim-ink) text-(--sim-paper)"
+                : "border border-(--sim-rule) text-(--sim-ink-soft)"
             }`}
           >
             <span className="tabular-nums">{String(i + 1).padStart(2, "0")}</span>
@@ -58,22 +58,23 @@ export default function SimuladorPage() {
 
       {/* Cabecera del run activo */}
       <header>
-        <h2 className="font-serif text-3xl font-bold leading-tight text-deep-900 md:text-4xl">
+        <h2 className="font-serif text-3xl font-bold leading-tight text-(--sim-ink) md:text-4xl">
           {run.titulo}
         </h2>
         {run.subtitulo && (
-          <p className="mt-3 max-w-reading font-serif text-lg italic leading-snug text-earth-700">
+          <p className="mt-3 max-w-reading font-serif text-lg italic leading-snug text-(--sim-ink-soft)">
             {run.subtitulo}
           </p>
         )}
         {resumen && (
-          <p className="mt-3 font-sans text-sm text-earth-600">
-            <code className="rounded bg-earth-100 px-1.5 py-0.5 text-earth-700">
+          // Registro del instrumento: la capa digital habla en monospace
+          <p className="sim-mono mt-3 text-xs text-(--sim-ink-soft)">
+            <code className="rounded bg-(--sim-paper-deep) px-1.5 py-0.5">
               {resumen.run_id.slice(0, 8)}
             </code>
-            <span className="mx-2 text-earth-300">·</span>
+            <span className="mx-2 text-(--sim-rule)">·</span>
             {resumen.model}
-            <span className="mx-2 text-earth-300">·</span>
+            <span className="mx-2 text-(--sim-rule)">·</span>
             {new Date(resumen.started_at).toLocaleDateString("es-VE", { dateStyle: "long" })}
           </p>
         )}
@@ -97,11 +98,13 @@ export default function SimuladorPage() {
             ]}
           />
 
-          {/* La historia, época por época */}
-          {run.epocas.map((epoca) => {
+          <Asterismo />
+
+          {/* La historia, folio por folio */}
+          {run.epocas.map((epoca, i) => {
             const voz = epoca.manaure ? getManaureFragment(epoca.manaure) : null;
             return (
-              <Epoca key={epoca.id} epoca={epoca}>
+              <Epoca key={epoca.id} epoca={epoca} folio={i + 1}>
                 {voz && <ManaureVoice fragment={voz} />}
                 {epoca.eventos.length > 0 && (
                   <ol className="mt-6">
@@ -118,15 +121,17 @@ export default function SimuladorPage() {
             );
           })}
 
+          <Asterismo />
+
           {/* La deriva, medida — el chart embebido en la narrativa */}
           <section id="deriva" className="mt-14 scroll-mt-24">
             <Overline>La marea, medida</Overline>
-            <h2 className="mt-1 font-serif text-2xl font-semibold text-deep-900 md:text-3xl">
+            <h2 className="mt-1 font-serif text-2xl font-semibold text-(--sim-ink) md:text-3xl">
               Composición de la lengua, turno a turno
             </h2>
             {derivaVoz && <ManaureVoice fragment={derivaVoz} />}
             {run.deriva?.nota && (
-              <p className="mb-4 max-w-reading font-sans text-[0.95rem] leading-relaxed text-earth-700">
+              <p className="mb-4 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
                 {run.deriva.nota}
               </p>
             )}
@@ -134,26 +139,31 @@ export default function SimuladorPage() {
           </section>
 
           {cierre && <ManaureVoice fragment={cierre} />}
+
+          {/* La crónica se sigue escribiendo */}
+          <p aria-hidden="true" className="mt-6">
+            <span className="sim-caret" />
+          </p>
         </>
       )}
 
       {/* Anexos: la wiki de referencia detrás de la historia */}
-      <footer className="mt-14 border-t border-earth-200/70 pt-8">
+      <footer className="mt-14 border-t border-(--sim-rule) pt-8">
         <Overline>Seguir explorando</Overline>
         <ul className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-3">
           {ANEXOS.map((a) => (
             <li key={a.href}>
               <Link href={a.href} className="group block">
-                <span className="font-serif text-lg font-semibold text-deep-900 transition-colors group-hover:text-frequency">
+                <span className="font-serif text-lg font-semibold text-(--sim-ink) transition-colors group-hover:text-(--sim-fuego)">
                   {a.label} →
                 </span>
-                <span className="mt-1 block font-sans text-sm leading-relaxed text-earth-600">{a.desc}</span>
+                <span className="mt-1 block font-sans text-sm leading-relaxed text-(--sim-ink-soft)">{a.desc}</span>
               </Link>
             </li>
           ))}
         </ul>
 
-        <p className="mt-10 max-w-reading font-sans text-xs leading-relaxed text-earth-500">
+        <p className="mt-10 max-w-reading font-sans text-xs leading-relaxed text-(--sim-ink-faint)">
           Sobre este contenido: las voces del narrador y de Manaure son reconstrucción editorial
           hipotética, escrita para esta publicación. Los datos — palabras, adopciones, deriva — salen
           de la simulación tal cual ocurrieron. El caquetío de los fragmentos usa la morfología

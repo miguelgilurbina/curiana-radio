@@ -64,7 +64,7 @@ export default function Timeline({
     return (
       <nav
         aria-label="Cronología del run"
-        className="sticky top-0 z-10 -mx-4 mb-8 flex items-center gap-1 overflow-x-auto border-b border-earth-200/70 bg-earth-50/90 px-4 py-2 backdrop-blur-sm sm:-mx-6 sm:px-6"
+        className="sticky top-0 z-10 -mx-4 mb-8 flex items-center gap-1 overflow-x-auto border-b border-(--sim-rule) bg-(--sim-paper-deep) px-4 py-2 backdrop-blur-sm sm:-mx-6 sm:px-6"
       >
         {epocas.map((e) => (
           <Link
@@ -72,8 +72,8 @@ export default function Timeline({
             href={`/simulador#epoca-${e.id}`}
             className={`shrink-0 rounded-full px-3 py-1 font-sans text-xs transition-colors ${
               enPortada && activa === e.id
-                ? "bg-deep-800 text-earth-50"
-                : "text-earth-600 hover:text-deep-800"
+                ? "bg-(--sim-ink) text-(--sim-paper)"
+                : "text-(--sim-ink-soft) hover:text-(--sim-ink)"
             }`}
           >
             <span className="tabular-nums">
@@ -82,13 +82,13 @@ export default function Timeline({
             {e.titulo}
           </Link>
         ))}
-        <span className="mx-1 shrink-0 text-earth-300">·</span>
+        <span className="mx-1 shrink-0 text-(--sim-rule)">·</span>
         {ANEXOS.map((a) => (
           <Link
             key={a.href}
             href={a.href}
             className={`shrink-0 rounded-full px-3 py-1 font-sans text-xs transition-colors ${
-              pathname?.startsWith(a.href) ? "bg-earth-200/80 text-deep-800" : "text-earth-600 hover:text-deep-800"
+              pathname?.startsWith(a.href) ? "bg-(--sim-rule) text-(--sim-ink)" : "text-(--sim-ink-soft) hover:text-(--sim-ink)"
             }`}
           >
             {a.label}
@@ -100,12 +100,12 @@ export default function Timeline({
 
   return (
     <nav aria-label="Cronología del run" className="sticky top-8">
-      <span className="font-sans text-[0.7rem] font-medium uppercase tracking-[0.18em] text-earth-600">
+      <span className="font-sans text-[0.7rem] font-medium uppercase tracking-[0.18em] text-(--sim-rubrica)">
         Cronología
       </span>
-      <p className="mt-1 font-serif text-sm italic text-earth-700">{runTitulo}</p>
+      <p className="mt-1 font-serif text-sm italic text-(--sim-ink-soft)">{runTitulo}</p>
 
-      <ol className="mt-4 border-l border-earth-200">
+      <ol className="mt-4 border-l border-(--sim-rule)">
         {epocas.map((e) => {
           const esActiva = enPortada && activa === e.id;
           return (
@@ -113,22 +113,22 @@ export default function Timeline({
               <span
                 aria-hidden="true"
                 className={`absolute -left-[4.5px] top-1.5 h-2 w-2 rounded-full transition-colors ${
-                  esActiva ? "bg-frequency" : "bg-earth-300"
+                  esActiva ? "bg-(--sim-rubrica)" : "bg-(--sim-rule)"
                 }`}
               />
               <Link href={`/simulador#epoca-${e.id}`} className="group block">
-                <span className="font-sans text-[0.7rem] tabular-nums uppercase tracking-wide text-earth-500">
+                <span className="font-sans text-[0.7rem] tabular-nums uppercase tracking-wide text-(--sim-ink-faint)">
                   Días {e.dias[0]}–{e.dias[1]}
                 </span>
                 <span
                   className={`block font-serif text-sm leading-snug transition-colors ${
-                    esActiva ? "text-deep-900 font-semibold" : "text-earth-700 group-hover:text-deep-800"
+                    esActiva ? "text-(--sim-ink) font-semibold" : "text-(--sim-ink-soft) group-hover:text-(--sim-ink)"
                   }`}
                 >
                   {e.titulo}
                 </span>
                 {e.hito && (
-                  <span className="mt-0.5 block font-sans text-xs leading-snug text-earth-500">{e.hito}</span>
+                  <span className="mt-0.5 block font-sans text-xs leading-snug text-(--sim-ink-faint)">{e.hito}</span>
                 )}
               </Link>
             </li>
@@ -136,8 +136,8 @@ export default function Timeline({
         })}
       </ol>
 
-      <div className="mt-8 border-t border-earth-200/70 pt-4">
-        <span className="font-sans text-[0.7rem] font-medium uppercase tracking-[0.18em] text-earth-600">
+      <div className="mt-8 border-t border-(--sim-rule) pt-4">
+        <span className="font-sans text-[0.7rem] font-medium uppercase tracking-[0.18em] text-(--sim-rubrica)">
           Anexos
         </span>
         <ul className="mt-2 flex flex-col gap-1.5">
@@ -147,8 +147,8 @@ export default function Timeline({
                 href={a.href}
                 className={`font-sans text-sm transition-colors ${
                   pathname?.startsWith(a.href)
-                    ? "text-deep-900 font-medium"
-                    : "text-earth-600 hover:text-deep-800"
+                    ? "text-(--sim-ink) font-medium"
+                    : "text-(--sim-ink-soft) hover:text-(--sim-ink)"
                 }`}
               >
                 {a.label}

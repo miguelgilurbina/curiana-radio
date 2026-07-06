@@ -18,10 +18,10 @@ export default function LexiconPage() {
     <article className="mx-auto max-w-[720px]">
       <header className="mb-6">
         <Overline>Vocabulario base</Overline>
-        <h2 className="mt-1 font-serif text-2xl font-semibold text-deep-900 md:text-3xl">
+        <h2 className="mt-1 font-serif text-2xl font-semibold text-(--sim-ink) md:text-3xl">
           Léxico Caquetío-Arahuaco
         </h2>
-        <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-earth-700">
+        <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
           {palabras.length} palabras: las atestiguadas vienen de crónicas coloniales y del trabajo
           académico que las rescató; el resto son reconstrucciones desde las lenguas arawak hermanas
           (wayunaiki, lokono, taíno). Cada entrada declara su fuente — esa etiqueta es la etimología

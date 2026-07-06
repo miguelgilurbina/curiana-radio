@@ -84,8 +84,8 @@ export default function NeologismosCronologia({
               className="rounded-full border px-3 py-1.5 font-sans text-sm transition-colors"
               style={{
                 background: active ? `${color}1a` : "transparent",
-                borderColor: active ? color : "#dcd2c3",
-                color: active ? color : "#72584a",
+                borderColor: active ? color : "var(--sim-rule)",
+                color: active ? color : "var(--sim-ink-soft)",
               }}
             >
               {s} · {count}
@@ -99,10 +99,10 @@ export default function NeologismosCronologia({
       ) : (
         dias.map((dia) => (
           <section key={dia} className="mt-8 first:mt-0">
-            <span className="font-sans text-[0.7rem] font-medium uppercase tracking-[0.18em] text-earth-600">
+            <span className="font-sans text-[0.7rem] font-medium uppercase tracking-[0.18em] text-(--sim-rubrica)">
               Día {dia}
             </span>
-            <div className="mt-1 border-l border-earth-200">
+            <div className="mt-1 border-l border-(--sim-rule)">
               {filtradas
                 .filter((e) => e.dia === dia)
                 .map((e) => {
@@ -116,16 +116,16 @@ export default function NeologismosCronologia({
                         style={{ background: st.color }}
                       />
                       <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                        <h3 className="font-serif text-2xl font-semibold text-frequency">{e.form}</h3>
+                        <h3 className="font-serif text-2xl font-semibold text-(--sim-fuego)">{e.form}</h3>
                         <LangPill color={st.color}>{st.label}</LangPill>
                       </div>
 
-                      <div className="mt-1.5 flex items-center gap-1.5 font-sans text-xs text-earth-500">
+                      <div className="mt-1.5 flex items-center gap-1.5 font-sans text-xs text-(--sim-ink-faint)">
                         <span>acuñó</span>
                         {slug ? (
                           <Link
                             href={`/simulador/personajes/${slug}`}
-                            className="inline-flex items-center gap-1 text-earth-600 transition-colors hover:text-frequency"
+                            className="inline-flex items-center gap-1 text-(--sim-ink-soft) transition-colors hover:text-(--sim-fuego)"
                           >
                             <Avatar name={e.proposedBy} size={18} />
                             {e.proposedBy}
@@ -141,14 +141,14 @@ export default function NeologismosCronologia({
                       <ol className="mt-3 flex flex-col gap-2">
                         {e.acepciones.map((a, i) => (
                           <li key={a.id} className="max-w-reading">
-                            <p className="font-sans text-[0.95rem] leading-relaxed text-deep-800">
+                            <p className="font-sans text-[0.95rem] leading-relaxed text-(--sim-ink)">
                               {e.acepciones.length > 1 && (
-                                <span className="mr-1.5 font-serif font-semibold text-earth-500">{i + 1}.</span>
+                                <span className="mr-1.5 font-serif font-semibold text-(--sim-ink-faint)">{i + 1}.</span>
                               )}
                               {a.meaning}
                             </p>
                             {a.components && (
-                              <p className="mt-0.5 font-sans text-xs text-earth-500">
+                              <p className="mt-0.5 font-sans text-xs text-(--sim-ink-faint)">
                                 {a.components}
                                 {a.morphological_rule && a.morphological_rule !== "desconocida" && (
                                   <span> · regla {a.morphological_rule}</span>
@@ -160,20 +160,20 @@ export default function NeologismosCronologia({
                       </ol>
 
                       {e.adoptadoPor.length > 0 && (
-                        <p className="mt-2 font-sans text-xs text-earth-500">
+                        <p className="mt-2 font-sans text-xs text-(--sim-ink-faint)">
                           la adoptaron: {e.adoptadoPor.join(", ")}
                         </p>
                       )}
 
                       {e.quotes.map((q) => (
-                        <blockquote key={q.quote} className="mt-3 border-l-[3px] border-frequency/60 pl-3">
-                          <p className="font-serif text-base italic leading-snug text-deep-900">{q.quote}</p>
+                        <blockquote key={q.quote} className="mt-3 border-l-[3px] border-(--sim-fuego)/60 pl-3">
+                          <p className="font-serif text-base italic leading-snug text-(--sim-ink)">{q.quote}</p>
                           {q.traduccion && (
-                            <p className="mt-1 font-sans text-xs leading-relaxed text-earth-600">{q.traduccion}</p>
+                            <p className="mt-1 font-sans text-xs leading-relaxed text-(--sim-ink-soft)">{q.traduccion}</p>
                           )}
                           <Link
                             href={`/simulador/personajes/${q.agente_slug}`}
-                            className="mt-1 inline-block font-sans text-xs text-earth-500 transition-colors hover:text-frequency"
+                            className="mt-1 inline-block font-sans text-xs text-(--sim-ink-faint) transition-colors hover:text-(--sim-fuego)"
                           >
                             — {q.agente}
                           </Link>

@@ -86,21 +86,21 @@ export default function LexiconDiccionario({ palabras }: { palabras: EntradaDicc
 
   const Paginacion = () =>
     totalPaginas > 1 ? (
-      <div className="flex items-center justify-between border-t border-earth-200/70 py-3 font-sans text-sm">
+      <div className="flex items-center justify-between border-t border-(--sim-rule) py-3 font-sans text-sm">
         <button
           onClick={() => setPagina(Math.max(0, paginaActual - 1))}
           disabled={paginaActual === 0}
-          className="text-earth-600 transition-colors hover:text-frequency disabled:cursor-default disabled:text-earth-300"
+          className="text-(--sim-ink-soft) transition-colors hover:text-(--sim-fuego) disabled:cursor-default disabled:text-(--sim-rule)"
         >
           ← anterior
         </button>
-        <span className="font-sans text-xs tabular-nums text-earth-500">
+        <span className="font-sans text-xs tabular-nums text-(--sim-ink-faint)">
           página {paginaActual + 1} de {totalPaginas}
         </span>
         <button
           onClick={() => setPagina(Math.min(totalPaginas - 1, paginaActual + 1))}
           disabled={paginaActual >= totalPaginas - 1}
-          className="text-earth-600 transition-colors hover:text-frequency disabled:cursor-default disabled:text-earth-300"
+          className="text-(--sim-ink-soft) transition-colors hover:text-(--sim-fuego) disabled:cursor-default disabled:text-(--sim-rule)"
         >
           siguiente →
         </button>
@@ -119,8 +119,8 @@ export default function LexiconDiccionario({ palabras }: { palabras: EntradaDicc
               className="rounded-full border px-3 py-1.5 font-sans text-sm transition-colors"
               style={{
                 background: active ? `${color}1a` : "transparent",
-                borderColor: active ? color : "#dcd2c3",
-                color: active ? color : "#72584a",
+                borderColor: active ? color : "var(--sim-rule)",
+                color: active ? color : "var(--sim-ink-soft)",
               }}
             >
               <span className="mr-1.5 inline-block h-2 w-2 rounded-full align-middle" style={{ background: color }} />
@@ -133,8 +133,8 @@ export default function LexiconDiccionario({ palabras }: { palabras: EntradaDicc
           className="rounded-full border px-3 py-1.5 font-sans text-sm transition-colors"
           style={{
             background: soloAtestiguadas ? "#C47A2B1a" : "transparent",
-            borderColor: soloAtestiguadas ? "#C47A2B" : "#dcd2c3",
-            color: soloAtestiguadas ? "#C47A2B" : "#72584a",
+            borderColor: soloAtestiguadas ? "#C47A2B" : "var(--sim-rule)",
+            color: soloAtestiguadas ? "#C47A2B" : "var(--sim-ink-soft)",
           }}
         >
           ✓ solo atestiguadas · {atestiguadas}
@@ -147,12 +147,12 @@ export default function LexiconDiccionario({ palabras }: { palabras: EntradaDicc
           placeholder="Buscar palabra o significado…"
           value={search}
           onChange={(e) => resetear(() => setSearch(e.target.value))}
-          className="min-w-[12rem] flex-1 rounded-lg border border-earth-200 bg-earth-50/80 px-3.5 py-2 font-sans text-sm text-deep-900 placeholder:text-earth-400 outline-none focus:border-frequency"
+          className="min-w-[12rem] flex-1 rounded-lg border border-(--sim-rule) bg-(--sim-paper-deep) px-3.5 py-2 font-sans text-sm text-(--sim-ink) placeholder:text-(--sim-ink-faint) outline-none focus:border-(--sim-fuego)"
         />
         {search && (
           <button
             onClick={() => resetear(() => setSearch(""))}
-            className="rounded-lg border border-earth-200 px-3 py-2 font-sans text-sm text-earth-600 transition-colors hover:text-deep-800"
+            className="rounded-lg border border-(--sim-rule) px-3 py-2 font-sans text-sm text-(--sim-ink-soft) transition-colors hover:text-(--sim-ink)"
             aria-label="Limpiar búsqueda"
           >
             Limpiar
@@ -161,7 +161,7 @@ export default function LexiconDiccionario({ palabras }: { palabras: EntradaDicc
         <select
           value={catFilter}
           onChange={(e) => resetear(() => setCatFilter(e.target.value))}
-          className="rounded-lg border border-earth-200 bg-earth-50/80 px-3 py-2 font-sans text-sm text-deep-800 outline-none focus:border-frequency"
+          className="rounded-lg border border-(--sim-rule) bg-(--sim-paper-deep) px-3 py-2 font-sans text-sm text-(--sim-ink) outline-none focus:border-(--sim-fuego)"
         >
           {CATEGORIES.map((c) => (
             <option key={c} value={c}>{c}</option>
@@ -169,7 +169,7 @@ export default function LexiconDiccionario({ palabras }: { palabras: EntradaDicc
         </select>
       </div>
 
-      <p className="mb-2 font-sans text-xs text-earth-500">
+      <p className="mb-2 font-sans text-xs text-(--sim-ink-faint)">
         {filtradas.length === palabras.length
           ? `${palabras.length} palabras`
           : `${filtradas.length} de ${palabras.length} palabras`}
@@ -182,18 +182,18 @@ export default function LexiconDiccionario({ palabras }: { palabras: EntradaDicc
         <>
           {grupos.map(({ letra, entradas }) => (
             <section key={`${letra}-${desde}`} className="mt-6 first:mt-2">
-              <h3 className="border-b border-earth-200/70 pb-1 font-serif text-2xl font-semibold text-earth-400">
+              <h3 className="border-b border-(--sim-rule) pb-1 font-serif text-2xl font-semibold text-(--sim-ink-faint)">
                 {letra}
               </h3>
               <dl>
                 {entradas.map((e, i) => {
                   const color = LANG_COLORS[e.source_language] ?? "#9d7f66";
                   return (
-                    <div key={`${e.word}-${i}`} className="border-t border-earth-200/40 py-2.5 first:border-t-0">
+                    <div key={`${e.word}-${i}`} className="border-t border-(--sim-rule) py-2.5 first:border-t-0">
                       <dt className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
-                        <span className="font-serif text-lg font-semibold text-frequency">{e.word}</span>
+                        <span className="font-serif text-lg font-semibold text-(--sim-fuego)">{e.word}</span>
                         {e.category && (
-                          <span className="font-sans text-xs italic text-earth-500">{e.category}</span>
+                          <span className="font-sans text-xs italic text-(--sim-ink-faint)">{e.category}</span>
                         )}
                         <span
                           className="rounded px-1.5 py-0.5 font-sans text-[0.7rem]"
@@ -202,13 +202,13 @@ export default function LexiconDiccionario({ palabras }: { palabras: EntradaDicc
                           {e.source_language}
                         </span>
                         {e.attested && (
-                          <span className="font-sans text-[0.7rem] font-medium text-earth-600">✓ atestiguada</span>
+                          <span className="font-sans text-[0.7rem] font-medium text-(--sim-ink-soft)">✓ atestiguada</span>
                         )}
                       </dt>
-                      <dd className="mt-0.5 max-w-reading font-sans text-sm leading-relaxed text-deep-800">
+                      <dd className="mt-0.5 max-w-reading font-sans text-sm leading-relaxed text-(--sim-ink)">
                         {e.meaning}
                         {e.attested && e.source_ref && e.source_ref !== e.source_language && (
-                          <span className="ml-2 font-sans text-xs italic text-earth-500">({e.source_ref})</span>
+                          <span className="ml-2 font-sans text-xs italic text-(--sim-ink-faint)">({e.source_ref})</span>
                         )}
                       </dd>
                     </div>

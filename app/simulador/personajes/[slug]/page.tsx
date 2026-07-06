@@ -51,7 +51,7 @@ export default async function PersonajePage({ params }: PersonajePageProps) {
     <article className="mx-auto max-w-[720px]">
       <Link
         href="/simulador/personajes"
-        className="font-sans text-sm text-earth-600 transition-colors hover:text-frequency"
+        className="font-sans text-sm text-(--sim-ink-soft) transition-colors hover:text-(--sim-fuego)"
       >
         ← Personajes
       </Link>
@@ -60,14 +60,14 @@ export default async function PersonajePage({ params }: PersonajePageProps) {
       <header className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-5">
         <Avatar name={p.nombre} size={72} />
         <div className="min-w-0">
-          <h1 className="font-serif text-3xl font-bold text-deep-900 md:text-4xl">{p.nombre}</h1>
-          <p className="mt-1 font-sans text-sm text-earth-500">
+          <h1 className="font-serif text-3xl font-bold text-(--sim-ink) md:text-4xl">{p.nombre}</h1>
+          <p className="mt-1 font-sans text-sm text-(--sim-ink-faint)">
             {[p.etnia, p.edad ? `${p.edad} años` : null, p.ubicacion_default?.replaceAll("_", " ")]
               .filter(Boolean)
               .join(" · ")}
           </p>
           {p.rol_comunidad && (
-            <p className="mt-2 max-w-reading font-serif text-lg italic leading-snug text-earth-700">
+            <p className="mt-2 max-w-reading font-serif text-lg italic leading-snug text-(--sim-ink-soft)">
               {p.rol_comunidad}
             </p>
           )}
@@ -76,15 +76,15 @@ export default async function PersonajePage({ params }: PersonajePageProps) {
 
       {/* Su voz, primero */}
       {heroQuote && (
-        <blockquote className="mt-8 border-l-[3px] border-frequency pl-5 md:pl-7">
-          <p className="font-serif text-2xl italic leading-snug text-deep-900 md:text-3xl">
+        <blockquote className="mt-8 border-l-[3px] border-(--sim-fuego) pl-5 md:pl-7">
+          <p className="font-serif text-2xl italic leading-snug text-(--sim-ink) md:text-3xl">
             {heroQuote.quote}
           </p>
           {heroQuote.traduccion && (
-            <p className="mt-2 font-sans text-sm leading-relaxed text-earth-600">{heroQuote.traduccion}</p>
+            <p className="mt-2 font-sans text-sm leading-relaxed text-(--sim-ink-soft)">{heroQuote.traduccion}</p>
           )}
           {heroQuote.day != null && (
-            <p className="mt-2 font-sans text-xs text-earth-500">día {heroQuote.day}</p>
+            <p className="mt-2 font-sans text-xs text-(--sim-ink-faint)">día {heroQuote.day}</p>
           )}
         </blockquote>
       )}
@@ -102,7 +102,7 @@ export default async function PersonajePage({ params }: PersonajePageProps) {
       {p.descripcion && (
         <section className="mt-8">
           <Overline>Quién es</Overline>
-          <p className="mt-2 max-w-reading font-sans text-[0.95rem] leading-relaxed text-earth-700">
+          <p className="mt-2 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
             {p.descripcion}
           </p>
         </section>
@@ -110,7 +110,7 @@ export default async function PersonajePage({ params }: PersonajePageProps) {
       {p.resumen_arco && (
         <section className="mt-8">
           <Overline>Su arco en esta edición</Overline>
-          <p className="mt-2 max-w-reading font-sans text-[0.95rem] leading-relaxed text-earth-700">
+          <p className="mt-2 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
             {p.resumen_arco}
           </p>
         </section>
@@ -124,14 +124,14 @@ export default async function PersonajePage({ params }: PersonajePageProps) {
             {apariciones.map((ev, i) => {
               const tipo = EVENTO_TIPOS[ev.tipo];
               return (
-                <li key={i} className="relative border-l border-earth-200 pl-5 pb-5 last:pb-0">
+                <li key={i} className="relative border-l border-(--sim-rule) pl-5 pb-5 last:pb-0">
                   <span
                     aria-hidden="true"
                     className="absolute -left-[4.5px] top-1.5 h-2 w-2 rounded-full"
                     style={{ background: tipo.color }}
                   />
-                  <div className="flex flex-wrap items-center gap-2 font-sans text-xs text-earth-500">
-                    <span className="tabular-nums font-medium text-earth-600">Día {ev.dia}</span>
+                  <div className="flex flex-wrap items-center gap-2 font-sans text-xs text-(--sim-ink-faint)">
+                    <span className="tabular-nums font-medium text-(--sim-ink-soft)">Día {ev.dia}</span>
                     <span
                       className="inline-flex items-center rounded-full px-2 py-0.5 font-medium"
                       style={{ background: `${tipo.color}1a`, color: tipo.color, border: `1px solid ${tipo.color}33` }}
@@ -140,16 +140,16 @@ export default async function PersonajePage({ params }: PersonajePageProps) {
                     </span>
                   </div>
                   {ev.forma && (
-                    <p className="mt-1 font-serif text-lg font-semibold text-frequency">{ev.forma}</p>
+                    <p className="mt-1 font-serif text-lg font-semibold text-(--sim-fuego)">{ev.forma}</p>
                   )}
                   {ev.nota && (
-                    <p className="mt-1 max-w-reading font-sans text-sm leading-relaxed text-earth-700">
+                    <p className="mt-1 max-w-reading font-sans text-sm leading-relaxed text-(--sim-ink-soft)">
                       {ev.nota}
                     </p>
                   )}
                   <Link
                     href={`/simulador#epoca-${ev.epocaId}`}
-                    className="mt-1 inline-block font-sans text-xs text-earth-500 transition-colors hover:text-frequency"
+                    className="mt-1 inline-block font-sans text-xs text-(--sim-ink-faint) transition-colors hover:text-(--sim-fuego)"
                   >
                     ver en «{ev.epocaTitulo}» →
                   </Link>
@@ -164,28 +164,28 @@ export default async function PersonajePage({ params }: PersonajePageProps) {
       {restoQuotes.length > 0 && (
         <section className="mt-10">
           <div className="flex items-baseline justify-between">
-            <h2 className="font-serif text-xl font-semibold text-deep-900">Más frases</h2>
+            <h2 className="font-serif text-xl font-semibold text-(--sim-ink)">Más frases</h2>
             <Overline>{restoQuotes.length} curadas</Overline>
           </div>
           <div className="mt-2">
             {restoQuotes.map((q, i) => (
-              <div key={i} className="border-t border-earth-200/70 py-6 first:border-t-0">
-                <blockquote className="border-l-[3px] border-frequency pl-4">
-                  <p className="font-serif text-xl italic leading-snug text-deep-900 md:text-2xl">
+              <div key={i} className="border-t border-(--sim-rule) py-6 first:border-t-0">
+                <blockquote className="border-l-[3px] border-(--sim-fuego) pl-4">
+                  <p className="font-serif text-xl italic leading-snug text-(--sim-ink) md:text-2xl">
                     {q.quote}
                   </p>
                 </blockquote>
                 {q.traduccion && (
-                  <p className="mt-2 pl-[19px] font-sans text-[0.95rem] leading-relaxed text-earth-600">
+                  <p className="mt-2 pl-[19px] font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
                     {q.traduccion}
                   </p>
                 )}
                 {q.justificacion && (
-                  <p className="mt-3 max-w-reading font-sans text-sm leading-relaxed text-earth-500">
+                  <p className="mt-3 max-w-reading font-sans text-sm leading-relaxed text-(--sim-ink-faint)">
                     {q.justificacion}
                   </p>
                 )}
-                <div className="mt-3 flex flex-wrap items-center gap-3 font-sans text-xs text-earth-500">
+                <div className="mt-3 flex flex-wrap items-center gap-3 font-sans text-xs text-(--sim-ink-faint)">
                   {q.day != null && <span>día {q.day}</span>}
                   {q.impacto_score != null && <ScoreGauge score={q.impacto_score} width={56} />}
                 </div>
@@ -196,16 +196,16 @@ export default async function PersonajePage({ params }: PersonajePageProps) {
       )}
 
       {/* Navegación entre personajes */}
-      <div className="mt-12 flex items-center justify-between border-t border-earth-200/70 pt-6 font-sans text-sm">
+      <div className="mt-12 flex items-center justify-between border-t border-(--sim-rule) pt-6 font-sans text-sm">
         <Link
           href={`/simulador/personajes/${anterior.slug}`}
-          className="text-earth-600 transition-colors hover:text-frequency"
+          className="text-(--sim-ink-soft) transition-colors hover:text-(--sim-fuego)"
         >
           ← {anterior.nombre}
         </Link>
         <Link
           href={`/simulador/personajes/${siguiente.slug}`}
-          className="text-earth-600 transition-colors hover:text-frequency"
+          className="text-(--sim-ink-soft) transition-colors hover:text-(--sim-fuego)"
         >
           {siguiente.nombre} →
         </Link>

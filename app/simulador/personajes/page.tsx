@@ -19,24 +19,24 @@ function EntradaPersonaje({ p }: { p: Personaje }) {
   const quote = p.quotes[0];
   const meta = [p.etnia, p.edad ? `${p.edad} años` : null].filter(Boolean).join(" · ");
   return (
-    <li className="border-t border-earth-200/70 first:border-t-0">
+    <li className="border-t border-(--sim-rule) first:border-t-0">
       <Link href={`/simulador/personajes/${p.slug}`} className="group flex gap-4 py-5">
         <Avatar name={p.nombre} size={48} />
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-            <h3 className="font-serif text-xl font-semibold text-deep-900 transition-colors group-hover:text-frequency">
+            <h3 className="font-serif text-xl font-semibold text-(--sim-ink) transition-colors group-hover:text-(--sim-fuego)">
               {p.nombre}
             </h3>
-            <span className="font-sans text-xs text-earth-500">{meta}</span>
+            <span className="font-sans text-xs text-(--sim-ink-faint)">{meta}</span>
             {p.neologismos_adoptados > 0 && (
-              <span className="font-sans text-xs text-earth-500">✦ acuñó {p.neologismos_adoptados}</span>
+              <span className="font-sans text-xs text-(--sim-ink-faint)">✦ acuñó {p.neologismos_adoptados}</span>
             )}
           </div>
-          <p className="mt-1 line-clamp-2 font-sans text-sm leading-relaxed text-earth-700">
+          <p className="mt-1 line-clamp-2 font-sans text-sm leading-relaxed text-(--sim-ink-soft)">
             {p.rol_comunidad}
           </p>
           {quote && (
-            <p className="mt-2 line-clamp-2 font-serif text-[0.95rem] italic text-deep-800">
+            <p className="mt-2 line-clamp-2 font-serif text-[0.95rem] italic text-(--sim-ink)">
               "{quote.quote}"
             </p>
           )}
@@ -73,8 +73,8 @@ export default function PersonajesPage() {
     <article className="mx-auto max-w-[720px]">
       <header>
         <Overline>Quiénes hablan</Overline>
-        <h2 className="mt-1 font-serif text-2xl font-semibold text-deep-900 md:text-3xl">Personajes</h2>
-        <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-earth-700">
+        <h2 className="mt-1 font-serif text-2xl font-semibold text-(--sim-ink) md:text-3xl">Personajes</h2>
+        <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
           {personajes.length} voces de la Curiana con historia propia. Cada una llegó con una
           biografía fija — y salió de la historia con un arco, un puñado de palabras nuevas y
           frases que nadie le escribió de antemano.

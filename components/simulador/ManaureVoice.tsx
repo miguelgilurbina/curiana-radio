@@ -26,10 +26,10 @@ export default function ManaureVoice({
   const hero = variant === "hero";
 
   return (
-    <figure className={hero ? "my-10 md:my-14" : "my-10 border-l-[3px] border-frequency/70 pl-5 md:pl-7"}>
+    <figure className={hero ? "my-10 md:my-14" : "my-10 border-l-[3px] border-(--sim-fuego)/70 pl-5 md:pl-7"}>
       {fragment.narrador && (
         <p
-          className={`max-w-reading font-sans leading-relaxed text-earth-600 ${
+          className={`max-w-reading font-sans leading-relaxed text-(--sim-ink-soft) ${
             hero ? "text-sm md:text-base" : "text-sm"
           }`}
         >
@@ -39,25 +39,25 @@ export default function ManaureVoice({
 
       <blockquote className={fragment.narrador ? "mt-6 md:mt-8" : ""}>
         {fragment.caquetio && (
-          <p className={`font-serif italic text-frequency ${hero ? "text-2xl md:text-3xl" : "text-xl md:text-2xl"}`}>
+          <p className={`font-serif italic text-(--sim-fuego) ${hero ? "text-2xl md:text-3xl" : "text-xl md:text-2xl"}`}>
             {fragment.caquetio}
           </p>
         )}
         {fragment.traduccion && (
-          <p className="mt-1.5 font-sans text-sm text-earth-500">{fragment.traduccion}</p>
+          <p className="mt-1.5 font-sans text-sm text-(--sim-ink-faint)">{fragment.traduccion}</p>
         )}
 
         <div
-          className={`font-serif leading-relaxed text-deep-900 ${
-            hero ? "mt-6 text-xl md:text-2xl" : "mt-5 text-lg md:text-xl"
+          className={`font-serif leading-relaxed text-(--sim-ink) ${
+            hero ? "sim-capitular mt-6 text-xl md:text-2xl" : "mt-5 text-lg md:text-xl"
           } ${fragment.caquetio ? "" : "mt-0"}`}
         >
           <MDXRemote source={fragment.body} components={mdxComponents} />
         </div>
       </blockquote>
 
-      <figcaption className="mt-5 flex flex-wrap items-center gap-2 font-sans text-xs text-earth-500">
-        <span className="inline-flex items-center rounded-full border border-earth-300/60 bg-earth-100/60 px-2 py-0.5 font-medium tracking-wide text-earth-600">
+      <figcaption className="mt-5 flex flex-wrap items-center gap-2 font-sans text-xs text-(--sim-ink-faint)">
+        <span className="inline-flex items-center rounded-full border border-(--sim-rule) bg-(--sim-paper-deep) px-2 py-0.5 font-medium tracking-wide text-(--sim-ink-soft)">
           {TIPO_LABEL[fragment.tipo]}
         </span>
         {fragment.contexto && <span>{fragment.contexto}</span>}
