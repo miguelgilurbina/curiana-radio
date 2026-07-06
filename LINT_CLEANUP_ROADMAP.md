@@ -27,24 +27,24 @@
 
 ### Ola 1 — Bugs reales (no es cosmética; arreglar primero)
 
-- [ ] **`app/not-found.tsx:65` — `react-hooks/immutability`**
+- [x] **`app/not-found.tsx:65` — `react-hooks/immutability`**
       `seleccionarSabiduria` se invoca dentro de un `useEffect` (línea 65) **antes** de
       declararse (línea 68). La captura temprana no se actualiza. Fix: mover la
       declaración de la función arriba del `useEffect`, o envolverla en `useCallback` y
       declararla antes. Verificar que el mensaje aleatorio siga apareceindo al montar.
-- [ ] **`components/simulador/LexiconDiccionario.tsx:220` — `react-hooks/static-components`**
+- [x] **`components/simulador/LexiconDiccionario.tsx:220` — `react-hooks/static-components`**
       Se crea un componente durante el render (se redefine en cada render → remonta el
       subárbol, pierde estado/foco). Fix: extraer ese componente fuera del componente
       padre (a nivel de módulo) y pasarle props.
 
 ### Ola 2 — Correctness / UX (reglas de Next y React)
 
-- [ ] **`app/[edition]/page.tsx:149` — `@next/next/no-html-link-for-pages`**
+- [x] **`app/[edition]/page.tsx:149` — `@next/next/no-html-link-for-pages`**
       `<a href="/archivo/">` → usar `<Link href="/archivo/">` de `next/link` (navegación
       client-side, prefetch).
-- [ ] **`app/not-found.tsx:100` — `react/jsx-no-comment-textnodes`**
+- [x] **`app/not-found.tsx:100` — `react/jsx-no-comment-textnodes`**
       Comentario suelto que se renderiza como texto. Envolver en `{/* ... */}` o eliminar.
-- [ ] **`react/no-unescaped-entities` (4)** — comillas sin escapar en JSX:
+- [x] **`react/no-unescaped-entities` (4)** — comillas sin escapar en JSX:
   - `app/not-found.tsx:119` (x2)
   - `app/simulador/personajes/page.tsx:40` (x2)
       Fix: usar `&ldquo;`/`&rdquo;`/`&quot;` o mover el texto a una constante/expresión.
@@ -53,20 +53,20 @@
 
 Empezar por el tipo raíz; probablemente cascada al resto.
 
-- [ ] **`types/edition.ts:68`, `:69`** — definir los tipos reales que hoy son `any`.
+- [x] **`types/edition.ts:68`, `:69`** — definir los tipos reales que hoy son `any`.
       Es el archivo de tipos de "edition"; tiparlo bien seguramente arregla varios de los
       `any` de `app/[edition]/page.tsx`.
-- [ ] **`app/[edition]/page.tsx:10-15`** (6 `any`) — reemplazar por los tipos de
+- [x] **`app/[edition]/page.tsx:10-15`** (6 `any`) — reemplazar por los tipos de
       `types/edition.ts` una vez definidos.
-- [ ] **`lib/content.ts:65`** — tipar el retorno/parámetro que hoy es `any`.
+- [x] **`lib/content.ts:65`** — tipar el retorno/parámetro que hoy es `any`.
 
 ### Ola 4 — Limpieza (warnings, `no-unused-vars`, 5)
 
-- [ ] `app/[edition]/page.tsx:4` — import `Navigation` sin usar → eliminar.
-- [ ] `app/[edition]/page.tsx:5` — import `Caption` sin usar → eliminar.
-- [ ] `app/not-found.tsx:19` — const `BURRO_ASCII` sin usar → eliminar o usar.
-- [ ] `app/not-found.tsx:29` — const `BURRO_PERFIL` sin usar → eliminar o usar.
-- [ ] `app/simulador/lexicon/page.tsx:15` — param `_id` sin usar.
+- [x] `app/[edition]/page.tsx:4` — import `Navigation` sin usar → eliminar.
+- [x] `app/[edition]/page.tsx:5` — import `Caption` sin usar → eliminar.
+- [x] `app/not-found.tsx:19` — const `BURRO_ASCII` sin usar → eliminar o usar.
+- [x] `app/not-found.tsx:29` — const `BURRO_PERFIL` sin usar → eliminar o usar.
+- [x] `app/simulador/lexicon/page.tsx:15` — param `_id` sin usar.
       **Decisión de config:** el prefijo `_` sugiere intención de "ignorado". Si es un
       patrón que se repetirá, considerar añadir al flat config
       `argsIgnorePattern: "^_"` / `varsIgnorePattern: "^_"` en las rules de
@@ -117,3 +117,23 @@ types/edition.ts
 ```bash
 npm run lint          # objetivo: 0 errores
 ```
+
+## Cierre — COMPLETADO
+
+Estado final: `npm run lint` → **0 errores, 0 warnings**; `tsc --noEmit` limpio.
+Ejecutado en 4 commits (uno por ola) sobre `chore/lint-cleanup`.
+
+Verificación en runtime (dev server): paginación del léxico cambia de página,
+`GlobalNotFound` puebla la cita aleatoria con comillas tipográficas, y la edición
+`/01` renderiza el MDX (34 párrafos) con el enlace de archivo como `<Link>`.
+
+Dos decisiones fuera del plan original:
+
+1. **Ola 1 destapó un error latente nuevo** (`react-hooks/set-state-in-effect` en
+   not-found.tsx): antes el linter no lo veía porque bailaba en el error de orden.
+   El setState de montaje es randomización client-only (hydration-safe), no estado
+   derivable, así que se resolvió con `eslint-disable-next-line` justificado.
+2. **`_id` (Ola 4) se resolvió a nivel de config**, no de código: se añadió a
+   `eslint.config.mjs` `no-unused-vars` con `ignoreRestSiblings: true` y
+   `varsIgnorePattern/argsIgnorePattern: "^_"`, honrando el patrón deliberado
+   `{ id: _id, ...rest }`. `app/simulador/lexicon/page.tsx` no se tocó.
