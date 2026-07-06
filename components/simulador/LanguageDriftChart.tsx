@@ -36,7 +36,7 @@ export default function LanguageDriftChart({ data }: Props) {
 
   if (chartData.length === 0) {
     return (
-      <div className="flex h-64 items-center justify-center rounded-xl border border-dashed border-earth-300 font-sans text-sm text-earth-500">
+      <div className="flex h-64 items-center justify-center rounded-xl border border-dashed border-(--sim-rule) font-sans text-sm text-(--sim-ink-faint)">
         Sin datos aún — la deriva aparecerá cuando corra la simulación.
       </div>
     );
@@ -53,17 +53,17 @@ export default function LanguageDriftChart({ data }: Props) {
             </linearGradient>
           ))}
         </defs>
-        <CartesianGrid strokeDasharray="3 3" stroke="#dcd2c3" vertical={false} />
+        <CartesianGrid strokeDasharray="3 3" stroke="#d8c8a3" vertical={false} />
         <XAxis
           dataKey="label"
-          tick={{ fill: "#8a6c57", fontSize: 11, fontFamily: "Inter, sans-serif" }}
+          tick={{ fill: "#8a7657", fontSize: 11, fontFamily: "Inter, sans-serif" }}
           tickLine={false}
-          axisLine={{ stroke: "#dcd2c3" }}
+          axisLine={{ stroke: "#d8c8a3" }}
           interval="preserveStartEnd"
         />
         <YAxis
           tickFormatter={(v) => `${v}%`}
-          tick={{ fill: "#8a6c57", fontSize: 11, fontFamily: "Inter, sans-serif" }}
+          tick={{ fill: "#8a7657", fontSize: 11, fontFamily: "Inter, sans-serif" }}
           tickLine={false}
           axisLine={false}
           domain={[0, 100]}
@@ -72,15 +72,15 @@ export default function LanguageDriftChart({ data }: Props) {
         <Tooltip
           formatter={(value: number, name: string) => [`${value}%`, name]}
           contentStyle={{
-            background: "#fffdf9",
-            border: "1px solid #dcd2c3",
+            background: "#f8f1de",
+            border: "1px solid #d8c8a3",
             borderRadius: 12,
             boxShadow: "0 8px 24px rgba(79,62,53,0.12)",
             fontFamily: "Inter, sans-serif",
             fontSize: 12,
           }}
-          labelStyle={{ color: "#2f425b", fontWeight: 600, marginBottom: 4 }}
-          cursor={{ stroke: "#c5b59f", strokeWidth: 1 }}
+          labelStyle={{ color: "#2f2517", fontWeight: 600, marginBottom: 4 }}
+          cursor={{ stroke: "#c4b28b", strokeWidth: 1 }}
         />
         {SERIES.map(({ key, lang }) => (
           <Area

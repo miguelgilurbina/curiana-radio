@@ -37,6 +37,24 @@
   --reading-max-width: 65ch;
 }
 
+/* ── Tema "Cronista digital" del simulador ─────────────────────────────
+   Tokens semánticos scoped: la crónica de Indias reapropiada, escrita por
+   una máquina que mide. Papel pergamino, tinta parda, rúbrica roja (las
+   crónicas reales rubricaban en rojo) y una capa digital en monospace.
+   Cambiar la paleta de una edición = redefinir estas variables. */
+[data-sim-theme="cronista"] {
+  --sim-paper: #f3ead4; /* pergamino */
+  --sim-paper-deep: #ebdfc0; /* asides, superficies hundidas */
+  --sim-ink: #2f2517; /* tinta parda oscura */
+  --sim-ink-soft: #5b4a33;
+  --sim-ink-faint: #8a7657;
+  --sim-rule: #d8c8a3; /* filetes / hairlines */
+  --sim-rubrica: #8f3b26; /* tinta roja seca — lo editorial */
+  --sim-fuego: #a05a10; /* la voz caquetía — pariente del ocre del chart */
+  --sim-mono: ui-monospace, "Cascadia Mono", "Consolas", monospace;
+  --sim-display: var(--font-fraunces), var(--font-lora), Georgia, serif;
+}
+
 @layer base {
   /* Smooth scrolling */
   html {
@@ -78,6 +96,72 @@
   }
   .sim-card-hover:hover {
     box-shadow: 0 8px 24px rgba(79, 62, 53, 0.10);
+  }
+
+  /* Capitular de códice: primera letra del primer párrafo (voz de Manaure) */
+  .sim-capitular > p:first-of-type::first-letter {
+    float: left;
+    font-family: var(--font-serif);
+    font-size: 3.1em;
+    line-height: 0.82;
+    padding-right: 0.09em;
+    color: var(--sim-rubrica);
+  }
+
+  /* La capa digital del cronista: los datos hablan en monospace */
+  .sim-mono {
+    font-family: var(--sim-mono);
+    letter-spacing: -0.01em;
+  }
+
+  /* Display editorial de revista (titulares, headwords, nameplate).
+     Configuración firma de Fraunces: WONK activo (glifos irregulares de
+     estilo antiguo), SOFT crisp (terminales afiladas, tono de crónica seria)
+     y opsz automático — a mayor tamaño, más contraste dramático. Los ejes no
+     nombrados (wght, ital) siguen bajo control de font-weight/font-style. */
+  .sim-display {
+    font-family: var(--sim-display);
+    font-optical-sizing: auto;
+    font-variation-settings: "SOFT" 0, "WONK" 1;
+  }
+
+  /* Filete doble de prensa: línea gruesa + línea fina */
+  .sim-double-rule {
+    height: 6px;
+    border-top: 3px solid var(--sim-ink);
+    border-bottom: 1px solid var(--sim-ink);
+  }
+
+  /* Pull-quote de revista: comilla colgante gigante en rúbrica */
+  .sim-pullquote {
+    position: relative;
+  }
+  .sim-pullquote::before {
+    content: "«";
+    position: absolute;
+    left: -0.14em;
+    top: -0.32em;
+    font-family: var(--sim-display);
+    font-size: 3.4em;
+    line-height: 1;
+    color: var(--sim-rubrica);
+    opacity: 0.55;
+    pointer-events: none;
+  }
+
+  /* La crónica se sigue escribiendo */
+  .sim-caret {
+    display: inline-block;
+    width: 0.55em;
+    height: 1.1em;
+    vertical-align: text-bottom;
+    background: var(--sim-rubrica);
+    animation: sim-caret-blink 1.15s step-end infinite;
+  }
+  @keyframes sim-caret-blink {
+    50% {
+      opacity: 0;
+    }
   }
 
   /* Reading container */

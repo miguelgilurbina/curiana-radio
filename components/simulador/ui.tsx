@@ -1,6 +1,6 @@
-// Primitivas de UI del Simulador — lenguaje editorial de Curiana Radio
-// (tonos tierra / azul profundo, serif Lora en títulos, acento frequency).
-// Los colores salen de la única fuente de verdad: lib/sim-theme.ts
+// Primitivas de UI del Simulador — tema "Cronista digital": papel pergamino,
+// tinta parda, rúbrica roja para lo editorial (tokens --sim-* en globals.css,
+// scoped al data-sim-theme del layout). Colores de DATOS: lib/sim-theme.ts
 import type { ReactNode, CSSProperties } from "react";
 import { scoreColor } from "@/lib/sim-theme";
 
@@ -18,7 +18,7 @@ export function Card({
 }) {
   return (
     <div
-      className={`sim-card rounded-2xl border border-earth-200/70 bg-earth-50/80 backdrop-blur-sm ${className}`}
+      className={`sim-card rounded-2xl border border-(--sim-rule) bg-(--sim-paper-deep) backdrop-blur-sm ${className}`}
       style={style}
     >
       {children}
@@ -27,9 +27,11 @@ export function Card({
 }
 
 // ── Etiqueta de sección (overline) ────────────────────────────────────
+// Rúbrica del cronista: lo editorial va en tinta roja, como en las crónicas
+// reales (de ahí la palabra "rúbrica").
 export function Overline({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
-    <span className={`font-sans text-[0.7rem] font-medium tracking-[0.18em] uppercase text-earth-600 ${className}`}>
+    <span className={`font-sans text-[0.7rem] font-medium tracking-[0.18em] uppercase text-(--sim-rubrica) ${className}`}>
       {children}
     </span>
   );
@@ -53,7 +55,7 @@ export function StatCard({
       <div className="mt-2 font-serif text-3xl md:text-4xl font-semibold leading-none" style={{ color: accent }}>
         {value}
       </div>
-      {sub && <div className="mt-1.5 font-sans text-xs text-earth-500">{sub}</div>}
+      {sub && <div className="mt-1.5 font-sans text-xs text-(--sim-ink-faint)">{sub}</div>}
     </Card>
   );
 }
@@ -64,10 +66,10 @@ export function ScoreGauge({ score, width = 96 }: { score: number; width?: numbe
   const hue = scoreColor(score);
   return (
     <div className="flex items-center gap-2" title={`${score.toFixed(1)} / 10`}>
-      <div className="h-1.5 rounded-full bg-earth-200 overflow-hidden" style={{ width }}>
+      <div className="h-1.5 rounded-full bg-(--sim-rule) overflow-hidden" style={{ width }}>
         <div className="h-full rounded-full transition-all" style={{ width: `${pct}%`, background: hue }} />
       </div>
-      <span className="font-sans text-xs tabular-nums text-earth-600">{score.toFixed(1)}</span>
+      <span className="font-sans text-xs tabular-nums text-(--sim-ink-soft)">{score.toFixed(1)}</span>
     </div>
   );
 }
@@ -125,7 +127,7 @@ export function LiveDot({ status }: { status: "connecting" | "live" | "off" }) {
   const color = status === "live" ? "#2E7D4F" : status === "connecting" ? "#C47A2B" : "#9d7f66";
   const label = status === "live" ? "En vivo" : status === "connecting" ? "Conectando" : "Sin conexión";
   return (
-    <span className="inline-flex items-center gap-1.5 font-sans text-xs text-earth-600">
+    <span className="inline-flex items-center gap-1.5 font-sans text-xs text-(--sim-ink-soft)">
       <span className="relative flex h-2 w-2">
         {status === "live" && (
           <span className="absolute inline-flex h-full w-full rounded-full opacity-60 animate-ping" style={{ background: color }} />
@@ -139,15 +141,15 @@ export function LiveDot({ status }: { status: "connecting" | "live" | "off" }) {
 
 // ── Skeleton de carga ─────────────────────────────────────────────────
 export function Skeleton({ className = "", style }: { className?: string; style?: CSSProperties }) {
-  return <div className={`animate-pulse rounded-md bg-earth-200/60 ${className}`} style={style} />;
+  return <div className={`animate-pulse rounded-md bg-(--sim-rule) ${className}`} style={style} />;
 }
 
 // ── Estado vacío ──────────────────────────────────────────────────────
 export function EmptyState({ title, hint }: { title: string; hint?: ReactNode }) {
   return (
     <Card className="px-6 py-12 text-center">
-      <div className="font-serif text-lg text-deep-800">{title}</div>
-      {hint && <div className="mt-2 font-sans text-sm text-earth-600 max-w-md mx-auto">{hint}</div>}
+      <div className="font-serif text-lg text-(--sim-ink)">{title}</div>
+      {hint && <div className="mt-2 font-sans text-sm text-(--sim-ink-soft) max-w-md mx-auto">{hint}</div>}
     </Card>
   );
 }
