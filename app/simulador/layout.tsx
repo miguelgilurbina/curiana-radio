@@ -20,10 +20,13 @@ export default function SimuladorLayout({
   const epocas = run.epocas.map(({ id, titulo, dias, hito }) => ({ id, titulo, dias, hito }));
 
   return (
-    <div className="mx-auto max-w-6xl px-4 pb-24 pt-8 animate-fade-in sm:px-6 lg:px-8">
+    // El pergamino del cronista: fondo propio de la sección, tapa el
+    // gradiente global de la radio sin tocarla (tokens en globals.css).
+    <div data-sim-theme="cronista" className="min-h-screen bg-(--sim-paper)">
+      <div className="mx-auto max-w-6xl px-4 pb-24 pt-8 animate-fade-in sm:px-6 lg:px-8">
       <header className="mb-8">
         <Overline>Laboratorio lingüístico · 88.8 FM</Overline>
-        <h1 className="mt-1 font-serif text-3xl font-bold text-deep-900 md:text-4xl">
+        <h1 className="mt-1 font-serif text-3xl font-bold text-(--sim-ink) md:text-4xl">
           Simulador Caquetío
         </h1>
       </header>
@@ -39,6 +42,7 @@ export default function SimuladorLayout({
           </div>
           {children}
         </div>
+      </div>
       </div>
     </div>
   );
