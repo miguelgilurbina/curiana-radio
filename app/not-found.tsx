@@ -102,7 +102,7 @@ export default function GlobalNotFound() {
             404
           </h1>
           <p className="text-frequency text-sm tracking-widest uppercase">
-            // Ruta del Extravío
+            {'// Ruta del Extravío'}
           </p>
         </header>
 
@@ -120,7 +120,7 @@ export default function GlobalNotFound() {
         <div className="space-y-6 text-left min-h-[120px]">
           <div className="h-px w-12 bg-frequency mb-6"></div>
           <p className="text-xl md:text-2xl text-earth-50 font-serif italic leading-relaxed">
-            "{mensaje}"
+            &ldquo;{mensaje}&rdquo;
           </p>
         </div>
 

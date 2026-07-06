@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getEditionBySlug, getAllEditionSlugs } from '@/lib/content';
@@ -146,12 +147,12 @@ export default async function EditionPage({ params }: EditionPageProps) {
 
           {/* Navigation to Archive */}
           <div className="text-center pt-16 border-t border-earth-200">
-            <a
+            <Link
               href="/archivo"
               className="inline-block text-deep-700 hover:text-frequency transition-colors font-sans text-sm tracking-wide uppercase"
             >
               ← Ver todas las ediciones
-            </a>
+            </Link>
           </div>
         </div>
       </div>
