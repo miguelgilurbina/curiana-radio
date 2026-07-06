@@ -6556,6 +6556,7 @@ class Neologismo:
     adoptado_por: list = field(default_factory=list)
     rechazado_por: list = field(default_factory=list)
     turno_resolucion: Optional[int] = None
+    dia_resolucion: Optional[int] = None   # día en que se adoptó/rechazó (dia = día de PROPUESTA)
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -6610,7 +6611,8 @@ class LexicoComunitario:
                 "dia": neo.dia,
             }
 
-    def adoptar(self, forma: str, agente: str, turno: int) -> Optional["Neologismo"]:
+    def adoptar(self, forma: str, agente: str, turno: int,
+                dia: Optional[int] = None) -> Optional["Neologismo"]:
         """
         Un agente adopta una palabra propuesta. Retorna el Neologismo si la
         adopción se OFICIALIZA recién en esta llamada (2do adoptante distinto),
@@ -6624,6 +6626,7 @@ class LexicoComunitario:
                 if len(neo.adoptado_por) >= 2:
                     neo.estado = "adoptado"
                     neo.turno_resolucion = turno
+                    neo.dia_resolucion = dia
                     self._lexico[forma] = {
                         "significado": neo.significado,
                         "autor": neo.autor,

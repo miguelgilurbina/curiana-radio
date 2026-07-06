@@ -233,7 +233,9 @@ class CurianaDB:
         """Crea un nuevo simulation run y retorna su UUID."""
         row = {
             "model": model,
-            "config": json.dumps(config or {}),
+            # dict directo → jsonb OBJETO consultable con config->>'clave'.
+            # (json.dumps lo guardaba como string JSON, inconsultable en SQL.)
+            "config": config or {},
         }
         result = self.client.table("simulation_runs").insert(row).execute()
         run_id: str = result.data[0]["id"]
@@ -395,13 +397,29 @@ class CurianaDB:
 
     # ── Koiné metrics ─────────────────────────────────────────────────
 
-    def save_koine_metric(self, run_id: str, day: int, distance: float, n_agents: int):
+    def save_koine_metric(self, run_id: str, day: int, distance: float, n_agents: int,
+                          distance_ventana: Optional[float] = None,
+                          distance_emergente: Optional[float] = None):
         """Persiste la distancia idiolectal media de un día (métrica de
-        convergencia). Upsert por (run_id, day) para ser idempotente."""
-        self.client.table("koine_metrics").upsert(
-            {"run_id": run_id, "day": day, "distance": distance, "n_agents": n_agents},
-            on_conflict="run_id,day",
-        ).execute()
+        convergencia). Upsert por (run_id, day) para ser idempotente.
+
+        distance = acumulada (histórica); distance_ventana = sobre los últimos
+        turnos de habla real; distance_emergente = ventana sin vocabulario base
+        (solo formas emergentes — la señal de koineización menos sesgada).
+        Si el esquema no tiene las columnas nuevas (sin migración), reintenta
+        con las básicas para no perder la métrica principal."""
+        row = {"run_id": run_id, "day": day, "distance": distance, "n_agents": n_agents,
+               "distance_ventana": distance_ventana,
+               "distance_emergente": distance_emergente}
+        try:
+            self.client.table("koine_metrics").upsert(
+                row, on_conflict="run_id,day").execute()
+        except Exception:
+            self.client.table("koine_metrics").upsert(
+                {"run_id": run_id, "day": day, "distance": distance,
+                 "n_agents": n_agents},
+                on_conflict="run_id,day",
+            ).execute()
 
     def save_koine_lexicon(self, run_id: str, concepto_id: str, descripcion: str,
                            form: str, fijada_dia: int,

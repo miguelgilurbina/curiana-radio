@@ -163,6 +163,20 @@ Esto vuelve el resultado defendible en vez de anecdótico. Tabla nueva
 - **Distancia idiolectal media** entre agentes (coseno/Jaccard sobre vectores
   de frecuencia de formas). **Debe contraerse** en el tiempo → firma de la
   koineización. Si no se contrae, no hubo koiné.
+  - ⚠️ **Corrección metodológica (2026-07-04):** la versión acumulada de esta
+    métrica converge por mera acumulación del vocabulario base compartido
+    (artefacto matemático), no por koineización. Desde entonces se miden TRES
+    lecturas por día (`koine_metrics.distance / distance_ventana /
+    distance_emergente`): acumulada (histórica), **ventana** (últimos
+    `VENTANA_TURNOS` de habla real, sin formas-semilla) y **emergente**
+    (ventana excluyendo el vocabulario base: solo neologismos/adopciones).
+    El veredicto de convergencia se emite sobre la más exigente con datos.
+    Verificado en un run corto: la acumulada "convergía" mientras ventana y
+    emergente divergían — el artefacto era real.
+  - ⚗ **Run de control (`--ablacion`):** apaga las tres inyecciones de prompt
+    que empujan la convergencia (sugerencias de contagio, competencias
+    abiertas, muestreo ponderado). La evidencia de koineización emergente es
+    la DIFERENCIA entre un run normal y su ablación, no el run normal solo.
 - **Variantes por significado → 1** (tasa de fijación).
 - **Curvas de frecuencia** de las formas ganadoras (forma de S esperada).
 - **Supervivencia de neologismos** (nace → vive → muere / se fija).

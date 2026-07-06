@@ -89,6 +89,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=...     # anon key local (ver `supabase status`)
 cd curiana_sim
 pip install -r requirements.txt
 python test_quick.py          # verifica el stack sin API keys (debe dar 8/8 OK)
+python -m pytest tests/ -q    # suite unitaria (koiné, léxico, observer, social; sin API keys)
 supabase start                 # levanta Supabase local (ver nota de egress arriba)
 python curiana_database.py seed  # siembra las 1262 palabras activas en Supabase
 
@@ -100,6 +101,11 @@ python curiana_orchestrator_v2.py --auto 30 --perfiles --reporte
   # --perfiles: genera perfiles curados por agente al cerrar el run
   #             (rol, arco narrativo, frases célebres → agent_profiles/agent_quotes)
   # --reporte:  reporte anual LLM al completar cada año simulado
+  # --ablacion: run de CONTROL — apaga las inyecciones de prompt que empujan la
+  #             convergencia (contagio, competencias abiertas, muestreo ponderado).
+  #             La evidencia de koineización es la DIFERENCIA normal vs. ablación.
+  #             La convergencia se mide en 3 lecturas/día (acumulada/ventana/emergente,
+  #             ver DISENO_KOINE.md §7); el veredicto usa la más exigente con datos.
 
 # Dashboard
 cd curiana_dashboard

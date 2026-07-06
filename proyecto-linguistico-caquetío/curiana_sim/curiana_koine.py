@@ -20,7 +20,7 @@ No hace llamadas LLM: se alimenta de lo que el Observer ya extrae cada turno.
 from __future__ import annotations
 
 import math
-from collections import Counter
+from collections import Counter, deque
 from typing import Optional
 
 
@@ -179,32 +179,53 @@ def formas_semilla(agente: str, emo: dict) -> list[str]:
 class IdiolectoAgente:
     """Perfil de frecuencia de formas de un agente. No expira en el run."""
 
+    # Turnos de habla que abarca la ventana reciente (~5 días si el agente
+    # habla cada turno; más días reales con la rotación de roster).
+    VENTANA_TURNOS = 10
+
     def __init__(self, agente: str, emocionar: Optional[dict] = None, peso_semilla: int = 2):
         self.agente = agente
         self.emocionar = emocionar or {}
         self.frecuencias: Counter[str] = Counter()
         self.acunaciones: set[str] = set()
         self.adopciones: set[str] = set()
+        # Ventana de USO REAL (solo lo que el agente dijo, sin semillas):
+        # base de la métrica de convergencia por ventana, inmune tanto al
+        # sesgo acumulativo como al artefacto de las formas-semilla.
+        self.recientes: deque[list[str]] = deque(maxlen=self.VENTANA_TURNOS)
         # Pre-carga: las formas-semilla entran con peso, para que el día 1 ya
         # haya divergencia entre agentes (precondición de la convergencia).
         for f in formas_semilla(agente, self.emocionar):
             self.frecuencias[f] += peso_semilla
 
     def registrar(self, formas, neologismos=None, adoptadas=None):
+        turno_formas: list[str] = []
         for f in formas or []:
             self.frecuencias[f] += 1
+            turno_formas.append(f)
         for neo in neologismos or []:
             forma = getattr(neo, "forma", neo)
             self.acunaciones.add(forma)
             self.frecuencias[forma] += 1
+            turno_formas.append(forma)
         for f in adoptadas or []:
             self.adopciones.add(f)
+        if turno_formas:
+            self.recientes.append(turno_formas)
 
     def top_formas(self, n: int = 6) -> list[str]:
         return [f for f, _ in self.frecuencias.most_common(n)]
 
     def vector(self) -> Counter:
         return self.frecuencias
+
+    def vector_reciente(self) -> Counter:
+        """Frecuencias SOLO de la ventana de turnos recientes (uso real,
+        sin las formas-semilla pre-cargadas)."""
+        c: Counter[str] = Counter()
+        for turno in self.recientes:
+            c.update(turno)
+        return c
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -252,7 +273,8 @@ def _coseno(a: Counter, b: Counter) -> float:
 
 
 def distancia_idiolectal(idiolectos: dict[str, "IdiolectoAgente"], min_formas: int = 5,
-                         solo: Optional[set] = None) -> float:
+                         solo: Optional[set] = None, ventana: bool = False,
+                         excluir: Optional[set] = None) -> Optional[float]:
     """Distancia idiolectal media (1 - coseno) entre pares de agentes activos.
 
     Es la firma de la koineización: DEBE CONTRAERSE en el tiempo. Solo se
@@ -262,18 +284,35 @@ def distancia_idiolectal(idiolectos: dict[str, "IdiolectoAgente"], min_formas: i
     agentes (los que REALMENTE hablaron) — clave porque los idiolectos se
     pre-cargan con formas-semilla para los 60 agentes, y medir sobre todos
     diluiría la señal con vectores estáticos de quienes nunca participaron.
+
+    `ventana`: mide sobre los últimos VENTANA_TURNOS de habla real (sin
+    semillas) en vez del acumulado. El acumulado converge en coseno por mera
+    acumulación del vocabulario base compartido (artefacto matemático); la
+    ventana mide si el habla ACTUAL de los agentes se parece.
+
+    `excluir`: formas a ignorar en los vectores (típicamente el vocabulario
+    base heredado). Con ventana+excluir la métrica queda solo sobre formas
+    EMERGENTES (neologismos y adopciones), que es donde la koiné se juega.
+
+    Retorna None si menos de 2 agentes tienen vocabulario suficiente bajo
+    estos filtros (sin datos ≠ convergencia perfecta).
     """
-    vectores = [
-        idio.vector() for nombre, idio in idiolectos.items()
-        if (solo is None or nombre in solo) and len(idio.vector()) >= min_formas
-    ]
+    vectores = []
+    for nombre, idio in idiolectos.items():
+        if solo is not None and nombre not in solo:
+            continue
+        vec = idio.vector_reciente() if ventana else idio.vector()
+        if excluir:
+            vec = Counter({f: n for f, n in vec.items() if f not in excluir})
+        if len(vec) >= min_formas:
+            vectores.append(vec)
     if len(vectores) < 2:
-        return 0.0
+        return None
     distancias = []
     for i in range(len(vectores)):
         for j in range(i + 1, len(vectores)):
             distancias.append(1.0 - _coseno(vectores[i], vectores[j]))
-    return round(sum(distancias) / len(distancias), 4) if distancias else 0.0
+    return round(sum(distancias) / len(distancias), 4) if distancias else None
 
 
 # ══════════════════════════════════════════════════════════════════════
