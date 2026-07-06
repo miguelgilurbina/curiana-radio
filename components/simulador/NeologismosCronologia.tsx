@@ -116,7 +116,7 @@ export default function NeologismosCronologia({
                         style={{ background: st.color }}
                       />
                       <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                        <h3 className="font-serif text-2xl font-semibold text-(--sim-fuego)">{e.form}</h3>
+                        <h3 className="sim-display text-2xl font-semibold text-(--sim-fuego)">{e.form}</h3>
                         <LangPill color={st.color}>{st.label}</LangPill>
                       </div>
 

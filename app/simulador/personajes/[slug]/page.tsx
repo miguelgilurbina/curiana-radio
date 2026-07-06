@@ -60,7 +60,7 @@ export default async function PersonajePage({ params }: PersonajePageProps) {
       <header className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-5">
         <Avatar name={p.nombre} size={72} />
         <div className="min-w-0">
-          <h1 className="font-serif text-3xl font-bold text-(--sim-ink) md:text-4xl">{p.nombre}</h1>
+          <h1 className="sim-display tracking-tight text-3xl font-bold text-(--sim-ink) md:text-4xl">{p.nombre}</h1>
           <p className="mt-1 font-sans text-sm text-(--sim-ink-faint)">
             {[p.etnia, p.edad ? `${p.edad} años` : null, p.ubicacion_default?.replaceAll("_", " ")]
               .filter(Boolean)
@@ -140,7 +140,7 @@ export default async function PersonajePage({ params }: PersonajePageProps) {
                     </span>
                   </div>
                   {ev.forma && (
-                    <p className="mt-1 font-serif text-lg font-semibold text-(--sim-fuego)">{ev.forma}</p>
+                    <p className="mt-1 sim-display text-lg font-semibold text-(--sim-fuego)">{ev.forma}</p>
                   )}
                   {ev.nota && (
                     <p className="mt-1 max-w-reading font-sans text-sm leading-relaxed text-(--sim-ink-soft)">
@@ -164,7 +164,7 @@ export default async function PersonajePage({ params }: PersonajePageProps) {
       {restoQuotes.length > 0 && (
         <section className="mt-10">
           <div className="flex items-baseline justify-between">
-            <h2 className="font-serif text-xl font-semibold text-(--sim-ink)">Más frases</h2>
+            <h2 className="sim-display text-xl font-semibold text-(--sim-ink)">Más frases</h2>
             <Overline>{restoQuotes.length} curadas</Overline>
           </div>
           <div className="mt-2">

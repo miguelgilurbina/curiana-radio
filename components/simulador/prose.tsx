@@ -25,7 +25,7 @@ export function Epoca({
         {folio != null && ROMANOS[folio - 1] ? `Folio ${ROMANOS[folio - 1]} · ` : ""}
         Días {epoca.dias[0]}–{epoca.dias[1]}
       </span>
-      <h2 className="mt-1 font-serif text-2xl font-semibold text-(--sim-ink) md:text-3xl">{epoca.titulo}</h2>
+      <h2 className="mt-1 sim-display text-2xl font-semibold text-(--sim-ink) md:text-3xl">{epoca.titulo}</h2>
       <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
         {epoca.resumen}
       </p>
@@ -65,7 +65,7 @@ export function EventoItem({
           {evento.forma && (
             <Link
               href="/simulador/neologisms"
-              className="font-serif text-lg font-semibold text-(--sim-fuego) hover:underline"
+              className="sim-display text-lg font-semibold text-(--sim-fuego) hover:underline"
             >
               {evento.forma}
             </Link>

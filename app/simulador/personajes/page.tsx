@@ -24,7 +24,7 @@ function EntradaPersonaje({ p }: { p: Personaje }) {
         <Avatar name={p.nombre} size={48} />
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-            <h3 className="font-serif text-xl font-semibold text-(--sim-ink) transition-colors group-hover:text-(--sim-fuego)">
+            <h3 className="sim-display text-xl font-semibold text-(--sim-ink) transition-colors group-hover:text-(--sim-fuego)">
               {p.nombre}
             </h3>
             <span className="font-sans text-xs text-(--sim-ink-faint)">{meta}</span>
@@ -73,7 +73,7 @@ export default function PersonajesPage() {
     <article className="mx-auto max-w-[720px]">
       <header>
         <Overline>Quiénes hablan</Overline>
-        <h2 className="mt-1 font-serif text-2xl font-semibold text-(--sim-ink) md:text-3xl">Personajes</h2>
+        <h2 className="mt-1 sim-display text-2xl font-semibold text-(--sim-ink) md:text-3xl">Personajes</h2>
         <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
           {personajes.length} voces de la Curiana con historia propia. Cada una llegó con una
           biografía fija — y salió de la historia con un arco, un puñado de palabras nuevas y

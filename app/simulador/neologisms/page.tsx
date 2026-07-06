@@ -18,7 +18,7 @@ export default function NeologismsPage() {
     <article className="mx-auto max-w-[720px]">
       <header>
         <Overline>Léxico emergente</Overline>
-        <h2 className="mt-1 font-serif text-2xl font-semibold text-(--sim-ink) md:text-3xl">Neologismos</h2>
+        <h2 className="mt-1 sim-display text-2xl font-semibold text-(--sim-ink) md:text-3xl">Neologismos</h2>
         <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
           Palabras que los agentes inventaron con sus propios morfemas durante la historia, ordenadas
           por su día de acuñación. La comunidad adopta una palabra cuando dos hablantes distintos la

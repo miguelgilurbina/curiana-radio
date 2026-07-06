@@ -182,7 +182,7 @@ export default function LexiconDiccionario({ palabras }: { palabras: EntradaDicc
         <>
           {grupos.map(({ letra, entradas }) => (
             <section key={`${letra}-${desde}`} className="mt-6 first:mt-2">
-              <h3 className="border-b border-(--sim-rule) pb-1 font-serif text-2xl font-semibold text-(--sim-ink-faint)">
+              <h3 className="border-b border-(--sim-rule) pb-1 sim-display text-2xl font-semibold text-(--sim-ink-faint)">
                 {letra}
               </h3>
               <dl>
@@ -191,7 +191,7 @@ export default function LexiconDiccionario({ palabras }: { palabras: EntradaDicc
                   return (
                     <div key={`${e.word}-${i}`} className="border-t border-(--sim-rule) py-2.5 first:border-t-0">
                       <dt className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
-                        <span className="font-serif text-lg font-semibold text-(--sim-fuego)">{e.word}</span>
+                        <span className="sim-display text-lg font-semibold text-(--sim-fuego)">{e.word}</span>
                         {e.category && (
                           <span className="font-sans text-xs italic text-(--sim-ink-faint)">{e.category}</span>
                         )}

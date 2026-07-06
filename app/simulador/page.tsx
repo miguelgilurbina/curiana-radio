@@ -58,11 +58,12 @@ export default function SimuladorPage() {
 
       {/* Cabecera del run activo */}
       <header>
-        <h2 className="font-serif text-3xl font-bold leading-tight text-(--sim-ink) md:text-4xl">
+        {/* Headline + deck, jerarquía de revista */}
+        <h2 className="sim-display text-5xl font-semibold leading-[0.95] tracking-tight text-(--sim-ink) md:text-6xl">
           {run.titulo}
         </h2>
         {run.subtitulo && (
-          <p className="mt-3 max-w-reading font-serif text-lg italic leading-snug text-(--sim-ink-soft)">
+          <p className="mt-4 max-w-reading font-serif text-xl italic leading-snug text-(--sim-ink-soft) md:text-2xl">
             {run.subtitulo}
           </p>
         )}
@@ -126,7 +127,7 @@ export default function SimuladorPage() {
           {/* La deriva, medida — el chart embebido en la narrativa */}
           <section id="deriva" className="mt-14 scroll-mt-24">
             <Overline>La marea, medida</Overline>
-            <h2 className="mt-1 font-serif text-2xl font-semibold text-(--sim-ink) md:text-3xl">
+            <h2 className="sim-display mt-1 text-3xl font-semibold tracking-tight text-(--sim-ink) md:text-4xl">
               Composición de la lengua, turno a turno
             </h2>
             {derivaVoz && <ManaureVoice fragment={derivaVoz} />}
@@ -135,7 +136,12 @@ export default function SimuladorPage() {
                 {run.deriva.nota}
               </p>
             )}
-            <LanguageDriftChart data={resumen.drift} />
+            <figure>
+              <LanguageDriftChart data={resumen.drift} />
+              <figcaption className="sim-mono mt-3 text-[0.65rem] uppercase tracking-[0.14em] text-(--sim-ink-faint)">
+                Fig. 1 · Proporción de cada lengua en el habla de la comunidad, por turno
+              </figcaption>
+            </figure>
           </section>
 
           {cierre && <ManaureVoice fragment={cierre} />}
@@ -154,7 +160,7 @@ export default function SimuladorPage() {
           {ANEXOS.map((a) => (
             <li key={a.href}>
               <Link href={a.href} className="group block">
-                <span className="font-serif text-lg font-semibold text-(--sim-ink) transition-colors group-hover:text-(--sim-fuego)">
+                <span className="sim-display text-lg font-semibold text-(--sim-ink) transition-colors group-hover:text-(--sim-fuego)">
                   {a.label} →
                 </span>
                 <span className="mt-1 block font-sans text-sm leading-relaxed text-(--sim-ink-soft)">{a.desc}</span>

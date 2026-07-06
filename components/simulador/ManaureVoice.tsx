@@ -37,9 +37,9 @@ export default function ManaureVoice({
         </p>
       )}
 
-      <blockquote className={fragment.narrador ? "mt-6 md:mt-8" : ""}>
+      <blockquote className={`${fragment.narrador ? "mt-6 md:mt-8" : ""} ${hero ? "" : "sim-pullquote"}`}>
         {fragment.caquetio && (
-          <p className={`font-serif italic text-(--sim-fuego) ${hero ? "text-2xl md:text-3xl" : "text-xl md:text-2xl"}`}>
+          <p className={`sim-display italic text-(--sim-fuego) ${hero ? "text-3xl md:text-4xl" : "text-2xl md:text-3xl"}`}>
             {fragment.caquetio}
           </p>
         )}
