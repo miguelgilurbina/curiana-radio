@@ -16,28 +16,6 @@ const SABIDURIA_ANCESTRAL = [
   "Has llegado al borde del mapa. Aquí comienzan los dragones (y los burros)."
 ];
 
-const BURRO_ASCII = `
-      /\_/\
-     ( o.o )
-      > ^ <
-     /     \
-    (       )
-    (___)___)
-`;
-
-// O una versión más "de perfil" mirando al usuario
-const BURRO_PERFIL = `
-        _  _ 
-       ( \/ ) 
-        \  / 
-        /  \    //
-       /    \__//
-      /      \ /
-     /   _    |
-    (   / \   |
-     \_/   \_/
-`;
-
 // Versión Minimalista Desierto
 const PAISAJE_ASCII = `
            ,

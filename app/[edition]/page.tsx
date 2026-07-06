@@ -2,8 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getEditionBySlug, getAllEditionSlugs } from '@/lib/content';
-import Navigation from '@/components/layout/Navigation';
-import { Heading, BodyText, Quote, Caption, SectionTitle } from '@/components/ui/Typography';
+import { Heading, BodyText, Quote, SectionTitle } from '@/components/ui/Typography';
 import type { Metadata } from 'next';
 import type { ComponentProps } from 'react';
 
