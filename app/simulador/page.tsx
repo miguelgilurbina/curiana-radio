@@ -4,6 +4,8 @@ import { getRunActivo, getRunsPublicados } from "@/lib/editorial";
 import { getManaureFragment } from "@/lib/manaure";
 import { getResumen } from "@/lib/resumen";
 import { getAllPersonajes } from "@/lib/personajes";
+import { getRunsIndex } from "@/lib/runs";
+import { EvolucionTimeline, DiccionarioKoine } from "@/components/simulador/evolucion";
 import ManaureVoice from "@/components/simulador/ManaureVoice";
 import LanguageDriftChart from "@/components/simulador/LanguageDriftChart";
 import { Epoca, EventoItem, DataAside, Asterismo } from "@/components/simulador/prose";
@@ -27,6 +29,7 @@ export default function SimuladorPage() {
   const runs = getRunsPublicados();
   const run = getRunActivo();
   const resumen = getResumen();
+  const runsIndex = getRunsIndex();
   const nombrePorSlug = new Map(getAllPersonajes().map((p) => [p.slug, p.nombre]));
 
   const hero = run.manaure_hero ? getManaureFragment(run.manaure_hero) : null;
@@ -150,6 +153,39 @@ export default function SimuladorPage() {
           <p aria-hidden="true" className="mt-6">
             <span className="sim-caret" />
           </p>
+        </>
+      )}
+
+      {/* El meta-relato: qué pasó ENTRE las simulaciones */}
+      {runsIndex && runsIndex.runs.length > 1 && (
+        <>
+          <Asterismo />
+          <section id="evolucion" className="scroll-mt-24">
+            <Overline>Bitácora de expediciones</Overline>
+            <h2 className="sim-display mt-1 text-3xl font-semibold tracking-tight text-(--sim-ink) md:text-4xl">
+              La evolución, simulación a simulación
+            </h2>
+            <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
+              Cada corrida es una expedición: mismo golfete, misma gente, y un instrumento que cada
+              vez mide mejor. Lo que empezó como una comunidad que apenas sostenía su lengua terminó
+              formando una koiné — y la última expedición salió con un grupo de control para probar
+              que la convergencia no era un truco del andamiaje.
+            </p>
+            <EvolucionTimeline runs={runsIndex.runs} />
+          </section>
+
+          <Asterismo />
+          <section id="diccionario-koine" className="scroll-mt-24">
+            <Overline>Lo que la comunidad nombró</Overline>
+            <h2 className="sim-display mt-1 text-3xl font-semibold tracking-tight text-(--sim-ink) md:text-4xl">
+              El diccionario koiné
+            </h2>
+            <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
+              Cuando algo nuevo llegó al golfete — un cometa, una fiebre, un metal amarillo — la
+              comunidad necesitó nombrarlo. Varias formas compitieron; estas ganaron.
+            </p>
+            <DiccionarioKoine runs={runsIndex.runs} />
+          </section>
         </>
       )}
 

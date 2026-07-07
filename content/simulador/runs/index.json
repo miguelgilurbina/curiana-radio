@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generado": "2026-07-06T21:18:28.092208+00:00",
+  "generado": "2026-07-07T20:20:58.655418+00:00",
   "runs": [
     {
       "id8": "2e729f3f",
@@ -151,42 +151,49 @@
         "formas": [
           {
             "concepto": "cometa",
+            "descripcion": "una estrella con cola que cruza el cielo varias noches seguidas",
             "form": "kali-subo",
             "fijada_dia": 5,
             "n_variantes": 3
           },
           {
             "concepto": "fiebre_manchas",
+            "descripcion": "una fiebre nueva que llena la piel de manchas, que ningún piache había visto",
             "form": "ka-bari-tüshi-kali",
             "fijada_dia": 9,
             "n_variantes": 2
           },
           {
             "concepto": "eclipse",
+            "descripcion": "el sol se oscurece en pleno día y luego vuelve, como si algo lo cubriera",
             "form": "ma-kali-bana",
             "fijada_dia": 10,
             "n_variantes": 4
           },
           {
             "concepto": "metal_amarillo",
+            "descripcion": "un trozo de metal amarillo y pesado, distinto del oro conocido, llegado por trueque",
             "form": "sulu-pana",
             "fijada_dia": 14,
             "n_variantes": 3
           },
           {
             "concepto": "tambor_caribe",
+            "descripcion": "un tambor de los caribe con un sonido grave y distinto a los nuestros",
             "form": "mana-koto",
             "fijada_dia": 17,
             "n_variantes": 2
           },
           {
             "concepto": "marea_roja",
+            "descripcion": "el agua del golfete se tiñe de rojo durante días y mata a los peces",
             "form": "duna-kali-biji",
             "fijada_dia": 18,
             "n_variantes": 2
           },
           {
             "concepto": "planta_quema",
+            "descripcion": "una planta nueva que cura la herida pero quema la boca al probarla",
             "form": "tüshi-mana-bana",
             "fijada_dia": 20,
             "n_variantes": 2
@@ -253,36 +260,42 @@
         "formas": [
           {
             "concepto": "cuentas_vidrio",
+            "descripcion": "unas cuentas brillantes y duras que un mercader trajo de tierras lejanas, nunca vistas aquí",
             "form": "kali-taro",
             "fijada_dia": 3,
             "n_variantes": 2
           },
           {
             "concepto": "fiebre_manchas",
+            "descripcion": "una fiebre nueva que llena la piel de manchas, que ningún piache había visto",
             "form": "bana-kali-taro-sulu",
             "fijada_dia": 9,
             "n_variantes": 3
           },
           {
             "concepto": "metal_amarillo",
+            "descripcion": "un trozo de metal amarillo y pesado, distinto del oro conocido, llegado por trueque",
             "form": "kali-pama",
             "fijada_dia": 11,
             "n_variantes": 2
           },
           {
             "concepto": "marea_roja",
+            "descripcion": "el agua del golfete se tiñe de rojo durante días y mata a los peces",
             "form": "duna-bana-kali-taro",
             "fijada_dia": 15,
             "n_variantes": 2
           },
           {
             "concepto": "tambor_caribe",
+            "descripcion": "un tambor de los caribe con un sonido grave y distinto a los nuestros",
             "form": "bani-taro-sulu",
             "fijada_dia": 17,
             "n_variantes": 3
           },
           {
             "concepto": "cometa",
+            "descripcion": "una estrella con cola que cruza el cielo varias noches seguidas",
             "form": "kali-rua-bana",
             "fijada_dia": 30,
             "n_variantes": 3
@@ -349,24 +362,28 @@
         "formas": [
           {
             "concepto": "eclipse",
+            "descripcion": "el sol se oscurece en pleno día y luego vuelve, como si algo lo cubriera",
             "form": "kali-ma-bana",
             "fijada_dia": 9,
             "n_variantes": 2
           },
           {
             "concepto": "metal_amarillo",
+            "descripcion": "un trozo de metal amarillo y pesado, distinto del oro conocido, llegado por trueque",
             "form": "kali-dunawe",
             "fijada_dia": 11,
             "n_variantes": 2
           },
           {
             "concepto": "fiebre_manchas",
+            "descripcion": "una fiebre nueva que llena la piel de manchas, que ningún piache había visto",
             "form": "kali-wara-bana",
             "fijada_dia": 12,
             "n_variantes": 3
           },
           {
             "concepto": "marea_roja",
+            "descripcion": "el agua del golfete se tiñe de rojo durante días y mata a los peces",
             "form": "**duna-karu-amana**",
             "fijada_dia": 15,
             "n_variantes": 2

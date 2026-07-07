@@ -55,6 +55,14 @@ export const EVENTO_TIPOS: Record<string, { label: string; color: string }> = {
   momento: { label: "momento", color: "#5B4FCF" },
 };
 
+// ── Categorías de run (índice cross-run de evolución) ─────────────────
+export const RUN_CATEGORIAS: Record<string, { label: string; color: string }> = {
+  baseline: { label: "línea base", color: "#6D8A9E" },
+  koine: { label: "koiné", color: "#C47A2B" },
+  experimento: { label: "experimento", color: "#5B4FCF" },
+  insignia: { label: "edición", color: "#B04040" },
+};
+
 // ── Semánticos (feedback) ─────────────────────────────────────────────
 export const SEMANTIC = {
   success: "#2E7D4F",

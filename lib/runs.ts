@@ -23,6 +23,8 @@ export interface Convergencia {
 
 export interface FormaFijada {
   concepto: string;
+  /** Glosa del referente que la comunidad necesitaba nombrar. */
+  descripcion: string | null;
   form: string;
   fijada_dia: number | null;
   n_variantes: number | null;

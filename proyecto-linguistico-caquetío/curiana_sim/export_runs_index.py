@@ -145,7 +145,8 @@ def resumir_run(db: CurianaDB, entrada: dict) -> dict | None:
             "conceptos_fijados": len(fijadas),
             "formas": sorted(
                 (
-                    {"concepto": f["concepto_id"], "form": f["form"],
+                    {"concepto": f["concepto_id"], "descripcion": f.get("descripcion"),
+                     "form": f["form"],
                      "fijada_dia": f.get("fijada_dia"), "n_variantes": f.get("n_variantes")}
                     for f in fijadas
                 ),
