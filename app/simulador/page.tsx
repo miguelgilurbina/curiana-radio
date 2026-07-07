@@ -4,8 +4,9 @@ import { getRunActivo, getRunsPublicados } from "@/lib/editorial";
 import { getManaureFragment } from "@/lib/manaure";
 import { getResumen } from "@/lib/resumen";
 import { getAllPersonajes } from "@/lib/personajes";
-import { getRunsIndex } from "@/lib/runs";
+import { getRunsIndex, getParejaExperimento } from "@/lib/runs";
 import { EvolucionTimeline, DiccionarioKoine } from "@/components/simulador/evolucion";
+import { ExperimentoControl } from "@/components/simulador/experimento";
 import ManaureVoice from "@/components/simulador/ManaureVoice";
 import LanguageDriftChart from "@/components/simulador/LanguageDriftChart";
 import { Epoca, EventoItem, DataAside, Asterismo } from "@/components/simulador/prose";
@@ -30,6 +31,7 @@ export default function SimuladorPage() {
   const run = getRunActivo();
   const resumen = getResumen();
   const runsIndex = getRunsIndex();
+  const experimento = getParejaExperimento("038d7b9d");
   const nombrePorSlug = new Map(getAllPersonajes().map((p) => [p.slug, p.nombre]));
 
   const hero = run.manaure_hero ? getManaureFragment(run.manaure_hero) : null;
@@ -173,6 +175,19 @@ export default function SimuladorPage() {
             </p>
             <EvolucionTimeline runs={runsIndex.runs} />
           </section>
+
+          {experimento && (
+            <>
+              <Asterismo />
+              <section id="experimento" className="scroll-mt-24">
+                <Overline>La prueba de control</Overline>
+                <h2 className="sim-display mt-1 text-3xl font-semibold tracking-tight text-(--sim-ink) md:text-4xl">
+                  ¿La lengua converge sola?
+                </h2>
+                <ExperimentoControl normal={experimento.normal} ablacion={experimento.ablacion} />
+              </section>
+            </>
+          )}
 
           <Asterismo />
           <section id="diccionario-koine" className="scroll-mt-24">
