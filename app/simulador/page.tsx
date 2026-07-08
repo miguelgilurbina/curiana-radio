@@ -5,7 +5,6 @@ import { getManaureFragment } from "@/lib/manaure";
 import { getResumen } from "@/lib/resumen";
 import { getAllPersonajes } from "@/lib/personajes";
 import { getRunsIndex } from "@/lib/runs";
-import { EvolucionTimeline, DiccionarioKoine } from "@/components/simulador/evolucion";
 import ManaureVoice from "@/components/simulador/ManaureVoice";
 import LanguageDriftChart from "@/components/simulador/LanguageDriftChart";
 import { Epoca, EventoItem, DataAside, Asterismo } from "@/components/simulador/prose";
@@ -20,6 +19,7 @@ export function generateMetadata(): Metadata {
 }
 
 const ANEXOS = [
+  { href: "/simulador/runs", label: "La evolución", desc: "El arco entre simulaciones: convergencia, experimento de control y diccionario koiné." },
   { href: "/simulador/personajes", label: "Personajes", desc: "Las veinte voces curadas del run y sus arcos." },
   { href: "/simulador/lexicon", label: "Léxico", desc: "El vocabulario reconstruido, palabra por palabra." },
   { href: "/simulador/neologisms", label: "Neologismos", desc: "Todas las palabras inventadas: las que prendieron y las que no." },
@@ -156,43 +156,32 @@ export default function SimuladorPage() {
         </>
       )}
 
-      {/* El meta-relato: qué pasó ENTRE las simulaciones */}
+      {/* El meta-relato vive en su propia página; aquí lo anunciamos como
+          destino destacado, no lo enterramos al pie de la crónica. */}
       {runsIndex && runsIndex.runs.length > 1 && (
         <>
           <Asterismo />
-          <section id="evolucion" className="scroll-mt-24">
-            <Overline>Bitácora de expediciones</Overline>
-            <h2 className="sim-display mt-1 text-3xl font-semibold tracking-tight text-(--sim-ink) md:text-4xl">
-              La evolución, simulación a simulación
+          <Link
+            href="/simulador/runs"
+            className="group block rounded-2xl border border-(--sim-rule) bg-(--sim-paper-deep) p-6 transition-colors hover:border-(--sim-fuego) sm:p-8"
+          >
+            <Overline>Más allá de esta edición</Overline>
+            <h2 className="sim-display mt-1 text-2xl font-semibold tracking-tight text-(--sim-ink) transition-colors group-hover:text-(--sim-fuego) md:text-3xl">
+              La evolución entre las {runsIndex.runs.length} simulaciones →
             </h2>
-            <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
-              Cada corrida es una expedición: mismo golfete, misma gente, y un instrumento que cada
-              vez mide mejor. Lo que empezó como una comunidad que apenas sostenía su lengua terminó
-              formando una koiné — y la última expedición salió con un grupo de control para probar
-              que la convergencia no era un truco del andamiaje.
+            <p className="mt-2 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
+              El arco completo del proyecto: de una lengua que apenas se sostenía a una koiné con
+              diccionario propio, la prueba de control que lo confirma, y las palabras que la
+              comunidad fijó por competencia.
             </p>
-            <EvolucionTimeline runs={runsIndex.runs} />
-          </section>
-
-          <Asterismo />
-          <section id="diccionario-koine" className="scroll-mt-24">
-            <Overline>Lo que la comunidad nombró</Overline>
-            <h2 className="sim-display mt-1 text-3xl font-semibold tracking-tight text-(--sim-ink) md:text-4xl">
-              El diccionario koiné
-            </h2>
-            <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
-              Cuando algo nuevo llegó al golfete — un cometa, una fiebre, un metal amarillo — la
-              comunidad necesitó nombrarlo. Varias formas compitieron; estas ganaron.
-            </p>
-            <DiccionarioKoine runs={runsIndex.runs} />
-          </section>
+          </Link>
         </>
       )}
 
       {/* Anexos: la wiki de referencia detrás de la historia */}
       <footer className="mt-14 border-t border-(--sim-rule) pt-8">
         <Overline>Seguir explorando</Overline>
-        <ul className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <ul className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {ANEXOS.map((a) => (
             <li key={a.href}>
               <Link href={a.href} className="group block">
