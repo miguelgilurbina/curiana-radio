@@ -60,6 +60,7 @@ from curiana_koine import (
     prompt_emocionar,
     prompt_idiolecto,
     distancia_idiolectal,
+    veredicto_convergencia,
 )
 
 
@@ -923,13 +924,16 @@ def auto_mode(
         # Veredicto sobre la métrica MÁS EXIGENTE con datos suficientes:
         # emergente > ventana > acumulada (la acumulada converge casi siempre
         # por acumulación del vocabulario base — no es evidencia por sí sola).
+        # No basta con fin < inicio: una curva que baja al principio y se
+        # estanca (típico de la ablación) daría un falso "converge". El
+        # veredicto mira también la pendiente del último tercio (ver
+        # veredicto_convergencia en curiana_koine.py).
         for etiqueta, idx in (("emergente", 3), ("ventana", 2), ("acumulada", 1)):
             puntos = [(p[0], p[idx]) for p in serie_distancia if p[idx] is not None]
             if len(puntos) >= 2:
+                _codigo, mensaje = veredicto_convergencia(puntos)
                 d_ini, d_fin = puntos[0][1], puntos[-1][1]
-                veredicto = ("CONVERGE ✓ (la koiné se forma)" if d_fin < d_ini
-                             else "NO converge ✗ (sin koineización)")
-                print(f"  Veredicto [{etiqueta}]: inicio {d_ini} → fin {d_fin}  →  {veredicto}")
+                print(f"  Veredicto [{etiqueta}]: inicio {d_ini} → fin {d_fin}  →  {mensaje}")
                 break
         else:
             print("  Veredicto: datos insuficientes (ningún par de días comparable)")
