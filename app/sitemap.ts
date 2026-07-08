@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { getAllEditions } from '@/lib/content';
+import { getAllPersonajes } from '@/lib/personajes';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const editions = await getAllEditions();
@@ -29,5 +30,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.9,
   }));
 
-  return [...staticPages, ...editionPages];
+  // Simulador: la sección de contenido evergreen (antes ausente del sitemap).
+  const simuladorPages: MetadataRoute.Sitemap = [
+    { path: '/simulador', priority: 0.9 },
+    { path: '/simulador/runs', priority: 0.8 },
+    { path: '/simulador/personajes', priority: 0.7 },
+    { path: '/simulador/lexicon', priority: 0.7 },
+    { path: '/simulador/neologisms', priority: 0.7 },
+  ].map(({ path, priority }) => ({
+    url: `${baseUrl}${path}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority,
+  }));
+
+  // Fichas de personaje (rutas dinámicas del seed curado).
+  const personajePages: MetadataRoute.Sitemap = getAllPersonajes().map((p) => ({
+    url: `${baseUrl}/simulador/personajes/${p.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.5,
+  }));
+
+  return [...staticPages, ...editionPages, ...simuladorPages, ...personajePages];
 }
