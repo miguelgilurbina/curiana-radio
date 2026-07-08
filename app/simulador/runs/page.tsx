@@ -59,6 +59,12 @@ export default function RunsPage() {
           una koiné — y la última expedición salió con un grupo de control para probar que la
           convergencia no era un truco del andamiaje.
         </p>
+        <p className="mt-3 max-w-reading font-sans text-xs leading-relaxed text-(--sim-ink-faint)">
+          Se muestran las {runsIndex.runs.length} expediciones que aportan al relato: los runs largos
+          y calibrados. Las corridas de desarrollo y las pruebas cortas — la mayoría de las más de
+          veinte simulaciones que se hicieron — quedan registradas en la bitácora del proyecto, no
+          aquí.
+        </p>
       </header>
 
       <section id="evolucion" className="mt-4 scroll-mt-24">
