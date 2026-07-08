@@ -7,7 +7,21 @@ from curiana_koine import (
     CompetenciaLexica,
     distancia_idiolectal,
     emocionar_de,
+    veredicto_convergencia,
 )
+
+# Series de convergencia emergente reales (koine_metrics) de los dos brazos del
+# experimento 2026-07-06 — la evidencia de que el veredicto binario engañaba.
+SERIE_NORMAL_038 = [
+    0.6997, 0.6253, 0.6069, 0.5634, 0.533, 0.5161, 0.509, 0.5047, 0.5413, 0.5363,
+    0.5346, 0.5721, 0.5682, 0.5858, 0.6321, 0.6392, 0.6404, 0.6216, 0.6195, 0.5934,
+    0.5907, 0.5917, 0.5835, 0.5791, 0.5763, 0.5792, 0.5842, 0.5823, 0.5714, 0.5746,
+]
+SERIE_ABLACION_BDC = [
+    0.6957, 0.6758, 0.7118, 0.6715, 0.6521, 0.6349, 0.6258, 0.6404, 0.6217, 0.6807,
+    0.6729, 0.6984, 0.6933, 0.6855, 0.6696, 0.6514, 0.6491, 0.649, 0.6461, 0.6456,
+    0.6423, 0.6413, 0.6407, 0.6427, 0.6423, 0.6432, 0.642, 0.6443, 0.6528, 0.6499,
+]
 
 
 def _idios(nombres):
@@ -34,6 +48,37 @@ def test_distancia_none_con_datos_insuficientes():
     # ventana sin habla registrada: nadie tiene vector reciente
     idios2 = _idios(["Manaure", "Shaboro"])
     assert distancia_idiolectal(idios2, ventana=True) is None
+
+
+# ── Veredicto de convergencia: plateau ≠ convergencia sostenida ──────
+
+def _puntos(serie):
+    return [(i + 1, v) for i, v in enumerate(serie)]
+
+
+def test_veredicto_normal_converge_sostenido():
+    """El run normal baja en total Y sigue bajando en el último tercio."""
+    codigo, _ = veredicto_convergencia(_puntos(SERIE_NORMAL_038))
+    assert codigo == "converge"
+
+
+def test_veredicto_ablacion_es_plateau_no_converge():
+    """El run de ablación baja al inicio y se estanca — el binario decía
+    'CONVERGE' porque fin < inicio; el nuevo veredicto lo llama plateau."""
+    codigo, _ = veredicto_convergencia(_puntos(SERIE_ABLACION_BDC))
+    assert codigo == "plateau"
+    # sanity: el binario viejo (fin < inicio) SÍ daba positivo — por eso engañaba
+    assert SERIE_ABLACION_BDC[-1] < SERIE_ABLACION_BDC[0]
+
+
+def test_veredicto_diverge_si_sube():
+    codigo, _ = veredicto_convergencia([(1, 0.4), (2, 0.5), (3, 0.6)])
+    assert codigo == "diverge"
+
+
+def test_veredicto_insuficiente_con_un_punto():
+    codigo, _ = veredicto_convergencia([(1, 0.5)])
+    assert codigo == "insuficiente"
 
 
 # ── Métrica por ventana: mide el habla RECIENTE, no el acumulado ─────

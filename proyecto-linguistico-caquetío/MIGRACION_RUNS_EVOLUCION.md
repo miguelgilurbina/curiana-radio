@@ -102,11 +102,33 @@ Sin riesgo nuevo: todo sale de Supabase **local** a JSON commiteado. La página
 en producción nunca consulta la base (misma razón por la que se borró el Vercel
 viejo). Añadir un run a la página = correr los exporters localmente + commit.
 
-## Estado de la rama
+## Estado
 
+**En producción (2026-07-07/08):**
 - ✅ `export_runs_index.py` + `content/simulador/runs/index.json` (6 runs curados).
-- ✅ `lib/runs.ts` (loader tipado + helper de pareja de experimento).
-- ⏳ Refactor de los tres `export_*_seed.py` a `runs/<id8>/`.
-- ⏳ Reparar `20091e1f`: correr `generar_perfiles_curados()` post-hoc (no tiene
-  perfiles — el teardown lo cortó en el turno 57). Es el run del diccionario koiné.
-- ⏳ UI (secciones 1–4 de arriba) — pendiente de tu criterio de diseño.
+- ✅ `lib/runs.ts` (loader tipado + `getParejaExperimento()`).
+- ✅ **Página propia `/simulador/runs`** con las tres secciones: la evolución
+  (timeline cross-run), la prueba de control (experimento normal vs. ablación,
+  `ConvergenciaChart` de doble línea) y el diccionario koiné. `/simulador` la
+  anuncia con un callout destacado + anexo. Resolvió el problema de
+  descubribilidad (las secciones estaban al 48% de scroll de la edición
+  insignia; ahora la evolución arranca al 9% de su propia página).
+
+**Pendiente:**
+- ⏳ **Detalle por run** (`runs/<id8>/{resumen,personajes,neologismos}.json`):
+  refactor de los tres `export_*_seed.py` a escribir por run + loaders con
+  parámetro de run + ruta dinámica `/simulador/runs/[id8]` para que cada
+  entrada del timeline sea navegable. Hoy el timeline no es clickable porque no
+  hay a dónde ir. **Es infraestructura sin consumidor todavía**; conviene
+  hacerlo junto con la UI que lo consuma, no antes.
+- ⏳ **Reparar `20091e1f`** (el run del diccionario koiné, sin perfiles porque el
+  teardown lo cortó en el turno 57). Escribe solo a Supabase local y cuesta
+  centavos de Haiku, pero **no es un one-liner**: `generar_perfiles_curados`
+  es un método de `ObserverAgent` (`curiana_observer.py:538`,
+  `observer.generar_perfiles_curados(db, run_id)`) y necesita un `ObserverAgent`
+  construido con un cliente Anthropic + el léxico. Lo más limpio es un script
+  chico que replique el bloque `--perfiles` del orquestador
+  (`curiana_orchestrator_v2.py:961`) apuntado al `run_id` de `20091e1f`, y
+  luego `python export_personajes_seed.py 20091e1f-...` para regenerar su seed.
+  (Además hoy no tiene consumidor en la página hasta que exista el detalle por
+  run — ver punto anterior.)

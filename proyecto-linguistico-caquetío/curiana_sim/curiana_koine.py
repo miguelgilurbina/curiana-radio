@@ -315,6 +315,52 @@ def distancia_idiolectal(idiolectos: dict[str, "IdiolectoAgente"], min_formas: i
     return round(sum(distancias) / len(distancias), 4) if distancias else None
 
 
+def veredicto_convergencia(
+    puntos: list[tuple[int, float]],
+    umbral_total: float = 0.05,
+    umbral_reciente: float = 0.02,
+) -> tuple[str, str]:
+    """Clasifica la trayectoria de la distancia idiolectal en el tiempo.
+
+    Un veredicto binario (fin < inicio) marca "converge" aunque la curva haya
+    bajado solo al principio y luego se ESTANCARA — el caso típico de un run de
+    ablación (baja los primeros días por el mundo compartido, se aplana después
+    sin andamiaje). Aquí se mira también la pendiente del último tercio para
+    separar convergencia SOSTENIDA de un plateau.
+
+    puntos: lista de (día, distancia) con valores no nulos. Se ordena por día.
+    Retorna (codigo, mensaje); codigo ∈ {converge, plateau, diverge, insuficiente}.
+
+      converge     — bajó en total (> umbral_total) y el último tercio sigue
+                     bajando (> umbral_reciente).
+      plateau      — bajó en total pero el último tercio se estancó o subió.
+      diverge      — no bajó en total (se mantuvo o subió).
+      insuficiente — menos de 2 puntos comparables.
+
+    Umbrales en cambio RELATIVO (la distancia vive en ~0.4–0.7): total 5%,
+    reciente 2%.
+    """
+    if len(puntos) < 2:
+        return ("insuficiente", "datos insuficientes (ningún par de días comparable)")
+    pts = sorted(puntos)
+    d_ini, d_fin = pts[0][1], pts[-1][1]
+    if not d_ini:
+        return ("insuficiente", "distancia inicial nula")
+    delta_total = (d_fin - d_ini) / d_ini
+
+    # Tramo reciente: desde el inicio del último tercio hasta el final. Con
+    # pocos puntos cae a una ventana de 2 (penúltimo → último).
+    corte = min(len(pts) - 2, (2 * len(pts)) // 3)
+    d_rec_ini = pts[corte][1]
+    delta_reciente = (d_fin - d_rec_ini) / d_rec_ini if d_rec_ini else 0.0
+
+    if delta_total <= -umbral_total:
+        if delta_reciente <= -umbral_reciente:
+            return ("converge", "CONVERGE ✓ (koineización sostenida)")
+        return ("plateau", "SE ESTABILIZA ~ (bajó y se estancó — sin convergencia sostenida)")
+    return ("diverge", "NO converge ✗ (sin koineización)")
+
+
 # ══════════════════════════════════════════════════════════════════════
 # V. INYECCIÓN EN EL PROMPT
 # ══════════════════════════════════════════════════════════════════════

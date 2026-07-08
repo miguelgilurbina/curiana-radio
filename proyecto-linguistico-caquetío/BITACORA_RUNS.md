@@ -67,11 +67,12 @@ ablación converge igual, la koineización era andamiaje, no emergencia.
   un rebote (días 12–17, entrada de formas nuevas) y **sigue convergiendo**
   hasta 0.575. El andamiaje no solo acelera: sostiene la convergencia después
   del equilibrio inicial.
-- ⚠️ **El veredicto impreso de la ablación dice "CONVERGE ✓"** porque compara
-  inicio vs fin de forma naive (−6.6% es negativo). Es correcto pero engañoso
-  leído solo: la trayectoria es plateau, no convergencia sostenida. El
-  veredicto binario debería considerar la pendiente reciente, no solo los
-  extremos — anotado como ajuste pendiente.
+- ✅ **El veredicto impreso de la ablación decía "CONVERGE ✓"** porque comparaba
+  inicio vs fin de forma naive (−6.6% es negativo). Era correcto pero engañoso
+  leído solo: la trayectoria es plateau, no convergencia sostenida. **Resuelto**
+  (`veredicto_convergencia()` en `curiana_koine.py`, 2026-07-08): el veredicto
+  mira ahora la pendiente del último tercio y distingue `converge` /
+  `plateau` / `diverge`. La ablación pasó a imprimir "SE ESTABILIZA ~".
 - **La ablación aún fija conceptos (4/10):** los eventos de nombramiento
   siguen ocurriendo (solo se apagan las inyecciones de prompt), así que hay
   fijación residual genuina — los agentes reusan variantes que oyeron en el
