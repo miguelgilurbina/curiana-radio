@@ -99,9 +99,10 @@ export function ExperimentoControl({
       </figure>
 
       <div className="mt-8 flex flex-col gap-6 rounded-2xl border border-(--sim-rule) bg-(--sim-paper-deep) p-6 sm:flex-row">
-        <Brazo run={normal} color="#5B4FCF" etiqueta="Normal" />
+        {/* Mismos colores que las líneas del chart (registro oscuro del laboratorio) */}
+        <Brazo run={normal} color="#8d83e8" etiqueta="Normal" />
         <div aria-hidden="true" className="hidden w-px self-stretch bg-(--sim-rule) sm:block" />
-        <Brazo run={ablacion} color="#9d7f66" etiqueta="Ablación (control)" />
+        <Brazo run={ablacion} color="#b09880" etiqueta="Ablación (control)" />
       </div>
 
       {factor != null && (
