@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Fragment } from "react";
 import Link from "next/link";
 import { getRunActivo, getRunsPublicados } from "@/lib/editorial";
 import { getManaureFragment } from "@/lib/manaure";
@@ -6,10 +7,12 @@ import { getResumen } from "@/lib/resumen";
 import { getAllPersonajes } from "@/lib/personajes";
 import { getRunsIndex, getParejaExperimento } from "@/lib/runs";
 import { getAbstract, getCifrasLab, getEjemploVida } from "@/lib/abstract";
+import { getGlosasPorManaure, getGlosasPorEvento } from "@/lib/glosas";
 import Masthead from "@/components/simulador/Masthead";
 import Timeline from "@/components/simulador/Timeline";
 import Umbral from "@/components/simulador/Umbral";
 import ManaureVoice from "@/components/simulador/ManaureVoice";
+import GlosaCronista from "@/components/simulador/GlosaCronista";
 import LanguageDriftChart from "@/components/simulador/LanguageDriftChart";
 import {
   PortadaLab,
@@ -211,6 +214,8 @@ export default function SimuladorPage() {
               </header>
 
               {hero && <ManaureVoice fragment={hero} variant="hero" />}
+              {run.manaure_hero &&
+                getGlosasPorManaure(run.manaure_hero).map((g) => <GlosaCronista key={g.id} glosa={g} />)}
 
               {!resumen ? (
                 <EmptyState
@@ -239,11 +244,18 @@ export default function SimuladorPage() {
                         {epoca.eventos.length > 0 && (
                           <ol className="mt-6">
                             {epoca.eventos.map((ev, i) => (
-                              <EventoItem
-                                key={i}
-                                evento={ev}
-                                personajeNombre={ev.personaje ? nombrePorSlug.get(ev.personaje) : undefined}
-                              />
+                              <Fragment key={i}>
+                                <EventoItem
+                                  evento={ev}
+                                  personajeNombre={ev.personaje ? nombrePorSlug.get(ev.personaje) : undefined}
+                                />
+                                {ev.forma &&
+                                  getGlosasPorEvento(ev.forma).map((g) => (
+                                    <li key={g.id} className="list-none pl-5">
+                                      <GlosaCronista glosa={g} />
+                                    </li>
+                                  ))}
+                              </Fragment>
                             ))}
                           </ol>
                         )}

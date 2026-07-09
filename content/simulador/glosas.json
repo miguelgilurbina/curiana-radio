@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "glosas": [
+    {
+      "id": "barsure-manaure",
+      "palabra_real": "barsure",
+      "significado_real": "alma, esencia vital, fuerza interior",
+      "cita": "Angulo Molina · Zavala Reyes 2015",
+      "ancla": { "manaure": "apertura" },
+      "nota": "Esta no es palabra que la simulación inventara: la trae Manaure de la lengua atestiguada, la misma que hablaron sus abuelos. Cuando dice «wa-barsure anüiki-ni» — nuestra alma sigue hablando — no está acuñando: está heredando."
+    },
+    {
+      "id": "pana-boca-pana",
+      "palabra_real": "pana",
+      "significado_real": "uno",
+      "cita": "Pedro Manuel Arcaya · Zavala Reyes 2015",
+      "ancla": { "evento_forma": "boca-pana" },
+      "nota": "«Pana» —uno— no lo inventó nadie en la Curiana simulada: es caquetío real, de crónica. Naure-sha lo tomó tal cual estaba en la lengua de sus mayores y lo hizo cabeza de la primera palabra nueva del run. La simulación no partió de cero; partió de lo que sobrevivió."
+    },
+    {
+      "id": "barsure-barchasure",
+      "palabra_real": "barsure",
+      "significado_real": "alma, esencia vital, fuerza interior",
+      "cita": "Angulo Molina · Zavala Reyes 2015",
+      "ancla": { "evento_forma": "barchasure" },
+      "nota": "Ocho días después de que Manaure la dijera, Tawaka toma la misma raíz atestiguada y la dobla en dolor: barcha-sure, el alma que duele. La lengua real, puesta a trabajar por una boca que no la había usado antes."
+    }
+  ]
+}
