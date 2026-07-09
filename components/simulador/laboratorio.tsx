@@ -4,16 +4,17 @@
 // por eso hablan con los mismos tokens que el cronista y no llevan colores
 // propios, salvo los de DATOS (lib/sim-theme.ts).
 import type { AbstractContent, ConceptoAbstract, PasoPipeline } from "@/lib/abstract";
+import HeroEscrito from "@/components/simulador/HeroEscrito";
 import { Overline } from "@/components/simulador/ui";
 
 // ── La portada del laboratorio ────────────────────────────────────────
+// El titular lo escribe el cronista: primero en caquetío, luego en español
+// (HeroEscrito, client component con fallback estático).
 export function PortadaLab({ pitch }: { pitch: AbstractContent["pitch"] }) {
   return (
     <header>
       <Overline>{pitch.overline}</Overline>
-      <h2 className="sim-display mt-2 text-4xl font-semibold leading-[1.02] tracking-tight text-(--sim-ink) sm:text-5xl md:text-6xl">
-        {pitch.titulo}
-      </h2>
+      <HeroEscrito caquetio={pitch.caquetio} traduccion={pitch.traduccion} titulo={pitch.titulo} />
       <p className="mt-6 max-w-reading font-sans text-base leading-relaxed text-(--sim-ink-soft) md:text-lg">
         {pitch.bajada}
       </p>

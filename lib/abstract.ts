@@ -28,7 +28,15 @@ export interface PasoPipeline {
 
 export interface AbstractContent {
   version: number;
-  pitch: { overline: string; titulo: string; bajada: string };
+  pitch: {
+    overline: string;
+    /** La frase que el cronista tipea antes del titular (eco de la apertura
+     *  de Manaure en el Acto II — el motivo se repite a propósito). */
+    caquetio: string;
+    traduccion: string;
+    titulo: string;
+    bajada: string;
+  };
   abstract: string[];
   conceptos: ConceptoAbstract[];
   pipeline: PasoPipeline[];
@@ -47,6 +55,9 @@ export function getAbstract(): AbstractContent {
   const content = JSON.parse(raw) as AbstractContent;
 
   if (!content.pitch?.titulo) fail("pitch.titulo es obligatorio");
+  if (!content.pitch.caquetio || !content.pitch.traduccion) {
+    fail("pitch.caquetio y pitch.traduccion son obligatorios (los tipea el cronista)");
+  }
   if (!content.abstract?.length) fail("abstract[] no puede estar vacío");
   if (!content.conceptos?.length) fail("conceptos[] no puede estar vacío");
   for (const c of content.conceptos) {
