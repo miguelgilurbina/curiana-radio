@@ -75,7 +75,7 @@ export function Conceptos({ conceptos }: { conceptos: ConceptoAbstract[] }) {
         El experimento, término a término
       </h3>
       <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
-        Ocho ideas bastan para leer todo lo que sigue. Ninguna requiere haber estudiado
+        Estas ideas bastan para leer todo lo que sigue. Ninguna requiere haber estudiado
         lingüística; todas están medidas en los datos.
       </p>
       <dl className="mt-8 grid grid-cols-1 gap-x-12 gap-y-10 sm:grid-cols-2">
