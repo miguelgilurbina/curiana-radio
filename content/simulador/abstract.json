@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "pitch": {
+    "overline": "Acto I · El experimento",
+    "titulo": "Una lengua que dejó de hablarse hace cuatro siglos, hablada de nuevo — por sesenta voces sintéticas.",
+    "bajada": "Reconstruimos el caquetío desde crónicas coloniales y sus lenguas hermanas; se lo dimos a una comunidad de personajes simulados con inteligencia artificial; y medimos qué hace esa comunidad con él: qué palabras inventa, cuáles adopta, y si converge en una lengua común."
+  },
+  "abstract": [
+    "El caquetío fue la lengua arahuaca del Golfete de Coro. Dejó de hablarse hace siglos y sobrevive en topónimos, crónicas coloniales y unas decenas de palabras registradas. Este proyecto la reconstruye parcialmente con el método comparativo — el de la lingüística histórica: inferir la forma caquetía probable comparando sus lenguas hermanas, el wayuunaiki y el lokono vivos, el taíno documentado — y la entrega a una comunidad simulada: sesenta personajes del siglo XV, cada uno un agente de inteligencia artificial con rol, edad, etnia y manera propia de hablar.",
+    "Los agentes conversan día a día. Inventan palabras cuando el mundo lo exige, adoptan las de otros, y un observador mide cada turno: cuánto caquetío hay en el habla, qué formas nacen y mueren, y si las maneras de hablar se acercan entre sí.",
+    "La pregunta central: ¿puede esa comunidad converger en una norma compartida — una koiné — y podemos probar que la convergencia es emergente y no un artefacto del instrumento? Tras seis simulaciones curadas y un experimento de control: sí, con matices que vuelven el resultado más interesante que el sí."
+  ],
+  "conceptos": [
+    {
+      "id": "lexicon",
+      "termino": "El lexicón",
+      "lema": "Las 1.262 palabras con las que arranca la lengua.",
+      "cuerpo": "Solo 75 están atestiguadas en crónicas (Galeotto Cey, Oviedo, Las Casas) y trabajo académico; 82 son reconstrucciones de trabajo del proyecto; el resto viene de las lenguas hermanas, marcado como tal. Cada palabra lleva su fuente a la vista: aquí la especulación nunca se presenta como dato.",
+      "dato": "441 formas hipotéticas fueron retiradas del léxico activo por no pasar validación."
+    },
+    {
+      "id": "comunidad",
+      "termino": "La comunidad simulada",
+      "lema": "Sesenta personajes, un solo golfete.",
+      "cuerpo": "Caciques, piaches, pescadoras, aprendices: cada agente tiene identidad histórica, red social y un emocionar — una disposición que sesga qué palabras alcanza primero y cómo arma la frase. La variación inicial no es ruido: es la materia prima. Sin hablantes distintos, no hay nada que pueda converger."
+    },
+    {
+      "id": "neologismos",
+      "termino": "Los neologismos",
+      "lema": "Cómo nace una palabra.",
+      "cuerpo": "Cuando aparece algo sin nombre — un cometa, una fiebre, un metal amarillo — los agentes componen con la morfología documentada: kali (luz) + dusha (lejos) → kali-dusha, la sombra. Una palabra propuesta no es nada todavía: solo existe cuando otra boca la repite."
+    },
+    {
+      "id": "contagio",
+      "termino": "El contagio léxico",
+      "lema": "Por qué unas prenden y otras no.",
+      "cuerpo": "Las formas viajan por la red social: la frecuencia y el prestigio de quien las usa les dan soporte; las que nadie repite decaen y mueren. El resultado son curvas de adopción en forma de S — las mismas que dibujan las lenguas reales."
+    },
+    {
+      "id": "deriva",
+      "termino": "La deriva lingüística",
+      "lema": "El pulso de la mezcla.",
+      "cuerpo": "Cada turno se mide la composición del habla: cuánto es caquetío, cuánto se fuga al español o a las hermanas arahuacas. Es el electrocardiograma de la simulación: la primera señal de si la lengua vive o se apaga.",
+      "dato": "De 92% caquetío en el primer run calibrado a 99% sostenido."
+    },
+    {
+      "id": "koine",
+      "termino": "La koiné",
+      "lema": "Cuando muchos modos de hablar se vuelven uno.",
+      "cuerpo": "Así llama la lingüística a la lengua común que emerge al nivelarse dialectos en contacto — como el griego koiné o, en esta misma costa, el papiamento. En términos de Maturana: un dominio consensual, coordinaciones de conducta que se estabilizan entre quienes conviven. Su firma medible: las variantes rivales para un concepto se reducen a una.",
+      "dato": "Diccionario koiné de 7 conceptos fijados por competencia."
+    },
+    {
+      "id": "convergencia",
+      "termino": "La convergencia y su medida",
+      "lema": "El experimento honesto.",
+      "cuerpo": "La distancia idiolectal mide cuánto difieren las maneras de hablar de los agentes, día a día, en tres lecturas de exigencia creciente; la más dura solo cuenta las formas emergentes. En el camino descubrimos que la lectura ingenua «convergía» sola por acumulación — un artefacto que corregimos y dejamos documentado, porque el error metodológico contado también es resultado."
+    },
+    {
+      "id": "ablacion",
+      "termino": "La ablación",
+      "lema": "¿Y si es un truco del andamiaje?",
+      "cuerpo": "La misma simulación, dos veces: una con los empujones que favorecen la convergencia, otra sin ellos. La evidencia de koineización emergente no es que el run normal converja — es la diferencia: 2,7 veces más convergencia con andamiaje… y aun sin él, la comunidad fija 4 conceptos por su cuenta. Esa fijación residual es la señal emergente pura."
+    }
+  ],
+  "pipeline": [
+    {
+      "titulo": "Fuentes",
+      "sub": "Crónicas coloniales y cuatro lenguas hermanas: lo que sobrevivió del caquetío y sus parientes vivos."
+    },
+    {
+      "titulo": "Reconstrucción",
+      "sub": "El método comparativo arma un lexicón de trabajo; cada palabra lleva marcada su fuente."
+    },
+    {
+      "titulo": "Simulación",
+      "sub": "Sesenta personajes con IA conversan día a día en el Golfete: inventan, adoptan, olvidan."
+    },
+    {
+      "titulo": "Medición",
+      "sub": "Un observador puntúa cada turno: deriva, adopción, convergencia. Todo queda registrado."
+    }
+  ],
+  "ejemplo_form": "kali-dusha",
+  "cierre": "Hasta aquí, el instrumento: lo que se midió, tal como se midió. Lo que sigue es lo que se oyó — la crónica del run insignia, contada por el señor de la Curiana y por un cronista que lo ve todo.",
+  "nota_honestidad": "Sobre este contenido: los datos — palabras, adopciones, deriva, convergencia — salen de la simulación tal cual ocurrieron y son reproducibles desde la bitácora del proyecto. Las voces del narrador y de Manaure son reconstrucción editorial hipotética, escrita para esta publicación, y se marcan siempre con su grado de certeza."
+}

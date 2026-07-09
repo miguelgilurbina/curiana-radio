@@ -55,6 +55,23 @@
   --sim-display: var(--font-fraunces), var(--font-lora), Georgia, serif;
 }
 
+/* ── Acto I: el laboratorio ────────────────────────────────────────────
+   El registro del instrumento a pantalla completa: la sección redefine la
+   MISMA paleta --sim-* a tinta profunda (los deep de la radio) con la
+   rúbrica en frequency. Así todos los componentes del cronista — Overline,
+   DataAside, EvolucionTimeline, ExperimentoControl — funcionan sin cambios
+   dentro del laboratorio; el scroll "amanece" al pergamino en el umbral. */
+[data-sim-acto="laboratorio"] {
+  --sim-paper: #0f1621; /* deep-900: la cabina de la radio */
+  --sim-paper-deep: #1f2c3e; /* deep-800: placas, asides */
+  --sim-ink: #f3ead4; /* el pergamino se vuelve tinta */
+  --sim-ink-soft: #c3cddb;
+  --sim-ink-faint: #8fa0b8;
+  --sim-rule: #2f425b; /* deep-700: filetes */
+  --sim-rubrica: #ff6b35; /* frequency: lo editorial del instrumento */
+  --sim-fuego: #e2a158; /* ocre caquetío legible sobre tinta profunda */
+}
+
 @layer base {
   /* Smooth scrolling */
   html {
