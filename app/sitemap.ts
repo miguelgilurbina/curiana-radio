@@ -31,9 +31,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   // Simulador: la sección de contenido evergreen (antes ausente del sitemap).
+  // /simulador/runs se fusionó al landing (Acto I) — redirect en next.config.js.
   const simuladorPages: MetadataRoute.Sitemap = [
     { path: '/simulador', priority: 0.9 },
-    { path: '/simulador/runs', priority: 0.8 },
     { path: '/simulador/personajes', priority: 0.7 },
     { path: '/simulador/lexicon', priority: 0.7 },
     { path: '/simulador/neologisms', priority: 0.7 },

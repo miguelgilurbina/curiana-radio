@@ -14,9 +14,13 @@ import {
 // Dos curvas de distancia idiolectal media por día (lectura emergente): el run
 // normal y su control de ablación. La evidencia de koineización no es que la
 // normal baje — es la BRECHA entre ambas. Colores: normal en violeta de
-// "experimento" (--sim), ablación en gris apagado (el control, sin andamiaje).
-const COLOR_NORMAL = "#5B4FCF";
-const COLOR_ABLACION = "#9d7f66";
+// "experimento" (--sim), ablación en arena apagada (el control, sin andamiaje).
+// El chart vive en el Acto I "laboratorio" (fondo deep-900): ejes, grilla y
+// tooltip están afinados para ese registro oscuro.
+const COLOR_NORMAL = "#8d83e8";
+const COLOR_ABLACION = "#b09880";
+const COLOR_GRID = "#2f425b";
+const COLOR_TICK = "#8fa0b8";
 
 interface Props {
   normal: number[];
@@ -34,18 +38,18 @@ export default function ConvergenciaChart({ normal, ablacion }: Props) {
   return (
     <ResponsiveContainer width="100%" height={300}>
       <LineChart data={data} margin={{ top: 8, right: 12, left: -8, bottom: 0 }}>
-        <CartesianGrid strokeDasharray="3 3" stroke="#d8c8a3" vertical={false} />
+        <CartesianGrid strokeDasharray="3 3" stroke={COLOR_GRID} vertical={false} />
         <XAxis
           dataKey="dia"
           tickFormatter={(v) => `D${v}`}
-          tick={{ fill: "#8a7657", fontSize: 11, fontFamily: "Inter, sans-serif" }}
+          tick={{ fill: COLOR_TICK, fontSize: 11, fontFamily: "Inter, sans-serif" }}
           tickLine={false}
-          axisLine={{ stroke: "#d8c8a3" }}
+          axisLine={{ stroke: COLOR_GRID }}
           interval="preserveStartEnd"
           minTickGap={24}
         />
         <YAxis
-          tick={{ fill: "#8a7657", fontSize: 11, fontFamily: "Inter, sans-serif" }}
+          tick={{ fill: COLOR_TICK, fontSize: 11, fontFamily: "Inter, sans-serif" }}
           tickLine={false}
           axisLine={false}
           width={44}
@@ -56,20 +60,20 @@ export default function ConvergenciaChart({ normal, ablacion }: Props) {
           formatter={(value: number, name: string) => [value?.toFixed(4), name]}
           labelFormatter={(v) => `Día ${v}`}
           contentStyle={{
-            background: "#f8f1de",
-            border: "1px solid #d8c8a3",
+            background: "#1f2c3e",
+            border: `1px solid ${COLOR_GRID}`,
             borderRadius: 12,
-            boxShadow: "0 8px 24px rgba(79,62,53,0.12)",
+            boxShadow: "0 8px 24px rgba(0,0,0,0.35)",
             fontFamily: "Inter, sans-serif",
             fontSize: 12,
           }}
-          labelStyle={{ color: "#2f2517", fontWeight: 600, marginBottom: 4 }}
-          cursor={{ stroke: "#c4b28b", strokeWidth: 1 }}
+          labelStyle={{ color: "#f3ead4", fontWeight: 600, marginBottom: 4 }}
+          cursor={{ stroke: "#3d5777", strokeWidth: 1 }}
         />
         <Legend
           verticalAlign="top"
           height={28}
-          wrapperStyle={{ fontFamily: "Inter, sans-serif", fontSize: 12 }}
+          wrapperStyle={{ fontFamily: "Inter, sans-serif", fontSize: 12, color: "#c3cddb" }}
         />
         <Line
           type="monotone"
