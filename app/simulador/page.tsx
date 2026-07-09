@@ -5,7 +5,7 @@ import { getManaureFragment } from "@/lib/manaure";
 import { getResumen } from "@/lib/resumen";
 import { getAllPersonajes } from "@/lib/personajes";
 import { getRunsIndex, getParejaExperimento } from "@/lib/runs";
-import { getAbstract, getCifrasLab } from "@/lib/abstract";
+import { getAbstract, getCifrasLab, getEjemploVida } from "@/lib/abstract";
 import Masthead from "@/components/simulador/Masthead";
 import Timeline from "@/components/simulador/Timeline";
 import Umbral from "@/components/simulador/Umbral";
@@ -17,6 +17,7 @@ import {
   Conceptos,
   PipelineFlujo,
 } from "@/components/simulador/laboratorio";
+import VidaDeUnaPalabra from "@/components/simulador/VidaDeUnaPalabra";
 import { EvolucionTimeline, DiccionarioKoine } from "@/components/simulador/evolucion";
 import { ExperimentoControl } from "@/components/simulador/experimento";
 import { Epoca, EventoItem, DataAside, Asterismo } from "@/components/simulador/prose";
@@ -49,7 +50,10 @@ export default function SimuladorPage() {
   const runs = getRunsPublicados();
   const run = getRunActivo();
   const resumen = getResumen();
-  const nombrePorSlug = new Map(getAllPersonajes().map((p) => [p.slug, p.nombre]));
+  const personajes = getAllPersonajes();
+  const nombrePorSlug = new Map(personajes.map((p) => [p.slug, p.nombre]));
+  const slugPorNombre = new Map(personajes.map((p) => [p.nombre, p.slug]));
+  const ejemploVida = getEjemploVida();
   const epocasNav = run.epocas.map(({ id, titulo, dias, hito }) => ({ id, titulo, dias, hito }));
 
   const hero = run.manaure_hero ? getManaureFragment(run.manaure_hero) : null;
@@ -98,6 +102,10 @@ export default function SimuladorPage() {
 
             <AbstractCientifico parrafos={abstract.abstract} />
             <Conceptos conceptos={abstract.conceptos} />
+            <VidaDeUnaPalabra
+              neo={ejemploVida}
+              proposerSlug={slugPorNombre.get(ejemploVida.proposed_by)}
+            />
             <PipelineFlujo pasos={abstract.pipeline} />
 
             {/* La bitácora: qué pasó ENTRE las simulaciones (antes /simulador/runs) */}
