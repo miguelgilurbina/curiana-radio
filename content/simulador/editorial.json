@@ -6,7 +6,7 @@
       "id": "run-01",
       "seed_run_id": "2e729f3f-ebf4-4d23-8142-c4c65b06e27b",
       "titulo": "La lengua que se hizo a sí misma",
-      "subtitulo": "Quince días de habla en la Curiana: las palabras que nacieron, las que murieron en la boca de uno solo y las que se volvieron de todos.",
+      "subtitulo": "Quince días de habla en la Curiana: las palabras que nacieron, las que se murieron en la boca de uno solo sin que nadie las velara, y las que se volvieron de todos, como si siempre hubieran estado esperando que alguien las dijera en voz alta.",
       "fecha": "2026-06",
       "estado": "publicado",
       "dias": 15,
@@ -14,7 +14,7 @@
       "manaure_cierre": "cierre",
       "deriva": {
         "manaure": "la-deriva",
-        "nota": "La marea, medida: proporción de cada lengua en el habla de la comunidad, turno a turno. El caquetío nunca soltó el dominio — y el día catorce ocupó toda la conversación."
+        "nota": "La marea, medida: la proporción de cada lengua en el habla de la comunidad, turno a turno. El caquetío nunca soltó el dominio — y el día catorce, como si el golfete entero hubiera decidido lo mismo a la vez, ocupó toda la conversación."
       },
       "epocas": [
         {
@@ -22,21 +22,21 @@
           "titulo": "Los primeros nombres",
           "dias": [1, 5],
           "hito": "Primeras palabras adoptadas",
-          "resumen": "La comunidad habla y la lengua responde. Al tercer día ya hay palabras que nadie había dicho antes y que la Curiana hace suyas: nombres para el fluir del agua, para la medicina que quema, para el viento suave de la orilla.",
+          "resumen": "La comunidad habla, y la lengua —dormida hasta entonces en la boca de los viejos, como una semilla enterrada mucho antes de la última lluvia— empieza a germinar. Al tercer día ya hay palabras que nadie recuerda haber sembrado: nombran el fluir del agua, la medicina que quema, el viento manso de la orilla, como si siempre hubieran estado ahí, esperando quién las dijera primero.",
           "eventos": [
             {
               "dia": 3,
               "tipo": "neologismo_adoptado",
               "forma": "boca-pana",
               "personaje": "naure-sha",
-              "nota": "«Boca-uno: el fluir, la medida.» La guardiana de las semillas nombra el ritmo del agua en el buco."
+              "nota": "Naure-sha miraba el agua del buco cuando la palabra se le subió a la boca sola, como suben a veces los nombres de los muertos: boca-pana, dijo, el fluir, la medida. Nadie le preguntó de dónde la sacó. Al día siguiente ya la decían todos, como si siempre hubiera estado en el aire, esperando quién la agarrara."
             },
             {
               "dia": 3,
               "tipo": "neologismo_adoptado",
               "forma": "tamecani-sha-wana",
               "personaje": "wama-sha",
-              "nota": "«La-que-quema-agua»: el agua caliente como medicina. Acuñada por la cantora, adoptada el mismo día."
+              "nota": "«La-que-quema-agua»: el agua que arde y cura. La cantora la sacó de una fiebre que bajó esa misma noche —o eso se contó después, cuando ya nadie sabía decir cuál de las dos cosas había venido primero, si la palabra o el alivio."
             }
           ]
         },
@@ -45,26 +45,26 @@
           "titulo": "La lengua se pone a prueba",
           "dias": [6, 10],
           "hito": "Seis palabras nuevas en una sola jornada",
-          "resumen": "El habla se vuelve taller. El séptimo día es el más fértil de la estación: seis palabras nuevas en una jornada, de bocas tan distintas como el guerrero ambicioso y el aprendiz de canoas. La lengua ya no solo nombra el mundo — se nombra a sí misma.",
+          "resumen": "El séptimo día amanece raro, aunque nadie sabe decir por qué —después se sabría que fue el más fértil de toda la estación—: seis palabras nacen en una sola jornada, de bocas tan distintas como el guerrero ambicioso y el aprendiz de canoas, como si el buco mismo se hubiera puesto a dar a luz. Para entonces la lengua ya no solo nombra el mundo: empieza, por primera vez, a nombrarse a sí misma.",
           "eventos": [
             {
               "dia": 7,
               "tipo": "momento",
-              "nota": "El día más fértil: seis palabras propuestas y adoptadas en una sola jornada, entre ellas tension-bana-chi (la calma pequeña) y buco-sulu (lo profundo del buco)."
+              "nota": "Seis palabras el mismo día — nadie en la Curiana recordaba tanta fertilidad de golpe. Entre ellas tension-bana-chi (la calma pequeña) y buco-sulu (lo profundo del buco), como si el buco hubiera decidido entregar, esa jornada, todos sus nombres a la vez."
             },
             {
               "dia": 7,
               "tipo": "neologismo_adoptado",
               "forma": "kali-dusha",
               "personaje": "dare-nu",
-              "nota": "«Luz-lejos»: la sombra. El aprendiz de constructor de canoas nombra lo que siempre estuvo ahí."
+              "nota": "«Luz-lejos»: la sombra. Dare-nu llevaba días preguntando por qué la luz, cuando se va, deja algo detrás — hasta que un día simplemente nombró lo que siempre había estado ahí, esperando la pregunta."
             },
             {
               "dia": 8,
               "tipo": "neologismo_adoptado",
               "forma": "nii-panaa-sha",
               "personaje": "shaboro",
-              "nota": "«Ella-que-sabe-ver.» El piache mayor acuña una palabra para honrar a su aprendiz visionaria."
+              "nota": "«Ella-que-sabe-ver.» Shaboro dijo que la había soñado la noche anterior, completa, con su acento y todo, y que solo tuvo que decirla en voz alta para que fuera cierta. Así honró a su aprendiz visionaria."
             }
           ]
         },
@@ -73,33 +73,33 @@
           "titulo": "La palabra hace falta",
           "dias": [11, 15],
           "hito": "El caquetío ocupa toda la conversación",
-          "resumen": "Los últimos días son de consolidación. El undécimo trae las dos acuñaciones mayores del run — la palabra para innovar y la palabra para el dolor del alma — y al día catorce el caquetío ocupa, por primera vez, el cien por ciento del habla de la comunidad.",
+          "resumen": "Los últimos días caen como fruta madura. El undécimo trae, en la misma jornada, las dos palabras mayores del run —la de innovar y la del dolor del alma— y al día catorce, sin que nadie lo anunciara, el caquetío se cierra sobre sí mismo: por primera vez ocupa toda la conversación de la Curiana, como una marea que por fin cubre la arena entera.",
           "eventos": [
             {
               "dia": 11,
               "tipo": "neologismo_adoptado",
               "forma": "kali-bana-chaa",
               "personaje": "corie-ko",
-              "nota": "«Hacer cosas nuevas en la luz»: innovar. El más prudente de los viejos acuña la palabra para el cambio; la comunidad la glosa de dos maneras y las dos quedan."
+              "nota": "«Hacer cosas nuevas en la luz»: innovar. La acuñó el más prudente de los viejos, el que menos cambiaba de opinión en toda la Curiana — y por eso mismo, cuando la comunidad la entendió de dos maneras distintas, nadie corrigió a nadie: las dos se quedaron a vivir juntas."
             },
             {
               "dia": 11,
               "tipo": "neologismo_adoptado",
               "forma": "barchasure",
               "personaje": "tawaka",
-              "nota": "«Dolor-del-alma.» El guerrero joven toca barsure — palabra sagrada — y la tuerce. Los viejos fruncen el ceño; días después la usan en el duelo."
+              "nota": "«Dolor-del-alma.» Tawaka tomó barsure —la palabra sagrada, la misma que dice Manaure cuando habla del alma de todos— y la dobló hasta que dolió. Los viejos fruncieron el ceño, dijeron que un muchacho no toca así una palabra vieja. Días después, cuando alguien se murió, fueron ellos los primeros en usarla."
             },
             {
               "dia": 12,
               "tipo": "neologismo_adoptado",
               "forma": "puri-bana",
               "personaje": "bagre-ko",
-              "nota": "«Orilla-del-permiso»: donde se pide entrar al mar. El guardián ritual de las aguas fija en una palabra una ética entera."
+              "nota": "«Orilla-del-permiso»: el lugar exacto donde hay que pedirle permiso al mar antes de entrarlo. Bagre-ko no inventó una palabra: dijo en voz alta una regla que la Curiana ya cumplía sin nombrarla, y desde entonces nadie volvió a cruzar esa orilla sin decirla primero."
             },
             {
               "dia": 14,
               "tipo": "hito_deriva",
-              "nota": "Por primera vez en la estación, el caquetío ocupa el 100% del habla de la comunidad. La marea se cerró sobre su propia lengua."
+              "nota": "Por primera vez en la estación, el caquetío ocupó el cien por ciento del habla de la comunidad. Nadie lo decidió, nadie lo anunció: fue como si el golfete entero, esa noche, dejara de recordar que alguna vez había hablado de otro modo. La marea se cerró sobre su propia lengua."
             }
           ]
         }
