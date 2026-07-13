@@ -182,28 +182,11 @@ propone la forma nueva entre corchetes:
 
 Si **2 agentes distintos** la usan → entra al léxico comunitario permanente.
 
-## Dashboard Next.js
+## Publicación
 
-`curiana_dashboard/` es un frontend Next.js 14 que visualiza la evolución lingüística
-en tiempo real desde Supabase (Recharts para los gráficos, Tailwind para el estilo,
-`@supabase/supabase-js` para los datos en vivo).
-
-```bash
-cd curiana_dashboard
-npm install
-cp .env.local.example .env.local      # pon NEXT_PUBLIC_SUPABASE_URL / ANON_KEY
-npm run dev                            # http://localhost:3000
-```
-
-Requiere que el backend haya corrido al menos una simulación con Supabase configurado
-(las tablas las crea `supabase_schema.sql`). Ver `curiana_dashboard/DEPLOY.md` para el
-despliegue. Estructura: `app/` (rutas), `components/` (gráficos y tablas), `lib/`
-(cliente Supabase).
-```
-curiana_dashboard/
-├── app/            # rutas y páginas Next.js
-├── components/     # charts (Recharts) + tablas de neologismos
-├── lib/            # cliente @supabase/supabase-js
-├── package.json
-└── .env.local.example
-```
+No hay dashboard propio: los resultados curados se exportan a JSON estático y se
+publican en el sitio Curiana Radio (`/simulador`, fuera de este repo de simulación).
+Ver `export_runs_index.py`, `export_personajes_seed.py`, `export_resumen_seed.py`,
+`export_lexicon_seed.py` — cada uno lee de Supabase local y escribe a
+`../content/simulador/*.json`. Añadir un run al sitio es correr los exporters que
+apliquen contra Supabase local y hacer commit del JSON resultante.

@@ -1,6 +1,6 @@
 # Curiana — Simulador de Emergencia Lingüística Caquetía
 
-Proyecto de investigación + experimento computacional: una simulación multi-agente donde 60 personajes históricos (pueblo Caquetío, Golfete de Coro, Venezuela, siglos XIV-XV) hablan en caquetío-arahuaco reconstruido. Los agentes evolucionan el idioma en tiempo real: inventan palabras, adoptan neologismos de otros, y su "deriva lingüística" queda registrada en Supabase y visualizada en un dashboard Next.js.
+Proyecto de investigación + experimento computacional: una simulación multi-agente donde 60 personajes históricos (pueblo Caquetío, Golfete de Coro, Venezuela, siglos XIV-XV) hablan en caquetío-arahuaco reconstruido. Los agentes evolucionan el idioma en tiempo real: inventan palabras, adoptan neologismos de otros, y su "deriva lingüística" queda registrada en Supabase, curada y publicada como sitio estático en Curiana Radio (`/simulador`).
 
 ## Stack
 
@@ -20,14 +20,6 @@ curiana_sim/        → Python 3.11+ (simulación)
                             + normalize_source_language() (8 categorías activas, ver abajo)
   arahuaco_comparative.py → método comparativo (transducir, COGNADOS, reconstruir_caquetio)
   supabase/migrations/    → schema versionado (init + fixes; supabase_schema.sql es referencia)
-
-curiana_dashboard/  → Next.js 14 + Tailwind + Recharts + Supabase JS
-  app/page.tsx            → dashboard en tiempo real (Supabase real-time subscriptions)
-  app/lexicon/page.tsx    → explorador del léxico (1262 palabras, 8 categorías, paginado)
-  app/neologisms/page.tsx → palabras inventadas por los agentes (propuesto/adoptado/rechazado)
-  components/LanguageDriftChart.tsx → area chart de composición lingüística por turno
-  components/AgentFeed.tsx          → feed en vivo de respuestas de agentes
-  lib/supabase.ts         → cliente Supabase + tipos TypeScript + LANG_COLORS (8 categorías)
 ```
 
 > ⚠️ **Queries a la tabla `lexicon`:** PostgREST limita cada respuesta a
@@ -68,12 +60,6 @@ LANGSMITH_API_KEY=ls__...             # opcional
 LANGSMITH_PROJECT=curiana             # opcional
 ```
 
-```bash
-# curiana_dashboard/.env.local  (ver .env.local.example)
-NEXT_PUBLIC_SUPABASE_URL=http://127.0.0.1:64321
-NEXT_PUBLIC_SUPABASE_ANON_KEY=...     # anon key local (ver `supabase status`)
-```
-
 > ⚠️ **Carga de `.env` en scripts Python:** cada entrypoint que se corra
 > directo (`python curiana_xxx.py ...`) debe cargar `curiana_sim/.env` por sí
 > mismo — leer `os.environ` no basta. `curiana_orchestrator_v2.py` y
@@ -106,13 +92,6 @@ python curiana_orchestrator_v2.py --auto 30 --perfiles --reporte
   #             La evidencia de koineización es la DIFERENCIA normal vs. ablación.
   #             La convergencia se mide en 3 lecturas/día (acumulada/ventana/emergente,
   #             ver DISENO_KOINE.md §7); el veredicto usa la más exigente con datos.
-
-# Dashboard
-cd curiana_dashboard
-npm install
-npm run dev          # http://localhost:3000
-npx vercel           # deploy a Vercel — ⚠️ ver nota de egress: activar
-                      # Deployment Protection antes de desplegar a producción
 ```
 
 ## Metodología del lexicón y validación

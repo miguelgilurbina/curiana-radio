@@ -45,7 +45,10 @@ Una sección/página `/agentes` en el dashboard con:
    8.17 GB de egress sobre el límite de 5 GB del plan Free).
 2. Correr `curiana_perfilador.py` contra un run real y revisar la calidad
    de las frases elegidas / justificaciones.
-3. Construir la página `/agentes` en `curiana_dashboard` (grid + detalle).
+3. ✅ Hecho, pero en Curiana Radio, no en `curiana_dashboard` (que se borró — no llegó
+   a desplegarse nunca): `/simulador/personajes` (grid) y
+   `/simulador/personajes/[slug]` (detalle) ya existen y consumen
+   `content/simulador/personajes.json`.
 4. Decidir si el perfilador corre automáticamente al final de cada
    `--auto N`, o se deja como paso manual aparte (para no gastar
    llamadas extra a Haiku en cada run de prueba) — quedó sin resolver.
