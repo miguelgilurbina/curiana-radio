@@ -1,0 +1,531 @@
+# Corpus cultural — Parentesco
+# Sesión 1/4 del programa "corpus cultural". Ver README.md para el esquema y las etiquetas de fuente.
+# Profundiza CULTURA_CAQUETIA.md §6 ("Las mujeres líderes y la matrilinealidad"), no lo reemplaza.
+
+- id: parentesco-001
+  contenido: >
+    La sucesión del cacicazgo COLONIAL de Coro (no precontacto) se documenta en probanzas españolas
+    de los siglos XVI-XVIII como transmisión de padre a hijo, y en un caso de hermano a hermano
+    ("abdicación" de 1636). Manaure (Don Martín) fue sucedido por su hijo Don Alexandre, ya bajo
+    encomienda y con casi una década de negociación con Ampíes a sus espaldas.
+  fuente: atestiguado
+  referencia: "Oliver 1989, cap. 3, pp. 255-256, 268 (\"the office of chief or diao was in the XVIth century inherited by the son of the diao\")"
+  dominios: [parentesco, politica]
+  agentes_relacionados: [Manaure]
+  implicacion_simulacion: >
+    NO USAR como evidencia de la norma precontacto (siglos XIV-XV) que la simulación modela — es dato
+    de la administración colonial de Coro, ya reformateado por categorías jurídicas españolas (título,
+    oficio, primogenitura). Ver ensayo §1 ("aviso metodológico"). Útil solo como semilla de una posible
+    línea narrativa futura sobre la deformación del cacicazgo tras el contacto, no para la Curiana
+    precontacto de este proyecto.
+
+- id: parentesco-002
+  contenido: >
+    Incluso dentro del registro colonial (ya de por sí un artefacto administrativo, no una ventana al
+    precontacto), Oliver duda de la lectura patrilineal literal del caso de Manaure: cuando el cacique
+    murió, su esposa principal "se casó" con quien las crónicas llaman su hijo, y Oliver anota la
+    ambigüedad de si ese parentesco es carnal o clasificatorio (es decir, posiblemente un sobrino
+    tratado con un término que el español tradujo como "hijo").
+  fuente: atestiguado
+  referencia: "Oliver 1989, cap. 3, p. 262 (\"his mother (carnal or classificatory?)\")"
+  dominios: [parentesco, politica]
+  agentes_relacionados: [Manaure]
+  implicacion_simulacion: >
+    Esta grieta en un registro ya colonial es indicio de que la lógica avuncular era lo bastante fuerte
+    como para filtrarse incluso bajo presión de la primogenitura española — refuerza (no compite con)
+    la lectura matrilineal como norma precontacto. Base documental de apoyo para Waimo-ko en
+    genealogia.yaml, no evidencia directa de él.
+
+- id: parentesco-003
+  contenido: >
+    En un conflicto de sucesión de mediados/fines del siglo XVIII en Paraguaná —dos siglos y medio
+    después del contacto, el registro más tardío y menos representativo del precontacto de todos los
+    citados aquí— los indios locales impugnaron a un aspirante a cacique por "bastardía", vinculada a
+    que su padre se había casado con una mujer española. La legitimidad se juzga por la identidad/
+    estatus de la madre, no solo del padre.
+  fuente: atestiguado
+  referencia: "Oliver 1989, cap. 3, pp. 255-256, citando a Martí 1969"
+  dominios: [parentesco, politica]
+  agentes_relacionados: []
+  implicacion_simulacion: >
+    Se cita solo por la FORMA del conflicto (legitimidad juzgada por la madre), útil como plantilla
+    narrativa para que las matriarcas (Sha-corie, Paugis-sha) objeten la legitimidad de un heredero —
+    no como evidencia de que la Curiana precontacto tuviera "bastardía" en sentido colonial/cristiano,
+    concepto que no aplica fuera de ese marco.
+
+- id: parentesco-004
+  contenido: >
+    La sucesión del liderazgo caquetío puede pasar por vía avuncular: de un hombre a su sobrino
+    uterino (hijo de su hermana), no a su propio hijo — siguiendo el patrón matrilineal arahuaco
+    comparado (wayuu, taíno) y tomando en serio la duda que el propio Oliver deja abierta sobre el
+    caso de Manaure.
+  fuente: reconstruido
+  referencia: "analogía wayuu y taína: herencia por sobrinos uterinos, no hijos (ver parentesco-006, 007); apoyo indirecto en Oliver 1989, cap. 3, p. 262"
+  dominios: [parentesco, politica]
+  agentes_relacionados: [Chiriguare, Chiri-ko, Manaure]
+  implicacion_simulacion: >
+    Ya aplicado en el canon actual para Chiriguare→Chiri-ko. Esta sesión propone extenderlo también a
+    Manaure, con un sobrino nuevo (Waimo-ko) — ver genealogia.yaml.
+
+- id: parentesco-005
+  contenido: >
+    La pertenencia de linaje, el nombre y buena parte de la herencia se cuentan por línea materna.
+    Entre los wayuu del siglo XX temprano esto se describía como "un definido matriarcado", ya
+    percibido como en declive en 1927.
+  fuente: reconstruido
+  referencia: "analogía wayuu: Jahn 1927, p. 172 (\"la herencia del nombre y nacionalidad materno constituían un definido matriarcado\")"
+  dominios: [parentesco]
+  agentes_relacionados: [Nubiri-sha]
+  implicacion_simulacion: >
+    Base directa del §6 ya existente en CULTURA_CAQUETIA.md. No se modifica ese texto; este corpus lo
+    respalda con cita concreta.
+
+- id: parentesco-006
+  contenido: >
+    En la organización wayuu, el tío materno (hermano de la madre) es la máxima autoridad familiar:
+    representa al grupo en pagos por ofensas, calumnias, robos y dotes matrimoniales. Son los
+    sobrinos, no los hijos, quienes heredan bienes materiales, prestigio y poder de un hombre.
+  fuente: reconstruido
+  referencia: "analogía wayuu: sistema de avunculado y herencia por sobrinos (etnografía wayuu contemporánea; ver hoja de fuentes)"
+  dominios: [parentesco, politica]
+  agentes_relacionados: [Chiri-ko, Chiriguare]
+  implicacion_simulacion: >
+    Bloque de rol componible "rol_avuncular": cualquier hombre con sobrinos por parte de una hermana
+    tiene autoridad económica/legal sobre ellos, aunque no sea protagonista tier 1.
+
+- id: parentesco-007
+  contenido: >
+    Entre los taínos, sociedad arahuaca matrilineal, la sucesión de un cacique recaía en el hijo mayor
+    de su hermana mayor a falta de heredero varón directo; esta misma lógica permitía la existencia de
+    cacicas mujeres.
+  fuente: reconstruido
+  referencia: "analogía taína: sucesión matrilineal, brother-to-sister-to-nephew (literatura tainista general; ver hoja de fuentes)"
+  dominios: [parentesco, politica]
+  agentes_relacionados: []
+  implicacion_simulacion: >
+    Refuerza que una mujer con linaje fuerte (Nubiri-sha, Sha-corie) podría en principio ejercer
+    autoridad cacical directa, no solo delegada — licencia narrativa para tramas futuras.
+
+- id: parentesco-008
+  contenido: >
+    El matrimonio wayuu tradicional era exógamo por clan: la mujer debía pertenecer a una "parcialidad"
+    (linaje) distinta a la del marido.
+  fuente: reconstruido
+  referencia: "analogía wayuu: Jahn 1927, p. 172 (\"ley de matrimonio exógamo... la mujer había de ser de una parcialidad distinta a la del marido\")"
+  dominios: [parentesco]
+  agentes_relacionados: []
+  implicacion_simulacion: >
+    Regla base para genealogia.yaml: cónyuges siempre de linajes distintos. Ver §5 del ensayo para el
+    esquema de 5-6 linajes propuestos.
+
+- id: parentesco-009
+  contenido: >
+    Cuando un hombre wayuu moría, su viuda pasaba en herencia a uno de los hermanos del difunto
+    (preferentemente el menor); si no había hermanos, pasaba a uno de sus sobrinos. Es un patrón de
+    levirato distinto y complementario al caso de la viuda de Manaure documentado por Oliver.
+  fuente: reconstruido
+  referencia: "analogía wayuu: Jahn 1927, pp. 172-173"
+  dominios: [parentesco]
+  agentes_relacionados: []
+  implicacion_simulacion: >
+    No se aplica a ningún agente actual (ningún tier 1 es viudo/a en el canon), pero queda disponible
+    como mecánica para runs futuros con muertes de personajes.
+
+- id: parentesco-010
+  contenido: >
+    Insultar a un muerto en presencia de un tío o un sobrino era, entre los wayuu, una ofensa
+    gravísima, a veces castigada con la muerte — evidencia del peso ritual, no solo económico, del
+    vínculo avuncular.
+  fuente: reconstruido
+  referencia: "analogía wayuu: Jahn 1927, p. 171"
+  dominios: [parentesco, cosmos]
+  agentes_relacionados: [Chiriguare, Chiri-ko]
+  implicacion_simulacion: >
+    Un insulto a la memoria de Chiriguare delante de Chiri-ko tendría, por este patrón, una carga
+    dramática y hasta legal, no solo emocional.
+
+- id: parentesco-011
+  contenido: >
+    Un listado comparativo guajiro/paraujano de términos de parentesco de comienzos del siglo XX
+    distingue léxicamente "tío materno" de "tío paterno" como entradas separadas — consistente con
+    una terminología bifurcada donde el hermano de la madre ocupa una categoría social distinta y más
+    cargada que el hermano del padre.
+  fuente: reconstruido
+  referencia: "analogía wayuu: Jahn 1927, pp. 438-439 (patrón estructural; formas léxicas exactas no reconstruidas por desalineación de la extracción del PDF, ver hoja de fuentes)"
+  dominios: [parentesco, lenguaje]
+  agentes_relacionados: []
+  implicacion_simulacion: >
+    Justifica que el caquetío de la Curiana distinga (o un piache acuñe la distinción en algún turno)
+    entre "tío materno" y "tío paterno" como categorías léxicas separadas, no un solo término genérico.
+
+- id: parentesco-012
+  contenido: >
+    El término caquetío atestiguado "daitiao" es cognado del taíno "daitia-o" y del lokono
+    "da-tti/da-iti", una raíz de parentesco que en lokono cubre 'tío', 'padre' e 'hija' según el
+    prefijo posesivo — un solo tallo léxico para varias relaciones de parentesco cercano.
+  fuente: atestiguado
+  referencia: "Oliver 1989, cap. 2, p. 147"
+  dominios: [parentesco, lenguaje]
+  agentes_relacionados: []
+  implicacion_simulacion: >
+    Candidato a incorporar a curiana_lexicon.py en trabajo futuro (fuera de alcance de esta sesión de
+    investigación, que no toca código). No usar todavía en prompts hasta que Miguel lo revise.
+
+- id: parentesco-013
+  contenido: >
+    Los caciques celebraban sus bodas con grandes fiestas, según lo poco que registran los cronistas
+    de Coro sobre instituciones familiares caquetías.
+  fuente: atestiguado
+  referencia: "Arcaya 1920, p. 128"
+  dominios: [parentesco]
+  agentes_relacionados: [Manaure]
+  implicacion_simulacion: >
+    Justifica una futura escena ritual de boda cacical con banquete, tambor y tejidos de prestigio
+    (hamacas de Cahu-sha, cerámica de Saruro-sha) como regalo de alianza.
+
+- id: parentesco-014
+  contenido: >
+    Es posible que las diferencias de tatuaje corporal entre los caquetíos de Coro correspondiesen a
+    distinciones de linaje/clan, y no únicamente a rango individual por hazañas de guerra — según una
+    intuición sin desarrollar de la historiografía venezolana temprana.
+  fuente: atestiguado
+  referencia: "Arcaya 1920, p. 127 (\"es posible que las diferencias del tatuage correspondiesen más bien a distinciones de clanes\")"
+  dominios: [parentesco]
+  agentes_relacionados: []
+  implicacion_simulacion: >
+    Abre la puerta a marcas corporales visibles de linaje (tatuaje, patrón de pintura) como mecánica
+    narrativa futura para señalar pertenencia de clan sin necesidad de exposición verbal.
+
+- id: parentesco-015
+  contenido: >
+    La poligamia cacical funcionaba como estrategia política deliberada: ampliaba la red de parentesco
+    y las obligaciones recíprocas entre familias aliadas. El Manaure histórico de CONTACTO (Don Martín,
+    ya negociando con Ampíes) es el único cacique documentado sin ambigüedad como polígamo, casado con
+    Doña Sancha y con "hijas de los caribes" — alianza matrimonial interétnica explícita.
+  fuente: atestiguado
+  referencia: "Oliver 1989, cap. 3, pp. 260-261 (\"Polygamy involves a much broader and extensive kinship network\"); dato del Manaure histórico de contacto, no del período precontacto que la simulación modela"
+  dominios: [parentesco, politica, comercio]
+  agentes_relacionados: [Manaure]
+  implicacion_simulacion: >
+    Este es exactamente el tipo de rasgo que CULTURA_CAQUETIA.md ya declara "proyectar hacia atrás" por
+    diseño explícito (nota metodológica inicial del canon: el Manaure histórico de contacto se usa como
+    plantilla para el jefe teocrático precolonial). Es decir: usarlo aquí es coherente con un método que
+    el proyecto ya adoptó a propósito, no una excepción a la regla de "no tratar dato de contacto como
+    precontacto" — la diferencia es que aquí el propio canon ya decidió conscientemente hacer la
+    proyección, mientras que la sucesión patrilineal (parentesco-001) nunca recibió esa misma decisión
+    explícita. No se propone hacer a Manaure polígamo en el elenco activo sin que Miguel lo decida
+    explícitamente — se deja como dato histórico de respaldo, no como cambio de canon.
+
+- id: parentesco-016
+  contenido: >
+    En matrimonios interétnicos ya presentes en el elenco (Piru-sha guaycarí casada con un caquetío;
+    los padres de Wata-ni), es la persona ajena a la Curiana quien se traslada e integra a la
+    comunidad, no al revés — coherente con que el matrimonio de élite/alianza es estratégico: se
+    consolida donde está el poder o el recurso (ver también el caso de la hija y la viuda de Manaure,
+    que se trasladan al pueblo del cacique-esposo o del cacique-hijo).
+  fuente: reconstruido
+  referencia: "patrón documentado en Oliver 1989, cap. 3, pp. 261-262 (traslado de la hija y de la viuda de Manaure al pueblo del cónyuge/heredero) aplicado por analogía a los casos ya existentes en curiana_agents.py"
+  dominios: [parentesco]
+  agentes_relacionados: [Piru-sha, Wata-ni, Nubiri-sha]
+  implicacion_simulacion: >
+    Regla de residencia: matrilocal por defecto entre caquetíos; para matrimonios interétnicos, reside
+    quien no es de la Curiana. No inventa nada nuevo sobre Piru-sha: explica por qué su caso ya
+    encaja así en el canon.
+
+- id: parentesco-017
+  contenido: >
+    Por lógica matrilineal estricta, Wata-ni —hijo de padre guaycarí y madre caquetía— debería tener
+    pertenencia caquetía inequívoca, heredada de su madre. Que su propia ficha lo describa sintiéndose
+    sin encajar del todo en ningún grupo sugiere que la comunidad no aplica su propia regla de
+    descendencia de forma limpia a las uniones mixtas.
+  fuente: hipotetico
+  referencia: "lectura interna de curiana_agents.py a la luz de parentesco-005/006; sin respaldo documental directo, es interpretación de esta sesión"
+  dominios: [parentesco]
+  agentes_relacionados: [Wata-ni]
+  implicacion_simulacion: >
+    Gancho narrativo: un piache o anciana podría señalar en algún turno que Wata-ni "es caquetío de
+    pleno derecho por su madre", y que se le trate como forastero seria una elección social de la
+    comunidad, no una necesidad estructural. No es mecánica obligatoria, es material dramático.
+
+- id: parentesco-018
+  contenido: >
+    Piri-sha es cuñada de Naure-sha en el canon actual, lo que implica que el esposo de Piri-sha es
+    hermano de Naure-sha (o el esposo de Naure-sha es hermano de Piri-sha) — una relación de
+    parentesco ya fijada en curiana_agents.py que cualquier genealogía propuesta debe preservar.
+  fuente: atestiguado
+  referencia: "curiana_agents.py, descripción de Naure-sha (\"Eres cuñada de Piri-sha\") y de Piri-sha (\"Cuñada de Naure-sha\")"
+  dominios: [parentesco]
+  agentes_relacionados: [Piri-sha, Naure-sha]
+  implicacion_simulacion: >
+    Restricción dura para genealogia.yaml: el esposo sin nombrar de Piri-sha debe compartir linaje
+    materno con Naure-sha (si la cuñadez es por parte de hermano) o Piri-sha y el esposo de Naure-sha
+    deben ser hermanos (si es la otra dirección). Se optó por la primera lectura — ver genealogia.yaml.
+
+- id: parentesco-019
+  contenido: >
+    Los apellidos/etnónimos comunes usados por cronistas para agrupar pueblos vecinos (p. ej.
+    "Jirajara") no necesariamente indicaban parentesco real entre los grupos así llamados, según
+    debate historiográfico temprano.
+  fuente: atestiguado
+  referencia: "Arcaya 1920, p. 119, citando a Salas, \"Tierra Firme\""
+  dominios: [parentesco]
+  agentes_relacionados: [Nabaraka, Raka-bi, Chorota]
+  implicacion_simulacion: >
+    Advertencia de diseño: no asumir que todos los "jirajaras" o "gayones" del elenco (Nabaraka,
+    Raka-bi, Chorota) comparten linaje entre sí solo por etnónimo compartido — el parentesco entre
+    ellos, si existe, debe hacerse explícito caso por caso (ver genealogia.yaml: Raka-bi es sobrino de
+    Nabaraka por dato ya atestiguado en su ficha).
+
+- id: parentesco-020
+  contenido: >
+    Bloques de rol componibles por edad y género derivados del análisis de parentesco: rol avuncular
+    (autoridad económica/ritual de tío materno sobre sobrinos), rol de matriarca ratificadora
+    (autoridad de ancianas sobre matrimonio, herencia y legitimidad), rol de cónyuge forastero
+    (biculturalidad, tensión de lealtad, función de mediación), rol de heredero bajo peso (presión de
+    demostrar mérito propio frente al título heredado).
+  fuente: hipotetico
+  referencia: "síntesis de diseño de esta sesión a partir de parentesco-002 a 017; no es un hecho histórico sino una propuesta de arquitectura de prompts"
+  dominios: [parentesco, politica]
+  agentes_relacionados: [Chiri-ko, Sha-corie, Paugis-sha, Piru-sha, Wata-ni]
+  implicacion_simulacion: >
+    Ver §5.6 del ensayo (01_familia_caquetia.md) para el detalle de cada bloque. Pensados como
+    fragmentos componibles para system prompts modulares futuros, no como mecánica ya implementada.
+
+- id: parentesco-021
+  contenido: >
+    Los achagua de los Llanos llamaban a los caquetíos llaneros "tamude", incorporando su término de
+    parentesco "mude" (aprox. "primo") — los trataban literalmente como primos. Jahn argumentó que el
+    término prueba origen común de achagua y caquetío dentro de la gran familia arahuaca.
+  fuente: atestiguado
+  referencia: "Oliver 1989, cap. 3, pp. 287-288, citando Jahn 1927: 213 y Rivero [1728-9] 1956: 30"
+  dominios: [parentesco, lenguaje]
+  agentes_relacionados: []
+  implicacion_simulacion: >
+    Legitima usar la etnografía achagua como comparanda de primer orden para la familia caquetía
+    (parentesco-022), al nivel de wayuu y lokono: son los parientes que las propias fuentes del
+    proyecto declaran "primos".
+
+- id: parentesco-022
+  contenido: >
+    La sociedad achagua se organizaba en numerosos linajes con nombre de animal (serpiente,
+    murciélago, jaguar, zorro), cada linaje ocupando una casa comunal propia dentro de la aldea, con
+    exogamia de linaje; practicaban poligamia con esposas jurídicamente iguales, cada una con conuco
+    propio, y un patrón de hogar extenso donde las hijas casadas permanecían con sus familias.
+  fuente: reconstruido
+  referencia: "analogía achagua (los 'primos' declarados del caquetío, ver parentesco-021): etnografía secundaria, incl. Britannica y portales etnográficos colombianos — ver hoja de fuentes"
+  dominios: [parentesco]
+  agentes_relacionados: []
+  implicacion_simulacion: >
+    Es la base de la imagen "un linaje = un grupo de bohíos con fogón compartido" (ensayo §6) y del
+    principio de expansión del elenco: cuando crezca la población de agentes, se agrega un linaje
+    completo como unidad residencial-narrativa, no individuos sueltos. Da también respaldo comparativo
+    directo a los nombres totémicos de animal de los linajes propuestos (Buio, Chiriguare, Corie,
+    Paugis).
+
+- id: parentesco-023
+  contenido: >
+    Los arawak costeros de las Guayanas (lokono) se organizaban en clanes matrilineales exógamos con
+    residencia matrilocal, y la sucesión del liderazgo corría por línea materna: de tío a sobrino o
+    entre hermanos dentro de la familia materna.
+  fuente: reconstruido
+  referencia: "analogía lokono: etnografía secundaria de los arawak costeros de las Guayanas — ver hoja de fuentes"
+  dominios: [parentesco, politica]
+  agentes_relacionados: []
+  implicacion_simulacion: >
+    Cierra el arco norteño: wayuu (Guajira), taíno (Antillas), lokono (Guayanas) y achagua (Llanos)
+    coinciden en matrilinealidad/matrilocalidad — la reconstrucción de la Curiana descansa en el
+    cluster completo, no en una sola analogía.
+
+- id: parentesco-024
+  contenido: >
+    No toda sociedad arahuaca es matrilineal: los baniwa/curripaco de la Amazonía noroccidental (río
+    Içana) se organizan en fratrias exógamas compuestas de sibs PATRILINEALES, jerarquizados por el
+    orden de emergencia de los hermanos-espíritu ancestrales, con preferencia por matrimonio entre
+    primos cruzados. La rama amazónica de la familia tomó el camino patrilineal.
+  fuente: reconstruido
+  referencia: "etnografía baniwa/curripaco (Amazonía noroccidental): fuentes secundarias, incl. Encyclopedia.com y pib.socioambiental.org — ver hoja de fuentes. Se registra como límite metodológico de la analogía arahuaca, no como rasgo caquetío"
+  dominios: [parentesco]
+  agentes_relacionados: []
+  implicacion_simulacion: >
+    Entrada de control metodológico: "arahuaco" no implica matrilineal por sí solo. Cualquier
+    reconstrucción futura por analogía arahuaca debe verificar que la comparanda pertenezca al arco
+    norteño-costero (wayuu, paraujano, taíno, lokono, achagua) y no a la rama amazónica, que divergió
+    en organización social. No usar rasgos baniwa/curripaco para la Curiana sin justificación aparte.
+
+- id: parentesco-025
+  contenido: >
+    Los linajes matrilineales son las unidades de expansión demográfica del elenco: un linaje nuevo o
+    en crecimiento llega como grupo residencial completo (matriarca, hermanas con sus hijos, hermanos
+    adultos, esposos venidos de otros linajes), no como individuos sueltos. Vías de entrada plausibles
+    de un linaje nuevo: matrimonio exogámico con otro asentamiento caquetío, rama insular (vía Aruba/
+    Bonaire), o grupo desplazado por raid caribe que pide adopción.
+  fuente: hipotetico
+  referencia: "decisión de diseño de esta sesión (dirección de Miguel, 2026-07-16), apoyada en la imagen achagua de parentesco-022; no es un hecho histórico"
+  dominios: [parentesco, politica]
+  agentes_relacionados: [Kadushi]
+  implicacion_simulacion: >
+    Cuando se expanda la cantidad de agentes, poblar por linaje: elegir un linaje existente
+    subpoblado (ver capacidad_de_expansion en genealogia.yaml) o introducir uno nuevo por una de las
+    tres vías. Los ~35 agentes actuales sin linaje asignado son el primer stock a colocar antes de
+    crear personajes nuevos.
+
+- id: parentesco-026
+  contenido: >
+    Entre los taínos, la élite practicaba residencia avunculocal: el sobrino-heredero se trasladaba a
+    vivir con o junto a su tío materno, y era el tío materno (no el padre) quien introducía a los
+    varones a las sociedades masculinas. La sucesión y la herencia corrían por línea materna; un
+    gobernante era más probablemente sucedido por los hijos de su hermana que por los propios, salvo
+    que el linaje de la madre de sus hijos les diera derecho por cuenta propia.
+  fuente: reconstruido
+  referencia: "analogía taína: Keegan 1989, The Evolution of Avunculocal Chiefdoms, American Anthropologist 91(3) — identificado vía búsqueda web, no consultado en texto completo (ver hoja de fuentes)"
+  dominios: [parentesco, politica]
+  agentes_relacionados: [Manaure, Nubiri-sha]
+  implicacion_simulacion: >
+    Da mecanismo residencial a la sucesión avuncular: Waimo-ko (el sobrino-sucesor propuesto) viviría
+    en o junto a casa_cacique, criado a la vista de Manaure — conviviendo con los hijos de Nubiri-sha,
+    que crecen sabiendo que el heredero es el primo llegado de afuera. Además: los hijos de Manaure
+    podrían aspirar a autoridad, pero por el linaje Warana de su madre, no por su padre.
+
+- id: parentesco-027
+  contenido: >
+    La poliginia cacical taína operaba a gran escala: algunos caciques tenían hasta 30 esposas, y el
+    número de esposas condensaba riqueza, capacidad de sostenerlas y amplitud de la red de alianzas.
+    La misma lógica matrilineal permitía cacicas mujeres con mando directo (caso célebre: Anacaona).
+  fuente: reconstruido
+  referencia: "analogía taína: literatura tainista secundaria (web) sobre poliginia cacical y cacicas — ver hoja de fuentes"
+  dominios: [parentesco, politica]
+  agentes_relacionados: [Manaure]
+  implicacion_simulacion: >
+    Refuerza parentesco-015 (poligamia del Manaure histórico) con el patrón hermano antillano: la
+    poligamia cacical no es rareza sino rasgo estructural del cacicazgo arahuaco de élite. También
+    refuerza parentesco-007: una cacica mujer es estructuralmente posible.
+
+- id: parentesco-028
+  contenido: >
+    El doble registro de habla kalinago (masculino/femenino) es un fósil de estructura matrimonial:
+    unos 400 pares de palabras, doble serie de prefijos pronominales y doble verbo negativo, donde el
+    registro femenino se conforma al arahuaco continental. La explicación clásica, dada a Breton por
+    los propios capitanes caribes, es una conquista galibi de las islas con muerte de los hombres
+    arahuacos y toma de las mujeres como esposas — y esto NO es solo mito de origen lejano: la
+    literatura etnohistórica describe la expansión caribe hacia las Antillas Menores como un proceso
+    ACTIVO durante todo el siglo XIV, desplazando o incorporando a poblaciones arahuacas por el mismo
+    patrón (matar a los hombres, tomar a las mujeres como esposas) — el mismo siglo en que arranca la
+    simulación. La investigación moderna matiza el registro masculino como posible pidgin comercial
+    con los kalina de Tierra Firme (guerra y comercio como un solo circuito) y entiende a los kalinago
+    como población de origen arahuaco de larga duración, de sociedad matrilineal, que incorporaba
+    mujeres cautivas de raids como esposas plenas (no solo esclavas) — la cautiva que se vuelve esposa
+    adquiere estatus de tronco materno dentro del nuevo linaje, no queda marcada para siempre como
+    ajena.
+  fuente: reconstruido
+  referencia: "analogía kalinago: Adam 1879 (en fuentes_caquetios/), pp. 275-302, citando Breton 1665 y Labat; corroborado por literatura etnohistórica secundaria sobre la expansión caribe del s. XIV en las Antillas Menores (ver hoja de fuentes). Dato sobre los kalinago, no sobre los caquetíos"
+  dominios: [parentesco, lenguaje, politica]
+  agentes_relacionados: [Marokoto-ni, Chiriguare]
+  implicacion_simulacion: >
+    Tres usos. (1) El rapto de mujeres es el modo matrimonial extremo del mundo caribe — el espejo
+    invertido del matrimonio-alianza caquetío: el raid no solo mata, se lleva mujeres de linaje, que
+    en una sociedad matrilineal es perder el futuro de un fuego entero; eso da contenido preciso al
+    miedo que estructura la vigilancia de Chiriguare. (2) La misma frontera produce alianzas cuando
+    conviene: el Manaure histórico se casó con "hijas de los caribes" (parentesco-015) — rapto y
+    alianza son el mismo lenguaje político en tonos opuestos. (3) El doble registro ya está modelado
+    en el lexicón (baruwa/hiñaru, kalinago-caribe-overlay): si un agente notara que hombres y mujeres
+    caribes no hablan igual, la observación sería históricamente exacta. Ver también parentesco-029
+    para la síntesis de por qué esto es, además de dato etnográfico, motor de conflicto.
+
+- id: parentesco-029
+  contenido: >
+    Hipótesis de síntesis (Miguel, 2026-07-16): la Curiana y el mundo caribe representan dos
+    ideologías opuestas de cómo se forma una familia — pacto entre linajes (matrimonio-alianza
+    caquetío) versus captura violenta (matrimonio-botín caribe) — y el conflicto estructural entre
+    ambos pueblos, tal como ya lo registra el canon (§7, "desconfianza profunda hacia el Caribe"), se
+    explica mejor como choque de estas dos ideologías del parentesco que como agresión genérica o
+    disputa de recursos. Ninguno de los dos sistemas es "primitivo" respecto al otro: cada uno resuelve
+    con lógica interna coherente el mismo problema, la continuidad del linaje.
+  fuente: hipotetico
+  referencia: "síntesis interpretativa de esta sesión a partir de parentesco-015, 026, 028 y de la ficha atestiguada de Chiriguare en curiana_agents.py (raid que 'se llevó a mujeres y niños'); ninguna fuente afirma esta tesis causal de forma explícita"
+  dominios: [parentesco, politica]
+  agentes_relacionados: [Chiriguare, Marokoto-ni, Manaure]
+  implicacion_simulacion: >
+    No reescribe nada atestiguado — le da profundidad causal a datos que el canon ya tiene: por qué
+    Chiriguare vigila con esa intensidad (no vigila bienes, vigila linajes), por qué Marokoto-ni no es
+    villano dentro de su propio sistema (tomar esposa por la fuerza es, en su cosmovisión, una forma
+    legítima de hacer familia, no un crimen), y por qué el matrimonio de élite entre pueblos (Manaure
+    con "hijas de los caribes") es la única vía que ambos sistemas reconocen como legítima al mismo
+    tiempo — el único punto de traducción entre las dos ideologías. Gancho narrativo de alto valor: un
+    piache o un anciano podría, en algún turno, articular esta oposición en términos cosmológicos
+    propios (no antropológicos) — "ellos hacen familia con la lanza; nosotros con la hamaca" o
+    similar — como una forma de explicar el miedo sin caer en el cliché de "el caribe es malo".
+
+- id: parentesco-030
+  contenido: >
+    La combinación de poligamia (hombres de rango concentrando varias esposas) y exogamia estricta de
+    linaje (nadie se casa dentro de su propio fuego) produce matemáticamente un excedente estructural
+    de hombres jóvenes solteros: menos mujeres casaderas disponibles que hombres que las buscan. Es
+    una de las regularidades mejor documentadas de la antropología comparada, con mecanismo
+    psicológico identificado (los jóvenes de sociedades polígamas se sienten tratados con más
+    desigualdad) y evidencia georreferenciada de que ese excedente predice más incursiones sobre
+    grupos vecinos.
+  fuente: reconstruido
+  referencia: "antropología comparada, no específica del área arahuaca: Koos & Neupert-Wentz (2020), poliginia y conflicto intergrupal en África rural; caso yanomami (guerreros exitosos acceden a más esposas); caso kuria de Tanzania (hombres sin hermanas casaderas, más propensos a robar ganado); caso vikingo (proporción de sexos sesgada por poligamia/concubinato como factor de los raids) — ver hoja de fuentes"
+  dominios: [parentesco, politica]
+  agentes_relacionados: [Tawaka, Taku-ko, Pari-nu, Suri-bana, Guama-ko, Buco-ni, Corie-ko]
+  implicacion_simulacion: >
+    Da causa estructural compartida (no solo personalidad) a la frustración de Tawaka, la rivalidad
+    Tawaka-Pari-nu, y a jóvenes sin vía guerrera abierta (Guama-ko, Buco-ni) que deben demostrar valor
+    por otro camino. También reencuadra la irritación de Corie-ko con "las ideas de cambio" de Tawaka
+    como fricción generacional real, no solo prudencia de viejo. Base del rol_soltero_en_competencia
+    (ensayo §6.6) y de los puntos 7-8 de decisiones de diseño (ensayo §6).
+
+- id: parentesco-031
+  contenido: >
+    En la etnografía arahuaca amazónica, los hombres jóvenes ya iniciados pero todavía solteros
+    colgaban sus hamacas en una zona propia de la casa comunal —cerca del centro/frente, aparte de
+    los compartimentos de las parejas casadas— es decir, existía una marca espacial visible de
+    "iniciado pero aún no casado" dentro de la propia vivienda.
+  fuente: reconstruido
+  referencia: "etnografía arahuaca amazónica (fuente identificada vía resumen de búsqueda web, probablemente vinculada a literatura sobre las religiones Kuwai de pueblos arahuacos del norte — no confirmada en texto completo; fuente comparativamente débil, ver hoja de fuentes)"
+  dominios: [parentesco]
+  agentes_relacionados: []
+  implicacion_simulacion: >
+    Imagen útil para pensar el bohío/casa comunal de un linaje de la Curiana con una zona reconocible
+    de solteros — complementa la imagen de "linaje = casa comunal" ya propuesta (parentesco-022).
+    Etiqueta reconstruido pero con fuente más débil que el resto del corpus: no usar como base firme
+    sin verificación adicional en una sesión futura.
+
+- id: parentesco-032
+  contenido: >
+    La etiqueta "caribe" que llega hasta nosotros vía las crónicas coloniales no describe de forma
+    limpia una nación precontacto homogénea: funcionó en buena medida como categoría legal/política
+    colonial (los españoles distinguían "arahuaco pacífico" de "caribe guerrero" en parte para decidir
+    bajo derecho castellano a quién se podía esclavizar), y la investigación arqueológica reciente
+    (morfología craneofacial) cuestiona el modelo clásico de una "invasión caribe" con reemplazo
+    poblacional biológico de las Antillas.
+  fuente: atestiguado
+  referencia: "historiografía caribeña sobre 'Caribe' como categoría colonial/legal, y estudios de morfología craneofacial que cuestionan el modelo de invasión caribe precontacto (fuentes secundarias web — ver hoja de fuentes). Nota: esto es un dato sobre el debate historiográfico en sí, no una afirmación directa sobre la Curiana"
+  dominios: [parentesco, politica]
+  agentes_relacionados: [Marokoto-ni]
+  implicacion_simulacion: >
+    Matiza parentesco-028: el modelo de "conquista galibi" que narra Adam 1879 es un modelo entre
+    varios posibles, no un hecho cerrado — mismo tipo de cautela precontacto-vs-colonial ya aplicada
+    en §1 del ensayo a la sucesión de Manaure. Abre la puerta a parentesco-033 como lectura alternativa
+    igualmente especulativa, no reemplaza el modelo de Adam sino que lo relativiza.
+
+- id: parentesco-033
+  contenido: >
+    Hipótesis de síntesis (Miguel, 2026-07-16), puramente especulativa: dado que "caribe" pudo ser una
+    categoría más porosa de lo que sugiere el modelo de invasión-nación (parentesco-032), es plausible
+    en la ficción que parte de lo que la Curiana llama "caribe" incluyera bandas de hombres de origen
+    arahuaco diverso que, no habiendo conseguido esposa por la vía normal de pacto/exogamia (el
+    excedente de solteros de parentesco-030), resolvieron el mismo problema estructural por la vía de
+    la captura — desarrollando con el tiempo lengua propia (el registro masculino de parentesco-028),
+    ética propia (la guerra como forma legítima de conseguir esposa) e identidad reconocida como
+    distinta por sus vecinos, sin ser necesariamente una sola nación extranjera de origen.
+  fuente: hipotetico
+  referencia: "síntesis interpretativa puramente especulativa de esta sesión, construida sobre parentesco-028, 030 y 032; ninguna fuente afirma esta hipótesis, es licencia narrativa explícita"
+  dominios: [parentesco, politica, lenguaje]
+  agentes_relacionados: [Marokoto-ni]
+  implicacion_simulacion: >
+    Capa de trasfondo OPCIONAL, no sustituye la lectura simple ya vigente de Marokoto-ni como caribe
+    de etnia distinta. Uso sugerido: nunca como hecho que un agente afirme con certeza — como
+    ambigüedad que el propio Marokoto-ni podría no resolver igual dos veces si se le pregunta por su
+    origen. Advertencia: no usar para debilitar la amenaza real de los raids (§7 anti-romanticización
+    del canon sigue vigente) ni para sugerir que "ser caribe" es una elección individual reversible.
