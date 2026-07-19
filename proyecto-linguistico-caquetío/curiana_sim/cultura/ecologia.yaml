@@ -1,0 +1,928 @@
+# =====================================================================
+# CORPUS CULTURAL — ECOLOGÍA DEL GOLFETE DE CORO
+# =====================================================================
+# Sesión 2 de 4 del programa "corpus cultural". Pregunta guía:
+# ¿Dónde existía el caquetío? — el medio físico, la geografía y la
+# hidrología del mundo de la Curiana (Golfete de Coro, s. XIV–XV).
+#
+# Ensayo acompañante: investigacion/ensayos/02_ecologia_golfete.md
+# Hoja de fuentes:     investigacion/hojas_fuentes/02_ecologia.md
+#
+# Marcas de `fuente` (una por entrada; en duda, degradar a la más débil):
+#   atestiguado     → citable a fuente concreta (incluye ciencia natural
+#                     moderna citada).
+#   reconstruido    → inferencia razonada (p. ej. proyectar la ecología
+#                     actual 600 años hacia atrás con los cambios conocidos).
+#   retro-abstraido → tradición viva local / intuición informada de Paraguaná.
+#   hipotetico      → plausible sin respaldo.
+#
+# `palabra_lexicon`: forma caquetía ya existente en curiana_lexicon.py que
+#   nombra la especie/fenómeno; `null` si es un HUECO LÉXICO.
+# `locacion`: locación de curiana_state.py a la que la entrada da sustancia.
+# Las entradas con `hueco_lexico: true` (sección final) marcan fenómenos del
+#   paisaje SIN palabra en el lexicón — candidatos a neologismo emergente.
+# =====================================================================
+
+entradas:
+
+  # ── GEOGRAFÍA FÍSICA ────────────────────────────────────────────
+  - id: ecologia-001
+    contenido: >
+      La Curiana ocupa el vértice de tres unidades del noroccidente falconiano:
+      el Golfete de Coro (bahía somera y semicerrada), la Península de Paraguaná
+      (macizo casi insular al norte) y el Istmo de los Médanos (la lengua de
+      arena que une Paraguaná al continente y separa el Golfete del Caribe abierto).
+    fuente: atestiguado
+    referencia: "Camacho et al. 2011, pp. 8–10"
+    dominios: [ecologia, geografia]
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: orilla
+
+  - id: ecologia-002
+    contenido: >
+      El paisaje de hace 600 años era prácticamente idéntico al actual: el Istmo
+      de Médanos se estabilizó hace ~4 000 años, cuando el ascenso tectónico y el
+      nivel del mar en su posición actual fijaron la línea de costa. La dinámica
+      de dunas y golfete que vio el caquetío del s. XV es la que hoy protege el
+      Parque Nacional Médanos de Coro.
+    fuente: atestiguado
+    referencia: "Camacho et al. 2011, pp. 16–17"
+    dominios: [ecologia, geografia]
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    implicacion_simulacion: >
+      Licencia para usar la ecología moderna de Coro como base de escena sin
+      anacronismo: el medio físico es una constante entre el s. XV y hoy.
+
+  - id: ecologia-003
+    contenido: >
+      El Istmo de Médanos es un mosaico de ambientes que, de este a oeste, se
+      ordenan así: playa (hasta 200 m), campo de dunas longitudinales
+      estabilizadas (~51 km², montículos de 800–1200 m orientados ENE–WSW,
+      fijados por vegetación), cordón de salinas (~11 km²) y una vasta zona
+      pantanosa (~80 km²). Junto a ellas hay dunas transversales activas (~12 km²)
+      de arena móvil.
+    fuente: atestiguado
+    referencia: "Camacho et al. 2011, pp. 10–11"
+    dominios: [ecologia, geografia]
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: matorral
+
+  - id: ecologia-004
+    contenido: >
+      El caquetío distingue dos clases de duna: la duna VIVA (transversal, móvil,
+      que "camina" con el viento y sepulta lo que encuentra) y la duna VIEJA
+      (longitudinal, fijada por cují rastrero y grama). Es una lectura del paisaje
+      que cualquier habitante haría a diario.
+    fuente: reconstruido
+    referencia: "Camacho et al. 2011, pp. 10–11, 16"
+    dominios: [ecologia, geografia]
+    agentes_relacionados: [Suba-ko, Dara-bana]
+    palabra_lexicon: null
+    locacion: matorral
+    implicacion_simulacion: >
+      El médano no tiene palabra en el lexicón (ver hueco-lex-001): fenómeno
+      central del territorio y mudo. Alta presión para acuñar neologismo.
+
+  # ── CLIMA ───────────────────────────────────────────────────────
+  - id: ecologia-005
+    contenido: >
+      Coro y su istmo son semiáridos a áridos (BSh en Coro, BWh en el núcleo de
+      los médanos): ~380–417 mm de lluvia al año, temperatura media ~28 °C con
+      variación anual mínima (1–2 °C), y viento del ENE los doce meses. La
+      evaporación potencial supera con mucho a la lluvia casi todo el año.
+    fuente: atestiguado
+    referencia: "Camacho et al. 2011, pp. 8–9 (estación Coro); datos climáticos de Coro"
+    dominios: [ecologia, clima]
+    agentes_relacionados: []
+    palabra_lexicon: joutai
+    locacion: null
+
+  - id: ecologia-006
+    contenido: >
+      La lluvia no se reparte: se concentra en un pulso corto (aprox. octubre–
+      diciembre) y el resto del año domina la seca. La estacionalidad caquetía
+      (Tiempo de Viento / Tiempo de Siembra) se distingue por el viento y el agua
+      del cielo, NO por la temperatura, que apenas se mueve.
+    fuente: atestiguado
+    referencia: "Camacho et al. 2011, p. 9 (tablas de precipitación y temperatura, estación Coro)"
+    dominios: [ecologia, clima]
+    agentes_relacionados: [Shaboro, Corie-ko]
+    palabra_lexicon: kaya
+    locacion: null
+    implicacion_simulacion: >
+      Confirma el calendario ritual bianual del canon (§2) como reflejo fiel del
+      clima real. El ciclo seca/lluvias no es arbitrario.
+
+  # ── HIDROLOGÍA ──────────────────────────────────────────────────
+  - id: ecologia-007
+    contenido: >
+      La zona se drena por cursos modestos: el río Mitare (~120 km) es el principal
+      de la vertiente del Golfo de Venezuela; Coro y Caujarao desembocan en el Golfo
+      de la Vela; Ricoa, Hueque y Tocuyo en la costa nororiental. En clima BSh estos
+      cauces son en gran parte efímeros: llevan agua tras el pulso de lluvias y se
+      secan el resto del año. No hay un gran río perenne.
+    fuente: atestiguado
+    referencia: "Camacho et al. 2011, p. 17 (Tabla 7); hidrología de Falcón / río Mitare"
+    dominios: [ecologia, hidrologia]
+    agentes_relacionados: []
+    palabra_lexicon: bara
+    locacion: null
+
+  - id: ecologia-008
+    contenido: >
+      El agua dulce —no el alimento— es el recurso limitante de este litoral con
+      pesca, sal y conucos. Por eso la tecnología del agua es central: el buco/buko
+      (represa, acequia, canal de riego), y los verbos jaguey (estancar, crear
+      charco artificial) y jacuque (regar). La comunidad no espera el agua: la
+      captura en el pulso húmedo y la administra durante la seca.
+    fuente: reconstruido
+    referencia: "Camacho et al. 2011 (clima/hidrología); lexicón atestiguado (buko, jaguey, jacuque)"
+    dominios: [ecologia, hidrologia, agricultura]
+    agentes_relacionados: [Buco-ko, Corie-ko, Ita-ko, Wari-ko]
+    palabra_lexicon: buco
+    locacion: buco
+    implicacion_simulacion: >
+      Da fundamento al evento crecida_buco: demasiada agua de golpe (pulso de
+      lluvia) amenaza reventar la represa tanto como la sequía la vacía.
+
+  # ── SALINAS ─────────────────────────────────────────────────────
+  - id: ecologia-009
+    contenido: >
+      La sal (biro) se produce por evaporación solar: el agua de mar queda estancada
+      en charcas someras del salinar y el sol más el viento la evaporan hasta dejar
+      una costra que se raspa a mano. La salina viva emblemática de la región es Las
+      Cumaraguas (Paraguaná), de cosecha artesanal heredada y teñida de rosa por el
+      alga Dunaliella; a escala venezolana se le suman Araya y Los Olivitos.
+    fuente: reconstruido
+    referencia: >
+      Reportajes sobre la salina de Las Cumaraguas, Paraguaná. DEGRADADO de
+      'atestiguado' en la rev. v2: el proceso evaporítico es física elemental y la
+      salina opera así hoy, pero la documentación consultada es periodística y describe
+      una operación artesanal de ~80 años, no una continuidad precolonial demostrada.
+    dominios: [ecologia, comercio, salinas]
+    agentes_relacionados: [Biro-ko, Moruy-sha, Guama-ko, Suba-ko]
+    palabra_lexicon: biro
+    locacion: salinar
+
+  - id: ecologia-010
+    contenido: >
+      El ciclo del biro está sincronizado con la seca: es el Tiempo de Viento
+      (alisio ENE fuerte + sol intenso + poca lluvia) el que seca las charcas y
+      permite la gran cosecha de sal. En lluvias el salinar no produce.
+    fuente: reconstruido
+    referencia: "Camacho et al. 2011 (viento/clima); proceso evaporítico de Las Cumaraguas"
+    dominios: [ecologia, salinas, clima]
+    agentes_relacionados: [Biro-ko, Manaure, Watapana]
+    palabra_lexicon: borojo
+    locacion: salinar
+    implicacion_simulacion: >
+      Sostén físico de los eventos gran_cosecha_sal y raspado_salinar (estación=seca).
+      La sal es un producto del viento y del sol, no de la mano sola.
+
+  # ── MANGLAR ─────────────────────────────────────────────────────
+  - id: ecologia-011
+    contenido: >
+      El borde oeste del Golfete y el NE de Paraguaná sostienen manglares —el único
+      bosque verdadero de este mundo semiárido—. Se documentan mangle rojo
+      (Rhizophora mangle, dominante en sectores como Iguanita) y mangle negro
+      (Avicennia germinans). Venezuela cuenta con cuatro especies de mangle —rojo,
+      negro, blanco (Laguncularia racemosa) y botoncillo (Conocarpus erectus)—, todas
+      esperables en este sistema.
+    fuente: atestiguado
+    referencia: >
+      Estudios geoquímicos de suelos de mangle, Golfete O / NE Paraguaná; las cuatro
+      especies de mangle de Venezuela confirmadas vía PN Morrocoy (Falcón) — corrige la
+      v1, que daba blanco y botoncillo solo como inferencia.
+    dominios: [ecologia, manglar]
+    agentes_relacionados: [Suba-ko]
+    palabra_lexicon: mankaba
+    locacion: manglar
+
+  - id: ecologia-012
+    contenido: >
+      El manglar es el contrapunto húmedo y fértil del matorral seco: guardería de
+      peces juveniles, banco de moluscos (ostras, cangrejos), refugio de aves
+      acuáticas y migratorias, y fuente de madera dura y plantas medicinales. Es la
+      despensa de recolección de la comunidad en cualquier estación.
+    fuente: reconstruido
+    referencia: "Ecología general de manglares del Caribe; Antczak & Antczak 2015 (moluscos)"
+    dominios: [ecologia, manglar, recoleccion]
+    agentes_relacionados: [Suba-ko, Guaranaro-sha]
+    palabra_lexicon: ukura
+    locacion: manglar
+
+  # ── CERÁMICA / SUELOS ───────────────────────────────────────────
+  - id: ecologia-013
+    contenido: >
+      La cerámica dabajuroide es el marcador arqueológico del pueblo caquetío: serie
+      originaria de la costa occidental de Falcón, distribuida por todo el estado y
+      hasta las Antillas Neerlandesas (~1300 km de litoral), fechada c. 800–1600 d.C.
+      y correlacionada con una única unidad étnica y lingüística: el caquetío.
+    fuente: atestiguado
+    referencia: "Atlas del Arte Precolombino Venezolano (serie Dabajuroide); Antczak & Antczak 2015"
+    dominios: [ecologia, ceramica, comercio]
+    agentes_relacionados: [Saruro-sha, Cahu-sha, Pira-sha]
+    palabra_lexicon: null
+    locacion: bohios
+
+  - id: ecologia-014
+    contenido: >
+      Rasgos de la cerámica dabajuroide: vasijas polícromas pintadas sobre engobe
+      blanco, vasijas efigie, formas trípodes/multípodes con base anular calada,
+      bases redondas impresas con tejido de algodón (la fibra dejó su huella al
+      desintegrarse), y urnas funerarias globulares y cilíndricas con tapa cónica que
+      modela figuras humanas. Implica arcilla local, engobe blanco, pigmentos y un
+      repertorio de diseños que funciona como identidad visual.
+    fuente: atestiguado
+    referencia: "Atlas del Arte Precolombino Venezolano (serie Dabajuroide)"
+    dominios: [ecologia, ceramica]
+    agentes_relacionados: [Saruro-sha, Cahu-sha, Pira-sha, Kori-sha]
+    palabra_lexicon: paugis
+    locacion: bohios
+    implicacion_simulacion: >
+      Ancla material del evento tejido_y_alfareria; los diseños viajan en canoa a
+      las islas (canon §3), enlazando alfarería y comercio insular.
+
+  # ── FAUNA MARINA ────────────────────────────────────────────────
+  - id: ecologia-015
+    contenido: >
+      Las aguas someras y los manglares del Golfete sostienen pargo (Lutjanus),
+      corvina (Cynoscion), mero (Epinephelus), róbalo (Centropomus), lisa (Mugil),
+      sardina, cazón y bagre marino (Bagre marinus / Arius); en aguas más profundas,
+      el cunaro (pargo de altura, Rhomboplites aurorubens).
+    fuente: atestiguado
+    referencia: "Ictiofauna del Golfo de Venezuela / La Vela de Coro (SVDB; FAO)"
+    dominios: [ecologia, pesca]
+    agentes_relacionados: [Bagre-ko, Cunaro-bana, Guaranaro-sha, Dara-bana]
+    palabra_lexicon: arima
+    locacion: orilla
+    implicacion_simulacion: >
+      cunaro, guaranaro y bagre se usan como nombres de agentes pero NO existen como
+      palabras de especie en el lexicón (ver hueco-lex-004).
+
+  - id: ecologia-016
+    contenido: >
+      La arqueología insular documenta el botuto o caracol reina (Lobatus/Strombus
+      gigas) en densidades altísimas, tortugas marinas (a las que se cortaba la
+      cabeza antes de transportarlas), quiguas (Cittarium pica) y colonias de bobas
+      (Sula sp.) sobre suelos de guano. Es el botín de las expediciones a las islas.
+    fuente: atestiguado
+    referencia: "Antczak & Antczak 2015, pp. 4, 13, 21–23"
+    dominios: [ecologia, pesca, islas]
+    agentes_relacionados: [Watapana, Kadushi, Dara-ko, Tari-ko]
+    palabra_lexicon: cobo
+    locacion: camino_islas
+
+  - id: ecologia-017
+    contenido: >
+      La ostra perlífera del Golfete y de las islas produce la perla (tüma), bien de
+      prestigio que compra alianzas y esposas. El buceo de perlas se hace en la seca,
+      con el agua clara y calma. Fue también la causa de la ruina: las armadas
+      esclavistas españolas de la pesca de perlas cortaron la movilidad indígena.
+    fuente: atestiguado
+    referencia: "Antczak & Antczak 2015 (pesca de perlas y armadas esclavistas)"
+    dominios: [ecologia, comercio, pesca]
+    agentes_relacionados: [Dara-ko, Bagre-ko, Watapana]
+    palabra_lexicon: tüma
+    locacion: camino_islas
+    implicacion_simulacion: >
+      Sostén del evento expedicion_perlas (estación=seca): el agua clara de la seca
+      es condición física del buceo.
+
+  # ── FAUNA Y FLORA TERRESTRES ────────────────────────────────────
+  - id: ecologia-018
+    contenido: >
+      La flora xerófila del matorral y las dunas incluye cardón (coro/kadushi,
+      Cereus/Stenocereus), dividivi (watapana, Caesalpinia coriaria), cocuiza
+      (kukuisa, agave), cují (Prosopis juliflora, que tapiza rastrero las crestas de
+      las dunas), sábila (rülipi), tuna y guamacho. Es fuente de fruto, fibra, leña,
+      madera dura y medicina.
+    fuente: atestiguado
+    referencia: "Camacho et al. 2011, p. 16 (flora de las dunas); lexicón caquetío atestiguado"
+    dominios: [ecologia, flora, recoleccion]
+    agentes_relacionados: [Suba-ko, Dara-ko, Paugis-sha]
+    palabra_lexicon: watapana
+    locacion: matorral
+
+  - id: ecologia-019
+    contenido: >
+      La fauna de caza y de agüero del matorral seco: venado (tara), armadillo
+      (cachicamo), iguana (iwana), conejo (Sylvilagus floridanus), zorro (Cerdocyon
+      thous), zamuro (warawara), gavilán (chiriguare), pauji, sinsonte (chuchubi) y
+      el tuqueque (gecko). Varios de estos animales cargan valor simbólico en la
+      cosmología (canon §1).
+    fuente: atestiguado
+    referencia: "Lexicón caquetío atestiguado (Alvarado 1921, Jahn 1927); fauna semiárida de Falcón"
+    dominios: [ecologia, fauna, caza]
+    agentes_relacionados: [Chiriguare, Suba-ko]
+    palabra_lexicon: tara
+    locacion: matorral
+
+  # ── VIENTO / NAVEGACIÓN ─────────────────────────────────────────
+  - id: ecologia-020
+    contenido: >
+      El alisio del noreste (ENE) que sopla los doce meses —más fuerte en la seca—
+      es el hecho ecológico maestro del mundo caquetío: construye y mueve las dunas,
+      seca las salinas y fabrica el biro, abre la temporada de pesca y de agua clara,
+      hace navegable y peligroso el Golfete, y sostiene el eje insular.
+    fuente: atestiguado
+    referencia: "Camacho et al. 2011, pp. 9, 15 (viento ENE dominante todo el año)"
+    dominios: [ecologia, clima, navegacion]
+    agentes_relacionados: [Bagre-ko, Dara-bana, Watapana, Tari-ko]
+    palabra_lexicon: joutai
+    locacion: orilla
+
+  - id: ecologia-021
+    contenido: >
+      Aruba está a ~25 km al norte de Paraguaná, alcanzable en canoa y en días
+      claros visible; el poblamiento arahuaco de las islas ABC y la dispersión de la
+      cerámica dabajuroide hasta ellas prueban una navegación indígena regular. Las
+      islas (Aruba, Bonaire, Curazao) son parte del mundo caquetío, no su frontera.
+    fuente: atestiguado
+    referencia: "Antczak & Antczak 2015; geografía de Paraguaná y las islas ABC"
+    dominios: [ecologia, navegacion, comercio, islas]
+    agentes_relacionados: [Kadushi, Watapana, Dara-ko, Tari-ko]
+    palabra_lexicon: kanua
+    locacion: camino_islas
+    implicacion_simulacion: >
+      Da realidad geográfica a los eventos watapana_parte_islas y canoa_islas_llega:
+      la travesía es corta pero real, gobernada por el viento.
+
+  # ── AMPLIACIÓN (2ª pasada): avifauna, manglar, cerámica, Golfete ──
+  - id: ecologia-022
+    contenido: >
+      El sistema de humedales costeros de Falcón sostiene una avifauna riquísima:
+      el análogo protegido más cercano (Refugio de Fauna Silvestre Cuare, primer
+      humedal Ramsar del país) reúne >350 especies y el 79 % de las familias de aves
+      acuáticas de Venezuela. Destacan flamenco (Phoenicopterus ruber), corocora roja
+      (Eudocimus ruber), garzas (real, paleta/Platalea, morena), playeros migratorios,
+      patos, cotúas y gaviotas (guanaguanare). El Golfete y su manglar son estación de
+      paso y despensa de aves.
+    fuente: reconstruido
+    referencia: "Refugio de Fauna Silvestre Cuare, Falcón (análogo del mismo litoral); Ramsar 1988"
+    dominios: [ecologia, fauna, manglar]
+    agentes_relacionados: [Suba-ko, Dara-bana]
+    palabra_lexicon: tokoko
+    locacion: manglar
+    implicacion_simulacion: >
+      La llegada estacional de aves migratorias es un reloj natural del paisaje:
+      candidato a señal ambiental del motor (presagio, indicador de estación).
+
+  - id: ecologia-023
+    contenido: >
+      La corteza del mangle rojo (Rhizophora mangle) es rica en taninos (10–40 %):
+      sirve para curtir cueros y sobre todo para teñir y endurecer cuerdas, redes y
+      sedales de pesca. El mangle negro (Avicennia) aporta ~12,5 % de taninos como
+      colorante. Es un enlace directo manglar → pesca: la red (atara) se trata con la
+      corteza del propio manglar.
+    fuente: atestiguado
+    referencia: "Etnobotánica de Rhizophora mangle / Avicennia germinans (taninos, curtido, tinción de redes)"
+    dominios: [ecologia, manglar, pesca]
+    agentes_relacionados: [Bagre-ko, Guaranaro-sha, Suba-ko]
+    palabra_lexicon: mankaba
+    locacion: manglar
+    implicacion_simulacion: >
+      Da una cadena de oficio verosímil: recolectar corteza de mankaba para tratar la
+      atara. Enlaza las locaciones manglar y orilla y los oficios de recolección y pesca.
+
+  - id: ecologia-024
+    contenido: >
+      Usos del manglar más allá del tanino: madera dura para postes, estacas y
+      construcción; carbón vegetal de alta calidad (mangle rojo); y farmacopea —
+      la corteza es cicatrizante, antiséptica, antimicrobiana, antidiarreica y sirve
+      para tratar heridas abiertas. El único bosque del mundo semiárido es también su
+      botiquín y su ferretería.
+    fuente: atestiguado
+    referencia: "Etnobotánica y farmacología de Rhizophora mangle (usos madereros y medicinales)"
+    dominios: [ecologia, manglar, medicina]
+    agentes_relacionados: [Suba-ko, Paugis-sha, Shaboro]
+    palabra_lexicon: mankaba
+    locacion: manglar
+
+  - id: ecologia-025
+    contenido: >
+      La cadena técnica de la alfarería dabajuroide, en su forma general: pasta de
+      arcilla amasada y desgrasada con arena de barranco libre de sales (evita grietas
+      al secar y cocer); construcción por urdido (culebrillas de barro superpuestas
+      sobre una base, como ya describe el canon); acabado con engobe (arcilla líquida
+      coloreada, aquí el característico engobe blanco); y cocción a fuego abierto por
+      encima de ~900 °C.
+    fuente: reconstruido
+    referencia: "Técnica alfarera tradicional (urdido, desgrasante, engobe, cocción); rasgos dabajuroides atestiguados"
+    dominios: [ecologia, ceramica]
+    agentes_relacionados: [Saruro-sha, Cahu-sha, Pira-sha]
+    palabra_lexicon: null
+    locacion: bohios
+    implicacion_simulacion: >
+      Sustancia técnica para el evento tejido_y_alfareria: arcilla, desgrasante de
+      arena, engobe blanco, cocción al fuego. La calidad de la arena (sin sal) importa
+      en un entorno salino — detalle que un alfarero experto vigilaría.
+
+  - id: ecologia-026
+    contenido: >
+      El Golfete de Coro es una laguna costera somera de marea pequeña: mareas
+      semidiurnas irregulares de ~50 cm de amplitud. Sus corrientes las gobiernan la
+      marea y, sobre todo, la acción tangencial del viento del este, que arrecia en el
+      curso del día y empuja las corrientes hasta cerca de 1 m/s por la tarde.
+    fuente: atestiguado
+    referencia: "Estudios de corrientes y transporte de sedimentos en la boca del Golfete de Coro"
+    dominios: [ecologia, pesca, navegacion]
+    agentes_relacionados: [Bagre-ko, Dara-ko, Dara-bana]
+    palabra_lexicon: habo
+    locacion: orilla
+    implicacion_simulacion: >
+      La corriente crece con el viento de la tarde: hecho que estructura el horario de
+      pesca y navegación (salir con la mañana calma, cuidar el regreso de la tarde).
+      Da textura temporal al día del pescador.
+
+  - id: ecologia-027
+    contenido: >
+      El viento y la marea sacan sedimento del Golfete (~10⁴ ton/año) y lo acumulan
+      formando barras de arena, como la de Punta Caimán. La línea de costa del Golfete
+      es viva: bajíos y barras que aparecen y se mueven, un mapa que el navegante debe
+      releer.
+    fuente: atestiguado
+    referencia: "Estudios de transporte de sedimentos en la boca del Golfete de Coro (barra de Punta Caimán)"
+    dominios: [ecologia, navegacion]
+    agentes_relacionados: [Dara-ko, Tari-ko, Bagre-ko]
+    palabra_lexicon: rao
+    locacion: orilla
+
+  # ── 3ª pasada: agricultura, canoas y la capa biológica ───────────
+  - id: ecologia-028
+    contenido: >
+      El buco no es solo una palabra del lexicón: es un hecho histórico. Los caquetíos
+      desarrollaron un sistema de riego llamado precisamente BUCO, que trazaron en las
+      márgenes del río Coro; los caquetíos del Valle del Turbio idearon sistemas para
+      llevar agua de los ríos a los campos cultivados. Su agricultura era desarrollada y
+      se basaba en maíz, yuca y batata.
+    fuente: atestiguado
+    referencia: "Fuentes sobre agricultura caquetía y el sistema de riego buco (río Coro, Valle del Turbio)"
+    dominios: [ecologia, hidrologia, agricultura]
+    agentes_relacionados: [Buco-ko, Corie-ko, Manaure]
+    palabra_lexicon: buco
+    locacion: buco
+    implicacion_simulacion: >
+      Convierte al buco en la locación MEJOR ANCLADA históricamente de la simulación:
+      nombre propio, técnica y ubicación documentados. La "ingeniería hidráulica" que el
+      canon §7 lista como vida intelectual está atestiguada.
+
+  - id: ecologia-029
+    contenido: >
+      El conuco es un sistema agrícola de perturbación y sucesión, no una parcela sin
+      más: se tala y se quema, y las cenizas devuelven al suelo los nutrientes que
+      estaban almacenados en la vegetación; los troncos talados se dejan in situ, donde
+      frenan la erosión y alimentan hongos y microorganismos. Gana biodiversidad con el
+      tiempo (es policultivo) y esa mezcla previene las plagas. Su función es dar
+      seguridad alimentaria a un grupo familiar.
+    fuente: atestiguado
+    referencia: "Literatura sobre el conuco indígena (Wataniba, 'El conuco indígena: más que una parcela agrícola')"
+    dominios: [ecologia, agricultura]
+    agentes_relacionados: [Corie-ko, Ita-ko, Wari-ko]
+    palabra_lexicon: conuco
+    locacion: conuco
+    implicacion_simulacion: >
+      El conuco es conocimiento transmitido (qué se siembra junto a qué, cuándo quemar,
+      qué dejar en pie) — material para escenas de enseñanza. Y es FAMILIAR: encaja con
+      el evento disputa_vecinos por límites del conuco y con la matrilinealidad (canon §6).
+
+  - id: ecologia-030
+    contenido: >
+      Talar y quemar el conuco en un semiárido con alisio constante es una operación de
+      riesgo real: el mismo viento que fabrica la sal puede llevarse el fuego. La quema
+      debe leerse como acto técnico vigilado, no como rutina.
+    fuente: hipotetico
+    referencia: "Inferencia desde la técnica de tala y quema + régimen de viento ENE constante"
+    dominios: [ecologia, agricultura]
+    agentes_relacionados: [Corie-ko, Manaure]
+    palabra_lexicon: null
+    locacion: conuco
+
+  - id: ecologia-031
+    contenido: >
+      La canoa caribeña de un solo tronco se labraba en cedro rojo (Cedrela odorata),
+      caoba (Swietenia) o ceiba (Ceiba pentandra), ahuecando el tronco CON FUEGO y sin
+      instrumentos de hierro. El saber indígena de canoa incluye la clasificación de las
+      maderas por peso y dureza.
+    fuente: atestiguado
+    referencia: "Fuentes sobre construcción indígena de canoas en Venezuela/Caribe"
+    dominios: [ecologia, navegacion, oficios]
+    agentes_relacionados: [Dara-ko, Tari-ko, Buco-ni]
+    palabra_lexicon: kanua
+    locacion: taller_canoas
+
+  - id: ecologia-032
+    contenido: >
+      Cedro, caoba y ceiba NO son árboles del cardonal espinoso: el monte espinoso de
+      Coro da cují, yabo, dividivi y cardón —leña, fibra, tanino y postes— pero no
+      troncos de diez metros. La madera de las canoas grandes tuvo que venir de fuera:
+      de bosques de galería en los cauces, de la sierra, o por intercambio.
+    fuente: reconstruido
+    referencia: "Cruce entre maderas de canoa atestiguadas y la flora xerófila de Coro (Camacho et al. 2011; PN Médanos)"
+    dominios: [ecologia, navegacion, comercio, oficios]
+    agentes_relacionados: [Dara-ko, Nabaraka, Watapana, Tari-ko]
+    palabra_lexicon: kuru
+    locacion: taller_canoas
+    implicacion_simulacion: >
+      La canoa es un bien de importación y por tanto de valor: Dara-ko trabaja un
+      material escaso y viajado. Enlaza taller_canoas con la red de comercio (Nabaraka
+      baja de la sierra) y con camino_islas: sin madera foránea no hay travesía a Aruba.
+
+  - id: ecologia-033
+    contenido: >
+      La fauna terrestre del istmo es ESCASA, y la causa es el clima desértico: las
+      caracterizaciones del Parque Nacional Médanos de Coro lo dicen sin rodeos ("la
+      fauna, así como la vegetación, es escasa, principalmente debido a las condiciones
+      extremas del clima desértico"). No es un bosque tropical rebosante: es un desierto
+      costero con una nómina animal corta.
+    fuente: atestiguado
+    referencia: "Caracterizaciones del Parque Nacional Médanos de Coro (Inparques y otros)"
+    dominios: [ecologia, fauna]
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: matorral
+    implicacion_simulacion: >
+      CORRIGE EL PESO DE LA CAZA: un istmo semiárido no sostiene presión cinegética
+      suficiente para alimentar un poblado. La caza es complemento, prestigio y símbolo
+      — NO despensa. Si una escena presenta la caza como fuente principal de comida,
+      contradice la ecología.
+
+  - id: ecologia-034
+    contenido: >
+      Los mamíferos del istmo son pocos y de talla pequeña-mediana: zorro común
+      (Cerdocyon thous), oso melero (Tamandua tetradactyla, que come bachacos), conejo
+      sabanero (Sylvilagus floridanus), mapurite (Conepatus semistriatus) y rabipelado
+      (Didelphis marsupialis). No hay jaguar, ni danta, ni grandes herbívoros de manada.
+    fuente: atestiguado
+    referencia: "Fauna del Parque Nacional Médanos de Coro"
+    dominios: [ecologia, fauna, caza]
+    agentes_relacionados: [Suba-ko, Chiriguare]
+    palabra_lexicon: koke
+    locacion: matorral
+    implicacion_simulacion: >
+      El kama (tapir/danta) del lexicón atestiguado NO es fauna local — es animal de
+      tierra firme húmeda; si la palabra existe es por el alcance de la red de contacto,
+      no por el patio de casa. El kabadaro (jaguar) es forma hermana wayunaiki.
+
+  - id: ecologia-035
+    contenido: >
+      Donde los mamíferos escasean, los reptiles dominan — firma de todo ecosistema
+      árido. En Falcón: cascabel (Crotalus durissus, que habita entre cardones, acacias,
+      cujíes y guayacanes), coral, mapanare, tigra cazadora, lagartijo, mato real,
+      tortuga mordelona e iguana (Iguana iguana). La región alberga incluso el lagarto
+      más pequeño del mundo (3–5 cm).
+    fuente: atestiguado
+    referencia: "Fauna de reptiles del estado Falcón y la península de Paraguaná"
+    dominios: [ecologia, fauna]
+    agentes_relacionados: [Suba-ko, Paugis-sha, Shaboro]
+    palabra_lexicon: iwana
+    locacion: matorral
+    implicacion_simulacion: >
+      Doble consecuencia: la iguana es proteína real y accesible (a diferencia del
+      venado), y las serpientes venenosas son amenaza cotidiana — lo que da sentido
+      material al urari (veneno-medicina) del piache y a la farmacopea de Paugis-sha.
+      El miedo a la mordedura es el miedo mejor fundado de este paisaje.
+
+  - id: ecologia-036
+    contenido: >
+      Contra la pobreza mamífera, el mar es la despensa verdadera: peces (pargo,
+      corvina, mero, róbalo, lisa, sábalo, jurel, corocoro, sardina, cazón, bagre
+      marino, cunaro), megafauna (manatí, delfines, tiburones) y cuatro especies de
+      tortuga marina (verde, carey, cardón, cabezón), más botuto, quiguas, cangrejos y
+      la ostra perlífera.
+    fuente: atestiguado
+    referencia: "Fauna marina de Falcón (PN Morrocoy como análogo); Antczak & Antczak 2015; ictiofauna del Golfo de Venezuela"
+    dominios: [ecologia, pesca, fauna]
+    agentes_relacionados: [Bagre-ko, Cunaro-bana, Guaranaro-sha, Dara-ko, Uro-ko]
+    palabra_lexicon: manatü
+    locacion: orilla
+    implicacion_simulacion: >
+      TESIS BIOLÓGICA DE LA SESIÓN: un mundo terrestre pobre junto a un mar riquísimo.
+      Toda la cultura caquetía —canoas, redes, buceo, sal para conservar pescado, rutas
+      a las islas, un dueño espiritual del mar al que pedir permiso— es la respuesta
+      lógica a ese desequilibrio. Bagre-ko no reza por folclore: reza al único proveedor
+      fiable que tiene.
+
+  - id: ecologia-037
+    contenido: >
+      La fauna de HOY no es la del siglo XV. El venado caramerudo (Odocoileus
+      virginianus) —el 'tara' del lexicón caquetío atestiguado— hoy está ausente de gran
+      parte del estado Falcón, y la causa documentada es la caza indiscriminada y
+      sistemática MODERNA, que ha desplomado sus poblaciones en toda Venezuela. Que el
+      caquetío tuviera palabra propia y atestiguada para el venado es evidencia de que
+      el venado estaba ahí.
+    fuente: atestiguado
+    referencia: "Distribución y declive del venado caramerudo (Odocoileus virginianus) en Venezuela y Falcón"
+    dominios: [ecologia, fauna, metodo]
+    agentes_relacionados: [Chiriguare, Suba-ko]
+    palabra_lexicon: tara
+    locacion: matorral
+    implicacion_simulacion: >
+      REGLA DE MÉTODO: proyectar la fauna actual hacia atrás SUBESTIMA el mundo animal
+      caquetío. El istmo del s. XV era pobre en fauna por el clima, pero menos pobre que
+      el de hoy, empobrecido además por el hombre. Cuando el lexicón atestiguado nombra
+      un animal hoy ausente localmente (tara), la palabra pesa más que el censo moderno.
+      Matiza la licencia de ecologia-002, que vale para geomorfología y clima, no fauna.
+
+  - id: ecologia-038
+    contenido: >
+      Las aves son un reloj y un oráculo: la llegada estacional de las migratorias marca
+      el año, y el comportamiento de las aves marinas delata dónde está el pescado. Un
+      pescador lee la bandada como quien lee un mapa.
+    fuente: reconstruido
+    referencia: "Avifauna del humedal falconiano (Cuare); práctica pesquera universal de seguimiento de aves"
+    dominios: [ecologia, fauna, pesca]
+    agentes_relacionados: [Bagre-ko, Dara-bana, Shaboro]
+    palabra_lexicon: null
+    locacion: orilla
+    implicacion_simulacion: >
+      Canal ideal para el motor de agentes ecológicos: las aves permiten que el medio
+      "hable" sin explicarse. "Las bobas vuelan al norte" es Capa 2 pura — experiencia
+      perceptible cuya causa física (el viento movió el cardumen) nunca se enuncia.
+
+  # ── 4ª pasada: CAPAS DE BIOSFERA — la fauna que ya no está ───────
+  # Ver investigacion/disenos/02_capas_biosfera.md para el modelo completo.
+  # Principio: el escenario (geomorfología, clima) es constante desde ~4000 BP;
+  # el ELENCO no — se vació mayormente DESPUÉS del s. XV. La Curiana vive en un
+  # mundo biológicamente más rico que cualquier cosa observable hoy.
+
+  - id: ecologia-039
+    contenido: >
+      Los tres componentes del "paisaje" corren a relojes distintos: la geomorfología
+      (milenios, estable desde ~4000 BP) y el clima (estable en el Holoceno tardío)
+      permiten usar la observación moderna; la BIOSFERA no — cambia en décadas y fue
+      devastada desde 1500. El escenario es constante; el elenco no.
+    fuente: reconstruido
+    referencia: "Síntesis de Camacho et al. 2011 (geomorfología/clima) + historia ecológica del Caribe (s. XVI–XX)"
+    dominios: [ecologia, fauna, metodo]
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    implicacion_simulacion: >
+      REGLA MAESTRA de la sesión. Corrige la licencia de ecologia-002: vale para el
+      terreno y el clima, NO para los animales. El mar y el monte de la Curiana deben
+      narrarse MÁS RICOS que cualquier referencia moderna.
+
+  - id: ecologia-040
+    contenido: >
+      CAPA 0 (extinción global). La foca monje del Caribe (Neomonachus tropicalis) fue
+      el único pinnípedo del mar Caribe y la única foca de aguas netamente tropicales.
+      Su distribución histórica llegaba hasta el norte de Sudamérica (Colombia y
+      Venezuela). Cazada por colonos por piel, grasa y carne, y privada de alimento por
+      la sobrepesca; último avistamiento confirmado en 1952, declarada extinta por la
+      UICN en 1994.
+    fuente: reconstruido
+    referencia: >
+      Neomonachus tropicalis: distribución histórica y extinción (UICN 1994). ATESTIGUADO
+      para la especie y su área; RECONSTRUIDO para su presencia en el mundo caquetío — no
+      se halló constancia arqueológica de foca en yacimientos del Golfete.
+    dominios: [ecologia, fauna, biosfera_perdida]
+    agentes_relacionados: [Bagre-ko, Dara-ko, Uro-ko]
+    palabra_lexicon: null
+    locacion: camino_islas
+    implicacion_simulacion: >
+      Si se usa, debe ser PRESENCIA RARA Y MEMORABLE, no recurso cotidiano ni evento
+      pintoresco. Y NO se le debe inventar una forma caquetía: sería fabricar evidencia
+      (ver la cicatriz de las 441 palabras hipotéticas en CLAUDE.md).
+
+  - id: ecologia-041
+    contenido: >
+      CAPA 1 (colapso de recurso). Los bancos de ostra perlífera (Pinctada imbricata) de
+      Cubagua sostuvieron la primera empresa extractiva europea de América: más de 100 mil
+      millones de ostras cosechadas en 30 años. Nueva Cádiz (1528), primer asentamiento
+      urbano español del continente, fue su centro hasta el abandono hacia 1545. Es el
+      primer agotamiento documentado de un recurso natural causado por europeos en América.
+    fuente: atestiguado
+    referencia: "Romero, Chilbert & Eisenhart, 'Cubagua's Pearl-Oyster Beds', Journal of Political Ecology; Romero, 'Death and Taxes', Conservation Biology 17 (2003)"
+    dominios: [ecologia, pesca, comercio, biosfera_perdida]
+    agentes_relacionados: [Dara-ko, Bagre-ko, Watapana, Manaure]
+    palabra_lexicon: tüma
+    locacion: camino_islas
+    implicacion_simulacion: >
+      Los agentes bucean en un mar cuya riqueza perlífera será aniquilada por completo
+      pocas décadas después del marco simulado. La simulación retrata el mundo ANTES.
+      La ironía es material para el APARATO CRÍTICO (glosas del cronista, página
+      pública), NO para presagios dentro de la ficción: sería anacronismo barato.
+
+  - id: ecologia-042
+    contenido: >
+      El colapso perlífero fue irreversible por un cambio de régimen ecológico: bajo el
+      estrés de la sobreexplotación, el mejillón pepitona (Arca zebra) desplazó
+      competitivamente a la ostra perlífera e impidió su recuperación. No fue solo que se
+      las llevaran: el ecosistema cambió de estado y se quedó así.
+    fuente: atestiguado
+    referencia: "Romero, 'Death and Taxes: The Case of the Depletion of Pearl Oyster Beds in Sixteenth-Century Venezuela', Conservation Biology 17 (2003)"
+    dominios: [ecologia, pesca, biosfera_perdida]
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: camino_islas
+
+  - id: ecologia-043
+    contenido: >
+      CAPA 2 (extirpación local). El manatí (Trichechus manatus) está hoy en peligro
+      crítico en Venezuela y su presencia documentada se limita a Maracaibo, el Golfo de
+      Paria y el Delta del Orinoco: NO al Golfete de Coro. Sin embargo el propio lexicón
+      glosa 'manatü' como "manatí, vaca marina DEL GOLFETE". La lengua recuerda una
+      biosfera que el censo perdió.
+    fuente: reconstruido
+    referencia: >
+      Estatus del manatí en Venezuela (peligro crítico; distribución actual) ATESTIGUADO;
+      su presencia histórica en el Golfete es RECONSTRUIDA a partir de la glosa del
+      lexicón y del área de distribución.
+    dominios: [ecologia, fauna, biosfera_perdida]
+    agentes_relacionados: [Bagre-ko, Uro-ko, Dara-ko]
+    palabra_lexicon: manatü
+    locacion: orilla
+    implicacion_simulacion: >
+      Caso ejemplar del principio: un pueblo no acuña palabra propia para lo que no ve.
+      Junto con 'tara' (venado, hoy ausente de gran parte de Falcón), demuestra que el
+      lexicón es un registro faunístico más fiel que el censo moderno.
+
+  - id: ecologia-044
+    contenido: >
+      CAPA 3 (sobreexplotación). El botuto o caracol reina (Lobatus gigas) aparece en la
+      arqueología insular en densidades altísimas —sus fragmentos son omnipresentes en los
+      sitios— y las densidades naturales de Los Roques estaban entre las más altas del
+      Caribe; hoy está bajo veda por sobrepesca. Las tortugas marinas se consumían de forma
+      sistemática: un solo sitio arrojó 223 restos, con las cabezas cortadas y descartadas
+      fuera del yacimiento.
+    fuente: atestiguado
+    referencia: "Antczak & Antczak 2015, pp. 4, 13 (Lobatus gigas; 223 restos de tortuga)"
+    dominios: [ecologia, pesca, biosfera_perdida]
+    agentes_relacionados: [Watapana, Kadushi, Dara-ko, Bagre-ko]
+    palabra_lexicon: cobo
+    locacion: camino_islas
+    implicacion_simulacion: >
+      Calibra el VOLUMEN de la pesca: el caquetío no "pescaba un poquito". Comía tortuga
+      y botuto sistemáticamente en un mar que los tenía en cantidades hoy inexistentes.
+      La pesca abundante es la LÍNEA BASE; la mala pesca es la anomalía que exige
+      explicación religiosa.
+
+  - id: ecologia-045
+    contenido: >
+      Regla de inferencia y su límite. VÁLIDO: "hay palabra caquetía atestiguada para un
+      animal hoy ausente → el animal estaba" (evidencia positiva; ej. tara, manatü).
+      INVÁLIDO: "el animal estaba en el Caribe → inventemos su palabra caquetía"
+      (fabricar evidencia). INVÁLIDO: "no hay palabra → no estaba" (el corpus léxico es un
+      colador: los cronistas anotaron mercancías y títulos, no ictiofauna).
+    fuente: reconstruido
+    referencia: "Método del proyecto; precedente de las 441 palabras hipotético-no-verificado (~80% de fallos), ver CLAUDE.md"
+    dominios: [ecologia, fauna, metodo]
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    implicacion_simulacion: >
+      Guardarraíl contra el error que el proyecto YA cometió una vez: sobre-generar
+      reconstrucciones sin verificar. Las capas de biosfera informan la NARRACIÓN y la
+      abundancia, no autorizan a acuñar léxico de oficio.
+
+# =====================================================================
+# HUECOS LÉXICOS — fenómenos del paisaje SIN palabra en el lexicón.
+# Son el hallazgo más productivo de la sesión: marcan dónde un agente
+# tendría presión comunicativa real para acuñar un neologismo
+# (morfología disponible: locativos -ana/-bana, agentivos -ko/-sha,
+# posesivos ta-/wa-/nü-). NO se deben rellenar a mano: el valor del
+# experimento es que EMERJAN en boca de un agente cuando la escena lo
+# empuje. Se listan aquí para que el diseño los conozca.
+# =====================================================================
+
+huecos_lexicos:
+
+  - id: hueco-lex-001
+    hueco_lexico: true
+    contenido: >
+      LA DUNA / EL MÉDANO. El accidente que define el territorio no tiene palabra
+      caquetía. Cuidado con el falso amigo: `duna` en el lexicón significa AGUA
+      (cognado garífuna/lokono), no médano. Ni la duna viva (móvil) ni la fijada
+      tienen nombre.
+    fuente: reconstruido
+    referencia: "Camacho et al. 2011 (dunas); ausencia verificada en curiana_lexicon.py"
+    dominios: [ecologia, geografia]
+    agentes_relacionados: [Suba-ko, Dara-bana]
+    palabra_lexicon: null
+    locacion: matorral
+
+  - id: hueco-lex-002
+    hueco_lexico: true
+    contenido: >
+      EL CARDUMEN / BANCO DE PECES. Concepto central del oficio de Bagre-ko y
+      Cunaro-bana (leer dónde están los peces), y sin embargo mudo. El lexicón tiene
+      arima (pez) pero no la agregación móvil de peces.
+    fuente: reconstruido
+    referencia: "Ictiofauna del Golfete; ausencia verificada en curiana_lexicon.py"
+    dominios: [ecologia, pesca]
+    agentes_relacionados: [Bagre-ko, Cunaro-bana, Guaranaro-sha]
+    palabra_lexicon: null
+    locacion: orilla
+    implicacion_simulacion: >
+      Candidato ideal para el motor de agentes ecológicos: un cardumen que se movió
+      (por el viento) y no tiene nombre es una situación jugable que empuja al agente
+      a acuñar una palabra.
+
+  - id: hueco-lex-003
+    hueco_lexico: true
+    contenido: >
+      EL ALISIO como entidad nombrada. El viento del NE que todo lo ordena solo se
+      dice con joutai (viento genérico) o habobrisa (brisa del Golfete). No hay un
+      nombre propio para el viento estructurante de la seca, distinto de cualquier
+      otro aire.
+    fuente: reconstruido
+    referencia: "Camacho et al. 2011 (viento ENE); ausencia verificada en curiana_lexicon.py"
+    dominios: [ecologia, clima, navegacion]
+    agentes_relacionados: [Dara-bana, Bagre-ko, Watapana]
+    palabra_lexicon: null
+    locacion: orilla
+
+  - id: hueco-lex-004
+    hueco_lexico: true
+    contenido: >
+      LOS PECES cunaro, guaranaro y bagre. Se usan como componentes de nombres de
+      agentes (Cunaro-bana, Bagre-ko) y en los prompts de Dara-ko, pero NO existen
+      como entradas de especie en el lexicón. El pescador nombra su presa con una
+      palabra que el idioma aún no ha fijado.
+    fuente: atestiguado
+    referencia: "curiana_agents.py (nombres); ausencia verificada en curiana_lexicon.py"
+    dominios: [ecologia, pesca]
+    agentes_relacionados: [Cunaro-bana, Bagre-ko, Dara-ko]
+    palabra_lexicon: null
+    locacion: orilla
+
+  - id: hueco-lex-005
+    hueco_lexico: true
+    contenido: >
+      LA COSTRA DE SAL y el AGUA SALOBRE. El producto raspado del salinar y el estado
+      intermedio entre mar y agua dulce no tienen palabra. El lexicón tiene biro (sal)
+      y borojo (salina) pero no la costra evaporítica ni lo salobre.
+    fuente: reconstruido
+    referencia: "Proceso de Las Cumaraguas; ausencia verificada en curiana_lexicon.py"
+    dominios: [ecologia, salinas]
+    agentes_relacionados: [Biro-ko, Moruy-sha]
+    palabra_lexicon: null
+    locacion: salinar
+
+  - id: hueco-lex-006
+    hueco_lexico: true
+    contenido: >
+      LA QUEBRADA / ARROYO EFÍMERO. El cauce que solo lleva agua tras la lluvia —clave
+      en clima BSh— carece de forma caquetía propia: hay palabras genéricas hermanas
+      (luwopu 'arroyo', lokono; laa 'jagüey', wayuu) pero ninguna caquetía ni ninguna
+      que capture lo EFÍMERO (el lecho seco que de pronto corre). El lexicón caquetío
+      solo nombra ríos perennes (bara, paro, güique).
+    fuente: reconstruido
+    referencia: "Hidrología efímera de Falcón; audit de curiana_lexicon.py (luwopu/laa como formas hermanas)"
+    dominios: [ecologia, hidrologia]
+    agentes_relacionados: [Buco-ko, Corie-ko]
+    palabra_lexicon: null
+    locacion: buco
+
+  - id: hueco-lex-007
+    hueco_lexico: true
+    contenido: >
+      EL ISTMO / LENGUA DE ARENA y LA MAREA. El puente de arena que une Paraguaná al
+      continente (rasgo geográfico definitorio) y la marea (que figura como concepto
+      en los prompts pero no como lexema) carecen de palabra. También la raíz-zanco del
+      mangle y la distinción mangle rojo / negro quedan bajo el genérico mankaba.
+    fuente: reconstruido
+    referencia: "Camacho et al. 2011 (istmo); ausencia verificada en curiana_lexicon.py"
+    dominios: [ecologia, geografia, manglar]
+    agentes_relacionados: [Dara-bana, Suba-ko]
+    palabra_lexicon: null
+    locacion: manglar
+
+  - id: hueco-lex-008
+    hueco_lexico: true
+    contenido: >
+      LA MADERA DE CANOA FORÁNEA. El material más valioso del taller de Dara-ko —el
+      tronco grande de cedro/caoba/ceiba que no crece en el cardonal y hay que traer de
+      fuera (ver ecologia-032)— no tiene nombre propio. El lexicón solo tiene kuru
+      ('árbol, madera, tronco'), genérico: no distingue la leña del matorral del tronco
+      importado con el que se labra una piragua.
+    fuente: reconstruido
+    referencia: "ecologia-031/032 (maderas de canoa vs. flora xerófila); ausencia verificada en curiana_lexicon.py"
+    dominios: [ecologia, navegacion, oficios, comercio]
+    agentes_relacionados: [Dara-ko, Tari-ko, Nabaraka]
+    palabra_lexicon: null
+    locacion: taller_canoas
+    implicacion_simulacion: >
+      Hueco de alta presión para Dara-ko: un maestro constructor necesita distinguir
+      léxicamente su materia prima escasa de la leña común. Candidato fuerte a
+      neologismo por composición sobre kuru.
+
+  - id: hueco-lex-009
+    hueco_lexico: true
+    contenido: >
+      LA FAUNA MARINA MAYOR SIN NOMBRE PROPIO CAQUETÍO. El delfín y las cuatro especies
+      de tortuga marina (verde, carey, cardón, cabezón) son animales vistos y
+      consumidos, pero el lexicón solo ofrece hikoteya (tortuga genérica) y nada para
+      el delfín. Tampoco hay palabra para la ostra perlífera (el molusco), aunque la
+      perla sí la tiene (tüma).
+    fuente: reconstruido
+    referencia: "ecologia-036 (fauna marina); ausencia verificada en curiana_lexicon.py"
+    dominios: [ecologia, fauna, pesca]
+    agentes_relacionados: [Bagre-ko, Dara-ko, Uro-ko]
+    palabra_lexicon: null
+    locacion: orilla
