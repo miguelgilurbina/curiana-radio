@@ -1,7 +1,7 @@
 # Corpus cultural — Sesión 4: Transmisión del saber
 # Pregunta guía: ¿Cómo sabía el caquetío lo que sabía?
 #
-# fuente: atestiguado | reconstruido | retro-abstraido | hipotetico
+# fuente: atestiguado | reconstruido | canon-simulacion | retro-abstraido | hipotetico
 # forma_transmision: aprendizaje_oficio | cancion | relato | iniciacion | consejo | genealogia_recitada
 #
 # Ver investigacion/ensayos/04_transmision_saber.md para el desarrollo completo
@@ -18,7 +18,7 @@
     — el barsure marca a la persona. Shaboro teme morir antes de que ella
     esté lista; de joven perdió a un primer aprendiz en un ayuno demasiado
     largo, y esa herida da forma a cómo enseña ahora.
-  fuente: retro-abstraido
+  fuente: canon-simulacion
   referencia: "curiana_agents.py (Shaboro, Buio-sha); CULTURA_CAQUETIA.md §6"
   dominios: [transmision, piazgo, cosmologia]
   agentes_relacionados: [Shaboro, Buio-sha]
@@ -34,7 +34,7 @@
     un hijo" tras perder a su propio hijo en una creciente. Lo que protege
     con celo no es su técnica sino un estándar: que ninguna canoa del
     taller salga con una falla que se trague a otro joven.
-  fuente: retro-abstraido
+  fuente: canon-simulacion
   referencia: "curiana_agents.py (Dara-ko, Dare-nu)"
   dominios: [transmision, oficio_canoas]
   agentes_relacionados: [Dara-ko, Dare-nu]
@@ -52,7 +52,7 @@
     generaciones en la misma línea de oficio. Pira-sha enseña "con dureza
     porque cree que un diseño mal copiado es un ancestro mal recordado" —
     los motivos cerámicos no son adorno, son memoria visual codificada.
-  fuente: retro-abstraido
+  fuente: canon-simulacion
   referencia: "curiana_agents.py (Pira-sha, Saruro-sha, Tawi)"
   dominios: [transmision, oficio_ceramica, memoria_visual]
   agentes_relacionados: [Pira-sha, Saruro-sha, Tawi]
@@ -71,7 +71,7 @@
     la planta que cura de la que mata — "un saber peligroso que carga con
     respeto". Suba-ko desea formalizarse como aprendiza de curandera y
     aún no lo ha logrado del todo.
-  fuente: retro-abstraido
+  fuente: canon-simulacion
   referencia: "curiana_agents.py (Paugis-sha, Suba-ko)"
   dominios: [transmision, medicina_herbal]
   agentes_relacionados: [Paugis-sha, Suba-ko]
@@ -89,7 +89,7 @@
     en su sobrino Chiri-ko, heredero natural por línea matrilineal (el
     linaje de jefe guerrero pasa por la hermana). Dos transmisiones
     paralelas: una de mérito (Taku-ko), una de linaje (Chiri-ko).
-  fuente: retro-abstraido
+  fuente: canon-simulacion
   referencia: "curiana_agents.py (Chiriguare, Taku-ko, Chiri-ko); CULTURA_CAQUETIA.md §6 (matrilinealidad)"
   dominios: [transmision, oficio_guerra, matrilinealidad]
   agentes_relacionados: [Chiriguare, Taku-ko, Chiri-ko]
@@ -105,7 +105,7 @@
     migraciones, guerras viejas y pactos que nadie más recuerda. No tiene
     heredero designado en el elenco. Su miedo explícito es morir sin
     encontrar "un joven con buena memoria a quien verter sus relatos".
-  fuente: retro-abstraido
+  fuente: canon-simulacion
   referencia: "curiana_agents.py (Bana-mana)"
   dominios: [transmision, historia_oral, genealogia]
   agentes_relacionados: [Bana-mana]
@@ -124,7 +124,7 @@
     repetidas sin cansarse los nombres de los animales, los ancestros y
     las reglas del mundo a todos los niños de la comunidad (Nubi, Tawi,
     Piru, Sha, Buco, Daru, Kawa, Piri, Kori — todo el Tier III).
-  fuente: retro-abstraido
+  fuente: canon-simulacion
   referencia: "curiana_agents.py (Wama-sha); comparanda wayuu: jayeechi (ALAI 2013)"
   dominios: [transmision, crianza, cancion]
   agentes_relacionados: [Wama-sha, Nubi, Tawi, Piru, Sha, Buco, Daru, Kawa, Piri, Kori]
@@ -144,7 +144,7 @@
     oficios sino el lugar de autoridad femenino; teme una generación que
     confunda obedecer al cacique con olvidar que la sangre se cuenta por
     las madres.
-  fuente: retro-abstraido
+  fuente: canon-simulacion
   referencia: "curiana_agents.py (Sha-corie); CULTURA_CAQUETIA.md §6"
   dominios: [transmision, matrilinealidad, derecho_consuetudinario]
   agentes_relacionados: [Sha-corie, Paugis-sha]
@@ -161,7 +161,7 @@
     "paciencia de piedra", convencido de que la tierra no perdona la
     prisa. Su temor es sobrevivir a Corie-ko y quedar como el último que
     recuerda cómo era la Curiana antes de las sequías que ambos vivieron.
-  fuente: retro-abstraido
+  fuente: canon-simulacion
   referencia: "curiana_agents.py (Ita-ko, Corie-ko)"
   dominios: [transmision, oficio_agricultura]
   agentes_relacionados: [Ita-ko, Corie-ko]
@@ -179,7 +179,7 @@
     semilla guardada, sin importar el hambre — porque de ella depende la
     cosecha del año siguiente. Desea que su cuñada Piri-sha domine el
     oficio.
-  fuente: retro-abstraido
+  fuente: canon-simulacion
   referencia: "curiana_agents.py (Naure-sha, Piri-sha)"
   dominios: [transmision, oficio_agricultura, etica]
   agentes_relacionados: [Naure-sha, Piri-sha]
@@ -197,7 +197,7 @@
     Buco-ko, Buco (9 años), "ya sabe cuándo regar sin que se lo digan,
     leyendo la tierra como su padre" — sucesión ya en marcha, visible
     incluso en un niño de Tier III.
-  fuente: retro-abstraido
+  fuente: canon-simulacion
   referencia: "curiana_agents.py (Corie-ko, Buco-ko, Buco)"
   dominios: [transmision, oficio_agricultura, ingenieria_hidraulica]
   agentes_relacionados: [Corie-ko, Buco-ko, Buco]
@@ -214,7 +214,7 @@
     respeta aunque vengan de otro pueblo. No tiene heredero nombrado en el
     elenco; su temor explícito es "que cuando él falte nadie sepa ya el
     camino seguro a las islas lejanas".
-  fuente: retro-abstraido
+  fuente: canon-simulacion
   referencia: "curiana_agents.py (Tari-ko)"
   dominios: [transmision, navegacion]
   agentes_relacionados: [Tari-ko, Dara-ko]
@@ -232,7 +232,7 @@
     comunidad — "memoria perfecta" que hace posible la redistribución. No
     hay agente designado explícitamente como su heredera en esa función
     específica, aunque Piru-sha aparece como su protegida política.
-  fuente: retro-abstraido
+  fuente: canon-simulacion
   referencia: "curiana_agents.py (Nubiri-sha, Piru-sha)"
   dominios: [transmision, economia, contabilidad_social]
   agentes_relacionados: [Nubiri-sha, Piru-sha]
@@ -451,7 +451,7 @@
     explícita: "los niños escuchan los nombres que un día tendrán que
     repetir ellos". Es, sin saberlo el propio código, una hipótesis de
     transmisión ya formulada y lista para medirse.
-  fuente: retro-abstraido
+  fuente: canon-simulacion
   referencia: "curiana_state.py::EVENTOS_COTIDIANOS (ofrenda_ancestros_anochecer); CANON_TIERRA.md"
   dominios: [transmision, historia_oral, diseño_simulacion]
   agentes_relacionados: [Bana-mana, Sha, Nubi, Piru, Buco, Tawi]
