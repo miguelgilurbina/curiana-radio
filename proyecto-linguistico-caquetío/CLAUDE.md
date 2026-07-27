@@ -6,7 +6,7 @@ Proyecto de investigación + experimento computacional: una simulación multi-ag
 
 ```
 curiana_sim/        → Python 3.11+ (simulación)
-  curiana_lexicon.py      → vocabulario de 1262 palabras (activas; 441 hipotéticas aisladas en lexicon_candidatos.py) + reglas morfológicas + prompts
+  curiana_lexicon.py      → vocabulario de 1416 palabras (activas; 441 hipotéticas aisladas en lexicon_candidatos.py) + reglas morfológicas + prompts
                             (muestra_caquetio_dinamica() prioriza caquetío por chunking contextual)
   curiana_agents.py       → 60 agentes históricos en 3 tiers (caciques, adultos, jóvenes)
   curiana_orchestrator_v2.py → orquestador principal (Claude Haiku por agente)
@@ -23,7 +23,7 @@ curiana_sim/        → Python 3.11+ (simulación)
 ```
 
 > ⚠️ **Queries a la tabla `lexicon`:** PostgREST limita cada respuesta a
-> `max_rows` (1000, ver `supabase/config.toml`). Con 1262 palabras, cualquier
+> `max_rows` (1000, ver `supabase/config.toml`). Con 1416 palabras, cualquier
 > query nueva sobre `lexicon` sin `.range()` se trunca silenciosamente.
 > Pagina con `.range(desde, desde+999)` hasta que la página devuelta tenga
 > menos de 1000 filas (ver `loadLexicon()` en `app/page.tsx` o `app/lexicon/page.tsx`).
@@ -77,7 +77,7 @@ pip install -r requirements.txt
 python test_quick.py          # verifica el stack sin API keys (debe dar 8/8 OK)
 python -m pytest tests/ -q    # suite unitaria (koiné, léxico, observer, social; sin API keys)
 supabase start                 # levanta Supabase local (ver nota de egress arriba)
-python curiana_database.py seed  # siembra las 1262 palabras activas en Supabase
+python curiana_database.py seed  # siembra las 1416 palabras activas en Supabase
 
 # Correr simulación
 python curiana_orchestrator_v2.py                    # modo interactivo
@@ -100,9 +100,17 @@ El lexicón activo distingue 8 categorías de `fuente` (ver `normalize_source_la
 en `curiana_database.py`), porque "caquetío" mezclaba históricamente dato real
 con especulación sin marcar:
 
-- **`caquetío-atestiguado`** (75) — dato histórico real, citable a crónicas
+- **`caquetío-atestiguado`** (232) — dato histórico real, citable a crónicas
   coloniales (Galeotto Cey, Oviedo, Las Casas) y trabajo académico (Zavala
-  Reyes 2015, Oliver 1989, Jahn 1927).
+  Reyes 2015, Oliver 1989, Jahn 1927). **Ampliado el 2026-07-20**: el glosario
+  de Zavala Reyes 2015 (286 entradas) estaba importado solo al 23%; faltaban
+  incluso palabras que dan nombre a agentes (`buio`, `bagre`, `cunaro`,
+  `guaranaro`, `dara`, `naure`), que por tanto NO puntuaban como caquetío.
+  `minar_zavala_glosario.py` extrae y clasifica el glosario por tiers y genera
+  `lexicon_zavala.py` (153 palabras + 8 afijos); la cobertura pasó al 76%.
+  Los topónimos, antropónimos y etnónimos quedan FUERA del habla, como
+  referencia de canon. 28 formas son homógrafos con español (`bagre`,
+  `sabana`, `cana`…) y `score_linguistico()` las resuelve por contexto.
 - **`caquetío-reconstruido`** (82: 12 base + 2 topónimo + 68 núcleo
   fundacional) — vocabulario de trabajo del proyecto: pronombres, numerales,
   verbos básicos que `prompt_reglas_completo()`/`breve()` presentan a los
@@ -147,6 +155,13 @@ Verificado en runs reales contra Supabase local: caquetío pasó de ~27% a
 ~91-93% del output tras estos cambios + retaguear el núcleo fundacional.
 
 ## Morfología caquetío-arahuaca
+
+Además de las reglas de trabajo del proyecto, `REGLAS_ZAVALA` incorpora seis
+afijos **atestiguados** en el glosario de Zavala Reyes 2015 y que faltaban:
+`-iro` (diminutivo — la única marca de diminutivo documentada), `-aima`
+(abundancia), `-ima` (humedad/quebrada), `-uco` (cauce), `-ubana` y `-uru`
+(desinencias de valor no precisado por la fuente). Amplían lo que los agentes
+pueden *construir*, no solo nombrar.
 
 ```
 Orden: pronombre + verbo-aspecto + complemento

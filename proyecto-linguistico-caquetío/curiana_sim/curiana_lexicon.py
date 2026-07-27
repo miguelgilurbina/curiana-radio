@@ -163,7 +163,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "sipara":     {"sig": "flecha, dardo arrojadizo",                       "cat": "sust",  "fuente": "lokono/garifuna"},
     "atara":      {"sig": "red de pesca, malla tejida",                     "cat": "sust",  "fuente": "lokono/proto-arawakan"},
     "kanua":      {"sig": "canoa pequeña, balsa de un tronco",              "cat": "sust",  "fuente": "lokono-cogn"},
-    "paugis":     {"sig": "vasija, totuma, recipiente de barro o calabaza", "cat": "sust",  "fuente": "lokono/garifuna"},
+    "paugis":     {"sig": "paují, pavón de monte (variante de pauji)",      "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015 #197 (E+A): 'Paují'. CORREGIDO 2026-07-20: figuraba como 'vasija, totuma' (lokono/garifuna), lo que contradecía a la vez la fuente y la ficha del propio agente Paugis-sha ('tu nombre viene de paugis (paují): el ave que ve desde lejos')"},
     "kürara":     {"sig": "cuerda, soga, fibra trenzada",                   "cat": "sust",  "fuente": "lokono/proto-arawakan"},
     "shukua":     {"sig": "remo, pala para impulsar la canoa",              "cat": "sust",  "fuente": "lokono/garifuna"},
 
@@ -320,7 +320,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "cayo":       {"es": "cayo, islote bajo y arenoso, escollo costero", "fuente": "taíno", "notas": "Tno. cayo → español cayo; rasgos costeros del Golfete", "categoria": "geografia"},
     "manigua":    {"es": "manigua, matorral denso, monte bajo", "fuente": "taíno", "notas": "Tno. manigua; vegetación de transición sabana-bosque", "categoria": "geografia"},
     "bixa":       {"es": "bija, onoto, achiote (Bixa orellana), pigmento corporal rojo", "fuente": "taíno", "notas": "Tno. bixa/bija; pigmento ritual rojo; análogo al bariki caquetío", "categoria": "materiales"},
-    "hayo":       {"es": "hayo, coca (Erythroxylum coca), hoja masticada ritual", "fuente": "taíno", "notas": "Tno. hayo; estimulante de uso ritual; documentado en Oviedo", "categoria": "ritual"},
+    "hayo":       {"es": "hayo, coca (Erythroxylum coca), hoja masticada ritual", "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015 #156 (HB): 'hierba quita sed'; cf. #154 hay (E) = coca. Forma taína hayo documentada en Oviedo. RE-ETIQUETADO 2026-07-20: estaba como taíno pese a figurar en el glosario caquetío", "categoria": "ritual"},
 
     # ── Expansión lokono ─────────────────────────────────────────────────
     "hadalli":    {"es": "sol (forma Lokono)", "fuente": "lokono", "notas": "Lokono hadalli; cognado de cazi caquetío; raíz proto-arahuaca *kadali", "categoria": "cosmos"},
@@ -6234,9 +6234,9 @@ VOCABULARIO_BASE: dict[str, dict] = {
         "categoria": "cosmos"
     },
     "para": {
-        "es": "mar, agua extensa",
-        "fuente": "proto-arahuaco",
-        "notas": "Proto-arahuaco *para; atestiguada en 4 lenguas: CQ: para, WY: palaa, LK: bara, TN: bagua; Payne (1991), Brinton (1871)",
+        "es": "mar, agua extensa (dulce o salada en gran cantidad)",
+        "fuente": "caquetío-atestiguado",
+        "notas": "Zavala Reyes 2015 #190 (E+HP): 'Aguadulce o salada en grandes cantidades'; cf. #191 paragua (GC) = mar. Reflejo del proto-arahuaco *para, atestiguado en 4 lenguas: CQ para, WY palaa, LK bara, TN bagua; Payne (1991), Brinton (1871). RE-ETIQUETADO 2026-07-20: figuraba como proto-arahuaco pese a estar atestiguado directamente en caquetío — por eso _familia_de_token necesitaba un caso especial para contarlo como caquetío",
         "categoria": "geografia"
     },
     "piay": {
@@ -6296,6 +6296,30 @@ VOCABULARIO_BASE: dict[str, dict] = {
 
     # -- FIN VOCABULARIO_BASE --
 }
+
+
+# ── Glosario Zavala Reyes 2015 ────────────────────────────────────────
+# El lexicón contenía solo ~66 de las 286 entradas del glosario caquetío de
+# Zavala (23%) — la fuente atestiguada central del proyecto. Faltaban incluso
+# palabras que dan nombre a agentes (buio, bagre, cunaro, guaranaro, dara,
+# naure), que por tanto NO puntuaban como caquetío en score_linguistico.
+#
+# `lexicon_zavala.py` lo genera `minar_zavala_glosario.py` desde el PDF, con
+# curación por tiers: entra el vocabulario del habla; los topónimos,
+# antropónimos y etnónimos quedan aparte como referencia de canon.
+#
+# Se fusiona SIN pisar entradas existentes: si una forma ya está en
+# VOCABULARIO_BASE con otra etiqueta, gana la que ya estaba (la corrección de
+# esas colisiones es una decisión aparte, no un efecto colateral del import).
+try:
+    from lexicon_zavala import GLOSARIO_ZAVALA, HOMOGRAFOS_ZAVALA
+except ImportError:      # el módulo generado no está presente
+    GLOSARIO_ZAVALA, HOMOGRAFOS_ZAVALA = {}, frozenset()
+
+for _f, _e in GLOSARIO_ZAVALA.items():
+    VOCABULARIO_BASE.setdefault(_f, _e)
+if GLOSARIO_ZAVALA:
+    del _f, _e
 
 
 # ── Canonicalización de esquema ───────────────────────────────────────
@@ -6529,6 +6553,68 @@ REGLAS_NUMERO: dict[str, dict] = {
     },
 }
 
+# ── Afijos ATESTIGUADOS por Zavala Reyes 2015 ───────────────────────
+# Ocho desinencias que el glosario documenta explícitamente como afijos de la
+# lengua ("desinencia que significa...", "sufijo...") y que no estaban en las
+# reglas del proyecto. Valen más que un sustantivo: amplían lo que los agentes
+# pueden CONSTRUIR. Notablemente, aportan un DIMINUTIVO (-iro) y dos marcas de
+# ABUNDANCIA (-aima, dito), categorías que el sistema no tenía.
+#
+# Los ejemplos vienen del propio glosario (topónimos donde el afijo es visible),
+# no inventados: es la evidencia de que el afijo era productivo.
+REGLAS_ZAVALA: dict[str, dict] = {
+    "-iro": {
+        "nombre": "diminutivo",
+        "desc": "Versión pequeña de X. La única marca de diminutivo atestiguada.",
+        "uso": "RAÍZ + -iro  →  X pequeño",
+        "ejemplos": ["dara + -iro = dara-iro (alcaraván pequeño)"],
+        "atestiguado": "Zavala Reyes 2015 #166 (E): 'desinencia que se usa en diminutivo'",
+        "instruccion_agente": (
+            "Para decir que algo es pequeño o cría, añade -iro: 'canoa-iro' "
+            "es una canoa pequeña."
+        ),
+    },
+    "-aima": {
+        "nombre": "abundancia",
+        "desc": "Lugar o estado donde X abunda.",
+        "uso": "RAÍZ + -aima  →  donde abunda X",
+        "ejemplos": ["variante -coa en topónimos: bacoa, adabacoa (arboleda)"],
+        "atestiguado": "Zavala Reyes 2015 #6 (AM+PMA): 'desinencia que significa abundancia'",
+        "instruccion_agente": (
+            "Para decir que algo abunda en un sitio, añade -aima: 'arima-aima' "
+            "es donde abunda el pescado."
+        ),
+    },
+    "-ima": {
+        "nombre": "humedad / quebrada",
+        "desc": "Agua corriente, humedad del terreno.",
+        "uso": "RAÍZ + -ima  →  quebrada o lugar húmedo de X",
+        "ejemplos": ["alaurima (río blanco o claro)"],
+        "atestiguado": "Zavala Reyes 2015 #165 (E+PMA): 'desinencia que significa humedad, quebrada'",
+    },
+    "-uco": {
+        "nombre": "cauce",
+        "desc": "Quebrada, cauce por donde corre el agua.",
+        "uso": "RAÍZ + -uco / -uto  →  cauce de X",
+        "ejemplos": ["variante -uto documentada en la misma entrada"],
+        "atestiguado": "Zavala Reyes 2015 #268 (E): 'sufijo. Quebrada, cauce'",
+    },
+    "-ubana": {
+        "nombre": "desinencia (valor no precisado)",
+        "desc": "Desinencia de la lengua; la fuente no precisa su valor semántico.",
+        "uso": "RAÍZ + -ubana",
+        "ejemplos": [],
+        "atestiguado": "Zavala Reyes 2015 #265 (AM): 'desinencia de esta lengua'",
+    },
+    "-uru": {
+        "nombre": "desinencia (valor no precisado)",
+        "desc": "Desinencia de la lengua; la fuente no precisa su valor semántico.",
+        "uso": "RAÍZ + -uru",
+        "ejemplos": [],
+        "atestiguado": "Zavala Reyes 2015 #274 (AM): 'desinencia de esta lengua'",
+    },
+}
+
 # ── Tabla maestra de reglas (para inyectar en prompts) ──────────────
 TODAS_LAS_REGLAS = {
     **REGLAS_ASPECTO,
@@ -6536,6 +6622,7 @@ TODAS_LAS_REGLAS = {
     **REGLAS_AGENTIVAS,
     **REGLAS_POSESIVAS,
     **REGLAS_NUMERO,
+    **REGLAS_ZAVALA,
 }
 
 
@@ -7092,6 +7179,11 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
     # si está rodeada de español, es la preposición.
     HOMOGRAFOS_CAQ = {"para"}
 
+    # Homógrafos de CONTENIDO (glosario Zavala): "bagre", "sabana", "cana"...
+    # son caquetío atestiguado, pero su forma coincide con una palabra española
+    # corriente. Distinción con los funcionales: si el contexto NO los resuelve
+    # como caquetío, no son una fuga al español funcional — simplemente no se
+    # cuentan (neutro). Penalizarlos como "el/la/de" sería sobrecastigar.
     usadas = []
     esp_func = []
     for i, t in enumerate(tokens):
@@ -7101,6 +7193,11 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
                 usadas.append(t)       # vecino arahuaco → palabra caquetía (mar)
             else:
                 esp_func.append(t)     # rodeada de español → preposición
+        elif t in HOMOGRAFOS_ZAVALA and t in activos:
+            ventana = tokens[max(0, i - 1):i] + tokens[i + 1:i + 2]
+            if any((v not in ES_STOPWORDS) and es_arahuaco(v) for v in ventana):
+                usadas.append(t)       # vecino arahuaco → la palabra caquetía
+            # si no, se ignora: ni densidad ni penalización
         elif es_arahuaco(t):
             usadas.append(t)
         elif t in ES_STOPWORDS:
