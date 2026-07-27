@@ -42,7 +42,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "piache":     {"sig": "chamán, curandero, intermediario espiritual",    "cat": "sust",  "fuente": "caquetío"},
     "caraota":    {"sig": "frijol negro, legumbre",                         "cat": "sust",  "fuente": "caquetío"},
     "pauji":      {"sig": "pavo de monte, ave grande",                      "cat": "sust",  "fuente": "caquetío"},
-    "manaure":    {"sig": "título laudatorio del señor principal",          "cat": "título","fuente": "caquetío"},
+    "manaure":    {"sig": "título laudatorio del señor principal (var. managuanare, managuarire)", "cat": "título", "fuente": "caquetío-atestiguado", "notas": "González, Carlos (estudio histórico del PLINCODE, p.23), citado en Zavala Reyes 2015 nota al pie (2): 'el cacique caquetío no se llamaba Manaure, pues este era un término laudatorio pero no el único, también recibía los dictados de managuanare, managuarire'. curiana_agents.py ya usaba este dato en el system_prompt de Manaure sin cita"},
     "curiana":    {"sig": "territorio de los caquetíos / lugar del cardón", "cat": "topón", "fuente": "caquetío"},
 
     # ── Arahuaco compartido (cognados en Wayunaiki, Lokono, Taíno) ──
@@ -232,7 +232,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "boratio":    {"sig": "piache, cacique, jefe, sacerdote, médico",       "cat": "título","fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, p.66; cf. Jahn 1927 p.213 n.29 (\"adivino o sacerdote\", vía Oviedo)"},
     "guaitiao":   {"sig": "amigo ritual, aliado de alianza",                "cat": "sust",  "fuente": "caquetío-atestiguado"},
     "datihao":    {"sig": "padrino de cautivo, el que presta su nombre al esclavo", "cat": "sust", "fuente": "caquetío-atestiguado"},
-    "uriacoa":    {"sig": "título del cacique mayor de Curiana/Coro",       "cat": "título","fuente": "caquetío-atestiguado"},
+    "uriacoa":    {"sig": "Uriacoa: antropónimo (apellido de un cacique del s. XVI)", "cat": "sust", "fuente": "caquetío-atestiguado", "notas": "Oliver 1989 cap.3 pp.255-256: 'the Crown recognized Don Sancho Uriacoa as the Caquetío paramount chief'; le sucedió su hijo Don Luis Caguallo. CORREGIDO 2026-07-20: figuraba como 'título del cacique mayor de Curiana/Coro', una inferencia sin fuente a partir de un NOMBRE PROPIO — el mismo error que tenía 'diao'. El título atestiguado del jefe mayor es diao (Zavala Reyes 2015 #106); apopo es el de parcialidad pequeña (#12)"},
     "tata":       {"sig": "padre, papá",                                   "cat": "sust",  "fuente": "caquetío-atestiguado"},
     "dare":       {"sig": "diente; hijo (extensión metafórica)",            "cat": "sust",  "fuente": "caquetío-atestiguado"},
     "sawaka":     {"sig": "inframundo, reino de los muertos",               "cat": "sust",  "fuente": "caquetío-atestiguado"},
