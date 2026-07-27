@@ -529,3 +529,106 @@
     ambigüedad que el propio Marokoto-ni podría no resolver igual dos veces si se le pregunta por su
     origen. Advertencia: no usar para debilitar la amenaza real de los raids (§7 anti-romanticización
     del canon sigue vigente) ni para sugerir que "ser caribe" es una elección individual reversible.
+
+# ── Sesión 5 (geografía política y sucesión) — añadido 2026-07-20, ver
+#    investigacion/ensayos/05_geografia_politica_y_sucesion.md ──────────────
+
+- id: parentesco-034
+  contenido: >
+    El título caquetío "diao" significa "señor principal, jefe mayor" — no "jefe de segundo orden".
+    Oliver, independientemente de Zavala, llama a Manaure "the main diao or great cacique" en el
+    relato del pacto con Ampíes: es decir, Manaure ES un diao (el de Coro/Todariquiba), reconocido
+    además como el principal entre varios.
+  fuente: atestiguado
+  referencia: "Zavala Reyes 2015, p.67 (glosario, entrada 106: \"Diao (HB)(AM): Señor principal. Jefe mayor\"); Oliver 1989, cap. 3, p. 251 (\"the main diao or great cacique, Manaure\")"
+  dominios: [parentesco, politica, lenguaje]
+  agentes_relacionados: [Manaure]
+  implicacion_simulacion: >
+    Corrige curiana_lexicon.py:230, que tenía "señor, jefe de segundo orden" sin cita. Ya corregido en
+    esta sesión. Ver parentesco-037 para el modelo de jerarquía completo que esto habilita.
+
+- id: parentesco-035
+  contenido: >
+    El título caquetío "apopo" designa al "jefe de parcialidad pequeña" — un rango menor que diao,
+    a nivel de facción/linaje dentro de un asentamiento, no de todo un asentamiento o territorio.
+  fuente: atestiguado
+  referencia: "Zavala Reyes 2015, p.65 (glosario, entrada 12: \"Apopo (AM): Nombre de jefe de parcialidad pequeña\")"
+  dominios: [parentesco, politica, lenguaje]
+  agentes_relacionados: [Corie-ko, Chiriguare, Paugis-sha, Sha-corie]
+  implicacion_simulacion: >
+    No estaba en curiana_lexicon.py; añadido en esta sesión como caquetío-atestiguado. Es el término
+    correcto para lo que Corie-ko, Chiriguare y Paugis-sha/Sha-corie ya ejercen de facto como cabezas
+    de sus respectivos linajes (Corie, Chiriguare, Paugis) — no son "diaos", son apopos.
+
+- id: parentesco-036
+  contenido: >
+    El título "boratio" funde en una sola palabra autoridad política, religiosa y médica: "piache,
+    cacique, jefe, sacerdote, médico". Es una glosa más rica que la ya usada en creencia.yaml (Jahn
+    1927, vía Oviedo: "adivino o sacerdote") y confirma, desde una fuente independiente, que el
+    caquetío no separaba léxicamente esas funciones.
+  fuente: atestiguado
+  referencia: "Zavala Reyes 2015, p.66 (glosario, entrada 43: \"Boratio (AM)(HB): Piache, cacique, jefe, sacerdote, médico\"); cf. curiana_sim/cultura/creencia.yaml (hallazgo de sesión 3, vía Jahn 1927 p.213 n.29)"
+  dominios: [parentesco, politica, cosmos, lenguaje]
+  agentes_relacionados: [Manaure, Shaboro]
+  implicacion_simulacion: >
+    Añadido a curiana_lexicon.py en esta sesión. Es la mejor evidencia atestiguada (no solo analogía
+    wayuu) de que la fusión cacique-piache de Manaure no es licencia narrativa: el propio vocabulario
+    de rango caquetío no distingue esas funciones. Ver parentesco-038 (legitimación espiritual como
+    tercera puerta de la sucesión).
+
+- id: parentesco-037
+  contenido: >
+    Modelo de jerarquía política de tres niveles, construido sobre parentesco-034/035 y la
+    confirmación cruzada de Oliver: apopo (cabeza de parcialidad/linaje pequeño, dentro de un solo
+    asentamiento) — diao (señor principal de un asentamiento o polity entero; Coro/Todariquiba tiene
+    el suyo) — paramountcy (el reconocimiento, no automático, de un diao como "principal entre
+    diaos" por parte de asentamientos vecinos). Manaure es, en esta lectura, el diao de Coro que
+    además logró paramountcy sobre "algunas circunvecinas" (Oviedo y Baños 1855:27, vía Zavala
+    Reyes 2015 p.60) — no sobre todo el mundo caquetío: Barquisimeto y Yaracuy (Arcaya 1920:27-28,
+    vía Zavala Reyes 2015 p.60) son evidencia de una esfera CULTURAL caquetía amplia, no de vasallaje
+    político directo a Manaure, que está fuera de alcance geográfico razonable de "algunas
+    circunvecinas".
+  fuente: reconstruido
+  referencia: "síntesis de esta sesión sobre datos atestiguados (parentesco-034; Zavala Reyes 2015 p.60; Oliver 1989 cap.3 p.251); el ENSAMBLE de los tres niveles como sistema es interpretación, no una fuente que lo describa así de explícito"
+  dominios: [parentesco, politica]
+  agentes_relacionados: [Manaure, Corie-ko, Chiriguare, Paugis-sha, Sha-corie]
+  implicacion_simulacion: >
+    Da vocabulario atestiguado a algo que el canon ya decía de forma abstracta (CULTURA_CAQUETIA.md:218,
+    "red mayor de cacicazgos caquetíos"). Ver curiana_sim/cultura/geografia_politica.yaml para el
+    desarrollo geográfico completo (ABC, Paraguaná, Guajira, Todariquiba, escala poblacional).
+
+- id: parentesco-038
+  contenido: >
+    Modelo de sucesión de tres puertas para el cargo de diao/paramount (no para apopo, que se
+    resuelve solo con la primera puerta): (1) elegibilidad matrilineal — sobrino uterino, no hijo,
+    siguiendo parentesco-004/006/026; (2) ratificación política — consenso o no-veto de los apopos/
+    diaos vecinos, sin la cual el heredero es diao pero no paramount; (3) legitimación espiritual —
+    reconocimiento como boratio (parentesco-036), no automático por sangre. Heredar el puesto de
+    Manaure no es un solo evento genealógico: es tres reconocimientos distintos que pueden no
+    coincidir en la misma persona al mismo tiempo.
+  fuente: hipotetico
+  referencia: "síntesis de diseño de esta sesión (conversación con Miguel, 2026-07-13/20), sobre comparanda ashanti/taína de selección entre candidatos matrilineales elegibles (ver hoja de fuentes 05); ninguna fuente caquetía describe este mecanismo de forma explícita"
+  dominios: [parentesco, politica, cosmos]
+  agentes_relacionados: [Manaure]
+  implicacion_simulacion: >
+    Gancho narrativo fuerte: Waimo-ko (genealogia.yaml) podría heredar la puerta 1 sin garantía de
+    las puertas 2 y 3 — un vacío de poder real, no protocolar, si los apopos vecinos no lo reconocen
+    o si ningún piache valida su capacidad. Ver parentesco-039 para la corrección de heredero único.
+
+- id: parentesco-039
+  contenido: >
+    Un solo sobrino candidato (como propone hoy genealogia.yaml: Waimo-ko) es una simplificación.
+    En sistemas de sucesión matrilineal bien documentados (ashanti, taíno de élite), lo normal es
+    VARIOS candidatos simultáneos — varias hermanas, cada una con hijos propios — y el poder político
+    real reside en decidir entre ellos, no en una genealogía de heredero único. La poligamia ya
+    atestiguada de Manaure (parentesco-015) hace plausible que tuviera más de una hermana viva con
+    hijos.
+  fuente: hipotetico
+  referencia: "síntesis de esta sesión sobre comparanda ashanti (consejo de ancianos elige/puede destituir entre candidatos matrilineales elegibles) y Keegan 1989 sobre política de élite taína (ver hoja de fuentes 05); no hay dato caquetío directo sobre pluralidad de candidatos"
+  dominios: [parentesco, politica]
+  agentes_relacionados: [Manaure]
+  implicacion_simulacion: >
+    Recomendación de diseño, no ejecutada todavía: el linaje Kaira (genealogia.yaml) ya anota en su
+    capacidad_de_expansion "más sobrinos rivales entre sí por la sucesión" como paso de crecimiento
+    natural — esta entrada formaliza esa intuición con respaldo comparativo. No se inventa un segundo
+    sobrino en esta sesión; queda como candidato de expansión explícito, sujeto a que Miguel lo apruebe.

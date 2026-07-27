@@ -4,9 +4,10 @@ Corpus de hechos culturales etiquetados por confianza epistémica, en el mismo e
 lexicón distingue `caquetío-atestiguado` de `hipotético-no-verificado` (ver `CLAUDE.md`). Complementa
 la guía narrativa en prosa `curiana_sim/CULTURA_CAQUETIA.md` con datos discretos y auditables.
 
-Es el producto del programa **"corpus cultural"** (4 sesiones de investigación, 2026-07), cada una
-guiada por una pregunta y con tres entregables: un mini-ensayo (`investigacion/ensayos/`), un archivo
-YAML aquí, y una hoja de fuentes (`investigacion/hojas_fuentes/`).
+Es el producto del programa **"corpus cultural"** (4 sesiones de investigación, 2026-07, más una
+sesión 5 de seguimiento sobre geografía política), cada una guiada por una pregunta y con tres
+entregables: un mini-ensayo (`investigacion/ensayos/`), un archivo YAML aquí, y una hoja de fuentes
+(`investigacion/hojas_fuentes/`).
 
 Estos archivos son **datos de propuesta / referencia de diseño**: no se cargan (todavía) desde ningún
 script de la simulación. Su función es (1) anclar prompts, escenas y eventos en hechos verificables;
@@ -24,6 +25,7 @@ propuestas requieren revisión/veto de Miguel antes de volverse canon.
 | [`ecologia.yaml`](ecologia.yaml) | 2/4 — Ecología | ¿Dónde existía el caquetío? Medio físico, geografía e hidrología del Golfete de Coro | [ensayo](../../investigacion/ensayos/02_ecologia_golfete.md) · [fuentes](../../investigacion/hojas_fuentes/02_ecologia.md) |
 | [`creencia.yaml`](creencia.yaml) | 3/4 — Creencia | ¿En qué creía el caquetío? Religión, muerte, piache, sistema onírico | [ensayo](../../investigacion/ensayos/03_creencia_caquetia.md) · [fuentes](../../investigacion/hojas_fuentes/03_creencia.md) |
 | [`transmision.yaml`](transmision.yaml) | 4/4 — Transmisión | ¿Cómo sabía lo que sabía? Currículo por edad, formas de transmisión, saberes restringidos, puntos únicos de falla | [ensayo](../../investigacion/ensayos/04_transmision_saber.md) · [fuentes](../../investigacion/hojas_fuentes/04_transmision.md) |
+| [`geografia_politica.yaml`](geografia_politica.yaml) | 5 — Geografía política | ¿Cuál era el área de influencia de Manaure, y qué asentamiento real reconstruimos? Apopo/diao/boratio, ABC+Paraguaná+Guajira, Todariquiba, escala poblacional | [ensayo](../../investigacion/ensayos/05_geografia_politica_y_sucesion.md) · [fuentes](../../investigacion/hojas_fuentes/05_geografia_politica.md) |
 
 ### Documentos de apoyo de la sesión 2 (ecología)
 
@@ -63,9 +65,10 @@ propuestas requieren revisión/veto de Miguel antes de volverse canon.
 ```
 
 Campos adicionales según el dominio: `palabra_lexicon` y `locacion` (ecología; `hueco_lexico: true`
-marca fenómeno sin palabra caquetía), `forma_transmision` y `restringido` (transmisión). El esquema
-de `genealogia.yaml` es distinto (un registro por persona, con `relaciones_atestiguadas_en_descripcion`
-vs. `relaciones_propuestas`) — ver el propio archivo.
+marca fenómeno sin palabra caquetía), `forma_transmision` y `restringido` (transmisión), `nota_abierta`
+(geografía política — dato parcialmente confirmado o decisión explícitamente pendiente de Miguel). El
+esquema de `genealogia.yaml` es distinto (un registro por persona, con
+`relaciones_atestiguadas_en_descripcion` vs. `relaciones_propuestas`) — ver el propio archivo.
 
 ## Las cinco etiquetas de `fuente`
 

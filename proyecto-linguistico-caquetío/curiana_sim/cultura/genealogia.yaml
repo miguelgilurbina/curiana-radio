@@ -84,12 +84,13 @@ agentes:
     madre: "no nombrada en curiana_agents.py — se propone Kaira-sha (fondo)"
     linaje: Kaira
     conyuge: Nubiri-sha
+    titulo: "diao (señor principal, jefe mayor) de Coro/Todariquiba, reconocido además como \"the main diao\" (Oliver 1989, cap.3, p.251) — ver curiana_sim/cultura/parentesco.yaml#parentesco-034 y geografia_politica.yaml#geografia_politica-003"
     relaciones_atestiguadas_en_descripcion:
       - "Esposo de Nubiri-sha (system_prompt: 'tu esposa Nubiri-sha')"
       - "Heredó de su padre el control de las rutas de biro (descripcion) — dato patrilineal ya en el canon, en tensión deliberada con esta propuesta (ver ensayo §1)"
     relaciones_propuestas:
       - "Hermana no nombrada, Itana-sha (fondo), madre del sucesor propuesto"
-      - "Sobrino uterino y sucesor natural: Waimo-ko (propuesto, ver abajo — NO es agente todavía en curiana_agents.py)"
+      - "Sobrino uterino y sucesor natural: Waimo-ko (propuesto, ver abajo — NO es agente todavía en curiana_agents.py). NOTA (sesión 5): heredar la elegibilidad matrilineal no garantiza el reconocimiento como diao paramount ni la legitimación espiritual (boratio) — ver parentesco-038. Un solo candidato es además una simplificación: ver parentesco-039 sobre pluralidad de sobrinos como patrón más realista, todavía no ejecutada en este archivo."
 
   Shaboro:
     madre: "no propuesta"
@@ -595,10 +596,12 @@ personas_de_fondo:
       añadirse al elenco (tier 1 o 2) en una decisión futura de Miguel, no como personaje ya activo.
       Por el patrón avunculocal taíno (parentesco-026), su ubicacion_default natural sería
       casa_cacique o adyacente: el heredero crece a la vista del tío, conviviendo con los hijos de
-      Nubiri-sha que no heredan.
+      Nubiri-sha que no heredan. Sesión 5: la elegibilidad matrilineal es solo la primera de tres
+      "puertas" (parentesco-038) — ratificación de los apopos/diaos vecinos y legitimación como
+      boratio no son automáticas. Además, un solo candidato es simplificación; ver parentesco-039.
     linaje: Kaira
     madre: Itana-sha
-    fuente_de_la_propuesta: "parentesco-002, 004, 026; ensayo §5.2"
+    fuente_de_la_propuesta: "parentesco-002, 004, 026, 034, 037, 038, 039; ensayo §5.2 y 05_geografia_politica_y_sucesion.md"
 
   Itana-sha:
     fondo: true
