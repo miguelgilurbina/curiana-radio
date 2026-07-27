@@ -32,6 +32,7 @@ from curiana_database import get_anthropic_client, get_db
 from curiana_agents import ALL_AGENTS, AGENTS_T1, AGENTS_T2, AGENTS_T3
 from curiana_state import (
     ComunidadState,
+    DIAS_POR_ESTACION,
     estado_inicial_test,
     EVENTOS_COTIDIANOS,
     EVENTOS_ESTACIONALES,
@@ -343,8 +344,15 @@ def director_select_event(state: ComunidadState) -> Optional[dict]:
         prob += 0.3
     if random.random() > prob:
         return None
-    pool = EVENTOS_COTIDIANOS.copy()
-    pool += EVENTOS_ESTACIONALES[:3] if state.estacion == "seca" else EVENTOS_ESTACIONALES[3:]
+    # El pool estacional se filtra por la CLAVE "estacion" de cada evento, no
+    # por posición en la lista. Antes se partía con [:3]/[3:], lo que dejaba
+    # los tres eventos etiquetados `seca` dentro del pool de lluvias y hacía
+    # inalcanzables otros tres genéricos. Un evento sin clave `estacion` vale
+    # para todo el año.
+    pool = EVENTOS_COTIDIANOS + [
+        e for e in EVENTOS_ESTACIONALES
+        if e.get("estacion") in (None, state.estacion)
+    ]
     return random.choice(pool)
 
 
@@ -414,6 +422,10 @@ def run_turn(
     if evento:
         state.evento_del_turno = evento["descripcion"]
         state.eventos_activos = [evento["id"]]
+        # Los efectos declarados por el evento SÍ mueven el mundo: sin esto,
+        # "gran cosecha de sal" se narraba y la sal seguía escasa al turno
+        # siguiente, y el contexto inyectado a los agentes era invariable.
+        state.aplicar_efecto(evento.get("efecto"))
         agentes_activos = [
             a for a in evento.get("agentes_involucrados", state.agentes_en_escena)
             if a in ALL_AGENTS and a not in ("toda_la_comunidad", "guerreros")
@@ -421,9 +433,17 @@ def run_turn(
     else:
         # Koiné: ventana rotatoria de 6 sobre el roster FIJO de participantes,
         # avanzando 6 por turno → todos hablan en ~2 días (población constante).
+        #
+        # OJO: hay que usar un contador GLOBAL de turnos, no state.turno, que
+        # solo vale 1 o 2 (avanzar_turno alterna). Con state.turno la ventana
+        # se quedaba clavada en k=6 y k=12: de 23 participantes solo hablaban
+        # 12, y los ocho caquetíos "formadores de norma" (Manaure, Shaboro,
+        # Nubiri-sha, Buio-sha, Tawaka, Dare-nu…) no entraban NUNCA salvo que
+        # un evento los invocara. Sesgaba toda métrica del experimento.
         roster = [a for a in PARTICIPANTES_KOINE if a in ALL_AGENTS]
         if roster:
-            k = (state.turno * 6) % len(roster)
+            n_turno = (state.dia - 1) * 2 + (state.turno - 1)   # 0,1,2,3…
+            k = (n_turno * 6) % len(roster)
             agentes_activos = [roster[(k + i) % len(roster)] for i in range(6)]
         else:
             agentes_activos = state.agentes_en_escena
@@ -883,10 +903,15 @@ def auto_mode(
             estacion_anterior = state.estacion
             dia_inicio_estacion = state.dia
 
-            # Cada vez que completa un año (2 estaciones), reporte anual
-            if reporte_anual and state.dia % 120 == 0:
+            # Cada vez que completa un año (2 estaciones), reporte anual.
+            # El año se cierra al VOLVER a la seca (días 121, 241, 361…), no
+            # con `dia % 120 == 0`: el cambio de estación nunca cae en un
+            # múltiplo exacto de 120, así que esa condición no se cumplía jamás
+            # y --reporte no producía nada.
+            anio_en_curso = (state.dia - 1) // (2 * DIAS_POR_ESTACION) + 1
+            if reporte_anual and anio_en_curso > anio_simulado:
                 print(observer.reporte_anual_llm(anio_simulado))
-                anio_simulado += 1
+                anio_simulado = anio_en_curso
 
     # Guardar localmente
     state.save()

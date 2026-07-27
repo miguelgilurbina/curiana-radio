@@ -16,6 +16,8 @@ curiana_sim/        → Python 3.11+ (simulación)
   curiana_social.py       → contagio léxico entre agentes (DifusionLexica: prestigio +
                             grafo social + exposición acumulada) + variación dialectal por etnia
   curiana_state.py        → estado del mundo (día, estación, eventos, locaciones)
+                            ciclo estacional: DIAS_POR_ESTACION=60, alterna en
+                            avanzar_turno(); aplicar_efecto() mueve los niveles
   curiana_database.py     → Supabase client + LangSmith wrapper + language_composition()
                             + normalize_source_language() (8 categorías activas, ver abajo)
   arahuaco_comparative.py → método comparativo (transducir, COGNADOS, reconstruir_caquetio)
@@ -86,7 +88,10 @@ python curiana_orchestrator_v2.py --auto 240 --anio  # 1 año simulado
 python curiana_orchestrator_v2.py --auto 30 --perfiles --reporte
   # --perfiles: genera perfiles curados por agente al cerrar el run
   #             (rol, arco narrativo, frases célebres → agent_profiles/agent_quotes)
-  # --reporte:  reporte anual LLM al completar cada año simulado
+  # --reporte:  reporte anual LLM al completar cada año simulado (días 121,
+  #             241, 361…). Estuvo inerte hasta el 2026-07-20: colgaba de un
+  #             cambio de estación que nunca ocurría, y además exigía
+  #             dia%120==0, que no coincide con ningún cambio de estación.
   # --ablacion: run de CONTROL — apaga las inyecciones de prompt que empujan la
   #             convergencia (contagio, competencias abiertas, muestreo ponderado).
   #             La evidencia de koineización es la DIFERENCIA normal vs. ablación.

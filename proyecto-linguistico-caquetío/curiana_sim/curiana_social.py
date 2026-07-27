@@ -26,11 +26,21 @@ Integración (en curiana_orchestrator_v2.py):
             f"empléala si encaja].")
 
     # — tras analizar la respuesta del agente —
-    metr["score"] = normalizar_por_dialecto(metr["score"], agent.get("etnia"))
     for forma in registro.palabras_caquetias:
         difusion.propagar_uso(forma, agent_name, state)
     for neo in registro.neologismos_extraidos:
         difusion.propagar_uso(neo.forma, agent_name, state)
+
+⚠ `normalizar_por_dialecto()` NO está cableada al pipeline (auditoría
+2026-07-20): se define y se testea aquí, y AUDITORIA_OPUS.md §"metr.score" la
+lista como paso del flujo, pero ningún módulo la llama. Es decir, la "justicia
+L2" no está activa: los hablantes foráneos se miden con el rasero del nativo.
+
+Se deja deliberadamente sin conectar. Activarla multiplicaría el score de un
+caribe por 0.65/0.25 = 2.6 (un 4.5 crudo pasaría a 10/10), lo que cambiaría la
+semántica de la métrica insignia del proyecto y rompería la comparabilidad con
+todos los runs ya publicados. Es una decisión de diseño pendiente, no un
+descuido: o se cablea y se re-corre todo, o se elimina la función.
 """
 
 from __future__ import annotations
