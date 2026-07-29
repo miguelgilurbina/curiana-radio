@@ -119,6 +119,17 @@ cobertura visible, exactamente lo que habría delatado el 23% de Zavala); y el
 corpus **aún no lo consume ningún código**, así que reestructurarlo cuesta
 cero roturas. Ese timing no vuelve.
 
+**Decisión de herramienta (2026-07-29, pregunta de Miguel: ¿Obsidian o clon
+propio?):** Obsidian, y sin costo. Sus productos pagos no tocan este plan —
+Sync se reemplaza por git+OneDrive, Publish por nuestro Next.js (que además es
+imprescindible para llms.txt/JSON-LD/URLs propias del jardín), y el uso
+comercial es gratuito desde 2024. El seguro anti-lock-in no es la herramienta
+sino el formato: markdown plano + frontmatter en git, legible por lentes
+libres (Foam, SilverBullet, VS Code) sin migración. Un clon propio sería años
+de producto ortogonal a la misión; la única "vista propia" que vale la pena
+construir es el jardín público (J3), que ya está en el plan y es 100% nuestro.
+La lógica crítica (validación) vive en `compilar_corpus.py`, nunca en plugins.
+
 **Fases** (0 y 1 son baratas y sin riesgo; la 2 cambia el formato canónico):
 
 - **V0. Repo como vault**: `.obsidian/` al gitignore; nota raíz `INDICE.md`;
