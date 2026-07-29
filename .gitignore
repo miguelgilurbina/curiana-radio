@@ -32,6 +32,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# obsidian — vault sobre proyecto-linguistico-caquetío/ (ver PLAN_MAESTRO.md §2)
+# Es config/caché LOCAL de la app, no contenido: el conocimiento vive en el
+# markdown+YAML versionado; esto es solo la lente.
+.obsidian/
+.trash/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
