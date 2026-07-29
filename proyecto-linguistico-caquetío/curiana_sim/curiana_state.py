@@ -32,6 +32,15 @@ ESTACIONES = {
 
 MOMENTOS_DIA = ["amanecer", "mañana", "mediodia", "tarde", "anochecer", "noche"]
 
+# Calendario comprimido: 60 días simulados = 1 estación; 120 = 1 año (2
+# estaciones). Coincide con el mapeo declarado en auto_mode() del orquestador.
+DIAS_POR_ESTACION = 60
+
+
+def ESTACION_DE_DIA(dia: int) -> str:
+    """Estación que corresponde a un día simulado (día 1 = seca)."""
+    return "seca" if ((dia - 1) // DIAS_POR_ESTACION) % 2 == 0 else "lluvias"
+
 LOCACIONES = [
     "orilla", "manglar", "plaza", "casa_cacique", "choza_piache",
     "conuco", "buco", "salinar", "taller_canoas", "bohios",
@@ -92,7 +101,7 @@ class ComunidadState:
     notas_orquestador: str = ""
 
     def avanzar_turno(self):
-        """Avanza un turno (media jornada)."""
+        """Avanza un turno (media jornada) y, al cambiar de día, el calendario."""
         if self.turno == 1:
             self.turno = 2
             self.momento = "tarde"
@@ -107,6 +116,39 @@ class ComunidadState:
                     "evento": self.evento_del_turno
                 })
                 self.evento_del_turno = None
+            self._actualizar_estacion()
+
+    def _actualizar_estacion(self):
+        """Alterna seca/lluvias cada DIAS_POR_ESTACION.
+
+        Antes NADIE asignaba `estacion`: los runs transcurrían enteros en
+        "seca". Eso dejaba inalcanzables 9 de los 25 eventos (incluidos los
+        seis escritos con más detalle etnográfico), y como el reporte anual
+        cuelga del cambio de estación, la bandera --reporte no hacía nada.
+        """
+        nueva = ESTACION_DE_DIA(self.dia)
+        if nueva != self.estacion:
+            self.estacion = nueva
+            self.clima = ESTACIONES[nueva]["clima_base"]
+
+    def aplicar_efecto(self, efecto: dict):
+        """Aplica el efecto de un evento sobre el estado del mundo.
+
+        Los 25 eventos declaran `efecto` (nivel_alimentos, nivel_sal,
+        nivel_tension) pero nadie lo leía: el mundo quedaba congelado en sus
+        valores iniciales y todos los agentes recibían, en todos los turnos de
+        todos los runs, el mismo "Alimentos: normal. Sal (biro): bajo."
+
+        NOTA DE DISEÑO: los niveles PERSISTEN hasta que otro evento los cambie
+        — no hay decaimiento ni regresión a la media. Una "gran cosecha de sal"
+        deja `nivel_sal=abundante` indefinidamente. Es mejor que el mundo
+        congelado de antes, pero modelar el consumo (la sal se gasta, la
+        tensión se enfría) es una decisión pendiente, no algo que este arreglo
+        deba inventar por su cuenta.
+        """
+        for clave, valor in (efecto or {}).items():
+            if hasattr(self, clave):
+                setattr(self, clave, valor)
 
     def to_context_string(self) -> str:
         """Genera el string de contexto que se inyecta en cada llamada de agente."""

@@ -1,0 +1,144 @@
+# Corpus cultural — Geografía política
+# Sesión 5 del programa "corpus cultural" (2026-07-20, conversación con Miguel).
+# Ver README.md para el esquema y las etiquetas de fuente.
+# Desarrolla investigacion/ensayos/05_geografia_politica_y_sucesion.md.
+#
+# Pregunta guía: ¿cuál es el área de influencia política de Manaure, y qué asentamiento real
+# corresponde al "la Curiana" que modela la simulación?
+
+- id: geografia_politica-001
+  contenido: >
+    Existió presencia caquetía atestiguada en las islas de Aruba, Bonaire y Curazao (ABC) durante
+    y antes de la época colonial. El caso de Curazao está documentado específicamente, incluyendo
+    préstamos léxicos caquetíos que sobreviven en el papiamento.
+  fuente: atestiguado
+  referencia: "Van Buurt, Gerard (2014), \"Caquetío Indians on Curaçao during colonial times and Caquetío words in the Papiamentu language\" (VanBuurt_2014_CaquetioWords_Papiamentu.txt, ya en fuentes_caquetios/)"
+  dominios: [politica, geografia, comercio]
+  agentes_relacionados: [Kadushi, Watapana]
+  implicacion_simulacion: >
+    Ya asumido implícitamente por el elenco (Kadushi es "caquetío de Aruba"; Watapana viaja
+    regularmente a Aruba/Bonaire) — esta entrada lo formaliza como parte del área de influencia
+    política/cultural de la confederación, no solo como ruta comercial.
+
+- id: geografia_politica-002
+  contenido: >
+    Los asentamientos caquetíos en la península de la Guajira eran, con toda probabilidad, puestos
+    de avanzada comercial ("avant guarde posts") que comerciaban con los Wanebucán y Coanao,
+    cambiando productos marítimos (sal) por oro y otros bienes procedentes de Valledupar y de las
+    laderas de la Sierra Nevada. Los caquetíos de la Guajira se originaron, sin duda, de la costa
+    de Falcón.
+  fuente: atestiguado
+  referencia: "Oliver 1989, cap. 3, p. 189 (\"The Caquetío settlements were, in all probability, avant guarde posts... The Caquetío of the Guajira undoubtedly originated from Coastal Falcón\")"
+  dominios: [politica, geografia, comercio]
+  agentes_relacionados: []
+  implicacion_simulacion: >
+    Confirma la intuición de Miguel: la Guajira SÍ es parte del área de influencia caquetía, no como
+    territorio propio sino como red de puestos comerciales fundados desde Falcón/Coro — el mismo
+    patrón de expansión por puesto de avanzada que ya modela Watapana/Kadushi hacia las islas.
+
+- id: geografia_politica-003
+  contenido: >
+    "Todariquiba" fue el poblado real, cercano a la actual Coro (aprox. 1 legua), donde residió
+    Manaure y donde se reasentó tras el pacto de 1527 con Juan de Ampíes; su hijo/sucesor Don
+    Alexandre también residió ahí. Aparece citado en la carta de 1538 del obispo Rodrigo de
+    Bastidas a Carlos V (junto a Guaibacoa, Cumarebo, Tomodore, Caujarao, Zazárida, Capatárida) y
+    en registros administrativos posteriores del período Welser. Su ubicación exacta sigue en
+    debate: no se ha hallado un sitio arqueológico de tamaño correspondiente en la periferia de
+    Coro; Oliver sospecha que quedó bajo la expansión urbana moderna o más allá de las 4.5-6 km
+    sugeridas por las crónicas.
+  fuente: atestiguado
+  referencia: "Oliver 1989, cap. 3, p. 251 (pacto de 1527); pp. 261-262 (recurrencia en registros Welser, Ponce y Vaccari 1977: 94, 179-80, 238-40, 451); carta de Rodrigo de Bastidas 1538"
+  dominios: [politica, geografia]
+  agentes_relacionados: [Manaure]
+  implicacion_simulacion: >
+    Es, con la mejor evidencia disponible, el asentamiento real más cercano a lo que "la Curiana"
+    de la simulación pretende reconstruir — el poblado de Manaure junto a Coro. Su ubicación abierta
+    (Oliver 1989) da licencia para que la simulación no necesite fijar coordenadas exactas.
+
+- id: geografia_politica-004
+  contenido: >
+    Según el obispo Ballesteros (carta de 1550 a Carlos V), en tiempos antiguos los indios habían
+    construido, una legua río arriba, una represa a la que llaman "buco" (ya atestiguado en el
+    lexicón), con un canal de dos leguas que llevaba agua a la ciudad de Coro para irrigar una gran
+    parte de la tierra. Cada temporada de lluvias el canal se atascaba y se rompía dos o tres
+    veces, requiriendo "cuatro o cinco mil indios" para repararlo. En la época en que Coro y sus
+    alrededores tenían "catorce o quince mil indios", el canal se arreglaba en tres o cuatro días.
+  fuente: atestiguado
+  referencia: "Oliver 1989, cap. 3, pp. 262-263, citando a Ballesteros [1550] en Bécker 1950 [1]: 688"
+  dominios: [politica, geografia, comercio]
+  agentes_relacionados: [Corie-ko, Buco-ko]
+  implicacion_simulacion: >
+    Oliver mismo infiere de esta cifra (4-5 mil trabajadores) coordinación entre MÁS DE 30 POBLADOS
+    (asumiendo 150-200 personas por poblado de todas las edades). El "buco" ya central en el canon
+    (Corie-ko, Buco-ko) no era una acequia de aldea: era infraestructura regional. Confirma con
+    números exactos la escala que Miguel señaló desde el inicio del programa "corpus cultural" — el
+    núcleo de 60 agentes es UNA fracción pequeña de la población real del área, no su totalidad.
+
+- id: geografia_politica-005
+  contenido: >
+    La misma carta de Ballesteros (1550) documenta el colapso demográfico posterior al contacto: de
+    "catorce o quince mil indios" en la época de mayor población, para 1550 (23 años después del
+    pacto Ampíes-Manaure de 1527) solo quedaban "hasta cuatrocientos indios" repartidos en seis
+    poblados alrededor de Coro.
+  fuente: atestiguado
+  referencia: "Oliver 1989, cap. 3, p. 262, citando a Ballesteros [1550] en Bécker 1950 [1]: 666, 688"
+  dominios: [politica, geografia]
+  agentes_relacionados: []
+  implicacion_simulacion: >
+    Dato duro para cualquier futura línea narrativa sobre el contacto/la colonización — consistente
+    con la postura anti-romantización ya declarada en CULTURA_CAQUETIA.md §7. No es material para la
+    Curiana precontacto (siglos XIV-XV) que la simulación modela hoy, pero fija la magnitud real de
+    lo que "el éxodo que dirigía el Manaure" (Zavala Reyes 2015, p.60) representó.
+
+- id: geografia_politica-006
+  contenido: >
+    El "Puerto de San Bartolomé" que describió Américo Vespucio en sus Quator Navigationes/Lettera
+    (1500-1509) —un poblado de viviendas sobre estacas (palafitos) que le recordó a Venecia y dio
+    origen al nombre "Venezuela" (pequeña Venecia) en el mapa de Juan de la Cosa— ha sido
+    identificado por el historiador Demetrio Ramos Pérez como ubicado en el Golfete de Coro, y no
+    en el área del Lago de Maracaibo, donde suele situarse la leyenda del nombre.
+  fuente: atestiguado
+  referencia: "Oliver 1989, cap. 3, p. 249, citando a Ramos Pérez (1976: 88); Navarrete 1829 [3]: 218-219"
+  dominios: [politica, geografia]
+  agentes_relacionados: []
+  implicacion_simulacion: >
+    Si se confirma, ancla el propio nombre de Venezuela a un poblado del Golfete de Coro. Oliver
+    (cap.3, ~p.265) sugiere que estas viviendas sobre estacas pudieran pertenecer a una comunidad
+    pesquera especializada, de relación aún no establecida con los asentamientos caquetíos de
+    tierra adentro (como Todariquiba) — no está claro que sea el mismo poblado.
+  nota_abierta: >
+    El número de "40 casas" que Miguel recordó para este poblado NO se confirmó en esta sesión: la
+    cifra de 40-50 encontrada en Oliver corresponde a la capacidad de una maloca en Curazao, un
+    dato distinto. Pendiente de verificar contra Vespucio directamente si se retoma esta pieza.
+
+- id: geografia_politica-007
+  contenido: >
+    "Curiana" es, en su propia atestación, un nombre TERRITORIAL: "territorio donde estaban
+    asentados los caquetíos" — no el nombre de un asentamiento puntual conocido.
+  fuente: atestiguado
+  referencia: "Zavala Reyes 2015, nota al pie (4): \"Curiana: territorio donde estaban asentados los caquetíos\""
+  dominios: [politica, geografia, lenguaje]
+  agentes_relacionados: []
+  implicacion_simulacion: >
+    TENSIÓN ABIERTA, no resuelta por esta sesión: todo curiana_agents.py, curiana_state.py y el
+    sitio público usan "la Curiana" para el asentamiento específico de los 60 agentes, no para el
+    territorio. Tres caminos posibles (ver ensayo §5): (a) dejar "la Curiana" como el asentamiento y
+    dar un nombre de trabajo aparte a la confederación/territorio; (b) corregir hacia la fuente —
+    "Curiana" nombra el territorio, el asentamiento de los 60 agentes recibe nombre propio (candidato
+    natural: Todariquiba, geografia_politica-003); (c) aceptar la ambigüedad ya asentada en meses de
+    contenido y solo documentarla aquí. Decisión pendiente de Miguel — no se ejecuta ninguna opción
+    todavía.
+
+- id: geografia_politica-008
+  contenido: >
+    Fuente adicional para un dato ya usado sin cita en curiana_agents.py: "Manaure" era un término
+    laudatorio, no el único nombre del cacique caquetío — también recibía los dictados de
+    "managuanare" y "managuarire".
+  fuente: atestiguado
+  referencia: "González, Carlos, estudio histórico del PLINCODE, p. 23, citado en Zavala Reyes 2015, nota al pie (2)"
+  dominios: [politica, lenguaje]
+  agentes_relacionados: [Manaure]
+  implicacion_simulacion: >
+    curiana_agents.py ya tiene esta frase en el system_prompt de Manaure ("también te llaman
+    managuanare") sin cita. Esta entrada le da respaldo documental — no requiere cambio de código,
+    solo deja constancia de la fuente.

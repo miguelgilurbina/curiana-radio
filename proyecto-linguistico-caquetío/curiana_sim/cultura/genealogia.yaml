@@ -1,0 +1,682 @@
+# Corpus cultural — Genealogía propuesta
+# Sesión 1/4 del programa "corpus cultural". Ver README.md para el esquema.
+#
+# ALCANCE: esta sesión ancla 6 linajes matrilineales con los miembros para los que ya hay evidencia
+# (relación explícita en curiana_agents.py) o una propuesta bien razonada (ver ensayo §5). Para el
+# resto de los 60 agentes se registra una entrada completa por consistencia de esquema, pero madre/
+# linaje/conyuge quedan en null cuando no hay base para proponer algo mejor que una invención vacía —
+# eso es trabajo de una sesión futura o de Miguel directamente, no algo que deba forzarse aquí.
+#
+# curiana_agents.py NO se modifica. Esto es una propuesta en datos, para revisar y vetar.
+
+# Los linajes son las UNIDADES DE EXPANSIÓN del elenco (dirección de Miguel, 2026-07-16; ver
+# parentesco-025 y ensayo §5.1): cuando la simulación crezca más allá de 60 agentes, se puebla un
+# linaje completo (matriarca + hermanas con hijos + hermanos adultos + esposos de otros linajes), no
+# individuos sueltos. `capacidad_de_expansion` anota qué le falta a cada linaje para ser un grupo
+# residencial creíble — es la lista de casting para la expansión futura. Modelo comparativo: los
+# linajes totémicos achagua, cada uno con casa comunal propia en la aldea (parentesco-022).
+
+linajes:
+  Buio:
+    totem: "buio (serpiente-espíritu)"
+    dominio: "piache, visión, barsure"
+    fundadora: "no propuesta (ancestral, se asume fallecida hace generaciones)"
+    capacidad_de_expansion: >
+      Hoy: Buio-sha, Sha y (por oficio, no sangre) Shaboro. Le falta la generación intermedia: la
+      madre Tuqa-sha está propuesta solo como fondo, no hay hermanos adultos (tíos maternos de
+      Buio-sha y Sha) ni matriarca viva. Expansión natural: 3-5 agentes (un tío materno pescador o
+      guerrero, una hermana mayor casada con hijos, la propia Tuqa-sha si se decide que vive).
+  Chiriguare:
+    totem: "chiriguare (gavilán)"
+    dominio: "guerra, defensa"
+    fundadora: "no propuesta (ancestral)"
+    capacidad_de_expansion: >
+      Hoy: Chiriguare y Chiri-ko (vía Yagua-sha, fondo). Le falta todo el núcleo femenino: Yagua-sha
+      podría promoverse a agente, y no hay hermanas de Chiri-ko ni sobrinas — es decir, el linaje
+      guerrero no tiene todavía quien lo continúe después de Chiri-ko. Expansión natural: 3-4 agentes
+      centrados en las mujeres del linaje.
+  Corie:
+    totem: "corie (armadillo)"
+    dominio: "agricultura, prudencia, lo común"
+    fundadora: "no propuesta (ancestral)"
+    capacidad_de_expansion: >
+      Hoy es el linaje más poblado de la propuesta: Corie-ko, Buco-ko, Buco (vía Peri-sha), Wata-ni
+      (vía Tuisa-sha), Tawari-ko (esposo de Piru-sha) — más los hijos futuros de Piru-sha, que serían
+      del linaje guaycarí de ella, no de Corie (buen material dramático). Le falta la matriarca viva
+      que ate esas ramas. Expansión natural: 2-3 agentes (la matriarca, una hermana de Tuisa-sha).
+  Paugis:
+    totem: "paugis (paují)"
+    dominio: "medicina, partería, memoria oral femenina"
+    fundadora: "no propuesta (ancestral)"
+    capacidad_de_expansion: >
+      Hoy: Paugis-sha, Sha-corie, Suba-ko (propuesta). Es el linaje más envejecido: dos ancianas y una
+      aprendiza. Le falta la generación del medio completa — la hermana de Paugis-sha murió de parto
+      (atestiguado en su ficha) y no se sabe si dejó más hijos que Suba-ko. Expansión natural: 3-4
+      agentes (hijas/sobrinas adultas con niños, para que el saber de partería tenga a dónde ir).
+  Kaira:
+    totem: "no fijado — linaje propuesto, nombre y tótem abiertos a que Miguel decida"
+    dominio: "linaje materno de Manaure"
+    fundadora: "Kaira-sha (propuesta, fondo:true, fallecida antes del presente narrativo)"
+    capacidad_de_expansion: >
+      Hoy: solo Manaure como agente; Itana-sha y Waimo-ko son fondo. Es deliberadamente el linaje con
+      más recorrido de expansión: promover a Waimo-ko (el sucesor) e Itana-sha a agentes es el primer
+      paso natural, y el linaje del Señor merece densidad (más hermanas, más sobrinos rivales entre
+      sí por la sucesión). Expansión natural: 4-6 agentes.
+  Warana:
+    totem: "no fijado — linaje propuesto, nombre y tótem abiertos a que Miguel decida"
+    dominio: "linaje materno de Nubiri-sha"
+    fundadora: "Warana-sha (propuesta, fondo:true, fallecida antes del presente narrativo)"
+    capacidad_de_expansion: >
+      Hoy: solo Nubiri-sha. Sus hijos con Manaure (no nombrados en el canon) serían de ESTE linaje, no
+      del de Manaure — el dato estructural más cargado de la propuesta: la casa del cacique cría hijos
+      que no heredan. Expansión natural: 3-5 agentes (los hijos de Nubiri-sha y Manaure, una hermana
+      de Nubiri-sha, la red femenina que sostiene su poder de redistribución).
+
+  # Vías de entrada de LINAJES NUEVOS al expandir (parentesco-025): matrimonio exogámico con otro
+  # asentamiento caquetío; rama insular vía Aruba/Bonaire (gancho natural: Kadushi); grupo desplazado
+  # por raid caribe que pide adopción. Cada vía trae su propio conflicto narrativo de integración.
+
+agentes:
+
+  # ══════════════ TIER I ══════════════
+
+  Manaure:
+    madre: "no nombrada en curiana_agents.py — se propone Kaira-sha (fondo)"
+    linaje: Kaira
+    conyuge: Nubiri-sha
+    titulo: "diao (señor principal, jefe mayor) de Coro/Todariquiba, reconocido además como \"the main diao\" (Oliver 1989, cap.3, p.251) — ver curiana_sim/cultura/parentesco.yaml#parentesco-034 y geografia_politica.yaml#geografia_politica-003"
+    relaciones_atestiguadas_en_descripcion:
+      - "Esposo de Nubiri-sha (system_prompt: 'tu esposa Nubiri-sha')"
+      - "Heredó de su padre el control de las rutas de biro (descripcion) — dato patrilineal ya en el canon, en tensión deliberada con esta propuesta (ver ensayo §1)"
+    relaciones_propuestas:
+      - "Hermana no nombrada, Itana-sha (fondo), madre del sucesor propuesto"
+      - "Sobrino uterino y sucesor natural: Waimo-ko (propuesto, ver abajo — NO es agente todavía en curiana_agents.py). NOTA (sesión 5): heredar la elegibilidad matrilineal no garantiza el reconocimiento como diao paramount ni la legitimación espiritual (boratio) — ver parentesco-038. Un solo candidato es además una simplificación: ver parentesco-039 sobre pluralidad de sobrinos como patrón más realista, todavía no ejecutada en este archivo."
+
+  Shaboro:
+    madre: "no propuesta"
+    linaje: Buio
+    conyuge: null
+    relaciones_atestiguadas_en_descripcion:
+      - "Forma a Buio-sha como aprendiz (vínculo de oficio, no de sangre)"
+    relaciones_propuestas:
+      - "Miembro fundador vivo del linaje Buio junto con Buio-sha y Sha, aunque no comparte sangre directa con ellas — su autoridad sobre el linaje es de piache, no de parentesco"
+
+  Nubiri-sha:
+    madre: "no nombrada — se propone Warana-sha (fondo)"
+    linaje: Warana
+    conyuge: Manaure
+    relaciones_atestiguadas_en_descripcion:
+      - "Esposa de Manaure"
+      - "Aliada de Saruro-sha; mentora de Piru-sha"
+      - "Su poder 'nace de su linaje materno' (descripcion) — esta propuesta nombra ese linaje por primera vez como Warana"
+    relaciones_propuestas: []
+
+  Watapana:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion: []
+    relaciones_propuestas: []
+
+  Dara-ko:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Perdió a su único hijo de sangre (no nombrado) en una creciente"
+      - "Enseña a Dare-nu 'como a un hijo prestado' (vínculo de oficio, no de sangre)"
+    relaciones_propuestas: []
+
+  Paugis-sha:
+    madre: "no propuesta"
+    linaje: Paugis
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Vio morir a su propia hermana (no nombrada) dando a luz"
+    relaciones_propuestas:
+      - "Junto con Sha-corie, matriarca fundadora-viva del linaje Paugis; Suba-ko propuesta como sobrina/aprendiza del mismo linaje (ver Suba-ko)"
+
+  Biro-ko:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion: []
+    relaciones_propuestas: []
+
+  Tawaka:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto (sentimientos no correspondidos por Buio-sha, sin consecuencia matrimonial)"
+    relaciones_atestiguadas_en_descripcion: []
+    relaciones_propuestas: []
+
+  Saruro-sha:
+    madre: "no propuesta"
+    linaje: "no asignado (independiente de Buio/Chiriguare/Corie/Paugis/Kaira/Warana)"
+    conyuge: "no nombrado en curiana_agents.py — se propone Ibi-ko (fondo), padre de Tawi"
+    relaciones_atestiguadas_en_descripcion:
+      - "Madre de Tawi (10 años, tier III)"
+      - "Aprendió de la vieja Pira-sha (vínculo de oficio, no de sangre)"
+    relaciones_propuestas:
+      - "Esposo propuesto: Ibi-ko (fondo), para dar a Tawi un padre nombrado sin alterar el linaje materno de la niña (que es el de Saruro-sha)"
+
+  Chiriguare:
+    madre: "no propuesta"
+    linaje: Chiriguare
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Tío de Chiri-ko ('Chiri-ko, sobrino de Chiriguare')"
+    relaciones_propuestas:
+      - "Hermana no nombrada, Yagua-sha (fondo), madre de Chiri-ko — la vía por la que la sucesión avuncular ya insinuada en el canon se vuelve genealógicamente explícita"
+
+  Kadushi:
+    madre: "no propuesta"
+    linaje: "no asignado — nota: si se modela una rama insular de un linaje de la Curiana, Kadushi (caquetío de Aruba) sería candidato natural, pero se deja abierto"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion: []
+    relaciones_propuestas: []
+
+  Buio-sha:
+    madre: "no nombrada — se propone Tuqa-sha (fondo, posiblemente fallecida)"
+    linaje: Buio
+    conyuge: null
+    relaciones_atestiguadas_en_descripcion:
+      - "Hermana mayor de Sha (11 años, tier III)"
+    relaciones_propuestas:
+      - "Madre compartida con Sha: Tuqa-sha (fondo)"
+
+  Corie-ko:
+    madre: "no propuesta"
+    linaje: Corie
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Amigo de infancia de Ita-ko (vínculo de amistad, no de sangre)"
+    relaciones_propuestas:
+      - "Miembro fundador vivo del linaje Corie"
+
+  Dare-nu:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Dara-ko lo trata 'casi como un hijo' (vínculo de oficio, no de sangre)"
+      - "Mejor amiga: Kori (tier III, no es parentesco de sangre)"
+    relaciones_propuestas: []
+
+  Marokoto-ni:
+    madre: "no propuesta"
+    linaje: "fuera del sistema de linajes caquetíos — es caribe; su propio sistema de parentesco queda fuera del alcance de esta sesión"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion: []
+    relaciones_propuestas: []
+
+  # ══════════════ TIER II ══════════════
+
+  Buco-ko:
+    madre: "no propuesta"
+    linaje: Corie
+    conyuge: "no nombrada en curiana_agents.py — se propone Peri-sha (fondo), madre de Buco"
+    relaciones_atestiguadas_en_descripcion:
+      - "Padre de Buco (9 años, tier III)"
+      - "Trabaja bajo la guía de Corie-ko (vínculo de oficio)"
+    relaciones_propuestas:
+      - "Esposa propuesta: Peri-sha (fondo) — el linaje de Buco (el hijo) es el de Peri-sha, no el de Buco-ko"
+
+  Naure-sha:
+    madre: "no propuesta"
+    linaje: "no asignado (linaje propio, distinto del de su esposo por exogamia)"
+    conyuge: "no nombrado — se propone Guare-ko (fondo), hermano del esposo de Piri-sha"
+    relaciones_atestiguadas_en_descripcion:
+      - "Cuñada de Piri-sha"
+    relaciones_propuestas:
+      - "Lectura propuesta de la cuñadez: el esposo de Naure-sha (Guare-ko, fondo) es hermano del esposo de Piri-sha — ver nota en Piri-sha sobre la excepción de residencia que esto implica"
+
+  Guama-ko:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Intercambia fibra con Kori-sha (vínculo de oficio, no de parentesco)"
+    relaciones_propuestas: []
+
+  Moruy-sha:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion: []
+    relaciones_propuestas: []
+
+  Ita-ko:
+    madre: "no propuesta"
+    linaje: "no asignado — deliberadamente distinto del de Corie-ko: la amistad de infancia no implica parentesco"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Amigo de infancia de Corie-ko"
+    relaciones_propuestas: []
+
+  Piri-sha:
+    madre: "no propuesta"
+    linaje: "no asignado (linaje natal propio, distinto del de su esposo por exogamia)"
+    conyuge: "no nombrado — se propone Tawa-ko (fondo), hermano de Guare-ko (esposo de Naure-sha)"
+    relaciones_atestiguadas_en_descripcion:
+      - "Cuñada de Naure-sha"
+    relaciones_propuestas:
+      - "Nota de diseño: bajo residencia matrilocal estricta, Piri-sha (recién casada) debería vivir donde su propio linaje, no donde el de su cuñada. Que trabaje junto a Naure-sha sugiere una excepción a la regla general — señalado en el ensayo §4 como variación real, no error de esta propuesta"
+
+  Wari-ko:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Paugis-sha le cuida la pierna (vínculo de cuidado, no de parentesco)"
+    relaciones_propuestas: []
+
+  Cunaro-bana:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion: []
+    relaciones_propuestas: []
+
+  Bagre-ko:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Vio ahogarse a su tío (no nombrado) por salir a pescar un día prohibido"
+    relaciones_propuestas:
+      - "Se propone nombrar a ese tío fallecido como Sabo-ko (fondo), para dejar constancia del vínculo avuncular ya insinuado en su ficha"
+
+  Guaranaro-sha:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Compite con Tariwa (guaycarí) por caladeros — vínculo de rivalidad, no de parentesco"
+    relaciones_propuestas: []
+
+  Dara-bana:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion: []
+    relaciones_propuestas: []
+
+  Buco-ni:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Aprende de Bagre-ko y de Dara-ko (vínculos de oficio, no de parentesco)"
+    relaciones_propuestas: []
+
+  Cahu-sha:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Amiga de Saruro-sha (vínculo de amistad, no de parentesco)"
+    relaciones_propuestas: []
+
+  Tina-sha:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Ayuda a Nubiri-sha en la redistribución (vínculo de oficio)"
+    relaciones_propuestas:
+      - "Se propone que Piru (7 años, tier III), 'siempre cerca del budare de Tina-sha', sea hijo suyo — ver Piru abajo"
+
+  Pira-sha:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Fue mentora de Saruro-sha (vínculo de oficio, no de sangre)"
+    relaciones_propuestas: []
+
+  Suba-ko:
+    madre: "no propuesta"
+    linaje: Paugis
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Paugis-sha le enseñó a distinguir las plantas"
+    relaciones_propuestas:
+      - "Se propone que ese aprendizaje siga (además de ser tutela de oficio) una línea de parentesco: Suba-ko como sobrina del linaje Paugis — coherente con que en sistemas matrilineales el saber especializado suele transmitirse dentro del propio linaje"
+
+  Wama-sha:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Perdió a dos hijos propios (no nombrados) siendo joven"
+    relaciones_propuestas: []
+
+  Kori-sha:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Intercambia fibras con Guama-ko (vínculo de oficio)"
+    relaciones_propuestas: []
+
+  Taku-ko:
+    madre: "no propuesta"
+    linaje: "no asignado — deliberadamente distinto del de Chiriguare: discipulado no es parentesco"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Discípulo fiel de Chiriguare (vínculo de oficio)"
+    relaciones_propuestas: []
+
+  Pari-nu:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Rivalidad amistosa con Tawaka (no es parentesco)"
+    relaciones_propuestas: []
+
+  Suri-bana:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Dare-nu le pidió consejo (no es parentesco)"
+    relaciones_propuestas: []
+
+  Chiri-ko:
+    madre: "no nombrada en curiana_agents.py — se propone Yagua-sha (fondo), hermana de Chiriguare"
+    linaje: Chiriguare
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Sobrino de Chiriguare — heredero natural en línea matrilineal (ya señalado explícitamente en CULTURA_CAQUETIA.md §6)"
+    relaciones_propuestas:
+      - "Madre: Yagua-sha (fondo), hermana de Chiriguare — nombra por primera vez el eslabón materno que hace posible la sucesión avuncular ya presente en el canon"
+
+  Bana-mana:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Shaboro y él son 'los más viejos' (no es parentesco)"
+    relaciones_propuestas: []
+
+  Sha-corie:
+    madre: "no propuesta"
+    linaje: Paugis
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Amiga de vida de Paugis-sha"
+    relaciones_propuestas:
+      - "Se propone que la amistad de toda la vida entre Sha-corie y Paugis-sha refleje pertenencia al mismo linaje materno (Paugis) — dos mujeres que son 'la última palabra entre las mujeres' comparten linaje, reforzando por qué su autoridad conjunta es tan sólida"
+
+  Uro-ko:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Le cuenta historias a Dara-ko (no es parentesco)"
+    relaciones_propuestas: []
+
+  Tariwa:
+    madre: "no propuesta"
+    linaje: "fuera del sistema de linajes caquetíos — es guaycarí; su propio sistema de parentesco queda fuera del alcance de esta sesión (candidato para una sesión futura del programa)"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion: []
+    relaciones_propuestas: []
+
+  Kawa-ni:
+    madre: "no propuesta"
+    linaje: "fuera del sistema de linajes caquetíos — es guaycarí"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Amigo de Dare-nu (no es parentesco)"
+    relaciones_propuestas: []
+
+  Piru-sha:
+    madre: "no propuesta"
+    linaje: "guaycarí de origen — su linaje natal queda fuera del alcance de esta sesión; ver conyuge para su integración a la Curiana"
+    conyuge: "no nombrado en curiana_agents.py — se propone Tawari-ko (fondo)"
+    relaciones_atestiguadas_en_descripcion:
+      - "Guaycarí 'casada con un caquetío' (cónyuge sin nombrar)"
+      - "Acogida plenamente por Nubiri-sha"
+    relaciones_propuestas:
+      - "Esposo propuesto: Tawari-ko (fondo), del linaje Corie — ver ensayo §4 sobre por qué es ella, la forastera, quien se traslada a la Curiana (excepción documentada a la matrilocalidad, no error)"
+
+  Tari-ko:
+    madre: "no propuesta"
+    linaje: "fuera del sistema de linajes caquetíos — es guaycarí"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Respeto mutuo con Dara-ko (no es parentesco)"
+    relaciones_propuestas: []
+
+  Wata-ni:
+    madre: "no nombrada en curiana_agents.py — se propone Tuisa-sha (fondo)"
+    linaje: Corie
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Nacido en la Curiana de padre guaycarí y madre caquetía (ambos sin nombrar)"
+    relaciones_propuestas:
+      - "Madre: Tuisa-sha (fondo), del linaje Corie — por lógica matrilineal estricta esto hace a Wata-ni caquetío de pleno derecho, en tensión deliberada con que se sienta 'sin encajar del todo' (ver ensayo §4 y parentesco-017)"
+      - "Padre: Kasa-ni (fondo), guaycarí"
+
+  Nabaraka:
+    madre: "no propuesta"
+    linaje: "fuera del sistema de linajes caquetíos — es jirajara; su propio sistema de parentesco queda fuera del alcance de esta sesión"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Tío de Raka-bi"
+    relaciones_propuestas: []
+
+  Raka-bi:
+    madre: "no propuesta"
+    linaje: "fuera del sistema de linajes caquetíos — es jirajara"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion:
+      - "Sobrino de Nabaraka, viaja con él para heredar la ruta de la sierra — nota: esto es un dato de sucesión avuncular ya atestiguado en curiana_agents.py, pero para el sistema de parentesco jirajara, no el caquetío; se cita aquí solo como paralelo interesante, no se reclama para el corpus caquetío"
+    relaciones_propuestas: []
+
+  Chorota:
+    madre: "no propuesta"
+    linaje: "fuera del sistema de linajes caquetíos — es gayón"
+    conyuge: "no propuesto"
+    relaciones_atestiguadas_en_descripcion: []
+    relaciones_propuestas: []
+
+  # ══════════════ TIER III ══════════════
+
+  Kori:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: null
+    relaciones_atestiguadas_en_descripcion:
+      - "Mejor amiga de Dare-nu (no es parentesco)"
+    relaciones_propuestas: []
+
+  Nubi:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: null
+    relaciones_atestiguadas_en_descripcion: []
+    relaciones_propuestas: []
+
+  Tawi:
+    madre: Saruro-sha
+    linaje: "el de Saruro-sha (no asignado a los 6 linajes propuestos)"
+    conyuge: null
+    relaciones_atestiguadas_en_descripcion:
+      - "Hija de Saruro-sha"
+    relaciones_propuestas:
+      - "Padre: Ibi-ko (fondo, propuesto en la entrada de Saruro-sha) — no afecta su linaje, que es el materno"
+
+  Piru:
+    madre: "no nombrada en curiana_agents.py"
+    linaje: "no asignado"
+    conyuge: null
+    relaciones_atestiguadas_en_descripcion:
+      - "'Siempre cerca del budare de Tina-sha'"
+    relaciones_propuestas:
+      - "Se propone que sea hijo de Tina-sha, no solo un niño que ronda su cocina — explicaría por qué es 'el más mimado' y por qué su hambre de bebé marcó a la comunidad que lo alimenta"
+
+  Sha:
+    madre: "no nombrada en curiana_agents.py — se propone Tuqa-sha (fondo), la misma de Buio-sha"
+    linaje: Buio
+    conyuge: null
+    relaciones_atestiguadas_en_descripcion:
+      - "Hermana menor de Buio-sha"
+    relaciones_propuestas:
+      - "Madre compartida con Buio-sha: Tuqa-sha (fondo)"
+
+  Buco:
+    madre: "no nombrada en curiana_agents.py — se propone Peri-sha (fondo), esposa de Buco-ko"
+    linaje: Corie
+    conyuge: null
+    relaciones_atestiguadas_en_descripcion:
+      - "Hijo de Buco-ko"
+    relaciones_propuestas:
+      - "Madre: Peri-sha (fondo) — su linaje es el de ella, no el de Buco-ko (su padre no transmite linaje)"
+
+  Daru:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: null
+    relaciones_atestiguadas_en_descripcion:
+      - "Padre muerto (no nombrado), a quien Daru desea enorgullecer con su iniciación"
+    relaciones_propuestas:
+      - "Se deja sin nombrar al padre fallecido y a la madre — inventar ambos sin ninguna base en la ficha original sería forzar la propuesta; mejor que Miguel decida si quiere desarrollarlo"
+
+  Kawa:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: null
+    relaciones_atestiguadas_en_descripcion: []
+    relaciones_propuestas: []
+
+  Piri:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: null
+    relaciones_atestiguadas_en_descripcion: []
+    relaciones_propuestas: []
+
+  Ita-sha:
+    madre: "no propuesta (es la más anciana; cualquier madre propuesta sería pura invención sin apoyo)"
+    linaje: "deliberadamente no asignada a ninguno de los 6 linajes — se deja como anciana fuera de la estructura de clanes, lo cual refuerza su carácter casi mítico ('dice frases que se cumplen dos días después')"
+    conyuge: null
+    relaciones_atestiguadas_en_descripcion: []
+    relaciones_propuestas: []
+
+  Moro-ko:
+    madre: "no propuesta"
+    linaje: "no asignado"
+    conyuge: null
+    relaciones_atestiguadas_en_descripcion: []
+    relaciones_propuestas: []
+
+  Jiru-ko:
+    madre: "no propuesta"
+    linaje: "fuera del sistema de linajes caquetíos — es jirajara de paso, ni siquiera residente"
+    conyuge: null
+    relaciones_atestiguadas_en_descripcion: []
+    relaciones_propuestas: []
+
+# ══════════════ PERSONAS DE FONDO (no son agentes en curiana_agents.py) ══════════════
+# Todas propuestas por esta sesión. Nombres inventados para esta propuesta — sujetos a veto o
+# renombre por Miguel. Ninguna se agrega a curiana_agents.py.
+
+personas_de_fondo:
+
+  Waimo-ko:
+    fondo: true
+    edad_propuesta: 21
+    descripcion: >
+      Sobrino uterino de Manaure (hijo de su hermana Itana-sha), propuesto como su sucesor natural en
+      línea matrilineal — no existe como agente hoy. Se propone explícitamente como candidato a
+      añadirse al elenco (tier 1 o 2) en una decisión futura de Miguel, no como personaje ya activo.
+      Por el patrón avunculocal taíno (parentesco-026), su ubicacion_default natural sería
+      casa_cacique o adyacente: el heredero crece a la vista del tío, conviviendo con los hijos de
+      Nubiri-sha que no heredan. Sesión 5: la elegibilidad matrilineal es solo la primera de tres
+      "puertas" (parentesco-038) — ratificación de los apopos/diaos vecinos y legitimación como
+      boratio no son automáticas. Además, un solo candidato es simplificación; ver parentesco-039.
+    linaje: Kaira
+    madre: Itana-sha
+    fuente_de_la_propuesta: "parentesco-002, 004, 026, 034, 037, 038, 039; ensayo §5.2 y 05_geografia_politica_y_sucesion.md"
+
+  Itana-sha:
+    fondo: true
+    descripcion: "Hermana no nombrada de Manaure, madre de Waimo-ko. Propuesta para dar sustento genealógico a la sucesión avuncular."
+    linaje: Kaira
+    fuente_de_la_propuesta: "ensayo §5.2"
+
+  Kaira-sha:
+    fondo: true
+    descripcion: "Madre propuesta de Manaure e Itana-sha; fundadora/ancestral del linaje Kaira. Presumiblemente fallecida antes del presente narrativo de la simulación."
+    linaje: Kaira
+    fuente_de_la_propuesta: "ensayo §5.1"
+
+  Warana-sha:
+    fondo: true
+    descripcion: "Madre propuesta de Nubiri-sha; fundadora/ancestral del linaje Warana."
+    linaje: Warana
+    fuente_de_la_propuesta: "ensayo §5.1"
+
+  Yagua-sha:
+    fondo: true
+    descripcion: "Hermana no nombrada de Chiriguare, madre de Chiri-ko. Nombra el eslabón materno de una sucesión avuncular que el canon ya afirma pero no genealogiza."
+    linaje: Chiriguare
+    fuente_de_la_propuesta: "ensayo §5.1; parentesco-004"
+
+  Tuqa-sha:
+    fondo: true
+    descripcion: "Madre propuesta de Buio-sha y de Sha (hermanas ya atestiguadas en curiana_agents.py)."
+    linaje: Buio
+    fuente_de_la_propuesta: "necesidad estructural de nombrar a la madre compartida"
+
+  Peri-sha:
+    fondo: true
+    descripcion: "Esposa propuesta de Buco-ko, madre de Buco (ya atestiguado como su hijo)."
+    linaje: Corie
+    fuente_de_la_propuesta: "necesidad estructural: el linaje de Buco es el de su madre, no el de Buco-ko"
+
+  Ibi-ko:
+    fondo: true
+    descripcion: "Esposo propuesto de Saruro-sha, padre de Tawi. No afecta el linaje de Tawi, que es el materno."
+    linaje: "no asignado"
+    fuente_de_la_propuesta: "completar la genealogía de Tawi sin alterar su linaje"
+
+  Guare-ko:
+    fondo: true
+    descripcion: "Esposo propuesto de Naure-sha, hermano propuesto de Tawa-ko (esposo de Piri-sha)."
+    linaje: "no asignado"
+    fuente_de_la_propuesta: "explicar la cuñadez ya atestiguada entre Naure-sha y Piri-sha"
+
+  Tawa-ko:
+    fondo: true
+    descripcion: "Esposo propuesto de Piri-sha, hermano propuesto de Guare-ko (esposo de Naure-sha)."
+    linaje: "no asignado"
+    fuente_de_la_propuesta: "explicar la cuñadez ya atestiguada entre Naure-sha y Piri-sha"
+
+  Sabo-ko:
+    fondo: true
+    descripcion: "Tío materno propuesto de Bagre-ko, fallecido ahogado por salir a pescar un día prohibido — el evento que ya está atestiguado en la ficha de Bagre-ko, aquí se le da nombre al tío."
+    linaje: "no asignado"
+    fuente_de_la_propuesta: "nombrar el vínculo avuncular ya insinuado en curiana_agents.py"
+
+  Tawari-ko:
+    fondo: true
+    descripcion: "Esposo caquetío propuesto de Piru-sha (guaycarí)."
+    linaje: Corie
+    fuente_de_la_propuesta: "completar el matrimonio interétnico ya atestiguado en curiana_agents.py"
+
+  Tuisa-sha:
+    fondo: true
+    descripcion: "Madre caquetía propuesta de Wata-ni."
+    linaje: Corie
+    fuente_de_la_propuesta: "completar el origen mixto ya atestiguado de Wata-ni"
+
+  Kasa-ni:
+    fondo: true
+    descripcion: "Padre guaycarí propuesto de Wata-ni."
+    linaje: "fuera del sistema de linajes caquetíos — guaycarí"
+    fuente_de_la_propuesta: "completar el origen mixto ya atestiguado de Wata-ni"

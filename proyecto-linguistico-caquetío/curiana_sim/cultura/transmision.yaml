@@ -1,0 +1,720 @@
+# Corpus cultural — Sesión 4: Transmisión del saber
+# Pregunta guía: ¿Cómo sabía el caquetío lo que sabía?
+#
+# fuente: atestiguado | reconstruido | canon-simulacion | retro-abstraido | hipotetico
+# forma_transmision: aprendizaje_oficio | cancion | relato | iniciacion | consejo | genealogia_recitada
+#
+# Ver investigacion/ensayos/04_transmision_saber.md para el desarrollo completo
+# y investigacion/hojas_fuentes/04_transmision.md para el detalle de búsqueda.
+
+# ══════════════════════════════════════════════════════════════════
+# I. DÍADAS MAESTRO-APRENDIZ DEL ELENCO
+# ══════════════════════════════════════════════════════════════════
+
+- id: transmision-001
+  contenido: >
+    Shaboro, piache mayor, forma a Buio-sha en el piazgo: preparación del
+    urari, lectura de sueños, ayunos en el manglar. El llamado no se elige
+    — el barsure marca a la persona. Shaboro teme morir antes de que ella
+    esté lista; de joven perdió a un primer aprendiz en un ayuno demasiado
+    largo, y esa herida da forma a cómo enseña ahora.
+  fuente: canon-simulacion
+  referencia: "curiana_agents.py (Shaboro, Buio-sha); CULTURA_CAQUETIA.md §6"
+  dominios: [transmision, piazgo, cosmologia]
+  agentes_relacionados: [Shaboro, Buio-sha]
+  forma_transmision: aprendizaje_oficio
+  restringido: true
+  implicacion_simulacion: >
+    Punto único de falla ALTO mitigado por heredera designada; el riesgo es
+    de tiempo (Shaboro vs. la madurez de Buio-sha), no de ausencia de sucesor.
+
+- id: transmision-002
+  contenido: >
+    Dara-ko, maestro constructor de canoas, enseña a Dare-nu "casi como a
+    un hijo" tras perder a su propio hijo en una creciente. Lo que protege
+    con celo no es su técnica sino un estándar: que ninguna canoa del
+    taller salga con una falla que se trague a otro joven.
+  fuente: canon-simulacion
+  referencia: "curiana_agents.py (Dara-ko, Dare-nu)"
+  dominios: [transmision, oficio_canoas]
+  agentes_relacionados: [Dara-ko, Dare-nu]
+  forma_transmision: aprendizaje_oficio
+  restringido: false
+  implicacion_simulacion: >
+    Fidelidad técnica alta esperable (imitación motriz repetida); el riesgo
+    de degradación está en el estándar de seguridad implícito, no en la
+    técnica de construcción en sí — más difícil de medir por ser tácito.
+
+- id: transmision-003
+  contenido: >
+    Pira-sha, maestra alfarera mayor, formó a Saruro-sha, que hoy enseña a
+    su propia hija Tawi (10 años, ya modela vasijas casi perfectas): tres
+    generaciones en la misma línea de oficio. Pira-sha enseña "con dureza
+    porque cree que un diseño mal copiado es un ancestro mal recordado" —
+    los motivos cerámicos no son adorno, son memoria visual codificada.
+  fuente: canon-simulacion
+  referencia: "curiana_agents.py (Pira-sha, Saruro-sha, Tawi)"
+  dominios: [transmision, oficio_ceramica, memoria_visual]
+  agentes_relacionados: [Pira-sha, Saruro-sha, Tawi]
+  forma_transmision: aprendizaje_oficio
+  restringido: true
+  implicacion_simulacion: >
+    No es punto único de falla (cadena de tres generaciones en curso) sino
+    caso de DEGRADACIÓN esperable: el miedo explícito de Pira-sha es que
+    "la prisa de las nuevas alfareras simplifique" los diseños antiguos —
+    fidelidad decreciente, no extinción. Buen caso para medir deriva de
+    forma en vez de supervivencia binaria.
+
+- id: transmision-004
+  contenido: >
+    Paugis-sha, curandera y partera mayor, enseñó a Suba-ko a distinguir
+    la planta que cura de la que mata — "un saber peligroso que carga con
+    respeto". Suba-ko desea formalizarse como aprendiza de curandera y
+    aún no lo ha logrado del todo.
+  fuente: canon-simulacion
+  referencia: "curiana_agents.py (Paugis-sha, Suba-ko)"
+  dominios: [transmision, medicina_herbal]
+  agentes_relacionados: [Paugis-sha, Suba-ko]
+  forma_transmision: aprendizaje_oficio
+  restringido: true
+  implicacion_simulacion: >
+    Sucesión "en pausa" — la aprendiz existe pero el estatus formal no se
+    ha otorgado. Interesante para medir el momento de transición
+    maestro→par en vez de solo maestro→aprendiz.
+
+- id: transmision-005
+  contenido: >
+    Chiriguare, jefe guerrero, forma disciplina militar en Taku-ko (su
+    discípulo más fiel, que modela su carácter sobre el de su maestro) y
+    en su sobrino Chiri-ko, heredero natural por línea matrilineal (el
+    linaje de jefe guerrero pasa por la hermana). Dos transmisiones
+    paralelas: una de mérito (Taku-ko), una de linaje (Chiri-ko).
+  fuente: canon-simulacion
+  referencia: "curiana_agents.py (Chiriguare, Taku-ko, Chiri-ko); CULTURA_CAQUETIA.md §6 (matrilinealidad)"
+  dominios: [transmision, oficio_guerra, matrilinealidad]
+  agentes_relacionados: [Chiriguare, Taku-ko, Chiri-ko]
+  forma_transmision: aprendizaje_oficio
+  restringido: false
+  implicacion_simulacion: >
+    Caso útil para separar transmisión-por-mérito de transmisión-por-linaje
+    dentro del mismo maestro — compiten por legitimidad, no por contenido.
+
+- id: transmision-006
+  contenido: >
+    Bana-mana, anciano narrador, guarda en la memoria genealogías,
+    migraciones, guerras viejas y pactos que nadie más recuerda. No tiene
+    heredero designado en el elenco. Su miedo explícito es morir sin
+    encontrar "un joven con buena memoria a quien verter sus relatos".
+  fuente: canon-simulacion
+  referencia: "curiana_agents.py (Bana-mana)"
+  dominios: [transmision, historia_oral, genealogia]
+  agentes_relacionados: [Bana-mana]
+  forma_transmision: relato
+  restringido: false
+  implicacion_simulacion: >
+    PUNTO ÚNICO DE FALLA — CRÍTICO. Sin heredero designado ni mecanismo de
+    repetición formulaica (a diferencia de la genealogía cantada del
+    areíto, su relato es prosa libre). Es el experimento narrable central
+    del anexo de diseño: ¿aparece un heredero de facto durante un run
+    largo, o el saber muere con él? Ver transmision-024.
+
+- id: transmision-007
+  contenido: >
+    Wama-sha, cuidadora de niños, transmite a través de canciones
+    repetidas sin cansarse los nombres de los animales, los ancestros y
+    las reglas del mundo a todos los niños de la comunidad (Nubi, Tawi,
+    Piru, Sha, Buco, Daru, Kawa, Piri, Kori — todo el Tier III).
+  fuente: canon-simulacion
+  referencia: "curiana_agents.py (Wama-sha); comparanda wayuu: jayeechi (ALAI 2013)"
+  dominios: [transmision, crianza, cancion]
+  agentes_relacionados: [Wama-sha, Nubi, Tawi, Piru, Sha, Buco, Daru, Kawa, Piri, Kori]
+  forma_transmision: cancion
+  restringido: false
+  implicacion_simulacion: >
+    Forma de MÁXIMA fidelidad esperable (melodía + métrica fijan el orden
+    de palabras, ver Ong 1982). Candidata ideal para medir "eco" textual
+    casi exacto en boca de los niños, a diferencia del relato libre de
+    Bana-mana.
+
+- id: transmision-008
+  contenido: >
+    Sha-corie, matriarca, es -junto a Paugis-sha- la última palabra en
+    tradición femenina: reglas de menstruación, matrimonio, luto y
+    herencia por línea materna. Desea que sus nietas hereden no solo los
+    oficios sino el lugar de autoridad femenino; teme una generación que
+    confunda obedecer al cacique con olvidar que la sangre se cuenta por
+    las madres.
+  fuente: canon-simulacion
+  referencia: "curiana_agents.py (Sha-corie); CULTURA_CAQUETIA.md §6"
+  dominios: [transmision, matrilinealidad, derecho_consuetudinario]
+  agentes_relacionados: [Sha-corie, Paugis-sha]
+  forma_transmision: consejo
+  restringido: true
+  implicacion_simulacion: >
+    No hay heredera nombrada explícitamente para el ROL de autoridad
+    (distinto de las mentorías de oficio) — riesgo estructural silencioso,
+    no verbalizado como miedo por el personaje pero derivable del canon.
+
+- id: transmision-009
+  contenido: >
+    Ita-ko, segundo en saber agrícola tras Corie-ko, forma jóvenes con
+    "paciencia de piedra", convencido de que la tierra no perdona la
+    prisa. Su temor es sobrevivir a Corie-ko y quedar como el último que
+    recuerda cómo era la Curiana antes de las sequías que ambos vivieron.
+  fuente: canon-simulacion
+  referencia: "curiana_agents.py (Ita-ko, Corie-ko)"
+  dominios: [transmision, oficio_agricultura]
+  agentes_relacionados: [Ita-ko, Corie-ko]
+  forma_transmision: aprendizaje_oficio
+  restringido: false
+  implicacion_simulacion: >
+    Transmisión de técnica (agricultura) empaquetada junto con memoria
+    histórica no formal (recuerdo de sequías pasadas) — dos saberes
+    distintos viajando por el mismo vínculo.
+
+- id: transmision-010
+  contenido: >
+    Naure-sha guarda en cestos separados las variedades de semilla de
+    maíz y sostiene una regla aprendida de su madre — no comerse jamás la
+    semilla guardada, sin importar el hambre — porque de ella depende la
+    cosecha del año siguiente. Desea que su cuñada Piri-sha domine el
+    oficio.
+  fuente: canon-simulacion
+  referencia: "curiana_agents.py (Naure-sha, Piri-sha)"
+  dominios: [transmision, oficio_agricultura, etica]
+  agentes_relacionados: [Naure-sha, Piri-sha]
+  forma_transmision: aprendizaje_oficio
+  restringido: false
+  implicacion_simulacion: >
+    Caso de transmisión de una REGLA ÉTICA/ECONÓMICA simple y memorable
+    (una sola frase-mandato), no de una técnica compleja — buen candidato
+    para probar si reglas cortas se propagan con más fidelidad que
+    procedimientos largos, siguiendo la lógica de Ong sobre fórmulas.
+
+- id: transmision-011
+  contenido: >
+    Corie-ko y Buco-ko mantienen el buco (represa/acequia); el hijo de
+    Buco-ko, Buco (9 años), "ya sabe cuándo regar sin que se lo digan,
+    leyendo la tierra como su padre" — sucesión ya en marcha, visible
+    incluso en un niño de Tier III.
+  fuente: canon-simulacion
+  referencia: "curiana_agents.py (Corie-ko, Buco-ko, Buco)"
+  dominios: [transmision, oficio_agricultura, ingenieria_hidraulica]
+  agentes_relacionados: [Corie-ko, Buco-ko, Buco]
+  forma_transmision: aprendizaje_oficio
+  restringido: false
+  implicacion_simulacion: >
+    El único caso del elenco donde un Tier III ya muestra transmisión
+    exitosa observable ANTES de la iniciación formal — útil como línea
+    base de "sucesión saludable" contra la cual medir los puntos de falla.
+
+- id: transmision-012
+  contenido: >
+    Tari-ko, navegante Guaycarí, conoce rutas de agua abierta que Dara-ko
+    respeta aunque vengan de otro pueblo. No tiene heredero nombrado en el
+    elenco; su temor explícito es "que cuando él falte nadie sepa ya el
+    camino seguro a las islas lejanas".
+  fuente: canon-simulacion
+  referencia: "curiana_agents.py (Tari-ko)"
+  dominios: [transmision, navegacion]
+  agentes_relacionados: [Tari-ko, Dara-ko]
+  forma_transmision: aprendizaje_oficio
+  restringido: false
+  implicacion_simulacion: >
+    PUNTO ÚNICO DE FALLA — CRÍTICO. A diferencia de Bana-mana (saber
+    narrativo), este es saber procedimental puro (una ruta) sin ningún
+    componente formulaico que ayude a fijarlo verbalmente — probablemente
+    el saber más frágil del elenco completo.
+
+- id: transmision-013
+  contenido: >
+    Nubiri-sha sostiene en la memoria todos los favores y deudas de la
+    comunidad — "memoria perfecta" que hace posible la redistribución. No
+    hay agente designado explícitamente como su heredera en esa función
+    específica, aunque Piru-sha aparece como su protegida política.
+  fuente: canon-simulacion
+  referencia: "curiana_agents.py (Nubiri-sha, Piru-sha)"
+  dominios: [transmision, economia, contabilidad_social]
+  agentes_relacionados: [Nubiri-sha, Piru-sha]
+  forma_transmision: consejo
+  restringido: true
+  implicacion_simulacion: >
+    PUNTO ÚNICO DE FALLA — MODERADO. El saber es de altísimo valor
+    político-económico (sostiene la redistribución cacical) y no tiene
+    forma fija que ayude a preservarlo — es una lista mental sin fórmula
+    ni canción que lo respalde.
+
+- id: transmision-014
+  contenido: >
+    Ita-sha, la más anciana de la Curiana (80 años), dice frases que
+    parecen sin sentido hasta que se cumplen dos días después. Su don no
+    es transmisible por diseño: no hay aprendiz posible para una forma de
+    conocimiento que ni ella misma controla conscientemente.
+  fuente: hipotetico
+  referencia: "curiana_agents.py (Ita-sha)"
+  dominios: [transmision, cosmologia, adivinacion]
+  agentes_relacionados: [Ita-sha]
+  forma_transmision: relato
+  restringido: false
+  implicacion_simulacion: >
+    Caso límite: un saber que se extingue por diseño narrativo, no por
+    falla de transmisión. Útil como control negativo — no debería
+    generarse "eco" nunca, y eso también es una medición válida.
+
+- id: transmision-015
+  contenido: >
+    Moro-ko, sordo desde una fiebre de juventud, lee los labios mejor que
+    nadie y por eso conoce secretos que nadie sospecha que sabe. Vive con
+    el peso de un conocimiento nunca transmitido porque nadie sabe que lo
+    tiene.
+  fuente: hipotetico
+  referencia: "curiana_agents.py (Moro-ko)"
+  dominios: [transmision, secreto]
+  agentes_relacionados: [Moro-ko]
+  forma_transmision: relato
+  restringido: true
+  implicacion_simulacion: >
+    Punto único de falla invisible: nadie en la comunidad sabe que hay
+    algo que perder. Difícil de instrumentar (el Observer tendría que
+    inferir secretos no verbalizados), pero vale documentarlo como límite
+    del propio marco de medición.
+
+# ══════════════════════════════════════════════════════════════════
+# II. FORMAS DE TRANSMISIÓN Y FIDELIDAD DIFERENCIAL
+# ══════════════════════════════════════════════════════════════════
+
+- id: transmision-016
+  contenido: >
+    El jayeechi wayuu es un canto narrativo que funciona como "memoria
+    cantada": se aprende por inmersión (escuchando e interactuando, no
+    con instrucción formal) y lo porta un especialista, el
+    jayeechimajachi, que transmite historia, economía, disputas de clanes
+    y héroes culturales en forma musical de generación en generación.
+  fuente: reconstruido
+  referencia: "Mercado Epieyu / ALAI (2013), 'Visión Antropolingüística de los Relatos Cantados del Pueblo Wayuu: El Jayeechi', alainet.org"
+  dominios: [transmision, cancion, comparanda_wayuu]
+  agentes_relacionados: [Wama-sha, Bana-mana]
+  forma_transmision: cancion
+  restringido: false
+  implicacion_simulacion: >
+    El elenco no tiene un equivalente adulto de Wama-sha: nadie canta
+    historia comunitaria fijada, solo Bana-mana la narra en prosa libre.
+    Es un hueco de diseño real, no solo teórico — ver anexo del ensayo.
+
+- id: transmision-017
+  contenido: >
+    Entre los wayuu, la vocación de ouutsü (piache) se revela por un
+    sueño, no se elige; desde entonces es a través de los sueños —regidos
+    por la deidad Lapü— que se diagnostica, se pronostica y se cura.
+  fuente: reconstruido
+  referencia: "'La mujer ouutsü en la comunidad wayuu', Portal de Lenguas de Colombia (Caro y Cuervo)"
+  dominios: [transmision, piazgo, cosmologia, comparanda_wayuu]
+  agentes_relacionados: [Shaboro, Buio-sha]
+  forma_transmision: iniciacion
+  restringido: true
+  implicacion_simulacion: >
+    Confirma y refina lo ya presente en CULTURA_CAQUETIA.md §1 sobre Lapü
+    y el piache que "lee sueños" — el llamado-por-sueño de Buio-sha no es
+    una decoración narrativa sino el mecanismo de reclutamiento
+    documentado en la lengua hermana más cercana.
+
+- id: transmision-018
+  contenido: >
+    Pedro Mártir de Anglería describe el areíto antillano: al entrar en
+    la ceremonia los danzantes "colmaban de maravillosas alabanzas al
+    zeme, y referían cantando las hazañas de los antepasados del
+    cacique" — genealogía política cantada ante toda la comunidad.
+  fuente: atestiguado
+  referencia: "Anglería, Fuentes Históricas sobre Colón y América (1892 [c.1530]), vol. 4, p. 236"
+  dominios: [transmision, genealogia, cancion]
+  agentes_relacionados: [Bana-mana, Manaure]
+  forma_transmision: genealogia_recitada
+  restringido: false
+  implicacion_simulacion: >
+    Comparanda estructural directa con ofrenda_ancestros_anochecer
+    (curiana_state.py): confirma que la genealogía cantada/recitada
+    pública es un patrón arahuaco-caribe amplio, no una invención de
+    diseño. Refuerza la elección de forma_transmision=genealogia_recitada
+    como categoría propia, distinta de "relato" libre.
+
+- id: transmision-019
+  contenido: >
+    Jahn (1927) registra un sistema guajiro de derecho consuetudinario
+    oral completo: "precio de la sangre" y "precio de lágrimas"
+    (tüquira sushirüa tachón, "mis lágrimas por mi hijo"), con tarifas
+    específicas exigidas por los deudos maternos según el daño causado —
+    ley sin código escrito, aplicada caso por caso por los mayores.
+  fuente: atestiguado
+  referencia: "Jahn (1927), Los aborígenes del occidente de Venezuela, pp. 205-207"
+  dominios: [transmision, derecho_consuetudinario, matrilinealidad]
+  agentes_relacionados: [Sha-corie, Paugis-sha, Nubiri-sha]
+  forma_transmision: consejo
+  restringido: false
+  implicacion_simulacion: >
+    Sugiere que la "contabilidad de deudas" de Nubiri-sha (ver
+    transmision-013) podría no ser solo económica sino jurídica —
+    reciprocidad y compensación por daño, no solo intercambio comercial.
+    Posible extensión futura del canon económico.
+
+- id: transmision-020
+  contenido: >
+    Jahn (1927) documenta que el adiestramiento masculino guajiro
+    (manejo de arco y flecha, cuido y monta de bestias) empieza "desde
+    temprana edad", mientras que "la verdadera educación de las hembras
+    no comienza sino en el momento de su nubilidad": al llegar la
+    pubertad la joven es recluida, alimentada solo con jaguape
+    (infusión medicinal), con el cabello cortado al rape como medida
+    del tiempo de reclusión, y durante ese encierro aprende de golpe
+    "todas las habilidades domésticas: coser, tejer, confeccionar
+    hamacas". El fin de la reclusión se celebra con una fiesta de
+    presentación pública, el ajuitis.
+  fuente: atestiguado
+  referencia: "Jahn (1927), Los aborígenes del occidente de Venezuela, pp. 208-211"
+  dominios: [transmision, genero, iniciacion, comparanda_wayuu]
+  agentes_relacionados: [Buio-sha, Sha, Sha-corie, Paugis-sha]
+  forma_transmision: iniciacion
+  restringido: true
+  implicacion_simulacion: >
+    Modelo concreto de transmisión FEMENINA por umbral (pulso único denso)
+    frente a transmisión MASCULINA continua desde la infancia —
+    asimetría estructural con fuente citable, no solo simétrica al
+    ritual de iniciación masculino ya presente en el canon
+    (ceremonia_iniciacion cubre a Dare-nu y Daru, ambos varones; el
+    canon caquetío no tiene aún un rito de paso femenino equivalente).
+
+- id: transmision-021
+  contenido: >
+    Jahn (1927) registra que nombrar a un muerto en presencia de sus
+    deudos es una ofensa gravísima "amenudo castigada con la muerte", y
+    que incluso mencionar el nombre propio de un vivo sin permiso exige
+    compensación — de ahí que los guajiros prefieran usar nombres
+    españoles bautismales en el trato cotidiano.
+  fuente: atestiguado
+  referencia: "Jahn (1927), Los aborígenes del occidente de Venezuela, p. 206"
+  dominios: [transmision, lengua, tabu, cosmologia]
+  agentes_relacionados: [Bana-mana]
+  forma_transmision: genealogia_recitada
+  restringido: true
+  implicacion_simulacion: >
+    Confirma con fuente concreta lo que CULTURA_CAQUETIA.md §5 ya
+    proponía como reconstrucción ("los nombres de los muertos... solo se
+    pronuncian en el contexto ritual del recuerdo") — sube de
+    [reconstruido] a comparanda atestiguada directa. La restricción de
+    acceso más severa del corpus protege una PALABRA, no una técnica.
+
+- id: transmision-022
+  contenido: >
+    Vansina distingue mensajes orales "memorizados" (fórmula fija, no se
+    puede alterar el orden de palabras) de mensajes "libres"
+    (se repite el contenido, no la forma exacta) — la primera categoría
+    resiste la deriva; la segunda se parafrasea con cada repetición.
+  fuente: reconstruido
+  referencia: "Vansina, Jan (1985), Oral Tradition as History, Univ. of Wisconsin Press"
+  dominios: [transmision, teoria]
+  agentes_relacionados: []
+  forma_transmision: cancion
+  restringido: false
+  implicacion_simulacion: >
+    Marco teórico central del ensayo: la fidelidad de un saber depende de
+    su FORMA (fija vs. libre), no de su importancia. Debería guiar el
+    diseño de la métrica de "eco" — no medir con el mismo criterio una
+    canción formulaica que un consejo en prosa libre.
+
+- id: transmision-023
+  contenido: >
+    Ong sostiene que las culturas orales dependen de fórmulas, ritmo y
+    repetición para conservar el conocimiento —epítetos fijos, pares
+    antitéticos, clichés rítmicos— porque el pensamiento oral es
+    "agregativo, no analítico": la memoria humana retiene bloques
+    prefabricados con fidelidad, no argumentos analíticos sueltos.
+  fuente: reconstruido
+  referencia: "Ong, Walter J. (1982), Orality and Literacy, Methuen"
+  dominios: [transmision, teoria, lengua]
+  agentes_relacionados: []
+  forma_transmision: cancion
+  restringido: false
+  implicacion_simulacion: >
+    Justifica por qué las canciones de Wama-sha y la genealogía cantada
+    (areíto) deberían ser las formas de MÁXIMA fidelidad medible en la
+    simulación, y por qué el relato libre de Bana-mana es estructuralmente
+    la forma más frágil del elenco — no por casualidad narrativa sino por
+    ausencia del andamiaje formulaico que las otras formas sí tienen.
+
+# ══════════════════════════════════════════════════════════════════
+# III. EL EXPERIMENTO BANA-MANA (diseño, no implementado)
+# ══════════════════════════════════════════════════════════════════
+
+- id: transmision-024
+  contenido: >
+    El evento ofrenda_ancestros_anochecer (curiana_state.py) ya pone a
+    Bana-mana frente a testigos infantiles con una frase de diseño
+    explícita: "los niños escuchan los nombres que un día tendrán que
+    repetir ellos". Es, sin saberlo el propio código, una hipótesis de
+    transmisión ya formulada y lista para medirse.
+  fuente: canon-simulacion
+  referencia: "curiana_state.py::EVENTOS_COTIDIANOS (ofrenda_ancestros_anochecer); CANON_TIERRA.md"
+  dominios: [transmision, historia_oral, diseño_simulacion]
+  agentes_relacionados: [Bana-mana, Sha, Nubi, Piru, Buco, Tawi]
+  forma_transmision: genealogia_recitada
+  restringido: false
+  implicacion_simulacion: >
+    Propuesta de medición concreta (ver anexo del ensayo): en turnos
+    posteriores al evento, buscar si algún agente que solo PRESENCIÓ la
+    ofrenda (no Bana-mana mismo) vuelve a nombrar esos ancestros sin que
+    él esté presente. Si ocurre, ese agente es el heredero de facto que
+    Bana-mana teme no encontrar — producido por el run, no narrado por
+    encima de él. Si nunca ocurre en un run largo, el resultado también es
+    válido: el saber murió con él, y el turno exacto en que se dijo por
+    última vez queda registrado.
+
+# ══════════════════════════════════════════════════════════════════
+# IV. REFUERZO — Amodio & Pérez 2006 (leído completo, 2ª pasada)
+# ══════════════════════════════════════════════════════════════════
+
+- id: transmision-025
+  contenido: >
+    El currículo masculino wayuu tiene hitos de edad concretos: desde los
+    5-6 años el tío materno lleva consigo al sobrino; a los 8-9 se otorgan
+    responsabilidades reales (pastoreo); a los 10-11 empiezan a domar; a
+    los 12 ya son jinetes expertos. "Los niños aprenden acompañando a sus
+    padres o adultos de la familia", y el cálculo se aprende contando
+    cabezas de ganado, tramas de tejido y siembra del conuco. La historia
+    viaja cantada desde la infancia: "por intermedio de canciones, se le
+    enseña sobre sus antepasados, guerras, orígenes".
+  fuente: atestiguado
+  referencia: "Amodio y Pérez (2006), Las pautas de crianza del pueblo wayuu, UNICEF, p. 40 (cita a González 1973)"
+  dominios: [transmision, curriculo_edad, genero, comparanda_wayuu]
+  agentes_relacionados: [Nubi, Buco, Daru, Dare-nu, Piri]
+  forma_transmision: aprendizaje_oficio
+  restringido: false
+  implicacion_simulacion: >
+    Ancla con fuente directa la matriz edad × saber del ensayo (§2): las
+    edades de los niños Tier III (7-15) caen exactamente en la franja de
+    "responsabilidad creciente acompañando adultos" del modelo wayuu.
+
+- id: transmision-026
+  contenido: >
+    La cultura wayuu nombra las etapas de la vida como categorías léxicas:
+    joüuu (hasta el destete), tepichi (1-5 años), jintüloa/jintülü (6-12),
+    jimaüai/majaüyülü (12-15); y en la secuencia masculina adulta jimai
+    (18), palalaichi (25), lalulaichi (30, "el que está cogiendo el camino
+    de la vejez"), laulaichon (anciano). La etapa vital no es solo un hecho
+    biológico: tiene nombre, y cambiar de etapa es cambiar de palabra.
+  fuente: atestiguado
+  referencia: "Amodio y Pérez (2006), pp. 23-24"
+  dominios: [transmision, curriculo_edad, lengua, comparanda_wayuu]
+  agentes_relacionados: []
+  forma_transmision: consejo
+  restringido: false
+  implicacion_simulacion: >
+    Sugerencia léxica directa para la simulación: si los agentes acuñaran o
+    usaran términos caquetíos de etapa vital (el equivalente de
+    jintüloa/jimai), la promoción de tier de la Opción B de CANON_TIERRA.md
+    tendría correlato lingüístico observable — el cambio de etapa se oiría
+    en cómo la comunidad nombra al agente.
+
+- id: transmision-027
+  contenido: >
+    El padre y el tío materno son los actores principales del
+    entrenamiento wayuu, y es el tío materno quien puede dirigir la
+    educación de un sobrino hacia una especialización (palabrero,
+    dirigente, comerciante) según las aptitudes que detecte en él. La
+    relación maestro-aprendiz ideal combina respeto y confianza, "sobre
+    todo cuando se trata del tío o la tía maternos".
+  fuente: atestiguado
+  referencia: "Amodio y Pérez (2006), pp. 40-41"
+  dominios: [transmision, matrilinealidad, curriculo_edad, comparanda_wayuu]
+  agentes_relacionados: [Chiriguare, Chiri-ko, Nabaraka, Raka-bi]
+  forma_transmision: aprendizaje_oficio
+  restringido: false
+  implicacion_simulacion: >
+    Valida con fuente directa dos díadas ya existentes en el elenco que son
+    exactamente avunculares: Chiriguare→Chiri-ko (sobrino) y
+    Nabaraka→Raka-bi (sobrino aprendiz de comerciante). El canon acertó
+    sin tener aún esta cita; ahora la tiene.
+
+- id: transmision-028
+  contenido: >
+    El encierro puberal femenino wayuu (püülüjütü) transforma a la niña en
+    majayura (mujer joven): las ancianas la despiertan de madrugada para
+    aconsejarla, aprende los nombres de las plantas medicinales "que debe
+    dejar en herencia a sus hijas", recibe educación sexual y normas, y
+    tras cuarenta días puede tocar el telar para refinarse bajo mujeres
+    expertas. La duración depende de la riqueza familiar (de tres días a
+    dos años). El propio rito está regulado por un relato: la historia de
+    La Majayura, la muchacha que quedó encerrada para siempre, "preocupa a
+    las madres de cuidar bien el encierro de las hijas".
+  fuente: atestiguado
+  referencia: "Amodio y Pérez (2006), pp. 44-45, 49-51; converge con Jahn (1927), pp. 208-211"
+  dominios: [transmision, genero, iniciacion, comparanda_wayuu]
+  agentes_relacionados: [Sha, Tawi, Kori, Sha-corie, Paugis-sha]
+  forma_transmision: iniciacion
+  restringido: true
+  implicacion_simulacion: >
+    Dos fuentes independientes con 80 años de distancia (Jahn 1927, Amodio
+    2006) describen el mismo rito — la comparanda más robusta del corpus.
+    Nótese además el detalle meta: la instrucción incluye el mandato de
+    re-transmitir ("dejar en herencia a sus hijas"), y un CUENTO regula la
+    duración del RITO — la tradición oral regulándose a sí misma. El canon
+    caquetío no tiene aún rito de paso femenino; Sha (11), Tawi (10) y
+    Kori (12) están en la edad exacta del umbral.
+
+- id: transmision-029
+  contenido: >
+    Los niños wayuu son llevados a los eventos importantes (velorios,
+    danzas, arreglos de conflictos) y "después, en casa, se les invita a
+    reflexionar sobre el acontecimiento"; y "durante los rituales curativos
+    o los entierros, los niños aprenden los cantos y los gestos que tendrán
+    que repetir una vez adultos". Las abuelas se encargan de que los niños
+    conozcan las cadenas completas de parientes maternos y paternos.
+  fuente: atestiguado
+  referencia: "Amodio y Pérez (2006), pp. 40, 42-43, 45"
+  dominios: [transmision, ritual, genealogia, comparanda_wayuu]
+  agentes_relacionados: [Bana-mana, Sha-corie, Wama-sha, Sha, Nubi, Tawi, Buco, Piru]
+  forma_transmision: genealogia_recitada
+  restringido: false
+  implicacion_simulacion: >
+    Confirmación etnográfica casi literal de la premisa del experimento
+    Bana-mana (transmision-024): el niño-testigo del ritual ES el
+    transmisor futuro en el modelo wayuu documentado. Además aporta el
+    mecanismo de "presenciar + reflexionar en casa" — un segundo pase
+    verbal de la memoria que la simulación podría implementar como
+    refuerzo de exposición en el turno siguiente al rito.
+
+- id: transmision-030
+  contenido: >
+    La vocación chamánica wayuu se transmite por elección de los espíritus
+    aliados (seyuu), comunicada mediante signos o sueños a la chamana, y
+    puede ser legado familiar. La historia de Paurala/Umarala lo narra: el
+    sobrino huérfano criado por su tía piache aprende "fijándose en todas
+    las cosas que hacía su tía", y al asumir el rol cambia de nombre — el
+    del espíritu protector. El mito codifica el rito de paso profesional,
+    incluido el cambio de identidad.
+  fuente: atestiguado
+  referencia: "Amodio y Pérez (2006), pp. 41-42 (cita versión de María Manuela de Cora, 1972)"
+  dominios: [transmision, piazgo, cosmologia, comparanda_wayuu]
+  agentes_relacionados: [Shaboro, Buio-sha]
+  forma_transmision: iniciacion
+  restringido: true
+  implicacion_simulacion: >
+    Refuerza transmision-017 con fuente académica (no solo divulgativa) y
+    añade un dato nuevo utilizable: el CAMBIO DE NOMBRE al asumir el rol.
+    Si Buio-sha llegara a suceder a Shaboro en un run largo, la marca
+    observable del traspaso podría ser léxica — un nombre nuevo acuñado en
+    la ceremonia, medible por el Observer como cualquier neologismo.
+
+# ══════════════════════════════════════════════════════════════════
+# V. EL PALABRERO — Guerra Curvelo / Mincultura (3ª pasada)
+# ══════════════════════════════════════════════════════════════════
+
+- id: transmision-031
+  contenido: >
+    El pütchipü'üi (palabrero) wayuu es el mediador especializado de la
+    palabra: no es juez, ni árbitro, ni abogado — es un negociador que
+    solo acude cuando es convocado, y no dicta sentencia sino que logra
+    que las partes en conflicto determinen ellas mismas una compensación
+    justa. Su justicia es restitutiva (recuperar la armonía), no punitiva.
+    Debe ser pensador, excelente conocedor de la lengua materna, orador y
+    neutral; por regla general solo los tíos maternos (talaula) pueden
+    aspirar al oficio. La etimología condensa el rol: pütchi (palabra) +
+    pü'üi (piernas → oficio): "el que lleva consigo a todas partes la
+    palabra". El sistema normativo que aplica es Patrimonio Cultural
+    Inmaterial de la Humanidad (UNESCO, 2010).
+  fuente: atestiguado
+  referencia: "Mincultura Colombia, cuadernillo Pütchipü'üi (investigación de Guerra Curvelo 2002); UNESCO ICH 00435; fuentes_caquetios/GuerraCurvelo_ref_2023_Cuadernillo_Sistema_Normativo_Wayuu_Palabrero.pdf"
+  dominios: [transmision, derecho_consuetudinario, lengua, comparanda_wayuu]
+  agentes_relacionados: [Manaure, Nubiri-sha]
+  forma_transmision: consejo
+  restringido: false
+  implicacion_simulacion: >
+    La palabra caquetía pütchi ("mensaje / palabra sagrada", cognado
+    wayunaiki ya en CULTURA_CAQUETIA.md §5) es la raíz exacta del oficio:
+    el palabrero es "el que porta la pütchi". La Curiana no tiene esta
+    figura — ver transmision-034 para la pregunta de diseño.
+
+- id: transmision-032
+  contenido: >
+    El proceso del palabrero recorre cinco piezas con nombre wayuu: la ley
+    Anaa Akuaitpaa (principio de reparación: toda ofensa obliga a
+    compensación, no a castigo), la palabra Pütchikalü (de origen mítico:
+    la lluvia Juyaa fecundando a la tierra Mma es la metáfora de la
+    palabra que da sentido al mundo), la compensación simbólica Walaa
+    (collares que alternan piedras preciosas con conchas y cerámica,
+    aves ornamentales sin valor económico, sangre animal sacrificada en
+    lugar de la sangre humana que se evitó derramar), el reequilibrio
+    Anoutaa (cuando se paga el tributo material acordado) y la
+    reconciliación definitiva Anajirawaa ("hacemos este sacrificio porque
+    la paz de la comunidad es más importante que nosotros"). El símbolo
+    del oficio es el bastón (paliisepai/waraaralü), una planta trepadora
+    enderezada artesanalmente: rectitud sin perder flexibilidad, con el
+    que el palabrero dibuja símbolos en la tierra mientras escucha.
+  fuente: atestiguado
+  referencia: "Mincultura Colombia, cuadernillo Pütchipü'üi (Guerra Curvelo 2002)"
+  dominios: [transmision, derecho_consuetudinario, cosmologia, comparanda_wayuu]
+  agentes_relacionados: [Nubiri-sha, Sha-corie]
+  forma_transmision: consejo
+  restringido: false
+  implicacion_simulacion: >
+    Refina transmision-019 (precio de sangre/lágrimas en Jahn): el derecho
+    consuetudinario arahuaco no es solo tarifa — es un proceso ritual
+    completo con vocabulario propio y compensación en dos monedas (bienes
+    + símbolos). Los eventos de disputa de la simulación
+    (disputa_vecinos, tensión Biro-ko/Tariwa) hoy se resuelven por
+    autoridad del cacique; el modelo wayuu ofrece la alternativa
+    documentada: resolución por mediación donde las PARTES acuerdan.
+
+- id: transmision-033
+  contenido: >
+    La contraparte femenina del palabrero es la ouutsü ("ojo femenino",
+    mujer visionaria): él trabaja sobre la palabra y el escuchar, ella
+    sobre la visión y el observar. La ouutsü media entre las tres
+    dimensiones de la realidad wayuu (ii, lo remoto-original; akuwa'ipa,
+    lo natural-visible; pulasü, lo oculto-invisible) y su cuarta esfera
+    son los sueños: muchos de los mitos wayuu más importantes "han sido
+    extraídos de sueños comunicados por las mujeres Ouutsü", cuyas
+    figuras recurrentes se vuelven arquetipos colectivos. La
+    interpretación de sueños es cohesión social y refuerzo normativo:
+    "un pueblo donde abundan los conflictos es un pueblo con una memoria
+    colectiva frágil".
+  fuente: atestiguado
+  referencia: "Mincultura Colombia, cuadernillo Pütchipü'üi (Guerra Curvelo 2002)"
+  dominios: [transmision, piazgo, cosmologia, genero, comparanda_wayuu]
+  agentes_relacionados: [Shaboro, Buio-sha, Paugis-sha]
+  forma_transmision: relato
+  restringido: true
+  implicacion_simulacion: >
+    Dato mayor para la simulación: en el modelo wayuu los sueños GENERAN
+    mitos — el ciclo sueño → interpretación pública → relato → arquetipo
+    es un mecanismo de PRODUCCIÓN de tradición oral, no solo de
+    conservación. Buio-sha ya tiene sueños literales; si sus
+    interpretaciones públicas cristalizaran en relatos que otros repiten,
+    la simulación estaría produciendo mitología nueva medible con la
+    misma maquinaria del eco.
+
+- id: transmision-034
+  contenido: >
+    El palabrero existe en una sociedad SIN caciques: la fuente subraya
+    que los tíos maternos wayuu "distan mucho de ser gobernantes
+    autoritarios como los caciques de otras culturas". La sociedad wayuu
+    es segmentaria (clanes matrilineales autónomos); la caquetía fue un
+    cacicazgo jerárquico teocrático. Donde no hay jefe, la palabra tiene
+    especialista propio; donde hay cacicazgo, la función mediadora vive
+    dentro del jefe. El Manaure histórico del contacto — el estadista que
+    pactó con los españoles para preservar a su pueblo — ejerció
+    exactamente el repertorio del palabrero (negociar, compensar,
+    reconciliar) pero desde la autoridad, no desde la neutralidad.
+  fuente: reconstruido
+  referencia: "Contraste estructural: cuadernillo Mincultura (Guerra Curvelo 2002) vs. CULTURA_CAQUETIA.md §6 (cacicazgo); Castellanos c.1589 sobre el Manaure histórico"
+  dominios: [transmision, derecho_consuetudinario, politica, comparanda_wayuu]
+  agentes_relacionados: [Manaure, Shaboro, Nubiri-sha]
+  forma_transmision: consejo
+  restringido: false
+  implicacion_simulacion: >
+    PREGUNTA DE DISEÑO ABIERTA (no resolver aquí): ¿la Curiana concentra
+    la función de palabrero en Manaure (variante cacical: su perfil de
+    "calculador, redistribuidor, mediador" ya la incluye), o existe un
+    mediador de la palabra separado del poder, aún sin personaje? La
+    segunda opción abriría un rol nuevo en el elenco — alguien neutral
+    que "porta la pütchi" entre familias en disputa — y una tensión
+    dramática natural con la autoridad de Manaure. Alimenta el programa
+    de investigación wayuu (investigacion/PROGRAMA_WAYUU.md).

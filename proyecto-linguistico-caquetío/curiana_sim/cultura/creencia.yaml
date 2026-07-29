@@ -1,0 +1,406 @@
+# creencia.yaml — Corpus cultural: ¿En qué creía el caquetío?
+# Sesión 3/4 del programa "corpus cultural" del proyecto Curiana.
+# Religión, muerte, piache y sistema onírico del caquetío del Golfete de Coro (s. XIV-XV).
+#
+# Etiquetas de fuente (ver ensayo 03_creencia_caquetia.md):
+#   atestiguado   - crónica o académico con cita concreta
+#   reconstruido  - comparativa arahuaca (wayuu, etc.) con comparanda citada
+#   retro-abstraido - tradición viva posterior (culto María Lionza) / intuición local
+#   hipotetico    - plausible sin respaldo
+# En duda, DEGRADAR. No dupliques lo que CULTURA_CAQUETIA.md §1 ya cubre.
+
+# ============================================================
+# EL PIACHE COMO INSTITUCIÓN
+# ============================================================
+
+- id: creencia-001
+  contenido: >
+    "Boratio" (también borattio) es la palabra caquetía atestiguada para el
+    médico-hechicero, el oficio del piache. Es la forma caquetía que la
+    simulación debería privilegiar sobre préstamos de lenguas hermanas (p.ej.
+    el wayuu "oütsü") para nombrar a Shaboro y su función.
+  fuente: atestiguado
+  referencia: "Oviedo y Valdés, Historia general, apéndice t. IV (en Jahn 1927:213 n.29); Arcaya 1920:116"
+  dominios: [creencia, lengua]
+  agentes_relacionados: [Shaboro, Buio-sha]
+  implicacion_simulacion: >
+    Si un agente necesita la palabra para "piache/adivino", que acuñe o use
+    "boratio", no un préstamo wayuu.
+
+- id: creencia-001b
+  contenido: >
+    El "díao" (diao; tiao entre los caquetíos de Apure) es el cacique principal
+    que es a la vez boratio: no un simple médico-hechicero, sino aquel cuyos
+    poderes mágicos le dan el carácter de jefe. Entre los caquetíos de Coro,
+    gobernar y mediar con lo sobrenatural eran la misma dignidad; el díao era
+    "más respetado y temido como hechicero que obedecido como jefe".
+  fuente: atestiguado
+  referencia: "Oviedo y Valdés t. II p.299; Arcaya 1920:48,116,118 (monarquía teocrática caquetía en formación)"
+  dominios: [creencia, poder]
+  agentes_relacionados: [Manaure, Shaboro]
+  implicacion_simulacion: >
+    Es el respaldo documental directo del modelo teocrático de Manaure (canon
+    §6), independiente del dato de las tormentas: cacique = piache supremo.
+
+- id: creencia-002
+  contenido: >
+    El piache trabaja el sueño como terreno propio: diagnostica, prescribe y
+    pronostica a través de él, guiado por espíritus auxiliares que le revelan en
+    trance la causa del mal y su remedio. El sueño no es adorno: es el lugar
+    donde se cura.
+  fuente: reconstruido
+  referencia: "Perrin 1995, chamanismo wayuu (oütsü); analogía arahuaca"
+  dominios: [creencia, medicina]
+  agentes_relacionados: [Shaboro, Buio-sha]
+  implicacion_simulacion: >
+    Shaboro y Buio-sha ya "leen sueños"; el marco lo vuelve central, no decorativo.
+
+- id: creencia-003
+  contenido: >
+    La parafernalia del piache incluye tabaco (masticado o fumado), aspersión de
+    licor, cantos y su veneno-medicina (urari). Entre los pueblos vecinos el
+    piache-mohán cierra la casa para el rito, cobra en tabaco y bebida, y recibe
+    a un espíritu-serpiente durante el trance.
+  fuente: reconstruido
+  referencia: "Jahn 1927:299-301,380-385 (piaches ayomán y timote, pueblos vecinos); Perrin 1995 (tabaco/chimó wayuu)"
+  dominios: [creencia, medicina]
+  agentes_relacionados: [Shaboro, Buio-sha]
+  implicacion_simulacion: >
+    El animal del piache en el canon es el buio (serpiente espíritu): coherente
+    con el espíritu-serpiente del trance regional.
+
+- id: creencia-004
+  contenido: >
+    El piache se forma con ayuno prolongado. En la región (Nueva Segovia /
+    Barquisimeto) el médico-hechicero adquiría su carácter "mediante prolongado
+    ayuno" y se reconocía porque traía "los cabellos muy largos como una mujer".
+    El llamado marca a la persona, no se elige; el aprendiz aprende ayunando,
+    leyendo sueños y reconociendo plantas junto al piache mayor.
+  fuente: atestiguado
+  referencia: "Arcaya 1920:101 (Relación de Nueva Segovia); Perrin 1995 (iniciación oütsü, carácter sagrado)"
+  dominios: [creencia]
+  agentes_relacionados: [Buio-sha, Shaboro]
+  implicacion_simulacion: >
+    Refuerza el arco de Buio-sha (elegida por sus sueños, formada por Shaboro) y
+    da rasgo físico atestiguado: el piache lleva el pelo muy largo.
+
+- id: creencia-004b
+  contenido: >
+    Se ayunaba también por motivos rituales fuera del piazgo: antes de la guerra
+    o de "sacrificar o hacer alguna cosa de mucha importancia", el jefe de la
+    familia y todos los suyos (menos los niños) ayunaban tan rigurosamente que
+    quedaban "muy flacos y descoloridos".
+  fuente: atestiguado
+  referencia: "Oviedo y Valdés t. II p.329; Arcaya 1920:118"
+  dominios: [creencia, calendario]
+  agentes_relacionados: [Chiriguare, Manaure, Shaboro]
+  implicacion_simulacion: >
+    El ayuno colectivo es un marcador ritual disponible antes de empresas graves
+    (guerra, expedición, gran ceremonia).
+
+# ============================================================
+# EL ALMA, EL SUEÑO Y LA ENFERMEDAD
+# ============================================================
+
+- id: creencia-005
+  contenido: >
+    Soñar no es dormir. En el sueño, el alma (barsure) sale del cuerpo y anda de
+    noche por el mundo de los espíritus y los muertos; lo soñado pesa tanto como
+    lo vivido y puede traer un aviso.
+  fuente: reconstruido
+  referencia: "Perrin 1995; Paz Reverol 2017 (alapüjawaa vs atunkawaa, aa'in wayuu)"
+  dominios: [creencia, muerte]
+  agentes_relacionados: [Shaboro, Buio-sha, Bana-mana]
+  implicacion_simulacion: >
+    Da marco a "el barsure viaja en los sueños" que el canon ya enuncia (§4 noche).
+
+- id: creencia-006
+  contenido: >
+    La enfermedad es el alma que se aleja del cuerpo o vaga demasiado tiempo;
+    curar es negociar su regreso. La muerte es la partida definitiva del alma.
+    El niño enferma fácil porque su alma aún no está asentada en el cuerpo.
+  fuente: reconstruido
+  referencia: "Perrin 1995; Paz Reverol 2017, analogía wayuu del aa'in"
+  dominios: [creencia, medicina, muerte]
+  agentes_relacionados: [Shaboro, Buio-sha, Paugis-sha]
+  implicacion_simulacion: >
+    Precisa la intuición del canon sobre el barsure (enfermar = perder el alma).
+
+- id: creencia-007
+  contenido: >
+    Los males se dividen en comunes -que ceden con plantas y remedios- y males
+    del espíritu, que exigen la intervención del piache y cuyo tratamiento se
+    revela en el sueño. La curación sigue un principio de semejanza: lo que se
+    parece al mal lo cura.
+  fuente: reconstruido
+  referencia: "Paz Reverol 2017 (ayülee vs wanülüü; homología wayuu)"
+  dominios: [creencia, medicina]
+  agentes_relacionados: [Paugis-sha, Shaboro, Buio-sha]
+  implicacion_simulacion: >
+    Reparte trabajo: Paugis-sha (partera/herbolaria) atiende lo común; Shaboro lo del espíritu.
+
+# ============================================================
+# LOS MUERTOS, EL DUELO Y EL SEGUNDO ENTIERRO
+# ============================================================
+
+- id: creencia-008
+  contenido: >
+    Los muertos recientes son peligrosos: rondan de noche -sobre todo al
+    atardecer- y pueden robar el alma de los vivos, en especial de los niños.
+    Los muertos antiguos y queridos, en cambio, protegen y avisan en sueños. El
+    mismo muerto es amenaza y guardián según se lo atienda.
+  fuente: reconstruido
+  referencia: "Paz Reverol 2017 (yoluja wayuu, ambivalentes)"
+  dominios: [creencia, muerte]
+  agentes_relacionados: [Bana-mana, Paugis-sha, Shaboro]
+  implicacion_simulacion: >
+    Da voluntad a los ancestros del canon: no son sólo memoria, son agentes.
+
+- id: creencia-008b
+  contenido: >
+    Los muertos eran temidos como seres peligrosos, dispuestos al mal y prontos a
+    obedecer los conjuros de los hechiceros. La muerte misma se atribuía a menudo
+    a conjuros mágicos. El alma sobrevivía y, tras el fallecimiento, se quedaba un
+    tiempo junto al cuerpo, revoloteando alrededor de la sepultura o de la choza,
+    o recorriendo el bosque y la sabana.
+  fuente: atestiguado
+  referencia: "Arcaya 1920:104-108 (indios de Coro/Falcón, síntesis de crónicas)"
+  dominios: [creencia, muerte]
+  agentes_relacionados: [Shaboro, Bana-mana]
+  implicacion_simulacion: >
+    Respaldo falconiano del temor a los muertos; el piache es quien controla ese
+    terreno peligroso. La muerte por brujería es fuente de conflicto/acusación.
+
+- id: creencia-008c
+  contenido: >
+    No había culto comunal de ídolos ni templos: las ideas religiosas se
+    reducían a la creencia en seres sobrenaturales, que no adoraba la tribu
+    entera, sino que invocaban individuos especializados (los piaches). Al muerto
+    se le enterraba con todos sus enseres y equipaje "para que no le falte nada
+    en la otra vida".
+  fuente: atestiguado
+  referencia: "Arcaya 1920:103,110,117 (indios de Coro/Falcón)"
+  dominios: [creencia, muerte]
+  agentes_relacionados: [Shaboro]
+  implicacion_simulacion: >
+    Confirma el canon ("no es una religión de templos y dogmas"). El ajuar
+    funerario y la provisión para el más-allá son atestiguados.
+
+- id: creencia-009
+  contenido: >
+    Hay una tierra de los muertos, con topónimo propio, adonde va el alma; la
+    vida allí prolonga la terrenal (tierras, ganado o pesca, familia) y no hay
+    premio ni castigo por la conducta en vida.
+  fuente: reconstruido
+  referencia: "Paz Reverol 2018; Jahn 1927:229 (Jepira/Cabo de la Vela, guajiro)"
+  dominios: [creencia, muerte]
+  agentes_relacionados: [Bana-mana]
+  implicacion_simulacion: >
+    Los nombres (Jepira) son wayuu: NO caquetizar por decreto. Que un piache
+    acuñe la forma caquetía en un turno.
+
+- id: creencia-010
+  contenido: >
+    El funeral caquetío del cacique común (atestiguado por Oviedo): se juntan los
+    indios del pueblo y las comarcas vecinas y lo lloran de noche "en tono alto y
+    cantando, y diciendo en aquel cantar lo que hizo mientras vivió". Al día
+    siguiente queman el cadáver, sacan los huesos del fuego antes de que se hagan
+    ceniza, los machacan entre dos piedras hasta polvo, y lo beben en una
+    mazamorra de maíz. Beber los huesos molidos es la mayor honra fúnebre.
+  fuente: atestiguado
+  referencia: "Oviedo y Valdés t. II p.299-300; Arcaya 1920:116"
+  dominios: [creencia, muerte]
+  agentes_relacionados: [Bana-mana, Sha-corie]
+  implicacion_simulacion: >
+    El canto fúnebre que recita las hazañas del muerto es el oficio de Bana-mana.
+    El caquetío es, atestiguadamente, endocanibalismo de los huesos, no entierro.
+
+- id: creencia-010b
+  contenido: >
+    El funeral del díao (el cacique-piache) es distinto y de dos tiempos, y es un
+    SEGUNDO ENTIERRO caquetío atestiguado. Primer tiempo: cuelgan el cuerpo en
+    una hamaca sobre brasas vivas que arden día y noche hasta desecarlo -"no le
+    queda sino el cuero y los huesos"-; luego lo dejan en hamaca nueva en su casa
+    "como si estuviesse un hombre echado durmiendo". Nadie vuelve a vivir en esa
+    casa; el hijo y sucesor le renueva la hamaca por muchos años.
+  fuente: atestiguado
+  referencia: "Oviedo y Valdés t. II p.300; Arcaya 1920:117"
+  dominios: [creencia, muerte, poder]
+  agentes_relacionados: [Manaure, Bana-mana]
+  implicacion_simulacion: >
+    Es el respaldo directo de "guardar los huesos de los mayores" (canon §1): un
+    rito específicamente caquetío, no sólo analogía wayuu.
+
+- id: creencia-010c
+  contenido: >
+    Segundo tiempo del funeral del díao, años después: cuando "por discurso de
+    tiempo, a cabo de muchos años, el cuerpo se descoyunta", se hace un
+    llamamiento general por toda la tierra y las comarcas anunciando que "quieren
+    beber los huesos del díao". Vienen todos, pintados de bija y jagua (busera) y
+    con sus mejores joyas de oro, y beben dos o tres días seguidos el macato (vino
+    de maíz) con los huesos molidos del díao echados en él.
+  fuente: atestiguado
+  referencia: "Oviedo y Valdés t. II p.300; Arcaya 1920:117-118"
+  dominios: [creencia, muerte, poder]
+  agentes_relacionados: [Manaure, Bana-mana, Nubiri-sha]
+  implicacion_simulacion: >
+    Evento ritual mayor, convocante de toda la red (aliados, comarcas): gancho
+    narrativo y político de primer orden.
+
+- id: creencia-010d
+  contenido: >
+    La cosmovisión wayuu ilumina el POR QUÉ del rito atestiguado: el muerto se
+    entierra dos veces, y en el segundo velorio los huesos se limpian (empezando
+    por el cráneo) y pasan al osario común; sólo entonces el alma pierde su
+    individualidad y se funde con los ancestros. El caquetío atestiguado bebe los
+    huesos; el wayuu los redeposita; ambos cierran el duelo disolviendo al muerto
+    individual en el colectivo de los mayores.
+  fuente: reconstruido
+  referencia: "Perrin 1992; Paz Reverol 2018 (segundo velorio wayuu); corrobora el rito atestiguado por Oviedo/Arcaya"
+  dominios: [creencia, muerte]
+  agentes_relacionados: [Bana-mana, Paugis-sha, Sha-corie]
+  implicacion_simulacion: >
+    Aporta la teoría del alma (individual -> colectiva) que Oviedo no explica.
+
+- id: creencia-011
+  contenido: >
+    Quien manipula los huesos en el segundo entierro queda sujeto a tabúes
+    severos (vigilias sin dormir, no tocarse el cuerpo con las manos, no comer
+    por su propia mano) para no ser poseído por el muerto. Suelen hacerlo mujeres
+    o ancianos, por su relación con las fuerzas de la muerte y la sequía.
+  fuente: reconstruido
+  referencia: "Paz Reverol 2018 (exhumadora wayuu ligada a Pulowi; tabúes)"
+  dominios: [creencia, muerte]
+  agentes_relacionados: [Paugis-sha, Sha-corie, Bana-mana]
+  implicacion_simulacion: >
+    Da a las ancianas (Paugis-sha, Sha-corie) un dominio ritual propio y temido.
+
+- id: creencia-012
+  contenido: >
+    El destino de los huesos y el ciclo del agua se enlazan: en varios pueblos de
+    la región las cenizas o los huesos de los muertos se asocian a la formación
+    de las nubes y la llegada de las buenas lluvias. Los mayores alimentan la
+    lluvia que hace germinar la semilla.
+  fuente: reconstruido
+  referencia: "Paz Reverol 2018 citando Civrieux 1980 (cumanagotos); analogía regional"
+  dominios: [creencia, muerte, calendario]
+  agentes_relacionados: [Corie-ko, Bana-mana, Shaboro]
+  implicacion_simulacion: >
+    Conecta muerte -> lluvia -> siembra con el ciclo seca/lluvias del canon (§2).
+
+# ============================================================
+# LAS FUERZAS DEL CIELO Y EL CALENDARIO RITUAL
+# ============================================================
+
+- id: creencia-013
+  contenido: >
+    Gobernar la Curiana y mediar con el cielo son la misma función. Al cacique
+    teocrático se le atribuye poder sobre las lluvias y las tormentas; su
+    legitimidad depende de que el cielo le obedezca ante la comunidad.
+  fuente: atestiguado
+  referencia: "crónicas del contacto sobre Manaure; canon CULTURA_CAQUETIA.md §1,§6"
+  dominios: [creencia, poder, calendario]
+  agentes_relacionados: [Manaure, Shaboro]
+  implicacion_simulacion: >
+    Ya en el canon; se incluye para anclar el calendario ritual al poder.
+
+- id: creencia-014
+  contenido: >
+    El calendario ritual sigue las dos estaciones. En la seca (Tiempo de Viento),
+    con gente reunida y comida, caen fiestas, ritos de iniciación de jóvenes y el
+    recitado de hazañas. En las lluvias (Tiempo de Siembra) se pide a las primeras
+    aguas que caigan buenas y no destructoras, y hay más tiempo para duelos,
+    ceremonias y transmisión oral.
+  fuente: reconstruido
+  referencia: "canon §2; Jahn 1927:384 (Bajada del Ches en enero, pueblos vecinos, como paralelo de rito estacional)"
+  dominios: [creencia, calendario]
+  agentes_relacionados: [Shaboro, Manaure, Bana-mana]
+  implicacion_simulacion: >
+    El ritual de las primeras lluvias y la fiesta de fin de seca son los dos
+    polos del año religioso.
+
+# ============================================================
+# RETRO-ABSTRACCIÓN: TRAZAS DE SUSTRATO EN EL CULTO DE MARÍA LIONZA
+# (SIEMPRE retro-abstraido; NUNCA ascender a reconstruido)
+# DECISIÓN DE USO (2026-07-15): la Vía B se emplea SOLO como inspiración
+# estética (textura, atmósfera) y como fuente de patrones geográficos
+# (qué lugares del territorio la tradición viva trata como cargados).
+# Nada de aquí entra como doctrina, rito ni vocabulario del canon.
+# ============================================================
+
+- id: creencia-015
+  contenido: >
+    Un accidente del paisaje puede ser un dueño-espíritu con voluntad, que veda
+    la caza, el cultivo o el sexo en su recinto y castiga la transgresión. En el
+    culto de María Lionza la montaña de Sorte -en territorio históricamente
+    caquetío- proyectaba esa sacralidad peligrosa antes de cualquier declaración
+    oficial.
+  fuente: retro-abstraido
+  referencia: "Ferrándiz 1999 (Sorte); traza compatible con los 'espíritus dueños' del canon"
+  dominios: [creencia]
+  agentes_relacionados: [Shaboro, Manaure]
+  implicacion_simulacion: >
+    Un cerro, un manantial o el salinar pueden tener dueño; el piache pide permiso.
+
+- id: creencia-015b
+  contenido: >
+    El valle del Yaracuy era conocido como "Valle de las Damas": Zavala Reyes
+    glosa "Yaracuy" como "indígena del Valle de las Damas. Población" (entrada
+    284) y "Tabicure" como "indio caquetío del valle de las Damas" (entrada
+    232). VERIFICADO contra la fuente; matiz: Yaracuy no SIGNIFICA "valle de las
+    damas", nombra al indígena de ese valle. La entrada 232 confirma además
+    presencia caquetía en el valle.
+  fuente: atestiguado
+  referencia: "Zavala Reyes 2015, entradas 232 y 284 (Boletín Antropológico Nº 89, ULA)"
+  dominios: [creencia, geografia, lengua]
+  agentes_relacionados: [Shaboro, Bana-mana]
+  implicacion_simulacion: >
+    Patrón de nomenclatura: los lugares cargados llevan nombres descriptivos
+    propios; la simulación debería acuñar los suyos con morfología caquetía
+    (locativos -ana/-bana/-ko). La resonancia con "Yara" (nombre indígena de
+    María Lionza en el culto, Ferrándiz 1999) es solo eco estético,
+    retro-abstraído, no dato.
+
+- id: creencia-016
+  contenido: >
+    A los muertos y a los espíritus hay que alimentarlos con ofrendas para que
+    permanezcan favorables; abandonarlos acarrea desgracia. Es una reciprocidad
+    transaccional con el más allá, no una devoción abstracta.
+  fuente: retro-abstraido
+  referencia: "Ferrándiz 1999 (alimentar a los hermanos/espíritus); converge con reciprocidad wayuu (Paz Reverol 2018) y con el canon"
+  dominios: [creencia, muerte]
+  agentes_relacionados: [Bana-mana, Paugis-sha]
+  implicacion_simulacion: >
+    La ofrenda del anochecer (canon §4) es un pago, no un gesto: si falta, el
+    muerto reclama.
+
+- id: creencia-017
+  contenido: >
+    En el culto de María Lionza -en territorio caquetío del Yaracuy- se venera
+    una Corte India de caciques históricos, y entre ellos figura un Cacique
+    Manaure. ADVERTENCIA DE MÉTODO: esa Corte es una construcción nacionalista
+    del siglo XX (cortes de espíritus de los años 1950, arte indigenista de la
+    dictadura), NO un recuerdo caquetío continuo. Es un eco moderno, no una fuente
+    del sustrato.
+  fuente: retro-abstraido
+  referencia: "Ferrándiz 1999; Fernández Quintana 2016; Pollak-Eltz 1972 (Corte India, invención s. XX)"
+  dominios: [creencia, poder]
+  agentes_relacionados: [Manaure]
+  implicacion_simulacion: >
+    NO usar como evidencia de que el nombre Manaure tuviera carga sacra en el
+    s. XV. Es una nota al pie, no un dato reconstruible.
+
+- id: creencia-018
+  contenido: >
+    Cautela de método sobre el culto de María Lionza: la posesión espiritista, el
+    vocabulario de "fluidos", la reencarnación (kardecismo), el sacrificio de
+    animales y el tambor (aportes afroamericanos) y la identificación con la
+    Virgen (capa católica) son capas fechables POSTERIORES a la conquista. No son
+    candidatas a retro-abstracción del sustrato caquetío.
+  fuente: retro-abstraido
+  referencia: "Ferrándiz 1999; Clarac de Briceño 1970; Fernández Quintana 2016"
+  dominios: [creencia]
+  agentes_relacionados: []
+  implicacion_simulacion: >
+    Marca explícita de qué NO importar. Mantiene impecable la frontera
+    reconstruido/retro-abstraido.
