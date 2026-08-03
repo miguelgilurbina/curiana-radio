@@ -1,9 +1,9 @@
 ---
 tipo: nota-viva
 ambito: decisiones que solo Miguel puede tomar
-abiertas: 7
-resueltas: 1
-actualizado: 2026-07-29
+abiertas: 6
+resueltas: 2
+actualizado: 2026-08-03
 ---
 
 # Decisiones abiertas
@@ -25,7 +25,7 @@ actualizado: 2026-07-29
 | D4 | Segundo sobrino de Manaure | D1 | 🔴 abierta |
 | D5 | Política ortográfica c/k | F2 | 🔴 abierta |
 | D6 | Merge del PR #30 | todo lo demás | ✅ **resuelta** (2026-07-29) |
-| D7 | Prelación entre glosa histórica e identificación científica | F3, F4, F6 | 🟡 nueva |
+| D7 | Prelación entre glosa histórica e identificación científica | F3, F4, F6 | ✅ **resuelta** (2026-08-03) |
 | D8 | ¿El repo archiva copias de las fuentes externas? | F10, trazabilidad | 🟡 nueva |
 
 ---
@@ -142,31 +142,6 @@ consecuencias públicas.
 
 ---
 
-## D7 — 🟡 Prelación entre glosa histórica e identificación científica moderna
-
-*(nueva, 2026-07-29 — surgida al inventariar [[zavala-reyes-2015]])*
-
-**Qué hay que decidir.** Cuando una fuente histórica y una fuente científica
-moderna glosan la misma palabra de forma distinta, ¿cuál manda?
-
-Dos casos concretos, ya en el dato:
-
-- **`cunaro`** — Zavala (glosario): *"Pez del golfete de Coro. Promicops Guasa"*.
-  Sistema Venezolano de Datos de Biodiversidad, vía [[02_ecologia]]: *pargo de
-  altura (Rhomboplites aurorubens)*. Son peces distintos.
-- **`guaranaro`** — Zavala: *"Pez lisa"*. La hoja de fuentes de ecología lo daba
-  por **sin identificar**, y sigue así en el corpus.
-
-**Por qué importa más de lo que parece.** F3, F4 y F6 (Alvarado, Gatschet, Van
-Buurt) van a producir **decenas** de casos así, porque los tres son glosarios con
-identificación taxonómica. Sin política, cada sesión decidirá distinto.
-
-**Opciones.** (a) La glosa histórica manda para el habla y la científica va como
-nota; (b) al revés; (c) se registran ambas con etiquetas separadas
-(`glosa_fuente` / `identificacion_moderna`) y el agente usa la histórica.
-
----
-
 ## D8 — 🟡 ¿El repositorio archiva copias de las fuentes externas?
 
 *(nueva, 2026-07-29 — surgida del inventario de [[INDICE_FUENTES]])*
@@ -192,6 +167,37 @@ DOI/URL en la nota de fuente.
 ---
 
 ## Resueltas
+
+### ✅ D7 — Prelación entre glosa histórica e identificación científica *(2026-08-03)*
+
+**Decisión de Miguel: se registran las dos, en campos separados.**
+
+Cuando una fuente histórica y una identificación científica moderna difieren
+sobre la misma palabra, **ninguna gana**: van en campos distintos.
+
+- **`glosa_fuente`** — lo que dice la fuente histórica, verbatim, con su cita.
+  **Es la que el agente habla**: el caquetío del s. XV nombraba lo que sus
+  hablantes veían, no un taxón linneano.
+- **`identificacion_moderna`** — el taxón actual, cuando exista, como nota
+  auditable. No sustituye a la glosa; la sitúa.
+
+**Por qué así.** Es la misma disciplina que ya rige el lexicón entero: el
+conflicto queda **visible** en vez de resuelto en silencio, y nadie pierde
+información. Zanjarlo a favor de uno de los dos habría borrado dato real en
+cualquiera de las dos direcciones.
+
+**Casos que la estrenan** (los dos que la provocaron, de [[zavala-reyes-2015]]):
+
+| Palabra | `glosa_fuente` | `identificacion_moderna` |
+|---|---|---|
+| `cunaro` | "Pez del golfete de Coro. Promicops Guasa" (Zavala #—) | *Rhomboplites aurorubens*, pargo de altura (SVDB) |
+| `guaranaro` | "Pez lisa" (Zavala) | sin resolver — probablemente *Mugil* sp. |
+
+**Consecuencia operativa.** Las minerías F3/F4/F6/F7 aplican esta política desde
+el primer registro. Los tres son glosarios con identificación taxonómica, así que
+el campo doble es la norma, no la excepción.
+
+---
 
 ### ✅ D6 — Merge del PR #30 *(2026-07-29)*
 
