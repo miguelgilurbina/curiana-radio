@@ -1,7 +1,7 @@
 ---
 tipo: nota-viva
 ambito: decisiones que solo Miguel puede tomar
-abiertas: 6
+abiertas: 8
 resueltas: 2
 actualizado: 2026-08-03
 ---
@@ -27,6 +27,8 @@ actualizado: 2026-08-03
 | D6 | Merge del PR #30 | todo lo demás | ✅ **resuelta** (2026-07-29) |
 | D7 | Prelación entre glosa histórica e identificación científica | F3, F4, F6 | ✅ **resuelta** (2026-08-03) |
 | D8 | ¿El repo archiva copias de las fuentes externas? | F10, trazabilidad | 🟡 nueva |
+| D9 | La glosa del locativo `-bana` | morfología, neologismos de agentes | 🟡 nueva |
+| D10 | Qué hacer con las 13 entradas reclasificadas | F1, canon | 🟡 nueva |
 
 ---
 
@@ -166,6 +168,74 @@ DOI/URL en la nota de fuente.
 
 ---
 
+## D9 — 🟡 La glosa del locativo `-bana`
+
+*(nueva, 2026-08-03 — la levantaron [[gatschet-1885]] y [[van-buurt-2014]] a la vez)*
+
+**Qué hay que decidir.** El proyecto usa `-bana` como locativo *"orilla/borde"*
+(está en `CLAUDE.md`, en las reglas morfológicas, y los agentes lo usan para
+acuñar neologismos). Las dos minerías insulares dan otra cosa:
+
+| Fuente | Glosa | Evidencia |
+|---|---|---|
+| Proyecto | 'orilla, borde' | sin cita |
+| [[van-buurt-2014]] | **'ancho, llano'** | Hudishibana = 'llano ventoso' |
+| [[van-buurt-2014]] vía Oliver | **'cubierto'** | wakaubana = 'cubierto por lo subterráneo' |
+
+**La forma del afijo está confirmada** por cuatro topónimos arubanos
+(Shiribana, Tarabana, Wakubana, Bushiribani) — **su significado, no.**
+
+**Por qué no es cosmético.** `-bana` es productivo: los agentes lo usan para
+construir palabras nuevas en cada run. Si la glosa es incorrecta, cada
+neologismo que lo lleve queda mal formado — y los runs futuros lo propagan.
+Es de las pocas decisiones que **contamina hacia adelante**.
+
+**Opciones.** (a) Corregir a 'ancho/llano' siguiendo a van Buurt; (b) mantener
+'orilla/borde' y documentar que es lectura del proyecto, no atestiguada;
+(c) admitir polisemia y dejar las dos, como hace el lexicón con otros casos.
+
+🔗 [[MOC_motor]] · [[INDICE_FUENTES]]
+
+---
+
+## D10 — 🟡 Qué hacer con las 13 entradas reclasificadas
+
+*(nueva, 2026-08-03 — resultado de la tanda de minería)*
+
+**Qué hay que decidir.** Trece entradas hoy marcadas `caquetío-atestiguado`
+tienen ahora una fuente que dice que son de **otra lengua**: `piache` y `ture`
+(cháima), `pauji` (chaima, y además es un árbol), `watapana` y `auyama`
+(cumanagoto), `kunuku` y `caraota` (taíno), `kukuisa`, `cumaragua`, `guanepe`,
+`bureche`, `tata`, `coro`. Corre `python curiana_sim/auditar_82.py` para la
+lista viva.
+
+**El caso duro es `piache`**: es la palabra para chamán, aparece en el canon, en
+fichas de agente y en el sitio público. [[alvarado-1921]] p.248 la da como
+*"voz cháima y tamanaca, con formas afines en otras lenguas caribes"* — y
+[[zavala-reyes-2015]] confirma por otra vía que en su glosario *piache* es la
+**glosa española** de `boratio`, no una voz caquetía.
+
+**Cautela justa antes de decidir**: Alvarado 1921 es el juicio de un filólogo,
+no un veredicto definitivo, y una palabra puede circular entre familias
+lingüísticas. Pero **el peso de la prueba se invirtió**: hoy estas entradas no
+tienen ninguna cita a favor y sí una en contra.
+
+**Opciones.** (a) Degradar las 13 a la etiqueta de la lengua que la fuente
+indica (`caribe`, `taíno`, `cumanagoto`…) y dejar que `score_linguistico` las
+trate como ajenas; (b) degradarlas a `hipotético` conservando la forma;
+(c) caso por caso — probablemente lo correcto, porque `piache` (con sustituto
+atestiguado, `boratio`) no es lo mismo que `tata` (que van Buurt solo baja de
+tier, no reasigna de lengua).
+
+**Ojo con el efecto colateral**: varias dan nombre o rol a agentes del elenco.
+`piache` → el oficio de Shaboro; `watapana`, `kadushi` → nombres de agente.
+Degradar la etiqueta **no** obliga a renombrar a nadie, pero conviene decidirlo
+a la vez.
+
+🔗 [[MOC_motor]] · [[INDICE_FUENTES]] · [[alvarado-1921]]
+
+---
+
 ## Resueltas
 
 ### ✅ D7 — Prelación entre glosa histórica e identificación científica *(2026-08-03)*
@@ -220,10 +290,11 @@ Salidos del inventario de [[INDICE_FUENTES]]. Ninguno necesita criterio de nadie
       no es lo que dice el nombre).
 - [ ] Mover `VanBuurt_2014_CaquetioWords_Papiamentu.txt` de la raíz a
       `fuentes_caquetios/`, o documentar por qué vive fuera.
-- [ ] Corregir [[05_geografia_politica_y_sucesion]] §2: dice que el glosario de
-      Zavala tiene **116 entradas**; tiene ~286-288.
-- [ ] `minar_zavala_glosario.py` revienta con `UnicodeEncodeError` al imprimir
-      los tiers en consola Windows. Envolver `sys.stdout` en UTF-8.
+- [x] ~~Corregir [[05_geografia_politica_y_sucesion]] §2: dice que el glosario
+      de Zavala tiene **116 entradas**~~ — corregido a 288 (F7, 2026-08-03).
+- [x] ~~`minar_zavala_glosario.py` revienta con `UnicodeEncodeError`~~ —
+      arreglado (F7). ⚠️ **`test_quick.py` tiene el mismo bug** y sigue abierto:
+      revienta sin `PYTHONIOENCODING=utf-8`. Misma línea de arreglo.
 - [ ] Recuperar los 4 archivos de 0 bytes que sí son huecos reales
       ([[rouse-cruxent-1963]], [[fernandes-2020]], [[ramos-perez-1978]],
       el PDF de [[brinton-1871]]).

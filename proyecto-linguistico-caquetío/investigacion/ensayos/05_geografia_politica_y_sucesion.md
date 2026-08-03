@@ -39,7 +39,7 @@ Esta sesión responde tres preguntas que Miguel planteó en cadena:
 ## 2. Vocabulario atestiguado de rango: *apopo*, *diao*, *boratio*
 
 Zavala Reyes (2015), la fuente central de todo el proyecto para el lexicón atestiguado, tiene un
-glosario de 116 entradas compiladas por nueve autores (identificados por iniciales: PMA = Pedro
+glosario de 288 entradas compiladas por nueve autores (identificados por iniciales: PMA = Pedro
 Manuel Arcaya, HB = Adrián Hernández Baño, E = Juan Esteves, AM = Angulo Molina, A = Lisandro
 Alvarado, GC = Galeotto Cey, CGB = Carlos González Batista, AAM = Antonio Arellano Moreno, HP =
 Aníbal Hill Peña). Tres entradas dan un sistema de rango de tres niveles:

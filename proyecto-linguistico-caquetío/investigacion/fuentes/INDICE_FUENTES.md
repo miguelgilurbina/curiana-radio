@@ -4,7 +4,8 @@ ambito: todas las fuentes del proyecto
 archivos_en_fuentes_caquetios: 30
 obras_distintas: 24
 archivos_vacios: 6
-medido: 2026-07-29
+minadas_2026_08_03: [alvarado-1921, gatschet-1885, van-buurt-2014, zavala-reyes-2015]
+medido: 2026-08-03
 ---
 
 # Índice de fuentes — estado real, medido
@@ -38,14 +39,14 @@ medido: 2026-07-29
 
 | Fuente | Pp. | Estado de minado | Sostiene | Prioridad |
 |---|---|---|---|---|
-| [[zavala-reyes-2015]] | 20 | **parcial (76%)** | 7 hechos · **164 entradas del lexicón** | F7 |
+| [[zavala-reyes-2015]] | 20 | ✅ **completo (288/288)** | 7 hechos · **164 lex.** · **62 citas para F1** | hecha |
 | [[oliver-1989-cap3]] | 113 | parcial (2 sesiones) | **15 hechos** · 2 lex. | barridos restantes |
-| [[oliver-1989-cap2]] | 109 | **sin minar** | 1 hecho | **F5 · ALTA** |
+| [[oliver-1989-cap2]] | 109 | **sin minar** | 1 hecho | **F5 · ALTA — la única del gate que queda** |
 | [[arcaya-1920]] | 348 | minado (religión/familia) | **13 hechos** · 1 lex. | media |
 | [[jahn-1927]] | 510 | parcial (3 sesiones) | **16 hechos** · 4 lex. | media |
-| [[alvarado-1921]] | 354 | **sin minar** | 1 hecho · **0 lex.** | **F3 · ALTA** |
-| [[gatschet-1885]] | ~10 (2 txt) | **sin minar** | 0 · **0 lex.** | **F4 · ALTA** |
-| [[van-buurt-2014]] | 48 | **sin minar** | 1 hecho · **0 lex.** | **F6 · ALTA** |
+| [[alvarado-1921]] | 354 | ✅ **minado** (109 de 1551 a fondo) | A=3 B=36 C=13 **D=57** · **18 adjudicaciones** | hecha |
+| [[gatschet-1885]] | 7 (2 txt) | ✅ **minado** | 48 léxicas + 31 topón. + 6 fórmulas · **5 citas** | hecha |
+| [[van-buurt-2014]] | 48 | ✅ **minado** | §6=88 · §11=29 · 180 topón. · **8 citas** | hecha |
 | [[oviedo-y-banos]] | 519 | **sin minar** | 1 hecho (vía Zavala) | alta |
 | [[camacho-2011]] | 13 | minado | **16 hechos** | hecha |
 | [[antczak-2015-las-aves]] | 38 | minado | 7 hechos | hecha |
@@ -99,9 +100,62 @@ Además, ~20 hechos de [[MOC_ecologia]] se apoyan en **literatura web general**
 (Inparques, SVDB, FAO, SciELO, Atlas del Arte Precolombino) sin obra citable con
 página. Es el punto más flojo del corpus para F10.
 
+## La tanda de minería del 2026-08-03 (F3, F4, F6, F7)
+
+Cuatro fuentes minadas en paralelo. **Ninguna tocó `curiana_lexicon.py`**: cada
+una emite una propuesta para revisión humana. `curiana_sim/auditar_82.py` cruza
+las cuatro y emite el veredicto por palabra para el censo de citas (F1):
+
+```
+61 confirman · 13 reclasifican · 3 conflicto de glosa · 5 sin rastro
+F1 puede adjudicar con evidencia: 77 de 82 (94%)
+```
+
+**Lo que la tanda le quitó al proyecto** — y es el resultado que más vale:
+
+- **13 entradas del lexicón resultan NO ser caquetías** según la fuente que
+  debería sostenerlas. Entre ellas `piache` (*"voz cháima y tamanaca"*,
+  [[alvarado-1921]] p.248 — la palabra para chamán), `ture` (cháima, y es un
+  **asiento**, no una vasija), `pauji` (es un **árbol** del chaima),
+  `watapana` (*"del cum. araguatapanár"*), `kunuku` (*"voz taina"*),
+  `auyama`, `kukuisa`, `caraota`, `cumaragua`, `guanepe`, `bureche`, `tata`,
+  `coro`.
+- **3 conflictos de glosa** — la fuente tiene la palabra, con otro significado:
+  `tara` (lexicón 'venado' vs. Zavala #238 **'langosta, mariposa'**), `saruro`
+  ('árbol' vs. #224 **'boa'**), `corie` ('choza' vs. #90 **'armadillo'**).
+  **Citarlas a Zavala sería un error.**
+- **4 falsos amigos**: `caraota`, `pauji`, `piache` y `coro` no son voces del
+  glosario — son la **glosa española** con que Zavala traduce a `icoroata`,
+  `paugis`, `boratio`; y `coro`='cardón' no sale de Zavala (#181 es *Koro*
+  'cotorra').
+- **`warawara` trae la identificación de [[gatschet-1885]] sin saberlo**:
+  *"Cathartes curasoica"* es la lectura de 1885. Es un **caracara**
+  (*Caracara cheriway*), no un zamuro. Familia distinta.
+
+**Lo que le dio:**
+
+- **La cadena de custodia de Zavala aguanta**: 24 de 26 entradas con sigla `A`
+  se rastrean a su página exacta en [[alvarado-1921]].
+- **Triple atestación** (continental / insular 1882 / viva) en 5 formas, y
+  **16 coincidencias** [[gatschet-1885]]↔[[van-buurt-2014]] entre dos
+  recolecciones independientes separadas por 130 años.
+- **Afijos**: `-ima` confirmado independientemente por van Buurt (Cruz Esteves
+  1989); apoyo insular para `-aima`, `-ubana`, `-uru`; **cero** para `-iro`,
+  `-uco`; `-bi` 'pequeño' aparece como **segundo diminutivo documentado**; y
+  **`-bari` no es un afijo**. ⚠️ `-bana` tiene la forma validada y **la glosa
+  en disputa** → [[DECISIONES_ABIERTAS]] D9.
+- **Zavala llena 4 huecos léxicos** que el corpus daba por abiertos, incluido
+  el nº 4 por presión (**especies de pez**: `cuna`, `cunaro`, `guaranaro`,
+  `bagre`).
+- **24 voces nuevas de nivel B** en Alvarado, del patrón *"Árbol indeterminado
+  de Coro"* — las menos castellanizables del repertorio. Dos cierran huecos:
+  `aiton` ("sima profunda del E. Falcón") y `tocororo` ("tallo leñoso del
+  cardón"). **Van al corpus cultural, no a `VOCABULARIO_BASE`** (protocolo §5).
+
 ## Cobertura real del lexicón — quién sostiene el "atestiguado"
 
-De las **233 entradas `caquetío-atestiguado`**, medidas por citas en `notas`:
+De las **231 entradas `caquetío-atestiguado`**, medidas por citas en `notas`
+(estado **anterior** a aplicar las 62 citas que F7 recuperó — eso es F1):
 
 | Fuente | Entradas que la citan |
 |---|---|
@@ -114,12 +168,13 @@ De las **233 entradas `caquetío-atestiguado`**, medidas por citas en `notas`:
 | [[alvarado-1921]] · [[van-buurt-2014]] · [[gatschet-1885]] · Las Casas | **0** |
 | **sin ninguna nota** | **82 (26% de las 314 de familia caquetía)** |
 
-> `CLAUDE.md` describe `caquetío-atestiguado` como citable a *"Galeotto Cey,
+> `CLAUDE.md` describía `caquetío-atestiguado` como citable a *"Galeotto Cey,
 > Oviedo, Las Casas… Zavala Reyes 2015, Oliver 1989, Jahn 1927"*. En el dato,
-> **es Zavala y casi nadie más** — y las tres fuentes ALTA sin minar
-> (Alvarado, Van Buurt, Gatschet) tienen penetración **cero**.
+> **es Zavala y casi nadie más**.
 >
-> Ese es, en una tabla, el argumento entero del eje FIDELIDAD.
+> Ese es, en una tabla, el argumento entero del eje FIDELIDAD. Tras la tanda del
+> 2026-08-03 las tres fuentes que tenían penetración **cero** ya están minadas y
+> con 31 adjudicaciones listas: aplicarlas es **F1**.
 
 ## Convención de estas notas
 

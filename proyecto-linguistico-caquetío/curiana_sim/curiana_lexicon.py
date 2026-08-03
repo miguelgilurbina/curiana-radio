@@ -6299,10 +6299,14 @@ VOCABULARIO_BASE: dict[str, dict] = {
 
 
 # ── Glosario Zavala Reyes 2015 ────────────────────────────────────────
-# El lexicón contenía solo ~66 de las 286 entradas del glosario caquetío de
+# El lexicón contenía solo ~66 de las 288 entradas del glosario caquetío de
 # Zavala (23%) — la fuente atestiguada central del proyecto. Faltaban incluso
 # palabras que dan nombre a agentes (buio, bagre, cunaro, guaranaro, dara,
 # naure), que por tanto NO puntuaban como caquetío en score_linguistico.
+#
+# CERRADO el 2026-08-03 (tarea F7): el parseo cubre las 288/288. 225 entran al
+# habla activa; 63 quedan fuera POR DISEÑO (45 topónimos + 14 antropónimos + 4
+# descartes), no por deuda. Ver investigacion/fuentes/zavala-reyes-2015.md.
 #
 # `lexicon_zavala.py` lo genera `minar_zavala_glosario.py` desde el PDF, con
 # curación por tiers: entra el vocabulario del habla; los topónimos,

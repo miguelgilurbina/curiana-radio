@@ -289,13 +289,17 @@ nuevo será el "run 1 de la era auditada":
 1. ~~**D6** — mergear PR #30~~ ✅ hecho (commit `609f9b5`).
 2. ~~**V0 + V1** — vault mínimo + notas por fuente + DECISIONES ABIERTAS~~
    ✅ hecho el 2026-07-29 (ver §2). **Siguiente paso: F1.**
-3. **F1** — censo de citas de las 82 sin nota (1-2 sesiones; el corazón de
-   "no vender humo"). Empezar por `investigacion/fuentes/INDICE_FUENTES.md`,
-   sección "Cobertura real del lexicón".
-4. **F2 + D5** — política c/k y deduplicación (1 sesión).
-5. **F3** — minar Alvarado 1921 (la fuente grande sin tocar; 1-2 sesiones).
-6. **J1** — sesión de diseño editorial del jardín (conversación).
-7. **F4, F5, F6, F7** — resto de minería ALTA (1 sesión c/u).
+3. ~~**F3, F4, F6, F7** — minería en paralelo~~ ✅ hecho el 2026-08-03, **antes
+   que F1 y no después**: 70 de las 82 entradas sin cita tenían rastro en esas
+   fuentes, así que censarlas primero habría degradado palabras con respaldo.
+4. **F1** — censo de citas, ahora con evidencia. Corre
+   `python curiana_sim/auditar_82.py`: **61 confirman · 13 reclasifican · 3
+   conflicto de glosa · 5 sin rastro**, 77 de 82 adjudicables. Incluye aplicar
+   las 62 citas de Zavala y decidir D10.
+5. **F2 + D5** — política c/k y deduplicación (1 sesión; medido: solo 2
+   duplicados reales dentro del caquetío).
+6. **F5** — Oliver cap. 2, la **única fuente ALTA del gate que queda**.
+7. **J1** — sesión de diseño editorial del jardín (conversación).
 8. **V2** — atomización del corpus + validador (1-2 sesiones, revisar antes).
 9. **V3 + V4** — notas agregadoras y dashboards.
 10. **J2, J3** — jardín público.
@@ -309,6 +313,14 @@ entregable que ya funcionó).
 
 *Historial: creado 2026-07-21 tras la auditoría del motor y del lexicón
 (commits `a84a52d`, `9929edf`, `b405729` en `feat/corpus-cultural`, PR #30).*
+
+*2026-08-03 — **tanda de minería F3/F4/F6/F7 en paralelo**. Zavala cerrado al
+100% (288/288); Alvarado, Gatschet y Van Buurt minados por primera vez. Las
+cuatro emiten propuesta sin tocar `curiana_lexicon.py`; `auditar_82.py` las
+cruza. El saldo tiene dos caras: 61 entradas del lexicón ganan cita, y **13
+resultan no ser caquetías** según la fuente que debía sostenerlas — `piache`
+entre ellas. Decisiones nuevas: D9 (glosa de `-bana`) y D10 (qué hacer con las
+13). Ver `investigacion/fuentes/INDICE_FUENTES.md`.*
 
 *2026-07-29 — **V0 y V1 ejecutados**. El vault existe: `INDICE.md`, 6 MOCs, 24
 notas de fuente con estado medido, `DECISIONES_ABIERTAS.md` y un verificador de
