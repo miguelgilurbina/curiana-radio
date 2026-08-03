@@ -1,4 +1,13 @@
+---
+tipo: hoja-de-fuentes
+sesion: 5
+moc: MOC_geografia_politica
+---
+
 # Hoja de fuentes — Sesión 5: Geografía política y sucesión
+
+> [[MOC_geografia_politica]] · [[05_geografia_politica_y_sucesion|ensayo]] · [[INDICE_FUENTES]]
+> Fuentes: [[oliver-1989-cap3]] · [[zavala-reyes-2015]] · [[oliver-1989-cap2]] · [[arcaya-1920]] · [[van-buurt-2014]] · [[oviedo-y-banos]] · [[ramos-perez-1978]]
 
 *Programa "corpus cultural". Conversación con Miguel, 2026-07-13 a 2026-07-20. A diferencia de las
 sesiones 1-4 (lanzadas como spawn_task independientes), esta sesión se desarrolló en vivo, dentro de

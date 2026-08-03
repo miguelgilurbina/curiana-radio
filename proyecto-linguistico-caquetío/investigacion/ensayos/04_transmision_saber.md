@@ -1,3 +1,12 @@
+---
+tipo: ensayo
+sesion: 4/4 — programa corpus cultural
+pregunta: "¿Cómo sabía el caquetío lo que sabía?"
+moc: MOC_transmision
+corpus: [transmision.yaml]
+fuentes: [jahn-1927, amodio-perez-2006, angleria-1892, guerra-curvelo-palabrero, vansina-ong, las-casas-1875, gilij-1780-1783, oviedo-y-valdes-1851]
+---
+
 # 04 — Cómo sabía el caquetío lo que sabía: la transmisión oral del saber
 
 *Sesión 4 de 4 del programa "corpus cultural" de Curiana. Cierra el ciclo: familia
@@ -5,6 +14,12 @@ es la estructura por la que viaja el saber; ecología es su contenido; creencia 
 su marco; esta sesión es el **mecanismo** — cómo el conocimiento salta de una
 cabeza a otra sin una sola letra escrita, y qué se pierde y qué sobrevive en ese
 salto.*
+
+> **Mapa** · [[MOC_transmision]] — [[04_transmision|hoja de fuentes]] — `transmision.yaml`
+> **Fuentes** · [[jahn-1927]] · [[amodio-perez-2006]] · [[angleria-1892]] · [[guerra-curvelo-palabrero]] · [[vansina-ong]]
+> **Diseño que enmarca** · [[CANON_TIERRA]] — el anexo de este ensayo lo extiende
+> **Programa que levantó** · [[PROGRAMA_WAYUU]]
+> **Cierra el ciclo de** · [[01_familia_caquetia]] · [[02_ecologia_golfete]] · [[03_creencia_caquetia]]
 
 ---
 

@@ -1,4 +1,13 @@
+---
+tipo: hoja-de-fuentes
+sesion: 3/4
+moc: MOC_creencia
+---
+
 # Hoja de fuentes — Sesión 03: ¿En qué creía el caquetío?
+
+> [[MOC_creencia]] · [[03_creencia_caquetia|ensayo]] · [[INDICE_FUENTES]]
+> Fuentes: [[arcaya-1920]] · [[jahn-1927]] · [[oviedo-y-valdes-1851]] · [[paz-reverol-2017-2018]] · [[perrin-1992-1995]] · [[maria-lionza-culto]] · [[zavala-reyes-2015]] · [[gilij-1780-1783]] · [[las-casas-1875]]
 
 Registro de qué se buscó, qué se encontró (con ubicación exacta) y qué quedó
 abierto. Acompaña a `investigacion/ensayos/03_creencia_caquetia.md` y a

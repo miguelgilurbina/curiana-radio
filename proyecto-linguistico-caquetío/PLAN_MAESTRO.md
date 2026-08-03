@@ -51,7 +51,29 @@ reconstrucción/hipótesis. Sin excepciones silenciosas.
 
 ### 1.1 Inventario y estado de minado de las fuentes
 
-`fuentes_caquetios/` tiene 30 archivos. Estado conocido:
+> 📌 **La tabla viva de esta sección vive ahora en
+> [`investigacion/fuentes/INDICE_FUENTES.md`](investigacion/fuentes/INDICE_FUENTES.md)**,
+> con una nota por obra en `investigacion/fuentes/` (V1, hecho el 2026-07-29).
+> Lo de abajo se conserva como el estado *creído* en 2026-07-21; el inventario
+> medido corrigió tres cosas de fondo:
+>
+> 1. **Alvarado 1921 SÍ tiene capa de texto** (704 KB extraíbles con
+>    `pdftotext -enc UTF-8`; lo que fallaba era `pypdf`). **F3 no está bloqueada
+>    por OCR.** Igual valía ya para Arcaya y Jahn.
+> 2. **Oviedo y Baños está disponible**: el archivo de 0 bytes es
+>    `Oviedo_Banhos_1885_...`; el gemelo `Oviedo_Banhos_Conquista_Poblacion_...`
+>    tiene 519 páginas con texto, y nunca se ha leído.
+> 3. **Hay 6 archivos de 0 bytes, no uno** (Brinton PDF, Fernandes 2020,
+>    Oviedo y Baños 1885, Perea Alonso duplicado, Ramos Pérez, Rouse & Cruxent),
+>    y un archivo cuyo **nombre no corresponde a su contenido**
+>    (`Schroeder_et_al_2018_PNAS_...` es en realidad Moreno-Mayar et al.,
+>    *Science* 2018).
+>
+> Además, medido sobre el dato: de las 233 entradas `caquetío-atestiguado`,
+> **164 citan a Zavala** y las tres fuentes ALTA sin minar (Alvarado, Van Buurt,
+> Gatschet) tienen penetración **cero**.
+
+`fuentes_caquetios/` tiene 30 archivos. Estado conocido (2026-07-21):
 
 | Fuente | Tipo | Estado de minado | Prioridad |
 |---|---|---|---|
@@ -132,14 +154,21 @@ La lógica crítica (validación) vive en `compilar_corpus.py`, nunca en plugins
 
 **Fases** (0 y 1 son baratas y sin riesgo; la 2 cambia el formato canónico):
 
-- **V0. Repo como vault**: `.obsidian/` al gitignore; nota raíz `INDICE.md`;
-  MOCs (mapas de contenido) por pregunta del programa cultural (familia /
-  ecología / creencia / transmisión / geografía política) + MOC del motor.
-  Wikilinks en los 5 ensayos existentes.
-- **V1. Notas por fuente** (una por archivo de `fuentes_caquetios/`): qué es,
-  estado de minado, qué dio, qué falta — la tabla de §1.1 pero viva y con
-  backlinks. Aquí es donde el eje FIDELIDAD escribe sus resultados. Más la
-  nota **`DECISIONES ABIERTAS.md`** (§5 de este plan, pero viva).
+- **V0. Repo como vault** — ✅ **hecho (2026-07-29)**: `.obsidian/` y `.trash/`
+  al gitignore (commit `02f4d0d`); nota raíz [`INDICE.md`](INDICE.md); seis MOCs
+  en [`mocs/`](mocs/) (familia / ecología / creencia / transmisión / geografía
+  política + motor); frontmatter y bloque de navegación con wikilinks en los 5
+  ensayos y en las 5 hojas de fuentes.
+- **V1. Notas por fuente** — ✅ **hecho (2026-07-29)**: 24 notas en
+  [`investigacion/fuentes/`](investigacion/fuentes/) (18 obras locales + 6
+  fuentes externas que sostienen 27 hechos y no están en el repo), más
+  [`INDICE_FUENTES.md`](investigacion/fuentes/INDICE_FUENTES.md) con el estado
+  medido de cada una, y la nota viva
+  [`DECISIONES_ABIERTAS.md`](DECISIONES_ABIERTAS.md).
+  Guardián: `python investigacion/check_vault_links.py --strict` (581 wikilinks,
+  todos resuelven). **Aquí es donde el eje FIDELIDAD escribe sus resultados**:
+  cuando F3 mine Alvarado, el resultado va a `fuentes/alvarado-1921.md`, no a un
+  markdown nuevo.
 - **V2. Atomizar el corpus**: ~156 hechos → una nota por hecho con
   frontmatter; los YAML actuales se retiran cuando el compilador los
   reproduzca. Incluye **`compilar_corpus.py`**: valida frontmatter (etiquetas
@@ -222,7 +251,15 @@ El motor queda como está (sano, testeado). No se toca salvo:
 
 ---
 
-## 5. Decisiones abiertas (se moverán a la nota viva del vault en V1)
+## 5. Decisiones abiertas
+
+> ✅ **Movidas a la nota viva [`DECISIONES_ABIERTAS.md`](DECISIONES_ABIERTAS.md)**
+> (2026-07-29). Ahí está el estado de cada una, qué necesita Miguel para
+> decidirla y qué desbloquea. **D6 está resuelta** (el PR #30 ya estaba mergeado:
+> commit `609f9b5`). Dos decisiones nuevas salieron del inventario de fuentes:
+> **D7** (¿manda la glosa histórica o la identificación científica moderna
+> cuando difieren?) y **D8** (¿el repo archiva copias de las fuentes externas?).
+> La tabla de abajo se conserva como el estado original del plan.
 
 | # | Decisión | Contexto | Bloquea |
 |---|---|---|---|
@@ -249,11 +286,12 @@ nuevo será el "run 1 de la era auditada":
 
 ## 7. Orden sugerido de sesiones (backlog para ir tomando)
 
-1. **D6** — mergear PR #30 (trámite, 1 sesión corta).
-2. **V0 + V1** — vault mínimo + notas por fuente + DECISIONES ABIERTAS
-   (1-2 sesiones; da la visibilidad que motiva todo lo demás).
+1. ~~**D6** — mergear PR #30~~ ✅ hecho (commit `609f9b5`).
+2. ~~**V0 + V1** — vault mínimo + notas por fuente + DECISIONES ABIERTAS~~
+   ✅ hecho el 2026-07-29 (ver §2). **Siguiente paso: F1.**
 3. **F1** — censo de citas de las 82 sin nota (1-2 sesiones; el corazón de
-   "no vender humo").
+   "no vender humo"). Empezar por `investigacion/fuentes/INDICE_FUENTES.md`,
+   sección "Cobertura real del lexicón".
 4. **F2 + D5** — política c/k y deduplicación (1 sesión).
 5. **F3** — minar Alvarado 1921 (la fuente grande sin tocar; 1-2 sesiones).
 6. **J1** — sesión de diseño editorial del jardín (conversación).
@@ -271,3 +309,10 @@ entregable que ya funcionó).
 
 *Historial: creado 2026-07-21 tras la auditoría del motor y del lexicón
 (commits `a84a52d`, `9929edf`, `b405729` en `feat/corpus-cultural`, PR #30).*
+
+*2026-07-29 — **V0 y V1 ejecutados**. El vault existe: `INDICE.md`, 6 MOCs, 24
+notas de fuente con estado medido, `DECISIONES_ABIERTAS.md` y un verificador de
+enlaces. El inventario de disponibilidad corrigió tres supuestos del §1.1
+(Alvarado legible, Oviedo y Baños disponible, 6 archivos de 0 bytes) y midió la
+cobertura real del lexicón por fuente — que es, en una tabla, el argumento del
+eje FIDELIDAD. Ver `investigacion/fuentes/INDICE_FUENTES.md`.*

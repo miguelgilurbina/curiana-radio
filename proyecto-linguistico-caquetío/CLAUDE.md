@@ -206,6 +206,15 @@ Real-time en Supabase: `agent_responses`, `turns`, `neologisms`, `agent_profiles
 
 ## Archivos de referencia
 
+- **`INDICE.md`** — nota raíz del vault (el repo ES el vault, ver
+  `PLAN_MAESTRO.md` §2). Punto de entrada: enlaza los 6 MOCs de `mocs/`,
+  `DECISIONES_ABIERTAS.md` e `investigacion/fuentes/INDICE_FUENTES.md`.
+- **`investigacion/fuentes/`** — una nota por obra: estado técnico medido
+  (capa de texto, páginas), estado de minado, qué sostiene y qué falta.
+  **Cuando se mine una fuente, el resultado se escribe en su nota**, no en un
+  markdown nuevo. Verificar el grafo con
+  `python investigacion/check_vault_links.py --strict`.
+- **`DECISIONES_ABIERTAS.md`** — lo que solo Miguel puede decidir (D1-D8).
 - `IDEA_PERFILES_AGENTES.md` — diseño de la sección de perfiles de agentes
   (rol, arco narrativo, frases célebres) y su implementación.
 - `test_quick.py` — test suite sin API keys (debe dar 8/8 OK).

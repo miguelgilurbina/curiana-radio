@@ -1,3 +1,13 @@
+---
+tipo: ensayo
+sesion: 5 — seguimiento del programa corpus cultural
+pregunta: "¿Cuál era el área de influencia de Manaure, y qué asentamiento real reconstruimos?"
+moc: MOC_geografia_politica
+corpus: [geografia_politica.yaml, parentesco.yaml]
+fuentes: [oliver-1989-cap3, zavala-reyes-2015, van-buurt-2014, arcaya-1920, ramos-perez-1978, oviedo-y-banos]
+decisiones: [D2, D4]
+---
+
 # La geografía política de Manaure: quién era un diao, y qué asentamiento reconstruimos
 
 *Sesión 5 del programa "corpus cultural" — Curiana, Golfete de Coro, siglos XIV-XV.*
@@ -5,6 +15,11 @@
 escala real del mundo caquetío. No repite el canon existente (CULTURA_CAQUETIA.md §6, "Política y
 jerarquía"; el ensayo 01, "familia caquetía"): lo precisa con vocabulario atestiguado y geografía
 concreta.*
+
+> **Mapa** · [[MOC_geografia_politica]] — [[05_geografia_politica|hoja de fuentes]] — `geografia_politica.yaml`
+> **Fuentes** · [[oliver-1989-cap3]] · [[zavala-reyes-2015]] · [[van-buurt-2014]] · [[arcaya-1920]] · [[ramos-perez-1978]] · [[oviedo-y-banos]]
+> **Decisiones que deja abiertas** · [[DECISIONES_ABIERTAS|D2 (el nombre "Curiana")]] · [[DECISIONES_ABIERTAS|D4 (segundo sobrino)]]
+> **Sigue de** · [[01_familia_caquetia]]
 
 ---
 

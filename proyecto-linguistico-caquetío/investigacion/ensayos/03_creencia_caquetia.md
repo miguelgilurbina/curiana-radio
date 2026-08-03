@@ -1,7 +1,22 @@
+---
+tipo: ensayo
+sesion: 3/4 — programa corpus cultural
+pregunta: "¿En qué creía el caquetío?"
+moc: MOC_creencia
+corpus: [creencia.yaml]
+fuentes: [arcaya-1920, oviedo-y-valdes-1851, jahn-1927, paz-reverol-2017-2018, perrin-1992-1995, maria-lionza-culto, zavala-reyes-2015, gilij-1780-1783, las-casas-1875]
+---
+
 # ¿En qué creía el caquetío?
 
 *Mini-ensayo — Sesión 3 de 4 del programa "corpus cultural", proyecto Curiana.*
 *Pregunta guía: la vida religiosa del caquetío del Golfete de Coro, siglos XIV–XV.*
+
+> **Mapa** · [[MOC_creencia]] — [[03_creencia|hoja de fuentes]] — `creencia.yaml`
+> **Vía A (reconstrucción wayuu)** · [[paz-reverol-2017-2018]] · [[perrin-1992-1995]]
+> **Vía B (retro-abstracción)** · [[maria-lionza-culto]] — *solo estética y patrones geográficos*
+> **Lo atestiguado** · [[arcaya-1920]] · [[oviedo-y-valdes-1851]] · [[jahn-1927]] · [[zavala-reyes-2015]]
+> **Sin minar** · [[gilij-1780-1783]] (sin capa de texto)
 
 ---
 

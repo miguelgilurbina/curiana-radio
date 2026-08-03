@@ -1,7 +1,21 @@
+---
+tipo: ensayo
+sesion: 1/4 — programa corpus cultural
+pregunta: "¿Cómo era la familia caquetía?"
+moc: MOC_familia
+corpus: [parentesco.yaml, genealogia.yaml]
+fuentes: [oliver-1989-cap3, oliver-1989-cap2, jahn-1927, arcaya-1920, adam-1879, keegan-1989, las-casas-1875]
+decisiones: [D1, D4]
+---
+
 # ¿Cómo era la familia caquetía?
 
 *Sesión 1/4 del programa "corpus cultural" — Curiana, Golfete de Coro, siglos XIV-XV.*
 *Profundiza CULTURA_CAQUETIA.md §6 ("Las mujeres líderes y la matrilinealidad"), no la duplica.*
+
+> **Mapa** · [[MOC_familia]] — [[01_familia|hoja de fuentes]] — `parentesco.yaml` · `genealogia.yaml`
+> **Fuentes** · [[oliver-1989-cap3]] · [[oliver-1989-cap2]] · [[jahn-1927]] · [[arcaya-1920]] · [[adam-1879]] · [[keegan-1989]] · [[las-casas-1875]]
+> **Decisiones que deja abiertas** · [[DECISIONES_ABIERTAS|D1 (veto de la genealogía)]] · [[DECISIONES_ABIERTAS|D4 (segundo sobrino)]]
 
 ---
 

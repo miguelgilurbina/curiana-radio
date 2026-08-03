@@ -1,4 +1,18 @@
+---
+tipo: hoja-de-fuentes
+sesion: 2/4
+moc: MOC_ecologia
+---
+
 # Hoja de fuentes — Sesión 02: Ecología del Golfete de Coro
+
+> [[MOC_ecologia]] · [[02_ecologia_golfete|ensayo]] · [[INDICE_FUENTES]]
+> Fuentes: [[camacho-2011]] · [[antczak-2015-las-aves]] · [[rouse-cruxent-1963]] · [[alvarado-1921]] · [[jahn-1927]]
+>
+> ⚠️ **Corrección posterior (2026-07-29)**: este documento clasifica a
+> [[alvarado-1921]] y [[jahn-1927]] como *"escaneo de imagen sin capa de texto,
+> no extraíble sin OCR"*. Eso era un artefacto de `pypdf`: **con `pdftotext`
+> ambos extraen texto completo**. Ver [[INDICE_FUENTES]].
 
 *Programa «corpus cultural», sesión 2 de 4. Pregunta guía: ¿Dónde existía el caquetío?*
 *Registro de qué se buscó, qué se encontró (ubicación exacta) y qué quedó abierto.*
