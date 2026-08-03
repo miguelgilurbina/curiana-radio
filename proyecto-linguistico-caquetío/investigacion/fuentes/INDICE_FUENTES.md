@@ -176,6 +176,37 @@ De las **231 entradas `caquetío-atestiguado`**, medidas por citas en `notas`
 > 2026-08-03 las tres fuentes que tenían penetración **cero** ya están minadas y
 > con 31 adjudicaciones listas: aplicarlas es **F1**.
 
+### Después de F1 — aplicadas las citas recuperadas (2026-08-03)
+
+`curiana_sim/aplicar_citas_82.py` escribió **63 citas** en `notas`. De las
+**231 entradas `caquetío-atestiguado`**, cuántas cita ahora cada fuente
+(medido sobre `VOCABULARIO_BASE`; una entrada puede citar a más de una, y la
+corroboración cruzada es deliberada):
+
+| Fuente | Antes | Ahora |
+|---|---|---|
+| [[zavala-reyes-2015]] | 164 | **211** |
+| [[alvarado-1921]] | 0 | **4** |
+| [[van-buurt-2014]] | 0 | **6** |
+| [[gatschet-1885]] | 0 | **3** |
+| Galeotto Cey (vía Zavala) | 2 | 11 |
+| [[arcaya-1920]] / Arcaya 1995 | 1 | 7 |
+| [[oviedo-y-valdes-1851]] (vía terceros) | 2 | 6 |
+| [[oliver-1989-cap2]] · [[oliver-1989-cap3]] | 2 | 5 |
+| [[jahn-1927]] | 1 | 1 |
+| Las Casas | 0 | 0 |
+
+**El censo de familia caquetía sin ninguna nota bajó de 82 a 19**
+(`python curiana_sim/auditar_82.py --resumen`). Las 19 que quedan **no son
+deuda de minería sino de decisión**: 13 que las fuentes reclasifican a otra
+lengua, 3 con conflicto de glosa — todas bloqueadas por **D10** en
+[[DECISIONES_ABIERTAS]] — y 3 sin rastro real (`kama`, `koke`, `wabarsure`).
+
+> Las tres fuentes con penetración cero ya no están en cero, pero el cuadro de
+> fondo no cambió: **sigue siendo Zavala y casi nadie más**. Lo nuevo es que
+> ahora hay 14 entradas con doble fuente independiente, y que
+> [[gatschet-1885]] entró corrigiendo un error vivo (ver `warawara`, D7).
+
 ## Convención de estas notas
 
 Cada nota de fuente declara en su frontmatter: `capa_texto`, `estado_minado`,
