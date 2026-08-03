@@ -308,10 +308,35 @@ no más débil, porque muestra que la matrilinealidad no es un supuesto románti
 Mayores, kalinago en las Menores, lokono en las Guayanas, achagua en los Llanos) es consistentemente
 matrilineal/matrilocal con avunculado — incluso los "caribes" insulares, el enemigo arquetípico, caen
 del lado matrilineal del abanico —, mientras la rama amazónica noroccidental es patrilineal. El caquetío está en el corazón
-geográfico y lingüístico del arco norteño — sus dos hermanas más cercanas según el propio Oliver
-(cap. 2) son el wayuunaiki y el paraujano, y sus "primos" declarados (los achagua) organizaban linajes
+geográfico y lingüístico del arco norteño, y sus "primos" declarados (los achagua) organizaban linajes
 totémicos con casa comunal propia. La matrilinealidad de la Curiana no descansa en una sola analogía:
-descansa en **todo el cluster al que su lengua pertenece**. Y el modelo achagua aporta además una
+descansa en **todo el cluster al que su lengua pertenece**.
+
+> ⚠️ **Corrección (2026-08-03, minería F5 de [[oliver-1989-cap2]]).** Este párrafo
+> afirmaba que *"sus dos hermanas más cercanas según el propio Oliver (cap. 2) son
+> el wayuunaiki y el paraujano"*. **Oliver dice lo contrario**, con estas palabras:
+> *"it seems reasonable, for the moment, to regard Caquetío as emerging from a
+> similar background to that of **Lokono rather than from a Guajiro-Paraujano
+> ancestry**"* (1989, cap. 2: 150). Lo apoya en el prefijo de 1.ª persona `/dA-/`
+> (*"only the Lokono and Taíno are known to have the same personal prefix"*), en
+> postposiciones como `-bana` **en vez de** `-pana`, y en que los topónimos
+> Guajira-Falcón muestran *"far more differences in sound sequences than
+> similarities"*.
+>
+> **Qué cambia y qué no.** El **argumento de este ensayo se mantiene**: el arco
+> norteño es matrilineal de punta a punta, y el lokono —la hermana que Oliver sí
+> propone— es igual de matrilineal y matrilocal que el wayuu (ver arriba, en esta
+> misma sección). La matrilinealidad no dependía de esa filiación.
+>
+> Lo que sí cambia es **de quién reconstruimos la lengua**. El wayuu sigue siendo
+> la comparanda *etnográfica* mejor documentada, y como tal se usa en todo el
+> corpus cultural. Pero como comparanda *lingüística* pasa a ser un primo, no una
+> hermana. Ver [[DECISIONES_ABIERTAS]] **D11**.
+>
+> Nótese que Oliver es explícitamente tentativo (*"for the moment"*,
+> *"tentatively"*, *"aknowledging the lack of further evidence"*). No es un
+> veredicto cerrado; es la mejor lectura disponible, y va en la dirección
+> contraria a la que el proyecto asumió. Y el modelo achagua aporta además una
 imagen concreta que el wayuu (disperso en rancherías de pastores, un paisaje muy distinto al Golfete)
 no daba: **el linaje como unidad residencial visible — un grupo de bohíos, una casa grande, un fogón
 compartido.**

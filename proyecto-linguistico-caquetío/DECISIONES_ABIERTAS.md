@@ -1,7 +1,7 @@
 ---
 tipo: nota-viva
 ambito: decisiones que solo Miguel puede tomar
-abiertas: 8
+abiertas: 9
 resueltas: 2
 actualizado: 2026-08-03
 ---
@@ -29,6 +29,7 @@ actualizado: 2026-08-03
 | D8 | ¿El repo archiva copias de las fuentes externas? | F10, trazabilidad | 🟡 nueva |
 | D9 | La glosa del locativo `-bana` | morfología, neologismos de agentes | 🟡 nueva |
 | D10 | Qué hacer con las 13 entradas reclasificadas | F1, canon | 🟡 nueva |
+| D11 | **El desbalance wayunaiki/lokono del lexicón** | base de la reconstrucción | 🟠 **nueva, de fondo** |
 
 ---
 
@@ -233,6 +234,68 @@ Degradar la etiqueta **no** obliga a renombrar a nadie, pero conviene decidirlo
 a la vez.
 
 🔗 [[MOC_motor]] · [[INDICE_FUENTES]] · [[alvarado-1921]]
+
+---
+
+## D11 — 🟠 El desbalance wayunaiki/lokono del lexicón
+
+*(nueva, 2026-08-03 — la levantó la minería F5 de [[oliver-1989-cap2]]. **Es la
+decisión más de fondo del proyecto en este momento.**)*
+
+**El hecho.** El lexicón se construyó sobre la premisa de que el wayuunaiki es
+la hermana más cercana del caquetío. **Oliver dice lo contrario**, y está en el
+capítulo que el proyecto declara su pilar teórico:
+
+> *"All things considered, it seems reasonable, for the moment, to regard
+> Caquetío as emerging from a similar background to that of **Lokono rather than
+> from a Guajiro-Paraujano ancestry**."* (cap. 2: 150)
+
+Lo apoya en tres cosas: el prefijo de 1.ª persona `/dA-/` (*"only the Lokono and
+Taíno are known to have the same personal prefix"*), postposiciones como
+`-bana` **en vez de** `-pana`, y que los topónimos Guajira-Falcón muestran *"far
+more differences in sound sequences than similarities"*.
+
+**La composición actual del lexicón, medida:**
+
+| Lengua | Entradas |
+|---|---|
+| **wayunaiki** (+cogn) | **776** |
+| **lokono** (+variantes) | **225** |
+| taíno | 53 |
+
+**3,4 a 1 a favor de la hermana que Oliver considera más lejana.** Y las 441
+formas `hipotético-no-verificado` de `lexicon_candidatos.py` se transdujeron
+mayoritariamente desde wayunaiki — lo que explicaría parte del ~80% de fallo
+medido: se reconstruía desde la lengua equivocada.
+
+**Qué hay que decidir.** No es "borrar el wayuu". Es de qué lengua se reconstruye
+cuando no hay dato caquetío:
+
+- (a) **Reequilibrar hacia el lokono** — hacer del lokono la fuente primaria de
+  transducción y del wayuunaiki una secundaria. Implica re-derivar candidatos y,
+  con ellos, buena parte de la Capa 2.
+- (b) **Mantener el wayuunaiki como primario** y documentar explícitamente que
+  es una decisión *de disponibilidad* (el wayuu está mucho mejor documentado y
+  vivo), no *de filiación*.
+- (c) **Ponderar por concepto**: usar el que tenga cognado atestiguado en cada
+  caso, con el lokono desempatando.
+
+**Lo que NO cambia.** El wayuu sigue siendo la comparanda **etnográfica** central
+y bien fundada: todo el corpus cultural (creencia, transmisión, parentesco) se
+apoya en etnografía wayuu, y eso no depende de la filiación lingüística. El arco
+norteño sigue siendo matrilineal de punta a punta — el lokono también lo es.
+Lo que se mueve es de quién se reconstruye **la lengua**.
+
+**Cautela.** Oliver es explícitamente tentativo (*"for the moment"*,
+*"tentatively"*, *"aknowledging the lack of further evidence"*). No es un
+veredicto cerrado. Pero es la única autoridad que el proyecto cita para esto, y
+va en dirección contraria a lo que se asumió.
+
+**Bloquea**: cualquier re-derivación de la Capa 2, y conviene resolverla **antes**
+del primer run de la era auditada — es exactamente el tipo de cambio de base que
+obliga a repetir corridas.
+
+🔗 [[oliver-1989-cap2]] · [[01_familia_caquetia]] · [[MOC_motor]] · [[MOC_familia]]
 
 ---
 

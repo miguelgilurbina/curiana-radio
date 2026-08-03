@@ -53,5 +53,71 @@
     "forma_predicha": "yamosa",
     "distancia": 6,
     "exacto": false
+  },
+  {
+    "glosa": "punta",
+    "origen_codigo": "WY",
+    "forma_origen": "e'iru'u",
+    "fuente_origen": "wayunaiki",
+    "forma_cq_real": "tomatei",
+    "fuente_cq": "caquetío-atestiguado",
+    "forma_predicha": "eiruu",
+    "distancia": 7,
+    "exacto": false
+  },
+  {
+    "glosa": "alcaraván",
+    "origen_codigo": "WY",
+    "forma_origen": "teitei",
+    "fuente_origen": "wayunaiki",
+    "forma_cq_real": "dara",
+    "fuente_cq": "caquetío-atestiguado",
+    "forma_predicha": "teitei",
+    "distancia": 6,
+    "exacto": false
+  },
+  {
+    "glosa": "raíz",
+    "origen_codigo": "WY",
+    "forma_origen": "ourala",
+    "fuente_origen": "wayunaiki",
+    "forma_cq_real": "ure",
+    "fuente_cq": "caquetío-atestiguado",
+    "forma_predicha": "ourala",
+    "distancia": 4,
+    "exacto": false
+  },
+  {
+    "glosa": "piedra",
+    "origen_codigo": "WY",
+    "forma_origen": "ipa",
+    "fuente_origen": "wayunaiki",
+    "forma_cq_real": "cuiva",
+    "fuente_cq": "caquetío-atestiguado",
+    "forma_predicha": "iba",
+    "distancia": 3,
+    "exacto": false
+  },
+  {
+    "glosa": "fuerza",
+    "origen_codigo": "WY",
+    "forma_origen": "atsüin",
+    "fuente_origen": "wayunaiki",
+    "forma_cq_real": "despopo",
+    "fuente_cq": "caquetío-atestiguado",
+    "forma_predicha": "atsuin",
+    "distancia": 6,
+    "exacto": false
+  },
+  {
+    "glosa": "iguana",
+    "origen_codigo": "TN",
+    "forma_origen": "higuana",
+    "fuente_origen": "taino",
+    "forma_cq_real": "barbache",
+    "fuente_cq": "caquetío-atestiguado",
+    "forma_predicha": "iguana",
+    "distancia": 7,
+    "exacto": false
   }
 ]
