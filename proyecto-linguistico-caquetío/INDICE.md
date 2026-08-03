@@ -2,7 +2,7 @@
 tipo: indice-raiz
 proyecto: Curiana — proyecto lingüístico caquetío
 vault: este mismo repositorio
-actualizado: 2026-07-29
+actualizado: 2026-08-03
 ---
 
 # Curiana — índice del vault
@@ -54,9 +54,15 @@ Uno por pregunta del programa cultural, más uno del código:
 
 - 📋 [[PLAN_MAESTRO]] — la hoja de ruta. Los 4 ejes: FIDELIDAD, VAULT, JARDÍN,
   MOTOR. **Fuente de verdad del backlog.**
-- ⚖️ [[DECISIONES_ABIERTAS]] — lo que solo Miguel puede decidir. 7 abiertas.
+- ⚖️ [[DECISIONES_ABIERTAS]] — lo que solo Miguel puede decidir. **9 abiertas**, dos de fondo (D10, D11).
 - 📚 [[INDICE_FUENTES]] — estado **medido** de las 24 obras: qué se puede leer,
   qué está minado, qué sostiene cada una.
+- 🕰️ [[LINEA_DE_TIEMPO]] — las cuatro eras del proyecto y sobre qué base corrió
+  cada cosa. Necesaria para saber qué resultados siguen valiendo.
+- 🔬 [[01_que_probaron_los_seis_runs]] — el análisis de los runs existentes:
+  qué probaron, qué no, y por qué no son comparables.
+- 🧪 [[04_protocolo_run_1_era_auditada]] — cómo se corre y se mide la próxima
+  simulación para que sí sea analizable.
 
 ## El territorio
 
@@ -91,19 +97,26 @@ Todo hecho del corpus lleva una, y **en duda se degrada a la más débil**:
 | `hipotetico` | plausible, sin respaldo — licencia narrativa | 10 |
 | `retro-abstraido` | tradición viva posterior; **nunca asciende** | 4 |
 
-El lexicón usa su propia escala paralela: `caquetío-atestiguado` (233),
+El lexicón usa su propia escala paralela: `caquetío-atestiguado` (231),
 `caquetío-reconstruido` (68) e `hipotético-no-verificado` (441, **aisladas** en
-`lexicon_candidatos.py` con ~80% de fallo medido).
+`lexicon_candidatos.py` con ~80% de fallo medido — de las que la minería de
+[[oliver-1989-cap2]] hace **82 adjudicables**).
 
-## Estado, medido el 2026-07-29
+## Estado, medido el 2026-08-03
 
 | | |
 |---|---|
 | Corpus cultural | **161 hechos**, todos con `referencia` |
-| Lexicón activo | **1416** palabras · 314 de familia caquetía · **82 sin cita (26%)** |
-| Fuentes | 24 obras · **6 archivos de 0 bytes** · 4 sin minar de prioridad ALTA |
+| Lexicón activo | **1414** palabras · 312 de familia caquetía · **19 sin cita** (eran 82) |
+| Fuentes | 24 obras · **6 archivos de 0 bytes** · **las 3 ALTA del gate, minadas** |
 | Motor | **45 tests en verde**, congelado |
-| Runs | 6 curados (1489 respuestas), **pre-auditoría** |
+| Runs | 6, declarados **era de desarrollo** — ver [[01_que_probaron_los_seis_runs]] |
+| Decisiones | **9 abiertas**, 2 resueltas |
+
+> Las 19 entradas sin cita que quedan **ya no son deuda de minería sino de
+> decisión**: 13 que una fuente reclasifica a otra lengua y 3 conflictos de
+> glosa esperan a [[DECISIONES_ABIERTAS|D10]]; 3 no dejan rastro en ninguna
+> fuente.
 
 ## Convenciones
 

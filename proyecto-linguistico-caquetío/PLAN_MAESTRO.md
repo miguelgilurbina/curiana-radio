@@ -272,6 +272,16 @@ El motor queda como está (sano, testeado). No se toca salvo:
 
 ## 6. Criterios para reanudar simulaciones (el "gate")
 
+> 📌 **Ampliado el 2026-08-03.** El gate de abajo sigue vigente, pero la
+> auditoría añadió tres condiciones nuevas (la glosa de `-bana`, el desbalance
+> wayunaiki/lokono, y reparar el exportador de runs) y un protocolo experimental
+> completo. Ver **[`investigacion/disenos/04_protocolo_run_1_era_auditada.md`](investigacion/disenos/04_protocolo_run_1_era_auditada.md)**.
+>
+> Y una decisión de encuadre: **los 6 runs existentes quedan formalmente
+> declarados pruebas de desarrollo del motor**, no resultados — no son
+> comparables entre sí porque el instrumento de medición cambió entre ellos.
+> Análisis en [`investigacion/analisis/01_que_probaron_los_seis_runs.md`](investigacion/analisis/01_que_probaron_los_seis_runs.md).
+
 Se reanudan cuando **todas** estas condiciones se cumplan — y el primer run
 nuevo será el "run 1 de la era auditada":
 
