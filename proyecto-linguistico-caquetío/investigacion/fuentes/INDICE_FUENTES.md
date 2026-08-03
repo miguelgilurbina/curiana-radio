@@ -201,11 +201,126 @@ corroboración cruzada es deliberada):
 deuda de minería sino de decisión**: 13 que las fuentes reclasifican a otra
 lengua, 3 con conflicto de glosa — todas bloqueadas por **D10** en
 [[DECISIONES_ABIERTAS]] — y 3 sin rastro real (`kama`, `koke`, `wabarsure`).
+> **D10 se resolvió el mismo día**: las 16 quedaron adjudicadas y el censo bajó
+> a 3. Ver «D10 aplicada» más abajo.
 
 > Las tres fuentes con penetración cero ya no están en cero, pero el cuadro de
 > fondo no cambió: **sigue siendo Zavala y casi nadie más**. Lo nuevo es que
 > ahora hay 14 entradas con doble fuente independiente, y que
 > [[gatschet-1885]] entró corrigiendo un error vivo (ver `warawara`, D7).
+
+## D10 aplicada — las 16 adjudicadas (2026-08-03)
+
+Miguel resolvió **D10 por grupos, no en bloque**: las 16 entradas que la tanda
+de minería contradijo no son homogéneas, así que reciben tres políticas
+distintas. Las aplicó `curiana_sim/aplicar_d10.py` (idempotente, con
+`--dry-run`); ningún otro archivo del canon se tocó.
+
+**El censo de familia caquetía sin cita bajó de 19 a 3** — solo quedan las tres
+`SIN_RASTRO` reales (`kama`, `koke`, `wabarsure`).
+
+### Grupo 1 — la fuente nombra otra lengua → se reasigna `fuente` (8)
+
+Se conserva la forma y la entrada: siguen siendo vocabulario del mundo, solo
+que prestado. `score_linguistico()` ya las trata como ajenas al caquetío.
+
+| Palabra | `fuente` nueva | Evidencia |
+|---|---|---|
+| `piache` | `caribe-cháima` · **fuera del habla** | [[alvarado-1921]] p.248 *"voz cháima y tamanaca"*; en [[zavala-reyes-2015]] es la glosa española de `boratio` (#43) |
+| `ture` | `caribe-cháima` | Alvarado p.301 *"voz cháima"* (Tauste) — y es un **asiento**, no una vasija |
+| `pauji` | `caribe-cháima` | Alvarado p.244 — es un **árbol** (*Bumelia buxifolia*), no un ave; la voz caquetía del ave es `paugis` |
+| `watapana` | `caribe-cumanagoto` | Alvarado p.163 *"del cum. araguatapanár, oreja de araguato"* |
+| `auyama` | `caribe-cumanagoto` | Alvarado p.16 *"voz cum."* (Ruiz Blanco) |
+| `kunuku` | `taíno` | Alvarado p.89 *"voz taina"* (Las Casas V.307); van Buurt lo repite en prosa |
+| `kukuisa` | `español-colonial` | Alvarado p.84 vía Caulín I.3: *"los indios llaman **caruata** y los españoles **cocuiza**"* |
+| `caraota` | `español-colonial` | Alvarado p.58; en Zavala es la **glosa** de `icoroata` (#162) |
+
+**Dos etiquetas nuevas**, dadas de alta en
+`curiana_database.py::normalize_source_language()` (y en `LANG_CATEGORIES`):
+
+- **`caribe-continental`** ← `caribe-cháima`, `caribe-cumanagoto`,
+  `caribe-tamanaco`. El lexicón ya distinguía `kalinago` (caribe **insular**) y
+  `kalinago-caribe-overlay`; lo que faltaba era el caribe de **tierra firme**,
+  que es el que Alvarado declara. El sufijo `-continental` es justo lo que lo
+  separa del insular ya presente. El orden de las comprobaciones importa:
+  `kalinago-caribe-overlay` también contiene *caribe* y se resuelve antes.
+- **`español-colonial`** ← `español`. Sin categoría propia caerían en el
+  `return` por defecto (`proto-arahuaco`) y se contarían como arahuacas.
+
+**`piache` sale del habla y `boratio` ocupa su lugar.** No se borra: pasa a
+`FUERA_DEL_HABLA`, un dict nuevo al final de `curiana_lexicon.py` que conserva
+la entrada entera con su procedencia. Deja de sembrarse, de aparecer en prompts
+y de puntuar. **El canon no se tocó**: Shaboro sigue siendo el piache de la
+Curiana. ⚠️ Queda pendiente que `curiana_koine.py::FORMAS_SEED` siembra todavía
+la forma «piache» a Shaboro y a Buio-sha.
+
+### Grupo 2 — conflicto de glosa → se corrige la glosa, se conserva la palabra (6)
+
+Política **D7**: la glosa de la fuente va verbatim a `glosa_fuente`, la lectura
+descartada queda registrada en `notas`. Nada se pierde en silencio.
+
+| Palabra | Qué pasó |
+|---|---|
+| `cumaragua` | `sig` → *caracol de las costas de Paraguaná* (Alvarado p.102). ⚠️ **La glosa anterior sí tenía fuente**: Zavala #93 (HB+E) «Ciruela, espuma rosada», fuerza F. Registrada en `notas` |
+| `bureche` | `sig` → *bebida fermentada de casabe* (Alvarado p.34) y `cat` v_raiz → sust. ⚠️ **La glosa anterior sí tenía fuente**: Zavala #49 (AM) «Hacer, realizar», fuerza F. Y crea cuasi-duplicado con `buriche` (#50, «Licor fermentado») |
+| `guanepe` | **La glosa se conserva** — Alvarado p.152 la confirma palabra por palabra. Lo que desmiente es la **geografía**: Barcelona y Guayana, no Coro. Reserva anotada |
+| `tara` | ⚠️ **conflicto abierto, NO reescrita** — ver abajo |
+| `saruro` | ⚠️ **conflicto abierto, NO reescrita** — ver abajo |
+| `corie` | ⚠️ **conflicto abierto, NO reescrita** — ver abajo |
+
+**Las tres que no se reescriben.** Se buscó fuente para la glosa **actual** y
+**no aparece en ninguna parte** — ni en [[alvarado-1921]], ni en
+[[van-buurt-2014]], ni en [[gatschet-1885]]. Pero las tres sostienen material
+del canon, así que quedan con su glosa y una `notas` que deja el conflicto
+**abierto y visible**. Un conflicto documentado es mejor que una corrección
+inventada.
+
+- **`tara`** — es el más fuerte de los tres y el único con **doble
+  corroboración independiente**: Zavala #238 (HB+PMA+AM) «Langosta, mariposa»
+  *y* Alvarado p.283, donde `tara` vale polilla o mariposa (cf. TARÍTA,
+  *"mariposa o tara pequeña"*). Cero fuentes para 'venado'. Corregirla obliga a
+  tocar `cultura/ecologia.yaml`, [[02_ecologia_golfete]] §10.6 y
+  [[02_capas_biosfera]], donde *tara*='venado' es un argumento entero.
+- **`saruro`** — su único rastro en el repo es una lista de Notion
+  (*Venezolanismos de Origen Indígena*) citada en `DISENO_KOINE` §8, y allí se
+  usa para confirmar la terminación **-aro/-uro**, no para sostener la glosa.
+  En contra: Zavala #224 (E) «Serpiente no venenosa. Boa constrictora». Da
+  nombre a **Saruro-sha**.
+- **`corie`** — el hallazgo incómodo: **el propio canon ya dice armadillo**.
+  `cultura/genealogia.yaml` da *"corie (armadillo)"* como tótem del linaje
+  Paugis y la ficha de Buio-sha usa *"corie (armadillo) como elogio"*. La glosa
+  del lexicón ('choza, habitación') contradice a la fuente **y a su propio
+  canon a la vez**. Da nombre a **Corie-ko**.
+
+### Grupo 3 — solo bajada de tier, sin cambio de lengua (2)
+
+Etiqueta nueva **`caquetío-hipotético`**, que sigue normalizando a `caquetío`:
+es deliberado — la **lengua** no se discute, solo baja la **confianza**.
+
+| Palabra | Por qué |
+|---|---|
+| `tata` | [[van-buurt-2014]] la pone en su **§11** (*"less certain links to Caquetío"*), no en §6. Zavala #243 la marca fuerza D (panhispánico infantil) |
+| `coro` | Zavala #181 es **`Koro` = 'cotorra'**. La glosa 'cardón grande' no sale de ninguna fuente: en Alvarado *coro* aparece 55 veces y **siempre como topónimo** |
+
+⚠️ **`coro` no se borra y el canon no se toca**: da nombre a la ciudad de Coro y
+aparece en todo el sitio público. Lo que se retira es el respaldo de la glosa.
+
+### Composición del lexicón tras D10
+
+`piache` sale del habla, así que el activo pasa de 1416 a **1413** entradas.
+
+| Categoría | Entradas |
+|---|---|
+| wayunaiki | 781 |
+| **caquetío** | **304** |
+| lokono | 227 |
+| taíno | 57 *(+1: `kunuku`)* |
+| kalinago | 19 |
+| proto-arahuaco | 8 |
+| jirajaroide-contacto | 7 |
+| **caribe-continental** *(nueva)* | **4** |
+| kalinago-caribe-overlay | 4 |
+| **español-colonial** *(nueva)* | **2** |
 
 ## Convención de estas notas
 
