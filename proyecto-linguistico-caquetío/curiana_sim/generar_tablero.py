@@ -260,13 +260,21 @@ def medir_corpus():
             continue
         with open(os.path.join(carpeta, f), encoding="utf-8") as fh:
             datos = yaml.safe_load(fh)
+        # Un hecho es una entrada **con etiqueta epistémica**, venga de la
+        # sección que venga. Antes solo se miraba `entradas`, y eso dejaba
+        # fuera los 9 `huecos_lexicos` de ecologia.yaml — que llevan su
+        # `fuente` y su `referencia` como cualquier otro hecho, y que este
+        # tablero contaba como "otra estructura". De ahí que el corpus
+        # apareciera con 152 hechos aquí y 161 en `compilar_corpus.py`.
         hechos = []
         if isinstance(datos, list):
             hechos = [h for h in datos if isinstance(h, dict)]
         elif isinstance(datos, dict):
             for clave, valor in datos.items():
-                if clave == "entradas" and isinstance(valor, list):
-                    hechos = [h for h in valor if isinstance(h, dict)]
+                etiquetados = ([h for h in valor if isinstance(h, dict) and "fuente" in h]
+                               if isinstance(valor, list) else [])
+                if etiquetados:
+                    hechos += etiquetados
                 elif isinstance(valor, (list, dict)):
                     otras.append((f, clave, len(valor)))
         if not hechos:
@@ -408,11 +416,23 @@ def medir_gate(lex, censo, fuentes, corpus, decisiones):
                       " · ".join("%s [[%s]] %s" % (t, s, e) for t, s, e in trio)
                       or "ninguna nota lleva las tareas F3/F4/F5"))
 
-    # 4 — validador del corpus
-    existe = os.path.exists(os.path.join(AQUI, "compilar_corpus.py")) or \
-        os.path.exists(os.path.join(REPO, "compilar_corpus.py"))
-    filas.append((4, "`compilar_corpus.py` en verde (V2)", existe,
-                  "el archivo existe" if existe else "no existe todavía"))
+    # 4 — validador del corpus. La condición dice "en verde", no "existe": un
+    # validador que existe pero falla no cumple nada, así que se corre.
+    if not os.path.exists(os.path.join(AQUI, "compilar_corpus.py")):
+        filas.append((4, "`compilar_corpus.py` en verde (V2)", False,
+                      "no existe todavía"))
+    else:
+        try:
+            from compilar_corpus import compilar
+            hechos, _, problemas = compilar()
+            errores = [p for p in problemas if p.nivel == "error"]
+            avisos = [p for p in problemas if p.nivel == "aviso"]
+            filas.append((4, "`compilar_corpus.py` en verde (V2)", not errores,
+                          "**%d hechos, %d errores, %d avisos**" % (
+                              len(hechos), len(errores), len(avisos))))
+        except Exception as e:                                  # noqa: BLE001
+            filas.append((4, "`compilar_corpus.py` en verde (V2)", None,
+                          "⚠️ no medido: %s: %s" % (type(e).__name__, e)))
 
     # 5 — citas del corpus verificadas (F10)
     if corpus is None:

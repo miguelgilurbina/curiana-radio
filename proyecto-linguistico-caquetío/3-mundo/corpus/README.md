@@ -93,6 +93,34 @@ para que el canon interno nunca se disfrace de ninguna de las otras dos.
 > Nota histórica: la sesión 4 etiquetó originalmente sus hechos de elenco como `retro-abstraido`;
 > se reetiquetaron a `canon-simulacion` al consolidar (2026-07), y la categoría se añadió al esquema.
 
+## Validación
+
+`curiana_sim/compilar_corpus.py` valida estos archivos y emite el YAML fusionado.
+Es la condición 4 del gate ([[PLAN_MAESTRO]] §6.2); antes de él, **nada
+comprobaba nada** de lo que esta página promete.
+
+```bash
+python curiana_sim/compilar_corpus.py            # informe
+python curiana_sim/compilar_corpus.py --check    # exit 1 si hay errores
+python curiana_sim/compilar_corpus.py --fusionar corpus.yaml
+```
+
+Comprueba que las etiquetas de `fuente` sean legales, que los `id` tengan la
+forma `<dominio>-NNN` y sean únicos, que los `agentes_relacionados` existan en
+`curiana_agents.py`, que las referencias cruzadas entre hechos resuelvan, y que
+`locacion`/`palabra_lexicon` enganchen con `curiana_state.py` y
+`curiana_lexicon.py`. Lo que **no** comprueba es que una cita resuelva a su
+página: eso sigue siendo trabajo humano (F10).
+
+Dos convenciones que el validador conoce porque el corpus ya las usaba:
+
+- **`id` con sufijo de letra** (`creencia-010b`) — para intercalar un hecho
+  junto al que ya existía sin renumerar los treinta siguientes.
+- **`hueco-lex-NNN`** — los huecos léxicos de `ecologia.yaml` van en su propia
+  serie, porque no son hechos sobre el mundo sino ausencias en la lengua. Son
+  hechos etiquetados de pleno derecho y **cuentan en el censo**: el corpus
+  tiene 161, no 152.
+
 ## Convenciones
 
 - Todo en español.
