@@ -50,6 +50,3 @@ de Las Casas. La religión taína está en otros pasajes y volúmenes.
 - Regla que deja: *no toda fuente del corpus rinde para todo tema*. Mismo
   precedente que [[perea-alonso-1942]].
 
-## Enlaces
-
-[[mapa-familia]] · [[mapa-creencia]] · [[mapa-transmision]] · [[INDICE_FUENTES]]

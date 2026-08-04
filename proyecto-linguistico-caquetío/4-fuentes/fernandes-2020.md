@@ -48,5 +48,4 @@ reemplazo poblacional biológico". Esa afirmación se apoya hoy en **búsquedas 
 
 ## Enlaces
 
-[[schroeder-2018]] · [[antczak-2017-cariban]] · [[adam-1879]] ·
-[[mapa-familia]] · [[INDICE_FUENTES]]
+[[schroeder-2018]] · [[antczak-2017-cariban]] · [[adam-1879]]

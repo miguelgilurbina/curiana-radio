@@ -247,6 +247,4 @@ revisar. **No se corrigen forzando la regla**; eso sería circular.
 
 ## Enlaces
 
-[[oliver-1989-cap3]] · [[zavala-reyes-2015]] · [[brinton-1871]] ·
-[[perea-alonso-1942]] · [[gatschet-1885]] · [[jahn-1927]] ·
-[[mapa-motor]] · [[mapa-familia]] · [[INDICE_FUENTES]]
+[[oliver-1989-cap3]] · [[zavala-reyes-2015]] · [[brinton-1871]] · [[perea-alonso-1942]] · [[gatschet-1885]] · [[jahn-1927]]

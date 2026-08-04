@@ -342,6 +342,4 @@ llegan rotos.
 
 ## Enlaces
 
-[[PLAN_MAESTRO]] · [[DECISIONES_ABIERTAS]] · [[INDICE]] ·
-[[mapa-familia]] · [[mapa-ecologia]] · [[mapa-creencia]] · [[mapa-transmision]] ·
-[[mapa-geografia-politica]] · [[mapa-motor]]
+[[PLAN_MAESTRO]] · [[DECISIONES_ABIERTAS]]

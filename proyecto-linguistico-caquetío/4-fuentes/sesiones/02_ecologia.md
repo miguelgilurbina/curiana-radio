@@ -23,7 +23,7 @@ moc: mapa-ecologia
 
 | Fuente | Ubicación | Qué aportó |
 |---|---|---|
-| Canon etnohistórico | `curiana_sim/CULTURA_CAQUETIA.md` | Confirma el hueco: cubre economía (§3) y ciclo seca/lluvias (§2) pero NO el medio físico. |
+| Canon etnohistórico | [[CULTURA_CAQUETIA]] | Confirma el hueco: cubre economía (§3) y ciclo seca/lluvias (§2) pero NO el medio físico. |
 | Locaciones y eventos | `curiana_sim/curiana_state.py` | Locaciones a las que dar sustancia (orilla, manglar, salinar, conuco, buco, matorral, camino_islas…) y eventos ambientales ya escritos (raspado_salinar, gran_cosecha_sal, crecida_buco, expedicion_perlas…). |
 | Lexicón | `curiana_sim/curiana_lexicon.py` (7442 líneas) | Inventario de especies/paisaje ya nombrados; base para detectar huecos léxicos. |
 | Nombres de agentes | `curiana_sim/curiana_agents.py` | Reveló que cunaro/guaranaro/bagre son componentes de nombres pero no entradas del lexicón. |

@@ -16,7 +16,7 @@ Qué se buscó, qué se encontró, qué quedó abierto. Complementa
 
 ## Fuentes internas leídas (obligatorias)
 
-- `curiana_sim/CULTURA_CAQUETIA.md` §5 ("El rol de la lengua" / "Cómo se
+- [[CULTURA_CAQUETIA]] §5 ("El rol de la lengua" / "Cómo se
   aprende") — punto de partida. Confirma que el aprendizaje lingüístico es
   ya reconstruido como transmisión en el regazo + canciones + trabajo
   compartido, y marca palabras "cargadas" (barsure, pütchi, urari,

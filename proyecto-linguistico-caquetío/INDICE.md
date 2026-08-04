@@ -80,6 +80,7 @@ proyecto-linguistico-caquetío/          ← raíz del vault
 ├── 3-mundo/         ¿cómo era ese pueblo?
 │   ├── mapa-familia · mapa-ecologia · mapa-creencia · mapa-transmision
 │   │   · mapa-geografia-politica
+│   ├── CULTURA_CAQUETIA.md  ← el canon narrativo: cómo se vivía ahí
 │   ├── ensayos/     ← los 5 mini-ensayos (el argumento, no el índice)
 │   └── corpus/      ← 161 hechos en YAML + genealogía
 │
@@ -158,7 +159,4 @@ El lexicón usa su propia escala paralela — `caquetío-atestiguado` (226),
 
 ## Enlaces
 
-[[PLAN_MAESTRO]] · [[DECISIONES_ABIERTAS]] · [[LINEA_DE_TIEMPO]] ·
-[[mapa-lengua]] · [[INDICE_FUENTES]] · [[mapa-motor]] ·
-[[mapa-familia]] · [[mapa-ecologia]] · [[mapa-creencia]] ·
-[[mapa-transmision]] · [[mapa-geografia-politica]]
+[[PLAN_MAESTRO]] · [[DECISIONES_ABIERTAS]] · [[LINEA_DE_TIEMPO]]

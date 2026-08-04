@@ -197,6 +197,4 @@ rastro alguno** en Alvarado.
 
 ## Enlaces
 
-[[mapa-ecologia]] · [[mapa-motor]] · [[02_protocolo_habla_paraguanera]] ·
-[[zavala-reyes-2015]] · [[van-buurt-2014]] · [[gatschet-1885]] ·
-[[oviedo-y-valdes-1851]] · [[INDICE_FUENTES]]
+[[02_protocolo_habla_paraguanera]] · [[zavala-reyes-2015]] · [[van-buurt-2014]] · [[gatschet-1885]] · [[oviedo-y-valdes-1851]]

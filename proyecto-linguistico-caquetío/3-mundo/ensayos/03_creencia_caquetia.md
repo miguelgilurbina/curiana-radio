@@ -43,7 +43,7 @@ Lionza— cuyo epicentro geográfico coincide con el territorio caquetío histó
 La disciplina de mantener separadas ambas vías —lo `reconstruido` de lo
 `retro-abstraido`— es, en esta sesión, el resultado principal.
 
-El canon (`CULTURA_CAQUETIA.md` §1) ya establece el sustrato: el alma *barsure*
+El canon ([[CULTURA_CAQUETIA]] §1) ya establece el sustrato: el alma *barsure*
 (atestiguada), Manaure señor de las tormentas (atestiguado), los espíritus dueños,
 la analogía wayuu Pulowi/Juyá/Wanülüü/Lapü (con la advertencia de que esos nombres
 son wayuu y no deben caquetizarse por decreto), los ancestros cuyos huesos se

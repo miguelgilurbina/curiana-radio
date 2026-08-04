@@ -55,4 +55,4 @@ dato verificado.**
 
 ## Enlaces
 
-[[fernandes-2020]] · [[keegan-1989]] · [[antczak-2017-cariban]] · [[INDICE_FUENTES]]
+[[fernandes-2020]] · [[keegan-1989]] · [[antczak-2017-cariban]]

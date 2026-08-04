@@ -53,4 +53,4 @@ resumen va a condicionar cómo se mide el experimento.
 
 ## Enlaces
 
-[[mapa-transmision]] · [[04_transmision_saber]] · [[CANON_TIERRA]] · [[INDICE_FUENTES]]
+[[04_transmision_saber]] · [[CANON_TIERRA]]

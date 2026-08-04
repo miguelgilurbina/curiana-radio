@@ -74,5 +74,4 @@ legitimidad se impugnaba por **la madre**. Ver [[01_familia_caquetia]] §1.
 
 ## Enlaces
 
-[[oliver-1989-cap2]] · [[mapa-familia]] · [[mapa-geografia-politica]] ·
-[[01_familia_caquetia]] · [[05_geografia_politica_y_sucesion]] · [[INDICE_FUENTES]]
+[[oliver-1989-cap2]] · [[01_familia_caquetia]] · [[05_geografia_politica_y_sucesion]]

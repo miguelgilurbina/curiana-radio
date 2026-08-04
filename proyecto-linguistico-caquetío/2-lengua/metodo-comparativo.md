@@ -174,6 +174,4 @@ mueve es de quién se reconstruye **la lengua**.
 
 ## Enlaces
 
-[[mapa-lengua]] · [[lexicon]] · [[morfologia]] · [[toponimia]] ·
-[[DECISIONES_ABIERTAS]] · [[oliver-1989-cap2]] · [[oliver-1989-cap3]] ·
-[[brinton-1871]] · [[perea-alonso-1942]] · [[adam-1879]] · [[mapa-motor]]
+[[lexicon]] · [[morfologia]] · [[toponimia]] · [[DECISIONES_ABIERTAS]] · [[oliver-1989-cap2]] · [[oliver-1989-cap3]] · [[brinton-1871]] · [[perea-alonso-1942]] · [[adam-1879]]

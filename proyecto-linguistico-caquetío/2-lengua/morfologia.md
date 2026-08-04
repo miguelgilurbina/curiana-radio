@@ -231,6 +231,4 @@ Despejados de ecuaciones bilingües; el método está en [[toponimia]].
 
 ## Enlaces
 
-[[mapa-lengua]] · [[lexicon]] · [[toponimia]] · [[metodo-comparativo]] ·
-[[DECISIONES_ABIERTAS]] · [[zavala-reyes-2015]] · [[van-buurt-2014]] ·
-[[gatschet-1885]] · [[03_descomposicion_toponimica]] · [[mapa-motor]]
+[[lexicon]] · [[toponimia]] · [[metodo-comparativo]] · [[DECISIONES_ABIERTAS]] · [[zavala-reyes-2015]] · [[van-buurt-2014]] · [[gatschet-1885]] · [[03_descomposicion_toponimica]]

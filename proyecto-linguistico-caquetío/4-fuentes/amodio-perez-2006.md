@@ -64,5 +64,4 @@ de `[hipótesis]` a `[reconstruido]` con doble comparanda (esta + [[jahn-1927]])
 
 ## Enlaces
 
-[[mapa-transmision]] · [[04_transmision_saber]] · [[jahn-1927]] ·
-[[guerra-curvelo-palabrero]] · [[INDICE_FUENTES]]
+[[04_transmision_saber]] · [[jahn-1927]] · [[guerra-curvelo-palabrero]]

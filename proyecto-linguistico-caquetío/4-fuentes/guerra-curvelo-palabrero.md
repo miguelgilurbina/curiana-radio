@@ -60,5 +60,4 @@ un programa aparte: [[PROGRAMA_WAYUU]].
 
 ## Enlaces
 
-[[mapa-transmision]] · [[PROGRAMA_WAYUU]] · [[amodio-perez-2006]] ·
-[[04_transmision_saber]] · [[INDICE_FUENTES]]
+[[PROGRAMA_WAYUU]] · [[amodio-perez-2006]] · [[04_transmision_saber]]

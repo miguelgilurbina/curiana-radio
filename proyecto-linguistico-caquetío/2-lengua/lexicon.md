@@ -192,5 +192,4 @@ se degradan a `caquetío-reconstruido`.
 
 ## Enlaces
 
-[[mapa-lengua]] · [[morfologia]] · [[toponimia]] · [[metodo-comparativo]] ·
-[[INDICE_FUENTES]] · [[DECISIONES_ABIERTAS]] · [[mapa-motor]]
+[[morfologia]] · [[toponimia]] · [[metodo-comparativo]] · [[DECISIONES_ABIERTAS]]

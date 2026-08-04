@@ -284,6 +284,4 @@ topónimos y los 19 morfemas.
 
 ## Enlaces
 
-[[gatschet-1885]] · [[alvarado-1921]] · [[zavala-reyes-2015]] ·
-[[oliver-1989-cap2]] · [[02_protocolo_habla_paraguanera]] ·
-[[mapa-geografia-politica]] · [[mapa-motor]] · [[INDICE_FUENTES]]
+[[gatschet-1885]] · [[alvarado-1921]] · [[zavala-reyes-2015]] · [[oliver-1989-cap2]] · [[02_protocolo_habla_paraguanera]]

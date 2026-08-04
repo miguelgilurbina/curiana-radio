@@ -50,4 +50,4 @@ sustitución silenciosa que el eje FIDELIDAD busca hacer visible.
 
 ## Enlaces
 
-[[antczak-2015-las-aves]] · [[mapa-ecologia]] · [[02_ecologia]] · [[INDICE_FUENTES]]
+[[antczak-2015-las-aves]] · [[02_ecologia]]

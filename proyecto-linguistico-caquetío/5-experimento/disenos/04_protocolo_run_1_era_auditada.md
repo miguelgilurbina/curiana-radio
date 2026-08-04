@@ -145,5 +145,4 @@ pueden comparar.
 
 ## Enlaces
 
-[[01_que_probaron_los_seis_runs]] · [[LINEA_DE_TIEMPO]] · [[PLAN_MAESTRO]] ·
-[[DISENO_KOINE]] · [[CANON_TIERRA]] · [[DECISIONES_ABIERTAS]] · [[mapa-motor]]
+[[01_que_probaron_los_seis_runs]] · [[LINEA_DE_TIEMPO]] · [[PLAN_MAESTRO]] · [[DISENO_KOINE]] · [[CANON_TIERRA]] · [[DECISIONES_ABIERTAS]]

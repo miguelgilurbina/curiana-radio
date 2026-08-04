@@ -156,6 +156,4 @@ el humano adjudica. Ver [[INDICE_FUENTES]].
 
 ## Enlaces
 
-[[mapa-lengua]] · [[morfologia]] · [[lexicon]] · [[metodo-comparativo]] ·
-[[03_descomposicion_toponimica]] · [[zavala-reyes-2015]] · [[gatschet-1885]] ·
-[[van-buurt-2014]] · [[alvarado-1921]]
+[[morfologia]] · [[lexicon]] · [[metodo-comparativo]] · [[03_descomposicion_toponimica]] · [[zavala-reyes-2015]] · [[gatschet-1885]] · [[van-buurt-2014]] · [[alvarado-1921]]
