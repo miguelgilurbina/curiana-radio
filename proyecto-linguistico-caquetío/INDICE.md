@@ -51,6 +51,8 @@ ensayo. Los ensayos —el argumento, con su evidencia— viven en
 
 ## Las notas de trabajo
 
+- 🌙 [[SIGUIENTE_TANDA]] — **qué lanzar en la próxima tanda de trabajo
+  desatendido, y cómo se encarga.** Empieza por aquí si arrancas en frío.
 - 📋 [[PLAN_MAESTRO]] — la hoja de ruta. Los 4 ejes: FIDELIDAD, VAULT, JARDÍN,
   MOTOR. **Fuente de verdad del backlog.**
 - ⚖️ [[DECISIONES_ABIERTAS]] — lo que solo Miguel puede decidir. **7 abiertas**,
