@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-04 02:20**.
+<!--GENERADO--> Generado el **2026-08-04 15:24**.
 
 ## ¿Vamos bien?
 
@@ -21,7 +21,7 @@ editar_a_mano: no
 |---|---|---|---|
 | Entradas del lexicón **sin cita** | **3** | 82 (2026-07-21) | 🟢 −79 |
 | Hechos del corpus **con referencia** | **161 / 161** | — | 🟢 |
-| Tests del motor | **91 en verde** | 0 rojos | 🟢 |
+| Tests del motor | **119 en verde** | 0 rojos | 🟢 |
 | Gate para reanudar simulaciones | **2 de 9** condiciones | faltan 7 | 🔴 |
 | Decisiones esperando a Miguel | **8 abiertas** | 3 resueltas | 🟡 |
 
@@ -122,8 +122,8 @@ Cuántas de las 301 entradas de familia caquetía **con `notas`** citan a cada o
 | [[oliver-1989-cap2]] | 5 | 2% |
 | [[oliver-1989-cap3]] | 5 | 2% |
 | [[gatschet-1885]] | 4 | 1% |
-| [[oviedo-y-valdes-1851]] | 2 | 1% |
-| [[jahn-1927]] | 1 | 0% |
+| [[oviedo-y-valdes-1851]] | 3 | 1% |
+| [[jahn-1927]] | 2 | 1% |
 | [[brinton-1871]] | 1 | 0% |
 
 Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas con `notas` que no citan a ninguna obra del vault: **68**.
@@ -138,10 +138,10 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 
 | `estado_minado` | n |
 |---|---|
-| minado | 17 |
+| minado | 18 |
 | no-disponible | 4 |
 | segunda-mano | 3 |
-| parcial | 2 |
+| parcial | 1 |
 | bloqueada | 1 |
 | sin-minar | 1 |
 | descartada | 1 |
@@ -155,10 +155,10 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 |---|---|---|---|---|---|---|
 | [[zavala-reyes-2015]] | completo | alta | si | 164 | 224 | 7 |
 | [[brinton-1871]] | minado | hecha | si | 84 | 1 | 0 |
-| [[jahn-1927]] | parcial | media | si | 4 | 1 | 16 |
+| [[jahn-1927]] | minado | media | si | 4 | 2 | 16 |
 | [[gatschet-1885]] | minado | alta | si | 4 | 4 | 0 |
 | [[oliver-1989-cap3]] | minado | media | si | 2 | 5 | 15 |
-| [[oviedo-y-valdes-1851]] | no-disponible | alta | no | 2 | 2 | 7 |
+| [[oviedo-y-valdes-1851]] | no-disponible | alta | no | 2 | 3 | 7 |
 | [[oliver-1989-cap2]] | minado | alta | parcial | 2 | 5 | 2 |
 | [[arcaya-1920]] | minado | media | si | 1 | 8 | 13 |
 | [[camacho-2011]] | minado | hecha | si | 0 | 0 | 16 |
@@ -257,8 +257,8 @@ Argumento y evidencia de cada una: [[DECISIONES_ABIERTAS]]. El **estado** manda 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 789 en 168 notas indexadas | 🟢 0 rotos |
-| Tests (`curiana_sim/tests/`) | 91 passed, 0 failed | 🟢 |
+| Wikilinks | 809 en 171 notas indexadas | 🟢 0 rotos |
+| Tests (`curiana_sim/tests/`) | 119 passed, 0 failed | 🟢 |
 
 Guardianes: `python check_vault_links.py --strict` · `python -m pytest curiana_sim/tests/ -q`
 

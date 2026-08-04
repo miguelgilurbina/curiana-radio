@@ -47,6 +47,7 @@ ensayo. Los ensayos —el argumento, con su evidencia— viven en
 | [[mapa-creencia]] | ¿En qué creía? | 26 |
 | [[mapa-transmision]] | ¿Cómo sabía lo que sabía? | 34 |
 | [[mapa-geografia-politica]] | ¿Cuál era el mundo de Manaure? | 8 |
+| [[polities-caquetias]] | ¿Cuántos caquetíos había, y cuál simulamos? | 4 polities |
 | [[mapa-motor]] | El código, los tests y los runs | — |
 
 ## Las notas de trabajo

@@ -70,6 +70,9 @@ desigual: guerra y economía son abundantes, la cerámica es una sola frase (per
 decisiva), y la religión es escasa **y casi toda de Barquisimeto, no de la
 costa** — que es justo donde vive la simulación.
 
+> 📌 Lo que salió de aquí está modelado en [[polities-caquetias]] y en
+> `curiana_sim/curiana_polities.py`.
+
 > ⚠️ **La advertencia que atraviesa los cuatro barridos.** Oliver dedica el
 > capítulo a demostrar que **los caquetíos NO eran una cultura homogénea**: la
 > Curiana de este proyecto es **caquetío costero** (Coro, Todariquiba), y buena
