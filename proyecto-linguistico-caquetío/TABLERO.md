@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-04 02:15**.
+<!--GENERADO--> Generado el **2026-08-04 02:20**.
 
 ## ¿Vamos bien?
 
@@ -138,16 +138,16 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 
 | `estado_minado` | n |
 |---|---|
-| minado | 16 |
+| minado | 17 |
 | no-disponible | 4 |
 | segunda-mano | 3 |
 | parcial | 2 |
-| sin-minar | 2 |
 | bloqueada | 1 |
+| sin-minar | 1 |
 | descartada | 1 |
 | completo | 1 |
 
-**Prioridad ALTA sin minar (2):** [[oviedo-y-banos]] (`sin-minar`), [[oviedo-y-valdes-1851]] (`no-disponible`).
+**Prioridad ALTA sin minar (1):** [[oviedo-y-valdes-1851]] (`no-disponible`).
 
 <details><summary>Las 30 notas, una por fila</summary>
 
@@ -173,7 +173,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[adam-1879]] | minado | hecha | si | 0 | 0 | 1 |
 | [[alvarado-1921]] | minado | media | si | 0 | 15 | 1 |
 | [[angleria-1892]] | parcial | media | si | 0 | 0 | 1 |
-| [[oviedo-y-banos]] | sin-minar | alta | si | 0 | 0 | 1 |
+| [[oviedo-y-banos]] | minado | baja | si | 0 | 0 | 1 |
 | [[van-buurt-2014]] | minado | alta | si | 0 | 12 | 1 |
 | [[antczak-2017-cariban]] | minado | media | si | 0 | 0 | 0 |
 | [[fernandes-2020]] | no-disponible | baja | archivo-vacio | 0 | 0 | 0 |
@@ -257,7 +257,7 @@ Argumento y evidencia de cada una: [[DECISIONES_ABIERTAS]]. El **estado** manda 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 778 en 168 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 789 en 168 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 91 passed, 0 failed | 🟢 |
 
 Guardianes: `python check_vault_links.py --strict` · `python -m pytest curiana_sim/tests/ -q`
