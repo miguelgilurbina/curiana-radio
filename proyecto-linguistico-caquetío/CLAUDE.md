@@ -25,7 +25,7 @@ curiana_sim/        → Python 3.11+ (simulación)
 ```
 
 > ⚠️ **Queries a la tabla `lexicon`:** PostgREST limita cada respuesta a
-> `max_rows` (1000, ver `supabase/config.toml`). Con 1413 palabras, cualquier
+> `max_rows` (1000, ver `supabase/config.toml`). Con ~1400 palabras, cualquier
 > query nueva sobre `lexicon` sin `.range()` se trunca silenciosamente.
 > Pagina con `.range(desde, desde+999)` hasta que la página devuelta tenga
 > menos de 1000 filas (ver `loadLexicon()` en `app/page.tsx` o `app/lexicon/page.tsx`).
@@ -77,9 +77,19 @@ LANGSMITH_PROJECT=curiana             # opcional
 cd curiana_sim
 pip install -r requirements.txt
 python test_quick.py          # verifica el stack sin API keys (debe dar 8/8 OK)
+
+# Estado del proyecto, medido (NO copiar cifras de la doc: se desactualizan)
+python curiana_sim/generar_tablero.py           # reescribe TABLERO.md en la raíz
+python curiana_sim/generar_tablero.py --stdout  # lo imprime sin escribir
+python curiana_sim/generar_tablero.py --check   # exit 1 si TABLERO.md está viejo
+  # Mide lexicón, censo de citas (importa auditar_82.py), frontmatter de
+  # 4-fuentes/, corpus de 3-mundo/corpus/, el gate y las decisiones abiertas.
+  # Sin red por defecto (--gh cruza los issues reales). TABLERO.md es generado:
+  # no se edita a mano.
+
 python -m pytest tests/ -q    # suite unitaria (koiné, léxico, observer, social; sin API keys)
 supabase start                 # levanta Supabase local (ver nota de egress arriba)
-python curiana_database.py seed  # siembra las 1413 palabras activas en Supabase
+python curiana_database.py seed  # siembra las palabras activas en Supabase
 
 # Correr simulación
 python curiana_orchestrator_v2.py                    # modo interactivo
@@ -101,6 +111,11 @@ python curiana_orchestrator_v2.py --auto 30 --perfiles --reporte
 
 ## Metodología del lexicón y validación
 
+> 📊 **Las cifras exactas NO van aquí: van en `TABLERO.md`**, que las mide
+> contra el dato en cada corrida (`python curiana_sim/generar_tablero.py`).
+> Este archivo da los números en orden de magnitud a propósito — una cifra
+> exacta escrita a mano envejece mal, y ya pasó tres veces.
+>
 > 📖 **El estado medido y en prosa está en `2-lengua/lexicon.md`,
 > `2-lengua/morfologia.md`, `2-lengua/toponimia.md` y
 > `2-lengua/metodo-comparativo.md`.** Esta sección es el resumen operativo;
@@ -110,7 +125,7 @@ El lexicón activo distingue 8 categorías de `fuente` (ver `normalize_source_la
 en `curiana_database.py`), porque "caquetío" mezclaba históricamente dato real
 con especulación sin marcar:
 
-- **`caquetío-atestiguado`** (231) — dato histórico real, citable a fuente
+- **`caquetío-atestiguado`** — dato histórico real, citable a fuente
   concreta. ⚠️ **Medido el 2026-08-03: en el dato es Zavala y casi nadie más** —
   164 entradas lo citan; Oliver 2, Oviedo (vía terceros) 2, Galeotto Cey 2,
   Arcaya 1, Jahn 1; Alvarado, Van Buurt y Gatschet, **cero**. Ver
