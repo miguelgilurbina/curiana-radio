@@ -35,7 +35,7 @@ import sys
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(AQUI)
-NOTA_ZAVALA = os.path.join(REPO, "investigacion", "fuentes", "zavala-reyes-2015.md")
+NOTA_ZAVALA = os.path.join(REPO, "4-fuentes", "zavala-reyes-2015.md")
 
 # Clases de veredicto, de mejor a peor para el lexicón.
 CONFIRMA = "CONFIRMA"          # hay cita y sostiene la etiqueta caquetía
@@ -122,7 +122,14 @@ def leer_propuestas():
 def _leer_zavala():
     """La adjudicación de F7 vive en markdown, por secciones A-E."""
     if not os.path.exists(NOTA_ZAVALA):
-        return
+        # Callarse aquí deja el cruce corriendo cojo sin que nadie lo note: fue
+        # exactamente lo que pasó tras el refactor del vault (#64), cuando la
+        # nota se movió de `investigacion/fuentes/` a `4-fuentes/`. Un brazo
+        # muerto del cruce es peor que un error, porque el informe SÍ sale.
+        raise FileNotFoundError(
+            "No está la nota de Zavala en %s. El cruce de F7 quedaría sin su "
+            "fuente principal y el informe saldría igual, pero mintiendo. "
+            "Corrige NOTA_ZAVALA." % NOTA_ZAVALA)
     with open(NOTA_ZAVALA, encoding="utf-8") as fh:
         lineas = fh.read().split("\n")
 

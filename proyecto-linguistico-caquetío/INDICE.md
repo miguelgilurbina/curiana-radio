@@ -127,20 +127,21 @@ El lexicón usa su propia escala paralela — `caquetío-atestiguado` (226),
 `caquetío-reconstruido` (68) e `hipotético-no-verificado` (441, **aisladas** en
 `lexicon_candidatos.py`). Ver [[lexicon]].
 
-## Estado, medido el 2026-08-04
+## Estado
 
-| | |
-|---|---|
-| Corpus cultural | **161 hechos**, todos con `referencia` |
-| Lexicón activo | **1413** palabras · 304 de familia caquetía · **3 sin cita** (eran 82) |
-| Fuentes | 30 notas de obra · **las 3 ALTA del gate, minadas** |
-| Motor | **45 tests en verde**, congelado |
-| Runs | 6, declarados **era de desarrollo** — ver [[01_que_probaron_los_seis_runs]] |
-| Decisiones | **7 abiertas**, 3 resueltas · [tablero](https://github.com/miguelgilurbina/curiana-radio/issues) |
-| Vault | **845 wikilinks, 0 rotos** — `python check_vault_links.py --strict` |
+> 📊 **El estado vive en [[TABLERO]], y se genera.** Ninguna cifra se copia a
+> mano: `python curiana_sim/generar_tablero.py` las mide contra el dato —
+> lexicón, corpus, frontmatter de las fuentes, gate y decisiones— y reescribe
+> `TABLERO.md` con la fecha de medición.
 
-> Las 3 entradas sin cita que quedan **ya no son deuda de minería sino de
-> decisión**: no dejan rastro en ninguna de las cuatro fuentes minadas.
+Los tres números que resumen el momento (medidos el 2026-08-04):
+
+- **3 entradas del lexicón sin cita**, de las 82 que había el 2026-07-21. Las
+  que quedan ya no son deuda de minería sino de decisión: no dejan rastro en
+  ninguna de las cuatro fuentes minadas.
+- **152 hechos del corpus, los 152 con `referencia`.**
+- **1 de las 9 condiciones del gate** para reanudar simulaciones. El resto,
+  con su porqué, en [[TABLERO]] §4.
 
 ## Convenciones
 
