@@ -356,19 +356,22 @@ prerrequisito de todo lo demás ([[PLAN_MAESTRO]] §7.1) y está cumplido.
 
 Salidos del inventario de [[INDICE_FUENTES]]. Ninguno necesita criterio de nadie:
 
-- [ ] Borrar los dos **duplicados muertos de 0 bytes**:
+- [x] ~~Borrar los dos **duplicados muertos de 0 bytes**:
       `Oviedo_Banhos_1885_Conquista_Venezuela.pdf` y
-      `Perea_Alonso_1942_Filologia_Comparada_Lenguas_Arawak_TomoI.pdf`.
-- [ ] **Renombrar** `Schroeder_et_al_2018_PNAS_Origins_Caribbean_Taino.pdf` →
+      `Perea_Alonso_1942_Filologia_Comparada_Lenguas_Arawak_TomoI.pdf`.~~ —
+      hecho el 2026-08-04 (#53).
+- [x] ~~**Renombrar** `Schroeder_et_al_2018_PNAS_Origins_Caribbean_Taino.pdf` →
       `MorenoMayar_et_al_2018_Science_Early_Human_Dispersals.pdf` (el contenido
-      no es lo que dice el nombre).
-- [ ] Mover `VanBuurt_2014_CaquetioWords_Papiamentu.txt` de la raíz a
-      `fuentes_caquetios/`, o documentar por qué vive fuera.
+      no es lo que dice el nombre).~~ — hecho el 2026-08-04 (#54); la nota es
+      [[moreno-mayar-2018]].
+- [x] ~~Mover `VanBuurt_2014_CaquetioWords_Papiamentu.txt` de la raíz a
+      `fuentes_caquetios/`, o documentar por qué vive fuera.~~ — movido el
+      2026-08-04 (#55), con `TXT_PATH` actualizado.
 - [x] ~~Corregir [[05_geografia_politica_y_sucesion]] §2: dice que el glosario
       de Zavala tiene **116 entradas**~~ — corregido a 288 (F7, 2026-08-03).
 - [x] ~~`minar_zavala_glosario.py` revienta con `UnicodeEncodeError`~~ —
-      arreglado (F7). ⚠️ **`test_quick.py` tiene el mismo bug** y sigue abierto:
-      revienta sin `PYTHONIOENCODING=utf-8`. Misma línea de arreglo.
+      arreglado (F7). ~~⚠️ **`test_quick.py` tiene el mismo bug**~~ — arreglado
+      también el 2026-08-04 (#41), con el mismo `_forzar_utf8()` bajo `__main__`.
 - [ ] Recuperar los 4 archivos de 0 bytes que sí son huecos reales
       ([[rouse-cruxent-1963]], [[fernandes-2020]], [[ramos-perez-1978]],
       el PDF de [[brinton-1871]]).

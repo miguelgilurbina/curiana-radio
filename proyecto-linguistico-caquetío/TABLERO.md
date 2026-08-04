@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-04 01:27**.
+<!--GENERADO--> Generado el **2026-08-04 01:50**.
 
 ## ¿Vamos bien?
 
@@ -179,10 +179,10 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[fernandes-2020]] | no-disponible | baja | archivo-vacio | 0 | 0 | 0 |
 | [[gilij-1780-1783]] | bloqueada | baja | no | 0 | 0 | 0 |
 | [[las-casas-1875]] | minado | baja | si | 0 | 0 | 0 |
+| [[moreno-mayar-2018]] | sin-minar | baja | si | 0 | 0 | 0 |
 | [[perea-alonso-1942]] | descartada | descartada | si | 0 | 0 | 0 |
 | [[ramos-perez-1978]] | no-disponible | baja | archivo-vacio | 0 | 0 | 0 |
 | [[rouse-cruxent-1963]] | no-disponible | media | archivo-vacio | 0 | 0 | 0 |
-| [[schroeder-2018]] | sin-minar | baja | si | 0 | 0 | 0 |
 
 </details>
 
@@ -257,7 +257,7 @@ Argumento y evidencia de cada una: [[DECISIONES_ABIERTAS]]. El **estado** manda 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 759 en 167 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 764 en 166 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 45 passed, 0 failed | 🟢 |
 
 Guardianes: `python check_vault_links.py --strict` · `python -m pytest curiana_sim/tests/ -q`

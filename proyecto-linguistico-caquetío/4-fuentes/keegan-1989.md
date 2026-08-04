@@ -49,8 +49,8 @@ inversión de fuentes."*
 2. Verificar que la avunculocalidad de élite es lo que el corpus afirma: hoy
    sostiene una decisión de diseño concreta (dónde vive el sucesor) sobre una
    lectura de resumen.
-3. Complementaria: [[schroeder-2018|el paper de Schroeder que el repo no tiene]]
-   sobre genética taína.
+3. Complementaria: el paper de Schroeder (PNAS 2018) sobre genética taína, que
+   el repo **no tiene** — ver [[moreno-mayar-2018]].
 
 ## Enlaces
 

@@ -5,7 +5,7 @@ autor: "van Buurt, Gerard"
 anio: 2014
 publicacion: "Edición propia, Curaçao (ISBN 978-99904-2-348-8); base en van Buurt & Joubert, *Stemmen uit het Verleden*, 1997"
 genero: glosario-etnohistoria
-local: "VanBuurt_2014_CaquetioWords_Papiamentu.txt"
+local: "fuentes_caquetios/VanBuurt_2014_CaquetioWords_Papiamentu.txt"
 paginas: 48
 capa_texto: si
 estado_minado: minado
@@ -48,9 +48,9 @@ Esa advertencia viaja en el campo `notas` de **cada** entrada importada.
 | Minador | `curiana_sim/minar_van_buurt.py` (patrón de `minar_zavala_glosario.py`) |
 | Propuesta | `curiana_sim/lexicon_van_buurt.py` — **no se importa en `curiana_lexicon.py`** |
 
-📌 **Nota de orden**: sigue siendo la única fuente del corpus que no está en
-`fuentes_caquetios/`. El minador la busca en la raíz; si se mueve, hay que
-actualizar `TXT_PATH`.
+📌 **Nota de orden** (resuelta el 2026-08-04, #55): era la única fuente del
+corpus fuera de `fuentes_caquetios/`. Ya está dentro, y `TXT_PATH` en el
+minador apunta ahí.
 
 ## Qué ha dado (minado 2026-08-03, tarea F6)
 
@@ -279,8 +279,8 @@ topónimos y los 19 morfemas.
 5. **Conseguir *Stemmen uit het Verleden* (1997)** si se quiere saber qué voces
    de Pinart son *"definitely not Indian"*. Sin él, F4 se queda con el mecanismo
    pero sin la lista.
-6. **Higiene**: mover el .txt de la raíz a `fuentes_caquetios/` y actualizar
-   `TXT_PATH` en el minador.
+6. ~~**Higiene**: mover el .txt de la raíz a `fuentes_caquetios/` y actualizar
+   `TXT_PATH` en el minador.~~ Hecho el 2026-08-04 (#55).
 
 ## Enlaces
 

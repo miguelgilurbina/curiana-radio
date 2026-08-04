@@ -60,14 +60,17 @@ reconstrucción/hipótesis. Sin excepciones silenciosas.
 > 1. **Alvarado 1921 SÍ tiene capa de texto** (704 KB extraíbles con
 >    `pdftotext -enc UTF-8`; lo que fallaba era `pypdf`). **F3 no está bloqueada
 >    por OCR.** Igual valía ya para Arcaya y Jahn.
-> 2. **Oviedo y Baños está disponible**: el archivo de 0 bytes es
->    `Oviedo_Banhos_1885_...`; el gemelo `Oviedo_Banhos_Conquista_Poblacion_...`
->    tiene 519 páginas con texto, y nunca se ha leído.
-> 3. **Hay 6 archivos de 0 bytes, no uno** (Brinton PDF, Fernandes 2020,
+> 2. **Oviedo y Baños está disponible**: el archivo de 0 bytes era
+>    `Oviedo_Banhos_1885_...` (ya borrado); el gemelo
+>    `Oviedo_Banhos_Conquista_Poblacion_...` tiene 519 páginas con texto.
+> 3. **Había 6 archivos de 0 bytes, no uno** (Brinton PDF, Fernandes 2020,
 >    Oviedo y Baños 1885, Perea Alonso duplicado, Ramos Pérez, Rouse & Cruxent),
->    y un archivo cuyo **nombre no corresponde a su contenido**
->    (`Schroeder_et_al_2018_PNAS_...` es en realidad Moreno-Mayar et al.,
+>    y un archivo cuyo **nombre no correspondía a su contenido**
+>    (`Schroeder_et_al_2018_PNAS_...` era en realidad Moreno-Mayar et al.,
 >    *Science* 2018).
+>
+> El lote de higiene del 2026-08-04 (#53, #54, #55) cerró los tres duplicados
+> y el nombre falso: hoy quedan **4 archivos de 0 bytes**, todos huecos reales.
 >
 > Además, medido sobre el dato: de las 233 entradas `caquetío-atestiguado`,
 > **164 citan a Zavala** y las tres fuentes ALTA sin minar (Alvarado, Van Buurt,

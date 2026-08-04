@@ -1,11 +1,11 @@
 ---
 tipo: indice
 ambito: todas las fuentes del proyecto
-archivos_en_fuentes_caquetios: 30
+archivos_en_fuentes_caquetios: 29
 obras_distintas: 24
-archivos_vacios: 6
+archivos_vacios: 4
 minadas_2026_08_03: [alvarado-1921, gatschet-1885, van-buurt-2014, zavala-reyes-2015]
-medido: 2026-08-03
+medido: 2026-08-04
 ---
 
 # Índice de fuentes — estado real, medido
@@ -24,14 +24,17 @@ medido: 2026-08-03
    "escaneo de imagen, no extraíble sin OCR" — eso era `pypdf`. Con `pdftotext`
    salen **704 KB de texto limpio, 354 páginas**. **F3 no está bloqueada.**
    Lo mismo valía ya para [[arcaya-1920]] y [[jahn-1927]].
-2. **🟢 [[oviedo-y-banos]] está disponible.** El archivo de 0 bytes es
-   `Oviedo_Banhos_1885_...`; el gemelo `Oviedo_Banhos_Conquista_Poblacion_...`
-   tiene **519 páginas con texto**. La obra que el programa señaló por su
-   cobertura de sucesión cacical **existe y nunca se ha leído**.
-3. **🔴 [[schroeder-2018|Un archivo tiene el nombre de otra obra]].**
-   `Schroeder_et_al_2018_PNAS_Origins_Caribbean_Taino.pdf` contiene en realidad
+2. **🟢 [[oviedo-y-banos]] está disponible.** El archivo de 0 bytes que la
+   hacía figurar como corrupta era `Oviedo_Banhos_1885_...`, ya borrado (#53);
+   el gemelo `Oviedo_Banhos_Conquista_Poblacion_...` tiene **519 páginas con
+   texto**. La obra que el programa señaló por su cobertura de sucesión cacical
+   **existe**.
+3. **🟢 Un archivo tenía el nombre de otra obra — resuelto (#54).**
+   `Schroeder_et_al_2018_PNAS_Origins_Caribbean_Taino.pdf` contenía en realidad
    *Early human dispersals within the Americas* (Moreno-Mayar et al., Science
-   2018). Nadie lo ha citado — por suerte.
+   2018). Nadie lo citó — por suerte. Hoy es
+   `MorenoMayar_et_al_2018_Science_Early_Human_Dispersals.pdf`, ver
+   [[moreno-mayar-2018]].
 
 ## Inventario medido
 
@@ -56,7 +59,7 @@ medido: 2026-08-03
 | [[las-casas-1875]] | 613 | minado — **nulo ×3** | 0 | baja |
 | [[guerra-curvelo-palabrero]] | 22 | minado | 4 hechos | hecha |
 | [[perea-alonso-1942]] | 926 | **descartada** (gramática lokono) | 0 | descartada |
-| [[schroeder-2018]] | 14 | sin minar · **mal nombrada** | 0 | baja |
+| [[moreno-mayar-2018]] | 14 | sin minar | 0 | baja |
 | [[brinton-1871]] (txt) | — | minado | **84 entradas del lexicón** | hecha |
 
 ### Bloqueadas o rotas
@@ -69,18 +72,18 @@ medido: 2026-08-03
 | [[fernandes-2020]] | **0 bytes** | recuperable (Nature / PMC) |
 | [[ramos-perez-1978]] | **0 bytes** | recuperable (Persée) |
 
-### 🔴 Los 6 archivos de 0 bytes
+### 🔴 Los 4 archivos de 0 bytes
 
 `Brinton_1871_Arawack_Language_Guiana.pdf` (el `.txt` sí existe) ·
 `Fernandes_et_al_2020_Nature_Genetic_History_Caribbean.pdf` ·
-`Oviedo_Banhos_1885_Conquista_Venezuela.pdf` (duplicado muerto) ·
-`Perea_Alonso_1942_Filologia_Comparada_Lenguas_Arawak_TomoI.pdf` (duplicado muerto) ·
 `Ramos_Perez_1978_resenia_Persee.pdf` ·
 `Rouse_Cruxent_1963_Venezuelan_Archaeology.pdf`
 
-> [[PLAN_MAESTRO]] §1.1 solo registraba **uno** de estos seis.
-> **Higiene inmediata**: borrar los dos duplicados muertos (Oviedo y Baños,
-> Perea Alonso), que solo generan confusión; los otros cuatro son huecos reales.
+> Eran seis. Los dos duplicados muertos (`Oviedo_Banhos_1885_...` y
+> `Perea_Alonso_1942_..._Lenguas_Arawak_TomoI.pdf`) **se borraron el 2026-08-04**
+> (#53): ambas obras estaban ya en el repo bajo otro nombre, y el primero hizo
+> figurar a [[oviedo-y-banos]] como corrupta durante meses. Los cuatro que
+> quedan son huecos reales.
 
 ### Fuentes externas (sin archivo local)
 
