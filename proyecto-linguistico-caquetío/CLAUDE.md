@@ -6,7 +6,7 @@ Proyecto de investigación + experimento computacional: una simulación multi-ag
 
 ```
 curiana_sim/        → Python 3.11+ (simulación)
-  curiana_lexicon.py      → vocabulario de 1416 palabras (activas; 441 hipotéticas aisladas en lexicon_candidatos.py) + reglas morfológicas + prompts
+  curiana_lexicon.py      → vocabulario de 1413 palabras (activas; 441 hipotéticas aisladas en lexicon_candidatos.py) + reglas morfológicas + prompts
                             (muestra_caquetio_dinamica() prioriza caquetío por chunking contextual)
   curiana_agents.py       → 60 agentes históricos en 3 tiers (caciques, adultos, jóvenes)
   curiana_orchestrator_v2.py → orquestador principal (Claude Haiku por agente)
@@ -25,7 +25,7 @@ curiana_sim/        → Python 3.11+ (simulación)
 ```
 
 > ⚠️ **Queries a la tabla `lexicon`:** PostgREST limita cada respuesta a
-> `max_rows` (1000, ver `supabase/config.toml`). Con 1416 palabras, cualquier
+> `max_rows` (1000, ver `supabase/config.toml`). Con 1413 palabras, cualquier
 > query nueva sobre `lexicon` sin `.range()` se trunca silenciosamente.
 > Pagina con `.range(desde, desde+999)` hasta que la página devuelta tenga
 > menos de 1000 filas (ver `loadLexicon()` en `app/page.tsx` o `app/lexicon/page.tsx`).
@@ -79,7 +79,7 @@ pip install -r requirements.txt
 python test_quick.py          # verifica el stack sin API keys (debe dar 8/8 OK)
 python -m pytest tests/ -q    # suite unitaria (koiné, léxico, observer, social; sin API keys)
 supabase start                 # levanta Supabase local (ver nota de egress arriba)
-python curiana_database.py seed  # siembra las 1416 palabras activas en Supabase
+python curiana_database.py seed  # siembra las 1413 palabras activas en Supabase
 
 # Correr simulación
 python curiana_orchestrator_v2.py                    # modo interactivo
@@ -96,10 +96,15 @@ python curiana_orchestrator_v2.py --auto 30 --perfiles --reporte
   #             convergencia (contagio, competencias abiertas, muestreo ponderado).
   #             La evidencia de koineización es la DIFERENCIA normal vs. ablación.
   #             La convergencia se mide en 3 lecturas/día (acumulada/ventana/emergente,
-  #             ver DISENO_KOINE.md §7); el veredicto usa la más exigente con datos.
+  #             ver 5-experimento/DISENO_KOINE.md §7); el veredicto usa la más exigente con datos.
 ```
 
 ## Metodología del lexicón y validación
+
+> 📖 **El estado medido y en prosa está en `2-lengua/lexicon.md`,
+> `2-lengua/morfologia.md`, `2-lengua/toponimia.md` y
+> `2-lengua/metodo-comparativo.md`.** Esta sección es el resumen operativo;
+> aquellas notas llevan las cifras con su fecha de medición.
 
 El lexicón activo distingue 8 categorías de `fuente` (ver `normalize_source_language()`
 en `curiana_database.py`), porque "caquetío" mezclaba históricamente dato real
@@ -109,7 +114,7 @@ con especulación sin marcar:
   concreta. ⚠️ **Medido el 2026-08-03: en el dato es Zavala y casi nadie más** —
   164 entradas lo citan; Oliver 2, Oviedo (vía terceros) 2, Galeotto Cey 2,
   Arcaya 1, Jahn 1; Alvarado, Van Buurt y Gatschet, **cero**. Ver
-  `investigacion/fuentes/INDICE_FUENTES.md`.
+  `4-fuentes/INDICE_FUENTES.md`.
   **Zavala cerrado al 100% (F7, 2026-08-03)**: `minar_zavala_glosario.py`
   parsea las **288** entradas del glosario y genera `lexicon_zavala.py` —
   225 (78%) van al habla activa, 63 (22%) quedan **fuera por diseño** (45
@@ -230,19 +235,48 @@ Real-time en Supabase: `agent_responses`, `turns`, `neologisms`, `agent_profiles
    con base real, validando las 441 `hipotético-no-verificado` ya aisladas en
    `lexicon_candidatos.py` (minar fuentes y conservar solo las que pasen).
 
+## Estructura del vault (refactor 2026-08-04)
+
+El repo ES el vault, y está ordenado **por la pregunta que responde cada
+carpeta**, no por tipo de archivo. Si no sabes dónde va un archivo nuevo,
+pregúntate qué pregunta contesta.
+
+```
+INDICE.md · CLAUDE.md · check_vault_links.py   ← puerta, config y guardián
+1-plan/        ¿qué hacemos y qué falta?      PLAN_MAESTRO · DECISIONES_ABIERTAS · LINEA_DE_TIEMPO
+2-lengua/      ¿cómo es el caquetío?          mapa-lengua · lexicon · morfologia · toponimia · metodo-comparativo
+3-mundo/       ¿cómo era ese pueblo?          5 mapas + ensayos/ + corpus/ (los YAML del corpus cultural)
+4-fuentes/     ¿de dónde lo sabemos?          INDICE_FUENTES + 30 notas de obra + sesiones/
+5-experimento/ ¿qué probamos con el simulador? mapa-motor · DISENO_KOINE · CANON_TIERRA · BITACORA_RUNS
+                                              · IDEA_PERFILES_AGENTES · MIGRACION_RUNS_EVOLUCION
+                                              · analisis/ · disenos/
+fuentes_caquetios/   los PDF (se citan, no se editan)
+curiana_sim/         el motor + tests/
+supabase/            el esquema versionado
+```
+
+Los **wikilinks resuelven por basename**, así que mover una nota no rompe
+enlaces; lo que se rompe son los enlaces markdown relativos.
+
 ## Archivos de referencia
 
 - **`INDICE.md`** — nota raíz del vault (el repo ES el vault, ver
-  `PLAN_MAESTRO.md` §2). Punto de entrada: enlaza los 6 MOCs de `mocs/`,
-  `DECISIONES_ABIERTAS.md` e `investigacion/fuentes/INDICE_FUENTES.md`.
-- **`investigacion/fuentes/`** — una nota por obra: estado técnico medido
+  `1-plan/PLAN_MAESTRO.md` §2). Punto de entrada: enlaza los mapas,
+  `1-plan/DECISIONES_ABIERTAS.md` y `4-fuentes/INDICE_FUENTES.md`.
+- **`2-lengua/`** — la lengua misma, en prosa: `lexicon.md` (qué palabras hay y
+  quién las sostiene), `morfologia.md` (afijos con su evidencia y su estado,
+  incluida la disputa `-bana`/`-ana`), `toponimia.md` (los topónimos como
+  ecuaciones bilingües) y `metodo-comparativo.md` (cómo se reconstruye, y el
+  desbalance wayunaiki/lokono). **Describen el código, no lo sustituyen**: la
+  fuente de verdad sigue siendo `curiana_sim/*.py`.
+- **`4-fuentes/`** — una nota por obra: estado técnico medido
   (capa de texto, páginas), estado de minado, qué sostiene y qué falta.
   **Cuando se mine una fuente, el resultado se escribe en su nota**, no en un
   markdown nuevo. Verificar el grafo con
-  `python investigacion/check_vault_links.py --strict`.
-- **`DECISIONES_ABIERTAS.md`** — lo que solo Miguel puede decidir (D1-D8).
-- `IDEA_PERFILES_AGENTES.md` — diseño de la sección de perfiles de agentes
-  (rol, arco narrativo, frases célebres) y su implementación.
+  `python check_vault_links.py --strict` (desde la raíz del proyecto).
+- **`1-plan/DECISIONES_ABIERTAS.md`** — lo que solo Miguel puede decidir (D1-D11).
+- `5-experimento/IDEA_PERFILES_AGENTES.md` — diseño de la sección de perfiles de
+  agentes (rol, arco narrativo, frases célebres) y su implementación.
 - `test_quick.py` — test suite sin API keys (debe dar 8/8 OK).
 - `requirements.txt` — dependencias pinneadas.
 - `.env.example` / `.env.local.example` — templates de variables de entorno.
