@@ -1,7 +1,7 @@
 # Ritos como mecanismo de transmisión — propuesta
 
 **Estado:** diseño, nada implementado todavía. No es canon etnohistórico (eso
-ya vive en `curiana_sim/CULTURA_CAQUETIA.md`, que es mucho más completo de lo
+ya vive en [[CULTURA_CAQUETIA]], que es mucho más completo de lo
 que yo había escrito aquí la primera vez — esta versión ya no repite esa
 parte). Esto es: cómo convertir los ritos que **ya existen como eventos**
 en un mecanismo medible, para que correr la simulación durante años permita
@@ -25,7 +25,7 @@ todavía un mecanismo de transmisión** — es una escena suelta.
 ## Qué le falta para serlo
 
 1. **Un concepto a transmitir, no un guion.** Cada rito apunta a una idea
-   (de `CULTURA_CAQUETIA.md` o de la nueva sección "Fuerzas en tensión") —
+   (de [[CULTURA_CAQUETIA]] o de la nueva sección "Fuerzas en tensión") —
    ej. `ceremonia_iniciacion` → la responsabilidad del *barsure* y el
    piazgo; `ritual_siembra_primeras_lluvias` → la lógica de reciprocidad con
    la tierra (Pulowi/Juyá). El piache lo dice en sus propias palabras, en
@@ -78,4 +78,4 @@ describes.
 
 ## Fuentes
 
-(las de cosmovisión/clima ya se movieron a `curiana_sim/CULTURA_CAQUETIA.md`)
+(las de cosmovisión/clima ya se movieron a [[CULTURA_CAQUETIA]])

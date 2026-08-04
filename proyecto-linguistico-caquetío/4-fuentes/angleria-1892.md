@@ -56,4 +56,4 @@ naturalista/zoológico).
 
 ## Enlaces
 
-[[mapa-transmision]] · [[04_transmision_saber]] · [[las-casas-1875]] · [[INDICE_FUENTES]]
+[[04_transmision_saber]] · [[las-casas-1875]]

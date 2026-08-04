@@ -53,4 +53,4 @@ bytes del repositorio** (ver [[INDICE_FUENTES]]).
 
 ## Enlaces
 
-[[oliver-1989-cap2]] · [[perea-alonso-1942]] · [[mapa-motor]] · [[INDICE_FUENTES]]
+[[oliver-1989-cap2]] · [[perea-alonso-1942]]

@@ -57,5 +57,4 @@ Preguntas concretas que se le deben hacer:
 
 ## Enlaces
 
-[[oviedo-y-valdes-1851]] · [[zavala-reyes-2015]] · [[oliver-1989-cap3]] ·
-[[mapa-geografia-politica]] · [[mapa-familia]] · [[INDICE_FUENTES]]
+[[oviedo-y-valdes-1851]] · [[zavala-reyes-2015]] · [[oliver-1989-cap3]]

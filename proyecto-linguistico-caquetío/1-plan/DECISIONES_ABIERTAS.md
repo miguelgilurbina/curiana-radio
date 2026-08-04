@@ -375,4 +375,4 @@ Salidos del inventario de [[INDICE_FUENTES]]. Ninguno necesita criterio de nadie
 
 ## Enlaces
 
-[[INDICE]] · [[PLAN_MAESTRO]] · [[INDICE_FUENTES]] · [[mapa-motor]]
+[[PLAN_MAESTRO]]

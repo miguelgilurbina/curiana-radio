@@ -66,5 +66,4 @@ cierra el duelo** fundiéndolo en el colectivo de los ancestros.
 
 ## Enlaces
 
-[[mapa-creencia]] · [[03_creencia_caquetia]] · [[perrin-1992-1995]] ·
-[[arcaya-1920]] · [[jahn-1927]] · [[INDICE_FUENTES]]
+[[03_creencia_caquetia]] · [[perrin-1992-1995]] · [[arcaya-1920]] · [[jahn-1927]]

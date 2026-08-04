@@ -79,5 +79,4 @@ día, y a cualquier fuente `retro-abstraido` futura.
 
 ## Enlaces
 
-[[mapa-creencia]] · [[03_creencia_caquetia]] · [[zavala-reyes-2015]] ·
-[[02_protocolo_habla_paraguanera]] · [[INDICE_FUENTES]]
+[[03_creencia_caquetia]] · [[zavala-reyes-2015]] · [[02_protocolo_habla_paraguanera]]

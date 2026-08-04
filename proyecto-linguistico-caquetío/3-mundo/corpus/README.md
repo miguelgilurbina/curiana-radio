@@ -2,7 +2,7 @@
 
 Corpus de hechos culturales etiquetados por confianza epistémica, en el mismo espíritu con que el
 lexicón distingue `caquetío-atestiguado` de `hipotético-no-verificado` (ver `CLAUDE.md`). Complementa
-la guía narrativa en prosa `curiana_sim/CULTURA_CAQUETIA.md` con datos discretos y auditables.
+la guía narrativa en prosa [[CULTURA_CAQUETIA]] con datos discretos y auditables.
 
 Es el producto del programa **"corpus cultural"** (4 sesiones de investigación, 2026-07, más una
 sesión 5 de seguimiento sobre geografía política), cada una guiada por una pregunta y con tres
@@ -77,7 +77,7 @@ esquema de `genealogia.yaml` es distinto (un registro por persona, con
 - **`reconstruido`** — inferido por método comparativo desde un pueblo arahuaco hermano (wayuu,
   lokono, taíno) u otra sociedad oral, con la comparanda y su fuente citadas en `referencia`.
 - **`canon-simulacion`** — hecho establecido por diseño del propio proyecto (`curiana_agents.py`,
-  `curiana_state.py`, `CULTURA_CAQUETIA.md`, `CANON_TIERRA.md`), sin pretensión histórica directa.
+  `curiana_state.py`, [[CULTURA_CAQUETIA]], `CANON_TIERRA.md`), sin pretensión histórica directa.
   Es el equivalente cultural del `caquetío-reconstruido` "vocabulario de trabajo" del lexicón: no es
   dato etnohistórico, es la ficción operativa de la simulación, y se marca como tal.
 - **`retro-abstraido`** — traza inferida desde una **tradición viva posterior** (espiritismo

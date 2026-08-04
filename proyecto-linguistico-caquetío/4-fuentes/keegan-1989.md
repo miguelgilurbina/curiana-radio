@@ -54,4 +54,4 @@ inversión de fuentes."*
 
 ## Enlaces
 
-[[mapa-familia]] · [[01_familia_caquetia]] · [[las-casas-1875]] · [[INDICE_FUENTES]]
+[[01_familia_caquetia]] · [[las-casas-1875]]

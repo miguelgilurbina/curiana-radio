@@ -383,7 +383,4 @@ otra manera.
 
 ## Enlaces
 
-[[INDICE_FUENTES]] · [[02_protocolo_habla_paraguanera]] · [[mapa-motor]] ·
-[[DECISIONES_ABIERTAS]] · [[PLAN_MAESTRO]] ·
-[[zavala-reyes-2015]] · [[gatschet-1885]] · [[van-buurt-2014]] ·
-[[alvarado-1921]] · [[oliver-1989-cap2]] · [[oviedo-y-banos]]
+[[02_protocolo_habla_paraguanera]] · [[DECISIONES_ABIERTAS]] · [[PLAN_MAESTRO]] · [[zavala-reyes-2015]] · [[gatschet-1885]] · [[van-buurt-2014]] · [[alvarado-1921]] · [[oliver-1989-cap2]] · [[oviedo-y-banos]]

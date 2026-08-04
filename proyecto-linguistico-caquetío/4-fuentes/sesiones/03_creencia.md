@@ -17,7 +17,7 @@ abierto. Acompaña a `3-mundo/ensayos/03_creencia_caquetia.md` y a
 
 ## 1. Lo que ya cubría el canon (no se duplicó)
 
-`curiana_sim/CULTURA_CAQUETIA.md` §1 y §2: barsure (alma, atestiguado), Manaure
+[[CULTURA_CAQUETIA]] §1 y §2: barsure (alma, atestiguado), Manaure
 señor de tormentas (atestiguado), espíritus dueños, analogía wayuu
 Pulowi/Juyá/Wanülüü/Lapü (con la advertencia de no caquetizar los nombres),
 ancestros y huesos guardados, animales simbólicos, ciclo seca/lluvias.

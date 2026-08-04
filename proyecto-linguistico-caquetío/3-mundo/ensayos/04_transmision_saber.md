@@ -319,7 +319,7 @@ un resultado más débil pero perfectamente medible hoy.
 **El ciclo completo, en la maquinaria que ya existe:**
 
 1. **Concepto, no guion.** Cada entrada de rito en `transmision.yaml` (o su
-   futura tabla) apunta a un concepto de `CULTURA_CAQUETIA.md` — el piache
+   futura tabla) apunta a un concepto de [[CULTURA_CAQUETIA]] — el piache
    lo dice en sus propias palabras, como ya hace con todo lo demás.
 2. **Pulso de exposición fuerte.** `DifusionLexica.propagar_uso()` ya
    modela exposición = prestigio × vínculo; para un rito con

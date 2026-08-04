@@ -73,5 +73,4 @@ a un Oviedo que **no tenemos legible** ([[oviedo-y-valdes-1851]]).
 
 ## Enlaces
 
-[[mapa-creencia]] · [[mapa-familia]] · [[03_creencia_caquetia]] ·
-[[oviedo-y-valdes-1851]] · [[jahn-1927]] · [[zavala-reyes-2015]] · [[INDICE_FUENTES]]
+[[03_creencia_caquetia]] · [[oviedo-y-valdes-1851]] · [[jahn-1927]] · [[zavala-reyes-2015]]

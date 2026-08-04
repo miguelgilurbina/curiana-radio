@@ -28,7 +28,7 @@ y heredado por sus sobrinos** ([[01_familia_caquetia]] §7).
 | `3-mundo/corpus/parentesco.yaml` | 39 hechos etiquetados (14 atestiguado · 18 reconstruido · 7 hipotético) |
 | `3-mundo/corpus/genealogia.yaml` | Linajes, agentes y personas de fondo propuestas — **pendiente de veto**, ver [[DECISIONES_ABIERTAS]] D1 |
 | [[01_familia]] | Hoja de fuentes — qué se buscó, qué se encontró, qué quedó abierto |
-| `curiana_sim/CULTURA_CAQUETIA.md` §6 | El canon que este ensayo profundiza, no duplica |
+| [[CULTURA_CAQUETIA]] §6 | El canon que este ensayo profundiza, no duplica |
 
 ## Las cuatro tesis que carga
 

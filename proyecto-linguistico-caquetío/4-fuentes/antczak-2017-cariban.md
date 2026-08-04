@@ -58,5 +58,4 @@ open access (CC), sin restricción de uso.
 
 ## Enlaces
 
-[[antczak-2015-las-aves]] · [[adam-1879]] · [[mapa-familia]] ·
-[[fernandes-2020]] · [[schroeder-2018]] · [[INDICE_FUENTES]]
+[[antczak-2015-las-aves]] · [[adam-1879]] · [[fernandes-2020]] · [[schroeder-2018]]

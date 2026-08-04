@@ -65,5 +65,4 @@ de dependencia invisible** que la auditoría de fidelidad existe para hacer visi
 
 ## Enlaces
 
-[[arcaya-1920]] · [[jahn-1927]] · [[oviedo-y-banos]] · [[mapa-creencia]] ·
-[[03_creencia_caquetia]] · [[INDICE_FUENTES]]
+[[arcaya-1920]] · [[jahn-1927]] · [[oviedo-y-banos]] · [[03_creencia_caquetia]]

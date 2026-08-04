@@ -46,5 +46,4 @@ se llama así por un poblado del Golfete") descansa en una obra que **no tenemos
 
 ## Enlaces
 
-[[oliver-1989-cap3]] · [[zavala-reyes-2015]] · [[mapa-geografia-politica]] ·
-[[INDICE_FUENTES]]
+[[oliver-1989-cap3]] · [[zavala-reyes-2015]]

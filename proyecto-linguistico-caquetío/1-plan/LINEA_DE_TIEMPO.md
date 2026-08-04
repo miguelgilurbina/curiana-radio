@@ -150,5 +150,4 @@ ninguna corrección posterior lo ha tocado, salvo el §2 del ensayo 01 (ver Era 
 
 ## Enlaces
 
-[[01_que_probaron_los_seis_runs]] · [[04_protocolo_run_1_era_auditada]] ·
-[[PLAN_MAESTRO]] · [[DECISIONES_ABIERTAS]] · [[BITACORA_RUNS]] · [[INDICE]]
+[[01_que_probaron_los_seis_runs]] · [[04_protocolo_run_1_era_auditada]] · [[PLAN_MAESTRO]] · [[DECISIONES_ABIERTAS]] · [[BITACORA_RUNS]]

@@ -47,4 +47,4 @@ desde entonces como precedente: *"no dio resultado"*.
 
 ## Enlaces
 
-[[brinton-1871]] · [[oliver-1989-cap2]] · [[mapa-motor]] · [[INDICE_FUENTES]]
+[[brinton-1871]] · [[oliver-1989-cap2]]

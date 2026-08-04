@@ -154,5 +154,4 @@ sea analizable es que la base deje de moverse debajo de él.**
 
 ## Enlaces
 
-[[BITACORA_RUNS]] · [[ANALISIS_RUN_30T_2026-06-22]] · [[DISENO_KOINE]] ·
-[[mapa-motor]] · [[PLAN_MAESTRO]] · [[LINEA_DE_TIEMPO]]
+[[BITACORA_RUNS]] · [[ANALISIS_RUN_30T_2026-06-22]] · [[DISENO_KOINE]] · [[PLAN_MAESTRO]] · [[LINEA_DE_TIEMPO]]

@@ -48,5 +48,4 @@ página web (Atlas del Arte Precolombino), no sobre la monografía prevista.
 
 ## Enlaces
 
-[[mapa-ecologia]] · [[rouse-cruxent-1963]] · [[antczak-2017-cariban]] ·
-[[02_ecologia_golfete]] · [[INDICE_FUENTES]]
+[[rouse-cruxent-1963]] · [[antczak-2017-cariban]] · [[02_ecologia_golfete]]

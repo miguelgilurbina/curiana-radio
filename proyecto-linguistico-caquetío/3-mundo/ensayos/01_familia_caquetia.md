@@ -35,14 +35,14 @@ probanzas y crónicas del siglo XVI al XVIII.
 
 ### Aviso metodológico previo: esto es dato de contacto, no de precontacto
 
-Antes de citar ese dato hay que aplicarle la misma advertencia que ya abre `CULTURA_CAQUETIA.md`: *"las
+Antes de citar ese dato hay que aplicarle la misma advertencia que ya abre [[CULTURA_CAQUETIA]]: *"las
 crónicas describen a los Caquetíos ya en contacto y en guerra con los españoles, no en su vida
 cotidiana intacta."* La sucesión que documenta Oliver —Manaure (Don Martín), su hijo Don Alexandre, la
 línea de Don Sancho Uriacoa, Don Luis Caguallo, Don Luis Martínez Manaure— es **el cacicazgo colonial
 de Coro**, ya reformateado por probanzas, encomienda y categorías jurídicas españolas (título, oficio,
 herencia, primogenitura, "pureza de sangre"). Ni siquiera el primer registro (Manaure→Don Alexandre,
 c. 1534-7) es precontacto: para entonces Ampíes ya lleva casi una década negociando con Manaure, y el
-propio canon del proyecto (nota metodológica inicial de `CULTURA_CAQUETIA.md`) ya trata a "Manaure" como
+propio canon del proyecto (nota metodológica inicial de [[CULTURA_CAQUETIA]]) ya trata a "Manaure" como
 "un estadista hábil que pactó con los españoles" — es decir, un operador político de la transición
 colonial, no una ventana limpia al cacicazgo del siglo XIV-XV que la simulación modela.
 

@@ -222,4 +222,4 @@ corpus de topónimos reales del territorio.
   no confundir con el framework homónimo de Snowden.
 - Documentos internos: Notion *Marco Teórico y Metodológico*, *Marco
   Epistemológico*, *Venezolanismos de Origen Indígena*; repo `CANON_TIERRA.md`,
-  `CULTURA_CAQUETIA.md`, `ANALISIS_RUN_30T_2026-06-22.md`.
+  [[CULTURA_CAQUETIA]], `ANALISIS_RUN_30T_2026-06-22.md`.

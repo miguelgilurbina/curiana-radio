@@ -56,5 +56,4 @@ También alimenta 3 de los 9 huecos léxicos (`hueco-lex-001` médano,
 
 ## Enlaces
 
-[[mapa-ecologia]] · [[02_ecologia_golfete]] · [[02_capas_biosfera]] ·
-[[antczak-2015-las-aves]] · [[INDICE_FUENTES]]
+[[02_ecologia_golfete]] · [[02_capas_biosfera]] · [[antczak-2015-las-aves]]

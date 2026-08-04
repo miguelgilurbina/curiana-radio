@@ -351,5 +351,4 @@ Curazao: `kadushi`, `kukuisa`, `kunuku`, `watapana`, `warawara`, `koke`) o
 
 ## Enlaces
 
-[[mapa-geografia-politica]] · [[mapa-creencia]] · [[mapa-motor]] ·
-[[05_geografia_politica_y_sucesion]] · [[oliver-1989-cap2]] · [[INDICE_FUENTES]]
+[[05_geografia_politica_y_sucesion]] · [[oliver-1989-cap2]]

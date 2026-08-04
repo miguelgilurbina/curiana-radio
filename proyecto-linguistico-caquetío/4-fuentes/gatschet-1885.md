@@ -242,6 +242,4 @@ toca. Para esas, las candidatas son [[zavala-reyes-2015]], [[alvarado-1921]] y
 
 ## Enlaces
 
-[[van-buurt-2014]] · [[zavala-reyes-2015]] · [[alvarado-1921]] ·
-[[oliver-1989-cap3]] · [[02_protocolo_habla_paraguanera]] ·
-[[mapa-creencia]] · [[mapa-motor]] · [[mapa-geografia-politica]] · [[INDICE_FUENTES]]
+[[van-buurt-2014]] · [[zavala-reyes-2015]] · [[alvarado-1921]] · [[oliver-1989-cap3]] · [[02_protocolo_habla_paraguanera]]

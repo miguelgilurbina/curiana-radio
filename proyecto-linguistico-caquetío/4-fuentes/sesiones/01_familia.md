@@ -16,7 +16,7 @@ Primera versión de este ensayo presentaba la sucesión patrilineal de Oliver 19
 la tensión activa" entre ambas. Miguel señaló el error: ese dato es de la administración **colonial**
 del cacicazgo de Coro (siglos XVI-XVIII, ya bajo probanzas, encomienda y categorías jurídicas
 españolas), no del **precontacto** (siglos XIV-XV) que el proyecto reconstruye — exactamente la
-distinción que el propio preámbulo de `CULTURA_CAQUETIA.md` ya advierte no pasar por alto ("las
+distinción que el propio preámbulo de [[CULTURA_CAQUETIA]] ya advierte no pasar por alto ("las
 crónicas describen a los Caquetíos ya en contacto... no en su vida cotidiana intacta").
 
 Se corrigió: el ensayo (§1) y `parentesco.yaml` (entradas 001-003, 015) ahora marcan explícitamente que

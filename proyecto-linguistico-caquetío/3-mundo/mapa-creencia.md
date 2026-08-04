@@ -29,7 +29,7 @@ vino de maíz, tras años de desecación. Lo demás se reconstruye desde el wayu
 | [[03_creencia_caquetia]] | El ensayo — Vía A (reconstrucción wayuu), Vía B (retro-abstracción), lo atestiguado |
 | `3-mundo/corpus/creencia.yaml` | 26 hechos (11 atestiguado · 11 reconstruido · 4 retro-abstraído) |
 | [[03_creencia]] | Hoja de fuentes |
-| `curiana_sim/CULTURA_CAQUETIA.md` §1 | El sustrato que este ensayo profundiza (barsure, tormentas, espíritus dueños) |
+| [[CULTURA_CAQUETIA]] §1 | El sustrato que este ensayo profundiza (barsure, tormentas, espíritus dueños) |
 
 ## Las cuatro tesis que carga
 

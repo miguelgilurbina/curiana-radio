@@ -36,7 +36,7 @@ afirmaciones apoyadas solo en prensa.)*
 
 ## 1. El hueco que este ensayo llena
 
-El canon existente (`CULTURA_CAQUETIA.md`) es fuerte en cosmología, economía, política y
+El canon existente ([[CULTURA_CAQUETIA]]) es fuerte en cosmología, economía, política y
 lengua, y define el ciclo bianual seca/lluvias (§2). Pero nunca describe **el sustrato físico
 y biológico**: qué era una duna, de dónde salía el agua dulce, qué peces había en el Golfete,
 qué animales compartían el mundo con la gente, por qué el salinar solo produce en la seca. Las
