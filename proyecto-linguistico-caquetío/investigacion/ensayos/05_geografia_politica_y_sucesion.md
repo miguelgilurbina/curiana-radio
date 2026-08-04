@@ -1,3 +1,13 @@
+---
+tipo: ensayo
+sesion: 5 — seguimiento del programa corpus cultural
+pregunta: "¿Cuál era el área de influencia de Manaure, y qué asentamiento real reconstruimos?"
+moc: MOC_geografia_politica
+corpus: [geografia_politica.yaml, parentesco.yaml]
+fuentes: [oliver-1989-cap3, zavala-reyes-2015, van-buurt-2014, arcaya-1920, ramos-perez-1978, oviedo-y-banos]
+decisiones: [D2, D4]
+---
+
 # La geografía política de Manaure: quién era un diao, y qué asentamiento reconstruimos
 
 *Sesión 5 del programa "corpus cultural" — Curiana, Golfete de Coro, siglos XIV-XV.*
@@ -5,6 +15,11 @@
 escala real del mundo caquetío. No repite el canon existente (CULTURA_CAQUETIA.md §6, "Política y
 jerarquía"; el ensayo 01, "familia caquetía"): lo precisa con vocabulario atestiguado y geografía
 concreta.*
+
+> **Mapa** · [[MOC_geografia_politica]] — [[05_geografia_politica|hoja de fuentes]] — `geografia_politica.yaml`
+> **Fuentes** · [[oliver-1989-cap3]] · [[zavala-reyes-2015]] · [[van-buurt-2014]] · [[arcaya-1920]] · [[ramos-perez-1978]] · [[oviedo-y-banos]]
+> **Decisiones que deja abiertas** · [[DECISIONES_ABIERTAS|D2 (el nombre "Curiana")]] · [[DECISIONES_ABIERTAS|D4 (segundo sobrino)]]
+> **Sigue de** · [[01_familia_caquetia]]
 
 ---
 
@@ -24,7 +39,7 @@ Esta sesión responde tres preguntas que Miguel planteó en cadena:
 ## 2. Vocabulario atestiguado de rango: *apopo*, *diao*, *boratio*
 
 Zavala Reyes (2015), la fuente central de todo el proyecto para el lexicón atestiguado, tiene un
-glosario de 116 entradas compiladas por nueve autores (identificados por iniciales: PMA = Pedro
+glosario de 288 entradas compiladas por nueve autores (identificados por iniciales: PMA = Pedro
 Manuel Arcaya, HB = Adrián Hernández Baño, E = Juan Esteves, AM = Angulo Molina, A = Lisandro
 Alvarado, GC = Galeotto Cey, CGB = Carlos González Batista, AAM = Antonio Arellano Moreno, HP =
 Aníbal Hill Peña). Tres entradas dan un sistema de rango de tres niveles:

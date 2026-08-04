@@ -1,3 +1,13 @@
+---
+tipo: ensayo
+sesion: 2/4 — programa corpus cultural
+pregunta: "¿Dónde existía el caquetío?"
+moc: MOC_ecologia
+corpus: [ecologia.yaml]
+fuentes: [camacho-2011, antczak-2015-las-aves, rouse-cruxent-1963, alvarado-1921, jahn-1927]
+version: v2
+---
+
 # ¿Dónde existía el caquetío?
 
 ## La ecología, la geografía, la hidrología y la fauna del mundo de la Curiana
@@ -17,6 +27,10 @@ afirmaciones apoyadas solo en prensa.)*
 > **reconstruido** (inferencia razonada, p. ej. proyectar la ecología actual 600 años atrás),
 > **retro-abstraído** (tradición viva local de Paraguaná / Coro), **hipotético** (plausible sin
 > respaldo). En duda, se degrada a la más débil.
+
+> **Mapa** · [[MOC_ecologia]] — [[02_ecologia|hoja de fuentes]] — `ecologia.yaml` · `ecologia_lexicon_map.md`
+> **Fuentes** · [[camacho-2011]] (pilar) · [[antczak-2015-las-aves]] · [[rouse-cruxent-1963]] (**0 bytes**) · [[alvarado-1921]] · [[jahn-1927]]
+> **Diseños que salieron de aquí** · [[02_capas_biosfera]] · [[02_motor_ambiental]] · [[02_protocolo_habla_paraguanera]]
 
 ---
 

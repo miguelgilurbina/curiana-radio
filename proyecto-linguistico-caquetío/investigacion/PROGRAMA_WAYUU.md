@@ -87,7 +87,7 @@ investigación dedicada:
 
 ## Advertencia metodológica (no negociable)
 
-Rige [[feedback_precontacto-vs-colonial]] y la práctica de las 4 sesiones
+Rige la regla *precontacto ≠ colonial* (ver [[01_familia_caquetia]] §1) y la práctica de las 4 sesiones
 del corpus: **el wayuu etnográfico (s. XIX-XXI) no es el caquetío del
 s. XV.** El pastoralismo, el caballo, la dote en ganado, el contrabando y
 la dualidad binacional son todos post-contacto. Lo que se compara es la

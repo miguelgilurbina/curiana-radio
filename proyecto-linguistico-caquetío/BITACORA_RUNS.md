@@ -1,4 +1,32 @@
+---
+tipo: bitacora
+era: desarrollo del motor (2026-06-22 → 2026-07-06)
+runs: 6
+respuestas: 1489
+estatus: cerrada — ningún run corrió sobre la base actual
+---
+
 # Bitácora de Runs — Simulación Curiana
+
+> 🔒 **Los seis runs de esta bitácora son PRUEBAS DE DESARROLLO DEL MOTOR, no
+> resultados del experimento.** Decisión de Miguel, 2026-08-03.
+>
+> **No son comparables entre sí.** Entre corrida y corrida cambió el motor **y**
+> el instrumento que los mide: el lexicón pasó de ~1717 a ~1276 entradas entre
+> el baseline y el primer koiné (el aislamiento de las 441 hipotéticas, commit
+> `3b490b7`), y esa misma madrugada se tocó `score_linguistico` dos veces. El
+> salto de 92.2% a 99.2% de caquetío **no es atribuible a una sola causa**.
+>
+> **La única evidencia limpia** es el par de ablación del 2026-07-06
+> (`038d7b9d` vs `bdc54134`): mismo motor, mismo día, una sola variable.
+>
+> El análisis completo está en [[01_que_probaron_los_seis_runs]]; la historia,
+> en [[LINEA_DE_TIEMPO]]; y el protocolo para que la próxima tanda sí sea
+> analizable, en [[04_protocolo_run_1_era_auditada]].
+>
+> **Estos runs se conservan y no se borran** — documentan cómo se construyó el
+> motor. Pero el sitio público no re-exporta desde ellos, y cualquier cita de
+> sus números lleva esta advertencia.
 
 Registro de cada corrida de la simulación con sus hallazgos. Documento vivo,
 **más reciente arriba**. Espejo en Notion (*Bitácora de Runs*). Análisis

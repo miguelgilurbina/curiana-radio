@@ -58,19 +58,32 @@ except ImportError:
 # Estas mismas categorías se usan en las columnas pct_* de agent_responses.
 LANG_CATEGORIES = ("caquetío", "wayunaiki", "lokono", "taíno", "proto-arahuaco",
                     "kalinago", "kalinago-caribe-overlay", "jirajaroide-contacto",
+                    "caribe-continental", "español-colonial",
                     "hipotético-no-verificado")
 
 def normalize_source_language(fuente: str) -> str:
     """
-    Convierte el campo 'fuente' del lexicón a una de las 9 categorías canónicas.
+    Convierte el campo 'fuente' del lexicón a una de las 11 categorías canónicas.
 
     caquetío / caquetío-atestiguado / caquetío/topónimo → "caquetío"
+    caquetío-hipotético / caquetío-hipotético/topónimo  → "caquetío"
+        (D10: la LENGUA no se discute, solo baja la confianza de la entrada —
+         por eso comparte categoría con el resto del caquetío y no puntúa peor)
     wayunaiki / wayunaiki-cogn                          → "wayunaiki"
     lokono / garifuna / lokono/garifuna                 → "lokono"
     taíno / taíno/caribe                                → "taíno"
     arahuaco / proto-arawakan / proto-arahuaco / ...    → "proto-arahuaco"
     kalinago-caribe-overlay                             → "kalinago-caribe-overlay"
     kalinago                                            → "kalinago"
+    caribe-cháima / caribe-cumanagoto / caribe-tamanaco → "caribe-continental"
+        (D10, 2026-08-03: caribe de TIERRA FIRME, el que Alvarado 1921 declara
+         para piache, ture, pauji, watapana y auyama. Se separa del `kalinago`
+         ya existente, que es el caribe INSULAR — de ahí el sufijo)
+    español / español-colonial                          → "español-colonial"
+        (D10: voces que la fuente declara castellanas frente a un nombre
+         indígena distinto — kukuisa/cocuiza vs. caruata, caraota vs. icoroata.
+         Necesitan categoría propia: si cayeran en el `return` por defecto se
+         contarían como proto-arahuaco, es decir, como arahuacas)
     jirajaroide-contacto                                → "jirajaroide-contacto"
     hipotético-no-verificado                            → "hipotético-no-verificado"
         (transducción fonológica sin verificar cognación real contra COGNADOS;
@@ -79,6 +92,8 @@ def normalize_source_language(fuente: str) -> str:
     f = fuente.lower()
     if "no-verificado" in f or "no verificado" in f:
         return "hipotético-no-verificado"
+    if "espanol" in f or "español" in f:
+        return "español-colonial"
     if "caquetio" in f or "caquetío" in f:
         return "caquetío"
     if "wayunaiki" in f or "wayuu" in f:
@@ -89,10 +104,14 @@ def normalize_source_language(fuente: str) -> str:
         return "lokono"
     if "jirajaroide" in f:
         return "jirajaroide-contacto"
+    # El overlay y el kalinago insular se resuelven ANTES que el caribe
+    # continental: "kalinago-caribe-overlay" también contiene "caribe".
     if "kalinago-caribe-overlay" in f:
         return "kalinago-caribe-overlay"
     if "kalinago" in f:
         return "kalinago"
+    if "caribe" in f:
+        return "caribe-continental"
     # proto-arawakan, proto-arahuaco, reconstructed
     return "proto-arahuaco"
 

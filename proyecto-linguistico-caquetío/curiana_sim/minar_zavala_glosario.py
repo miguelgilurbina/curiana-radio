@@ -2,7 +2,7 @@
 CURIANA — Minería del glosario de Zavala Reyes (2015)
 =====================================================
 
-Extrae las 288 entradas numeradas del glosario de:
+Extrae las **288** entradas numeradas del glosario de:
 
     Zavala Reyes, Miguel Enrique (2015). "Palabras vivas de una lengua muerta:
     legado arawak-caquetío". Boletín Antropológico, año 33, n.º 89, pp. 58-76.
@@ -18,21 +18,41 @@ palabras que dan nombre a agentes de la simulación (buio, bagre, cunaro,
 guaranaro, dara, naure) y ocho AFIJOS atestiguados ausentes de las reglas
 morfológicas.
 
+CIERRE DEL PARSEO (F7, 2026-08-03): la extracción cubría 286 de las 288 entradas
+y mutilaba nueve definiciones. Ver `RESCATES_PARSEO` y `_normalizar_plano()` más
+abajo: hoy el parseo es **288/288 sin mutilaciones**, y `extraer()` lo verifica.
+
 Uso:
     python minar_zavala_glosario.py              # informe por tiers
     python minar_zavala_glosario.py --json out.json
     python minar_zavala_glosario.py --python     # emite entradas listas para pegar
+    python minar_zavala_glosario.py --generar-modulo   # reescribe lexicon_zavala.py
 
 NO modifica curiana_lexicon.py: emite una propuesta para revisión humana, en la
 misma disciplina que retag_nucleo_fundacional.py y minar_pares_validacion.py.
 """
 
 import argparse
+import io
 import json
 import os
 import re
 import sys
 import unicodedata
+
+
+def _forzar_utf8() -> None:
+    """La consola de Windows usa cp1252 y el informe imprime "─", "⚠", "í"…
+
+    Sin esto el script revienta con UnicodeEncodeError al llegar a los tiers.
+    Se llama solo al ejecutarlo como script: reasignar sys.stdout al importarlo
+    como módulo le rompería el stdout a quien lo importa.
+    """
+    for nombre in ("stdout", "stderr"):
+        flujo = getattr(sys, nombre)
+        if hasattr(flujo, "buffer") and (flujo.encoding or "").lower() != "utf-8":
+            setattr(sys, nombre, io.TextIOWrapper(
+                flujo.buffer, encoding="utf-8", errors="replace", line_buffering=True))
 
 PDF_PATH = os.path.join(
     os.path.dirname(__file__), "..", "fuentes_caquetios",
@@ -55,6 +75,50 @@ _ENTRADA = re.compile(
     r"(.{0,180}?)"                                     # definición
     r"(?=\s*(?<!\d)\d{1,3}\s*[.\-]+\s*[A-ZÁÉÍÓÚÑÜ]|$)"
 )
+
+TOTAL_ENTRADAS_PDF = 288          # numeración del glosario, pp. 65-72
+
+# Número de página suelto (58-76) que sobrevive a `_FOOTER` y se pega a la
+# definición de la última entrada de cada plana ("…cerca del mar.  66 38. Barsure").
+_PAG_SUELTA = re.compile(
+    r"\s+-?\s*(?:5[89]|6\d|7[0-6])\s*-?\s+(?=\d{1,3}\s*[.\-]\s*[A-ZÁÉÍÓÚÑÜ])")
+
+# pypdf separa la versal inicial de algunas palabras ("V olturido", "V ocero").
+# Se excluyen las letras que en español son palabra por sí solas (a, e, o, u, y).
+_VERSAL_SUELTA = re.compile(r"\b([BCDFGHJKLMNPQRSTVWXZ]) (?=[a-záéíóúñ])")
+
+# RESCATES DEL PARSEO (F7, 2026-08-03) — las dos entradas que el regex perdía y
+# las nueve definiciones que mutilaba. Se documentan aquí, no se parchean a mano:
+# `_normalizar_plano()` corrige la causa y el regex las captura como al resto.
+RESCATES_PARSEO = {
+    31: "Baracoica (HP). Cacique de Curazao — única entrada del glosario que "
+        "separa siglas y definición con PUNTO en vez de dos puntos. El regex "
+        "exigía ':' y la saltaba entera.",
+    104: "Darubana (durabana) (AM): Camino, vía — única entrada cuyo lema lleva "
+         "una variante entre paréntesis en minúscula. El grupo del lema excluye "
+         "'(' y el de siglas solo acepta 1-4 letras, así que no casaba ninguno.",
+    "definiciones_mutiladas":
+        "#37, #77, #116, #156, #195, #235, #275 arrastraban el número de página "
+        "de la plana ('…cerca del mar. 66'); #143 y #183 traían la versal partida "
+        "por pypdf ('V olturido', 'V ocero').",
+}
+
+
+def _normalizar_plano(plano: str) -> str:
+    """Repara los tres defectos de extracción documentados en RESCATES_PARSEO.
+
+    Los tres patrones son **únicos** en el glosario (verificado: un solo
+    '(SIGLAS).', un solo paréntesis en minúscula), así que la corrección es
+    general y no un parche por entrada.
+    """
+    plano = _PAG_SUELTA.sub(" ", plano)
+    plano = _VERSAL_SUELTA.sub(r"\1", plano)
+    # "(HP). Cacique de Curazao"  →  "(HP): Cacique de Curazao"
+    plano = re.sub(r"(\([A-Z]{1,4}\))\s*\.\s*(?=[A-ZÁÉÍÓÚÑÜ])", r"\1: ", plano)
+    # "Darubana (durabana) (AM)"  →  "Darubana, durabana (AM)"
+    plano = re.sub(r"\s*\(([a-záéíóúñ]{3,})\)", r", \1", plano)
+    return plano
+
 
 # Compiladores citados por Zavala (p. 64).
 SIGLAS = {
@@ -110,11 +174,89 @@ _RE_OTRA_LENGUA = re.compile(
 # FLAG — homógrafos con español corriente: si entran al léxico activo, un texto
 # en español que los use puntuaría como caquetío. Se importan marcados para que
 # el scoring los resuelva POR CONTEXTO (mismo mecanismo que ya usa "para").
-HOMOGRAFOS_ES = {
-    "bagre", "sabana", "cabana", "cana", "enea", "guaca", "coca", "hay",
-    "dato", "apo", "tuba", "ruba", "supi", "quiba", "quiva", "guama",
-    "caraota", "icoroata", "samuro", "taque", "taques", "cocuy", "yaro",
-    "sigua", "carama", "guata", "guay", "koro", "ure", "aca", "capo",
+#
+# REVISIÓN F7 (2026-08-03) — las 28 formas que la marca heurística levantaba se
+# revisaron **una por una** contra la entrada de Zavala. La pregunta era: ¿es la
+# voz caquetía, o es la palabra ESPAÑOLA con la que Zavala la glosa? Resultado:
+#
+#   · 14 se quedan marcadas  → colisión real con el español (esta tabla).
+#   · 11 pierden la marca    → no son palabras del español (ver DESMARCADAS_F7);
+#                              marcarlas hacía que el scorer SUB-contara caquetío.
+#   ·  3 salen del habla     → ver DESCARTAR_DEL_HABLA.
+#
+# Cuatro casos que la revisión aclaró de paso (no son homógrafos, son la GLOSA
+# española de otra entrada, y por tanto no deben tratarse como voz caquetía):
+# `caraota` glosa a *icoroata* (#162), `paují` glosa a *paugis* (#197),
+# `piache` glosa a *boratio* (#43), y `coro` no viene de aquí — Zavala #181 es
+# *Koro* 'cotorra', no 'cardón'.
+HOMOGRAFOS_ES: dict[str, str] = {
+    "aca":    "#3 (E) 'bejuco'. Caquetía. Colisiona con 'acá' si se escribe sin tilde.",
+    "bagre":  "#21 (AM) 'pez'. Caquetía según la fuente; el 'bagre' español es a su vez indigenismo. Colisión real.",
+    "cana":   "#57 (HB) 'demonio'. Caquetía; colisiona con 'cana'/'caña'.",
+    "capo":   "#59 (E) 'duende'. Caquetía (cf. #60 capu 'demonio'); colisión menor con 'capo'.",
+    "carama": "#64 (E) 'ramazón'. Caquetía; 'carama' existe en español rural (escarcha).",
+    "cocuy":  "#87 'penca; planta que da un vino'. Indigenismo de circulación pan-venezolana: ATRIBUCIÓN DÉBIL además de homógrafo.",
+    "dato":   "#105 (HB) 'fruto del cardón'. Caquetía, pero 'dato' es altísima frecuencia en español: la marca es imprescindible.",
+    "guaca":  "#123 (E) 'ave, cotorra'. Caquetía; 'guaca' español (quechua, tesoro) es otra cosa.",
+    "guay":   "#147 (E)(A) 'árbol parecido a la ceiba'. Caquetía; colisiona con la interjección.",
+    "samuro": "#223 (AM) 'punta hacia el mar'. La forma coincide con 'zamuro' (zoónimo venezolano) y la glosa es geográfica: ATRIBUCIÓN DÉBIL.",
+    "sigua":  "#227 (E) 'blando'. Caquetía; 'sigua' antillano es otra cosa.",
+    "taque":  "#236 (E) 'árbol nucífero'. Caquetía; 'taque' español es regional y raro.",
+    "taques": "#237 (AM) 'salina'. Es también el topónimo Los Taques (Paraguaná): la glosa es la etimología del lugar. ATRIBUCIÓN DÉBIL.",
+    "tuba":   "#253 (E) 'aglomeración, montón'. Caquetía; colisiona con 'tuba'.",
+}
+
+# Formas que la marca heurística levantaba y que NO son palabras del español.
+# Se documentan para que nadie las vuelva a marcar "por si acaso": marcarlas
+# obliga al scorer a exigir vecino arahuaco y hace perder caquetío legítimo.
+DESMARCADAS_F7: dict[str, str] = {
+    "aco":      "#4 'comida; par, pareja' — no existe en español.",
+    "apo":      "#11 'grande' — en español solo es prefijo culto (apo-).",
+    "cabana":   "#51 'sabana' — la palabra española es 'cabaña', con ñ.",
+    "icoroata": "#162 'caraota' — NO es homógrafo: es la voz caquetía; 'caraota' es su glosa.",
+    "koro":     "#181 'cotorra' — con k no colisiona; 'coro' (canto) es otra forma.",
+    "quiba":    "#203 'ayuda' — no existe en español.",
+    "quiva":    "#218 'piedra' — no existe en español.",
+    "ruba":     "#221 'abeja silvestre negra de Coro' — no existe en español.",
+    "supi":     "#230 'sitio a orilla del mar' — no existe en español.",
+    "ure":      "#272 'raíz' — no existe en español.",
+    "yaro":     "#285 'bejuco, planta venenosa' — no existe en español (sí es topónimo de Falcón).",
+}
+
+# DESCARTE del habla activa (nivel D del protocolo de descarte, §5 de
+# investigacion/disenos/02_protocolo_habla_paraguanera.md). No son topónimos:
+# son formas cuya presencia en el léxico activo hace más daño que bien.
+DESCARTAR_DEL_HABLA: dict[str, str] = {
+    "hay": "F7: #154 (AM) 'coca'. La forma coincide con el verbo español más "
+           "frecuente ('hay'); ninguna resolución por contexto compensa eso. "
+           "En su lugar queda `hayo` (#156, 'hierba quita sed'), que es la forma "
+           "corriente del mismo referente y no colisiona.",
+    "enea": "F7: #118 (A) 'planta ciperácea'. 'Enea' (~anea, Typha) ES la palabra "
+            "española del junco; Alvarado está dando el nombre castellano de la "
+            "planta, no una voz caquetía.",
+    "guata": "F7: #146 (AM) 'Planta'. Glosa vacía —no dice qué planta— y homógrafo "
+             "con 'guata'. Mismo criterio que `coroque` ('Árbol de ¿?').",
+}
+
+# ══════════════════════════════════════════════════════════════════════
+# D7 — glosa histórica vs. identificación científica moderna
+# ══════════════════════════════════════════════════════════════════════
+# Decisión de Miguel, 2026-08-03: cuando la glosa de la fuente y la
+# identificación taxonómica moderna difieren, **se registran las dos, en campos
+# separados**, y ninguna gana:
+#
+#   glosa_fuente           → lo que dice Zavala, verbatim, con nº y siglas.
+#                            ES LA QUE EL AGENTE HABLA (`sig` se deriva de ella).
+#   identificacion_moderna → el taxón actual, como nota auditable.
+#
+# Se rellena a mano, caso por caso: nadie infiere taxonomía automáticamente.
+IDENTIFICACION_MODERNA: dict[str, str] = {
+    "cunaro": "Rhomboplites aurorubens (pargo cunaro, de altura) según SVDB. "
+              "Zavala transcribe 'Promicops Guasa' (por Promicrops itajara, hoy "
+              "Epinephelus itajara, el mero guasa): dos peces distintos.",
+    "guaranaro": "sin resolver; 'lisa' apunta a Mugil spp. (M. curema / M. incilis "
+                 "son las del Golfete). La hoja de fuentes 02_ecologia lo daba por "
+                 "'sin identificación taxonómica firme' cuando Zavala YA lo glosaba.",
 }
 
 # EXCLUIR — curación a mano tras revisar las listas heurísticas (2026-07-20).
@@ -160,11 +302,12 @@ def extraer(pdf_path: str = PDF_PATH) -> list[dict]:
     plano = re.sub(r"-\n", "", texto)           # une palabras cortadas por guion
     plano = re.sub(r"\s*\n\s*", " ", plano)
     plano = _FOOTER.sub(" ", plano)             # quita pies de página repetidos
+    plano = _normalizar_plano(plano)            # ver RESCATES_PARSEO
 
     vistos: dict[int, dict] = {}
     for m in _ENTRADA.finditer(plano):
         num = int(m.group(1))
-        if num in vistos or not (1 <= num <= 288):
+        if num in vistos or not (1 <= num <= TOTAL_ENTRADAS_PDF):
             continue
         lemas_raw = m.group(2).strip().rstrip(".,;")
         siglas = re.findall(r"\(([A-Za-z]{1,4})\)", m.group(3) or "")
@@ -178,6 +321,13 @@ def extraer(pdf_path: str = PDF_PATH) -> list[dict]:
             "num": num, "lemas": lemas, "siglas": siglas,
             "definicion": definicion[:160],
         }
+
+    # El parseo debe cerrar en 288/288. Si vuelve a abrirse un hueco (otra
+    # extracción de PDF, otra versión de pypdf), que se vea, no que se silencie.
+    faltan = [n for n in range(1, TOTAL_ENTRADAS_PDF + 1) if n not in vistos]
+    if faltan:
+        print(f"  AVISO: entradas del PDF no parseadas: {faltan}", file=sys.stderr)
+
     return [vistos[k] for k in sorted(vistos)]
 
 
@@ -231,9 +381,15 @@ def clasificar(entradas: list[dict]) -> dict:
                 tiers["MAL_ETIQUETADO"].append(reg)
             continue
 
-        e = {**e, "homografo_es": any(l in HOMOGRAFOS_ES for l in lemas_n)}
+        # La marca se decide por la forma que REALMENTE entra al léxico (el
+        # primer lema), no por cualquier variante: la #4 "Aco. Aca" entra como
+        # `aco`, que no es homógrafo, aunque su variante `aca` sí lo sea.
+        e = {**e, "homografo_es": lemas_n[0] in HOMOGRAFOS_ES}
 
-        if any(l in EXCLUIR_DEL_HABLA for l in lemas_n):
+        if any(l in DESCARTAR_DEL_HABLA for l in lemas_n):
+            motivo = next(DESCARTAR_DEL_HABLA[l] for l in lemas_n if l in DESCARTAR_DEL_HABLA)
+            tiers["T6_descartado"].append({**e, "motivo": motivo})
+        elif any(l in EXCLUIR_DEL_HABLA for l in lemas_n):
             tiers["T5_toponimo"].append({**e, "motivo": "curación manual: topónimo/etnónimo o glosa incierta"})
         elif any(l in AFIJOS for l in lemas_n):
             afijo = next(AFIJOS[l] for l in lemas_n if l in AFIJOS)
@@ -260,9 +416,16 @@ def informe(tiers: dict, entradas: list[dict]):
     print("=" * 78)
     print("  GLOSARIO ZAVALA REYES 2015 — auditoría de importación")
     print("=" * 78)
-    print(f"  entradas parseadas del PDF: {total}")
+    print(f"  entradas numeradas del PDF: {TOTAL_ENTRADAS_PDF}")
+    print(f"  entradas parseadas:         {total}"
+          f"   ({'CIERRA' if total == TOTAL_ENTRADAS_PDF else 'HUECO'})")
     print(f"  ya presentes en VOCABULARIO_BASE: {ya}  ({100*ya//max(total,1)}%)")
     print(f"  ausentes: {total - ya}")
+    capturadas = sum(len(tiers[t]) for t in
+                     ("T1_afijos", "T2_nombres_agente", "T3_concreto", "T4_abstracto",
+                      "T5_toponimo", "T5b_antroponimo", "T6_descartado")) + ya
+    print(f"  CAPTURADAS (habla + canon + descartes + ya presentes): {capturadas}"
+          f"/{TOTAL_ENTRADAS_PDF}  ({100*capturadas//TOTAL_ENTRADAS_PDF}%)")
     print()
     orden = ["T1_afijos", "T2_nombres_agente", "T3_concreto", "T4_abstracto",
              "T5_toponimo", "T5b_antroponimo", "T6_descartado"]
@@ -298,7 +461,8 @@ _CAT_POR_TIER = {"T4_abstracto": "v_raiz"}   # heurística de POS; el resto, sus
 
 def _entrada_py(e: dict, tier: str, indent: str = "    ") -> str:
     forma = norm(e["lemas"][0])
-    sig = e["definicion"].replace('"', "'").replace("\\", "")[:78]
+    verbatim = e["definicion"].replace('"', "'").replace("\\", "")
+    sig = verbatim[:78]
     sig = (sig[0].lower() + sig[1:]) if sig else sig
     siglas = "+".join(e["siglas"]) or "s/sigla"
     nota = f"Zavala Reyes 2015 #{e['num']} ({siglas})"
@@ -309,8 +473,14 @@ def _entrada_py(e: dict, tier: str, indent: str = "    ") -> str:
         nota += f"; variantes: {', '.join(variantes)}"
     cat = _CAT_POR_TIER.get(tier, "sust")
     pad = " " * max(1, 14 - len(forma))
+    # D7: la glosa de la fuente se conserva verbatim y trazable; la
+    # identificación moderna se añade aparte, sin desplazarla.
+    extra = (f' "glosa_fuente": "{verbatim} [Zavala Reyes 2015 #{e["num"]} ({siglas})]",')
+    moderna = IDENTIFICACION_MODERNA.get(forma)
+    if moderna:
+        extra += f' "identificacion_moderna": "{moderna.replace(chr(34), chr(39))}",'
     return (f'{indent}"{forma}":{pad}{{"sig": "{sig}", "cat": "{cat}", '
-            f'"fuente": "caquetío-atestiguado", "notas": "{nota}"}},')
+            f'"fuente": "caquetío-atestiguado",{extra} "notas": "{nota}"}},')
 
 
 def generar_modulo(tiers: dict, ruta: str):
@@ -327,11 +497,23 @@ def generar_modulo(tiers: dict, ruta: str):
     L.append('    muerta: legado arawak-caquetío". Boletín Antropológico 33(89), pp. 58-76.')
     L.append("    Universidad de Los Andes. → fuentes_caquetios/")
     L.append("")
-    L.append("MOTIVO (auditoría 2026-07-20): el lexicón contenía solo ~66 de las 286")
+    L.append("MOTIVO (auditoría 2026-07-20): el lexicón contenía solo ~66 de las 288")
     L.append("entradas del glosario (23%). Faltaban palabras que el propio proyecto usa")
     L.append("como nombre de agente (buio, bagre, cunaro, guaranaro, dara, naure) — que")
     L.append("por tanto NO puntuaban como caquetío — y ocho afijos atestiguados ausentes")
     L.append("de las reglas morfológicas.")
+    L.append("")
+    L.append("CIERRE DEL PARSEO (F7, 2026-08-03): el glosario tiene 288 entradas numeradas")
+    L.append("y hoy se parsean las 288. Antes se perdían la #31 (separa siglas y definición")
+    L.append("con punto) y la #104 (variante del lema entre paréntesis), y nueve")
+    L.append("definiciones venían mutiladas por el número de página o por versales")
+    L.append("partidas por pypdf. Ver RESCATES_PARSEO en el minador.")
+    L.append("")
+    L.append("D7 — GLOSA HISTÓRICA vs. IDENTIFICACIÓN MODERNA (decidido el 2026-08-03):")
+    L.append("cada entrada lleva `glosa_fuente` con el texto VERBATIM de Zavala, su número")
+    L.append("y las siglas del compilador. Esa es la glosa que el agente habla. Cuando la")
+    L.append("ciencia moderna identifica otra cosa, se añade `identificacion_moderna` como")
+    L.append("nota auditable; ninguna de las dos desplaza a la otra.")
     L.append("")
     L.append("CAVEAT DE MÉTODO: el glosario de Zavala es una compilación de nueve autores")
     L.append("(Arcaya, Hernández Baño, Esteves, Angulo Molina, Alvarado, Galeotto Cey,")
@@ -406,10 +588,23 @@ def generar_modulo(tiers: dict, ruta: str):
     L.append('# "el bagre" puntuaría como caquetío. score_linguistico los cuenta solo')
     L.append("# si un vecino inmediato es arahuaco (mismo mecanismo que ya usa 'para').")
     L.append("")
+    L.append("# Revisión F7 (2026-08-03): las 28 formas que la heurística marcaba se")
+    L.append("# revisaron una por una contra su entrada de Zavala. 14 siguen marcadas,")
+    L.append("# 11 perdieron la marca por no ser palabras del español (DESMARCADAS_F7 en")
+    L.append("# el minador) y 3 salieron del habla (DESCARTADOS_ZAVALA, abajo).")
+    L.append("")
     L.append("HOMOGRAFOS_ZAVALA: frozenset = frozenset({")
     for h in homs:
         L.append(f'    "{h}",')
     L.append("})")
+    L.append("")
+    L.append("")
+    L.append("# Veredicto por forma, para que la marca sea auditable y no un acto de fe.")
+    L.append("VEREDICTO_HOMOGRAFOS: dict[str, str] = {")
+    for h in homs:
+        v = HOMOGRAFOS_ES.get(h, "").replace('"', "'")
+        L.append(f'    "{h}": "{v}",')
+    L.append("}")
     L.append("")
     L.append("")
 
@@ -441,6 +636,9 @@ def generar_modulo(tiers: dict, ruta: str):
     L.append(f'    "homografos": {len(homs)},')
     L.append(f'    "toponimos": {len(tiers["T5_toponimo"])},')
     L.append(f'    "antroponimos": {len(tiers["T5b_antroponimo"])},')
+    L.append(f'    "descartados": {len(tiers["T6_descartado"])},')
+    L.append(f'    "ya_en_lexicon_antes_del_import": {len(tiers["YA_EN_LEXICON"])},')
+    L.append(f'    "entradas_pdf": {TOTAL_ENTRADAS_PDF},')
     L.append("}")
     L.append("")
 
@@ -461,6 +659,7 @@ def emitir_python(tiers: dict, incluir=("T2_nombres_agente", "T3_concreto", "T4_
 
 
 if __name__ == "__main__":
+    _forzar_utf8()
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--json", metavar="RUTA", help="volcar la clasificación a JSON")
     ap.add_argument("--python", action="store_true", help="emitir entradas para VOCABULARIO_BASE")

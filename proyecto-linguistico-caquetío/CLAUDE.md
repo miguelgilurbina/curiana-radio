@@ -105,17 +105,19 @@ El lexicón activo distingue 8 categorías de `fuente` (ver `normalize_source_la
 en `curiana_database.py`), porque "caquetío" mezclaba históricamente dato real
 con especulación sin marcar:
 
-- **`caquetío-atestiguado`** (232) — dato histórico real, citable a crónicas
-  coloniales (Galeotto Cey, Oviedo, Las Casas) y trabajo académico (Zavala
-  Reyes 2015, Oliver 1989, Jahn 1927). **Ampliado el 2026-07-20**: el glosario
-  de Zavala Reyes 2015 (286 entradas) estaba importado solo al 23%; faltaban
-  incluso palabras que dan nombre a agentes (`buio`, `bagre`, `cunaro`,
-  `guaranaro`, `dara`, `naure`), que por tanto NO puntuaban como caquetío.
-  `minar_zavala_glosario.py` extrae y clasifica el glosario por tiers y genera
-  `lexicon_zavala.py` (153 palabras + 8 afijos); la cobertura pasó al 76%.
-  Los topónimos, antropónimos y etnónimos quedan FUERA del habla, como
-  referencia de canon. 28 formas son homógrafos con español (`bagre`,
-  `sabana`, `cana`…) y `score_linguistico()` las resuelve por contexto.
+- **`caquetío-atestiguado`** (231) — dato histórico real, citable a fuente
+  concreta. ⚠️ **Medido el 2026-08-03: en el dato es Zavala y casi nadie más** —
+  164 entradas lo citan; Oliver 2, Oviedo (vía terceros) 2, Galeotto Cey 2,
+  Arcaya 1, Jahn 1; Alvarado, Van Buurt y Gatschet, **cero**. Ver
+  `investigacion/fuentes/INDICE_FUENTES.md`.
+  **Zavala cerrado al 100% (F7, 2026-08-03)**: `minar_zavala_glosario.py`
+  parsea las **288** entradas del glosario y genera `lexicon_zavala.py` —
+  225 (78%) van al habla activa, 63 (22%) quedan **fuera por diseño** (45
+  topónimos + 14 antropónimos + 4 descartes). No es deuda: es curación.
+  De los 28 homógrafos con español, tras revisión quedan **14** marcados;
+  11 perdieron la marca (no eran palabras del español, y marcarlas hacía que
+  `score_linguistico()` **sub-contara** caquetío legítimo) y 3 salieron del
+  habla (`hay`, `enea`, `guata`).
 - **`caquetío-reconstruido`** (82: 12 base + 2 topónimo + 68 núcleo
   fundacional) — vocabulario de trabajo del proyecto: pronombres, numerales,
   verbos básicos que `prompt_reglas_completo()`/`breve()` presentan a los
@@ -143,6 +145,30 @@ que dio 4 pares LK-TN reales y corrigió un bug en `REGLAS_LK_TN`; *no* dio
 resultado: Perea Alonso 1942, que es gramática Lokono pura, no comparativa
 entre lenguas arahuacas). `arahuaco_comparative.py::validar()` corre la
 suite de validación (18 pares al momento de escribir esto).
+
+### Minerías de 2026-08-03 (F3, F4, F6, F7) — propuestas, no fusiones
+
+Cuatro fuentes se minaron en paralelo. **Ninguna modificó `curiana_lexicon.py`**:
+cada una emite un módulo de propuesta para revisión humana, con la misma
+disciplina de `minar_zavala_glosario.py`.
+
+| Minador | Propuesta | Nota de fuente |
+|---|---|---|
+| `minar_alvarado_glosario.py` | `lexicon_alvarado.py` | 1551 lemas, 109 evaluados; A=3 B=36 C=13 **D=57** |
+| `minar_gatschet.py` | `lexicon_gatschet.py` | 48 léxicas + 31 topónimos + 6 fórmulas rituales |
+| `minar_van_buurt.py` | `lexicon_van_buurt.py` | §6 (88) y §11 (29) **en diccionarios separados** |
+| `minar_zavala_glosario.py` | `lexicon_zavala.py` | 288/288, el parseo cierra |
+
+**`auditar_82.py` cruza las cuatro** y emite el veredicto por palabra para el
+censo de citas (F1). Estado al 2026-08-03: de 82 entradas sin cita, **61
+confirman · 13 reclasifican · 3 conflicto de glosa · 5 sin rastro** — 77 de 82
+(94%) adjudicables con evidencia. La lista se recalcula del lexicón en cada
+corrida, así que se encoge sola a medida que F1 aplica citas.
+
+> ⚠️ **`lexicon_zavala.py` no es solo propuesta**: `curiana_lexicon.py` lo
+> importa (`GLOSARIO_ZAVALA`, `HOMOGRAFOS_ZAVALA`). Regenerarlo **cambia el
+> comportamiento de `score_linguistico()`**. Los otros tres módulos de propuesta
+> no se importan en ninguna parte.
 
 ## Scoring lingüístico (`score_linguistico()` en `curiana_lexicon.py`)
 
@@ -206,6 +232,15 @@ Real-time en Supabase: `agent_responses`, `turns`, `neologisms`, `agent_profiles
 
 ## Archivos de referencia
 
+- **`INDICE.md`** — nota raíz del vault (el repo ES el vault, ver
+  `PLAN_MAESTRO.md` §2). Punto de entrada: enlaza los 6 MOCs de `mocs/`,
+  `DECISIONES_ABIERTAS.md` e `investigacion/fuentes/INDICE_FUENTES.md`.
+- **`investigacion/fuentes/`** — una nota por obra: estado técnico medido
+  (capa de texto, páginas), estado de minado, qué sostiene y qué falta.
+  **Cuando se mine una fuente, el resultado se escribe en su nota**, no en un
+  markdown nuevo. Verificar el grafo con
+  `python investigacion/check_vault_links.py --strict`.
+- **`DECISIONES_ABIERTAS.md`** — lo que solo Miguel puede decidir (D1-D8).
 - `IDEA_PERFILES_AGENTES.md` — diseño de la sección de perfiles de agentes
   (rol, arco narrativo, frases célebres) y su implementación.
 - `test_quick.py` — test suite sin API keys (debe dar 8/8 OK).

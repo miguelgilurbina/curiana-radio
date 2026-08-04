@@ -1,4 +1,14 @@
+---
+tipo: hoja-de-fuentes
+sesion: 4/4
+moc: MOC_transmision
+---
+
 # Hoja de fuentes — Sesión 4: Transmisión del saber
+
+> [[MOC_transmision]] · [[04_transmision_saber|ensayo]] · [[INDICE_FUENTES]]
+> Fuentes: [[jahn-1927]] · [[amodio-perez-2006]] · [[angleria-1892]] · [[guerra-curvelo-palabrero]] · [[vansina-ong]] · [[las-casas-1875]] · [[gilij-1780-1783]] · [[oviedo-y-valdes-1851]]
+> Programa que levantó: [[PROGRAMA_WAYUU]]
 
 Qué se buscó, qué se encontró, qué quedó abierto. Complementa
 `investigacion/ensayos/04_transmision_saber.md` y

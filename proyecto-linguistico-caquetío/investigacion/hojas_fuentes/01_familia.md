@@ -1,4 +1,13 @@
+---
+tipo: hoja-de-fuentes
+sesion: 1/4
+moc: MOC_familia
+---
+
 # Hoja de fuentes — Sesión 1/4: ¿Cómo era la familia caquetía?
+
+> [[MOC_familia]] · [[01_familia_caquetia|ensayo]] · [[INDICE_FUENTES]]
+> Fuentes: [[oliver-1989-cap3]] · [[oliver-1989-cap2]] · [[jahn-1927]] · [[arcaya-1920]] · [[adam-1879]] · [[keegan-1989]] · [[las-casas-1875]] · [[oviedo-y-banos]]
 
 ## Corrección post-entrega (feedback de Miguel)
 
