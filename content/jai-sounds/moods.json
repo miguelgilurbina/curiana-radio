@@ -1,0 +1,89 @@
+{
+  "_nota": "TAXONOMÍA SEMILLA — andamio, no curaduría. Estos seis moods existen para que el dial tenga estructura y la portada compile antes de que haya datos. Reemplazarlos por los reales: correr `node jai-sounds/scripts/ingest_spotify.mjs --inspect <url>`, que imprime nombre e id de las playlists de verdad, y derivar los moods de ahí. `hue` es un ángulo de matiz en oklch (no hsl): 25 rojo, 55 ámbar, 150 verde, 240 azul, 300 violeta, 355 rosa. Mientras 'borrador' sea true, la portada lo declara en pantalla.",
+  "moods": [
+    {
+      "slug": "senal-debil",
+      "nombre": "Señal débil",
+      "frecuencia": "88.1",
+      "bajada": "Lo que llega después de viajar demasiado lejos. Ruido que resultó ser mensaje.",
+      "hue": 55,
+      "cruces": [
+        "ambient",
+        "modern classical",
+        "drone"
+      ],
+      "playlists": [],
+      "borrador": true
+    },
+    {
+      "slug": "cuerpo-primero",
+      "nombre": "Cuerpo primero",
+      "frecuencia": "88.4",
+      "bajada": "La decisión la toma la cadera y el resto se entera después.",
+      "hue": 355,
+      "cruces": [
+        "afrobeat",
+        "house",
+        "champeta"
+      ],
+      "playlists": [],
+      "borrador": true
+    },
+    {
+      "slug": "hora-lenta",
+      "nombre": "Hora lenta",
+      "frecuencia": "88.8",
+      "bajada": "Música para cuando el día ya no exige nada. Ni duelo ni fiesta.",
+      "hue": 240,
+      "cruces": [
+        "jazz",
+        "soul",
+        "bossa"
+      ],
+      "playlists": [],
+      "borrador": true
+    },
+    {
+      "slug": "lengua-madre",
+      "nombre": "Lengua madre",
+      "frecuencia": "89.2",
+      "bajada": "Abya Yala cantando en sus propias vocales, con o sin permiso del mercado.",
+      "hue": 150,
+      "cruces": [
+        "folklore",
+        "cumbia",
+        "andina"
+      ],
+      "playlists": [],
+      "borrador": true
+    },
+    {
+      "slug": "maquina-que-suena",
+      "nombre": "Máquina que sueña",
+      "frecuencia": "89.6",
+      "bajada": "Sintetizadores que respiran. La frontera donde el circuito empieza a parecer criatura.",
+      "hue": 300,
+      "cruces": [
+        "electronic",
+        "idm",
+        "synth"
+      ],
+      "playlists": [],
+      "borrador": true
+    },
+    {
+      "slug": "filo",
+      "nombre": "Filo",
+      "frecuencia": "90.1",
+      "bajada": "Lo que raspa. Volumen como argumento.",
+      "hue": 25,
+      "cruces": [
+        "post-punk",
+        "noise",
+        "experimental"
+      ],
+      "playlists": [],
+      "borrador": true
+    }
+  ]
+}

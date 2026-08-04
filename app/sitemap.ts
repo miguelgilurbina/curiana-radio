@@ -52,5 +52,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }));
 
-  return [...staticPages, ...editionPages, ...simuladorPages, ...personajePages];
+  // JAI Sounds: la curaduría musical. Por ahora solo la portada del dial;
+  // las páginas de mood entran cuando exista la taxonomía real.
+  const jaiSoundsPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/jai-sounds`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+  ];
+
+  return [
+    ...staticPages,
+    ...editionPages,
+    ...simuladorPages,
+    ...personajePages,
+    ...jaiSoundsPages,
+  ];
 }
