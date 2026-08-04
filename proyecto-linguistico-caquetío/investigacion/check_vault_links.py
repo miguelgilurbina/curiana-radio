@@ -29,7 +29,11 @@ import sys
 
 VAULT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-IGNORAR_DIRS = {"__pycache__", ".obsidian", ".trash", "node_modules", "data", ".git"}
+# `.claude/` incluye worktrees de git, que duplican el repo entero y hacen que
+# todo basename aparezca como ambiguo. Un worktree es una copia de trabajo, no
+# contenido del vault.
+IGNORAR_DIRS = {"__pycache__", ".obsidian", ".trash", "node_modules", "data",
+                ".git", ".claude", ".next"}
 EXT_ENLAZABLES = {".md", ".canvas", ".pdf", ".yaml", ".yml", ".py", ".txt"}
 
 # [[destino]] · [[destino|alias]] · [[destino#seccion]]

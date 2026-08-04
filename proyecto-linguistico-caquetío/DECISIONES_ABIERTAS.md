@@ -1,35 +1,46 @@
 ---
 tipo: nota-viva
 ambito: decisiones que solo Miguel puede tomar
-abiertas: 9
-resueltas: 2
+abiertas: 7
+resueltas: 3
+tablero: https://github.com/miguelgilurbina/curiana-radio/issues
 actualizado: 2026-08-03
 ---
 
 # Decisiones abiertas
 
 > Nota viva. Sustituye a la tabla de [[PLAN_MAESTRO]] §5 — el plan sigue siendo
-> el mapa, pero **el estado de cada decisión se lleva aquí**. Una decisión entra
-> cuando bloquea trabajo real y no puede tomarse desde el código o las fuentes.
+> el mapa, pero **el razonamiento de cada decisión se lleva aquí**.
 >
-> Al resolver una: mover a *Resueltas* con fecha y una línea de por qué, y
-> actualizar la nota o el archivo que quedaba bloqueado. No borrar.
+> **Desde el 2026-08-03 hay dos registros, y cada uno tiene su trabajo:**
+>
+> | Dónde | Qué guarda |
+> |---|---|
+> | **[GitHub Issues](https://github.com/miguelgilurbina/curiana-radio/issues)** | el **estado**: qué está abierto, qué se cerró, qué bloquea a qué |
+> | **Esta nota** | el **argumento**: la evidencia, las opciones y el porqué |
+>
+> No se duplican: el issue enlaza aquí para el razonamiento, y aquí se anota el
+> número de issue. **El tablero manda sobre el estado; esta nota manda sobre el
+> porqué.**
+>
+> Al resolver una: cerrar el issue, mover la decisión a *Resueltas* con fecha y
+> una línea de por qué, y actualizar el archivo que quedaba bloqueado. No borrar.
 
 ## Panorama
 
 | # | Decisión | Bloquea | Estado |
 |---|---|---|---|
-| D1 | Veto de la genealogía | V3, J1 | 🔴 abierta |
-| D2 | El nombre "Curiana" | J1, naming público | 🔴 abierta |
-| D3 | `normalizar_por_dialecto()` (M1) | reanudar simulaciones | 🔴 abierta |
-| D4 | Segundo sobrino de Manaure | D1 | 🔴 abierta |
-| D5 | Política ortográfica c/k | F2 | 🔴 abierta |
+| [D1](https://github.com/miguelgilurbina/curiana-radio/issues/32) | Veto de la genealogía | V3, J1 | 🔴 abierta |
+| [D2](https://github.com/miguelgilurbina/curiana-radio/issues/33) | El nombre "Curiana" | J1, naming público | 🔴 abierta |
+| [D3](https://github.com/miguelgilurbina/curiana-radio/issues/34) | `normalizar_por_dialecto()` (M1) | reanudar simulaciones | 🔴 abierta |
+| [D4](https://github.com/miguelgilurbina/curiana-radio/issues/35) | Segundo sobrino de Manaure | D1 | 🔴 abierta |
+| [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) | Política ortográfica c/k | F2 | 🔴 abierta |
 | D6 | Merge del PR #30 | todo lo demás | ✅ **resuelta** (2026-07-29) |
 | D7 | Prelación entre glosa histórica e identificación científica | F3, F4, F6 | ✅ **resuelta** (2026-08-03) |
-| D8 | ¿El repo archiva copias de las fuentes externas? | F10, trazabilidad | 🟡 nueva |
-| D9 | La glosa del locativo `-bana` | morfología, neologismos de agentes | 🟡 nueva |
-| D10 | Qué hacer con las 13 entradas reclasificadas | F1, canon | 🟡 nueva |
-| D11 | **El desbalance wayunaiki/lokono del lexicón** | base de la reconstrucción | 🟠 **nueva, de fondo** |
+| [D8](https://github.com/miguelgilurbina/curiana-radio/issues/37) | ¿El repo archiva copias de las fuentes externas? | F10, trazabilidad | 🟡 abierta |
+| [D9](https://github.com/miguelgilurbina/curiana-radio/issues/38) | La glosa de `-bana` — **y el hallazgo de `-ana`** | morfología, neologismos | 🟡 abierta |
+| D10 | Qué hacer con las 13 entradas reclasificadas | F1, canon | ✅ **resuelta** (2026-08-03) |
+| [D11](https://github.com/miguelgilurbina/curiana-radio/issues/39) | **El desbalance wayunaiki/lokono del lexicón** | base de la reconstrucción | 🟠 **abierta, de fondo** |
 
 ---
 
