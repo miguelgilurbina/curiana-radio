@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-04 15:24**.
+<!--GENERADO--> Generado el **2026-08-04 15:30**.
 
 ## ¿Vamos bien?
 
@@ -21,7 +21,7 @@ editar_a_mano: no
 |---|---|---|---|
 | Entradas del lexicón **sin cita** | **3** | 82 (2026-07-21) | 🟢 −79 |
 | Hechos del corpus **con referencia** | **161 / 161** | — | 🟢 |
-| Tests del motor | **119 en verde** | 0 rojos | 🟢 |
+| Tests del motor | **120 en verde** | 0 rojos | 🟢 |
 | Gate para reanudar simulaciones | **2 de 9** condiciones | faltan 7 | 🔴 |
 | Decisiones esperando a Miguel | **8 abiertas** | 3 resueltas | 🟡 |
 
@@ -258,7 +258,7 @@ Argumento y evidencia de cada una: [[DECISIONES_ABIERTAS]]. El **estado** manda 
 |  | Medido |  |
 |---|---|---|
 | Wikilinks | 809 en 171 notas indexadas | 🟢 0 rotos |
-| Tests (`curiana_sim/tests/`) | 119 passed, 0 failed | 🟢 |
+| Tests (`curiana_sim/tests/`) | 120 passed, 0 failed | 🟢 |
 
 Guardianes: `python check_vault_links.py --strict` · `python -m pytest curiana_sim/tests/ -q`
 

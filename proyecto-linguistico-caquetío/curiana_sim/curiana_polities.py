@@ -162,10 +162,20 @@ POLITIES = {
             epoca="1200 d.C. - Contacto (arqueológico) — **dentro de la ventana "
                   "de la simulación**"),
         religion=Rasgo(
-            "El jefe paramount ejerce de gran chamán. No hay en la fuente un "
-            "boratio separado del poder político, al contrario que en "
-            "Barquisimeto.",
-            _OLIVER + ", p. 279"),
+            "**Dos niveles, no uno.** (a) El jefe paramount ejerce además de "
+            "gran chamán — es el rasgo que la distingue de Barquisimeto. "
+            "(b) Y por debajo, **'en cada pueblo principal hay un boratio'**, "
+            "sacerdote y médico a la vez: se encierra solo en un buhío con "
+            "tabaco 'que le saca el sentido' uno, dos, tres días o más, y sale "
+            "con la respuesta sobre la lluvia, el año seco o abundante, y si "
+            "deben ir a la guerra; se le paga con joyas de oro. Para las "
+            "preguntas pequeñas —si habrá caza, si la mujer lo quiere bien— "
+            "**'cada uno es boratio'**: adivinación doméstica con tabaco "
+            "enrollado en una mazorca, leyendo la ceniza (curva como hoz = "
+            "bien; recta = al revés).",
+            _OLIVER + ", p. 279 (el jefe como gran chamán); Oviedo y Valdés, "
+            "*Historia General y Natural de las Indias*, t. II p. 298, citado "
+            "extensamente en Arcaya 1920, pp. 97-100"),
         ceramica=Rasgo(
             "Su distribución en tiempo y espacio es 'precisely congruent' con "
             "la sub-tradición **Dabajurana**. ⚠️ El propio Oliver matizó esto "
@@ -399,21 +409,30 @@ def coherencia_del_canon() -> list:
     except Exception as e:                                       # noqa: BLE001
         return [f"no se pudo leer curiana_agents.py: {e}"]
 
-    # La costera funde poder secular y sagrado en el diao. Si el elenco tiene un
-    # piache que NO es el cacique, eso es el patrón de Barquisimeto.
+    # Lo que separa a la costera de Barquisimeto NO es que existan boratios
+    # —los hay en las dos, "en cada pueblo principal hay un boratio"— sino si
+    # el JEFE es además gran chamán. En la costa sí; en Barquisimeto el jefe de
+    # paz no lo es (Oliver p.279). Así que la comprobación mira al cacique, no
+    # a si los oficios están repartidos entre personas distintas.
     if POLITY_SIMULADA == "costera":
-        piaches = [n for n, a in ALL_AGENTS.items()
-                   if a.get("ubicacion_default") == "choza_piache"]
         caciques = [n for n, a in ALL_AGENTS.items()
                     if a.get("ubicacion_default") == "casa_cacique"]
-        solapan = set(piaches) & set(caciques)
-        if piaches and caciques and not solapan:
+        marcas = ("piache", "chamán", "chaman", "teocrátic", "teocratic",
+                  "boratio", "tormenta")
+
+        def _es_tambien_chaman(a: dict) -> bool:
+            texto = " ".join(str(a.get(c, "")) for c in
+                             ("descripcion", "system_prompt")).lower()
+            return any(m in texto for m in marcas)
+
+        sin_don = [n for n in caciques if not _es_tambien_chaman(ALL_AGENTS[n])]
+        if caciques and len(sin_don) == len(caciques):
             avisos.append(
-                "poder sagrado y secular SEPARADOS en el elenco "
-                f"(piaches={piaches}, caciques={caciques}), pero la polity "
-                "'costera' los funde en el diao (Oliver 1989 cap.3 p.279). "
-                "El patrón separado —boratio apartado de la aldea— es el de "
-                "**barquisimeto**. Decisión de canon pendiente.")
+                f"ningún cacique del elenco ({', '.join(caciques)}) aparece "
+                "como gran chamán, y eso es lo que distingue a la polity "
+                "'costera' de la de barquisimeto (Oliver 1989 cap.3 p.279): "
+                "en la costa el diao gobierna el cuerpo y el cielo. Revisar "
+                "el canon o cambiar POLITY_SIMULADA.")
 
     # Las etnias son un eje distinto del de polity, pero conviene ver que el
     # campo esté sano: 'caquetío' y 'caquetía' son el mismo pueblo escrito en

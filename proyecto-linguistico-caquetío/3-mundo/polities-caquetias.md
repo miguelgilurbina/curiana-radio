@@ -51,32 +51,34 @@ python curiana_sim/curiana_polities.py --contrastar costera barquisimeto
 
 ## Lo que el modelo destapó
 
-### 🔴 Shaboro es de Barquisimeto
+### 🟢 Shaboro y Manaure: el canon estaba bien (y la primera lectura, mal)
 
-`coherencia_del_canon()` lo detecta solo, leyendo `curiana_agents.py`:
+La primera versión de esta nota afirmaba que Shaboro era un personaje importado
+de Barquisimeto, porque el elenco tiene `casa_cacique` y `choza_piache` en
+personas distintas y Oliver describe el poder costero como fundido en el diao.
+**Esa inferencia era incorrecta**, y la corrigió minar [[arcaya-1920]] un rato
+después.
 
-- La polity **costera** funde poder sagrado y secular: el diao *es* el gran
-  chamán (Oliver p. 279; y [[oviedo-y-banos]] describe a Manaure llevado en
-  hamaca **a hombros de caciques**, con la etiqueta de un señor sagrado).
-- El elenco actual tiene `casa_cacique` (Manaure, Nubiri-sha) y `choza_piache`
-  (Shaboro, Buio-sha, Sha) **sin solaparse**: poder político y poder sagrado en
-  personas y lugares distintos.
-- Eso —incluido el detalle de que el boratio vive en su propia choza fuera de la
-  aldea— es literalmente el patrón que Oliver describe para **Barquisimeto**.
+Lo que Oliver dice que distingue a la costa **no es que no haya boratios**, sino
+que allí **el jefe es además gran chamán**, cosa que el jefe de paz de
+Barquisimeto no es. Y las dos cosas conviven: Arcaya cita a Oviedo y Valdés
+(t. II p. 298) diciendo que **"en cada pueblo principal hay un boratio"**.
 
-No es un error que haya que corregir a la fuerza: es una **decisión de canon**
-que nunca se tomó explícitamente, y ahora está a la vista. Las salidas son tres,
-y son de Miguel:
+El canon del proyecto ya lo tenía bien, y con precisión: Manaure es *"Señor de
+la Curiana y piache a la vez: gobierna el cuerpo y el cielo de su pueblo"*, *"el
+jefe teocrático: gobernante Y piache en uno"*. Es exactamente el modelo costero.
+Que además exista Shaboro como boratio especialista es **lo que la fuente
+describe**, no una desviación.
 
-1. **Aceptarlo y marcarlo**: la Curiana es costera salvo en esto, por razones
-   narrativas (un piache-personaje da mucho más juego que un cacique que también
-   profetiza). Basta con decirlo.
-2. **Corregir el canon**: Manaure absorbe la función chamánica y Shaboro pasa a
-   ser su aprendiz/ejecutor, no un poder paralelo.
-3. **Convertirlo en trama**: que la separación sea *reciente* y disputada dentro
-   de la ficción — la costa fundía los dos poderes y en Todariquiba se están
-   separando. Es la opción que más rendimiento narrativo tiene y la que menos
-   contradice la fuente.
+`coherencia_del_canon()` se corrigió en consecuencia: ahora comprueba si el
+cacique lleva atributos chamánicos, que es el rasgo diagnóstico, en vez de si
+los oficios están repartidos entre personas distintas. Con el canon actual, no
+salta.
+
+> La lección que queda: **el eje que separa dos polities no siempre es el que
+> parece.** "Hay un piache aparte" no distingue nada; "el jefe también profetiza"
+> sí. Distinguir mal es el mismo error de aplanamiento que Oliver denuncia, solo
+> que en la otra dirección.
 
 ### 🟢 El corpus, en cambio, está limpio
 
@@ -88,12 +90,14 @@ marcar. **Siete** mencionan otra formación, y los siete lo hacen bien:
   como prueba de que existía otra estructura.
 - `creencia-015b` trata el Yaracuy como toponimia, no importa rasgos.
 - `creencia-004` (la formación del piache por ayuno prolongado) **sí marca** su
-  origen —"Nueva Segovia / Barquisimeto"—, pero es el mismo asunto de Shaboro
-  visto desde el corpus: es dato de Barquisimeto sosteniendo a un personaje
-  costero. Va con la decisión de arriba.
+  origen: "Nueva Segovia / Barquisimeto". Y ahora tiene además respaldo costero
+  independiente: el boratio de Oviedo y Valdés también manda **ayunar** —a toda
+  la casa, con solo `cazá` una vez al día— durante la cura.
 
-Conclusión honesta del barrido: **la mezcla de polities no está en el corpus,
-está en el canon del motor.**
+Conclusión honesta del barrido: **no hay mezcla de polities sin marcar, ni en el
+corpus ni en el canon del motor.** El único hallazgo real fue de higiene (el
+campo `etnia`), y la primera sospecha sobre Shaboro no resistió el contraste con
+la fuente.
 
 ## Qué falta
 

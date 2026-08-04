@@ -86,12 +86,14 @@ def test_costera_y_barquisimeto_diferen_en_liderazgo():
 
 
 def test_el_contraste_marca_el_eje_religioso():
-    """La costera funde poder sagrado y secular; Barquisimeto los separa.
-    Es el hallazgo del que sale la advertencia sobre Shaboro."""
+    """En la costa el jefe es además gran chamán; en Barquisimeto no, y su
+    boratio vive apartado. Las dos tienen boratio: la diferencia está en el
+    jefe, no en si el oficio existe."""
     dif = contrastar("costera", "barquisimeto")
     assert "religion" in dif
     costera, barq = dif["religion"]
     assert "gran chamán" in costera.valor
+    assert "cada pueblo principal hay un boratio" in costera.valor
     assert "apartado" in barq.valor
 
 
@@ -125,17 +127,32 @@ def test_prompt_polity_menciona_el_nombre(pid):
 
 # ── la coherencia del canon ───────────────────────────────────────────
 
-def test_coherencia_detecta_el_piache_separado():
-    """El caso que motivó el módulo: el elenco tiene piaches (choza_piache) y
-    caciques (casa_cacique) que no se solapan, y eso es el patrón de
-    Barquisimeto, no el costero que la simulación dice modelar.
+def test_el_canon_es_coherente_con_la_polity_costera():
+    """Manaure es "gobernante Y piache en uno", que es exactamente el modelo
+    costero de Oliver (p. 279). No debe saltar el aviso de barquisimeto.
 
-    Si este test empieza a fallar, es que alguien resolvió la decisión de canon
-    — y entonces hay que actualizar la nota, no borrar el test."""
+    Que existan además piaches especialistas (Shaboro) NO es un problema: la
+    costa también tenía boratio "en cada pueblo principal" (Oviedo y Valdés
+    t. II p.298, en Arcaya 1920 pp. 97-100). Lo que separa a las dos polities
+    es si el JEFE es además gran chamán, no si el oficio existe."""
     avisos = coherencia_del_canon()
-    assert any("barquisimeto" in a for a in avisos), (
-        "esperábamos el aviso sobre poder sagrado/secular separado; "
-        f"avisos={avisos}")
+    assert not any("barquisimeto" in a for a in avisos), (
+        f"el canon costero no debería disparar el aviso; avisos={avisos}")
+
+
+def test_coherencia_avisa_si_el_cacique_pierde_el_don(monkeypatch):
+    """La comprobación tiene que servir de algo: si el cacique deja de ser
+    chamán, el aviso debe aparecer."""
+    import curiana_agents
+    falso = {
+        "Manaure": {"ubicacion_default": "casa_cacique",
+                    "descripcion": "Solo gobierna, reparte sal y juzga.",
+                    "system_prompt": "Eres el señor. Administras el buco.",
+                    "etnia": "caquetío"},
+    }
+    monkeypatch.setattr(curiana_agents, "ALL_AGENTS", falso)
+    avisos = coherencia_del_canon()
+    assert any("barquisimeto" in a for a in avisos)
 
 
 def test_coherencia_detecta_el_etnia_partido_por_genero():
