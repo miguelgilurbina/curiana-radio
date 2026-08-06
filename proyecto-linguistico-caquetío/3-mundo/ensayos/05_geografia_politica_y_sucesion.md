@@ -218,6 +218,6 @@ razonables:
   Caquetío Polities." (`fuentes_caquetios/Chapter 3 Ethnohistory.DOC-comprimido.pdf`)
 - Arcaya, Pedro Manuel (1920). *Historia del Estado Falcón*, citado vía Zavala Reyes 2015.
 - Van Buurt, Gerard (2014). "Caquetío Indians on Curaçao during colonial times and Caquetío words in
-  the Papiamentu language." (`VanBuurt_2014_CaquetioWords_Papiamentu.txt`)
+  the Papiamentu language." (`fuentes_caquetios/VanBuurt_2014_CaquetioWords_Papiamentu.txt`)
 - Ballesteros [1550], carta al Rey, en Bécker (1950), citado vía Oliver 1989.
 - Ramos Pérez, Demetrio (1976, 1978, 1981), citado vía Zavala Reyes 2015 y Oliver 1989.

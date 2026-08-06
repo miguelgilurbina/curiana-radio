@@ -567,7 +567,7 @@
     1927, vía Oviedo: "adivino o sacerdote") y confirma, desde una fuente independiente, que el
     caquetío no separaba léxicamente esas funciones.
   fuente: atestiguado
-  referencia: "Zavala Reyes 2015, p.66 (glosario, entrada 43: \"Boratio (AM)(HB): Piache, cacique, jefe, sacerdote, médico\"); cf. curiana_sim/cultura/creencia.yaml (hallazgo de sesión 3, vía Jahn 1927 p.213 n.29)"
+  referencia: "Zavala Reyes 2015, p.66 (glosario, entrada 43: \"Boratio (AM)(HB): Piache, cacique, jefe, sacerdote, médico\"); cf. 3-mundo/corpus/creencia.yaml (hallazgo de sesión 3, vía Jahn 1927 p.213 n.29)"
   dominios: [parentesco, politica, cosmos, lenguaje]
   agentes_relacionados: [Manaure, Shaboro]
   implicacion_simulacion: >
@@ -594,7 +594,7 @@
   agentes_relacionados: [Manaure, Corie-ko, Chiriguare, Paugis-sha, Sha-corie]
   implicacion_simulacion: >
     Da vocabulario atestiguado a algo que el canon ya decía de forma abstracta (CULTURA_CAQUETIA.md:218,
-    "red mayor de cacicazgos caquetíos"). Ver curiana_sim/cultura/geografia_politica.yaml para el
+    "red mayor de cacicazgos caquetíos"). Ver 3-mundo/corpus/geografia_politica.yaml para el
     desarrollo geográfico completo (ABC, Paraguaná, Guajira, Todariquiba, escala poblacional).
 
 - id: parentesco-038

@@ -8,7 +8,7 @@ Extrae y clasifica el material léxico de:
     and Caquetío words in the Papiamentu language — Some names of Animals and
     Plants in Papiamentu". Edición propia, Curaçao. ISBN 978-99904-2-348-8.
     Base: van Buurt & Joubert, *Stemmen uit het Verleden* (1997).
-    → VanBuurt_2014_CaquetioWords_Papiamentu.txt  (raíz del proyecto)
+    → fuentes_caquetios/VanBuurt_2014_CaquetioWords_Papiamentu.txt
 
 POR QUÉ ESTA FUENTE SE MINA DISTINTO
 ------------------------------------
@@ -67,7 +67,8 @@ if (hasattr(sys.stdout, "buffer")
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 _AQUI = os.path.dirname(os.path.abspath(__file__))
-TXT_PATH = os.path.join(_AQUI, "..", "VanBuurt_2014_CaquetioWords_Papiamentu.txt")
+TXT_PATH = os.path.join(
+    _AQUI, "..", "fuentes_caquetios", "VanBuurt_2014_CaquetioWords_Papiamentu.txt")
 GATSCHET_PATHS = [
     os.path.join(_AQUI, "..", "fuentes_caquetios", "Gatschet_1885_Aruba_texto.txt"),
     os.path.join(_AQUI, "..", "fuentes_caquetios", "Gatschet_1885_biostor_texto.txt"),

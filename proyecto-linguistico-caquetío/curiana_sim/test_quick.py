@@ -4,7 +4,28 @@ Corre sin llamadas LLM reales. Verifica imports, léxico, DB mock, scoring.
 Uso: python test_quick.py
 """
 
+import io
 import sys
+
+
+def _forzar_utf8() -> None:
+    """La consola de Windows usa cp1252 y este informe imprime "─", "✓", "í"…
+
+    Sin esto la suite revienta con UnicodeEncodeError en el primer _check.
+    Se llama solo al ejecutarlo como script: reasignar sys.stdout al importarlo
+    como módulo le rompería el stdout a quien lo importa.
+    """
+    for nombre in ("stdout", "stderr"):
+        flujo = getattr(sys, nombre)
+        if hasattr(flujo, "buffer") and (flujo.encoding or "").lower() != "utf-8":
+            setattr(sys, nombre, io.TextIOWrapper(
+                flujo.buffer, encoding="utf-8", errors="replace", line_buffering=True))
+
+
+# Este archivo corre sus verificaciones al nivel del módulo, así que la envoltura
+# tiene que aplicarse aquí arriba — pero solo cuando se ejecuta como script.
+if __name__ == "__main__":
+    _forzar_utf8()
 
 # Contadores globales de verificación
 _OK = 0

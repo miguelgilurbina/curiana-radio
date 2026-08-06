@@ -38,8 +38,8 @@ reemplazo poblacional biológico". Esa afirmación se apoya hoy en **búsquedas 
 
 1. Reconseguir el PDF (Nature; hay versión de acceso público en repositorios
    institucionales y en PMC).
-2. Usarlo, junto a [[antczak-2017-cariban]] y al Schroeder que
-   [[schroeder-2018|el archivo mal nombrado]] no es, para **respaldar o corregir**
+2. Usarlo, junto a [[antczak-2017-cariban]] y al Schroeder que el repo todavía
+   no tiene (ver [[moreno-mayar-2018]]), para **respaldar o corregir**
    `parentesco-028/029/032/033`.
 3. Advertencia de método: la genética responde a "¿quién descendía de quién?",
    **no** a "¿cómo llamaban los vecinos a estos grupos?". No usar datos genéticos
@@ -48,4 +48,4 @@ reemplazo poblacional biológico". Esa afirmación se apoya hoy en **búsquedas 
 
 ## Enlaces
 
-[[schroeder-2018]] · [[antczak-2017-cariban]] · [[adam-1879]]
+[[moreno-mayar-2018]] · [[antczak-2017-cariban]] · [[adam-1879]]

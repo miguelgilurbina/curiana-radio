@@ -13,19 +13,19 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-04 01:27**.
+<!--GENERADO--> Generado el **2026-08-04 02:01**.
 
 ## ¿Vamos bien?
 
 |  | Hoy | Referencia |  |
 |---|---|---|---|
 | Entradas del lexicón **sin cita** | **3** | 82 (2026-07-21) | 🟢 −79 |
-| Hechos del corpus **con referencia** | **152 / 152** | — | 🟢 |
-| Tests del motor | **45 en verde** | 0 rojos | 🟢 |
-| Gate para reanudar simulaciones | **1 de 9** condiciones | faltan 8 | 🔴 |
+| Hechos del corpus **con referencia** | **161 / 161** | — | 🟢 |
+| Tests del motor | **91 en verde** | 0 rojos | 🟢 |
+| Gate para reanudar simulaciones | **2 de 9** condiciones | faltan 7 | 🔴 |
 | Decisiones esperando a Miguel | **8 abiertas** | 3 resueltas | 🟡 |
 
-**Lo que bloquea hoy:** censo de citas (F1) · pares c/k (F2 · D5) · validador del corpus (V2) · decisiones D1/D3/D5 · glosa de `-bana` (D9) · wayunaiki vs. lokono (D11).
+**Lo que bloquea hoy:** censo de citas (F1) · pares c/k (F2 · D5) · decisiones D1/D3/D5 · glosa de `-bana` (D9) · wayunaiki vs. lokono (D11).
 Y 2 condición(es) que **nadie puede medir por script**: citas del corpus (F10) · exportador de runs.
 
 Detalle de cada número: [lexicón](#1-el-lexicón) · [fuentes](#2-las-fuentes) · [corpus](#3-el-corpus-cultural) · [gate](#4-el-gate-para-reanudar-simulaciones) · [decisiones](#5-decisiones-e-issues)
@@ -179,10 +179,10 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[fernandes-2020]] | no-disponible | baja | archivo-vacio | 0 | 0 | 0 |
 | [[gilij-1780-1783]] | bloqueada | baja | no | 0 | 0 | 0 |
 | [[las-casas-1875]] | minado | baja | si | 0 | 0 | 0 |
+| [[moreno-mayar-2018]] | sin-minar | baja | si | 0 | 0 | 0 |
 | [[perea-alonso-1942]] | descartada | descartada | si | 0 | 0 | 0 |
 | [[ramos-perez-1978]] | no-disponible | baja | archivo-vacio | 0 | 0 | 0 |
 | [[rouse-cruxent-1963]] | no-disponible | media | archivo-vacio | 0 | 0 | 0 |
-| [[schroeder-2018]] | sin-minar | baja | si | 0 | 0 | 0 |
 
 </details>
 
@@ -197,13 +197,13 @@ Mapas: [[mapa-familia]] · [[mapa-ecologia]] · [[mapa-creencia]] · [[mapa-tran
 | Archivo | hechos | `atestiguado` | `reconstruido` | `canon-simulacion` | `hipotetico` | `retro-abstraido` | con `referencia` |
 |---|---|---|---|---|---|---|---|
 | `creencia.yaml` | 26 | 11 | 11 |  |  | 4 | 26/26 |
-| `ecologia.yaml` | 45 | 31 | 13 |  | 1 |  | 45/45 |
+| `ecologia.yaml` | 54 | 32 | 21 |  | 1 |  | 54/54 |
 | `geografia_politica.yaml` | 8 | 8 |  |  |  |  | 8/8 |
 | `parentesco.yaml` | 39 | 14 | 18 |  | 7 |  | 39/39 |
 | `transmision.yaml` | 34 | 13 | 5 | 14 | 2 |  | 34/34 |
-| **total** | **152** | **77** | **47** | **14** | **10** | **4** | **152/152** |
+| **total** | **161** | **78** | **55** | **14** | **10** | **4** | **161/161** |
 
-Además, estructuras del corpus que **no son hechos etiquetados** (y por eso no entran en el total): `ecologia.yaml::huecos_lexicos` (9), `genealogia.yaml::linajes` (6), `genealogia.yaml::agentes` (60), `genealogia.yaml::personas_de_fondo` (14).
+Además, estructuras del corpus que **no son hechos etiquetados** (y por eso no entran en el total): `genealogia.yaml::linajes` (6), `genealogia.yaml::agentes` (60), `genealogia.yaml::personas_de_fondo` (14).
 
 ---
 
@@ -216,8 +216,8 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | 1 | 🔴 | Lexicón: 0 entradas de familia caquetía sin cita **o sin degradar** (F1) | 3 sin cita (eran 82 el 2026-07-21) |
 | 2 | 🔴 | Pares c/k resueltos (F2) | abiertas: D5 — [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) · medido: 10 colisiones, 3 dentro del caquetío |
 | 3 | 🟢 | Las 3 fuentes ALTA minadas (F3, F4, F5) | F3 [[alvarado-1921]] minado · F4 [[gatschet-1885]] minado · F5 [[oliver-1989-cap2]] minado |
-| 4 | 🔴 | `compilar_corpus.py` en verde (V2) | no existe todavía |
-| 5 | ⚪ | Citas del corpus verificadas por muestreo (F10) | **no automedible**: que la cita *resuelva* (que la página exista) es trabajo humano. Medible sí: 152/152 hechos **tienen** `referencia` |
+| 4 | 🟢 | `compilar_corpus.py` en verde (V2) | **161 hechos, 0 errores, 0 avisos** |
+| 5 | ⚪ | Citas del corpus verificadas por muestreo (F10) | **no automedible**: que la cita *resuelva* (que la página exista) es trabajo humano. Medible sí: 161/161 hechos **tienen** `referencia` |
 | 6 | 🔴 | D1, D3 y D5 tomadas | abiertas: D1, D3, D5 — [D1](https://github.com/miguelgilurbina/curiana-radio/issues/32) · [D3](https://github.com/miguelgilurbina/curiana-radio/issues/34) · [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) |
 | 7 | 🔴 | La glosa de `-bana` resuelta | abiertas: D9 — [D9](https://github.com/miguelgilurbina/curiana-radio/issues/38) |
 | 8 | 🔴 | El desbalance wayunaiki/lokono resuelto | abiertas: D11 — [D11](https://github.com/miguelgilurbina/curiana-radio/issues/39) · medido: wayunaiki 781 vs. lokono 227 (3.4 a 1) |
@@ -257,8 +257,8 @@ Argumento y evidencia de cada una: [[DECISIONES_ABIERTAS]]. El **estado** manda 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 759 en 167 notas indexadas | 🟢 0 rotos |
-| Tests (`curiana_sim/tests/`) | 45 passed, 0 failed | 🟢 |
+| Wikilinks | 764 en 168 notas indexadas | 🟢 0 rotos |
+| Tests (`curiana_sim/tests/`) | 91 passed, 0 failed | 🟢 |
 
 Guardianes: `python check_vault_links.py --strict` · `python -m pytest curiana_sim/tests/ -q`
 

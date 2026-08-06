@@ -4,7 +4,7 @@ obra: "Filología comparada de las lenguas y dialectos arawak, tomo I"
 autor: "Perea y Alonso, Sigfrido"
 anio: 1942
 genero: gramatica
-local: ["fuentes_caquetios/Perea_Alonso_1942_Filologia_Comparada_Arawak_TomoI.pdf (926 pp., ÚTIL)", "fuentes_caquetios/Perea_Alonso_1942_Filologia_Comparada_Lenguas_Arawak_TomoI.pdf (0 bytes)"]
+local: "fuentes_caquetios/Perea_Alonso_1942_Filologia_Comparada_Arawak_TomoI.pdf (926 pp., ÚTIL)"
 paginas: 926
 capa_texto: si
 estado_minado: descartada
@@ -31,9 +31,7 @@ desde entonces como precedente: *"no dio resultado"*.
 | Archivo | Estado |
 |---|---|
 | `..._Filologia_Comparada_Arawak_TomoI.pdf` | **17.9 MB · 926 páginas · capa de texto sí** (39K car. en 30 pp.) ✔ |
-| `..._Filologia_Comparada_Lenguas_Arawak_TomoI.pdf` | **0 bytes** — duplicado muerto |
-
-> Tarea de higiene: borrar el duplicado de 0 bytes.
+| `..._Filologia_Comparada_Lenguas_Arawak_TomoI.pdf` | **0 bytes** — duplicado muerto. **Borrado el 2026-08-04** (#53) |
 
 ## Qué falta (si alguna vez se reabre)
 

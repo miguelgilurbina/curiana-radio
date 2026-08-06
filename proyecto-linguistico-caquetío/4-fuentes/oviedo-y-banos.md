@@ -4,7 +4,7 @@ obra: "Historia de la conquista y población de la provincia de Venezuela"
 autor: "Oviedo y Baños, José de"
 anio: "1885 [1723]"
 genero: cronica
-local: ["fuentes_caquetios/Oviedo_Banhos_Conquista_Poblacion_Venezuela.pdf (519 pp., ÚTIL)", "fuentes_caquetios/Oviedo_Banhos_1885_Conquista_Venezuela.pdf (0 bytes)"]
+local: "fuentes_caquetios/Oviedo_Banhos_Conquista_Poblacion_Venezuela.pdf (519 pp., ÚTIL)"
 paginas: 519
 capa_texto: si
 estado_minado: sin-minar
@@ -22,16 +22,13 @@ Este es el caso más confuso del inventario, y conviene dejarlo cerrado:
 
 | Archivo | Estado real (verificado 2026-07-29) |
 |---|---|
-| `Oviedo_Banhos_1885_Conquista_Venezuela.pdf` | **0 bytes** — el que todas las hojas de fuentes reportan como corrupto |
+| `Oviedo_Banhos_1885_Conquista_Venezuela.pdf` | **0 bytes** — el que todas las hojas de fuentes reportaban como corrupto. **Borrado el 2026-08-04** (#53) |
 | `Oviedo_Banhos_Conquista_Poblacion_Venezuela.pdf` | **1.9 MB · 519 páginas · capa de texto buena** (59K car. en 30 pp.) ✔ |
 
-Es decir: **la obra está disponible y nunca se ha leído.** La sesión 1 lo
+Es decir: **la obra estaba disponible y nunca se había leído.** La sesión 1 lo
 detectó ("presumiblemente la misma obra con nombre de archivo distinto") pero no
-alcanzó a revisarla por agotamiento de tiempo, y desde entonces la fuente arrastra
-la etiqueta de "PDF corrupto" del archivo equivocado.
-
-> Tarea de higiene: **borrar el archivo de 0 bytes** y renombrar el bueno con la
-> convención del repo (`Oviedo_Banhos_1885_Conquista_Poblacion_Venezuela.pdf`).
+alcanzó a revisarla por agotamiento de tiempo, y desde entonces la fuente
+arrastró la etiqueta de "PDF corrupto" del archivo equivocado.
 
 ## Qué ha dado
 

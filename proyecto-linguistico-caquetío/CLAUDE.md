@@ -87,7 +87,17 @@ python curiana_sim/generar_tablero.py --check   # exit 1 si TABLERO.md está vie
   # Sin red por defecto (--gh cruza los issues reales). TABLERO.md es generado:
   # no se edita a mano.
 
-python -m pytest tests/ -q    # suite unitaria (koiné, léxico, observer, social; sin API keys)
+python -m pytest tests/ -q    # suite unitaria (koiné, léxico, observer, social,
+                              # corpus; sin API keys)
+
+# Validar el corpus cultural de 3-mundo/corpus/ (condición 4 del gate)
+python curiana_sim/compilar_corpus.py            # informe
+python curiana_sim/compilar_corpus.py --check    # exit 1 si hay errores
+python curiana_sim/compilar_corpus.py --fusionar corpus.yaml
+  # Valida etiquetas epistémicas, ids, referencias cruzadas entre hechos,
+  # que los `agentes_relacionados` existan en curiana_agents.py, y que
+  # `locacion`/`palabra_lexicon` enganchen con curiana_state/curiana_lexicon.
+  # No modifica los YAML: valida y emite.
 supabase start                 # levanta Supabase local (ver nota de egress arriba)
 python curiana_database.py seed  # siembra las palabras activas en Supabase
 
