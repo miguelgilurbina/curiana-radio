@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-06 15:55**.
+<!--GENERADO--> Generado el **2026-08-06 16:19**.
 
 ## ¿Vamos bien?
 
@@ -21,7 +21,7 @@ editar_a_mano: no
 |---|---|---|---|
 | Entradas del lexicón **sin cita** | **3** | 82 (2026-07-21) | 🟢 −79 |
 | Hechos del corpus **con referencia** | **161 / 161** | — | 🟢 |
-| Tests del motor | **120 en verde** | 0 rojos | 🟢 |
+| Tests del motor | **122 en verde** | 0 rojos | 🟢 |
 | Gate para reanudar simulaciones | **2 de 9** condiciones | faltan 7 | 🔴 |
 | Decisiones esperando a Miguel | **11 abiertas** | 3 resueltas | 🟡 |
 
@@ -246,9 +246,9 @@ Argumento y evidencia de cada una: [[DECISIONES_ABIERTAS]]. El **estado** manda 
 | D9 | La glosa de `-bana` — **y el hallazgo de `-ana`** | morfología, neologismos | 🟡 abierta | [#38](https://github.com/miguelgilurbina/curiana-radio/issues/38) |
 | D10 | Qué hacer con las 13 entradas reclasificadas | F1, canon | ✅ **resuelta** (2026-08-03) | — |
 | D11 | **El desbalance wayunaiki/lokono del lexicón** | base de la reconstrucción | 🟠 **abierta, de fondo** | [#39](https://github.com/miguelgilurbina/curiana-radio/issues/39) |
-| D12 | La etiqueta de `parentesco-032` | F10, honestidad del corpus | 🟡 abierta (sin issue) | — |
-| D13 | El hueco léxico de "tío materno" | D1, D4, la tesis avuncular | 🟠 **abierta** (sin issue) | — |
-| D14 | Qué segunda polity se pone en escena | expansión de la simulación | 🟡 abierta (sin issue) | — |
+| D12 | La etiqueta de `parentesco-032` | F10, honestidad del corpus | 🟡 abierta | [#81](https://github.com/miguelgilurbina/curiana-radio/issues/81) |
+| D13 | El hueco léxico de "tío materno" | D1, D4, la tesis avuncular | 🟠 **abierta** | [#82](https://github.com/miguelgilurbina/curiana-radio/issues/82) |
+| D14 | Qué segunda polity se pone en escena | expansión de la simulación | 🟡 abierta | [#83](https://github.com/miguelgilurbina/curiana-radio/issues/83) |
 
 > ⚠️ **Descuadre.** El frontmatter de [[DECISIONES_ABIERTAS]] declara `abiertas: 10`, pero en su propia tabla de Panorama hay **11** marcadas abiertas. Manda la tabla.
 
@@ -260,8 +260,8 @@ Argumento y evidencia de cada una: [[DECISIONES_ABIERTAS]]. El **estado** manda 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 812 en 171 notas indexadas | 🟢 0 rotos |
-| Tests (`curiana_sim/tests/`) | 120 passed, 0 failed | 🟢 |
+| Wikilinks | 809 en 171 notas indexadas | 🟢 0 rotos |
+| Tests (`curiana_sim/tests/`) | 122 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
 **Avisos de `curiana_polities.py::coherencia_del_canon()`:**
