@@ -36,6 +36,30 @@ medido: 2026-08-04
    `MorenoMayar_et_al_2018_Science_Early_Human_Dispersals.pdf`, ver
    [[moreno-mayar-2018]].
 
+## ⚠️ Cómo NO medir una fuente (aprendido el 2026-08-04)
+
+La tanda de minería de esa noche tropezó **tres veces** con la misma clase de
+error, y las tres veces el síntoma fue idéntico: *un `grep` devuelve cero y uno
+concluye que la fuente no habla del tema*. No era la fuente: era la consulta.
+
+| Fuente | El `grep` que falló | Por qué | La realidad |
+|---|---|---|---|
+| [[antczak-2017-cariban]] | `Caqueti` → 0 | el PDF descompone acentos: `Caquet´ıo` | 8 menciones, media p. 157 sobre la frontera caquetía |
+| [[oviedo-y-banos]] | `caquet` → 0 | Oviedo escribe **`caiquetía`**, y `Coriana` por Curiana | 7 menciones, incluido el pasaje de Manaure |
+| [[oliver-1989-cap3]] | `Todariquiba` → 0 con `pypdf` | `pypdf` lo parte en `T odariquiba`; `pdftotext` no | 7 apariciones limpias |
+
+Reglas que salen de ahí, y que valen para toda minería futura:
+
+1. **Buscar por raíz corta y sin acentos** (`caquet`, `Manaur`, `Paraguan`)
+   antes de dar por ausente un tema.
+2. **Probar la otra receta de extracción** antes de concluir. `pdftotext` y
+   `pypdf` no producen el mismo texto sobre el mismo PDF.
+3. **Las fuentes coloniales no usan la ortografía moderna.** Antes de buscar un
+   etnónimo o un topónimo en una crónica, leer una página al azar y ver cómo lo
+   escribe *esa* obra.
+4. Un cero es un resultado que hay que **verificar**, no uno que se pueda
+   reportar directamente.
+
 ## Inventario medido
 
 ### Disponibles y con texto
@@ -43,17 +67,17 @@ medido: 2026-08-04
 | Fuente | Pp. | Estado de minado | Sostiene | Prioridad |
 |---|---|---|---|---|
 | [[zavala-reyes-2015]] | 20 | ✅ **completo (288/288)** | 7 hechos · **164 lex.** · **62 citas para F1** | hecha |
-| [[oliver-1989-cap3]] | 113 | parcial (2 sesiones) | **15 hechos** · 2 lex. | barridos restantes |
+| [[oliver-1989-cap3]] | 113 | ✅ **minado** (4 barridos cerrados 2026-08-04) | **15 hechos** · 2 lex. | hecha |
 | [[oliver-1989-cap2]] | 109 | **sin minar** | 1 hecho | **F5 · ALTA — la única del gate que queda** |
 | [[arcaya-1920]] | 348 | minado (religión/familia) | **13 hechos** · 1 lex. | media |
 | [[jahn-1927]] | 510 | parcial (3 sesiones) | **16 hechos** · 4 lex. | media |
 | [[alvarado-1921]] | 354 | ✅ **minado** (109 de 1551 a fondo) | A=3 B=36 C=13 **D=57** · **18 adjudicaciones** | hecha |
 | [[gatschet-1885]] | 7 (2 txt) | ✅ **minado** | 48 léxicas + 31 topón. + 6 fórmulas · **5 citas** | hecha |
 | [[van-buurt-2014]] | 48 | ✅ **minado** | §6=88 · §11=29 · 180 topón. · **8 citas** | hecha |
-| [[oviedo-y-banos]] | 519 | **sin minar** | 1 hecho (vía Zavala) | alta |
+| [[oviedo-y-banos]] | 519 | ✅ **minado** — solo el cap. III toca a los caquetíos | 1 hecho, **ascendido a cita directa** | hecha |
 | [[camacho-2011]] | 13 | minado | **16 hechos** | hecha |
 | [[antczak-2015-las-aves]] | 38 | minado | 7 hechos | hecha |
-| [[antczak-2017-cariban]] | 45 | **sin minar** | 0 | media |
+| [[antczak-2017-cariban]] | 45 | ✅ **minado** | 0 hechos · refuerza `parentesco-032` | hecha |
 | [[adam-1879]] | 27 | minado | 1 hecho | hecha |
 | [[angleria-1892]] | 460+492 | parcial (1 dato) | 1 hecho | media |
 | [[las-casas-1875]] | 613 | minado — **nulo ×3** | 0 | baja |

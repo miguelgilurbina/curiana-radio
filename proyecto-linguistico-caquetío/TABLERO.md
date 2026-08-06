@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-04 02:01**.
+<!--GENERADO--> Generado el **2026-08-04 02:20**.
 
 ## ¿Vamos bien?
 
@@ -138,16 +138,16 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 
 | `estado_minado` | n |
 |---|---|
-| minado | 14 |
+| minado | 17 |
 | no-disponible | 4 |
-| parcial | 3 |
-| sin-minar | 3 |
 | segunda-mano | 3 |
+| parcial | 2 |
 | bloqueada | 1 |
+| sin-minar | 1 |
 | descartada | 1 |
 | completo | 1 |
 
-**Prioridad ALTA sin minar (2):** [[oviedo-y-banos]] (`sin-minar`), [[oviedo-y-valdes-1851]] (`no-disponible`).
+**Prioridad ALTA sin minar (1):** [[oviedo-y-valdes-1851]] (`no-disponible`).
 
 <details><summary>Las 30 notas, una por fila</summary>
 
@@ -157,7 +157,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[brinton-1871]] | minado | hecha | si | 84 | 1 | 0 |
 | [[jahn-1927]] | parcial | media | si | 4 | 1 | 16 |
 | [[gatschet-1885]] | minado | alta | si | 4 | 4 | 0 |
-| [[oliver-1989-cap3]] | parcial | media | si | 2 | 5 | 15 |
+| [[oliver-1989-cap3]] | minado | media | si | 2 | 5 | 15 |
 | [[oviedo-y-valdes-1851]] | no-disponible | alta | no | 2 | 2 | 7 |
 | [[oliver-1989-cap2]] | minado | alta | parcial | 2 | 5 | 2 |
 | [[arcaya-1920]] | minado | media | si | 1 | 8 | 13 |
@@ -173,9 +173,9 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[adam-1879]] | minado | hecha | si | 0 | 0 | 1 |
 | [[alvarado-1921]] | minado | media | si | 0 | 15 | 1 |
 | [[angleria-1892]] | parcial | media | si | 0 | 0 | 1 |
-| [[oviedo-y-banos]] | sin-minar | alta | si | 0 | 0 | 1 |
+| [[oviedo-y-banos]] | minado | baja | si | 0 | 0 | 1 |
 | [[van-buurt-2014]] | minado | alta | si | 0 | 12 | 1 |
-| [[antczak-2017-cariban]] | sin-minar | media | si | 0 | 0 | 0 |
+| [[antczak-2017-cariban]] | minado | media | si | 0 | 0 | 0 |
 | [[fernandes-2020]] | no-disponible | baja | archivo-vacio | 0 | 0 | 0 |
 | [[gilij-1780-1783]] | bloqueada | baja | no | 0 | 0 | 0 |
 | [[las-casas-1875]] | minado | baja | si | 0 | 0 | 0 |
@@ -257,7 +257,7 @@ Argumento y evidencia de cada una: [[DECISIONES_ABIERTAS]]. El **estado** manda 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 764 en 168 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 789 en 168 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 91 passed, 0 failed | 🟢 |
 
 Guardianes: `python check_vault_links.py --strict` · `python -m pytest curiana_sim/tests/ -q`
