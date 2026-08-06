@@ -185,3 +185,44 @@ def test_campo_decae_y_descarta():
     campo.decaer()
     assert campo.peso("biro") == 0.5
     assert campo.peso("kali") == 0.0   # 0.04 < umbral 0.05: la forma muere
+
+
+# ── El motor no puede sembrar palabras que ya salieron del habla ──────
+
+def test_formas_seed_solo_usa_palabras_del_lexicon():
+    """`FORMAS_SEED` siembra el idiolecto de cada agente desde el día 1. Si
+    siembra una forma que no está en `VOCABULARIO_BASE`, el motor le está
+    enseñando a los agentes una palabra que el proyecto ya descartó — y
+    `score_linguistico()` ni siquiera se la va a contar.
+
+    Es lo que pasó con `piache`: D10 la sacó del habla por ser voz caribe
+    (Alvarado p.248, corroborado por Jahn 1927 n.28), y `FORMAS_SEED` siguió
+    sembrándosela a Shaboro y Buio-sha. La reemplaza `boratio`, que es la forma
+    caquetía atestiguada del mismo oficio.
+    """
+    import re
+
+    from curiana_koine import FORMAS_SEED
+    from curiana_lexicon import VOCABULARIO_BASE
+
+    huerfanas = {}
+    for agente, formas in FORMAS_SEED.items():
+        for forma in formas:
+            # Las formas con aspecto (`wana-ka`) se validan por su raíz.
+            raiz = re.split(r"-", forma)[0]
+            if forma not in VOCABULARIO_BASE and raiz not in VOCABULARIO_BASE:
+                huerfanas.setdefault(forma, []).append(agente)
+
+    assert not huerfanas, (
+        "FORMAS_SEED siembra formas que no están en VOCABULARIO_BASE: "
+        + "; ".join(f"{f} ({', '.join(a)})" for f, a in sorted(huerfanas.items())))
+
+
+def test_ningun_referente_novedoso_menciona_piache():
+    """Los `desc` de REFERENTES_NOVEDOSOS entran al prompt vía
+    `competencia.activar()`, así que ponen sus palabras delante de los agentes.
+    `piache` salió del habla: tampoco puede colarse por ahí."""
+    from curiana_koine import REFERENTES_NOVEDOSOS
+
+    con_piache = [r["id"] for r in REFERENTES_NOVEDOSOS if "piache" in r["desc"]]
+    assert not con_piache, f"referentes que aún dicen 'piache': {con_piache}"
