@@ -68,7 +68,7 @@ Reglas que salen de ahí, y que valen para toda minería futura:
 |---|---|---|---|---|
 | [[zavala-reyes-2015]] | 20 | ✅ **completo (288/288)** | 7 hechos · **164 lex.** · **62 citas para F1** | hecha |
 | [[oliver-1989-cap3]] | 113 | ✅ **minado** (4 barridos cerrados 2026-08-04) | **15 hechos** · 2 lex. | hecha |
-| [[oliver-1989-cap2]] | 109 | **sin minar** | 1 hecho | **F5 · ALTA — la única del gate que queda** |
+| [[oliver-1989-cap2]] | 109 | ✅ **minado** (F5, 2026-08-03) | 2 hechos · 2 lex. · propone 16 cognados | hecha |
 | [[arcaya-1920]] | 348 | minado (religión/familia) | **13 hechos** · 1 lex. | media |
 | [[jahn-1927]] | 510 | parcial (3 sesiones) | **16 hechos** · 4 lex. | media |
 | [[alvarado-1921]] | 354 | ✅ **minado** (109 de 1551 a fondo) | A=3 B=36 C=13 **D=57** · **18 adjudicaciones** | hecha |

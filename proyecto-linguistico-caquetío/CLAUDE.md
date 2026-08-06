@@ -15,6 +15,11 @@ curiana_sim/        → Python 3.11+ (simulación)
                             generar_perfiles_curados() → agent_profiles/agent_quotes)
   curiana_social.py       → contagio léxico entre agentes (DifusionLexica: prestigio +
                             grafo social + exposición acumulada) + variación dialectal por etnia
+  curiana_polities.py     → las 4 polities caquetías atestiguadas (costera,
+                            barquisimeto, yaracuy, llanos), con fuente por rasgo.
+                            POLITY_SIMULADA="costera" es la que modela el motor;
+                            coherencia_del_canon() cruza curiana_agents.py contra
+                            ella. Ver 3-mundo/polities-caquetias.md
   curiana_state.py        → estado del mundo (día, estación, eventos, locaciones)
                             ciclo estacional: DIAS_POR_ESTACION=60, alterna en
                             avanzar_turno(); aplicar_efecto() mueve los niveles
@@ -270,7 +275,7 @@ pregúntate qué pregunta contesta.
 INDICE.md · CLAUDE.md · check_vault_links.py   ← puerta, config y guardián
 1-plan/        ¿qué hacemos y qué falta?      PLAN_MAESTRO · DECISIONES_ABIERTAS · LINEA_DE_TIEMPO
 2-lengua/      ¿cómo es el caquetío?          mapa-lengua · lexicon · morfologia · toponimia · metodo-comparativo
-3-mundo/       ¿cómo era ese pueblo?          5 mapas + ensayos/ + corpus/ (los YAML del corpus cultural)
+3-mundo/       ¿cómo era ese pueblo?          5 mapas + polities-caquetias + ensayos/ + corpus/
 4-fuentes/     ¿de dónde lo sabemos?          INDICE_FUENTES + 30 notas de obra + sesiones/
 5-experimento/ ¿qué probamos con el simulador? mapa-motor · DISENO_KOINE · CANON_TIERRA · BITACORA_RUNS
                                               · IDEA_PERFILES_AGENTES · MIGRACION_RUNS_EVOLUCION

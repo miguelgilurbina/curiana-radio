@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-04 02:20**.
+<!--GENERADO--> Generado el **2026-08-06 15:55**.
 
 ## ¿Vamos bien?
 
@@ -21,9 +21,9 @@ editar_a_mano: no
 |---|---|---|---|
 | Entradas del lexicón **sin cita** | **3** | 82 (2026-07-21) | 🟢 −79 |
 | Hechos del corpus **con referencia** | **161 / 161** | — | 🟢 |
-| Tests del motor | **91 en verde** | 0 rojos | 🟢 |
+| Tests del motor | **120 en verde** | 0 rojos | 🟢 |
 | Gate para reanudar simulaciones | **2 de 9** condiciones | faltan 7 | 🔴 |
-| Decisiones esperando a Miguel | **8 abiertas** | 3 resueltas | 🟡 |
+| Decisiones esperando a Miguel | **11 abiertas** | 3 resueltas | 🟡 |
 
 **Lo que bloquea hoy:** censo de citas (F1) · pares c/k (F2 · D5) · decisiones D1/D3/D5 · glosa de `-bana` (D9) · wayunaiki vs. lokono (D11).
 Y 2 condición(es) que **nadie puede medir por script**: citas del corpus (F10) · exportador de runs.
@@ -122,8 +122,8 @@ Cuántas de las 301 entradas de familia caquetía **con `notas`** citan a cada o
 | [[oliver-1989-cap2]] | 5 | 2% |
 | [[oliver-1989-cap3]] | 5 | 2% |
 | [[gatschet-1885]] | 4 | 1% |
-| [[oviedo-y-valdes-1851]] | 2 | 1% |
-| [[jahn-1927]] | 1 | 0% |
+| [[oviedo-y-valdes-1851]] | 3 | 1% |
+| [[jahn-1927]] | 2 | 1% |
 | [[brinton-1871]] | 1 | 0% |
 
 Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas con `notas` que no citan a ninguna obra del vault: **68**.
@@ -138,10 +138,10 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 
 | `estado_minado` | n |
 |---|---|
-| minado | 17 |
+| minado | 18 |
 | no-disponible | 4 |
 | segunda-mano | 3 |
-| parcial | 2 |
+| parcial | 1 |
 | bloqueada | 1 |
 | sin-minar | 1 |
 | descartada | 1 |
@@ -155,10 +155,10 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 |---|---|---|---|---|---|---|
 | [[zavala-reyes-2015]] | completo | alta | si | 164 | 224 | 7 |
 | [[brinton-1871]] | minado | hecha | si | 84 | 1 | 0 |
-| [[jahn-1927]] | parcial | media | si | 4 | 1 | 16 |
+| [[jahn-1927]] | minado | media | si | 4 | 2 | 16 |
 | [[gatschet-1885]] | minado | alta | si | 4 | 4 | 0 |
 | [[oliver-1989-cap3]] | minado | media | si | 2 | 5 | 15 |
-| [[oviedo-y-valdes-1851]] | no-disponible | alta | no | 2 | 2 | 7 |
+| [[oviedo-y-valdes-1851]] | no-disponible | alta | no | 2 | 3 | 7 |
 | [[oliver-1989-cap2]] | minado | alta | parcial | 2 | 5 | 2 |
 | [[arcaya-1920]] | minado | media | si | 1 | 8 | 13 |
 | [[camacho-2011]] | minado | hecha | si | 0 | 0 | 16 |
@@ -246,8 +246,11 @@ Argumento y evidencia de cada una: [[DECISIONES_ABIERTAS]]. El **estado** manda 
 | D9 | La glosa de `-bana` — **y el hallazgo de `-ana`** | morfología, neologismos | 🟡 abierta | [#38](https://github.com/miguelgilurbina/curiana-radio/issues/38) |
 | D10 | Qué hacer con las 13 entradas reclasificadas | F1, canon | ✅ **resuelta** (2026-08-03) | — |
 | D11 | **El desbalance wayunaiki/lokono del lexicón** | base de la reconstrucción | 🟠 **abierta, de fondo** | [#39](https://github.com/miguelgilurbina/curiana-radio/issues/39) |
+| D12 | La etiqueta de `parentesco-032` | F10, honestidad del corpus | 🟡 abierta (sin issue) | — |
+| D13 | El hueco léxico de "tío materno" | D1, D4, la tesis avuncular | 🟠 **abierta** (sin issue) | — |
+| D14 | Qué segunda polity se pone en escena | expansión de la simulación | 🟡 abierta (sin issue) | — |
 
-> ⚠️ **Descuadre.** El frontmatter de [[DECISIONES_ABIERTAS]] declara `abiertas: 7`, pero en su propia tabla de Panorama hay **8** marcadas abiertas. Manda la tabla.
+> ⚠️ **Descuadre.** El frontmatter de [[DECISIONES_ABIERTAS]] declara `abiertas: 10`, pero en su propia tabla de Panorama hay **11** marcadas abiertas. Manda la tabla.
 
 > `gh` no se consultó: no consultado (sin red por defecto). El tablero **no necesita red**; los estados de arriba salen de la nota. Para cruzarlos con el tablero real: `python curiana_sim/generar_tablero.py --gh`.
 
@@ -257,10 +260,16 @@ Argumento y evidencia de cada una: [[DECISIONES_ABIERTAS]]. El **estado** manda 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 789 en 168 notas indexadas | 🟢 0 rotos |
-| Tests (`curiana_sim/tests/`) | 91 passed, 0 failed | 🟢 |
+| Wikilinks | 812 en 171 notas indexadas | 🟢 0 rotos |
+| Tests (`curiana_sim/tests/`) | 120 passed, 0 failed | 🟢 |
+| Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
-Guardianes: `python check_vault_links.py --strict` · `python -m pytest curiana_sim/tests/ -q`
+**Avisos de `curiana_polities.py::coherencia_del_canon()`:**
+
+- el campo `etnia` usa 'caquetío' y 'caquetía' como valores distintos (concuerdan con el género de la persona, no con el pueblo). Hoy no rompe nada porque las tablas que lo consumen duplican la entrada, pero cualquier agrupación nueva por etnia contará dos pueblos donde hay uno.
+- 12 agentes sin campo `etnia`; caen al defecto 'caquetío' en el orquestador: Buco, Daru, Ita-sha, Jiru-ko, Kawa, Kori …
+
+Guardianes: `python check_vault_links.py --strict` · `python -m pytest curiana_sim/tests/ -q` · `python curiana_sim/compilar_corpus.py --check` · `python curiana_sim/curiana_polities.py --canon`
 
 ## Mediciones que fallaron
 

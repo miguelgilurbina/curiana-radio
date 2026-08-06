@@ -70,6 +70,9 @@ desigual: guerra y economía son abundantes, la cerámica es una sola frase (per
 decisiva), y la religión es escasa **y casi toda de Barquisimeto, no de la
 costa** — que es justo donde vive la simulación.
 
+> 📌 Lo que salió de aquí está modelado en [[polities-caquetias]] y en
+> `curiana_sim/curiana_polities.py`.
+
 > ⚠️ **La advertencia que atraviesa los cuatro barridos.** Oliver dedica el
 > capítulo a demostrar que **los caquetíos NO eran una cultura homogénea**: la
 > Curiana de este proyecto es **caquetío costero** (Coro, Todariquiba), y buena
@@ -217,9 +220,12 @@ nombre a los españoles**— es demasiado bueno para no dejarlo anotado.
 - **Los hallazgos de arriba están en la nota, no en el corpus.** Ninguno se ha
   fusionado a `3-mundo/corpus/`: son propuesta para revisión, en la misma
   disciplina que los minadores del lexicón.
-- La **religión costera** sigue siendo el hueco: todo el detalle ritual del
-  capítulo es de Barquisimeto. Para la Curiana costera hay que ir a
-  [[arcaya-1920]], [[jahn-1927]] y [[oviedo-y-banos]].
+- ~~La **religión costera** sigue siendo el hueco~~ — **resuelto el 2026-08-04**:
+  todo el detalle ritual de *este capítulo* es de Barquisimeto, sí, pero
+  [[arcaya-1920]] pp. 97-100 trae el oficio del boratio costero completo
+  (oráculo, adivinación doméstica y cura paso a paso), citando a Oviedo y Valdés
+  t. II p. 298. [[jahn-1927]] no aporta aquí: su material religioso es guajiro,
+  ayomán y timote.
 - Cadena de citas a verificar: Ballesteros [1550] en Bécker 1950, Martí 1969,
   Ponce y Vaccari 1977, [[ramos-perez-1978]] — todos llegan **vía Oliver**.
 
