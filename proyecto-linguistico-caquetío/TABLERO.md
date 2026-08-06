@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-04 15:30**.
+<!--GENERADO--> Generado el **2026-08-06 12:49**.
 
 ## ¿Vamos bien?
 
@@ -23,7 +23,7 @@ editar_a_mano: no
 | Hechos del corpus **con referencia** | **161 / 161** | — | 🟢 |
 | Tests del motor | **120 en verde** | 0 rojos | 🟢 |
 | Gate para reanudar simulaciones | **2 de 9** condiciones | faltan 7 | 🔴 |
-| Decisiones esperando a Miguel | **8 abiertas** | 3 resueltas | 🟡 |
+| Decisiones esperando a Miguel | **11 abiertas** | 3 resueltas | 🟡 |
 
 **Lo que bloquea hoy:** censo de citas (F1) · pares c/k (F2 · D5) · decisiones D1/D3/D5 · glosa de `-bana` (D9) · wayunaiki vs. lokono (D11).
 Y 2 condición(es) que **nadie puede medir por script**: citas del corpus (F10) · exportador de runs.
@@ -246,8 +246,11 @@ Argumento y evidencia de cada una: [[DECISIONES_ABIERTAS]]. El **estado** manda 
 | D9 | La glosa de `-bana` — **y el hallazgo de `-ana`** | morfología, neologismos | 🟡 abierta | [#38](https://github.com/miguelgilurbina/curiana-radio/issues/38) |
 | D10 | Qué hacer con las 13 entradas reclasificadas | F1, canon | ✅ **resuelta** (2026-08-03) | — |
 | D11 | **El desbalance wayunaiki/lokono del lexicón** | base de la reconstrucción | 🟠 **abierta, de fondo** | [#39](https://github.com/miguelgilurbina/curiana-radio/issues/39) |
+| D12 | La etiqueta de `parentesco-032` | F10, honestidad del corpus | 🟡 abierta (sin issue) | — |
+| D13 | El hueco léxico de "tío materno" | D1, D4, la tesis avuncular | 🟠 **abierta** (sin issue) | — |
+| D14 | Qué segunda polity se pone en escena | expansión de la simulación | 🟡 abierta (sin issue) | — |
 
-> ⚠️ **Descuadre.** El frontmatter de [[DECISIONES_ABIERTAS]] declara `abiertas: 7`, pero en su propia tabla de Panorama hay **8** marcadas abiertas. Manda la tabla.
+> ⚠️ **Descuadre.** El frontmatter de [[DECISIONES_ABIERTAS]] declara `abiertas: 10`, pero en su propia tabla de Panorama hay **11** marcadas abiertas. Manda la tabla.
 
 > `gh` no se consultó: no consultado (sin red por defecto). El tablero **no necesita red**; los estados de arriba salen de la nota. Para cruzarlos con el tablero real: `python curiana_sim/generar_tablero.py --gh`.
 
@@ -257,7 +260,7 @@ Argumento y evidencia de cada una: [[DECISIONES_ABIERTAS]]. El **estado** manda 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 809 en 171 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 812 en 171 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 120 passed, 0 failed | 🟢 |
 
 Guardianes: `python check_vault_links.py --strict` · `python -m pytest curiana_sim/tests/ -q`

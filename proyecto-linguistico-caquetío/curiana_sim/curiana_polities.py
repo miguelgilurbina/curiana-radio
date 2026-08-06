@@ -19,8 +19,15 @@ por rasgo, para que:
 1. La costera deje de ser *"lo caquetío"* a secas y pase a ser una opción
    explícita entre varias — que es lo que era.
 2. Se pueda **detectar cuándo el canon importa un rasgo de otra polity** sin
-   marcarlo. Ya hay un caso confirmado: Shaboro como piache aparte de Manaure es
-   el modelo de Barquisimeto, no el costero (ver `coherencia_del_canon()`).
+   marcarlo (ver `coherencia_del_canon()`).
+
+   ⚠️ Y para no equivocarse al hacerlo. La primera versión de este módulo daba
+   por confirmado que Shaboro, piache aparte de Manaure, era un préstamo de
+   Barquisimeto. **Era falso**: la costa también tenía boratio "en cada pueblo
+   principal" (Oviedo y Valdés t. II p.298, en Arcaya 1920 pp. 97-100). El eje
+   que separa a las dos polities no es que exista el oficio, sino que en la
+   costa **el jefe es además gran chamán** — y el canon ya lo cumple, porque
+   Manaure es "gobernante Y piache en uno". El chequeo mira eso.
 3. Cuando se decida dar vida a las otras, el dato ya esté reunido y citado en
    vez de inventarse en el momento.
 
@@ -61,7 +68,7 @@ Uso:
 import argparse
 import io
 import sys
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Optional
 
 # La formación que la simulación modela hoy. Todo lo que vive en
