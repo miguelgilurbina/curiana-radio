@@ -192,4 +192,4 @@ se degradan a `caquetío-reconstruido`.
 
 ## Enlaces
 
-[[morfologia]] · [[toponimia]] · [[metodo-comparativo]] · [[DECISIONES_ABIERTAS]]
+[[morfologia]] · [[toponimia]] · [[metodo-comparativo]] · [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision)

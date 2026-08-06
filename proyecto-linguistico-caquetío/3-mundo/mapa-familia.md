@@ -26,7 +26,7 @@ y heredado por sus sobrinos** ([[01_familia_caquetia]] §7).
 |---|---|
 | [[01_familia_caquetia]] | El ensayo — 7 secciones, cinco rondas de trabajo acumuladas |
 | `3-mundo/corpus/parentesco.yaml` | 39 hechos etiquetados (14 atestiguado · 18 reconstruido · 7 hipotético) |
-| `3-mundo/corpus/genealogia.yaml` | Linajes, agentes y personas de fondo propuestas — **pendiente de veto**, ver [[DECISIONES_ABIERTAS]] D1 |
+| `3-mundo/corpus/genealogia.yaml` | Linajes, agentes y personas de fondo propuestas — **pendiente de veto**, ver [D1](https://github.com/miguelgilurbina/curiana-radio/issues/32) |
 | [[01_familia]] | Hoja de fuentes — qué se buscó, qué se encontró, qué quedó abierto |
 | [[CULTURA_CAQUETIA]] §6 | El canon que este ensayo profundiza, no duplica |
 
@@ -60,7 +60,7 @@ y heredado por sus sobrinos** ([[01_familia_caquetia]] §7).
 
 ## Hilos abiertos
 
-- **D1 — veto de la genealogía** ([[DECISIONES_ABIERTAS]]): bloquea V3 y J1.
+- **D1 — veto de la genealogía** ([el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision)): bloquea V3 y J1.
 - **D4 — segundo sobrino de Manaure** (`parentesco-039`): pluralidad de
   candidatos, no ejecutada en `genealogia.yaml`.
 - `daitiao` (Oliver 1989: 147) **sigue sin incorporarse** al lexicón. Ojo: existe

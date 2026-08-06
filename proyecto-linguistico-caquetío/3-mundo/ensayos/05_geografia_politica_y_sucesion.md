@@ -18,7 +18,7 @@ concreta.*
 
 > **Mapa** · [[mapa-geografia-politica]] — [[05_geografia_politica|hoja de fuentes]] — `geografia_politica.yaml`
 > **Fuentes** · [[oliver-1989-cap3]] · [[zavala-reyes-2015]] · [[van-buurt-2014]] · [[arcaya-1920]] · [[ramos-perez-1978]] · [[oviedo-y-banos]]
-> **Decisiones que deja abiertas** · [[DECISIONES_ABIERTAS|D2 (el nombre "Curiana")]] · [[DECISIONES_ABIERTAS|D4 (segundo sobrino)]]
+> **Decisiones que deja abiertas** · [D2 (el nombre "Curiana")](https://github.com/miguelgilurbina/curiana-radio/issues/33) · [D4 (segundo sobrino)](https://github.com/miguelgilurbina/curiana-radio/issues/35)
 > **Sigue de** · [[01_familia_caquetia]]
 
 ---

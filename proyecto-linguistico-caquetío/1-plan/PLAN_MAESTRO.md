@@ -167,7 +167,7 @@ La lógica crítica (validación) vive en `compilar_corpus.py`, nunca en plugins
   fuentes externas que sostienen 27 hechos y no están en el repo), más
   [`INDICE_FUENTES.md`](../4-fuentes/INDICE_FUENTES.md) con el estado
   medido de cada una, y la nota viva
-  [`DECISIONES_ABIERTAS.md`](DECISIONES_ABIERTAS.md).
+  [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision).
   Guardián: `python check_vault_links.py --strict` (581 wikilinks,
   todos resuelven). **Aquí es donde el eje FIDELIDAD escribe sus resultados**:
   cuando F3 mine Alvarado, el resultado va a `fuentes/alvarado-1921.md`, no a un
@@ -256,7 +256,7 @@ El motor queda como está (sano, testeado). No se toca salvo:
 
 ## 5. Decisiones abiertas
 
-> ✅ **Movidas a la nota viva [`DECISIONES_ABIERTAS.md`](DECISIONES_ABIERTAS.md)**
+> ✅ **Movidas a la nota viva [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision)**
 > (2026-07-29). Ahí está el estado de cada una, qué necesita Miguel para
 > decidirla y qué desbloquea. **D6 está resuelta** (el PR #30 ya estaba mergeado:
 > commit `609f9b5`). Dos decisiones nuevas salieron del inventario de fuentes:
@@ -336,7 +336,7 @@ entre ellas. Decisiones nuevas: D9 (glosa de `-bana`) y D10 (qué hacer con las
 13). Ver `4-fuentes/INDICE_FUENTES.md`.*
 
 *2026-07-29 — **V0 y V1 ejecutados**. El vault existe: `INDICE.md`, 6 MOCs, 24
-notas de fuente con estado medido, `DECISIONES_ABIERTAS.md` y un verificador de
+notas de fuente con estado medido, [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision) y un verificador de
 enlaces. El inventario de disponibilidad corrigió tres supuestos del §1.1
 (Alvarado legible, Oviedo y Baños disponible, 6 archivos de 0 bytes) y midió la
 cobertura real del lexicón por fuente — que es, en una tabla, el argumento del

@@ -47,7 +47,7 @@ vez el logro y la fragilidad de la base documental.
 
 ## Las tres tensiones abiertas
 
-Cada una tiene issue y argumento en [[DECISIONES_ABIERTAS]].
+Cada una tiene issue y argumento en [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision).
 
 | Tensión | Dónde se explica | Decisión |
 |---|---|---|

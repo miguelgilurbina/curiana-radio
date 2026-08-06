@@ -273,7 +273,7 @@ pregúntate qué pregunta contesta.
 
 ```
 INDICE.md · CLAUDE.md · check_vault_links.py   ← puerta, config y guardián
-1-plan/        ¿qué hacemos y qué falta?      PLAN_MAESTRO · DECISIONES_ABIERTAS · LINEA_DE_TIEMPO
+1-plan/        ¿qué hacemos y qué falta?      PLAN_MAESTRO · LINEA_DE_TIEMPO · SIGUIENTE_TANDA
 2-lengua/      ¿cómo es el caquetío?          mapa-lengua · lexicon · morfologia · toponimia · metodo-comparativo
 3-mundo/       ¿cómo era ese pueblo?          5 mapas + polities-caquetias + ensayos/ + corpus/
 4-fuentes/     ¿de dónde lo sabemos?          INDICE_FUENTES + 30 notas de obra + sesiones/
@@ -292,7 +292,7 @@ enlaces; lo que se rompe son los enlaces markdown relativos.
 
 - **`INDICE.md`** — nota raíz del vault (el repo ES el vault, ver
   `1-plan/PLAN_MAESTRO.md` §2). Punto de entrada: enlaza los mapas,
-  `1-plan/DECISIONES_ABIERTAS.md` y `4-fuentes/INDICE_FUENTES.md`.
+  [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision) y `4-fuentes/INDICE_FUENTES.md`.
 - **`2-lengua/`** — la lengua misma, en prosa: `lexicon.md` (qué palabras hay y
   quién las sostiene), `morfologia.md` (afijos con su evidencia y su estado,
   incluida la disputa `-bana`/`-ana`), `toponimia.md` (los topónimos como
@@ -304,7 +304,9 @@ enlaces; lo que se rompe son los enlaces markdown relativos.
   **Cuando se mine una fuente, el resultado se escribe en su nota**, no en un
   markdown nuevo. Verificar el grafo con
   `python check_vault_links.py --strict` (desde la raíz del proyecto).
-- **`1-plan/DECISIONES_ABIERTAS.md`** — lo que solo Miguel puede decidir (D1-D11).
+- **[Decisiones abiertas](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision)** — lo que solo Miguel puede decidir. Viven en
+  el tablero de GitHub, con su argumento dentro; `1-plan/DECISIONES_ABIERTAS.md`
+  se retiró del repo el 2026-08-06 para no mantener dos copias.
 - `5-experimento/IDEA_PERFILES_AGENTES.md` — diseño de la sección de perfiles de
   agentes (rol, arco narrativo, frases célebres) y su implementación.
 - `test_quick.py` — test suite sin API keys (debe dar 8/8 OK).

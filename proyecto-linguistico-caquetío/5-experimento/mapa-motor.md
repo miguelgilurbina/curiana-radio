@@ -74,7 +74,7 @@ Ocho categorías activas de `fuente` tras normalizar. Las tres que importan:
   abundante para siempre).
 - **D5** — política ortográfica c/k del lexicón (10 colisiones medidas).
 
-Todas en [[DECISIONES_ABIERTAS]].
+Todas en [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision).
 
 ## Lo que el corpus le pide al motor y todavía no existe
 

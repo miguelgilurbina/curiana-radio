@@ -105,7 +105,7 @@ fonemas /ch/, /ñ/, /sh/ guajiros son recientes—; `REGLAS_LK_WY` R7 (`r → l`
 ## El desbalance wayunaiki / lokono
 
 **La decisión más de fondo del proyecto ahora mismo.** D11 en
-[[DECISIONES_ABIERTAS]] · issue
+[el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision) · issue
 [#39](https://github.com/miguelgilurbina/curiana-radio/issues/39).
 
 ### El hecho
@@ -174,4 +174,4 @@ mueve es de quién se reconstruye **la lengua**.
 
 ## Enlaces
 
-[[lexicon]] · [[morfologia]] · [[toponimia]] · [[DECISIONES_ABIERTAS]] · [[oliver-1989-cap2]] · [[oliver-1989-cap3]] · [[brinton-1871]] · [[perea-alonso-1942]] · [[adam-1879]]
+[[lexicon]] · [[morfologia]] · [[toponimia]] · [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision) · [[oliver-1989-cap2]] · [[oliver-1989-cap3]] · [[brinton-1871]] · [[perea-alonso-1942]] · [[adam-1879]]

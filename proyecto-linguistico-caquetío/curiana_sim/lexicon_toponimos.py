@@ -270,7 +270,7 @@ MORFEMAS_DESPEJADOS = {
                      "glosado 'raíz' por Cruz Esteves 1989, y lo declara "
                      "equivalente al `-ure` continental. La evidencia "
                      "toponímica dice 'sitio de'. Glosa en disputa — misma "
-                     "situación que `-bana` (DECISIONES_ABIERTAS D9).",
+                     "situación que `-bana` (el tablero de decisiones D9).",
     },
     "ada-": {
         "glosa_inferida": "árbol",
@@ -694,7 +694,7 @@ FORMATIVOS_SIN_GLOSA = {
 }
 
 # ───────────────────────────────────────────────────────────────────────────
-# CONFLICTOS QUE ESTE ANÁLISIS ABRE  (para F1 / DECISIONES_ABIERTAS)
+# CONFLICTOS QUE ESTE ANÁLISIS ABRE  (para F1 / el tablero de decisiones)
 # ───────────────────────────────────────────────────────────────────────────
 
 CONFLICTOS = {

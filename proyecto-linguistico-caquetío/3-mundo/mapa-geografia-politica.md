@@ -59,7 +59,7 @@ de **14-15 mil personas en 30+ poblados**, no de sesenta.
 
 ## Hilos abiertos
 
-- **D2 — el nombre "Curiana"** ([[DECISIONES_ABIERTAS]]): tres caminos, ninguno
+- **D2 — el nombre "Curiana"** ([el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision)): tres caminos, ninguno
   tomado. Bloquea el naming público del jardín.
 - **D4 — segundo sobrino de Manaure** (`parentesco-039`), no ejecutada en
   `genealogia.yaml`.

@@ -72,9 +72,8 @@ lectura wayunaiki sin depender de ella.
 
 ## 3. `-bana` vs. `-ana` — la decisión abierta
 
-**Este es el punto más importante de la nota.** Issue
-[#38](https://github.com/miguelgilurbina/curiana-radio/issues/38) · D9 en
-[[DECISIONES_ABIERTAS]].
+**Este es el punto más importante de la nota.** Es la decisión **D9**:
+[#38](https://github.com/miguelgilurbina/curiana-radio/issues/38).
 
 ### El problema
 
@@ -231,4 +230,4 @@ Despejados de ecuaciones bilingües; el método está en [[toponimia]].
 
 ## Enlaces
 
-[[lexicon]] · [[toponimia]] · [[metodo-comparativo]] · [[DECISIONES_ABIERTAS]] · [[zavala-reyes-2015]] · [[van-buurt-2014]] · [[gatschet-1885]] · [[03_descomposicion_toponimica]]
+[[lexicon]] · [[toponimia]] · [[metodo-comparativo]] · [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision) · [[zavala-reyes-2015]] · [[van-buurt-2014]] · [[gatschet-1885]] · [[03_descomposicion_toponimica]]

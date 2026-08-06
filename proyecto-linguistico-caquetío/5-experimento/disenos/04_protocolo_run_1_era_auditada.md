@@ -145,4 +145,4 @@ pueden comparar.
 
 ## Enlaces
 
-[[01_que_probaron_los_seis_runs]] · [[LINEA_DE_TIEMPO]] · [[PLAN_MAESTRO]] · [[DISENO_KOINE]] · [[CANON_TIERRA]] · [[DECISIONES_ABIERTAS]]
+[[01_que_probaron_los_seis_runs]] · [[LINEA_DE_TIEMPO]] · [[PLAN_MAESTRO]] · [[DISENO_KOINE]] · [[CANON_TIERRA]] · [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision)

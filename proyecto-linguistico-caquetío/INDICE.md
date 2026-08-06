@@ -56,8 +56,9 @@ ensayo. Los ensayos —el argumento, con su evidencia— viven en
   desatendido, y cómo se encarga.** Empieza por aquí si arrancas en frío.
 - 📋 [[PLAN_MAESTRO]] — la hoja de ruta. Los 4 ejes: FIDELIDAD, VAULT, JARDÍN,
   MOTOR. **Fuente de verdad del backlog.**
-- ⚖️ [[DECISIONES_ABIERTAS]] — lo que solo Miguel puede decidir. **7 abiertas**,
-  una de fondo (D11). Cada una tiene su issue en el tablero.
+- ⚖️ [Decisiones abiertas](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision) — lo que solo Miguel puede decidir, en el
+  tablero de GitHub. Cada una lleva su argumento y su evidencia dentro; ya no
+  hay nota en el repo que las duplique.
 - 📚 [[INDICE_FUENTES]] — estado **medido** de las obras: qué se puede leer, qué
   está minado, qué sostiene cada una.
 - 🕰️ [[LINEA_DE_TIEMPO]] — las cuatro eras del proyecto y sobre qué base corrió
@@ -75,7 +76,7 @@ proyecto-linguistico-caquetío/          ← raíz del vault
 ├── CLAUDE.md · check_vault_links.py     ← config y guardián del grafo
 │
 ├── 1-plan/          ¿qué hacemos y qué falta?
-│   └── PLAN_MAESTRO · DECISIONES_ABIERTAS · LINEA_DE_TIEMPO
+│   └── PLAN_MAESTRO · LINEA_DE_TIEMPO · SIGUIENTE_TANDA
 │
 ├── 2-lengua/        ¿cómo es el caquetío?
 │   └── mapa-lengua · lexicon · morfologia · toponimia · metodo-comparativo
@@ -163,4 +164,4 @@ Los tres números que resumen el momento (medidos el 2026-08-04):
 
 ## Enlaces
 
-[[PLAN_MAESTRO]] · [[DECISIONES_ABIERTAS]] · [[LINEA_DE_TIEMPO]]
+[[PLAN_MAESTRO]] · [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision) · [[LINEA_DE_TIEMPO]]

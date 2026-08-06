@@ -15,7 +15,7 @@ decisiones: [D1, D4]
 
 > **Mapa** · [[mapa-familia]] — [[01_familia|hoja de fuentes]] — `parentesco.yaml` · `genealogia.yaml`
 > **Fuentes** · [[oliver-1989-cap3]] · [[oliver-1989-cap2]] · [[jahn-1927]] · [[arcaya-1920]] · [[adam-1879]] · [[keegan-1989]] · [[las-casas-1875]]
-> **Decisiones que deja abiertas** · [[DECISIONES_ABIERTAS|D1 (veto de la genealogía)]] · [[DECISIONES_ABIERTAS|D4 (segundo sobrino)]]
+> **Decisiones que deja abiertas** · [D1 (veto de la genealogía)](https://github.com/miguelgilurbina/curiana-radio/issues/32) · [D4 (segundo sobrino)](https://github.com/miguelgilurbina/curiana-radio/issues/35)
 
 ---
 
@@ -331,7 +331,7 @@ descansa en **todo el cluster al que su lengua pertenece**.
 > Lo que sí cambia es **de quién reconstruimos la lengua**. El wayuu sigue siendo
 > la comparanda *etnográfica* mejor documentada, y como tal se usa en todo el
 > corpus cultural. Pero como comparanda *lingüística* pasa a ser un primo, no una
-> hermana. Ver [[DECISIONES_ABIERTAS]] **D11**.
+> hermana. Ver [D11](https://github.com/miguelgilurbina/curiana-radio/issues/39).
 >
 > Nótese que Oliver es explícitamente tentativo (*"for the moment"*,
 > *"tentatively"*, *"aknowledging the lack of further evidence"*). No es un
