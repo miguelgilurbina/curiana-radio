@@ -502,6 +502,19 @@ def medir_vault():
     return {"wikilinks": total, "rotos": len(rotos), "notas": notas}
 
 
+def medir_coherencia_polity():
+    """Avisos de `curiana_polities.py::coherencia_del_canon()`.
+
+    Mide si el canon del motor (`curiana_agents.py`) sigue siendo coherente con
+    la polity que la simulación dice modelar. Devuelve la lista de avisos —
+    vacía es lo bueno. Sin esto, los hallazgos solo se ven corriendo el módulo a
+    mano, que es como no verlos.
+    """
+    sys.path.insert(0, AQUI)
+    from curiana_polities import coherencia_del_canon
+    return coherencia_del_canon()
+
+
 def medir_tests():
     out = subprocess.run([sys.executable, "-m", "pytest",
                           os.path.join(AQUI, "tests"), "-q", "--no-header"],
@@ -912,10 +925,32 @@ def componer(datos):
     else:
         filas.append(("Tests (`curiana_sim/tests/`)",
                       "no corridos (`--sin-tests`) o fallo al correrlos", "⚪"))
+
+    coh = d.get("coherencia")
+    if coh is None:
+        filas.append(("Canon ↔ polity simulada", "⚠️ no medido", "⚠️"))
+    elif not coh:
+        filas.append(("Canon ↔ polity simulada",
+                      "sin discrepancias detectables desde el código", "🟢"))
+    else:
+        filas.append(("Canon ↔ polity simulada",
+                      "%d aviso(s) — ver abajo" % len(coh), "🟡"))
     L += tabla(["", "Medido", ""], filas)
     a("")
+
+    # Los avisos van en prosa: son largos y explican el porqué, que es lo que
+    # sirve. En una celda de tabla no se leerían.
+    if coh:
+        a("**Avisos de `curiana_polities.py::coherencia_del_canon()`:**")
+        a("")
+        for aviso in coh:
+            a("- %s" % aviso)
+        a("")
+
     a("Guardianes: `python check_vault_links.py --strict` · "
-      "`python -m pytest curiana_sim/tests/ -q`")
+      "`python -m pytest curiana_sim/tests/ -q` · "
+      "`python curiana_sim/compilar_corpus.py --check` · "
+      "`python curiana_sim/curiana_polities.py --canon`")
     a("")
 
     # ── Fallos ───────────────────────────────────────────────────────
@@ -957,6 +992,8 @@ def recolectar(correr_tests=True, usar_gh=False):
     gate = medir("gate (PLAN_MAESTRO §6 + protocolo 04 §2)",
                  lambda: medir_gate(lex, censo, fuentes, corpus, decisiones))
     vault = medir("wikilinks del vault", medir_vault)
+    coherencia = medir("canon ↔ polity simulada (curiana_polities.py)",
+                       medir_coherencia_polity)
     tests = medir("tests del motor", medir_tests) if correr_tests else None
     gh = consultar_gh(decisiones or []) if usar_gh else (None, "no consultado (sin red por defecto)")
     return {
@@ -965,6 +1002,7 @@ def recolectar(correr_tests=True, usar_gh=False):
         "decisiones": decisiones, "dec_declaradas": dec_declaradas,
         "sostiene": sostiene, "gate": gate,
         "vault": vault, "tests": tests, "gh": gh,
+        "coherencia": coherencia,
     }
 
 

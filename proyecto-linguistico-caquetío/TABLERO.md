@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-06 12:49**.
+<!--GENERADO--> Generado el **2026-08-06 15:55**.
 
 ## ¿Vamos bien?
 
@@ -262,8 +262,14 @@ Argumento y evidencia de cada una: [[DECISIONES_ABIERTAS]]. El **estado** manda 
 |---|---|---|
 | Wikilinks | 812 en 171 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 120 passed, 0 failed | 🟢 |
+| Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
-Guardianes: `python check_vault_links.py --strict` · `python -m pytest curiana_sim/tests/ -q`
+**Avisos de `curiana_polities.py::coherencia_del_canon()`:**
+
+- el campo `etnia` usa 'caquetío' y 'caquetía' como valores distintos (concuerdan con el género de la persona, no con el pueblo). Hoy no rompe nada porque las tablas que lo consumen duplican la entrada, pero cualquier agrupación nueva por etnia contará dos pueblos donde hay uno.
+- 12 agentes sin campo `etnia`; caen al defecto 'caquetío' en el orquestador: Buco, Daru, Ita-sha, Jiru-ko, Kawa, Kori …
+
+Guardianes: `python check_vault_links.py --strict` · `python -m pytest curiana_sim/tests/ -q` · `python curiana_sim/compilar_corpus.py --check` · `python curiana_sim/curiana_polities.py --canon`
 
 ## Mediciones que fallaron
 
