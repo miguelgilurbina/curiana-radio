@@ -36,7 +36,7 @@ actualizado: 2026-08-03
 - **06-20** — canonicalización del esquema del lexicón; se separa categoría
   gramatical de dominio semántico. Se renombra *arahuacano* → **proto-arahuaco**.
 - **06-21** — **expansión v4 del lexicón: +1003 palabras** (wayunaiki, lokono,
-  kalinago, jirajaroide). Aquí nace el desbalance que hoy es [[DECISIONES_ABIERTAS|D11]].
+  kalinago, jirajaroide). Aquí nace el desbalance que hoy es [D11](https://github.com/miguelgilurbina/curiana-radio/issues/39).
 - **06-21** — reconstrucción comparativa del caquetío + chunking contextual.
 - **06-22** — se penaliza la **fuga a otra lengua arahuaca** y se retaguea el
   núcleo fundacional. El caquetío pasa de ~27% a ~91% del output.
@@ -120,7 +120,7 @@ ninguna corrección posterior lo ha tocado, salvo el §2 del ensayo 01 (ver Era 
   FIDELIDAD, VAULT, JARDÍN, MOTOR.
 - **07-29** — decisión de herramienta: Obsidian como lente, el repo como vault.
 - **08-03** — **V0 + V1 del vault**: `INDICE`, 6 MOCs, 30 notas de fuente,
-  `DECISIONES_ABIERTAS`, verificador de enlaces. El inventario **medido**
+  `el tablero de decisiones`, verificador de enlaces. El inventario **medido**
   corrige tres supuestos (Alvarado sí es legible, Oviedo y Baños existe, hay 6
   archivos de 0 bytes).
 - **08-03** — **minería en paralelo** de Alvarado, Gatschet, Van Buurt y cierre
@@ -150,4 +150,4 @@ ninguna corrección posterior lo ha tocado, salvo el §2 del ensayo 01 (ver Era 
 
 ## Enlaces
 
-[[01_que_probaron_los_seis_runs]] · [[04_protocolo_run_1_era_auditada]] · [[PLAN_MAESTRO]] · [[DECISIONES_ABIERTAS]] · [[BITACORA_RUNS]]
+[[01_que_probaron_los_seis_runs]] · [[04_protocolo_run_1_era_auditada]] · [[PLAN_MAESTRO]] · [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision) · [[BITACORA_RUNS]]

@@ -236,7 +236,7 @@ revisar. **No se corrigen forzando la regla**; eso sería circular.
    del capítulo, y es la que cerraría las reglas del motor.
 3. **Decidir la lengua donante prioritaria.** El lexicón tiene 781 entradas
    wayunaiki frente a 228 lokono — 3.4 a 1 a favor de la hermana que Oliver
-   considera **más lejana**. Candidata a decisión en [[DECISIONES_ABIERTAS]].
+   considera **más lejana**. Candidata a decisión en [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision).
 4. **Corregir [[01_familia_caquetia]] §2**, que se apoya en la lectura invertida
    del arco norteño.
 5. Revisar tres etiquetas del lexicón a la luz de este capítulo: `guaitiao`

@@ -52,7 +52,7 @@ el resultado no se puede fusionar:
 3. **NO correr simulaciones ni gastar API en runs.** Hay moratoria
    ([[PLAN_MAESTRO]] §0).
 4. **NO tocar** `TABLERO.md` (se genera), `PLAN_MAESTRO.md`,
-   `DECISIONES_ABIERTAS.md` ni `4-fuentes/INDICE_FUENTES.md` — los consolida el
+   [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision) ni `4-fuentes/INDICE_FUENTES.md` — los consolida el
    que lanza, para que no colisionen entre sí.
 5. **Envolver `sys.stdout` en UTF-8** bajo `__main__`, nunca al importar. La
    consola de Windows es cp1252 y revienta con `§` o `ü`.

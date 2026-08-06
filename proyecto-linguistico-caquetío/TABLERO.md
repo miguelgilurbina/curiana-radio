@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-06 16:19**.
+<!--GENERADO--> Generado el **2026-08-06 16:48**.
 
 ## ¿Vamos bien?
 
@@ -23,7 +23,7 @@ editar_a_mano: no
 | Hechos del corpus **con referencia** | **161 / 161** | — | 🟢 |
 | Tests del motor | **122 en verde** | 0 rojos | 🟢 |
 | Gate para reanudar simulaciones | **2 de 9** condiciones | faltan 7 | 🔴 |
-| Decisiones esperando a Miguel | **11 abiertas** | 3 resueltas | 🟡 |
+| Decisiones esperando a Miguel | **12 abiertas** | 0 resueltas | 🟡 |
 
 **Lo que bloquea hoy:** censo de citas (F1) · pares c/k (F2 · D5) · decisiones D1/D3/D5 · glosa de `-bana` (D9) · wayunaiki vs. lokono (D11).
 Y 2 condición(es) que **nadie puede medir por script**: citas del corpus (F10) · exportador de runs.
@@ -231,28 +231,24 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 ## 5. Decisiones e issues
 
-Argumento y evidencia de cada una: [[DECISIONES_ABIERTAS]]. El **estado** manda desde el [tablero de GitHub](https://github.com/miguelgilurbina/curiana-radio/issues).
+**El argumento y la evidencia de cada una viven en su issue.** `1-plan/el tablero de decisiones` se retiró del repo el 2026-08-06: mantener el razonamiento en markdown y el estado en el tablero producía dos copias que se desviaban. Hoy hay una sola fuente — [los issues con label `decision`](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision).
 
-| # | Decisión | Bloquea | Estado en la nota | Issue |
-|---|---|---|---|---|
-| D1 | Veto de la genealogía | V3, J1 | 🔴 abierta | [#32](https://github.com/miguelgilurbina/curiana-radio/issues/32) |
-| D2 | El nombre "Curiana" | J1, naming público | 🔴 abierta | [#33](https://github.com/miguelgilurbina/curiana-radio/issues/33) |
-| D3 | `normalizar_por_dialecto()` (M1) | reanudar simulaciones | 🔴 abierta | [#34](https://github.com/miguelgilurbina/curiana-radio/issues/34) |
-| D4 | Segundo sobrino de Manaure | D1 | 🔴 abierta | [#35](https://github.com/miguelgilurbina/curiana-radio/issues/35) |
-| D5 | Política ortográfica c/k | F2 | 🔴 abierta | [#36](https://github.com/miguelgilurbina/curiana-radio/issues/36) |
-| D6 | Merge del PR #30 | todo lo demás | ✅ **resuelta** (2026-07-29) | — |
-| D7 | Prelación entre glosa histórica e identificación científica | F3, F4, F6 | ✅ **resuelta** (2026-08-03) | — |
-| D8 | ¿El repo archiva copias de las fuentes externas? | F10, trazabilidad | 🟡 abierta | [#37](https://github.com/miguelgilurbina/curiana-radio/issues/37) |
-| D9 | La glosa de `-bana` — **y el hallazgo de `-ana`** | morfología, neologismos | 🟡 abierta | [#38](https://github.com/miguelgilurbina/curiana-radio/issues/38) |
-| D10 | Qué hacer con las 13 entradas reclasificadas | F1, canon | ✅ **resuelta** (2026-08-03) | — |
-| D11 | **El desbalance wayunaiki/lokono del lexicón** | base de la reconstrucción | 🟠 **abierta, de fondo** | [#39](https://github.com/miguelgilurbina/curiana-radio/issues/39) |
-| D12 | La etiqueta de `parentesco-032` | F10, honestidad del corpus | 🟡 abierta | [#81](https://github.com/miguelgilurbina/curiana-radio/issues/81) |
-| D13 | El hueco léxico de "tío materno" | D1, D4, la tesis avuncular | 🟠 **abierta** | [#82](https://github.com/miguelgilurbina/curiana-radio/issues/82) |
-| D14 | Qué segunda polity se pone en escena | expansión de la simulación | 🟡 abierta | [#83](https://github.com/miguelgilurbina/curiana-radio/issues/83) |
+| # | Decisión | Estado | Issue |
+|---|---|---|---|
+| D1 | Veto de la genealogia propuesta | 🔴 abierta | [#32](https://github.com/miguelgilurbina/curiana-radio/issues/32) |
+| D2 | El nombre "Curiana": ¿territorio o asentamiento? | 🔴 abierta | [#33](https://github.com/miguelgilurbina/curiana-radio/issues/33) |
+| D3 | `normalizar_por_dialecto()`: cablearla o eliminarla | 🔴 abierta | [#34](https://github.com/miguelgilurbina/curiana-radio/issues/34) |
+| D4 | Pluralidad de candidatos a la sucesion de Manaure | 🔴 abierta | [#35](https://github.com/miguelgilurbina/curiana-radio/issues/35) |
+| D5 | Politica ortografica c/k del lexicon | 🔴 abierta | [#36](https://github.com/miguelgilurbina/curiana-radio/issues/36) |
+| D8 | ¿El repo archiva copias de las fuentes externas? | 🔴 abierta | [#37](https://github.com/miguelgilurbina/curiana-radio/issues/37) |
+| D9 | La glosa de `-bana` y el hallazgo de `-ana` | 🔴 abierta | [#38](https://github.com/miguelgilurbina/curiana-radio/issues/38) |
+| D11 | El desbalance wayunaiki/lokono del lexicon | 🔴 abierta | [#39](https://github.com/miguelgilurbina/curiana-radio/issues/39) |
+| D12 | La etiqueta de `parentesco-032`: una entrada `atestiguado` con material sin fuente | 🔴 abierta | [#81](https://github.com/miguelgilurbina/curiana-radio/issues/81) |
+| D13 | El hueco léxico de "tío materno": la palabra que le falta a la tesis central | 🔴 abierta | [#82](https://github.com/miguelgilurbina/curiana-radio/issues/82) |
+| D14 | Qué segunda polity se pone en escena | 🔴 abierta | [#83](https://github.com/miguelgilurbina/curiana-radio/issues/83) |
+| — | `tara`: ¿venado o mariposa? — puede tumbar un argumento del corpus | 🔴 abierta | [#45](https://github.com/miguelgilurbina/curiana-radio/issues/45) |
 
-> ⚠️ **Descuadre.** El frontmatter de [[DECISIONES_ABIERTAS]] declara `abiertas: 10`, pero en su propia tabla de Panorama hay **11** marcadas abiertas. Manda la tabla.
-
-> `gh` no se consultó: no consultado (sin red por defecto). El tablero **no necesita red**; los estados de arriba salen de la nota. Para cruzarlos con el tablero real: `python curiana_sim/generar_tablero.py --gh`.
+**12 abiertas** de 12. Medido contra el tablero, no contra una nota.
 
 ---
 
@@ -260,7 +256,7 @@ Argumento y evidencia de cada una: [[DECISIONES_ABIERTAS]]. El **estado** manda 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 809 en 171 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 736 en 170 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 122 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 

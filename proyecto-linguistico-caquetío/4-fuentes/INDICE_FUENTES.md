@@ -170,7 +170,7 @@ F1 puede adjudicar con evidencia: 77 de 82 (94%)
   1989); apoyo insular para `-aima`, `-ubana`, `-uru`; **cero** para `-iro`,
   `-uco`; `-bi` 'pequeño' aparece como **segundo diminutivo documentado**; y
   **`-bari` no es un afijo**. ⚠️ `-bana` tiene la forma validada y **la glosa
-  en disputa** → [[DECISIONES_ABIERTAS]] D9.
+  en disputa** → [D9](https://github.com/miguelgilurbina/curiana-radio/issues/38).
 - **Zavala llena 4 huecos léxicos** que el corpus daba por abiertos, incluido
   el nº 4 por presión (**especies de pez**: `cuna`, `cunaro`, `guaranaro`,
   `bagre`).
@@ -227,7 +227,7 @@ corroboración cruzada es deliberada):
 (`python curiana_sim/auditar_82.py --resumen`). Las 19 que quedan **no son
 deuda de minería sino de decisión**: 13 que las fuentes reclasifican a otra
 lengua, 3 con conflicto de glosa — todas bloqueadas por **D10** en
-[[DECISIONES_ABIERTAS]] — y 3 sin rastro real (`kama`, `koke`, `wabarsure`).
+[el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision) — y 3 sin rastro real (`kama`, `koke`, `wabarsure`).
 > **D10 se resolvió el mismo día**: las 16 quedaron adjudicadas y el censo bajó
 > a 3. Ver «D10 aplicada» más abajo.
 
@@ -369,4 +369,4 @@ llegan rotos.
 
 ## Enlaces
 
-[[PLAN_MAESTRO]] · [[DECISIONES_ABIERTAS]]
+[[PLAN_MAESTRO]] · [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision)

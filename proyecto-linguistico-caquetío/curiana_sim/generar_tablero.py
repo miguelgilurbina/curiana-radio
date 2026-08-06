@@ -29,7 +29,7 @@ Los seis paneles:
     3. Las fuentes      — frontmatter de `4-fuentes/*.md` (la nota manda)
     4. El corpus        — YAML de `3-mundo/corpus/`
     5. El gate          — PLAN_MAESTRO §6 + protocolo 04 §2, autocalculado
-    6. Decisiones       — DECISIONES_ABIERTAS.md, con su issue
+    6. Decisiones       — los issues con label `decision` (necesita --gh)
 
 Uso:
     python generar_tablero.py             # escribe TABLERO.md
@@ -290,55 +290,68 @@ def medir_corpus():
 #  Panel 6 — decisiones
 # ══════════════════════════════════════════════════════════════════════
 
-FILA_DEC = re.compile(
-    r"^\|\s*(?:\[)?(D\d+)(?:\]\((?P<url>[^)]+)\))?\s*\|"
-    r"\s*(?P<que>[^|]+?)\s*\|\s*(?P<bloquea>[^|]*?)\s*\|\s*(?P<estado>[^|]+?)\s*\|\s*$")
+# Las decisiones **ya no viven en el repo**: se retiró [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision)
+# (2026-08-06) y cada una es un issue etiquetado `decision` en el tablero. Antes
+# se leían de una tabla markdown mantenida a mano, que podía —y solía— desviarse
+# del estado real; por eso existía `--gh`, para cruzarlas. Ahora la única fuente
+# es el tablero, y el cruce sobra.
+#
+# Consecuencia asumida: **este panel necesita red**. El resto del tablero sigue
+# sin necesitarla, así que sin `--gh` el panel se declara no medido en vez de
+# inventar nada — que es la regla de la casa.
+REPO_GH = "miguelgilurbina/curiana-radio"
+
+# "D11 — El desbalance wayunaiki/lokono del lexicon" → id y qué.
+TITULO_DEC = re.compile(r"^\s*(D\d+)\s*[—–-]\s*(?P<que>.+?)\s*$")
 
 
 def medir_decisiones():
-    path = os.path.join(REPO, "1-plan", "DECISIONES_ABIERTAS.md")
-    filas = []
-    with open(path, encoding="utf-8") as fh:
-        for linea in fh:
-            m = FILA_DEC.match(linea.rstrip("\n"))
-            if not m:
-                continue
-            url = m.group("url") or ""
-            issue = url.rstrip("/").rsplit("/", 1)[-1] if "/issues/" in url else None
-            estado = m.group("estado")
-            filas.append({
-                "id": m.group(1),
-                "que": m.group("que").strip(),
-                "bloquea": m.group("bloquea").strip(),
-                "estado": estado.strip(),
-                "abierta": "abierta" in estado.lower(),
-                "issue": issue,
-                "url": url,
-            })
-    if not filas:
-        raise RuntimeError("no se reconoció ninguna fila de decisión en el Panorama")
-    return filas
+    """Las decisiones, leídas del tablero de GitHub (issues con label `decision`).
 
-
-def consultar_gh(filas):
-    """Estado real del tablero. Solo con --gh; degrada sin ruido si falla."""
-    numeros = [f["issue"] for f in filas if f["issue"]]
-    if not numeros:
-        return None, "ninguna decisión tiene issue anotado"
-    try:
-        out = subprocess.run(
-            ["gh", "issue", "list", "--repo", "miguelgilurbina/curiana-radio",
-             "--state", "all", "--limit", "200", "--json", "number,state,title"],
-            capture_output=True, text=True, timeout=25, encoding="utf-8")
-    except Exception as exc:  # noqa: BLE001
-        return None, "gh no se pudo ejecutar (%s)" % type(exc).__name__
+    Devuelve la misma forma que la versión que leía el markdown, para no tocar
+    el render. `bloquea` ya no se mide: vivía en una columna de la tabla que se
+    retiró, y ponerlo en el título del issue sería peor. Queda vacío a
+    propósito, que es más honesto que arrastrar un dato viejo.
+    """
+    out = subprocess.run(
+        ["gh", "issue", "list", "--repo", REPO_GH, "--label", "decision",
+         "--state", "all", "--limit", "200",
+         "--json", "number,state,title,url"],
+        capture_output=True, text=True, timeout=25, encoding="utf-8")
     if out.returncode != 0:
-        return None, "gh devolvió error: %s" % (out.stderr or "").strip()[:120]
-    try:
-        datos = json.loads(out.stdout)
-    except Exception:  # noqa: BLE001
-        return None, "gh devolvió algo que no es JSON"
-    return {str(d["number"]): d for d in datos}, None
+        raise RuntimeError("gh devolvió error: %s"
+                           % (out.stderr or "").strip()[:160])
+    datos = json.loads(out.stdout)
+
+    filas = []
+    for issue in datos:
+        m = TITULO_DEC.match(issue["title"])
+        if not m:
+            # Un issue con label `decision` que no sigue la convención "D## — …"
+            # (p. ej. #45 `tara`). Se lista igual: es una decisión real.
+            ident, que = "—", issue["title"]
+        else:
+            ident, que = m.group(1), m.group("que")
+        abierta = issue["state"].upper() == "OPEN"
+        filas.append({
+            "id": ident,
+            "que": que,
+            "bloquea": "",
+            "estado": "🔴 abierta" if abierta else "✅ resuelta",
+            "abierta": abierta,
+            "issue": str(issue["number"]),
+            "url": issue["url"],
+        })
+
+    if not filas:
+        raise RuntimeError("el tablero no devolvió ninguna decisión "
+                           "(¿falta el label `decision`?)")
+
+    def orden(f):
+        return (0, int(f["id"][1:])) if f["id"].startswith("D") else (1, 0)
+
+    filas.sort(key=orden)
+    return filas
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -870,41 +883,26 @@ def componer(datos):
     # ── 6. Decisiones ────────────────────────────────────────────────
     a("## 5. Decisiones e issues")
     a("")
-    a("Argumento y evidencia de cada una: [[DECISIONES_ABIERTAS]]. "
-      "El **estado** manda desde el "
-      "[tablero de GitHub](https://github.com/miguelgilurbina/curiana-radio/issues).")
+    a("**El argumento y la evidencia de cada una viven en su issue.** "
+      "`1-plan/el tablero de decisiones` se retiró del repo el 2026-08-06: "
+      "mantener el razonamiento en markdown y el estado en el tablero producía "
+      "dos copias que se desviaban. Hoy hay una sola fuente — "
+      "[los issues con label `decision`]"
+      "(https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision).")
     a("")
     if d["decisiones"] is None:
-        a("⚠️ **No medido.** Ver «Mediciones que fallaron».")
+        a("⚠️ **No medido**: este panel lee el tablero y necesita red. "
+          "Córrelo con `python curiana_sim/generar_tablero.py --gh`.")
     else:
-        gh, gh_error = d["gh"]
-        filas = []
-        for x in d["decisiones"]:
-            issue = "[#%s](%s)" % (x["issue"], x["url"]) if x["issue"] else "—"
-            real = ""
-            if gh and x["issue"] in gh:
-                real = gh[x["issue"]]["state"].lower()
-            filas.append((x["id"], x["que"], x["bloquea"], x["estado"], issue, real)
-                         if gh else
-                         (x["id"], x["que"], x["bloquea"], x["estado"], issue))
-        cab = ["#", "Decisión", "Bloquea", "Estado en la nota", "Issue"]
-        if gh:
-            cab.append("Estado en GitHub")
-        L += tabla(cab, filas)
+        filas = [(x["id"], x["que"], x["estado"],
+                  "[#%s](%s)" % (x["issue"], x["url"]))
+                 for x in d["decisiones"]]
+        L += tabla(["#", "Decisión", "Estado", "Issue"], filas)
         a("")
         abiertas = sum(1 for x in d["decisiones"] if x["abierta"])
-        declaradas = d["dec_declaradas"]
-        if declaradas is not None and declaradas != abiertas:
-            a("> ⚠️ **Descuadre.** El frontmatter de [[DECISIONES_ABIERTAS]] declara "
-              "`abiertas: %s`, pero en su propia tabla de Panorama hay **%d** "
-              "marcadas abiertas. Manda la tabla."
-              % (declaradas, abiertas))
-            a("")
-        if gh_error:
-            a("> `gh` no se consultó: %s. El tablero **no necesita red**; los "
-              "estados de arriba salen de la nota. Para cruzarlos con el tablero "
-              "real: `python curiana_sim/generar_tablero.py --gh`." % gh_error)
-            a("")
+        a("**%d abiertas** de %d. Medido contra el tablero, no contra una nota."
+          % (abiertas, len(d["decisiones"])))
+        a("")
     a("---")
     a("")
 
@@ -982,11 +980,13 @@ def recolectar(correr_tests=True, usar_gh=False):
     censo = medir("censo de citas (auditar_82.py)", medir_censo_citas)
     fuentes = medir("frontmatter de 4-fuentes/", notas_de_fuente)
     corpus = medir("corpus cultural (3-mundo/corpus/*.yaml)", medir_corpus)
-    decisiones = medir("decisiones (DECISIONES_ABIERTAS.md)", medir_decisiones)
-    dec_declaradas = medir(
-        "frontmatter de DECISIONES_ABIERTAS.md",
-        lambda: frontmatter(os.path.join(REPO, "1-plan",
-                                         "DECISIONES_ABIERTAS.md")).get("abiertas"))
+    # Las decisiones viven en el tablero, así que este panel **sí** necesita
+    # red. Sin `--gh` no se inventa: se declara no medido.
+    decisiones = (medir("decisiones (issues con label `decision`)", medir_decisiones)
+                  if usar_gh else None)
+    if not usar_gh:
+        FALLOS.append(("decisiones (issues con label `decision`)",
+                       "no consultado: necesita red, pásale --gh"))
     sostiene = medir("atribución de citas por obra",
                      lambda: medir_quien_sostiene(lex)) if lex else None
     gate = medir("gate (PLAN_MAESTRO §6 + protocolo 04 §2)",
@@ -995,13 +995,12 @@ def recolectar(correr_tests=True, usar_gh=False):
     coherencia = medir("canon ↔ polity simulada (curiana_polities.py)",
                        medir_coherencia_polity)
     tests = medir("tests del motor", medir_tests) if correr_tests else None
-    gh = consultar_gh(decisiones or []) if usar_gh else (None, "no consultado (sin red por defecto)")
     return {
         "fecha": datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
         "lex": lex, "censo": censo, "fuentes": fuentes, "corpus": corpus,
-        "decisiones": decisiones, "dec_declaradas": dec_declaradas,
+        "decisiones": decisiones, "dec_declaradas": None,
         "sostiene": sostiene, "gate": gate,
-        "vault": vault, "tests": tests, "gh": gh,
+        "vault": vault, "tests": tests,
         "coherencia": coherencia,
     }
 

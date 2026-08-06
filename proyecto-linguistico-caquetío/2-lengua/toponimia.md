@@ -138,7 +138,7 @@ dos morfemas distintos que colapsan en la misma grafía castellana.
 
 La grafía castellana de las crónicas —`c`/`k`/`qu`, `b`/`v`, `gu`/`w`— es la
 causa común. Es el mismo problema que D5, la política ortográfica c/k
-([[DECISIONES_ABIERTAS]]).
+([el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision)).
 
 ## Por qué esto no toca el lexicón
 

@@ -302,7 +302,7 @@ versión anterior del filtro lo descartaba entero por empezar con "Apellido".
 ## 6. Qué le propone esto a `REGLAS_ZAVALA`
 
 Tres cosas, en orden de confianza. Ninguna se aplica aquí: son propuestas para
-revisión humana (ver [[mapa-motor]] y [[DECISIONES_ABIERTAS]]).
+revisión humana (ver [[mapa-motor]] y [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision)).
 
 **1. Reduplicación** — regla nueva.
 
@@ -331,7 +331,7 @@ en el lexicón como palabra (`bacoa` 'bosque'); lo que falta es registrar su
 
 ## 7. Conflictos que este análisis abre
 
-Para [[DECISIONES_ABIERTAS]] y para la tarea F1 del censo de citas:
+Para [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision) y para la tarea F1 del censo de citas:
 
 | Conflicto | Evidencia |
 |---|---|
@@ -383,4 +383,4 @@ otra manera.
 
 ## Enlaces
 
-[[02_protocolo_habla_paraguanera]] · [[DECISIONES_ABIERTAS]] · [[PLAN_MAESTRO]] · [[zavala-reyes-2015]] · [[gatschet-1885]] · [[van-buurt-2014]] · [[alvarado-1921]] · [[oliver-1989-cap2]] · [[oviedo-y-banos]]
+[[02_protocolo_habla_paraguanera]] · [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision) · [[PLAN_MAESTRO]] · [[zavala-reyes-2015]] · [[gatschet-1885]] · [[van-buurt-2014]] · [[alvarado-1921]] · [[oliver-1989-cap2]] · [[oviedo-y-banos]]

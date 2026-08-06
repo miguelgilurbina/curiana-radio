@@ -232,7 +232,7 @@ toca. Para esas, las candidatas son [[zavala-reyes-2015]], [[alvarado-1921]] y
    una especie.
 4. **Las dos decisiones de afijo** (`-bana` con glosa en disputa, `-uri/-uru`
    con glosa nueva propuesta por Cruz Esteves vía van Buurt) son para
-   `DECISIONES_ABIERTAS.md`, no para este minado.
+   [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision), no para este minado.
 5. **Facsímil de las pp. 299-305** para cerrar `xovam` y el imperativo
    `?aba dobo…guayete`, que los dos OCR rompen en el mismo punto. Es lo único
    que un tercer testimonio digital resolvería.
