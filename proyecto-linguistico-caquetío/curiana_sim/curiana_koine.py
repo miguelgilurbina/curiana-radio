@@ -120,7 +120,7 @@ _ASPECTO_SUFIJO = {"completivo": "-ka", "continuativo": "-ni", "prospectivo": "-
 # por muestreo de dominio. Distintas entre agentes → divergencia inicial.
 FORMAS_SEED: dict[str, list[str]] = {
     "Manaure":    ["biro", "barsure", "kali", "kasha", "chiriguare", "maa-ka", "naa-ka"],
-    "Shaboro":    ["urari", "barsure", "piache", "saruro", "kasha", "suna-ni", "naba-ni"],
+    "Shaboro":    ["urari", "barsure", "boratio", "saruro", "kasha", "suna-ni", "naba-ni"],
     "Nubiri-sha": ["ama", "buri", "arua", "biro", "conuco", "paa-da", "raka-da"],
     "Watapana":   ["biro", "maure", "canoa", "habo", "arima", "naa-da", "wana-da"],
     "Dara-ko":    ["kuru", "canoa", "bara", "arima", "cunaro", "bagre", "wana-ni"],
@@ -129,7 +129,7 @@ FORMAS_SEED: dict[str, list[str]] = {
     "Tawaka":     ["chiriguare", "kabo", "arima", "habo", "wana-da", "naa-da"],
     "Saruro-sha": ["maure", "arua", "naure", "kuru", "kono-ni", "chaa-ni"],
     "Chiriguare": ["chiriguare", "sima", "habo", "kabo", "wana-ka", "naa-ka"],
-    "Buio-sha":   ["barsure", "piache", "kasha", "suka", "urari", "naba-ni"],
+    "Buio-sha":   ["barsure", "boratio", "kasha", "suka", "urari", "naba-ni"],
     "Corie-ko":   ["conuco", "buco", "kuru", "dali", "kaya", "kono-ni"],
     "Dare-nu":    ["canoa", "arima", "bara", "kuru", "naa-da", "wana-da"],
     "Kadushi":    ["habo", "canoa", "biro", "kali", "maure", "naa-ni"],
@@ -402,7 +402,7 @@ REFERENTES_NOVEDOSOS: list[dict] = [
     {"id": "cuentas_vidrio", "desc": "unas cuentas brillantes y duras que un mercader trajo de tierras lejanas, nunca vistas aquí"},
     {"id": "cometa",         "desc": "una estrella con cola que cruza el cielo varias noches seguidas"},
     {"id": "eclipse",        "desc": "el sol se oscurece en pleno día y luego vuelve, como si algo lo cubriera"},
-    {"id": "fiebre_manchas", "desc": "una fiebre nueva que llena la piel de manchas, que ningún piache había visto"},
+    {"id": "fiebre_manchas", "desc": "una fiebre nueva que llena la piel de manchas, que ningún boratio había visto"},
     {"id": "metal_amarillo", "desc": "un trozo de metal amarillo y pesado, distinto del oro conocido, llegado por trueque"},
     {"id": "bestia_orilla",  "desc": "un animal enorme nunca visto, varado y muerto en la orilla del golfete"},
     {"id": "marea_roja",     "desc": "el agua del golfete se tiñe de rojo durante días y mata a los peces"},
