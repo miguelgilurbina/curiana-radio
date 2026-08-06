@@ -41,9 +41,9 @@ actualizado: 2026-08-04
 | [D9](https://github.com/miguelgilurbina/curiana-radio/issues/38) | La glosa de `-bana` — **y el hallazgo de `-ana`** | morfología, neologismos | 🟡 abierta |
 | D10 | Qué hacer con las 13 entradas reclasificadas | F1, canon | ✅ **resuelta** (2026-08-03) |
 | [D11](https://github.com/miguelgilurbina/curiana-radio/issues/39) | **El desbalance wayunaiki/lokono del lexicón** | base de la reconstrucción | 🟠 **abierta, de fondo** |
-| D12 | La etiqueta de `parentesco-032` | F10, honestidad del corpus | 🟡 abierta (sin issue) |
-| D13 | El hueco léxico de "tío materno" | D1, D4, la tesis avuncular | 🟠 **abierta** (sin issue) |
-| D14 | Qué segunda polity se pone en escena | expansión de la simulación | 🟡 abierta (sin issue) |
+| [D12](https://github.com/miguelgilurbina/curiana-radio/issues/81) | La etiqueta de `parentesco-032` | F10, honestidad del corpus | 🟡 abierta |
+| [D13](https://github.com/miguelgilurbina/curiana-radio/issues/82) | El hueco léxico de "tío materno" | D1, D4, la tesis avuncular | 🟠 **abierta** |
+| [D14](https://github.com/miguelgilurbina/curiana-radio/issues/83) | Qué segunda polity se pone en escena | expansión de la simulación | 🟡 abierta |
 
 ---
 
@@ -387,106 +387,26 @@ Salidos del inventario de [[INDICE_FUENTES]]. Ninguno necesita criterio de nadie
 
 ---
 
-## D12 — 🟡 La etiqueta de `parentesco-032`
+## D12, D13 y D14 — el argumento vive en el tablero
 
-*(nueva, 2026-08-04 — la levantó la minería de [[antczak-2017-cariban]], issue #58)*
+*(nuevas, 2026-08-04)*
 
-**El hecho.** `parentesco-032` está etiquetada **`atestiguado`** y su
-`referencia` decía "fuentes secundarias web". Era la entrada más frágil del
-corpus: la etiqueta más fuerte sobre el sostén más débil.
+Estas tres se levantaron directamente como issues de GitHub, con su evidencia y
+sus opciones dentro. **No se duplican aquí**: seguir la convención de esta nota
+—el argumento en el markdown, el estado en el issue— tenía sentido cuando el
+razonamiento era largo y el issue un puntero; para decisiones nacidas de una
+minería concreta, el issue las contiene enteras y mantener dos copias solo
+crea deriva.
 
-Tras minar Antczak, la entrada quedó partida en dos mitades desiguales:
-
-| Afirmación | Estado |
-|---|---|
-| Las fronteras étnicas caribe/arahuaco eran porosas | ✅ cita revisada por pares (Antczak 2017 p.157) |
-| La conflación cerámica = lengua = biología es un modelo superado | ✅ Antczak 2017 p.132 |
-| Falta evidencia arqueológica de subyugación violenta | ✅ Antczak 2017 p.160 |
-| **"Caribe" como categoría legal/colonial para decidir a quién esclavizar** | 🔴 **sin fuente citable** |
-| **Morfología craneofacial que cuestiona la invasión caribe** | 🔴 **sin fuente citable** |
-
-Hoy las dos mitades conviven en el mismo campo `referencia`, separadas por texto.
-Funciona, pero es una entrada `atestiguado` que contiene material no atestiguado.
-
-**Opciones.**
-1. **Partirla en dos**: `parentesco-032` (atestiguado, lo que Antczak sostiene)
-   y `parentesco-032b` (hipotetico o reconstruido, lo craneofacial y lo legal).
-   Es lo más limpio y lo que el esquema del corpus pide — *una sola etiqueta por
-   entrada, en duda degradar*.
-2. **Degradarla entera** a `reconstruido`. Sencillo, pero desperdicia una cita
-   buena.
-3. **Dejarla como está** y buscar fuente para las dos mitades huérfanas. La
-   craneofacial existe en la literatura; no está en el repo.
-
-**Recomendación**: la 1. El corpus ya tiene la convención del sufijo de letra
-(`creencia-010b`) para intercalar sin renumerar.
-
----
-
-## D13 — 🟠 El hueco léxico de "tío materno"
-
-*(nueva, 2026-08-04 — la levantó la minería de [[jahn-1927]])*
-
-**El hecho.** El modelo social del proyecto descansa en la **sucesión avuncular
-matrilineal**: Manaure hereda a su sobrino uterino (Waimo-ko, D1/D4). Y el
-lexicón, con 1413 palabras y **40 términos de parentesco**, no tiene **ninguna
-palabra para "tío materno"** — ni caquetía, ni siquiera wayunaiki.
-
-Los agentes no pueden nombrar la relación sobre la que gira su propia sociedad.
-
-**Lo que Jahn aporta** (n. 28 y tabla de pp. 438-439):
-
-| Glosa | Guajiro |
-|---|---|
-| cacique / anciano / **tío materno** | **`alágla`** |
-| tío materno (forma poseída) | **`tapári`, `tarágla`** |
-| tío paterno | `táta` |
-
-Y lo lee él mismo como *"otra reminiscencia del antiguo matriarcado"*: **que la
-palabra para 'jefe' sea la misma que para 'tío materno'** no es un dato léxico,
-es evidencia comparativa directa de la sucesión avuncular. Refuerza
-`parentesco-004` desde la lengua, no desde la analogía.
-
-**Lo que hay que decidir.**
-1. ¿Se **incorpora** `alágla`/`tapári` como comparanda wayunaiki (etiqueta
-   `wayunaiki`, sin más)? Es lo mínimo y no compromete nada.
-2. ¿Se **reconstruye** una forma caquetía por método comparativo
-   (`arahuaco_comparative.py`)? Ojo con **D11**: reconstruir desde wayunaiki es
-   justamente lo que Oliver desaconseja, y el 80% de fallo medido viene de ahí.
-   Habría que buscar antes el término lokono.
-3. ¿O se deja el hueco **a propósito**, como candidato a **neologismo
-   emergente** — que es lo que el README del corpus dice que son los huecos
-   léxicos, y sería un experimento precioso: ver si los agentes acuñan solos la
-   palabra para la relación que estructura su mundo?
-
-**La 3 es la más interesante para el experimento y la 1 es compatible con ella.**
-La 2 depende de D11.
-
----
-
-## D14 — 🟡 Qué segunda polity se pone en escena
-
-*(nueva, 2026-08-04 — la levantó `curiana_polities.py`)*
-
-**El hecho.** La simulación modela **una** de las cuatro formaciones caquetías
-(`POLITY_SIMULADA = "costera"`). Las otras tres están documentadas y citadas en
-[[polities-caquetias]], listas para usarse.
-
-**Por qué importa para la tesis de koiné.** Un contacto con **Barquisimeto** o
-**Yaracuy** pone en escena dos sociedades que **hablan la misma lengua y
-organizan el poder al revés**. Para medir convergencia lingüística eso aísla la
-variable mucho mejor que el contacto interétnico, donde lengua y sociedad varían
-a la vez.
-
-| Candidata | A favor | En contra |
+| # | Decisión | Issue |
 |---|---|---|
-| **barquisimeto** | La mejor documentada (8/8 ejes); el contraste más fuerte: jefatura doble, aldeas fortificadas de 4.000, boratio apartado | Está lejos de la costa; el contacto hay que justificarlo |
-| **yaracuy** | Confederación elástica — políticamente lo más distinto; es el paso comercial hacia la costa, así que el contacto **se justifica solo** | Peor documentada (6/8): sin religión ni cerámica |
-| **llanos** | Única con esclavitud documentada; alto potencial dramático | Oliver acota el dato al bajo Cojedes y advierte de no generalizar |
+| D12 | La etiqueta de `parentesco-032` — una entrada `atestiguado` con material sin fuente | [#81](https://github.com/miguelgilurbina/curiana-radio/issues/81) |
+| D13 | El hueco léxico de "tío materno" — la palabra que le falta a la tesis central | [#82](https://github.com/miguelgilurbina/curiana-radio/issues/82) |
+| D14 | Qué segunda polity se pone en escena | [#83](https://github.com/miguelgilurbina/curiana-radio/issues/83) |
 
-**Recomendación**: **yaracuy** por la ruta comercial (el contacto no hay que
-inventarlo, la sal y el paso a los Llanos ya lo motivan), aceptando que dos de
-sus ocho ejes quedarán sin documentar y hay que marcarlos como tales.
+> **Para las próximas**: levantar el issue con el argumento completo y anotar
+> aquí solo la fila del panorama. Esta nota queda como índice y como archivo del
+> razonamiento de D1-D11, que ya está escrito.
 
 ## Enlaces
 
