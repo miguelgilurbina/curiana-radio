@@ -2,7 +2,7 @@
 tipo: indice-raiz
 proyecto: Curiana — proyecto lingüístico caquetío
 vault: este mismo repositorio
-actualizado: 2026-08-04
+actualizado: 2026-08-06
 ---
 
 # Curiana — índice del vault
@@ -59,6 +59,8 @@ ensayo. Los ensayos —el argumento, con su evidencia— viven en
 - ⚖️ [Decisiones abiertas](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision) — lo que solo Miguel puede decidir, en el
   tablero de GitHub. Cada una lleva su argumento y su evidencia dentro; ya no
   hay nota en el repo que las duplique.
+- 🔧 [[HARNESS]] — cómo se trabaja aquí y por qué; los guardianes.
+- 🏗️ [[ARQUITECTURA]] — el motor medido: 50 módulos, dónde va a doler.
 - 📚 [[INDICE_FUENTES]] — estado **medido** de las obras: qué se puede leer, qué
   está minado, qué sostiene cada una.
 - 🕰️ [[LINEA_DE_TIEMPO]] — las cuatro eras del proyecto y sobre qué base corrió
@@ -76,14 +78,14 @@ proyecto-linguistico-caquetío/          ← raíz del vault
 ├── CLAUDE.md · check_vault_links.py     ← config y guardián del grafo
 │
 ├── 1-plan/          ¿qué hacemos y qué falta?
-│   └── PLAN_MAESTRO · LINEA_DE_TIEMPO · SIGUIENTE_TANDA
+│   └── PLAN_MAESTRO · LINEA_DE_TIEMPO · SIGUIENTE_TANDA · HARNESS
 │
 ├── 2-lengua/        ¿cómo es el caquetío?
 │   └── mapa-lengua · lexicon · morfologia · toponimia · metodo-comparativo
 │
 ├── 3-mundo/         ¿cómo era ese pueblo?
 │   ├── mapa-familia · mapa-ecologia · mapa-creencia · mapa-transmision
-│   │   · mapa-geografia-politica
+│   │   · mapa-geografia-politica · polities-caquetias
 │   ├── CULTURA_CAQUETIA.md  ← el canon narrativo: cómo se vivía ahí
 │   ├── ensayos/     ← los 5 mini-ensayos (el argumento, no el índice)
 │   └── corpus/      ← 161 hechos en YAML + genealogía
@@ -93,12 +95,12 @@ proyecto-linguistico-caquetío/          ← raíz del vault
 │   └── sesiones/    ← bitácoras: qué se buscó, qué se halló, qué quedó abierto
 │
 ├── 5-experimento/   ¿qué probamos con el simulador?
-│   ├── mapa-motor · DISENO_KOINE · CANON_TIERRA · BITACORA_RUNS · …
+│   ├── mapa-motor · ARQUITECTURA · DISENO_KOINE · CANON_TIERRA · …
 │   ├── analisis/    ← qué produjeron los runs
 │   └── disenos/     ← biosfera, motor ambiental, toponimia, protocolos
 │
 ├── fuentes_caquetios/    ← los PDF (no se editan, se citan)
-├── curiana_sim/          ← el motor + 45 tests, el guardián
+├── curiana_sim/          ← el motor + 125 tests, los guardianes
 └── supabase/             ← el esquema versionado
 ```
 
@@ -138,13 +140,13 @@ El lexicón usa su propia escala paralela — `caquetío-atestiguado` (226),
 > lexicón, corpus, frontmatter de las fuentes, gate y decisiones— y reescribe
 > `TABLERO.md` con la fecha de medición.
 
-Los tres números que resumen el momento (medidos el 2026-08-04):
+Los tres números que resumen el momento (medidos el 2026-08-06):
 
 - **3 entradas del lexicón sin cita**, de las 82 que había el 2026-07-21. Las
   que quedan ya no son deuda de minería sino de decisión: no dejan rastro en
   ninguna de las cuatro fuentes minadas.
-- **152 hechos del corpus, los 152 con `referencia`.**
-- **1 de las 9 condiciones del gate** para reanudar simulaciones. El resto,
+- **161 hechos del corpus, los 161 con `referencia`.**
+- **2 de las 9 condiciones del gate** para reanudar simulaciones. El resto,
   con su porqué, en [[TABLERO]] §4.
 
 ## Convenciones

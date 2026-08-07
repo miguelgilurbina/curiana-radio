@@ -1,7 +1,17 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(xargs git log -1 --format='base: %ci %h')",
+      "Bash(python -c ' *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'feat\\(simulador\\): fragmentos de la voz de Manaure + loader MDX *)",
+      "Bash(git commit -m 'feat\\(simulador\\): capa editorial multi-run con eventos por epoca *)",
+      "Bash(git commit -m 'feat\\(simulador\\): componente ManaureVoice \\(hero/inline\\) + tokens de eventos *)",
+      "Bash(git commit -m 'feat\\(simulador\\): Timeline \\(cronologia scrollspy\\) + primitivas narrativas *)",
+      "Bash(git rm *)",
+      "Bash(npx tsc *)",
+      "Bash(npx eslint *)"
     ],
     "deny": [],
     "ask": []
