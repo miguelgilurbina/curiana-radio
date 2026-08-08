@@ -29,12 +29,18 @@ cura y se publica en Curiana Radio (`/simulador`).
    la nota de la fuente.
 6. **Un cero hay que verificarlo.** Un `grep` sin resultados mide tu consulta,
    no la fuente. Ver la skill `minar-fuente` §2 — pasó tres veces en una noche.
-7. **El resultado de minar va en `4-fuentes/<obra>.md`**, no en un markdown
-   nuevo.
-8. **Nunca secretos en archivos del proyecto** — ni gitignored: el repo
+7. **Minar alimenta la esfera que toque, no solo el lexicón.** Lengua (léxico,
+   cognados, topónimos) y mundo (parentesco, ecología, creencia, transmisión,
+   geografía política). La nota de `4-fuentes/` es la **bitácora** —qué se
+   preguntó, qué se halló, qué no—, no el almacén. Medido: 18 de 30 obras
+   dejan rastro en una sola esfera. Ver `medir_sostiene.py --esferas`.
+8. **Citar es una clave foránea, no prosa.** `procedencia.obra` apunta a
+   `4-fuentes/bibliografia.yaml` y el validador lo comprueba. Si no hay fuente,
+   se declara `deuda: sin-procedencia`: el hueco se admite, **callarlo no**.
+9. **Nunca secretos en archivos del proyecto** — ni gitignored: el repo
    sincroniza a OneDrive.
-9. **Las decisiones viven en el tablero de GitHub** (label `decision`), no en
-   markdown. `DECISIONES_ABIERTAS.md` se retiró el 2026-08-06.
+10. **Las decisiones viven en el tablero de GitHub** (label `decision`), no en
+    markdown. `DECISIONES_ABIERTAS.md` se retiró el 2026-08-06.
 
 ---
 
@@ -60,8 +66,14 @@ cura y se publica en Curiana Radio (`/simulador`).
 cd curiana_sim
 pip install -r requirements.txt
 
-python guardianes.py              # los 5 en verde antes de cerrar nada
+python guardianes.py              # los 7 en verde antes de cerrar nada
 python guardianes.py --rapido     # sin los tests (más rápido)
+
+# Los datos de lengua y la bibliografía
+python generar_bibliografia.py    # 4-fuentes/bibliografia.yaml (generado)
+python compilar_lengua.py         # valida cognados, topónimos, morfemas
+python compilar_lengua.py --deuda # qué no cita a nadie todavía
+python medir_sostiene.py --esferas  # qué esfera alimenta cada obra
 
 python generar_tablero.py         # reescribe TABLERO.md (medido)
 python generar_tablero.py --gh    # + decisiones del tablero (usa red)
@@ -93,6 +105,7 @@ INDICE.md          la puerta del vault
 TABLERO.md         el estado medido (generado — no se edita a mano)
 1-plan/            ¿qué hacemos y qué falta?
 2-lengua/          ¿cómo es el caquetío?  lexicon · morfologia · toponimia · metodo-comparativo
+                   datos: cognados.yaml · toponimos.yaml · morfemas.yaml (ver datos-de-lengua)
 3-mundo/           ¿cómo era ese pueblo?  5 mapas · polities-caquetias · corpus/ · ensayos/
 4-fuentes/         ¿de dónde lo sabemos?  una nota por obra + INDICE_FUENTES
 5-experimento/     ¿qué probamos?  mapa-motor · ARQUITECTURA · DISENO_KOINE · analisis/

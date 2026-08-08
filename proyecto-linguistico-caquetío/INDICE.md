@@ -60,6 +60,7 @@ ensayo. Los ensayos —el argumento, con su evidencia— viven en
 - ⚖️ [Decisiones abiertas](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision) — lo que solo Miguel puede decidir, en el
   tablero de GitHub. Cada una lleva su argumento y su evidencia dentro; ya no
   hay nota en el repo que las duplique.
+- 🔤 [[datos-de-lengua]] — cognados, topónimos y morfemas: dónde viven y por qué.
 - 🔧 [[HARNESS]] — cómo se trabaja aquí y por qué; los guardianes.
 - 🏗️ [[ARQUITECTURA]] — el motor medido: 50 módulos, dónde va a doler.
 - 📚 [[INDICE_FUENTES]] — estado **medido** de las obras: qué se puede leer, qué

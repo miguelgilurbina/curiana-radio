@@ -1,0 +1,389 @@
+meta:
+  generado_por: curiana_sim/generar_bibliografia.py
+  obras: 30
+  en_repo: 24
+  solo_citadas: 6
+  nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
+    El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
+obras:
+- id: adam-1879
+  obra: Du parler des hommes et du parler des femmes dans la langue caraïbe
+  autor: Adam, Lucien
+  anio: 1879
+  publicacion: Revue de Linguistique et de Philologie Comparée XII, fasc. 3, pp. 275-304
+  genero: linguistica-comparativa
+  local:
+  - fuentes_caquetios/Adam_1879_Parler_hommes_femmes_langue_caraibe.pdf
+  paginas: 27
+  aliases:
+  - Adam 1879
+  en_repo: true
+- id: alvarado-1921
+  obra: Glosario de voces indígenas de Venezuela
+  autor: Alvarado, Lisandro
+  anio: 1921
+  genero: glosario
+  local:
+  - fuentes_caquetios/Alvarado_1921_Glosario_Voces_Indigenas_Venezuela.pdf
+  paginas: 354
+  aliases:
+  - Alvarado 1921
+  - Glosario de voces indígenas
+  en_repo: true
+- id: amodio-perez-2006
+  obra: Las pautas de crianza del pueblo wayuu de Venezuela
+  autor: Amodio, Emanuele y Pérez, Luis Adolfo
+  anio: 2006
+  publicacion: UNICEF / Ministerio de Educación y Deportes, Caracas
+  genero: etnografia
+  paginas: ~10 (monografía)
+  acceso: PDF público (guao.org) — descargado y leído completo en la sesión 4; NO archivado en el repo
+  aliases:
+  - Amodio y Pérez 2006
+  - Pautas de crianza wayuu
+  en_repo: false
+- id: angleria-1892
+  obra: Fuentes Históricas sobre Colón y América (Décadas del Nuevo Mundo), vols. 1 y 4
+  autor: Anglería, Pedro Mártir de
+  anio: 1892 [c. 1530]
+  genero: cronica
+  local:
+  - fuentes_caquetios/Angleria_1892_Fuentes_Historicas_Colon_America_vol1.pdf
+  - fuentes_caquetios/Angleria_1892_Fuentes_Historicas_Colon_America_vol4.pdf
+  paginas: 460 + 492
+  aliases:
+  - Anglería 1892
+  - Pedro Mártir
+  - Décadas
+  en_repo: true
+- id: antczak-2015-las-aves
+  obra: 'Las Aves: arqueología del archipiélago (navegación insular, botuto, tortugas)'
+  autor: Antczak, Andrzej T. y Antczak, Maria Magdalena
+  anio: 2015
+  genero: arqueologia
+  local:
+  - fuentes_caquetios/Antczak_Antczak_2015_Las_Aves_Arqueologia.pdf
+  paginas: 38
+  aliases:
+  - Antczak & Antczak 2015
+  - Las Aves
+  en_repo: true
+- id: antczak-2017-cariban
+  obra: Re-thinking the Migration of Cariban-Speakers from the Middle Orinoco River to North-Central Venezuela
+    (AD 800)
+  autor: Antczak, Andrzej; Urbani, Bernardo; Antczak, Maria Magdalena
+  anio: 2017
+  publicacion: Journal of World Prehistory 30:131-175 (open access)
+  genero: arqueo-linguistica
+  local:
+  - fuentes_caquetios/Antczak_et_al_2017_Cariban_Migration_Orinoco.pdf
+  paginas: 45
+  aliases:
+  - Antczak et al. 2017
+  - Cariban Migration
+  en_repo: true
+- id: arcaya-1920
+  obra: Historia del Estado Falcón, tomo I
+  autor: Arcaya, Pedro Manuel
+  anio: 1920
+  genero: cronica-historia-regional
+  local:
+  - fuentes_caquetios/Arcaya_1920_Historia_Estado_Falcon.pdf
+  paginas: 348
+  aliases:
+  - Arcaya 1920
+  - Historia del Estado Falcón
+  en_repo: true
+- id: brinton-1871
+  obra: The Arawack Language of Guiana in its Linguistic and Ethnological Relations
+  autor: Brinton, Daniel G.
+  anio: 1871
+  genero: linguistica-comparativa
+  local:
+  - fuentes_caquetios/Brinton_1871_texto.txt
+  - fuentes_caquetios/Brinton_1871_Arawack_Language_Guiana.pdf (0 bytes)
+  paginas: —
+  aliases:
+  - Brinton 1871
+  en_repo: true
+- id: camacho-2011
+  obra: Dunas y médanos del estado Falcón (geomorfología del Istmo de los Médanos)
+  autor: Camacho, R. et al.
+  anio: 2011
+  genero: ciencia-natural
+  local:
+  - fuentes_caquetios/Camacho_et_al_2011_Dunas_Medanos_Falcon.pdf
+  paginas: 13
+  aliases:
+  - Camacho et al. 2011
+  - Camacho 2011
+  en_repo: true
+- id: fernandes-2020
+  obra: A genetic history of the pre-contact Caribbean
+  autor: Fernandes, Daniel M. et al.
+  anio: 2020
+  publicacion: Nature 590 (2021), publicado online 2020
+  genero: genetica
+  local:
+  - fuentes_caquetios/Fernandes_et_al_2020_Nature_Genetic_History_Caribbean.pdf
+  paginas: — (archivo vacío)
+  aliases:
+  - Fernandes et al. 2020
+  en_repo: true
+- id: gatschet-1885
+  obra: The Aruba Language and the Papiamento Jargon
+  autor: Gatschet, Albert S. (material recogido por Alphonse L. Pinart, 1882)
+  anio: 1885
+  publicacion: Proceedings of the American Philosophical Society XXII(120), pp. 299-305 (leído el 18 de
+    julio de 1884)
+  genero: vocabulario
+  local:
+  - fuentes_caquetios/Gatschet_1885_Aruba_texto.txt
+  - fuentes_caquetios/Gatschet_1885_biostor_texto.txt
+  paginas: 7 (pp. 299-305; dos OCR del mismo artículo)
+  aliases:
+  - Gatschet 1885
+  - Pinart 1882
+  - The Aruba Language
+  en_repo: true
+- id: gilij-1780-1783
+  obra: Saggio di Storia Americana, vols. 1, 3 y 4
+  autor: Gilij, Filippo Salvatore
+  anio: 1780, 1782, 1783
+  genero: etnografia-misionera
+  local:
+  - fuentes_caquetios/Gilij_1780_Saggio_Storia_Americana_vol1.pdf
+  - fuentes_caquetios/Gilij_1782_Saggio_Storia_Americana_vol3.pdf
+  - fuentes_caquetios/Gilij_1783_Saggio_Storia_Americana_vol4.pdf
+  paginas: 414 + 457 + 452 = 1323
+  aliases:
+  - Gilij
+  - Saggio di Storia Americana
+  en_repo: true
+- id: guerra-curvelo-palabrero
+  obra: Pütchipü'üi, Palabrero Wayuu (cuadernillo, serie Patrimonio Cultural Inmaterial)
+  autor: Ministerio de Cultura de Colombia — basado en Guerra Curvelo, W., *La disputa y la palabra* (2002)
+  anio: 2023
+  genero: etnografia-normativa
+  local:
+  - fuentes_caquetios/GuerraCurvelo_ref_2023_Cuadernillo_Sistema_Normativo_Wayuu_Palabrero.pdf
+  paginas: 22
+  aliases:
+  - cuadernillo del palabrero
+  - Guerra Curvelo
+  - Pütchipü'üi
+  en_repo: true
+- id: jahn-1927
+  obra: Los aborígenes del occidente de Venezuela
+  autor: Jahn, Alfredo
+  anio: 1927
+  genero: etnografia-vocabularios
+  local:
+  - fuentes_caquetios/Jahn_1927_Aborigenes_Occidente_Venezuela.pdf
+  paginas: 510
+  aliases:
+  - Jahn 1927
+  - Los aborígenes del occidente de Venezuela
+  en_repo: true
+- id: keegan-1989
+  obra: 'The Evolution of Avunculocal Chiefdoms: A Reconstruction of Taino Kinship and Politics'
+  autor: Keegan, William F.
+  anio: 1989
+  publicacion: American Anthropologist 91(3)
+  genero: academico
+  acceso: NO consultado en texto completo — identificado vía resúmenes de búsqueda
+  aliases:
+  - Keegan 1989
+  en_repo: false
+- id: las-casas-1875
+  obra: Historia de las Indias, tomo I
+  autor: Las Casas, Bartolomé de
+  anio: 1875 [c. 1561]
+  genero: cronica
+  local:
+  - fuentes_caquetios/Las_Casas_1875_Historia_Indias_vol1.pdf
+  paginas: 613
+  aliases:
+  - Las Casas 1875
+  - Historia de las Indias
+  en_repo: true
+- id: maria-lionza-culto
+  obra: Bibliografía del culto de María Lionza — Ferrándiz 1999 · Fernández Quintana 2016 · Pollak-Eltz
+    1972 · Barreto 1987/1989-90 · Clarac de Briceño 1970
+  autor: varios
+  anio: 1970-2016
+  genero: antropologia-religion
+  acceso: Ferrándiz 1999 y Fernández Quintana 2016 leídos íntegros (PDF en Redalyc); Pollak-Eltz y Barreto
+    solo vía sus citas
+  aliases:
+  - María Lionza
+  - Ferrándiz 1999
+  - Fernández Quintana 2016
+  - Pollak-Eltz
+  en_repo: false
+- id: moreno-mayar-2018
+  obra: Early human dispersals within the Americas
+  autor: Moreno-Mayar, J. V. et al. (53 autores)
+  anio: 2018
+  publicacion: Science 362(6419), eaav2621
+  genero: genetica
+  local:
+  - fuentes_caquetios/MorenoMayar_et_al_2018_Science_Early_Human_Dispersals.pdf
+  paginas: 14
+  aliases:
+  - Moreno-Mayar 2018
+  - Schroeder 2018
+  en_repo: true
+- id: oliver-1989-cap2
+  obra: 'Chapter 2: Arawakan Historical Linguistics'
+  autor: Oliver, José R.
+  anio: 1989
+  genero: linguistica-comparativa
+  local:
+  - fuentes_caquetios/Chapter 2 Linguistics- Oliver 1989.pdf
+  paginas: 109
+  aliases:
+  - Oliver 1989 cap. 2
+  - Oliver cap. 2
+  - Linguistics
+  en_repo: true
+- id: oliver-1989-cap3
+  obra: 'Chapter 3: XVI Century Ethnic Boundaries and the Nature of Caquetío Polities (en *The Archaeological,
+    Linguistic and Ethnohistorical Evidence for the Expansion of Arawakan into Northwestern Venezuela*)'
+  autor: Oliver, José R.
+  anio: 1989
+  genero: academico
+  local:
+  - fuentes_caquetios/Chapter 3 Ethnohistory.DOC-comprimido.pdf
+  paginas: 113
+  aliases:
+  - Oliver 1989 cap. 3
+  - Oliver cap. 3
+  - Ethnohistory
+  en_repo: true
+- id: oviedo-y-banos
+  obra: Historia de la conquista y población de la provincia de Venezuela
+  autor: Oviedo y Baños, José de
+  anio: 1885 [1723]
+  edicion_del_ejemplar: Biblioteca Ayacucho n.º 175 (la cita del corpus es a la edición de 1855 — paginación
+    sin cotejar)
+  genero: cronica
+  local:
+  - fuentes_caquetios/Oviedo_Banhos_Conquista_Poblacion_Venezuela.pdf (519 pp., ÚTIL)
+  paginas: 519
+  aliases:
+  - Oviedo y Baños
+  - Oviedo Baños 1885
+  en_repo: true
+- id: oviedo-y-valdes-1851
+  obra: Historia general y natural de las Indias, vol. I
+  autor: Fernández de Oviedo y Valdés, Gonzalo
+  anio: 1851 [s. XVI]
+  genero: cronica
+  local:
+  - fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1.pdf
+  paginas: — (no legible)
+  aliases:
+  - Oviedo y Valdés
+  - Oviedo 1851
+  - Historia general y natural
+  en_repo: true
+- id: paz-reverol-2017-2018
+  obra: «Hacer los sueños». Una perspectiva wayuu (2017) · Los ritos de muerte y dobles enterramientos
+    en el pueblo wayuu (2018)
+  autor: Paz Reverol, Carmen Laura
+  anio: 2017, 2018
+  publicacion: EntreDiversidades, pp. 277-288 · Interacción y Perspectiva 8(1), pp. 67-92
+  genero: etnografia
+  acceso: PDF completo en Dialnet (artículos 6236107 y 6329268) — leídos íntegros en la sesión 3; NO archivados
+    en el repo
+  aliases:
+  - Paz Reverol 2017
+  - Paz Reverol 2018
+  en_repo: false
+- id: perea-alonso-1942
+  obra: Filología comparada de las lenguas y dialectos arawak, tomo I
+  autor: Perea y Alonso, Sigfrido
+  anio: 1942
+  genero: gramatica
+  local:
+  - fuentes_caquetios/Perea_Alonso_1942_Filologia_Comparada_Arawak_TomoI.pdf (926 pp., ÚTIL)
+  paginas: 926
+  aliases:
+  - Perea Alonso 1942
+  - Filología comparada arawak
+  en_repo: true
+- id: perrin-1992-1995
+  obra: El camino de los indios muertos (1992) · Los practicantes del sueño. El chamanismo wayuu (1995)
+  autor: Perrin, Michel
+  anio: 1992, 1995
+  publicacion: Monte Ávila, Caracas
+  genero: etnografia
+  acceso: NO consultado directamente — se usa vía las citas de [[paz-reverol-2017-2018]]
+  aliases:
+  - Perrin 1992
+  - Perrin 1995
+  en_repo: false
+- id: ramos-perez-1978
+  obra: Reseña (Persée)
+  autor: Ramos Pérez, Demetrio
+  anio: 1978
+  genero: resenia
+  local:
+  - fuentes_caquetios/Ramos_Perez_1978_resenia_Persee.pdf
+  paginas: — (archivo vacío)
+  aliases:
+  - Ramos Pérez 1978
+  - Ramos 1978
+  en_repo: true
+- id: rouse-cruxent-1963
+  obra: Venezuelan Archaeology
+  autor: Rouse, Irving y Cruxent, José María
+  anio: 1963
+  genero: arqueologia
+  local:
+  - fuentes_caquetios/Rouse_Cruxent_1963_Venezuelan_Archaeology.pdf
+  paginas: — (archivo vacío)
+  aliases:
+  - Rouse & Cruxent 1963
+  - Venezuelan Archaeology
+  en_repo: true
+- id: van-buurt-2014
+  obra: Caquetío Indians on Curaçao during colonial times and Caquetío words in the Papiamentu Language
+    — Some names of Animals and Plants in Papiamentu
+  autor: van Buurt, Gerard
+  anio: 2014
+  publicacion: Edición propia, Curaçao (ISBN 978-99904-2-348-8); base en van Buurt & Joubert, *Stemmen
+    uit het Verleden*, 1997
+  genero: glosario-etnohistoria
+  local:
+  - fuentes_caquetios/VanBuurt_2014_CaquetioWords_Papiamentu.txt
+  paginas: 48
+  aliases:
+  - Van Buurt 2014
+  - Caquetío words in Papiamentu
+  en_repo: true
+- id: vansina-ong
+  obra: Oral Tradition as History (Vansina 1985) · Orality and Literacy (Ong 1982)
+  autor: Vansina, Jan · Ong, Walter J.
+  anio: 1985, 1982
+  genero: marco-teorico
+  acceso: NO leídos — síntesis de reseñas y resúmenes de búsqueda
+  aliases:
+  - Vansina 1985
+  - Ong 1982
+  en_repo: false
+- id: zavala-reyes-2015
+  obra: 'Palabras vivas de una lengua muerta: legado arawak-caquetío'
+  autor: Zavala Reyes, Miguel Enrique
+  anio: 2015
+  publicacion: Boletín Antropológico 33(89), enero-junio, pp. 58-76. Universidad de Los Andes, Mérida
+  genero: glosario
+  local:
+  - fuentes_caquetios/Palabras Vivas de una Lengua Muerta.pdf
+  paginas: 20
+  aliases:
+  - Zavala 2015
+  - Zavala Reyes 2015
+  - Palabras Vivas
+  en_repo: true

@@ -5,7 +5,7 @@ description: Minar una fuente documental del proyecto lingüístico caquetío (P
 
 # Minar una fuente
 
-Protocolo destilado de ocho minerías reales. Cada paso está porque **saltárselo
+Protocolo destilado de diez minerías reales. Cada paso está porque **saltárselo
 costó un error concreto** que aquí se nombra.
 
 ## 0. Antes de abrir nada: ¿qué pregunta le haces?
@@ -63,11 +63,46 @@ generoso (`grep -o ".\{300\}PATRÓN.\{400\}"`) y **lee lo que hay alrededor**.
 Localiza la **página impresa**, no la del PDF. Suelen diferir por un desfase
 constante que se calcula una vez (en Antczak: pdf + 130 = impresa).
 
-## 4. Escribir el resultado en la nota de la fuente
+## 4. Repartir el hallazgo por esferas, no solo al lexicón
 
-**El resultado va en `4-fuentes/<slug>.md`, no en un markdown nuevo.** Es regla
-del proyecto (CLAUDE.md). Actualiza también el frontmatter: `estado_minado`,
-`cobertura`, `sostiene`, `verificado`, `minado`.
+**Esta es la parte que se venía haciendo mal.** Medido el 2026-08-06: de 30
+obras, **18 dejan rastro en una sola esfera**. Parte es real —un paper de
+genética no da topónimos— y parte es que se minaba con el lexicón en la cabeza y
+lo demás caía donde cayera.
+
+Antes de escribir nada, pregúntate a **cuál de estas** va cada hallazgo:
+
+| Esfera | Dónde vive | Qué acepta |
+|---|---|---|
+| lengua — léxico | propuesta `lexicon_*.py` | palabras, glosas, afijos |
+| lengua — cognados | `2-lengua/cognados.yaml` | relaciones entre lenguas |
+| lengua — topónimos | `2-lengua/toponimos.yaml`, `morfemas.yaml` | nombres de lugar, formantes |
+| mundo — parentesco | `3-mundo/corpus/parentesco.yaml` | familia, sucesión, linaje |
+| mundo — ecología | `3-mundo/corpus/ecologia.yaml` | medio, fauna, flora, huecos léxicos |
+| mundo — creencia | `3-mundo/corpus/creencia.yaml` | rito, muerte, boratio, cosmos |
+| mundo — transmisión | `3-mundo/corpus/transmision.yaml` | cómo se aprende y se enseña |
+| mundo — geografía política | `geografia_politica.yaml`, `polities-caquetias.md` | territorio, autoridad, polities |
+| experimento | `5-experimento/` | lo que cambia cómo se corre o se mide |
+
+Una fuente buena alimenta **varias**. Oliver cap. 3 dio geografía política,
+guerra, economía y religión en el mismo barrido; Jahn dio parentesco, un mapa de
+polities y una corroboración léxica.
+
+Comprueba después con `python curiana_sim/medir_sostiene.py --esferas`.
+
+## 5. Y escribir la bitácora en la nota de la fuente
+
+La nota (`4-fuentes/<slug>.md`) es la **bitácora**: qué se preguntó, qué se
+halló, qué **no** se halló, qué deuda queda. Ya no es el almacén — el dato vive
+en su esfera y cita la obra por `procedencia.obra`.
+
+Actualiza el frontmatter: `estado_minado`, `cobertura`, `verificado`, `minado`.
+
+⚠️ **`sostiene` no se toca a mano.** Se mantenía así y ha derivado en 17 de 30
+obras. Lo mide `medir_sostiene.py`.
+
+Si la obra es nueva en el repo, regenera la bibliografía para que su id exista
+como clave foránea: `python curiana_sim/generar_bibliografia.py`.
 
 Estructura que funciona:
 
@@ -77,7 +112,7 @@ Estructura que funciona:
 - **Veredicto por entrada** si el encargo era verificar entradas del corpus.
 - **Qué falta**, incluida la deuda documental nueva que la minería genera.
 
-## 5. Las negativas valen tanto como las positivas
+## 6. Las negativas valen tanto como las positivas
 
 Oviedo y Baños fue señalada *"por su cobertura de sucesión cacical"*. Medido: la
 cobertura **no existe** (Manaure aparece 2 veces en 519 páginas). Escribir eso
@@ -86,7 +121,7 @@ ahorra que alguien vuelva a gastar una noche ahí.
 Un hallazgo negativo **bien medido** baja la prioridad de una fuente y eso es
 progreso.
 
-## 6. Propuesta, no fusión
+## 7. Propuesta, no fusión
 
 **No toques `curiana_lexicon.py` ni `3-mundo/corpus/*.yaml` en una minería.**
 
@@ -97,7 +132,7 @@ fuentes sin romper nada.
 ⚠️ Excepción con trampa: `lexicon_zavala.py` **sí** lo importa
 `curiana_lexicon`. Regenerarlo cambia `score_linguistico()`.
 
-## 7. Segundas atestaciones y conflictos
+## 8. Segundas atestaciones y conflictos
 
 Si la fuente confirma algo que ya estaba: eso **sube** una entrada de "una
 fuente" a "dos independientes", que es de lo más valioso que hay.
@@ -109,10 +144,10 @@ del que viene la duda. Una corroboración falsa es peor que ninguna.
 Si contradice al lexicón, **no reescribas la glosa**: añade la evidencia a
 `notas` y levanta/actualiza el issue. Cambiar una glosa mueve canon.
 
-## 8. Cerrar
+## 9. Cerrar
 
 ```bash
-python curiana_sim/guardianes.py     # los cinco en verde
+python curiana_sim/guardianes.py     # los siete en verde
 python curiana_sim/generar_tablero.py
 ```
 

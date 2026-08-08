@@ -1,0 +1,765 @@
+meta:
+  generado_por: curiana_sim/migrar_cognados.py
+  cognados: 51
+  con_procedencia: 16
+  sin_procedencia: 35
+  lenguas_nucleo:
+  - CAIC
+  - CQ
+  - KL
+  - LK
+  - PA
+  - PJ
+  - TN
+  - WY
+  lenguas_comparanda: 25
+  no_son_cognados: 2
+  nota: 'Fusión de arahuaco_comparative.COGNADOS (37, sin procedencia) y cognados_oliver.COGNADOS_OLIVER
+    (16, con página y ancla). Las formas van en un mapa abierto: los códigos en mayúscula son el núcleo
+    con reglas de transducción; los nombres en minúscula son comparanda citada, y son abiertos a propósito.'
+cognados:
+- id: cognado-001
+  glosa: ceniza (y, por extensión colonial, pólvora)
+  formas:
+    PA: '*p-/b-ali-'
+    CQ: barisi
+    WY: palíi
+    LK: bálisi
+  fuente: atestiguado
+  procedencia:
+    obra: oliver-1989-cap2
+    pagina: 142
+    ancla: the toponym bari-si-ki-meto
+  confianza: alta
+  clave_origen: ceniza
+  nota: 'El documento de 1579 glosa barisi como ''agua turbia/lodosa'' del río (Río Turbio > Barquisimeto).
+    Oliver separa dos morfemas sobre la misma raíz: bari-si ''ceniza'' y bari-ki ''rojizo''. El par CQ
+    barisi : LK bálisi : WY palíi es la evidencia más limpia del capítulo de que el caquetío conserva
+    /b-/ como el lokono, frente al /p-/ guajiro (ver C3).'
+- id: cognado-002
+  glosa: almagre, óxido férrico rojo usado como pintura corporal
+  formas:
+    CQ: bariki
+    achagua: ki-rrayi
+    piapoco: ki-reri
+    otras: ki-lali
+  fuente: atestiguado
+  procedencia:
+    obra: oliver-1989-cap2
+    pagina: 142
+    ancla: some painted [their bodies] with bariki which is like
+  confianza: baja
+  clave_origen: rojo_almagre
+  duda_del_autor: '"The etymology, however, is not too clear since the dependent segmental morpheme for
+    ''red'' is -ira- or -ila- rather than ki-" (n. 40, p. 143). Oliver propone leer ki- como el prefijo
+    atributivo /kV-/ (''que tiene la cualidad de''), no como el lexema ''rojo''.'
+  nota: 'Ya en el lexicón como `bariki`/`barique` vía Zavala 2015 #35.'
+- id: cognado-003
+  glosa: danta, tapir (Tapirus terrestris)
+  formas:
+    PA: '*-ama / *-Vma-'
+    CQ: kama
+    WY: ama'
+    karro: hema
+    maipure: kiema
+    baré: dehema
+    achagua: emayenesi
+    yavitero: kema
+    baniva: ema
+    cauyarí: ?e.ma
+    piro: xema
+    amarakaeri: keme
+  fuente: atestiguado
+  procedencia:
+    obra: oliver-1989-cap2
+    pagina: 143
+    ancla: is defined as danta (Spanish) or tapir
+  confianza: alta
+  clave_origen: tapir
+  nota: 'El set más ancho del capítulo: 9 lenguas arahuacas más dos preandinas. Oliver observa que la
+    raíz se reaplicó al ganado europeo donde no había referente americano (WY ama'' ''caballo'').'
+- id: cognado-004
+  glosa: árbol, madera, corteza, piel (la parte por el todo)
+  formas:
+    PA: '*at-/-ada-'
+    CQ: -ada-
+    WY: ata'
+    LK: ada
+    baniva: aáta-pi
+    manao: ata
+    baré: adda
+    wapishana: ata-man
+    maipure: aá
+    terena: m-oto-ru
+    kinikinao: m-oto-ke
+    campa: ota-ki
+    machiguenga: ota-kyi
+    piro: m-ta
+    ipuriná: m-ata
+  fuente: atestiguado
+  procedencia:
+    obra: oliver-1989-cap2
+    pagina: 144
+    ancla: The Caquetío stem -ada- is characteristic of Maipuran languages
+  confianza: alta
+  clave_origen: arbol
+  duda_del_autor: 'Sobre el par LK ada : WY ata'' ''árbol'' (p. 120): "It is not clear if this is a shift
+    in meaning or whether the recorder was given a term for the part (bark for tree) and interpreted for
+    the whole... For now, I do not count the pair of terms for ''tree'' as cognates." La cognación de
+    la RAÍZ no está en duda; lo que está en duda es contarlos como el mismo ítem léxico en la lexicoestadística.'
+  nota: 'CLAVE: "having the phoneme /d/ rather than /t/ appears to make it closer to Lokono than to Paraujano
+    or Guajiro" (p. 144). Es uno de los tres pilares de la filiación caquetío-lokono. Ver ANCLA_ARCO_NORTENO.'
+- id: cognado-005
+  glosa: auyama, calabaza de botella / calabacín
+  formas:
+    CQ: auyama
+    achagua: uyama
+    guarequena: uiiayama
+    baniva: ui-iama
+    yavitero: oyama
+    maipure: aviama
+    baria: ui-iama
+    mandauaca: ui-iama
+  fuente: atestiguado
+  procedencia:
+    obra: oliver-1989-cap2
+    pagina: 145
+    ancla: Achagua has the term uyama as cognate of Caquetio's auyama
+  confianza: alta
+  clave_origen: calabaza
+  duda_del_autor: '"has been thoroughly incorporated to modern Venezuelan Spanish" (p. 144) — la forma
+    que conocemos pasó por el español, no la recogió un lingüista.'
+  no_cognado:
+    LK: hihuida
+    WY: kala'pua / wuirru
+    PJ: wüir
+    TN: wíro
+    piapoco: ayi
+  nota: 'Set NEGATIVO valioso: el caquetío se alinea con achagua/alto Negro y NO con lokono ni con el
+    par guajiro-paraujano-taíno (wuirru/wüir/wíro). Contradice parcialmente la tesis lokonoide del propio
+    Oliver: él no lo comenta.'
+- id: cognado-006
+  glosa: espíritu, diablo, duende (topónimo Capubana, Paraguaná)
+  formas:
+    CQ: capú
+    wapishana: capishi
+    baré: capuyo carlene
+  fuente: atestiguado
+  procedencia:
+    obra: oliver-1989-cap2
+    pagina: 145
+    ancla: Capú is the Caquetío term which, according to a 1579 document
+  confianza: baja
+  clave_origen: espiritu_maligno
+  duda_del_autor: '"There is one caution, however. The Carib speaking Tamanaco have the term capu, /kapu/,
+    for ''sky''; therefore, the possibility of borrowing from Tamanaco (Carib) to Caquetío (Arawak) or
+    vice-versa cannot be discounted" (p. 145).'
+  nota: Oliver apoya la lectura arahuaca en el topónimo Capubana y en una leyenda moderna de duende que
+    él mismo oyó cerca de Santa Ana (Paraguaná) — evidencia etnográfica del s. XX, no filológica del XVI.
+- id: cognado-007
+  glosa: bachaco, hormiga roja grande (Atta sp.)
+  formas:
+    CQ: koke
+    LK: kuse
+    yavitero: hoke
+    maipure: kuki
+  fuente: atestiguado
+  procedencia:
+    obra: oliver-1989-cap2
+    pagina: 145
+    ancla: The term coque or /koke/ is defined as
+  confianza: media
+  clave_origen: bachaco
+  duda_del_autor: 'El segundo set (mandauaca ko-oue, karru kabirri, baria kute, piapoco kahue, baniva
+    ()uehe) queda fuera: "the second /k/ is not found as in the former set, and the sound change can not
+    be explained (e.g. kabirri : koke)" (p. 146). Y advierte parecidos NO arahuacos: ye''kuana chauke,
+    karina kumako, yaruro kohi.'
+  nota: 'koke : hoke : kuki : kuse es el único subconjunto que Oliver sostiene.'
+- id: cognado-008
+  glosa: señor o cacique principal, al que otros caciques están sujetos
+  formas:
+    CQ: diao
+    LK: dai-yana-ho
+  fuente: atestiguado
+  procedencia:
+    obra: oliver-1989-cap2
+    pagina: 146
+    ancla: 'DIAO: Lord or cacique of the zaquitios territory'
+  confianza: media
+  clave_origen: senor_diao
+  duda_del_autor: '"From the above I could suggest that Caquetío /d-ia(o)/ is cognate to the stem /d-ai-/
+    of Lokono" — formulación condicional, no afirmación.'
+  nota: 'Análisis de Oliver: /d-/ 1sg + raíz ''palabra/lengua'' (LK dia ''palabra'', adian ''lengua'',
+    wa-(a)dia-ni-wa ''nuestra lengua'') + /-(h)o/ nominalizador solemne. ES UNA ETIMOLOGÍA DISTINTA de
+    la de daitiao. Ver NUDO_DAITIAO.'
+- id: cognado-009
+  glosa: pariente o aliado ritual; el que presta su nombre (intercambio de nombres)
+  formas:
+    PA: '*-atti-'
+    CQ: daitiao
+    LK: da-tti / da-iti
+    TN: daitia-o / waitiao / watiao
+  fuente: atestiguado
+  procedencia:
+    obra: oliver-1989-cap2
+    pagina: 147
+    ancla: This Taíno term is cognate to Caquetio daitiao
+  confianza: alta
+  clave_origen: pariente_aliado
+  duda_del_autor: 'Sobre datihao (n. 42, p. 146): "I have no absolute certainty that it belongs to a Caquetío
+    language since Oviedo only speaks --at that specific juncture-- of the Indians of Province of Venezuela
+    in general... He could very well have used Taíno to express the relationship". Concluye: "makes me
+    suspect that datihao was equally shared by both Taíno and Caquetío".'
+  nota: 'Morfología explícita: /wa- [gua-]/ = 3.ª persona plural; /da-/ = 1.ª persona singular. Las Casas
+    [1552] 1929 II:291 documenta el rito de intercambio de nombres entre Juan Ponce de León y el cacique
+    Agüeybaná (''se hicieron guaitiaos'').'
+- id: cognado-010
+  glosa: diente
+  formas:
+    PA: '*/a(r/l)i/'
+    CQ: dare
+    WY: t-ali
+    LK: d-ari
+    TN: m-a(h)i-te
+    PJ: t-a()i
+  fuente: atestiguado
+  procedencia:
+    obra: oliver-1989-cap2
+    pagina: 147
+    ancla: in coastal Falcón we find the term dare for tooth
+  confianza: alta
+  clave_origen: diente
+  duda_del_autor: '"although it is known to just a few individuals in Paraguaná" — dato etnográfico del
+    s. XX recogido por el propio Oliver, no de crónica.'
+  nota: 'EL PAR MÁS PRODUCTIVO DEL CAPÍTULO. Cuatro lenguas con la misma raíz y el prefijo de 1sg contrastando:
+    CQ d- = LK d- ≠ WY t- = PJ t-. Sostiene C1 y falsifica la regla `^d → t` de REGLAS_LK_CQ. El lexicón
+    ya tiene `dare` vía Zavala #103; lo que faltaba era el par.'
+- id: cognado-011
+  glosa: fruto del cardón (pitahaya); lit. 'la hija del cardón'
+  formas:
+    CQ: dato
+    LK: -atti-
+  fuente: atestiguado
+  procedencia:
+    obra: oliver-1989-cap2
+    pagina: 147
+    ancla: The other fruit is called in their Indian language as dato
+  confianza: media
+  clave_origen: fruto_cardon
+  duda_del_autor: '"Here it seems quite probable that, etymologically..." y "-ato probably relating to
+    Lokono -atti-". Oliver mismo lo llama "to put it tritely".'
+  nota: 'El otro fruto del mismo cardón, caduchi (''breva''), queda SIN etimología en Oliver. Ambos están
+    ya en el lexicón vía Zavala (#105, #55).'
+- id: cognado-012
+  glosa: chamán, piache
+  formas:
+    CQ: boratio
+    LK: -atti- + -hu
+    TN: -atti- + -hu
+  fuente: atestiguado
+  procedencia:
+    obra: oliver-1989-cap2
+    pagina: 147
+    ancla: The term boratio for 'shaman' again includes the ubiquitous stem
+  confianza: media
+  clave_origen: chaman_boratio
+  nota: 'Descomposición: bor- + /-ati/ (parentesco) + /-(h)o/ nominalizador solemne (/-hu/ en taíno-lokono).
+    El primer segmento queda sin analizar. Distinto de `piache` (< PA *piay), que el proyecto ya tiene
+    en COGNADOS.'
+- id: cognado-013
+  glosa: ser vivo, criatura viviente (NO 'gente propia')
+  formas:
+    PA: '*/kake/i/-thi/-o/'
+    CQ: kaketío
+    LK: kakïtho
+    piro: kaxiti
+    ipuriná: kakiti
+  fuente: atestiguado
+  procedencia:
+    obra: oliver-1989-cap2
+    pagina: 148
+    ancla: It is obvious that Lokono kakïtho is cognate of the Caquetío term
+  confianza: alta
+  clave_origen: persona_ser_vivo
+  no_cognado:
+    LK_alt: loko / loko-no
+  nota: 'CORRIGE COGNADOS[''persona''] del proyecto, que empareja CQ ''caquetio'' con LK ''lokono'', WY
+    ''wayuu'' y TN ''taino'' como autónimos paralelos con la glosa ''persona arahuaca, gente propia''.
+    Oliver dice tres cosas incompatibles con eso: (1) el cognado de kaketío es kakïtho, no lokono; (2)
+    kakïtho glosa ''ser vivo'' e incluye MÁS que loko; (3) loko-no y kaketío no son cognados entre sí.
+    Correspondencia derivada: CQ /t/ : LK /th/ (ver C4b).'
+- id: cognado-014
+  glosa: canal excavado para riego; presa
+  formas:
+    CQ: buko
+    LK: wáburúkku / wáboróko
+  fuente: atestiguado
+  procedencia:
+    obra: oliver-1989-cap2
+    pagina: 148
+    ancla: defined the Caquetío term buco /buko/as a channel dug into the earth
+  confianza: media
+  clave_origen: canal_buco
+  duda_del_autor: '"These terms are probably cognate to Caquetío buko" — y el argumento es semántico (''sendero
+    angosto'' ≈ ''canal''), no fonológico.'
+  nota: 'Ballesteros [1550] vía Bécker 1950a. En el lexicón `buco` está etiquetado `caquetío` (no -atestiguado)
+    con la reserva de Alvarado 1921, que lo cree romance. Oliver aporta el lado arahuaco de la disputa:
+    NO la cierra.'
+- id: cognado-015
+  glosa: perro
+  formas:
+    PA: '*Africada-/i/-nV'
+    CQ: auri
+    PJ: -y-eri
+    CAIC: auri / auli
+    maipure: auri
+    achagua: auri
+    piapoco: auri
+    wapishana: a()ri-merak
+    cauyarí: cha-aw()i
+    guarequena: chi-nu/o
+    mandauaca: chi-nu/o
+    baniva: tsinu
+    werekena: tsinu
+    tariana: tsíinu
+    baré: shino
+    campa: o-chi-tu
+    matsigüenga: o-tsi-ti
+    amuesha: oo-che-k
+  fuente: atestiguado
+  procedencia:
+    obra: oliver-1989-cap2
+    pagina: 151
+    ancla: The term for 'dog' in Caquetío is auri
+  confianza: alta
+  clave_origen: perro
+  duda_del_autor: 'El término lo halló en una lista de vocabulario CUYÓN, no caquetía: "there is little
+    doubt that the Cuyón borrowed the term from the neighboring Caquetío of Barquisimeto" — inferencia
+    por distribución geográfica, no atestación directa en boca caquetía.'
+  nota: 'INNOVACIÓN proto-norteña: auri/auli sustituye a la forma proto-arahuaca *Africada-i-nV, que sobrevive
+    en el Alto Río Negro. Es uno de los tres pilares de la filiación lokonoide del caquetío. El lexicón
+    NO tiene ninguna palabra caquetía para ''perro'' (solo el wayunaiki erü).'
+- id: cognado-016
+  glosa: mar
+  formas:
+    PA: '*para'
+    CQ: para
+    WY: palaa'
+    TN: bara-wa
+  fuente: atestiguado
+  procedencia:
+    obra: oliver-1989-cap2
+    pagina: 150
+    ancla: 'para- for ''sea'' [Guajiro: /palaa''/, Taíno: /bara-wa/]'
+  confianza: alta
+  clave_origen: mar
+  nota: 'Ya está en COGNADOS del proyecto (con LK bara, TN bagua). Oliver aporta TN bara-wa, más cercano
+    a bara que bagua. **Es la excepción a C3**: aquí el caquetío tiene /p/ donde el taíno tiene /b/. Oliver
+    no lo comenta.'
+- id: cognado-017
+  glosa: sol
+  formas:
+    PA: '*kali'
+    CQ: cazi
+    WY: kai
+    LK: adali
+    KL: wiru
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: sol
+- id: cognado-018
+  glosa: luna
+  formas:
+    PA: '*kati'
+    CQ: cati
+    WY: kachi
+    LK: katsi
+    KL: kati
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: luna
+- id: cognado-019
+  glosa: mar, agua extensa
+  formas:
+    PA: '*para'
+    CQ: para
+    WY: palaa
+    LK: bara
+    TN: bagua
+    KL: barana
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: mar
+- id: cognado-020
+  glosa: canoa, embarcación
+  formas:
+    PA: '*kanoa'
+    CQ: canoa
+    LK: kannoa
+    TN: canoa
+    KL: kanawa
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: canoa
+- id: cognado-021
+  glosa: hamaca, cama colgante
+  formas:
+    PA: '*hamaka'
+    CQ: hamaca
+    LK: hamaha
+    TN: hamaca
+    KL: hamaka
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: hamaca
+- id: cognado-022
+  glosa: casabe, pan de yuca
+  formas:
+    PA: '*kasabi'
+    CQ: casabe
+    LK: kasabi
+    TN: casabe
+    KL: kasabi
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: casabe
+- id: cognado-023
+  glosa: chamán, curandero, piache
+  formas:
+    PA: '*piay'
+    CQ: piache
+    LK: piaye
+    TN: bejique
+    KL: buyei
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: chaman
+- id: cognado-024
+  glosa: iguana (Iguana iguana)
+  formas:
+    PA: '*iwana'
+    WY: iwana
+    LK: iwana
+    TN: higuana
+    KL: iwana
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: iguana
+- id: cognado-025
+  glosa: caimán (Caiman crocodilus)
+  formas:
+    PA: '*kaiman'
+    LK: kaiman
+    TN: caiman
+    KL: kaiman
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: caiman
+- id: cognado-026
+  glosa: piedra, roca
+  formas:
+    PA: '*siba'
+    LK: siba
+    TN: siba
+    KL: siba
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: piedra
+- id: cognado-027
+  glosa: isla, cayo
+  formas:
+    PA: '*kairi'
+    CQ: cairi
+    LK: kairi
+    TN: cai
+    KL: kairi
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: isla
+- id: cognado-028
+  glosa: yuca, mandioca (Manihot esculenta)
+  formas:
+    PA: '*yuka'
+    CQ: yuca
+    LK: yuka
+    TN: yuca
+    KL: yuka
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: yuca
+- id: cognado-029
+  glosa: maíz (Zea mays)
+  formas:
+    PA: '*marisi'
+    LK: marisi
+    TN: maisi
+    KL: marisi
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: maiz
+- id: cognado-030
+  glosa: ají, pimienta (Capsicum sp.)
+  formas:
+    PA: '*achi'
+    LK: achi
+    TN: aji
+    KL: achi
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: aji
+- id: cognado-031
+  glosa: tabaco (Nicotiana tabacum)
+  formas:
+    PA: '*iuli'
+    LK: iuli
+    TN: cohiba
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: tabaco
+- id: cognado-032
+  glosa: sabana, llanura
+  formas:
+    PA: '*sallaba'
+    LK: sallaban
+    TN: sabana
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: sabana
+- id: cognado-033
+  glosa: barbacoa, parrilla, lugar de provisiones
+  formas:
+    PA: '*barraha-koa'
+    LK: barrahakoa
+    TN: barbacoa
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: barbacoa
+- id: cognado-034
+  glosa: persona arahuaca, gente propia
+  formas:
+    PA: '*lokono'
+    CQ: caquetio
+    WY: wayuu
+    LK: lokono
+    TN: taino
+    KL: kalinagu
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: persona
+- id: cognado-035
+  glosa: casa, vivienda
+  formas:
+    PA: '*isikoa'
+    LK: sikoa
+    TN: bohio
+    KL: ikoa
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: casa
+- id: cognado-036
+  glosa: agua, río
+  formas:
+    PA: '*tuna'
+    CQ: tuy
+    WY: wuin
+    LK: tuna
+    TN: tuna
+    KL: duna
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: agua_rio
+- id: cognado-037
+  glosa: padre
+  formas:
+    PA: '*itti'
+    CQ: tata
+    LK: itti
+    TN: taita
+    KL: baba
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: padre
+- id: cognado-038
+  glosa: madre
+  formas:
+    PA: '*uju'
+    LK: uju
+    KL: naha
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: madre
+- id: cognado-039
+  glosa: uno, un
+  formas:
+    PA: '*aba'
+    WY: aba
+    LK: abba
+    KL: aban
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: uno
+- id: cognado-040
+  glosa: dos
+  formas:
+    PA: '*biama'
+    LK: biama
+    TN: yamosa
+    KL: biama
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: dos
+- id: cognado-041
+  glosa: mano
+  formas:
+    PA: '*akkabu'
+    LK: akkabu
+    KL: akabi
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: mano
+- id: cognado-042
+  glosa: corazón, centro vital
+  formas:
+    PA: '*ukku'
+    LK: ukku
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: corazon
+- id: cognado-043
+  glosa: arco (arma)
+  formas:
+    PA: '*semaara-haaba'
+    LK: semaara-haaba
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: arco
+- id: cognado-044
+  glosa: flecha
+  formas:
+    PA: '*semaara'
+    LK: semaara
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: flecha
+- id: cognado-045
+  glosa: grande, de gran tamaño
+  formas:
+    PA: '*ipiru'
+    LK: firo
+    KL: firo
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: grande
+- id: cognado-046
+  glosa: no, negación (prefijo)
+  formas:
+    PA: '*ma'
+    WY: ma
+    LK: ma
+    TN: mayani
+    KL: ma
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: negacion
+- id: cognado-047
+  glosa: firmamento, bóveda celeste
+  formas:
+    PA: '*kassaku'
+    WY: siruma
+    LK: kassaku
+    KL: kasaku
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: firmamento
+- id: cognado-048
+  glosa: pez, pescado
+  formas:
+    PA: '*itime'
+    LK: itime
+    KL: pira
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: pez
+- id: cognado-049
+  glosa: fuego
+  formas:
+    PA: '*yuru'
+    WY: yuru
+    KL: iduru
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: fuego
+- id: cognado-050
+  glosa: Caribe, pueblo Kalinago (nombre arahuaco y autónimo)
+  formas:
+    CQ: karibna
+    LK: karibna
+    TN: caribe
+    KL: kalínagu
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: caribe_gente
+- id: cognado-052
+  glosa: persona, ser humano (registro femenino KL)
+  formas:
+    PA: '*hianaru'
+    LK: hianaro
+    KL: hiñaru
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: hombre_KL
+no_son_cognados:
+- id: cognado-051
+  glosa: quiripa, concha-moneda; medio de intercambio costero
+  formas:
+    CQ: quiripa
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: quiripa
+  diagnostico: NO está en VOCABULARIO_BASE — este registro es su única constancia; moverlo al lexicón
+    antes de retirarlo de aquí
+- id: cognado-053
+  glosa: hombre (registro masculino Kalinago, origen caribe)
+  formas:
+    KL: baruwa
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: hombre_caribe
+  diagnostico: ya existe en VOCABULARIO_BASE — este registro sobra
