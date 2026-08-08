@@ -138,14 +138,44 @@ miden 16.
 > clave foránea — que es justamente el argumento para migrar también corpus y
 > lexicón a `procedencia.obra`.
 
+## El corpus, a medio migrar — y por qué a medias a propósito
+
+`migrar_corpus_procedencia.py` derivó la obra desde la `referencia` en prosa de
+los 161 hechos. Resultado:
+
+| | n | Qué pasa |
+|---|---|---|
+| citan **una** obra → migrados | **58** | `procedencia: {obra: …}` añadida |
+| citan **varias** → sin decidir | 38 | es la cadena de custodia, ver abajo |
+| sin obra reconocible | 65 | web, analogías, reconstrucciones |
+
+Los 38 ambiguos **no son un fallo del script**: son la cadena de custodia real
+del proyecto. `creencia-001` cita Arcaya, Jahn **y** Oviedo y Valdés porque el
+dato es de Oviedo y llega *vía* los otros dos. Elegir una por frecuencia
+falsearía justo lo que el proyecto más cuida. Necesitan un `procedencia` con
+`obra` + `via`, y decidir cuál es cuál es lectura, no script.
+
+> 📌 **La `referencia` en prosa no se toca, y no es transitorio.** Dice cosas
+> que un id no puede: la página, la cita textual, el «vía tal». Los dos campos
+> conviven — uno es para leer, el otro para comprobar.
+
+⚠️ Nota de método: la primera versión de la migración cargaba y volvía a volcar
+el YAML con `yaml.safe_dump`, y **reformateaba los archivos enteros** — los
+bloques `>` de `contenido` se volvían cadenas entrecomilladas y los comentarios
+de cabecera desaparecían. Sobre datos de investigación curados eso es
+inaceptable. La versión buena inserta el bloque **como texto**: el diff son 58
+inserciones y **cero borrados**.
+
 ## Lo que falta
 
-1. **Migrar `corpus` y `lexicón` a `procedencia.obra`.** Es lo que haría exactas
-   las cuatro columnas y cerraría el círculo.
-2. **Cambiar los consumidores.** `arahuaco_comparative.COGNADOS` todavía
+1. **Los 38 ambiguos**, con un `procedencia` que exprese la cadena
+   (`obra` + `via`).
+2. **El lexicón a `procedencia.obra`.** Es el que más entradas tiene (1413) y
+   el que peor se mide hoy por apellido.
+3. **Cambiar los consumidores.** `arahuaco_comparative.COGNADOS` todavía
    alimenta `transducir()` desde el Python; el YAML existe pero nadie lo lee aún.
    Antes de cambiarlo hay que congelar la salida actual con un test.
-3. **Decidir el caso `para`** y qué hacer con `quiripa`.
+4. **Decidir el caso `para`** y qué hacer con `quiripa`.
 
 ## Enlaces
 

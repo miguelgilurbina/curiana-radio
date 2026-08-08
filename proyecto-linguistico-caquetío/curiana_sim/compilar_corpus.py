@@ -358,6 +358,53 @@ def validar_referencias_cruzadas(hechos: list) -> list:
     return problemas
 
 
+def _obras_de_la_bibliografia():
+    """Los ids de `4-fuentes/bibliografia.yaml`, o None si no existe."""
+    ruta = os.path.join(_AQUI, "..", "4-fuentes", "bibliografia.yaml")
+    if not os.path.exists(ruta):
+        return None
+    with open(ruta, encoding="utf-8") as fh:
+        doc = yaml.safe_load(fh) or {}
+    return {o["id"] for o in doc.get("obras", []) if o.get("id")}
+
+
+def validar_procedencia(hechos: list, obras) -> list:
+    """`procedencia.obra` es una clave foránea contra la bibliografía.
+
+    El campo es **opcional** todavía: 58 de los 161 hechos lo tienen (los que
+    citaban una sola obra de forma inequívoca). Los demás siguen con la
+    `referencia` en prosa, que no se toca — dice cosas que un id no puede
+    (página, cita textual, "vía tal").
+
+    Lo que sí se comprueba es que, cuando está, apunte a una obra real. Sin
+    esto, migrar el corpus a ids habría cambiado un texto libre por otro.
+    """
+    problemas = []
+    if obras is None:
+        return [_aviso("sin-bibliografia", "4-fuentes/bibliografia.yaml",
+                       "no existe: las citas del corpus no se pueden comprobar. "
+                       "Genérala con `python curiana_sim/generar_bibliografia.py`")]
+
+    for hecho in hechos:
+        proc = hecho.get("procedencia")
+        if proc is None:
+            continue
+        donde = _donde(hecho)
+        if not isinstance(proc, dict):
+            problemas.append(_error("procedencia-mal-formada", donde,
+                                    f"es {type(proc).__name__}, se esperaba dict"))
+            continue
+        obra = proc.get("obra")
+        if not obra:
+            problemas.append(_error("procedencia-sin-obra", donde,
+                                    "`procedencia` sin campo `obra`"))
+        elif obra not in obras:
+            problemas.append(_error(
+                "obra-fantasma", donde,
+                f"cita la obra `{obra}`, que no está en la bibliografía"))
+    return problemas
+
+
 def validar_rutas(hechos: list) -> list:
     """Nadie puede citar `curiana_sim/cultura/`: ya no existe."""
     problemas = []
@@ -511,6 +558,7 @@ def compilar(directorio: str = CORPUS_DIR, universo=None):
     problemas += validar_etiquetas(hechos)
     problemas += validar_referencias_cruzadas(hechos)
     problemas += validar_rutas(hechos)
+    problemas += validar_procedencia(hechos, _obras_de_la_bibliografia())
     if agentes:
         problemas += validar_agentes(hechos, agentes, fondo)
         problemas += validar_genealogia(genealogia, agentes)

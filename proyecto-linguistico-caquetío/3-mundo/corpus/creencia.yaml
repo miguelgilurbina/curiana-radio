@@ -50,6 +50,7 @@
     donde se cura.
   fuente: reconstruido
   referencia: "Perrin 1995, chamanismo wayuu (oütsü); analogía arahuaca"
+  procedencia: {obra: perrin-1992-1995}
   dominios: [creencia, medicina]
   agentes_relacionados: [Shaboro, Buio-sha]
   implicacion_simulacion: >
@@ -134,6 +135,7 @@
     parece al mal lo cura.
   fuente: reconstruido
   referencia: "Paz Reverol 2017 (ayülee vs wanülüü; homología wayuu)"
+  procedencia: {obra: paz-reverol-2017-2018}
   dominios: [creencia, medicina]
   agentes_relacionados: [Paugis-sha, Shaboro, Buio-sha]
   implicacion_simulacion: >
@@ -151,6 +153,7 @@
     mismo muerto es amenaza y guardián según se lo atienda.
   fuente: reconstruido
   referencia: "Paz Reverol 2017 (yoluja wayuu, ambivalentes)"
+  procedencia: {obra: paz-reverol-2017-2018}
   dominios: [creencia, muerte]
   agentes_relacionados: [Bana-mana, Paugis-sha, Shaboro]
   implicacion_simulacion: >
@@ -165,6 +168,7 @@
     o recorriendo el bosque y la sabana.
   fuente: atestiguado
   referencia: "Arcaya 1920:104-108 (indios de Coro/Falcón, síntesis de crónicas)"
+  procedencia: {obra: arcaya-1920}
   dominios: [creencia, muerte]
   agentes_relacionados: [Shaboro, Bana-mana]
   implicacion_simulacion: >
@@ -180,6 +184,7 @@
     en la otra vida".
   fuente: atestiguado
   referencia: "Arcaya 1920:103,110,117 (indios de Coro/Falcón)"
+  procedencia: {obra: arcaya-1920}
   dominios: [creencia, muerte]
   agentes_relacionados: [Shaboro]
   implicacion_simulacion: >
@@ -270,6 +275,7 @@
     o ancianos, por su relación con las fuerzas de la muerte y la sequía.
   fuente: reconstruido
   referencia: "Paz Reverol 2018 (exhumadora wayuu ligada a Pulowi; tabúes)"
+  procedencia: {obra: paz-reverol-2017-2018}
   dominios: [creencia, muerte]
   agentes_relacionados: [Paugis-sha, Sha-corie, Bana-mana]
   implicacion_simulacion: >
@@ -283,6 +289,7 @@
     lluvia que hace germinar la semilla.
   fuente: reconstruido
   referencia: "Paz Reverol 2018 citando Civrieux 1980 (cumanagotos); analogía regional"
+  procedencia: {obra: paz-reverol-2017-2018}
   dominios: [creencia, muerte, calendario]
   agentes_relacionados: [Corie-ko, Bana-mana, Shaboro]
   implicacion_simulacion: >
@@ -313,6 +320,7 @@
     ceremonias y transmisión oral.
   fuente: reconstruido
   referencia: "canon §2; Jahn 1927:384 (Bajada del Ches en enero, pueblos vecinos, como paralelo de rito estacional)"
+  procedencia: {obra: jahn-1927}
   dominios: [creencia, calendario]
   agentes_relacionados: [Shaboro, Manaure, Bana-mana]
   implicacion_simulacion: >
@@ -337,6 +345,7 @@
     oficial.
   fuente: retro-abstraido
   referencia: "Ferrándiz 1999 (Sorte); traza compatible con los 'espíritus dueños' del canon"
+  procedencia: {obra: maria-lionza-culto}
   dominios: [creencia]
   agentes_relacionados: [Shaboro, Manaure]
   implicacion_simulacion: >
@@ -352,6 +361,7 @@
     presencia caquetía en el valle.
   fuente: atestiguado
   referencia: "Zavala Reyes 2015, entradas 232 y 284 (Boletín Antropológico Nº 89, ULA)"
+  procedencia: {obra: zavala-reyes-2015}
   dominios: [creencia, geografia, lengua]
   agentes_relacionados: [Shaboro, Bana-mana]
   implicacion_simulacion: >
@@ -384,6 +394,7 @@
     del sustrato.
   fuente: retro-abstraido
   referencia: "Ferrándiz 1999; Fernández Quintana 2016; Pollak-Eltz 1972 (Corte India, invención s. XX)"
+  procedencia: {obra: maria-lionza-culto}
   dominios: [creencia, poder]
   agentes_relacionados: [Manaure]
   implicacion_simulacion: >
@@ -399,6 +410,7 @@
     candidatas a retro-abstracción del sustrato caquetío.
   fuente: retro-abstraido
   referencia: "Ferrándiz 1999; Clarac de Briceño 1970; Fernández Quintana 2016"
+  procedencia: {obra: maria-lionza-culto}
   dominios: [creencia]
   agentes_relacionados: []
   implicacion_simulacion: >

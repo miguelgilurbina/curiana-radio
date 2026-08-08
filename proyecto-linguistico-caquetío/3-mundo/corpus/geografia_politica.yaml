@@ -13,6 +13,7 @@
     préstamos léxicos caquetíos que sobreviven en el papiamento.
   fuente: atestiguado
   referencia: "Van Buurt, Gerard (2014), \"Caquetío Indians on Curaçao during colonial times and Caquetío words in the Papiamentu language\" (VanBuurt_2014_CaquetioWords_Papiamentu.txt, ya en fuentes_caquetios/)"
+  procedencia: {obra: van-buurt-2014}
   dominios: [politica, geografia, comercio]
   agentes_relacionados: [Kadushi, Watapana]
   implicacion_simulacion: >
@@ -117,6 +118,7 @@
     asentados los caquetíos" — no el nombre de un asentamiento puntual conocido.
   fuente: atestiguado
   referencia: "Zavala Reyes 2015, nota al pie (4): \"Curiana: territorio donde estaban asentados los caquetíos\""
+  procedencia: {obra: zavala-reyes-2015}
   dominios: [politica, geografia, lenguaje]
   agentes_relacionados: []
   implicacion_simulacion: >
@@ -136,6 +138,7 @@
     "managuanare" y "managuarire".
   fuente: atestiguado
   referencia: "González, Carlos, estudio histórico del PLINCODE, p. 23, citado en Zavala Reyes 2015, nota al pie (2)"
+  procedencia: {obra: zavala-reyes-2015}
   dominios: [politica, lenguaje]
   agentes_relacionados: [Manaure]
   implicacion_simulacion: >

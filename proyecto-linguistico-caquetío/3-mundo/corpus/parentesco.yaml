@@ -74,6 +74,7 @@
     percibido como en declive en 1927.
   fuente: reconstruido
   referencia: "analogía wayuu: Jahn 1927, p. 172 (\"la herencia del nombre y nacionalidad materno constituían un definido matriarcado\")"
+  procedencia: {obra: jahn-1927}
   dominios: [parentesco]
   agentes_relacionados: [Nubiri-sha]
   implicacion_simulacion: >
@@ -112,6 +113,7 @@
     (linaje) distinta a la del marido.
   fuente: reconstruido
   referencia: "analogía wayuu: Jahn 1927, p. 172 (\"ley de matrimonio exógamo... la mujer había de ser de una parcialidad distinta a la del marido\")"
+  procedencia: {obra: jahn-1927}
   dominios: [parentesco]
   agentes_relacionados: []
   implicacion_simulacion: >
@@ -125,6 +127,7 @@
     levirato distinto y complementario al caso de la viuda de Manaure documentado por Oliver.
   fuente: reconstruido
   referencia: "analogía wayuu: Jahn 1927, pp. 172-173"
+  procedencia: {obra: jahn-1927}
   dominios: [parentesco]
   agentes_relacionados: []
   implicacion_simulacion: >
@@ -138,6 +141,7 @@
     vínculo avuncular.
   fuente: reconstruido
   referencia: "analogía wayuu: Jahn 1927, p. 171"
+  procedencia: {obra: jahn-1927}
   dominios: [parentesco, cosmos]
   agentes_relacionados: [Chiriguare, Chiri-ko]
   implicacion_simulacion: >
@@ -152,6 +156,7 @@
     cargada que el hermano del padre.
   fuente: reconstruido
   referencia: "analogía wayuu: Jahn 1927, pp. 438-439 (patrón estructural; formas léxicas exactas no reconstruidas por desalineación de la extracción del PDF, ver hoja de fuentes)"
+  procedencia: {obra: jahn-1927}
   dominios: [parentesco, lenguaje]
   agentes_relacionados: []
   implicacion_simulacion: >
@@ -177,6 +182,7 @@
     de Coro sobre instituciones familiares caquetías.
   fuente: atestiguado
   referencia: "Arcaya 1920, p. 128"
+  procedencia: {obra: arcaya-1920}
   dominios: [parentesco]
   agentes_relacionados: [Manaure]
   implicacion_simulacion: >
@@ -190,6 +196,7 @@
     intuición sin desarrollar de la historiografía venezolana temprana.
   fuente: atestiguado
   referencia: "Arcaya 1920, p. 127 (\"es posible que las diferencias del tatuage correspondiesen más bien a distinciones de clanes\")"
+  procedencia: {obra: arcaya-1920}
   dominios: [parentesco]
   agentes_relacionados: []
   implicacion_simulacion: >
@@ -268,6 +275,7 @@
     debate historiográfico temprano.
   fuente: atestiguado
   referencia: "Arcaya 1920, p. 119, citando a Salas, \"Tierra Firme\""
+  procedencia: {obra: arcaya-1920}
   dominios: [parentesco]
   agentes_relacionados: [Nabaraka, Raka-bi, Chorota]
   implicacion_simulacion: >
@@ -378,6 +386,7 @@
     que el linaje de la madre de sus hijos les diera derecho por cuenta propia.
   fuente: reconstruido
   referencia: "analogía taína: Keegan 1989, The Evolution of Avunculocal Chiefdoms, American Anthropologist 91(3) — identificado vía búsqueda web, no consultado en texto completo (ver hoja de fuentes)"
+  procedencia: {obra: keegan-1989}
   dominios: [parentesco, politica]
   agentes_relacionados: [Manaure, Nubiri-sha]
   implicacion_simulacion: >
@@ -418,6 +427,7 @@
     ajena.
   fuente: reconstruido
   referencia: "analogía kalinago: Adam 1879 (en fuentes_caquetios/), pp. 275-302, citando Breton 1665 y Labat; corroborado por literatura etnohistórica secundaria sobre la expansión caribe del s. XIV en las Antillas Menores (ver hoja de fuentes). Dato sobre los kalinago, no sobre los caquetíos"
+  procedencia: {obra: adam-1879}
   dominios: [parentesco, lenguaje, politica]
   agentes_relacionados: [Marokoto-ni, Chiriguare]
   implicacion_simulacion: >
@@ -553,6 +563,7 @@
     a nivel de facción/linaje dentro de un asentamiento, no de todo un asentamiento o territorio.
   fuente: atestiguado
   referencia: "Zavala Reyes 2015, p.65 (glosario, entrada 12: \"Apopo (AM): Nombre de jefe de parcialidad pequeña\")"
+  procedencia: {obra: zavala-reyes-2015}
   dominios: [parentesco, politica, lenguaje]
   agentes_relacionados: [Corie-ko, Chiriguare, Paugis-sha, Sha-corie]
   implicacion_simulacion: >
@@ -625,6 +636,7 @@
     hijos.
   fuente: hipotetico
   referencia: "síntesis de esta sesión sobre comparanda ashanti (consejo de ancianos elige/puede destituir entre candidatos matrilineales elegibles) y Keegan 1989 sobre política de élite taína (ver hoja de fuentes 05); no hay dato caquetío directo sobre pluralidad de candidatos"
+  procedencia: {obra: keegan-1989}
   dominios: [parentesco, politica]
   agentes_relacionados: [Manaure]
   implicacion_simulacion: >

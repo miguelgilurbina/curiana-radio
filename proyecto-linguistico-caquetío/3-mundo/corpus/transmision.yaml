@@ -326,6 +326,7 @@
     cacique" — genealogía política cantada ante toda la comunidad.
   fuente: atestiguado
   referencia: "Anglería, Fuentes Históricas sobre Colón y América (1892 [c.1530]), vol. 4, p. 236"
+  procedencia: {obra: angleria-1892}
   dominios: [transmision, genealogia, cancion]
   agentes_relacionados: [Bana-mana, Manaure]
   forma_transmision: genealogia_recitada
@@ -346,6 +347,7 @@
     ley sin código escrito, aplicada caso por caso por los mayores.
   fuente: atestiguado
   referencia: "Jahn (1927), Los aborígenes del occidente de Venezuela, pp. 205-207"
+  procedencia: {obra: jahn-1927}
   dominios: [transmision, derecho_consuetudinario, matrilinealidad]
   agentes_relacionados: [Sha-corie, Paugis-sha, Nubiri-sha]
   forma_transmision: consejo
@@ -370,6 +372,7 @@
     presentación pública, el ajuitis.
   fuente: atestiguado
   referencia: "Jahn (1927), Los aborígenes del occidente de Venezuela, pp. 208-211"
+  procedencia: {obra: jahn-1927}
   dominios: [transmision, genero, iniciacion, comparanda_wayuu]
   agentes_relacionados: [Buio-sha, Sha, Sha-corie, Paugis-sha]
   forma_transmision: iniciacion
@@ -391,6 +394,7 @@
     españoles bautismales en el trato cotidiano.
   fuente: atestiguado
   referencia: "Jahn (1927), Los aborígenes del occidente de Venezuela, p. 206"
+  procedencia: {obra: jahn-1927}
   dominios: [transmision, lengua, tabu, cosmologia]
   agentes_relacionados: [Bana-mana]
   forma_transmision: genealogia_recitada
@@ -410,6 +414,7 @@
     resiste la deriva; la segunda se parafrasea con cada repetición.
   fuente: reconstruido
   referencia: "Vansina, Jan (1985), Oral Tradition as History, Univ. of Wisconsin Press"
+  procedencia: {obra: vansina-ong}
   dominios: [transmision, teoria]
   agentes_relacionados: []
   forma_transmision: cancion
@@ -483,6 +488,7 @@
     enseña sobre sus antepasados, guerras, orígenes".
   fuente: atestiguado
   referencia: "Amodio y Pérez (2006), Las pautas de crianza del pueblo wayuu, UNICEF, p. 40 (cita a González 1973)"
+  procedencia: {obra: amodio-perez-2006}
   dominios: [transmision, curriculo_edad, genero, comparanda_wayuu]
   agentes_relacionados: [Nubi, Buco, Daru, Dare-nu, Piri]
   forma_transmision: aprendizaje_oficio
@@ -502,6 +508,7 @@
     biológico: tiene nombre, y cambiar de etapa es cambiar de palabra.
   fuente: atestiguado
   referencia: "Amodio y Pérez (2006), pp. 23-24"
+  procedencia: {obra: amodio-perez-2006}
   dominios: [transmision, curriculo_edad, lengua, comparanda_wayuu]
   agentes_relacionados: []
   forma_transmision: consejo
@@ -523,6 +530,7 @@
     todo cuando se trata del tío o la tía maternos".
   fuente: atestiguado
   referencia: "Amodio y Pérez (2006), pp. 40-41"
+  procedencia: {obra: amodio-perez-2006}
   dominios: [transmision, matrilinealidad, curriculo_edad, comparanda_wayuu]
   agentes_relacionados: [Chiriguare, Chiri-ko, Nabaraka, Raka-bi]
   forma_transmision: aprendizaje_oficio
@@ -546,6 +554,7 @@
     las madres de cuidar bien el encierro de las hijas".
   fuente: atestiguado
   referencia: "Amodio y Pérez (2006), pp. 44-45, 49-51; converge con Jahn (1927), pp. 208-211"
+  procedencia: {obra: amodio-perez-2006}
   dominios: [transmision, genero, iniciacion, comparanda_wayuu]
   agentes_relacionados: [Sha, Tawi, Kori, Sha-corie, Paugis-sha]
   forma_transmision: iniciacion
@@ -569,6 +578,7 @@
     conozcan las cadenas completas de parientes maternos y paternos.
   fuente: atestiguado
   referencia: "Amodio y Pérez (2006), pp. 40, 42-43, 45"
+  procedencia: {obra: amodio-perez-2006}
   dominios: [transmision, ritual, genealogia, comparanda_wayuu]
   agentes_relacionados: [Bana-mana, Sha-corie, Wama-sha, Sha, Nubi, Tawi, Buco, Piru]
   forma_transmision: genealogia_recitada
@@ -592,6 +602,7 @@
     incluido el cambio de identidad.
   fuente: atestiguado
   referencia: "Amodio y Pérez (2006), pp. 41-42 (cita versión de María Manuela de Cora, 1972)"
+  procedencia: {obra: amodio-perez-2006}
   dominios: [transmision, piazgo, cosmologia, comparanda_wayuu]
   agentes_relacionados: [Shaboro, Buio-sha]
   forma_transmision: iniciacion
@@ -622,6 +633,7 @@
     Inmaterial de la Humanidad (UNESCO, 2010).
   fuente: atestiguado
   referencia: "Mincultura Colombia, cuadernillo Pütchipü'üi (investigación de Guerra Curvelo 2002); UNESCO ICH 00435; fuentes_caquetios/GuerraCurvelo_ref_2023_Cuadernillo_Sistema_Normativo_Wayuu_Palabrero.pdf"
+  procedencia: {obra: guerra-curvelo-palabrero}
   dominios: [transmision, derecho_consuetudinario, lengua, comparanda_wayuu]
   agentes_relacionados: [Manaure, Nubiri-sha]
   forma_transmision: consejo
@@ -650,6 +662,7 @@
     que el palabrero dibuja símbolos en la tierra mientras escucha.
   fuente: atestiguado
   referencia: "Mincultura Colombia, cuadernillo Pütchipü'üi (Guerra Curvelo 2002)"
+  procedencia: {obra: guerra-curvelo-palabrero}
   dominios: [transmision, derecho_consuetudinario, cosmologia, comparanda_wayuu]
   agentes_relacionados: [Nubiri-sha, Sha-corie]
   forma_transmision: consejo
@@ -678,6 +691,7 @@
     colectiva frágil".
   fuente: atestiguado
   referencia: "Mincultura Colombia, cuadernillo Pütchipü'üi (Guerra Curvelo 2002)"
+  procedencia: {obra: guerra-curvelo-palabrero}
   dominios: [transmision, piazgo, cosmologia, genero, comparanda_wayuu]
   agentes_relacionados: [Shaboro, Buio-sha, Paugis-sha]
   forma_transmision: relato
@@ -705,6 +719,7 @@
     reconciliar) pero desde la autoridad, no desde la neutralidad.
   fuente: reconstruido
   referencia: "Contraste estructural: cuadernillo Mincultura (Guerra Curvelo 2002) vs. CULTURA_CAQUETIA.md §6 (cacicazgo); Castellanos c.1589 sobre el Manaure histórico"
+  procedencia: {obra: guerra-curvelo-palabrero}
   dominios: [transmision, derecho_consuetudinario, politica, comparanda_wayuu]
   agentes_relacionados: [Manaure, Shaboro, Nubiri-sha]
   forma_transmision: consejo

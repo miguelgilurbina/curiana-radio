@@ -136,16 +136,30 @@ def medir():
     except Exception as e:                                   # noqa: BLE001
         print(f"  ⚠ no se pudo leer el lexicón: {e}")
 
-    # ── corpus (texto libre: cota inferior) ────────────────────────────
+    # ── corpus ─────────────────────────────────────────────────────────
+    # Mixto a propósito: si el hecho ya tiene `procedencia.obra`, se usa esa
+    # (exacta) y no se adivina por apellido. Los 58 migrados cuentan bien; los
+    # 103 que aún citan en prosa siguen siendo estimación. Conforme avance la
+    # migración, esta columna se vuelve exacta sola.
+    exactos = 0
     try:
         from compilar_corpus import compilar as compilar_corpus
         hechos, _, _ = compilar_corpus()
         for h in hechos:
+            obra = (h.get("procedencia") or {}).get("obra")
+            if obra:
+                if obra in cuenta:
+                    cuenta[obra]["corpus"] += 1
+                    exactos += 1
+                continue
             texto = " ".join(str(h.get(c, "")) for c in
                              ("referencia", "contenido", "implicacion_simulacion"))
             for oid, d in datos.items():
                 if d["claves"] and _cita(texto, d["claves"]):
                     cuenta[oid]["corpus"] += 1
+        if hechos:
+            print(f"  ({exactos}/{len(hechos)} hechos del corpus se cuentan por "
+                  f"clave foránea; el resto, por apellido)")
     except Exception as e:                                   # noqa: BLE001
         print(f"  ⚠ no se pudo leer el corpus: {e}")
 

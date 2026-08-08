@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-08 02:46**.
+<!--GENERADO--> Generado el **2026-08-08 02:52**.
 
 ## ¿Vamos bien?
 
@@ -256,7 +256,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 774 en 188 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 774 en 189 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 149 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
