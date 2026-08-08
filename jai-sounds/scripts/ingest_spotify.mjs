@@ -1,29 +1,29 @@
 #!/usr/bin/env node
 /**
- * JAI Sounds · ingesta de playlists de Spotify → Supabase
+ * JAI Sounds · ingesta de Spotify → Supabase
  * ---------------------------------------------------------------------
- * Uso:
- *   node ingest_spotify.mjs --inspect <url|id> [...]   Solo mira: imprime
- *       nombre, id y nº de pistas. Sirve para derivar los moods reales
- *       antes de escribir nada. No toca la base de datos.
+ * Uso, en el orden en que se usa la primera vez:
  *
- *   node ingest_spotify.mjs --sync                     Ingesta todas las
- *       playlists referenciadas en content/jai-sounds/moods.json.
+ *   --login              Abre el consentimiento de Spotify y guarda la
+ *                        sesión en ~/.secrets/. Una sola vez.
  *
- *   node ingest_spotify.mjs --sync <url|id> [...]      Ingesta esas.
+ *   --listar             Lista TODAS tus playlists (incluidas privadas) con
+ *                        nombre, id y nº de pistas. No escribe nada. De aquí
+ *                        salen los moods reales.
  *
- * Flags: --dry-run (no escribe)  --force (ignora snapshot_id y re-ingesta)
+ *   --sync               Ingesta las playlists declaradas en
+ *                        content/jai-sounds/moods.json.
+ *   --sync <url|id> …    Ingesta esas.
+ *   --sync --todas       Ingesta todas tus playlists sin preguntar.
+ *   --sync --guardadas   Ingesta además "Canciones que te gustan".
+ *
+ * Flags: --dry-run (no escribe)  --force (ignora snapshot_id)
  *
  * Credenciales — SOLO por variables de entorno de la sesión, nunca en un
- * archivo del repo (este proyecto vive dentro de OneDrive: un .env con
+ * archivo del repo (el proyecto vive dentro de OneDrive: un .env con
  * secretos se sincroniza a la nube aunque esté gitignoreado):
  *   SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET
  *   SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY
- *
- * Alcance del flujo Client Credentials: lee playlists PÚBLICAS por id. No
- * puede listar /me/playlists ni abrir privadas — eso exige Authorization
- * Code con redirect. Si alguna colección es privada, hacerla pública un
- * momento o pedir el flujo de usuario (otro PR).
  *
  * Lo que NO trae, y no es un olvido: valence, energy, danceability, tempo.
  * Spotify deprecó /audio-features el 2024-11-27 y devuelve 403 a toda app
@@ -34,6 +34,13 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createClient } from "@supabase/supabase-js";
+import {
+  ErrorDeConfig,
+  haySesion,
+  login,
+  tokenDeApp,
+  tokenDeUsuario,
+} from "./spotify_auth.mjs";
 
 const AQUI = path.dirname(fileURLToPath(import.meta.url));
 const RAIZ = path.resolve(AQUI, "..", "..");
@@ -41,8 +48,8 @@ const TAXONOMIA = path.join(RAIZ, "content", "jai-sounds", "moods.json");
 
 const API = "https://api.spotify.com/v1";
 const LOTE_UPSERT = 500;
-
-// ── Utilidades ───────────────────────────────────────────────────────
+/** Pseudo-playlist para "Canciones que te gustan", que no tiene id propio. */
+const ID_GUARDADAS = "me-saved-tracks";
 
 const log = (...a) => console.log(...a);
 const fatal = (msg) => {
@@ -65,33 +72,7 @@ function idDePlaylist(entrada) {
   fatal(`No reconozco esto como playlist de Spotify: "${entrada}"`);
 }
 
-// ── Spotify ──────────────────────────────────────────────────────────
-
-async function obtenerToken() {
-  const id = process.env.SPOTIFY_CLIENT_ID;
-  const secret = process.env.SPOTIFY_CLIENT_SECRET;
-  if (!id || !secret) {
-    fatal(
-      "Faltan SPOTIFY_CLIENT_ID / SPOTIFY_CLIENT_SECRET en el entorno.\n" +
-        "  Crear una app en https://developer.spotify.com/dashboard y exportarlas\n" +
-        "  en la sesión del shell (NO en un archivo del repo — OneDrive sincroniza)."
-    );
-  }
-
-  const res = await fetch("https://accounts.spotify.com/api/token", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-      Authorization: `Basic ${Buffer.from(`${id}:${secret}`).toString("base64")}`,
-    },
-    body: "grant_type=client_credentials",
-  });
-
-  if (!res.ok) {
-    fatal(`Spotify rechazó las credenciales (${res.status}): ${await res.text()}`);
-  }
-  return (await res.json()).access_token;
-}
+// ── Cliente HTTP ─────────────────────────────────────────────────────
 
 /** GET con reintento ante 429, respetando Retry-After. */
 async function api(ruta, token, intento = 0) {
@@ -115,22 +96,69 @@ async function api(ruta, token, intento = 0) {
     );
   }
 
+  if (res.status === 401) {
+    fatal(
+      `401 en ${ruta}\n` +
+        "  Token inválido o sin el scope necesario. Reintentar --login."
+    );
+  }
+
   if (!res.ok) fatal(`Spotify ${res.status} en ${ruta}: ${await res.text()}`);
   return res.json();
 }
 
-async function traerPlaylist(id, token) {
-  const meta = await api(`/playlists/${id}?fields=id,name,description,images,snapshot_id,tracks(total)`, token);
-
+/** Recorre un endpoint paginado hasta el final. */
+async function paginar(rutaInicial, token) {
   const items = [];
-  let url = `${API}/playlists/${id}/tracks?limit=100&offset=0`;
+  let url = rutaInicial;
   while (url) {
     const pagina = await api(url, token);
     items.push(...pagina.items);
     url = pagina.next;
   }
+  return items;
+}
 
+// ── Lecturas ─────────────────────────────────────────────────────────
+
+async function misPlaylists(token) {
+  const crudas = await paginar(`${API}/me/playlists?limit=50`, token);
+  return crudas.filter(Boolean).map((p) => ({
+    id: p.id,
+    name: p.name,
+    description: p.description ?? null,
+    image_url: p.images?.[0]?.url ?? null,
+    track_count: p.tracks?.total ?? null,
+    snapshot_id: p.snapshot_id ?? null,
+  }));
+}
+
+async function traerPlaylist(id, token) {
+  const meta = await api(
+    `/playlists/${id}?fields=id,name,description,images,snapshot_id,tracks(total)`,
+    token
+  );
+  const items = await paginar(
+    `${API}/playlists/${id}/tracks?limit=100&offset=0`,
+    token
+  );
   return { meta, items };
+}
+
+async function traerGuardadas(token) {
+  const items = await paginar(`${API}/me/tracks?limit=50`, token);
+  return {
+    meta: {
+      id: ID_GUARDADAS,
+      name: "Canciones que te gustan",
+      description: "Biblioteca guardada del usuario (/me/tracks).",
+      images: [],
+      // No hay snapshot_id: siempre se re-ingesta.
+      snapshot_id: null,
+      tracks: { total: items.length },
+    },
+    items,
+  };
 }
 
 async function traerArtistas(ids, token) {
@@ -213,6 +241,22 @@ async function upsert(db, tabla, filas, onConflict) {
 
 // ── Modos ────────────────────────────────────────────────────────────
 
+async function listar(token) {
+  const listas = await misPlaylists(token);
+  const total = listas.reduce((s, p) => s + (p.track_count ?? 0), 0);
+
+  log(`\n${listas.length} playlists · ${total} pistas en total\n`);
+  for (const p of listas) {
+    log(`  ${String(p.track_count ?? "?").padStart(5)}  ${p.name}`);
+    log(`         ${p.id}`);
+  }
+  log(
+    "\nSiguiente paso: agrupar estas listas en moods dentro de\n" +
+      "content/jai-sounds/moods.json (campo `playlists`) y poner borrador:false.\n" +
+      "O ingestar todo de una con: --sync --todas\n"
+  );
+}
+
 async function inspeccionar(ids, token) {
   log(`\nInspeccionando ${ids.length} playlist(s) — no se escribe nada.\n`);
   for (const id of ids) {
@@ -220,38 +264,42 @@ async function inspeccionar(ids, token) {
     log(`  ${meta.name}`);
     log(`    id: ${meta.id}   pistas: ${meta.tracks.total}`);
   }
-  log(
-    "\nSiguiente paso: agrupar estas playlists en moods dentro de\n" +
-      "content/jai-sounds/moods.json (campo `playlists`) y poner borrador:false.\n"
-  );
 }
 
-async function sincronizar(ids, token, { dryRun, force }) {
+async function sincronizar(fuentes, token, { dryRun, force }) {
   const db = dryRun ? null : conectarSupabase();
   const artistasVistos = new Set();
+  let totalPistas = 0;
 
-  for (const id of ids) {
-    log(`\n▸ ${id}`);
-    const { meta, items } = await traerPlaylist(id, token);
+  for (const fuente of fuentes) {
+    log(`\n▸ ${fuente === ID_GUARDADAS ? "Canciones guardadas" : fuente}`);
+
+    const { meta, items } =
+      fuente === ID_GUARDADAS
+        ? await traerGuardadas(token)
+        : await traerPlaylist(fuente, token);
+
     log(`  ${meta.name} — ${items.length} items`);
 
-    if (!force && db) {
+    if (!force && db && meta.snapshot_id) {
       const { data } = await db
         .from("jai_playlists")
         .select("snapshot_id")
         .eq("id", meta.id)
         .maybeSingle();
       if (data?.snapshot_id === meta.snapshot_id) {
-        log("  · sin cambios desde la última ingesta (snapshot_id igual) — salto");
+        log("  · sin cambios desde la última ingesta — salto");
         continue;
       }
     }
 
-    const { tracks, artistas, enlacesTrackArtista, enPlaylist } = normalizar(items);
+    const { tracks, artistas, enlacesTrackArtista, enPlaylist } =
+      normalizar(items);
     const descartados = items.length - enPlaylist.length;
     if (descartados > 0) {
-      log(`  · ${descartados} items descartados (locales, episodios o borrados)`);
+      log(`  · ${descartados} descartados (locales, episodios o borrados)`);
     }
+    totalPistas += tracks.size;
 
     const nuevos = [...artistas].filter((a) => !artistasVistos.has(a));
     const filasArtistas = (await traerArtistas(nuevos, token)).map((a) => ({
@@ -274,7 +322,12 @@ async function sincronizar(ids, token, { dryRun, force }) {
     // los enlaces que las referencian.
     await upsert(db, "jai_artists", filasArtistas, "id");
     await upsert(db, "jai_tracks", [...tracks.values()], "id");
-    await upsert(db, "jai_track_artists", enlacesTrackArtista, "track_id,artist_id");
+    await upsert(
+      db,
+      "jai_track_artists",
+      enlacesTrackArtista,
+      "track_id,artist_id"
+    );
     await upsert(
       db,
       "jai_playlists",
@@ -297,6 +350,8 @@ async function sincronizar(ids, token, { dryRun, force }) {
       "playlist_id,track_id"
     );
   }
+
+  log(`\n✓ ${totalPistas} pistas procesadas.\n`);
 }
 
 // ── Entrada ──────────────────────────────────────────────────────────
@@ -308,8 +363,8 @@ function playlistsDeLaTaxonomia() {
   if (ids.length === 0) {
     fatal(
       "Ningún mood declara playlists todavía.\n" +
-        "  Correr primero: node ingest_spotify.mjs --inspect <url> ...\n" +
-        "  y llenar el campo `playlists` de cada mood."
+        "  Correr primero: --listar   (y llenar el campo `playlists`)\n" +
+        "  O ingestar todo de una:    --sync --todas"
     );
   }
   return ids;
@@ -320,34 +375,69 @@ async function main() {
   const flags = new Set(argv.filter((a) => a.startsWith("--")));
   const sueltos = argv.filter((a) => !a.startsWith("--"));
 
-  const modoInspect = flags.has("--inspect");
-  const modoSync = flags.has("--sync");
-  if (modoInspect === modoSync) {
-    fatal("Elegí un modo: --inspect o --sync. Ver la cabecera del archivo.");
+  if (flags.has("--login")) {
+    await login();
+    log("Siguiente: node jai-sounds/scripts/ingest_spotify.mjs --listar\n");
+    return;
   }
 
-  // --inspect existe justamente para cuando la taxonomía aún está vacía:
-  // exige URLs explícitas en vez de ir a buscarlas donde no hay.
-  if (modoInspect && sueltos.length === 0) {
+  const modos = ["--listar", "--inspect", "--sync"].filter((m) => flags.has(m));
+  if (modos.length !== 1) {
     fatal(
-      "--inspect necesita al menos una playlist:\n" +
-        "  node ingest_spotify.mjs --inspect https://open.spotify.com/playlist/..."
+      "Elegí un modo: --login, --listar, --inspect o --sync.\n" +
+        "  Ver la cabecera del archivo para el flujo completo."
     );
   }
+  const modo = modos[0];
 
-  const ids = (sueltos.length > 0 ? sueltos : playlistsDeLaTaxonomia()).map(
-    idDePlaylist
-  );
+  // Con sesión de usuario leemos también lo privado; sin ella, solo lo
+  // público — y --listar directamente no existe sin usuario.
+  const conUsuario = haySesion();
+  if (!conUsuario && (modo === "--listar" || flags.has("--todas") || flags.has("--guardadas"))) {
+    fatal(
+      "Eso necesita sesión de usuario.\n" +
+        "  Correr primero: node jai-sounds/scripts/ingest_spotify.mjs --login"
+    );
+  }
+  const token = conUsuario ? await tokenDeUsuario() : await tokenDeApp();
+  if (!conUsuario) {
+    log("· Sin sesión de usuario: solo playlists públicas por id.");
+  }
 
-  const token = await obtenerToken();
+  if (modo === "--listar") return listar(token);
 
-  if (modoInspect) return inspeccionar(ids, token);
+  if (modo === "--inspect") {
+    if (sueltos.length === 0) {
+      fatal(
+        "--inspect necesita al menos una playlist:\n" +
+          "  node ingest_spotify.mjs --inspect https://open.spotify.com/playlist/..."
+      );
+    }
+    return inspeccionar(sueltos.map(idDePlaylist), token);
+  }
 
-  await sincronizar(ids, token, {
+  // --sync
+  let fuentes;
+  if (flags.has("--todas")) {
+    fuentes = (await misPlaylists(token)).map((p) => p.id);
+    log(`· ${fuentes.length} playlists encontradas en tu cuenta.`);
+  } else if (sueltos.length > 0) {
+    fuentes = sueltos.map(idDePlaylist);
+  } else if (flags.has("--guardadas")) {
+    fuentes = [];
+  } else {
+    fuentes = playlistsDeLaTaxonomia();
+  }
+  if (flags.has("--guardadas")) fuentes.push(ID_GUARDADAS);
+
+  await sincronizar(fuentes, token, {
     dryRun: flags.has("--dry-run"),
     force: flags.has("--force"),
   });
-  log("\n✓ Listo.\n");
 }
 
-main().catch((e) => fatal(e.stack ?? String(e)));
+// Un error de configuración es una instrucción para el usuario; solo lo
+// inesperado merece stack trace.
+main().catch((e) =>
+  fatal(e instanceof ErrorDeConfig ? e.message : (e.stack ?? String(e)))
+);

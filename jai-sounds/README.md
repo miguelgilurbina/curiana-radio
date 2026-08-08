@@ -50,61 +50,101 @@ proyecto `curiana-produccion`, desde el SQL Editor de Supabase o con la CLI.
 La migración deja lectura pública (anon) y escritura solo para `service_role`,
 porque la anon key viaja en el bundle del navegador.
 
-### 2. Credenciales
+### 2. Registrar la app en Spotify
 
-Registrar una app en <https://developer.spotify.com/dashboard> y exportar las
-variables **en la sesión del shell**:
+En <https://developer.spotify.com/dashboard> → **Create app**:
+
+| Campo | Valor |
+|---|---|
+| App name | `JAI Sounds` (cualquiera) |
+| Redirect URI | `http://127.0.0.1:8888/callback` |
+| API | marcar **Web API** |
+
+> **`localhost` NO sirve.** Spotify prohíbe ese hostname como redirect URI
+> desde abril de 2025 y exige el literal de loopback `127.0.0.1`. Usar
+> `localhost` da `INVALID_CLIENT: Insecure redirect URI` y es el error más
+> común al montar esto.
+
+Después, en *Settings*, copiar el Client ID y el Client secret.
+
+### 3. Credenciales, fuera de OneDrive
 
 ```bash
 export SPOTIFY_CLIENT_ID=...
 export SPOTIFY_CLIENT_SECRET=...
-export SUPABASE_URL=https://edygyxlcvvgnvdsqxnsm.supabase.co
+export SUPABASE_URL=...
 export SUPABASE_SERVICE_ROLE_KEY=...
 ```
 
 > **No escribir estos valores en ningún archivo del repo**, ni en un `.env`
 > gitignoreado: el proyecto vive dentro de OneDrive y cualquier archivo se
-> sincroniza a la nube igual.
+> sincroniza a la nube igual. Un sitio seguro es `~/.secrets/jai.env`, que
+> queda fuera del árbol sincronizado.
 
-### 3. Descubrir las playlists reales
-
-```bash
-node jai-sounds/scripts/ingest_spotify.mjs --inspect https://open.spotify.com/playlist/XXXX
-```
-
-Imprime nombre, id y nº de pistas sin escribir nada. Con esa lista se arman
-los moods de verdad en `content/jai-sounds/moods.json` y se pone
-`"borrador": false`.
-
-### 4. Ingesta
+### 4. Iniciar sesión (una sola vez)
 
 ```bash
-node jai-sounds/scripts/ingest_spotify.mjs --sync --dry-run
+node jai-sounds/scripts/ingest_spotify.mjs --login
+```
+
+Imprime una URL, la abres, aceptas, y el script recoge el callback en
+`127.0.0.1:8888`. El `refresh_token` queda en `~/.secrets/jai-spotify-token.json`
+—nunca en el repo— y a partir de ahí todo funciona sin volver a pedirlo.
+
+Scopes: `playlist-read-private`, `playlist-read-collaborative`,
+`user-library-read`. Solo lectura: el script no puede modificar nada en la
+cuenta.
+
+### 5. Ver qué hay
+
+```bash
+node jai-sounds/scripts/ingest_spotify.mjs --listar
+```
+
+Lista **todas** las playlists de la cuenta —incluidas privadas y
+colaborativas— con nombre, id y nº de pistas, sin escribir nada. De aquí
+salen los moods reales para `content/jai-sounds/moods.json`.
+
+### 6. Ingesta
+
+```bash
+node jai-sounds/scripts/ingest_spotify.mjs --sync --todas --dry-run
 ```
 
 ```bash
-node jai-sounds/scripts/ingest_spotify.mjs --sync
+node jai-sounds/scripts/ingest_spotify.mjs --sync --todas
 ```
 
-Sin argumentos sueltos, lee las playlists declaradas en la taxonomía. Salta
-las que no cambiaron (compara `snapshot_id`); `--force` las re-ingesta.
+Modos de `--sync`:
+
+| Forma | Qué ingesta |
+|---|---|
+| `--sync` | Las playlists declaradas en `moods.json` |
+| `--sync <url\|id> …` | Solo esas |
+| `--sync --todas` | Todas las de la cuenta |
+| `--sync --guardadas` | Añade "Canciones que te gustan" (`/me/tracks`) |
+
+Salta las playlists que no cambiaron comparando `snapshot_id`; `--force` las
+re-ingesta igual. `--dry-run` no escribe nada.
 
 ---
 
-## Límite conocido del flujo actual
+## Sin sesión de usuario
 
-La ingesta usa **Client Credentials**: lee playlists públicas por id, pero no
-puede listar `/me/playlists` ni abrir colecciones privadas — eso exige
-Authorization Code con redirect y navegador. Si parte del archivo es privado,
-hacerlo público un momento o levantar el flujo de usuario en otro PR.
+Si no se corre `--login`, el script cae a **Client Credentials**: solo lee
+playlists públicas por id, y `--listar`, `--todas` y `--guardadas` no están
+disponibles (no hay usuario del que hablar). Sirve para inspeccionar listas
+ajenas, no para ingestar un archivo propio.
 
 ---
 
 ## Estado
 
 - [x] Esquema del catálogo + RLS
-- [x] Script de ingesta (inspect / sync / dry-run / snapshot)
+- [x] Script de ingesta (listar / inspect / sync / dry-run / snapshot)
+- [x] Login de usuario (Authorization Code) para leer privadas y `/me/*`
 - [x] Portada del dial en `/jai-sounds`
+- [x] Propuestas de UI sobre datos de muestra en `/jai-sounds/muestra`
 - [ ] Taxonomía real (hoy hay seis moods de andamio, marcados `borrador`)
 - [ ] Páginas de mood `/jai-sounds/[mood]`
 - [ ] Fichas de artista y navegación por cruces de género
