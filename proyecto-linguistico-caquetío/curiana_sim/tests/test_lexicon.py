@@ -98,3 +98,50 @@ def test_adopcion_repetida_mismo_agente_no_oficializa():
     _neo(lex)
     assert lex.adoptar("kali-dusha", "Shaboro", turno=1, dia=4) is None
     assert lex.adoptar("kali-dusha", "Shaboro", turno=2, dia=4) is None
+
+
+# ── word_source_language debe entender morfología ─────────────────────
+
+def test_word_source_language_resuelve_formas_flexionadas():
+    """Lo que se guarda en `word_uses.source_language` tiene que reconocer las
+    formas con prefijo posesivo y sufijo de aspecto.
+
+    Antes era un lookup pelado contra VOCABULARIO_BASE, así que `wana-ka` o
+    `ta-barsure` se guardaban con NULL. Medido sobre la base local el
+    2026-08-06: **27.641 de 54.936 usos (50,3%) sin lengua, y el 100% de ellos
+    formas morfológicamente complejas** — justo los usos que prueban que los
+    agentes manejan la morfología del proyecto.
+    """
+    from curiana_database import word_source_language
+
+    for forma in ("wana-ka", "naba-ni", "kaa-ni", "ta-barsure", "pi-barsure"):
+        assert word_source_language(forma) is not None, (
+            f"{forma} debería resolver a una lengua, no a None")
+
+
+def test_word_source_language_conserva_la_lengua_hermana():
+    """Descomponer no puede convertirlo todo en caquetío: una palabra wayunaiki
+    o lokono tiene que seguir siendo suya, que es de lo que vive el scoring.
+
+    Se comprueba sobre TODO el lexicón, no sobre una muestra: si una sola
+    entrada cambiara de lengua al pasar por aquí, la composición por lengua de
+    los runs quedaría falseada.
+    """
+    from curiana_database import normalize_source_language, word_source_language
+    from curiana_lexicon import VOCABULARIO_BASE
+
+    discrepantes = []
+    for palabra, entrada in VOCABULARIO_BASE.items():
+        esperada = normalize_source_language(entrada.get("fuente", ""))
+        obtenida = word_source_language(palabra)
+        if obtenida != esperada:
+            discrepantes.append((palabra, esperada, obtenida))
+
+    assert not discrepantes, (
+        f"{len(discrepantes)} entradas cambian de lengua al resolverse; "
+        f"primeras: {discrepantes[:5]}")
+
+
+def test_word_source_language_vacio_es_none():
+    from curiana_database import word_source_language
+    assert word_source_language("") is None

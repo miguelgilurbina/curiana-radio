@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-06 16:48**.
+<!--GENERADO--> Generado el **2026-08-06 23:23**.
 
 ## ¿Vamos bien?
 
@@ -21,7 +21,7 @@ editar_a_mano: no
 |---|---|---|---|
 | Entradas del lexicón **sin cita** | **3** | 82 (2026-07-21) | 🟢 −79 |
 | Hechos del corpus **con referencia** | **161 / 161** | — | 🟢 |
-| Tests del motor | **122 en verde** | 0 rojos | 🟢 |
+| Tests del motor | **125 en verde** | 0 rojos | 🟢 |
 | Gate para reanudar simulaciones | **2 de 9** condiciones | faltan 7 | 🔴 |
 | Decisiones esperando a Miguel | **12 abiertas** | 0 resueltas | 🟡 |
 
@@ -256,8 +256,8 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 736 en 170 notas indexadas | 🟢 0 rotos |
-| Tests (`curiana_sim/tests/`) | 122 passed, 0 failed | 🟢 |
+| Wikilinks | 765 en 177 notas indexadas | 🟢 0 rotos |
+| Tests (`curiana_sim/tests/`) | 125 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
 **Avisos de `curiana_polities.py::coherencia_del_canon()`:**

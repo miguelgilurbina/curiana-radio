@@ -138,11 +138,28 @@ def language_composition(words_used: list[str]) -> dict[str, float]:
 
 
 def word_source_language(word: str) -> Optional[str]:
-    """Devuelve la categoría canónica de lengua para una palabra individual."""
-    from curiana_lexicon import VOCABULARIO_BASE
-    if word in VOCABULARIO_BASE:
-        return normalize_source_language(VOCABULARIO_BASE[word]["fuente"])
-    return None
+    """Categoría canónica de lengua de una palabra ya reconocida como arahuaca.
+
+    Delega en `_familia_de_token()`, que **deshace prefijos posesivos y sufijos
+    de aspecto** antes de buscar en el lexicón. Antes esto era un lookup pelado
+    contra `VOCABULARIO_BASE`, y por eso toda forma flexionada se guardaba con
+    `source_language = NULL`: `wana-ka`, `ta-barsure`, `naba-ni`…
+
+    Medido sobre la base local (2026-08-06): **27.641 de 54.936 usos (50,3%)
+    estaban sin lengua, y el 100% de ellos eran formas morfológicamente
+    complejas** — o sea, justo los usos que prueban que los agentes manejan la
+    morfología que el proyecto quiere modelar. El motor los reconocía para
+    puntuar (`score_linguistico`) y los perdía al persistir.
+
+    Solo se llama con tokens que `score_linguistico()` ya aceptó como arahuacos
+    (`words_used` = `palabras_caquetias`), que es la precondición de
+    `_familia_de_token`: para un neologismo comunitario devuelve "caquetío",
+    que es lo correcto — es lengua propia, no préstamo.
+    """
+    from curiana_lexicon import _familia_de_token
+    if not word:
+        return None
+    return _familia_de_token(word)
 
 
 # ══════════════════════════════════════════════════════════════════════

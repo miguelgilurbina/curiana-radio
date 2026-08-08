@@ -1,319 +1,167 @@
 # Curiana — Simulador de Emergencia Lingüística Caquetía
 
-Proyecto de investigación + experimento computacional: una simulación multi-agente donde 60 personajes históricos (pueblo Caquetío, Golfete de Coro, Venezuela, siglos XIV-XV) hablan en caquetío-arahuaco reconstruido. Los agentes evolucionan el idioma en tiempo real: inventan palabras, adoptan neologismos de otros, y su "deriva lingüística" queda registrada en Supabase, curada y publicada como sitio estático en Curiana Radio (`/simulador`).
+Investigación + experimento computacional: 60 agentes históricos (pueblo
+Caquetío, Golfete de Coro, s. XIV-XV) hablan en caquetío-arahuaco reconstruido,
+inventan palabras y se contagian entre sí. La deriva se registra en Supabase, se
+cura y se publica en Curiana Radio (`/simulador`).
 
-## Stack
+> **Este archivo dice cómo trabajar aquí, no qué sabemos.** Lo que sabemos está
+> medido en `TABLERO.md` y explicado en el vault. Si buscas una cifra y la
+> encuentras escrita a mano en este archivo, es un bug: repórtalo.
 
-```
-curiana_sim/        → Python 3.11+ (simulación)
-  curiana_lexicon.py      → vocabulario de 1413 palabras (activas; 441 hipotéticas aisladas en lexicon_candidatos.py) + reglas morfológicas + prompts
-                            (muestra_caquetio_dinamica() prioriza caquetío por chunking contextual)
-  curiana_agents.py       → 60 agentes históricos en 3 tiers (caciques, adultos, jóvenes)
-  curiana_orchestrator_v2.py → orquestador principal (Claude Haiku por agente)
-  curiana_observer.py     → análisis lingüístico + scoring 0-10 + detección de neologismos
-                            + curación de perfiles de fin de run (analizar_agente_curado(),
-                            generar_perfiles_curados() → agent_profiles/agent_quotes)
-  curiana_social.py       → contagio léxico entre agentes (DifusionLexica: prestigio +
-                            grafo social + exposición acumulada) + variación dialectal por etnia
-  curiana_polities.py     → las 4 polities caquetías atestiguadas (costera,
-                            barquisimeto, yaracuy, llanos), con fuente por rasgo.
-                            POLITY_SIMULADA="costera" es la que modela el motor;
-                            coherencia_del_canon() cruza curiana_agents.py contra
-                            ella. Ver 3-mundo/polities-caquetias.md
-  curiana_state.py        → estado del mundo (día, estación, eventos, locaciones)
-                            ciclo estacional: DIAS_POR_ESTACION=60, alterna en
-                            avanzar_turno(); aplicar_efecto() mueve los niveles
-  curiana_database.py     → Supabase client + LangSmith wrapper + language_composition()
-                            + normalize_source_language() (8 categorías activas, ver abajo)
-  arahuaco_comparative.py → método comparativo (transducir, COGNADOS, reconstruir_caquetio)
-  supabase/migrations/    → schema versionado (init + fixes; supabase_schema.sql es referencia)
-```
+---
 
-> ⚠️ **Queries a la tabla `lexicon`:** PostgREST limita cada respuesta a
-> `max_rows` (1000, ver `supabase/config.toml`). Con ~1400 palabras, cualquier
-> query nueva sobre `lexicon` sin `.range()` se trunca silenciosamente.
-> Pagina con `.range(desde, desde+999)` hasta que la página devuelta tenga
-> menos de 1000 filas (ver `loadLexicon()` en `app/page.tsx` o `app/lexicon/page.tsx`).
+## Las reglas que no se rompen
 
-## Modelo LLM
+1. **Ninguna cifra a mano.** Se mide (`generar_tablero.py`) o no se dice. Han
+   circulado tres tamaños distintos del lexicón a la vez; el corpus tenía dos
+   censos (152 y 161) que no coincidían.
+2. **Etiqueta epistémica en todo.** Lexicón y corpus distinguen atestiguado /
+   reconstruido / hipotético. Una sola por entrada; **en duda, degradar**. Es lo
+   que hace que esto sea investigación y no fanfiction.
+3. **Precontacto ≠ colonial.** Casi todo el dato es de crónica del s. XVI. La
+   simulación es del XIV-XV. No se proyecta sin decidirlo explícitamente.
+4. **Los caquetíos no eran una sola sociedad.** Modelamos la polity **costera**
+   (`curiana_polities.py`). Importar un rasgo de Barquisimeto o los Llanos sin
+   marcarlo es el error que Oliver denuncia.
+5. **Minar propone, el humano fusiona.** Un minador **nunca** toca
+   `curiana_lexicon.py` ni `3-mundo/corpus/`. Emite `lexicon_*.py` o escribe en
+   la nota de la fuente.
+6. **Un cero hay que verificarlo.** Un `grep` sin resultados mide tu consulta,
+   no la fuente. Ver la skill `minar-fuente` §2 — pasó tres veces en una noche.
+7. **El resultado de minar va en `4-fuentes/<obra>.md`**, no en un markdown
+   nuevo.
+8. **Nunca secretos en archivos del proyecto** — ni gitignored: el repo
+   sincroniza a OneDrive.
+9. **Las decisiones viven en el tablero de GitHub** (label `decision`), no en
+   markdown. `DECISIONES_ABIERTAS.md` se retiró el 2026-08-06.
 
-`claude-haiku-4-5-20251001` para todos los agentes (costo-efectivo). El cliente se crea en `curiana_database.py::get_anthropic_client()`. Si `LANGSMITH_API_KEY` está en el entorno, wrappea automáticamente con `wrap_anthropic()`.
+---
 
-## Variables de entorno
+## Trampas medidas (cada una costó un error real)
 
-> ⚠️ **Supabase: correr en LOCAL por defecto (Docker), no en cloud.** El
-> proyecto cloud llegó a 8.17 GB de egress (límite del plan Free: 5 GB) por
-> el dashboard público con `realtime` + el patrón de tráfico típico de
-> `*.vercel.app` (escaneo automático). El proyecto Vercel se borró por esa
-> razón. Hasta decidir un reemplazo (Vercel con Deployment Protection, VPS
-> propio, etc.), todo el trabajo de desarrollo/simulación corre contra
-> Supabase local:
-> ```bash
-> cd curiana_sim && supabase start   # levanta Docker; ver supabase/config.toml
->                                     # (puertos 64321-64329, NO los default
->                                     #  54321-54329: esos los usan otros
->                                     #  proyectos supabase locales como
->                                     #  fintech.benditaia.cl. API=64321 DB=64322)
-> ```
-> `curiana_sim/.env` ya tiene ambos bloques (local activo, cloud comentado)
-> — para volver a cloud, intercambiar qué bloque está comentado.
+| Trampa | Qué pasa |
+|---|---|
+| **Supabase local, no cloud** | El cloud llegó a 8.17 GB de egress. Puertos **64321/64322**, no los 54321 por defecto (esos son de otro proyecto, fintech). Para consultar: `docker exec supabase_db_curiana_sim psql -U postgres -d postgres` |
+| **Cada entrypoint carga su `.env`** | Leer `os.environ` no basta: `load_dotenv(...)` al inicio del módulo o falla por credenciales |
+| **`pypdf` ≠ `pdftotext`** | Producen texto distinto del mismo PDF. Arcaya sale **vacío** con pypdf; `pdftotext` da 467 KB. Y pypdf parte `Todariquiba` en `T odariquiba` |
+| **Tablas a dos columnas** | Se desalinean sin `-layout`. Extraer las dos veces y comparar |
+| **`lexicon` en PostgREST** | `max_rows`=1000 y hay ~1400 palabras: toda query sin `.range()` se trunca **en silencio**. Ver `loadLexicon()` |
+| **`lexicon_zavala.py` es generado Y se importa** | Regenerarlo **cambia `score_linguistico()`**. Los otros `lexicon_*.py` no se importan |
+| **La consola de Windows es cp1252** | Todo script que imprima `─`, `✓` o acentos necesita `_forzar_utf8()` bajo `__main__` |
+| **`pct_caquetio` está saturada** | 91% de las respuestas en 1.0. **No la uses para comparar agentes** — usa `score`. Issue #69 |
+| **La longitud del prompt predice el score** | r = −0.48. Cualquier análisis por agente tiene que controlarla, o estarás midiendo cuánto escribiste tú. Ver `ANALISIS_BASE_2026-08-06.md` |
+
+---
+
+## Comandos
 
 ```bash
-# curiana_sim/.env  (ver .env.example)
-ANTHROPIC_API_KEY=sk-ant-...       # obligatorio
-SUPABASE_URL=http://127.0.0.1:64321   # local (supabase start). Sin esto, modo JSON local.
-SUPABASE_SERVICE_KEY=eyJ...           # service_role key local (ver `supabase status`)
-LANGSMITH_API_KEY=ls__...             # opcional
-LANGSMITH_PROJECT=curiana             # opcional
-```
-
-> ⚠️ **Carga de `.env` en scripts Python:** cada entrypoint que se corra
-> directo (`python curiana_xxx.py ...`) debe cargar `curiana_sim/.env` por sí
-> mismo — leer `os.environ` no basta. `curiana_orchestrator_v2.py` y
-> `curiana_database.py` ya lo hacen con `load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))`
-> al inicio del módulo. Si agregas un nuevo `__main__` (p.ej. en
-> `curiana_observer.py`), copia ese mismo bloque o fallará con
-> "Faltan SUPABASE_URL o SUPABASE_SERVICE_KEY".
-
-## Comandos clave
-
-```bash
-# Setup Python
 cd curiana_sim
 pip install -r requirements.txt
-python test_quick.py          # verifica el stack sin API keys (debe dar 8/8 OK)
 
-# Estado del proyecto, medido (NO copiar cifras de la doc: se desactualizan)
-python curiana_sim/generar_tablero.py           # reescribe TABLERO.md en la raíz
-python curiana_sim/generar_tablero.py --stdout  # lo imprime sin escribir
-python curiana_sim/generar_tablero.py --check   # exit 1 si TABLERO.md está viejo
-  # Mide lexicón, censo de citas (importa auditar_82.py), frontmatter de
-  # 4-fuentes/, corpus de 3-mundo/corpus/, el gate y las decisiones abiertas.
-  # Sin red por defecto (--gh cruza los issues reales). TABLERO.md es generado:
-  # no se edita a mano.
+python guardianes.py              # los 5 en verde antes de cerrar nada
+python guardianes.py --rapido     # sin los tests (más rápido)
 
-python -m pytest tests/ -q    # suite unitaria (koiné, léxico, observer, social,
-                              # corpus; sin API keys)
+python generar_tablero.py         # reescribe TABLERO.md (medido)
+python generar_tablero.py --gh    # + decisiones del tablero (usa red)
 
-# Validar el corpus cultural de 3-mundo/corpus/ (condición 4 del gate)
-python curiana_sim/compilar_corpus.py            # informe
-python curiana_sim/compilar_corpus.py --check    # exit 1 si hay errores
-python curiana_sim/compilar_corpus.py --fusionar corpus.yaml
-  # Valida etiquetas epistémicas, ids, referencias cruzadas entre hechos,
-  # que los `agentes_relacionados` existan en curiana_agents.py, y que
-  # `locacion`/`palabra_lexicon` enganchen con curiana_state/curiana_lexicon.
-  # No modifica los YAML: valida y emite.
-supabase start                 # levanta Supabase local (ver nota de egress arriba)
-python curiana_database.py seed  # siembra las palabras activas en Supabase
+python analizar_runs.py --todo    # análisis de los runs en la base
+python compilar_corpus.py --check # valida 3-mundo/corpus/
+python curiana_polities.py --canon
 
-# Correr simulación
-python curiana_orchestrator_v2.py                    # modo interactivo
-python curiana_orchestrator_v2.py --auto 10          # 10 turnos automáticos
-python curiana_orchestrator_v2.py --auto 240 --anio  # 1 año simulado
-python curiana_orchestrator_v2.py --auto 30 --perfiles --reporte
-  # --perfiles: genera perfiles curados por agente al cerrar el run
-  #             (rol, arco narrativo, frases célebres → agent_profiles/agent_quotes)
-  # --reporte:  reporte anual LLM al completar cada año simulado (días 121,
-  #             241, 361…). Estuvo inerte hasta el 2026-07-20: colgaba de un
-  #             cambio de estación que nunca ocurría, y además exigía
-  #             dia%120==0, que no coincide con ningún cambio de estación.
-  # --ablacion: run de CONTROL — apaga las inyecciones de prompt que empujan la
-  #             convergencia (contagio, competencias abiertas, muestreo ponderado).
-  #             La evidencia de koineización es la DIFERENCIA normal vs. ablación.
-  #             La convergencia se mide en 3 lecturas/día (acumulada/ventana/emergente,
-  #             ver 5-experimento/DISENO_KOINE.md §7); el veredicto usa la más exigente con datos.
+supabase start                    # Docker local (ver puertos arriba)
+python curiana_database.py seed   # siembra el lexicón activo
 ```
 
-## Metodología del lexicón y validación
+### Correr simulación
 
-> 📊 **Las cifras exactas NO van aquí: van en `TABLERO.md`**, que las mide
-> contra el dato en cada corrida (`python curiana_sim/generar_tablero.py`).
-> Este archivo da los números en orden de magnitud a propósito — una cifra
-> exacta escrita a mano envejece mal, y ya pasó tres veces.
->
-> 📖 **El estado medido y en prosa está en `2-lengua/lexicon.md`,
-> `2-lengua/morfologia.md`, `2-lengua/toponimia.md` y
-> `2-lengua/metodo-comparativo.md`.** Esta sección es el resumen operativo;
-> aquellas notas llevan las cifras con su fecha de medición.
+```bash
+python curiana_orchestrator_v2.py --auto 30 --perfiles --reporte
+#   --perfiles  perfiles curados por agente al cerrar (agent_profiles/quotes)
+#   --reporte   reporte anual LLM al completar cada año simulado
+#   --ablacion  run de CONTROL: apaga las inyecciones que empujan convergencia.
+#               La evidencia de koineización es la DIFERENCIA normal vs. ablación
+```
 
-El lexicón activo distingue 8 categorías de `fuente` (ver `normalize_source_language()`
-en `curiana_database.py`), porque "caquetío" mezclaba históricamente dato real
-con especulación sin marcar:
+---
 
-- **`caquetío-atestiguado`** — dato histórico real, citable a fuente
-  concreta. ⚠️ **Medido el 2026-08-03: en el dato es Zavala y casi nadie más** —
-  164 entradas lo citan; Oliver 2, Oviedo (vía terceros) 2, Galeotto Cey 2,
-  Arcaya 1, Jahn 1; Alvarado, Van Buurt y Gatschet, **cero**. Ver
-  `4-fuentes/INDICE_FUENTES.md`.
-  **Zavala cerrado al 100% (F7, 2026-08-03)**: `minar_zavala_glosario.py`
-  parsea las **288** entradas del glosario y genera `lexicon_zavala.py` —
-  225 (78%) van al habla activa, 63 (22%) quedan **fuera por diseño** (45
-  topónimos + 14 antropónimos + 4 descartes). No es deuda: es curación.
-  De los 28 homógrafos con español, tras revisión quedan **14** marcados;
-  11 perdieron la marca (no eran palabras del español, y marcarlas hacía que
-  `score_linguistico()` **sub-contara** caquetío legítimo) y 3 salieron del
-  habla (`hay`, `enea`, `guata`).
-- **`caquetío-reconstruido`** (82: 12 base + 2 topónimo + 68 núcleo
-  fundacional) — vocabulario de trabajo del proyecto: pronombres, numerales,
-  verbos básicos que `prompt_reglas_completo()`/`breve()` presentan a los
-  agentes desde el día 1. No siempre atestiguado, pero es la lengua de la
-  simulación, no un préstamo.
-- **`hipotético-no-verificado`** (441) — **AISLADAS del léxico activo**
-  (2026-06-28) a `curiana_sim/lexicon_candidatos.py` (`CANDIDATOS_NO_VERIFICADOS`).
-  Palabras generadas por `reconstruir_caquetio_gaps.py` transduciendo
-  fonológicamente CUALQUIER palabra wayunaiki/lokono/taíno con la misma glosa,
-  **sin verificar cognación real** contra `COGNADOS` (el único set curado, 37
-  entradas). La minería de pares objetivos (`minar_pares_validacion.py`) mostró
-  ~80% de fallos contra datos reales. Estando en `VOCABULARIO_BASE` producían
-  falsos positivos en `score_linguistico` (el "la"/"para" español matcheaba
-  contra entradas hipotéticas), así que se sacaron del léxico y de Supabase. No
-  se importan ni se siembran; quedan como material para una futura validación
-  sistemática.
-- **wayunaiki (781), lokono (228), taíno (57), proto-arahuaco (9), kalinago
-  (19), kalinago-caribe-overlay (4), jirajaroide-contacto (7)** — lenguas
-  hermanas/de contacto, tratadas como tan ajenas como el español para
-  scoring (ver siguiente sección).
+## Dónde está cada cosa
 
-**Para fortalecer la Capa 2 (reconstrucción con base real):** minar más
-fuentes publicadas con `fuentes_caquetios/*.pdf` (ya minado: Brinton 1871,
-que dio 4 pares LK-TN reales y corrigió un bug en `REGLAS_LK_TN`; *no* dio
-resultado: Perea Alonso 1942, que es gramática Lokono pura, no comparativa
-entre lenguas arahuacas). `arahuaco_comparative.py::validar()` corre la
-suite de validación (18 pares al momento de escribir esto).
+```
+INDICE.md          la puerta del vault
+TABLERO.md         el estado medido (generado — no se edita a mano)
+1-plan/            ¿qué hacemos y qué falta?
+2-lengua/          ¿cómo es el caquetío?  lexicon · morfologia · toponimia · metodo-comparativo
+3-mundo/           ¿cómo era ese pueblo?  5 mapas · polities-caquetias · corpus/ · ensayos/
+4-fuentes/         ¿de dónde lo sabemos?  una nota por obra + INDICE_FUENTES
+5-experimento/     ¿qué probamos?  mapa-motor · ARQUITECTURA · DISENO_KOINE · analisis/
+curiana_sim/       el motor + tests/
+fuentes_caquetios/ los PDF (se citan, no se editan)
+```
 
-### Minerías de 2026-08-03 (F3, F4, F6, F7) — propuestas, no fusiones
+**El motor** (`5-experimento/ARQUITECTURA.md` lo mide entero):
 
-Cuatro fuentes se minaron en paralelo. **Ninguna modificó `curiana_lexicon.py`**:
-cada una emite un módulo de propuesta para revisión humana, con la misma
-disciplina de `minar_zavala_glosario.py`.
+| Módulo | Qué hace |
+|---|---|
+| `curiana_orchestrator_v2` | el bucle; importa a los otros seis |
+| `curiana_lexicon` | vocabulario + reglas + prompts + `score_linguistico()` |
+| `curiana_agents` | los 60 personajes |
+| `curiana_koine` | idiolectos, competencia léxica, métricas de convergencia |
+| `curiana_social` | contagio léxico, prestigio, variación dialectal |
+| `curiana_state` | día, estación, locaciones, eventos |
+| `curiana_observer` | scoring, análisis, perfiles curados |
+| `curiana_database` | Supabase + LangSmith |
+| `curiana_polities` | las 4 polities atestiguadas; cuál simulamos |
 
-| Minador | Propuesta | Nota de fuente |
-|---|---|---|
-| `minar_alvarado_glosario.py` | `lexicon_alvarado.py` | 1551 lemas, 109 evaluados; A=3 B=36 C=13 **D=57** |
-| `minar_gatschet.py` | `lexicon_gatschet.py` | 48 léxicas + 31 topónimos + 6 fórmulas rituales |
-| `minar_van_buurt.py` | `lexicon_van_buurt.py` | §6 (88) y §11 (29) **en diccionarios separados** |
-| `minar_zavala_glosario.py` | `lexicon_zavala.py` | 288/288, el parseo cierra |
+**Los wikilinks resuelven por basename**, así que mover una nota no rompe
+enlaces; lo que se rompe son los enlaces markdown relativos.
 
-**`auditar_82.py` cruza las cuatro** y emite el veredicto por palabra para el
-censo de citas (F1). Estado al 2026-08-03: de 82 entradas sin cita, **61
-confirman · 13 reclasifican · 3 conflicto de glosa · 5 sin rastro** — 77 de 82
-(94%) adjudicables con evidencia. La lista se recalcula del lexicón en cada
-corrida, así que se encoge sola a medida que F1 aplica citas.
+---
 
-> ⚠️ **`lexicon_zavala.py` no es solo propuesta**: `curiana_lexicon.py` lo
-> importa (`GLOSARIO_ZAVALA`, `HOMOGRAFOS_ZAVALA`). Regenerarlo **cambia el
-> comportamiento de `score_linguistico()`**. Los otros tres módulos de propuesta
-> no se importan en ninguna parte.
-
-## Scoring lingüístico (`score_linguistico()` en `curiana_lexicon.py`)
-
-El objetivo del proyecto es que el caquetío **domine**, no solo que se evite
-el español. `score_linguistico()` penaliza dos fugas distintas:
-1. Español funcional (`el/la/de/que/...`) — penalización fuerte (hasta −3).
-2. Otra lengua arahuaca viva (wayunaiki/lokono/taíno) en vez de su forma
-   caquetía — penalización moderada (hasta −2.5), vía `_familia_de_token()`.
-
-El rescate intra-turno (`curiana_orchestrator_v2.py::call_agent()`) dispara
-reintento tanto por score bajo como por fuga a otra lengua arahuaca
-(`otro_arahuaco >= 3` y `pct_caquetio_especifico < 0.3`).
-
-Verificado en runs reales contra Supabase local: caquetío pasó de ~27% a
-~91-93% del output tras estos cambios + retaguear el núcleo fundacional.
-
-## Morfología caquetío-arahuaca
-
-Además de las reglas de trabajo del proyecto, `REGLAS_ZAVALA` incorpora seis
-afijos **atestiguados** en el glosario de Zavala Reyes 2015 y que faltaban:
-`-iro` (diminutivo — la única marca de diminutivo documentada), `-aima`
-(abundancia), `-ima` (humedad/quebrada), `-uco` (cauce), `-ubana` y `-uru`
-(desinencias de valor no precisado por la fuente). Amplían lo que los agentes
-pueden *construir*, no solo nombrar.
+## Morfología (lo mínimo para leer el output)
 
 ```
 Orden: pronombre + verbo-aspecto + complemento
 Pronombres: taya (yo), pia (tú), nüma (él/ella), tayamaa (nosotros)
-Aspectos: -ka (completivo), -ni (continuativo), -da (prospectivo)
-Prefijos posesivos: ta- (mi), pi- (tu), nü- (su)
-Locativos: -bana (orilla/borde), -ana (lugar de), -ko (interior de)
-Neologismos: agentes proponen [forma: componentes = significado]
+Aspectos:   -ka (completivo), -ni (continuativo), -da (prospectivo)
+Posesivos:  ta- (mi), pi- (tu), nü- (su)
+Locativos:  -bana (orilla/borde), -ana (lugar de), -ko (interior de)
+Neologismos: [forma: componentes = significado]
 ```
 
-## Arquitectura de datos
+`REGLAS_ZAVALA` añade seis afijos atestiguados: `-iro` (diminutivo), `-aima`,
+`-ima`, `-uco`, `-ubana`, `-uru`. El detalle y su evidencia, en
+`2-lengua/morfologia.md`.
+
+---
+
+## Modelo y entorno
+
+`claude-haiku-4-5-20251001` para todos los agentes. El cliente se crea en
+`curiana_database.py::get_anthropic_client()`; si `LANGSMITH_API_KEY` está en el
+entorno, se wrappea solo.
+
+```bash
+# curiana_sim/.env  (ver .env.example)
+ANTHROPIC_API_KEY=sk-ant-...          # obligatorio
+SUPABASE_URL=http://127.0.0.1:64321   # local. Sin esto, modo JSON
+SUPABASE_SERVICE_KEY=eyJ...           # service_role local (`supabase status`)
+LANGSMITH_API_KEY=...                 # opcional
+```
+
+---
+
+## Esquema de datos
 
 ```
 simulation_runs → turns → agent_responses → word_uses
                                           → neologisms
-                       → phrase_etymologies
-                       → agent_profiles → agent_quotes   (perfiles curados, --perfiles)
-lexicon  (seed desde VOCABULARIO_BASE)
+                       → agent_profiles → agent_quotes
+                       → koine_metrics · koine_lexicon
+lexicon
 ```
 
-Real-time en Supabase: `agent_responses`, `turns`, `neologisms`, `agent_profiles`,
-`agent_quotes` publicados en `supabase_realtime`.
-
-## Próximos pasos del proyecto
-
-1. Analizar los datos de la simulación larga ya corrida (ver
-   `agent_profiles`/`agent_quotes` y `language_drift_by_turn` en Supabase
-   local) — este era el objetivo original: simular, documentar, analizar.
-2. Decidir qué mostrar públicamente (la página debe mostrar el proyecto en
-   sí, curado — no necesariamente todos los datos crudos).
-3. Decidir el reemplazo del proyecto Supabase cloud borrado (ver nota de
-   egress arriba) antes de cualquier deploy público del dashboard.
-4. Seguir fortaleciendo la Capa 2 minando más fuentes publicadas (ver
-   sección de metodología arriba) si se quiere reconstruir más caquetío
-   con base real, validando las 441 `hipotético-no-verificado` ya aisladas en
-   `lexicon_candidatos.py` (minar fuentes y conservar solo las que pasen).
-
-## Estructura del vault (refactor 2026-08-04)
-
-El repo ES el vault, y está ordenado **por la pregunta que responde cada
-carpeta**, no por tipo de archivo. Si no sabes dónde va un archivo nuevo,
-pregúntate qué pregunta contesta.
-
-```
-INDICE.md · CLAUDE.md · check_vault_links.py   ← puerta, config y guardián
-1-plan/        ¿qué hacemos y qué falta?      PLAN_MAESTRO · LINEA_DE_TIEMPO · SIGUIENTE_TANDA
-2-lengua/      ¿cómo es el caquetío?          mapa-lengua · lexicon · morfologia · toponimia · metodo-comparativo
-3-mundo/       ¿cómo era ese pueblo?          5 mapas + polities-caquetias + ensayos/ + corpus/
-4-fuentes/     ¿de dónde lo sabemos?          INDICE_FUENTES + 30 notas de obra + sesiones/
-5-experimento/ ¿qué probamos con el simulador? mapa-motor · DISENO_KOINE · CANON_TIERRA · BITACORA_RUNS
-                                              · IDEA_PERFILES_AGENTES · MIGRACION_RUNS_EVOLUCION
-                                              · analisis/ · disenos/
-fuentes_caquetios/   los PDF (se citan, no se editan)
-curiana_sim/         el motor + tests/
-supabase/            el esquema versionado
-```
-
-Los **wikilinks resuelven por basename**, así que mover una nota no rompe
-enlaces; lo que se rompe son los enlaces markdown relativos.
-
-## Archivos de referencia
-
-- **`INDICE.md`** — nota raíz del vault (el repo ES el vault, ver
-  `1-plan/PLAN_MAESTRO.md` §2). Punto de entrada: enlaza los mapas,
-  [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision) y `4-fuentes/INDICE_FUENTES.md`.
-- **`2-lengua/`** — la lengua misma, en prosa: `lexicon.md` (qué palabras hay y
-  quién las sostiene), `morfologia.md` (afijos con su evidencia y su estado,
-  incluida la disputa `-bana`/`-ana`), `toponimia.md` (los topónimos como
-  ecuaciones bilingües) y `metodo-comparativo.md` (cómo se reconstruye, y el
-  desbalance wayunaiki/lokono). **Describen el código, no lo sustituyen**: la
-  fuente de verdad sigue siendo `curiana_sim/*.py`.
-- **`4-fuentes/`** — una nota por obra: estado técnico medido
-  (capa de texto, páginas), estado de minado, qué sostiene y qué falta.
-  **Cuando se mine una fuente, el resultado se escribe en su nota**, no en un
-  markdown nuevo. Verificar el grafo con
-  `python check_vault_links.py --strict` (desde la raíz del proyecto).
-- **[Decisiones abiertas](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision)** — lo que solo Miguel puede decidir. Viven en
-  el tablero de GitHub, con su argumento dentro; `1-plan/DECISIONES_ABIERTAS.md`
-  se retiró del repo el 2026-08-06 para no mantener dos copias.
-- `5-experimento/IDEA_PERFILES_AGENTES.md` — diseño de la sección de perfiles de
-  agentes (rol, arco narrativo, frases célebres) y su implementación.
-- `test_quick.py` — test suite sin API keys (debe dar 8/8 OK).
-- `requirements.txt` — dependencias pinneadas.
-- `.env.example` / `.env.local.example` — templates de variables de entorno.
-- `curiana_sim/minar_pares_validacion.py` — mina el propio corpus para
-  pares de validación objetivos (caquetío atestiguado + cognado hermano).
-- `curiana_sim/retag_nucleo_fundacional.py` /
-  `retag_reconstruccion_no_verificada.py` — scripts de corrección de
-  etiquetado del lexicón (documentan por qué quedó como quedó).
+⚠️ `word_uses.source_language` se resuelve con `_familia_de_token()`, que
+deshace prefijos y sufijos. Si vuelve a hacerse con un lookup pelado, **la mitad
+del corpus se guarda sin lengua** (pasó: 27.641 de 54.936 usos).
