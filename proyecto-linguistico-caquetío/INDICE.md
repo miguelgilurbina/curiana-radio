@@ -48,6 +48,7 @@ ensayo. Los ensayos —el argumento, con su evidencia— viven en
 | [[mapa-transmision]] | ¿Cómo sabía lo que sabía? | 34 |
 | [[mapa-geografia-politica]] | ¿Cuál era el mundo de Manaure? | 8 |
 | [[polities-caquetias]] | ¿Cuántos caquetíos había, y cuál simulamos? | 4 polities |
+| [[esfera-de-interaccion]] | ¿Era una sola etnia? ¿Qué unidad hay que simular? | 10/60 · 36/1413 |
 | [[horizonte-de-contacto]] | ¿Hasta dónde llegaba su mundo? ¿Tocó a los mayas? | prospección |
 | [[cronista]] | ¿Se puede contar desde dentro sin inventarlo? | 8 sustituciones |
 | [[mapa-motor]] | El código, los tests y los runs | — |
@@ -69,6 +70,8 @@ ensayo. Los ensayos —el argumento, con su evidencia— viven en
 - 🕰️ [[LINEA_DE_TIEMPO]] — las cuatro eras del proyecto y sobre qué base corrió
   cada cosa. Necesaria para saber qué resultados siguen valiendo.
 - 🎬 [[DINAMICA_DE_RUNS]] — cómo se corre, se lee y se muestra un run.
+- 🔭 [[HALLAZGOS_FASE_1]] — **el cierre de la primera fase como experimento**:
+  qué contestó, qué no puede contestar, y qué restricción abre la fase 2.
 - 🔬 [[01_que_probaron_los_seis_runs]] — qué probaron los runs existentes, qué
   no, y por qué no son comparables.
 - 🧪 [[04_protocolo_run_1_era_auditada]] — cómo se corre y se mide la próxima
