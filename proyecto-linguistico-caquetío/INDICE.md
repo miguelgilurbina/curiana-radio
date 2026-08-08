@@ -49,6 +49,7 @@ ensayo. Los ensayos —el argumento, con su evidencia— viven en
 | [[mapa-geografia-politica]] | ¿Cuál era el mundo de Manaure? | 8 |
 | [[polities-caquetias]] | ¿Cuántos caquetíos había, y cuál simulamos? | 4 polities |
 | [[horizonte-de-contacto]] | ¿Hasta dónde llegaba su mundo? ¿Tocó a los mayas? | prospección |
+| [[cronista]] | ¿Se puede contar desde dentro sin inventarlo? | 8 sustituciones |
 | [[mapa-motor]] | El código, los tests y los runs | — |
 
 ## Las notas de trabajo
