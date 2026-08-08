@@ -30,6 +30,7 @@ except ImportError:
 
 from curiana_database import get_anthropic_client, get_db
 from curiana_agents import ALL_AGENTS, AGENTS_T1, AGENTS_T2, AGENTS_T3
+from huella_de_base import huella as huella_de_base, resumen as resumen_huella
 from curiana_state import (
     ComunidadState,
     DIAS_POR_ESTACION,
@@ -678,7 +679,12 @@ def interactive_mode(client: anthropic.Anthropic):
 
     # Inicializar DB (gracefully degraded si no hay Supabase)
     db = get_db()
-    run_id = db.create_run(model=MODEL, config={"mode": "interactive"})
+    # La huella se sella al arrancar: sin ella no se puede saber, mirando el
+    # run, sobre qué lexicón/corpus/elenco corrió (issue #68).
+    _h = huella_de_base()
+    print(f"  base: {resumen_huella(_h)}")
+    run_id = db.create_run(model=MODEL,
+                           config={"mode": "interactive", **_h})
     client = get_client(run_id)  # re-crear con run_id para LangSmith
 
     print(f"\n  Vocabulario disponible: {len(lexico.palabras_activas())} palabras")
@@ -826,9 +832,14 @@ def auto_mode(
 
     # Inicializar DB (CurianaDB real o CurianaDBMock si no está configurada)
     db = get_db()
+    _h = huella_de_base()
+    print(f"  base: {resumen_huella(_h)}")
+    if _h.get("motor_sucio"):
+        print("  ⚠ árbol sucio: este run NO será citable (ver huella_de_base.py)")
     run_id = db.create_run(
         model=MODEL,
-        config={"max_turns": turnos, "mode": "auto", "ablacion": ablacion},
+        config={"max_turns": turnos, "mode": "auto", "ablacion": ablacion,
+                **_h},
     )
     # Re-crear cliente con run_id para que LangSmith use el proyecto correcto
     client = get_client(run_id)

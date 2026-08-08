@@ -68,6 +68,7 @@ ensayo. Los ensayos —el argumento, con su evidencia— viven en
   está minado, qué sostiene cada una.
 - 🕰️ [[LINEA_DE_TIEMPO]] — las cuatro eras del proyecto y sobre qué base corrió
   cada cosa. Necesaria para saber qué resultados siguen valiendo.
+- 🎬 [[DINAMICA_DE_RUNS]] — cómo se corre, se lee y se muestra un run.
 - 🔬 [[01_que_probaron_los_seis_runs]] — qué probaron los runs existentes, qué
   no, y por qué no son comparables.
 - 🧪 [[04_protocolo_run_1_era_auditada]] — cómo se corre y se mide la próxima
