@@ -4,7 +4,7 @@
 CURIANA — los guardianes, en un solo comando
 ============================================
 
-El proyecto tiene siete comprobaciones que miden **contra el dato** y no contra
+El proyecto tiene ocho comprobaciones que miden **contra el dato** y no contra
 la documentación. Estaban sueltas, y correrlas dependía de que alguien se
 acordara de todas:
 
@@ -15,8 +15,9 @@ acordara de todas:
     5. las polities               python curiana_sim/curiana_polities.py --check
     6. la bibliografía al día     python curiana_sim/generar_bibliografia.py --check
     7. los datos de lengua        python curiana_sim/compilar_lengua.py --check
+    8. el registro de nodos       python curiana_sim/compilar_asentamientos.py --check
 
-Acordarse de siete cosas no es un método: es suerte. Esto las corre todas,
+Acordarse de ocho cosas no es un método: es suerte. Esto las corre todas,
 informa en una tabla y sale con código ≠ 0 si alguna falla, para que se pueda
 colgar de un hook o de CI.
 
@@ -25,7 +26,7 @@ viejo cada vez que cambia una cifra medida, que es constantemente, y bloquear
 por eso sería ruido. Se regenera, no se vigila.
 
 Uso:
-    python guardianes.py            # los cinco, informe en tabla
+    python guardianes.py            # los ocho, informe en tabla
     python guardianes.py --rapido   # salta los tests (los más lentos)
     python guardianes.py --silencio # solo el veredicto, para hooks
 """
@@ -63,6 +64,9 @@ GUARDIANES = [
      REPO, False),
     ("datos de lengua",
      [PY, os.path.join(AQUI, "compilar_lengua.py"), "--check"],
+     REPO, False),
+    ("registro de nodos",
+     [PY, os.path.join(AQUI, "compilar_asentamientos.py"), "--check"],
      REPO, False),
 ]
 

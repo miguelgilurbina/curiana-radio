@@ -184,6 +184,22 @@ cap.3 pp.251, 261-262 (`geografia_politica-003`):
 > **Todariquiba** (el poblado de Manaure, ~1 legua de Coro) · **Guaibacoa** ·
 > **Cumarebo** · **Tomodore** · **Caujarao** · **Zazárida** · **Capatárida**
 
+De esos, dos rinden mucho más que los otros cinco:
+
+- **Todariquiba** es el poblado de Manaure y el mejor candidato a lo que la
+  simulación llama «la Curiana». Su ubicación **sigue en debate**: no aparece
+  sitio arqueológico del tamaño correspondiente en la periferia de Coro.
+- **Cumarebo** tiene etimología resuelta —`Cumare` (antropónimo de cacique) +
+  `ebo` ('camino', atestiguado) = *'camino de Cumare'*, nivel A— y, sobre todo,
+  una ensenada **justo al este** llamada **«Puerto de los Indios Curaçao»**,
+  punto de partida documentado desde el que los caquetíos de Curazao cruzaban a
+  la isla en canoa (van Buurt 2014, citando a Hartog 1968).
+
+> **Ese par vale más que la lista entera**: Todariquiba es el centro político y
+> Cumarebo el puerto, y entre Cumarebo y Curazao hay una **ruta atestiguada**.
+> Es el enlace continente-isla mejor sostenido que tiene el proyecto, y es lo
+> que hace viable un diseño de dos nodos con tráfico real entre ellos.
+
 Y la escala, de la carta de Ballesteros (1550), vía Oliver cap.3 pp.262-263
 (`geografia_politica-004`): el canal del **buco** requería «cuatro o cinco mil
 indios» para repararlo, de lo que Oliver infiere coordinación entre **más de 30
@@ -197,11 +213,34 @@ poblados**. La región tenía «catorce o quince mil indios».
 
 ---
 
+### 🔴 Lo que el registro de nodos reveló al construirlo
+
+`3-mundo/asentamientos.yaml` separa tres cosas que la prosa mezclaba:
+**¿existió?** (`etiqueta`), **¿de qué época es el documento?** (`atestacion`) y
+**¿existía en el s. XIV-XV?** (`precontacto`). Al separarlas salió esto, medido
+el 2026-08-08 sobre 13 nodos:
+
+| Precontacto sostenido | n | Cuáles |
+|---|---|---|
+| **sí** | **3** | **Curazao, Aruba, Bonaire** — los tres insulares |
+| desconocido | 10 | todo el eje continental, incluida Todariquiba |
+
+**Ningún nodo continental tiene evidencia de existir en la ventana que
+simulamos.** Los tres que la tienen la deben a la **arqueología** —presencia
+dabajuroide ~900 d.C. (Antczak 2017 p.157)—, no a las crónicas.
+
+Es contraintuitivo y hay que tenerlo delante: **para el siglo XV, las islas
+están mejor sostenidas que la costa.** Toda la evidencia continental es de
+cartas de 1538 y 1550, y una carta de 1538 no dice nada de 1450.
+
+El validador lo protege con una regla ejecutable: `precontacto: si` **exige**
+`precontacto_razon`, y no puede convivir con `atestacion: colonial`.
+
 ## 5. Lo que hay que construir
 
 | # | Qué | Por qué |
 |---|---|---|
-| 1 | **Registro de nodos** (`3-mundo/asentamientos.yaml`) con etiqueta epistémica por nodo | hoy no existe: los poblados viven en prosa dentro del corpus |
+| 1 | ~~**Registro de nodos**~~ | ✅ **hecho**: `3-mundo/asentamientos.yaml`, 13 nodos, 4 huecos declarados, 8.º guardián |
 | 2 | Minar Paraguaná específicamente (Arcaya trabajó los archivos de Coro) | falta la mitad de los topónimos y no sabemos cuáles son precontacto |
 | 3 | Que la simulación declare su nodo, como ya declara su polity | `huella_de_base.py` ya sella `polity`; falta `nodo` |
 | 4 | Variación dialectal **por nodo**, no por agente suelto | es la condición para que «koiné» signifique algo |

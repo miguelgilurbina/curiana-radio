@@ -48,7 +48,7 @@ ensayo. Los ensayos —el argumento, con su evidencia— viven en
 | [[mapa-transmision]] | ¿Cómo sabía lo que sabía? | 34 |
 | [[mapa-geografia-politica]] | ¿Cuál era el mundo de Manaure? | 8 |
 | [[polities-caquetias]] | ¿Cuántos caquetíos había, y cuál simulamos? | 4 polities |
-| [[esfera-de-interaccion]] | ¿Era una sola etnia? ¿Qué unidad hay que simular? | 10/60 · 36/1413 |
+| [[esfera-de-interaccion]] | ¿Era una sola etnia? ¿Qué unidad hay que simular? | 13 nodos |
 | [[horizonte-de-contacto]] | ¿Hasta dónde llegaba su mundo? ¿Tocó a los mayas? | prospección |
 | [[cronista]] | ¿Se puede contar desde dentro sin inventarlo? | 8 sustituciones |
 | [[mapa-motor]] | El código, los tests y los runs | — |
