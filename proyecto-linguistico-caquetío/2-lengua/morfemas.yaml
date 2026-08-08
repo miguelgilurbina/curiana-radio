@@ -1,0 +1,157 @@
+meta:
+  generado_por: curiana_sim/migrar_toponimos.py
+  morfemas: 10
+  glosados: 6
+  sin_glosa: 4
+morfemas:
+- id: morfema-001
+  forma: -bacoa
+  glosado: true
+  glosa_inferida: bosque, arboleda; formante toponímico de 'paraje cubierto de'
+  estatus: 'CORROBORADO (no es nuevo: `bacoa` ya está en el lexicón como caquetío-atestiguado). Lo nuevo
+    es su uso SUFIJAL productivo, que REGLAS_ZAVALA no recoge.'
+  apoyos:
+  - adabacoa (Todo arboleda)
+  - guadabacoa (Arboleda)
+  - quibacoas (Bosques pedregosos)
+  - yacarebacoa (Pueblo del bosque)
+  contraejemplos:
+  - sazaribacoa (Río de los maizales) — la glosa no menciona bosque; encaja mejor con la acepción 'sitio
+    fértil' de la misma entrada
+  apoyo_externo:
+  - 'Alvarado 1921, vía van Buurt §10: `-baca` ''grupo, matorral, espesura'' en topónimos venezolanos
+    (Yatu Bacu, Dauguaraubaca)'
+  - 'insular sin glosa: Barbacoa (Aruba), Maniguacoa (Curaçao)'
+  recurrencia: 5
+  veredicto: 'El morfema mejor sostenido de todo el ejercicio: 5 topónimos glosados + apoyo independiente
+    de Alvarado.'
+- id: morfema-002
+  forma: -are
+  glosado: true
+  glosa_inferida: sitio de, paraje de (sufijo locativo)
+  estatus: NUEVO — despejado aquí por primera vez
+  apoyos:
+  - bobare (Sitio de cultivo)
+  - cabudare (sitio de cultivo)
+  - dabudare (Sitio de extracción de barro)
+  - pachacuare (Sitio de palmeras)
+  - taratarare (Hato, conuco — un hato es un lugar)
+  contraejemplos:
+  - guasare (Árbol cactáceo) — no denota lugar
+  - chunare (Mazorca tierna) — no denota lugar
+  recurrencia: 5
+  veredicto: 5 de 7 apariciones en posición final con glosa descriptiva denotan un LUGAR, y las 4 más
+    limpias dicen literalmente 'Sitio de'. `dabudare` es el caso decisivo porque su base `dabuda` 'barro
+    loza' ya está atestiguada.
+  conflicto: ⚠ van Buurt §5 recoge `-ure` (papiamentu -huri/-uri) glosado 'raíz' por Cruz Esteves 1989,
+    y lo declara equivalente al `-ure` continental. La evidencia toponímica dice 'sitio de'. Glosa en
+    disputa — misma situación que `-bana` (el tablero de decisiones D9).
+- id: morfema-003
+  forma: ada-
+  glosado: true
+  glosa_inferida: árbol
+  estatus: NUEVO en el caquetío — pero con cognado arahuaco fuerte
+  apoyos:
+  - adabacoa (Todo arboleda)
+  - guadabacoa (Arboleda)
+  apoyo_externo:
+  - Lokono `ada` 'árbol' (cognado arahuaco directo)
+  - van Buurt §5 documenta `bara`/`bari` 'árbol' (cf. Lokono balli) como OTRA raíz de árbol en el mismo
+    sistema — no compiten
+  recurrencia: 2
+  veredicto: Recurrencia mínima (2) pero con las dos glosas idénticas ('arboleda') y cognado arahuaco
+    de manual. B sólido.
+  advertencia: 'El despeje no es estrictamente forzoso: con `-bacoa` = ''arboleda'' por sí solo, `ada-`
+    podría ser cualquier otra cosa. Lo que lo sostiene es el cognado lokono, no la ecuación.'
+- id: morfema-004
+  forma: bari-
+  glosado: true
+  glosa_inferida: rojizo, turbio (del color del agua o de la tierra)
+  estatus: REAGRUPACIÓN de dos entradas ya existentes
+  apoyos:
+  - barisi (Región de tierras coloradas cerca del mar)
+  - bariquisimeto (Río de aguas turbias)
+  contraejemplos:
+  - el lexicón tiene además `bari` = 'vientre, barriga', homógrafo sin relación
+  recurrencia: 2
+  veredicto: 'Propone unificar `barici` ''agua turbia'' y `bariki` ''tierra colorada'' bajo una raíz `bari-`
+    + formantes. NO propone tocar el lexicón: propone la pregunta.'
+- id: morfema-005
+  forma: yacare
+  glosado: true
+  glosa_inferida: pueblo, poblado
+  estatus: NUEVO
+  apoyos:
+  - yacare (Pueblo. Caimán)
+  - yacarebacoa (Pueblo del bosque)
+  recurrencia: 2
+  veredicto: Cierra la ecuación de `yacarebacoa` sin residuo. Pero ver la advertencia de contaminación
+    tupí en NIVEL_B.
+- id: morfema-006
+  forma: wa-
+  glosado: true
+  glosa_inferida: prefijo de pluralidad / 'tener'
+  estatus: CORROBORADO (van Buurt §6, de Goeje 1928) — nuevo es el apoyo toponímico continental
+  apoyos:
+  - guadabacoa (Arboleda) frente a adabacoa (TODO arboleda)
+  - guamabatriba (Muchas tierras de cultivo)
+  contraejemplos:
+  - muchos topónimos en gua-/wa- sin glosa; el prefijo es demasiado frecuente para probar nada por sí
+    solo
+  recurrencia: 2
+  veredicto: C alto / B bajo. La pareja adabacoa~guadabacoa es elegante pero es UNA pareja.
+- id: morfema-007
+  forma: -shi / -chi
+  glosado: false
+  apariciones: 22
+  ejemplos:
+  - Balashi
+  - Hudishibana
+  - Arashi
+  - Bushiri
+  - Cadushi
+  - Canashito
+  - Cashunti
+  - Catashi
+  - Cudishi
+  - Macoshi
+  - Tibushi
+  - Teishi
+  - Sasarawichi
+  - Angochi
+  - Anamichi
+  nota: '**El formante más frecuente del corpus insular y nadie lo ha glosado.** Ni Gatschet, ni van Buurt,
+    ni Zavala. Es el objetivo nº 1 de cualquier minería futura de toponimia ABC.'
+- id: morfema-008
+  forma: -ari / -ri
+  glosado: false
+  apariciones: 7
+  ejemplos:
+  - Handebirari
+  - Kasiaari
+  - Yabarubari
+  - Arikurari
+  - Cubari
+  - Damari
+  - Kassibari
+  nota: van Buurt glosa `rí` 'fuerte, duro, durable' solo dentro de Casibari. Falta comprobar si vale
+    igual en los otros seis.
+- id: morfema-009
+  forma: -kuri / -curi
+  glosado: false
+  apariciones: 3
+  ejemplos:
+  - Warerukuri
+  - Antikuri
+  - Kamakuri
+  nota: ya señalado en SUFIJOS_NO_CODIFICADOS de lexicon_gatschet.
+- id: morfema-010
+  forma: -bari
+  glosado: false
+  apariciones: 3
+  ejemplos:
+  - Yabarubari
+  - Cubari
+  - Kassibari
+  nota: ⚠ INDICE_FUENTES ya concluyó que **`-bari` no es un afijo**; van Buurt lo explica como `bara`/`bari`
+    'árbol'. Coherente con que aparezca en posición final de topónimos.

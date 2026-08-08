@@ -34,6 +34,7 @@ entradas:
       arena que une Paraguaná al continente y separa el Golfete del Caribe abierto).
     fuente: atestiguado
     referencia: "Camacho et al. 2011, pp. 8–10"
+    procedencia: {obra: camacho-2011}
     dominios: [ecologia, geografia]
     agentes_relacionados: []
     palabra_lexicon: null
@@ -48,6 +49,7 @@ entradas:
       Parque Nacional Médanos de Coro.
     fuente: atestiguado
     referencia: "Camacho et al. 2011, pp. 16–17"
+    procedencia: {obra: camacho-2011}
     dominios: [ecologia, geografia]
     agentes_relacionados: []
     palabra_lexicon: null
@@ -66,6 +68,7 @@ entradas:
       de arena móvil.
     fuente: atestiguado
     referencia: "Camacho et al. 2011, pp. 10–11"
+    procedencia: {obra: camacho-2011}
     dominios: [ecologia, geografia]
     agentes_relacionados: []
     palabra_lexicon: null
@@ -79,6 +82,7 @@ entradas:
       que cualquier habitante haría a diario.
     fuente: reconstruido
     referencia: "Camacho et al. 2011, pp. 10–11, 16"
+    procedencia: {obra: camacho-2011}
     dominios: [ecologia, geografia]
     agentes_relacionados: [Suba-ko, Dara-bana]
     palabra_lexicon: null
@@ -96,6 +100,7 @@ entradas:
       evaporación potencial supera con mucho a la lluvia casi todo el año.
     fuente: atestiguado
     referencia: "Camacho et al. 2011, pp. 8–9 (estación Coro); datos climáticos de Coro"
+    procedencia: {obra: camacho-2011}
     dominios: [ecologia, clima]
     agentes_relacionados: []
     palabra_lexicon: joutai
@@ -109,6 +114,7 @@ entradas:
       del cielo, NO por la temperatura, que apenas se mueve.
     fuente: atestiguado
     referencia: "Camacho et al. 2011, p. 9 (tablas de precipitación y temperatura, estación Coro)"
+    procedencia: {obra: camacho-2011}
     dominios: [ecologia, clima]
     agentes_relacionados: [Shaboro, Corie-ko]
     palabra_lexicon: kaya
@@ -127,6 +133,7 @@ entradas:
       secan el resto del año. No hay un gran río perenne.
     fuente: atestiguado
     referencia: "Camacho et al. 2011, p. 17 (Tabla 7); hidrología de Falcón / río Mitare"
+    procedencia: {obra: camacho-2011}
     dominios: [ecologia, hidrologia]
     agentes_relacionados: []
     palabra_lexicon: bara
@@ -141,6 +148,7 @@ entradas:
       captura en el pulso húmedo y la administra durante la seca.
     fuente: reconstruido
     referencia: "Camacho et al. 2011 (clima/hidrología); lexicón atestiguado (buko, jaguey, jacuque)"
+    procedencia: {obra: camacho-2011}
     dominios: [ecologia, hidrologia, agricultura]
     agentes_relacionados: [Buco-ko, Corie-ko, Ita-ko, Wari-ko]
     palabra_lexicon: buco
@@ -175,6 +183,7 @@ entradas:
       permite la gran cosecha de sal. En lluvias el salinar no produce.
     fuente: reconstruido
     referencia: "Camacho et al. 2011 (viento/clima); proceso evaporítico de Las Cumaraguas"
+    procedencia: {obra: camacho-2011}
     dominios: [ecologia, salinas, clima]
     agentes_relacionados: [Biro-ko, Manaure, Watapana]
     palabra_lexicon: borojo
@@ -303,6 +312,7 @@ entradas:
       madera dura y medicina.
     fuente: atestiguado
     referencia: "Camacho et al. 2011, p. 16 (flora de las dunas); lexicón caquetío atestiguado"
+    procedencia: {obra: camacho-2011}
     dominios: [ecologia, flora, recoleccion]
     agentes_relacionados: [Suba-ko, Dara-ko, Paugis-sha]
     palabra_lexicon: watapana
@@ -331,6 +341,7 @@ entradas:
       hace navegable y peligroso el Golfete, y sostiene el eje insular.
     fuente: atestiguado
     referencia: "Camacho et al. 2011, pp. 9, 15 (viento ENE dominante todo el año)"
+    procedencia: {obra: camacho-2011}
     dominios: [ecologia, clima, navegacion]
     agentes_relacionados: [Bagre-ko, Dara-bana, Watapana, Tari-ko]
     palabra_lexicon: joutai
@@ -523,6 +534,7 @@ entradas:
       de bosques de galería en los cauces, de la sierra, o por intercambio.
     fuente: reconstruido
     referencia: "Cruce entre maderas de canoa atestiguadas y la flora xerófila de Coro (Camacho et al. 2011; PN Médanos)"
+    procedencia: {obra: camacho-2011}
     dominios: [ecologia, navegacion, comercio, oficios]
     agentes_relacionados: [Dara-ko, Nabaraka, Watapana, Tari-ko]
     palabra_lexicon: kuru
@@ -658,6 +670,7 @@ entradas:
       devastada desde 1500. El escenario es constante; el elenco no.
     fuente: reconstruido
     referencia: "Síntesis de Camacho et al. 2011 (geomorfología/clima) + historia ecológica del Caribe (s. XVI–XX)"
+    procedencia: {obra: camacho-2011}
     dominios: [ecologia, fauna, metodo]
     agentes_relacionados: []
     palabra_lexicon: null
@@ -801,6 +814,7 @@ huecos_lexicos:
       tienen nombre.
     fuente: reconstruido
     referencia: "Camacho et al. 2011 (dunas); ausencia verificada en curiana_lexicon.py"
+    procedencia: {obra: camacho-2011}
     dominios: [ecologia, geografia]
     agentes_relacionados: [Suba-ko, Dara-bana]
     palabra_lexicon: null
@@ -832,6 +846,7 @@ huecos_lexicos:
       otro aire.
     fuente: reconstruido
     referencia: "Camacho et al. 2011 (viento ENE); ausencia verificada en curiana_lexicon.py"
+    procedencia: {obra: camacho-2011}
     dominios: [ecologia, clima, navegacion]
     agentes_relacionados: [Dara-bana, Bagre-ko, Watapana]
     palabra_lexicon: null
@@ -888,6 +903,7 @@ huecos_lexicos:
       mangle y la distinción mangle rojo / negro quedan bajo el genérico mankaba.
     fuente: reconstruido
     referencia: "Camacho et al. 2011 (istmo); ausencia verificada en curiana_lexicon.py"
+    procedencia: {obra: camacho-2011}
     dominios: [ecologia, geografia, manglar]
     agentes_relacionados: [Dara-bana, Suba-ko]
     palabra_lexicon: null
