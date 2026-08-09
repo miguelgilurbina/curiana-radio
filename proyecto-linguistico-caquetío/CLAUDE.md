@@ -66,7 +66,7 @@ cura y se publica en Curiana Radio (`/simulador`).
 cd curiana_sim
 pip install -r requirements.txt
 
-python guardianes.py              # los 7 en verde antes de cerrar nada
+python guardianes.py              # los 8 en verde antes de cerrar nada
 python guardianes.py --rapido     # sin los tests (más rápido)
 
 # Los datos de lengua y la bibliografía
@@ -80,6 +80,7 @@ python generar_tablero.py --gh    # + decisiones del tablero (usa red)
 
 python analizar_runs.py --todo    # análisis de los runs en la base
 python compilar_corpus.py --check # valida 3-mundo/corpus/
+python compilar_asentamientos.py  # los nodos de la esfera: existencia y época
 python curiana_polities.py --canon
 
 supabase start                    # Docker local (ver puertos arriba)
@@ -107,6 +108,7 @@ TABLERO.md         el estado medido (generado — no se edita a mano)
 2-lengua/          ¿cómo es el caquetío?  lexicon · morfologia · toponimia · metodo-comparativo
                    datos: cognados.yaml · toponimos.yaml · morfemas.yaml (ver datos-de-lengua)
 3-mundo/           ¿cómo era ese pueblo?  5 mapas · polities-caquetias · corpus/ · ensayos/
+                   esfera-de-interaccion · asentamientos.yaml (los nodos)
 4-fuentes/         ¿de dónde lo sabemos?  una nota por obra + INDICE_FUENTES
 5-experimento/     ¿qué probamos?  mapa-motor · ARQUITECTURA · DISENO_KOINE · analisis/
 curiana_sim/       el motor + tests/

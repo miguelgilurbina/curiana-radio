@@ -1,0 +1,346 @@
+# Curiana — registro de nodos de la esfera de interacción
+# =========================================================
+#
+# Responde a UNA pregunta: ¿qué asentamientos existían, cuándo, y con qué
+# evidencia? Es un artefacto DISTINTO de 2-lengua/toponimos.yaml, que responde
+# a "¿qué significa este nombre?".
+#
+# La distinción no es burocrática. En `toponimos.yaml`, Adícora, Curaçao y
+# Aruba están los tres como `descartado` — que ahí significa "sin etimología
+# despejable", NO "no existió". Un registro de nodos tiene que poder decir
+# "este lugar existió y no sabemos qué quiere decir su nombre".
+#
+# LOS TRES CAMPOS QUE NO SE PUEDEN CONFUNDIR
+# ------------------------------------------
+#   etiqueta      ¿tenemos evidencia de que este asentamiento existió?
+#                 atestiguado | reconstruido | hipotetico   (las del corpus)
+#
+#   atestacion    ¿de qué época es el DOCUMENTO que lo atestigua?
+#                 colonial | precolonial | arqueologica
+#
+#   precontacto   ¿existía en la ventana que simulamos (s. XIV-XV)?
+#                 si | probable | desconocido
+#
+# El tercero es el que importa y el que casi siempre dice `desconocido`.
+# Un poblado nombrado en una carta de 1538 está *atestiguado* sin que eso diga
+# nada de si existía cien años antes. Confundir `etiqueta: atestiguado` con
+# "sirve para la simulación" es exactamente la regla 3 de CLAUDE.md.
+#
+# EL HALLAZGO QUE DEJA VER ESTE REGISTRO
+# --------------------------------------
+# Ningún nodo continental tiene `precontacto: si`. Los únicos que lo tienen son
+# los insulares, y no por documento sino por ARQUEOLOGÍA (presencia dabajuroide
+# ~900 d.C.). Es decir: para la ventana que simulamos, las islas están mejor
+# sostenidas que la costa. Eso contradice la intuición y hay que tenerlo
+# delante al decidir qué nodo se pone en escena (#90).
+#
+# Valida: python curiana_sim/compilar_asentamientos.py --check
+
+meta:
+  pregunta: "¿Qué asentamientos existían en la esfera, cuándo, y con qué evidencia?"
+  creado: 2026-08-08
+  ambito: >
+    La esfera de interacción del Golfete de Coro — ver 3-mundo/esfera-de-interaccion.md.
+    NO es un gazeteer de Falcón: solo entran nodos con evidencia citable.
+  advertencia: >
+    Siete de los nodos continentales vienen de UNA sola fuente: la carta del
+    obispo Rodrigo de Bastidas a Carlos V (1538), vía Oliver 1989 cap.3.
+    Una lista de 1538 es documentación colonial once años posterior al pacto
+    Ampíes-Manaure. Sirve para saber qué topónimos existían; no para dar por
+    buena la organización política que describe.
+
+nodos:
+
+  # ── El eje continental: Coro y el Golfete ──────────────────────────────
+
+  - id: nodo-001
+    forma: todariquiba
+    tipo: asentamiento
+    region: golfete-de-coro
+    etiqueta: atestiguado
+    atestacion: colonial
+    precontacto: desconocido
+    rol: >
+      Poblado real donde residió Manaure y donde se reasentó tras el pacto de
+      1527 con Juan de Ampíes; su hijo/sucesor Don Alexandre también residió
+      ahí. Es el mejor candidato a lo que la simulación llama "la Curiana".
+    ubicacion: >
+      Aprox. 1 legua (4,5-6 km) de la actual Coro. LA UBICACIÓN EXACTA SIGUE EN
+      DEBATE: no se ha hallado sitio arqueológico del tamaño correspondiente en
+      la periferia de Coro. Oliver sospecha que quedó bajo la expansión urbana
+      moderna, o más allá de la distancia que sugieren las crónicas.
+    procedencia:
+      obra: oliver-1989-cap3
+      detalle: "pp. 251 (pacto de 1527), 261-262 (registros Welser, Ponce y Vaccari 1977)"
+    corpus: [geografia_politica-003]
+    etimologia: sin-resolver
+    nota: >
+      NO está en toponimos.yaml. Sí está `todarahuato` ('Indígena de la Vela'),
+      que NO se ha demostrado relacionado — no asumirlo.
+      ⚠ Trampa de extracción medida: `pypdf` parte "Todariquiba" en
+      "T odariquiba" en sus 7 apariciones de Oliver cap.3. Usar `pdftotext`.
+
+  - id: nodo-002
+    forma: cumarebo
+    tipo: asentamiento-puerto
+    region: golfete-de-coro
+    etiqueta: atestiguado
+    atestacion: colonial
+    precontacto: desconocido
+    rol: >
+      Nombrado en la carta de Bastidas (1538). Su interés no es el poblado sino
+      la costa: una ensenada JUSTO AL ESTE de Puerto Cumarebo se llamaba
+      "Puerto de los Indios Curaçao", y es el punto de partida documentado
+      desde el que los caquetíos de Curazao cruzaban a la isla en canoa.
+      Es, con eso, el enlace continente-isla mejor sostenido del registro.
+    ubicacion: costa oriental del estado Falcón, al este de Coro.
+    procedencia:
+      obra: van-buurt-2014
+      detalle: "Puerto de los Indios Curaçao, citando a Hartog 1968; la lista de 1538 en Oliver 1989 cap.3 p.251"
+    corpus: [geografia_politica-001, geografia_politica-003]
+    etimologia: resuelto
+    etimologia_detalle: >
+      toponimo-004, nivel A: `Cumare` (antropónimo — la fuente lo identifica
+      como el nombre del cacique) + `ebo` ('camino, paso, senda', lexicón,
+      caquetío-atestiguado) = 'camino de Cumare'. Segunda atestación
+      independiente de `ebo` (la otra es `jurijurebo`).
+
+  - id: nodo-003
+    forma: guaibacoa
+    tipo: asentamiento
+    region: golfete-de-coro
+    etiqueta: atestiguado
+    atestacion: colonial
+    precontacto: desconocido
+    rol: Nombrado en la carta de Bastidas a Carlos V (1538). Nada más se sabe.
+    procedencia:
+      obra: oliver-1989-cap3
+      detalle: "p. 251, carta de Rodrigo de Bastidas 1538"
+    corpus: [geografia_politica-003]
+    etimologia: sin-resolver
+    nota: >
+      El elemento `-bacoa` ('bosque, lugar, paraje') es productivo y está
+      atestiguado (yacarebacoa, quibacoas, guadabacoa, adabacoa, sazaribacoa).
+      Eso hace la segmentación plausible, pero `guai-` no recurre: NO se
+      despeja. Queda como tarea, no como hallazgo.
+
+  - id: nodo-004
+    forma: tomodore
+    tipo: asentamiento
+    region: golfete-de-coro
+    etiqueta: atestiguado
+    atestacion: colonial
+    precontacto: desconocido
+    rol: Nombrado en la carta de Bastidas a Carlos V (1538). Nada más se sabe.
+    procedencia:
+      obra: oliver-1989-cap3
+      detalle: "p. 251, carta de Rodrigo de Bastidas 1538"
+    corpus: [geografia_politica-003]
+    etimologia: sin-resolver
+
+  - id: nodo-005
+    forma: caujarao
+    tipo: asentamiento
+    region: golfete-de-coro
+    etiqueta: atestiguado
+    atestacion: colonial
+    precontacto: desconocido
+    rol: Nombrado en la carta de Bastidas a Carlos V (1538). Nada más se sabe.
+    procedencia:
+      obra: oliver-1989-cap3
+      detalle: "p. 251, carta de Rodrigo de Bastidas 1538"
+    corpus: [geografia_politica-003]
+    etimologia: sin-resolver
+
+  - id: nodo-006
+    forma: zazarida
+    variantes: [Zazárida]
+    tipo: asentamiento
+    region: falcon-occidental
+    etiqueta: atestiguado
+    atestacion: colonial
+    precontacto: desconocido
+    rol: Nombrado en la carta de Bastidas a Carlos V (1538). Nada más se sabe.
+    procedencia:
+      obra: oliver-1989-cap3
+      detalle: "p. 251, carta de Rodrigo de Bastidas 1538"
+    corpus: [geografia_politica-003]
+    etimologia: sin-resolver
+
+  - id: nodo-007
+    forma: capatarida
+    variantes: [Capatárida]
+    tipo: asentamiento
+    region: falcon-occidental
+    etiqueta: atestiguado
+    atestacion: colonial
+    precontacto: desconocido
+    rol: Nombrado en la carta de Bastidas a Carlos V (1538). Nada más se sabe.
+    procedencia:
+      obra: oliver-1989-cap3
+      detalle: "p. 251, carta de Rodrigo de Bastidas 1538"
+    corpus: [geografia_politica-003]
+    etimologia: sin-resolver
+    nota: >
+      ⚠ NO confundir con `capadare` de toponimos.yaml (nivel C, 'Diente de
+      tigre'). Se parecen y no hay nada que demuestre que sean el mismo lugar.
+
+  - id: nodo-008
+    forma: san-bartolome
+    tipo: asentamiento-palafito
+    region: golfete-de-coro
+    etiqueta: atestiguado
+    atestacion: colonial
+    precontacto: desconocido
+    rol: >
+      El "Puerto de San Bartolomé" que describió Vespucio (1500-1509): un
+      poblado de viviendas sobre estacas que le recordó a Venecia y dio origen
+      al nombre "Venezuela" en el mapa de Juan de la Cosa. Ramos Pérez lo ubica
+      en el Golfete de Coro, no en el Lago de Maracaibo.
+    procedencia:
+      obra: oliver-1989-cap3
+      detalle: "p. 249, citando a Ramos Pérez (1976: 88) y Navarrete 1829 [3]: 218-219"
+    corpus: [geografia_politica-006]
+    etimologia: no-aplica
+    nota: >
+      🔴 DEUDA DE FUENTE: descansa en Ramos Pérez, obra que NO está en el repo
+      (ver 4-fuentes/ramos-perez-1978.md). Y Oliver sugiere que los palafitos
+      pudieran ser de una comunidad pesquera especializada cuya relación con
+      los asentamientos de tierra adentro NO está establecida — puede no ser
+      el mismo poblado ni la misma gente. Nombre castellano, no caquetío.
+
+  # ── Los nodos insulares: los únicos con precontacto sostenido ──────────
+
+  - id: nodo-009
+    forma: curazao
+    variantes: [Curaçao]
+    tipo: isla
+    region: islas-abc
+    etiqueta: atestiguado
+    atestacion: arqueologica
+    precontacto: si
+    rol: >
+      Nodo insular con presencia caquetía documentada, incluidos préstamos
+      léxicos caquetíos que sobreviven en el papiamento. Enlazado con el
+      continente por la travesía desde el este de Puerto Cumarebo (nodo-002).
+    procedencia:
+      obra: van-buurt-2014
+    corpus: [geografia_politica-001]
+    etimologia: sin-resolver
+    precontacto_razon: >
+      La ruta dabajuroide Yaracuy → costa → Aruba/Bonaire/Curazao está fechada
+      ~900 d.C. (Antczak et al. 2017 p.157). La presencia es arqueológica y muy
+      anterior a la ventana simulada — NO depende de las crónicas.
+
+  - id: nodo-010
+    forma: aruba
+    tipo: isla
+    region: islas-abc
+    etiqueta: atestiguado
+    atestacion: arqueologica
+    precontacto: si
+    rol: >
+      Nodo insular con presencia caquetía. Los indios de Alto Vista mantenían
+      contacto regular con el pueblo de Santa Ana, en Paraguaná, hasta el s.
+      XIX — el enlace isla-península con más continuidad documentada.
+    procedencia:
+      obra: van-buurt-2014
+    corpus: [geografia_politica-001]
+    etimologia: sin-resolver
+    precontacto_razon: ruta dabajuroide ~900 d.C. (Antczak et al. 2017 p.157).
+    nota: >
+      En Aruba y Bonaire la identidad indígena se mantuvo; en Curazao quedó
+      "swamped" por un acervo africano mucho mayor (van Buurt 2014). Los tres
+      nodos insulares NO son intercambiables.
+
+  - id: nodo-011
+    forma: bonaire
+    tipo: isla
+    region: islas-abc
+    etiqueta: atestiguado
+    atestacion: arqueologica
+    precontacto: si
+    rol: Nodo insular con presencia caquetía.
+    procedencia:
+      obra: van-buurt-2014
+    corpus: [geografia_politica-001]
+    etimologia: sin-resolver
+    precontacto_razon: ruta dabajuroide ~900 d.C. (Antczak et al. 2017 p.157).
+
+  # ── Paraguaná: nombrada, casi sin sostener ─────────────────────────────
+
+  - id: nodo-012
+    forma: adicora
+    variantes: [Adicoura]
+    tipo: asentamiento
+    region: paraguana
+    etiqueta: reconstruido
+    atestacion: colonial
+    precontacto: desconocido
+    rol: >
+      Topónimo de Paraguaná recogido por Zavala Reyes. NO hay en el repo
+      ninguna fuente que lo describa como asentamiento caquetío ni que lo feche.
+    procedencia:
+      obra: zavala-reyes-2015
+    etimologia: descartada
+    nota: >
+      En toponimos.yaml consta como `descartado`, que ahí significa "el
+      comentario del autor es histórico o anecdótico, no etimológico" — NO
+      significa que el lugar no exista. Degradado a `reconstruido` porque lo
+      único atestiguado es el NOMBRE, no el asentamiento.
+
+  - id: nodo-013
+    forma: santa-ana
+    tipo: asentamiento
+    region: paraguana
+    etiqueta: atestiguado
+    atestacion: colonial
+    precontacto: desconocido
+    rol: >
+      Pueblo de Paraguaná con el que los indios de Alto Vista (Aruba)
+      mantuvieron contacto regular hasta el s. XIX.
+    procedencia:
+      obra: van-buurt-2014
+    etimologia: no-aplica
+    nota: >
+      Nombre castellano y de misión: el topónimo es colonial con seguridad,
+      aunque el asentamiento pudiera ser anterior con otro nombre. Entra por la
+      RUTA que documenta, no por sí mismo.
+
+# ── Lo que falta, dicho en voz alta ───────────────────────────────────────
+#
+# Regla 8 de CLAUDE.md: el hueco se admite, callarlo no.
+
+huecos:
+
+  - que: >
+      Miraca, Moruy, Baraived, Jadacaquiva y los demás poblados de Paraguaná.
+    por_que_no_estan: >
+      No hay en el repo ninguna fuente que los nombre. Ponerlos como
+      `hipotetico` sería inventarlos: no se listan hasta que una fuente los
+      sostenga.
+    candidato_a_verificar: >
+      `jadicuar` está en toponimos.yaml y SE PARECE a Jadacaquiva. Parecerse no
+      es evidencia — hay que comprobarlo, no asumirlo.
+    donde: "issue #92"
+
+  - que: Los "más de 30 poblados" que infiere Oliver.
+    por_que_no_estan: >
+      La carta de Ballesteros (1550) dice que reparar el canal del `buco`
+      requería "cuatro o cinco mil indios", de lo que Oliver infiere
+      coordinación entre más de 30 poblados (geografia_politica-004). Tenemos
+      trece nodos, y siete de ellos son una sola lista. Faltan dos tercios.
+    donde: "issue #92"
+
+  - que: La ubicación de Todariquiba.
+    por_que_no_estan: >
+      Sigue en debate en la propia literatura. Descansa parcialmente en Ramos
+      Pérez 1978, que no está en el repo.
+    donde: "issue #92, y 4-fuentes/ramos-perez-1978.md"
+
+  - que: Qué lengua o lenguas hablaba cada nodo.
+    por_que_no_estan: >
+      Que la esfera fuera multiétnica no dice cuánto ni dónde. El lexicón tiene
+      7 formas jirajaroides y 4 de solapamiento caribe: no alcanza para modelar
+      un nodo bilingüe.
+    donde: "3-mundo/esfera-de-interaccion.md §6"
