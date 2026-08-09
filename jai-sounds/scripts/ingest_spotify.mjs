@@ -59,6 +59,8 @@ const TAXONOMIA = path.join(RAIZ, "content", "jai-sounds", "moods.json");
 
 const API = "https://api.spotify.com/v1";
 const LOTE_UPSERT = 500;
+/** Las tablas viven en su propio esquema, no en public. Ver la migración. */
+const ESQUEMA = "jai";
 const GUARDADAS = Symbol("canciones-guardadas");
 
 const log = (...a) => console.log(...a);
@@ -251,20 +253,25 @@ function conectarSupabase() {
   return createClient(url, key, { auth: { persistSession: false } });
 }
 
-/** Escritor contra PostgREST (Supabase alcanzable por HTTP). */
+/**
+ * Escritor contra PostgREST. Las tablas viven en el esquema `jai`, no en
+ * `public`: hay que pedírselo explícitamente y además exponer el esquema
+ * en la config de la API del proyecto.
+ */
 function escritorSupabase(db) {
+  const jai = () => db.schema(ESQUEMA);
   return {
     async upsert(tabla, filas, onConflict) {
       if (filas.length === 0) return;
       for (const lote of trozos(filas, LOTE_UPSERT)) {
-        const { error } = await db.from(tabla).upsert(lote, { onConflict });
-        if (error) fatal(`Upsert en ${tabla}: ${error.message}`);
+        const { error } = await jai().from(tabla).upsert(lote, { onConflict });
+        if (error) fatal(`Upsert en ${ESQUEMA}.${tabla}: ${error.message}`);
       }
       log(`  · ${tabla}: ${filas.length}`);
     },
     async consultarSnapshot(id) {
-      const { data } = await db
-        .from("jai_playlists")
+      const { data } = await jai()
+        .from("playlists")
         .select("snapshot_id")
         .eq("id", id)
         .maybeSingle();
@@ -311,7 +318,7 @@ function escritorSQL(ruta) {
           .map((f) => "(" + cols.map((c) => lit(f[c])).join(",") + ")")
           .join(",\n  ");
         salida.write(
-          `insert into ${tabla} (${cols.join(", ")}) values\n  ${values}\n` +
+          `insert into ${ESQUEMA}.${tabla} (${cols.join(", ")}) values\n  ${values}\n` +
             `on conflict (${claves.join(", ")}) do ${
               setter ? `update set ${setter}` : "nothing"
             };\n`
@@ -331,11 +338,11 @@ function escritorSQL(ruta) {
 
 /** Escribe las entidades compartidas respetando las claves foráneas. */
 async function guardarEntidades(w, n) {
-  await w.upsert("jai_artists", [...n.artistas.values()], "id");
-  await w.upsert("jai_albums", [...n.albums.values()], "id");
-  await w.upsert("jai_album_artists", n.albumArtistas, "album_id,artist_id");
-  await w.upsert("jai_tracks", [...n.tracks.values()], "id");
-  await w.upsert("jai_track_artists", n.trackArtistas, "track_id,artist_id");
+  await w.upsert("artists", [...n.artistas.values()], "id");
+  await w.upsert("albums", [...n.albums.values()], "id");
+  await w.upsert("album_artists", n.albumArtistas, "album_id,artist_id");
+  await w.upsert("tracks", [...n.tracks.values()], "id");
+  await w.upsert("track_artists", n.trackArtistas, "track_id,artist_id");
 }
 
 // ── Modos ────────────────────────────────────────────────────────────
@@ -379,7 +386,7 @@ async function sincronizar(fuentes, token, { dryRun, force, miId, sqlOut }) {
       }
       await guardarEntidades(db, n);
       await db.upsert(
-        "jai_saved_tracks",
+        "saved_tracks",
         n.posiciones.map(({ track_id, added_at }) => ({ track_id, added_at })),
         "track_id"
       );
@@ -414,7 +421,7 @@ async function sincronizar(fuentes, token, { dryRun, force, miId, sqlOut }) {
 
     await guardarEntidades(db, n);
     await db.upsert(
-      "jai_playlists",
+      "playlists",
       [
         {
           id: meta.id,
@@ -431,7 +438,7 @@ async function sincronizar(fuentes, token, { dryRun, force, miId, sqlOut }) {
       "id"
     );
     await db.upsert(
-      "jai_playlist_tracks",
+      "playlist_tracks",
       n.posiciones.map((e) => ({ ...e, playlist_id: meta.id })),
       "playlist_id,track_id"
     );
