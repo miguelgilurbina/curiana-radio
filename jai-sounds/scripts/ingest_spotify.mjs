@@ -251,22 +251,91 @@ function conectarSupabase() {
   return createClient(url, key, { auth: { persistSession: false } });
 }
 
-async function upsert(db, tabla, filas, onConflict) {
-  if (filas.length === 0) return;
-  for (const lote of trozos(filas, LOTE_UPSERT)) {
-    const { error } = await db.from(tabla).upsert(lote, { onConflict });
-    if (error) fatal(`Upsert en ${tabla}: ${error.message}`);
-  }
-  log(`  · ${tabla}: ${filas.length}`);
+/** Escritor contra PostgREST (Supabase alcanzable por HTTP). */
+function escritorSupabase(db) {
+  return {
+    async upsert(tabla, filas, onConflict) {
+      if (filas.length === 0) return;
+      for (const lote of trozos(filas, LOTE_UPSERT)) {
+        const { error } = await db.from(tabla).upsert(lote, { onConflict });
+        if (error) fatal(`Upsert en ${tabla}: ${error.message}`);
+      }
+      log(`  · ${tabla}: ${filas.length}`);
+    },
+    async consultarSnapshot(id) {
+      const { data } = await db
+        .from("jai_playlists")
+        .select("snapshot_id")
+        .eq("id", id)
+        .maybeSingle();
+      return data?.snapshot_id ?? null;
+    },
+    async cerrar() {},
+  };
+}
+
+/**
+ * Escritor a archivo .sql. Existe porque un Supabase local puede estar
+ * corriendo sin publicar puertos al host: entonces PostgREST es
+ * inalcanzable pero psql sigue entrando por `docker exec`. Para carga
+ * masiva además es más rápido que trocear en upserts de 500.
+ *
+ * El archivo resultante es portable: sirve para el local de hoy y para
+ * producción mañana.
+ */
+function escritorSQL(ruta) {
+  const salida = fs.createWriteStream(ruta, { encoding: "utf-8" });
+  salida.write("begin;\n");
+
+  // standard_conforming_strings está activo por defecto: la barra invertida
+  // es literal y solo hay que duplicar la comilla simple.
+  const lit = (v) => {
+    if (v === null || v === undefined) return "NULL";
+    if (typeof v === "number") return Number.isFinite(v) ? String(v) : "NULL";
+    if (typeof v === "boolean") return v ? "true" : "false";
+    return "'" + String(v).replace(/'/g, "''") + "'";
+  };
+
+  return {
+    async upsert(tabla, filas, onConflict) {
+      if (filas.length === 0) return;
+      const cols = Object.keys(filas[0]);
+      const claves = onConflict.split(",").map((c) => c.trim());
+      const actualizables = cols.filter((c) => !claves.includes(c));
+      const setter = actualizables.length
+        ? actualizables.map((c) => `${c} = excluded.${c}`).join(", ")
+        : null;
+
+      for (const lote of trozos(filas, LOTE_UPSERT)) {
+        const values = lote
+          .map((f) => "(" + cols.map((c) => lit(f[c])).join(",") + ")")
+          .join(",\n  ");
+        salida.write(
+          `insert into ${tabla} (${cols.join(", ")}) values\n  ${values}\n` +
+            `on conflict (${claves.join(", ")}) do ${
+              setter ? `update set ${setter}` : "nothing"
+            };\n`
+        );
+      }
+      log(`  · ${tabla}: ${filas.length}`);
+    },
+    cerrar() {
+      return new Promise((res, rej) => {
+        salida.write("commit;\n");
+        salida.end(() => res());
+        salida.on("error", rej);
+      });
+    },
+  };
 }
 
 /** Escribe las entidades compartidas respetando las claves foráneas. */
-async function guardarEntidades(db, n) {
-  await upsert(db, "jai_artists", [...n.artistas.values()], "id");
-  await upsert(db, "jai_albums", [...n.albums.values()], "id");
-  await upsert(db, "jai_album_artists", n.albumArtistas, "album_id,artist_id");
-  await upsert(db, "jai_tracks", [...n.tracks.values()], "id");
-  await upsert(db, "jai_track_artists", n.trackArtistas, "track_id,artist_id");
+async function guardarEntidades(w, n) {
+  await w.upsert("jai_artists", [...n.artistas.values()], "id");
+  await w.upsert("jai_albums", [...n.albums.values()], "id");
+  await w.upsert("jai_album_artists", n.albumArtistas, "album_id,artist_id");
+  await w.upsert("jai_tracks", [...n.tracks.values()], "id");
+  await w.upsert("jai_track_artists", n.trackArtistas, "track_id,artist_id");
 }
 
 // ── Modos ────────────────────────────────────────────────────────────
@@ -288,8 +357,11 @@ async function listar(token, miId) {
   log("\n(~ = seguida, no tuya)\n");
 }
 
-async function sincronizar(fuentes, token, { dryRun, force, miId }) {
-  const db = dryRun ? null : conectarSupabase();
+async function sincronizar(fuentes, token, { dryRun, force, miId, sqlOut }) {
+  const db =
+    dryRun ? null
+    : sqlOut ? escritorSQL(sqlOut)
+    : escritorSupabase(conectarSupabase());
   let pistasTotales = 0;
 
   for (const fuente of fuentes) {
@@ -306,8 +378,7 @@ async function sincronizar(fuentes, token, { dryRun, force, miId }) {
         continue;
       }
       await guardarEntidades(db, n);
-      await upsert(
-        db,
+      await db.upsert(
         "jai_saved_tracks",
         n.posiciones.map(({ track_id, added_at }) => ({ track_id, added_at })),
         "track_id"
@@ -319,13 +390,11 @@ async function sincronizar(fuentes, token, { dryRun, force, miId }) {
     const { meta, items } = await traerPlaylist(fuente, token);
     log(`  ${meta.name} — ${items.length} elementos`);
 
-    if (!force && db && meta.snapshot_id) {
-      const { data } = await db
-        .from("jai_playlists")
-        .select("snapshot_id")
-        .eq("id", meta.id)
-        .maybeSingle();
-      if (data?.snapshot_id === meta.snapshot_id) {
+    // Saltar lo no cambiado exige consultar, y el escritor a .sql no puede:
+    // genera SQL a ciegas. Solo aplica cuando escribimos por PostgREST.
+    if (!force && db?.consultarSnapshot && meta.snapshot_id) {
+      const previo = await db.consultarSnapshot(meta.id);
+      if (previo === meta.snapshot_id) {
         log("  · sin cambios desde la última ingesta — salto");
         continue;
       }
@@ -344,8 +413,7 @@ async function sincronizar(fuentes, token, { dryRun, force, miId }) {
     }
 
     await guardarEntidades(db, n);
-    await upsert(
-      db,
+    await db.upsert(
       "jai_playlists",
       [
         {
@@ -362,13 +430,15 @@ async function sincronizar(fuentes, token, { dryRun, force, miId }) {
       ],
       "id"
     );
-    await upsert(
-      db,
+    await db.upsert(
       "jai_playlist_tracks",
       n.posiciones.map((e) => ({ ...e, playlist_id: meta.id })),
       "playlist_id,track_id"
     );
   }
+
+  await db?.cerrar();
+  if (sqlOut) log(`\n· SQL escrito en ${sqlOut}`);
 
   log(`\n✓ ${pistasTotales} pistas procesadas.\n`);
 }
@@ -391,8 +461,24 @@ function playlistsDeLaTaxonomia() {
 
 async function main() {
   const argv = process.argv.slice(2);
-  const flags = new Set(argv.filter((a) => a.startsWith("--")));
-  const sueltos = argv.filter((a) => !a.startsWith("--"));
+
+  // --sql lleva valor: hay que sacarlo ANTES de calcular los sueltos, o la
+  // ruta de salida se colaría en la lista de playlists a ingestar.
+  let sqlOut = null;
+  const resto = [];
+  for (let i = 0; i < argv.length; i++) {
+    if (argv[i] === "--sql") {
+      sqlOut = argv[++i];
+      if (!sqlOut || sqlOut.startsWith("--")) {
+        throw new ErrorDeConfig("--sql necesita una ruta de archivo de salida.");
+      }
+    } else {
+      resto.push(argv[i]);
+    }
+  }
+
+  const flags = new Set(resto.filter((a) => a.startsWith("--")));
+  const sueltos = resto.filter((a) => !a.startsWith("--"));
 
   if (flags.has("--login")) {
     await login();
@@ -442,6 +528,7 @@ async function main() {
     dryRun: flags.has("--dry-run"),
     force: flags.has("--force"),
     miId,
+    sqlOut,
   });
 }
 
