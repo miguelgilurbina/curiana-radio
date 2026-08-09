@@ -1,71 +1,106 @@
 -- JAI Sounds · esquema inicial del catálogo
 -- ---------------------------------------------------------------------
 -- Qué vive aquí y qué NO:
---   AQUÍ  → el catálogo: lo que Spotify afirma sobre pistas, artistas y
---           playlists. Datos, volumen, re-sincronizables. Si se pierden se
---           recuperan corriendo la ingesta otra vez.
+--   AQUÍ  → el catálogo: lo que Spotify entrega sobre pistas, álbumes,
+--           artistas y playlists. Datos re-sincronizables: si se pierden,
+--           se recuperan corriendo la ingesta otra vez.
 --   EN GIT → la taxonomía: moods, cruces de género, notas curatoriales.
---           Criterio, no dato. Vive en content/jai-sounds/moods.json porque
---           se revisa en un diff, como se revisa un texto.
+--           Criterio, no dato. Vive en content/jai-sounds/moods.json.
 --
--- El puente entre ambos es jai_curation (abajo) y el array `playlists` de
--- cada mood en el JSON.
+-- ---------------------------------------------------------------------
+-- IMPORTANTE — este esquema solo tiene columnas que Spotify REALMENTE
+-- devuelve a una app registrada hoy. Verificado contra la API en vivo el
+-- 2026-08-09 con la app de este proyecto. Lo que NO está y no es olvido:
 --
--- Nota histórica: Spotify deprecó /audio-features el 2024-11-27 (403 para
--- toda app nueva). Por eso NO hay columnas valence/energy/danceability: no
--- son recuperables y fingir que existen sería mentirle al esquema.
+--   popularity      /tracks?ids= y /artists?ids= dan 403; el objeto
+--                   embebido en las playlists no trae el campo.
+--   generos         /artists?ids= da 403, y /artists/{id} responde 200
+--                   pero YA NO incluye `genres`. No hay forma de obtener
+--                   géneros de Spotify. Si el proyecto los quiere, salen
+--                   de la curaduría o de otra fuente (MusicBrainz por
+--                   ISRC, que sí guardamos).
+--   valence/energy  /audio-features deprecado el 2024-11-27, 403.
+--
+-- Una columna que nunca se puede llenar es una mentira en el esquema.
+-- ---------------------------------------------------------------------
 
 -- ── Artistas ─────────────────────────────────────────────────────────
+-- Se construyen de lo EMBEBIDO en cada pista: id y nombre. No hay una
+-- llamada a /artists que aporte más.
 create table if not exists jai_artists (
-  id              text primary key,              -- Spotify artist id
-  name            text not null,
-  spotify_genres  text[],                        -- lo que AFIRMA Spotify; puede venir vacío
-  popularity      int,
-  image_url       text,
-  synced_at       timestamptz not null default now()
+  id         text primary key,               -- Spotify artist id
+  name       text not null,
+  synced_at  timestamptz not null default now()
 );
 
--- ── Pistas ───────────────────────────────────────────────────────────
-create table if not exists jai_tracks (
-  id                      text primary key,      -- Spotify track id
+-- ── Álbumes ──────────────────────────────────────────────────────────
+-- /albums/{id} da 404, pero el objeto álbum viene completo dentro de
+-- cada pista, así que la tabla se llena igual sin pedir nada extra.
+create table if not exists jai_albums (
+  id                      text primary key,
   name                    text not null,
-  album_name              text,
-  album_image_url         text,
-  -- Spotify da precisión variable: '1998', '1998-04' o '1998-04-12'. Se
+  album_type              text,              -- album | single | compilation
+  -- Spotify da precisión variable: '1985', '1985-06' o '1985-06-24'. Se
   -- guarda como texto + su precisión en vez de forzar una date falsa.
   release_date            text,
   release_date_precision  text check (release_date_precision in ('year','month','day')),
-  duration_ms             int,
-  isrc                    text,                  -- identidad estable entre plataformas
-  popularity              int,
-  spotify_url             text,
+  total_tracks            int,
+  image_url               text,
   synced_at               timestamptz not null default now()
 );
 
+create index if not exists jai_albums_anio_idx on jai_albums (left(release_date, 4));
+
+-- ── Pistas ───────────────────────────────────────────────────────────
+create table if not exists jai_tracks (
+  id            text primary key,
+  name          text not null,
+  album_id      text references jai_albums (id) on delete set null,
+  disc_number   int,
+  track_number  int,
+  duration_ms   int,
+  -- Identidad estable entre plataformas: es la llave para enriquecer con
+  -- MusicBrainz/Discogs si algún día hacen falta géneros o créditos.
+  isrc          text,
+  explicit      boolean,
+  spotify_url   text,
+  synced_at     timestamptz not null default now()
+);
+
 create index if not exists jai_tracks_isrc_idx on jai_tracks (isrc);
--- Búsqueda por título en la UI (sin extensiones extra: to_tsvector simple).
+create index if not exists jai_tracks_album_idx on jai_tracks (album_id);
+-- Búsqueda por título en la UI (sin extensiones extra).
 create index if not exists jai_tracks_name_idx on jai_tracks using gin (to_tsvector('simple', name));
 
--- ── Pista ↔ artista (N:M; el orden distingue principal de feat.) ─────
+-- ── Relaciones N:M (el orden distingue principal de featuring) ───────
 create table if not exists jai_track_artists (
   track_id   text not null references jai_tracks (id) on delete cascade,
   artist_id  text not null references jai_artists (id) on delete cascade,
   position   int  not null default 0,
   primary key (track_id, artist_id)
 );
-
 create index if not exists jai_track_artists_artist_idx on jai_track_artists (artist_id);
+
+create table if not exists jai_album_artists (
+  album_id   text not null references jai_albums (id) on delete cascade,
+  artist_id  text not null references jai_artists (id) on delete cascade,
+  position   int  not null default 0,
+  primary key (album_id, artist_id)
+);
 
 -- ── Playlists ────────────────────────────────────────────────────────
 create table if not exists jai_playlists (
-  id           text primary key,                 -- Spotify playlist id
+  id           text primary key,
   name         text not null,
   description  text,
   image_url    text,
   track_count  int,
-  -- snapshot_id cambia cuando la playlist cambia: permite saltar la
-  -- re-ingesta de las que no se tocaron.
+  -- Cambia cuando la playlist cambia: permite saltar la re-ingesta de las
+  -- que no se tocaron.
   snapshot_id  text,
+  colaborativa boolean,
+  publica      boolean,
+  es_propia    boolean,                      -- distingue curada de seguida
   synced_at    timestamptz not null default now()
 );
 
@@ -76,13 +111,20 @@ create table if not exists jai_playlist_tracks (
   added_at     timestamptz,
   primary key (playlist_id, track_id)
 );
-
 create index if not exists jai_playlist_tracks_track_idx on jai_playlist_tracks (track_id);
 
--- ── Capa curatorial en base de datos ─────────────────────────────────
--- Solo lo que es POR PISTA (una nota sobre una canción concreta). La
--- taxonomía general sigue en git. mood_slug no tiene FK a propósito: su
--- fuente de verdad es el JSON, y el script de ingesta valida contra él.
+-- ── Canciones guardadas ──────────────────────────────────────────────
+-- "Canciones que te gustan" NO es una playlist y no tiene id: fingir que
+-- lo es obligaría a inventar una fila falsa en jai_playlists. Tabla propia.
+create table if not exists jai_saved_tracks (
+  track_id  text primary key references jai_tracks (id) on delete cascade,
+  added_at  timestamptz
+);
+create index if not exists jai_saved_tracks_added_idx on jai_saved_tracks (added_at desc);
+
+-- ── Capa curatorial ──────────────────────────────────────────────────
+-- Solo lo que es POR PISTA. La taxonomía general sigue en git; mood_slug
+-- no lleva FK a propósito: su fuente de verdad es moods.json.
 create table if not exists jai_curation (
   track_id    text primary key references jai_tracks (id) on delete cascade,
   mood_slug   text,
@@ -90,11 +132,10 @@ create table if not exists jai_curation (
   destacado   boolean not null default false,
   updated_at  timestamptz not null default now()
 );
-
 create index if not exists jai_curation_mood_idx on jai_curation (mood_slug);
 
--- ── Vista de conteos ─────────────────────────────────────────────────
--- La portada necesita "cuántas pistas por playlist" sin traerse 12k filas.
+-- ── Vistas de conteo ─────────────────────────────────────────────────
+-- La portada necesita totales sin traerse 12k filas.
 create or replace view jai_playlist_counts as
   select playlist_id, count(*)::int as total
   from jai_playlist_tracks
@@ -102,25 +143,18 @@ create or replace view jai_playlist_counts as
 
 -- ── RLS ──────────────────────────────────────────────────────────────
 -- La anon key es PÚBLICA (va en el bundle del cliente vía NEXT_PUBLIC_*).
--- Por eso: lectura abierta para anon, escritura solo para service_role —
--- que es la que usa el script de ingesta y nunca toca el navegador.
-alter table jai_artists         enable row level security;
-alter table jai_tracks          enable row level security;
-alter table jai_track_artists   enable row level security;
-alter table jai_playlists       enable row level security;
-alter table jai_playlist_tracks enable row level security;
-alter table jai_curation        enable row level security;
-
+-- Lectura abierta para anon; escritura solo para service_role, que es la
+-- que usa el script de ingesta y nunca toca el navegador.
 do $$
 declare t text;
 begin
   foreach t in array array[
-    'jai_artists','jai_tracks','jai_track_artists',
-    'jai_playlists','jai_playlist_tracks','jai_curation'
+    'jai_artists','jai_albums','jai_tracks','jai_track_artists',
+    'jai_album_artists','jai_playlists','jai_playlist_tracks',
+    'jai_saved_tracks','jai_curation'
   ] loop
-    execute format(
-      'drop policy if exists %I on %I', 'lectura_publica_' || t, t
-    );
+    execute format('alter table %I enable row level security', t);
+    execute format('drop policy if exists %I on %I', 'lectura_publica_' || t, t);
     execute format(
       'create policy %I on %I for select to anon, authenticated using (true)',
       'lectura_publica_' || t, t
@@ -128,6 +162,6 @@ begin
   end loop;
 end $$;
 
--- La vista hereda el RLS de la tabla base (security_invoker) en vez de
--- correr con los permisos del dueño.
+-- La vista hereda el RLS de la tabla base en vez de correr con los
+-- permisos del dueño.
 alter view jai_playlist_counts set (security_invoker = on);
