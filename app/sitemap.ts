@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { getAllEditions } from '@/lib/content';
 import { getAllPersonajes } from '@/lib/personajes';
+import { getSlugs } from '@/lib/galeria';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const editions = await getAllEditions();
@@ -16,6 +17,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${baseUrl}/archivo`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/galeria`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -63,11 +70,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
+  // Fichas de obra de la galería.
+  const galeriaPages: MetadataRoute.Sitemap = getSlugs().map((slug) => ({
+    url: `${baseUrl}/galeria/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.5,
+  }));
+
   return [
     ...staticPages,
     ...editionPages,
     ...simuladorPages,
     ...personajePages,
     ...jaiSoundsPages,
+    ...galeriaPages,
   ];
 }

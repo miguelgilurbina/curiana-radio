@@ -55,7 +55,12 @@ export default function Navigation({ editionNumber }: NavigationProps) {
             </Link>
 
             {/* Navigation Items */}
-            <div className="flex items-center space-x-6">
+            {/* Con Galería son cuatro enlaces visibles en móvil, y a 375px no
+                caben. Hasta sm se aprietan cuerpo y espaciado, y la fila puede
+                desplazarse en horizontal: así ninguna sección desaparece del
+                menú en pantallas estrechas ni empuja la página de lado. De sm
+                en adelante sobra sitio y todo vuelve a su tamaño. */}
+            <div className="flex items-center space-x-3 sm:space-x-6 min-w-0 overflow-x-auto sm:overflow-x-visible [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               {/* Edition Number (if on edition page) */}
               {editionNumber && (
                 <div className="font-serif text-lg text-deep-800">
@@ -66,7 +71,7 @@ export default function Navigation({ editionNumber }: NavigationProps) {
               {/* Archive Link */}
               <Link
                 href="/archivo"
-                className="text-sm font-sans text-deep-700 hover:text-frequency transition-colors tracking-wide uppercase"
+                className="shrink-0 whitespace-nowrap text-xs sm:text-sm font-sans text-deep-700 hover:text-frequency transition-colors tracking-normal sm:tracking-wide uppercase"
               >
                 Archivo
               </Link>
@@ -74,15 +79,23 @@ export default function Navigation({ editionNumber }: NavigationProps) {
               {/* JAI Sounds Link */}
               <Link
                 href="/jai-sounds"
-                className="text-sm font-sans text-deep-700 hover:text-frequency transition-colors tracking-wide uppercase"
+                className="shrink-0 whitespace-nowrap text-xs sm:text-sm font-sans text-deep-700 hover:text-frequency transition-colors tracking-normal sm:tracking-wide uppercase"
               >
                 JAI Sounds
+              </Link>
+
+              {/* Galería Link */}
+              <Link
+                href="/galeria"
+                className="shrink-0 whitespace-nowrap text-xs sm:text-sm font-sans text-deep-700 hover:text-frequency transition-colors tracking-normal sm:tracking-wide uppercase"
+              >
+                Galería
               </Link>
 
               {/* Simulador Link */}
               <Link
                 href="/simulador"
-                className="text-sm font-sans text-deep-700 hover:text-frequency transition-colors tracking-wide uppercase"
+                className="shrink-0 whitespace-nowrap text-xs sm:text-sm font-sans text-deep-700 hover:text-frequency transition-colors tracking-normal sm:tracking-wide uppercase"
               >
                 Simulador
               </Link>
@@ -90,7 +103,7 @@ export default function Navigation({ editionNumber }: NavigationProps) {
               {/* About Link (optional) */}
               <Link
                 href="/sobre"
-                className="hidden md:block text-sm font-sans text-deep-700 hover:text-frequency transition-colors tracking-wide uppercase"
+                className="hidden md:block shrink-0 whitespace-nowrap text-xs sm:text-sm font-sans text-deep-700 hover:text-frequency transition-colors tracking-normal sm:tracking-wide uppercase"
               >
                 Sobre
               </Link>
