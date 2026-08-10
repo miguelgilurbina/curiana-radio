@@ -7,6 +7,7 @@ de imagen generados con IA con su prompt y su procedencia a la vista.
 - **Ficha:** `/galeria/<slug>` — imagen grande, concepto, prompt, licencia.
 - **Fuente de verdad:** [`content/galeria/obras.json`](content/galeria/obras.json)
 - **Tipos:** [`types/galeria.ts`](types/galeria.ts) · **Lectura:** [`lib/galeria.ts`](lib/galeria.ts)
+- **Hacia dónde va:** [`GALERIA_PLAN.md`](GALERIA_PLAN.md) — monetización, interfaz y motion graphics.
 
 ## Infraestructura
 
@@ -176,9 +177,25 @@ queda. Sumado a que el estatus de los derechos sobre imágenes generadas con IA
 está sin asentar y depende de los términos del plan con que se generaron, el
 defecto conservador es el único que no compromete nada.
 
-Señales medidas sobre las 821 que piden mirar antes de abrir en bloque: **68**
-prompts nombran a un artista («in the style of…») y **~127** podrían contener
-personas.
+**Revisado el 2026-08-10, y el resultado invierte lo que decía este párrafo.**
+Las señales que se habían contado por encima —68 prompts con «in the style of»,
+~127 con posibles personas— eran artefactos del filtro, no hallazgos:
+
+- De los 68 «in the style of», solo **6** citan a un artista real; el resto
+  nombra una época o una estética (*1990s arawak*, *polaroid*, *soviet realism*).
+  Y el estilo no es objeto de copyright: eso es curaduría, no derecho.
+- Lo de «podrían contener personas» era la pregunta equivocada. Un *model
+  release* existe para que una persona real consienta; aquí no posó nadie. Y
+  **ningún prompt nombra a una persona viva**: los 34 con «portrait of» describen
+  arquetipos («an androgynous entity», «a Caqueto native American»). El único
+  humano nombrado es Simón Bolívar, muerto en 1830.
+- Lo que sí aparece, y se había pasado por alto: **2** obras nombran una marca
+  registrada (*polaroid*, *Call of Duty on a Playstation*).
+
+Así que hay **8 obras** que apartar, no cientos. El defecto conservador sigue
+siendo correcto como punto de partida —conceder una licencia es una promesa—,
+pero ya no hay nada que investigar antes de abrir el resto. El desglose y el
+plan de precios están en [`GALERIA_PLAN.md`](GALERIA_PLAN.md).
 
 Para cambiarlo por lotes, el manifest es JSON plano: filtrar por `tags`,
 `serie` o texto del prompt y reasignar `licencia` y `licenciaDetalle`.
