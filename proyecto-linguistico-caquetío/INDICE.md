@@ -72,6 +72,8 @@ ensayo. Los ensayos —el argumento, con su evidencia— viven en
 - 🎬 [[DINAMICA_DE_RUNS]] — cómo se corre, se lee y se muestra un run.
 - 🔭 [[HALLAZGOS_FASE_1]] — **el cierre de la primera fase como experimento**:
   qué contestó, qué no puede contestar, y qué restricción abre la fase 2.
+- 🔤 [[fonotactica]] — **un resultado negativo**: cerrar la forma de la palabra
+  detecta castellano, no arahuaco genérico. Y por qué D5 no es cosmética.
 - 🔬 [[01_que_probaron_los_seis_runs]] — qué probaron los runs existentes, qué
   no, y por qué no son comparables.
 - 🧪 [[04_protocolo_run_1_era_auditada]] — cómo se corre y se mide la próxima
