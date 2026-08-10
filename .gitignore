@@ -43,3 +43,6 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+
+# galería: derivados regenerables (escalera WebP antes de subir a Blob)
+.galeria-trabajo/
