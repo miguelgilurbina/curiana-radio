@@ -91,18 +91,10 @@ export default async function ObraPage({ params }: ObraPageProps) {
             </p>
           )}
 
-          {obra.procedencia.prompt && (
-            <section className="mt-8">
-              <h2 className="mb-3 font-sans text-xs tracking-[0.2em] uppercase text-earth-600">
-                El prompt
-              </h2>
-              <blockquote className="border-l-2 border-frequency bg-earth-50 py-4 pl-5 pr-4">
-                <p className="max-w-reading font-mono text-sm leading-relaxed text-deep-800">
-                  {obra.procedencia.prompt}
-                </p>
-              </blockquote>
-            </section>
-          )}
+          {/* El prompt ya no se publica. 72 de las 821 obras nombran a un
+              artista en el suyo ("in the style of…"), y apoyar la ficha en el
+              nombre de otro no es describir la obra. El texto de arriba sale
+              de mirar la imagen — ver scripts/galeria-describir.mjs. */}
 
           {obra.procedencia.posproceso && (
             <section className="mt-8">
