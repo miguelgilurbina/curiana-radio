@@ -39,8 +39,8 @@ export default function GaleriaGrid({
 
   const barajadas = useMemo(() => {
     if (semilla === null) return obras;
-    // Barajar y luego apartar las variantes hermanas: Midjourney entrega
-    // cuatro imágenes casi iguales por prompt y el azar las junta cada tanto.
+    // Barajar y luego apartar las obras que salieron de la misma parrilla de
+    // Midjourney: se parecen mucho y el azar las junta cada tanto.
     return separarHermanas(mezclar(obras, semilla), (o) => o.generacion);
   }, [obras, semilla]);
 

@@ -50,9 +50,10 @@ export interface ProcedenciaObra {
   /** Retoque, upscaling, collage posterior. */
   posproceso?: string;
   /**
-   * Id de la generación de origen. Midjourney devuelve una parrilla de cuatro
-   * variantes por prompt: comparten `generacion` y se distinguen por
-   * `variante`. El barajado lo usa para no dejarlas contiguas en el mosaico.
+   * Id de la parrilla de origen. Midjourney entrega hasta cuatro variantes por
+   * prompt: las que se hayan elegido comparten `generacion` y se distinguen
+   * por `variante`. El barajado lo usa para no dejar contiguas dos obras que
+   * salieron de la misma parrilla y se parecen demasiado.
    */
   generacion?: string;
   variante?: number;

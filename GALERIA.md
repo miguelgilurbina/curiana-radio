@@ -152,9 +152,13 @@ rompería la hidratación. La semilla se modela como dato externo a React
 `useSyncExternalStore`: el HTML prerenderizado sale en orden curatorial
 —estable para los rastreadores— y el cliente conmuta al barajado al hidratar.
 
-Después del barajado, `separarHermanas()` aparta las variantes de una misma
-generación: Midjourney entrega cuatro imágenes casi idénticas por prompt
-(mismo `generacion`, distinto `variante`) y el azar las junta cada tanto.
+Después del barajado, `separarHermanas()` aparta las obras que salieron de una
+misma parrilla de Midjourney (mismo `generacion`, distinto `variante`).
+
+El catálogo es una selección a mano, no parrillas enteras: de las 600
+generaciones, 431 aportan una sola imagen y solo 8 aportan las cuatro. Aun
+así el 48% de las obras conserva alguna hermana, y sin reparar el barajado
+las deja contiguas unas 4,3 veces de media.
 
 ## Licencias
 
