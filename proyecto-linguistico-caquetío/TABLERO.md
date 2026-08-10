@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-08 13:12**.
+<!--GENERADO--> Generado el **2026-08-09 23:00**.
 
 ## ¿Vamos bien?
 
@@ -21,9 +21,9 @@ editar_a_mano: no
 |---|---|---|---|
 | Entradas del lexicón **sin cita** | **3** | 82 (2026-07-21) | 🟢 −79 |
 | Hechos del corpus **con referencia** | **161 / 161** | — | 🟢 |
-| Tests del motor | **174 en verde** | 0 rojos | 🟢 |
+| Tests del motor | **185 en verde** | 0 rojos | 🟢 |
 | Gate para reanudar simulaciones | **2 de 9** condiciones | faltan 7 | 🔴 |
-| Decisiones esperando a Miguel | **12 abiertas** | 0 resueltas | 🟡 |
+| Decisiones esperando a Miguel | **13 abiertas** | 0 resueltas | 🟡 |
 
 **Lo que bloquea hoy:** censo de citas (F1) · pares c/k (F2 · D5) · decisiones D1/D3/D5 · glosa de `-bana` (D9) · wayunaiki vs. lokono (D11).
 Y 2 condición(es) que **nadie puede medir por script**: citas del corpus (F10) · exportador de runs.
@@ -246,9 +246,10 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | D12 | La etiqueta de `parentesco-032`: una entrada `atestiguado` con material sin fuente | 🔴 abierta | [#81](https://github.com/miguelgilurbina/curiana-radio/issues/81) |
 | D13 | El hueco léxico de "tío materno": la palabra que le falta a la tesis central | 🔴 abierta | [#82](https://github.com/miguelgilurbina/curiana-radio/issues/82) |
 | D14 | Qué segunda polity se pone en escena | 🔴 abierta | [#83](https://github.com/miguelgilurbina/curiana-radio/issues/83) |
+| D15 | Qué nodo se simula primero: Coro, Paraguaná, o un par desde el principio | 🔴 abierta | [#90](https://github.com/miguelgilurbina/curiana-radio/issues/90) |
 | — | `tara`: ¿venado o mariposa? — puede tumbar un argumento del corpus | 🔴 abierta | [#45](https://github.com/miguelgilurbina/curiana-radio/issues/45) |
 
-**12 abiertas** de 12. Medido contra el tablero, no contra una nota.
+**13 abiertas** de 13. Medido contra el tablero, no contra una nota.
 
 ---
 
@@ -256,8 +257,8 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 793 en 195 notas indexadas | 🟢 0 rotos |
-| Tests (`curiana_sim/tests/`) | 174 passed, 0 failed | 🟢 |
+| Wikilinks | 813 en 200 notas indexadas | 🟢 0 rotos |
+| Tests (`curiana_sim/tests/`) | 185 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
 **Avisos de `curiana_polities.py::coherencia_del_canon()`:**
