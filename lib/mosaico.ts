@@ -65,13 +65,17 @@ export function aspectoDeObra(obra: ObraGrid): number {
 }
 
 /**
- * Aparta las variantes hermanas de una misma generación.
+ * Aparta las obras que salieron de una misma generación.
  *
- * Midjourney devuelve cuatro imágenes casi idénticas por prompt. Publicadas
- * las cuatro, un barajado normal las deja caer contiguas cada tanto y el
- * mosaico parece un error de repetición. Esto recorre el orden ya barajado y,
- * cuando una pieza choca con una hermana dentro de las `distancia` anteriores,
- * la intercambia por la primera de más adelante que no choque.
+ * Midjourney entrega una parrilla de hasta cuatro imágenes por prompt, muy
+ * parecidas entre sí. El catálogo es una selección a mano, así que la mitad
+ * de las obras son la única elegida de su parrilla y no tienen con quién
+ * chocar; pero la otra mitad sí conserva alguna hermana, y un barajado normal
+ * las deja caer contiguas cada tanto, con aspecto de repetición por error.
+ *
+ * Esto recorre el orden ya barajado y, cuando una pieza choca con una hermana
+ * dentro de las `distancia` anteriores, la intercambia por la primera de más
+ * adelante que no choque.
  *
  * Es una reparación, no una reordenación: el azar del barajado se conserva
  * salvo en los pocos puntos donde hacía falta. Si no hay candidato limpio, se

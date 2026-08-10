@@ -120,7 +120,7 @@ Lo que el script no puede saber, y queda con valores conservadores:
 
 | Campo | Valor por defecto | Qué hacer |
 |---|---|---|
-| `licencia` | `reservado` | Decidir obra por obra o por lote |
+| `licencia` | `reservado` | Ver abajo. Decidir por lote o obra a obra |
 | `concepto` | vacío | Escribir statement en las que lo merezcan |
 | `tags` | `[]` | Sin tags, la faceta «Motivos» no aparece |
 | `titulo` | primeras 8 palabras del prompt | Reescribir las destacadas |
@@ -152,14 +152,36 @@ rompería la hidratación. La semilla se modela como dato externo a React
 `useSyncExternalStore`: el HTML prerenderizado sale en orden curatorial
 —estable para los rastreadores— y el cliente conmuta al barajado al hidratar.
 
-Después del barajado, `separarHermanas()` aparta las variantes de una misma
-generación: Midjourney entrega cuatro imágenes casi idénticas por prompt
-(mismo `generacion`, distinto `variante`) y el azar las junta cada tanto.
+Después del barajado, `separarHermanas()` aparta las obras que salieron de una
+misma parrilla de Midjourney (mismo `generacion`, distinto `variante`).
+
+El catálogo es una selección a mano, no parrillas enteras: de las 600
+generaciones, 431 aportan una sola imagen y solo 8 aportan las cuatro. Aun
+así el 48% de las obras conserva alguna hermana, y sin reparar el barajado
+las deja contiguas unas 4,3 veces de media.
 
 ## Licencias
 
 Cada obra declara `licencia` y `licenciaDetalle.print`. Hoy es informativo: se
 muestra en la pieza, en el lightbox y en la ficha, y no hay checkout.
+
+### Por qué el archivo entra como `reservado`
+
+No es una negativa, es la ausencia de decisión. Conceder una licencia es una
+promesa, y el catálogo se ingirió sin que nadie mirara las obras una por una.
+
+La asimetría manda: pasar de `reservado` a permisivo es cambiar un campo;
+al revés no funciona, porque quien ya descargó bajo licencia abierta se la
+queda. Sumado a que el estatus de los derechos sobre imágenes generadas con IA
+está sin asentar y depende de los términos del plan con que se generaron, el
+defecto conservador es el único que no compromete nada.
+
+Señales medidas sobre las 821 que piden mirar antes de abrir en bloque: **68**
+prompts nombran a un artista («in the style of…») y **~127** podrían contener
+personas.
+
+Para cambiarlo por lotes, el manifest es JSON plano: filtrar por `tags`,
+`serie` o texto del prompt y reasignar `licencia` y `licenciaDetalle`.
 
 El esquema existe desde ya porque el modelo de datos es lo caro de cambiar
 después. Piezas previstas para ese momento, deliberadamente sin implementar:

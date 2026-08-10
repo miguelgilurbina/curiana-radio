@@ -20,11 +20,16 @@ const VACIO: GaleriaManifest = { blobBase: null, series: [], obras: [] };
  * El manifest se lee una vez por proceso. Con ~800 obras, releer y reparsear
  * el JSON en cada una de las ~800 llamadas a generateStaticParams/página
  * convertiría el build en minutos de E/S inútil.
+ *
+ * En desarrollo no se cachea: el manifest es contenido que se edita a mano
+ * mientras el servidor corre (curar títulos, licencias, tags), y cachearlo
+ * obligaría a reiniciar para ver cada cambio.
  */
+const CACHEAR = process.env.NODE_ENV === "production";
 let cache: GaleriaManifest | null = null;
 
 function readManifest(): GaleriaManifest {
-  if (cache) return cache;
+  if (CACHEAR && cache) return cache;
   let raw: string;
   try {
     raw = fs.readFileSync(MANIFEST_PATH, "utf-8");

@@ -2,7 +2,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import ImagenObra from "@/components/galeria/ImagenObra";
-import LicenciaBadge from "@/components/galeria/LicenciaBadge";
 import {
   getBlobBase,
   getObra,
@@ -10,7 +9,7 @@ import {
   getSlugs,
   getVecinas,
 } from "@/lib/galeria";
-import { DESCRIPCION_LICENCIA, urlVariante } from "@/types/galeria";
+import { urlVariante } from "@/types/galeria";
 
 interface ObraPageProps {
   params: Promise<{ slug: string }>;
@@ -140,25 +139,9 @@ export default async function ObraPage({ params }: ObraPageProps) {
             </Dato>
           )}
 
-          <div>
-            <div className="mb-2 font-sans text-xs tracking-[0.2em] uppercase text-earth-500">
-              Licencia
-            </div>
-            <LicenciaBadge tipo={obra.licencia} />
-            <p className="mt-2 font-sans text-sm leading-relaxed text-earth-700">
-              {DESCRIPCION_LICENCIA[obra.licencia]}
-            </p>
-            {obra.licenciaDetalle.notas && (
-              <p className="mt-2 font-sans text-xs italic leading-relaxed text-earth-600">
-                {obra.licenciaDetalle.notas}
-              </p>
-            )}
-            <p className="mt-2 font-sans text-xs text-earth-600">
-              {obra.licenciaDetalle.print
-                ? "Apta para impresión."
-                : "No disponible para impresión."}
-            </p>
-          </div>
+          {/* La licencia vive en el manifest pero no se muestra todavía: la
+              galería es, por ahora, un sitio donde enseñar el trabajo. Cuando
+              haya algo que ofrecer, el dato ya está etiquetado obra por obra. */}
 
           {obra.tags.length > 0 && (
             <div>

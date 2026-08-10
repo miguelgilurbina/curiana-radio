@@ -30,7 +30,12 @@ export type TipoLicencia =
   | "editorial"
   /** Disponible para uso comercial / impresión bajo acuerdo. */
   | "comercial"
-  /** No se licencia (pieza de identidad de la radio, encargo, etc.). */
+  /**
+   * Sin licencia concedida. Es el estado por defecto del archivo: no niega que
+   * la obra pueda licenciarse, dice que todavía no se ha decidido nada sobre
+   * ella. Conceder una licencia es una promesa, y el catálogo entra sin que
+   * nadie haya mirado las obras una por una.
+   */
   | "reservado";
 
 export interface LicenciaObra {
@@ -50,9 +55,10 @@ export interface ProcedenciaObra {
   /** Retoque, upscaling, collage posterior. */
   posproceso?: string;
   /**
-   * Id de la generación de origen. Midjourney devuelve una parrilla de cuatro
-   * variantes por prompt: comparten `generacion` y se distinguen por
-   * `variante`. El barajado lo usa para no dejarlas contiguas en el mosaico.
+   * Id de la parrilla de origen. Midjourney entrega hasta cuatro variantes por
+   * prompt: las que se hayan elegido comparten `generacion` y se distinguen
+   * por `variante`. El barajado lo usa para no dejar contiguas dos obras que
+   * salieron de la misma parrilla y se parecen demasiado.
    */
   generacion?: string;
   variante?: number;
@@ -141,7 +147,8 @@ export const DESCRIPCION_LICENCIA: Record<TipoLicencia, string> = {
   editorial:
     "Uso en prensa, docencia y divulgación. No cubre reventa ni merchandising.",
   comercial: "Disponible para uso comercial e impresión bajo acuerdo previo.",
-  reservado: "Pieza de identidad de la radio. No se licencia para uso externo.",
+  reservado:
+    "Derechos reservados. Todavía no se ha definido licencia para esta obra; escríbenos si te interesa usarla.",
 };
 
 /** Compone la URL de una variante concreta en Blob. */

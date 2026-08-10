@@ -3,8 +3,7 @@
 import { useCallback, useEffect, useRef } from "react";
 import Link from "next/link";
 import ImagenObra from "./ImagenObra";
-import LicenciaBadge from "./LicenciaBadge";
-import { DESCRIPCION_LICENCIA, type ObraGrid } from "@/types/galeria";
+import type { ObraGrid } from "@/types/galeria";
 
 const FOCUSABLES =
   'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
@@ -140,13 +139,6 @@ export default function Lightbox({
           >
             {obra.titulo}
           </h2>
-
-          <div className="mb-4">
-            <LicenciaBadge tipo={obra.licencia} />
-            <p className="mt-2 font-sans text-xs leading-relaxed text-earth-400">
-              {DESCRIPCION_LICENCIA[obra.licencia]}
-            </p>
-          </div>
 
           <Link
             href={`/galeria/${obra.slug}`}
