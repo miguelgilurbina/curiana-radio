@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint .",
     "galeria:preparar": "node scripts/galeria-ingesta.mjs preparar",
-    "galeria:subir": "node scripts/galeria-ingesta.mjs subir"
+    "galeria:subir": "node scripts/galeria-ingesta.mjs subir",
+    "galeria:describir": "node scripts/galeria-describir.mjs enviar",
+    "galeria:recoger": "node scripts/galeria-describir.mjs recoger"
   },
   "repository": {
     "type": "git",
@@ -31,6 +33,7 @@
     "recharts": "^2.15.4"
   },
   "devDependencies": {
+    "@anthropic-ai/sdk": "^0.116.0",
     "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.7",
