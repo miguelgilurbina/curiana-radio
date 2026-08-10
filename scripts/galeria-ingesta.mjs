@@ -447,7 +447,15 @@ async function subir(opciones) {
     manifest.blobBase = `${u.origin}/galeria`;
   }
   for (const obra of manifest.obras) {
-    if (obra.anchos?.every((a) => registro[`${obra.slug}-${a}.webp`])) {
+    // `length > 0` no es redundante: `[].every(...)` es true, y sin esa
+    // comprobación las obras que son solo concepto —sin ninguna variante
+    // generada— se marcarían como publicadas y aparecerían con licencia sobre
+    // un degradado vacío, afirmando ser algo que no son.
+    const tieneVariantes = obra.anchos?.length > 0;
+    if (
+      tieneVariantes &&
+      obra.anchos.every((a) => registro[`${obra.slug}-${a}.webp`])
+    ) {
       obra.estado = "publicada";
     }
   }

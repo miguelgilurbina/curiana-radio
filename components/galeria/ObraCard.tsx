@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import ImagenObra from "./ImagenObra";
-import { ETIQUETA_LICENCIA, type ObraGrid } from "@/types/galeria";
+import type { ObraGrid } from "@/types/galeria";
 
 interface ObraCardProps {
   obra: ObraGrid;
@@ -54,11 +54,11 @@ export default function ObraCard({
         <h3 className="line-clamp-2 font-serif text-base leading-tight text-white drop-shadow-sm">
           {obra.titulo}
         </h3>
-        <p className="mt-1 font-sans text-[0.65rem] tracking-[0.15em] uppercase text-earth-200">
-          {obra.estado === "pendiente"
-            ? "Sin render"
-            : ETIQUETA_LICENCIA[obra.licencia]}
-        </p>
+        {obra.estado === "pendiente" && (
+          <p className="mt-1 font-sans text-[0.65rem] tracking-[0.15em] uppercase text-earth-200">
+            Sin render
+          </p>
+        )}
       </div>
     </Link>
   );
