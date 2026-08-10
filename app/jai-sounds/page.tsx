@@ -1,138 +1,119 @@
 import type { CSSProperties } from "react";
-import {
-  contarMood,
-  getCenso,
-  getMoods,
-  hayTaxonomiaEnBorrador,
-} from "@/lib/jai-sounds";
+import { getCenso, getPlaylists, hueDeSlug } from "@/lib/jai-sounds";
+import type { FichaPlaylist } from "@/types/jai-sounds";
 
 // El catálogo cambia cuando corre la ingesta, no cuando entra una visita.
 export const revalidate = 3600;
 
-function Cifra({ valor, etiqueta }: { valor: number; etiqueta: string }) {
+function Estacion({ ficha }: { ficha: FichaPlaylist }) {
   return (
-    <div>
-      <div className="font-(family-name:--jai-mono) text-2xl md:text-3xl tabular-nums text-(--jai-luz)">
-        {valor > 0 ? valor.toLocaleString("es") : "—"}
+    <li
+      style={{ "--jai-hue": hueDeSlug(ficha.slug) } as CSSProperties}
+      className="jai-estacion group relative bg-(--jai-panel) overflow-hidden"
+    >
+      {/* Mientras no haya portada propia, la placa de color hace de arte:
+          estable por slug, así cada lista tiene identidad desde hoy. */}
+      <div className="aspect-square relative">
+        {ficha.portada ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={ficha.portada}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        ) : (
+          <div className="absolute inset-0 bg-(--jai-senal-tenue) flex items-end p-4">
+            <span
+              aria-hidden
+              className="font-(family-name:--jai-display) text-6xl leading-none text-(--jai-senal) opacity-40 select-none"
+            >
+              {ficha.nombre.trim().charAt(0)}
+            </span>
+          </div>
+        )}
+        <span
+          aria-hidden
+          className="absolute left-0 top-0 bottom-0 w-[3px] bg-(--jai-senal) opacity-60 transition-opacity group-hover:opacity-100"
+        />
       </div>
-      <div className="font-(family-name:--jai-mono) text-[0.65rem] uppercase tracking-[0.2em] text-(--jai-luz-faint) mt-1">
-        {etiqueta}
+
+      <div className="p-4">
+        <h3 className="font-(family-name:--jai-display) text-lg leading-tight">
+          {ficha.nombre}
+        </h3>
+        {ficha.descripcion ? (
+          <p className="mt-2 text-sm text-(--jai-luz-soft)">
+            {ficha.descripcion}
+          </p>
+        ) : null}
+        <p className="mt-3 font-(family-name:--jai-mono) text-[0.65rem] uppercase tracking-widest tabular-nums text-(--jai-luz-faint)">
+          {ficha.pistas} pistas
+        </p>
+        <a
+          href={`https://open.spotify.com/playlist/${ficha.spotify_id}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-2 inline-block font-(family-name:--jai-mono) text-[0.65rem] uppercase tracking-widest text-(--jai-luz-faint) hover:text-(--jai-senal) transition-colors"
+        >
+          Escuchar ↗
+        </a>
       </div>
-    </div>
+    </li>
   );
 }
 
 export default async function JaiSoundsPage() {
-  const moods = getMoods();
+  const playlists = getPlaylists();
   const censo = await getCenso();
-  const enBorrador = hayTaxonomiaEnBorrador(moods);
+  const totalPistas = playlists.reduce((s, p) => s + (p.pistas ?? 0), 0);
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-      {/* ── Cabecera: la banda ─────────────────────────────────────── */}
-      <header className="border-b border-(--jai-rule) pb-10">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      {/* ── Quiénes somos ──────────────────────────────────────────── */}
+      <header className="border-b border-(--jai-rule) pb-12">
         <p className="font-(family-name:--jai-mono) text-[0.7rem] uppercase tracking-[0.3em] text-(--jai-luz-faint)">
           88.8 FM · Curaduría
         </p>
         <h1 className="font-(family-name:--jai-display) text-5xl md:text-7xl mt-4 leading-[1.05]">
           JAI Sounds
         </h1>
-        <p className="mt-6 max-w-reading text-body text-(--jai-luz-soft)">
-          Un dial, no un catálogo. Cada estación es un{" "}
-          <em>mood</em> — un estado, no un género — y lo que la sintoniza es
-          que cruza fronteras que la industria dibujó por conveniencia.
+        <p className="mt-5 font-(family-name:--jai-mono) text-sm text-(--jai-senal)">
+          jay · caquetío · ruido, sonido
         </p>
-        <p className="mt-4 max-w-reading text-sm text-(--jai-luz-faint)">
-          En noviembre de 2024 Spotify apagó el acceso público a sus medidas de{" "}
-          <span className="font-(family-name:--jai-mono)">valence</span> y{" "}
-          <span className="font-(family-name:--jai-mono)">energy</span>. Aquí
-          eso no es una pérdida: el mood nunca fue un número. Lo decide el
-          oído, y queda escrito.
+        <p className="mt-6 max-w-reading text-body text-(--jai-luz-soft)">
+          Una curaduría sin fronteras de género. Ninguna canción entra por lo
+          que es; entra por lo que describe — la experiencia viva que la trajo
+          al mundo, y el sentimiento que la sostiene.
         </p>
       </header>
 
-      {/* ── Censo del catálogo ─────────────────────────────────────── */}
-      <section className="grid grid-cols-3 gap-6 py-10 border-b border-(--jai-rule)">
-        <Cifra valor={censo.tracks} etiqueta="Pistas" />
-        <Cifra valor={censo.artistas} etiqueta="Artistas" />
-        <Cifra valor={censo.playlists} etiqueta="Playlists" />
-      </section>
-
-      {censo.tracks === 0 && (
-        <p className="mt-8 font-(family-name:--jai-mono) text-xs leading-relaxed text-(--jai-luz-faint) border-l-2 border-(--jai-rule) pl-4">
-          Catálogo vacío: la migración de Supabase y la ingesta desde Spotify
-          todavía no han corrido. Ver{" "}
-          <span className="text-(--jai-luz-soft)">jai-sounds/README.md</span>.
-        </p>
-      )}
-
-      {enBorrador && (
-        <p className="mt-4 font-(family-name:--jai-mono) text-xs leading-relaxed text-(--jai-luz-faint) border-l-2 border-(--jai-senal) pl-4">
-          Taxonomía en borrador: los moods de abajo son andamio para que el
-          dial exista, no curaduría. Se reemplazan por los reales al derivarlos
-          de las playlists.
-        </p>
-      )}
-
-      {/* ── El dial ────────────────────────────────────────────────── */}
+      {/* ── Las playlists: lo principal ────────────────────────────── */}
       <section className="mt-16">
-        <h2 className="font-(family-name:--jai-mono) text-[0.7rem] uppercase tracking-[0.3em] text-(--jai-luz-faint) mb-8">
-          El dial · {moods.length} estaciones
-        </h2>
+        <div className="flex flex-wrap items-baseline justify-between gap-4 mb-8">
+          <h2 className="font-(family-name:--jai-mono) text-[0.7rem] uppercase tracking-[0.3em] text-(--jai-luz-faint)">
+            El dial · {playlists.length} estaciones
+          </h2>
+          <p className="font-(family-name:--jai-mono) text-[0.7rem] tabular-nums text-(--jai-luz-faint)">
+            {totalPistas.toLocaleString("es")} pistas curadas
+            {censo.artistas > 0 &&
+              ` · ${censo.artistas.toLocaleString("es")} artistas en el archivo`}
+          </p>
+        </div>
 
-        {moods.length === 0 ? (
+        {playlists.length === 0 ? (
           <p className="text-(--jai-luz-faint)">
-            No hay taxonomía todavía. Falta{" "}
+            Todavía no hay playlists en{" "}
             <span className="font-(family-name:--jai-mono)">
-              content/jai-sounds/moods.json
+              content/jai-sounds/playlists.json
             </span>
             .
           </p>
         ) : (
-          <ol className="space-y-px">
-            {moods.map((mood) => {
-              const total = contarMood(mood, censo);
-              return (
-                <li
-                  key={mood.slug}
-                  style={{ "--jai-hue": mood.hue } as CSSProperties}
-                  className="jai-estacion group relative bg-(--jai-panel) px-5 py-6 md:px-8 md:py-8 transition-colors hover:bg-(--jai-senal-tenue)"
-                >
-                  {/* La aguja: el matiz del mood, encendido al pasar */}
-                  <span
-                    aria-hidden
-                    className="absolute left-0 top-0 bottom-0 w-[3px] bg-(--jai-senal) opacity-40 transition-opacity group-hover:opacity-100"
-                  />
-                  <div className="md:flex md:items-baseline md:gap-8">
-                    <div className="font-(family-name:--jai-mono) text-sm tabular-nums text-(--jai-senal) shrink-0 md:w-20">
-                      {mood.frecuencia}
-                    </div>
-                    <div className="mt-2 md:mt-0 flex-1">
-                      <h3 className="font-(family-name:--jai-display) text-2xl md:text-3xl">
-                        {mood.nombre}
-                      </h3>
-                      <p className="mt-2 max-w-reading text-(--jai-luz-soft)">
-                        {mood.bajada}
-                      </p>
-                      <ul className="mt-4 flex flex-wrap gap-2">
-                        {mood.cruces.map((cruce) => (
-                          <li
-                            key={cruce}
-                            className="font-(family-name:--jai-mono) text-[0.65rem] uppercase tracking-widest text-(--jai-luz-faint) border border-(--jai-rule) rounded-full px-3 py-1"
-                          >
-                            {cruce}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="mt-4 md:mt-0 font-(family-name:--jai-mono) text-xs tabular-nums text-(--jai-luz-faint) shrink-0 md:text-right md:w-24">
-                      {total > 0 ? `${total.toLocaleString("es")} pistas` : "sin pistas"}
-                    </div>
-                  </div>
-                </li>
-              );
-            })}
-          </ol>
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {playlists.map((p) => (
+              <Estacion key={p.slug} ficha={p} />
+            ))}
+          </ul>
         )}
       </section>
     </div>

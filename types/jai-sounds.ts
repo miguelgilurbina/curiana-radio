@@ -35,7 +35,29 @@ export interface Taxonomia {
   moods: Mood[];
 }
 
-// ── Catálogo: tablas de Supabase ─────────────────────────────────────
+// ── Ficha editorial: content/jai-sounds/playlists.json ───────────────
+
+/**
+ * Una playlist publicada, con su copy. La unidad principal de JAI Sounds.
+ * Todo lo editable vive en git, no en Spotify.
+ */
+export interface FichaPlaylist {
+  slug: string;
+  spotify_id: string;
+  nombre: string;
+  pistas: number;
+  /** El copy propio. Vacío = todavía sin escribir. */
+  descripcion: string;
+  /** Arqueología: lo que quedó en Spotify. No es un destino a sincronizar. */
+  descripcion_spotify: string | null;
+  /** Portada propia. null = se pinta un color derivado del slug. */
+  portada: string | null;
+  /** Slug de mood, si algún día agrupamos por encima de las playlists. */
+  mood: string | null;
+  estado: "pendiente" | "copy" | "listo";
+}
+
+// ── Catálogo: tablas de Supabase (esquema `jai`) ─────────────────────
 
 export interface JaiArtist {
   id: string;
@@ -73,11 +95,9 @@ export interface JaiPlaylist {
   synced_at: string;
 }
 
-/** Conteos para la portada. Un solo viaje, no 12k filas. */
+/** Conteos para el landing. Un solo viaje, no 12k filas. */
 export interface CensoCatalogo {
   tracks: number;
   artistas: number;
-  playlists: number;
-  /** slug de playlist de Spotify → nº de tracks, para contar por mood. */
-  porPlaylist: Record<string, number>;
+  albums: number;
 }

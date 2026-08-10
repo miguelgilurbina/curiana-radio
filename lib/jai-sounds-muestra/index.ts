@@ -11,7 +11,6 @@
  */
 import fs from "fs";
 import path from "path";
-import { getMoods } from "../jai-sounds";
 import type { Mood } from "@/types/jai-sounds";
 import type {
   AlbumMuestra,
@@ -33,10 +32,11 @@ const MUESTRA_PATH = path.join(
 );
 
 export function getMuestra() {
-  const { artistas, albums, tracks, playlists } = JSON.parse(
+  // Los moods de la muestra viven en su propio fixture, no en la taxonomía
+  // real: son inventados, y el contenido de verdad no debe cargar con ellos.
+  const { artistas, albums, tracks, playlists, moods } = JSON.parse(
     fs.readFileSync(MUESTRA_PATH, "utf-8")
-  ) as Muestra;
-  const moods = getMoods();
+  ) as Muestra & { moods: Mood[] };
 
   const porArtista = new Map(artistas.map((a) => [a.id, a]));
   const porAlbum = new Map(albums.map((d) => [d.id, d]));

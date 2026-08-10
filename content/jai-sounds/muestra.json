@@ -1,5 +1,13 @@
 {
   "_nota": "DATOS DE MUESTRA — NO ES EL CATÁLOGO. Existen solo para poder juzgar el diseño antes de que haya ingesta real. Los nombres de artista y álbum son reales (son metadatos, hechos); los ids son ficticios a propósito (prefijo 'muestra-') para que jamás se confundan con ids de Spotify ni acaben en la base. Las notas curatoriales son de relleno: NO son curaduría del proyecto. Borrar este archivo y la ruta /jai-sounds/muestra cuando el catálogo real esté cargado.",
+  "moods": [
+    { "slug": "senal-debil", "nombre": "Señal débil", "frecuencia": "88.1", "bajada": "Lo que llega después de viajar demasiado lejos.", "hue": 55, "cruces": ["ambient", "modern classical", "drone"], "playlists": [], "borrador": true },
+    { "slug": "cuerpo-primero", "nombre": "Cuerpo primero", "frecuencia": "88.4", "bajada": "La decisión la toma la cadera y el resto se entera después.", "hue": 355, "cruces": ["afrobeat", "house", "champeta"], "playlists": [], "borrador": true },
+    { "slug": "hora-lenta", "nombre": "Hora lenta", "frecuencia": "88.8", "bajada": "Ni duelo ni fiesta.", "hue": 240, "cruces": ["jazz", "soul", "bossa"], "playlists": [], "borrador": true },
+    { "slug": "lengua-madre", "nombre": "Lengua madre", "frecuencia": "89.2", "bajada": "Abya Yala cantando en sus propias vocales.", "hue": 150, "cruces": ["folklore", "cumbia", "andina"], "playlists": [], "borrador": true },
+    { "slug": "maquina-que-suena", "nombre": "Máquina que sueña", "frecuencia": "89.6", "bajada": "El circuito empieza a parecer criatura.", "hue": 300, "cruces": ["electronic", "idm", "synth"], "playlists": [], "borrador": true },
+    { "slug": "filo", "nombre": "Filo", "frecuencia": "90.1", "bajada": "Volumen como argumento.", "hue": 25, "cruces": ["post-punk", "noise", "experimental"], "playlists": [], "borrador": true }
+  ],
   "artistas": [
     { "id": "muestra-a01", "nombre": "Arca", "generos": ["electronic", "experimental", "reggaeton"], "hue": 300 },
     { "id": "muestra-a02", "nombre": "Rosalía", "generos": ["flamenco", "pop", "reggaeton"], "hue": 355 },
