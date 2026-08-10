@@ -1,0 +1,4 @@
+{
+  "_nota": "Los moods vacíos son a propósito. Aquí hubo seis inventados por Claude como andamio para que la portada compilara antes de que existieran datos; se retiraron al descubrir que la unidad organizadora real son las playlists (content/jai-sounds/playlists.json), cuyos nombres YA funcionan como moods: 'El Paraíso y su Euforia', 'El purgatorio y su tristeza', '¿Le temes a la Oscuridad?'. Este archivo se queda porque un mood puede acabar siendo útil como agrupador por encima de las playlists — pero se llena con criterio del proyecto, no con relleno. `hue` es ángulo en oklch (no hsl): 25 rojo · 55 ámbar · 150 verde · 240 azul · 300 violeta · 355 rosa.",
+  "moods": []
+}

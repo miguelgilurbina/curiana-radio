@@ -72,6 +72,42 @@
   --sim-fuego: #e2a158; /* ocre caquetío legible sobre tinta profunda */
 }
 
+/* ── Tema "Dial" de JAI Sounds ─────────────────────────────────────────
+   La tercera arista tiene su propio registro: ni el pergamino del cronista
+   ni el papel de la radio. Es la cabina de noche — tinta profunda, y el
+   acento NO es fijo: cada mood trae su propio matiz (--jai-hue) y pinta su
+   estación del dial. El color es el dato, no la decoración. */
+[data-jai-theme="dial"] {
+  --jai-noche: #0b1119; /* más hondo que deep-900: aquí no hay papel */
+  --jai-panel: #131c28; /* placas, tarjetas de estación */
+  --jai-luz: #f1ece2; /* texto principal */
+  --jai-luz-soft: #b9c3d1;
+  --jai-luz-faint: #7b8a9c;
+  --jai-rule: #24303f; /* filetes de la banda */
+  --jai-mono: ui-monospace, "Cascadia Mono", "Consolas", monospace;
+  --jai-display: var(--font-fraunces), var(--font-lora), Georgia, serif;
+
+  /* Fallback del dial cuando no hay estación (avisos, filetes). */
+  --jai-hue: 40;
+  --jai-senal: oklch(0.8 0.15 var(--jai-hue));
+  --jai-senal-tenue: oklch(0.28 0.06 var(--jai-hue));
+}
+
+/* Una custom property con var() se sustituye en el elemento donde se DECLARA,
+   y lo que hereda es el color ya resuelto. Si --jai-senal viviera solo arriba,
+   que cada estación redefina --jai-hue llegaría tarde: todas las agujas
+   saldrían del mismo naranja. Por eso la señal se recalcula aquí, en la
+   estación, que es donde su matiz existe.
+
+   El color va en oklch y no en hsl a propósito: a lightness fija, hsl vuelve
+   los violetas mucho más oscuros que los verdes y el contraste se cae por
+   debajo de AA en algunas estaciones. oklch mantiene la luminosidad
+   PERCIBIDA constante mientras gira el matiz — que es lo que un dial pide. */
+[data-jai-theme="dial"] .jai-estacion {
+  --jai-senal: oklch(0.8 0.15 var(--jai-hue));
+  --jai-senal-tenue: oklch(0.28 0.06 var(--jai-hue));
+}
+
 @layer base {
   /* Smooth scrolling */
   html {

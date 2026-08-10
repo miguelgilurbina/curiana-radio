@@ -71,6 +71,14 @@ export default function Navigation({ editionNumber }: NavigationProps) {
                 Archivo
               </Link>
 
+              {/* JAI Sounds Link */}
+              <Link
+                href="/jai-sounds"
+                className="text-sm font-sans text-deep-700 hover:text-frequency transition-colors tracking-wide uppercase"
+              >
+                JAI Sounds
+              </Link>
+
               {/* Simulador Link */}
               <Link
                 href="/simulador"
