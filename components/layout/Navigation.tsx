@@ -55,7 +55,9 @@ export default function Navigation({ editionNumber }: NavigationProps) {
             </Link>
 
             {/* Navigation Items */}
-            <div className="flex items-center space-x-6">
+            {/* Con Galería son tres enlaces visibles en móvil: a 375px el gap
+                de 24px desborda la barra. Se aprieta hasta sm. */}
+            <div className="flex items-center space-x-4 sm:space-x-6">
               {/* Edition Number (if on edition page) */}
               {editionNumber && (
                 <div className="font-serif text-lg text-deep-800">
@@ -77,6 +79,14 @@ export default function Navigation({ editionNumber }: NavigationProps) {
                 className="text-sm font-sans text-deep-700 hover:text-frequency transition-colors tracking-wide uppercase"
               >
                 JAI Sounds
+              </Link>
+
+              {/* Galería Link */}
+              <Link
+                href="/galeria"
+                className="text-sm font-sans text-deep-700 hover:text-frequency transition-colors tracking-wide uppercase"
+              >
+                Galería
               </Link>
 
               {/* Simulador Link */}
