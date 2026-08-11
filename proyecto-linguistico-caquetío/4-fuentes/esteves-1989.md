@@ -176,6 +176,84 @@ Y aparecen como referencia geográfica: **Moruy · Jadacaquiva · Los Taques ·
 Adícora · Pueblo Nuevo · San Pedro · Aguaque · Caradacagua · Urupaguaduco ·
 Buenavista**.
 
+### 🔴 Lo que el cruce con nuestros datos destapó (pp. 17-19)
+
+**El proyecto ya citaba a Esteves sin tener la obra.** `morfemas.yaml` §46-47
+dice: *"van Buurt §5 recoge `-ure` (papiamentu -huri/-uri) glosado 'raíz' por
+**Cruz Esteves 1989**, y lo declara equivalente al `-ure` continental. La
+evidencia toponímica dice 'sitio de'."* Era un conflicto abierto contra una
+fuente que no teníamos. Ahora la tenemos.
+
+#### 1. `-ure` = 'raíz' — Esteves lo sostiene con tres topónimos
+
+| Topónimo | Descomposición de Esteves |
+|---|---|
+| **Abudure** | `dabuda` 'barro de loza' + `ure` 'raíz' = 'sitio de donde se extrae barro de las raíces' |
+| **Babahuro** | `baba` 'caño' + `ure` 'raíz' = 'el caño de las raíces' — *"por las abundantes raíces adventicias de los tupidos manglares"* |
+| **Asubure** | nombre indígena del *sesuvio* (*Sesuvium portulacastrum*), el "vidrio". ⚠️ Esteves NO lo descompone |
+
+Los dos primeros son referencias **literales** a raíces (raíces de manglar,
+barro extraído de raíces), no a 'sitio de'. Eso **refuerza la lectura de
+Esteves** frente a la nuestra, pero no la cierra: `-ure` podría ser 'sitio de'
+y el sentido de raíz venir del otro elemento. Sigue en conflicto declarado.
+
+#### 2. 🔴 `bara`: el lexicón dice 'río', dos fuentes dicen 'árbol'
+
+Esteves (p. 19), citando el *Glosario de Voces Indígenas* de **Lisandro
+Alvarado** — que es [[alvarado-1921]], obra que **ya tenemos y ya minamos**:
+
+> *"Sabemos que **Bara**, en lengua caquetía, es voz general para designar toda
+> clase de **árbol**. Nos informamos en Lisandro Alvarado que **Barabara**,
+> plural por duplicación, es el nombre de un árbol caparidáceo que aquí
+> conocemos con el nombre de olivo."*
+
+Y `morfemas.yaml` §59 ya decía que **van Buurt §5** documenta `bara`/`bari`
+'árbol' (cf. lokono *balli*).
+
+**Pero `curiana_lexicon.py:113` tiene `bara` = 'río, corriente fluvial'**,
+`caquetío-reconstruido`, *"forma justificada por cognado en
+proto-arawakan/topónimo"*.
+
+> Dos fuentes independientes dicen 'árbol'; el motor dice 'río'. Es el mismo
+> patrón que `tara` ([#45](https://github.com/miguelgilurbina/curiana-radio/issues/45)),
+> `saruro` ([#47](https://github.com/miguelgilurbina/curiana-radio/issues/47))
+> y `corie` ([#46](https://github.com/miguelgilurbina/curiana-radio/issues/46)).
+> Levantado aparte.
+
+Complica el cuadro que `bara` aparece **además** como cognado lokono de `para`
+'mar' (`cognados.yaml`). Tres sentidos en danza: 'río', 'árbol', 'mar'.
+
+#### 3. `saruro` (#47) — pista, no solución
+
+Esteves da **Asaro** (aldea de Pueblo Nuevo) y lo compara con **Sarosaro** de
+La Guajira, *"plural por duplicación… un árbol cuya madera blanda utilizaban
+los guajiros para obtener el fuego por frotación"*.
+
+⚠️ **No resuelve #47.** La forma es `sarosaro`/`asaro`, no `saruro`; y es
+**guajiro**, no caquetío. El issue dice que Alvarado no trae `saruro` ni como
+lema — y esto no lo cambia. Es una pista para seguir, nada más.
+
+#### 4. Dos rasgos morfológicos que se repiten
+
+- **Reduplicación = plural.** Esteves lo dice dos veces con esas palabras:
+  `Sarosaro` y `Barabara` son *"plural por duplicación"*. Nuestro
+  `jurijurebo` ya usaba reduplicación. ⚠️ Pero `morfologia.md:176` la lee como
+  **intensidad** (`barabara` = 'árbol de madera dura'), no como plural.
+  **Otro conflicto**, y esta vez Esteves es explícito.
+- **`baba` = `baja` = 'caño'.** Esteves los da como equivalentes (Bajabaroa,
+  Babahuro).
+
+#### 5. Una regla prosódica, y es nueva
+
+> ARAJÓ (p. 17) — *"Sobre esta voz Arajó, inusitada por **aguda**, mantenemos
+> reservas: **las voces agudas escasean en los topónimos indígenas de
+> Paraguaná**; a nuestro modo de ver, la pronunciación primitiva debió ser:
+> Arajo."*
+
+Es una afirmación **fonotáctica comprobable** contra nuestros 74 topónimos, y
+el proyecto no tenía nada sobre acento. Encaja en
+[[fonotactica]] — que hoy solo mira inventario, clusters y codas.
+
 ### Más fuentes que cita, según avanza el barrido
 
 | Fuente | Dónde | Qué aporta |
@@ -183,6 +261,8 @@ Buenavista**.
 | **Aníbal Hill Peña**, historiador | p. 13 | los adaures como "tribu belicosa"; Esteves dice tener papeles de sus peleas contra los españoles |
 | **José Félix Blanco (Cor.)**, *Documentos para la Historia del Libertador* (1875) | p. 16 | compilación por decreto de Guzmán Blanco |
 | **Obispo Gerónimo de Ballesteros** | p. 16 | 2.º obispo de Coro, † Coro 1558. **El mismo de la carta de 1550** que ya citamos vía Oliver |
+| ⭐ **Lisandro Alvarado**, *Glosario de Voces Indígenas* | p. 19 | **Ya lo tenemos**: [[alvarado-1921]]. Fuente de su `bara` = 'árbol' — comprobable directamente |
+| **José Luis Cisneros**, *Descripción de la Probincia de Benezuela* | p. 18 | libro colonial (1764). Da *Avotuca* como "lugar de vigilancia de las costas de Paraguaná" |
 
 ### 👍 Un punto a favor del método de Esteves
 
