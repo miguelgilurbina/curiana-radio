@@ -272,6 +272,32 @@ que es *lo contrario* de llano.
 Es una glosa nueva y de una fuente que conoce el terreno: Capuhana **es** un
 cerro. D9 lleva abierta desde el principio y **bloquea el gate**.
 
+##### 🔴 Y en la p. 28, segunda atestación — que además explica de dónde vino nuestro error
+
+> **CARIRUBANA** — *"significa: orilla del peñón, la orilla del cerro. **`Cari`:
+> orilla. `Bana`: sitio alto.**"*
+>
+> **CARIGUARIANA** — *"quiere decir: la playa de los tabacones… **`Cari`:
+> orilla de mar.** `Guariana`: tabaco pescador o tabacón."*
+
+Con esto quedan **dos morfemas separados y dos atestaciones cada uno**:
+
+| Morfema | Glosa de Esteves | Dónde |
+|---|---|---|
+| **`cari`** | **'orilla, orilla de mar'** | Carirubana, Cariguariana |
+| **`bana`** | **'sitio alto, cerro'** | Carirubana, Capuhana |
+
+> ⭐ **La hipótesis que esto sugiere**: el proyecto glosa `-bana` como
+> **'orilla, borde'** — que es exactamente lo que Esteves asigna a **`cari`**.
+> Si `Carirubana` = `cari`+`ru`+`bana` = 'orilla del cerro', entonces alguien
+> leyó el compuesto entero, se quedó con 'orilla' y se lo colgó al elemento
+> equivocado. **`-bana` habría absorbido el significado de `cari`.**
+>
+> Es una hipótesis, no un veredicto: hace falta ver de dónde salió nuestra
+> glosa original. Pero explica el conflicto entero de D9 de una manera
+> económica, y encaja con que `-bana` conviva con `-ana` sin que nadie sepa
+> distinguirlos.
+
 #### `capu` = 'duende, ente sobrenatural' — el cronista tenía razón
 
 `curiana_cronista.py` sustituye *demonio* → **`capu`** como parte de
@@ -301,6 +327,63 @@ contrario: de los caquetíos hacia los mejicanos.
 > con jadeíta de Motagua en las Antillas Menores, ~1000 años antes de la
 > ventana simulada. Esto es de otro tipo: folclore moderno, no material
 > arqueológico. Se anota, no se usa.
+
+##### Tercera atestación de `bana`, pp. 30-31
+
+> **COABANA** — *"El topónimo es una voz compuesta que dice: **el cerro de las
+> coas**. `Coa` es un tosco instrumento de labranza, un palo aguzado para abrir
+> el surco. **`Bana`: cerro.**"*
+
+Tres topónimos, tres veces 'cerro / sitio alto', y en los tres el referente es
+un accidente elevado: **Capuhana · Carirubana · Coabana**. Para una glosa que
+el proyecto tiene como 'orilla' o 'llano', es evidencia dura.
+
+### pp. 30-31 — dos afijos corroborados y un sitio precolombino
+
+#### ✅ `-uco` / `-uto` = 'quebrada, cauce' — corroboración limpia
+
+> **CODUTO** — *"El sufijo **`uto`** y **`uco`**, indistintamente, lo hemos
+> hallado formando voces compuestas con la significación de **quebrada,
+> cauce**."*
+
+`morfologia.md:35` ya tenía `-uco` = 'cauce, quebrada (variante `-uto`)',
+**sostenido por una sola fuente**: Zavala #268. Esteves da la **misma glosa y
+la misma variante** de forma independiente. Es de los afijos de
+`REGLAS_ZAVALA`, así que toca al motor.
+
+#### 🆕 `-dito` = colectivo
+
+> **COCODITE** — *"Del topónimo sabemos que el sufijo **"dito"** es distintivo
+> de los **sustantivos colectivos** en lengua indígena."*
+
+Afijo nuevo, no está en `morfemas.yaml`. Una sola fuente y sin más ejemplos:
+`hipotetico`.
+
+#### ⭐ CAYERUBA — el primer sitio de Paraguaná con evidencia precolombina
+
+> *"no hay dudas de que en **tiempos precolombinos** fue asiento de un populoso
+> vecindario indígena, lo atestigua, aparte de la abundancia de **restos de
+> cerámica aborigen** que se encuentra en el lugar, **el hallazgo reciente de
+> un cementerio**."*
+
+Esto **sí** es del tipo de evidencia que `3-mundo/asentamientos.yaml` exige para
+`precontacto`: material, no documental. Hoy ningún nodo continental lo tiene.
+
+> ⚠️ Pero es **Esteves reportando**, no un informe arqueológico. Sin excavación
+> publicada ni fecha, no alcanza para `precontacto: si` —que exige
+> `precontacto_razon` verificable— pero sí marca **dónde habría que buscar**.
+> Curiosamente, Cayeruba **no aparece en el censo de 1881** y Esteves llama la
+> omisión "inexplicable".
+
+#### Documentos de archivo con fecha, que es lo que rinde
+
+| Año | Qué | Dónde |
+|---|---|---|
+| **1590** | *"antiguos papeles escriturados… como tierras compuestas a favor de Alonso Arias Vaca"* — donde el topónimo es **Cocodito**, no Cocodite | p. 31 |
+| **1698** | papeles escriturados de los linderos de la posesión de **Urupaguaduca** (topónimo *Carajaima*, antes *Caramajaima*) | p. 27 |
+
+**1590 es el documento más antiguo que Esteves cita**, y está a 52 años del
+pacto de Manaure. Merece perseguirse.
 
 #### `caramata`/`caigua`: otro estrato, y cumanagoto
 
