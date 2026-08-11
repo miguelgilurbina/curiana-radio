@@ -76,9 +76,71 @@ precontacto que la carta de Bastidas (1538), no más cerca.
 de topónimos** y su ubicación — que es justo lo que [#92](https://github.com/miguelgilurbina/curiana-radio/issues/92)
 necesita para dejar de tener a Paraguaná vacía.
 
-## Lo minado hasta ahora — 6 de 146 páginas
+## Lo minado hasta ahora — 10 de 146 páginas
 
-> 🔴 **Barrido apenas empezado.** Lo de abajo sale de las páginas 11-12 y 25.
+> 🔴 **Barrido en curso.** Lo de abajo sale de las páginas 11-16 y 25 del libro.
+
+### ⭐ Los cuatro hallazgos que ya cambian algo
+
+**1. `jadicuar` resuelto — y contra la hipótesis que teníamos.**
+
+`toponimos.yaml` tiene `jadicuar` sin glosa, y yo lo había marcado como posible
+variante de **Jadacaquiva**. Es falso. Esteves (p. 14):
+
+> ADÍCORA — *"El nombre primitivo era **Jadícuar**, que quiere decir: jajatal,
+> sitio donde abunda el jajato, hierba halófila de terrenos salobres. Este
+> Jadícuar, por uno de esos curiosos procesos de selección eufónica, ha venido
+> cambiando de Jadícuar a Jadícora, de Jadícora a Jatícora, hasta llegar al
+> sugestivo y poético Adícora de hoy."*
+
+Es **el nombre indígena de Adícora**, con la cadena de cambio completa. Sirve
+para subir `nodo-012` en `3-mundo/asentamientos.yaml`, que hoy está como
+`reconstruido` porque solo teníamos el nombre.
+
+**2. Una serie morfológica de apellidos caquetíos — con Manaure dentro.**
+
+Esteves (p. 13) lista *"algunos de los apellidos de la gran familia caquetía"*:
+
+> **Adaure · Timaure · Yaraure · Chunaure · Manaure**
+
+Cinco formas en `-aure`. `toponimos.yaml` ya tenía `timaure` ('Apellido') y
+`tumarure` ('Apellido de un cacique') sueltos y sin explicar; ahora hay serie.
+Toca directamente al personaje central del elenco.
+
+> ⚠️ Esteves **no** analiza `-aure` como morfema ni da su significado. La serie
+> es suya; el análisis sería nuestro y sería `hipotetico`.
+
+**3. 🔴 Amuay no sería caquetío: Esteves lo atribuye al caribe insular.**
+
+> AMUAY (p. 16) — *"La voz da la idea de cavidad subterránea, haitón, cueva
+> grande… **Por su fonética la voz pertenece al caribe insular**, como batey,
+> mamey, caney, carey"*.
+
+Es un topónimo **de Paraguaná** atribuido a otro estrato lingüístico. Va
+directo a [[esfera-de-interaccion]]: la sociedad no era monoétnica y la lengua
+no era homogénea. El lexicón ya tiene las categorías `kalinago` (19) y
+`kalinago-caribe-overlay` (4) donde esto encajaría.
+
+**4. Un documento de 1556 con voz indígena, citado textual.**
+
+Petición de los **indios amuayes** al obispo Gerónimo de Ballesteros pidiendo
+cambiar de santo patrono:
+
+> *"A vos, Gerónimo, que sos nuestro Obispo y Amo, te pedimos dos cosas. La
+> primera: es un buen santo para nuestro Patrón, pues nosotros no queremos a
+> San Juan, pues como está desnudo, no va a querer que llueva para no tener
+> frío. La segunda: Danos otro cura, que no sea cobarde como el que tenemos,
+> que en cuanto vio venir el verano se largó…"*
+
+**Ballesteros es el mismo obispo cuya carta de 1550 ya citamos** vía Oliver
+(`geografia_politica-004/005`, el canal del `buco` y los 14-15 mil indios).
+Esteves añade que fue el **segundo obispo de Coro** y que murió allí en 1558.
+
+> ⚠️ Esteves **no da la referencia de esta petición**. Menciona la compilación
+> del Coronel José Félix Blanco, *Documentos para la Historia del Libertador*
+> (1875), pero en la frase siguiente y aplicada al dato de la lápida. **Hay que
+> perseguir la fuente antes de usarla**: una cita sin procedencia de un texto
+> tan bueno es exactamente donde conviene desconfiar.
 
 ### Morfemas que corroboran el lexicón
 
@@ -99,13 +161,28 @@ necesita para dejar de tener a Paraguaná vacía.
 | **Abudure** | aldea al SO de Moruy | censo 1881: 6 casas, 50 vecinos. `dabuda`+`ure` = 'sitio de donde se extrae barro de las raíces' |
 | **Acaboa** | lugar pecuario, municipio Jadacaquiva | censo 1881: 2 casas, 11 vecinos. **Oratorio en 1773 (Martí)** |
 | **Adaro** | Punta de Adaro, costa occidental, Los Taques | de `dara`, con prótesis vocálica y disimilación a>o |
+| **Adaure** | aldea al oeste de Buenavista | censo 1881: **87 casas, 522 vecinos** — mayor que muchas cabeceras de municipio. **Martí 1773 citado textual**. Aníbal Hill Peña los da como "tribu belicosa" |
+| **Adícora** | capital de municipio, costa oriental | ⭐ antes **Jadícuar** = 'jajatal' (ver arriba) |
+| **Aguaque** | fundo a dos leguas al norte de Pueblo Nuevo | de *guaco*, portulácea. Casa natal de Josefa Camejo; Monumento Histórico desde 1982 |
+| **Amaraya** | aldea al sur de Jadacaquiva | censo 1881 (como *Amaralla*): 16 casas, 108 vecinos. ¿de *maracaya*, el "güirito", gato silvestre? |
+| **Amuay** | bahía y población, municipio Los Taques | censo 1881: 8 casas, 60 vecinos → ~400 casas y 3.000 hab. al escribir. 🔴 **atribuido al caribe insular** |
+| **Antuni** | lugar pecuario al norte de Jadacaquiva | Esteves **duda que sea indígena** |
 | **Buenibativa** | caserío San Pedro, municipio Adícora | de *Guanibativa*; `bativa` sin explicar |
 | **Caibacoa** | sabana al oeste del fundo de Aguaque | `cái` (< *guay*, árbol tipo ceiba) + `bacoa` |
 | **Camare** | municipio Pueblo Nuevo | censo 1881: 8 casas, 48 vecinos |
 | **Camoruco** | cerca de Caradacagua, oeste de Pueblo Nuevo | antes *Semeruco* |
 
 Y aparecen como referencia geográfica: **Moruy · Jadacaquiva · Los Taques ·
-Adícora · Pueblo Nuevo · San Pedro · Aguaque · Caradacagua · Urupaguaduco**.
+Adícora · Pueblo Nuevo · San Pedro · Aguaque · Caradacagua · Urupaguaduco ·
+Buenavista**.
+
+### Más fuentes que cita, según avanza el barrido
+
+| Fuente | Dónde | Qué aporta |
+|---|---|---|
+| **Aníbal Hill Peña**, historiador | p. 13 | los adaures como "tribu belicosa"; Esteves dice tener papeles de sus peleas contra los españoles |
+| **José Félix Blanco (Cor.)**, *Documentos para la Historia del Libertador* (1875) | p. 16 | compilación por decreto de Guzmán Blanco |
+| **Obispo Gerónimo de Ballesteros** | p. 16 | 2.º obispo de Coro, † Coro 1558. **El mismo de la carta de 1550** que ya citamos vía Oliver |
 
 ### 👍 Un punto a favor del método de Esteves
 
@@ -129,10 +206,13 @@ libro: 1-25 · 25-55 · 55-72 · 72-100 · 100-129 · 129-final.
 
 ## Lo que falta
 
-- **140 de 146 páginas.** El barrido completo es el trabajo de #92.
-- Comprobar si **`jadicuar`** de `toponimos.yaml` tiene algo que ver con
-  **Jadacaquiva**. Parecerse no es evidencia.
-- Perseguir a **Martí 1773**.
+- **136 de 146 páginas.** El barrido completo es el trabajo de #92.
+- ✅ ~~Comprobar `jadicuar` ↔ Jadacaquiva~~ — **resuelto y descartado**: es el
+  nombre primitivo de **Adícora**.
+- Perseguir a **Martí 1773** y a la petición de 1556, que Esteves cita sin dar
+  procedencia.
+- Hay un **Apéndice** con un artículo "Sobre el Nombre de Adícora" (remitido
+  desde la p. 14). Localizarlo — probablemente en el archivo 6.
 
 ## Enlaces
 
