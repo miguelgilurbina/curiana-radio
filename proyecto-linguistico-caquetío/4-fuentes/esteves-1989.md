@@ -254,6 +254,66 @@ Es una afirmación **fonotáctica comprobable** contra nuestros 74 topónimos, y
 el proyecto no tenía nada sobre acento. Encaja en
 [[fonotactica]] — que hoy solo mira inventario, clusters y codas.
 
+### ⭐⭐ pp. 26-27 — evidencia para D9, y el `capu` del cronista corroborado
+
+> **CAPUHANA** (p. 26) — *"`Capu-hana`, con hache intercalada para deshacer el
+> diptongo, es el nombre de un pequeño cerro, cerca de Misaray. Quiere decir:
+> **el cerro del duende**. **`Capó`: duende, ente sobrenatural. `Bana`: cerro,
+> sitio alto.**"*
+
+Dos golpes de una vez.
+
+#### `bana` = 'cerro, sitio alto' — evidencia directa para D9 ([#38](https://github.com/miguelgilurbina/curiana-radio/issues/38))
+
+El motor glosa `-bana` como **'orilla, borde'** (CLAUDE.md, locativos) y
+`morfologia.md` como **'ancho, llano'**. Esteves dice **'cerro, sitio alto'** —
+que es *lo contrario* de llano.
+
+Es una glosa nueva y de una fuente que conoce el terreno: Capuhana **es** un
+cerro. D9 lleva abierta desde el principio y **bloquea el gate**.
+
+#### `capu` = 'duende, ente sobrenatural' — el cronista tenía razón
+
+`curiana_cronista.py` sustituye *demonio* → **`capu`** como parte de
+`DESCOLONIZAR`. Esa elección se hizo por coherencia interna del canon.
+**Esteves la corrobora desde fuera**: `Capó` es el ente sobrenatural, y aquí no
+es un demonio cristiano sino **un espíritu protector de los árboles**.
+
+Esteves añade que equivale al **`Región`** de las creencias campesinas del
+Guárico, *"cuyos primitivos habitantes eran también de ascendencia caquetía"*.
+
+#### 🐍 Y la serpiente emplumada — con cuidado
+
+El profesor **Francisco Tamayo**, etnólogo, recogió que en el cerro de Capuhana
+hay un duende que, junto a **una serpiente emplumada con una estrella en la
+cabeza**, impide que se corten los árboles. Tamayo comenta que es *"la misma
+leyenda de la serpiente emplumada de los mejicanos"* y postula
+**transculturación de los aztecas hacia los caquetíos**. Esteves propone lo
+contrario: de los caquetíos hacia los mejicanos.
+
+> ⚠️ **Ninguna de las dos direcciones tiene apoyo aquí.** Es una creencia
+> recogida en el siglo XX: `retro-abstraido` como máximo, y la etiqueta
+> **nunca asciende**. La comparación "serpiente emplumada = Quetzalcóatl" es
+> difusionismo clásico y hay que tratarla como tal.
+>
+> Dicho eso, **toca [[horizonte-de-contacto]]** — la nota que se escribió para
+> la pregunta "¿pudo un caquetío contactar con los mayas?". Aquello se cerró
+> con jadeíta de Motagua en las Antillas Menores, ~1000 años antes de la
+> ventana simulada. Esto es de otro tipo: folclore moderno, no material
+> arqueológico. Se anota, no se usa.
+
+#### `caramata`/`caigua`: otro estrato, y cumanagoto
+
+> **CARADACAGUA** (p. 27) — de *Caramatacaigua*, 'guairón de cal'. **"En lengua
+> cumanagota, `caramata` es carbón y `caigua` es un molusco, la almeja"**.
+> Esteves lo apoya con evidencia material: vio en el sitio *"señales,
+> antiquísimas y abundantes, de los guairones donde los indios quemaban
+> conchas marinas para la obtención de cal"*.
+
+Segundo topónimo de Paraguaná atribuido a lengua **no caquetía** (tras Amuay al
+caribe insular). El lexicón tiene `caribe-cumanagoto` con 2 entradas. Más
+material para [[esfera-de-interaccion]].
+
 ### Más fuentes que cita, según avanza el barrido
 
 | Fuente | Dónde | Qué aporta |
