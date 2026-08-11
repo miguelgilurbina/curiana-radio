@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 30
+  obras: 31
   en_repo: 24
-  solo_citadas: 6
+  solo_citadas: 7
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
@@ -118,6 +118,10 @@ obras:
   - Camacho et al. 2011
   - Camacho 2011
   en_repo: true
+- id: esteves-1989
+  obra: esteves-1989
+  autor: Juan de la Cruz Esteves
+  en_repo: false
 - id: fernandes-2020
   obra: A genetic history of the pre-contact Caribbean
   autor: Fernandes, Daniel M. et al.
