@@ -502,6 +502,126 @@ Esto **no lo cierra** —Esteves mismo dice que no sabe si hay relación— pero
 el primer rastro documental de los guayquerí que toca el proyecto, y viene con
 nombres perseguibles: cacique Charaima de Margarita, Francisco Fajardo.
 
+### pp. 36-37 — `bana` quinta vez, `naure` glosado y el estrato taíno
+
+#### `bana` = 'cerro' — quinta atestación
+
+> **CHICHIBANA** — *"`Chichabana` es una aféresis de `Achichibana`, que quiere
+> decir: **el cerro de los achechives**."*
+
+Cinco compuestos, cinco veces 'cerro': **Capuhana · Carirubana · Coabana ·
+Cujíbano · Chichibana**. Para una fuente única es todo lo consistente que puede
+llegar a ser.
+
+#### ⭐ `naure` / `ñaure` — glosados "en lengua caquetía", y tocan a Manaure
+
+> **CHUNAURE** — *"`Chunaure` es un apellido indígena; sabemos, además, que **en
+> lengua caquetía "ñaure" es planta bejucosa, y "naure", es jojoto, mazorca de
+> maíz tierno**."*
+
+Dos entradas léxicas nuevas, atribuidas explícitamente al caquetío. Y **cierran
+sobre la serie de apellidos de la p. 13** (Adaure, Timaure, Yaraure, Chunaure,
+**Manaure**): el elemento `-naure` ya no es opaco.
+
+> ⚠️ **No lo apliques a Manaure todavía.** El corpus ya tiene una explicación
+> del nombre (`geografia_politica-008`: término laudatorio, con las variantes
+> *managuanare* y *managuarire*, vía Zavala citando a González). Segmentar
+> `Ma-naure` = '?-maíz tierno' sería nuestro, no de Esteves, y entraría como
+> `hipotetico`. Lo que sí es de Esteves: `naure` = 'jojoto' en caquetío.
+
+#### 🔴 Dos topónimos más de estrato taíno / caribe insular
+
+> **ELEGÜEY** — *"Nombre antiguo de **Punta Cardón**… **Es voz taína, del caribe
+> insular**. En Casicure, en la otra costa del golfete de Coro, hay una pequeña
+> península llamada **Maragüey, que también es voz taína**."*
+
+El elemento compartido **`-güey`** apoya la atribución: es un formante bien
+conocido de la toponimia taína antillana. Con esto el mapa lingüístico de
+Paraguaná que dibuja Esteves va así:
+
+| Estrato | Topónimos |
+|---|---|
+| caquetío | el grueso del libro |
+| **taíno / caribe insular** | **Amuay · Elegüey (Punta Cardón) · Maragüey** |
+| **cumanagoto** | **Caradacagua** |
+| **ayamán** (dudoso) | Cuara — *"parece voz ayamán"* |
+
+> Es exactamente la tesis de [[esfera-de-interaccion]] vista desde el terreno:
+> **una península con topónimos de al menos tres lenguas distintas.** Y no es
+> una inferencia nuestra — la hace un cronista local, topónimo por topónimo.
+
+#### Corroboraciones menores
+
+- **`dabuda`** 'barro de loza' — segunda vez (Dabadubare, mun. Santa Ana), tras
+  Abudure. Esteves mismo remite de una entrada a la otra.
+- **`chiguaral`** — *"colectivo de `chigua`re"*: segundo caso de sufijo
+  colectivo, tras `-dito`. Esteves no lo nombra como afijo aquí.
+
+### pp. 38-39 — un contraejemplo nuestro que se cae, y un numeral
+
+#### ✅ `ebo` — cuarta y quinta atestación, **y resuelve un contraejemplo declarado**
+
+> **GISEBO** — *"`Ebo`: significa camino."*
+>
+> **GUACUREBO** — *"proviene de 'Guacoa', pero más explícito por el **sufijo
+> "ebo"**, o sea que expresa: **el paso de la guacoa**."*
+
+⭐ `2-lengua/toponimos.yaml` lista, bajo `ebo`: *"nota: dos contraejemplos con
+glosa divergente: **guacurebo**, turijerebo"*.
+
+**Esteves analiza `guacurebo` exactamente como `ebo`** — y con la misma glosa
+que ya teníamos ('paso'). Uno de los dos contraejemplos declarados **deja de
+serlo**. Queda `turijerebo` por resolver.
+
+Y aquí Esteves lo llama **sufijo** con esa palabra, cosa que no había hecho.
+
+#### ✅ `bacoa` — tercera atestación, con análisis alternativo
+
+> **GUAIDABACOA** — *"con sílaba epentética intercalada, es una voz compuesta de
+> **`guái`, árbol parecido a la ceiba** y **`bacoa`: sitio, paraje**."*
+
+Tercera dentro de Esteves (Caibacoa, Cumujacoa, Guaidabacoa). Pero ojo:
+
+> ⚠️ **Nuestro `toponimos.yaml` analiza `guadabacoa` de otra manera**: glosa
+> 'Arboleda', con `ada` = 'árbol' y `wa-` como prefijo de pluralidad (van Buurt
+> §6, de Goeje 1928). **Esteves lo parte en `guái` + `bacoa`.**
+>
+> Los dos coinciden en `bacoa` y en que hay un árbol; discrepan en el primer
+> elemento y en si hay prefijo de plural. Es el **mismo topónimo con dos
+> segmentaciones**, y conviene anotarlo antes de que alguien las mezcle.
+> (Esteves también da `Guadabacoa` como la grafía del censo de 1881.)
+
+#### 🆕 `aco` = 'dos, par' — un numeral, y choca con el que tenemos
+
+> **GUACHACO** — *"quiere decir: **los dos zorros**. **`Guache`: zorro; `Aco`:
+> dos, par.**"*
+
+El lexicón tiene solo 3 numerales, y uno de ellos es **`gudamuen` = 'dos'**.
+Esteves da **`aco`**. Dos formas distintas para el mismo número: o es variación
+dialectal, o una de las dos está mal atribuida. Menor, pero anotado.
+
+#### ✅ `guanepe` — corroborado casi palabra por palabra
+
+> **GUACHUNEPE** — *"el nombre viene de **`guanepe`**, objeto doméstico de la
+> artesanía autóctona, **cesto de fibra primorosamente elaborado por las indias
+> para cargar dentro a sus hijos recién nacidos**."*
+
+El lexicón ya tiene `guanepe` = **'cesto para cargar niños'**. Coincidencia
+exacta, de fuente independiente. 👍
+
+(Esteves además **descarta** con buen criterio la etimología popular de
+*"what you name?"* → "guachumen", razonando que el topónimo es anterior a la
+llegada de las petroleras.)
+
+#### Martí otra vez, con grafía distinta
+
+> **GUACUIRA** (1881: 84 casas, 593 habitantes) — *"El obispo Martí escribió
+> **"Guaimaguacuira"** en la relación de su Visita Pastoral."*
+
+Tercera aparición de Martí 1773 en el barrido, y aquí conserva una **forma más
+larga** del topónimo. Es justo lo que hace valiosa la fuente primaria: la
+grafía de 1773 está menos erosionada que la de 1881.
+
 #### `caramata`/`caigua`: otro estrato, y cumanagoto
 
 > **CARADACAGUA** (p. 27) — de *Caramatacaigua*, 'guairón de cal'. **"En lengua
