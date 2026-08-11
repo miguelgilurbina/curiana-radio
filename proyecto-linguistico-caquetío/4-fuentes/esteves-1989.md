@@ -385,6 +385,123 @@ Esto **sí** es del tipo de evidencia que `3-mundo/asentamientos.yaml` exige par
 **1590 es el documento más antiguo que Esteves cita**, y está a 52 años del
 pacto de Manaure. Merece perseguirse.
 
+### pp. 32-33 — `bana` cuarta vez, `bacoa` segunda, y un vínculo con los jirajaras
+
+#### `bana` / `bano` — cuarta atestación, con variante
+
+> **CUBIANO** — *"`Cujíbano`, que es la forma primitiva, quiere decir: **el
+> cerro del cují**."*
+
+Cuatro: **Capuhana · Carirubana · Coabana · Cujíbano**. Y aparece la variante
+**`-bano`**, que el proyecto no tenía registrada. (También hay un
+**Cucurubano**, pero Esteves lo despacha como onomatopéyico.)
+
+#### ✅ `bacoa` = 'lugar' — segunda atestación dentro de Esteves
+
+> **CUMUJACOA** — *"alteración de `Curumubacoa`, quiere decir: **lugar de los
+> zamuros**. `Curumu`: zamuro. **`Bacoa`: lugar.**"*
+
+Con `Caibacoa` (p. 25) van dos dentro de esta obra, más las cinco de Zavala en
+nuestro `toponimos.yaml`. **`bacoa` es el morfema mejor sostenido del corpus
+toponímico.** Y `curumu` = 'zamuro' es entrada nueva.
+
+#### ⭐ Un vínculo lingüístico caquetío–jirajara, dicho por Esteves
+
+> **CUMARAGUAS** — *"En los valles de **Yaracuy** hay también un lugar con ese
+> nombre, esto revela que **existieron vínculos lingüísticos entre caquetíos y
+> jirajaras**."*
+
+Toca dos cosas a la vez:
+
+- **[[esfera-de-interaccion]]**: es una afirmación explícita de contacto
+  lingüístico entre dos pueblos. El elenco tiene 2 agentes jirajara y el
+  lexicón 7 formas `jirajaroide-contacto`.
+- **[[polities-caquetias]]**: Yaracuy es una polity **distinta** de la costera
+  que simulamos. Esteves cruza esa frontera con un topónimo compartido — que es
+  justo el tipo de dato que la regla 4 de CLAUDE.md obliga a marcar antes de
+  usar.
+
+> ⚠️ Un topónimo compartido no prueba parentesco lingüístico: puede ser
+> préstamo, coincidencia o difusión posterior. La inferencia es de Esteves.
+
+##### 🔴 Y de paso, un conflicto de glosa
+
+Esteves: **`cumaragua`** = *"un pequeño **cangrejo** de caparazón rosada… voz
+indígena con significación de **espuma rosada**"*.
+
+El lexicón tiene `cumaragua` = **'caracol de las costas de Paraguaná'**.
+Cangrejo ≠ caracol. Menor, pero es del mismo tipo que `bara` y `tara`.
+
+#### 🆕 El mapa de Fidalgo — fuente cartográfica
+
+> **CUCUY** — *"La Punta de Cocuy está señalada en el **mapa de Paraguaná que
+> elaboró el Brigadier Joaquín Fidalgo**."*
+
+Fidalgo levantó la carta de la costa de Venezuela a finales del s. XVIII. Es
+**fuente primaria cartográfica** y fija topónimos con posición. Va a la lista
+de adquisición.
+
+#### Dos entes sobrenaturales más
+
+- **El Cude** (paraje boscoso con rocas cavernosas, Pedregalito, mun. Adícora):
+  *"un ente sobrenatural, un espíritu perturbador que trastorna a las personas
+  con su invitación al viaje del Más Allá"*. Voces, quejidos, luces nocturnas.
+- Junto al **Capó** de Capuhana y el **Región** del Guárico, van tres.
+  ⚠️ Todos son creencia viva recogida en el s. XX: `retro-abstraido`.
+
+#### Y una nota ecológica que sí sirve
+
+> **CUNACHO** — de `Cuna`/`Cunaro`, *"pez lábrido que abunda en el golfete de
+> Coro y del cual extraían **manteca para untar los 'jachos'**, teas de madera,
+> comúnmente de curarí, para encandilar en labores de **pesca nocturna**"*.
+
+Técnica de pesca con antorcha alimentada con grasa de mero, en el Golfete.
+Material para [[mapa-ecologia]] y para el canon.
+
+### p. 35 — `ebo` corroborado, un sitio de 1538 y una pista guayquerí
+
+#### ✅ `ebo` = 'camino, paso, senda' — tercera atestación, segunda fuente
+
+> **CURAIDEBO** — *"su forma primitiva `Curarirebo`, significa: **el paso del
+> Curarí**. `Curarí`: árbol maderable, tecoma. **`Ebo`: camino, paso, senda.**"*
+
+`toponimos.yaml` lo tenía por `jurijurebo` y `cumarebo`, ambos vía Zavala.
+Esteves lo da **con la glosa idéntica** y en un tercer topónimo. Junto con
+`bacoa`, es de lo más firme que hay.
+
+(Y `curarí` 'árbol maderable, tecoma' ya había salido en la p. 33 como la
+madera de los `jachos` para pesca nocturna: coherencia interna.)
+
+#### ⭐ CHAMURIANA — una aldea indígena anterior a 1538
+
+> *"**Antigua aldea indígena** en cuyas cercanías los españoles fundaron en
+> **1538** el pueblo de Santa Ana de Paraguaná. En el lugar se hallan **restos
+> de cerámica indígena y europea**. Nada sabemos del significado de la voz."*
+
+Segundo sitio de Paraguaná con evidencia material (tras Cayeruba), y este
+además **fechado por el contacto**: la aldea ya estaba cuando llegaron los
+españoles en 1538.
+
+> ⚠️ Anterior a 1538 **no es precontacto**: el contacto en esta costa empieza
+> hacia 1499-1527. Sigue sin dar `precontacto: si`, pero es el nodo peninsular
+> con la evidencia más temprana de todo el libro hasta aquí — y la cerámica
+> mixta indígena/europea documenta el momento del choque.
+
+#### 🆕 Charaima y los guayquerí — una pista para un hueco declarado
+
+> **CHARAIMA** — 1881: 79 casas, 527 habitantes. Nombre primitivo **`Charaide`**
+> según su *Título de Composición*. Y: *"No sabemos qué relación guarda el
+> nombre de esta Charaima de Paraguaná con el del **cacique Charaima de la Isla
+> de Margarita, el abuelo del guayquerí Francisco Fajardo**."*
+
+[[esfera-de-interaccion]] §6 declara como hueco: *"Si los guaycaríes eran un
+grupo distinto o una denominación de otra cosa. Son 4 agentes del elenco y no
+hay nota de fuente que los sostenga."*
+
+Esto **no lo cierra** —Esteves mismo dice que no sabe si hay relación— pero es
+el primer rastro documental de los guayquerí que toca el proyecto, y viene con
+nombres perseguibles: cacique Charaima de Margarita, Francisco Fajardo.
+
 #### `caramata`/`caigua`: otro estrato, y cumanagoto
 
 > **CARADACAGUA** (p. 27) — de *Caramatacaigua*, 'guairón de cal'. **"En lengua
