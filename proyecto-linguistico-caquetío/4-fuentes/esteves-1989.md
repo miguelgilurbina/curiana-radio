@@ -622,6 +622,77 @@ Tercera aparición de Martí 1773 en el barrido, y aquí conserva una **forma m�
 larga** del topónimo. Es justo lo que hace valiosa la fuente primaria: la
 grafía de 1773 está menos erosionada que la de 1881.
 
+### ⭐⭐ pp. 41-43 — HURRAQUE: un pueblo caquetío del siglo XVI, y tres sitios arqueológicos
+
+#### Hurraque / Jurraque — nombrado por Juan de Castellanos
+
+> *"Nombre de un **pueblo caquetío** mencionado por **Juan de Castellanos**, el
+> fraile rimador de las famosas por extensas *Elegías de Varones Ilustres de
+> Indias*. Debió ser **`Jurraque`** la pronunciación primitiva de este
+> desaparecido pueblo. **Hasta el presente se desconoce el sitio** donde estuvo
+> ubicada esta importante comunidad indígena. Podría ser cerca del caserío
+> **Misaray, en Machuruca**, sitio en el cual fue descubierto **un cementerio
+> indígena**. O tal vez en las cercanías de **El Supí, playa de Adícora, donde
+> hay un placer de "piedras escritas"**."*
+
+Esto es lo mejor que ha dado el libro para [#92](https://github.com/miguelgilurbina/curiana-radio/issues/92):
+
+1. **Un poblado caquetío nombrado en el siglo XVI.** Castellanos escribió las
+   *Elegías* hacia 1589 sobre hechos desde los 1540. Es **la fuente más
+   temprana que Esteves cita**, y estaba en mi lista de adquisición del turno
+   anterior — ahora hay una razón concreta para perseguirla.
+2. **Un poblado perdido**: nadie sabe dónde estuvo. Entra en
+   `asentamientos.yaml` como `atestiguado` de existencia y **sin ubicación**,
+   igual que Todariquiba.
+3. **Tres pistas arqueológicas nuevas**:
+   - **cementerio indígena en Machuruca / Misaray**
+   - **"piedras escritas" (petroglifos) en El Supí, playa de Adícora**
+   - más el cementerio y la cerámica de **Cayeruba** (p. 30) y la cerámica
+     mixta de **Chamuriana** (p. 35)
+
+> Cuatro sitios con material arqueológico en Paraguaná, todos reportados por
+> Esteves sin excavación publicada. Ninguno alcanza para `precontacto: si`,
+> pero juntos dicen **dónde habría que mirar** — y los petroglifos de El Supí
+> son el único rastro no funerario del conjunto.
+
+#### ✅ `-dito` sube de nivel: segunda atestación, y atribuida al caquetío
+
+> **GUANADITO** (p. 41) — *"**`Dito` es característica desinencial de nombres
+> colectivos en caquetío**."*
+
+Con `Cocodite` (p. 31) van dos, y aquí Esteves **nombra la lengua**. Deja de ser
+un `hipotetico` de una sola aparición.
+
+(Y en `Guayacanal`, p. 42, observa que *"la partícula 'al' colectiviza y
+españoliza la voz **Guayacán, de origen taíno**"* — o sea que distingue el
+colectivo indígena del castellano.)
+
+#### ✅ `guasare` — corroborado exacto
+
+Esteves: *"`Guasare` es un **árbol cactáceo**"*. Nuestro `toponimos.yaml` ya
+tenía `guasare` glosado *'Árbol cactáceo'*. Coincidencia literal.
+
+#### Más léxico dado como caquetío
+
+| Forma | Glosa de Esteves |
+|---|---|
+| **`guara`** | *"en caquetío"*, el ave que llaman cunareja — mayor que el zamuro, plumones blancos en las alas, occipucio rojo sin plumas |
+| `guaraguaja` / `guaraguara` | 'cunarejal' — **plural por duplicación** (cuarto caso) |
+| `guarataro` | barro de loza gomoso para budares y ollas |
+| `güica` | otro nombre indígena del árbol *yabo* |
+| `imujo` | aféresis de `huaymujo`, cangrejo pequeño |
+| `guatacare` | árbol perennifolio sapindáceo |
+
+#### Y dos apuntes de mundo
+
+- **Güima** (p. 43) era *"un cacique que, según la leyenda, él y su familia
+  padecían de **albinismo**"*. Mencionado en el Título de Composición de
+  Urupaguaduco.
+- **Hayo** (p. 43): *"leyenda de que los indios masticaban las hojas de este
+  árbol para **aliviar el hambre**; quizás la savia contenga alguna sustancia
+  alcaloide"*. ⚠️ `hayo` es también el nombre de la coca en zonas de Colombia —
+  no lo doy por relacionado, pero merece comprobarse.
+
 #### `caramata`/`caigua`: otro estrato, y cumanagoto
 
 > **CARADACAGUA** (p. 27) — de *Caramatacaigua*, 'guairón de cal'. **"En lengua
