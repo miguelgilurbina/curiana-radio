@@ -13,10 +13,124 @@ sostiene: []
 
 # Esteves 1989 — Topónimos indígenas de Paraguaná
 
-> **Qué es.** El gazeteer de Paraguaná que al proyecto le faltaba. 146 páginas
-> de entradas topónimo por topónimo, con ubicación, censo y etimología
-> propuesta. Es **la fuente que desbloquea [#92](https://github.com/miguelgilurbina/curiana-radio/issues/92)** —
-> los poblados de Paraguaná que hoy no se pueden meter en `asentamientos.yaml`.
+> **Qué es.** El gazeteer de Paraguaná que al proyecto le faltaba. **413
+> topónimos** en 154 páginas, con ubicación, censo de 1881 y etimología
+> propuesta. Es **la fuente que desbloquea [#92](https://github.com/miguelgilurbina/curiana-radio/issues/92)**.
+
+---
+
+# 📄 ABSTRACTO — el libro entero en una página
+
+*Barrido completo: 154 páginas, leídas entre lectura directa y cuatro extractos
+paralelos, 2026-08-11.*
+
+## 1. Qué aporta que no teníamos
+
+**Un inventario toponímico de Paraguaná y Falcón con referente geográfico
+real.** No es una lista de palabras: cada entrada dice *dónde está* el lugar,
+qué accidente es y cuánta gente vivía allí en 1881. Eso permite algo que ninguna
+otra fuente del repo permitía: **verificar una glosa contra el terreno**. Cuando
+Esteves dice que `bana` es 'cerro', se puede comprobar que Capuhana, Coabana y
+Chichibana son efectivamente elevaciones.
+
+## 2. Los cinco morfemas que quedan corroborados
+
+Todos ya estaban en el proyecto sostenidos **por una sola fuente** (casi siempre
+Zavala). Ahora tienen segunda fuente independiente:
+
+| Morfema | Glosa | Atestaciones en Esteves |
+|---|---|---|
+| **`bacoa`** | 'lugar, paraje, sitio' | Caibacoa, Cumujacoa, Guaidabacoa, Tobacoa |
+| **`ebo`** | 'camino, paso, senda, **valle estrecho, cañón**' | Curaidebo, Gisebo, Guacurebo, Jurijurebo, Cumarebo |
+| **`-uco`/`-uto`** | 'quebrada, cauce' | Coduto, Matuto, Acatuto, Quebrahuto, Quibarute, Tacaduto, Urupaguaduco, Semeruco |
+| **`quiba`** | 'piedra, pedruzco' | Jadacaquiva, Quibarute, Tiquiba, Todariquiba, Yauquiba, Quibucara |
+| **`-ima`** | 'húmedo, humedad' — *"en caquetío"* | p. 93 |
+| `guasare`, `guanepe`, `juri` | glosas idénticas a las nuestras | varias |
+
+**`ebo` gana matiz**: no es solo 'camino' sino **'paso, valle estrecho, cañón'**,
+y Esteves lo verifica contra el terreno en Jurijurebo (*"hay allí una abertura
+orográfica"*).
+
+## 3. Los morfemas nuevos
+
+`ure` 'raíz' (6 atestaciones) · **`tuba` 'aglomeración, abundancia' *en
+caquetío*** (3) · `bana` 'cerro, sitio alto' (8) · `cari` 'orilla' (2) ·
+`-dito` 'colectivo abundancial' *en caquetío* (4) · `aco` 'dos' (2) · `bara`
+'árbol' (2) · `naure` 'jojoto, mazorca tierna' · `ñaure` 'planta bejucosa' ·
+`dabuda` 'barro de loza' · `guara` (ave) · `rao` 'arena' · `para` 'agua'
+
+## 4. Los tres conflictos que abre
+
+| Nuestro dato | Lo que dice Esteves | Estado |
+|---|---|---|
+| `-bana` = 'orilla, borde' / 'ancho, llano' | **`bana` = 'cerro, sitio alto'** ×8, y **`cari` = 'orilla'** aparte | **D9 · [#38](https://github.com/miguelgilurbina/curiana-radio/issues/38)** — hipótesis: nuestro `-bana` absorbió el sentido de `cari` |
+| `bara` = 'río, corriente fluvial' | **'árbol'**, citando a Alvarado | **[#101](https://github.com/miguelgilurbina/curiana-radio/issues/101)** |
+| reduplicación = intensidad | **"plural por duplicación"** ×4, explícito | sin issue todavía |
+| `cumaragua` = 'caracol' | 'cangrejo de caparazón rosada' | menor |
+| `gudamuen` = 'dos' | `aco` = 'dos' | menor |
+
+## 5. 🔴 Lo que más rinde: las fuentes que abre
+
+**Juan de Castellanos, *Elegías de Varones Ilustres de Indias* (~1589)** hace
+*"una larga enumeración de los poblados indígenas de Paraguaná"* y nombra al
+*Gran Señor de Jurijurebo*; Esteves deduce que estuvo en la península **en
+1540**. Es la fuente más temprana de todo el libro y **la única que puede llenar
+Paraguaná en `asentamientos.yaml`**.
+
+Después: **Mariano Martí, *Relación de la Visita Pastoral*, 4 tomos (1773)** ·
+**fray Antonio Caulín (1799)** · **Nicolás Federmann** (que según Esteves, con
+Alfínger, *"dejó sin habitantes la península"* con sus levas) · la
+**capitulación de Carlos I a los Welser (1528)**, citada textual · escrituras
+de **1590, 1698 y 1719** · el **mapa de Fidalgo**.
+
+De su bibliografía, el repo ya tiene a **Alvarado** y **Arcaya** — pero **otras
+obras** de ellos.
+
+## 6. El mapa multilingüe
+
+Esteves atribuye topónimos a **nueve estratos** distintos, topónimo por
+topónimo. En Paraguaná: caquetío (el grueso), **taíno/caribe insular** (Amuay,
+Elegüey = Punta Cardón, Maragüey, Jamaica, Maitiruma), **cumanagoto**
+(Caradacagua, Manare, y el sufijo `cuar` dentro de **Adícora**), **papiamento**
+(Macama). En el resto de Falcón añade **chaima, caribe, ayamán, chibcha,
+cuica-timote y africano**.
+
+> **Adícora es un topónimo híbrido**: raíz caquetía + sufijo colectivo
+> cumanagoto. Es la tesis de [[esfera-de-interaccion]] en una sola palabra.
+
+## 7. Arqueología: diez sitios
+
+**Jurijurebo** (grandes cementerios, **urnas funerarias**, cerámica de
+viviendas) · **Todariquiba** (grandes cementerios) · **Cayeruba** (cementerio +
+cerámica) · **Chamuriana** (cerámica indígena **y europea**, junto a la
+fundación española de 1538) · **Machuruca/Misaray** (cementerio + **petroglifo
+fotografiado**) · **El Supí** (petroglifos, *"piedras escritas"*) · **Cerro de
+Siraba** (petroglifos, *"Las Piedras del Almanaque"*) · **Aribanache** (cueva) ·
+**Mapiare/Churuguara** · **Taima-Taima**.
+
+> Ninguno alcanza para `precontacto: si` — son reportes sin excavación
+> publicada. Pero **Jurijurebo y Todariquiba con "grandes cementerios"
+> contradice o actualiza a Oliver 1989**, que da la ubicación de Todariquiba por
+> no hallada.
+
+## 8. Cómo se debe usar esta fuente
+
+**Fiable en la glosa, escéptico en lo transoceánico.** Sus corroboraciones van
+**8 de 8** contra lo que ya sabíamos, y descarta bien las etimologías populares
+(rechaza *Caoba* por ecología, *"what you name?"* por cronología, y la leyenda
+de Judibana por falta de documento). Pero **tiende dos puentes a Mesoamérica**
+—la serpiente emplumada de Capuhana y el supuesto maya `Tecuna`— que no se
+sostienen.
+
+Y su cadena de autoridad es **Caulín (1799, sobre la Nueva Andalucía) →
+Alvarado → Esteves**: una fuente sobre el **oriente** de Venezuela. Eso puede
+sobre-representar sus atribuciones al cumanagoto.
+
+**Regla práctica**: sus glosas entran como `hipotetico`; **suben a
+`reconstruido` cuando corroboran algo que ya teníamos**; solo llegan a
+`atestiguado` si se persigue el documento que cita.
+
+---
 
 ## Ficha
 
@@ -949,6 +1063,192 @@ la flora autóctona de Paraguaná". Es exactamente el tipo de control ecológico
 que el proyecto aplica en [[mapa-ecologia]]. No es un cronista que acepte
 cualquier cosa.
 
+## La estructura real del libro — corrección
+
+Al empezar el barrido asumí que los seis PDF eran un diccionario corrido. **No
+lo es**, y el título ya lo decía: son **dos partes**. Reconstruido leyendo los
+finales de cada lote y el Índice General (pp. 147-149):
+
+| Páginas | Qué es | Archivo |
+|---|---|---|
+| 7-10 | preliminares (introducción de Lagoven) | 1 |
+| **11-67** | **PARTE I — topónimos indígenas de PARAGUANÁ**, alfabético | 1-3 |
+| 68-70 | índice de los topónimos compilados | 3 |
+| **71** | **informantes orales** — nombre, pueblo, año de nacimiento | 3 |
+| **70-72** | **FUENTES BIBLIOGRÁFICAS** | 3 |
+| **73-80** | **APÉNDICE** — artículos ensayísticos | 4 |
+| **81-144** | **PARTE II — "otros topónimos indígenas del ESTADO FALCÓN"** | 4-6 |
+| 145-146 | biografía del autor | 6 |
+| ~147-154 | Resumen numerado (**413 topónimos**) e Índice General | 6 |
+
+> ⚠️ **La Parte II NO es Paraguaná.** Cubre el resto del estado Falcón, que
+> incluye territorio de otras polities y otros pueblos (jirajara, ayamán,
+> caribe). Por la **regla 4 de CLAUDE.md**, todo lo que salga de las pp. 81-144
+> hay que marcarlo con su procedencia geográfica antes de usarlo: no vale
+> importar un topónimo de la sierra falconiana al canon costero sin decirlo.
+
+Las remisiones internas que fui encontrando (*"Ver en el Apéndice el artículo:
+Sobre el Nombre de Adícora"*, p. 14; *"la leyenda de la Piedra del Toro"*,
+p. 51) apuntan a las pp. 73-80.
+
+**El autor**: Juan de la Cruz Esteves, nacido en **El Hato, Paraguaná, 1922**.
+Escribe sobre su propia tierra. (La biografía data la edición en **1988**; la
+portada dice **Caracas, 1989** — se cita por la portada.)
+
+## ⭐⭐ Los informantes — y un apellido que no esperaba
+
+La p. 71 nombra a los informantes orales, con pueblo y año de nacimiento. Dos
+de ellos se apellidan **Manaure**:
+
+> **Don Jesús Manaure Pulgar** — *"Nativo de Misaray, municipio Santa Ana
+> (1935). Pintor-poeta… Nos dio datos sobre los pueblos de Santa Ana."*
+>
+> **Don Miguel Manaure** — *"Nativo de El Vínculo, municipio Pueblo Nuevo
+> (1942). Analfabeta, hombre de campo, completo; domador de bestias cerreras,
+> peón de fundos pecuarios, **silbador de iguanas, aguaitador de venados** y en
+> todo momento fabulador maravilloso… nos suministró **un detallado inventario
+> de la fauna y la flora en la Península**."*
+
+**Manaure es un apellido vivo en Paraguaná.** Encaja con la serie de apellidos
+caquetíos de la p. 13 (Adaure, Timaure, Yaraure, Chunaure, **Manaure**).
+
+> ⚠️ **Esto no dice nada sobre descendencia del diao histórico** ni sobre
+> continuidad de linaje — los apellidos indígenas se difundieron por bautismo y
+> encomienda. Lo que sí dice es que **el nombre sobrevive en el terreno**, y
+> que buena parte del inventario de fauna y flora de este libro viene de un
+> hombre llamado Manaure. Para un proyecto cuyo personaje central se llama así,
+> merece quedar escrito.
+
+Los otros informantes: **Don Napoleón Riera Rodríguez** (El Hato, mun. Adícora,
+1898) y **Dr. Luis A. Barreno** (El Vínculo, 1939).
+
+## 📚 La bibliografía de Esteves (pp. 71-72) — transcrita
+
+| Autor | Obra |
+|---|---|
+| **Acosta Saignes, Miguel** | *Estudios de Etnología Antigua de Venezuela* |
+| **Alvarado, Lisandro** | *Datos Etnográficos de Venezuela* · ***Glosario de Voces Indígenas*** |
+| **Arcaya, Pedro Manuel** | *La Independencia de Paraguaná* · *Población de Origen Europeo de Coro* |
+| **Coddazzi, Agustín** | *Resumen de Geografía de Venezuela* |
+| **Armas Chitty, J. A.** | *Historia de Paraguaná y Punto Fijo* |
+| **Cisneros, José Luis** | *Descripción de la Probincia de Benezuela* |
+| **Hill Peña, Aníbal** | *Noticias Históricas de Paraguaná* |
+| **Martí Estadella, Mariano** | ***Relación de la Visita Pastoral (4 tomos)*** |
+
+De estos, el repo ya tiene a **Alvarado** ([[alvarado-1921]]) y a **Arcaya**
+([[arcaya-1920]]) — aunque **no las mismas obras**: las de Esteves son otras.
+
+> **Martí en 4 tomos** es la pieza a conseguir. Es colonial (1773), primaria, y
+> Oliver ya la cita como "Martí 1969" (la edición moderna del Concejo Municipal
+> de Caracas). Existe y es rastreable.
+
+## ⭐⭐ El apéndice, p. 73 — "Sobre el nombre de Adícora"
+
+Tres cosas de peso en una sola página.
+
+#### `tuba` = 'aglomeración, abundancia' **en caquetío**
+
+> *"examinamos el primitivo `jadícuar` y lo descomponemos en **`jade`, de
+> jajato**, y la desinencia **`cuar`, que identifica a los sustantivos
+> colectivos en lengua cumanagota**. `Cuar`, en cumanagota, significa:
+> **aglomeración, abundancia**, según el misionero **Caulín**.
+>
+> Este `cuar`, cumanagota, **tiene el mismo significado del `tuba` de los
+> caquetíos**."*
+
+Morfema caquetío nuevo con glosa explícita — y **el barrido paralelo del
+archivo 3 lo encontró por su cuenta dos veces más**, con la misma glosa
+('aglomeración, montón'). Confirmación cruzada entre dos lecturas
+independientes del libro.
+
+Nótese además: **Adícora resulta ser un topónimo híbrido** — raíz caquetía
+(`jade` 'jajato') + sufijo colectivo **cumanagoto** (`cuar`). Sexto apunte
+multilingüe.
+
+#### 🆕 Coro = 'viento', según Castellanos
+
+> *"si nos atenemos al verbo retozón del **Cronista de Indias, Don Juan de
+> Castellanos**, en aquello de que **Coro quiere decir viento en lengua
+> generosa**"*
+
+Segunda aparición de Castellanos (la primera, Hurraque, p. 43). Y una glosa
+para el topónimo mayor de toda la región. ⚠️ Esteves la reporta con distancia
+irónica (*"verbo retozón"*, *"podríamos caer en el desplante"*), así que no la
+suscribe del todo.
+
+#### 🆕 Fray Antonio Caulín (1799) — y una cadena de fuentes
+
+> *"fray Antonio Caulín, profundo estudioso de las lenguas indígenas de
+> Venezuela, es el autor de **"Historia Corográfica, Natural y Evangélica de la
+> Nueva Andalucía"**, valiosa obra etnográfica publicada en **1799** y la cual
+> utilizó el sabio **Lisandro Alvarado** para desentrañar el significado de las
+> Voces Geográficas que sirven de Apéndice a su monumental **Glosario de Voces
+> Indígenas**."*
+
+Queda dibujada la cadena: **Caulín (1799) → Alvarado → Esteves (1989)**. Es la
+genealogía de buena parte de las glosas de este libro, y explica por qué tantas
+atribuciones son a lenguas orientales (cumanagoto, caribe): **Caulín escribió
+sobre la Nueva Andalucía**, o sea el oriente de Venezuela, no sobre Falcón.
+
+> ⚠️ **Sesgo de fuente que hay que tener presente**: si la autoridad léxica de
+> Esteves para lo "indígena" es una obra sobre el oriente, sus atribuciones al
+> cumanagoto pueden estar sobre-representadas por el material que tenía a mano,
+> no por la realidad de Paraguaná.
+
+## ⭐⭐⭐ p. 78 — Castellanos enumera los poblados de Paraguaná
+
+El hallazgo con más consecuencias de todo el libro. Textual:
+
+> **JURIJUREBO** — *"**Juan de Castellanos** en los monótonos endecasílabos que
+> conforman su famosa por extensa *Elegías de Varones Ilustres de Indias*, nos
+> habla del **Gran Señor de Jurijurebo**, y **por la larga enumeración que hace
+> de los poblados indígenas de Paraguaná**, induce a pensar que el fraile
+> rimador **estuvo en esta Península de Paraguaná en 1540**.
+>
+> Pero como hasta el presente no ha aparecido un documento preciso que le
+> confiera autenticidad a estos indicios, **la cuestión no pasa del terreno de
+> las conjeturas**. También, vagamente, algunos historiadores han conjeturado
+> que el Cacique Jurijurebo y su esposa Judibana fueron los "indianos" llevados
+> por **Alonso de Ojeda a las Cortes españolas en el año de 1500** y que de allá
+> regresaron con los nombres cristianos de Fernando García y Juana de García.
+>
+> Sobre el particular nos abstenemos de más comentarios, **porque la historia es
+> historia y no invención**…
+>
+> Pero lo que sí hay de cierto es que la población de **Jurijurebo junto con
+> Todariquiba eran los asientos poblacionales de más importancia en la nación
+> caquetía**, como ha quedado demostrado últimamente con el descubrimiento de
+> **grandes cementerios** en las inmediaciones."*
+
+### Por qué esto es lo más importante del libro
+
+1. **Castellanos trae una lista de poblados de Paraguaná del siglo XVI.**
+   [#92](https://github.com/miguelgilurbina/curiana-radio/issues/92) existe
+   porque `asentamientos.yaml` tiene Paraguaná casi vacía por falta de fuente
+   temprana. **Aquí está la fuente**, y es de ~1540 — anterior a la carta de
+   Bastidas y a todo lo demás que maneja Esteves.
+2. **Todariquiba y Jurijurebo, al mismo rango.** Todariquiba es `nodo-001`, el
+   poblado de Manaure. Esteves pone a Jurijurebo a su altura: los dos *"asientos
+   poblacionales de más importancia en la nación caquetía"*.
+3. **Cementerios grandes en ambos.** Y la ubicación de Todariquiba está **en
+   debate** en Oliver 1989 — *"no se ha hallado un sitio arqueológico del tamaño
+   correspondiente"*. Si Esteves dice que se descubrieron cementerios grandes,
+   **eso contradice o actualiza a Oliver** y hay que perseguirlo.
+
+### ⚠️ Y una corrección al barrido automático
+
+Un extracto paralelo resumió esto como *"Jurijurebo/Judibana: cacique y esposa
+mencionados por Juan de Castellanos"*. **No es lo que dice el texto.**
+Castellanos nombra al *Gran Señor de Jurijurebo*; la historia de la pareja
+llevada por Ojeda en 1500 la atribuye Esteves, *"vagamente"*, a *"algunos
+historiadores"* — y se abstiene de suscribirla. La diferencia importa: una cosa
+es una mención en una crónica del XVI y otra una conjetura historiográfica sin
+documento.
+
+Es coherente con lo que Esteves ya había dicho en la p. 47 sobre la misma
+pareja (*"Es pura leyenda, nada consta en documentos"*). **No se contradice: se
+mantiene escéptico las dos veces.**
+
 ## Cómo se lee esta fuente
 
 Los PDF **no tienen capa de texto**: son fotos de CamScanner y `pdftotext` solo
@@ -961,6 +1261,26 @@ python <scratchpad>/extraer_paginas.py <pdf> <desde> <hasta> <destino>
 
 Los seis archivos son **contiguos y sin solapamiento**, por tramos de página del
 libro: 1-25 · 25-55 · 55-72 · 72-100 · 100-129 · 129-final.
+
+## La transcripción cruda
+
+El barrido página por página está en `4-fuentes/sesiones/`:
+
+| Archivo | Páginas del libro |
+|---|---|
+| `06_esteves_1989_barrido_lote3.md` | 56-72 (cola del diccionario + aparato) |
+| `06_esteves_1989_barrido_lote4.md` | 73-100 (apéndice + Parte II, letra A-C) |
+| `06_esteves_1989_barrido_lote5.md` | 101-129 (Parte II, C-Q) |
+| `06_esteves_1989_barrido_lote6.md` | 130-154 (Parte II, Q-Z + índices) |
+
+Las pp. 11-55 están transcritas en esta misma nota, arriba. **Nadie debería
+tener que releer las 154 imágenes**: si falta un dato, está en esos cuatro
+archivos con cita textual y número de página.
+
+> ⚠️ Los lotes 3-6 salen de un barrido automático. **Todo lo que se ascienda
+> desde ahí al lexicón o al corpus hay que verificarlo contra la imagen** — ya
+> se detectó un caso donde el resumen automático convertía una conjetura
+> historiográfica en una mención de crónica (ver p. 78 arriba).
 
 ## Lo que falta
 
