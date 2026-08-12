@@ -693,6 +693,88 @@ tenía `guasare` glosado *'Árbol cactáceo'*. Coincidencia literal.
   alcaloide"*. ⚠️ `hayo` es también el nombre de la coca en zonas de Colombia —
   no lo doy por relacionado, pero merece comprobarse.
 
+### ⭐⭐ pp. 44-45 — Federmann vació la península, y un patrón en Esteves que hay que nombrar
+
+#### Federmann y Alfínger, según el cronista
+
+> **JAGÜE** — *"en esa cueva perecieron asfixiados cantidad de indios de los
+> **reclutados por Nicolás Federmann**, el conquistador alemán que varias veces
+> hizo levas de indios en Paraguaná. Es bien sabido que **Federmann y Alfínger
+> fueron los grandes genocidas de Paraguaná**: sus descabelladas excursiones
+> las organizaban utilizando como bestias de carga a nuestros primitivos
+> pobladores y los seguidos reclutamientos que practicaron con ese fin,
+> **dejaron sin habitantes a nuestra península**."*
+>
+> **JACUQUE** — *"fue por Punta de Jacuque por donde **Nicolás Federmann
+> desembarcó los caballos que trajo de Santo Domingo en 1530**"* (Esteves avisa
+> que esto *"no se puede confirmar históricamente"*).
+
+**Federmann era el nombre que encabezaba la lista de adquisición** de fuentes
+directas del turno anterior — el teniente de los Welser que salió de Coro en
+1530 y escribió la *Indianische Historia*. Esteves confirma que **operó en
+Paraguaná**, y con esto la fuente pasa de "interesante" a "necesaria".
+
+Y añade una tesis demográfica con consecuencias:
+
+> ⚠️ Si las levas de Federmann y Alfínger **dejaron sin habitantes la
+> península** en los años 1530, eso explica por qué los poblados de Paraguaná
+> no se dejan rastrear hacia atrás: **la continuidad se rompió**. Los censos de
+> 1881 y las visitas de 1773 estarían contando repoblación posterior, no
+> descendencia directa.
+>
+> Es una afirmación fuerte de un cronista local, sin cita. **Perseguirla en
+> Federmann mismo es exactamente el trabajo que hay que hacer.**
+
+#### ✅ `quiba` = 'pedruzco' — corroborado, y resuelve un conflicto viejo
+
+> **JADACAQUIVA** — *"**`Quiba` en caquetío es pedruzco**"*.
+
+`toponimos.yaml` (toponimo-003, `quibacoas`) ya había resuelto a favor de
+'piedra' un conflicto entre `quiba` = 'ayuda' (Zavala #203) y `quiva`/`cuiva` =
+'piedra', apoyándose en van Buurt. **Esteves lo confirma de forma
+independiente y en caquetío.** Tercera fuente para la misma glosa.
+
+> (La etimología que Esteves reporta para el topónimo —*"¡Jaca… quiba!"* =
+> 'piedra contra esas jacas'— es etimología popular, y él mismo llama
+> "pintorescas" a las dos versiones que recoge. La glosa de `quiba` sí la
+> afirma en seco.)
+
+**Jadacaquiva** es además el poblado más grande del censo: **243 casas y 1.840
+vecinos** en 1881, iglesia de 1740, *"uno de los más antiguos de Paraguaná"*.
+
+#### 🔴 El patrón mesoamericano de Esteves — segunda vez, y hay que decirlo
+
+> **ITICUNA** — *"`Cuna` es el nombre de un pez que hay en el Golfete de Coro.
+> **`Tecuna` es una voz maya que quiere decir: mujer infiel.** Ahondando con
+> seriedad en el asunto, se podría establecer la afinidad de esta voz maya con
+> este topónimo caquetío."*
+
+Es la **segunda vez** que Esteves tiende un puente a Mesoamérica: antes fue la
+serpiente emplumada de Capuhana (p. 26), donde propuso transculturación
+caquetío → mexicano.
+
+> ⚠️ **Esto no se sostiene, y conviene nombrarlo como sesgo del autor.**
+> - Un parecido de una palabra a 2.000 km sin nada más es el caso de manual de
+>   falso cognado.
+> - **La forma es inestable**: el censo de 1881 escribe **`Arituna`**, no
+>   `Iticuna`. Se está comparando con el maya una forma que ni siquiera es
+>   firme.
+> - El propio Esteves hedge: *"se podría establecer"*.
+>
+> **Consecuencia práctica**: Esteves tiene una atracción declarada por las
+> conexiones mesoamericanas. Eso no invalida el resto del libro —sus glosas
+> corroboradas van cinco de cinco— pero **obliga a mirar con lupa cualquier
+> afirmación suya que cruce el Caribe**. [[horizonte-de-contacto]] cerró la
+> pregunta maya con jadeíta de Motagua, evidencia material y ~1000 años
+> anterior a la ventana. Ni la serpiente ni `Tecuna` la reabren.
+
+#### 🆕 Fuentes nuevas
+
+| Fuente | Para qué |
+|---|---|
+| **Tulio Febres Cordero** | glosa de `jagüe` como árbol de los Andes |
+| **Juan de Castellanos**, *Elegías* | ver Hurraque, p. 43 |
+
 #### `caramata`/`caigua`: otro estrato, y cumanagoto
 
 > **CARADACAGUA** (p. 27) — de *Caramatacaigua*, 'guairón de cal'. **"En lengua
