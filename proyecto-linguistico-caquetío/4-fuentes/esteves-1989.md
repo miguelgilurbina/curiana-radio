@@ -848,6 +848,78 @@ colectivo **de abundancia**, no colectivo a secas. Ya es un afijo sólido.
 
 Con Amuay, Elegüey y Maragüey van cuatro.
 
+### pp. 48-51 — el contrato de los Welser, el venado extinto y dos afijos más
+
+#### ⭐ La capitulación de los Welser, citada textualmente
+
+> **MARACAPANA** — *"en el **contrato de arrendamiento, otorgado por Carlos
+> Primero a los Belzares**, decía: **"Desde el Cabo de La Vela hasta la costa
+> de Maracapana"**"*.
+
+Es la **capitulación de 1528** que entregó Venezuela a los Welser — documento
+fundacional del período que Federmann y Alfínger protagonizaron. Esteves lo
+cita para **corregir un error**: ese Cabo de la Vela es el de La Guajira y esa
+Maracapana la de Cumaná, no las homónimas de Paraguaná. Buen criterio otra vez.
+
+#### 🦌 `matacán` — un venado de Paraguaná, extinguido
+
+> **MATACÁN** — *"cérvido de poca alzada. **En tiempos pasados había rebaños de
+> este tipo de venado en los bosques de Paraguaná. Se han extinguido por la
+> cacería incontrolada.**"*
+
+Toca dos cosas del proyecto:
+
+- **[#45](https://github.com/miguelgilurbina/curiana-radio/issues/45)** (`tara`:
+  ¿venado o mariposa?) — confirma que **había venados en Paraguaná**, lo que
+  hace ecológicamente viable la glosa 'venado'. No decide el issue (no habla de
+  `tara`), pero quita el argumento de que no habría referente.
+- **[[mapa-ecologia]]** — es un caso literal de la tesis "fauna moderna ≠ fauna
+  del s. XV": había rebaños de cérvidos y ya no hay.
+
+#### Afijos: tercera y segunda atestación
+
+> **MATUTO** — *"la desinencia **"uto"**, o **"uco"**, expresa: **quebrajón,
+> cauce**."* → tercera vez (con Coduto p. 31 y la mención de la p. 31).
+>
+> **MICHACO** — *"la desidencia **`Aco`** significa: **dos**."* → segunda vez
+> (con Guachaco p. 39, 'los dos zorros').
+
+`aco` = 'dos' ya no es una aparición suelta. Sigue chocando con el `gudamuen` =
+'dos' del lexicón.
+
+#### 🔴 Quinto estrato: papiamento
+
+> **MACAMA** — *"`Macamba` y `Macambo` hemos leído en antiguos mapas, lo cual
+> nos induce a considerar la voz como **originaria del papiamento de las
+> Antillas holandesas**. Sabemos que en Aruba y Curazao —suponemos que también
+> en Bonaire— **`macambo` es gentilicio despectivo que aplican a los nativos de
+> Holanda**."*
+
+Es la dirección **inversa** a la de [[van-buurt-2014]], que documenta palabras
+caquetías **en** el papiamento. Aquí una voz papiamenta llega a un topónimo de
+Paraguaná — o sea, **tráfico en los dos sentidos** entre las islas y la
+península. Material directo para [[esfera-de-interaccion]].
+
+Y **MAITIRUMA** suma al estrato antillano: *"En el **caribe insular**, `mái`
+significa: manantial, ojo de agua; `Iruma`: azul celeste, o sea que Maitiruma
+expresa: **manantial azul**."*
+
+#### Segundo cumanagoto, y una coherencia interna
+
+> **MANARE** — *"es **voz cumanagota** que significa: **cesto de fibra**."*
+
+Y **`quigua`** = 'concha de almeja y otros moluscos' (Maquigua < *Moriquigua*),
+que es el mismo elemento que el **`caigua`** 'almeja' que dio como cumanagoto en
+Caradacagua (p. 27). Las glosas de Esteves cierran entre sí.
+
+#### ✅ Cita a Jahn, fuente que ya tenemos
+
+> *"En la Guajira hay un lugar con ese nombre (**Alfredo Jhan, "Los Aborígenes
+> del Occidente de Venezuela"**)"* (p. 49)
+
+Es [[jahn-1927]] — con el apellido mal escrito (*Jhan* por **Jahn**). Tercera
+obra del repo que Esteves cita, tras Alvarado y (indirectamente) Arcaya.
+
 #### `caramata`/`caigua`: otro estrato, y cumanagoto
 
 > **CARADACAGUA** (p. 27) — de *Caramatacaigua*, 'guairón de cal'. **"En lengua
