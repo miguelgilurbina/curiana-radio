@@ -775,6 +775,79 @@ caquetío → mexicano.
 | **Tulio Febres Cordero** | glosa de `jagüe` como árbol de los Andes |
 | **Juan de Castellanos**, *Elegías* | ver Hurraque, p. 43 |
 
+### ⭐⭐⭐ pp. 46-47 — JURIJUREBO: nuestro `toponimo-001`, corroborado entero
+
+> **JURIJUREBO** — *"Antaño hubo allí una importante comunidad indígena; **la
+> gran ciudad de Jurijurebo, decían los cronistas**; todavía hay vestigios de
+> su cementerio; **al excavar se encuentran restos humanos dentro de tinajas de
+> barro**, también se hallan fragmentos de cerámica alrededor de los sitios
+> donde estuvieron las viviendas.
+>
+> `Jurijurebo` quiere decir: **el paso de los vientos**. `Juri`: viento; `Ebo`:
+> **paso, ruta, valle estrecho, cañón. En efecto, hay allí una abertura
+> orográfica.**"*
+
+`2-lengua/toponimos.yaml`, **`toponimo-001`**, nivel A, con esta observación:
+*"Estaba archivado en TOPONIMOS_ZAVALA como 'glosa incierta' y fuera del habla.
+**Es el caso que originó toda la tarea F11.**"*
+
+Nuestra glosa: *'Paso de los vientos'*, `juri` 'viento' + `ebo` 'camino, paso'.
+**Esteves da exactamente lo mismo**, desde otra fuente y con tres cosas más:
+
+1. **Verifica contra el terreno**: *"En efecto, hay allí una abertura
+   orográfica"*. La glosa no es solo etimológica, la sostiene la geografía.
+2. **Enriquece `ebo`**: 'paso, ruta, **valle estrecho, cañón**'. Nuestra glosa
+   ('camino, paso, senda') se queda corta en el sentido orográfico.
+3. **Era un asentamiento mayor**: *"la gran ciudad de Jurijurebo, **decían los
+   cronistas**"*. O sea que hay cronistas que lo nombran — otra pista
+   documental que perseguir.
+
+> El topónimo que abrió la línea de trabajo entera queda **confirmado por
+> fuente independiente, con verificación de terreno**. Es la mejor
+> corroboración del libro.
+
+#### 🏺 Quinto sitio arqueológico — y con enterramiento en urnas
+
+*"restos humanos dentro de **tinajas de barro**"* es **enterramiento en urna**,
+un rasgo diagnóstico en la arqueología venezolana, no un detalle de color. Más
+cerámica alrededor de las viviendas.
+
+Los cinco sitios que Esteves reporta hasta aquí:
+
+| Sitio | Evidencia |
+|---|---|
+| **Jurijurebo** | cementerio con **urnas funerarias** + cerámica de viviendas |
+| Cayeruba | cementerio + cerámica aborigen abundante |
+| Chamuriana | cerámica indígena **y europea** (contacto, 1538) |
+| Machuruca / Misaray | cementerio indígena |
+| El Supí (playa de Adícora) | **petroglifos** — *"placer de piedras escritas"* |
+
+#### `bana` = 'sitio alto' — sexta atestación
+
+> **JUDIBANA** — *"**`Judi`, `juri`: viento. `Bana`: sitio alto.**"*
+
+Seis: Capuhana · Carirubana · Coabana · Cujíbano · Chichibana · **Judibana**.
+Y aparece la variante **`judi`** de `juri` 'viento'.
+
+(La leyenda que recoge —Judibana como *"hermosa mujer, esposa del Gran Cacique
+de Jurijurebo"*— la despacha él mismo: *"Es pura leyenda, **nada consta en
+documentos**"*. Buen criterio otra vez.)
+
+#### `-dito` — tercera atestación, y ahora "abundancial"
+
+> **JARAYADITO** — *"El sufijo **"dito"** es distintivo de los nombres
+> colectivos **abundanciales**."* (censo de 1881: *Sarayadite*)
+
+Tres apariciones (Cocodite, Guanadito, Jarayadito), con la glosa afinada:
+colectivo **de abundancia**, no colectivo a secas. Ya es un afijo sólido.
+
+#### Cuarto topónimo de estrato caribe insular
+
+> **JAMAICA** — *"en el **caribe insular**, quiere decir: **tierra de los
+> manantiales**."* (lugar del municipio Buenavista)
+
+Con Amuay, Elegüey y Maragüey van cuatro.
+
 #### `caramata`/`caigua`: otro estrato, y cumanagoto
 
 > **CARADACAGUA** (p. 27) — de *Caramatacaigua*, 'guairón de cal'. **"En lengua
