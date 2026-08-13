@@ -75,6 +75,7 @@ Reglas que salen de ahí, y que valen para toda minería futura:
 | [[gatschet-1885]] | 7 (2 txt) | ✅ **minado** | 48 léxicas + 31 topón. + 6 fórmulas · **5 citas** | hecha |
 | [[van-buurt-2014]] | 48 | ✅ **minado** | §6=88 · §11=29 · 180 topón. · **8 citas** | hecha |
 | [[oviedo-y-banos]] | 519 | ✅ **minado** — solo el cap. III toca a los caquetíos | 1 hecho, **ascendido a cita directa** | hecha |
+| [[esteves-1989]] | 146 | 🔴 **6 de 146** (nueva, 2026-08-11) | 1 morfema corroborado (`bacoa`) · 5 nuevos · 7 topónimos con censo | **alta** — es el gazeteer de Paraguaná ([#92](https://github.com/miguelgilurbina/curiana-radio/issues/92)) |
 | [[camacho-2011]] | 13 | minado | **16 hechos** | hecha |
 | [[antczak-2015-las-aves]] | 38 | minado | 7 hechos | hecha |
 | [[antczak-2017-cariban]] | 45 | ✅ **minado** | 0 hechos · refuerza `parentesco-032` | hecha |
