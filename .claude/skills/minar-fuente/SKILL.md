@@ -125,9 +125,19 @@ progreso.
 
 **No toques `curiana_lexicon.py` ni `3-mundo/corpus/*.yaml` en una minería.**
 
-Cada minador emite una *propuesta* (`lexicon_*.py`) o deja los hallazgos en la
-nota. La fusión al corpus es decisión humana. Es lo que ha permitido minar ocho
-fuentes sin romper nada.
+Cada minador emite una *propuesta* y la deja en **`6-fusion/`** (datos en YAML;
+issues/comentarios redactados en `6-fusion/issues-pendientes/`). La fusión al
+corpus es decisión humana. Es lo que ha permitido minar ocho fuentes sin romper
+nada.
+
+⚠️ **Nada valioso muere en el scratchpad.** Una medición, un borrador de issue o
+una tabla extraída que se queden en el directorio temporal de la sesión
+desaparecen con ella — pasó con la medición de D9 el 2026-08-14 y se salvó de
+milagro. Si vale la pena escribirlo, vale la pena escribirlo en `6-fusion/`.
+
+Los `lexicon_*.py` históricos viven en `curiana_sim/` porque el tooling los
+importa (ver la trampa en CLAUDE.md); las propuestas **nuevas** van en YAML a
+`6-fusion/`. Al cerrar, regenera la cola: `python generar_bandeja.py`.
 
 ⚠️ Excepción con trampa: `lexicon_zavala.py` **sí** lo importa
 `curiana_lexicon`. Regenerarlo cambia `score_linguistico()`.
