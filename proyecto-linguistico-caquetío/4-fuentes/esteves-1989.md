@@ -5,6 +5,8 @@ autor: Juan de la Cruz Esteves
 titulo: "Topónimos indígenas de Paraguaná y otros topónimos indígenas del estado Falcón"
 lugar_año: "Caracas, 1989"
 editor: Refinería de Amuay de Lagoven S.A.
+local: "fuentes_caquetios/Esteves_1989_Toponimos_Paraguana_1..6.pdf"
+capa_texto: si
 estado_minado: parcial
 prioridad: alta
 medido: 2026-08-11

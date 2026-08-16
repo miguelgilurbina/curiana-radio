@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 31
-  en_repo: 24
-  solo_citadas: 7
+  obras: 38
+  en_repo: 32
+  solo_citadas: 6
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
@@ -121,7 +121,9 @@ obras:
 - id: esteves-1989
   obra: esteves-1989
   autor: Juan de la Cruz Esteves
-  en_repo: false
+  local:
+  - fuentes_caquetios/Esteves_1989_Toponimos_Paraguana_1..6.pdf
+  en_repo: true
 - id: fernandes-2020
   obra: A genetic history of the pre-contact Caribbean
   autor: Fernandes, Daniel M. et al.
@@ -225,6 +227,32 @@ obras:
   - Fernández Quintana 2016
   - Pollak-Eltz
   en_repo: false
+- id: martinez-cruzado-2003
+  obra: 'Mitochondrial DNA Analysis in Aruba: Strong Maternal Ancestry of Closely Related Amerindians
+    and Implications for the Peopling of Northwestern Venezuela'
+  autor: Martínez-Cruzado, J. C. et al.
+  anio: 2003
+  publicacion: Caribbean Journal of Science, vol. 39, nº 1, pp. 11-22
+  genero: genetica
+  local:
+  - fuentes_caquetios/MartinezCruzado_et_al_2003_mtDNA_Aruba.pdf
+  paginas: 12
+  aliases:
+  - Martínez-Cruzado et al. 2003
+  - mtDNA Aruba 2003
+  en_repo: true
+- id: medina-colina-sxx
+  obra: Del Habla Paraguanera. Siglo XX
+  autor: Medina Colina, Juan Bautista
+  anio: s. XX
+  genero: lexico-regional
+  local:
+  - ⚠️ FÍSICO — ejemplar de Miguel; entra por dictado curado (+ foto/OCR si hace falta cobertura)
+  aliases:
+  - Medina Colina
+  - Del Habla Paraguanera
+  - habla paraguanera
+  en_repo: true
 - id: moreno-mayar-2018
   obra: Early human dispersals within the Americas
   autor: Moreno-Mayar, J. V. et al. (53 autores)
@@ -237,6 +265,18 @@ obras:
   aliases:
   - Moreno-Mayar 2018
   - Schroeder 2018
+  en_repo: true
+- id: oliver-1989-apendice-a
+  obra: 'Appendix A: Swadesh''s 100 Word List vocabularies for Arawakan Languages (en *The Archaeological,
+    Linguistic and Ethnohistorical Evidence for the Expansion of Arawakan into Northwestern Venezuela*)'
+  autor: Oliver, José R.
+  anio: 1989
+  genero: linguistica
+  local:
+  - UCL Discovery, PDF de 801 pp. — impresas 559-594 = pdf 586-621 (offset -27)
+  aliases:
+  - Oliver 1989 Apéndice A
+  - Appendix A Swadesh
   en_repo: true
 - id: oliver-1989-cap2
   obra: 'Chapter 2: Arawakan Historical Linguistics'
@@ -264,6 +304,18 @@ obras:
   - Oliver 1989 cap. 3
   - Oliver cap. 3
   - Ethnohistory
+  en_repo: true
+- id: oliver-1989-cap4
+  obra: 'Chapter 4: The Macro-Tocuyanoid and Macro-Dabajuroid Archæological Traditions (en *The Archaeological,
+    Linguistic and Ethnohistorical Evidence for the Expansion of Arawakan into Northwestern Venezuela*)'
+  autor: Oliver, José R.
+  anio: 1989
+  genero: arqueologia
+  local:
+  - ⚠️ .DOC sin convertir — 'Info para Miguel/PhD Oliver Edited/Chapter 4 Archaeology.DOC'
+  aliases:
+  - Oliver 1989 cap. 4
+  - Oliver Chapter 4 Archaeology
   en_repo: true
 - id: oviedo-y-banos
   obra: Historia de la conquista y población de la provincia de Venezuela
@@ -352,6 +404,33 @@ obras:
   - Rouse & Cruxent 1963
   - Venezuelan Archaeology
   en_repo: true
+- id: schroeder-2018
+  obra: Origins and genetic legacies of the Caribbean Taino
+  autor: Schroeder, H. et al.
+  anio: 2018
+  publicacion: PNAS 115(10)
+  genero: genetica
+  local:
+  - fuentes_caquetios/Schroeder_et_al_2018_PNAS_Caribbean_Taino.pdf
+  paginas: 6
+  aliases:
+  - Schroeder et al. 2018
+  - Taíno PNAS 2018
+  en_repo: true
+- id: urbina-jimenez-2007-2011
+  obra: 'El Carrizal: cambios en el uso del espacio a través del tiempo (2007) · An Archaeological Survey
+    for Coastal Falcón, Venezuela (2011)'
+  autor: Urbina Jiménez, Eduy María
+  anio: 2007, 2011
+  genero: arqueologia
+  local:
+  - ⚠️ FUERA DEL REPO — 'Info para Miguel/TESISpdf eduy.pdf' y 'Dissertation Terminada Eduy Urbina.pdf'
+  aliases:
+  - Urbina Jiménez 2007
+  - Urbina Jiménez 2011
+  - El Carrizal
+  - Coastal Falcón Survey
+  en_repo: true
 - id: van-buurt-2014
   obra: Caquetío Indians on Curaçao during colonial times and Caquetío words in the Papiamentu Language
     — Some names of Animals and Plants in Papiamentu
@@ -390,4 +469,19 @@ obras:
   - Zavala 2015
   - Zavala Reyes 2015
   - Palabras Vivas
+  en_repo: true
+- id: zavala-reyes-2018
+  obra: 'Contribución a la arqueología del Parque Nacional Médanos de Coro (PNMC), Venezuela: implicaciones
+    para los patrones de ocupación caquetía'
+  autor: Zavala Reyes, M.; Pedraza, E.; Zambrano, E.; Barros, H.; Herrera, R.; Morán, C. y Leal, A.
+  anio: 2018
+  publicacion: Interciencia, vol. 43, nº 6, pp. 400-406
+  genero: arqueologia
+  local:
+  - fuentes_caquetios/ZavalaReyes_et_al_2018_Arqueologia_Medanos_Coro.pdf
+  paginas: 7
+  aliases:
+  - Zavala Reyes et al. 2018
+  - Leal et al. 2018
+  - Médanos de Coro 2018
   en_repo: true
