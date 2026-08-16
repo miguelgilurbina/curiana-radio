@@ -25,15 +25,17 @@ cura y se publica en Curiana Radio (`/simulador`).
    (`curiana_polities.py`). Importar un rasgo de Barquisimeto o los Llanos sin
    marcarlo es el error que Oliver denuncia.
 5. **Minar propone, el humano fusiona.** Un minador **nunca** toca
-   `curiana_lexicon.py` ni `3-mundo/corpus/`. Emite `lexicon_*.py` o escribe en
-   la nota de la fuente.
+   `curiana_lexicon.py` ni `3-mundo/corpus/`. Deja su propuesta en `6-fusion/`
+   (datos en YAML; issues redactados en `issues-pendientes/`) y regenera la
+   BANDEJA. Nada valioso muere en el scratchpad de una sesión.
 6. **Un cero hay que verificarlo.** Un `grep` sin resultados mide tu consulta,
    no la fuente. Ver la skill `minar-fuente` §2 — pasó tres veces en una noche.
 7. **Minar alimenta la esfera que toque, no solo el lexicón.** Lengua (léxico,
    cognados, topónimos) y mundo (parentesco, ecología, creencia, transmisión,
    geografía política). La nota de `4-fuentes/` es la **bitácora** —qué se
-   preguntó, qué se halló, qué no—, no el almacén. Medido: 18 de 30 obras
-   dejan rastro en una sola esfera. Ver `medir_sostiene.py --esferas`.
+   preguntó, qué se halló, qué no—, no el almacén. La mayoría de las obras
+   dejan rastro en una sola esfera por sesgo del minador, no de la fuente —
+   se mide con `medir_sostiene.py --esferas`.
 8. **Citar es una clave foránea, no prosa.** `procedencia.obra` apunta a
    `4-fuentes/bibliografia.yaml` y el validador lo comprueba. Si no hay fuente,
    se declara `deuda: sin-procedencia`: el hueco se admite, **callarlo no**.
@@ -53,7 +55,7 @@ cura y se publica en Curiana Radio (`/simulador`).
 | **`pypdf` ≠ `pdftotext`** | Producen texto distinto del mismo PDF. Arcaya sale **vacío** con pypdf; `pdftotext` da 467 KB. Y pypdf parte `Todariquiba` en `T odariquiba` |
 | **Tablas a dos columnas** | Se desalinean sin `-layout`. Extraer las dos veces y comparar |
 | **`lexicon` en PostgREST** | `max_rows`=1000 y hay ~1400 palabras: toda query sin `.range()` se trunca **en silencio**. Ver `loadLexicon()` |
-| **`lexicon_zavala.py` es generado Y se importa** | Regenerarlo **cambia `score_linguistico()`**. Los otros `lexicon_*.py` no se importan |
+| **`lexicon_zavala.py` es generado Y se importa** | Regenerarlo **cambia `score_linguistico()`**. ⚠️ Los otros `lexicon_*.py` NO los importa el motor, pero **sí el tooling** (`generar_tablero`, `auditar_82`, `migrar_toponimos` — medido 2026-08-15): no se pueden mover de `curiana_sim/` sin romperlo |
 | **La consola de Windows es cp1252** | Todo script que imprima `─`, `✓` o acentos necesita `_forzar_utf8()` bajo `__main__` |
 | **`pct_caquetio` está saturada** | 91% de las respuestas en 1.0. **No la uses para comparar agentes** — usa `score`. Issue #69 |
 | **La longitud del prompt predice el score** | r = −0.48. Cualquier análisis por agente tiene que controlarla, o estarás midiendo cuánto escribiste tú. Ver `ANALISIS_BASE_2026-08-06.md` |
@@ -74,9 +76,13 @@ python generar_bibliografia.py    # 4-fuentes/bibliografia.yaml (generado)
 python compilar_lengua.py         # valida cognados, topónimos, morfemas
 python compilar_lengua.py --deuda # qué no cita a nadie todavía
 python medir_sostiene.py --esferas  # qué esfera alimenta cada obra
+python ocr_fuente.py <pdf> --lang spa  # fuentes escaneadas sin capa de texto
+                                  # (localiza la página; la cita se saca de la imagen)
 
 python generar_tablero.py         # reescribe TABLERO.md (medido)
 python generar_tablero.py --gh    # + decisiones del tablero (usa red)
+python generar_bandeja.py         # reescribe 6-fusion/BANDEJA.md — la cola de fusión
+python generar_cronica.py         # reescribe 1-plan/CRONICA.md — cada cambio de main, con fecha
 
 python analizar_runs.py --todo    # análisis de los runs en la base
 python compilar_corpus.py --check # valida 3-mundo/corpus/
@@ -111,7 +117,11 @@ TABLERO.md         el estado medido (generado — no se edita a mano)
                    esfera-de-interaccion · asentamientos.yaml (los nodos)
 4-fuentes/         ¿de dónde lo sabemos?  una nota por obra + INDICE_FUENTES
 5-experimento/     ¿qué probamos?  mapa-motor · ARQUITECTURA · DISENO_KOINE · analisis/
-curiana_sim/       el motor + tests/
+6-fusion/          la cola de entrada al canon: propuestas de datos + issues sin
+                   publicar + BANDEJA.md (generado). Un minador deja aquí lo que
+                   propone; nada valioso muere en el scratchpad de una sesión
+curiana_sim/       el motor + tests/ (+ lexicon_*.py: propuestas que el tooling
+                   importa — se indexan en la BANDEJA pero viven aquí)
 fuentes_caquetios/ los PDF (se citan, no se editan)
 ```
 
@@ -141,7 +151,9 @@ Orden: pronombre + verbo-aspecto + complemento
 Pronombres: taya (yo), pia (tú), nüma (él/ella), tayamaa (nosotros)
 Aspectos:   -ka (completivo), -ni (continuativo), -da (prospectivo)
 Posesivos:  ta- (mi), pi- (tu), nü- (su)
-Locativos:  -bana (orilla/borde), -ana (lugar de), -ko (interior de)
+Locativos:  -bana (orilla/borde ⚠️ EN DISPUTA — D9/#38: dos fuentes
+            independientes dicen 'cerro, sitio alto'), -ana (lugar de),
+            -ko (interior de)
 Neologismos: [forma: componentes = significado]
 ```
 
