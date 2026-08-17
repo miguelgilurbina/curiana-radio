@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-08-17**.
 
-**1256 ítems propuestos** en 9 propuestas, más **5 issue(s)/comentario(s) redactados sin publicar**.
+**1256 ítems propuestos** en 9 propuestas, más **6 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -52,6 +52,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `comentario-d9-issue38.md` | Medición del barrido completo — **no aplicar todavía** |
 | `issue-caraota.md` | `caraota`: el corpus atribuye la palabra al caquetío, y Oliver marca su étimo como foráneo |
 | `issue-hayo.md` | `hayo` = 'coca' está como `caquetío-atestiguado`, y Oliver lo marca como préstamo de Santa |
+| `issue-polity-en-el-corpus.md` | El corpus etiqueta la *certeza* de cada hecho pero no *de qué polity* es |
 
 ---
 
