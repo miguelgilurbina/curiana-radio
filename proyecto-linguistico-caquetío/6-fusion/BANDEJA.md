@@ -15,12 +15,13 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-08-17**.
 
-**1206 ítems propuestos** en 7 propuestas, más **5 issue(s)/comentario(s) redactados sin publicar**.
+**1223 ítems propuestos** en 8 propuestas, más **5 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
 | Archivo | Obra | Ítems | Aviso |
 |---|---|---|---|
+| `nodos_foco_92.yaml` | ? | 17 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
 | `tabla_a9_oliver.yaml` | oliver-1989-cap2 | 21 |  |
 

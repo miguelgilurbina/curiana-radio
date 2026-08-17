@@ -1,7 +1,7 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 38
-  en_repo: 32
+  obras: 39
+  en_repo: 33
   solo_citadas: 6
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
@@ -291,6 +291,20 @@ obras:
   - Oliver 1989 cap. 2
   - Oliver cap. 2
   - Linguistics
+  en_repo: true
+- id: oliver-1989-cap3-vecinos
+  obra: 'Chapter 3, §3.2.3 y §3.3: Macro-Chibchan and Jirajaran-Speaking Ethnic Groups (en *The Archaeological,
+    Linguistic and Ethnohistorical Evidence for the Expansion of Arawakan into Northwestern Venezuela*)'
+  autor: Oliver, José R.
+  anio: 1989
+  genero: etnohistoria
+  local:
+  - fuentes_caquetios/Oliver_1989_Tesis_Arawakan_NW_Venezuela_UCL.pdf — impresas 213-250 = pdf 240-277
+    (offset -27)
+  aliases:
+  - Oliver 1989 §3.3
+  - los vecinos de los caquetíos
+  - jirajaranos
   en_repo: true
 - id: oliver-1989-cap3
   obra: 'Chapter 3: XVI Century Ethnic Boundaries and the Nature of Caquetío Polities (en *The Archaeological,

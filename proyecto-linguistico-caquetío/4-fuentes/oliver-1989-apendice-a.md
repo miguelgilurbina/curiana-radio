@@ -20,13 +20,24 @@ El issue lo llamaba *"la pieza que más rendiría"* sin saber qué contenía. Ya
 sabe. Está en las **páginas impresas 559-594** de la tesis (pdf 586-621, desfase
 −27) del PDF en abierto de UCL Discovery.
 
-Son **36 páginas** con tres cosas distintas:
+Son **36 páginas** y contienen **al menos nueve tablas numeradas** (A-1 a A-9),
+no una lista suelta. Inventario medido el 2026-08-17:
 
-1. **Listas Swadesh de 100 palabras** para lenguas arahuacas, en formulario
-   bilingüe *"LISTA DIAGNOSTICA LEXICO-ESTADISTICA"*.
-2. Un **vocabulario paraujano (añú) de 1958-59**, *"courtesy of Johannes
-   Wilbert"*. Es comparanda del vecino arahuaco más próximo, recogida en campo.
-3. ⭐ La **TABLA A-9**, en las pp. 593-594.
+| Tabla | Qué es | pp. impresas |
+|---|---|---|
+| A-1 y ss. | formularios *"LISTA DIAGNOSTICA LEXICO-ESTADISTICA"*, bilingües | 560 y ss. |
+| — | **Vocabulario paraujano (añú) de 1958-59**, *"courtesy of Johannes Wilbert"* — comparanda del vecino arahuaco más próximo, recogida en campo | ~561 |
+| **A-7** | ***Swadesh's 100 Basic Vocabulary List: Comparative Arawakan Lexicon*** — columnas por lengua **con su ubicación**: BAURE (Bolivia), TERENA y KINIKINAO (Matto Grosso), CAMPA y MACHIGUENGA (Ucayali-Perú), PIRO-IPURINA (Urubamba-Purús)… | ~585-590 |
+| **A-8** | ***JIRAJARAN STOCK, WESTERN VENEZUELA*** — jirajara y ayomán enfrentados, **columna PROTO-JIRAJARA** y porcentajes lexicoestadísticos. Ver [[oliver-1989-cap3-vecinos]] | ~591-592 |
+| **A-9** | ⭐ ***Selected Caquetío Vocabulary from the XVIth Century*** | 593-594 |
+
+Es decir: **#62 no era "una lista de palabras"**, es un aparato comparativo
+arahuaco con sus vecinos no arahuacos al lado. La Tabla A-7 sola daría al
+método comparativo del proyecto una base que hoy no tiene.
+
+⚠️ **Las tablas necesitan `--psm 6` y `--rotar auto`**: van a dos columnas y
+varias páginas del escaneo están giradas 90°. Sin eso, glosas y formas se
+desalinean o la página entera devuelve basura.
 
 ## ⭐⭐ Tabla A-9 — *Selected Caquetío Vocabulary from the XVIth Century*
 

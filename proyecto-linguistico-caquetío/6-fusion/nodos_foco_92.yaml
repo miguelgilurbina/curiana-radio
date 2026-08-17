@@ -1,0 +1,277 @@
+# PROPUESTA DE FUSIÓN A 3-mundo/asentamientos.yaml — #92
+# ======================================================
+# Los 15 sitios del Apéndice E de Oliver que son COSTEROS (Coro-Golfete o
+# Paraguaná) Y caen dentro o cerca de la ventana simulada (s. XIV-XV).
+# Un minador propone, el humano fusiona (regla 5).
+#
+# POR QUÉ ESTOS 15 Y NO LOS 134: el registro de nodos solo admite lo que tiene
+# evidencia citable y pertenece a la esfera. Los otros 119 son costa occidental
+# (¿misma polity?), sierra, Falcón oriental, o están fuera de época.
+#
+# ─────────────────────────────────────────────────────────────────────────
+# LA DISCRIMINACIÓN QUE HACE POSIBLE ESTE CIERRE
+# ─────────────────────────────────────────────────────────────────────────
+# "Dabajuroide" NO es una fecha, y no todas sus afiliaciones valen igual.
+# Con las fechas calibradas que Oliver publica en el cap. 4 (p. 440 y ss.):
+#
+#   Túcua                ISGS-1173   A.D.  783-[944]-998     ANTERIOR
+#   Urumaco Temprano     ISGS-1255   A.D. 1164-[1257]-1279   entra
+#   Urumaco (Corralito)  ISGS-1184   concuerda con ISGS-1255 entra
+#   Urumaco Tardío       ISGS-1257   A.D. 1278-[1336]-1393   ENTRA DE LLENO
+#   Los Médanos A/B                  A.D. 1350-1600/1650     CRUZA EL CONTACTO
+#
+# Por tanto:
+#   · afiliación "Urumaco Complex"  → termina ~1393/1450: PRECONTACTO por
+#     definición del complejo. Es lo más fuerte que hay sin datación propia.
+#   · afiliación "Los Médanos"      → cruza 1499: no decide nada por sí sola.
+#   · "Dabajuroid" a secas (800-1600) → tampoco decide. `desconocido`.
+#   · "Neoindian" sin complejo      → aún menos. `desconocido`.
+#
+# Esto responde a la advertencia que el propio asentamientos.yaml lleva en su
+# cabecera: "ningún nodo continental tiene precontacto: si". Cuatro de estos
+# quince pueden cambiarlo, y por la vía correcta — arqueología, no documento.
+
+meta:
+  para: 3-mundo/asentamientos.yaml
+  issue: 92
+  obra_base: oliver-1989-cap4
+  detalle_base: "Apéndice E, pp. impresas 747-749; fechas del cap. 4 p. 440"
+  generado: '2026-08-17'
+  sitios: 15
+  advertencia: >
+    Ninguna de estas entradas trae coordenadas del Apéndice E. Las únicas
+    coordenadas verificadas del registro son las de Tamers 1970 (IVIC-626 en
+    11°26'N 69°40'O; IVIC-673 en 12°9'N 69°57'O). Las de Oliver habría que
+    sacarlas de su Figura 77, que es un mapa y no se ha extraído.
+
+# ══ Coro y el Golfete ═══════════════════════════════════════════════════
+
+sitios:
+
+  - fal: FAL-101
+    forma: la-maternidad
+    nombre_oliver: "Monumento a la Madre / La Maternidad / LM-1"
+    region: coro-golfete
+    complejo: "Los Médanos y Urumaco"
+    precontacto_propuesto: si
+    precontacto_razon: >
+      ES EL CANDIDATO MÁS FUERTE DEL REGISTRO. Tres fuentes independientes
+      convergen en el mismo punto del terreno: (1) Oliver lo registra con
+      componentes Urumaco Y Los Médanos; (2) Tamers 1970 p. 512 lo data —es
+      "La Maternidad Sur", IVIC-626, 500±60 BP = A.D. 1450— y Cruxent anota
+      que VOLVIÓ AL SITIO y "we were unable to find any trace of European
+      artifacts"; (3) Zavala Reyes et al. 2018 excava el área (MCa/1-9,
+      Plaza de la Madre) y halla un antrosol de 36 cm sin cerámica híbrida.
+      Una fecha dentro de la ventana + ausencia de material europeo declarada
+      por el excavador + antrosol de ocupación prolongada.
+    cautela: >
+      La muestra de Tamers es carbón de SUPERFICIE en dunas activas, no de
+      estratigrafía sellada. Y el mismo sitio tiene IVIC-625 (A.D. 1750) unos
+      metros al norte: es un lugar reocupado, no un depósito puro.
+    procedencia:
+      obra: oliver-1989-cap4
+      detalle: "Apéndice E FAL-101; fechas en Tamers 1970: 512; excavación en zavala-reyes-2018"
+    cruces: [zavala-reyes-2018, tamers-1970]
+
+  - fal: FAL-100
+    forma: jose-gregorio-hernandez
+    nombre_oliver: "José Gregorio Hernández / GH-1"
+    region: coro-golfete
+    complejo: "Los Médanos y Urumaco"
+    precontacto_propuesto: probable
+    precontacto_razon: >
+      La lista imprime sus números de laboratorio: C-14 dated ISGS-1253, 1423
+      y 1424 — TRES dataciones propias. Componente Urumaco presente.
+    deuda: >
+      Las tres fechas están sin leer. Hay que localizar ISGS-1253/1423/1424 en
+      las tablas del cap. 4 (Table 15 y ss.) o en Oliver 1984. Con ellas esto
+      pasa a `si` o cae, pero deja de ser inferencia.
+    procedencia: {obra: oliver-1989-cap4, detalle: "Apéndice E FAL-100"}
+
+  - fal: FAL-099
+    forma: los-medanos-oeste-1
+    nombre_oliver: "Los Médanos West-1"
+    region: coro-golfete
+    complejo: "Urumaco"
+    precontacto_propuesto: probable
+    precontacto_razon: >
+      Afiliación Urumaco pura, sin componente Los Médanos: el complejo termina
+      hacia 1393/1450, antes del contacto. Sin datación propia.
+    procedencia: {obra: oliver-1989-cap4, detalle: "Apéndice E FAL-099"}
+
+  - fal: FAL-111
+    forma: la-posta
+    nombre_oliver: "La Posta A through C"
+    region: coro-golfete
+    complejo: "Urumaco, Dabajuroide"
+    precontacto_propuesto: probable
+    precontacto_razon: "Urumaco + la lista marca C-14 (cf. Tamers 1965)."
+    deuda: "Tamers 1965 no está en el repo. Es fuente distinta de Tamers 1970."
+    procedencia: {obra: oliver-1989-cap4, detalle: "Apéndice E FAL-111"}
+
+  - fal: FAL-106
+    forma: tara-tara
+    nombre_oliver: "Tara-tara cemetery"
+    region: coro-golfete
+    complejo: "Dabajuroide"
+    precontacto_propuesto: desconocido
+    precontacto_razon: >
+      "Dabajuroide" a secas abarca 800-1600: cruza el contacto y no decide.
+      Interesa igual porque es CEMENTERIO — el corpus tiene rito funerario de
+      crónica y aquí habría material.
+    procedencia: {obra: oliver-1989-cap4, detalle: "Apéndice E FAL-106"}
+
+  - fal: FAL-103
+    forma: la-vela
+    nombre_oliver: "La Vela"
+    region: coro-golfete
+    complejo: "Dabajuroide"
+    precontacto_propuesto: desconocido
+    nota: >
+      El lexicón tiene `todarahuato` = 'indígena de La Vela'. El nodo-001
+      (todariquiba) advierte que NO se ha demostrado relación entre ambos: este
+      registro no la asume tampoco.
+    procedencia: {obra: oliver-1989-cap4, detalle: "Apéndice E FAL-103"}
+
+  - fal: FAL-109
+    forma: puente-de-piedra
+    nombre_oliver: "Puente de Piedra"
+    region: coro-golfete
+    complejo: "Dabajuroide"
+    precontacto_propuesto: desconocido
+    procedencia: {obra: oliver-1989-cap4, detalle: "Apéndice E FAL-109"}
+
+  - fal: FAL-102
+    forma: boca-del-rio-coro
+    nombre_oliver: "Boca del Río Coro Complex"
+    region: coro-golfete
+    complejo: null
+    afiliacion: "Neoindio"
+    precontacto_propuesto: desconocido
+    procedencia: {obra: oliver-1989-cap4, detalle: "Apéndice E FAL-102"}
+
+  - fal: FAL-110
+    forma: guayacancito
+    nombre_oliver: "Guayacancito"
+    region: coro-golfete
+    afiliacion: "Neoindio"
+    precontacto_propuesto: desconocido
+    procedencia: {obra: oliver-1989-cap4, detalle: "Apéndice E FAL-110"}
+
+  - fal: FAL-112
+    forma: el-manglar
+    nombre_oliver: "El Manglar East/West camp sites"
+    region: coro-golfete
+    afiliacion: "Neoindio"
+    precontacto_propuesto: desconocido
+    nota: >
+      "Camp sites" — campamentos, no poblado. Si se confirma, es el primer
+      nodo del registro que documenta uso ESTACIONAL del manglar, que es un
+      hueco declarado del corpus de ecología.
+    procedencia: {obra: oliver-1989-cap4, detalle: "Apéndice E FAL-112"}
+
+# ══ Península de Paraguaná ══════════════════════════════════════════════
+
+  - fal: FAL-154
+    forma: santa-ana-el-cerro
+    nombre_oliver: 'Santa Ana ["El Cerro"]-1'
+    region: paraguana
+    complejo: "Urumaco"
+    precontacto_propuesto: probable
+    precontacto_razon: >
+      Urumaco (termina ~1393/1450) MÁS datación marcada en la lista
+      (cf. Tamers 1965). Y cruza con Esteves: describe una "antigua aldea
+      indígena en cuyas cercanías los españoles fundaron en 1538 el pueblo de
+      Santa Ana de Paraguaná", con "restos de cerámica indígena y europea".
+      Aldea anterior a la fundación española, con secuencia hasta el contacto.
+    cautela: >
+      Esteves llama al sitio Chamuriana; Oliver lo registra como Santa Ana
+      "El Cerro". Hay que confirmar que hablan del mismo lugar antes de fundir
+      las dos evidencias en un nodo.
+    procedencia: {obra: oliver-1989-cap4, detalle: "Apéndice E FAL-154"}
+    cruces: [esteves-1989]
+
+  - fal: FAL-143
+    forma: cayerua
+    nombre_oliver: "Cayerúa"
+    region: paraguana
+    complejo: "Dabajuroide [cf. Howard 1943]"
+    precontacto_propuesto: probable
+    precontacto_razon: >
+      ⭐ CIERRA UN HUECO DECLARADO. La nota de Esteves dice de CAYERUBA que es
+      "el primer sitio de Paraguaná con evidencia precolombina" (cementerio +
+      cerámica) pero que "sin excavación publicada ni fecha, no alcanza para
+      precontacto: si". La prospección de Oliver 1981-83 ES ese registro
+      arqueológico que faltaba, y Howard 1943 lo respalda desde antes.
+    cautela: >
+      Cayerúa (Oliver) ~ Cayeruba (Esteves): la equivalencia es muy probable
+      pero hay que confirmarla. Y "Dabajuroide" sigue sin fechar la ocupación.
+      Sube de `desconocido` a `probable`, no a `si`.
+    procedencia: {obra: oliver-1989-cap4, detalle: "Apéndice E FAL-143"}
+    cruces: [esteves-1989]
+
+  - fal: FAL-152
+    forma: machuruca
+    nombre_oliver: "Machuruca"
+    region: paraguana
+    complejo: "Urumaco, Dabajuroide"
+    precontacto_propuesto: probable
+    precontacto_razon: >
+      Componente Urumaco. Esteves registra "Machuruca/Misaray" como sitio
+      arqueológico con cementerio indígena y PETROGLIFO FOTOGRAFIADO.
+      Dos fuentes, una toponímica y otra de prospección, sobre el mismo lugar.
+    procedencia: {obra: oliver-1989-cap4, detalle: "Apéndice E FAL-152"}
+    cruces: [esteves-1989]
+
+  - fal: FAL-149
+    forma: moruy
+    nombre_oliver: "Moruy"
+    region: paraguana
+    complejo: "Dabajuroide [cf. Howard 1943]"
+    precontacto_propuesto: desconocido
+    nota: >
+      Moruy es hoy un pueblo vivo y Esteves lo usa como referencia geográfica
+      de toda la zona. Dabajuroide sin precisar no decide la época.
+    procedencia: {obra: oliver-1989-cap4, detalle: "Apéndice E FAL-149"}
+    cruces: [esteves-1989]
+
+  - fal: FAL-144
+    forma: cerro-pelon-chuchube
+    nombre_oliver: "Cerro Pelón / Chuchube"
+    region: paraguana
+    afiliacion: "Neoindio"
+    precontacto_propuesto: desconocido
+    nota: >
+      ⭐ El topónimo lleva `chuchube`, que ES entrada del lexicón (van Buurt,
+      Gatschet, Zavala) y aparece en la Tabla A-9 de Oliver como
+      'paraulata / bird species'. Un nodo cuyo nombre es una palabra
+      atestiguada del lexicón: material para toponimos.yaml, no solo para el
+      registro de nodos.
+    procedencia: {obra: oliver-1989-cap4, detalle: "Apéndice E FAL-144"}
+
+  - fal: FAL-145
+    forma: la-guaquira-abajo
+    nombre_oliver: "La Guaquira Abajo"
+    region: paraguana
+    afiliacion: "Neoindio"
+    precontacto_propuesto: desconocido
+    procedencia: {obra: oliver-1989-cap4, detalle: "Apéndice E FAL-145"}
+
+  - fal: FAL-153
+    forma: la-aguada
+    nombre_oliver: "La Aguada"
+    region: paraguana
+    afiliacion: "Neoindio"
+    precontacto_propuesto: desconocido
+    nota: "Nombre castellano; no aporta al léxico."
+    procedencia: {obra: oliver-1989-cap4, detalle: "Apéndice E FAL-153"}
+
+# ══ Qué falta para cerrar del todo ══════════════════════════════════════
+#
+# 1. Las fechas de FAL-100 (ISGS-1253, 1423, 1424): están en las tablas del
+#    cap. 4. Con ellas, el primer `precontacto: si` continental deja de
+#    depender de una muestra de superficie.
+# 2. Tamers 1965 — fuente distinta de la de 1970, sin localizar; fecha
+#    FAL-111 y FAL-154.
+# 3. Confirmar Cayerúa ~ Cayeruba y Santa Ana "El Cerro" ~ Chamuriana.
+# 4. Coordenadas: hay que extraer la Figura 77 del cap. 4 (mapa).
