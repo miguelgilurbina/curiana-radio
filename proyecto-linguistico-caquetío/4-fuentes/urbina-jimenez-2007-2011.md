@@ -4,7 +4,7 @@ obra: "El Carrizal: cambios en el uso del espacio a través del tiempo (2007) ·
 autor: "Urbina Jiménez, Eduy María"
 anio: "2007, 2011"
 genero: arqueologia
-local: "⚠️ FUERA DEL REPO — 'Info para Miguel/TESISpdf eduy.pdf' y 'Dissertation Terminada Eduy Urbina.pdf'"
+local: ["fuentes_caquetios/Urbina_2007_El_Carrizal_UCV.pdf", "fuentes_caquetios/Urbina_2011_Archaeological_Survey_Coastal_Falcon_UCL.pdf"]
 capa_texto: si
 estado_minado: parcial
 prioridad: alta

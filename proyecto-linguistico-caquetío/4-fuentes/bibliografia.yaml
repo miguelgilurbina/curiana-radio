@@ -273,7 +273,8 @@ obras:
   anio: 1989
   genero: linguistica
   local:
-  - UCL Discovery, PDF de 801 pp. — impresas 559-594 = pdf 586-621 (offset -27)
+  - fuentes_caquetios/Oliver_1989_Tesis_Arawakan_NW_Venezuela_UCL.pdf — impresas 559-594 = pdf 586-621
+    (offset -27)
   aliases:
   - Oliver 1989 Apéndice A
   - Appendix A Swadesh
@@ -312,7 +313,8 @@ obras:
   anio: 1989
   genero: arqueologia
   local:
-  - ⚠️ .DOC sin convertir — 'Info para Miguel/PhD Oliver Edited/Chapter 4 Archaeology.DOC'
+  - fuentes_caquetios/Oliver_1989_Tesis_Arawakan_NW_Venezuela_UCL.pdf (tesis completa, escaneo; el .DOC
+    con texto limpio sigue en 'Info para Miguel/PhD Oliver Edited/')
   aliases:
   - Oliver 1989 cap. 4
   - Oliver Chapter 4 Archaeology
@@ -424,7 +426,8 @@ obras:
   anio: 2007, 2011
   genero: arqueologia
   local:
-  - ⚠️ FUERA DEL REPO — 'Info para Miguel/TESISpdf eduy.pdf' y 'Dissertation Terminada Eduy Urbina.pdf'
+  - fuentes_caquetios/Urbina_2007_El_Carrizal_UCV.pdf
+  - fuentes_caquetios/Urbina_2011_Archaeological_Survey_Coastal_Falcon_UCL.pdf
   aliases:
   - Urbina Jiménez 2007
   - Urbina Jiménez 2011

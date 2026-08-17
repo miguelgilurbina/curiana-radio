@@ -4,7 +4,7 @@ obra: "Appendix A: Swadesh's 100 Word List vocabularies for Arawakan Languages (
 autor: "Oliver, José R."
 anio: 1989
 genero: linguistica
-local: "UCL Discovery, PDF de 801 pp. — impresas 559-594 = pdf 586-621 (offset -27)"
+local: "fuentes_caquetios/Oliver_1989_Tesis_Arawakan_NW_Venezuela_UCL.pdf — impresas 559-594 = pdf 586-621 (offset -27)"
 capa_texto: no
 estado_minado: parcial
 prioridad: alta

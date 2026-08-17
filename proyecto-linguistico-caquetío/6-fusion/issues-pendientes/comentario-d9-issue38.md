@@ -120,3 +120,34 @@ ser deliberado.
       Castellanos son los candidatos que este mismo barrido destapó.
 - [ ] Comprobar si los `-bana` insulares (*Shiribana*, *Tarabana*, *Wakubana*,
       *Bushiribani*) tienen referente alto o llano.
+
+---
+
+## Actualización 2026-08-16 — segunda fuente, y el rumbo que fija Miguel
+
+**Todo lo de arriba se escribió con Esteves como fuente única. Ya no lo es.**
+La Tabla A-9 de Oliver 1989 (Apéndice A, p. 593; `6-fusion/tabla_a9_oliver.yaml`)
+trae:
+
+> `17. Capubana — kapu-bana — a hill in Paraguaná`
+
+Oliver segmenta **con `b`** y glosa 'colina', trabajando sobre fuentes del XVI —
+independiente de Esteves, y justo en el punto débil (la hache de `Capu-hana`).
+La propuesta de arriba ("entrar como `reconstruido` por fuente única") **se
+quedó corta**: hay dos fuentes independientes.
+
+**Y una corrección de lectura de Miguel que cambia una pieza**: la entrada
+`13. cabana` no se transcribe `sabana` con s — es **`çabana` con ç cedilla**
+(grafía del XVI para /s/). Confirma que Oliver la trata como **el étimo entero
+del castellano "sabana"**: segmentarla en `ca-bana` para sostener `-bana` =
+'llano' (morfologia.md §3) es análisis nuestro, no de la fuente.
+
+**El rumbo decidido (Miguel, 2026-08-16):** no se declara una glosa única
+todavía. `-ana` y `-bana` **pueden ser morfemas distintos y su valor puede
+depender de la palabra** — `-ana` solo también parece locativo (cf. *Paraguaná*,
+que pudo ser *Paraguana*). La decisión se toma **después de las dos sesiones de
+topónimos** planificadas, evaluando palabra por palabra. Topónimos que Miguel
+señala para esa revisión: **Cujicana · Carirubana** (y los que salgan del
+gazeteer y de la revisión regional que hará junto al dictado de Medina Colina).
+
+La chuleta del CLAUDE.md ya marca la glosa como EN DISPUTA mientras tanto.

@@ -84,3 +84,12 @@ y el lexicón ya tiene precedente para esto: `jirajaroide-contacto` (7 formas),
    la recogió, no la filiación.
 
 Fuente: `4-fuentes/oliver-1989-apendice-a.md`.
+
+---
+
+**DECISIÓN (Miguel, 2026-08-16): se mantiene en el lexicón**, entendida como
+**producto que venía de afuera** — como el oro: un bien del contacto chibcha
+que circulaba en boca caquetía. Queda pendiente solo la etiqueta concreta
+(¿`chibcha-contacto`, espejo de `jirajaroide-contacto`?), a coordinar con el
+cierre del vocabulario de `fuente` (#93). Autorizada también la **revisión del
+criterio del re-etiquetado 2026-07-20** (punto 3 de arriba).

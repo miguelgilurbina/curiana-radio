@@ -42,3 +42,10 @@ que la palabra es caquetía; la fuente más autorizada dice que probablemente no
    **hueco léxico** nuevo?
 
 Fuente: `4-fuentes/oliver-1989-apendice-a.md`.
+
+---
+
+**DECISIÓN (Miguel, 2026-08-16): igual que `hayo`** — se mantiene, entendida
+como préstamo de contacto (`icoroata` como palabra viajera con el producto).
+El cultivo no está en duda; la palabra se marca con su filiación de contacto
+en el mapa de ecología.

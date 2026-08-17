@@ -6,7 +6,7 @@ titulo: "Topónimos indígenas de Paraguaná y otros topónimos indígenas del e
 lugar_año: "Caracas, 1989"
 editor: Refinería de Amuay de Lagoven S.A.
 local: "fuentes_caquetios/Esteves_1989_Toponimos_Paraguana_1..6.pdf"
-capa_texto: si
+capa_texto: no  # medido 2026-08-16: 250-450 chars/archivo, solo metadatos. El barrido se hizo por lectura de imagen; pasada de OCR de verificación pendiente
 estado_minado: parcial
 prioridad: alta
 medido: 2026-08-11

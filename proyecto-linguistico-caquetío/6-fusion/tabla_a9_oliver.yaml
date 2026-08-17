@@ -34,11 +34,13 @@ entradas:
     en_repo: [lexicon-activo, alvarado, toponimos, van_buurt, morfemas]
   - num: 13
     forma: cabana
-    fonemica: sabana
+    fonemica: çabana
     glosa_en: savannah
     cursiva: false
     en_repo: [zavala]
-    nota: Oliver la trata como étimo entero de "sabana" — debilita el análisis ca-bana de morfologia.md §3 (D9)
+    nota: la transcripción lleva Ç CEDILLA (leído a ojo por Miguel 2026-08-16; el OCR dio "sabana"
+      — misma lectura fonética, /s/ del XVI). Oliver la trata como étimo entero de "sabana" —
+      debilita el análisis ca-bana de morfologia.md §3 (D9)
   - num: 14
     forma: caduchi
     fonemica: caduchi

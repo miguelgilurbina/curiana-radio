@@ -4,7 +4,7 @@ obra: "Chapter 4: The Macro-Tocuyanoid and Macro-Dabajuroid Archæological Tradi
 autor: "Oliver, José R."
 anio: 1989
 genero: arqueologia
-local: "⚠️ .DOC sin convertir — 'Info para Miguel/PhD Oliver Edited/Chapter 4 Archaeology.DOC'"
+local: "fuentes_caquetios/Oliver_1989_Tesis_Arawakan_NW_Venezuela_UCL.pdf (tesis completa, escaneo; el .DOC con texto limpio sigue en 'Info para Miguel/PhD Oliver Edited/')"
 capa_texto: si
 estado_minado: parcial
 prioridad: alta
