@@ -5,7 +5,22 @@ improvise. No implementa nada.*
 
 ---
 
-## 0. Estado de la fuente: NO DISPONIBLE
+## 0. Estado de la fuente: IDENTIFICADA (2026-08-15)
+
+> ✅ **La obra es: Juan Bautista Medina Colina, *Del Habla Paraguanera. Siglo
+> XX*.** Miguel la tiene en físico. Los dos candidatos que barajaba este
+> documento (Brett Martínez, Tito Guerra) no eran; quedan como fuentes
+> adyacentes. El otro bloqueo también cayó: **el entorno tiene OCR desde el
+> 2026-08-14** (tesseract 5.4.0 + `curiana_sim/ocr_fuente.py`).
+>
+> La vía de entrada elegida es **dictado curado por Miguel** (su criba es la
+> marca `retro-abstraido` en acción), con página obligatoria, cobertura
+> declarada por sección y dudosas de calibración. Bitácora y formato de
+> captura: [[medina-colina-sxx]].
+
+<details><summary>El §0 original (histórico, ya resuelto)</summary>
+
+## 0-bis. Estado de la fuente: NO DISPONIBLE
 
 > ⚠️ **El libro no está en el repositorio.** Se buscó en todo el árbol (`find` por
 > *habla* / *paraguan*) y en `fuentes_caquetios/` (30 archivos, inventario en la hoja de
@@ -27,6 +42,8 @@ improvise. No implementa nada.*
 
 Mientras tanto, este documento define **cómo** se minaría y —lo más importante— **cómo se
 mide la factibilidad** de que una voz paraguanera sea sustrato caquetío.
+
+</details>
 
 ---
 

@@ -1,0 +1,176 @@
+# PROPUESTA — un minador propone, el humano fusiona (regla 5).
+# Origen: Oliver 1989, Apéndice A, TABLA A-9: "Selected Caquetío Vocabulary
+# from the XVIth Century". pp. impresas 593-594 = pdf 620-621 (offset -27) del
+# PDF abierto de UCL Discovery.
+#
+# ⚠️ LECTURA PROVISIONAL. Sale de OCR (spa+eng, 400/600 dpi) sobre escaneo UMI.
+#    Ninguna forma debe entrar al lexicón sin cotejar contra la imagen de la
+#    página. Faltan las entradas 1-5, 7-12, 15, 20-26, 28, 32, 34-44, 47-49.
+#
+# Las CURSIVAS (= "probably not Caquetío, but from the Santa Marta area
+# [chibchan?]", nota al pie de Oliver) las identificó Miguel leyendo las
+# imágenes el 2026-08-15: son exactamente tres. El resto queda avalado por
+# Oliver como caquetío. OJO: cursiva ≠ fuera del caquetío — están dentro de un
+# vocabulario recogido de boca caquetía; son préstamos EN la lengua (ver
+# 6-fusion/issues-pendientes/issue-hayo.md).
+
+meta:
+  obra: oliver-1989-cap2   # el Apéndice A acompaña la lingüística; nota propia: oliver-1989-apendice-a
+  tabla: A-9
+  paginas_impresas: [593, 594]
+  columnas: [forma, fonemica, glosa_es, glosa_en]
+  entradas_totales_estimadas: 50
+  legibles_por_ocr: 18
+  cursivas_verificadas_a_ojo: 3
+  generado: '2026-08-15'
+
+entradas:
+  - num: 6
+    forma: barici
+    fonemica: barisi
+    glosa_es: agua turbia
+    glosa_en: muddy, opaque
+    cursiva: false
+    en_repo: [lexicon-activo, alvarado, toponimos, van_buurt, morfemas]
+  - num: 13
+    forma: cabana
+    fonemica: çabana
+    glosa_en: savannah
+    cursiva: false
+    en_repo: [zavala]
+    nota: la transcripción lleva Ç CEDILLA (leído a ojo por Miguel 2026-08-16; el OCR dio "sabana"
+      — misma lectura fonética, /s/ del XVI). Oliver la trata como étimo entero de "sabana" —
+      debilita el análisis ca-bana de morfologia.md §3 (D9)
+  - num: 14
+    forma: caduchi
+    fonemica: caduchi
+    glosa_es: higo, breva
+    glosa_en: cactus fruit
+    cursiva: false
+    en_repo: [lexicon-activo, alvarado, gatschet, van_buurt, cognados]
+    nota: toca el issue 51 (kadushi, referente en disputa)
+  - num: 16
+    forma: Capú
+    fonemica: kapú
+    glosa_en: spirit, goblin
+    cursiva: false
+    en_repo: [zavala, cognados]
+  - num: 17
+    forma: Capubana
+    fonemica: kapu-bana
+    glosa_en: a hill in Paraguaná
+    cursiva: false
+    en_repo: [zavala, cognados]
+    nota: segmenta con -b- y glosa 'colina' — SEGUNDA FUENTE independiente para D9 (issue 38); remite a los núms. 2 y 16
+  - num: 18
+    forma: Caquetio
+    fonemica: Kaketio
+    glosa_es: ser viviente
+    glosa_en: people (general)
+    cursiva: false
+    en_repo: [toponimos, van_buurt, zavala, cognados]
+    nota: tercera glosa del etnónimo, junto a la 'buena gente' de Cey (zavala-reyes-2018)
+  - num: 19
+    forma: caca
+    fonemica: kasa, kaza
+    glosa_es: puche de maíz
+    glosa_en: maize porridge
+    cursiva: false
+    en_repo: []
+  - num: 27
+    forma: chirgua
+    fonemica: chirwa
+    glosa_es: vasija para el agua
+    cursiva: false
+    en_repo: [alvarado, zavala]
+  - num: 29
+    forma: chiriguare
+    fonemica: chiriware
+    glosa_es: gavilán
+    glosa_en: hawk
+    cursiva: false
+    en_repo: [lexicon-activo, alvarado, gatschet, van_buurt]
+  - num: 30
+    forma: chuchube
+    fonemica: chuchube
+    glosa_es: paraulata
+    glosa_en: bird species
+    cursiva: false
+    en_repo: [lexicon-activo, gatschet, toponimos, zavala]
+  - num: 31
+    forma: dare
+    fonemica: dare
+    glosa_es: diente
+    glosa_en: tooth
+    cursiva: false
+    en_repo: [lexicon-activo, alvarado, toponimos, van_buurt, cognados]
+  - num: 33
+    forma: diao
+    fonemica: diao
+    glosa_es: señor principal
+    glosa_en: principal chief
+    cursiva: false
+    en_repo: [lexicon-activo, zavala, cognados]
+  - num: 45
+    forma: mene
+    fonemica: mene
+    glosa_es: viruela / pez derretida
+    glosa_en: smallpox / tar
+    cursiva: false
+    en_repo: [lexicon-activo, alvarado, van_buurt]
+    nota: toca el issue 52 — no es 'petróleo', es brea; la acepción 'viruela' es nueva en el repo
+  - num: 46
+    forma: quicidi
+    fonemica: kuicidi
+    glosa_es: serranía
+    glosa_en: sierra
+    cursiva: false
+    en_repo: []
+  - num: 50
+    forma: auri
+    fonemica: auri
+    glosa_es: perro (?)
+    cursiva: false
+    en_repo: [cognados]
+  - num: null
+    forma: barbasco
+    fonemica: barbasko
+    glosa_es: hierba de borrachera
+    glosa_en: fish poison
+    cursiva: false
+    en_repo: [toponimos, zavala]
+  - num: null
+    forma: eque
+    fonemica: eque
+    glosa_es: lechuza
+    glosa_en: owl
+    cursiva: false
+    en_repo: []
+  - num: null
+    forma: cocu
+    fonemica: koku
+    glosa_es: penca
+    glosa_en: agave species
+    cursiva: false
+    en_repo: []
+
+  # ── Las tres cursivas (lectura a ojo de Miguel, 2026-08-15) ────────────────
+  - num: null
+    forma: icoroata
+    forma_alt: ikoroata
+    glosa_es: étimo de 'caraota' (leguminosa)
+    cursiva: true
+    en_repo: [CULTURA_CAQUETIA.md, ecologia_lexicon_map.md]
+    nota: issue pendiente (issue-caraota.md) — el corpus atribuye la palabra al caquetío
+  - num: null
+    forma: hayo
+    glosa_es: la hierba que quita la sed (coca)
+    cursiva: true
+    en_repo: [lexicon-activo]
+    nota: 'issue pendiente (issue-hayo.md) — está como caquetío-atestiguado y categoria: ritual'
+  - num: null
+    forma: raporón
+    glosa_es: calabaza con cal para mascar coca (poporo, gourd flask)
+    cursiva: true
+    en_repo: []
+    nota: el complejo de la coca sin el recipiente — se absorbió la palabra, no el paquete

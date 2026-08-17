@@ -1,0 +1,513 @@
+# PROPUESTA — un minador propone, el humano fusiona (regla 5).
+# Origen: Oliver 1989, Apendice E, 'Code List of Archaeological Sites in
+# Falcon State, Venezuela' (Fig. 77, cap. 4). SURVEY 1981-1983.
+# pp. impresas 747-751 = pdf 774-779 del PDF abierto de UCL Discovery (offset -27).
+# OCR en dos pasadas (psm auto + psm 6) y fundido: la lista va a dos columnas
+# y una sola pasada pierde nombres y afiliaciones.
+#
+# AVISOS antes de fusionar a asentamientos.yaml:
+#  - La afiliacion es la que declaro el excavador, no una fecha. 'Dabajuroid'
+#    abarca 800-1600 d.C.: no equivale a precontacto por si solo.
+#  - Ninguna entrada trae coordenadas. Las de Tamers 1970 si.
+#  - Hay que decidir por sitio si cae en la polity COSTERA (regla 4).
+#  - El OCR no distingue cursivas ni resuelve todas las filas.
+
+meta:
+  obra: oliver-1989-cap4
+  apendice: E
+  prospeccion: '1981-1983'
+  generado: '2026-08-15'
+  sitios: 98
+  incompletos: 9
+
+sitios:
+  - codigo: FAL-001
+    nombre: 'Cataure'
+    afiliacion: 'Historic'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-002
+    nombre: 'San Félix de Mauroa'
+    afiliacion: 'Neoindian'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-003
+    nombre: 'El Tanquecito-1 and 2'
+    afiliacion: 'Historic/Criollo'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-004
+    nombre: 'La Majadita'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-005
+    nombre: 'El Cacuro-1 and 2'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-006
+    nombre: 'Sybira or Cibira'
+    afiliacion: 'Neoindian'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-007
+    nombre: 'Los Indios-2 and Los Indios 3'
+    afiliacion: 'Maticora Complex'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-008
+    nombre: 'Los Indios-6 "Montanita'
+    afiliacion: 'Maticora Complex'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-009
+    nombre: 'Los Indios-1 "Hato Adan Affez'
+    afiliacion: 'Maticora Complex'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-010
+    nombre: 'Los Indios-4 “La Vibora'
+    afiliacion: 'Maticora Complex'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-011
+    nombre: 'La Providencia'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-012
+    nombre: 'Hato Capana'
+    afiliacion: 'Falconian Criollo'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-013
+    nombre: 'Costa Rica Shell Mounds 1, 2, and 3'
+    afiliacion: null   # OCR incompleto
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-014
+    nombre: 'Ojo de Agua'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-015
+    nombre: 'Cerro Frio'
+    afiliacion: 'Dabajuroid?'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-016
+    nombre: 'Tojadare Shell Mounds'
+    afiliacion: 'reported; not visited'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-017
+    nombre: 'Supidebo Coast Mounds A through E'
+    afiliacion: null   # OCR incompleto
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-018
+    nombre: 'Supidebo-5'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-019
+    nombre: 'Supidebo-6'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-020
+    nombre: 'Conejal'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-021
+    nombre: 'Supidebo-4'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-022
+    nombre: 'Supidebo-3'
+    afiliacion: 'reported by Graf; not visited'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-023
+    nombre: 'Supidebo-1'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-024
+    nombre: 'Calabrote'
+    afiliacion: 'Dabajuroid?'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-025
+    nombre: 'Punta Borojo Shell Mounds'
+    afiliacion: null   # OCR incompleto
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-026
+    nombre: 'Punta Penitas'
+    afiliacion: 'reported by Graf; not visited'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-027
+    nombre: 'Hato Canapo'
+    afiliacion: 'Falconian Criollo'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-028
+    nombre: 'Calabrote'
+    afiliacion: 'Falconian Criollo'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-029
+    nombre: 'Hato Yuquique'
+    afiliacion: 'Historic'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-030
+    nombre: 'Antunes-5 Shell Mounds'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-032
+    nombre: 'Limoncillo'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-033
+    nombre: 'Antunes-1 Shell Mound'
+    afiliacion: 'Dabajuroid?'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-034
+    nombre: 'Antunes-4 Shell Mound'
+    afiliacion: 'Dabajuroid?'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-035
+    nombre: 'El Guayabo'
+    afiliacion: 'Historic'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-036
+    nombre: 'Los Haticos'
+    afiliacion: 'Historic/Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-037
+    nombre: 'Los Llanitos'
+    afiliacion: 'Urumaco Complex, Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-038
+    nombre: 'Nueva Venecia'
+    afiliacion: 'Tortolitas/Hato Nuevo related'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-039
+    nombre: 'San José de La Vega/Sorongo-1'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-040
+    nombre: 'San José de La Vega/Sorongo-2'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-041
+    nombre: 'El Suite'
+    afiliacion: 'reported by Graf; not visited'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-042
+    nombre: 'Paleoindian Site'
+    afiliacion: 'El Jobo'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-043
+    nombre: 'Capatárida'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-044
+    nombre: 'Los Cerritos'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-045
+    nombre: 'El Limón'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-046
+    nombre: 'El Chipero de Santa Rosa'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-047
+    nombre: 'Casas Viejas'
+    afiliacion: 'Maticora Complex [cf. Cruxent 1955]'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-048
+    nombre: 'Palo Negro'
+    afiliacion: 'Urumaco Complex, Dabajuroid [Cruxent 1955]'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-049
+    nombre: 'Mamá Juana/Buchivacoa-1'
+    afiliacion: 'Maticora Complex/Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-050
+    nombre: 'Zazárida'
+    afiliacion: 'Historic and undetermined'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-051
+    nombre: 'Mucurata'
+    afiliacion: 'Aceramic + Falconian Criollo'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-052
+    nombre: 'El Llano-2'
+    afiliacion: 'Mesoindian, aceramic'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-053
+    nombre: 'El Llano-1'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-054
+    nombre: 'El Llano de Villa Bolivia'
+    afiliacion: 'Active Falconian Criollo'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-055
+    nombre: 'Jucaira cemetery'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-056
+    nombre: 'Túcua-3'
+    afiliacion: 'Falconian Criollo'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-058
+    nombre: 'Eroita-3, "El Sabilar'
+    afiliacion: 'Falconian Criollo'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-059
+    nombre: 'Túcua-4'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-060
+    nombre: 'Túcua-1'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-061
+    nombre: 'La Todacoa'
+    afiliacion: 'Neoindian'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-062
+    nombre: 'Lonciko or Leoncito'
+    afiliacion: 'Urumaco Complex, Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-063
+    nombre: 'Cuajaracume Shell Mound'
+    afiliacion: 'Neoindian?'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-065
+    nombre: 'Hato Viejo-1'
+    afiliacion: 'Urumaco Complex [ cf. Nomiand 1933-5]'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-066
+    nombre: 'Codore Afuera-3'
+    afiliacion: 'Neoindian; not visited'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-067
+    nombre: 'Hato Viejo-2'
+    afiliacion: 'Urumaco Complex; isolated burial'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-068
+    nombre: 'El Chiguaje'
+    afiliacion: 'Urumaco Complex, Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-069
+    nombre: 'Corralito [El Mamón]'
+    afiliacion: null   # OCR incompleto
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-070
+    nombre: 'La Montanita'
+    afiliacion: 'Neoindian'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-071
+    nombre: 'Paso de Coro/Lower Pedregal'
+    afiliacion: 'Paleoindian'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-072
+    nombre: 'El Jobo Basin [El Jobo/Las Casitas] sites'
+    afiliacion: 'Paleoindian'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-073
+    nombre: 'La Guacoa'
+    afiliacion: 'Neoindian'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-074
+    nombre: 'Paso-Caldera/Tupure sites'
+    afiliacion: 'Paleoindian'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-075
+    nombre: 'Camare sites'
+    afiliacion: 'Paleoindian'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-076
+    nombre: 'Pueblo Viejo'
+    afiliacion: 'also IVIC #2512, 2514'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-077
+    nombre: 'La Maravilla/Montanita (Urumaco Complex, Dabajuroid'
+    afiliacion: null   # OCR incompleto
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-078
+    nombre: null   # OCR incompleto
+    afiliacion: null   # OCR incompleto
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-079
+    nombre: 'San Antonio de Mitare cemetery'
+    afiliacion: 'Urumaco Complex, Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-080
+    nombre: 'Mitare-Caimancito'
+    afiliacion: 'Urumaco Complex and Falconian Criollo'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-081
+    nombre: 'Mitare-1'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-082
+    nombre: 'Mitare-2'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-083
+    nombre: 'no name'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-084
+    nombre: 'no name'
+    afiliacion: 'Aceramic'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-085
+    nombre: 'El Derramadero'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-086
+    nombre: 'El Chipe/Los Chipes-2'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-087
+    nombre: 'El Chipe/Los Chipes-1'
+    afiliacion: 'Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-088
+    nombre: 'El Chipe/Los Chipes-2'
+    afiliacion: 'Dabajuroid; Historic'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-089
+    nombre: 'Turamaco-1'
+    afiliacion: 'Neoindian'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-090
+    nombre: 'Turamaco-2'
+    afiliacion: 'Neoindian'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-091
+    nombre: 'Botoroa'
+    afiliacion: 'Neoindian'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-092
+    nombre: 'San Antonio'
+    afiliacion: 'Mesoindian'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-093
+    nombre: 'La Maleta Cave'
+    afiliacion: 'Los Médanos Complex, Dabajuroid'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-094
+    nombre: 'Coy-Coy de Uria'
+    afiliacion: 'Coy-Coy Complex, Tocuyanoid?'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-095
+    nombre: 'Nafia'
+    afiliacion: 'Modern Criollo'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-096
+    nombre: 'Taparoy'
+    afiliacion: 'Modern Criollo'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-097
+    nombre: 'Araica'
+    afiliacion: 'Modern Criollo'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-098
+    nombre: 'Barrio Nuevo'
+    afiliacion: 'Modern Criollo'
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-100
+    nombre: '101)| Late Urumaco-Los Médanos'
+    afiliacion: null   # OCR incompleto
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-143
+    nombre: ') ___| Late Urumaco Complex'
+    afiliacion: null   # OCR incompleto
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4
+  - codigo: FAL-154
+    nombre: ') | Urumaco Complex'
+    afiliacion: null   # OCR incompleto
+    epoca: null   # humano: precontacto / contacto / colonial
+    costera: null  # humano: regla 4

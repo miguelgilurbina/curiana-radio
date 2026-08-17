@@ -1,9 +1,8 @@
 ---
 tipo: nota-viva
-ambito: historia del proyecto, reconstruida del historial
-periodo: 2026-06-13 → hoy
-commits: 78
-actualizado: 2026-08-03
+ambito: historia del proyecto — la narrativa curada; el registro crudo es CRONICA.md
+periodo: 2026-06-13 → 2026-08-03 (curado); lo posterior, en la crónica
+registro_crudo: CRONICA.md (generado — ahí están los conteos y las fechas)
 ---
 
 # Línea de tiempo del proyecto
@@ -13,6 +12,16 @@ actualizado: 2026-08-03
 > puede decidir qué resultados siguen valiendo y cuáles hay que repetir — que es
 > exactamente la pregunta abierta hoy (ver
 > [[01_que_probaron_los_seis_runs]]).
+>
+> **División de trabajo desde el 2026-08-16**: el registro crudo —cada cambio
+> de main con su fecha— lo genera `generar_cronica.py` en [[CRONICA]] y no se
+> mantiene a mano (aquí llegó a decir "commits: 78" y se quedó congelado — la
+> deriva exacta que la regla 1 castiga). Esta nota guarda lo que git no sabe:
+> qué **significó** cada tramo. Se cura por eras, cuando una se cierra.
+>
+> ⚠️ **La narrativa llega hasta el 2026-08-03.** Queda por curar la era
+> siguiente (galería, jai-sounds, fonotáctica #95, la ola Esteves→Oliver,
+> 6-fusion): sus hechos ya están en la crónica.
 
 ## Las cuatro eras
 
