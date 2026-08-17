@@ -20,6 +20,7 @@ como pista para llegar a la página, nunca como cita.
 import argparse
 import io
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -61,6 +62,30 @@ def idiomas_disponibles(binario):
         return []
 
 
+def orientar(imagen, modo, pytesseract):
+    """Grados que hay que girar la página para enderezarla (0 si nada).
+
+    Un escaneo con páginas invertidas no falla ruidosamente: devuelve texto
+    con la forma correcta y el contenido destruido. Pasó con el Apéndice E de
+    Oliver — las páginas de Paraguaná dieron 2.850 caracteres y CERO códigos
+    de sitio, y la pista fue leer `YNYNOVUVd` como `PARAGUANA` del revés.
+    """
+    if modo in ("0", "no", "none"):
+        return 0
+    if modo != "auto":
+        try:
+            return int(modo) % 360
+        except ValueError:
+            return 0
+    try:
+        osd = pytesseract.image_to_osd(imagen)
+        m = re.search(r"Rotate:\s*(\d+)", osd)
+        return int(m.group(1)) % 360 if m else 0
+    except Exception:
+        # OSD falla en páginas con poco texto; no es motivo para abortar
+        return 0
+
+
 def rango(spec, total):
     """'40-60' o '12' → lista de índices 0-based del PDF."""
     if not spec:
@@ -88,6 +113,12 @@ def main():
                     help="modo de segmentación de tesseract. 3=auto (por defecto), "
                          "4=columna única de tamaños variables, 6=bloque uniforme. "
                          "Las listas a dos columnas suelen necesitar 4 o 6")
+    ap.add_argument("--rotar", default="auto",
+                    help="'auto' detecta la orientación con OSD y endereza (por "
+                         "defecto) · '0' la desactiva · 90/180/270 fuerza el giro. "
+                         "Los escaneos antiguos traen páginas invertidas: sin esto "
+                         "salen 2.000 caracteres de basura y CERO datos, que es "
+                         "peor que una página vacía porque no se nota")
     args = ap.parse_args()
 
     binario = localizar_tesseract()
@@ -126,10 +157,14 @@ def main():
     print(f"  motor    {binario}  ·  idioma {args.lang}  ·  {args.dpi} dpi")
     print(f"  páginas  {len(indices)} de {len(doc)}")
 
-    vacias = []
+    vacias, girada = [], []
     with open(salida, "w", encoding="utf-8") as f:
         for n, i in enumerate(indices, 1):
             imagen = doc[i].render(scale=escala).to_pil()
+            giro = orientar(imagen, args.rotar, pytesseract)
+            if giro:
+                imagen = imagen.rotate(-giro, expand=True)
+                girada.append((i + 1, giro))
             cfg = f"--psm {args.psm}" if args.psm else ""
             texto = pytesseract.image_to_string(imagen, lang=args.lang, config=cfg)
             impresa = i + 1 + args.offset
@@ -142,6 +177,11 @@ def main():
 
     chars = salida.stat().st_size
     print(f"  → {salida.name}: {chars:,} bytes")
+
+    if girada:
+        detalle = ", ".join(f"{p}({g}°)" for p, g in girada[:10])
+        print(f"  ↻ {len(girada)} página(s) enderezada(s): {detalle}"
+              f"{' …' if len(girada) > 10 else ''}")
 
     # Una página en blanco puede ser real (portadilla) o un fallo de render.
     # Decirlo evita el error de la regla 6: un cero hay que verificarlo.

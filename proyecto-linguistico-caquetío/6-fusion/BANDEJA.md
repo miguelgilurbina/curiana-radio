@@ -13,15 +13,15 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-16**.
+<!--GENERADO--> Generado el **2026-08-17**.
 
-**1170 ítems propuestos** en 7 propuestas, más **5 issue(s)/comentario(s) redactados sin publicar**.
+**1206 ítems propuestos** en 7 propuestas, más **5 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
 | Archivo | Obra | Ítems | Aviso |
 |---|---|---|---|
-| `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 98 | 9 incompletos |
+| `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
 | `tabla_a9_oliver.yaml` | oliver-1989-cap2 | 21 |  |
 
 ## Propuestas léxicas (`curiana_sim/lexicon_*.py` — indexadas en su sitio)
