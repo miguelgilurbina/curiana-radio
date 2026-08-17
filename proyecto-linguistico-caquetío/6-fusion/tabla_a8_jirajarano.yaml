@@ -1,0 +1,228 @@
+# PROPUESTA — comparanda del vecino no arahuaco. Un minador propone (regla 5).
+# Origen: Oliver 1989, Apéndice A, TABLA A-8 "JIRAJARAN STOCK, WESTERN
+# VENEZUELA". pp. impresas 591-592 = pdf 618-619 (offset -27) de
+# fuentes_caquetios/Oliver_1989_Tesis_Arawakan_NW_Venezuela_UCL.pdf
+# OCR spa+eng, 500 dpi, --psm 6, --rotar auto (la p. 617 venía a 90°).
+#
+# ⚠️ LECTURA PROVISIONAL: transcripción por OCR de un escaneo. Las formas
+#    llevan diacríticos y variantes separadas por "/" que hay que cotejar
+#    contra la imagen antes de usar ninguna como dato.
+#
+# ─────────────────────────────────────────────────────────────────────────
+# PARA QUÉ SIRVE ESTO AQUÍ
+# ─────────────────────────────────────────────────────────────────────────
+# No es vocabulario caquetío y NUNCA debe entrar al lexicón como tal. Sirve
+# para lo contrario: para poder decir "esta palabra NO es caquetía, es del
+# vecino". El lexicón ya tiene 7 formas `jirajaroide-contacto` sin nada con
+# qué contrastarlas; esto es ese contraste.
+#
+# LA CUARTA COLUMNA ES PROTO-CHIBCHA, NO PROTO-JIRAJARA.
+# Oliver no reconstruyó el jirajarano: puso el proto-chibcha de Wheeler (1972)
+# al lado para PROBAR la hipótesis chibcha. El resultado está en el dato y
+# sostiene su frase del cap. 3: "few points of comparison". 'agua', 'fuego',
+# 'diente' y 'piedra' no se parecen en nada al proto-chibcha.
+#
+# CONSECUENCIA PARA EL CANON: el jirajarano no es arahuaco (Oliver nunca lo
+# dice) y su filiación chibcha tampoco está sostenida. La etiqueta
+# `jirajaroide-contacto` del lexicón —contacto, no parentesco— es la correcta.
+
+meta:
+  obra: oliver-1989-apendice-a
+  tabla: A-8
+  paginas_impresas: [591, 592]
+  columnas: [glosa, jirajara, ayoman, cuyon, proto_chibcha]
+  autoridad_proto_chibcha: "Wheeler 1972"
+  nota_fuente: >
+    "Note 1: Terms in parenthesis come from a mixed Jirajara-Ayoman word list
+    (Oramas, 1916)." — las formas entre paréntesis NO están asignadas a una
+    lengua concreta.
+  numeracion: "los números de glosa son los de la lista Swadesh de Oliver"
+  generado: '2026-08-17'
+
+entradas:
+  - n: 44
+    glosa: tongue
+    ayoman: aguipa
+    proto_chibcha: "*bi-kWa"
+  - n: 43
+    glosa: tooth
+    ayoman: aguinam/kinam
+    proto_chibcha: "*du-/(va)-de"
+  - n: 42
+    glosa: mouth
+    ayoman: aguspo siguegua
+    proto_chibcha: "*ka-isi-ka"
+  - n: 41
+    glosa: nose
+    jirajara: akingans
+    ayoman: akin/aguin
+    cuyon: kin/kuin
+    proto_chibcha: "*su-ni-ka"
+    mixta: "(akingans)"
+  - n: 40
+    glosa: eye
+    jirajara: unan
+    ayoman: akivough/akibax
+    cuyon: kibot/iskauno
+    proto_chibcha: "*uba-N-(ka)"
+    mixta: "(auñan)"
+  - n: 39
+    glosa: ear
+    jirajara: siguegua
+    ayoman: ahoui/akihuo/aga
+    cuyon: higuiguan/himigui
+    proto_chibcha: "*ku-(su)-ka-(ka)"
+    mixta: "(ateeg siguegua)"
+  - n: 38
+    glosa: head
+    jirajara: akregui
+    ayoman: atogh/aman
+    cuyon: tog/iscot
+  - n: 48
+    glosa: hand
+    jirajara: apasimaman
+    ayoman: iman/aman
+    proto_chibcha: "*ita / *kukaide"
+  - n: 46
+    glosa: foot
+    jirajara: augau/angan
+    ayoman: asengan/sangan
+    cuyon: segue
+    proto_chibcha: "*kaisi-"
+  - n: 49
+    glosa: belly
+    jirajara: ayu/apoo
+    ayoman: ipoh/abagu
+    cuyon: ipo/pompo
+    proto_chibcha: "*disa"
+    mixta: "(ayu)"
+  - n: null
+    glosa: penis
+    jirajara: apig
+    ayoman: apig
+    cuyon: piguisa
+  - n: 30
+    glosa: blood
+    cuyon: hiski/higui
+    proto_chibcha: "*ebi"
+  - n: 29
+    glosa: flesh
+    ayoman: himan/ilnian
+    cuyon: kemao
+    mixta: "(chu)"
+  - n: 75
+    glosa: water
+    jirajara: ing
+    ayoman: ing/in/(a)in
+    cuyon: him
+    proto_chibcha: "*sidi(n)ye"
+    nota: sin parecido con el proto-chibcha
+  - n: 117
+    glosa: river
+    ayoman: entien nun
+    cuyon: kuak/kigua
+    proto_chibcha: "*(va)-tu-(ka)"
+    mixta: "(sat) = 'creek'"
+  - n: 76
+    glosa: rain
+    jirajara: kosi/kat
+    ayoman: geui
+    cuyon: iskas/govi
+    proto_chibcha: "*si-di-(n)-wa-"
+  - n: 82
+    glosa: fire
+    jirajara: dueg
+    ayoman: du/dus/dug
+    cuyon: dut/idu
+    proto_chibcha: "*guka"
+    nota: sin parecido con el proto-chibcha
+  - n: 72
+    glosa: sun
+    jirajara: yuau
+    ayoman: in
+    cuyon: yivac/yibatc
+    proto_chibcha: "*sayuia"
+    mixta: "(yuau)"
+  - n: 73
+    glosa: moon
+    ayoman: "(yi-i)"
+    cuyon: yio
+    nota: "⭐ Oliver anota 'Tamanaco' junto a esta entrada — lengua CARIBE. Posible préstamo: perseguir"
+  - n: 86
+    glosa: mountain
+    cuyon: padeuyes
+    mixta: "(aspigu/pokdiu)"
+  - n: 79
+    glosa: earth
+    jirajara: guedap
+    ayoman: gucdap
+    cuyon: dap yuao
+    proto_chibcha: "*ka-pi"
+  - n: 77
+    glosa: stone
+    ayoman: eyi
+    cuyon: hiyuha/yuao
+    proto_chibcha: "*haika"
+    mixta: "(dox)"
+  - n: 17
+    glosa: man
+    ayoman: yus/yuza
+    cuyon: yus
+    proto_chibcha: "*achai"
+    nota: "yllisco = plural"
+  - n: 16
+    glosa: woman
+    jirajara: sie puk
+    ayoman: sen-ha/sem-pa
+    cuyon: susegame
+    mixta: "(sie puc)"
+  - n: 139
+    glosa: boy
+    ayoman: unu-yo
+    cuyon: gogus/pagos
+    mixta: "(pagog)"
+  - n: 139
+    glosa: girl
+    jirajara: pagog
+    ayoman: kob-pa
+    cuyon: kobas/paspas/pagas
+  - n: 113
+    glosa: sky
+    jirajara: inguet
+    mixta: "(ínguet)"
+  - n: 18
+    glosa: person
+    mixta: "(yíllic)"
+  - n: 95
+    glosa: eat
+    jirajara: tanuoy
+    cuyon: naime/nambisi
+    mixta: "(nan)"
+  - n: 54
+    glosa: drink
+    cuyon: mambi/manvi
+  - n: null
+    glosa: "leave (go)"
+    cuyon: knyivi
+    mixta: "(numague)"
+  - n: null
+    glosa: pain
+    jirajara: siguigauni
+    ayoman: guipa
+    cuyon: jok-jok
+    mixta: "(susupui)"
+  - n: 94
+    glosa: cold
+    jirajara: tatadmu
+    ayoman: tachat
+    cuyon: testes-tivini
+
+# ── Qué falta ────────────────────────────────────────────────────────────
+# 1. Cotejar contra la imagen: hay diacríticos y variantes que el OCR come.
+# 2. Los porcentajes lexicoestadísticos (Jirajara-Ayoman, Jirajara-Cuyón,
+#    Ayoman-Cuyón) están en la misma tabla y no se han leído.
+# 3. Cruzar las 7 formas `jirajaroide-contacto` del lexicón contra esto.
+# 4. Perseguir Oramas 1916 (la lista mixta) y el 'Tamanaco' de 'moon'.
+# 5. Cruzar con Jahn 1927 cap. V, que trae vocabularios ayamán y gayón
+#    recogidos de los últimos hablantes (~1880-1910): son DOS registros
+#    independientes de las mismas lenguas, separados por décadas.

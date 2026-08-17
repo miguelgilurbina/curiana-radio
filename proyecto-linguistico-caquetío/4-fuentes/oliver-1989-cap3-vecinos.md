@@ -68,20 +68,38 @@ Nota al pie 160 del propio capítulo:
 > *"In **Appendix A, Table 8**, I have compiled a basic, although small,
 > **Jirajaran vocabulary**."*
 
-Localizada: **Tabla A-8, *"JIRAJARAN STOCK, WESTERN VENEZUELA"***, en el
-Apéndice A (pp. impresas ~591-592). Trae:
+Localizada y extraída: **Tabla A-8, *"JIRAJARAN STOCK, WESTERN VENEZUELA"***,
+pp. impresas **591-592**. Transcrita en `6-fusion/tabla_a8_jirajarano.yaml`
+(33 entradas). Cuatro columnas: **JIRAJARA · AYOMAN · CUYÓN · PROTO-CHIBCHA**,
+más una nota: *"Terms in parenthesis come from a mixed Jirajara-Ayoman word
+list (**Oramas, 1916**)"*, y porcentajes lexicoestadísticos entre las tres
+lenguas (sin leer todavía).
 
-- columnas **JIRAJARA** y **AYOMAN** enfrentadas, con formas alternativas
-  (`aguinam/kinam`, `akin/aguin`, `atogh/aman`, `du/dus/dug`…);
-- una columna **PROTO-JIRAJARA** — Oliver **reconstruyó proto-formas**;
-- porcentajes lexicoestadísticos entre las tres lenguas: **Jirajara-Ayoman**,
-  **Jirajara-Cuyón**, **Ayoman-Cuyón**;
-- *"Note 1: Terms in parenthesis come from a mixed Jirajara-Ayoman word list
-  (**Oramas, 1916**)"*.
+### 🔴 La cuarta columna es PROTO-CHIBCHA, y ahí está el argumento
 
-Para un proyecto que necesita saber **qué NO es caquetío** para poder marcar
-préstamos, tener el vocabulario del vecino más inmediato es tan útil como tener
-el propio.
+**Oliver no reconstruyó el jirajarano.** Puso el **proto-chibcha de Wheeler
+(1972)** al lado para **poner a prueba la hipótesis chibcha** — y su frase
+*"few points of comparison"* se puede verificar en el propio dato:
+
+| Glosa | Jirajara | Ayomán | Cuyón | Proto-chibcha | |
+|---|---|---|---|---|---|
+| agua | `ing` | `ing/in/(a)in` | `him` | `*sidi(n)ye` | ✗ |
+| fuego | `dueg` | `du/dus/dug` | `dut/idu` | `*guka` | ✗ |
+| diente | — | `aguinam/kinam` | — | `*du-/(va)-de` | ✗ |
+| piedra | — | `eyi` | `hiyuha/yuao` | `*haika` | ✗ |
+| nariz | `akingans` | `akin/aguin` | `kin/kuin` | `*su-ni-ka` | ? |
+
+El vocabulario básico —agua, fuego, diente, piedra— **no se parece**. Es la
+clase de comparación que decide filiaciones, y sale negativa.
+
+> Para un proyecto que necesita saber **qué NO es caquetío** para poder marcar
+> préstamos, tener el vocabulario del vecino inmediato vale tanto como tener el
+> propio. Las 7 formas `jirajaroide-contacto` del lexicón por fin tienen contra
+> qué contrastarse.
+
+Y un cabo suelto que puede rendir: en la entrada de **'luna'** (ayomán `yi-i`,
+cuyón `yio`) Oliver anota **"Tamanaco"** — que es una lengua **caribe**. Si es
+un préstamo caribe dentro del jirajarano, dice algo de la esfera entera.
 
 ## El mapa: dónde estaban, y desde cuándo hubo contacto
 
@@ -109,6 +127,65 @@ Lomas del Caballo, altiplanicies de Baragua, valle de Carora.
 
 Un topónimo wayuunaiki en la sierra falconiana es dato de esfera, no de
 paisaje: entra a [[esfera-de-interaccion]] y a la revisión toponímica.
+
+## §3.2.3 — los chibchas, y la ruta de la sal por oro
+
+**El marco lingüístico.** El stock **Macro-Chibcha-Paezano** que Wheeler (1972)
+analiza incluye **kogi (caggaba), arhuaco (ika), marocacero, motilón, muisca
+(chibcha propiamente) y tunebo**. Kogi, arhuaco y marocacero forman un grupo
+apretado; el **motilón es el más divergente** — y Oliver aclara que *"the
+Chibchan Motilón Indians are now recognized as the **Barí**, and their language
+is also known as **Dobokubi**"*.
+
+Sobre el origen: **Constenla (1981)** sitúa el foco proto-chibcha en
+Centroamérica; **Oliver se declara del bando colombiano**, en las llanuras del
+Magdalena-Cauca (Lathrap 1977). Y advierte que el dato lingüístico del s. XVI
+es *"so scanty"* que correlacionar grupos históricos con el stock es difícil.
+
+### ⭐⭐ Los coanaos y el comercio de sal por oro
+
+Los **coanaos** son, según Oliver, de los mejores candidatos a macro-chibchas —
+*"however, this can not be proven on linguistic grounds, but rather in terms of
+**dress etiquette**"*. Y cita a **Esteban Martín**, de la expedición de Alfínger
+(1531-1534):
+
+> *"These Coanaos are numerous peoples, and cover their shameful parts, and are
+> a people that **trade a lot [with] inland [peoples], taking the salt to
+> 'sell' in exchange for gold**. They wear mantas ['blankets'] and caps of
+> cotton…"*
+
+> 🔴 **Esto sostiene la decisión de Miguel del 2026-08-16 sobre `hayo` y
+> `caraota`.** Su argumento fue: *"de repente era un producto que venía de
+> afuera y, por ende, así como el oro, podía ser el hayo de este contacto
+> chibcha"*. Aquí está la ruta documentada, en fuente del s. XVI: **sal costera
+> hacia el interior, oro hacia la costa**, con pueblos chibchas de por medio.
+> Un préstamo léxico viajando por esa vía no es una anomalía: es lo esperable.
+> El complejo de la coca —`hayo` y su `raporón`— es exactamente el tipo de bien
+> que circula por una ruta así.
+
+## 🔴 §3.8 — el fundamento de la regla 4, dicho por Oliver
+
+La regla 4 del CLAUDE.md (*"los caquetíos no eran una sola sociedad"*) se cita
+en el proyecto de oídas. Esta es la sección donde Oliver la argumenta, y las
+diferencias que establece son **políticas y militares**, no de matiz:
+
+| | Caquetío **costero** (el que simulamos) | Caquetío de **Barquisimeto-Yaracuy** |
+|---|---|---|
+| Jefatura | **tenía jefe paramount** (el diao) | *"clearly had **no** paramount chief"* — dos tipos de líder distintos |
+| Guerra | menos beligerante | *"extremely bellicose"*; guerra constreñida pero constante |
+| Riqueza | redistribuida | acumulada, no redistribuida |
+
+Oliver es honesto sobre el límite: *"the available data for the Barquisimeto
+Caquetío is too scanty and insufficient to warrant a detailed comparison"*.
+
+> ⚠️ **Y la trampa concreta que esto destapa.** Oliver advierte de un rito cuya
+> descripción menciona el **río de Barquisimeto (Turbio)**, y concluye que *"this
+> is probably a **Barquisimeto Caquetío** ritual"*. Es decir: **hay material
+> ritual en las crónicas que pertenece a la otra polity**. Cualquier hecho del
+> corpus de creencia que venga de una fuente que hable de Barquisimeto o el
+> Yaracuy está bajo sospecha y hay que revisarlo contra esta sección.
+>
+> Eso convierte §3.8 en tarea de auditoría, no solo de lectura.
 
 ## Estado de la minería y trampas medidas
 
