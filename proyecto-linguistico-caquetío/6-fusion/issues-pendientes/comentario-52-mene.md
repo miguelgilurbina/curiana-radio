@@ -27,3 +27,22 @@ del XVI.
 
 Pendiente: `Mene Mauroa` entra a la lista de topónimos de las sesiones de
 revisión (junto a Cujicana y Carirubana — D9/#38).
+
+---
+
+**Confirmación desde el propio lexicón (2026-08-18).** La nota de la entrada
+`mene` ya traía la evidencia, sin que nadie la hubiera conectado con este issue:
+
+> *"Alvarado 1921, p.218 s.v. MÉNE, citando **Oviedo II.301 («betún a manera de
+> brea»)** y a Codazzi, que localiza los yacimientos en Coro y Maracaibo […]
+> advertencia: la sintaxis de Arcaya es ambigua y esa cita **NO sostiene la
+> glosa de petróleo** o rezumadero — quien la sostiene es Alvarado."*
+
+O sea: **Oviedo dice literalmente "betún a manera de brea"**, que es exactamente
+la decisión de Miguel y coincide con el *tar* de Oliver. La nota incluso ya
+advertía que la cita de Arcaya no sostenía 'petróleo'.
+
+Tres fuentes independientes convergen en **brea**: Oviedo (s. XVI, vía
+Alvarado), Oliver (Tabla A-9) y el uso toponímico que aporta Miguel (los *menes*
+como rezumaderos de asfalto). La glosa actual —*"sustancia que brota de la
+tierra (petróleo, resina)"*— es la que hay que corregir.

@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-17**.
+<!--GENERADO--> Generado el **2026-08-18**.
 
 **1256 ítems propuestos** en 9 propuestas, más **6 issue(s)/comentario(s) redactados sin publicar**.
 

@@ -98,3 +98,62 @@ declarar la polity, no hay forma de medir cuántos son — y la regla 4 seguirá
 siendo una advertencia en el CLAUDE.md en vez de una restricción comprobable.
 
 Fuente: `4-fuentes/oliver-1989-cap3-vecinos.md` §3.8.
+
+---
+
+## Ampliación 2026-08-18 — el lexicón también, y el resultado invierte lo esperado
+
+Se extendió la auditoría a las **1.413 entradas del lexicón**
+(`curiana_sim/auditar_polity_lexicon.py`, que queda en el repo para repetirla).
+
+**Resultado: solo 7 entradas mencionan otra polity**, 4 de ellas marcadas
+caquetío. Y al leerlas enteras, **las cuatro son casos donde el proyecto YA
+razonó bien**:
+
+| Entrada | Qué pasa |
+|---|---|
+| `mene` | La nota ya advierte que *"la cita de Arcaya sobre la Relación de Barquisimeto NO sostiene la glosa de petróleo — quien la sostiene es Alvarado"* |
+| `cumaragua` | **D10 ya adjudicó por localización**: Alvarado p.102 la sitúa en *"costas de Paraguaná"*, y la lectura de Barquisimeto queda registrada como descartada |
+| `bariki` | Cita la Relación de Barquisimeto **además** de Zavala y Galeotto Cey |
+| `sima` | ⚠️ el único flojo — ver abajo |
+
+> **La inversión**: las entradas que nombran otra polity son **las auditadas**.
+> Nombran la región precisamente porque alguien estaba siendo cuidadoso. El
+> riesgo no está en esas 7 — está en las **219 `caquetío-atestiguado`
+> restantes**, que citan a Zavala, Alvarado u Oviedo **sin decir de qué región
+> procede la atestación**.
+>
+> Es decir: el barrido por texto **no puede medir esto**, porque el dato no está
+> escrito. Es el mismo argumento que la sección anterior, ahora con número:
+> **7 medibles de 1.413**. Sin un campo obligatorio, la regla 4 seguirá sin ser
+> comprobable ni en el corpus ni en el lexicón.
+
+### 🔴 `sima` — la que sí está floja, y toca D9
+
+```python
+"sima": {"sig": "cerro, montaña, elevación",
+         "fuente": "caquetío-reconstruido",
+         "notas": "núcleo fundacional, forma justificada por cognado en
+                   lokono/topónimo (Barquisimeto)"}
+```
+
+Una palabra del **núcleo fundacional** cuya única justificación toponímica es
+**de Barquisimeto**, es decir de la otra polity.
+
+**Y hay una consecuencia que nadie había notado.** El motor enseña este
+compuesto en sus prompts y lo usa como ejemplo canónico de acuñación:
+
+```
+curiana_lexicon.py:6863   [sima-bana: sima+-bana = orilla del cerro]
+curiana_lexicon.py:7548   ídem, en el prompt
+curiana_social.py:269-272 Shaboro acuña [sima-bana]; se propaga a Buio-sha
+                          — es el fixture del test de contagio léxico
+```
+
+`sima-bana` = 'orilla del cerro' **solo funciona si `-bana` significa 'orilla'**.
+
+> ⚠️ **Si D9 (#38) resuelve que `bana` = 'cerro', entonces `sima-bana` =
+> 'cerro-cerro'**, y el ejemplo insignia de neologismo del motor —el que además
+> usa el test de contagio— deja de tener sentido y hay que reescribirlo.
+>
+> Añádase al radio de impacto de D9, que ya iba por nueve archivos.

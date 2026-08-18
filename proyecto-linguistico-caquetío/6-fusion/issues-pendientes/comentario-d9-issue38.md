@@ -151,3 +151,32 @@ señala para esa revisión: **Cujicana · Carirubana** (y los que salgan del
 gazeteer y de la revisión regional que hará junto al dictado de Medina Colina).
 
 La chuleta del CLAUDE.md ya marca la glosa como EN DISPUTA mientras tanto.
+
+---
+
+## Ampliación 2026-08-18 — `sima-bana`, el ejemplo insignia del motor, depende de esto
+
+La auditoría de polity del lexicón (`curiana_sim/auditar_polity_lexicon.py`)
+destapó una consecuencia que no estaba en el radio de impacto de nueve archivos.
+
+El motor **enseña y usa** este compuesto:
+
+```
+curiana_lexicon.py:6863   [sima-bana: sima+-bana = orilla del cerro]
+curiana_lexicon.py:7548   ídem, dentro del prompt
+curiana_social.py:269-272 Shaboro acuña [sima-bana]; se propaga a Buio-sha
+                          — es el FIXTURE DEL TEST de contagio léxico
+```
+
+Y `sima` está en el lexicón como **'cerro, montaña, elevación'**
+(`caquetío-reconstruido`).
+
+> **`sima-bana` = 'orilla del cerro' solo se sostiene si `-bana` es 'orilla'.
+> Si D9 resuelve 'cerro', el compuesto pasa a ser 'cerro-cerro'** — y no es un
+> ejemplo cualquiera: es el que el motor usa para demostrar cómo se acuña y se
+> contagia un neologismo, y el que verifica su test.
+
+Hay que decidirlo junto con la glosa, no después. Y de paso: la nota de `sima`
+dice que su forma está *"justificada por cognado en lokono/topónimo
+(Barquisimeto)"* — una palabra del núcleo fundacional apoyada en un topónimo de
+**la otra polity**. Merece revisión aparte.
