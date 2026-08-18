@@ -78,14 +78,20 @@ sitios:
     nombre_oliver: "José Gregorio Hernández / GH-1"
     region: coro-golfete
     complejo: "Los Médanos y Urumaco"
-    precontacto_propuesto: probable
+    precontacto_propuesto: si
     precontacto_razon: >
-      La lista imprime sus números de laboratorio: C-14 dated ISGS-1253, 1423
-      y 1424 — TRES dataciones propias. Componente Urumaco presente.
-    deuda: >
-      Las tres fechas están sin leer. Hay que localizar ISGS-1253/1423/1424 en
-      las tablas del cap. 4 (Table 15 y ss.) o en Oliver 1984. Con ellas esto
-      pasa a `si` o cae, pero deja de ser inferencia.
+      ✅ LAS TRES FECHAS LOCALIZADAS (Table 15 del cap. 4, recalibrada con OxCal
+      v3.10). Dos caen DENTRO de la ventana simulada y una es colonial:
+        ISGS-1253 (Sector 1)  570±70 BP  → cal. A.D. 1299-[1363]-1424
+        ISGS-1423 (Sector NW) 550±110 BP → cal. A.D. 1280-[1407]-1440
+        ISGS-1424 (Sector 2)  330±110 BP → cal. A.D. 1521-[1572]-1641
+      Dos dataciones propias en el s. XIV-XV, en sectores distintos del sitio.
+      Ya no es inferencia por complejo cerámico: son fechas.
+    cautela: >
+      El sitio fue REOCUPADO: ISGS-1424 es colonial. Un nodo con ocupación
+      precontacto **y** posterior; al ponerlo en escena hay que usar la capa,
+      no el sitio entero. De FAL-100 Sector-2 procede además el cuenco de Los
+      Médanos-B con motivo zoomorfo en espiral (Fig. 86).
     procedencia: {obra: oliver-1989-cap4, detalle: "Apéndice E FAL-100"}
 
   - fal: FAL-099
@@ -106,7 +112,10 @@ sitios:
     complejo: "Urumaco, Dabajuroide"
     precontacto_propuesto: probable
     precontacto_razon: "Urumaco + la lista marca C-14 (cf. Tamers 1965)."
-    deuda: "Tamers 1965 no está en el repo. Es fuente distinta de Tamers 1970."
+    nota: >
+      La Table 15 declara sus fuentes: "Sources for IVIC: Tamers 1965, 1967".
+      Oliver ya publicó las fechas IVIC recalibradas, así que Tamers 1965 deja
+      de ser bloqueante — sigue valiendo para el contexto de cada muestra.
     procedencia: {obra: oliver-1989-cap4, detalle: "Apéndice E FAL-111"}
 
   - fal: FAL-106
@@ -177,13 +186,20 @@ sitios:
     nombre_oliver: 'Santa Ana ["El Cerro"]-1'
     region: paraguana
     complejo: "Urumaco"
-    precontacto_propuesto: probable
+    precontacto_propuesto: si
     precontacto_razon: >
-      Urumaco (termina ~1393/1450) MÁS datación marcada en la lista
-      (cf. Tamers 1965). Y cruza con Esteves: describe una "antigua aldea
-      indígena en cuyas cercanías los españoles fundaron en 1538 el pueblo de
-      Santa Ana de Paraguaná", con "restos de cerámica indígena y europea".
-      Aldea anterior a la fundación española, con secuencia hasta el contacto.
+      ⭐ EL MEJOR SOSTENIDO DE TODO EL REGISTRO. Tres dataciones propias en la
+      Table 15, TODAS precontacto, cubriendo tres siglos de ocupación continua:
+        IVIC-18  790±100 BP → cal. A.D. 1160-[1257]-1280
+        IVIC-16  730±110 BP → cal. A.D. 1210-[1278]-1387
+        IVIC-14  520±120 BP → cal. A.D. 1299-[1415]-1451
+      La última la obtuvo Zucchi (com. pers.) y Oliver la llama "a terminal
+      date… of cal. A.D. 1415". Su cerámica es Late Urumaco "still lavishly
+      decorated", que Oliver contrapone al estilo empobrecido contemporáneo de
+      Supidebo-Antúnez: es un sitio de plena vitalidad en la ventana simulada.
+      Y cruza con Esteves, que describe una "antigua aldea indígena en cuyas
+      cercanías los españoles fundaron en 1538 el pueblo de Santa Ana de
+      Paraguaná", con "restos de cerámica indígena y europea".
     cautela: >
       Esteves llama al sitio Chamuriana; Oliver lo registra como Santa Ana
       "El Cerro". Hay que confirmar que hablan del mismo lugar antes de fundir

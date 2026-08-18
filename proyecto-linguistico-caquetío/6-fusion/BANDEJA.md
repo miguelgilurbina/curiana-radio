@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-08-18**.
 
-**1256 ítems propuestos** en 9 propuestas, más **6 issue(s)/comentario(s) redactados sin publicar**.
+**1256 ítems propuestos** en 10 propuestas, más **6 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -23,6 +23,10 @@ editar_a_mano: no
 |---|---|---|---|
 | `nodos_foco_92.yaml` | ? | 17 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
+| `tabla15_c14_oliver.yaml` | ? | 0 | ⚠️ no parsea: mapping values are not allowed here
+  in "<unicode string>", line 27, column 26:
+      - lab: ISGS-1173, sitio: "Túcua",              bp: "110 ... 
+                             ^ |
 | `tabla_a8_jirajarano.yaml` | oliver-1989-apendice-a | 33 |  |
 | `tabla_a9_oliver.yaml` | oliver-1989-cap2 | 21 |  |
 

@@ -1,0 +1,73 @@
+# DATO — Tabla 15 de Oliver 1989 cap. 4: "C14 dates from Coastal Falcón and the
+# Netherlands Antilles". 23 dataciones, RECALIBRADAS por el propio Oliver con
+# OxCal v3.10 para la versión PDF de 2006 (la calibración original era de
+# 1988-89, a 1 sigma).
+#
+# Extraída del .DOC del capítulo con antiword — NO del escaneo. La tabla sí
+# sobrevive a la extracción; una lectura anterior la dio por perdida y era
+# falso.
+#
+# Fuentes que la propia tabla declara:
+#   IVIC-*  → Tamers 1965, 1967
+#   I-*     → Heidercker & Seigel 1969
+#   ISGS-*  → laboratorio de Illinois (Oliver 1984)
+#
+# LEER: cal_menos / cal_central / cal_mas son A.D. calibrados a 1 sigma.
+# La ventana simulada es el s. XIV-XV (1300-1500).
+
+meta:
+  obra: oliver-1989-cap4
+  tabla: 15
+  figura: 85
+  calibracion: "OxCal v3.10 (recalibrada 2006); original 1 sigma 1988-89"
+  n: 23
+  generado: '2026-08-18'
+
+dataciones:
+  - lab: ISGS-1173, sitio: "Túcua",              bp: "1100 ± 70",  cal: [783, 944, 998],    ventana: no
+  - lab: ISGS-1174, sitio: "Píritu-La Luz",      bp: "920 ± 110",  cal: [1000, 1098, 1220], ventana: no
+  - lab: IVIC-223,  sitio: "Knip-9 (Curazao)",   bp: "910 ± 50",   cal: [1027, 1112, 1192], ventana: no
+  - lab: IVIC-224,  sitio: "Knip-9 (Curazao)",   bp: "830 ± 60",   cal: [1158, 1215, 1261], ventana: no
+  - lab: IVIC-12,   sitio: "La Luz, Paraguaná",  bp: "830 ± 50",   cal: [1160, 1215, 1260], ventana: no
+  - lab: IVIC-18,   sitio: "Santa Ana, Paraguaná", bp: "790 ± 100", cal: [1160, 1257, 1280], ventana: no, fal: FAL-154
+  - lab: ISGS-1255, sitio: "Túcua",              bp: "790 ± 70",   cal: [1164, 1257, 1279], ventana: no
+  - lab: I-4026,    sitio: "Tanki Flip (Aruba)", bp: "765 ± 105",  cal: [1162, 1262, 1284], ventana: no
+  - lab: I-4025,    sitio: "Tanki Flip (Aruba)", bp: "740 ± 105",  cal: [1209, 1277, 1383], ventana: roza
+  - lab: IVIC-16,   sitio: "Santa Ana, Paraguaná", bp: "730 ± 110", cal: [1210, 1278, 1387], ventana: roza, fal: FAL-154
+  - lab: IVIC-250,  sitio: "Knip-26 (Curazao)",  bp: "720 ± 60",   cal: [1258, 1279, 1285], ventana: no
+  - lab: ISGS-1184, sitio: "Corralito",          bp: "720 ± 70",   cal: [1257, 1279, 1377], ventana: roza
+  - lab: ISGS-1257, sitio: "Corralito",          bp: "650 ± 70",   cal: [1278, 1336, 1393], ventana: SI
+  - lab: IVIC-249,  sitio: "Knip-27 (Curazao)",  bp: "630 ± 50",   cal: [1281, 1344, 1395], ventana: SI
+  - lab: ISGS-1256, sitio: "Supidebo",           bp: "630 ± 150",  cal: [1260, 1344, 1430], ventana: SI
+  - lab: ISGS-1188, sitio: "Antúnez-5",          bp: "580 ± 110",  cal: [1280, 1362, 1430], ventana: SI
+  - lab: ISGS-1253, sitio: "FAL-100 Sector 1",   bp: "570 ± 70",   cal: [1299, 1363, 1424], ventana: SI, fal: FAL-100
+  - lab: ISGS-1423, sitio: "FAL-100 Sector NW",  bp: "550 ± 110",  cal: [1280, 1407, 1440], ventana: SI, fal: FAL-100
+  - lab: IVIC-14,   sitio: "Santa Ana, Paraguaná", bp: "520 ± 120", cal: [1299, 1415, 1451], ventana: SI, fal: FAL-154
+  - lab: ISGS-1254, sitio: "Supidebo 1b",        bp: "470 ± 70",   cal: [1409, 1432, 1452], ventana: SI
+  - lab: IVIC-241,  sitio: "Gaito",              bp: "340 ± 50",   cal: [1455, 1567, 1640], ventana: cruza-contacto
+  - lab: ISGS-1424, sitio: "FAL-100 Sector 2",   bp: "330 ± 110",  cal: [1521, 1572, 1641], ventana: no, fal: FAL-100
+  - lab: IVIC-236,  sitio: "Savaneta (Aruba)",   bp: "70 ± 60",    cal: [1880, 1927, 1955], ventana: no
+
+nota_supidebo: >
+  "Supidebo Coast, Shell mound 'C', aceramic shell lense beneath sterile sand
+  and, in turn, beneath a ceramic shell lense." — estratigrafía sellada: capa
+  de concha SIN cerámica bajo arena estéril bajo capa de concha CON cerámica.
+  Es el tipo de secuencia que el registro de nodos necesitaría para declarar
+  precontacto sin depender de superficie.
+
+lo_que_esto_cambia:
+  - >
+    FAL-154 (Santa Ana, Paraguaná) tiene TRES dataciones propias, todas
+    precontacto, cubriendo 1160-1451. Oliver llama a IVIC-14 "a terminal date
+    of cal. A.D. 1415" y describe su cerámica Late Urumaco como "still
+    lavishly decorated", en contraste con el estilo empobrecido contemporáneo
+    de Supidebo-Antúnez. Es el nodo mejor sostenido del registro.
+  - >
+    FAL-100 tiene tres, dos en la ventana (1299-1424, 1280-1440) y una
+    colonial (1521-1641): ocupación precontacto Y reocupación posterior.
+  - >
+    Ocho dataciones caen de lleno en la ventana simulada. Hasta hoy el registro
+    de nodos no tenía NINGUNA para el continente.
+  - >
+    Las islas están igual de bien fechadas que la costa (Knip, Tanki Flip),
+    lo que sostiene la esfera marítima con cronología, no solo con cerámica.
