@@ -1,6 +1,6 @@
 ---
 tipo: fuente
-obra: "Chapter 3, §3.2.3 y §3.3: Macro-Chibchan and Jirajaran-Speaking Ethnic Groups (en *The Archaeological, Linguistic and Ethnohistorical Evidence for the Expansion of Arawakan into Northwestern Venezuela*)"
+obra: "Chapter 3, §3.2.3, §3.2.4 y §3.3: Macro-Chibchan, Carib and Jirajaran-Speaking Ethnic Groups (en *The Archaeological, Linguistic and Ethnohistorical Evidence for the Expansion of Arawakan into Northwestern Venezuela*)"
 autor: "Oliver, José R."
 anio: 1989
 genero: etnohistoria
@@ -12,7 +12,7 @@ verificado: 2026-08-17
 aliases: ["Oliver 1989 §3.3", "los vecinos de los caquetíos", "jirajaranos"]
 ---
 
-# Oliver 1989 §3.2.3 y §3.3 — los vecinos: chibchas y jirajaranos
+# Oliver 1989 §3.2.3, §3.2.4 y §3.3 — los vecinos: chibchas, caribes y jirajaranos
 
 ## Qué se le preguntó
 
@@ -186,6 +186,106 @@ Caquetío is too scanty and insufficient to warrant a detailed comparison"*.
 > Yaracuy está bajo sospecha y hay que revisarlo contra esta sección.
 >
 > Eso convierte §3.8 en tarea de auditoría, no solo de lectura.
+
+## §3.2.4 — los caribes, y la palabra que no era una etnia
+
+### 🔴 Lo más importante: "caribe" en las crónicas es una categoría POLÍTICA
+
+> *"Throughout the XVIth to XVII/XVIIIth centuries **none of the ethnic and
+> linguistic terms discussed above were mentioned by the chroniclers**. The
+> documents speak very frequently of **caribes**, but only as a categorical
+> opposition to the Spanish category of **guaitiao** (Taíno word roughly
+> translating as 'ally'). Often the very suspicion of cannibalistic rituals was
+> enough to label any group as **caníbales**… This elementary opposition
+> responded to **the Hispanic policies of conquest and colonization and not to
+> specific ethnic and linguistic categories**."*
+
+Cuando una crónica dice *caribe* no está diciendo "hablante de una lengua
+caribe": está diciendo **"enemigo, esclavizable"**. Y su opuesto, *guaitiao*,
+no es una etnia sino **"aliado"**.
+
+> **Consecuencia para el canon**: cualquier atribución de lengua o filiación que
+> descanse en que una crónica llamó "caribes" a un grupo **no vale como dato
+> lingüístico**. Es la misma clase de error que la regla 3 (precontacto ≠
+> colonial), pero en el eje étnico: la etiqueta es del colonizador, no del
+> hablante. Oliver remite a **Sued Badillo, *Los Caribes: ¿realidad o fábula?*
+> (1978)** y **Peter Hulme, *Colonial Encounters* (1986)**.
+
+### ⭐ Y la palabra conecta con algo que el repo ya tenía a medias
+
+El proyecto ya había analizado `guaitiao` sin saber que era la mitad de este
+sistema: `wa-` (3ª pl.) + raíz **`-(i)tiao`** (recíproco) → taíno *waitiao* →
+préstamo español *guaitiao* 'amigo, aliado'; con `da-` (1ª sg.) → *daitiao*
+(ver [[zavala-reyes-2015]] y [[oliver-1989-cap2]]).
+
+**Es la misma raíz que `diao`**, el título del jefe. Los españoles montaron su
+sistema de clasificación colonial —aliado contra enemigo— sobre una palabra
+indígena de reciprocidad emparentada con el título del señor caquetío. Para un
+proyecto sobre el contacto, eso es una pieza de primer orden.
+
+### La clasificación caribe, y quién es quién
+
+Oliver sigue a **Durbin (1977)**: Caribe del Norte y Caribe del Sur, con el del
+Norte más cercano al proto-caribe. El **Caribe Costero Venezolano** lo componen:
+
+| Sub-grupo | Lenguas |
+|---|---|
+| **Caribe Costero Venezolano** | **Chayma, Cumanagoto, Yao, Tamanaco** |
+| Caribe de la Sierra de Perijá | Japrería, Yukpa, Yuko |
+| Opone-Carare | Opone, Carare |
+
+**Cumanagoto** es el estrato al que [[esteves-1989]] atribuye topónimos de
+Paraguaná (*Caradacagua*, *Manare*, el sufijo `cuar` de *Adícora*) — y sobre el
+que su nota ya advertía que **sobre-representa sus atribuciones** porque su
+autoridad léxica era Caulín. Ahora hay clasificación independiente contra la que
+contrastarlas.
+
+Y **Tamanaco** es la lengua anotada junto a 'luna' en la Tabla A-8 del
+vocabulario jirajarano: un préstamo caribe dentro del jirajarano.
+
+### La historia: por qué los caquetíos fueron por donde fueron
+
+- La expansión caribe usó **la misma ruta** (hacia el sur del Maracaibo por la
+  depresión del Táchira) que después usarían los arahuacos, **pero mucho antes**.
+- *"Probably, the later Arawakan expansion (leading to Caquetío) **did not use
+  this route precisely because the Caribs had established a stronghold** in this
+  area."* — La geografía caquetía se explica en parte por dónde **no** podían ir.
+- La expansión caribe al Maracaibo es aproximadamente contemporánea de la del
+  caquetío ancestral en los Llanos del Norte.
+
+### Convivencia y comercio, no solo frontera
+
+- *"Amidst the **Bubure** of Juruara, there were **a few Caquetío villages**"* —
+  enclaves caquetíos dentro de territorio caribe.
+- **Pemenos y bubures** tienen topónimos de filiación caribe (*Roromoni*…), y
+  comerciaban productos agrícolas *"and possibly the Caquetío as well"*.
+- *"the trade is **highly selective** between groups"* — no todos con todos.
+- Y una caracterización que hay que registrar con pinzas: Oliver contrasta a los
+  caribes de Perijá y Juruara con **"the Caquetío, who were always peaceful"**.
+  Viene de las crónicas — las mismas que inventaron la oposición
+  caribe/guaitiao, que este capítulo advierte no tomar al pie de la letra.
+
+### 🔴 Un conflicto de estratos en el lexicón
+
+Oliver anota al paso: ***"Onoto is the Carib word for achiote or bija"***. Pero
+el lexicón tiene:
+
+```python
+"bixa":   {"es": "bija, onoto, achiote (Bixa orellana), pigmento corporal rojo",
+           "fuente": "taíno", ...}
+"bariki": {"sig": "tierra colorada, pigmento encarnado...",
+           "fuente": "caquetío-atestiguado", ...}
+```
+
+La entrada `bixa` mete en una sola glosa **tres palabras de tres estratos**:
+`bixa` (taíno), `onoto` (caribe) y el referente que en caquetío es `bariki`. Hay
+que separarlas — mismo patrón que `kadushi`/`dato` (#51): una glosa que aplana
+varias lenguas sobre un referente.
+
+> ⚠️ **Hallazgo lateral para el issue del campo `polity`**: la nota de `bariki`
+> cita *"Arcaya… en la **Relación de Barquisimeto** 1579"*. La auditoría de
+> polity se hizo solo sobre `3-mundo/corpus/`; **el lexicón tiene el mismo
+> problema y no se ha medido**.
 
 ## Estado de la minería y trampas medidas
 
