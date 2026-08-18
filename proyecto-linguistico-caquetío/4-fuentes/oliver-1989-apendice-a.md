@@ -20,24 +20,64 @@ El issue lo llamaba *"la pieza que más rendiría"* sin saber qué contenía. Ya
 sabe. Está en las **páginas impresas 559-594** de la tesis (pdf 586-621, desfase
 −27) del PDF en abierto de UCL Discovery.
 
-Son **36 páginas** y contienen **al menos nueve tablas numeradas** (A-1 a A-9),
-no una lista suelta. Inventario medido el 2026-08-17:
+Son **36 páginas** y contienen **nueve tablas numeradas** (A-1 a A-9), no una
+lista suelta.
 
-| Tabla | Qué es | pp. impresas |
-|---|---|---|
-| A-1 y ss. | formularios *"LISTA DIAGNOSTICA LEXICO-ESTADISTICA"*, bilingües | 560 y ss. |
-| — | **Vocabulario paraujano (añú) de 1958-59**, *"courtesy of Johannes Wilbert"* — comparanda del vecino arahuaco más próximo, recogida en campo | ~561 |
-| **A-7** | ***Swadesh's 100 Basic Vocabulary List: Comparative Arawakan Lexicon*** — columnas por lengua **con su ubicación**: BAURE (Bolivia), TERENA y KINIKINAO (Matto Grosso), CAMPA y MACHIGUENGA (Ucayali-Perú), PIRO-IPURINA (Urubamba-Purús)… | ~585-590 |
-| **A-8** | ***JIRAJARAN STOCK, WESTERN VENEZUELA*** — jirajara y ayomán enfrentados, **columna PROTO-JIRAJARA** y porcentajes lexicoestadísticos. Ver [[oliver-1989-cap3-vecinos]] | ~591-592 |
-| **A-9** | ⭐ ***Selected Caquetío Vocabulary from the XVIth Century*** | 593-594 |
+### 🔴 El inventario real, medido página a página (2026-08-18)
 
-Es decir: **#62 no era "una lista de palabras"**, es un aparato comparativo
-arahuaco con sus vecinos no arahuacos al lado. La Tabla A-7 sola daría al
-método comparativo del proyecto una base que hoy no tiene.
+La entrada anterior de esta nota decía "al menos nueve tablas" sin mapearlas.
+Mapeadas, con su desfase ya aplicado (impresa = pdf − 27):
 
-⚠️ **Las tablas necesitan `--psm 6` y `--rotar auto`**: van a dos columnas y
-varias páginas del escaneo están giradas 90°. Sin eso, glosas y formas se
-desalinean o la página entera devuelve basura.
+| Tabla | Lenguas comparadas | pp. impresas | pdf |
+|---|---|---|---|
+| A-1 | formularios *"LISTA DIAGNOSTICA LEXICO-ESTADISTICA"* + vocabulario **paraujano** de Wilbert (1958-59) | ~560-562 | 587-589 |
+| **A-2** | ⭐ **GUAJIRO · PARAUJANO · ARAWAK (lokono) · ISLAND-CARIB · MAIPURE** | **563-565** | **590-592** |
+| **A-3** | ⭐ **ACHAGUA · PIAPOCO · GUAREQUENA · YAVITERO · MANDAUACA** | **566-570** | **593-597** |
+| A-4 | NEWIKI (NAIKI) / WAKUENAI — por dialectos | 571-575 | 598-602 |
+| A-5 | NEWIKI / WAKUENAI (cont.): Hohodeni, Dzuboya, Maurieni, Mapatse-dakenai, Dzawinainai | 576-580 | 603-607 |
+| A-6 | MANAO · BARE (BARIA) · WAPISHIANA · CAUYARI — con localización por lengua | 581-585 | 608-612 |
+| A-7 | BAURE (Bolivia) · TERENA y KINIKINAO (Matto Grosso) · CAMPA y MACHIGUENGA (Ucayali) · PIRO-IPURINA (Urubamba-Purús) | 586-589 | 613-616 |
+| **A-8** | **JIRAJARA · AYOMAN · CUYÓN** + PROTO-CHIBCHA | 591-592 | 618-619 |
+| **A-9** | **Caquetío del s. XVI** | 593-594 | 620-621 |
+
+Todas son **listas Swadesh de 100 palabras**, con filas de `Language`, `Group` y
+`Location`. Son **más de 25 lenguas arahuacas comparadas de forma sistemática**.
+
+#### ⭐⭐ La Tabla A-2 es la que el proyecto llevaba años necesitando
+
+`GUAJIRO · PARAUJANO · ARAWAK · ISLAND-CARIB · MAIPURE` **son exactamente las
+comparandas del proyecto**, en una sola tabla y sobre la misma lista de 100
+conceptos:
+
+| En la tabla | En el repo |
+|---|---|
+| Guajiro | `wayunaiki` — **769 entradas**, el 55% del lexicón |
+| Arawak | `lokono` — **198 entradas** |
+| Island-Carib | `kalinago` — 19 entradas |
+| **Paraujano** | **el añú: cero entradas**, y es el vecino arahuaco más próximo |
+| Maipure | — |
+
+El lexicón tiene casi mil palabras de wayuunaiki y lokono **sin una comparación
+sistemática entre ellas**. D11 ([#39](https://github.com/miguelgilurbina/curiana-radio/issues/39)) discute justamente el desbalance
+wayuunaiki/lokono y se ha discutido sin este dato, que estaba en una fuente que
+el repo ya tenía.
+
+#### Y la A-3 trae a los parientes más cercanos
+
+`ACHAGUA` y `PIAPOCO` son las lenguas que Fabre (siguiendo a Loukotka 1968)
+pone **en la misma rama que el caquetío**. El corpus ya usa comparanda achagua
+(`parentesco-021/022`) argumentando que las fuentes los llaman "primos"; aquí
+está el léxico para comprobarlo palabra por palabra.
+
+> **Consecuencia**: el `metodo-comparativo` del proyecto puede dejar de apoyarse
+> en cognados sueltos y pasar a tener una base tabular. Es la pieza de mayor
+> rendimiento que queda sin extraer del Apéndice A — más que completar la A-9.
+
+⚠️ **Coste real**: son ~30 páginas de tabla a varias columnas, **todas rotadas
+90°** en el escaneo. `--rotar auto --psm 6` las lee, pero la transcripción
+fiable de formas con diacríticos exige cotejo contra imagen, como la A-9.
+Conviene extraerlas **por pares de lenguas**, según la pregunta, en vez de
+volcarlas enteras.
 
 ## ⭐⭐ Tabla A-9 — *Selected Caquetío Vocabulary from the XVIth Century*
 
