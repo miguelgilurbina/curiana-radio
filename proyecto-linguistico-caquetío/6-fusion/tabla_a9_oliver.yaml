@@ -3,16 +3,30 @@
 # from the XVIth Century". pp. impresas 593-594 = pdf 620-621 (offset -27) del
 # PDF abierto de UCL Discovery.
 #
-# ⚠️ LECTURA PROVISIONAL. Sale de OCR (spa+eng, 400/600 dpi) sobre escaneo UMI.
-#    Ninguna forma debe entrar al lexicón sin cotejar contra la imagen de la
-#    página. Faltan las entradas 1-5, 7-12, 15, 20-26, 28, 32, 34-44, 47-49.
+# ESTADO (2026-08-24): 49 entradas, de las cuales 29 DICTADAS POR MIGUEL leyendo
+# la imagen a 500 dpi y 18 verificadas a ojo contra el OCR. El OCR acertó en
+# unas y falló en otras: corrigió "caca"→caça, "eque"→Cegue, "cocu"→cocuy,
+# y perdió sistemáticamente la Ç CEDILLA y varias glosas españolas.
+#
+# ⚠️ 33 números de la tabla (3-5, 7-12, 15, 20-26, 28, 32, 34-44, 47-49) siguen
+#    sin asignar: hay entradas dictadas sin número porque Miguel leyó por orden
+#    alfabético, no por numeración. Emparejar forma↔número es trabajo pendiente
+#    y NO se debe adivinar.
+#
+# ⚠️ Ninguna forma debe entrar al lexicón sin cotejar contra la imagen.
 #
 # Las CURSIVAS (= "probably not Caquetío, but from the Santa Marta area
-# [chibchan?]", nota al pie de Oliver) las identificó Miguel leyendo las
-# imágenes el 2026-08-15: son exactamente tres. El resto queda avalado por
-# Oliver como caquetío. OJO: cursiva ≠ fuera del caquetío — están dentro de un
+# [chibchan?]", nota al pie de Oliver) las identificó Miguel el 2026-08-15: son
+# exactamente tres. OJO: cursiva ≠ fuera del caquetío — están dentro de un
 # vocabulario recogido de boca caquetía; son préstamos EN la lengua (ver
 # 6-fusion/issues-pendientes/issue-hayo.md).
+#
+# 🔴 TRES PREGUNTAS ABIERTAS PARA MIGUEL:
+#   1. `Capubana` (#17): falta la columna ESPAÑOLA, y confirmar si la fonémica
+#      es `kapú` o `kapú-bana` — decide si Oliver segmenta ahí.
+#   2. `baperón` ~ `raporón`: el 15 dictó raporón, el 24 baperón, mismo
+#      referente (calabaza con cal). ¿Cuál es la forma? ¿Lleva cursiva?
+#   3. `icoroata`: marcada cursiva el 15, dictada sin marca el 24. Confirmar.
 
 meta:
   obra: oliver-1989-cap2   # el Apéndice A acompaña la lingüística; nota propia: oliver-1989-apendice-a
@@ -20,9 +34,13 @@ meta:
   paginas_impresas: [593, 594]
   columnas: [forma, fonemica, glosa_es, glosa_en]
   entradas_totales_estimadas: 50
-  legibles_por_ocr: 18
+  transcritas: 49
+  dictadas_por_miguel: 29
+  verificadas_a_ojo: 18
+  numeros_sin_asignar: 33
   cursivas_verificadas_a_ojo: 3
   generado: '2026-08-15'
+  actualizado: '2026-08-24'
 
 entradas:
   - num: 6
@@ -32,15 +50,32 @@ entradas:
     glosa_en: muddy, opaque
     cursiva: false
     en_repo: [lexicon-activo, alvarado, toponimos, van_buurt, morfemas]
+    verificada_a_ojo: '2026-08-24 — Miguel la dictó idéntica al OCR. La forma
+      impresa lleva guion final: "barici-", lo que sugiere que Oliver la trata
+      como RAÍZ, no como palabra suelta.'
   - num: 13
-    forma: cabana
-    fonemica: çabana
+    forma: çabana
+    fonemica: sabana
+    glosa_es: prado
     glosa_en: savannah
     cursiva: false
     en_repo: [zavala]
-    nota: la transcripción lleva Ç CEDILLA (leído a ojo por Miguel 2026-08-16; el OCR dio "sabana"
-      — misma lectura fonética, /s/ del XVI). Oliver la trata como étimo entero de "sabana" —
-      debilita el análisis ca-bana de morfologia.md §3 (D9)
+    verificada_a_ojo: '2026-08-24'
+    nota: >
+      🔴 CORRECCIÓN DE REGISTRO (2026-08-24). Antes estaba anotada como
+      forma=cabana / fonémica=çabana, que era una lectura mía equivocada de las
+      columnas. La lectura correcta es forma=ÇABANA (grafía del XVI, ç = /s/) y
+      fonémica=SABANA. Y la glosa española es 'prado', que faltaba.
+
+      ESTO REFUERZA EL ARGUMENTO DE D9, y lo hace por dos vías en vez de una:
+      `morfologia.md` §3 sostiene que `-bana` = 'llano' porque `cabana` =
+      'sabana' y "una sabana es un llano ancho". Pero (1) la inicial no es /ka/
+      sino /sa/ — no hay ningún elemento `ca-` que segmentar; y (2) Oliver la
+      normaliza como `sabana`, es decir la trata como el ÉTIMO ENTERO del
+      castellano "sabana", no como un compuesto.
+
+      La segmentación `ca-bana` es nuestra, y descansa sobre un fonema que la
+      fuente no escribe. Como apoyo de `-bana` = 'llano', se cae.
   - num: 14
     forma: caduchi
     fonemica: caduchi
@@ -48,20 +83,36 @@ entradas:
     glosa_en: cactus fruit
     cursiva: false
     en_repo: [lexicon-activo, alvarado, gatschet, van_buurt, cognados]
+    verificada_a_ojo: '2026-08-24 — idéntica al OCR'
     nota: toca el issue 51 (kadushi, referente en disputa)
   - num: 16
     forma: Capú
     fonemica: kapú
+    glosa_es: demonio
     glosa_en: spirit, goblin
     cursiva: false
     en_repo: [zavala, cognados]
+    verificada_a_ojo: '2026-08-24 — el OCR había perdido la glosa española: DEMONIO'
+    nota: >
+      La glosa española es la palabra exacta que `curiana_cronista.py` eligió
+      para sustituir "demonio" por coherencia interna del canon, sin fuente
+      externa. Aquí está la fuente.
   - num: 17
     forma: Capubana
     fonemica: kapu-bana
     glosa_en: a hill in Paraguaná
     cursiva: false
     en_repo: [zavala, cognados]
-    nota: segmenta con -b- y glosa 'colina' — SEGUNDA FUENTE independiente para D9 (issue 38); remite a los núms. 2 y 16
+    verificada_a_ojo: '2026-08-24 — PARCIAL: Miguel leyó forma=Capubana,
+      fonémica=kapú (¿o kapú-bana?), glosa_en="a hill in Paraguaná". FALTA la
+      columna española y confirmar si la fonémica segmenta o no.'
+    nota: >
+      ⚠️ RELEER LA NOTA VIEJA CON LA #2 DELANTE. Aquí se anotó que esta entrada
+      era "segunda fuente independiente para bana = cerro". Con la #2 leída
+      —donde Oliver glosa el morfema `-bana` como SURROUNDING— esta entrada
+      queda como identificación del LUGAR (Capuhana es un cerro), no como glosa
+      del morfema. La lectura de 'segunda fuente para cerro' no se sostiene.
+      Remite a los núms. 2 (-bana) y 16 (capú = demonio).
   - num: 18
     forma: Caquetio
     fonemica: Kaketio
@@ -69,20 +120,30 @@ entradas:
     glosa_en: people (general)
     cursiva: false
     en_repo: [toponimos, van_buurt, zavala, cognados]
-    nota: tercera glosa del etnónimo, junto a la 'buena gente' de Cey (zavala-reyes-2018)
+    verificada_a_ojo: '2026-08-24 — idéntica al OCR, columna por columna'
+    nota: >
+      Tercera glosa del etnónimo, junto a la "buena gente" de Galeoto Cey
+      (zavala-reyes-2018). 'Ser viviente / people (general)' y 'buena gente'
+      no son la misma etimología: una es genérica ('la gente') y la otra
+      valorativa. Dos cronistas, dos lecturas.
   - num: 19
-    forma: caca
+    forma: caça
     fonemica: kasa, kaza
     glosa_es: puche de maíz
     glosa_en: maize porridge
     cursiva: false
     en_repo: []
+    verificada_a_ojo: '2026-08-24 — CORRIGE AL OCR: la forma es CAÇA con
+      cedilla, no "caca". Segunda ç de la tabla tras çabana: la grafía es
+      sistemática para /s/, y el OCR la pierde siempre.'
   - num: 27
     forma: chirgua
     fonemica: chirwa
     glosa_es: vasija para el agua
+    glosa_en: pot for water
     cursiva: false
     en_repo: [alvarado, zavala]
+    verificada_a_ojo: '2026-08-24 — idéntica al OCR; añadida la glosa inglesa'
   - num: 29
     forma: chiriguare
     fonemica: chiriware
@@ -90,6 +151,7 @@ entradas:
     glosa_en: hawk
     cursiva: false
     en_repo: [lexicon-activo, alvarado, gatschet, van_buurt]
+    verificada_a_ojo: '2026-08-24 — idéntica al OCR'
   - num: 30
     forma: chuchube
     fonemica: chuchube
@@ -97,6 +159,7 @@ entradas:
     glosa_en: bird species
     cursiva: false
     en_repo: [lexicon-activo, gatschet, toponimos, zavala]
+    verificada_a_ojo: '2026-08-24 — idéntica al OCR'
   - num: 31
     forma: dare
     fonemica: dare
@@ -104,6 +167,7 @@ entradas:
     glosa_en: tooth
     cursiva: false
     en_repo: [lexicon-activo, alvarado, toponimos, van_buurt, cognados]
+    verificada_a_ojo: '2026-08-24 — idéntica al OCR'
   - num: 33
     forma: diao
     fonemica: diao
@@ -111,6 +175,7 @@ entradas:
     glosa_en: principal chief
     cursiva: false
     en_repo: [lexicon-activo, zavala, cognados]
+    verificada_a_ojo: '2026-08-24 — idéntica al OCR. Leer junto a `datihao`.'
   - num: 45
     forma: mene
     fonemica: mene
@@ -123,15 +188,26 @@ entradas:
     forma: quicidi
     fonemica: kuicidi
     glosa_es: serranía
-    glosa_en: sierra
+    glosa_en: mountain (specific?)
     cursiva: false
     en_repo: []
+    verificada_a_ojo: '2026-08-24 — forma QUICIDI confirmada (el OCR acertó).
+      Corrige la glosa inglesa: no es "sierra" sino "mountain (SPECIFIC?)", con
+      la interrogación del propio Oliver.'
+    nota: >
+      El "(specific?)" es de Oliver, no nuestro: duda de si la palabra nombra
+      un cerro CONCRETO o la categoría 'serranía'. Ese matiz importa para D9 y
+      para la revisión de topónimos — si es un nombre propio, no es vocabulario
+      común y no debe usarse como si lo fuera.
   - num: 50
     forma: auri
     fonemica: auri
-    glosa_es: perro (?)
+    glosa_es: perro
+    glosa_en: dog
     cursiva: false
     en_repo: [cognados]
+    verificada_a_ojo: '2026-08-24 — CONFIRMADA sin la duda que le puse yo: es
+      perro / dog, limpio. El "(?)" era mío, no de la fuente.'
   - num: null
     forma: barbasco
     fonemica: barbasko
@@ -139,29 +215,612 @@ entradas:
     glosa_en: fish poison
     cursiva: false
     en_repo: [toponimos, zavala]
+    verificada_a_ojo: '2026-08-24 — Miguel la dictó IDÉNTICA a lo que dio el OCR,
+      columna por columna. Primera verificación humana de una lectura del OCR en
+      esta tabla: en esta fila acertó.'
   - num: null
-    forma: eque
-    fonemica: eque
+    forma: Cegue
+    fonemica: cegue
     glosa_es: lechuza
     glosa_en: owl
     cursiva: false
     en_repo: []
+    verificada_a_ojo: '2026-08-24 — CORRIGE AL OCR, que había leído "eque":
+      perdió la C- inicial y confundió gu por qu. La forma es CEGUE.'
   - num: null
-    forma: cocu
-    fonemica: koku
+    forma: cocuy
+    fonemica: kokuy
     glosa_es: penca
     glosa_en: agave species
     cursiva: false
     en_repo: []
+    verificada_a_ojo: '2026-08-24 — CORRIGE AL OCR ("cocu"): lleva -y final.'
+    nota: >
+      Con la -y la palabra es reconocible: el COCUY es el agave de Falcón y
+      Lara (Agave cocui) y el destilado que se hace de él, vivo hoy en el habla
+      regional. Que Oliver lo dé como voz caquetía del XVI conecta el léxico
+      atestiguado con una palabra que sigue en uso — candidata de primer orden
+      para el dictado de [[medina-colina-sxx]]. Ver si el repo tiene el agave.
+
+  # ── Dictadas por Miguel leyendo la imagen (2026-08-24) ──────────────────
+  - num: 1
+    forma: adabacoa
+    fonemica: (h)adabakoa
+    glosa_es: valle con arboleda
+    glosa_en: '"wooded" valley'
+    cursiva: false
+    dictada_por: miguel
+    en_repo: [morfemas.yaml, metodo-comparativo]
+    nota: >
+      Confirma la composición ada- 'árbol' + bacoa 'lugar' que morfemas.yaml
+      infería de la pareja adabacoa~guadabacoa. Y la fonémica revela una h-
+      inicial que la grafía castellana pierde.
+  - num: 2
+    forma: -bana
+    fonemica: -bana
+    glosa_en: Surrounding
+    cursiva: false
+    dictada_por: miguel
+    nota: >
+      🔴 ES LA GLOSA MORFÉMICA DE -bana POR OLIVER, y es la entrada a la que
+      remite la #17 (Capubana). NO dice 'cerro' ni 'orilla': dice SURROUNDING.
+      Ver el comentario de D9 — cambia la lectura de la evidencia.
+  - num: null
+    forma: báquiro
+    fonemica: bákiro
+    glosa_es: báquiro
+    glosa_en: peccary
+    cursiva: false
+    dictada_por: miguel
+    en_repo: [lexicon_zavala]
+    nota: >
+      ⚠️ CONFLICTO DE FILIACIÓN: lexicon_zavala.py:356 la trae como "Cochino de
+      monte" con la anotación de que "Lisandro Alvarado señala que es
+      CUMANAGOTA" — es decir, caribe. Oliver la incluye en un vocabulario
+      caquetío. Dos autoridades, dos filiaciones.
+  - num: null
+    forma: baperón
+    fonemica: baperón
+    glosa_es: calabaza con cal
+    glosa_en: lime gourd flask
+    cursiva: revisar
+    dictada_por: miguel
+    nota: >
+      ⚠️ Es el mismo referente que Miguel dictó el 2026-08-15 como "raporón" al
+      identificar las cursivas. La lectura de hoy, hecha sobre la imagen a 500
+      dpi, dice BAPERÓN. Hay que confirmar la forma Y si lleva cursiva: si la
+      lleva, es la tercera del paquete de Santa Marta (con icoroata y hayo).
+
+  - num: null
+    forma: bariqui / bariquie
+    fonemica: bariki / -ke
+    glosa_es: almagre
+    glosa_en: red hematite
+    cursiva: false
+    dictada_por: miguel
+    en_repo: [lexicon-activo, zavala]
+    nota: >
+      🔴 DOS COSAS, Y LAS DOS TOCAN CONFLICTOS ABIERTOS.
+
+      (1) RESUELVE el solapamiento barici~bariki que toponimia.md:137 y
+      morfemas.yaml:77 dan por sin resolver ("dos entradas con glosas
+      solapadas... propone unificarlas bajo una raíz bari-"). Oliver las trae
+      como DOS ENTRADAS DISTINTAS con glosas distintas: barici- = agua turbia,
+      bariqui = almagre. No se unifican: comparten raíz `bari-` 'rojizo' y
+      divergen en referente. La propuesta de unificación se cae.
+
+      (2) DESHACE una falsa analogía del lexicón. La entrada `bixa` (taíno)
+      dice "pigmento ritual rojo; análogo al bariki caquetío" — pero ALMAGRE /
+      RED HEMATITE es un MINERAL (óxido de hierro), y bixa/onoto/achiote es un
+      tinte VEGETAL de semilla. Los dos dan rojo y ahí acaba el parecido. Son
+      materiales distintos, con extracción, comercio y ritual distintos.
+      Súmese al lío de estratos ya anotado en `bixa` (taíno/caribe/caquetío).
+
+      Y la glosa de Oliver es más precisa que la del repo ("tierra colorada,
+      pigmento encarnado"): almagre nombra el material, no el color.
+
+  - num: null
+    forma: bisure
+    fonemica: bisure
+    glosa_es: lagartija
+    glosa_en: lizard species
+    cursiva: false
+    dictada_por: miguel
+    en_repo: [lexicon-activo, zavala]
+    nota: >
+      Segunda atestación de Zavala #41 ("Lagartija"), ahora independiente.
+      ⚠️ Y ES CONTRAEJEMPLO PARA `-ure`: morfemas.yaml lo tiene en disputa entre
+      'sitio de' (evidencia toponímica) y 'raíz' (van Buurt vía Cruz Esteves).
+      `bisure` es un ANIMAL — ni lugar ni raíz. Se suma a los contraejemplos ya
+      declarados (`guasare` árbol, `chunare` mazorca): el sufijo aparece en
+      nombres de seres vivos con demasiada frecuencia como para ser solo
+      locativo.
+  - num: null
+    forma: boratio
+    fonemica: boratio
+    glosa_es: sacerdote, médico
+    glosa_en: shaman
+    cursiva: false
+    dictada_por: miguel
+    en_repo: [lexicon-activo, corpus-creencia]
+    nota: >
+      ⭐ ATESTACIÓN INDEPENDIENTE PARA `creencia-001`, y llega justo donde hacía
+      falta. Ese hecho del corpus sostiene que `boratio` es la palabra caquetía
+      del piache citando "Oviedo y Valdés, Historia general, APÉNDICE T. IV (en
+      Jahn 1927:213 n.29); Arcaya 1920:116" — y medimos el 2026-08-14 que ese
+      apéndice de voces NO EXISTE en la edición Amador de los Ríos (#61). La
+      cadena estaba coja. Oliver la trae directa, sin depender de ese apéndice.
+
+      Y su glosa es más rica que la del repo ("médico-hechicero"): dice
+      SACERDOTE, médico. La dimensión sacerdotal es justo la que sostiene
+      `creencia-001b` — el diao como jefe Y boratio, "gobernar y mediar con lo
+      sobrenatural eran la misma dignidad".
+
+  - num: null
+    forma: buco
+    fonemica: buko
+    glosa_es: represa
+    glosa_en: cut into the ground
+    cursiva: false
+    dictada_por: miguel
+    en_repo: [lexicon-activo, CULTURA_CAQUETIA, ecologia.yaml, curiana_agents]
+    nota: >
+      ⚠️ LA GLOSA INGLESA NO DICE LO MISMO QUE LA ESPAÑOLA. "Cut into the
+      ground" es un CORTE, una zanja excavada — no una represa, que es un muro
+      construido. Para la obra hidráulica del canon la diferencia es real:
+      acequia/caz frente a presa. Y Alvarado apoya la primera lectura: el repo
+      ya cita su "BUCO: caz, acequia".
+
+      ⚠️ FILIACIÓN DUDOSA, ya declarada en el repo: Alvarado "la localiza en
+      LARA y sugiere origen ROMANCE, confirma la glosa pero duda del origen
+      indígena". Lara es Barquisimeto — otra polity — y "origen romance"
+      significaría que ni siquiera es indígena. Oliver la mete en el
+      vocabulario caquetío del XVI. Tres autoridades, tres posiciones.
+
+      Pesa porque `buco` es `ubicacion_default` de un agente en
+      curiana_agents.py:296: no es vocabulario decorativo, es escenario.
+  - num: null
+    forma: budare
+    fonemica: budare
+    glosa_es: plato llano de barro
+    glosa_en: clay griddle
+    cursiva: false
+    dictada_por: miguel
+    nota: >
+      🔴 OLIVER SE CONTRADICE CONSIGO MISMO, y conviene saberlo. En el cap. 4
+      escribe que "el término budare es definitivamente de origen maipurano
+      (arahuaco), aunque NO NECESARIAMENTE UN TÉRMINO CAQUETÍO, ya que los
+      españoles lo usaron ampliamente en Venezuela" — y aquí lo incluye en el
+      vocabulario caquetío del XVI.
+
+      ⭐ Y hay cronología material para el objeto: el mismo cap. 4 documenta
+      "una caída notable en la frecuencia de budares" y que "los componentes
+      Urumaco Temprano/Tardío del sitio Corralito YA HABÍAN ABANDONADO el
+      budare en favor del ARIPO". Urumaco va de 1164 a 1393: el objeto estaba
+      saliendo de uso DURANTE la ventana simulada. Un agente del s. XV
+      hablando de budares está usando una palabra en retirada — y `aripo`,
+      su reemplazo, es de origen CARIBE según el propio Oliver.
+  - num: null
+    forma: buxera
+    fonemica: bujera
+    glosa_es: pintura negra — Genipa
+    glosa_en: black body paint
+    cursiva: false
+    dictada_por: miguel
+    nota: >
+      Completa el par de pigmentos corporales: `bariqui` = almagre (rojo,
+      mineral) y `buxera` = negro de Genipa (vegetal, la jagua). Oliver
+      identifica el género botánico, así que es dato de ecología además de
+      léxico. Ver si el repo tiene jagua/caruto.
+
+  - num: null
+    forma: cama
+    fonemica: k-ama
+    glosa_es: danta
+    glosa_en: tapir
+    cursiva: false
+    dictada_por: miguel
+    en_repo: [lexicon-activo, cognados_oliver]
+    nota: >
+      🔴 PROBLEMA DE ÁREA, NO DE PALABRA. El tapir (Tapirus terrestris) no vive
+      en Paraguaná ni en el Golfete: es animal de selva y humedal, de los Llanos
+      hacia el sur. El lexicón ya la tiene como `kama`, `caquetío-atestiguado`.
+
+      No es un error de la fuente: es señal de que la TABLA A-9 ES
+      PAN-CAQUETÍA, no costera. Oliver compiló "vocabulario caquetío del s.
+      XVI" de donde lo hubiera — y los caquetíos llaneros sí conocían la danta.
+      Por la regla 4, eso obliga a leer TODA la tabla con la pregunta "¿de qué
+      polity es esta palabra?", no solo esta entrada.
+
+      ⚠️ Y choca con una regla del propio corpus de ecología: "no proyectar la
+      fauna moderna hacia atrás — cuando el lexicón atestiguado nombra un
+      animal hoy ausente (tara), LA PALABRA MANDA sobre el censo actual". Con
+      `tara` esa regla resuelve bien (venado que se extinguió localmente). Con
+      la danta no: no es que se extinguiera en Paraguaná, es que nunca la hubo.
+      La regla necesita un tercer caso — animal conocido POR CONTACTO, no por
+      presencia.
+
+      Detalle de forma: la fonémica lleva GUION, `k-ama`. Como `barici-` y
+      `-bana`, Oliver está marcando estructura morfológica.
+
+  - num: null
+    forma: comoho
+    fonemica: komoho
+    glosa_es: higo, tuna
+    glosa_en: cactus
+    cursiva: false
+    dictada_por: miguel
+    en_repo: []
+    nota: >
+      ⭐ CONFIRMA LA SALIDA PROPUESTA PARA EL ISSUE #51. Ese issue dice que
+      `kadushi` "tiene triple atestación y el referente son TRES CACTUS
+      DISTINTOS", y se propuso resolverlo con léxico POR ESPECIES en vez de una
+      glosa única. Aquí está la prueba dentro de la misma tabla: Oliver trae
+      DOS entradas distintas para fruto de cactus —
+
+        caduchi = higo, BREVA   (cactus fruit)
+        comoho  = higo, TUNA    (cactus)
+
+      breva y tuna son frutos de plantas distintas (higuera vs. Opuntia). Más
+      el `dato` que Miguel aporta como voz viva de Punto Fijo. Tres palabras,
+      tres referentes: el caquetío distinguía especies donde nuestras fuentes
+      aplanaron. El issue #51 se resuelve separando, no eligiendo.
+  - num: null
+    forma: coque
+    fonemica: koke
+    glosa_es: hormiga roja
+    glosa_en: red ant species
+    cursiva: false
+    dictada_por: miguel
+    en_repo: []
+    nota: >
+      Entrada nueva. Fauna menor con especificidad de especie ("red ant
+      SPECIES"), igual que `bisure` lagartija y `chuchube` paraulata: la tabla
+      nombra el bicho concreto, no la categoría. Alimenta el cruce fauna↔
+      ecología, donde `ecologia_lexicon_map.md` tiene 30 huecos.
+
+  - num: null
+    forma: corie
+    fonemica: korie
+    glosa_es: armadillo
+    glosa_en: armadillo
+    cursiva: false
+    dictada_por: miguel
+    en_repo: [lexicon-activo, zavala, genealogia.yaml]
+    nota: >
+      ⭐ CIERRA EL ISSUE #46. La entrada del lexicón dice "choza, habitación,
+      espacio propio" y su propia nota reconoce que esa glosa "NO TIENE FUENTE
+      LOCALIZADA: ausente de Alvarado 1921 y de van Buurt 2014", mientras que
+      Zavala #90 dice "Armadillo" y el CANON del proyecto también —
+      genealogia.yaml da "corie (armadillo)" como tótem del linaje Paugis, y la
+      ficha de Buio-sha lo usa como elogio.
+
+      Oliver es la tercera fuente independiente que dice ARMADILLO. Contra ella,
+      'choza' no tiene ninguna. La razón por la que D10 no la tocó —"no se toca
+      porque corie da nombre a Corie-ko"— es de coste, no de evidencia: el
+      agente se llama igual con cualquiera de las dos glosas, y hoy se llama
+      "Choza-ko" en un canon que ya lo trata como armadillo.
+  - num: null
+    forma: cumaragua
+    fonemica: kumarawa
+    glosa_es: viruela
+    glosa_en: smallpox
+    cursiva: false
+    dictada_por: miguel
+    en_repo: [lexicon-activo, zavala, alvarado]
+    nota: >
+      🔴🔴 ESTO EXPLICA UNA AMBIGÜEDAD QUE EL REPO LLEVA MESES ARRASTRANDO, Y
+      PUEDE REABRIR D10.
+
+      La nota de `mene` en el lexicón advierte: "Zavala cita a Arcaya sobre la
+      Relación de Barquisimeto 1579 («mene y cumaragua nombre de la CIRUELA»)
+      [advertencia: la sintaxis de Arcaya es ambigua]". Y la nota de
+      `cumaragua` descarta la lectura de Zavala «CIRUELA, espuma rosada».
+
+      Oliver glosa las dos palabras del mismo par como VIRUELA:
+        mene      = viruela / pez derretida   (smallpox / tar)
+        cumaragua = viruela                   (smallpox)
+
+      CIRUELA y VIRUELA se diferencian en una letra. Que las MISMAS DOS
+      PALABRAS aparezcan emparejadas en las dos fuentes no es coincidencia: es
+      el mismo dato, y una de las dos lecturas arrastra un error de
+      transcripción. La "sintaxis ambigua" que el repo detectó en Arcaya
+      probablemente no era sintaxis, era una errata.
+
+      ⚠️ CONSECUENCIA PARA D10: adjudicó `cumaragua` = 'caracol' por
+      localización (Alvarado, "costas de Paraguaná") descartando la lectura
+      rival como 'ciruela' — una fruta. Si la lectura rival era 'VIRUELA', la
+      decisión se tomó sobre una premisa distinta. No se reabre aquí: se señala.
+
+  - num: null
+    forma: chaure
+    fonemica: chaure
+    glosa_es: búho
+    glosa_en: owl
+    cursiva: false
+    dictada_por: miguel
+    en_repo: []
+    nota: >
+      ⚠️ SEGUNDA PALABRA PARA 'OWL' EN LA MISMA TABLA: `Cegue` = lechuza / owl
+      y `chaure` = búho / owl. En español lechuza y búho son aves distintas
+      (Tyto vs. Bubo), y la tabla las separa — otra vez léxico por especies,
+      como caduchi~comoho y como pide el #51. La glosa inglesa las aplana; la
+      española no.
+
+      Y ojo a la forma: otro `-ure` sobre un ANIMAL, como `bisure`. Van dos en
+      esta tabla contra la lectura locativa del morfema.
+
+  - num: null
+    forma: chirigua
+    fonemica: chiriwa
+    glosa_es: tinaja pequeña
+    glosa_en: small jar
+    cursiva: false
+    dictada_por: miguel
+    en_repo: []
+    nota: >
+      ⚠️ PAR MÍNIMO CON LA #27, y es la evidencia más limpia del patrón:
+        chirgua   / chirwa   = vasija para el agua  (pot for water)
+        chirigua  / chiriwa  = tinaja pequeña       (small jar)
+      Las dos formas se distinguen por UNA VOCAL —chirwa vs. chiriwa— y las dos
+      glosas por el tamaño del recipiente. No son variantes de la misma palabra:
+      son dos palabras que contrastan. Cuarto par de la tabla tras
+      caduchi~comoho, Cegue~chaure y barici~bariqui.
+
+      Y toca la cerámica: el cap. 4 clasifica las formas de vasija por tamaño y
+      función. Si el léxico distingue tinaja pequeña de vasija de agua, hay
+      correspondencia posible entre palabras y tipos cerámicos excavados.
+
+  - num: null
+    forma: datihao
+    fonemica: datihao
+    glosa_es: señor
+    glosa_en: '"lesser" chief'
+    cursiva: false
+    dictada_por: miguel
+    en_repo: [lexicon-activo, cognados]
+    nota: >
+      🔴🔴 DOS COSAS GRANDES, Y UNA TOCA EL MODELO POLÍTICO ENTERO.
+
+      (1) NO ES LA GLOSA QUE TIENE EL LEXICÓN. La entrada activa dice "padrino
+      de cautivo, el que presta su nombre al esclavo" (Oviedo vía Oliver cap. 2
+      p.147). Aquí el propio Oliver la glosa "señor / LESSER CHIEF". Son cosas
+      distintas: una es una relación ritual de apadrinamiento, la otra un RANGO
+      POLÍTICO.
+
+      (2) ⭐ Y EN LA MISMA TABLA ESTÁ SU PAR:
+            datihao = señor            "lesser" chief
+            diao    = señor principal  principal chief
+      Oliver los opone explícitamente por rango, con las comillas en "lesser"
+      marcando que es contraste, no diminutivo. Eso da APOYO LÉXICO al modelo de
+      tres niveles de `parentesco-037` (apopo — diao — paramountcy), que el
+      corpus marca `reconstruido` y admite que "el ENSAMBLE de los tres niveles
+      como sistema es interpretación, no una fuente que lo describa así de
+      explícito". Pues aquí hay una fuente que opone dos de los niveles.
+
+      Y de paso ilumina #50 ("datihao/daitiao: dos grafías, ¿una palabra?"): la
+      tabla escribe DATIHAO, la misma forma del lexicón, no la `daitiao` del
+      cap. 2. La nota del lexicón se preguntaba si era "metátesis de copia o dos
+      formas" — la tabla dice que Oliver usa las dos.
+  - num: null
+    forma: guacaubana
+    fonemica: wakaubana
+    glosa_es: '"río escondido"'
+    glosa_en: underground creek
+    cursiva: false
+    dictada_por: miguel
+    en_repo: [toponimia.md, morfemas.yaml]
+    nota: >
+      ⚠️ TERCER TIPO DE REFERENTE PARA `-bana`, Y NO ES UN CERRO. La tabla ya da
+      capubana (una colina) y carirubana (costa con peñón); esto es un CURSO DE
+      AGUA SUBTERRÁNEO. Tres referentes incompatibles entre sí bajo el mismo
+      formante — que es exactamente lo que se espera si la glosa correcta es la
+      de la #2, "SURROUNDING", y no un accidente concreto del terreno.
+      Refuerza que Esteves leía el referente, no el morfema.
+  - num: null
+    forma: guacoa
+    fonemica: wakoa
+    glosa_es: especie de paloma
+    glosa_en: pigeon species
+    cursiva: false
+    dictada_por: miguel
+    en_repo: [lexicon-activo]
+    nota: >
+      ⭐ DISUELVE EL CONFLICTO `guaca` DE toponimia.md:135, que enfrenta dos
+      lecturas: el lexicón dice `guaca` = 'ave, cotorra' y van Buurt §6 (vía
+      Oliver) dice `waka` = 'subterráneo', y la nota concluye que guacaubana
+      "apoya la segunda".
+
+      La tabla trae LAS DOS, y son palabras distintas:
+        wakaubana = underground creek   → waka 'subterráneo'  ✓
+        wakoa     = pigeon species      → waka 'ave'          ✓
+      No hay que elegir: hay dos raíces parecidas con referentes distintos. El
+      conflicto era falso.
+  - num: null
+    forma: guacurebo
+    fonemica: wakurebo
+    glosa_es: quebrada que crece
+    glosa_en: creek with water
+    cursiva: false
+    dictada_por: miguel
+    en_repo: []
+    nota: >
+      Tercer `waku-` de la tabla, otra vez sobre agua (cf. wakaubana). Y lleva
+      `-ebo`, el morfema 'camino, paso, senda' que Esteves corrobora cinco
+      veces. Un curso de agua como "camino" encaja sin forzar.
+
+      "Quebrada que CRECE" es además dato de ecología: nombra el régimen
+      ESTACIONAL del cauce —seco y luego crecido—, que es justo el carácter
+      efímero de los cauces del Golfete que el corpus infiere del clima y marca
+      `reconstruido`. Aquí habría una palabra que lo atestigua.
+  - num: null
+    forma: guairón
+    fonemica: wairon
+    glosa_es: hoguera
+    glosa_en: fire hearth
+    cursiva: false
+    dictada_por: miguel
+    en_repo: []
+    nota: >
+      Entrada nueva. 'Fire hearth' es el FOGÓN, no el fuego: nombra la
+      estructura doméstica. Cruza con la arqueología del cap. 4, donde los
+      carbones datados "correspondieron morfológicamente a los producidos en
+      FOGONES" (Zavala 2018 dice lo mismo del antrosol de los médanos). Palabra
+      para el objeto que produjo las muestras de C-14.
+  - num: null
+    forma: guaranaro
+    fonemica: waranaro
+    glosa_es: pez lisa
+    glosa_en: fish species
+    cursiva: false
+    dictada_por: miguel
+    en_repo: []
+    nota: >
+      ⭐ ATACA EL PUNTO CIEGO DECLARADO DEL LEXICÓN. El protocolo del habla
+      paraguanera dice que el caquetío atestiguado es fuerte en "lo que se
+      comercia y lo que significa" y MUDO en "lo que se ve y se trabaja a
+      diario — los peces POR ESPECIE, el médano, el cardumen". Esto es un pez
+      por especie: la lisa (Mugil sp.), pez costero de estuario, exactamente el
+      del Golfete. Primer nombre de pez específico que entra por esta vía.
+
+  - num: null
+    forma: guaro
+    fonemica: waro
+    glosa_es: cotorra
+    glosa_en: parrot
+    cursiva: false
+    dictada_por: miguel
+    en_repo: [lexicon-activo]
+    nota: >
+      Tercera pata de la rama 'ave' de `waka-/wa-`, junto a `wakoa` (paloma).
+      El lexicón glosa `guaca` = 'ave, cotorra': COTORRA es exactamente esta
+      entrada. La glosa del lexicón estaba juntando dos palabras — el genérico
+      'ave' y la cotorra concreta— que la tabla separa.
+  - num: null
+    forma: machire
+    fonemica: machire
+    glosa_es: loza con grumos / defectos
+    glosa_en: defective pottery
+    cursiva: false
+    dictada_por: miguel
+    en_repo: []
+    nota: >
+      ⭐⭐ LA ENTRADA MÁS INESPERADA DE LA TABLA, Y DICE MUCHO DE QUIÉN HABLABA.
+      No es un objeto ni un animal: es un JUICIO DE CALIDAD sobre una pieza mal
+      hecha. Tener palabra para "loza defectuosa" implica un oficio con
+      estándar, con piezas que se rechazan y gente capaz de nombrar el defecto.
+
+      Cruza directo con la arqueología: el cap. 4 de Oliver clasifica la
+      cerámica por técnica —Zero Coiling, Single Coiled, corrugación— y Zavala
+      2018 halla en los médanos "restos cerámicos altamente fragmentados" con
+      "evidencias de elaboración de alfarería IN SITU". Si se producía en el
+      sitio, había desecho de producción — y aquí está la palabra para él.
+
+      Para la simulación es material de primer orden: un término técnico de
+      taller, no de conversación general.
+  - num: null
+    forma: macoya
+    fonemica: makoya
+    glosa_es: cuerda
+    glosa_en: rope
+    cursiva: false
+    dictada_por: miguel
+    en_repo: []
+    nota: >
+      Entrada nueva, y encaja con la fibra: el repo tiene `kukuisa` (cocuiza,
+      "agave de FIBRA PARA CUERDA") reasignada a español en D10, con la nota de
+      que el nombre indígena de la planta sería `caruata` (cháima). Faltaba la
+      palabra para el producto. `macoya` la cubre — y siendo caquetía, no obliga
+      a resolver antes la filiación de la planta.
+
+  - num: null
+    forma: maure
+    fonemica: maure
+    glosa_es: tejido de maure (algodón)
+    glosa_en: type of textile (cotton)
+    cursiva: false
+    dictada_por: miguel
+    en_repo: []
+    nota: >
+      ⭐ ES UN BIEN DE COMERCIO, Y LAS CRÓNICAS LO DESCRIBEN. Esteban Martín
+      (expedición de Alfínger, 1531-34), citado por Oliver en §3.2.3, dice de
+      los coanaos que "wear MANTAS ['blankets'] and CAPS OF COTTON" mientras
+      comerciaban sal por oro. `maure` nombra ese textil desde dentro de la
+      lengua.
+
+      ⚠️ TERCER `-ure` DE LA TABLA SOBRE ALGO QUE NO ES UN LUGAR: `bisure`
+      lagartija, `chaure` búho, `maure` tejido. `morfemas.yaml` tiene el morfema
+      en disputa entre 'sitio de' (evidencia toponímica) y 'raíz' (van Buurt vía
+      Cruz Esteves). Tres contraejemplos nuevos en una sola tabla, sumados a los
+      dos que ya estaban declarados (`guasare` árbol, `chunare` mazorca): la
+      lectura locativa se está quedando sin sitio.
+
+      Y toca la onomástica: la serie de apellidos vivos de Paraguaná que
+      registra Esteves —Adaure, Timaure, Yaraure, Chunaure, MANAURE— comparte
+      esa terminación. Con `maure` atestiguado como palabra plena, `Ma-naure`
+      deja de ser el único análisis posible.
+
+  - num: null
+    forma: tara
+    fonemica: tara
+    glosa_es: langosta
+    glosa_en: locust
+    cursiva: false
+    dictada_por: miguel
+    en_repo: [lexicon-activo, ecologia.yaml, zavala, alvarado]
+    nota: >
+      🔴🔴🔴 CIERRA EL ISSUE #45, Y TUMBA UN ARGUMENTO DEL CORPUS — que es
+      exactamente lo que el issue advertía que podía pasar.
+
+      El lexicón tiene `tara` = "venado, ciervo (Odocoileus virginianus)" como
+      `caquetío-atestiguado`, y SU PROPIA NOTA dice: "la glosa activa NO TIENE
+      FUENTE LOCALIZADA: no está en Zavala 2015, ni en van Buurt 2014, ni como
+      lema en Alvarado 1921. En contra hay DOS fuentes independientes que
+      coinciden: Zavala #238 «Langosta, mariposa» y Alvarado p.283 «polilla o
+      mariposa». Es el más fuerte de los tres conflictos."
+
+      Oliver es la TERCERA fuente independiente, y dice LANGOSTA / LOCUST —
+      coincidiendo con Zavala palabra por palabra. Marcador: tres fuentes para
+      insecto, CERO para venado.
+
+      ⚠️ Y EL CORPUS DE ECOLOGÍA ESTÁ CONSTRUIDO SOBRE 'VENADO':
+        ecologia.yaml:323  "La fauna de caza y de agüero del matorral seco:
+                            VENADO (tara), armadillo..."
+        ecologia.yaml:624  "La fauna de HOY no es la del siglo XV. El venado
+                            caramerudo —el 'tara' del lexicón caquetío
+                            atestiguado— hoy está ausente..."
+      Ese segundo hecho es el EJEMPLO INSIGNIA de la regla "no proyectar la
+      fauna moderna hacia atrás; cuando el lexicón nombra un animal hoy ausente,
+      la palabra manda sobre el censo actual". Si `tara` es una langosta, el
+      ejemplo se cae: las langostas no están ausentes, y la regla pierde su caso
+      demostrativo. Hay que rehacer el hecho, no solo la glosa.
+
+      (Nota metodológica: el 2026-08-24, al anotar `cama` = danta, usé `tara`
+      como el caso donde esa regla funciona bien. Era el contrario.)
 
   # ── Las tres cursivas (lectura a ojo de Miguel, 2026-08-15) ────────────────
   - num: null
     forma: icoroata
-    forma_alt: ikoroata
-    glosa_es: étimo de 'caraota' (leguminosa)
+    fonemica: ikoroata
+    glosa_es: caraotas
+    glosa_en: black beans
     cursiva: true
+    dictada_por: miguel
     en_repo: [CULTURA_CAQUETIA.md, ecologia_lexicon_map.md]
-    nota: issue pendiente (issue-caraota.md) — el corpus atribuye la palabra al caquetío
+    verificada_a_ojo: '2026-08-24 — columnas completas. La forma alternativa que
+      antes se anotó como forma_alt resulta ser la FONÉMICA: ikoroata.'
+    nota: >
+      Issue pendiente (issue-caraota.md): el corpus atribuye la palabra al
+      caquetío y Oliver la marca en cursiva (= probablemente de Santa Marta).
+
+      La glosa es más específica de lo que se había anotado: no 'leguminosa' en
+      general sino CARAOTAS / BLACK BEANS — el frijol negro, que es lo que
+      "caraota" significa hoy en Venezuela. Confirma la etimología directa.
+
+      ⚠️ CURSIVA A CONFIRMAR: `cursiva: true` viene de la lectura de Miguel del
+      2026-08-15, cuando identificó las tres. Al dictarla hoy no la marcó. Si al
+      pasar por esa fila ve que NO va en cursiva, hay que rehacer el issue —
+      cambiaría de "préstamo de contacto" a caquetío pleno.
   - num: null
     forma: hayo
     glosa_es: la hierba que quita la sed (coca)
