@@ -26,13 +26,27 @@
 # nada de si existía cien años antes. Confundir `etiqueta: atestiguado` con
 # "sirve para la simulación" es exactamente la regla 3 de CLAUDE.md.
 #
-# EL HALLAZGO QUE DEJA VER ESTE REGISTRO
-# --------------------------------------
-# Ningún nodo continental tiene `precontacto: si`. Los únicos que lo tienen son
-# los insulares, y no por documento sino por ARQUEOLOGÍA (presencia dabajuroide
-# ~900 d.C.). Es decir: para la ventana que simulamos, las islas están mejor
-# sostenidas que la costa. Eso contradice la intuición y hay que tenerlo
-# delante al decidir qué nodo se pone en escena (#90).
+# EL HALLAZGO QUE DEJABA VER ESTE REGISTRO — Y CÓMO CAMBIÓ
+# ---------------------------------------------------------
+# Hasta el 2026-08-24 este archivo decía: "ningún nodo continental tiene
+# `precontacto: si`; los únicos que lo tienen son los insulares, y no por
+# documento sino por ARQUEOLOGÍA". Era cierto, y era el argumento de que para
+# la ventana simulada las islas estaban mejor sostenidas que la costa.
+#
+# YA NO LO ES. La fusión de los 17 sitios del Apéndice E de Oliver (#92) trae
+# TRES nodos continentales con `precontacto: si`, y por la misma vía que los
+# insulares — arqueología fechada, no crónica:
+#
+#   nodo la-maternidad     Tamers 1970 IVIC-626, A.D. 1450, y Cruxent anota que
+#                          volvió al sitio y no halló material europeo
+#   nodo jose-gregorio-hernandez   dos dataciones en ventana (1299-1424,
+#                          1280-1440) más una colonial: sitio reocupado
+#   nodo santa-ana-el-cerro   TRES dataciones, todas precontacto, hasta A.D. 1415
+#
+# Lo que sigue siendo cierto: el continente depende de MUY POCOS sitios
+# fechados, y casi todo lo demás sigue en `desconocido`. La asimetría se
+# redujo; no desapareció. Sigue importando al decidir qué nodo se pone en
+# escena (#90).
 #
 # Valida: python curiana_sim/compilar_asentamientos.py --check
 
@@ -310,6 +324,372 @@ nodos:
 # ── Lo que falta, dicho en voz alta ───────────────────────────────────────
 #
 # Regla 8 de CLAUDE.md: el hueco se admite, callarlo no.
+
+  # ── Los 17 sitios arqueológicos de Oliver (Apéndice E) ─────────────────
+  #
+  # Fusionados el 2026-08-24 (#92). Vienen de PROSPECCIÓN, no de crónica:
+  # por eso `atestacion: arqueologica` en los diecisiete. Su `etiqueta` es
+  # `atestiguado` porque la existencia del sitio no está en duda — lo que se
+  # discute es su ÉPOCA, y eso vive en `precontacto`.
+  #
+  # LA REGLA QUE LOS CLASIFICA: "dabajuroide" no es una fecha. Con las
+  # calibraciones de Oliver (cap. 4 p. 440 y Tabla 15), el complejo Urumaco
+  # termina hacia 1393/1450 —antes del contacto— mientras Los Médanos A/B va
+  # de 1350 a 1650 y lo cruza. Por eso una afiliación Urumaco sostiene
+  # `probable` por sí sola y "Dabajuroide" a secas (800-1600) no sostiene
+  # nada.
+  #
+  # Coro y el Golfete
+
+  - id: nodo-014
+    forma: la-maternidad
+    tipo: sitio-arqueologico
+    region: golfete-de-coro
+    etiqueta: atestiguado
+    atestacion: arqueologica
+    precontacto: si
+    rol: >
+      Sitio FAL-101 del inventario de Oliver (prospección 1981-1983),
+      registrado como "Monumento a la Madre / La Maternidad / LM-1".
+      Afiliación cerámica: Los Médanos y Urumaco.
+    precontacto_razon: >
+      ES EL CANDIDATO MÁS FUERTE DEL REGISTRO. Tres fuentes independientes
+      convergen en el mismo punto del terreno: (1) Oliver lo registra con
+      componentes Urumaco Y Los Médanos; (2) Tamers 1970 p. 512 lo data —es
+      "La Maternidad Sur", IVIC-626, 500±60 BP = A.D. 1450— y Cruxent anota
+      que VOLVIÓ AL SITIO y "we were unable to find any trace of European
+      artifacts"; (3) Zavala Reyes et al. 2018 excava el área (MCa/1-9, Plaza
+      de la Madre) y halla un antrosol de 36 cm sin cerámica híbrida. Una
+      fecha dentro de la ventana + ausencia de material europeo declarada por
+      el excavador + antrosol de ocupación prolongada. CAUTELA: La muestra de
+      Tamers es carbón de SUPERFICIE en dunas activas, no de estratigrafía
+      sellada. Y el mismo sitio tiene IVIC-625 (A.D. 1750) unos metros al
+      norte: es un lugar reocupado, no un depósito puro.
+    procedencia:
+      obra: oliver-1989-cap4
+      detalle: "Apéndice E FAL-101; fechas en Tamers 1970: 512; excavación en zavala-reyes-2018"
+    etimologia: sin-resolver
+
+  - id: nodo-015
+    forma: jose-gregorio-hernandez
+    tipo: sitio-arqueologico
+    region: golfete-de-coro
+    etiqueta: atestiguado
+    atestacion: arqueologica
+    precontacto: si
+    rol: >
+      Sitio FAL-100 del inventario de Oliver (prospección 1981-1983),
+      registrado como "José Gregorio Hernández / GH-1". Afiliación cerámica:
+      Los Médanos y Urumaco.
+    precontacto_razon: >
+      ✅ LAS TRES FECHAS LOCALIZADAS (Table 15 del cap. 4, recalibrada con
+      OxCal v3.10). Dos caen DENTRO de la ventana simulada y una es colonial:
+      ISGS-1253 (Sector 1) 570±70 BP → cal. A.D. 1299-[1363]-1424 ISGS-1423
+      (Sector NW) 550±110 BP → cal. A.D. 1280-[1407]-1440 ISGS-1424 (Sector 2)
+      330±110 BP → cal. A.D. 1521-[1572]-1641 Dos dataciones propias en el s.
+      XIV-XV, en sectores distintos del sitio. Ya no es inferencia por
+      complejo cerámico: son fechas. CAUTELA: El sitio fue REOCUPADO:
+      ISGS-1424 es colonial. Un nodo con ocupación precontacto **y**
+      posterior; al ponerlo en escena hay que usar la capa, no el sitio
+      entero. De FAL-100 Sector-2 procede además el cuenco de Los Médanos-B
+      con motivo zoomorfo en espiral (Fig. 86).
+    procedencia:
+      obra: oliver-1989-cap4
+      detalle: "Apéndice E FAL-100"
+    etimologia: sin-resolver
+
+  - id: nodo-016
+    forma: los-medanos-oeste-1
+    tipo: sitio-arqueologico
+    region: golfete-de-coro
+    etiqueta: atestiguado
+    atestacion: arqueologica
+    precontacto: probable
+    rol: >
+      Sitio FAL-099 del inventario de Oliver (prospección 1981-1983),
+      registrado como "Los Médanos West-1". Afiliación cerámica: Urumaco.
+    procedencia:
+      obra: oliver-1989-cap4
+      detalle: "Apéndice E FAL-099"
+    etimologia: sin-resolver
+
+    nota: >
+      Afiliación Urumaco pura, sin componente Los Médanos: el complejo termina
+      hacia 1393/1450, antes del contacto. Sin datación propia.
+  - id: nodo-017
+    forma: la-posta
+    tipo: sitio-arqueologico
+    region: golfete-de-coro
+    etiqueta: atestiguado
+    atestacion: arqueologica
+    precontacto: probable
+    rol: >
+      Sitio FAL-111 del inventario de Oliver (prospección 1981-1983),
+      registrado como "La Posta A through C". Afiliación cerámica: Urumaco,
+      Dabajuroide.
+    procedencia:
+      obra: oliver-1989-cap4
+      detalle: "Apéndice E FAL-111"
+    etimologia: sin-resolver
+    nota: >
+      Urumaco + la lista marca C-14 (cf. Tamers 1965).
+      --
+      La Table 15 declara sus fuentes: "Sources for IVIC: Tamers 1965, 1967".
+      Oliver ya publicó las fechas IVIC recalibradas, así que Tamers 1965 deja
+      de ser bloqueante — sigue valiendo para el contexto de cada muestra.
+
+  - id: nodo-018
+    forma: tara-tara
+    tipo: sitio-arqueologico
+    region: golfete-de-coro
+    etiqueta: atestiguado
+    atestacion: arqueologica
+    precontacto: desconocido
+    rol: >
+      Sitio FAL-106 del inventario de Oliver (prospección 1981-1983),
+      registrado como "Tara-tara cemetery". Afiliación cerámica: Dabajuroide.
+    procedencia:
+      obra: oliver-1989-cap4
+      detalle: "Apéndice E FAL-106"
+    etimologia: sin-resolver
+
+    nota: >
+      "Dabajuroide" a secas abarca 800-1600: cruza el contacto y no decide.
+      Interesa igual porque es CEMENTERIO — el corpus tiene rito funerario de
+      crónica y aquí habría material.
+  - id: nodo-019
+    forma: la-vela
+    tipo: sitio-arqueologico
+    region: golfete-de-coro
+    etiqueta: atestiguado
+    atestacion: arqueologica
+    precontacto: desconocido
+    rol: >
+      Sitio FAL-103 del inventario de Oliver (prospección 1981-1983),
+      registrado como "La Vela". Afiliación cerámica: Dabajuroide.
+    procedencia:
+      obra: oliver-1989-cap4
+      detalle: "Apéndice E FAL-103"
+    etimologia: sin-resolver
+    nota: >
+      El lexicón tiene `todarahuato` = 'indígena de La Vela'. El nodo-001
+      (todariquiba) advierte que NO se ha demostrado relación entre ambos:
+      este registro no la asume tampoco.
+
+  - id: nodo-020
+    forma: puente-de-piedra
+    tipo: sitio-arqueologico
+    region: golfete-de-coro
+    etiqueta: atestiguado
+    atestacion: arqueologica
+    precontacto: desconocido
+    rol: >
+      Sitio FAL-109 del inventario de Oliver (prospección 1981-1983),
+      registrado como "Puente de Piedra". Afiliación cerámica: Dabajuroide.
+    procedencia:
+      obra: oliver-1989-cap4
+      detalle: "Apéndice E FAL-109"
+    etimologia: sin-resolver
+
+  - id: nodo-021
+    forma: boca-del-rio-coro
+    tipo: sitio-arqueologico
+    region: golfete-de-coro
+    etiqueta: atestiguado
+    atestacion: arqueologica
+    precontacto: desconocido
+    rol: >
+      Sitio FAL-102 del inventario de Oliver (prospección 1981-1983),
+      registrado como "Boca del Río Coro Complex". Afiliación cerámica:
+      Neoindio.
+    procedencia:
+      obra: oliver-1989-cap4
+      detalle: "Apéndice E FAL-102"
+    etimologia: sin-resolver
+
+  - id: nodo-022
+    forma: guayacancito
+    tipo: sitio-arqueologico
+    region: golfete-de-coro
+    etiqueta: atestiguado
+    atestacion: arqueologica
+    precontacto: desconocido
+    rol: >
+      Sitio FAL-110 del inventario de Oliver (prospección 1981-1983),
+      registrado como "Guayacancito". Afiliación cerámica: Neoindio.
+    procedencia:
+      obra: oliver-1989-cap4
+      detalle: "Apéndice E FAL-110"
+    etimologia: sin-resolver
+
+  - id: nodo-023
+    forma: el-manglar
+    tipo: sitio-arqueologico
+    region: golfete-de-coro
+    etiqueta: atestiguado
+    atestacion: arqueologica
+    precontacto: desconocido
+    rol: >
+      Sitio FAL-112 del inventario de Oliver (prospección 1981-1983),
+      registrado como "El Manglar East/West camp sites". Afiliación cerámica:
+      Neoindio.
+    procedencia:
+      obra: oliver-1989-cap4
+      detalle: "Apéndice E FAL-112"
+    etimologia: sin-resolver
+    nota: >
+      "Camp sites" — campamentos, no poblado. Si se confirma, es el primer
+      nodo del registro que documenta uso ESTACIONAL del manglar, que es un
+      hueco declarado del corpus de ecología.
+
+  # Península de Paraguaná
+
+  - id: nodo-024
+    forma: santa-ana-el-cerro
+    tipo: sitio-arqueologico
+    region: paraguana
+    etiqueta: atestiguado
+    atestacion: arqueologica
+    precontacto: si
+    rol: >
+      Sitio FAL-154 del inventario de Oliver (prospección 1981-1983),
+      registrado como "Santa Ana ["El Cerro"]-1". Afiliación cerámica:
+      Urumaco.
+    precontacto_razon: >
+      ⭐ EL MEJOR SOSTENIDO DE TODO EL REGISTRO. Tres dataciones propias en la
+      Table 15, TODAS precontacto, cubriendo tres siglos de ocupación
+      continua: IVIC-18 790±100 BP → cal. A.D. 1160-[1257]-1280 IVIC-16
+      730±110 BP → cal. A.D. 1210-[1278]-1387 IVIC-14 520±120 BP → cal. A.D.
+      1299-[1415]-1451 La última la obtuvo Zucchi (com. pers.) y Oliver la
+      llama "a terminal date… of cal. A.D. 1415". Su cerámica es Late Urumaco
+      "still lavishly decorated", que Oliver contrapone al estilo empobrecido
+      contemporáneo de Supidebo-Antúnez: es un sitio de plena vitalidad en la
+      ventana simulada. Y cruza con Esteves, que describe una "antigua aldea
+      indígena en cuyas cercanías los españoles fundaron en 1538 el pueblo de
+      Santa Ana de Paraguaná", con "restos de cerámica indígena y europea".
+      CAUTELA: Esteves llama al sitio Chamuriana; Oliver lo registra como
+      Santa Ana "El Cerro". Hay que confirmar que hablan del mismo lugar antes
+      de fundir las dos evidencias en un nodo.
+    procedencia:
+      obra: oliver-1989-cap4
+      detalle: "Apéndice E FAL-154"
+    etimologia: sin-resolver
+
+  - id: nodo-025
+    forma: cayerua
+    tipo: sitio-arqueologico
+    region: paraguana
+    etiqueta: atestiguado
+    atestacion: arqueologica
+    precontacto: probable
+    rol: >
+      Sitio FAL-143 del inventario de Oliver (prospección 1981-1983),
+      registrado como "Cayerúa". Afiliación cerámica: Dabajuroide [cf. Howard
+      1943].
+    procedencia:
+      obra: oliver-1989-cap4
+      detalle: "Apéndice E FAL-143"
+    etimologia: sin-resolver
+
+    nota: >
+      ⭐ CIERRA UN HUECO DECLARADO. La nota de Esteves dice de CAYERUBA que es
+      "el primer sitio de Paraguaná con evidencia precolombina" (cementerio +
+      cerámica) pero que "sin excavación publicada ni fecha, no alcanza para
+      precontacto: si". La prospección de Oliver 1981-83 ES ese registro
+      arqueológico que faltaba, y Howard 1943 lo respalda desde antes.
+      CAUTELA: Cayerúa (Oliver) ~ Cayeruba (Esteves): la equivalencia es muy
+      probable pero hay que confirmarla. Y "Dabajuroide" sigue sin fechar la
+      ocupación. Sube de `desconocido` a `probable`, no a `si`.
+  - id: nodo-026
+    forma: machuruca
+    tipo: sitio-arqueologico
+    region: paraguana
+    etiqueta: atestiguado
+    atestacion: arqueologica
+    precontacto: probable
+    rol: >
+      Sitio FAL-152 del inventario de Oliver (prospección 1981-1983),
+      registrado como "Machuruca". Afiliación cerámica: Urumaco, Dabajuroide.
+    procedencia:
+      obra: oliver-1989-cap4
+      detalle: "Apéndice E FAL-152"
+    etimologia: sin-resolver
+
+    nota: >
+      Componente Urumaco. Esteves registra "Machuruca/Misaray" como sitio
+      arqueológico con cementerio indígena y PETROGLIFO FOTOGRAFIADO. Dos
+      fuentes, una toponímica y otra de prospección, sobre el mismo lugar.
+  - id: nodo-027
+    forma: moruy
+    tipo: sitio-arqueologico
+    region: paraguana
+    etiqueta: atestiguado
+    atestacion: arqueologica
+    precontacto: desconocido
+    rol: >
+      Sitio FAL-149 del inventario de Oliver (prospección 1981-1983),
+      registrado como "Moruy". Afiliación cerámica: Dabajuroide [cf. Howard
+      1943].
+    procedencia:
+      obra: oliver-1989-cap4
+      detalle: "Apéndice E FAL-149"
+    etimologia: sin-resolver
+    nota: >
+      Moruy es hoy un pueblo vivo y Esteves lo usa como referencia geográfica
+      de toda la zona. Dabajuroide sin precisar no decide la época.
+
+  - id: nodo-028
+    forma: cerro-pelon-chuchube
+    tipo: sitio-arqueologico
+    region: paraguana
+    etiqueta: atestiguado
+    atestacion: arqueologica
+    precontacto: desconocido
+    rol: >
+      Sitio FAL-144 del inventario de Oliver (prospección 1981-1983),
+      registrado como "Cerro Pelón / Chuchube". Afiliación cerámica: Neoindio.
+    procedencia:
+      obra: oliver-1989-cap4
+      detalle: "Apéndice E FAL-144"
+    etimologia: sin-resolver
+    nota: >
+      ⭐ El topónimo lleva `chuchube`, que ES entrada del lexicón (van Buurt,
+      Gatschet, Zavala) y aparece en la Tabla A-9 de Oliver como 'paraulata /
+      bird species'. Un nodo cuyo nombre es una palabra atestiguada del
+      lexicón: material para toponimos.yaml, no solo para el registro de
+      nodos.
+
+  - id: nodo-029
+    forma: la-guaquira-abajo
+    tipo: sitio-arqueologico
+    region: paraguana
+    etiqueta: atestiguado
+    atestacion: arqueologica
+    precontacto: desconocido
+    rol: >
+      Sitio FAL-145 del inventario de Oliver (prospección 1981-1983),
+      registrado como "La Guaquira Abajo". Afiliación cerámica: Neoindio.
+    procedencia:
+      obra: oliver-1989-cap4
+      detalle: "Apéndice E FAL-145"
+    etimologia: sin-resolver
+
+  - id: nodo-030
+    forma: la-aguada
+    tipo: sitio-arqueologico
+    region: paraguana
+    etiqueta: atestiguado
+    atestacion: arqueologica
+    precontacto: desconocido
+    rol: >
+      Sitio FAL-153 del inventario de Oliver (prospección 1981-1983),
+      registrado como "La Aguada". Afiliación cerámica: Neoindio.
+    procedencia:
+      obra: oliver-1989-cap4
+      detalle: "Apéndice E FAL-153"
+    etimologia: sin-resolver
+    nota: >
+      Nombre castellano; no aporta al léxico.
 
 huecos:
 
