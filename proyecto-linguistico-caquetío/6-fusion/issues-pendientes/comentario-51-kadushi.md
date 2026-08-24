@@ -24,3 +24,43 @@ a su especie, y el hueco se declara donde no haya nombre.
 
 `dato` como voz regional viva entra además al circuito del dictado de
 [[medina-colina-sxx]] cuando arranque.
+
+---
+
+## Ampliación 2026-08-24 — la prueba está dentro de la misma tabla
+
+La lectura completa de la Tabla A-9 confirma la salida por especies, y no hace
+falta salir de la fuente para verlo. Oliver trae **dos entradas distintas** para
+fruto de cactus:
+
+```
+caduchi | caduchi | higo, BREVA | cactus fruit
+comoho  | komoho  | higo, TUNA  | cactus
+```
+
+**Breva y tuna son frutos de plantas distintas**: la breva es de higuera, la
+tuna es de *Opuntia*. Oliver no las funde en una glosa: las separa, y usa "higo"
+como aproximación castellana en las dos, que es exactamente el aplanamiento que
+este issue detectó en nuestras fuentes.
+
+Más el testimonio regional de Miguel (Punto Fijo, 2026-08-16): **en Paraguaná al
+fruto del cactus se le dice `dato`**, y hay varios cactus con frutos distintos.
+
+| Palabra | Referente | Fuente |
+|---|---|---|
+| `caduchi` / `kadushi` | higo, breva | Oliver A-9 · Zavala · van Buurt · Gatschet · Alvarado |
+| `comoho` | higo, tuna | **Oliver A-9 (nueva en el repo)** |
+| `dato` | fruto de cactus | retro-abstraído, habla viva de Paraguaná |
+
+**El issue se resuelve separando, no eligiendo.** Las "tres atestaciones con
+tres referentes distintos" que lo abrieron no eran un conflicto: eran tres
+palabras que nuestras fuentes metieron bajo una.
+
+Y es un patrón, no un caso aislado. La misma tabla separa otros tres pares que
+el repo tiene aplanados: `Cegue` (lechuza) ~ `chaure` (búho), `chirgua` (vasija
+de agua) ~ `chirigua` (tinaja pequeña), `barici` (agua turbia) ~ `bariqui`
+(almagre). **El caquetío distinguía especies y tamaños donde nuestras glosas
+agrupan.**
+
+Pendiente: asignar especie botánica a `caduchi` y `comoho` —el cardón, la tuna,
+el dato— es trabajo de la campaña fauna/flora contra ecología, no de este issue.

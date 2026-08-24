@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-08-24**.
 
-**1284 ítems propuestos** en 10 propuestas, más **6 issue(s)/comentario(s) redactados sin publicar**.
+**1284 ítems propuestos** en 10 propuestas, más **9 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -51,6 +51,9 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 
 | Archivo | Qué es |
 |---|---|
+| `comentario-45-tara.md` | Tercera fuente independiente, y dice **langosta**. El conflicto se cierra. |
+| `comentario-46-corie.md` | Tercera fuente independiente: **armadillo**. Y 'choza' sigue sin ninguna. |
+| `comentario-50-datihao.md` | La tabla trae `datihao` — y con otra glosa, y con su par de rango |
 | `comentario-51-kadushi.md` | `kadushi`: testimonio regional de Miguel, y la salida por especies |
 | `comentario-52-mene.md` | `mene`: la evidencia de Oliver, la decisión, y una aclaración de género |
 | `comentario-d9-issue38.md` | Medición del barrido completo — **no aplicar todavía** |
