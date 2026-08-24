@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-16 03:58**.
+<!--GENERADO--> Generado el **2026-08-24 01:01**.
 
 ## ¿Vamos bien?
 
@@ -114,18 +114,19 @@ Cuántas de las 301 entradas de familia caquetía **con `notas`** citan a cada o
 
 | Obra | Entradas que la citan | % de las citadas |
 |---|---|---|
-| [[zavala-reyes-2015]] | 224 | 74% |
-| [[zavala-reyes-2018]] | 224 | 74% |
-| [[alvarado-1921]] | 15 | 5% |
-| [[van-buurt-2014]] | 12 | 4% |
+| [[zavala-reyes-2015]] | 223 | 74% |
+| [[zavala-reyes-2018]] | 223 | 74% |
+| [[alvarado-1921]] | 14 | 5% |
+| [[oliver-1989-apendice-a]] | 10 | 3% |
+| [[oliver-1989-cap2]] | 10 | 3% |
+| [[oliver-1989-cap3-vecinos]] | 10 | 3% |
+| [[oliver-1989-cap3]] | 10 | 3% |
+| [[oliver-1989-cap4]] | 10 | 3% |
+| [[van-buurt-2014]] | 10 | 3% |
 | [[arcaya-1920]] | 8 | 3% |
-| [[oliver-1989-apendice-a]] | 5 | 2% |
-| [[oliver-1989-cap2]] | 5 | 2% |
-| [[oliver-1989-cap3]] | 5 | 2% |
-| [[oliver-1989-cap4]] | 5 | 2% |
-| [[gatschet-1885]] | 4 | 1% |
-| [[oviedo-y-valdes-1851]] | 3 | 1% |
-| [[jahn-1927]] | 2 | 1% |
+| [[gatschet-1885]] | 3 | 1% |
+| [[oviedo-y-valdes-1851]] | 2 | 1% |
+| [[jahn-1927]] | 1 | 0% |
 | [[brinton-1871]] | 1 | 0% |
 
 Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas con `notas` que no citan a ninguna obra del vault: **68**.
@@ -136,12 +137,12 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 
 Índice: [[INDICE_FUENTES]]. **La nota de cada obra es la fuente de verdad**; esta tabla lee su frontmatter (`estado_minado`, `prioridad`, `capa_texto`, `sostiene`), no una lista cableada.
 
-**38 notas de obra.**
+**39 notas de obra.**
 
 | `estado_minado` | n |
 |---|---|
 | minado | 21 |
-| parcial | 5 |
+| parcial | 6 |
 | no-disponible | 4 |
 | segunda-mano | 3 |
 | sin-minar | 2 |
@@ -149,19 +150,19 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | descartada | 1 |
 | completo | 1 |
 
-**Prioridad ALTA sin minar (6):** [[esteves-1989]] (`parcial`), [[medina-colina-sxx]] (`en-curso`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`no-disponible`), [[urbina-jimenez-2007-2011]] (`parcial`).
+**Prioridad ALTA sin minar (7):** [[esteves-1989]] (`parcial`), [[medina-colina-sxx]] (`en-curso`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap3-vecinos]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`no-disponible`), [[urbina-jimenez-2007-2011]] (`parcial`).
 
-<details><summary>Las 38 notas, una por fila</summary>
+<details><summary>Las 39 notas, una por fila</summary>
 
 | Nota | minado | prioridad | capa texto | lexicón (declarado) | lexicón (medido) | hechos corpus |
 |---|---|---|---|---|---|---|
-| [[zavala-reyes-2015]] | completo | alta | si | 164 | 224 | 7 |
+| [[zavala-reyes-2015]] | completo | alta | si | 164 | 223 | 7 |
 | [[brinton-1871]] | minado | hecha | si | 84 | 1 | 0 |
-| [[jahn-1927]] | minado | media | si | 4 | 2 | 16 |
-| [[gatschet-1885]] | minado | alta | si | 4 | 4 | 0 |
-| [[oliver-1989-cap3]] | minado | media | si | 2 | 5 | 15 |
-| [[oviedo-y-valdes-1851]] | no-disponible | alta | no | 2 | 3 | 7 |
-| [[oliver-1989-cap2]] | minado | alta | parcial | 2 | 5 | 2 |
+| [[jahn-1927]] | minado | media | si | 4 | 1 | 16 |
+| [[gatschet-1885]] | minado | alta | si | 4 | 3 | 0 |
+| [[oliver-1989-cap3]] | minado | media | si | 2 | 10 | 15 |
+| [[oviedo-y-valdes-1851]] | no-disponible | alta | no | 2 | 2 | 7 |
+| [[oliver-1989-cap2]] | minado | alta | parcial | 2 | 10 | 2 |
 | [[arcaya-1920]] | minado | media | si | 1 | 8 | 13 |
 | [[camacho-2011]] | minado | hecha | si | 0 | 0 | 16 |
 | [[paz-reverol-2017-2018]] | minado | hecha | — | 0 | 0 | 9 |
@@ -173,26 +174,27 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[keegan-1989]] | segunda-mano | media | — | 0 | 0 | 2 |
 | [[vansina-ong]] | segunda-mano | baja | — | 0 | 0 | 2 |
 | [[adam-1879]] | minado | hecha | si | 0 | 0 | 1 |
-| [[alvarado-1921]] | minado | media | si | 0 | 15 | 1 |
+| [[alvarado-1921]] | minado | media | si | 0 | 14 | 1 |
 | [[angleria-1892]] | parcial | media | si | 0 | 0 | 1 |
 | [[oviedo-y-banos]] | minado | baja | si | 0 | 0 | 1 |
-| [[van-buurt-2014]] | minado | alta | si | 0 | 12 | 1 |
+| [[van-buurt-2014]] | minado | alta | si | 0 | 10 | 1 |
 | [[antczak-2017-cariban]] | minado | media | si | 0 | 0 | 0 |
-| [[esteves-1989]] | parcial | alta | si | 0 | 0 | 0 |
+| [[esteves-1989]] | parcial | alta | no | 0 | 0 | 0 |
 | [[fernandes-2020]] | no-disponible | baja | archivo-vacio | 0 | 0 | 0 |
 | [[gilij-1780-1783]] | sin-minar | baja | no | 0 | 0 | 0 |
 | [[las-casas-1875]] | minado | baja | si | 0 | 0 | 0 |
 | [[martinez-cruzado-2003]] | minado | alta | si | 0 | 0 | 0 |
 | [[medina-colina-sxx]] | en-curso | alta | no | 0 | 0 | 0 |
 | [[moreno-mayar-2018]] | sin-minar | baja | si | 0 | 0 | 0 |
-| [[oliver-1989-apendice-a]] | parcial | alta | no | 0 | 5 | 0 |
-| [[oliver-1989-cap4]] | parcial | alta | si | 0 | 5 | 0 |
+| [[oliver-1989-apendice-a]] | parcial | alta | no | 0 | 10 | 0 |
+| [[oliver-1989-cap3-vecinos]] | parcial | alta | no | 0 | 10 | 0 |
+| [[oliver-1989-cap4]] | parcial | alta | si | 0 | 10 | 0 |
 | [[perea-alonso-1942]] | descartada | descartada | si | 0 | 0 | 0 |
 | [[ramos-perez-1978]] | no-disponible | baja | archivo-vacio | 0 | 0 | 0 |
 | [[rouse-cruxent-1963]] | no-disponible | media | archivo-vacio | 0 | 0 | 0 |
 | [[schroeder-2018]] | minado | media | si | 0 | 0 | 0 |
 | [[urbina-jimenez-2007-2011]] | parcial | alta | si | 0 | 0 | 0 |
-| [[zavala-reyes-2018]] | minado | alta | si | 0 | 224 | 0 |
+| [[zavala-reyes-2018]] | minado | alta | si | 0 | 223 | 0 |
 
 </details>
 
@@ -207,11 +209,11 @@ Mapas: [[mapa-familia]] · [[mapa-ecologia]] · [[mapa-creencia]] · [[mapa-tran
 | Archivo | hechos | `atestiguado` | `reconstruido` | `canon-simulacion` | `hipotetico` | `retro-abstraido` | con `referencia` |
 |---|---|---|---|---|---|---|---|
 | `creencia.yaml` | 26 | 11 | 11 |  |  | 4 | 26/26 |
-| `ecologia.yaml` | 54 | 32 | 21 |  | 1 |  | 54/54 |
+| `ecologia.yaml` | 54 | 31 | 22 |  | 1 |  | 54/54 |
 | `geografia_politica.yaml` | 8 | 8 |  |  |  |  | 8/8 |
 | `parentesco.yaml` | 39 | 14 | 18 |  | 7 |  | 39/39 |
 | `transmision.yaml` | 34 | 13 | 5 | 14 | 2 |  | 34/34 |
-| **total** | **161** | **78** | **55** | **14** | **10** | **4** | **161/161** |
+| **total** | **161** | **77** | **56** | **14** | **10** | **4** | **161/161** |
 
 Además, estructuras del corpus que **no son hechos etiquetados** (y por eso no entran en el total): `genealogia.yaml::linajes` (6), `genealogia.yaml::agentes` (60), `genealogia.yaml::personas_de_fondo` (14).
 
@@ -250,7 +252,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 916 en 232 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 934 en 252 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 197 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 

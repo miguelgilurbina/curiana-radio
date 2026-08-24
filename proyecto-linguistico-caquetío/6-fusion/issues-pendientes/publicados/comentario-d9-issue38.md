@@ -180,3 +180,77 @@ Hay que decidirlo junto con la glosa, no después. Y de paso: la nota de `sima`
 dice que su forma está *"justificada por cognado en lokono/topónimo
 (Barquisimeto)"* — una palabra del núcleo fundacional apoyada en un topónimo de
 **la otra polity**. Merece revisión aparte.
+
+---
+
+## 🔴 Ampliación 2026-08-24 — Oliver SÍ glosa el morfema, y no dice ni 'cerro' ni 'orilla'
+
+Miguel leyó la Tabla A-9 completa sobre la imagen. **La entrada #2 es el
+morfema, y su glosa cambia la lectura de toda la evidencia anterior:**
+
+```
+2. -bana | -bana | | Surrounding
+```
+
+**Y es la entrada a la que remite la #17.** `Capubana` dice *"a hill in
+Paraguaná, **cf. #2 and #16**"* — es decir, Oliver **identifica el lugar**
+(Capuhana es una colina) y **remite al lector a la #2 para el significado del
+morfema**. La glosa morfémica es *surrounding*; 'a hill' es el referente.
+
+### Lo que esto corrige de las ampliaciones anteriores
+
+La ampliación del 2026-08-16 presentó `kapu-bana = "a hill in Paraguaná"` como
+**segunda fuente independiente para `bana` = 'cerro'**. Con la #2 delante, esa
+lectura no se sostiene: Oliver no está glosando el morfema ahí. **Queda una sola
+fuente para 'cerro' — Esteves — y ahora hay una tercera glosa en juego.**
+
+### Las tres lecturas, y dónde encaja cada una
+
+| Glosa | Quién | Apoyo |
+|---|---|---|
+| 'orilla, borde' | el proyecto (sin cita) | ninguna localizada |
+| 'cerro, sitio alto' | **Esteves** ×10 topónimos | el terreno de esos diez |
+| **'surrounding'** | **Oliver, Tabla A-9 #2** | glosa morfémica explícita |
+
+Y *surrounding* **coincide con algo que el repo ya tenía**: `toponimos.yaml` da
+`paraguana` = **"Rodeada del mar"** (Zavala). *Rodeada* y *surrounding* son la
+misma palabra.
+
+### La evidencia nueva de la propia tabla: tres referentes incompatibles
+
+La A-9 trae tres compuestos en `-bana`, y sus referentes **no se parecen**:
+
+| Compuesto | Referente |
+|---|---|
+| `Capubana` | **una colina** en Paraguaná |
+| `Carirubana` | **costa con peñón** |
+| `guacaubana` / `wakaubana` | **un arroyo subterráneo** — *"río escondido"* |
+
+Colina, costa y curso de agua no tienen nada en común como accidente
+geográfico. **Sí lo tienen como relación**: algo que rodea o circunda. Eso es
+justo lo que se espera de un morfema relacional, y justo lo que NO se espera de
+uno topográfico. Refuerza que **Esteves estaba leyendo el referente, no el
+morfema** — que era la hipótesis de esta discusión desde el principio, ahora con
+un tercer caso que la separa limpiamente.
+
+### Y la #13 se corrigió: no hay ningún `ca-` que segmentar
+
+```
+13. çabana | sabana | prado | savannah
+```
+
+La entrada se había anotado como `forma: cabana`. La lectura correcta es
+**`çabana`**, con ç cedilla (grafía del XVI para /s/), y fonémica **`sabana`**.
+
+`morfologia.md` §3 sostiene que `-bana` = 'llano' porque *"`cabana` = 'sabana' y
+una sabana es un llano ancho"*. Pero la inicial **es /sa/, no /ka/**: no existe
+el elemento `ca-`. Y Oliver la normaliza como `sabana`, o sea la trata como el
+**étimo entero** del castellano. Ese apoyo se cae por partida doble.
+
+### Qué queda por decidir
+
+- ¿Se adopta **'surrounding'** —la única glosa morfémica explícita que hay— con
+  'orilla/borde' como su traducción castellana razonable?
+- Si se adopta, **`sima-bana` sigue roto**: 'cerro que rodea' no es 'orilla del
+  cerro'. El ejemplo insignia del motor y su test necesitan reescritura igual.
+- Y `Capubana` requiere **la columna española**, que falta: puede dar el matiz.

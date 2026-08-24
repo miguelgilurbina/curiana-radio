@@ -73,13 +73,25 @@ caquetío*** (3) · `bana` 'cerro, sitio alto' (8) · `cari` 'orilla' (2) ·
 
 ## 5. 🔴 Lo que más rinde: las fuentes que abre
 
-**Juan de Castellanos, *Elegías de Varones Ilustres de Indias* (~1589)** hace
-*"una larga enumeración de los poblados indígenas de Paraguaná"* y nombra al
-*Gran Señor de Jurijurebo*; Esteves deduce que estuvo en la península **en
-1540**. Es la fuente más temprana de todo el libro y **la única que puede llenar
-Paraguaná en `asentamientos.yaml`**.
+**Juan de Castellanos, *Elegías de Varones Ilustres de Indias* (~1589)** hace,
+**según Esteves**, *"una larga enumeración de los poblados indígenas de
+Paraguaná"* y nombra al *Gran Señor de Jurijurebo*; Esteves deduce que estuvo
+en la península **en 1540**.
 
-Después: **Mariano Martí, *Relación de la Visita Pastoral*, 4 tomos (1773)** ·
+> ⚠️ **Esta atribución a Castellanos no se sostiene — verificado 2026-08-14**
+> ([[01-rastreo-fuentes]]): grep sobre las 147.532 líneas de la edición de 1857
+> de las *Elegías* (Internet Archive), con cuatro variantes ortográficas de
+> "Jurijurebo". **Cero apariciones.** Coincide con lo que ya medía
+> [[oliver-1989-cap4]] por su cuenta (0 apariciones de `Jurijurebo` y
+> `Hurraque`). El nombre solo circula en blogs de divulgación, que además se
+> contradicen sobre dónde ubicarlo (Duaca, Lara vs. Judibana, Paraguaná). La
+> cita es de Esteves, no verificable en la fuente primaria que ella misma
+> nombra — **ya no es la fuente más temprana que llena Paraguaná en
+> `asentamientos.yaml`**; issue
+> [#92](https://github.com/miguelgilurbina/curiana-radio/issues/92) debería
+> revisarse con esto en cuenta.
+
+Después: **Mariano Martí, *Relación de la Visita Pastoral*, 7 tomos (1773)** ·
 **fray Antonio Caulín (1799)** · **Nicolás Federmann** (que según Esteves, con
 Alfínger, *"dejó sin habitantes la península"* con sus levas) · la
 **capitulación de Carlos I a los Welser (1528)**, citada textual · escrituras
@@ -1135,14 +1147,20 @@ Los otros informantes: **Don Napoleón Riera Rodríguez** (El Hato, mun. Adícor
 | **Armas Chitty, J. A.** | *Historia de Paraguaná y Punto Fijo* |
 | **Cisneros, José Luis** | *Descripción de la Probincia de Benezuela* |
 | **Hill Peña, Aníbal** | *Noticias Históricas de Paraguaná* |
-| **Martí Estadella, Mariano** | ***Relación de la Visita Pastoral (4 tomos)*** |
+| **Martí Estadella, Mariano** | ***Relación de la Visita Pastoral (4 tomos, según la bibliografía de Esteves)*** |
 
 De estos, el repo ya tiene a **Alvarado** ([[alvarado-1921]]) y a **Arcaya**
 ([[arcaya-1920]]) — aunque **no las mismas obras**: las de Esteves son otras.
 
-> **Martí en 4 tomos** es la pieza a conseguir. Es colonial (1773), primaria, y
-> Oliver ya la cita como "Martí 1969" (la edición moderna del Concejo Municipal
-> de Caracas). Existe y es rastreable.
+> **Martí son 7 tomos, no 4** — corregido en el rastreo documental de
+> 2026-08-14 ([[01-rastreo-fuentes]]): la obra completa es *Documentos
+> relativos a su visita pastoral de la diócesis de Caracas, 1771-1784* (ed. ANH
+> 1969, 2ª ed. 1989), listada en 7 vols. por BiblioFEP y en la venta de Casa del
+> Libro. Esteves cita "4 tomos" en su propia bibliografía (transcrito arriba tal
+> cual); el número correcto para localizar o pedir la obra es 7. Sigue **solo en
+> papel** — no se encontró copia digital en Internet Archive, Google Books ni
+> HathiTrust. Oliver ya la cita como "Martí 1969" (la edición moderna del
+> Concejo Municipal de Caracas). Es rastreable, pero no descargable.
 
 ## ⭐⭐ El apéndice, p. 73 — "Sobre el nombre de Adícora"
 
@@ -1222,13 +1240,21 @@ El hallazgo con más consecuencias de todo el libro. Textual:
 > caquetía**, como ha quedado demostrado últimamente con el descubrimiento de
 > **grandes cementerios** en las inmediaciones."*
 
-### Por qué esto es lo más importante del libro
+### ⚠️ Por qué esto ya NO sostiene lo que se pensaba
 
-1. **Castellanos trae una lista de poblados de Paraguaná del siglo XVI.**
+> **Actualización 2026-08-14** ([[01-rastreo-fuentes]]): grep directo sobre la
+> ed. de 1857 de las *Elegías* (147.532 líneas, cuatro variantes de grafía) da
+> **cero** apariciones de "Jurijurebo". Ver el detalle en el bloque de arriba,
+> §5. Los tres puntos que siguen son el razonamiento **original** de esta nota
+> — se dejan intactos como registro, pero el punto 1 ya no es válido tal como
+> está escrito: la atribución a Castellanos es de Esteves, no verificable en
+> Castellanos mismo.
+
+1. ~~**Castellanos trae una lista de poblados de Paraguaná del siglo XVI.**
    [#92](https://github.com/miguelgilurbina/curiana-radio/issues/92) existe
    porque `asentamientos.yaml` tiene Paraguaná casi vacía por falta de fuente
    temprana. **Aquí está la fuente**, y es de ~1540 — anterior a la carta de
-   Bastidas y a todo lo demás que maneja Esteves.
+   Bastidas y a todo lo demás que maneja Esteves.~~ — no verificable, ver arriba.
 2. **Todariquiba y Jurijurebo, al mismo rango.** Todariquiba es `nodo-001`, el
    poblado de Manaure. Esteves pone a Jurijurebo a su altura: los dos *"asientos
    poblacionales de más importancia en la nación caquetía"*.

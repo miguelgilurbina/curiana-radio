@@ -13,9 +13,9 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-18**.
+<!--GENERADO--> Generado el **2026-08-24**.
 
-**1256 ítems propuestos** en 10 propuestas, más **6 issue(s)/comentario(s) redactados sin publicar**.
+**1284 ítems propuestos** en 10 propuestas, más **0 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -28,7 +28,7 @@ editar_a_mano: no
       - lab: ISGS-1173, sitio: "Túcua",              bp: "110 ... 
                              ^ |
 | `tabla_a8_jirajarano.yaml` | oliver-1989-apendice-a | 33 |  |
-| `tabla_a9_oliver.yaml` | oliver-1989-cap2 | 21 |  |
+| `tabla_a9_oliver.yaml` | oliver-1989-cap2 | 49 |  |
 
 ## Propuestas léxicas (`curiana_sim/lexicon_*.py` — indexadas en su sitio)
 
@@ -51,12 +51,6 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 
 | Archivo | Qué es |
 |---|---|
-| `comentario-51-kadushi.md` | `kadushi`: testimonio regional de Miguel, y la salida por especies |
-| `comentario-52-mene.md` | `mene`: la evidencia de Oliver, la decisión, y una aclaración de género |
-| `comentario-d9-issue38.md` | Medición del barrido completo — **no aplicar todavía** |
-| `issue-caraota.md` | `caraota`: el corpus atribuye la palabra al caquetío, y Oliver marca su étimo como foráneo |
-| `issue-hayo.md` | `hayo` = 'coca' está como `caquetío-atestiguado`, y Oliver lo marca como préstamo de Santa |
-| `issue-polity-en-el-corpus.md` | El corpus etiqueta la *certeza* de cada hecho pero no *de qué polity* es |
 
 ---
 

@@ -27,7 +27,8 @@ Los caquetíos no dejaron escritura, y las crónicas coloniales los describen
 sesión, el inventario de datos duros parecía mínimo: el nombre de un cacique que
 "controlaba las tormentas" (Manaure) y una palabra de oficio, **boratio**
 (*borattio* en la grafía de Jahn 1927: 213, nota 29; *boratio* en la de Arcaya
-1920: 116 — ambas remiten al mismo apéndice del tomo IV de Oviedo y Valdés),
+1920: 116 — ambas remiten al mismo apéndice del tomo IV de Oviedo y Valdés,
+⚠️ que no se localiza en la edición disponible — ver [[oviedo-y-valdes-1851]]),
 glosada como "adivino o sacerdote". La minería de Arcaya (1920) amplió ese
 inventario mucho más de lo previsto —el título de cacique-piache (*díao*) y el
 funeral caquetío completo, con segundo entierro incluido, resultaron estar

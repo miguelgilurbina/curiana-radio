@@ -69,8 +69,12 @@ gh issue comment 38 --body-file "6-fusion/issues-pendientes/comentario-d9-issue3
    Y aparte: confirmar el criterio de `borde` para los 83 sitios de la costa
    occidental (¿misma polity?).
 4. **Campo `polity`** en el corpus (el issue A.1 lo argumenta).
-5. **#61** — editar: el "apéndice de voces" del tomo IV de Oviedo **no existe**
-   en la ed. Amador de los Ríos (medido). El tomo II sí está, gratis, en IA.
+5. **#61** — ✅ editado 2026-08-14: el "apéndice de voces" del tomo IV de
+   Oviedo **no existe** en la ed. Amador de los Ríos (16 hits de "vocabulario"
+   = bibliografía ajena, p. 626). Aplicado en [[oviedo-y-valdes-1851]],
+   [[jahn-1927]] y [[03_creencia_caquetia]]. Tomo II **y** tomo IV están
+   libres en IA (enlaces en la nota). Falta cerrar el issue #61 en GitHub y
+   bajar el tomo II para intentar localizar *borattio* ahí en vez de en el IV.
 6. **`esteves-1989.md`** — el frontmatter dice `parcial` y "10 de 146 páginas";
    el barrido cerró a 154.
 

@@ -320,17 +320,22 @@ entradas:
 
   - id: ecologia-019
     contenido: >
-      La fauna de caza y de agüero del matorral seco: venado (tara), armadillo
-      (cachicamo), iguana (iwana), conejo (Sylvilagus floridanus), zorro (Cerdocyon
-      thous), zamuro (warawara), gavilán (chiriguare), pauji, sinsonte (chuchubi) y
-      el tuqueque (gecko). Varios de estos animales cargan valor simbólico en la
-      cosmología (canon §1).
+      La fauna de caza y de agüero del matorral seco: armadillo (cachicamo), iguana
+      (iwana), conejo (Sylvilagus floridanus), zorro (Cerdocyon thous), zamuro
+      (warawara), gavilán (chiriguare), pauji, sinsonte (chuchubi) y el tuqueque
+      (gecko). Varios de estos animales cargan valor simbólico en la cosmología
+      (canon §1).
     fuente: atestiguado
     referencia: "Lexicón caquetío atestiguado (Alvarado 1921, Jahn 1927); fauna semiárida de Falcón"
     dominios: [ecologia, fauna, caza]
     agentes_relacionados: [Chiriguare, Suba-ko]
-    palabra_lexicon: tara
     locacion: matorral
+    nota: >
+      CORREGIDO 2026-08-24 (#45): 'tara' salió de esta lista. La glosa 'venado' no
+      tenía fuente localizada; tres fuentes independientes (Zavala #238, Alvarado
+      p.283, Oliver Tabla A-9) coinciden en 'langosta, mariposa, polilla' — ver la
+      entrada corregida en curiana_lexicon.py. La palabra caquetía del VENADO queda
+      como hueco léxico: no se rellena a mano (regla del proyecto).
 
   # ── VIENTO / NAVEGACIÓN ─────────────────────────────────────────
   - id: ecologia-020
@@ -621,24 +626,27 @@ entradas:
 
   - id: ecologia-037
     contenido: >
-      La fauna de HOY no es la del siglo XV. El venado caramerudo (Odocoileus
-      virginianus) —el 'tara' del lexicón caquetío atestiguado— hoy está ausente de gran
-      parte del estado Falcón, y la causa documentada es la caza indiscriminada y
-      sistemática MODERNA, que ha desplomado sus poblaciones en toda Venezuela. Que el
-      caquetío tuviera palabra propia y atestiguada para el venado es evidencia de que
-      el venado estaba ahí.
-    fuente: atestiguado
-    referencia: "Distribución y declive del venado caramerudo (Odocoileus virginianus) en Venezuela y Falcón"
+      REVISADO 2026-08-24 (#45): este hecho usaba a 'tara' como venado caramerudo
+      hoy ausente, ejemplo insignia de que el lexicón atestiguado puede nombrar fauna
+      que el censo moderno no registra. La glosa 'venado' para 'tara' cayó (ver
+      ecologia-019 y curiana_lexicon.py): tres fuentes independientes (Zavala,
+      Alvarado, Oliver Tabla A-9) la dan como 'langosta, mariposa, polilla', no como
+      venado. El caso concreto se retira; LA REGLA DE MÉTODO sigue siendo válida y se
+      conserva sin ejemplo hasta que aparezca uno verificado. La palabra caquetía del
+      venado queda como hueco léxico declarado, no se rellena a mano.
+    fuente: reconstruido
+    referencia: "Regla de método reformulada tras auditoría de 2026-08-24 (issue #45); pendiente de caso verificado"
     dominios: [ecologia, fauna, metodo]
     agentes_relacionados: [Chiriguare, Suba-ko]
-    palabra_lexicon: tara
     locacion: matorral
     implicacion_simulacion: >
-      REGLA DE MÉTODO: proyectar la fauna actual hacia atrás SUBESTIMA el mundo animal
-      caquetío. El istmo del s. XV era pobre en fauna por el clima, pero menos pobre que
-      el de hoy, empobrecido además por el hombre. Cuando el lexicón atestiguado nombra
-      un animal hoy ausente localmente (tara), la palabra pesa más que el censo moderno.
-      Matiza la licencia de ecologia-002, que vale para geomorfología y clima, no fauna.
+      REGLA DE MÉTODO (sin caso demostrativo tras la corrección de 2026-08-24):
+      proyectar la fauna actual hacia atrás SUBESTIMA el mundo animal caquetío. El
+      istmo del s. XV era pobre en fauna por el clima, pero menos pobre que el de hoy,
+      empobrecido además por el hombre. Cuando el lexicón atestiguado nombre con fuente
+      sólida un animal hoy ausente localmente, la palabra debe pesar más que el censo
+      moderno — pero ese ejemplo concreto está por encontrar. Matiza la licencia de
+      ecologia-002, que vale para geomorfología y clima, no fauna.
 
   - id: ecologia-038
     contenido: >
