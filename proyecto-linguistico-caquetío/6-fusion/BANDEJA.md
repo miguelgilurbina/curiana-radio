@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-08-24**.
 
-**1284 ítems propuestos** en 10 propuestas, más **0 issue(s)/comentario(s) redactados sin publicar**.
+**1284 ítems propuestos** en 10 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -51,6 +51,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 
 | Archivo | Qué es |
 |---|---|
+| `comentario-47-saruro.md` | El último de la categoría — pero con menos evidencia que sus hermanos |
 
 ---
 
