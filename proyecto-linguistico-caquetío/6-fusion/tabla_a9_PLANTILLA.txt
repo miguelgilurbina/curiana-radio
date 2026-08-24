@@ -1,0 +1,86 @@
+TABLA A-9 — Selected Caquetío Vocabulary from the XVIth Century
+Oliver 1989, Apéndice A, pp. impresas 593-594 (= pdf 620-621 de
+fuentes_caquetios/Oliver_1989_Tesis_Arawakan_NW_Venezuela_UCL.pdf)
+
+CÓMO RELLENAR
+  Una línea por entrada, con | entre columnas:
+      forma | fonémica | glosa español | glosa inglés
+  Si va EN CURSIVA, añade  | CURSIVA  al final (= Oliver la marca como
+  probablemente NO caquetía, zona de Santa Marta).
+  Si una columna está vacía en el libro, deja el hueco: dos | seguidos.
+  Si un número no existe o no se lee, escribe  ---  y sigue.
+
+  ✓ = ya transcrita por OCR y verificada. No hace falta tocarla,
+      pero si ves que el OCR se equivocó, corrígela.
+
+====================================================================
+
+ 1.   ______ | ______ | ______ | ______
+ 2.   ______ | ______ | ______ | ______
+ 3.   ______ | ______ | ______ | ______
+ 4.   ______ | ______ | ______ | ______
+ 5.   ______ | ______ | ______ | ______
+ 6. ✓ barici | barisi | agua turbia | muddy, opaque
+ 7.   ______ | ______ | ______ | ______
+ 8.   ______ | ______ | ______ | ______
+ 9.   ______ | ______ | ______ | ______
+10.   ______ | ______ | ______ | ______
+11.   ______ | ______ | ______ | ______
+12.   ______ | ______ | ______ | ______
+13. ✓ cabana | çabana |  | savannah
+14. ✓ caduchi | caduchi | higo, breva | cactus fruit
+15.   ______ | ______ | ______ | ______
+16. ✓ Capú | kapú |  | spirit, goblin
+17. ✓ Capubana | kapu-bana |  | a hill in Paraguaná
+18. ✓ Caquetio | Kaketio | ser viviente | people (general)
+19. ✓ caca | kasa, kaza | puche de maíz | maize porridge
+20.   ______ | ______ | ______ | ______
+21.   ______ | ______ | ______ | ______
+22.   ______ | ______ | ______ | ______
+23.   ______ | ______ | ______ | ______
+24.   ______ | ______ | ______ | ______
+25.   ______ | ______ | ______ | ______
+26.   ______ | ______ | ______ | ______
+27. ✓ chirgua | chirwa | vasija para el agua | 
+28.   ______ | ______ | ______ | ______
+29. ✓ chiriguare | chiriware | gavilán | hawk
+30. ✓ chuchube | chuchube | paraulata | bird species
+31. ✓ dare | dare | diente | tooth
+32.   ______ | ______ | ______ | ______
+33. ✓ diao | diao | señor principal | principal chief
+34.   ______ | ______ | ______ | ______
+35.   ______ | ______ | ______ | ______
+36.   ______ | ______ | ______ | ______
+37.   ______ | ______ | ______ | ______
+38.   ______ | ______ | ______ | ______
+39.   ______ | ______ | ______ | ______
+40.   ______ | ______ | ______ | ______
+41.   ______ | ______ | ______ | ______
+42.   ______ | ______ | ______ | ______
+43.   ______ | ______ | ______ | ______
+44.   ______ | ______ | ______ | ______
+45. ✓ mene | mene | viruela / pez derretida | smallpox / tar
+46. ✓ quicidi | kuicidi | serranía | sierra
+47.   ______ | ______ | ______ | ______
+48.   ______ | ______ | ______ | ______
+49.   ______ | ______ | ______ | ______
+50. ✓ auri | auri | perro (?) | 
+
+====================================================================
+
+SIN NÚMERO LEGIBLE (el OCR las dio sueltas; si ves su número, añádelo):
+
+  ✓ barbasco | barbasko | hierba de borrachera | fish poison
+  ✓ eque | eque | lechuza | owl
+  ✓ cocu | koku | penca | agave species
+  ✓ icoroata |  | étimo de 'caraota' (leguminosa) |  | CURSIVA
+  ✓ hayo |  | la hierba que quita la sed (coca) |  | CURSIVA
+  ✓ raporón |  | calabaza con cal para mascar coca (poporo, gourd flask) |  | CURSIVA
+
+====================================================================
+
+NOTA AL PIE DE OLIVER, al final de la tabla:
+  "(words in italics are probably not Caquetío, but from the Santa Marta
+   area [chibchan?])"
+
+Cursivas ya identificadas por Miguel (2026-08-15): icoroata · hayo · raporón
