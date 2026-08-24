@@ -823,10 +823,32 @@ entradas:
       cambiaría de "préstamo de contacto" a caquetío pleno.
   - num: null
     forma: hayo
-    glosa_es: la hierba que quita la sed (coca)
+    fonemica: hayo
+    glosa_es: '"hierba que quita la sed"'
+    glosa_en: coca leaves
     cursiva: true
+    dictada_por: miguel
     en_repo: [lexicon-activo]
-    nota: 'issue pendiente (issue-hayo.md) — está como caquetío-atestiguado y categoria: ritual'
+    verificada_a_ojo: '2026-08-24 — columnas completas.'
+    nota: >
+      Issue pendiente (issue-hayo.md): está en el lexicón activo como
+      `caquetío-atestiguado` con `categoria: ritual`, y Oliver la marca en
+      cursiva (= probablemente del área de Santa Marta).
+
+      ⭐ DOS DETALLES DE LA LECTURA QUE IMPORTAN:
+
+      (1) La glosa española va ENTRE COMILLAS en el impreso —"hierba que quita
+      la sed"—. Oliver está CITANDO, no glosando él: es la descripción de su
+      fuente, no una traducción moderna. (La grafía es "hierba" normal; un
+      "huerba" que se anotó primero era una errata de dictado, corregida por
+      Miguel en el momento.)
+
+      (2) La glosa inglesa dice COCA LEAVES, en plural y nombrando la hoja, no
+      la planta. Encaja con el uso: lo que se masca es la hoja. El lexicón dice
+      "hayo, coca (Erythroxylum coca), hoja masticada ritual" — compatible, pero
+      el repo añade la identificación botánica y el adjetivo "ritual", que
+      Oliver no da. Al fusionar hay que distinguir lo que dice la fuente de lo
+      que añadió el proyecto.
   - num: null
     forma: raporón
     glosa_es: calabaza con cal para mascar coca (poporo, gourd flask)
