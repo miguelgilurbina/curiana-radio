@@ -20,9 +20,25 @@ aliases: ["Oviedo y Valdés", "Oviedo 1851", "Historia general y natural"]
 ## Qué es
 
 **La deuda documental más grande del proyecto.** Oviedo es la fuente última de
-los datos caquetíos más citados del corpus — el funeral del díao, el apéndice de
-voces caquetías — y **el proyecto no tiene ni una página suya legible**. Todo lo
-que usamos de Oviedo llega citado por [[arcaya-1920]] y [[jahn-1927]].
+los datos caquetíos más citados del corpus — el funeral del díao, y lo que
+Jahn cita como "apéndice de voces caquetías" del tomo IV — y **el proyecto no
+tiene ni una página suya legible**. Todo lo que usamos de Oviedo llega citado
+por [[arcaya-1920]] y [[jahn-1927]].
+
+> ⚠️ **El "apéndice de voces" del tomo IV no existe — verificado 2026-08-14**
+> ([[01-rastreo-fuentes]]): en la edición Amador de los Ríos (tomo IV, 1855,
+> libre en [Internet Archive](https://archive.org/details/historiageneral04fernguat)),
+> las 16 apariciones de "vocabulario" son una **bibliografía de obras ajenas en
+> la p. 626**, no un glosario de voces caquetías. Esto ya estaba anotado como
+> pendiente en [[SIGUIENTE_TANDA]] (#61, "medido" pero sin editar); esta nota
+> lo cierra. Consecuencia: *borattio* / *datihao-diao* (`creencia-001`, vía
+> Jahn p. 213 n.29) **no se puede verificar en esta edición** — Jahn cita "el
+> apéndice al tomo IV", pero esa pieza no existe en el volumen que el proyecto
+> puede consultar. No implica que Jahn invente el dato; puede venir de otra
+> edición o impresión de Oviedo. Sí implica que la cadena de cita
+> (Oviedo → Jahn → nosotros) tiene un eslabón que hoy no se puede cerrar, y que
+> "conseguir el apéndice" deja de ser una tarea con sentido tal como estaba
+> planteada — **prioridad bajada**, según el rastreo.
 
 ## Estado técnico (verificado 2026-07-29) — 🔴 corrupto
 
@@ -34,8 +50,12 @@ que usamos de Oviedo llega citado por [[arcaya-1920]] y [[jahn-1927]].
 | Veredicto | **no procesable con las herramientas actuales** |
 
 Y aunque funcionara, **sería el volumen equivocado**: el material caquetío está
-en el **tomo II** (funerales, pp. 299-300 y 329) y en el **apéndice de voces
-caquetías del tomo IV** — ninguno de los dos está en el repositorio.
+en el **tomo II** (funerales, pp. 299-300 y 329) — ninguno de los dos tomos que
+hacen falta (II y IV) está en el repositorio, pero **los dos son de descarga
+libre** en la ed. Amador de los Ríos, verificado 2026-08-14: [tomo
+II](https://archive.org/details/historiageneral01fernguat) · [tomo
+IV](https://archive.org/details/historiageneral04fernguat) — este último **sin
+el apéndice de voces que se buscaba** (ver advertencia arriba).
 
 ## Qué sostiene hoy (todo de segunda mano)
 
@@ -58,10 +78,17 @@ tres eslabones (Oviedo → Arcaya/Jahn → nosotros) sin poder verificar el prim
 No es un defecto fatal —Arcaya cita casi verbatim— pero es **exactamente el tipo
 de dependencia invisible** que la auditoría de fidelidad existe para hacer visible.
 
-1. Conseguir **tomo II** en copia legible (el funeral del díao).
-2. Conseguir el **apéndice de voces del tomo IV** — podría contener más términos
-   religiosos además de *boratio*, y es fuente directa de lexicón.
-3. Reparar o reemplazar este vol. I.
+1. ~~Conseguir tomo II en copia legible~~ — **ya no hace falta reparar nada**:
+   está libre en Internet Archive (enlace arriba). Falta bajarlo y extraer las
+   pp. 299-300 y 329.
+2. ~~Conseguir el apéndice de voces del tomo IV~~ — **no existe en esta
+   edición**; tarea cerrada, ver advertencia arriba.
+3. Verificar si *borattio*/*datihao-diao* aparece en el **tomo II** (que sí
+   existe) en vez del IV — Jahn pudo confundir el volumen, o citar otra
+   edición. Es la única vía que queda para no dejar `creencia-001` colgando de
+   una cita irreproducible.
+4. Reparar o reemplazar este vol. I, si sigue haciendo falta una vez resueltos
+   los tomos II y IV.
 
 ## Enlaces
 

@@ -1,12 +1,12 @@
 # PROPUESTA DE FUSIÓN A 3-mundo/asentamientos.yaml — #92
 # ======================================================
-# Los 15 sitios del Apéndice E de Oliver que son COSTEROS (Coro-Golfete o
+# Los 17 sitios del Apéndice E de Oliver que son COSTEROS (Coro-Golfete o
 # Paraguaná) Y caen dentro o cerca de la ventana simulada (s. XIV-XV).
 # Un minador propone, el humano fusiona (regla 5).
 #
-# POR QUÉ ESTOS 15 Y NO LOS 134: el registro de nodos solo admite lo que tiene
+# POR QUÉ ESTOS 17 Y NO LOS 134: el registro de nodos solo admite lo que tiene
 # evidencia citable y pertenece a la esfera. Los otros 119 son costa occidental
-# (¿misma polity?), sierra, Falcón oriental, o están fuera de época.
+# (¿misma polity?), sierra, Falcón oriental, o están fuera de época. (Los otros 117.)
 #
 # ─────────────────────────────────────────────────────────────────────────
 # LA DISCRIMINACIÓN QUE HACE POSIBLE ESTE CIERRE
@@ -37,7 +37,7 @@ meta:
   obra_base: oliver-1989-cap4
   detalle_base: "Apéndice E, pp. impresas 747-749; fechas del cap. 4 p. 440"
   generado: '2026-08-17'
-  sitios: 15
+  sitios: 17   # medido, no a mano (regla 1): corregido 2026-08-24, decia 15
   advertencia: >
     Ninguna de estas entradas trae coordenadas del Apéndice E. Las únicas
     coordenadas verificadas del registro son las de Tamers 1970 (IVIC-626 en
