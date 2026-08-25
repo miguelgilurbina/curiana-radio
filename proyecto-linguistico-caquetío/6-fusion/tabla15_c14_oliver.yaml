@@ -24,29 +24,29 @@ meta:
   generado: '2026-08-18'
 
 dataciones:
-  - lab: ISGS-1173, sitio: "Túcua",              bp: "1100 ± 70",  cal: [783, 944, 998],    ventana: no
-  - lab: ISGS-1174, sitio: "Píritu-La Luz",      bp: "920 ± 110",  cal: [1000, 1098, 1220], ventana: no
-  - lab: IVIC-223,  sitio: "Knip-9 (Curazao)",   bp: "910 ± 50",   cal: [1027, 1112, 1192], ventana: no
-  - lab: IVIC-224,  sitio: "Knip-9 (Curazao)",   bp: "830 ± 60",   cal: [1158, 1215, 1261], ventana: no
-  - lab: IVIC-12,   sitio: "La Luz, Paraguaná",  bp: "830 ± 50",   cal: [1160, 1215, 1260], ventana: no
-  - lab: IVIC-18,   sitio: "Santa Ana, Paraguaná", bp: "790 ± 100", cal: [1160, 1257, 1280], ventana: no, fal: FAL-154
-  - lab: ISGS-1255, sitio: "Túcua",              bp: "790 ± 70",   cal: [1164, 1257, 1279], ventana: no
-  - lab: I-4026,    sitio: "Tanki Flip (Aruba)", bp: "765 ± 105",  cal: [1162, 1262, 1284], ventana: no
-  - lab: I-4025,    sitio: "Tanki Flip (Aruba)", bp: "740 ± 105",  cal: [1209, 1277, 1383], ventana: roza
-  - lab: IVIC-16,   sitio: "Santa Ana, Paraguaná", bp: "730 ± 110", cal: [1210, 1278, 1387], ventana: roza, fal: FAL-154
-  - lab: IVIC-250,  sitio: "Knip-26 (Curazao)",  bp: "720 ± 60",   cal: [1258, 1279, 1285], ventana: no
-  - lab: ISGS-1184, sitio: "Corralito",          bp: "720 ± 70",   cal: [1257, 1279, 1377], ventana: roza
-  - lab: ISGS-1257, sitio: "Corralito",          bp: "650 ± 70",   cal: [1278, 1336, 1393], ventana: SI
-  - lab: IVIC-249,  sitio: "Knip-27 (Curazao)",  bp: "630 ± 50",   cal: [1281, 1344, 1395], ventana: SI
-  - lab: ISGS-1256, sitio: "Supidebo",           bp: "630 ± 150",  cal: [1260, 1344, 1430], ventana: SI
-  - lab: ISGS-1188, sitio: "Antúnez-5",          bp: "580 ± 110",  cal: [1280, 1362, 1430], ventana: SI
-  - lab: ISGS-1253, sitio: "FAL-100 Sector 1",   bp: "570 ± 70",   cal: [1299, 1363, 1424], ventana: SI, fal: FAL-100
-  - lab: ISGS-1423, sitio: "FAL-100 Sector NW",  bp: "550 ± 110",  cal: [1280, 1407, 1440], ventana: SI, fal: FAL-100
-  - lab: IVIC-14,   sitio: "Santa Ana, Paraguaná", bp: "520 ± 120", cal: [1299, 1415, 1451], ventana: SI, fal: FAL-154
-  - lab: ISGS-1254, sitio: "Supidebo 1b",        bp: "470 ± 70",   cal: [1409, 1432, 1452], ventana: SI
-  - lab: IVIC-241,  sitio: "Gaito",              bp: "340 ± 50",   cal: [1455, 1567, 1640], ventana: cruza-contacto
-  - lab: ISGS-1424, sitio: "FAL-100 Sector 2",   bp: "330 ± 110",  cal: [1521, 1572, 1641], ventana: no, fal: FAL-100
-  - lab: IVIC-236,  sitio: "Savaneta (Aruba)",   bp: "70 ± 60",    cal: [1880, 1927, 1955], ventana: no
+  - {lab: ISGS-1173, sitio: "Túcua",              bp: "1100 ± 70",  cal: [783, 944, 998],    ventana: no}
+  - {lab: ISGS-1174, sitio: "Píritu-La Luz",      bp: "920 ± 110",  cal: [1000, 1098, 1220], ventana: no}
+  - {lab: IVIC-223,  sitio: "Knip-9 (Curazao)",   bp: "910 ± 50",   cal: [1027, 1112, 1192], ventana: no}
+  - {lab: IVIC-224,  sitio: "Knip-9 (Curazao)",   bp: "830 ± 60",   cal: [1158, 1215, 1261], ventana: no}
+  - {lab: IVIC-12,   sitio: "La Luz, Paraguaná",  bp: "830 ± 50",   cal: [1160, 1215, 1260], ventana: no}
+  - {lab: IVIC-18,   sitio: "Santa Ana, Paraguaná", bp: "790 ± 100", cal: [1160, 1257, 1280], ventana: no, fal: FAL-154}
+  - {lab: ISGS-1255, sitio: "Túcua",              bp: "790 ± 70",   cal: [1164, 1257, 1279], ventana: no}
+  - {lab: I-4026,    sitio: "Tanki Flip (Aruba)", bp: "765 ± 105",  cal: [1162, 1262, 1284], ventana: no}
+  - {lab: I-4025,    sitio: "Tanki Flip (Aruba)", bp: "740 ± 105",  cal: [1209, 1277, 1383], ventana: roza}
+  - {lab: IVIC-16,   sitio: "Santa Ana, Paraguaná", bp: "730 ± 110", cal: [1210, 1278, 1387], ventana: roza, fal: FAL-154}
+  - {lab: IVIC-250,  sitio: "Knip-26 (Curazao)",  bp: "720 ± 60",   cal: [1258, 1279, 1285], ventana: no}
+  - {lab: ISGS-1184, sitio: "Corralito",          bp: "720 ± 70",   cal: [1257, 1279, 1377], ventana: roza}
+  - {lab: ISGS-1257, sitio: "Corralito",          bp: "650 ± 70",   cal: [1278, 1336, 1393], ventana: SI}
+  - {lab: IVIC-249,  sitio: "Knip-27 (Curazao)",  bp: "630 ± 50",   cal: [1281, 1344, 1395], ventana: SI}
+  - {lab: ISGS-1256, sitio: "Supidebo",           bp: "630 ± 150",  cal: [1260, 1344, 1430], ventana: SI}
+  - {lab: ISGS-1188, sitio: "Antúnez-5",          bp: "580 ± 110",  cal: [1280, 1362, 1430], ventana: SI}
+  - {lab: ISGS-1253, sitio: "FAL-100 Sector 1",   bp: "570 ± 70",   cal: [1299, 1363, 1424], ventana: SI, fal: FAL-100}
+  - {lab: ISGS-1423, sitio: "FAL-100 Sector NW",  bp: "550 ± 110",  cal: [1280, 1407, 1440], ventana: SI, fal: FAL-100}
+  - {lab: IVIC-14,   sitio: "Santa Ana, Paraguaná", bp: "520 ± 120", cal: [1299, 1415, 1451], ventana: SI, fal: FAL-154}
+  - {lab: ISGS-1254, sitio: "Supidebo 1b",        bp: "470 ± 70",   cal: [1409, 1432, 1452], ventana: SI}
+  - {lab: IVIC-241,  sitio: "Gaito",              bp: "340 ± 50",   cal: [1455, 1567, 1640], ventana: cruza-contacto}
+  - {lab: ISGS-1424, sitio: "FAL-100 Sector 2",   bp: "330 ± 110",  cal: [1521, 1572, 1641], ventana: no, fal: FAL-100}
+  - {lab: IVIC-236,  sitio: "Savaneta (Aruba)",   bp: "70 ± 60",    cal: [1880, 1927, 1955], ventana: no}
 
 nota_supidebo: >
   "Supidebo Coast, Shell mound 'C', aceramic shell lense beneath sterile sand

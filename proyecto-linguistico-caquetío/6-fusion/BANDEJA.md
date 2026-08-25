@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-08-24**.
 
-**1267 ítems propuestos** en 9 propuestas, más **0 issue(s)/comentario(s) redactados sin publicar**.
+**1267 ítems propuestos** en 9 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -50,6 +50,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 
 | Archivo | Qué es |
 |---|---|
+| `issue-pdfs-fuentes-aporte.md` | Servir los PDF del vault desde `/simulador/fuentes`, tras un aporte voluntario |
 
 ---
 

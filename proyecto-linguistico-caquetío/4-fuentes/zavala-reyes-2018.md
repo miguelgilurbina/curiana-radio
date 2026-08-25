@@ -8,6 +8,7 @@ genero: arqueologia
 local: "fuentes_caquetios/ZavalaReyes_et_al_2018_Arqueologia_Medanos_Coro.pdf"
 paginas: 7
 capa_texto: si
+acceso: "Libre — Redalyc: https://www.redalyc.org/journal/339/33957447002/33957447002.pdf · Dialnet: https://dialnet.unirioja.es/servlet/articulo?codigo=6457604. Verificado en el rastreo de 2026-08-14."
 estado_minado: minado
 prioridad: alta
 verificado: 2026-08-14

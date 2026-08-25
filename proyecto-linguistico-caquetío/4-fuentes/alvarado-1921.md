@@ -7,6 +7,7 @@ genero: glosario
 local: "fuentes_caquetios/Alvarado_1921_Glosario_Voces_Indigenas_Venezuela.pdf"
 paginas: 354
 capa_texto: si
+acceso: "Libre — Internet Archive: https://archive.org/details/glosariodevocesi00alva · también en CENAL: https://cenal.gob.ve/?wpdmpro=coleccion-bicentenario-carabobo-26-alvarado-lisandro-glosario-de-voces-indigenas-de-venezuela-pdf. Verificado en el rastreo de 2026-08-14."
 estado_minado: minado
 prioridad: media
 tareas: [F3]

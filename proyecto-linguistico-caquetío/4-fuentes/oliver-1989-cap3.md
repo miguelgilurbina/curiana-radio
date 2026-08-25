@@ -7,6 +7,7 @@ genero: academico
 local: "fuentes_caquetios/Chapter 3 Ethnohistory.DOC-comprimido.pdf"
 paginas: 113
 capa_texto: si
+acceso: "Libre — la tesis completa (823 pp., incluye este capítulo) está en UCL Discovery, depositada por el propio Oliver: PDF https://discovery.ucl.ac.uk/id/eprint/10157455/1/Oliver_10157455_thesis_redacted.pdf · ficha https://discovery.ucl.ac.uk/id/eprint/10157455/. Verificado en el rastreo de 2026-08-14."
 estado_minado: minado
 cobertura: "familia (sesión 1), geografía política (sesión 5), economía/cerámica/guerra/religión (2026-08-04, issue #59)"
 prioridad: media

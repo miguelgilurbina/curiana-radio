@@ -6,6 +6,7 @@ anio: "2007, 2011"
 genero: arqueologia
 local: ["fuentes_caquetios/Urbina_2007_El_Carrizal_UCV.pdf", "fuentes_caquetios/Urbina_2011_Archaeological_Survey_Coastal_Falcon_UCL.pdf"]
 capa_texto: si
+acceso: "El survey de 2011 es libre — Academia.edu: https://www.academia.edu/35413060/. El Carrizal (2007) no se verificó acceso en el rastreo. Ver el rastreo documental del 2026-08-14."
 estado_minado: parcial
 prioridad: alta
 verificado: 2026-08-14
