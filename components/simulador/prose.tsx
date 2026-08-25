@@ -64,7 +64,7 @@ export function EventoItem({
         <div className="mt-1.5 flex flex-wrap items-baseline gap-x-2 gap-y-1">
           {evento.forma && (
             <Link
-              href="/simulador/neologisms"
+              href="/kaketiana/neologisms"
               className="sim-display text-lg font-semibold text-(--sim-fuego) hover:underline"
             >
               {evento.forma}
@@ -72,7 +72,7 @@ export function EventoItem({
           )}
           {personajeNombre && evento.personaje && (
             <Link
-              href={`/simulador/personajes/${evento.personaje}`}
+              href={`/kaketiana/personajes/${evento.personaje}`}
               className="inline-flex items-center gap-1.5 font-sans text-sm text-(--sim-ink-soft) transition-colors hover:text-(--sim-ink)"
             >
               <Avatar name={personajeNombre} size={20} />

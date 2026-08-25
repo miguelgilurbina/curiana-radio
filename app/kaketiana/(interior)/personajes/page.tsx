@@ -20,7 +20,7 @@ function EntradaPersonaje({ p }: { p: Personaje }) {
   const meta = [p.etnia, p.edad ? `${p.edad} años` : null].filter(Boolean).join(" · ");
   return (
     <li className="border-t border-(--sim-rule) first:border-t-0">
-      <Link href={`/simulador/personajes/${p.slug}`} className="group flex gap-4 py-5">
+      <Link href={`/kaketiana/personajes/${p.slug}`} className="group flex gap-4 py-5">
         <Avatar name={p.nombre} size={48} />
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">

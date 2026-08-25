@@ -75,7 +75,7 @@ export default async function Home() {
             en tiempo real.
           </BodyText>
           <Link
-            href="/simulador"
+            href="/kaketiana"
             className="inline-block px-8 py-4 border-2 border-frequency text-frequency font-sans text-sm tracking-[0.2em] uppercase hover:bg-frequency hover:text-white transition-all duration-300"
           >
             Entrar al Simulador

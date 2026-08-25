@@ -124,7 +124,7 @@ export default function NeologismosCronologia({
                         <span>acuñó</span>
                         {slug ? (
                           <Link
-                            href={`/simulador/personajes/${slug}`}
+                            href={`/kaketiana/personajes/${slug}`}
                             className="inline-flex items-center gap-1 text-(--sim-ink-soft) transition-colors hover:text-(--sim-fuego)"
                           >
                             <Avatar name={e.proposedBy} size={18} />
@@ -172,7 +172,7 @@ export default function NeologismosCronologia({
                             <p className="mt-1 font-sans text-xs leading-relaxed text-(--sim-ink-soft)">{q.traduccion}</p>
                           )}
                           <Link
-                            href={`/simulador/personajes/${q.agente_slug}`}
+                            href={`/kaketiana/personajes/${q.agente_slug}`}
                             className="mt-1 inline-block font-sans text-xs text-(--sim-ink-faint) transition-colors hover:text-(--sim-fuego)"
                           >
                             — {q.agente}

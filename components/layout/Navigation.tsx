@@ -94,7 +94,7 @@ export default function Navigation({ editionNumber }: NavigationProps) {
 
               {/* Simulador Link */}
               <Link
-                href="/simulador"
+                href="/kaketiana"
                 className="shrink-0 whitespace-nowrap text-xs sm:text-sm font-sans text-deep-700 hover:text-frequency transition-colors tracking-normal sm:tracking-wide uppercase"
               >
                 Simulador

@@ -35,9 +35,10 @@ export function generateMetadata(): Metadata {
 }
 
 const ANEXOS = [
-  { href: "/simulador/personajes", label: "Personajes", desc: "Las veinte voces curadas del run y sus arcos." },
-  { href: "/simulador/lexicon", label: "Léxico", desc: "El vocabulario reconstruido, palabra por palabra, con su fuente." },
-  { href: "/simulador/neologisms", label: "Neologismos", desc: "Todas las palabras inventadas: las que prendieron y las que no." },
+  { href: "/kaketiana/personajes", label: "Personajes", desc: "Las veinte voces curadas del run y sus arcos." },
+  { href: "/kaketiana/lexicon", label: "Léxico", desc: "El vocabulario reconstruido, palabra por palabra, con su fuente." },
+  { href: "/kaketiana/neologisms", label: "Neologismos", desc: "Todas las palabras inventadas: las que prendieron y las que no." },
+  { href: "/kaketiana/fuentes", label: "Fuentes", desc: "El wiki de investigación: crónicas, glosarios y el mundo caquetío, cada dato con su fuente." },
 ];
 
 // El landing en tres actos: el laboratorio (abstract de disertación, a sangre
