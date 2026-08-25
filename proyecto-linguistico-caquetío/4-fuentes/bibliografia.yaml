@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 43
+  obras: 46
   en_repo: 33
-  solo_citadas: 10
+  solo_citadas: 13
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
@@ -208,6 +208,17 @@ obras:
   - Guerra Curvelo
   - Pütchipü'üi
   en_repo: true
+- id: gumilla-1791
+  obra: El Orinoco Ilustrado y Defendido
+  autor: Gumilla, Joseph
+  anio: 1791
+  genero: cronica
+  paginas: — (no localizada)
+  aliases:
+  - Gumilla 1791
+  - Joseph Gumilla
+  - El Orinoco Ilustrado
+  en_repo: false
 - id: jahn-1927
   obra: Los aborígenes del occidente de Venezuela
   autor: Jahn, Alfredo
@@ -484,6 +495,17 @@ obras:
   - Ramos Pérez 1978
   - Ramos 1978
   en_repo: true
+- id: rivero-1883
+  obra: Historia de las Misiones de los Llanos de Casanare y los ríos Orinoco y Meta
+  autor: Rivero, Juan
+  anio: 1883
+  genero: cronica
+  paginas: — (no localizada)
+  aliases:
+  - Rivero 1883
+  - Juan Rivero
+  - Historia de las Misiones de los Llanos
+  en_repo: false
 - id: rouse-cruxent-1963
   obra: Venezuelan Archaeology
   autor: Rouse, Irving y Cruxent, José María
@@ -509,6 +531,17 @@ obras:
   - Schroeder et al. 2018
   - Taíno PNAS 2018
   en_repo: true
+- id: steward-1949
+  obra: Handbook of South American Indians, Vol. V
+  autor: Steward, Julian H. (ed.)
+  anio: 1949
+  genero: etnologia
+  paginas: 665-668 (la sección demográfica)
+  aliases:
+  - Steward 1949
+  - Handbook of South American Indians
+  - HSAI
+  en_repo: false
 - id: urbina-jimenez-2007-2011
   obra: 'El Carrizal: cambios en el uso del espacio a través del tiempo (2007) · An Archaeological Survey
     for Coastal Falcón, Venezuela (2011)'

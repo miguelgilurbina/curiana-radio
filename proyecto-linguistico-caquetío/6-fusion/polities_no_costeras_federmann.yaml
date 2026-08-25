@@ -194,3 +194,96 @@ hechos:
       Dato de horizonte de contacto: la movilidad de 1578 es CONSECUENCIA del
       colapso, no un rasgo precontacto. Trampa clásica de proyección (regla 3).
     procedencia: {obra: relacion-1578-el-tocuyo, pagina: "?", via: obra-secundaria-sin-identificar}
+
+  # ── Lote 3 (2026-08-25): convivencia interétnica y demografía ────────────
+
+  # ⭐⭐ EL PAR CLAVE: dos modelos distintos de convivencia, misma fuente
+  - id: prop-polity-012
+    polity: llanos
+    esfera: esfera_de_interaccion
+    afirmacion: >-
+      Caquetíos y guayqueríes en el Cojedes: dos naciones en paz en el MISMO
+      territorio, unidas por necesidad mutua y por mercado (pescado a cambio de
+      frutas y víveres), pero habitando ALDEAS DISTINTAS.
+    cita: >-
+      "que hacen mercado con los caquetíos y cambian frutas y otros víveres por
+      pescado, porque la pesca es única industria y hanse adueñado del río.
+      Viven estas dos naciones en paz en el mismo territorio porque se necesitan
+      mutuamente, pero cada uno habita aldeas distintas."
+    relevancia: >-
+      ⭐ Contrastar con prop-polity-007 (Hacarigua): allí caquetíos y cuibas
+      viven "juntos y entremezclados", en las MISMAS aldeas. Aquí, mismo
+      territorio pero aldeas separadas, con el mercado como interfaz. La misma
+      fuente documenta DOS arreglos distintos de convivencia interétnica
+      caquetía. Eso es un espectro, no una regla — y es exactamente la variable
+      que decide si hay contacto lingüístico intenso o solo contacto de
+      mercado. Material de primer orden para la esfera de interacción (#89).
+    aviso: >-
+      El propio texto dice que los expedicionarios "supusieron eran
+      Guayqueríes" — es una atribución étnica conjetural, no confirmada. Y los
+      guayqueríes se documentan normalmente en Margarita, no en el Cojedes.
+    procedencia: {obra: federmann-1916, pagina: "90", via: obra-secundaria-sin-identificar}
+
+  - id: prop-polity-013
+    polity: llanos
+    esfera: esfera_de_interaccion
+    afirmacion: >-
+      Mercado indígena de gran escala observado desde los cerros de El Baúl,
+      con gente congregada de diversas aldeas para comprar pescado.
+    cita: >-
+      "atravesé un considerable número de grandes aldeas pertenecientes a
+      caquetíos y guayqueríes […] tal era el número de indios que allí se había
+      congregado provenientes de diversas aldeas, a comprar pescado, que vacilé
+      en arriesgarme a entrar donde estaban"
+    relevancia: >-
+      Mercado periódico supralocal como institución. Comparar con la sal y el
+      pescado que los caquetíos costeros permutaban hacia Turbio y Yaracuy
+      (prop-polity-001 y ss.): mismo patrón de intercambio por especialización.
+    procedencia: {obra: federmann-1916, pagina: "85", via: obra-secundaria-sin-identificar}
+
+  # ⭐ Enunciado de continuo dialectal — comparativo arahuaco
+  - id: prop-polity-014
+    polity: NO-CAQUETIO-achagua
+    esfera: lengua
+    afirmacion: >-
+      Más de veinte "naciones o provincias" achaguas bajo un mismo idioma, con
+      diferencias internas comparadas explícitamente con la variación regional
+      peninsular.
+    cita: >-
+      "Más de veinte naciones o provincias contaban los Achaguas bajo un mismo
+      idioma, si bien había y aun hay, algunas diferencias, como las que existen
+      en Castilla entre portugueses y gallegos, asturianos y otros."
+    relevancia: >-
+      ⭐ NO es caquetío — los achaguas son otro pueblo ARAHUACO de los llanos.
+      Pero es un enunciado de época de CONTINUO DIALECTAL en una lengua
+      arahuaca vecina: una lengua, veinte provincias, variación mutuamente
+      inteligible. Es el escenario sociolingüístico que el experimento simula,
+      documentado para un pariente. Toca DISENO_KOINE y la variación dialectal
+      de curiana_social.
+    procedencia: {obra: rivero-1883, pagina: "21", via: obra-secundaria-sin-identificar}
+
+  - id: prop-polity-015
+    polity: TODA-VENEZUELA
+    esfera: geografia_politica
+    afirmacion: >-
+      Steward estima 350.000 indígenas en territorio venezolano en las últimas
+      décadas del s. XV, de los cuales 144.000 al norte del Orinoco. La obra
+      secundaria discute la cifra por baja.
+    relevancia: >-
+      Contexto de escala para el mundo simulado (s. XIV-XV). ⚠️ Es una
+      ESTIMACIÓN de 1949 por correlación, no un censo: nivel `hipotetico` como
+      mucho. Útil como orden de magnitud, nunca como dato.
+    procedencia: {obra: steward-1949, pagina: "665-668", via: obra-secundaria-sin-identificar}
+
+  - id: prop-polity-016
+    polity: TODA-VENEZUELA
+    esfera: geografia_politica
+    afirmacion: >-
+      Tres áreas demográficas en el s. XV. La Costero-Montañosa es la más
+      poblada, con aldeas de elevada densidad justo donde hay agricultura
+      intensiva y riego sistemático.
+    relevancia: >-
+      Encaja con el buco de [[ballesteros-1550]]: el riego indígena del río de
+      Coro es el caso costero del patrón general. Da marco al Golfete dentro de
+      la distribución del poblamiento — sin importar ninguna cifra.
+    procedencia: {obra: steward-1949, pagina: "665-668", via: obra-secundaria-sin-identificar}

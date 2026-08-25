@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-25 13:12**.
+<!--GENERADO--> Generado el **2026-08-25 13:23**.
 
 ## ¿Vamos bien?
 
@@ -137,12 +137,12 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 
 Índice: [[INDICE_FUENTES]]. **La nota de cada obra es la fuente de verdad**; esta tabla lee su frontmatter (`estado_minado`, `prioridad`, `capa_texto`, `sostiene`), no una lista cableada.
 
-**43 notas de obra.**
+**46 notas de obra.**
 
 | `estado_minado` | n |
 |---|---|
 | minado | 21 |
-| no-disponible | 7 |
+| no-disponible | 10 |
 | parcial | 6 |
 | segunda-mano | 4 |
 | sin-minar | 2 |
@@ -152,7 +152,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 
 **Prioridad ALTA sin minar (9):** [[ballesteros-1550]] (`segunda-mano`), [[esteves-1989]] (`parcial`), [[medina-colina-sxx]] (`en-curso`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap3-vecinos]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`no-disponible`), [[perez-de-tolosa-1546]] (`no-disponible`), [[urbina-jimenez-2007-2011]] (`parcial`).
 
-<details><summary>Las 43 notas, una por fila</summary>
+<details><summary>Las 46 notas, una por fila</summary>
 
 | Nota | minado | prioridad | capa texto | lexicón (declarado) | lexicón (medido) | hechos corpus |
 |---|---|---|---|---|---|---|
@@ -184,6 +184,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[federmann-1916]] | no-disponible | media | no | 0 | 0 | 0 |
 | [[fernandes-2020]] | no-disponible | baja | archivo-vacio | 0 | 0 | 0 |
 | [[gilij-1780-1783]] | sin-minar | baja | no | 0 | 0 | 0 |
+| [[gumilla-1791]] | no-disponible | baja | no | 0 | 0 | 0 |
 | [[las-casas-1875]] | minado | baja | si | 0 | 0 | 0 |
 | [[martinez-cruzado-2003]] | minado | alta | si | 0 | 0 | 0 |
 | [[medina-colina-sxx]] | en-curso | alta | no | 0 | 0 | 0 |
@@ -195,8 +196,10 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[perea-alonso-1942]] | descartada | descartada | si | 0 | 0 | 0 |
 | [[perez-de-tolosa-1546]] | no-disponible | alta | no | 0 | 0 | 0 |
 | [[ramos-perez-1978]] | no-disponible | baja | archivo-vacio | 0 | 0 | 0 |
+| [[rivero-1883]] | no-disponible | media | no | 0 | 0 | 0 |
 | [[rouse-cruxent-1963]] | no-disponible | media | archivo-vacio | 0 | 0 | 0 |
 | [[schroeder-2018]] | minado | media | si | 0 | 0 | 0 |
+| [[steward-1949]] | no-disponible | baja | no | 0 | 0 | 0 |
 | [[urbina-jimenez-2007-2011]] | parcial | alta | si | 0 | 0 | 0 |
 | [[zavala-reyes-2018]] | minado | alta | si | 0 | 223 | 0 |
 
@@ -256,7 +259,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 980 en 269 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 988 en 272 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 197 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
