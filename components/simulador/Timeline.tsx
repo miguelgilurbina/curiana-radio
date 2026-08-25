@@ -17,9 +17,11 @@ export interface TimelineEpoca {
 }
 
 const ANEXOS = [
-  { href: "/simulador/personajes", label: "Personajes" },
-  { href: "/simulador/lexicon", label: "Léxico" },
-  { href: "/simulador/neologisms", label: "Neologismos" },
+  { href: "/kaketiana", label: "Kaketiana" },
+  { href: "/kaketiana/personajes", label: "Personajes" },
+  { href: "/kaketiana/lexicon", label: "Léxico" },
+  { href: "/kaketiana/neologisms", label: "Neologismos" },
+  { href: "/kaketiana/bibliografia", label: "Bibliografía" },
 ];
 
 function useEpocaActiva(epocas: TimelineEpoca[], enabled: boolean): string | null {
@@ -57,7 +59,7 @@ export default function Timeline({
   variant: "sidebar" | "bar";
 }) {
   const pathname = usePathname();
-  const enPortada = pathname === "/simulador";
+  const enPortada = pathname === "/kaketiana";
   const activa = useEpocaActiva(epocas, enPortada);
 
   if (variant === "bar") {
@@ -69,7 +71,7 @@ export default function Timeline({
         {epocas.map((e) => (
           <Link
             key={e.id}
-            href={`/simulador#epoca-${e.id}`}
+            href={`/kaketiana/experimento#epoca-${e.id}`}
             className={`shrink-0 rounded-full px-3 py-1 font-sans text-xs transition-colors ${
               enPortada && activa === e.id
                 ? "bg-(--sim-ink) text-(--sim-paper)"
@@ -116,7 +118,7 @@ export default function Timeline({
                   esActiva ? "bg-(--sim-rubrica)" : "bg-(--sim-rule)"
                 }`}
               />
-              <Link href={`/simulador#epoca-${e.id}`} className="group block">
+              <Link href={`/kaketiana/experimento#epoca-${e.id}`} className="group block">
                 <span className="font-sans text-[0.7rem] tabular-nums uppercase tracking-wide text-(--sim-ink-faint)">
                   Días {e.dias[0]}–{e.dias[1]}
                 </span>

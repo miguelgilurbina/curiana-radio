@@ -87,13 +87,30 @@ def test_el_registro_real_valida():
     assert len(nodos) >= 13
 
 
-def test_los_nodos_con_precontacto_son_los_insulares():
-    """El hallazgo que el registro deja ver: para la ventana simulada, las
-    islas están mejor sostenidas que la costa — y por arqueología, no por
-    crónica. Si esto cambia, es que entró evidencia nueva y hay que mirarla."""
+def test_quienes_sostienen_precontacto():
+    """Cable-trampa sobre la afirmación más fuerte del registro.
+
+    Hasta el 2026-08-24 este test decía `== {"curazao", "aruba", "bonaire"}` y
+    su docstring afirmaba que solo las islas sostenían precontacto. Saltó al
+    fusionar los 17 sitios del Apéndice E de Oliver (#92) — que es justo para
+    lo que estaba puesto: "si esto cambia, es que entró evidencia nueva y hay
+    que mirarla".
+
+    La evidencia nueva son tres nodos CONTINENTALES con datación propia:
+    la-maternidad (Tamers IVIC-626, A.D. 1450, sin material europeo según
+    Cruxent), jose-gregorio-hernandez (ISGS-1253/1423, dos fechas en ventana) y
+    santa-ana-el-cerro (IVIC-14/16/18, tres fechas, todas precontacto).
+
+    La trampa sigue armada: si esta lista vuelve a cambiar, hay que mirar por
+    qué. Y el invariante de abajo NO se toca — es la regla 3 en código."""
     nodos, _, _ = CA.compilar()
     con_pre = {n["forma"] for n in nodos if n.get("precontacto") == "si"}
-    assert con_pre == {"curazao", "aruba", "bonaire"}
+    assert con_pre == {
+        "curazao", "aruba", "bonaire",
+        "la-maternidad", "jose-gregorio-hernandez", "santa-ana-el-cerro",
+    }
     for n in nodos:
         if n.get("precontacto") == "si":
-            assert n["atestacion"] == "arqueologica"
+            assert n["atestacion"] == "arqueologica", (
+                f"{n['forma']}: precontacto 'si' exige atestación arqueológica; "
+                "un documento colonial no prueba existencia precontacto")

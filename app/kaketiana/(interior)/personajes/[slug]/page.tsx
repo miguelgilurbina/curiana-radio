@@ -50,7 +50,7 @@ export default async function PersonajePage({ params }: PersonajePageProps) {
   return (
     <article className="mx-auto max-w-[720px]">
       <Link
-        href="/simulador/personajes"
+        href="/kaketiana/personajes"
         className="font-sans text-sm text-(--sim-ink-soft) transition-colors hover:text-(--sim-fuego)"
       >
         ← Personajes
@@ -148,7 +148,7 @@ export default async function PersonajePage({ params }: PersonajePageProps) {
                     </p>
                   )}
                   <Link
-                    href={`/simulador#epoca-${ev.epocaId}`}
+                    href={`/kaketiana/experimento#epoca-${ev.epocaId}`}
                     className="mt-1 inline-block font-sans text-xs text-(--sim-ink-faint) transition-colors hover:text-(--sim-fuego)"
                   >
                     ver en «{ev.epocaTitulo}» →
@@ -198,13 +198,13 @@ export default async function PersonajePage({ params }: PersonajePageProps) {
       {/* Navegación entre personajes */}
       <div className="mt-12 flex items-center justify-between border-t border-(--sim-rule) pt-6 font-sans text-sm">
         <Link
-          href={`/simulador/personajes/${anterior.slug}`}
+          href={`/kaketiana/personajes/${anterior.slug}`}
           className="text-(--sim-ink-soft) transition-colors hover:text-(--sim-fuego)"
         >
           ← {anterior.nombre}
         </Link>
         <Link
-          href={`/simulador/personajes/${siguiente.slug}`}
+          href={`/kaketiana/personajes/${siguiente.slug}`}
           className="text-(--sim-ink-soft) transition-colors hover:text-(--sim-fuego)"
         >
           {siguiente.nombre} →

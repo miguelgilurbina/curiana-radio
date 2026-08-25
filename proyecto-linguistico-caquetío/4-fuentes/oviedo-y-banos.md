@@ -8,6 +8,7 @@ local: "fuentes_caquetios/Oviedo_Banhos_Conquista_Poblacion_Venezuela.pdf (519 p
 edicion_del_ejemplar: "Biblioteca Ayacucho n.º 175 (la cita del corpus es a la edición de 1855 — paginación sin cotejar)"
 paginas: 519
 capa_texto: si
+acceso: "Libre — Internet Archive (ed. 1885): https://archive.org/details/historiadelacon00bagoog. Verificado en el rastreo de 2026-08-14."
 estado_minado: minado
 cobertura: "leída entera para las 4 preguntas del issue #57; solo el cap. III (pp. 26-28) toca a los caquetíos"
 prioridad: baja

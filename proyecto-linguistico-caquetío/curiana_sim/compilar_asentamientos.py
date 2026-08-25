@@ -63,7 +63,15 @@ RE_HECHO = re.compile(r"^[a-z][a-z_]*-\d{3}[a-z]?$")
 ETIQUETAS = ("atestiguado", "reconstruido", "hipotetico")
 ATESTACIONES = ("colonial", "precolonial", "arqueologica")
 PRECONTACTO = ("si", "probable", "desconocido")
-TIPOS = ("asentamiento", "asentamiento-puerto", "asentamiento-palafito", "isla")
+TIPOS = ("asentamiento", "asentamiento-puerto", "asentamiento-palafito",
+         "isla", "sitio-arqueologico")
+# `sitio-arqueologico` se anadio el 2026-08-24 al fusionar los 17 del
+# Apendice E de Oliver (#92). Son sitios de PROSPECCION, no poblados
+# nombrados en cronica: llamarlos `asentamiento` afirmaria una funcion
+# que el registro arqueologico no da. Cuando la funcion SI se conoce
+# (Tara-tara es cementerio, El Manglar son campamentos) vive en `rol`,
+# no en `tipo` — el tipo dice que clase de nodo es en la red, el rol
+# dice que sabemos de el.
 ETIMOLOGIAS = ("resuelto", "sin-resolver", "descartada", "no-aplica")
 
 OBLIGATORIOS = ("id", "forma", "tipo", "region", "etiqueta", "atestacion",

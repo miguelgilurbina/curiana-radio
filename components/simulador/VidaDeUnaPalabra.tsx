@@ -37,7 +37,7 @@ export default function VidaDeUnaPalabra({
             <p className="mt-1.5 font-sans text-sm leading-relaxed text-(--sim-ink-soft)">
               {proposerSlug ? (
                 <Link
-                  href={`/simulador/personajes/${proposerSlug}`}
+                  href={`/kaketiana/personajes/${proposerSlug}`}
                   className="font-medium text-(--sim-ink) transition-colors hover:text-(--sim-fuego)"
                 >
                   {neo.proposed_by}

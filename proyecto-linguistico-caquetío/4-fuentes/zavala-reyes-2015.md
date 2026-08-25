@@ -8,6 +8,7 @@ genero: glosario
 local: "fuentes_caquetios/Palabras Vivas de una Lengua Muerta.pdf"
 paginas: 20
 capa_texto: si
+acceso: "Libre — Academia.edu: https://www.academia.edu/14657955/Palabras_vivas_de_una_lengua_muerta_Legado_arawak_caquetio · ficha SABER-ULA: http://www.saber.ula.ve/handle/123456789/40730. Verificado en el rastreo de 2026-08-14."
 estado_minado: completo
 cobertura: "288/288 entradas parseadas (100%); 225 en el habla activa (78%), 63 fuera por diseño"
 prioridad: alta

@@ -1,0 +1,127 @@
+{
+  "generado": "2026-08-24",
+  "n": 15,
+  "n_biblio": 39,
+  "paginas": [
+    {
+      "slug": "lexico",
+      "seccion": "lengua",
+      "orden": 0,
+      "tipo": "nota-viva",
+      "titulo": "El lexicón",
+      "resumen": "El lexicón activo es VOCABULARIOBASE en curianasim/curianalexicon.py. Esta nota lo describe; no lo define. Todas las cifras se midieron el 2026-08-04 corriendo el propio módulo, no copiándolas de la documentación…"
+    },
+    {
+      "slug": "morfologia",
+      "seccion": "lengua",
+      "orden": 1,
+      "tipo": "nota-viva",
+      "titulo": "La morfología",
+      "resumen": "Lo que un agente puede construir, no solo nombrar. Cada afijo va aquí con su evidencia y su estado — porque el proyecto mezcló durante mucho tiempo afijos atestiguados con afijos de trabajo, sin marcar la diferencia, y…"
+    },
+    {
+      "slug": "toponimia",
+      "seccion": "lengua",
+      "orden": 2,
+      "tipo": "nota-viva",
+      "titulo": "La toponimia como fuente de morfemas",
+      "resumen": "El método que abrió Miguel en F11, y el mejor rendimiento por unidad de esfuerzo que ha tenido el proyecto. El diseño completo está en 03descomposiciontoponimica; esta nota es la lectura corta. La idea El proyecto venía…"
+    },
+    {
+      "slug": "metodo-comparativo",
+      "seccion": "lengua",
+      "orden": 3,
+      "tipo": "nota-viva",
+      "titulo": "El método comparativo",
+      "resumen": "Cómo se reconstruye una palabra caquetía cuando no hay dato caquetío. Es la Capa 2 del proyecto, y la que más ha fallado — por buenas razones que conviene tener escritas. Las piezas curianasim/arahuacocomparative.py:…"
+    },
+    {
+      "slug": "fonotactica",
+      "seccion": "lengua",
+      "orden": 4,
+      "tipo": "nota",
+      "titulo": "La fonotáctica — un resultado negativo, y por qué vale",
+      "resumen": "1. Lo que se quería y lo que salió HALLAZGOSFASE1 §3.1 nombró la amenaza principal de la fase 1: los agentes son modelos que ya saben español y ya conocen patrones arahuacos, así que cuando producen una forma bien…"
+    },
+    {
+      "slug": "vida-cotidiana",
+      "seccion": "pueblo",
+      "orden": 0,
+      "tipo": "articulo",
+      "titulo": "La vida en La Curiana",
+      "resumen": "1. Cosmología arahuaca La cosmovisión caquetía es arahuaca: comparte una matriz profunda con los Wayuu de la Guajira, los Lokono de las Guayanas y los Taínos de las Antillas. No es una religión de templos y dogmas, sino…"
+    },
+    {
+      "slug": "familia",
+      "seccion": "pueblo",
+      "orden": 1,
+      "tipo": "ensayo",
+      "titulo": "¿Cómo era la familia caquetía?",
+      "resumen": "1. Lo que dicen las crónicas de Coro — y lo poco que dicen Empecemos por el vacío, porque es honesto reconocerlo primero: ningún cronista temprano de Coro describió en detalle la institución familiar caquetía. Arcaya lo…"
+    },
+    {
+      "slug": "ecologia",
+      "seccion": "pueblo",
+      "orden": 2,
+      "tipo": "ensayo",
+      "titulo": "¿Dónde existía el caquetío?",
+      "resumen": "La ecología, la geografía, la hidrología y la fauna del mundo de la Curiana Sesión 2 del programa «corpus cultural». Investigación y redacción, siglos XIV–XV, Golfete de Coro, noroccidente de Venezuela. (v2 — amplía la…"
+    },
+    {
+      "slug": "creencia",
+      "seccion": "pueblo",
+      "orden": 3,
+      "tipo": "ensayo",
+      "titulo": "¿En qué creía el caquetío?",
+      "resumen": "El problema y el método Los caquetíos no dejaron escritura, y las crónicas coloniales los describen —cuando lo hacen— ya en guerra con los españoles, no rezando. Al comenzar esta sesión, el inventario de datos duros…"
+    },
+    {
+      "slug": "transmision",
+      "seccion": "pueblo",
+      "orden": 4,
+      "tipo": "ensayo",
+      "titulo": "¿Cómo sabía el caquetío lo que sabía?",
+      "resumen": "Sesión 4 de 4 del programa \"corpus cultural\" de Curiana. Cierra el ciclo: familia es la estructura por la que viaja el saber; ecología es su contenido; creencia es su marco; esta sesión es el mecanismo — cómo el…"
+    },
+    {
+      "slug": "geografia-politica",
+      "seccion": "pueblo",
+      "orden": 5,
+      "tipo": "ensayo",
+      "titulo": "La geografía política de Manaure: quién era un diao, y qué asentamiento reconstruimos",
+      "resumen": "Sesión 5 del programa \"corpus cultural\" — Curiana, Golfete de Coro, siglos XIV-XV. Surge de una conversación con Miguel (2026-07-13 a 2026-07-20) sobre la sucesión de Manaure y la escala real del mundo caquetío. No…"
+    },
+    {
+      "slug": "polities",
+      "seccion": "pueblo",
+      "orden": 6,
+      "tipo": "nota",
+      "titulo": "Las polities caquetías — y cuál es la nuestra",
+      "resumen": "\"To say that the Caquetío are a Theocratic Chiefdom […] explains absolutely nothing, and blurs the differences that make a difference.\" — Oliver 1989, cap. 3, p. 278 La respuesta en una frase Los caquetíos hablaban una…"
+    },
+    {
+      "slug": "esfera-de-interaccion",
+      "seccion": "pueblo",
+      "orden": 7,
+      "tipo": "nota",
+      "titulo": "La esfera de interacción — por qué «caquetío» no nombra una etnia",
+      "resumen": "1. El nombre ya lo decía Oliver 1989, capítulo 3, nota al pie 3: el término Caquetío /kaketío/ es cognado del lokono kakitho, que significa 'persona, gente' — y por eso hay razón para creer que los españoles designaron…"
+    },
+    {
+      "slug": "horizonte-de-contacto",
+      "seccion": "pueblo",
+      "orden": 8,
+      "tipo": "nota",
+      "titulo": "El horizonte de contacto — hasta dónde llegaba su mundo",
+      "resumen": "Aviso de estado. Esto es prospección, no minería. Ninguna de las obras citadas está en fuentescaquetios/ todavía: son el mapa de qué conseguir y por qué. Nada de aquí debe fusionarse al corpus hasta leer el original. La…"
+    },
+    {
+      "slug": "cronista",
+      "seccion": "pueblo",
+      "orden": 9,
+      "tipo": "nota",
+      "titulo": "El cronista — contar desde dentro sin inventar",
+      "resumen": "python curianasim/curianacronista.py --glosario · --check verifica la tabla contra el lexicón y la bibliografía. El problema, y no es ideológico Todo lo que sabemos del caquetío llega en la lengua y las categorías de…"
+    }
+  ]
+}

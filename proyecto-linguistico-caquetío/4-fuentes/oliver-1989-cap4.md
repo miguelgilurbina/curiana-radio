@@ -6,6 +6,7 @@ anio: 1989
 genero: arqueologia
 local: "fuentes_caquetios/Oliver_1989_Tesis_Arawakan_NW_Venezuela_UCL.pdf (tesis completa, escaneo; el .DOC con texto limpio sigue en 'Info para Miguel/PhD Oliver Edited/')"
 capa_texto: si
+acceso: "Libre — la tesis completa (823 pp., incluye este capítulo) está en UCL Discovery, depositada por el propio Oliver: PDF https://discovery.ucl.ac.uk/id/eprint/10157455/1/Oliver_10157455_thesis_redacted.pdf · ficha https://discovery.ucl.ac.uk/id/eprint/10157455/."
 estado_minado: parcial
 prioridad: alta
 verificado: 2026-08-14

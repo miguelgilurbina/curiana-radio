@@ -8,6 +8,7 @@ genero: glosario-etnohistoria
 local: "fuentes_caquetios/VanBuurt_2014_CaquetioWords_Papiamentu.txt"
 paginas: 48
 capa_texto: si
+acceso: "Libre — PDF completo: https://tiboko.com/wp-content/uploads/2023/07/Final-version-GvB-Papiamentu-book.pdf. Verificado en el rastreo de 2026-08-14."
 estado_minado: minado
 cobertura: "§6 88/88 entradas, §11 29/29, §7 180 topónimos, §8-10 15 etimologías, 19 morfemas; propuesta en curiana_sim/lexicon_van_buurt.py, sin tocar el lexicón activo"
 prioridad: alta

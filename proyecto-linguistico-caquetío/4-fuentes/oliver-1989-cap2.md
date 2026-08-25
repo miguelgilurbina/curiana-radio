@@ -7,6 +7,7 @@ genero: linguistica-comparativa
 local: "fuentes_caquetios/Chapter 2 Linguistics- Oliver 1989.pdf"
 paginas: 109
 capa_texto: parcial
+acceso: "Libre — la tesis completa (823 pp., incluye este capítulo) está en UCL Discovery, depositada por el propio Oliver: PDF https://discovery.ucl.ac.uk/id/eprint/10157455/1/Oliver_10157455_thesis_redacted.pdf · ficha https://discovery.ucl.ac.uk/id/eprint/10157455/. Verificado en el rastreo de 2026-08-14."
 estado_minado: minado
 prioridad: alta
 tareas: [F5]

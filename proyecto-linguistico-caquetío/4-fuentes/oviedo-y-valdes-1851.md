@@ -7,6 +7,7 @@ genero: cronica
 local: "fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1.pdf"
 paginas: "— (no legible)"
 capa_texto: no
+acceso: "El vol. I local está corrupto y es el tomo equivocado. Lo que hace falta SÍ es libre en Internet Archive, ed. Amador de los Ríos: tomo II (funerales) https://archive.org/details/historiageneral01fernguat · tomo IV (sin el apéndice de voces que se buscaba) https://archive.org/details/historiageneral04fernguat. Verificado en el rastreo de 2026-08-14."
 estado_minado: no-disponible
 prioridad: alta
 tareas: [F9]

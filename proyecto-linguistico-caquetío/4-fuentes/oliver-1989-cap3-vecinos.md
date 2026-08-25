@@ -6,6 +6,7 @@ anio: 1989
 genero: etnohistoria
 local: "fuentes_caquetios/Oliver_1989_Tesis_Arawakan_NW_Venezuela_UCL.pdf — impresas 213-250 = pdf 240-277 (offset -27)"
 capa_texto: no
+acceso: "Libre — la tesis completa (823 pp., incluye esta sección) está en UCL Discovery, depositada por el propio Oliver: PDF https://discovery.ucl.ac.uk/id/eprint/10157455/1/Oliver_10157455_thesis_redacted.pdf · ficha https://discovery.ucl.ac.uk/id/eprint/10157455/. Verificado en el rastreo de 2026-08-14."
 estado_minado: parcial
 prioridad: alta
 verificado: 2026-08-17

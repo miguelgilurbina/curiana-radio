@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import { getAllEditions } from '@/lib/content';
 import { getAllPersonajes } from '@/lib/personajes';
 import { getSlugs } from '@/lib/galeria';
+import { getWikiIndice } from '@/lib/wiki';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const editions = await getAllEditions();
@@ -37,13 +38,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.9,
   }));
 
-  // Simulador: la sección de contenido evergreen (antes ausente del sitemap).
-  // /simulador/runs se fusionó al landing (Acto I) — redirect en next.config.js.
+  // Kaketiana: la wiki sobre el pueblo caquetío. Antes /simulador — el
+  // renombrado y sus redirects están en next.config.js.
   const simuladorPages: MetadataRoute.Sitemap = [
-    { path: '/simulador', priority: 0.9 },
-    { path: '/simulador/personajes', priority: 0.7 },
-    { path: '/simulador/lexicon', priority: 0.7 },
-    { path: '/simulador/neologisms', priority: 0.7 },
+    { path: '/kaketiana', priority: 0.9 },
+    { path: '/kaketiana/experimento', priority: 0.8 },
+    { path: '/kaketiana/bibliografia', priority: 0.7 },
+    { path: '/kaketiana/personajes', priority: 0.7 },
+    { path: '/kaketiana/lexicon', priority: 0.7 },
+    { path: '/kaketiana/neologisms', priority: 0.7 },
   ].map(({ path, priority }) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(),
@@ -53,7 +56,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Fichas de personaje (rutas dinámicas del seed curado).
   const personajePages: MetadataRoute.Sitemap = getAllPersonajes().map((p) => ({
-    url: `${baseUrl}/simulador/personajes/${p.slug}`,
+    url: `${baseUrl}/kaketiana/personajes/${p.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.5,
@@ -78,6 +81,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }));
 
+  // Los artículos del wiki (pueblo/lengua del vault exportado). Son el
+  // contenido de fondo del sitio: prioridad alta, por encima de los anexos.
+  const wikiPages: MetadataRoute.Sitemap = getWikiIndice().map((p) => ({
+    url: `${baseUrl}/kaketiana/${p.seccion}/${p.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
   return [
     ...staticPages,
     ...editionPages,
@@ -85,5 +97,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...personajePages,
     ...jaiSoundsPages,
     ...galeriaPages,
+    ...wikiPages,
   ];
 }
