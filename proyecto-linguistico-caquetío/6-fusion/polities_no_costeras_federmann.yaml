@@ -7,10 +7,11 @@
 #    la fuente base si algún día se pone en escena una segunda polity
 #    (issue #83 · D14) y porque una de las citas sostiene el modelo mismo.
 #
-# Procedencia: pasajes leídos por Miguel el 2026-08-25 en una obra secundaria
-# (Scribd) PENDIENTE DE IDENTIFICAR, que cita a Federmann ed. 1916 y al
-# documento de los alcaldes de Nueva Segovia. Ninguna de las dos obras está
-# en el repo. Ver 4-fuentes/federmann-1916.md y nueva-segovia-1579.md.
+# Procedencia: pasajes leídos por Miguel el 2026-08-25 en Brito Figueroa,
+# *Población y economía en el pasado indígena venezolano* (Scribd). Es
+# HISTORIOGRAFÍA del s. XX que cita crónicas: la cadena real es
+# crónica s.XVI -> Brito Figueroa -> este repo. Nada de aquí entra al canon
+# como `atestiguado` sin ir al original. Ver 4-fuentes/brito-figueroa-poblacion-economia.md
 # ─────────────────────────────────────────────────────────────────────────
 meta:
   recogido: '2026-08-25'
@@ -30,7 +31,7 @@ hechos:
       "Paré cerca de quince días en sus aldeas; son en número de veinte y tres y
       todas situadas a la margen del río, a distancia de una legua o media legua
       una de otra... estas aldeas podrían reunir en medio día treinta mil hombre."
-    procedencia: {obra: federmann-1916, pagina: "109-110", via: obra-secundaria-sin-identificar}
+    procedencia: {obra: federmann-1916, pagina: "109-110", via: brito-figueroa-poblacion-economia}
 
   - id: prop-polity-002
     polity: barquisimeto-turbio
@@ -43,7 +44,7 @@ hechos:
       indios, porque son enemigos de las cuatro naciones vecinas... Tales
       circunstancias los han movido a fundar sus aldeas lo más cercanas posible
       las unas a las otras, a fin de poder reunirse más fácilmente."
-    procedencia: {obra: federmann-1916, pagina: "109-110", via: obra-secundaria-sin-identificar}
+    procedencia: {obra: federmann-1916, pagina: "109-110", via: brito-figueroa-poblacion-economia}
 
   - id: prop-polity-003
     polity: yaracuy
@@ -54,7 +55,7 @@ hechos:
       "Tuvimos ocasión de observar todo este trayecto la grandeza de las aldeas de
       esta nación, así como la fuerza de la población... creo que les sería fácil
       reunir en un día hasta veinte mil guerreros."
-    procedencia: {obra: federmann-1916, pagina: "62-63", via: obra-secundaria-sin-identificar}
+    procedencia: {obra: federmann-1916, pagina: "62-63", via: brito-figueroa-poblacion-economia}
 
   # ⭐ La cita estructural: sostiene la regla 4 y el modelo de curiana_polities
   - id: prop-polity-004
@@ -73,7 +74,7 @@ hechos:
       modelo de curiana_polities.py. Aunque el pasaje es del Yaracuy, la
       afirmación es sobre la organización caquetía en general — evaluar si se
       cita como sostén del modelo, marcando su procedencia no costera.
-    procedencia: {obra: federmann-1916, pagina: "62-63", via: obra-secundaria-sin-identificar}
+    procedencia: {obra: federmann-1916, pagina: "62-63", via: brito-figueroa-poblacion-economia}
 
   - id: prop-polity-005
     polity: yaracuy
@@ -89,7 +90,7 @@ hechos:
       Morfología de asentamiento + composición del hogar. 5-8 familias por casa
       es dato de residencia postmarital y toca directamente mapa-familia. NO
       importar a la polity costera sin decisión.
-    procedencia: {obra: federmann-1916, pagina: "62-63", via: obra-secundaria-sin-identificar}
+    procedencia: {obra: federmann-1916, pagina: "62-63", via: brito-figueroa-poblacion-economia}
 
   - id: prop-polity-006
     polity: barquisimeto-turbio
@@ -105,7 +106,7 @@ hechos:
     relevancia: >-
       Paralelo del `buco` costero de Ballesteros 1550: riego indígena a gran
       escala, pero en otra polity. Comparar, no fusionar.
-    procedencia: {obra: nueva-segovia-1579, pagina: "?", via: obra-secundaria-sin-identificar}
+    procedencia: {obra: nueva-segovia-1579, pagina: "?", via: brito-figueroa-poblacion-economia}
 
   # ── Lote 2 (2026-08-25): llanos, valles centrales, otras etnias ──────────
   # 🔴 Aviso reforzado: buena parte de esto NO ES CAQUETÍO en absoluto
@@ -131,7 +132,7 @@ hechos:
       interacción y el modelo de sociedad multiétnica (#89). Es de los llanos,
       no de la costa — pero es el mejor dato de convivencia interétnica que ha
       aparecido, y el fenómeno que la simulación modela es exactamente ése.
-    procedencia: {obra: federmann-1916, pagina: "?", via: obra-secundaria-sin-identificar}
+    procedencia: {obra: federmann-1916, pagina: "?", via: brito-figueroa-poblacion-economia}
 
   # ⭐ Método toponímico — vale aunque la etnia sea otra
   - id: prop-polity-008
@@ -152,7 +153,7 @@ hechos:
       1578. Como hipótesis de método para 2-lengua/toponimia.md vale mucho:
       predice que un topónimo describe un rasgo del sitio, no un dueño ni un
       evento. Contrastar con la segmentación de Paraguaná y con D9.
-    procedencia: {obra: relacion-1578-provincia-caracas, pagina: "?", via: obra-secundaria-sin-identificar}
+    procedencia: {obra: relacion-1578-provincia-caracas, pagina: "?", via: brito-figueroa-poblacion-economia}
 
   - id: prop-polity-009
     polity: NO-CAQUETIO-lengua-caraca
@@ -167,7 +168,7 @@ hechos:
       aparece cultivado en la provincia de lengua Caraca — es decir, circula
       muy por fuera del área caquetía. Refuerza la lectura de Wanderkulturwort,
       no de voz caquetía propia.
-    procedencia: {obra: relacion-1578-provincia-caracas, pagina: "?", via: obra-secundaria-sin-identificar}
+    procedencia: {obra: relacion-1578-provincia-caracas, pagina: "?", via: brito-figueroa-poblacion-economia}
 
   - id: prop-polity-010
     polity: barquisimeto-turbio
@@ -178,7 +179,7 @@ hechos:
     cita: >-
       "cerca de ciento cincuenta indios de ambos sexos iban tranquilamente a
       trabajar en sus campos"
-    procedencia: {obra: federmann-1916, pagina: "?", via: obra-secundaria-sin-identificar}
+    procedencia: {obra: federmann-1916, pagina: "?", via: brito-figueroa-poblacion-economia}
 
   - id: prop-polity-011
     polity: el-tocuyo
@@ -193,7 +194,7 @@ hechos:
     relevancia: >-
       Dato de horizonte de contacto: la movilidad de 1578 es CONSECUENCIA del
       colapso, no un rasgo precontacto. Trampa clásica de proyección (regla 3).
-    procedencia: {obra: relacion-1578-el-tocuyo, pagina: "?", via: obra-secundaria-sin-identificar}
+    procedencia: {obra: relacion-1578-el-tocuyo, pagina: "?", via: brito-figueroa-poblacion-economia}
 
   # ── Lote 3 (2026-08-25): convivencia interétnica y demografía ────────────
 
@@ -222,7 +223,7 @@ hechos:
       El propio texto dice que los expedicionarios "supusieron eran
       Guayqueríes" — es una atribución étnica conjetural, no confirmada. Y los
       guayqueríes se documentan normalmente en Margarita, no en el Cojedes.
-    procedencia: {obra: federmann-1916, pagina: "90", via: obra-secundaria-sin-identificar}
+    procedencia: {obra: federmann-1916, pagina: "90", via: brito-figueroa-poblacion-economia}
 
   - id: prop-polity-013
     polity: llanos
@@ -239,7 +240,7 @@ hechos:
       Mercado periódico supralocal como institución. Comparar con la sal y el
       pescado que los caquetíos costeros permutaban hacia Turbio y Yaracuy
       (prop-polity-001 y ss.): mismo patrón de intercambio por especialización.
-    procedencia: {obra: federmann-1916, pagina: "85", via: obra-secundaria-sin-identificar}
+    procedencia: {obra: federmann-1916, pagina: "85", via: brito-figueroa-poblacion-economia}
 
   # ⭐ Enunciado de continuo dialectal — comparativo arahuaco
   - id: prop-polity-014
@@ -260,7 +261,7 @@ hechos:
       inteligible. Es el escenario sociolingüístico que el experimento simula,
       documentado para un pariente. Toca DISENO_KOINE y la variación dialectal
       de curiana_social.
-    procedencia: {obra: rivero-1883, pagina: "21", via: obra-secundaria-sin-identificar}
+    procedencia: {obra: rivero-1883, pagina: "21", via: brito-figueroa-poblacion-economia}
 
   - id: prop-polity-015
     polity: TODA-VENEZUELA
@@ -273,7 +274,7 @@ hechos:
       Contexto de escala para el mundo simulado (s. XIV-XV). ⚠️ Es una
       ESTIMACIÓN de 1949 por correlación, no un censo: nivel `hipotetico` como
       mucho. Útil como orden de magnitud, nunca como dato.
-    procedencia: {obra: steward-1949, pagina: "665-668", via: obra-secundaria-sin-identificar}
+    procedencia: {obra: steward-1949, pagina: "665-668", via: brito-figueroa-poblacion-economia}
 
   - id: prop-polity-016
     polity: TODA-VENEZUELA
@@ -286,4 +287,4 @@ hechos:
       Encaja con el buco de [[ballesteros-1550]]: el riego indígena del río de
       Coro es el caso costero del patrón general. Da marco al Golfete dentro de
       la distribución del poblamiento — sin importar ninguna cifra.
-    procedencia: {obra: steward-1949, pagina: "665-668", via: obra-secundaria-sin-identificar}
+    procedencia: {obra: steward-1949, pagina: "665-668", via: brito-figueroa-poblacion-economia}

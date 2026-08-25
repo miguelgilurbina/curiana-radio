@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 46
+  obras: 47
   en_repo: 33
-  solo_citadas: 13
+  solo_citadas: 14
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
@@ -120,6 +120,17 @@ obras:
   aliases:
   - Brinton 1871
   en_repo: true
+- id: brito-figueroa-poblacion-economia
+  obra: Población y economía en el pasado indígena venezolano
+  autor: Brito Figueroa, Federico
+  anio: 1962
+  publicacion: Caracas, 1962
+  genero: historiografia
+  paginas: — (leída por Miguel en Scribd)
+  aliases:
+  - Brito Figueroa
+  - Población y economía en el pasado indígena venezolano
+  en_repo: false
 - id: camacho-2011
   obra: Dunas y médanos del estado Falcón (geomorfología del Istmo de los Médanos)
   autor: Camacho, R. et al.
