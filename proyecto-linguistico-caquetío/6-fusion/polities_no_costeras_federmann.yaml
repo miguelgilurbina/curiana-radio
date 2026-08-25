@@ -1,0 +1,196 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — Federmann y Nueva Segovia sobre polities caquetías NO costeras
+#
+# 🔴 REGLA 4. Nada de este archivo entra al corpus de la polity costera del
+#    Golfete sin una decisión explícita que lo marque. Barquisimeto/Turbio y
+#    Yaracuy son polities distintas (Oliver §3.8). Se recoge aquí porque es
+#    la fuente base si algún día se pone en escena una segunda polity
+#    (issue #83 · D14) y porque una de las citas sostiene el modelo mismo.
+#
+# Procedencia: pasajes leídos por Miguel el 2026-08-25 en una obra secundaria
+# (Scribd) PENDIENTE DE IDENTIFICAR, que cita a Federmann ed. 1916 y al
+# documento de los alcaldes de Nueva Segovia. Ninguna de las dos obras está
+# en el repo. Ver 4-fuentes/federmann-1916.md y nueva-segovia-1579.md.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-08-25'
+  estado: sin-fusionar
+  aviso_polity: "NO es la polity costera simulada"
+  procedencia_incompleta: true
+
+hechos:
+
+  - id: prop-polity-001
+    polity: barquisimeto-turbio
+    esfera: geografia_politica
+    afirmacion: >-
+      23 aldeas sobre la margen del río, a una legua o media legua una de otra,
+      capaces de reunir 30.000 hombres en medio día.
+    cita: >-
+      "Paré cerca de quince días en sus aldeas; son en número de veinte y tres y
+      todas situadas a la margen del río, a distancia de una legua o media legua
+      una de otra... estas aldeas podrían reunir en medio día treinta mil hombre."
+    procedencia: {obra: federmann-1916, pagina: "109-110", via: obra-secundaria-sin-identificar}
+
+  - id: prop-polity-002
+    polity: barquisimeto-turbio
+    esfera: geografia_politica
+    afirmacion: >-
+      Aldeas fortificadas y agrupadas por defensa, con hostilidad declarada
+      hacia cuatro naciones vecinas.
+    cita: >-
+      "sus aldeas están fortificadas y no podría sorprendérselas como las de otros
+      indios, porque son enemigos de las cuatro naciones vecinas... Tales
+      circunstancias los han movido a fundar sus aldeas lo más cercanas posible
+      las unas a las otras, a fin de poder reunirse más fácilmente."
+    procedencia: {obra: federmann-1916, pagina: "109-110", via: obra-secundaria-sin-identificar}
+
+  - id: prop-polity-003
+    polity: yaracuy
+    esfera: geografia_politica
+    afirmacion: >-
+      Densidad alta; hasta 20.000 guerreros reunibles en un día.
+    cita: >-
+      "Tuvimos ocasión de observar todo este trayecto la grandeza de las aldeas de
+      esta nación, así como la fuerza de la población... creo que les sería fácil
+      reunir en un día hasta veinte mil guerreros."
+    procedencia: {obra: federmann-1916, pagina: "62-63", via: obra-secundaria-sin-identificar}
+
+  # ⭐ La cita estructural: sostiene la regla 4 y el modelo de curiana_polities
+  - id: prop-polity-004
+    polity: yaracuy
+    esfera: geografia_politica
+    afirmacion: >-
+      Aldeas de la MISMA nación no están bajo el dominio de un solo señor: forman
+      pequeñas confederaciones de dos, tres o cuatro aldeas, y no todas aliadas.
+    cita: >-
+      "Aunque los habitantes de todas estas aldeas son de la misma nación, no están
+      bajo el dominio de un solo señor... no están todos aliados, pero forman
+      pequeñas confederaciones de dos, tres o cuatro aldeas."
+    relevancia: >-
+      Testimonio ocular del s. XVI de que "caquetío" nombra una etnia, no una
+      unidad política. Es el respaldo textual de la regla 4 del proyecto y del
+      modelo de curiana_polities.py. Aunque el pasaje es del Yaracuy, la
+      afirmación es sobre la organización caquetía en general — evaluar si se
+      cita como sostén del modelo, marcando su procedencia no costera.
+    procedencia: {obra: federmann-1916, pagina: "62-63", via: obra-secundaria-sin-identificar}
+
+  - id: prop-polity-005
+    polity: yaracuy
+    esfera: parentesco
+    afirmacion: >-
+      Aldeas de hasta media legua de largo, con una sola calle o dos; cada casa
+      habitada a menudo por cinco y hasta ocho familias.
+    cita: >-
+      "Sus aldeas son a veces de media legua de largo y no tienen sino una sola
+      calle o dos cuando más, y una casa la habitan a menudo cinco y hasta ocho
+      familias."
+    relevancia: >-
+      Morfología de asentamiento + composición del hogar. 5-8 familias por casa
+      es dato de residencia postmarital y toca directamente mapa-familia. NO
+      importar a la polity costera sin decisión.
+    procedencia: {obra: federmann-1916, pagina: "62-63", via: obra-secundaria-sin-identificar}
+
+  - id: prop-polity-006
+    polity: barquisimeto-turbio
+    esfera: ecologia
+    afirmacion: >-
+      Agricultura de riego sobre el río Turbio, con regadíos que se extienden
+      tres leguas río abajo y arriba de la ciudad; gran cantidad de maíz.
+    cita: >-
+      "tiene este río grandes vegas donde siembran los naturales y españoles de
+      agora, y son en tanta cantidad los regadíos que tiran tres leguas al río
+      abajo y arriba de esta ciudad. Dase en estos regadíos gran cantidad de maíz
+      por ser tierra muy fértil."
+    relevancia: >-
+      Paralelo del `buco` costero de Ballesteros 1550: riego indígena a gran
+      escala, pero en otra polity. Comparar, no fusionar.
+    procedencia: {obra: nueva-segovia-1579, pagina: "?", via: obra-secundaria-sin-identificar}
+
+  # ── Lote 2 (2026-08-25): llanos, valles centrales, otras etnias ──────────
+  # 🔴 Aviso reforzado: buena parte de esto NO ES CAQUETÍO en absoluto
+  #    (lengua Caraca, cumanagotos, guayqueríes). Se recoge por comparación
+  #    y por método, nunca para el corpus costero.
+
+  - id: prop-polity-007
+    polity: llanos
+    esfera: geografia_politica
+    afirmacion: >-
+      En Hacarigua (llanos) convivían caquetíos y cuibas "juntos y
+      entremezclados", en un caserío que agrupaba varias aldeas y contaba
+      16.000 indios aptos para el servicio.
+    cita: >-
+      "llegamos a un extenso caserío llamado Hacarigua, que asemeja más bien un
+      conjunto de varias aldeas situadas las unas cerca de las otras a lo largo
+      de la llanura... Contienen diez y seis mil indios aptos para el servicio,
+      sin contar los ancianos, mujeres y niños. Estos habitantes de los cuales
+      unos son cuibas y otros caquetíos, viven junto y entremezclados."
+    relevancia: >-
+      ⭐ Testimonio ocular del s. XVI de CORRESIDENCIA MULTIÉTNICA caquetía con
+      un grupo no arahuaco (cuiba/guahibo). Toca directamente la esfera de
+      interacción y el modelo de sociedad multiétnica (#89). Es de los llanos,
+      no de la costa — pero es el mejor dato de convivencia interétnica que ha
+      aparecido, y el fenómeno que la simulación modela es exactamente ése.
+    procedencia: {obra: federmann-1916, pagina: "?", via: obra-secundaria-sin-identificar}
+
+  # ⭐ Método toponímico — vale aunque la etnia sea otra
+  - id: prop-polity-008
+    polity: NO-CAQUETIO-lengua-caraca
+    esfera: lengua
+    afirmacion: >-
+      Principio de formación de topónimos declarado en el s. XVI: los barrios y
+      poblazones toman su nombre de un árbol, quebrada, arroyo, peña u otro
+      rasgo señalado que esté en su asiento o cerca.
+    cita: >-
+      "Los barrios e poblazones tienen su nombre derivado de algún árbol,
+      quebrada, arroyo, peña u otra cosa señalada que esté en su asiento o cerca
+      dellos, y la lengua que todos los yndios desta provincia y comarca hablan
+      es la lengua Caraca."
+    relevancia: >-
+      ⭐ NO es caquetío — es la provincia de lengua Caraca. Pero es un enunciado
+      EXPLÍCITO del principio de nominación toponímica indígena en la región, en
+      1578. Como hipótesis de método para 2-lengua/toponimia.md vale mucho:
+      predice que un topónimo describe un rasgo del sitio, no un dueño ni un
+      evento. Contrastar con la segmentación de Paraguaná y con D9.
+    procedencia: {obra: relacion-1578-provincia-caracas, pagina: "?", via: obra-secundaria-sin-identificar}
+
+  - id: prop-polity-009
+    polity: NO-CAQUETIO-lengua-caraca
+    esfera: ecologia
+    afirmacion: >-
+      Cultivaban maíz "de tres o cuatro maneras y colores", yuca para casabe,
+      batata, auyama, ocumo, mapuey; frutales; maguey para bohíos y cuerdas; y
+      consumían tabaco y HAYO.
+    relevancia: >-
+      🎯 Toca el issue #104: `hayo` está en el lexicón como
+      caquetío-atestiguado y Oliver lo marca como préstamo de Santa Marta. Aquí
+      aparece cultivado en la provincia de lengua Caraca — es decir, circula
+      muy por fuera del área caquetía. Refuerza la lectura de Wanderkulturwort,
+      no de voz caquetía propia.
+    procedencia: {obra: relacion-1578-provincia-caracas, pagina: "?", via: obra-secundaria-sin-identificar}
+
+  - id: prop-polity-010
+    polity: barquisimeto-turbio
+    esfera: transmision
+    afirmacion: >-
+      Trabajo agrícola colectivo: ~150 personas de ambos sexos salían juntas a
+      trabajar los campos en las primeras horas de la mañana.
+    cita: >-
+      "cerca de ciento cincuenta indios de ambos sexos iban tranquilamente a
+      trabajar en sus campos"
+    procedencia: {obra: federmann-1916, pagina: "?", via: obra-secundaria-sin-identificar}
+
+  - id: prop-polity-011
+    polity: el-tocuyo
+    esfera: geografia_politica
+    afirmacion: >-
+      Hacia 1578 la población había caído por enfermedad y los asentamientos
+      dejaron de ser permanentes.
+    cita: >-
+      "ay pocos indios mucho menos de los que avía a principio, a causa de
+      muchas enfermedades,... y los que de presente ay están poblados en pueblos
+      formados ni permanente, antes se mudan facilmente"
+    relevancia: >-
+      Dato de horizonte de contacto: la movilidad de 1578 es CONSECUENCIA del
+      colapso, no un rasgo precontacto. Trampa clásica de proyección (regla 3).
+    procedencia: {obra: relacion-1578-el-tocuyo, pagina: "?", via: obra-secundaria-sin-identificar}

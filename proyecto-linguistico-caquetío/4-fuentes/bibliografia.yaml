@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 39
+  obras: 43
   en_repo: 33
-  solo_citadas: 6
+  solo_citadas: 10
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
@@ -97,6 +97,17 @@ obras:
   - Arcaya 1920
   - Historia del Estado Falcón
   en_repo: true
+- id: ballesteros-1550
+  obra: Carta al Monarca Español sobre la ciudad de Coro
+  autor: Ballesteros, Miguel Gerónimo de (Obispo de Coro)
+  anio: 1550
+  genero: cronica
+  paginas: — (no localizada; transmitida por Arcaya)
+  aliases:
+  - Ballesteros 1550
+  - Obispo Ballesteros
+  - Miguel Gerónimo de Ballesteros
+  en_repo: false
 - id: brinton-1871
   obra: The Arawack Language of Guiana in its Linguistic and Ethnological Relations
   autor: Brinton, Daniel G.
@@ -127,6 +138,18 @@ obras:
   local:
   - fuentes_caquetios/Esteves_1989_Toponimos_Paraguana_1..6.pdf
   en_repo: true
+- id: federmann-1916
+  obra: Narración del primer viaje (ed. 1916)
+  autor: Federmann, Nicolás
+  anio: 1916
+  genero: cronica
+  paginas: — (no localizada)
+  aliases:
+  - Federmann
+  - Federmann 1916
+  - Narración de Federmann
+  - Indianische Historia
+  en_repo: false
 - id: fernandes-2020
   obra: A genetic history of the pre-contact Caribbean
   autor: Fernandes, Daniel M. et al.
@@ -274,6 +297,17 @@ obras:
   - Moreno-Mayar 2018
   - Schroeder 2018
   en_repo: true
+- id: nueva-segovia-1579
+  obra: Descripción de la Nueva Segovia de la Gobernación de Venezuela de las Indias del Mar Océano
+  autor: Arévalo, Gonzalo de y Ruiz de la Parra, Juan (alcaldes)
+  anio: 1579
+  genero: cronica
+  paginas: — (no localizada)
+  aliases:
+  - Descripción de la Nueva Segovia
+  - Nueva Segovia 1579
+  - Arévalo y Ruiz de la Parra
+  en_repo: false
 - id: oliver-1989-apendice-a
   obra: 'Appendix A: Swadesh''s 100 Word List vocabularies for Arawakan Languages (en *The Archaeological,
     Linguistic and Ethnohistorical Evidence for the Expansion of Arawakan into Northwestern Venezuela*)'
@@ -415,6 +449,18 @@ obras:
   - Perea Alonso 1942
   - Filología comparada arawak
   en_repo: true
+- id: perez-de-tolosa-1546
+  obra: Relaciones y cartas al Rey
+  autor: Pérez de Tolosa, Juan (Licenciado)
+  anio: 1546
+  genero: cronica
+  paginas: — (no localizada)
+  aliases:
+  - Pérez de Tolosa
+  - Pérez de Tolosa 1546
+  - Juan Pérez de Tolosa
+  - Ldo. Tolosa
+  en_repo: false
 - id: perrin-1992-1995
   obra: El camino de los indios muertos (1992) · Los practicantes del sueño. El chamanismo wayuu (1995)
   autor: Perrin, Michel

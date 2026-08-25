@@ -1,24 +1,34 @@
 ---
 tipo: indice
-ambito: todas las fuentes del proyecto
-archivos_en_fuentes_caquetios: 29
-obras_distintas: 24
-archivos_vacios: 4
-minadas_2026_08_03: [alvarado-1921, gatschet-1885, van-buurt-2014, zavala-reyes-2015]
-medido: 2026-08-04
+ambito: bitácora de las fuentes — método, hallazgos y lecciones
+cifras: TABLERO.md §2 (generado); esta nota no las mantiene
 ---
 
-# Índice de fuentes — estado real, medido
+# Índice de fuentes — bitácora y método
 
-> Esta nota es la versión **viva y verificada** de la tabla de
-> [[PLAN_MAESTRO]] §1.1. Cada fila se midió el 2026-07-29 abriendo el archivo:
-> tamaño, páginas (`pypdf`), capa de texto (`pdftotext -f 1 -l 30`), y cuántos
-> hechos del corpus y entradas del lexicón lo citan realmente.
+> ⚠️ **Esta nota NO lleva el censo de fuentes.** Lo lleva
+> [[TABLERO]] §2, que lo mide contra el frontmatter de cada nota cada vez que
+> se genera. Aquí vivían tres cifras a mano —archivos, obras distintas,
+> vacíos— que envejecieron sin avisar: por la regla 1, se retiraron.
 >
-> **El nombre de un archivo no es un dato verificado.** Tres de las conclusiones
-> de abajo contradicen lo que el proyecto creía.
+> Lo que sí vive aquí, y no lo mide ningún script:
+> **cómo se mina, qué salió mal, y qué aprendimos de cada tanda.**
+>
+> **Toda cifra que aparezca más abajo es histórica y está fechada.** Es el
+> registro de lo que se midió aquel día, no el estado de hoy. Para el estado
+> de hoy: `python curiana_sim/generar_tablero.py`.
 
-## Las tres correcciones que salieron de medir
+## Cómo leer esto
+
+| Si buscas… | Ve a |
+|---|---|
+| cuántas fuentes hay, cuáles están minadas, quién sostiene el lexicón | [[TABLERO]] §1 y §2 — **medido** |
+| qué se propuso y espera fusión | [[BANDEJA]] — **medido** |
+| cómo minar sin equivocarte, y los errores ya cometidos | esta nota |
+| el estado declarado de **una** obra | su propia nota en `4-fuentes/` — es la fuente de verdad |
+
+## Las tres correcciones que salieron de medir *(2026-07-29)*
+
 
 1. **🟢 [[alvarado-1921]] SÍ tiene capa de texto.** Estaba clasificada como
    "escaneo de imagen, no extraíble sin OCR" — eso era `pypdf`. Con `pdftotext`
@@ -60,7 +70,7 @@ Reglas que salen de ahí, y que valen para toda minería futura:
 4. Un cero es un resultado que hay que **verificar**, no uno que se pueda
    reportar directamente.
 
-## Inventario medido
+## Inventario medido *(instantánea del 2026-08-11 — el vigente está en [[TABLERO]] §2)*
 
 ### Disponibles y con texto
 
@@ -180,7 +190,7 @@ F1 puede adjudicar con evidencia: 77 de 82 (94%)
   `aiton` ("sima profunda del E. Falcón") y `tocororo` ("tallo leñoso del
   cardón"). **Van al corpus cultural, no a `VOCABULARIO_BASE`** (protocolo §5).
 
-## Cobertura real del lexicón — quién sostiene el "atestiguado"
+## Cobertura real del lexicón — quién sostiene el "atestiguado" *(instantánea del 2026-08-03)*
 
 De las **231 entradas `caquetío-atestiguado`**, medidas por citas en `notas`
 (estado **anterior** a aplicar las 62 citas que F7 recuperó — eso es F1):
@@ -333,7 +343,7 @@ es deliberado — la **lengua** no se discute, solo baja la **confianza**.
 ⚠️ **`coro` no se borra y el canon no se toca**: da nombre a la ciudad de Coro y
 aparece en todo el sitio público. Lo que se retira es el respaldo de la glosa.
 
-### Composición del lexicón tras D10
+### Composición del lexicón tras D10 *(2026-08-03)*
 
 `piache` sale del habla, así que el activo pasa de 1416 a **1413** entradas.
 
