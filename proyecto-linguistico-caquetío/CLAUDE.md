@@ -3,7 +3,7 @@
 Investigación + experimento computacional: 60 agentes históricos (pueblo
 Caquetío, Golfete de Coro, s. XIV-XV) hablan en caquetío-arahuaco reconstruido,
 inventan palabras y se contagian entre sí. La deriva se registra en Supabase, se
-cura y se publica en Curiana Radio (`/simulador`).
+cura y se publica en Curiana Radio (`/kaketiana`).
 
 > **Este archivo dice cómo trabajar aquí, no qué sabemos.** Lo que sabemos está
 > medido en `TABLERO.md` y explicado en el vault. Si buscas una cifra y la

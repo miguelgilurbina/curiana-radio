@@ -26,6 +26,9 @@ obras:
   local:
   - fuentes_caquetios/Alvarado_1921_Glosario_Voces_Indigenas_Venezuela.pdf
   paginas: 354
+  acceso: 'Libre — Internet Archive: https://archive.org/details/glosariodevocesi00alva · también en CENAL:
+    https://cenal.gob.ve/?wpdmpro=coleccion-bicentenario-carabobo-26-alvarado-lisandro-glosario-de-voces-indigenas-de-venezuela-pdf.
+    Verificado en el rastreo de 2026-08-14.'
   aliases:
   - Alvarado 1921
   - Glosario de voces indígenas
@@ -162,6 +165,9 @@ obras:
   - fuentes_caquetios/Gilij_1782_Saggio_Storia_Americana_vol3.pdf
   - fuentes_caquetios/Gilij_1783_Saggio_Storia_Americana_vol4.pdf
   paginas: 414 + 457 + 452 = 1323
+  acceso: 'Libre — Internet Archive, los 4 tomos: https://archive.org/details/saggiodistoriaam03gili (tomo
+    III, el lingüístico) · t.I https://archive.org/details/saggiodistoriaa01giligoog · t.II https://archive.org/details/saggiodistoriaam02gili
+    · t.IV https://archive.org/details/saggiodistoriaam04gili. Verificado en el rastreo de 2026-08-14.'
   aliases:
   - Gilij
   - Saggio di Storia Americana
@@ -187,6 +193,8 @@ obras:
   local:
   - fuentes_caquetios/Jahn_1927_Aborigenes_Occidente_Venezuela.pdf
   paginas: 510
+  acceso: 'Libre — PDF en la Biblioteca Digital de Venezuela: https://bibliotecadigital.bnv.gob.ve/wp-content/uploads/los_aborigenes_del_occidente_de_venezuela_.pdf.
+    Verificado en el rastreo de 2026-08-14.'
   aliases:
   - Jahn 1927
   - Los aborígenes del occidente de Venezuela
@@ -275,6 +283,9 @@ obras:
   local:
   - fuentes_caquetios/Oliver_1989_Tesis_Arawakan_NW_Venezuela_UCL.pdf — impresas 559-594 = pdf 586-621
     (offset -27)
+  acceso: 'Libre — la tesis completa (823 pp., incluye este apéndice, pp. 559-594 impresas = pdf 586-621)
+    está en UCL Discovery, depositada por el propio Oliver: PDF https://discovery.ucl.ac.uk/id/eprint/10157455/1/Oliver_10157455_thesis_redacted.pdf
+    · ficha https://discovery.ucl.ac.uk/id/eprint/10157455/. Verificado en el rastreo de 2026-08-14.'
   aliases:
   - Oliver 1989 Apéndice A
   - Appendix A Swadesh
@@ -287,6 +298,9 @@ obras:
   local:
   - fuentes_caquetios/Chapter 2 Linguistics- Oliver 1989.pdf
   paginas: 109
+  acceso: 'Libre — la tesis completa (823 pp., incluye este capítulo) está en UCL Discovery, depositada
+    por el propio Oliver: PDF https://discovery.ucl.ac.uk/id/eprint/10157455/1/Oliver_10157455_thesis_redacted.pdf
+    · ficha https://discovery.ucl.ac.uk/id/eprint/10157455/. Verificado en el rastreo de 2026-08-14.'
   aliases:
   - Oliver 1989 cap. 2
   - Oliver cap. 2
@@ -302,6 +316,9 @@ obras:
   local:
   - fuentes_caquetios/Oliver_1989_Tesis_Arawakan_NW_Venezuela_UCL.pdf — impresas 213-250 = pdf 240-277
     (offset -27)
+  acceso: 'Libre — la tesis completa (823 pp., incluye esta sección) está en UCL Discovery, depositada
+    por el propio Oliver: PDF https://discovery.ucl.ac.uk/id/eprint/10157455/1/Oliver_10157455_thesis_redacted.pdf
+    · ficha https://discovery.ucl.ac.uk/id/eprint/10157455/. Verificado en el rastreo de 2026-08-14.'
   aliases:
   - Oliver 1989 §3.3
   - los vecinos de los caquetíos
@@ -316,6 +333,9 @@ obras:
   local:
   - fuentes_caquetios/Chapter 3 Ethnohistory.DOC-comprimido.pdf
   paginas: 113
+  acceso: 'Libre — la tesis completa (823 pp., incluye este capítulo) está en UCL Discovery, depositada
+    por el propio Oliver: PDF https://discovery.ucl.ac.uk/id/eprint/10157455/1/Oliver_10157455_thesis_redacted.pdf
+    · ficha https://discovery.ucl.ac.uk/id/eprint/10157455/. Verificado en el rastreo de 2026-08-14.'
   aliases:
   - Oliver 1989 cap. 3
   - Oliver cap. 3
@@ -330,6 +350,9 @@ obras:
   local:
   - fuentes_caquetios/Oliver_1989_Tesis_Arawakan_NW_Venezuela_UCL.pdf (tesis completa, escaneo; el .DOC
     con texto limpio sigue en 'Info para Miguel/PhD Oliver Edited/')
+  acceso: 'Libre — la tesis completa (823 pp., incluye este capítulo) está en UCL Discovery, depositada
+    por el propio Oliver: PDF https://discovery.ucl.ac.uk/id/eprint/10157455/1/Oliver_10157455_thesis_redacted.pdf
+    · ficha https://discovery.ucl.ac.uk/id/eprint/10157455/.'
   aliases:
   - Oliver 1989 cap. 4
   - Oliver Chapter 4 Archaeology
@@ -344,6 +367,8 @@ obras:
   local:
   - fuentes_caquetios/Oviedo_Banhos_Conquista_Poblacion_Venezuela.pdf (519 pp., ÚTIL)
   paginas: 519
+  acceso: 'Libre — Internet Archive (ed. 1885): https://archive.org/details/historiadelacon00bagoog. Verificado
+    en el rastreo de 2026-08-14.'
   aliases:
   - Oviedo y Baños
   - Oviedo Baños 1885
@@ -356,6 +381,10 @@ obras:
   local:
   - fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1.pdf
   paginas: — (no legible)
+  acceso: 'El vol. I local está corrupto y es el tomo equivocado. Lo que hace falta SÍ es libre en Internet
+    Archive, ed. Amador de los Ríos: tomo II (funerales) https://archive.org/details/historiageneral01fernguat
+    · tomo IV (sin el apéndice de voces que se buscaba) https://archive.org/details/historiageneral04fernguat.
+    Verificado en el rastreo de 2026-08-14.'
   aliases:
   - Oviedo y Valdés
   - Oviedo 1851
@@ -443,6 +472,8 @@ obras:
   local:
   - fuentes_caquetios/Urbina_2007_El_Carrizal_UCV.pdf
   - fuentes_caquetios/Urbina_2011_Archaeological_Survey_Coastal_Falcon_UCL.pdf
+  acceso: 'El survey de 2011 es libre — Academia.edu: https://www.academia.edu/35413060/. El Carrizal
+    (2007) no se verificó acceso en el rastreo. Ver el rastreo documental del 2026-08-14.'
   aliases:
   - Urbina Jiménez 2007
   - Urbina Jiménez 2011
@@ -460,6 +491,8 @@ obras:
   local:
   - fuentes_caquetios/VanBuurt_2014_CaquetioWords_Papiamentu.txt
   paginas: 48
+  acceso: 'Libre — PDF completo: https://tiboko.com/wp-content/uploads/2023/07/Final-version-GvB-Papiamentu-book.pdf.
+    Verificado en el rastreo de 2026-08-14.'
   aliases:
   - Van Buurt 2014
   - Caquetío words in Papiamentu
@@ -483,6 +516,8 @@ obras:
   local:
   - fuentes_caquetios/Palabras Vivas de una Lengua Muerta.pdf
   paginas: 20
+  acceso: 'Libre — Academia.edu: https://www.academia.edu/14657955/Palabras_vivas_de_una_lengua_muerta_Legado_arawak_caquetio
+    · ficha SABER-ULA: http://www.saber.ula.ve/handle/123456789/40730. Verificado en el rastreo de 2026-08-14.'
   aliases:
   - Zavala 2015
   - Zavala Reyes 2015
@@ -498,6 +533,8 @@ obras:
   local:
   - fuentes_caquetios/ZavalaReyes_et_al_2018_Arqueologia_Medanos_Coro.pdf
   paginas: 7
+  acceso: 'Libre — Redalyc: https://www.redalyc.org/journal/339/33957447002/33957447002.pdf · Dialnet:
+    https://dialnet.unirioja.es/servlet/articulo?codigo=6457604. Verificado en el rastreo de 2026-08-14.'
   aliases:
   - Zavala Reyes et al. 2018
   - Leal et al. 2018

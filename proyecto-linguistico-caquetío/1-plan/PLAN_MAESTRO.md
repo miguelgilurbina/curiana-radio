@@ -194,7 +194,7 @@ y no en más markdown suelto.
 
 ## 3. Eje JARDÍN — la presentación pública que sí funcione
 
-**Diagnóstico compartido:** `/simulador` está bien construido pero cuenta *el
+**Diagnóstico compartido:** `/kaketiana` está bien construido pero cuenta *el
 experimento*. Tras varias vueltas sigue sin sentirse efectivo porque el
 experimento es solo una parte — y no la más enlazable — de lo que el proyecto
 tiene. **La investigación ES el contenido**: diao/apopo/boratio, Todariquiba,
