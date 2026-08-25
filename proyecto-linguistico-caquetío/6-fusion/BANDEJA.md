@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-08-25**.
 
-**1306 ítems propuestos** en 10 propuestas, más **5 issue(s)/comentario(s) redactados sin publicar**.
+**1306 ítems propuestos** en 10 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -48,11 +48,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 
 | Archivo | Qué es |
 |---|---|
-| `comentario-101-bara.md` | Zavala también dice 'árbol' — y es el #29 de su glosario |
-| `comentario-36-d5-ortografia.md` | D5 son tres decisiones, no una — y solo la tercera toca el experimento |
-| `comentario-38-d9-bana.md` | `-bana` = 'cerro, sitio alto': hay prueba composicional dentro de Zavala |
 | `issue-pdfs-fuentes-aporte.md` | Servir los PDF del vault desde `/kaketiana/fuentes`, tras un aporte voluntario |
-| `issue-segmentacion-paraguana-ana.md` | `-ana` está como atestiguado y su único caso sólido no descompone |
 
 ---
 
