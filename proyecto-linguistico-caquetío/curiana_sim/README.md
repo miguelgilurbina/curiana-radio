@@ -185,7 +185,7 @@ Si **2 agentes distintos** la usan → entra al léxico comunitario permanente.
 ## Publicación
 
 No hay dashboard propio: los resultados curados se exportan a JSON estático y se
-publican en el sitio Curiana Radio (`/simulador`, fuera de este repo de simulación).
+publican en el sitio Curiana Radio (`/kaketiana`, fuera de este repo de simulación).
 Ver `export_runs_index.py`, `export_personajes_seed.py`, `export_resumen_seed.py`,
 `export_lexicon_seed.py` — cada uno lee de Supabase local y escribe a
 `../content/simulador/*.json`. Añadir un run al sitio es correr los exporters que

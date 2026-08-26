@@ -13,19 +13,16 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-24**.
+<!--GENERADO--> Generado el **2026-08-25**.
 
-**1267 ítems propuestos** en 9 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
+**1290 ítems propuestos** en 9 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
 | Archivo | Obra | Ítems | Aviso |
 |---|---|---|---|
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
-| `tabla15_c14_oliver.yaml` | ? | 0 | ⚠️ no parsea: mapping values are not allowed here
-  in "<unicode string>", line 27, column 26:
-      - lab: ISGS-1173, sitio: "Túcua",              bp: "110 ... 
-                             ^ |
+| `tabla15_c14_oliver.yaml` | oliver-1989-cap4 | 23 |  |
 | `tabla_a8_jirajarano.yaml` | oliver-1989-apendice-a | 33 |  |
 | `tabla_a9_oliver.yaml` | oliver-1989-cap2 | 49 |  |
 
@@ -50,7 +47,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 
 | Archivo | Qué es |
 |---|---|
-| `issue-pdfs-fuentes-aporte.md` | Servir los PDF del vault desde `/simulador/fuentes`, tras un aporte voluntario |
+| `issue-pdfs-fuentes-aporte.md` | Servir los PDF del vault desde `/kaketiana/fuentes`, tras un aporte voluntario |
 
 ---
 

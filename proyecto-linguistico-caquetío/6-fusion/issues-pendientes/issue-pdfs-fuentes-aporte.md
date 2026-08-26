@@ -1,8 +1,8 @@
-Servir los PDF del vault desde `/simulador/fuentes`, tras un aporte voluntario
+Servir los PDF del vault desde `/kaketiana/fuentes`, tras un aporte voluntario
 
 ## De dónde sale esto
 
-La wiki de fuentes (`/simulador/fuentes`, 62 páginas) publica **lo que
+La wiki de fuentes (`/kaketiana/fuentes`, 62 páginas) publica **lo que
 resolvimos y minamos de cada obra**, pero no la obra. Miguel lo señaló el
 2026-08-24 con la pregunta obvia: *"pero no las tenemos en el mismo
 proyecto?"*.
