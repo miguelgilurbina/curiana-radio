@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 47
+  obras: 49
   en_repo: 33
-  solo_citadas: 14
+  solo_citadas: 16
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
@@ -97,6 +97,17 @@ obras:
   - Arcaya 1920
   - Historia del Estado Falcón
   en_repo: true
+- id: arcaya-obra-inedita-1995
+  obra: Obra inédita y dispersa
+  autor: Arcaya, Pedro Manuel
+  anio: 1995
+  publicacion: CIHPMA-UNEFM, Coro
+  paginas: — (no localizada)
+  aliases:
+  - Arcaya Obra inédita
+  - Obra inédita y dispersa
+  - Arcaya 1995
+  en_repo: false
 - id: ballesteros-1550
   obra: Carta al Monarca Español sobre la ciudad de Coro
   autor: Ballesteros, Miguel Gerónimo de (Obispo de Coro)
@@ -173,6 +184,15 @@ obras:
   aliases:
   - Fernandes et al. 2020
   en_repo: true
+- id: fuente-toponimia-coriana-sin-identificar
+  obra: Obra sobre toponimia caquetía y el nombre de Coro — SIN IDENTIFICAR
+  autor: sin identificar (indicios apuntan a Carlos González Batista)
+  anio: sin confirmar (posterior a 2000)
+  paginas: — (leída por Miguel en capturas)
+  aliases:
+  - fuente toponimia Coriana
+  - obra sin identificar 2026-08-25
+  en_repo: false
 - id: gatschet-1885
   obra: The Aruba Language and the Papiamento Jargon
   autor: Gatschet, Albert S. (material recogido por Alphonse L. Pinart, 1882)

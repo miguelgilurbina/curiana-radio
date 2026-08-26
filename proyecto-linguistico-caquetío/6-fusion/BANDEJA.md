@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-08-25**.
 
-**1312 ítems propuestos** en 12 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
+**1317 ítems propuestos** en 13 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -28,6 +28,7 @@ editar_a_mano: no
 | `tabla15_c14_oliver.yaml` | oliver-1989-cap4 | 23 |  |
 | `tabla_a8_jirajarano.yaml` | oliver-1989-apendice-a | 33 |  |
 | `tabla_a9_oliver.yaml` | oliver-1989-cap2 | 49 |  |
+| `toponimia_coro_espina.yaml` | fuente-toponimia-coriana-sin-identificar | 5 |  |
 
 ## Propuestas léxicas (`curiana_sim/lexicon_*.py` — indexadas en su sitio)
 

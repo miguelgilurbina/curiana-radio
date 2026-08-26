@@ -1,0 +1,255 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — el análisis toponímico de la obra sin identificar (2026-08-25)
+#
+# 🔴 PROCEDENCIA INCOMPLETA. La obra no tiene portada todavía; ver
+#    4-fuentes/fuente-toponimia-coriana-sin-identificar.md. Nada de aquí puede
+#    entrar al canon hasta que la obra tenga cita. Se recoge porque propone la
+#    morfología toponímica más desarrollada que ha visto el proyecto, y porque
+#    entra en conflicto directo con glosas que HOY están como atestiguadas.
+#
+# LA REGLA QUE APLICA: donde el autor y Zavala discrepan, Zavala tiene glosa
+# de fuente y el autor tiene análisis. No se sustituye una por otra: se
+# registra el conflicto (política D7).
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-08-25'
+  estado: sin-fusionar
+  procedencia_incompleta: true
+  obra: fuente-toponimia-coriana-sin-identificar
+
+# ══════════════════════════════════════════════════════════════════
+# 1. MORFOLOGÍA DEL PLURAL — tres mecanismos propuestos
+# ══════════════════════════════════════════════════════════════════
+plural:
+  - id: plural-reduplicacion
+    mecanismo: reduplicación de la palabra
+    estado_en_el_vault: >-
+      YA REGISTRADO parcialmente: toponimo-001 (`jurijurebo`) explica la
+      reduplicación como plural de la glosa. Esta obra lo generaliza.
+    casos_del_autor:
+      - {forma: quibaquiba, base: "quiba 'piedra'", glosa: "pedregal"}
+      - {forma: taratara,   base: "tara 'mariposa'", glosa: "sitio donde abundan"}
+      - {forma: corocoro,   base: "coro 'espina'",  glosa: "espinar (implícito)"}
+    convergencia: >-
+      ⭐ Coincide con la lectura que esta misma sesión propuso para
+      Quiquibacoa = 'el pedregal' (lengua_toponimia_quibacoa.yaml), llegada por
+      otro camino: Zavala #218 `Quiva` 'piedra' + `-bacoa`. Dos derivaciones
+      independientes al mismo resultado.
+    reserva: >-
+      `Quibaquibi` (Zavala #205) = 'baquiano, conocedor' está reduplicado y NO
+      es plural. El mecanismo existe; no es universal.
+
+  - id: plural-sufijo-bo
+    mecanismo: "sufijo -bo / -buno"
+    caso_del_autor:
+      forma: Curaidebo
+      forma_antigua: Curaridebo
+      segmentacion: "Curaride + bo"
+      glosa: "curaridal, lugar de muchos curaríes"
+      nota: propiedad agraria en Paraguaná; el curarí abundaba antes de la deforestación
+    conflicto_grave: >-
+      🔴 El lexicón tiene `ebo` = 'camino, paso, senda' como
+      caquetío-atestiguado (Zavala #117). Si `-bo` fuera pluralizador, la
+      segmentación de `jurijurebo` cambia por completo. Ver plural-superlativo.
+
+  - id: plural-superlativo
+    mecanismo: reduplicación + sufijo -bo
+    caso_del_autor:
+      forma: Jurijurebo
+      forma_antigua: Hurehurebo
+      analisis_del_autor: "hure 'arena' -> hurehure 'arenal' -> hurehurebo 'lugar de muchos arenales'"
+    conflicto_grave: >-
+      🔴 CHOCA DE FRENTE CON ZAVALA. El glosario da #178 «Juri, jura (E):
+      Viento, ventarrón» y #179 «Jurijurebo (E): Paso de los vientos», y el
+      vault lo tiene resuelto así en toponimo-001 (`juri~juri + ebo`), sin
+      residuo.
+      El autor escribe "si `hure` fuera **como creemos**" — es conjetura
+      declarada. Zavala tiene glosa impresa. **Zavala gana**, pero el conflicto
+      se registra: Arcaya confirma la variante `Hurehurebo` ~ `Jurijurebo`, así
+      que la alternancia h~j es real aunque la etimología del autor no lo sea.
+      Además `hure` 'arena' compite con `rao` 'arena, arenal costero'
+      (Zavala #219), que sí está atestiguado.
+
+# ══════════════════════════════════════════════════════════════════
+# 2. LA FAMILIA CORO = 'ESPINA'  — lo que Miguel recordaba
+# ══════════════════════════════════════════════════════════════════
+familia_coro:
+  - id: coro-espina
+    propuesta_del_autor: "coro = 'espina'; cocoro / corocoro = su plural, 'espinas'"
+    derivados:
+      - {forma: tococoro,    seg: "to 'árbol, planta' + cocoro 'espinas'", glosa: "árbol de muchas espinas = el cardón"}
+      - {forma: datococoro,  seg: "dato 'fruto' + to + cocoro",            glosa: "árbol espinoso que da fruta"}
+      - {forma: totocoro,    seg: "to + to + coro",                        glosa: "las varas secas del cardón, el varillaje"}
+    vivos_hoy: >-
+      ⭐ `tococoro` y `totocoro` SIGUEN EN USO en el léxico de la arquitectura
+      tradicional coriana: "techos de tococoro y torta". El autor advierte que
+      no son intercambiables aunque lo parezcan. Son palabras caquetías vivas
+      — categoría que el proyecto casi no tiene.
+    estado_en_el_lexicon: >-
+      `coro` está como `caquetío-hipotético/topónimo` = 'cardón grande, cactus
+      columnar', DEGRADADO por D10 con esta razón: "La glosa «cardón grande» NO
+      sale de ninguna fuente localizada". `dato` sí está atestiguado ('fruto
+      del cardón'). `cocoro`, `corocoro`, `tococoro`, `totocoro` NO ESTÁN.
+    conflicto: >-
+      🔴 El autor dice `coro` = 'espina', no 'cardón'. La diferencia importa: si
+      es 'espina', el cardón es `tococoro` ('árbol de espinas') y `coro` solo
+      nombra la espina. Eso REHABILITARÍA a `coro` con otra glosa, no con la
+      que D10 degradó.
+      ⚠️ Y choca con Alvarado, donde `coro` aparece 55 veces y SIEMPRE como
+      topónimo (medido en la tanda del 2026-08-03).
+    contexto_ecologico_a_favor: >-
+      Testimonio de 1533 (vía el autor): Federman no dejaba salir a los
+      cristianos de la ciudad "a coger una fruta de que se mantienen en cierta
+      temporada la mayor parte de los cristianos, que nace de unos cardones
+      grandes". El cardonal de Coro era tan extenso que figuraba entre los
+      linderos al comprar propiedades. El referente existe y es dominante.
+
+  - id: coriana-tierra-de-espinas
+    propuesta_del_autor: >-
+      "la palabra Coriana, y no Curiana que nos parece un barbarismo y una
+      inexactitud […] Si `paragua` es para los caquetíos mar o agua grande, `na`
+      es tierra, en consecuencia `paraguaná` es la tierra-en-el-mar, o mejor, la
+      tierra rodeada de mar. `Coriana` sería en consecuencia tierra de las
+      espinas, o la tierra del espinar, de vegetación espinosa, e
+      indirectamente, tierra de cardones."
+    apoyo_de_arcaya: >-
+      [[arcaya-1920]] p. 170 lista a `Coriana` dentro de la serie Coro-/Curi-:
+      "la antigua Coriana, Coroquide, Corobore, Coroquidiro, Ocorote, Corocoro,
+      Cocorote". La variante `Coriana` está atestiguada.
+    conflicto_central: >-
+      🔴 TODO ESTE ANÁLISIS DEPENDE DE `na` = 'TIERRA'.
+      El lexicón tiene `na` = 'como, semejante a (partícula comparativa)' como
+      **caquetío-atestiguado**, citando Zavala #184: «Na (HP): Partícula
+      equivalente a "como" o "semejante"».
+      Son dos glosas incompatibles para la misma forma, y la de Zavala está
+      impresa. O son homónimos, o una es errónea.
+      ⚠️ Esto reabre la segmentación de Paraguaná discutida en #109: con `na` =
+      'tierra' da 'tierra rodeada de mar' (limpio); con `na` = 'como' da 'a
+      manera de tierra cercada por el mar' (más forzado). **La glosa de `na`
+      pasa a ser la pieza que decide #109.**
+    nota_arcaya_contra: >-
+      Arcaya p. 170 propone para la serie Coro-/Curi- otra etimología: "Koori,
+      avispa, en guajiro o Kuru, lagartija". No 'espina'. Y refuta expresamente
+      "Coro = viento" de Castellanos: "esto es un error".
+
+# ══════════════════════════════════════════════════════════════════
+# 3. MORFEMAS QUE EL AUTOR DA POR ESTABLECIDOS
+# ══════════════════════════════════════════════════════════════════
+morfemas_del_autor:
+  - forma: "bana"
+    glosa: "cerro o altura"
+    caso: "Guadadubana / Guadedubana / Guadubabana = 'el alto o cerro de las cañas' (guaduba 'caña')"
+    valor: >-
+      ⭐ CONFIRMACIÓN INDEPENDIENTE PARA D9 (#38). El autor lo usa como
+      establecido, sin discutirlo. Se suma a Zavala #26 «Bana: Sitio, cerro
+      alto» y a la composición `capu`+`bana` = 'duende del cerro' (#61).
+      Y recuerda que el lexicón tiene `bana` = 'hígado' (reconstruido).
+
+  - forma: "bacoa"
+    glosa: "valle"
+    caso: "Guaibacoa = 'el valle (bacoa) de las ceibas (guay)'"
+    nota: >-
+      El lexicón lo tiene atestiguado como 'bosque, lugar, paraje, sitio fértil'
+      (Zavala #18). 'Valle' es un matiz, no un conflicto. `guay` = 'árbol
+      parecido a la ceiba' YA está atestiguado en el lexicón.
+
+  - forma: "to"
+    glosa: "árbol o planta; por extensión, su madera"
+    nota: >-
+      El lexicón tiene `to` solo como lokono (artículo). Como raíz caquetía
+      'árbol' sería nueva — pero `ada` ya ocupa 'árbol' (morfema-003 de
+      morfemas.yaml). Evaluar si compiten o si `to` es 'madera/planta'.
+
+  - forma: "guaduba"
+    glosa: "caña"
+    nota: NO está en el lexicón. Entrada nueva si la obra se identifica.
+
+  - forma: "hure"
+    glosa: "arena (conjetura del autor)"
+    nota: >-
+      NO está en el lexicón, y compite con `rao` 'arena, arenal costero'
+      (Zavala #219, atestiguado). El autor lo marca como conjetura suya.
+
+# ══════════════════════════════════════════════════════════════════
+# 4. EL PRINCIPIO TOPONÍMICO — convergencia independiente
+# ══════════════════════════════════════════════════════════════════
+metodo:
+  - id: principio-toponimico
+    enunciado_del_autor: >-
+      "el examen de los topónimos caquetíos conduce a deducir que éstos
+      referirían lo más característico de un sitio, ya sea una aguada, un
+      maizal, la presencia de ciertos animales, la abundancia de barro, de
+      piedra, o de arena, pero sobre todo la presencia de determinados
+      vegetales."
+    enunciado_paralelo_de_1578: >-
+      "Los barrios e poblazones tienen su nombre derivado de algún árbol,
+      quebrada, arroyo, peña u otra cosa señalada que esté en su asiento o cerca
+      dellos" (Relación de 1578, provincia de lengua Caraca — ver
+      polities_no_costeras_federmann.yaml#prop-polity-008).
+    valor: >-
+      ⭐ DOS formulaciones independientes del mismo principio, separadas por
+      cuatro siglos y por pueblo: una de un documento colonial de 1578 sobre
+      otra etnia, otra de análisis moderno sobre el caquetío. Convergencia
+      fuerte. Es una hipótesis de método utilizable para 2-lengua/toponimia.md:
+      un topónimo describe un RASGO DEL SITIO, no un dueño ni un evento.
+    contraste: >-
+      Frente a esto, los cuatro `Quicer-` del glosario son "nombre propio
+      indígena en Barquisimeto" — antropónimos, no descriptivos. El principio
+      predice que ésos NO deberían estar en toponimos.yaml (ver
+      lengua_toponimia_quibacoa.yaml#bug-antroponimos-como-toponimos).
+
+# ══════════════════════════════════════════════════════════════════
+# 5. LA LENGUA COMO OBJETO — juicios de época
+# ══════════════════════════════════════════════════════════════════
+juicios_sobre_la_lengua:
+  - autor: "Galeotto Cey (comerciante florentino, residente en Coro)"
+    cita: >-
+      "porque esta lengua caquetía es la más bella y más agradable de todas las
+      lenguas de las Indias, con muchos derivativos, y es lengua que se podría
+      escribir fácilmente"
+    procedencia: {obra: "Galeotto Cey, Viaje y descripción de las Indias/1539-1553, Caracas 1995", pagina: "102"}
+    valor: >-
+      ⭐ "con muchos derivativos" es una observación MORFOLÓGICA de un testigo
+      del s. XVI: lengua rica en derivación. Coincide con lo que el proyecto
+      reconstruye (afijos productivos, composición toponímica). Cey convivió con
+      servidores caquetíos en Coro, así que no es un juicio de oídas.
+    reserva: >-
+      Es un juicio estético de época, no una descripción técnica. La obra
+      secundaria misma dice que "aunque el juicio pareciera extremado,
+      podríamos concederle algunos adarmes de certeza".
+
+  - autor: "Juan de Castellanos"
+    cita: "\"Y su lenguaje es el de caquetío\" / \"En el lenguaje todos elegantes\""
+    procedencia: {obra: "Castellanos, Elegías de varones ilustres de Indias, ANH Caracas 1987", pagina: "175"}
+
+# ══════════════════════════════════════════════════════════════════
+# 6. CRONOLOGÍA DE LA MUERTE DE LA LENGUA
+# ══════════════════════════════════════════════════════════════════
+sustitucion_linguistica:
+  - epoca: s. XVI
+    hecho: >-
+      Empieza el bilingüismo, antes incluso de fundarse Coro: cautivos
+      caquetíos rescatados en Santo Domingo por Juan de Ampíes viven en su casa
+      y regresan a Curazao y Paraguaná. En sentido inverso, tres españoles
+      salen "lenguas excelentes": Esteban Martín, Pedro de Limpias y un tal
+      "Aceros" (Castellanos).
+  - epoca: 1619
+    hecho: >-
+      Cédula real ordena que los curas doctrineros sean examinados EN LA LENGUA
+      de los indios que sirven, y de no saberla sean removidos del curato.
+    valor: prueba de que el caquetío seguía siendo la lengua de uso.
+  - epoca: s. XVII
+    hecho: >-
+      "Todavía bien entrado el siglo XVII en los pueblos caquetíos la mayor
+      parte de sus moradores ignoraba el castellano, no eran 'ladinos'" — los
+      documentos especificaban junto al nombre si el indio era ladino o no.
+  - epoca: s. XIX
+    hecho: "\"Fue en el decurso del siglo XIX cuando el caquetío deviene plenamente en lengua muerta\""
+  - epoca: ~1905
+    hecho: >-
+      Arcaya recoge en Mitare una fórmula de salutación "ya muy alterada",
+      conservada en la memoria de algunos habitantes. DOS versiones.
+    procedencia: {obra: arcaya-obra-inedita-1995, pagina: "247"}
+    valor: >-
+      🔴 MÁXIMA PRIORIDAD DE ADQUISICIÓN. Sería el único fragmento de habla
+      caquetía —no de glosario— que el proyecto tendría. Ver la ficha de la obra.
