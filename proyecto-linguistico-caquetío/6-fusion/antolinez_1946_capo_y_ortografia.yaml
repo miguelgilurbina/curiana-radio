@@ -217,3 +217,63 @@ pendiente:
     Bibliografía (pp. 366-401): sin revisar. Antolínez cita a Tamayo, Bertoni,
     Ruiz de Montoya (*Tesoro de la lengua guaraní*) y la Relación de Nueva
     Segovia. Puede dar más referencias localizables.
+
+# ══════════════════════════════════════════════════════════════════
+# 6. ORIENTACIÓN DEL PROYECTO — el prefacio como declaración de rumbo
+# ══════════════════════════════════════════════════════════════════
+orientacion:
+  - id: madre-indigena-padre-europeo
+    senalado_por: Miguel
+    fecha: '2026-08-25'
+    cita: >-
+      "América se siente inclinada hacia Europa como el hijo hacia el padre; pero
+      al mismo tiempo se resiste a ser su propio padre... De aquí este sentirnos
+      cohibidos, inferiores al europeo... nuestro complejo de minusvalía no es
+      más que una consecuencia de una mala solución del infantil complejo de
+      Edipo cultural americano. La cultura precolombina es la FUENTE MATERNA de
+      lo americano, y el hombre americano pretende borrar en sí todos los
+      caracteres de lo que él considera como culturalmente 'femenino'."
+      Y: "en Venezuela lo arquetípico ha sido lo europeo. El estado actual de
+      cosas nos empuja a ser americanos, mas esto implicaría reconocer la validez
+      de los elementos culturales ancestrales autóctonos. Yo desearía incitar a
+      ese reconocimiento."
+    donde: "cap. I, 'Ciencia, americanismo y venezolanidad', pp. 38-39"
+    por_que_se_registra: >-
+      Miguel señala que el proyecto va en sintonía con esto: el objetivo no es
+      mirar al caquetío como observador occidental, sino emular en lo posible
+      una mirada DESDE ADENTRO HACIA AFUERA. Y reconoce la dificultad — aun
+      siendo él de allí, se accede a esas experiencias por información.
+    consecuencia_metodologica: >-
+      No es adorno: tiene consecuencia operativa. Si el marco por defecto es el
+      del observador externo, las categorías que se aplican son las suyas —
+      "esto es taíno, no caquetío", "esto es de otra polity, fuera". El aviso de
+      Antolínez es que esa limpieza categorial puede ser el propio sesgo.
+      Ver `6-fusion/issues-pendientes/issue-repertorio-vs-filiacion.md`, que
+      convierte esta orientación en una propuesta concreta de esquema.
+    limite: >-
+      ⚠️ Es una orientación, no una licencia. Reconocer el sesgo del observador
+      externo NO baja el listón de la atestación — el propio Antolínez es el
+      mejor ejemplo, con dos afirmaciones refutadas hoy usando las fuentes que
+      él mismo cita. La regla queda: rigor sobre lo que la fuente dice,
+      generosidad sobre lo que el hablante pudo usar.
+
+# ══════════════════════════════════════════════════════════════════
+# 7. CAPÍTULO DE AGRICULTURA — minado, rinde poco para la costa
+# ══════════════════════════════════════════════════════════════════
+agricultura_jirajara_muku:
+  estado: minado el 2026-08-25
+  veredicto: >-
+    🔴 Es agricultura ANDINA: terrazas, andenes y canales de riego entre muku,
+    mukuñoke y "estanques" de Mérida, vía Julio C. Salas. Otro pueblo, otra
+    familia lingüística y otra ecología — nada aplicable a la costa árida del
+    Golfete. Y es donde el difusionismo andino de Antolínez está más cargado.
+  dos_voces_indigenas:
+    - {forma: katafok, glosa: "terraza, andén agrícola", lengua: "muku (andina)"}
+    - {forma: kimpués, glosa: "estanques y lagunetas artificiales de riego", lengua: "mukuñoke", nota: "aún en uso en zonas mukuñoke según Salas"}
+  lo_unico_aprovechable: >-
+    Por CONTRASTE con el `buco` de [[ballesteros-1550]]. Dos soluciones
+    hidráulicas indígenas del mismo país: la andina por terrazas y canales de
+    ladera; la caquetía costera por presa en el río y acequia de dos leguas
+    hacia la llanura. Ambas documentadas en el XVI, ambas de gran escala.
+    Refuerza que la ingeniería hidráulica era destreza areal, no privativa.
+    Nada de esto entra al corpus costero: es marco comparativo.

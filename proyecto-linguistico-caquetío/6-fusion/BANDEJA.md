@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-08-26**.
 
-**1326 ítems propuestos** en 16 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
+**1326 ítems propuestos** en 16 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -55,6 +55,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | Archivo | Qué es |
 |---|---|
 | `issue-pdfs-fuentes-aporte.md` | Servir los PDF del vault desde `/kaketiana/fuentes`, tras un aporte voluntario |
+| `issue-repertorio-vs-filiacion.md` | El lexicón responde "¿de qué lengua es esta palabra?" y lo usamos como si respondiera "¿la |
 
 ---
 
