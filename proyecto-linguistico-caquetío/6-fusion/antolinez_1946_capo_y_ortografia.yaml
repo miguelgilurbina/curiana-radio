@@ -1,0 +1,219 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — Antolínez 1946, *Hacia el indio y su mundo*
+#
+# Fuente: 4-fuentes/antolinez-1946-hacia-el-indio.md — PDF en el repo, con
+# capa de texto, minado el 2026-08-25 (122 pp., ed. digital El Perro y la
+# Rana 2023).
+#
+# 🔴 EL LIBRO NO CONTIENE "El Diao Manaure". Verificado por índice y por
+#    texto completo. Ese artículo sigue en Los ciclos de los dioses (1995) o
+#    en la hemeroteca de El Universal (9-IX-1944).
+#
+# REGLA DE USO: se le cree lo que REPORTA (documentos, informantes, campo);
+# no lo que DEDUCE (etimologías, difusionismo andino y tupí-guaraní).
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-08-25'
+  estado: sin-fusionar
+  obra: antolinez-1946-hacia-el-indio
+
+# ══════════════════════════════════════════════════════════════════
+# 1. ⭐ UN PRECEDENTE DE 1945 PARA LA POLÍTICA ORTOGRÁFICA (D5)
+# ══════════════════════════════════════════════════════════════════
+ortografia:
+  - id: precedente-d5-1945
+    donde: "prefacio, fechado en Caracas, marzo de 1945"
+    cita: >-
+      "sigo a estos también en la adopción de una fonética más racional que la
+      que resulta sacrificando los sonidos intervocales e interconsonantes a la
+      transcripción española hasta ahora acostumbrada; de este modo escribo:
+      wajiro, no guajiro; kaketío, no caquetío; akáwa, no Achaguas."
+    reglas_que_aplica:
+      - {cambio: "guajiro -> wajiro",    regla_d5: "gu -> /w/  — D5c, HOY SIN DECIDIR"}
+      - {cambio: "caquetío -> kaketío",  regla_d5: "c/qu -> k  — D5a"}
+      - {cambio: "Achaguas -> akáwa",    regla_d5: "ch -> k, gu -> w, y sin plural castellano"}
+    valor: >-
+      ⭐ Es LITERALMENTE la política que Miguel propuso el 2026-08-25, argumentada
+      en los mismos términos: la grafía castellana "sacrifica los sonidos" y hay
+      que sustituirla por "una fonética más racional". Y Antolínez la presenta
+      como "una convención a que han llegado los etnólogos" — o sea, disciplina
+      establecida ya en 1945, no ocurrencia personal.
+      Ochenta años de uso en la etnología venezolana respaldan el rumbo.
+    limite: >-
+      ⚠️ NO zanja D5. Es una convención de transcripción entre etnólogos, no
+      evidencia sobre la fonología caquetía. Lo que aporta es que la política
+      no es una invención nuestra ni una ruptura: es volver a una práctica que
+      la disciplina ya tenía.
+    de_paso: >-
+      Rechaza pluralizar etnónimos a la castellana "como que ya son colectivas
+      en su origen", y glosa dos: `Waikerí` = 'saqueadores' (nuestro guayquerí,
+      ver etnias_en_contacto.yaml#etnia-002) y `Waraúno` = 'hombres de agua'.
+
+# ══════════════════════════════════════════════════════════════════
+# 2. ⭐⭐ CAPU / CAPO — documento de 1578 + creencia viva + el compuesto
+# ══════════════════════════════════════════════════════════════════
+capu_capo:
+  - id: capu-1578-documental
+    afirmacion: >-
+      Los indios kaketío-parlantes de la jurisdicción de Nueva Segovia llamaban
+      al demonio `Capu`, los hechiceros podían tratar con él, y aplicaban el
+      mismo nombre a los españoles para tildarlos de crueldad.
+    cita: >-
+      "Cuenta la Relación geográfica de Nueva Segovia (hoy Barquisimeto), pre-
+      sentada por el Cabildo de aquella ciudad en 1578, que los indios
+      kaketío-parlantes de aquella jurisdicción llamaban al demonio Capu, y que
+      podían tener trato con él los hechiceros. Este mismo nombre daban esos
+      indios a los españoles para tildarlos de crueldad."
+    valor: >-
+      Atestación DOCUMENTAL del s. XVI para una entrada que el lexicón ya tiene
+      (`capu` = 'demonio', Zavala #60), y con dos datos que el lexicón no tiene:
+      que los hechiceros trataban con él, y que se usaba como insulto aplicado a
+      los españoles. Lo segundo es dato de contacto, no solo de creencia.
+    aviso_polity: >-
+      🔴 Nueva Segovia es Barquisimeto — NO la polity costera. Pero el texto
+      dice "kaketío-parlantes", así que es dato de LENGUA caquetía en otra
+      polity. Distinguir las dos cosas al fusionar.
+    discrepancia: >-
+      ⚠️ Antolínez fecha la Relación en 1578; Brito Figueroa la cita como 1579
+      (Bol. del Centro Histórico Larense nº 11, 1942). Resolver al conseguirla.
+    procedencia: {obra: antolinez-1946-hacia-el-indio, via_documento: nueva-segovia-1579}
+
+  - id: capo-cerro-santa-ana
+    afirmacion: >-
+      En el cerro de Santa Ana de Paraguaná hay un "dueño" llamado Capo que,
+      junto a una serpiente emplumada con una estrella en la cabeza, impide que
+      se corten los árboles.
+    cita: >-
+      "en la localidad del cerro de Santa Ana de Paraguaná (distrito Falcón del
+      estado Falcón, zona kaketía) hay un dueño llamado Capo quien, junto con
+      una serpiente emplumada que tiene una estrella en la cabeza, impide que
+      sean cortados los árboles de la localidad. Cuando le sucede algo a las
+      personas que se aventuran por aquellos lugares es el Capo el responsable
+      […] Si alguien corta un árbol, se le aparece el Capo."
+    via: "Francisco Tamayo, citado por Antolínez"
+    categoria_epistemica: >-
+      `retro-abstraido` — tradición viva recogida en el s. XX, no dato
+      precontacto. Pero es de la POLITY COSTERA, y eso es raro y valioso: casi
+      todo el material oral que ha entrado hoy es de otras polities.
+    procedencia: {obra: antolinez-1946-hacia-el-indio}
+
+  # ⭐ LA CONVERGENCIA
+  - id: capubana-cierra
+    hallazgo: >-
+      ⭐⭐ El lexicón tiene las tres piezas como caquetío-atestiguado y nunca se
+      conectaron con esta creencia:
+      · `capu`     'demonio'                   Zavala #60
+      · `capo`     'duende, ente sobrenatural' Zavala #59
+      · `capubana` 'duende del CERRO'          Zavala #61
+      `capubana` = `capu` + `bana` 'cerro'. Y la creencia viva sitúa a Capo
+      exactamente en EL CERRO DE SANTA ANA, el más prominente de Paraguaná.
+      El compuesto atestiguado nombra la creencia documentada en el terreno.
+    consecuencia_d9: >-
+      🟢 REFUERZA D9 (#38). Es un cuarto apoyo para `bana` = 'cerro, sitio
+      alto', y esta vez no es composicional sino REFERENCIAL: el sitio existe,
+      es un cerro, y la creencia sigue viva ahí.
+    consecuencia_d5: >-
+      La variación `capo` ~ `capu` la explica Antolínez como "intercambiabilidad
+      dialectal muy frecuente en las lenguas arawak, tupí y karibe". Dato de
+      variación vocálica para la política ortográfica.
+
+# ══════════════════════════════════════════════════════════════════
+# 3. 🟢 SIN SACERDOCIO — segunda fuente para lo que el corpus afirma
+# ══════════════════════════════════════════════════════════════════
+religion:
+  - id: sin-sacerdocio
+    cita: >-
+      "el caney o casa de dos aguas, algunas veces en piernas y otras con
+      paredes deleznables, es la forma corriente entre los kaketío y akáwa de
+      las regiones bajas. Estos, generalmente, no tienen sacerdocio, sino
+      médicos-hechiceros no asociados sino enemistados entre sí y en conflicto
+      de potencias."
+    convergencia: >-
+      🟢 Coincide con [[arcaya-1920]] pp. 103 y 110, que el corpus ya registra
+      en `creencia.yaml`: "no había culto comunal de ídolos ni templos". DOS
+      fuentes independientes sobre la ausencia de religión institucional.
+      Y añade un matiz que el corpus no tiene: los hechiceros no solo no están
+      asociados — están ENEMISTADOS ENTRE SÍ, "en conflicto de potencias". Eso
+      es estructura social, y es modelable.
+    consecuencia_cemies: >-
+      Refuerza la posición cauta sobre los zemi (ver
+      petroglifos_y_manaure.yaml#conflicto_cemies): sin sacerdocio ni culto
+      comunal, "ídolos de piedra iguales a los taínos" pide más evidencia.
+    conflicto_interno_del_autor: >-
+      🔴 CONTRADICE A SU PROPIO 1944. El "gran señor de Paraguaná […]
+      depositario de la autoridad religiosa" que Morón lee con Frazer como
+      SACERDOTE-REY choca con este "no tienen sacerdocio". Antolínez se
+      contradice entre 1944 y 1946. El corpus se inclina por 1946, porque
+      Arcaya lo respalda de forma independiente.
+      Toca D15 (#90) — ver petroglifos_y_manaure.yaml#toca-d15-paraguana.
+
+  - id: vivienda-caney
+    afirmacion: "El caney de dos aguas, a veces sobre pilotes, es la vivienda corriente kaketía"
+    conflicto: >-
+      ⚠️ El lexicón tiene `caney` como **taíno** ('caney, bohío rectangular del
+      cacique'), no caquetío. Si es la forma corriente kaketía, o la palabra es
+      préstamo taíno para una cosa propia, o hay que revisar la etiqueta.
+    comparar_con: >-
+      Federmann sobre el Yaracuy: "una casa la habitan a menudo cinco y hasta
+      ocho familias" (polities_no_costeras_federmann.yaml#prop-polity-005).
+      Dos descripciones de vivienda, dos polities.
+
+# ══════════════════════════════════════════════════════════════════
+# 4. 🔴 LO QUE NO ENTRA — el difusionismo
+# ══════════════════════════════════════════════════════════════════
+descartado:
+  - id: capo-etimo-tupi
+    lo_que_propone: >-
+      Que `Capo` viene del tupí: *cáa*/*caá* 'bosque' + *pó*, apócope de *pora*
+      'el morador o habitante de un lugar' -> *Cáapo*, 'el morador del bosque',
+      equivalente al Caapóra brasileño.
+    por_que_no_entra: >-
+      🔴 Convertiría a `capo`/`capu` en préstamo tupí y no voz caquetía — pero
+      lo construye con "deduzco lo siguiente" y "debió ser". Es inferencia, no
+      atestación. Y va contra dos entradas del lexicón con cita de Zavala.
+      Se registra por D7: la lectura queda, no se aplica.
+    contexto: >-
+      Sostiene, vía Bertoni, que el taíno contiene "50 % de voces procedentes
+      del guaraní", y propone "una fuerte conexión cultural en cierto modo
+      unidad, entre los pueblos del Perú, Ecuador, Colombia y Venezuela
+      occidental". Es difusionismo de los años 40. La regla del proyecto es
+      explícita: no traer material andino sin vínculo arahuaco demostrado.
+
+  - id: sufijo-ima-karibe
+    lo_que_dice: >-
+      Da el sufijo karibe `-imá`/`-imé` = 'grande, gigantesco', en taurepán,
+      ingarikó, arekuná, purukotó y wayumará, usado para formar el nombre del
+      Demonio del Arco Iris contrayendo el nombre de una serpiente.
+    por_que_NO_es_nuestro_ima: >-
+      ⚠️ El caquetío tiene `-ima` = 'humedad, quebrada' con DOBLE ATESTACIÓN
+      INDEPENDIENTE: Zavala #165 y van Buurt §10 (`nima` 'húmedo', topónimo
+      Onima de Bonaire). Dos fuentes que no se citan entre sí, misma glosa.
+      El `-imá` de Antolínez es KARIBE y significa otra cosa. Homofonía entre
+      familias, no conflicto. Se anota para que nadie lo importe por parecido.
+
+  - id: gomez-ultimo-manaure
+    lo_que_dice: '"Quizás Gómez fue el último Manaure"'
+    veredicto: >-
+      Figura retórica sobre Juan Vicente Gómez, dentro de un argumento sobre la
+      pervivencia de lo indígena en el mestizo. **No es un dato.** Se anota
+      porque la frase circula y alguien podría tomarla por afirmación histórica.
+
+# ══════════════════════════════════════════════════════════════════
+# 5. QUÉ QUEDA POR MINAR DEL LIBRO
+# ══════════════════════════════════════════════════════════════════
+pendiente:
+  - >-
+    "Enseñanzas útiles de la agricultura jirajara-muku" (pp. 99-117) y "El
+    teatro, institución de los muku y jirajara" (pp. 118-140). Los jirajara
+    tocan al proyecto: el lexicón tiene `jirajaroide-contacto` (7 entradas) y
+    Oliver dedica su Tabla A-8 al vocabulario jirajarano. 🔴 Pero son OTRO
+    pueblo y otra familia (chibcha según la clasificación que el propio Zavala
+    reproduce). Minar solo con la esfera de contacto en mente.
+  - >-
+    "Dioses y demonios de Amazonia y Guayana" (pp. 217-350) es el grueso del
+    libro y es material arahuaco-caribe de Guayana, no del Golfete. Rinde para
+    comparación mitológica; nada entra al corpus costero sin decisión.
+  - >-
+    Bibliografía (pp. 366-401): sin revisar. Antolínez cita a Tamayo, Bertoni,
+    Ruiz de Montoya (*Tesoro de la lengua guaraní*) y la Relación de Nueva
+    Segovia. Puede dar más referencias localizables.

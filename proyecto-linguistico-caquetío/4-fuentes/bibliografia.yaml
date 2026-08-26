@@ -1,7 +1,7 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 51
-  en_repo: 34
+  obras: 52
+  en_repo: 35
   solo_citadas: 17
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
@@ -97,6 +97,23 @@ obras:
   - El Diao Manaure
   - Disección de un Hombre-Dios
   en_repo: false
+- id: antolinez-1946-hacia-el-indio
+  obra: Hacia el indio y su mundo. Pensamientos vivos del hombre americano
+  autor: Antolínez, Gilberto
+  anio: 1946
+  publicacion: 'Ed. digital: Fundación Editorial El Perro y la Rana, Caracas, noviembre de 2023. Prefacio
+    del autor fechado en Caracas, marzo de 1945'
+  genero: etnologia
+  local:
+  - fuentes_caquetios/Antolinez_1946_Hacia_el_indio_y_su_mundo.pdf
+  paginas: 122
+  acceso: 'Libre — Fundación Editorial El Perro y la Rana (ed. digital 2023). ⚠️ su servidor rechaza HTTPS:
+    abrir en http://'
+  aliases:
+  - Antolínez 1946
+  - Hacia el indio y su mundo
+  - Pensamientos vivos del hombre americano
+  en_repo: true
 - id: arcaya-1920
   obra: Historia del Estado Falcón, tomo I
   autor: Arcaya, Pedro Manuel
