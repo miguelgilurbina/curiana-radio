@@ -98,16 +98,53 @@ La lectura resultante, y creo que es la justa:
 Es el mismo reparto que hubo que hacer con [[gonzalez-batista-nombre-de-coro]]:
 autoridad sobre unas cosas, no sobre otras.
 
-## Dónde conseguirlo
+## Dónde conseguirlo — rastreo del 2026-08-25
+
+**El artículo suelto no está digitalizado.** Se buscó en Redalyc, SaberULA,
+Internet Archive y bibliotecas digitales venezolanas: no aparece.
+
+La vía más prometedora, por orden:
 
 | Vía | Estado |
 |---|---|
-| **El Universal**, 9-IX-1944 | hemeroteca — Biblioteca Nacional de Venezuela |
-| *Hacia el indio y su mundo. Pensamientos vivos del hombre americano* (1946) | libro de dos años después; probable recopilación de sus piezas de prensa de los 40 |
-| *Los ciclos de los dioses. Folklore y mitología de centro-occidente de Venezuela* (1995) | compilación de Orlando Barreto, **Editorial la Oruga Luminosa**, San Felipe (Yaracuy). Es donde encajaría el texto |
-| *Retratos y figuras* (1997) · *El agujero de la Serpiente* (1998) | los otros dos tomos de la misma compilación |
+| 🟢 ***Hacia el indio y su mundo*** — **reeditado por Fundación Editorial El Perro y la Rana en 2023** | La editorial del Estado publica sus títulos en **PDF gratuito**. Ficha: `http://www.elperroylarana.gob.ve/libros/hacia-indio-mundo/` ⚠️ Su servidor **rechaza HTTPS**: hay que abrirlo en `http://` a pelo. Sus PDF siguen el patrón `/wp-content/uploads/AAAA/MM/nombre.pdf` |
+| *Los ciclos de los dioses* (1995) | compilación de **Orlando Barreto**, Editorial la Oruga Luminosa, San Felipe (Yaracuy). Es donde encajaría el texto por materia. Con *Retratos y figuras* (1997) y *El agujero de la Serpiente* (1998) |
+| **El Universal**, 9-IX-1944 | hemeroteca de la Biblioteca Nacional de Venezuela. El original |
 
-Ninguna aparece digitalizada. La editorial es local de San Felipe.
+⚠️ *Hacia el indio y su mundo* es de **1946**, dos años después del artículo, y
+recopila su producción de los 40. Es la apuesta razonable — pero **no está
+confirmado** que incluya la pieza de Manaure.
+
+## 🟢 Y mientras tanto: la tesis tiene tres testigos más
+
+El rastreo destapó que Antolínez no está solo. La misma afirmación la sostienen:
+
+- **Miguel Acosta Saignes** — el nombre era el de una **dinastía de gobernantes**,
+  no el de una persona. ⭐ Y su *Estudios de etnología antigua de Venezuela*
+  (UCV, 1961) **ya está en la bibliografía de [[zavala-reyes-2015]]**: es fuente
+  más citable, más localizable y de más peso académico que un artículo de prensa.
+- **Walter Dupouy** — el nombre "no es propio, sino que representa jerarquía
+  social, ejecutiva y política dentro de la tribu".
+- **González Batista**, vía la nota (2) de Zavala — el que el canon ya usa.
+
+Con Antolínez son **cuatro** fuentes independientes. La tesis está sólida sin
+necesidad del original.
+
+### 🔴 Pero cuidado con el matiz de Acosta Saignes
+
+Se le atribuye decir que el título se heredaba **"de padres a hijos"**. Eso es
+**patrilineal** — y el canon del proyecto tiene decidido que el caquetío
+precontacto era **matrilineal**, siendo el dato patrilineal de Oliver del
+cacicazgo **colonial** (ver [[01_familia_caquetia]] y la regla 3).
+
+Si Acosta Saignes describe herencia padre-hijo, o está describiendo el
+cacicazgo ya colonial —el mismo error que el canon ya identificó una vez—, o
+contradice la reconstrucción matrilineal. **No importar sin resolver.** Es
+material para D4 ([#35](https://github.com/miguelgilurbina/curiana-radio/issues/35))
+y toca la esfera de parentesco.
+
+⚠️ Este matiz viene de un resumen de búsqueda, **no de leer a Acosta Saignes**.
+Verificarlo es parte de conseguirlo.
 
 **Pero no urge**: el pasaje que importa ya lo tenemos verbatim vía
 [[moron-2012-petroglifos]], con fecha y medio. Conseguir el original serviría
