@@ -86,15 +86,16 @@ obras:
   - Cariban Migration
   en_repo: true
 - id: antolinez-1944-manaure
-  obra: 'Disección de un Hombre-Dios: Manaure'
+  obra: El Diao Manaure o la Disección de un Hombre-Dios
   autor: Antolínez, Gilberto
   anio: 1944
+  publicacion: El Universal, Caracas, sábado 9 de septiembre de 1944
   genero: etnologia
-  paginas: — (no localizada)
+  paginas: — (artículo de prensa; no localizado)
   aliases:
   - Antolínez 1944
+  - El Diao Manaure
   - Disección de un Hombre-Dios
-  - Antolínez Manaure
   en_repo: false
 - id: arcaya-1920
   obra: Historia del Estado Falcón, tomo I
