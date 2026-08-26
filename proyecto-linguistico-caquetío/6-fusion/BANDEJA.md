@@ -15,13 +15,14 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-08-25**.
 
-**1317 ítems propuestos** en 13 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
+**1319 ítems propuestos** en 14 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
 | Archivo | Obra | Ítems | Aviso |
 |---|---|---|---|
 | `etnias_en_contacto.yaml` | ? | 3 |  |
+| `frase_saludo_mitare.yaml` | ? | 2 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
 | `polities_no_costeras_federmann.yaml` | ? | 16 |  |

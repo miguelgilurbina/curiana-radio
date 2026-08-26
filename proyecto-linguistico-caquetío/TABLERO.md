@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-25 21:48**.
+<!--GENERADO--> Generado el **2026-08-25 22:09**.
 
 ## ¿Vamos bien?
 
@@ -138,12 +138,12 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 
 Índice: [[INDICE_FUENTES]]. **La nota de cada obra es la fuente de verdad**; esta tabla lee su frontmatter (`estado_minado`, `prioridad`, `capa_texto`, `sostiene`), no una lista cableada.
 
-**49 notas de obra.**
+**50 notas de obra.**
 
 | `estado_minado` | n |
 |---|---|
 | minado | 21 |
-| no-disponible | 11 |
+| no-disponible | 12 |
 | parcial | 6 |
 | segunda-mano | 4 |
 | en-curso | 3 |
@@ -151,9 +151,9 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | descartada | 1 |
 | completo | 1 |
 
-**Prioridad ALTA sin minar (12):** [[arcaya-obra-inedita-1995]] (`no-disponible`), [[ballesteros-1550]] (`segunda-mano`), [[brito-figueroa-poblacion-economia]] (`en-curso`), [[esteves-1989]] (`parcial`), [[gonzalez-batista-nombre-de-coro]] (`en-curso`), [[medina-colina-sxx]] (`en-curso`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap3-vecinos]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`no-disponible`), [[perez-de-tolosa-1546]] (`no-disponible`), [[urbina-jimenez-2007-2011]] (`parcial`).
+**Prioridad ALTA sin minar (13):** [[antolinez-1944-manaure]] (`no-disponible`), [[arcaya-obra-inedita-1995]] (`no-disponible`), [[ballesteros-1550]] (`segunda-mano`), [[brito-figueroa-poblacion-economia]] (`en-curso`), [[esteves-1989]] (`parcial`), [[gonzalez-batista-nombre-de-coro]] (`en-curso`), [[medina-colina-sxx]] (`en-curso`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap3-vecinos]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`no-disponible`), [[perez-de-tolosa-1546]] (`no-disponible`), [[urbina-jimenez-2007-2011]] (`parcial`).
 
-<details><summary>Las 49 notas, una por fila</summary>
+<details><summary>Las 50 notas, una por fila</summary>
 
 | Nota | minado | prioridad | capa texto | lexicón (declarado) | lexicón (medido) | hechos corpus |
 |---|---|---|---|---|---|---|
@@ -181,6 +181,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[oviedo-y-banos]] | minado | baja | si | 0 | 0 | 1 |
 | [[van-buurt-2014]] | minado | alta | si | 0 | 10 | 1 |
 | [[antczak-2017-cariban]] | minado | media | si | 0 | 0 | 0 |
+| [[antolinez-1944-manaure]] | no-disponible | alta | no | 0 | 0 | 0 |
 | [[arcaya-obra-inedita-1995]] | no-disponible | alta | no | 0 | 8 | 0 |
 | [[brito-figueroa-poblacion-economia]] | en-curso | alta | no | 0 | 0 | 0 |
 | [[esteves-1989]] | parcial | alta | no | 0 | 0 | 0 |
@@ -263,7 +264,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1007 en 278 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 1012 en 280 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 197 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 

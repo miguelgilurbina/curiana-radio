@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 49
+  obras: 50
   en_repo: 33
-  solo_citadas: 16
+  solo_citadas: 17
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
@@ -85,6 +85,17 @@ obras:
   - Antczak et al. 2017
   - Cariban Migration
   en_repo: true
+- id: antolinez-1944-manaure
+  obra: 'Disección de un Hombre-Dios: Manaure'
+  autor: Antolínez, Gilberto
+  anio: 1944
+  genero: etnologia
+  paginas: — (no localizada)
+  aliases:
+  - Antolínez 1944
+  - Disección de un Hombre-Dios
+  - Antolínez Manaure
+  en_repo: false
 - id: arcaya-1920
   obra: Historia del Estado Falcón, tomo I
   autor: Arcaya, Pedro Manuel
