@@ -253,3 +253,64 @@ sustitucion_linguistica:
     valor: >-
       🔴 MÁXIMA PRIORIDAD DE ADQUISICIÓN. Sería el único fragmento de habla
       caquetía —no de glosario— que el proyecto tendría. Ver la ficha de la obra.
+
+# ══════════════════════════════════════════════════════════════════
+# 7. VEREDICTOS DE MIGUEL (2026-08-25) — el humano fusiona
+# ══════════════════════════════════════════════════════════════════
+veredictos:
+  - id: veredicto-cautela-general
+    sobre: toda la obra sin identificar
+    decision: >-
+      TOMARLA CON MUCHA CAUTELA. Puede tener razón en algunas cosas
+      —especialmente en la etimología de Coriana— pero no se le concede
+      autoridad general. Cada afirmación suya se evalúa por separado y contra
+      Zavala.
+
+  - id: veredicto-coriana
+    sobre: "coro = 'espina'; Coriana = 'tierra de las espinas'"
+    decision: PLAUSIBLE — se mantiene abierta como la línea más prometedora del autor.
+    razon: >-
+      Es la parte de su análisis que Miguel considera con más fundamento, y
+      coincide con lo que él recordaba de otras lecturas. Sigue necesitando que
+      la obra tenga portada, y sigue chocando con `na` = 'como' de Zavala #184.
+
+  - id: veredicto-jurijurebo
+    sobre: "Jurijurebo: 'lugar de muchos arenales' (autor) vs. 'paso de los vientos' (Zavala #179)"
+    decision: >-
+      SE MANTIENE ZAVALA. La lectura `hure` = 'arena' se descarta como lectura
+      principal y queda registrada por D7.
+    razon_documental: >-
+      Zavala tiene glosa impresa en dos entradas contiguas — #178 «Juri, jura
+      (E): Viento, ventarrón» y #179 «Jurijurebo (E): Paso de los vientos» — y
+      la segmentación del vault (toponimo-001, `juri~juri + ebo`) cierra sin
+      residuo. El autor, en cambio, escribe "si `hure` fuera COMO CREEMOS,
+      arena": es conjetura declarada por él mismo. Y `rao` 'arena, arenal
+      costero' (Zavala #219) ya ocupa ese campo semántico.
+    razon_de_terreno:
+      testimonio: Miguel Gil Urbina, residente en Judibana (Paraguaná)
+      argumento: >-
+        `Judi` y `juri` son la misma palabra deformada, y `Judibana` = judi
+        ('viento') + bana ('cerro, sitio alto') = 'el cerro del viento'. El
+        viento ES el rasgo dominante de Judibana y de Paraguaná entera. El
+        topónimo moderno y el antiguo comparten raíz y comparten referente.
+      convergencia_documental: >-
+        La nota [[esteves-1989]] ya registraba que las fuentes divulgativas
+        sitúan Jurijurebo precisamente en "Judibana, Paraguaná" (frente a
+        Duaca, Lara). No es prueba —esas fuentes no son citables y la
+        atribución a Castellanos ya se falsificó el 2026-08-14— pero es una
+        convergencia entre tres cosas independientes: la glosa de Zavala, el
+        topónimo vivo, y la tradición local sobre la ubicación.
+      estatus: >-
+        ⚠️ Testimonio de hablante-residente, no fuente documental. Categoría
+        distinta: entra como el dictado curado previsto para
+        [[medina-colina-sxx]], no como atestación de crónica.
+    consecuencia: >-
+      `ebo` = 'camino, paso, senda' (Zavala #117) se mantiene. La propuesta de
+      `-bo` como pluralizador NO se aplica a `jurijurebo`; queda viva solo para
+      `Curaidebo`, que es el caso donde el autor la sostiene sin competencia.
+    propuesta_derivada: >-
+      **Judibana entra como candidato a topónimo del registro.** No está en
+      toponimos.yaml, ni en Zavala, ni en Arcaya, ni en Alvarado. Si se acepta,
+      es un caso más de `-bana` = 'cerro' (D9) y un apoyo a `juri` = 'viento'.
+      Necesita fuente documental antes de subir de nivel: buscar en
+      [[esteves-1989]], que es el gazeteer de Paraguaná.
