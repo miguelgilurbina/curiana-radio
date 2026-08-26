@@ -1,0 +1,178 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — la raíz 'piedra', los locativos toponímicos, y Coquibacoa
+#
+# Todo lo de aquí sale de fuentes YA en el repo (Zavala 2015, Arcaya 1920) y
+# de datos YA en el vault (toponimos.yaml, VOCABULARIO_BASE). No hay material
+# nuevo: hay conexiones que no estaban hechas.
+#
+# Sesión del 2026-08-25. Regla 5: nada de esto toca el canon todavía.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-08-25'
+  estado: sin-fusionar
+
+# ══════════════════════════════════════════════════════════════════
+# 1. UN CONJUNTO DE COGNADOS QUE EL LEXICÓN YA TENÍA, SIN CONECTAR
+# ══════════════════════════════════════════════════════════════════
+cognados:
+  - id: cognado-piedra
+    glosa: piedra
+    raiz_propuesta: "*ipa / *iba"
+    apoyo_externo: >-
+      Arcaya 1920 p. 36: "en todos los dialectos de esta familia se encuentra
+      con ese sentido la raíz `ipa` o `iba`. En uno de ellos, el conocido
+      guajiro, `ipar` es piedra, e `iparcoa` cascajo".
+    reflejos:
+      - {lengua: wayunaiki, forma: ipa,   estado: ya en VOCABULARIO_BASE}
+      - {lengua: lokono,    forma: siba,  estado: ya en VOCABULARIO_BASE, sig: "piedra, roca"}
+      - {lengua: caquetio,  forma: quiva, estado: ya en VOCABULARIO_BASE, procedencia: "Zavala #218 (E)"}
+      - {lengua: caquetio,  forma: cuiva, estado: ya en VOCABULARIO_BASE, procedencia: "Zavala #92 (PMA)"}
+      - {lengua: caquetio,  forma: kiba,  estado: variante declarada por la fuente}
+    nota_d5: >-
+      ⭐ Zavala #92 se imprime «Cuiva. Kiba (PMA): Piedra» — la FUENTE MISMA
+      declara dos grafías de una palabra. Con #218 «Quiva», son tres grafías
+      (cu-/ki-/qui-) de un mismo lexema. Es un caso de la política ortográfica
+      de D5 (#36) dicho por la fuente, no inferido por nosotros.
+    derivado_atestiguado: >-
+      `ucibo` 'cuenta de piedra, chaquira' (Zavala #267) puede pertenecer al
+      mismo conjunto — evaluar.
+
+# ══════════════════════════════════════════════════════════════════
+# 2. MORFEMAS LOCATIVOS
+# ══════════════════════════════════════════════════════════════════
+morfemas:
+  - id: morfema-bacoa
+    forma: "-bacoa"
+    glosa_propuesta: "lugar de, paraje de, conjunto de"
+    estado: >-
+      ⚠️ NO es nuevo: `bacoa` ya está en VOCABULARIO_BASE como
+      caquetío-atestiguado = 'bosque, lugar, paraje, sitio fértil'
+      (Zavala #18, AM+E). Lo que se propone es declararlo también como
+      FORMANTE toponímico productivo, que es como funciona en 5 topónimos.
+    apoyos:
+      - {forma: adabacoa,    glosa: "Todo arboleda",       seg: "ada 'árbol' + bacoa"}
+      - {forma: guadabacoa,  glosa: "Arboleda",            seg: "wa- + ada + bacoa"}
+      - {forma: yacarebacoa, glosa: "Pueblo del bosque",   seg: "yacare + bacoa"}
+      - {forma: quibacoas,   glosa: "Bosques pedregosos",  seg: "quiba 'piedra' + (b)acoa"}
+      - {forma: sazaribacoa, glosa: "Río de los maizales", seg: "sazari- + bacoa"}
+    apoyo_externo: >-
+      El guajiro `iparcoa` 'cascajo' = `ipar` 'piedra' + `-coa` (Arcaya p. 36)
+      confirma el formante `-coa` en lengua hermana CON LA MISMA RAÍZ.
+    consecuencia_para_ana: >-
+      Si `-bacoa` es el locativo-colectivo productivo y atestiguado, el
+      caquetío NO necesita que `-ana` cargue 'lugar de'. Refuerza el issue #109
+      en su versión corregida: forma de `-ana` intacta, glosa en disputa.
+    nota_d5c: >-
+      ⚠️ La segmentación de `guadabacoa` en el vault ya dice `wa- + ada +
+      bacoa`. Es decir: el proyecto YA aplica `gua-` → `wa-` en su análisis
+      toponímico, mientras D5c sigue formalmente sin decidir. Inconsistencia
+      entre decisión y práctica.
+
+  # ⭐ HALLAZGO NUEVO — no está en morfemas.yaml, morfologia.md ni REGLAS_ZAVALA
+  - id: morfema-are
+    forma: "-are / -dare"
+    glosa_propuesta: "sitio de"
+    estado: NUEVO — sin declarar en ninguna parte del vault
+    apoyos:
+      - {forma: bobare,     glosa: "Sitio de cultivo"}
+      - {forma: cabudare,   glosa: "sitio de cultivo"}
+      - {forma: dabudare,   glosa: "Sitio de extracción de barro"}
+      - {forma: pachacuare, glosa: "Sitio de palmeras"}
+      - {forma: taratarare, glosa: "Hato, conuco"}
+    razon: >-
+      CUATRO de las cinco glosas de fuente dicen literalmente "Sitio de…", y la
+      quinta es también un lugar. Ocho de los 74 topónimos terminan en -are.
+      Es más consistencia semántica de la que `-ana` 'lugar de' tuvo nunca.
+    pendiente: >-
+      Decidir si el morfema es `-are` con consonante de enlace, o `-dare` con
+      `-are` como variante. Los datos: cabu-dare, dabu-dare, capa-dare frente a
+      bob-are, pachacu-are, yac-are.
+
+# ══════════════════════════════════════════════════════════════════
+# 3. COQUIBACOA — rehabilitar un topónimo descartado
+# ══════════════════════════════════════════════════════════════════
+toponimos:
+  - id: rehabilitar-quiquiba
+    forma_actual_en_vault: quiquiba
+    nivel_actual: descartado
+    razon_del_descarte: >-
+      "la glosa IDENTIFICA al referente sin traducirlo. No hay ecuación
+      bilingüe: no hay significado que despejar." (toponimo-034)
+    por_que_se_rehabilita: >-
+      Arcaya 1920 p. 130 nombra el referente y lo vuelve mayor: "tomaron por
+      las costas de la Goagira, región que llamaron de Coquibacoa, o de
+      QUIQUIBACOA, por el nombre indígena de uno de sus sitios. Este nombre se
+      le dio también entonces al Golfo, y aun se extendió a todas las tierras
+      que lo rodean, inclusive las de Paraguaná."
+      Con `quiva`/`quiba` = 'piedra' (Zavala #218/#92) y `-bacoa` = 'lugar de',
+      la ecuación bilingüe que faltaba aparece.
+    segmentacion_propuesta: "qui~quiba (reduplicado) + bacoa"
+    glosa_reconstruida: "lugar de las piedras, el pedregal"
+    apoyos_de_la_lectura:
+      - "`quiva`/`cuiva`/`kiba` = 'piedra' — Zavala #218, #92"
+      - "`-bacoa` = 'lugar de' — 5 topónimos, ver morfema-bacoa"
+      - "reduplicación con valor plural — el caso `juri` → `jurijurebo` 'paso de los VIENTOS' (toponimo-001, ya en el vault)"
+      - "`quibacoas` 'Bosques pedregosos' (Zavala #204) = la misma composición sin reduplicar"
+    reservas:
+      - >-
+        `Quiba` #203 = 'Ayuda' choca con `Quiva` #218 = 'Piedra' tras
+        normalizar betacismo. O son homónimos, o una glosa está mal. La
+        composición de `quibacoas` favorece 'piedra'.
+      - >-
+        La reduplicación NO es uniformemente plural: `Quibaquibi` #205
+        'baquiano, conocedor' está reduplicado y no lo es. Sigue siendo un
+        patrón con casos, no una regla productiva demostrada.
+    procedencia: {obra: arcaya-1920, pagina: "130"}
+
+  - id: escalado-sitio-region
+    observacion: >-
+      Arcaya documenta DOS veces el mismo patrón: un nombre de sitio indígena
+      se aplica después a toda una región.
+      · Coquibacoa — "por el nombre indígena de UNO DE SUS SITIOS […] este
+      nombre SE LE DIO TAMBIÉN ENTONCES al Golfo" (p. 130).
+      · Curiana — "Coro o Curiana se denominaba el pueblo que allí tenían
+      fundado los indios, y Curiana LA COSTA VECINA" (p. 169).
+    aviso_regla_3: >-
+      🔴 En Coquibacoa la extensión es EXPLÍCITAMENTE española ("se le dio
+      también entonces"). Lo indígena es el sitio; lo macro-regional es
+      colonial. Tratar Coquibacoa como denominación territorial caquetía sería
+      justo la proyección que la regla 3 prohíbe.
+      En Curiana, Arcaya no separa tan claro quién extendió qué — y ESA es la
+      pregunta de D2 (#33), que ahora tiene dos casos en vez de uno.
+
+# ══════════════════════════════════════════════════════════════════
+# 4. HIGIENE DE toponimos.yaml
+# ══════════════════════════════════════════════════════════════════
+higiene:
+  - id: bug-campo-forma
+    severidad: alta
+    problema: >-
+      24 de las 74 entradas llevan la glosa DENTRO del campo `forma`. Por
+      ejemplo: dabajuro (Población de Falcón), guasare (Árbol cactáceo),
+      tabicure (Indio caquetío del valle de las Damas).
+    impacto: >-
+      Envenena cualquier análisis morfológico automático — los conteos de
+      terminaciones devuelven basura como "-o)", "-a)", "-na)" — y bloquea la
+      auditoría de tildes. Es un tercio del archivo.
+    arreglo: separar a `glosa_fuente`, dejar `forma` con la forma sola.
+
+  - id: bug-antroponimos-como-toponimos
+    severidad: media
+    problema: >-
+      Cuatro entradas están como `clase: topónimo` cuando la fuente las glosa
+      como ANTROPÓNIMOS, y además de otra polity. Zavala #207-210 —
+      Quiceraguru, Quiceroaboa, Quiceromata, Quiciroata — dice de las cuatro:
+      "Nombre propio indígena EN BARQUISIMETO".
+    arreglo: >-
+      reclasificar a `clase: antropónimo` y marcar `polity: barquisimeto`.
+      Toca la regla 4.
+
+  - id: auditoria-tildes
+    severidad: alta
+    problema: >-
+      La fuente imprime `Paraguaná`; el vault guarda `forma: paraguana`.
+      `Cariatávo` sí conservó la suya. La pérdida es inconsistente.
+    impacto: >-
+      El acento es el rasgo que distinguiría `-ana` átona de `-aná` tónica —
+      la hipótesis de Miguel en #109. Hoy no es testeable con datos propios.
+    arreglo: auditar las 74 entradas contra su fuente. Depende de bug-campo-forma.

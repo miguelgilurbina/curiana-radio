@@ -1,0 +1,104 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — registro de etnias documentadas en contacto social con los
+# caquetíos. Una entrada por pueblo: quién es, qué familia lingüística, qué
+# tipo de contacto está atestiguado, y con qué fuente.
+#
+# POR QUÉ EXISTE: el proyecto modela una sociedad multiétnica (#89), pero no
+# tenía un registro de CON QUIÉN. Cada vez que una fuente documenta a los
+# caquetíos conviviendo, comerciando o guerreando con otro pueblo, ese pueblo
+# entra aquí con su ficha — no diluido dentro de un hecho del corpus.
+#
+# 🔴 Casi todo el contacto documentado es de polities NO costeras. Se declara
+#    en cada entrada. Nada entra al corpus del Golfete sin decisión explícita.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-08-25'
+  estado: sin-fusionar
+  extensible: true
+
+etnias:
+
+  - id: etnia-001
+    nombre: cuiba
+    variantes: [cuiva, cuiba, wamonae]
+    familia_linguistica: guahibo (guahibana)
+    aviso_familia: >-
+      NI arahuaca NI caribe. Es una tercera familia lingüística, independiente
+      de las dos que dominan el mundo caquetío. Eso hace de este contacto el
+      más distante tipológicamente que tenemos documentado. Zavala Reyes 2015
+      (p. 61, citando a Molina 2009) coloca a los "Guajibos" entre los grupos
+      "sin filiación precisa", fuera de arawak, caribe y chibcha.
+    donde: llanos venezolanos — Hacarigua
+    polity_caquetia: llanos (NO la costera del Golfete)
+    tipo_de_contacto: corresidencia
+    intensidad: >-
+      MÁXIMA de las documentadas: no aldeas vecinas sino población mezclada
+      dentro del mismo caserío.
+    cita: >-
+      "Estos habitantes de los cuales unos son cuibas y otros caquetíos, viven
+      junto y entremezclados."
+    procedencia: {obra: federmann-1916, via: brito-figueroa-poblacion-economia}
+    ver_tambien: polities_no_costeras_federmann.yaml#prop-polity-007
+
+    # ⚠️ HIPÓTESIS, NO DATO — pero vale la pena registrarla
+    hipotesis_etimologica: >-
+      El lexicón tiene `cuiva` = 'piedra' como caquetío-atestiguado, y la
+      fuente lo declara así: Zavala #92 «Cuiva. Kiba (PMA): Piedra», más #218
+      «Quiva (E): Piedra». Es decir: el etnónimo es HOMÓGRAFO de la palabra
+      caquetía para 'piedra'.
+      Si no es coincidencia, "Cuiba" sería un EXÓNIMO caquetío — cómo los
+      llamaban ellos, no cómo se llamaban a sí mismos —, exactamente el mismo
+      patrón que `Ciparicoto` = 'gente de la piedra' (ver etnia-003).
+      ⚠️ NO verificado. El autónimo cuiba documentado es *wamonae*. La
+      coincidencia puede ser eso y nada más. Lo que la haría dato es una
+      fuente que gloce el etnónimo, no la homografía.
+
+  - id: etnia-002
+    nombre: guayqueri
+    variantes: [guaiquerí, guayquerí]
+    familia_linguistica: caribe
+    aviso_familia: >-
+      Zavala Reyes 2015 (p. 61) los clasifica como CARIBE. Así que este
+      contacto es arahuaco↔caribe, la frontera clásica del área.
+    donde: riberas del Cojedes; y su asiento habitual es Margarita y el litoral
+    polity_caquetia: llanos (NO la costera)
+    tipo_de_contacto: vecindad con mercado, sin mezcla residencial
+    intensidad: >-
+      MEDIA: mismo territorio y dependencia económica mutua, pero aldeas
+      separadas. Contraste deliberado con etnia-001.
+    cita: >-
+      "hacen mercado con los caquetíos y cambian frutas y otros víveres por
+      pescado […] Viven estas dos naciones en paz en el mismo territorio porque
+      se necesitan mutuamente, pero cada uno habita aldeas distintas."
+    aviso: >-
+      El propio texto dice que los expedicionarios "supusieron eran
+      Guayqueríes". Atribución conjetural, y geográficamente rara: los
+      guayqueríes se documentan en Margarita, no en el Cojedes.
+    procedencia: {obra: federmann-1916, pagina: "90", via: brito-figueroa-poblacion-economia}
+    ver_tambien: polities_no_costeras_federmann.yaml#prop-polity-012
+
+  - id: etnia-003
+    nombre: ciparicoto
+    variantes: [ciparigoto, cipariconto]
+    familia_linguistica: arahuaca
+    aviso_familia: >-
+      Zavala Reyes 2015 (p. 61, vía Molina 2009) los lista como ARAWAK, junto a
+      achaguas y caquetíos. Pero su etnónimo lleva formante caribe — ver abajo.
+    donde: Yaracuy y sierras de Falcón
+    polity_caquetia: frontera oriental del área caquetía
+    tipo_de_contacto: vecindad; etnónimo dado desde fuera
+    etimologia: >-
+      'gente de la piedra' / 'hombre de la montaña'. Arcaya 1920 p. 36 lo
+      descompone: los formantes «cotos y gotos» son caribes y designan "pueblo,
+      gente, u hombres"; y `cipa`~`chipa`~`cipare`~`chipare` "quizás sea de
+      origen nuarhuaco, significando piedra, pues en todos los dialectos de
+      esta familia se encuentra con ese sentido la raíz `ipa` o `iba`. En uno
+      de ellos, el conocido guajiro, `ipar` es piedra, e `iparcoa` cascajo".
+    relevancia: >-
+      ⭐ Etnónimo HÍBRIDO: raíz arahuaca + formante caribe. Y es un nombre
+      dado por vecinos, no un autónimo — Miguel lo leyó como forma despectiva
+      caquetía para la gente de montaña. El `cipa` cae del lado del reflejo
+      lokono `siba` 'piedra, roca', no del caquetío `quiva`/`cuiva`: la
+      sibilante lo delata. Ver la propuesta de cognados en
+      lengua_toponimia_quibacoa.yaml.
+    procedencia: {obra: arcaya-1920, pagina: "36"}
