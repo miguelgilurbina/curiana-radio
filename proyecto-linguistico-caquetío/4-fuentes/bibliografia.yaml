@@ -184,15 +184,6 @@ obras:
   aliases:
   - Fernandes et al. 2020
   en_repo: true
-- id: fuente-toponimia-coriana-sin-identificar
-  obra: Obra sobre toponimia caquetía y el nombre de Coro — SIN IDENTIFICAR
-  autor: sin identificar (indicios apuntan a Carlos González Batista)
-  anio: sin confirmar (posterior a 2000)
-  paginas: — (leída por Miguel en capturas)
-  aliases:
-  - fuente toponimia Coriana
-  - obra sin identificar 2026-08-25
-  en_repo: false
 - id: gatschet-1885
   obra: The Aruba Language and the Papiamento Jargon
   autor: Gatschet, Albert S. (material recogido por Alphonse L. Pinart, 1882)
@@ -226,6 +217,17 @@ obras:
   - Gilij
   - Saggio di Storia Americana
   en_repo: true
+- id: gonzalez-batista-nombre-de-coro
+  obra: El nombre de Coro
+  autor: González Batista, Carlos
+  anio: sin confirmar — posterior a 2000 (cita a Fernández Heres 2000)
+  publicacion: Coro, Falcón
+  paginas: — (leída por Miguel en capturas)
+  aliases:
+  - González Batista
+  - El nombre de Coro
+  - González Batista El nombre de Coro
+  en_repo: false
 - id: guerra-curvelo-palabrero
   obra: Pütchipü'üi, Palabrero Wayuu (cuadernillo, serie Patrimonio Cultural Inmaterial)
   autor: Ministerio de Cultura de Colombia — basado en Guerra Curvelo, W., *La disputa y la palabra* (2002)

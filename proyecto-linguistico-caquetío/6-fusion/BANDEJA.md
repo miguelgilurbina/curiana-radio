@@ -28,7 +28,7 @@ editar_a_mano: no
 | `tabla15_c14_oliver.yaml` | oliver-1989-cap4 | 23 |  |
 | `tabla_a8_jirajarano.yaml` | oliver-1989-apendice-a | 33 |  |
 | `tabla_a9_oliver.yaml` | oliver-1989-cap2 | 49 |  |
-| `toponimia_coro_espina.yaml` | fuente-toponimia-coriana-sin-identificar | 5 |  |
+| `toponimia_coro_espina.yaml` | gonzalez-batista-nombre-de-coro | 5 |  |
 
 ## Propuestas léxicas (`curiana_sim/lexicon_*.py` — indexadas en su sitio)
 

@@ -22,7 +22,7 @@ Es la única fuente localizada que promete algo que el proyecto no tiene: **una
 fórmula de salutación caquetía recogida de hablantes**, no de un glosario.
 
 Según la obra secundaria que Miguel leyó el 2026-08-25 (ver
-[[fuente-toponimia-coriana-sin-identificar]]):
+[[gonzalez-batista-nombre-de-coro]]):
 
 > "A comienzos del siglo pasado aún se conservaba en la memoria de algunos
 > habitantes de **Mitare**, pueblo que fue caquetío, **una fórmula de salutación

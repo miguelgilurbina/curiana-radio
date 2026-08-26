@@ -1,9 +1,9 @@
 # ─────────────────────────────────────────────────────────────────────────
-# PROPUESTA — el análisis toponímico de la obra sin identificar (2026-08-25)
+# PROPUESTA — el análisis toponímico de González Batista, *El nombre de Coro*
 #
-# 🔴 PROCEDENCIA INCOMPLETA. La obra no tiene portada todavía; ver
-#    4-fuentes/fuente-toponimia-coriana-sin-identificar.md. Nada de aquí puede
-#    entrar al canon hasta que la obra tenga cita. Se recoge porque propone la
+# ⚠️ OBRA IDENTIFICADA el 2026-08-25: Carlos González Batista, *El nombre de
+#    Coro*. Ver 4-fuentes/gonzalez-batista-nombre-de-coro.md. Falta el año.
+#    Veredicto de Miguel: tomarla con MUCHA CAUTELA (ver seccion 7). Se recoge porque propone la
 #    morfología toponímica más desarrollada que ha visto el proyecto, y porque
 #    entra en conflicto directo con glosas que HOY están como atestiguadas.
 #
@@ -14,8 +14,8 @@
 meta:
   recogido: '2026-08-25'
   estado: sin-fusionar
-  procedencia_incompleta: true
-  obra: fuente-toponimia-coriana-sin-identificar
+  procedencia_incompleta: falta el año
+  obra: gonzalez-batista-nombre-de-coro
 
 # ══════════════════════════════════════════════════════════════════
 # 1. MORFOLOGÍA DEL PLURAL — tres mecanismos propuestos
@@ -259,7 +259,7 @@ sustitucion_linguistica:
 # ══════════════════════════════════════════════════════════════════
 veredictos:
   - id: veredicto-cautela-general
-    sobre: toda la obra sin identificar
+    sobre: toda la obra de González Batista
     decision: >-
       TOMARLA CON MUCHA CAUTELA. Puede tener razón en algunas cosas
       —especialmente en la etimología de Coriana— pero no se le concede

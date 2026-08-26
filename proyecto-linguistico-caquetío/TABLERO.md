@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-25 21:33**.
+<!--GENERADO--> Generado el **2026-08-25 21:48**.
 
 ## ¿Vamos bien?
 
@@ -151,7 +151,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | descartada | 1 |
 | completo | 1 |
 
-**Prioridad ALTA sin minar (12):** [[arcaya-obra-inedita-1995]] (`no-disponible`), [[ballesteros-1550]] (`segunda-mano`), [[brito-figueroa-poblacion-economia]] (`en-curso`), [[esteves-1989]] (`parcial`), [[fuente-toponimia-coriana-sin-identificar]] (`en-curso`), [[medina-colina-sxx]] (`en-curso`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap3-vecinos]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`no-disponible`), [[perez-de-tolosa-1546]] (`no-disponible`), [[urbina-jimenez-2007-2011]] (`parcial`).
+**Prioridad ALTA sin minar (12):** [[arcaya-obra-inedita-1995]] (`no-disponible`), [[ballesteros-1550]] (`segunda-mano`), [[brito-figueroa-poblacion-economia]] (`en-curso`), [[esteves-1989]] (`parcial`), [[gonzalez-batista-nombre-de-coro]] (`en-curso`), [[medina-colina-sxx]] (`en-curso`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap3-vecinos]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`no-disponible`), [[perez-de-tolosa-1546]] (`no-disponible`), [[urbina-jimenez-2007-2011]] (`parcial`).
 
 <details><summary>Las 49 notas, una por fila</summary>
 
@@ -186,8 +186,8 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[esteves-1989]] | parcial | alta | no | 0 | 0 | 0 |
 | [[federmann-1916]] | no-disponible | media | no | 0 | 0 | 0 |
 | [[fernandes-2020]] | no-disponible | baja | archivo-vacio | 0 | 0 | 0 |
-| [[fuente-toponimia-coriana-sin-identificar]] | en-curso | alta | no | 0 | 0 | 0 |
 | [[gilij-1780-1783]] | sin-minar | baja | no | 0 | 0 | 0 |
+| [[gonzalez-batista-nombre-de-coro]] | en-curso | alta | no | 0 | 0 | 0 |
 | [[gumilla-1791]] | no-disponible | baja | no | 0 | 0 | 0 |
 | [[las-casas-1875]] | minado | baja | si | 0 | 0 | 0 |
 | [[martinez-cruzado-2003]] | minado | alta | si | 0 | 0 | 0 |
@@ -263,7 +263,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1006 en 278 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 1007 en 278 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 197 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 

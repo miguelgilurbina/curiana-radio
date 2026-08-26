@@ -1,8 +1,9 @@
 ---
 tipo: fuente
-obra: "Obra sobre toponimia caquetía y el nombre de Coro — SIN IDENTIFICAR"
-autor: "sin identificar (indicios apuntan a Carlos González Batista)"
-anio: "sin confirmar (posterior a 2000)"
+obra: "El nombre de Coro"
+autor: "González Batista, Carlos"
+anio: "sin confirmar — posterior a 2000 (cita a Fernández Heres 2000)"
+publicacion: "Coro, Falcón"
 paginas: "— (leída por Miguel en capturas)"
 capa_texto: no
 estado_minado: en-curso
@@ -10,37 +11,36 @@ prioridad: alta
 tareas: [F12]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
 verificado: 2026-08-25
-aliases: ["fuente toponimia Coriana", "obra sin identificar 2026-08-25"]
+aliases: ["González Batista", "El nombre de Coro", "González Batista El nombre de Coro"]
 ---
 
-# Obra sin identificar — toponimia caquetía y el nombre de Coro
+# González Batista — *El nombre de Coro*
 
-## 🔴 Falta la portada
+## Quién es y qué peso tiene
 
-Miguel la leyó el **2026-08-25** en capturas de pantalla y no pudo obtener el
-pie bibliográfico. Es una obra **muy relevante**: propone un análisis
-morfológico del caquetío toponímico más desarrollado que nada de lo que el
-proyecto tiene.
+**Carlos González Batista**, historiador de Coro, autor de *Tierras de
+Falcón/Paraguaná* (Coro, 1999) — que esta obra cita como *"nuestro libro"* en su
+nota (16), y también en tercera persona por apellido en la (17).
 
-## Indicios para identificarla
+Es un **historiador regional trabajando sobre su propio terreno**, con acceso
+directo a AHEF (Archivo Histórico del Estado Falcón), AAC (Archivo Arzobispal de
+Caracas) y documentación de 1726 y 1739. Eso le da autoridad sobre el terreno y
+los archivos locales — no automáticamente sobre lingüística arahuaca, que es
+donde están sus afirmaciones más fuertes y también las más discutibles.
 
-De su propio aparato de notas:
+⚠️ **Veredicto de Miguel (2026-08-25): tomarla con mucha cautela.** No se le
+concede autoridad general; cada afirmación se evalúa por separado y contra
+[[zavala-reyes-2015]]. Ver los tres veredictos en
+`6-fusion/toponimia_coro_espina.yaml`.
 
-| Nota | Dice |
-|---|---|
-| (16) | *"**nuestro libro** Tierras de Falcón/Paraguaná, T.II, Coro, 1999, p.183"* |
-| (17) | *"**González Batista**, Op.cit. T.I, p.287 y ss."* |
-| (18) | *"Pedro M. Arcaya, Obra inédita y dispersa, CIHPMA-UNEFM, Coro, 1995. p.247"* |
-| (1) | *"Arcaya … Historia del Estado Falcón (Caracas, 1920, p.170)"* |
-| (2) | *"Juan de Castellanos, Elegías de varones ilustres de Indias, ANH, Caracas, 1987, p.175"* |
+Propone el análisis morfológico del caquetío toponímico **más desarrollado que
+ha visto el proyecto**, y por eso mismo choca con seis glosas que hoy están
+como atestiguadas.
 
-**`Tierras de Falcón` es obra de Carlos González Batista**, historiador de Coro.
-La nota (16) la llama *"nuestro libro"*, lo que apuntaría a él como autor — pero
-la (17) lo cita en tercera persona por apellido. **No se afirma la autoría**
-hasta ver la portada.
+## Pendiente de confirmar
 
-Cita además AHEF (Archivo Histórico del Estado Falcón), AAC (Archivo Arzobispal
-de Caracas) y documentos de 1726 y 1739.
+**Año y editorial.** El texto cita a Fernández Heres 2000, así que es posterior.
+Miguel la localizó en Scribd.
 
 ## ⭐ Lo que aporta: una morfología del plural caquetío
 
@@ -129,7 +129,8 @@ Ver `6-fusion/toponimia_coro_espina.yaml` para el detalle. En resumen:
 
 ## Pendiente
 
-1. **Portada.** Sin ella, todo lo de esta obra queda `sin-procedencia` completa.
-2. Conseguir [[arcaya-obra-inedita-1995]] p. 247 — la fórmula de salutación.
+1. Confirmar **año y editorial**.
+2. Conseguir [[arcaya-obra-inedita-1995]] p. 247 — la fórmula de salutación de
+   Mitare, que es la pista más valiosa que deja esta obra.
 
 Índice: [[INDICE_FUENTES]]
