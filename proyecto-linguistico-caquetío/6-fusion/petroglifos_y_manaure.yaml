@@ -1,0 +1,229 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — Morón 2012, petroglifos de Falcón y el expediente Manaure
+#
+# Fuente: 4-fuentes/moron-2012-petroglifos.md — PDF ya en el repo, con capa
+# de texto, minado el 2026-08-25.
+#
+# ⚠️ CADENA: casi todo lo oral que recoge Morón es de campesinos de los años
+#    2000. Lo directamente citable son las CITAS que transcribe (Antolínez
+#    1944, Salas, Carvajal 1646-47) y el registro de estaciones. Lo demás es
+#    memoria colectiva contemporánea — categoría `retro-abstraido` como mucho.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-08-25'
+  estado: sin-fusionar
+  obra: moron-2012-petroglifos
+
+# ══════════════════════════════════════════════════════════════════
+# 1. EL EXPEDIENTE MANAURE — lo que Miguel buscaba
+# ══════════════════════════════════════════════════════════════════
+manaure:
+  - id: manaure-es-titulo
+    afirmacion: "Manaure no es nombre propio sino el nombre de una jerarquía política"
+    cita: >-
+      "Los cronistas españoles nos hablan de 'el Manaure'. Tengo suficientes
+      motivos para establecer que Manaure no es nombre propio de varón, sino el
+      nombre de una jerarquía política, tal como otros de la historia, como
+      Inca, Minos, Jerjes (Xchatria), Faraón, Czar."
+    autor_de_la_cita: "Gilberto Antolínez"
+    donde: "El Universal, sábado 9 de septiembre de 1944"
+    estado_en_el_canon: >-
+      🟢 EL CANON YA LO DICE. `curiana_lexicon.py` tiene `manaure` como
+      caquetío-atestiguado = "título laudatorio del señor principal", con
+      variantes managuanare/managuarire, y `geografia_politica-008` lo registra.
+      Hoy eso descansa en una nota al pie de Zavala citando a González Batista
+      (PLINCODE p. 23). Antolínez es un SEGUNDO testimonio independiente y
+      anterior — de 1944 frente a la nota de 2015.
+    valor: refuerzo, no corrección. Sube la solidez de un hecho ya canónico.
+    procedencia: {obra: antolinez-1944-manaure, via: moron-2012-petroglifos}
+
+  - id: manaure-nombre-cristiano
+    afirmacion: "El nombre cristiano de Manaure era Martín Manaure"
+    consecuencia: >-
+      Morón propone la ecuación: las "Piedras de Martín" de la costa cerca de
+      La Vela = Piedras de Martín Manaure = Piedras de Manaure. Los vecinos las
+      atribuyen a "un antiguo cacique del lugar" llamado Martín, del que no
+      queda otra memoria en Falcón.
+    dato_de_estatus: >-
+      Vía Castellanos: en homenaje a Don Martín Manaure es la ÚNICA ocasión
+      conocida en que los españoles hicieron correr sus caballos en honor a un
+      cacique. Morón subraya el peso: el caballo tenía dimensión psicológica de
+      terror, y los españoles enterraban los muertos para preservar esa aura.
+    reserva: >-
+      ⚠️ Es una etimología popular reconstruida por Morón, no una atestación.
+      Plausible y elegante; no probada.
+    procedencia: {obra: moron-2012-petroglifos, pagina: '168'}
+
+  - id: manaure-en-la-tradicion-viva
+    afirmacion: "El nombre sobrevive en cuatro rastros de tradición oral"
+    rastros:
+      - {forma: "Arco Manare / Arco Manaure", donde: "Mérida y cuenca del Maracaibo", que: "el halo lunar; se recomienda cuidarse de su influjo", apoyo: "Alvarado 1989 y Clarac 1981, a generaciones de distancia"}
+      - {forma: "manare", donde: "ríos falconianos", que: "serpiente blanca, llamada también 'príncipe', devoradora de serpientes"}
+      - {forma: "Piedras de Martín", donde: "costa cerca de La Vela", que: "formación rocosa atribuida a un cacique Martín sin memoria"}
+      - {forma: "Leyenda del Rey Manaure", donde: "Aguas Termales de Agua Clara / La Cuiba", que: "la viejita caquetía, el machete, la culebra amarilla, las barritas de oro"}
+    valor: >-
+      El título sobrevive cuatro siglos después de la lengua, adherido a
+      accidentes del paisaje. Material para la esfera de creencia — pero
+      `retro-abstraido`: es memoria del s. XX-XXI, no dato precontacto.
+    procedencia: {obra: moron-2012-petroglifos, pagina: '167-169'}
+
+  - id: manaure-en-los-llanos
+    afirmacion: >-
+      Tradición de que Manaure se retiró a los Llanos con sus súbditos y que
+      los caquetíos construyeron allí las calzadas y terraplenes.
+    cita: >-
+      Fray Francisco de Carvajal, viaje por el Apure 1646-47: vieron "empinadas
+      ceibas y jobos, constituidas éstas y aquéllos en unas eminencias que a
+      mano compusieron las tropas inmensas de los indios caquetíos que se
+      retiraron por estos llanos cuando la venida de los españoles primeros que
+      tomaron tierra en Coro, y fueron a poblar con su cacique el gran Manaure
+      la laguna de Caranaca."
+    apoyo: >-
+      [[jahn-1927]] (ya en el repo) sostiene que terraplenes y calzadas son
+      "una característica cultural de los pueblos aruacos", con paralelos en
+      Mojos, el Paraná, el alto Paraguay y Marajó.
+    aviso_polity: >-
+      🔴 Los Llanos NO son la polity costera. Y Arcaya (vía Alvarado) ya
+      descartaba lo más grueso: "Descartando de esta tradición lo eminentemente
+      falso, de que estos trabajos se hicieran para sólo el tránsito de
+      Manaure". Lo que queda en pie es la atribución arahuaca de las calzadas.
+    procedencia: {obra: moron-2012-petroglifos, via: "Alvarado 1989 citando a Arcaya citando a Carvajal"}
+
+# ══════════════════════════════════════════════════════════════════
+# 2. 🔴 DOS AFIRMACIONES QUE TOCAN DECISIONES ABIERTAS
+# ══════════════════════════════════════════════════════════════════
+decisiones_tocadas:
+  - id: toca-d11-lokono
+    decision: "D11 (#39) — el desbalance wayunaiki/lokono del lexicón"
+    estado_medido: "wayunaiki 781 vs. lokono 227 — 3,4 a 1"
+    lo_que_dice_la_fuente: >-
+      "Los Kaketíos son los más conspicuos representantes de los Arawak de la
+      costa de Guayana, o LOKONO, pobladores, durante la diástole arawak, de las
+      islas mayores y menores del Caribe, de donde fueron expulsados poco a poco
+      por los Karibe." (Antolínez 1944)
+      Y: "no es errado suponer que los kaketíos hablaban una parla Arawak muy
+      afín de la taína de Cuba, Haitiano, Eyeri-kabre y otros dialectos
+      similares."
+    valor: >-
+      ⭐ Argumento explícito para afiliar el caquetío al LOKONO y al taíno
+      insular, no al wayuu. Si se acepta, la proporción actual del lexicón está
+      invertida respecto a lo que la afiliación pediría.
+    reserva: >-
+      ⚠️ Es una afiliación de 1944, anterior a la lingüística arahuaca moderna,
+      y Antolínez razona por arqueología y toponimia comparada (los zemi de
+      Falcón "exactamente iguales" a los taínos de Cuba), no por método
+      comparativo léxico. Vale como argumento a sopesar, no como demostración.
+      La Tabla A-7 de Oliver sigue siendo la evidencia que zanjaría.
+
+  - id: toca-d15-paraguana
+    decision: "D15 (#90) — qué nodo se simula primero: Coro, Paraguaná, o un par"
+    lo_que_dice_la_fuente: >-
+      "la nación Curiana o Caquetía estaba dividida en multitud de cacicazgos
+      independientes unos de otros pero sometidos a la autoridad absoluta del
+      GRAN SEÑOR DE PARAGUANÁ, al cual consideraban sus súbditos depositario de
+      la autoridad religiosa, y como de origen divino atribuírsele la facultad
+      de disponer a su antojo la producción de fenómenos naturales y también de
+      hacer abundar las sementeras." (Julio C. Salas, vía Antolínez 1944)
+    valor: >-
+      ⭐ Sitúa la CABECERA en Paraguaná, no en Coro, y describe la estructura:
+      muchos cacicazgos autónomos + un paramount con autoridad religiosa. Morón
+      lo lee con Frazer como un Sacerdote-Rey.
+    convergencia: >-
+      Encaja con Federmann sobre el Yaracuy — "de la misma nación, no están bajo
+      el dominio de un solo señor" (polities_no_costeras_federmann.yaml
+      #prop-polity-004): autonomía cacical es la norma, y el paramount es un
+      rasgo específico de la costa/península.
+    reserva: >-
+      ⚠️ Salas citado por Antolínez citado por Morón: tres eslabones. Y "gran
+      señor de Paraguaná" hay que contrastarlo con lo que el corpus ya tiene
+      sobre Manaure asentado en Coro.
+
+# ══════════════════════════════════════════════════════════════════
+# 3. LA CUIBA — apoyo toponímico para 'piedra'
+# ══════════════════════════════════════════════════════════════════
+toponimia:
+  - id: la-cuiba-piedra
+    forma: "La Cuiba"
+    tambien: "Aguas Termales de Agua Clara · Pozos del Saladillo"
+    rasgo_del_sitio: >-
+      "los lugares aledaños a La Cuiba son usados en tratamiento de
+      cristaloterapia, dada la RIQUEZA DE CRISTALES DE CUARZO A RAS DEL SUELO"
+    lectura_propuesta: >-
+      ⭐ Si `cuiva`/`quiva` = 'piedra' (Zavala #92 «Cuiva. Kiba: Piedra» y #218
+      «Quiva: Piedra»), el topónimo nombra exactamente el rasgo dominante del
+      sitio. Es el principio toponímico —el nombre describe el rasgo
+      característico— que enuncian por separado González Batista y la Relación
+      de 1578 sobre la provincia de lengua Caraca.
+    consecuencia: >-
+      Refuerza el conjunto de cognados 'piedra' de lengua_toponimia_quibacoa.yaml
+      (ipa / siba / quiva / cuiva) con un caso toponímico verificable en terreno.
+    reserva: >-
+      ⚠️ NO confundir con la etnia cuiba (etnias_en_contacto.yaml#etnia-001).
+      La homografía es la misma que ya quedó anotada allí como hipótesis sin
+      verificar. Este dato no la resuelve — pero hace la coincidencia más
+      llamativa, porque ahora hay un lugar de piedras llamado La Cuiba.
+
+  - id: estaciones-de-petroglifos
+    nota: >-
+      ~20 topónimos de Falcón asociados a estaciones de arte rupestre. Candidatos
+      a cruzar con toponimos.yaml y con los 413 de Esteves. Varios ya suenan en
+      el corpus: Taratara (el `tara` de #45), Cabure, Adícora, Taimataima.
+    costa: [El Supí, Adícora, Playa de Cucuruchú]
+    sabana_arida: [El Mestizo, Piedra Pintada, Los Pozones, Piedra Grande, Cerro Frío, Tupure]
+    sierra_de_san_luis: [Cabure, San Hilario, El Ramonal, Carayapa, Viento Suave, San José, Los Riegos, río Hueque]
+    otras: [Cueva del Indio (Morrocoy), Taimataima, Taratara, La Peña Clara, Los Urupaguales]
+    aviso_etimologico: >-
+      Morón DESCARTA expresamente la etimología quechua que Hernández Baño da
+      para `Cabure` (*Kahurí* = 'monstruo'): "Hagamos a un lado la discutible
+      etimología". Coincide con la regla del proyecto de no importar material
+      andino sin vínculo arahuaco explícito.
+
+# ══════════════════════════════════════════════════════════════════
+# 4. VOCES QUE APARECEN
+# ══════════════════════════════════════════════════════════════════
+voces:
+  - {forma: tamudi, glosa: "abuelos (en los Llanos)", via: "Antolínez, referido a la voz Zaquitios", nota: "apelativo genérico para los indígenas: 'los viejos'. Clarac da 'Taitas' para Mérida"}
+  - {forma: urupagua, glosa: "Aveledoa nucifera — árbol de nuez amarga, 'muy apreciada en todo Falcón desde tiempos antiguos'", nota: "da nombre a Los Urupaguales; candidata para el mapa de ecología"}
+  - {forma: manare, glosa: "serpiente blanca de los ríos falconianos, llamada también 'príncipe'", nota: "homófono del título Manaure; ver manaure-en-la-tradicion-viva"}
+
+# ══════════════════════════════════════════════════════════════════
+# 5. UNA ESFERA QUE EL PROYECTO NO TIENE
+# ══════════════════════════════════════════════════════════════════
+esfera_nueva:
+  propuesta: >-
+    Los petroglifos son EXPRESIÓN SIMBÓLICA ATESTIGUADA MATERIALMENTE — no
+    lengua, pero sí producción de sentido del mismo pueblo, con geografía,
+    estilos y cronología propios. El corpus tiene creencia, ecología,
+    parentesco, transmisión y geografía política; no tiene arte.
+  lo_que_habria_que_decidir: >-
+    Si entra como esfera propia, como subconjunto de creencia, o solo como
+    capa geográfica sobre asentamientos.yaml.
+  estilos_por_region:
+    - {region: "costa y sabana árida", motivos: "geométricos y abstractos"}
+    - {region: "serranía (Sierra de San Luis)", motivos: "rostros cuadrangulares, espirales, círculos concéntricos y radiados, predominio antropomorfo"}
+    - {region: "Piedra Grande (Mun. Democracia)", motivos: "las 'ranitas', como las documentadas en Táchira"}
+  aviso: >-
+    ⚠️ Ningún petroglifo está datado en este artículo. La asociación
+    petroglifo↔caquetío es de contigüidad geográfica, no de datación. Falcón
+    tuvo ocupación anterior y posterior: Taima-Taima es paleoindio.
+
+# ══════════════════════════════════════════════════════════════════
+# 6. LO QUE ESTA FUENTE ABRE
+# ══════════════════════════════════════════════════════════════════
+seguimiento:
+  - id: filon-boletin-antropologico
+    hallazgo: >-
+      ⭐ Morón 2012 y [[zavala-reyes-2015]] salen de la MISMA revista: el
+      Boletín Antropológico de la Universidad de Los Andes (ISSN 1325-2610),
+      números 84 y 89. Dos de las fuentes más útiles del proyecto, de la misma
+      publicación, ambas en abierto vía Redalyc/SaberULA.
+    accion: >-
+      Barrer el índice del Boletín buscando Falcón, caquetío, Paraguaná, Coro,
+      arte rupestre y toponimia. Es la vía de adquisición más barata
+      identificada: acceso abierto, sin OCR, con capa de texto.
+  - id: hernandez-bano-2000
+    obra: "HERNÁNDEZ BAÑO, Adrián (2000): Petroglifos. Estado Falcón. Litografías López, Coro"
+    nota: >-
+      Pionero del registro sistemático de estaciones en Falcón. ⚠️ Morón avisa:
+      "hay que reconocer en Hernández Baño una tendencia literaria dada a la
+      hipérbole". Y su etimología quechua de Cabure ya quedó descartada.

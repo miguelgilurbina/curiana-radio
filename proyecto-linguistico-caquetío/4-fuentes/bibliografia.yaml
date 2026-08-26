@@ -1,7 +1,7 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 50
-  en_repo: 33
+  obras: 51
+  en_repo: 34
   solo_citadas: 17
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
@@ -351,6 +351,22 @@ obras:
   aliases:
   - Moreno-Mayar 2018
   - Schroeder 2018
+  en_repo: true
+- id: moron-2012-petroglifos
+  obra: 'Petroglifos en Falcón: entre la roca y la memoria'
+  autor: Morón, Camilo
+  anio: 2012
+  publicacion: Boletín Antropológico, Año 30, N° 84, julio-diciembre 2012, pp. 163-175. Universidad de
+    Los Andes, Mérida
+  genero: etnologia
+  local:
+  - fuentes_caquetios/Moron_2012_Petroglifos_Falcon.pdf
+  paginas: 14
+  acceso: 'Libre — Redalyc: http://www.redalyc.org/articulo.oa?id=71226816005'
+  aliases:
+  - Morón 2012
+  - Petroglifos en Falcón
+  - Camilo Morón
   en_repo: true
 - id: nueva-segovia-1579
   obra: Descripción de la Nueva Segovia de la Gobernación de Venezuela de las Indias del Mar Océano
