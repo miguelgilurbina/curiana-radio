@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-25 09:32**.
+<!--GENERADO--> Generado el **2026-08-25 21:48**.
 
 ## ¿Vamos bien?
 
@@ -124,6 +124,7 @@ Cuántas de las 301 entradas de familia caquetía **con `notas`** citan a cada o
 | [[oliver-1989-cap4]] | 10 | 3% |
 | [[van-buurt-2014]] | 10 | 3% |
 | [[arcaya-1920]] | 8 | 3% |
+| [[arcaya-obra-inedita-1995]] | 8 | 3% |
 | [[gatschet-1885]] | 3 | 1% |
 | [[oviedo-y-valdes-1851]] | 2 | 1% |
 | [[jahn-1927]] | 1 | 0% |
@@ -137,22 +138,22 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 
 Índice: [[INDICE_FUENTES]]. **La nota de cada obra es la fuente de verdad**; esta tabla lee su frontmatter (`estado_minado`, `prioridad`, `capa_texto`, `sostiene`), no una lista cableada.
 
-**39 notas de obra.**
+**49 notas de obra.**
 
 | `estado_minado` | n |
 |---|---|
 | minado | 21 |
+| no-disponible | 11 |
 | parcial | 6 |
-| no-disponible | 4 |
-| segunda-mano | 3 |
+| segunda-mano | 4 |
+| en-curso | 3 |
 | sin-minar | 2 |
-| en-curso | 1 |
 | descartada | 1 |
 | completo | 1 |
 
-**Prioridad ALTA sin minar (7):** [[esteves-1989]] (`parcial`), [[medina-colina-sxx]] (`en-curso`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap3-vecinos]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`no-disponible`), [[urbina-jimenez-2007-2011]] (`parcial`).
+**Prioridad ALTA sin minar (12):** [[arcaya-obra-inedita-1995]] (`no-disponible`), [[ballesteros-1550]] (`segunda-mano`), [[brito-figueroa-poblacion-economia]] (`en-curso`), [[esteves-1989]] (`parcial`), [[gonzalez-batista-nombre-de-coro]] (`en-curso`), [[medina-colina-sxx]] (`en-curso`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap3-vecinos]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`no-disponible`), [[perez-de-tolosa-1546]] (`no-disponible`), [[urbina-jimenez-2007-2011]] (`parcial`).
 
-<details><summary>Las 39 notas, una por fila</summary>
+<details><summary>Las 49 notas, una por fila</summary>
 
 | Nota | minado | prioridad | capa texto | lexicón (declarado) | lexicón (medido) | hechos corpus |
 |---|---|---|---|---|---|---|
@@ -164,6 +165,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[oviedo-y-valdes-1851]] | no-disponible | alta | no | 2 | 2 | 7 |
 | [[oliver-1989-cap2]] | minado | alta | parcial | 2 | 10 | 2 |
 | [[arcaya-1920]] | minado | media | si | 1 | 8 | 13 |
+| [[ballesteros-1550]] | segunda-mano | alta | no | 1 | 0 | 0 |
 | [[camacho-2011]] | minado | hecha | si | 0 | 0 | 16 |
 | [[paz-reverol-2017-2018]] | minado | hecha | — | 0 | 0 | 9 |
 | [[antczak-2015-las-aves]] | minado | hecha | si | 0 | 0 | 7 |
@@ -179,26 +181,35 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[oviedo-y-banos]] | minado | baja | si | 0 | 0 | 1 |
 | [[van-buurt-2014]] | minado | alta | si | 0 | 10 | 1 |
 | [[antczak-2017-cariban]] | minado | media | si | 0 | 0 | 0 |
+| [[arcaya-obra-inedita-1995]] | no-disponible | alta | no | 0 | 8 | 0 |
+| [[brito-figueroa-poblacion-economia]] | en-curso | alta | no | 0 | 0 | 0 |
 | [[esteves-1989]] | parcial | alta | no | 0 | 0 | 0 |
+| [[federmann-1916]] | no-disponible | media | no | 0 | 0 | 0 |
 | [[fernandes-2020]] | no-disponible | baja | archivo-vacio | 0 | 0 | 0 |
 | [[gilij-1780-1783]] | sin-minar | baja | no | 0 | 0 | 0 |
+| [[gonzalez-batista-nombre-de-coro]] | en-curso | alta | no | 0 | 0 | 0 |
+| [[gumilla-1791]] | no-disponible | baja | no | 0 | 0 | 0 |
 | [[las-casas-1875]] | minado | baja | si | 0 | 0 | 0 |
 | [[martinez-cruzado-2003]] | minado | alta | si | 0 | 0 | 0 |
 | [[medina-colina-sxx]] | en-curso | alta | no | 0 | 0 | 0 |
 | [[moreno-mayar-2018]] | sin-minar | baja | si | 0 | 0 | 0 |
+| [[nueva-segovia-1579]] | no-disponible | media | no | 0 | 0 | 0 |
 | [[oliver-1989-apendice-a]] | parcial | alta | no | 0 | 10 | 0 |
 | [[oliver-1989-cap3-vecinos]] | parcial | alta | no | 0 | 10 | 0 |
 | [[oliver-1989-cap4]] | parcial | alta | si | 0 | 10 | 0 |
 | [[perea-alonso-1942]] | descartada | descartada | si | 0 | 0 | 0 |
+| [[perez-de-tolosa-1546]] | no-disponible | alta | no | 0 | 0 | 0 |
 | [[ramos-perez-1978]] | no-disponible | baja | archivo-vacio | 0 | 0 | 0 |
+| [[rivero-1883]] | no-disponible | media | no | 0 | 0 | 0 |
 | [[rouse-cruxent-1963]] | no-disponible | media | archivo-vacio | 0 | 0 | 0 |
 | [[schroeder-2018]] | minado | media | si | 0 | 0 | 0 |
+| [[steward-1949]] | no-disponible | baja | no | 0 | 0 | 0 |
 | [[urbina-jimenez-2007-2011]] | parcial | alta | si | 0 | 0 | 0 |
 | [[zavala-reyes-2018]] | minado | alta | si | 0 | 223 | 0 |
 
 </details>
 
-Suma declarada en los frontmatter: **263** entradas de lexicón y **121** hechos de corpus sostenidos. La columna *medido* cuenta las entradas de familia caquetía cuyo campo `notas` nombra a esa obra; donde las dos columnas difieren, **manda la medida** — el frontmatter se escribió a mano y envejece.
+Suma declarada en los frontmatter: **264** entradas de lexicón y **121** hechos de corpus sostenidos. La columna *medido* cuenta las entradas de familia caquetía cuyo campo `notas` nombra a esa obra; donde las dos columnas difieren, **manda la medida** — el frontmatter se escribió a mano y envejece.
 
 ---
 
@@ -252,7 +263,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 956 en 260 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 1007 en 278 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 197 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
