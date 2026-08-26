@@ -227,3 +227,111 @@ seguimiento:
       Pionero del registro sistemático de estaciones en Falcón. ⚠️ Morón avisa:
       "hay que reconocer en Hernández Baño una tendencia literaria dada a la
       hipérbole". Y su etimología quechua de Cabure ya quedó descartada.
+
+# ══════════════════════════════════════════════════════════════════
+# 7. DECISIÓN DE MIGUEL (2026-08-25) — ARTE como esfera propia
+# ══════════════════════════════════════════════════════════════════
+decision_esfera:
+  decidido_por: Miguel
+  fecha: '2026-08-25'
+  decision: >-
+    Los petroglifos entran como esfera propia, **ARTE**, y la parte de mito y
+    leyenda asociada va aparte, a **CREENCIA**. No se mezclan: una cosa es el
+    objeto material y su geografía, otra el relato que hoy se le adhiere.
+  consecuencia_estructural: >-
+    `3-mundo/corpus/` tiene hoy cinco esferas con archivo — creencia, ecologia,
+    genealogia, geografia_politica, parentesco, transmision. Habría que crear
+    `arte.yaml` con la misma cabecera de marcas epistémicas, y
+    `compilar_corpus.py` tendría que reconocerla.
+  reparto_del_material_de_moron:
+    a_arte:
+      - "las ~20 estaciones de petroglifos, con su geografía"
+      - "los estilos por región (geométrico/abstracto en costa y sabana; rostros cuadrangulares y espirales en serranía; 'ranitas' en Piedra Grande)"
+      - "los zemi o ídolos de piedra — SI se logran atestiguar, ver §8"
+    a_creencia:
+      - "los cuatro rastros de Manaure en tradición oral (Arco Manare, la serpiente manare, Piedras de Martín, la leyenda de La Cuiba)"
+      - "la Leyenda del Venado de Piedra y 'el Salvaje' de San José"
+      - "los tesoros enterrados y los espíritus que salen de las piedras"
+    aviso: >-
+      🔴 Todo lo que va a CREENCIA por esta vía es `retro-abstraido`: memoria
+      campesina de los años 2000, no dato precontacto. La marca ya existe en
+      la cabecera de los .yaml del corpus y hay que usarla sin excepción.
+
+# ══════════════════════════════════════════════════════════════════
+# 8. 🔴 LOS CEMÍES — Antolínez CHOCA con lo que el corpus ya afirma
+# ══════════════════════════════════════════════════════════════════
+conflicto_cemies:
+  lo_que_dice_antolinez: >-
+    "Los Zemi o ídolos de piedra del Estado Falcón, son exactamente iguales a
+    los de los Taínos de Cuba" (El Universal, 9-IX-1944, vía Morón 2012).
+  lo_que_el_corpus_ya_afirma: >-
+    🔴 LO CONTRARIO, y con fuente. `3-mundo/corpus/creencia.yaml` registra: "No
+    había culto comunal de ídolos ni templos: las ideas religiosas se…".
+    Sale de [[arcaya-1920]] **pp. 103 y 110** — ver 4-fuentes/arcaya-1920.md:57
+    y 3-mundo/ensayos/03_creencia_caquetia.md:258. Y `3-mundo/cronista.md`
+    llega a listar "ídolo, idolatría" como vocabulario que el cronista NO puede
+    usar, precisamente por eso.
+  como_se_resuelve_el_choque: >-
+    ⚠️ No es una contradicción estricta y conviene no tratarla como tal:
+    · Arcaya niega **culto comunal y templos** — una institución.
+    · Antolínez afirma **objetos** — ídolos de piedra semejantes a los taínos.
+    Puede haber objetos sin culto comunal. Pero la tensión es real y hay que
+    declararla, porque si los zemi entran a la esfera ARTE con la glosa "ídolo",
+    contradicen la entrada de creencia que hoy está como atestiguada.
+  ruta_de_atestacion:
+    fuente_designada: "Antczak & Antczak 2006, *Los ídolos de las Islas Prometidas*"
+    estado: >-
+      🟡 YA IDENTIFICADA como prioridad, dos veces, antes de esta sesión:
+      · 1-plan/SIGUIENTE_TANDA.md:161 — "solo tenemos LA PORTADA (1 página)"
+      · 3-mundo/horizonte-de-contacto.md:92 — prioridad 2, "Ya es fuente de
+        segunda mano del corpus (la disputa por Los Roques). Cerrarlo de
+        primera mano"
+      Es decir: el proyecto ya sabía que le faltaba, por otra razón. Ahora tiene
+      una segunda razón, y más concreta.
+    que_preguntarle: >-
+      1. ¿Hay ídolos de piedra documentados en FALCÓN continental, o solo
+         insulares (Los Roques, las islas)?
+      2. ¿La semejanza con los zemi taínos es formal, o hay filiación
+         demostrada?
+      3. ¿Aparecen asociados a contextos rituales, o son hallazgos sueltos?
+    otras_vias: >-
+      [[las-casas-1875]] fue barrida buscando `behique`, `cemí`, `areíto` y dio
+      **cero en el vol. 1** (4-fuentes/las-casas-1875.md:35). El vol. 2 no se ha
+      mirado. Y [[antczak-2015-las-aves]] y [[antczak-2017-cariban]] ya están en
+      el repo pero son de otra cosa.
+  regla_mientras_tanto: >-
+    Hasta atestiguarlo, los zemi NO entran al corpus. La afirmación de
+    Antolínez queda registrada aquí como lo que es: una cita de 1944, de segunda
+    mano vía Morón, que contradice una entrada `atestiguado` del corpus apoyada
+    en Arcaya. Por la regla 2, en duda no se sube.
+
+# ══════════════════════════════════════════════════════════════════
+# 9. EL FILÓN DEL BOLETÍN — dónde buscar y qué hay ya localizado
+# ══════════════════════════════════════════════════════════════════
+filon_boletin:
+  revista: "Boletín Antropológico, Universidad de Los Andes (Mérida). ISSN 1325-2610"
+  cobertura: "números 50 (2000) a 101 (2021) — unos 50 boletines, acceso abierto"
+  donde_buscar:
+    - {via: "OJS de la ULA — el mejor, tiene buscador por texto", url: "http://erevistas.saber.ula.ve/index.php/boletin_antropologico"}
+    - {via: "Colección completa en el repositorio SaberULA", url: "http://www.saber.ula.ve/handle/123456789/4223"}
+    - {via: "Espejo en Redalyc, navegable por número", url: "https://www.redalyc.org/revista.oa?id=712"}
+  terminos_de_busqueda: [caquetío, Falcón, Paraguaná, Coro, petroglifos, arte rupestre, toponimia, dabajuroide, Manaure]
+  ya_localizados:
+    - obra: "Registro y documentación de los petroglifos de la quebrada de Chirache-Buenevara, Estado Falcón"
+      autor: "Zavala Reyes"
+      url: "http://erevistas.saber.ula.ve/index.php/boletin_antropologico/article/view/21037/0"
+      por_que: >-
+        ⭐ MISMO AUTOR que zavala-reyes-2015, la fuente que sostiene el 74% de
+        las citas del lexicón. Petroglifos de Paraguaná, con registro y
+        documentación — material directo para la esfera ARTE, y de un autor
+        cuya cadena de custodia el proyecto ya auditó.
+    - obra: "Panorama geológico, paleontológico, arqueológico, histórico y mitológico del estado Falcón"
+      autor: "Morón, Camilo"
+      url: "http://erevistas.saber.ula.ve/index.php/boletin_antropologico/article/view/21065/0"
+      por_que: >-
+        Del mismo autor de la fuente que acabamos de minar, pero de alcance
+        mucho mayor: cubre arqueología, historia y mitología de Falcón entero.
+  nota: >-
+    ⭐ Dos de las fuentes más útiles del proyecto salen de esta revista
+    (zavala-reyes-2015 nº 89 y moron-2012 nº 84). Acceso abierto, con capa de
+    texto, sin OCR. Es la vía de adquisición más barata identificada hasta hoy.
