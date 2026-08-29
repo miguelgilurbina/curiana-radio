@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 52
+  obras: 53
   en_repo: 35
-  solo_citadas: 17
+  solo_citadas: 18
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
@@ -147,6 +147,18 @@ obras:
   - Ballesteros 1550
   - Obispo Ballesteros
   - Miguel Gerónimo de Ballesteros
+  en_repo: false
+- id: brett-martinez-aquella-paraguana
+  obra: Aquella Paraguaná
+  autor: Brett Martínez, Alí
+  anio: 1971
+  publicacion: 1ª ed. 1971 (autofinanciada); 2ª ed. 1998, Fondo Editorial Alí Brett Martínez
+  genero: cronica-regional
+  paginas: — (no localizada)
+  aliases:
+  - Brett Martínez
+  - Aquella Paraguaná
+  - Alí Brett
   en_repo: false
 - id: brinton-1871
   obra: The Arawack Language of Guiana in its Linguistic and Ethnological Relations

@@ -335,3 +335,38 @@ filon_boletin:
     ⭐ Dos de las fuentes más útiles del proyecto salen de esta revista
     (zavala-reyes-2015 nº 89 y moron-2012 nº 84). Acceso abierto, con capa de
     texto, sin OCR. Es la vía de adquisición más barata identificada hasta hoy.
+
+# ══════════════════════════════════════════════════════════════════
+# 10. LEADS DE MIGUEL (2026-08-25, sin desarrollar)
+# ══════════════════════════════════════════════════════════════════
+leads:
+  - id: lead-brett-martinez
+    que: >-
+      Alí Brett Martínez, periodista y escritor paraguanero del s. XX (nacido
+      en Carirubana). Su *Aquella Paraguaná* (1971, reed. 1998) narra el origen
+      del poblamiento de la península con etimologías y fundación de sus
+      pueblos, más la Paraguaná pre-petrolera.
+    estado: >-
+      Ficha abierta en 4-fuentes/brett-martinez-aquella-paraguana.md. El vault
+      YA lo conocía: medina-colina-sxx lo barajó como candidato a la autoría
+      del documento del habla paraguanera (no era), y el protocolo lo dejó
+      anotado como "quedan como fuentes". Este lead es ese seguimiento.
+
+  - id: lead-maitiruma
+    que: "El topónimo Maitiruma, señalado por Miguel."
+    estado_en_el_vault: >-
+      🟢 YA TIENE EXPEDIENTE, y es de los interesantes. Es uno de los CINCO
+      topónimos de Paraguaná que Esteves atribuye al estrato NO caquetío
+      (Amuay, Elegüey, Maragüey, Jamaica, Maitiruma), y esteves-1989.md:1031
+      recoge su etimología: "En el caribe insular, `mái` significa: manantial,
+      ojo de agua; `Iruma`: azul celeste, o sea que Maitiruma expresa:
+      MANANTIAL AZUL."
+    por_que_importa: >-
+      Es evidencia del estrato CARIBE INSULAR dentro de Paraguaná — la misma
+      pregunta de la tarea B.1 de la cola de minería (Oliver §3.2.4, los
+      caribes), que sigue pendiente. Y para el issue de repertorio: un topónimo
+      caribe en plena península caquetía es otro dato de convivencia de
+      lenguas en el mismo territorio.
+    accion_pendiente: >-
+      Al minar Oliver §3.2.4 (pp. impresas 223-230 = pdf 250-257), cruzar con
+      los cinco topónimos de Esteves y ver si Maitiruma aparece.
