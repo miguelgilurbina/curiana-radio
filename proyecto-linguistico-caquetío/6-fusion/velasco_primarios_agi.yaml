@@ -124,7 +124,12 @@ reverificacion_castellanos:
     las grafías hure, urehure, hvre (u/v coloniales) ANTES de tocar la nota de
     esteves-1989. Si aparece, la conclusión del 08-14 se revierte y Esteves
     recupera su fuente más temprana para Paraguaná — lo que reabre #92.
-  estado: pendiente — la conclusión del 08-14 queda EN CUARENTENA, no revertida.
+  estado: >-
+    ✅ RESUELTO el mismo 2026-08-25: el grep con la grafía -e- encontró
+    "Señor de la ciudad Hurehurebo" (línea 48166) y la lista de once
+    ciudades (48246 ss.). La conclusión del 08-14 quedó revertida en lo
+    sustancial. Ver 6-fusion/castellanos_1589_toponimos.yaml y la
+    corrección en 4-fuentes/esteves-1989.md.
 
 # ══════════════════════════════════════════════════════════════════
 # 4. EL CERRO DE CAPÚ — el lazo referencial completo

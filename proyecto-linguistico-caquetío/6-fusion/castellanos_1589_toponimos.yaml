@@ -1,0 +1,133 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — Castellanos 1589: la lista de las once ciudades, verificada
+#
+# El 2026-08-25, a raíz de las citas de Velasco 2015, se re-verificó la
+# edición de 1857 de las Elegías (Internet Archive, 147.532 líneas — texto
+# archivado en fuentes_caquetios/Castellanos_1857_Elegias_partes_I-II_texto.txt)
+# con las grafías en -e- que el rastreo del 08-14 NO probó.
+#
+# RESULTADO: la conclusión del 08-14 ("no debe citarse como pasaje de las
+# Elegías") queda REVERTIDA en lo sustancial. Ver §1.
+#
+# Castellanos escribe en 1589 sobre hechos de 1499-1560: es lo más cercano a
+# primario que hay en verso, con las cautelas de un poeta que versifica.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-08-25'
+  estado: sin-fusionar
+  obra: castellanos-elegias
+  edicion_verificada: "1857 (BAE), partes I-II — II, Elegía 1"
+
+# ══════════════════════════════════════════════════════════════════
+# 1. LA REVERIFICACIÓN — qué falló el 08-14 y qué apareció hoy
+# ══════════════════════════════════════════════════════════════════
+reverificacion:
+  que_probo_el_08-14: "jurijureb, hurihureb, jurijure, urihure — CERO resultados"
+  que_falto: "la grafía con -e- interior: hurehureb"
+  que_aparece_hoy:
+    - {linea: 48166, texto: "Señor de la ciudad Hurehurcbo. (OCR: c por e)"}
+    - {linea: 48260, texto: "Miraca, Hurraqui, Hurehurebo;"}
+  veredicto: >-
+    ⭐ El verso que Velasco cita ("Señor de la ciudad Hurehurebo", 1962 vv.
+    80-81) EXISTE en la ed. 1857. La conclusión del 08-14 era correcta en lo
+    literal (la EXPRESIÓN "Gran Señor de Jurijurebo" no está) pero errada en
+    lo sustancial: Castellanos sí nombra el lugar y a su señor. La cita de
+    Esteves queda REHABILITADA en sustancia — se reabre la parte de #92 que
+    dependía de esto.
+  leccion_de_metodo: >-
+    🔴 Para la skill minar-fuente: un cero sobre nombre propio colonial exige
+    probar TODAS las permutaciones vocálicas del interior de palabra, no solo
+    las iniciales. h~j se probó; e~i interior no. Es la trampa 3 del INDICE
+    ("las fuentes coloniales no usan la ortografía moderna") en su variante
+    más fina.
+
+# ══════════════════════════════════════════════════════════════════
+# 2. ⭐⭐ LA LISTA DE LAS ONCE CIUDADES (II, Elegía 1 — línea 48246 ss.)
+# ══════════════════════════════════════════════════════════════════
+lista_de_ciudades:
+  cita: >-
+    "Doce leguas en torno del asiento / Había población engrandecida, /
+    CIUDADES DE GRANDÍSIMO MOMENTO, / Como Todariquibo, Zacerida, /
+    Memoradas también en este cuento / Carao, Tamadoré, Capatarida, /
+    Carona, Guaybacoa, Cumarebo, / Miraca, Hurraqui, Hurehurebo; /
+    Con otros que callamos de presente."
+  toponimos:
+    - {forma_1589: Todariquibo, nota: "= Todariquiba. TERCERA atestación temprana (Bastidas 1538 + Castellanos 1589), aquí 'ciudad de grandísimo momento'"}
+    - {forma_1589: Zacerida,    nota: "= Sacerida/Zazárida (la lista de Arcaya)"}
+    - {forma_1589: Carao,       nota: "Arcaya lo suponía en el actual Carazao"}
+    - {forma_1589: Tamadoré,    nota: "= Tomadoré, cerca de La Vela (Arcaya)"}
+    - {forma_1589: Capatarida,  nota: "= Capatárida, hoy vivo"}
+    - {forma_1589: Carona,      nota: "Arcaya: 'ni el nombre queda' — pues aquí está el nombre, en 1589"}
+    - {forma_1589: Guaybacoa,   nota: "⭐ = Guaibacoa/Guaidabacoa — OTRO -bacoa temprano; GB lo segmenta guay 'ceiba' + bacoa"}
+    - {forma_1589: Cumarebo,    nota: "hoy Puerto Cumarebo; lleva el -ebo de jurijurebo/curaidebo"}
+    - {forma_1589: Miraca,      nota: "confirma a Bastidas 1538 (Myraca); comunidad viva"}
+    - {forma_1589: Hurraqui,    nota: "= Hurraque. Oliver medía 0 apariciones de 'Hurraque' — la grafía en -i explica el cero"}
+    - {forma_1589: Hurehurebo,  nota: "cierra la serie Hurihurebo (1538) ~ Hurehurebo (1589) ~ Jurijurebo (moderno)"}
+  valor: >-
+    ⭐⭐ ONCE topónimos costeros en un solo pasaje de 1589, que además:
+    · confirma los de Bastidas 1538 por segunda vía independiente;
+    · da la fuente que Arcaya/Brito usaban sin que el proyecto la tuviera;
+    · aporta demografía ("doce leguas en torno... población engrandecida...
+      CIUDADES") para asentamientos.yaml y la esfera política;
+    · y a Paraguaná como "promontorio... de San Román, antiguo diversorio de
+      cristianos", con Coro-Maracaibo a "treinta leguas".
+  destino: cruzar con toponimos_esteves_indice.yaml y asentamientos.yaml al fusionar.
+
+# ══════════════════════════════════════════════════════════════════
+# 3. LA CASA DEL SEÑOR DE HUREHUREBO — los nombres cristianos
+# ══════════════════════════════════════════════════════════════════
+casa_de_hurehurebo:
+  cita: >-
+    "Año de veinte y cinco con quinientos [...] Entre los cuales fué cierto
+    mancebo, / Señor de la ciudad Hurehurebo. / Y en casa del Ampiés este
+    tenía / Sus hijos, su mujer y una su hermana; / Aqueste se llamó Fernán
+    García, / Después que ya tomó la fe cristiana, / La hermana se nombró
+    doña Mencía, / A su mujer pusieron DOÑA JUANA; / Era también captiva
+    desta presa / Otra que se llamó doña Teresa." (líneas 48146-48170)
+  datos:
+    - "1525: fecha del cautiverio, confirmada en el verso"
+    - "el señor de Hurehurebo, bautizado FERNÁN GARCÍA"
+    - "su hermana: doña Mencía · su mujer: DOÑA JUANA · otra cautiva: doña Teresa"
+    - "retenidos en casa de Ampíes como 'prendas' (rehenes)"
+  hipotesis_juana_judibana: >-
+    ⭐ CONVERGENCIA A TRES BANDAS sobre la mujer del señor de Hurehurebo:
+    · Castellanos 1589: se llamó "doña Juana" (nombre cristiano impuesto)
+    · Arcaya 1920 p. 167: "Sin duda la Doña Juana, mujer del 'señor' de
+      Hurehurebo... era LA HIJA DE MANAURE"
+    · La tradición local (Velasco 2015 + el testimonio de Miguel criado en
+      Judibana): la hija de Manaure se llamaba JUDIBANA
+    Hipótesis registrable: doña JUANA es el bautismo de JUDIBANA — el eco
+    fonético Ju[dib]ana → Juana es exactamente el patrón de castellanización
+    por truncamiento. NO demostrado (la homofonía puede ser casual y la
+    tradición pudo derivar el nombre indígena DESDE el doña Juana del verso,
+    en dirección contraria). Pero las tres fuentes son independientes entre
+    sí en apariencia, y la cadena persona↔nombre↔topónimo queda más trabada
+    que esta mañana. Aplica el principio de Miguel: el significado del nombre
+    (judi+bana) es una cosa; a quién nombró, otra; y ambas preguntas siguen
+    abiertas por separado.
+  perros: >-
+    ⚠️ La historia de la muerte por perros del señor de Jurijurebo NO aparece
+    en este pasaje. El "mataba con perros" de la línea 49364 es caza de
+    conejos y venados por los soldados hambrientos de Coro. Sigue sin
+    localizar; queda en la parte III-IV de las Elegías (no cubiertas por la
+    ed. 1857), en Aguado, o en la tradición local.
+
+# ══════════════════════════════════════════════════════════════════
+# 4. MANAURE, REY DE CORO — el radio del prestigio
+# ══════════════════════════════════════════════════════════════════
+manaure_rey_de_coro:
+  cita: >-
+    "Estéban respondió: «Somos cristianos [...] Somos también carísimos
+    hermanos / Del CACIQUE MANAURE, REY DE CORO.» / El indio, viendo que en
+    Manaure toca, / Dióse ciertas palmadas en la boca. / Y luego con el
+    rostro más sereno / Les dijo: «Si es de paz vuestra venida, / Por ser
+    hermanos de señor tan bueno, / TENGO POR BIEN DEJAROS CON LA VIDA»"
+    (línea 52133 ss.)
+  valor: >-
+    ⭐ El nombre de Manaure como salvoconducto LEJOS de Coro (la escena es
+    camino de los llanos): invocarlo bastó para que un grupo armado
+    perdonara la vida. Es la medida del radio de prestigio del título en
+    verso de 1589 — converge con el paramount de Ampíes ("se haze adorar"),
+    con Salas/Antolínez, y con la carrera de caballos en su honor. El
+    Esteban que habla es probablemente Esteban Martín, una de las tres
+    "lenguas excelentes".
