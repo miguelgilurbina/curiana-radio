@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-08-30**.
 
-**1512 ítems propuestos** en 18 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
+**1516 ítems propuestos** en 19 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -34,6 +34,7 @@ editar_a_mano: no
 | `tabla_a9_oliver.yaml` | oliver-1989-cap2 | 49 |  |
 | `toponimia_coro_espina.yaml` | gonzalez-batista-nombre-de-coro | 5 |  |
 | `toponimos_esteves_indice.yaml` | esteves-1989 | 182 |  |
+| `velasco_primarios_agi.yaml` | velasco-2015-resistencia | 4 |  |
 
 ## Propuestas léxicas (`curiana_sim/lexicon_*.py` — indexadas en su sitio)
 

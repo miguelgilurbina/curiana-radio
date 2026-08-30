@@ -1,0 +1,179 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — los primarios del AGI que transmite Velasco 2015
+#
+# Fuente: 4-fuentes/velasco-2015-resistencia.md — PDF en el repo, minado
+# el 2026-08-25. Velasco cita verbatim traslados del Archivo General de
+# Indias (Legajo 218, Audiencia de Santo Domingo, Caja Nº 1): cartas de
+# Ampíes al Rey (1513-1521) y de Rodrigo de Bastidas (8-X-1538).
+#
+# CADENA: AGI (original) → traslado → Velasco 2015 → aquí. Dos eslabones
+# humanos. Las citas van verbatim con su folio; el original no se ha visto.
+# La interpretación decolonial de Velasco NO entra: solo sus documentos.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-08-25'
+  estado: sin-fusionar
+  obra: velasco-2015-resistencia
+
+# ══════════════════════════════════════════════════════════════════
+# 1. TOPÓNIMOS EN PRIMARIO — carta de Bastidas, 8-X-1538
+# ══════════════════════════════════════════════════════════════════
+toponimos_primarios:
+  cita_completa: >-
+    "A sido el dho Federman tan perjudicial a los indios de la provincia y
+    especialmente a los amigos comarcanos de Coro despoblando lugares
+    totalmente […] llevo consigo a Don Alexandro Cacique principal de la
+    Provincia q reside en un pueblo dos leguas desta cabda que se dize
+    Todariquiba a otº Cacique d la Provincia d Paraguana q le dize Don Alonso
+    y su pueblo se dize Hurihurebo y a Bonyata Cacique d Myraca el qual en su
+    jornada murió y a Don Jorge principal deste pueblo con prisiones y a
+    Esteban (?) principal de Cayarua llevo otº Cacique en cadenas q se dize
+    verbo y su pueblo Gorybacoa" (Folio 2, Legajo 218, AGI, 8-X-1538)
+  atestaciones:
+    - forma_1538: Todariquiba
+      dato: "pueblo a DOS LEGUAS de Coro; cacique principal Don Alexandro"
+      valor: >-
+        ⭐⭐ PRIMARIO para el sitio central del canon del proyecto. Arcaya lo
+        daba entre los pueblos "de los cuales ni el nombre queda"; aquí tiene
+        nombre, distancia y cacique en 1538. Y la ubicación —dos leguas de la
+        ciudad— es dato para asentamientos.yaml (FAL/nodos).
+    - forma_1538: Hurihurebo
+      dato: "pueblo de la Provincia de Paraguaná; cacique Don Alonso"
+      valor: >-
+        TERCERA grafía de la serie (Hurehurebo ~ Jurijurebo ~ Hurihurebo).
+        Más evidencia de la alternancia h~j para D5, y atestación primaria del
+        asentamiento que Castellanos llama "ciudad".
+    - forma_1538: Myraca
+      dato: "cacique Bonyata, que murió en la jornada de Federmann"
+      valor: "= Miraca (índice de Esteves; comunidad viva hoy). Primario + antropónimo Bonyata."
+    - forma_1538: Cayarua
+      dato: "principal Esteban (?)"
+      valor: "topónimo NUEVO — no está en toponimos.yaml ni en el índice de Esteves."
+    - forma_1538: Gorybacoa
+      dato: "pueblo de un cacique que 'se dize verbo' (lectura dudosa del traslado)"
+      valor: >-
+        ⭐ OTRO -bacoa, y en primario de 1538. Se suma a los cinco de la
+        familia (adabacoa, guadabacoa, yacarebacoa, quibacoas, sazaribacoa) y
+        al Guaidabacoa/Caibacoa/Cumujacoa/Tutubacoa del índice de Esteves.
+        El morfema locativo gana su atestación más antigua.
+  antroponimos_de_paso: ["Don Alexandro", "Don Alonso", "Bonyata", "Don Jorge", "Esteban (?)", "verbo (?)"]
+
+# ══════════════════════════════════════════════════════════════════
+# 2. MANAURE EN PRIMARIO — carta de Ampíes, folios 13-15
+# ══════════════════════════════════════════════════════════════════
+manaure_primario:
+  - id: manaure-da-los-temporales
+    cita: >-
+      "esto principalmente me enviaba a decir un gran caci q esta diez leguas
+      la tierra adentro en la provinza q de Coro […] el cual por ser tan gran
+      señor SE HAZE ADORAR como digo DANDO A ENTENDER A LOS INDIOS Q EL DA LOS
+      TEMPORALES" (Folio 14)
+    valor: >-
+      ⭐⭐ El paramount teocrático, descrito por Ampíes ~1520: se hace adorar y
+      se le atribuye dar los temporales (el clima). CONFIRMA EN PRIMARIO la
+      tesis que Salas (vía Antolínez 1944) formulaba: "disponer a su antojo la
+      producción de fenómenos naturales". La cadena Salas→Antolínez→Morón
+      queda anclada a documento de época. Toca geografia_politica-008 y D15.
+    nota_geografica: >-
+      "diez leguas la tierra adentro" — dato de ubicación del asiento de
+      Manaure, a cruzar con Todariquiba ("dos leguas") y el registro de nodos.
+  - id: baracoyca-emisario
+    cita: "\"Acordaron de me enviar un casique se dize don Juº Baracoyca\" (Folio 14)"
+    valor: >-
+      Casa con Zavala #31 «Baracoica (HP): Cacique de Curazao» — el
+      antropónimo del glosario, en primario y en función (emisario de Manaure
+      a Ampíes). toponimos.yaml lo tiene como toponimo-028; es persona.
+  - id: secuestro-1525
+    cita: >-
+      "estos indios q tan fuera de razón están en el si que al este gran
+      cacicos al igual traxeron una hija suya con su marido" (Folio 15).
+      Castellanos fecha: "Año de veinte y cinco con quinientos" y nombra al
+      marido "Señor de la ciudad Hurehurebo" (1962, vv. 80-81).
+    identificacion_de_velasco: >-
+      ⚠️ Velasco los nombra: "la querida JUDIBANA y su esposo, el Cacique de
+      Jurijurebo". El nombre Judibana NO aparece en las citas que transcribe —
+      es identificación suya o de tradición no citada. NO atestiguado; se
+      registra como lectura con autor.
+    consecuencia_toponimica: >-
+      🔴 Si "Judibana" como nombre de la hija de Manaure se sostiene, el
+      topónimo JUDIBANA gana una lectura rival: conmemoración de una persona,
+      no (solo) judi+bana 'cerro del viento'. Y las dos lecturas se tocan: ella
+      era esposa del señor de JURIJUREBO — la conexión con el viento persiste
+      por vía conyugal. Primer caso de uso real del esquema `lecturas`
+      (issue-esquema-lecturas-toponimos): ambas entran, tipadas, ninguna gana
+      todavía.
+
+# ══════════════════════════════════════════════════════════════════
+# 3. 🔴 RE-VERIFICAR: Castellanos y Hurehurebo
+# ══════════════════════════════════════════════════════════════════
+reverificacion_castellanos:
+  problema: >-
+    El rastreo del 2026-08-14 buscó "Jurijurebo" (cuatro variantes) en la ed.
+    1857 de las Elegías: CERO apariciones → la nota de esteves-1989 concluyó
+    que la atribución a Castellanos "no se sostiene".
+    Velasco cita con precisión: Castellanos 1962 (Biblioteca ANH, Tomo 57),
+    versos 80-81: "Señor de la ciudad HUREHUREBO"; y v. 98 sobre el Piache de
+    Todariquiba: "Jamás palabra dio que la quebrase, ni cosa prometió que no
+    cumpliese".
+  hipotesis: >-
+    O las cuatro variantes probadas el 08-14 no incluían "Hurehurebo" con H
+    inicial y u-e (posible: el grep documentado era sobre "Jurijurebo"), o las
+    ediciones 1857/1962 difieren en el texto.
+  accion: >-
+    Repetir el grep sobre la ed. 1857 (Internet Archive, ya identificada) con
+    las grafías hure, urehure, hvre (u/v coloniales) ANTES de tocar la nota de
+    esteves-1989. Si aparece, la conclusión del 08-14 se revierte y Esteves
+    recupera su fuente más temprana para Paraguaná — lo que reabre #92.
+  estado: pendiente — la conclusión del 08-14 queda EN CUARENTENA, no revertida.
+
+# ══════════════════════════════════════════════════════════════════
+# 4. EL CERRO DE CAPÚ — el lazo referencial completo
+# ══════════════════════════════════════════════════════════════════
+cerro_de_capu:
+  cita: >-
+    "Fredy en Moruy pintando su amor por el CERRO DE CAPÚ, al cual LE
+    CAMBIARON EL NOMBRE" (p. 49) — y pie de foto "Cerro de Capú, Paraguaná".
+  valor: >-
+    ⭐ El Cerro Santa Ana llevaba el nombre de Capú. Con esto el lazo cierra
+    con CUATRO piezas independientes sobre un solo referente:
+    1. `capu` 'demonio' — Zavala #60 + Relación de Nueva Segovia 1578
+    2. el "dueño" Capo del cerro de Santa Ana — Tamayo vía Antolínez 1946
+    3. `capubana` 'duende del cerro' — Zavala #61 (capu + bana)
+    4. el cerro MISMO se llamaba Capú — memoria local vía Velasco
+    Refuerza D9 (#38) por enésima vez, y documenta la sustitución toponímica
+    colonial (Capú → Santa Ana) en el cerro más prominente de Paraguaná.
+  categoria: retro-abstraido (memoria local actual) para la pieza 4.
+
+# ══════════════════════════════════════════════════════════════════
+# 5. SIRABA — para la esfera ARTE
+# ══════════════════════════════════════════════════════════════════
+siraba:
+  que: >-
+    La Piedra de Siraba ("Piedra del Sacrificio" para los lugareños de Santa
+    Ana), monolito con petroglifos encabezado por una figura de RANA. Acasio
+    2013 (pp. 102-103, citado verbatim) la lee como Atabey/Pléyades en clave
+    taína, en oposición Tortuga/Orión.
+  valor: >-
+    Material directo para arte.yaml: estación con nombre, ubicación (Cerro
+    Santa Ana), motivo dominante y monografía dedicada (Acasio 2013). Y
+    converge con las "ranitas" que Morón 2012 documenta en Piedra Grande.
+    ⚠️ Misma reserva que los cemíes: el GLIFO es el dato; la lectura
+    taína-astronómica es interpretación de Acasio/Velasco. La comparación
+    formal con Caguana (la rana taína) es sugerente y va como hipótesis.
+  toponimo: "Siraba está en el índice de Esteves (en cola). Cruzar al procesarlo."
+
+# ══════════════════════════════════════════════════════════════════
+# 6. ETNOGRAFÍA DEL PRESENTE — comunidades descendientes con nombre
+# ══════════════════════════════════════════════════════════════════
+presente:
+  - "etnia MABO en Guacurebo (Ester y Lisbeth, representantes)"
+  - "artesanos en Moruy (el tío Juan, la Muñequera, Rogelio y los Amaya), Miraca (Chucho, Jesús Hernández), Barunú (Nancy Guanipa, hamacas), Abudure (Emilia)"
+  - voz: >-
+      "carpintería criolla MANABLE" (Rogelio, Moruy) — ¿voz viva? evaluar si
+      es derivado de manare/manaure o castellano regional.
+  - etimologia_popular: >-
+      Velasco llama a Paraguaná "Conuco entre aguas" — el portador citable de
+      la etimología popular que Miguel recordaba de Wikipedia ("conuco entre
+      el mar"). Entra al expediente de Paraguaná como lectura
+      `etimologia-popular` con autor, junto a la de González Batista y la
+      segmentación del proyecto (#109).

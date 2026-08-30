@@ -1,7 +1,7 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 53
-  en_repo: 35
+  obras: 54
+  en_repo: 36
   solo_citadas: 18
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
@@ -676,6 +676,22 @@ obras:
   - Vansina 1985
   - Ong 1982
   en_repo: false
+- id: velasco-2015-resistencia
+  obra: 'Historia de una Resistencia: sobre el encubrimiento del pueblo caquetío y su exclusión de la
+    historia'
+  autor: Velasco, Reinaldo Jesús
+  anio: 2015
+  publicacion: Paraguaná. ISBN 978-980-12-8508-3, Depósito Legal lf06820159004042. Edición digital del
+    autor, distribución libre no comercial
+  genero: historiografia
+  local:
+  - fuentes_caquetios/Velasco_2015_Historia_de_una_Resistencia.pdf
+  paginas: 56
+  aliases:
+  - Velasco 2015
+  - Historia de una Resistencia
+  - Reinaldo Velasco
+  en_repo: true
 - id: zavala-reyes-2015
   obra: 'Palabras vivas de una lengua muerta: legado arawak-caquetío'
   autor: Zavala Reyes, Miguel Enrique
