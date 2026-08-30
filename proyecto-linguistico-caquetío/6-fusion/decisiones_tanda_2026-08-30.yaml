@@ -22,7 +22,7 @@ f1:
       accion: fusionar con `coques` (Zavala #89, HB — 'hormiga roja')
       detalle: >-
         `koke` no estaba SIN_RASTRO: es la gemela en grafía k de `coques`
-        (c/qu→k + la -s del plural castellano de Zavala, cf. quibacoas).
+        (c/qu a k + la -s del plural castellano de Zavala, cf. quibacoas).
         Se fusiona heredando la cita; la forma koke queda como variante
         declarada. Cuarto par de D5b. La glosa castellana 'bachaco' se
         conserva — el venezolanismo es caribe (tamanaco chiauco) y no
@@ -42,5 +42,56 @@ f1:
         proto-arahuaco *kema — verificar en la Tabla A-7 de Oliver (trae
         'tapir' en el Swadesh comparado); si aparece, sube con cita".
   efecto: >-
-    Censo de familia caquetía sin cita o sin degradar: 3 → 0. Condición 1
+    Censo de familia caquetía sin cita o sin degradar: 3 a 0. Condición 1
     del gate en verde al aplicar.
+
+# ══════════════════════════════════════════════════════════════════
+# DECISIÓN 2 — D5 (#36): política ortográfica  ✅ APROBADA (a+b+c)
+# ══════════════════════════════════════════════════════════════════
+d5:
+  estado: APROBADA (2026-08-30) — las tres partes
+  cierra: condición 2 del gate (F2) y saca a D5 de la condición 6
+  a_lema:
+    politica: >-
+      LEMA FONÉMICO en todo el lexicón, con `forma_fuente` OBLIGATORIO — la
+      grafía original de la fuente sale de la prosa de `notas` y se vuelve
+      campo consultable. Los topónimos DENTRO de la política, del lado
+      fuente: su grafía oficial con tilde es la forma_fuente; el lema
+      fonémico es derivado.
+    razon: >-
+      El caquetío es lengua 100 por ciento oral: la grafía colonial no es el
+      dato sino ruido de transmisión, y conservarla también es decidir —
+      heredar el análisis fonológico del escribano en vez del nuestro, que
+      tiene cognados y reglas testeadas. (Argumento de Miguel, 08-25.)
+    quedan_disputadas_no_se_aplican:
+      - "h a cero (31 formas; Hurehurebo~Jurijurebo da h~j pero Hacarigua~Acarigua da h~cero)"
+      - "ce/ci a s (5 formas; asume seseo del escribano)"
+    condicion_de_pipeline: >-
+      La fusión desde la BANDEJA incorpora el paso de normalización — si no,
+      la cola (~1.500 ítems en grafía colonial) reinyecta grafía vieja para
+      siempre.
+  b_pares:
+    - {par: "buco/buko",     veredicto: FUSIONAR, nota: "cita reina nueva: Ballesteros 1550 «que ellos llaman buco» vía Arcaya p.170; se resuelve también la capa sin declarar de buco"}
+    - {par: "koke/coques",   veredicto: FUSIONAR, nota: "ya aprobado en F1; hereda Zavala #89"}
+    - {par: "barici/bariki", veredicto: NO FUSIONAR, nota: "Zavala #34 «agua turbia» y #35 «Barique: arcilla roja» son entradas distintas; referencia cruzada mutua"}
+    - {par: "coro/koro",     veredicto: NO TOCAR, nota: "falso positivo: cardón (hipotético, D10) vs. cotorra (#181)"}
+  c_gu_es_w:
+    politica: "gu/gü ante vocal pasa a /w/, UNIFORME (inicial y medial), en el lema fonémico"
+    evidencia_de_tres_patas:
+      - "el escribano colonial no tenía grafema para [w]: waitiao a guaitiao, wei a Huey (patrón panamericano)"
+      - "convención de los etnólogos desde 1945: Antolínez «escribo wajiro, no guajiro; kaketío, no caquetío»"
+      - "habla viva medida: guachaco~uachaco, Mérida 1912 (Alvarado s.v. BACHACO)"
+    uniforme_porque: >-
+      si Paraguaná es para-gua-ná, el morfema gua 'terreno cercado' aparece
+      en medial — y un morfema no puede valer /wa/ en una posición y /gwa/
+      en otra.
+    efectos_conocidos:
+      - "~44 lemas cambian de forma visible (guamacho a wamacho, güere a were…) — SIEMPRE con la grafía original en forma_fuente, y la ficha pública muestra ambas"
+      - "el filtro fonotáctico multiplica ~2,5 su poder contra el wayunaiki (65.4 por ciento pasa vs. 86.3)"
+      - "desaparece el choque de la diéresis: ü queda libre para el fonema wayuu en las 6 formas del núcleo"
+      - "las 6 formas reconstruidas con ü que caen del filtro son importaciones wayuu — es el filtro funcionando, y alimenta D11"
+      - "retirar de fonemizar() la regla vieja gu ante e/i a g, que contradice la política"
+  nota_de_aplicacion: >-
+    Todo va en aplicar_tanda_08_30.py con --dry-run. score_linguistico()
+    empareja contra claves del lexicón: el renombrado se hace ANTES del run 1
+    de la era auditada — es el momento barato que el análisis identificó.
