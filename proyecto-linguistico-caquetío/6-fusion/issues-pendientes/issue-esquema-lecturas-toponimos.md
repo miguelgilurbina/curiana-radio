@@ -57,6 +57,13 @@ mentir. El resultado: o se pierden, o contaminan un campo que no les toca.
 
 ### Las reglas
 
+0. **Significado ≠ referente** (principio de Miguel, 2026-08-25, a raíz de
+   Judibana): la etimología de un nombre y aquello a lo que el nombre refiere
+   son ejes independientes. Un topónimo puede conmemorar a una persona cuyo
+   nombre significa algo — la etimología vale en ambos escenarios y solo la
+   vía referencial queda abierta. Y a la inversa: un antropónimo transparente
+   **atestigua sus morfemas** aunque su referente sea una persona (Yarosabana,
+   Quiquiba, Yaracuy). Las lecturas deben poder declarar sobre qué eje hablan.
 1. **Ninguna lectura pisa a otra.** Conviven; el campo es una lista.
 2. **Toda lectura declara `quien` y, si existe, `procedencia`.** Sin autor no
    entra — es la regla 8 aplicada a opiniones.
