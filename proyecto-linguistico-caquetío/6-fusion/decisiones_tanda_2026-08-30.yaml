@@ -1,0 +1,46 @@
+# ─────────────────────────────────────────────────────────────────────────
+# DECISIONES DE MIGUEL — tanda del 2026-08-30
+#
+# Cada decisión de esta tanda queda registrada aquí al tomarse, y TODAS se
+# aplican al canon en un solo `aplicar_tanda_08_30.py` (idempotente, con
+# --dry-run, al estilo de aplicar_d10.py) cuando la tanda cierre.
+# Hasta entonces, el canon no se toca (regla 5).
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-08-30'
+  decidido_por: Miguel
+  estado: en-curso — el canon se toca solo vía el script aplicador
+
+# ══════════════════════════════════════════════════════════════════
+# DECISIÓN 1 — F1: las tres palabras sin cita  ✅ APROBADA
+# ══════════════════════════════════════════════════════════════════
+f1:
+  estado: APROBADA (2026-08-30)
+  cierra: condición 1 del gate
+  veredictos:
+    - palabra: koke
+      accion: fusionar con `coques` (Zavala #89, HB — 'hormiga roja')
+      detalle: >-
+        `koke` no estaba SIN_RASTRO: es la gemela en grafía k de `coques`
+        (c/qu→k + la -s del plural castellano de Zavala, cf. quibacoas).
+        Se fusiona heredando la cita; la forma koke queda como variante
+        declarada. Cuarto par de D5b. La glosa castellana 'bachaco' se
+        conserva — el venezolanismo es caribe (tamanaco chiauco) y no
+        compite: ver bachaco_y_gu_es_w.yaml.
+    - palabra: wabarsure
+      accion: reclasificar a `caquetío-reconstruido`
+      detalle: >-
+        Compuesto de trabajo del proyecto: wa- 'nuestro' + barsure 'alma'
+        (atestiguado — Angulo Molina; Zavala). Nota nueva: "compuesto de
+        trabajo: wa- + barsure (atestiguado); nunca buscarlo en fuentes como
+        palabra simple". De paso sale del limbo `fuente: caquetío` a secas.
+    - palabra: kama
+      accion: degradar a `caquetío-hipotético`
+      detalle: >-
+        SIN_RASTRO real en las cuatro fuentes; el lokono usa otra raíz
+        (firobero). Nota nueva: "candidata a reconstruido vía cognado
+        proto-arahuaco *kema — verificar en la Tabla A-7 de Oliver (trae
+        'tapir' en el Swadesh comparado); si aparece, sube con cita".
+  efecto: >-
+    Censo de familia caquetía sin cita o sin degradar: 3 → 0. Condición 1
+    del gate en verde al aplicar.
