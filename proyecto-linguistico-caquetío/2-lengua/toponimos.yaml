@@ -334,7 +334,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-028
-  forma: baracoica (Cacique de Curazao)
+  forma: baracoica
+  glosa_fuente: "Cacique de Curazao"
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -342,7 +343,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-029
-  forma: huay (Nombre propio)
+  forma: huay
+  glosa_fuente: "Nombre propio"
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -398,7 +400,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-036
-  forma: timaure (Apellido)
+  forma: timaure
+  glosa_fuente: "Apellido"
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -406,7 +409,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-037
-  forma: tumarure (Apellido de un cacique)
+  forma: tumarure
+  glosa_fuente: "Apellido de un cacique"
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -414,7 +418,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-038
-  forma: xaraguamari (Cacique de Yaracuy)
+  forma: xaraguamari
+  glosa_fuente: "Cacique de Yaracuy"
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -422,7 +427,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-039
-  forma: yarosabana (Cacique de los Guaragua)
+  forma: yarosabana
+  glosa_fuente: "Cacique de los Guaragua"
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -430,7 +436,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-040
-  forma: dabajuro (Población de Falcón)
+  forma: dabajuro
+  glosa_fuente: "Población de Falcón"
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -438,7 +445,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-041
-  forma: doaca (Asiento indígena)
+  forma: doaca
+  glosa_fuente: "Asiento indígena"
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -446,7 +454,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-042
-  forma: iboa (Comunidad indígena)
+  forma: iboa
+  glosa_fuente: "Comunidad indígena"
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -454,7 +463,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-043
-  forma: parotaima (Indígena del Yaracuy)
+  forma: parotaima
+  glosa_fuente: "Indígena del Yaracuy"
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -462,7 +472,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-044
-  forma: tabicure (Indio caquetío del valle de las Damas)
+  forma: tabicure
+  glosa_fuente: "Indio caquetío del valle de las Damas"
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -470,7 +481,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-045
-  forma: todarahuato (Indígena de la Vela)
+  forma: todarahuato
+  glosa_fuente: "Indígena de la Vela"
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -478,7 +490,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-046
-  forma: yaracuy (Indígena del Valle de las Damas)
+  forma: yaracuy
+  glosa_fuente: "Indígena del Valle de las Damas"
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -486,7 +499,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-047
-  forma: caquetio (Buena gente — etnónimo, no descripción del lugar)
+  forma: caquetio
+  glosa_fuente: "Buena gente — etnónimo, no descripción del lugar"
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -494,7 +508,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-048
-  forma: xirahara (Población indígena vecina)
+  forma: xirahara
+  glosa_fuente: "Población indígena vecina"
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -502,7 +517,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-049
-  forma: yaruca (Indígena caquetío)
+  forma: yaruca
+  glosa_fuente: "Indígena caquetío"
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -538,7 +554,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-054
-  forma: aburi (aguas de un río lleno de arena)
+  forma: aburi
+  glosa_fuente: "aguas de un río lleno de arena"
   nivel: descartado
   clase: topónimo
   razon: la glosa es descriptiva y utilizable, pero ninguna segmentación reconstruye nada. Son los que
@@ -546,7 +563,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-055
-  forma: acatute (Pueblo entre valles)
+  forma: acatute
+  glosa_fuente: "Pueblo entre valles"
   nivel: descartado
   clase: topónimo
   razon: la glosa es descriptiva y utilizable, pero ninguna segmentación reconstruye nada. Son los que
@@ -554,7 +572,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-056
-  forma: alcaboa (Tierras solas o desiertas)
+  forma: alcaboa
+  glosa_fuente: "Tierras solas o desiertas"
   nivel: descartado
   clase: topónimo
   razon: la glosa es descriptiva y utilizable, pero ninguna segmentación reconstruye nada. Son los que
@@ -562,7 +581,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-057
-  forma: aricula (Punto de tierra)
+  forma: aricula
+  glosa_fuente: "Punto de tierra"
   nivel: descartado
   clase: topónimo
   razon: la glosa es descriptiva y utilizable, pero ninguna segmentación reconstruye nada. Son los que
@@ -570,7 +590,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-058
-  forma: guanajo (Cardón muy lanoso)
+  forma: guanajo
+  glosa_fuente: "Cardón muy lanoso"
   nivel: descartado
   clase: topónimo
   razon: la glosa es descriptiva y utilizable, pero ninguna segmentación reconstruye nada. Son los que
@@ -578,7 +599,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-059
-  forma: guasare (Árbol cactáceo)
+  forma: guasare
+  glosa_fuente: "Árbol cactáceo"
   nivel: descartado
   clase: topónimo
   razon: la glosa es descriptiva y utilizable, pero ninguna segmentación reconstruye nada. Son los que
@@ -586,7 +608,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-060
-  forma: siguruba (Salvar. Caserío)
+  forma: siguruba
+  glosa_fuente: "Salvar. Caserío"
   nivel: descartado
   clase: topónimo
   razon: la glosa es descriptiva y utilizable, pero ninguna segmentación reconstruye nada. Son los que
@@ -594,7 +617,8 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-061
-  forma: tarai (Garipial o caripial)
+  forma: tarai
+  glosa_fuente: "Garipial o caripial"
   nivel: descartado
   clase: topónimo
   razon: la glosa es descriptiva y utilizable, pero ninguna segmentación reconstruye nada. Son los que

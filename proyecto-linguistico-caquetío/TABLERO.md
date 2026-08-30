@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-26 09:18**.
+<!--GENERADO--> Generado el **2026-08-30 00:40**.
 
 ## ¿Vamos bien?
 
@@ -138,12 +138,12 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 
 Índice: [[INDICE_FUENTES]]. **La nota de cada obra es la fuente de verdad**; esta tabla lee su frontmatter (`estado_minado`, `prioridad`, `capa_texto`, `sostiene`), no una lista cableada.
 
-**52 notas de obra.**
+**53 notas de obra.**
 
 | `estado_minado` | n |
 |---|---|
 | minado | 23 |
-| no-disponible | 11 |
+| no-disponible | 12 |
 | parcial | 6 |
 | segunda-mano | 5 |
 | en-curso | 3 |
@@ -153,7 +153,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 
 **Prioridad ALTA sin minar (12):** [[arcaya-obra-inedita-1995]] (`no-disponible`), [[ballesteros-1550]] (`segunda-mano`), [[brito-figueroa-poblacion-economia]] (`en-curso`), [[esteves-1989]] (`parcial`), [[gonzalez-batista-nombre-de-coro]] (`en-curso`), [[medina-colina-sxx]] (`en-curso`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap3-vecinos]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`no-disponible`), [[perez-de-tolosa-1546]] (`no-disponible`), [[urbina-jimenez-2007-2011]] (`parcial`).
 
-<details><summary>Las 52 notas, una por fila</summary>
+<details><summary>Las 53 notas, una por fila</summary>
 
 | Nota | minado | prioridad | capa texto | lexicón (declarado) | lexicón (medido) | hechos corpus |
 |---|---|---|---|---|---|---|
@@ -184,6 +184,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[antolinez-1944-manaure]] | segunda-mano | media | no | 0 | 0 | 0 |
 | [[antolinez-1946-hacia-el-indio]] | minado | alta | si | 0 | 0 | 0 |
 | [[arcaya-obra-inedita-1995]] | no-disponible | alta | no | 0 | 8 | 0 |
+| [[brett-martinez-aquella-paraguana]] | no-disponible | media | no | 0 | 0 | 0 |
 | [[brito-figueroa-poblacion-economia]] | en-curso | alta | no | 0 | 0 | 0 |
 | [[esteves-1989]] | parcial | alta | no | 0 | 0 | 0 |
 | [[federmann-1916]] | no-disponible | media | no | 0 | 0 | 0 |
@@ -266,7 +267,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1029 en 286 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 1039 en 291 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 197 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
