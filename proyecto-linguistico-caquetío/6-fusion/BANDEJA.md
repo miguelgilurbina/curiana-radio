@@ -15,13 +15,14 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-08-30**.
 
-**1516 ítems propuestos** en 20 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
+**1516 ítems propuestos** en 21 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
 | Archivo | Obra | Ítems | Aviso |
 |---|---|---|---|
 | `antolinez_1946_capo_y_ortografia.yaml` | antolinez-1946-hacia-el-indio | 3 |  |
+| `bachaco_y_gu_es_w.yaml` | alvarado-1921 | 0 |  |
 | `castellanos_1589_toponimos.yaml` | castellanos-elegias | 0 |  |
 | `colores_caquetios.yaml` | ? | 4 |  |
 | `etnias_en_contacto.yaml` | ? | 3 |  |
