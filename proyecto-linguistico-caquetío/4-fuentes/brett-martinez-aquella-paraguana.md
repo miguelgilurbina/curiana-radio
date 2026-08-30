@@ -50,10 +50,22 @@ Para el proyecto rinde en:
 - **La Paraguaná pre-petrolera** — el estado de la península antes de 1920,
   útil como capa intermedia entre la colonia y el presente.
 
-## Dónde buscarla
+## Dónde buscarla — rastreo del 2026-08-25
 
-1ª edición 1971 autofinanciada (rara); **2ª edición 1998** del Fondo Editorial
-que lleva su nombre — la más conseguible. Está en Google Books (id l3hsAAAAMAAJ,
-sin vista) y Open Library. No aparece digitalizada en abierto.
+**No está digitalizada.** Verificado: Google Books la registra sin vista
+(id l3hsAAAAMAAJ), y no aparece en Internet Archive ni en bibliotecas
+digitales venezolanas.
+
+**Sí hay ejemplares físicos a la venta:**
+
+| Vía | Detalle |
+|---|---|
+| **Iberlibro/AbeBooks** — Guido Soroka Bookseller | 1ª ed. **1971, tapa dura, estado "Bien"** — https://www.iberlibro.com/Aquella-Paraguan%C3%A1-Brett-Mart%C3%ADnez-al%C3%AD-Ediciones/30862913855/bd |
+| Amazon | ficha B004AZQ87U, ejemplares usados |
+| 2ª ed. 1998 (Fondo Editorial Alí Brett Martínez) | la más común en librerías venezolanas de viejo |
+
+Misma situación que Galeoto Cey: **entra por compra física**, no por descarga.
+Una vez en mano, el protocolo es el del dictado curado ([[medina-colina-sxx]])
+o escaneo + `ocr_fuente.py`.
 
 Índice: [[INDICE_FUENTES]]

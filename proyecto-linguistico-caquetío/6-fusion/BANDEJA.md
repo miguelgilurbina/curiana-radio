@@ -15,13 +15,14 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-08-29**.
 
-**1326 ítems propuestos** en 16 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
+**1330 ítems propuestos** en 17 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
 | Archivo | Obra | Ítems | Aviso |
 |---|---|---|---|
 | `antolinez_1946_capo_y_ortografia.yaml` | antolinez-1946-hacia-el-indio | 3 |  |
+| `colores_caquetios.yaml` | ? | 4 |  |
 | `etnias_en_contacto.yaml` | ? | 3 |  |
 | `frase_saludo_mitare.yaml` | ? | 2 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
