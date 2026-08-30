@@ -177,3 +177,60 @@ presente:
       el mar"). Entra al expediente de Paraguaná como lectura
       `etimologia-popular` con autor, junto a la de González Batista y la
       segmentación del proyecto (#109).
+
+# ══════════════════════════════════════════════════════════════════
+# 7. TESTIMONIO DE MIGUEL (2026-08-25) — la tradición de Judibana es VIVA
+# ══════════════════════════════════════════════════════════════════
+judibana_tradicion:
+  testimonio:
+    quien: "Miguel Gil Urbina, criado en Judibana (Paraguaná)"
+    tipo: testimonio-residente
+    que_dice: >-
+      Creció con la noción de que Judibana era el nombre de la hija del
+      "Cacique Manaure, Indio Manaure" — así lo tenía conceptualizado desde
+      niño, ANTES de leer a Velasco. Después supo que ella estaba unida a
+      Jurijurebo, y que hay una historia triste detrás: al cacique lo
+      terminaron matando CON PERROS.
+  por_que_importa: >-
+    ⭐ Cambia el estatus de la identificación de Velasco. "Judibana = hija de
+    Manaure" ya no es una afirmación aislada de un autor de 2015 sin cita:
+    es TRADICIÓN LOCAL VIVA, transmitida a un niño de Judibana decenios antes.
+    Velasco y Miguel son dos receptores independientes de la misma tradición
+    (salvo que la fuente de ambos sea común y reciente — p. ej. la toponimia
+    escolar del s. XX. No descartable; se registra la reserva).
+  la_historia_de_los_perros:
+    que: "al cacique (¿el de Jurijurebo?) lo mataron con perros — aperreamiento"
+    verificacion_parcial: >-
+      El aperreamiento como práctica está en las fuentes del repo: Arcaya
+      (p. 62) relata vía Castellanos a un indio CHIPA "despedazado por los
+      perros que llevaban" los españoles — pero es otra región (Aroa) y otra
+      etnia. La muerte por perros del señor de Jurijurebo NO está localizada
+      aún en ninguna fuente del repo.
+    donde_buscar: >-
+      Castellanos 1962 (los versos que siguen a vv. 80-81, donde aparece el
+      "Señor de la ciudad Hurehurebo"), De Lima 2012, Esteves 1988, Morón
+      Camilo 2007 (*Manaure: al filo de la eternidad*), y Guillermo Morón
+      (*Los orígenes históricos de Venezuela*). La captura de Federmann de
+      1530 ("aquella india, que el alemán Federman intenta capturar" — Brito
+      Figueroa) puede ser parte del mismo ciclo narrativo.
+  la_reserva_de_miguel: >-
+    ⭐ Y es la reserva correcta: "puede que Judibana sea una de tantas
+    hijas-hijos, pensando en el sistema social caquetío". En una sociedad
+    MATRILINEAL (canon del proyecto, sesión 1/4 del corpus cultural), los
+    hijos del paramount no heredan el cargo (heredan los sobrinos maternos) —
+    pero las HIJAS casadas con caciques vecinos tejen ALIANZAS. El matrimonio
+    Judibana↔señor de Jurijurebo se lee, en clave matrilineal, como alianza
+    política entre Coro/Todariquiba y Paraguaná. Eso es exactamente el tipo
+    de estructura que geografia_politica y parentesco modelan — y conecta con
+    la reserva sobre Acosta Saignes ("de padres a hijos" = ¿colonial?) anotada
+    en antolinez-1944-manaure.md.
+  estado: >-
+    Tres lecturas ahora para el topónimo Judibana, ninguna vencedora:
+    1. judi+bana 'cerro del viento' (etimología-analítica, Miguel + léxico)
+    2. conmemoración de Judibana hija de Manaure (tradición-local, Velasco +
+       testimonio de Miguel)
+    3. ambas a la vez — la persona pudo llevar nombre toponímico o viceversa;
+       en el registro antroponímico caquetío los nombres de persona y lugar
+       se cruzan (Yaracuy, Yarosabana, Baracoica).
+    El esquema `lecturas` las aloja sin decidir. La historia de los perros y
+    la genealogía quedan como objetivos de verificación.

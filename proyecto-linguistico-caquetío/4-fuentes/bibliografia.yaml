@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 54
+  obras: 55
   en_repo: 36
-  solo_citadas: 18
+  solo_citadas: 19
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
@@ -398,6 +398,19 @@ obras:
   - Petroglifos en Falcón
   - Camilo Morón
   en_repo: true
+- id: moron-guillermo-historia-venezuela
+  obra: Historia de Venezuela (5 vols.) · Los orígenes históricos de Venezuela
+  autor: Morón, Guillermo
+  anio: 1971
+  publicacion: Historia de Venezuela, 5 vols., 1971 · Los orígenes históricos de Venezuela, introducción
+    al siglo XVI, 1954
+  genero: historiografia
+  paginas: — (no localizada)
+  aliases:
+  - Guillermo Morón
+  - Morón Historia de Venezuela
+  - Los orígenes históricos de Venezuela
+  en_repo: false
 - id: nueva-segovia-1579
   obra: Descripción de la Nueva Segovia de la Gobernación de Venezuela de las Indias del Mar Océano
   autor: Arévalo, Gonzalo de y Ruiz de la Parra, Juan (alcaldes)
