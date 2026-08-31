@@ -77,22 +77,27 @@ muestreo F10 de Miguel, **9** el exportador #42).
 
 ## B · La cola de trabajo, por rendimiento
 
-### B.1 · La Tabla A-7 de Oliver  ← **lo siguiente**
+### B.1 · La serie Swadesh de Oliver (A-1 a A-7)  ← **arrancada el 2026-08-31**
 
-Apéndice A de la tesis, ~impresas 585-590 = **pdf 612-617** (offset −27).
-Swadesh comparado con Baure, Terena, Kinikinao, Campa, Machiguenga,
-Piro-Apurinã. Es la sesión más rentable que queda porque alimenta CUATRO
-frentes de una vez:
+**Progreso**: no era una tabla, eran **siete** — A-1 es el vocabulario añú
+completo de Wilbert (1958-59); **A-2 es LA tabla de D11**
+(guajiro·paraujano·lokono·island-carib·maipure); A-3..A-7 cubren el resto de
+la familia. Las filas clave están minadas por OCR (todas las páginas venían
+giradas 90°; `--rotar auto` las salvó): ver
+`6-fusion/tabla_a1_a7_swadesh.yaml`.
 
-- **D11 (#39)** — la base comparativa que le falta al método.
-- **`kama`** — la fila 'tapir' (¿\*kema?): si aparece, sube de hipotético.
-- **`bana` 'hígado'** — la fila 'liver' verifica el cognado lokono.
-- **Los colores** — el Swadesh trae red/black/white/green/yellow, y el
-  caquetío atestiguado tiene cero.
+- ✅ **La fila 53 (liver) VERIFICÓ el cognado de `bana₂`** — lokono `ebana`,
+  island-carib `*bana`, y la serie panarahuaca `*pana` entera.
+- ✅ **El paraujano de 1958 ya decía SPANISH** en verde/amarillo/blanco/negro:
+  la pérdida de los colores, documentada en el pariente costero más cercano.
+- 🔴 **El tapir NO está** (el Swadesh-100 no lo trae): la ruta de `kama` se
+  corrigió — candidatos: la A-1 completa, la fauna de van Buurt, Payne.
 
-⚠️ Es lectura **a ojo**: el OCR no dio las columnas de la A-9 con fiabilidad
-y la A-7 es la misma clase de tabla. Extraer con `pdftotext -layout` primero
-y comparar; si sale ruido, página a página desde la imagen.
+**Queda**: medir la extensión de la A-1 (hacia atrás de pdf 584), la cabecera
+de la A-5, y la **transcripción A OJO de la A-2 completa** (100 ítems × 5
+lenguas contra la imagen). Con la A-2 transcrita, D11 pasa de opinión a
+**medición**: emparejar las 226 formas atestiguadas contra cada columna con
+las reglas de D5 y ver a cuál se acercan más.
 
 ### B.2 · Fase 2 de D5 — la migración de lemas
 

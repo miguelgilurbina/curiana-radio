@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-08-31**.
 
-**1516 ítems propuestos** en 22 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
+**1520 ítems propuestos** en 23 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -33,6 +33,7 @@ editar_a_mano: no
 | `petroglifos_y_manaure.yaml` | moron-2012-petroglifos | 4 |  |
 | `polities_no_costeras_federmann.yaml` | ? | 16 |  |
 | `tabla15_c14_oliver.yaml` | oliver-1989-cap4 | 23 |  |
+| `tabla_a1_a7_swadesh.yaml` | oliver-1989-apendice-a | 4 |  |
 | `tabla_a8_jirajarano.yaml` | oliver-1989-apendice-a | 33 |  |
 | `tabla_a9_oliver.yaml` | oliver-1989-cap2 | 49 |  |
 | `toponimia_coro_espina.yaml` | gonzalez-batista-nombre-de-coro | 5 |  |
