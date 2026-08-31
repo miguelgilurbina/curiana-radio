@@ -130,3 +130,26 @@ d9:
       "EN DISPUTA") y 2-lengua/morfologia.md. El hueco de ubana ('desinencia
       de esta lengua', Zavala #265, sin entrada) queda anotado para la
       campaña de topónimos.
+
+# ══════════════════════════════════════════════════════════════════
+# DECISIÓN 4 — #101: la glosa de bara  ✅ APROBADA
+# ══════════════════════════════════════════════════════════════════
+bara:
+  estado: APROBADA (2026-08-30)
+  cierra: issue #101
+  veredicto: "bara pasa a caquetío-atestiguado = 'palo, árbol'"
+  citas: "Zavala #29 «Bara (E): Palo, árbol» + Esteves + van Buurt"
+  prueba_interna: >-
+    barabara ya estaba como caquetío-atestiguado = 'árbol de madera dura y
+    pesada. Olivo' (Zavala #30) — la reduplicada de la misma raíz con la
+    glosa de árbol. Base 'río' + reduplicada 'árbol' era insostenible.
+  lectura_descartada: >-
+    'río, corriente fluvial' se conserva como lectura descartada (política
+    D7) con su razonamiento de cognado proto-arawakan/topónimo — archivada
+    con nombre, no borrada.
+  arrastre_higiene: >-
+    zavala-reyes-2015 estaba `estado_minado: completo` con el #29 sin
+    levantar. El aplicador corrige el frontmatter a completo-con-reserva.
+    Tarea de seguimiento anotada: auditoría entrada-por-entrada del glosario
+    completo de Zavala contra el lexicón (la obra está en el repo con capa
+    de texto — es barata).
