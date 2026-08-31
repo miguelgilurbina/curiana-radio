@@ -1,7 +1,7 @@
 ---
 tipo: nota-viva
 ambito: qué hacer a continuación, y con qué contexto arrancar en frío
-preparado: 2026-08-17
+preparado: 2026-08-31
 tablero: TABLERO.md
 bandeja: 6-fusion/BANDEJA.md
 ---
@@ -12,210 +12,202 @@ bandeja: 6-fusion/BANDEJA.md
 > ```
 > python curiana_sim/generar_tablero.py    # el canon, medido
 > python curiana_sim/generar_bandeja.py    # la cola de fusión
-> python curiana_sim/guardianes.py         # los 6 en verde antes de cerrar nada
+> python curiana_sim/guardianes.py         # los 8 en verde antes de cerrar nada
 > ```
 > Los números de esta nota pueden haber envejecido. Los de los generados, no.
 
-## Dónde estamos (2026-08-17)
+## Dónde estamos (2026-08-31)
 
-Tres días de minería intensa dejaron el proyecto con **más hallazgos de los que
-se han fusionado**. La bandeja mide esa distancia: **~1.256 ítems en cola** y
-**6 issues redactados sin publicar**. El motor no se ha tocado; el canon
-tampoco. Todo lo nuevo vive en `6-fusion/` esperando decisión humana.
+La sesión del 25-31 de agosto fue la más grande del proyecto: **el gate pasó
+de 2 a 5 condiciones en verde**. Miguel resolvió cinco decisiones —F1, D5
+(entera), D9, #101 y #109— en una tanda formal cuyo registro completo, con la
+evidencia de cada una, vive en `6-fusion/decisiones_tanda_2026-08-30.yaml`, y
+que aplicó al canon `curiana_sim/aplicar_tanda_08_30.py` (idempotente, con
+`--dry-run`; el patrón a seguir para futuras tandas).
 
-Lo que cambió de fondo en estos días:
+Lo que cambió de fondo:
 
-- **Hay OCR** (`ocr_fuente.py`), y con él dejaron de estar bloqueadas Gilij y
-  todo escaneo. Ver las trampas al final: es una herramienta que miente si no
-  se la usa bien.
-- **Está la tesis completa de Oliver** en `fuentes_caquetios/`, 801 páginas.
-  Contiene los capítulos que el repo no tenía (1 y 4) y **los apéndices**, que
-  eran #62.
-- **`6-fusion/` existe**: la etapa entre minar y canon, con su BANDEJA medida.
-  Nada valioso debe volver a morir en el scratchpad de una sesión.
+- **`-bana` = 'cerro, sitio alto', atestiguado** (D9 resuelta, seis apoyos).
+  `-ana` quedó al revés: forma atestiguada, glosa 'lugar de' EN DISPUTA (#109
+  abierto apuntando al censo de Esteves).
+- **D5 decidida entera**: lema fonémico con `forma_fuente` obligatorio,
+  cuatro pares c/k resueltos, `gu`→/w/ uniforme. ⚠️ **Lo puntual está
+  aplicado; la migración masiva de lemas NO** — es la fase 2 (ver B.2).
+- **La bibliografía pasó de 39 a 55 obras.** Entraron al repo con PDF: Morón
+  2012 (petroglifos), Antolínez 1946 (*Hacia el indio y su mundo*), Velasco
+  2015 (*Historia de una Resistencia*) y el texto de Castellanos ed. 1857.
+- **Aparecieron los primeros PRIMARIOS del s. XVI**: las cartas de Ampíes
+  (~1520) y Bastidas (1538) vía Velasco —Todariquiba, Hurihurebo, Myraca,
+  Gorybacoa, y Manaure que "se haze adorar... dando a entender que el da los
+  temporales"— y la **lista de las once ciudades** de Castellanos 1589
+  (`6-fusion/castellanos_1589_toponimos.yaml`).
+- **La única frase caquetía conocida estaba en el repo** sin que nadie la
+  viera como frase: la fórmula de salutación de Mitare (Zavala p. 73, dos
+  versiones). Su expediente: `6-fusion/frase_saludo_mitare.yaml`.
+- **La campaña de topónimos de Falcón quedó montada**: bug de `forma`
+  arreglado (glosa_fuente 27→51 de 74), índice de Esteves como cola (182 por
+  procesar), esquema `lecturas` propuesto con la regla 0 de Miguel
+  (significado ≠ referente).
+- **Dos issues de método publicables**: repertorio-vs-filiación (el `caney`:
+  el lexicón contesta filiación y lo usamos como uso) y esquema-lecturas.
+- El colofón involuntario: **el caquetío atestiguado tiene CERO términos de
+  color** (`6-fusion/colores_caquetios.yaml`) — objetivo de minería definido.
 
----
-
-## A · Lo que espera a Miguel (bloquea todo lo demás)
-
-### A.1 · Publicar los 6 issues redactados
-
-Están en `6-fusion/issues-pendientes/`. El classifier de las sesiones no puede
-publicarlos; se hace a mano:
-
-```bash
-gh issue create --title "..." --label fidelidad,datos --body-file "6-fusion/issues-pendientes/ARCHIVO.md"
-gh issue comment 38 --body-file "6-fusion/issues-pendientes/comentario-d9-issue38.md"
-```
-
-| Archivo | Qué es |
-|---|---|
-| `comentario-d9-issue38.md` | D9: la segunda fuente (`kapu-bana` = *a hill*) y el rumbo que fijó Miguel |
-| `issue-hayo.md` | `hayo` está como caquetío-atestiguado y Oliver lo marca de Santa Marta |
-| `issue-caraota.md` | ídem con `icoroata` |
-| `comentario-52-mene.md` | #52: la glosa es **brea** ("pez derretida" = la pez, no un pescado) |
-| `comentario-51-kadushi.md` | #51: la salida es léxico **por especies**; en Punto Fijo el fruto es `dato` |
-| `issue-polity-en-el-corpus.md` | 🔴 el corpus dice cuánta certeza, no certeza **sobre quién** |
-
-### A.2 · Decisiones de canon pendientes
-
-1. **D9 (#38)** — no se declara glosa única hasta las dos sesiones de
-   topónimos. En la lista de revisión: **Cujicana, Carirubana, Mene Mauroa**
-   (y "Tropicana", que Miguel dictó y hay que confirmar).
-2. **Etiqueta de préstamo** para `hayo` y `caraota` — se mantienen como bienes
-   de contacto; falta el valor concreto, a coordinar con **#93**.
-3. **#92 · los 15 nodos del foco** — `6-fusion/nodos_foco_92.yaml`. Un
-   candidato a `precontacto: si` (FAL-101 La Maternidad), 5 `probable`.
-   Y aparte: confirmar el criterio de `borde` para los 83 sitios de la costa
-   occidental (¿misma polity?).
-4. **Campo `polity`** en el corpus (el issue A.1 lo argumenta).
-5. **#61** — ✅ editado 2026-08-14: el "apéndice de voces" del tomo IV de
-   Oviedo **no existe** en la ed. Amador de los Ríos (16 hits de "vocabulario"
-   = bibliografía ajena, p. 626). Aplicado en [[oviedo-y-valdes-1851]],
-   [[jahn-1927]] y [[03_creencia_caquetia]]. Tomo II **y** tomo IV están
-   libres en IA (enlaces en la nota). Falta cerrar el issue #61 en GitHub y
-   bajar el tomo II para intentar localizar *borattio* ahí en vez de en el IV.
-6. **`esteves-1989.md`** — el frontmatter dice `parcial` y "10 de 146 páginas";
-   el barrido cerró a 154.
+El gate hoy: **1 🟢 · 2 🟢 · 3 🟢 · 4 🟢 · 7 🟢** — faltan **6** (D1 y D3, sin
+preparar), **8** (D11, espera la A-7), y las dos no automedibles (**5** el
+muestreo F10 de Miguel, **9** el exportador #42).
 
 ---
 
-## B · La cola de minería, por rendimiento
+## A · Lo que espera a Miguel (nada bloquea, todo suma)
 
-### B.1 · Oliver §3.2.4 — los caribes  ← **lo siguiente**
+1. **El muestreo F10** — verificar ~15-20 citas del corpus al azar (que la
+   página exista y diga lo que el hecho afirma). Es la condición 5 del gate y
+   es trabajo humano por definición.
+2. **Publicar los 2 borradores** de `6-fusion/issues-pendientes/`:
+   `issue-repertorio-vs-filiacion.md` y `issue-esquema-lecturas-toponimos.md`
+   (`gh issue create --body-file ...`). Y **reescribir** el tercero
+   (`issue-pdfs-fuentes-aporte.md`): su premisa describe una wiki de fuentes
+   que se descartó el 08-24.
+3. **La decisión de una línea sobre repertorio** para el protocolo del run 1:
+   *"el run 1 se mide contra filiación, como decisión de modelado declarada;
+   repertorio queda para la era 2"* — o lo contrario. Sin esa línea, el run
+   queda medido con una vara que después puede parecer equivocada.
+4. **Compras físicas** (ver C).
 
-pp. impresas 223-230 = **pdf 250-257**. Es el estrato que Esteves atribuye a
-`Amuay`, `Elegüey`, `Maragüey`, `Jamaica` y `Maitiruma` — topónimos **de
-Paraguaná** en lengua no caquetía. El lexicón ya tiene `kalinago` (19 formas) y
-`kalinago-caribe-overlay` (4) donde encajarían. Pregunta concreta: ¿qué grupos
-caribes, dónde, y con qué contacto documentado?
+## B · La cola de trabajo, por rendimiento
 
-Pista suelta que espera: en la Tabla A-8, la entrada de 'luna' lleva la
-anotación **"Tamanaco"** — lengua caribe — dentro del vocabulario jirajarano.
+### B.1 · La serie Swadesh de Oliver (A-1 a A-7)  ← **arrancada el 2026-08-31**
 
-### B.2 · Las tablas de C-14 del capítulo 4
+**Progreso**: no era una tabla, eran **siete** — A-1 es el vocabulario añú
+completo de Wilbert (1958-59); **A-2 es LA tabla de D11**
+(guajiro·paraujano·lokono·island-carib·maipure); A-3..A-7 cubren el resto de
+la familia. Las filas clave están minadas por OCR (todas las páginas venían
+giradas 90°; `--rotar auto` las salvó): ver
+`6-fusion/tabla_a1_a7_swadesh.yaml`.
 
-**Table 15** es la de fechas dabajuroides (citada junto a `ISGS-1184`). Está
-por la zona de 4.12, impresas 435-473 = pdf 462-500. Ya se leyeron las del
-texto corrido (p. 440):
+- ✅ **La fila 53 (liver) VERIFICÓ el cognado de `bana₂`** — lokono `ebana`,
+  island-carib `*bana`, y la serie panarahuaca `*pana` entera.
+- ✅ **El paraujano de 1958 ya decía SPANISH** en verde/amarillo/blanco/negro:
+  la pérdida de los colores, documentada en el pariente costero más cercano.
+- 🔴 **El tapir NO está** (el Swadesh-100 no lo trae): la ruta de `kama` se
+  corrigió — candidatos: la A-1 completa, la fauna de van Buurt, Payne.
 
-```
-ISGS-1173  Túcua           A.D.  783-[944]-998
-ISGS-1255  Urumaco Temp.   A.D. 1164-[1257]-1279
-ISGS-1257  Urumaco Tardío  A.D. 1278-[1336]-1393
-```
+**Queda**: medir la extensión de la A-1 (hacia atrás de pdf 584), la cabecera
+de la A-5, y la **transcripción A OJO de la A-2 completa** (100 ítems × 5
+lenguas contra la imagen). Con la A-2 transcrita, D11 pasa de opinión a
+**medición**: emparejar las 226 formas atestiguadas contra cada columna con
+las reglas de D5 y ver a cuál se acercan más.
 
-Faltan **ISGS-1253, 1423 y 1424** (FAL-100), que son las que convertirían el
-primer `precontacto: si` continental en algo que no dependa de una muestra de
-superficie.
+### B.2 · Fase 2 de D5 — la migración de lemas
 
-### B.3 · La Tabla A-9 completa (Apéndice A, #62)
+La decisión está tomada; falta la obra: lema fonémico + `forma_fuente` en
+toda la familia caquetía, `gu`→/w/ en ~44 formas, y el paso de normalización
+en el pipeline de fusión (sin él, la BANDEJA reinyecta grafía colonial). Toca
+exporters, la wiki (`/kaketiana` debe mostrar ambas formas) y tests.
+**Obligatoria antes del run 1** — es el momento barato porque no hay runs
+post-auditoría que invalidar.
 
-Vocabulario caquetío del XVI, pp. impresas **593-594** = pdf 620-621.
-Transcritas 21 de ~50 entradas en `6-fusion/tabla_a9_oliver.yaml`. **El resto
-hay que leerlo a ojo**: el OCR no da la columna de formas con fiabilidad, y las
-**cursivas** (= no caquetío) no sobreviven. Miguel ya identificó las tres que
-hay: `icoroata`, `hayo`, `raporón`.
+### B.3 · Dossiers de D1 y D3 — la próxima tanda de decisiones
 
-### B.4 · La Tabla A-7 — léxico arahuaco comparado
+Prepararlas como se preparó D5: evidencia servida, opciones con contra, y
+Miguel decide una por una. D1 = el veto de la genealogía propuesta (#32);
+D3 = `normalizar_por_dialecto()`: cablearla o eliminarla (#34). Son lo único
+que queda de la condición 6.
 
-Mismo apéndice, ~impresas 585-590. Swadesh comparado con **Baure, Terena,
-Kinikinao, Campa, Machiguenga, Piro-Ipurina**, cada una con ubicación. Es la
-base que le falta al método comparativo del proyecto. Sin extraer.
+### B.4 · El exportador de runs (#42)
 
-### B.5 · Cruzar la Tabla A-8 con Jahn
+`export_runs_index.py` da 0 turnos para `20091e1f` con 290 respuestas.
+Sesión técnica contra Supabase local (puertos 64321/64322). Condición 9.
 
-`6-fusion/tabla_a8_jirajarano.yaml` tiene 33 entradas de jirajara/ayomán/cuyón.
-**Jahn 1927 cap. V** trae vocabularios de los últimos hablantes **ayamán y
-gayón** (~1880-1910). Son **dos registros independientes de las mismas lenguas
-separados por décadas**: se pueden contrastar.
+### B.5 · La campaña de topónimos
 
-### B.6 · Oliver §3.2.3 (chibchas), lo que falta
+Implementar `lecturas` en el esquema + `compilar_lengua.py`; retro-poblar
+las ~20 lecturas de la sesión (están en `toponimia_coro_espina.yaml`,
+`lengua_toponimia_quibacoa.yaml`, `petroglifos_y_manaure.yaml`,
+`velasco_primarios_agi.yaml`); y procesar la cola de 182 de
+`toponimos_esteves_indice.yaml`, cruzada con las once ciudades de Castellanos
+y los cinco de Bastidas. La auditoría de tildes va aquí (es lo que
+distinguiría `-ana` de `-aná` y decide #109).
 
-Extraído y minado solo en parte. Queda §3.3.2 (jirajaranos fuera de la esfera)
-y §3.3.3 (los chipas de Aroa).
+### B.6 · Oliver §3.2.4 — los caribes (pendiente desde la tanda anterior)
+
+pp. impresas 223-230 = pdf 250-257. El estrato que Esteves atribuye a Amuay,
+Elegüey, Maragüey, Jamaica y **Maitiruma** ('manantial azul', caribe
+insular). Pregunta: ¿qué grupos caribes, dónde, con qué contacto?
 
 ### B.7 · Campañas grandes, cuando haya hueco
 
-- **Topónimos**: los 413 de Esteves + los **134 sitios FAL** (que son topónimos
-  *con afiliación arqueológica*) + Codazzi 1841. Parsear con morfemas
-  atestiguados → predecir referente → verificar contra terreno. Resuelve D9.
-- **Fauna/flora contra ecología**: `ecologia_lexicon_map.md` tiene **30 HUECO**.
-  Fuentes ya minadas para cruzar: van Buurt (~100 voces con identificación
-  científica), el inventario del informante **Manaure** en Esteves, Alvarado.
-- **Dictado de Medina Colina** — protocolo y bitácora listos
-  (`4-fuentes/medina-colina-sxx.md`). Miguel lo hará junto a una revisión de
-  topónimos regionales.
-
----
+- **Auditoría del glosario de Zavala** entrada-por-entrada contra el lexicón
+  (el #29 `bara` se había escapado de un minado "completo"; medir cuántas
+  más). Barata: capa de texto en el repo.
+- **Fauna/flora contra ecología**: `ecologia_lexicon_map.md` tiene 30 HUECO.
+- **El filón del Boletín Antropológico** (ULA, nos. 50-101, acceso abierto):
+  ya localizados Zavala sobre los petroglifos de Chirache-Buenevara y el
+  "Panorama" de Morón. La vía de adquisición más barata que existe.
+- **La esfera ARTE** (`arte.yaml` + compilar_corpus): decidida el 08-25,
+  sin implementar. Material listo en `petroglifos_y_manaure.yaml` §7.
 
 ## C · Adquisiciones pendientes
 
 | Obra | Por qué | Estado |
 |---|---|---|
-| **van Koolwijk 1884**, *Bijdrage tot de taal der oude Indianen* | vocabulario indígena de las ABC recogido en campo **antes de 1900** — el mejor lead que hay | sin localizar |
-| **Martí 1969**, *Visita Pastoral* (7 tomos) | censó Paraguaná pueblo por pueblo en 1773 | solo papel |
-| **Galeoto Cey** (ed. 1995) | crónica 1539-53 con Manaure y "caquetíos = buena gente" | agotada; Miguel la compra |
-| **Tamers 1965** | fecha FAL-111 y FAL-154 (distinta de la de 1970, que sí tenemos) | sin localizar |
-| **Hartog 1961** | deportaciones de Aruba 1515/1526 | restringido en IA |
-| **Antczak, *Los ídolos de las islas prometidas*** | solo tenemos **la portada** (1 página) | buscar |
-| Oramas 1916 · Arcaya 1977 · Oliver 1984 | citados por las tablas jirajaranas y de C-14 | sin localizar |
+| **Arcaya, *Obra inédita y dispersa*** (CIHPMA-UNEFM 1995), **p. 247** | las DOS versiones originales de la fórmula de Mitare — el único fragmento de habla | vía CIHPMA/UNEFM; objetivo = una página |
+| **Brett Martínez, *Aquella Paraguaná*** (1971/1998) | etimologías locales de los pueblos de la península | ejemplar físico en Iberlibro (ficha en la nota) |
+| **Antczak & Antczak, *Los ídolos de las islas prometidas*** | la ruta de atestación de los cemíes (choque Antolínez↔Arcaya declarado) | solo tenemos la portada — prioridad subió |
+| **Galeoto Cey** (ed. 1995) | "esta lengua caquetía es la más bella... con muchos derivativos" — juicio morfológico de testigo | Miguel la compra |
+| **Acosta Saignes, *Estudios de etnología antigua*** (UCV 1961) | Manaure-como-dinastía con peso académico; ⚠️ verificar el matiz "de padres a hijos" (¿colonial?) | localizable |
+| **Antolínez, *Los ciclos de los dioses*** (1995) | donde encajaría "El Diao Manaure" completo | Oruga Luminosa, San Felipe |
+| **G. Morón, *Los orígenes históricos de Venezuela*** (1954) · *Los cronistas y la historia* (1957) | el siglo XVI con aparato; crítica de fuentes sobre Castellanos/Oviedo y Baños | bibliotecas |
+| **Mosonyi, *Hablemos… Idiomas Indígenas*** (2007) · **Bidó, *Voces del Bohío*** (2010) | lingüística moderna para D11; vocabulario taíno para repertorio | localizables |
+| **C. Morón, *Manaure: al filo de la eternidad*** (2007) · **Esteves 1988** · **Acasio 2013** | el libro entero sobre Manaure; el segundo Esteves; los petroglifos de Siraba | Casa Blanca/Lagoven/Punto Fijo |
+| van Koolwijk 1884 · Martí 1969 (7 t.) · Tamers 1965 · Hartog 1961 | (de la tanda anterior, siguen vigentes) | sin localizar / papel |
 
----
+## D · Trampas medidas esta tanda (leer antes de minar)
 
-## D · Trampas medidas estos días (leer antes de minar)
-
-**El OCR miente si no se le exige.** Tres fallos silenciosos, los tres ya
-resueltos en la herramienta pero que hay que saber que existen:
-
-1. **Páginas rotadas.** El Apéndice E devolvió 2.850 caracteres y **cero
-   sitios** porque la página venía a 90°. Un cero puede estar midiendo la
-   *orientación*, no el contenido. `--rotar auto` (por defecto) lo detecta y
-   **dice qué páginas giró**.
-2. **Tablas a dos columnas.** Sin `--psm 6`, glosas y formas se desalinean y
-   la mitad de las filas se pierden. Pasó con la lista de sitios y con la
-   Tabla A-8.
-3. **Más dpi no siempre es mejor.** A 600 se recuperó la cabecera de la Tabla
-   A-9 pero se perdieron filas que sí salían a 400. **Correr las dos y fundir.**
-
-**El OCR localiza la página; la cita se saca de la imagen.** Sobre todo en
-nombres propios, topónimos y palabras indígenas — que es donde falla más y
-donde el proyecto no puede permitirse el error.
-
-### Desfases calibrados (no recalcular)
-
-| Fuente | offset | Comprobado en |
-|---|---|---|
-| Tesis de Oliver (UCL) | **−27** | pdf 586 = impresa 559 |
-| Gilij vol. 1 | **−52** | pdf 120 = impresa 68 |
-
-⚠️ Los vols. 3 y 4 de Gilij **no están calibrados**: repetir por volumen.
-
-### Otras
-
-- **Los seis PDF de Esteves no tienen capa de texto** (250-450 chars/archivo).
-  El barrido de agosto se hizo por lectura de imagen; queda pendiente una
-  pasada de OCR de verificación.
-- **La ſ larga sale como `f`** en Gilij: buscar con la clase `[fs]`.
-- **`Caquet´ıo`** con acentos descompuestos en PDF de ResearchGate: `grep
-  Caquetío` da cero, `grep -i caquet` da 19.
-
----
+1. **Un cero sobre nombre propio colonial exige permutar TODAS las vocales
+   interiores, no solo las iniciales.** El grep del 08-14 probó
+   `jurijureb/hurihureb/jurijure/urihure` y concluyó que Castellanos no traía
+   el topónimo. La grafía real era `Hurehurebo` — con **e** — y estaba, con
+   la lista de once ciudades al lado. La conclusión vivió 11 días siendo
+   falsa. (El mismo error ocultó `coques` detrás de `koke`.)
+2. **El merge de un PR congela la rama en ese commit.** El #110 se mergeó a
+   mitad de sesión y los 10 commits empujados después quedaron fuera de main
+   — y el checkout posterior los borró del disco. Nada se perdió (estaban en
+   la rama), pero costó un rescate. Si se sigue trabajando tras abrir un PR,
+   avisar antes de mergear.
+3. **Autores regionales: la cita documental entra, la deducción no.** A
+   González Batista se le refutaron `hure`='arena' y `corocoro`='espinas'; a
+   Antolínez, `ma`='grande' y el étimo de Capo — siempre con las fuentes que
+   ellos mismos citan. El método es atestación contra inferencia, no
+   autoridad contra autoridad.
+4. **La consola y los guardas del harness**: el guard de PowerShell bloquea
+   comandos cuyo TEXTO contenga rutas tipo `/s/` o `/w/` (aunque sean glosas
+   fonémicas en un here-string) — para contenido con fonémica, escribir a
+   archivo con Write y pasar `--body-file`. Y el Bash puede perder el PATH a
+   mitad de sesión: PowerShell es el plan B.
 
 ## E · Lo que NO hay que hacer
 
-- **No tocar** `curiana_lexicon.py`, `3-mundo/corpus/*.yaml` ni
-  `asentamientos.yaml` en una minería. Propuesta a `6-fusion/` (regla 5).
-- **No mover los `lexicon_*.py`** de `curiana_sim/`: el tooling los importa
-  (`generar_tablero`, `auditar_82`, `migrar_toponimos`).
-- **No traer material mesoamericano ni andino** sin vínculo arahuaco explícito.
-  Ya se descartó un lote entero por eso: la carpeta externa
-  `Curiana Radio/Fuentes` se trió el 2026-08-14 y de ~27 obras solo valían dos,
-  que ya están dentro. Lo que queda ahí no hay que volver a abrirlo.
-- **No dar por caquetío** lo que salga de Barquisimeto, Yaracuy o los Llanos:
-  Oliver §3.8 documenta que son polities distintas. Es el issue A.1 abierto.
+- **No tocar el canon fuera de un aplicador.** El patrón que funcionó:
+  decisiones registradas en `6-fusion/decisiones_tanda_*.yaml` → un
+  `aplicar_tanda_*.py` idempotente con `--dry-run` → guardianes → commit.
+- **No aplicar `h`→∅ ni `ce/ci`→/s/**: quedaron DISPUTADAS en D5
+  (`Hurehurebo`~`Jurijurebo` da h~j pero `Hacarigua`~`Acarigua` da h~∅).
+- **No regenerar `lexicon_zavala.py` sin fusionar/excluir el #89** (`coques`
+  quedó fusionada en `koke`; la regeneración ingenua resucita el duplicado).
+- **No importar el matiz patrilineal de Acosta Saignes sin resolverlo**
+  contra el canon matrilineal (regla 3; ver antolinez-1944-manaure.md).
+- **No dar por caquetío** lo de Barquisimeto, Yaracuy o los Llanos: el
+  material de Brito Figueroa/Federmann vive en
+  `polities_no_costeras_federmann.yaml` con su `polity` declarada, y ahí se
+  queda salvo decisión.
+- Las trampas de OCR y desfases de la tanda anterior siguen vigentes
+  (offset Oliver **−27**, Gilij vol.1 **−52**, `--psm 6`, dos dpi y fundir).
 
 ## Enlaces
 
 [[TABLERO]] · [[BANDEJA]] · [[CRONICA]] · [[PLAN_MAESTRO]] ·
-[[oliver-1989-cap3-vecinos]] · [[oliver-1989-apendice-a]] · [[esteves-1989]]
+`6-fusion/decisiones_tanda_2026-08-30.yaml` ·
+[[velasco-2015-resistencia]] · [[gonzalez-batista-nombre-de-coro]] ·
+[[moron-2012-petroglifos]] · [[antolinez-1946-hacia-el-indio]]

@@ -1,0 +1,129 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — la serie Swadesh del Apéndice A de Oliver (Tablas A-1 a A-7)
+#
+# Minada el 2026-08-31 (B.1 de SIGUIENTE_TANDA). OCR con ocr_fuente.py
+# (--lang eng --dpi 400 --psm 6; las ~30 páginas venían giradas 90° y
+# --rotar auto las enderezó). Ventanas: pdf 584-621 (impresas ~557-594,
+# offset -27).
+#
+# ⚠️ REGLA DE LA HERRAMIENTA: esto es OCR, no transcripción. Cada forma de
+# abajo es PISTA para llegar a la página, nunca cita. Antes de fusionar nada
+# al canon, verificar contra la imagen. Los nombres de lengua ya salieron
+# garblados (GUAJTRO, MATPURE) — las formas indígenas sufrirán igual.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-08-31'
+  estado: sin-fusionar — filas clave minadas; la transcripción completa es trabajo a ojo
+  obra: oliver-1989-apendice-a
+
+# ══════════════════════════════════════════════════════════════════
+# 1. LA ESTRUCTURA DE LA SERIE — lo que nadie había mapeado
+# ══════════════════════════════════════════════════════════════════
+estructura:
+  descripcion: >-
+    "SWADESH'S 100 BASIC VOCABULARY LIST: COMPARATIVE ARAWAKAN LEXICON" no es
+    una tabla sino SIETE, cada una con ~5 lenguas en columnas y los 100 ítems
+    en filas, repartidas en varias páginas apaisadas por tabla.
+  tablas:
+    - {tabla: A-1, contenido: "Paraujano Vocabulary from 1958-59 (courtesy of Johannes Wilbert)", nota: "⭐ NO es Swadesh: vocabulario paraujano (añú) COMPLETO — el pariente costero vivo más cercano al caquetío. Arranca antes de pdf 584; extensión hacia atrás sin medir"}
+    - {tabla: A-2, lenguas: "GUAJIRO · PARAUJANO · ARAWAK (lokono) · ISLAND-CARIB · MAIPURE", nota: "⭐⭐ LA TABLA DE D11: el norte costero completo", pdf: "~588-595"}
+    - {tabla: A-3, lenguas: "ACHAGUA · PIAPOCO (Dzase) · GUAREQUENA · YAVITERO · MANDAUACA", nota: "Río Negro / Orinoco", pdf: "~595-600"}
+    - {tabla: A-4, lenguas: "NEWIKI (WAKUENAI): dialectos Karru, Kurripaco, Ñame, Eh-en, Oh-on", pdf: "~600-604"}
+    - {tabla: A-5, lenguas: "(cabecera por leer a ojo — 5 columnas más)", pdf: "~604-608"}
+    - {tabla: A-6, lenguas: "MANAO · BARE · WAPISHIANA · CAUYARI (Cabiyari)", pdf: "~608-612"}
+    - {tabla: A-7, lenguas: "BAURE · TERENA · KINIKINAO · CAMPA · MACHIGUENGA · PIRO-APURINÃ", nota: "el sur pre-andino", pdf: "~612-617"}
+  correccion_a_siguiente_tanda: >-
+    La nota B.4 de la tanda vieja decía "Tabla A-7 — léxico arahuaco
+    comparado... la base que le falta al método comparativo". Era la serie
+    entera A-1..A-7, y la que más importa para D11 es la A-2, no la A-7.
+
+# ══════════════════════════════════════════════════════════════════
+# 2. ✅ LA FILA 53 (liver) — el cognado de bana-2 'hígado', VERIFICADO
+# ══════════════════════════════════════════════════════════════════
+fila_53_liver:
+  resultado: >-
+    ⭐⭐ La verificación que D9 dejó pendiente queda HECHA: el cognado de
+    `bana` 'hígado' existe en toda la familia, con el reflejo lokono/insular
+    en b- exactamente como el lexicón reconstruía.
+  formas_ocr:
+    - {tabla: A-2, guajiro: "apa'na", paraujano: "—", arawak_lokono: "ebana (vid. #25)", island_carib: "*bana (vid. #25)", maipure: "—"}
+    - {tabla: A-3, achagua: "panesri", piapoco: "nu-pana", guarequena: "pa-karetana", mandauaca: "nu-upana"}
+    - {tabla: A-5, formas: "eperon/teperrena · apakana · apakona · iranatare · iriraapanatsi · hopna (-pana)"}
+    - {tabla: A-6, formas: "nu-shupana · nu-shupana · nu-shupana · ri-kabare · ri-shupana"}
+    - {tabla: A-7, formas: "kuba/un-kuba · -upana"}
+  lectura: >-
+    Serie panarahuaca *pana 'hígado', con reflejos en b (lokono ebana, IC
+    *bana) en la rama norte-costera. bana-2 'hígado' (caquetío-reconstruido)
+    queda con base comparativa sólida; la homonimia con bana-1 'cerro'
+    (atestiguado) se sostiene sin tensión.
+  accion: actualizar la nota de `bana` en el lexicón vía el aplicador (hecho en esta sesión).
+
+# ══════════════════════════════════════════════════════════════════
+# 3. 🔴 EL TAPIR NO ESTÁ — la ruta de kama era errónea
+# ══════════════════════════════════════════════════════════════════
+tapir:
+  hallazgo: >-
+    El Swadesh-100 NO incluye 'tapir': la ruta de rehabilitación que la
+    decisión F1 le puso a `kama` ("verificar en la fila tapir de la A-7")
+    apuntaba a una fila que no existe.
+  ruta_corregida: >-
+    Candidatos reales para el cognado *kema: (1) el vocabulario paraujano
+    COMPLETO de Wilbert en la A-1 (no es Swadesh, puede traer fauna — su
+    extensión hacia atrás de pdf 584 está sin medir); (2) fuentes léxicas de
+    fauna (van Buurt tiene ~100 voces con identificación científica);
+    (3) literatura comparativa arahuaca externa (Payne). La nota de `kama`
+    en el lexicón se corrige vía el aplicador (hecho en esta sesión).
+
+# ══════════════════════════════════════════════════════════════════
+# 4. ⭐ LOS COLORES — la base comparativa para el cero caquetío
+# ══════════════════════════════════════════════════════════════════
+colores:
+  contexto: >-
+    El caquetío atestiguado tiene CERO términos de color
+    (colores_caquetios.yaml). Estas filas son la base comparativa para
+    reconstruir — y traen un hallazgo histórico aparte.
+  hallazgo_paraujano: >-
+    ⭐⭐ En la A-2, la columna PARAUJANO dice «SPANISH» en green, yellow,
+    white y black: para 1958-59 el paraujano ya había PERDIDO sus términos de
+    color nativos. La pérdida de los colores está documentada en el pariente
+    costero más cercano — el cero caquetío deja de ser anomalía y pasa a ser
+    patrón areal de sustitución. (Registrar también en colores_caquetios.)
+  filas_ocr:
+    - item: "87/82. red"
+      a2: "guajiro isho- · paraujano jebapar(?) · lokono kare(e)-funa(?) · IC cayumeni/kayumeni"
+      a5: "poti(-ye-i) · kiyaul/giyani · wir/(anato)(?) · kira"
+      a6: "*noseregan · kiraari"
+      nota_oliver: "⭐ Oliver anota: «'anato'/'onoto' Carib borrowing (Bixa orellana-red)» — el onoto/bija como préstamo CARIBE. Toca la entrada bixa (taíno) del lexicón y el pigmento bariki"
+    - item: "83/88. green"
+      a2: "guajiro wültV- · paraujano SPANISH · lokono (imoro-) · IC uri-gi (vid. #91)"
+      a5: "*buhurent(?) · kuli"
+    - item: "89. yellow"
+      a2: "guajiro maloukatu(shi/-su) · paraujano SPANISH · lokono (hehe-) · IC dumari · maipure ewakini"
+      a3: "merrekey · eebert · wisull/*uisutu · teuami · ulsope"
+      a4: "tewali · tewari · ewaperi/iriperi · ewadari"
+      a6: "ewa-dari · ewa-dari · ewa-ka · iRai-ka"
+      lectura: "serie *ewa- muy extendida (ewadari/ewakini/ewaperi); el lokono hehe- casa con el hehen 'amarillo' del lexicón"
+    - item: "90. white"
+      a2: "guajiro kasu-(shi/-su) · paraujano SPANISH · lokono harira- · IC haru- · maipure marikini"
+      a4: "alili · arird · haremanuka · haredari"
+      a6: "hare-dari · hare-dari · hare-ka · aari-kani"
+      lectura: "dos series: *hare- (lokono harira, IC haru, haredari...) y el guajiro kasu- — que casa con kasuta 'blanco' del lexicón"
+    - item: "91. black"
+      a2: "guajiro mutsia · paraujano SPANISH · lokono khareme-/*keremero · IC uri · maipure kurikini"
+      a4: "srecreli · tsereri · padaumanuka · itadari"
+      a6: "ita-dari · ita-dari · tta-ka · kaida-ka"
+      lectura: "el guajiro mutsia casa con mütsia/mütsiiya del lexicón; lokono khareme ~ kharemero"
+  uso: >-
+    Con la A-2 el proyecto puede por fin plantear colores
+    caquetío-reconstruidos con base declarada — y la elección de serie
+    (¿kasu- guajiro o *hare- lokono para 'blanco'?) es un caso de prueba de
+    D11 en miniatura.
+
+# ══════════════════════════════════════════════════════════════════
+# 5. LO QUE QUEDA DE LA SERIE
+# ══════════════════════════════════════════════════════════════════
+pendiente:
+  - "Medir la extensión de la A-1 (hacia atrás de pdf 584) y minarla entera: es el vocabulario añú de Wilbert — fauna incluida, quizá el tapir"
+  - "Leer a ojo la cabecera de la A-5 (5 lenguas sin identificar en el OCR)"
+  - "La transcripción completa de la A-2 (100 ítems × 5 lenguas) A OJO contra la imagen — es LA tabla de D11: con ella se computa la cercanía del caquetío atestiguado (226 formas) a cada columna"
+  - "El plan de cómputo para D11: emparejar las 226 formas atestiguadas contra las columnas guajiro/lokono de la A-2 con las reglas fonémicas de D5, y medir a cuál se acercan más — eso convierte D11 de opinión en medición"

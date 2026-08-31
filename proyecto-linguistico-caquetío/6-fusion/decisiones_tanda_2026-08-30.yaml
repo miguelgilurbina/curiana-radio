@@ -176,3 +176,40 @@ ana:
     Trabajo, no decisión: censo de -ana/-aná en los topónimos de Esteves +
     auditoría de tildes (el acento es el rasgo que distingue). #109 queda
     abierto apuntando a ese censo.
+
+# ══════════════════════════════════════════════════════════════════
+# DECISIÓN 6 — D11 (#39): RUMBO FIJADO (la decisión formal queda abierta)
+# ══════════════════════════════════════════════════════════════════
+d11_rumbo:
+  estado: RUMBO FIJADO (2026-08-31) — el issue #39 sigue abierto hasta implementar
+  directiva_de_miguel: >-
+    "Sí o sí tenemos que rebalancear importando más lokono." Fijado tras ver
+    el cómputo (computo_d11_2026-08-31.yaml): las tres señales convergen en
+    que la capa atestiguada se inclina a lokono/insular, con fondo propio
+    considerable (11 de 24 sin pareja en ningún vecino).
+  implementacion_pendiente:
+    - >-
+      IMPORTAR LOKONO: identificar la fuente de las 227 actuales (las notas
+      citan Pet 1987) y ampliar desde ella o desde un diccionario lokono
+      completo. Candidatos a verificar: Pet 1987 (Lokono Dian), Bennett 1989
+      (Arawak-English Dictionary), de Goeje 1928. La importación entra por
+      6-fusion como todas (regla 5) y con el paso de normalización de D5.
+    - >-
+      ⭐ LA COLUMNA AÑÚ/PARAUJANO: el lexicón tiene CERO entradas del
+      pariente costero más cercano — medido 2026-08-31. Crear la categoría
+      `paraujano` y poblarla: (1) la Tabla A-1 de Oliver ES la hoja de campo
+      manuscrita de Wilbert 1958-59 (pdf 587, parcialmente legible a ojo:
+      wapaua 'hígado' — otra vez *pana —, tou 'ojo', anyu 'gente' = el
+      autónimo, haiti 'lluvia', moi 'arena', wabih 'camino'); (2) la columna
+      paraujano de la A-2 ya transcrita; (3) adquisición a verificar:
+      Marie-France Patte, la especialista del añú (¿*Parlons Añun*?), y el
+      material de revitalización de Sinamaica.
+    - >-
+      Al importar, mantener el sesgo declarado del cómputo: lo que entre no
+      redefine el núcleo reconstruido sin decisión aparte — las tres opciones
+      del comentario de #39 (rebalancear/re-etiquetar/repertorio) no son
+      excluyentes y (a) ya está fijada; (b) y (c) siguen abiertas.
+  nota: >-
+    El paraujano de Wilbert ya mostraba SPANISH en los colores en 1958: el
+    añú es también un ESPEJO de lo que le pasó al caquetío — documentar su
+    pérdida es documentar el patrón areal.

@@ -58,7 +58,7 @@ CAMPOS = {
     # ── F1 ──
     "kama": {
         "fuente": "caquetío-hipotético",
-        "notas": "Decisión F1 (tanda 2026-08-30) — DEGRADADA: SIN_RASTRO real en las cuatro minerías (auditar_82); el lokono usa otra raíz (firobero). Candidata a reconstruido vía cognado proto-arahuaco *kema: verificar en la fila tapir de la Tabla A-7 de Oliver (Swadesh comparado, sin extraer) — si aparece, sube con cita",
+        "notas": "Decisión F1 (tanda 2026-08-30) — DEGRADADA: SIN_RASTRO real en las cuatro minerías (auditar_82); el lokono usa otra raíz (firobero). Candidata a reconstruido vía cognado proto-arahuaco *kema. RUTA CORREGIDA 2026-08-31: el Swadesh-100 de Oliver NO trae tapir (medido al minar la serie A-1..A-7); candidatos reales: el vocabulario paraujano completo de Wilbert (Tabla A-1), las voces de fauna de van Buurt, o la comparativa externa (Payne). Ver 6-fusion/tabla_a1_a7_swadesh.yaml",
     },
     "wabarsure": {
         "fuente": "caquetío-reconstruido",
@@ -100,10 +100,13 @@ BANA_NUEVA = (
     "caquetío-ATESTIGUADO (%s #26 «Bana (E): Sitio, cerro alto»; composición "
     "capu+bana = «duende del cerro» #61; el cerro de Santa Ana se llamaba Cerro "
     "de Capú). Esta entrada es bana-2 hígado, reconstruida por cognado lokono "
-    "(Pet 1987: bana, bana-ha) — verificar el cognado en la fila liver de la "
-    "Tabla A-7. El morfema toponímico -bana vive en morfologia.md y "
-    "morfemas.yaml. Saneado de paso un bug latente: la entrada traía dos claves "
-    'notas y la segunda pisaba a la primera"'
+    "(Pet 1987: bana, bana-ha) — COGNADO VERIFICADO 2026-08-31 en la serie "
+    "Swadesh de Oliver, fila 53 liver: lokono ebana, island-carib *bana, "
+    "guajiro apa-na, y la serie panarahuaca *pana entera (nu-pana, nu-shupana, "
+    "-upana, apakana...; ver 6-fusion/tabla_a1_a7_swadesh.yaml). El morfema "
+    "toponímico -bana vive en morfologia.md y morfemas.yaml. Saneado de paso un "
+    "bug latente: la entrada traía dos claves notas y la segunda pisaba a la "
+    'primera"'
 ) % (BANA_MARCADOR, Z)
 
 # ── D5b: `buco` sale (absorbida por `buko`) ──
@@ -162,11 +165,16 @@ def aplicar_campos(contenido, tabla):
 
 
 def reescribir_bana(contenido):
-    """D9: una sola clave `notas`, con la homonimia declarada. Idempotente."""
+    """D9: una sola clave `notas`, con la homonimia declarada. Idempotente.
+
+    La marca de "ya hecho" es la ÚLTIMA frase distintiva del texto vigente
+    (no el marcador genérico): así una edición posterior de BANA_NUEVA
+    —como la verificación del cognado del 08-31— se aplica sobre la versión
+    anterior en vez de saltársela."""
     m = _entrada(contenido, "bana")
     if not m:
         return contenido, "⚠ bana NO ENCONTRADA"
-    if BANA_MARCADOR in m.group(2):
+    if "COGNADO VERIFICADO" in m.group(2):
         return contenido, "ya estaba"
     nuevo = m.group(1).rstrip("{") + "{\n        " + BANA_NUEVA + "\n    " + m.group(3)
     contenido = contenido[:m.start()] + nuevo + contenido[m.end():]
