@@ -1,0 +1,187 @@
+# ─────────────────────────────────────────────────────────────────────────
+# TRANSCRIPCIÓN — Tabla A-2 de Oliver 1989: Swadesh-100 comparado del norte
+#
+# Oliver 1989, Apéndice A, pp. impresas 561-565 (pdf 588-592, offset −27).
+# Columnas: GUAJIRO (Wayu, Guajira P.) · PARAUJANO (Añu, Sinamaica) ·
+# ARAWAK (Lokono, Guyanas/Surinam) · ISLAND-CARIB ("Eieri",
+# Antillas-Honduras) · MAIPURE (Waminari, Orinoco).
+#
+# MÉTODO (doble extracción, 2026-08-31): lectura A OJO de las cinco páginas
+# renderizadas a 200dpi (protocolo del proyecto) + OCR tesseract 400dpi como
+# contraste. Donde el ojo dudó hay «(?)». Los apóstrofos son glotales del
+# original; las subrayadas del original van sin marcar (limitación nuestra).
+# «---» = celda vacía en el original. Palabras en MAYÚSCULA (SPANISH, CARIB,
+# KARIB, AFRICANISM) son anotaciones DE OLIVER marcando préstamo.
+#
+# ⚠️ Esto ES transcripción (a ojo), no OCR — pero de una fotocopia de tesis:
+# para citar una forma en el canon, verificar la celda contra la imagen
+# (scratchpad/oliver_p588-592.png en la sesión; regenerables con offset −27).
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-08-31'
+  estado: transcrita — pendiente de segunda pasada de verificación por Miguel
+  obra: oliver-1989-apendice-a
+  paginas_impresas: "561-565"
+  columnas: [guajiro, paraujano, arawak_lokono, island_carib, maipure]
+
+items:
+  - {n: 1,  gloss: I,        guajiro: "taya'", paraujano: "te-/ta-", lokono: "*day/dei/dai", ic: "nu-guia", maipure: "nu-ya"}
+  - {n: 2,  gloss: thou,     guajiro: "pia'", paraujano: "pia", lokono: "bii", ic: "hu-guia", maipure: "p-ia"}
+  - {n: 3,  gloss: we,       guajiro: "waya'", paraujano: "we-/wegani", lokono: "oai/oei", ic: "ua-gia", maipure: "wa-ya"}
+  - {n: 4,  gloss: this,     guajiro: "chia'/chi'-/tu-", paraujano: "chi/(tyi)", lokono: "tho(h)o/li(h)i", ic: "tua/lia", maipure: "ia (masc.) / yuya (fem.)"}
+  - {n: 5,  gloss: that,     guajiro: "chia'/tuya'", paraujano: "shira", lokono: "thora(h)a/lira(h)a", ic: "tura/lira", maipure: "vid. n4"}
+  - {n: 6,  gloss: who,      guajiro: "jana'/jarrai", paraujano: "---", lokono: "halikan", ic: "ka/kata-", maipure: "iti (?)"}
+  - {n: 7,  gloss: what,     guajiro: "kasa'/jetshi/jama'", paraujano: "keeti", lokono: "hamaha", ic: "ka/kaka-", maipure: "---"}
+  - {n: 8,  gloss: not,      guajiro: "nojo", paraujano: "nou-/nawa", lokono: "kho(ro)", ic: "(ma-)", maipure: "nuka-/-maka · ma-/-pama"}
+  - {n: 9,  gloss: all,      guajiro: "apu'shua/uta'muinreya", paraujano: "hikiko", lokono: "*tumakua/hara-", ic: "su-gubai", maipure: "ununa"}
+  - {n: 10, gloss: many,     guajiro: "mainma/wainma", paraujano: "kaaya/kaije", lokono: "io(h)o", ic: "gibe", maipure: "---"}
+  - {n: 11, gloss: one,      guajiro: "wane", paraujano: "manei", lokono: "aba-", ic: "abana", maipure: "piau (=first) · pakiata (=one, each)"}
+  - {n: 12, gloss: two,      guajiro: "piama", paraujano: "pimu/pimi", lokono: "biama/bian", ic: "biama", maipure: "pina"}
+  - {n: 13, gloss: big,      guajiro: "muleu", paraujano: "youghe", lokono: "(i)firo/(i)fili-", ic: "uairi", maipure: "---"}
+  - {n: 14, gloss: long,     guajiro: "muleu", paraujano: "you", lokono: "oadi-", ic: "CARIB", maipure: "---"}
+  - {n: 15, gloss: small,    guajiro: "motaayui (-chon) (?)", paraujano: "jeddiga", lokono: "ibi-/sioko-", ic: "niorao", maipure: "---"}
+  - {n: 16, gloss: woman,    guajiro: "erruni/jie'rru · eiyetse", paraujano: "hniere/ñerika · añukar", lokono: "hiaro", ic: "hiaru", maipure: "---"}
+  - {n: 17, gloss: man,      guajiro: "tolo/achini/t-echin", paraujano: "eichire", lokono: "oadili", ic: "eieri/*iñeri", maipure: "kayarrikini"}
+  - {n: 18, gloss: person,   guajiro: "wayu", paraujano: "añu", lokono: "loko · kakitho", ic: "AFRICANISM", maipure: "nu-minari · kamonee (=people)"}
+  - {n: 19, gloss: fish,     guajiro: "jime'", paraujano: "(oih) SPECIES", lokono: "hime", ic: "KARIB", maipure: "timaki"}
+  - {n: 20, gloss: bird,     guajiro: "wuchi", paraujano: "SPANISH", lokono: "kodibio", ic: "KARIB", maipure: "siu"}
+  - {n: 21, gloss: dog,      guajiro: "SPANISH (*-eri)", paraujano: "SPANISH (y-eri)", lokono: "SPANISH", ic: "auli", maipure: "auri"}
+  - {n: 22, gloss: louse,    guajiro: "mapui", paraujano: "---", lokono: "ichi/-ie", ic: "ie", maipure: "---"}
+  - {n: 23, gloss: tree,     guajiro: "ouulia/mojui · wunuu (=stick)", paraujano: "jinghi/jiki", lokono: "ada · kunnuku (=stick)", ic: "---", maipure: "aa · aama (=woods)"}
+  - {n: 24, gloss: seed,     guajiro: "auu · asi (=flower)", paraujano: "---", lokono: "isii/-si", ic: "arabu (=woods) · tii/tila", maipure: "---"}
+  - {n: 25, gloss: leaf,     guajiro: "apana", paraujano: "---", lokono: "adobona/-bana", ic: "-bana", maipure: "---"}
+  - {n: 26, gloss: root,     guajiro: "ourrala", paraujano: "---", lokono: "iikirahi/-ikira", ic: "-ilagola", maipure: "---"}
+  - {n: 27, gloss: bark,     guajiro: "ata", paraujano: "jundo (=cuero)", lokono: "adada/-da", ic: "-ura", maipure: "---"}
+  - {n: 28, gloss: skin,     guajiro: "ata", paraujano: "jundo (=cuero)", lokono: "ida/-da", ic: "-ura", maipure: "---"}
+  - {n: 29, gloss: flesh,    guajiro: "eirru'ku", paraujano: "---", lokono: "sirokoho/-siroko", ic: "-orogoro", maipure: "---"}
+  - {n: 30, gloss: blood,    guajiro: "asha/isha'", paraujano: "---", lokono: "ithihi/-china (?)", ic: "hitao/-ita", maipure: "---"}
+  - {n: 31, gloss: bone,     guajiro: "eipuse/jipu", paraujano: "---", lokono: "ahonaha/-bona", ic: "-abu", maipure: "---"}
+  - {n: 32, gloss: fat,      guajiro: "kausishi/ausi (?)", paraujano: "kougdo (?) (=gordo?)", lokono: "iki(h)i (vid. n25)", ic: "-agole", maipure: "---"}
+  - {n: 33, gloss: egg,      guajiro: "ashu'ku", paraujano: "---", lokono: "kodibiosa/-sa (vid. n20)", ic: "tii (vid. n24)", maipure: "---"}
+  - {n: 34, gloss: horn,     guajiro: "oua", paraujano: "---", lokono: "*tukua/-(o)koa", ic: "arigari", maipure: "---"}
+  - {n: 35, gloss: tail,     guajiro: "asi/jusi", paraujano: "---", lokono: "i(h)itoko/-i(h)i", ic: "-ili", maipure: "---"}
+  - {n: 36, gloss: feather,  guajiro: "oiua/jai", paraujano: "---", lokono: "(o)bara/-hara (?)", ic: "-bana (vid. n25)", maipure: "---"}
+  - {n: 37, gloss: hair,     guajiro: "wala'shi/tawa'la", paraujano: "tawala", lokono: "(o)bara/-bara", ic: "-idiburi/-iu", maipure: "---"}
+  - {n: 38, gloss: head,     guajiro: "ekiwa/ekiwi", paraujano: "taki/-ki", lokono: "*dasi/isii/-si/sin", ic: "icogo/icigo", maipure: "nu-kibuku"}
+  - {n: 39, gloss: ear,      guajiro: "acheeua (?)", paraujano: "tachoo (ch=ty)", lokono: "*dike/-dike/-koioko", ic: "arigari (vid. n34)", maipure: "nu-akini"}
+  - {n: 40, gloss: eye,      guajiro: "ouuu/ouua (?)", paraujano: "tou", lokono: "*dacusi/-kosi", ic: "-agu", maipure: "nu-puriki"}
+  - {n: 41, gloss: nose,     guajiro: "eichi/teichi'", paraujano: "teiyi", lokono: "sirihi/siri", ic: "igiri", maipure: "nu-kirri"}
+  - {n: 42, gloss: mouth,    guajiro: "anuku", paraujano: "tounaga", lokono: "-reroko", ic: "-iuma", maipure: "nu-numa-ku"}
+  - {n: 43, gloss: tooth,    guajiro: "aiua/ali", paraujano: "tai", lokono: "arii/-ari", ic: "-ari", maipure: "n-ati"}
+  - {n: 44, gloss: tongue,   guajiro: "ayewa/ayeua", paraujano: "tehenye/-weña", lokono: "*daiya/-iee", ic: "-ieie", maipure: "nu-are"}
+  - {n: 45, gloss: claw,     guajiro: "apa'touscha", paraujano: "jiyi", lokono: "-bada", ic: "-(u)bara", maipure: "---"}
+  - {n: 46, gloss: foot,     guajiro: "ouuiua", paraujano: "tapat", lokono: "*dacuti/-koti", ic: "-(u)gudi", maipure: "nu-kii"}
+  - {n: 47, gloss: knee,     guajiro: "asa'pain (-pani)", paraujano: "tai otroh (?)", lokono: "*dacuruji/-koro · *-culu-siba", ic: "-gacorogo", maipure: "nu-kumaraki"}
+  - {n: 48, gloss: hand,     guajiro: "aja'pu", paraujano: "tap/aapi", lokono: "*dacabu/-khabo", ic: "-(u)habu", maipure: "nu-kabi"}
+  - {n: 49, gloss: belly,    guajiro: "alee", paraujano: "tayu/hyure", lokono: "*dibeyu-/-dibeio/ite", ic: "-(u)ragai", maipure: "---"}
+  - {n: 50, gloss: neck,     guajiro: "anu'lu", paraujano: "togoin", lokono: "-noro", ic: "-igiina", maipure: "nu-inu"}
+  - {n: 51, gloss: breast,   guajiro: "achirra/aintowa", paraujano: "tayiri", lokono: "-dio", ic: "-uri", maipure: "---"}
+  - {n: 52, gloss: heart,    guajiro: "ain-i/ainwa", paraujano: "t-ein (=soul)", lokono: "-oasina/oloa/kakin", ic: "anigi", maipure: "nu-nikini"}
+  - {n: 53, gloss: liver,    guajiro: "apa'na (vid. n25)", paraujano: "---", lokono: "-bana (vid. n25)", ic: "-bana (vid. n25)", maipure: "---"}
+  - {n: 54, gloss: drink,    guajiro: "asa/onooto", paraujano: "hnooti (drank)", lokono: "(a)-thin/(a)-than", ic: "ata/gura-", maipure: "---"}
+  - {n: 55, gloss: eat,      guajiro: "eka", paraujano: "akina-tete (=going to...)", lokono: "(e)kin/khoton", ic: "aiga/hau-", maipure: "-eka-"}
+  - {n: 56, gloss: bite,     guajiro: "ojotta/apotsta", paraujano: "---", lokono: "ridin", ic: "ariha", maipure: "---"}
+  - {n: 57, gloss: see,      guajiro: "erra", paraujano: "---", lokono: "dikhin/*adikin", ic: "agoragua", maipure: "nu-ava"}
+  - {n: 58, gloss: hear,     guajiro: "apa", paraujano: "---", lokono: "kanabon/*kanabun", ic: "agaba", maipure: "---"}
+  - {n: 59, gloss: know,     guajiro: "e'rraja/atuja", paraujano: "---", lokono: "aithin", ic: "CARIB", maipure: "sekakuni (they...)"}
+  - {n: 60, gloss: sleep,    guajiro: "atunka", paraujano: "ata-mite (to be..)", lokono: "donkon/*adumka", ic: "arumuga", maipure: "---"}
+  - {n: 61, gloss: die,      guajiro: "outa", paraujano: "oikti (died)", lokono: "(h)odon/*ahudun", ic: "aue/hila", maipure: "-mava-"}
+  - {n: 62, gloss: kill,     guajiro: "outa ain-i (vid. n52+61)", paraujano: "---", lokono: "farin/*ap(h)aru-", ic: "afara", maipure: "(mia)kani"}
+  - {n: 63, gloss: swim,     guajiro: "katuna", paraujano: "ougda", lokono: "thimin/*at(h)imun", ic: "CARIB", maipure: "---"}
+  - {n: 64, gloss: fly,      guajiro: "awa'ta", paraujano: "---", lokono: "morodon", ic: "ahamara", maipure: "---"}
+  - {n: 65, gloss: walk,     guajiro: "ouna", paraujano: "---", lokono: "konan/*-kunna- · *iyahadun (=walk)", ic: "abuga", maipure: "---"}
+  - {n: 66, gloss: come,     guajiro: "se' · antaa' (arrive)", paraujano: "---", lokono: "andin · *andin (arrive)", ic: "CARIB", maipure: "---"}
+  - {n: 67, gloss: lie,      guajiro: "otolirra/apa'lasirra", paraujano: "---", lokono: "torodon", ic: "rau-", maipure: "---"}
+  - {n: 68, gloss: sit,      guajiro: "aikalaua", paraujano: "---", lokono: "balatin", ic: "niuru-/(n)iu", maipure: "---"}
+  - {n: 69, gloss: stand,    guajiro: "shawata", paraujano: "---", lokono: "dinamin", ic: "rarama", maipure: "---"}
+  - {n: 70, gloss: give,     guajiro: "apa (-ja/-ua)", paraujano: "---", lokono: "sikin", ic: "iciga/ru-", maipure: "-taa (gave to)"}
+  - {n: 71, gloss: say,      guajiro: "ma/maja/maja'ua", paraujano: "---", lokono: "akan/dian/man", ic: "erega/ariaga", maipure: "mayuke (le dijo) · -puku/-puriaka (hablo)"}
+  - {n: 72, gloss: sun,      guajiro: "kai'", paraujano: "kai/kei", lokono: "hadali", ic: "CARIB", maipure: "kie"}
+  - {n: 73, gloss: moon,     guajiro: "kashi'", paraujano: "keichare", lokono: "kathi", ic: "hati", maipure: "keyapi"}
+  - {n: 74, gloss: star,     guajiro: "shuli'wala", paraujano: "jatuge/hatuge", lokono: "oioa", ic: "uaruauma", maipure: "urrupu"}
+  - {n: 75, gloss: water,    guajiro: "wuin", paraujano: "win/winkari", lokono: "oniabo/-nia", ic: "CARIB", maipure: "ueni"}
+  - {n: 76, gloss: rain,     guajiro: "juya'/ouyase", paraujano: "wiagha", lokono: "oni", ic: "huia", maipure: "tia"}
+  - {n: 77, gloss: stone,    guajiro: "ipa", paraujano: "ipah", lokono: "siba/-siban", ic: "CARIB", maipure: "kipa"}
+  - {n: 78, gloss: sand,     guajiro: "jasai/wule'shi/muaku", paraujano: "mo", lokono: "mothoko", ic: "CARIB", maipure: "kaina"}
+  - {n: 79, gloss: earth,    guajiro: "mma'/ommani/tomain", paraujano: "mmo/mogho", lokono: "hororo/-orora", ic: "mua", maipure: "peni"}
+  - {n: 80, gloss: cloud,    guajiro: "sirru'ma", paraujano: "SPANISH", lokono: "oraro", ic: "huariu/ube(h)u", maipure: "tamana"}
+  - {n: "80b", gloss: sky,   guajiro: "aituu (=the blue..) · sirru'ma (=the white)", paraujano: "jirama", lokono: "kasako/*kasaku", ic: "ubehu", maipure: "---"}
+  - {n: 81, gloss: smoke,    guajiro: "sika'musala/aka'lirra/kaita", paraujano: "---", lokono: "koreeli/*kuleheli", ic: "gumulali", maipure: "---"}
+  - {n: 82, gloss: fire,     guajiro: "siki/asi'ma", paraujano: "chighe/chigiga", lokono: "jiki(h)i/-ihime", ic: "-ileme", maipure: "katti/kattirriti"}
+  - {n: 83, gloss: ash,      guajiro: "palii", paraujano: "---", lokono: "balisi", ic: "baligi", maipure: "mbalide"}
+  - {n: 84, gloss: burn,     guajiro: "aaja/joto/isha", paraujano: "---", lokono: "bithin/bithonoan · *tibittua", ic: "aguda", maipure: "---"}
+  - {n: 85, gloss: path,     guajiro: "wopu'/apu'na", paraujano: "wobu(h)", lokono: "oaboroko/abonaha", ic: "CARIB", maipure: "anepu"}
+  - {n: 86, gloss: mountain, guajiro: "uchi/kochooshi/kamu'nashi", paraujano: "utschi", lokono: "hororo sin (vid. 38+79)", ic: "CARIB", maipure: "yapa"}
+  - {n: 87, gloss: red,      guajiro: "isho-", paraujano: "jebagar", lokono: "kore(e)-", ic: "funa", maipure: "cayumeni/kayumeni"}
+  - {n: 88, gloss: green,    guajiro: "wuitV- (color of the water)", paraujano: "SPANISH", lokono: "(imoro-)", ic: "uri-gi (vid. n91)", maipure: "---"}
+  - {n: 89, gloss: yellow,   guajiro: "maloukatu-(shi/-su)", paraujano: "SPANISH", lokono: "(hehe-)", ic: "dumari", maipure: "ewakini"}
+  - {n: 90, gloss: white,    guajiro: "kasu-(shi/-su)", paraujano: "SPANISH", lokono: "harira-", ic: "haru-", maipure: "marikini"}
+  - {n: 91, gloss: black,    guajiro: "mutsia", paraujano: "SPANISH", lokono: "khareme-/*keremero", ic: "uri", maipure: "kurikini (blue=black)"}
+  - {n: 92, gloss: night,    guajiro: "ai/aipaa-", paraujano: "ayip", lokono: "orika/kasakoda", ic: "ariabu", maipure: "yatti"}
+  - {n: 93, gloss: hot,      guajiro: "jaii/jaiua · payu- (=warm)", paraujano: "---", lokono: "there- · orebe (=warm)", ic: "hara-/baca-/so", maipure: "---"}
+  - {n: 94, gloss: cold,     guajiro: "jemiai", paraujano: "---", lokono: "mimili-", ic: "dili-", maipure: "---"}
+  - {n: 95, gloss: full,     guajiro: "woto (of solids) · pirra' (of liquid)", paraujano: "---", lokono: "(h)ebe-/*-ibe-/*-ebe-", ic: "bui-", maipure: "---"}
+  - {n: 96, gloss: new,      guajiro: "achi'ki/juchi'ki", paraujano: "jirorgho", lokono: "(h)emelea-/-emelia-", ic: "CARIB", maipure: "---"}
+  - {n: 97, gloss: good,     guajiro: "ana'shi/ana'su", paraujano: "anai/kama-chichiri", lokono: "sa-/*u-sa-", ic: "CARIB", maipure: "sonirri"}
+  - {n: 98, gloss: round,    guajiro: "laka'yasi/kooyosh", paraujano: "---", lokono: "balala", ic: "giriri", maipure: "---"}
+  - {n: 99, gloss: dry,      guajiro: "osoni/joso'shi", paraujano: "jaradu", lokono: "oaa-/sare-/*wahado", ic: "mabai", maipure: "---"}
+  - {n: 100, gloss: name,    guajiro: "anu'lia", paraujano: "---", lokono: "-iri", ic: "-iri", maipure: "-iti/-iri"}
+
+# ══════════════════════════════════════════════════════════════════
+# HALLAZGOS INMEDIATOS (antes de cualquier cómputo)
+# ══════════════════════════════════════════════════════════════════
+hallazgos:
+  - id: nucleo-del-proyecto-es-guajiro
+    que: >-
+      ⭐⭐ Los pronombres del núcleo fundacional de la simulación son la
+      COLUMNA GUAJIRO casi literal: taya' (I) = taya, pia' (thou) = pia,
+      waya' (we) ~ tayamaa. El lokono difiere de raíz (*day/dei/dai, bii,
+      oai). Y siguen: kai' (sun) ~ kai, kashi' (moon) ~ kashi, wuin (water)
+      ~ wuin, eka (eat), piama (two). El "cognado en wayunaiki" que
+      justifica el núcleo reconstruido queda a la vista fila por fila — y
+      D11 tiene aquí su primera medición parcial: el núcleo YA es guajiro.
+  - id: bana-hoja-higado
+    que: >-
+      ⭐ La fila 25 (leaf) da lokono adobona/-bana e IC -bana, y la 53
+      (liver) remite a ella (vid. n25) con lokono -bana, IC -bana, guajiro
+      apa'na: HOJA e HÍGADO comparten la raíz *pana en el norte arahuaco
+      (polisemia hoja/órgano-plano). El cognado de bana-2 'hígado' queda
+      verificado — y enriquecido: el étimo es 'hoja'.
+  - id: kipa-maipure
+    que: >-
+      ⭐ Fila 77 (stone): guajiro ipa, paraujano ipah, lokono siba, maipure
+      KIPA. El maipure kipa (k+ipa) es el paralelo exacto de la serie
+      caquetía quiva/cuiva/kiba 'piedra' — se suma al conjunto
+      cognado-piedra de lengua_toponimia_quibacoa.yaml.
+  - id: aituu-el-azul
+    que: >-
+      La fila sky da guajiro "aituu (=the blue..)": el cielo nombrado como
+      'el azul'. Eco directo del iruma 'azul celeste' de Maitiruma (Esteves)
+      — el campo semántico cielo/azul celeste existe en el área.
+  - id: prestamos-marcados
+    que: >-
+      Oliver marca préstamos por celda y eso ES dato de contacto: el
+      ISLAND-CARIB dice CARIB en long/sun/water/stone/sand/path/mountain...
+      (el sustrato caribe del eyeri), KARIB en fish/bird, AFRICANISM en
+      person; el PARAUJANO dice SPANISH en bird/dog/cloud y LOS CUATRO
+      COLORES; dog es SPANISH en guajiro, paraujano y lokono a la vez.
+  - id: paraujano-t-prefijo
+    que: >-
+      El paraujano marca posesión con t- donde el guajiro no (taki 'head',
+      tai 'tooth', tou 'eye', tapat 'foot', tawala 'hair'): las formas están
+      recogidas con el prefijo fosilizado. Relevante para comparar formas
+      caquetías que empiecen por t- (¿ta- posesivo lexicalizado?).
+
+# ══════════════════════════════════════════════════════════════════
+# EL CÓMPUTO DE D11 — ahora es posible
+# ══════════════════════════════════════════════════════════════════
+plan_d11:
+  que: >-
+    Con la A-2 transcrita, D11 pasa de opinión a medición: (1) tomar las 226
+    formas caquetío-atestiguadas; (2) para las que tengan glosa en el
+    Swadesh (o campo semántico mapeable), comparar la forma caquetía contra
+    las columnas guajiro y lokono con las reglas fonémicas de D5; (3) contar
+    a cuál se acerca más. El resultado es el dato que la condición 8 del
+    gate espera. Sesgo a declarar: el núcleo RECONSTRUIDO no entra al
+    cómputo (es guajiro por construcción — ver hallazgo 1); solo lo
+    atestiguado vota.
