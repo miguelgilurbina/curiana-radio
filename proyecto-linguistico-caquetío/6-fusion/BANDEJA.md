@@ -13,9 +13,9 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-30**.
+<!--GENERADO--> Generado el **2026-08-31**.
 
-**1516 ítems propuestos** en 21 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
+**1516 ítems propuestos** en 22 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -25,6 +25,7 @@ editar_a_mano: no
 | `bachaco_y_gu_es_w.yaml` | alvarado-1921 | 0 |  |
 | `castellanos_1589_toponimos.yaml` | castellanos-elegias | 0 |  |
 | `colores_caquetios.yaml` | ? | 4 |  |
+| `decisiones_tanda_2026-08-30.yaml` | ? | 0 |  |
 | `etnias_en_contacto.yaml` | ? | 3 |  |
 | `frase_saludo_mitare.yaml` | ? | 2 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |

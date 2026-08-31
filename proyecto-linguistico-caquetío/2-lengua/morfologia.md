@@ -129,19 +129,38 @@ topónimo, con y sin reduplicación de la sílaba inicial**. Si la raíz es `shi
 y se reduplica a `shishiri`, entonces lo que queda detrás es `-bana` entero, no
 `-ana`. Los dos afijos coexisten.
 
-### El estado real
+### El estado real *(actualizado 2026-08-31 — tanda de decisiones)*
 
-Hay **dos morfemas distintos** y el proyecto los tenía colapsados en uno solo,
-con la glosa del que no está atestiguado:
+Hay **dos morfemas distintos**, y las dos decisiones les dieron destinos
+opuestos a los que esta nota preveía:
 
-- **`-ana`** 'lugar de' — **atestiguado** (*paraguana*, *curiana*).
-- **`-bana`** — **forma confirmada, glosa en disputa**: 'ancho/llano' (van
-  Buurt) vs. 'orilla/borde' (proyecto, sin cita). El dato interno del lexicón
-  (`cabana`, `darubana`) favorece a van Buurt.
+- **`-bana`** = **'cerro, sitio alto' — RESUELTO y atestiguado** (D9/#38,
+  2026-08-31). Seis apoyos convergentes: Zavala #26 «Bana (E): Sitio, cerro
+  alto» (lema directo), la composición contigua `capu` #60 + `capubana` #61
+  'duende **del cerro**', González Batista usándolo como establecido
+  (*Guadadubana* = 'el cerro de las cañas'), el lazo referencial del dueño
+  Capo en el cerro de Santa Ana — que **se llamaba Cerro de Capú** (Velasco
+  2015), *Judibana* = 'cerro del viento', y las dos fuentes que esta nota ya
+  registraba. Contra 'orilla': cero — y `cari` #66 'orilla del mar' ya cubre
+  ese campo. Es **homónimo declarado** de `bana` 'hígado' (reconstruido por
+  cognado lokono, Pet 1987).
 
-Las opciones de D9 —(a) corregir a 'ancho/llano', (b) mantener 'orilla' marcando
-que es lectura del proyecto, (c) admitir polisemia— siguen abiertas. Lo que ya
-**no** es defendible es presentarlo a los agentes como si estuviera atestiguado.
+  ⚠️ Las formas que no encajan **no se forzaron**: `cabana` 'sabana'
+  (probable préstamo castellano), `darubana` 'camino', `guacaubana` 'río
+  escondido' quedan como segmentación dudosa o polisemia pendiente — la
+  lectura 'ancho/llano' de van Buurt sigue viva **para ellas**, registrada.
+
+- **`-ana`** — **forma atestiguada, glosa 'lugar de' EN DISPUTA** (#109,
+  ratificado 2026-08-31): el tratamiento que antes tenía `-bana`, invertido.
+  *Paraguana* dejó de ser su apoyo — la fuente imprime **Paraguaná** con
+  tilde, la glosa «Rodeada del mar» no despeja con 'lugar de', y existe la
+  segmentación alternativa `para` + `gua` 'terreno cercado' + `ná` (los tres
+  atestiguados en Zavala #190/#122/#184), con su objeción de orden anotada.
+  *Curiana* tiene expediente propio abierto. Y `na` acumula **tres glosas
+  rivales** ('como, semejante' — Zavala #184, la única impresa; 'tierra' —
+  González Batista; 'propuesto' — Antolínez 1944): la canónica sigue siendo
+  la de Zavala. Lo que zanja la disputa es el **censo de -ana/-aná en los
+  topónimos de Esteves + la auditoría de tildes** — trabajo, no decisión.
 
 > El mismo patrón se repite en `-are` vs `-ure`: la evidencia toponímica dice
 > 'sitio de', van Buurt §5 dice 'raíz'. Ver [[toponimia]] §conflictos. D9 no es

@@ -130,7 +130,7 @@ FORMAS_SEED: dict[str, list[str]] = {
     "Saruro-sha": ["maure", "arua", "naure", "kuru", "kono-ni", "chaa-ni"],
     "Chiriguare": ["chiriguare", "sima", "habo", "kabo", "wana-ka", "naa-ka"],
     "Buio-sha":   ["barsure", "boratio", "kasha", "suka", "urari", "naba-ni"],
-    "Corie-ko":   ["conuco", "buco", "kuru", "dali", "kaya", "kono-ni"],
+    "Corie-ko":   ["conuco", "buko", "kuru", "dali", "kaya", "kono-ni"],  # buco→buko: fusión D5b, tanda 2026-08-30
     "Dare-nu":    ["canoa", "arima", "bara", "kuru", "naa-da", "wana-da"],
     "Kadushi":    ["habo", "canoa", "biro", "kali", "maure", "naa-ni"],
     "Marokoto-ni":["biro", "habo", "canoa", "arima", "naa-da"],
