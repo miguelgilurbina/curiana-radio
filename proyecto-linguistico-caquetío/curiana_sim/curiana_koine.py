@@ -119,24 +119,24 @@ _ASPECTO_SUFIJO = {"completivo": "-ka", "continuativo": "-ni", "prospectivo": "-
 # caquetío activo, así que el sesgo se siembra con estas listas explícitas, no
 # por muestreo de dominio. Distintas entre agentes → divergencia inicial.
 FORMAS_SEED: dict[str, list[str]] = {
-    "Manaure":    ["biro", "barsure", "kali", "kasha", "chiriguare", "maa-ka", "naa-ka"],
+    "Manaure":    ["biro", "barsure", "kali", "kasha", "chiriware", "maa-ka", "naa-ka"],
     "Shaboro":    ["urari", "barsure", "boratio", "saruro", "kasha", "suna-ni", "naba-ni"],
-    "Nubiri-sha": ["ama", "buri", "arua", "biro", "conuco", "paa-da", "raka-da"],
+    "Nubiri-sha": ["ama", "buri", "arua", "biro", "konuko", "paa-da", "raka-da"],
     "Watapana":   ["biro", "maure", "canoa", "habo", "arima", "naa-da", "wana-da"],
     "Dara-ko":    ["kuru", "canoa", "bara", "arima", "cunaro", "bagre", "wana-ni"],
     "Paugis-sha": ["urari", "arua", "buri", "ama", "kabo", "kono-ka", "wana-ka"],
     "Biro-ko":    ["biro", "habo", "dali", "sima", "naa-ka", "paa-ka"],
-    "Tawaka":     ["chiriguare", "kabo", "arima", "habo", "wana-da", "naa-da"],
+    "Tawaka":     ["chiriware", "kabo", "arima", "habo", "wana-da", "naa-da"],
     "Saruro-sha": ["maure", "arua", "naure", "kuru", "kono-ni", "chaa-ni"],
-    "Chiriguare": ["chiriguare", "sima", "habo", "kabo", "wana-ka", "naa-ka"],
+    "Chiriguare": ["chiriware", "sima", "habo", "kabo", "wana-ka", "naa-ka"],
     "Buio-sha":   ["barsure", "boratio", "kasha", "suka", "urari", "naba-ni"],
-    "Corie-ko":   ["conuco", "buko", "kuru", "dali", "kaya", "kono-ni"],  # buco→buko: fusión D5b, tanda 2026-08-30
+    "Corie-ko":   ["konuko", "buko", "kuru", "dali", "kaya", "kono-ni"],  # buco→buko: fusión D5b, tanda 2026-08-30
     "Dare-nu":    ["canoa", "arima", "bara", "kuru", "naa-da", "wana-da"],
     "Kadushi":    ["habo", "canoa", "biro", "kali", "maure", "naa-ni"],
     "Marokoto-ni":["biro", "habo", "canoa", "arima", "naa-da"],
     "Tariwa":     ["arima", "habo", "bara", "biro", "canoa", "wana-ni"],
     "Kawa-ni":    ["arima", "habo", "bara", "masa-ni", "naa-ni"],
-    "Piru-sha":   ["ama", "buri", "arua", "conuco", "masa-ni"],
+    "Piru-sha":   ["ama", "buri", "arua", "konuko", "masa-ni"],
     "Nabaraka":   ["maure", "naure", "sima", "biro", "kuru", "paa-da"],
     "Raka-bi":    ["biro", "sima", "habo", "naa-ni", "paa-ni"],
 }

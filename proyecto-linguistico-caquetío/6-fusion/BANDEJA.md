@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-08-31**.
 
-**1625 ítems propuestos** en 25 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
+**1710 ítems propuestos** en 26 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -30,6 +30,7 @@ editar_a_mano: no
 | `etnias_en_contacto.yaml` | ? | 3 |  |
 | `frase_saludo_mitare.yaml` | ? | 2 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
+| `migracion_lemas_fase2.yaml` | ? | 85 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
 | `petroglifos_y_manaure.yaml` | moron-2012-petroglifos | 4 |  |
 | `polities_no_costeras_federmann.yaml` | ? | 16 |  |

@@ -499,7 +499,7 @@ entradas:
     referencia: "Literatura sobre el conuco indígena (Wataniba, 'El conuco indígena: más que una parcela agrícola')"
     dominios: [ecologia, agricultura]
     agentes_relacionados: [Corie-ko, Ita-ko, Wari-ko]
-    palabra_lexicon: conuco
+    palabra_lexicon: konuko
     locacion: conuco
     implicacion_simulacion: >
       El conuco es conocimiento transmitido (qué se siembra junto a qué, cuándo quemar,
