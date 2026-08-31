@@ -95,3 +95,38 @@ d5:
     Todo va en aplicar_tanda_08_30.py con --dry-run. score_linguistico()
     empareja contra claves del lexicón: el renombrado se hace ANTES del run 1
     de la era auditada — es el momento barato que el análisis identificó.
+
+# ══════════════════════════════════════════════════════════════════
+# DECISIÓN 3 — D9 (#38): la glosa de -bana  ✅ APROBADA
+# ══════════════════════════════════════════════════════════════════
+d9:
+  estado: APROBADA (2026-08-30)
+  cierra: condición 7 del gate
+  glosa: "-bana = 'cerro, sitio alto' — capa ATESTIGUADO"
+  evidencia_seis_apoyos:
+    - "Zavala #26, lema directo con glosa impresa: «Bana (E): Sitio, cerro alto»"
+    - "prueba composicional contigua: capu #60 'demonio' + capubana #61 'duende del cerro'"
+    - "González Batista lo usa como establecido: Guadadubana = 'el alto o cerro de las cañas'"
+    - "lazo referencial: el dueño Capo vive en el cerro de Santa Ana (Tamayo vía Antolínez) y el cerro se llamaba CERRO DE CAPÚ (Velasco 2015)"
+    - "Judibana = judi+bana 'cerro del viento' (testimonio de Miguel, residente)"
+    - "las dos fuentes independientes que el CLAUDE.md ya registraba"
+  contra_orilla: >-
+    Cero apoyos. Y cari #66 = 'orilla del mar' ya está atestiguado: el
+    caquetío no necesita que -bana cargue ese sentido.
+  arrastres:
+    higado: >-
+      HOMÓNIMOS DECLARADOS: bana-1 'cerro, sitio alto' (atestiguado, Zavala
+      #26) y bana-2 'hígado' (reconstruido, por cognado wayuu), con
+      referencia cruzada mutua y verificación del cognado pendiente en la
+      fila 'liver' de la Tabla A-7. No se borra un reconstruido justificado;
+      se declara la homonimia.
+    formas_que_no_encajan: >-
+      NO se fuerzan: cabana 'sabana' (probable préstamo castellano),
+      darubana 'camino', guacaubana 'río escondido', yarosabana
+      (antropónimo) quedan marcadas como segmentación dudosa o polisemia
+      pendiente — tal como se publicó en el comentario de #38.
+    documentacion: >-
+      El aplicador actualiza la línea de morfología del CLAUDE.md (hoy dice
+      "EN DISPUTA") y 2-lengua/morfologia.md. El hueco de ubana ('desinencia
+      de esta lengua', Zavala #265, sin entrada) queda anotado para la
+      campaña de topónimos.
