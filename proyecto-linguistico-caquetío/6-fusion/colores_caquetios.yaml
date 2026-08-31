@@ -1,0 +1,104 @@
+# ─────────────────────────────────────────────────────────────────────────
+# REGISTRO DE COLORES — directiva de Miguel, 2026-08-25
+#
+# "Importante llevar registro de los colores que puedan salir."
+#
+# POR QUÉ IMPORTA MÁS DE LO QUE PARECE — medido al abrir este archivo:
+# el lexicón tiene 26 entradas con color en la glosa y CERO de ellas son
+# términos de color caquetío-atestiguados. Todos los términos abstractos de
+# color son wayunaiki, lokono o taíno. Lo más cercano en caquetío es `bariki`
+# 'tierra colorada, pigmento encarnado' — un PIGMENTO, no un color.
+#
+# Los colores son vocabulario básico (Swadesh; secuencia de Berlin & Kay:
+# negro/blanco → rojo → verde/amarillo → azul). Un hueco ahí es un hueco en
+# el núcleo de la lengua — y cada color que aparezca en un topónimo o una
+# fuente es dato de primer orden. Este archivo los acumula.
+#
+# Regla 5: propuesta. Cuando un color gane atestación, se fusiona al canon.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-08-25'
+  estado: registro-vivo
+  directiva: Miguel
+
+# ══════════════════════════════════════════════════════════════════
+# EL HUECO, MEDIDO (2026-08-25)
+# ══════════════════════════════════════════════════════════════════
+estado_del_lexicon:
+  entradas_con_color_en_la_glosa: 26
+  terminos_de_color_caquetio_atestiguado: 0
+  lo_mas_cercano:
+    - {forma: bariki, sig: "tierra colorada, pigmento encarnado, pintura corporal", nota: "pigmento/material, no término de color abstracto. Zavala #35"}
+    - {forma: barici, sig: "agua turbia, tierras coloradas rojizas", nota: "ídem. Zavala #34"}
+  quien_cubre_el_hueco_hoy:
+    wayunaiki: [kasuta 'blanco', mütsia 'negro', irolu 'verde', mariiyaa 'amarillo', wüittaa 'ser azul/verde']
+    lokono: [mahoro 'blanco', siwi 'negro', roodi 'rojo', nohin 'rojo', hehen 'amarillo', kanawa 'amarillo-oro', tsipana 'verde']
+    taino: [bixa 'pigmento rojo (onoto)']
+  consecuencia: >-
+    Cuando un agente de la simulación nombra un color, habla wayunaiki o
+    lokono por fuerza. Es un caso concreto del issue repertorio-vs-filiación
+    — y un objetivo de minería definido: cualquier color en fuente caquetía
+    o en topónimo de Falcón vale oro.
+
+# ══════════════════════════════════════════════════════════════════
+# COLORES QUE HAN SALIDO — el registro
+# ══════════════════════════════════════════════════════════════════
+colores:
+
+  - id: color-001-iruma
+    forma: iruma
+    glosa: "azul celeste"
+    lengua_declarada: "caribe insular (según Esteves)"
+    donde_aparece: >-
+      En el topónimo MAITIRUMA (Paraguaná): "En el caribe insular, `mái`
+      significa: manantial, ojo de agua; `Iruma`: azul celeste, o sea que
+      Maitiruma expresa: manantial azul." (esteves-1989.md:1031)
+    estado: >-
+      NO está en el lexicón. Es uno de los 5 topónimos que Esteves atribuye al
+      estrato no caquetío de Paraguaná. Pero un color ANTILLANO en un topónimo
+      de la península es exactamente el patrón de circulación taíno/caribe ya
+      documentado (van Buurt en las dos direcciones, comercio "en grande con
+      la restante zona taína" según Antolínez).
+    procedencia: {obra: esteves-1989}
+
+  - id: color-002-manare-blanco
+    observacion: >-
+      La serpiente `manare` de los ríos falconianos "suele ser de color BLANCO"
+      y se llama también 'príncipe'; Morón añade que en algunas regiones se
+      llama príncipe "a una sierpe enteramente NEGRA". Y en la leyenda de La
+      Cuiba, la culebra es "de color AMARILLO intenso".
+    valor: >-
+      No da términos indígenas — las descripciones son en castellano — pero
+      registra que el color es RASGO DISTINTIVO en la taxonomía popular de
+      serpientes de Falcón: blanca/negra/amarilla nombran seres distintos.
+      Si aparece la palabra caquetía de alguno, este es su referente.
+    procedencia: {obra: moron-2012-petroglifos}
+
+  - id: color-003-corocoro-rojo
+    observacion: >-
+      El pez corocoro se llama así "por las sendas manchas de un ROJO
+      sanguíneo que se observan en las comisuras labiales" (Alvarado), y el
+      corocoro ave es el ibis ROJO escarlata. El rojo une las dos acepciones.
+    valor: >-
+      Dato del expediente corocoro (contra-corocoro en toponimia_coro_espina):
+      el nombre viaja por el color, no por las espinas.
+    procedencia: {obra: alvarado-1921, entrada: COROCORO}
+
+# ══════════════════════════════════════════════════════════════════
+# DÓNDE BUSCAR MÁS — objetivos definidos
+# ══════════════════════════════════════════════════════════════════
+donde_buscar:
+  - >-
+    La Tabla A-7 de Oliver (Swadesh comparado, sin extraer — B.4 de la cola):
+    las listas Swadesh incluyen los colores básicos. Si hay una fila de
+    'rojo', 'negro' o 'blanco' con forma caquetía, ahí está el hueco cerrado.
+  - >-
+    Los 413 topónimos de Esteves: buscar los que la fuente glose con color
+    (como Maitiruma 'manantial azul').
+  - >-
+    Aquella Paraguaná (Brett Martínez), cuando entre: etimologías locales de
+    pueblos — los colores en nombres de sitios son frecuentes.
+  - >-
+    Los pigmentos ya atestiguados como puente: `bariki` 'tierra colorada' es
+    la vía natural por la que una lengua deriva su término de 'rojo'
+    (material → color, como el castellano 'colorado').

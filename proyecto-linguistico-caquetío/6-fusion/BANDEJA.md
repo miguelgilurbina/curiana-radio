@@ -13,22 +13,31 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-25**.
+<!--GENERADO--> Generado el **2026-08-31**.
 
-**1317 ítems propuestos** en 13 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
+**1516 ítems propuestos** en 22 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
 | Archivo | Obra | Ítems | Aviso |
 |---|---|---|---|
+| `antolinez_1946_capo_y_ortografia.yaml` | antolinez-1946-hacia-el-indio | 3 |  |
+| `bachaco_y_gu_es_w.yaml` | alvarado-1921 | 0 |  |
+| `castellanos_1589_toponimos.yaml` | castellanos-elegias | 0 |  |
+| `colores_caquetios.yaml` | ? | 4 |  |
+| `decisiones_tanda_2026-08-30.yaml` | ? | 0 |  |
 | `etnias_en_contacto.yaml` | ? | 3 |  |
+| `frase_saludo_mitare.yaml` | ? | 2 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
+| `petroglifos_y_manaure.yaml` | moron-2012-petroglifos | 4 |  |
 | `polities_no_costeras_federmann.yaml` | ? | 16 |  |
 | `tabla15_c14_oliver.yaml` | oliver-1989-cap4 | 23 |  |
 | `tabla_a8_jirajarano.yaml` | oliver-1989-apendice-a | 33 |  |
 | `tabla_a9_oliver.yaml` | oliver-1989-cap2 | 49 |  |
 | `toponimia_coro_espina.yaml` | gonzalez-batista-nombre-de-coro | 5 |  |
+| `toponimos_esteves_indice.yaml` | esteves-1989 | 182 |  |
+| `velasco_primarios_agi.yaml` | velasco-2015-resistencia | 4 |  |
 
 ## Propuestas léxicas (`curiana_sim/lexicon_*.py` — indexadas en su sitio)
 
@@ -51,7 +60,9 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 
 | Archivo | Qué es |
 |---|---|
+| `issue-esquema-lecturas-toponimos.md` | El registro de topónimos necesita una tercera voz: la de la tradición |
 | `issue-pdfs-fuentes-aporte.md` | Servir los PDF del vault desde `/kaketiana/fuentes`, tras un aporte voluntario |
+| `issue-repertorio-vs-filiacion.md` | El lexicón responde "¿de qué lengua es esta palabra?" y lo usamos como si respondiera "¿la |
 
 ---
 

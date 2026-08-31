@@ -78,7 +78,18 @@ caquetío*** (3) · `bana` 'cerro, sitio alto' (8) · `cari` 'orilla' (2) ·
 Paraguaná"* y nombra al *Gran Señor de Jurijurebo*; Esteves deduce que estuvo
 en la península **en 1540**.
 
-> ⚠️ **Esta atribución a Castellanos no se sostiene — verificado 2026-08-14**
+> 🟢 **CORRECCIÓN 2026-08-25 — la conclusión de abajo quedó REVERTIDA en lo
+> sustancial.** Re-verificación sobre la misma ed. 1857 con la grafía en -e-
+> que el grep del 08-14 no probó: **«Señor de la ciudad Hurehurebo» EXISTE**
+> (línea 48166 del texto, II Elegía 1), y la línea 48260 trae la lista
+> «Miraca, Hurraqui, Hurehurebo» dentro de un pasaje con ONCE topónimos
+> costeros (incluido Todariquibo). La expresión exacta "Gran Señor de
+> Jurijurebo" sigue sin aparecer — el error era de grafía, no de sustancia.
+> La cita de Esteves queda rehabilitada; se reabre la parte de #92 que
+> dependía de esto. Detalle: `6-fusion/castellanos_1589_toponimos.yaml`.
+> Texto archivado: `fuentes_caquetios/Castellanos_1857_Elegias_partes_I-II_texto.txt`.
+>
+> ⚠️ **La atribución a Castellanos no se sostiene — verificado 2026-08-14** *(SUPERADO, ver arriba)*
 > ([[01-rastreo-fuentes]]): grep sobre las 147.532 líneas de la edición de 1857
 > de las *Elegías* (Internet Archive), con cuatro variantes ortográficas de
 > "Jurijurebo". **Cero apariciones.** Coincide con lo que ya medía

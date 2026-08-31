@@ -1,0 +1,178 @@
+# ─────────────────────────────────────────────────────────────────────────
+# DECISIONES DE MIGUEL — tanda del 2026-08-30
+#
+# Cada decisión de esta tanda queda registrada aquí al tomarse, y TODAS se
+# aplican al canon en un solo `aplicar_tanda_08_30.py` (idempotente, con
+# --dry-run, al estilo de aplicar_d10.py) cuando la tanda cierre.
+# Hasta entonces, el canon no se toca (regla 5).
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-08-30'
+  decidido_por: Miguel
+  estado: en-curso — el canon se toca solo vía el script aplicador
+
+# ══════════════════════════════════════════════════════════════════
+# DECISIÓN 1 — F1: las tres palabras sin cita  ✅ APROBADA
+# ══════════════════════════════════════════════════════════════════
+f1:
+  estado: APROBADA (2026-08-30)
+  cierra: condición 1 del gate
+  veredictos:
+    - palabra: koke
+      accion: fusionar con `coques` (Zavala #89, HB — 'hormiga roja')
+      detalle: >-
+        `koke` no estaba SIN_RASTRO: es la gemela en grafía k de `coques`
+        (c/qu a k + la -s del plural castellano de Zavala, cf. quibacoas).
+        Se fusiona heredando la cita; la forma koke queda como variante
+        declarada. Cuarto par de D5b. La glosa castellana 'bachaco' se
+        conserva — el venezolanismo es caribe (tamanaco chiauco) y no
+        compite: ver bachaco_y_gu_es_w.yaml.
+    - palabra: wabarsure
+      accion: reclasificar a `caquetío-reconstruido`
+      detalle: >-
+        Compuesto de trabajo del proyecto: wa- 'nuestro' + barsure 'alma'
+        (atestiguado — Angulo Molina; Zavala). Nota nueva: "compuesto de
+        trabajo: wa- + barsure (atestiguado); nunca buscarlo en fuentes como
+        palabra simple". De paso sale del limbo `fuente: caquetío` a secas.
+    - palabra: kama
+      accion: degradar a `caquetío-hipotético`
+      detalle: >-
+        SIN_RASTRO real en las cuatro fuentes; el lokono usa otra raíz
+        (firobero). Nota nueva: "candidata a reconstruido vía cognado
+        proto-arahuaco *kema — verificar en la Tabla A-7 de Oliver (trae
+        'tapir' en el Swadesh comparado); si aparece, sube con cita".
+  efecto: >-
+    Censo de familia caquetía sin cita o sin degradar: 3 a 0. Condición 1
+    del gate en verde al aplicar.
+
+# ══════════════════════════════════════════════════════════════════
+# DECISIÓN 2 — D5 (#36): política ortográfica  ✅ APROBADA (a+b+c)
+# ══════════════════════════════════════════════════════════════════
+d5:
+  estado: APROBADA (2026-08-30) — las tres partes
+  cierra: condición 2 del gate (F2) y saca a D5 de la condición 6
+  a_lema:
+    politica: >-
+      LEMA FONÉMICO en todo el lexicón, con `forma_fuente` OBLIGATORIO — la
+      grafía original de la fuente sale de la prosa de `notas` y se vuelve
+      campo consultable. Los topónimos DENTRO de la política, del lado
+      fuente: su grafía oficial con tilde es la forma_fuente; el lema
+      fonémico es derivado.
+    razon: >-
+      El caquetío es lengua 100 por ciento oral: la grafía colonial no es el
+      dato sino ruido de transmisión, y conservarla también es decidir —
+      heredar el análisis fonológico del escribano en vez del nuestro, que
+      tiene cognados y reglas testeadas. (Argumento de Miguel, 08-25.)
+    quedan_disputadas_no_se_aplican:
+      - "h a cero (31 formas; Hurehurebo~Jurijurebo da h~j pero Hacarigua~Acarigua da h~cero)"
+      - "ce/ci a s (5 formas; asume seseo del escribano)"
+    condicion_de_pipeline: >-
+      La fusión desde la BANDEJA incorpora el paso de normalización — si no,
+      la cola (~1.500 ítems en grafía colonial) reinyecta grafía vieja para
+      siempre.
+  b_pares:
+    - {par: "buco/buko",     veredicto: FUSIONAR, nota: "cita reina nueva: Ballesteros 1550 «que ellos llaman buco» vía Arcaya p.170; se resuelve también la capa sin declarar de buco"}
+    - {par: "koke/coques",   veredicto: FUSIONAR, nota: "ya aprobado en F1; hereda Zavala #89"}
+    - {par: "barici/bariki", veredicto: NO FUSIONAR, nota: "Zavala #34 «agua turbia» y #35 «Barique: arcilla roja» son entradas distintas; referencia cruzada mutua"}
+    - {par: "coro/koro",     veredicto: NO TOCAR, nota: "falso positivo: cardón (hipotético, D10) vs. cotorra (#181)"}
+  c_gu_es_w:
+    politica: "gu/gü ante vocal pasa a /w/, UNIFORME (inicial y medial), en el lema fonémico"
+    evidencia_de_tres_patas:
+      - "el escribano colonial no tenía grafema para [w]: waitiao a guaitiao, wei a Huey (patrón panamericano)"
+      - "convención de los etnólogos desde 1945: Antolínez «escribo wajiro, no guajiro; kaketío, no caquetío»"
+      - "habla viva medida: guachaco~uachaco, Mérida 1912 (Alvarado s.v. BACHACO)"
+    uniforme_porque: >-
+      si Paraguaná es para-gua-ná, el morfema gua 'terreno cercado' aparece
+      en medial — y un morfema no puede valer /wa/ en una posición y /gwa/
+      en otra.
+    efectos_conocidos:
+      - "~44 lemas cambian de forma visible (guamacho a wamacho, güere a were…) — SIEMPRE con la grafía original en forma_fuente, y la ficha pública muestra ambas"
+      - "el filtro fonotáctico multiplica ~2,5 su poder contra el wayunaiki (65.4 por ciento pasa vs. 86.3)"
+      - "desaparece el choque de la diéresis: ü queda libre para el fonema wayuu en las 6 formas del núcleo"
+      - "las 6 formas reconstruidas con ü que caen del filtro son importaciones wayuu — es el filtro funcionando, y alimenta D11"
+      - "retirar de fonemizar() la regla vieja gu ante e/i a g, que contradice la política"
+  nota_de_aplicacion: >-
+    Todo va en aplicar_tanda_08_30.py con --dry-run. score_linguistico()
+    empareja contra claves del lexicón: el renombrado se hace ANTES del run 1
+    de la era auditada — es el momento barato que el análisis identificó.
+
+# ══════════════════════════════════════════════════════════════════
+# DECISIÓN 3 — D9 (#38): la glosa de -bana  ✅ APROBADA
+# ══════════════════════════════════════════════════════════════════
+d9:
+  estado: APROBADA (2026-08-30)
+  cierra: condición 7 del gate
+  glosa: "-bana = 'cerro, sitio alto' — capa ATESTIGUADO"
+  evidencia_seis_apoyos:
+    - "Zavala #26, lema directo con glosa impresa: «Bana (E): Sitio, cerro alto»"
+    - "prueba composicional contigua: capu #60 'demonio' + capubana #61 'duende del cerro'"
+    - "González Batista lo usa como establecido: Guadadubana = 'el alto o cerro de las cañas'"
+    - "lazo referencial: el dueño Capo vive en el cerro de Santa Ana (Tamayo vía Antolínez) y el cerro se llamaba CERRO DE CAPÚ (Velasco 2015)"
+    - "Judibana = judi+bana 'cerro del viento' (testimonio de Miguel, residente)"
+    - "las dos fuentes independientes que el CLAUDE.md ya registraba"
+  contra_orilla: >-
+    Cero apoyos. Y cari #66 = 'orilla del mar' ya está atestiguado: el
+    caquetío no necesita que -bana cargue ese sentido.
+  arrastres:
+    higado: >-
+      HOMÓNIMOS DECLARADOS: bana-1 'cerro, sitio alto' (atestiguado, Zavala
+      #26) y bana-2 'hígado' (reconstruido, por cognado wayuu), con
+      referencia cruzada mutua y verificación del cognado pendiente en la
+      fila 'liver' de la Tabla A-7. No se borra un reconstruido justificado;
+      se declara la homonimia.
+    formas_que_no_encajan: >-
+      NO se fuerzan: cabana 'sabana' (probable préstamo castellano),
+      darubana 'camino', guacaubana 'río escondido', yarosabana
+      (antropónimo) quedan marcadas como segmentación dudosa o polisemia
+      pendiente — tal como se publicó en el comentario de #38.
+    documentacion: >-
+      El aplicador actualiza la línea de morfología del CLAUDE.md (hoy dice
+      "EN DISPUTA") y 2-lengua/morfologia.md. El hueco de ubana ('desinencia
+      de esta lengua', Zavala #265, sin entrada) queda anotado para la
+      campaña de topónimos.
+
+# ══════════════════════════════════════════════════════════════════
+# DECISIÓN 4 — #101: la glosa de bara  ✅ APROBADA
+# ══════════════════════════════════════════════════════════════════
+bara:
+  estado: APROBADA (2026-08-30)
+  cierra: issue #101
+  veredicto: "bara pasa a caquetío-atestiguado = 'palo, árbol'"
+  citas: "Zavala #29 «Bara (E): Palo, árbol» + Esteves + van Buurt"
+  prueba_interna: >-
+    barabara ya estaba como caquetío-atestiguado = 'árbol de madera dura y
+    pesada. Olivo' (Zavala #30) — la reduplicada de la misma raíz con la
+    glosa de árbol. Base 'río' + reduplicada 'árbol' era insostenible.
+  lectura_descartada: >-
+    'río, corriente fluvial' se conserva como lectura descartada (política
+    D7) con su razonamiento de cognado proto-arawakan/topónimo — archivada
+    con nombre, no borrada.
+  arrastre_higiene: >-
+    zavala-reyes-2015 estaba `estado_minado: completo` con el #29 sin
+    levantar. El aplicador corrige el frontmatter a completo-con-reserva.
+    Tarea de seguimiento anotada: auditoría entrada-por-entrada del glosario
+    completo de Zavala contra el lexicón (la obra está en el repo con capa
+    de texto — es barata).
+
+# ══════════════════════════════════════════════════════════════════
+# DECISIÓN 5 — #109: la atestación de -ana  ✅ RATIFICADA
+# ══════════════════════════════════════════════════════════════════
+ana:
+  estado: RATIFICADA (2026-08-31) — la posición corregida por Miguel
+  cierra: nada del gate; re-encuadra #109 (queda abierto apuntando al censo)
+  veredicto: >-
+    La FORMA -ana queda — no se degrada. La GLOSA 'lugar de' pasa a EN
+    DISPUTA: el tratamiento exacto que tuvo -bana antes de D9. Es la
+    aplicación del principio significado-vs-referente (regla 0 del esquema
+    de lecturas).
+  correcciones_de_documentacion:
+    - "morfologia.md: paraguana deja de ser apoyo de -ana 'lugar de' — su segmentación tiene la alternativa para-gua-ná registrada con la objeción de orden anotada"
+    - "curiana queda con su expediente propio abierto (capa sin declarar + glosa 'lugar del cardón' sin procedencia)"
+  na_glosa_canonica: >-
+    na conserva la glosa de Zavala #184 ('como, semejante a') como canónica —
+    la única impresa. 'Tierra' (González Batista) y 'propuesto' (Antolínez)
+    quedan como lecturas de autor, registradas y pendientes.
+  pieza_que_zanja: >-
+    Trabajo, no decisión: censo de -ana/-aná en los topónimos de Esteves +
+    auditoría de tildes (el acento es el rasgo que distingue). #109 queda
+    abierto apuntando a ese censo.

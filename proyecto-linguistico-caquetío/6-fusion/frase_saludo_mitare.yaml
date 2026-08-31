@@ -1,0 +1,167 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — la fórmula de saludo de Mitare: la ÚNICA frase caquetía
+#
+# El vault ya tiene las cuatro palabras en VOCABULARIO_BASE. Lo que NO tiene
+# es la frase como unidad, ni sus dos versiones enfrentadas, ni el problema
+# epistémico que esconde. Esto es lo único con nivel de ORACIÓN que el
+# proyecto posee, y `2-lengua/morfologia.md` declara el orden de palabras
+# como `reconstruido` sin usarlo.
+#
+# Fuente: Zavala Reyes 2015, p. 73 — ya minada y en el repo.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-08-25'
+  estado: sin-fusionar
+  procedencia: {obra: zavala-reyes-2015, pagina: '73'}
+
+# ══════════════════════════════════════════════════════════════════
+# 1. EL TEXTO, VERBATIM Y COMPLETO
+# ══════════════════════════════════════════════════════════════════
+texto_fuente: >-
+  "Los aborígenes caquetíos se limitaron a transmitir todas sus ideas, de
+  generación en generación, a través de la vía oral; sin embargo, Arcaya
+  (1995), con la ayuda de la memoria tenaz de una «anciana vecina de la
+  población de Mitare», transcribe la única frase hasta ahora conocida en esa
+  lengua y que refiere la «fórmula de saludo: chacamba cudanga (¿Cómo está
+  usted?), cudan de cuté (para servir a usted)». Dicha frase guarda estrecha
+  relación a la citada en el comunicado que le dirige Guillermo Cuartín al
+  referido Arcaya, haciendo mención a entrevista realizada en 1905 a los mismos
+  indios de Mitare, los que indicaron que para el saludo «el que llegaba decía:
+  Jacamba judan y el que recibía contestaba judan de cuteo»."
+
+versiones:
+  - id: version-arcaya-anciana
+    via: "Arcaya 1995, de una anciana de Mitare"
+    turno_1: {forma: "chacamba cudanga", glosa: "¿Cómo está usted?"}
+    turno_2: {forma: "cudan de cuté",    glosa: "para servir a usted"}
+  - id: version-cuartin-1905
+    via: "Guillermo Cuartín a Arcaya, entrevista de 1905 a los indios de Mitare"
+    turno_1: {forma: "Jacamba judan",  rol: "el que llegaba"}
+    turno_2: {forma: "judan de cuteo", rol: "el que recibía"}
+    nota: >-
+      Esta versión NO trae glosa castellana en Zavala. Solo el reparto de
+      turnos. Es dato de estructura, no de significado.
+
+# ══════════════════════════════════════════════════════════════════
+# 2. 🔴 EL PROBLEMA: cuatro entradas `atestiguado` con glosa inferida
+# ══════════════════════════════════════════════════════════════════
+problema_epistemico:
+  severidad: alta
+  hallazgo: >-
+    `chacamba`, `cudanga`, `cudan` y `cuté` están en VOCABULARIO_BASE como
+    **caquetío-atestiguado**, con categoría gramatical asignada (interr, pron,
+    v_raiz, pron) y glosa individual. Pero la fuente NO gloso ninguna palabra:
+    dio dos frases con su traducción entera.
+  lo_que_la_fuente_da:
+    - "chacamba cudanga = '¿Cómo está usted?'   (2 palabras -> 3)"
+    - "cudan de cuté    = 'para servir a usted' (3 palabras -> 4)"
+  lo_que_el_proyecto_anadio: >-
+    El reparto palabra-por-palabra: chacamba='¿cómo?', cudanga='usted',
+    cudan='servir', cuté='a usted'. Es una alineación POSICIONAL de las
+    traducciones castellanas, no una atestación. Ninguna fuente lo dice.
+  la_prueba_de_que_el_reparto_falla: >-
+    ⭐ La versión de 1905 lo delata. El saludo es «Jacamba **judan**» y la
+    respuesta «**judan** de cuteo»: LA MISMA FORMA en los dos turnos. Bajo
+    nuestras glosas serían dos palabras distintas — `cudanga` 'usted' en el
+    saludo y `cudan` 'servir' en la respuesta. O bien `cudan` y `cudanga` son
+    una sola palabra con variantes, o el reparto está mal. En cualquier caso,
+    la segmentación actual NO se sostiene sola.
+  el_paralelo: >-
+    Es la misma clase de problema que el issue #109 (`-ana` atestiguado sobre
+    una segmentación que nadie atestiguó). Un dato real —la frase— sostiene
+    cuatro afirmaciones más finas de las que el dato permite.
+  propuesta: >-
+    NO borrar nada. Las cuatro entradas conservan su forma y su cita, que son
+    sólidas. Lo que se propone es:
+    · degradar la GLOSA individual y la categoría gramatical a `reconstruido`,
+      dejando la frase entera como lo `atestiguado`;
+    · registrar la frase como unidad, que es el dato real;
+    · anotar en cada entrada que su glosa procede de alineación posicional.
+    Política D7: se conserva la lectura, se declara de dónde viene.
+
+# ══════════════════════════════════════════════════════════════════
+# 3. LA ALTERNANCIA ENTRE LAS DOS VERSIONES — dato fonológico
+# ══════════════════════════════════════════════════════════════════
+alternancia:
+  pares:
+    - {v1: chacamba, v2: Jacamba, alternan: "ch ~ j"}
+    - {v1: cudanga,  v2: judan,   alternan: "cu ~ ju  (+ pérdida de -ga)"}
+    - {v1: cudan,    v2: judan,   alternan: "cu ~ ju"}
+    - {v1: cuté,     v2: cuteo,   alternan: "-é ~ -eo"}
+  valor: >-
+    ⭐ Dos transcripciones independientes de la MISMA fórmula, recogidas de los
+    MISMOS informantes de Mitare, con alternancia sistemática ch~j y cu~ju.
+    Eso es exactamente el tipo de dato que D5 (#36) necesita: mide la variación
+    del TRANSCRIPTOR sobre un habla constante. No hay muchas oportunidades de
+    ver la misma palabra escrita por dos oídos distintos.
+  conexion_con_judibana: >-
+    Miguel señaló que `judi` (Judibana) y `juri` (Jurijurebo) son la misma
+    palabra deformada. Aquí aparece la misma alternancia en la dirección
+    contraria — `cudan`~`judan` — sobre habla real. Refuerza que la serie
+    velar/palatal/aspirada del caquetío transcrito es inestable en la pluma
+    castellana, y que la regla `h`→∅ de D5 no es segura (ver
+    comentario-36-d5-ortografia).
+  aviso: >-
+    ⚠️ La fórmula está descrita como "ya muy alterada" (González Batista) y
+    llega por memoria de hablantes de 1905, no por transcripción de hablantes
+    nativos fluidos. La alternancia puede ser del transcriptor, del recuerdo, o
+    de castellanización. No se puede aislar cuál.
+
+# ══════════════════════════════════════════════════════════════════
+# 4. LO QUE LA FRASE SÍ PERMITE AFIRMAR (y lo que no)
+# ══════════════════════════════════════════════════════════════════
+alcance_sintactico:
+  permite:
+    - >-
+      Que existe una fórmula de saludo con ESTRUCTURA DE PAR ADYACENTE:
+      pregunta del que llega, respuesta del que recibe. Eso es pragmática
+      atestiguada, y el motor la puede usar en los prompts.
+    - >-
+      Que la respuesta es una fórmula de cortesía de servicio ("para servir a
+      usted"), calcada o no del castellano — ver la reserva de abajo.
+  no_permite:
+    - >-
+      Fijar el orden de palabras del caquetío. `2-lengua/morfologia.md` declara
+      el orden como `reconstruido` y debe seguir así: dos frases fórmula, muy
+      alteradas, no son una gramática.
+    - >-
+      Dar por buena la categoría gramatical de las cuatro palabras (ver §2).
+  reserva_grave: >-
+    🔴 «cudan **de** cuté» y «judan **de** cuteo» llevan un `de` que es
+    idéntico a la preposición castellana, y la glosa entera —"para servir a
+    usted"— es una FÓRMULA DE CORTESÍA CASTELLANA del período colonial.
+    Hay que considerar en serio que la respuesta sea un calco, total o parcial,
+    del castellano aprendido en cuatro siglos de contacto — precisamente el
+    tipo de contaminación que la nota "ya muy alterada" anuncia.
+    ⚠️ El lexicón tiene `de` = 'yo (pronombre libre 1sg)' pero en **lokono**,
+    no en caquetío. Si ese `de` fuera el lokono, la lectura cambiaría por
+    completo. Sin resolver.
+
+# ══════════════════════════════════════════════════════════════════
+# 5. ENTRADAS NUEVAS QUE LA VERSIÓN DE 1905 APORTA
+# ══════════════════════════════════════════════════════════════════
+formas_nuevas:
+  formas:
+    - {forma: jacamba, estado: NO en VOCABULARIO_BASE, propuesta: "variante de `chacamba` (1905)"}
+    - {forma: judan,   estado: NO en VOCABULARIO_BASE, propuesta: "variante de `cudan`/`cudanga` (1905)"}
+    - {forma: cuteo,   estado: NO en VOCABULARIO_BASE, propuesta: "variante de `cuté` (1905)"}
+  nota: >-
+    Se proponen como VARIANTES declaradas en las entradas existentes, no como
+    lemas nuevos — son la misma fórmula por otra pluma. Encaja con la política
+    de lema fonémico + `forma_fuente` que discute D5 (#36).
+
+# ══════════════════════════════════════════════════════════════════
+# 6. LA CADENA DE CUSTODIA
+# ══════════════════════════════════════════════════════════════════
+cadena:
+  eslabones:
+    - {n: 1, quien: "hablantes de Mitare", cuando: "hasta ~1905", que: "memoria de la fórmula, ya alterada"}
+    - {n: 2, quien: "una anciana de Mitare / los indios de Mitare", cuando: "~1905", que: "dos recogidas distintas"}
+    - {n: 3, quien: "Guillermo Cuartín", cuando: "1905", que: "comunicado a Arcaya con la versión 2"}
+    - {n: 4, quien: "Pedro M. Arcaya", cuando: "1995 (obra póstuma)", que: "publica ambas — Obra inédita y dispersa, p. 247"}
+    - {n: 5, quien: "Zavala Reyes", cuando: 2015, que: "cita a Arcaya en p. 73 — ESTE es el eslabón que tenemos en el repo"}
+  nota: >-
+    ✅ El repo tiene el eslabón 5 completo y minado. Conseguir
+    [[arcaya-obra-inedita-1995]] p. 247 sigue valiendo —Arcaya puede dar
+    contexto, ortografía original y quizá más de lo que Zavala resume— pero
+    **la frase ya no está bloqueada**: está en el repo desde que se minó Zavala.

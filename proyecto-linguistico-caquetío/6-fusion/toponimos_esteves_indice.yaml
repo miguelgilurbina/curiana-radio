@@ -1,0 +1,217 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — el índice de topónimos compilados de Esteves 1989, como registro
+#
+# Fuente: apéndice "TOPÓNIMOS COMPILADOS" de Esteves 1989 (pp. 68-69),
+# transcrito en 4-fuentes/sesiones/06_esteves_1989_barrido_lote3.md. Es el
+# ÍNDICE del gazeteer: 187 nombres numerados, sin glosas (las glosas están en
+# el cuerpo del libro, barrido por lotes en la nota de la fuente).
+#
+# ⚠️ Dos huecos del propio índice, ya documentados en la sesión: una entrada
+#    quedó [ilegible: ...Sisibaúco] y un topónimo entre Tumatey/Tura y
+#    Tutubacoa se perdió (empieza probablemente con "Tu-").
+#
+# QUÉ ES ESTO: la lista de trabajo para la campaña de clasificación de
+# topónimos de Falcón que Miguel pidió el 2026-08-25. Cada nombre nuevo se
+# incorpora al canon SOLO al procesarlo: con su glosa del cuerpo de Esteves si
+# la tiene, su análisis, y sus lecturas. Regla 5: esto es la cola, no el canon.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-08-25'
+  estado: cola-de-trabajo
+  obra: esteves-1989
+  total_indice: 186
+  ya_en_canon: 4
+  por_procesar: 182
+
+# Los que YA están en 2-lengua/toponimos.yaml (referencia cruzada):
+ya_registrados:
+  - {forma: Guacurebo, canon: toponimo-021}
+  - {forma: Guasare, canon: toponimo-059}
+  - {forma: Jurijurebo, canon: toponimo-001}
+  - {forma: Paraguaná, canon: toponimo-018}
+
+# Los que NO están — la cola. `estrato` marca los que Esteves atribuye a
+# lengua no caquetía (la pregunta de B.1 / Oliver §3.2.4):
+por_procesar:
+  - {forma: Abudure}
+  - {forma: Acaboa}
+  - {forma: Adaro}
+  - {forma: Adaure}
+  - {forma: Adícora}
+  - {forma: Aguaque}
+  - {forma: Amaraya}
+  - {forma: Amuay, estrato: no-caquetio-segun-esteves}
+  - {forma: Antuní}
+  - {forma: Arajó}
+  - {forma: Asaro}
+  - {forma: Asubure}
+  - {forma: Avotuca}
+  - {forma: Babahuro}
+  - {forma: Bajabaroa}
+  - {forma: Bajarigua}
+  - {forma: Barabara}
+  - {forma: Baracara}
+  - {forma: Baraived}
+  - {forma: Barbasco}
+  - {forma: Bariquí}
+  - {forma: Barisigua}
+  - {forma: Barunú}
+  - {forma: Bibidure}
+  - {forma: Bibuche}
+  - {forma: Biniche}
+  - {forma: Bucuruy}
+  - {forma: Buchaquiba}
+  - {forma: Buchuaco}
+  - {forma: Buenevara}
+  - {forma: Buenibativa}
+  - {forma: Caibacoa}
+  - {forma: Camare}
+  - {forma: Camoruco}
+  - {forma: Camunare}
+  - {forma: Capacheruda}
+  - {forma: Capuhana}
+  - {forma: Caradacagua}
+  - {forma: Carajaima}
+  - {forma: Cararapa}
+  - {forma: Cariguariana}
+  - {forma: Carirubana}
+  - {forma: Caruca}
+  - {forma: Caseto}
+  - {forma: Caujarito}
+  - {forma: Cayeruba}
+  - {forma: Cayude}
+  - {forma: Cimiro}
+  - {forma: Coabana}
+  - {forma: Cocodite}
+  - {forma: Coduto}
+  - {forma: Cuara}
+  - {forma: Cubiano}
+  - {forma: Cucurubano}
+  - {forma: Cucuy}
+  - {forma: Cude}
+  - {forma: Cujicana}
+  - {forma: Cumaraguas}
+  - {forma: Cumujacoa}
+  - {forma: Cunacho}
+  - {forma: Curaidebo}
+  - {forma: Cuzubitos}
+  - {forma: Chamuriana}
+  - {forma: Charaima}
+  - {forma: Chaure}
+  - {forma: Chichibana}
+  - {forma: Chiguaral}
+  - {forma: Chirache}
+  - {forma: Chuchube}
+  - {forma: Chujaro}
+  - {forma: Chunaure}
+  - {forma: Dabadubare}
+  - {forma: Dibaragua}
+  - {forma: Duraguaco}
+  - {forma: Elegüey, estrato: no-caquetio-segun-esteves}
+  - {forma: Garrapata}
+  - {forma: Gisebo}
+  - {forma: Guacuira}
+  - {forma: Guacujúa}
+  - {forma: Guachaco}
+  - {forma: Guachunepe}
+  - {forma: Guaidabacoa}
+  - {forma: Guanadito}
+  - {forma: Guarama}
+  - {forma: Guaranao}
+  - {forma: Guarataro}
+  - {forma: Guaricure}
+  - {forma: Guaruguaja}
+  - {forma: Guatacare}
+  - {forma: Guayacanal}
+  - {forma: Güica}
+  - {forma: Güima}
+  - {forma: Hayo}
+  - {forma: Hurraque}
+  - {forma: Imujo}
+  - {forma: Isiro}
+  - {forma: Isito}
+  - {forma: Iticuna}
+  - {forma: Jabe}
+  - {forma: Jacuque}
+  - {forma: Jagüe}
+  - {forma: Jadacaquiva}
+  - {forma: Jamaica, estrato: no-caquetio-segun-esteves}
+  - {forma: Jarayadito}
+  - {forma: Jariaca}
+  - {forma: Jayana}
+  - {forma: Juderecal}
+  - {forma: Judibana}
+  - {forma: Juroguagua}
+  - {forma: Laguarí}
+  - {forma: Macama}
+  - {forma: Machuruca}
+  - {forma: Maicara}
+  - {forma: Maitiruma, estrato: no-caquetio-segun-esteves}
+  - {forma: Manadí}
+  - {forma: Manare}
+  - {forma: Manichare}
+  - {forma: Maquigua}
+  - {forma: Maracapana}
+  - {forma: Matacán}
+  - {forma: Matividiro}
+  - {forma: Matuto}
+  - {forma: Michaco}
+  - {forma: Miraca}
+  - {forma: Misaray}
+  - {forma: Moruy}
+  - {forma: Muaco}
+  - {forma: Niraba}
+  - {forma: Nonocoti}
+  - {forma: Oboque}
+  - {forma: Oripopo}
+  - {forma: Paguara}
+  - {forma: Perabay}
+  - {forma: Peticuare}
+  - {forma: Pipiacoa}
+  - {forma: Pipiribana}
+  - {forma: Pitajaya}
+  - {forma: Pury}
+  - {forma: Quibarute}
+  - {forma: Quitaire}
+  - {forma: Quipital}
+  - {forma: Quipayú}
+  - {forma: Quiyegua}
+  - {forma: Sabarigua}
+  - {forma: Sacuragua}
+  - {forma: Saguatumo}
+  - {forma: Sanajaquí}
+  - {forma: Sanquinche}
+  - {forma: Sarabón}
+  - {forma: Sarinao}
+  - {forma: Saruro}
+  - {forma: Sicaname}
+  - {forma: Sibidigual}
+  - {forma: Siraba}
+  - {forma: Supí}
+  - {forma: Supideo}
+  - {forma: Suriquiva}
+  - {forma: Tacal}
+  - {forma: Tacaduto}
+  - {forma: Taque}
+  - {forma: Tacuato}
+  - {forma: Tausabana}
+  - {forma: Tequeguacare}
+  - {forma: Ticuí}
+  - {forma: Tiguadare}
+  - {forma: Tijuro}
+  - {forma: Tiraya}
+  - {forma: Tiquiba}
+  - {forma: Tobagía}
+  - {forma: Todariquiba}
+  - {forma: Tubarao}
+  - {forma: Tumarusa}
+  - {forma: Tumatey}
+  - {forma: Tura}
+  - {forma: Tutubacoa}
+  - {forma: Urupagua}
+  - {forma: Urupaguaduco}
+  - {forma: Yacure}
+  - {forma: Yaguarima}
+  - {forma: Yaima}
+  - {forma: Yarí}
+  - {forma: Yauquiba}

@@ -151,9 +151,9 @@ Orden: pronombre + verbo-aspecto + complemento
 Pronombres: taya (yo), pia (tú), nüma (él/ella), tayamaa (nosotros)
 Aspectos:   -ka (completivo), -ni (continuativo), -da (prospectivo)
 Posesivos:  ta- (mi), pi- (tu), nü- (su)
-Locativos:  -bana (orilla/borde ⚠️ EN DISPUTA — D9/#38: dos fuentes
-            independientes dicen 'cerro, sitio alto'), -ana (lugar de),
-            -ko (interior de)
+Locativos:  -bana (cerro, sitio alto — D9 resuelta 2026-08-31, seis apoyos;
+            homónimo de bana 'hígado' reconstruido), -ana (forma atestiguada,
+            glosa 'lugar de' EN DISPUTA — #109), -ko (interior de)
 Neologismos: [forma: componentes = significado]
 ```
 

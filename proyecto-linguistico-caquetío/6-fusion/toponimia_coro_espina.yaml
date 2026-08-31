@@ -314,3 +314,55 @@ veredictos:
       es un caso más de `-bana` = 'cerro' (D9) y un apoyo a `juri` = 'viento'.
       Necesita fuente documental antes de subir de nivel: buscar en
       [[esteves-1989]], que es el gazeteer de Paraguaná.
+
+# ══════════════════════════════════════════════════════════════════
+# 8. CONTRA-EVIDENCIA VERIFICADA (2026-08-25)
+# ══════════════════════════════════════════════════════════════════
+contra_evidencia:
+  - id: contra-corocoro
+    refuta: "plural-reduplicacion, el ejemplo `corocoro` de González Batista"
+    origen_de_la_pregunta: >-
+      Miguel aporto un argumento A FAVOR: el pez corocoro (Haemulon plumierii)
+      es notoriamente espinoso, lo que encajaria con `coro` = 'espina' y
+      `corocoro` = su plural. El hecho zoologico es correcto. La etimologia no.
+    lo_que_dice_la_fuente: >-
+      [[alvarado-1921]] tiene entrada propia para COROCORO y cubre las dos
+      acepciones, ave y pez, con la misma raiz.
+      · El AVE: "Canta imitando la palabra **coro repetida**. Voz de origen
+        caribe, citada por Gilij (Ensayo I.227): en macu. `korrokorro`, en
+        bacairi `korokoro`, en jianacoto `kolokolo-kane`, etc. En tupi
+        `kurukaka` o `korikaka`."
+      · El PEZ: "Varias especies de Haemulon, familia de los Escienidos, se
+        conocen con el mismo nombre de corocoro en las costas de Venezuela,
+        v.g. el H. formosum y el H. caudimaculatum […] **El nombre vulgar alude
+        a las sendas manchas de un rojo sanguineo que se observan en las
+        comisuras labiales del animal. Voz tupi.**"
+    veredicto: >-
+      🔴 El nombre viene del CANTO del ave (onomatopeya) y se transfiere al pez
+      por las MANCHAS ROJAS de las comisuras — el mismo rojo del corocoro rojo.
+      No por las espinas. Y tiene serie de cognados en cuatro lenguas caribes y
+      tupies, que es evidencia dura de prestamo, no de composicion caquetia.
+      La reduplicacion de `corocoro` esta HEREDADA del etimo `korokoro`, no es
+      un plural caquetio de `coro`.
+    alcance_de_la_refutacion: >-
+      ⚠️ Precision importante: esto tumba el EJEMPLO, no la TESIS.
+      · Se cae: `corocoro` como caso de plural por reduplicacion. Gonzalez
+        Batista lo usa como uno de sus tres ejemplos (con `Taratara` y
+        `Quibaquiba`); quedan dos, y `Quibaquiba` sigue siendo el mejor.
+      · NO se cae: `coro` = 'espina' en si, ni la etimologia de `Coriana`. Esas
+        se apoyan en otros argumentos — el cardonal documentado de Coro (que
+        figuraba entre los linderos de las propiedades), `tococoro`/`totocoro`
+        vivos en la arquitectura tradicional, y `dato` atestiguado como fruto
+        del cardon (Zavala).
+    patron: >-
+      Es la SEGUNDA afirmacion de Gonzalez Batista que no aguanta verificacion,
+      tras `hure` = 'arena' (ver veredicto-jurijurebo). Las dos veces el fallo
+      es del mismo tipo: propone una etimologia interna caquetia para una
+      palabra que las fuentes documentan como prestamo o con otra glosa.
+      Refuerza veredicto-cautela-general.
+    procedencia: {obra: alvarado-1921, entrada: COROCORO}
+    aporte_de_miguel: >-
+      La pregunta la abrio Miguel y el resultado le salio en contra. Se registra
+      asi, con su nombre, porque un argumento verificado y descartado vale tanto
+      como uno confirmado — y porque sin la pregunta no habriamos mirado la
+      entrada.

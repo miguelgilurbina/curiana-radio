@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 49
-  en_repo: 33
-  solo_citadas: 16
+  obras: 55
+  en_repo: 36
+  solo_citadas: 19
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
@@ -85,6 +85,35 @@ obras:
   - Antczak et al. 2017
   - Cariban Migration
   en_repo: true
+- id: antolinez-1944-manaure
+  obra: El Diao Manaure o la Disección de un Hombre-Dios
+  autor: Antolínez, Gilberto
+  anio: 1944
+  publicacion: El Universal, Caracas, sábado 9 de septiembre de 1944
+  genero: etnologia
+  paginas: — (artículo de prensa; no localizado)
+  aliases:
+  - Antolínez 1944
+  - El Diao Manaure
+  - Disección de un Hombre-Dios
+  en_repo: false
+- id: antolinez-1946-hacia-el-indio
+  obra: Hacia el indio y su mundo. Pensamientos vivos del hombre americano
+  autor: Antolínez, Gilberto
+  anio: 1946
+  publicacion: 'Ed. digital: Fundación Editorial El Perro y la Rana, Caracas, noviembre de 2023. Prefacio
+    del autor fechado en Caracas, marzo de 1945'
+  genero: etnologia
+  local:
+  - fuentes_caquetios/Antolinez_1946_Hacia_el_indio_y_su_mundo.pdf
+  paginas: 122
+  acceso: 'Libre — Fundación Editorial El Perro y la Rana (ed. digital 2023). ⚠️ su servidor rechaza HTTPS:
+    abrir en http://'
+  aliases:
+  - Antolínez 1946
+  - Hacia el indio y su mundo
+  - Pensamientos vivos del hombre americano
+  en_repo: true
 - id: arcaya-1920
   obra: Historia del Estado Falcón, tomo I
   autor: Arcaya, Pedro Manuel
@@ -118,6 +147,18 @@ obras:
   - Ballesteros 1550
   - Obispo Ballesteros
   - Miguel Gerónimo de Ballesteros
+  en_repo: false
+- id: brett-martinez-aquella-paraguana
+  obra: Aquella Paraguaná
+  autor: Brett Martínez, Alí
+  anio: 1971
+  publicacion: 1ª ed. 1971 (autofinanciada); 2ª ed. 1998, Fondo Editorial Alí Brett Martínez
+  genero: cronica-regional
+  paginas: — (no localizada)
+  aliases:
+  - Brett Martínez
+  - Aquella Paraguaná
+  - Alí Brett
   en_repo: false
 - id: brinton-1871
   obra: The Arawack Language of Guiana in its Linguistic and Ethnological Relations
@@ -341,6 +382,35 @@ obras:
   - Moreno-Mayar 2018
   - Schroeder 2018
   en_repo: true
+- id: moron-2012-petroglifos
+  obra: 'Petroglifos en Falcón: entre la roca y la memoria'
+  autor: Morón, Camilo
+  anio: 2012
+  publicacion: Boletín Antropológico, Año 30, N° 84, julio-diciembre 2012, pp. 163-175. Universidad de
+    Los Andes, Mérida
+  genero: etnologia
+  local:
+  - fuentes_caquetios/Moron_2012_Petroglifos_Falcon.pdf
+  paginas: 14
+  acceso: 'Libre — Redalyc: http://www.redalyc.org/articulo.oa?id=71226816005'
+  aliases:
+  - Morón 2012
+  - Petroglifos en Falcón
+  - Camilo Morón
+  en_repo: true
+- id: moron-guillermo-historia-venezuela
+  obra: Historia de Venezuela (5 vols.) · Los orígenes históricos de Venezuela
+  autor: Morón, Guillermo
+  anio: 1971
+  publicacion: Historia de Venezuela, 5 vols., 1971 · Los orígenes históricos de Venezuela, introducción
+    al siglo XVI, 1954
+  genero: historiografia
+  paginas: — (no localizada)
+  aliases:
+  - Guillermo Morón
+  - Morón Historia de Venezuela
+  - Los orígenes históricos de Venezuela
+  en_repo: false
 - id: nueva-segovia-1579
   obra: Descripción de la Nueva Segovia de la Gobernación de Venezuela de las Indias del Mar Océano
   autor: Arévalo, Gonzalo de y Ruiz de la Parra, Juan (alcaldes)
@@ -619,6 +689,22 @@ obras:
   - Vansina 1985
   - Ong 1982
   en_repo: false
+- id: velasco-2015-resistencia
+  obra: 'Historia de una Resistencia: sobre el encubrimiento del pueblo caquetío y su exclusión de la
+    historia'
+  autor: Velasco, Reinaldo Jesús
+  anio: 2015
+  publicacion: Paraguaná. ISBN 978-980-12-8508-3, Depósito Legal lf06820159004042. Edición digital del
+    autor, distribución libre no comercial
+  genero: historiografia
+  local:
+  - fuentes_caquetios/Velasco_2015_Historia_de_una_Resistencia.pdf
+  paginas: 56
+  aliases:
+  - Velasco 2015
+  - Historia de una Resistencia
+  - Reinaldo Velasco
+  en_repo: true
 - id: zavala-reyes-2015
   obra: 'Palabras vivas de una lengua muerta: legado arawak-caquetío'
   autor: Zavala Reyes, Miguel Enrique

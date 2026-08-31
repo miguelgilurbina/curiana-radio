@@ -1,0 +1,59 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — el expediente de `bachaco`: etimología, hipótesis de Miguel,
+# y el dato de 1912 que apoya D5c
+#
+# Origen: pregunta de Miguel (2026-08-25) al revisar `koke`/`coques` en F1 —
+# "el mismo bachaco yo lo usaba de niño y al parecer también es palabra
+# indígena... la ch puede significar k, entonces ¿podría ser bakako?"
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-08-25'
+  estado: sin-fusionar
+  obra: alvarado-1921
+
+etimologia_bachaco:
+  entrada: "BACHACO — Atta sexdens, Alvarado 1921"
+  lo_que_dice_la_fuente: >-
+    "La voz procede, según Rojas, del tam. CHIAUCO. Sin. GUACHACO (Tauste)."
+    Tam. = tamanaco (caribe); Tauste escribió sobre cumanagoto/chaima
+    (caribe continental).
+  veredicto: >-
+    Indígena SÍ — pero de familia CARIBE (tamanaco chiauco, vía Arístides
+    Rojas), no arahuaca. Venezolanismo de origen caribe en uso universal:
+    caso de manual para el eje repertorio-vs-filiación (etimo caribe,
+    repertorio de todos — incluido el caquetío descendiente).
+  relacion_con_koke: >-
+    Sin conflicto con `koke`/`coques`: `coques` (Zavala #89) es la palabra
+    CAQUETÍA para el referente; `bachaco` es el venezolanismo caribe con que
+    la glosamos. Dos lenguas, un insecto.
+
+hipotesis_bakako:
+  quien: Miguel
+  hipotesis: "ch ~ k → ¿bachaco < *bakako?"
+  evaluacion: >-
+    DESCARTADA para esta palabra, con la razón registrada: la alternancia
+    ch~k existe en abstracto (Achaguas → akáwa en Antolínez 1946), pero las
+    variantes documentadas de `bachaco` conservan la ch y varían la INICIAL:
+    chiauco → bachaco ~ guachaco ~ uachaco. Ninguna variante en k. La
+    etimología atestiguada (tamanaco chiauco) explica la ch como original.
+    Atestación contra inferencia — mismo criterio aplicado a Antolínez y
+    González Batista.
+
+# ══════════════════════════════════════════════════════════════════
+# ⭐ EL DATO PARA D5c — habla viva medida en 1912
+# ══════════════════════════════════════════════════════════════════
+dato_para_d5c:
+  cita: >-
+    "La gente campesina del Estado Mérida no pronuncia hoi (1912) bachaco, ni
+    tampoco guachaco, sino UACHACO". (Alvarado 1921, s.v. BACHACO, citando
+    Pic. 41)
+  valor: >-
+    ⭐⭐ `guachaco` ~ `uachaco` es gu = /w/ DOCUMENTADO EN PRONUNCIACIÓN VIVA
+    y fechado (1912) — no inferido de grafías coloniales. Hasta hoy, el
+    expediente de D5c (gu → /w/) se apoyaba en el escribano colonial (waitiao
+    → guaitiao) y en la práctica de los etnólogos (Antolínez 1945): esto
+    añade la tercera pata — hablantes reales alternando gu~u en una palabra
+    india. Y la serie completa b~gu~u en la inicial documenta también el
+    contacto b~w (el betacismo tocando a /w/), relevante para la fórmula de
+    Mitare (cudan~judan) y la serie quiva~cuiva~kiba.
+  destino: sumar al expediente de D5 (#36) cuando se decida D5c.
