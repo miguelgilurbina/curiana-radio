@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-08-31**.
 
-**1621 ítems propuestos** en 24 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
+**1625 ítems propuestos** en 25 propuestas, más **4 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -25,6 +25,7 @@ editar_a_mano: no
 | `bachaco_y_gu_es_w.yaml` | alvarado-1921 | 0 |  |
 | `castellanos_1589_toponimos.yaml` | castellanos-elegias | 0 |  |
 | `colores_caquetios.yaml` | ? | 4 |  |
+| `computo_d11_2026-08-31.yaml` | ? | 4 |  |
 | `decisiones_tanda_2026-08-30.yaml` | ? | 0 |  |
 | `etnias_en_contacto.yaml` | ? | 3 |  |
 | `frase_saludo_mitare.yaml` | ? | 2 |  |
@@ -62,6 +63,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 
 | Archivo | Qué es |
 |---|---|
+| `comentario-39-computo-d11.md` | D11 tiene su primer número: la capa atestiguada se inclina a lokono — y tiene fondo propio |
 | `issue-esquema-lecturas-toponimos.md` | El registro de topónimos necesita una tercera voz: la de la tradición |
 | `issue-pdfs-fuentes-aporte.md` | Servir los PDF del vault desde `/kaketiana/fuentes`, tras un aporte voluntario |
 | `issue-repertorio-vs-filiacion.md` | El lexicón responde "¿de qué lengua es esta palabra?" y lo usamos como si respondiera "¿la |

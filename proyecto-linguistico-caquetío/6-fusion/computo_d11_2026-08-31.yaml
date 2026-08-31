@@ -1,0 +1,146 @@
+# ─────────────────────────────────────────────────────────────────────────
+# CÓMPUTO D11 — la primera medición (2026-08-31)
+#
+# Tres cómputos independientes sobre la pregunta de D11 (#39): ¿a qué vecino
+# se acerca más el caquetío ATESTIGUADO — al wayuu/guajiro o al lokono?
+# Base: la Tabla A-2 de Oliver recién transcrita (tabla_a2_transcripcion.yaml)
+# y el propio lexicón. Guion: scratchpad/computo_d11.py (sesión); método
+# reproducible descrito abajo.
+#
+# ⚠️ QUÉ ES Y QUÉ NO ES: el primer indicador NUMÉRICO que D11 ha tenido — no
+# un veredicto. N=24 en el cómputo central. La decisión sigue siendo de
+# Miguel; esto es evidencia para tomarla.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-08-31'
+  estado: evidencia para D11 (#39) — borrador de comentario en issues-pendientes
+  alimenta: "#39"
+
+# ══════════════════════════════════════════════════════════════════
+# MÉTODO
+# ══════════════════════════════════════════════════════════════════
+metodo:
+  curacion: >-
+    De las 226 caquetío-atestiguadas, 78 caen por glosa en conceptos del
+    Swadesh; se curaron a mano a 24 de CONCEPTO DIRECTO (la palabra ES el
+    concepto), excluyendo especies (caujaro, guamacho...), préstamos
+    declarados (hayo, bagre) y derivados (tubarao, ucibo).
+  fonemizacion: >-
+    Ambos lados con las reglas de D5 aprobadas (qu/c→k, z→s, v→b, gu→w
+    uniforme; kh/th del lokono → k/t; ce/ci→s SOLO para comparar — sigue
+    disputada en lemas; h se conserva — disputada). A las columnas de la A-2
+    se les quitan prefijos de persona (nu-, hu-, t-...) y se comparan TODAS
+    las variantes de cada celda, quedándose con la mejor.
+  metrica: >-
+    Similitud = 1 − Levenshtein/longitud-máxima sobre esqueletos fonémicos.
+    Gana una lengua con sim ≥ 0.50 y margen ≥ 0.10; si no, empate o
+    «ninguna».
+  sesgo_declarado: >-
+    Solo vota lo ATESTIGUADO. El núcleo reconstruido queda fuera del cómputo
+    porque es guajiro POR CONSTRUCCIÓN (taya'=taya, pia'=pia, kai'=kai,
+    kashi'~kashi, wuin=wuin, eka, piama — a la vista en la A-2, filas
+    1/2/72/73/75/55/12): meterlo sería contarse a uno mismo.
+
+# ══════════════════════════════════════════════════════════════════
+# A · SWADESH CURADO — el cómputo central
+# ══════════════════════════════════════════════════════════════════
+computo_a:
+  tally: {lokono: 7, guajiro: 3, island_carib: 2, maipure: 1, ninguna: 11}
+  nota_tally: los empates cuentan para la lengua líder; detalle por fila abajo.
+  filas_estrella:
+    - "⭐⭐ cati 'luna' → lokono kathi: similitud 1.00 tras fonemizar (kati=kati). El guajiro kashi' queda a 0.60. La fila bandera del cómputo."
+    - "dare 'diente' → lokono *dari/-ari: 0.75 (la ecuación CQ dare : LK d-ari que Oliver mismo anota en su cap. 2, p.147 — ahora medida)"
+    - "quiva/cuiva 'piedra' → lokono siba ~ maipure kipa (0.75/0.75): la familia *ipa con k-/s-; el guajiro ipa pelado queda a 0.50"
+    - "ateri 'hombre' → island-carib eieri/*iñeri (0.60): resuena con el AUTÓNIMO eyeri de las Antillas"
+    - "iero 'mujer' → lokono hiaro (0.60, empate técnico con guajiro jie'rru 0.50)"
+    - "buiamati 'dos lunas' → lokono/IC biama (0.62): el numeral compuesto usa la forma en b-"
+  ninguna_11_de_24: >-
+    ⭐ Casi la mitad de las comparables no se parece (≥0.50) a NINGUNA de las
+    cinco columnas: rao 'arena', ebo 'camino', quidi 'cerro', para 'mar',
+    apo 'grande', jai 'oír', ure 'raíz', quiricias 'sangre', gudamuen 'dos',
+    cudanga 'usted', apana 'una luna'. Lectura: la capa atestiguada tiene
+    material PROPIO considerable — ni guajiro ni lokono la explican entera.
+    Es un argumento de peso para tratar el caquetío como lengua con
+    personalidad, no como dialecto de ninguno de los dos.
+  detalle:
+    - {forma: cati,      concepto: luna,      veredicto: lokono,            scores: "guaj 0.60 · para 0.25 · loko 1.00 · ic 0.75 · maip 0.50"}
+    - {forma: cazi,      concepto: sol,       veredicto: "guajiro~paraujano", scores: "guaj 0.75 · para 0.75 · loko 0.33"}
+    - {forma: quiva,     concepto: piedra,    veredicto: "lokono~maipure",  scores: "loko 0.75 · maip 0.75 · guaj 0.50"}
+    - {forma: cuiva,     concepto: piedra,    veredicto: "lokono~maipure",  scores: "loko 0.60 · maip 0.60 · guaj 0.40"}
+    - {forma: rao,       concepto: arena,     veredicto: ninguna,           scores: "max 0.33"}
+    - {forma: jajato,    concepto: "lugar de arena", veredicto: guajiro,    scores: "guaj 0.50 (jasai)"}
+    - {forma: iero,      concepto: mujer,     veredicto: "lokono~guajiro",  scores: "loko 0.60 · guaj 0.50 · para 0.50"}
+    - {forma: ateri,     concepto: hombre,    veredicto: island-carib,      scores: "ic 0.60 (eieri)"}
+    - {forma: dare,      concepto: diente,    veredicto: lokono,            scores: "loko 0.75 (*dari)"}
+    - {forma: ebo,       concepto: camino,    veredicto: ninguna,           scores: "max 0.29"}
+    - {forma: darubana,  concepto: "camino (comp.)", veredicto: guajiro,    scores: "guaj 0.50 (apu'na) — compuesto, poco fiable"}
+    - {forma: pana,      concepto: uno,       veredicto: "ic~guajiro",      scores: "ic 0.60 (abana) · guaj 0.50 · loko 0.50"}
+    - {forma: gudamuen,  concepto: dos,       veredicto: ninguna,           scores: "max 0.25"}
+    - {forma: buiamati,  concepto: "dos lunas", veredicto: "lokono~ic",     scores: "loko 0.62 · ic 0.62 (biama)"}
+    - {forma: ure,       concepto: raíz,      veredicto: ninguna,           scores: "max 0.29"}
+    - {forma: jai,       concepto: oír,       veredicto: ninguna,           scores: "max 0.20"}
+    - {forma: quiricias, concepto: sangre,    veredicto: ninguna,           scores: "max 0.38"}
+    - {forma: apo,       concepto: grande,    veredicto: ninguna,           scores: "max 0.25"}
+    - {forma: quidi,     concepto: cerro,     veredicto: ninguna,           scores: "max 0.25"}
+    - {forma: bana,      concepto: "cerro (morfema)", veredicto: maipure,   scores: "maip 0.50 (yapa) — débil, no concluyente"}
+    - {forma: para,      concepto: "mar/agua grande", veredicto: ninguna,   scores: "max 0.29 — el Swadesh no trae 'mar'"}
+    - {forma: bara,      concepto: árbol,     veredicto: "lokono~maipure",  scores: "loko 0.50 (ada?) · maip 0.50 (aama) — débil"}
+    - {forma: cudanga,   concepto: "usted (2ª formal)", veredicto: ninguna, scores: "max 0.14"}
+    - {forma: apana,     concepto: "una luna", veredicto: ninguna,          scores: "max 0.20"}
+
+# ══════════════════════════════════════════════════════════════════
+# B · FONOTÁCTICO — señal estructural (curiana_fonotactica.py)
+# ══════════════════════════════════════════════════════════════════
+computo_b:
+  con_gu_es_w_D5c_aprobada:
+    lokono_pasa: "79.3%"
+    wayunaiki_pasa: "65.4%"
+    castellano_control: "44.7%"
+  sin_la_regla_el_orden_se_invierte: {wayunaiki: "86.3%", lokono: "79.8%"}
+  lectura: >-
+    Con la fonemización aprobada en D5, el perfil fonotáctico del caquetío
+    atestiguado ADMITE MÁS LOKONO QUE WAYUU (79.3 vs 65.4). La regla gu→w es
+    la que voltea el orden — coherente con que buena parte del parecido
+    aparente con el wayuu era un artefacto de la grafía colonial.
+
+# ══════════════════════════════════════════════════════════════════
+# C · COLISIONES LÉXICAS — control estricto
+# ══════════════════════════════════════════════════════════════════
+computo_c:
+  criterio: "similitud ≥ 0.80 + solapamiento de glosa, contra las 781 wayuu y 226 lokono importadas"
+  resultado: {wayuu: 0, lokono: 1}
+  la_unica: "cati ~ katsi [lokono] — 'luna' | 'luna (forma Lokono)'"
+  lectura: >-
+    El criterio es durísimo (ortografías distintas entre importaciones) y
+    casi no deja pasar nada — pero la ÚNICA colisión que sobrevive es
+    exactamente la fila bandera del cómputo A. Confirmación independiente.
+
+# ══════════════════════════════════════════════════════════════════
+# LA LECTURA CONJUNTA — lo que las tres señales dicen a la vez
+# ══════════════════════════════════════════════════════════════════
+conclusion_provisional:
+  - >-
+    ⭐⭐ LAS TRES SEÑALES CONVERGEN: la capa ATESTIGUADA del caquetío se
+    inclina a LOKONO/insular (léxico A: 7-3; estructura B: 79.3 vs 65.4;
+    control C: 1-0), mientras el núcleo RECONSTRUIDO de la simulación es
+    guajiro por construcción. La tensión que D11 intuía queda medida:
+    el desbalance 781/227 del lexicón está al revés de lo que la capa
+    atestiguada sugiere.
+  - >-
+    ⭐ Y el hallazgo que nadie pidió: 11 de 24 comparables no se parecen a
+    NINGÚN vecino. El caquetío atestiguado no es dialecto de nadie — tiene
+    léxico propio en el vocabulario básico. Eso también es respuesta a D11:
+    la pregunta no es "¿de quién es dialecto?" sino "¿con qué mezcla de
+    vecinos y de fondo propio se reconstruye?".
+  - >-
+    Coincide con la afiliación de Antolínez 1944 ("los kaketíos son los más
+    conspicuos representantes de los Arawak de la costa de Guayana, o
+    Lokono... muy afín de la taína") — que era opinión y ahora tiene un
+    número al lado. Y ateri~eieri suma un eco insular independiente.
+  - >-
+    LO QUE ESTO NO DECIDE: qué hacer con las 781 entradas wayuu del lexicón
+    (opciones: rebalancear importando más lokono; re-etiquetar el núcleo
+    reconstruido declarando su base guajiro; o declarar el repertorio mixto
+    y medir contra filiación — conecta con el issue repertorio-vs-filiación).
+    Esa sigue siendo la decisión D11, de Miguel. El comentario para #39 está
+    redactado en issues-pendientes.
