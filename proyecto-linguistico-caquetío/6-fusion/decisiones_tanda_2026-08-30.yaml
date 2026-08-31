@@ -153,3 +153,26 @@ bara:
     Tarea de seguimiento anotada: auditoría entrada-por-entrada del glosario
     completo de Zavala contra el lexicón (la obra está en el repo con capa
     de texto — es barata).
+
+# ══════════════════════════════════════════════════════════════════
+# DECISIÓN 5 — #109: la atestación de -ana  ✅ RATIFICADA
+# ══════════════════════════════════════════════════════════════════
+ana:
+  estado: RATIFICADA (2026-08-31) — la posición corregida por Miguel
+  cierra: nada del gate; re-encuadra #109 (queda abierto apuntando al censo)
+  veredicto: >-
+    La FORMA -ana queda — no se degrada. La GLOSA 'lugar de' pasa a EN
+    DISPUTA: el tratamiento exacto que tuvo -bana antes de D9. Es la
+    aplicación del principio significado-vs-referente (regla 0 del esquema
+    de lecturas).
+  correcciones_de_documentacion:
+    - "morfologia.md: paraguana deja de ser apoyo de -ana 'lugar de' — su segmentación tiene la alternativa para-gua-ná registrada con la objeción de orden anotada"
+    - "curiana queda con su expediente propio abierto (capa sin declarar + glosa 'lugar del cardón' sin procedencia)"
+  na_glosa_canonica: >-
+    na conserva la glosa de Zavala #184 ('como, semejante a') como canónica —
+    la única impresa. 'Tierra' (González Batista) y 'propuesto' (Antolínez)
+    quedan como lecturas de autor, registradas y pendientes.
+  pieza_que_zanja: >-
+    Trabajo, no decisión: censo de -ana/-aná en los topónimos de Esteves +
+    auditoría de tildes (el acento es el rasgo que distingue). #109 queda
+    abierto apuntando a ese censo.
