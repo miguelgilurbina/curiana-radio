@@ -6323,6 +6323,22 @@ for _f, _e in GLOSARIO_ZAVALA.items():
 if GLOSARIO_ZAVALA:
     del _f, _e
 
+# ── D11 (#39): la columna añú/paraujano y el refuerzo lokono ─────────
+# `lexicon_a2.py` lo genera `minar_a2_swadesh.py` desde la transcripción de
+# la Tabla A-2 de Oliver (6-fusion/tabla_a2_transcripcion.yaml). Vocabulario
+# de COMPARACIÓN (detección de fugas, columnas del filtro fonotáctico), no
+# habla de agentes. Misma disciplina que el import de Zavala: setdefault —
+# jamás pisa una clave existente; las colisiones quedan en COLISIONES_A2.
+try:
+    from lexicon_a2 import PARAUJANO_A2, LOKONO_A2
+except ImportError:      # el módulo generado no está presente
+    PARAUJANO_A2, LOKONO_A2 = {}, {}
+
+for _f, _e in list(PARAUJANO_A2.items()) + list(LOKONO_A2.items()):
+    VOCABULARIO_BASE.setdefault(_f, _e)
+if PARAUJANO_A2 or LOKONO_A2:
+    del _f, _e
+
 
 # ── Canonicalización de esquema ───────────────────────────────────────
 # Las entradas de expansión (taíno, lokono, atestiguadas) se escribieron con

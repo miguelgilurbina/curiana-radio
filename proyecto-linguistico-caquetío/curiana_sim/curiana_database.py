@@ -63,13 +63,17 @@ LANG_CATEGORIES = ("caquetío", "wayunaiki", "lokono", "taíno", "proto-arahuaco
 
 def normalize_source_language(fuente: str) -> str:
     """
-    Convierte el campo 'fuente' del lexicón a una de las 11 categorías canónicas.
+    Convierte el campo 'fuente' del lexicón a una de las 12 categorías canónicas.
 
     caquetío / caquetío-atestiguado / caquetío/topónimo → "caquetío"
     caquetío-hipotético / caquetío-hipotético/topónimo  → "caquetío"
         (D10: la LENGUA no se discute, solo baja la confianza de la entrada —
          por eso comparte categoría con el resto del caquetío y no puntúa peor)
     wayunaiki / wayunaiki-cogn                          → "wayunaiki"
+    paraujano / añú                                     → "paraujano"
+        (D11 #39, 2026-08-31: el pariente costero más cercano abre columna
+         propia — el lexicón tenía CERO entradas añú. Fuente: Wilbert
+         1958-59 vía Oliver 1989, Tabla A-2; ver lexicon_a2.py)
     lokono / garifuna / lokono/garifuna                 → "lokono"
     taíno / taíno/caribe                                → "taíno"
     arahuaco / proto-arawakan / proto-arahuaco / ...    → "proto-arahuaco"
@@ -98,6 +102,8 @@ def normalize_source_language(fuente: str) -> str:
         return "caquetío"
     if "wayunaiki" in f or "wayuu" in f:
         return "wayunaiki"
+    if "paraujano" in f or "añú" in f or "añu" in f:
+        return "paraujano"
     if "taino" in f or "taíno" in f:
         return "taíno"
     if "lokono" in f or "garifuna" in f:

@@ -97,11 +97,27 @@ giradas 90°; `--rotar auto` las salvó): ver
 - 🔴 **El tapir NO está** (el Swadesh-100 no lo trae): la ruta de `kama` se
   corrigió — candidatos: la A-1 completa, la fauna de van Buurt, Payne.
 
-**Queda**: medir la extensión de la A-1 (hacia atrás de pdf 584), la cabecera
-de la A-5, y la **transcripción A OJO de la A-2 completa** (100 ítems × 5
-lenguas contra la imagen). Con la A-2 transcrita, D11 pasa de opinión a
-**medición**: emparejar las 226 formas atestiguadas contra cada columna con
-las reglas de D5 y ver a cuál se acercan más.
+**La A-2 ya está transcrita entera y RINDE** (2026-08-31): el cómputo de D11
+salió de ella, y el **primer incremento del rumbo de D11 está implementado**
+— `minar_a2_swadesh.py` → `lexicon_a2.py` (generado E importado, como
+zavala): **46 entradas paraujano** (la columna añú abrió — estaba en CERO) y
+**48 lokono** nuevas. La categoría `paraujano` es canónica y el filtro
+fonotáctico ya la mide: **73.9%, entre lokono (82.9%) y wayuu (65.4%)** — el
+pariente costero más cercano pasa a tasa intermedia. 12 colisiones
+registradas como dato areal (pia, biama, siba...). Tests en
+`tests/test_d11_a2.py`.
+
+✅ **La segunda pasada de Miguel sobre la A-2 está hecha (2026-09-01)**:
+correcciones en el YAML (abonaba, -thina, cuatro «(?)» resueltos) que
+liberaron tres entradas más (ithihi 'sangre', kougdo 'grasa') — el estado de
+verificación vive en el meta de la transcripción y todas las notas del
+módulo lo heredan al regenerar.
+
+**Queda**: la extensión de la A-1 (hacia atrás de pdf 584) y su transcripción
+completa — es EL vocabulario añú de Wilbert; la cabecera de la A-5; y la
+escala diccionario del lokono (ver C: Pet 1987, Bennett 1989, de Goeje 1928 —
+⚠️ NO están en el repo; candidato interno ya en `fuentes_caquetios/`:
+**Perea Alonso 1942**, *Filología Comparada Arawak* Tomo I, sin minar).
 
 ### B.2 · Fase 2 de D5 — la migración de lemas ✅ ejecutada (2026-08-31)
 
@@ -180,6 +196,8 @@ insular). Pregunta: ¿qué grupos caribes, dónde, con qué contacto?
 | **Antolínez, *Los ciclos de los dioses*** (1995) | donde encajaría "El Diao Manaure" completo | Oruga Luminosa, San Felipe |
 | **G. Morón, *Los orígenes históricos de Venezuela*** (1954) · *Los cronistas y la historia* (1957) | el siglo XVI con aparato; crítica de fuentes sobre Castellanos/Oviedo y Baños | bibliotecas |
 | **Mosonyi, *Hablemos… Idiomas Indígenas*** (2007) · **Bidó, *Voces del Bohío*** (2010) | lingüística moderna para D11; vocabulario taíno para repertorio | localizables |
+| **Pet 1987 (*Lokono Dian*)** · **Bennett 1989 (*Arawak-English Dictionary*)** · **de Goeje 1928** | la escala diccionario del rebalanceo lokono (D11 #39) — las 227+48 actuales citan a los tres pero ninguno está en el repo | Pet: SIL, suele haber PDF; Bennett: Walter Roth Museum |
+| **Marie-France Patte** (¿*Parlons Añun*?) + material de revitalización de Sinamaica | LA especialista del añú — la columna paraujano hoy descansa solo en Wilbert 1958-59 vía Oliver | por localizar |
 | **C. Morón, *Manaure: al filo de la eternidad*** (2007) · **Esteves 1988** · **Acasio 2013** | el libro entero sobre Manaure; el segundo Esteves; los petroglifos de Siraba | Casa Blanca/Lagoven/Punto Fijo |
 | van Koolwijk 1884 · Martí 1969 (7 t.) · Tamers 1965 · Hartog 1961 | (de la tanda anterior, siguen vigentes) | sin localizar / papel |
 

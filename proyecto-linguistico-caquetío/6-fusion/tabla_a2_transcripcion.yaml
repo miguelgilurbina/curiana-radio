@@ -19,7 +19,13 @@
 # ─────────────────────────────────────────────────────────────────────────
 meta:
   recogido: '2026-08-31'
-  estado: transcrita — pendiente de segunda pasada de verificación por Miguel
+  estado: verificada contra la imagen por Miguel el 2026-09-01
+  segunda_pasada: >-
+    Correcciones de la revisión: n31 lokono ahonaha→abonaba (lectura
+    corregida), n30 lokono -china→-thina, y cuatro «(?)» resueltos (n32
+    guajiro y paraujano, n36 lokono, n39/n40 guajiro, n47 paraujano, n88
+    guajiro wuitV→wuity). Al resolver la duda, kougdo 'gordo' (n32) se
+    volvió importable.
   obra: oliver-1989-apendice-a
   paginas_impresas: "561-565"
   columnas: [guajiro, paraujano, arawak_lokono, island_carib, maipure]
@@ -54,24 +60,24 @@ items:
   - {n: 27, gloss: bark,     guajiro: "ata", paraujano: "jundo (=cuero)", lokono: "adada/-da", ic: "-ura", maipure: "---"}
   - {n: 28, gloss: skin,     guajiro: "ata", paraujano: "jundo (=cuero)", lokono: "ida/-da", ic: "-ura", maipure: "---"}
   - {n: 29, gloss: flesh,    guajiro: "eirru'ku", paraujano: "---", lokono: "sirokoho/-siroko", ic: "-orogoro", maipure: "---"}
-  - {n: 30, gloss: blood,    guajiro: "asha/isha'", paraujano: "---", lokono: "ithihi/-china (?)", ic: "hitao/-ita", maipure: "---"}
-  - {n: 31, gloss: bone,     guajiro: "eipuse/jipu", paraujano: "---", lokono: "ahonaha/-bona", ic: "-abu", maipure: "---"}
-  - {n: 32, gloss: fat,      guajiro: "kausishi/ausi (?)", paraujano: "kougdo (?) (=gordo?)", lokono: "iki(h)i (vid. n25)", ic: "-agole", maipure: "---"}
+  - {n: 30, gloss: blood,    guajiro: "asha/isha'", paraujano: "---", lokono: "ithihi/-thina ", ic: "hitao/-ita", maipure: "---"}
+  - {n: 31, gloss: bone,     guajiro: "eipuse/jipu", paraujano: "---", lokono: "abonaba/-bona", ic: "-abu", maipure: "---"}
+  - {n: 32, gloss: fat,      guajiro: "kausishi/ausi", paraujano: "kougdo (=gordo?)", lokono: "iki(h)i (vid. n25)", ic: "-agole", maipure: "---"}
   - {n: 33, gloss: egg,      guajiro: "ashu'ku", paraujano: "---", lokono: "kodibiosa/-sa (vid. n20)", ic: "tii (vid. n24)", maipure: "---"}
   - {n: 34, gloss: horn,     guajiro: "oua", paraujano: "---", lokono: "*tukua/-(o)koa", ic: "arigari", maipure: "---"}
   - {n: 35, gloss: tail,     guajiro: "asi/jusi", paraujano: "---", lokono: "i(h)itoko/-i(h)i", ic: "-ili", maipure: "---"}
-  - {n: 36, gloss: feather,  guajiro: "oiua/jai", paraujano: "---", lokono: "(o)bara/-hara (?)", ic: "-bana (vid. n25)", maipure: "---"}
+  - {n: 36, gloss: feather,  guajiro: "oiua/jai", paraujano: "---", lokono: "(o)bara/-hara", ic: "-bana (vid. n25)", maipure: "---"}
   - {n: 37, gloss: hair,     guajiro: "wala'shi/tawa'la", paraujano: "tawala", lokono: "(o)bara/-bara", ic: "-idiburi/-iu", maipure: "---"}
   - {n: 38, gloss: head,     guajiro: "ekiwa/ekiwi", paraujano: "taki/-ki", lokono: "*dasi/isii/-si/sin", ic: "icogo/icigo", maipure: "nu-kibuku"}
-  - {n: 39, gloss: ear,      guajiro: "acheeua (?)", paraujano: "tachoo (ch=ty)", lokono: "*dike/-dike/-koioko", ic: "arigari (vid. n34)", maipure: "nu-akini"}
-  - {n: 40, gloss: eye,      guajiro: "ouuu/ouua (?)", paraujano: "tou", lokono: "*dacusi/-kosi", ic: "-agu", maipure: "nu-puriki"}
+  - {n: 39, gloss: ear,      guajiro: "acheeua", paraujano: "tachoo (ch=ty)", lokono: "*dike/-dike/-koioko", ic: "arigari (vid. n34)", maipure: "nu-akini"}
+  - {n: 40, gloss: eye,      guajiro: "ouuu/ouua", paraujano: "tou", lokono: "*dacusi/-kosi", ic: "-agu", maipure: "nu-puriki"}
   - {n: 41, gloss: nose,     guajiro: "eichi/teichi'", paraujano: "teiyi", lokono: "sirihi/siri", ic: "igiri", maipure: "nu-kirri"}
   - {n: 42, gloss: mouth,    guajiro: "anuku", paraujano: "tounaga", lokono: "-reroko", ic: "-iuma", maipure: "nu-numa-ku"}
   - {n: 43, gloss: tooth,    guajiro: "aiua/ali", paraujano: "tai", lokono: "arii/-ari", ic: "-ari", maipure: "n-ati"}
   - {n: 44, gloss: tongue,   guajiro: "ayewa/ayeua", paraujano: "tehenye/-weña", lokono: "*daiya/-iee", ic: "-ieie", maipure: "nu-are"}
   - {n: 45, gloss: claw,     guajiro: "apa'touscha", paraujano: "jiyi", lokono: "-bada", ic: "-(u)bara", maipure: "---"}
   - {n: 46, gloss: foot,     guajiro: "ouuiua", paraujano: "tapat", lokono: "*dacuti/-koti", ic: "-(u)gudi", maipure: "nu-kii"}
-  - {n: 47, gloss: knee,     guajiro: "asa'pain (-pani)", paraujano: "tai otroh (?)", lokono: "*dacuruji/-koro · *-culu-siba", ic: "-gacorogo", maipure: "nu-kumaraki"}
+  - {n: 47, gloss: knee,     guajiro: "asa'pain (-pani)", paraujano: "tai otroh", lokono: "*dacuruji/-koro · *-culu-siba", ic: "-gacorogo", maipure: "nu-kumaraki"}
   - {n: 48, gloss: hand,     guajiro: "aja'pu", paraujano: "tap/aapi", lokono: "*dacabu/-khabo", ic: "-(u)habu", maipure: "nu-kabi"}
   - {n: 49, gloss: belly,    guajiro: "alee", paraujano: "tayu/hyure", lokono: "*dibeyu-/-dibeio/ite", ic: "-(u)ragai", maipure: "---"}
   - {n: 50, gloss: neck,     guajiro: "anu'lu", paraujano: "togoin", lokono: "-noro", ic: "-igiina", maipure: "nu-inu"}
@@ -113,7 +119,7 @@ items:
   - {n: 85, gloss: path,     guajiro: "wopu'/apu'na", paraujano: "wobu(h)", lokono: "oaboroko/abonaha", ic: "CARIB", maipure: "anepu"}
   - {n: 86, gloss: mountain, guajiro: "uchi/kochooshi/kamu'nashi", paraujano: "utschi", lokono: "hororo sin (vid. 38+79)", ic: "CARIB", maipure: "yapa"}
   - {n: 87, gloss: red,      guajiro: "isho-", paraujano: "jebagar", lokono: "kore(e)-", ic: "funa", maipure: "cayumeni/kayumeni"}
-  - {n: 88, gloss: green,    guajiro: "wuitV- (color of the water)", paraujano: "SPANISH", lokono: "(imoro-)", ic: "uri-gi (vid. n91)", maipure: "---"}
+  - {n: 88, gloss: green,    guajiro: "wuity- (color of the water)", paraujano: "SPANISH", lokono: "(imoro-)", ic: "uri-gi (vid. n91)", maipure: "---"}
   - {n: 89, gloss: yellow,   guajiro: "maloukatu-(shi/-su)", paraujano: "SPANISH", lokono: "(hehe-)", ic: "dumari", maipure: "ewakini"}
   - {n: 90, gloss: white,    guajiro: "kasu-(shi/-su)", paraujano: "SPANISH", lokono: "harira-", ic: "haru-", maipure: "marikini"}
   - {n: 91, gloss: black,    guajiro: "mutsia", paraujano: "SPANISH", lokono: "khareme-/*keremero", ic: "uri", maipure: "kurikini (blue=black)"}

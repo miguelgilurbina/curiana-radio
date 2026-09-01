@@ -46,3 +46,6 @@ next-env.d.ts
 
 # galería: derivados regenerables (escalera WebP antes de subir a Blob)
 .galeria-trabajo/
+
+# revision A-2: renders de paginas de la tesis de Oliver (copyright) - no suben
+revision-a2/
