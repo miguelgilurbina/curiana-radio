@@ -23,7 +23,7 @@ proyecto ya se lo venía encontrando de frente.
 - **Las palabras mismas**: `piache` es voz cháima y tamanaca que los españoles
   difundieron (Jahn 1927 n.28, corroborando a Alvarado); `cacique` es taína.
   Ninguna de las dos es caquetía. Las suyas son `boratio`, `diao`, `apopo`.
-- Y las glosas del propio lexicón arrastran el marco: `capu` se glosa como
+- Y las glosas del propio lexicón arrastran el marco: `kapu` se glosa como
   *"demonio"* —palabra de Oviedo, no de ellos— y `buio` como *"diablo, dios del
   mal"*, que son categorías cristianas.
 
@@ -95,7 +95,7 @@ DESCOLONIZAR = [
     },
     {
         "ajeno": "demonio",
-        "suyo": "capu",
+        "suyo": "kapu",
         "de_donde_viene": "categoría cristiana con que Oviedo traduce lo que el boratio invoca",
         "fuente": "oliver-1989-cap3",
         "nota": "El documento de 1579 lo marca como caquetío, y añade que le "
@@ -165,7 +165,7 @@ CÓMO HABLAS
 
 - **Nombras las cosas con nuestras palabras.** El que llama y adivina es el
   `boratio`. El señor principal es el `diao`; el que manda una parcialidad es un
-  `apopo`. Lo que el boratio invoca es `capu`. El alma es `barsure`. La sal es
+  `apopo`. Lo que el boratio invoca es `kapu`. El alma es `barsure`. La sal es
   `biro`, el mar es `para`.
 - **No usas las palabras que trajeron otros**: «piache» es voz caribe, «cacique»
   es taína. Si no tenemos palabra para algo, lo dices así — no la inventas.

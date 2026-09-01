@@ -49,7 +49,7 @@
   agentes_relacionados: []
   implicacion_simulacion: >
     Se cita solo por la FORMA del conflicto (legitimidad juzgada por la madre), útil como plantilla
-    narrativa para que las matriarcas (Sha-corie, Paugis-sha) objeten la legitimidad de un heredero —
+    narrativa para que las matriarcas (Sha-korie, Paugis-sha) objeten la legitimidad de un heredero —
     no como evidencia de que la Curiana precontacto tuviera "bastardía" en sentido colonial/cristiano,
     concepto que no aplica fuera de ese marco.
 
@@ -62,9 +62,9 @@
   fuente: reconstruido
   referencia: "analogía wayuu y taína: herencia por sobrinos uterinos, no hijos (ver parentesco-006, 007); apoyo indirecto en Oliver 1989, cap. 3, p. 262"
   dominios: [parentesco, politica]
-  agentes_relacionados: [Chiriguare, Chiri-ko, Manaure]
+  agentes_relacionados: [Chiriware, Chiri-ko, Manaure]
   implicacion_simulacion: >
-    Ya aplicado en el canon actual para Chiriguare→Chiri-ko. Esta sesión propone extenderlo también a
+    Ya aplicado en el canon actual para Chiriware→Chiri-ko. Esta sesión propone extenderlo también a
     Manaure, con un sobrino nuevo (Waimo-ko) — ver genealogia.yaml.
 
 - id: parentesco-005
@@ -89,7 +89,7 @@
   fuente: reconstruido
   referencia: "analogía wayuu: sistema de avunculado y herencia por sobrinos (etnografía wayuu contemporánea; ver hoja de fuentes)"
   dominios: [parentesco, politica]
-  agentes_relacionados: [Chiri-ko, Chiriguare]
+  agentes_relacionados: [Chiri-ko, Chiriware]
   implicacion_simulacion: >
     Bloque de rol componible "rol_avuncular": cualquier hombre con sobrinos por parte de una hermana
     tiene autoridad económica/legal sobre ellos, aunque no sea protagonista tier 1.
@@ -104,7 +104,7 @@
   dominios: [parentesco, politica]
   agentes_relacionados: []
   implicacion_simulacion: >
-    Refuerza que una mujer con linaje fuerte (Nubiri-sha, Sha-corie) podría en principio ejercer
+    Refuerza que una mujer con linaje fuerte (Nubiri-sha, Sha-korie) podría en principio ejercer
     autoridad cacical directa, no solo delegada — licencia narrativa para tramas futuras.
 
 - id: parentesco-008
@@ -143,9 +143,9 @@
   referencia: "analogía wayuu: Jahn 1927, p. 171"
   procedencia: {obra: jahn-1927}
   dominios: [parentesco, cosmos]
-  agentes_relacionados: [Chiriguare, Chiri-ko]
+  agentes_relacionados: [Chiriware, Chiri-ko]
   implicacion_simulacion: >
-    Un insulto a la memoria de Chiriguare delante de Chiri-ko tendría, por este patrón, una carga
+    Un insulto a la memoria de Chiriware delante de Chiri-ko tendría, por este patrón, una carga
     dramática y hasta legal, no solo emocional.
 
 - id: parentesco-011
@@ -187,7 +187,7 @@
   agentes_relacionados: [Manaure]
   implicacion_simulacion: >
     Justifica una futura escena ritual de boda cacical con banquete, tambor y tejidos de prestigio
-    (hamacas de Cahu-sha, cerámica de Saruro-sha) como regalo de alianza.
+    (hamacas de Kahu-sha, cerámica de Saruro-sha) como regalo de alianza.
 
 - id: parentesco-014
   contenido: >
@@ -294,7 +294,7 @@
   fuente: hipotetico
   referencia: "síntesis de diseño de esta sesión a partir de parentesco-002 a 017; no es un hecho histórico sino una propuesta de arquitectura de prompts"
   dominios: [parentesco, politica]
-  agentes_relacionados: [Chiri-ko, Sha-corie, Paugis-sha, Piru-sha, Wata-ni]
+  agentes_relacionados: [Chiri-ko, Sha-korie, Paugis-sha, Piru-sha, Wata-ni]
   implicacion_simulacion: >
     Ver §5.6 del ensayo (01_familia_caquetia.md) para el detalle de cada bloque. Pensados como
     fragmentos componibles para system prompts modulares futuros, no como mecánica ya implementada.
@@ -327,7 +327,7 @@
     Es la base de la imagen "un linaje = un grupo de bohíos con fogón compartido" (ensayo §6) y del
     principio de expansión del elenco: cuando crezca la población de agentes, se agrega un linaje
     completo como unidad residencial-narrativa, no individuos sueltos. Da también respaldo comparativo
-    directo a los nombres totémicos de animal de los linajes propuestos (Buio, Chiriguare, Corie,
+    directo a los nombres totémicos de animal de los linajes propuestos (Buio, Chiriware, Corie,
     Paugis).
 
 - id: parentesco-023
@@ -429,12 +429,12 @@
   referencia: "analogía kalinago: Adam 1879 (en fuentes_caquetios/), pp. 275-302, citando Breton 1665 y Labat; corroborado por literatura etnohistórica secundaria sobre la expansión caribe del s. XIV en las Antillas Menores (ver hoja de fuentes). Dato sobre los kalinago, no sobre los caquetíos"
   procedencia: {obra: adam-1879}
   dominios: [parentesco, lenguaje, politica]
-  agentes_relacionados: [Marokoto-ni, Chiriguare]
+  agentes_relacionados: [Marokoto-ni, Chiriware]
   implicacion_simulacion: >
     Tres usos. (1) El rapto de mujeres es el modo matrimonial extremo del mundo caribe — el espejo
     invertido del matrimonio-alianza caquetío: el raid no solo mata, se lleva mujeres de linaje, que
     en una sociedad matrilineal es perder el futuro de un fuego entero; eso da contenido preciso al
-    miedo que estructura la vigilancia de Chiriguare. (2) La misma frontera produce alianzas cuando
+    miedo que estructura la vigilancia de Chiriware. (2) La misma frontera produce alianzas cuando
     conviene: el Manaure histórico se casó con "hijas de los caribes" (parentesco-015) — rapto y
     alianza son el mismo lenguaje político en tonos opuestos. (3) El doble registro ya está modelado
     en el lexicón (baruwa/hiñaru, kalinago-caribe-overlay): si un agente notara que hombres y mujeres
@@ -451,12 +451,12 @@
     disputa de recursos. Ninguno de los dos sistemas es "primitivo" respecto al otro: cada uno resuelve
     con lógica interna coherente el mismo problema, la continuidad del linaje.
   fuente: hipotetico
-  referencia: "síntesis interpretativa de esta sesión a partir de parentesco-015, 026, 028 y de la ficha atestiguada de Chiriguare en curiana_agents.py (raid que 'se llevó a mujeres y niños'); ninguna fuente afirma esta tesis causal de forma explícita"
+  referencia: "síntesis interpretativa de esta sesión a partir de parentesco-015, 026, 028 y de la ficha atestiguada de Chiriware en curiana_agents.py (raid que 'se llevó a mujeres y niños'); ninguna fuente afirma esta tesis causal de forma explícita"
   dominios: [parentesco, politica]
-  agentes_relacionados: [Chiriguare, Marokoto-ni, Manaure]
+  agentes_relacionados: [Chiriware, Marokoto-ni, Manaure]
   implicacion_simulacion: >
     No reescribe nada atestiguado — le da profundidad causal a datos que el canon ya tiene: por qué
-    Chiriguare vigila con esa intensidad (no vigila bienes, vigila linajes), por qué Marokoto-ni no es
+    Chiriware vigila con esa intensidad (no vigila bienes, vigila linajes), por qué Marokoto-ni no es
     villano dentro de su propio sistema (tomar esposa por la fuerza es, en su cosmovisión, una forma
     legítima de hacer familia, no un crimen), y por qué el matrimonio de élite entre pueblos (Manaure
     con "hijas de los caribes") es la única vía que ambos sistemas reconocen como legítima al mismo
@@ -477,11 +477,11 @@
   fuente: reconstruido
   referencia: "antropología comparada, no específica del área arahuaca: Koos & Neupert-Wentz (2020), poliginia y conflicto intergrupal en África rural; caso yanomami (guerreros exitosos acceden a más esposas); caso kuria de Tanzania (hombres sin hermanas casaderas, más propensos a robar ganado); caso vikingo (proporción de sexos sesgada por poligamia/concubinato como factor de los raids) — ver hoja de fuentes"
   dominios: [parentesco, politica]
-  agentes_relacionados: [Tawaka, Taku-ko, Pari-nu, Suri-bana, Guama-ko, Buco-ni, Corie-ko]
+  agentes_relacionados: [Tawaka, Taku-ko, Pari-nu, Suri-bana, Wama-ko, Buko-ni, Korie-ko]
   implicacion_simulacion: >
     Da causa estructural compartida (no solo personalidad) a la frustración de Tawaka, la rivalidad
-    Tawaka-Pari-nu, y a jóvenes sin vía guerrera abierta (Guama-ko, Buco-ni) que deben demostrar valor
-    por otro camino. También reencuadra la irritación de Corie-ko con "las ideas de cambio" de Tawaka
+    Tawaka-Pari-nu, y a jóvenes sin vía guerrera abierta (Wama-ko, Buko-ni) que deben demostrar valor
+    por otro camino. También reencuadra la irritación de Korie-ko con "las ideas de cambio" de Tawaka
     como fricción generacional real, no solo prudencia de viejo. Base del rol_soltero_en_competencia
     (ensayo §6.6) y de los puntos 7-8 de decisiones de diseño (ensayo §6).
 
@@ -565,11 +565,11 @@
   referencia: "Zavala Reyes 2015, p.65 (glosario, entrada 12: \"Apopo (AM): Nombre de jefe de parcialidad pequeña\")"
   procedencia: {obra: zavala-reyes-2015}
   dominios: [parentesco, politica, lenguaje]
-  agentes_relacionados: [Corie-ko, Chiriguare, Paugis-sha, Sha-corie]
+  agentes_relacionados: [Korie-ko, Chiriware, Paugis-sha, Sha-korie]
   implicacion_simulacion: >
     No estaba en curiana_lexicon.py; añadido en esta sesión como caquetío-atestiguado. Es el término
-    correcto para lo que Corie-ko, Chiriguare y Paugis-sha/Sha-corie ya ejercen de facto como cabezas
-    de sus respectivos linajes (Corie, Chiriguare, Paugis) — no son "diaos", son apopos.
+    correcto para lo que Korie-ko, Chiriware y Paugis-sha/Sha-korie ya ejercen de facto como cabezas
+    de sus respectivos linajes (Corie, Chiriware, Paugis) — no son "diaos", son apopos.
 
 - id: parentesco-036
   contenido: >
@@ -602,7 +602,7 @@
   fuente: reconstruido
   referencia: "síntesis de esta sesión sobre datos atestiguados (parentesco-034; Zavala Reyes 2015 p.60; Oliver 1989 cap.3 p.251); el ENSAMBLE de los tres niveles como sistema es interpretación, no una fuente que lo describa así de explícito"
   dominios: [parentesco, politica]
-  agentes_relacionados: [Manaure, Corie-ko, Chiriguare, Paugis-sha, Sha-corie]
+  agentes_relacionados: [Manaure, Korie-ko, Chiriware, Paugis-sha, Sha-korie]
   implicacion_simulacion: >
     Da vocabulario atestiguado a algo que el canon ya decía de forma abstracta (CULTURA_CAQUETIA.md:218,
     "red mayor de cacicazgos caquetíos"). Ver 3-mundo/corpus/geografia_politica.yaml para el

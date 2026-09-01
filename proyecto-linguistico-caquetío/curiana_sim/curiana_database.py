@@ -675,7 +675,7 @@ if __name__ == "__main__":
 
     elif cmd == "test":
         print("── Test de composición de lengua ──")
-        test_words = ["taya", "barsure", "arima", "hamaca", "duna", "wana", "ka", "mara"]
+        test_words = ["taya", "barsure", "arima", "hamaka", "duna", "wana", "ka", "mara"]
         comp = language_composition(test_words)
         for lang, pct in comp.items():
             bar = "█" * int(pct * 20)

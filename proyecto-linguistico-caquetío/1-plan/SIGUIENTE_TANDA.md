@@ -30,9 +30,13 @@ Lo que cambió de fondo:
 - **`-bana` = 'cerro, sitio alto', atestiguado** (D9 resuelta, seis apoyos).
   `-ana` quedó al revés: forma atestiguada, glosa 'lugar de' EN DISPUTA (#109
   abierto apuntando al censo de Esteves).
-- **D5 decidida entera**: lema fonémico con `forma_fuente` obligatorio,
-  cuatro pares c/k resueltos, `gu`→/w/ uniforme. ⚠️ **Lo puntual está
-  aplicado; la migración masiva de lemas NO** — es la fase 2 (ver B.2).
+- **D5 decidida entera Y la fase 2 ejecutada** (2026-08-31): lema fonémico
+  con `forma_fuente` en toda la familia caquetía — 31 renombres en el literal
+  (`aplicar_fase2_d5.py`) y 80 en el generado (el miner de Zavala normaliza
+  al emitir). Las colisiones se decidieron el mismo día (fusionar: la grafía
+  española es grafía, el lema fonémico es la palabra) y 10 agentes se
+  renombraron a grafía fonémica (`aplicar_colisiones_d5.py`). Queda el paso
+  de normalización del pipeline de fusión (ver B.2).
 - **La bibliografía pasó de 39 a 55 obras.** Entraron al repo con PDF: Morón
   2012 (petroglifos), Antolínez 1946 (*Hacia el indio y su mundo*), Velasco
   2015 (*Historia de una Resistencia*) y el texto de Castellanos ed. 1857.
@@ -99,14 +103,30 @@ lenguas contra la imagen). Con la A-2 transcrita, D11 pasa de opinión a
 **medición**: emparejar las 226 formas atestiguadas contra cada columna con
 las reglas de D5 y ver a cuál se acercan más.
 
-### B.2 · Fase 2 de D5 — la migración de lemas
+### B.2 · Fase 2 de D5 — la migración de lemas ✅ ejecutada (2026-08-31)
 
-La decisión está tomada; falta la obra: lema fonémico + `forma_fuente` en
-toda la familia caquetía, `gu`→/w/ en ~44 formas, y el paso de normalización
-en el pipeline de fusión (sin él, la BANDEJA reinyecta grafía colonial). Toca
-exporters, la wiki (`/kaketiana` debe mostrar ambas formas) y tests.
-**Obligatoria antes del run 1** — es el momento barato porque no hay runs
-post-auditoría que invalidar.
+Hecha en dos mitades: el **literal** (31 renombres, `aplicar_fase2_d5.py`,
+mapa en `6-fusion/migracion_lemas_fase2.yaml`) y el **generado** (80
+renombres: `minar_zavala_glosario.py` normaliza al emitir, casa por
+`forma_fuente` — eso cerró de paso la fusión del #89 y dedupicó `barique`).
+Los tests de fonotáctica ahora GUARDAN el estado decidido (lokono 79.3% >
+wayuu 65.4% con la base entera migrada).
+
+**Las colisiones se decidieron y aplicaron el mismo día** (Miguel: la grafía
+española es grafía; el lema fonémico es la palabra; homónimos se declaran —
+patrón D9): kati y kiba quedaron atestiguadas (kiba con la grafía k IMPRESA
+en Zavala #92 «Cuiva. Kiba» de Arcaya), kanoa/hamaka reconstruidas, siwa con
+homónimos declarados. Y los 10 agentes en grafía colonial se renombraron
+(Buko, Chiriware, Korie-ko, Sha-korie...). Registro:
+`6-fusion/decisiones_colisiones_d5_2026-08-31.yaml`; aplicador:
+`aplicar_colisiones_d5.py`. **Lo que queda de B.2**:
+
+- El **paso de normalización en el pipeline de fusión** (sin él, la BANDEJA
+  reinyecta grafía colonial) y la wiki `/kaketiana` mostrando ambas formas.
+- `naure` #185/#186 (dos glosas, mismo lema — no es colisión de grafías):
+  sigue visible en `COLISIONES_D5` del generado.
+- Los IDs de locación (`buco`, `conuco`) siguen en grafía vieja: etiquetas
+  de registro, decisión aparte si se quiere.
 
 ### B.3 · Dossiers de D1 y D3 — la próxima tanda de decisiones
 
@@ -194,8 +214,9 @@ insular). Pregunta: ¿qué grupos caribes, dónde, con qué contacto?
   `aplicar_tanda_*.py` idempotente con `--dry-run` → guardianes → commit.
 - **No aplicar `h`→∅ ni `ce/ci`→/s/**: quedaron DISPUTADAS en D5
   (`Hurehurebo`~`Jurijurebo` da h~j pero `Hacarigua`~`Acarigua` da h~∅).
-- **No regenerar `lexicon_zavala.py` sin fusionar/excluir el #89** (`coques`
-  quedó fusionada en `koke`; la regeneración ingenua resucita el duplicado).
+- ~~No regenerar `lexicon_zavala.py` sin fusionar/excluir el #89~~ **resuelto
+  2026-08-31**: el miner casa por `forma_fuente` y el #89 (y `barique`) quedan
+  como YA_EN_LEXICON; la regeneración ya no resucita duplicados.
 - **No importar el matiz patrilineal de Acosta Saignes sin resolverlo**
   contra el canon matrilineal (regla 3; ver antolinez-1944-manaure.md).
 - **No dar por caquetío** lo de Barquisimeto, Yaracuy o los Llanos: el

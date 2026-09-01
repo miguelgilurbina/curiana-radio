@@ -87,9 +87,9 @@ _FORMAS_BASE = frozenset(VOCABULARIO_BASE)
 PARTICIPANTES_KOINE = [
     # caquetíos nucleares (formadores de norma)
     "Manaure", "Shaboro", "Nubiri-sha", "Buio-sha", "Tawaka", "Dare-nu",
-    "Corie-ko", "Paugis-sha",
+    "Korie-ko", "Paugis-sha",
     # caquetíos periféricos
-    "Watapana", "Dara-ko", "Biro-ko", "Saruro-sha", "Chiriguare",
+    "Watapana", "Dara-ko", "Biro-ko", "Saruro-sha", "Chiriware",
     # contacto insular / caribe
     "Kadushi", "Marokoto-ni",
     # foráneos (aportantes de la mezcla)

@@ -60,12 +60,12 @@ edad:
 
 | Edad aprox. | Qué se aprende | Cómo | Ejemplos del elenco |
 |---|---|---|---|
-| 7–9 | Imitación pasiva del oficio del progenitor; lectura básica del entorno (agua, tierra, animales) | Observación libre, sin instrucción formal | Nubi (8, imita pescadores con un palo), Buco (9, "ya sabe cuándo regar sin que se lo digan"), Piru (7) |
+| 7–9 | Imitación pasiva del oficio del progenitor; lectura básica del entorno (agua, tierra, animales) | Observación libre, sin instrucción formal | Nubi (8, imita pescadores con un palo), Buko (9, "ya sabe cuándo regar sin que se lo digan"), Piru (7) |
 | 10–12 | Primeras habilidades productivas reales bajo mirada de un adulto; se tolera tocar y errar | Imitación supervisada + corrección verbal | Tawi (10, modela vasijas casi perfectas), Kori (12, ronda el taller de canoas preguntando) |
 | 13–17 | Tareas de riesgo/responsabilidad creciente; inminencia de la iniciación; primeras exclusiones de género en el saber | Aprendizaje de oficio formal + preparación ritual | Piri (13, buceo), Daru (15) y Dare-nu (17) a las puertas de la iniciación |
 | 17–25 | Piazgo, oficios especializados, primer matrimonio; se empieza a enseñar a otros más jóvenes | Aprendizaje intensivo 1-a-1 con un maestro | Buio-sha (23, aprendiz de piache), Suri-bana (24, recién iniciado) |
-| 25–50 | Maestría plena del oficio; autoridad para formar aprendices; participación en el consejo si el rango lo permite | Enseñanza activa + consolidación de reputación | Dara-ko, Saruro-sha, Pira-sha, Chiriguare |
-| 50–70 | Guardián de memoria de largo plazo, derecho consuetudinario, genealogía; paciencia como capital social | Consejo, relato, arbitraje | Corie-ko, Ita-ko, Sha-corie, Shaboro |
+| 25–50 | Maestría plena del oficio; autoridad para formar aprendices; participación en el consejo si el rango lo permite | Enseñanza activa + consolidación de reputación | Dara-ko, Saruro-sha, Pira-sha, Chiriware |
+| 50–70 | Guardián de memoria de largo plazo, derecho consuetudinario, genealogía; paciencia como capital social | Consejo, relato, arbitraje | Korie-ko, Ita-ko, Sha-korie, Shaboro |
 | 70+ | Archivo viviente; conocimiento que ya no se actualiza pero que ancla la identidad del grupo | Recitado, presencia simbólica | Bana-mana, Uro-ko, Ita-sha, Moro-ko |
 
 La comparanda wayuu directa (Amodio y Pérez 2006, leído completo) confirma
@@ -158,7 +158,7 @@ aplicado por los deudos maternos — ley oral sin código escrito, sostenida
 solo porque los mayores la recuerdan y la aplican caso por caso. Es plausible
 que la Curiana operara con una lógica de reciprocidad y compensación
 análoga, gestionada por figuras como Nubiri-sha (memoria de deudas) y
-Sha-corie/Paugis-sha (derecho femenino). **[reconstruido por analogía
+Sha-korie/Paugis-sha (derecho femenino). **[reconstruido por analogía
 guajira]** El desarrollo pleno de ese derecho oral wayuu —el sistema
 normativo aplicado por el *pütchipü'üi* o palabrero, Patrimonio Inmaterial
 de la Humanidad (UNESCO 2010), documentado por Guerra Curvelo (2002)— se
@@ -173,7 +173,7 @@ formación, Buio-sha; los diseños cerámicos antiguos son propiedad de
 transmisión de Pira-sha, que enseña "con dureza porque cree que un diseño
 mal copiado es un ancestro mal recordado"; los secretos de nacimiento
 pertenecen a Paugis-sha por su rol de partera; el derecho femenino (luto,
-matrimonio, herencia) lo administran Sha-corie y Paugis-sha sin que "ni
+matrimonio, herencia) lo administran Sha-korie y Paugis-sha sin que "ni
 Manaure las intimide". El patrón es consistente: **el acceso restringido no
 se guarda por escasez sino por riesgo** — urari mal dosificado mata, un
 diseño mal copiado "borra" un ancestro, un secreto de nacimiento mal

@@ -360,7 +360,7 @@ cognados:
   glosa: sol
   formas:
     PA: '*kali'
-    CQ: cazi
+    CQ: kasi  # forma_fuente cazi (Fase 2 D5)
     WY: kai
     LK: adali
     KL: wiru
@@ -372,7 +372,7 @@ cognados:
   glosa: luna
   formas:
     PA: '*kati'
-    CQ: cati
+    CQ: kati  # forma_fuente cati (colisiones D5 2026-08-31)
     WY: kachi
     LK: katsi
     KL: kati
@@ -397,26 +397,26 @@ cognados:
   glosa: canoa, embarcación
   formas:
     PA: '*kanoa'
-    CQ: canoa
+    CQ: kanoa  # forma_fuente canoa (colisiones D5 2026-08-31)
     LK: kannoa
     TN: canoa
     KL: kanawa
   fuente: reconstruido
   procedencia: null
   deuda: sin-procedencia
-  clave_origen: canoa
+  clave_origen: kanoa
 - id: cognado-021
   glosa: hamaca, cama colgante
   formas:
     PA: '*hamaka'
-    CQ: hamaca
+    CQ: hamaka  # forma_fuente hamaca (colisiones D5 2026-08-31)
     LK: hamaha
     TN: hamaca
     KL: hamaka
   fuente: reconstruido
   procedencia: null
   deuda: sin-procedencia
-  clave_origen: hamaca
+  clave_origen: hamaka
 - id: cognado-022
   glosa: casabe, pan de yuca
   formas:

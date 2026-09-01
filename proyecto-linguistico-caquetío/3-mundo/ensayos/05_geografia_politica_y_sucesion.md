@@ -71,7 +71,7 @@ Con ese vocabulario, la jerarquía queda así:
 
 | Nivel | Escala | Ejemplo en el elenco |
 |---|---|---|
-| **Apopo** | cabeza de parcialidad/linaje pequeño, dentro de un asentamiento | Corie-ko, Chiriguare, Paugis-sha/Sha-corie, cada uno cabeza de su linaje |
+| **Apopo** | cabeza de parcialidad/linaje pequeño, dentro de un asentamiento | Korie-ko, Chiriware, Paugis-sha/Sha-korie, cada uno cabeza de su linaje |
 | **Diao** | señor principal de un asentamiento o polity entero | Manaure, diao de Coro/Todariquiba — y, por el mismo título, presumiblemente cualquier otro asentamiento caquetío importante (Barquisimeto, Yaracuy) tendría el suyo |
 | **Paramountcy** | reconocimiento, NO automático, de un diao como principal entre diaos vecinos | Manaure sobre "algunas circunvecinas" (Oviedo y Baños 1855: 27) |
 
@@ -138,8 +138,8 @@ el inicio del programa:
 > cap. 3, pp. 262-263)
 
 Oliver interpreta: 4-5 mil trabajadores implican coordinación entre **más de 30 poblados** (asumiendo
-150-200 personas por poblado de todas las edades). El *buco* que ya es central en el canon —Corie-ko,
-Buco-ko— no era una acequia de aldea: era infraestructura regional, y su mantenimiento movilizaba a un
+150-200 personas por poblado de todas las edades). El *buco* que ya es central en el canon —Korie-ko,
+Buko-ko— no era una acequia de aldea: era infraestructura regional, y su mantenimiento movilizaba a un
 tercio de toda la población del área. El núcleo de 60 agentes de la simulación es, y siempre fue
 narrativamente, **una fracción pequeña** de la población real de Todariquiba y su región — consistente
 con la idea ya establecida de que los linajes son "unidades de expansión" del elenco (parentesco-025),
@@ -190,8 +190,8 @@ razonables:
 ## 9. Decisiones de diseño para la simulación
 
 1. **Vocabulario de rango**: `apopo`, `diao` (corregido) y `boratio` ya se incorporaron a
-   `curiana_lexicon.py` como `caquetío-atestiguado`, con cita. Corie-ko, Chiriguare y Paugis-sha/
-   Sha-corie son, propiamente, *apopos* de sus linajes — no "diaos".
+   `curiana_lexicon.py` como `caquetío-atestiguado`, con cita. Korie-ko, Chiriware y Paugis-sha/
+   Sha-korie son, propiamente, *apopos* de sus linajes — no "diaos".
 2. **Modelo de sucesión de tres puertas** (elegibilidad matrilineal + ratificación política +
    legitimación espiritual como *boratio*) — ver `parentesco.yaml#parentesco-038`. Heredar la
    posición de Manaure no es un solo evento genealógico.

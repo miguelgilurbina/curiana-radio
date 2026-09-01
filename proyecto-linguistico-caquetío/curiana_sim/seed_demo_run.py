@@ -57,14 +57,14 @@ GUION = [
          "[kuru-bana: kuru+-bana = ribera arbolada]"),
         ("Buio-sha", "caquetía", 1,
          "Taya suna-ka sima-bana. Nüma maa-ni wara. Wa-barsure raka-da."),
-        ("Chiriguare", "caquetío", 1,
+        ("Chiriware", "caquetío", 1,
          "Taya panaa-ka perimetro-ana. Naya wana-ni. Ka mara taya kira-da."),
     ]),
     (2, 4, "tarde", "seca", None, [
         ("Manaure", "caquetío", 1,
          "Taya maa-ka naya. Wa-Curiana kira-ni wara. Biro paa-da taya pia-kana. "
          "[managua-ana: managua+-ana = lugar del señorío]"),
-        ("Corie-ko", "caquetío", 1,
+        ("Korie-ko", "caquetío", 1,
          "Taya kono-ni conuco-ko. Arima wana-ka. Ta-duna suka-da kashi."),
         ("Buio-sha", "caquetía", 1,
          "Taya naba-ka sima-bana. Kuru-bana kira-ni. Nüma raka-da wa-barsure."),

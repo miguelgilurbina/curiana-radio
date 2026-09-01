@@ -61,7 +61,7 @@ PRESTIGIO: dict[str, float] = {
     "Paugis-sha": 0.85,  # autoridad femenina, conocimiento de plantas
     "Buio-sha": 0.7,     # piache aprendiz
     "Bana-mana": 0.7,
-    "Chiriguare": 0.65,  # jefe guerrero
+    "Chiriware": 0.65,  # jefe guerrero
     "Watapana": 0.6,
     "Kadushi": 0.55,     # mensajero insular (caquetío_aruba), contacto léxico
 }
@@ -98,12 +98,12 @@ def prestigio_de(agente: str) -> float:
 # dirigidas: VINCULOS[A][B] = cuánto escucha B a A. Se simetriza en vecinos().
 VINCULOS: dict[str, dict[str, float]] = {
     "Shaboro":   {"Buio-sha": 0.95, "Manaure": 0.7, "Bana-mana": 0.5},
-    "Manaure":   {"Nubiri-sha": 0.95, "Shaboro": 0.7, "Chiriguare": 0.6},
+    "Manaure":   {"Nubiri-sha": 0.95, "Shaboro": 0.7, "Chiriware": 0.6},
     "Nubiri-sha": {"Manaure": 0.95, "Saruro-sha": 0.5},
     "Paugis-sha": {"Suba-ko": 0.7, "Saruro-sha": 0.5},
-    "Chiriguare": {"Tawaka": 0.6, "Pari-nu": 0.7},
+    "Chiriware": {"Tawaka": 0.6, "Pari-nu": 0.7},
     "Dara-ko":   {"Dare-nu": 0.9, "Tari-ko": 0.6, "Bagre-ko": 0.5},
-    "Corie-ko":  {"Tawaka": 0.5, "Ita-ko": 0.7, "Buco-ko": 0.6},
+    "Korie-ko":  {"Tawaka": 0.5, "Ita-ko": 0.7, "Buko-ko": 0.6},
     "Kadushi":   {"Watapana": 0.5, "Marokoto-ni": 0.4},
     "Watapana":  {"Biro-ko": 0.6, "Bagre-ko": 0.5},
 }

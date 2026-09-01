@@ -76,23 +76,34 @@ def test_el_filtro_discrimina_el_castellano():
     assert paso["castellano (control)"] < paso["wayunaiki"] - 0.20
 
 
-def test_el_filtro_NO_discrimina_el_wayunaiki():
-    """**El resultado negativo de #91.** El wayunaiki pasa casi entero porque
-    ya satisface la fonotáctica caquetía: ambas son abrumadoramente CV.
+def test_el_filtro_discrimina_el_wayunaiki_tras_d5c():
+    """**El estado decidido.** Hasta la tanda del 2026-08-30 este test
+    protegía el resultado negativo de #91 (el wayunaiki pasaba >80% porque la
+    grafía colonial disfrazaba las /w/ de <gu>). D5c se decidió (gu→w
+    uniforme) y la Fase 2 la horneó en los LEMAS (aplicar_fase2_d5.py), así
+    que la discriminación ya no depende del flag: vive en la base.
 
-    Si este test empieza a fallar porque el wayunaiki bajó, no es una mejora
-    automática — hay que mirar si el filtro se volvió más estricto por buenas
-    razones o si el lexicón cambió debajo."""
+    Lo que se protege ahora: el wayunaiki pasa MINORITARIAMENTE, y el orden
+    lokono > wayunaiki — la señal estructural del cómputo de D11
+    (6-fusion/computo_d11_2026-08-31.yaml). Si esto falla, o el lexicón
+    cambió debajo o alguien deshizo la migración."""
     _, paso = F.medir()
-    assert paso["wayunaiki"] > 0.80, (
-        "el wayunaiki dejó de pasar mayoritariamente: revisar si el filtro "
-        "cambió o si cambió el lexicón")
+    assert paso["wayunaiki"] < 0.75, (
+        "el wayunaiki volvió a pasar mayoritariamente: ¿se deshizo la "
+        "migración de lemas de la Fase 2 de D5?")
+    assert paso["lokono"] > paso["wayunaiki"], (
+        "el orden lokono > wayunaiki del cómputo D11 se invirtió: revisar "
+        "qué cambió en la base atestiguada")
 
 
-def test_la_regla_gu_cambia_la_discriminacion_a_lo_grande():
-    """Una sola decisión ortográfica (D5, #36) mueve el poder discriminante
-    del filtro contra el wayunaiki por un factor grande. Es la razón de que
-    D5 no sea cosmética."""
+def test_la_regla_gu_ya_esta_horneada_en_los_lemas():
+    """Antes de la tanda, activar gu_es_w movía el pase del wayunaiki >15
+    puntos — la prueba de que D5 no era cosmética. Tras la Fase 2, los lemas
+    ya llevan la /w/ escrita y el flag es casi nulo SOBRE LA BASE. Este test
+    documenta que la decisión está aplicada: si el flag vuelve a mover mucho,
+    hay lemas sin migrar entrando a la base (p. ej. una regeneración de
+    lexicon_zavala sin el paso de normalización — ver
+    6-fusion/migracion_lemas_fase2.yaml)."""
     _, sin_regla = F.medir(gu_es_w=False)
     _, con_regla = F.medir(gu_es_w=True)
-    assert sin_regla["wayunaiki"] - con_regla["wayunaiki"] > 0.15
+    assert abs(sin_regla["wayunaiki"] - con_regla["wayunaiki"]) < 0.05

@@ -1,0 +1,91 @@
+# ─────────────────────────────────────────────────────────────
+# MAPA — migración de lemas de la Fase 2 de D5 (generado por
+# aplicar_fase2_d5.py; la fecha es la del commit que lo trae).
+# forma_fuente conserva la grafía anterior en cada entrada.
+# ─────────────────────────────────────────────────────────────
+renombres:
+excluidas_por_decision:
+  - {forma: coro, razon: "D5b: par coro/koro decidido «no tocar» (colisión con koro 'cotorra')"}
+  - {forma: curiana, razon: "topónimo y nombre de la polity: queda del lado fuente (D5a) hasta la migración de toponimos.yaml"}
+colisiones_no_renombradas:  # cada una es una decisión pendiente
+renombres_en_generado:  # ejecutados por minar_zavala_glosario.py; forma_fuente en cada entrada
+  - {de: aca, a: aka}
+  - {de: aco, a: ako}
+  - {de: arica, a: arika}
+  - {de: bacoa, a: bakoa}
+  - {de: baharuco, a: baharuko}
+  - {de: bajareque, a: bajareke}
+  - {de: barbasco, a: barbasko}
+  - {de: beceremicore, a: beceremikore}
+  - {de: cabana, a: kabana}
+  - {de: cachipo, a: kachipo}
+  - {de: cacuro, a: kakuro}
+  - {de: camaroa, a: kamaroa}
+  - {de: cana, a: kana}
+  - {de: capo, a: kapo}
+  - {de: capu, a: kapu}
+  - {de: capubana, a: kapubana}
+  - {de: caquetillo, a: kaketillo}
+  - {de: carama, a: karama}
+  - {de: carapa, a: karapa}
+  - {de: caruca, a: karuka}
+  - {de: caseto, a: kaseto}
+  - {de: casquito, a: kaskito}
+  - {de: caujaro, a: kaujaro}
+  - {de: cayude, a: kayude}
+  - {de: cegue, a: cege}
+  - {de: chaguanco, a: chawanko}
+  - {de: chirgua, a: chirwa}
+  - {de: cocuy, a: kokuy}
+  - {de: comoho, a: komoho}
+  - {de: cuna, a: kuna}
+  - {de: cunaro, a: kunaro}
+  - {de: curari, a: kurari}
+  - {de: dacagua, a: dakawa}
+  - {de: dichiva, a: dichiba}
+  - {de: dividive, a: dibidibe}
+  - {de: durigua, a: duriwa}
+  - {de: guaca, a: waka}
+  - {de: guache, a: wache}
+  - {de: guaco, a: wako}
+  - {de: guacoa, a: wakoa}
+  - {de: guacuaro, a: wakuaro}
+  - {de: guaidima, a: waidima}
+  - {de: guairon, a: wairon}
+  - {de: guamacho, a: wamacho}
+  - {de: guamipa, a: wamipa}
+  - {de: guaracaro, a: warakaro}
+  - {de: guaranao, a: waranao}
+  - {de: guaranaro, a: waranaro}
+  - {de: guarataro, a: warataro}
+  - {de: guariana, a: wariana}
+  - {de: guaru, a: waru}
+  - {de: guasima, a: wasima}
+  - {de: guay, a: way}
+  - {de: guica, a: gika}
+  - {de: guide, a: gide}
+  - {de: hueque, a: hueke}
+  - {de: icoroata, a: ikoroata}
+  - {de: igui, a: igi}
+  - {de: judereque, a: judereke}
+  - {de: laguari, a: lawari}
+  - {de: paragua, a: parawa}
+  - {de: paraguatan, a: parawatan}
+  - {de: querequere, a: kerekere}
+  - {de: quibaquibi, a: kibakibi}
+  - {de: quiboata, a: kiboata}
+  - {de: quicuidi, a: kikuidi}
+  - {de: quidiboata, a: kidiboata}
+  - {de: quigua, a: kiwa}
+  - {de: quiguagua, a: kiwawa}
+  - {de: quiricias, a: kiricias}
+  - {de: sibidigua, a: sibidiwa}
+  - {de: singuanguso, a: sinwanguso}
+  - {de: taque, a: take}
+  - {de: taques, a: takes}
+  - {de: tigua, a: tiwa}
+  - {de: tigui, a: tigi}
+  - {de: tuquinemo, a: tukinemo}
+  - {de: turumaco, a: turumako}
+  - {de: yacure, a: yakure}
+en_lexicon_zavala_pendientes:  # colisiones del generado — cada una es una decisión

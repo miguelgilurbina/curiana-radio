@@ -12,7 +12,7 @@ observar cómo se traspasa la tradición oral, no solo narrarla.
 `curiana_state.py::EVENTOS_ESTACIONALES` ya tiene tres ritos escritos:
 
 - `ceremonia_iniciacion` — Dare-nu y Daru, con Manaure/Shaboro/Paugis-sha.
-- `ritual_siembra_primeras_lluvias` — Shaboro guía, Corie-ko espera la señal.
+- `ritual_siembra_primeras_lluvias` — Shaboro guía, Korie-ko espera la señal.
 - `fiesta_cosecha_chicha` — "los viejos cuentan las hazañas de los ancestros".
 
 Hoy, cuando el Director elige uno de estos eventos, lo único que pasa

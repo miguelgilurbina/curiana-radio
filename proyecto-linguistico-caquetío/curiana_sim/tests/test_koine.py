@@ -98,7 +98,7 @@ def test_ventana_refleja_habla_actual_no_historia():
     # Historia divergente (más larga que la ventana)
     for _ in range(IdiolectoAgente.VENTANA_TURNOS + 5):
         a.registrar(["kali", "kasha", "urari", "piache", "barsure"])
-        b.registrar(["biro", "habo", "canoa", "arima", "bara"])
+        b.registrar(["biro", "habo", "kanoa", "arima", "bara"])
     # Habla reciente idéntica (llena la ventana completa)
     comunes = ["taya", "naa-ka", "wana-ni", "duna", "kuru"]
     for _ in range(IdiolectoAgente.VENTANA_TURNOS):

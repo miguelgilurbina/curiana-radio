@@ -51,7 +51,7 @@ descarta queda registrada en `notas`. Nada se pierde en silencio.
 de D10: si no aparece fuente para la glosa **actual**, no se la sustituye por
 la de Zavala en silencio. Se investigó y **no aparece** — ni en Alvarado, ni en
 van Buurt, ni en Gatschet. Pero las tres sostienen material del canon
-(`Saruro-sha`, `Corie-ko`, el corpus ecológico), así que la entrada se queda
+(`Saruro-sha`, `Korie-ko`, el corpus ecológico), así que la entrada se queda
 con la glosa que tiene y una `notas` que deja el conflicto **abierto y
 visible**. Un conflicto documentado es mejor que una corrección inventada.
 
@@ -184,7 +184,7 @@ GRUPO_2 = {
         "notas": "D10 (2026-08-03), grupo 2 — CONFLICTO DE GLOSA ABIERTO, la entrada NO se reescribe. La glosa activa («árbol saruro») no tiene fuente localizada: %s no la trae ni como lema ni como mención, %s no la tiene, Gatschet tampoco. Su único rastro en el repo es una lista de Notion (Venezolanismos de Origen Indígena) citada en DISENO_KOINE §8, y allí se usa para confirmar la terminación -aro/-uro, NO para sostener la glosa. En contra: %s glosario #224 (E) «Serpiente no venenosa. Boa constrictora». No se toca aquí porque saruro da nombre a la agente Saruro-sha y aparece en el vocabulario de Shaboro" % (A, VB, Z),
     },
     "corie": {
-        "notas": "D10 (2026-08-03), grupo 2 — CONFLICTO DE GLOSA ABIERTO, la entrada NO se reescribe. La glosa activa («choza, habitación») no tiene fuente localizada: ausente de %s (ni lema ni mención) y de %s. En contra, %s glosario #90 (HB) «Armadillo» — y el propio CANON del proyecto ya dice armadillo: cultura/genealogia.yaml da «corie (armadillo)» como tótem del linaje Paugis, y la ficha de Buio-sha usa «corie (armadillo) como elogio». Es decir: la glosa del lexicón contradice a la fuente Y a su propio canon a la vez. No se toca aquí porque corie da nombre a Corie-ko" % (A, VB, Z),
+        "notas": "D10 (2026-08-03), grupo 2 — CONFLICTO DE GLOSA ABIERTO, la entrada NO se reescribe. La glosa activa («choza, habitación») no tiene fuente localizada: ausente de %s (ni lema ni mención) y de %s. En contra, %s glosario #90 (HB) «Armadillo» — y el propio CANON del proyecto ya dice armadillo: cultura/genealogia.yaml da «corie (armadillo)» como tótem del linaje Paugis, y la ficha de Buio-sha usa «corie (armadillo) como elogio». Es decir: la glosa del lexicón contradice a la fuente Y a su propio canon a la vez. No se toca aquí porque corie da nombre a Korie-ko" % (A, VB, Z),
     },
 }
 

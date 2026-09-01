@@ -197,7 +197,7 @@ estructura matrimonial**:
 Para la Curiana esto rinde en tres direcciones. Primera: el **rapto de mujeres es el modo matrimonial
 extremo del mundo caribe** — la imagen invertida del matrimonio-alianza caquetío. Donde la Curiana
 teje linajes con bodas, fiestas y hamacas de regalo, el raid caribe toma la esposa sin pacto; la
-amenaza que estructura la vigilancia de Chiriguare no es solo de muerte sino de **pérdida de mujeres
+amenaza que estructura la vigilancia de Chiriware no es solo de muerte sino de **pérdida de mujeres
 de linaje** — que es, en una sociedad matrilineal, perder el futuro entero de un fuego. Segunda: aun
 así, ambos mundos son interoperables — Manaure histórico se casó con "hijas de los caribes" (§1c):
 la misma frontera que produce raptos produce alianzas matrimoniales cuando conviene, y ambas cosas
@@ -244,9 +244,9 @@ salvo, precisamente, el matrimonio negociado de élite (Manaure con "hijas de lo
 
 Esta lectura además **conecta directamente con datos ya atestiguados en el canon**, sin inventar nada
 nuevo sobre los agentes existentes — solo les da una razón más profunda:
-- La ficha de **Chiriguare** ya dice que sobrevivió a un raid caribe que "se llevó a mujeres y niños"
+- La ficha de **Chiriware** ya dice que sobrevivió a un raid caribe que "se llevó a mujeres y niños"
   de una aldea aliada — exactamente el patrón documentado (matar/no llevarse a los hombres, capturar
-  mujeres y niños), no saqueo genérico. Chiriguare no vigila por vigilar: vigila porque sabe, con
+  mujeres y niños), no saqueo genérico. Chiriware no vigila por vigilar: vigila porque sabe, con
   precisión, **qué es lo que se pierde** en un raid — no bienes, sino linajes enteros cortados de raíz.
 - La ficha de **Marokoto-ni** ya lo describe sin villanizarlo ("no eres villano... la guerra es parte
   del ciclo natural") — esta lectura le da a esa frase un contenido concreto de parentesco, no solo de
@@ -385,12 +385,12 @@ que respetar como materia prima, no reinventar:
   su propia ficha lo describe sintiéndose "sin encajar del todo en ningún grupo". Esa es una tensión
   dramática real, no un error: sugiere que la comunidad **no aplica su propia regla de descendencia de
   forma limpia** a las uniones mixtas, lo cual es más interesante narrativamente que resolverlo.
-- **Chiri-ko**, sobrino de Chiriguare, ya está descrito en el canon (§6) como heredero natural por vía
+- **Chiri-ko**, sobrino de Chiriware, ya está descrito en el canon (§6) como heredero natural por vía
   avuncular — el patrón wayuu/taíno aplicado, en la práctica, desde antes de esta sesión.
 - **Piri-sha** es *"recién casada"* y cuñada de **Naure-sha** — indica que su esposo es hermano de
   Naure-sha (o de su esposa), dato de parentesco ya fijado que hay que preservar en la genealogía
   propuesta.
-- **Tawi** (hija de Saruro-sha) y **Buco** (hijo de Buco-ko) son los dos casos de filiación
+- **Tawi** (hija de Saruro-sha) y **Buko** (hijo de Buko-ko) son los dos casos de filiación
   madre/padre→hijo/a ya explícitos en tier III.
 
 **Regla propuesta (`reconstruido`, analogía wayuu directa):** exogamia de linaje materno — nadie se
@@ -455,11 +455,11 @@ nuevos — les da una razón estructural compartida:
   o contra un maestro) son, leídos así, no personajes sueltos sino **la cohorte del cuello de botella**
   — jóvenes en competencia directa por un número limitado de bodas posibles, y la rivalidad "amistosa"
   entre Tawaka y Pari-nu deja de ser solo color de personalidad para ser, en el fondo, competencia real.
-- **Guama-ko** ("admira a Tawaka, quisiera ser guerrero, pero su lugar es el azadón") y **Buco-ni**
+- **Wama-ko** ("admira a Tawaka, quisiera ser guerrero, pero su lugar es el azadón") y **Buko-ni**
   ("todavía no encuentra su oficio") son la otra cara: hombres jóvenes sin la vía guerrera abierta,
   que deben demostrar valor por otro camino (fuerza de trabajo, versatilidad) porque **también**
   necesitan entrar al mismo mercado matrimonial estrecho.
-- **Corie-ko irritándose con las "ideas de cambio" de Tawaka** (ya atestiguado en el canon) gana una
+- **Korie-ko irritándose con las "ideas de cambio" de Tawaka** (ya atestiguado en el canon) gana una
   segunda lectura: no es solo prudencia de viejo agricultor — es la fricción entre un sistema que
   exige que los jóvenes demuestren mérito extraordinario para acceder a lo que a los mayores ya
   polígamos les llegó más fácil.
@@ -515,16 +515,16 @@ construida sobre datos reales (el cuello de botella matrimonial, el debate histo
    pequeños y visitantes de paso), 5-6 linajes de 6-10 miembros dan suficiente variedad para sostener
    exogamia sin fragmentar el elenco en microlinajes sin sentido. Propongo:
    - **Buio** (serpiente-espíritu): Shaboro, Buio-sha, Sha — línea del piache, ya implícita.
-   - **Chiriguare** (gavilán): Chiriguare y su descendencia por hermana — línea guerrera, ya implícita
+   - **Chiriware** (gavilán): Chiriware y su descendencia por hermana — línea guerrera, ya implícita
      vía Chiri-ko.
-   - **Corie** (armadillo): Corie-ko y allegados — línea de agricultura/prudencia.
-   - **Paugis** (paují): Paugis-sha y Sha-corie — línea de medicina, partería y memoria oral femenina.
+   - **Corie** (armadillo): Korie-ko y allegados — línea de agricultura/prudencia.
+   - **Paugis** (paují): Paugis-sha y Sha-korie — línea de medicina, partería y memoria oral femenina.
    - **Linaje de Manaure** (propuesto, sin nombre de tótem fijado — ver §6 y genealogia.yaml): la
      matrilínea del propio Señor, necesariamente distinta de la de su esposa.
    - **Linaje de Nubiri-sha** (propuesto): la matrilínea de la esposa del Señor, cuyo peso político es
      explícito en el canon actual (§6) pero cuya estructura de linaje nunca se hizo explícita.
 
-   Nota importante de método: el nombre de un linaje (Buio, Chiriguare...) coincide aquí con el nombre
+   Nota importante de método: el nombre de un linaje (Buio, Chiriware...) coincide aquí con el nombre
    de un agente destacado por **conveniencia expositiva de esta propuesta** — un linaje real no es un
    gremio ocupacional, y no todos sus miembros comparten oficio. No fuerzo el mismo patrón en agentes
    sin relación de parentesco ya establecida.
@@ -553,7 +553,7 @@ construida sobre datos reales (el cuello de botella matrimonial, el debate histo
    otro período y no compite por ese lugar.** No hay que reescribir CULTURA_CAQUETIA.md §6: ya sostiene
    la lectura correcta para el siglo XIV-XV. Lo que sí vale la pena preservar del hallazgo de Oliver es
    la *forma* del conflicto de legitimidad (impugnar a un heredero por su madre), como herramienta
-   narrativa disponible para las ancianas (Sha-corie, Paugis-sha) — no como un sistema paralelo
+   narrativa disponible para las ancianas (Sha-korie, Paugis-sha) — no como un sistema paralelo
    patrilineal que la Curiana precontacto también tendría. Si en algún momento el proyecto decide
    dramatizar la llegada española o una "crónica del futuro" (como ya hace el Acto II con la voz del
    cronista, según el historial de commits), **ahí sí** el dato patrilineal de Oliver se vuelve
@@ -576,23 +576,23 @@ construida sobre datos reales (el cuello de botella matrimonial, el debate histo
 6. **Bloques de rol componibles derivados de este análisis** (para prompts modulares futuros, no
    implementados aquí):
    - `rol_avuncular`: aplica a cualquier hermano de una madre con hijos — autoridad económica/legal
-     sobre sus sobrinos, incluso si no es tier 1 (ej. un Buco-ko con sobrinos por parte de una
+     sobre sus sobrinos, incluso si no es tier 1 (ej. un Buko-ko con sobrinos por parte de una
      hermana no nombrada podría activar este bloque sin ser "el sucesor").
-   - `rol_matriarca_ratificadora`: Sha-corie, Paugis-sha — capacidad narrativa de aprobar/objetar
+   - `rol_matriarca_ratificadora`: Sha-korie, Paugis-sha — capacidad narrativa de aprobar/objetar
      matrimonios y legitimidad de herederos.
    - `rol_conyuge_forastero`: Piru-sha, el esposo sin nombrar de Piri-sha (si se confirma de otra
      etnia), los padres de Wata-ni — bicculturalidad, tensión de lealtad, función de mediación.
    - `rol_heredero_bajo_peso`: Chiri-ko, y ahora Waimo-ko propuesto — necesidad de "demostrar que lo
      merece", tensión generacional con el titular vivo del cargo.
-   - `rol_soltero_en_competencia` (nuevo, §5): Tawaka, Taku-ko, Pari-nu, Suri-bana, Guama-ko, Buco-ni
+   - `rol_soltero_en_competencia` (nuevo, §5): Tawaka, Taku-ko, Pari-nu, Suri-bana, Wama-ko, Buko-ni
      — jóvenes varones midiendo su valor contra el de otros porque el número de bodas posibles es
      estructuralmente menor que el número de hombres que las buscan. Rivalidades "amistosas" del
      canon (Tawaka-Pari-nu) pueden jugarse con este trasfondo de presión real, no solo personalidad.
 
 7. **El excedente de solteros como motor narrativo explícito** (nuevo, §5; `reconstruido` para el
    mecanismo, `hipotetico` para su aplicación puntual a cada agente). Sugiero tratar la cohorte de
-   guerreros y jóvenes sin oficio fijo del tier 2 (Tawaka, Taku-ko, Pari-nu, Suri-bana, Guama-ko,
-   Buco-ni) como un grupo en competencia estructural, no solo personajes con arcos individuales
+   guerreros y jóvenes sin oficio fijo del tier 2 (Tawaka, Taku-ko, Pari-nu, Suri-bana, Wama-ko,
+   Buko-ni) como un grupo en competencia estructural, no solo personajes con arcos individuales
    paralelos — su fricción tiene una causa material compartida (el cuello de botella matrimonial de
    poligamia + exogamia), no solo diferencias de carácter. Sugiero también tener presente, para runs
    largos o futuros, que la aritmética implica que **no todos terminan casados**: el rol avuncular
@@ -616,7 +616,7 @@ construida sobre datos reales (el cuello de botella matrimonial, el debate histo
 
 9. **El conflicto Curiana-Caribe como choque de ideologías familiares, no solo de fuerza** (ver §2,
    subsección "Dos polos de ideación familiar"; `hipotetico`, parentesco-029). Sugiero que cualquier
-   escena futura entre Chiriguare/la guardia y Marokoto-ni/visitantes caribes se escriba desde este
+   escena futura entre Chiriware/la guardia y Marokoto-ni/visitantes caribes se escriba desde este
    eje: no "el caribe es peligroso" en abstracto, sino "el caribe tiene otra forma de hacer familia, y
    esa forma se traga la nuestra". Da textura concreta al miedo ya atestiguado en el canon (§7) sin
    inventar hechos nuevos sobre los agentes — solo profundiza el porqué. Advertencia explícita: no usar
@@ -638,7 +638,7 @@ enemistarse con todos — sigue siendo del linaje de su madre, y cualquiera de l
 qué fuego es cada quien, igual que sabe de quién es cada canoa.
 
 En el centro del grupo están **las hermanas**: la mayor manda el fogón, las demás crían juntas a los
-niños de todas, y una anciana del linaje —una Sha-corie— guarda las reglas: quién puede casarse con
+niños de todas, y una anciana del linaje —una Sha-korie— guarda las reglas: quién puede casarse con
 quién, qué se hereda, cómo se guarda luto. Los **esposos** viven ahí pero son huéspedes permanentes:
 vinieron de otro fuego, comen del fogón de sus esposas, y sus propios nombres pertenecen a otra parte.
 Un hombre camina cada tanto de vuelta al bohío de su madre y sus hermanas, porque ahí es donde de
@@ -648,7 +648,7 @@ materno.
 
 Casarse es un pacto entre dos fuegos, no entre dos personas. Nadie toma esposa de su propio linaje —
 eso sería casarse con su propia sangre — así que cada matrimonio teje la Curiana un poco más apretada:
-el fuego de Buio queda emparentado con el de Corie, el de Paugis con el de Chiriguare, y las deudas y
+el fuego de Buio queda emparentado con el de Corie, el de Paugis con el de Chiriware, y las deudas y
 favores que Nubiri-sha lleva en la memoria corren por esos hilos. Por eso la boda de un cacique se
 celebra con fiesta grande y regalos de hamaca y vasija: no se está casando un hombre — se están
 aliando dos linajes, y a veces dos pueblos.

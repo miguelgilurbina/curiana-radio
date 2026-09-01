@@ -158,7 +158,7 @@ costa.
 
 **Antes del amanecer (*kapua*).** El frío suave de la madrugada falconiana. Olor a brasa reavivada y a
 casabe del día anterior. Las mujeres soplan el fogón; los pescadores revisan redes y piden permiso al
-mar en voz baja. Chiriguare reparte la guardia mirando al este. Shaboro ya está fuera de su choza si la
+mar en voz baja. Chiriware reparte la guardia mirando al este. Shaboro ya está fuera de su choza si la
 noche le trajo un sueño.
 
 **Mañana.** El viento noreste arrecia. Las canoas salen al Golfete; los agricultores bajan al conuco y
@@ -243,12 +243,12 @@ consecuencias políticas concretas:
 - La esposa del cacique (Nubiri-sha) no es un adorno: su linaje materno da base a la autoridad, y ella
   gestiona la **red de redistribución y deudas** que sostiene el cacicazgo.
 - La sucesión puede pasar **por la hermana del jefe a su sobrino** (de ahí el peso que carga Chiri-ko,
-  sobrino de Chiriguare): el heredero "natural" no es el hijo, sino el hijo de la hermana.
-- Las ancianas (Sha-corie, Paugis-sha) son **autoridad real** sobre el dominio femenino: nacimiento,
+  sobrino de Chiriware): el heredero "natural" no es el hijo, sino el hijo de la hermana.
+- Las ancianas (Sha-korie, Paugis-sha) son **autoridad real** sobre el dominio femenino: nacimiento,
   matrimonio, luto, herencia. Nadie las intimida, ni el cacique.
 
 ### El jefe guerrero
-Chiriguare manda la defensa. La amenaza estructurante son los **Caribes** del este, asociados a los
+Chiriware manda la defensa. La amenaza estructurante son los **Caribes** del este, asociados a los
 *raids*. La guerra no es constante, pero la **vigilancia** sí: moldea la vida cotidiana (guardia al
 amanecer, centinelas en la orilla).
 
@@ -266,13 +266,13 @@ amanecer, centinelas en la orilla).
 
 Para que la simulación no caiga en el cliché del "buen salvaje", conviene tener presente que la Curiana
 tiene **tensiones reales**:
-- **Generacionales:** prudencia vs. ambición (Corie-ko vs. Tawaka).
+- **Generacionales:** prudencia vs. ambición (Korie-ko vs. Tawaka).
 - **Económicas:** disputa permanente de precio sal-por-pescado (Biro-ko vs. Tariwa).
-- **Étnicas:** desconfianza profunda hacia el Caribe (Chiriguare vs. Marokoto-ni); identidad partida de
+- **Étnicas:** desconfianza profunda hacia el Caribe (Chiriware vs. Marokoto-ni); identidad partida de
   los hijos de uniones mixtas (Wata-ni).
 - **De poder:** noticias de las islas que cuestionan la autoridad del señor (Manaure vs. Kadushi);
   ambición de jóvenes que rozan el borde de las reglas.
-- **De género y rol:** una mujer pescadora que se ganó su sitio a pulso (Guaranaro-sha); una mujer cuyo
+- **De género y rol:** una mujer pescadora que se ganó su sitio a pulso (Waranaro-sha); una mujer cuyo
   valor social lo mide la comunidad por la maternidad (Piri-sha).
 
 Y tiene **vida intelectual**: lectura experta del clima y del mar, conocimiento botánico y médico,

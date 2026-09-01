@@ -62,13 +62,13 @@ EMOCIONAR_SEED: dict[str, dict] = {
     "Saruro-sha": {"disposicion": "paciencia del hacer — el cuidado de la materia",
                    "sesgo_lexico": ["flora", "alimentos", "cuerpo"],
                    "aspecto": "continuativo", "registro": {"frase": "media", "metafora": "media"}},
-    "Chiriguare": {"disposicion": "vigilancia dura — el deber de la defensa",
+    "Chiriware": {"disposicion": "vigilancia dura — el deber de la defensa",
                    "sesgo_lexico": ["jerarquia", "geografia", "cuerpo"],
                    "aspecto": "completivo", "registro": {"frase": "corta", "metafora": "baja"}},
     "Buio-sha":   {"disposicion": "visión naciente, asombro reverente",
                    "sesgo_lexico": ["ritual", "cosmos", "cuerpo"],
                    "aspecto": "continuativo", "registro": {"frase": "media", "metafora": "alta"}},
-    "Corie-ko":   {"disposicion": "paciencia de la tierra — la reciprocidad del conuco",
+    "Korie-ko":   {"disposicion": "paciencia de la tierra — la reciprocidad del conuco",
                    "sesgo_lexico": ["flora", "geografia", "tiempo"],
                    "aspecto": "continuativo", "registro": {"frase": "media", "metafora": "media"}},
     "Dare-nu":    {"disposicion": "apertura ávida — las ganas de pertenecer y aprender",
@@ -119,24 +119,24 @@ _ASPECTO_SUFIJO = {"completivo": "-ka", "continuativo": "-ni", "prospectivo": "-
 # caquetío activo, así que el sesgo se siembra con estas listas explícitas, no
 # por muestreo de dominio. Distintas entre agentes → divergencia inicial.
 FORMAS_SEED: dict[str, list[str]] = {
-    "Manaure":    ["biro", "barsure", "kali", "kasha", "chiriguare", "maa-ka", "naa-ka"],
+    "Manaure":    ["biro", "barsure", "kali", "kasha", "chiriware", "maa-ka", "naa-ka"],
     "Shaboro":    ["urari", "barsure", "boratio", "saruro", "kasha", "suna-ni", "naba-ni"],
-    "Nubiri-sha": ["ama", "buri", "arua", "biro", "conuco", "paa-da", "raka-da"],
-    "Watapana":   ["biro", "maure", "canoa", "habo", "arima", "naa-da", "wana-da"],
-    "Dara-ko":    ["kuru", "canoa", "bara", "arima", "cunaro", "bagre", "wana-ni"],
+    "Nubiri-sha": ["ama", "buri", "arua", "biro", "konuko", "paa-da", "raka-da"],
+    "Watapana":   ["biro", "maure", "kanoa", "habo", "arima", "naa-da", "wana-da"],
+    "Dara-ko":    ["kuru", "kanoa", "bara", "arima", "kunaro", "bagre", "wana-ni"],
     "Paugis-sha": ["urari", "arua", "buri", "ama", "kabo", "kono-ka", "wana-ka"],
     "Biro-ko":    ["biro", "habo", "dali", "sima", "naa-ka", "paa-ka"],
-    "Tawaka":     ["chiriguare", "kabo", "arima", "habo", "wana-da", "naa-da"],
+    "Tawaka":     ["chiriware", "kabo", "arima", "habo", "wana-da", "naa-da"],
     "Saruro-sha": ["maure", "arua", "naure", "kuru", "kono-ni", "chaa-ni"],
-    "Chiriguare": ["chiriguare", "sima", "habo", "kabo", "wana-ka", "naa-ka"],
+    "Chiriware": ["chiriware", "sima", "habo", "kabo", "wana-ka", "naa-ka"],
     "Buio-sha":   ["barsure", "boratio", "kasha", "suka", "urari", "naba-ni"],
-    "Corie-ko":   ["conuco", "buko", "kuru", "dali", "kaya", "kono-ni"],  # buco→buko: fusión D5b, tanda 2026-08-30
-    "Dare-nu":    ["canoa", "arima", "bara", "kuru", "naa-da", "wana-da"],
-    "Kadushi":    ["habo", "canoa", "biro", "kali", "maure", "naa-ni"],
-    "Marokoto-ni":["biro", "habo", "canoa", "arima", "naa-da"],
-    "Tariwa":     ["arima", "habo", "bara", "biro", "canoa", "wana-ni"],
+    "Korie-ko":   ["konuko", "buko", "kuru", "dali", "kaya", "kono-ni"],  # buco→buko: fusión D5b, tanda 2026-08-30
+    "Dare-nu":    ["kanoa", "arima", "bara", "kuru", "naa-da", "wana-da"],
+    "Kadushi":    ["habo", "kanoa", "biro", "kali", "maure", "naa-ni"],
+    "Marokoto-ni":["biro", "habo", "kanoa", "arima", "naa-da"],
+    "Tariwa":     ["arima", "habo", "bara", "biro", "kanoa", "wana-ni"],
     "Kawa-ni":    ["arima", "habo", "bara", "masa-ni", "naa-ni"],
-    "Piru-sha":   ["ama", "buri", "arua", "conuco", "masa-ni"],
+    "Piru-sha":   ["ama", "buri", "arua", "konuko", "masa-ni"],
     "Nabaraka":   ["maure", "naure", "sima", "biro", "kuru", "paa-da"],
     "Raka-bi":    ["biro", "sima", "habo", "naa-ni", "paa-ni"],
 }
@@ -522,7 +522,7 @@ class CompetenciaLexica:
 if __name__ == "__main__":
     print("── curiana_koine: smoke test ──")
     idios = {}
-    for nm in ("Manaure", "Shaboro", "Dara-ko", "Corie-ko", "Tariwa"):
+    for nm in ("Manaure", "Shaboro", "Dara-ko", "Korie-ko", "Tariwa"):
         emo = emocionar_de(nm)
         idio = IdiolectoAgente(nm, emo)
         idios[nm] = idio

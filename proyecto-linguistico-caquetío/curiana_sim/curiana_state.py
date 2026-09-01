@@ -24,7 +24,7 @@ ESTACIONES = {
     "lluvias": {
         "nombre": "Tiempo de Siembra",
         "meses_equiv": "Jun–Nov",
-        "descripcion": "Lluvias frecuentes. Siembra y cultivo. Buco lleno. Menos navegación. Ceremonias.",
+        "descripcion": "Lluvias frecuentes. Siembra y cultivo. Buko lleno. Menos navegación. Ceremonias.",
         "actividades_primarias": ["cultivar", "sembrar", "ritual_siembra", "construir"],
         "clima_base": "nublado, lluvias frecuentes, viento suave",
     },
@@ -91,8 +91,8 @@ class ComunidadState:
 
     # Memoria de relaciones (tensiones activas entre pares)
     tensiones_activas: dict = field(default_factory=lambda: {
-        "Tawaka-Corie-ko": {"nivel": "medio", "causa": "diferencia generacional sobre tradición"},
-        "Chiriguare-Marokoto-ni": {"nivel": "alto", "causa": "desconfianza étnica profunda"},
+        "Tawaka-Korie-ko": {"nivel": "medio", "causa": "diferencia generacional sobre tradición"},
+        "Chiriware-Marokoto-ni": {"nivel": "alto", "causa": "desconfianza étnica profunda"},
         "Biro-ko-Tariwa": {"nivel": "medio", "causa": "disputa precio sal/pescado"},
         "Manaure-Kadushi": {"nivel": "bajo", "causa": "noticias de islas que cuestionan autoridad"},
     })
@@ -204,7 +204,7 @@ def estado_inicial_test() -> ComunidadState:
             "Buio-sha lo vio desde lejos: ha tenido un sueño de los que importan. "
             "Manaure todavía no ha salido de su casa."
         ),
-        agentes_en_escena=["Manaure", "Shaboro", "Buio-sha", "Tawaka", "Dare-nu", "Corie-ko"],
+        agentes_en_escena=["Manaure", "Shaboro", "Buio-sha", "Tawaka", "Dare-nu", "Korie-ko"],
     )
 
 
@@ -218,7 +218,7 @@ EVENTOS_COTIDIANOS = [
         "nombre": "Pesca abundante",
         "descripcion": "Los pescadores regresan con más de lo esperado. El humor mejora.",
         "efecto": {"nivel_alimentos": "abundante", "nivel_tension": "bajo"},
-        "agentes_involucrados": ["Bagre-ko", "Tariwa", "Guaranaro-sha"],
+        "agentes_involucrados": ["Bagre-ko", "Tariwa", "Waranaro-sha"],
     },
     {
         "id": "pesca_mala",
@@ -239,21 +239,21 @@ EVENTOS_COTIDIANOS = [
         "nombre": "Disputa entre vecinos",
         "descripcion": "Dos familias en conflicto por límites del conuco.",
         "efecto": {"nivel_tension": "medio"},
-        "agentes_involucrados": ["Manaure", "Nubiri-sha", "Corie-ko"],
+        "agentes_involucrados": ["Manaure", "Nubiri-sha", "Korie-ko"],
     },
     {
         "id": "canoa_islas_llega",
         "nombre": "Llega canoa de las islas",
         "descripcion": "La canoa de Kadushi llega desde Aruba con bienes y noticias.",
         "efecto": {},
-        "agentes_involucrados": ["Kadushi", "Watapana", "Manaure", "Chiriguare"],
+        "agentes_involucrados": ["Kadushi", "Watapana", "Manaure", "Chiriware"],
     },
     {
         "id": "raspado_salinar",
         "nombre": "Raspado de la sal en el salinar",
         "descripcion": "El sol del mediodía ha secado las charcas costeras y la costra de biro brilla blanca y dura. Biro-ko y los suyos la raspan con conchas y palas de madera, los pies hinchados por la salmuera, amontonando la sal en cestos que cargarán hasta los bohíos. El aire sabe a sal y el reflejo ciega.",
         "efecto": {"nivel_sal": "abundante"},
-        "agentes_involucrados": ["Biro-ko", "Moruy-sha", "Suba-ko", "Guama-ko"],
+        "agentes_involucrados": ["Biro-ko", "Moruy-sha", "Suba-ko", "Wama-ko"],
     },
     {
         "id": "consulta_piache_sueno",
@@ -272,9 +272,9 @@ EVENTOS_COTIDIANOS = [
     {
         "id": "tejido_y_alfareria",
         "nombre": "Jornada de tejedoras y ceramistas",
-        "descripcion": "Bajo la sombra de los bohíos las manos no descansan: Saruro-sha levanta una vasija enrollando culebrillas de barro, Cahu-sha anuda una hamaca de maure y Pira-sha corrige a las jóvenes que copian los diseños antiguos. Se habla poco; el trabajo se enseña mirando.",
+        "descripcion": "Bajo la sombra de los bohíos las manos no descansan: Saruro-sha levanta una vasija enrollando culebrillas de barro, Kahu-sha anuda una hamaca de maure y Pira-sha corrige a las jóvenes que copian los diseños antiguos. Se habla poco; el trabajo se enseña mirando.",
         "efecto": {},
-        "agentes_involucrados": ["Saruro-sha", "Cahu-sha", "Pira-sha", "Kori-sha", "Kawa"],
+        "agentes_involucrados": ["Saruro-sha", "Kahu-sha", "Pira-sha", "Kori-sha", "Kawa"],
     },
     {
         "id": "trueque_visitantes_plaza",
@@ -288,21 +288,21 @@ EVENTOS_COTIDIANOS = [
         "nombre": "Ofrenda del anochecer a los ancestros",
         "descripcion": "Al caer la luz, las familias dejan un poco de casabe y chicha junto al lugar donde reposan los huesos de los mayores. Bana-mana recita en voz baja los nombres de los muertos para que no se olviden, y los niños escuchan los nombres que un día tendrán que repetir ellos.",
         "efecto": {"nivel_tension": "bajo"},
-        "agentes_involucrados": ["Bana-mana", "Sha-corie", "Paugis-sha"],
+        "agentes_involucrados": ["Bana-mana", "Sha-korie", "Paugis-sha"],
     },
     {
         "id": "vigilancia_perimetro_amanecer",
         "nombre": "Relevo de vigilancia en el perímetro",
-        "descripcion": "Antes de que aclare, Chiriguare reparte los puestos de guardia mirando hacia el este, de donde vienen los Caribes. Los jóvenes guerreros se frotan los ojos y ocupan sus lugares; Dara-bana ya escruta el horizonte del Golfete buscando velas que no deberían estar.",
+        "descripcion": "Antes de que aclare, Chiriware reparte los puestos de guardia mirando hacia el este, de donde vienen los Caribes. Los jóvenes guerreros se frotan los ojos y ocupan sus lugares; Dara-bana ya escruta el horizonte del Golfete buscando velas que no deberían estar.",
         "efecto": {"nivel_tension": "bajo"},
-        "agentes_involucrados": ["Chiriguare", "Taku-ko", "Pari-nu", "Dara-bana", "Chiri-ko"],
+        "agentes_involucrados": ["Chiriware", "Taku-ko", "Pari-nu", "Dara-bana", "Chiri-ko"],
     },
     {
         "id": "preparar_chicha",
         "nombre": "Preparación de la chicha de maíz",
         "descripcion": "Las mujeres mastican el maíz cocido y escupen la pasta en la múcura de barro para que fermente, un trabajo paciente que tomará días. La chicha agria es para la fiesta que viene; mientras tanto huele a grano dulce y fuego, y las niñas aprenden mirando cómo se mide el agua.",
         "efecto": {"nivel_alimentos": "normal"},
-        "agentes_involucrados": ["Naure-sha", "Wama-sha", "Sha-corie", "Tawi"],
+        "agentes_involucrados": ["Naure-sha", "Wama-sha", "Sha-korie", "Tawi"],
     },
 ]
 
@@ -310,9 +310,9 @@ EVENTOS_ESTACIONALES = [
     {
         "id": "sequia_inicio",
         "nombre": "Inicio de sequía",
-        "descripcion": "El buco baja. Los conucos se resienten. Tensión sobre el agua.",
+        "descripcion": "El buko baja. Los conucos se resienten. Tensión sobre el agua.",
         "efecto": {"nivel_alimentos": "escaso", "nivel_tension": "alto"},
-        "agentes_involucrados": ["Manaure", "Shaboro", "Corie-ko", "Buco-ko"],
+        "agentes_involucrados": ["Manaure", "Shaboro", "Korie-ko", "Buko-ko"],
     },
     {
         "id": "tormenta_fuerte",
@@ -331,9 +331,9 @@ EVENTOS_ESTACIONALES = [
     {
         "id": "rumor_raid_caribe",
         "nombre": "Rumor de raid Caribe",
-        "descripcion": "Dara-bana vio canoas extrañas al este. Chiriguare activa el perímetro.",
+        "descripcion": "Dara-bana vio canoas extrañas al este. Chiriware activa el perímetro.",
         "efecto": {"nivel_tension": "alto"},
-        "agentes_involucrados": ["Chiriguare", "Dara-bana", "Manaure", "Tawaka", "guerreros"],
+        "agentes_involucrados": ["Chiriware", "Dara-bana", "Manaure", "Tawaka", "guerreros"],
     },
     {
         "id": "ceremonia_iniciacion",
@@ -357,7 +357,7 @@ EVENTOS_ESTACIONALES = [
         "estacion": "seca",
         "descripcion": "El viento noreste sopla firme y las charcas del salinar se han secado por completo: es la gran cosecha del año. Toda mano disponible baja a raspar el biro hasta que los cestos rebosan, porque esta sal alimentará el trueque de muchas lunas. Biro-ko cuenta los montones con orgullo feroz mientras Manaure decide cuánto se guarda y cuánto se cambia.",
         "efecto": {"nivel_sal": "abundante", "nivel_tension": "bajo"},
-        "agentes_involucrados": ["Biro-ko", "Manaure", "Watapana", "Moruy-sha", "Guama-ko"],
+        "agentes_involucrados": ["Biro-ko", "Manaure", "Watapana", "Moruy-sha", "Wama-ko"],
     },
     {
         "id": "expedicion_perlas",
@@ -381,24 +381,24 @@ EVENTOS_ESTACIONALES = [
         "id": "ritual_siembra_primeras_lluvias",
         "nombre": "Ritual de las primeras lluvias",
         "estacion": "lluvias",
-        "descripcion": "Las primeras nubes cargadas se amontonan sobre el llano y Shaboro guía el ritual para que la lluvia caiga buena y no como tormenta destructora. Se ofrenda casabe y se sopla humo hacia el cielo; Corie-ko ya ha preparado los conucos y aguarda la señal del piache para clavar las primeras estacas de yuca.",
+        "descripcion": "Las primeras nubes cargadas se amontonan sobre el llano y Shaboro guía el ritual para que la lluvia caiga buena y no como tormenta destructora. Se ofrenda casabe y se sopla humo hacia el cielo; Korie-ko ya ha preparado los conucos y aguarda la señal del piache para clavar las primeras estacas de yuca.",
         "efecto": {"nivel_tension": "bajo"},
-        "agentes_involucrados": ["Shaboro", "Manaure", "Corie-ko", "Buio-sha", "Buco-ko"],
+        "agentes_involucrados": ["Shaboro", "Manaure", "Korie-ko", "Buio-sha", "Buko-ko"],
     },
     {
         "id": "crecida_buco",
-        "nombre": "Crecida del buco",
+        "nombre": "Crecida del buko",
         "estacion": "lluvias",
-        "descripcion": "Las lluvias han llenado el buco hasta el borde y el agua corre por los canales hacia los conucos sedientos. Corie-ko y Buco-ko caminan las represas reparando filtraciones bajo el aguacero, aliviados y tensos a la vez: demasiada agua de golpe puede reventar las paredes de barro que tanto cuesta levantar.",
+        "descripcion": "Las lluvias han llenado el buko hasta el borde y el agua corre por los canales hacia los conucos sedientos. Korie-ko y Buko-ko caminan las represas reparando filtraciones bajo el aguacero, aliviados y tensos a la vez: demasiada agua de golpe puede reventar las paredes de barro que tanto cuesta levantar.",
         "efecto": {"nivel_alimentos": "abundante", "nivel_tension": "bajo"},
-        "agentes_involucrados": ["Corie-ko", "Buco-ko", "Ita-ko", "Wari-ko"],
+        "agentes_involucrados": ["Korie-ko", "Buko-ko", "Ita-ko", "Wari-ko"],
     },
     {
         "id": "duelo_ritual_difunto",
         "nombre": "Duelo y ceremonia funeraria",
         "estacion": "lluvias",
-        "descripcion": "Un mayor ha muerto y la comunidad se reúne bajo la lluvia para el duelo: se entona el llanto ritual, se prepara el cuerpo y se guardan sus huesos según la costumbre para que su barsure halle el camino. Paugis-sha y Sha-corie dirigen el lamento de las mujeres; Bana-mana añade el nombre del difunto a la lista de los que no deben olvidarse.",
+        "descripcion": "Un mayor ha muerto y la comunidad se reúne bajo la lluvia para el duelo: se entona el llanto ritual, se prepara el cuerpo y se guardan sus huesos según la costumbre para que su barsure halle el camino. Paugis-sha y Sha-korie dirigen el lamento de las mujeres; Bana-mana añade el nombre del difunto a la lista de los que no deben olvidarse.",
         "efecto": {"nivel_tension": "medio"},
-        "agentes_involucrados": ["Paugis-sha", "Sha-corie", "Shaboro", "Bana-mana"],
+        "agentes_involucrados": ["Paugis-sha", "Sha-korie", "Shaboro", "Bana-mana"],
     },
 ]

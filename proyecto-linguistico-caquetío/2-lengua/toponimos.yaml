@@ -57,7 +57,8 @@ toponimos:
     a la vez.
   observacion: '⚠ Resuelve un problema del lexicón: hay una entrada `quiba` = ''ayuda'' (Zavala #203)
     y otra `quiva`/`cuiva` = ''piedra''. El topónimo, con glosa ''pedregosos'', confirma ''piedra'' —
-    y coincide con van Buurt. Ver CONFLICTOS.'
+    y coincide con van Buurt. Ver CONFLICTOS. (Cerrado el 2026-08-31: ambas fusionadas como `kiba`,
+    homónimos declarados; el sentido piedra lleva el sig activo.)'
   procedencia:
     obra: zavala-reyes-2015
 - id: toponimo-004
@@ -738,12 +739,15 @@ corroboraciones_lexicon:
   - jurijurebo
   independencia: alta
   nota: y eco insular en Hudishibana 'windy plain' (van Buurt)
-- palabra: quiva/quiba
+- palabra: kiba
   glosa_lexicon: piedra
   toponimos:
   - quibacoas
   independencia: alta
-  nota: ⚠ desambigua contra la entrada homógrafa `quiba` = 'ayuda'
+  nota: 'grafías fuente quiva/quiba/cuiva (colisiones D5 2026-08-31: fusionadas
+    como kiba, con kiba-2 ''ayuda'' de homónimo declarado). El topónimo
+    corrobora kiba-1 ''piedra'' — y Zavala #92 «Cuiva. Kiba» trae la grafía k
+    impresa'
 - palabra: barici
   glosa_lexicon: agua turbia, tierras coloradas rojizas
   toponimos:
@@ -769,7 +773,7 @@ corroboraciones_lexicon:
   toponimos:
   - paraguana
   independencia: alta
-- palabra: gua
+- palabra: wa
   glosa_lexicon: conuco, heredad, terreno cercado cultivado
   toponimos:
   - guamabatriba
@@ -795,7 +799,7 @@ corroboraciones_lexicon:
   toponimos:
   - Hudishibana
   independencia: NULA — ídem
-- palabra: cari
+- palabra: kari
   glosa_lexicon: costa, orilla
   toponimos:
   - Cariatávo
