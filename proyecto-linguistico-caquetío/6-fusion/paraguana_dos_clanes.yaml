@@ -1,0 +1,137 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — Los dos clanes de Paraguaná: Amuayes y Guaranaos
+#
+# Minería de verificación del 2026-09-01, a pedido de Miguel («estoy seguro
+# que en ese texto menciona información sobre cómo Paraguaná está
+# estructurada») — CONFIRMADO, con nombres, territorios y páginas.
+#
+# Fuente: Oliver 1989, cap. 3, pp. impresas 275-276 (pdf 302-303, offset
+# −27). OCR de localización + VERIFICADO A OJO contra la imagen (protocolo).
+# Oliver cita a González Batista 1984 y al documento de Modesto Delmonte
+# (1883, sobre documentos hoy perdidos y tradición oral de la península).
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-09-01'
+  estado: sin-fusionar
+  obra: oliver-1989-cap3
+  motivo: rumbo era 2 — el diseño de los nodos de Paraguaná (D15 #90)
+
+hechos_propuestos:
+  - id: paraguana-dos-clanes
+    esfera: geografia_politica
+    contenido: >-
+      Paraguaná en el s. XVI estaba dividida en DOS territorios, cada uno de
+      un sub-grupo caquetío distinto: los AMUAYES controlaban la parte SUR y
+      los GUARANAOS la parte NORTE de la península. Cada sub-grupo tenía sus
+      propias cabezas de playa (beach heads) con derechos exclusivos de
+      pesca, y cabe asumir parcelas agrícolas interiores igual de definidas.
+    cita: >-
+      "Thanks to historian González Batista (1984) we know that Paraguaná,
+      in the XVIth century, was divided into two territories, each occupied
+      by a different Caquetío sub-group: the Amuayes which controlled the
+      southern part and the Guaranaos who controlled the northern part of
+      the peninsula. Each sub-group had its own beach heads, entitling them
+      to specific fishing grounds..."
+    procedencia: {obra: oliver-1989-cap3, pagina: '275', via: "González Batista 1984"}
+    etiqueta_sugerida: atestiguado (s. XVI, con la cadena declarada)
+
+  - id: paraguana-clanes-asentamientos
+    esfera: geografia_politica
+    contenido: >-
+      Según el documento de Delmonte (1883): los Amuayes estuvieron primero
+      en la aldea de CAYERDA (Cayerta/"Coyarna", aún existente) y luego se
+      reasentaron en MORUY; los Guaranaos se asentaron en SANTA ANA. Oliver
+      pudo confirmar el reasentamiento de los Amuayes, lo que da
+      credibilidad a la crónica de Delmonte.
+    cita: >-
+      "...he mentions the existence of two tribal groups in the XVIth
+      century: the Amuayes and the Guaranaos. According to the same
+      document, the Amuayes were found first established in the village of
+      Cayerda and later in Moruy, while the others [Guaranaos] settled in
+      Santa Ana. On our part we have been able to confirm that the
+      resettlement of the Amuayes really had taken place..."
+    procedencia: {obra: oliver-1989-cap3, pagina: '276', via: "Delmonte 1883 vía González Batista"}
+    etiqueta_sugerida: atestiguado con cadena larga (documento 1883 sobre papeles perdidos + tradición oral)
+
+  - id: paraguana-jefatura-de-dos-niveles
+    esfera: geografia_politica
+    contenido: >-
+      Lectura de Oliver: derechos territoriales mutuamente excluyentes entre
+      Amuay y Guaranao implican un nivel de organización supra-aldea — lazos
+      de parentesco y/o alianza dentro de cada grupo, y UN jefe de orden
+      superior por sub-grupo. Y ambos sub-grupos integrados a un nivel más
+      alto: el polity costero caquetío, bajo un jefe de rango aún mayor —
+      al contacto, Manaure.
+    cita: >-
+      "There was a higher-order level of organization in which villages were
+      bound together as is manifested by the mutually exclusive territorial
+      rights between the Amuay and Guaranao. Presumably within each
+      supra-village group there were close ties of kinship and/or alliance,
+      and [a] single higher-order chief represented the political authority
+      for the set of villages... At the same time, both sub-groups were
+      integrated at a higher level of organization, that of the Coastal
+      Caquetío polity... this higher ranking, overall chief, was Manaure."
+    procedencia: {obra: oliver-1989-cap3, pagina: '276'}
+    etiqueta_sugerida: reconstruido (es la síntesis de Oliver, no cita directa de fuente primaria)
+
+  - id: paraguana-cacicazgos-taino
+    esfera: geografia_politica
+    contenido: >-
+      Modelo general de Oliver para las aldeas costeras: organizadas como los
+      cacicazgos antillanos (taínos) — conjuntos de aldeas emparentadas
+      dentro de fronteras espaciales determinadas, con alianzas
+      inter-aldea definidas por matrimonio y parentesco. La estructura
+      exacta de las subdivisiones "no puede definirse con precisión".
+    cita: >-
+      "Villages were probably organized into something like the Antillean
+      (Taíno) cacicazgos; that is, into a set of related villages within
+      determined spatial boundaries... Intervillage alliances along with the
+      territorial boundaries was probably determined by a combination of
+      marriage alliances and kinship ties."
+    procedencia: {obra: oliver-1989-cap3, pagina: '275'}
+    etiqueta_sugerida: reconstruido
+
+  - id: paraguana-maloca-y-ritual
+    esfera: geografia_politica
+    contenido: >-
+      Vivienda costera: solo Vespucci describe una maloca grande (40-50
+      personas, Curazao); si el dato vale para tierra firme, una aldea
+      "mediana" tendría hasta cuatro malocas. Y los cronistas NO mencionan
+      estructuras especializadas (casa de hombres, chozas menstruales) entre
+      los caquetíos — Oliver presume que fueron "quite secretive" con sus
+      espacios rituales/sagrados.
+    procedencia: {obra: oliver-1989-cap3, pagina: '275'}
+    etiqueta_sugerida: reconstruido; el silencio sobre lo ritual es dato negativo declarado
+
+conflicto_declarado:
+  - id: amuay-caquetio-vs-caribe
+    que: >-
+      Esteves atribuye estrato CARIBE al topónimo Amuay (cola B.6, Oliver
+      §3.2.4); González Batista/Oliver dan a los Amuayes como sub-grupo
+      CAQUETÍO. No se resuelve aquí: se registran ambas voces (patrón
+      lecturas). El minado de B.6 (pendiente) debe encarar este choque.
+
+implicaciones_era_2:
+  - >-
+    La visión de Miguel («primero un clan, después el espejo») tiene nombres
+    y geografía atestiguados: GUARANAOS (norte, Santa Ana) y AMUAYES (sur,
+    Moruy, antes Cayerda). El diseño de los dos nodos de Paraguaná no se
+    inventa — se calca.
+  - >-
+    El contacto entre nodos que el diseño necesita ya está descrito por la
+    fuente: fronteras por alianza matrimonial y parentesco (exogamia entre
+    grupos = el canal), derechos de pesca excluyentes (el conflicto), y la
+    integración al polity de Manaure (el techo común).
+  - >-
+    OJO onomástico: guaranao ~ waranao (D5: gua→wa) — cf. la entrada
+    waranao del lexicón (Zavala, forma_fuente guaranao) y el pez
+    waranaro/Waranaro-sha. El etnónimo y el zoónimo piden desambiguación al
+    diseñar.
+
+correccion_de_erratas:
+  - >-
+    Las referencias de parentesco-001 y parentesco-003 citaban "pp. 255-256"
+    para la sucesión colonial y la bastardía: las páginas reales son
+    265-266 (impresas; pdf 292-293). Verificado a ojo el 2026-09-01 — la
+    255 impresa es la Figura 40 (mapa de Juan de la Cosa) y la 256 el viaje
+    de Ojeda. Corregir vía aplicador.

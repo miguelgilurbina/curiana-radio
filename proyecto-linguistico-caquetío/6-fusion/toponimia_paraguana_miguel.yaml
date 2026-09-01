@@ -1,0 +1,179 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — Toponimia paraguanera: la investigación coloquial de Miguel
+# (2026-09-01, sobre el hallazgo de los dos clanes)
+#
+# Método NUEVO decidido este día (ver decisiones_tanda_2026-09-01.yaml
+# §rumbo_toponimos): Miguel se moja con lecturas de investigación coloquial
+# (hearsay, tradición local, mapas actuales), Claude valida probabilidad, y
+# el proyecto adopta DEFINICIONES ACEPTADAS PARA LA SIMULACIÓN — etiqueta
+# canon-simulacion, nunca atestiguado. La atestación científica deja de ser
+# el único camino; la etiqueta epistémica sigue diciendo la verdad.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-09-01'
+  estado: sin-fusionar
+  quien: "Miguel (investigación coloquial + lectura de mapa actual de Paraguaná)"
+  contexto: los dos clanes de Oliver (paraguana_dos_clanes.yaml) y el diseño de nodos de la era 2
+
+lecturas:
+
+  - toponimo: Santa Ana (Paraguaná)
+    tipo: tradicion-local
+    lectura: >-
+      El nombre original era CHAMURIANA, "elegida por los nativos debido a
+      la abundancia de agua dulce que bajaba del cerro". Hallado por Miguel
+      en investigación coloquial (web/crónica local), sin fuente citable
+      aún — deuda declarada.
+    observaciones_del_proyecto:
+      - "Chamuriana termina en -ana: el formante cuya glosa está EN DISPUTA (#109) — un dato más para esa cola"
+      - "el cerro del que baja el agua es el CERRO SANTA ANA = el Cerro de Capú (Velasco 2015; D9): el complejo capu/bana/agua se toca con este nombre"
+      - "cf. -iana en Coriana/Curiana (toponimia_coro_espina.yaml)"
+    veredicto_de_miguel_2026_09_01: >-
+      «Sí o sí Santa Ana es puramente colonial: fue fundada por
+      FRANCISCANOS.» El PUEBLO es fundación misional; el SITIO y su agua
+      llevaban nombre nativo (Chamuriana). Consecuencia para el diseño: la
+      asignación de Delmonte (Guaranaos "en Santa Ana") describe geografía
+      colonial — el nodo norte precontacto no puede anclarse en Santa Ana
+      como pueblo. (Pregunta aparcada por Miguel para otro momento: por qué
+      un franciscano elegiría a Santa Ana, personaje de apócrifos.)
+    deuda: sin-procedencia
+
+  - toponimo: Moruy
+    tipo: etimologia-popular (CUATRO versiones recogidas)
+    lectura: >-
+      Versiones de tradición oral que recoge Miguel: (1) Moruy era un
+      CACIQUE; (2) llegaron unos "moros" tan temibles que los aborígenes
+      gritaban «¡moro uy!»; (3) del quechua muru, 'viruela' o 'pepa';
+      (4) «alteración de MEREJUY, levadura o preparación agria que usaban
+      para acelerar la fermentación del maíz cocido con que elaboraban la
+      chicha embriagadora, que consumían en ceremonias religiosas»
+      (recogida el 2026-09-01, investigación coloquial, cita textual de
+      crónica local sin identificar aún).
+    validacion_de_probabilidad: >-
+      (Claude, curaduría acordada) La (2) es etimología de anécdota —
+      improbable. La (3) exige préstamo quechua sin ruta — improbable.
+      Quedan compitiendo (1) y (4): la (1) sigue el patrón regional real
+      (topónimo < antropónimo, cf. Manaure); la (4) da un SIGNIFICADO
+      funcional-ritual que encaja con Paraguaná como asiento religioso
+      (Salas: el Gran Señor) y con la chicha ceremonial — aunque el paso
+      merejuy→moruy pide varios cambios vocálicos y una síncopa (posible
+      en transmisión oral, no evidente). Y las dos son COMPATIBLES entre
+      sí por la regla 0: un cacique puede llamarse por el oficio del
+      sitio. Se registran ambas como candidatas; merejuy además propone
+      una VOZ (levadura/fermento ritual) que merece entrada propia si
+      aparece segunda fuente. Nota: moruy está en EXCLUIR_DEL_HABLA como
+      topónimo; Zavala lo trae en su glosario.
+    deuda: sin-procedencia
+
+  - toponimo: Aruba / Arubanas
+    tipo: hipotesis-de-miguel
+    lectura: >-
+      En «Arubanas» (los indios de Aruba, Altoaguirre [1768] vía Oliver p.
+      256) Miguel ve otra vez el formante bana — o quizás el -ana
+      escondido, si el nombre quedó como Aruba, que "supuestamente
+      significa 'La que acompaña'" (etimología popular circulante).
+    validacion_de_probabilidad: >-
+      Cautela: Arubanas puede ser simplemente Aruba + -nas (plural/gentilicio
+      castellano, como «paraujanos»), sin morfema indígena. La segmentación
+      aru+bana o arub+ana necesitaría apoyo independiente. Se registra la
+      lectura; probabilidad baja mientras no aparezca segundo apoyo.
+      Cf. van Buurt §7 para la toponimia aruberoa real (Sero Warawara...).
+
+  - toponimo: Cayerda / Cayerúa
+    tipo: verificacion-de-mapa (Miguel)
+    lectura: >-
+      «Cayerda no existe, pero Cayerúa sí» — Miguel, sobre el mapa actual.
+      La aldea que Delmonte da como asiento primero de los Amuayes
+      (Cayerda/Cayerta/"Coyarna" en Oliver p. 276, que la da como "still
+      extant") aparece hoy como CAYERÚA, cerca de Moruy (foto de Miguel:
+      Moruy, Uarayadito, Cayerúa en el mismo sector).
+    observaciones_del_proyecto:
+      - "Oliver mismo vacila en la grafía: Cayerta/'Coyarna'/Cayerda — el nombre llegó mal copiado por alguna de las cadenas"
+      - "las variantes -erda/-erta/-erúa son material para la campaña de topónimos (permutar TODAS las vocales — trampa 1 de la tanda)"
+
+hipotesis_estructural:
+
+  - id: capubana-centro-sagrado
+    quien: Miguel (2026-09-01, segunda entrega)
+    hipotesis: >-
+      Los pueblos del sector llevan distinciones SEGÚN SU POSICIÓN RESPECTO
+      DEL CAPUBANA (el Cerro Santa Ana = el Cerro de Capú, D9): Moruy —
+      donde se hacía el merejuy para fermentar la chicha ritual — quedaba a
+      la IZQUIERDA del Capubana, y Chamuriana al SUR del mismo, con el agua
+      que baja del cerro. Si Paraguaná era el asiento religioso del polity
+      (Salas: el Gran Señor de Paraguaná), el conjunto alrededor del cerro
+      sería su CENTRO SAGRADO: sitios con funciones rituales distintas
+      (fermento, agua) organizados en torno a la montaña.
+    correccion_geografica_de_miguel: >-
+      Chamuriana (Santa Ana) está al SUR del cerro y Cayerúa al NORTE —
+      contra la lectura rápida anterior. Todo el conglomerado
+      Moruy-Cayerúa-Chamuriana orbita el Capubana, no se reparte
+      norte/sur de la península.
+    validacion_de_probabilidad: >-
+      (Claude) La geografía es verificable y Miguel la tiene mejor que
+      Delmonte-vía-Oliver. El modelo centro-sagrado es consistente con
+      TRES piezas ya canónicas independientes: el Capubana como morada del
+      dueño Capo (D9/Velasco: el cerro se llamaba Cerro de Capú), Salas
+      sobre la cabecera religiosa en Paraguaná, y el silencio de cronistas
+      sobre estructuras rituales ("quite secretive", Oliver p. 275) — un
+      centro sagrado de montaña es exactamente lo que un cronista costero
+      no vería. Etiqueta: canon-simulacion como modelo espacial; ninguna
+      fuente lo dice así de explícito.
+    tension_a_verificar: >-
+      Los homónimos MODERNOS de los clanes parecen invertidos respecto a
+      Oliver: Amuay está al NOROESTE de la península (norte de Punto
+      Fijo) y la bahía de Guaranao al SUR de Punto Fijo — mientras Oliver
+      da Amuayes=sur, Guaranaos=norte. VERIFICAR en mapa antes de fijar
+      territorios; puede ser errata de Delmonte, de Oliver, o que el
+      topónimo moderno no marque el territorio del clan.
+    apoyo_ecologico: >-
+      (Miguel, 2026-09-01, sobre el mapa) El Capubana no es solo el eje
+      simbólico: entre los cerros «sigue existiendo uno de los pocos
+      BOSQUES XERÓFITOS que quedan en el mundo» (hoy Monumento Natural
+      Cerro Santa Ana). En una península árida, el cerro es la anomalía
+      ecológica — el agua que baja (Chamuriana), el manantial (la escuela
+      MAITIRUMA está al pie este del cerro: el 'manantial azul'
+      caribe-insular de Esteves, geolocalizado en el mismo complejo) y el
+      bosque. El asiento religioso coincide con el corazón de agua y
+      verde de la tierra seca — datos para la esfera de ECOLOGÍA además
+      de la política. Convergencia Maitiruma-Chamuriana-Capubana: tres
+      nombres de agua/cerro en un radio de pocos km.
+  - id: moruy-santa-ana-mismo-clan
+    quien: Miguel
+    hipotesis: >-
+      Moruy y Santa Ana (Chamuriana) eran DEL MISMO CLAN, no de clanes
+      rivales: están muy cerca (foto), y SANTA ANA pudo ser un pueblo
+      CREADO POR EL PROCESO COLONIAL (congregación/reducción) — en cuyo
+      caso la asignación de Delmonte (Guaranaos en Santa Ana) describe
+      geografía COLONIAL, no precontacto. La casa de los Guaranaos habría
+      sido Moruy... o los nodos tenían extensiones familiares que la
+      lectura de "dos territorios" simplifica.
+    validacion_de_probabilidad: >-
+      Es la regla 3 del proyecto aplicada a Delmonte — y es seria: el
+      propio Oliver confirma un REASENTAMIENTO (Amuayes: Cayerda→Moruy),
+      que huele a reducción colonial. Si los Amuayes fueron REASENTADOS en
+      Moruy, la geografía de Delmonte es posterior al contacto por lo
+      menos en parte. PERO la división norte/sur con playas de pesca
+      excluyentes (González Batista) es económica-territorial, no de
+      pueblos: puede sobrevivir a la reubicación de las aldeas. Lectura
+      propuesta para el diseño: conservar los DOS clanes (atestiguados)
+      como estructura, y dejar la ASIGNACIÓN clan→pueblo-moderno como
+      canon-simulacion revisable. Chamuriana como nombre precontacto de
+      Santa Ana, si se confirma, DEBILITA la parte "pueblo puramente
+      colonial" de la hipótesis (los nativos la nombraron por su agua).
+    implicacion_era_2: >-
+      Para DISENO_ERA2: los nodos se modelan como TERRITORIOS de clan
+      (norte/sur) con extensiones familiares, no como pueblos puntuales —
+      lo cual encaja con los linajes de D1 como unidades de expansión.
+
+cola_de_mapa:
+  nota: >-
+    topónimos vivos que las dos fotos de Miguel muestran (sector del
+    Capubana) — para la campaña. Ojo con la familia -quiva/-quiba (kiba
+    'piedra'): Jadacaquiva y Yabuquiva se suman a quibacoa/Todariquiba.
+    Y Maitiruma pasa de nombre suelto de Esteves a LUGAR geolocalizado al
+    pie este del cerro.
+  candidatos: [Uarayadito, Davaduvare, Abudure, Machuruca, Caseto, La Rinconada,
+               Jadacaquiva, Yabuquiva, Amaraya, Adaure, Maicara, Buchuaco,
+               Charaima, Baraived, Cocodite, Parunu, Guacubero, Jacuque,
+               Cayerúa, El Supí, Pedregalito, Maitiruma, Judibana]

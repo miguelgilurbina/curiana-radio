@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-01 10:20**.
+<!--GENERADO--> Generado el **2026-09-01 12:23**.
 
 ## ¿Vamos bien?
 
@@ -21,11 +21,11 @@ editar_a_mano: no
 |---|---|---|---|
 | Entradas del lexicón **sin cita** | **0** | 82 (2026-07-21) | 🟢 −82 |
 | Hechos del corpus **con referencia** | **161 / 161** | — | 🟢 |
-| Tests del motor | **201 en verde** | 0 rojos | 🟢 |
-| Gate para reanudar simulaciones | **5 de 9** condiciones | faltan 4 | 🔴 |
-| Decisiones esperando a Miguel | **11 abiertas** | 2 resueltas | 🟡 |
+| Tests del motor | **206 en verde** | 0 rojos | 🟢 |
+| Gate para reanudar simulaciones | **6 de 9** condiciones | faltan 3 | 🔴 |
+| Decisiones esperando a Miguel | **9 abiertas** | 4 resueltas | 🟡 |
 
-**Lo que bloquea hoy:** decisiones D1/D3/D5 · wayunaiki vs. lokono (D11).
+**Lo que bloquea hoy:** wayunaiki vs. lokono (D11).
 Y 2 condición(es) que **nadie puede medir por script**: citas del corpus (F10) · exportador de runs.
 
 Detalle de cada número: [lexicón](#1-el-lexicón) · [fuentes](#2-las-fuentes) · [corpus](#3-el-corpus-cultural) · [gate](#4-el-gate-para-reanudar-simulaciones) · [decisiones](#5-decisiones-e-issues)
@@ -242,7 +242,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | 3 | 🟢 | Las 3 fuentes ALTA minadas (F3, F4, F5) | F3 [[alvarado-1921]] minado · F4 [[gatschet-1885]] minado · F5 [[oliver-1989-cap2]] minado |
 | 4 | 🟢 | `compilar_corpus.py` en verde (V2) | **161 hechos, 0 errores, 0 avisos** |
 | 5 | ⚪ | Citas del corpus verificadas por muestreo (F10) | **no automedible**: que la cita *resuelva* (que la página exista) es trabajo humano. Medible sí: 161/161 hechos **tienen** `referencia` |
-| 6 | 🔴 | D1, D3 y D5 tomadas | abiertas: D1, D3 — [D1](https://github.com/miguelgilurbina/curiana-radio/issues/32) · [D3](https://github.com/miguelgilurbina/curiana-radio/issues/34) · [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) |
+| 6 | 🟢 | D1, D3 y D5 tomadas | todas tomadas — [D1](https://github.com/miguelgilurbina/curiana-radio/issues/32) · [D3](https://github.com/miguelgilurbina/curiana-radio/issues/34) · [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) |
 | 7 | 🟢 | La glosa de `-bana` resuelta | todas tomadas — [D9](https://github.com/miguelgilurbina/curiana-radio/issues/38) |
 | 8 | 🔴 | El desbalance wayunaiki/lokono resuelto | abiertas: D11 — [D11](https://github.com/miguelgilurbina/curiana-radio/issues/39) · medido: wayunaiki 781 vs. lokono 275 (2.8 a 1) |
 | 9 | ⚪ | `export_runs_index.py` reparado | **no automedible sin correr un export contra la base** (ver [[04_protocolo_run_1_era_auditada]] §2.9) |
@@ -259,9 +259,9 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 | # | Decisión | Estado | Issue |
 |---|---|---|---|
-| D1 | Veto de la genealogia propuesta | 🔴 abierta | [#32](https://github.com/miguelgilurbina/curiana-radio/issues/32) |
+| D1 | Veto de la genealogia propuesta | ✅ resuelta | [#32](https://github.com/miguelgilurbina/curiana-radio/issues/32) |
 | D2 | El nombre "Curiana": ¿territorio o asentamiento? | 🔴 abierta | [#33](https://github.com/miguelgilurbina/curiana-radio/issues/33) |
-| D3 | `normalizar_por_dialecto()`: cablearla o eliminarla | 🔴 abierta | [#34](https://github.com/miguelgilurbina/curiana-radio/issues/34) |
+| D3 | `normalizar_por_dialecto()`: cablearla o eliminarla | ✅ resuelta | [#34](https://github.com/miguelgilurbina/curiana-radio/issues/34) |
 | D4 | Pluralidad de candidatos a la sucesion de Manaure | 🔴 abierta | [#35](https://github.com/miguelgilurbina/curiana-radio/issues/35) |
 | D5 | Politica ortografica c/k del lexicon | ✅ resuelta | [#36](https://github.com/miguelgilurbina/curiana-radio/issues/36) |
 | D8 | ¿El repo archiva copias de las fuentes externas? | 🔴 abierta | [#37](https://github.com/miguelgilurbina/curiana-radio/issues/37) |
@@ -273,7 +273,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | D15 | Qué nodo se simula primero: Coro, Paraguaná, o un par desde el principio | 🔴 abierta | [#90](https://github.com/miguelgilurbina/curiana-radio/issues/90) |
 | — | `tara`: ¿venado o mariposa? — puede tumbar un argumento del corpus | 🔴 abierta | [#45](https://github.com/miguelgilurbina/curiana-radio/issues/45) |
 
-**11 abiertas** de 13. Medido contra el tablero, no contra una nota.
+**9 abiertas** de 13. Medido contra el tablero, no contra una nota.
 
 ---
 
@@ -281,8 +281,8 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1042 en 313 notas indexadas | 🟢 0 rotos |
-| Tests (`curiana_sim/tests/`) | 201 passed, 0 failed | 🟢 |
+| Wikilinks | 1042 en 320 notas indexadas | 🟢 0 rotos |
+| Tests (`curiana_sim/tests/`) | 206 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
 **Avisos de `curiana_polities.py::coherencia_del_canon()`:**

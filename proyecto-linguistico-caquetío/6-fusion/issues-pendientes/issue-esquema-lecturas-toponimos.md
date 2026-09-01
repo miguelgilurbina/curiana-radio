@@ -86,13 +86,35 @@ topónimo — que es exactamente lo que pasó hoy.
 Es el mismo movimiento que el issue de repertorio-vs-filiación, aplicado a
 topónimos: **varias voces, cada una etiquetada, ninguna silenciada.**
 
+## La capa de decisión (añadida el 2026-09-01, decisión de Miguel)
+
+A las voces se les suma un **veredicto**: para los topónimos que la
+simulación necesita, el proyecto **toma posición**. El flujo acordado:
+
+1. **Miguel se moja** — propone la lectura desde investigación coloquial
+   (hearsay, tradición local, mapas vivos, memoria de residente).
+2. **Claude valida la probabilidad** — contra el lexicón, los cognados, los
+   patrones regionales y las trampas medidas (etimología de anécdota,
+   préstamos sin ruta, etc.).
+3. Se adopta una **`definicion_aceptada_simulacion`** — con etiqueta
+   `canon-simulacion`, **nunca** atestiguado: la etiqueta epistémica sigue
+   diciendo la verdad; lo que cambia es que una lengua muerta exige
+   posturas y el proyecto las declara en vez de esconderlas.
+
+Sus palabras: *«ya para estos topónimos no dependeremos de atestiguaciones
+científicas solamente»*. Primer uso: la toponimia paraguanera de los nodos
+de la era 2 (`6-fusion/toponimia_paraguana_miguel.yaml`).
+
 ## Trabajo que implica
 
 1. Añadir `lecturas` al esquema y a la validación de `compilar_lengua.py`
    (campo opcional — no rompe nada existente).
-2. Retro-poblar las lecturas de la sesión del 2026-08-25 (~15 lecturas ya
+2. Añadir el campo `definicion_aceptada_simulacion` (opcional, con `quien`,
+   `fecha` y la validación de probabilidad como rastro).
+3. Retro-poblar las lecturas de la sesión del 2026-08-25 (~15 lecturas ya
    escritas en `6-fusion/toponimia_coro_espina.yaml`,
-   `lengua_toponimia_quibacoa.yaml` y `petroglifos_y_manaure.yaml`).
-3. Usarlo como formato de salida de la campaña de Falcón.
+   `lengua_toponimia_quibacoa.yaml` y `petroglifos_y_manaure.yaml`) y las
+   paraguaneras del 2026-09-01.
+4. Usarlo como formato de salida de la campaña de Falcón.
 
 Relacionado: #109 · #38 (D9) · #92 · el issue de repertorio-vs-filiación.

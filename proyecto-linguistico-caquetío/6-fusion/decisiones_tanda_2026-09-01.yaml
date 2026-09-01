@@ -1,0 +1,241 @@
+# ─────────────────────────────────────────────────────────────────────────
+# DECISIONES DE MIGUEL — tanda del 2026-09-01 (D3 · D1 · rumbo era 2)
+#
+# Mismo patrón que la tanda del 08-30: cada decisión queda registrada aquí
+# al tomarse, y TODAS se aplican al canon en un solo aplicador idempotente
+# con --dry-run cuando la tanda cierre. Hasta entonces, el canon no se toca
+# (regla 5). Dossiers servidos en 6-fusion/issues-pendientes/
+# (comentario-32-dossier-d1.md · comentario-34-dossier-d3.md).
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-01'
+  decidido_por: Miguel
+  estado: CERRADA — D3, D1 y rumbo era 2 decididos; aplicar vía aplicador de tanda
+
+# ══════════════════════════════════════════════════════════════════
+# DECISIÓN 1 — D3 (#34): normalizar_por_dialecto()  ✅ APROBADA (opción A)
+# ══════════════════════════════════════════════════════════════════
+d3:
+  estado: APROBADA (2026-09-01) — opción A, más la adyacente de ablación
+  cierra: la mitad de la condición 6 del gate (la otra mitad es D1)
+  decision: >-
+    CABLEAR normalizar_por_dialecto() en el UMBRAL DEL RESCATE intra-turno,
+    y guardar en la base el score CRUDO. El reintento se decide sobre el
+    score normalizado por etnia; la medición almacenada no se toca.
+  adyacente_aprobada: >-
+    El rescate intra-turno se APAGA en los runs de --ablacion: es una
+    inyección que empuja convergencia y el brazo de control debe correr sin
+    ella. El protocolo del run 1 lo declara.
+  evidencia_que_la_decidio:
+    - >-
+      El score SÍ retroalimenta el run: el rescate reintenta bajo 5.0
+      (orchestrator ~289-303). Un caribe con densidad objetivo 0.25,
+      obedeciendo su propio prompt dialectal, vive bajo ese umbral →
+      reintento crónico que lo empuja al caquetío. El motor peleaba contra
+      su propio diseño dialectal, pagando tokens por hacerlo.
+    - >-
+      La mitad gemela (prompt_rasgos_dialectales) SÍ estaba cableada: la
+      asimetría era real, no teórica.
+    - >-
+      El rescate NO estaba gateado por --ablacion: presión de convergencia
+      sobreviviendo al brazo de control, correlacionada con la etnia.
+  por_que_no_las_otras:
+    b_eliminar: deja vivo el reintento crónico; arreglarlo después es reescribir lo borrado
+    c_normalizar_lo_almacenado: >-
+      hornea constantes de autor (0.65/0.25...) en los datos — la lección de
+      fase 1 ("el instrumento medía en parte a sus autores", r=-0.48) — y
+      rompe la comparabilidad con los runs viejos, guardados en crudo
+  reserva_declarada: >-
+    Las densidades objetivo de DIALECTOS son constantes de diseño sin base
+    empírica declarada. Acotadas al reintento son operables; calibrarlas
+    desde los datos de runs queda como mejora futura anotada.
+  implementacion: >-
+    Aplicador de la tanda: (1) en el orquestador, el umbral usa
+    normalizar_por_dialecto(metr[score], etnia) y se añade `and not
+    ablacion` al bloque del rescate; (2) tests: el caribe con score bajo NO
+    reintenta, el nativo SÍ; en ablación nadie reintenta; (3) la nota de
+    curiana_social.py deja de decir "no está cableada".
+
+# ══════════════════════════════════════════════════════════════════
+# DECISIÓN 2 — RUMBO ERA 2: la ruta a la simulación multi-nodo  ✅ APROBADA
+# ══════════════════════════════════════════════════════════════════
+rumbo_era2:
+  estado: APROBADO (2026-09-01) — «me cuadra»
+  vision_de_miguel: >-
+    "Tener nodos que conversen entre sí, con aldeas de agentes donde
+    predomina el caribe en su mayoría y cuentan con pocos extranjeros
+    caquetíos — distintos nodos culturales, con overlaps obvios, pensando
+    en cómo estaba estructurada la sociedad según las fuentes y siguiendo
+    el orden geográfico." La utopía declarada; esta ruta es el camino, no
+    el salto.
+  por_que_no_es_desvio: >-
+    La tesis lo exige: una koiné no se forma dentro de una unidad homogénea
+    sino donde nodos distintos tienen que entenderse (cierre de fase 1).
+    Con un solo nodo, "convergencia" solo significa entre individuos; con
+    nodos, es geográfica y falsable. La esfera de interacción ya es canon,
+    los 30 asentamientos están registrados, y D15 (#90) espera exactamente
+    esta pregunta.
+  ruta_aprobada:
+    - paso: 1
+      que: cerrar esta tanda (D1) y el gate; el run 1 sigue MONO-nodo
+      por_que: es la línea base del instrumento auditado — sin ella el par no se lee
+    - paso: 2
+      que: escribir 5-experimento/DISENO_ERA2.md ANTES de tocar código
+      contenido: >-
+        dos nodos; pertenencia de agente a nodo; contacto por comercio
+        (rutas de biro/sal) y matrimonio exogámico matrilineal (los esposos
+        que circulan entre aldeas — el canal que la genealogía de D1 ya
+        diseña); métricas de koiné dentro-de-nodo vs ENTRE-nodos (la señal
+        es la segunda); modelo de costos (repartir 30+30, no duplicar); qué
+        pregunta responde el par que el mono-nodo no puede.
+    - paso: 3
+      que: decidir D15 (#90) con dossier — qué par de nodos primero
+      candidato: >-
+        Coro/Todariquiba + Paraguaná: par caquetío-caquetío unido por la
+        ruta de la sal y la paramountcy (Salas vía Antolínez sitúa la
+        cabecera religiosa en Paraguaná, el diao en Coro). Metodológicamente
+        limpio: la koiné se estudia primero entre variedades mutuamente
+        inteligibles.
+    - paso: 4
+      que: minar B.6 (Oliver §3.2.4, los caribes) ANTES de diseñar el nodo caribe
+      por_que: >-
+        que una aldea sea mayoría caribe tiene que salir de las fuentes
+        (regla 4): el estrato que Esteves atribuye a Amuay, Elegüey,
+        Maragüey, Jamaica y Maitiruma, más la convivencia caquetío-cuiba de
+        Brito Figueroa. El nodo caribe es la era 3, con composición citada.
+  nota: >-
+    D3-A alimenta esta ruta: con nodos de mayorías distintas, la justicia
+    dialectal del rescate deja de ser un parche para 10 forasteros y pasa a
+    ser la regla del sistema — mejor decidida ahora, con un caso, que
+    improvisada con N.
+
+# ══════════════════════════════════════════════════════════════════
+# DECISIÓN 3 — D1 (#32): el veto de la genealogía  ✅ APROBADA (opción B)
+# ══════════════════════════════════════════════════════════════════
+d1:
+  estado: APROBADA (2026-09-01) — opción B, con las tres puertas como regla dura
+  cierra: condición 6 del gate (junto con D3)
+  veredicto_de_miguel: >-
+    «Sí o sí, efectivamente, el que era el heredero ahora es básicamente
+    candidato. Y sí o sí me gustaría que siguiéramos eso de las tres
+    puertas: la sangre matrilineal, el reconocimiento político de los otros
+    diaos, y la legitimación espiritual del boratio.»
+  decision:
+    linajes: los 6 entran como canon-simulacion (Kaira y Warana con tótem/nombre aún abiertos a Miguel)
+    sucesor: >-
+      Waimo-ko DEGRADADO de "sucesor natural" a "candidato elegible
+      (puerta 1 de 3; pluralidad de candidatos pendiente por
+      parentesco-039)". Las TRES PUERTAS de parentesco-038 pasan de
+      hipótesis de diseño a REGLA del modelo de sucesión.
+    personas_de_fondo: las ~14 entran como canon-simulacion
+    etiqueta: todo canon-simulacion — nunca atestiguado; la genealogía es diseño nuestro sobre patrón atestiguado
+  contexto_de_miguel: >-
+    La simulación se re-arma para la era acotada (ver rumbo_era2): el
+    elenco de 60 se reestructura hacia el foco nuevo, así que aprobar la
+    estructura no protege historia vieja — habilita el casting del nodo.
+  implicacion: >-
+    parentesco-038 sube de fuente:hipotetico a regla de diseño DECIDIDA
+    (la etiqueta epistémica del hecho no cambia — lo decidido es que el
+    MODELO la sigue). El aplicador cambia la línea de Waimo-ko en
+    genealogia.yaml y marca la propuesta como aprobada en su encabezado.
+
+# ══════════════════════════════════════════════════════════════════
+# REFINAMIENTO del rumbo era 2 — la sesión de diseño del 2026-09-01
+# ══════════════════════════════════════════════════════════════════
+rumbo_era2_refinado:
+  fecha: '2026-09-01'
+  directivas_de_miguel:
+    - >-
+      UNA sola simulación, no varias: "no me gustaría hacer más de una" —
+      compensar con MÁS DÍAS/turnos que los runs cortos habituales, y
+      calcular cuántos turnos dan data que valga la pena.
+    - >-
+      Antes de correr: "un buen pensamiento sobre exactamente cómo va a
+      ser la estructura social" — el diseño social precede al run
+      (alimenta DISENO_ERA2.md, paso 2 de la ruta).
+    - >-
+      El foco inicial NO es necesariamente Todariquiba: que ahí se fundara
+      Coro no implica que Manaure residiera ahí, y la cabecera religiosa
+      estaba en Paraguaná. Candidato de Miguel: empezar por UN clan de
+      Paraguaná, luego "meter el espejo" (el segundo clan) — y Paraguaná
+      queda montada como dos clanes/parcialidades no emparentados.
+    - >-
+      Boceto de nodos de la polity costera (a validar contra fuentes):
+      sección PARAGUANÁ (la península con sus nodos internos + Aruba,
+      Curazao y Bonaire) y sección COSTERA CONTINENTAL (Cumarebo,
+      Zazárida, Capatárida, Todariquiba). Juntas = el polity costero de
+      Oliver.
+  # ── añadido tras la verificación (mismo día) ──
+  rumbo_toponimos: >-
+    DECISIÓN DE MÉTODO de Miguel (2026-09-01): para los topónimos de los
+    nodos, el proyecto deja de depender SOLO de atestiguación científica.
+    El flujo acordado: Miguel SE MOJA con lecturas de investigación
+    coloquial (hearsay, tradición local, mapas vivos), Claude VALIDA LA
+    PROBABILIDAD de cada una, y juntos se adoptan DEFINICIONES ACEPTADAS
+    PARA LA SIMULACIÓN. Sus palabras: «al ser una lengua muerta hay que
+    tomar posturas... para esta simulación vamos a tener que tomar
+    decisiones para que la simulación tenga la mayor info posible».
+    Higiene declarada: la definición aceptada lleva etiqueta
+    canon-simulacion y NUNCA asciende a atestiguado — la etiqueta sigue
+    diciendo la verdad; lo que cambia es que el proyecto toma posición.
+    Se instrumenta sobre el esquema `lecturas` (issue en borrador, sección
+    añadida) y estrena con la toponimia paraguanera:
+    6-fusion/toponimia_paraguana_miguel.yaml (Chamuriana, Moruy×3,
+    Cayerúa, Arubanas, y la hipótesis Moruy-Santa-Ana-mismo-clan).
+  # ── tercera entrega de directivas (conversación de diseño, mismo día) ──
+  diseno_era2_directivas:
+    elenco: >-
+      «Un elenco significativo: tenemos que tener a TODOS los arquetipos de
+      la familia; teniendo el arquetipo mínimo de familias armamos los dos
+      nodos.» El tamaño NO se fija por número sino por completitud de
+      arquetipos — y la plantilla ya existe: genealogia.yaml define el
+      grupo residencial creíble (matriarca + hermanas con hijos + hermanos
+      adultos + esposos de otros linajes). Derivación: ~8-10 por linaje ×
+      2 linajes por nodo + esposos exogámicos cruzados ≈ 35-40 agentes.
+    duracion: >-
+      «El sweet spot: un mínimo de tiempo donde podamos ver cuándo se
+      llega a un PLATEAU que significaría una koiné.» Regla de parada
+      dinámica, no días fijos: piso (una estación completa) + detector de
+      plateau sobre la métrica ENTRE-nodos (pendiente ~0 en ventana de N
+      días) + techo de presupuesto. Caveat de fase 1 a declarar: la
+      convergencia intra-comunidad "desplaza de entrada y sostiene" — el
+      plateau informativo es el de CRUCE entre nodos, que exige viaje
+      físico de formas. Y honestidad: plateau alto = koiné; plateau bajo
+      = diglosia estable — ambos son resultados.
+    memoria_persistente: >-
+      «Que cada participante pueda recordar sus decisiones, convicciones,
+      etc. a medida que está en la simulación.» Memoria biográfica
+      PERSISTENTE por agente durante el run (hoy: agent_memory reciente +
+      idiolecto lingüístico acumulado + perfiles solo al CIERRE). Diseño:
+      un «diario consolidado» por agente — consolidación periódica (cada
+      N días, pasada barata que resume decisiones/convicciones/relaciones)
+      inyectada al prompt; dos capas de memoria: la lingüística
+      (idiolecto, ya existe) y la biográfica (nueva). Costo de las
+      consolidaciones al modelo de presupuesto.
+  # ── cuarta entrega: los últimos dos ejes (mismo día) ──
+  diseno_era2_cierre:
+    mini_ablacion: APROBADA — «sería nuestro comparativo» (10-15 días, mismo setup, inyecciones apagadas)
+    campana_episodica: >-
+      «Cada run por partes: vamos por runs con espacios intermedios, pero
+      cuando hacemos un run sigue de alguna forma la narrativa del
+      primero.» La era 2 es UNA campaña de episodios encadenados: mundo y
+      memorias persisten entre runs (estado serializado + diario
+      consolidado); los espacios intermedios son donde se cura (análisis,
+      fusión de lo emergido, ajustes declarados). Un solo mundo, ejecutado
+      por entregas.
+    bibliografia_base_por_participante: >-
+      «Sí o sí tendríamos que tener bibliografía base para cada
+      participante»: cada agente del elenco nuevo lleva su dossier de
+      fuentes — qué hechos del corpus, qué linaje de D1 y qué obras lo
+      sostienen. Es la tarea V3 (notas por agente) que D1 desbloqueó,
+      elevada a requisito del casting.
+  verificacion_hecha: >-
+    CONFIRMADO (minar-fuente 2026-09-01, verificado a ojo contra la
+    imagen): Oliver 1989 pp. 275-276, citando a González Batista 1984 y
+    Delmonte 1883 — Paraguaná dividida en dos territorios de dos
+    sub-grupos caquetíos: AMUAYES (sur; Cayerda→Moruy) y GUARANAOS
+    (norte; Santa Ana), cada uno con playas de pesca propias y jefe
+    supra-aldea, ambos bajo el polity de Manaure. Los dos clanes del
+    diseño de Miguel tienen nombre y geografía atestiguados. Propuesta
+    completa: 6-fusion/paraguana_dos_clanes.yaml (incluye el conflicto
+    declarado Amuay caquetío-vs-caribe con Esteves, para B.6).
