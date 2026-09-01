@@ -168,6 +168,9 @@ FAMILIAS = {
     "lokono": "lokono",
     "taíno": "taíno",
     "taino": "taíno",
+    # D11 #39 (2026-08-31): la columna añú abre — el pariente costero más
+    # cercano entra al comparador (Wilbert 1958-59 vía Oliver A-2).
+    "paraujano": "paraujano (añú)",
 }
 
 # Control externo: castellano corriente. No es una muestra representativa del

@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-01 11:51**.
+<!--GENERADO--> Generado el **2026-09-01 10:20**.
 
 ## ¿Vamos bien?
 
@@ -21,7 +21,7 @@ editar_a_mano: no
 |---|---|---|---|
 | Entradas del lexicón **sin cita** | **0** | 82 (2026-07-21) | 🟢 −82 |
 | Hechos del corpus **con referencia** | **161 / 161** | — | 🟢 |
-| Tests del motor | **202 en verde** | 0 rojos | 🟢 |
+| Tests del motor | **201 en verde** | 0 rojos | 🟢 |
 | Gate para reanudar simulaciones | **5 de 9** condiciones | faltan 4 | 🔴 |
 | Decisiones esperando a Miguel | **11 abiertas** | 2 resueltas | 🟡 |
 
@@ -36,31 +36,33 @@ Detalle de cada número: [lexicón](#1-el-lexicón) · [fuentes](#2-las-fuentes)
 
 Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 
-**1404 entradas activas** en `VOCABULARIO_BASE`.
+**1500 entradas activas** en `VOCABULARIO_BASE`.
 
 ### Por lengua (categoría normalizada)
 
 | Lengua (`normalize_source_language()`) | n | % del lexicón |
 |---|---|---|
-| wayunaiki | 781 | 55.6% |
-| caquetío | 299 | 21.3% |
-| lokono | 226 | 16.1% |
-| taíno | 57 | 4.1% |
-| kalinago | 19 | 1.4% |
+| wayunaiki | 781 | 52.1% |
+| caquetío | 299 | 19.9% |
+| lokono | 275 | 18.3% |
+| taíno | 57 | 3.8% |
+| paraujano | 47 | 3.1% |
+| kalinago | 19 | 1.3% |
 | jirajaroide-contacto | 7 | 0.5% |
-| proto-arahuaco | 5 | 0.4% |
+| proto-arahuaco | 5 | 0.3% |
 | caribe-continental | 4 | 0.3% |
 | kalinago-caribe-overlay | 4 | 0.3% |
 | español-colonial | 2 | 0.1% |
 
-<details><summary>Los 24 valores de <code>fuente</code> en el dato crudo (F8 quiere sanearlos)</summary>
+<details><summary>Los 25 valores de <code>fuente</code> en el dato crudo (F8 quiere sanearlos)</summary>
 
 | `fuente` crudo | n |
 |---|---|
 | wayunaiki | 769 |
+| lokono | 247 |
 | caquetío-atestiguado | 222 |
-| lokono | 198 |
 | caquetío-reconstruido | 68 |
+| paraujano | 47 |
 | taíno | 36 |
 | kalinago | 19 |
 | taino | 18 |
@@ -236,13 +238,13 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | # |  | Condición | Estado medido |
 |---|---|---|---|
 | 1 | 🟢 | Lexicón: 0 entradas de familia caquetía sin cita **o sin degradar** (F1) | 0 sin cita (eran 82 el 2026-07-21) |
-| 2 | 🟢 | Pares c/k resueltos (F2) | todas tomadas — [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) · medido: 6 colisiones, 2 dentro del caquetío |
+| 2 | 🟢 | Pares c/k resueltos (F2) | todas tomadas — [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) · medido: 7 colisiones, 2 dentro del caquetío |
 | 3 | 🟢 | Las 3 fuentes ALTA minadas (F3, F4, F5) | F3 [[alvarado-1921]] minado · F4 [[gatschet-1885]] minado · F5 [[oliver-1989-cap2]] minado |
 | 4 | 🟢 | `compilar_corpus.py` en verde (V2) | **161 hechos, 0 errores, 0 avisos** |
 | 5 | ⚪ | Citas del corpus verificadas por muestreo (F10) | **no automedible**: que la cita *resuelva* (que la página exista) es trabajo humano. Medible sí: 161/161 hechos **tienen** `referencia` |
 | 6 | 🔴 | D1, D3 y D5 tomadas | abiertas: D1, D3 — [D1](https://github.com/miguelgilurbina/curiana-radio/issues/32) · [D3](https://github.com/miguelgilurbina/curiana-radio/issues/34) · [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) |
 | 7 | 🟢 | La glosa de `-bana` resuelta | todas tomadas — [D9](https://github.com/miguelgilurbina/curiana-radio/issues/38) |
-| 8 | 🔴 | El desbalance wayunaiki/lokono resuelto | abiertas: D11 — [D11](https://github.com/miguelgilurbina/curiana-radio/issues/39) · medido: wayunaiki 781 vs. lokono 226 (3.5 a 1) |
+| 8 | 🔴 | El desbalance wayunaiki/lokono resuelto | abiertas: D11 — [D11](https://github.com/miguelgilurbina/curiana-radio/issues/39) · medido: wayunaiki 781 vs. lokono 275 (2.8 a 1) |
 | 9 | ⚪ | `export_runs_index.py` reparado | **no automedible sin correr un export contra la base** (ver [[04_protocolo_run_1_era_auditada]] §2.9) |
 
 🟢 cumplida · 🔴 no cumplida · ⚪ no automedible (necesita criterio humano o correr algo)
@@ -279,8 +281,8 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1042 en 315 notas indexadas | 🟢 0 rotos |
-| Tests (`curiana_sim/tests/`) | 202 passed, 0 failed | 🟢 |
+| Wikilinks | 1042 en 313 notas indexadas | 🟢 0 rotos |
+| Tests (`curiana_sim/tests/`) | 201 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
 **Avisos de `curiana_polities.py::coherencia_del_canon()`:**
