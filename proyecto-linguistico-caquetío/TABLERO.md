@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-01 12:23**.
+<!--GENERADO--> Generado el **2026-09-01 13:45**.
 
 ## ¿Vamos bien?
 
@@ -23,7 +23,7 @@ editar_a_mano: no
 | Hechos del corpus **con referencia** | **161 / 161** | — | 🟢 |
 | Tests del motor | **206 en verde** | 0 rojos | 🟢 |
 | Gate para reanudar simulaciones | **6 de 9** condiciones | faltan 3 | 🔴 |
-| Decisiones esperando a Miguel | **9 abiertas** | 4 resueltas | 🟡 |
+| Decisiones esperando a Miguel | **8 abiertas** | 5 resueltas | 🟡 |
 
 **Lo que bloquea hoy:** wayunaiki vs. lokono (D11).
 Y 2 condición(es) que **nadie puede medir por script**: citas del corpus (F10) · exportador de runs.
@@ -270,10 +270,10 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | D12 | La etiqueta de `parentesco-032`: una entrada `atestiguado` con material sin fuente | 🔴 abierta | [#81](https://github.com/miguelgilurbina/curiana-radio/issues/81) |
 | D13 | El hueco léxico de "tío materno": la palabra que le falta a la tesis central | 🔴 abierta | [#82](https://github.com/miguelgilurbina/curiana-radio/issues/82) |
 | D14 | Qué segunda polity se pone en escena | 🔴 abierta | [#83](https://github.com/miguelgilurbina/curiana-radio/issues/83) |
-| D15 | Qué nodo se simula primero: Coro, Paraguaná, o un par desde el principio | 🔴 abierta | [#90](https://github.com/miguelgilurbina/curiana-radio/issues/90) |
+| D15 | Qué nodo se simula primero: Coro, Paraguaná, o un par desde el principio | ✅ resuelta | [#90](https://github.com/miguelgilurbina/curiana-radio/issues/90) |
 | — | `tara`: ¿venado o mariposa? — puede tumbar un argumento del corpus | 🔴 abierta | [#45](https://github.com/miguelgilurbina/curiana-radio/issues/45) |
 
-**9 abiertas** de 13. Medido contra el tablero, no contra una nota.
+**8 abiertas** de 13. Medido contra el tablero, no contra una nota.
 
 ---
 
@@ -281,7 +281,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1042 en 320 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 1046 en 321 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 206 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
