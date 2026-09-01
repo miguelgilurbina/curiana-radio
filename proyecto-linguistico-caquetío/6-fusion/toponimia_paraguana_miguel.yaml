@@ -39,20 +39,30 @@ lecturas:
     deuda: sin-procedencia
 
   - toponimo: Moruy
-    tipo: etimologia-popular (tres versiones recogidas)
+    tipo: etimologia-popular (CUATRO versiones recogidas)
     lectura: >-
       Versiones de tradición oral que recoge Miguel: (1) Moruy era un
       CACIQUE; (2) llegaron unos "moros" tan temibles que los aborígenes
-      gritaban «¡moro uy!»; (3) del quechua muru, 'viruela' o 'pepa'.
+      gritaban «¡moro uy!»; (3) del quechua muru, 'viruela' o 'pepa';
+      (4) «alteración de MEREJUY, levadura o preparación agria que usaban
+      para acelerar la fermentación del maíz cocido con que elaboraban la
+      chicha embriagadora, que consumían en ceremonias religiosas»
+      (recogida el 2026-09-01, investigación coloquial, cita textual de
+      crónica local sin identificar aún).
     validacion_de_probabilidad: >-
-      (Claude, parte de la curaduría acordada) La (2) es etimología de
-      anécdota clásica — improbable. La (3) exige un préstamo quechua en
-      Paraguaná — sin ruta conocida, improbable. La (1) es el patrón
-      regional real (topónimo < antropónimo: Manaure→Pueblo de Manaure,
-      regla 0 significado≠referente) — LA MÁS PROBABLE de las tres, y
-      además compatible con que el cacique llevara un nombre con
-      significado propio. Nota: el lexicón tiene moruy en EXCLUIR_DEL_HABLA
-      como topónimo; Zavala lo trae en su glosario.
+      (Claude, curaduría acordada) La (2) es etimología de anécdota —
+      improbable. La (3) exige préstamo quechua sin ruta — improbable.
+      Quedan compitiendo (1) y (4): la (1) sigue el patrón regional real
+      (topónimo < antropónimo, cf. Manaure); la (4) da un SIGNIFICADO
+      funcional-ritual que encaja con Paraguaná como asiento religioso
+      (Salas: el Gran Señor) y con la chicha ceremonial — aunque el paso
+      merejuy→moruy pide varios cambios vocálicos y una síncopa (posible
+      en transmisión oral, no evidente). Y las dos son COMPATIBLES entre
+      sí por la regla 0: un cacique puede llamarse por el oficio del
+      sitio. Se registran ambas como candidatas; merejuy además propone
+      una VOZ (levadura/fermento ritual) que merece entrada propia si
+      aparece segunda fuente. Nota: moruy está en EXCLUIR_DEL_HABLA como
+      topónimo; Zavala lo trae en su glosario.
     deuda: sin-procedencia
 
   - toponimo: Aruba / Arubanas
@@ -82,6 +92,40 @@ lecturas:
       - "las variantes -erda/-erta/-erúa son material para la campaña de topónimos (permutar TODAS las vocales — trampa 1 de la tanda)"
 
 hipotesis_estructural:
+
+  - id: capubana-centro-sagrado
+    quien: Miguel (2026-09-01, segunda entrega)
+    hipotesis: >-
+      Los pueblos del sector llevan distinciones SEGÚN SU POSICIÓN RESPECTO
+      DEL CAPUBANA (el Cerro Santa Ana = el Cerro de Capú, D9): Moruy —
+      donde se hacía el merejuy para fermentar la chicha ritual — quedaba a
+      la IZQUIERDA del Capubana, y Chamuriana al SUR del mismo, con el agua
+      que baja del cerro. Si Paraguaná era el asiento religioso del polity
+      (Salas: el Gran Señor de Paraguaná), el conjunto alrededor del cerro
+      sería su CENTRO SAGRADO: sitios con funciones rituales distintas
+      (fermento, agua) organizados en torno a la montaña.
+    correccion_geografica_de_miguel: >-
+      Chamuriana (Santa Ana) está al SUR del cerro y Cayerúa al NORTE —
+      contra la lectura rápida anterior. Todo el conglomerado
+      Moruy-Cayerúa-Chamuriana orbita el Capubana, no se reparte
+      norte/sur de la península.
+    validacion_de_probabilidad: >-
+      (Claude) La geografía es verificable y Miguel la tiene mejor que
+      Delmonte-vía-Oliver. El modelo centro-sagrado es consistente con
+      TRES piezas ya canónicas independientes: el Capubana como morada del
+      dueño Capo (D9/Velasco: el cerro se llamaba Cerro de Capú), Salas
+      sobre la cabecera religiosa en Paraguaná, y el silencio de cronistas
+      sobre estructuras rituales ("quite secretive", Oliver p. 275) — un
+      centro sagrado de montaña es exactamente lo que un cronista costero
+      no vería. Etiqueta: canon-simulacion como modelo espacial; ninguna
+      fuente lo dice así de explícito.
+    tension_a_verificar: >-
+      Los homónimos MODERNOS de los clanes parecen invertidos respecto a
+      Oliver: Amuay está al NOROESTE de la península (norte de Punto
+      Fijo) y la bahía de Guaranao al SUR de Punto Fijo — mientras Oliver
+      da Amuayes=sur, Guaranaos=norte. VERIFICAR en mapa antes de fijar
+      territorios; puede ser errata de Delmonte, de Oliver, o que el
+      topónimo moderno no marque el territorio del clan.
   - id: moruy-santa-ana-mismo-clan
     quien: Miguel
     hipotesis: >-
