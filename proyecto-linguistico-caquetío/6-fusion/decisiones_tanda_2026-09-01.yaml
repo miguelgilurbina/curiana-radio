@@ -212,6 +212,23 @@ rumbo_era2_refinado:
       inyectada al prompt; dos capas de memoria: la lingüística
       (idiolecto, ya existe) y la biográfica (nueva). Costo de las
       consolidaciones al modelo de presupuesto.
+  # ── cuarta entrega: los últimos dos ejes (mismo día) ──
+  diseno_era2_cierre:
+    mini_ablacion: APROBADA — «sería nuestro comparativo» (10-15 días, mismo setup, inyecciones apagadas)
+    campana_episodica: >-
+      «Cada run por partes: vamos por runs con espacios intermedios, pero
+      cuando hacemos un run sigue de alguna forma la narrativa del
+      primero.» La era 2 es UNA campaña de episodios encadenados: mundo y
+      memorias persisten entre runs (estado serializado + diario
+      consolidado); los espacios intermedios son donde se cura (análisis,
+      fusión de lo emergido, ajustes declarados). Un solo mundo, ejecutado
+      por entregas.
+    bibliografia_base_por_participante: >-
+      «Sí o sí tendríamos que tener bibliografía base para cada
+      participante»: cada agente del elenco nuevo lleva su dossier de
+      fuentes — qué hechos del corpus, qué linaje de D1 y qué obras lo
+      sostienen. Es la tarea V3 (notas por agente) que D1 desbloqueó,
+      elevada a requisito del casting.
   verificacion_hecha: >-
     CONFIRMADO (minar-fuente 2026-09-01, verificado a ojo contra la
     imagen): Oliver 1989 pp. 275-276, citando a González Batista 1984 y
