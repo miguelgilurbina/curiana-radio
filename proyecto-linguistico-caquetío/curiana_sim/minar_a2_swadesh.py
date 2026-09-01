@@ -200,10 +200,10 @@ def minar():
                 "filas": [(n, gloss)], "variantes": variantes,
                 "nota_celda": nota_forma, "celda": celda,
             }
-    return out, referencia, colisiones
+    return out, referencia, colisiones, doc["meta"].get("estado", "sin estado")
 
 
-def _nota(e, col):
+def _nota(e, col, estado):
     filas = "; ".join(f"fila {n} '{g}'" for n, g in e["filas"])
     quien = ("Wilbert 1958-59 (Sinamaica) vía Oliver 1989, Apéndice A, Tabla A-2"
              if col == "paraujano"
@@ -213,19 +213,21 @@ def _nota(e, col):
         nota += f"; variantes: {', '.join(e['variantes'])}"
     if e["nota_celda"]:
         nota += f"; nota de la celda: {e['nota_celda']}"
-    nota += (". Transcripción a ojo del 2026-08-31, pendiente de verificación "
-             "contra la imagen (D11 #39). Vocabulario de comparación, no habla de agentes")
+    # El estado de verificación viene del meta de la transcripción: cuando
+    # Miguel hace la segunda pasada, TODAS las notas lo heredan al regenerar.
+    nota += (f". Transcripción a ojo del 2026-08-31 ({estado}) — D11 #39. "
+             "Vocabulario de comparación, no habla de agentes")
     return nota
 
 
-def generar_modulo(out, referencia, colisiones):
+def generar_modulo(out, referencia, colisiones, estado):
     L = ['"""']
     L.append("CURIANA — Tabla A-2 de Oliver: la columna añú y el refuerzo lokono (D11)")
     L.append("=" * 72)
     L.append("")
     L.append("GENERADO por `minar_a2_swadesh.py` — no editar a mano; la fuente es")
-    L.append("6-fusion/tabla_a2_transcripcion.yaml (transcripción a ojo, 2026-08-31,")
-    L.append("pendiente de segunda pasada de Miguel contra la imagen).")
+    L.append("6-fusion/tabla_a2_transcripcion.yaml (transcripción a ojo del 2026-08-31;")
+    L.append(f"estado: {estado}).")
     L.append("")
     L.append("Implementa el rumbo de D11 (#39): rebalancear con lokono y abrir la")
     L.append("columna añú/paraujano (tenía CERO entradas del pariente costero más")
@@ -240,7 +242,7 @@ def generar_modulo(out, referencia, colisiones):
         L.append(f"{nombre}: dict[str, dict] = {{")
         for forma, e in sorted(out[col].items()):
             L.append(f'    "{forma}": {{"es": "{e["es"]}", "fuente": "{e["fuente"]}", '
-                     f'"categoria": "{e["categoria"]}", "notas": "{_nota(e, col)}"}},')
+                     f'"categoria": "{e["categoria"]}", "notas": "{_nota(e, col, estado)}"}},')
         L.append("}")
         L.append("")
     L.append("")
@@ -298,8 +300,8 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--generar-modulo", action="store_true")
     args = ap.parse_args()
-    out, referencia, colisiones = minar()
+    out, referencia, colisiones, estado = minar()
     if args.generar_modulo:
-        generar_modulo(out, referencia, colisiones)
+        generar_modulo(out, referencia, colisiones, estado)
     else:
         informe(out, referencia, colisiones)

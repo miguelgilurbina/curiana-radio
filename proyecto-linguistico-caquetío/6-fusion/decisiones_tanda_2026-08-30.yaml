@@ -183,11 +183,14 @@ ana:
 d11_rumbo:
   estado: >-
     RUMBO FIJADO (2026-08-31) — PRIMER INCREMENTO IMPLEMENTADO el mismo día:
-    minar_a2_swadesh.py → lexicon_a2.py (46 paraujano + 48 lokono desde la
-    Tabla A-2), categoría `paraujano` canónica, columna añú en el filtro
-    fonotáctico (73.9%, entre lokono 82.9% y wayuu 65.4%). El issue #39
-    sigue abierto: falta la escala diccionario (Pet/Bennett/de Goeje — no
-    están en el repo; candidato interno: Perea Alonso 1942) y la A-1 entera.
+    minar_a2_swadesh.py → lexicon_a2.py desde la Tabla A-2, categoría
+    `paraujano` canónica, columna añú en el filtro fonotáctico. VERIFICADA
+    por Miguel contra la imagen el 2026-09-01 (47 paraujano + 49 lokono tras
+    sus correcciones: abonaba, ithihi y kougdo entraron con la segunda
+    pasada; orden del filtro lokono 83.0 > añú 72.3 > wayuu 65.4). El issue
+    #39 sigue abierto: falta la escala diccionario (Pet/Bennett/de Goeje —
+    no están en el repo; candidato interno: Perea Alonso 1942) y la A-1
+    entera.
   directiva_de_miguel: >-
     "Sí o sí tenemos que rebalancear importando más lokono." Fijado tras ver
     el cómputo (computo_d11_2026-08-31.yaml): las tres señales convergen en

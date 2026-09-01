@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-31 22:24**.
+<!--GENERADO--> Generado el **2026-09-01 10:20**.
 
 ## ¿Vamos bien?
 
@@ -36,17 +36,17 @@ Detalle de cada número: [lexicón](#1-el-lexicón) · [fuentes](#2-las-fuentes)
 
 Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 
-**1498 entradas activas** en `VOCABULARIO_BASE`.
+**1500 entradas activas** en `VOCABULARIO_BASE`.
 
 ### Por lengua (categoría normalizada)
 
 | Lengua (`normalize_source_language()`) | n | % del lexicón |
 |---|---|---|
 | wayunaiki | 781 | 52.1% |
-| caquetío | 299 | 20.0% |
-| lokono | 274 | 18.3% |
+| caquetío | 299 | 19.9% |
+| lokono | 275 | 18.3% |
 | taíno | 57 | 3.8% |
-| paraujano | 46 | 3.1% |
+| paraujano | 47 | 3.1% |
 | kalinago | 19 | 1.3% |
 | jirajaroide-contacto | 7 | 0.5% |
 | proto-arahuaco | 5 | 0.3% |
@@ -59,10 +59,10 @@ Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 | `fuente` crudo | n |
 |---|---|
 | wayunaiki | 769 |
-| lokono | 246 |
+| lokono | 247 |
 | caquetío-atestiguado | 222 |
 | caquetío-reconstruido | 68 |
-| paraujano | 46 |
+| paraujano | 47 |
 | taíno | 36 |
 | kalinago | 19 |
 | taino | 18 |
@@ -244,7 +244,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | 5 | ⚪ | Citas del corpus verificadas por muestreo (F10) | **no automedible**: que la cita *resuelva* (que la página exista) es trabajo humano. Medible sí: 161/161 hechos **tienen** `referencia` |
 | 6 | 🔴 | D1, D3 y D5 tomadas | abiertas: D1, D3 — [D1](https://github.com/miguelgilurbina/curiana-radio/issues/32) · [D3](https://github.com/miguelgilurbina/curiana-radio/issues/34) · [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) |
 | 7 | 🟢 | La glosa de `-bana` resuelta | todas tomadas — [D9](https://github.com/miguelgilurbina/curiana-radio/issues/38) |
-| 8 | 🔴 | El desbalance wayunaiki/lokono resuelto | abiertas: D11 — [D11](https://github.com/miguelgilurbina/curiana-radio/issues/39) · medido: wayunaiki 781 vs. lokono 274 (2.9 a 1) |
+| 8 | 🔴 | El desbalance wayunaiki/lokono resuelto | abiertas: D11 — [D11](https://github.com/miguelgilurbina/curiana-radio/issues/39) · medido: wayunaiki 781 vs. lokono 275 (2.8 a 1) |
 | 9 | ⚪ | `export_runs_index.py` reparado | **no automedible sin correr un export contra la base** (ver [[04_protocolo_run_1_era_auditada]] §2.9) |
 
 🟢 cumplida · 🔴 no cumplida · ⚪ no automedible (necesita criterio humano o correr algo)

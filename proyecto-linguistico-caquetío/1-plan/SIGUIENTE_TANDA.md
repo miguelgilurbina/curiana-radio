@@ -107,13 +107,17 @@ pariente costero más cercano pasa a tasa intermedia. 12 colisiones
 registradas como dato areal (pia, biama, siba...). Tests en
 `tests/test_d11_a2.py`.
 
+✅ **La segunda pasada de Miguel sobre la A-2 está hecha (2026-09-01)**:
+correcciones en el YAML (abonaba, -thina, cuatro «(?)» resueltos) que
+liberaron tres entradas más (ithihi 'sangre', kougdo 'grasa') — el estado de
+verificación vive en el meta de la transcripción y todas las notas del
+módulo lo heredan al regenerar.
+
 **Queda**: la extensión de la A-1 (hacia atrás de pdf 584) y su transcripción
-completa — es EL vocabulario añú de Wilbert; la cabecera de la A-5; la
-**segunda pasada de Miguel sobre la A-2** contra la imagen (ahora alimenta
-entradas de canon, subió de prioridad); y la escala diccionario del lokono
-(ver C: Pet 1987, Bennett 1989, de Goeje 1928 — ⚠️ NO están en el repo;
-candidato interno ya en `fuentes_caquetios/`: **Perea Alonso 1942**,
-*Filología Comparada Arawak* Tomo I, sin minar).
+completa — es EL vocabulario añú de Wilbert; la cabecera de la A-5; y la
+escala diccionario del lokono (ver C: Pet 1987, Bennett 1989, de Goeje 1928 —
+⚠️ NO están en el repo; candidato interno ya en `fuentes_caquetios/`:
+**Perea Alonso 1942**, *Filología Comparada Arawak* Tomo I, sin minar).
 
 ### B.2 · Fase 2 de D5 — la migración de lemas ✅ ejecutada (2026-08-31)
 
