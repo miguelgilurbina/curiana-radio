@@ -46,7 +46,8 @@ def test_las_palabras_ajenas_no_se_cuelan_en_el_prompt_como_nuestras():
 
 def test_el_prompt_usa_las_palabras_propias():
     p = prompt_cronista()
-    for propia in ("boratio", "diao", "apopo", "capu", "barsure", "biro", "para"):
+    # kapu, no capu: Fase 2 de D5 (2026-08-31) migró el lema al fonémico.
+    for propia in ("boratio", "diao", "apopo", "kapu", "barsure", "biro", "para"):
         assert propia in p, f"el cronista debería nombrar `{propia}`"
 
 

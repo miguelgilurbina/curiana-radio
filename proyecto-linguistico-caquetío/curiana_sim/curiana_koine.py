@@ -123,7 +123,7 @@ FORMAS_SEED: dict[str, list[str]] = {
     "Shaboro":    ["urari", "barsure", "boratio", "saruro", "kasha", "suna-ni", "naba-ni"],
     "Nubiri-sha": ["ama", "buri", "arua", "biro", "konuko", "paa-da", "raka-da"],
     "Watapana":   ["biro", "maure", "canoa", "habo", "arima", "naa-da", "wana-da"],
-    "Dara-ko":    ["kuru", "canoa", "bara", "arima", "cunaro", "bagre", "wana-ni"],
+    "Dara-ko":    ["kuru", "canoa", "bara", "arima", "kunaro", "bagre", "wana-ni"],
     "Paugis-sha": ["urari", "arua", "buri", "ama", "kabo", "kono-ka", "wana-ka"],
     "Biro-ko":    ["biro", "habo", "dali", "sima", "naa-ka", "paa-ka"],
     "Tawaka":     ["chiriware", "kabo", "arima", "habo", "wana-da", "naa-da"],

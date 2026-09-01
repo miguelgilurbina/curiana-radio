@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-31 17:41**.
+<!--GENERADO--> Generado el **2026-08-31 21:34**.
 
 ## ¿Vamos bien?
 
@@ -35,14 +35,14 @@ Detalle de cada número: [lexicón](#1-el-lexicón) · [fuentes](#2-las-fuentes)
 
 Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 
-**1412 entradas activas** en `VOCABULARIO_BASE`.
+**1410 entradas activas** en `VOCABULARIO_BASE`.
 
 ### Por lengua (categoría normalizada)
 
 | Lengua (`normalize_source_language()`) | n | % del lexicón |
 |---|---|---|
-| wayunaiki | 781 | 55.3% |
-| caquetío | 303 | 21.5% |
+| wayunaiki | 781 | 55.4% |
+| caquetío | 301 | 21.3% |
 | lokono | 227 | 16.1% |
 | taíno | 57 | 4.0% |
 | kalinago | 19 | 1.3% |
@@ -57,7 +57,7 @@ Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 | `fuente` crudo | n |
 |---|---|
 | wayunaiki | 769 |
-| caquetío-atestiguado | 226 |
+| caquetío-atestiguado | 224 |
 | lokono | 198 |
 | caquetío-reconstruido | 68 |
 | taíno | 36 |
@@ -88,11 +88,11 @@ Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 
 | Capa | n | Qué significa |
 |---|---|---|
-| `caquetío-atestiguado` | 226 | dato histórico citable a fuente concreta |
+| `caquetío-atestiguado` | 224 | dato histórico citable a fuente concreta |
 | `caquetío-reconstruido` | 68 | vocabulario de trabajo del proyecto |
 | `caquetío-hipotético` | 3 | baja de tier por D10 — la lengua no se discute, la confianza sí |
 | `caquetío` a secas / topónimo | 6 | sin capa declarada en el campo `fuente` |
-| **total familia caquetía** | **303** |  |
+| **total familia caquetía** | **301** |  |
 
 Fuera del habla activa: **441** candidatas `hipotético-no-verificado` en `lexicon_candidatos.py` (aisladas el 2026-06-28) y **1** entrada(s) en `FUERA_DEL_HABLA` (`piache`).
 
@@ -102,12 +102,12 @@ Entradas de familia caquetía **sin nada en `notas`**: **0** (eran 82 el 2026-07
 
 ### Quién sostiene el «atestiguado»
 
-Cuántas de las 303 entradas de familia caquetía **con `notas`** citan a cada obra. Los patrones de búsqueda salen del `autor` y los `aliases` de cada nota de `4-fuentes/`, así que una obra nueva aparece sola aquí.
+Cuántas de las 301 entradas de familia caquetía **con `notas`** citan a cada obra. Los patrones de búsqueda salen del `autor` y los `aliases` de cada nota de `4-fuentes/`, así que una obra nueva aparece sola aquí.
 
 | Obra | Entradas que la citan | % de las citadas |
 |---|---|---|
-| [[zavala-reyes-2015]] | 226 | 75% |
-| [[zavala-reyes-2018]] | 226 | 75% |
+| [[zavala-reyes-2015]] | 224 | 74% |
+| [[zavala-reyes-2018]] | 224 | 74% |
 | [[alvarado-1921]] | 14 | 5% |
 | [[oliver-1989-apendice-a]] | 13 | 4% |
 | [[oliver-1989-cap2]] | 13 | 4% |
@@ -150,7 +150,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 
 | Nota | minado | prioridad | capa texto | lexicón (declarado) | lexicón (medido) | hechos corpus |
 |---|---|---|---|---|---|---|
-| [[zavala-reyes-2015]] | completo-con-reserva | alta | si | 164 | 226 | 7 |
+| [[zavala-reyes-2015]] | completo-con-reserva | alta | si | 164 | 224 | 7 |
 | [[brinton-1871]] | minado | hecha | si | 84 | 1 | 0 |
 | [[jahn-1927]] | minado | media | si | 4 | 1 | 16 |
 | [[gatschet-1885]] | minado | alta | si | 4 | 3 | 0 |
@@ -204,7 +204,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[steward-1949]] | no-disponible | baja | no | 0 | 0 | 0 |
 | [[urbina-jimenez-2007-2011]] | parcial | alta | si | 0 | 0 | 0 |
 | [[velasco-2015-resistencia]] | minado | alta | si | 0 | 0 | 0 |
-| [[zavala-reyes-2018]] | minado | alta | si | 0 | 226 | 0 |
+| [[zavala-reyes-2018]] | minado | alta | si | 0 | 224 | 0 |
 
 </details>
 

@@ -67,7 +67,7 @@ CAMPOS = {
     "koke": {
         "sig": "hormiga roja; bachaco, hormiga grande (Atta spp.)",
         "forma_fuente": "coques",
-        "notas": "Decisión F1/D5b (tanda 2026-08-30) — FUSIONADA con la grafía de fuente «coques»: %s #89 (HB): «Hormiga roja». No estaba SIN_RASTRO: las minerías buscaron la grafía k y no vieron la c (el mismo error de grafía que ocultó a Hurehurebo en Castellanos). Apoyo extra: cognados_oliver.py trae CQ coque, hormiga roja. La -s de coques es plural castellano de Zavala (cf. quibacoas). ⚠ lexicon_zavala.py (generado) aún trae coques como entrada aparte: al regenerarlo, fusionar o excluir el #89" % Z,
+        "notas": "Decisión F1/D5b (tanda 2026-08-30) — FUSIONADA con la grafía de fuente «coques»: %s #89 (HB): «Hormiga roja». No estaba SIN_RASTRO: las minerías buscaron la grafía k y no vieron la c (el mismo error de grafía que ocultó a Hurehurebo en Castellanos). Apoyo extra: cognados_oliver.py trae CQ coque, hormiga roja. La -s de coques es plural castellano de Zavala (cf. quibacoas). FUSIÓN CERRADA 2026-08-31: el miner casa ahora por forma_fuente y el #89 queda como YA_EN_LEXICON — coques dejó de ser entrada aparte del generado" % Z,
     },
     # ── D5b: el par que NO se fusiona, con referencia cruzada ──
     "barici": {

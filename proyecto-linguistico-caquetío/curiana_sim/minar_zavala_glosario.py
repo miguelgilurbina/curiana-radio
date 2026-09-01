@@ -40,6 +40,10 @@ import re
 import sys
 import unicodedata
 
+# Las reglas ortográficas de D5 (lema fonémico) viven en el aplicador de la
+# Fase 2 y se importan de ahí: una sola fuente de verdad para la migración.
+from aplicar_fase2_d5 import lema_fonemico
+
 
 def _forzar_utf8() -> None:
     """La consola de Windows usa cp1252 y el informe imprime "─", "⚠", "í"…
@@ -349,7 +353,16 @@ def clasificar(entradas: list[dict]) -> dict:
     for w, e in VOCABULARIO_BASE.items():
         if w in _YA_IMPORTADO:
             continue
-        lex_idx.setdefault(norm(w), (w, normalize_source_language(e.get("fuente", ""))))
+        familia = normalize_source_language(e.get("fuente", ""))
+        lex_idx.setdefault(norm(w), (w, familia))
+        # Fase 2 de D5 (2026-08-31): el literal migró sus lemas a grafía
+        # fonémica conservando la anterior en forma_fuente. Sin este alias el
+        # miner vería «cari», «coques» o «catarí» como ausentes —ya no casan
+        # con la clave migrada— y los re-emitiría duplicados. Es también lo
+        # que cierra la fusión del #89: «coques» casa con koke.forma_fuente.
+        ff = e.get("forma_fuente")
+        if ff:
+            lex_idx.setdefault(norm(ff), (w, familia))
 
     tiers = {
         "T1_afijos": [], "T2_nombres_agente": [], "T3_concreto": [],
@@ -372,6 +385,10 @@ def clasificar(entradas: list[dict]) -> dict:
         lemas_n = [norm(l) for l in e["lemas"]]
         d = e["definicion"]
 
+        # Un lema «ya está» solo si casa POR GRAFÍA (la clave o la
+        # forma_fuente del alias). Casar por lema fonémico sería absorber en
+        # silencio palabras DISTINTAS que colisionan (quiba 'ayuda' no es el
+        # kiba del literal): esas van a COLISIONES_D5, más abajo.
         hit = next(((l, *lex_idx[norm(l)]) for l in e["lemas"] if norm(l) in lex_idx), None)
         if hit:
             lema, forma_lex, fuente = hit
@@ -406,6 +423,39 @@ def clasificar(entradas: list[dict]) -> dict:
             tiers["T3_concreto"].append(e)
         else:
             tiers["T4_abstracto"].append(e)
+
+    # ── Fase 2 de D5 sobre el generado (decidida 2026-08-30; el literal
+    # migró el 2026-08-31 con aplicar_fase2_d5.py — mismo movimiento aquí) ──
+    # Cada entrada del vocabulario activo entra con su LEMA FONÉMICO y
+    # conserva la grafía de Zavala en forma_fuente. Colisiones NO se
+    # renombran: cada una es una decisión, no un accidente. Los topónimos y
+    # antropónimos (T5/T5b) quedan en grafía fuente por D5a.
+    claves_literal = {w for w in VOCABULARIO_BASE if w not in _YA_IMPORTADO}
+    activos = [e for t in ("T2_nombres_agente", "T3_concreto", "T4_abstracto")
+               for e in tiers[t]]
+    finales: dict[str, int] = {}
+    for e in activos:
+        e["lema_fonemico"] = lema_fonemico(norm(e["lemas"][0]))
+        finales[e["lema_fonemico"]] = finales.get(e["lema_fonemico"], 0) + 1
+    tiers["COLISIONES_D5"] = []
+    for e in activos:
+        origen, nuevo = norm(e["lemas"][0]), e["lema_fonemico"]
+        colision = None
+        if nuevo in claves_literal:
+            colision = f"su lema fonémico «{nuevo}» ya es clave del lexicón literal"
+        elif finales[nuevo] > 1:
+            colision = f"más de una entrada del glosario da el lema «{nuevo}»"
+        # Colisión con forma cambiada → se queda en grafía fuente, pendiente.
+        # Colisión con forma intacta (naure/naure) → statu quo, pero visible.
+        e["lema_final"] = origen if (colision and nuevo != origen) else nuevo
+        if colision:
+            tiers["COLISIONES_D5"].append(
+                {"forma": origen, "lema_fonemico": nuevo, "num": e["num"],
+                 "motivo": colision})
+        # El veredicto de homógrafo (F7) es sobre la GRAFÍA: si la migración
+        # cambió la forma, la colisión con el español se disuelve con ella.
+        e["homografo_disuelto"] = bool(e.get("homografo_es")) and e["lema_final"] != origen
+        e["homografo_es"] = bool(e.get("homografo_es")) and e["lema_final"] == origen
 
     return tiers
 
@@ -449,6 +499,17 @@ def informe(tiers: dict, entradas: list[dict]):
         print()
     n_hom = sum(1 for t in orden for e in tiers[t] if e.get("homografo_es"))
     print(f"  ⚠ homógrafos con español (importar con nota): {n_hom}")
+
+    activos = [e for t in ("T2_nombres_agente", "T3_concreto", "T4_abstracto")
+               for e in tiers[t]]
+    renombradas = [e for e in activos
+                   if e.get("lema_final", "") != norm(e["lemas"][0])]
+    disueltos = [e for e in activos if e.get("homografo_disuelto")]
+    print(f"\n  D5 fase 2 — {len(renombradas)} lemas al fonémico, "
+          f"{len(disueltos)} homógrafos disueltos, "
+          f"{len(tiers.get('COLISIONES_D5', []))} colisiones sin renombrar:")
+    for c in tiers.get("COLISIONES_D5", []):
+        print(f"     ⚠ {c['forma']:14} → {c['lema_fonemico']:14} {c['motivo']}")
     if tiers["MAL_ETIQUETADO"]:
         print(f"\n  ⚠ presentes pero NO etiquetadas 'caquetío' ({len(tiers['MAL_ETIQUETADO'])}):")
         for e in tiers["MAL_ETIQUETADO"]:
@@ -460,7 +521,8 @@ _CAT_POR_TIER = {"T4_abstracto": "v_raiz"}   # heurística de POS; el resto, sus
 
 
 def _entrada_py(e: dict, tier: str, indent: str = "    ") -> str:
-    forma = norm(e["lemas"][0])
+    origen = norm(e["lemas"][0])
+    forma = e.get("lema_final", origen)      # Fase 2 de D5: lema fonémico
     verbatim = e["definicion"].replace('"', "'").replace("\\", "")
     sig = verbatim[:78]
     sig = (sig[0].lower() + sig[1:]) if sig else sig
@@ -468,6 +530,12 @@ def _entrada_py(e: dict, tier: str, indent: str = "    ") -> str:
     nota = f"Zavala Reyes 2015 #{e['num']} ({siglas})"
     if e.get("homografo_es"):
         nota += "; homógrafo con español — resuelto por contexto en score_linguistico"
+    if e.get("homografo_disuelto"):
+        nota += (f"; era homógrafo del español en grafía fuente ({origen}) — "
+                 "la migración D5 disolvió la colisión")
+    if forma == origen != e.get("lema_fonemico", origen):
+        nota += (f"; D5 PENDIENTE: su lema fonémico {e['lema_fonemico']} "
+                 "colisiona — ver COLISIONES_D5")
     variantes = [norm(l) for l in e["lemas"][1:]]
     if variantes:
         nota += f"; variantes: {', '.join(variantes)}"
@@ -476,7 +544,9 @@ def _entrada_py(e: dict, tier: str, indent: str = "    ") -> str:
     # D7: la glosa de la fuente se conserva verbatim y trazable; la
     # identificación moderna se añade aparte, sin desplazarla.
     extra = (f' "glosa_fuente": "{verbatim} [Zavala Reyes 2015 #{e["num"]} ({siglas})]",')
-    moderna = IDENTIFICACION_MODERNA.get(forma)
+    if forma != origen:
+        extra += f' "forma_fuente": "{origen}",'
+    moderna = IDENTIFICACION_MODERNA.get(origen)
     if moderna:
         extra += f' "identificacion_moderna": "{moderna.replace(chr(34), chr(39))}",'
     return (f'{indent}"{forma}":{pad}{{"sig": "{sig}", "cat": "{cat}", '
@@ -514,6 +584,15 @@ def generar_modulo(tiers: dict, ruta: str):
     L.append("y las siglas del compilador. Esa es la glosa que el agente habla. Cuando la")
     L.append("ciencia moderna identifica otra cosa, se añade `identificacion_moderna` como")
     L.append("nota auditable; ninguna de las dos desplaza a la otra.")
+    L.append("")
+    L.append("D5 FASE 2 — LEMA FONÉMICO (decidida 2026-08-30/F2-#36; aplicada al generado")
+    L.append("el 2026-08-31): el vocabulario activo entra con su lema en grafía fonémica")
+    L.append("(gua/gü→w, gue/gui→g dura, qu→k, c→k salvo ch y ce/ci, z→s, v→b) y conserva")
+    L.append("la grafía de Zavala en `forma_fuente`. Los homógrafos cuya colisión con el")
+    L.append("español era de la grafía colonial quedan DISUELTOS (ver")
+    L.append("HOMOGRAFOS_DISUELTOS_D5); las colisiones de lema NO se renombran y esperan")
+    L.append("decisión (ver COLISIONES_D5). Topónimos y antropónimos siguen en grafía")
+    L.append("fuente por D5a. Mapa del literal: 6-fusion/migracion_lemas_fase2.yaml.")
     L.append("")
     L.append("CAVEAT DE MÉTODO: el glosario de Zavala es una compilación de nueve autores")
     L.append("(Arcaya, Hernández Baño, Esteves, Angulo Molina, Alvarado, Galeotto Cey,")
@@ -578,8 +657,12 @@ def generar_modulo(tiers: dict, ruta: str):
     L.append("")
 
     # ── homógrafos ──
-    homs = sorted({norm(e["lemas"][0]) for t in ("T2_nombres_agente", "T3_concreto", "T4_abstracto")
-                   for e in tiers[t] if e.get("homografo_es")})
+    _activos = [e for t in ("T2_nombres_agente", "T3_concreto", "T4_abstracto")
+                for e in tiers[t]]
+    homs = sorted({e.get("lema_final", norm(e["lemas"][0]))
+                   for e in _activos if e.get("homografo_es")})
+    disueltos = sorted((e for e in _activos if e.get("homografo_disuelto")),
+                       key=lambda e: e["lema_final"])
     L.append("# ══════════════════════════════════════════════════════════════════")
     L.append("# HOMÓGRAFOS CON ESPAÑOL — se resuelven POR CONTEXTO")
     L.append("# ══════════════════════════════════════════════════════════════════")
@@ -607,6 +690,27 @@ def generar_modulo(tiers: dict, ruta: str):
     L.append("}")
     L.append("")
     L.append("")
+    L.append("# Homógrafos que la migración D5 DISOLVIÓ: la colisión con el español era")
+    L.append("# de la grafía colonial, no del fonema (guaca chocaba con 'guaca'; waka no")
+    L.append("# choca con nada). Se conserva el veredicto F7 para que nadie los vuelva a")
+    L.append("# marcar «por si acaso» — marcarlos haría sub-contar caquetío legítimo.")
+    L.append("HOMOGRAFOS_DISUELTOS_D5: dict[str, str] = {")
+    for e in disueltos:
+        origen = norm(e["lemas"][0])
+        v = HOMOGRAFOS_ES.get(origen, "").replace('"', "'")
+        L.append(f'    "{e["lema_final"]}": "grafía fuente «{origen}» — {v}",')
+    L.append("}")
+    L.append("")
+    L.append("")
+    L.append("# Colisiones de lema fonémico — NO se renombraron: cada una es una")
+    L.append("# decisión pendiente, no un accidente. La entrada sigue en grafía fuente.")
+    L.append("COLISIONES_D5: list[dict] = [")
+    for c in tiers.get("COLISIONES_D5", []):
+        L.append(f'    {{"forma": "{c["forma"]}", "lema_fonemico": "{c["lema_fonemico"]}", '
+                 f'"num": {c["num"]}, "motivo": "{c["motivo"]}"}},')
+    L.append("]")
+    L.append("")
+    L.append("")
 
     # ── referencia de canon ──
     L.append("# ══════════════════════════════════════════════════════════════════")
@@ -630,10 +734,15 @@ def generar_modulo(tiers: dict, ruta: str):
         L.append("")
 
     L.append("")
+    _renombradas = sum(1 for e in _activos
+                       if e.get("lema_final", "") != norm(e["lemas"][0]))
     L.append("TOTALES = {")
     L.append(f'    "afijos": {len(tiers["T1_afijos"])},')
     L.append(f'    "vocabulario_activo": {sum(len(tiers[t]) for t, _, _ in bloques)},')
+    L.append(f'    "renombradas_d5": {_renombradas},')
     L.append(f'    "homografos": {len(homs)},')
+    L.append(f'    "homografos_disueltos_d5": {len(disueltos)},')
+    L.append(f'    "colisiones_d5": {len(tiers.get("COLISIONES_D5", []))},')
     L.append(f'    "toponimos": {len(tiers["T5_toponimo"])},')
     L.append(f'    "antroponimos": {len(tiers["T5b_antroponimo"])},')
     L.append(f'    "descartados": {len(tiers["T6_descartado"])},')

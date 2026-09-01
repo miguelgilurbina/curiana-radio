@@ -174,7 +174,19 @@ def propagar(renombres, dry):
     return tocados
 
 
-def escribir_mapa(renombres, colisiones, en_generado, excluidas):
+def renombres_del_generado():
+    """(forma_fuente, lema) de lexicon_zavala.py — los renombres que ejecutó
+    el propio generador (minar_zavala_glosario.py) al regenerar con D5."""
+    try:
+        from lexicon_zavala import GLOSARIO_ZAVALA
+    except ImportError:
+        return []
+    return sorted((e["forma_fuente"], k) for k, e in GLOSARIO_ZAVALA.items()
+                  if e.get("forma_fuente"))
+
+
+def escribir_mapa(renombres, colisiones, en_generado, excluidas,
+                  generado_hechos=()):
     lineas = [
         "# ─────────────────────────────────────────────────────────────",
         "# MAPA — migración de lemas de la Fase 2 de D5 (generado por",
@@ -191,7 +203,10 @@ def escribir_mapa(renombres, colisiones, en_generado, excluidas):
     lineas.append("colisiones_no_renombradas:  # cada una es una decisión pendiente")
     for v, n in colisiones:
         lineas.append("  - {forma: %s, chocaria_con: %s}" % (v, n))
-    lineas.append("en_lexicon_zavala_generado:  # migran cuando se regenere ese módulo")
+    lineas.append("renombres_en_generado:  # ejecutados por minar_zavala_glosario.py; forma_fuente en cada entrada")
+    for v, n in generado_hechos:
+        lineas.append("  - {de: %s, a: %s}" % (v, n))
+    lineas.append("en_lexicon_zavala_pendientes:  # colisiones del generado — cada una es una decisión")
     for v, n in en_generado:
         lineas.append("  - {forma: %s, lema_fonemico: %s}" % (v, n))
     io.open(MAPA_FILE, "w", encoding="utf-8", newline="\n").write("\n".join(lineas) + "\n")
@@ -232,11 +247,16 @@ def main():
     io.open(LEXICON_FILE, "w", encoding="utf-8", newline="").write(contenido)
     print("\n  ✓ lexicón: %d entradas renombradas (forma_fuente añadida)." % len(hechos))
 
-    tocados = propagar(hechos, dry=False)
+    # Se propagan también los renombres que ya ejecutó el GENERADOR: las
+    # referencias vivas (corpus, FORMAS_SEED) no distinguen de qué módulo
+    # viene la palabra. Fue lo que atrapó test_formas_seed: la semilla de
+    # Dara-ko decía cunaro y el generado ya decía kunaro.
+    generado_hechos = renombres_del_generado()
+    tocados = propagar(hechos + generado_hechos, dry=False)
     for donde, n in tocados:
         print("  ✓ %s: %d referencia(s) actualizadas." % (donde, n))
 
-    escribir_mapa(hechos, colisiones, en_generado, excluidas)
+    escribir_mapa(hechos, colisiones, en_generado, excluidas, generado_hechos)
     print("  ✓ mapa escrito: 6-fusion/migracion_lemas_fase2.yaml")
     return 0
 
