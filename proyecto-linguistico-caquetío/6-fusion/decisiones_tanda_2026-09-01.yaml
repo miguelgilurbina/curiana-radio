@@ -182,6 +182,36 @@ rumbo_era2_refinado:
     añadida) y estrena con la toponimia paraguanera:
     6-fusion/toponimia_paraguana_miguel.yaml (Chamuriana, Moruy×3,
     Cayerúa, Arubanas, y la hipótesis Moruy-Santa-Ana-mismo-clan).
+  # ── tercera entrega de directivas (conversación de diseño, mismo día) ──
+  diseno_era2_directivas:
+    elenco: >-
+      «Un elenco significativo: tenemos que tener a TODOS los arquetipos de
+      la familia; teniendo el arquetipo mínimo de familias armamos los dos
+      nodos.» El tamaño NO se fija por número sino por completitud de
+      arquetipos — y la plantilla ya existe: genealogia.yaml define el
+      grupo residencial creíble (matriarca + hermanas con hijos + hermanos
+      adultos + esposos de otros linajes). Derivación: ~8-10 por linaje ×
+      2 linajes por nodo + esposos exogámicos cruzados ≈ 35-40 agentes.
+    duracion: >-
+      «El sweet spot: un mínimo de tiempo donde podamos ver cuándo se
+      llega a un PLATEAU que significaría una koiné.» Regla de parada
+      dinámica, no días fijos: piso (una estación completa) + detector de
+      plateau sobre la métrica ENTRE-nodos (pendiente ~0 en ventana de N
+      días) + techo de presupuesto. Caveat de fase 1 a declarar: la
+      convergencia intra-comunidad "desplaza de entrada y sostiene" — el
+      plateau informativo es el de CRUCE entre nodos, que exige viaje
+      físico de formas. Y honestidad: plateau alto = koiné; plateau bajo
+      = diglosia estable — ambos son resultados.
+    memoria_persistente: >-
+      «Que cada participante pueda recordar sus decisiones, convicciones,
+      etc. a medida que está en la simulación.» Memoria biográfica
+      PERSISTENTE por agente durante el run (hoy: agent_memory reciente +
+      idiolecto lingüístico acumulado + perfiles solo al CIERRE). Diseño:
+      un «diario consolidado» por agente — consolidación periódica (cada
+      N días, pasada barata que resume decisiones/convicciones/relaciones)
+      inyectada al prompt; dos capas de memoria: la lingüística
+      (idiolecto, ya existe) y la biográfica (nueva). Costo de las
+      consolidaciones al modelo de presupuesto.
   verificacion_hecha: >-
     CONFIRMADO (minar-fuente 2026-09-01, verificado a ojo contra la
     imagen): Oliver 1989 pp. 275-276, citando a González Batista 1984 y
