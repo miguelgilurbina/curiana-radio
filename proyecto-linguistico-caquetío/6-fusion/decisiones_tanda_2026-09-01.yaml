@@ -165,6 +165,23 @@ rumbo_era2_refinado:
       Curazao y Bonaire) y sección COSTERA CONTINENTAL (Cumarebo,
       Zazárida, Capatárida, Todariquiba). Juntas = el polity costero de
       Oliver.
+  # ── añadido tras la verificación (mismo día) ──
+  rumbo_toponimos: >-
+    DECISIÓN DE MÉTODO de Miguel (2026-09-01): para los topónimos de los
+    nodos, el proyecto deja de depender SOLO de atestiguación científica.
+    El flujo acordado: Miguel SE MOJA con lecturas de investigación
+    coloquial (hearsay, tradición local, mapas vivos), Claude VALIDA LA
+    PROBABILIDAD de cada una, y juntos se adoptan DEFINICIONES ACEPTADAS
+    PARA LA SIMULACIÓN. Sus palabras: «al ser una lengua muerta hay que
+    tomar posturas... para esta simulación vamos a tener que tomar
+    decisiones para que la simulación tenga la mayor info posible».
+    Higiene declarada: la definición aceptada lleva etiqueta
+    canon-simulacion y NUNCA asciende a atestiguado — la etiqueta sigue
+    diciendo la verdad; lo que cambia es que el proyecto toma posición.
+    Se instrumenta sobre el esquema `lecturas` (issue en borrador, sección
+    añadida) y estrena con la toponimia paraguanera:
+    6-fusion/toponimia_paraguana_miguel.yaml (Chamuriana, Moruy×3,
+    Cayerúa, Arubanas, y la hipótesis Moruy-Santa-Ana-mismo-clan).
   verificacion_hecha: >-
     CONFIRMADO (minar-fuente 2026-09-01, verificado a ojo contra la
     imagen): Oliver 1989 pp. 275-276, citando a González Batista 1984 y

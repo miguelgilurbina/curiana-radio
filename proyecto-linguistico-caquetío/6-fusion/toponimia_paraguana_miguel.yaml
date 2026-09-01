@@ -1,0 +1,107 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — Toponimia paraguanera: la investigación coloquial de Miguel
+# (2026-09-01, sobre el hallazgo de los dos clanes)
+#
+# Método NUEVO decidido este día (ver decisiones_tanda_2026-09-01.yaml
+# §rumbo_toponimos): Miguel se moja con lecturas de investigación coloquial
+# (hearsay, tradición local, mapas actuales), Claude valida probabilidad, y
+# el proyecto adopta DEFINICIONES ACEPTADAS PARA LA SIMULACIÓN — etiqueta
+# canon-simulacion, nunca atestiguado. La atestación científica deja de ser
+# el único camino; la etiqueta epistémica sigue diciendo la verdad.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-09-01'
+  estado: sin-fusionar
+  quien: "Miguel (investigación coloquial + lectura de mapa actual de Paraguaná)"
+  contexto: los dos clanes de Oliver (paraguana_dos_clanes.yaml) y el diseño de nodos de la era 2
+
+lecturas:
+
+  - toponimo: Santa Ana (Paraguaná)
+    tipo: tradicion-local
+    lectura: >-
+      El nombre original era CHAMURIANA, "elegida por los nativos debido a
+      la abundancia de agua dulce que bajaba del cerro". Hallado por Miguel
+      en investigación coloquial (web/crónica local), sin fuente citable
+      aún — deuda declarada.
+    observaciones_del_proyecto:
+      - "Chamuriana termina en -ana: el formante cuya glosa está EN DISPUTA (#109) — un dato más para esa cola"
+      - "el cerro del que baja el agua es el CERRO SANTA ANA = el Cerro de Capú (Velasco 2015; D9): el complejo capu/bana/agua se toca con este nombre"
+      - "cf. -iana en Coriana/Curiana (toponimia_coro_espina.yaml)"
+    deuda: sin-procedencia
+
+  - toponimo: Moruy
+    tipo: etimologia-popular (tres versiones recogidas)
+    lectura: >-
+      Versiones de tradición oral que recoge Miguel: (1) Moruy era un
+      CACIQUE; (2) llegaron unos "moros" tan temibles que los aborígenes
+      gritaban «¡moro uy!»; (3) del quechua muru, 'viruela' o 'pepa'.
+    validacion_de_probabilidad: >-
+      (Claude, parte de la curaduría acordada) La (2) es etimología de
+      anécdota clásica — improbable. La (3) exige un préstamo quechua en
+      Paraguaná — sin ruta conocida, improbable. La (1) es el patrón
+      regional real (topónimo < antropónimo: Manaure→Pueblo de Manaure,
+      regla 0 significado≠referente) — LA MÁS PROBABLE de las tres, y
+      además compatible con que el cacique llevara un nombre con
+      significado propio. Nota: el lexicón tiene moruy en EXCLUIR_DEL_HABLA
+      como topónimo; Zavala lo trae en su glosario.
+    deuda: sin-procedencia
+
+  - toponimo: Aruba / Arubanas
+    tipo: hipotesis-de-miguel
+    lectura: >-
+      En «Arubanas» (los indios de Aruba, Altoaguirre [1768] vía Oliver p.
+      256) Miguel ve otra vez el formante bana — o quizás el -ana
+      escondido, si el nombre quedó como Aruba, que "supuestamente
+      significa 'La que acompaña'" (etimología popular circulante).
+    validacion_de_probabilidad: >-
+      Cautela: Arubanas puede ser simplemente Aruba + -nas (plural/gentilicio
+      castellano, como «paraujanos»), sin morfema indígena. La segmentación
+      aru+bana o arub+ana necesitaría apoyo independiente. Se registra la
+      lectura; probabilidad baja mientras no aparezca segundo apoyo.
+      Cf. van Buurt §7 para la toponimia aruberoa real (Sero Warawara...).
+
+  - toponimo: Cayerda / Cayerúa
+    tipo: verificacion-de-mapa (Miguel)
+    lectura: >-
+      «Cayerda no existe, pero Cayerúa sí» — Miguel, sobre el mapa actual.
+      La aldea que Delmonte da como asiento primero de los Amuayes
+      (Cayerda/Cayerta/"Coyarna" en Oliver p. 276, que la da como "still
+      extant") aparece hoy como CAYERÚA, cerca de Moruy (foto de Miguel:
+      Moruy, Uarayadito, Cayerúa en el mismo sector).
+    observaciones_del_proyecto:
+      - "Oliver mismo vacila en la grafía: Cayerta/'Coyarna'/Cayerda — el nombre llegó mal copiado por alguna de las cadenas"
+      - "las variantes -erda/-erta/-erúa son material para la campaña de topónimos (permutar TODAS las vocales — trampa 1 de la tanda)"
+
+hipotesis_estructural:
+  - id: moruy-santa-ana-mismo-clan
+    quien: Miguel
+    hipotesis: >-
+      Moruy y Santa Ana (Chamuriana) eran DEL MISMO CLAN, no de clanes
+      rivales: están muy cerca (foto), y SANTA ANA pudo ser un pueblo
+      CREADO POR EL PROCESO COLONIAL (congregación/reducción) — en cuyo
+      caso la asignación de Delmonte (Guaranaos en Santa Ana) describe
+      geografía COLONIAL, no precontacto. La casa de los Guaranaos habría
+      sido Moruy... o los nodos tenían extensiones familiares que la
+      lectura de "dos territorios" simplifica.
+    validacion_de_probabilidad: >-
+      Es la regla 3 del proyecto aplicada a Delmonte — y es seria: el
+      propio Oliver confirma un REASENTAMIENTO (Amuayes: Cayerda→Moruy),
+      que huele a reducción colonial. Si los Amuayes fueron REASENTADOS en
+      Moruy, la geografía de Delmonte es posterior al contacto por lo
+      menos en parte. PERO la división norte/sur con playas de pesca
+      excluyentes (González Batista) es económica-territorial, no de
+      pueblos: puede sobrevivir a la reubicación de las aldeas. Lectura
+      propuesta para el diseño: conservar los DOS clanes (atestiguados)
+      como estructura, y dejar la ASIGNACIÓN clan→pueblo-moderno como
+      canon-simulacion revisable. Chamuriana como nombre precontacto de
+      Santa Ana, si se confirma, DEBILITA la parte "pueblo puramente
+      colonial" de la hipótesis (los nativos la nombraron por su agua).
+    implicacion_era_2: >-
+      Para DISENO_ERA2: los nodos se modelan como TERRITORIOS de clan
+      (norte/sur) con extensiones familiares, no como pueblos puntuales —
+      lo cual encaja con los linajes de D1 como unidades de expansión.
+
+cola_de_mapa:
+  nota: topónimos vivos del sector que la foto de Miguel muestra — para la campaña
+  candidatos: [Uarayadito, Davaduvare, Abudure, Machuruca, Caseto, La Rinconada]
