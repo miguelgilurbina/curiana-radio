@@ -160,7 +160,7 @@ lleva su razonamiento completo en el campo `notas` de la entrada.
 
 **Por qué son caros.** `tara` sostiene material del corpus ecológico
 ([[mapa-ecologia]], `ecologia.yaml`, [[02_ecologia_golfete]] §10.6); `corie` da
-nombre al asentamiento Corie-ko. Corregir la glosa no es editar una fila: es
+nombre al asentamiento Korie-ko. Corregir la glosa no es editar una fila: es
 mover el mundo. Por eso quedan como decisión de Miguel.
 
 ## Las 3 entradas que quedan sin cita

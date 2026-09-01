@@ -227,6 +227,19 @@ DESMARCADAS_F7: dict[str, str] = {
     "yaro":     "#285 'bejuco, planta venenosa' — no existe en español (sí es topónimo de Falcón).",
 }
 
+# FUSIONADAS EN EL LITERAL por la decisión de colisiones D5 (2026-08-31,
+# 6-fusion/decisiones_colisiones_d5_2026-08-31.yaml): la grafía española es
+# grafía; el lema fonémico es la palabra, y vive UNA vez, en el literal de
+# curiana_lexicon.py, con los homónimos declarados (patrón D9). El miner las
+# reconoce aquí y no las re-emite. El homógrafo español de sigua se disolvió
+# con la grafía (siwa no choca con nada); su veredicto F7 sigue abajo en
+# HOMOGRAFOS_ES como documentación.
+FUSIONADAS_EN_LITERAL: dict[str, str] = {
+    "quiba": "kiba",   # #203 (AM) 'ayuda' — homónimo kiba-2, declarado bajo kiba
+    "quiva": "kiba",   # #218 (E) 'piedra' — kiba-1, el sig activo
+    "sigua": "siwa",   # #227 (E) 'blando' — siwa-1; 'sal de comercio' queda como siwa-2
+}
+
 # DESCARTE del habla activa (nivel D del protocolo de descarte, §5 de
 # investigacion/disenos/02_protocolo_habla_paraguanera.md). No son topónimos:
 # son formas cuya presencia en el léxico activo hace más daño que bien.
@@ -396,6 +409,15 @@ def clasificar(entradas: list[dict]) -> dict:
             tiers["YA_EN_LEXICON"].append(reg)
             if fuente != "caquetío":
                 tiers["MAL_ETIQUETADO"].append(reg)
+            continue
+
+        # Colisiones ya DECIDIDAS (2026-08-31): viven fusionadas en el
+        # literal con homónimos declarados; no se re-emiten.
+        fus = next((l for l in lemas_n if l in FUSIONADAS_EN_LITERAL), None)
+        if fus:
+            tiers["YA_EN_LEXICON"].append(
+                {**e, "forma_lexicon": FUSIONADAS_EN_LITERAL[fus],
+                 "fuente_actual": "caquetío"})
             continue
 
         # La marca se decide por la forma que REALMENTE entra al léxico (el

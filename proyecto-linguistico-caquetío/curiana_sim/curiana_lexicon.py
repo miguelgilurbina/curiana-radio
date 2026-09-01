@@ -36,7 +36,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "chiriware": {"sig": "gavilán, ave rapaz grande",                      "cat": "sust",  "fuente": "caquetío", "notas": "Zavala Reyes 2015, glosario #84 (HB): «Gavilán» [atribución débil: voz zoonímica panvenezolana]", "forma_fuente": "chiriguare"},
     "maure":      {"sig": "fibra de algodón, hilo para tejer",              "cat": "sust",  "fuente": "caquetío", "notas": "Zavala Reyes 2015, nota al pie (3): «Maure: fibra de algodón con la que tejían las hamacas»; Alvarado 1921, p.216 s.v. MÁURE (Carvajal 168 y Castellanos la registran como faja o tejido; en Coro vivía en 1921 como pieza de dril)"},
     "urari":      {"sig": "veneno/medicina vegetal (curare)",               "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015 (AM); artículo de comercio", "categoria": "comercio"},
-    "korie": {"sig": "armadillo",              "cat": "sust",  "fuente": "caquetío", "notas": "RESUELTO 2026-08-24 (#46). Glosa anterior: 'choza, habitacion, espacio propio', que su propia nota admitia sin fuente localizada (ausente de Alvarado 1921 y de van Buurt 2014). Tres fuentes dicen armadillo: Zavala Reyes 2015 #90 (HB); el CANON del proyecto (genealogia.yaml da 'corie (armadillo)' como totem del linaje Paugis, y la ficha de Buio-sha lo usa como elogio); y Oliver 1989, Apendice A, Tabla A-9 «Selected Caquetio Vocabulary from the XVIth Century», pp. impresas 593-594, leida sobre la imagen por Miguel el 2026-08-24: 'corie | korie | armadillo | armadillo'. La agente Corie-ko conserva su nombre: lo que cambia es que significa", "forma_fuente": "corie"},
+    "korie": {"sig": "armadillo",              "cat": "sust",  "fuente": "caquetío", "notas": "RESUELTO 2026-08-24 (#46). Glosa anterior: 'choza, habitacion, espacio propio', que su propia nota admitia sin fuente localizada (ausente de Alvarado 1921 y de van Buurt 2014). Tres fuentes dicen armadillo: Zavala Reyes 2015 #90 (HB); el CANON del proyecto (genealogia.yaml da 'corie (armadillo)' como totem del linaje Paugis, y la ficha de Buio-sha lo usa como elogio); y Oliver 1989, Apendice A, Tabla A-9 «Selected Caquetio Vocabulary from the XVIth Century», pp. impresas 593-594, leida sobre la imagen por Miguel el 2026-08-24: 'corie | korie | armadillo | armadillo'. La agente Korie-ko conserva su nombre: lo que cambia es que significa", "forma_fuente": "corie"},
     "saruro":     {"sig": "boa, serpiente no venenosa",                 "cat": "sust",  "fuente": "caquetío", "notas": "RESUELTO 2026-08-24 (#47). Glosa anterior: 'arbol saruro', cuyo unico rastro era una lista de Notion citada en DISENO_KOINE §8 — y alli se usa para confirmar la terminacion -aro/-uro, NO para sostener la glosa. A favor: Zavala Reyes 2015 #224 (E) 'Serpiente no venenosa. Boa constrictora'. AVISO: MARCADOR 1-0, no 3-0 — comprobado que `saruro` NO aparece en la Tabla A-9 de Oliver, asi que no hay tercera fuente; se decide con menos respaldo que #45 y #46 y conviene saberlo. Apoyo lateral: la A-9 da tres palabras en -ure sobre seres vivos (bisure lagartija, chaure buho, maure tejido), asi que la terminacion es compatible con un animal. La agente Saruro-sha conserva su nombre"},
     "tukeke": {"sig": "lagartija pequeña, gecko",                       "cat": "sust",  "fuente": "caquetío", "notas": "Zavala Reyes 2015, glosario #257 (E+A+PMA): «Lagarto casero»; Alvarado 1921, p.300 s.v. TUQUEQUE (geco: Thecadactylus rapicaudus / Gonatodes albogularis); van Buurt 2014 §6 s.v. waltaca deriva el papiamento totèki de «tuqueque, tuteque, an Amerindian word used for geckos in Venezuela» [atribución débil: voz venezolana corriente, ninguna fuente la localiza en Coro]", "forma_fuente": "tuqueque"},
     "coro":       {"sig": "cardón grande, cactus columnar",                 "cat": "sust",  "fuente": "caquetío-hipotético/topónimo", "notas": "D10 (2026-08-03), grupo 3 — BAJA DE TIER, no cambia de lengua. La glosa «cardón grande» NO sale de ninguna fuente localizada. Zavala Reyes 2015 sección D lo dice explícitamente: su #181 es Koro = «Cotorra» (ya en el lexicón como entrada aparte, con su cita), no cardón. En Alvarado 1921 la palabra coro aparece 55 veces y siempre como TOPÓNIMO: no hay lema CORO con glosa de cardón. van Buurt 2014 solo la menciona como la ciudad. La entrada NO se borra y el canon NO se toca: coro da nombre a la ciudad de Coro y aparece en todo el sitio público. Lo que se retira es el respaldo de la glosa, no la palabra"},
@@ -61,8 +61,6 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "jarai":      {"sig": "cinco (numeral)",                                "cat": "num",   "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki", "fuente": "caquetío-reconstruido"},
 
     # ── Taíno (familia arahuaca, préstamos a todas las lenguas caribeñas) ──
-    "hamaca":     {"sig": "red colgante para dormir",                       "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en taíno", "fuente": "caquetío-reconstruido"},
-    "canoa":      {"sig": "embarcación excavada en tronco",                 "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en taíno", "fuente": "caquetío-reconstruido"},
     "cacique":    {"sig": "jefe, señor principal de la comunidad",          "cat": "sust",  "fuente": "taíno"},
     "maíz":       {"sig": "planta de maíz, grano principal",               "cat": "sust",  "fuente": "taíno"},
     "yuca":       {"sig": "tubérculo, mandioca amarga o dulce",             "cat": "sust",  "fuente": "taíno", "notas": "Tno. yuca; cognado Lokono mariti", "categoria": "flora"},
@@ -168,7 +166,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "shukua":     {"sig": "remo, pala para impulsar la canoa",              "cat": "sust",  "fuente": "lokono/garifuna"},
 
     # ── Intercambio y comercio (raíces y cognados arahuacos) ─────────
-    "siwa":       {"sig": "sal de comercio (< proto-arawakan *siwa)",       "cat": "sust",  "fuente": "proto-arawakan/lokono"},
+    "siwa":       {"sig": "blando",                                        "cat": "v_raiz","fuente": "caquetío-atestiguado", "forma_fuente": "sigua", "notas": "Decisión colisiones D5 (2026-08-31) — HOMÓNIMOS DECLARADOS: siwa-1 blando, caquetío-ATESTIGUADO (Zavala Reyes 2015 #227 «Sigua» (E); su homógrafo con el español era de la grafía y se disolvió con ella) y siwa-2 sal de comercio (< proto-arawakan *siwa, la entrada anterior de esta clave, capa lokono). La atestación directa gana la etiqueta — precedente de para (2026-07-20)"},
     "tüma":       {"sig": "perla, cuenta brillante del mar",                "cat": "sust",  "fuente": "lokono/proto-arawakan"},
     "karükera":   {"sig": "oro, metal amarillo (caona-cogn)",               "cat": "sust",  "fuente": "taíno/lokono"},
     "paratü":     {"sig": "trueque, intercambio de bienes (raíz paa-)",     "cat": "sust",  "fuente": "proto-arawakan"},
@@ -222,7 +220,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "iero":       {"sig": "mujer",                                          "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #163 (GC): «Mujer»"},
     "humokaro": {"sig": "mujer bella, hermosa",                           "cat": "adj",   "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #159 (GC): «Mujer bella»", "forma_fuente": "humocaro"},
     "kasi": {"sig": "sol",                                            "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #76 (GC): «Sol»", "forma_fuente": "cazi"},
-    "cati":       {"sig": "luna",                                           "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #71 (CGB): «Luna [catire: persona de tez blanca]»"},
+    "kiba":       {"sig": "piedra",                                        "cat": "sust",  "fuente": "caquetío-atestiguado", "forma_fuente": "quiva", "notas": "Decisión colisiones D5 (2026-08-31) — HOMÓNIMOS DECLARADOS bajo el mismo lema: kiba-1 piedra (Zavala Reyes 2015 #218 «Quiva» (E); y #92 «Cuiva. Kiba» (PMA) piedra — Arcaya registró la grafía k: el lema fonémico está impreso en la fuente) y kiba-2 ayuda (Zavala #203 «Quiba» (AM), cat v_raiz). La grafía b~v es betacismo colonial: mismo lema fonémico. El sentido piedra lleva el sig activo por la capa toponímica (van Buurt §8 siba/quiba piedra-roca; quibacoa, Todariquiba). Ambas salen del generado: FUSIONADAS_EN_LITERAL del miner"},
     "apana":      {"sig": "una luna (unidad de tiempo ~30 días)",           "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #10 (GC): «Una luna. Medición de tiempo»"},
     "buiamati":   {"sig": "dos lunas (unidad de tiempo ~60 días)",          "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #47 (GC): «dos lunas. Medición de tiempo»"},
     "kasebo": {"sig": "poniente, oeste",                                "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #75 (GC): «Poniente»", "forma_fuente": "cazebo"},
@@ -247,7 +245,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "borojo":     {"sig": "salina, lago salado de Coro",                   "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #44 (AM): «Salina de Coro, comercio de la sal»"},
     "ucibo":      {"sig": "cuenta de piedra, chaquira",                    "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #267 (AM): «Cuenta de piedras»"},
     "buriche":    {"sig": "licor fermentado, chicha de maíz",              "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #50 (AM): «Licor fermentado»"},
-    "buko":       {"sig": "presa de agua, represa, canal de riego",                "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Decisión D5b (tanda 2026-08-30) — FUSIONADA con buco: bajo D5a el lema fonémico sobrevive y la grafía de fuente queda aquí. CITA REINA: Ballesteros, Obispo de Coro, 1550: «Los indios antiguamente, una legua del río arriba tenían hecha una presa que ellos llaman buco» (vía Arcaya 1920 p.170, que declara citar de una copia — segunda mano; ver 4-fuentes/ballesteros-1550.md). Además Zavala Reyes 2015 #46 «Buco» (AM+CGB): «Chorro de agua, presa de agua». La reserva de Alvarado 1921 p.34 (sugería origen romance, localizaba en Lara) queda superada por la atestación de 1550 en el propio río de Coro; el topónimo vivo El Buco corrobora", "forma_fuente": "buco"},
+    "buko":       {"sig": "presa de agua, represa, canal de riego",                "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Decisión D5b (tanda 2026-08-30) — FUSIONADA con buco: bajo D5a el lema fonémico sobrevive y la grafía de fuente queda aquí. CITA REINA: Ballesteros, Obispo de Coro, 1550: «Los indios antiguamente, una legua del río arriba tenían hecha una presa que ellos llaman buco» (vía Arcaya 1920 p.170, que declara citar de una copia — segunda mano; ver 4-fuentes/ballesteros-1550.md). Además Zavala Reyes 2015 #46 «Buko» (AM+CGB): «Chorro de agua, presa de agua». La reserva de Alvarado 1921 p.34 (sugería origen romance, localizaba en Lara) queda superada por la atestación de 1550 en el propio río de Coro; el topónimo vivo El Buko corrobora", "forma_fuente": "buco"},
     "wa": {"sig": "conuco, heredad, terreno cercado cultivado",    "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #122 (HP): «Conuco, heredad, terreno cercado con algo»", "forma_fuente": "gua"},
     "duraboa":    {"sig": "conuco sembrado, parcela en producción",        "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #115 (AM): «Conuco, sembrado»"},
     "tabri":      {"sig": "siembra, plantación en proceso",                "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #234 (AM): «Conuco, siembra»"},
@@ -6207,9 +6205,10 @@ VOCABULARIO_BASE: dict[str, dict] = {
 
     # --- Proto-arahuaco reconstruido (arahuaco_comparative.py) ---
     "hamaka": {
-        "es": "hamaca, cama colgante",
-        "fuente": "proto-arahuaco",
-        "notas": "Proto-arahuaco *hamaka; atestiguada en 3 lenguas: CQ: hamaca, LK: hamaha, TN: hamaca; Payne (1991), Brinton (1871)",
+        "es": "hamaca, red colgante para dormir",
+        "fuente": "caquetío-reconstruido",
+        "forma_fuente": "hamaca",
+        "notas": "Decisión colisiones D5 (2026-08-31) — FUSIONADA con hamaca (núcleo fundacional, forma justificada por cognado en taíno). Cognados: proto-arahuaco *hamaka, LK hamaha, TN hamaca (Payne 1991, Brinton 1871). Se queda RECONSTRUIDA (mismo motivo que kanoa: hamaca es préstamo taíno del propio español). OJO: amaka sitio-de-moler-maíz (Zavala #9, forma_fuente amaca) es palabra DISTINTA, y h→∅ sigue disputada en D5 — no se fusionan",
         "categoria": "utiles"
     },
     "isikoa": {
@@ -6219,15 +6218,17 @@ VOCABULARIO_BASE: dict[str, dict] = {
         "categoria": "utiles"
     },
     "kanoa": {
-        "es": "canoa, embarcación",
-        "fuente": "proto-arahuaco",
-        "notas": "Proto-arahuaco *kanoa; atestiguada en 3 lenguas: CQ: canoa, LK: kannoa, TN: canoa; Payne (1991), Brinton (1871)",
+        "es": "canoa, embarcación excavada en tronco",
+        "fuente": "caquetío-reconstruido",
+        "forma_fuente": "canoa",
+        "notas": "Decisión colisiones D5 (2026-08-31) — FUSIONADA con canoa (núcleo fundacional, forma justificada por cognado en taíno): grafía española del mismo lema. Cognados: proto-arahuaco *kanoa, LK kannoa, TN canoa (Payne 1991, Brinton 1871). Se queda RECONSTRUIDA: el CQ canoa de la serie comparativa no es atestación independiente — canoa es préstamo taíno del propio español, riesgo de circularidad",
         "categoria": "utiles"
     },
     "kati": {
         "es": "luna",
-        "fuente": "proto-arahuaco",
-        "notas": "Proto-arahuaco *kati; atestiguada en 3 lenguas: CQ: cati, WY: kachi, LK: katsi; Payne (1991), Brinton (1871)",
+        "fuente": "caquetío-atestiguado",
+        "forma_fuente": "cati",
+        "notas": "Decisión colisiones D5 (2026-08-31) — FUSIONADA con cati: la grafía c es colonial y el lema fonémico es la palabra. Atestiguada: Zavala Reyes 2015, glosario #71 (CGB): «Luna [catire: persona de tez blanca]». Cognados: proto-arahuaco *kati, WY kachi, LK katsi (Payne 1991, Brinton 1871); en el Swadesh de Oliver (Tabla A-2, fila moon) el lokono trae kathi — similitud 1.00, la fila bandera del cómputo de D11. RE-ETIQUETADA de proto-arahuaco a caquetío-atestiguado por atestación directa (precedente de para, 2026-07-20)",
         "categoria": "cosmos"
     },
     "para": {
@@ -6457,8 +6458,8 @@ REGLAS_AGENTIVAS: dict[str, dict] = {
         "uso": "RAÍZ + -ko  →  nombre o apodo masculino",
         "ejemplos": [
             "biro + ko = Biro-ko (el salinero, el hombre de la sal)",
-            "corie + ko = Corie-ko (el de la choza, guardián del espacio)",
-            "buco + ko = Buco-ko (el de la represa)",
+            "korie + ko = Korie-ko (el de la choza, guardián del espacio)",
+            "buko + ko = Buko-ko (el de la represa)",
         ],
         "wayunaiki": "-shi (masculine singular marker, triad A)",
         "instruccion_agente": (

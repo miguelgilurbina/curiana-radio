@@ -116,7 +116,7 @@ entradas:
     referencia: "Camacho et al. 2011, p. 9 (tablas de precipitación y temperatura, estación Coro)"
     procedencia: {obra: camacho-2011}
     dominios: [ecologia, clima]
-    agentes_relacionados: [Shaboro, Corie-ko]
+    agentes_relacionados: [Shaboro, Korie-ko]
     palabra_lexicon: kaya
     locacion: null
     implicacion_simulacion: >
@@ -150,7 +150,7 @@ entradas:
     referencia: "Camacho et al. 2011 (clima/hidrología); lexicón atestiguado (buko, jaguey, jacuque)"
     procedencia: {obra: camacho-2011}
     dominios: [ecologia, hidrologia, agricultura]
-    agentes_relacionados: [Buco-ko, Corie-ko, Ita-ko, Wari-ko]
+    agentes_relacionados: [Buko-ko, Korie-ko, Ita-ko, Wari-ko]
     palabra_lexicon: buko
     locacion: buco
     implicacion_simulacion: >
@@ -172,7 +172,7 @@ entradas:
       salina opera así hoy, pero la documentación consultada es periodística y describe
       una operación artesanal de ~80 años, no una continuidad precolonial demostrada.
     dominios: [ecologia, comercio, salinas]
-    agentes_relacionados: [Biro-ko, Moruy-sha, Guama-ko, Suba-ko]
+    agentes_relacionados: [Biro-ko, Moruy-sha, Wama-ko, Suba-ko]
     palabra_lexicon: biro
     locacion: salinar
 
@@ -220,7 +220,7 @@ entradas:
     fuente: reconstruido
     referencia: "Ecología general de manglares del Caribe; Antczak & Antczak 2015 (moluscos)"
     dominios: [ecologia, manglar, recoleccion]
-    agentes_relacionados: [Suba-ko, Guaranaro-sha]
+    agentes_relacionados: [Suba-ko, Waranaro-sha]
     palabra_lexicon: ukura
     locacion: manglar
 
@@ -234,7 +234,7 @@ entradas:
     fuente: atestiguado
     referencia: "Atlas del Arte Precolombino Venezolano (serie Dabajuroide); Antczak & Antczak 2015"
     dominios: [ecologia, ceramica, comercio]
-    agentes_relacionados: [Saruro-sha, Cahu-sha, Pira-sha]
+    agentes_relacionados: [Saruro-sha, Kahu-sha, Pira-sha]
     palabra_lexicon: null
     locacion: bohios
 
@@ -249,7 +249,7 @@ entradas:
     fuente: atestiguado
     referencia: "Atlas del Arte Precolombino Venezolano (serie Dabajuroide)"
     dominios: [ecologia, ceramica]
-    agentes_relacionados: [Saruro-sha, Cahu-sha, Pira-sha, Kori-sha]
+    agentes_relacionados: [Saruro-sha, Kahu-sha, Pira-sha, Kori-sha]
     palabra_lexicon: paugis
     locacion: bohios
     implicacion_simulacion: >
@@ -266,7 +266,7 @@ entradas:
     fuente: atestiguado
     referencia: "Ictiofauna del Golfo de Venezuela / La Vela de Coro (SVDB; FAO)"
     dominios: [ecologia, pesca]
-    agentes_relacionados: [Bagre-ko, Cunaro-bana, Guaranaro-sha, Dara-bana]
+    agentes_relacionados: [Bagre-ko, Kunaro-bana, Waranaro-sha, Dara-bana]
     palabra_lexicon: arima
     locacion: orilla
     implicacion_simulacion: >
@@ -328,7 +328,7 @@ entradas:
     fuente: atestiguado
     referencia: "Lexicón caquetío atestiguado (Alvarado 1921, Jahn 1927); fauna semiárida de Falcón"
     dominios: [ecologia, fauna, caza]
-    agentes_relacionados: [Chiriguare, Suba-ko]
+    agentes_relacionados: [Chiriware, Suba-ko]
     locacion: matorral
     nota: >
       CORREGIDO 2026-08-24 (#45): 'tara' salió de esta lista. La glosa 'venado' no
@@ -398,7 +398,7 @@ entradas:
     fuente: atestiguado
     referencia: "Etnobotánica de Rhizophora mangle / Avicennia germinans (taninos, curtido, tinción de redes)"
     dominios: [ecologia, manglar, pesca]
-    agentes_relacionados: [Bagre-ko, Guaranaro-sha, Suba-ko]
+    agentes_relacionados: [Bagre-ko, Waranaro-sha, Suba-ko]
     palabra_lexicon: mankaba
     locacion: manglar
     implicacion_simulacion: >
@@ -430,7 +430,7 @@ entradas:
     fuente: reconstruido
     referencia: "Técnica alfarera tradicional (urdido, desgrasante, engobe, cocción); rasgos dabajuroides atestiguados"
     dominios: [ecologia, ceramica]
-    agentes_relacionados: [Saruro-sha, Cahu-sha, Pira-sha]
+    agentes_relacionados: [Saruro-sha, Kahu-sha, Pira-sha]
     palabra_lexicon: null
     locacion: bohios
     implicacion_simulacion: >
@@ -479,7 +479,7 @@ entradas:
     fuente: atestiguado
     referencia: "Fuentes sobre agricultura caquetía y el sistema de riego buco (río Coro, Valle del Turbio)"
     dominios: [ecologia, hidrologia, agricultura]
-    agentes_relacionados: [Buco-ko, Corie-ko, Manaure]
+    agentes_relacionados: [Buko-ko, Korie-ko, Manaure]
     palabra_lexicon: buko
     locacion: buco
     implicacion_simulacion: >
@@ -498,7 +498,7 @@ entradas:
     fuente: atestiguado
     referencia: "Literatura sobre el conuco indígena (Wataniba, 'El conuco indígena: más que una parcela agrícola')"
     dominios: [ecologia, agricultura]
-    agentes_relacionados: [Corie-ko, Ita-ko, Wari-ko]
+    agentes_relacionados: [Korie-ko, Ita-ko, Wari-ko]
     palabra_lexicon: konuko
     locacion: conuco
     implicacion_simulacion: >
@@ -514,7 +514,7 @@ entradas:
     fuente: hipotetico
     referencia: "Inferencia desde la técnica de tala y quema + régimen de viento ENE constante"
     dominios: [ecologia, agricultura]
-    agentes_relacionados: [Corie-ko, Manaure]
+    agentes_relacionados: [Korie-ko, Manaure]
     palabra_lexicon: null
     locacion: conuco
 
@@ -527,7 +527,7 @@ entradas:
     fuente: atestiguado
     referencia: "Fuentes sobre construcción indígena de canoas en Venezuela/Caribe"
     dominios: [ecologia, navegacion, oficios]
-    agentes_relacionados: [Dara-ko, Tari-ko, Buco-ni]
+    agentes_relacionados: [Dara-ko, Tari-ko, Buko-ni]
     palabra_lexicon: kanua
     locacion: taller_canoas
 
@@ -577,7 +577,7 @@ entradas:
     fuente: atestiguado
     referencia: "Fauna del Parque Nacional Médanos de Coro"
     dominios: [ecologia, fauna, caza]
-    agentes_relacionados: [Suba-ko, Chiriguare]
+    agentes_relacionados: [Suba-ko, Chiriware]
     palabra_lexicon: koke
     locacion: matorral
     implicacion_simulacion: >
@@ -614,7 +614,7 @@ entradas:
     fuente: atestiguado
     referencia: "Fauna marina de Falcón (PN Morrocoy como análogo); Antczak & Antczak 2015; ictiofauna del Golfo de Venezuela"
     dominios: [ecologia, pesca, fauna]
-    agentes_relacionados: [Bagre-ko, Cunaro-bana, Guaranaro-sha, Dara-ko, Uro-ko]
+    agentes_relacionados: [Bagre-ko, Kunaro-bana, Waranaro-sha, Dara-ko, Uro-ko]
     palabra_lexicon: manatü
     locacion: orilla
     implicacion_simulacion: >
@@ -637,7 +637,7 @@ entradas:
     fuente: reconstruido
     referencia: "Regla de método reformulada tras auditoría de 2026-08-24 (issue #45); pendiente de caso verificado"
     dominios: [ecologia, fauna, metodo]
-    agentes_relacionados: [Chiriguare, Suba-ko]
+    agentes_relacionados: [Chiriware, Suba-ko]
     locacion: matorral
     implicacion_simulacion: >
       REGLA DE MÉTODO (sin caso demostrativo tras la corrección de 2026-08-24):
@@ -832,12 +832,12 @@ huecos_lexicos:
     hueco_lexico: true
     contenido: >
       EL CARDUMEN / BANCO DE PECES. Concepto central del oficio de Bagre-ko y
-      Cunaro-bana (leer dónde están los peces), y sin embargo mudo. El lexicón tiene
+      Kunaro-bana (leer dónde están los peces), y sin embargo mudo. El lexicón tiene
       arima (pez) pero no la agregación móvil de peces.
     fuente: reconstruido
     referencia: "Ictiofauna del Golfete; ausencia verificada en curiana_lexicon.py"
     dominios: [ecologia, pesca]
-    agentes_relacionados: [Bagre-ko, Cunaro-bana, Guaranaro-sha]
+    agentes_relacionados: [Bagre-ko, Kunaro-bana, Waranaro-sha]
     palabra_lexicon: null
     locacion: orilla
     implicacion_simulacion: >
@@ -864,13 +864,13 @@ huecos_lexicos:
     hueco_lexico: true
     contenido: >
       LOS PECES cunaro, guaranaro y bagre. Se usan como componentes de nombres de
-      agentes (Cunaro-bana, Bagre-ko) y en los prompts de Dara-ko, pero NO existen
+      agentes (Kunaro-bana, Bagre-ko) y en los prompts de Dara-ko, pero NO existen
       como entradas de especie en el lexicón. El pescador nombra su presa con una
       palabra que el idioma aún no ha fijado.
     fuente: atestiguado
     referencia: "curiana_agents.py (nombres); ausencia verificada en curiana_lexicon.py"
     dominios: [ecologia, pesca]
-    agentes_relacionados: [Cunaro-bana, Bagre-ko, Dara-ko]
+    agentes_relacionados: [Kunaro-bana, Bagre-ko, Dara-ko]
     palabra_lexicon: null
     locacion: orilla
 
@@ -898,7 +898,7 @@ huecos_lexicos:
     fuente: reconstruido
     referencia: "Hidrología efímera de Falcón; audit de curiana_lexicon.py (luwopu/laa como formas hermanas)"
     dominios: [ecologia, hidrologia]
-    agentes_relacionados: [Buco-ko, Corie-ko]
+    agentes_relacionados: [Buko-ko, Korie-ko]
     palabra_lexicon: null
     locacion: buco
 

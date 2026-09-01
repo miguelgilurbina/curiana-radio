@@ -71,7 +71,7 @@ de **14-15 mil personas en 30+ poblados**, no de sesenta.
 
 ## Salidas hacia otras preguntas
 
-- *Apopo* = cabeza de linaje → [[mapa-familia]] (Corie-ko, Chiriguare,
+- *Apopo* = cabeza de linaje → [[mapa-familia]] (Korie-ko, Chiriware,
   Paugis-sha son apopos, no diaos).
 - *Boratio* / díao como una sola dignidad → [[mapa-creencia]].
 - El *buco* como infraestructura regional → [[mapa-ecologia]].

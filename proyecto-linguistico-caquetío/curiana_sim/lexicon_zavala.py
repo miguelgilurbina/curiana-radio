@@ -116,7 +116,6 @@ GLOSARIO_ZAVALA: dict[str, dict] = {
     "chipare":       {"sig": "matapalo", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Matapalo [Zavala Reyes 2015 #82 (E)]", "notas": "Zavala Reyes 2015 #82 (E)"},
     "chirwa":        {"sig": "tinaja pequeña", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Tinaja pequeña [Zavala Reyes 2015 #83 (HB)]", "forma_fuente": "chirgua", "notas": "Zavala Reyes 2015 #83 (HB)"},
     "kokuy":         {"sig": "penca. Planta rizomoza que da un vino agradable", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Penca. Planta rizomoza que da un vino agradable [Zavala Reyes 2015 #87 (HB+CGB+A)]", "forma_fuente": "cocuy", "notas": "Zavala Reyes 2015 #87 (HB+CGB+A); era homógrafo del español en grafía fuente (cocuy) — la migración D5 disolvió la colisión"},
-    "kuiba":         {"sig": "piedra", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Piedra [Zavala Reyes 2015 #92 (PMA)]", "forma_fuente": "cuiva", "notas": "Zavala Reyes 2015 #92 (PMA); variantes: kiba"},
     "kurari":        {"sig": "árbol de roble, tecoma", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Árbol de roble, tecoma [Zavala Reyes 2015 #97 (E)]", "forma_fuente": "curari", "notas": "Zavala Reyes 2015 #97 (E)"},
     "dabuda":        {"sig": "barro loza", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Barro loza [Zavala Reyes 2015 #99 (HB+E)]", "notas": "Zavala Reyes 2015 #99 (HB+E)"},
     "dakawa":        {"sig": "árbol de corteza gris, madera compacta", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Árbol de corteza gris, madera compacta [Zavala Reyes 2015 #101 (A)]", "forma_fuente": "dacagua", "notas": "Zavala Reyes 2015 #101 (A)"},
@@ -153,7 +152,6 @@ GLOSARIO_ZAVALA: dict[str, dict] = {
     "kerekere":      {"sig": "ave pequeña", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Ave pequeña [Zavala Reyes 2015 #202 (AM)]", "forma_fuente": "querequere", "notas": "Zavala Reyes 2015 #202 (AM)"},
     "kikuidi":       {"sig": "serranía", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Serranía [Zavala Reyes 2015 #211 (HB)]", "forma_fuente": "quicuidi", "notas": "Zavala Reyes 2015 #211 (HB)"},
     "kiwa":          {"sig": "concha de almeja y otros moluscos. Sitio del estado Lara", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Concha de almeja y otros moluscos. Sitio del estado Lara [Zavala Reyes 2015 #214 (E+AM)]", "forma_fuente": "quigua", "notas": "Zavala Reyes 2015 #214 (E+AM)"},
-    "quiva":         {"sig": "piedra", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Piedra [Zavala Reyes 2015 #218 (E)]", "notas": "Zavala Reyes 2015 #218 (E); D5 PENDIENTE: su lema fonémico kiba colisiona — ver COLISIONES_D5"},
     "ruba":          {"sig": "especie de abeja silvestre negra de Coro", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Especie de abeja silvestre negra de Coro [Zavala Reyes 2015 #221 (A)]", "notas": "Zavala Reyes 2015 #221 (A)"},
     "samuro":        {"sig": "punta hacia el mar", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Punta hacia el mar [Zavala Reyes 2015 #223 (AM)]", "notas": "Zavala Reyes 2015 #223 (AM); homógrafo con español — resuelto por contexto en score_linguistico"},
     "sibidiwa":      {"sig": "arbusto euforbiaceo. Jatrofa Gossy Pifolia", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Arbusto euforbiaceo. Jatrofa Gossy Pifolia [Zavala Reyes 2015 #226 (E+A)]", "forma_fuente": "sibidigua", "notas": "Zavala Reyes 2015 #226 (E+A)"},
@@ -219,14 +217,12 @@ GLOSARIO_ZAVALA: dict[str, dict] = {
     "orumo":         {"sig": "urumu. Apamate. No confundir con el Myrciacucuo llata", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Urumu. Apamate. No confundir con el Myrciacucuo llata [Zavala Reyes 2015 #187 (A+PMA)]", "notas": "Zavala Reyes 2015 #187 (A+PMA)"},
     "patapati":      {"sig": "anegadizo", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Anegadizo [Zavala Reyes 2015 #198 (AM)]", "notas": "Zavala Reyes 2015 #198 (AM)"},
     "popoi":         {"sig": "ahí. Adverbio de lugar", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Ahí. Adverbio de lugar [Zavala Reyes 2015 #201 (AM)]", "notas": "Zavala Reyes 2015 #201 (AM)"},
-    "quiba":         {"sig": "ayuda", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Ayuda [Zavala Reyes 2015 #203 (AM)]", "notas": "Zavala Reyes 2015 #203 (AM); D5 PENDIENTE: su lema fonémico kiba colisiona — ver COLISIONES_D5"},
     "kibakibi":      {"sig": "baquiano, conocedor", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Baquiano, conocedor [Zavala Reyes 2015 #205 (AM)]", "forma_fuente": "quibaquibi", "notas": "Zavala Reyes 2015 #205 (AM)"},
     "kiboata":       {"sig": "engañar", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Engañar [Zavala Reyes 2015 #206 (AM)]", "forma_fuente": "quiboata", "notas": "Zavala Reyes 2015 #206 (AM)"},
     "kidiboata":     {"sig": "engañar, engañado", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Engañar, engañado [Zavala Reyes 2015 #213 (AM)]", "forma_fuente": "quidiboata", "notas": "Zavala Reyes 2015 #213 (AM)"},
     "kiwawa":        {"sig": "especie de haba grande y blanca", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Especie de haba grande y blanca [Zavala Reyes 2015 #215 (A)]", "forma_fuente": "quiguagua", "notas": "Zavala Reyes 2015 #215 (A)"},
     "kiricias":      {"sig": "sangre, sangrado", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Sangre, sangrado [Zavala Reyes 2015 #217 (AM)]", "forma_fuente": "quiricias", "notas": "Zavala Reyes 2015 #217 (AM)"},
     "raporon":       {"sig": "calabaza con cal", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Calabaza con cal [Zavala Reyes 2015 #220 (HB)]", "notas": "Zavala Reyes 2015 #220 (HB)"},
-    "sigua":         {"sig": "blando", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Blando [Zavala Reyes 2015 #227 (E)]", "notas": "Zavala Reyes 2015 #227 (E); homógrafo con español — resuelto por contexto en score_linguistico; D5 PENDIENTE: su lema fonémico siwa colisiona — ver COLISIONES_D5"},
     "sinwanguso":    {"sig": "insolente", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Insolente [Zavala Reyes 2015 #229 (PMA)]", "forma_fuente": "singuanguso", "notas": "Zavala Reyes 2015 #229 (PMA)"},
     "surupa":        {"sig": "blatta orientalis. Cucaracha", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Blatta orientalis. Cucaracha [Zavala Reyes 2015 #231 (A)]", "notas": "Zavala Reyes 2015 #231 (A)"},
     "tuba":          {"sig": "aglomeración, montón", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Aglomeración, montón [Zavala Reyes 2015 #253 (E)]", "notas": "Zavala Reyes 2015 #253 (E); homógrafo con español — resuelto por contexto en score_linguistico"},
@@ -254,7 +250,6 @@ HOMOGRAFOS_ZAVALA: frozenset = frozenset({
     "bagre",
     "dato",
     "samuro",
-    "sigua",
     "tuba",
 })
 
@@ -264,7 +259,6 @@ VEREDICTO_HOMOGRAFOS: dict[str, str] = {
     "bagre": "#21 (AM) 'pez'. Caquetía según la fuente; el 'bagre' español es a su vez indigenismo. Colisión real.",
     "dato": "#105 (HB) 'fruto del cardón'. Caquetía, pero 'dato' es altísima frecuencia en español: la marca es imprescindible.",
     "samuro": "#223 (AM) 'punta hacia el mar'. La forma coincide con 'zamuro' (zoónimo venezolano) y la glosa es geográfica: ATRIBUCIÓN DÉBIL.",
-    "sigua": "#227 (E) 'blando'. Caquetía; 'sigua' antillano es otra cosa.",
     "tuba": "#253 (E) 'aglomeración, montón'. Caquetía; colisiona con 'tuba'.",
 }
 
@@ -291,9 +285,6 @@ HOMOGRAFOS_DISUELTOS_D5: dict[str, str] = {
 COLISIONES_D5: list[dict] = [
     {"forma": "naure", "lema_fonemico": "naure", "num": 185, "motivo": "más de una entrada del glosario da el lema «naure»"},
     {"forma": "naure", "lema_fonemico": "naure", "num": 186, "motivo": "más de una entrada del glosario da el lema «naure»"},
-    {"forma": "quiva", "lema_fonemico": "kiba", "num": 218, "motivo": "más de una entrada del glosario da el lema «kiba»"},
-    {"forma": "quiba", "lema_fonemico": "kiba", "num": 203, "motivo": "más de una entrada del glosario da el lema «kiba»"},
-    {"forma": "sigua", "lema_fonemico": "siwa", "num": 227, "motivo": "su lema fonémico «siwa» ya es clave del lexicón literal"},
 ]
 
 
@@ -379,14 +370,14 @@ DESCARTADOS_ZAVALA: dict[str, str] = {
 
 TOTALES = {
     "afijos": 8,
-    "vocabulario_activo": 149,
-    "renombradas_d5": 80,
-    "homografos": 5,
+    "vocabulario_activo": 145,
+    "renombradas_d5": 79,
+    "homografos": 4,
     "homografos_disueltos_d5": 9,
-    "colisiones_d5": 5,
+    "colisiones_d5": 2,
     "toponimos": 45,
     "antroponimos": 14,
     "descartados": 4,
-    "ya_en_lexicon_antes_del_import": 68,
+    "ya_en_lexicon_antes_del_import": 72,
     "entradas_pdf": 288,
 }

@@ -1,0 +1,103 @@
+# ─────────────────────────────────────────────────────────────────────────
+# DECISIÓN — las colisiones de la Fase 2 de D5, y los nombres de agente
+#
+# Decidido por Miguel el 2026-08-31, sobre las 6 colisiones que la migración
+# dejó servidas y los nombres en grafía fuente. Sus palabras:
+#
+#   «las colisiones: me parece que podemos pensar que las grafías son de un
+#    lado las grafías en español y el otro el fonemismo caquetío que
+#    usaremos como tal»
+#   «me parece bien que cambiemos los nombres sin problema, ya que
+#    igualmente extenderemos la simulación a más nodos. Por lo que no
+#    usaremos lo desarrollado por estos personajes en estas primeras tandas
+#    de simulación»
+#
+# Lectura operativa: la grafía española es GRAFÍA (va a forma_fuente); el
+# lema fonémico es LA PALABRA y vive una sola vez en el lexicón. Cuando dos
+# palabras DISTINTAS colapsan en el mismo lema, son homónimos y se declaran
+# (el patrón de D9 con bana-1/bana-2). Atestación directa gana la etiqueta
+# (el precedente de `para`, re-etiquetada 2026-07-20).
+#
+# Aplicada por: curiana_sim/aplicar_colisiones_d5.py (idempotente, --dry-run)
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  decidido: '2026-08-31'
+  estado: aplicada
+  decide: Miguel
+  contexto: PR 114 (Fase 2 de D5 completa)
+
+fusiones_literal:
+  - par: cati / kati
+    lema: kati
+    fuente_resultante: caquetío-atestiguado
+    razon: >-
+      La misma palabra en dos capas: cati es la grafía de Zavala #71 (CGB)
+      «Luna», kati el lema del módulo proto-arahuaco cuya propia nota ya
+      citaba «CQ: cati». Atestación directa gana la etiqueta (precedente de
+      para). Es además la fila bandera del cómputo de D11: lokono kathi,
+      similitud 1.00.
+  - par: canoa / kanoa
+    lema: kanoa
+    fuente_resultante: caquetío-reconstruido
+    razon: >-
+      canoa era núcleo fundacional (reconstruido por cognado taíno); kanoa
+      el proto-arahuaco *kanoa. Se queda RECONSTRUIDA: el «CQ: canoa» de la
+      serie comparativa no es atestación independiente — canoa es préstamo
+      taíno del propio español (riesgo de circularidad).
+  - par: hamaca / hamaka
+    lema: hamaka
+    fuente_resultante: caquetío-reconstruido
+    razon: >-
+      Mismo caso que kanoa. OJO: amaka 'sitio de moler maíz' (Zavala #9,
+      forma_fuente amaca) es palabra DISTINTA, y h→∅ sigue disputada en D5:
+      no se fusionan.
+
+fusiones_generado:
+  - par: quiba (#203 'ayuda') + quiva (#218 'piedra')
+    lema: kiba
+    patron: homónimos declarados (D9)
+    razon: >-
+      La grafía b~v es betacismo colonial: mismo lema fonémico, dos
+      palabras. kiba-1 'piedra' lleva el sig activo (la capa toponímica lo
+      apoya: van Buurt §8 siba/quiba 'piedra, roca'; quibacoa, Todariquiba);
+      kiba-2 'ayuda' queda declarado en notas. Sale del generado y entra al
+      literal como entrada curada. HALLAZGO al aplicar: Zavala #92 «Cuiva.
+      Kiba» (PMA) 'Piedra' ya registraba la grafía k — el lema fonémico está
+      IMPRESO en la compilación de Arcaya; esa entrada queda absorbida como
+      variante y es el tercer apoyo del sentido piedra.
+  - par: sigua (#227 'blando') / siwa ('sal de comercio', proto/lokono)
+    lema: siwa
+    patron: homónimos declarados (D9)
+    razon: >-
+      siwa-1 'blando' es caquetío-ATESTIGUADO (Zavala #227) y gana la
+      etiqueta (precedente de para); siwa-2 'sal de comercio' (< *siwa,
+      capa lokono) queda declarado en notas. De paso el homógrafo español
+      de sigua se disuelve: siwa no choca con nada.
+
+no_decidido_aun:
+  - par: naure #185 'jojoto' / naure #186 'planta bejucosa'
+    razon: >-
+      No es colisión de grafías sino dos entradas del glosario con el mismo
+      lema y glosas distintas. Sigue visible en COLISIONES_D5 del generado.
+
+nombres_de_agente:
+  decision: >-
+    Renombrar a grafía fonémica los 10 de 60 que la llevaban colonial.
+    Miguel: las primeras tandas de simulación no se reutilizan y la
+    simulación se extenderá a más nodos.
+  renombres:
+    - {de: Buco, a: Buko}
+    - {de: Buco-ko, a: Buko-ko}
+    - {de: Buco-ni, a: Buko-ni}
+    - {de: Cahu-sha, a: Kahu-sha}
+    - {de: Chiriguare, a: Chiriware}
+    - {de: Corie-ko, a: Korie-ko}
+    - {de: Cunaro-bana, a: Kunaro-bana}
+    - {de: Guama-ko, a: Wama-ko}
+    - {de: Guaranaro-sha, a: Waranaro-sha}
+    - {de: Sha-corie, a: Sha-korie}
+  fuera_del_alcance: >-
+    Los IDs de locación de curiana_state ("buco", "conuco"...) NO se
+    renombraron: son etiquetas de registro mezcladas con español
+    ("taller_canoas", "salinar"), no léxico que puntúe. Si se quiere
+    grafía fonémica ahí también, es una decisión aparte.

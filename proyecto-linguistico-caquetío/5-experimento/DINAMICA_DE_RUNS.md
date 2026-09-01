@@ -83,7 +83,7 @@ fuentes describen a los caquetíos en vocabulario ajeno, y el proyecto lleva
 meses corrigiéndolo. El cronista aplica esa corrección a los datos **propios**.
 
 Y hay una razón práctica: el observador puede decirte que la distancia de koiné
-bajó 0.07, pero no que **Corie-ko acuñó treinta y siete palabras y nadie adoptó
+bajó 0.07, pero no que **Korie-ko acuñó treinta y siete palabras y nadie adoptó
 ninguna**. Eso es un arco, y hace falta leerlo.
 
 ### 4. Mostrar — la evidencia debajo, no delante

@@ -95,7 +95,7 @@ Tres consecuencias estructuran la vida de la Curiana:
 
 1. **El agua dulce es el recurso limitante, no el alimento.** En un litoral con pesca, sal y
    conucos, lo que escasea es agua bebible. De ahí el peso desmesurado que el canon y la
-   simulación dan al **buco** y a los oficios de Corie-ko y Buco-ko: no es folclore hidráulico,
+   simulación dan al **buco** y a los oficios de Korie-ko y Buko-ko: no es folclore hidráulico,
    es supervivencia — y además es un hecho histórico documentado (§5). **[reconstruido]**
 2. **La estacionalidad es eólica y pluvial, no térmica.** «Seca» y «lluvias» se distinguen por
    el viento y el agua del cielo, no por la temperatura (que apenas se mueve). El calendario
@@ -177,7 +177,7 @@ Tres consecuencias para la simulación:
 
 1. **El conuco es conocimiento, no rutina.** Saber qué se siembra junto a qué, cuándo quemar y
    qué dejar en pie es un saber técnico transmitido — material para las escenas de enseñanza
-   (Corie-ko a los jóvenes) que hoy son genéricas.
+   (Korie-ko a los jóvenes) que hoy son genéricas.
 2. **Es familiar, no estatal.** Da seguridad alimentaria a *un grupo familiar*: encaja con el
    evento `disputa_vecinos` («dos familias en conflicto por límites del conuco») y con la
    matrilinealidad del canon (§6) — ¿de quién es el conuco, de la línea materna?
@@ -382,7 +382,7 @@ Sus rasgos —vasijas polícromas pintadas sobre **engobe blanco**, vasijas efig
 trípodes/multípodes con base anular calada, **bases redondas impresas con tejido de algodón** que
 dejó su huella al desintegrarse la fibra, y urnas funerarias globulares y cilíndricas con tapa
 cónica que modela figuras humanas— implican una cadena técnica concreta para las alfareras del
-elenco (Saruro-sha, Cahu-sha, Pira-sha). En su forma general esa cadena es: arcilla amasada y
+elenco (Saruro-sha, Kahu-sha, Pira-sha). En su forma general esa cadena es: arcilla amasada y
 **desgrasada con arena de barranco libre de sales** (evita grietas al secar y cocer);
 construcción por **urdido** (culebrillas superpuestas — justo como el canon ya lo narra); acabado
 con **engobe** blanco; y **cocción a fuego abierto**. En un entorno salino, *la calidad de la
@@ -475,7 +475,7 @@ mapa completo, entrada por entrada, está en `3-mundo/corpus/ecologia_lexicon_ma
 **Idea.** Hoy `curiana_state.py` dispara eventos ambientales de un catálogo fijo
 (`EVENTOS_COTIDIANOS`, `EVENTOS_ESTACIONALES`). La propuesta —**solo conceptual, no
 implementar**— es modelar el medio como un pequeño elenco de **agentes ecológicos**: el
-**Golfete**, el **Alisio**, el **Manglar**, el **Salinar**, el **Buco**. No son personajes que
+**Golfete**, el **Alisio**, el **Manglar**, el **Salinar**, el **Buko**. No son personajes que
 hablan: son procesos con estado que evoluciona. Su regla de oro es que **su «voz» nunca llega
 como dato crudo al agente humano**, sino solo por **canales culturalmente verosímiles**.
 

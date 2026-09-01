@@ -8,9 +8,6 @@ excluidas_por_decision:
   - {forma: coro, razon: "D5b: par coro/koro decidido «no tocar» (colisión con koro 'cotorra')"}
   - {forma: curiana, razon: "topónimo y nombre de la polity: queda del lado fuente (D5a) hasta la migración de toponimos.yaml"}
 colisiones_no_renombradas:  # cada una es una decisión pendiente
-  - {forma: canoa, chocaria_con: kanoa}
-  - {forma: cati, chocaria_con: kati}
-  - {forma: hamaca, chocaria_con: hamaka}
 renombres_en_generado:  # ejecutados por minar_zavala_glosario.py; forma_fuente en cada entrada
   - {de: aca, a: aka}
   - {de: aco, a: ako}
@@ -41,7 +38,6 @@ renombres_en_generado:  # ejecutados por minar_zavala_glosario.py; forma_fuente 
   - {de: chirgua, a: chirwa}
   - {de: cocuy, a: kokuy}
   - {de: comoho, a: komoho}
-  - {de: cuiva, a: kuiba}
   - {de: cuna, a: kuna}
   - {de: cunaro, a: kunaro}
   - {de: curari, a: kurari}
@@ -93,6 +89,3 @@ renombres_en_generado:  # ejecutados por minar_zavala_glosario.py; forma_fuente 
   - {de: turumaco, a: turumako}
   - {de: yacure, a: yakure}
 en_lexicon_zavala_pendientes:  # colisiones del generado — cada una es una decisión
-  - {forma: quiba, lema_fonemico: kiba}
-  - {forma: quiva, lema_fonemico: kiba}
-  - {forma: sigua, lema_fonemico: siwa}

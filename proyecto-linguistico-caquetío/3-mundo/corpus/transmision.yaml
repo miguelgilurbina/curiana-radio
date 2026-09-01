@@ -84,15 +84,15 @@
 
 - id: transmision-005
   contenido: >
-    Chiriguare, jefe guerrero, forma disciplina militar en Taku-ko (su
+    Chiriware, jefe guerrero, forma disciplina militar en Taku-ko (su
     discípulo más fiel, que modela su carácter sobre el de su maestro) y
     en su sobrino Chiri-ko, heredero natural por línea matrilineal (el
     linaje de jefe guerrero pasa por la hermana). Dos transmisiones
     paralelas: una de mérito (Taku-ko), una de linaje (Chiri-ko).
   fuente: canon-simulacion
-  referencia: "curiana_agents.py (Chiriguare, Taku-ko, Chiri-ko); CULTURA_CAQUETIA.md §6 (matrilinealidad)"
+  referencia: "curiana_agents.py (Chiriware, Taku-ko, Chiri-ko); CULTURA_CAQUETIA.md §6 (matrilinealidad)"
   dominios: [transmision, oficio_guerra, matrilinealidad]
-  agentes_relacionados: [Chiriguare, Taku-ko, Chiri-ko]
+  agentes_relacionados: [Chiriware, Taku-ko, Chiri-ko]
   forma_transmision: aprendizaje_oficio
   restringido: false
   implicacion_simulacion: >
@@ -123,11 +123,11 @@
     Wama-sha, cuidadora de niños, transmite a través de canciones
     repetidas sin cansarse los nombres de los animales, los ancestros y
     las reglas del mundo a todos los niños de la comunidad (Nubi, Tawi,
-    Piru, Sha, Buco, Daru, Kawa, Piri, Kori — todo el Tier III).
+    Piru, Sha, Buko, Daru, Kawa, Piri, Kori — todo el Tier III).
   fuente: canon-simulacion
   referencia: "curiana_agents.py (Wama-sha); comparanda wayuu: jayeechi (ALAI 2013)"
   dominios: [transmision, crianza, cancion]
-  agentes_relacionados: [Wama-sha, Nubi, Tawi, Piru, Sha, Buco, Daru, Kawa, Piri, Kori]
+  agentes_relacionados: [Wama-sha, Nubi, Tawi, Piru, Sha, Buko, Daru, Kawa, Piri, Kori]
   forma_transmision: cancion
   restringido: false
   implicacion_simulacion: >
@@ -138,16 +138,16 @@
 
 - id: transmision-008
   contenido: >
-    Sha-corie, matriarca, es -junto a Paugis-sha- la última palabra en
+    Sha-korie, matriarca, es -junto a Paugis-sha- la última palabra en
     tradición femenina: reglas de menstruación, matrimonio, luto y
     herencia por línea materna. Desea que sus nietas hereden no solo los
     oficios sino el lugar de autoridad femenino; teme una generación que
     confunda obedecer al cacique con olvidar que la sangre se cuenta por
     las madres.
   fuente: canon-simulacion
-  referencia: "curiana_agents.py (Sha-corie); CULTURA_CAQUETIA.md §6"
+  referencia: "curiana_agents.py (Sha-korie); CULTURA_CAQUETIA.md §6"
   dominios: [transmision, matrilinealidad, derecho_consuetudinario]
-  agentes_relacionados: [Sha-corie, Paugis-sha]
+  agentes_relacionados: [Sha-korie, Paugis-sha]
   forma_transmision: consejo
   restringido: true
   implicacion_simulacion: >
@@ -157,14 +157,14 @@
 
 - id: transmision-009
   contenido: >
-    Ita-ko, segundo en saber agrícola tras Corie-ko, forma jóvenes con
+    Ita-ko, segundo en saber agrícola tras Korie-ko, forma jóvenes con
     "paciencia de piedra", convencido de que la tierra no perdona la
-    prisa. Su temor es sobrevivir a Corie-ko y quedar como el último que
+    prisa. Su temor es sobrevivir a Korie-ko y quedar como el último que
     recuerda cómo era la Curiana antes de las sequías que ambos vivieron.
   fuente: canon-simulacion
-  referencia: "curiana_agents.py (Ita-ko, Corie-ko)"
+  referencia: "curiana_agents.py (Ita-ko, Korie-ko)"
   dominios: [transmision, oficio_agricultura]
-  agentes_relacionados: [Ita-ko, Corie-ko]
+  agentes_relacionados: [Ita-ko, Korie-ko]
   forma_transmision: aprendizaje_oficio
   restringido: false
   implicacion_simulacion: >
@@ -193,14 +193,14 @@
 
 - id: transmision-011
   contenido: >
-    Corie-ko y Buco-ko mantienen el buco (represa/acequia); el hijo de
-    Buco-ko, Buco (9 años), "ya sabe cuándo regar sin que se lo digan,
+    Korie-ko y Buko-ko mantienen el buco (represa/acequia); el hijo de
+    Buko-ko, Buko (9 años), "ya sabe cuándo regar sin que se lo digan,
     leyendo la tierra como su padre" — sucesión ya en marcha, visible
     incluso en un niño de Tier III.
   fuente: canon-simulacion
-  referencia: "curiana_agents.py (Corie-ko, Buco-ko, Buco)"
+  referencia: "curiana_agents.py (Korie-ko, Buko-ko, Buko)"
   dominios: [transmision, oficio_agricultura, ingenieria_hidraulica]
-  agentes_relacionados: [Corie-ko, Buco-ko, Buco]
+  agentes_relacionados: [Korie-ko, Buko-ko, Buko]
   forma_transmision: aprendizaje_oficio
   restringido: false
   implicacion_simulacion: >
@@ -349,7 +349,7 @@
   referencia: "Jahn (1927), Los aborígenes del occidente de Venezuela, pp. 205-207"
   procedencia: {obra: jahn-1927}
   dominios: [transmision, derecho_consuetudinario, matrilinealidad]
-  agentes_relacionados: [Sha-corie, Paugis-sha, Nubiri-sha]
+  agentes_relacionados: [Sha-korie, Paugis-sha, Nubiri-sha]
   forma_transmision: consejo
   restringido: false
   implicacion_simulacion: >
@@ -374,7 +374,7 @@
   referencia: "Jahn (1927), Los aborígenes del occidente de Venezuela, pp. 208-211"
   procedencia: {obra: jahn-1927}
   dominios: [transmision, genero, iniciacion, comparanda_wayuu]
-  agentes_relacionados: [Buio-sha, Sha, Sha-corie, Paugis-sha]
+  agentes_relacionados: [Buio-sha, Sha, Sha-korie, Paugis-sha]
   forma_transmision: iniciacion
   restringido: true
   implicacion_simulacion: >
@@ -459,7 +459,7 @@
   fuente: canon-simulacion
   referencia: "curiana_state.py::EVENTOS_COTIDIANOS (ofrenda_ancestros_anochecer); CANON_TIERRA.md"
   dominios: [transmision, historia_oral, diseño_simulacion]
-  agentes_relacionados: [Bana-mana, Sha, Nubi, Piru, Buco, Tawi]
+  agentes_relacionados: [Bana-mana, Sha, Nubi, Piru, Buko, Tawi]
   forma_transmision: genealogia_recitada
   restringido: false
   implicacion_simulacion: >
@@ -490,7 +490,7 @@
   referencia: "Amodio y Pérez (2006), Las pautas de crianza del pueblo wayuu, UNICEF, p. 40 (cita a González 1973)"
   procedencia: {obra: amodio-perez-2006}
   dominios: [transmision, curriculo_edad, genero, comparanda_wayuu]
-  agentes_relacionados: [Nubi, Buco, Daru, Dare-nu, Piri]
+  agentes_relacionados: [Nubi, Buko, Daru, Dare-nu, Piri]
   forma_transmision: aprendizaje_oficio
   restringido: false
   implicacion_simulacion: >
@@ -532,12 +532,12 @@
   referencia: "Amodio y Pérez (2006), pp. 40-41"
   procedencia: {obra: amodio-perez-2006}
   dominios: [transmision, matrilinealidad, curriculo_edad, comparanda_wayuu]
-  agentes_relacionados: [Chiriguare, Chiri-ko, Nabaraka, Raka-bi]
+  agentes_relacionados: [Chiriware, Chiri-ko, Nabaraka, Raka-bi]
   forma_transmision: aprendizaje_oficio
   restringido: false
   implicacion_simulacion: >
     Valida con fuente directa dos díadas ya existentes en el elenco que son
-    exactamente avunculares: Chiriguare→Chiri-ko (sobrino) y
+    exactamente avunculares: Chiriware→Chiri-ko (sobrino) y
     Nabaraka→Raka-bi (sobrino aprendiz de comerciante). El canon acertó
     sin tener aún esta cita; ahora la tiene.
 
@@ -556,7 +556,7 @@
   referencia: "Amodio y Pérez (2006), pp. 44-45, 49-51; converge con Jahn (1927), pp. 208-211"
   procedencia: {obra: amodio-perez-2006}
   dominios: [transmision, genero, iniciacion, comparanda_wayuu]
-  agentes_relacionados: [Sha, Tawi, Kori, Sha-corie, Paugis-sha]
+  agentes_relacionados: [Sha, Tawi, Kori, Sha-korie, Paugis-sha]
   forma_transmision: iniciacion
   restringido: true
   implicacion_simulacion: >
@@ -580,7 +580,7 @@
   referencia: "Amodio y Pérez (2006), pp. 40, 42-43, 45"
   procedencia: {obra: amodio-perez-2006}
   dominios: [transmision, ritual, genealogia, comparanda_wayuu]
-  agentes_relacionados: [Bana-mana, Sha-corie, Wama-sha, Sha, Nubi, Tawi, Buco, Piru]
+  agentes_relacionados: [Bana-mana, Sha-korie, Wama-sha, Sha, Nubi, Tawi, Buko, Piru]
   forma_transmision: genealogia_recitada
   restringido: false
   implicacion_simulacion: >
@@ -664,7 +664,7 @@
   referencia: "Mincultura Colombia, cuadernillo Pütchipü'üi (Guerra Curvelo 2002)"
   procedencia: {obra: guerra-curvelo-palabrero}
   dominios: [transmision, derecho_consuetudinario, cosmologia, comparanda_wayuu]
-  agentes_relacionados: [Nubiri-sha, Sha-corie]
+  agentes_relacionados: [Nubiri-sha, Sha-korie]
   forma_transmision: consejo
   restringido: false
   implicacion_simulacion: >

@@ -94,7 +94,7 @@
   fuente: atestiguado
   referencia: "Oviedo y Valdés t. II p.329; Arcaya 1920:118"
   dominios: [creencia, calendario]
-  agentes_relacionados: [Chiriguare, Manaure, Shaboro]
+  agentes_relacionados: [Chiriware, Manaure, Shaboro]
   implicacion_simulacion: >
     El ayuno colectivo es un marcador ritual disponible antes de empresas graves
     (guerra, expedición, gran ceremonia).
@@ -215,7 +215,7 @@
   fuente: atestiguado
   referencia: "Oviedo y Valdés t. II p.299-300; Arcaya 1920:116"
   dominios: [creencia, muerte]
-  agentes_relacionados: [Bana-mana, Sha-corie]
+  agentes_relacionados: [Bana-mana, Sha-korie]
   implicacion_simulacion: >
     El canto fúnebre que recita las hazañas del muerto es el oficio de Bana-mana.
     El caquetío es, atestiguadamente, endocanibalismo de los huesos, no entierro.
@@ -263,7 +263,7 @@
   fuente: reconstruido
   referencia: "Perrin 1992; Paz Reverol 2018 (segundo velorio wayuu); corrobora el rito atestiguado por Oviedo/Arcaya"
   dominios: [creencia, muerte]
-  agentes_relacionados: [Bana-mana, Paugis-sha, Sha-corie]
+  agentes_relacionados: [Bana-mana, Paugis-sha, Sha-korie]
   implicacion_simulacion: >
     Aporta la teoría del alma (individual -> colectiva) que Oviedo no explica.
 
@@ -277,9 +277,9 @@
   referencia: "Paz Reverol 2018 (exhumadora wayuu ligada a Pulowi; tabúes)"
   procedencia: {obra: paz-reverol-2017-2018}
   dominios: [creencia, muerte]
-  agentes_relacionados: [Paugis-sha, Sha-corie, Bana-mana]
+  agentes_relacionados: [Paugis-sha, Sha-korie, Bana-mana]
   implicacion_simulacion: >
-    Da a las ancianas (Paugis-sha, Sha-corie) un dominio ritual propio y temido.
+    Da a las ancianas (Paugis-sha, Sha-korie) un dominio ritual propio y temido.
 
 - id: creencia-012
   contenido: >
@@ -291,7 +291,7 @@
   referencia: "Paz Reverol 2018 citando Civrieux 1980 (cumanagotos); analogía regional"
   procedencia: {obra: paz-reverol-2017-2018}
   dominios: [creencia, muerte, calendario]
-  agentes_relacionados: [Corie-ko, Bana-mana, Shaboro]
+  agentes_relacionados: [Korie-ko, Bana-mana, Shaboro]
   implicacion_simulacion: >
     Conecta muerte -> lluvia -> siembra con el ciclo seca/lluvias del canon (§2).
 
