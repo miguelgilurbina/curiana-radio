@@ -55,7 +55,7 @@ cura y se publica en Curiana Radio (`/kaketiana`).
 | **`pypdf` ≠ `pdftotext`** | Producen texto distinto del mismo PDF. Arcaya sale **vacío** con pypdf; `pdftotext` da 467 KB. Y pypdf parte `Todariquiba` en `T odariquiba` |
 | **Tablas a dos columnas** | Se desalinean sin `-layout`. Extraer las dos veces y comparar |
 | **`lexicon` en PostgREST** | `max_rows`=1000 y hay ~1400 palabras: toda query sin `.range()` se trunca **en silencio**. Ver `loadLexicon()` |
-| **`lexicon_zavala.py` es generado Y se importa** | Regenerarlo **cambia `score_linguistico()`**. ⚠️ Los otros `lexicon_*.py` NO los importa el motor, pero **sí el tooling** (`generar_tablero`, `auditar_82`, `migrar_toponimos` — medido 2026-08-15): no se pueden mover de `curiana_sim/` sin romperlo |
+| **`lexicon_zavala.py` y `lexicon_a2.py` son generados Y se importan** | Regenerarlos **cambia `score_linguistico()`** (zavala: habla; a2: columnas de comparación paraujano/lokono, D11). ⚠️ Los otros `lexicon_*.py` NO los importa el motor, pero **sí el tooling** (`generar_tablero`, `auditar_82`, `migrar_toponimos` — medido 2026-08-15): no se pueden mover de `curiana_sim/` sin romperlo |
 | **La consola de Windows es cp1252** | Todo script que imprima `─`, `✓` o acentos necesita `_forzar_utf8()` bajo `__main__` |
 | **`pct_caquetio` está saturada** | 91% de las respuestas en 1.0. **No la uses para comparar agentes** — usa `score`. Issue #69 |
 | **La longitud del prompt predice el score** | r = −0.48. Cualquier análisis por agente tiene que controlarla, o estarás midiendo cuánto escribiste tú. Ver `ANALISIS_BASE_2026-08-06.md` |

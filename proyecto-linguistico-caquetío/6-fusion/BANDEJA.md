@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-08-31**.
 
-**1707 ítems propuestos** en 27 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
+**1707 ítems propuestos** en 27 propuestas, más **4 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -65,6 +65,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 
 | Archivo | Qué es |
 |---|---|
+| `comentario-39-primer-incremento.md` | Borrador — comentario para #39 (D11): el primer incremento del rebalanceo |
 | `issue-esquema-lecturas-toponimos.md` | El registro de topónimos necesita una tercera voz: la de la tradición |
 | `issue-pdfs-fuentes-aporte.md` | Servir los PDF del vault desde `/kaketiana/fuentes`, tras un aporte voluntario |
 | `issue-repertorio-vs-filiacion.md` | El lexicón responde "¿de qué lengua es esta palabra?" y lo usamos como si respondiera "¿la |

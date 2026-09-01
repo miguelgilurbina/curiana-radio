@@ -181,7 +181,13 @@ ana:
 # DECISIÓN 6 — D11 (#39): RUMBO FIJADO (la decisión formal queda abierta)
 # ══════════════════════════════════════════════════════════════════
 d11_rumbo:
-  estado: RUMBO FIJADO (2026-08-31) — el issue #39 sigue abierto hasta implementar
+  estado: >-
+    RUMBO FIJADO (2026-08-31) — PRIMER INCREMENTO IMPLEMENTADO el mismo día:
+    minar_a2_swadesh.py → lexicon_a2.py (46 paraujano + 48 lokono desde la
+    Tabla A-2), categoría `paraujano` canónica, columna añú en el filtro
+    fonotáctico (73.9%, entre lokono 82.9% y wayuu 65.4%). El issue #39
+    sigue abierto: falta la escala diccionario (Pet/Bennett/de Goeje — no
+    están en el repo; candidato interno: Perea Alonso 1942) y la A-1 entera.
   directiva_de_miguel: >-
     "Sí o sí tenemos que rebalancear importando más lokono." Fijado tras ver
     el cómputo (computo_d11_2026-08-31.yaml): las tres señales convergen en
