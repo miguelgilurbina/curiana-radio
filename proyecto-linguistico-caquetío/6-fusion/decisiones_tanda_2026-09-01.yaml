@@ -10,7 +10,7 @@
 meta:
   fecha: '2026-09-01'
   decidido_por: Miguel
-  estado: en-curso — D3 y rumbo era 2 decididos; D1 pendiente
+  estado: CERRADA — D3, D1 y rumbo era 2 decididos; aplicar vía aplicador de tanda
 
 # ══════════════════════════════════════════════════════════════════
 # DECISIÓN 1 — D3 (#34): normalizar_por_dialecto()  ✅ APROBADA (opción A)
@@ -110,13 +110,68 @@ rumbo_era2:
     improvisada con N.
 
 # ══════════════════════════════════════════════════════════════════
-# DECISIÓN 3 — D1 (#32): el veto de la genealogía  ⏳ PENDIENTE
+# DECISIÓN 3 — D1 (#32): el veto de la genealogía  ✅ APROBADA (opción B)
 # ══════════════════════════════════════════════════════════════════
 d1:
-  estado: PENDIENTE — dossier servido (comentario-32-dossier-d1.md)
-  ejes: [linajes, sucesor, personas_de_fondo, etiqueta_epistemica]
-  recomendacion_del_dossier: >-
-    Opción B — aprobar la estructura (6 linajes + ~14 fondo, todo
-    canon-simulacion) y degradar a Waimo-ko de "sucesor natural" a
-    "candidato elegible (puerta 1 de 3; pluralidad pendiente por
-    parentesco-039)".
+  estado: APROBADA (2026-09-01) — opción B, con las tres puertas como regla dura
+  cierra: condición 6 del gate (junto con D3)
+  veredicto_de_miguel: >-
+    «Sí o sí, efectivamente, el que era el heredero ahora es básicamente
+    candidato. Y sí o sí me gustaría que siguiéramos eso de las tres
+    puertas: la sangre matrilineal, el reconocimiento político de los otros
+    diaos, y la legitimación espiritual del boratio.»
+  decision:
+    linajes: los 6 entran como canon-simulacion (Kaira y Warana con tótem/nombre aún abiertos a Miguel)
+    sucesor: >-
+      Waimo-ko DEGRADADO de "sucesor natural" a "candidato elegible
+      (puerta 1 de 3; pluralidad de candidatos pendiente por
+      parentesco-039)". Las TRES PUERTAS de parentesco-038 pasan de
+      hipótesis de diseño a REGLA del modelo de sucesión.
+    personas_de_fondo: las ~14 entran como canon-simulacion
+    etiqueta: todo canon-simulacion — nunca atestiguado; la genealogía es diseño nuestro sobre patrón atestiguado
+  contexto_de_miguel: >-
+    La simulación se re-arma para la era acotada (ver rumbo_era2): el
+    elenco de 60 se reestructura hacia el foco nuevo, así que aprobar la
+    estructura no protege historia vieja — habilita el casting del nodo.
+  implicacion: >-
+    parentesco-038 sube de fuente:hipotetico a regla de diseño DECIDIDA
+    (la etiqueta epistémica del hecho no cambia — lo decidido es que el
+    MODELO la sigue). El aplicador cambia la línea de Waimo-ko en
+    genealogia.yaml y marca la propuesta como aprobada en su encabezado.
+
+# ══════════════════════════════════════════════════════════════════
+# REFINAMIENTO del rumbo era 2 — la sesión de diseño del 2026-09-01
+# ══════════════════════════════════════════════════════════════════
+rumbo_era2_refinado:
+  fecha: '2026-09-01'
+  directivas_de_miguel:
+    - >-
+      UNA sola simulación, no varias: "no me gustaría hacer más de una" —
+      compensar con MÁS DÍAS/turnos que los runs cortos habituales, y
+      calcular cuántos turnos dan data que valga la pena.
+    - >-
+      Antes de correr: "un buen pensamiento sobre exactamente cómo va a
+      ser la estructura social" — el diseño social precede al run
+      (alimenta DISENO_ERA2.md, paso 2 de la ruta).
+    - >-
+      El foco inicial NO es necesariamente Todariquiba: que ahí se fundara
+      Coro no implica que Manaure residiera ahí, y la cabecera religiosa
+      estaba en Paraguaná. Candidato de Miguel: empezar por UN clan de
+      Paraguaná, luego "meter el espejo" (el segundo clan) — y Paraguaná
+      queda montada como dos clanes/parcialidades no emparentados.
+    - >-
+      Boceto de nodos de la polity costera (a validar contra fuentes):
+      sección PARAGUANÁ (la península con sus nodos internos + Aruba,
+      Curazao y Bonaire) y sección COSTERA CONTINENTAL (Cumarebo,
+      Zazárida, Capatárida, Todariquiba). Juntas = el polity costero de
+      Oliver.
+  verificacion_hecha: >-
+    CONFIRMADO (minar-fuente 2026-09-01, verificado a ojo contra la
+    imagen): Oliver 1989 pp. 275-276, citando a González Batista 1984 y
+    Delmonte 1883 — Paraguaná dividida en dos territorios de dos
+    sub-grupos caquetíos: AMUAYES (sur; Cayerda→Moruy) y GUARANAOS
+    (norte; Santa Ana), cada uno con playas de pesca propias y jefe
+    supra-aldea, ambos bajo el polity de Manaure. Los dos clanes del
+    diseño de Miguel tienen nombre y geografía atestiguados. Propuesta
+    completa: 6-fusion/paraguana_dos_clanes.yaml (incluye el conflicto
+    declarado Amuay caquetío-vs-caribe con Esteves, para B.6).

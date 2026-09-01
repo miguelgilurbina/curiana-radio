@@ -8,6 +8,12 @@
 # eso es trabajo de una sesión futura o de Miguel directamente, no algo que deba forzarse aquí.
 #
 # curiana_agents.py NO se modifica. Esto es una propuesta en datos, para revisar y vetar.
+#
+# ✅ D1 DECIDIDA (2026-09-01, opción B — 6-fusion/decisiones_tanda_2026-09-01.yaml):
+# los 6 linajes y las personas de fondo son CANON-SIMULACIÓN; Waimo-ko queda como
+# CANDIDATO ELEGIBLE (puerta 1 de 3, parentesco-038 como regla del modelo), NO
+# "sucesor natural"; la pluralidad de candidatos (parentesco-039) es expansión
+# aprobada, sin ejecutar. Tótem y nombre de Kaira y Warana siguen abiertos a Miguel.
 
 # Los linajes son las UNIDADES DE EXPANSIÓN del elenco (dirección de Miguel, 2026-07-16; ver
 # parentesco-025 y ensayo §5.1): cuando la simulación crezca más allá de 60 agentes, se puebla un
@@ -59,7 +65,7 @@ linajes:
     fundadora: "Kaira-sha (propuesta, fondo:true, fallecida antes del presente narrativo)"
     capacidad_de_expansion: >
       Hoy: solo Manaure como agente; Itana-sha y Waimo-ko son fondo. Es deliberadamente el linaje con
-      más recorrido de expansión: promover a Waimo-ko (el sucesor) e Itana-sha a agentes es el primer
+      más recorrido de expansión: promover a Waimo-ko (el candidato) e Itana-sha a agentes es el primer
       paso natural, y el linaje del Señor merece densidad (más hermanas, más sobrinos rivales entre
       sí por la sucesión). Expansión natural: 4-6 agentes.
   Warana:
@@ -89,8 +95,8 @@ agentes:
       - "Esposo de Nubiri-sha (system_prompt: 'tu esposa Nubiri-sha')"
       - "Heredó de su padre el control de las rutas de biro (descripcion) — dato patrilineal ya en el canon, en tensión deliberada con esta propuesta (ver ensayo §1)"
     relaciones_propuestas:
-      - "Hermana no nombrada, Itana-sha (fondo), madre del sucesor propuesto"
-      - "Sobrino uterino y sucesor natural: Waimo-ko (propuesto, ver abajo — NO es agente todavía en curiana_agents.py). NOTA (sesión 5): heredar la elegibilidad matrilineal no garantiza el reconocimiento como diao paramount ni la legitimación espiritual (boratio) — ver parentesco-038. Un solo candidato es además una simplificación: ver parentesco-039 sobre pluralidad de sobrinos como patrón más realista, todavía no ejecutada en este archivo."
+      - "Hermana no nombrada, Itana-sha (fondo), madre del candidato propuesto"
+      - "Sobrino uterino y CANDIDATO ELEGIBLE, puerta 1 de 3 (D1, 2026-09-01): Waimo-ko (propuesto, ver abajo — NO es agente todavía en curiana_agents.py). NOTA (sesión 5): heredar la elegibilidad matrilineal no garantiza el reconocimiento como diao paramount ni la legitimación espiritual (boratio) — ver parentesco-038. Un solo candidato es además una simplificación: ver parentesco-039 sobre pluralidad de sobrinos como patrón más realista, todavía no ejecutada en este archivo — expansión APROBADA por D1, sin ejecutar."
 
   Shaboro:
     madre: "no propuesta"
@@ -591,8 +597,8 @@ personas_de_fondo:
     fondo: true
     edad_propuesta: 21
     descripcion: >
-      Sobrino uterino de Manaure (hijo de su hermana Itana-sha), propuesto como su sucesor natural en
-      línea matrilineal — no existe como agente hoy. Se propone explícitamente como candidato a
+      Sobrino uterino de Manaure (hijo de su hermana Itana-sha), CANDIDATO ELEGIBLE por
+      línea matrilineal (D1 2026-09-01: candidato, no sucesor) — no existe como agente hoy. Se propone explícitamente como candidato a
       añadirse al elenco (tier 1 o 2) en una decisión futura de Miguel, no como personaje ya activo.
       Por el patrón avunculocal taíno (parentesco-026), su ubicacion_default natural sería
       casa_cacique o adyacente: el heredero crece a la vista del tío, conviviendo con los hijos de

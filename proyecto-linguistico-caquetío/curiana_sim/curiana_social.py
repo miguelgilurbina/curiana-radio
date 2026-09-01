@@ -31,16 +31,18 @@ Integración (en curiana_orchestrator_v2.py):
     for neo in registro.neologismos_extraidos:
         difusion.propagar_uso(neo.forma, agent_name, state)
 
-⚠ `normalizar_por_dialecto()` NO está cableada al pipeline (auditoría
-2026-07-20): se define y se testea aquí, y AUDITORIA_OPUS.md §"metr.score" la
-lista como paso del flujo, pero ningún módulo la llama. Es decir, la "justicia
-L2" no está activa: los hablantes foráneos se miden con el rasero del nativo.
+D3 (#34) DECIDIDA el 2026-09-01 — opción A: `normalizar_por_dialecto()` se
+cablea en el UMBRAL DEL RESCATE intra-turno (ver `necesita_rescate()` y el
+orquestador), y SOLO ahí. El score que se ALMACENA sigue siendo el crudo: la
+métrica insignia y la comparabilidad con los runs publicados no cambian. La
+"justicia L2" opera donde el score tiene efecto dentro del run (el reintento),
+no en el dato — la lección de fase 1 ("el instrumento medía en parte a sus
+autores") prohíbe hornear estas constantes en lo almacenado.
 
-Se deja deliberadamente sin conectar. Activarla multiplicaría el score de un
-caribe por 0.65/0.25 = 2.6 (un 4.5 crudo pasaría a 10/10), lo que cambiaría la
-semántica de la métrica insignia del proyecto y rompería la comparabilidad con
-todos los runs ya publicados. Es una decisión de diseño pendiente, no un
-descuido: o se cablea y se re-corre todo, o se elimina la función.
+Y en ABLACIÓN no hay rescate: es una inyección que empuja convergencia y el
+brazo de control corre sin ella. Reserva declarada: las densidades objetivo
+siguen siendo constantes de diseño sin base empírica; calibrarlas desde los
+runs queda como mejora anotada (6-fusion/decisiones_tanda_2026-09-01.yaml).
 """
 
 from __future__ import annotations
@@ -247,6 +249,19 @@ def normalizar_por_dialecto(score_crudo: float, etnia: str | None) -> float:
     un guaycarí no debe penalizarse al rasero del nativo. Acotado a [0,10]."""
     objetivo = perfil_dialectal(etnia)["densidad_objetivo"] or _DENSIDAD_REF
     return round(min(score_crudo * (_DENSIDAD_REF / objetivo), 10.0), 1)
+
+
+def necesita_rescate(metr: dict, etnia: str | None, ablacion: bool = False) -> bool:
+    """D3 (#34, decidida 2026-09-01): ¿la respuesta amerita el reintento
+    intra-turno? El umbral se evalúa sobre el score NORMALIZADO por dialecto
+    (justicia L2: el caribe no reintenta por obedecer su propio prompt); lo
+    que se almacena sigue siendo el score crudo. En ABLACIÓN no hay rescate:
+    es una inyección que empuja convergencia y el control corre sin ella."""
+    if ablacion:
+        return False
+    fuga_otra_lengua = (metr.get("otro_arahuaco", 0) >= 3
+                        and metr.get("pct_caquetio_especifico", 1) < 0.3)
+    return normalizar_por_dialecto(metr["score"], etnia) < 5.0 or fuga_otra_lengua
 
 
 def prompt_rasgos_dialectales(etnia: str | None) -> str:

@@ -51,6 +51,7 @@ from curiana_lexicon import (
 from curiana_observer import ObserverAgent
 from curiana_social import (
     DifusionLexica,
+    necesita_rescate,
     prompt_rasgos_dialectales,
 )
 from curiana_koine import (
@@ -287,8 +288,10 @@ def call_agent(
     #    esa fuga es más sutil que el español pero igual de indeseada, el
     #    objetivo es que el caquetío DOMINE, no solo "no hablar español" ──
     metr = score_linguistico(response, lexico)
-    fuga_otra_lengua = metr.get("otro_arahuaco", 0) >= 3 and metr.get("pct_caquetio_especifico", 1) < 0.3
-    if metr["score"] < 5.0 or fuga_otra_lengua:
+    # D3 (#34, 2026-09-01): el umbral se evalúa sobre el score NORMALIZADO
+    # por dialecto, y en ablación no hay rescate — curiana_social.
+    # necesita_rescate(). A la base va siempre el score CRUDO.
+    if necesita_rescate(metr, etnia, ablacion):
         rescate = prompt_rescate_linguistico(
             response, metr["score"], metr.get("espanol_funcional", 0),
             metr.get("palabras_otro_arahuaco"),

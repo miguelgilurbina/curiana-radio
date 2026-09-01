@@ -9,7 +9,7 @@
     ("abdicación" de 1636). Manaure (Don Martín) fue sucedido por su hijo Don Alexandre, ya bajo
     encomienda y con casi una década de negociación con Ampíes a sus espaldas.
   fuente: atestiguado
-  referencia: "Oliver 1989, cap. 3, pp. 255-256, 268 (\"the office of chief or diao was in the XVIth century inherited by the son of the diao\")"
+  referencia: "Oliver 1989, cap. 3, pp. 265-266, 268 (\"the office of chief or diao was in the XVIth century inherited by the son of the diao\")"
   dominios: [parentesco, politica]
   agentes_relacionados: [Manaure]
   implicacion_simulacion: >
@@ -44,7 +44,7 @@
     que su padre se había casado con una mujer española. La legitimidad se juzga por la identidad/
     estatus de la madre, no solo del padre.
   fuente: atestiguado
-  referencia: "Oliver 1989, cap. 3, pp. 255-256, citando a Martí 1969"
+  referencia: "Oliver 1989, cap. 3, pp. 265-266, citando a Martí 1969"
   dominios: [parentesco, politica]
   agentes_relacionados: []
   implicacion_simulacion: >
@@ -624,7 +624,7 @@
   implicacion_simulacion: >
     Gancho narrativo fuerte: Waimo-ko (genealogia.yaml) podría heredar la puerta 1 sin garantía de
     las puertas 2 y 3 — un vacío de poder real, no protocolar, si los apopos vecinos no lo reconocen
-    o si ningún piache valida su capacidad. Ver parentesco-039 para la corrección de heredero único.
+    o si ningún piache valida su capacidad. Ver parentesco-039 para la corrección de heredero único. DECISIÓN D1 (2026-09-01): las tres puertas son REGLA del modelo de sucesión de la simulación — el hecho sigue siendo hipotetico como reconstrucción histórica; lo decidido es que el diseño la sigue.
 
 - id: parentesco-039
   contenido: >
