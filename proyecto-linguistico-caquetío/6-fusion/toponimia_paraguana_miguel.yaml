@@ -126,6 +126,18 @@ hipotesis_estructural:
       da Amuayes=sur, Guaranaos=norte. VERIFICAR en mapa antes de fijar
       territorios; puede ser errata de Delmonte, de Oliver, o que el
       topónimo moderno no marque el territorio del clan.
+    apoyo_ecologico: >-
+      (Miguel, 2026-09-01, sobre el mapa) El Capubana no es solo el eje
+      simbólico: entre los cerros «sigue existiendo uno de los pocos
+      BOSQUES XERÓFITOS que quedan en el mundo» (hoy Monumento Natural
+      Cerro Santa Ana). En una península árida, el cerro es la anomalía
+      ecológica — el agua que baja (Chamuriana), el manantial (la escuela
+      MAITIRUMA está al pie este del cerro: el 'manantial azul'
+      caribe-insular de Esteves, geolocalizado en el mismo complejo) y el
+      bosque. El asiento religioso coincide con el corazón de agua y
+      verde de la tierra seca — datos para la esfera de ECOLOGÍA además
+      de la política. Convergencia Maitiruma-Chamuriana-Capubana: tres
+      nombres de agua/cerro en un radio de pocos km.
   - id: moruy-santa-ana-mismo-clan
     quien: Miguel
     hipotesis: >-
@@ -155,5 +167,13 @@ hipotesis_estructural:
       lo cual encaja con los linajes de D1 como unidades de expansión.
 
 cola_de_mapa:
-  nota: topónimos vivos del sector que la foto de Miguel muestra — para la campaña
-  candidatos: [Uarayadito, Davaduvare, Abudure, Machuruca, Caseto, La Rinconada]
+  nota: >-
+    topónimos vivos que las dos fotos de Miguel muestran (sector del
+    Capubana) — para la campaña. Ojo con la familia -quiva/-quiba (kiba
+    'piedra'): Jadacaquiva y Yabuquiva se suman a quibacoa/Todariquiba.
+    Y Maitiruma pasa de nombre suelto de Esteves a LUGAR geolocalizado al
+    pie este del cerro.
+  candidatos: [Uarayadito, Davaduvare, Abudure, Machuruca, Caseto, La Rinconada,
+               Jadacaquiva, Yabuquiva, Amaraya, Adaure, Maicara, Buchuaco,
+               Charaima, Baraived, Cocodite, Parunu, Guacubero, Jacuque,
+               Cayerúa, El Supí, Pedregalito, Maitiruma, Judibana]
