@@ -1,0 +1,122 @@
+# ─────────────────────────────────────────────────────────────────────────
+# DECISIONES DE MIGUEL — tanda del 2026-09-01 (D3 · D1 · rumbo era 2)
+#
+# Mismo patrón que la tanda del 08-30: cada decisión queda registrada aquí
+# al tomarse, y TODAS se aplican al canon en un solo aplicador idempotente
+# con --dry-run cuando la tanda cierre. Hasta entonces, el canon no se toca
+# (regla 5). Dossiers servidos en 6-fusion/issues-pendientes/
+# (comentario-32-dossier-d1.md · comentario-34-dossier-d3.md).
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-01'
+  decidido_por: Miguel
+  estado: en-curso — D3 y rumbo era 2 decididos; D1 pendiente
+
+# ══════════════════════════════════════════════════════════════════
+# DECISIÓN 1 — D3 (#34): normalizar_por_dialecto()  ✅ APROBADA (opción A)
+# ══════════════════════════════════════════════════════════════════
+d3:
+  estado: APROBADA (2026-09-01) — opción A, más la adyacente de ablación
+  cierra: la mitad de la condición 6 del gate (la otra mitad es D1)
+  decision: >-
+    CABLEAR normalizar_por_dialecto() en el UMBRAL DEL RESCATE intra-turno,
+    y guardar en la base el score CRUDO. El reintento se decide sobre el
+    score normalizado por etnia; la medición almacenada no se toca.
+  adyacente_aprobada: >-
+    El rescate intra-turno se APAGA en los runs de --ablacion: es una
+    inyección que empuja convergencia y el brazo de control debe correr sin
+    ella. El protocolo del run 1 lo declara.
+  evidencia_que_la_decidio:
+    - >-
+      El score SÍ retroalimenta el run: el rescate reintenta bajo 5.0
+      (orchestrator ~289-303). Un caribe con densidad objetivo 0.25,
+      obedeciendo su propio prompt dialectal, vive bajo ese umbral →
+      reintento crónico que lo empuja al caquetío. El motor peleaba contra
+      su propio diseño dialectal, pagando tokens por hacerlo.
+    - >-
+      La mitad gemela (prompt_rasgos_dialectales) SÍ estaba cableada: la
+      asimetría era real, no teórica.
+    - >-
+      El rescate NO estaba gateado por --ablacion: presión de convergencia
+      sobreviviendo al brazo de control, correlacionada con la etnia.
+  por_que_no_las_otras:
+    b_eliminar: deja vivo el reintento crónico; arreglarlo después es reescribir lo borrado
+    c_normalizar_lo_almacenado: >-
+      hornea constantes de autor (0.65/0.25...) en los datos — la lección de
+      fase 1 ("el instrumento medía en parte a sus autores", r=-0.48) — y
+      rompe la comparabilidad con los runs viejos, guardados en crudo
+  reserva_declarada: >-
+    Las densidades objetivo de DIALECTOS son constantes de diseño sin base
+    empírica declarada. Acotadas al reintento son operables; calibrarlas
+    desde los datos de runs queda como mejora futura anotada.
+  implementacion: >-
+    Aplicador de la tanda: (1) en el orquestador, el umbral usa
+    normalizar_por_dialecto(metr[score], etnia) y se añade `and not
+    ablacion` al bloque del rescate; (2) tests: el caribe con score bajo NO
+    reintenta, el nativo SÍ; en ablación nadie reintenta; (3) la nota de
+    curiana_social.py deja de decir "no está cableada".
+
+# ══════════════════════════════════════════════════════════════════
+# DECISIÓN 2 — RUMBO ERA 2: la ruta a la simulación multi-nodo  ✅ APROBADA
+# ══════════════════════════════════════════════════════════════════
+rumbo_era2:
+  estado: APROBADO (2026-09-01) — «me cuadra»
+  vision_de_miguel: >-
+    "Tener nodos que conversen entre sí, con aldeas de agentes donde
+    predomina el caribe en su mayoría y cuentan con pocos extranjeros
+    caquetíos — distintos nodos culturales, con overlaps obvios, pensando
+    en cómo estaba estructurada la sociedad según las fuentes y siguiendo
+    el orden geográfico." La utopía declarada; esta ruta es el camino, no
+    el salto.
+  por_que_no_es_desvio: >-
+    La tesis lo exige: una koiné no se forma dentro de una unidad homogénea
+    sino donde nodos distintos tienen que entenderse (cierre de fase 1).
+    Con un solo nodo, "convergencia" solo significa entre individuos; con
+    nodos, es geográfica y falsable. La esfera de interacción ya es canon,
+    los 30 asentamientos están registrados, y D15 (#90) espera exactamente
+    esta pregunta.
+  ruta_aprobada:
+    - paso: 1
+      que: cerrar esta tanda (D1) y el gate; el run 1 sigue MONO-nodo
+      por_que: es la línea base del instrumento auditado — sin ella el par no se lee
+    - paso: 2
+      que: escribir 5-experimento/DISENO_ERA2.md ANTES de tocar código
+      contenido: >-
+        dos nodos; pertenencia de agente a nodo; contacto por comercio
+        (rutas de biro/sal) y matrimonio exogámico matrilineal (los esposos
+        que circulan entre aldeas — el canal que la genealogía de D1 ya
+        diseña); métricas de koiné dentro-de-nodo vs ENTRE-nodos (la señal
+        es la segunda); modelo de costos (repartir 30+30, no duplicar); qué
+        pregunta responde el par que el mono-nodo no puede.
+    - paso: 3
+      que: decidir D15 (#90) con dossier — qué par de nodos primero
+      candidato: >-
+        Coro/Todariquiba + Paraguaná: par caquetío-caquetío unido por la
+        ruta de la sal y la paramountcy (Salas vía Antolínez sitúa la
+        cabecera religiosa en Paraguaná, el diao en Coro). Metodológicamente
+        limpio: la koiné se estudia primero entre variedades mutuamente
+        inteligibles.
+    - paso: 4
+      que: minar B.6 (Oliver §3.2.4, los caribes) ANTES de diseñar el nodo caribe
+      por_que: >-
+        que una aldea sea mayoría caribe tiene que salir de las fuentes
+        (regla 4): el estrato que Esteves atribuye a Amuay, Elegüey,
+        Maragüey, Jamaica y Maitiruma, más la convivencia caquetío-cuiba de
+        Brito Figueroa. El nodo caribe es la era 3, con composición citada.
+  nota: >-
+    D3-A alimenta esta ruta: con nodos de mayorías distintas, la justicia
+    dialectal del rescate deja de ser un parche para 10 forasteros y pasa a
+    ser la regla del sistema — mejor decidida ahora, con un caso, que
+    improvisada con N.
+
+# ══════════════════════════════════════════════════════════════════
+# DECISIÓN 3 — D1 (#32): el veto de la genealogía  ⏳ PENDIENTE
+# ══════════════════════════════════════════════════════════════════
+d1:
+  estado: PENDIENTE — dossier servido (comentario-32-dossier-d1.md)
+  ejes: [linajes, sucesor, personas_de_fondo, etiqueta_epistemica]
+  recomendacion_del_dossier: >-
+    Opción B — aprobar la estructura (6 linajes + ~14 fondo, todo
+    canon-simulacion) y degradar a Waimo-ko de "sucesor natural" a
+    "candidato elegible (puerta 1 de 3; pluralidad pendiente por
+    parentesco-039)".
