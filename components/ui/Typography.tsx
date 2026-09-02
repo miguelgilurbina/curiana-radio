@@ -103,3 +103,30 @@ export function SectionTitle({ children, className = "" }: SectionTitleProps) {
     </h2>
   );
 }
+
+// Cartel — "type 3c": la voz de cartel del sistema (Archivo Black comprimida
+// por transform; ver .cartel en globals.css y BRAND_MVP.md §2.1). Solo para
+// rótulos y sellos de 1–3 palabras: en texto que envuelve, la compresión se
+// nota. `hero` baja la compresión a 0.78 para "CURIANA RADIO" completo en
+// heros. Se tinta sola según la superficie ([data-sim-theme], [data-jai-theme]).
+interface CartelProps {
+  children: ReactNode;
+  as?: "span" | "div" | "p" | "h1" | "h2" | "h3";
+  hero?: boolean;
+  /** transform-origin al centro: para cuando el rótulo va centrado */
+  centrado?: boolean;
+  className?: string;
+}
+
+export function Cartel({
+  children,
+  as: Tag = "span",
+  hero = false,
+  centrado = false,
+  className = "",
+}: CartelProps) {
+  const clases = ["cartel", hero && "cartel-hero", centrado && "cartel-centrado", className]
+    .filter(Boolean)
+    .join(" ");
+  return <Tag className={clases}>{children}</Tag>;
+}

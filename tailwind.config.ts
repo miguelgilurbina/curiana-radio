@@ -37,10 +37,24 @@ const config: Config = {
         },
         // Accent colors
         frequency: "#FF6B35", // Radio frequency orange (88.8 FM badge)
+        // Tintas del arte: el registro saturado/serigráfico (intro, carteles,
+        // ecos). Nunca para UI de lectura. Espejo de --color-arte-* en globals.css.
+        arte: {
+          acido: "#C7C91C",
+          indigo: "#26396A",
+          electrico: "#2154C5",
+          ocre: "#C36712",
+          rojo: "#B64924",
+          hueso: "#F3EAD4",
+        },
+        rubrica: "#8F3B26", // tinta roja seca: material canónico del isotipo 3D
+        arcilla: "#B8502E", // la espiral 3D sobre fondo saturado
       },
       fontFamily: {
         serif: ["Lora", "Georgia", "serif"],
         sans: ["Inter", "system-ui", "sans-serif"],
+        // "Type 3c": el cartel. Va siempre con .cartel (la compresión).
+        cartel: ["var(--font-archivo-black)", "Archivo Black", "system-ui", "sans-serif"],
       },
       fontSize: {
         // Custom typography scale for long-form reading
