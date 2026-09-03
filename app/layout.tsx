@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Lora, Fraunces } from "next/font/google";
+import { Archivo_Black, Fraunces, Inter, Lora } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
@@ -30,6 +30,16 @@ const fraunces = Fraunces({
   display: "swap",
 });
 
+// "Type 3c": la voz de cartel del sistema — Archivo Black comprimida por
+// transform (ver .cartel en globals.css y BRAND_MVP.md §2.1). Solo tiene
+// peso 400; la compresión la pone el CSS, no la fuente.
+const archivoBlack = Archivo_Black({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-archivo-black",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Curiana Radio - 88.8 FM",
   description: "Transmisión Cultural desde Abya Yala - A cultural newsletter experience delivered as immersive web pages.",
@@ -47,7 +57,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${inter.variable} ${lora.variable} ${fraunces.variable}`}>
+    <html lang="es" className={`${inter.variable} ${lora.variable} ${fraunces.variable} ${archivoBlack.variable}`}>
       <body className="font-sans antialiased">
         <Background>
           <Navigation />

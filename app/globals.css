@@ -29,9 +29,27 @@
   /* Accent */
   --color-frequency: #ff6b35;
 
+  /* Tintas del arte: el registro saturado/serigráfico de la marca (intro,
+     carteles, ecos). Nunca para UI de lectura. Espejo en tailwind.config.ts. */
+  --color-arte-acido: #c7c91c;
+  --color-arte-indigo: #26396a;
+  --color-arte-electrico: #2154c5;
+  --color-arte-ocre: #c36712;
+  --color-arte-rojo: #b64924;
+  --color-arte-hueso: #f3ead4;
+
+  /* Interfaz de marca */
+  --color-rubrica: #8f3b26; /* tinta roja seca: material canónico del isotipo 3D */
+  --color-arcilla: #b8502e; /* la espiral 3D sobre fondo saturado */
+  --color-intro: #23224f; /* la noche ultramar: fondo de la intro */
+
   /* Typography */
   --font-serif: var(--font-lora);
   --font-sans: var(--font-inter);
+  /* "Type 3c": el cartel. La compresión va en .cartel, no en la fuente. */
+  --font-cartel: var(--font-archivo-black), "Archivo Black", system-ui, sans-serif;
+  --cartel-compresion: 0.82;
+  --cartel-compresion-hero: 0.78; /* "CURIANA RADIO" completo en heros */
 
   /* Spacing for reading */
   --reading-max-width: 65ch;
@@ -287,6 +305,223 @@
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+}
+
+/* ── Type 3c: el cartel ──────────────────────────────────────────────────
+   El registro de cartel del lockup CURIANA/RADIO como display del sistema:
+   Archivo Black comprimida artificialmente — la compresión ES la identidad.
+   Solo para rótulos y sellos de 1–3 palabras (en texto que envuelve, el
+   transform se nota y degrada). Se tinta por superficie. El lockup PNG
+   (public/marca/lockup-bnw.png) sigue siendo el logo oficial. Reglas
+   completas en BRAND_MVP.md §2.1; componente <Cartel> en ui/Typography. */
+@layer components {
+  .cartel {
+    display: inline-block; /* necesario para que el transform aplique */
+    font-family: var(--font-cartel);
+    font-weight: 400; /* Archivo Black solo tiene 400 */
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    transform: scaleX(var(--cartel-compresion));
+    transform-origin: left;
+    color: var(--color-deep-900);
+  }
+  .cartel-hero {
+    --cartel-compresion: var(--cartel-compresion-hero);
+  }
+  .cartel-centrado {
+    transform-origin: center;
+  }
+  /* Tinta por superficie. Galería (--gal-luz) y Buchibe (--buc-oro) entran
+     cuando esas superficies existan como tema. */
+  [data-sim-theme] .cartel {
+    color: var(--sim-rubrica);
+  }
+  [data-jai-theme="dial"] .cartel {
+    color: var(--jai-senal);
+  }
+}
+
+/* ── La intro: el remolino serigráfico ──────────────────────────────────
+   Pantalla de entrada (components/intro). El registro de ARTE a máxima
+   saturación: tintas del arte, trama de semitono, scanlines y misregistro
+   de imprenta en el nombre. La landing que sigue es lo sobrio. Valores
+   1:1 del prototipo del handoff (Inicio Curiana Psicodelico.html). */
+@layer components {
+  .intro-curiana {
+    position: fixed;
+    inset: 0;
+    z-index: 60; /* por encima del nav (z-50) */
+    overflow: hidden;
+    background: var(--color-intro);
+    color: var(--color-arte-hueso);
+    font-family: ui-monospace, "Cascadia Mono", Consolas, Menlo, monospace;
+  }
+  /* Amaneciendo: solo queda el velo; la landing ya se ve debajo. */
+  .intro-curiana[data-fase="amanece"] {
+    background: transparent;
+    pointer-events: none;
+  }
+  .intro-lienzo {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+  }
+  .intro-curiana[data-listo] .intro-lienzo {
+    opacity: 1;
+  }
+  /* trama de semitono + scanlines: el registro de arte, encima del 3D */
+  .intro-trama {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    opacity: 0.5;
+    background: radial-gradient(circle, rgba(20, 10, 30, 0.9) 0.8px, transparent 1.5px);
+    background-size: 5px 5px;
+  }
+  .intro-scan {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.14;
+    background: repeating-linear-gradient(0deg, transparent 0 2px, rgba(0, 0, 0, 0.7) 2px 3px);
+  }
+  .intro-ui {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6vh 24px;
+    pointer-events: none;
+  }
+  .intro-marca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+  }
+  /* misregistro de imprenta: la tinta roja y la azul no coinciden */
+  .intro-nombre {
+    font-size: 15px;
+    letter-spacing: 0.62em;
+    text-indent: 0.62em;
+    text-transform: uppercase;
+    color: var(--color-arte-hueso);
+    animation: intro-misregistro 7s ease-in-out infinite;
+  }
+  @keyframes intro-misregistro {
+    0%,
+    100% {
+      text-shadow: 2px 0 0 var(--color-arte-rojo), -2px 0 0 var(--color-arte-indigo);
+    }
+    25% {
+      text-shadow: 3px 1px 0 var(--color-arte-rojo), -2px -1px 0 var(--color-arte-indigo);
+    }
+    50% {
+      text-shadow: 1px -1px 0 var(--color-arte-rojo), -3px 1px 0 var(--color-arte-indigo);
+    }
+    75% {
+      text-shadow: 2px 1px 0 var(--color-arte-rojo), -1px -2px 0 var(--color-arte-indigo);
+    }
+  }
+  .intro-pie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    text-align: center;
+  }
+  .intro-estado {
+    font-size: 10px;
+    letter-spacing: 0.34em;
+    text-indent: 0.34em;
+    text-transform: uppercase;
+    color: var(--color-arte-acido);
+  }
+  .intro-punto {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 9px;
+    border-radius: 9999px;
+    background: var(--color-frequency);
+    vertical-align: 1px;
+    animation: intro-pulso 1.1s steps(2) infinite;
+  }
+  @keyframes intro-pulso {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.15;
+    }
+  }
+  .intro-sintonizar {
+    pointer-events: auto;
+    cursor: pointer;
+    white-space: nowrap; /* fix de viewport angosto */
+    padding: 16px 30px;
+    border: 1px solid var(--color-arte-acido);
+    border-radius: 2px;
+    background: rgba(35, 34, 79, 0.35);
+    color: var(--color-arte-acido);
+    font: inherit;
+    font-size: 12px;
+    letter-spacing: 0.26em;
+    text-indent: 0.26em;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .intro-sintonizar:hover,
+  .intro-sintonizar:focus-visible {
+    background: var(--color-arte-acido);
+    color: var(--color-intro);
+  }
+  /* lo oracular susurra: Lora itálica, nunca cartel */
+  .intro-proverbio {
+    max-width: 36ch;
+    font-family: var(--font-lora), Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(243, 234, 212, 0.7);
+  }
+  /* el velo pergamino: lo lleva el rAF de sintonizar (sin transición) y
+     luego se disuelve con .intro-velo-amanece */
+  .intro-velo {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    background: var(--color-arte-hueso);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .intro-velo-amanece {
+    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .intro-nombre {
+      animation: none;
+      text-shadow: 2px 0 0 var(--color-arte-rojo), -2px 0 0 var(--color-arte-indigo);
+    }
+    .intro-punto {
+      animation: none;
+    }
+    .intro-lienzo {
+      transition: none;
     }
   }
 }
