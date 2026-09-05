@@ -1,0 +1,3622 @@
+# 6-fusion/medina_colina_dictado.yaml — PROPUESTA (regla 5: nada de aquí toca
+# el lexicón ni el corpus; el humano fusiona).
+#
+# La sesión de dictado de *Del Habla Paraguanera. Siglo XX* (Medina Colina,
+# 2ª ed. 2013). Miguel lee el ejemplar físico y dicta las voces que su ojo de
+# paraguanero señala como posible herencia indígena; el escriba cruza cada una
+# contra el canon y aplica el protocolo (02_protocolo_habla_paraguanera §3-5).
+#
+# Bitácora: 4-fuentes/medina-colina-sxx.md · Fuente: medina-colina-sxx
+
+meta:
+  fuente: medina-colina-sxx
+  metodo: >
+    Dictado curado por Miguel: lectura del ejemplar físico → reconocimiento de
+    voz → escriba. La criba de Miguel ES la marca `retro-abstraido`.
+  inicio: 2026-09-01
+  protocolo: 5-experimento/disenos/02_protocolo_habla_paraguanera.md
+  bitacora: 4-fuentes/medina-colina-sxx.md
+  advertencia_transcripcion: >
+    Lo dictado llega por reconocimiento de voz y trae erratas de oído ("del
+    agua" por "del habla", "para aduanera" por "paraguanera"). Toda cita lleva
+    `segun_dictado: true` hasta que se coteje contra el papel; las palabras
+    dudosas van con [?]. Las GLOSAS de las voces se dictan letra a letra
+    cuando haga falta: la glosa textual es lo citable (regla 8).
+  regla_cero: >
+    Ninguna voz de este libro entra como caquetía por defecto. Cadena:
+    paraguanerismo → ¿sustrato indígena? → ¿de cuál estrato? → etiqueta,
+    nunca mejor que `hipotetico` desde esta fuente sola.
+
+ficha:
+  autor: "Medina Colina, Juan Bautista"
+  firma_en_portada: "Juan B. Medina Colina"
+  titulo: "Del Habla Paraguanera. Siglo XX"
+  edicion: "2ª, ampliada y corregida"
+  anio: 2013
+  diseno_editorial: "Maribel Ovalles Miranda"
+  impresion: "Editorial Miranda"
+  ciudad: null                 # no dictada — preguntar (¿Punto Fijo? ¿Coro?)
+  primera_edicion:
+    anio: null                 # el prefacio no lo dice
+    reconocimiento: "mención honorífica del Centro Nacional del Libro (CENAL) el año en que circuló"
+  dedicatoria:
+    a: "sus nietos, bisnietos y sobrinos [?] — «el recuerdo de un abuelo que les ama»"
+    cita: "la premisa que lo une al hombre es el sentimiento, no la sangre"
+    segun_dictado: true
+  dictado: 2026-09-01
+
+prefacio:
+  autor: "Guillermo de León Calles"
+  relacion_con_el_autor: "compañero de bachillerato («desde los tiempos en que compartimos las aulas iniciales del bachillerato»)"
+  segun_dictado: true
+  resumen: >
+    Presenta a Medina Colina como «apasionado defensor del ancestro peninsular»
+    desde hace décadas. El origen del libro: además de compilaciones ligadas a
+    acontecimientos históricos transmitidos casi siempre de forma ORAL por sus
+    ascendientes, el autor fue registrando en un CUADERNO ESCOLAR una variedad
+    de expresiones [dictado: «excepciones» — leer «expresiones»], que derivó en
+    la obra. La 1ª edición recibió mención honorífica del CENAL el año en que
+    circuló y en Paraguaná se volvió «una especie de trofeo bibliográfico»
+    porque «había entrado en una competencia real con el olvido». El autor
+    refleja «las faenas campesinas» y las dota «de sus expresiones parlantes».
+    La 2ª edición («ampliada y corregida») incorpora vocablos «producto de su
+    observación posterior» y de «la natural inconformidad por no haber sido
+    incluidos en el trabajo inicial». Cierra: «un diccionario propuesto por la
+    espontaneidad, en el cual lo natural sobrepasa las exigencias de la
+    exquisitez idiomática».
+  citas:
+    - texto: "un apasionado defensor del ancestro peninsular"
+    - texto: "registrar en un cuaderno escolar una variedad de expresiones [?]"
+    - texto: "había entrado en una competencia real con el olvido"
+    - texto: >-
+        varias de ellas auténticamente surgidas del pensamiento trascendido de
+        sus lugareños, y en casos particulares de la directa herencia hispánica
+        o de fusiones creadas por la debilidad misma de sus respectivas
+        pronunciaciones
+      nota: la única frase del prefacio sobre el ORIGEN de las voces
+    - texto: "un diccionario propuesto por la espontaneidad, en el cual lo natural sobrepasa las exigencias de la exquisitez idiomática"
+  lectura_para_el_etiquetado:
+    - >
+      MÉTODO DEL AUTOR: cuaderno de un hablante nativo a lo largo de décadas,
+      con transmisión oral de sus ascendientes. No es encuesta ni trabajo de
+      campo con informantes declarados: el prefacio no dice pueblos ni
+      décadas. Es exactamente la fuente `retro-abstraido` (tradición viva
+      local) que el programa del corpus tenía en cero.
+    - >
+      MARCO ETIMOLÓGICO DEL PREFACISTA: tres orígenes — creación lugareña,
+      herencia hispánica directa, y «fusiones» por deformación de la
+      pronunciación. NO menciona sustrato indígena, ni papiamento, ni
+      neerlandés. Consecuencia: la criba indígena es NUESTRA (de Miguel), no
+      del libro. Que el libro no marque una voz como indígena no le resta;
+      que la marque (si el autor marca origen en alguna entrada) sumaría como
+      atestación del autor, en campo aparte (`origen_libro`).
+    - >
+      DOS EDICIONES: la 2ª añade voces por observación posterior. No se
+      distingue 1ª/2ª en el dictado salvo que el libro lo marque.
+  pendiente_de_preguntar:
+    - "~~¿Hay nota del propio autor?~~ SÍ: «Aclaratorias al lector» (abajo). Resuelve criterio, mundo y grafía; no da décadas de recolección."
+    - "¿Las entradas llevan marca de origen o de distribución (país / Falcón / península)? — mirar al dictar las primeras."
+    - "Año de la 1ª edición y ciudad de impresión de la 2ª."
+
+# La nota del propio autor. Es la pieza de método: dice de dónde viene el
+# léxico, por qué canales, cómo está escrito y cómo se distribuye.
+aclaratorias_al_lector:
+  segun_dictado: true
+  correcciones_de_oido: >
+    El reconocimiento de voz trajo: «Avícora»/«avícola» (→ Adícora),
+    «Morui» (→ Moruy), «Por lo nuevo» (→ Pueblo Nuevo), «el ato» (→ El Hato),
+    «los taches» (→ Los Taques), «Cariduana» (→ Carirubana), «la menée
+    grande» (→ Mene Grande), «Creolé» (→ Creole), «foléticamente»
+    (→ fonéticamente), «escuescas» (→ escasas), «riveras» (→ riberas),
+    «estadolara» (→ estado Lara), «cautivó el lenguaje» (→ ¿captó?). Son
+    lecturas del escriba, no del papel: cotejar.
+  el_aislamiento:
+    hecho: >
+      Sin carretera a Coro ni al resto del país hasta la década de 1950,
+      cuando las refinerías (Shell y Creole) hicieron la carretera asfaltada
+      y el acueducto. Antes, la comunicación fue MARÍTIMA: goletas desde el
+      puerto de Adícora a Aruba, Curazao, Cuba, Santo Domingo y Puerto Rico —
+      horas a las Antillas cercanas, 3-5 días a las lejanas según el viento;
+      a Maracaibo, más de 7 días (los ríos en lluvias obligaban a esperar
+      días en sus riberas). «Nuestra península era territorio aislado del
+      resto del país.»
+    para_el_protocolo: >
+      El FILTRO 2 (papiamento/neerlandés) sube al primer puesto por boca del
+      propio autor: Aruba y Curazao estaban a horas; Coro, lejos; Maracaibo,
+      a una semana. Toda voz «rara» tiene a las islas como primer sospechoso.
+  la_poblacion_y_los_pueblos:
+    hecho: >
+      Población eminentemente rural: cría de ganado menor y cultivo en las
+      escasas épocas de lluvia. Escuelas: quizá no llegaban a la docena en
+      toda la península, y solo primeros grados. Centros poblados: Tacuato,
+      Santa Ana, Moruy, Buena Vista, Pueblo Nuevo, Adícora, El Hato, El
+      Vínculo, Los Taques y Punta Cardón — ninguno llegaba a 2.000
+      habitantes. Carirubana / lo que hoy es Punto Fijo: playa de pescadores
+      de menos de 200 personas hasta 1926 (instalación de la Mene Grande en
+      Cerro Arriba; ~400 personas hasta 1946), y desde 1946 las refinerías
+      Shell y Creole con miles de hombres trabajando.
+    para_el_mundo: >
+      Regla 7 — esto alimenta la esfera MUNDO, no solo la lengua: (a) la
+      lista de pueblos de Paraguaná c. 1900-1950 con su escala, para la
+      campaña de topónimos y para `asentamientos.yaml` (época: s. XX; Moruy
+      y Santa Ana, los asientos de los dos clanes de Oliver, siguen siendo
+      los centros); (b) el eje marítimo península–ABC como constante
+      estructural: el mismo eje que la ruta Cumarebo–Curazao del s. XVI
+      (van Buurt), ahora en el s. XX. Época declarada: colonial-tardía /
+      s. XX. NO se proyecta al precontacto (regla 3): se registra la
+      persistencia, no la identidad.
+  el_lenguaje_y_sus_canales:
+    hecho: >
+      «Nuestra gente captó [?] el lenguaje del pueblo llano, en el cual
+      numerosos vocablos sufrieron alteraciones en su estructura»: supresión
+      de letras en la primera sílaba o en la última, cambio de letras — «el
+      lenguaje culto se le alteró en su constitución para hacerlo accesible
+      al pueblo, que de oídas lo iba a hablar mas no escribirlo, pues la
+      mayoría de nuestra gente era analfabeta». Los vasos comunicantes: los
+      ARRIEROS (transportistas y mensajeros entre la península y Santa Ana
+      de Coro, «el centro culto de nuestro estado») y los MARINOS (navegaban
+      por las estrellas sin saber leer una carta marina, y traían de tierras
+      lejanas mercancías «y también el vocabulario, con todo y sus
+      imperfecciones»).
+    para_el_protocolo: >
+      (1) El marco del autor es el del prefacista: español culto deformado
+      por un pueblo analfabeto + importación por mar. El sustrato indígena
+      no está entre sus canales — la criba sigue siendo de Miguel. (2) Los
+      patrones de deformación que él declara (aféresis, apócope, cambio de
+      letra) son el FILTRO 1 con instrucciones: una voz que «suena indígena»
+      puede ser castellano con la primera sílaba comida. Probar la
+      restitución antes de pasar al filtro 3. (3) A la inversa, una forma
+      indígena pudo llegar castellanizada por la misma «debilidad».
+  la_distribucion:
+    hecho: >
+      «La mayoría de estos vocablos son comunes en otras regiones del país,
+      algunos de ellos solo se escucharon en Falcón, y los menos son
+      autóctonos de la península.» Hay polisemia regional: una misma palabra
+      con un sentido en los pueblos de la península, otro en el resto del
+      estado, otro en Lara y otro en Trujillo.
+    para_el_protocolo: >
+      El criterio positivo 2 (distribución restringida) lo formula el propio
+      autor en tres niveles: país / Falcón / península. Si lo marca por
+      entrada, se captura en `distribucion_libro`; si no, vale como
+      expectativa global — «los menos» autóctonos coincide con §7 del
+      protocolo (tasa de acierto baja). La polisemia interestatal es un
+      aviso: la GLOSA paraguanera es la que cuenta, no la larense.
+  la_grafia:
+    hecho: >
+      «Estos vocablos están escritos fonéticamente, tal cual como lo
+      pronuncia nuestra gente.»
+    para_el_protocolo: >
+      La forma del libro es pronunciación local en grafía castellana
+      improvisada, no ortografía. Se conserva tal cual en `voz` (es la
+      `forma_fuente`); el cruce contra el canon se hace por esqueleto
+      fonémico (cruzar_voz.py), que es lo que esta grafía permite.
+  quien_es_nuestra_gente: >
+    «Cuando digo nuestro pueblo, nuestra gente, nuestros mayores, nuestros
+    antepasados, nuestros abuelos, me refiero con mucho orgullo al pueblo
+    paraguanero en general, del cual provenimos la mayoría de los que hoy
+    vivimos aquí.»
+  anexos: >
+    Más de doscientos refranes y decires «del paraguanero de ayer». Es una
+    segunda veta: fraseología con léxico en contexto (cf. las FORMULAS de
+    Gatschet y la fórmula de Mitare). Se mina aparte, después de las voces.
+  ethos: >
+    La palabra empeñada como garantía — «hubo quien diera como garantía o
+    aval un pelo de su bigote» y lo rescatara al cumplir. Dato de mundo
+    (s. XX), no de lengua; se anota por si el corpus de transmisión lo
+    quiere como testimonio retro-abstraído.
+
+# Cobertura declarada por letra/sección, al cerrarla (regla 6: distinguir
+# «no hay sustrato» de «no se miró»). {letra, vistas: ~n, dictadas: n}
+cobertura: []
+
+# Patrones de forma que el dictado va mostrando (se anotan; ninguno es
+# etimología por sí solo — regla del protocolo §4.3: la fonotáctica es
+# filtro negativo, débil en positivo).
+patrones_observados:
+  - final: -ao
+    lectura: "participio castellano -ado con -d- caída (abofao, abollao, acoquinao): señal segura de castellano. Distinto del -ao toponímico (diao, waitiao, waranao: 6/222 atestiguadas), que no es participio"
+  - final: -are
+    lectura: >-
+      La más recurrente del dictado: cadare, cachinare, catanare, chiguare,
+      chipare (canon), machire. El canon la tiene como morfema-002
+      (2-lengua/morfemas.yaml): sufijo LOCATIVO 'sitio de' en topónimos
+      (bobare, cabudare, dabudare, pachacuare), con dos contraejemplos ya
+      registrados que NO son lugares — guasare 'árbol cactáceo' y chunare
+      'mazorca tierna'. El dictado añade más nombres comunes en -are
+      (partes de planta, bejucos, estados): sugiere un formante nominal
+      más amplio que el locativo. Dato para revisar la glosa de morfema-002.
+      En el lexicón atestiguado solo dare 'diente' y chipare terminan en
+      -are.
+  - final: -ebe
+    lectura: "carebe (cucharón de tapara), chevebe (saltamontes): dos voces sin filiación con la misma cadencia; nada en el canon"
+  - final: -igua
+    lectura: "barisigua (Erythrina), con tacarigua y samanigua de Alvarado y los topónimos regionales en -igua: formante fitonímico/toponímico de filiación no resuelta"
+  - final: -uro / -aro
+    lectura: "camuro, caujaro, cacuro, saruro, samuro, kakuro: cadencia del lexicón atestiguado; camuro y caujaro encajan"
+  - final: -nga
+    lectura: "ananinga, chenga: AJENA al caquetío medido (1/222, y esa dudosa: kudanga/judan); típica de africanismos. Reserva declarada en ambas"
+  - prefijo: ma-
+    lectura: "machire 'masa granulosa' frente a chirita 'masa fina': el privativo arahuaco ma- (madunaka; wayuu ma-) en uso vivo — hipótesis, ver la entrada"
+  - marca_del_autor: "creación del pueblo llano / palabra de pueblo"
+    lectura: "NO marca autoctonía: el autor la usa igual para deformaciones castellanas (abofao, buruza) que para voces sin filiación. En cambio «en otras regiones se conoce como X» SÍ es dato: distribución restringida declarada por la fuente (saruro, camuro, barisigua, chamaco, bachaco)"
+
+# Regla 7: lo que el diccionario dice del MUNDO aunque la voz sea castellana.
+# Época: s. XX (tradición viva, marca retro-abstraido). No se proyecta al
+# precontacto; se registra para el corpus de ecología/casa y para cruzarlo
+# con lo que sí es antiguo.
+datos_mundo:
+  - id: mc-mundo-001
+    esfera: ecologia / casa
+    hecho: >
+      La madera más común para fabricar el aguamanil (mueble de aseo) era
+      el CARDÓN, «por su durabilidad».
+    voz_origen: aguamanil
+    pagina: "23-24"
+    epoca: s. XX (Paraguaná rural, antes de 1950)
+    lectura: >
+      Uso constructivo del cardón (Cereus/Stenocereus; caq. kadushi 'cactus
+      columnar', dato/kaduchi 'su fruto') como madera de mueblería en la
+      península. El lexicón atestiguado tiene el cardón como planta y fruto,
+      no como MATERIAL: el corpus de ecología puede registrar el uso, con
+      esta fuente, como testimonio retro-abstraído s. XX.
+    segun_dictado: true
+  - id: mc-mundo-002
+    esfera: transmision / crianza
+    hecho: >
+      Amenaza velada al niño travieso: la fórmula «ananinga / ay naninga»
+      dicha mientras se agita la mano derecha castañeando índice y medio
+      «en son de látigo». Desaparecida por falta de uso.
+    voz_origen: ananinga
+    pagina: 28
+    epoca: s. XX (Paraguaná rural), extinta al escribir el autor
+    lectura: >
+      Gesto + fórmula como disciplina infantil sin contacto físico. Dato de
+      crianza para el corpus de transmisión (testimonio retro-abstraído,
+      s. XX). No se proyecta al precontacto; se registra porque el corpus de
+      transmisión del saber tiene poco sobre la crianza cotidiana.
+    segun_dictado: true
+  - id: mc-mundo-003
+    esfera: ecologia / tecnica (agua)
+    hecho: >
+      El agua de consumo era de origen pluvial, depositada en estanques
+      cavados a cielo abierto en la tierra, y solía estar turbia por el
+      barro en suspensión. Para clarificarla: con un trozo de CARDÓN DE
+      LEFARIA, previamente limpio de espinas, se agitaba el agua un rato y
+      se dejaba en reposo; el material en suspensión se precipitaba y el
+      agua quedaba «limpia, cristalina, lista para ser utilizada».
+    voz_origen: asentar agua
+    pagina: null            # ⚠️ PENDIENTE
+    epoca: s. XX (Paraguaná rural, antes del acueducto de los años 50)
+    lectura: >
+      Floculación con mucílago de cactácea: técnica tradicional documentada
+      en otras zonas áridas de América (mucílago de Opuntia como clarificante
+      de agua). Aquí con el cardón lefaria, sobre agua de JAGÜEY — el
+      «estanque cavado a cielo abierto» es el jagüey (voz taína
+      panamericana; el lexicón tiene buko 'jagüey/charca' caquetío
+      atestiguado y el verbo jagey 'estancar' con atribución débil, y
+      ecologia.yaml §hidrología ya modela el jagüey como la pieza de agua
+      de la tierra pobre). Es exactamente el vocabulario del OFICIO DIARIO
+      del agua que el corpus de ecología tenía en hueco: tesis
+      tierra-pobre/mar-rico, ahora con la técnica de potabilización.
+      Época s. XX: se registra como testimonio retro-abstraído; su
+      antigüedad precontacto no se afirma (regla 3) aunque el par
+      cardón+jagüey sea de la ecología de siempre.
+    voces_a_mirar:
+      - "lefaria: dictada el 2026-09-01 bajo «breva o guanariji» (p. 49) — ver entradas"
+    segun_dictado: true
+  - id: mc-mundo-004
+    esfera: creencia / fauna
+    hecho: >
+      El saruro (boa, tragavenados) «exhala un vaho sobre sus víctimas
+      cuando son pequeñas, y dicen que con esto las adormece para
+      facilitarse el ataque». De ahí el dicho «procura que Manuel no te
+      bajee» = 'evita que te engañe'.
+    voz_origen: bajear
+    pagina: 41
+    epoca: s. XX (creencia viva; «nuestros viejos decían»)
+    lectura: >
+      Etología popular de la boa convertida en metáfora del engaño. Para el
+      corpus de creencia/ecología: la boa ya tiene carga simbólica en el
+      canon (buio 'serpiente, boa, diablo, dios del mal', atestiguado); esta
+      creencia del s. XX es testimonio retro-abstraído, no se proyecta al
+      precontacto, pero conecta la fauna del Golfete con la esfera moral
+      (engaño) por la misma vía que buio.
+    segun_dictado: true
+  - id: mc-mundo-005
+    esfera: ecologia / fauna
+    hecho: >
+      Los puercos silvestres (báquiros, pecaríes) fueron «en épocas lejanas
+      abundantes en nuestros montes, hoy extintos» en Paraguaná.
+    voz_origen: báquiro
+    pagina: 43
+    epoca: "abundantes antes del s. XX («épocas lejanas»); extintos al escribir el autor"
+    lectura: >
+      Extinción local documentada por testimonio: la fauna moderna de la
+      península NO es la del s. XV (tesis ya registrada en el corpus de
+      ecología). Suma un animal de caza al inventario precontacto plausible
+      — y el lexicón no tiene palabra caquetía para él: hueco léxico de
+      fauna de caza, a añadir a ecologia_lexicon_map (el wayuu y el
+      cumanagoto sí la tienen).
+    segun_dictado: true
+  - id: mc-mundo-006
+    esfera: ecologia / flora / oficios
+    hecho: >
+      La barisigua («palo de balsa» en el habla; botánicamente un bucare,
+      Erythrina — ver la entrada) «fue abundante en nuestro medio, hoy muy
+      escaso», hasta ocho metros; madera muy liviana, de grano suave, con
+      la que se hacían bateas y baques.
+    voz_origen: barisigua
+    pagina: 43
+    epoca: s. XX (abundante antes; escasa al escribir el autor)
+    lectura: >
+      Toca ecologia-032 y hueco-lex-008 (la madera de canoa foránea): un
+      bucare local de madera liviana y blanda al secar — madera de vasijas
+      (bateas, baques) y talla, no de piraguas. Para el mundo caquetío: un
+      árbol de la península con nombre propio (y topónimo en Dabajuro), hoy
+      casi desaparecido. La pregunta de Miguel (¿canoas?) queda respondida
+      con matiz: canoas de un tronco, improbable; vasijas y objetos de
+      madera, sí. Precontacto: no se afirma (regla 3); se registra la
+      abundancia pasada como dato de ecología histórica. (Corrección
+      2026-09-01: la primera lectura identificó el árbol con Ochroma por el
+      nombre «palo de balsa»; la flora científica lo pone en Erythrina.)
+    segun_dictado: true
+  - id: mc-mundo-007
+    esfera: ecologia / casa / conuco
+    hecho: >
+      El camuro (vasija de Lagenaria, «una especie de tapara, fruto de una
+      planta rastrera») «era común en las empalizadas de los conucos. Hoy
+      desaparecido en nuestro medio rural».
+    voz_origen: camuro
+    pagina: 61
+    epoca: s. XX (común antes; desaparecido al escribir el autor)
+    lectura: >
+      La calabaza de bejuco cultivada en la cerca del conuco como fuente de
+      vasijas: técnica de casa precontacto plausible (Lagenaria es
+      pancaribeña y prehispánica), documentada aquí como tradición viva
+      del XX y como pérdida. Se suma a la serie de desapariciones del
+      libro (báquiro, barisigua): la península rural de antes de 1950 como
+      ecosistema que el autor ve extinguirse.
+    segun_dictado: true
+  - id: mc-mundo-008
+    esfera: oficios / economia
+    hecho: >
+      Las vísceras («capirote») del animal sacrificado «generalmente
+      formaban parte de lo que se pagaba al matarife por sus servicios».
+    voz_origen: capirote
+    pagina: "62-63"
+    epoca: s. XX (Paraguaná rural)
+    lectura: >
+      Pago en especie por un oficio: economía no monetaria del ganado
+      menor (el chivo). Dato para el corpus de oficios/intercambio como
+      testimonio retro-abstraído del XX; no se proyecta al precontacto,
+      pero es la clase de reciprocidad que la esfera de interacción modela.
+    segun_dictado: true
+  - id: mc-mundo-009
+    esfera: sociedad / oficios / reciprocidad
+    hecho: >
+      La CAYAPA: «varios hombres, en un día acordado previamente, le
+      trabajaban de gratis a uno de ellos a cambio de licor y comida,
+      generalmente para hacer la casa o atender una siembra».
+    voz_origen: cayapa
+    pagina: 66
+    epoca: s. XX (Paraguaná rural)
+    lectura: >
+      Trabajo colectivo recíproco (convite, minga) para la casa y el
+      conuco, pagado en comida y bebida: la institución de reciprocidad
+      que la esfera de interacción y el corpus de parentesco/transmisión
+      necesitan modelar para la era 2 (ceremonias, casa, siembra). Se
+      registra como testimonio retro-abstraído del XX; su forma
+      precontacto no se afirma, pero es la clase de hecho social que las
+      crónicas no describen y que la tradición viva sí.
+    segun_dictado: true
+  - id: mc-mundo-010
+    esfera: ecologia / fauna
+    hecho: >
+      La paloma perdiz (chenga) «fue abundante en nuestros montes, hoy
+      casi desaparecida».
+    voz_origen: chenga
+    pagina: 70
+    epoca: "abundante antes; casi extinta al escribir el autor"
+    lectura: >
+      Cuarta desaparición documentada por el libro (báquiro, barisigua,
+      camuro, chenga): la serie es ya un dato en sí — la fauna y flora de
+      la Paraguaná rural de antes de 1950 como línea de base que se pierde,
+      y que el corpus de ecología puede usar para separar «fauna moderna»
+      de «fauna del XV» con testimonio, no solo con inferencia.
+    segun_dictado: true
+  - id: mc-mundo-011
+    esfera: oficios / agua
+    hecho: >
+      La chícora (hoja metálica encastrada en mango de madera de metro y
+      medio), «junto con el pico y la barra», era «instrumento
+      indispensable» para cavar sepulturas y los estanques.
+    voz_origen: chícora
+    pagina: 70
+    epoca: s. XX
+    lectura: >
+      Cierra el circuito de mc-mundo-003 (asentar agua): el jagüey se
+      CAVABA con chícora, pico y barra. Herramienta de hierro, posterior
+      al contacto; la técnica del estanque excavado para agua de lluvia
+      es la que el corpus de ecología atribuye a la tierra pobre (buko,
+      jagey). Testimonio retro-abstraído del XX.
+    segun_dictado: true
+  - id: mc-mundo-012
+    esfera: oficios / textil
+    hecho: >
+      El chinchorro se tejía «de hilos de cocuy, que es más fuerte y fino
+      que el hilo de cocuiza»; también de algodón, «pero resultan más
+      calurosos». La hamaca (de tela) se hacía de lonilla.
+    voz_origen: chinchorro
+    pagina: 71
+    epoca: s. XX
+    lectura: >
+      Jerarquía de fibras del oficio de la hamaca, con nombres que el
+      lexicón ya tiene: kokuy (Agave cocui) > kukuisa/dipopo (Furcraea)
+      por finura y resistencia; maure (algodón) como alternativa. Para el
+      corpus de oficios (la tejedora de hamacas del elenco, Kahu-sha,
+      «usa maure para sus mejores hamacas»: el testimonio dice que la
+      fibra fina de red era el cocuy — matiz para su ficha).
+    segun_dictado: true
+  - id: mc-mundo-013
+    esfera: transmision / crianza (juego)
+    hecho: >
+      La chuchumbaca: juego de muchachos en que uno se queda en el
+      chinchorro y los demás le sacuden violentamente las cabulleras.
+    voz_origen: chuchumbaca
+    pagina: 74
+    epoca: s. XX
+    lectura: >
+      Segundo dato de crianza del libro (con la amenaza gestual de
+      ananinga): juego rudo de grupo alrededor del chinchorro, el mueble
+      central de la casa. Para el corpus de transmisión, que tiene poco de
+      infancia cotidiana. Testimonio retro-abstraído.
+    segun_dictado: true
+  - id: mc-mundo-014
+    esfera: oficios / agricultura
+    hecho: >
+      Siembra con COA: palo de madera aguzado con que se abría el hueco en
+      la tierra donde se depositaba la semilla.
+    voz_origen: coa
+    pagina: 77
+    epoca: s. XX (Paraguaná rural), técnica precontacto por definición
+    lectura: >
+      El palo cavador es la herramienta agrícola indígena de todo el
+      continente; su persistencia en el conuco paraguanero del XX es
+      continuidad técnica, con nombre taíno-español. El lexicón tiene
+      kono 'sembrar' y tabri 'siembra' pero ninguna palabra para la
+      herramienta: hueco léxico de oficio (ecologia_lexicon_map). Se
+      registra la técnica con marca retro-abstraido; el nombre caquetío
+      del objeto sigue sin fuente.
+    segun_dictado: true
+  - id: mc-mundo-015
+    esfera: oficios / alfarería / cal
+    hecho: >
+      El CURUBO, caracol marino,
+      cuya concha usaron los alfareros para PULIR los envases que
+      fabricaban, y también para hacer CAL mediante su cocción a altas
+      temperaturas.
+    voz_origen: curubo
+    pagina: 86
+    epoca: s. XX (Paraguaná)
+    lectura: >
+      Dos técnicas de una sola concha. (1) BRUÑIDO cerámico con concha:
+      la técnica de acabado de la alfarería precontacto de toda la región
+      (superficies bruñidas de la tradición dabajuroide) — el oficio de
+      Saruro-sha y Pira-sha en el elenco, con instrumento nombrado. (2) CAL
+      DE CONCHA por calcinación: la cal es el reactivo del hayo (coca) que
+      el lexicón conserva en baperon / raporon 'calabaza con cal'
+      [caquetío-atestiguado] — este testimonio da la FUENTE LOCAL de esa
+      cal: el caracol marino calcinado. Mar rico alimentando la tierra
+      pobre otra vez. El canon tiene caracoles con nombre (kumarawa
+      'caracol de las costas de Paraguaná', yagruma 'caracol', kiwa
+      'concha') pero sin este uso. Marca retro-abstraido, s. XX; la
+      continuidad con el precontacto es plausible por la arqueología
+      (bruñido, cal para hayo) y se afirma como tal, no como hecho.
+    segun_dictado: true
+  - id: mc-mundo-016
+    esfera: oficios / recolección / ecología
+    hecho: >
+      La DATERA: vara hecha con el maguey (bohordo floral) de la planta de
+      cocuy, con una corona de púas en un extremo para ensartar y bajar
+      los frutos del cardón (datos).
+    voz_origen: datera
+    pagina: 89
+    epoca: s. XX (Paraguaná), técnica de recolección
+    lectura: >
+      La herramienta de la recolección del dato, hecha de OTRA planta del
+      cardonal (el bohordo del cocuy, kokuy en el lexicón): dos recursos
+      del monte seco combinados en un instrumento. Cierra el campo del
+      fruto de cardón que este dictado ha ido llenando (dato, kaduchi,
+      guanariji, cachinare, breva) con el modo de cosecharlo. Para el
+      corpus de ecología/oficios, con marca retro-abstraido; la técnica
+      es plausible precontacto (materiales y objetivo locales), no
+      afirmada.
+    segun_dictado: true
+  - id: mc-mundo-017
+    esfera: ecologia / fauna
+    hecho: >
+      La guacoa (paloma silvestre, wakoa) «en épocas pasadas muy abundante
+      en nuestro monte, hoy casi extinta».
+    voz_origen: guacoa
+    pagina: "129-130"
+    epoca: "abundante antes; casi extinta al escribir el autor"
+    lectura: >
+      Quinta desaparición documentada (báquiro, barisigua, camuro, chenga,
+      guacoa) — y la primera de un animal con nombre caquetío ATESTIGUADO:
+      la paloma que Hernández Baño registró todavía volaba en Paraguaná
+      cuando Medina Colina era niño. Línea de base de fauna del monte
+      seco para el corpus de ecología.
+    segun_dictado: true
+  - id: mc-mundo-018
+    esfera: oficios / cal / fuego
+    hecho: >
+      El GUAIRÓN: horno rústico hecho en tierra para calcinar (conchas y)
+      piedras y fabricar cal.
+    voz_origen: guairón
+    pagina: 130
+    epoca: s. XX (Paraguaná)
+    lectura: >
+      Cierra mc-mundo-015 (la cal de caracol para el hayo y el bruñido):
+      la cal se hacía EN CASA, en un horno de tierra con nombre propio —
+      y ese nombre es la voz que el lexicón tiene como wairon 'hoguera'
+      (caquetío-atestiguado). Fuego → hoguera → horno de cal: la misma
+      palabra recorre la técnica. Con la datera, la chícora y la coa, el
+      dictado va dando el instrumental del oficio con nombre. Marca
+      retro-abstraido, s. XX; la continuidad con la cal precontacto del
+      hayo (baperon/raporon) es plausible, no afirmada.
+    segun_dictado: true
+  - id: mc-mundo-019
+    esfera: ecologia / flora / clima
+    hecho: >
+      El guamaro, árbol venenoso para los animales, «hoy es escaso en
+      nuestros montes, quizá debido a los continuos veranos».
+    voz_origen: guamaro
+    pagina: 130
+    epoca: "escaso al escribir el autor; causa que él propone: sequías prolongadas"
+    lectura: >
+      Sexta desaparición documentada, y la primera con CAUSA declarada por
+      la fuente: los «continuos veranos» (sequías). Para el corpus de
+      ecología: el testimonio liga la pérdida de flora del monte seco al
+      clima, no solo a la refinería o al desmonte — dato para la tesis de
+      tierra pobre y para el calendario de estaciones del motor (seca /
+      lluvias).
+    segun_dictado: true
+  - id: mc-mundo-020
+    esfera: lengua / dialectologia / geografia politica
+    hecho: >
+      ISOGLOSA INTRAPENINSULAR: al lagarto amarillo lo llaman gualamo «en
+      las poblaciones de Tacuato y Santa Ana»; «en el resto de las
+      poblaciones paraguaneras conserva el nombre de bisure».
+    voz_origen: gualamo
+    pagina: 130
+    epoca: s. XX
+    lectura: >
+      Primer dato de variación léxica DENTRO de Paraguaná que da el
+      dictado — y cae sobre Santa Ana, el asiento de los Guaranaos en
+      Oliver (pp. 275-276) y uno de los dos nodos de la era 2
+      (DISENO_ERA2 §2), con Tacuato al lado. Un solo dato no hace un
+      dialecto, pero es exactamente la clase de evidencia que la
+      simulación multi-nodo necesita para sembrar «semillas léxicas
+      divergentes por nodo» con base y no por diseño. Se registra para
+      la campaña de topónimos y para el casting de nodos; si el libro
+      da más pares «en X le dicen A, en el resto B», se junta la serie.
+    segun_dictado: true
+
+# Formato de entrada (ver bitácora §Formato de captura):
+# - voz: <tal como la escribe Medina Colina>
+#   glosa_libro: "<textual, corta>"
+#   pagina: <n>
+#   campo: mar | fauna | flora | cuerpo | oficio | casa | clima | otro
+#   origen_libro: "<solo si el autor marca origen>"
+#   nota_miguel: "<por qué le suena indígena; opcional>"
+#   dudosa: true            # calibración
+#   cruce: {lexicon: …, cognados: …, toponimos: …, comparandas: …}   # escriba
+#   veredicto: A | B | C | D  # protocolo §5, provisional
+#   razon: "<por qué ese nivel>"
+entradas:
+  - voz: arifuque
+    entrada_libro: "Arifuque / Harifuque (el libro la escribe de las dos formas, con y sin h)"
+    glosa_libro: >-
+      harina de maíz a la que se agregaba raspillo [?] de panela y que se
+      servía como parte de la comida de los arrieros. Es muy nutritiva.
+    pagina: 31
+    campo: oficio / comida
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: >-
+        ⭐ CASA con harifuche 'maíz tostado y miel' [caquetío-atestiguado],
+        Zavala Reyes 2015 glosario #153 (HB = Adrián Hernández Baño). Mismo
+        referente (maíz tostado + dulce), misma forma salvo ch~k final.
+      por_glosa: "kasá 'puche de maíz', amaka 'sitio de moler maíz', buriche/masato (bebidas): el campo del maíz procesado ya es caquetío atestiguado; ninguno es este alimento"
+      cognados: nada
+      toponimos: nada
+      a2: nada
+      fonotactica: pasa
+      fuera_del_repo: >-
+        Fundación Empresas Polar, *El maíz*, «Glosario alimentario del maíz»,
+        p. 498: «Harifuque. Harina de maíz tostado mezclada con papelón. / En
+        el estado Falcón, alimento consistente en harina de maíz cariaco
+        tostado, mezclada con leche.» (PDF consultado el 2026-09-01; ver
+        4-fuentes/polar-el-maiz-glosario.md). Distribución: Falcón.
+    filtros:
+      "1 castellano": "no restituye a nada: sin raíz ni sufijo castellanos; el análogo funcional canario es gofio, otra palabra"
+      "2 papiamento/neerlandés": "el maíz tostado allá es funchi (< bantú funji); no hay parecido"
+      "3 wayuu": "sin forma parecida en las 781 entradas wayuu ni en la A-2"
+      "4 taíno panhispánico": "no es voz general del español"
+      "5 africanismo": "sin candidato"
+      "6 caribe/jirajaroide": "sin candidato"
+    criterios_positivos:
+      "1 campo local intraducible": "sí — técnica alimentaria local (comida de camino de arrieros), el oficio diario que las crónicas no anotaron"
+      "2 distribución restringida": "sí — Falcón (Polar) y Paraguaná (Medina Colina); no es voz venezolana general"
+      "6 atestación previa": "sí — Hernández Baño vía Zavala #153, ya en el lexicón como atestiguado"
+    veredicto: A
+    razon: >
+      No es una entrada nueva: es la ATESTACIÓN REGIONAL VIVA (s. XX) de una
+      forma que el lexicón ya tiene como caquetío-atestiguado por Hernández
+      Baño. Tres testigos independientes convergen — Hernández Baño (vía
+      Zavala, 'maíz tostado y miel'), el glosario de Polar ('harina de maíz
+      tostado con papelón'; Falcón: cariaco tostado con leche) y Medina
+      Colina ('harina de maíz con panela, comida de arrieros'). El
+      paraguanerismo confirma la palabra en boca del pueblo un siglo después
+      de la crónica, y enriquece la glosa: no es solo el alimento sino su
+      USO (comida de camino). Es el primer acierto del dictado y del tipo
+      que la bitácora predijo: «la mayoría de lo bueno suele estar ya, y
+      entonces la voz vale como atestación regional viva».
+    dato_para_d5: >
+      Alternancia ch ~ k en la sílaba final: harifuche (Hernández Baño) ~
+      harifuque (Medina Colina, Polar). Se suma a las alternancias del
+      transcriptor que D5 (#36) colecciona (ch~j de Mitare). La h- inicial
+      la traen las tres fuentes (Medina Colina también sin ella).
+    propuesta_fusion:
+      accion: enriquecer, no crear
+      lema: harifuche
+      forma_fuente_anadir: "arifuque / harifuque (Medina Colina 2013 p. 31); harifuque (Polar, glosario p. 498)"
+      glosa_enriquecer: "maíz tostado y miel; harina de maíz tostado con papelón/panela — comida de camino de los arrieros (Paraguaná, s. XX)"
+      procedencias_anadir:
+        - {obra: medina-colina-sxx, pagina: 31}
+        - {obra: polar-el-maiz-glosario, pagina: 498}
+      etiqueta: "se mantiene caquetío-atestiguado (la atestación es la de Hernández Baño); las dos nuevas son testimonio regional s. XX"
+      esfera_mundo: "ecología/alimentación: el maíz tostado con dulce como ración de camino — para el corpus, con marca retro-abstraido"
+
+  - voz: saruro
+    glosa_libro: >-
+      [bajo la entrada «bajear»] la serpiente que en otros lugares del país
+      denominan tragavenados, nuestra gente la conoció como saruro.
+    pagina: 41
+    campo: fauna
+    origen_libro: "el autor contrasta el nombre nacional (tragavenados) con el de «nuestra gente» (saruro): distribución PENINSULAR declarada"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: >-
+        = saruro 'boa, serpiente no venenosa' [fuente: caquetío — RESUELTO
+        2026-08-24 (#47); la glosa anterior era 'árbol saruro']. Y buio
+        'serpiente, boa, diablo' [caquetío-atestiguado] como la otra palabra
+        de serpiente del canon.
+      toponimos: "= SARURO en la cola de Esteves (topónimo de Paraguaná)"
+      cognados: nada
+      a2: nada
+      fonotactica: pasa
+    filtros:
+      "1 castellano": "no restituye a nada"
+      "2 papiamento/neerlandés": "sin candidato"
+      "3 wayuu": "la culebra wayuu es wüi; nada parecido"
+      "4 panhispánico": "no — la voz nacional es tragavenados; saruro es local, lo dice el autor"
+      "5-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — fauna, y la boa es un animal del Golfete con carga simbólica (buio)"
+      "2 distribución restringida": "sí — «nuestra gente», frente al nacional tragavenados"
+      "5 respaldo toponímico": "sí — Saruro es topónimo en el índice de Esteves"
+      "6 atestación previa": "sí — ya en el lexicón (#47) con esta glosa"
+    veredicto: A
+    razon: >
+      Segunda atestación regional viva: la voz ya está en el lexicón como
+      caquetío 'boa' (tras #47, que corrigió la glosa de 'árbol' a
+      'serpiente'), es topónimo en Esteves, y Medina Colina la da como el
+      nombre PENINSULAR de la boa frente al nacional tragavenados — tres
+      patas independientes (fuente del lexicón, topónimo, habla viva del
+      s. XX). Es la confirmación externa que la decisión de #47 no tenía.
+    propuesta_fusion:
+      accion: enriquecer, no crear
+      lema: saruro
+      glosa_enriquecer: "boa, serpiente no venenosa; tragavenados (Boa constrictor) — nombre paraguanero frente al nacional"
+      procedencias_anadir:
+        - {obra: medina-colina-sxx, pagina: 41}
+      etiqueta: "la sube o no Miguel: hoy es 'caquetío' a secas; con topónimo + habla viva + fuente original hay base para revisarla"
+
+  - voz: barisigua
+    entrada_libro: "Barisigua — «con b larga y con s» (Miguel, sobre el papel)"
+    glosa_libro: >-
+      árbol que fue abundante en nuestro medio, hoy muy escaso, de hasta
+      ocho metros de altura, en otras regiones del país conocido como palo
+      de balsa. Su madera era muy liviana de peso, de granulación suave, se
+      presta para trabajarla y con ella se hacían bateas y baques que
+      necesitaban nuestras mujeres.
+    pagina: 43
+    campo: flora
+    origen_libro: "el autor contrasta el nombre local con el nacional («en otras regiones del país conocido como palo de balsa»): distribución PENINSULAR declarada"
+    nota_miguel: "habría que anotar si los caquetíos prehispánicos usaban este árbol para hacer canoas"
+    segun_dictado: true
+    dictado: 2026-09-01
+    identificacion_botanica: >-
+      CORREGIDA 2026-09-01. Género Erythrina (bucares, Fabaceae): Avendaño &
+      Castillo 2014 (Acta Bot. Venez. 37(2), p. 146) registran «Barisigua»
+      como nombre común de Erythrina pallida Britton, distribución con
+      Falcón (FA). Un blog local da E. tamayonis Krukoff (no está en la
+      monografía). A especie: abierta; a género: cerrada. NO es Ochroma: el
+      «palo de balsa» de Medina Colina es el nombre popular de una madera
+      liviana (el bucare seco), no la balsa botánica — la primera lectura
+      del escriba (Ochroma) fue una inferencia del nombre y queda retirada.
+    cruce:
+      lexicon: >-
+        nada por forma. ≈ barici/barisi 'agua turbia, tierras coloradas;
+        ceniza' [caquetío-atestiguado; cognado-001; toponimo-006] es
+        parecido difuso: se anota, NO se afirma (la madera es «blanco
+        rojizo» según Alvarado — coincidencia tentadora, sin prueba).
+      por_glosa: "kuru 'árbol, madera, tronco' [caq. reconstruido], bara 'palo, árbol' [caq. atestiguado]; ningún fitónimo caquetío para esta especie"
+      cognados: nada
+      toponimos: "nada en el canon ni en Esteves"
+      a2: nada
+      fonotactica: "pasa (barisiwa: sílabas CV, sin clusters)"
+      fuera_del_repo: >-
+        No está en Alvarado 1921. SÍ está en la flora científica: Avendaño &
+        Castillo 2014, p. 146 — «Nombres comunes: Bucare Peonia, Barisigua»
+        (Erythrina pallida; distribución AN, DC, FA, LA, MI, SU). Y es
+        TOPÓNIMO: el caserío LAS BARISIGUAS, parroquia Dabajuro, municipio
+        Dabajuro, Falcón (blog Pueblos de Venezuela: N 11º02,414′ W
+        70º43,247′, 65 msnm, a 3 km de Dabajuro; «el nombre lo toma del
+        árbol llamado Barisigua... palabra indígena»; madera «pesada y dura
+        cuando está verde, se hace liviana cuando se seca», buena para
+        talla). Wikipedia (municipio Dabajuro) no lista el caserío: la
+        fuente del topónimo es débil pero trae coordenadas — Miguel puede
+        verificarlo en el mapa. Pista inicial: resumen generado por Google
+        que pasó Miguel (no citable; se verificó cada afirmación).
+    filtros:
+      "1 castellano": "no restituye a nada; el nombre castellano es balsa/balso/lano"
+      "2 papiamento/neerlandés": "sin candidato"
+      "3 wayuu": "sin forma parecida"
+      "4 panhispánico": "no — el nombre general es otro; barisigua no circula fuera"
+      "5 africanismo": "sin candidato"
+      "6 caribe": "sin candidato directo; pero la FORMACIÓN en -igua es la de tacarigua y samanigua (Alvarado): patrón de fitónimo indígena venezolano, de filiación no resuelta"
+    criterios_positivos:
+      "1 campo local intraducible": "sí — fitónimo de especie, el criterio más discriminante"
+      "2 distribución restringida": "sí — solo Paraguaná, y el autor lo declara"
+      "3 fonotáctica": "pasa (débil en positivo)"
+      "4 cognado regular": "no"
+      "5 respaldo toponímico": "SÍ — Las Barisiguas (Dabajuro, Falcón occidental: el corazón de la tradición dabajuroide, la cerámica de los caquetíos costeros). Fuente débil (blog) con coordenadas; verificar en mapa"
+      "6 atestación colonial": "no; pero sí atestación CIENTÍFICA del nombre común (Avendaño & Castillo 2014)"
+    veredicto: B
+    razon: >
+      Subió de C a B el mismo día: sobrevive a los seis descartes y cumple
+      TRES criterios positivos — campo local (fitónimo de especie),
+      distribución restringida (Falcón; el autor la contrasta con el nombre
+      nacional) y RESPALDO TOPONÍMICO (Las Barisiguas, Dabajuro) — más la
+      fonotáctica y una atestación externa del nombre común en la flora
+      científica. Le falta el cognado con correspondencia regular que el
+      nivel B pide en sentido estricto: por eso es B «sin cognado», no A.
+      Destino del protocolo: corpus cultural SÍ (flora, marca
+      retro-abstraido, etiqueta hipotetico), lexicón activo NO salvo
+      decisión explícita. Es el primer fitónimo del dictado y el primer
+      candidato a sustrato SIN forma previa en el canon. La terminación
+      -igua (tacarigua, samanigua, y los topónimos en -igua de la región)
+      sugiere estrato indígena de filiación no resuelta — Paraguaná era
+      multiétnica (Esteves: nueve estratos); que el topónimo caiga en
+      Dabajuro inclina, sin probar, hacia el estrato caquetío costero.
+    propuesta:
+      destino: "3-mundo/corpus/ecologia.yaml (flora), etiqueta hipotetico, marca retro-abstraido, procedencia medina-colina-sxx p. 43"
+      hueco_que_toca: >-
+        hueco-lex-008 y ecologia-032: el corpus afirma que el cardonal no
+        da troncos y que la madera de canoa vino de fuera. Barisigua no lo
+        contradice: es un bucare de hasta ocho metros, de madera liviana al
+        secar y blanda — madera de BATEAS, BAQUES y talla (Medina Colina;
+        blog), no de piraguas. La pregunta de Miguel (¿canoas
+        prehispánicas?) queda respondida con matiz y sin fuente directa:
+        canoas de un tronco, improbable por la madera; vasijas de madera y
+        objetos ligeros, sí. Se registra como mc-mundo-006.
+      toponimo_a_la_cola: "Las Barisiguas (Dabajuro) → pasar a la campaña de topónimos con la lectura 'lugar de barisiguas' (fitónimo + -s plural castellano), fuente débil, coordenadas dadas"
+
+  - voz: bayute
+    glosa_libro: >-
+      especie de abeja que produce una miel dulce y un poco ácida. También
+      se le llama así a la casa que hace esta abeja, generalmente en palos
+      secos y huecos.
+    pagina: 45
+    campo: fauna / oficio (miel)
+    segun_dictado: true
+    dictado: 2026-09-01
+    identificacion: >-
+      Abeja sin aguijón (Meliponini), por la miel «dulce y un poco ácida»
+      (la acidez alta es el rasgo de las mieles de meliponinos: Vit et al.
+      2012 miden 12,7-95,9 meq/kg en la Melipona favosa de Paraguaná) y por
+      el nido en palos huecos. Especie: abierta (¿Melipona favosa? ¿otra?).
+    cruce:
+      lexicon: >-
+        nada por forma (lokono bute 'ahora' es ruido). Por glosa ('abeja',
+        'miel'): RUBA 'especie de abeja silvestre negra de Coro'
+        [caquetío-atestiguado], harifuche 'maíz tostado y miel', wayuu
+        mapase 'cera de abeja'. El caquetío tiene UNA abeja con nombre
+        (ruba); bayute sería otra.
+      cognados: nada
+      toponimos: nada
+      a2: nada
+      fonotactica: pasa
+      fuera_del_repo: >-
+        No está en Alvarado 1921. No aparece en la web como voz (búsqueda
+        2026-09-01: solo una marca comercial y anagramas). La literatura
+        sobre la Melipona favosa de Paraguaná (Vit et al. 2012, Rev. Inst.
+        Nac. Hig. «Rafael Rangel» 43(1): 15-19) la llama «erica» o «maba»;
+        las listas nacionales de meliponinos dan guanota, erica/arica,
+        rubita, conguita, angelita. BAYUTE NO ESTÁ EN NINGUNA: Medina
+        Colina es hoy su única fuente.
+    filtros:
+      "1 castellano": "no restituye a nada"
+      "2 papiamento/neerlandés": "sin candidato conocido (por cotejar)"
+      "3 wayuu": "la abeja/miel wayuu es maapa; nada parecido"
+      "4 panhispánico": "no — los nombres nacionales son otros"
+      "5 africanismo": "sin candidato"
+      "6 caribe": "sin candidato"
+    criterios_positivos:
+      "1 campo local intraducible": "sí — nombre de especie + su producto + su nido: el oficio de la miel silvestre"
+      "2 distribución restringida": "sí — no circula fuera (ni en la literatura de la propia Paraguaná)"
+      "3 fonotáctica": "pasa (débil)"
+      "4 cognado regular": "no"
+      "5 respaldo toponímico": "no"
+      "6 atestación previa": "no"
+    veredicto: C
+    razon: >
+      Sobrevive a los seis descartes con dos criterios positivos (campo
+      local, distribución restringida): NIVEL C, plausible — al corpus
+      (fauna/oficio, hipotético), nunca al lexicón. Es exactamente la clase
+      de voz que el protocolo esperaba encontrar: el oficio diario (la miel
+      silvestre, el nido en el palo hueco) que las crónicas no anotaron. Y
+      un dato de contraste: el canon ya tiene ruba 'abeja silvestre negra
+      de Coro'; si bayute y ruba son dos especies distintas con nombre
+      propio, el caquetío costero distinguía sus meliponinos — lo que la
+      etnoapicultura documenta en toda la región.
+    propuesta:
+      destino: "3-mundo/corpus/ecologia.yaml (fauna / oficios: miel silvestre), etiqueta hipotetico, marca retro-abstraido, procedencia medina-colina-sxx p. 45"
+    voces_a_mirar:
+      - "maba: el OTRO nombre paraguanero de la Melipona favosa (Vit et al. 2012) — ~ wayuu maapa 'miel, abeja' (arahuaco). Si el habla de Paraguaná conserva maba, es una voz arahuaca viva que Medina Colina quizá trae bajo M. Cruzar contra el lexicón y preguntar a Miguel"
+      - "rubita (lista nacional de meliponinos, «muy pequeña, amarilla») frente a caquetío ruba 'abeja silvestre negra de Coro': ¿diminutivo castellano sobre la voz caquetía, o rubia 'amarilla'? Ambiguo; se anota"
+
+  - voz: buche
+    glosa_libro: >-
+      es la palabra académica y nuestro pueblo la utilizó en algunas de sus
+      acepciones. En las aves, bolsa formada por el esófago en la que los
+      alimentos permanecen un poco antes de llegar al estómago. También se
+      denominó así a un cactus, pequeño en su tamaño, no alcanzaba más de
+      los veinte centímetros de alto y de forma redonda, y produce un fruto
+      de color rojo, de sabor agradable.
+    pagina: "49-50"
+    campo: flora
+    origen_libro: "el autor la llama «la palabra académica» por la acepción del ave; la del cactus es la que importa"
+    testimonio_miguel: "«Yo mismo conocí el buche como este cactus pequeño y redondo, con que florece.» — testimonio vivo (marca retro-abstraido en primera persona)"
+    segun_dictado: true
+    dictado: 2026-09-01
+    identificacion_botanica: "Melocactus (M. curvispinus / «M. communis» de Alvarado): cactus globoso ≤ 20 cm, fruto rojo comestible"
+    cruce:
+      lexicon: >-
+        = BUCHE 'planta xerófita, melocacto, cardo globoso, rastrero'
+        [caquetío-atestiguado, Zavala Reyes 2015 #45 (AM+E); variante
+        buchi]. Misma forma, mismo referente.
+      fuera_del_repo: "Alvarado 1921 s.v. BUCHE: «Melocactus communis. Pichigüey, abajo. Voz usada en Occ[idente]»"
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa
+    filtros:
+      "1 castellano": "la acepción del cactus NO es la castellana (buche 'bolsa del ave'): homonimia con voz local, o metáfora por la forma globosa — el lexicón la tiene como caquetía atestiguada por Zavala"
+      "4 panhispánico": "la acepción cactus es occidental venezolana (Alvarado), no general"
+    criterios_positivos:
+      "1 campo local": "sí — nombre de especie de cactácea"
+      "2 distribución restringida": "sí — Occidente (Alvarado), Coro/Paraguaná"
+      "6 atestación previa": "sí — Zavala #45 (Angulo Molina + Esteves); Alvarado 1921"
+    veredicto: A
+    razon: >
+      Tercera atestación regional viva: la voz ya es caquetío-atestiguado en
+      el lexicón, Alvarado la sitúa en el Occidente, Medina Colina la da en
+      Paraguaná con descripción botánica precisa, y Miguel la conoce de
+      primera mano. Reserva honesta: la forma coincide con el castellano
+      buche 'bolsa del esófago', así que cabe que sea metáfora castellana
+      sobre el cactus globoso y no voz indígena; la etiqueta atestiguada
+      descansa en Zavala (AM+E), y esa duda vale trasladarla a la ficha del
+      lexicón como nota, no cambia el veredicto del dictado.
+    propuesta_fusion:
+      accion: enriquecer, no crear
+      lema: buche
+      glosa_enriquecer: "melocacto (Melocactus), cactus globoso de hasta 20 cm, fruto rojo comestible"
+      procedencias_anadir:
+        - {obra: medina-colina-sxx, pagina: "49-50"}
+        - {obra: alvarado-1921, nota: "s.v. BUCHE, Melocactus communis, «voz usada en Occ.»"}
+      nota_etiqueta: "añadir la reserva de homonimia con el castellano buche"
+
+  - voz: lefaria
+    entrada_libro: "bajo «Breva o guanariji» (p. 49): «la primera era [el fruto] del cardón de lefaria»; y bajo «asentar agua»: «un trozo de cardón de lefaria»"
+    glosa_libro: "[no tiene entrada propia hasta ahora] cardón cuyo fruto se llamaba breva; su tallo sin espinas se usaba para asentar el agua"
+    pagina: "49 (y asentar agua)"
+    campo: flora
+    segun_dictado: true
+    dictado: 2026-09-01
+    identificacion_botanica: "cactácea columnar de Falcón; especie abierta (¿Cereus repandus? ¿Stenocereus?)"
+    cruce:
+      lexicon: "nada por forma; los cardones del canon son kadushi (Cereus hexagonus), coro (hipotético), dato/kaduchi (fruto), buche (melocacto)"
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa
+      fuera_del_repo: >-
+        Alvarado 1921 USA la voz sin lematizarla, s.v. AURÉRO (cirio del
+        Oriente): «su fruto, que es verde como la lefaria y redondo como el
+        dato» — es decir, en 1921 «lefaria» era nombre corriente de un
+        cardón (o de su fruto) para un lector venezolano. No aparece como
+        lema; no tiene etimología dada.
+    filtros:
+      "1 castellano": "no restituye a nada castellano"
+      "2-6": "sin candidato conocido"
+    criterios_positivos:
+      "1 campo local": "sí — fitónimo de especie de cactácea"
+      "2 distribución restringida": "sí en Paraguaná (Medina Colina); Alvarado la conoce, así que circula al menos en Falcón/Lara"
+      "6 atestación previa": "parcial — mención de Alvarado 1921, no lematizada"
+    veredicto: C
+    razon: >
+      Fitónimo de cardón sin forma en el canon: sobrevive a los descartes,
+      campo local y distribución regional, con la mención de Alvarado como
+      apoyo. Sin cognado ni topónimo: C, al corpus (flora) como hipotético.
+      Dos usos técnicos documentados por Medina Colina: fruto comestible
+      (breva) y clarificación del agua (mc-mundo-003).
+
+  - voz: susucure
+    lectura_de_oido: "dictado «susuchure», «zuzucure» — cotejar grafía del libro"
+    entrada_libro: "bajo «Breva o guanariji» (p. 49): «la segunda [guanariji] era [el fruto] del susucure»"
+    glosa_libro: "[sin entrada propia hasta ahora] cardón cuyo fruto se llamaba guanariji"
+    pagina: 49
+    campo: flora
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada por forma ni por glosa"
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa
+      fuera_del_repo: "no está en Alvarado 1921; sin resultados en la web (2026-09-01)"
+    filtros:
+      "1-6": "sin candidato en ninguno; reduplicación su-su- de tipo expresivo/onomatopéyico frecuente en fitónimos y zoónimos regionales (cf. chuchubi)"
+    criterios_positivos:
+      "1 campo local": "sí — fitónimo de especie de cactácea"
+      "2 distribución restringida": "sí — única fuente: Medina Colina"
+    veredicto: C
+    razon: >
+      Como lefaria pero con menos apoyo: sin atestación previa de ningún
+      tipo. Medina Colina es la única fuente. C, al corpus como hipotético.
+      Si el libro trae entrada propia en la S, dictarla con la descripción.
+
+  - voz: guanariji
+    lectura_de_oido: "dictado «Guanarihi», «guanariji» — cotejar"
+    entrada_libro: "Breva o guanariji"
+    glosa_libro: >-
+      eran las denominaciones de los frutos de determinados cardones. La
+      primera era del cardón de lefaria, la segunda del susucure.
+    pagina: 49
+    campo: flora (fruto)
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: >-
+        nada por forma. Por glosa: DATO 'fruto del cardón' y KADUCHI 'fruto
+        del cardón (Cereus spp.)' [caquetío-atestiguado]: el caquetío tenía
+        dos nombres de fruto de cardón registrados; guanariji sería un
+        tercero, específico del susucure.
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa (wanariji)
+      fuera_del_repo: "no está en Alvarado; sin resultados en la web. El fruto del cardón guajiro es iguaraya en wayuu (Stenocereus griseus, «yosú»): sin parecido"
+    filtros:
+      "1 castellano": "no restituye"
+      "3 wayuu": "iguaraya/yosú: nada parecido"
+      "2, 4-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — nombre de fruto de cardón, el campo más caquetío que hay (dato, kaduchi)"
+      "2 distribución restringida": "sí — única fuente"
+    veredicto: C
+    razon: >
+      El habla paraguanera distinguía los frutos por especie de cardón:
+      breva (lefaria) y guanariji (susucure). Que el lexicón atestiguado ya
+      tenga DOS nombres de fruto de cardón (dato, kaduchi) hace verosímil
+      un tercero. Sin apoyo externo: C. La inicial gua- (/wa-/) es la de
+      guaca/waka, guacoa/wakoa: grafía colonial de /w/ — el lema fonémico
+      sería wanariji.
+
+  - voz: budare
+    glosa_libro: >-
+      [según Miguel] palabra aceptada por la Real Academia; plato de barro
+      o hierro para cocer el pan de maíz.
+    pagina: null            # ⚠️ PENDIENTE (¿50-51?)
+    campo: casa / oficio (cocina)
+    nota_miguel: >-
+      «Esta palabra sí o sí es de acá, pero sin lugar a dudas es una
+      creación del pueblo para identificar el plato de barro o hierro para
+      cocer el pan de maíz. Y sí o sí tiene esa terminación -re que ya
+      identificamos.»
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada por forma (dare 'diente' es ruido); no está en el lexicón"
+      toponimos: >-
+        ≈ CABUDARE (toponimo-010, nivel B, 'sitio de cultivo') y DABUDARE
+        (toponimo-011, nivel B, 'sitio de extracción de barro'): el canon
+        ya tiene -budare como formante toponímico, y Dabudare 'sitio de
+        extracción de barro' es el barro con que se hacen budares.
+      cognados: >-
+        NO registrado, pero la correspondencia es la de cognado-001 (CQ
+        barisi : LK bálisi — l lokono ~ r caquetío): lokono BUDALI
+        'budare' (Alvarado: «aruaco búddale») : budare, misma regla.
+      fonotactica: pasa
+      fuera_del_repo: >-
+        Alvarado 1921 s.v. BUDARE: «Disco de barro cocido, plano o
+        ligeramente cóncavo, en que se cuece el pan de yuca o de maíz... El
+        vocablo tenemos directamente del caribe insular butáli, ch[aima]
+        pitari, aruaco búddale». Es decir: voz arahuaca (lokono budali), con
+        reflejo en caribe insular y chaima; DRAE: budare, Ven. y Col.
+    filtros:
+      "1 castellano": "no"
+      "2 papiamento": "no"
+      "3 wayuu": "el budare wayuu es otra palabra (jaipa? — no en el lexicón); no es préstamo wayuu"
+      "4 panhispánico": "NO es panhispánico: venezolanismo/colombianismo. Pero sí es nacional en Venezuela — no discrimina Paraguaná"
+      "5-6": "el chaima pitari y el caribe insular butáli son reflejos del mismo étimo arahuaco, no origen"
+    criterios_positivos:
+      "1 campo local": "sí — técnica alimentaria (casabe/arepa)"
+      "2 distribución restringida": "no — nacional"
+      "4 cognado con correspondencia regular": "SÍ — lokono budali, con l~r como barisi/bálisi (cognado-001)"
+      "5 respaldo toponímico": "sí — Cabudare, Dabudare en el canon (nivel B)"
+      "6 atestación colonial": "sí — Codazzi («hudare»), y la voz está en las crónicas del casabe"
+    veredicto: B
+    razon: >
+      Voz ARAHUACA con cognado lokono de correspondencia regular (l~r, la
+      misma de barisi/bálisi), formante toponímico ya en el canon
+      (Cabudare, Dabudare) y atestación temprana. Le falta la distribución
+      restringida (es nacional) — por eso no es prueba de sustrato
+      PARAGUANERO, pero sí de vocabulario arahuaco compartido, el criterio
+      de repertorio que Miguel aplicó a bajareke. B: candidata al lexicón
+      con etiqueta a decidir por Miguel (¿caquetío-reconstruido por
+      cognado + topónimo?), nunca atestiguado (ninguna fuente la da como
+      caquetía en boca caquetía). La -re final que Miguel señala es la
+      terminación más frecuente de los topónimos de Esteves (19/186).
+    propuesta:
+      destino: "candidata al lexicón: budare 'disco de barro para cocer casabe/arepa', fuente a decidir (reconstruido por cognado lokono budali + topónimos Cabudare/Dabudare + Alvarado); registrar cognado nuevo en cognados.yaml (CQ budare : LK budali : CAIC butáli : chaima pitari), procedencia alvarado-1921 s.v. BUDARE"
+
+  - voz: busuga
+    glosa_libro: >-
+      árbol de madera liviana que se utilizó para hacer la armazón de las
+      casas de bahareque. Su corteza se usaba para teñir de color amarillo.
+      Se escuchó decir «tan amarillo como una busuga». Es palabra popular.
+    pagina: 52
+    campo: flora / casa / tinte
+    origen_libro: "«es palabra popular»"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada por forma; por glosa ('madera', 'amarillo'): kuru, bara [caq.], kanawa 'amarillo' [lokono/garífuna], dibidibe 'árbol cuyo fruto da tinta' [caq. atestiguado] — el caquetío tiene UN árbol tintóreo con nombre (dibidibe, el dividivi); busuga sería otro, de tinte amarillo"
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa
+      fuera_del_repo: "no está en Alvarado 1921 (búsqueda por lema y por texto)"
+    filtros:
+      "1 castellano": "no restituye"
+      "2-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — fitónimo con dos usos técnicos (armazón de bahareque, tinte amarillo)"
+      "2 distribución restringida": "sí — única fuente"
+    veredicto: C
+    razon: >
+      Fitónimo con técnica: madera de armazón para el bahareque (la
+      tecnología compartida de bajareke) y corteza tintórea amarilla. Sin
+      apoyo externo: C, al corpus (flora/oficios) como hipotético. Toca el
+      registro de colores: el caquetío atestiguado tiene CERO términos de
+      color (colores_caquetios.yaml), y aquí aparece el AMARILLO como
+      tinte con árbol propio — dato de mundo, no de lengua. Identificación
+      botánica abierta (¿un Bignoniácea o Fabácea de corteza amarilla?).
+
+  - voz: cachicamo
+    glosa_libro: >-
+      así denominaron nuestros viejos al animal conocido en otras latitudes
+      como armadillo.
+    pagina: 57
+    campo: fauna
+    origen_libro: "el autor contrasta con el nombre «de otras latitudes» (armadillo)"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: >-
+        = KACHIKAMO 'armadillo (Dasypus novemcinctus)' [caquetío-atestiguado,
+        forma_fuente cachicamo; notas: «Alvarado 1921 s.v. CACHICAMO...
+        atribución débil de la filiación: voz de circulación nacional»]. Y
+        KORIE 'armadillo' [caquetío; #46 resuelto 2026-08-24: tres fuentes
+        dicen armadillo]. El canon tiene DOS palabras para el armadillo.
+      fuera_del_repo: >-
+        Alvarado 1921 s.v. CACHICAMO: «Cachicamo es voz cumanagota, que
+        encontramos en otras lenguas caribes, v. g. el calina kachikamon,
+        el tamanaco kaikkámo, el arecuna kachikamó. Dice Cassani
+        expresamente: "llámanle los Indios Cachicamo, y los Españoles
+        Armadillo"». Castellanos la cita como nombre de un cacique de
+        Barcelona.
+      fonotactica: pasa
+    filtros:
+      "4 nacional": "cae — voz venezolana general"
+      "6 caribe": "cae — cumanagota/caribe según Alvarado"
+    veredicto: A
+    razon: >
+      Atestación viva de una entrada que el lexicón ya tiene como
+      caquetío-atestiguado — pero con la misma reserva que la propia ficha
+      declara: la FILIACIÓN es caribe (cumanagoto) y la circulación
+      nacional; la etiqueta sobrevive por el criterio de repertorio que
+      Miguel fijó con bajareke. Lo que el dictado añade es de mundo, no de
+      lengua: el paraguanero del XX dice cachicamo, no korie — y korie es la
+      palabra caquetía de filiación propia (Hernández Baño). Tercera
+      sustitución documentada (koke→bachaco, dipopo→cabuya, korie→cachicamo).
+    propuesta_fusion:
+      accion: enriquecer, no crear
+      lema: kachikamo
+      procedencias_anadir:
+        - {obra: medina-colina-sxx, pagina: 57}
+      nota: "añadir a la ficha la filiación cumanagota que da Alvarado (hoy la nota solo dice «no declara origen») y el vínculo con korie"
+
+  - voz: cachinare
+    glosa_libro: >-
+      es creada por el pueblo para designar con ella el fruto del cardón
+      que no terminó de desarrollarse, que quedó pequeño o no maduró bien.
+    pagina: 57
+    campo: flora (fruto)
+    origen_libro: "creada por el pueblo (según el autor)"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada por forma; por glosa: dato, kaduchi 'fruto del cardón' [caq. atestiguado] — el campo ya es caquetío; cachinare sería el fruto MALOGRADO"
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa (kakinare)
+      fuera_del_repo: "no está en Alvarado 1921"
+    filtros:
+      "1 castellano": "no restituye (¿cachi- + -nare? nada castellano)"
+      "2-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — vocabulario del fruto de cardón, el más caquetío del lexicón (dato, kaduchi, guanariji)"
+      "2 distribución restringida": "sí — única fuente"
+    veredicto: C
+    razon: >
+      Cuarto término del campo «fruto de cardón» en esta sesión: el fruto
+      que no cuajó. Una lengua que distingue el fruto por especie
+      (dato/kaduchi/guanariji) y por estado (cachinare) es una lengua de
+      recolectores de cardón — coherente con la ecología del Golfete. Sin
+      apoyo externo: C, al corpus. Final -are, como cadare y budare: se
+      anota sin afirmar nada.
+
+  - voz: cacuro
+    glosa_libro: >-
+      con este nombre nuestros viejos denominaron a la conocida avispa, y
+      por ser esta muy agresiva cuando se molestaba, por lo general
+      llamaban así a la persona de mal genio. Es palabra de pueblo.
+    pagina: 57
+    campo: fauna
+    origen_libro: "«es palabra de pueblo»"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "= KAKURO 'pequeña avispa negra' [caquetío-atestiguado, Zavala Reyes 2015 #54 (E+A), forma_fuente cacuro]"
+      fuera_del_repo: "Alvarado 1921 s.v. CACURO: «En Coro significa avispero.» — LOCALIZADA EN CORO por Alvarado"
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa
+    filtros:
+      "1-6": "sin candidato; el wayuu es ko'oi"
+    criterios_positivos:
+      "1 campo local": "sí — zoónimo de especie"
+      "2 distribución restringida": "sí — Coro (Alvarado), Paraguaná (Medina Colina)"
+      "6 atestación previa": "sí — Zavala #54 (Esteves + Arcaya); Alvarado 1921 con localización"
+    veredicto: A
+    razon: >
+      Cuarta atestación viva, y la más limpia: el lexicón la tiene por
+      Esteves y Arcaya, Alvarado la localiza explícitamente en Coro en
+      1921, y Medina Colina la da viva en Paraguaná con extensión
+      metafórica ('persona de mal genio') — señal de palabra arraigada, no
+      de tecnicismo. Sin competidor en ninguna lengua vecina.
+    propuesta_fusion:
+      accion: enriquecer, no crear
+      lema: kakuro
+      glosa_enriquecer: "pequeña avispa negra; avispero (Coro, Alvarado); fig. persona de mal genio (Paraguaná)"
+      procedencias_anadir:
+        - {obra: medina-colina-sxx, pagina: 57}
+        - {obra: alvarado-1921, nota: "s.v. CACURO: «En Coro significa avispero»"}
+
+  - voz: cadare
+    entrada_libro: "Cadare o mugre"
+    glosa_libro: >-
+      la primera fue creada por el pueblo como sinónimo de la segunda, y
+      ambas significaron una suciedad profunda; conforme a la Academia de
+      la Lengua, la segunda es grasa o suciedad de la lana, vestidos u
+      otros.
+    pagina: 57
+    campo: otro (cuerpo/casa)
+    origen_libro: "creada por el pueblo (según el autor)"
+    nota_miguel: "«cadare — bien interesante esa palabra» (la -re)"
+    segun_dictado: true
+    dictado: 2026-09-01
+    dudosa: true
+    cruce:
+      lexicon: "nada por forma (dare 'diente' es ruido: cognado-010); por glosa: lokono wakaijaru 'sucio', wayuu yarüttaa 'estar sucio' — nada parecido"
+      toponimos: "≈ capadare (nivel C, 'diente de tigre'), cabudare; Esteves: Adaure, Camare — parecidos difusos por la final -are/-ure, no por la raíz"
+      fonotactica: pasa
+      fuera_del_repo: "no está en Alvarado 1921; nada en la web"
+    filtros:
+      "1 castellano": "no restituye a nada conocido"
+      "2-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "no — 'mugre' no es referente local"
+      "2 distribución restringida": "sí, por defecto — única fuente"
+    veredicto: C
+    certeza: baja
+    razon: >
+      Sobrevive a los descartes por falta de etimología, no por mérito:
+      el campo (suciedad) no discrimina y solo la única fuente la hace
+      «restringida». Queda C-baja / dudosa. Lo único que la sostiene es la
+      final -are/-re que Miguel viene marcando (budare, cachinare, y la
+      terminación toponímica más frecuente de Esteves): es un patrón real
+      de la región, pero una terminación no hace una etimología.
+
+  - voz: camuro
+    glosa_libro: >-
+      es un recipiente que se hace con una especie de tapara, fruto de una
+      planta rastrera. Era común en las empalizadas de los conucos. Hoy
+      desaparecido en nuestro medio rural. En otras regiones del país se le
+      conoce como camaso.
+    pagina: 61
+    campo: casa / flora (recipiente)
+    origen_libro: "el autor contrasta con el nombre nacional (camaso): distribución peninsular del nombre"
+    segun_dictado: true
+    dictado: 2026-09-01
+    identificacion_botanica: "Lagenaria siceraria (camaso, calabazo, tapara de bejuco): cucurbitácea rastrera de fruto duro usado como vasija"
+    cruce:
+      lexicon: >-
+        nada por forma (kakuro, samuro: ruido). Por glosa: baperon /
+        raporon 'calabaza con cal' [caquetío-atestiguado], auyama
+        [caribe-cumanagoto], wayuu aliita 'totuma'. El caquetío tiene la
+        calabaza-recipiente (baperon 'con cal': el poporo del hayo), no
+        esta vasija de Lagenaria.
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa
+      fuera_del_repo: "Alvarado 1921: CAMASA «fruto del camaso, y vasija hecha de él» (voz nacional); CAMURO no está"
+    filtros:
+      "1 castellano": "no restituye"
+      "2 papiamento": "sin candidato"
+      "3 wayuu": "aliita/iita: nada parecido"
+      "4 nacional": "no — el nacional es camaso; camuro es local, lo dice el autor"
+      "5-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — vasija de calabaza, referente precontacto (el conuco, la empalizada, la tapara)"
+      "2 distribución restringida": "sí — única fuente, y contrastada por el autor con el nacional"
+    veredicto: C
+    razon: >
+      Nombre local de la vasija de Lagenaria frente al nacional camaso:
+      pasa los filtros, campo local y distribución restringida, sin cognado
+      ni atestación previa. C, al corpus (casa/flora). Final -uro como
+      saruro, kakuro, samuro: cadencia del lexicón atestiguado. El dato de
+      mundo (la planta en las empalizadas del conuco, hoy desaparecida) va
+      a mc-mundo-007.
+
+  - voz: caseto
+    glosa_libro: >-
+      planta silvestre en nuestros montes, de una altura de no más de dos
+      metros, de ninguna utilidad para el campesino.
+    pagina: 65
+    campo: flora
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "= KASETO 'planta herbácea' [caquetío-atestiguado, Zavala Reyes 2015 #68 (E = Esteves), forma_fuente caseto]"
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa
+      fuera_del_repo: "no está en Alvarado 1921"
+    criterios_positivos:
+      "1 campo local": "sí — fitónimo"
+      "2 distribución restringida": "sí — única fuente además de Esteves"
+      "6 atestación previa": "sí — Esteves vía Zavala #68"
+    veredicto: A
+    razon: >
+      Quinta atestación viva: Esteves (vía Zavala) la registra como
+      «planta herbácea» y Medina Colina la describe (arbusto de hasta 2 m,
+      sin uso). Que una planta SIN utilidad conserve nombre propio es
+      señal fuerte de léxico heredado, no de creación práctica: nadie
+      inventa un nombre para lo que no sirve. La descripción de Medina
+      Colina mejora la glosa (arbusto, no hierba). Identificación botánica
+      abierta.
+    propuesta_fusion:
+      accion: enriquecer, no crear
+      lema: kaseto
+      glosa_enriquecer: "planta silvestre del monte, arbustiva (hasta 2 m), sin uso campesino"
+      procedencias_anadir:
+        - {obra: medina-colina-sxx, pagina: 65}
+
+  - voz: caujaro
+    lectura_de_oido: "dictado «Caojaro / Caujaro»"
+    glosa_libro: >-
+      arbusto común en nuestros montes, de fruto comestible y de agradable
+      sabor.
+    pagina: 65
+    campo: flora
+    segun_dictado: true
+    dictado: 2026-09-01
+    identificacion_botanica: "Cordia sp. (caujaro = Cordia dentata / C. alba en Falcón y Lara), Boraginaceae; fruto mucilaginoso comestible"
+    cruce:
+      lexicon: "= KAUJARO 'árbol de madera blanda, fruta mucilaginosa, del género Cordia' [caquetío-atestiguado, Zavala Reyes 2015 #72 (E = Esteves), forma_fuente caujaro]"
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa
+      fuera_del_repo: "Alvarado 1921 solo trae el derivado (CAUJARO, A. 'concerniente al caujaro'; viruela caujara): la voz era corriente en 1921"
+    criterios_positivos:
+      "1 campo local": "sí — fitónimo de especie con fruto comestible"
+      "2 distribución restringida": "regional (Falcón/Lara)"
+      "6 atestación previa": "sí — Esteves vía Zavala #72"
+    veredicto: A
+    razon: >
+      Sexta atestación viva. Esteves lo registra como caquetío con la
+      descripción botánica (Cordia, fruta mucilaginosa) y Medina Colina lo
+      da vivo en Paraguaná con el dato de uso (fruto comestible, sabor
+      agradable). Final -aro como saruro, kakuro, camuro: la cadencia del
+      lexicón atestiguado.
+    propuesta_fusion:
+      accion: enriquecer, no crear
+      lema: kaujaro
+      glosa_enriquecer: "árbol/arbusto del género Cordia, madera blanda, fruto mucilaginoso comestible y agradable"
+      procedencias_anadir:
+        - {obra: medina-colina-sxx, pagina: 65}
+
+  - voz: chamaco
+    glosa_libro: >-
+      con este vocablo se conoció en nuestra Paraguaná al ave conocida por
+      todos como pájaro carpintero, dado que su principal característica
+      es que, por poseer un pico muy fuerte, construye sus nidos en los
+      huecos que taladra en los árboles.
+    pagina: 67
+    campo: fauna
+    origen_libro: "el autor contrasta con el nombre general («conocida por todos como pájaro carpintero»): distribución peninsular del nombre"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada real (kama 'tapir', wamacho 'guamacho': ruido difuso); por glosa: solo genéricos de 'pájaro' en lokono y wayuu — el canon NO tiene nombre para el carpintero"
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa
+      fuera_del_repo: "no está en Alvarado 1921. Homónimo del mexicanismo chamaco 'muchacho' (< náhuatl chamahuac), que no llega a Venezuela con ese sentido: homonimia casual"
+    filtros:
+      "1 castellano": "no restituye; el homónimo mexicano no explica 'carpintero'"
+      "2-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — zoónimo de especie (Picidae del monte xerófilo)"
+      "2 distribución restringida": "sí — única fuente, contrastada por el autor con el nombre general"
+    veredicto: C
+    razon: >
+      Nombre local del pájaro carpintero frente al general: pasa los
+      filtros, campo local y distribución restringida, sin cognado ni
+      atestación. C, al corpus (fauna) como hipotético. Llena un hueco:
+      el canon no tiene palabra caquetía para el carpintero, ave
+      conspicua del cardonal (anida en los cardones secos).
+
+  - voz: chevebe
+    glosa_libro: >-
+      con este nombre, un tanto extraño, nuestros mayores identificaron a
+      la langosta; otros le llaman saltamontes. Es palabra de pueblo.
+    pagina: "69-70"
+    campo: fauna
+    origen_libro: "«es palabra de pueblo»; el autor mismo la halla «un tanto extraña»"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: >-
+        nada por forma. POR GLOSA: TARA 'langosta; también mariposa,
+        polilla' [caquetío-atestiguado] — y tara es la decisión abierta
+        #45 («¿venado o mariposa?»). También ditero 'insecto que daña'
+        [caq.], wayuu kaashapü 'langosta', ju'i 'grillo'.
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa (kebebe)
+      fuera_del_repo: "no está en Alvarado 1921"
+    filtros:
+      "1 castellano": "no restituye"
+      "3 wayuu": "kaashapü / ju'i: nada parecido"
+      "2, 4-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — zoónimo de especie"
+      "2 distribución restringida": "sí — única fuente"
+    veredicto: C
+    razon: >
+      Nombre local del saltamontes: pasa los filtros, campo local y
+      distribución restringida, sin cognado ni atestación. C, al corpus
+      (fauna). Final -ebe como carebe (p. 64): dos voces de esta letra con
+      la misma cadencia, ambas sin filiación — se anota, no se afirma.
+    dato_para_45: >
+      El habla paraguanera del XX tenía palabra PROPIA para la langosta
+      (chevebe) y no usaba tara. No decide #45 (tara: ¿venado o
+      mariposa?), pero quita apoyo a la lectura «tara = langosta»: si tara
+      hubiera sido el nombre corriente del insecto, lo esperable es que
+      sobreviviera como sobrevivieron cacuro, buche o caujaro. Se anota
+      como dato para la decisión.
+
+  - voz: chenga
+    lectura_de_oido: "dictado «Jenga, chenga, chinga» — leído chenga; cotejar"
+    glosa_libro: >-
+      voz con que el pueblo identificó a la paloma perdiz. Fue abundante en
+      nuestros montes, hoy casi desaparecida.
+    pagina: 70
+    campo: fauna
+    segun_dictado: true
+    dictado: 2026-09-01
+    identificacion: "paloma perdiz = Leptotila / Geotrygon (paloma de suelo del monte seco); especie abierta"
+    cruce:
+      lexicon: >-
+        nada por forma. POR GLOSA: el caquetío atestiguado distingue
+        palomas por especie — wakoa 'paloma', tauta y tigi 'pequeña paloma
+        ictiófaga', tijua 'paloma de canto onomatopéyico' — y ninguna es
+        la paloma perdiz: chenga sería una más de esa serie. Wayuu:
+        mo'uwa 'paloma silvestre', peerü 'perdiz'.
+      cognados: nada
+      toponimos: nada
+      fonotactica: "pasa por el cluster ng de kudanga, pero -nga es marginal en caquetío (1/222 atestiguadas, y esa de segmentación dudosa — ver ananinga)"
+      fuera_del_repo: "no está en Alvarado 1921"
+    filtros:
+      "1 castellano": "no restituye"
+      "3 wayuu": "mo'uwa/peerü: nada parecido"
+      "5 africanismo": "la final -nga es la cadencia típica de los africanismos caribeños; sin candidato concreto"
+      "2, 4, 6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — zoónimo de especie, y de una serie (palomas) que el caquetío atestiguado ya nombra por especie"
+      "2 distribución restringida": "sí — única fuente"
+    veredicto: C
+    certeza: baja
+    razon: >
+      Encaja en la serie caquetía de palomas nombradas por especie
+      (wakoa, tauta, tigi, tijua) y pasa los filtros; pero la final -nga
+      es ajena al caquetío medido y propia de los africanismos, y no hay
+      etimología en ninguna dirección. C-baja: al corpus (fauna) como
+      hipotético, con la reserva fonológica declarada. Posible
+      onomatopeya del canto (como tijua). La extinción va a mc-mundo-010.
+
+  - voz: chiguare
+    glosa_libro: >-
+      así identificó nuestro pueblo a una planta enredadera que
+      generalmente cubre un árbol para, apoyándose en él, poder
+      desarrollarse. No es parásita, por lo que no daña a la que le sirve
+      de apoyo. Sus frutos, muy pequeños, tienen un sabor agradable y
+      parecido a la uva.
+    pagina: 71
+    campo: flora
+    segun_dictado: true
+    dictado: 2026-09-01
+    identificacion_botanica: "trepadora no parásita de fruto pequeño dulce (¿Cissus? ¿Vitis? ¿Passiflora?); abierta"
+    cruce:
+      lexicon: >-
+        nada exacto. ≈ CHIPARE 'matapalo' [caquetío-atestiguado] — misma
+        cadencia, referente vecino: el matapalo es la trepadora que SÍ mata
+        al árbol, y el autor subraya que la chiguare «no es parásita»,
+        como si la distinguiera de esa. Por glosa: naure 'planta bejucosa',
+        aka 'bejuco', yaro 'bejuco venenoso' [todos caq. atestiguado] — el
+        caquetío nombra varios bejucos por tipo; chiguare sería uno más.
+        (chiriware 'gavilán' y kiwa 'concha': ruido difuso.)
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa (kiware)
+      fuera_del_repo: "no está en Alvarado 1921"
+    filtros:
+      "1 castellano": "no restituye"
+      "2-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — fitónimo de especie con fruto comestible"
+      "2 distribución restringida": "sí — única fuente"
+    veredicto: C
+    razon: >
+      Fitónimo de bejuco frutal sin forma en el canon, en un campo (los
+      bejucos) que el caquetío atestiguado ya nombra por tipo (naure, aka,
+      yaro, chipare): pasa los filtros, campo local y distribución
+      restringida. C, al corpus (flora). El par chipare 'matapalo' /
+      chiguare 'trepadora que no mata' con la misma final -are es
+      sugerente — se anota como pareja léxica posible, no como etimología.
+
+  - voz: chirigua
+    glosa_libro: >-
+      recipiente de barro cocido, pequeño, manual, para contener agua u
+      otro líquido. Es palabra popular.
+    pagina: 72
+    campo: casa / oficio (alfarería)
+    origen_libro: "«es palabra popular»"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: >-
+        ≈ CHIRWA 'tinaja pequeña' [caquetío-atestiguado, Zavala Reyes 2015
+        #83 (HB = Hernández Baño), forma_fuente chirgua] — la misma
+        palabra con vocal epentética (chirgua ~ chirigua), que Alvarado
+        registra como variante («D. t. chirigua»).
+      fuera_del_repo: >-
+        Alvarado 1921 s.v. CHIRGUA: «Vasija de barro, esférica u oblonga,
+        de gollete corto y estrecho, destinada a trasportar agua. Usábanla
+        los indios Guamos, según Gilij (Ensayo II. 315). En sáliba chírua.
+        D. t. chirigua. Voz y objeto usan en Occ[idente]». Y s.v.
+        CHIRIGUA: «Véase Chirgua. En Mérida, alcarraza o pimpina»; cita a
+        Salas (Tierra Firme, 52): «ollas, múcuras, chiriguas, chorotes y
+        otras piezas que usaban los aborígenes».
+      cognados: "sáliba chírua (Alvarado) — familia distinta (sáliba), misma forma: préstamo o voz viajera del objeto"
+      fonotactica: pasa
+    filtros:
+      "1 castellano": "no restituye"
+      "4 nacional": "regional occidental (Alvarado: «usan en Occ.»), con presencia en Mérida y en los Llanos (guamos): no es panvenezolana ni panhispánica"
+      "6 otro estrato": "la forma sáliba chírua y el uso guamo (Gilij) muestran la voz en el Orinoco: la filiación no es exclusivamente caquetía"
+    criterios_positivos:
+      "1 campo local": "sí — vasija de alfarería, el oficio de las alfareras del elenco (Saruro-sha, Pira-sha)"
+      "2 distribución restringida": "regional (Occidente)"
+      "6 atestación previa": "sí — Hernández Baño vía Zavala #83; Alvarado 1921; Salas"
+    veredicto: A
+    razon: >
+      Séptima atestación viva: Hernández Baño la recoge en Coro, Alvarado la
+      describe con precisión (esférica, gollete corto, para transportar
+      agua) y la sitúa en el Occidente, Salas la cuenta entre las piezas
+      «que usaban los aborígenes», y Medina Colina la da viva en
+      Paraguaná. Reserva de filiación: la misma voz vive en sáliba y entre
+      los guamos del Orinoco — es palabra del OBJETO, viajera, no
+      exclusiva del caquetío. La etiqueta atestiguada descansa en
+      Hernández Baño; la reserva se traslada a la ficha.
+    propuesta_fusion:
+      accion: enriquecer, no crear
+      lema: chirwa
+      forma_fuente_anadir: "chirigua (Medina Colina 2013 p. 72; Alvarado 1921 «D. t. chirigua»)"
+      glosa_enriquecer: "tinaja pequeña de barro, esférica u oblonga, de gollete corto, para cargar y guardar agua"
+      procedencias_anadir:
+        - {obra: medina-colina-sxx, pagina: 72}
+        - {obra: alvarado-1921, nota: "s.v. CHIRGUA y CHIRIGUA"}
+      nota_etiqueta: "añadir la reserva: sáliba chírua, uso guamo (Gilij) — voz de circulación más amplia que el caquetío"
+
+  - voz: chiriguare
+    glosa_libro: >-
+      es un ave de rapiña, de mayor envergadura que el gavilán [dictado:
+      «el rapiño»], casi del tamaño de un zamuro. Era muy temido por los
+      criadores de gallinas, que constituían su comida favorita.
+    pagina: null            # ⚠️ PENDIENTE (¿72?)
+    campo: fauna
+    segun_dictado: true
+    dictado: 2026-09-01
+    identificacion: "caracara (Caracara cheriway) por el tamaño «casi de zamuro» y las gallinas; en el uso venezolano chiriguare suele ser el caricare/chiriguare menor (Milvago chimachima). Especie abierta"
+    cruce:
+      lexicon: >-
+        = CHIRIWARE 'gavilán, ave rapaz grande' [caquetío, Zavala Reyes 2015
+        #84 (HB), forma_fuente chiriguare; nota de la ficha: «atribución
+        débil: voz zoonímica panvenezolana»]. Y WARAWARA 'caracara, ave
+        rapaz carroñera (Caracara cheriway)' [caquetío-atestiguado]: el
+        canon tiene dos rapaces grandes con nombre.
+      fuera_del_repo: "Alvarado 1921 no la lematiza, pero la usa en un refrán: «Después que samuro come, chiriguare roe» — voz corriente en 1921"
+      fonotactica: pasa (kiriware)
+    filtros:
+      "4 nacional": "chiriguare es zoónimo venezolano general (la ficha del lexicón ya lo dice): no discrimina Paraguaná"
+    criterios_positivos:
+      "1 campo local": "sí — zoónimo de especie"
+      "6 atestación previa": "sí — Hernández Baño vía Zavala #84"
+    veredicto: A
+    razon: >
+      Atestación viva de una entrada del lexicón (etiqueta «caquetío» a
+      secas, con la reserva de panvenezolanismo ya declarada). Lo que el
+      dictado añade es la DESCRIPCIÓN — tamaño casi de zamuro, depredador
+      de gallinas —, que apunta al caracara grande y no al gavilán: es
+      decir, al referente que el canon nombra warawara. Dos palabras para
+      la misma rapaz, o dos rapaces: cuestión para la ficha, no para el
+      dictado. Un agente del elenco se llama Chiriware.
+    propuesta_fusion:
+      accion: enriquecer, no crear
+      lema: chiriware
+      glosa_enriquecer: "ave de rapiña grande (caracara / chiriguare), casi del tamaño del zamuro; depredador de gallinas"
+      procedencias_anadir:
+        - {obra: medina-colina-sxx, pagina: null}
+      nota: "revisar contra warawara 'caracara': ¿sinónimos, o especies distintas (Caracara vs. Milvago)?"
+
+  - voz: chirita / machire
+    entrada_libro: "Chirita (y, dentro de la entrada, machire)"
+    glosa_libro: >-
+      la masa de maíz, cuando estaba muy fina, lista para hacer la arepa,
+      estaba chirita. Por el contrario, cuando estaba granulosa se decía
+      que estaba machire.
+    pagina: 72
+    campo: oficio (cocina del maíz)
+    nota_miguel: "«ahí hay varias cositas que podemos ver»"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: >-
+        nada por forma (kira, wayuu iita: ruido). Por glosa: amaka 'sitio
+        de moler maíz', kasá 'puche de maíz' [caq. atestiguado] — el campo
+        del maíz procesado es caquetío atestiguado, pero no hay término de
+        TEXTURA de la masa.
+      morfologia: >-
+        ⭐ La pareja chirita 'fina' / machire 'no fina, granulosa' se deja
+        analizar como raíz chir- + PREFIJO PRIVATIVO ma- 'sin, carente de'
+        — que el lexicón tiene como caquetío-reconstruido (ma, cognado
+        directo del wayuu ma-; morfologia.md §prefijos) y que aparece en
+        madunaka 'sequía' (ma + duna 'agua'). Es decir: machire = ma-chire
+        'sin finura'. Y chirita puede ser chir- + diminutivo castellano
+        -ita ('finita'), lo que haría de la pareja un híbrido: raíz
+        indígena con afijo arahuaco en una forma y castellano en la otra.
+      cognados: nada
+      fonotactica: pasa (kirita, makire)
+      fuera_del_repo: "ninguna de las dos está en Alvarado 1921"
+    filtros:
+      "1 castellano": "chirita no restituye (chira 'harapo' no encaja; -ita podría ser el diminutivo); machire no restituye a nada"
+      "2-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — la textura de la masa de maíz para la arepa: oficio diario"
+      "2 distribución restringida": "sí — única fuente"
+      "3 fonotáctica": "pasa"
+      "morfología arahuaca": "sí, como hipótesis — el par con ma- privativo es la estructura que el protocolo llama 'correspondencia regular', aquí gramatical y no fonológica"
+    veredicto: C
+    certeza: media
+    razon: >
+      Sube por la morfología y no por la forma: dos voces sin filiación
+      que, tomadas JUNTAS, muestran el prefijo privativo arahuaco ma- en
+      uso vivo sobre una raíz común — la primera evidencia de morfología
+      caquetía productiva en el habla del XX que da el dictado. Queda C
+      (no B) porque la raíz chir- no tiene cognado ni atestación y el
+      análisis es hipótesis del escriba; si Miguel confirma que en
+      Paraguaná se dice «está machire» con ese sentido y no hay otra
+      palabra machire, el par merece un issue de morfología. Al corpus
+      (oficios: cocina del maíz) como hipotético, las dos.
+    propuesta:
+      destino: "corpus (oficios), y nota en 2-lengua/morfologia.md §ma- como posible atestación viva del privativo — a decidir"
+
+  - voz: chuchube
+    glosa_libro: >-
+      nombre inventado por nuestros viejos para identificar al pájaro que
+      en otras regiones del país conocen con el nombre de paraulata.
+    pagina: 74
+    campo: fauna
+    origen_libro: "«nombre inventado por nuestros viejos»; contrasta con el nacional (paraulata): distribución restringida declarada"
+    segun_dictado: true
+    dictado: 2026-09-01
+    identificacion: "Mimus gilvus, paraulata / sinsonte tropical"
+    cruce:
+      lexicon: >-
+        = CHUCHUBE 'paraulata' [caquetío-atestiguado, Zavala #85 (HB)] y
+        CHUCHUBI 'sinsonte tropical (Mimus gilvus)' [caquetío-atestiguado:
+        Zavala #85 + Gatschet 1885 (Pinart, Aruba 1882) «shushubi» +
+        van Buurt 2014 §6 «chuchubi» (Aruba, Bonaire, Curazao) — «triple
+        atestación continental-insular-viva»]. ⚠ Están como DOS entradas
+        (y chuchube con cat v_raiz, error): son la misma palabra.
+      toponimos: "= CHUCHUBE en la cola de Esteves (topónimo de Paraguaná)"
+      cognados: nada
+      fonotactica: pasa
+    filtros:
+      "2 papiamento": "chuchubi ES voz del papiamento (nombre del sinsonte en las islas) — pero van Buurt la da como arahuaca de las islas, no como préstamo europeo: es el caso inverso, el papiamento conservó la voz indígena"
+      "4 nacional": "no — el nacional es paraulata, lo dice el autor"
+    criterios_positivos:
+      "1 campo local": "sí — zoónimo de especie, el pájaro emblemático del cardonal"
+      "2 distribución restringida": "sí — Paraguaná + islas ABC frente al nacional paraulata"
+      "5 respaldo toponímico": "sí — Chuchube (Esteves)"
+      "6 atestación previa": "sí — Hernández Baño, Gatschet/Pinart 1882, van Buurt"
+    veredicto: A
+    razon: >
+      La atestación viva más fuerte del dictado: continental (Hernández
+      Baño), insular en el s. XIX (Pinart/Gatschet, Aruba 1882), insular
+      moderna (van Buurt: A, B y C), toponímica (Esteves) y ahora
+      paraguanera del XX. Es además la voz que mejor ilustra el eje
+      península–islas de las Aclaratorias: la misma palabra de un lado y
+      otro del canal, conservada por el papiamento. Que el autor la crea
+      «inventada por nuestros viejos» es la marca de arraigo, no de
+      invención.
+    propuesta_fusion:
+      accion: "FUSIONAR las dos entradas del lexicón (chuchubi + chuchube) en un lema, con chuchube como forma_fuente de Zavala y chuchubi como lema (van Buurt: la insular con -i es la original); corregir cat v_raiz → sust"
+      procedencias_anadir:
+        - {obra: medina-colina-sxx, pagina: 74}
+      nota: "el duplicado es de la clase que la Fase 2 de D5 limpió (grafías); aquí es variante fonológica -e/-i, no de grafía — decidir el lema"
+
+  - voz: cuaguaro
+    glosa_libro: >-
+      árbol de madera dura que se utilizó para hacer las cercas de los
+      conucos y el armazón de las viviendas. Es palabra popular.
+    pagina: 83
+    campo: flora / casa
+    origen_libro: "«es palabra popular»"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada por forma (ni cuaguaro ni guaguaro); por glosa: kuru 'árbol, madera', bara 'palo', wa 'conuco, terreno cercado' [caq.] — el conuco cercado tiene nombre caquetío (wa); la madera de la cerca, no"
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa (kuawaro)
+      fuera_del_repo: "no está en Alvarado 1921; sin resultados en la web (búsqueda 2026-09-01): Medina Colina es la única fuente"
+    filtros:
+      "1 castellano": "no restituye"
+      "2-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — fitónimo de especie con dos usos técnicos (cerca del conuco, armazón de la casa de bahareque)"
+      "2 distribución restringida": "sí — única fuente"
+    veredicto: C
+    razon: >
+      Fitónimo de madera de construcción sin forma en el canon, con los
+      dos usos que definen la casa y el conuco caquetíos (cerca y armazón
+      de bahareque). Pasa los filtros; campo local y distribución
+      restringida; sin cognado ni atestación. C, al corpus (flora/casa).
+      Con busuga (armazón, tinte) y barisigua (bateas) suma la tercera
+      madera con nombre y función del dictado. Final -aro como caujaro.
+
+  - voz: dara
+    glosa_libro: >-
+      con este nombre nominó nuestra gente al ave común en nuestros campos
+      y que el resto del país conoce como alcaraván.
+    pagina: 89
+    campo: fauna
+    origen_libro: "contrasta con el nacional (alcaraván): distribución peninsular declarada"
+    segun_dictado: true
+    dictado: 2026-09-01
+    identificacion: "alcaraván venezolano, Burhinus bistriatus"
+    cruce:
+      lexicon: "= DARA 'alcaraván' [caquetío-atestiguado, Zavala Reyes 2015 #102 (HB + E)]. Wayuu: kaarai (glosado en el lexicón como «alcaraván (dara)»), teitei"
+      cognados: "el lexicón anota para el wayuu kaarai un *carai proto-caquetío: NO es cognado de dara — dos raíces distintas para el mismo ave"
+      toponimos: "⊂ todarahuato (descartado): parecido de cadena, sin relación"
+      fonotactica: pasa
+      fuera_del_repo: "no está en Alvarado 1921 como lema"
+    criterios_positivos:
+      "1 campo local": "sí — zoónimo de especie, ave emblemática del monte seco"
+      "2 distribución restringida": "sí — el autor la contrasta con el nacional"
+      "6 atestación previa": "sí — Hernández Baño y Esteves vía Zavala #102"
+    veredicto: A
+    razon: >
+      Undécima atestación viva: dos fuentes (Hernández Baño y Esteves) la
+      tenían como caquetía, y Medina Colina la da viva y peninsular frente
+      al nacional alcaraván. Distinta de la wayuu (kaarai): no es préstamo
+      guajiro. Un agente del elenco se llama Dara-ko.
+    propuesta_fusion:
+      accion: enriquecer, no crear
+      lema: dara
+      procedencias_anadir:
+        - {obra: medina-colina-sxx, pagina: 89}
+
+  - voz: disey
+    glosa_libro: >-
+      nuestras abuelas cocinaban sobre un fuego producido con leña seca,
+      rodeado de tres topias o piedras de igual tamaño sobre las que
+      descansaban la sartén, la olla u otro. A dichas topias se les
+      denominó así.
+    pagina: 95
+    campo: casa (fogón)
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada por forma; por glosa: kiba 'piedra' [caq. atestiguado], amana 'fuego' [caq. reconstruido] — el caquetío tiene piedra y fuego, no la piedra del fogón"
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa (disei)
+      fuera_del_repo: "no está en Alvarado 1921 (búsqueda en el texto completo). Topia, la palabra con que el autor lo glosa, es el indigenismo venezolano general para la piedra de fogón"
+    filtros:
+      "1 castellano": "no restituye"
+      "4 nacional": "no — el nacional es topia, y el autor lo usa como glosa: disey es el local"
+      "2, 3, 5, 6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — el fogón de tres piedras, técnica doméstica precontacto universal, con nombre propio para la piedra"
+      "2 distribución restringida": "sí — única fuente; el autor la explica con la general (topia)"
+    veredicto: C
+    razon: >
+      Nombre local de la piedra de fogón frente al nacional topia: pasa
+      los filtros, campo local (la cocina de leña de tres piedras es la
+      del mundo simulado) y distribución restringida; sin cognado ni
+      atestación. C, al corpus (casa/cocina). Final -ey (cf. jagüey,
+      Yabuquiva no; en el canon casi no hay finales en -ey): se anota.
+  - voz: gatiao
+    glosa_libro: >-
+      árbol cuyas ramas nuestros mayores utilizaron para espantar moscas.
+    pagina: 127
+    campo: flora
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: >-
+        nada real por forma — los parecidos difusos son datihao 'padrino
+        de cautivo' y waitiao 'amigo ritual' [caq. atestiguado], que no
+        tienen nada que ver, pero comparten la FINAL -ao indígena (diao,
+        waitiao, datihao, waranao: la serie medida en la primera
+        observación de Miguel). Por glosa: kuru, bara 'árbol' [caq.];
+        ningún fitónimo caquetío para esta especie.
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa
+      fuera_del_repo: "no está en Alvarado 1921 (texto completo)"
+    filtros:
+      "1 castellano": "no restituye: el -ao NO es participio (no hay verbo *gatiar); es la final indígena -ao/-aw"
+      "2-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — fitónimo de especie con uso doméstico (ramas contra las moscas: ¿aromáticas? id. botánica abierta)"
+      "2 distribución restringida": "sí — única fuente"
+      "3 fonotáctica": "pasa, y la final -ao es de la serie atestiguada"
+    veredicto: C
+    razon: >
+      Fitónimo con uso, sin forma en el canon ni en Alvarado, y con la
+      final -ao que en el caquetío atestiguado marca palabras de
+      filiación propia (diao, waitiao, datihao, waranao) y NO el
+      participio castellano: es el primer -ao del dictado que cae del
+      lado indígena de la regla práctica fijada al principio («candidata
+      solo si no se deja restituir a -ado»). C, al corpus (flora).
+  - voz: guacoa
+    glosa_libro: >-
+      fue paloma silvestre en épocas pasadas, muy abundante en nuestro
+      monte, hoy casi extinta.
+    pagina: "129-130"
+    campo: fauna
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "= WAKOA 'paloma' [caquetío-atestiguado, Zavala Reyes 2015 #127 (HB = Hernández Baño), forma_fuente guacoa]. Serie caquetía de palomas: wakoa, tauta, tigi, tijua (+ chenga del dictado)"
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa (wakoa)
+      fuera_del_repo: "no está en Alvarado 1921 como lema"
+    criterios_positivos:
+      "1 campo local": "sí — zoónimo de especie"
+      "2 distribución restringida": "sí — única fuente viva"
+      "6 atestación previa": "sí — Hernández Baño vía Zavala #127"
+    veredicto: A
+    razon: >
+      Duodécima atestación viva: Hernández Baño la recogió como 'paloma' y
+      Medina Colina la da como la paloma silvestre del monte, antes
+      abundante y hoy casi extinta. La grafía gua- del libro es la
+      colonial de /w/ (lema fonémico wakoa, D5). Quinta extinción
+      documentada — mc-mundo-017.
+    propuesta_fusion:
+      accion: enriquecer, no crear
+      lema: wakoa
+      glosa_enriquecer: "paloma silvestre del monte (especie abierta), antes abundante en Paraguaná"
+      procedencias_anadir:
+        - {obra: medina-colina-sxx, pagina: "129-130"}
+  - voz: guacuquero
+    glosa_libro: >-
+      así denominaron a una abeja de color amarillento que producía una
+      miel muy dulce y también de color amarillo.
+    pagina: 130
+    campo: fauna / oficio (miel)
+    segun_dictado: true
+    dictado: 2026-09-01
+    dudosa: true
+    identificacion: "meliponino de color amarillo y miel amarilla (¿Tetragonisca / Scaptotrigona? cf. la «rubita» amarilla de las listas nacionales); especie abierta"
+    cruce:
+      lexicon: >-
+        nada real por forma (wakuaro 'palo de tinte' es parecido difuso).
+        Por glosa: RUBA 'abeja silvestre negra de Coro' [caq. atestiguado]
+        — la abeja NEGRA tiene nombre caquetío; esta es la AMARILLA. Con
+        bayute (C) son ya tres meliponinos con nombre en el habla.
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa (wakukero)
+      fuera_del_repo: "no está en Alvarado 1921 (ni GUACUC-). Guacuco es, en el Zulia, una almeja pequeña — sin relación visible"
+    filtros:
+      "1 castellano": "la terminación -ero es el sufijo castellano de oficio/agente: guacuqu-ero = 'el del guacuco' — la BASE guacuc-/guacuco no es castellana; posible híbrido como datera"
+      "2-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — zoónimo de especie del oficio de la miel silvestre"
+      "2 distribución restringida": "sí — única fuente"
+    veredicto: C
+    certeza: baja
+    razon: >
+      Tercer meliponino nombrado (ruba negra, bayute, guacuquero amarilla):
+      la etnoapicultura del monte seco con vocabulario propio, que es lo
+      que el protocolo esperaba encontrar. La forma es probablemente
+      híbrida (base local + -ero castellano), de modo que la voz entera no
+      es sustrato pero su base puede serlo — como datera con dato. C-baja
+      hasta saber qué es el guacuco de la base (¿planta, sitio, la
+      almeja zuliana?). Al corpus (fauna/oficios) como hipotético.
+  - voz: guairón
+    glosa_libro: >-
+      con este nombre se denominaron los hornos rústicos que se hacían en
+      tierra para calcinar [dictado: «que marcara cuáles»; cotejar] piedras
+      y fabricar cal.
+    pagina: 130
+    campo: oficio (cal / fuego)
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "= WAIRON 'hoguera' [caquetío-atestiguado, Zavala Reyes 2015 #132 (HB = Hernández Baño), forma_fuente guairon]. Mismo campo (fuego), referente especializado (horno de cal)"
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa (wairon)
+      fuera_del_repo: >-
+        Alvarado 1921 s.v. GUAIRA: «Especie de horno, a modo de barbacoa.
+        La voz, usada en el E[stado] Lara, debe referirse a las guairas de
+        los mineros peruanos» (quechua wayra 'viento': el hornillo de
+        viento para fundir plata). Guairón sería entonces aumentativo
+        castellano de guaira.
+    filtros:
+      "1 castellano / americanismo minero": >-
+        ⚠️ CONFLICTO DE FILIACIÓN: Hernández Baño la da como caquetía
+        (hoguera); Alvarado explica la guaira de Lara como quechuismo
+        minero, y guairón se deja leer como guaira + -ón. Las dos lecturas
+        son compatibles con los datos: o bien wairon es caquetío y la
+        guaira larense es otra palabra, o bien ambas vienen del
+        quechuismo colonial y Hernández Baño recogió un préstamo.
+    criterios_positivos:
+      "1 campo local": "sí — técnica de la cal, que en Paraguaná es de concha y piedra del propio sitio"
+      "6 atestación previa": "sí — Hernández Baño vía Zavala #132"
+    veredicto: A
+    certeza: media
+    razon: >
+      Atestación viva de una entrada del lexicón (wairon 'hoguera'), con
+      especialización de sentido en el habla (horno de cal). La etiqueta
+      atestiguada descansa en Hernández Baño; la reserva de Alvarado
+      (quechuismo guaira) se traslada a la ficha como conflicto
+      declarado, no resuelto — misma clase que kachikamo (filiación
+      caribe) y chirwa (sáliba). El dato de oficio va a mc-mundo-018.
+    propuesta_fusion:
+      accion: enriquecer, no crear
+      lema: wairon
+      glosa_enriquecer: "hoguera; horno rústico de tierra para hacer cal (Paraguaná)"
+      procedencias_anadir:
+        - {obra: medina-colina-sxx, pagina: 130}
+        - {obra: alvarado-1921, nota: "s.v. GUAIRA — conflicto de filiación (quechua minero vs. caquetío)"}
+      nota_etiqueta: "declarar el conflicto guaira/quechua en la ficha"
+  - voz: bisure
+    entrada_libro: "mencionada dentro de «Gualamo» (p. 130): «en el resto de las poblaciones paraguaneras conserva el nombre de bisure»"
+    glosa_libro: "[por la entrada gualamo] lagarto; el nombre general en Paraguaná del reptil que en Tacuato y Santa Ana llaman gualamo"
+    pagina: 130
+    campo: fauna
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "= BISURE 'lagartija' [caquetío-atestiguado, Zavala Reyes 2015 #41 (HB + E)]. Serie caquetía de reptiles: bisure, tukeke 'gecko', barbache 'iguana'"
+      fonotactica: pasa
+    criterios_positivos:
+      "1 campo local": "sí — zoónimo"
+      "2 distribución restringida": "sí — «el resto de las poblaciones paraguaneras»"
+      "6 atestación previa": "sí — Hernández Baño y Esteves vía Zavala #41"
+    veredicto: A
+    razon: >
+      Decimotercera atestación viva, indirecta pero explícita: el autor da
+      bisure como EL nombre paraguanero general del lagarto (frente al
+      local gualamo). Dos fuentes lo tenían como caquetío.
+    propuesta_fusion:
+      accion: enriquecer, no crear
+      lema: bisure
+      procedencias_anadir:
+        - {obra: medina-colina-sxx, pagina: 130}
+
+  - voz: gualamo
+    glosa_libro: >-
+      así le llaman, en las poblaciones de Tacuato y Santa Ana, a un
+      bisure de color amarillo combinado con gris terroso. En el resto de
+      las poblaciones paraguaneras conserva el nombre de bisure.
+    pagina: 130
+    campo: fauna
+    origen_libro: "el autor da la DISTRIBUCIÓN INTRAPENINSULAR: Tacuato y Santa Ana frente al resto"
+    segun_dictado: true
+    dictado: 2026-09-01
+    identificacion: "lagarto amarillo y gris terroso (¿Cnemidophorus / Ameiva?); especie abierta — puede ser un bisure distinto, no solo otro nombre"
+    cruce:
+      lexicon: "nada por forma (walamo); por glosa: bisure, tukeke, barbache [caq.] — el campo de los reptiles ya es caquetío atestiguado"
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa (walamo)
+      fuera_del_repo: "no está en Alvarado 1921"
+    filtros:
+      "1 castellano": "no restituye (la gua- es la grafía de /w/: lema walamo)"
+      "2-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — zoónimo de especie (o de variedad de color)"
+      "2 distribución restringida": "SÍ, y más fina que nunca: dos pueblos de la península"
+    veredicto: C
+    razon: >
+      Nombre local del lagarto amarillo en Tacuato y Santa Ana frente al
+      general bisure: pasa los filtros, campo local y la distribución más
+      restringida de todo el dictado. Sin cognado ni atestación: C, al
+      corpus. Lo que importa es la ISOGLOSA (mc-mundo-020): es el primer
+      dato de variación léxica DENTRO de Paraguaná, y cae justo en Santa
+      Ana — el asiento de los Guaranaos según Oliver (DISENO_ERA2 §2).
+
+  - voz: guamaro
+    glosa_libro: >-
+      era un árbol venenoso para los animales. Hoy es escaso en nuestros
+      montes, quizá debido a los continuos veranos.
+    pagina: 130
+    campo: flora
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada por forma (wamacho 'guamacho, Pereskia' es parecido difuso, otro árbol); por glosa: urari 'veneno vegetal' [caq. atestiguado] — el caquetío tiene la palabra del veneno, no este árbol"
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa (wamaro)
+      fuera_del_repo: "no está en Alvarado 1921"
+    filtros:
+      "1 castellano": "no restituye (gua- = /w/: lema wamaro)"
+      "2-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — fitónimo de especie, con propiedad relevante para el pastor de ganado menor (tóxico)"
+      "2 distribución restringida": "sí — única fuente"
+    veredicto: C
+    razon: >
+      Fitónimo con propiedad (tóxico para el ganado), sin forma en el
+      canon ni en Alvarado; pasa los filtros; final -aro (caujaro,
+      cuaguaro, camuro). C, al corpus (flora). Sexta desaparición del
+      libro, y la primera con causa declarada por el autor: «los
+      continuos veranos» — mc-mundo-019.
+  - voz: curubo
+    lectura_de_oido: "dictado «Curriculum»; grafía dada por Miguel: curubo"
+    glosa_libro: >-
+      caracol marino cuya caparazón utilizaron los alfareros para pulir
+      los envases que fabricaban, y también para hacer cal mediante su
+      cocción a altas temperaturas.
+    pagina: 86
+    campo: fauna (mar) / oficio (alfarería, cal)
+    segun_dictado: true
+    dictado: 2026-09-01
+    identificacion: "gasterópodo marino de concha gruesa (¿Strombus/Lobatus? ¿Melongena? ¿Cittarium?); especie abierta"
+    cruce:
+      lexicon: >-
+        nada por forma (kuru 'árbol' es ruido). Por glosa: el caquetío
+        tiene TRES palabras de molusco atestiguadas — kumarawa 'caracol de
+        las costas de Paraguaná', yagruma 'caracol', kiwa 'concha de
+        almeja' — y ninguna es curubo: sería la cuarta, con función.
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa (kurubo)
+      fuera_del_repo: "no está en Alvarado 1921 (texto completo)"
+    filtros:
+      "1 castellano": "no restituye"
+      "2 papiamento": "sin candidato (el caracol en papiamento es kokolishi / karkó)"
+      "3-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — zoónimo marino con dos usos técnicos (bruñido cerámico, cal): el oficio diario del mar rico"
+      "2 distribución restringida": "sí — única fuente"
+    veredicto: C
+    razon: >
+      Nombre de caracol con función (pulir la loza, hacer cal) sin forma en
+      el canon ni en Alvarado; pasa los filtros; campo local y distribución
+      restringida; sin cognado ni atestación. C, al corpus (fauna/oficios).
+      Es la voz que faltaba en mc-mundo-015: la fuente local de la cal del
+      hayo y el instrumento del bruñido, ambos con nombre. Final -ubo (cf.
+      -ibo en ucibo 'chaquira', -bo en habo): dentro de la cadencia
+      atestiguada.
+
+# Nivel D con su razón: un descarte documentado ahorra re-minarla.
+descartes:
+  - voz: abofao
+    glosa_libro: "creación del pueblo llano para decir que se tenía la cara hinchada. En junio de 2001 esta palabra ingresó en el DRAE."
+    pagina: 21
+    campo: cuerpo
+    origen_libro: "creación del pueblo llano; ingresó en el DRAE (junio de 2001)"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "sin forma; por glosa ('cara', 'hinchada') solo wayunaiki o'upünaa 'cara' — nada caquetío para 'hinchado'"
+      cognados: nada
+      toponimos: nada
+      a2: nada
+      fonotactica: pasa (no discrimina)
+    veredicto: D
+    filtro: 1
+    razon: >
+      Castellano: participio de abofar(se) 'hincharse' (< bofe), con la caída
+      de -d- intervocálica (-ado > -ao) que el propio autor anuncia como
+      grafía fonética. El DRAE registra «abofado» (Ven.). Es la primera
+      calibración del filtro 1: la voz «rara» era una deformación castellana
+      de las que las Aclaratorias describen. Dato que sí queda: el autor
+      anota origen y trayectoria en sus notas («creación del pueblo llano»,
+      ingreso al DRAE) — las entradas SÍ llevan marcas, al menos a veces.
+
+  - voz: abollao
+    lectura_de_oido: "dictado «abollado, sin d» → leído abollao (cotejar)"
+    glosa_libro: >-
+      entre las múltiples acepciones que el pueblo le daba a esta palabra
+      está: si se sentía mucho trabajo por hacer, se estaba abollao; si
+      emergía el cadáver de un ahogado, «el muerto abolló». Para nada [tiene
+      que ver con] la acepción académica: abollar, producir una depresión con
+      un golpe.
+    pagina: 21
+    campo: otro / mar (la 2ª acepción)
+    origen_libro: "el autor contrasta la acepción del DRAE con las del pueblo"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada por forma ni por glosa (ahogado/flotar/cadáver)"
+      cognados: nada
+      toponimos: nada
+      a2: nada
+      fonotactica: pasa (no discrimina)
+    veredicto: D
+    filtro: 1
+    razon: >
+      Castellano en las dos acepciones. La del ahogado no es «abollar»
+      'hundir de un golpe' sino su homófono yeísta ABOYAR (< boya) 'flotar,
+      salir a la superficie' (DRAE, Mar.): «el muerto aboyó». El autor la
+      archiva bajo abollar por la grafía; el significado es náutico
+      castellano de los marinos que él mismo nombra como canal. La de
+      'agobiado de trabajo' es extensión popular de la misma familia. Nada
+      indígena que probar.
+
+  - voz: abongado
+    glosa_libro: >-
+      tener el estómago o el vientre prominente, especialmente si era por
+      falta de salud, se identificaba con este vocablo.
+    pagina: 21
+    campo: cuerpo
+    segun_dictado: true
+    dictado: 2026-09-01
+    dudosa: true            # calibración: no está en el DRAE tal cual
+    cruce:
+      lexicon: "nada por forma; por glosa ('vientre'): bari [caquetío-reconstruido], tayu [añú], ite [lokono], ale'eru'u [wayuu] — ninguno se parece"
+      cognados: nada
+      toponimos: nada
+      a2: nada
+      fonotactica: pasa (no discrimina)
+    veredicto: D
+    certeza: baja
+    filtro: 1
+    razon: >
+      Probable variante oral de ABOMBADO 'convexo, hinchado' (< bomba; en
+      Venezuela 'hinchado'), con el grupo -mb- velarizado a -ng- — un «cambio
+      de letras» de los que las Aclaratorias describen. No está en el DRAE
+      con esta forma, por eso queda DUDOSA: el descarte es probable, no
+      probado. En contra de lo indígena: es un estado del cuerpo, no un
+      referente local intraducible (criterio 1 del protocolo), y no se parece
+      a ninguna palabra de 'vientre' de las comparandas. Si Miguel conoce
+      «abombado» con este sentido en Paraguaná, el descarte cierra.
+
+  - voz: acoquinao
+    entrada_libro: "Acoquinao - acosao"   # grafía confirmada por Miguel sobre el papel
+    glosa_libro: >-
+      acoquinao y acosao son vocablos que el paraguanero utilizó como
+      sinónimos, siendo el segundo un derivado del académico acosar:
+      perseguir sin tregua, importunar, fatigar con molestias y trabajos.
+    pagina: 22
+    campo: otro
+    origen_libro: "el autor deriva «acosado» del académico acosar; a acoquinao no le da origen"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada (el ≈ wayuu kochiina 'cochino' es ruido del parecido difuso)"
+      cognados: nada
+      toponimos: nada
+      a2: nada
+      fonotactica: pasa (no discrimina)
+    veredicto: D
+    filtro: 1
+    razon: >
+      Castellano: participio de ACOQUINAR 'amilanar, acobardar, hacer perder
+      el ánimo' (DRAE), con -ado > -ao. Voz peninsular corriente (de origen
+      discutido, quizá del fr. coquin), documentada en toda Hispanoamérica.
+      El sentido paraguanero 'acosado' es un deslizamiento entre dos verbos
+      de acorralar. Nada indígena que probar.
+
+  - voz: aguamanil
+    glosa_libro: >-
+      así denominaba nuestro pueblo el mueble rústico, especie de mesa de
+      mediana altura y con espacio para colocar en su parte superior la
+      ponchera y la jabonera, y en la inferior la jarra con pico para
+      contener el agua con que se hacía la limpieza de manos y caras. La
+      madera más común para fabricarlos era el cardón, por su durabilidad.
+      Agregada al DRAE en junio de 2001.
+    pagina: "23-24"
+    campo: casa
+    origen_libro: "agregada al DRAE en junio de 2001 (según el autor)"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada por forma; por glosa ('madera'): barabara, kaketillo [caquetío-atestiguado], ture [caribe], dujo [taíno] — muebles y maderas, ninguno cardón"
+      cognados: nada
+      toponimos: nada
+      a2: nada
+      fonotactica: pasa (no discrimina)
+    veredicto: D
+    filtro: 1
+    razon: >
+      Castellano viejo: AGUAMANIL (< lat. aquimanile) 'jarro para echar agua
+      en la palangana; palanganero' está en el DRAE desde siempre (la nota
+      del autor sobre 2001 debe de referirse a la acepción de mueble, no a
+      la voz). El paraguanero conserva la palabra antigua para el mueble
+      entero. Lo que SÍ vale aquí no es la voz sino el dato de mundo: el
+      cardón como madera de mueblería — ver datos_mundo.
+
+  - voz: ahíto
+    glosa_libro: >-
+      al comer, quedar con el estómago lleno al máximo. En el oriente del
+      país dicen quedar embolsado [?].
+    pagina: 24
+    campo: cuerpo
+    origen_libro: "el autor da el sinónimo del oriente del país (distribución regional)"
+    nota_miguel: "no sé si esto es español"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada por forma (areito taíno y lokono kakïtho son ruido difuso); por glosa: wayuu wotoo 'estar lleno' — el caquetío no tiene palabra registrada para 'saciado'"
+      cognados: nada real
+      toponimos: nada
+      a2: nada
+      fonotactica: pasa (no discrimina)
+    veredicto: D
+    filtro: 1
+    razon: >
+      Castellano clásico: AHÍTO, -TA 'saciado, harto de comer' (DRAE; del
+      participio antiguo de ahitar, lat. infictus). Está en Cervantes y en
+      el Siglo de Oro; en Venezuela sobrevive en el habla rural. Que suene
+      «raro» es por arcaico, no por indígena — el paraguanero conservó una
+      palabra que el español urbano soltó. Es el mismo caso que aguamanil:
+      conservadurismo léxico de región aislada, que el propio autor explica
+      (arrieros, marinos, analfabetismo).
+
+  - voz: ananinga
+    entrada_libro: "Ananinga – ay naninga"   # dos formas, confirmadas por Miguel
+    glosa_libro: >-
+      una expresión del pueblo para decir una amenaza velada al niño que
+      cometía una travesura. Generalmente se pronunciaba mientras con la
+      mano derecha, que se agitaba, se hacía castañear los dedos índice y
+      medio en son de látigo [?]. Esta expresión ha desaparecido entre el
+      pueblo por falta de uso.
+    pagina: 28
+    campo: otro (fórmula expresiva; crianza)
+    origen_libro: "el autor la da como creación del pueblo; anota que desapareció"
+    nota_miguel: >-
+      la cadencia suena como «cutanga» [cudanga], la fórmula de Mitare que
+      registró Arcaya.
+    segun_dictado: true
+    dictado: 2026-09-01
+    dudosa: true
+    cruce:
+      lexicon: "nada por forma (ananinga, ainaninga, ninga); por glosa ('niño'): wanepe 'cesto para cargar niños' [caq.], ibili [lokono], tepichi [wayuu] — nada de amenaza/castigo"
+      cognados: nada
+      toponimos: nada
+      a2: nada
+      fonotactica: pasa (no discrimina)
+      la_cadencia_nga_medida: >-
+        Formas en -nga/-nca/-nka: caquetío atestiguado 1/222 — y es
+        justamente kudanga, cuya -ga es inestable (la versión de 1905 da
+        «judan», ver frase_saludo_mitare.yaml §2-3: la segmentación
+        cudanga/cudan no se sostiene); reconstruido 0/68; lokono 0/282;
+        taíno 0/39; añú 0/47; wayuu 2/781; topónimos del canon 0/74;
+        cola de Esteves 0/186. La cadencia -nga NO es caquetía ni arahuaca
+        en nuestros datos: es un hapax y de segmentación dudosa.
+    veredicto: D
+    certeza: baja
+    filtro: 5
+    razon: >
+      Fórmula expresiva sin referente, del tipo que el protocolo §6.2 avisa
+      de rendimiento casi nulo (interjecciones y fraseología son casi
+      siempre romances o expresivas). La final -nga, ausente del caquetío y
+      de sus hermanas, es en cambio la cadencia típica de los AFRICANISMOS
+      del español caribeño (malanga, conga, candanga, ñinga — y ñinga es
+      venezolanismo vivo: 'poquito, nada'), y «ay naninga» se lee como
+      ¡ay! + fórmula. El descarte más probable es el filtro 5, sin prueba
+      positiva: queda DUDOSA. La asociación con cudanga se probó y no se
+      sostiene con datos (una sola forma, y esa inestable). Lo que sí vale
+      es el gesto — ver datos_mundo.
+
+  - voz: arrumaco
+    glosa_libro: >-
+      los paraguaneros utilizaron esta palabra para referirse a las caricias
+      o demostraciones de cariño hechas con gestos o ademanes.
+    pagina: 33
+    campo: otro
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "no cruzada: la glosa del libro es la del DRAE casi literal"
+    veredicto: D
+    filtro: 1
+    razon: >
+      Castellano general: ARRUMACO 'demostración de cariño hecha con gestos
+      o ademanes' (DRAE, de arrumar/arrumaje). La glosa de Medina Colina
+      reproduce la académica; no hay uso local que la separe.
+
+  - voz: asentar agua
+    glosa_libro: >-
+      [técnica] Siendo el agua que se consumía de origen pluvial, que se
+      depositaba en estanques cavados a cielo abierto en la tierra,
+      generalmente estaba turbia por la abundancia de barro en suspensión,
+      por lo que era necesario someterla a un proceso de clarificación.
+      Con un trozo de cardón de lefaria, previamente limpio de espinas, se
+      agitaba el agua por un rato y luego se dejaba en reposo; todo el
+      material en suspensión se precipitaba y el agua quedaba limpia,
+      cristalina, lista para ser utilizada.
+    pagina: null            # ⚠️ PENDIENTE (¿33-35?)
+    campo: oficio / agua
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "la locución es castellana; lo cruzado fue lefaria (nada) y jagüey (buko / jagey, ver mc-mundo-003)"
+    veredicto: D
+    filtro: 1
+    razon: >
+      La VOZ es castellana: asentar 'dicho de un líquido, aclararse al
+      depositarse en el fondo las partículas' (DRAE) + agua. Lo que vale es
+      la TÉCNICA y su instrumento — cardón lefaria sobre agua de jagüey —,
+      registrada como dato de mundo mc-mundo-003. Y queda abierta la voz
+      «lefaria» (nombre de cactácea sin etimología castellana obvia): si el
+      libro la trae, se dicta aparte.
+
+  - voz: bachaco
+    glosa_libro: >-
+      es una especie de hormiga grande, muy común en nuestra tierra
+      venezolana. Se distingue por su laboriosidad, y cuando alguien está
+      desplazándose regularmente de un lado a otro en funciones de trabajo
+      le dicen «estás como el bachaco, viaje y viaje». También se dijo de la
+      persona que tenía el pelo ensortijado y de color rojizo.
+    pagina: 41
+    campo: fauna
+    origen_libro: "el propio autor la da como «muy común en nuestra tierra venezolana» — distribución nacional"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: >-
+        no por forma; POR GLOSA sí: koke 'hormiga roja; bachaco (Atta spp.)'
+        [caquetío-atestiguado, Hernández Baño vía Zavala #89, forma_fuente
+        coques; Oliver 1989 cap. 2 p. 145: cognados yavitero hoke, maipure
+        kuki, lokono kuse] y ditero 'hormiga que daña'. El caquetío TENÍA su
+        palabra para este insecto.
+      cognados: nada para bachaco
+      toponimos: >-
+        ≈ GUACHACO (cola de Esteves): NO es ruido — Alvarado registra
+        «Sin. guachaco (Tauste)», es decir, la misma voz en el vocabulario
+        cumanagoto-chaima de Tauste (1680), y la variante «uachaco» en
+        Mérida. Pista para la campaña de topónimos: el Guachaco de Esteves
+        puede ser 'bachaco' en su forma caribe. Se pasa a la cola con esta
+        lectura.
+      a2: nada
+      fonotactica: pasa
+      fuera_del_repo: >-
+        Alvarado 1921, Glosario de voces indígenas, s.v. BACHACO (Atta
+        sexdens): «La voz procede, según Rojas, del tam[anaco] chiauco. Sin.
+        guachaco (Tauste)»; y «la gente campesina del Estado Mérida no
+        pronuncia hoi (1912) bachaco, ni tampoco guachaco, sino uachaco». RAE, Tesoro de los
+        diccionarios históricos: primeras atestaciones c. 1780 (it.
+        «bacciaco», fr. «vachacos») — la italiana es de la época y el
+        ámbito de Gilij (tamanaco, Orinoco).
+    filtros:
+      "4 panhispánico/nacional": "cae — es voz venezolana general (y colombiana), lo dice el autor"
+      "6 caribe": "cae — origen tamanaco (caribe del Orinoco) según Rojas vía Alvarado"
+    veredicto: D
+    filtro: 6
+    razon: >
+      No es caquetía: es el indigenismo NACIONAL para la Atta, de origen
+      caribe (tamanaco) y difusión panvenezolana — el propio Medina Colina
+      la sitúa en «nuestra tierra venezolana». Y el caso importa por lo que
+      enseña: el sustrato local SÍ tenía palabra (koke, atestiguada, con
+      cognados arahuacos), y el habla paraguanera del s. XX no la conserva —
+      la desplazó la voz nacional. Es el patrón inverso de arifuque: allí
+      sobrevivió la forma local; aquí ganó la general. La acepción del pelo
+      rojizo ensortijado es igualmente venezolana general.
+    nota_metodo: >
+      Primer caso de «la palabra caquetía existía y se perdió»: cuando el
+      cruce por GLOSA da caquetío-atestiguado y el cruce por FORMA da nada,
+      la voz dictada no es sustrato sino sustitución. Vale registrarlo como
+      pérdida léxica (esfera lengua: transmisión), no solo como descarte.
+
+  - voz: bajareque
+    entrada_libro: "Bajareque o bahareque [dictado: «Barrareque» — cotejar cuál va primero]"
+    glosa_libro: >-
+      es la palabra académica que el pueblo utilizó para identificar el
+      enredado de palos entretejidos con cañas y barro; casa humilde.
+    pagina: 41
+    campo: casa
+    origen_libro: "el autor la llama «la palabra académica»: la sabe general"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: >-
+        ≈ bajareke 'tabique hecho de tierra, palos y bejuco'
+        [caquetío-atestiguado, Zavala Reyes 2015 #24 (AM), forma_fuente
+        bajareque] — ES la misma palabra.
+      por_glosa: "bohío [taíno], kaly 'casa' [lokono]; nada caquetío para 'pared/tabique' salvo este bajareke"
+      fuera_del_repo: >-
+        RAE (DLE): bahareque, de origen taíno; Tesoro de los diccionarios
+        históricos: voz arahuaca antillana. Alvarado 1921 s.v. PAJAREQUE:
+        «Vocablo antillano», con la variante «de pajareque» en Venezuela.
+    veredicto: D
+    filtro: 4
+    razon: >
+      Antillanismo panamericano: entró al español general desde el taíno
+      (RAE) y volvió a toda Hispanoamérica; Medina Colina mismo la llama «la
+      palabra académica». No prueba nada local (filtro 4 del protocolo).
+      Que sea ARAHUACA no la hace caquetía: la ruta es taíno → español →
+      Paraguaná, no sustrato.
+    alerta_canon: >
+      ⚠️ (escriba) El lexicón tiene bajareke como CAQUETÍO-ATESTIGUADO sobre
+      la sola autoridad de Zavala #24 (AM), cuando la voz es antillanismo
+      panamericano de origen taíno — misma clase que #104 (hayo), #105
+      (caraota) y jaguey (#174, «D: panamericano, de taíno» en la nota de
+      Zavala). Se elevó a Miguel el 2026-09-01.
+    decision_miguel:
+      fecha: 2026-09-01
+      veredicto: "se MANTIENE caquetío-atestiguado; no hay issue"
+      razon: >-
+        «Es el material hecho mezcla con lo que hacían las casas. Yo creo
+        que habla de que había una tecnología compartida, y ya tenemos
+        atestiguado con Zavala. Yo la califico como caquetía atestiguada y
+        las otras [atestaciones] taínas solo refuerzan hermandad.»
+      criterio_aplicado: >-
+        REPERTORIO, no filiación: la palabra cuenta como caquetía porque los
+        caquetíos la usaban (Zavala la registra) y nombra una tecnología de
+        casa compartida por la familia arahuaca; que el origen sea taíno
+        refuerza la hermandad, no la resta. Es el criterio que el issue
+        pendiente repertorio-vs-filiación discute — queda aquí como
+        precedente declarado, y la misma vara deberá aplicarse al decidir
+        #104 (hayo) y #105 (caraota).
+      consecuencia_para_el_dictado: >-
+        La voz paraguanera sigue en D (no aporta sustrato nuevo: es la
+        palabra general), pero se registra como atestación viva del
+        material de casa en la península (s. XX).
+
+  - voz: bajear
+    glosa_libro: >-
+      la serpiente que en otros lugares del país denominan tragavenados,
+      nuestra gente la conoció como saruro. Esta exhala un vaho sobre sus
+      víctimas cuando son pequeñas, y dicen que con esto las adormece para
+      facilitarse el ataque. Nuestros viejos decían «procura que Manuel no
+      te bajee», por decir «evita que te engañe».
+    pagina: 41
+    campo: fauna / creencia
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada por forma (bajarí 'recorrer' es ruido difuso); la voz que importa de esta entrada es SARURO — ver entradas"
+      fonotactica: "NO pasa (coda -r): es castellana"
+    veredicto: D
+    filtro: 1
+    razon: >
+      Castellano regional: BAJEAR (< vaho/baho), 'dicho de un animal,
+      especialmente una serpiente: echar su aliento sobre otro para
+      adormecerlo' — venezolanismo y colombianismo del DRAE. La entrada vale
+      por dos cosas que no son la voz: el nombre local de la boa (saruro,
+      registrado aparte) y la creencia del vaho adormecedor (mc-mundo-004).
+
+  - voz: baque
+    lectura_de_oido: "dictado «Baki» y luego «Baque» — cotejar la grafía del libro"
+    glosa_libro: >-
+      el hombre de nuestro pueblo creó esta palabra para designar la pequeña
+      batea de madera con paredes bajas, muy parecida a la actual bandeja,
+      en la cual se transportaban las granjerías para vender o se recogía
+      la masa de maíz que se molía. Se fabricaba con madera de barisigua.
+    pagina: 42
+    campo: casa / oficio
+    origen_libro: "el autor la da como creación local («el hombre de nuestro pueblo creó esta palabra»)"
+    segun_dictado: true
+    dictado: 2026-09-01
+    dudosa: true
+    cruce:
+      lexicon: "nada por forma (bariki, bachure: ruido difuso); por glosa ('madera', 'maíz'): kuru 'árbol, madera' [caq. reconstruido], amaka 'sitio de moler maíz' [caq. atestiguado] — nada para 'batea'"
+      cognados: nada
+      toponimos: nada
+      a2: nada
+      fonotactica: pasa (no discrimina)
+    filtros:
+      "1 castellano": "el DRAE tiene baque 'golpe al caer' — otro significado; no restituye"
+      "2 papiamento/neerlandés": >-
+        ⚠️ CANDIDATO FUERTE: papiamento baki 'bandeja, recipiente, cajón'
+        < neerlandés bak 'recipiente, artesa, bandeja'. Misma forma, mismo
+        referente, y es exactamente el canal que el autor describe (goletas
+        de Adícora a Aruba/Curazao). Por verificar contra un diccionario de
+        papiamento antes de cerrar.
+    veredicto: D
+    certeza: media
+    filtro: 2
+    razon: >
+      Primer préstamo probable del PAPIAMENTO en el dictado: baki 'bandeja'
+      (< ndl. bak) explica forma y significado sin residuo, y el autor mismo
+      documenta el contacto marítimo con las islas. Que él la dé como
+      «creación de nuestro pueblo» no contradice: el préstamo se percibe
+      como propio al cabo de dos generaciones. Queda DUDOSA hasta cotejar el
+      papiamento (el repo no tiene diccionario; ver adquisiciones). Si se
+      confirma, es el caso de calibración del filtro 2 que el protocolo
+      pedía.
+    ver_tambien: "barisigua (entradas): la madera del baque, dictada aparte — «con b larga y con s», Miguel"
+
+  - voz: báquiro
+    lectura_de_oido: "dictado «Bakiro»; el libro trae baquiro/báquiro — cotejar tilde"
+    glosa_libro: >-
+      así mismo llamaron nuestros viejos a los puercos silvestres, en épocas
+      lejanas abundantes en nuestros montes, hoy extintos.
+    pagina: 43
+    campo: fauna
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada por forma (biro 'sal' es ruido); por glosa (puerco/pecarí): NADA caquetío — el lexicón no tiene palabra para el pecarí, animal de caza"
+      cognados: nada
+      toponimos: nada
+      fuera_del_repo: >-
+        Alvarado 1921 s.v. BÁQUIRO: «Báquira (váquira, Cod. 168) es voz
+        cumanagota; en car[ibe] pakira. Pécari es otra forma de la voz no
+        usada aquí»; refs. Oviedo I.409, Castellanos, Carvajal 189. Voz
+        venezolana general.
+    veredicto: D
+    filtro: 6
+    razon: >
+      Como bachaco: indigenismo NACIONAL de origen caribe (cumanagoto
+      báquira, caribe pakira) documentado desde Oviedo; no es sustrato
+      local. La diferencia con bachaco: aquí el cruce por glosa NO da
+      palabra caquetía — el lexicón carece de nombre para el pecarí (hueco
+      léxico de fauna de caza; ver mc-mundo-005).
+
+  - voz: paraviquejo
+    lectura_de_oido: "dictado «para Viquejo» — cotejar grafía (¿paraviquejo? ¿barabiquejo?)"
+    glosa_libro: >-
+      es una deformación de la pronunciación a la que era dado nuestro
+      pueblo, pues con esta palabra distinguían al barboquejo.
+    pagina: 43
+    campo: otro (vestido)
+    origen_libro: "el propio autor la declara deformación de barboquejo"
+    nota_miguel: "efectivamente debe ser un españolismo"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "no cruzada: el autor da la restitución castellana"
+    veredicto: D
+    filtro: 1
+    razon: >
+      Castellano deformado, y lo dice la fuente: BARBOQUEJO 'cinta que
+      sujeta el sombrero por debajo de la barba' (DRAE) con metátesis y
+      cambio de consonante — el «cambio de letras» de las Aclaratorias. La
+      entrada sirve de calibración porque el autor mismo hace el filtro 1.
+
+  - voz: basirruque
+    lectura_de_oido: "dictado «Basilruque», «Basirruque» — cotejar grafía"
+    glosa_libro: >-
+      creación del pueblo para expresar con ella dudas, desconfianza y a
+      veces negación.
+    pagina: 44
+    campo: otro (interjección)
+    origen_libro: "creación del pueblo (según el autor)"
+    segun_dictado: true
+    dictado: 2026-09-01
+    dudosa: true
+    cruce:
+      lexicon: "nada por forma ni por glosa"
+      cognados: nada
+      toponimos: nada
+      fonotactica: "NO pasa (cluster rr no atestiguado en caquetío)"
+    veredicto: D
+    certeza: media
+    filtro: 1
+    razon: >
+      Interjección expresiva sin referente: rendimiento casi nulo por
+      protocolo (§6.2), y la -rr- la deja fuera de la fonotáctica caquetía.
+      Sin etimología castellana clara tampoco (¿cruce expresivo tipo
+      «¡bah!» + terminación burlesca?): se documenta como creación expresiva
+      local y no se persigue. Dudosa solo para calibración.
+
+  - voz: bejuca
+    lectura_de_oido: "dictado «Behuca / bejuca»"
+    glosa_libro: >-
+      es una palabra creada por el pueblo para identificar una culebra
+      común en nuestros montes. No es peligrosa. En otras partes del país
+      se le conoce con el nombre de ratonera.
+    pagina: 45
+    campo: fauna
+    origen_libro: "creación del pueblo; el autor da el nombre nacional (ratonera): distribución peninsular del NOMBRE"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada por forma; por glosa ('culebra'): buio 'serpiente, boa, diablo' [caq. atestiguado], saruro 'boa' [caq.], wüi 'culebra' [wayuu] — ningún nombre caquetío para esta especie"
+      cognados: nada
+      toponimos: nada
+    veredicto: D
+    filtro: 4
+    razon: >
+      Derivado de BEJUCO ('liana'; voz antillana de origen caribe/taíno que
+      es español general desde el s. XVI): la culebra-bejuco, por la forma.
+      La metáfora es paraguanera (nombre local, como dice el autor), pero
+      la BASE es un antillanismo panhispánico: no aporta sustrato caquetío.
+      Queda como dato de fauna: una culebra inofensiva común en el monte
+      (la «ratonera» nacional — probablemente Mastigodryas/Drymarchon, id.
+      abierta), sin nombre caquetío conocido (hueco de fauna).
+
+  - voz: brote / birote
+    glosa_libro: >-
+      todas fueron producidas por el pueblo para identificar a las personas
+      tontas, gafas, medio pendejas.
+    pagina: 45
+    campo: otro (insulto)
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "no cruzada: insulto (protocolo §6.2: los insultos son casi siempre romances)"
+    veredicto: D
+    filtro: 1
+    razon: >
+      Insultos de formación expresiva castellana (cf. birote, birria, bruto
+      → brote). Rendimiento nulo para el sustrato; se anota por cobertura.
+
+  - voz: borote / bojote
+    glosa_libro: >-
+      la gente de la península decía esta palabra para identificar con
+      ella un lío, bulto o paquete, que es la acepción correcta dictada por
+      la academia.
+    pagina: 46
+    campo: otro
+    origen_libro: "el autor remite a la acepción académica"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "no cruzada: el autor da la voz académica (bojote)"
+    veredicto: D
+    filtro: 1
+    razon: >
+      BOJOTE 'bulto, lío, paquete' es venezolanismo y colombianismo del DRAE
+      (origen incierto, no local); borote es su variante con cambio de
+      consonante. Voz general del país: no discrimina.
+
+  - voz: breva
+    entrada_libro: "Breva o guanariji"
+    glosa_libro: "[el fruto] del cardón de lefaria (ver guanariji)"
+    pagina: 49
+    campo: flora (fruto)
+    segun_dictado: true
+    dictado: 2026-09-01
+    veredicto: D
+    filtro: 1
+    razon: >
+      Castellano: BREVA 'primer fruto de la higuera' aplicado por metáfora al
+      fruto del cardón de lefaria. El dato (que ese fruto tenía nombre y se
+      comía) queda en la entrada lefaria.
+
+  - voz: buruza
+    glosa_libro: >-
+      es creación del pueblo llano para identificar una cosa pequeña o
+      parte mínima de alguna cosa.
+    pagina: 51
+    campo: otro
+    origen_libro: "creación del pueblo llano (según el autor)"
+    segun_dictado: true
+    dictado: 2026-09-01
+    dudosa: true
+    cruce:
+      lexicon: "nada (lokono buru 'cielo' es ruido)"
+      fonotactica: pasa
+    veredicto: D
+    certeza: baja
+    filtro: 1
+    razon: >
+      Sin referente local (cuantificador 'pizca, poquito'); probable
+      formación expresiva castellana (cf. brizna, borusca; y el
+      venezolanismo ñinga con el mismo valor). No hay candidato indígena y
+      el protocolo no persigue cuantificadores. Dudosa solo por falta de
+      etimología cerrada.
+
+  - voz: buzaca
+    lectura_de_oido: "dictado «Busaka», «buzaca» — cotejar grafía (¿busaca?)"
+    glosa_libro: >-
+      para nuestros mayores, toda bolsa de papel capaz de contener algo en
+      su interior era una buzaca. También se le llamó así a los sacos hechos
+      de tela. Es palabra del pueblo llano.
+    pagina: 52
+    campo: casa
+    origen_libro: "palabra del pueblo llano"
+    nota_miguel: "cree que «palabra del pueblo llano» indica autóctona; y nota la cadencia parecida de buzaca y busuga"
+    segun_dictado: true
+    dictado: 2026-09-01
+    dudosa: true
+    cruce:
+      lexicon: "nada (lokono buraka 'arco' es ruido); por glosa: wayuu piyulu 'bolsa de malla', toleeka 'saco' — nada parecido"
+      fonotactica: pasa
+      fuera_del_repo: >-
+        Documentada como voz ZULIANA y falconiana (Diccionario de maracucho;
+        repertorio de palabras falconianas): busaca 'bolsa'. Distribución
+        regional occidental, no solo Paraguaná. El protocolo §5 la usaba
+        como EJEMPLO de descarte por papiamento («busaca → papiamento,
+        descartada»), pero eso era ilustrativo: la búsqueda del 2026-09-01
+        no halló ninguna fuente que la dé como papiamento.
+    veredicto: D
+    certeza: baja
+    filtro: "1/2 (origen incierto)"
+    razon: >
+      Tres razones para no perseguirla: el referente es introducido (bolsa
+      de papel, saco de tela: no hay bolsa de papel precontacto); la
+      distribución es occidental venezolana (Zulia + Falcón), no
+      peninsular; y la forma se deja leer como castellano deformado (¿bolsa
+      + -aca, con l vocalizada: bolsaca > busaca?) o como préstamo por mar,
+      sin que ninguna fuente lo cierre. Sobre «palabra del pueblo llano»:
+      en este libro es la etiqueta de toda creación popular, incluidas las
+      deformaciones castellanas (abofao, buruza) — NO marca autoctonía. La
+      cadencia buzaca~busuga es -Vga/-Vka final: en el lexicón atestiguado
+      abundan (waka, bakoa, saruro...), no discrimina.
+
+  - voz: cabuya
+    entrada_libro: "Cabuya (con y)"
+    glosa_libro: >-
+      es voz caribe. Para nuestra gente fue fibra de la pita con que se
+      fabrican cuerdas y tejidos; cuerda, especialmente de pita o sisal.
+    pagina: 55
+    campo: oficio / fibra
+    origen_libro: "«es voz caribe» — la fórmula etimológica del DRAE (cabuya: «Voz caribe»), copiada por el autor"
+    nota_miguel: "cree que «voz caribe» quiere decir «voz indígena» en general; lo deja como dice el autor"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: >-
+        nada por forma. POR GLOSA: DIPOPO 'fibra de cocuiza, cabuya'
+        [caquetío-atestiguado], kukuisa 'cocuiza, agave de fibra'
+        [español-colonial], maure 'fibra de algodón' [caquetío]. El
+        caquetío tenía su propia palabra para la fibra de cabuya: dipopo.
+      cognados: nada
+      toponimos: nada
+      fonotactica: pasa
+      fuera_del_repo: >-
+        DRAE: cabuya, «Voz caribe». Alvarado 1921 s.v. CABUYA: «Voz taína,
+        adoptada en el chaima. En cal[ina] káboya, en gal[ibi] kabuia, en
+        maquiritare kahuya» (refs. Las Casas, Oviedo I.132, Herrera,
+        Gilij). Es decir: TAÍNA (arahuaca insular), y las formas caribes
+        son préstamos de ella — al revés de lo que la marca del DRAE
+        sugiere.
+    veredicto: D
+    filtro: 4
+    razon: >
+      Antillanismo panhispánico: cabuya entró al español general desde el
+      Caribe insular en el s. XVI (Oviedo la trae) y se dice en toda
+      Hispanoamérica — no discrimina. Lo que la entrada deja es el mismo
+      hallazgo que bachaco/koke: el caquetío TENÍA nombre propio para la
+      fibra (dipopo, atestiguado) y el habla paraguanera del XX conserva
+      la voz general, no la local. Segunda PÉRDIDA LÉXICA documentada.
+      Sobre «voz caribe»: el autor copia la marca del DRAE, que en ese
+      diccionario significa «de las lenguas del Caribe insular» — no es
+      su etimología ni un juicio sobre Paraguaná.
+
+  - voz: cachimbo
+    glosa_libro: >-
+      así denominaron nuestros viejos a la pipa de fumar tabaco. En otras
+      latitudes significa ingenio de azúcar pequeño y hasta guardia
+      nacional.
+    pagina: 57
+    campo: otro (oficio)
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "no cruzada: etimología conocida"
+    veredicto: D
+    filtro: 5
+    razon: >
+      AFRICANISMO: cachimba/cachimbo 'pipa' entró al español americano por
+      el portugués (bantú, kimbundu kixima) — DRAE: «de or. africano». Voz
+      general del Caribe y Venezuela; el autor mismo la da con acepciones
+      de otras regiones.
+
+  - voz: cachivache
+    glosa_libro: >-
+      [entrada agrupada] las palabras catanar [?], camastrón y carcacha son
+      sinónimos de cosas viejas. Esta es la palabra académica.
+    pagina: 57
+    campo: otro
+    segun_dictado: true
+    dictado: 2026-09-01
+    veredicto: D
+    filtro: 1
+    razon: "Castellano general (DRAE); el autor la marca como académica. Se anota por cobertura."
+
+  - voz: cafudeco
+    glosa_libro: >-
+      rara expresión para referirse a alguien que calificaban como tonto,
+      bobo; en fin, un rol histriónico [?] de pendejo, decían.
+    pagina: 58
+    campo: otro (insulto)
+    segun_dictado: true
+    dictado: 2026-09-01
+    veredicto: D
+    filtro: 1
+    razon: "Insulto de formación expresiva; el protocolo no los persigue (rendimiento nulo). Se anota por cobertura."
+
+  - voz: calende
+    glosa_libro: >-
+      taparrabo. Para los paraguaneros fue la ropa maltrecha, rota,
+      andrajosa.
+    pagina: 59
+    campo: vestido
+    segun_dictado: true
+    dictado: 2026-09-01
+    dudosa: true
+    cruce:
+      lexicon: "nada por forma (wayuu ka'lee 'grueso' es ruido); por glosa: solo wayuu ashe'in 'ropa' — el lexicón no tiene 'taparrabo/guayuco'"
+      cognados: nada
+      toponimos: nada
+      fonotactica: "NO pasa — cluster -nd- no atestiguado en caquetío"
+      fuera_del_repo: "no está en Alvarado 1921"
+    veredicto: D
+    certeza: baja
+    filtro: "fonotáctica (criterio 3 como filtro negativo)"
+    razon: >
+      El referente (taparrabo) es precontacto y el lexicón no tiene palabra
+      para él — hueco real. Pero la forma viola la fonotáctica atestiguada
+      (-nd-), que el protocolo usa como filtro negativo, y no hay
+      etimología en ninguna dirección (ni castellana, ni papiamento, ni
+      arahuaca). Se documenta el hueco (guayuco/taparrabo sin nombre
+      caquetío) y la voz queda D-dudosa.
+
+  - voz: catanare
+    lectura_de_oido: "dictado «Catanari», «Catenar», «Catanare» — cotejar grafía"
+    entrada_libro: "agrupada con camastrón y carcacha (p. 57)"
+    glosa_libro: >-
+      estas palabras fueron tomadas por nuestros mayores como sinónimo de
+      cosas viejas, inservibles o muy deterioradas.
+    pagina: 57
+    campo: otro
+    nota_miguel: "«creo que catanare es la que más pareciera caquetía» (la -re)"
+    segun_dictado: true
+    dictado: 2026-09-01
+    dudosa: true
+    cruce:
+      lexicon: "nada por forma; por glosa ('viejo'): baharuko 'abuelo, viejo', wasima 'viejo, anciano' [caq. atestiguado] — de personas, no de cosas"
+      fonotactica: pasa
+      fuera_del_repo: "no está en Alvarado 1921"
+    veredicto: D
+    certeza: media
+    filtro: 1
+    razon: >
+      Probable derivado de CATANA (< jap. katana 'sable'; en Cuba y
+      Venezuela 'objeto viejo, inservible' — DRAE), con una terminación
+      -are. Si eso es así, la -are que Miguel señala sería aquí un SUFIJO
+      LOCAL sobre raíz castellana: dato interesante sobre la productividad
+      de -are en el habla, pero contrario a que la palabra sea sustrato.
+      Queda dudosa hasta cotejar catana en el uso paraguanero.
+
+  - voz: camonina
+    glosa_libro: >-
+      así dijeron nuestros viejos para referirse a los engaños, a la
+      simulación, a la tomadera de pelo.
+    pagina: "60-61"
+    campo: otro (abstracto)
+    segun_dictado: true
+    dictado: 2026-09-01
+    dudosa: true
+    cruce:
+      lexicon: "nada por forma ni por glosa"
+      fonotactica: pasa
+      fuera_del_repo: "no está en Alvarado 1921"
+    veredicto: D
+    certeza: baja
+    filtro: "campo no discriminante"
+    razon: >
+      Abstracto ('engaño') sin referente local ni etimología en ninguna
+      dirección. Regla que se fija aquí para no inflar la C: una voz sin
+      filiación Y sin campo local no sube de D-dudosa por el solo hecho de
+      no tener etimología castellana (cadare se dejó en C-baja por la
+      -are; camonina no tiene ni eso). Terminación -ina: castellana
+      (tomadera, cominería) o expresiva.
+
+  - voz: capirote
+    glosa_libro: >-
+      las vísceras de un animal que se sacrificara generalmente formaban
+      parte de lo que se pagaba al matarife por sus servicios. A dichas
+      vísceras nuestra gente denominó con esta palabra.
+    pagina: "62-63"
+    campo: oficio (matanza)
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada por forma; por glosa ('vísceras'): nada en ninguna lengua del canon"
+      fonotactica: pasa
+    veredicto: D
+    filtro: 1
+    razon: >
+      Forma castellana (capirote 'capucha cónica'; también 'variedad de
+      cosas' en el uso regional) con acepción local 'asadura del animal
+      sacrificado'. Metáfora o deslizamiento castellano; nada indígena. El
+      dato de oficio — el matarife cobraba en vísceras — va a mc-mundo-008.
+
+  - voz: capusa
+    glosa_libro: >-
+      fue creada por el pueblo para con ella designar a todo envase de
+      papel o tela capaz de contener algo. Se decía capusa de papel o
+      capusa de tela.
+    pagina: 63
+    campo: casa
+    origen_libro: "creada por el pueblo (según el autor)"
+    segun_dictado: true
+    dictado: 2026-09-01
+    dudosa: true
+    cruce:
+      lexicon: "nada real (kapu 'demonio', kapua 'amanecer', kasá: ruido difuso); por glosa: solo wayuu piyulu/toleeka"
+      fonotactica: pasa
+      fuera_del_repo: "no está en Alvarado 1921"
+    veredicto: D
+    certeza: baja
+    filtro: 1
+    razon: >
+      Mismo referente que buzaca (bolsa de papel o tela: introducido), y
+      la misma conclusión: el habla tenía DOS palabras locales para la
+      bolsa (buzaca, capusa), lo que sugiere creación popular tardía sobre
+      base castellana (¿capuz/capucha 'cubierta' → capusa?) más que
+      sustrato. Dudosa por falta de etimología cerrada.
+
+  - voz: carebe
+    lectura_de_oido: "dictado «Caribe, Carebe» — leído carebe; cotejar"
+    glosa_libro: >-
+      con esta palabra, propia del pueblo, se identificaba una especie de
+      cucharón que se hacía con media tapara y que era atravesada por sus
+      bordes por un mango de madera. Era utilizado para servir comida.
+    pagina: 64
+    campo: casa (utensilio)
+    origen_libro: "«palabra propia del pueblo»"
+    segun_dictado: true
+    dictado: 2026-09-01
+    dudosa: true
+    cruce:
+      lexicon: "nada por forma (cognado-050 caribe es ruido); por glosa: kudan 'servir' [caq.], wayuu aliita 'totuma' — nada para 'cucharón'"
+      fonotactica: pasa
+      fuera_del_repo: "no está en Alvarado 1921"
+    veredicto: C
+    certeza: baja
+    razon: >
+      Utensilio de tapara con mango: referente precontacto (la totuma
+      como cucharón es pancaribeña) y nombre local sin etimología
+      castellana. Pasa los filtros; campo local y distribución restringida
+      por única fuente; sin cognado ni atestación. C-baja: al corpus
+      (casa/oficio) como hipotético, junto a camuro — el par tapara-vasija
+      / tapara-cucharón con nombres propios.
+
+  - voz: cataneja
+    glosa_libro: >-
+      ave carroñera, muy parecida al zamuro, pero con la cabeza sin
+      plumas [?].
+    pagina: 65
+    campo: fauna
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: >-
+        nada por forma. POR GLOSA: WARU 'volturido, cataneja. Ave mayor que
+        el zamuro' [caquetío-atestiguado, Zavala #143 (Esteves),
+        forma_fuente guaru] — el propio lexicón usa «cataneja» como la
+        GLOSA CASTELLANA de waru. También warawara 'caracara' [caq.
+        atestiguado] y wayuu samulu 'zamuro'.
+      fonotactica: pasa
+      fuera_del_repo: "no está en Alvarado 1921 como lema"
+    veredicto: D
+    certeza: media
+    filtro: "4 (nombre regional de circulación amplia)"
+    razon: >
+      Cataneja es el nombre común del occidente venezolano (Falcón, Lara,
+      Zulia) para el buitre grande, y es la palabra con que Esteves y el
+      lexicón GLOSAN la voz caquetía waru. Cuarta sustitución documentada
+      (koke→bachaco, dipopo→cabuya, korie→cachicamo, waru→cataneja): el
+      habla del XX conserva el nombre regional castellano-criollo, no el
+      caquetío. La etimología de cataneja misma queda abierta (no es
+      castellana obvia; podría ser indígena de otro estrato) — por eso
+      certeza media: D como sustrato caquetío, no como voz castellana.
+
+  - voz: cayapa
+    glosa_libro: >-
+      con este adjetivo, invento de su ingenio, nuestros mayores
+      calificaron dos cosas: una, cuando varias personas le caían a golpes
+      a una sola; dos, cuando varios hombres, en un día acordado
+      previamente, le trabajaban de gratis a uno de ellos a cambio de
+      licor y comida, generalmente para hacer la casa o atender una
+      siembra.
+    pagina: 66
+    campo: sociedad / oficios
+    origen_libro: "«invento de su ingenio» (creación local, según el autor)"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada real (kaya, karapa, wayuu jayapa: ruido difuso); por glosa: nada"
+      fonotactica: pasa
+    veredicto: D
+    filtro: 4
+    razon: >
+      Voz venezolana GENERAL (DRAE: cayapa, Ven.; en todo el país 'trabajo
+      colectivo' y 'ataque en grupo'), no local — el autor la cree local
+      porque la conoce en su uso. Origen discutido (se ha propuesto el
+      etnónimo cayapa/chachi del Ecuador; no hay candidato arahuaco). Lo
+      que vale es la INSTITUCIÓN: trabajo colectivo recíproco por licor y
+      comida — mc-mundo-009.
+
+  - voz: chaguaca
+    lectura_de_oido: "dictado «chihuahua, chaguaca» — leído chaguaca; cotejar"
+    glosa_libro: >-
+      así llamaron los viejos paraguaneros al estómago de las aves, fueran
+      estas domésticas o no.
+    pagina: 67
+    campo: cuerpo (animal) / cocina
+    segun_dictado: true
+    dictado: 2026-09-01
+    dudosa: true
+    cruce:
+      lexicon: "nada real (sawaka, waka: ruido difuso); por glosa ('molleja'): nada en ninguna lengua del canon"
+      fonotactica: pasa
+      fuera_del_repo: "no está en Alvarado 1921"
+    veredicto: D
+    certeza: baja
+    filtro: "campo no discriminante (regla fijada en camonina)"
+    razon: >
+      Forma sin etimología castellana, pero el referente (la molleja de
+      un ave, doméstica o no) no es local ni intraducible — el español
+      tiene molleja. Por la regla fijada en camonina: sin filiación y sin
+      campo local, D-dudosa. Se deja abierta por si aparece en otra
+      fuente regional (Zulia/Lara) con pista de origen.
+
+  - voz: chaqui chaqui
+    glosa_libro: >-
+      era la arena con alto contenido de pequeñas piedras de canto, la
+      cual al caminar sobre ellas hacía un ruido que le dio el nombre
+      popular.
+    pagina: 69
+    campo: paisaje
+    origen_libro: "el autor la declara onomatopéyica («el ruido que le dio el nombre»)"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "no cruzada: onomatopeya declarada por la fuente"
+    veredicto: D
+    filtro: "1 (creación expresiva)"
+    razon: >
+      Reduplicación onomatopéyica, y lo dice el autor. El REFERENTE sí
+      importa: la arena de canto rodado es un tipo de suelo del paisaje
+      costero que el corpus de ecología distingue (playa, médano, salina),
+      y el lexicón no tiene palabra para él — hueco de paisaje anotado,
+      sin voz que lo llene.
+
+  - voz: chaute
+    lectura_de_oido: "dictado «Chaote, chaute, chaufres» — leído chaute; cotejar"
+    glosa_libro: >-
+      las frutas aún no maduras, y las pasadas de maduras, eran para
+      nuestros viejos frutas chautes.
+    pagina: 69
+    campo: flora (estado del fruto)
+    segun_dictado: true
+    dictado: 2026-09-01
+    dudosa: true
+    cruce:
+      lexicon: "nada real (kuté 'a usted', chaure 'lechuza': ruido difuso); por glosa: solo 'verde' y 'maduro' en lokono y wayuu, nada caquetío"
+      fonotactica: pasa
+      fuera_del_repo: "no está en Alvarado 1921"
+    veredicto: D
+    certeza: baja
+    filtro: "campo no discriminante (regla de camonina)"
+    razon: >
+      Adjetivo de estado del fruto ('malogrado': verde o pasado) sin
+      etimología en ninguna dirección. A diferencia de cachinare (que
+      nombra el fruto malogrado DEL CARDÓN, campo caquetío), chaute es
+      genérico y el español lo cubre (verde, pasado): D-dudosa. Si en la
+      letra correspondiente el libro trae más vocabulario de recolección
+      de fruta, se revisa el conjunto.
+
+  - voz: chiclán
+    glosa_libro: >-
+      todo hombre o animal macho que solo tuviese un testículo, para
+      nuestros viejos era un hombre o animal chiclán.
+    pagina: 70
+    campo: cuerpo / ganado
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "no cruzada: etimología castellana cerrada"
+    veredicto: D
+    filtro: 1
+    razon: >
+      Castellano: CICLÁN 'que tiene un solo testículo' (DRAE; de origen
+      árabe), con la variante chiclán documentada en Andalucía y América.
+      Arcaísmo ganadero conservado, como ahíto y aguamanil: el vocabulario
+      de la cría de ganado menor es donde el español rural viejo sobrevive
+      mejor.
+
+  - voz: chícora
+    glosa_libro: >-
+      era una herramienta para cavar huecos y clavar maderos. La componía
+      una hoja metálica afilada que se encastraba, por su lado circular, en
+      un mango de madera de poco más de metro y medio. Junto con el pico y
+      la barra, era instrumento indispensable para el trabajo de sacar
+      sepulturas y [hacer] los estanques [?].
+    pagina: 70
+    campo: oficio (herramienta)
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada real (kira, ikoa: ruido); por glosa: wayuu paarü 'pala', lokono shukua 'remo' — nada caquetío para 'azada/coa'"
+      fonotactica: pasa
+      fuera_del_repo: "DRAE: chícora, Ven. 'azada' (sin etimología). No está en Alvarado 1921 como lema. Búsqueda 2026-09-01: voz venezolana general"
+    veredicto: D
+    filtro: 4
+    razon: >
+      Voz venezolana general (DRAE, Ven.), no peninsular; el objeto es de
+      hoja metálica, posterior al contacto. Origen de la palabra abierto
+      (no es castellana obvia; podría ser indígena de otro estrato o
+      derivado de coa) — pero no discrimina Paraguaná. El dato que vale:
+      es la herramienta con que se cavaban los ESTANQUES (los jagüeyes de
+      asentar agua) y las sepulturas — mc-mundo-011.
+
+  - voz: chinchorro
+    glosa_libro: >-
+      es académica. Hamaca ligera hecha con cordeles; se hacía de hilos de
+      cocuy, que es más fuerte y fino que el hilo de cocuiza. También se
+      tejían de hilo de algodón, pero resultan más calurosos. La hamaca se
+      hacía de lonilla.
+    pagina: 71
+    campo: casa / oficio (textil)
+    origen_libro: "«es académica»"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "no cruzada la voz (DRAE: chinchorro 'hamaca de red', Ven./Col.); SÍ cruzadas las fibras: kokuy 'penca... que da un vino agradable' [caq. atestiguado], dipopo 'fibra de cocuiza' [caq. atestiguado], kukuisa [español-colonial], maure 'fibra de algodón' [caq.]"
+    veredicto: D
+    filtro: 1
+    razon: >
+      Castellano (chinchorro 'red' > 'hamaca de red'), y el autor la marca
+      como académica. Lo que la entrada trae es tecnología textil con
+      nombres que el lexicón SÍ tiene: la fibra de COCUY (kokuy, Agave
+      cocui) «más fuerte y fina» que la de COCUIZA (kukuisa/dipopo,
+      Furcraea), y el algodón (maure) como alternativa cálida. Es la
+      jerarquía de fibras del oficio de la hamaca — mc-mundo-012.
+
+  - voz: chingo
+    glosa_libro: >-
+      así llamaron nuestros paraguaneros a los que por alguna
+      circunstancia no tuvieran nariz, como también a los que estaban
+      desesperados o a la expectativa por alcanzar algo.
+    pagina: 72
+    campo: cuerpo / otro
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "no cruzada: venezolanismo general"
+    veredicto: D
+    filtro: 4
+    razon: >
+      Venezolanismo GENERAL del DRAE: chingo 'chato, de nariz roma' y
+      «estar chingo» 'estar deseoso, desesperado por algo' — las dos
+      acepciones que da el autor son las nacionales (origen discutido,
+      probablemente romance/caló, no indígena). No discrimina Paraguaná.
+
+  - voz: chiripa
+    glosa_libro: >-
+      nuestra gente le dio dos significados a esta palabra: la cucaracha
+      pequeña, la que aún no está desarrollada, la llamó así; y lo que se
+      alcanzaba u obtenía por casualidad. Es palabra académica.
+    pagina: 72
+    campo: fauna / otro
+    origen_libro: "«es palabra académica»"
+    nota_miguel: "le llama la atención la terminación -ipa"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "no cruzada: las dos acepciones son del DRAE"
+    veredicto: D
+    filtro: 4
+    razon: >
+      Las dos acepciones están en el DRAE: chiripa 'casualidad favorable'
+      (general) y, marcada Ven., 'cucaracha pequeña'. Venezolanismo
+      general, no peninsular. Sobre la -ipa: no hay en el caquetío
+      atestiguado una final -ipa con la que compararla (sí -pa en el
+      wayuu); se anota la observación sin más.
+
+  - voz: chirito
+    lectura_de_oido: "dictado «chiquito, chirito» — leído chirito"
+    glosa_libro: >-
+      así llama nuestra gente a un pequeño pájaro de color blanco
+      grisáceo, un poco mayor del tamaño del colibrí, y que da su sonido
+      en árboles altos.
+    pagina: 73
+    campo: fauna
+    segun_dictado: true
+    dictado: 2026-09-01
+    dudosa: true
+    cruce:
+      lexicon: "nada por forma; por glosa: lokono bimiti, wayuu chünü'ü 'colibrí' — nada parecido; ningún nombre caquetío de pájaro pequeño"
+      fonotactica: pasa
+      fuera_del_repo: "no está en Alvarado 1921"
+    veredicto: D
+    certeza: baja
+    filtro: 1
+    razon: >
+      Zoónimo, sí, pero la forma se deja leer como castellano expresivo:
+      chir- (de chirriar, el canto) + diminutivo -ito, 'el pajarito que
+      chirría' — exactamente lo que describe el autor (pequeño, canta en
+      lo alto). Sin nada indígena que lo sostenga: D-dudosa. Se deja
+      abierta por si la raíz chir- resulta ser la misma de chirita
+      (poco probable: allí es 'fino', aquí es canto).
+
+  - voz: chocore
+    lectura_de_oido: "dictado «Chocori, Chocoré, chocore» — leído chocore; cotejar tilde"
+    glosa_libro: >-
+      un sombrero viejo, pero aún usable, era para nuestros viejos un
+      chocore. Palabra inventada por nuestro pueblo.
+    pagina: 73
+    campo: vestido
+    origen_libro: "«palabra inventada por nuestro pueblo»"
+    segun_dictado: true
+    dictado: 2026-09-01
+    dudosa: true
+    cruce:
+      lexicon: "nada real (koke 'bachaco', wayuu chocho 'trompo': ruido); por glosa: wayuu uwon 'sombrero' — nada parecido"
+      fonotactica: pasa
+      fuera_del_repo: "no está en Alvarado 1921"
+    veredicto: D
+    certeza: baja
+    filtro: "referente introducido + campo no discriminante"
+    razon: >
+      El sombrero es objeto de después del contacto y la voz no tiene
+      etimología en ninguna dirección: por la regla de camonina, D-dudosa.
+      La final -ore se suma a la familia -are/-ure/-ore que el dictado
+      viene mostrando en nombres comunes; se anota en patrones, no aquí.
+
+  - voz: chuchumbaca
+    glosa_libro: >-
+      entretenimiento de los muchachos que consistía en que, mientras uno
+      de ellos permanecía en el chinchorro, los demás le movían
+      violentamente las cabulleras del mismo.
+    pagina: 74
+    campo: otro (juego)
+    segun_dictado: true
+    dictado: 2026-09-01
+    dudosa: true
+    cruce:
+      lexicon: "nada"
+      fonotactica: "pasa (-mb- está atestiguado: chacamba)"
+    veredicto: D
+    certeza: baja
+    filtro: "1 (creación expresiva)"
+    razon: >
+      Nombre de juego con reduplicación expresiva (chu-chu-) y final
+      -baca de sabor jocoso; sin referente natural ni etimología. Se
+      documenta el JUEGO como dato de crianza (mc-mundo-013), no la voz.
+
+  - voz: chuchumeco
+    glosa_libro: "se utilizaba para zaherir al hombre ruin."
+    pagina: 74
+    campo: otro (insulto)
+    segun_dictado: true
+    dictado: 2026-09-01
+    veredicto: D
+    filtro: 1
+    razon: >
+      Castellano general: CHUCHUMECO 'hombre pequeño, feo y de mala
+      figura; ruin' está en el DRAE (de origen incierto, quizá de
+      chichimeca). Insulto, además: rendimiento nulo por protocolo.
+
+  - voz: chuco
+    glosa_libro: >-
+      los paraguaneros le dieron cuatro significados a esta palabra: uno,
+      para designar al mono, que sin importar clase o raza denominaron
+      así; dos, para identificar la especie de libélula muy común en los
+      estanques de aguas pluviales y que tiene la particularidad de tocar
+      el agua sin detener el vuelo; tres, para referirse a la persona que
+      pierde [?] en el juego o los negocios; y cuatro, para el acto de
+      cargar a horcajadas en el hombro a los niños.
+    pagina: 74
+    campo: fauna / otro
+    segun_dictado: true
+    dictado: 2026-09-01
+    dudosa: true
+    cruce:
+      lexicon: >-
+        nada por forma (konuko: ruido). POR GLOSA: ARATA 'mono'
+        [caquetío-atestiguado] — el caquetío tenía nombre propio para el
+        mono; wayuu potshonoi 'libélula'; wanepe 'cesto para cargar
+        niños' [caq.].
+      fonotactica: pasa
+      fuera_del_repo: >-
+        No está en Alvarado 1921. Diccionarios de venezolanismos en línea
+        (jergozo, asihablamos, 2026-09-01): chuco 'libélula' en el ZULIA;
+        'correa de castigo' en Táchira; 'sucio' en uso general. La
+        acepción 'mono' no aparece fuera.
+    veredicto: D
+    certeza: baja
+    filtro: "4 (regional occidental) / sin filiación"
+    razon: >
+      La acepción de libélula es marabina (Zulia y parte de Falcón), no
+      peninsular; las otras tres no tienen filiación en ninguna dirección
+      y la polisemia (mono, libélula, perdedor, cargar al hombro) sugiere
+      voz expresiva o infantil. Para 'mono' el caquetío tenía arata: si
+      chuco lo sustituyó, sería la quinta sustitución — pero sin fuente
+      que dé chuco como voz antigua, se queda en D-dudosa. La libélula de
+      los estanques de agua de lluvia es, eso sí, un dato del jagüey
+      (fauna del agua de la tierra pobre) sin nombre caquetío conocido.
+
+  - voz: chucuto
+    glosa_libro: >-
+      animal al que le faltara el rabo era chucuto para nuestros
+      paraguaneros, así como también lo era todo aquello que no estuviera
+      completamente hecho o le faltara algo para estar completo.
+    pagina: 75
+    campo: ganado / otro
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada por forma; por glosa: wayuu asi 'cola' — nada caquetío para 'rabón'"
+      fonotactica: pasa
+      fuera_del_repo: "DRAE: chucuto, Ven. 'rabón; incompleto' (sin etimología). No está en Alvarado 1921"
+    veredicto: D
+    filtro: 4
+    razon: >
+      Venezolanismo general (DRAE, Ven.) con las dos acepciones que da el
+      autor. Origen abierto (no castellano obvio; Alvarado no lo recoge
+      como indigenismo): no discrimina Paraguaná.
+
+  - voz: churribamba
+    glosa_libro: >-
+      para decir que algo era numeroso lo manifestaron con este vocablo.
+      Se escuchó decir: «Josefa y Mamerto tienen una churribamba de
+      muchachos». Es vocabulario popular.
+    pagina: 75
+    campo: otro (cuantificador)
+    origen_libro: "«es vocabulario popular»"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "no cruzada: cuantificador expresivo"
+      fonotactica: "pasa (-mb- atestiguado en chacamba)"
+    veredicto: D
+    filtro: "1 (creación expresiva)"
+    razon: >
+      Cuantificador expresivo con final -bamba de sabor jocoso (cf. los
+      venezolanismos burundanga, chirimbolo, y el tipo churrete/churri-);
+      sin referente ni filiación. El protocolo no persigue cuantificadores
+      (cf. buruza). Se anota por cobertura.
+
+  - voz: coa
+    glosa_libro: >-
+      es el palo de madera aguzado en la punta con que se abrían huecos en
+      la tierra, y donde se depositaba la semilla de la siembra.
+    pagina: 77
+    campo: oficio (agricultura)
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada por forma; por glosa: kono 'sembrar' [caq. reconstruido], tabri 'siembra' [caq. atestiguado], bara 'palo' — el caquetío tiene el sembrar y la siembra, NO la herramienta"
+      fonotactica: pasa
+      fuera_del_repo: "DRAE: coa 'palo con la punta endurecida al fuego para sembrar', de origen antillano (taíno); no está en Alvarado 1921 como lema"
+    veredicto: D
+    filtro: 4
+    razon: >
+      Antillanismo panhispánico (taíno → español general del Caribe): la
+      voz no discrimina Paraguaná. El OBJETO sí es precontacto — el palo
+      cavador es la herramienta agrícola indígena por excelencia — y el
+      lexicón no tiene nombre caquetío para él: hueco léxico de oficio,
+      registrado en mc-mundo-014 junto con la técnica.
+
+  - voz: cochocho
+    glosa_libro: >-
+      voz popular venezolana: piojo blanco del cuerpo, que produce
+      comezón, desova en la ropa. Con esa acepción la utilizó nuestra
+      gente.
+    pagina: 77
+    campo: fauna (parásito)
+    origen_libro: "«voz popular venezolana» — el autor mismo la da como nacional"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada por forma (tokoko, chocho: ruido); por glosa: wayuu mapüi, lokono ichi 'piojo' — nada caquetío"
+      fonotactica: pasa
+      fuera_del_repo: "no está en Alvarado 1921 como lema"
+    veredicto: D
+    filtro: 4
+    razon: >
+      Venezolanismo general (el autor lo declara), reduplicación expresiva
+      co-cho-cho; sin filiación. No discrimina Paraguaná. Dato marginal:
+      el caquetío no tiene palabra registrada para el piojo (sí el wayuu
+      y el lokono).
+
+  - voz: coquiza
+    entrada_libro: "Coquiza (grafía fonética del libro por cocuiza)"
+    glosa_libro: >-
+      los viejos de nuestros campos llamaron así al hilo obtenido de la
+      planta del sisal; con el mismo hicieron cordeles, mecates, hilos y
+      tejidos para sacos donde envasar productos agrícolas.
+    pagina: 77
+    campo: oficio (fibra)
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: >-
+        = KUKUISA 'cocuiza, agave de fibra para cuerda' [ESPAÑOL-COLONIAL —
+        reasignada en D10 (2026-08-03) porque Alvarado cita a Caulín: «una
+        especie de pita que los indios llaman CARUATA y los españoles
+        COCUIZA»]; y DIPOPO 'fibra de cocuiza, cabuya' [caquetío-atestiguado,
+        Hernández Baño]. Es decir: el canon ya decidió que cocuiza es la
+        palabra de los españoles; la indígena para la planta es caruata y
+        para la fibra, dipopo.
+      fuera_del_repo: "Alvarado 1921 s.v. COCUIZA (Fourcroya): «fibra textil llamada también cocuiza... D. t. cucuiza, forma vulgar y primitiva: cucuyza (Carvajal 156)»"
+      fonotactica: pasa
+    veredicto: D
+    filtro: 1
+    razon: >
+      Voz del español colonial (decisión D10 del canon, con Caulín como
+      testigo). El habla paraguanera del XX conserva el nombre español de
+      la fibra, no el caquetío: es la misma pérdida ya anotada bajo cabuya
+      (dipopo → cabuya/cocuiza), ahora con la forma que usaba el pueblo.
+      Lo que la entrada añade es de oficio: cordeles, mecates, hilos y
+      sacos de cocuiza para envasar la cosecha — se suma a mc-mundo-012
+      (jerarquía de fibras).
+
+  - voz: cogote
+    glosa_libro: >-
+      así designaron nuestros viejos a la parte posterior y superior del
+      cuello; es casi seguro que no sabían que estaban utilizando un
+      vocablo académico.
+    pagina: 78
+    campo: cuerpo
+    origen_libro: "el autor la reconoce como académica"
+    segun_dictado: true
+    dictado: 2026-09-01
+    veredicto: D
+    filtro: 1
+    razon: "Castellano general (DRAE: cogote). Se anota por cobertura."
+
+  - voz: comején
+    glosa_libro: >-
+      así identificó nuestro pueblo a las termitas, pequeños animales que
+      se consumen la parte interna de la madera y le dejan sana la parte
+      exterior. Es palabra académica.
+    pagina: 78
+    campo: fauna
+    origen_libro: "«es palabra académica»"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "nada por forma; por glosa: solo wayuu ruluma 'comején' — el caquetío no tiene palabra registrada para la termita"
+      fonotactica: pasa
+      fuera_del_repo: "Alvarado 1921 s.v. COMEJÉN: «Voz taína, de que son formas antiguas comixén (Las Casas I.412), convijén (Castellanos)»"
+    veredicto: D
+    filtro: 4
+    razon: >
+      Antillanismo panhispánico de origen taíno (Alvarado, con Las Casas
+      y Castellanos como testigos): la voz no discrimina Paraguaná. Como
+      con cabuya y bajareque: arahuaca sí, caquetía no probada. Dato
+      marginal: el caquetío no tiene nombre registrado para la termita,
+      plaga central de la casa de madera y bahareque.
+
+  - voz: corroto
+    entrada_libro: "Corroto (grafía del libro; el nacional es coroto)"
+    glosa_libro: >-
+      con esta palabra nuestros viejos distinguían a cualquier utensilio
+      casero que en un momento dado no identificaran con su nombre.
+    pagina: 81
+    campo: casa / otro
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "no cruzada: venezolanismo general"
+    veredicto: D
+    filtro: 4
+    razon: >
+      COROTO 'objeto cualquiera, trasto' es venezolanismo general del DRAE
+      (origen incierto; la etimología popular del pintor Corot es leyenda),
+      aquí con -rr- fonética. No discrimina Paraguaná.
+
+  - voz: cota
+    glosa_libro: >-
+      para los paraguaneros tenía dos significados: uno era el corpiño de
+      la mujer, y el otro fue la especie de lora más grande que el perico
+      y más pequeña que la guacamaya.
+    pagina: 82
+    campo: vestido / fauna
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: >-
+        nada por forma (lokono khotaha, wayuu ko'utaa: ruido). POR GLOSA:
+        KORO 'cotorra' y WAKA 'ave, cotorra' [caquetío-atestiguado] — el
+        caquetío tiene DOS nombres de loro registrados.
+      fonotactica: pasa
+      fuera_del_repo: "no está en Alvarado 1921 como lema"
+    veredicto: D
+    certeza: media
+    filtro: 1
+    razon: >
+      Las dos acepciones se explican desde el castellano: cota 'jubón,
+      prenda ceñida' (DRAE) para el corpiño, y cota como acortamiento de
+      COTORRA para la lora mediana (cotorra > cota, como cachimba > cacho).
+      Si la lora se decía cota y no koro/waka, sería otra sustitución
+      (koro → cota) — se anota con certeza media porque el acortamiento
+      es hipótesis, no documento.
+
+  - voz: crehuela
+    glosa_libro: >-
+      tela de algodón muy común en tiempos ya idos y que era utilizada
+      principalmente en la ropa femenina.
+    pagina: 82
+    campo: vestido
+    segun_dictado: true
+    dictado: 2026-09-01
+    veredicto: D
+    filtro: 1
+    razon: >
+      Castellano del comercio de telas: CREHUELA 'lienzo de cáñamo o
+      algodón muy delgado' (DRAE, diminutivo de crea, tela de Bretaña).
+      Arcaísmo mercantil conservado, como aguamanil: tela importada por
+      los marinos que el autor nombra como canal.
+
+  - voz: crica
+    glosa_libro: >-
+      con esta palabra nuestros mayores identificaron al órgano sexual de
+      la mujer, siendo para ellos sinónimo de breva, papa o cuca [dictado:
+      «puca»; cotejar]. Es palabra académica.
+    pagina: "82-83"
+    campo: cuerpo
+    origen_libro: "«es palabra académica»"
+    segun_dictado: true
+    dictado: 2026-09-01
+    veredicto: D
+    filtro: 1
+    razon: >
+      Castellano académico (DRAE: crica). Los sinónimos que da el autor
+      son metáforas castellanas (breva, papa) y el venezolanismo cuca. Se
+      anota por cobertura.
+
+  - voz: cuje
+    glosa_libro: >-
+      esta voz, repetida, les sirvió a los nuestros para asustar a los
+      perros. Es voz del pueblo.
+    pagina: 84
+    campo: otro (interjección)
+    segun_dictado: true
+    dictado: 2026-09-01
+    veredicto: D
+    filtro: "1 (interjección)"
+    razon: >
+      Interjección para espantar perros («¡cuje, cuje!»): expresiva, sin
+      referente; el protocolo no persigue interjecciones (cf. el
+      castellano general ¡zape! para gatos, ¡fuera!). Se anota por
+      cobertura.
+
+  - voz: curia
+    glosa_libro: >-
+      si una persona era capaz de hacer algo y, gracias al esmero y
+      cuidado que tuviese al hacerlo, lo fabricado fuese muy bueno, para
+      nuestros mayores esa persona tenía curia. Es palabra académica y,
+      entre muchas acepciones, tiene la de cuidado, esmero.
+    pagina: 85
+    campo: otro (cualidad)
+    origen_libro: "«es palabra académica»"
+    nota_miguel: "«siento que esta palabra es importante»"
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "≈ CURIANA 'territorio de los caquetíos' [caquetío, Zavala nota 4] y uria 'plantío' [caq. atestiguado]: parecidos de forma, NO de origen (ver razón)"
+      fonotactica: pasa
+    veredicto: D
+    filtro: 1
+    razon: >
+      Castellano: CURIA 'cuidado, esmero' (DRAE, acepción 3), del latín
+      cura — la misma raíz de curar, curioso, procurar. El uso «tener
+      curia» = 'tener esmero' es arcaísmo castellano vivo en Venezuela y
+      Canarias. Lo que Miguel intuye como importante es la coincidencia
+      con CURIANA, el nombre del territorio caquetío (Ojeda y Vespucio,
+      1499-1500) que da nombre al proyecto: es HOMOFONÍA. Curia es latina
+      y Curiana es indígena (el canon la tiene por Zavala como 'territorio
+      donde estaban asentados los caquetíos'; la lectura 'lugar del
+      cardón' vía coro es hipotética, D10). Que dos palabras de dos
+      lenguas suenen igual no las emparienta; se deja dicho aquí para que
+      nadie lo re-descubra.
+
+  - voz: datera
+    glosa_libro: >-
+      instrumento para recolectar los frutos del cardón, hecho con el
+      maguey de la planta de cocuy; en uno de sus extremos se coloca una
+      corona de púas para en ella ensartar y bajar los frutos.
+    pagina: 89
+    campo: oficio (recolección)
+    segun_dictado: true
+    dictado: 2026-09-01
+    cruce:
+      lexicon: "la BASE es caquetía: DATO 'fruto del cardón' [caquetío-atestiguado, Zavala #105 (HB)]; el sufijo es castellano (-era instrumental, como tijera, tabaquera)"
+      fonotactica: "—"
+    veredicto: D
+    filtro: "1 (derivación castellana sobre raíz caquetía)"
+    razon: >
+      Híbrido transparente: dato (caquetío atestiguado) + -era (sufijo
+      instrumental castellano) = 'el instrumento del dato'. La voz es
+      castellana por formación, pero PRUEBA que dato era palabra viva y
+      productiva en el habla de Paraguaná — la misma clase de evidencia
+      que chirita (raíz local + afijo castellano). Se registra como
+      derivado, no como sustrato; el instrumento y su técnica van a
+      mc-mundo-016.
+  - voz: garuso
+    glosa_libro: >-
+      es creación del pueblo para identificar a la persona desordenada en
+      el comer, que es muy golosa, glotona.
+    pagina: 127
+    campo: otro (carácter)
+    origen_libro: "creación del pueblo (según el autor)"
+    segun_dictado: true
+    dictado: 2026-09-01
+    veredicto: D
+    filtro: "1 (creación expresiva)"
+    razon: >
+      Calificativo de carácter sin referente ni filiación (cf. el
+      castellano garoso/garrudo, y el andalucismo garuso 'ansioso' que
+      algunos repertorios recogen): rendimiento nulo por protocolo. Se
+      anota por cobertura. Nota de cobertura: el dictado salta de la
+      p. 95 (D) a la p. 127 (G) — las letras E y F quedan sin declarar.
+

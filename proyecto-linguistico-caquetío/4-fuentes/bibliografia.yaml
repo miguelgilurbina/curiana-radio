@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 55
-  en_repo: 36
-  solo_citadas: 19
+  obras: 57
+  en_repo: 37
+  solo_citadas: 20
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
@@ -137,6 +137,21 @@ obras:
   - Obra inédita y dispersa
   - Arcaya 1995
   en_repo: false
+- id: avendano-castillo-2014-erythrina
+  obra: El género Erythrina L. (Leguminosae-Faboideae) en Venezuela
+  autor: Avendaño, Neida & Aníbal Castillo
+  anio: 2014
+  publicacion: 'Acta Botánica Venezuelica 37(2): 123-164. Fundación Instituto Botánico de Venezuela /
+    UCV. Acceso abierto (saber.ucv.ve, rev_abv 12707)'
+  genero: botanica
+  local:
+  - fuentes_caquetios/Avendano_Castillo_2014_Erythrina_Venezuela.pdf
+  paginas: 42
+  aliases:
+  - Avendaño & Castillo 2014
+  - Erythrina en Venezuela
+  - avendano-castillo-2014-erythrina
+  en_repo: true
 - id: ballesteros-1550
   obra: Carta al Monarca Español sobre la ciudad de Coro
   autor: Ballesteros, Miguel Gerónimo de (Obispo de Coro)
@@ -360,7 +375,10 @@ obras:
 - id: medina-colina-sxx
   obra: Del Habla Paraguanera. Siglo XX
   autor: Medina Colina, Juan Bautista
-  anio: s. XX
+  anio: 2013
+  publicacion: '2ª ed., ampliada y corregida. Diseño editorial Maribel Ovalles Miranda; impresión Editorial
+    Miranda. Prefacio de Guillermo de León Calles. (1ª ed.: año no dictado; mención honorífica del CENAL)'
+  edicion_del_ejemplar: 2ª ed. 2013 (ejemplar físico de Miguel)
   genero: lexico-regional
   local:
   - ⚠️ FÍSICO — ejemplar de Miguel; entra por dictado curado (+ foto/OCR si hace falta cobertura)
@@ -585,6 +603,19 @@ obras:
   aliases:
   - Perrin 1992
   - Perrin 1995
+  en_repo: false
+- id: polar-el-maiz-glosario
+  obra: El maíz — Glosario alimentario del maíz y bibliografía
+  autor: Fundación Empresas Polar (ed.)
+  anio: s.f.
+  publicacion: Fundación Empresas Polar, Caracas. Capítulo 10 de la obra *El maíz*; PDF en bibliofep.fundacionempresaspolar.org
+    (media/1378250)
+  genero: glosario-alimentario
+  acceso: https://bibliofep.fundacionempresaspolar.org/media/1378250/libro-el-maiz-10-glosario-y-bibliografia.pdf
+  aliases:
+  - Polar, El maíz
+  - glosario del maíz
+  - polar-el-maiz-glosario
   en_repo: false
 - id: ramos-perez-1978
   obra: Reseña (Persée)
