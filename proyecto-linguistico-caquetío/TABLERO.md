@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-01 13:45**.
+<!--GENERADO--> Generado el **2026-09-05 13:27**.
 
 ## ¿Vamos bien?
 
@@ -22,10 +22,9 @@ editar_a_mano: no
 | Entradas del lexicón **sin cita** | **0** | 82 (2026-07-21) | 🟢 −82 |
 | Hechos del corpus **con referencia** | **161 / 161** | — | 🟢 |
 | Tests del motor | **206 en verde** | 0 rojos | 🟢 |
-| Gate para reanudar simulaciones | **6 de 9** condiciones | faltan 3 | 🔴 |
-| Decisiones esperando a Miguel | **8 abiertas** | 5 resueltas | 🟡 |
+| Gate para reanudar simulaciones | **3 de 9** condiciones | faltan 6 | 🔴 |
 
-**Lo que bloquea hoy:** wayunaiki vs. lokono (D11).
+**Lo que bloquea hoy:** pares c/k (F2 · D5) · decisiones D1/D3/D5 · glosa de `-bana` (D9) · wayunaiki vs. lokono (D11).
 Y 2 condición(es) que **nadie puede medir por script**: citas del corpus (F10) · exportador de runs.
 
 Detalle de cada número: [lexicón](#1-el-lexicón) · [fuentes](#2-las-fuentes) · [corpus](#3-el-corpus-cultural) · [gate](#4-el-gate-para-reanudar-simulaciones) · [decisiones](#5-decisiones-e-issues)
@@ -120,6 +119,7 @@ Cuántas de las 299 entradas de familia caquetía **con `notas`** citan a cada o
 | [[arcaya-1920]] | 10 | 3% |
 | [[arcaya-obra-inedita-1995]] | 10 | 3% |
 | [[brinton-1871]] | 4 | 1% |
+| [[castellanos-elegias]] | 3 | 1% |
 | [[gatschet-1885]] | 3 | 1% |
 | [[oviedo-y-valdes-1851]] | 2 | 1% |
 | [[jahn-1927]] | 1 | 0% |
@@ -133,7 +133,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 
 Índice: [[INDICE_FUENTES]]. **La nota de cada obra es la fuente de verdad**; esta tabla lee su frontmatter (`estado_minado`, `prioridad`, `capa_texto`, `sostiene`), no una lista cableada.
 
-**55 notas de obra.**
+**58 notas de obra.**
 
 | `estado_minado` | n |
 |---|---|
@@ -141,14 +141,15 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | no-disponible | 13 |
 | parcial | 6 |
 | segunda-mano | 5 |
-| en-curso | 3 |
+| en-curso | 4 |
+| puntual | 2 |
 | sin-minar | 2 |
 | descartada | 1 |
 | completo-con-reserva | 1 |
 
-**Prioridad ALTA sin minar (13):** [[arcaya-obra-inedita-1995]] (`no-disponible`), [[ballesteros-1550]] (`segunda-mano`), [[brito-figueroa-poblacion-economia]] (`en-curso`), [[esteves-1989]] (`parcial`), [[gonzalez-batista-nombre-de-coro]] (`en-curso`), [[medina-colina-sxx]] (`en-curso`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap3-vecinos]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`no-disponible`), [[perez-de-tolosa-1546]] (`no-disponible`), [[urbina-jimenez-2007-2011]] (`parcial`), [[zavala-reyes-2015]] (`completo-con-reserva`).
+**Prioridad ALTA sin minar (14):** [[arcaya-obra-inedita-1995]] (`no-disponible`), [[ballesteros-1550]] (`segunda-mano`), [[brito-figueroa-poblacion-economia]] (`en-curso`), [[castellanos-elegias]] (`en-curso`), [[esteves-1989]] (`parcial`), [[gonzalez-batista-nombre-de-coro]] (`en-curso`), [[medina-colina-sxx]] (`en-curso`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap3-vecinos]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`no-disponible`), [[perez-de-tolosa-1546]] (`no-disponible`), [[urbina-jimenez-2007-2011]] (`parcial`), [[zavala-reyes-2015]] (`completo-con-reserva`).
 
-<details><summary>Las 55 notas, una por fila</summary>
+<details><summary>Las 58 notas, una por fila</summary>
 
 | Nota | minado | prioridad | capa texto | lexicón (declarado) | lexicón (medido) | hechos corpus |
 |---|---|---|---|---|---|---|
@@ -179,8 +180,10 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[antolinez-1944-manaure]] | segunda-mano | media | no | 0 | 0 | 0 |
 | [[antolinez-1946-hacia-el-indio]] | minado | alta | si | 0 | 0 | 0 |
 | [[arcaya-obra-inedita-1995]] | no-disponible | alta | no | 0 | 10 | 0 |
+| [[avendano-castillo-2014-erythrina]] | puntual | baja | si | 0 | 0 | 0 |
 | [[brett-martinez-aquella-paraguana]] | no-disponible | media | no | 0 | 0 | 0 |
 | [[brito-figueroa-poblacion-economia]] | en-curso | alta | no | 0 | 0 | 0 |
+| [[castellanos-elegias]] | en-curso | alta | si | 0 | 3 | 0 |
 | [[esteves-1989]] | parcial | alta | no | 0 | 0 | 0 |
 | [[federmann-1916]] | no-disponible | media | no | 0 | 0 | 0 |
 | [[fernandes-2020]] | no-disponible | baja | archivo-vacio | 0 | 0 | 0 |
@@ -199,6 +202,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[oliver-1989-cap4]] | parcial | alta | si | 0 | 14 | 0 |
 | [[perea-alonso-1942]] | descartada | descartada | si | 0 | 0 | 0 |
 | [[perez-de-tolosa-1546]] | no-disponible | alta | no | 0 | 0 | 0 |
+| [[polar-el-maiz-glosario]] | puntual | baja | si | 0 | 0 | 0 |
 | [[ramos-perez-1978]] | no-disponible | baja | archivo-vacio | 0 | 0 | 0 |
 | [[rivero-1883]] | no-disponible | media | no | 0 | 0 | 0 |
 | [[rouse-cruxent-1963]] | no-disponible | media | archivo-vacio | 0 | 0 | 0 |
@@ -238,13 +242,13 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | # |  | Condición | Estado medido |
 |---|---|---|---|
 | 1 | 🟢 | Lexicón: 0 entradas de familia caquetía sin cita **o sin degradar** (F1) | 0 sin cita (eran 82 el 2026-07-21) |
-| 2 | 🟢 | Pares c/k resueltos (F2) | todas tomadas — [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) · medido: 7 colisiones, 2 dentro del caquetío |
+| 2 | 🔴 | Pares c/k resueltos (F2) | abiertas: D5 — D5 · medido: 7 colisiones, 2 dentro del caquetío |
 | 3 | 🟢 | Las 3 fuentes ALTA minadas (F3, F4, F5) | F3 [[alvarado-1921]] minado · F4 [[gatschet-1885]] minado · F5 [[oliver-1989-cap2]] minado |
 | 4 | 🟢 | `compilar_corpus.py` en verde (V2) | **161 hechos, 0 errores, 0 avisos** |
 | 5 | ⚪ | Citas del corpus verificadas por muestreo (F10) | **no automedible**: que la cita *resuelva* (que la página exista) es trabajo humano. Medible sí: 161/161 hechos **tienen** `referencia` |
-| 6 | 🟢 | D1, D3 y D5 tomadas | todas tomadas — [D1](https://github.com/miguelgilurbina/curiana-radio/issues/32) · [D3](https://github.com/miguelgilurbina/curiana-radio/issues/34) · [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) |
-| 7 | 🟢 | La glosa de `-bana` resuelta | todas tomadas — [D9](https://github.com/miguelgilurbina/curiana-radio/issues/38) |
-| 8 | 🔴 | El desbalance wayunaiki/lokono resuelto | abiertas: D11 — [D11](https://github.com/miguelgilurbina/curiana-radio/issues/39) · medido: wayunaiki 781 vs. lokono 275 (2.8 a 1) |
+| 6 | 🔴 | D1, D3 y D5 tomadas | abiertas: D1, D3, D5 — D1 · D3 · D5 |
+| 7 | 🔴 | La glosa de `-bana` resuelta | abiertas: D9 — D9 |
+| 8 | 🔴 | El desbalance wayunaiki/lokono resuelto | abiertas: D11 — D11 · medido: wayunaiki 781 vs. lokono 275 (2.8 a 1) |
 | 9 | ⚪ | `export_runs_index.py` reparado | **no automedible sin correr un export contra la base** (ver [[04_protocolo_run_1_era_auditada]] §2.9) |
 
 🟢 cumplida · 🔴 no cumplida · ⚪ no automedible (necesita criterio humano o correr algo)
@@ -257,31 +261,14 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 **El argumento y la evidencia de cada una viven en su issue.** `1-plan/el tablero de decisiones` se retiró del repo el 2026-08-06: mantener el razonamiento en markdown y el estado en el tablero producía dos copias que se desviaban. Hoy hay una sola fuente — [los issues con label `decision`](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision).
 
-| # | Decisión | Estado | Issue |
-|---|---|---|---|
-| D1 | Veto de la genealogia propuesta | ✅ resuelta | [#32](https://github.com/miguelgilurbina/curiana-radio/issues/32) |
-| D2 | El nombre "Curiana": ¿territorio o asentamiento? | 🔴 abierta | [#33](https://github.com/miguelgilurbina/curiana-radio/issues/33) |
-| D3 | `normalizar_por_dialecto()`: cablearla o eliminarla | ✅ resuelta | [#34](https://github.com/miguelgilurbina/curiana-radio/issues/34) |
-| D4 | Pluralidad de candidatos a la sucesion de Manaure | 🔴 abierta | [#35](https://github.com/miguelgilurbina/curiana-radio/issues/35) |
-| D5 | Politica ortografica c/k del lexicon | ✅ resuelta | [#36](https://github.com/miguelgilurbina/curiana-radio/issues/36) |
-| D8 | ¿El repo archiva copias de las fuentes externas? | 🔴 abierta | [#37](https://github.com/miguelgilurbina/curiana-radio/issues/37) |
-| D9 | La glosa de `-bana` y el hallazgo de `-ana` | ✅ resuelta | [#38](https://github.com/miguelgilurbina/curiana-radio/issues/38) |
-| D11 | El desbalance wayunaiki/lokono del lexicon | 🔴 abierta | [#39](https://github.com/miguelgilurbina/curiana-radio/issues/39) |
-| D12 | La etiqueta de `parentesco-032`: una entrada `atestiguado` con material sin fuente | 🔴 abierta | [#81](https://github.com/miguelgilurbina/curiana-radio/issues/81) |
-| D13 | El hueco léxico de "tío materno": la palabra que le falta a la tesis central | 🔴 abierta | [#82](https://github.com/miguelgilurbina/curiana-radio/issues/82) |
-| D14 | Qué segunda polity se pone en escena | 🔴 abierta | [#83](https://github.com/miguelgilurbina/curiana-radio/issues/83) |
-| D15 | Qué nodo se simula primero: Coro, Paraguaná, o un par desde el principio | ✅ resuelta | [#90](https://github.com/miguelgilurbina/curiana-radio/issues/90) |
-| — | `tara`: ¿venado o mariposa? — puede tumbar un argumento del corpus | 🔴 abierta | [#45](https://github.com/miguelgilurbina/curiana-radio/issues/45) |
-
-**8 abiertas** de 13. Medido contra el tablero, no contra una nota.
-
+⚠️ **No medido**: este panel lee el tablero y necesita red. Córrelo con `python curiana_sim/generar_tablero.py --gh`.
 ---
 
 ## Salud del vault y del motor
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1046 en 321 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 1071 en 331 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 206 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
@@ -294,7 +281,11 @@ Guardianes: `python check_vault_links.py --strict` · `python -m pytest curiana_
 
 ## Mediciones que fallaron
 
-Ninguna: los seis paneles se midieron completos.
+Un hueco que se ve es mejor que un número inventado.
+
+| Qué se intentaba medir | Error |
+|---|---|
+| decisiones (issues con label `decision`) | `no consultado: necesita red, pásale --gh` |
 
 ---
 

@@ -3,7 +3,7 @@
 # trabaja desde aquí, pero el canon sigue siendo 2-lengua/toponimos.yaml.
 meta:
   generado_por: curiana_sim/juntar_toponimos.py
-  generado: '2026-09-04'
+  generado: '2026-09-05'
   editar_a_mano: no — se edita la fuente y se regenera
   que_es: 'vista: todos los topónimos del proyecto, agrupados por obra y cruzados entre sí. No es canon ni propuesta
     de fusión.'
@@ -112,8 +112,7 @@ meta:
       - Todariquiba (3)
       - jurijurebo (3)
       - paraguana (3)
-  avisos:
-  - '⚠️ obra sin ficha en bibliografia.yaml: castellanos-elegias'
+  avisos: []
 por_fuente:
 - obra: zavala-reyes-2015
   en_bibliografia: true
@@ -973,7 +972,7 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
 - obra: castellanos-elegias
-  en_bibliografia: false
+  en_bibliografia: true
   descripcion: las 'ciudades de grandísimo momento' en torno a Coro (II, Elegía 1, 1589)
   menciones: 11
   formas: 11

@@ -14,11 +14,9 @@ editar_a_mano: no
 > python curiana_sim/juntar_toponimos.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-04**. Marcas: ★ canon · ≡ Esteves · ◆ mapa de Miguel · ⌂ nodo.
+<!--GENERADO--> Generado el **2026-09-05**. Marcas: ★ canon · ≡ Esteves · ◆ mapa de Miguel · ⌂ nodo.
 
 **492 formas distintas** en **601 menciones** de **12 fuentes**. En el canon: 74. En el registro de nodos: 14. Sin canon ni nodo (la cola pura): 408.
-
-> ⚠️ obra sin ficha en bibliografia.yaml: castellanos-elegias
 
 ## Resumen por fuente
 
@@ -26,7 +24,7 @@ editar_a_mano: no
 |---|---|---|---|---|---|---|
 | `zavala-reyes-2015` | el glosario (TOPONIMOS_ZAVALA y ANTROPONIMOS_ZAVALA, con glosa española) — la base del canon | 57 | 57 | 57 | 3 | 1 |
 | `esteves-1989` | el índice 'Topónimos compilados' de Paraguaná (pp. 68-69): la cola de la campaña | 186 | 186 | 4 | 186 | 5 |
-| `castellanos-elegias` (sin ficha) | las 'ciudades de grandísimo momento' en torno a Coro (II, Elegía 1, 1589) | 11 | 11 | 2 | 5 | 5 |
+| `castellanos-elegias` | las 'ciudades de grandísimo momento' en torno a Coro (II, Elegía 1, 1589) | 11 | 11 | 2 | 5 | 5 |
 | `velasco-2015-resistencia` | los pueblos de la carta de Bastidas al rey (AGI, 1538) — primarios | 5 | 5 | 0 | 2 | 1 |
 | `gonzalez-batista-nombre-de-coro` | lecturas etimológicas del autor — con cautela declarada; cada una se juzga contra Zavala | 10 | 10 | 2 | 4 | 2 |
 | `arcaya-1920` | Quiquibacoa/Coquibacoa, Curiana y la serie Coro-/Curi- | 9 | 9 | 1 | 0 | 0 |

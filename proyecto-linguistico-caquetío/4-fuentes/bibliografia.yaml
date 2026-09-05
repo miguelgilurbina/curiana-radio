@@ -1,7 +1,7 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 57
-  en_repo: 37
+  obras: 58
+  en_repo: 38
   solo_citadas: 20
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
@@ -209,6 +209,29 @@ obras:
   aliases:
   - Camacho et al. 2011
   - Camacho 2011
+  en_repo: true
+- id: castellanos-elegias
+  obra: Elegías de varones ilustres de Indias (partes I-II)
+  autor: Castellanos, Juan de
+  anio: 1857 [c. 1589]
+  publicacion: 'Biblioteca de Autores Españoles (dir. Buenaventura Carlos Aribau), 2ª ed., Madrid, M.
+    Rivadeneyra, 1857. La parte I se imprimió en 1589; la II quedó inédita hasta la BAE. Otras ediciones
+    que cita el repo: ANH, Caracas 1962 (t. 57 — la de Velasco, cita por versos) y ANH 1987 (la de González
+    Batista, cita por páginas)'
+  genero: cronica
+  local:
+  - fuentes_caquetios/Castellanos_1857_Elegias_partes_I-II_texto.txt
+  paginas: '— (texto OCR: partes I y II enteras; la de Coro es la parte II, elegía I, desde la p. 185
+    de la ed. 1857)'
+  acceso: Internet Archive (OCR de Google Books); descargado el 2026-08-14 en la sesión 07_rastreo_documental
+  aliases:
+  - Castellanos
+  - Castellanos 1589
+  - Castellanos 1857
+  - Elegías
+  - Elegías de varones ilustres de Indias
+  - Juan de Castellanos
+  - castellanos-elegias
   en_repo: true
 - id: esteves-1989
   obra: esteves-1989
