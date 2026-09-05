@@ -16,7 +16,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-05**. Marcas: ★ canon · ≡ Esteves · ◆ mapa de Miguel · ⌂ nodo.
 
-**492 formas distintas** en **601 menciones** de **12 fuentes**. En el canon: 74. En el registro de nodos: 14. Sin canon ni nodo (la cola pura): 408.
+**492 formas distintas** en **602 menciones** de **12 fuentes**. En el canon: 74. En el registro de nodos: 14. Sin canon ni nodo (la cola pura): 408.
 
 ## Resumen por fuente
 
@@ -33,7 +33,7 @@ editar_a_mano: no
 | `medina-colina-sxx` | lo que el dictado toca: voces que son topónimo en Esteves, lo mandado a la cola, y los pueblos del autor (s. XX) | 22 | 20 | 3 | 7 | 3 |
 | `gatschet-1885` | topónimos de Aruba (material de Pinart, 1882), sin glosa | 31 | 30 | 1 | 0 | 0 |
 | `van-buurt-2014` | §7 topónimos de Aruba, Bonaire y Curazao sin glosa; §8-10 las etimologías del autor | 212 | 180 | 18 | 1 | 4 |
-| `testimonio-miguel` (sin ficha) | Miguel Gil Urbina: lecturas de investigación coloquial, tradición local, mapa vivo — deuda sin-procedencia, por diseño | 30 | 29 | 1 | 17 | 6 |
+| `testimonio-miguel` (sin ficha) | Miguel Gil Urbina: lecturas de investigación coloquial, tradición local, mapa vivo — deuda sin-procedencia, por diseño | 31 | 30 | 1 | 17 | 6 |
 
 ## Los cruces que importan
 
@@ -42,7 +42,7 @@ editar_a_mano: no
 - **Castellanos 1589 ∩ Bastidas 1538 (2)**: Miraca, Todariquiba.
 - **Bastidas 1538 ∩ Esteves (2)**: Miraca, Todariquiba.
 - **Medina Colina ∩ Esteves (7)**: Adícora, Carirubana, Chuchube, Guachaco, Moruy, Saruro, Tacuato; en el canon (3): cabudare, capadare, todarahuato.
-- **En tres fuentes o más (9)**: Adícora (3), Guaidabacoa (3), Miraca (3), Moruy (4), Santa Ana (3), Supí (3), Todariquiba (3), jurijurebo (3), paraguana (3).
+- **En tres fuentes o más (10)**: Adícora (3), Coriana (3), Guaidabacoa (3), Miraca (3), Moruy (4), Santa Ana (3), Supí (3), Todariquiba (3), jurijurebo (3), paraguana (3).
 
 ## Por fuente
 
@@ -236,7 +236,7 @@ topónimos de Aruba (material de Pinart, 1882), sin glosa.
 
 paraguana★≡ (Rodeada del mar), Casibari★ ('there are hard rocks'), Hudishibana★ ('windy plain'), aruba★⌂ (→ 'Oruba. Oruma. Oirubae'), Adicoura★⌂, Amboïna★, Arashi★, Burubunu★, Buynari★, Curaçao★⌂, Macuarima★, Matividiri★, Taratata★, Yatu Bacu★, Balashi★, Onima★, Cariatávo★, Anabui, Anamichi, Andicuri, Angochi, Araburu, Arashi★, Arikok, Aruba★⌂, Avikurari, Ayo, Balashi★, Barbacoa, Basiruti, Behika, Boroncana, Bubali, Bucuti, Budui, Boegoeroei, Burubunu★, Bushiri, Bushiribana, Butucu, Cababuna, Caburi, Cadushi, Cadushi, Camari, Camacuri, Canashito, Caushati, Caruburi, Cashero, Cashunti, Casibari★, Catashi, Catiri, Cawara, Choroni, Cocodoro, Cubeju, Cubou, Cucu, Cudarebo, Curuburi, Cuwana, Daimari, Eayac, Fofoti, Guadirikiri, Guarero, Hadicurari, Hadicuri, Hubada, Hudishibana★, Huliba, Jaburibari, Jucuri, Juditi, Kadiwari, Kamay, Keito, Kimbaima, Kivarcu, Kodekodectu, Koyari, Kudawecha, Kukurui, Kurimiauw, Mabon, Macuarima★, Macubari, Madiki, Mahos, Mahuma, Malmok, Manchebo, Masiduri, Matividiri★, Moko, Nanki, Noka, Paradera, Paraguana★≡, Sasarawichi, Shaba, Shabururi, Shidaharaca, Shiribana, Siribana, Sividivi, Skepou, Suduri, Tarabana, Taratata★, Tibushi, Tikibanaro, Teishi, Turibana, Uditi, Huliba, Uña uña, Urataka, Urirama, Utie, Wakubana, Wao-Wao, Warawao, Warawara, Warerikiri, Wariruri, Wayaca, Weburi, Wiriwari, Yamanota, Yanana, Yara, Yuwana, Yuwiti, Adicoura★⌂, Cariatavo★, Charomba, Chinchó, Choloma, Cocori, Codoko, Cudishi, Curazao★⌂, Maco, Macola, Mahuma, Maniguacoa, Padiki, Parasasa, Wakawa, Wanapa, Wandomi, Wanota, Watamula, Amboina★, Bacuna, Bototó, Buynari★, Cabuja, Caracao, Casicunda, Curuburu, Garati, Guarati, Hobao, Huba, Ishiri, Jua, Karati, Kaumati, Koahara, Macoshi, Macutucao, Malmok, Manparia Cutu, Morotin, Nawati, Nikiboko, Onima★, Orizjan, Roshikiri, Shishiribana, Sorobon, Wamari, Wanapa, Wanico, Warahama, Wasao, Washikemba, Watapana, Wayacá, Wecua, Yatu Bacu★, Yatu, Yuana, Adicoura★⌂ (According to Van Grol, this is the original name of the island Klein Curaçao. The name Nicula is also found i…), Amboïna, Ambuana (pronounce Ambwana) (In the Dominican Republic this name is also found. Amboïna, Amboína is associated with caves or a well. The n…), Arashi★ (nowadays this is one of best sites to fish for warashi (bonefish, Albula vulpes) in Aruba. This makes it like…), Balashi★ (contains the root bala meaning the sea, Balashi is situated near the sea.), Burubunu★ (in the Venezuelan state of Falcón, near Zazárida a small village called Borobuno is found (Cruz Esteves, 1989…), Buynari, Buinare (Nicolaas Federmann passed Bonaire in early 1530, in an account of his voyage which was published in Hagenau i…), Cariatávo, Cariatabo, Careotabo (the name of a cove or small lagoon east of the Schottegat (Hartog, 1968). cari means ‘coast', ‘shore' (Cruz E…), Casibari★ (At this location there is a pile of very large rocks. ca-, ka- is a localizer meaning ‘there is', ‘there are'…), Curaçao, Curazao (Curaçao is definitely not from Portuguese. Both Las Casas and Oviedo mention it very early and although their…), Hudishibana (P8)★ (a calcareous terrace, nowadays the site of a golf course. juri, judi, hudi means ‘wind' (Cruz Esteves, 1989),…), Macuarima★ (Named after a legendary Indian girl with this name, who used to live there (Anonymous, 2004).), Matividiri★ (In Paraguaná a hill with a nearby village is called Matividiro (Cruz Esteves, 1989).), Onima★ (a cave on the North coast of Bonaire, it is also the name of a nearby cove (Boca Onima). Taïno ní is ‘water',…), Taratata, Tatarata (in the Venezuelan state of Falcón, the toponyms: Taratara, Taratare and Tatatarare are found (Cruz Esteves, 1…), Yatu Bacu★ (In Venezuela the suffix –baca is found in place names. Dauguaraubaca is a place along the Río Amacuro, in Eas…)
 
-### `testimonio-miguel` — 29 formas, 30 menciones
+### `testimonio-miguel` — 30 formas, 31 menciones
 
 Miguel Gil Urbina: lecturas de investigación coloquial, tradición local, mapa vivo — deuda sin-procedencia, por diseño.
 
@@ -248,6 +248,7 @@ Miguel Gil Urbina: lecturas de investigación coloquial, tradición local, mapa 
 | Moruy | etimologia-popular (CUATRO versiones recogidas) | Versiones de tradición oral que recoge Miguel: (1) Moruy era un CACIQUE; (2) llegaron unos "moros" tan temibl… | sin-procedencia | ≡ ⌂ nodo-027 |
 | Aruba ~ Arubanas | hipotesis-de-miguel | En «Arubanas» (los indios de Aruba, Altoaguirre [1768] vía Oliver p. 256) Miguel ve otra vez el formante bana… |  | ★ toponimo-051 · nivel descartado ⌂ nodo-010 |
 | Cayerda ~ Cayerúa | verificacion-de-mapa (Miguel) | «Cayerda no existe, pero Cayerúa sí» — Miguel, sobre el mapa actual. La aldea que Delmonte da como asiento pr… |  | ◆ ⌂ nodo-025 |
+| Curiana ~ Coro | hipotesis-de-miguel | ¿Curi- (Curiana, Coriana) y juri 'viento' son la misma palabra con dos pronunciaciones, una de Coro y otra de… | sin-procedencia |  |
 | Capubana | hipotesis | el Cerro Santa Ana = Cerro de Capú (D9); centro sagrado con Moruy, Chamuriana, Cayerúa y Maitiruma en órbita | canon-simulacion (validación de probabilidad) |  |
 | Uarayadito | mapa | topónimo vivo en las fotos del mapa (sector del Capubana) | 2026-09-01 | ◆ |
 | Davaduvare | mapa | topónimo vivo en las fotos del mapa (sector del Capubana) | 2026-09-01 | ◆ |
@@ -428,7 +429,7 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Cocorote |  | arcaya-1920 |  |  |  |  |
 | Codoko |  | van-buurt-2014 |  |  |  |  |
 | Coduto |  | esteves-1989 |  | ≡ |  |  |
-| Coriana | Curiana, Coro | gonzalez-batista-nombre-de-coro, arcaya-1920 |  |  |  |  |
+| Coriana | Curiana, Coro | gonzalez-batista-nombre-de-coro, arcaya-1920, testimonio-miguel |  |  |  |  |
 | Corobore |  | arcaya-1920 |  |  |  |  |
 | corocoro | Corocoro | gonzalez-batista-nombre-de-coro, arcaya-1920 |  |  |  |  |
 | coroque |  | zavala-reyes-2015 | toponimo-052 · nivel descartado |  |  |  |

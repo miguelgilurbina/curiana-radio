@@ -13,9 +13,9 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-04**.
+<!--GENERADO--> Generado el **2026-09-05**.
 
-**1778 ítems propuestos** en 31 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
+**1779 ítems propuestos** en 31 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -44,7 +44,7 @@ editar_a_mano: no
 | `tabla_a8_jirajarano.yaml` | oliver-1989-apendice-a | 33 |  |
 | `tabla_a9_oliver.yaml` | oliver-1989-cap2 | 49 |  |
 | `toponimia_coro_espina.yaml` | gonzalez-batista-nombre-de-coro | 5 |  |
-| `toponimia_paraguana_miguel.yaml` | ? | 4 |  |
+| `toponimia_paraguana_miguel.yaml` | ? | 5 |  |
 | `toponimos_esteves_indice.yaml` | esteves-1989 | 182 |  |
 | `velasco_primarios_agi.yaml` | velasco-2015-resistencia | 4 |  |
 

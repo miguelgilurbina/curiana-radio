@@ -9,7 +9,7 @@ meta:
     de fusión.'
   marcas: ★ en el canon · ≡ en el índice de Esteves · ◆ en el mapa de Miguel · ⌂ en asentamientos.yaml
   resumen:
-    menciones: 601
+    menciones: 602
     formas_distintas: 492
     fuentes: 12
     por_fuente:
@@ -47,8 +47,8 @@ meta:
         menciones: 212
         formas: 180
       testimonio-miguel:
-        menciones: 30
-        formas: 29
+        menciones: 31
+        formas: 30
     en_canon: 74
     en_nodos: 14
     sin_canon_ni_nodo: 408
@@ -104,6 +104,7 @@ meta:
       - todarahuato
       en_mas_de_dos_fuentes:
       - Adícora (3)
+      - Coriana (3)
       - Guaidabacoa (3)
       - Miraca (3)
       - Moruy (4)
@@ -2757,8 +2758,8 @@ por_fuente:
   en_bibliografia: false
   descripcion: 'Miguel Gil Urbina: lecturas de investigación coloquial, tradición local, mapa vivo — deuda sin-procedencia,
     por diseño'
-  menciones: 30
-  formas: 29
+  menciones: 31
+  formas: 30
   toponimos:
   - forma: Judibana
     tipo: testimonio-residente
@@ -2797,6 +2798,14 @@ por_fuente:
       pr…
     variantes:
     - Cayerúa
+  - forma: Curiana
+    tipo: hipotesis-de-miguel
+    donde: 6-fusion/toponimia_paraguana_miguel.yaml §lecturas
+    dato: ¿Curi- (Curiana, Coriana) y juri 'viento' son la misma palabra con dos pronunciaciones, una de Coro y
+      otra de…
+    ref: sin-procedencia
+    variantes:
+    - Coro
   - forma: Capubana
     tipo: hipotesis
     donde: 6-fusion/toponimia_paraguana_miguel.yaml §capubana-centro-sagrado
@@ -4635,6 +4644,7 @@ indice_de_formas:
   fuentes:
   - gonzalez-batista-nombre-de-coro
   - arcaya-1920
+  - testimonio-miguel
   cruces:
     en_canon: null
     en_esteves: false
@@ -4644,6 +4654,7 @@ indice_de_formas:
   - gonzalez-batista-nombre-de-coro · lectura
   - arcaya-1920 · lectura · p. 169
   - arcaya-1920 · serie · p. 170
+  - testimonio-miguel · hipotesis-de-miguel · sin-procedencia
 - forma: Corobore
   variantes: []
   fuentes:

@@ -91,6 +91,42 @@ lecturas:
       - "Oliver mismo vacila en la grafía: Cayerta/'Coyarna'/Cayerda — el nombre llegó mal copiado por alguna de las cadenas"
       - "las variantes -erda/-erta/-erúa son material para la campaña de topónimos (permutar TODAS las vocales — trampa 1 de la tanda)"
 
+  - toponimo: Curiana / Coro
+    tipo: hipotesis-de-miguel
+    fecha: '2026-09-05'
+    lectura: >-
+      ¿Curi- (Curiana, Coriana) y juri 'viento' son la misma palabra con dos
+      pronunciaciones, una de Coro y otra de Paraguaná? En Paraguaná conviven
+      juri y judi 'viento' (Judibana, Jurijurebo); del lado de Coro está
+      Curiana. Curiana sería entonces 'tierra del viento', paralelo de
+      Judibana 'cerro del viento' y de Jurijurebo 'paso de los vientos'.
+    apoyos_en_el_canon:
+      - "la alternancia c~j EXISTE en el corpus, y del lado de Coro: la fórmula de Mitare, cudan (Arcaya 1995) ~ judan (Cuartín 1905) — frase_saludo_mitare.yaml"
+      - "juri~judi (r~d) ya aceptada para Judibana; h~j medida en D5 (Hurehurebo~Jurijurebo)"
+      - "la serie Coro-/Curi- de Arcaya p. 170 es un formante productivo sin glosa acordada (avispa/lagartija, espina, cardón): 'viento' entra en la competencia con el referente a favor — Castellanos, línea 48219: «aquella tierra muy ventosa»"
+      - "reparto en el índice de Esteves: el viento paraguanero va con jur-/jud- (Judibana, Jurijurebo, Juderecal, Juroguagua, Tijuro); los cur- de Paraguaná llevan otros morfemas (Curaidebo, Guacurebo, Yacure, Guaricure)"
+    validacion_de_probabilidad: >-
+      (Claude, 2026-09-05) BAJA-MEDIA. Frenos: (1) fonología — D5 midió que la
+      h/j inicial alterna también con cero (Hacarigua~Acarigua), lo que
+      describe una aspiración débil, y una /k/ no se cae; el pariente wayuu
+      del viento arranca en h (joutai [houtai]) o w (wawai): la raíz apunta a
+      h/w, no a k, salvo que cudan~judan sea variación real y no dos oídos
+      distintos. (2) Mitare está del lado de Coro: la alternancia c~j no se
+      reparte limpia por región; parece variación de transcripción o libre,
+      no un dialecto con frontera. (3) Castellanos NO es apoyo independiente:
+      «Coro viento quiere decir en lengua generosa» es casi seguro el latín
+      corus/caurus 'viento del noroeste' (el castellano lo heredó como coro
+      'viento noroeste'); por eso Arcaya lo llama error. (4) La segunda mitad
+      depende de #109: si -ana es la comparativa na 'como' y no 'lugar de',
+      Curiana pierde el locativo; y D2 (#33) sigue abierto.
+    que_la_haria_subir:
+      - "un segundo par c~j en el corpus, fuera de Mitare"
+      - "que Esteves (fuente E de juri, Zavala #178) traiga en el cuerpo del libro alguna variante con c/k — tarea de la campaña"
+      - "un topónimo cor-/cur- del lado de Coro con referente claramente ventoso"
+      - "resolver #109 (-ana)"
+    toca: ["#109", "#33 (D2)", "toponimia_coro_espina.yaml §coriana-tierra-de-espinas (compite)", "lexicón: coro (D10, hipotético) y curiana"]
+    deuda: sin-procedencia
+
 hipotesis_estructural:
 
   - id: capubana-centro-sagrado
