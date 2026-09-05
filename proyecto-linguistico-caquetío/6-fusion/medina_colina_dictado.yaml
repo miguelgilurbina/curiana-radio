@@ -145,6 +145,13 @@ aclaratorias_al_lector:
       (van Buurt), ahora en el s. XX. Época declarada: colonial-tardía /
       s. XX. NO se proyecta al precontacto (regla 3): se registra la
       persistencia, no la identidad.
+    # Los mismos nombres del hecho, estructurados para juntar_toponimos.py
+    # (época declarada: s. XX; no se proyectan al precontacto — regla 3).
+    lugares_nombrados:
+      centros_poblados: [Tacuato, Santa Ana, Moruy, Buena Vista, Pueblo Nuevo, Adícora,
+                         El Hato, El Vínculo, Los Taques, Punta Cardón]
+      otros: [Carirubana, Punto Fijo, Cerro Arriba]
+      epoca: "c. 1900-1950"
   el_lenguaje_y_sus_canales:
     hecho: >
       «Nuestra gente captó [?] el lenguaje del pueblo llano, en el cual
@@ -588,6 +595,7 @@ datos_mundo:
       las poblaciones de Tacuato y Santa Ana»; «en el resto de las
       poblaciones paraguaneras conserva el nombre de bisure».
     voz_origen: gualamo
+    lugares: [Tacuato, Santa Ana]   # la isoglosa, para juntar_toponimos.py
     pagina: 130
     epoca: s. XX
     lectura: >

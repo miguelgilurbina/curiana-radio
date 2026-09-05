@@ -158,6 +158,11 @@ Sesión técnica contra Supabase local (puertos 64321/64322). Condición 9.
 
 ### B.5 · La campaña de topónimos
 
+La mesa de trabajo es `6-fusion/TOPONIMOS_POR_FUENTE.md` (generada por
+`juntar_toponimos.py`, 2026-09-04): todos los topónimos que el proyecto ha
+tocado, por obra, cruzados contra el canon, Esteves, los nodos y el mapa de
+Miguel. Se regenera; no se edita.
+
 Implementar `lecturas` en el esquema + `compilar_lengua.py`; retro-poblar
 las ~20 lecturas de la sesión (están en `toponimia_coro_espina.yaml`,
 `lengua_toponimia_quibacoa.yaml`, `petroglifos_y_manaure.yaml`,

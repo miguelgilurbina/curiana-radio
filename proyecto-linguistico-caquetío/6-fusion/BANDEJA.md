@@ -13,9 +13,9 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-01**.
+<!--GENERADO--> Generado el **2026-09-04**.
 
-**1716 ítems propuestos** en 30 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
+**1778 ítems propuestos** en 31 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -32,6 +32,7 @@ editar_a_mano: no
 | `etnias_en_contacto.yaml` | ? | 3 |  |
 | `frase_saludo_mitare.yaml` | ? | 2 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
+| `medina_colina_dictado.yaml` | ? | 62 |  |
 | `migracion_lemas_fase2.yaml` | ? | 79 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
 | `paraguana_dos_clanes.yaml` | oliver-1989-cap3 | 5 |  |
@@ -46,6 +47,10 @@ editar_a_mano: no
 | `toponimia_paraguana_miguel.yaml` | ? | 4 |  |
 | `toponimos_esteves_indice.yaml` | esteves-1989 | 182 |  |
 | `velasco_primarios_agi.yaml` | velasco-2015-resistencia | 4 |  |
+
+Vistas generadas en `6-fusion/` (no cuentan: juntan lo que ya está arriba):
+
+- `toponimos_por_fuente.yaml` — generado por `curiana_sim/juntar_toponimos.py`
 
 ## Propuestas léxicas (`curiana_sim/lexicon_*.py` — indexadas en su sitio)
 
