@@ -56,6 +56,30 @@ NIVEL_A = {
         "observacion": "Estaba archivado en TOPONIMOS_ZAVALA como 'glosa "
                        "incierta' y fuera del habla. Es el caso que originó "
                        "toda la tarea F11.",
+        # La tercera voz: lecturas que conviven sin pisar la glosa impresa ni
+        # la segmentación (esquema en 2-lengua/datos-de-lengua.md).
+        "lecturas": [
+            {"tipo": "etimologia-analitica",
+             "lectura": "hure 'arena' -> hurehure 'arenal' -> hurehurebo 'lugar de "
+                        "muchos arenales' (reduplicación + sufijo -bo)",
+             "quien": "González Batista", "fecha": "2026-08-25", "eje": "significado",
+             "procedencia": dict(obra="gonzalez-batista-nombre-de-coro"),
+             "veredicto": "descartada como lectura principal (2026-08-25): Zavala "
+                          "#178-179 tiene glosa impresa y juri~juri + ebo cierra sin "
+                          "residuo; el propio autor la da como conjetura («si hure "
+                          "fuera como creemos»). Se conserva por D7. Detalle: "
+                          "6-fusion/toponimia_coro_espina.yaml §veredicto-jurijurebo"},
+            {"tipo": "testimonio-residente",
+             "lectura": "Jurijurebo está en Judibana (Paraguaná); judi y juri son la "
+                        "misma palabra deformada, y el viento es el rasgo dominante "
+                        "del sitio: el topónimo moderno y el antiguo comparten raíz "
+                        "y referente",
+             "quien": "Miguel Gil Urbina, residente en Judibana", "fecha": "2026-08-25",
+             "eje": "referente",
+             "apoyo": "converge con la ubicación que dan las fuentes divulgativas "
+                      "(esteves-1989) y con la tradición local de Judibana "
+                      "(velasco-2015-resistencia §judibana_tradicion)"},
+        ],
     },
     "yacarebacoa": {
         "clase": "topónimo",
@@ -358,6 +382,25 @@ NIVEL_C = {
         "razon": "corrobora `para`/`paragua` = 'mar' del lexicón. Pero 'rodeada' "
                  "no queda explicada y `-na` es demasiado frecuente (34 formas "
                  "del corpus) para significar nada demostrable.",
+        "lecturas": [
+            {"tipo": "etimologia-analitica",
+             "lectura": "para 'agua en grandes cantidades' (Zavala #190) + gua "
+                        "'terreno cercado' (#122) + na 'como, semejante' (#184) ≈ "
+                        "'a manera de tierra cercada por el mar': explica el "
+                        "'rodeada' que para(gua) + -na dejaba sin origen",
+             "quien": "proyecto", "fecha": "2026-08-25", "eje": "significado",
+             "apoyo": "tres morfemas ya atestiguados; la tilde de Paraguaná (-aná "
+                      "tónica) sería el dato que decide",
+             "veredicto": "pendiente: #109 (abierto)"},
+            {"tipo": "etimologia-analitica",
+             "lectura": "paragua 'mar, agua grande' + na 'tierra' = 'la tierra "
+                        "rodeada de mar'",
+             "quien": "González Batista", "fecha": "2026-08-25", "eje": "significado",
+             "procedencia": dict(obra="gonzalez-batista-nombre-de-coro"),
+             "veredicto": "depende de na = 'tierra', que ninguna fuente impresa da; "
+                          "choca con na = 'como' (Zavala #184, atestiguado). Es la "
+                          "pieza que decide #109"},
+        ],
     },
     "guamabatriba": {
         "glosa_fuente": "Muchas tierras de cultivo",

@@ -7,6 +7,9 @@ meta:
     C: 13
     descartado: 47
   con_procedencia: 14
+  con_lecturas: 2
+  lecturas: 4
+  con_definicion_aceptada: 0
   corroboraciones_del_lexicon: 17
   nota: 'El nivel de confianza es un CAMPO, no un contenedor: antes eran NIVEL_A/B/C separados y para
     listar todos los topónimos había que unir tres dicts. La prosa (reduplicación, conflictos, veredicto
@@ -27,6 +30,26 @@ toponimos:
     vocal final por haplología (juri-jur-ebo).
   observacion: Estaba archivado en TOPONIMOS_ZAVALA como 'glosa incierta' y fuera del habla. Es el caso
     que originó toda la tarea F11.
+  lecturas:
+  - tipo: etimologia-analitica
+    lectura: hure 'arena' -> hurehure 'arenal' -> hurehurebo 'lugar de muchos arenales' (reduplicación
+      + sufijo -bo)
+    quien: González Batista
+    fecha: '2026-08-25'
+    eje: significado
+    procedencia:
+      obra: gonzalez-batista-nombre-de-coro
+    veredicto: 'descartada como lectura principal (2026-08-25): Zavala #178-179 tiene glosa impresa y
+      juri~juri + ebo cierra sin residuo; el propio autor la da como conjetura («si hure fuera como creemos»).
+      Se conserva por D7. Detalle: 6-fusion/toponimia_coro_espina.yaml §veredicto-jurijurebo'
+  - tipo: testimonio-residente
+    lectura: 'Jurijurebo está en Judibana (Paraguaná); judi y juri son la misma palabra deformada, y el
+      viento es el rasgo dominante del sitio: el topónimo moderno y el antiguo comparten raíz y referente'
+    quien: Miguel Gil Urbina, residente en Judibana
+    fecha: '2026-08-25'
+    eje: referente
+    apoyo: converge con la ubicación que dan las fuentes divulgativas (esteves-1989) y con la tradición
+      local de Judibana (velasco-2015-resistencia §judibana_tradicion)
   procedencia:
     obra: zavala-reyes-2015
 - id: toponimo-002
@@ -57,8 +80,7 @@ toponimos:
     a la vez.
   observacion: '⚠ Resuelve un problema del lexicón: hay una entrada `quiba` = ''ayuda'' (Zavala #203)
     y otra `quiva`/`cuiva` = ''piedra''. El topónimo, con glosa ''pedregosos'', confirma ''piedra'' —
-    y coincide con van Buurt. Ver CONFLICTOS. (Cerrado el 2026-08-31: ambas fusionadas como `kiba`,
-    homónimos declarados; el sentido piedra lleva el sig activo.)'
+    y coincide con van Buurt. Ver CONFLICTOS.'
   procedencia:
     obra: zavala-reyes-2015
 - id: toponimo-004
@@ -238,6 +260,25 @@ toponimos:
   segmentacion: para(gua) + -na
   razon: corrobora `para`/`paragua` = 'mar' del lexicón. Pero 'rodeada' no queda explicada y `-na` es
     demasiado frecuente (34 formas del corpus) para significar nada demostrable.
+  lecturas:
+  - tipo: etimologia-analitica
+    lectura: 'para ''agua en grandes cantidades'' (Zavala #190) + gua ''terreno cercado'' (#122) + na
+      ''como, semejante'' (#184) ≈ ''a manera de tierra cercada por el mar'': explica el ''rodeada'' que
+      para(gua) + -na dejaba sin origen'
+    quien: proyecto
+    fecha: '2026-08-25'
+    eje: significado
+    apoyo: tres morfemas ya atestiguados; la tilde de Paraguaná (-aná tónica) sería el dato que decide
+    veredicto: 'pendiente: #109 (abierto)'
+  - tipo: etimologia-analitica
+    lectura: paragua 'mar, agua grande' + na 'tierra' = 'la tierra rodeada de mar'
+    quien: González Batista
+    fecha: '2026-08-25'
+    eje: significado
+    procedencia:
+      obra: gonzalez-batista-nombre-de-coro
+    veredicto: 'depende de na = ''tierra'', que ninguna fuente impresa da; choca con na = ''como'' (Zavala
+      #184, atestiguado). Es la pieza que decide #109'
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-019
@@ -335,8 +376,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-028
-  forma: baracoica
-  glosa_fuente: "Cacique de Curazao"
+  forma: baracoica (Cacique de Curazao)
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -344,8 +384,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-029
-  forma: huay
-  glosa_fuente: "Nombre propio"
+  forma: huay (Nombre propio)
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -401,8 +440,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-036
-  forma: timaure
-  glosa_fuente: "Apellido"
+  forma: timaure (Apellido)
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -410,8 +448,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-037
-  forma: tumarure
-  glosa_fuente: "Apellido de un cacique"
+  forma: tumarure (Apellido de un cacique)
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -419,8 +456,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-038
-  forma: xaraguamari
-  glosa_fuente: "Cacique de Yaracuy"
+  forma: xaraguamari (Cacique de Yaracuy)
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -428,8 +464,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-039
-  forma: yarosabana
-  glosa_fuente: "Cacique de los Guaragua"
+  forma: yarosabana (Cacique de los Guaragua)
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -437,8 +472,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-040
-  forma: dabajuro
-  glosa_fuente: "Población de Falcón"
+  forma: dabajuro (Población de Falcón)
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -446,8 +480,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-041
-  forma: doaca
-  glosa_fuente: "Asiento indígena"
+  forma: doaca (Asiento indígena)
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -455,8 +488,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-042
-  forma: iboa
-  glosa_fuente: "Comunidad indígena"
+  forma: iboa (Comunidad indígena)
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -464,8 +496,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-043
-  forma: parotaima
-  glosa_fuente: "Indígena del Yaracuy"
+  forma: parotaima (Indígena del Yaracuy)
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -473,8 +504,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-044
-  forma: tabicure
-  glosa_fuente: "Indio caquetío del valle de las Damas"
+  forma: tabicure (Indio caquetío del valle de las Damas)
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -482,8 +512,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-045
-  forma: todarahuato
-  glosa_fuente: "Indígena de la Vela"
+  forma: todarahuato (Indígena de la Vela)
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -491,8 +520,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-046
-  forma: yaracuy
-  glosa_fuente: "Indígena del Valle de las Damas"
+  forma: yaracuy (Indígena del Valle de las Damas)
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -500,8 +528,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-047
-  forma: caquetio
-  glosa_fuente: "Buena gente — etnónimo, no descripción del lugar"
+  forma: caquetio (Buena gente — etnónimo, no descripción del lugar)
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -509,8 +536,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-048
-  forma: xirahara
-  glosa_fuente: "Población indígena vecina"
+  forma: xirahara (Población indígena vecina)
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -518,8 +544,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-049
-  forma: yaruca
-  glosa_fuente: "Indígena caquetío"
+  forma: yaruca (Indígena caquetío)
   nivel: descartado
   clase: topónimo
   razon: 'la glosa IDENTIFICA al referente (quién es, dónde queda) sin traducirlo. No hay ecuación bilingüe:
@@ -555,8 +580,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-054
-  forma: aburi
-  glosa_fuente: "aguas de un río lleno de arena"
+  forma: aburi (aguas de un río lleno de arena)
   nivel: descartado
   clase: topónimo
   razon: la glosa es descriptiva y utilizable, pero ninguna segmentación reconstruye nada. Son los que
@@ -564,8 +588,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-055
-  forma: acatute
-  glosa_fuente: "Pueblo entre valles"
+  forma: acatute (Pueblo entre valles)
   nivel: descartado
   clase: topónimo
   razon: la glosa es descriptiva y utilizable, pero ninguna segmentación reconstruye nada. Son los que
@@ -573,8 +596,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-056
-  forma: alcaboa
-  glosa_fuente: "Tierras solas o desiertas"
+  forma: alcaboa (Tierras solas o desiertas)
   nivel: descartado
   clase: topónimo
   razon: la glosa es descriptiva y utilizable, pero ninguna segmentación reconstruye nada. Son los que
@@ -582,8 +604,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-057
-  forma: aricula
-  glosa_fuente: "Punto de tierra"
+  forma: aricula (Punto de tierra)
   nivel: descartado
   clase: topónimo
   razon: la glosa es descriptiva y utilizable, pero ninguna segmentación reconstruye nada. Son los que
@@ -591,8 +612,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-058
-  forma: guanajo
-  glosa_fuente: "Cardón muy lanoso"
+  forma: guanajo (Cardón muy lanoso)
   nivel: descartado
   clase: topónimo
   razon: la glosa es descriptiva y utilizable, pero ninguna segmentación reconstruye nada. Son los que
@@ -600,8 +620,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-059
-  forma: guasare
-  glosa_fuente: "Árbol cactáceo"
+  forma: guasare (Árbol cactáceo)
   nivel: descartado
   clase: topónimo
   razon: la glosa es descriptiva y utilizable, pero ninguna segmentación reconstruye nada. Son los que
@@ -609,8 +628,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-060
-  forma: siguruba
-  glosa_fuente: "Salvar. Caserío"
+  forma: siguruba (Salvar. Caserío)
   nivel: descartado
   clase: topónimo
   razon: la glosa es descriptiva y utilizable, pero ninguna segmentación reconstruye nada. Son los que
@@ -618,8 +636,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-061
-  forma: tarai
-  glosa_fuente: "Garipial o caripial"
+  forma: tarai (Garipial o caripial)
   nivel: descartado
   clase: topónimo
   razon: la glosa es descriptiva y utilizable, pero ninguna segmentación reconstruye nada. Son los que
@@ -739,15 +756,12 @@ corroboraciones_lexicon:
   - jurijurebo
   independencia: alta
   nota: y eco insular en Hudishibana 'windy plain' (van Buurt)
-- palabra: kiba
+- palabra: quiva/quiba
   glosa_lexicon: piedra
   toponimos:
   - quibacoas
   independencia: alta
-  nota: 'grafías fuente quiva/quiba/cuiva (colisiones D5 2026-08-31: fusionadas
-    como kiba, con kiba-2 ''ayuda'' de homónimo declarado). El topónimo
-    corrobora kiba-1 ''piedra'' — y Zavala #92 «Cuiva. Kiba» trae la grafía k
-    impresa'
+  nota: ⚠ desambigua contra la entrada homógrafa `quiba` = 'ayuda'
 - palabra: barici
   glosa_lexicon: agua turbia, tierras coloradas rojizas
   toponimos:
@@ -773,7 +787,7 @@ corroboraciones_lexicon:
   toponimos:
   - paraguana
   independencia: alta
-- palabra: wa
+- palabra: gua
   glosa_lexicon: conuco, heredad, terreno cercado cultivado
   toponimos:
   - guamabatriba
@@ -799,7 +813,7 @@ corroboraciones_lexicon:
   toponimos:
   - Hudishibana
   independencia: NULA — ídem
-- palabra: kari
+- palabra: cari
   glosa_lexicon: costa, orilla
   toponimos:
   - Cariatávo

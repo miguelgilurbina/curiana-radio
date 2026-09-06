@@ -163,6 +163,20 @@ def canon() -> list[Mencion]:
             dato=corto(f"{resto} {glosa}".strip()),
             ref=f"{t['id']} · nivel {t['nivel']} · {t.get('clase', '')} · fuente {como}",
         ))
+        # La tercera voz del canon: cada lectura cuenta como mención de quien
+        # la firma — la obra si la cita, Miguel si es su testimonio, y si no,
+        # el proyecto (análisis propio).
+        for l in t.get("lecturas") or []:
+            quien = str(l.get("quien", ""))
+            obra_l = (l.get("procedencia") or {}).get("obra")
+            f_l = obra_l or (TESTIMONIO if "Miguel" in quien else "proyecto")
+            out.append(Mencion(
+                forma=forma, fuente=f_l, tipo=f"lectura:{l.get('tipo', '?')}",
+                donde="2-lengua/toponimos.yaml §lecturas",
+                dato=corto(l.get("lectura", "")),
+                ref=f"{t['id']} · {quien} · {l.get('fecha', '')}"
+                    + (f" · {corto(l['veredicto'], 60)}" if l.get("veredicto") else ""),
+            ))
     return out
 
 
@@ -449,6 +463,7 @@ DESCRIPCION = OrderedDict([
     ("gatschet-1885", "topónimos de Aruba (material de Pinart, 1882), sin glosa"),
     ("van-buurt-2014", "§7 topónimos de Aruba, Bonaire y Curazao sin glosa; §8-10 las etimologías del autor"),
     (TESTIMONIO, "Miguel Gil Urbina: lecturas de investigación coloquial, tradición local, mapa vivo — deuda sin-procedencia, por diseño"),
+    ("proyecto", "lecturas analíticas del propio proyecto registradas en el canon (segmentaciones propias, con su veredicto o su issue)"),
     ("sin-procedencia", "entradas del canon cuya fuente no se pudo declarar ni inferir — deuda"),
 ])
 

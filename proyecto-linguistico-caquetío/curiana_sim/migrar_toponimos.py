@@ -160,6 +160,11 @@ def main(argv=None) -> int:
             "toponimos": len(tops),
             "por_nivel": por_nivel,
             "con_procedencia": sum(1 for r in tops if r.get("procedencia")),
+            # La tercera voz (2026-09-05): lecturas que cuelgan del topónimo sin
+            # pisar glosa_fuente ni segmentacion. Ver datos-de-lengua.md.
+            "con_lecturas": sum(1 for r in tops if r.get("lecturas")),
+            "lecturas": sum(len(r.get("lecturas") or []) for r in tops),
+            "con_definicion_aceptada": sum(1 for r in tops if r.get("definicion_aceptada_simulacion")),
             "corroboraciones_del_lexicon": len(corrs),
             "nota": ("El nivel de confianza es un CAMPO, no un contenedor: "
                      "antes eran NIVEL_A/B/C separados y para listar todos los "
@@ -195,6 +200,9 @@ def main(argv=None) -> int:
 
     print(f"\n  topónimos: {len(tops)}  {por_nivel}")
     print(f"  con procedencia: {doc_top['meta']['con_procedencia']}/{len(tops)}")
+    print(f"  con lecturas: {doc_top['meta']['con_lecturas']} "
+          f"({doc_top['meta']['lecturas']} lecturas; "
+          f"{doc_top['meta']['con_definicion_aceptada']} con definición aceptada)")
     print(f"  morfemas: {len(morfs)}  ({doc_mor['meta']['glosados']} glosados)")
     print(f"  corroboraciones del lexicón: {len(corrs)}")
     print("\n  ⚠ La prosa NO se migró (reduplicación, conflictos, veredicto de")

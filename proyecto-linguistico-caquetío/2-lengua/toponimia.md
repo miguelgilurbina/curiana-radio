@@ -146,6 +146,19 @@ causa común. Es el mismo problema que D5, la política ortográfica c/k
 Misma disciplina que las cuatro minerías del 2026-08-03 — el minador emite,
 el humano adjudica. Ver [[INDICE_FUENTES]].
 
+## La tercera voz: `lecturas` (desde el 2026-09-05)
+
+Cada topónimo tenía dos voces: lo impreso (`glosa_fuente`) y nuestro análisis
+(`segmentacion` + `glosa_reconstruida`). Lo que la tradición local, un
+residente o un autor con etimología propia dicen del nombre no cabía en
+ninguna sin mentir, y se quedaba huérfano en `6-fusion/`. Ahora cuelga del
+topónimo como lista `lecturas`, cada una con autor, fecha, tipo y, si lo
+tiene, veredicto; y las que la simulación necesita pueden llevar una
+`definicion_aceptada_simulacion` con etiqueta `canon-simulacion`, nunca
+atestiguado. El esquema y sus reglas: [[datos-de-lengua]] §«La tercera voz».
+La mesa de trabajo donde se ven todas las lecturas junto a las demás fuentes:
+`6-fusion/TOPONIMOS_POR_FUENTE.md`.
+
 ## Lo que queda
 
 - Los **213 topónimos ABC de van Buurt §7 sin glosa** son el mayor corpus sin

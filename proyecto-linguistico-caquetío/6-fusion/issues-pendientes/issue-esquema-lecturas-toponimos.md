@@ -105,6 +105,18 @@ Sus palabras: *«ya para estos topónimos no dependeremos de atestiguaciones
 científicas solamente»*. Primer uso: la toponimia paraguanera de los nodos
 de la era 2 (`6-fusion/toponimia_paraguana_miguel.yaml`).
 
+## Estado (2026-09-05)
+
+Los puntos 1 y 2 de abajo están **implementados**: `lecturas` y
+`definicion_aceptada_simulacion` se validan en `compilar_lengua.py` (tipos
+cerrados, autor y fecha obligatorios, procedencia comprobada contra la
+bibliografía, etiqueta `canon-simulacion` obligatoria en la definición),
+`migrar_toponimos.py` los cuenta y `juntar_toponimos.py` los muestra por
+fuente. Dos tipos se añadieron a la tabla: `etimologia-de-cronista` (el
+«Coro = viento» de Castellanos, que no es glosa ni tradición) e `hipotesis`
+(una lectura propuesta para validar, con la validación como rastro). El
+punto 3 arrancó con jurijurebo y paraguana; el resto espera fusión.
+
 ## Trabajo que implica
 
 1. Añadir `lecturas` al esquema y a la validación de `compilar_lengua.py`

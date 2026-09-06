@@ -163,7 +163,8 @@ La mesa de trabajo es `6-fusion/TOPONIMOS_POR_FUENTE.md` (generada por
 tocado, por obra, cruzados contra el canon, Esteves, los nodos y el mapa de
 Miguel. Se regenera; no se edita.
 
-Implementar `lecturas` en el esquema + `compilar_lengua.py`; retro-poblar
+~~Implementar `lecturas` en el esquema + `compilar_lengua.py`~~ (hecho el
+2026-09-05, con `definicion_aceptada_simulacion`; ver datos-de-lengua.md); retro-poblar
 las ~20 lecturas de la sesión (están en `toponimia_coro_espina.yaml`,
 `lengua_toponimia_quibacoa.yaml`, `petroglifos_y_manaure.yaml`,
 `velasco_primarios_agi.yaml`); y procesar la cola de 182 de

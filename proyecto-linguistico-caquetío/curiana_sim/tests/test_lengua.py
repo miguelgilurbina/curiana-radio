@@ -14,6 +14,7 @@ import pytest
 from compilar_lengua import (
     LENGUAS_NUCLEO,
     NIVELES_TOPONIMO,
+    TIPOS_LECTURA,
     compilar,
     obras_conocidas,
     validar_cognados,
@@ -188,3 +189,94 @@ def test_el_id_no_es_la_glosa_espanola():
     for r in datos["cognados"]["cognados"]:
         assert r["id"].startswith("cognado-")
         assert r["id"] != r.get("glosa")
+
+
+# ══════════════════════════════════════════════════════════════════════
+# La tercera voz: lecturas y definición aceptada (2026-09-05)
+# ══════════════════════════════════════════════════════════════════════
+
+def _toponimo(**kw):
+    base = {"id": "toponimo-001", "forma": "x", "nivel": "C",
+            "procedencia": None, "deuda": "sin-procedencia"}
+    base.update(kw)
+    return base
+
+
+def _lectura(**kw):
+    base = {"tipo": "testimonio-residente", "lectura": "el viento manda en el sitio",
+            "quien": "Miguel Gil Urbina, residente", "fecha": "2026-08-25"}
+    base.update(kw)
+    return base
+
+
+def _errores_top(doc, obras=None):
+    return _codigos(validar_toponimos(doc, obras if obras is not None else set(), None, set()),
+                    nivel="error")
+
+
+def test_una_lectura_bien_formada_pasa():
+    assert not _errores_top({"toponimos": [_toponimo(lecturas=[_lectura()])]})
+
+
+@pytest.mark.parametrize("tipo", TIPOS_LECTURA)
+def test_todos_los_tipos_de_lectura_son_legales(tipo):
+    assert not _errores_top({"toponimos": [_toponimo(lecturas=[_lectura(tipo=tipo)])]})
+
+
+def test_lectura_de_tipo_desconocido_es_error():
+    doc = {"toponimos": [_toponimo(lecturas=[_lectura(tipo="ocurrencia")])]}
+    assert "lectura-tipo-ilegal" in _errores_top(doc)
+
+
+def test_lectura_sin_autor_es_error():
+    """Sin autor no entra: es la regla 8 aplicada a opiniones."""
+    doc = {"toponimos": [_toponimo(lecturas=[_lectura(quien="")])]}
+    assert "lectura-sin-autor" in _errores_top(doc)
+
+
+def test_lectura_sin_fecha_es_error():
+    doc = {"toponimos": [_toponimo(lecturas=[_lectura(fecha=None)])]}
+    assert "lectura-sin-fecha" in _errores_top(doc)
+
+
+def test_lectura_que_cita_obra_fantasma_es_error():
+    doc = {"toponimos": [_toponimo(lecturas=[_lectura(procedencia={"obra": "nadie-2099"})])]}
+    assert "obra-fantasma" in _errores_top(doc, obras={"oliver-1989-cap2"})
+
+
+def test_lectura_que_cita_obra_real_pasa():
+    doc = {"toponimos": [_toponimo(lecturas=[_lectura(procedencia={"obra": "oliver-1989-cap2"})])]}
+    assert not _errores_top(doc, obras={"oliver-1989-cap2"})
+
+
+def test_eje_de_lectura_ilegal_es_error():
+    doc = {"toponimos": [_toponimo(lecturas=[_lectura(eje="vibra")])]}
+    assert "lectura-eje-ilegal" in _errores_top(doc)
+
+
+def test_campo_desconocido_en_lectura_solo_avisa():
+    doc = {"toponimos": [_toponimo(lecturas=[_lectura(peso=3)])]}
+    problemas = validar_toponimos(doc, set(), None, set())
+    assert "lectura-campo-desconocido" in _codigos(problemas, nivel="aviso")
+    assert not _codigos(problemas, nivel="error")
+
+
+def test_definicion_aceptada_nunca_es_atestiguado():
+    """La capa de decisión toma posición sin mentir sobre la evidencia."""
+    doc = {"toponimos": [_toponimo(definicion_aceptada_simulacion={
+        "definicion": "el cerro del viento", "quien": "Miguel", "fecha": "2026-09-01",
+        "etiqueta": "atestiguado"})]}
+    assert "definicion-etiqueta-ilegal" in _errores_top(doc)
+
+
+def test_definicion_aceptada_bien_formada_pasa():
+    doc = {"toponimos": [_toponimo(definicion_aceptada_simulacion={
+        "definicion": "el cerro del viento", "quien": "Miguel", "fecha": "2026-09-01",
+        "etiqueta": "canon-simulacion", "validacion": "(Claude) media"})]}
+    assert not _errores_top(doc)
+
+
+def test_definicion_aceptada_incompleta_es_error():
+    doc = {"toponimos": [_toponimo(definicion_aceptada_simulacion={
+        "definicion": "x", "etiqueta": "canon-simulacion"})]}
+    assert "definicion-incompleta" in _errores_top(doc)
