@@ -114,7 +114,9 @@ NIVEL_A = {
                        "`quiba` = 'ayuda' (Zavala #203) y otra `quiva`/`cuiva` "
                        "= 'piedra'. El topónimo, con glosa 'pedregosos', "
                        "confirma 'piedra' — y coincide con van Buurt. Ver "
-                       "CONFLICTOS.",
+                       "CONFLICTOS. (Cerrado el 2026-08-31: ambas fusionadas "
+                       "como `kiba`, homónimos declarados; el sentido piedra "
+                       "lleva el sig activo.)",
     },
     "cumarebo": {
         "clase": "topónimo",
@@ -553,10 +555,12 @@ CORROBORACIONES_LEXICON = {
     "juri": {"glosa_lexicon": "viento, ventarrón", "toponimos": ["jurijurebo"],
              "independencia": "alta",
              "nota": "y eco insular en Hudishibana 'windy plain' (van Buurt)"},
-    "quiva/quiba": {"glosa_lexicon": "piedra", "toponimos": ["quibacoas"],
-                    "independencia": "alta",
-                    "nota": "⚠ desambigua contra la entrada homógrafa "
-                            "`quiba` = 'ayuda'"},
+    "kiba": {"glosa_lexicon": "piedra", "toponimos": ["quibacoas"],
+             "independencia": "alta",
+             "nota": "grafías fuente quiva/quiba/cuiva (colisiones D5 2026-08-31: "
+                     "fusionadas como kiba, con kiba-2 'ayuda' de homónimo "
+                     "declarado). El topónimo corrobora kiba-1 'piedra' — y Zavala "
+                     "#92 «Cuiva. Kiba» trae la grafía k impresa"},
     "barici": {"glosa_lexicon": "agua turbia, tierras coloradas rojizas",
                "toponimos": ["barisi"], "independencia": "alta"},
     "bariki": {"glosa_lexicon": "tierra colorada",
@@ -567,7 +571,7 @@ CORROBORACIONES_LEXICON = {
              "independencia": "alta"},
     "para/paragua": {"glosa_lexicon": "mar, agua extensa",
                      "toponimos": ["paraguana"], "independencia": "alta"},
-    "gua": {"glosa_lexicon": "conuco, heredad, terreno cercado cultivado",
+    "wa": {"glosa_lexicon": "conuco, heredad, terreno cercado cultivado",
             "toponimos": ["guamabatriba"], "independencia": "media",
             "nota": "compite con el prefijo gua-/wa- de pluralidad"},
     # ── NO independientes: el morfema salió del mismo análisis etimológico que
@@ -582,7 +586,7 @@ CORROBORACIONES_LEXICON = {
            "independencia": "NULA — ídem"},
     "bana": {"glosa_lexicon": "ancho, llano", "toponimos": ["Hudishibana"],
              "independencia": "NULA — ídem"},
-    "cari": {"glosa_lexicon": "costa, orilla", "toponimos": ["Cariatávo"],
+    "kari": {"glosa_lexicon": "costa, orilla", "toponimos": ["Cariatávo"],
              "independencia": "NULA — ídem"},
     "bala": {"glosa_lexicon": "el mar", "toponimos": ["Balashi"],
              "independencia": "NULA — ídem"},

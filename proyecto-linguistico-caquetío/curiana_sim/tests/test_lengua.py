@@ -280,3 +280,30 @@ def test_definicion_aceptada_incompleta_es_error():
     doc = {"toponimos": [_toponimo(definicion_aceptada_simulacion={
         "definicion": "x", "etiqueta": "canon-simulacion"})]}
     assert "definicion-incompleta" in _errores_top(doc)
+
+
+# ══════════════════════════════════════════════════════════════════════
+# El canon es lo que emite el migrador — nada más (2026-09-06)
+# ══════════════════════════════════════════════════════════════════════
+
+def test_el_canon_de_toponimos_es_lo_que_emite_el_migrador():
+    """Dos commits (2026-08-30 y 08-31) editaron toponimos.yaml a mano sin
+    tocar lexicon_toponimos.py ni migrar_toponimos.py, y la siguiente
+    regeneración deshizo 25 entradas. Desde entonces el archivo tiene que
+    coincidir con lo que emite el migrador: se edita la fuente curada y se
+    regenera, nunca el YAML."""
+    import os
+    import yaml
+    import lexicon_toponimos as T
+    import migrar_toponimos as M
+
+    ruta = os.path.join(M.DIR_LENGUA, "toponimos.yaml")
+    with open(ruta, encoding="utf-8") as fh:
+        canon = yaml.safe_load(fh)
+    # Ida y vuelta por YAML para comparar con los mismos tipos (las fechas
+    # de las lecturas salen como str y vuelven como date, por ejemplo).
+    emitido = yaml.safe_load(yaml.safe_dump(
+        {"toponimos": M.toponimos(T), "corroboraciones_lexicon": M.corroboraciones(T)},
+        allow_unicode=True, sort_keys=False))
+    assert canon["toponimos"] == emitido["toponimos"]
+    assert canon["corroboraciones_lexicon"] == emitido["corroboraciones_lexicon"]

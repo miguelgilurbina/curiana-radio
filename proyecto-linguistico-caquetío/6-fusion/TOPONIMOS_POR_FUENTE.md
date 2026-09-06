@@ -44,7 +44,7 @@ editar_a_mano: no
 - **Castellanos 1589 ∩ Esteves (5)**: Guaidabacoa, Hurraque, Miraca, Todariquiba, jurijurebo.
 - **Castellanos 1589 ∩ Bastidas 1538 (2)**: Miraca, Todariquiba.
 - **Bastidas 1538 ∩ Esteves (2)**: Miraca, Todariquiba.
-- **Medina Colina ∩ Esteves (7)**: Adícora, Carirubana, Chuchube, Guachaco, Moruy, Saruro, Tacuato; en el canon (3): cabudare, capadare, todarahuato (Indígena de la Vela).
+- **Medina Colina ∩ Esteves (7)**: Adícora, Carirubana, Chuchube, Guachaco, Moruy, Saruro, Tacuato; en el canon (3): cabudare, capadare, todarahuato.
 - **En tres fuentes o más (10)**: Adícora (3), Coriana (3), Guaidabacoa (3), Miraca (3), Moruy (4), Santa Ana (3), Supí (3), Todariquiba (3), jurijurebo (4), paraguana (4).
 
 ## Por fuente
@@ -53,7 +53,7 @@ editar_a_mano: no
 
 el glosario (TOPONIMOS_ZAVALA y ANTROPONIMOS_ZAVALA, con glosa española) — la base del canon.
 
-jurijurebo★≡ (Paso de los vientos), yacarebacoa★ (Pueblo del bosque), quibacoas★ (Bosques pedregosos), cumarebo★⌂ (Camino del cacique Cumare), guacaubana★ (Río escondido), barisi★ (Región de tierras coloradas cerca del mar), adabacoa★ (Todo arboleda), guadabacoa★ (Arboleda), bobare★ (Sitio de cultivo), cabudare★ (sitio de cultivo), dabudare★ (Sitio de extracción de barro), pachacuare★ (Sitio de palmeras), bariquisimeto★ (Río de aguas turbias), yacare★ (Pueblo. Caimán), alaurima★ (Río blanco o claro), capadare★ (Diente de tigre), sazaribacoa★ (Río de los maizales), guamabatriba★ (Muchas tierras de cultivo), turijerebo★ (Lugar de descanso), guacurebo★≡ (Quebrada que crece), taratarare★ (Hato, conuco), poapao★ (Serranía de Coro), jadicuar★ (Sitio donde abunda jajato. Salicornia fructuosa), chunare★ (Apellido. Mazorca tierna), baracoica (Cacique de Curazao)★, huay (Nombre propio)★, quiceraguru★, quiceroaboa★, quiceromata★, quiciroata★, quiquiba★, tamani★, timaure (Apellido)★, tumarure (Apellido de un cacique)★, xaraguamari (Cacique de Yaracuy)★, yarosabana (Cacique de los Guaragua)★, dabajuro (Población de Falcón)★, doaca (Asiento indígena)★, iboa (Comunidad indígena)★, parotaima (Indígena del Yaracuy)★, tabicure (Indio caquetío del valle de las Damas)★, todarahuato (Indígena de la Vela)★, yaracuy (Indígena del Valle de las Damas)★, caquetio (Buena gente — etnónimo, no descripción del lugar)★, xirahara (Población indígena vecina)★, yaruca (Indígena caquetío)★, cemirucos★ (→ 'Semerucos'), coroque★ (→ 'Árbol de ¿?'), zamurano★ (← esp. *zamuro* + -ano), aburi (aguas de un río lleno de arena)★, acatute (Pueblo entre valles)★, alcaboa (Tierras solas o desiertas)★, aricula (Punto de tierra)★, guanajo (Cardón muy lanoso)★, guasare (Árbol cactáceo)★≡, siguruba (Salvar. Caserío)★, tarai (Garipial o caripial)★
+jurijurebo★≡ (Paso de los vientos), yacarebacoa★ (Pueblo del bosque), quibacoas★ (Bosques pedregosos), cumarebo★⌂ (Camino del cacique Cumare), guacaubana★ (Río escondido), barisi★ (Región de tierras coloradas cerca del mar), adabacoa★ (Todo arboleda), guadabacoa★ (Arboleda), bobare★ (Sitio de cultivo), cabudare★ (sitio de cultivo), dabudare★ (Sitio de extracción de barro), pachacuare★ (Sitio de palmeras), bariquisimeto★ (Río de aguas turbias), yacare★ (Pueblo. Caimán), alaurima★ (Río blanco o claro), capadare★ (Diente de tigre), sazaribacoa★ (Río de los maizales), guamabatriba★ (Muchas tierras de cultivo), turijerebo★ (Lugar de descanso), guacurebo★≡ (Quebrada que crece), taratarare★ (Hato, conuco), poapao★ (Serranía de Coro), jadicuar★ (Sitio donde abunda jajato. Salicornia fructuosa), chunare★ (Apellido. Mazorca tierna), baracoica★ (Cacique de Curazao), huay★ (Nombre propio), quiceraguru★, quiceroaboa★, quiceromata★, quiciroata★, quiquiba★, tamani★, timaure★ (Apellido), tumarure★ (Apellido de un cacique), xaraguamari★ (Cacique de Yaracuy), yarosabana★ (Cacique de los Guaragua), dabajuro★ (Población de Falcón), doaca★ (Asiento indígena), iboa★ (Comunidad indígena), parotaima★ (Indígena del Yaracuy), tabicure★ (Indio caquetío del valle de las Damas), todarahuato★ (Indígena de la Vela), yaracuy★ (Indígena del Valle de las Damas), caquetio★ (Buena gente — etnónimo, no descripción del lugar), xirahara★ (Población indígena vecina), yaruca★ (Indígena caquetío), cemirucos★ (→ 'Semerucos'), coroque★ (→ 'Árbol de ¿?'), zamurano★ (← esp. *zamuro* + -ano), aburi★ (aguas de un río lleno de arena), acatute★ (Pueblo entre valles), alcaboa★ (Tierras solas o desiertas), aricula★ (Punto de tierra), guanajo★ (Cardón muy lanoso), guasare★≡ (Árbol cactáceo), siguruba★ (Salvar. Caserío), tarai★ (Garipial o caripial)
 
 ### `esteves-1989` — 186 formas, 186 menciones
 
@@ -295,9 +295,9 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Forma | Variantes | Fuentes | ★ | ≡ | ◆ | ⌂ |
 |---|---|---|---|---|---|---|
 | Abudure |  | esteves-1989, testimonio-miguel |  | ≡ | ◆ |  |
-| aburi (aguas de un río lleno de arena) |  | zavala-reyes-2015 | toponimo-054 · nivel descartado |  |  |  |
+| aburi |  | zavala-reyes-2015 | toponimo-054 · nivel descartado |  |  |  |
 | Acaboa |  | esteves-1989 |  | ≡ |  |  |
-| acatute (Pueblo entre valles) |  | zavala-reyes-2015 | toponimo-055 · nivel descartado |  |  |  |
+| acatute |  | zavala-reyes-2015 | toponimo-055 · nivel descartado |  |  |  |
 | adabacoa |  | zavala-reyes-2015 | toponimo-007 · nivel B |  |  |  |
 | Adaro |  | esteves-1989 |  | ≡ |  |  |
 | Adaure |  | esteves-1989, testimonio-miguel |  | ≡ | ◆ |  |
@@ -306,7 +306,7 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Aguaque |  | esteves-1989 |  | ≡ |  |  |
 | Aiyo |  | gatschet-1885 |  |  |  |  |
 | alaurima |  | zavala-reyes-2015 | toponimo-015 · nivel C |  |  |  |
-| alcaboa (Tierras solas o desiertas) |  | zavala-reyes-2015 | toponimo-056 · nivel descartado |  |  |  |
+| alcaboa |  | zavala-reyes-2015 | toponimo-056 · nivel descartado |  |  |  |
 | Amaraya |  | esteves-1989, testimonio-miguel |  | ≡ | ◆ |  |
 | Amboïna | Amboina | van-buurt-2014 | toponimo-063 · nivel descartado |  |  |  |
 | Amboïna, Ambuana (pronounce Ambwana) |  | van-buurt-2014 |  |  |  |  |
@@ -320,7 +320,7 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Araburu |  | van-buurt-2014 |  |  |  |  |
 | Arajó |  | esteves-1989 |  | ≡ |  |  |
 | Arashi |  | van-buurt-2014 | toponimo-064 · nivel descartado |  |  |  |
-| aricula (Punto de tierra) |  | zavala-reyes-2015 | toponimo-057 · nivel descartado |  |  |  |
+| aricula |  | zavala-reyes-2015 | toponimo-057 · nivel descartado |  |  |  |
 | Arikok | Avikok | van-buurt-2014 |  |  |  |  |
 | Arikurari |  | gatschet-1885 |  |  |  |  |
 | aruba | Aruba, Oruba, Orua, Arubanas | van-buurt-2014, testimonio-miguel | toponimo-051 · nivel descartado |  |  | nodo-010 |
@@ -336,7 +336,7 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Balashi |  | van-buurt-2014 | toponimo-072 · nivel descartado |  |  |  |
 | Barabara |  | esteves-1989 |  | ≡ |  |  |
 | Baracara |  | esteves-1989 |  | ≡ |  |  |
-| baracoica (Cacique de Curazao) |  | zavala-reyes-2015 | toponimo-028 · nivel descartado |  |  |  |
+| baracoica |  | zavala-reyes-2015 | toponimo-028 · nivel descartado |  |  |  |
 | Baraived |  | esteves-1989, testimonio-miguel |  | ≡ | ◆ |  |
 | Barbacoa |  | van-buurt-2014 |  |  |  |  |
 | Barbasco |  | esteves-1989 |  | ≡ |  |  |
@@ -390,7 +390,7 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Capatarida | Capatárida | castellanos-elegias |  |  |  | nodo-007 |
 | Capubana |  | testimonio-miguel |  |  |  |  |
 | Capuhana |  | esteves-1989 |  | ≡ |  |  |
-| caquetio (Buena gente — etnónimo, no descripción del lugar) |  | zavala-reyes-2015 | toponimo-047 · nivel descartado |  |  |  |
+| caquetio |  | zavala-reyes-2015 | toponimo-047 · nivel descartado |  |  |  |
 | Caracao |  | van-buurt-2014 |  |  |  |  |
 | Caradacagua |  | esteves-1989 |  | ≡ |  |  |
 | Carajaima |  | esteves-1989 |  | ≡ |  |  |
@@ -476,12 +476,12 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Cuwana |  | van-buurt-2014 |  |  |  |  |
 | Cuzubitos |  | esteves-1989 |  | ≡ |  |  |
 | Dabadubare |  | esteves-1989 |  | ≡ |  |  |
-| dabajuro (Población de Falcón) |  | zavala-reyes-2015 | toponimo-040 · nivel descartado |  |  |  |
+| dabajuro |  | zavala-reyes-2015 | toponimo-040 · nivel descartado |  |  |  |
 | dabudare |  | zavala-reyes-2015 | toponimo-011 · nivel B |  |  |  |
 | Damari | Daimari | gatschet-1885, van-buurt-2014 |  |  |  |  |
 | Davaduvare |  | testimonio-miguel |  |  | ◆ |  |
 | Dibaragua |  | esteves-1989 |  | ≡ |  |  |
-| doaca (Asiento indígena) |  | zavala-reyes-2015 | toponimo-041 · nivel descartado |  |  |  |
+| doaca |  | zavala-reyes-2015 | toponimo-041 · nivel descartado |  |  |  |
 | Duraguaco |  | esteves-1989 |  | ≡ |  |  |
 | Eayac |  | van-buurt-2014 |  |  |  |  |
 | Elegüey |  | esteves-1989 |  | ≡ |  |  |
@@ -503,14 +503,14 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Guaidabacoa | Guaybacoa, Guaibacoa | esteves-1989, castellanos-elegias, gonzalez-batista-nombre-de-coro |  | ≡ |  | nodo-003 |
 | guamabatriba |  | zavala-reyes-2015 | toponimo-019 · nivel C |  |  |  |
 | Guanadito |  | esteves-1989 |  | ≡ |  |  |
-| guanajo (Cardón muy lanoso) |  | zavala-reyes-2015 | toponimo-058 · nivel descartado |  |  |  |
+| guanajo |  | zavala-reyes-2015 | toponimo-058 · nivel descartado |  |  |  |
 | Guarama |  | esteves-1989 |  | ≡ |  |  |
 | Guaranao |  | esteves-1989, oliver-1989-cap3 |  | ≡ |  |  |
 | Guarataro |  | esteves-1989 |  | ≡ |  |  |
 | Guarero |  | van-buurt-2014 |  |  |  |  |
 | Guaricure |  | esteves-1989 |  | ≡ |  |  |
 | Guaruguaja |  | esteves-1989 |  | ≡ |  |  |
-| guasare (Árbol cactáceo) | Guasare | zavala-reyes-2015, esteves-1989 | toponimo-059 · nivel descartado | ≡ |  |  |
+| guasare | Guasare | zavala-reyes-2015, esteves-1989 | toponimo-059 · nivel descartado | ≡ |  |  |
 | Guatacare |  | esteves-1989 |  | ≡ |  |  |
 | Guayacanal |  | esteves-1989 |  | ≡ |  |  |
 | Güica |  | esteves-1989 |  | ≡ |  |  |
@@ -522,14 +522,14 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Hayo |  | esteves-1989 |  | ≡ |  |  |
 | Hendieku |  | gatschet-1885 |  |  |  |  |
 | Hobao |  | van-buurt-2014 |  |  |  |  |
-| huay (Nombre propio) |  | zavala-reyes-2015 | toponimo-029 · nivel descartado |  |  |  |
+| huay |  | zavala-reyes-2015 | toponimo-029 · nivel descartado |  |  |  |
 | Huba |  | van-buurt-2014 |  |  |  |  |
 | Hubada |  | van-buurt-2014 |  |  |  |  |
 | Hudishibana | Hudishibana (P8) | van-buurt-2014 | toponimo-027 · nivel C |  |  |  |
 | Huliba | Uliba | van-buurt-2014 |  |  |  |  |
 | Hurihurebo |  | velasco-2015-resistencia |  |  |  |  |
 | Hurraque | Hurraqui | esteves-1989, castellanos-elegias |  | ≡ |  |  |
-| iboa (Comunidad indígena) |  | zavala-reyes-2015 | toponimo-042 · nivel descartado |  |  |  |
+| iboa |  | zavala-reyes-2015 | toponimo-042 · nivel descartado |  |  |  |
 | Imujo |  | esteves-1989 |  | ≡ |  |  |
 | Ishiri |  | van-buurt-2014 |  |  |  |  |
 | Isiro |  | esteves-1989 |  | ≡ |  |  |
@@ -625,7 +625,7 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Paradera |  | van-buurt-2014 |  |  |  |  |
 | paraguana | Paraguaná, Paraguana, Parawana | van-buurt-2014, proyecto, gonzalez-batista-nombre-de-coro, esteves-1989 | toponimo-018 · nivel C | ≡ |  |  |
 | Parasasa |  | van-buurt-2014 |  |  |  |  |
-| parotaima (Indígena del Yaracuy) |  | zavala-reyes-2015 | toponimo-043 · nivel descartado |  |  |  |
+| parotaima |  | zavala-reyes-2015 | toponimo-043 · nivel descartado |  |  |  |
 | Parunu |  | testimonio-miguel |  |  | ◆ |  |
 | Pedregalito |  | testimonio-miguel |  |  | ◆ |  |
 | La Peña Clara |  | moron-2012-petroglifos |  |  |  |  |
@@ -680,7 +680,7 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Shishiribana |  | van-buurt-2014 |  |  |  |  |
 | Sibidigual |  | esteves-1989 |  | ≡ |  |  |
 | Sicaname |  | esteves-1989 |  | ≡ |  |  |
-| siguruba (Salvar. Caserío) |  | zavala-reyes-2015 | toponimo-060 · nivel descartado |  |  |  |
+| siguruba |  | zavala-reyes-2015 | toponimo-060 · nivel descartado |  |  |  |
 | Siraba |  | esteves-1989 |  | ≡ |  |  |
 | Siribana |  | van-buurt-2014 |  |  |  |  |
 | Sividivi |  | van-buurt-2014 |  |  |  |  |
@@ -690,7 +690,7 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Supí | El Supí | esteves-1989, moron-2012-petroglifos, testimonio-miguel |  | ≡ | ◆ |  |
 | Supideo |  | esteves-1989 |  | ≡ |  |  |
 | Suriquiva |  | esteves-1989 |  | ≡ |  |  |
-| tabicure (Indio caquetío del valle de las Damas) |  | zavala-reyes-2015 | toponimo-044 · nivel descartado |  |  |  |
+| tabicure |  | zavala-reyes-2015 | toponimo-044 · nivel descartado |  |  |  |
 | Tacaduto |  | esteves-1989 |  | ≡ |  |  |
 | Tacal |  | esteves-1989 |  | ≡ |  |  |
 | Tacuato |  | esteves-1989, medina-colina-sxx |  | ≡ |  |  |
@@ -700,7 +700,7 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Taque |  | esteves-1989 |  | ≡ |  |  |
 | Los Taques |  | medina-colina-sxx |  |  |  |  |
 | Tarabana |  | gatschet-1885, van-buurt-2014 |  |  |  |  |
-| tarai (Garipial o caripial) |  | zavala-reyes-2015 | toponimo-061 · nivel descartado |  |  |  |
+| tarai |  | zavala-reyes-2015 | toponimo-061 · nivel descartado |  |  |  |
 | taratara | Taratara | gonzalez-batista-nombre-de-coro, moron-2012-petroglifos |  |  |  | nodo-018 |
 | taratarare |  | zavala-reyes-2015 | toponimo-022 · nivel C |  |  |  |
 | Taratata | Tatarata | van-buurt-2014 | toponimo-070 · nivel descartado |  |  |  |
@@ -713,14 +713,14 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Tiguadare |  | esteves-1989 |  | ≡ |  |  |
 | Tijuro |  | esteves-1989 |  | ≡ |  |  |
 | Tikibanaro |  | van-buurt-2014 |  |  |  |  |
-| timaure (Apellido) |  | zavala-reyes-2015 | toponimo-036 · nivel descartado |  |  |  |
+| timaure |  | zavala-reyes-2015 | toponimo-036 · nivel descartado |  |  |  |
 | Tiquiba |  | esteves-1989 |  | ≡ |  |  |
 | Tiraya |  | esteves-1989 |  | ≡ |  |  |
 | Tobagía |  | esteves-1989 |  | ≡ |  |  |
-| todarahuato (Indígena de la Vela) | todarahuato | zavala-reyes-2015, medina-colina-sxx | toponimo-045 · nivel descartado |  |  |  |
+| todarahuato |  | zavala-reyes-2015, medina-colina-sxx | toponimo-045 · nivel descartado |  |  |  |
 | Todariquiba | Todariquibo | esteves-1989, castellanos-elegias, velasco-2015-resistencia |  | ≡ |  | nodo-001 |
 | Tubarao |  | esteves-1989 |  | ≡ |  |  |
-| tumarure (Apellido de un cacique) |  | zavala-reyes-2015 | toponimo-037 · nivel descartado |  |  |  |
+| tumarure |  | zavala-reyes-2015 | toponimo-037 · nivel descartado |  |  |  |
 | Tumarusa |  | esteves-1989 |  | ≡ |  |  |
 | Tumatey |  | esteves-1989 |  | ≡ |  |  |
 | Tupure |  | moron-2012-petroglifos |  |  |  |  |
@@ -762,8 +762,8 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Weburi |  | gatschet-1885, van-buurt-2014 |  |  |  |  |
 | Wecua |  | van-buurt-2014 |  |  |  |  |
 | Wiriwari |  | van-buurt-2014 |  |  |  |  |
-| xaraguamari (Cacique de Yaracuy) |  | zavala-reyes-2015 | toponimo-038 · nivel descartado |  |  |  |
-| xirahara (Población indígena vecina) |  | zavala-reyes-2015 | toponimo-048 · nivel descartado |  |  |  |
+| xaraguamari |  | zavala-reyes-2015 | toponimo-038 · nivel descartado |  |  |  |
+| xirahara |  | zavala-reyes-2015 | toponimo-048 · nivel descartado |  |  |  |
 | Yabarubari |  | gatschet-1885 |  |  |  |  |
 | Yabuquiva |  | testimonio-miguel |  |  | ◆ |  |
 | yacare |  | zavala-reyes-2015 | toponimo-014 · nivel B |  |  |  |
@@ -774,10 +774,10 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Yamanota |  | gatschet-1885, van-buurt-2014 |  |  |  |  |
 | Yanana |  | van-buurt-2014 |  |  |  |  |
 | Yara |  | van-buurt-2014 |  |  |  |  |
-| yaracuy (Indígena del Valle de las Damas) |  | zavala-reyes-2015 | toponimo-046 · nivel descartado |  |  |  |
+| yaracuy |  | zavala-reyes-2015 | toponimo-046 · nivel descartado |  |  |  |
 | Yarí |  | esteves-1989 |  | ≡ |  |  |
-| yarosabana (Cacique de los Guaragua) |  | zavala-reyes-2015 | toponimo-039 · nivel descartado |  |  |  |
-| yaruca (Indígena caquetío) |  | zavala-reyes-2015 | toponimo-049 · nivel descartado |  |  |  |
+| yarosabana |  | zavala-reyes-2015 | toponimo-039 · nivel descartado |  |  |  |
+| yaruca |  | zavala-reyes-2015 | toponimo-049 · nivel descartado |  |  |  |
 | Yatu |  | van-buurt-2014 |  |  |  |  |
 | Yatu Bacu |  | van-buurt-2014 | toponimo-071 · nivel descartado |  |  |  |
 | Yauquiba |  | esteves-1989 |  | ≡ |  |  |

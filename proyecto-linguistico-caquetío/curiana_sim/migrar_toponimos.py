@@ -45,6 +45,7 @@ Uso:
 import argparse
 import io
 import os
+import re
 import sys
 
 import yaml
@@ -96,18 +97,28 @@ def toponimos(T):
 
     # DESCARTES viene indexado por RAZÓN, con una lista de formas dentro. Se
     # expande a un registro por forma: la unidad es el topónimo, no el motivo.
+    # La glosa viene DENTRO de la forma, «dabajuro (Población de Falcón)»: se
+    # separa a `glosa_fuente` (el bug de forma, arreglado el 2026-08-30 sobre
+    # el YAML y aquí desde el 2026-09-06 para que regenerar no lo deshaga).
+    # Las flechas («cemirucos → 'Semerucos'») no son glosa y se quedan.
     for razon, e in T.DESCARTES.items():
         for forma in e.get("formas", []):
             n += 1
-            registros.append({
+            m = re.match(r"^(.+?)\s+\((.+)\)$", forma)
+            reg = {
                 "id": f"toponimo-{n:03d}",
-                "forma": forma,
+                "forma": m.group(1) if m else forma,
                 "nivel": "descartado",
                 "clase": "topónimo",
+            }
+            if m:
+                reg["glosa_fuente"] = m.group(2)
+            reg.update({
                 "razon": e.get("razon") or razon,
                 "procedencia": None,
                 "deuda": "sin-procedencia",
             })
+            registros.append(reg)
     return registros
 
 

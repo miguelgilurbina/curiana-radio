@@ -104,7 +104,7 @@ meta:
       medina_colina_en_canon:
       - cabudare
       - capadare
-      - todarahuato (Indígena de la Vela)
+      - todarahuato
       en_mas_de_dos_fuentes:
       - Adícora (3)
       - Coriana (3)
@@ -245,13 +245,15 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml
     dato: Apellido. Mazorca tierna
     ref: toponimo-025 · nivel C · antropónimo · fuente inferida-por-cruce
-  - forma: baracoica (Cacique de Curazao)
+  - forma: baracoica
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Cacique de Curazao
     ref: toponimo-028 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: huay (Nombre propio)
+  - forma: huay
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Nombre propio
     ref: toponimo-029 · nivel descartado · topónimo · fuente inferida-por-cruce
   - forma: quiceraguru
     tipo: canon
@@ -277,61 +279,75 @@ por_fuente:
     tipo: canon
     donde: 2-lengua/toponimos.yaml
     ref: toponimo-035 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: timaure (Apellido)
+  - forma: timaure
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Apellido
     ref: toponimo-036 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: tumarure (Apellido de un cacique)
+  - forma: tumarure
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Apellido de un cacique
     ref: toponimo-037 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: xaraguamari (Cacique de Yaracuy)
+  - forma: xaraguamari
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Cacique de Yaracuy
     ref: toponimo-038 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: yarosabana (Cacique de los Guaragua)
+  - forma: yarosabana
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Cacique de los Guaragua
     ref: toponimo-039 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: dabajuro (Población de Falcón)
+  - forma: dabajuro
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Población de Falcón
     ref: toponimo-040 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: doaca (Asiento indígena)
+  - forma: doaca
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Asiento indígena
     ref: toponimo-041 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: iboa (Comunidad indígena)
+  - forma: iboa
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Comunidad indígena
     ref: toponimo-042 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: parotaima (Indígena del Yaracuy)
+  - forma: parotaima
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Indígena del Yaracuy
     ref: toponimo-043 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: tabicure (Indio caquetío del valle de las Damas)
+  - forma: tabicure
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Indio caquetío del valle de las Damas
     ref: toponimo-044 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: todarahuato (Indígena de la Vela)
+  - forma: todarahuato
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Indígena de la Vela
     ref: toponimo-045 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: yaracuy (Indígena del Valle de las Damas)
+  - forma: yaracuy
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Indígena del Valle de las Damas
     ref: toponimo-046 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: caquetio (Buena gente — etnónimo, no descripción del lugar)
+  - forma: caquetio
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Buena gente — etnónimo, no descripción del lugar
     ref: toponimo-047 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: xirahara (Población indígena vecina)
+  - forma: xirahara
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Población indígena vecina
     ref: toponimo-048 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: yaruca (Indígena caquetío)
+  - forma: yaruca
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Indígena caquetío
     ref: toponimo-049 · nivel descartado · topónimo · fuente inferida-por-cruce
   - forma: cemirucos
     tipo: canon
@@ -348,37 +364,45 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml
     dato: ← esp. *zamuro* + -ano
     ref: toponimo-053 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: aburi (aguas de un río lleno de arena)
+  - forma: aburi
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: aguas de un río lleno de arena
     ref: toponimo-054 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: acatute (Pueblo entre valles)
+  - forma: acatute
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Pueblo entre valles
     ref: toponimo-055 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: alcaboa (Tierras solas o desiertas)
+  - forma: alcaboa
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Tierras solas o desiertas
     ref: toponimo-056 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: aricula (Punto de tierra)
+  - forma: aricula
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Punto de tierra
     ref: toponimo-057 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: guanajo (Cardón muy lanoso)
+  - forma: guanajo
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Cardón muy lanoso
     ref: toponimo-058 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: guasare (Árbol cactáceo)
+  - forma: guasare
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Árbol cactáceo
     ref: toponimo-059 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: siguruba (Salvar. Caserío)
+  - forma: siguruba
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Salvar. Caserío
     ref: toponimo-060 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: tarai (Garipial o caripial)
+  - forma: tarai
     tipo: canon
     donde: 2-lengua/toponimos.yaml
+    dato: Garipial o caripial
     ref: toponimo-061 · nivel descartado · topónimo · fuente inferida-por-cruce
 - obra: esteves-1989
   en_bibliografia: true
@@ -2952,7 +2976,7 @@ indice_de_formas:
   menciones:
   - esteves-1989 · indice
   - testimonio-miguel · mapa · 2026-09-01
-- forma: aburi (aguas de un río lleno de arena)
+- forma: aburi
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -2974,7 +2998,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: acatute (Pueblo entre valles)
+- forma: acatute
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -3081,7 +3105,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - zavala-reyes-2015 · canon · toponimo-015 · nivel C · topónimo · fuente inferida-por-cruce
-- forma: alcaboa (Tierras solas o desiertas)
+- forma: alcaboa
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -3244,7 +3268,7 @@ indice_de_formas:
   - van-buurt-2014 · canon · toponimo-064 · nivel descartado · topónimo · fuente inferida-por-cruce
   - van-buurt-2014 · indice-abc · §7
   - van-buurt-2014 · lectura · §8-10
-- forma: aricula (Punto de tierra)
+- forma: aricula
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -3430,7 +3454,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: baracoica (Cacique de Curazao)
+- forma: baracoica
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -4044,7 +4068,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: caquetio (Buena gente — etnónimo, no descripción del lugar)
+- forma: caquetio
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -5033,7 +5057,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: dabajuro (Población de Falcón)
+- forma: dabajuro
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -5091,7 +5115,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: doaca (Asiento indígena)
+- forma: doaca
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -5349,7 +5373,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: guanajo (Cardón muy lanoso)
+- forma: guanajo
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -5428,7 +5452,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: guasare (Árbol cactáceo)
+- forma: guasare
   variantes:
   - Guasare
   fuentes:
@@ -5563,7 +5587,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - van-buurt-2014 · indice-abc · §7
-- forma: huay (Nombre propio)
+- forma: huay
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -5648,7 +5672,7 @@ indice_de_formas:
   menciones:
   - esteves-1989 · indice
   - castellanos-elegias · lista-1589 · II, Elegía 1
-- forma: iboa (Comunidad indígena)
+- forma: iboa
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -6771,7 +6795,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - van-buurt-2014 · indice-abc · §7
-- forma: parotaima (Indígena del Yaracuy)
+- forma: parotaima
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -7393,7 +7417,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: siguruba (Salvar. Caserío)
+- forma: siguruba
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -7508,7 +7532,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: tabicure (Indio caquetío del valle de las Damas)
+- forma: tabicure
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -7624,7 +7648,7 @@ indice_de_formas:
   menciones:
   - gatschet-1885 · indice-aruba · Pinart 1882
   - van-buurt-2014 · indice-abc · §7
-- forma: tarai (Garipial o caripial)
+- forma: tarai
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -7774,7 +7798,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - van-buurt-2014 · indice-abc · §7
-- forma: timaure (Apellido)
+- forma: timaure
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -7818,9 +7842,8 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: todarahuato (Indígena de la Vela)
-  variantes:
-  - todarahuato
+- forma: todarahuato
+  variantes: []
   fuentes:
   - zavala-reyes-2015
   - medina-colina-sxx
@@ -7859,7 +7882,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: tumarure (Apellido de un cacique)
+- forma: tumarure
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -8334,7 +8357,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - van-buurt-2014 · indice-abc · §7
-- forma: xaraguamari (Cacique de Yaracuy)
+- forma: xaraguamari
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -8345,7 +8368,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - zavala-reyes-2015 · canon · toponimo-038 · nivel descartado · topónimo · fuente inferida-por-cruce
-- forma: xirahara (Población indígena vecina)
+- forma: xirahara
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -8468,7 +8491,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - van-buurt-2014 · indice-abc · §7
-- forma: yaracuy (Indígena del Valle de las Damas)
+- forma: yaracuy
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -8490,7 +8513,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: yarosabana (Cacique de los Guaragua)
+- forma: yarosabana
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -8501,7 +8524,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - zavala-reyes-2015 · canon · toponimo-039 · nivel descartado · topónimo · fuente inferida-por-cruce
-- forma: yaruca (Indígena caquetío)
+- forma: yaruca
   variantes: []
   fuentes:
   - zavala-reyes-2015
