@@ -9,16 +9,16 @@ meta:
     de fusión.'
   marcas: ★ en el canon · ≡ en el índice de Esteves · ◆ en el mapa de Miguel · ⌂ en asentamientos.yaml
   resumen:
-    menciones: 606
-    formas_distintas: 492
+    menciones: 632
+    formas_distintas: 493
     fuentes: 13
     por_fuente:
       zavala-reyes-2015:
-        menciones: 57
-        formas: 57
+        menciones: 58
+        formas: 58
       esteves-1989:
-        menciones: 186
-        formas: 186
+        menciones: 206
+        formas: 187
       castellanos-elegias:
         menciones: 11
         formas: 11
@@ -47,31 +47,31 @@ meta:
         menciones: 212
         formas: 180
       testimonio-miguel:
-        menciones: 32
+        menciones: 35
         formas: 31
       proyecto:
-        menciones: 1
-        formas: 1
-    en_canon: 74
+        menciones: 3
+        formas: 3
+    en_canon: 89
     en_nodos: 14
-    sin_canon_ni_nodo: 408
+    sin_canon_ni_nodo: 395
     cruces:
       mapa_de_miguel_en_esteves:
-      - Abudure
-      - Adaure
-      - Amaraya
-      - Baraived
       - Buchuaco
-      - Caseto
-      - Charaima
-      - Cocodite
-      - Jacuque
-      - Jadacaquiva
-      - Judibana
-      - Machuruca
-      - Maicara
-      - Maitiruma
-      - Supí
+      - abudure
+      - adaure
+      - amaraya
+      - baraived
+      - caseto
+      - charaima
+      - cocodite
+      - jacuque
+      - jadacaquiva
+      - judibana
+      - machuruca
+      - maicara
+      - maitiruma
+      - supí
       mapa_de_miguel_fuera_de_esteves:
       - Cayerda
       - Davaduvare
@@ -112,18 +112,20 @@ meta:
       - Miraca (3)
       - Moruy (4)
       - Santa Ana (3)
-      - Supí (3)
       - Todariquiba (3)
+      - jadacaquiva (3)
+      - judibana (3)
       - jurijurebo (4)
       - paraguana (4)
+      - supí (4)
   avisos:
   - '⚠️ obra sin ficha en bibliografia.yaml: proyecto'
 por_fuente:
 - obra: zavala-reyes-2015
   en_bibliografia: true
   descripcion: el glosario (TOPONIMOS_ZAVALA y ANTROPONIMOS_ZAVALA, con glosa española) — la base del canon
-  menciones: 57
-  formas: 57
+  menciones: 58
+  formas: 58
   toponimos:
   - forma: jurijurebo
     tipo: canon
@@ -245,6 +247,12 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml
     dato: Apellido. Mazorca tierna
     ref: toponimo-025 · nivel C · antropónimo · fuente inferida-por-cruce
+  - forma: supí
+    tipo: lectura:glosa-fuente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: 'supi: sitio a orilla del mar; arena; arboleda supide'
+    ref: toponimo-077 · Zavala Reyes 2015 (glosario) · 2026-09-06 · compite con el fitónimo de Esteves; un balneario
+      de arena a…
   - forma: baracoica
     tipo: canon
     donde: 2-lengua/toponimos.yaml
@@ -407,9 +415,121 @@ por_fuente:
 - obra: esteves-1989
   en_bibliografia: true
   descripcion: 'el índice ''Topónimos compilados'' de Paraguaná (pp. 68-69): la cola de la campaña'
-  menciones: 186
-  formas: 186
+  menciones: 206
+  formas: 187
   toponimos:
+  - forma: judibana
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: 'Judi, jurí: viento. Bana: sitio alto'
+    ref: toponimo-075 · nivel A · topónimo · fuente procedencia
+  - forma: judibana
+    tipo: lectura:tradicion-local
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: «Judibana era una hermosa mujer, que era esposa del Gran Cacique de Jurijurebo»
+    ref: 'toponimo-075 · leyenda que recoge Esteves · 2026-09-06 · el propio autor: «Es pura leyenda, nada consta
+      en documento…'
+  - forma: abudure
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: sitio de donde se extrae barro de las raíces
+    ref: toponimo-076 · nivel B · topónimo · fuente procedencia
+  - forma: buchuhaco
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: 'los dos buches. Buche: cardo, Aco: par, casal, pareja'
+    ref: toponimo-086 · nivel B · topónimo · fuente procedencia
+  - forma: adaure
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: 'apellido indígena; «no descartamos que provenga de Dara, en tal caso en forma patronímica: quizás la
+      Dara fue…'
+    ref: toponimo-080 · nivel C · topónimo · fuente procedencia
+  - forma: amaraya
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: puede ser una alteración de «maracaya», otro nombre indígena que recibe el «güirito», gato silvestre
+    ref: toponimo-081 · nivel C · topónimo · fuente procedencia
+  - forma: baraived
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: 'Bara: árbol; en Baraivere, la forma primitiva, «la desinencia bere actuaría como adjetivo o como sustantivo
+      p…'
+    ref: toponimo-087 · nivel C · topónimo · fuente procedencia
+  - forma: baraived
+    tipo: lectura:etimologia-popular
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: unos marinos perdidos vararon en los bancos de arena y uno dijo «vara y ved»; de ahí el nombre
+    ref: toponimo-087 · tradición local, recogida por Esteves · 2026-09-06 · descartada por el propio autor («estamos
+      en total desacuerd…
+  - forma: caseto
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: planta herbácea de las malvas espigadas, el Malvastrum spicatum de los botánicos
+    ref: toponimo-088 · nivel C · topónimo · fuente procedencia
+  - forma: caseto
+    tipo: lectura:etimologia-popular
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: Gaseto < gaceta, porque en el lugar vivía quien redactaba una hoja periódica
+    ref: toponimo-088 · versión local, recogida por Esteves · 2026-09-06 · el autor la llama «un tanto fantasiosa
+      por lo que tiene de …
+  - forma: cocodite
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: el sufijo «dito» es distintivo de los sustantivos colectivos en lengua indígena
+    ref: toponimo-079 · nivel C · topónimo · fuente procedencia
+  - forma: jadacaquiva
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: Quiba en caquetío es pedruzco
+    ref: toponimo-083 · nivel C · topónimo · fuente procedencia
+  - forma: jadacaquiva
+    tipo: lectura:etimologia-popular
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: 'los nativos, con miedo a los caballos, se armaban de piedras y gritaban «¡Jaca... quiba!»: ¡piedra contra
+      esa…'
+    ref: toponimo-083 · versión local, recogida por Esteves · 2026-09-06 · el autor la llama «pintoresca» y «hilarante»;
+      mezcla caquet…
+  - forma: jadacaquiva
+    tipo: lectura:etimologia-popular
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: en una sequía machacaban macoyas de jajato contra piedras para chupar el jugo y gritaban «¡Jajato... quiba!»
+    ref: toponimo-083 · versión local, recogida por Esteves · 2026-09-06 · «menos hilarante»; el autor la recibe
+      con reservas
+  - forma: machuruca
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: viene de caruca, paja áspera con la cual se le da consistencia al barro batido para la torta que se aplica
+      a …
+    ref: toponimo-084 · nivel C · topónimo · fuente procedencia
+  - forma: maicara
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: '«en un documento de Composición de Tierras hemos leído: Maicuare, éste sería tal vez el nombre primitivo»'
+    ref: toponimo-085 · nivel C · topónimo · fuente procedencia
+  - forma: maitiruma
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: 'en el caribe insular, mái significa: manantial, ojo de agua; iruma: azul celeste, o sea que Maitiruma
+      expresa…'
+    ref: toponimo-078 · nivel C · topónimo (estrato caribe insular, según Esteves) · fuente procedencia
+  - forma: supí
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: es un árbol cactáceo que exuda una goma medicinal, es el guamacho Pereskia de los botánicos
+    ref: toponimo-077 · nivel C · topónimo · fuente procedencia
+  - forma: charaima
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: 'población entre Adícora y Baraived; censo 1881: 79 casas, 527 habitantes; nombre primitivo Charaide en
+      su Tít…'
+    ref: toponimo-082 · nivel descartado · topónimo · fuente procedencia
+  - forma: jacuque
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: sabanas y hatos en Jadacaquiva; Punta de Jacuque, por donde «no se puede confirmar históricamente» Federmann
+      …
+    ref: toponimo-089 · nivel descartado · topónimo · fuente procedencia
   - forma: Guacurebo
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
@@ -428,23 +548,74 @@ por_fuente:
     ref: toponimo-018
   - forma: Abudure
     tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-076
+  - forma: Adaure
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-080
+  - forma: Amaraya
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-081
+  - forma: Baraived
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-087
+  - forma: Buchuaco
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-086
+  - forma: Caseto
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-088
+  - forma: Charaima
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-082
+  - forma: Cocodite
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-079
+  - forma: Jacuque
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-089
+  - forma: Jadacaquiva
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-083
+  - forma: Judibana
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-075
+  - forma: Machuruca
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-084
+  - forma: Maicara
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-085
+  - forma: Maitiruma
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-078
+  - forma: Supí
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-077
   - forma: Acaboa
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Adaro
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Adaure
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Adícora
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Aguaque
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Amaraya
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Amuay
@@ -481,9 +652,6 @@ por_fuente:
   - forma: Baracara
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Baraived
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Barbasco
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
@@ -509,9 +677,6 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Buchaquiba
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Buchuaco
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Buenevara
@@ -556,9 +721,6 @@ por_fuente:
   - forma: Caruca
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Caseto
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Caujarito
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
@@ -572,9 +734,6 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Coabana
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Cocodite
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Coduto
@@ -614,9 +773,6 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Chamuriana
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Charaima
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Chaure
@@ -725,13 +881,7 @@ por_fuente:
   - forma: Jabe
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Jacuque
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Jagüe
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Jadacaquiva
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Jamaica
@@ -750,9 +900,6 @@ por_fuente:
   - forma: Juderecal
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Judibana
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Juroguagua
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
@@ -762,16 +909,6 @@ por_fuente:
   - forma: Macama
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Machuruca
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Maicara
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Maitiruma
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-    dato: estrato no caquetío según Esteves
   - forma: Manadí
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
@@ -890,9 +1027,6 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Siraba
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Supí
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Supideo
@@ -2774,7 +2908,7 @@ por_fuente:
   en_bibliografia: false
   descripcion: 'Miguel Gil Urbina: lecturas de investigación coloquial, tradición local, mapa vivo — deuda sin-procedencia,
     por diseño'
-  menciones: 32
+  menciones: 35
   formas: 31
   toponimos:
   - forma: jurijurebo
@@ -2783,6 +2917,24 @@ por_fuente:
     dato: Jurijurebo está en Judibana (Paraguaná); judi y juri son la misma palabra deformada, y el viento es el
       rasgo …
     ref: toponimo-001 · Miguel Gil Urbina, residente en Judibana · 2026-08-25
+  - forma: judibana
+    tipo: lectura:testimonio-residente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: el viento es el rasgo dominante del sitio y de Paraguaná entera; judi y juri son la misma palabra deformada,
+      …
+    ref: toponimo-075 · Miguel Gil Urbina, residente en Judibana · 2026-08-25
+  - forma: judibana
+    tipo: lectura:testimonio-residente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: Judibana era el nombre de la hija del cacique Manaure, unida al señor de Jurijurebo, al que mataron con
+      perro…
+    ref: toponimo-075 · Miguel Gil Urbina, criado en Judibana · 2026-08-25
+  - forma: maitiruma
+    tipo: lectura:testimonio-residente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: el 'manantial azul' cae al pie este del Capubana, donde sigue habiendo agua y uno de los pocos bosques
+      xerófi…
+    ref: toponimo-078 · Miguel Gil Urbina (mapa y terreno) · 2026-09-01
   - forma: Judibana
     tipo: testimonio-residente
     donde: 6-fusion/velasco_primarios_agi.yaml §judibana_tradicion
@@ -2953,28 +3105,42 @@ por_fuente:
   en_bibliografia: false
   descripcion: lecturas analíticas del propio proyecto registradas en el canon (segmentaciones propias, con su veredicto
     o su issue)
-  menciones: 1
-  formas: 1
+  menciones: 3
+  formas: 3
   toponimos:
+  - forma: judibana
+    tipo: lectura:hipotesis
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: doña Juana, la mujer del señor de Hurehurebo bautizada en casa de Ampiés (Castellanos 1589, línea 48166),
+      ser…
+    ref: 'toponimo-075 · proyecto · 2026-08-25 · no demostrada: la homofonía puede ser casual y la tradición…'
   - forma: paraguana
     tipo: lectura:etimologia-analitica
     donde: 2-lengua/toponimos.yaml §lecturas
     dato: 'para ''agua en grandes cantidades'' (Zavala #190) + gua ''terreno cercado'' (#122) + na ''como, semejante''
       (#184) …'
     ref: 'toponimo-018 · proyecto · 2026-08-25 · pendiente: #109 (abierto)'
+  - forma: jadacaquiva
+    tipo: lectura:hipotesis
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: 'jada- sería el mismo jadi-/jaja- de Jadícuar ''jajatal'' (jajato, lexicón) + quiva ''piedra'': ''las
+      piedras del j…'
+    ref: toponimo-083 · proyecto · 2026-09-06 · sin apoyo independiente; la correspondencia d~j de jadicuar…
 indice_de_formas:
-- forma: Abudure
-  variantes: []
+- forma: abudure
+  variantes:
+  - Abudure
   fuentes:
   - esteves-1989
   - testimonio-miguel
   cruces:
-    en_canon: null
+    en_canon: toponimo-076 · nivel B
     en_esteves: true
     en_mapa_miguel: true
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-076 · nivel B · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-076
   - testimonio-miguel · mapa · 2026-09-01
 - forma: aburi
   variantes: []
@@ -3031,18 +3197,20 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: Adaure
-  variantes: []
+- forma: adaure
+  variantes:
+  - Adaure
   fuentes:
   - esteves-1989
   - testimonio-miguel
   cruces:
-    en_canon: null
+    en_canon: toponimo-080 · nivel C
     en_esteves: true
     en_mapa_miguel: true
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-080 · nivel C · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-080
   - testimonio-miguel · mapa · 2026-09-01
 - forma: Adícora
   variantes: []
@@ -3116,18 +3284,20 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - zavala-reyes-2015 · canon · toponimo-056 · nivel descartado · topónimo · fuente inferida-por-cruce
-- forma: Amaraya
-  variantes: []
+- forma: amaraya
+  variantes:
+  - Amaraya
   fuentes:
   - esteves-1989
   - testimonio-miguel
   cruces:
-    en_canon: null
+    en_canon: toponimo-081 · nivel C
     en_esteves: true
     en_mapa_miguel: true
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-081 · nivel C · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-081
   - testimonio-miguel · mapa · 2026-09-01
 - forma: Amboïna
   variantes:
@@ -3465,18 +3635,22 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - zavala-reyes-2015 · canon · toponimo-028 · nivel descartado · topónimo · fuente inferida-por-cruce
-- forma: Baraived
-  variantes: []
+- forma: baraived
+  variantes:
+  - Baraived
   fuentes:
   - esteves-1989
   - testimonio-miguel
   cruces:
-    en_canon: null
+    en_canon: toponimo-087 · nivel C
     en_esteves: true
     en_mapa_miguel: true
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-087 · nivel C · topónimo · fuente procedencia
+  - esteves-1989 · lectura:etimologia-popular · toponimo-087 · tradición local, recogida por Esteves · 2026-09-06
+    · descartada por el propio autor («estamos en total desacuerd…
+  - esteves-1989 · indice · toponimo-087
   - testimonio-miguel · mapa · 2026-09-01
 - forma: Barbacoa
   variantes: []
@@ -3713,8 +3887,19 @@ indice_de_formas:
     en_mapa_miguel: true
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · indice · toponimo-086
   - testimonio-miguel · mapa · 2026-09-01
+- forma: buchuhaco
+  variantes: []
+  fuentes:
+  - esteves-1989
+  cruces:
+    en_canon: toponimo-086 · nivel B
+    en_esteves: true
+    en_mapa_miguel: false
+    en_nodos: null
+  menciones:
+  - esteves-1989 · canon · toponimo-086 · nivel B · topónimo · fuente procedencia
 - forma: Bucuruy
   variantes: []
   fuentes:
@@ -4226,18 +4411,22 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: Caseto
-  variantes: []
+- forma: caseto
+  variantes:
+  - Caseto
   fuentes:
   - esteves-1989
   - testimonio-miguel
   cruces:
-    en_canon: null
+    en_canon: toponimo-088 · nivel C
     en_esteves: true
     en_mapa_miguel: true
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-088 · nivel C · topónimo · fuente procedencia
+  - esteves-1989 · lectura:etimologia-popular · toponimo-088 · versión local, recogida por Esteves · 2026-09-06
+    · el autor la llama «un tanto fantasiosa por lo que tiene de …
+  - esteves-1989 · indice · toponimo-088
   - testimonio-miguel · mapa · 2026-09-01
 - forma: Cashero
   variantes: []
@@ -4434,18 +4623,20 @@ indice_de_formas:
   menciones:
   - esteves-1989 · indice
   - testimonio-miguel · tradicion-local · sin-procedencia
-- forma: Charaima
-  variantes: []
+- forma: charaima
+  variantes:
+  - Charaima
   fuentes:
   - esteves-1989
   - testimonio-miguel
   cruces:
-    en_canon: null
+    en_canon: toponimo-082 · nivel descartado
     en_esteves: true
     en_mapa_miguel: true
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-082 · nivel descartado · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-082
   - testimonio-miguel · mapa · 2026-09-01
 - forma: Charomba
   variantes: []
@@ -4604,18 +4795,20 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: Cocodite
-  variantes: []
+- forma: cocodite
+  variantes:
+  - Cocodite
   fuentes:
   - esteves-1989
   - testimonio-miguel
   cruces:
-    en_canon: null
+    en_canon: toponimo-079 · nivel C
     en_esteves: true
     en_mapa_miguel: true
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-079 · nivel C · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-079
   - testimonio-miguel · mapa · 2026-09-01
 - forma: Cocodoro
   variantes: []
@@ -5760,31 +5953,42 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - van-buurt-2014 · indice-abc · §7
-- forma: Jacuque
-  variantes: []
+- forma: jacuque
+  variantes:
+  - Jacuque
   fuentes:
   - esteves-1989
   - testimonio-miguel
   cruces:
-    en_canon: null
+    en_canon: toponimo-089 · nivel descartado
     en_esteves: true
     en_mapa_miguel: true
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-089 · nivel descartado · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-089
   - testimonio-miguel · mapa · 2026-09-01
-- forma: Jadacaquiva
-  variantes: []
+- forma: jadacaquiva
+  variantes:
+  - Jadacaquiva
   fuentes:
   - esteves-1989
+  - proyecto
   - testimonio-miguel
   cruces:
-    en_canon: null
+    en_canon: toponimo-083 · nivel C
     en_esteves: true
     en_mapa_miguel: true
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-083 · nivel C · topónimo · fuente procedencia
+  - esteves-1989 · lectura:etimologia-popular · toponimo-083 · versión local, recogida por Esteves · 2026-09-06
+    · el autor la llama «pintoresca» y «hilarante»; mezcla caquet…
+  - esteves-1989 · lectura:etimologia-popular · toponimo-083 · versión local, recogida por Esteves · 2026-09-06
+    · «menos hilarante»; el autor la recibe con reservas
+  - proyecto · lectura:hipotesis · toponimo-083 · proyecto · 2026-09-06 · sin apoyo independiente; la correspondencia
+    d~j de jadicuar…
+  - esteves-1989 · indice · toponimo-083
   - testimonio-miguel · mapa · 2026-09-01
 - forma: jadicuar
   variantes: []
@@ -5886,18 +6090,28 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: Judibana
-  variantes: []
+- forma: judibana
+  variantes:
+  - Judibana
   fuentes:
   - esteves-1989
   - testimonio-miguel
+  - proyecto
   cruces:
-    en_canon: null
+    en_canon: toponimo-075 · nivel A
     en_esteves: true
     en_mapa_miguel: true
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-075 · nivel A · topónimo · fuente procedencia
+  - testimonio-miguel · lectura:testimonio-residente · toponimo-075 · Miguel Gil Urbina, residente en Judibana ·
+    2026-08-25
+  - 'esteves-1989 · lectura:tradicion-local · toponimo-075 · leyenda que recoge Esteves · 2026-09-06 · el propio
+    autor: «Es pura leyenda, nada consta en documento…'
+  - testimonio-miguel · lectura:testimonio-residente · toponimo-075 · Miguel Gil Urbina, criado en Judibana · 2026-08-25
+  - 'proyecto · lectura:hipotesis · toponimo-075 · proyecto · 2026-08-25 · no demostrada: la homofonía puede ser
+    casual y la tradición…'
+  - esteves-1989 · indice · toponimo-075
   - testimonio-miguel · testimonio-residente · Miguel Gil Urbina, criado en Judibana (Paraguaná)
   - testimonio-miguel · mapa · 2026-09-01
 - forma: Juditi
@@ -6193,18 +6407,20 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: Machuruca
-  variantes: []
+- forma: machuruca
+  variantes:
+  - Machuruca
   fuentes:
   - esteves-1989
   - testimonio-miguel
   cruces:
-    en_canon: null
+    en_canon: toponimo-084 · nivel C
     en_esteves: true
     en_mapa_miguel: true
     en_nodos: nodo-026 (atestiguado, precontacto probable)
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-084 · nivel C · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-084
   - testimonio-miguel · mapa · 2026-09-01
 - forma: Maco
   variantes: []
@@ -6308,31 +6524,36 @@ indice_de_formas:
   menciones:
   - van-buurt-2014 · indice-abc · §7
   - van-buurt-2014 · indice-abc · §7
-- forma: Maicara
-  variantes: []
+- forma: maicara
+  variantes:
+  - Maicara
   fuentes:
   - esteves-1989
   - testimonio-miguel
   cruces:
-    en_canon: null
+    en_canon: toponimo-085 · nivel C
     en_esteves: true
     en_mapa_miguel: true
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-085 · nivel C · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-085
   - testimonio-miguel · mapa · 2026-09-01
-- forma: Maitiruma
-  variantes: []
+- forma: maitiruma
+  variantes:
+  - Maitiruma
   fuentes:
   - esteves-1989
   - testimonio-miguel
   cruces:
-    en_canon: null
+    en_canon: toponimo-078 · nivel C
     en_esteves: true
     en_mapa_miguel: true
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-078 · nivel C · topónimo (estrato caribe insular, según Esteves) · fuente procedencia
+  - testimonio-miguel · lectura:testimonio-residente · toponimo-078 · Miguel Gil Urbina (mapa y terreno) · 2026-09-01
+  - esteves-1989 · indice · toponimo-078
   - testimonio-miguel · mapa · 2026-09-01
 - forma: Malmok
   variantes: []
@@ -7494,20 +7715,25 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - van-buurt-2014 · indice-abc · §7
-- forma: Supí
+- forma: supí
   variantes:
+  - Supí
   - El Supí
   fuentes:
   - esteves-1989
+  - zavala-reyes-2015
   - moron-2012-petroglifos
   - testimonio-miguel
   cruces:
-    en_canon: null
+    en_canon: toponimo-077 · nivel C
     en_esteves: true
     en_mapa_miguel: true
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-077 · nivel C · topónimo · fuente procedencia
+  - zavala-reyes-2015 · lectura:glosa-fuente · toponimo-077 · Zavala Reyes 2015 (glosario) · 2026-09-06 · compite
+    con el fitónimo de Esteves; un balneario de arena a…
+  - esteves-1989 · indice · toponimo-077
   - moron-2012-petroglifos · estacion-rupestre
   - testimonio-miguel · mapa · 2026-09-01
 - forma: Supideo

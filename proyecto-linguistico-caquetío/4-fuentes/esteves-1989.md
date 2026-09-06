@@ -6,7 +6,7 @@ titulo: "Topónimos indígenas de Paraguaná y otros topónimos indígenas del e
 lugar_año: "Caracas, 1989"
 editor: Refinería de Amuay de Lagoven S.A.
 local: "fuentes_caquetios/Esteves_1989_Toponimos_Paraguana_1..6.pdf"
-capa_texto: no  # medido 2026-08-16: 250-450 chars/archivo, solo metadatos. El barrido se hizo por lectura de imagen; pasada de OCR de verificación pendiente
+capa_texto: ocr  # sin capa propia (medido 2026-08-16); OCR local con ocr_fuente.py desde 2026-09-06 (Esteves_1989_..._N.ocr.txt, pista no cita)
 estado_minado: parcial
 prioridad: alta
 medido: 2026-08-11
@@ -1320,6 +1320,35 @@ archivos con cita textual y número de página.
 > desde ahí al lexicón o al corpus hay que verificarlo contra la imagen** — ya
 > se detectó un caso donde el resumen automático convertía una conjetura
 > historiográfica en una mención de crónica (ver p. 78 arriba).
+
+## La campaña, lote 1 (2026-09-06) — los del mapa de Miguel
+
+Quince nombres del índice que Miguel tiene vistos en el mapa vivo del sector
+del Capubana entraron al canon (`2-lengua/toponimos.yaml`, ids 075-089), cada
+uno con la glosa de Esteves, su página y, donde la hay, la lectura de Miguel
+colgada en `lecturas`. El reparto por nivel y el detalle están en el canon y
+en `6-fusion/TOPONIMOS_POR_FUENTE.md`; el índice
+(`6-fusion/toponimos_esteves_indice.yaml`) los pasó a `ya_registrados`.
+
+Lo que dejó el lote, aparte de las entradas:
+
+- **El libro ya tiene capa de texto por OCR** (`ocr_fuente.py`, 300 dpi):
+  `fuentes_caquetios/Esteves_1989_Toponimos_Paraguana_N.ocr.txt`, con marcador
+  por página. El desfase pdf → impresa es **+6** en el PDF 1, **+25** en el 2 y
+  **+55** en el 3. Es OCR, no transcripción: sirve para llegar a la página; la
+  cita se comprueba en la imagen. Cuidado con las cabeceras en mayúscula:
+  Esteves escribe BUCHUHACO (con h) donde el mapa dice Buchuaco.
+- **Dos morfemas más con recurrencia**: `aco` 'dos, par' (Buchuhaco p. 24 y
+  Guachaco p. 38, choca con `gudamuen`) y `-dito` colectivo ya con cuatro
+  casos. Y `ure` 'raíz' sigue en conflicto con nuestro -ure ~ -are 'sitio de':
+  en Abudure las dos lecturas dan casi lo mismo.
+- **Esteves recoge etimologías populares y las relativiza él mismo** (Baraived
+  «vara y ved», Caseto < gaceta, Jacuque «¡jaca... huy!», Jadacaquiva «¡jaca...
+  quiba!»): entran como `etimologia-popular` con su veredicto, para que nadie
+  las re-investigue.
+- Un dato para la auditoría de tildes (#109): «en los topónimos indígenas de
+  Paraguaná casi no hay voces agudas» (p. 21, a propósito de Baraivede /
+  Baraivere).
 
 ## Lo que falta
 

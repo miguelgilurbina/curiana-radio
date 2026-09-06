@@ -169,6 +169,66 @@ NIVEL_A = {
                  "la del listado toponímico es corroboración interna, y no "
                  "estaba registrada.",
     },
+    # ── La campaña de Esteves 1989, lote 1 (2026-09-06) — ver NIVEL_B ──
+    "judibana": {
+        "id": "toponimo-075",
+        "clase": "topónimo", "fuente": "esteves-1989", "pagina": 47,
+        "glosa_fuente": "Judi, jurí: viento. Bana: sitio alto",
+        "segmentacion": "judi + bana",
+        "morfemas": {
+            "judi": "viento  [= juri, lexicón caquetío-atestiguado, Zavala #178; "
+                    "la variante judi la da Esteves]",
+            "bana": "cerro, sitio alto  [lexicón caquetío-atestiguado, Zavala "
+                    "#26; D9 resuelta 2026-08-31]",
+        },
+        "glosa_reconstruida": "viento + sitio alto = 'el cerro del viento'",
+        "razon": "Esteves da la segmentación y las dos glosas, y los dos "
+                 "morfemas ya estaban atestiguados por otra fuente (Zavala): la "
+                 "ecuación cierra sin residuo. Sexta atestación de bana 'cerro' "
+                 "en Esteves y la que trae la variante judi de juri (r~d), la "
+                 "misma raíz de jurijurebo (toponimo-001) y del hudi de "
+                 "Hudishibana (Aruba).",
+        "observacion": "«Antiguamente era un fundo pecuario de la aldea de "
+                       "Guanadito, hoy es una moderna ciudad del municipio Los "
+                       "Taques.» Es el pueblo donde se crió Miguel: el único "
+                       "topónimo del canon con testimonio de residente. Nombra "
+                       "también a la hija de Manaure en la tradición local — "
+                       "significado ≠ referente: la etimología vale igual si "
+                       "nombra al cerro o a la persona.",
+        "lecturas": [
+            {"tipo": "testimonio-residente",
+             "lectura": "el viento es el rasgo dominante del sitio y de Paraguaná "
+                        "entera; judi y juri son la misma palabra deformada, y el "
+                        "topónimo moderno y el antiguo (Jurijurebo) comparten raíz "
+                        "y referente",
+             "quien": "Miguel Gil Urbina, residente en Judibana", "fecha": "2026-08-25",
+             "eje": "ambos"},
+            {"tipo": "tradicion-local",
+             "lectura": "«Judibana era una hermosa mujer, que era esposa del Gran "
+                        "Cacique de Jurijurebo»",
+             "quien": "leyenda que recoge Esteves", "fecha": "2026-09-06",
+             "eje": "referente", "procedencia": dict(obra="esteves-1989", pagina=47),
+             "veredicto": "el propio autor: «Es pura leyenda, nada consta en "
+                          "documentos»"},
+            {"tipo": "testimonio-residente",
+             "lectura": "Judibana era el nombre de la hija del cacique Manaure, "
+                        "unida al señor de Jurijurebo, al que mataron con perros: "
+                        "así lo tenía desde niño, antes de leer a Velasco",
+             "quien": "Miguel Gil Urbina, criado en Judibana", "fecha": "2026-08-25",
+             "eje": "referente",
+             "apoyo": "Velasco 2015 recoge la misma tradición; dos receptores "
+                      "independientes salvo fuente común reciente (reserva "
+                      "declarada en velasco-2015-resistencia §judibana_tradicion)"},
+            {"tipo": "hipotesis",
+             "lectura": "doña Juana, la mujer del señor de Hurehurebo bautizada en "
+                        "casa de Ampiés (Castellanos 1589, línea 48166), sería el "
+                        "bautismo de Judibana: Ju[dib]ana → Juana por truncamiento",
+             "quien": "proyecto", "fecha": "2026-08-25", "eje": "referente",
+             "veredicto": "no demostrada: la homofonía puede ser casual y la "
+                          "tradición pudo derivar el nombre desde el verso "
+                          "(castellanos_1589_toponimos.yaml §3)"},
+        ],
+    },
 }
 
 # ───────────────────────────────────────────────────────────────────────────
@@ -246,6 +306,45 @@ NIVEL_B = {
                        "entró al español general. Puede haber contaminación de "
                        "la glosa. El valor 'pueblo' se apoya en "
                        "`yacarebacoa`; el valor 'caimán' NO se usa aquí.",
+    },
+    # ── La campaña de Esteves 1989, lote 1 (2026-09-06): los del mapa de Miguel
+    # que están en el índice del libro. Ids explícitos desde 075: los 74 de
+    # arriba no se mueven (otros archivos los citan). `pagina` es la del libro.
+    "abudure": {
+        "id": "toponimo-076",
+        "clase": "topónimo", "fuente": "esteves-1989", "pagina": 11,
+        "glosa_fuente": "sitio de donde se extrae barro de las raíces",
+        "segmentacion": "(a)dabuda + ure   [aféresis de la d- inicial]",
+        "despeja": "ure",
+        "razon": "Esteves segmenta y glosa: «voz compuesta de dabuda y ure, que "
+                 "literalmente expresa: barro y raíz». `dabuda` 'barro loza' ya "
+                 "es caquetío-atestiguado en el lexicón (Zavala) y `ure` 'raíz' "
+                 "también; el autor lo verifica en el terreno («gruesas vetas de "
+                 "barro de loza en los cangilones labrados por la lluvia»). Con "
+                 "`dabudare` (toponimo-011) la raíz queda en dos topónimos con "
+                 "dos sufijos.",
+        "observacion": "⚠ El valor de `-ure` sigue en conflicto declarado: "
+                       "Esteves lo lee literal ('raíz', «presente en muchos "
+                       "topónimos indígenas de Paraguaná»); el proyecto tenía "
+                       "-ure ~ -are 'sitio de'. Aquí las dos dan casi lo mismo. "
+                       "Aldea al SO de Moruy; censo 1881: 6 casas, 50 vecinos. "
+                       "Vivo en el mapa (fotos de Miguel, 2026-09-01).",
+    },
+    "buchuhaco": {
+        "id": "toponimo-086",
+        "clase": "topónimo", "fuente": "esteves-1989", "pagina": 24,
+        "glosa_fuente": "los dos buches. Buche: cardo, Aco: par, casal, pareja",
+        "segmentacion": "buche + aco   [«con hache intercalada para deshacer el diptongo»]",
+        "despeja": "aco",
+        "razon": "`buche` 'melocacto, cardo globoso' ya es caquetío-atestiguado; "
+                 "`aco` 'dos, par' lo da Esteves dos veces con la misma glosa "
+                 "(Buchuhaco y Guachaco 'los dos zorros', p. 38): recurrencia 2.",
+        "observacion": "⚠ `aco` 'dos' choca con `gudamuen` 'dos' del lexicón: "
+                       "variación dialectal o atribución errada, sin resolver. "
+                       "Ensenada pesquera 7 km al norte de Adícora («algunos "
+                       "esnobistas le han cambiado el nombre por el horrendo "
+                       "Saint Tropez. ¡Qué barbaridad!»). En el mapa vivo como "
+                       "Buchuaco.",
     },
 }
 
@@ -473,6 +572,215 @@ NIVEL_C = {
                  "'viento' aparece en un topónimo del Golfete y en otro de "
                  "Aruba, en dos ortografías distintas.**",
     },
+    # ── La campaña de Esteves 1989, lote 1 (2026-09-06) — ver NIVEL_B ──
+    "adaure": {
+        "id": "toponimo-080", "fuente": "esteves-1989", "pagina": 13,
+        "glosa_fuente": "apellido indígena; «no descartamos que provenga de Dara, "
+                        "en tal caso en forma patronímica: quizás la Dara fuera "
+                        "el ave totémica de la tribu»",
+        "segmentacion": "a- + dar(a) + -ure   [prótesis y epéntesis, según Esteves]",
+        "razon": "`dara` 'alcaraván' es caquetío-atestiguado y el autor lo "
+                 "propone con reservas; `-ure` recurre (Abudure, Babahuro) pero "
+                 "aquí no hay glosa que cierre. Serie de apellidos en -aure que "
+                 "Esteves lista y no analiza: Adaure, Timaure, Yaraure, "
+                 "Chunaure, Manaure (p. 13). Un nombre propio atestigua sus "
+                 "morfemas aunque nombre a un linaje.",
+        "observacion": "Aldea al oeste de Buenavista; censo 1881: 87 casas, 522 "
+                       "vecinos, «más importante que muchas poblaciones cabeceras "
+                       "de municipio». Hill Peña: «tribu belicosa»; Martí 1773 la "
+                       "nombra. En el mapa vivo.",
+    },
+    "amaraya": {
+        "id": "toponimo-081", "fuente": "esteves-1989", "pagina": 14,
+        "glosa_fuente": "puede ser una alteración de «maracaya», otro nombre "
+                        "indígena que recibe el «güirito», gato silvestre",
+        "segmentacion": "a- + maraya (< maracaya, con síncopa)",
+        "razon": "zoónimo con prótesis vocálica, patrón que Esteves documenta en "
+                 "Adaro < dara. Conjetura declarada («puede ser»); maracaya no "
+                 "está en el lexicón. Aldea al sur de Jadacaquiva; censo 1881, "
+                 "como Amaralla: 16 casas, 108 vecinos.",
+    },
+    "baraived": {
+        "id": "toponimo-087", "fuente": "esteves-1989", "pagina": 21,
+        "glosa_fuente": "Bara: árbol; en Baraivere, la forma primitiva, «la "
+                        "desinencia bere actuaría como adjetivo o como sustantivo "
+                        "para formar una voz compuesta»",
+        "segmentacion": "bara + i + bere   [formas antiguas Baraivede, Baraivere]",
+        "razon": "`bara` 'palo, árbol' es caquetío-atestiguado (#101: 'árbol', no "
+                 "'río') y Esteves lo pone; el resto queda sin glosa — el autor "
+                 "lo deja abierto y solo aporta el paralelo guaraní Uretebere "
+                 "'raíz amarga' (bere 'amargo'), que no es caquetío. Rechaza la "
+                 "etimología popular «vara y ved».",
+        "observacion": "Capital de municipio; censo 1881: 256 casas, 1.724 vecinos "
+                       "con Maquigua, Miraca, Camunare y Charaima. Esteves: «en "
+                       "los topónimos indígenas de Paraguaná casi no hay voces "
+                       "agudas» — dato para la auditoría de tildes (#109).",
+        "lecturas": [
+            {"tipo": "etimologia-popular",
+             "lectura": "unos marinos perdidos vararon en los bancos de arena y "
+                        "uno dijo «vara y ved»; de ahí el nombre",
+             "quien": "tradición local, recogida por Esteves", "fecha": "2026-09-06",
+             "eje": "significado", "procedencia": dict(obra="esteves-1989", pagina=21),
+             "veredicto": "descartada por el propio autor («estamos en total "
+                          "desacuerdo con tan expeditivo procedimiento»); se "
+                          "registra para no re-investigarla"},
+        ],
+    },
+    "caseto": {
+        "id": "toponimo-088", "fuente": "esteves-1989", "pagina": 30,
+        "glosa_fuente": "planta herbácea de las malvas espigadas, el Malvastrum "
+                        "spicatum de los botánicos",
+        "segmentacion": "caseto (fitónimo, sin composición)",
+        "razon": "el topónimo ES el nombre de una planta que el lexicón no tiene: "
+                 "no hay ecuación que despejar sino una palabra nueva propuesta "
+                 "por Esteves. Aldea del municipio Santa Ana; censo 1881: 45 "
+                 "casas, 303 vecinos.",
+        "lecturas": [
+            {"tipo": "etimologia-popular",
+             "lectura": "Gaseto < gaceta, porque en el lugar vivía quien redactaba "
+                        "una hoja periódica",
+             "quien": "versión local, recogida por Esteves", "fecha": "2026-09-06",
+             "eje": "significado", "procedencia": dict(obra="esteves-1989", pagina=30),
+             "veredicto": "el autor la llama «un tanto fantasiosa por lo que tiene "
+                          "de chauvinismo»"},
+        ],
+    },
+    "cocodite": {
+        "id": "toponimo-079", "fuente": "esteves-1989", "pagina": 31,
+        "glosa_fuente": "el sufijo «dito» es distintivo de los sustantivos "
+                        "colectivos en lengua indígena",
+        "segmentacion": "coco + -dito   [Cocodito en papeles escriturados de 1590]",
+        "razon": "`-dito` 'colectivo abundancial' lo atestigua Esteves cuatro "
+                 "veces y lo atribuye al caquetío (Guanadito, p. 41); la base "
+                 "coco- no la glosa nadie. Cierra la mitad de la ecuación.",
+        "observacion": "Colinas al oeste de Pueblo Nuevo; San José de Cocodite, "
+                       "censo 1881: 34 casas, 243 vecinos, «desapareció "
+                       "totalmente cuando la hambruna de 1912». El papel de 1590 "
+                       "(tierras compuestas a favor de Alonso Arias Vaca) es el "
+                       "documento más antiguo que cita el libro.",
+    },
+    "jadacaquiva": {
+        "id": "toponimo-083", "fuente": "esteves-1989", "pagina": 45,
+        "glosa_fuente": "Quiba en caquetío es pedruzco",
+        "segmentacion": "jada(ca) + quiva",
+        "razon": "`quiva`/`kiba` 'piedra' es caquetío-atestiguado y Esteves lo "
+                 "pone en su serie (Jadacaquiva, Quibarute, Tiquiba, Todariquiba, "
+                 "Yauquiba, Quibucara); la base jada(ca)- no la glosa: solo "
+                 "recoge dos etimologías populares y las relativiza («ambas "
+                 "versiones hay que recibirlas con las reservas del caso, por la "
+                 "razón de que Jadacaquiva antiguamente tuvo otros nombres»). "
+                 "Cierra la mitad de la ecuación.",
+        "observacion": "Capital de municipio; 1881: 243 casas, 1.840 vecinos; "
+                       "iglesia de 1740, «de los más antiguos de Paraguaná». Con "
+                       "Yabuquiva (mapa de Miguel, no en Esteves) la familia "
+                       "-quiva/-quiba de Paraguaná crece.",
+        "lecturas": [
+            {"tipo": "etimologia-popular",
+             "lectura": "los nativos, con miedo a los caballos, se armaban de "
+                        "piedras y gritaban «¡Jaca... quiba!»: ¡piedra contra esas "
+                        "jacas!",
+             "quien": "versión local, recogida por Esteves", "fecha": "2026-09-06",
+             "eje": "significado", "procedencia": dict(obra="esteves-1989", pagina=45),
+             "veredicto": "el autor la llama «pintoresca» y «hilarante»; mezcla "
+                          "caquetío y andaluz"},
+            {"tipo": "etimologia-popular",
+             "lectura": "en una sequía machacaban macoyas de jajato contra "
+                        "piedras para chupar el jugo y gritaban «¡Jajato... "
+                        "quiba!»",
+             "quien": "versión local, recogida por Esteves", "fecha": "2026-09-06",
+             "eje": "significado", "procedencia": dict(obra="esteves-1989", pagina=46),
+             "veredicto": "«menos hilarante»; el autor la recibe con reservas"},
+            {"tipo": "hipotesis",
+             "lectura": "jada- sería el mismo jadi-/jaja- de Jadícuar 'jajatal' "
+                        "(jajato, lexicón) + quiva 'piedra': 'las piedras del "
+                        "jajatal' — la segunda versión popular contendría el dato "
+                        "real (jajato) envuelto en anécdota",
+             "quien": "proyecto", "fecha": "2026-09-06", "eje": "significado",
+             "veredicto": "sin apoyo independiente; la correspondencia d~j de "
+                          "jadicuar (toponimo-024) tampoco está documentada"},
+        ],
+    },
+    "machuruca": {
+        "id": "toponimo-084", "fuente": "esteves-1989", "pagina": 49,
+        "glosa_fuente": "viene de caruca, paja áspera con la cual se le da "
+                        "consistencia al barro batido para la torta que se aplica "
+                        "a paredes y techos de las casas humildes",
+        "segmentacion": "ma- + c(h)aruca",
+        "razon": "fitónimo con prefijo: Esteves deriva el nombre de caruca, que "
+                 "el lexicón no tiene; el ma- inicial queda sin explicar (¿el "
+                 "mismo ma- de Manaure, Maicara, Maitiruma?). Sin recurrencia "
+                 "de caruca.",
+        "observacion": "Aldea del municipio Santa Ana, sin censo en 1881 «incluida "
+                       "en los Ejidos del Pueblo». Sitio FAL-152 de Oliver "
+                       "(nodo-026, Urumaco y Dabajuroide) y, según Esteves, "
+                       "cementerio indígena y petroglifo en Misaray. En el mapa "
+                       "vivo, sector del Capubana.",
+    },
+    "maicara": {
+        "id": "toponimo-085", "fuente": "esteves-1989", "pagina": 49,
+        "glosa_fuente": "«en un documento de Composición de Tierras hemos leído: "
+                        "Maicuare, éste sería tal vez el nombre primitivo»",
+        "segmentacion": "mai- + cu- + -are   [sobre la forma primitiva Maicuare]",
+        "razon": "Esteves no glosa; solo la forma antigua. Sobre ella alinea "
+                 "`-are` 'sitio de' (morfema-002, cuatro topónimos en Zavala); "
+                 "mai- no tiene glosa caquetía (Esteves usa mái 'manantial' solo "
+                 "como caribe insular, en Maitiruma). Conjetura nuestra sobre la "
+                 "mitad del nombre.",
+        "observacion": "Aldea de Buenavista; 1881: 21 casas, 146 vecinos. En el "
+                       "mapa vivo.",
+    },
+    "maitiruma": {
+        "id": "toponimo-078", "fuente": "esteves-1989", "pagina": 49,
+        "clase": "topónimo (estrato caribe insular, según Esteves)",
+        "glosa_fuente": "en el caribe insular, mái significa: manantial, ojo de "
+                        "agua; iruma: azul celeste, o sea que Maitiruma expresa: "
+                        "manantial azul",
+        "segmentacion": "mai + iruma   [según Esteves; no caquetío]",
+        "razon": "la ecuación cierra, pero con morfemas de otra lengua: ni mai ni "
+                 "iruma están en el lexicón caquetío (e'iruma wayuu 'primogénito' "
+                 "es falso amigo). Uno de los cinco topónimos de Paraguaná que "
+                 "Esteves da como no caquetíos (Amuay, Elegüey, Maragüey, "
+                 "Jamaica, Maitiruma): evidencia de convivencia de lenguas en la "
+                 "península (cola B.6, Oliver §3.2.4).",
+        "observacion": "Aldea del municipio Santa Ana; 1881: 52 casas, 342 "
+                       "vecinos. Geolocalizado: la escuela Maitiruma está al pie "
+                       "este del cerro de Santa Ana, en el mismo complejo de agua "
+                       "que Chamuriana (toponimia_paraguana_miguel.yaml "
+                       "§capubana-centro-sagrado).",
+        "lecturas": [
+            {"tipo": "testimonio-residente",
+             "lectura": "el 'manantial azul' cae al pie este del Capubana, donde "
+                        "sigue habiendo agua y uno de los pocos bosques xerófitos "
+                        "que quedan: converge con Chamuriana ('agua que baja del "
+                        "cerro') en un radio de pocos kilómetros",
+             "quien": "Miguel Gil Urbina (mapa y terreno)", "fecha": "2026-09-01",
+             "eje": "referente"},
+        ],
+    },
+    "supí": {
+        "id": "toponimo-077", "fuente": "esteves-1989", "pagina": 61,
+        "glosa_fuente": "es un árbol cactáceo que exuda una goma medicinal, es el "
+                        "guamacho Pereskia de los botánicos",
+        "segmentacion": "supí (fitónimo, sin composición)",
+        "razon": "el topónimo ES una palabra atestiguada, pero con dos glosas que "
+                 "no coinciden: Zavala da `supi` 'sitio a orilla del mar; arena; "
+                 "arboleda supide' (lexicón, caquetío-atestiguado) y Esteves "
+                 "'guamacho (Pereskia)'. Dos lugares en Paraguaná: el balneario "
+                 "El Supí cerca de Adícora y otro en Baraived. Sin cognado que "
+                 "decida, queda en C con el conflicto declarado.",
+        "observacion": "En El Supí, playa de Adícora, «hay un placer de piedras "
+                       "escritas» (petroglifos): el único rastro no funerario del "
+                       "conjunto arqueológico de Paraguaná que reporta Esteves. "
+                       "En el mapa vivo.",
+        "lecturas": [
+            {"tipo": "glosa-fuente",
+             "lectura": "supi: sitio a orilla del mar; arena; arboleda supide",
+             "quien": "Zavala Reyes 2015 (glosario)", "fecha": "2026-09-06",
+             "eje": "significado", "procedencia": dict(obra="zavala-reyes-2015"),
+             "veredicto": "compite con el fitónimo de Esteves; un balneario de "
+                          "arena a orilla del mar encaja con las dos"},
+        ],
+    },
 }
 
 # ───────────────────────────────────────────────────────────────────────────
@@ -481,6 +789,30 @@ NIVEL_C = {
 # Documentar el descarte vale tanto como el hallazgo: evita re-minarlo.
 
 DESCARTES = {
+    # La campaña de Esteves 1989, lote 1 (2026-09-06). El grupo trae `fuente`,
+    # `paginas` e `ids` para que el migrador cite y no mueva el contador.
+    # «Descartado» aquí = sin etimología despejable, NO «no existió»: los
+    # dos son lugares vivos del mapa de Miguel.
+    "Esteves 1989: sin glosa en la fuente y ningún morfema conocido alinea": {
+        "razon": "Esteves da referente, censo e historia, pero ninguna glosa "
+                 "propia: solo la etimología popular, que él mismo relativiza. "
+                 "Sin ecuación bilingüe no hay morfema que despejar; se registra "
+                 "para que la campaña no lo vuelva a abrir sin dato nuevo.",
+        "fuente": "esteves-1989",
+        "ids": {"charaima": "toponimo-082", "jacuque": "toponimo-089"},
+        "paginas": {"charaima": 35, "jacuque": 44},
+        "formas": [
+            "charaima (población entre Adícora y Baraived; censo 1881: 79 casas, "
+            "527 habitantes; nombre primitivo Charaide en su Título de "
+            "Composición; Esteves no sabe qué relación guarda con el cacique "
+            "Charaima de Margarita, abuelo del guayquerí Francisco Fajardo)",
+            "jacuque (sabanas y hatos en Jadacaquiva; Punta de Jacuque, por donde "
+            "«no se puede confirmar históricamente» Federmann desembarcó los "
+            "caballos de Santo Domingo en 1530; etimología popular: jaca "
+            "andaluza + ¡huy!, «se dice que los nativos, sorprendidos al ver los "
+            "caballos o jacas, exclamaron, asustados»)",
+        ],
+    },
     "glosa meramente referencial": {
         "razon": "la glosa IDENTIFICA al referente (quién es, dónde queda) sin "
                  "traducirlo. No hay ecuación bilingüe: no hay significado que "

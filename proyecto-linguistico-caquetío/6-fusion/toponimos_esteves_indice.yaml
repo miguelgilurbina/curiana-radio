@@ -17,11 +17,11 @@
 # ─────────────────────────────────────────────────────────────────────────
 meta:
   recogido: '2026-08-25'
-  estado: cola-de-trabajo
+  estado: cola-de-trabajo   # lote 1 procesado el 2026-09-06 (los del mapa de Miguel)
   obra: esteves-1989
   total_indice: 186
-  ya_en_canon: 4
-  por_procesar: 182
+  ya_en_canon: 19
+  por_procesar: 167
 
 # Los que YA están en 2-lengua/toponimos.yaml (referencia cruzada):
 ya_registrados:
@@ -29,17 +29,29 @@ ya_registrados:
   - {forma: Guasare, canon: toponimo-059}
   - {forma: Jurijurebo, canon: toponimo-001}
   - {forma: Paraguaná, canon: toponimo-018}
+  - {forma: Abudure, canon: toponimo-076, lote: 2026-09-06}
+  - {forma: Adaure, canon: toponimo-080, lote: 2026-09-06}
+  - {forma: Amaraya, canon: toponimo-081, lote: 2026-09-06}
+  - {forma: Baraived, canon: toponimo-087, lote: 2026-09-06}
+  - {forma: Buchuaco, canon: toponimo-086, lote: 2026-09-06}
+  - {forma: Caseto, canon: toponimo-088, lote: 2026-09-06}
+  - {forma: Charaima, canon: toponimo-082, lote: 2026-09-06}
+  - {forma: Cocodite, canon: toponimo-079, lote: 2026-09-06}
+  - {forma: Jacuque, canon: toponimo-089, lote: 2026-09-06}
+  - {forma: Jadacaquiva, canon: toponimo-083, lote: 2026-09-06}
+  - {forma: Judibana, canon: toponimo-075, lote: 2026-09-06}
+  - {forma: Machuruca, canon: toponimo-084, lote: 2026-09-06}
+  - {forma: Maicara, canon: toponimo-085, lote: 2026-09-06}
+  - {forma: Maitiruma, canon: toponimo-078, lote: 2026-09-06}
+  - {forma: Supí, canon: toponimo-077, lote: 2026-09-06}
 
 # Los que NO están — la cola. `estrato` marca los que Esteves atribuye a
 # lengua no caquetía (la pregunta de B.1 / Oliver §3.2.4):
 por_procesar:
-  - {forma: Abudure}
   - {forma: Acaboa}
   - {forma: Adaro}
-  - {forma: Adaure}
   - {forma: Adícora}
   - {forma: Aguaque}
-  - {forma: Amaraya}
   - {forma: Amuay, estrato: no-caquetio-segun-esteves}
   - {forma: Antuní}
   - {forma: Arajó}
@@ -51,7 +63,6 @@ por_procesar:
   - {forma: Bajarigua}
   - {forma: Barabara}
   - {forma: Baracara}
-  - {forma: Baraived}
   - {forma: Barbasco}
   - {forma: Bariquí}
   - {forma: Barisigua}
@@ -61,7 +72,6 @@ por_procesar:
   - {forma: Biniche}
   - {forma: Bucuruy}
   - {forma: Buchaquiba}
-  - {forma: Buchuaco}
   - {forma: Buenevara}
   - {forma: Buenibativa}
   - {forma: Caibacoa}
@@ -76,13 +86,11 @@ por_procesar:
   - {forma: Cariguariana}
   - {forma: Carirubana}
   - {forma: Caruca}
-  - {forma: Caseto}
   - {forma: Caujarito}
   - {forma: Cayeruba}
   - {forma: Cayude}
   - {forma: Cimiro}
   - {forma: Coabana}
-  - {forma: Cocodite}
   - {forma: Coduto}
   - {forma: Cuara}
   - {forma: Cubiano}
@@ -96,7 +104,6 @@ por_procesar:
   - {forma: Curaidebo}
   - {forma: Cuzubitos}
   - {forma: Chamuriana}
-  - {forma: Charaima}
   - {forma: Chaure}
   - {forma: Chichibana}
   - {forma: Chiguaral}
@@ -132,21 +139,15 @@ por_procesar:
   - {forma: Isito}
   - {forma: Iticuna}
   - {forma: Jabe}
-  - {forma: Jacuque}
   - {forma: Jagüe}
-  - {forma: Jadacaquiva}
   - {forma: Jamaica, estrato: no-caquetio-segun-esteves}
   - {forma: Jarayadito}
   - {forma: Jariaca}
   - {forma: Jayana}
   - {forma: Juderecal}
-  - {forma: Judibana}
   - {forma: Juroguagua}
   - {forma: Laguarí}
   - {forma: Macama}
-  - {forma: Machuruca}
-  - {forma: Maicara}
-  - {forma: Maitiruma, estrato: no-caquetio-segun-esteves}
   - {forma: Manadí}
   - {forma: Manare}
   - {forma: Manichare}
@@ -187,7 +188,6 @@ por_procesar:
   - {forma: Sicaname}
   - {forma: Sibidigual}
   - {forma: Siraba}
-  - {forma: Supí}
   - {forma: Supideo}
   - {forma: Suriquiva}
   - {forma: Tacal}

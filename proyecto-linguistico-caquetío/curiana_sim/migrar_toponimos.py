@@ -60,7 +60,19 @@ OBRA_POR_FUENTE = {
     "zavala-reyes-2015": "zavala-reyes-2015",
     "van-buurt-2014": "van-buurt-2014",
     "gatschet-1885": "gatschet-1885",
+    "esteves-1989": "esteves-1989",
 }
+
+
+def _procedencia(e):
+    """`fuente` → clave foránea; `pagina`, si la entrada la trae, viaja dentro."""
+    obra = OBRA_POR_FUENTE.get(e.get("fuente"))
+    if not obra:
+        return None
+    proc = {"obra": obra}
+    if e.get("pagina") is not None:
+        proc["pagina"] = e["pagina"]
+    return proc
 
 
 def _forzar_utf8() -> None:
@@ -77,21 +89,28 @@ def _limpio(d: dict, saltar=()) -> dict:
 
 def toponimos(T):
     """NIVEL_A/B/C + DESCARTES → una lista con `nivel` como campo."""
+    # Los ids son claves que citan otros archivos (índice de Esteves, dictado,
+    # lecturas, asentamientos): tienen que ser ESTABLES. Los 74 originales se
+    # numeran por orden, como siempre; toda entrada nueva trae su `id`
+    # explícito (toponimo-075 en adelante) y no mueve el contador.
     registros = []
     n = 0
     for nivel, contenedor in (("A", T.NIVEL_A), ("B", T.NIVEL_B), ("C", T.NIVEL_C)):
         for forma, e in contenedor.items():
-            n += 1
+            if e.get("id"):
+                rid = e["id"]
+            else:
+                n += 1
+                rid = f"toponimo-{n:03d}"
             reg = {
-                "id": f"toponimo-{n:03d}",
+                "id": rid,
                 "forma": forma,
                 "nivel": nivel,
                 "clase": e.get("clase", "topónimo"),
             }
-            reg.update(_limpio(e, saltar=("clase", "fuente")))
-            obra = OBRA_POR_FUENTE.get(e.get("fuente"))
-            reg["procedencia"] = {"obra": obra} if obra else None
-            if not obra:
+            reg.update(_limpio(e, saltar=("id", "clase", "fuente", "pagina")))
+            reg["procedencia"] = _procedencia(e)
+            if not reg["procedencia"]:
                 reg["deuda"] = "sin-procedencia"
             registros.append(reg)
 
@@ -101,23 +120,32 @@ def toponimos(T):
     # separa a `glosa_fuente` (el bug de forma, arreglado el 2026-08-30 sobre
     # el YAML y aquí desde el 2026-09-06 para que regenerar no lo deshaga).
     # Las flechas («cemirucos → 'Semerucos'») no son glosa y se quedan.
+    # Un grupo de DESCARTES puede traer `fuente` y `paginas` {forma: página}
+    # (los de Esteves) y `ids` {forma: id} para no mover el contador.
     for razon, e in T.DESCARTES.items():
+        ids = e.get("ids", {})
+        paginas = e.get("paginas", {})
         for forma in e.get("formas", []):
-            n += 1
             m = re.match(r"^(.+?)\s+\((.+)\)$", forma)
+            base = m.group(1) if m else forma
+            if base in ids:
+                rid = ids[base]
+            else:
+                n += 1
+                rid = f"toponimo-{n:03d}"
             reg = {
-                "id": f"toponimo-{n:03d}",
-                "forma": m.group(1) if m else forma,
+                "id": rid,
+                "forma": base,
                 "nivel": "descartado",
                 "clase": "topónimo",
             }
             if m:
                 reg["glosa_fuente"] = m.group(2)
-            reg.update({
-                "razon": e.get("razon") or razon,
-                "procedencia": None,
-                "deuda": "sin-procedencia",
-            })
+            reg["razon"] = e.get("razon") or razon
+            reg["procedencia"] = _procedencia({"fuente": e.get("fuente"),
+                                               "pagina": paginas.get(base)})
+            if not reg["procedencia"]:
+                reg["deuda"] = "sin-procedencia"
             registros.append(reg)
     return registros
 

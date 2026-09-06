@@ -160,13 +160,20 @@ def test_los_cuatro_niveles_son_legales(nivel):
     assert "nivel-ilegal" not in _codigos(validar_toponimos(doc, set(), None, set()))
 
 
-def test_toponimos_reales_conservan_los_totales_del_modulo_viejo():
+def test_los_74_originales_conservan_id_y_nivel():
     """`lexicon_toponimos.TOTALES` declaraba 74 procesados y 6/8/13/47 por
-    nivel. Si la migración fuera infiel, esto lo cazaría."""
+    nivel, numerados toponimo-001..074 por orden. Desde el 2026-09-06 el
+    canon crece (la campaña de Esteves) con ids explícitos a partir de 075:
+    los 74 originales tienen que seguir exactamente donde estaban, porque
+    otros archivos los citan por id."""
+    from collections import Counter
     datos, _ = compilar()
-    por_nivel = datos["toponimos"]["meta"]["por_nivel"]
-    assert datos["toponimos"]["meta"]["toponimos"] == 74
-    assert por_nivel == {"A": 6, "B": 8, "C": 13, "descartado": 47}
+    regs = datos["toponimos"]["toponimos"]
+    originales = [r for r in regs if int(r["id"].split("-")[1]) <= 74]
+    assert len(originales) == 74
+    assert Counter(r["nivel"] for r in originales) == {"A": 6, "B": 8, "C": 13, "descartado": 47}
+    nuevos = [r for r in regs if int(r["id"].split("-")[1]) > 74]
+    assert all(r.get("procedencia") for r in nuevos), "toda entrada nueva cita su obra"
 
 
 # ══════════════════════════════════════════════════════════════════════
