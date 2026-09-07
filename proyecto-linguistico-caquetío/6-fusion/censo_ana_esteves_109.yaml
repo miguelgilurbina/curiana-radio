@@ -1,0 +1,183 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — el censo de -ana/-aná en Esteves 1989: la condición de cierre
+# que Miguel puso en #109 (comentario del 2026-08-25): «Lo que zanjaría si
+# `-ana` 'lugar de' tiene diez casos o tiene uno son los topónimos de
+# Esteves 1989, sin minar».
+#
+# Hecho el 2026-09-07 sobre el índice (toponimos_esteves_indice.yaml, 186
+# nombres) y el OCR de los tres volúmenes (pista, no cita: cada entrada se
+# leyó en su página). Regla 5: esto mide; la decisión sobre la glosa de -ana
+# es de Miguel. Regla 6: los ceros de abajo están verificados con permutación
+# (-ana, -aná, -ANA; y las formas con -bana se cuentan aparte, son #38).
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-09-07'
+  estado: propuesta
+  obra: esteves-1989
+  toca: ["#109", "#38 (-bana)", "toponimo-018 paraguaná", "2-lengua/morfologia.md §3"]
+  pregunta: >-
+    #109 — ¿cuántos topónimos en -ana/-aná tiene Esteves, y cuántos glosa
+    como 'lugar de'?
+  paginas: "pdf → impresa: vol 1 +6 · vol 2 +25 · vol 3 +55"
+
+# ══════════════════════════════════════════════════════════════════
+# 1. LA RESPUESTA CORTA
+# ══════════════════════════════════════════════════════════════════
+respuesta:
+  formas_en_ana_en_el_indice: 13
+  de_ellas_son_bana: 6          # Judibana, Carirubana, Coabana, Chichibana, Pipiribana, Tausabana → #38
+  bana_con_h_intercalada: 1     # Capuhana = Capu-hana, «Bana: cerro»
+  ana_dentro_de_una_raiz: 2     # Cariguariana (guariana 'arbusto'), Maracapana ('totumitas')
+  sin_glosa: 4                  # Paraguaná, Chamuriana, Cujicana, Jayana
+  glosadas_lugar_de: 0
+  veredicto: >-
+    Esteves no aporta NINGÚN caso de -ana 'lugar de'. Cuando quiere decir
+    'lugar de' usa bacoa: Curumubacoa «lugar de los zamuros» (p. 33),
+    Tutubacoa «el lugar de los tuturutos» y Datobacoa «lugar de los datos»
+    (p. 66), Guaidabacoa «bacoa: sitio, paraje» (lote 1). Y cuando segmenta
+    algo terminado en -ana, es -bana 'cerro, sitio alto' o una raíz léxica.
+  lo_que_si_da_para_paraguana: >-
+    «Conuco en medio del mar es la más repetida de las significaciones que
+    le dan al topónimo. Está suficientemente averiguado que Para significa
+    agua» (p. 56). Es la tradición local impresa en 1989, y morfema a
+    morfema es para 'agua' + gua 'conuco, heredad, terreno cercado' (Zavala
+    #122, HP): la segmentación para-gua-ná del issue, por una vía
+    independiente de Zavala. Lo que sigue sin morfema es el 'en medio de' /
+    'rodeada'. Registrado como tres lecturas en toponimo-018.
+
+# ══════════════════════════════════════════════════════════════════
+# 2. EL CENSO, FORMA POR FORMA
+# ══════════════════════════════════════════════════════════════════
+censo:
+  - forma: Paraguaná
+    pagina: 56
+    clase: sin-glosa-propia
+    esteves: >-
+      «Conuco en medio del mar es la más repetida de las significaciones que
+      le dan al topónimo. Está suficientemente averiguado que Para significa
+      agua.»
+    nota: Esteves reporta la significación «que le dan»; solo firma para = agua.
+  - forma: Chamuriana
+    pagina: 35
+    clase: sin-glosa
+    esteves: "«Nada sabemos del significado de la voz.»"
+    nota: ya en el canon (lote 5) como variante de Santa Ana.
+  - forma: Cujicana
+    pagina: 32-33
+    clase: sin-glosa
+    esteves: potrero del municipio Carirubana, hoy zona residencial de Punto Fijo; sin etimología.
+  - forma: Jayana
+    pagina: 46-47
+    clase: sin-glosa
+    esteves: >-
+      puerto habilitado en 1834; «creemos que Jayana es el mismo sitio costeño
+      que con el nombre de Guarama aparece señalado en un antiguo mapa». Sin
+      etimología.
+  - forma: Cariguariana
+    pagina: 28
+    clase: ana-dentro-de-raiz
+    esteves: >-
+      «la playa de los tabacones; descompuesta así: Cari: orilla de mar.
+      Guariana: tabaco pescador o tabacón. Guariana es un arbusto halófilo».
+    nota: el -ana es del fitónimo guariana (Zavala #142, ya en el lexicón), no un sufijo del topónimo.
+  - forma: Maracapana
+    pagina: 50-51
+    clase: ana-dentro-de-raiz
+    esteves: >-
+      «Maracapana según Lisandro Alvarado, son las totumitas silvestres con
+      las cuales fabrican los capachos». Y desliga esta de la Maracapana de
+      Cumaná de la Capitulación de los Welser.
+  - forma: Capuhana
+    pagina: 26
+    clase: bana-con-h
+    esteves: >-
+      «Capu-hana, con hache intercalada para deshacer el diptongo, es el
+      nombre de un pequeño cerro, cerca de Misaray. Quiere decir: el cerro
+      del duende. Capú: duende, ente sobrenatural. Bana: cerro, sitio alto.»
+    nota: >-
+      Es el capubana 'duende del cerro' de Zavala #61, con b~h intervocálica
+      (otra permutación para la skill). Segunda atestación del compuesto, y
+      con el REFERENTE dicho: un cerro. Ver §3.
+  - forma: Judibana
+    pagina: 47
+    clase: bana
+    esteves: "«Judi, jurí: viento. Bana: sitio alto.»"
+  - forma: Carirubana
+    pagina: 28
+    clase: bana
+    esteves: "«orilla del peñón, la orilla del cerro. Cari: orilla. Bana: sitio alto.»"
+  - forma: Coabana
+    pagina: 31
+    clase: bana
+    esteves: "«el cerro de las coas. Coa es un tosco instrumento de labranza. Bana: cerro.» Los vecinos dicen Cuabana."
+  - forma: Chichibana
+    pagina: 36
+    clase: bana
+    esteves: "«Chichabana es una aféresis de Achichibana, que quiere decir: el cerro de los achechives.»"
+  - forma: Pipiribana
+    pagina: 56
+    clase: bana
+    esteves: "cerro cercano al de Tausabana; «¿Será voz onomatopéyica?»"
+  - forma: Tausabana
+    pagina: 62
+    clase: bana
+    esteves: "«Tausabana era primitivamente Tautabana, que quiere decir: el cerro de las palomas “tautas”.»"
+
+fuera_del_censo:
+  - forma: Chiguana
+    pagina: 28
+    por_que: >-
+      No es topónimo de Paraguaná: nombre que los margariteños dieron a
+      Carirubana en 1924 «por la nostalgia de un pueblecito de ese nombre en
+      el Oriente venezolano».
+  - forma: Cumaná
+    por_que: ciudad del oriente, citada de paso.
+  - forma: Guariana
+    por_que: fitónimo (Zavala #142), no topónimo; aparece dentro de Cariguariana.
+
+# ══════════════════════════════════════════════════════════════════
+# 3. LO QUE EL CENSO DICE DEL ORDEN DEL COMPUESTO (la objeción de #109)
+# ══════════════════════════════════════════════════════════════════
+orden_del_compuesto:
+  la_objecion: >-
+    #109 objeta que en capubana «duende del cerro» (Zavala #61) el núcleo va
+    primero, y que entonces para-gua-ná daría 'mar cercado' (un golfo) y no
+    'tierra cercada por el mar'.
+  lo_medido: >-
+    En los seis compuestos en -bana que Esteves glosa, el núcleo es bana y va
+    AL FINAL en cinco: Judibana 'cerro del viento', Coabana 'cerro de las
+    coas', Achichibana 'cerro de los achechives', Tautabana 'cerro de las
+    palomas', Capuhana 'el cerro del duende'. La excepción es Carirubana
+    'orilla del cerro' (núcleo cari), que igual admite 'cerro de la orilla'
+    (es un puerto). Y Capuhana es el MISMO compuesto que capubana: Zavala lo
+    glosa 'duende del cerro' y Esteves 'el cerro del duende' con el referente
+    a la vista (un cerro cerca de Misaray). El referente decide por Esteves.
+  implicacion: >-
+    Con núcleo final, para-gua-ná es 'conuco (gua) de agua (para)' = la
+    lectura de Esteves p. 56, no un golfo. La objeción de orden de #109 se
+    apoya en una glosa de Zavala que Esteves contradice con el referente.
+    Sigue faltando el morfema de 'en medio de' / 'rodeada'.
+  cautela: >-
+    Las segmentaciones son de Esteves (etimología de cronista), no dato
+    independiente; lo que vale es que el patrón es consistente en cinco de
+    seis y que el referente de Capuhana está dicho.
+
+# ══════════════════════════════════════════════════════════════════
+# 4. LA DECISIÓN QUE QUEDA (Miguel)
+# ══════════════════════════════════════════════════════════════════
+decision_pendiente:
+  hoy: "-ana — forma atestiguada, glosa 'lugar de' EN DISPUTA (#109, morfologia.md §3)"
+  opciones:
+    - id: A
+      que: "mantener «en disputa» y esperar más fuentes (Medina Colina, mapa vivo)"
+    - id: B
+      que: >-
+        retirar la glosa 'lugar de': -ana pasa a FORMATIVOS_SIN_GLOSA (forma
+        atestiguada, significado sin apoyo); paraguaná deja de sostenerla y
+        Curiana queda con su expediente propio (#33, D2)
+      apoyo: "0 casos en Esteves; el 'lugar' paraguanero es bacoa; el único apoyo que quedaba era Paraguaná, que ahora tiene lectura mejor"
+    - id: C
+      que: "aceptar para-gua-ná como segmentación principal de paraguaná (nivel B) con el residuo 'en medio de' declarado"
+      apoyo: "Esteves p. 56 + Zavala #122 + orden núcleo-final medido"
+      cautela: "sube nivel; es canon de segmentación, no solo de glosa"
+  recomendacion_del_proyecto: "B, y C como lectura (ya registrada), no como segmentación canónica hasta que aparezca el morfema del 'rodeada'"

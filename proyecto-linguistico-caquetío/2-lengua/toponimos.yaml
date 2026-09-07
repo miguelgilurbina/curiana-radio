@@ -8,7 +8,7 @@ meta:
     descartado: 60
   con_procedencia: 41
   con_lecturas: 21
-  lecturas: 40
+  lecturas: 43
   con_definicion_aceptada: 0
   corroboraciones_del_lexicon: 17
   nota: 'El nivel de confianza es un CAMPO, no un contenedor: antes eran NIVEL_A/B/C separados y para
@@ -427,13 +427,16 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-018
-  forma: paraguana
+  forma: paraguaná
   nivel: C
   clase: topónimo
   glosa_fuente: Rodeada del mar
   segmentacion: para(gua) + -na
   razon: corrobora `para`/`paragua` = 'mar' del lexicón. Pero 'rodeada' no queda explicada y `-na` es
     demasiado frecuente (34 formas del corpus) para significar nada demostrable.
+  observacion: 'Grafía: Zavala #192 y Esteves p. 56 imprimen Paraguaná con tilde; el canon la guardó sin
+    ella hasta la auditoría de tildes del 2026-09-07 (#109 §3: la -aná tónica es el dato que distinguiría
+    este sufijo del -ana de Curiana). Censo de -ana en Esteves, mismo día: 6-fusion/censo_ana_esteves_109.yaml.'
   lecturas:
   - tipo: etimologia-analitica
     lectura: 'para ''agua en grandes cantidades'' (Zavala #190) + gua ''terreno cercado'' (#122) + na
@@ -453,6 +456,40 @@ toponimos:
       obra: gonzalez-batista-nombre-de-coro
     veredicto: 'depende de na = ''tierra'', que ninguna fuente impresa da; choca con na = ''como'' (Zavala
       #184, atestiguado). Es la pieza que decide #109'
+  - tipo: glosa-fuente
+    lectura: «Conuco en medio del mar es la más repetida de las significaciones que le dan al topónimo»
+    quien: Esteves 1989
+    fecha: '2026-09-07'
+    eje: significado
+    procedencia:
+      obra: esteves-1989
+      pagina: 56
+    veredicto: 'Esteves no la firma: la reporta como la significación «que le dan». Es la tradición local
+      impresa en 1989, veintiséis años antes de que el proyecto la conociera como etimología popular «tipo
+      Wikipedia»'
+  - tipo: etimologia-de-cronista
+    lectura: «Está suficientemente averiguado que Para significa agua»
+    quien: Esteves 1989
+    fecha: '2026-09-07'
+    eje: significado
+    procedencia:
+      obra: esteves-1989
+      pagina: 56
+    apoyo: 'converge con Zavala #190 para ''agua dulce o salada en grandes cantidades'' y #191 paragua
+      ''mar'''
+  - tipo: hipotesis
+    lectura: '''conuco en medio del mar'' es, morfema a morfema, para ''agua'' + gua ''conuco, heredad,
+      terreno cercado'' (Zavala #122, HP): la tradición que Esteves recoge coincide con la segmentación
+      para-gua-ná de la primera lectura, y por una vía independiente de Zavala. Sigue sin morfema el ''en
+      medio de'' / ''rodeada''. Y el censo de -ana en Esteves (2026-09-07) no da ningún -ana ''lugar de'':
+      el ''lugar'' de Esteves es bacoa'
+    quien: proyecto
+    fecha: '2026-09-07'
+    eje: significado
+    procedencia:
+      obra: esteves-1989
+      pagina: 56
+    veredicto: 'pendiente: #109 (la decisión sobre la glosa de -ana es de Miguel; censo en 6-fusion/censo_ana_esteves_109.yaml)'
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-019
@@ -1414,7 +1451,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-047
-  forma: caquetio
+  forma: caquetío
   nivel: descartado
   clase: topónimo
   glosa_fuente: Buena gente — etnónimo, no descripción del lugar
@@ -1469,7 +1506,7 @@ toponimos:
   procedencia: null
   deuda: sin-procedencia
 - id: toponimo-054
-  forma: aburi
+  forma: aburí
   nivel: descartado
   clase: topónimo
   glosa_fuente: aguas de un río lleno de arena
@@ -1684,7 +1721,7 @@ corroboraciones_lexicon:
 - palabra: para/paragua
   glosa_lexicon: mar, agua extensa
   toponimos:
-  - paraguana
+  - paraguaná
   independencia: alta
 - palabra: wa
   glosa_lexicon: conuco, heredad, terreno cercado cultivado

@@ -178,8 +178,13 @@ las ~20 lecturas de la sesión (están en `toponimia_coro_espina.yaml`,
 `lengua_toponimia_quibacoa.yaml`, `petroglifos_y_manaure.yaml`,
 `velasco_primarios_agi.yaml`); y procesar la cola de 182 de
 `toponimos_esteves_indice.yaml`, cruzada con las once ciudades de Castellanos
-y los cinco de Bastidas. La auditoría de tildes va aquí (es lo que
-distinguiría `-ana` de `-aná` y decide #109).
+y los cinco de Bastidas. ~~La auditoría de tildes va aquí (es lo que
+distinguiría `-ana` de `-aná` y decide #109).~~ Hecha el 2026-09-07 contra
+Esteves y Zavala: tres correcciones (`paraguaná`, `caquetío`, `aburí`). Y el
+censo de -ana en Esteves, mismo día: ninguna forma glosada 'lugar de'
+(`6-fusion/censo_ana_esteves_109.yaml`; borrador de comentario en
+`issues-pendientes/comentario-109-censo-ana-esteves.md`). #109 espera la
+decisión de Miguel sobre la glosa.
 
 ### B.6 · Oliver §3.2.4 — los caribes ✅ (minado el 2026-09-07)
 

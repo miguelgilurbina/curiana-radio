@@ -1403,6 +1403,36 @@ Lo que dejó el lote, aparte de las entradas:
 - Las dos páginas dañadas por el OCR (30 y 52) se leyeron en la imagen
   renderizada del PDF: es el camino cuando la línea que decide está borrosa.
 
+## El censo de -ana para #109 (2026-09-07)
+
+**Qué se preguntó.** Cuántos topónimos en -ana/-aná tiene Esteves y cuántos
+glosa como 'lugar de': la condición de cierre que Miguel puso en #109.
+
+**Qué se halló.** 13 formas en -ana en el índice: 6 son `-bana` (#38), 1 es
+`-bana` con h (Capuhana = Capu-hana, «Bana: cerro», p. 26 — el capubana de
+Zavala #61, con el referente dicho: un cerro), 2 llevan el -ana dentro de una
+raíz (Cariguariana < *guariana*, p. 28; Maracapana < 'totumitas', p. 51), 4
+sin glosa (Paraguaná, Chamuriana, Cujicana, Jayana). **Ninguna 'lugar de'.**
+El 'lugar' de Esteves es `bacoa` (Curumubacoa p. 33; Tutubacoa y Datobacoa
+p. 66). Para Paraguaná (p. 56) recoge «conuco en medio del mar» como la
+significación más repetida y firma solo «Para significa agua»: es `para` +
+`gua` 'conuco' (Zavala #122), la segmentación de #109 por otra vía. Y en sus
+compuestos en -bana el núcleo va al final en cinco de seis, contra la objeción
+de orden del issue. Todo en `6-fusion/censo_ana_esteves_109.yaml`; borrador de
+comentario en `issues-pendientes/comentario-109-censo-ana-esteves.md`.
+
+**Qué no se halló.** Ninguna variante con c/k de *juri* 'viento' (curi, kuri,
+cudan, judan: 0 en los tres volúmenes). Lo que hay es la familia con j- en
+tres formas: «Judi, jurí» (p. 47), «Juri» (p. 47) y **«Jura, juri: ventarrón»**
+(Tura, p. 66: «Hato de Jura es como está escrito el fundo que fue censado en
+1881» — la T actual es corrupción escrita de la J). Neutro para la hipótesis
+curi ~ juri de Miguel, que predice j- en Paraguaná; la prueba pasa al lado de
+Coro (`toponimia_paraguana_miguel.yaml` §Curiana / Coro, cruce del día).
+
+**Tildes.** El índice imprime Paraguaná con tilde; el canon la guardaba sin
+ella. Corregido con la auditoría (#109 §3), junto con caquetío y aburí de
+Zavala.
+
 ## Lo que falta
 
 - **136 de 146 páginas.** El barrido completo es el trabajo de #92.

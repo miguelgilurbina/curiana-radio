@@ -9,7 +9,7 @@ meta:
     de fusión.'
   marcas: ★ en el canon · ≡ en el índice de Esteves · ◆ en el mapa de Miguel · ⌂ en asentamientos.yaml
   resumen:
-    menciones: 677
+    menciones: 680
     formas_distintas: 495
     fuentes: 14
     por_fuente:
@@ -17,7 +17,7 @@ meta:
         menciones: 58
         formas: 58
       esteves-1989:
-        menciones: 227
+        menciones: 230
         formas: 191
       castellanos-elegias:
         menciones: 12
@@ -125,7 +125,7 @@ meta:
       - jurijurebo (4)
       - miraca (3)
       - moruy (4)
-      - paraguana (4)
+      - paraguaná (4)
       - supí (4)
       - todariquiba (4)
   avisos:
@@ -352,7 +352,7 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml
     dato: Indígena del Valle de las Damas
     ref: toponimo-046 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: caquetio
+  - forma: caquetío
     tipo: canon
     donde: 2-lengua/toponimos.yaml
     dato: Buena gente — etnónimo, no descripción del lugar
@@ -382,7 +382,7 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml
     dato: ← esp. *zamuro* + -ano
     ref: toponimo-053 · nivel descartado · topónimo · fuente inferida-por-cruce
-  - forma: aburi
+  - forma: aburí
     tipo: canon
     donde: 2-lengua/toponimos.yaml
     dato: aguas de un río lleno de arena
@@ -425,7 +425,7 @@ por_fuente:
 - obra: esteves-1989
   en_bibliografia: true
   descripcion: 'el índice ''Topónimos compilados'' de Paraguaná (pp. 68-69): la cola de la campaña'
-  menciones: 227
+  menciones: 230
   formas: 191
   toponimos:
   - forma: judibana
@@ -465,6 +465,23 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml
     dato: 'los dos buches. Buche: cardo, Aco: par, casal, pareja'
     ref: toponimo-086 · nivel B · topónimo · fuente procedencia
+  - forma: paraguaná
+    tipo: lectura:glosa-fuente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: «Conuco en medio del mar es la más repetida de las significaciones que le dan al topónimo»
+    ref: 'toponimo-018 · Esteves 1989 · 2026-09-07 · Esteves no la firma: la reporta como la significación «que
+      …'
+  - forma: paraguaná
+    tipo: lectura:etimologia-de-cronista
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: «Está suficientemente averiguado que Para significa agua»
+    ref: toponimo-018 · Esteves 1989 · 2026-09-07
+  - forma: paraguaná
+    tipo: lectura:hipotesis
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: '''conuco en medio del mar'' es, morfema a morfema, para ''agua'' + gua ''conuco, heredad, terreno cercado''
+      (Zavala…'
+    ref: 'toponimo-018 · proyecto · 2026-09-07 · pendiente: #109 (la decisión sobre la glosa de -ana es de M…'
   - forma: guacurebo
     tipo: lectura:glosa-fuente
     donde: 2-lengua/toponimos.yaml §lecturas
@@ -1395,7 +1412,7 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml §lecturas
     dato: Guaibacoa = 'el valle (bacoa) de las ceibas (guay)'
     ref: toponimo-008 · González Batista · 2026-08-25 · coincide con Esteves por vía independiente; 'valle' es mati…
-  - forma: paraguana
+  - forma: paraguaná
     tipo: lectura:etimologia-analitica
     donde: 2-lengua/toponimos.yaml §lecturas
     dato: paragua 'mar, agua grande' + na 'tierra' = 'la tierra rodeada de mar'
@@ -1948,7 +1965,7 @@ por_fuente:
   menciones: 212
   formas: 180
   toponimos:
-  - forma: paraguana
+  - forma: paraguaná
     tipo: canon
     donde: 2-lengua/toponimos.yaml
     dato: Rodeada del mar
@@ -3339,7 +3356,7 @@ por_fuente:
     dato: doña Juana, la mujer del señor de Hurehurebo bautizada en casa de Ampiés (Castellanos 1589, línea 48166),
       ser…
     ref: 'toponimo-075 · proyecto · 2026-08-25 · no demostrada: la homofonía puede ser casual y la tradición…'
-  - forma: paraguana
+  - forma: paraguaná
     tipo: lectura:etimologia-analitica
     donde: 2-lengua/toponimos.yaml §lecturas
     dato: 'para ''agua en grandes cantidades'' (Zavala #190) + gua ''terreno cercado'' (#122) + na ''como, semejante''
@@ -3423,7 +3440,7 @@ indice_de_formas:
   - esteves-1989 · canon · toponimo-076 · nivel B · topónimo · fuente procedencia
   - esteves-1989 · indice · toponimo-076
   - testimonio-miguel · mapa · 2026-09-01
-- forma: aburi
+- forma: aburí
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -4548,7 +4565,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: caquetio
+- forma: caquetío
   variantes: []
   fuentes:
   - zavala-reyes-2015
@@ -7355,7 +7372,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - van-buurt-2014 · indice-abc · §7
-- forma: paraguana
+- forma: paraguaná
   variantes:
   - Paraguaná
   - Paraguana
@@ -7375,6 +7392,11 @@ indice_de_formas:
   - 'proyecto · lectura:etimologia-analitica · toponimo-018 · proyecto · 2026-08-25 · pendiente: #109 (abierto)'
   - gonzalez-batista-nombre-de-coro · lectura:etimologia-analitica · toponimo-018 · González Batista · 2026-08-25
     · depende de na = 'tierra', que ninguna fuente impresa da; ch…
+  - 'esteves-1989 · lectura:glosa-fuente · toponimo-018 · Esteves 1989 · 2026-09-07 · Esteves no la firma: la reporta
+    como la significación «que …'
+  - esteves-1989 · lectura:etimologia-de-cronista · toponimo-018 · Esteves 1989 · 2026-09-07
+  - 'esteves-1989 · lectura:hipotesis · toponimo-018 · proyecto · 2026-09-07 · pendiente: #109 (la decisión sobre
+    la glosa de -ana es de M…'
   - esteves-1989 · indice · toponimo-018
   - gonzalez-batista-nombre-de-coro · lectura
   - van-buurt-2014 · indice-abc · §7

@@ -574,11 +574,17 @@ NIVEL_C = {
                  "glosa no menciona bosque, lo que tensiona el valor de "
                  "`-bacoa`.",
     },
-    "paraguana": {
+    "paraguaná": {
         "glosa_fuente": "Rodeada del mar", "segmentacion": "para(gua) + -na",
         "razon": "corrobora `para`/`paragua` = 'mar' del lexicón. Pero 'rodeada' "
                  "no queda explicada y `-na` es demasiado frecuente (34 formas "
                  "del corpus) para significar nada demostrable.",
+        "observacion": "Grafía: Zavala #192 y Esteves p. 56 imprimen Paraguaná "
+                       "con tilde; el canon la guardó sin ella hasta la auditoría "
+                       "de tildes del 2026-09-07 (#109 §3: la -aná tónica es el "
+                       "dato que distinguiría este sufijo del -ana de Curiana). "
+                       "Censo de -ana en Esteves, mismo día: "
+                       "6-fusion/censo_ana_esteves_109.yaml.",
         "lecturas": [
             {"tipo": "etimologia-analitica",
              "lectura": "para 'agua en grandes cantidades' (Zavala #190) + gua "
@@ -597,6 +603,34 @@ NIVEL_C = {
              "veredicto": "depende de na = 'tierra', que ninguna fuente impresa da; "
                           "choca con na = 'como' (Zavala #184, atestiguado). Es la "
                           "pieza que decide #109"},
+            {"tipo": "glosa-fuente",
+             "lectura": "«Conuco en medio del mar es la más repetida de las "
+                        "significaciones que le dan al topónimo»",
+             "quien": "Esteves 1989", "fecha": "2026-09-07", "eje": "significado",
+             "procedencia": dict(obra="esteves-1989", pagina=56),
+             "veredicto": "Esteves no la firma: la reporta como la significación "
+                          "«que le dan». Es la tradición local impresa en 1989, "
+                          "veintiséis años antes de que el proyecto la conociera "
+                          "como etimología popular «tipo Wikipedia»"},
+            {"tipo": "etimologia-de-cronista",
+             "lectura": "«Está suficientemente averiguado que Para significa agua»",
+             "quien": "Esteves 1989", "fecha": "2026-09-07", "eje": "significado",
+             "procedencia": dict(obra="esteves-1989", pagina=56),
+             "apoyo": "converge con Zavala #190 para 'agua dulce o salada en "
+                      "grandes cantidades' y #191 paragua 'mar'"},
+            {"tipo": "hipotesis",
+             "lectura": "'conuco en medio del mar' es, morfema a morfema, para "
+                        "'agua' + gua 'conuco, heredad, terreno cercado' (Zavala "
+                        "#122, HP): la tradición que Esteves recoge coincide con la "
+                        "segmentación para-gua-ná de la primera lectura, y por una "
+                        "vía independiente de Zavala. Sigue sin morfema el 'en "
+                        "medio de' / 'rodeada'. Y el censo de -ana en Esteves "
+                        "(2026-09-07) no da ningún -ana 'lugar de': el 'lugar' de "
+                        "Esteves es bacoa",
+             "quien": "proyecto", "fecha": "2026-09-07", "eje": "significado",
+             "procedencia": dict(obra="esteves-1989", pagina=56),
+             "veredicto": "pendiente: #109 (la decisión sobre la glosa de -ana es "
+                          "de Miguel; censo en 6-fusion/censo_ana_esteves_109.yaml)"},
         ],
     },
     "guamabatriba": {
@@ -1346,7 +1380,7 @@ DESCARTES = {
                    "tabicure (Indio caquetío del valle de las Damas)",
                    "todarahuato (Indígena de la Vela)",
                    "yaracuy (Indígena del Valle de las Damas)",
-                   "caquetio (Buena gente — etnónimo, no descripción del lugar)",
+                   "caquetío (Buena gente — etnónimo, no descripción del lugar)",
                    "xirahara (Población indígena vecina)",
                    "yaruca (Indígena caquetío)"],
     },
@@ -1369,7 +1403,7 @@ DESCARTES = {
         "razon": "la glosa es descriptiva y utilizable, pero ninguna "
                  "segmentación reconstruye nada. Son los que quedan para una "
                  "pasada futura con más morfemas en el inventario.",
-        "formas": ["aburi (aguas de un río lleno de arena)",
+        "formas": ["aburí (aguas de un río lleno de arena)",
                    "acatute (Pueblo entre valles)",
                    "alcaboa (Tierras solas o desiertas)",
                    "aricula (Punto de tierra)", "guanajo (Cardón muy lanoso)",
@@ -1420,7 +1454,7 @@ CORROBORACIONES_LEXICON = {
     "dare": {"glosa_lexicon": "diente; hijo", "toponimos": ["capadare"],
              "independencia": "alta"},
     "para/paragua": {"glosa_lexicon": "mar, agua extensa",
-                     "toponimos": ["paraguana"], "independencia": "alta"},
+                     "toponimos": ["paraguaná"], "independencia": "alta"},
     "wa": {"glosa_lexicon": "conuco, heredad, terreno cercado cultivado",
             "toponimos": ["guamabatriba"], "independencia": "media",
             "nota": "compite con el prefijo gua-/wa- de pluralidad"},

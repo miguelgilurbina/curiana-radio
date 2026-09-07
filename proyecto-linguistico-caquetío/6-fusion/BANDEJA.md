@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-07**.
 
-**1778 ítems propuestos** en 31 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
+**1791 ítems propuestos** en 32 propuestas, más **4 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -24,6 +24,7 @@ editar_a_mano: no
 | `antolinez_1946_capo_y_ortografia.yaml` | antolinez-1946-hacia-el-indio | 3 |  |
 | `bachaco_y_gu_es_w.yaml` | alvarado-1921 | 0 |  |
 | `castellanos_1589_toponimos.yaml` | castellanos-elegias | 0 |  |
+| `censo_ana_esteves_109.yaml` | esteves-1989 | 13 |  |
 | `colores_caquetios.yaml` | ? | 4 |  |
 | `computo_d11_2026-08-31.yaml` | ? | 4 |  |
 | `decisiones_colisiones_d5_2026-08-31.yaml` | ? | 3 |  |
@@ -76,6 +77,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 
 | Archivo | Qué es |
 |---|---|
+| `comentario-109-censo-ana-esteves.md` | El censo de -ana en Esteves está hecho: cero casos de 'lugar de' |
 | `issue-esquema-lecturas-toponimos.md` | El registro de topónimos necesita una tercera voz: la de la tradición |
 | `issue-pdfs-fuentes-aporte.md` | Servir los PDF del vault desde `/kaketiana/fuentes`, tras un aporte voluntario |
 | `issue-repertorio-vs-filiacion.md` | El lexicón responde "¿de qué lengua es esta palabra?" y lo usamos como si respondiera "¿la |

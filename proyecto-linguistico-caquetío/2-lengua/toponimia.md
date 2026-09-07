@@ -122,7 +122,7 @@ que el método falle.
 | `yacarebacoa` | "Pueblo del bosque" | `yacare` + `bacoa` |
 | `quibacoas` | "Bosques pedregosos" | `quiba` + `(b)acoa`, haplología |
 | `guacaubana` | "Río escondido" | `waka` 'subterráneo' + `-ubana` |
-| `paraguana` | "Rodeada del mar" | `paragua` 'mar' + `-ana` — **el caso que sostiene `-ana`** ([[morfologia]] §3) |
+| `paraguaná` | "Rodeada del mar" | `paragua` 'mar' + `-ana` — **era el caso que sostenía `-ana`**; desde #109 la segmentación está abierta y Esteves (p. 56) recoge «conuco en medio del mar» ([[morfologia]] §3) |
 
 ## Conflictos que la toponimia destapó
 

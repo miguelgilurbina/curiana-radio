@@ -112,7 +112,7 @@ van Buurt, y 'orilla' no explica nada.
 
 > **`-ana` = 'lugar de' está atestiguado, y `-bana` nunca lo estuvo.**
 
-La ecuación que lo cierra la da el propio Zavala: **`paraguana` = *"Rodeada del
+La ecuación que lo cierra la da el propio Zavala: **`paraguaná` = *"Rodeada del
 mar"***, y `para` / `paragua` = 'mar' **ya están en el lexicón como
 `caquetío-atestiguado`**. Despejando: `paragua` + `-na` / `-ana` = el lugar
 definido por el mar. Y `curiana` = *"lugar del cardón"* / territorio de los
@@ -161,6 +161,18 @@ opuestos a los que esta nota preveía:
   González Batista; 'propuesto' — Antolínez 1944): la canónica sigue siendo
   la de Zavala. Lo que zanja la disputa es el **censo de -ana/-aná en los
   topónimos de Esteves + la auditoría de tildes** — trabajo, no decisión.
+  **Censo hecho el 2026-09-07** (`6-fusion/censo_ana_esteves_109.yaml`): de
+  las 13 formas en -ana del índice de Esteves, 6 son `-bana`, 1 es `-bana`
+  con h (Capuhana = Capu-hana, «Bana: cerro»), 2 llevan el -ana dentro de una
+  raíz léxica (Cariguariana < *guariana* 'arbusto'; Maracapana < 'totumitas'),
+  y 4 van sin glosa (Paraguaná, Chamuriana, Cujicana, Jayana). **Ninguna
+  glosada 'lugar de'**: el 'lugar' de Esteves es `bacoa` (Curumubacoa,
+  Tutubacoa, Datobacoa). Para Paraguaná, Esteves (p. 56) recoge «conuco en
+  medio del mar» como la significación más repetida — que es, morfema a
+  morfema, `para` 'agua' + `gua` 'conuco' (Zavala #122), la segmentación de
+  #109 por una vía independiente. Tildes auditadas contra Esteves y Zavala:
+  `paraguaná`, `caquetío` y `aburí` corregidas en el canon. La decisión sobre
+  la glosa 'lugar de' queda para Miguel.
 
 > El mismo patrón se repite en `-are` vs `-ure`: la evidencia toponímica dice
 > 'sitio de', van Buurt §5 dice 'raíz'. Ver [[toponimia]] §conflictos. D9 no es
