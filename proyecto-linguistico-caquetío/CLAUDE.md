@@ -69,7 +69,7 @@ cura y se publica en Curiana Radio (`/kaketiana`).
 cd curiana_sim
 pip install -r requirements.txt
 
-python guardianes.py              # los 8 en verde antes de cerrar nada
+python guardianes.py              # los 9 en verde antes de cerrar nada
 python guardianes.py --rapido     # sin los tests (más rápido)
 
 # Los datos de lengua y la bibliografía
@@ -88,6 +88,7 @@ python generar_cronica.py         # reescribe 1-plan/CRONICA.md — cada cambio 
 python analizar_runs.py --todo    # análisis de los runs en la base
 python compilar_corpus.py --check # valida 3-mundo/corpus/
 python compilar_asentamientos.py  # los nodos de la esfera: existencia y época
+python compilar_etnias.py         # los vecinos: con quién, y de qué polity (regla 4)
 python curiana_polities.py --canon
 
 supabase start                    # Docker local (ver puertos arriba)

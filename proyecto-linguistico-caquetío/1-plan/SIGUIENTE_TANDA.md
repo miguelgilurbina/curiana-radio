@@ -12,7 +12,7 @@ bandeja: 6-fusion/BANDEJA.md
 > ```
 > python curiana_sim/generar_tablero.py    # el canon, medido
 > python curiana_sim/generar_bandeja.py    # la cola de fusión
-> python curiana_sim/guardianes.py         # los 8 en verde antes de cerrar nada
+> python curiana_sim/guardianes.py         # los 9 en verde antes de cerrar nada
 > ```
 > Los números de esta nota pueden haber envejecido. Los de los generados, no.
 
