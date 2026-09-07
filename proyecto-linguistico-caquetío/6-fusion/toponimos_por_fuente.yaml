@@ -3,7 +3,7 @@
 # trabaja desde aquí, pero el canon sigue siendo 2-lengua/toponimos.yaml.
 meta:
   generado_por: curiana_sim/juntar_toponimos.py
-  generado: '2026-09-06'
+  generado: '2026-09-07'
   editar_a_mano: no — se edita la fuente y se regenera
   que_es: 'vista: todos los topónimos del proyecto, agrupados por obra y cruzados entre sí. No es canon ni propuesta
     de fusión.'

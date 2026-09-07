@@ -172,11 +172,16 @@ las ~20 lecturas de la sesión (están en `toponimia_coro_espina.yaml`,
 y los cinco de Bastidas. La auditoría de tildes va aquí (es lo que
 distinguiría `-ana` de `-aná` y decide #109).
 
-### B.6 · Oliver §3.2.4 — los caribes (pendiente desde la tanda anterior)
+### B.6 · Oliver §3.2.4 — los caribes ✅ (minado el 2026-09-07)
 
-pp. impresas 223-230 = pdf 250-257. El estrato que Esteves atribuye a Amuay,
-Elegüey, Maragüey, Jamaica y **Maitiruma** ('manantial azul', caribe
-insular). Pregunta: ¿qué grupos caribes, dónde, con qué contacto?
+pp. impresas 223-230 = pdf 250-257. Respuesta en
+`6-fusion/oliver_324_caribes.yaml`: los grupos de lengua caribe (bubure,
+burede, pemeno, kirikire) están al sur y oeste de Maracaibo; el único contacto
+con caquetíos son los enclaves de la esfera occidental en Juruara. **Paraguaná
+no aparece** y ninguno de los cinco de Esteves tampoco (0/5, medido): el
+«estrato caribe insular» es inferencia fonética suya, y la etiqueta nombra una
+lengua arahuaca. Queda: fusionar los cuatro grupos a `etnias_en_contacto.yaml`
+y resolver Amuay a favor de la etnohistoria.
 
 ### B.7 · Campañas grandes, cuando haya hueco
 

@@ -746,7 +746,12 @@ NIVEL_C = {
                        "vecinos. Geolocalizado: la escuela Maitiruma está al pie "
                        "este del cerro de Santa Ana, en el mismo complejo de agua "
                        "que Chamuriana (toponimia_paraguana_miguel.yaml "
-                       "§capubana-centro-sagrado).",
+                       "§capubana-centro-sagrado). ⚠ El estrato es INFERENCIA "
+                       "léxica de Esteves, sin documento, y su etiqueta nombra "
+                       "una lengua arahuaca (el caribe insular de Breton): B.6, "
+                       "minada el 2026-09-07, no da ningún grupo de lengua "
+                       "caribe en Paraguaná (6-fusion/oliver_324_caribes.yaml "
+                       "§5).",
         "lecturas": [
             {"tipo": "testimonio-residente",
              "lectura": "el 'manantial azul' cae al pie este del Capubana, donde "

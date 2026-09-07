@@ -215,6 +215,28 @@ precontacto que la carta de Bastidas (1538), no más cerca.
 de topónimos** y su ubicación — que es justo lo que [#92](https://github.com/miguelgilurbina/curiana-radio/issues/92)
 necesita para dejar de tener a Paraguaná vacía.
 
+### ⚠️ Y una segunda advertencia: el «caribe insular» es inferencia suya (2026-09-07)
+
+Miguel, paraguanero, no reconoce más ancestría que la caquetía, y preguntó de
+dónde saca Esteves su estrato «caribe insular». Del texto sale que es **parecido
+de sonido y consulta de vocabulario, sin documento**: Amuay «por su fonética
+pertenece al caribe insular, como batey, mamey, caney, carey» (p. 14), y esas
+cuatro son voces **taínas** del español general; Elegüey y Maragüey «voz taína,
+del caribe insular» (p. 35), o sea las dos etiquetas juntas por la -güey;
+Jamaica «tierra de los manantiales» (p. 46), la etimología de la isla, en un
+lugar que es «la casa grande de Jamaica», casi seguro hacienda; Maitiruma con
+mái e iruma sin cita (p. 49). Y la etiqueta está mal puesta: **el caribe insular
+de Breton es una lengua arahuaca** (iñeri) con préstamos caribes en el habla de
+los hombres, hermana del taíno y del caquetío. Una coincidencia con él es, casi
+siempre, parentesco de familia, no otro pueblo.
+
+B.6 lo cerró por el otro lado: [[oliver-1989-cap3-vecinos]] §3.2.4 no da ningún
+grupo de lengua caribe en Paraguaná ni en Falcón (medido: 0/5 de los topónimos).
+Veredicto y qué lo cerraría del todo: `6-fusion/oliver_324_caribes.yaml` §5.
+Las atribuciones cumanagotas (Caradacagua, Manare, el -cuar de Adícora) quedan
+en la misma cuarentena: Oliver pone a los cumanagotos en la costa central y
+oriental.
+
 ## Lo minado hasta ahora — 10 de 146 páginas
 
 > 🔴 **Barrido en curso.** Lo de abajo sale de las páginas 11-16 y 25 del libro.

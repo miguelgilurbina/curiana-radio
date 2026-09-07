@@ -14,7 +14,7 @@ editar_a_mano: no
 > python curiana_sim/juntar_toponimos.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-06**. Marcas: ★ canon · ≡ Esteves · ◆ mapa de Miguel · ⌂ nodo.
+<!--GENERADO--> Generado el **2026-09-07**. Marcas: ★ canon · ≡ Esteves · ◆ mapa de Miguel · ⌂ nodo.
 
 **493 formas distintas** en **632 menciones** de **13 fuentes**. En el canon: 89. En el registro de nodos: 14. Sin canon ni nodo (la cola pura): 395.
 

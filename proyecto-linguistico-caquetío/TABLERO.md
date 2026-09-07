@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-06 01:34**.
+<!--GENERADO--> Generado el **2026-09-07 10:27**.
 
 ## ¿Vamos bien?
 
@@ -185,7 +185,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[brett-martinez-aquella-paraguana]] | no-disponible | media | no | 0 | 0 | 0 |
 | [[brito-figueroa-poblacion-economia]] | en-curso | alta | no | 0 | 0 | 0 |
 | [[castellanos-elegias]] | en-curso | alta | si | 0 | 3 | 0 |
-| [[esteves-1989]] | parcial | alta | no | 0 | 0 | 0 |
+| [[esteves-1989]] | parcial | alta | ocr | 0 | 0 | 0 |
 | [[federmann-1916]] | no-disponible | media | no | 0 | 0 | 0 |
 | [[fernandes-2020]] | no-disponible | baja | archivo-vacio | 0 | 0 | 0 |
 | [[gilij-1780-1783]] | sin-minar | baja | no | 0 | 0 | 0 |
@@ -199,7 +199,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[moron-guillermo-historia-venezuela]] | no-disponible | media | no | 0 | 0 | 0 |
 | [[nueva-segovia-1579]] | no-disponible | media | no | 0 | 0 | 0 |
 | [[oliver-1989-apendice-a]] | parcial | alta | no | 0 | 14 | 0 |
-| [[oliver-1989-cap3-vecinos]] | parcial | alta | no | 0 | 14 | 0 |
+| [[oliver-1989-cap3-vecinos]] | parcial | alta | ocr-parcial | 0 | 14 | 0 |
 | [[oliver-1989-cap4]] | parcial | alta | si | 0 | 14 | 0 |
 | [[perea-alonso-1942]] | descartada | descartada | si | 0 | 0 | 0 |
 | [[perez-de-tolosa-1546]] | no-disponible | alta | no | 0 | 0 | 0 |
@@ -286,7 +286,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1072 en 334 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 1074 en 336 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 225 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
