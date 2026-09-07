@@ -115,7 +115,7 @@ TABLERO.md         el estado medido (generado — no se edita a mano)
 2-lengua/          ¿cómo es el caquetío?  lexicon · morfologia · toponimia · metodo-comparativo
                    datos: cognados.yaml · toponimos.yaml · morfemas.yaml (ver datos-de-lengua)
 3-mundo/           ¿cómo era ese pueblo?  5 mapas · polities-caquetias · corpus/ · ensayos/
-                   esfera-de-interaccion · asentamientos.yaml (los nodos)
+                   esfera-de-interaccion · asentamientos.yaml (los nodos) · etnias.yaml (los vecinos)
 4-fuentes/         ¿de dónde lo sabemos?  una nota por obra + INDICE_FUENTES
 5-experimento/     ¿qué probamos?  mapa-motor · ARQUITECTURA · DISENO_KOINE · analisis/
 6-fusion/          la cola de entrada al canon: propuestas de datos + issues sin

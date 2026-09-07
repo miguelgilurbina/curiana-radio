@@ -145,3 +145,115 @@
     curiana_agents.py ya tiene esta frase en el system_prompt de Manaure ("también te llaman
     managuanare") sin cita. Esta entrada le da respaldo documental — no requiere cambio de código,
     solo deja constancia de la fuente.
+
+# ── B.6 (Oliver §3.2.4, minada 2026-09-07; fusión decidida por Miguel el mismo
+# día). Los cinco son de la ESFERA OCCIDENTAL (Maracaibo, Perijá, Guajira):
+# regla 4, no se proyectan a la polity costera sin decirlo. Propuesta y citas
+# completas en 6-fusion/oliver_324_caribes.yaml.
+
+- id: geografia_politica-009
+  contenido: >
+    Los caquetíos de la esfera occidental eran minoría entre otros pueblos:
+    puestos de frontera en el norte de la Guajira y en Cabo de la Vela–
+    Chichibacoa (donde había agricultura si llovía), y aldeas dentro del
+    territorio de los bubures, de lengua caribe, en la provincia de Juruara
+    (Parepi). Su relación con los bubures «appears to be more than a simple
+    trade partnership»; de todos los grupos caribes, solo los bubures tuvieron
+    relación con arahuacos. Su presencia en la Guajira la explica el comercio:
+    punto intermedio entre el valle César–Ranchería y «the Coastal Falcón
+    areas».
+  fuente: atestiguado
+  polity: occidental
+  referencia: Oliver 1989 cap. 3 §3.2.4, pp. 227-229 (Martín 1534 en María 1977; Oviedo y Valdés [6]:32-34)
+  procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "227-229"}
+  dominios: [politica, geografia, comercio]
+  agentes_relacionados: []
+  implicacion_simulacion: >
+    Nada cambia en la polity costera (regla 4): fija que «caquetío» en
+    Maracaibo nombra otra sociedad, enclave minoritario entre caribes. Para la
+    era 2 es un modelo real de contacto: un enclave que comercia y convive sin
+    fundirse, con el eje Falcón costero ↔ Guajira como ruta comercial caquetía.
+
+- id: geografia_politica-010
+  contenido: >
+    Los caquetíos de la Guajira escogieron a wanebucanes y coanaos como socios
+    comerciales y evitaron toda relación con onotos, kusi'na y guajiros (wayú):
+    «there is not one single reference of Caquetío being in association to
+    any of the latter Arawakan-speaking groups». El comercio de la esfera era
+    «highly selective between groups»: alianzas formalizadas, no todos con
+    todos.
+  fuente: atestiguado
+  polity: occidental
+  referencia: Oliver 1989 cap. 3 §3.2.4, p. 229, y n. 155
+  procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "227-229"}
+  dominios: [politica, comercio]
+  agentes_relacionados: []
+  implicacion_simulacion: >
+    Toca D11 (wayunaiki vs. lokono como comparanda del caquetío): la
+    etnohistoria muestra a los caquetíos EVITANDO a los wayú, no conviviendo
+    — aunque sea en la polity occidental. Y para el diseño de nodos: el
+    contacto entre nodos se modela como alianza selectiva, no como mercado
+    abierto.
+
+- id: geografia_politica-011
+  contenido: >
+    Mercado del lago de Maracaibo: los onotos y los kirikires, «señores de la
+    laguna», que no siembran, venden pescado en sus mercados a los bubures de
+    Juruara a cambio de maíz, yuca «y otras cosas»; pemenos y bubures, «and
+    possibly the Caquetío as well», cambiaban productos agrícolas por pescado.
+  fuente: atestiguado
+  polity: occidental
+  referencia: Pérez de Tolosa 1546 (en Arellano 1964:6-7) y Oviedo y Valdés [6]:32, citados en Oliver 1989 pp. 227-228
+  procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "227-228"}
+  dominios: [comercio, geografia]
+  agentes_relacionados: []
+  implicacion_simulacion: >
+    Patrón de intercambio pescadores ↔ agricultores con mercados formales:
+    el modelo para el trueque entre los dos nodos de la era 2 (uno de costa,
+    otro de conuco) sin inventar la mecánica.
+
+- id: geografia_politica-012
+  contenido: >
+    Modelo de Oliver: la expansión caribe usó la misma ruta que la primera
+    oleada arahuaca (Llanos → sur de Maracaibo por la depresión del Táchira),
+    pero después; y el bastión caribe en el sur del lago y en parte de los
+    Llanos del norte es la razón de que la expansión arahuaca posterior — la
+    que lleva al caquetío — no usara esa ruta. La expansión caribe a la cuenca
+    de Maracaibo es más o menos contemporánea de la del caquetío ancestral en
+    los Llanos del norte. Cronología léxico-estadística (Layrisse y Wilbert
+    1966): el proto-caribe diverge hace ≥ 4,5 milenios; el nodo del Caribe del
+    Norte, hacia 2,3.
+  fuente: hipotetico
+  polity: occidental
+  referencia: Oliver 1989 cap. 3 §3.2.4.1, pp. 224-225 (Durbin 1977; Layrisse y Wilbert 1966); n. 148 declara sin hacer la correlación arqueológica
+  procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "224-225"}
+  dominios: [geografia, teoria]
+  agentes_relacionados: []
+  implicacion_simulacion: >
+    Ninguna mecánica: contexto de por qué los caquetíos están donde están. Se
+    registra como hipótesis del autor; la simulación no la usa.
+
+- id: geografia_politica-013
+  contenido: >
+    Las crónicas describen a los caribes de Perijá y Juruara como pacíficos y a
+    los arahuacos de Maracaibo (onoto, wayú, kusi'na) como «more bellicose and
+    rebellious» — «a notable exception to this is the Caquetío, who were
+    always peaceful» (Oliver, n. 154).
+  fuente: hipotetico
+  polity: occidental
+  referencia: Oliver 1989 cap. 3 §3.2.4, p. 227 n. 154 (Martín 1534; Oviedo y Valdés)
+  procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "227"}
+  dominios: [politica, teoria]
+  agentes_relacionados: [Chiriware]
+  nota_abierta: >
+    «Pacífico» es etiqueta colonial tanto como «caribe»: viene de las mismas
+    crónicas que montaron la oposición caribe/guaitiao (§3.2.4.2). Y Esteves
+    1989 (p. 53) dice de Moruy que «los indios eran los más belicosos de
+    Paraguaná, hay testimonios escritos» de sus peleas por la tierra. Se
+    registra, no se proyecta.
+  implicacion_simulacion: >
+    No cambia nada: la simulación ya tiene guerreros (Chiriware, Tawaka,
+    Taku-ko, Pari-nu) y un raid caribe en la biografía de Chiriware, todo
+    canon-simulación. Este hecho impide que «los caquetíos eran pacíficos» se
+    use como argumento para quitarlos.
+

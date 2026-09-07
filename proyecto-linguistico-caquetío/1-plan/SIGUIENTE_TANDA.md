@@ -189,8 +189,10 @@ burede, pemeno, kirikire) están al sur y oeste de Maracaibo; el único contacto
 con caquetíos son los enclaves de la esfera occidental en Juruara. **Paraguaná
 no aparece** y ninguno de los cinco de Esteves tampoco (0/5, medido): el
 «estrato caribe insular» es inferencia fonética suya, y la etiqueta nombra una
-lengua arahuaca. Queda: fusionar los cuatro grupos a `etnias_en_contacto.yaml`
-y resolver Amuay a favor de la etnohistoria.
+lengua arahuaca. Fusionado el mismo día por decisión de Miguel: los cinco hechos
+son `geografia_politica-009..013`, los cuatro grupos están en `3-mundo/etnias.yaml`
+(registro canon nuevo, con el caribe del elenco como canon-simulación), Amuay
+resuelto a favor de la etnohistoria, Miraca es `nodo-031`.
 
 ### B.7 · Campañas grandes, cuando haya hueco
 

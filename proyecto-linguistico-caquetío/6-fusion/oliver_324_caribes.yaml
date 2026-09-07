@@ -8,13 +8,13 @@
 #
 # Minado el 2026-09-07 sobre OCR propio (fuentes_caquetios/
 # Oliver_1989_cap3_s324_caribes.ocr.txt; pdf 250-257 = impresas 223-230).
-# Regla 5: esto es propuesta; la fusión a etnias_en_contacto.yaml y al
+# Regla 5: esto es propuesta; la fusión a 3-mundo/etnias.yaml (antes 6-fusion/etnias_en_contacto.yaml) y al
 # corpus la decide el humano. Regla 4: TODO lo de aquí es de la esfera
 # OCCIDENTAL (Maracaibo, Perijá, Guajira), no de la polity costera.
 # ─────────────────────────────────────────────────────────────────────────
 meta:
   recogido: '2026-09-07'
-  estado: sin-fusionar
+  estado: fusionado   # 2026-09-07, decisión de Miguel: hechos → geografia_politica-009..013; grupos → 3-mundo/etnias.yaml etnia-004..007; Amuay resuelto
   obra: oliver-1989-cap3-vecinos
   paginas: "223-230 (pdf 250-257)"
   pregunta: "B.6 — grupos de lengua caribe, dónde, y su contacto con los caquetíos; cruce con los cinco «caribe insular» de Esteves"
@@ -46,7 +46,7 @@ respuesta:
     caribes — no los del Golfete.
 
 # ══════════════════════════════════════════════════════════════════
-# 2. LOS GRUPOS, UNO POR UNO — candidatos para etnias_en_contacto.yaml
+# 2. LOS GRUPOS, UNO POR UNO — candidatos para 3-mundo/etnias.yaml (antes 6-fusion/etnias_en_contacto.yaml)
 # ══════════════════════════════════════════════════════════════════
 grupos:
   - nombre: bubure
@@ -201,7 +201,7 @@ lengua:
     cruce: >-
       ⭐ AYNAGOTO lleva el formante -goto que Arcaya 1920 (p. 36) da como
       caribe 'pueblo, gente' en el etnónimo jirajara/xirahara (ver
-      etnias_en_contacto.yaml). Segunda aparición del formante, esta vez en un
+      3-mundo/etnias.yaml (antes 6-fusion/etnias_en_contacto.yaml)). Segunda aparición del formante, esta vez en un
       topónimo de grupo que Oliver clasifica caribe por otra vía: apoyo
       independiente a la lectura de Arcaya. Los demás no cruzan con nada del
       canon.

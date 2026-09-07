@@ -13,8 +13,13 @@
 # ─────────────────────────────────────────────────────────────────────────
 meta:
   recogido: '2026-08-25'
-  estado: sin-fusionar
+  estado: canon   # fusionado el 2026-09-07 por decisión de Miguel (era 6-fusion/etnias_en_contacto.yaml)
   extensible: true
+  nota: >-
+    Registro canon de los pueblos en contacto con los caquetíos, hermano de
+    asentamientos.yaml. Sin guardián propio todavía (pendiente): cada entrada
+    cita obra y página, y declara la polity caquetía a la que toca (regla 4).
+    El «caribe» del elenco de la simulación es canon-simulación (etnia-008).
 
 etnias:
 
@@ -102,6 +107,11 @@ etnias:
       sibilante lo delata. Ver la propuesta de cognados en
       lengua_toponimia_quibacoa.yaml.
     procedencia: {obra: arcaya-1920, pagina: "36"}
+    apoyo_2026-09-07: >-
+      Segunda aparición del formante -goto en nombre de grupo que otra vía da
+      como caribe: AYNAGOTO, aldea de los pemenos/bubures de Juruara en la
+      lista de Oviedo y Valdés (Oliver §3.2.4 p. 227, «toponyms suggest Carib
+      affiliations»). Apoyo independiente a la lectura de Arcaya.
 
   # ── Los grupos de lengua caribe de Oliver §3.2.4 (B.6, 2026-09-07) ──
   # Todos de la esfera OCCIDENTAL (Maracaibo, Perijá): regla 4. Detalle y
@@ -174,4 +184,25 @@ etnias:
       dicen güerigüeris que tractan con estos otros pemenos y andan siempre en
       canoas» (Oviedo y Valdés [6]: 32).
     procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "227-228"}
+
+  # ── El caribe del elenco (decisión de Miguel, 2026-09-07) ──
+  - id: etnia-008
+    nombre: caribe del elenco
+    variantes: [Marokoto-ni «guerrero y comerciante caribe»; el raid caribe de la biografía de Chiriware]
+    familia_linguistica: caribe (sin grupo fijado)
+    aviso_familia: >-
+      CANON-SIMULACIÓN, no dato. B.6 (Oliver §3.2.4) no da ningún grupo de
+      lengua caribe en Paraguaná ni en la costa de Falcón: los caribes
+      documentados están al sur y oeste de Maracaibo, y el «caribe insular»
+      de Esteves es inferencia. Un contacto caribe en la polity costera solo
+      cabe POR MAR, desde el Caribe Costero Venezolano (chayma, cumanagoto,
+      yao, tamanaco: costa central y oriental) o desde las Antillas.
+    donde: llega a la Curiana por mar; no reside
+    polity_caquetia: costera (la simulada)
+    tipo_de_contacto: visita — comercio y, en la memoria de Chiriware, un raid
+    intensidad: baja; episódica
+    estatus: canon-simulacion
+    procedencia: null
+    deuda: sin-procedencia
+    ver_tambien: 6-fusion/oliver_324_caribes.yaml §5; geografia_politica-013
 

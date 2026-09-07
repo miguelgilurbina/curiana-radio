@@ -261,6 +261,9 @@ Honestidad primero, porque son huecos reales:
   eso no alcanza para modelar un nodo bilingüe.
 - **Si los guaycaríes eran un grupo distinto o una denominación de otra cosa.**
   Son 4 agentes del elenco y no hay nota de fuente que los sostenga.
+  (2026-09-07: el registro de pueblos en contacto ya existe, `etnias.yaml`,
+  con los guayqueríes como etnia-002 y el caribe del elenco como etnia-008,
+  canon-simulación; el hueco de los guaycaríes sigue.)
 
 Los tres son trabajo de minería, no de diseño. **Ninguno se resuelve
 decidiéndolo.**

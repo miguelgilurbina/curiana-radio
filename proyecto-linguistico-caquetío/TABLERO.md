@@ -13,14 +13,14 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-07 10:57**.
+<!--GENERADO--> Generado el **2026-09-07 12:29**.
 
 ## ¿Vamos bien?
 
 |  | Hoy | Referencia |  |
 |---|---|---|---|
 | Entradas del lexicón **sin cita** | **0** | 82 (2026-07-21) | 🟢 −82 |
-| Hechos del corpus **con referencia** | **161 / 161** | — | 🟢 |
+| Hechos del corpus **con referencia** | **166 / 166** | — | 🟢 |
 | Tests del motor | **225 en verde** | 0 rojos | 🟢 |
 | Gate para reanudar simulaciones | **6 de 9** condiciones | faltan 3 | 🔴 |
 | Decisiones esperando a Miguel | **8 abiertas** | 5 resueltas | 🟡 |
@@ -227,10 +227,10 @@ Mapas: [[mapa-familia]] · [[mapa-ecologia]] · [[mapa-creencia]] · [[mapa-tran
 |---|---|---|---|---|---|---|---|
 | `creencia.yaml` | 26 | 11 | 11 |  |  | 4 | 26/26 |
 | `ecologia.yaml` | 54 | 31 | 22 |  | 1 |  | 54/54 |
-| `geografia_politica.yaml` | 8 | 8 |  |  |  |  | 8/8 |
+| `geografia_politica.yaml` | 13 | 11 |  |  | 2 |  | 13/13 |
 | `parentesco.yaml` | 39 | 14 | 18 |  | 7 |  | 39/39 |
 | `transmision.yaml` | 34 | 13 | 5 | 14 | 2 |  | 34/34 |
-| **total** | **161** | **77** | **56** | **14** | **10** | **4** | **161/161** |
+| **total** | **166** | **80** | **56** | **14** | **12** | **4** | **166/166** |
 
 Además, estructuras del corpus que **no son hechos etiquetados** (y por eso no entran en el total): `genealogia.yaml::linajes` (6), `genealogia.yaml::agentes` (60), `genealogia.yaml::personas_de_fondo` (14).
 
@@ -245,8 +245,8 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | 1 | 🟢 | Lexicón: 0 entradas de familia caquetía sin cita **o sin degradar** (F1) | 0 sin cita (eran 82 el 2026-07-21) |
 | 2 | 🟢 | Pares c/k resueltos (F2) | todas tomadas — [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) · medido: 7 colisiones, 2 dentro del caquetío |
 | 3 | 🟢 | Las 3 fuentes ALTA minadas (F3, F4, F5) | F3 [[alvarado-1921]] minado · F4 [[gatschet-1885]] minado · F5 [[oliver-1989-cap2]] minado |
-| 4 | 🟢 | `compilar_corpus.py` en verde (V2) | **161 hechos, 0 errores, 0 avisos** |
-| 5 | ⚪ | Citas del corpus verificadas por muestreo (F10) | **no automedible**: que la cita *resuelva* (que la página exista) es trabajo humano. Medible sí: 161/161 hechos **tienen** `referencia` |
+| 4 | 🟢 | `compilar_corpus.py` en verde (V2) | **166 hechos, 0 errores, 0 avisos** |
+| 5 | ⚪ | Citas del corpus verificadas por muestreo (F10) | **no automedible**: que la cita *resuelva* (que la página exista) es trabajo humano. Medible sí: 166/166 hechos **tienen** `referencia` |
 | 6 | 🟢 | D1, D3 y D5 tomadas | todas tomadas — [D1](https://github.com/miguelgilurbina/curiana-radio/issues/32) · [D3](https://github.com/miguelgilurbina/curiana-radio/issues/34) · [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) |
 | 7 | 🟢 | La glosa de `-bana` resuelta | todas tomadas — [D9](https://github.com/miguelgilurbina/curiana-radio/issues/38) |
 | 8 | 🔴 | El desbalance wayunaiki/lokono resuelto | abiertas: D11 — [D11](https://github.com/miguelgilurbina/curiana-radio/issues/39) · medido: wayunaiki 781 vs. lokono 275 (2.8 a 1) |

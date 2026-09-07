@@ -56,7 +56,7 @@ meta:
         menciones: 8
         formas: 8
     en_canon: 109
-    en_nodos: 15
+    en_nodos: 18
     sin_canon_ni_nodo: 381
     cruces:
       mapa_de_miguel_en_esteves:
@@ -4867,7 +4867,7 @@ indice_de_formas:
     en_canon: toponimo-104 · nivel C
     en_esteves: true
     en_mapa_miguel: false
-    en_nodos: null
+    en_nodos: nodo-025 (atestiguado, precontacto probable)
   menciones:
   - esteves-1989 · canon · toponimo-104 · nivel C · topónimo · fuente procedencia
   - testimonio-miguel · lectura:testimonio-residente · toponimo-104 · Miguel Gil Urbina (mapa) · 2026-09-01
@@ -4928,7 +4928,7 @@ indice_de_formas:
     en_canon: toponimo-109 · nivel C
     en_esteves: true
     en_mapa_miguel: false
-    en_nodos: null
+    en_nodos: nodo-013 (atestiguado, precontacto desconocido)
   menciones:
   - esteves-1989 · canon · toponimo-109 · nivel C · topónimo · fuente procedencia
   - testimonio-miguel · lectura:tradicion-local · toponimo-109 · crónica local, recogida por Miguel · 2026-09-01
@@ -7109,7 +7109,7 @@ indice_de_formas:
     en_canon: toponimo-095 · nivel C
     en_esteves: true
     en_mapa_miguel: false
-    en_nodos: null
+    en_nodos: nodo-031 (atestiguado, precontacto desconocido)
   menciones:
   - esteves-1989 · canon · toponimo-095 · nivel C · topónimo (glosa guaraúna, según Esteves) · fuente procedencia
   - esteves-1989 · lectura:etimologia-analitica · toponimo-095 · Esteves 1989 · 2026-09-07 · sin cita ni ruta de

@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-07**.
 
-**1785 ítems propuestos** en 32 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
+**1778 ítems propuestos** en 31 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -29,7 +29,6 @@ editar_a_mano: no
 | `decisiones_colisiones_d5_2026-08-31.yaml` | ? | 3 |  |
 | `decisiones_tanda_2026-08-30.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-01.yaml` | ? | 0 |  |
-| `etnias_en_contacto.yaml` | ? | 7 |  |
 | `frase_saludo_mitare.yaml` | ? | 2 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
 | `medina_colina_dictado.yaml` | ? | 62 |  |
