@@ -161,7 +161,14 @@ Sesión técnica contra Supabase local (puertos 64321/64322). Condición 9.
 La mesa de trabajo es `6-fusion/TOPONIMOS_POR_FUENTE.md` (generada por
 `juntar_toponimos.py`, 2026-09-04): todos los topónimos que el proyecto ha
 tocado, por obra, cruzados contra el canon, Esteves, los nodos y el mapa de
-Miguel. Se regenera; no se edita.
+Miguel. Se regenera; no se edita. El protocolo completo es la skill
+`campana-toponimos`. Lotes hechos: 1 (2026-09-06, los del mapa de Miguel en
+Esteves, 15) y 2 (2026-09-07, los «caribe insular», 4 más). Siguientes, por
+las dos vías de la skill §9: **el diccionario de Medina Colina** (cada sesión
+de dictado cierra con `juntar_toponimos.py`; lo que quede ≡ sin ★ es el lote)
+y el **barrido del mapa vivo de la Kaketiana** (lista con coordenadas por
+región → cruce con la mesa → lo nuevo a la cola con deuda declarada). Las once
+ciudades de Castellanos y el resto del índice de Esteves, a su ritmo.
 
 ~~Implementar `lecturas` en el esquema + `compilar_lengua.py`~~ (hecho el
 2026-09-05, con `definicion_aceptada_simulacion`; ver datos-de-lengua.md); retro-poblar

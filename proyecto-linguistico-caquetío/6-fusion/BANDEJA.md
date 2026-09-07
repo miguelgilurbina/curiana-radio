@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-07**.
 
-**1781 ítems propuestos** en 32 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
+**1779 ítems propuestos** en 32 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -49,7 +49,7 @@ editar_a_mano: no
 | `tabla_a9_oliver.yaml` | oliver-1989-cap2 | 49 |  |
 | `toponimia_coro_espina.yaml` | gonzalez-batista-nombre-de-coro | 5 |  |
 | `toponimia_paraguana_miguel.yaml` | ? | 5 |  |
-| `toponimos_esteves_indice.yaml` | esteves-1989 | 167 |  |
+| `toponimos_esteves_indice.yaml` | esteves-1989 | 164 |  |
 | `velasco_primarios_agi.yaml` | velasco-2015-resistencia | 4 |  |
 
 Vistas generadas en `6-fusion/` (no cuentan: juntan lo que ya está arriba):
@@ -67,7 +67,7 @@ falsa y se corrigió). Entradas contadas por patrón de dict.
 | `lexicon_alvarado.py` | alvarado-1921 | 217 | lo importan generar_tablero y auditar_82 |
 | `lexicon_gatschet.py` | gatschet-1885 | 88 | lo importan generar_tablero y auditar_82 |
 | `lexicon_van_buurt.py` | van-buurt-2014 | 231 | lo importan generar_tablero y auditar_82 |
-| `lexicon_toponimos.py` | varias (F11) | 91 | lo importa migrar_toponimos |
+| `lexicon_toponimos.py` | varias (F11) | 92 | lo importa migrar_toponimos |
 | `lexicon_candidatos.py` | aisladas 2026-06-28 | 441 | lo importa generar_tablero |
 
 ## Redactado y sin publicar (`6-fusion/issues-pendientes/`)

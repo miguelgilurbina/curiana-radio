@@ -16,7 +16,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-07**. Marcas: ★ canon · ≡ Esteves · ◆ mapa de Miguel · ⌂ nodo.
 
-**493 formas distintas** en **632 menciones** de **13 fuentes**. En el canon: 89. En el registro de nodos: 14. Sin canon ni nodo (la cola pura): 395.
+**494 formas distintas** en **639 menciones** de **13 fuentes**. En el canon: 93. En el registro de nodos: 14. Sin canon ni nodo (la cola pura): 392.
 
 > ⚠️ obra sin ficha en bibliografia.yaml: proyecto
 
@@ -25,13 +25,13 @@ editar_a_mano: no
 | Fuente | Qué es | Menciones | Formas | ★ canon | ≡ Esteves | ⌂ nodo |
 |---|---|---|---|---|---|---|
 | `zavala-reyes-2015` | el glosario (TOPONIMOS_ZAVALA y ANTROPONIMOS_ZAVALA, con glosa española) — la base del canon | 58 | 58 | 58 | 4 | 1 |
-| `esteves-1989` | el índice 'Topónimos compilados' de Paraguaná (pp. 68-69): la cola de la campaña | 206 | 187 | 19 | 187 | 5 |
+| `esteves-1989` | el índice 'Topónimos compilados' de Paraguaná (pp. 68-69): la cola de la campaña | 212 | 188 | 23 | 188 | 5 |
 | `castellanos-elegias` | las 'ciudades de grandísimo momento' en torno a Coro (II, Elegía 1, 1589) | 11 | 11 | 2 | 5 | 5 |
 | `velasco-2015-resistencia` | los pueblos de la carta de Bastidas al rey (AGI, 1538) — primarios | 5 | 5 | 0 | 2 | 1 |
 | `gonzalez-batista-nombre-de-coro` | lecturas etimológicas del autor — con cautela declarada; cada una se juzga contra Zavala | 12 | 10 | 2 | 4 | 2 |
 | `arcaya-1920` | Quiquibacoa/Coquibacoa, Curiana y la serie Coro-/Curi- | 9 | 9 | 1 | 0 | 0 |
 | `moron-2012-petroglifos` | La Cuiba y las estaciones de arte rupestre de Falcón | 23 | 23 | 1 | 2 | 2 |
-| `oliver-1989-cap3` | los asientos de los dos clanes de Paraguaná según Delmonte 1883 | 5 | 5 | 0 | 3 | 3 |
+| `oliver-1989-cap3` | los asientos de los dos clanes de Paraguaná según Delmonte 1883 | 6 | 5 | 1 | 3 | 3 |
 | `medina-colina-sxx` | lo que el dictado toca: voces que son topónimo en Esteves, lo mandado a la cola, y los pueblos del autor (s. XX) | 22 | 20 | 3 | 7 | 3 |
 | `gatschet-1885` | topónimos de Aruba (material de Pinart, 1882), sin glosa | 31 | 30 | 1 | 0 | 0 |
 | `van-buurt-2014` | §7 topónimos de Aruba, Bonaire y Curazao sin glosa; §8-10 las etimologías del autor | 212 | 180 | 18 | 1 | 4 |
@@ -55,11 +55,11 @@ el glosario (TOPONIMOS_ZAVALA y ANTROPONIMOS_ZAVALA, con glosa española) — la
 
 jurijurebo★≡ (Paso de los vientos), yacarebacoa★ (Pueblo del bosque), quibacoas★ (Bosques pedregosos), cumarebo★⌂ (Camino del cacique Cumare), guacaubana★ (Río escondido), barisi★ (Región de tierras coloradas cerca del mar), adabacoa★ (Todo arboleda), guadabacoa★ (Arboleda), bobare★ (Sitio de cultivo), cabudare★ (sitio de cultivo), dabudare★ (Sitio de extracción de barro), pachacuare★ (Sitio de palmeras), bariquisimeto★ (Río de aguas turbias), yacare★ (Pueblo. Caimán), alaurima★ (Río blanco o claro), capadare★ (Diente de tigre), sazaribacoa★ (Río de los maizales), guamabatriba★ (Muchas tierras de cultivo), turijerebo★ (Lugar de descanso), guacurebo★≡ (Quebrada que crece), taratarare★ (Hato, conuco), poapao★ (Serranía de Coro), jadicuar★ (Sitio donde abunda jajato. Salicornia fructuosa), chunare★ (Apellido. Mazorca tierna), supí★≡◆ (supi: sitio a orilla del mar; arena; arboleda supide), baracoica★ (Cacique de Curazao), huay★ (Nombre propio), quiceraguru★, quiceroaboa★, quiceromata★, quiciroata★, quiquiba★, tamani★, timaure★ (Apellido), tumarure★ (Apellido de un cacique), xaraguamari★ (Cacique de Yaracuy), yarosabana★ (Cacique de los Guaragua), dabajuro★ (Población de Falcón), doaca★ (Asiento indígena), iboa★ (Comunidad indígena), parotaima★ (Indígena del Yaracuy), tabicure★ (Indio caquetío del valle de las Damas), todarahuato★ (Indígena de la Vela), yaracuy★ (Indígena del Valle de las Damas), caquetio★ (Buena gente — etnónimo, no descripción del lugar), xirahara★ (Población indígena vecina), yaruca★ (Indígena caquetío), cemirucos★ (→ 'Semerucos'), coroque★ (→ 'Árbol de ¿?'), zamurano★ (← esp. *zamuro* + -ano), aburi★ (aguas de un río lleno de arena), acatute★ (Pueblo entre valles), alcaboa★ (Tierras solas o desiertas), aricula★ (Punto de tierra), guanajo★ (Cardón muy lanoso), guasare★≡ (Árbol cactáceo), siguruba★ (Salvar. Caserío), tarai★ (Garipial o caripial)
 
-### `esteves-1989` — 187 formas, 206 menciones
+### `esteves-1989` — 188 formas, 212 menciones
 
 el índice 'Topónimos compilados' de Paraguaná (pp. 68-69): la cola de la campaña.
 
-judibana★≡◆ (Judi, jurí: viento. Bana: sitio alto), judibana★≡◆ («Judibana era una hermosa mujer, que era esposa del Gran Cacique de Jurijurebo»), abudure★≡◆ (sitio de donde se extrae barro de las raíces), buchuhaco★≡ (los dos buches. Buche: cardo, Aco: par, casal, pareja), adaure★≡◆ (apellido indígena; «no descartamos que provenga de Dara, en tal caso en forma patronímica: quizás la Dara fue…), amaraya★≡◆ (puede ser una alteración de «maracaya», otro nombre indígena que recibe el «güirito», gato silvestre), baraived★≡◆ (Bara: árbol; en Baraivere, la forma primitiva, «la desinencia bere actuaría como adjetivo o como sustantivo p…), baraived★≡◆ (unos marinos perdidos vararon en los bancos de arena y uno dijo «vara y ved»; de ahí el nombre), caseto★≡◆ (planta herbácea de las malvas espigadas, el Malvastrum spicatum de los botánicos), caseto★≡◆ (Gaseto < gaceta, porque en el lugar vivía quien redactaba una hoja periódica), cocodite★≡◆ (el sufijo «dito» es distintivo de los sustantivos colectivos en lengua indígena), jadacaquiva★≡◆ (Quiba en caquetío es pedruzco), jadacaquiva★≡◆ (los nativos, con miedo a los caballos, se armaban de piedras y gritaban «¡Jaca... quiba!»: ¡piedra contra esa…), jadacaquiva★≡◆ (en una sequía machacaban macoyas de jajato contra piedras para chupar el jugo y gritaban «¡Jajato... quiba!»), machuruca★≡◆⌂ (viene de caruca, paja áspera con la cual se le da consistencia al barro batido para la torta que se aplica a …), maicara★≡◆ («en un documento de Composición de Tierras hemos leído: Maicuare, éste sería tal vez el nombre primitivo»), maitiruma★≡◆ (en el caribe insular, mái significa: manantial, ojo de agua; iruma: azul celeste, o sea que Maitiruma expresa…), supí★≡◆ (es un árbol cactáceo que exuda una goma medicinal, es el guamacho Pereskia de los botánicos), charaima★≡◆ (población entre Adícora y Baraived; censo 1881: 79 casas, 527 habitantes; nombre primitivo Charaide en su Tít…), jacuque★≡◆ (sabanas y hatos en Jadacaquiva; Punta de Jacuque, por donde «no se puede confirmar históricamente» Federmann …), Guacurebo★≡, Guasare★≡, Jurijurebo★≡, Paraguaná★≡, Abudure★≡◆, Adaure★≡◆, Amaraya★≡◆, Baraived★≡◆, Buchuaco≡◆, Caseto★≡◆, Charaima★≡◆, Cocodite★≡◆, Jacuque★≡◆, Jadacaquiva★≡◆, Judibana★≡◆, Machuruca★≡◆⌂, Maicara★≡◆, Maitiruma★≡◆, Supí★≡◆, Acaboa≡, Adaro≡, Adícora≡⌂, Aguaque≡, Amuay≡ (estrato no caquetío según Esteves), Antuní≡, Arajó≡, Asaro≡, Asubure≡, Avotuca≡, Babahuro≡, Bajabaroa≡, Bajarigua≡, Barabara≡, Baracara≡, Barbasco≡, Bariquí≡, Barisigua≡, Barunú≡, Bibidure≡, Bibuche≡, Biniche≡, Bucuruy≡, Buchaquiba≡, Buenevara≡, Buenibativa≡, Caibacoa≡, Camare≡, Camoruco≡, Camunare≡, Capacheruda≡, Capuhana≡, Caradacagua≡, Carajaima≡, Cararapa≡, Cariguariana≡, Carirubana≡, Caruca≡, Caujarito≡, Cayeruba≡, Cayude≡, Cimiro≡, Coabana≡, Coduto≡, Cuara≡, Cubiano≡, Cucurubano≡, Cucuy≡, Cude≡, Cujicana≡, Cumaraguas≡, Cumujacoa≡, Cunacho≡, Curaidebo≡, Cuzubitos≡, Chamuriana≡, Chaure≡, Chichibana≡, Chiguaral≡, Chirache≡, Chuchube≡, Chujaro≡, Chunaure≡, Dabadubare≡, Dibaragua≡, Duraguaco≡, Elegüey≡ (estrato no caquetío según Esteves), Garrapata≡, Gisebo≡, Guacuira≡, Guacujúa≡, Guachaco≡, Guachunepe≡, Guaidabacoa≡⌂, Guanadito≡, Guarama≡, Guaranao≡, Guarataro≡, Guaricure≡, Guaruguaja≡, Guatacare≡, Guayacanal≡, Güica≡, Güima≡, Hayo≡, Hurraque≡, Imujo≡, Isiro≡, Isito≡, Iticuna≡, Jabe≡, Jagüe≡, Jamaica≡ (estrato no caquetío según Esteves), Jarayadito≡, Jariaca≡, Jayana≡, Juderecal≡, Juroguagua≡, Laguarí≡, Macama≡, Manadí≡, Manare≡, Manichare≡, Maquigua≡, Maracapana≡, Matacán≡, Matividiro≡, Matuto≡, Michaco≡, Miraca≡, Misaray≡, Moruy≡⌂, Muaco≡, Niraba≡, Nonocoti≡, Oboque≡, Oripopo≡, Paguara≡, Perabay≡, Peticuare≡, Pipiacoa≡, Pipiribana≡, Pitajaya≡, Pury≡, Quibarute≡, Quitaire≡, Quipital≡, Quipayú≡, Quiyegua≡, Sabarigua≡, Sacuragua≡, Saguatumo≡, Sanajaquí≡, Sanquinche≡, Sarabón≡, Sarinao≡, Saruro≡, Sicaname≡, Sibidigual≡, Siraba≡, Supideo≡, Suriquiva≡, Tacal≡, Tacaduto≡, Taque≡, Tacuato≡, Tausabana≡, Tequeguacare≡, Ticuí≡, Tiguadare≡, Tijuro≡, Tiraya≡, Tiquiba≡, Tobagía≡, Todariquiba≡⌂, Tubarao≡, Tumarusa≡, Tumatey≡, Tura≡, Tutubacoa≡, Urupagua≡, Urupaguaduco≡, Yacure≡, Yaguarima≡, Yaima≡, Yarí≡, Yauquiba≡
+judibana★≡◆ (Judi, jurí: viento. Bana: sitio alto), judibana★≡◆ («Judibana era una hermosa mujer, que era esposa del Gran Cacique de Jurijurebo»), abudure★≡◆ (sitio de donde se extrae barro de las raíces), buchuhaco★≡ (los dos buches. Buche: cardo, Aco: par, casal, pareja), adaure★≡◆ (apellido indígena; «no descartamos que provenga de Dara, en tal caso en forma patronímica: quizás la Dara fue…), amaraya★≡◆ (puede ser una alteración de «maracaya», otro nombre indígena que recibe el «güirito», gato silvestre), baraived★≡◆ (Bara: árbol; en Baraivere, la forma primitiva, «la desinencia bere actuaría como adjetivo o como sustantivo p…), baraived★≡◆ (unos marinos perdidos vararon en los bancos de arena y uno dijo «vara y ved»; de ahí el nombre), caseto★≡◆ (planta herbácea de las malvas espigadas, el Malvastrum spicatum de los botánicos), caseto★≡◆ (Gaseto < gaceta, porque en el lugar vivía quien redactaba una hoja periódica), cocodite★≡◆ (el sufijo «dito» es distintivo de los sustantivos colectivos en lengua indígena), jadacaquiva★≡◆ (Quiba en caquetío es pedruzco), jadacaquiva★≡◆ (los nativos, con miedo a los caballos, se armaban de piedras y gritaban «¡Jaca... quiba!»: ¡piedra contra esa…), jadacaquiva★≡◆ (en una sequía machacaban macoyas de jajato contra piedras para chupar el jugo y gritaban «¡Jajato... quiba!»), machuruca★≡◆⌂ (viene de caruca, paja áspera con la cual se le da consistencia al barro batido para la torta que se aplica a …), maicara★≡◆ («en un documento de Composición de Tierras hemos leído: Maicuare, éste sería tal vez el nombre primitivo»), maitiruma★≡◆ (en el caribe insular, mái significa: manantial, ojo de agua; iruma: azul celeste, o sea que Maitiruma expresa…), amuay★≡ («la voz da la idea de cavidad subterránea, haitón, cueva grande. Y justamente en las cercanías de Amuay hay u…), amuay★≡ ('cavidad subterránea, cueva grande', por las cuevas naturales cercanas; voz del caribe insular «por su fonéti…), amuay★≡ (de «muelle», por el endeble muelle de 1924 cuando el puerto fue aduana marítima), supí★≡◆ (es un árbol cactáceo que exuda una goma medicinal, es el guamacho Pereskia de los botánicos), charaima★≡◆ (población entre Adícora y Baraived; censo 1881: 79 casas, 527 habitantes; nombre primitivo Charaide en su Tít…), jacuque★≡◆ (sabanas y hatos en Jadacaquiva; Punta de Jacuque, por donde «no se puede confirmar históricamente» Federmann …), elegüey★≡ (nombre antiguo de Punta Cardón, hoy solo del cementerio viejo en la Puntica; «es voz taína, del caribe insula…), maragüey★≡ (pequeña península en Casicure, en la otra costa del Golfete de Coro; «también es voz taína», sin glosa; misma…), jamaica★≡ (lugar de Buenavista formado alrededor de «la casa grande de Jamaica»: con toda probabilidad una hacienda baut…), Guacurebo★≡, Guasare★≡, Jurijurebo★≡, Paraguaná★≡, Abudure★≡◆, Adaure★≡◆, Amaraya★≡◆, Baraived★≡◆, Buchuaco≡◆, Caseto★≡◆, Charaima★≡◆, Cocodite★≡◆, Jacuque★≡◆, Jadacaquiva★≡◆, Judibana★≡◆, Machuruca★≡◆⌂, Maicara★≡◆, Maitiruma★≡◆, Supí★≡◆, Amuay★≡, Elegüey★≡, Jamaica★≡, Acaboa≡, Adaro≡, Adícora≡⌂, Aguaque≡, Antuní≡, Arajó≡, Asaro≡, Asubure≡, Avotuca≡, Babahuro≡, Bajabaroa≡, Bajarigua≡, Barabara≡, Baracara≡, Barbasco≡, Bariquí≡, Barisigua≡, Barunú≡, Bibidure≡, Bibuche≡, Biniche≡, Bucuruy≡, Buchaquiba≡, Buenevara≡, Buenibativa≡, Caibacoa≡, Camare≡, Camoruco≡, Camunare≡, Capacheruda≡, Capuhana≡, Caradacagua≡, Carajaima≡, Cararapa≡, Cariguariana≡, Carirubana≡, Caruca≡, Caujarito≡, Cayeruba≡, Cayude≡, Cimiro≡, Coabana≡, Coduto≡, Cuara≡, Cubiano≡, Cucurubano≡, Cucuy≡, Cude≡, Cujicana≡, Cumaraguas≡, Cumujacoa≡, Cunacho≡, Curaidebo≡, Cuzubitos≡, Chamuriana≡, Chaure≡, Chichibana≡, Chiguaral≡, Chirache≡, Chuchube≡, Chujaro≡, Chunaure≡, Dabadubare≡, Dibaragua≡, Duraguaco≡, Garrapata≡, Gisebo≡, Guacuira≡, Guacujúa≡, Guachaco≡, Guachunepe≡, Guaidabacoa≡⌂, Guanadito≡, Guarama≡, Guaranao≡, Guarataro≡, Guaricure≡, Guaruguaja≡, Guatacare≡, Guayacanal≡, Güica≡, Güima≡, Hayo≡, Hurraque≡, Imujo≡, Isiro≡, Isito≡, Iticuna≡, Jabe≡, Jagüe≡, Jarayadito≡, Jariaca≡, Jayana≡, Juderecal≡, Juroguagua≡, Laguarí≡, Macama≡, Manadí≡, Manare≡, Manichare≡, Maquigua≡, Maracapana≡, Matacán≡, Matividiro≡, Matuto≡, Michaco≡, Miraca≡, Misaray≡, Moruy≡⌂, Muaco≡, Niraba≡, Nonocoti≡, Oboque≡, Oripopo≡, Paguara≡, Perabay≡, Peticuare≡, Pipiacoa≡, Pipiribana≡, Pitajaya≡, Pury≡, Quibarute≡, Quitaire≡, Quipital≡, Quipayú≡, Quiyegua≡, Sabarigua≡, Sacuragua≡, Saguatumo≡, Sanajaquí≡, Sanquinche≡, Sarabón≡, Sarinao≡, Saruro≡, Sicaname≡, Sibidigual≡, Siraba≡, Supideo≡, Suriquiva≡, Tacal≡, Tacaduto≡, Taque≡, Tacuato≡, Tausabana≡, Tequeguacare≡, Ticuí≡, Tiguadare≡, Tijuro≡, Tiraya≡, Tiquiba≡, Tobagía≡, Todariquiba≡⌂, Tubarao≡, Tumarusa≡, Tumatey≡, Tura≡, Tutubacoa≡, Urupagua≡, Urupaguaduco≡, Yacure≡, Yaguarima≡, Yaima≡, Yarí≡, Yauquiba≡
 
 ### `castellanos-elegias` — 11 formas, 11 menciones
 
@@ -156,16 +156,17 @@ La Cuiba y las estaciones de arte rupestre de Falcón.
 | La Peña Clara | estacion-rupestre | estación de arte rupestre — otras |  |  |
 | Los Urupaguales | estacion-rupestre | estación de arte rupestre — otras |  |  |
 
-### `oliver-1989-cap3` — 5 formas, 5 menciones
+### `oliver-1989-cap3` — 5 formas, 6 menciones
 
 los asientos de los dos clanes de Paraguaná según Delmonte 1883.
 
 | Forma | Tipo | Lo que dice la fuente | Ref. | Cruces |
 |---|---|---|---|---|
+| amuay | lectura:hipotesis | el topónimo es el etnónimo del clan Amuay, sub-grupo caquetío que controlaba el sur de la península con playa… | toponimo-090 · proyecto · 2026-09-07 | ★ toponimo-090 · nivel C ≡ |
 | Cayerda | asiento-de-clan | primer asiento de los Amuayes (Delmonte 1883); grafías Cayerta/'Coyarna' | p. 276 | ◆ ⌂ nodo-025 |
 | Moruy | asiento-de-clan | reasentamiento de los Amuayes (confirmado por Oliver) | p. 276 | ≡ ⌂ nodo-027 |
 | Santa Ana | asiento-de-clan | asiento de los Guaranaos (Delmonte 1883) | p. 276 | ⌂ nodo-013 |
-| Amuay | clan | nombre del clan del sur; Esteves lo atribuye a estrato caribe (conflicto declarado) | pp. 275-276 | ≡ |
+| Amuay | clan | nombre del clan del sur; Esteves lo atribuye a estrato caribe (conflicto declarado) | pp. 275-276 | ★ toponimo-090 · nivel C ≡ |
 | Guaranao | clan | nombre del clan del norte | pp. 275-276 | ≡ |
 
 ### `medina-colina-sxx` — 20 formas, 22 menciones
@@ -315,7 +316,7 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | amaraya | Amaraya | esteves-1989, testimonio-miguel | toponimo-081 · nivel C | ≡ | ◆ |  |
 | Amboïna | Amboina | van-buurt-2014 | toponimo-063 · nivel descartado |  |  |  |
 | Amboïna, Ambuana (pronounce Ambwana) |  | van-buurt-2014 |  |  |  |  |
-| Amuay |  | esteves-1989, oliver-1989-cap3 |  | ≡ |  |  |
+| amuay | Amuay | esteves-1989, oliver-1989-cap3 | toponimo-090 · nivel C | ≡ |  |  |
 | Anabui |  | van-buurt-2014 |  |  |  |  |
 | Anamichi |  | van-buurt-2014 |  |  |  |  |
 | Andicuri | Andicouri | van-buurt-2014 |  |  |  |  |
@@ -490,7 +491,7 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | doaca |  | zavala-reyes-2015 | toponimo-041 · nivel descartado |  |  |  |
 | Duraguaco |  | esteves-1989 |  | ≡ |  |  |
 | Eayac |  | van-buurt-2014 |  |  |  |  |
-| Elegüey |  | esteves-1989 |  | ≡ |  |  |
+| elegüey | Elegüey | esteves-1989 | toponimo-091 · nivel descartado | ≡ |  |  |
 | Fofoti |  | van-buurt-2014 |  |  |  |  |
 | Garati | Guarati | van-buurt-2014 |  |  |  |  |
 | Garrapata |  | esteves-1989 |  | ≡ |  |  |
@@ -547,7 +548,7 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | jadacaquiva | Jadacaquiva | esteves-1989, proyecto, testimonio-miguel | toponimo-083 · nivel C | ≡ | ◆ |  |
 | jadicuar |  | zavala-reyes-2015 | toponimo-024 · nivel C |  |  |  |
 | Jagüe |  | esteves-1989 |  | ≡ |  |  |
-| Jamaica |  | esteves-1989 |  | ≡ |  |  |
+| jamaica | Jamaica | esteves-1989 | toponimo-093 · nivel descartado | ≡ |  |  |
 | Jarayadito |  | esteves-1989 |  | ≡ |  |  |
 | Jariaca |  | esteves-1989 |  | ≡ |  |  |
 | Jayana |  | esteves-1989 |  | ≡ |  |  |
@@ -601,6 +602,7 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Manparia Cutu |  | van-buurt-2014 |  |  |  |  |
 | Maquigua |  | esteves-1989 |  | ≡ |  |  |
 | Maracapana |  | esteves-1989 |  | ≡ |  |  |
+| maragüey |  | esteves-1989 | toponimo-092 · nivel descartado | ≡ |  |  |
 | Masiduri |  | van-buurt-2014 |  |  |  |  |
 | Matacán |  | esteves-1989 |  | ≡ |  |  |
 | Matividiri | Matividiri (cueva) | van-buurt-2014, gatschet-1885 | toponimo-069 · nivel descartado |  |  |  |

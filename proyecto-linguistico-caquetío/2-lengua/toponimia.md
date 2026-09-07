@@ -159,6 +159,30 @@ atestiguado. El esquema y sus reglas: [[datos-de-lengua]] §«La tercera voz».
 La mesa de trabajo donde se ven todas las lecturas junto a las demás fuentes:
 `6-fusion/TOPONIMOS_POR_FUENTE.md`.
 
+## La campaña (desde 2026-09): cómo entra un topónimo
+
+El método de los cuatro pasos de arriba sigue siendo el análisis; lo que se
+añadió en septiembre de 2026 es el **circuito completo** de un nombre hasta el
+canon, escrito como protocolo en la skill `campana-toponimos` (raíz del repo,
+`.claude/skills/`). En corto: la mesa de trabajo es
+`6-fusion/TOPONIMOS_POR_FUENTE.md`; se elige un lote con criterio dicho; se
+llega a la página del libro (Esteves tiene OCR con desfases anotados); se lee
+la entrada entera; se cruza contra canon, lexicón, morfemas, índice, nodos y
+mapa; se decide el nivel; las voces que no son la glosa impresa ni nuestro
+análisis van a `lecturas`; la entrada se escribe en `lexicon_toponimos.py` con
+id explícito y se regenera; la cola de Esteves se cierra nombre a nombre; y la
+bitácora de la fuente dice qué dejó el lote.
+
+Lo hecho: lote 1 (2026-09-06), los del mapa de Miguel que están en Esteves;
+lote 2 (2026-09-07), los cinco del «caribe insular», cerrados con B.6. Lo que
+sigue, por las dos vías que la skill §9 describe: **el diccionario de Medina
+Colina** ([[medina-colina-sxx]]), cuyo dictado manda topónimos a la cola por
+tres caminos (voz que es topónimo en Esteves, lugar que solo Medina nombra,
+isoglosa por lugar), y el **barrido del mapa vivo de la Kaketiana** topónimo por
+topónimo, cuyo territorio es el de la polity costera ([[polities-caquetias]]).
+Las once ciudades de Castellanos y el resto del índice de Esteves siguen en la
+cola.
+
 ## Lo que queda
 
 - Los **213 topónimos ABC de van Buurt §7 sin glosa** son el mayor corpus sin

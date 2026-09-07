@@ -762,6 +762,59 @@ NIVEL_C = {
              "eje": "referente"},
         ],
     },
+    # ── Lote 2 (2026-09-07): los del «caribe insular», cerrados con B.6 ──
+    "amuay": {
+        "id": "toponimo-090", "fuente": "esteves-1989", "pagina": 14,
+        "glosa_fuente": "«la voz da la idea de cavidad subterránea, haitón, cueva "
+                        "grande. Y justamente en las cercanías de Amuay hay unas "
+                        "cuevas naturales que debieron ser habituales residencias "
+                        "de los nativos»",
+        "segmentacion": "amu- + -ay   [sin morfema caquetío que alinee]",
+        "razon": "la glosa es una idea del autor («da la idea de»), sin fuente; "
+                 "ningún morfema del canon alinea. Lo que sí está atestiguado "
+                 "por otra vía es que el nombre es el ETNÓNIMO de uno de los dos "
+                 "clanes caquetíos de la península, los Amuayes, con territorio "
+                 "al sur y reasentamiento Cayerda → Moruy (Delmonte 1883 vía "
+                 "Oliver cap. 3 pp. 275-276; paraguana_dos_clanes.yaml). El "
+                 "topónimo hereda el nombre del grupo, como la bahía de "
+                 "Guaranao el del otro clan. Se registra en C por el etnónimo, "
+                 "no por la glosa.",
+        "observacion": "⚠ Esteves lo atribuye al «caribe insular» «por su "
+                       "fonética, como batey, mamey, caney, carey» (p. 16): "
+                       "cuatro taínismos del español general; y el caribe insular "
+                       "de Breton es lengua arahuaca. B.6 (Oliver §3.2.4, minada "
+                       "2026-09-07) no da ningún grupo caribe en Paraguaná. "
+                       "Conflicto amuay-caquetio-vs-caribe resuelto a favor de la "
+                       "etnohistoria (propuesta). Bahía y población de Los "
+                       "Taques; 1881: 8 casas, 60 vecinos; «hoy» ~400 casas y "
+                       "3.000 habitantes; también la etimología «muelle» (1924), "
+                       "que Esteves descarta.",
+        "lecturas": [
+            {"tipo": "hipotesis",
+             "lectura": "el topónimo es el etnónimo del clan Amuay, sub-grupo "
+                        "caquetío que controlaba el sur de la península con "
+                        "playas de pesca excluyentes frente a los Guaranaos",
+             "quien": "proyecto", "fecha": "2026-09-07", "eje": "referente",
+             "procedencia": dict(obra="oliver-1989-cap3", pagina="275-276"),
+             "apoyo": "González Batista y Delmonte 1883 vía Oliver; el mismo patrón "
+                      "etnónimo → topónimo que Guaranao → bahía de Guaranao"},
+            {"tipo": "etimologia-analitica",
+             "lectura": "'cavidad subterránea, cueva grande', por las cuevas "
+                        "naturales cercanas; voz del caribe insular «por su "
+                        "fonética»",
+             "quien": "Esteves 1989", "fecha": "2026-09-07", "eje": "significado",
+             "procedencia": dict(obra="esteves-1989", pagina=16),
+             "veredicto": "inferencia fonética sin documento; la etiqueta de "
+                          "estrato está mal puesta (6-fusion/oliver_324_caribes.yaml "
+                          "§5). Se conserva como voz del cronista local"},
+            {"tipo": "etimologia-popular",
+             "lectura": "de «muelle», por el endeble muelle de 1924 cuando el "
+                        "puerto fue aduana marítima",
+             "quien": "«algunos, inocentemente», según Esteves", "fecha": "2026-09-07",
+             "eje": "significado", "procedencia": dict(obra="esteves-1989", pagina=16),
+             "veredicto": "anacrónica: el nombre es anterior (censo 1881)"},
+        ],
+    },
     "supí": {
         "id": "toponimo-077", "fuente": "esteves-1989", "pagina": 61,
         "glosa_fuente": "es un árbol cactáceo que exuda una goma medicinal, es el "
@@ -804,8 +857,11 @@ DESCARTES = {
                  "Sin ecuación bilingüe no hay morfema que despejar; se registra "
                  "para que la campaña no lo vuelva a abrir sin dato nuevo.",
         "fuente": "esteves-1989",
-        "ids": {"charaima": "toponimo-082", "jacuque": "toponimo-089"},
-        "paginas": {"charaima": 35, "jacuque": 44},
+        "ids": {"charaima": "toponimo-082", "jacuque": "toponimo-089",
+                "elegüey": "toponimo-091", "maragüey": "toponimo-092",
+                "jamaica": "toponimo-093"},
+        "paginas": {"charaima": 35, "jacuque": 44, "elegüey": 37, "maragüey": 37,
+                    "jamaica": 46},
         "formas": [
             "charaima (población entre Adícora y Baraived; censo 1881: 79 casas, "
             "527 habitantes; nombre primitivo Charaide en su Título de "
@@ -816,6 +872,22 @@ DESCARTES = {
             "caballos de Santo Domingo en 1530; etimología popular: jaca "
             "andaluza + ¡huy!, «se dice que los nativos, sorprendidos al ver los "
             "caballos o jacas, exclamaron, asustados»)",
+            # Lote 2 (2026-09-07): los «caribe insular» que B.6 dejó sin estrato.
+            # Esteves no da glosa, solo la etiqueta — y la etiqueta es inferencia
+            # suya sobre la terminación -güey, con nombre de lengua equivocado
+            # (el caribe insular de Breton es arahuaco). Ver oliver_324_caribes §5.
+            "elegüey (nombre antiguo de Punta Cardón, hoy solo del cementerio "
+            "viejo en la Puntica; «es voz taína, del caribe insular», sin glosa: "
+            "lo que Esteves ve es la terminación -güey, formante de la toponimia "
+            "taína; ningún morfema caquetío alinea)",
+            "maragüey (pequeña península en Casicure, en la otra costa del "
+            "Golfete de Coro; «también es voz taína», sin glosa; misma "
+            "terminación -güey que Elegüey; no está en el índice de Esteves "
+            "porque no es de Paraguaná)",
+            "jamaica (lugar de Buenavista formado alrededor de «la casa grande de "
+            "Jamaica»: con toda probabilidad una hacienda bautizada con el nombre "
+            "de la isla; la glosa que da Esteves, «tierra de los manantiales», es "
+            "la etimología taína de la isla, de los libros, no un dato local)",
         ],
     },
     "glosa meramente referencial": {

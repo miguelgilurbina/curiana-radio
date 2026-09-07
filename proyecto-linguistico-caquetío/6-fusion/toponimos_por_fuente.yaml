@@ -9,16 +9,16 @@ meta:
     de fusión.'
   marcas: ★ en el canon · ≡ en el índice de Esteves · ◆ en el mapa de Miguel · ⌂ en asentamientos.yaml
   resumen:
-    menciones: 632
-    formas_distintas: 493
+    menciones: 639
+    formas_distintas: 494
     fuentes: 13
     por_fuente:
       zavala-reyes-2015:
         menciones: 58
         formas: 58
       esteves-1989:
-        menciones: 206
-        formas: 187
+        menciones: 212
+        formas: 188
       castellanos-elegias:
         menciones: 11
         formas: 11
@@ -35,7 +35,7 @@ meta:
         menciones: 23
         formas: 23
       oliver-1989-cap3:
-        menciones: 5
+        menciones: 6
         formas: 5
       medina-colina-sxx:
         menciones: 22
@@ -52,9 +52,9 @@ meta:
       proyecto:
         menciones: 3
         formas: 3
-    en_canon: 89
+    en_canon: 93
     en_nodos: 14
-    sin_canon_ni_nodo: 395
+    sin_canon_ni_nodo: 392
     cruces:
       mapa_de_miguel_en_esteves:
       - Buchuaco
@@ -415,8 +415,8 @@ por_fuente:
 - obra: esteves-1989
   en_bibliografia: true
   descripcion: 'el índice ''Topónimos compilados'' de Paraguaná (pp. 68-69): la cola de la campaña'
-  menciones: 206
-  formas: 187
+  menciones: 212
+  formas: 188
   toponimos:
   - forma: judibana
     tipo: canon
@@ -513,6 +513,24 @@ por_fuente:
     dato: 'en el caribe insular, mái significa: manantial, ojo de agua; iruma: azul celeste, o sea que Maitiruma
       expresa…'
     ref: toponimo-078 · nivel C · topónimo (estrato caribe insular, según Esteves) · fuente procedencia
+  - forma: amuay
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: «la voz da la idea de cavidad subterránea, haitón, cueva grande. Y justamente en las cercanías de Amuay
+      hay u…
+    ref: toponimo-090 · nivel C · topónimo · fuente procedencia
+  - forma: amuay
+    tipo: lectura:etimologia-analitica
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: '''cavidad subterránea, cueva grande'', por las cuevas naturales cercanas; voz del caribe insular «por
+      su fonéti…'
+    ref: toponimo-090 · Esteves 1989 · 2026-09-07 · inferencia fonética sin documento; la etiqueta de estrato e…
+  - forma: amuay
+    tipo: lectura:etimologia-popular
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: de «muelle», por el endeble muelle de 1924 cuando el puerto fue aduana marítima
+    ref: 'toponimo-090 · «algunos, inocentemente», según Esteves · 2026-09-07 · anacrónica: el nombre es anterior
+      (censo 1881)'
   - forma: supí
     tipo: canon
     donde: 2-lengua/toponimos.yaml
@@ -530,6 +548,24 @@ por_fuente:
     dato: sabanas y hatos en Jadacaquiva; Punta de Jacuque, por donde «no se puede confirmar históricamente» Federmann
       …
     ref: toponimo-089 · nivel descartado · topónimo · fuente procedencia
+  - forma: elegüey
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: nombre antiguo de Punta Cardón, hoy solo del cementerio viejo en la Puntica; «es voz taína, del caribe
+      insula…
+    ref: toponimo-091 · nivel descartado · topónimo · fuente procedencia
+  - forma: maragüey
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: pequeña península en Casicure, en la otra costa del Golfete de Coro; «también es voz taína», sin glosa;
+      misma…
+    ref: toponimo-092 · nivel descartado · topónimo · fuente procedencia
+  - forma: jamaica
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: 'lugar de Buenavista formado alrededor de «la casa grande de Jamaica»: con toda probabilidad una hacienda
+      baut…'
+    ref: toponimo-093 · nivel descartado · topónimo · fuente procedencia
   - forma: Guacurebo
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
@@ -606,6 +642,18 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
     ref: toponimo-077
+  - forma: Amuay
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-090
+  - forma: Elegüey
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-091
+  - forma: Jamaica
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-093
   - forma: Acaboa
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
@@ -618,10 +666,6 @@ por_fuente:
   - forma: Aguaque
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Amuay
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-    dato: estrato no caquetío según Esteves
   - forma: Antuní
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
@@ -805,10 +849,6 @@ por_fuente:
   - forma: Duraguaco
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Elegüey
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-    dato: estrato no caquetío según Esteves
   - forma: Garrapata
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
@@ -884,10 +924,6 @@ por_fuente:
   - forma: Jagüe
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Jamaica
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-    dato: estrato no caquetío según Esteves
   - forma: Jarayadito
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
@@ -1464,9 +1500,15 @@ por_fuente:
 - obra: oliver-1989-cap3
   en_bibliografia: true
   descripcion: los asientos de los dos clanes de Paraguaná según Delmonte 1883
-  menciones: 5
+  menciones: 6
   formas: 5
   toponimos:
+  - forma: amuay
+    tipo: lectura:hipotesis
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: el topónimo es el etnónimo del clan Amuay, sub-grupo caquetío que controlaba el sur de la península con
+      playa…
+    ref: toponimo-090 · proyecto · 2026-09-07
   - forma: Cayerda
     tipo: asiento-de-clan
     donde: 6-fusion/paraguana_dos_clanes.yaml §paraguana-clanes-asentamientos
@@ -3323,18 +3365,25 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - van-buurt-2014 · lectura · §8-10
-- forma: Amuay
-  variantes: []
+- forma: amuay
+  variantes:
+  - Amuay
   fuentes:
   - esteves-1989
   - oliver-1989-cap3
   cruces:
-    en_canon: null
+    en_canon: toponimo-090 · nivel C
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-090 · nivel C · topónimo · fuente procedencia
+  - oliver-1989-cap3 · lectura:hipotesis · toponimo-090 · proyecto · 2026-09-07
+  - esteves-1989 · lectura:etimologia-analitica · toponimo-090 · Esteves 1989 · 2026-09-07 · inferencia fonética
+    sin documento; la etiqueta de estrato e…
+  - 'esteves-1989 · lectura:etimologia-popular · toponimo-090 · «algunos, inocentemente», según Esteves · 2026-09-07
+    · anacrónica: el nombre es anterior (censo 1881)'
+  - esteves-1989 · indice · toponimo-090
   - oliver-1989-cap3 · clan · pp. 275-276
 - forma: Anabui
   variantes: []
@@ -5341,17 +5390,19 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - van-buurt-2014 · indice-abc · §7
-- forma: Elegüey
-  variantes: []
+- forma: elegüey
+  variantes:
+  - Elegüey
   fuentes:
   - esteves-1989
   cruces:
-    en_canon: null
+    en_canon: toponimo-091 · nivel descartado
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-091 · nivel descartado · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-091
 - forma: Fofoti
   variantes: []
   fuentes:
@@ -6012,17 +6063,19 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: Jamaica
-  variantes: []
+- forma: jamaica
+  variantes:
+  - Jamaica
   fuentes:
   - esteves-1989
   cruces:
-    en_canon: null
+    en_canon: toponimo-093 · nivel descartado
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-093 · nivel descartado · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-093
 - forma: Jarayadito
   variantes: []
   fuentes:
@@ -6655,6 +6708,17 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
+- forma: maragüey
+  variantes: []
+  fuentes:
+  - esteves-1989
+  cruces:
+    en_canon: toponimo-092 · nivel descartado
+    en_esteves: true
+    en_mapa_miguel: false
+    en_nodos: null
+  menciones:
+  - esteves-1989 · canon · toponimo-092 · nivel descartado · topónimo · fuente procedencia
 - forma: Masiduri
   variantes: []
   fuentes:

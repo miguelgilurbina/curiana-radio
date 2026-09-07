@@ -17,11 +17,11 @@
 # ─────────────────────────────────────────────────────────────────────────
 meta:
   recogido: '2026-08-25'
-  estado: cola-de-trabajo   # lote 1 procesado el 2026-09-06 (los del mapa de Miguel)
+  estado: cola-de-trabajo   # lote 1 (2026-09-06, los del mapa de Miguel) y lote 2 (2026-09-07, los «caribe insular»; Maitiruma fue en el 1) procesados
   obra: esteves-1989
   total_indice: 186
-  ya_en_canon: 19
-  por_procesar: 167
+  ya_en_canon: 22
+  por_procesar: 164
 
 # Los que YA están en 2-lengua/toponimos.yaml (referencia cruzada):
 ya_registrados:
@@ -44,6 +44,9 @@ ya_registrados:
   - {forma: Maicara, canon: toponimo-085, lote: 2026-09-06}
   - {forma: Maitiruma, canon: toponimo-078, lote: 2026-09-06}
   - {forma: Supí, canon: toponimo-077, lote: 2026-09-06}
+  - {forma: Amuay, canon: toponimo-090, lote: 2026-09-07, estrato: no-caquetio-segun-esteves}
+  - {forma: Elegüey, canon: toponimo-091, lote: 2026-09-07, estrato: no-caquetio-segun-esteves}
+  - {forma: Jamaica, canon: toponimo-093, lote: 2026-09-07, estrato: no-caquetio-segun-esteves}
 
 # Los que NO están — la cola. `estrato` marca los que Esteves atribuye a
 # lengua no caquetía (la pregunta de B.1 / Oliver §3.2.4):
@@ -52,7 +55,6 @@ por_procesar:
   - {forma: Adaro}
   - {forma: Adícora}
   - {forma: Aguaque}
-  - {forma: Amuay, estrato: no-caquetio-segun-esteves}
   - {forma: Antuní}
   - {forma: Arajó}
   - {forma: Asaro}
@@ -114,7 +116,6 @@ por_procesar:
   - {forma: Dabadubare}
   - {forma: Dibaragua}
   - {forma: Duraguaco}
-  - {forma: Elegüey, estrato: no-caquetio-segun-esteves}
   - {forma: Garrapata}
   - {forma: Gisebo}
   - {forma: Guacuira}
@@ -140,7 +141,6 @@ por_procesar:
   - {forma: Iticuna}
   - {forma: Jabe}
   - {forma: Jagüe}
-  - {forma: Jamaica, estrato: no-caquetio-segun-esteves}
   - {forma: Jarayadito}
   - {forma: Jariaca}
   - {forma: Jayana}
