@@ -93,6 +93,18 @@ aplicó en los lotes:
 
 - «Descartado» = sin etimología despejable, **no** «no existió». La existencia
   y la época se juzgan en `asentamientos.yaml`.
+- **Un nombre que sigue vivo es dato** (Miguel, 2026-09-07). Que Miraca se
+  llame igual desde 1538, que Capatárida y Zazárida sigan en el mapa, o que
+  Uarayadito conserve en 2026 lo que el censo de 1881 escribió Sarayadite, es
+  continuidad de asentamiento aunque no haya etimología: va en `observacion`
+  con la cadena de formas fechadas, y el descartado se registra con ella. Y
+  a veces el mapa es más fiel que el libro: Yabuquiva conserva la b del étimo
+  yabo que la cabecera de Esteves (Yauquiba) perdió.
+- **Antes de decir que un nombre del mapa no está en la fuente**, permutar la
+  inicial (j~s~u~h: Jarayadito / Sarayadite / Uarayadito), b~v~p (Barunú /
+  Parunu), r~b (Guacurebo / Guacubero) y la terminación (Cayeruba / Cayerúa /
+  Cayerda), y buscar por la raíz. Los ocho «fuera de Esteves» del lote 4
+  estaban todos.
 - Un etnónimo con territorio atestiguado (Amuay) entra en C por el etnónimo
   aunque la glosa no valga.
 - Los conflictos de glosa entre fuentes **no se resuelven cambiando la glosa**:

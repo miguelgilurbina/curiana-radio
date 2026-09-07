@@ -163,12 +163,13 @@ La mesa de trabajo es `6-fusion/TOPONIMOS_POR_FUENTE.md` (generada por
 tocado, por obra, cruzados contra el canon, Esteves, los nodos y el mapa de
 Miguel. Se regenera; no se edita. El protocolo completo es la skill
 `campana-toponimos`. Lotes hechos: 1 (2026-09-06, los del mapa de Miguel en
-Esteves, 15) y 2 (2026-09-07, los «caribe insular», 4 más). Siguientes, por
+Esteves, 15), 2 (2026-09-07, los «caribe insular», 4), 3 (las once ciudades de
+Castellanos, 8 entradas nuevas) y 4 (los ocho del mapa «fuera de Esteves», que
+estaban con otra grafía). Siguientes, por
 las dos vías de la skill §9: **el diccionario de Medina Colina** (cada sesión
 de dictado cierra con `juntar_toponimos.py`; lo que quede ≡ sin ★ es el lote)
 y el **barrido del mapa vivo de la Kaketiana** (lista con coordenadas por
-región → cruce con la mesa → lo nuevo a la cola con deuda declarada). Las once
-ciudades de Castellanos y el resto del índice de Esteves, a su ritmo.
+región → cruce con la mesa → lo nuevo a la cola con deuda declarada). El resto del índice de Esteves (155 en cola), a su ritmo.
 
 ~~Implementar `lecturas` en el esquema + `compilar_lengua.py`~~ (hecho el
 2026-09-05, con `definicion_aceptada_simulacion`; ver datos-de-lengua.md); retro-poblar

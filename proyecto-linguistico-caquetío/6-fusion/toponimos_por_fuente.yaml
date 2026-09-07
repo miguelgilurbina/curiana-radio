@@ -9,25 +9,25 @@ meta:
     de fusión.'
   marcas: ★ en el canon · ≡ en el índice de Esteves · ◆ en el mapa de Miguel · ⌂ en asentamientos.yaml
   resumen:
-    menciones: 639
-    formas_distintas: 494
-    fuentes: 13
+    menciones: 667
+    formas_distintas: 495
+    fuentes: 14
     por_fuente:
       zavala-reyes-2015:
         menciones: 58
         formas: 58
       esteves-1989:
-        menciones: 212
-        formas: 188
+        menciones: 222
+        formas: 190
       castellanos-elegias:
-        menciones: 11
-        formas: 11
+        menciones: 12
+        formas: 12
       velasco-2015-resistencia:
         menciones: 5
         formas: 5
       gonzalez-batista-nombre-de-coro:
-        menciones: 12
-        formas: 10
+        menciones: 13
+        formas: 11
       arcaya-1920:
         menciones: 9
         formas: 9
@@ -35,8 +35,8 @@ meta:
         menciones: 23
         formas: 23
       oliver-1989-cap3:
-        menciones: 6
-        formas: 5
+        menciones: 7
+        formas: 6
       medina-colina-sxx:
         menciones: 22
         formas: 20
@@ -47,14 +47,17 @@ meta:
         menciones: 212
         formas: 180
       testimonio-miguel:
-        menciones: 35
-        formas: 31
+        menciones: 41
+        formas: 37
       proyecto:
-        menciones: 3
-        formas: 3
-    en_canon: 93
-    en_nodos: 14
-    sin_canon_ni_nodo: 392
+        menciones: 4
+        formas: 4
+      sin-procedencia:
+        menciones: 8
+        formas: 8
+    en_canon: 107
+    en_nodos: 15
+    sin_canon_ni_nodo: 382
     cruces:
       mapa_de_miguel_en_esteves:
       - Buchuaco
@@ -76,23 +79,24 @@ meta:
       - Cayerda
       - Davaduvare
       - Guacubero
-      - La Rinconada
       - Parunu
-      - Pedregalito
       - Uarayadito
       - Yabuquiva
+      - la rinconada
+      - pedregalito
       castellanos_1589_en_esteves:
       - Guaidabacoa
-      - Hurraque
-      - Miraca
-      - Todariquiba
+      - guadabacoa
+      - hurraque
       - jurijurebo
+      - miraca
+      - todariquiba
       castellanos_1589_y_bastidas_1538:
-      - Miraca
-      - Todariquiba
+      - miraca
+      - todariquiba
       bastidas_1538_en_esteves:
-      - Miraca
-      - Todariquiba
+      - miraca
+      - todariquiba
       medina_colina_en_esteves:
       - Adícora
       - Carirubana
@@ -109,15 +113,20 @@ meta:
       - Adícora (3)
       - Coriana (3)
       - Guaidabacoa (3)
-      - Miraca (3)
       - Moruy (4)
       - Santa Ana (3)
-      - Todariquiba (3)
+      - cayeruba (3)
+      - dabudare (3)
+      - guacurebo (3)
+      - guadabacoa (4)
+      - hurraque (3)
       - jadacaquiva (3)
       - judibana (3)
       - jurijurebo (4)
+      - miraca (3)
       - paraguana (4)
       - supí (4)
+      - todariquiba (4)
   avisos:
   - '⚠️ obra sin ficha en bibliografia.yaml: proyecto'
 por_fuente:
@@ -415,8 +424,8 @@ por_fuente:
 - obra: esteves-1989
   en_bibliografia: true
   descripcion: 'el índice ''Topónimos compilados'' de Paraguaná (pp. 68-69): la cola de la campaña'
-  menciones: 212
-  formas: 188
+  menciones: 222
+  formas: 190
   toponimos:
   - forma: judibana
     tipo: canon
@@ -429,6 +438,22 @@ por_fuente:
     dato: «Judibana era una hermosa mujer, que era esposa del Gran Cacique de Jurijurebo»
     ref: 'toponimo-075 · leyenda que recoge Esteves · 2026-09-06 · el propio autor: «Es pura leyenda, nada consta
       en documento…'
+  - forma: yauquiba
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: 'Yabu-quiba: la piedra del yabo, árbol resinoso'
+    ref: toponimo-105 · nivel A · topónimo · fuente procedencia
+  - forma: guadabacoa
+    tipo: lectura:glosa-fuente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: «Guaidabacoa, con sílaba epentética intercalada, es una voz compuesta de guái, árbol parecido a la ceiba
+      y ba…
+    ref: toponimo-008 · Esteves 1989 · 2026-09-07 · way 'árbol parecido a la ceiba' es caquetío-atestiguado en …
+  - forma: dabudare
+    tipo: lectura:glosa-fuente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: 'Dabadubare, aldea del municipio Santa Ana: «Dabuda: barro de loza (ver Abudure)»'
+    ref: toponimo-011 · Esteves 1989 · 2026-09-07 · misma raíz dabuda que Zavala; Esteves no glosa el resto (-b…
   - forma: abudure
     tipo: canon
     donde: 2-lengua/toponimos.yaml
@@ -439,6 +464,11 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml
     dato: 'los dos buches. Buche: cardo, Aco: par, casal, pareja'
     ref: toponimo-086 · nivel B · topónimo · fuente procedencia
+  - forma: guacurebo
+    tipo: lectura:glosa-fuente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: '«proviene de Guacoa, pero más explícito por el sufijo ebo, o sea que expresa: el paso de la guacoa»'
+    ref: 'toponimo-021 · Esteves 1989 · 2026-09-07 · compatible con ebo ''paso'' (Zavala #117); la glosa de Zavala…'
   - forma: adaure
     tipo: canon
     donde: 2-lengua/toponimos.yaml
@@ -531,6 +561,39 @@ por_fuente:
     dato: de «muelle», por el endeble muelle de 1924 cuando el puerto fue aduana marítima
     ref: 'toponimo-090 · «algunos, inocentemente», según Esteves · 2026-09-07 · anacrónica: el nombre es anterior
       (censo 1881)'
+  - forma: todariquiba
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: '«Tubariquiba y no Todariquiba, quiere decir: pedregal. Tuba: aglomeración. Quiba: pedruzco»'
+    ref: toponimo-094 · nivel C · topónimo · fuente procedencia
+  - forma: miraca
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: '«De la voz hemos averiguado que en lengua guaraúna, Miraca es atarraya. Miraca sanuco: atarraya pequeña»'
+    ref: toponimo-095 · nivel C · topónimo (glosa guaraúna, según Esteves) · fuente procedencia
+  - forma: miraca
+    tipo: lectura:etimologia-analitica
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: '''atarraya'' en warao (guaraúno); «Miraca sanuco: atarraya pequeña»'
+    ref: toponimo-095 · Esteves 1989 · 2026-09-07 · sin cita ni ruta de contacto warao–caquetío; encaja con un …
+  - forma: jarayadito
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: «Jarayadito significa espinar, retamal, ñaragatal. El sufijo dito es distintivo de los nombres colectivos
+      abu…
+    ref: toponimo-102 · nivel C · topónimo · fuente procedencia
+  - forma: barunú
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: «El nombre viene de Barubaru (palo delgado), palmera con cuyas hojas fabrican esteras los nativos. Esta
+      palme…
+    ref: toponimo-103 · nivel C · topónimo · fuente procedencia
+  - forma: cayeruba
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: «¿Origen de la voz? ¿Simaruba? Es posible, hay abundancia de este árbol rutáceo en sus contornos» (leído
+      en l…
+    ref: toponimo-104 · nivel C · topónimo · fuente procedencia
   - forma: supí
     tipo: canon
     donde: 2-lengua/toponimos.yaml
@@ -654,6 +717,42 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
     ref: toponimo-093
+  - forma: Todariquiba
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-094
+  - forma: Miraca
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-095
+  - forma: Hurraque
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-096
+  - forma: Jarayadito
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-102
+  - forma: Barunú
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-103
+  - forma: Cayeruba
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-104
+  - forma: Yauquiba
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-105
+  - forma: Dabadubare
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-011
+  - forma: Guaidabacoa
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-008
   - forma: Acaboa
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
@@ -703,9 +802,6 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Barisigua
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Barunú
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Bibidure
@@ -766,9 +862,6 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Caujarito
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Cayeruba
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Cayude
@@ -840,9 +933,6 @@ por_fuente:
   - forma: Chunaure
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Dabadubare
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Dibaragua
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
@@ -865,9 +955,6 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Guachunepe
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Guaidabacoa
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Guanadito
@@ -903,9 +990,6 @@ por_fuente:
   - forma: Hayo
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Hurraque
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Imujo
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
@@ -922,9 +1006,6 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Jagüe
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Jarayadito
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Jariaca
@@ -970,9 +1051,6 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Michaco
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Miraca
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Misaray
@@ -1107,9 +1185,6 @@ por_fuente:
   - forma: Tobagía
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Todariquiba
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Tubarao
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
@@ -1143,15 +1218,18 @@ por_fuente:
   - forma: Yarí
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Yauquiba
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
 - obra: castellanos-elegias
   en_bibliografia: true
   descripcion: las 'ciudades de grandísimo momento' en torno a Coro (II, Elegía 1, 1589)
-  menciones: 11
-  formas: 11
+  menciones: 12
+  formas: 12
   toponimos:
+  - forma: guadabacoa
+    tipo: lectura:hipotesis
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: la Guaybacoa «ciudad de grandísimo momento» de Castellanos (1589) y la Guaibacoa de Bastidas (1538) serían
+      es…
+    ref: 'toponimo-008 · proyecto · 2026-09-07 · no demostrada: Castellanos dice «doce leguas en torno» de C…'
   - forma: Todariquibo
     tipo: lista-1589
     donde: 6-fusion/castellanos_1589_toponimos.yaml §lista_de_ciudades
@@ -1269,8 +1347,8 @@ por_fuente:
 - obra: gonzalez-batista-nombre-de-coro
   en_bibliografia: true
   descripcion: lecturas etimológicas del autor — con cautela declarada; cada una se juzga contra Zavala
-  menciones: 12
-  formas: 10
+  menciones: 13
+  formas: 11
   toponimos:
   - forma: jurijurebo
     tipo: lectura:etimologia-analitica
@@ -1278,6 +1356,11 @@ por_fuente:
     dato: hure 'arena' -> hurehure 'arenal' -> hurehurebo 'lugar de muchos arenales' (reduplicación + sufijo -bo)
     ref: 'toponimo-001 · González Batista · 2026-08-25 · descartada como lectura principal (2026-08-25): Zavala
       #178…'
+  - forma: guadabacoa
+    tipo: lectura:etimologia-analitica
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: Guaibacoa = 'el valle (bacoa) de las ceibas (guay)'
+    ref: toponimo-008 · González Batista · 2026-08-25 · coincide con Esteves por vía independiente; 'valle' es mati…
   - forma: paraguana
     tipo: lectura:etimologia-analitica
     donde: 2-lengua/toponimos.yaml §lecturas
@@ -1500,8 +1583,8 @@ por_fuente:
 - obra: oliver-1989-cap3
   en_bibliografia: true
   descripcion: los asientos de los dos clanes de Paraguaná según Delmonte 1883
-  menciones: 6
-  formas: 5
+  menciones: 7
+  formas: 6
   toponimos:
   - forma: amuay
     tipo: lectura:hipotesis
@@ -1509,6 +1592,12 @@ por_fuente:
     dato: el topónimo es el etnónimo del clan Amuay, sub-grupo caquetío que controlaba el sur de la península con
       playa…
     ref: toponimo-090 · proyecto · 2026-09-07
+  - forma: cayeruba
+    tipo: lectura:hipotesis
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: Cayerda (Delmonte 1883), Cayeruba (Esteves 1989) y Cayerúa (mapa 2026) son un solo lugar, el primer asiento
+      d…
+    ref: toponimo-104 · proyecto · 2026-09-07 · muy probable por la geografía (Esteves y el mapa lo ponen d…
   - forma: Cayerda
     tipo: asiento-de-clan
     donde: 6-fusion/paraguana_dos_clanes.yaml §paraguana-clanes-asentamientos
@@ -2950,8 +3039,8 @@ por_fuente:
   en_bibliografia: false
   descripcion: 'Miguel Gil Urbina: lecturas de investigación coloquial, tradición local, mapa vivo — deuda sin-procedencia,
     por diseño'
-  menciones: 35
-  formas: 31
+  menciones: 41
+  formas: 37
   toponimos:
   - forma: jurijurebo
     tipo: lectura:testimonio-residente
@@ -2971,12 +3060,43 @@ por_fuente:
     dato: Judibana era el nombre de la hija del cacique Manaure, unida al señor de Jurijurebo, al que mataron con
       perro…
     ref: toponimo-075 · Miguel Gil Urbina, criado en Judibana · 2026-08-25
+  - forma: yauquiba
+    tipo: lectura:testimonio-residente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: vivo en el mapa actual como Yabuquiva, sector del Capubana; con Jadacaquiva hace crecer la familia -quiva/-qu…
+    ref: toponimo-105 · Miguel Gil Urbina (fotos del mapa) · 2026-09-01
+  - forma: dabudare
+    tipo: lectura:testimonio-residente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: vivo en el mapa actual como Davaduvare, sector del Capubana, junto a Uarayadito y Cayerúa
+    ref: toponimo-011 · Miguel Gil Urbina (fotos del mapa) · 2026-09-01
+  - forma: guacurebo
+    tipo: lectura:testimonio-residente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: vivo en el mapa actual como Guacubero, sector del Capubana
+    ref: toponimo-021 · Miguel Gil Urbina (fotos del mapa) · 2026-09-01
   - forma: maitiruma
     tipo: lectura:testimonio-residente
     donde: 2-lengua/toponimos.yaml §lecturas
     dato: el 'manantial azul' cae al pie este del Capubana, donde sigue habiendo agua y uno de los pocos bosques
       xerófi…
     ref: toponimo-078 · Miguel Gil Urbina (mapa y terreno) · 2026-09-01
+  - forma: jarayadito
+    tipo: lectura:testimonio-residente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: vivo en el mapa actual como Uarayadito, en el mismo sector que Moruy y Cayerúa
+    ref: toponimo-102 · Miguel Gil Urbina (fotos del mapa) · 2026-09-01
+  - forma: barunú
+    tipo: lectura:testimonio-residente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: vivo en el mapa actual como Parunu, sector del Capubana
+    ref: toponimo-103 · Miguel Gil Urbina (fotos del mapa) · 2026-09-01
+  - forma: cayeruba
+    tipo: lectura:testimonio-residente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: '«Cayerda no existe, pero Cayerúa sí»: en el mapa actual aparece Cayerúa cerca de Moruy, con Uarayadito
+      en el …'
+    ref: toponimo-104 · Miguel Gil Urbina (mapa) · 2026-09-01
   - forma: Judibana
     tipo: testimonio-residente
     donde: 6-fusion/velasco_primarios_agi.yaml §judibana_tradicion
@@ -3147,8 +3267,8 @@ por_fuente:
   en_bibliografia: false
   descripcion: lecturas analíticas del propio proyecto registradas en el canon (segmentaciones propias, con su veredicto
     o su issue)
-  menciones: 3
-  formas: 3
+  menciones: 4
+  formas: 4
   toponimos:
   - forma: judibana
     tipo: lectura:hipotesis
@@ -3168,6 +3288,62 @@ por_fuente:
     dato: 'jada- sería el mismo jadi-/jaja- de Jadícuar ''jajatal'' (jajato, lexicón) + quiva ''piedra'': ''las
       piedras del j…'
     ref: toponimo-083 · proyecto · 2026-09-06 · sin apoyo independiente; la correspondencia d~j de jadicuar…
+  - forma: todariquiba
+    tipo: lectura:hipotesis
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: 'toda- (Zavala #250, desinencia sin valor) + ri + quiba ''piedra'': la forma atestiguada de 1538 y 1589
+      se segme…'
+    ref: toponimo-094 · proyecto · 2026-09-07 · pendiente de que toda- reciba glosa en otra fuente
+- obra: sin-procedencia
+  en_bibliografia: false
+  descripcion: entradas del canon cuya fuente no se pudo declarar ni inferir — deuda
+  menciones: 8
+  formas: 8
+  toponimos:
+  - forma: hurraque
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: Hurraqui en Castellanos; «pueblo caquetío mencionado por Juan de Castellanos» en Esteves p. 43, que supone
+      Ju…
+    ref: toponimo-096 · nivel descartado · topónimo · fuente deuda
+  - forma: zazarida
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: Zacerida en Castellanos; Sacerida/Zazárida en Arcaya; carta de Bastidas 1538 vía Oliver p. 251, nodo-006;
+      hoy…
+    ref: toponimo-097 · nivel descartado · topónimo · fuente deuda
+  - forma: carao
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: Castellanos; «Arcaya lo suponía en el actual Carazao»
+    ref: toponimo-098 · nivel descartado · topónimo · fuente deuda
+  - forma: tomodore
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: Tamadoré en Castellanos; Tomadoré cerca de La Vela según Arcaya; carta de Bastidas 1538 vía Oliver p.
+      251, no…
+    ref: toponimo-099 · nivel descartado · topónimo · fuente deuda
+  - forma: capatarida
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: Capatarida en Castellanos; carta de Bastidas 1538 vía Oliver p. 251, nodo-007; hoy Capatárida, capital
+      del mu…
+    ref: toponimo-100 · nivel descartado · topónimo · fuente deuda
+  - forma: carona
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: 'Castellanos; Arcaya: «ni el nombre queda» — pues aquí está, en 1589'
+    ref: toponimo-101 · nivel descartado · topónimo · fuente deuda
+  - forma: la rinconada
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: mapa vivo, sector del Capubana; fotos de Miguel 2026-09-01
+    ref: toponimo-106 · nivel descartado · topónimo · fuente deuda
+  - forma: pedregalito
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: mapa vivo, sector del Capubana; fotos de Miguel 2026-09-01
+    ref: toponimo-107 · nivel descartado · topónimo · fuente deuda
 indice_de_formas:
 - forma: abudure
   variantes:
@@ -3778,17 +3954,21 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - medina-colina-sxx · a-la-cola · p. 43
-- forma: Barunú
-  variantes: []
+- forma: barunú
+  variantes:
+  - Barunú
   fuentes:
   - esteves-1989
+  - testimonio-miguel
   cruces:
-    en_canon: null
+    en_canon: toponimo-103 · nivel C
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-103 · nivel C · topónimo · fuente procedencia
+  - testimonio-miguel · lectura:testimonio-residente · toponimo-103 · Miguel Gil Urbina (fotos del mapa) · 2026-09-01
+  - esteves-1989 · indice · toponimo-103
 - forma: Basiruti
   variantes: []
   fuentes:
@@ -4268,17 +4448,20 @@ indice_de_formas:
   menciones:
   - zavala-reyes-2015 · canon · toponimo-016 · nivel C · topónimo · fuente inferida-por-cruce
   - medina-colina-sxx · referido-por-voz · p. 57
-- forma: Capatarida
+- forma: capatarida
   variantes:
+  - Capatarida
   - Capatárida
   fuentes:
+  - sin-procedencia
   - castellanos-elegias
   cruces:
-    en_canon: null
+    en_canon: toponimo-100 · nivel descartado
     en_esteves: false
     en_mapa_miguel: false
     en_nodos: nodo-007 (atestiguado, precontacto desconocido)
   menciones:
+  - sin-procedencia · canon · toponimo-100 · nivel descartado · topónimo · fuente deuda
   - castellanos-elegias · lista-1589 · II, Elegía 1
 - forma: Capubana
   variantes: []
@@ -4346,16 +4529,19 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: Carao
-  variantes: []
+- forma: carao
+  variantes:
+  - Carao
   fuentes:
+  - sin-procedencia
   - castellanos-elegias
   cruces:
-    en_canon: null
+    en_canon: toponimo-098 · nivel descartado
     en_esteves: false
     en_mapa_miguel: false
     en_nodos: null
   menciones:
+  - sin-procedencia · canon · toponimo-098 · nivel descartado · topónimo · fuente deuda
   - castellanos-elegias · lista-1589 · II, Elegía 1
 - forma: Cararapa
   variantes: []
@@ -4427,16 +4613,19 @@ indice_de_formas:
   menciones:
   - esteves-1989 · indice
   - medina-colina-sxx · lugar-s-xx
-- forma: Carona
-  variantes: []
+- forma: carona
+  variantes:
+  - Carona
   fuentes:
+  - sin-procedencia
   - castellanos-elegias
   cruces:
-    en_canon: null
+    en_canon: toponimo-101 · nivel descartado
     en_esteves: false
     en_mapa_miguel: false
     en_nodos: null
   menciones:
+  - sin-procedencia · canon · toponimo-101 · nivel descartado · topónimo · fuente deuda
   - castellanos-elegias · lista-1589 · II, Elegía 1
 - forma: Caruburi
   variantes: []
@@ -4604,17 +4793,24 @@ indice_de_formas:
   - oliver-1989-cap3 · asiento-de-clan · p. 276
   - testimonio-miguel · verificacion-de-mapa (Miguel)
   - testimonio-miguel · mapa · 2026-09-01
-- forma: Cayeruba
-  variantes: []
+- forma: cayeruba
+  variantes:
+  - Cayeruba
   fuentes:
   - esteves-1989
+  - testimonio-miguel
+  - oliver-1989-cap3
   cruces:
-    en_canon: null
+    en_canon: toponimo-104 · nivel C
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-104 · nivel C · topónimo · fuente procedencia
+  - testimonio-miguel · lectura:testimonio-residente · toponimo-104 · Miguel Gil Urbina (mapa) · 2026-09-01
+  - oliver-1989-cap3 · lectura:hipotesis · toponimo-104 · proyecto · 2026-09-07 · muy probable por la geografía
+    (Esteves y el mapa lo ponen d…
+  - esteves-1989 · indice · toponimo-104
 - forma: Cayude
   variantes: []
   fuentes:
@@ -5298,7 +5494,7 @@ indice_de_formas:
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · indice · toponimo-011
 - forma: dabajuro
   variantes: []
   fuentes:
@@ -5314,13 +5510,18 @@ indice_de_formas:
   variantes: []
   fuentes:
   - zavala-reyes-2015
+  - esteves-1989
+  - testimonio-miguel
   cruces:
     en_canon: toponimo-011 · nivel B
-    en_esteves: false
+    en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
   - zavala-reyes-2015 · canon · toponimo-011 · nivel B · topónimo · fuente procedencia
+  - esteves-1989 · lectura:glosa-fuente · toponimo-011 · Esteves 1989 · 2026-09-07 · misma raíz dabuda que Zavala;
+    Esteves no glosa el resto (-b…
+  - testimonio-miguel · lectura:testimonio-residente · toponimo-011 · Miguel Gil Urbina (fotos del mapa) · 2026-09-01
 - forma: Damari
   variantes:
   - Daimari
@@ -5534,6 +5735,7 @@ indice_de_formas:
   fuentes:
   - zavala-reyes-2015
   - esteves-1989
+  - testimonio-miguel
   cruces:
     en_canon: toponimo-021 · nivel C
     en_esteves: true
@@ -5541,18 +5743,30 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - zavala-reyes-2015 · canon · toponimo-021 · nivel C · topónimo · fuente inferida-por-cruce
+  - 'esteves-1989 · lectura:glosa-fuente · toponimo-021 · Esteves 1989 · 2026-09-07 · compatible con ebo ''paso''
+    (Zavala #117); la glosa de Zavala…'
+  - testimonio-miguel · lectura:testimonio-residente · toponimo-021 · Miguel Gil Urbina (fotos del mapa) · 2026-09-01
   - esteves-1989 · indice · toponimo-021
 - forma: guadabacoa
   variantes: []
   fuentes:
   - zavala-reyes-2015
+  - esteves-1989
+  - gonzalez-batista-nombre-de-coro
+  - castellanos-elegias
   cruces:
     en_canon: toponimo-008 · nivel B
-    en_esteves: false
+    en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
   - zavala-reyes-2015 · canon · toponimo-008 · nivel B · topónimo · fuente procedencia
+  - esteves-1989 · lectura:glosa-fuente · toponimo-008 · Esteves 1989 · 2026-09-07 · way 'árbol parecido a la ceiba'
+    es caquetío-atestiguado en …
+  - gonzalez-batista-nombre-de-coro · lectura:etimologia-analitica · toponimo-008 · González Batista · 2026-08-25
+    · coincide con Esteves por vía independiente; 'valle' es mati…
+  - 'castellanos-elegias · lectura:hipotesis · toponimo-008 · proyecto · 2026-09-07 · no demostrada: Castellanos
+    dice «doce leguas en torno» de C…'
 - forma: Guadadubana
   variantes:
   - Guadedubana
@@ -5592,7 +5806,7 @@ indice_de_formas:
     en_mapa_miguel: false
     en_nodos: nodo-003 (atestiguado, precontacto desconocido)
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · indice · toponimo-008
   - castellanos-elegias · lista-1589 · II, Elegía 1
   - gonzalez-batista-nombre-de-coro · lectura · morfema bacoa = 'valle'
 - forma: guamabatriba
@@ -5902,19 +6116,22 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - velasco-2015-resistencia · primario-1538 · AGI, Legajo 218, f. 2
-- forma: Hurraque
+- forma: hurraque
   variantes:
+  - Hurraque
   - Hurraqui
   fuentes:
+  - sin-procedencia
   - esteves-1989
   - castellanos-elegias
   cruces:
-    en_canon: null
+    en_canon: toponimo-096 · nivel descartado
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - sin-procedencia · canon · toponimo-096 · nivel descartado · topónimo · fuente deuda
+  - esteves-1989 · indice · toponimo-096
   - castellanos-elegias · lista-1589 · II, Elegía 1
 - forma: iboa
   variantes: []
@@ -6076,17 +6293,21 @@ indice_de_formas:
   menciones:
   - esteves-1989 · canon · toponimo-093 · nivel descartado · topónimo · fuente procedencia
   - esteves-1989 · indice · toponimo-093
-- forma: Jarayadito
-  variantes: []
+- forma: jarayadito
+  variantes:
+  - Jarayadito
   fuentes:
   - esteves-1989
+  - testimonio-miguel
   cruces:
-    en_canon: null
+    en_canon: toponimo-102 · nivel C
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-102 · nivel C · topónimo · fuente procedencia
+  - testimonio-miguel · lectura:testimonio-residente · toponimo-102 · Miguel Gil Urbina (fotos del mapa) · 2026-09-01
+  - esteves-1989 · indice · toponimo-102
 - forma: Jariaca
   variantes: []
   fuentes:
@@ -6802,20 +7023,24 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: Miraca
+- forma: miraca
   variantes:
+  - Miraca
   - Myraca
   fuentes:
   - esteves-1989
   - castellanos-elegias
   - velasco-2015-resistencia
   cruces:
-    en_canon: null
+    en_canon: toponimo-095 · nivel C
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-095 · nivel C · topónimo (glosa guaraúna, según Esteves) · fuente procedencia
+  - esteves-1989 · lectura:etimologia-analitica · toponimo-095 · Esteves 1989 · 2026-09-07 · sin cita ni ruta de
+    contacto warao–caquetío; encaja con un …
+  - esteves-1989 · indice · toponimo-095
   - castellanos-elegias · lista-1589 · II, Elegía 1
   - velasco-2015-resistencia · primario-1538 · AGI, Legajo 218, f. 2
 - forma: Misaray
@@ -7102,16 +7327,19 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - testimonio-miguel · mapa · 2026-09-01
-- forma: Pedregalito
-  variantes: []
+- forma: pedregalito
+  variantes:
+  - Pedregalito
   fuentes:
+  - sin-procedencia
   - testimonio-miguel
   cruces:
-    en_canon: null
+    en_canon: toponimo-107 · nivel descartado
     en_esteves: false
     en_mapa_miguel: true
     en_nodos: null
   menciones:
+  - sin-procedencia · canon · toponimo-107 · nivel descartado · topónimo · fuente deuda
   - testimonio-miguel · mapa · 2026-09-01
 - forma: La Peña Clara
   variantes: []
@@ -7437,16 +7665,19 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - moron-2012-petroglifos · estacion-rupestre
-- forma: La Rinconada
-  variantes: []
+- forma: la rinconada
+  variantes:
+  - La Rinconada
   fuentes:
+  - sin-procedencia
   - testimonio-miguel
   cruces:
-    en_canon: null
+    en_canon: toponimo-106 · nivel descartado
     en_esteves: false
     en_mapa_miguel: true
     en_nodos: null
   menciones:
+  - sin-procedencia · canon · toponimo-106 · nivel descartado · topónimo · fuente deuda
   - testimonio-miguel · mapa · 2026-09-01
 - forma: río Hueque
   variantes: []
@@ -8145,22 +8376,38 @@ indice_de_formas:
   menciones:
   - zavala-reyes-2015 · canon · toponimo-045 · nivel descartado · topónimo · fuente inferida-por-cruce
   - medina-colina-sxx · referido-por-voz · p. 89
-- forma: Todariquiba
+- forma: todariquiba
   variantes:
+  - Todariquiba
   - Todariquibo
   fuentes:
   - esteves-1989
+  - proyecto
   - castellanos-elegias
   - velasco-2015-resistencia
   cruces:
-    en_canon: null
+    en_canon: toponimo-094 · nivel C
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: nodo-001 (atestiguado, precontacto desconocido)
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-094 · nivel C · topónimo · fuente procedencia
+  - proyecto · lectura:hipotesis · toponimo-094 · proyecto · 2026-09-07 · pendiente de que toda- reciba glosa en
+    otra fuente
+  - esteves-1989 · indice · toponimo-094
   - castellanos-elegias · lista-1589 · II, Elegía 1
   - velasco-2015-resistencia · primario-1538 · AGI, Legajo 218, f. 2
+- forma: tomodore
+  variantes: []
+  fuentes:
+  - sin-procedencia
+  cruces:
+    en_canon: toponimo-099 · nivel descartado
+    en_esteves: false
+    en_mapa_miguel: false
+    en_nodos: nodo-004 (atestiguado, precontacto desconocido)
+  menciones:
+  - sin-procedencia · canon · toponimo-099 · nivel descartado · topónimo · fuente deuda
 - forma: Tubarao
   variantes: []
   fuentes:
@@ -8849,17 +9096,21 @@ indice_de_formas:
   - van-buurt-2014 · canon · toponimo-071 · nivel descartado · topónimo · fuente inferida-por-cruce
   - van-buurt-2014 · indice-abc · §7
   - van-buurt-2014 · lectura · §8-10
-- forma: Yauquiba
-  variantes: []
+- forma: yauquiba
+  variantes:
+  - Yauquiba
   fuentes:
   - esteves-1989
+  - testimonio-miguel
   cruces:
-    en_canon: null
+    en_canon: toponimo-105 · nivel A
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-105 · nivel A · topónimo · fuente procedencia
+  - testimonio-miguel · lectura:testimonio-residente · toponimo-105 · Miguel Gil Urbina (fotos del mapa) · 2026-09-01
+  - esteves-1989 · indice · toponimo-105
 - forma: Yuditi
   variantes: []
   fuentes:
@@ -8896,19 +9147,6 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - van-buurt-2014 · indice-abc · §7
-- forma: Zacerida
-  variantes:
-  - Zazárida
-  - Sacerida
-  fuentes:
-  - castellanos-elegias
-  cruces:
-    en_canon: null
-    en_esteves: false
-    en_mapa_miguel: false
-    en_nodos: nodo-006 (atestiguado, precontacto desconocido)
-  menciones:
-  - castellanos-elegias · lista-1589 · II, Elegía 1
 - forma: zamurano
   variantes: []
   fuentes:
@@ -8920,3 +9158,19 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - zavala-reyes-2015 · canon · toponimo-053 · nivel descartado · topónimo · fuente inferida-por-cruce
+- forma: zazarida
+  variantes:
+  - Zacerida
+  - Zazárida
+  - Sacerida
+  fuentes:
+  - sin-procedencia
+  - castellanos-elegias
+  cruces:
+    en_canon: toponimo-097 · nivel descartado
+    en_esteves: false
+    en_mapa_miguel: false
+    en_nodos: nodo-006 (atestiguado, precontacto desconocido)
+  menciones:
+  - sin-procedencia · canon · toponimo-097 · nivel descartado · topónimo · fuente deuda
+  - castellanos-elegias · lista-1589 · II, Elegía 1

@@ -9,7 +9,7 @@ local: "fuentes_caquetios/Castellanos_1857_Elegias_partes_I-II_texto.txt"
 paginas: "— (texto OCR: partes I y II enteras; la de Coro es la parte II, elegía I, desde la p. 185 de la ed. 1857)"
 acceso: "Internet Archive (OCR de Google Books); descargado el 2026-08-14 en la sesión 07_rastreo_documental"
 capa_texto: si
-estado_minado: en-curso
+estado_minado: en-curso  # la lista de las once ciudades ya está en el canon (2026-09-07); la Elegía I sigue sin leer entera
 prioridad: alta
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
 verificado: 2026-09-05
@@ -137,6 +137,16 @@ cruzados con las demás fuentes, en `6-fusion/TOPONIMOS_POR_FUENTE.md`.
    cita como v. 98 **no se localizó** en la ed. 1857 (`Todariquibo` aparece
    una sola vez, en la lista). O está en otra parte de la elegía con otra
    grafía, o la ed. 1962 difiere: probar `piache` + permutaciones.
+
+## Lote 3 de la campaña (2026-09-07): las once ciudades, al canon
+
+Todas están ya en `2-lengua/toponimos.yaml`: Cumarebo (004) y Jurijurebo
+(001, con las formas Hurihurebo 1538 / Hurehurebo 1589 anotadas) estaban;
+Guaybacoa se cuelga de Guadabacoa (008) como identificación no demostrada;
+Todariquiba (094) y Miraca (095) entran en C por Esteves; Hurraque, Zazárida,
+Carao, Tomodoré, Capatárida y Carona (096-101) van descartados con esta obra
+como procedencia (línea del txt en `pagina`), porque nadie los glosa. Dos de
+ellos siguen vivos con el mismo nombre desde 1538: Zazárida y Capatárida.
 
 ## Pistas sin minar (líneas medidas el 2026-09-05)
 

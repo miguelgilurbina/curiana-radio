@@ -102,3 +102,76 @@ etnias:
       sibilante lo delata. Ver la propuesta de cognados en
       lengua_toponimia_quibacoa.yaml.
     procedencia: {obra: arcaya-1920, pagina: "36"}
+
+  # ── Los grupos de lengua caribe de Oliver §3.2.4 (B.6, 2026-09-07) ──
+  # Todos de la esfera OCCIDENTAL (Maracaibo, Perijá): regla 4. Detalle y
+  # citas en oliver_324_caribes.yaml §2.
+
+  - id: etnia-004
+    nombre: bubure
+    variantes: [bubures, bugure]
+    familia_linguistica: caribe (Perijá Carib; Durbin 1977)
+    aviso_familia: >-
+      La filiación caribe la sostiene Oliver con Durbin de acuerdo; la única
+      pista léxica que cita es que llamaban «Onoto» (voz caribe para el
+      achiote) al grupo vecino. Y «caribe» en las crónicas es categoría
+      política, no lingüística (Oliver §3.2.4.2).
+    donde: laderas orientales de la Sierra de Perijá, al oeste de la villa de Maracaibo; y la provincia de Juruara, sur-sureste del lago
+    polity_caquetia: occidental (Maracaibo) — NO la costera del Golfete
+    tipo_de_contacto: corresidencia — «a few Caquetío villages, such as Parepi» entre los bubures de Juruara
+    intensidad: >-
+      la más alta entre los caribes: «Of all the Cariban-speaking groups,
+      only the Bubure appear to have had relationships with Arawakan-speaking
+      groups»; «more than a simple trade partnership» (p. 229).
+    cita: >-
+      Esteban Martín (1534): «domestic» y «peaceful», aldeas de tres o cuatro
+      casas; los hombres con estuche fálico de totuma, las mujeres con
+      pampanillas de algodón.
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "226-229"}
+
+  - id: etnia-005
+    nombre: burede
+    variantes: [coronados]
+    familia_linguistica: caribe (Perijá Carib) — «another nation of Indians but with little differences in the language» respecto a los bubures (Martín 1534)
+    donde: Sierra de Perijá por el río Macomite (Guasare); valle del Ranchería, compartido con los coanaos
+    polity_caquetia: occidental — sin contacto directo con caquetíos documentado
+    tipo_de_contacto: ninguno documentado
+    intensidad: n/a
+    cita: >-
+      «crowned like friars», de ahí coronados. Oliver los cree ancestrales de
+      los yukpa que siguen en la sierra.
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "226"}
+
+  - id: etnia-006
+    nombre: pemeno
+    variantes: [pemono, pemones, pemeos]
+    familia_linguistica: caribe — «hablan como los bubures» (Oviedo y Valdés [6]:33); «basically the same nation» que los de Perijá (Martín)
+    donde: al este de los bubures de Juruara; y «pemeos» lejos al sur, por el Magdalena, en tierra de pantanos
+    polity_caquetia: occidental — mercado, no corresidencia documentada
+    tipo_de_contacto: >-
+      mercado: pemenos y bubures («and possibly the Caquetío as well»)
+      cambiaban productos agrícolas por pescado del lago con kirikires y
+      onotos.
+    intensidad: media — alianzas de intercambio formalizadas, «highly selective between groups»
+    cita: >-
+      Pérez de Tolosa (1546): los onotos «lo venden en sus mercados a los
+      indios bubures de la provincia de Juruara, a trueque de maíz, yuca, y
+      otras cosas».
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "226-228"}
+
+  - id: etnia-007
+    nombre: kirikire
+    variantes: [quiriquires, güerigüeris]
+    familia_linguistica: desconocida — «I have a hunch that they were a Carib-speaking group» (Oliver, n. 155)
+    aviso_familia: corazonada declarada del autor; no entra como filiación
+    donde: «along the coast and inside the water of the lake itself, many villages constructed with wood» — palafitos del lago de Maracaibo; «travel always by canoe»
+    polity_caquetia: occidental — socios de mercado de los pemenos
+    tipo_de_contacto: mercado (pescado por productos agrícolas)
+    intensidad: media
+    cita: >-
+      «Junto con estos, dentro de la costa y agua de la misma laguna, hay
+      muchos pueblos armados sobre madera de una generación de indios que se
+      dicen güerigüeris que tractan con estos otros pemenos y andan siempre en
+      canoas» (Oviedo y Valdés [6]: 32).
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "227-228"}
+

@@ -173,7 +173,9 @@ def test_los_74_originales_conservan_id_y_nivel():
     assert len(originales) == 74
     assert Counter(r["nivel"] for r in originales) == {"A": 6, "B": 8, "C": 13, "descartado": 47}
     nuevos = [r for r in regs if int(r["id"].split("-")[1]) > 74]
-    assert all(r.get("procedencia") for r in nuevos), "toda entrada nueva cita su obra"
+    # Regla 8: toda entrada nueva cita su obra, o declara la deuda (los del
+    # mapa vivo de Miguel no tienen obra todavía: deuda, no silencio).
+    assert all(r.get("procedencia") or r.get("deuda") == "sin-procedencia" for r in nuevos)
 
 
 # ══════════════════════════════════════════════════════════════════════

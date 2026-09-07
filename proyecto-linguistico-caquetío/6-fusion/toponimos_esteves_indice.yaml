@@ -20,8 +20,8 @@ meta:
   estado: cola-de-trabajo   # lote 1 (2026-09-06, los del mapa de Miguel) y lote 2 (2026-09-07, los «caribe insular»; Maitiruma fue en el 1) procesados
   obra: esteves-1989
   total_indice: 186
-  ya_en_canon: 22
-  por_procesar: 164
+  ya_en_canon: 31
+  por_procesar: 155
 
 # Los que YA están en 2-lengua/toponimos.yaml (referencia cruzada):
 ya_registrados:
@@ -47,6 +47,15 @@ ya_registrados:
   - {forma: Amuay, canon: toponimo-090, lote: 2026-09-07, estrato: no-caquetio-segun-esteves}
   - {forma: Elegüey, canon: toponimo-091, lote: 2026-09-07, estrato: no-caquetio-segun-esteves}
   - {forma: Jamaica, canon: toponimo-093, lote: 2026-09-07, estrato: no-caquetio-segun-esteves}
+  - {forma: Todariquiba, canon: toponimo-094, lote: 2026-09-07}
+  - {forma: Miraca, canon: toponimo-095, lote: 2026-09-07}
+  - {forma: Hurraque, canon: toponimo-096, lote: 2026-09-07}
+  - {forma: Jarayadito, canon: toponimo-102, lote: 2026-09-07}
+  - {forma: Barunú, canon: toponimo-103, lote: 2026-09-07}
+  - {forma: Cayeruba, canon: toponimo-104, lote: 2026-09-07}
+  - {forma: Yauquiba, canon: toponimo-105, lote: 2026-09-07}
+  - {forma: Dabadubare, canon: toponimo-011, lote: 2026-09-07}
+  - {forma: Guaidabacoa, canon: toponimo-008, lote: 2026-09-07}
 
 # Los que NO están — la cola. `estrato` marca los que Esteves atribuye a
 # lengua no caquetía (la pregunta de B.1 / Oliver §3.2.4):
@@ -68,7 +77,6 @@ por_procesar:
   - {forma: Barbasco}
   - {forma: Bariquí}
   - {forma: Barisigua}
-  - {forma: Barunú}
   - {forma: Bibidure}
   - {forma: Bibuche}
   - {forma: Biniche}
@@ -89,7 +97,6 @@ por_procesar:
   - {forma: Carirubana}
   - {forma: Caruca}
   - {forma: Caujarito}
-  - {forma: Cayeruba}
   - {forma: Cayude}
   - {forma: Cimiro}
   - {forma: Coabana}
@@ -113,7 +120,6 @@ por_procesar:
   - {forma: Chuchube}
   - {forma: Chujaro}
   - {forma: Chunaure}
-  - {forma: Dabadubare}
   - {forma: Dibaragua}
   - {forma: Duraguaco}
   - {forma: Garrapata}
@@ -122,7 +128,6 @@ por_procesar:
   - {forma: Guacujúa}
   - {forma: Guachaco}
   - {forma: Guachunepe}
-  - {forma: Guaidabacoa}
   - {forma: Guanadito}
   - {forma: Guarama}
   - {forma: Guaranao}
@@ -134,14 +139,12 @@ por_procesar:
   - {forma: Güica}
   - {forma: Güima}
   - {forma: Hayo}
-  - {forma: Hurraque}
   - {forma: Imujo}
   - {forma: Isiro}
   - {forma: Isito}
   - {forma: Iticuna}
   - {forma: Jabe}
   - {forma: Jagüe}
-  - {forma: Jarayadito}
   - {forma: Jariaca}
   - {forma: Jayana}
   - {forma: Juderecal}
@@ -157,7 +160,6 @@ por_procesar:
   - {forma: Matividiro}
   - {forma: Matuto}
   - {forma: Michaco}
-  - {forma: Miraca}
   - {forma: Misaray}
   - {forma: Moruy}
   - {forma: Muaco}
@@ -202,7 +204,6 @@ por_procesar:
   - {forma: Tiraya}
   - {forma: Tiquiba}
   - {forma: Tobagía}
-  - {forma: Todariquiba}
   - {forma: Tubarao}
   - {forma: Tumarusa}
   - {forma: Tumatey}
@@ -214,4 +215,3 @@ por_procesar:
   - {forma: Yaguarima}
   - {forma: Yaima}
   - {forma: Yarí}
-  - {forma: Yauquiba}

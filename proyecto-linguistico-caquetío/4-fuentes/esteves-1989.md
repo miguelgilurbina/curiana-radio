@@ -1372,6 +1372,29 @@ Lo que dejó el lote, aparte de las entradas:
   Paraguaná casi no hay voces agudas» (p. 21, a propósito de Baraivede /
   Baraivere).
 
+## Lotes 2, 3 y 4 (2026-09-07) — y la regla que salió de ellos
+
+- **Lote 2**: los cinco del «caribe insular», cerrados con B.6 (ver la
+  advertencia arriba): Amuay en C por el etnónimo del clan; Elegüey, Maragüey
+  y Jamaica descartados; Maitiruma ya estaba.
+- **Lote 3**: las ciudades de Castellanos con entrada aquí — Todariquiba
+  (p. 64: Esteves enmienda a Tubariquiba para que dé 'pedregal'), Miraca
+  (p. 52: «en lengua guaraúna es atarraya»; y **Arcaya 1556**: Santa Ana,
+  Moruy, Miraca y Cayeruba ya existían), Hurraque (p. 43, sin sitio). Las
+  demás (Zazárida, Carao, Tomodoré, Capatárida, Carona) van descartadas con
+  procedencia Castellanos y su nodo.
+- **Lote 4**: los ocho del mapa de Miguel que «no estaban» en este libro
+  **estaban con otra grafía**: Uarayadito = Jarayadito (p. 46, y Sarayadite en
+  1881), Davaduvare = Dabadubare (p. 37), Parunu = Barunú (p. 23), Cayerúa =
+  Cayeruba (p. 30, precolombino; Esteves llama a la grafía Cayerúa «nacida de
+  snobismo», y es la del mapa), Yabuquiva = Yauquiba (p. 67: el mapa conserva
+  la b del étimo yabo que la cabecera perdió; nivel A), Guacubero = Guacurebo
+  (p. 38). La regla, ya en la skill: permutar inicial (j~s~u~h), b~v~p, r~b y
+  terminación antes de dar un nombre por ausente. Y la de Miguel: **un nombre
+  que sigue vivo es dato**.
+- Las dos páginas dañadas por el OCR (30 y 52) se leyeron en la imagen
+  renderizada del PDF: es el camino cuando la línea que decide está borrosa.
+
 ## Lo que falta
 
 - **136 de 146 páginas.** El barrido completo es el trabajo de #92.

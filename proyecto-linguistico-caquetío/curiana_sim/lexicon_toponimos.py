@@ -55,7 +55,13 @@ NIVEL_A = {
                  "(juri-jur-ebo).",
         "observacion": "Estaba archivado en TOPONIMOS_ZAVALA como 'glosa "
                        "incierta' y fuera del habla. Es el caso que originó "
-                       "toda la tarea F11.",
+                       "toda la tarea F11. Formas atestiguadas (2026-09-07): "
+                       "Hurihurebo (Bastidas 1538, AGI, «pueblo de la Provincia "
+                       "de Paraguaná»), Hurehurebo (Castellanos 1589, II-1, «Señor "
+                       "de la ciudad Hurehurebo» y en la lista de las once "
+                       "ciudades), Jurijurebo (Zavala, Esteves p. 47: «lugar al "
+                       "norte de Pueblo Nuevo, cercano a El Vínculo; todavía hay "
+                       "vestigios de su cementerio»).",
         # La tercera voz: lecturas que conviven sin pisar la glosa impresa ni
         # la segmentación (esquema en 2-lengua/datos-de-lengua.md).
         "lecturas": [
@@ -229,6 +235,37 @@ NIVEL_A = {
                           "(castellanos_1589_toponimos.yaml §3)"},
         ],
     },
+    # ── Lote 4 (2026-09-07): los del mapa de Miguel que «no estaban» en
+    # Esteves — estaban, con otra grafía. Un nombre que sigue vivo es dato.
+    "yauquiba": {
+        "id": "toponimo-105",
+        "clase": "topónimo", "fuente": "esteves-1989", "pagina": 67,
+        "glosa_fuente": "Yabu-quiba: la piedra del yabo, árbol resinoso",
+        "segmentacion": "yabu + quiba",
+        "morfemas": {
+            "yabo": "cercidium, árbol resinoso  [lexicón caquetío-atestiguado, "
+                    "Zavala — la misma glosa que da Esteves]",
+            "kiba": "piedra  [lexicón caquetío-atestiguado, Zavala #92/#218]",
+        },
+        "glosa_reconstruida": "yabo + piedra = 'la piedra del yabo'",
+        "razon": "Esteves segmenta y glosa, y los dos morfemas ya estaban "
+                 "atestiguados por Zavala con las mismas glosas: cierra sin "
+                 "residuo. Séptima forma de la familia -quiba de Paraguaná.",
+        "observacion": "Población del municipio Moruy; 1881: 26 casas, 199 "
+                       "vecinos. ⭐ La cabecera de Esteves dice Yauquiba, pero su "
+                       "propia segmentación dice Yabu-quiba — y el mapa vivo "
+                       "(fotos de Miguel, 2026-09-01: YABUQUIVA) conserva la b "
+                       "del étimo que el libro perdió en la cabecera. El nombre "
+                       "en uso es más fiel que el gazeteer.",
+        "lecturas": [
+            {"tipo": "testimonio-residente",
+             "lectura": "vivo en el mapa actual como Yabuquiva, sector del "
+                        "Capubana; con Jadacaquiva hace crecer la familia "
+                        "-quiva/-quiba de la península",
+             "quien": "Miguel Gil Urbina (fotos del mapa)", "fecha": "2026-09-01",
+             "eje": "referente"},
+        ],
+    },
 }
 
 # ───────────────────────────────────────────────────────────────────────────
@@ -253,6 +290,45 @@ NIVEL_B = {
                  "primera. El `wa-` inicial es el prefijo de pluralidad de van "
                  "Buurt §6 (de Goeje 1928), lo que explica que Zavala glose "
                  "`adabacoa` 'TODO arboleda' y este simplemente 'arboleda'.",
+        "observacion": "⚠ (2026-09-07) Es el mismo nombre que Esteves escribe "
+                       "Guaidabacoa («Guadabacoa es como está escrito en el "
+                       "censo de 1881», p. 39: lugar pecuario al norte de "
+                       "Jadacaquiva, 2 casas, 35 habitantes) y que González "
+                       "Batista analiza como Guaibacoa. Dos segmentaciones "
+                       "compiten con morfemas atestiguados las dos: wa-ada-bacoa "
+                       "'arboleda' (Zavala) y way-bacoa 'sitio de guái, el árbol "
+                       "parecido a la ceiba' (Esteves y González Batista, "
+                       "independientes). Se conserva la de Zavala como principal "
+                       "por ser la que glosa 'arboleda'; las otras van en "
+                       "lecturas. Formas antiguas: Guaybacoa entre las once "
+                       "ciudades de Castellanos (1589) y Guaibacoa en la carta de "
+                       "Bastidas (1538, nodo-003) — la identificación con ESTE "
+                       "lugar no está demostrada.",
+        "lecturas": [
+            {"tipo": "glosa-fuente",
+             "lectura": "«Guaidabacoa, con sílaba epentética intercalada, es una "
+                        "voz compuesta de guái, árbol parecido a la ceiba y "
+                        "bacoa: sitio, paraje»",
+             "quien": "Esteves 1989", "fecha": "2026-09-07", "eje": "significado",
+             "procedencia": dict(obra="esteves-1989", pagina=39),
+             "veredicto": "way 'árbol parecido a la ceiba' es caquetío-atestiguado "
+                          "en el lexicón: la ecuación también cierra por aquí. "
+                          "Conflicto de segmentación declarado, sin resolver"},
+            {"tipo": "etimologia-analitica",
+             "lectura": "Guaibacoa = 'el valle (bacoa) de las ceibas (guay)'",
+             "quien": "González Batista", "fecha": "2026-08-25", "eje": "significado",
+             "procedencia": dict(obra="gonzalez-batista-nombre-de-coro"),
+             "veredicto": "coincide con Esteves por vía independiente; 'valle' es "
+                          "matiz suyo de bacoa"},
+            {"tipo": "hipotesis",
+             "lectura": "la Guaybacoa «ciudad de grandísimo momento» de Castellanos "
+                        "(1589) y la Guaibacoa de Bastidas (1538) serían este "
+                        "mismo lugar del norte de Jadacaquiva",
+             "quien": "proyecto", "fecha": "2026-09-07", "eje": "referente",
+             "procedencia": dict(obra="castellanos-elegias", pagina="185 (línea 48252)"),
+             "veredicto": "no demostrada: Castellanos dice «doce leguas en torno» "
+                          "de Coro, y Paraguaná cabe; pero nadie fija el sitio"},
+        ],
     },
     "bobare": {
         "clase": "topónimo", "fuente": "zavala-reyes-2015",
@@ -274,6 +350,26 @@ NIVEL_B = {
                  "lexicón como caquetío-atestiguado, así que la ecuación deja "
                  "el sufijo despejado contra un morfema conocido, no contra un "
                  "hueco.",
+        "observacion": "(2026-09-07) Tres grafías, un lugar probable: Dabudare "
+                       "(Zavala), Dabadubare (Esteves p. 37: «aldea del "
+                       "municipio Santa Ana. Dabuda: barro de loza») y "
+                       "Davaduvare en el mapa vivo (fotos de Miguel, sector del "
+                       "Capubana). La identificación no está demostrada; el "
+                       "cruce se registra aquí y no como entrada nueva.",
+        "lecturas": [
+            {"tipo": "glosa-fuente",
+             "lectura": "Dabadubare, aldea del municipio Santa Ana: «Dabuda: "
+                        "barro de loza (ver Abudure)»",
+             "quien": "Esteves 1989", "fecha": "2026-09-07", "eje": "ambos",
+             "procedencia": dict(obra="esteves-1989", pagina=37),
+             "veredicto": "misma raíz dabuda que Zavala; Esteves no glosa el "
+                          "resto (-bare ~ -are 'sitio de')"},
+            {"tipo": "testimonio-residente",
+             "lectura": "vivo en el mapa actual como Davaduvare, sector del "
+                        "Capubana, junto a Uarayadito y Cayerúa",
+             "quien": "Miguel Gil Urbina (fotos del mapa)", "fecha": "2026-09-01",
+             "eje": "referente"},
+        ],
     },
     "pachacuare": {
         "clase": "topónimo", "fuente": "zavala-reyes-2015",
@@ -521,6 +617,26 @@ NIVEL_C = {
         "razon": "**contraejemplo útil**: si `-ebo` fuera 'camino', esta glosa "
                  "no encaja. Registrado para que la corroboración de `ebo` no "
                  "se cuente más limpia de lo que es: 2 aciertos, 2 dudosos.",
+        "observacion": "(2026-09-07) Esteves lo analiza como guacoa + ebo 'el "
+                       "paso de la guacoa' (p. 38): con eso el contraejemplo de "
+                       "`ebo` deja de serlo (ya anotado en esteves-1989.md). "
+                       "«En el censo de 1881 toda Guacurebo pertenecía a Moruy y "
+                       "tenía 34 casas»; la variante de Moruy es Guasurebo. En el "
+                       "mapa vivo aparece como GUACUBERO (fotos de Miguel): "
+                       "metátesis r/b, el nombre sigue en uso.",
+        "lecturas": [
+            {"tipo": "glosa-fuente",
+             "lectura": "«proviene de Guacoa, pero más explícito por el sufijo "
+                        "ebo, o sea que expresa: el paso de la guacoa»",
+             "quien": "Esteves 1989", "fecha": "2026-09-07", "eje": "significado",
+             "procedencia": dict(obra="esteves-1989", pagina=38),
+             "veredicto": "compatible con ebo 'paso' (Zavala #117); la glosa de "
+                          "Zavala 'quebrada que crece' queda como la divergente"},
+            {"tipo": "testimonio-residente",
+             "lectura": "vivo en el mapa actual como Guacubero, sector del Capubana",
+             "quien": "Miguel Gil Urbina (fotos del mapa)", "fecha": "2026-09-01",
+             "eje": "referente"},
+        ],
     },
     "taratarare": {
         "glosa_fuente": "Hato, conuco",
@@ -815,6 +931,152 @@ NIVEL_C = {
              "veredicto": "anacrónica: el nombre es anterior (censo 1881)"},
         ],
     },
+    # ── Lote 3 (2026-09-07): las ciudades de Castellanos con entrada en Esteves ──
+    "todariquiba": {
+        "id": "toponimo-094", "fuente": "esteves-1989", "pagina": 64,
+        "glosa_fuente": "«Tubariquiba y no Todariquiba, quiere decir: pedregal. "
+                        "Tuba: aglomeración. Quiba: pedruzco»",
+        "segmentacion": "toda/tuba + ri + quiba",
+        "razon": "los dos morfemas de Esteves están atestiguados en el lexicón "
+                 "(tuba 'aglomeración, montón'; kiba 'piedra'), pero su ecuación "
+                 "exige ENMENDAR la forma: los primarios dicen Todariquiba "
+                 "(Bastidas 1538) y Todariquibo (Castellanos 1589), no "
+                 "Tubariquiba. Zavala #250 tiene toda- como «desinencia» sin "
+                 "valor: la forma atestiguada segmenta sin enmienda, pero sin "
+                 "glosa para toda-. Cierra a medias.",
+        "observacion": "«Legendaria ciudad caquetía que se supone fuera asiento "
+                       "del gobierno del Cacique Manaure» (Esteves); la carta de "
+                       "Bastidas (AGI 1538) la pone a dos leguas de Coro con el "
+                       "cacique Don Alexandro; Castellanos la encabeza entre las "
+                       "«ciudades de grandísimo momento». Ubicación sin fijar: "
+                       "Esteves recoge Tacuato y los Médanos de Coro, y objeta "
+                       "que allí hay arena, no piedra. Es nodo-001 del registro "
+                       "de asentamientos (la Curiana de la simulación).",
+        "lecturas": [
+            {"tipo": "hipotesis",
+             "lectura": "toda- (Zavala #250, desinencia sin valor) + ri + quiba "
+                        "'piedra': la forma atestiguada de 1538 y 1589 se "
+                        "segmenta sin enmendar; falta la glosa de toda-",
+             "quien": "proyecto", "fecha": "2026-09-07", "eje": "significado",
+             "veredicto": "pendiente de que toda- reciba glosa en otra fuente"},
+        ],
+    },
+    "miraca": {
+        "id": "toponimo-095", "fuente": "esteves-1989", "pagina": 52,
+        "clase": "topónimo (glosa guaraúna, según Esteves)",
+        "glosa_fuente": "«De la voz hemos averiguado que en lengua guaraúna, "
+                        "Miraca es atarraya. Miraca sanuco: atarraya pequeña»",
+        "segmentacion": "miraca (sin composición; voz warao según Esteves)",
+        "razon": "la glosa viene de otra lengua (warao) y de un «hemos "
+                 "averiguado» sin cita: ningún morfema caquetío alinea. Lo firme "
+                 "es la cadena de atestación, la más larga del canon: Myraca con "
+                 "el cacique Bonyata en la carta de Bastidas (1538), pueblo de "
+                 "Paraguaná en 1556 según Arcaya (vía Esteves), «ciudad de "
+                 "grandísimo momento» en Castellanos (1589), 79 casas en el censo "
+                 "de 1881, y población viva hoy — «de los cuales sólo existe hoy "
+                 "el pueblo de Miraca», dice Esteves de las tres ciudades.",
+        "observacion": "⭐ Cinco siglos con el mismo nombre en el mismo sitio "
+                       "(Baraived). Un topónimo que sigue en uso es dato aunque "
+                       "no tenga etimología: aquí la continuidad del asentamiento "
+                       "está mejor sostenida que la de cualquier otro nombre de "
+                       "la península. Candidato a nodo en asentamientos.yaml.",
+        "lecturas": [
+            {"tipo": "etimologia-analitica",
+             "lectura": "'atarraya' en warao (guaraúno); «Miraca sanuco: atarraya "
+                        "pequeña»",
+             "quien": "Esteves 1989", "fecha": "2026-09-07", "eje": "significado",
+             "procedencia": dict(obra="esteves-1989", pagina=52),
+             "veredicto": "sin cita ni ruta de contacto warao–caquetío; encaja con "
+                          "un pueblo de costa pescadora, que es poco. Misma "
+                          "cuarentena que sus atribuciones caribe insular y "
+                          "cumanagota"},
+        ],
+    },
+    # ── Lote 4 (2026-09-07): los del mapa con otra grafía en Esteves ──
+    "jarayadito": {
+        "id": "toponimo-102", "fuente": "esteves-1989", "pagina": 46,
+        "glosa_fuente": "«Jarayadito significa espinar, retamal, ñaragatal. El "
+                        "sufijo dito es distintivo de los nombres colectivos "
+                        "abundanciales»",
+        "segmentacion": "jaraya + -dito",
+        "razon": "`-dito` colectivo abundancial está atestiguado por Esteves "
+                 "cuatro veces y atribuido al caquetío; la base jaraya "
+                 "'espina, retama' se despeja por sustracción de la glosa, sin "
+                 "recurrencia. Cierra la mitad.",
+        "observacion": "⭐ Tres grafías en tres siglos y el nombre sigue vivo: "
+                       "Sarayadite (censo de 1881), Jarayadito (Esteves), "
+                       "UARAYADITO (mapa vivo, fotos de Miguel 2026-09-01, junto a "
+                       "Moruy y Cayerúa). La inicial j ~ s ~ u es la misma "
+                       "aspiración inestable de Hurehurebo ~ Jurijurebo. Aldea del "
+                       "municipio Moruy; 1881: 9 casas, 58 vecinos.",
+        "lecturas": [
+            {"tipo": "testimonio-residente",
+             "lectura": "vivo en el mapa actual como Uarayadito, en el mismo "
+                        "sector que Moruy y Cayerúa",
+             "quien": "Miguel Gil Urbina (fotos del mapa)", "fecha": "2026-09-01",
+             "eje": "referente"},
+        ],
+    },
+    "barunú": {
+        "id": "toponimo-103", "fuente": "esteves-1989", "pagina": 23,
+        "glosa_fuente": "«El nombre viene de Barubaru (palo delgado), palmera con "
+                        "cuyas hojas fabrican esteras los nativos. Esta palmera "
+                        "abunda en las faldas del Cerro de Santa Ana»",
+        "segmentacion": "baru~baru (bara 'palo', reduplicado) + -nú",
+        "razon": "`bara` 'palo, árbol' es caquetío-atestiguado y la reduplicación "
+                 "es patrón del corpus (jurijurebo, quibaquiba, barabara "
+                 "'olivo'); el -nú final queda sin explicar y el fitónimo "
+                 "barubaru no tiene segunda fuente. Cierra a medias.",
+        "observacion": "Aldea al norte de Moruy; 1881: 5 casas, 29 habitantes. "
+                       "Esteves lo pone en su serie Bara- indígena (Bariquí, "
+                       "Baracara, Barunú, p. 22). En el mapa vivo, PARUNU (fotos "
+                       "de Miguel): p por b y u por ú, y el nombre sigue.",
+        "lecturas": [
+            {"tipo": "testimonio-residente",
+             "lectura": "vivo en el mapa actual como Parunu, sector del Capubana",
+             "quien": "Miguel Gil Urbina (fotos del mapa)", "fecha": "2026-09-01",
+             "eje": "referente"},
+        ],
+    },
+    "cayeruba": {
+        "id": "toponimo-104", "fuente": "esteves-1989", "pagina": 30,
+        "glosa_fuente": "«¿Origen de la voz? ¿Simaruba? Es posible, hay "
+                        "abundancia de este árbol rutáceo en sus contornos» "
+                        "(leído en la imagen; la línea está borrosa en el OCR)",
+        "segmentacion": "caye + ruba (?)   [conjetura fitonímica del autor]",
+        "razon": "Esteves solo conjetura, con interrogación, un fitónimo "
+                 "(simaruba); ningún morfema del canon alinea. Lo que sí está "
+                 "firme es la existencia y la antigüedad del lugar, por cuatro "
+                 "vías: cerámica aborigen abundante y un cementerio (Esteves), "
+                 "pueblo de Paraguaná en 1556 según Arcaya (vía Esteves p. 52), "
+                 "Cayerda como primer asiento de los Amuayes en Delmonte 1883 "
+                 "(vía Oliver p. 276), y el sitio FAL-143 de Oliver "
+                 "(nodo-025, dabajuroide, precontacto probable).",
+        "observacion": "⭐ Un lugar, cuatro grafías: Cayerda / Cayerta / "
+                       "«Coyarna» (Delmonte vía Oliver), Cayeruba (Esteves, que "
+                       "llama a la grafía Cayerúa «nacida de snobismo»), y "
+                       "CAYERÚA en el mapa vivo, la forma que Miguel verificó "
+                       "(«Cayerda no existe, pero Cayerúa sí»). Aldea de Pueblo "
+                       "Nuevo, omitida en el censo de 1881 («la omisión es "
+                       "inexplicable»).",
+        "lecturas": [
+            {"tipo": "testimonio-residente",
+             "lectura": "«Cayerda no existe, pero Cayerúa sí»: en el mapa actual "
+                        "aparece Cayerúa cerca de Moruy, con Uarayadito en el "
+                        "mismo sector",
+             "quien": "Miguel Gil Urbina (mapa)", "fecha": "2026-09-01",
+             "eje": "referente"},
+            {"tipo": "hipotesis",
+             "lectura": "Cayerda (Delmonte 1883), Cayeruba (Esteves 1989) y "
+                        "Cayerúa (mapa 2026) son un solo lugar, el primer asiento "
+                        "de los Amuayes; las variantes -erda/-erta/-eruba/-erúa "
+                        "son ruido de transmisión sobre un mismo nombre",
+             "quien": "proyecto", "fecha": "2026-09-07", "eje": "referente",
+             "procedencia": dict(obra="oliver-1989-cap3", pagina=276),
+             "veredicto": "muy probable por la geografía (Esteves y el mapa lo "
+                          "ponen donde Delmonte); sin documento que las iguale"},
+        ],
+    },
     "supí": {
         "id": "toponimo-077", "fuente": "esteves-1989", "pagina": 61,
         "glosa_fuente": "es un árbol cactáceo que exuda una goma medicinal, es el "
@@ -847,6 +1109,55 @@ NIVEL_C = {
 # Documentar el descarte vale tanto como el hallazgo: evita re-minarlo.
 
 DESCARTES = {
+    # Lote 3 (2026-09-07): las ciudades «de grandísimo momento» de Castellanos
+    # (II, Elegía 1, 1589) que ninguna fuente glosa. Son atestaciones de
+    # EXISTENCIA del s. XVI, no de significado: por eso están en
+    # asentamientos.yaml como nodos y aquí como descartados. Varias siguen
+    # vivas — Zazárida, Capatárida — y eso es dato aunque no haya etimología.
+    "Castellanos 1589: nombrados en las Elegías, sin glosa en ninguna fuente": {
+        "razon": "Castellanos enumera, no traduce; Arcaya y Esteves los sitúan "
+                 "o los dan por perdidos; ningún morfema del canon alinea sin "
+                 "forzar. Se registran con su forma de 1589, su identificación "
+                 "moderna y su nodo, para que la campaña no los vuelva a abrir "
+                 "sin dato nuevo.",
+        "fuente": "castellanos-elegias",
+        "ids": {"hurraque": "toponimo-096", "zazarida": "toponimo-097",
+                "carao": "toponimo-098", "tomodore": "toponimo-099",
+                "capatarida": "toponimo-100", "carona": "toponimo-101"},
+        "paginas": {"hurraque": "185 (línea 48260)", "zazarida": "185 (línea 48249)",
+                    "carao": "185 (línea 48251)", "tomodore": "185 (línea 48251)",
+                    "capatarida": "185 (línea 48251)", "carona": "185 (línea 48252)"},
+        "formas": [
+            "hurraque (Hurraqui en Castellanos; «pueblo caquetío mencionado por "
+            "Juan de Castellanos» en Esteves p. 43, que supone Jurraque como "
+            "pronunciación primitiva y no sabe dónde estuvo: quizá Misaray, en "
+            "Machuruca, donde hay cementerio indígena, o El Supí, donde hay "
+            "piedras escritas; la grafía en -i explica el cero de Oliver)",
+            "zazarida (Zacerida en Castellanos; Sacerida/Zazárida en Arcaya; "
+            "carta de Bastidas 1538 vía Oliver p. 251, nodo-006; hoy Zazárida, "
+            "población viva de Falcón)",
+            "carao (Castellanos; «Arcaya lo suponía en el actual Carazao»)",
+            "tomodore (Tamadoré en Castellanos; Tomadoré cerca de La Vela según "
+            "Arcaya; carta de Bastidas 1538 vía Oliver p. 251, nodo-004)",
+            "capatarida (Capatarida en Castellanos; carta de Bastidas 1538 vía "
+            "Oliver p. 251, nodo-007; hoy Capatárida, capital del municipio "
+            "Buchivacoa: nombre vivo desde 1538)",
+            "carona (Castellanos; Arcaya: «ni el nombre queda» — pues aquí está, "
+            "en 1589)",
+        ],
+    },
+    # Lote 4 (2026-09-07): lo castellano del mapa vivo, registrado y no callado
+    # (filtro 1 del protocolo del habla paraguanera).
+    "castellano: nombres del mapa vivo en español": {
+        "razon": "el nombre es transparente en castellano; no hay sustrato que "
+                 "despejar. Se registra para que el barrido del mapa no lo "
+                 "vuelva a proponer.",
+        "ids": {"la rinconada": "toponimo-106", "pedregalito": "toponimo-107"},
+        "formas": [
+            "la rinconada (mapa vivo, sector del Capubana; fotos de Miguel 2026-09-01)",
+            "pedregalito (mapa vivo, sector del Capubana; fotos de Miguel 2026-09-01)",
+        ],
+    },
     # La campaña de Esteves 1989, lote 1 (2026-09-06). El grupo trae `fuente`,
     # `paginas` e `ids` para que el migrador cite y no mueva el contador.
     # «Descartado» aquí = sin etimología despejable, NO «no existió»: los
