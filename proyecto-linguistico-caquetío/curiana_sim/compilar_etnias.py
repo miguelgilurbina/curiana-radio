@@ -67,10 +67,10 @@ RE_HECHO = re.compile(r"^[a-z][a-z_]*-\d{3}[a-z]?$")
 # Lo que no cabe en el valor cerrado va al campo `*_nota` de al lado.
 ETIQUETAS = ("atestiguado", "reconstruido", "hipotetico", "canon-simulacion")
 FAMILIAS = ("arahuaca", "caribe", "guahibo", "chibcha", "jirajara", "desconocida")
-# Las cuatro de `curiana_polities.py` + `occidental` (Maracaibo, Juruara,
-# Perijá): la esfera que Oliver §3.2.4 documenta y que el corpus ya usa como
-# `polity: occidental` (geografia_politica-009..013). No está modelada en
-# `curiana_polities.py`; añadirla allí es canon y decisión humana.
+# Las cinco de `curiana_polities.py`: las cuatro atestiguadas de Oliver/Jahn
+# y `occidental` (la Guajira, el lago de Maracaibo, Juruara: la Western
+# Sphere de Oliver §3.2), que entró como esfera futura el 2026-09-07 por
+# decisión de Miguel. Un test comprueba que las dos listas coinciden.
 POLITIES = ("costera", "barquisimeto", "yaracuy", "llanos", "occidental")
 POLITY_SIMULADA = "costera"
 CONTACTOS = ("corresidencia", "vecindad", "mercado", "guerra", "visita", "ninguno")

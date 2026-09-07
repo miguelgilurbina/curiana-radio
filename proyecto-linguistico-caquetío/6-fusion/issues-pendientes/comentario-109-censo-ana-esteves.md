@@ -49,6 +49,17 @@ núcleo final, `para-gua-ná` es 'conuco de agua', no un golfo.
 Cautela: son segmentaciones de cronista, no dato independiente. Vale que el
 patrón sea consistente y que el referente de Capuhana esté dicho.
 
+### Un dato colateral de Oliver (cap. 3 p. 207), en los dos platillos
+
+Entre los nombres de aldea **wanebucán** de Punta Espada–Chichibacoa (Guajira)
+Oliver lee morfemas «suspiciously Caquetío»: **«Paragua-nil» y «Coria-na»**, y
+lo explica por el nexo comercial con los caquetíos de allí. A favor: `-na` es
+sufijo también para él, y los formantes viajan con el comercio (un segundo
+*Coriana*, fuera de Coro: toca #33). En contra: Oliver corta **`paragua`
+entera** como raíz (Zavala #191 'mar'), no `para` + `gua`; si el paralelo vale,
+Paraguaná es `paragua` + `ná` y el 'conuco' de Esteves vuelve a quedarse sin
+morfema. Ninguna de las dos lecturas cierra sin residuo.
+
 ### La auditoría de tildes (punto 3 del issue), hecha
 
 Contra Esteves (índice, 34 formas en canon) y Zavala (glosario): tres

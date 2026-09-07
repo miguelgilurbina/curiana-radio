@@ -139,7 +139,7 @@ fuentes_caquetios/ los PDF (se citan, no se editan)
 | `curiana_state` | día, estación, locaciones, eventos |
 | `curiana_observer` | scoring, análisis, perfiles curados |
 | `curiana_database` | Supabase + LangSmith |
-| `curiana_polities` | las 4 polities atestiguadas; cuál simulamos |
+| `curiana_polities` | las 4 polities atestiguadas + la occidental (futura esfera, Coquibacoa); cuál simulamos |
 
 **Los wikilinks resuelven por basename**, así que mover una nota no rompe
 enlaces; lo que se rompe son los enlaces markdown relativos.

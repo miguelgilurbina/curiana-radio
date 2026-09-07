@@ -252,10 +252,11 @@ es canon-simulación.
 costera` **exige** una `procedencia.obra` que documente ese contacto o
 `etiqueta: canon-simulacion`; y lo canon-simulación declara `deuda:
 sin-procedencia`. Sin eso, un vecino de Barquisimeto se desliza al Golfete sin
-que nadie lo note. La esfera `occidental` (Maracaibo, Juruara) está en el
-vocabulario porque el corpus ya la usa (`geografia_politica-009..013`), pero
-**no** es una de las cuatro polities de `curiana_polities.py`: si se modela,
-es decisión humana.
+que nadie lo note. La esfera `occidental` (la Guajira, el lago de Maracaibo,
+Juruara: la *Western Sphere* de Oliver §3.2, Coquibacoa en los mapas de 1500)
+entró a `curiana_polities.py` el 2026-09-07 como quinta polity con estado
+`futura`, por decisión de Miguel: se modela como esfera futura, no se simula.
+Ver [[polities-caquetias]].
 
 ## 5. Lo que hay que construir
 

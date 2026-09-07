@@ -14,7 +14,10 @@ precisamente porque *"blurs the differences that make a difference"*.
 
 La simulación modela **una** de esas formaciones: la costera (Coro,
 Todariquiba, el Golfete). Este módulo pone las cuatro por escrito, con su fuente
-por rasgo, para que:
+por rasgo —y desde el 2026-09-07 una quinta, la **occidental** (la Guajira, el
+lago de Maracaibo, Juruara: la *Western Sphere* de Oliver §3.2, «Coquibacoa»
+en los mapas de 1500), con `estado="futura"`: se modela como esfera futura por
+decisión de Miguel, no se simula—, para que:
 
 1. La costera deje de ser *"lo caquetío"* a secas y pase a ser una opción
    explícita entre varias — que es lo que era.
@@ -104,6 +107,12 @@ class Polity:
     religion: Optional[Rasgo] = None
     ceramica: Optional[Rasgo] = None
     notas: str = ""
+    # `atestiguada`: una de las cuatro formaciones que Oliver y Jahn
+    # describen. `futura`: una esfera decidida para modelar más adelante,
+    # reunida desde el canon con la misma disciplina de fuentes, sin agentes.
+    estado: str = "atestiguada"
+
+    ESTADOS = ("atestiguada", "futura")
 
     # Los seis ejes en los que Oliver dice que las polities difieren, más dos
     # que el proyecto necesita (religión y cerámica).
@@ -325,6 +334,96 @@ POLITIES = {
               "esclavitud documentada. Oliver acota el dato con cuidado; "
               "conviene no generalizarlo.",
     ),
+
+    # ── La quinta: la esfera occidental, FUTURA (decisión de Miguel,
+    # 2026-09-07). Es la «Western Sphere» de Oliver §3.2 (pp. 185-230): la
+    # Guajira —Coquibacoa en el mapa de Juan de la Cosa (1500) y en la
+    # capitulación de Ojeda—, el lago de Maracaibo y los enclaves de Juruara.
+    # Los caquetíos son aquí MINORÍA y avanzada de la costera; por eso importa
+    # para la era 2: es el modelo real de un enclave que comercia y convive
+    # sin fundirse. Regla 3: Coquibacoa como nombre de región es español
+    # (Arcaya 1920 p. 130); lo indígena es el sitio. ──
+    "occidental": Polity(
+        id="occidental",
+        estado="futura",
+        nombre="Caquetío de la esfera occidental (la Guajira, el lago de "
+               "Maracaibo y Juruara — Coquibacoa)",
+        territorio=Rasgo(
+            "Dos sectores de la Guajira: el Cabo de la Vela y la franja entre "
+            "Punta Espada y Punta Chichibacoa, «precisely where some limited "
+            "agriculture was possible (if the rainy season materialized)»; y "
+            "aldeas en el sur-sureste del lago de Maracaibo, entre los "
+            "bubures de lengua caribe de Juruara (Parepi). Esteban Martín "
+            "(1534): «En Coquibacoa y en el Cabo de la Vela, que es en la "
+            "costa, poblado de indios coanaos e caquetíos». Castellanos llama "
+            "Coquibacoa al norte-noreste de la península (Macuira, Jarara); "
+            "Juan de la Cosa (1500) escribe Coquibacoa sobre toda la Guajira.",
+            _OLIVER + ", pp. 191, 199, 202, 222 (Martín [1534] en María "
+            "1977: 505; Castellanos [1589] en Parra 1930a: 284; de la Cosa "
+            "1500, p. 192)"),
+        asentamiento=Rasgo(
+            "**Puestos de frontera y avanzada** («frontier settlements or "
+            "outposts», «avant guarde posts»), no territorio propio: "
+            "numéricamente inferiores a todos los demás grupos de la esfera. "
+            "Rasgo común a la Guajira y a Juruara: «wherever one finds "
+            "Caquetío villages, these are within the best agricultural "
+            "lowlands locally available»; nunca en tierras altas. Oliver "
+            "los hace salir «out of the coast of Falcón and/or the islands "
+            "of Aruba and Curaçao, north of Paraguaná».",
+            _OLIVER + ", pp. 189, 200, 202, 222"),
+        economia=Rasgo(
+            "Comercio de larga distancia como razón de estar ahí: punto "
+            "intermedio entre el valle César-Ranchería y la costa de Falcón. "
+            "Productos marítimos —sal— hacia el interior; oro y otros bienes "
+            "de Valledupar y de las laderas de la Sierra Nevada hacia la "
+            "costa, quizá también las «piedras verdes» que atrajeron a Ojeda "
+            "en 1499. Socios elegidos: wanebucanes y coanaos; «shunned» "
+            "onotos, kusi'na y guajiros (wayú): «not one single reference». "
+            "En Juruara, con los bubures, «more than a simple trade "
+            "partnership»; y probablemente en el mercado del lago (productos "
+            "agrícolas por pescado). El comercio de la esfera es «highly "
+            "selective between groups».",
+            _OLIVER + ", pp. 189, 211, 222, 227-229 (capitulación de Ojeda "
+            "1500 en Otte 1963: 3; Martín [1534] sobre los coanaos)"),
+        guerra=Rasgo(
+            "Un solo episodio: en la sierra de Coquibacoa (Macuira, Jarara) "
+            "salieron guerreros «con armas castellanas en las manos» contra "
+            "Pedro de Limpias, «y todos estos pueblos que vinieron eran "
+            "guanebucanes y caquetíos» (Castellanos). Contra eso, las "
+            "crónicas los llaman «always peaceful» frente a onotos, wayú y "
+            "kusi'na «more bellicose and rebellious» — etiqueta colonial "
+            "(regla 3), registrada como hipotético en geografia_politica-013.",
+            _OLIVER + ", pp. 191 (Castellanos [1589] en Parra 1930a: 284) y "
+            "227 n. 154"),
+        ceramica=Rasgo(
+            "El correlato material del eje Guajira ↔ Falcón: formas de vasija "
+            "de aparición súbita y tardía en el área de Coro «which can only "
+            "have been derived from the Ranchería area» (complejos Los "
+            "Médanos [Coro] y Portacelli [Ranchería]). Y la cronología del "
+            "contacto: asentamientos en la Guajira quizá desde 1200 d.C.; la "
+            "intensificación con el Cabo de la Vela y la costa Punta "
+            "Espada-Chichibacoa **tiene su pico en 1400 d.C.** — dentro de la "
+            "ventana de la simulación.",
+            _OLIVER + ", pp. 200 y 292",
+            epoca="1200-1400 d.C. (arqueológico, Los Médanos) — **dentro de la "
+                  "ventana de la simulación**"),
+        notas="ESFERA FUTURA: no se simula; ningún agente vive aquí. Es hija "
+              "de la costera (Oliver: «undoubtedly originated from Coastal "
+              "Falcón», p. 189) y el modelo real de contacto para la era 2. "
+              "Jahn y Arcaya meten la orilla del lago en la franja costera; "
+              "aquí se sigue a Oliver, que separa a estos caquetíos como "
+              "avanzadas. Liderazgo, demografía y religión: «very little is "
+              "known about the culture» (p. 202) — huecos, no se rellenan. "
+              "El corpus la usa como `polity: occidental` "
+              "(geografia_politica-009..013) y etnias.yaml como "
+              "`polity_caquetia: occidental` (bubure, burede, pemeno, "
+              "kirikire). Dos hallazgos colaterales para la lengua (Oliver "
+              "p. 207 y p. 249 n. 94): entre los nombres de aldea wanebucán "
+              "de Punta Espada-Chichibacoa hay «Paragua-nil» y «Coria-na», "
+              "«suspiciously Caquetío» (toca #33 y #109); y el cabo "
+              "Chichibacoa «suspiciously sounds like Coquibacoa, except for "
+              "a /k/::/ch/ sound shift».",
+    ),
 }
 
 
@@ -393,6 +492,11 @@ def validar() -> list:
     for pid, p in POLITIES.items():
         if pid != p.id:
             problemas.append(f"{pid}: la clave no coincide con .id={p.id!r}")
+        if p.estado not in Polity.ESTADOS:
+            problemas.append(f"{pid}: estado {p.estado!r} no es legal "
+                             f"(solo {', '.join(Polity.ESTADOS)})")
+        if pid == POLITY_SIMULADA and p.estado != "atestiguada":
+            problemas.append(f"{pid}: la polity simulada tiene que ser atestiguada")
         if p.territorio is None:
             problemas.append(f"{pid}: sin territorio (es el único eje obligatorio)")
         for eje, rasgo in p.rasgos().items():
@@ -485,14 +589,17 @@ def informe() -> None:
     print("\n── Las polities caquetías ──")
     for pid, p in POLITIES.items():
         marca = "  ◄ LA QUE SIMULAMOS" if pid == POLITY_SIMULADA else ""
+        if p.estado == "futura":
+            marca += "  (esfera futura: no se simula)"
         print(f"\n  [{pid}] {p.nombre}{marca}")
         print(f"      ejes con dato: {len(p.rasgos())}/{len(Polity.EJES)}"
               + (f"   huecos: {', '.join(p.huecos())}" if p.huecos() else ""))
 
-    print("\n\n── Contraste: la costera frente a las otras tres ──")
+    otras = [pid for pid in POLITIES if pid != POLITY_SIMULADA]
+    print(f"\n\n── Contraste: la {POLITY_SIMULADA} frente a las otras {len(otras)} ──")
     print("  (un eje solo cuenta como distinto si AMBAS tienen dato; si a una "
           "le falta,\n   la diferencia es de documentación, no de las polities)")
-    for otra in ("barquisimeto", "yaracuy", "llanos"):
+    for otra in otras:
         dif = contrastar(POLITY_SIMULADA, otra)
         ambas = [e for e, (a, b) in dif.items() if a is not None and b is not None]
         solo_una = [e for e in dif if e not in ambas]
@@ -549,7 +656,9 @@ def main(argv=None) -> int:
         for p in problemas:
             print(f"     {p}")
     elif not args.contrastar:
-        print(f"\n  ✓ {len(POLITIES)} polities, todos los rasgos con fuente")
+        futuras = sum(1 for p in POLITIES.values() if p.estado == "futura")
+        print(f"\n  ✓ {len(POLITIES)} polities ({len(POLITIES) - futuras} atestiguadas, "
+              f"{futuras} futura), todos los rasgos con fuente")
 
     return 1 if (args.check and problemas) else 0
 

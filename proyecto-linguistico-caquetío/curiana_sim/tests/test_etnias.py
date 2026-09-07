@@ -75,14 +75,13 @@ def test_los_campos_cerrados_rechazan_valores_nuevos():
     assert any(x["codigo"] == "familia_linguistica-ilegal" for x in p)
 
 
-def test_las_polities_del_motor_estan_en_el_vocabulario():
+def test_las_polities_del_motor_son_el_vocabulario():
     """`curiana_polities.py` es el canon de las polities; si aparece una
-    quinta allí, este validador tiene que saberlo. `occidental` es la
-    excepción declarada: la esfera de Maracaibo que el corpus ya usa y el
-    motor no modela."""
-    assert set(CP.POLITIES) <= set(CE.POLITIES)
-    assert CE.POLITY_SIMULADA in CP.POLITIES
-    assert set(CE.POLITIES) - set(CP.POLITIES) == {"occidental"}
+    sexta allí, este validador tiene que saberlo, y al revés. `occidental`
+    entró a las dos el 2026-09-07 (esfera futura, decisión de Miguel)."""
+    assert set(CP.POLITIES) == set(CE.POLITIES)
+    assert CE.POLITY_SIMULADA == CP.POLITY_SIMULADA
+    assert CP.polity("occidental").estado == "futura"
 
 
 # ── integridad referencial ────────────────────────────────────────────

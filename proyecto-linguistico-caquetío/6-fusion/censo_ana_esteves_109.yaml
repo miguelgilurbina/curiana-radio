@@ -163,6 +163,27 @@ orden_del_compuesto:
     seis y que el referente de Capuhana está dicho.
 
 # ══════════════════════════════════════════════════════════════════
+# 3b. UN DATO COLATERAL DE OLIVER (mismo día, al releer §3.2 para la
+#     quinta polity) — pesa en los dos platillos
+# ══════════════════════════════════════════════════════════════════
+hallazgo_colateral_oliver_207:
+  cita: >-
+    «we find morphemes in village names --such as Paragua-nil, and Coria-na--
+    which are suspiciously Caquetío» (Oliver 1989 cap. 3 p. 207, sobre las
+    aldeas wanebucán de Punta Espada-Chichibacoa, Guajira).
+  a_favor_de_para_gua_na: >-
+    Nada directo. Pero un Coria-na en la Guajira y un Paragua-nil
+    muestran los mismos formantes toponímicos caquetíos viajando con el
+    comercio: -na es sufijo también para Oliver.
+  en_contra: >-
+    Oliver corta «Paragua-nil»: la raíz es PARAGUA entera (Zavala #191
+    'mar'), no para + gua. Si el paralelo vale, Paraguaná sería paragua + ná,
+    que es la segmentación original del canon (para(gua) + -na), y el
+    'conuco' de Esteves quedaría sin morfema otra vez. Las dos lecturas
+    siguen vivas; ninguna cierra sin residuo.
+  toca: ["#109", "#33 (D2): segundo Coriana, fuera de Coro", "toponimia_paraguana_miguel.yaml §Curiana / Coro"]
+
+# ══════════════════════════════════════════════════════════════════
 # 4. LA DECISIÓN QUE QUEDA (Miguel)
 # ══════════════════════════════════════════════════════════════════
 decision_pendiente:

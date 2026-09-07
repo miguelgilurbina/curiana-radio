@@ -9,7 +9,7 @@ paginas: 113
 capa_texto: si
 acceso: "Libre — la tesis completa (823 pp., incluye este capítulo) está en UCL Discovery, depositada por el propio Oliver: PDF https://discovery.ucl.ac.uk/id/eprint/10157455/1/Oliver_10157455_thesis_redacted.pdf · ficha https://discovery.ucl.ac.uk/id/eprint/10157455/. Verificado en el rastreo de 2026-08-14."
 estado_minado: minado
-cobertura: "familia (sesión 1), geografía política (sesión 5), economía/cerámica/guerra/religión (2026-08-04, issue #59)"
+cobertura: "familia (sesión 1), geografía política (sesión 5), economía/cerámica/guerra/religión (2026-08-04, issue #59), la esfera occidental §3.2 (2026-09-07, quinta polity)"
 prioridad: media
 sostiene: {hechos_corpus: 15, entradas_lexicon: 2, entradas_reforzadas: 1}
 verificado: 2026-08-04
@@ -56,6 +56,34 @@ sesiones enteras del programa cultural ([[mapa-familia]] y
 
 **Lexicón**: 2 entradas lo citan (`diao`, `uriacoa`) — ambas por **corrección**
 de una glosa previa sin fuente.
+
+### §3.2 *The Western Sphere*, releída el 2026-09-07 para la quinta polity
+
+**Qué se preguntó.** Miguel decidió modelar la esfera occidental (Maracaibo,
+la Guajira) como polity futura «porque Oliver también menciona información de
+esa región en el contexto de Coquibacoa». ¿Qué dice, y con qué página? Este
+PDF tiene capa de texto y §3.2 está entero (la tesis completa no la tiene).
+Página impresa = pdf + 182.
+
+**Qué se halló** (todo en `curiana_polities.py::POLITIES["occidental"]`):
+
+| Página | Hallazgo |
+|---|---|
+| 185 | La *Western Sphere* definida: el lago de Maracaibo y sus llanuras aluviales, la Guajira semiárida, los valles del Ranchería y el César; el noreste del lago como «strategic locus» de paso entre Venezuela, la Guajira, Santa Marta y el Magdalena |
+| 189 | Tesis: los asentamientos caquetíos de la Guajira fueron «avant guarde posts» que comerciaban sal por oro con wanebucanes y coanaos; «undoubtedly originated from Coastal Falcón» (ya `geografia_politica-002`) |
+| 191 | Castellanos llama **Coquibacoa** al norte-noreste de la Guajira (Macuira, Jarara), con sementeras; Pedro de Limpias encontró allí resistencia **«guanebucán y caquetío»**, guerreros «con armas castellanas en las manos» (Parra 1930a: 284) |
+| 192 | El mapa de Juan de la Cosa (1500) y el anónimo de c. 1534 escriben **Coquibacoa** sobre la península; «guajiro» no aparece en ninguno |
+| 199 | Esteban Martín (1534): la costa de la Gobernación «toda poblada de caquetíos» ochenta leguas al oeste de Coro hasta el Cabo de la Vela; y **«En Coquibacoa y en el Cabo de la Vela… poblado de indios coanaos e caquetíos»**. La Gobernación entera se llamó Coquibacoa a principios del XVI. Dos sectores caquetíos: Cabo de la Vela y Punta Espada–Chichibacoa |
+| 200 | Cronología: en la Guajira quizá desde **1200 d.C.**; la intensificación del contacto Los Médanos ↔ Cabo de la Vela / Punta Espada–Chichibacoa **tiene su pico en 1400 d.C.** (n. 28). La arqueología de la Guajira, «as yet unknown» (n. 27) |
+| 202 | Los caquetíos de Juruara y los de la Guajira, «avant guarde settlements of the expanding Caquetío peoples»; «very little is known about the culture»; rasgo común: siempre en las mejores tierras bajas de cultivo, **nunca en tierras altas** |
+| 207 | ⭐ Los wanebucanes, de lengua desconocida, quizá arahuacos: en sus nombres de aldea hay morfemas «suspiciously Caquetío» — **«Paragua-nil» y «Coria-na»** — que Oliver explica por el nexo comercial con los caquetíos en Punta Espada–Chichibacoa. Un segundo *Coriana*, en la Guajira (#33); y una segmentación *paragua* + sufijo, *coria* + *-na* (#109) |
+| 211 | Las «piedras verdes» de la capitulación de Ojeda (1500: «Quinquevacoa… donde están las piedras verdes») como bien de ese comercio |
+| 222 | El balance de la esfera: solo los caquetíos tienen distribución amplia, como «frontier settlements or outposts»; minoría numérica; socios wanebucanes y coanaos, «shunned» onotos, kusi'na y wayú (ya `geografia_politica-009/010`) |
+| 249 n. 94 | El cabo **Chichibacoa** «suspiciously sounds like Coquibacoa, except for a /k/::/ch/ sound shift» |
+| 292 | Cerámica: formas de vasija de aparición súbita y tardía en Coro «which can only have been derived from the Ranchería area» (Los Médanos ↔ Portacelli) |
+
+**Qué no se halló.** Nada sobre liderazgo, demografía ni religión de estos
+caquetíos: los tres ejes quedan como huecos en el módulo, a propósito.
 
 ## Por qué importa metodológicamente
 
