@@ -1392,6 +1392,14 @@ Lo que dejó el lote, aparte de las entradas:
   (p. 38). La regla, ya en la skill: permutar inicial (j~s~u~h), b~v~p, r~b y
   terminación antes de dar un nombre por ausente. Y la de Miguel: **un nombre
   que sigue vivo es dato**.
+- **Lote 5**: los nodos de la era 2. Moruy (p. 53: la etimología de merejuy
+  que Miguel había recogido «sin identificar» es esta página, palabra por
+  palabra; «los indios de Moruy eran los más belicosos de Paraguaná», contra el
+  «siempre pacíficos» de las crónicas), Chamuriana (p. 35: «antigua aldea
+  indígena en cuyas cercanías los españoles fundaron en 1538 el pueblo de
+  Santa Ana» — la fuente que le faltaba al nombre nativo del sitio) y Adícora,
+  que es el Jadícuar de Zavala (p. 14 y apéndice p. 73: el mismo nombre en dos
+  fuentes, con la atribución cumanagota del sufijo en cuarentena).
 - Las dos páginas dañadas por el OCR (30 y 52) se leyeron en la imagen
   renderizada del PDF: es el camino cuando la línea que decide está borrosa.
 

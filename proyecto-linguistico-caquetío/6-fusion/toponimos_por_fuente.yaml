@@ -9,7 +9,7 @@ meta:
     de fusión.'
   marcas: ★ en el canon · ≡ en el índice de Esteves · ◆ en el mapa de Miguel · ⌂ en asentamientos.yaml
   resumen:
-    menciones: 667
+    menciones: 677
     formas_distintas: 495
     fuentes: 14
     por_fuente:
@@ -17,8 +17,8 @@ meta:
         menciones: 58
         formas: 58
       esteves-1989:
-        menciones: 222
-        formas: 190
+        menciones: 227
+        formas: 191
       castellanos-elegias:
         menciones: 12
         formas: 12
@@ -47,7 +47,7 @@ meta:
         menciones: 212
         formas: 180
       testimonio-miguel:
-        menciones: 41
+        menciones: 46
         formas: 37
       proyecto:
         menciones: 4
@@ -55,9 +55,9 @@ meta:
       sin-procedencia:
         menciones: 8
         formas: 8
-    en_canon: 107
+    en_canon: 109
     en_nodos: 15
-    sin_canon_ni_nodo: 382
+    sin_canon_ni_nodo: 381
     cruces:
       mapa_de_miguel_en_esteves:
       - Buchuaco
@@ -102,18 +102,18 @@ meta:
       - Carirubana
       - Chuchube
       - Guachaco
-      - Moruy
       - Saruro
       - Tacuato
+      - moruy
       medina_colina_en_canon:
       - cabudare
       - capadare
+      - moruy
       - todarahuato
       en_mas_de_dos_fuentes:
       - Adícora (3)
       - Coriana (3)
       - Guaidabacoa (3)
-      - Moruy (4)
       - Santa Ana (3)
       - cayeruba (3)
       - dabudare (3)
@@ -124,6 +124,7 @@ meta:
       - judibana (3)
       - jurijurebo (4)
       - miraca (3)
+      - moruy (4)
       - paraguana (4)
       - supí (4)
       - todariquiba (4)
@@ -424,8 +425,8 @@ por_fuente:
 - obra: esteves-1989
   en_bibliografia: true
   descripcion: 'el índice ''Topónimos compilados'' de Paraguaná (pp. 68-69): la cola de la campaña'
-  menciones: 222
-  formas: 190
+  menciones: 227
+  formas: 191
   toponimos:
   - forma: judibana
     tipo: canon
@@ -469,6 +470,19 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml §lecturas
     dato: '«proviene de Guacoa, pero más explícito por el sufijo ebo, o sea que expresa: el paso de la guacoa»'
     ref: 'toponimo-021 · Esteves 1989 · 2026-09-07 · compatible con ebo ''paso'' (Zavala #117); la glosa de Zavala…'
+  - forma: jadicuar
+    tipo: lectura:glosa-fuente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: '«El nombre primitivo era Jadícuar, que quiere decir: jajatal, sitio donde abunda el jajato, hierba halófila
+      d…'
+    ref: toponimo-024 · Esteves 1989 · 2026-09-07 · coincide con Zavala; segunda atestación de la glosa
+  - forma: jadicuar
+    tipo: lectura:etimologia-analitica
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: jade 'jajato' + cuar, colectivo cumanagoto 'aglomeración, abundancia' según Caulín — «este cuar tiene
+      el mism…
+    ref: toponimo-024 · Esteves 1989 (apéndice) · 2026-09-07 · la parte caquetía (jajato, tuba) está atestiguada;
+      la atrib…
   - forma: adaure
     tipo: canon
     donde: 2-lengua/toponimos.yaml
@@ -594,6 +608,23 @@ por_fuente:
     dato: «¿Origen de la voz? ¿Simaruba? Es posible, hay abundancia de este árbol rutáceo en sus contornos» (leído
       en l…
     ref: toponimo-104 · nivel C · topónimo · fuente procedencia
+  - forma: moruy
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: «Es más aceptable considerar la voz como una alteración de merejuy, cierta levadura o preparación agria
+      que u…
+    ref: toponimo-108 · nivel C · topónimo · fuente procedencia
+  - forma: moruy
+    tipo: lectura:etimologia-popular
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: los naturales temían a los moros (los piratas) y al ver barcos gritaban «¡Moro... uy!»
+    ref: 'toponimo-108 · tradición oral, recogida por Esteves y por Miguel · 2026-09-01 · Esteves: «demasiado infantil»;
+      el proyecto: etimología de a…'
+  - forma: chamuriana
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: «Antigua aldea indígena en cuyas cercanías los españoles fundaron en 1538 el pueblo de Santa Ana de Paraguaná…
+    ref: toponimo-109 · nivel C · topónimo · fuente procedencia
   - forma: supí
     tipo: canon
     donde: 2-lengua/toponimos.yaml
@@ -753,13 +784,22 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
     ref: toponimo-008
+  - forma: Moruy
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-108
+  - forma: Chamuriana
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-109
+  - forma: Adícora
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-024
   - forma: Acaboa
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Adaro
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Adícora
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Aguaque
@@ -909,9 +949,6 @@ por_fuente:
   - forma: Cuzubitos
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Chamuriana
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Chaure
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
@@ -1054,9 +1091,6 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Misaray
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Moruy
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Muaco
@@ -3039,7 +3073,7 @@ por_fuente:
   en_bibliografia: false
   descripcion: 'Miguel Gil Urbina: lecturas de investigación coloquial, tradición local, mapa vivo — deuda sin-procedencia,
     por diseño'
-  menciones: 41
+  menciones: 46
   formas: 37
   toponimos:
   - forma: jurijurebo
@@ -3097,6 +3131,35 @@ por_fuente:
     dato: '«Cayerda no existe, pero Cayerúa sí»: en el mapa actual aparece Cayerúa cerca de Moruy, con Uarayadito
       en el …'
     ref: toponimo-104 · Miguel Gil Urbina (mapa) · 2026-09-01
+  - forma: moruy
+    tipo: lectura:etimologia-popular
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: del quechua muru 'viruela' o 'pepa'
+    ref: 'toponimo-108 · tradición recogida por Miguel · 2026-09-01 · exige préstamo quechua sin ruta: improbable'
+  - forma: moruy
+    tipo: lectura:hipotesis
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: 'Moruy era un cacique: topónimo < antropónimo, el patrón regional (cf. Manaure)'
+    ref: toponimo-108 · tradición recogida por Miguel; validación del proyecto · 2026-09-01 · compatible con merejuy
+      por la regla 0 (un cacique puede lla…
+  - forma: moruy
+    tipo: lectura:hipotesis
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: 'Moruy y Santa Ana (Chamuriana) eran del mismo clan, en órbita del Capubana: Moruy donde se hacía el merejuy
+      p…'
+    ref: toponimo-108 · Miguel Gil Urbina · 2026-09-01 · canon-simulacion como modelo espacial (validación en toponi…
+  - forma: chamuriana
+    tipo: lectura:tradicion-local
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: «elegida por los nativos debido a la abundancia de agua dulce que bajaba del cerro»
+    ref: toponimo-109 · crónica local, recogida por Miguel · 2026-09-01 · sin procedencia para la frase; el agua
+      del cerro es verific…
+  - forma: chamuriana
+    tipo: lectura:hipotesis
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: el pueblo de Santa Ana es fundación colonial (franciscana según Miguel, «los españoles» en 1538 según
+      Esteves…
+    ref: 'toponimo-109 · Miguel Gil Urbina · 2026-09-01 · Esteves lo sostiene: aldea indígena ANTERIOR a la fundación…'
   - forma: Judibana
     tipo: testimonio-residente
     donde: 6-fusion/velasco_primarios_agi.yaml §judibana_tradicion
@@ -3442,7 +3505,7 @@ indice_de_formas:
     en_mapa_miguel: false
     en_nodos: nodo-012 (reconstruido, precontacto desconocido)
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · indice · toponimo-024
   - moron-2012-petroglifos · estacion-rupestre
   - medina-colina-sxx · lugar-s-xx
 - forma: Adicoura
@@ -4855,18 +4918,24 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - moron-2012-petroglifos · estacion-rupestre
-- forma: Chamuriana
-  variantes: []
+- forma: chamuriana
+  variantes:
+  - Chamuriana
   fuentes:
   - esteves-1989
   - testimonio-miguel
   cruces:
-    en_canon: null
+    en_canon: toponimo-109 · nivel C
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-109 · nivel C · topónimo · fuente procedencia
+  - testimonio-miguel · lectura:tradicion-local · toponimo-109 · crónica local, recogida por Miguel · 2026-09-01
+    · sin procedencia para la frase; el agua del cerro es verific…
+  - 'testimonio-miguel · lectura:hipotesis · toponimo-109 · Miguel Gil Urbina · 2026-09-01 · Esteves lo sostiene:
+    aldea indígena ANTERIOR a la fundación…'
+  - esteves-1989 · indice · toponimo-109
   - testimonio-miguel · tradicion-local · sin-procedencia
 - forma: charaima
   variantes:
@@ -6262,13 +6331,18 @@ indice_de_formas:
   variantes: []
   fuentes:
   - zavala-reyes-2015
+  - esteves-1989
   cruces:
     en_canon: toponimo-024 · nivel C
-    en_esteves: false
+    en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
   - zavala-reyes-2015 · canon · toponimo-024 · nivel C · topónimo · fuente inferida-por-cruce
+  - esteves-1989 · lectura:glosa-fuente · toponimo-024 · Esteves 1989 · 2026-09-07 · coincide con Zavala; segunda
+    atestación de la glosa
+  - esteves-1989 · lectura:etimologia-analitica · toponimo-024 · Esteves 1989 (apéndice) · 2026-09-07 · la parte
+    caquetía (jajato, tuba) está atestiguada; la atrib…
 - forma: Jagüe
   variantes: []
   fuentes:
@@ -7076,20 +7150,30 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - van-buurt-2014 · indice-abc · §7
-- forma: Moruy
-  variantes: []
+- forma: moruy
+  variantes:
+  - Moruy
   fuentes:
   - esteves-1989
+  - testimonio-miguel
   - oliver-1989-cap3
   - medina-colina-sxx
-  - testimonio-miguel
   cruces:
-    en_canon: null
+    en_canon: toponimo-108 · nivel C
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: nodo-027 (atestiguado, precontacto desconocido)
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-108 · nivel C · topónimo · fuente procedencia
+  - 'esteves-1989 · lectura:etimologia-popular · toponimo-108 · tradición oral, recogida por Esteves y por Miguel
+    · 2026-09-01 · Esteves: «demasiado infantil»; el proyecto: etimología de a…'
+  - 'testimonio-miguel · lectura:etimologia-popular · toponimo-108 · tradición recogida por Miguel · 2026-09-01
+    · exige préstamo quechua sin ruta: improbable'
+  - testimonio-miguel · lectura:hipotesis · toponimo-108 · tradición recogida por Miguel; validación del proyecto
+    · 2026-09-01 · compatible con merejuy por la regla 0 (un cacique puede lla…
+  - testimonio-miguel · lectura:hipotesis · toponimo-108 · Miguel Gil Urbina · 2026-09-01 · canon-simulacion como
+    modelo espacial (validación en toponi…
+  - esteves-1989 · indice · toponimo-108
   - oliver-1989-cap3 · asiento-de-clan · p. 276
   - medina-colina-sxx · lugar-s-xx
   - testimonio-miguel · etimologia-popular (CUATRO versiones recogidas) · sin-procedencia

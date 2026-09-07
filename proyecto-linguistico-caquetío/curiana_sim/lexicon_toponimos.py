@@ -661,6 +661,36 @@ NIVEL_C = {
                  "forrajera, lugar de arena') y `jadi-`~`jaja-` podría ser la "
                  "misma raíz, pero la correspondencia d~j no está documentada "
                  "en ninguna de las tres ortografías.",
+        "observacion": "⭐ (2026-09-07) Jadícuar es el nombre primitivo de ADÍCORA "
+                       "(Esteves p. 14: «de Jadícuar a Jadícora, de Jadícora a "
+                       "Jatícora, hasta llegar al sugestivo y poético Adícora de "
+                       "hoy»): el topónimo de Zavala y la capital de municipio de "
+                       "la costa oriental son el mismo nombre. Esteves confirma la "
+                       "glosa 'jajatal' por vía independiente y, en el apéndice, "
+                       "segmenta jade 'jajato' + cuar, «desinencia de los "
+                       "sustantivos colectivos en lengua cumanagota» (Caulín): "
+                       "topónimo híbrido según él — atribución cumanagota en "
+                       "cuarentena (B.6). Nodo-012 adicora. Puerto de goletas a "
+                       "las islas hasta los años 50 (Medina Colina, s. XX).",
+        "lecturas": [
+            {"tipo": "glosa-fuente",
+             "lectura": "«El nombre primitivo era Jadícuar, que quiere decir: "
+                        "jajatal, sitio donde abunda el jajato, hierba halófila de "
+                        "terrenos salobres»",
+             "quien": "Esteves 1989", "fecha": "2026-09-07", "eje": "ambos",
+             "procedencia": dict(obra="esteves-1989", pagina=14),
+             "veredicto": "coincide con Zavala; segunda atestación de la glosa"},
+            {"tipo": "etimologia-analitica",
+             "lectura": "jade 'jajato' + cuar, colectivo cumanagoto "
+                        "'aglomeración, abundancia' según Caulín — «este cuar "
+                        "tiene el mismo significado del tuba de los caquetíos»",
+             "quien": "Esteves 1989 (apéndice)", "fecha": "2026-09-07",
+             "eje": "significado", "procedencia": dict(obra="esteves-1989", pagina=73),
+             "veredicto": "la parte caquetía (jajato, tuba) está atestiguada; la "
+                          "atribución del sufijo al cumanagoto es de Esteves vía "
+                          "Caulín, sin geografía que la sostenga (Oliver §3.2.4 "
+                          "pone a los cumanagotos en la costa oriental)"},
+        ],
     },
     "chunare": {
         "glosa_fuente": "Apellido. Mazorca tierna",
@@ -1075,6 +1105,106 @@ NIVEL_C = {
              "procedencia": dict(obra="oliver-1989-cap3", pagina=276),
              "veredicto": "muy probable por la geografía (Esteves y el mapa lo "
                           "ponen donde Delmonte); sin documento que las iguale"},
+        ],
+    },
+    # ── Lote 5 (2026-09-07): los nodos de la era 2 — Moruy, Chamuriana, Adícora ──
+    "moruy": {
+        "id": "toponimo-108", "fuente": "esteves-1989", "pagina": 53,
+        "glosa_fuente": "«Es más aceptable considerar la voz como una alteración "
+                        "de merejuy, cierta levadura o preparación agria que "
+                        "usaban para acelerar la fermentación del maíz cocido con "
+                        "que elaboraban la chicha embriagadora, que consumían en "
+                        "ceremonias religiosas»",
+        "segmentacion": "moruy (< merejuy, según Esteves; sin composición)",
+        "razon": "la etimología es propuesta de Esteves («más aceptable»), sin "
+                 "fuente, y merejuy no está en el lexicón; el paso merejuy → "
+                 "moruy pide varios cambios vocálicos y una síncopa. Ningún "
+                 "morfema del canon alinea. Lo firme es el lugar: asiento del "
+                 "clan Amuay tras el reasentamiento desde Cayerda (Delmonte 1883 "
+                 "vía Oliver), pueblo de Paraguaná en 1556 (Arcaya vía Esteves "
+                 "p. 52), sitio FAL-149 de Oliver (nodo-027), 213 casas en 1881, "
+                 "y hoy capital de municipio.",
+        "observacion": "⭐ Esteves: «los indios de Moruy eran los más belicosos de "
+                       "Paraguaná, hay testimonios escritos» de sus peleas contra "
+                       "los españoles que les usurpaban tierras — contra el "
+                       "«Caquetío, who were always peaceful» de Oliver (n. 154): "
+                       "otra etiqueta colonial. «La comunidad con más apego a las "
+                       "costumbres de sus antepasados»: cerámica, silletas, "
+                       "bernegales, jabón de la tierra; apellidos sin deformar "
+                       "(Caguao, Cuauro, Mabo, Guarecuco, Cotopo). Es uno de los "
+                       "dos nodos de la era 2 (DISENO_ERA2 §2). La versión de "
+                       "merejuy que Miguel recogió «sin identificar» era esta "
+                       "página.",
+        "lecturas": [
+            {"tipo": "etimologia-popular",
+             "lectura": "los naturales temían a los moros (los piratas) y al ver "
+                        "barcos gritaban «¡Moro... uy!»",
+             "quien": "tradición oral, recogida por Esteves y por Miguel",
+             "fecha": "2026-09-01", "eje": "significado",
+             "procedencia": dict(obra="esteves-1989", pagina=53),
+             "veredicto": "Esteves: «demasiado infantil»; el proyecto: etimología "
+                          "de anécdota, improbable"},
+            {"tipo": "etimologia-popular",
+             "lectura": "del quechua muru 'viruela' o 'pepa'",
+             "quien": "tradición recogida por Miguel", "fecha": "2026-09-01",
+             "eje": "significado",
+             "veredicto": "exige préstamo quechua sin ruta: improbable"},
+            {"tipo": "hipotesis",
+             "lectura": "Moruy era un cacique: topónimo < antropónimo, el patrón "
+                        "regional (cf. Manaure)",
+             "quien": "tradición recogida por Miguel; validación del proyecto",
+             "fecha": "2026-09-01", "eje": "referente",
+             "veredicto": "compatible con merejuy por la regla 0 (un cacique puede "
+                          "llamarse por el oficio del sitio); sin documento"},
+            {"tipo": "hipotesis",
+             "lectura": "Moruy y Santa Ana (Chamuriana) eran del mismo clan, en "
+                        "órbita del Capubana: Moruy donde se hacía el merejuy para "
+                        "la chicha ritual, a la izquierda del cerro; la asignación "
+                        "de Delmonte (Guaranaos en Santa Ana) describiría geografía "
+                        "colonial",
+             "quien": "Miguel Gil Urbina", "fecha": "2026-09-01", "eje": "referente",
+             "veredicto": "canon-simulacion como modelo espacial (validación en "
+                          "toponimia_paraguana_miguel.yaml §capubana-centro-sagrado); "
+                          "Oliver confirma el REASENTAMIENTO Cayerda → Moruy, que "
+                          "huele a reducción colonial"},
+        ],
+    },
+    "chamuriana": {
+        "id": "toponimo-109", "fuente": "esteves-1989", "pagina": 35,
+        "glosa_fuente": "«Antigua aldea indígena en cuyas cercanías los españoles "
+                        "fundaron en 1538 el pueblo de Santa Ana de Paraguaná. En "
+                        "el lugar se hallan restos de cerámica indígena y europea. "
+                        "Nada sabemos del significado de la voz»",
+        "segmentacion": "chamur- + -iana",
+        "razon": "Esteves no glosa. Lo único que alinea es la terminación -iana, "
+                 "la misma de Coriana/Curiana, sobre el formante -ana (forma "
+                 "atestiguada, glosa 'lugar de' en disputa, #109): un dato más "
+                 "para esa cola, no una etimología. Lo firme es el referente: la "
+                 "aldea nativa anterior a 1538 junto a la que se fundó Santa Ana, "
+                 "con cerámica indígena y europea (nodos 013 y 024: el cerro "
+                 "tiene tres dataciones precontacto, hasta 1415).",
+        "observacion": "⭐ El nombre nativo del sitio de Santa Ana, que Miguel "
+                       "había hallado en investigación coloquial sin fuente "
+                       "citable: la fuente es esta (p. 35). Esteves fecha la "
+                       "fundación española en 1538; Miguel la da como franciscana. "
+                       "Con Moruy, Cayerúa y Maitiruma orbita el Capubana: el otro "
+                       "nodo de la era 2.",
+        "lecturas": [
+            {"tipo": "tradicion-local",
+             "lectura": "«elegida por los nativos debido a la abundancia de agua "
+                        "dulce que bajaba del cerro»",
+             "quien": "crónica local, recogida por Miguel", "fecha": "2026-09-01",
+             "eje": "referente",
+             "veredicto": "sin procedencia para la frase; el agua del cerro es "
+                          "verificable (Maitiruma, el bosque xerófito)"},
+            {"tipo": "hipotesis",
+             "lectura": "el pueblo de Santa Ana es fundación colonial (franciscana "
+                        "según Miguel, «los españoles» en 1538 según Esteves) y el "
+                        "nodo norte precontacto no puede anclarse en él como "
+                        "pueblo: el sitio y su agua se llamaban Chamuriana",
+             "quien": "Miguel Gil Urbina", "fecha": "2026-09-01", "eje": "referente",
+             "veredicto": "Esteves lo sostiene: aldea indígena ANTERIOR a la "
+                          "fundación, con cerámica de las dos épocas"},
         ],
     },
     "supí": {

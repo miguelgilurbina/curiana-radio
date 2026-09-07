@@ -20,8 +20,8 @@ meta:
   estado: cola-de-trabajo   # lote 1 (2026-09-06, los del mapa de Miguel) y lote 2 (2026-09-07, los «caribe insular»; Maitiruma fue en el 1) procesados
   obra: esteves-1989
   total_indice: 186
-  ya_en_canon: 31
-  por_procesar: 155
+  ya_en_canon: 34
+  por_procesar: 152
 
 # Los que YA están en 2-lengua/toponimos.yaml (referencia cruzada):
 ya_registrados:
@@ -56,13 +56,15 @@ ya_registrados:
   - {forma: Yauquiba, canon: toponimo-105, lote: 2026-09-07}
   - {forma: Dabadubare, canon: toponimo-011, lote: 2026-09-07}
   - {forma: Guaidabacoa, canon: toponimo-008, lote: 2026-09-07}
+  - {forma: Moruy, canon: toponimo-108, lote: 2026-09-07}
+  - {forma: Chamuriana, canon: toponimo-109, lote: 2026-09-07}
+  - {forma: Adícora, canon: toponimo-024, lote: 2026-09-07}
 
 # Los que NO están — la cola. `estrato` marca los que Esteves atribuye a
 # lengua no caquetía (la pregunta de B.1 / Oliver §3.2.4):
 por_procesar:
   - {forma: Acaboa}
   - {forma: Adaro}
-  - {forma: Adícora}
   - {forma: Aguaque}
   - {forma: Antuní}
   - {forma: Arajó}
@@ -112,7 +114,6 @@ por_procesar:
   - {forma: Cunacho}
   - {forma: Curaidebo}
   - {forma: Cuzubitos}
-  - {forma: Chamuriana}
   - {forma: Chaure}
   - {forma: Chichibana}
   - {forma: Chiguaral}
@@ -161,7 +162,6 @@ por_procesar:
   - {forma: Matuto}
   - {forma: Michaco}
   - {forma: Misaray}
-  - {forma: Moruy}
   - {forma: Muaco}
   - {forma: Niraba}
   - {forma: Nonocoti}
