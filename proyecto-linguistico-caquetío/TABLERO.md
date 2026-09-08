@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-07 21:56**.
+<!--GENERADO--> Generado el **2026-09-07 22:17**.
 
 ## ¿Vamos bien?
 
@@ -23,7 +23,7 @@ editar_a_mano: no
 | Hechos del corpus **con referencia** | **166 / 166** | — | 🟢 |
 | Tests del motor | **246 en verde** | 0 rojos | 🟢 |
 | Gate para reanudar simulaciones | **6 de 9** condiciones | faltan 3 | 🔴 |
-| Decisiones esperando a Miguel | **8 abiertas** | 5 resueltas | 🟡 |
+| Decisiones esperando a Miguel | **10 abiertas** | 5 resueltas | 🟡 |
 
 **Lo que bloquea hoy:** wayunaiki vs. lokono (D11).
 Y 2 condición(es) que **nadie puede medir por script**: citas del corpus (F10) · exportador de runs.
@@ -276,9 +276,11 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | D13 | El hueco léxico de "tío materno": la palabra que le falta a la tesis central | 🔴 abierta | [#82](https://github.com/miguelgilurbina/curiana-radio/issues/82) |
 | D14 | Qué segunda polity se pone en escena | 🔴 abierta | [#83](https://github.com/miguelgilurbina/curiana-radio/issues/83) |
 | D15 | Qué nodo se simula primero: Coro, Paraguaná, o un par desde el principio | ✅ resuelta | [#90](https://github.com/miguelgilurbina/curiana-radio/issues/90) |
+| — | Servir los PDF del vault desde `/kaketiana/fuentes`, tras un aporte voluntario | 🔴 abierta | [#120](https://github.com/miguelgilurbina/curiana-radio/issues/120) |
+| — | El lexicón responde "¿de qué lengua es esta palabra?" y lo usamos como si respondiera "¿la usaba un caquetío?" | 🔴 abierta | [#119](https://github.com/miguelgilurbina/curiana-radio/issues/119) |
 | — | `tara`: ¿venado o mariposa? — puede tumbar un argumento del corpus | 🔴 abierta | [#45](https://github.com/miguelgilurbina/curiana-radio/issues/45) |
 
-**8 abiertas** de 13. Medido contra el tablero, no contra una nota.
+**10 abiertas** de 15. Medido contra el tablero, no contra una nota.
 
 ---
 

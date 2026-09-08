@@ -16,6 +16,11 @@ revisión encima (el de D9 lleva tres, con dos autocorrecciones).
 | `issue-hayo.md` | issue **#104** | 2026-08-24 |
 | `issue-caraota.md` | issue **#105** | 2026-08-24 |
 | `issue-polity-en-el-corpus.md` | issue **#106** | 2026-08-24 |
+| `comentario-109-censo-ana-esteves.md` | comentario en [#109](https://github.com/miguelgilurbina/curiana-radio/issues/109), **cerrado** con la decisión B de Miguel | 2026-09-07 |
+| `comentario-83-d14-occidental.md` | comentario en [#83](https://github.com/miguelgilurbina/curiana-radio/issues/83) (D14): la esfera occidental como quinta candidata | 2026-09-07 |
+| `issue-repertorio-vs-filiacion.md` | issue **#119** (`decision`, `fidelidad`, `motor`) | 2026-09-07 |
+| `issue-pdfs-fuentes-aporte.md` | issue **#120** (`decision`, `jardin`); enlaza a #37 (D8) | 2026-09-07 |
+| `issue-esquema-lecturas-toponimos.md` | **no se publicó: se implementó** (2026-09-05, campo `lecturas` + `definicion_aceptada_simulacion`). Queda el punto 3, retro-poblar las lecturas del 2026-08-25, como trabajo | 2026-09-07 |
 
 Nada de esto está fusionado al canon: son argumentos publicados esperando
 decisión humana.

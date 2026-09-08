@@ -31,6 +31,8 @@ No hace falta suponerlo. Todo esto entró al vault en la sesión del 2026-08-25,
 
 Un pueblo de comerciantes, en un archipiélago de contacto, con deportaciones y retornos hacia y desde las Antillas taínas. **La hipótesis por defecto no puede ser el monolingüismo.**
 
+*(Añadido el 2026-09-07: los pueblos de esa lista ya tienen registro canon propio, `3-mundo/etnias.yaml`, con familia lingüística, tipo de contacto y la polity caquetía que toca cada uno — ocho fichas, validadas por `compilar_etnias.py`. Y `curiana_polities.py` tiene desde hoy la esfera occidental como quinta polity, futura: los caquetíos de la Guajira y Juruara, enclave entre bubures de lengua caribe y coanaos chibchas. El contacto ya no es una lista de citas sueltas: es dato estructurado.)*
+
 ## 🔴 Y la consecuencia que va más allá del lexicón
 
 Esto no toca solo etiquetas. Toca la métrica central del experimento.
