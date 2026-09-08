@@ -1021,7 +1021,7 @@ entradas:
         objetos ligeros, sí. Se registra como mc-mundo-006.
       toponimo_a_la_cola: "Las Barisiguas (Dabajuro) → pasar a la campaña de topónimos con la lectura 'lugar de barisiguas' (fitónimo + -s plural castellano), fuente débil, coordenadas dadas"
 
-  - voz: bayute
+  - voz: bayure
     glosa_libro: >-
       especie de abeja que produce una miel dulce y un poco ácida. También
       se le llama así a la casa que hace esta abeja, generalmente en palos
@@ -1030,6 +1030,11 @@ entradas:
     campo: fauna / oficio (miel)
     segun_dictado: true
     dictado: 2026-09-01
+    cotejo_2026-09-08: >-
+      Miguel confirma BAYURE, con r: la t del dictado del día 1 era
+      error de oído. Segunda mención, p. [pendiente, letra M]: «maba,
+      mebi, bayure: tres denominaciones para identificar al panal de las
+      abejas» — panal y abeja, como decía la entrada de la p. 45.
     identificacion: >-
       Abeja sin aguijón (Meliponini), por la miel «dulce y un poco ácida»
       (la acidez alta es el rasgo de las mieles de meliponinos: Vit et al.
@@ -1041,7 +1046,7 @@ entradas:
         'miel'): RUBA 'especie de abeja silvestre negra de Coro'
         [caquetío-atestiguado], harifuche 'maíz tostado y miel', wayuu
         mapase 'cera de abeja'. El caquetío tiene UNA abeja con nombre
-        (ruba); bayute sería otra.
+        (ruba); bayure sería otra.
       cognados: nada
       toponimos: nada
       a2: nada
@@ -1052,7 +1057,7 @@ entradas:
         sobre la Melipona favosa de Paraguaná (Vit et al. 2012, Rev. Inst.
         Nac. Hig. «Rafael Rangel» 43(1): 15-19) la llama «erica» o «maba»;
         las listas nacionales de meliponinos dan guanota, erica/arica,
-        rubita, conguita, angelita. BAYUTE NO ESTÁ EN NINGUNA: Medina
+        rubita, conguita, angelita. BAYURE NO ESTÁ EN NINGUNA: Medina
         Colina es hoy su única fuente.
     filtros:
       "1 castellano": "no restituye a nada"
@@ -1076,7 +1081,7 @@ entradas:
       de voz que el protocolo esperaba encontrar: el oficio diario (la miel
       silvestre, el nido en el palo hueco) que las crónicas no anotaron. Y
       un dato de contraste: el canon ya tiene ruba 'abeja silvestre negra
-      de Coro'; si bayute y ruba son dos especies distintas con nombre
+      de Coro'; si bayure y ruba son dos especies distintas con nombre
       propio, el caquetío costero distinguía sus meliponinos — lo que la
       etnoapicultura documenta en toda la región.
     propuesta:
@@ -2092,7 +2097,7 @@ entradas:
         nada real por forma (wakuaro 'palo de tinte' es parecido difuso).
         Por glosa: RUBA 'abeja silvestre negra de Coro' [caq. atestiguado]
         — la abeja NEGRA tiene nombre caquetío; esta es la AMARILLA. Con
-        bayute (C) son ya tres meliponinos con nombre en el habla.
+        bayure (C) son ya tres meliponinos con nombre en el habla.
       cognados: nada
       toponimos: nada
       fonotactica: pasa (wakukero)
@@ -2106,7 +2111,7 @@ entradas:
     veredicto: C
     certeza: baja
     razon: >
-      Tercer meliponino nombrado (ruba negra, bayute, guacuquero amarilla):
+      Tercer meliponino nombrado (ruba negra, bayure, guacuquero amarilla):
       la etnoapicultura del monte seco con vocabulario propio, que es lo
       que el protocolo esperaba encontrar. La forma es probablemente
       híbrida (base local + -ero castellano), de modo que la voz entera no
@@ -3903,10 +3908,11 @@ descartes:
       precontacto (regla 3). Hipotético, solo corpus. Lo que la subiría a B:
       que Medina la escriba dabudeque o registre la variante; una segunda
       fuente falconiana con la etimología del adobe; la página.
-    pendiente_miguel: >-
-      la página del libro, y si Medina la escribe con de- o con da- (la web
-      trae las dos). Si dice dabudeque, el cruce con dabuda pasa de
-      hipótesis a lectura con apoyo.
+    cotejo_2026-09-08: >-
+      Miguel confirma DEBUDEQUE, con de-. La variante dabudeque es de la
+      web, no del libro: el cruce con dabuda 'barro de loza' se queda en
+      hipótesis (pide a > e en la primera sílaba, o que la forma con da-
+      sea la más vieja). Página, pendiente.
 
   # disey, dictada de nuevo el 2026-09-07: YA estaba (2026-09-01, p. 95, C).
   # No se duplica.
@@ -4147,7 +4153,7 @@ descartes:
       "2 distribución restringida": "sí — única fuente"
     veredicto: C
     razon: >
-      Como bayute: fitónimo local con función precisa (el amarre del
+      Como bayure: fitónimo local con función precisa (el amarre del
       bajareque), pasa los filtros y cumple dos criterios; sin cognado ni
       atestación. C, al corpus (casa). Deuda: identificar la planta.
   - voz: guargüero
@@ -4627,7 +4633,7 @@ descartes:
       lexicon: >-
         nada por forma. Por glosa: el lexicón tiene RUBA 'abeja silvestre
         negra de Coro' [caq. atestiguado], harifuche 'maíz tostado y miel',
-        y wayuu mapase 'cera de abeja'. Y bayute (dictado, C): abeja sin
+        y wayuu mapase 'cera de abeja'. Y bayure (dictado, C): abeja sin
         aguijón y su casa. La miel y el panal caquetíos no tienen voz en el
         lexicón: aquí llegan TRES de golpe (maba, mebi, bayure), más mavita
         y memerea, más la abeja zamuro (s.v. zamuro).
@@ -4681,28 +4687,8 @@ descartes:
       Segundo nombre del panal, sin paralelo: C, al corpus (miel). Que haya
       TRES nombres para el panal (maba, mebi, bayure) sugiere tres cosas
       distintas que el autor ya no distingue — quizá tres abejas, como
-      bayute y la abeja zamuro. Deuda: preguntar a Miguel si su gente los
+      bayure y la abeja zamuro. Deuda: preguntar a Miguel si su gente los
       diferencia.
-  - voz: bayure
-    glosa_libro: "[con maba y mebi] son tres denominaciones para identificar al panal de las abejas"
-    pagina: null            # ⚠️ PENDIENTE
-    campo: fauna / oficio (miel)
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: "nada por forma; BAYUTE (dictado del día 1, p. 45, C): «especie de abeja… también se le llama así a la casa que hace esta abeja». Bayure ~ bayute: r~t es alternancia de oído o de dictado — con toda probabilidad la MISMA palabra, panal y abeja"
-      fonotactica: pasa
-      fuera_del_repo: "no localizada"
-    filtros:
-      "1-6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí"
-      "2 distribución restringida": "sí"
-    veredicto: C
-    razon: >
-      Probablemente bayute (p. 45) con otra grafía o con error de dictado;
-      se registra aparte hasta cotejar el papel, y entonces se funden.
-      Pendiente de Miguel: ¿bayute o bayure en la p. 45 y en esta?
   - voz: macana
     glosa_libro: "en Paraguaná se utilizó por nuestros viejos para referirse a algo muy grande o desproporcionado"
     pagina: null            # ⚠️ PENDIENTE
@@ -4917,7 +4903,7 @@ descartes:
     segun_dictado: true
     dictado: 2026-09-08
     cruce:
-      lexicon: "nada; ver maba. Coincide con bayute (día 1): «casa… generalmente en palos secos y huecos» — ¿el panal de la abeja bayute?"
+      lexicon: "nada; ver maba. Coincide con bayure (día 1): «casa… generalmente en palos secos y huecos» — ¿el panal de la abeja bayure?"
       fonotactica: pasa (reduplicación me-me-)
       fuera_del_repo: "no localizada; única fuente"
     filtros:
@@ -4927,9 +4913,9 @@ descartes:
       "2 distribución restringida": "sí"
     veredicto: C
     razon: >
-      Otro nombre del panal, con el rasgo del tronco seco que bayute ya
+      Otro nombre del panal, con el rasgo del tronco seco que bayure ya
       traía: C. El racimo completo de la miel paraguanera queda así: maba,
-      mebi, bayure/bayute, mavita, memerea, matejea (avispas), zamuro
+      mebi, bayure, mavita, memerea, matejea (avispas), zamuro
       (abeja hedionda) — siete voces donde el lexicón tenía una (ruba).
       Es el hueco léxico mejor documentado del dictado.
   - voz: muchilas
