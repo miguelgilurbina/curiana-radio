@@ -78,6 +78,65 @@ muestreo F10 de Miguel, **9** el exportador #42).
    queda medido con una vara que después puede parecer equivocada.
 4. **Compras físicas** (ver C).
 
+## A-bis · El plan de arranque de la simulación (2026-09-08)
+
+> Miguel preguntó qué falta para empezar a montar la simulación. Esto es la
+> respuesta, medida contra el gate de `TABLERO.md` §4 y la ingeniería de
+> [[DISENO_ERA2]] §8. **Nada de aquí es nuevo trabajo de investigación**: la
+> minería que cerró el 2026-09-08 (Medina Colina, la campaña de topónimos,
+> B.6) dejó el insumo puesto.
+
+### Lo que bloquea el gate: tres cosas
+
+| # | Qué | De quién | Tamaño |
+|---|---|---|---|
+| 8 | **D11** — contra qué lengua se reconstruye (wayuu 781 vs. lokono 275) | **Miguel**: es decisión, no trabajo. La evidencia está completa desde el 2026-08-31 (`6-fusion/computo_d11_2026-08-31.yaml`) | una decisión |
+| 5 | **F10** — muestreo de 15-20 citas del corpus al azar | **Miguel**: es trabajo humano por definición | una tarde |
+| 9 | **El exportador** (`export_runs_index.py`, #42): exporta 0 turnos con 290 respuestas | escriba | chico |
+
+Las otras seis condiciones están en verde y medidas. El re-export del sitio va
+DESPUÉS del primer run limpio, nunca antes (PLAN_MAESTRO §6.4).
+
+### Lo que la minería ya resolvió, y conviene no volver a comprar
+
+- **Las semillas léxicas divergentes por nodo**, que [[DISENO_ERA2]] §1 declara
+  condición de que los dos nodos no sean decorado, ya existen **atestiguadas**:
+  las dos isoglosas intrapeninsulares del dictado — `gualamo`/`bisure` (Tacuato
+  y Santa Ana frente al resto, mc-mundo-020) y `siguato` (oriente = el ánimo
+  caído, occidente entre pescadores = el pescado pasado, mc-mundo-027). La
+  segunda reparte además por OFICIO, que es justo el eje playa/conuco de los
+  dos nodos.
+- **La toponimia de los nodos con coordenadas**: 145 topónimos en canon y el
+  barrido OSM (`6-fusion/toponimos_mapa_kaketiana.yaml`), con Moruy, Chamuriana,
+  Cayerúa, Maitiruma y el Capubana localizados.
+- **El registro de vecinos** (`3-mundo/etnias.yaml`, 9.º guardián) y la quinta
+  polity (`occidental`, futura) para cuando el contacto salga de la península.
+
+### El orden de arranque
+
+1. **Arreglar el exportador** (escriba, chico). Desbloquea la condición 9 y es
+   lo único del gate que no depende de Miguel.
+2. **D11 y F10** (Miguel, en paralelo). Con eso el gate queda en verde.
+3. **Verificar la asignación norte/sur de los clanes** ([[DISENO_ERA2]] §2 la
+   marca EN VERIFICACIÓN: los homónimos modernos parecen invertidos respecto a
+   Oliver). Ahora se puede: el barrido OSM tiene las coordenadas. Chico, y hay
+   que hacerlo antes de sembrar los nodos o se siembran al revés.
+4. **Un run corto de la era 1 con la base sellada**, para tener la vara contra
+   la que leer la era 2 (protocolo `04_protocolo_run_1_era_auditada`).
+5. **Las cuatro piezas chicas de la era 2**, en el orden que el propio diseño
+   sugiere: modelo de costos → columna `nodo` en el esquema y pertenencia
+   agente→nodo → semillas por nodo (las isoglosas de arriba) → métricas
+   dentro/entre nodos con detector de meseta.
+6. **Lo grande, después**: episodios serializables, diario por agente y el
+   elenco nuevo desde los linajes. El elenco no es código, es curaduría con
+   Miguel, y puede avanzar en paralelo desde el principio.
+
+### Lo que este plan NO decide
+
+Si el run 1 se mide contra filiación o contra repertorio (#119). Sin esa línea
+escrita, el run queda medido con una vara que después puede parecer
+equivocada — es el punto 3 de la sección A, y sigue esperando.
+
 ## B · La cola de trabajo, por rendimiento
 
 ### B.1 · La serie Swadesh de Oliver (A-1 a A-7)  ← **arrancada el 2026-08-31**
