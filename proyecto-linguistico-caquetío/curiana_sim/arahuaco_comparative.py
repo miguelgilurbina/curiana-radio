@@ -132,8 +132,16 @@ COGNADOS = {
     },
     "piedra": {
         "PA": "*siba",
-        "CQ": None,
-        "WY": None,
+        # 2026-09-07 (fusión de lengua_toponimia_quibacoa.yaml §1, propuesta
+        # del 2026-08-25): el caquetío SÍ tiene reflejo, y con tres grafías
+        # declaradas por la fuente — Zavala #218 «Quiva (E): Piedra», #92
+        # «Cuiva. Kiba (PMA): Piedra». Y el wayuu ipa. Arcaya 1920 p. 36 da la
+        # raíz comparada: «en todos los dialectos de esta familia se encuentra
+        # con ese sentido la raíz ipa o iba; en guajiro ipar es piedra, e
+        # iparcoa cascajo». El caquetío cae del lado ki-/kwi- (sin la
+        # sibilante lokono): ver toponimo-034 quiquiba y toponimo-112 la cuiba.
+        "CQ": "quiva",
+        "WY": "ipa",
         "LK": "siba",
         "TN": "siba",
         "KL": "siba",      # [A] conservado; pan-arahuaco

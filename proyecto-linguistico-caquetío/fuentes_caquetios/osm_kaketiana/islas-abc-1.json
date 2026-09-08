@@ -1,0 +1,5051 @@
+{
+"version": 0.6,
+"generator": "Overpass API 0.7.62.11 87bfad18",
+"osm3s": {
+"timestamp_osm_base": "2026-09-08T01:32:17Z",
+"copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+},
+"elements": [
+{
+"type": "node",
+"id": 50031810,
+"lat": 12.5201024,
+"lon": -70.0371329,
+"tags": {
+"admin_level": "3",
+"capital": "3",
+"is_capital": "state",
+"name": "Oranjestad",
+"name:ar": "أورنجستاد",
+"name:be": "Араньестад",
+"name:be-tarask": "Араньестад",
+"name:bg": "Оранестад",
+"name:de": "Oranjestad",
+"name:el": "Οράνιεστατ",
+"name:en": "Oranjestad",
+"name:eo": "Oranjestado",
+"name:fr": "Oranjestad",
+"name:fy": "Oranjestêd",
+"name:he": "אורנייסטאד",
+"name:hu": "Oranjestad",
+"name:it": "Oranjestad",
+"name:ja": "オラニエスタッド",
+"name:ka": "ორანესტადი",
+"name:ko": "오랑예스타트",
+"name:lt": "Oranjestadas",
+"name:mk": "Орањестад",
+"name:mr": "ओरांजेश्टाड",
+"name:nb": "Oranjestad",
+"name:nl": "Oranjestad",
+"name:os": "Ораньестад",
+"name:pl": "Oranjestad",
+"name:pt": "Oranjestad",
+"name:ru": "Ораньестад",
+"name:sr": "Орањестад",
+"name:sv": "Oranjestad",
+"name:tr": "Oranjestad",
+"name:uk": "Ораньєстад",
+"name:ur": "اورنجسٹیڈ",
+"name:zh": "奧拉涅斯塔德",
+"place": "town",
+"population": "35000",
+"ref:LOCODE": "AWORJ",
+"wikidata": "Q131243",
+"wikipedia": "nl:Oranjestad (Aruba)"
+}
+},
+{
+"type": "node",
+"id": 540167863,
+"lat": 12.4929282,
+"lon": -69.9073335,
+"tags": {
+"name": "Fontein Cave",
+"natural": "cave_entrance",
+"tourism": "attraction"
+}
+},
+{
+"type": "node",
+"id": 540167865,
+"lat": 12.4728209,
+"lon": -69.8964972,
+"tags": {
+"name": "Tunnel of Love",
+"natural": "cave_entrance",
+"tourism": "attraction"
+}
+},
+{
+"type": "node",
+"id": 540217531,
+"lat": 12.4874094,
+"lon": -69.9404811,
+"tags": {
+"ele": "188",
+"name": "Sero Jamanota",
+"name:de": "Jamanota",
+"natural": "peak",
+"tourism": "viewpoint",
+"wikidata": "Q594885"
+}
+},
+{
+"type": "node",
+"id": 540219435,
+"lat": 12.5545624,
+"lon": -70.0550645,
+"tags": {
+"name": "Divi Divi Tree",
+"natural": "tree",
+"tourism": "attraction"
+}
+},
+{
+"type": "node",
+"id": 540982491,
+"lat": 12.4825269,
+"lon": -69.8995204,
+"tags": {
+"alt_name": "Quadiriki Caves",
+"name": "Guadirikiri Cave",
+"natural": "cave_entrance",
+"tourism": "attraction",
+"wikidata": "Q7268293"
+}
+},
+{
+"type": "node",
+"id": 1760835958,
+"lat": 12.505682,
+"lon": -69.9431545,
+"tags": {
+"ele": "185",
+"name": "Sero Arikok",
+"natural": "peak",
+"tourism": "viewpoint"
+}
+},
+{
+"type": "node",
+"id": 1770467684,
+"lat": 12.5013629,
+"lon": -69.9618475,
+"tags": {
+"ISO3166-1": "AW",
+"ISO3166-1:alpha2": "AW",
+"ISO3166-1:alpha3": "ABW",
+"ISO3166-1:numeric": "533",
+"ISO3166-2": "NL-AW",
+"admin_level": "3",
+"default_language": "nl",
+"description:en": "Constituent country of the Kingdom of the Netherlands.",
+"description:nl": "Constituerend land van het Koninkrijk der Nederlanden.",
+"name": "Aruba",
+"name:ar": "أروبا",
+"name:be": "Аруба",
+"name:bg": "Aruba",
+"name:br": "Aruba",
+"name:ca": "Aruba",
+"name:ckb": "ئارووبا",
+"name:cs": "Aruba",
+"name:de": "Aruba",
+"name:el": "Αρούμπα",
+"name:en": "Aruba",
+"name:eo": "Arubo",
+"name:es": "Aruba",
+"name:et": "Aruba",
+"name:eu": "Aruba uhartea",
+"name:fa": "آروبا",
+"name:fi": "Aruba",
+"name:fr": "Aruba",
+"name:fy": "Arûba",
+"name:gv": "Aruba",
+"name:he": "ארובה",
+"name:hr": "Aruba",
+"name:hu": "Aruba",
+"name:ia": "Aruba",
+"name:io": "Aruba",
+"name:is": "Arúba",
+"name:it": "Aruba",
+"name:ja": "アルバ",
+"name:jbo": "arubas",
+"name:kn": "ಅರುಬ",
+"name:ko": "아루바",
+"name:ku": "Arûba",
+"name:kw": "Aruba",
+"name:lfn": "Aruba",
+"name:lt": "Aruba",
+"name:mk": "Аруба",
+"name:mr": "अरुबा",
+"name:nds": "Aruba",
+"name:nl": "Aruba",
+"name:no": "Aruba",
+"name:pl": "Aruba",
+"name:ro": "Aruba",
+"name:ru": "Аруба",
+"name:sk": "Aruba",
+"name:sl": "Aruba",
+"name:sr": "Аруба",
+"name:sv": "Aruba",
+"name:tr": "Aruba",
+"name:uk": "Аруба",
+"name:uz": "Aruba",
+"name:vi": "Aruba",
+"name:wal": "Aruba",
+"name:zh": "阿鲁巴",
+"name:zh-Hans": "阿鲁巴",
+"name:zh-Hant": "阿魯巴",
+"operator": "Land Aruba",
+"place": "country",
+"population": "116576",
+"related_law": "Staatsregeling van Aruba",
+"related_law:url": "https://www.overheid.aw/bestuur-organisatie/wetteksten-0101-staatsregeling-van-aruba_41326/item/0101-staatsregeling-van-aruba_5724.html",
+"source:name:br": "ofis publik ar brezhoneg",
+"source:sqkm": "CIA World Factbook",
+"sqkm": "180",
+"wikidata": "Q21203",
+"wikipedia": "nl:Aruba"
+}
+},
+{
+"type": "node",
+"id": 1773562177,
+"lat": 12.4923821,
+"lon": -69.9364641,
+"tags": {
+"ele": "169",
+"name": "Sero Cabai",
+"natural": "peak",
+"tourism": "viewpoint",
+"wikidata": "Q21972902"
+}
+},
+{
+"type": "node",
+"id": 3101286560,
+"lat": 12.55059,
+"lon": -69.970986,
+"tags": {
+"name": "Boca Mahos",
+"natural": "bay"
+}
+},
+{
+"type": "node",
+"id": 3101287429,
+"lat": 12.5713241,
+"lon": -69.9992787,
+"tags": {
+"name": "Boca Chiquito",
+"natural": "bay"
+}
+},
+{
+"type": "node",
+"id": 3809650724,
+"lat": 12.5544595,
+"lon": -70.0551005,
+"tags": {
+"name": "Divi Divi Tree",
+"natural": "tree",
+"tourism": "attraction"
+}
+},
+{
+"type": "node",
+"id": 3814910956,
+"lat": 12.5645311,
+"lon": -70.0319284,
+"tags": {
+"name": "Noord",
+"place": "suburb"
+}
+},
+{
+"type": "node",
+"id": 4182294398,
+"lat": 12.5113591,
+"lon": -69.9804307,
+"tags": {
+"name": "Santa Cruz",
+"name:mk": "Санта Крус",
+"place": "town",
+"population": "15236",
+"population:date": "2020",
+"source:population": "wikipedia",
+"wikidata": "Q3558364"
+}
+},
+{
+"type": "node",
+"id": 4253910397,
+"lat": 12.5170358,
+"lon": -69.9949262,
+"tags": {
+"ele": "165",
+"name": "Hooiberg",
+"natural": "peak",
+"wikidata": "Q2455906"
+}
+},
+{
+"type": "node",
+"id": 4258604518,
+"lat": 12.5165439,
+"lon": -69.9575205,
+"tags": {
+"name": "Catashi",
+"name:mk": "Каташи",
+"place": "hamlet",
+"wikidata": "Q1999160"
+}
+},
+{
+"type": "node",
+"id": 4258604519,
+"lat": 12.5459535,
+"lon": -70.0144071,
+"tags": {
+"name": "Catiri",
+"name:mk": "Катири",
+"place": "village",
+"wikidata": "Q1810266"
+}
+},
+{
+"type": "node",
+"id": 4258604520,
+"lat": 12.4191945,
+"lon": -69.880463,
+"tags": {
+"name": "Sero Colorado",
+"name:mk": "Серо Колорадо",
+"place": "village",
+"wikidata": "Q612126"
+}
+},
+{
+"type": "node",
+"id": 4258604521,
+"lat": 12.6037621,
+"lon": -70.0514009,
+"tags": {
+"name": "Malmok Beach",
+"name:mk": "Малмок Бич",
+"place": "village",
+"wikidata": "Q2026303"
+}
+},
+{
+"type": "node",
+"id": 4258604522,
+"lat": 12.4526385,
+"lon": -69.9496521,
+"tags": {
+"name": "Savaneta",
+"name:mk": "Саванета",
+"place": "village",
+"wikidata": "Q2665720"
+}
+},
+{
+"type": "node",
+"id": 4491605028,
+"lat": 12.6024171,
+"lon": -70.0513149,
+"tags": {
+"name": "Tres Trapi",
+"natural": "beach"
+}
+},
+{
+"type": "node",
+"id": 4599172428,
+"lat": 12.4643623,
+"lon": -69.961098,
+"tags": {
+"name": "Pos Chikito",
+"name:mk": "Пос Чикито",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 4599172431,
+"lat": 12.5346035,
+"lon": -70.0312278,
+"tags": {
+"name": "Ponton",
+"name:mk": "Понтон",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 4599172432,
+"lat": 12.5420161,
+"lon": -70.0196205,
+"tags": {
+"name": "Tanki Leendert",
+"place": "village",
+"wikidata": "Q7683552"
+}
+},
+{
+"type": "node",
+"id": 4599172433,
+"lat": 12.535434,
+"lon": -70.0049851,
+"tags": {
+"name": "Paradera",
+"name:mk": "Парадера",
+"place": "village",
+"wikidata": "Q14217403"
+}
+},
+{
+"type": "node",
+"id": 4599172434,
+"lat": 12.5461254,
+"lon": -70.0305757,
+"tags": {
+"name": "Tanki Flip",
+"name:mk": "Танки Флип",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 4599172435,
+"lat": 12.5912367,
+"lon": -70.0373932,
+"tags": {
+"name": "West Punt",
+"name:mk": "Вест Пунт",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 4599172436,
+"lat": 12.5961494,
+"lon": -70.0489342,
+"tags": {
+"name": "Malmok",
+"name:mk": "Малмок",
+"place": "hamlet"
+}
+},
+{
+"type": "node",
+"id": 4599172437,
+"lat": 12.604091,
+"lon": -70.0421896,
+"tags": {
+"name": "Tierra Del Sol",
+"name:mk": "Тјера дел Сол",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 4599172438,
+"lat": 12.5402198,
+"lon": -70.0594822,
+"tags": {
+"name": "Punta Brabo",
+"name:mk": "Пунта Брабо",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 4599172439,
+"lat": 12.5505778,
+"lon": -70.0448305,
+"tags": {
+"name": "Bubali",
+"name:mk": "Бубали",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 4599172440,
+"lat": 12.5549699,
+"lon": -70.042269,
+"tags": {
+"name": "Washington",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 4599172441,
+"lat": 12.5259497,
+"lon": -69.9950234,
+"tags": {
+"name": "Piedra Plat",
+"name:mk": "Пједра Плат",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 4599172442,
+"lat": 12.5009147,
+"lon": -69.9538344,
+"tags": {
+"name": "San Fuego",
+"name:mk": "Сан Фуего",
+"place": "hamlet"
+}
+},
+{
+"type": "node",
+"id": 4599172443,
+"lat": 12.4457692,
+"lon": -69.9312908,
+"tags": {
+"name": "Cura Cabai",
+"name:mk": "Кура Кабај",
+"place": "hamlet"
+}
+},
+{
+"type": "node",
+"id": 4599172444,
+"lat": 12.4450149,
+"lon": -69.9231155,
+"tags": {
+"name": "Brazil",
+"place": "hamlet"
+}
+},
+{
+"type": "node",
+"id": 4599172445,
+"lat": 12.434646,
+"lon": -69.8915381,
+"tags": {
+"name": "Lago Heights",
+"name:mk": "Лаго Хајтс",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 4599172446,
+"lat": 12.4181798,
+"lon": -69.8695608,
+"tags": {
+"name": "Seroe Colorado",
+"natural": "peak",
+"wikidata": "Q88068799"
+}
+},
+{
+"type": "node",
+"id": 4599172447,
+"lat": 12.5213958,
+"lon": -70.038454,
+"tags": {
+"name": "Rancho",
+"name:mk": "Ранчо",
+"place": "neighbourhood",
+"wikidata": "Q63510044"
+}
+},
+{
+"type": "node",
+"id": 4599172448,
+"lat": 12.5279796,
+"lon": -70.0412714,
+"tags": {
+"name": "Madiki",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 4599172449,
+"lat": 12.5269742,
+"lon": -70.0369597,
+"tags": {
+"name": "Socotoro",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 4599172450,
+"lat": 12.529383,
+"lon": -70.027926,
+"tags": {
+"name": "Solito",
+"name:mk": "Солито",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 4599172451,
+"lat": 12.5370092,
+"lon": -70.0497932,
+"tags": {
+"name": "Bushiri",
+"name:mk": "Бушири",
+"place": "suburb"
+}
+},
+{
+"type": "node",
+"id": 4599172452,
+"lat": 12.4412783,
+"lon": -69.9010969,
+"tags": {
+"name": "Rooi Hundu",
+"name:mk": "Рои Хунду",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 4599172453,
+"lat": 12.4455365,
+"lon": -69.902126,
+"tags": {
+"name": "Rooi Spoki",
+"name:mk": "Рои Споки",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 4599172454,
+"lat": 12.4367956,
+"lon": -69.8860301,
+"tags": {
+"name": "Sabana Lodo",
+"name:mk": "Сабана Лодо",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 4632067907,
+"lat": 12.5855575,
+"lon": -70.0460837,
+"tags": {
+"name": "Hadicurari Beach",
+"natural": "beach"
+}
+},
+{
+"type": "node",
+"id": 4872525469,
+"lat": 12.4211877,
+"lon": -69.8705907,
+"tags": {
+"name": "Fosfaat Mijn (former)",
+"name:en": "Former Phosphate mine",
+"natural": "cave_entrance"
+}
+},
+{
+"type": "node",
+"id": 4888608614,
+"lat": 12.5497618,
+"lon": -69.9932302,
+"tags": {
+"ele": "91",
+"name": "Sero Cristal",
+"natural": "peak",
+"wikidata": "Q21972914"
+}
+},
+{
+"type": "node",
+"id": 5116960611,
+"lat": 12.5235393,
+"lon": -69.9305844,
+"tags": {
+"description": "Car and ATV parking, Conchi/Natural pool located down the steps and 300m walk",
+"name": "Cliff above Conchi",
+"natural": "peak"
+}
+},
+{
+"type": "node",
+"id": 5298483729,
+"lat": 12.4383105,
+"lon": -69.8867047,
+"tags": {
+"name": "De Vuyst",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 5966826126,
+"lat": 12.4618609,
+"lon": -69.9436253,
+"tags": {
+"name": "Sero Alejandro",
+"natural": "peak"
+}
+},
+{
+"type": "node",
+"id": 5976787344,
+"lat": 12.4876864,
+"lon": -69.9773675,
+"tags": {
+"email": "info@smartcommunityaruba.aw",
+"name": "Smart Community Aruba",
+"name:mk": "Смарт Комјунити Аруба",
+"place": "neighbourhood",
+"website": "https://www.smartcommunityaruba.aw/"
+}
+},
+{
+"type": "node",
+"id": 6486942430,
+"lat": 12.5386331,
+"lon": -70.0282514,
+"tags": {
+"name": "Punto di Oro",
+"name:mk": "Пунто ди Оро",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 6496504323,
+"lat": 12.5084336,
+"lon": -69.9676276,
+"tags": {
+"name": "Urataka",
+"natural": "peak"
+}
+},
+{
+"type": "node",
+"id": 6496597934,
+"lat": 12.4988541,
+"lon": -69.9064736,
+"tags": {
+"name": "Boca Prins",
+"natural": "bay"
+}
+},
+{
+"type": "node",
+"id": 6497917813,
+"lat": 12.4474643,
+"lon": -69.8932436,
+"tags": {
+"name": "Juana Morto",
+"name:mk": "Хуана Морто",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 6497917814,
+"lat": 12.4474096,
+"lon": -69.9085117,
+"tags": {
+"name": "Sero Preto",
+"name:mk": "Серо Прето",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 6497917815,
+"lat": 12.436846,
+"lon": -69.9174073,
+"tags": {
+"name": "Zeewijk",
+"name:mk": "Зевајк",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 6497917816,
+"lat": 12.4446043,
+"lon": -69.9278869,
+"tags": {
+"name": "Cura Cabai",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 6596602233,
+"lat": 12.5143164,
+"lon": -70.0212771,
+"tags": {
+"name": "Dakota",
+"name:mk": "Дакота",
+"place": "town",
+"wikidata": "Q2223287"
+}
+},
+{
+"type": "node",
+"id": 6596602234,
+"lat": 12.5041503,
+"lon": -70.0031012,
+"tags": {
+"name": "Wayaca",
+"name:mk": "Вајака",
+"place": "town"
+}
+},
+{
+"type": "node",
+"id": 6596602235,
+"lat": 12.4998654,
+"lon": -69.9952528,
+"tags": {
+"name": "Mahuma",
+"name:mk": "Махума",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 6596602236,
+"lat": 12.5040212,
+"lon": -69.9870268,
+"tags": {
+"name": "Papillon",
+"name:mk": "Папилон",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 6596602237,
+"lat": 12.520397,
+"lon": -69.9992435,
+"tags": {
+"name": "Hooiberg",
+"name:mk": "Хоиберг",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 6596602238,
+"lat": 12.5173828,
+"lon": -70.006396,
+"tags": {
+"name": "Morgenster",
+"name:mk": "Моргенстер",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 6786429685,
+"lat": 12.5779182,
+"lon": -70.0454858,
+"tags": {
+"addr:housenumber": "33B",
+"addr:street": "Palm Beach",
+"email": "info@happydiversaruba.com",
+"name": "Happy Divers Aruba boat",
+"opening_hours": "Mo-Sa 07:00-18:00",
+"operator": "Happy Divers Aruba",
+"phone": "+2977336570",
+"sport": "diving",
+"waterway": "boatyard",
+"website": "https://happydiversaruba.com/"
+}
+},
+{
+"type": "node",
+"id": 7261130981,
+"lat": 12.6140673,
+"lon": -70.0511797,
+"tags": {
+"name": "Hudishibana",
+"natural": "cliff"
+}
+},
+{
+"type": "node",
+"id": 7261130982,
+"lat": 12.418766,
+"lon": -69.8855426,
+"tags": {
+"name": "Nanki",
+"natural": "beach",
+"surface": "unpaved"
+}
+},
+{
+"type": "node",
+"id": 7449545811,
+"lat": 12.4717914,
+"lon": -69.8972164,
+"tags": {
+"name": "Huliba Cave",
+"natural": "cave_entrance"
+}
+},
+{
+"type": "node",
+"id": 7452927097,
+"lat": 12.6031759,
+"lon": -70.0294754,
+"tags": {
+"name": "Sero Muskita",
+"natural": "peak"
+}
+},
+{
+"type": "node",
+"id": 7452927098,
+"lat": 12.6012655,
+"lon": -70.0272246,
+"tags": {
+"ele": "50",
+"name": "Sero Grandi",
+"natural": "peak",
+"wikidata": "Q21972926"
+}
+},
+{
+"type": "node",
+"id": 7452928826,
+"lat": 12.5952856,
+"lon": -70.0208597,
+"tags": {
+"name": "Sero Tres Cabes",
+"natural": "peak",
+"wikidata": "Q21972978"
+}
+},
+{
+"type": "node",
+"id": 7452928827,
+"lat": 12.5914568,
+"lon": -70.0165492,
+"tags": {
+"name": "Urirana",
+"natural": "bay"
+}
+},
+{
+"type": "node",
+"id": 7452928828,
+"lat": 12.5824424,
+"lon": -70.008883,
+"tags": {
+"name": "Boca Cora",
+"natural": "bay"
+}
+},
+{
+"type": "node",
+"id": 7452928918,
+"lat": 12.5697927,
+"lon": -70.0041969,
+"tags": {
+"name": "Sero Pos di Noord",
+"natural": "peak"
+}
+},
+{
+"type": "node",
+"id": 7452928919,
+"lat": 12.5583707,
+"lon": -69.9907066,
+"tags": {
+"name": "Sero Sumpiña",
+"natural": "peak",
+"wikidata": "Q21972973"
+}
+},
+{
+"type": "node",
+"id": 7452928920,
+"lat": 12.5543301,
+"lon": -69.990437,
+"tags": {
+"name": "Sero Gerard",
+"natural": "peak"
+}
+},
+{
+"type": "node",
+"id": 7452928923,
+"lat": 12.5439758,
+"lon": -69.9867303,
+"tags": {
+"name": "Sero Koeriboeri",
+"natural": "peak"
+}
+},
+{
+"type": "node",
+"id": 7452928924,
+"lat": 12.5569175,
+"lon": -69.9797162,
+"tags": {
+"name": "Boedoei",
+"natural": "bay"
+}
+},
+{
+"type": "node",
+"id": 7452928954,
+"lat": 12.5409812,
+"lon": -69.9564155,
+"tags": {
+"name": "Andicuri",
+"natural": "bay"
+}
+},
+{
+"type": "node",
+"id": 7452928955,
+"lat": 12.5400082,
+"lon": -69.947109,
+"tags": {
+"name": "Noordkaap",
+"natural": "peak"
+}
+},
+{
+"type": "node",
+"id": 7452929046,
+"lat": 12.5277921,
+"lon": -69.9332479,
+"tags": {
+"name": "Boca Keto",
+"natural": "bay"
+}
+},
+{
+"type": "node",
+"id": 7452929325,
+"lat": 12.4823967,
+"lon": -69.9066803,
+"tags": {
+"name": "Drumidera",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 7452929326,
+"lat": 12.4559208,
+"lon": -69.9021367,
+"tags": {
+"name": "Sero Blanco",
+"natural": "peak"
+}
+},
+{
+"type": "node",
+"id": 7452929386,
+"lat": 12.4640462,
+"lon": -69.8818703,
+"tags": {
+"name": "Rincon",
+"natural": "bay"
+}
+},
+{
+"type": "node",
+"id": 7452929430,
+"lat": 12.4242419,
+"lon": -69.8763545,
+"tags": {
+"name": "Seroe Colebra",
+"natural": "peak"
+}
+},
+{
+"type": "node",
+"id": 7452929431,
+"lat": 12.4196303,
+"lon": -69.8822663,
+"tags": {
+"name": "Colony",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 7452929444,
+"lat": 12.4165246,
+"lon": -69.866259,
+"tags": {
+"name": "Punta Basora",
+"name:en": "Colorado Point",
+"natural": "bay"
+}
+},
+{
+"type": "node",
+"id": 7452989994,
+"lat": 12.6240598,
+"lon": -70.058267,
+"tags": {
+"name": "Kudareu",
+"natural": "cape"
+}
+},
+{
+"type": "node",
+"id": 7452989995,
+"lat": 12.5078542,
+"lon": -69.9940239,
+"tags": {
+"name": "Sero Canashito",
+"natural": "peak",
+"wikidata": "Q21972904"
+}
+},
+{
+"type": "node",
+"id": 7452989996,
+"lat": 12.5121586,
+"lon": -69.9966731,
+"tags": {
+"name": "Sero Biento",
+"natural": "peak",
+"wikidata": "Q21972896"
+}
+},
+{
+"type": "node",
+"id": 7452989997,
+"lat": 12.4977565,
+"lon": -69.9917618,
+"tags": {
+"name": "Sero Tijshi",
+"natural": "peak",
+"wikidata": "Q21972977"
+}
+},
+{
+"type": "node",
+"id": 7483090949,
+"lat": 12.6137363,
+"lon": -70.0510644,
+"tags": {
+"name": "Hudishibana",
+"natural": "peak",
+"wikidata": "Q21972929"
+}
+},
+{
+"type": "node",
+"id": 7483093484,
+"lat": 12.545808,
+"lon": -70.0085164,
+"tags": {
+"name": "Papaya Stones & Gardens",
+"place": "neighbourhood",
+"website": "https://www.betterhomesaruba.com/papaya-homes-gardens"
+}
+},
+{
+"type": "node",
+"id": 8286835804,
+"lat": 12.560613,
+"lon": -70.0331056,
+"tags": {
+"name": "Sero Boegoeroei",
+"natural": "peak"
+}
+},
+{
+"type": "node",
+"id": 8406604456,
+"lat": 12.4839152,
+"lon": -69.8903662,
+"tags": {
+"name": "Punt Kalkoven",
+"natural": "cliff"
+}
+},
+{
+"type": "node",
+"id": 9231055193,
+"lat": 12.4835587,
+"lon": -69.9591554,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055194,
+"lat": 12.4822829,
+"lon": -69.9593824,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055195,
+"lat": 12.4821631,
+"lon": -69.95891,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055196,
+"lat": 12.4812407,
+"lon": -69.9589714,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055197,
+"lat": 12.4815701,
+"lon": -69.9587014,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055198,
+"lat": 12.4819894,
+"lon": -69.9582597,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055199,
+"lat": 12.4821511,
+"lon": -69.9579101,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055200,
+"lat": 12.4830496,
+"lon": -69.9585481,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055201,
+"lat": 12.4831933,
+"lon": -69.9584376,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055202,
+"lat": 12.4841217,
+"lon": -69.9585726,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055203,
+"lat": 12.4833191,
+"lon": -69.9578364,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055204,
+"lat": 12.4826063,
+"lon": -69.9577076,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055205,
+"lat": 12.4828938,
+"lon": -69.9568304,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055206,
+"lat": 12.4831274,
+"lon": -69.9570942,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055207,
+"lat": 12.4834629,
+"lon": -69.9566034,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055208,
+"lat": 12.4835826,
+"lon": -69.9573457,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055209,
+"lat": 12.4831514,
+"lon": -69.9571923,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055210,
+"lat": 12.4834269,
+"lon": -69.9571739,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055211,
+"lat": 12.4831873,
+"lon": -69.9569592,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055212,
+"lat": 12.4832472,
+"lon": -69.9551065,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055213,
+"lat": 12.4827561,
+"lon": -69.9551188,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055214,
+"lat": 12.4828639,
+"lon": -69.954855,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055215,
+"lat": 12.4830373,
+"lon": -69.9547224,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231055216,
+"lat": 12.4830675,
+"lon": -69.9542599,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057617,
+"lat": 12.483373,
+"lon": -69.9540943,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057618,
+"lat": 12.4837084,
+"lon": -69.9539716,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057619,
+"lat": 12.4820194,
+"lon": -69.9553458,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057620,
+"lat": 12.4823548,
+"lon": -69.9553274,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057621,
+"lat": 12.4826543,
+"lon": -69.9553764,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057622,
+"lat": 12.4827681,
+"lon": -69.954536,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057623,
+"lat": 12.4828998,
+"lon": -69.9533581,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057624,
+"lat": 12.4822589,
+"lon": -69.9529103,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057625,
+"lat": 12.4819894,
+"lon": -69.953125,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057626,
+"lat": 12.4813665,
+"lon": -69.9532477,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057627,
+"lat": 12.4833057,
+"lon": -69.954356,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057628,
+"lat": 12.4833235,
+"lon": -69.9568347,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057629,
+"lat": 12.4838262,
+"lon": -69.9567891,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057630,
+"lat": 12.4839641,
+"lon": -69.958279,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057631,
+"lat": 12.4835549,
+"lon": -69.9585251,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057632,
+"lat": 12.483586,
+"lon": -69.9582699,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057633,
+"lat": 12.4831456,
+"lon": -69.9581013,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057634,
+"lat": 12.4836928,
+"lon": -69.9535086,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057635,
+"lat": 12.4840105,
+"lon": -69.9501302,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057636,
+"lat": 12.4837711,
+"lon": -69.950196,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057637,
+"lat": 12.4835259,
+"lon": -69.9504053,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057638,
+"lat": 12.4833449,
+"lon": -69.9505548,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057639,
+"lat": 12.4833332,
+"lon": -69.9507821,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057640,
+"lat": 12.4836485,
+"lon": -69.9506326,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057641,
+"lat": 12.4837711,
+"lon": -69.9504831,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057642,
+"lat": 12.4838237,
+"lon": -69.9512784,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057643,
+"lat": 12.4844604,
+"lon": -69.9501924,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057644,
+"lat": 12.4834563,
+"lon": -69.9452362,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057645,
+"lat": 12.4833594,
+"lon": -69.9453226,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057646,
+"lat": 12.4840377,
+"lon": -69.9460993,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057648,
+"lat": 12.4833394,
+"lon": -69.9574978,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057649,
+"lat": 12.4831662,
+"lon": -69.9574045,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057683,
+"lat": 12.4809525,
+"lon": -69.959091,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057684,
+"lat": 12.4808462,
+"lon": -69.9590168,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057685,
+"lat": 12.4817665,
+"lon": -69.9595635,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057686,
+"lat": 12.481967,
+"lon": -69.958945,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057687,
+"lat": 12.4832713,
+"lon": -69.9578491,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057688,
+"lat": 12.4835612,
+"lon": -69.9576809,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057689,
+"lat": 12.4832182,
+"lon": -69.9570599,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057690,
+"lat": 12.4832689,
+"lon": -69.9567655,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9231057691,
+"lat": 12.4837472,
+"lon": -69.9571737,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9379370519,
+"lat": 12.5310164,
+"lon": -69.9964483,
+"tags": {
+"name": "Piedra plat",
+"natural": "stone"
+}
+},
+{
+"type": "node",
+"id": 9379384104,
+"lat": 12.4825999,
+"lon": -69.9534149,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9379384105,
+"lat": 12.4824014,
+"lon": -69.9530538,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9379384106,
+"lat": 12.4830888,
+"lon": -69.953506,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9379384107,
+"lat": 12.4831659,
+"lon": -69.9530295,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9379384108,
+"lat": 12.4823717,
+"lon": -69.9547205,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9379384109,
+"lat": 12.4839644,
+"lon": -69.9537197,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9439471318,
+"lat": 12.4749602,
+"lon": -69.9391432,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9439471319,
+"lat": 12.4707022,
+"lon": -69.9350202,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9439471320,
+"lat": 12.4708044,
+"lon": -69.9350506,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9439471321,
+"lat": 12.4708103,
+"lon": -69.9352296,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9439471322,
+"lat": 12.4709037,
+"lon": -69.9354026,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9439471323,
+"lat": 12.47088,
+"lon": -69.9354906,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9439471324,
+"lat": 12.470954,
+"lon": -69.9355983,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9439471325,
+"lat": 12.470994,
+"lon": -69.9357455,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9439471326,
+"lat": 12.4707866,
+"lon": -69.9348579,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9439471327,
+"lat": 12.4706252,
+"lon": -69.9345438,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9439471329,
+"lat": 12.4814339,
+"lon": -69.9384116,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9439471330,
+"lat": 12.4816561,
+"lon": -69.9384556,
+"tags": {
+"name": "Kibrahacha",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 9929075372,
+"lat": 12.5161058,
+"lon": -69.9697732,
+"tags": {
+"name": "Sero Compa",
+"natural": "peak"
+}
+},
+{
+"type": "node",
+"id": 10308886317,
+"lat": 12.4136736,
+"lon": -69.8792954,
+"tags": {
+"name": "Baby beach",
+"natural": "beach"
+}
+},
+{
+"type": "node",
+"id": 12165943766,
+"lat": 12.5625904,
+"lon": -70.0417042,
+"tags": {
+"name": "Gasparito",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 12165943767,
+"lat": 12.5641612,
+"lon": -70.0409961,
+"tags": {
+"name": "Keito",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 13111662192,
+"lat": 12.436375,
+"lon": -69.9090028,
+"tags": {
+"name": "San Nicolas",
+"name:mk": "Сан Николас",
+"name:nl": "Sint Nicolaas",
+"place": "town",
+"population": "18000",
+"wikidata": "Q2605285",
+"wikipedia": "en:San Nicolaas"
+}
+},
+{
+"type": "node",
+"id": 13422393884,
+"lat": 12.6061843,
+"lon": -70.0523764,
+"tags": {
+"lifeguard": "no",
+"name": "Boca Catalina Beach",
+"natural": "beach",
+"sport": "snorkeling;scuba diving",
+"supervised": "no"
+}
+},
+{
+"type": "node",
+"id": 13438581427,
+"lat": 12.4507341,
+"lon": -69.907466,
+"tags": {
+"name": "Sero Preto",
+"natural": "peak"
+}
+},
+{
+"type": "way",
+"id": 6279617,
+"center": {
+"lat": 12.4743087,
+"lon": -69.9939397
+},
+"tags": {
+"name": "Palm Island Key",
+"natural": "coastline",
+"place": "islet"
+}
+},
+{
+"type": "way",
+"id": 6279621,
+"center": {
+"lat": 12.4656765,
+"lon": -69.979145
+},
+"tags": {
+"name": "Mangel Halto Key",
+"natural": "coastline",
+"place": "islet"
+}
+},
+{
+"type": "way",
+"id": 23060047,
+"center": {
+"lat": 12.5747796,
+"lon": -70.0490297
+},
+"tags": {
+"name": "Palm Beach",
+"name:ko": "팜 비치",
+"natural": "beach"
+}
+},
+{
+"type": "way",
+"id": 25590792,
+"center": {
+"lat": 12.5465346,
+"lon": -70.0593675
+},
+"tags": {
+"name": "Eagle Beach",
+"name:ko": "이글 비치",
+"natural": "beach",
+"wikidata": "Q5325023"
+}
+},
+{
+"type": "way",
+"id": 25591508,
+"center": {
+"lat": 12.5353345,
+"lon": -70.0226982
+},
+"tags": {
+"name": "Dam Tanki Leendert",
+"natural": "water"
+}
+},
+{
+"type": "way",
+"id": 25604974,
+"center": {
+"lat": 12.5487929,
+"lon": -70.033386
+},
+"tags": {
+"name": "Dam Tanki Flip",
+"natural": "water"
+}
+},
+{
+"type": "way",
+"id": 25606168,
+"center": {
+"lat": 12.5493543,
+"lon": -70.0150311
+},
+"tags": {
+"name": "Dam di Moko",
+"natural": "water"
+}
+},
+{
+"type": "way",
+"id": 38424483,
+"center": {
+"lat": 12.5010407,
+"lon": -70.0298387
+},
+"tags": {
+"name": "Flamingo Beach",
+"natural": "beach"
+}
+},
+{
+"type": "way",
+"id": 97566650,
+"center": {
+"lat": 12.4490791,
+"lon": -69.9540119
+},
+"tags": {
+"name": "Savaneta Key",
+"natural": "coastline",
+"place": "islet"
+}
+},
+{
+"type": "way",
+"id": 97566695,
+"center": {
+"lat": 12.4420721,
+"lon": -69.9427168
+},
+"tags": {
+"name": "Comandeurs Bay Key",
+"natural": "coastline",
+"place": "islet"
+}
+},
+{
+"type": "way",
+"id": 97566879,
+"center": {
+"lat": 12.4392646,
+"lon": -69.9357838
+},
+"tags": {
+"name": "Comandeurs Bay Key",
+"natural": "coastline",
+"place": "islet"
+}
+},
+{
+"type": "way",
+"id": 98064356,
+"center": {
+"lat": 12.4745073,
+"lon": -69.9740808
+},
+"tags": {
+"name": "Spaans Lagoen",
+"natural": "water"
+}
+},
+{
+"type": "way",
+"id": 170301326,
+"center": {
+"lat": 12.5105006,
+"lon": -70.0300567
+},
+"tags": {
+"addr:housenumber": "7",
+"addr:street": "L.G. Smith Boulevard",
+"landuse": "commercial",
+"name": "Aruba Surfside Marina",
+"place": "plot",
+"source": "KG Ground Survey 2015 Aruba"
+}
+},
+{
+"type": "way",
+"id": 255368366,
+"center": {
+"lat": 12.6007551,
+"lon": -70.0507678
+},
+"tags": {
+"name": "Malmok Beach",
+"natural": "beach"
+}
+},
+{
+"type": "way",
+"id": 255369699,
+"center": {
+"lat": 12.4322259,
+"lon": -69.8716736
+},
+"tags": {
+"name": "Bachelor's Beach",
+"natural": "beach",
+"surface": "sand"
+}
+},
+{
+"type": "way",
+"id": 261451853,
+"center": {
+"lat": 12.4910228,
+"lon": -70.0082814
+},
+"tags": {
+"name": "Parkietenbos Mangrove",
+"natural": "wetland",
+"source": "Bing",
+"wetland": "mangrove"
+}
+},
+{
+"type": "way",
+"id": 261454624,
+"center": {
+"lat": 12.5339466,
+"lon": -70.057382
+},
+"tags": {
+"name": "Druif Beach",
+"name:ko": "디비 비치",
+"natural": "beach",
+"source": "Bing (adjusted)"
+}
+},
+{
+"type": "way",
+"id": 305490212,
+"center": {
+"lat": 12.4178717,
+"lon": -69.8848597
+},
+"tags": {
+"name": "Rodgers Beach",
+"natural": "beach",
+"wikidata": "Q15272928"
+}
+},
+{
+"type": "way",
+"id": 305490815,
+"center": {
+"lat": 12.5079586,
+"lon": -70.0296235
+},
+"tags": {
+"beach": "sand",
+"name": "Surfside Beach",
+"name:en": "Surfside Beach",
+"natural": "beach"
+}
+},
+{
+"type": "way",
+"id": 339090140,
+"center": {
+"lat": 12.5374583,
+"lon": -69.9558304
+},
+"tags": {
+"name": "Andicuri Beach",
+"natural": "beach",
+"surface": "sand"
+}
+},
+{
+"type": "way",
+"id": 339090141,
+"center": {
+"lat": 12.5384687,
+"lon": -69.9573138
+},
+"tags": {
+"name": "Shark Bay Beach",
+"name:en": "Shark Bay",
+"natural": "beach"
+}
+},
+{
+"type": "way",
+"id": 352778212,
+"center": {
+"lat": 12.4636725,
+"lon": -69.9688693
+},
+"tags": {
+"name": "Aruba",
+"natural": "coastline"
+}
+},
+{
+"type": "way",
+"id": 368080453,
+"center": {
+"lat": 12.5193643,
+"lon": -70.0315626
+},
+"tags": {
+"name": "Plaza Niki",
+"place": "square",
+"source": "KG Ground Survey 2015"
+}
+},
+{
+"type": "way",
+"id": 377983560,
+"center": {
+"lat": 12.5588584,
+"lon": -70.049397
+},
+"tags": {
+"name": "Bubali Bird sanctuary",
+"natural": "wetland",
+"wetland": "mangrove"
+}
+},
+{
+"type": "way",
+"id": 378040153,
+"center": {
+"lat": 12.5704516,
+"lon": -70.0391499
+},
+"tags": {
+"landuse": "residential",
+"name": "Palm Beach",
+"place": "neighbourhood",
+"wikidata": "Q6976737"
+}
+},
+{
+"type": "way",
+"id": 378040154,
+"center": {
+"lat": 12.5650822,
+"lon": -70.0325031
+},
+"tags": {
+"landuse": "residential",
+"name": "Noord",
+"name:mk": "Норд",
+"place": "suburb"
+}
+},
+{
+"type": "way",
+"id": 378042114,
+"center": {
+"lat": 12.5681079,
+"lon": -70.034458
+},
+"tags": {
+"landuse": "residential",
+"name": "Duartestraat",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378042115,
+"center": {
+"lat": 12.5714341,
+"lon": -70.0335568
+},
+"tags": {
+"landuse": "residential",
+"name": "Gielstraat",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378042116,
+"center": {
+"lat": 12.5706458,
+"lon": -70.0356808
+},
+"tags": {
+"landuse": "residential",
+"name": "Monserat",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378042995,
+"center": {
+"lat": 12.5676859,
+"lon": -70.0333381
+},
+"tags": {
+"landuse": "residential",
+"name": "Alvarezstraat",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378042996,
+"center": {
+"lat": 12.5693616,
+"lon": -70.0344604
+},
+"tags": {
+"landuse": "residential",
+"name": "Christiaanstraat",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378042997,
+"center": {
+"lat": 12.5685569,
+"lon": -70.0331839
+},
+"tags": {
+"landuse": "residential",
+"name": "Figaroastraat",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378042998,
+"center": {
+"lat": 12.5694473,
+"lon": -70.0331009
+},
+"tags": {
+"landuse": "residential",
+"name": "Heidestraat",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378042999,
+"center": {
+"lat": 12.5694043,
+"lon": -70.0337454
+},
+"tags": {
+"landuse": "residential",
+"name": "Wolffstraat",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378045522,
+"center": {
+"lat": 12.5703453,
+"lon": -70.0331794
+},
+"tags": {
+"landuse": "residential",
+"name": "Eckmeyerstraat",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378045527,
+"center": {
+"lat": 12.5707441,
+"lon": -70.0333379
+},
+"tags": {
+"landuse": "residential",
+"name": "Frankenstraat",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378051367,
+"center": {
+"lat": 12.5721838,
+"lon": -70.0340635
+},
+"tags": {
+"landuse": "residential",
+"name": "Bermudezstraat",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378051368,
+"center": {
+"lat": 12.5796631,
+"lon": -70.0285117
+},
+"tags": {
+"landuse": "residential",
+"name": "Kurimiauw",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378051369,
+"center": {
+"lat": 12.57662,
+"lon": -70.0361181
+},
+"tags": {
+"landuse": "residential",
+"name": "Saliña Cerca",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378051370,
+"center": {
+"lat": 12.5703485,
+"lon": -70.0331791
+},
+"tags": {
+"landuse": "residential",
+"name": "Semeleerstraat",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378051371,
+"center": {
+"lat": 12.5757338,
+"lon": -70.0324365
+},
+"tags": {
+"landuse": "residential",
+"name": "Kamay",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378051852,
+"center": {
+"lat": 12.571399,
+"lon": -70.0280729
+},
+"tags": {
+"landuse": "residential",
+"name": "Turibana",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378055897,
+"center": {
+"lat": 12.5641768,
+"lon": -70.040305
+},
+"tags": {
+"landuse": "residential",
+"name": "Keito",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378055898,
+"center": {
+"lat": 12.5647769,
+"lon": -70.039358
+},
+"tags": {
+"landuse": "residential",
+"name": "Palma Real Condo",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378057630,
+"center": {
+"lat": 12.5627797,
+"lon": -70.0413966
+},
+"tags": {
+"landuse": "residential",
+"name": "Gasparito",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378057631,
+"center": {
+"lat": 12.5598109,
+"lon": -70.0435686
+},
+"tags": {
+"landuse": "residential",
+"name": "Koyari",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378057632,
+"center": {
+"lat": 12.5566931,
+"lon": -70.0456961
+},
+"tags": {
+"landuse": "residential",
+"name": "San Miguel",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378076725,
+"center": {
+"lat": 12.5872095,
+"lon": -70.0397595
+},
+"tags": {
+"landuse": "residential",
+"name": "Opal",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378076726,
+"center": {
+"lat": 12.5909029,
+"lon": -70.0406632
+},
+"tags": {
+"landuse": "residential",
+"name": "Ruby",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378076900,
+"center": {
+"lat": 12.5893253,
+"lon": -70.0357345
+},
+"tags": {
+"landuse": "residential",
+"name": "Topaz",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378077343,
+"center": {
+"lat": 12.59539,
+"lon": -70.0413025
+},
+"tags": {
+"landuse": "residential",
+"name": "Esmeralda",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378077344,
+"center": {
+"lat": 12.5947684,
+"lon": -70.0368384
+},
+"tags": {
+"landuse": "residential",
+"name": "Safir",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378077345,
+"center": {
+"lat": 12.5930676,
+"lon": -70.0384386
+},
+"tags": {
+"landuse": "residential",
+"name": "Westpunt",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378078105,
+"center": {
+"lat": 12.5919327,
+"lon": -70.0365565
+},
+"tags": {
+"landuse": "residential",
+"name": "Tibushi",
+"name:mk": "Тибуши",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 378078106,
+"center": {
+"lat": 12.5987429,
+"lon": -70.0418487
+},
+"tags": {
+"landuse": "residential",
+"name": "Gold Coast Villas",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 426574930,
+"center": {
+"lat": 12.4206003,
+"lon": -69.8837614
+},
+"tags": {
+"landuse": "residential",
+"name": "Seroe Colorado",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 450892420,
+"center": {
+"lat": 12.5072148,
+"lon": -70.0349183
+},
+"tags": {
+"name": "Paardenbaai Key",
+"natural": "coastline",
+"place": "islet"
+}
+},
+{
+"type": "way",
+"id": 450894324,
+"center": {
+"lat": 12.4812332,
+"lon": -69.9522657
+},
+"tags": {
+"name": "Rooi Taki",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 451803770,
+"center": {
+"lat": 12.4982168,
+"lon": -69.910861
+},
+"tags": {
+"leisure": "nature_reserve",
+"name": "Sand Dunes",
+"natural": "sand"
+}
+},
+{
+"type": "way",
+"id": 451803771,
+"center": {
+"lat": 12.501518,
+"lon": -69.9297832
+},
+"tags": {
+"name": "Rooi Tambu",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 451809465,
+"center": {
+"lat": 12.5000821,
+"lon": -70.0285801
+},
+"tags": {
+"name": "Iguana Beach",
+"natural": "beach"
+}
+},
+{
+"type": "way",
+"id": 451979019,
+"center": {
+"lat": 12.5053893,
+"lon": -70.0155688
+},
+"tags": {
+"description": "Colombian monument",
+"name": "Condor plaza",
+"place": "square"
+}
+},
+{
+"type": "way",
+"id": 452334301,
+"center": {
+"lat": 12.564882,
+"lon": -70.0416386
+},
+"tags": {
+"name": "Bird Sanctuary",
+"natural": "wetland"
+}
+},
+{
+"type": "way",
+"id": 452334302,
+"center": {
+"lat": 12.5675699,
+"lon": -70.0424448
+},
+"tags": {
+"name": "Bird sanctuary",
+"natural": "wetland"
+}
+},
+{
+"type": "way",
+"id": 452335457,
+"center": {
+"lat": 12.5567942,
+"lon": -70.0484542
+},
+"tags": {
+"name": "Bubali Bird sanctuary",
+"natural": "wetland",
+"wetland": "wet_meadow"
+}
+},
+{
+"type": "way",
+"id": 452335458,
+"center": {
+"lat": 12.5569932,
+"lon": -70.0515497
+},
+"tags": {
+"landuse": "natural reserve",
+"name": "Bubali Bird Sanctuary",
+"natural": "wetland",
+"wetland": "wet_meadow"
+}
+},
+{
+"type": "way",
+"id": 452343638,
+"center": {
+"lat": 12.5915969,
+"lon": -70.0439724
+},
+"tags": {
+"landuse": "natural reserve",
+"name": "Bird Sanctuary",
+"name:ko": "조류 보호구역",
+"natural": "wetland"
+}
+},
+{
+"type": "way",
+"id": 455532531,
+"center": {
+"lat": 12.5202128,
+"lon": -69.9400474
+},
+"tags": {
+"name": "Rooi Fluit",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 455539006,
+"center": {
+"lat": 12.526808,
+"lon": -69.9349223
+},
+"tags": {
+"name": "Boca Keto",
+"name:pap": "Moro",
+"natural": "beach"
+}
+},
+{
+"type": "way",
+"id": 459658938,
+"center": {
+"lat": 12.4771198,
+"lon": -69.9722381
+},
+"tags": {
+"leisure": "nature_reserve",
+"name": "Spaans Lagoen",
+"natural": "wetland"
+}
+},
+{
+"type": "way",
+"id": 461642880,
+"center": {
+"lat": 12.6049459,
+"lon": -70.0311578
+},
+"tags": {
+"name": "Druif",
+"natural": "beach"
+}
+},
+{
+"type": "way",
+"id": 461642881,
+"center": {
+"lat": 12.6192275,
+"lon": -70.0502268
+},
+"tags": {
+"name": "Sasariwichi",
+"natural": "dune"
+}
+},
+{
+"type": "way",
+"id": 461643289,
+"center": {
+"lat": 12.5174009,
+"lon": -69.9951036
+},
+"tags": {
+"ele": "165",
+"name": "Hooiberg",
+"natural": "wood"
+}
+},
+{
+"type": "way",
+"id": 461766965,
+"center": {
+"lat": 12.6099384,
+"lon": -70.0536379
+},
+"tags": {
+"name": "Arashi Beach",
+"natural": "beach",
+"wikidata": "Q4784359"
+}
+},
+{
+"type": "way",
+"id": 461972529,
+"center": {
+"lat": 12.4900332,
+"lon": -69.9864466
+},
+"tags": {
+"name": "Sero Tijshi",
+"natural": "wood"
+}
+},
+{
+"type": "way",
+"id": 463354307,
+"center": {
+"lat": 12.4642787,
+"lon": -69.9695258
+},
+"tags": {
+"leisure": "snorkeling",
+"name": "Mangel Halto Beach",
+"natural": "beach"
+}
+},
+{
+"type": "way",
+"id": 463354309,
+"center": {
+"lat": 12.4646017,
+"lon": -69.9696396
+},
+"tags": {
+"leaf_type": "broadleaved",
+"name": "Mangel Halto",
+"natural": "wood"
+}
+},
+{
+"type": "way",
+"id": 463354310,
+"center": {
+"lat": 12.4633934,
+"lon": -69.9681992
+},
+"tags": {
+"name": "Mangel Halto",
+"natural": "wood"
+}
+},
+{
+"type": "way",
+"id": 487089203,
+"center": {
+"lat": 12.5107134,
+"lon": -69.9867655
+},
+"tags": {
+"intermittent": "yes",
+"name": "Rooi Canashito",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 487213284,
+"center": {
+"lat": 12.4757688,
+"lon": -69.9759993
+},
+"tags": {
+"name": "Wood",
+"natural": "wood"
+}
+},
+{
+"type": "way",
+"id": 487229816,
+"center": {
+"lat": 12.5275713,
+"lon": -70.0053185
+},
+"tags": {
+"name": "Rooi Afo",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 487234275,
+"center": {
+"lat": 12.5491852,
+"lon": -69.9996258
+},
+"tags": {
+"landuse": "residential",
+"name": "Jaburibari",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 495510386,
+"center": {
+"lat": 12.4538021,
+"lon": -69.8786175
+},
+"tags": {
+"name": "Grapefield Beach",
+"name:en": "Grapefield Beach",
+"natural": "beach",
+"surface": "sand"
+}
+},
+{
+"type": "way",
+"id": 495547205,
+"center": {
+"lat": 12.418869,
+"lon": -69.8779328
+},
+"tags": {
+"name": "Cave",
+"place": "plot"
+}
+},
+{
+"type": "way",
+"id": 512692822,
+"center": {
+"lat": 12.4736251,
+"lon": -69.9914268
+},
+"tags": {
+"landuse": "forest",
+"name": "Parkietenbos Key",
+"place": "islet"
+}
+},
+{
+"type": "way",
+"id": 526144287,
+"center": {
+"lat": 12.4938075,
+"lon": -69.9209017
+},
+"tags": {
+"intermittent": "yes",
+"name": "Rooi Prins",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 527843590,
+"center": {
+"lat": 12.5421949,
+"lon": -69.9816874
+},
+"tags": {
+"name": "Rooi Pikichi",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 561806970,
+"center": {
+"lat": 12.5591888,
+"lon": -70.0383333
+},
+"tags": {
+"landuse": "residential",
+"name": "Washington",
+"name:mk": "Вашингтон",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 561809498,
+"center": {
+"lat": 12.5570162,
+"lon": -70.0308022
+},
+"tags": {
+"landuse": "residential",
+"name": "Boegoeroei",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 561811586,
+"center": {
+"lat": 12.5567405,
+"lon": -70.027389
+},
+"tags": {
+"landuse": "residential",
+"name": "Montana",
+"place": "suburb"
+}
+},
+{
+"type": "way",
+"id": 562114550,
+"center": {
+"lat": 12.5519106,
+"lon": -70.0428986
+},
+"tags": {
+"landuse": "residential",
+"name": "Bubali",
+"place": "suburb"
+}
+},
+{
+"type": "way",
+"id": 562115746,
+"center": {
+"lat": 12.5486359,
+"lon": -70.0510211
+},
+"tags": {
+"name": "Caya Ritmo",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 562124774,
+"center": {
+"lat": 12.5474322,
+"lon": -70.0444691
+},
+"tags": {
+"name": "Cunucu Abao",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 562124775,
+"center": {
+"lat": 12.5466084,
+"lon": -70.0498862
+},
+"tags": {
+"name": "Tumba",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 562129462,
+"center": {
+"lat": 12.5382399,
+"lon": -70.0474145
+},
+"tags": {
+"name": "Bushiri",
+"name:mk": "Бушири",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 562129463,
+"center": {
+"lat": 12.5446316,
+"lon": -70.0479943
+},
+"tags": {
+"name": "Pos Abou",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 563059135,
+"center": {
+"lat": 12.5568312,
+"lon": -70.0131896
+},
+"tags": {
+"landuse": "residential",
+"name": "Kudawecha",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 563059142,
+"center": {
+"lat": 12.5538442,
+"lon": -70.0207149
+},
+"tags": {
+"landuse": "residential",
+"name": "Sero Janchi",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 563163273,
+"center": {
+"lat": 12.5391191,
+"lon": -70.0505085
+},
+"tags": {
+"name": "Soeur Meletia",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 563163276,
+"center": {
+"lat": 12.5461825,
+"lon": -70.0372019
+},
+"tags": {
+"landuse": "residential",
+"name": "Hato",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 563945681,
+"center": {
+"lat": 12.5517642,
+"lon": -70.0086343
+},
+"tags": {
+"landuse": "residential",
+"name": "Moko",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 567607095,
+"center": {
+"lat": 12.4380938,
+"lon": -69.8855761
+},
+"tags": {
+"landuse": "residential",
+"name": "De Vuyst",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 613575539,
+"center": {
+"lat": 12.5399758,
+"lon": -69.9801251
+},
+"tags": {
+"landuse": "residential",
+"name": "Rooi Pikichi",
+"place": "neighbourhood",
+"source": "Bing"
+}
+},
+{
+"type": "way",
+"id": 613576035,
+"center": {
+"lat": 12.5400379,
+"lon": -69.9736613
+},
+"tags": {
+"landuse": "residential",
+"name": "Matidiviri",
+"place": "neighbourhood",
+"source": "Bing"
+}
+},
+{
+"type": "way",
+"id": 613576039,
+"center": {
+"lat": 12.5439487,
+"lon": -69.9861384
+},
+"tags": {
+"landuse": "residential",
+"name": "Koeri Boeri",
+"place": "neighbourhood",
+"source": "Bing"
+}
+},
+{
+"type": "way",
+"id": 613577142,
+"center": {
+"lat": 12.5434554,
+"lon": -69.9920578
+},
+"tags": {
+"landuse": "residential",
+"name": "Marawiel",
+"place": "neighbourhood",
+"source": "Bing"
+}
+},
+{
+"type": "way",
+"id": 613579000,
+"center": {
+"lat": 12.5414527,
+"lon": -69.9953368
+},
+"tags": {
+"landuse": "residential",
+"name": "Babijn",
+"place": "neighbourhood",
+"source": "Bing"
+}
+},
+{
+"type": "way",
+"id": 620153318,
+"center": {
+"lat": 12.5104458,
+"lon": -70.0278641
+},
+"tags": {
+"name": "Plaza Bolivar",
+"place": "square"
+}
+},
+{
+"type": "way",
+"id": 620434274,
+"center": {
+"lat": 12.5367979,
+"lon": -70.0323646
+},
+"tags": {
+"landuse": "residential",
+"name": "Ponton",
+"name:mk": "Понтон",
+"place": "neighbourhood",
+"wikidata": "Q11823856"
+}
+},
+{
+"type": "way",
+"id": 627582960,
+"center": {
+"lat": 12.4135197,
+"lon": -69.8783796
+},
+"tags": {
+"name": "Mangle Cora",
+"natural": "wood"
+}
+},
+{
+"type": "way",
+"id": 627582961,
+"center": {
+"lat": 12.4132495,
+"lon": -69.8779382
+},
+"tags": {
+"name": "Mangle Cora",
+"natural": "wood"
+}
+},
+{
+"type": "way",
+"id": 627582962,
+"center": {
+"lat": 12.4137352,
+"lon": -69.8778192
+},
+"tags": {
+"name": "Mangle Cora",
+"natural": "wood"
+}
+},
+{
+"type": "way",
+"id": 627582963,
+"center": {
+"lat": 12.4136923,
+"lon": -69.8749509
+},
+"tags": {
+"name": "Mangle Cora",
+"natural": "wood"
+}
+},
+{
+"type": "way",
+"id": 642353115,
+"center": {
+"lat": 12.5866977,
+"lon": -70.0369707
+},
+"tags": {
+"landuse": "residential",
+"name": "Rooi Santo",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 660884801,
+"center": {
+"lat": 12.5185041,
+"lon": -70.0363605
+},
+"tags": {
+"amenity": "fountain",
+"name": "Plaza Padu Lampe",
+"natural": "water"
+}
+},
+{
+"type": "way",
+"id": 660886242,
+"center": {
+"lat": 12.519712,
+"lon": -70.0373966
+},
+"tags": {
+"amenity": "fountain",
+"name": "Blue Horse Fountain",
+"natural": "water"
+}
+},
+{
+"type": "way",
+"id": 669446919,
+"center": {
+"lat": 12.4295646,
+"lon": -69.8956969
+},
+"tags": {
+"admin_level": "8",
+"boundary": "administrative",
+"name": "San Nicolaas",
+"place": "city",
+"wikidata": "Q2605285"
+}
+},
+{
+"type": "way",
+"id": 675017959,
+"center": {
+"lat": 12.5151815,
+"lon": -70.0348437
+},
+"tags": {
+"name": "Governor's Beach",
+"natural": "beach"
+}
+},
+{
+"type": "way",
+"id": 686001298,
+"center": {
+"lat": 12.5351643,
+"lon": -70.0420236
+},
+"tags": {
+"name": "Madiki Kavel",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 686223855,
+"center": {
+"lat": 12.535167,
+"lon": -70.0420347
+},
+"tags": {
+"landuse": "residential",
+"name": "Madiki Kavel",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 689500717,
+"center": {
+"lat": 12.4403326,
+"lon": -69.9304777
+},
+"tags": {
+"name": "Cura Cabai Beach",
+"natural": "beach"
+}
+},
+{
+"type": "way",
+"id": 690840582,
+"center": {
+"lat": 12.6049235,
+"lon": -70.0518584
+},
+"tags": {
+"name": "Boca Catalina",
+"natural": "beach",
+"surface": "sand"
+}
+},
+{
+"type": "way",
+"id": 690843664,
+"center": {
+"lat": 12.582111,
+"lon": -70.0392441
+},
+"tags": {
+"landuse": "residential",
+"name": "Bakval",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 691869854,
+"center": {
+"lat": 12.4957415,
+"lon": -69.9787692
+},
+"tags": {
+"name": "Rooi Bosal",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 691869858,
+"center": {
+"lat": 12.4937917,
+"lon": -69.9794277
+},
+"tags": {
+"name": "Rooi Bosal",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 692097192,
+"center": {
+"lat": 12.5781816,
+"lon": -70.0376936
+},
+"tags": {
+"landuse": "natural reserve",
+"name": "Saliña Bird Sanctuary",
+"natural": "grassland"
+}
+},
+{
+"type": "way",
+"id": 692243837,
+"center": {
+"lat": 12.4427737,
+"lon": -69.9275941
+},
+"tags": {
+"landuse": "residential",
+"name": "Cura Cabai",
+"place": "town"
+}
+},
+{
+"type": "way",
+"id": 692243838,
+"center": {
+"lat": 12.4481769,
+"lon": -69.9297417
+},
+"tags": {
+"landuse": "residential",
+"name": "Noord Cura Cabai",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 692249589,
+"center": {
+"lat": 12.4345826,
+"lon": -69.9067577
+},
+"tags": {
+"landuse": "residential",
+"name": "Village",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 706560381,
+"center": {
+"lat": 12.4875162,
+"lon": -69.982185
+},
+"tags": {
+"name": "Rooi Bosal",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 715566542,
+"center": {
+"lat": 12.5660033,
+"lon": -70.0450628
+},
+"tags": {
+"fixme": "outline estimated",
+"leisure": "nature_reserve",
+"name": "Bird Sanctuary",
+"natural": "wetland"
+}
+},
+{
+"type": "way",
+"id": 734452499,
+"center": {
+"lat": 12.4826458,
+"lon": -69.9845161
+},
+"tags": {
+"name": "Rooi Bosal",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 734452879,
+"center": {
+"lat": 12.4858294,
+"lon": -69.9828058
+},
+"tags": {
+"name": "Rooi Bosal",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 734453246,
+"center": {
+"lat": 12.4890043,
+"lon": -69.981913
+},
+"tags": {
+"name": "Rooi Bosal",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 734453248,
+"center": {
+"lat": 12.4913397,
+"lon": -69.9802818
+},
+"tags": {
+"name": "Rooi Bosal",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 796907721,
+"center": {
+"lat": 12.5878611,
+"lon": -70.0325509
+},
+"tags": {
+"intermittent": "yes",
+"name": "Rooi Santo",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 796907726,
+"center": {
+"lat": 12.5849561,
+"lon": -70.0393563
+},
+"tags": {
+"intermittent": "yes",
+"name": "Rooi Santo",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 796907727,
+"center": {
+"lat": 12.5861272,
+"lon": -70.0366042
+},
+"tags": {
+"layer": "-1",
+"name": "Rooi Santo",
+"tunnel": "culvert",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 796907733,
+"center": {
+"lat": 12.5244627,
+"lon": -69.9286088
+},
+"tags": {
+"description": "Natural pool",
+"name": "Conchi",
+"natural": "water",
+"tourism": "attraction"
+}
+},
+{
+"type": "way",
+"id": 796907743,
+"center": {
+"lat": 12.4563077,
+"lon": -69.8796883
+},
+"tags": {
+"name": "Zwart Mangle",
+"natural": "scrub"
+}
+},
+{
+"type": "way",
+"id": 839091474,
+"center": {
+"lat": 12.520774,
+"lon": -70.0382432
+},
+"tags": {
+"name": "Plaza di Museo",
+"place": "square"
+}
+},
+{
+"type": "way",
+"id": 884422904,
+"center": {
+"lat": 12.471654,
+"lon": -69.9369645
+},
+"tags": {
+"name": "Dam di Awa Marga",
+"waterway": "dam"
+}
+},
+{
+"type": "way",
+"id": 885043204,
+"center": {
+"lat": 12.4938285,
+"lon": -69.9776789
+},
+"tags": {
+"name": "Rooi Bosal",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 885056884,
+"center": {
+"lat": 12.5118071,
+"lon": -69.9798918
+},
+"tags": {
+"intermittent": "yes",
+"name": "Rooi Canashito",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 885056885,
+"center": {
+"lat": 12.511508,
+"lon": -69.9813292
+},
+"tags": {
+"layer": "-1",
+"name": "Rooi Canashito",
+"tunnel": "culvert",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 906829876,
+"center": {
+"lat": 12.5243598,
+"lon": -70.046063
+},
+"tags": {
+"name": "Taratata",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 909263948,
+"center": {
+"lat": 12.5199313,
+"lon": -70.0374729
+},
+"tags": {
+"lit": "yes",
+"name": "Plaza Daniel Leo",
+"place": "square",
+"surface": "paving_stones"
+}
+},
+{
+"type": "way",
+"id": 923556591,
+"center": {
+"lat": 12.4958944,
+"lon": -69.9761713
+},
+"tags": {
+"name": "Rooi Bosal",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 923556592,
+"center": {
+"lat": 12.4972992,
+"lon": -69.9753366
+},
+"tags": {
+"name": "Rooi Bosal",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 937993875,
+"center": {
+"lat": 12.5113602,
+"lon": -69.9983779
+},
+"tags": {
+"landuse": "residential",
+"name": "Sero Biento",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 937993876,
+"center": {
+"lat": 12.50786,
+"lon": -69.988736
+},
+"tags": {
+"landuse": "residential",
+"name": "Cochinilla",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 1000033715,
+"center": {
+"lat": 12.4791623,
+"lon": -69.9858775
+},
+"tags": {
+"name": "Rooi Bosal",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 1000033716,
+"center": {
+"lat": 12.4807998,
+"lon": -69.9854866
+},
+"tags": {
+"layer": "-1",
+"name": "Rooi Bosal",
+"tunnel": "culvert",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 1016888344,
+"center": {
+"lat": 12.5468724,
+"lon": -70.0107254
+},
+"tags": {
+"landuse": "residential",
+"name": "Fuerte",
+"place": "neighbourhood",
+"residential": "single_family"
+}
+},
+{
+"type": "way",
+"id": 1021603943,
+"center": {
+"lat": 12.5445018,
+"lon": -70.016011
+},
+"tags": {
+"landuse": "residential",
+"name": "Catiri",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 1021603957,
+"center": {
+"lat": 12.5475511,
+"lon": -70.0162605
+},
+"tags": {
+"landuse": "residential",
+"name": "Soledad",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 1021603966,
+"center": {
+"lat": 12.550613,
+"lon": -70.0148123
+},
+"tags": {
+"landuse": "residential",
+"name": "Saliña",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 1021603994,
+"center": {
+"lat": 12.5611317,
+"lon": -70.0056658
+},
+"tags": {
+"landuse": "residential",
+"name": "Calbas",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 1023410830,
+"center": {
+"lat": 12.4719782,
+"lon": -69.9637871
+},
+"tags": {
+"landuse": "residential",
+"name": "Sabana Basora",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 1058284864,
+"center": {
+"lat": 12.5277938,
+"lon": -70.0516052
+},
+"tags": {
+"name": "Bushiri",
+"natural": "beach",
+"surface": "gravel"
+}
+},
+{
+"type": "way",
+"id": 1072277803,
+"center": {
+"lat": 12.4561971,
+"lon": -69.9596272
+},
+"tags": {
+"name": "Aruba",
+"natural": "coastline"
+}
+},
+{
+"type": "way",
+"id": 1074802756,
+"center": {
+"lat": 12.5851745,
+"lon": -70.0268664
+},
+"tags": {
+"landuse": "residential",
+"name": "Seroe Pela",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 1076618502,
+"center": {
+"lat": 12.4413495,
+"lon": -69.8859382
+},
+"tags": {
+"landuse": "residential",
+"name": "Juwana Morto Complex",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 1076618503,
+"center": {
+"lat": 12.4362721,
+"lon": -69.8925118
+},
+"tags": {
+"landuse": "residential",
+"name": "Lago Heights",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 1081790289,
+"center": {
+"lat": 12.6205421,
+"lon": -70.0488453
+},
+"tags": {
+"lifeguard": "no",
+"name": "Dunes Beach",
+"natural": "beach",
+"supervised": "no",
+"surface": "dirt"
+}
+},
+{
+"type": "way",
+"id": 1081790290,
+"center": {
+"lat": 12.5379644,
+"lon": -69.9504099
+},
+"tags": {
+"name": "Blackstone Beach",
+"natural": "beach"
+}
+},
+{
+"type": "way",
+"id": 1083983028,
+"center": {
+"lat": 12.5326321,
+"lon": -69.99639
+},
+"tags": {
+"name": "Rooi Afo",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1083983029,
+"center": {
+"lat": 12.5324841,
+"lon": -69.9967999
+},
+"tags": {
+"layer": "-1",
+"name": "Rooi Afo",
+"tunnel": "culvert",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1083983030,
+"center": {
+"lat": 12.5320887,
+"lon": -69.9969383
+},
+"tags": {
+"name": "Rooi Afo",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1083983031,
+"center": {
+"lat": 12.5316815,
+"lon": -69.9970352
+},
+"tags": {
+"layer": "-1",
+"name": "Rooi Afo",
+"tunnel": "culvert",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1083983032,
+"center": {
+"lat": 12.5305561,
+"lon": -69.9983993
+},
+"tags": {
+"name": "Rooi Afo",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1083983033,
+"center": {
+"lat": 12.5294272,
+"lon": -69.9997996
+},
+"tags": {
+"layer": "-1",
+"name": "Rooi Afo",
+"tunnel": "culvert",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1083983034,
+"center": {
+"lat": 12.5288892,
+"lon": -70.0010925
+},
+"tags": {
+"name": "Rooi Afo",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1083983035,
+"center": {
+"lat": 12.5283842,
+"lon": -70.0024004
+},
+"tags": {
+"layer": "-1",
+"name": "Rooi Afo",
+"tunnel": "culvert",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1084244437,
+"center": {
+"lat": 12.5143515,
+"lon": -70.0033185
+},
+"tags": {
+"landuse": "residential",
+"name": "Verano",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 1124502110,
+"center": {
+"lat": 12.6210852,
+"lon": -70.0502719
+},
+"tags": {
+"name": "California Beach",
+"natural": "beach"
+}
+},
+{
+"type": "way",
+"id": 1127739313,
+"center": {
+"lat": 12.4400404,
+"lon": -69.9268645
+},
+"tags": {
+"name": "Papegaaienbos",
+"natural": "wetland",
+"wetland": "mangrove"
+}
+},
+{
+"type": "way",
+"id": 1221771304,
+"center": {
+"lat": 12.5181525,
+"lon": -70.0388964
+},
+"tags": {
+"name": "Schoenerhaven",
+"natural": "water",
+"water": "harbour"
+}
+},
+{
+"type": "way",
+"id": 1221953065,
+"center": {
+"lat": 12.5153548,
+"lon": -70.0400436
+},
+"tags": {
+"name": "Paardenbaai",
+"natural": "water",
+"water": "harbour"
+}
+},
+{
+"type": "way",
+"id": 1223442097,
+"center": {
+"lat": 12.4793708,
+"lon": -70.0002175
+},
+"tags": {
+"name": "Barcadera haven",
+"natural": "water",
+"water": "harbour"
+}
+},
+{
+"type": "way",
+"id": 1226192735,
+"center": {
+"lat": 12.4183455,
+"lon": -69.8887785
+},
+"tags": {
+"name": "Rodgers Lagoon",
+"natural": "water"
+}
+},
+{
+"type": "way",
+"id": 1226192736,
+"center": {
+"lat": 12.4251762,
+"lon": -69.9059584
+},
+"tags": {
+"name": "San Nicolasbaai",
+"natural": "water"
+}
+},
+{
+"type": "way",
+"id": 1299300021,
+"center": {
+"lat": 12.5056294,
+"lon": -70.0020487
+},
+"tags": {
+"landuse": "residential",
+"name": "Wayaca",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 1299300029,
+"center": {
+"lat": 12.497256,
+"lon": -69.997383
+},
+"tags": {
+"landuse": "residential",
+"name": "Mahuma",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 1299300031,
+"center": {
+"lat": 12.5052038,
+"lon": -69.9947304
+},
+"tags": {
+"landuse": "residential",
+"name": "Santa Marta",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 1327597647,
+"center": {
+"lat": 12.5664247,
+"lon": -70.0176491
+},
+"tags": {
+"landuse": "residential",
+"name": "Alto Vista",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 1327612965,
+"center": {
+"lat": 12.5090711,
+"lon": -70.0119346
+},
+"tags": {
+"landuse": "residential",
+"name": "Sabana Blanco",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 1333352016,
+"center": {
+"lat": 12.5406237,
+"lon": -70.0072478
+},
+"tags": {
+"landuse": "residential",
+"name": "Nuñe",
+"place": "neighbourhood"
+}
+},
+{
+"type": "relation",
+"id": 1400181,
+"center": {
+"lat": 12.5175988,
+"lon": -69.9646463
+},
+"tags": {
+"name": "Aruba",
+"name:be": "Аруба",
+"name:en": "Aruba",
+"name:ko": "아루바",
+"name:lt": "Aruba",
+"name:mk": "Аруба",
+"name:nl": "Aruba",
+"name:ru": "Аруба",
+"name:sk": "Aruba",
+"name:sl": "Aruba",
+"name:vi": "Aruba",
+"place": "island",
+"type": "multipolygon",
+"wikidata": "Q31884901"
+}
+},
+{
+"type": "relation",
+"id": 1406785,
+"center": {
+"lat": 12.4414856,
+"lon": -69.8743678
+},
+"tags": {
+"name": "Boca Grandi Beach",
+"natural": "beach",
+"tourism": "attraction",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 1406786,
+"center": {
+"lat": 12.4132513,
+"lon": -69.8816627
+},
+"tags": {
+"name": "Baby Beach",
+"natural": "beach",
+"tourism": "attraction",
+"type": "multipolygon",
+"wikidata": "Q280262"
+}
+},
+{
+"type": "relation",
+"id": 1406983,
+"center": {
+"lat": 12.5861783,
+"lon": -70.0434551
+},
+"tags": {
+"name": "Salina Bird Sanctuary",
+"natural": "water",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 5635162,
+"center": {
+"lat": 12.5603482,
+"lon": -70.04916
+},
+"tags": {
+"landuse": "nature reserve",
+"name": "Bubali Bird Sanctuary",
+"natural": "wetland",
+"type": "multipolygon",
+"wetland": "marsh"
+}
+},
+{
+"type": "relation",
+"id": 5638923,
+"center": {
+"lat": 12.5598739,
+"lon": -70.0505811
+},
+"tags": {
+"landuse": "nature reserve",
+"name": "Bubali Bird sanctuary",
+"natural": "water",
+"type": "multipolygon",
+"water": "lake"
+}
+},
+{
+"type": "relation",
+"id": 5638924,
+"center": {
+"lat": 12.5602584,
+"lon": -70.0469068
+},
+"tags": {
+"landuse": "forest",
+"landuse_1": "nature reserve",
+"name": "Bubali Bird Sanctuary",
+"natural": "wetland",
+"type": "multipolygon",
+"wetland": "marsh;mangrove"
+}
+},
+{
+"type": "relation",
+"id": 6694922,
+"center": {
+"lat": 12.5061654,
+"lon": -69.9188755
+},
+"tags": {
+"name": "Dos Playa",
+"natural": "beach",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 9254691,
+"center": {
+"lat": 12.4570118,
+"lon": -69.9601663
+},
+"tags": {
+"name": "Isla di Oro Mangrove",
+"natural": "wetland",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 10103227,
+"center": {
+"lat": 12.4188658,
+"lon": -69.8974669
+},
+"tags": {
+"name": "San Nicolaas Bay key",
+"natural": "sand",
+"place": "islet",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 10103309,
+"center": {
+"lat": 12.4186081,
+"lon": -69.894275
+},
+"tags": {
+"alt_name": "Indiaans Kop",
+"name": "Indiaanskop",
+"name:en": "Indian Head",
+"natural": "sand",
+"place": "islet",
+"type": "multipolygon",
+"wikidata": "Q21972931",
+"wikipedia": "en:Indiaanskop"
+}
+},
+{
+"type": "relation",
+"id": 10103324,
+"center": {
+"lat": 12.4252373,
+"lon": -69.9076831
+},
+"tags": {
+"name": "San Nicolaas bay key",
+"natural": "reef",
+"place": "islet",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 11001098,
+"center": {
+"lat": 12.4570421,
+"lon": -69.9602463
+},
+"tags": {
+"name": "Isla di Oro Mangrove",
+"natural": "wood",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 11777111,
+"center": {
+"lat": 12.5611965,
+"lon": -70.0507701
+},
+"tags": {
+"landuse": "nature reserve",
+"name": "Bubali Bird Sanctuary",
+"natural": "wetland",
+"type": "multipolygon",
+"wetland": "mangrove"
+}
+},
+{
+"type": "relation",
+"id": 11946074,
+"center": {
+"lat": 16.6598321,
+"lon": -72.1861014
+},
+"tags": {
+"name": "Antilles",
+"name:be": "Антыльскія астравы",
+"name:br": "Antilhez",
+"name:de": "Antillen",
+"name:en": "Antilles",
+"name:es": "Antillas",
+"name:eu": "Antillak",
+"name:fr": "Antilles",
+"name:gcf": "Woch a Djanman",
+"name:it": "Antille",
+"name:la": "Insulae Antillae",
+"name:nl": "Antillen",
+"name:ru": "Антильские острова",
+"name:sk": "Antily",
+"name:uk": "Антильські острови",
+"name:zh": "安的列斯群岛",
+"place": "archipelago",
+"source:name:br": "ofis publik ar brezhoneg",
+"type": "multipolygon",
+"wikidata": "Q166131"
+}
+},
+{
+"type": "relation",
+"id": 12305624,
+"center": {
+"lat": 12.4426858,
+"lon": -69.9429458
+},
+"tags": {
+"leisure": "nature_reserve",
+"name": "Comandeurs Bay Key",
+"natural": "reef",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 13677185,
+"center": {
+"lat": 12.538775,
+"lon": -70.0217649
+},
+"tags": {
+"landuse": "residential",
+"name": "Tanki Leendert",
+"place": "neighbourhood",
+"source": "Bing",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 13888531,
+"center": {
+"lat": 14.3962108,
+"lon": -64.7419785
+},
+"tags": {
+"name": "Antillas Menores / Lesser Antilles",
+"name:ace": "Antilles Cut",
+"name:af": "Klein-Antille",
+"name:ar": "جزر الأنتيل الصغرى",
+"name:arz": "جزر الانتيل الصغرى",
+"name:ast": "Antilles Menores",
+"name:az": "Kiçik Antil adaları",
+"name:be": "Малыя Антыльскія астравы",
+"name:bg": "Малки Антили",
+"name:br": "Antilhez Bihanañ",
+"name:bs": "Mali Antili",
+"name:ca": "Petites Antilles",
+"name:ceb": "Lesser Antilles",
+"name:cs": "Malé Antily",
+"name:cy": "Antilles Leiaf",
+"name:da": "Små Antiller",
+"name:de": "Kleine Antillen",
+"name:dsb": "Małe Antile",
+"name:el": "Μικρές Αντίλλες",
+"name:en": "Lesser Antilles",
+"name:eo": "Malgrandaj Antiloj",
+"name:es": "Antillas Menores",
+"name:et": "Väikesed Antillid",
+"name:eu": "Antilla Txikiak",
+"name:fa": "آنتیل کوچک",
+"name:fi": "Pienet Antillit",
+"name:fo": "Smærru Antilloyggjar",
+"name:fr": "Petites Antilles",
+"name:frr": "Letj Antilen",
+"name:fy": "Lytse Antillen",
+"name:ga": "Na hAintillí Beaga",
+"name:gd": "Na h-Eileanan Aintilia Beaga",
+"name:gl": "Antillas Menores",
+"name:hak": "Séu Antilles Khiùn-tó",
+"name:he": "האנטילים הקטנים",
+"name:hr": "Mali Antili",
+"name:hsb": "Małe Antile",
+"name:hu": "Kis-Antillák",
+"name:hy": "Փոքր Անտիլյան կղզիներ",
+"name:id": "Antillen Kecil",
+"name:is": "Litlu-Antillaeyjar",
+"name:it": "Piccole Antille",
+"name:ja": "小アンティル諸島",
+"name:ka": "მცირე ანტილის კუნძულები",
+"name:ko": "소앤틸리스 제도",
+"name:ku": "Antîlên Biçûk",
+"name:la": "Antillae Minores",
+"name:lb": "Kleng Antillen",
+"name:lmo": "Antil Piscininn",
+"name:lt": "Mažieji Antilai",
+"name:lv": "Mazās Antiļu salas",
+"name:map-bms": "Antillen Cilik",
+"name:mg": "Antilia Kely",
+"name:mk": "Мали Антили",
+"name:mrj": "Изи Антил ошмаотывлӓ",
+"name:ms": "Antillen Kecil",
+"name:nan": "Sió Antilles Kûn-tó",
+"name:nl": "Kleine Antillen",
+"name:pl": "Małe Antyle",
+"name:pt": "Pequenas Antilhas",
+"name:ro": "Antilele Mici",
+"name:ru": "Малые Антильские острова",
+"name:sco": "Lesser Antilles",
+"name:sh": "Mali Antili",
+"name:sk": "Malé Antily",
+"name:sl": "Mali Antili",
+"name:sr": "Мали Антили",
+"name:stq": "Litje Antillen",
+"name:sv": "Små Antillerna",
+"name:sw": "Antili Ndogo",
+"name:ta": "சிறிய அண்டிலிசு",
+"name:th": "เลสเซอร์แอนทิลลีส",
+"name:tr": "Küçük Antiller",
+"name:udm": "Пичи Антильской шормуӵъёс",
+"name:uk": "Малі Антильські острови",
+"name:ur": "انٹیلیز اصغر",
+"name:vi": "Tiểu Antilles",
+"name:war": "Antillas Menores",
+"name:wuu": "小安的列斯群岛",
+"name:xmf": "მორჩილი ანტილიშ კოკეფი",
+"name:yue": "細安地列斯群島",
+"name:zh": "小安的列斯群岛",
+"place": "archipelago",
+"type": "multipolygon",
+"wikidata": "Q93259",
+"wikipedia": "en:Lesser Antilles"
+}
+},
+{
+"type": "relation",
+"id": 14174829,
+"center": {
+"lat": 12.5363235,
+"lon": -70.0448157
+},
+"tags": {
+"boundary": "place",
+"name": "Oranjestad West",
+"place": "borough",
+"type": "boundary"
+}
+},
+{
+"type": "relation",
+"id": 14174830,
+"center": {
+"lat": 12.5082969,
+"lon": -70.0160687
+},
+"tags": {
+"boundary": "place",
+"name": "Oranjestad Oost",
+"place": "borough",
+"type": "boundary"
+}
+},
+{
+"type": "relation",
+"id": 14309831,
+"center": {
+"lat": 12.5830872,
+"lon": -70.0310017
+},
+"tags": {
+"landuse": "residential",
+"name": "Boroncana",
+"place": "neighbourhood",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 14755731,
+"center": {
+"lat": 12.4255786,
+"lon": -69.9102228
+},
+"tags": {
+"name": "San Nicolaas bay key",
+"natural": "reef",
+"place": "islet",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 14755767,
+"center": {
+"lat": 12.4122974,
+"lon": -69.8803738
+},
+"tags": {
+"name": "Klein Lagoen Cay",
+"natural": "rock",
+"place": "islet",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 14755920,
+"center": {
+"lat": 12.413153,
+"lon": -69.8812355
+},
+"tags": {
+"description": "Official location name: Klein Lagoen, not Baby Beach!",
+"name": "Klein Lagoen",
+"natural": "bay",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 14756209,
+"center": {
+"lat": 12.5064272,
+"lon": -69.9175104
+},
+"tags": {
+"name": "Dos Playa",
+"natural": "bay",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 14756250,
+"center": {
+"lat": 12.5309606,
+"lon": -69.938766
+},
+"tags": {
+"name": "Daimari",
+"natural": "bay",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 14759456,
+"center": {
+"lat": 12.5589692,
+"lon": -69.9852216
+},
+"tags": {
+"name": "Wariruri Bay",
+"natural": "bay",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 14759482,
+"center": {
+"lat": 12.5739048,
+"lon": -70.0021105
+},
+"tags": {
+"name": "Boca di Pos di Noord",
+"natural": "bay",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 15599524,
+"center": {
+"lat": 12.4490791,
+"lon": -69.9540119
+},
+"tags": {
+"name": "Savaneta Key",
+"natural": "reef",
+"type": "multipolygon"
+}
+}
+],
+"_curiana": {
+"region": "islas-abc",
+"caja": [
+12.4,
+-70.08,
+12.65,
+-69.85
+],
+"descargado": "2026-09-07",
+"licencia": "ODbL 1.0 — © OpenStreetMap contributors",
+"consulta": "[out:json][timeout:180];\n(\n  nwr[\"name\"][\"place\"](12.4,-70.08,12.65,-69.85);\n  nwr[\"name\"][\"natural\"](12.4,-70.08,12.65,-69.85);\n  nwr[\"name\"][\"waterway\"](12.4,-70.08,12.65,-69.85);\n  nwr[\"name\"][\"landuse\"~\"salt_pond\"](12.4,-70.08,12.65,-69.85);\n);\nout center tags;"
+}
+}

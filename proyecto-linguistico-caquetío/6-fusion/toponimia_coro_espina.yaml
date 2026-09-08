@@ -13,7 +13,7 @@
 # ─────────────────────────────────────────────────────────────────────────
 meta:
   recogido: '2026-08-25'
-  estado: sin-fusionar
+  estado: fusionado-parcial   # 2026-09-07: las lecturas (González Batista, Arcaya, Castellanos, veredictos de Miguel, contra-corocoro) cuelgan de toponimo-111 curiana y toponimo-001 jurijurebo; el principio toponímico está en 2-lengua/toponimia.md; coro = 'espina' sigue en D10 (lexicón)
   procedencia_incompleta: falta el año
   obra: gonzalez-batista-nombre-de-coro
 

@@ -61,6 +61,13 @@ OBRA_POR_FUENTE = {
     "van-buurt-2014": "van-buurt-2014",
     "gatschet-1885": "gatschet-1885",
     "esteves-1989": "esteves-1989",
+    # 2026-09-07: las lecturas del 25 de agosto entran al canon con su obra.
+    "arcaya-1920": "arcaya-1920",
+    "moron-2012-petroglifos": "moron-2012-petroglifos",
+    "gonzalez-batista-nombre-de-coro": "gonzalez-batista-nombre-de-coro",
+    "oliver-1989-cap3": "oliver-1989-cap3",
+    "velasco-2015-resistencia": "velasco-2015-resistencia",
+    "castellanos-elegias": "castellanos-elegias",
 }
 
 
@@ -121,13 +128,24 @@ def toponimos(T):
     # el YAML y aquí desde el 2026-09-06 para que regenerar no lo deshaga).
     # Las flechas («cemirucos → 'Semerucos'») no son glosa y se quedan.
     # Un grupo de DESCARTES puede traer `fuente` y `paginas` {forma: página}
-    # (los de Esteves) y `ids` {forma: id} para no mover el contador.
+    # (los de Esteves) y `ids` {forma: id} para no mover el contador. Y
+    # `reubicados` [formas]: nombres que SIGUEN en la lista para que el
+    # contador no se mueva, pero que ya no se emiten desde aquí porque viven
+    # en otro sitio con su id explícito (quiquiba → NIVEL_C toponimo-034; los
+    # cuatro Quicer- → el grupo de antropónimos, 030-033). Es lo que permite
+    # rehabilitar o reclasificar un original sin mover a los demás.
+    # `clase` y `polity` de grupo viajan a cada forma (los antropónimos de
+    # Barquisimeto: regla 4).
     for razon, e in T.DESCARTES.items():
         ids = e.get("ids", {})
         paginas = e.get("paginas", {})
+        reubicados = set(e.get("reubicados", []))
         for forma in e.get("formas", []):
             m = re.match(r"^(.+?)\s+\((.+)\)$", forma)
             base = m.group(1) if m else forma
+            if base in reubicados:
+                n += 1
+                continue
             if base in ids:
                 rid = ids[base]
             else:
@@ -137,8 +155,10 @@ def toponimos(T):
                 "id": rid,
                 "forma": base,
                 "nivel": "descartado",
-                "clase": "topónimo",
+                "clase": e.get("clase", "topónimo"),
             }
+            if e.get("polity"):
+                reg["polity"] = e["polity"]
             if m:
                 reg["glosa_fuente"] = m.group(2)
             reg["razon"] = e.get("razon") or razon

@@ -1,0 +1,2658 @@
+{
+"version": 0.6,
+"generator": "Overpass API 0.7.62.11 87bfad18",
+"osm3s": {
+"timestamp_osm_base": "2026-09-08T01:32:17Z",
+"copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+},
+"elements": [
+{
+"type": "node",
+"id": 2418327937,
+"lat": 11.0239188,
+"lon": -70.6776151,
+"tags": {
+"capital": "6",
+"name": "Dabajuro",
+"place": "town",
+"population": "24000",
+"wikidata": "Q985991",
+"wikipedia": "es:Dabajuro (ciudad)"
+}
+},
+{
+"type": "node",
+"id": 3073397548,
+"lat": 11.236999,
+"lon": -70.1089639,
+"tags": {
+"name": "Carazao",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 3073397550,
+"lat": 11.2346732,
+"lon": -70.1799888,
+"tags": {
+"name": "El Refugio",
+"place": "isolated_dwelling"
+}
+},
+{
+"type": "node",
+"id": 3948661657,
+"lat": 11.0662862,
+"lon": -70.8043032,
+"tags": {
+"capital": "7",
+"name": "Borojó",
+"place": "village",
+"wikidata": "Q113833806"
+}
+},
+{
+"type": "node",
+"id": 3948661658,
+"lat": 11.1729744,
+"lon": -70.6194495,
+"tags": {
+"capital": "6",
+"name": "Capatárida",
+"place": "town",
+"wikidata": "Q1034218"
+}
+},
+{
+"type": "node",
+"id": 3948661659,
+"lat": 11.0195976,
+"lon": -71.0140103,
+"tags": {
+"capital": "7",
+"name": "Casigua",
+"place": "village",
+"wikidata": "Q113834058"
+}
+},
+{
+"type": "node",
+"id": 3948666957,
+"lat": 11.0237511,
+"lon": -70.1166009,
+"tags": {
+"capital": "6",
+"name": "Pedregal",
+"place": "town",
+"wikidata": "Q3373995"
+}
+},
+{
+"type": "node",
+"id": 3948667761,
+"lat": 11.2424231,
+"lon": -70.4822992,
+"tags": {
+"capital": "7",
+"name": "Zazárida",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 4448577090,
+"lat": 11.2054404,
+"lon": -70.2551221,
+"tags": {
+"name": "Urbanización César Hernández",
+"name:es": "Urbanización Cesar Hernandez",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 4448595589,
+"lat": 11.2065294,
+"lon": -70.2556647,
+"tags": {
+"name": "Sector La Pica",
+"name:es": "Sector La Pica",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 5300912919,
+"lat": 10.6789486,
+"lon": -71.0364168,
+"tags": {
+"capital": "6",
+"name": "Mene de Mauroa",
+"place": "town",
+"wikidata": "Q985996"
+}
+},
+{
+"type": "node",
+"id": 5312521837,
+"lat": 10.788825,
+"lon": -70.9618137,
+"tags": {
+"name": "Los Pedros",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5312521849,
+"lat": 10.8235338,
+"lon": -70.9984312,
+"tags": {
+"name": "Jadagua",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5312521858,
+"lat": 10.8310578,
+"lon": -71.0140202,
+"tags": {
+"name": "Guaguana",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5312521874,
+"lat": 10.8806231,
+"lon": -71.0409925,
+"tags": {
+"name": "Las Crucecitas",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5314686521,
+"lat": 10.779396,
+"lon": -70.9195085,
+"tags": {
+"name": "Cuarenta Pasos",
+"place": "hamlet"
+}
+},
+{
+"type": "node",
+"id": 5314686605,
+"lat": 10.7741895,
+"lon": -70.7404013,
+"tags": {
+"capital": "7",
+"name": "Bariro",
+"place": "village",
+"wikidata": "Q113833629"
+}
+},
+{
+"type": "node",
+"id": 5314686606,
+"lat": 10.7054839,
+"lon": -70.6880768,
+"tags": {
+"name": "El Saladillo",
+"place": "hamlet"
+}
+},
+{
+"type": "node",
+"id": 5314686607,
+"lat": 10.6230229,
+"lon": -70.7208749,
+"tags": {
+"capital": "7",
+"name": "Guajiro",
+"place": "village",
+"wikidata": "Q3109553"
+}
+},
+{
+"type": "node",
+"id": 5314686608,
+"lat": 10.5592087,
+"lon": -70.6914993,
+"tags": {
+"name": "San Juan",
+"place": "hamlet"
+}
+},
+{
+"type": "node",
+"id": 5314693511,
+"lat": 11.0175329,
+"lon": -70.828355,
+"tags": {
+"capital": "7",
+"name": "San José de Seque",
+"place": "village",
+"wikidata": "Q113840856"
+}
+},
+{
+"type": "node",
+"id": 5314694127,
+"lat": 10.9458721,
+"lon": -70.7921211,
+"tags": {
+"name": "El Olivo",
+"place": "hamlet"
+}
+},
+{
+"type": "node",
+"id": 5314694136,
+"lat": 10.8735617,
+"lon": -70.9013519,
+"tags": {
+"name": "La Cuchara",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5314708022,
+"lat": 10.9617239,
+"lon": -70.7649669,
+"tags": {
+"name": "Santa María",
+"place": "hamlet"
+}
+},
+{
+"type": "node",
+"id": 5314708024,
+"lat": 10.9847272,
+"lon": -70.721043,
+"tags": {
+"name": "Pajuizal",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5314708154,
+"lat": 10.9574112,
+"lon": -70.6889691,
+"tags": {
+"name": "La Danta",
+"place": "hamlet"
+}
+},
+{
+"type": "node",
+"id": 5314708159,
+"lat": 11.1161703,
+"lon": -70.6513618,
+"tags": {
+"name": "Santa Rosa",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5314708160,
+"lat": 11.2220807,
+"lon": -70.6064096,
+"tags": {
+"name": "Miramar",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5314761616,
+"lat": 11.0956255,
+"lon": -70.5633456,
+"tags": {
+"name": "San Pedro",
+"place": "hamlet"
+}
+},
+{
+"type": "node",
+"id": 5314761617,
+"lat": 11.0963731,
+"lon": -70.5387551,
+"tags": {
+"name": "La Quietud",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5314763863,
+"lat": 11.1691632,
+"lon": -70.4821194,
+"tags": {
+"name": "San Gregorio",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5314763867,
+"lat": 11.238804,
+"lon": -70.5123149,
+"tags": {
+"name": "Puerto Zazárida",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5314763868,
+"lat": 11.1416968,
+"lon": -70.4093409,
+"tags": {
+"name": "Tarana",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5314763869,
+"lat": 11.1552547,
+"lon": -70.3763069,
+"tags": {
+"name": "Corubo",
+"place": "hamlet"
+}
+},
+{
+"type": "node",
+"id": 5314763879,
+"lat": 11.1787271,
+"lon": -70.3067089,
+"tags": {
+"name": "Llano Grande",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5314763999,
+"lat": 11.0779161,
+"lon": -70.3317178,
+"tags": {
+"capital": "7",
+"name": "San José de Bruzual",
+"place": "village",
+"wikidata": "Q113840854"
+}
+},
+{
+"type": "node",
+"id": 5314764000,
+"lat": 11.1248397,
+"lon": -70.3353657,
+"tags": {
+"name": "El Brasil",
+"place": "hamlet"
+}
+},
+{
+"type": "node",
+"id": 5314764020,
+"lat": 11.2022782,
+"lon": -70.2563371,
+"tags": {
+"capital": "6",
+"name": "Urumaco",
+"place": "town",
+"wikidata": "Q2096142"
+}
+},
+{
+"type": "node",
+"id": 5314764122,
+"lat": 11.1580933,
+"lon": -70.2380123,
+"tags": {
+"name": "La Represa",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5314764123,
+"lat": 11.1409775,
+"lon": -70.2231421,
+"tags": {
+"name": "El Tamarindo",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5314764124,
+"lat": 11.1176285,
+"lon": -70.217091,
+"tags": {
+"name": "Corralito",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5314764125,
+"lat": 11.0639123,
+"lon": -70.2380337,
+"tags": {
+"name": "La Curva",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5314764169,
+"lat": 11.019064,
+"lon": -70.2334526,
+"tags": {
+"name": "Las Guarabas",
+"place": "hamlet"
+}
+},
+{
+"type": "node",
+"id": 5314764170,
+"lat": 11.0593214,
+"lon": -70.2245797,
+"tags": {
+"name": "Las Cruces",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5314764171,
+"lat": 11.0545409,
+"lon": -70.2058473,
+"tags": {
+"name": "El 22",
+"place": "hamlet"
+}
+},
+{
+"type": "node",
+"id": 5314764190,
+"lat": 11.0511188,
+"lon": -70.1911809,
+"tags": {
+"name": "San Fernando",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5314764191,
+"lat": 11.0252246,
+"lon": -70.1371398,
+"tags": {
+"name": "La Meseta de Pedregal",
+"place": "hamlet"
+}
+},
+{
+"type": "node",
+"id": 5314764202,
+"lat": 11.2325239,
+"lon": -70.1886811,
+"tags": {
+"name": "El Cují",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5314764203,
+"lat": 11.2377111,
+"lon": -70.1585712,
+"tags": {
+"name": "El Lindero",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5314764204,
+"lat": 11.3038098,
+"lon": -70.1792028,
+"tags": {
+"name": "San Gregorio",
+"place": "hamlet"
+}
+},
+{
+"type": "node",
+"id": 5314764205,
+"lat": 11.3525797,
+"lon": -70.2064862,
+"tags": {
+"capital": "7",
+"name": "Río Seco",
+"place": "town",
+"wikidata": "Q113840663"
+}
+},
+{
+"type": "node",
+"id": 5314764206,
+"lat": 11.3403355,
+"lon": -70.236645,
+"tags": {
+"name": "Acorote",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5314764353,
+"lat": 11.3275832,
+"lon": -70.2661326,
+"tags": {
+"name": "Cauca",
+"place": "hamlet"
+}
+},
+{
+"type": "node",
+"id": 5314796626,
+"lat": 11.2330732,
+"lon": -70.267581,
+"tags": {
+"name": "Campo El Mamón",
+"place": "locality"
+}
+},
+{
+"type": "node",
+"id": 7899399847,
+"lat": 11.3544339,
+"lon": -70.2803582,
+"tags": {
+"name": "Punta Codare",
+"natural": "cape",
+"source": "SAGECAN 1994"
+}
+},
+{
+"type": "node",
+"id": 7899486979,
+"lat": 11.3033399,
+"lon": -70.3882601,
+"tags": {
+"name": "Punta Cuajasal",
+"natural": "cape",
+"source": "SAGECAN 1994"
+}
+},
+{
+"type": "node",
+"id": 7899487987,
+"lat": 11.1937566,
+"lon": -70.8446148,
+"tags": {
+"name": "Punta Borojó",
+"natural": "cape",
+"source": "SAGECAN 1994"
+}
+},
+{
+"type": "node",
+"id": 7899488114,
+"lat": 11.2892527,
+"lon": -70.479094,
+"tags": {
+"name": "Punta Peña",
+"natural": "cape",
+"source": "SAGECAN 1994"
+}
+},
+{
+"type": "node",
+"id": 7899491837,
+"lat": 11.2296085,
+"lon": -70.6629837,
+"tags": {
+"name": "Punta Yuyo",
+"natural": "cape",
+"source": "SAGECAN 1994"
+}
+},
+{
+"type": "node",
+"id": 9087415629,
+"lat": 10.8370468,
+"lon": -70.4234737,
+"tags": {
+"capital": "7",
+"name": "Tupere",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 11141157838,
+"lat": 10.8397181,
+"lon": -70.3225744,
+"tags": {
+"name": "Los Llantos de Santa María",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141158007,
+"lat": 10.8591537,
+"lon": -70.3251708,
+"tags": {
+"name": "La Esponja",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141158577,
+"lat": 10.8804107,
+"lon": -70.1411444,
+"tags": {
+"name": "El Edén",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141158776,
+"lat": 10.8483323,
+"lon": -70.160172,
+"tags": {
+"name": "El Blanquero",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141206537,
+"lat": 10.8189324,
+"lon": -71.031375,
+"tags": {
+"name": "Los Círculos",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141212395,
+"lat": 11.0685708,
+"lon": -70.4778019,
+"tags": {
+"name": "Las Grietas",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141212545,
+"lat": 11.0789656,
+"lon": -70.4505157,
+"tags": {
+"name": "El Satélite",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141212620,
+"lat": 11.0735511,
+"lon": -70.4487911,
+"tags": {
+"name": "Piedra Fina",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141212728,
+"lat": 11.0645565,
+"lon": -70.4382956,
+"tags": {
+"name": "Piedra Loca",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141213062,
+"lat": 11.0351095,
+"lon": -70.4138272,
+"tags": {
+"name": "La Bateíta",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141221713,
+"lat": 11.091571,
+"lon": -70.2391094,
+"tags": {
+"name": "La Represa",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141221816,
+"lat": 11.1078949,
+"lon": -70.243535,
+"tags": {
+"name": "La Puntica",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141222415,
+"lat": 11.0991462,
+"lon": -70.2975762,
+"tags": {
+"name": "Los Triángulos",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141227468,
+"lat": 11.3256553,
+"lon": -70.3203535,
+"tags": {
+"name": "Los Tres Ríos",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141237679,
+"lat": 11.1039627,
+"lon": -70.3694916,
+"tags": {
+"name": "Represón de Tarana",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141237703,
+"lat": 11.1011465,
+"lon": -70.3766477,
+"tags": {
+"name": "Caminito Viejo",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141237797,
+"lat": 11.1171593,
+"lon": -70.4024291,
+"tags": {
+"name": "Los Pliegues de Tarana",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141237798,
+"lat": 11.096014,
+"lon": -70.3896993,
+"tags": {
+"name": "Los Dientes",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141237799,
+"lat": 11.0940347,
+"lon": -70.3880578,
+"tags": {
+"name": "La Cinta",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141237833,
+"lat": 11.0882309,
+"lon": -70.3856894,
+"tags": {
+"name": "La Piedra",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141237895,
+"lat": 11.075749,
+"lon": -70.3846568,
+"tags": {
+"name": "La Bateíta",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141238213,
+"lat": 11.0625796,
+"lon": -70.3876019,
+"tags": {
+"name": "El Candado",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141238425,
+"lat": 11.0152774,
+"lon": -70.40627,
+"tags": {
+"name": "Los Lavadores",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141242196,
+"lat": 10.6436521,
+"lon": -70.8437581,
+"tags": {
+"name": "Las Cuatro Vías",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141242197,
+"lat": 10.627014,
+"lon": -70.8867931,
+"tags": {
+"name": "Paso de Santa Sofía",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141242295,
+"lat": 10.6752422,
+"lon": -70.817957,
+"tags": {
+"name": "Las Lápidas",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141242411,
+"lat": 10.6571496,
+"lon": -70.8220768,
+"tags": {
+"name": "Loma del Pescado",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141244891,
+"lat": 11.0700238,
+"lon": -70.6452549,
+"tags": {
+"name": "Vuelta del Niño",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141253749,
+"lat": 10.9380106,
+"lon": -70.7555473,
+"tags": {
+"name": "El Vueltón",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141257812,
+"lat": 10.5887656,
+"lon": -70.5005443,
+"tags": {
+"name": "Loma Seca",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141259582,
+"lat": 10.8726298,
+"lon": -70.5353809,
+"tags": {
+"name": "Valle Verde",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141259947,
+"lat": 10.8236744,
+"lon": -70.5190033,
+"tags": {
+"name": "La Bateota",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141261159,
+"lat": 10.8031036,
+"lon": -70.5479121,
+"tags": {
+"name": "Los Pozos",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141261160,
+"lat": 10.7953997,
+"lon": -70.5317652,
+"tags": {
+"name": "Los Epilegos",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141272394,
+"lat": 10.9315006,
+"lon": -70.3086806,
+"tags": {
+"name": "Los Bateones",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141273627,
+"lat": 11.0659937,
+"lon": -70.2537677,
+"tags": {
+"name": "La Terracita",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141273867,
+"lat": 11.0831534,
+"lon": -70.2414751,
+"tags": {
+"name": "El Bateón",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141274926,
+"lat": 11.1010096,
+"lon": -70.1474261,
+"tags": {
+"name": "La Minita",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141274998,
+"lat": 11.112006,
+"lon": -70.1165727,
+"tags": {
+"name": "Cortada de Santa Elena",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141275033,
+"lat": 11.1066158,
+"lon": -70.121854,
+"tags": {
+"name": "Cortada de Santa Sofía",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141275675,
+"lat": 11.1180646,
+"lon": -70.1085395,
+"tags": {
+"name": "El Monolito",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11141277623,
+"lat": 11.2180637,
+"lon": -70.1371855,
+"tags": {
+"name": "La Tubería",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11160832683,
+"lat": 11.0183419,
+"lon": -70.5610764,
+"tags": {
+"capital": "7",
+"name": "Los Chucos",
+"place": "village",
+"wikidata": "Q5979542"
+}
+},
+{
+"type": "node",
+"id": 12105696035,
+"lat": 11.0446963,
+"lon": -70.2287967,
+"tags": {
+"name": "Soledad",
+"place": "town"
+}
+},
+{
+"type": "way",
+"id": 256080139,
+"center": {
+"lat": 10.95282,
+"lon": -70.64162
+},
+"tags": {
+"name": "Embalse Mamito",
+"natural": "water",
+"note": "El polígono acuático proviene de la data del IGVSB, la imagen de BING posiblemente esté desactualizada. Algún local que confirme/corrija en dado caso."
+}
+},
+{
+"type": "way",
+"id": 256080143,
+"center": {
+"lat": 10.903475,
+"lon": -70.63014
+},
+"tags": {
+"name": "Embalse Mamito",
+"natural": "water"
+}
+},
+{
+"type": "way",
+"id": 256080146,
+"center": {
+"lat": 10.65662,
+"lon": -70.967365
+},
+"tags": {
+"name": "Embalse Matícora",
+"natural": "water"
+}
+},
+{
+"type": "way",
+"id": 351451233,
+"center": {
+"lat": 11.1660854,
+"lon": -70.6130879
+},
+"tags": {
+"name": "Río Capatárida",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 478921063,
+"center": {
+"lat": 10.6191693,
+"lon": -70.581889
+},
+"tags": {
+"name": "Río Mojino",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 478921082,
+"center": {
+"lat": 10.5897843,
+"lon": -70.7108844
+},
+"tags": {
+"name": "Río Riecito",
+"source:name": "DCN (1973)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 674107532,
+"center": {
+"lat": 11.1212894,
+"lon": -70.8216126
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Borojó",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 674165307,
+"center": {
+"lat": 11.1908051,
+"lon": -70.4693401
+},
+"tags": {
+"name": "Río Zazárida",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 674574447,
+"center": {
+"lat": 11.2683278,
+"lon": -70.2051541
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Urumaco",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 751977345,
+"center": {
+"lat": 11.3069567,
+"lon": -70.3571424
+},
+"tags": {
+"name": "Cuajaracume",
+"place": "village"
+}
+},
+{
+"type": "way",
+"id": 778906347,
+"center": {
+"lat": 10.9080824,
+"lon": -70.1413425
+},
+"tags": {
+"name": "Río Pedregal",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 778951907,
+"center": {
+"lat": 10.9647535,
+"lon": -70.4115631
+},
+"tags": {
+"name": "Río Zazárida",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 786541269,
+"center": {
+"lat": 11.0368585,
+"lon": -70.564904
+},
+"tags": {
+"name": "Quebrada El Placer",
+"source:name": "DCN (1963)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 786541290,
+"center": {
+"lat": 11.0872415,
+"lon": -70.6025635
+},
+"tags": {
+"name": "Quebrada El Placer",
+"source:name": "DCN (1963)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 801679345,
+"center": {
+"lat": 10.7358434,
+"lon": -70.4628049
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Tupure",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 801697884,
+"center": {
+"lat": 10.7053732,
+"lon": -70.5360963
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Tupure",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 803305883,
+"center": {
+"lat": 10.5756144,
+"lon": -70.1421184
+},
+"tags": {
+"name": "Río Baragua",
+"source:name": "DCN (1976)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 803305887,
+"center": {
+"lat": 10.5846777,
+"lon": -70.0751066
+},
+"tags": {
+"name": "Río Baragua",
+"source:name": "DCN (1976)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 810215345,
+"center": {
+"lat": 10.5584303,
+"lon": -70.6901912
+},
+"tags": {
+"name": "Río Riecito",
+"source:name": "DCN (1973)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 810225984,
+"center": {
+"lat": 10.6250341,
+"lon": -70.7498164
+},
+"tags": {
+"name": "Río Riecito",
+"source:name": "DCN (1973)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 834186447,
+"center": {
+"lat": 10.5187387,
+"lon": -70.2272289
+},
+"tags": {
+"name": "Río El Zurdo",
+"source:name": "DCN (1976)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 1188109199,
+"center": {
+"lat": 10.5493534,
+"lon": -70.1835622
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Baragua",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1976)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1188109202,
+"center": {
+"lat": 10.5497642,
+"lon": -70.2474759
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Baragua",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1976)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1188109205,
+"center": {
+"lat": 10.5661603,
+"lon": -70.3030787
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Santa Rita",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1976)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 1188109206,
+"center": {
+"lat": 10.5612574,
+"lon": -70.303646
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Santa Rita",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1976)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 1201688065,
+"center": {
+"lat": 10.5925736,
+"lon": -71.0480972
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Cocuiza",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1970)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688073,
+"center": {
+"lat": 10.77614,
+"lon": -71.0143147
+},
+"tags": {
+"name": "Río Matícora",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1970)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688247,
+"center": {
+"lat": 10.7196178,
+"lon": -71.0022301
+},
+"tags": {
+"name": "Río Matícora",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1970)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688252,
+"center": {
+"lat": 10.8090997,
+"lon": -71.053251
+},
+"tags": {
+"name": "Río Matícora",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1970)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688253,
+"center": {
+"lat": 10.6800947,
+"lon": -70.9962434
+},
+"tags": {
+"name": "Río Matícora",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688254,
+"center": {
+"lat": 10.6786714,
+"lon": -70.9976462
+},
+"tags": {
+"name": "Río Matícora",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688255,
+"center": {
+"lat": 10.6523411,
+"lon": -70.9207123
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Matícora",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688258,
+"center": {
+"lat": 10.6621981,
+"lon": -70.7547214
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Matícora",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688259,
+"center": {
+"lat": 10.9377805,
+"lon": -70.7528329
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Borojó",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688262,
+"center": {
+"lat": 11.0212693,
+"lon": -70.8854192
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Arroyo Hondo",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 1201688263,
+"center": {
+"lat": 11.0023419,
+"lon": -70.7855041
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Borojó",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688268,
+"center": {
+"lat": 11.1778639,
+"lon": -70.7776824
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Antúnez",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688270,
+"center": {
+"lat": 11.158186,
+"lon": -70.5260172
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Datuara",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688271,
+"center": {
+"lat": 11.1501492,
+"lon": -70.5219336
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Datuara",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688272,
+"center": {
+"lat": 11.1425163,
+"lon": -70.5180457
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Datuara",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 1201688273,
+"center": {
+"lat": 11.1372642,
+"lon": -70.5164921
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Datuara",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 1201688274,
+"center": {
+"lat": 11.0807538,
+"lon": -70.4894064
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Zazárida",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688275,
+"center": {
+"lat": 11.0903432,
+"lon": -70.489385
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Alamón",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688279,
+"center": {
+"lat": 11.2000227,
+"lon": -70.5346526
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Datuara",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688313,
+"center": {
+"lat": 11.2571788,
+"lon": -70.3277175
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Cauca",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688314,
+"center": {
+"lat": 11.1785883,
+"lon": -70.3561194
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Los Bisures",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 1201688316,
+"center": {
+"lat": 10.9202023,
+"lon": -70.3946246
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Zazárida",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688321,
+"center": {
+"lat": 11.1006853,
+"lon": -70.9559096
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Arroyo Hondo",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688322,
+"center": {
+"lat": 11.0702341,
+"lon": -70.9261626
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Arroyo Hondo",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688323,
+"center": {
+"lat": 11.046149,
+"lon": -70.909317
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Arroyo Hondo",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 1201688324,
+"center": {
+"lat": 11.0299087,
+"lon": -70.8946172
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Arroyo Hondo",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 1201688325,
+"center": {
+"lat": 11.0055853,
+"lon": -70.8790704
+},
+"tags": {
+"intermittent": "yes",
+"layer": "-1",
+"name": "Quebrada Arroyo Hondo",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"tunnel": "yes",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 1201688326,
+"center": {
+"lat": 11.0036066,
+"lon": -70.8765257
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Arroyo Hondo",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 1201688327,
+"center": {
+"lat": 11.0119282,
+"lon": -70.8811049
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Arroyo Hondo",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 1201688330,
+"center": {
+"lat": 10.8192204,
+"lon": -70.6682119
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Borojó",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688331,
+"center": {
+"lat": 10.7958752,
+"lon": -70.6719751
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Borojó",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688332,
+"center": {
+"lat": 10.7849048,
+"lon": -70.6709384
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Borojó",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 1201688333,
+"center": {
+"lat": 10.7794967,
+"lon": -70.6730184
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Borojó",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 1201688334,
+"center": {
+"lat": 11.103031,
+"lon": -70.6596308
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Tortolica",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688336,
+"center": {
+"lat": 10.880228,
+"lon": -70.7039738
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Borojó",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688343,
+"center": {
+"lat": 10.5487834,
+"lon": -70.5167752
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada La Divisa",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1973)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688345,
+"center": {
+"lat": 10.6734747,
+"lon": -70.5356397
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada El Recreo",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688346,
+"center": {
+"lat": 10.6399496,
+"lon": -70.5132553
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada El Recreo",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 1201688347,
+"center": {
+"lat": 10.6350569,
+"lon": -70.5117707
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada El Recreo",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 1201688348,
+"center": {
+"lat": 11.064478,
+"lon": -70.6416952
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Capatárida",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688352,
+"center": {
+"lat": 10.9702172,
+"lon": -70.5970971
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Tacal",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688353,
+"center": {
+"lat": 10.7800585,
+"lon": -70.5433349
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Los Zorros",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 1201688354,
+"center": {
+"lat": 10.7758467,
+"lon": -70.5461928
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Los Zorros",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 1201688355,
+"center": {
+"lat": 10.7738758,
+"lon": -70.5480342
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Los Zorros",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 1201688356,
+"center": {
+"lat": 10.7650129,
+"lon": -70.5475675
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Los Zorros",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688357,
+"center": {
+"lat": 10.7543938,
+"lon": -70.5463443
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Los Zorros",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688358,
+"center": {
+"lat": 10.748719,
+"lon": -70.5477257
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Los Zorros",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688359,
+"center": {
+"lat": 10.7039946,
+"lon": -70.5564978
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Tupure",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688360,
+"center": {
+"lat": 10.7254431,
+"lon": -70.5608377
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada El Tancón",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688363,
+"center": {
+"lat": 10.7198694,
+"lon": -70.4974343
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Tupure",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688367,
+"center": {
+"lat": 10.9793443,
+"lon": -70.2631565
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Guaraba",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688378,
+"center": {
+"lat": 11.0866581,
+"lon": -70.2278428
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada El Puerco",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688388,
+"center": {
+"lat": 11.2849013,
+"lon": -70.187505
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Las Cocuizas",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201688647,
+"center": {
+"lat": 10.5642245,
+"lon": -71.0298106
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Cocuiza",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1970)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201821028,
+"center": {
+"lat": 10.7104502,
+"lon": -70.5072237
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Tupure",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201821029,
+"center": {
+"lat": 10.7006188,
+"lon": -70.5795183
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Tupure",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201821030,
+"center": {
+"lat": 10.6903858,
+"lon": -70.6400465
+},
+"tags": {
+"name": "Río Matícora",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201821031,
+"center": {
+"lat": 11.0391376,
+"lon": -70.801186
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Borojó",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201821032,
+"center": {
+"lat": 11.025204,
+"lon": -70.0769669
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Pedregal",
+"source:name": "DCN (1963)",
+"tidal": "no",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201827220,
+"center": {
+"lat": 11.0291487,
+"lon": -70.4616775
+},
+"tags": {
+"name": "Río Zazárida",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1201831187,
+"center": {
+"lat": 10.5509195,
+"lon": -70.7086233
+},
+"tags": {
+"name": "Río Jordán",
+"source:name": "DCN (1973)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1202557454,
+"center": {
+"lat": 10.9618846,
+"lon": -70.7693312
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Borojó",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1204164451,
+"center": {
+"lat": 11.0219272,
+"lon": -70.6206778
+},
+"tags": {
+"intermittent": "yes",
+"name": "Río Capatárida",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1307193294,
+"center": {
+"lat": 11.0748856,
+"lon": -70.3320177
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Guaraba",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "way",
+"id": 1307193295,
+"center": {
+"lat": 11.0460442,
+"lon": -70.2491748
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Guaraba",
+"source": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:geometry": "Maxar (2023); OpenTopoMap; SAGECAN (1994); INE (2011); IGVSB; Esri; Bing",
+"source:name": "DCN (1963)",
+"waterway": "river"
+}
+},
+{
+"type": "relation",
+"id": 272632,
+"center": {
+"lat": 10.107023,
+"lon": -72.0103086
+},
+"tags": {
+"ISO3166-2": "VE-V",
+"admin_level": "4",
+"border_type": "entidad federal",
+"boundary": "administrative",
+"name": "Zulia",
+"name:en": "Zulia State",
+"name:es": "Estado Zulia",
+"name:guc": "Mma'ipakat Suuria",
+"name:ja": "スリア州",
+"place": "state",
+"population": "3704404",
+"population:date": "2011",
+"ref": "ZU",
+"source:population": "INE (2014)",
+"source:ref": "INTT (2011)",
+"type": "boundary",
+"wikidata": "Q43269",
+"wikipedia": "es:Estado Zulia"
+}
+},
+{
+"type": "relation",
+"id": 272744,
+"center": {
+"lat": 10.0713979,
+"lon": -69.8789504
+},
+"tags": {
+"ISO3166-2": "VE-K",
+"admin_level": "4",
+"border_type": "entidad federal",
+"boundary": "administrative",
+"name": "Lara",
+"name:en": "Lara State",
+"name:es": "Estado Lara",
+"name:ja": "ララ州",
+"place": "state",
+"population": "1774867",
+"population:date": "2011",
+"ref": "LA",
+"source:population": "INE (2014)",
+"source:ref": "INTT (2011)",
+"type": "boundary",
+"wikidata": "Q205796",
+"wikipedia": "es:Estado Lara"
+}
+},
+{
+"type": "relation",
+"id": 2269792,
+"center": {
+"lat": 11.2741903,
+"lon": -69.7093443
+},
+"tags": {
+"ISO3166-2": "VE-I",
+"admin_level": "4",
+"border_type": "entidad federal",
+"boundary": "administrative",
+"name": "Falcón",
+"name:en": "Falcon State",
+"name:es": "Estado Falcón",
+"name:ja": "ファルコン州",
+"place": "state",
+"population": "902847",
+"population:date": "2011",
+"ref": "FA",
+"source:population": "INE (2014)",
+"source:ref": "INTT (2011)",
+"type": "boundary",
+"wikidata": "Q202071",
+"wikipedia": "es:Estado Falcón"
+}
+},
+{
+"type": "relation",
+"id": 9992524,
+"center": {
+"lat": 11.6667645,
+"lon": -71.0556677
+},
+"tags": {
+"name": "Golfo de Venezuela",
+"name:cs": "Venezuelský záliv",
+"name:da": "Venezuelabugten",
+"name:de": "Golf von Venezuela",
+"name:en": "Gulf of Venezuela",
+"name:es": "Golfo de Venezuela",
+"name:fr": "Golfe de Venezuela",
+"name:nl": "Golf van Venezuela",
+"name:ru": "Венесуэльский залив",
+"name:sk": "Venezuelský záliv",
+"natural": "bay",
+"type": "multipolygon",
+"wikidata": "Q210305",
+"wikipedia": "es:Golfo de Venezuela"
+}
+},
+{
+"type": "relation",
+"id": 9993715,
+"center": {
+"lat": 11.5558883,
+"lon": -69.9741841
+},
+"tags": {
+"name": "Golfete de Coro",
+"natural": "bay",
+"type": "multipolygon"
+}
+}
+],
+"_curiana": {
+"region": "falcon-occidental",
+"caja": [
+10.55,
+-71.05,
+11.45,
+-70.1
+],
+"descargado": "2026-09-07",
+"licencia": "ODbL 1.0 — © OpenStreetMap contributors",
+"consulta": "[out:json][timeout:180];\n(\n  nwr[\"name\"][\"place\"](10.55,-71.05,11.45,-70.1);\n  nwr[\"name\"][\"natural\"](10.55,-71.05,11.45,-70.1);\n  nwr[\"name\"][\"waterway\"](10.55,-71.05,11.45,-70.1);\n  nwr[\"name\"][\"landuse\"~\"salt_pond\"](10.55,-71.05,11.45,-70.1);\n);\nout center tags;"
+}
+}

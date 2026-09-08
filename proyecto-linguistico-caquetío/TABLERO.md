@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-07 22:17**.
+<!--GENERADO--> Generado el **2026-09-07 22:46**.
 
 ## ¿Vamos bien?
 
@@ -134,7 +134,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 
 Índice: [[INDICE_FUENTES]]. **La nota de cada obra es la fuente de verdad**; esta tabla lee su frontmatter (`estado_minado`, `prioridad`, `capa_texto`, `sostiene`), no una lista cableada.
 
-**58 notas de obra.**
+**59 notas de obra.**
 
 | `estado_minado` | n |
 |---|---|
@@ -142,7 +142,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | no-disponible | 13 |
 | parcial | 6 |
 | segunda-mano | 5 |
-| en-curso | 4 |
+| en-curso | 5 |
 | puntual | 2 |
 | sin-minar | 2 |
 | descartada | 1 |
@@ -150,7 +150,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 
 **Prioridad ALTA sin minar (14):** [[arcaya-obra-inedita-1995]] (`no-disponible`), [[ballesteros-1550]] (`segunda-mano`), [[brito-figueroa-poblacion-economia]] (`en-curso`), [[castellanos-elegias]] (`en-curso`), [[esteves-1989]] (`parcial`), [[gonzalez-batista-nombre-de-coro]] (`en-curso`), [[medina-colina-sxx]] (`en-curso`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap3-vecinos]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`no-disponible`), [[perez-de-tolosa-1546]] (`no-disponible`), [[urbina-jimenez-2007-2011]] (`parcial`), [[zavala-reyes-2015]] (`completo-con-reserva`).
 
-<details><summary>Las 58 notas, una por fila</summary>
+<details><summary>Las 59 notas, una por fila</summary>
 
 | Nota | minado | prioridad | capa texto | lexicón (declarado) | lexicón (medido) | hechos corpus |
 |---|---|---|---|---|---|---|
@@ -201,6 +201,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[oliver-1989-apendice-a]] | parcial | alta | no | 0 | 14 | 0 |
 | [[oliver-1989-cap3-vecinos]] | parcial | alta | ocr-parcial | 0 | 14 | 0 |
 | [[oliver-1989-cap4]] | parcial | alta | si | 0 | 14 | 0 |
+| [[osm-kaketiana]] | en-curso | media | datos | 0 | 0 | 0 |
 | [[perea-alonso-1942]] | descartada | descartada | si | 0 | 0 | 0 |
 | [[perez-de-tolosa-1546]] | no-disponible | alta | no | 0 | 0 | 0 |
 | [[polar-el-maiz-glosario]] | puntual | baja | si | 0 | 0 | 0 |
@@ -288,7 +289,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1077 en 341 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 1085 en 345 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 246 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 

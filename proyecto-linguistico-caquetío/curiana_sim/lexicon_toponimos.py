@@ -273,6 +273,67 @@ NIVEL_A = {
 # ───────────────────────────────────────────────────────────────────────────
 
 NIVEL_B = {
+    # ── Lote 6 (2026-09-07): del censo de -ana para #109. Es el capubana
+    # 'duende del cerro' de Zavala #61, escrito por Esteves con h. Y la
+    # percha de la hipótesis del centro sagrado de Miguel (2026-09-01). ──
+    "capuhana": {
+        "id": "toponimo-113", "clase": "topónimo", "fuente": "esteves-1989",
+        "pagina": 26,
+        "glosa_fuente": "«Capu-hana, con hache intercalada para deshacer el "
+                        "diptongo, es el nombre de un pequeño cerro, cerca de "
+                        "Misaray. Quiere decir: el cerro del duende. Capú: duende, "
+                        "ente sobrenatural. Bana: cerro, sitio alto»",
+        "segmentacion": "capu + (h)ana   [< capu + bana, con b > h intervocálica]",
+        "morfemas": {
+            "capu": "duende, espíritu protector de los árboles  [capo/capú del "
+                    "lexicón; Zavala #61 capubana 'duende del cerro']",
+            "bana": "cerro, sitio alto  [D9, resuelta 2026-08-31; el «Barna» del "
+                    "OCR es Bana]",
+        },
+        "glosa_reconstruida": "cerro del duende",
+        "razon": "dos morfemas atestiguados, glosa impresa y referente dicho (un "
+                 "cerro). Segunda atestación del compuesto capubana, ahora como "
+                 "topónimo y con el núcleo al final: Esteves lee 'el cerro del "
+                 "duende' donde Zavala glosaba 'duende del cerro', y el referente "
+                 "decide. B y no A porque la forma con h es de Esteves y la "
+                 "identificación con el capubana de Zavala es nuestra.",
+        "observacion": "Alternancia b~h intervocálica: permutación nueva para la "
+                       "skill. En el mapa vivo: «Cerro Capuana» (OSM, 11.844 "
+                       "-69.896), unos 6 km al NE de la cumbre del Cerro Santa "
+                       "Ana; Esteves lo llama «pequeño cerro cerca de Misaray». "
+                       "Tensión con la lectura de Miguel, que identifica el "
+                       "Capubana con el Cerro Santa Ana entero: o son dos "
+                       "Capubana o el nombre bajó del cerro grande al pequeño.",
+        "lecturas": [
+            {"tipo": "hipotesis",
+             "lectura": "el Capubana es el Cerro Santa Ana (el Cerro de Capú, "
+                        "D9/Velasco) y el centro sagrado del sector: Moruy, donde "
+                        "se hacía el merejuy para la chicha ritual, a su izquierda; "
+                        "Chamuriana, con el agua que baja del cerro, al sur; "
+                        "Cayerúa al norte. Sitios con funciones rituales distintas "
+                        "organizados en torno a la morada del dueño Capo",
+             "quien": "Miguel Gil Urbina", "fecha": "2026-09-01", "eje": "referente",
+             "apoyo": "Velasco: el cerro se llamaba Cerro de Capú; Salas: la "
+                      "cabecera religiosa del polity en Paraguaná; Oliver p. 275: "
+                      "silencio de cronistas sobre lo ritual («quite secretive»)",
+             "veredicto": "canon-simulación como modelo espacial (Claude, "
+                          "2026-09-01): ninguna fuente lo dice así de explícito, "
+                          "pero es consistente con tres piezas canónicas. Esteves "
+                          "da el nombre a un cerro pequeño cerca de Misaray, no al "
+                          "macizo. Detalle: 6-fusion/toponimia_paraguana_miguel.yaml "
+                          "§capubana-centro-sagrado"},
+            {"tipo": "tradicion-local",
+             "lectura": "en el cerro de Capuhana hay un duende que, junto con una "
+                        "serpiente emplumada con una estrella en la cabeza, impide "
+                        "que sean cortados los árboles de la localidad; Esteves lo "
+                        "emparenta con la leyenda de la serpiente emplumada del "
+                        "Guárico, «cuyos primitivos habitantes eran también de "
+                        "ascendencia caquetía»",
+             "quien": "tradición local recogida por Francisco Tamayo, vía Esteves "
+                      "1989", "fecha": "2026-09-07", "eje": "referente",
+             "procedencia": dict(obra="esteves-1989", pagina=26)},
+        ],
+    },
     "adabacoa": {
         "clase": "topónimo", "fuente": "zavala-reyes-2015",
         "glosa_fuente": "Todo arboleda",
@@ -552,6 +613,214 @@ MORFEMAS_DESPEJADOS = {
 # ───────────────────────────────────────────────────────────────────────────
 
 NIVEL_C = {
+    # ── Las lecturas del 25 de agosto, fusionadas el 2026-09-07 por orden de
+    # Miguel («que no quede nada pendiente por ahí sin guardar o fusionar»).
+    # Venían sueltas en toponimia_coro_espina.yaml, lengua_toponimia_quibacoa.yaml
+    # y petroglifos_y_manaure.yaml. ──
+    "curiana": {
+        "id": "toponimo-111", "clase": "topónimo", "fuente": "arcaya-1920",
+        "pagina": 169,
+        "glosa_fuente": "«Coro o Curiana se denominaba el pueblo que allí tenían "
+                        "fundado los indios, y Curiana la costa vecina» (Arcaya "
+                        "p. 169); «Curiana: territorio donde estaban asentados los "
+                        "caquetíos» (Zavala 2015, nota 4)",
+        "segmentacion": "curi-/cori- + -ana   [-ana: forma atestiguada, sin glosa "
+                        "desde #109]",
+        "razon": "el nombre del proyecto no tenía entrada: vivía en el lexicón y "
+                 "en D2 (#33). Forma atestiguada en tres grafías (Curiana, "
+                 "Coriana, Coro), pero ninguna fuente impresa la glosa: las dos "
+                 "glosas de fuente son referenciales. Cuatro lecturas del "
+                 "significado compiten, ninguna cierra, y -ana perdió la glosa "
+                 "'lugar de' el 2026-09-07. C: forma segura, significado abierto.",
+        "observacion": "D2 (#33), territorio o asentamiento: Arcaya da las dos "
+                       "cosas. Y hay un segundo Coriana: Oliver (cap. 3 p. 207) "
+                       "lee «Coria-na» entre los nombres de aldea wanebucán de "
+                       "Punta Espada-Chichibacoa (Guajira), «suspiciously "
+                       "Caquetío».",
+        "lecturas": [
+            {"tipo": "etimologia-analitica",
+             "lectura": "coro 'espina' → Coriana 'tierra de las espinas, o la "
+                        "tierra del espinar, de vegetación espinosa, e "
+                        "indirectamente, tierra de cardones' (con paragua 'mar' + "
+                        "na 'tierra' = Paraguaná como paralelo); «Coriana, y no "
+                        "Curiana, que nos parece un barbarismo»",
+             "quien": "González Batista", "fecha": "2026-08-25", "eje": "significado",
+             "procedencia": dict(obra="gonzalez-batista-nombre-de-coro"),
+             "veredicto": "PLAUSIBLE (Miguel, 2026-08-25): la línea más "
+                          "prometedora del autor, abierta. Depende de na = "
+                          "'tierra', que ninguna fuente impresa da (Zavala #184: na "
+                          "'como, semejante'). Su ejemplo corocoro como plural de "
+                          "coro se refutó con Alvarado 1921 (onomatopeya del canto "
+                          "del ave, voz caribe/tupí; el pez, por las manchas rojas): "
+                          "cae el ejemplo, no la tesis, que se apoya en "
+                          "tococoro/totocoro vivos en la arquitectura coriana, en "
+                          "dato 'fruto del cardón' (Zavala) y en el cardonal de "
+                          "Coro que figuraba entre los linderos de las propiedades. "
+                          "Cautela general sobre el autor (Miguel)."},
+            {"tipo": "etimologia-de-cronista",
+             "lectura": "la serie Coro-/Curi- («la antigua Coriana, Coroquide, "
+                        "Corobore, Coroquidiro, Ocorote, Corocoro, Cocorote») "
+                        "remite a «Koori, avispa, en guajiro o Kuru, lagartija»; y "
+                        "«Coro = viento» de Castellanos «esto es un error»",
+             "quien": "Arcaya 1920", "fecha": "2026-08-25", "eje": "significado",
+             "procedencia": dict(obra="arcaya-1920", pagina=170),
+             "veredicto": "formante productivo sin glosa acordada: avispa o "
+                          "lagartija (Arcaya), espina o cardón (González Batista; "
+                          "D10 degradó coro 'cardón grande'), viento (Castellanos, "
+                          "Miguel). Compiten; ninguna con glosa impresa del "
+                          "caquetío."},
+            {"tipo": "etimologia-de-cronista",
+             "lectura": "«Coro viento quiere decir en lengua generosa»",
+             "quien": "Castellanos 1589", "fecha": "2026-09-04", "eje": "significado",
+             "procedencia": dict(obra="castellanos-elegias", pagina=185),
+             "veredicto": "casi seguro el latín corus/caurus 'viento del "
+                          "noroeste', que el castellano heredó como coro 'viento "
+                          "noroeste': juego del poeta, no glosa caquetía; Arcaya lo "
+                          "llama error. No es apoyo independiente de curi ~ juri."},
+            {"tipo": "hipotesis",
+             "lectura": "curi- (Curiana, Coriana) y juri 'viento' son la misma "
+                        "palabra con dos pronunciaciones, una de Coro y otra de "
+                        "Paraguaná: Curiana 'tierra del viento', paralelo de "
+                        "Judibana 'cerro del viento' y Jurijurebo 'paso de los "
+                        "vientos'",
+             "quien": "Miguel Gil Urbina", "fecha": "2026-09-05", "eje": "significado",
+             "apoyo": "cudan ~ judan en la fórmula de Mitare (c~j del lado de "
+                      "Coro); juri ~ judi ya aceptada para Judibana; «aquella "
+                      "tierra muy ventosa» (Castellanos)",
+             "veredicto": "validación BAJA-MEDIA (Claude, 2026-09-05): una /k/ no "
+                          "se cae como la h/j; el pariente wayuu del viento arranca "
+                          "en h o w; Mitare no reparte limpio por región. Esteves no "
+                          "trae variante con c/k (0 verificado, 2026-09-07): "
+                          "neutro, porque solo cubre Paraguaná. La prueba pasa al "
+                          "lado de Coro. Detalle: "
+                          "6-fusion/toponimia_paraguana_miguel.yaml §Curiana / Coro"},
+            {"tipo": "glosa-fuente",
+             "lectura": "el mismo nombre nombra el pueblo y la costa: «Coro o "
+                        "Curiana se denominaba el pueblo que allí tenían fundado "
+                        "los indios, y Curiana la costa vecina»",
+             "quien": "Arcaya 1920", "fecha": "2026-08-25", "eje": "referente",
+             "procedencia": dict(obra="arcaya-1920", pagina=169),
+             "veredicto": "es la pregunta de D2 (#33), con dos casos desde el "
+                          "2026-08-25: en Coquibacoa la extensión sitio → región es "
+                          "explícitamente española (Arcaya p. 130); en Curiana "
+                          "Arcaya no separa quién extendió qué."},
+            {"tipo": "hipotesis",
+             "lectura": "hay un segundo Coriana: «Coria-na», nombre de aldea "
+                        "wanebucán en Punta Espada-Chichibacoa (Guajira), junto a "
+                        "«Paragua-nil»: morfemas «suspiciously Caquetío» que Oliver "
+                        "explica por el nexo comercial con los caquetíos de allí",
+             "quien": "Oliver 1989", "fecha": "2026-09-07", "eje": "referente",
+             "procedencia": dict(obra="oliver-1989-cap3", pagina=207),
+             "veredicto": "si Coria-na se repite donde no hay nada que llamar Coro, "
+                          "la raíz coria- es léxica (formación común, 'tierra o "
+                          "lugar de X') o el nombre viajó con los comerciantes: en "
+                          "los dos casos toca D2. Está también en la lista viva de "
+                          "-ana (#109)."},
+        ],
+    },
+    # Rehabilitado el 2026-09-07 (propuesta del 2026-08-25,
+    # lengua_toponimia_quibacoa.yaml §3). Conserva su id: sigue listado en
+    # DESCARTES «glosa meramente referencial» como `reubicado` para que el
+    # contador no se mueva.
+    "quiquiba": {
+        "id": "toponimo-034", "clase": "topónimo", "fuente": "arcaya-1920",
+        "pagina": 130,
+        "glosa_fuente": "«tomaron por las costas de la Goagira, región que "
+                        "llamaron de Coquibacoa, o de Quiquibacoa, por el nombre "
+                        "indígena de uno de sus sitios. Este nombre se le dio "
+                        "también entonces al Golfo, y aun se extendió a todas las "
+                        "tierras que lo rodean, inclusive las de Paraguaná»",
+        "segmentacion": "qui~quiba (reduplicado) + bacoa",
+        "morfemas": {
+            "quiba": "piedra  [Zavala #218 quiva, #92 cuiva/kiba: atestiguado]",
+            "bacoa": "lugar, paraje  [atestiguado; morfema-001]",
+        },
+        "glosa_reconstruida": "lugar de las piedras, el pedregal",
+        "razon": "estaba descartado por glosa referencial (Zavala solo nombra). "
+                 "Arcaya p. 130 da el referente (un sitio de la Guajira, luego el "
+                 "Golfo) y la forma con -bacoa; con quiba 'piedra' y bacoa 'lugar' "
+                 "hay ecuación, y quibacoas 'Bosques pedregosos' (Zavala #204) es "
+                 "la misma composición sin reduplicar. C y no B porque la "
+                 "reduplicación es patrón con casos (jurijurebo sí, quibaquibi "
+                 "no), Quiba #203 'ayuda' choca con Quiva #218 'piedra', y la "
+                 "glosa es reconstruida, no impresa.",
+        "observacion": "Regla 3: la extensión al Golfo y sus tierras es española; "
+                       "lo indígena es el sitio. La grafía más antigua es la "
+                       "reduplicada: «Quinquevacoa» en la capitulación de Ojeda "
+                       "(28-VII-1500, Otte 1963: 3, vía Oliver cap. 3 p. 211); de "
+                       "la Cosa 1500 escribe Coquibacoa sobre toda la Guajira "
+                       "(p. 192). Y el cabo Chichibacoa «suspiciously sounds like "
+                       "Coquibacoa, except for a /k/::/ch/ sound shift» (p. 249 "
+                       "n. 94): el sitio puede seguir vivo con otro sonido.",
+        "lecturas": [
+            {"tipo": "etimologia-analitica",
+             "lectura": "qui~quiba (reduplicación con valor plural, como juri → "
+                        "jurijurebo) + bacoa 'lugar de' = 'lugar de las piedras, "
+                        "el pedregal'",
+             "quien": "proyecto", "fecha": "2026-08-25", "eje": "significado",
+             "apoyo": "quiva/cuiva/kiba 'piedra' (Zavala #218, #92); -bacoa en "
+                      "cinco topónimos glosados; Arcaya p. 36: iparcoa 'cascajo' "
+                      "= ipar 'piedra' + -coa en guajiro, el formante con la misma "
+                      "raíz en lengua hermana",
+             "veredicto": "rehabilitado a nivel C el 2026-09-07 (Miguel: lo del "
+                          "25 de agosto se guarda o se fusiona); subir a B pide un "
+                          "segundo caso de reduplicación plural o una glosa "
+                          "impresa."},
+            {"tipo": "hipotesis",
+             "lectura": "el cabo Chichibacoa, en el norte de la Guajira, es "
+                        "Coquibacoa con /k/ > /ch/: el sitio indígena de Arcaya "
+                        "seguiría vivo en el mapa",
+             "quien": "Oliver 1989", "fecha": "2026-09-07", "eje": "referente",
+             "procedencia": dict(obra="oliver-1989-cap3", pagina=249),
+             "apoyo": "un nombre que sigue vivo es dato (Miguel); Punta "
+                      "Chichibacoa existe en el mapa de hoy"},
+        ],
+    },
+    "la cuiba": {
+        "id": "toponimo-112", "clase": "topónimo", "fuente": "moron-2012-petroglifos",
+        "glosa_fuente": "sitio de la leyenda del Rey Manaure (Aguas Termales de "
+                        "Agua Clara), que destaca por «la riqueza de cristales de "
+                        "cuarzo a ras del suelo»",
+        "segmentacion": "cuiba (< cuiva/quiva/kiba 'piedra'), con artículo castellano",
+        "morfemas": {
+            "cuiba": "piedra  [Zavala #92 «Cuiva. Kiba (PMA): Piedra», #218 «Quiva "
+                     "(E): Piedra»: atestiguado]",
+        },
+        "glosa_reconstruida": "la piedra, el pedregal",
+        "razon": "Morón no glosa el nombre; la ecuación la da el sitio: un lugar de "
+                 "cristales de cuarzo a ras del suelo llamado con la palabra "
+                 "caquetía para 'piedra'. Es el principio toponímico (el nombre "
+                 "describe el rasgo del sitio) en un caso verificable en terreno. "
+                 "C: un morfema atestiguado y el referente a favor; sin glosa "
+                 "impresa y sin página del topónimo en la fuente.",
+        "observacion": "Homógrafo del etnónimo cuiba (3-mundo/etnias.yaml, "
+                       "etnia-001: guahibos de los Llanos). La hipótesis de que el "
+                       "etnónimo sea un exónimo caquetío 'gente de la piedra' sigue "
+                       "sin verificar; este sitio la hace más llamativa, no la "
+                       "prueba. Nombre vivo en Falcón: localizar en el barrido OSM.",
+        "lecturas": [
+            {"tipo": "hipotesis",
+             "lectura": "si cuiva/quiva = 'piedra', La Cuiba nombra exactamente el "
+                        "rasgo dominante del sitio: cristales de cuarzo a ras del "
+                        "suelo",
+             "quien": "proyecto", "fecha": "2026-08-25", "eje": "ambos",
+             "procedencia": dict(obra="moron-2012-petroglifos"),
+             "apoyo": "principio toponímico, enunciado por separado por González "
+                      "Batista y por la Relación de 1578 sobre la provincia de "
+                      "lengua Caraca; conjunto de cognados 'piedra' ipa (wayuu) / "
+                      "siba (lokono) / quiva-cuiva-kiba (caquetío), Arcaya 1920 "
+                      "p. 36",
+             "veredicto": "fusionado como nivel C el 2026-09-07 (Miguel: lo del 25 "
+                          "de agosto se guarda o se fusiona)."},
+            {"tipo": "tradicion-local",
+             "lectura": "la leyenda del Rey Manaure en La Cuiba / Aguas Termales de "
+                        "Agua Clara: la viejita caquetía, el machete, la culebra "
+                        "amarilla y las barritas de oro",
+             "quien": "tradición oral recogida por Morón 2012", "fecha": "2026-08-25",
+             "eje": "referente",
+             "procedencia": dict(obra="moron-2012-petroglifos")},
+        ],
+    },
     "alaurima": {
         "glosa_fuente": "Río blanco o claro", "segmentacion": "alaur- + -ima",
         "razon": "`-ima` 'humedad, quebrada' (AFIJOS_ZAVALA #165, confirmado "
@@ -1377,6 +1646,12 @@ DESCARTES = {
         "razon": "la glosa IDENTIFICA al referente (quién es, dónde queda) sin "
                  "traducirlo. No hay ecuación bilingüe: no hay significado que "
                  "despejar.",
+        # 2026-09-07: cinco formas siguen aquí SOLO para que el contador de ids
+        # no se mueva (el migrador las salta): los cuatro Quicer- viven en el
+        # grupo «antropónimos de Barquisimeto» con sus ids 030-033, y quiquiba
+        # se rehabilitó a NIVEL_C con su id 034.
+        "reubicados": ["quiceraguru", "quiceroaboa", "quiceromata", "quiciroata",
+                       "quiquiba"],
         "formas": ["baracoica (Cacique de Curazao)", "huay (Nombre propio)",
                    "quiceraguru", "quiceroaboa", "quiceromata", "quiciroata",
                    "quiquiba", "tamani", "timaure (Apellido)",
@@ -1391,6 +1666,23 @@ DESCARTES = {
                    "caquetío (Buena gente — etnónimo, no descripción del lugar)",
                    "xirahara (Población indígena vecina)",
                    "yaruca (Indígena caquetío)"],
+    },
+    "antropónimos de Barquisimeto (Zavala #207-210)": {
+        "razon": "la fuente los glosa como «Nombre propio indígena en "
+                 "Barquisimeto»: son antropónimos, no topónimos, y de otra "
+                 "polity (regla 4). Estaban como topónimos de glosa referencial "
+                 "desde el origen del registro; reclasificados el 2026-09-07 "
+                 "(propuesta del 2026-08-25, lengua_toponimia_quibacoa.yaml "
+                 "§bug-antroponimos-como-toponimos). Conservan sus ids.",
+        "clase": "antropónimo",
+        "polity": "barquisimeto",
+        "fuente": "zavala-reyes-2015",
+        "ids": {"quiceraguru": "toponimo-030", "quiceroaboa": "toponimo-031",
+                "quiceromata": "toponimo-032", "quiciroata": "toponimo-033"},
+        "formas": ["quiceraguru (Nombre propio indígena en Barquisimeto)",
+                   "quiceroaboa (Nombre propio indígena en Barquisimeto)",
+                   "quiceromata (Nombre propio indígena en Barquisimeto)",
+                   "quiciroata (Nombre propio indígena en Barquisimeto)"],
     },
     "glosa circular": {
         "razon": "la 'traducción' es el propio topónimo castellanizado. No "

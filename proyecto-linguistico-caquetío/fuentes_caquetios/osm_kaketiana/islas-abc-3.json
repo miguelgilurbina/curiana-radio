@@ -1,0 +1,1101 @@
+{
+"version": 0.6,
+"generator": "Overpass API 0.7.62.11 87bfad18",
+"osm3s": {
+"timestamp_osm_base": "2026-09-08T01:32:17Z",
+"copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+},
+"elements": [
+{
+"type": "node",
+"id": 50034650,
+"lat": 12.1472869,
+"lon": -68.2740206,
+"tags": {
+"alt_name": "Kralendijk",
+"capital": "8",
+"int_name": "Kralendijk",
+"is_capital": "territory",
+"name": "Kralendijk",
+"name:ar": "كراليندايك",
+"name:az": "Kralendeyk",
+"name:be": "Кралендэйк",
+"name:bg": "Кралендайк",
+"name:de": "Kralendijk",
+"name:el": "Κράλεντεϊκ",
+"name:en": "Kralendijk",
+"name:fa": "کرالن‌دیک",
+"name:fr": "Kralendijk",
+"name:hu": "Kralendijk",
+"name:hy": "Կրալենդիյկ",
+"name:ja": "クラレンダイク",
+"name:ka": "კრალენდეიკი",
+"name:kk": "Кралендейк",
+"name:ko": "크랄렌데이크",
+"name:ky": "Кралендейк",
+"name:lt": "Kralendeikas",
+"name:lv": "Krālendeika",
+"name:mk": "Кралендајк",
+"name:nl": "Kralendijk",
+"name:no": "Kralendijk",
+"name:pl": "Kralendijk",
+"name:ru": "Кралендейк",
+"name:sr": "Кралендајк",
+"name:sv": "Kralendijk",
+"name:th": "กราเลินไดก์",
+"name:tr": "Kralendijk",
+"name:uk": "Кралендейк",
+"name:ur": "کرالندیک",
+"name:uz": "Kralendeyk",
+"name:zh": "克拉伦代克",
+"note:capital": "Bonaire is a subset (type Special municipality) of Bonaire, Sint Eustatius and Saba which is admin_level=8",
+"place": "town",
+"population": "12531",
+"wikidata": "Q331584",
+"wikipedia": "nl:Kralendijk"
+}
+},
+{
+"type": "node",
+"id": 292989451,
+"lat": 12.2386709,
+"lon": -68.329816,
+"tags": {
+"name": "Rincon",
+"name:es": "Rincón",
+"name:mk": "Ринкон",
+"note": "According to http://wiki.openstreetmap.org/wiki/Key:place, Rincon should be tagged as a hamlet, but since it is the second place in the island and has restaurants and a church, it might be fair to tag it as a village",
+"place": "town",
+"wikidata": "Q2033101"
+}
+},
+{
+"type": "node",
+"id": 313790239,
+"lat": 12.1033412,
+"lon": -68.2316259,
+"tags": {
+"created_by": "Potlatch 0.10f",
+"name": "Lac Bay",
+"natural": "bay"
+}
+},
+{
+"type": "node",
+"id": 663869423,
+"lat": 12.1444535,
+"lon": -68.276667,
+"tags": {
+"name": "Calabas Reef",
+"natural": "reef",
+"scuba_diving:divespot": "yes",
+"scuba_diving:entry": "shore",
+"sport": "scuba_diving",
+"website": "https://www.divers-guide.com/en/dive-spots/calabas-reef"
+}
+},
+{
+"type": "node",
+"id": 3259700421,
+"lat": 12.1393128,
+"lon": -68.2625555,
+"tags": {
+"name": "Tera Kora",
+"place": "suburb",
+"population": "2000",
+"wikidata": "Q9357153"
+}
+},
+{
+"type": "node",
+"id": 3259727894,
+"lat": 12.1479242,
+"lon": -68.2658534,
+"tags": {
+"name": "Nikiboko",
+"place": "suburb",
+"population": "1500",
+"wikidata": "Q25702521"
+}
+},
+{
+"type": "node",
+"id": 3259732423,
+"lat": 12.1644817,
+"lon": -68.2666161,
+"tags": {
+"name": "Antriol",
+"place": "suburb",
+"population": "1500",
+"wikidata": "Q955613"
+}
+},
+{
+"type": "node",
+"id": 3259738079,
+"lat": 12.177285,
+"lon": -68.2741441,
+"tags": {
+"name": "Noord Saliña",
+"place": "suburb",
+"population": "1500",
+"wikidata": "Q115180895"
+}
+},
+{
+"type": "node",
+"id": 3259739770,
+"lat": 12.1548223,
+"lon": -68.2611865,
+"tags": {
+"name": "Amboina",
+"place": "suburb",
+"population": "1000"
+}
+},
+{
+"type": "node",
+"id": 3259746489,
+"lat": 12.1264325,
+"lon": -68.2859507,
+"tags": {
+"name": "Belnem",
+"place": "suburb",
+"population": "1000",
+"wikidata": "Q106689673"
+}
+},
+{
+"type": "node",
+"id": 3259747468,
+"lat": 12.1802946,
+"lon": -68.2915509,
+"tags": {
+"name": "Hato",
+"place": "suburb",
+"population": "500"
+}
+},
+{
+"type": "node",
+"id": 3259750811,
+"lat": 12.1814964,
+"lon": -68.2828483,
+"tags": {
+"name": "Republiek",
+"place": "suburb"
+}
+},
+{
+"type": "node",
+"id": 3259752806,
+"lat": 12.1925554,
+"lon": -68.2842897,
+"tags": {
+"name": "Santa Barbara",
+"place": "suburb",
+"population": "1500"
+}
+},
+{
+"type": "node",
+"id": 3259769702,
+"lat": 12.1974361,
+"lon": -68.3025045,
+"tags": {
+"name": "Santa Barbara Crowns",
+"place": "suburb"
+}
+},
+{
+"type": "node",
+"id": 3259776864,
+"lat": 12.1514143,
+"lon": -68.2687352,
+"tags": {
+"name": "Sabana",
+"place": "suburb"
+}
+},
+{
+"type": "node",
+"id": 3276467902,
+"lat": 12.0933766,
+"lon": -68.2333139,
+"tags": {
+"name": "Windsurf Paradise",
+"place": "suburb"
+}
+},
+{
+"type": "node",
+"id": 3281142419,
+"lat": 12.1373167,
+"lon": -68.2761852,
+"tags": {
+"name": "Plaza Beach Resort",
+"place": "suburb",
+"wikidata": "Q7203639"
+}
+},
+{
+"type": "node",
+"id": 3282465628,
+"lat": 12.1646462,
+"lon": -68.287073,
+"tags": {
+"name": "Caribe Watersport and Watertaxi",
+"phone": "+599 700 8080",
+"place": "locality",
+"source": "http://www.tripstacker.com/p/bonaire/caribe-watersport",
+"website": "https://www.caribewatersportbonaire.com/"
+}
+},
+{
+"type": "node",
+"id": 3282523304,
+"lat": 12.103412,
+"lon": -68.22209,
+"tags": {
+"name": "Lac",
+"place": "suburb",
+"wikidata": "Q14213648"
+}
+},
+{
+"type": "node",
+"id": 3286803025,
+"lat": 12.2462196,
+"lon": -68.4137309,
+"tags": {
+"name": "Playa Frans",
+"place": "hamlet"
+}
+},
+{
+"type": "node",
+"id": 3286804229,
+"lat": 12.2643026,
+"lon": -68.4136608,
+"tags": {
+"name": "Slagbaai",
+"place": "hamlet"
+}
+},
+{
+"type": "node",
+"id": 3286835623,
+"lat": 12.2197393,
+"lon": -68.3520456,
+"tags": {
+"name": "Karpata",
+"place": "hamlet",
+"wikidata": "Q104534130"
+}
+},
+{
+"type": "node",
+"id": 3658674356,
+"lat": 12.1609281,
+"lon": -68.2226913,
+"tags": {
+"name": "Kunuku Di Mamai Rosa",
+"place": "farm"
+}
+},
+{
+"type": "node",
+"id": 4017913908,
+"lat": 12.1460122,
+"lon": -68.276318,
+"tags": {
+"name": "Chachacha Beach",
+"natural": "beach",
+"sport": "scuba_diving",
+"website": "https://www.divers-guide.com/en/dive-spots/chachacha"
+}
+},
+{
+"type": "node",
+"id": 5408268308,
+"lat": 12.1512769,
+"lon": -68.302002,
+"tags": {
+"name": "Tanki Kalbas",
+"place": "locality"
+}
+},
+{
+"type": "node",
+"id": 5408268309,
+"lat": 12.1623105,
+"lon": -68.3015728,
+"tags": {
+"name": "Pos Kabritu",
+"place": "locality"
+}
+},
+{
+"type": "node",
+"id": 5408268310,
+"lat": 12.1608842,
+"lon": -68.3207989,
+"tags": {
+"name": "Westpunt",
+"place": "locality",
+"wikidata": "Q21806640"
+}
+},
+{
+"type": "node",
+"id": 6786530515,
+"lat": 12.180112,
+"lon": -68.2770464,
+"tags": {
+"name": "Nawati",
+"place": "suburb"
+}
+},
+{
+"type": "node",
+"id": 9285716235,
+"lat": 12.198652,
+"lon": -68.2954377,
+"tags": {
+"name": "Terrace",
+"place": "suburb",
+"population": "1000"
+}
+},
+{
+"type": "node",
+"id": 9523939999,
+"lat": 12.2738773,
+"lon": -68.3993415,
+"tags": {
+"ele": "241",
+"name": "Mount Brandaris",
+"natural": "peak",
+"wikidata": "Q9178935",
+"wikipedia": "nl:Brandaris (berg)"
+}
+},
+{
+"type": "node",
+"id": 9949058989,
+"lat": 12.1626048,
+"lon": -68.2771102,
+"tags": {
+"name": "Den Tera",
+"place": "suburb"
+}
+},
+{
+"type": "node",
+"id": 9949107988,
+"lat": 12.1466464,
+"lon": -68.2707849,
+"tags": {
+"name": "Den Chefi",
+"place": "suburb"
+}
+},
+{
+"type": "node",
+"id": 9949120851,
+"lat": 12.1558213,
+"lon": -68.2750987,
+"tags": {
+"name": "Kralendijk",
+"place": "suburb"
+}
+},
+{
+"type": "node",
+"id": 11005854426,
+"lat": 12.1733299,
+"lon": -68.2119376,
+"tags": {
+"denotation": "natural_monument",
+"name": "Longest Tree",
+"natural": "tree",
+"species": "Conocarpus erectus",
+"species:wikidata": "Q2520560"
+}
+},
+{
+"type": "node",
+"id": 11006259202,
+"lat": 12.1632565,
+"lon": -68.2289389,
+"tags": {
+"name": "Kunuku di Sur Swinda",
+"place": "farm"
+}
+},
+{
+"type": "node",
+"id": 11049718352,
+"lat": 12.1755025,
+"lon": -68.2159998,
+"tags": {
+"name": "Red Hill",
+"natural": "hill",
+"tourism": "viewpoint"
+}
+},
+{
+"type": "node",
+"id": 11049744492,
+"lat": 12.173616,
+"lon": -68.2101339,
+"tags": {
+"name": "Boka Washikemba",
+"natural": "beach",
+"tourism": "viewpoint"
+}
+},
+{
+"type": "node",
+"id": 12101339936,
+"lat": 12.1468023,
+"lon": -68.3082853,
+"tags": {
+"name": "Shade Tree",
+"natural": "tree"
+}
+},
+{
+"type": "node",
+"id": 12996962137,
+"lat": 12.2282655,
+"lon": -68.405775,
+"tags": {
+"name": "Wekua",
+"natural": "peak"
+}
+},
+{
+"type": "way",
+"id": 26273223,
+"center": {
+"lat": 12.2280201,
+"lon": -68.3981538
+},
+"tags": {
+"name": "Saliña Tam",
+"natural": "water",
+"wikidata": "Q21806618"
+}
+},
+{
+"type": "way",
+"id": 26273321,
+"center": {
+"lat": 12.2470211,
+"lon": -68.4098681
+},
+"tags": {
+"name": "Saliña Frans",
+"natural": "water"
+}
+},
+{
+"type": "way",
+"id": 26273397,
+"center": {
+"lat": 12.2707155,
+"lon": -68.4107921
+},
+"tags": {
+"name": "Saliña Wayaka",
+"natural": "water"
+}
+},
+{
+"type": "way",
+"id": 26279120,
+"center": {
+"lat": 12.2769116,
+"lon": -68.354159
+},
+"tags": {
+"name": "Saliña Matijs",
+"natural": "water",
+"wikidata": "Q21806571"
+}
+},
+{
+"type": "way",
+"id": 26281476,
+"center": {
+"lat": 12.1809278,
+"lon": -68.2194828
+},
+"tags": {
+"name": "Kaminda Lagun",
+"natural": "water"
+}
+},
+{
+"type": "way",
+"id": 26289128,
+"center": {
+"lat": 12.1666914,
+"lon": -68.2810931
+},
+"tags": {
+"name": "Saliña di Vlijt",
+"natural": "water"
+}
+},
+{
+"type": "way",
+"id": 28820593,
+"center": {
+"lat": 12.0921482,
+"lon": -68.2357829
+},
+"tags": {
+"name": "Sorobon Beach",
+"natural": "beach",
+"wikidata": "Q123347696"
+}
+},
+{
+"type": "way",
+"id": 243919362,
+"center": {
+"lat": 12.0442161,
+"lon": -68.2664187
+},
+"tags": {
+"name": "Atlantis Beach",
+"natural": "beach",
+"sport": "kitesurfing"
+}
+},
+{
+"type": "way",
+"id": 316421491,
+"center": {
+"lat": 12.0482781,
+"lon": -68.2276941
+},
+"tags": {
+"name": "Bonaire",
+"natural": "coastline"
+}
+},
+{
+"type": "way",
+"id": 317179936,
+"center": {
+"lat": 12.1155615,
+"lon": -68.2273943
+},
+"tags": {
+"name": "Mangrove",
+"natural": "wetland",
+"wetland": "mangrove"
+}
+},
+{
+"type": "way",
+"id": 361204224,
+"center": {
+"lat": 12.1707364,
+"lon": -68.2169248
+},
+"tags": {
+"name": "Saliña Washikemba",
+"natural": "water",
+"source": "Bing"
+}
+},
+{
+"type": "way",
+"id": 366567118,
+"center": {
+"lat": 12.1498341,
+"lon": -68.2768554
+},
+"tags": {
+"name": "Plaza Wilhelmina",
+"name:nl": "Wilhelminapark",
+"place": "square",
+"source": "KG Ground Survey 2015"
+}
+},
+{
+"type": "way",
+"id": 371256574,
+"center": {
+"lat": 12.1235086,
+"lon": -68.2791656
+},
+"tags": {
+"landuse": "residential",
+"name": "Sabal Palm Villas",
+"place": "neighbourhood",
+"source": "KG Ground Source 2015"
+}
+},
+{
+"type": "way",
+"id": 371479844,
+"center": {
+"lat": 12.2611091,
+"lon": -68.3395299
+},
+"tags": {
+"name": "Dam grandi",
+"natural": "water"
+}
+},
+{
+"type": "way",
+"id": 371816363,
+"center": {
+"lat": 12.1253865,
+"lon": -68.287288
+},
+"tags": {
+"name": "Bachelor's Beach",
+"natural": "beach",
+"source": "KG Ground Survey 2015"
+}
+},
+{
+"type": "way",
+"id": 371816369,
+"center": {
+"lat": 12.1219471,
+"lon": -68.2758299
+},
+"tags": {
+"landuse": "residential",
+"name": "La Palma Residence",
+"place": "neighbourhood",
+"source": "KG Ground Survey 2015"
+}
+},
+{
+"type": "way",
+"id": 734004453,
+"center": {
+"lat": 12.1093403,
+"lon": -68.2280344
+},
+"tags": {
+"name": "seagrass bed",
+"natural": "wetland",
+"surface": "water"
+}
+},
+{
+"type": "way",
+"id": 734260624,
+"center": {
+"lat": 12.2927372,
+"lon": -68.3582457
+},
+"tags": {
+"name": "Seru Grandi",
+"natural": "cliff"
+}
+},
+{
+"type": "way",
+"id": 904281495,
+"center": {
+"lat": 12.1324939,
+"lon": -68.282627
+},
+"tags": {
+"name": "Playa Palu di Mangel",
+"natural": "beach"
+}
+},
+{
+"type": "way",
+"id": 1051856033,
+"center": {
+"lat": 12.1615086,
+"lon": -68.2725202
+},
+"tags": {
+"name": "Dam",
+"natural": "water"
+}
+},
+{
+"type": "way",
+"id": 1080775251,
+"center": {
+"lat": 12.2769613,
+"lon": -68.353662
+},
+"tags": {
+"name": "Saliña Matijs",
+"natural": "wetland"
+}
+},
+{
+"type": "way",
+"id": 1080775252,
+"center": {
+"lat": 12.279669,
+"lon": -68.3491503
+},
+"tags": {
+"lifeguard": "no",
+"name": "Playa Chikitu",
+"natural": "beach",
+"supervised": "no",
+"surface": "sand",
+"swimming": "no"
+}
+},
+{
+"type": "way",
+"id": 1184810139,
+"center": {
+"lat": 12.2947364,
+"lon": -68.3918074
+},
+"tags": {
+"intermittent": "yes",
+"name": "Pos Mangel",
+"natural": "water",
+"salt": "no",
+"water": "pond"
+}
+},
+{
+"type": "way",
+"id": 1187639066,
+"center": {
+"lat": 12.3048011,
+"lon": -68.3687415
+},
+"tags": {
+"name": "Boka Kokolishi",
+"natural": "beach",
+"surface": "sand"
+}
+},
+{
+"type": "way",
+"id": 1188151213,
+"center": {
+"lat": 12.1345835,
+"lon": -68.2797913
+},
+"tags": {
+"lifeguard": "no",
+"name": "Te Amo Beach",
+"natural": "beach",
+"sport": "scuba_diving",
+"supervised": "no",
+"tourism": "attraction"
+}
+},
+{
+"type": "way",
+"id": 1207218921,
+"center": {
+"lat": 12.1208931,
+"lon": -68.2725749
+},
+"tags": {
+"landuse": "residential",
+"name": "Suikerpalm",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 1481050643,
+"center": {
+"lat": 12.1358282,
+"lon": -68.2709449
+},
+"tags": {
+"name": "Bahia",
+"natural": "peninsula"
+}
+},
+{
+"type": "way",
+"id": 1495901720,
+"center": {
+"lat": 12.2108655,
+"lon": -68.3218727
+},
+"tags": {
+"name": "1000 Steps",
+"natural": "beach",
+"ref": "16",
+"sport": "scuba_diving"
+}
+},
+{
+"type": "relation",
+"id": 1326826,
+"center": {
+"lat": 12.2343606,
+"lon": -68.3747925
+},
+"tags": {
+"alt_name": "Goto Meer",
+"name": "Saliña Goto",
+"natural": "water",
+"source": "Bing",
+"type": "multipolygon",
+"wikidata": "Q21808764"
+}
+},
+{
+"type": "relation",
+"id": 4266671,
+"center": {
+"lat": 12.1684508,
+"lon": -68.3082083
+},
+"tags": {
+"name": "Bonaire",
+"name:ar": "بونير",
+"name:be": "Банайрэ",
+"name:de": "Bonaire",
+"name:en": "Bonaire",
+"name:es": "Bonaire",
+"name:fr": "Bonaire",
+"name:it": "Bonaire",
+"name:ko": "보네르섬",
+"name:mk": "Бонер",
+"name:nl": "Bonaire",
+"name:no": "Bonaire",
+"name:pap": "Boneiru",
+"name:pl": "Bonaire",
+"name:pt": "Bonaire",
+"name:ru": "Бонайре",
+"name:sv": "Bonaire",
+"name:tr": "Bonaire",
+"name:zh": "博奈尔",
+"place": "island",
+"type": "multipolygon",
+"wikidata": "Q65433949",
+"wikipedia": "nl:Bonaire"
+}
+},
+{
+"type": "relation",
+"id": 4283346,
+"center": {
+"lat": 12.2603844,
+"lon": -68.4058432
+},
+"tags": {
+"name": "Saliña Slagbaai",
+"natural": "water",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 4284318,
+"center": {
+"lat": 12.3004132,
+"lon": -68.3937613
+},
+"tags": {
+"name": "Saliña Bartol",
+"natural": "water",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 4284543,
+"center": {
+"lat": 12.0782116,
+"lon": -68.2529718
+},
+"tags": {
+"name": "Solar Salt Works",
+"natural": "water",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 5176051,
+"center": {
+"lat": 12.1572173,
+"lon": -68.3108993
+},
+"tags": {
+"name": "Klein Bonaire",
+"name:be": "Малы Банайрэ",
+"name:mk": "Мал Бонер",
+"name:nl": "Klein Bonaire",
+"natural": "scrub",
+"place": "island",
+"type": "multipolygon",
+"wikidata": "Q1544807"
+}
+},
+{
+"type": "relation",
+"id": 6236325,
+"center": {
+"lat": 12.0588149,
+"lon": -68.2558303
+},
+"tags": {
+"name": "Solar Salt Works",
+"natural": "water",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 11946074,
+"center": {
+"lat": 16.6598321,
+"lon": -72.1861014
+},
+"tags": {
+"name": "Antilles",
+"name:be": "Антыльскія астравы",
+"name:br": "Antilhez",
+"name:de": "Antillen",
+"name:en": "Antilles",
+"name:es": "Antillas",
+"name:eu": "Antillak",
+"name:fr": "Antilles",
+"name:gcf": "Woch a Djanman",
+"name:it": "Antille",
+"name:la": "Insulae Antillae",
+"name:nl": "Antillen",
+"name:ru": "Антильские острова",
+"name:sk": "Antily",
+"name:uk": "Антильські острови",
+"name:zh": "安的列斯群岛",
+"place": "archipelago",
+"source:name:br": "ofis publik ar brezhoneg",
+"type": "multipolygon",
+"wikidata": "Q166131"
+}
+},
+{
+"type": "relation",
+"id": 13888531,
+"center": {
+"lat": 14.3962108,
+"lon": -64.7419785
+},
+"tags": {
+"name": "Antillas Menores / Lesser Antilles",
+"name:ace": "Antilles Cut",
+"name:af": "Klein-Antille",
+"name:ar": "جزر الأنتيل الصغرى",
+"name:arz": "جزر الانتيل الصغرى",
+"name:ast": "Antilles Menores",
+"name:az": "Kiçik Antil adaları",
+"name:be": "Малыя Антыльскія астравы",
+"name:bg": "Малки Антили",
+"name:br": "Antilhez Bihanañ",
+"name:bs": "Mali Antili",
+"name:ca": "Petites Antilles",
+"name:ceb": "Lesser Antilles",
+"name:cs": "Malé Antily",
+"name:cy": "Antilles Leiaf",
+"name:da": "Små Antiller",
+"name:de": "Kleine Antillen",
+"name:dsb": "Małe Antile",
+"name:el": "Μικρές Αντίλλες",
+"name:en": "Lesser Antilles",
+"name:eo": "Malgrandaj Antiloj",
+"name:es": "Antillas Menores",
+"name:et": "Väikesed Antillid",
+"name:eu": "Antilla Txikiak",
+"name:fa": "آنتیل کوچک",
+"name:fi": "Pienet Antillit",
+"name:fo": "Smærru Antilloyggjar",
+"name:fr": "Petites Antilles",
+"name:frr": "Letj Antilen",
+"name:fy": "Lytse Antillen",
+"name:ga": "Na hAintillí Beaga",
+"name:gd": "Na h-Eileanan Aintilia Beaga",
+"name:gl": "Antillas Menores",
+"name:hak": "Séu Antilles Khiùn-tó",
+"name:he": "האנטילים הקטנים",
+"name:hr": "Mali Antili",
+"name:hsb": "Małe Antile",
+"name:hu": "Kis-Antillák",
+"name:hy": "Փոքր Անտիլյան կղզիներ",
+"name:id": "Antillen Kecil",
+"name:is": "Litlu-Antillaeyjar",
+"name:it": "Piccole Antille",
+"name:ja": "小アンティル諸島",
+"name:ka": "მცირე ანტილის კუნძულები",
+"name:ko": "소앤틸리스 제도",
+"name:ku": "Antîlên Biçûk",
+"name:la": "Antillae Minores",
+"name:lb": "Kleng Antillen",
+"name:lmo": "Antil Piscininn",
+"name:lt": "Mažieji Antilai",
+"name:lv": "Mazās Antiļu salas",
+"name:map-bms": "Antillen Cilik",
+"name:mg": "Antilia Kely",
+"name:mk": "Мали Антили",
+"name:mrj": "Изи Антил ошмаотывлӓ",
+"name:ms": "Antillen Kecil",
+"name:nan": "Sió Antilles Kûn-tó",
+"name:nl": "Kleine Antillen",
+"name:pl": "Małe Antyle",
+"name:pt": "Pequenas Antilhas",
+"name:ro": "Antilele Mici",
+"name:ru": "Малые Антильские острова",
+"name:sco": "Lesser Antilles",
+"name:sh": "Mali Antili",
+"name:sk": "Malé Antily",
+"name:sl": "Mali Antili",
+"name:sr": "Мали Антили",
+"name:stq": "Litje Antillen",
+"name:sv": "Små Antillerna",
+"name:sw": "Antili Ndogo",
+"name:ta": "சிறிய அண்டிலிசு",
+"name:th": "เลสเซอร์แอนทิลลีส",
+"name:tr": "Küçük Antiller",
+"name:udm": "Пичи Антильской шормуӵъёс",
+"name:uk": "Малі Антильські острови",
+"name:ur": "انٹیلیز اصغر",
+"name:vi": "Tiểu Antilles",
+"name:war": "Antillas Menores",
+"name:wuu": "小安的列斯群岛",
+"name:xmf": "მორჩილი ანტილიშ კოკეფი",
+"name:yue": "細安地列斯群島",
+"name:zh": "小安的列斯群岛",
+"place": "archipelago",
+"type": "multipolygon",
+"wikidata": "Q93259",
+"wikipedia": "en:Lesser Antilles"
+}
+}
+],
+"_curiana": {
+"region": "islas-abc",
+"caja": [
+12.0,
+-68.44,
+12.33,
+-68.18
+],
+"descargado": "2026-09-07",
+"licencia": "ODbL 1.0 — © OpenStreetMap contributors",
+"consulta": "[out:json][timeout:180];\n(\n  nwr[\"name\"][\"place\"](12.0,-68.44,12.33,-68.18);\n  nwr[\"name\"][\"natural\"](12.0,-68.44,12.33,-68.18);\n  nwr[\"name\"][\"waterway\"](12.0,-68.44,12.33,-68.18);\n  nwr[\"name\"][\"landuse\"~\"salt_pond\"](12.0,-68.44,12.33,-68.18);\n);\nout center tags;"
+}
+}

@@ -171,7 +171,17 @@ def test_los_74_originales_conservan_id_y_nivel():
     regs = datos["toponimos"]["toponimos"]
     originales = [r for r in regs if int(r["id"].split("-")[1]) <= 74]
     assert len(originales) == 74
-    assert Counter(r["nivel"] for r in originales) == {"A": 6, "B": 8, "C": 13, "descartado": 47}
+    # 2026-09-07: quiquiba (toponimo-034) se rehabilitó de descartado a C con
+    # su id de siempre (mecanismo `reubicados` del migrador). Era 13/47.
+    assert Counter(r["nivel"] for r in originales) == {"A": 6, "B": 8, "C": 14, "descartado": 46}
+    # Y los cuatro Quicer- (030-033) son antropónimos de Barquisimeto, no
+    # topónimos: la reclasificación conserva los ids.
+    por_id = {r["id"]: r for r in originales}
+    for rid in ("toponimo-030", "toponimo-031", "toponimo-032", "toponimo-033"):
+        assert por_id[rid]["clase"] == "antropónimo", rid
+        assert por_id[rid]["polity"] == "barquisimeto", rid
+    assert por_id["toponimo-034"]["forma"] == "quiquiba"
+    assert por_id["toponimo-034"]["nivel"] == "C"
     nuevos = [r for r in regs if int(r["id"].split("-")[1]) > 74]
     # Regla 8: toda entrada nueva cita su obra, o declara la deuda (los del
     # mapa vivo de Miguel no tienen obra todavía: deuda, no silencio).

@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-07**.
 
-**1791 ítems propuestos** en 32 propuestas, más **0 issue(s)/comentario(s) redactados sin publicar**.
+**1800 ítems propuestos** en 32 propuestas, más **0 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -54,6 +54,7 @@ editar_a_mano: no
 
 Vistas generadas en `6-fusion/` (no cuentan: juntan lo que ya está arriba):
 
+- `toponimos_mapa_kaketiana.yaml` — generado por `curiana_sim/barrer_mapa.py`
 - `toponimos_por_fuente.yaml` — generado por `curiana_sim/juntar_toponimos.py`
 
 ## Propuestas léxicas (`curiana_sim/lexicon_*.py` — indexadas en su sitio)
@@ -67,7 +68,7 @@ falsa y se corrigió). Entradas contadas por patrón de dict.
 | `lexicon_alvarado.py` | alvarado-1921 | 217 | lo importan generar_tablero y auditar_82 |
 | `lexicon_gatschet.py` | gatschet-1885 | 88 | lo importan generar_tablero y auditar_82 |
 | `lexicon_van_buurt.py` | van-buurt-2014 | 231 | lo importan generar_tablero y auditar_82 |
-| `lexicon_toponimos.py` | varias (F11) | 107 | lo importa migrar_toponimos |
+| `lexicon_toponimos.py` | varias (F11) | 116 | lo importa migrar_toponimos |
 | `lexicon_candidatos.py` | aisladas 2026-06-28 | 441 | lo importa generar_tablero |
 
 ## Redactado y sin publicar (`6-fusion/issues-pendientes/`)

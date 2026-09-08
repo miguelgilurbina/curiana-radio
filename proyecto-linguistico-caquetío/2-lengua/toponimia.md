@@ -28,6 +28,21 @@ mismo. La exclusión es correcta para el **habla**: un agente no debería decir
 Es criptoanálisis con texto plano conocido: se tiene la forma y se tiene el
 significado; se despejan las partes.
 
+**Y hay un principio detrás de los nombres**, enunciado dos veces por vías
+independientes: un topónimo caquetío nombra **el rasgo más característico del
+sitio**, no un dueño ni un suceso. [[gonzalez-batista-nombre-de-coro]]: «el
+examen de los topónimos caquetíos conduce a deducir que éstos referirían lo más
+característico de un sitio, ya sea una aguada, un maizal, la presencia de
+ciertos animales, la abundancia de barro, de piedra, o de arena, pero sobre
+todo la presencia de determinados vegetales». Y la Relación de 1578 sobre la
+provincia de lengua Caraca, cuatro siglos antes y sobre otro pueblo: «los
+barrios e poblazones tienen su nombre derivado de algún árbol, quebrada,
+arroyo, peña u otra cosa señalada que esté en su asiento o cerca dellos». La
+convergencia es fuerte y tiene consecuencias: predice que los antropónimos no
+son topónimos (los cuatro *Quicer-* de Barquisimeto salieron del registro el
+2026-09-07 por eso) y hace verificable en terreno una lectura como *La Cuiba*
+'la piedra', el sitio de los cristales de cuarzo a ras del suelo (`toponimo-112`).
+
 ## El caso que lo destapó: `jurijurebo`
 
 El ejemplo de Miguel, y resultó estar **ya atestiguado pieza por pieza**:

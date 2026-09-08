@@ -112,6 +112,12 @@ aplicó en los lotes:
   como `glosa-fuente`, y el conflicto se declara (Supí).
 - Regla 3: un censo de 1881, un título de composición de 1740 o un papel de
   1590 fechan el **documento**, no el nombre.
+- **Y b~h** (2026-09-07): Esteves escribe *Capuhana* lo que Zavala escribe
+  *capubana* («con hache intercalada para deshacer el diptongo», p. 26). Y
+  el mapa vivo permuta más: Guaydabacos / Guaidabacoa, Cividual / Sibidigual,
+  Varacara / Baracara, Sibarigua / Sabarigua. `barrer_mapa.py` aplica la
+  permutación laxa y una distancia de 1-2 antes de llamar «nuevo» a un
+  nombre; lo que sale como `aproximado` se revisa a mano, no cuenta.
 
 ## 5. La tercera voz: `lecturas`
 
@@ -212,7 +218,9 @@ para cuando se haga:
    posibles: las fotos de Miguel (como hasta ahora, `cola_de_mapa`), un volcado
    de GeoNames (VE) o de OpenStreetMap filtrado por la caja de cada región.
    Descargar datos es decisión de Miguel; el script que los lea
-   (`curiana_sim/barrer_mapa.py`, por escribir) deja en
+   (`curiana_sim/barrer_mapa.py`, escrito el 2026-09-07: `--descargar` trae
+   OSM vía Overpass, que fue la fuente que Miguel eligió ese día; la ficha es
+   `4-fuentes/osm-kaketiana.md`) deja en
    `6-fusion/toponimos_mapa_kaketiana.yaml` una entrada por nombre:
    `{forma, tipo (poblado / cerro / quebrada / punta / bahía…), lat, lon,
    region, fuente_mapa}`.

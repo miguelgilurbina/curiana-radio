@@ -16,7 +16,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-07**. Marcas: ★ canon · ≡ Esteves · ◆ mapa de Miguel · ⌂ nodo.
 
-**495 formas distintas** en **681 menciones** de **14 fuentes**. En el canon: 110. En el registro de nodos: 18. Sin canon ni nodo (la cola pura): 380.
+**495 formas distintas** en **696 menciones** de **14 fuentes**. En el canon: 113. En el registro de nodos: 18. Sin canon ni nodo (la cola pura): 377.
 
 > ⚠️ obra sin ficha en bibliografia.yaml: proyecto
 
@@ -24,20 +24,20 @@ editar_a_mano: no
 
 | Fuente | Qué es | Menciones | Formas | ★ canon | ≡ Esteves | ⌂ nodo |
 |---|---|---|---|---|---|---|
-| `zavala-reyes-2015` | el glosario (TOPONIMOS_ZAVALA y ANTROPONIMOS_ZAVALA, con glosa española) — la base del canon | 58 | 58 | 58 | 7 | 1 |
-| `esteves-1989` | el índice 'Topónimos compilados' de Paraguaná (pp. 68-69): la cola de la campaña | 231 | 191 | 36 | 191 | 8 |
-| `castellanos-elegias` | las 'ciudades de grandísimo momento' en torno a Coro (II, Elegía 1, 1589) | 12 | 12 | 10 | 6 | 6 |
+| `zavala-reyes-2015` | el glosario (TOPONIMOS_ZAVALA y ANTROPONIMOS_ZAVALA, con glosa española) — la base del canon | 57 | 57 | 57 | 7 | 1 |
+| `esteves-1989` | el índice 'Topónimos compilados' de Paraguaná (pp. 68-69): la cola de la campaña | 233 | 191 | 37 | 191 | 8 |
+| `castellanos-elegias` | las 'ciudades de grandísimo momento' en torno a Coro (II, Elegía 1, 1589) | 19 | 16 | 14 | 7 | 8 |
 | `velasco-2015-resistencia` | los pueblos de la carta de Bastidas al rey (AGI, 1538) — primarios | 5 | 5 | 2 | 2 | 2 |
-| `gonzalez-batista-nombre-de-coro` | lecturas etimológicas del autor — con cautela declarada; cada una se juzga contra Zavala | 13 | 11 | 3 | 5 | 2 |
-| `arcaya-1920` | Quiquibacoa/Coquibacoa, Curiana y la serie Coro-/Curi- | 9 | 9 | 1 | 0 | 0 |
-| `moron-2012-petroglifos` | La Cuiba y las estaciones de arte rupestre de Falcón | 23 | 23 | 1 | 2 | 2 |
-| `oliver-1989-cap3` | los asientos de los dos clanes de Paraguaná según Delmonte 1883 | 7 | 6 | 3 | 4 | 4 |
+| `gonzalez-batista-nombre-de-coro` | lecturas etimológicas del autor — con cautela declarada; cada una se juzga contra Zavala | 14 | 12 | 6 | 5 | 2 |
+| `arcaya-1920` | Quiquibacoa/Coquibacoa, Curiana y la serie Coro-/Curi- | 13 | 10 | 4 | 0 | 0 |
+| `moron-2012-petroglifos` | La Cuiba y las estaciones de arte rupestre de Falcón | 26 | 23 | 2 | 2 | 2 |
+| `oliver-1989-cap3` | los asientos de los dos clanes de Paraguaná según Delmonte 1883 | 9 | 8 | 5 | 4 | 4 |
 | `medina-colina-sxx` | lo que el dictado toca: voces que son topónimo en Esteves, lo mandado a la cola, y los pueblos del autor (s. XX) | 22 | 20 | 4 | 7 | 3 |
 | `gatschet-1885` | topónimos de Aruba (material de Pinart, 1882), sin glosa | 31 | 30 | 1 | 0 | 0 |
 | `van-buurt-2014` | §7 topónimos de Aruba, Bonaire y Curazao sin glosa; §8-10 las etimologías del autor | 212 | 180 | 18 | 1 | 4 |
-| `testimonio-miguel` (sin ficha) | Miguel Gil Urbina: lecturas de investigación coloquial, tradición local, mapa vivo — deuda sin-procedencia, por diseño | 46 | 37 | 26 | 24 | 8 |
-| `proyecto` (sin ficha) | lecturas analíticas del propio proyecto registradas en el canon (segmentaciones propias, con su veredicto o su issue) | 4 | 4 | 4 | 4 | 1 |
-| `sin-procedencia` (sin ficha) | entradas del canon cuya fuente no se pudo declarar ni inferir — deuda | 8 | 8 | 8 | 1 | 3 |
+| `testimonio-miguel` (sin ficha) | Miguel Gil Urbina: lecturas de investigación coloquial, tradición local, mapa vivo — deuda sin-procedencia, por diseño | 48 | 38 | 28 | 25 | 8 |
+| `proyecto` (sin ficha) | lecturas analíticas del propio proyecto registradas en el canon (segmentaciones propias, con su veredicto o su issue) | 5 | 5 | 5 | 4 | 1 |
+| `sin-procedencia` (sin ficha) | entradas del canon cuya fuente no se pudo declarar ni inferir — deuda | 2 | 2 | 2 | 0 | 0 |
 
 ## Los cruces que importan
 
@@ -46,29 +46,36 @@ editar_a_mano: no
 - **Castellanos 1589 ∩ Bastidas 1538 (2)**: miraca, todariquiba.
 - **Bastidas 1538 ∩ Esteves (2)**: miraca, todariquiba.
 - **Medina Colina ∩ Esteves (7)**: Adícora, Carirubana, Chuchube, Guachaco, Saruro, Tacuato, moruy; en el canon (4): cabudare, capadare, moruy, todarahuato.
-- **En tres fuentes o más (17)**: Adícora (3), Coriana (3), Guaidabacoa (3), Santa Ana (3), cayeruba (3), dabudare (3), guacurebo (3), guadabacoa (4), hurraque (3), jadacaquiva (3), judibana (3), jurijurebo (4), miraca (3), moruy (4), paraguaná (4), supí (4), todariquiba (4).
+- **En tres fuentes o más (17)**: Adícora (3), Guaidabacoa (3), Santa Ana (3), cayeruba (3), curiana (5), dabudare (3), guacurebo (3), guadabacoa (4), jadacaquiva (3), judibana (3), jurijurebo (4), miraca (3), moruy (4), paraguaná (4), quiquiba (3), supí (4), todariquiba (4).
 
 ## Por fuente
 
-### `zavala-reyes-2015` — 58 formas, 58 menciones
+### `zavala-reyes-2015` — 57 formas, 57 menciones
 
 el glosario (TOPONIMOS_ZAVALA y ANTROPONIMOS_ZAVALA, con glosa española) — la base del canon.
 
-jurijurebo★≡ (Paso de los vientos), yacarebacoa★ (Pueblo del bosque), quibacoas★ (Bosques pedregosos), cumarebo★⌂ (Camino del cacique Cumare), guacaubana★ (Río escondido), barisi★ (Región de tierras coloradas cerca del mar), adabacoa★ (Todo arboleda), guadabacoa★≡ (Arboleda), bobare★ (Sitio de cultivo), cabudare★ (sitio de cultivo), dabudare★≡ (Sitio de extracción de barro), pachacuare★ (Sitio de palmeras), bariquisimeto★ (Río de aguas turbias), yacare★ (Pueblo. Caimán), alaurima★ (Río blanco o claro), capadare★ (Diente de tigre), sazaribacoa★ (Río de los maizales), guamabatriba★ (Muchas tierras de cultivo), turijerebo★ (Lugar de descanso), guacurebo★≡ (Quebrada que crece), taratarare★ (Hato, conuco), poapao★ (Serranía de Coro), jadicuar★≡ (Sitio donde abunda jajato. Salicornia fructuosa), chunare★ (Apellido. Mazorca tierna), supí★≡◆ (supi: sitio a orilla del mar; arena; arboleda supide), baracoica★ (Cacique de Curazao), huay★ (Nombre propio), quiceraguru★, quiceroaboa★, quiceromata★, quiciroata★, quiquiba★, tamani★, timaure★ (Apellido), tumarure★ (Apellido de un cacique), xaraguamari★ (Cacique de Yaracuy), yarosabana★ (Cacique de los Guaragua), dabajuro★ (Población de Falcón), doaca★ (Asiento indígena), iboa★ (Comunidad indígena), parotaima★ (Indígena del Yaracuy), tabicure★ (Indio caquetío del valle de las Damas), todarahuato★ (Indígena de la Vela), yaracuy★ (Indígena del Valle de las Damas), caquetío★ (Buena gente — etnónimo, no descripción del lugar), xirahara★ (Población indígena vecina), yaruca★ (Indígena caquetío), cemirucos★ (→ 'Semerucos'), coroque★ (→ 'Árbol de ¿?'), zamurano★ (← esp. *zamuro* + -ano), aburí★ (aguas de un río lleno de arena), acatute★ (Pueblo entre valles), alcaboa★ (Tierras solas o desiertas), aricula★ (Punto de tierra), guanajo★ (Cardón muy lanoso), guasare★≡ (Árbol cactáceo), siguruba★ (Salvar. Caserío), tarai★ (Garipial o caripial)
+jurijurebo★≡ (Paso de los vientos), yacarebacoa★ (Pueblo del bosque), quibacoas★ (Bosques pedregosos), cumarebo★⌂ (Camino del cacique Cumare), guacaubana★ (Río escondido), barisi★ (Región de tierras coloradas cerca del mar), adabacoa★ (Todo arboleda), guadabacoa★≡ (Arboleda), bobare★ (Sitio de cultivo), cabudare★ (sitio de cultivo), dabudare★≡ (Sitio de extracción de barro), pachacuare★ (Sitio de palmeras), bariquisimeto★ (Río de aguas turbias), yacare★ (Pueblo. Caimán), alaurima★ (Río blanco o claro), capadare★ (Diente de tigre), sazaribacoa★ (Río de los maizales), guamabatriba★ (Muchas tierras de cultivo), turijerebo★ (Lugar de descanso), guacurebo★≡ (Quebrada que crece), taratarare★ (Hato, conuco), poapao★ (Serranía de Coro), jadicuar★≡ (Sitio donde abunda jajato. Salicornia fructuosa), chunare★ (Apellido. Mazorca tierna), supí★≡◆ (supi: sitio a orilla del mar; arena; arboleda supide), baracoica★ (Cacique de Curazao), huay★ (Nombre propio), tamani★, timaure★ (Apellido), tumarure★ (Apellido de un cacique), xaraguamari★ (Cacique de Yaracuy), yarosabana★ (Cacique de los Guaragua), dabajuro★ (Población de Falcón), doaca★ (Asiento indígena), iboa★ (Comunidad indígena), parotaima★ (Indígena del Yaracuy), tabicure★ (Indio caquetío del valle de las Damas), todarahuato★ (Indígena de la Vela), yaracuy★ (Indígena del Valle de las Damas), caquetío★ (Buena gente — etnónimo, no descripción del lugar), xirahara★ (Población indígena vecina), yaruca★ (Indígena caquetío), quiceraguru★ (Nombre propio indígena en Barquisimeto), quiceroaboa★ (Nombre propio indígena en Barquisimeto), quiceromata★ (Nombre propio indígena en Barquisimeto), quiciroata★ (Nombre propio indígena en Barquisimeto), cemirucos★ (→ 'Semerucos'), coroque★ (→ 'Árbol de ¿?'), zamurano★ (← esp. *zamuro* + -ano), aburí★ (aguas de un río lleno de arena), acatute★ (Pueblo entre valles), alcaboa★ (Tierras solas o desiertas), aricula★ (Punto de tierra), guanajo★ (Cardón muy lanoso), guasare★≡ (Árbol cactáceo), siguruba★ (Salvar. Caserío), tarai★ (Garipial o caripial)
 
-### `esteves-1989` — 191 formas, 231 menciones
+### `esteves-1989` — 191 formas, 233 menciones
 
 el índice 'Topónimos compilados' de Paraguaná (pp. 68-69): la cola de la campaña.
 
-judibana★≡◆ (Judi, jurí: viento. Bana: sitio alto), judibana★≡◆ («Judibana era una hermosa mujer, que era esposa del Gran Cacique de Jurijurebo»), yauquiba★≡ (Yabu-quiba: la piedra del yabo, árbol resinoso), guadabacoa★≡ («Guaidabacoa, con sílaba epentética intercalada, es una voz compuesta de guái, árbol parecido a la ceiba y ba…), dabudare★≡ (Dabadubare, aldea del municipio Santa Ana: «Dabuda: barro de loza (ver Abudure)»), abudure★≡◆ (sitio de donde se extrae barro de las raíces), buchuhaco★≡ (los dos buches. Buche: cardo, Aco: par, casal, pareja), paraguaná★≡ («Conuco en medio del mar es la más repetida de las significaciones que le dan al topónimo»), paraguaná★≡ («Está suficientemente averiguado que Para significa agua»), paraguaná★≡ ('conuco en medio del mar' es, morfema a morfema, para 'agua' + gua 'conuco, heredad, terreno cercado' (Zavala…), guacurebo★≡ («proviene de Guacoa, pero más explícito por el sufijo ebo, o sea que expresa: el paso de la guacoa»), jadicuar★≡ («El nombre primitivo era Jadícuar, que quiere decir: jajatal, sitio donde abunda el jajato, hierba halófila d…), jadicuar★≡ (jade 'jajato' + cuar, colectivo cumanagoto 'aglomeración, abundancia' según Caulín — «este cuar tiene el mism…), adaure★≡◆ (apellido indígena; «no descartamos que provenga de Dara, en tal caso en forma patronímica: quizás la Dara fue…), amaraya★≡◆ (puede ser una alteración de «maracaya», otro nombre indígena que recibe el «güirito», gato silvestre), baraived★≡◆ (Bara: árbol; en Baraivere, la forma primitiva, «la desinencia bere actuaría como adjetivo o como sustantivo p…), baraived★≡◆ (unos marinos perdidos vararon en los bancos de arena y uno dijo «vara y ved»; de ahí el nombre), caseto★≡◆ (planta herbácea de las malvas espigadas, el Malvastrum spicatum de los botánicos), caseto★≡◆ (Gaseto < gaceta, porque en el lugar vivía quien redactaba una hoja periódica), cocodite★≡◆ (el sufijo «dito» es distintivo de los sustantivos colectivos en lengua indígena), jadacaquiva★≡◆ (Quiba en caquetío es pedruzco), jadacaquiva★≡◆ (los nativos, con miedo a los caballos, se armaban de piedras y gritaban «¡Jaca... quiba!»: ¡piedra contra esa…), jadacaquiva★≡◆ (en una sequía machacaban macoyas de jajato contra piedras para chupar el jugo y gritaban «¡Jajato... quiba!»), machuruca★≡◆⌂ (viene de caruca, paja áspera con la cual se le da consistencia al barro batido para la torta que se aplica a …), maicara★≡◆ («en un documento de Composición de Tierras hemos leído: Maicuare, éste sería tal vez el nombre primitivo»), maitiruma★≡◆ (en el caribe insular, mái significa: manantial, ojo de agua; iruma: azul celeste, o sea que Maitiruma expresa…), amuay★≡ («la voz da la idea de cavidad subterránea, haitón, cueva grande. Y justamente en las cercanías de Amuay hay u…), amuay★≡ ('cavidad subterránea, cueva grande', por las cuevas naturales cercanas; voz del caribe insular «por su fonéti…), amuay★≡ (de «muelle», por el endeble muelle de 1924 cuando el puerto fue aduana marítima), todariquiba★≡⌂ («Tubariquiba y no Todariquiba, quiere decir: pedregal. Tuba: aglomeración. Quiba: pedruzco»), miraca★≡⌂ («De la voz hemos averiguado que en lengua guaraúna, Miraca es atarraya. Miraca sanuco: atarraya pequeña»), miraca★≡⌂ ('atarraya' en warao (guaraúno); «Miraca sanuco: atarraya pequeña»), jarayadito★≡ («Jarayadito significa espinar, retamal, ñaragatal. El sufijo dito es distintivo de los nombres colectivos abu…), barunú★≡ («El nombre viene de Barubaru (palo delgado), palmera con cuyas hojas fabrican esteras los nativos. Esta palme…), cayeruba★≡⌂ («¿Origen de la voz? ¿Simaruba? Es posible, hay abundancia de este árbol rutáceo en sus contornos» (leído en l…), moruy★≡⌂ («Es más aceptable considerar la voz como una alteración de merejuy, cierta levadura o preparación agria que u…), moruy★≡⌂ (los naturales temían a los moros (los piratas) y al ver barcos gritaban «¡Moro... uy!»), chamuriana★≡⌂ («Antigua aldea indígena en cuyas cercanías los españoles fundaron en 1538 el pueblo de Santa Ana de Paraguaná…), supí★≡◆ (es un árbol cactáceo que exuda una goma medicinal, es el guamacho Pereskia de los botánicos), charaima★≡◆ (población entre Adícora y Baraived; censo 1881: 79 casas, 527 habitantes; nombre primitivo Charaide en su Tít…), jacuque★≡◆ (sabanas y hatos en Jadacaquiva; Punta de Jacuque, por donde «no se puede confirmar históricamente» Federmann …), elegüey★≡ (nombre antiguo de Punta Cardón, hoy solo del cementerio viejo en la Puntica; «es voz taína, del caribe insula…), maragüey★≡ (pequeña península en Casicure, en la otra costa del Golfete de Coro; «también es voz taína», sin glosa; misma…), jamaica★≡ (lugar de Buenavista formado alrededor de «la casa grande de Jamaica»: con toda probabilidad una hacienda baut…), jayana★≡ (antiguo fundo pecuario cerca de Amuaicito, hoy caserío del municipio Los Taques; con Adícora, único puerto de…), Guacurebo★≡, Guasare★≡, Jurijurebo★≡, Paraguaná★≡, Abudure★≡◆, Adaure★≡◆, Amaraya★≡◆, Baraived★≡◆, Buchuaco≡◆, Caseto★≡◆, Charaima★≡◆, Cocodite★≡◆, Jacuque★≡◆, Jadacaquiva★≡◆, Judibana★≡◆, Machuruca★≡◆⌂, Maicara★≡◆, Maitiruma★≡◆, Supí★≡◆, Jayana★≡, Amuay★≡, Elegüey★≡, Jamaica★≡, Todariquiba★≡⌂, Miraca★≡⌂, Hurraque★≡, Jarayadito★≡, Barunú★≡, Cayeruba★≡⌂, Yauquiba★≡, Dabadubare≡, Guaidabacoa≡⌂, Moruy★≡⌂, Chamuriana★≡⌂, Adícora≡⌂, Acaboa≡, Adaro≡, Aguaque≡, Antuní≡, Arajó≡, Asaro≡, Asubure≡, Avotuca≡, Babahuro≡, Bajabaroa≡, Bajarigua≡, Barabara≡, Baracara≡, Barbasco≡, Bariquí≡, Barisigua≡, Bibidure≡, Bibuche≡, Biniche≡, Bucuruy≡, Buchaquiba≡, Buenevara≡, Buenibativa≡, Caibacoa≡, Camare≡, Camoruco≡, Camunare≡, Capacheruda≡, Capuhana≡, Caradacagua≡, Carajaima≡, Cararapa≡, Cariguariana≡, Carirubana≡, Caruca≡, Caujarito≡, Cayude≡, Cimiro≡, Coabana≡, Coduto≡, Cuara≡, Cubiano≡, Cucurubano≡, Cucuy≡, Cude≡, Cujicana≡, Cumaraguas≡, Cumujacoa≡, Cunacho≡, Curaidebo≡, Cuzubitos≡, Chaure≡, Chichibana≡, Chiguaral≡, Chirache≡, Chuchube≡, Chujaro≡, Chunaure≡, Dibaragua≡, Duraguaco≡, Garrapata≡, Gisebo≡, Guacuira≡, Guacujúa≡, Guachaco≡, Guachunepe≡, Guanadito≡, Guarama≡, Guaranao≡, Guarataro≡, Guaricure≡, Guaruguaja≡, Guatacare≡, Guayacanal≡, Güica≡, Güima≡, Hayo≡, Imujo≡, Isiro≡, Isito≡, Iticuna≡, Jabe≡, Jagüe≡, Jariaca≡, Juderecal≡, Juroguagua≡, Laguarí≡, Macama≡, Manadí≡, Manare≡, Manichare≡, Maquigua≡, Maracapana≡, Matacán≡, Matividiro≡, Matuto≡, Michaco≡, Misaray≡, Muaco≡, Niraba≡, Nonocoti≡, Oboque≡, Oripopo≡, Paguara≡, Perabay≡, Peticuare≡, Pipiacoa≡, Pipiribana≡, Pitajaya≡, Pury≡, Quibarute≡, Quitaire≡, Quipital≡, Quipayú≡, Quiyegua≡, Sabarigua≡, Sacuragua≡, Saguatumo≡, Sanajaquí≡, Sanquinche≡, Sarabón≡, Sarinao≡, Saruro≡, Sicaname≡, Sibidigual≡, Siraba≡, Supideo≡, Suriquiva≡, Tacal≡, Tacaduto≡, Taque≡, Tacuato≡, Tausabana≡, Tequeguacare≡, Ticuí≡, Tiguadare≡, Tijuro≡, Tiraya≡, Tiquiba≡, Tobagía≡, Tubarao≡, Tumarusa≡, Tumatey≡, Tura≡, Tutubacoa≡, Urupagua≡, Urupaguaduco≡, Yacure≡, Yaguarima≡, Yaima≡, Yarí≡
+judibana★≡◆ (Judi, jurí: viento. Bana: sitio alto), judibana★≡◆ («Judibana era una hermosa mujer, que era esposa del Gran Cacique de Jurijurebo»), yauquiba★≡ (Yabu-quiba: la piedra del yabo, árbol resinoso), capuhana★≡ («Capu-hana, con hache intercalada para deshacer el diptongo, es el nombre de un pequeño cerro, cerca de Misar…), capuhana★≡ (en el cerro de Capuhana hay un duende que, junto con una serpiente emplumada con una estrella en la cabeza, i…), guadabacoa★≡ («Guaidabacoa, con sílaba epentética intercalada, es una voz compuesta de guái, árbol parecido a la ceiba y ba…), dabudare★≡ (Dabadubare, aldea del municipio Santa Ana: «Dabuda: barro de loza (ver Abudure)»), abudure★≡◆ (sitio de donde se extrae barro de las raíces), buchuhaco★≡ (los dos buches. Buche: cardo, Aco: par, casal, pareja), paraguaná★≡ («Conuco en medio del mar es la más repetida de las significaciones que le dan al topónimo»), paraguaná★≡ («Está suficientemente averiguado que Para significa agua»), paraguaná★≡ ('conuco en medio del mar' es, morfema a morfema, para 'agua' + gua 'conuco, heredad, terreno cercado' (Zavala…), guacurebo★≡ («proviene de Guacoa, pero más explícito por el sufijo ebo, o sea que expresa: el paso de la guacoa»), jadicuar★≡ («El nombre primitivo era Jadícuar, que quiere decir: jajatal, sitio donde abunda el jajato, hierba halófila d…), jadicuar★≡ (jade 'jajato' + cuar, colectivo cumanagoto 'aglomeración, abundancia' según Caulín — «este cuar tiene el mism…), adaure★≡◆ (apellido indígena; «no descartamos que provenga de Dara, en tal caso en forma patronímica: quizás la Dara fue…), amaraya★≡◆ (puede ser una alteración de «maracaya», otro nombre indígena que recibe el «güirito», gato silvestre), baraived★≡◆ (Bara: árbol; en Baraivere, la forma primitiva, «la desinencia bere actuaría como adjetivo o como sustantivo p…), baraived★≡◆ (unos marinos perdidos vararon en los bancos de arena y uno dijo «vara y ved»; de ahí el nombre), caseto★≡◆ (planta herbácea de las malvas espigadas, el Malvastrum spicatum de los botánicos), caseto★≡◆ (Gaseto < gaceta, porque en el lugar vivía quien redactaba una hoja periódica), cocodite★≡◆ (el sufijo «dito» es distintivo de los sustantivos colectivos en lengua indígena), jadacaquiva★≡◆ (Quiba en caquetío es pedruzco), jadacaquiva★≡◆ (los nativos, con miedo a los caballos, se armaban de piedras y gritaban «¡Jaca... quiba!»: ¡piedra contra esa…), jadacaquiva★≡◆ (en una sequía machacaban macoyas de jajato contra piedras para chupar el jugo y gritaban «¡Jajato... quiba!»), machuruca★≡◆⌂ (viene de caruca, paja áspera con la cual se le da consistencia al barro batido para la torta que se aplica a …), maicara★≡◆ («en un documento de Composición de Tierras hemos leído: Maicuare, éste sería tal vez el nombre primitivo»), maitiruma★≡◆ (en el caribe insular, mái significa: manantial, ojo de agua; iruma: azul celeste, o sea que Maitiruma expresa…), amuay★≡ («la voz da la idea de cavidad subterránea, haitón, cueva grande. Y justamente en las cercanías de Amuay hay u…), amuay★≡ ('cavidad subterránea, cueva grande', por las cuevas naturales cercanas; voz del caribe insular «por su fonéti…), amuay★≡ (de «muelle», por el endeble muelle de 1924 cuando el puerto fue aduana marítima), todariquiba★≡⌂ («Tubariquiba y no Todariquiba, quiere decir: pedregal. Tuba: aglomeración. Quiba: pedruzco»), miraca★≡⌂ («De la voz hemos averiguado que en lengua guaraúna, Miraca es atarraya. Miraca sanuco: atarraya pequeña»), miraca★≡⌂ ('atarraya' en warao (guaraúno); «Miraca sanuco: atarraya pequeña»), jarayadito★≡ («Jarayadito significa espinar, retamal, ñaragatal. El sufijo dito es distintivo de los nombres colectivos abu…), barunú★≡ («El nombre viene de Barubaru (palo delgado), palmera con cuyas hojas fabrican esteras los nativos. Esta palme…), cayeruba★≡⌂ («¿Origen de la voz? ¿Simaruba? Es posible, hay abundancia de este árbol rutáceo en sus contornos» (leído en l…), moruy★≡⌂ («Es más aceptable considerar la voz como una alteración de merejuy, cierta levadura o preparación agria que u…), moruy★≡⌂ (los naturales temían a los moros (los piratas) y al ver barcos gritaban «¡Moro... uy!»), chamuriana★≡⌂ («Antigua aldea indígena en cuyas cercanías los españoles fundaron en 1538 el pueblo de Santa Ana de Paraguaná…), supí★≡◆ (es un árbol cactáceo que exuda una goma medicinal, es el guamacho Pereskia de los botánicos), charaima★≡◆ (población entre Adícora y Baraived; censo 1881: 79 casas, 527 habitantes; nombre primitivo Charaide en su Tít…), jacuque★≡◆ (sabanas y hatos en Jadacaquiva; Punta de Jacuque, por donde «no se puede confirmar históricamente» Federmann …), elegüey★≡ (nombre antiguo de Punta Cardón, hoy solo del cementerio viejo en la Puntica; «es voz taína, del caribe insula…), maragüey★≡ (pequeña península en Casicure, en la otra costa del Golfete de Coro; «también es voz taína», sin glosa; misma…), jamaica★≡ (lugar de Buenavista formado alrededor de «la casa grande de Jamaica»: con toda probabilidad una hacienda baut…), jayana★≡ (antiguo fundo pecuario cerca de Amuaicito, hoy caserío del municipio Los Taques; con Adícora, único puerto de…), Guacurebo★≡, Guasare★≡, Jurijurebo★≡, Paraguaná★≡, Abudure★≡◆, Adaure★≡◆, Amaraya★≡◆, Baraived★≡◆, Buchuaco≡◆, Caseto★≡◆, Charaima★≡◆, Cocodite★≡◆, Jacuque★≡◆, Jadacaquiva★≡◆, Judibana★≡◆, Machuruca★≡◆⌂, Maicara★≡◆, Maitiruma★≡◆, Supí★≡◆, Jayana★≡, Amuay★≡, Elegüey★≡, Jamaica★≡, Todariquiba★≡⌂, Miraca★≡⌂, Hurraque★≡, Jarayadito★≡, Barunú★≡, Cayeruba★≡⌂, Yauquiba★≡, Dabadubare≡, Guaidabacoa≡⌂, Moruy★≡⌂, Chamuriana★≡⌂, Adícora≡⌂, Acaboa≡, Adaro≡, Aguaque≡, Antuní≡, Arajó≡, Asaro≡, Asubure≡, Avotuca≡, Babahuro≡, Bajabaroa≡, Bajarigua≡, Barabara≡, Baracara≡, Barbasco≡, Bariquí≡, Barisigua≡, Bibidure≡, Bibuche≡, Biniche≡, Bucuruy≡, Buchaquiba≡, Buenevara≡, Buenibativa≡, Caibacoa≡, Camare≡, Camoruco≡, Camunare≡, Capacheruda≡, Capuhana★≡, Caradacagua≡, Carajaima≡, Cararapa≡, Cariguariana≡, Carirubana≡, Caruca≡, Caujarito≡, Cayude≡, Cimiro≡, Coabana≡, Coduto≡, Cuara≡, Cubiano≡, Cucurubano≡, Cucuy≡, Cude≡, Cujicana≡, Cumaraguas≡, Cumujacoa≡, Cunacho≡, Curaidebo≡, Cuzubitos≡, Chaure≡, Chichibana≡, Chiguaral≡, Chirache≡, Chuchube≡, Chujaro≡, Chunaure≡, Dibaragua≡, Duraguaco≡, Garrapata≡, Gisebo≡, Guacuira≡, Guacujúa≡, Guachaco≡, Guachunepe≡, Guanadito≡, Guarama≡, Guaranao≡, Guarataro≡, Guaricure≡, Guaruguaja≡, Guatacare≡, Guayacanal≡, Güica≡, Güima≡, Hayo≡, Imujo≡, Isiro≡, Isito≡, Iticuna≡, Jabe≡, Jagüe≡, Jariaca≡, Juderecal≡, Juroguagua≡, Laguarí≡, Macama≡, Manadí≡, Manare≡, Manichare≡, Maquigua≡, Maracapana≡, Matacán≡, Matividiro≡, Matuto≡, Michaco≡, Misaray≡, Muaco≡, Niraba≡, Nonocoti≡, Oboque≡, Oripopo≡, Paguara≡, Perabay≡, Peticuare≡, Pipiacoa≡, Pipiribana≡, Pitajaya≡, Pury≡, Quibarute≡, Quitaire≡, Quipital≡, Quipayú≡, Quiyegua≡, Sabarigua≡, Sacuragua≡, Saguatumo≡, Sanajaquí≡, Sanquinche≡, Sarabón≡, Sarinao≡, Saruro≡, Sicaname≡, Sibidigual≡, Siraba≡, Supideo≡, Suriquiva≡, Tacal≡, Tacaduto≡, Taque≡, Tacuato≡, Tausabana≡, Tequeguacare≡, Ticuí≡, Tiguadare≡, Tijuro≡, Tiraya≡, Tiquiba≡, Tobagía≡, Tubarao≡, Tumarusa≡, Tumatey≡, Tura≡, Tutubacoa≡, Urupagua≡, Urupaguaduco≡, Yacure≡, Yaguarima≡, Yaima≡, Yarí≡
 
-### `castellanos-elegias` — 12 formas, 12 menciones
+### `castellanos-elegias` — 16 formas, 19 menciones
 
 las 'ciudades de grandísimo momento' en torno a Coro (II, Elegía 1, 1589).
 
 | Forma | Tipo | Lo que dice la fuente | Ref. | Cruces |
 |---|---|---|---|---|
 | guadabacoa | lectura:hipotesis | la Guaybacoa «ciudad de grandísimo momento» de Castellanos (1589) y la Guaibacoa de Bastidas (1538) serían es… | toponimo-008 · proyecto · 2026-09-07 · no demostrada: Castellanos dice «doce leguas en torno» de C… | ★ toponimo-008 · nivel B ≡ |
+| curiana | lectura:etimologia-de-cronista | «Coro viento quiere decir en lengua generosa» | toponimo-111 · Castellanos 1589 · 2026-09-04 · casi seguro el latín corus/caurus 'viento del noroeste', qu… | ★ toponimo-111 · nivel C |
+| hurraque | canon | Hurraqui en Castellanos; «pueblo caquetío mencionado por Juan de Castellanos» en Esteves p. 43, que supone Ju… | toponimo-096 · nivel descartado · topónimo · fuente procedencia | ★ toponimo-096 · nivel descartado ≡ |
+| zazarida | canon | Zacerida en Castellanos; Sacerida/Zazárida en Arcaya; carta de Bastidas 1538 vía Oliver p. 251, nodo-006; hoy… | toponimo-097 · nivel descartado · topónimo · fuente procedencia | ★ toponimo-097 · nivel descartado ⌂ nodo-006 |
+| carao | canon | Castellanos; «Arcaya lo suponía en el actual Carazao» | toponimo-098 · nivel descartado · topónimo · fuente procedencia | ★ toponimo-098 · nivel descartado |
+| tomodore | canon | Tamadoré en Castellanos; Tomadoré cerca de La Vela según Arcaya; carta de Bastidas 1538 vía Oliver p. 251, no… | toponimo-099 · nivel descartado · topónimo · fuente procedencia | ★ toponimo-099 · nivel descartado ⌂ nodo-004 |
+| capatarida | canon | Capatarida en Castellanos; carta de Bastidas 1538 vía Oliver p. 251, nodo-007; hoy Capatárida, capital del mu… | toponimo-100 · nivel descartado · topónimo · fuente procedencia | ★ toponimo-100 · nivel descartado ⌂ nodo-007 |
+| carona | canon | Castellanos; Arcaya: «ni el nombre queda» — pues aquí está, en 1589 | toponimo-101 · nivel descartado · topónimo · fuente procedencia | ★ toponimo-101 · nivel descartado |
 | Todariquibo (= Todariquiba) | lista-1589 | = Todariquiba. TERCERA atestación temprana (Bastidas 1538 + Castellanos 1589), aquí 'ciudad de grandísimo mom… | II, Elegía 1 | ★ toponimo-094 · nivel C ≡ ⌂ nodo-001 |
 | Zacerida ~ Zazárida (= Sacerida) | lista-1589 | = Sacerida/Zazárida (la lista de Arcaya) | II, Elegía 1 | ★ toponimo-097 · nivel descartado ⌂ nodo-006 |
 | Carao | lista-1589 | Arcaya lo suponía en el actual Carazao | II, Elegía 1 | ★ toponimo-098 · nivel descartado |
@@ -93,7 +100,7 @@ los pueblos de la carta de Bastidas al rey (AGI, 1538) — primarios.
 | Cayarua | primario-1538 | principal Esteban (?) | AGI, Legajo 218, f. 2 |  |
 | Gorybacoa | primario-1538 | pueblo de un cacique que 'se dize verbo' (lectura dudosa del traslado) | AGI, Legajo 218, f. 2 |  |
 
-### `gonzalez-batista-nombre-de-coro` — 11 formas, 13 menciones
+### `gonzalez-batista-nombre-de-coro` — 12 formas, 14 menciones
 
 lecturas etimológicas del autor — con cautela declarada; cada una se juzga contra Zavala.
 
@@ -101,27 +108,32 @@ lecturas etimológicas del autor — con cautela declarada; cada una se juzga co
 |---|---|---|---|---|
 | jurijurebo | lectura:etimologia-analitica | hure 'arena' -> hurehure 'arenal' -> hurehurebo 'lugar de muchos arenales' (reduplicación + sufijo -bo) | toponimo-001 · González Batista · 2026-08-25 · descartada como lectura principal (2026-08-25): Zavala #178… | ★ toponimo-001 · nivel A ≡ |
 | guadabacoa | lectura:etimologia-analitica | Guaibacoa = 'el valle (bacoa) de las ceibas (guay)' | toponimo-008 · González Batista · 2026-08-25 · coincide con Esteves por vía independiente; 'valle' es mati… | ★ toponimo-008 · nivel B ≡ |
+| curiana | lectura:etimologia-analitica | coro 'espina' → Coriana 'tierra de las espinas, o la tierra del espinar, de vegetación espinosa, e indirectam… | toponimo-111 · González Batista · 2026-08-25 · PLAUSIBLE (Miguel, 2026-08-25): la línea más prometedora de… | ★ toponimo-111 · nivel C |
 | paraguaná | lectura:etimologia-analitica | paragua 'mar, agua grande' + na 'tierra' = 'la tierra rodeada de mar' | toponimo-018 · González Batista · 2026-08-25 · depende de na = 'tierra', que ninguna fuente impresa da; ch… | ★ toponimo-018 · nivel C ≡ |
 | quibaquiba | lectura | quiba 'piedra' → pedregal | plural por reduplicación |  |
 | taratara | lectura | tara 'mariposa' → sitio donde abundan | plural por reduplicación | ⌂ nodo-018 |
 | corocoro | lectura | coro 'espina' → espinar (implícito) | plural por reduplicación |  |
 | Curaidebo ~ Curaridebo | lectura | curaridal, lugar de muchos curaríes | sufijo -bo / -buno | ≡ |
 | Jurijurebo ~ Hurehurebo | lectura | hure 'arena' -> hurehure 'arenal' -> hurehurebo 'lugar de muchos arenales' | reduplicación + sufijo -bo | ★ toponimo-001 · nivel A ≡ |
-| Coro | lectura | coro = 'espina' (el autor); choca con Alvarado, donde coro es siempre topónimo |  |  |
-| Coriana ~ Curiana | lectura | 'tierra de las espinas' — depende de na = 'tierra' (choca con Zavala #184) |  |  |
+| Coro | lectura | coro = 'espina' (el autor); choca con Alvarado, donde coro es siempre topónimo |  | ★ toponimo-111 · nivel C |
+| Coriana ~ Curiana | lectura | 'tierra de las espinas' — depende de na = 'tierra' (choca con Zavala #184) |  | ★ toponimo-111 · nivel C |
 | Paraguaná | lectura | paragua 'mar' + na 'tierra' = 'la tierra rodeada de mar' (misma dependencia) |  | ★ toponimo-018 · nivel C ≡ |
 | Guadadubana ~ Guadedubana, Guadubabana | lectura | Guadadubana / Guadedubana / Guadubabana = 'el alto o cerro de las cañas' (guaduba 'caña') | morfema bana = 'cerro o altura' |  |
 | Guaibacoa | lectura | Guaibacoa = 'el valle (bacoa) de las ceibas (guay)' | morfema bacoa = 'valle' | ≡ ⌂ nodo-003 |
 
-### `arcaya-1920` — 9 formas, 9 menciones
+### `arcaya-1920` — 10 formas, 13 menciones
 
 Quiquibacoa/Coquibacoa, Curiana y la serie Coro-/Curi-.
 
 | Forma | Tipo | Lo que dice la fuente | Ref. | Cruces |
 |---|---|---|---|---|
-| Quiquibacoa ~ Coquibacoa, Quiquiba | lectura | qui~quiba (reduplicado) + bacoa = 'lugar de las piedras, el pedregal' | p. 130 | ★ toponimo-034 · nivel descartado |
-| Curiana ~ Coro | lectura | el pueblo indígena de Coro, y 'la costa vecina' — sitio → región (¿quién extendió qué? D2) | p. 169 |  |
-| Coriana | serie | serie Coro-/Curi- de Arcaya (él propone koori 'avispa' o kuru 'lagartija', no 'espina') | p. 170 |  |
+| curiana | canon | «Coro o Curiana se denominaba el pueblo que allí tenían fundado los indios, y Curiana la costa vecina» (Arcay… | toponimo-111 · nivel C · topónimo · fuente procedencia | ★ toponimo-111 · nivel C |
+| curiana | lectura:etimologia-de-cronista | la serie Coro-/Curi- («la antigua Coriana, Coroquide, Corobore, Coroquidiro, Ocorote, Corocoro, Cocorote») re… | toponimo-111 · Arcaya 1920 · 2026-08-25 · formante productivo sin glosa acordada: avispa o lagartija … | ★ toponimo-111 · nivel C |
+| curiana | lectura:glosa-fuente | el mismo nombre nombra el pueblo y la costa: «Coro o Curiana se denominaba el pueblo que allí tenían fundado … | toponimo-111 · Arcaya 1920 · 2026-08-25 · es la pregunta de D2 (#33), con dos casos desde el 2026-08-… | ★ toponimo-111 · nivel C |
+| quiquiba | canon | «tomaron por las costas de la Goagira, región que llamaron de Coquibacoa, o de Quiquibacoa, por el nombre ind… | toponimo-034 · nivel C · topónimo · fuente procedencia | ★ toponimo-034 · nivel C |
+| Quiquibacoa ~ Coquibacoa, Quiquiba | lectura | qui~quiba (reduplicado) + bacoa = 'lugar de las piedras, el pedregal' | p. 130 | ★ toponimo-034 · nivel C |
+| Curiana ~ Coro | lectura | el pueblo indígena de Coro, y 'la costa vecina' — sitio → región (¿quién extendió qué? D2) | p. 169 | ★ toponimo-111 · nivel C |
+| Coriana | serie | serie Coro-/Curi- de Arcaya (él propone koori 'avispa' o kuru 'lagartija', no 'espina') | p. 170 | ★ toponimo-111 · nivel C |
 | Coroquide | serie | serie Coro-/Curi- de Arcaya (él propone koori 'avispa' o kuru 'lagartija', no 'espina') | p. 170 |  |
 | Corobore | serie | serie Coro-/Curi- de Arcaya (él propone koori 'avispa' o kuru 'lagartija', no 'espina') | p. 170 |  |
 | Coroquidiro | serie | serie Coro-/Curi- de Arcaya (él propone koori 'avispa' o kuru 'lagartija', no 'espina') | p. 170 |  |
@@ -129,13 +141,16 @@ Quiquibacoa/Coquibacoa, Curiana y la serie Coro-/Curi-.
 | Corocoro | serie | serie Coro-/Curi- de Arcaya (él propone koori 'avispa' o kuru 'lagartija', no 'espina') | p. 170 |  |
 | Cocorote | serie | serie Coro-/Curi- de Arcaya (él propone koori 'avispa' o kuru 'lagartija', no 'espina') | p. 170 |  |
 
-### `moron-2012-petroglifos` — 23 formas, 23 menciones
+### `moron-2012-petroglifos` — 23 formas, 26 menciones
 
 La Cuiba y las estaciones de arte rupestre de Falcón.
 
 | Forma | Tipo | Lo que dice la fuente | Ref. | Cruces |
 |---|---|---|---|---|
-| La Cuiba ~ Aguas Termales de Agua Clara, Pozos del Saladillo | lectura | cuiva/quiva 'piedra': el sitio tiene cristales de cuarzo a ras del suelo |  |  |
+| la cuiba | canon | sitio de la leyenda del Rey Manaure (Aguas Termales de Agua Clara), que destaca por «la riqueza de cristales … | toponimo-112 · nivel C · topónimo · fuente procedencia | ★ toponimo-112 · nivel C |
+| la cuiba | lectura:hipotesis | si cuiva/quiva = 'piedra', La Cuiba nombra exactamente el rasgo dominante del sitio: cristales de cuarzo a ra… | toponimo-112 · proyecto · 2026-08-25 · fusionado como nivel C el 2026-09-07 (Miguel: lo del 25 de … | ★ toponimo-112 · nivel C |
+| la cuiba | lectura:tradicion-local | la leyenda del Rey Manaure en La Cuiba / Aguas Termales de Agua Clara: la viejita caquetía, el machete, la cu… | toponimo-112 · tradición oral recogida por Morón 2012 · 2026-08-25 | ★ toponimo-112 · nivel C |
+| La Cuiba ~ Aguas Termales de Agua Clara, Pozos del Saladillo | lectura | cuiva/quiva 'piedra': el sitio tiene cristales de cuarzo a ras del suelo |  | ★ toponimo-112 · nivel C |
 | El Supí | estacion-rupestre | estación de arte rupestre — costa |  | ★ toponimo-077 · nivel C ≡ ◆ |
 | Adícora | estacion-rupestre | estación de arte rupestre — costa |  | ≡ ⌂ nodo-012 |
 | Playa de Cucuruchú | estacion-rupestre | estación de arte rupestre — costa |  |  |
@@ -159,12 +174,14 @@ La Cuiba y las estaciones de arte rupestre de Falcón.
 | La Peña Clara | estacion-rupestre | estación de arte rupestre — otras |  |  |
 | Los Urupaguales | estacion-rupestre | estación de arte rupestre — otras |  |  |
 
-### `oliver-1989-cap3` — 6 formas, 7 menciones
+### `oliver-1989-cap3` — 8 formas, 9 menciones
 
 los asientos de los dos clanes de Paraguaná según Delmonte 1883.
 
 | Forma | Tipo | Lo que dice la fuente | Ref. | Cruces |
 |---|---|---|---|---|
+| curiana | lectura:hipotesis | hay un segundo Coriana: «Coria-na», nombre de aldea wanebucán en Punta Espada-Chichibacoa (Guajira), junto a … | toponimo-111 · Oliver 1989 · 2026-09-07 · si Coria-na se repite donde no hay nada que llamar Coro, la… | ★ toponimo-111 · nivel C |
+| quiquiba | lectura:hipotesis | el cabo Chichibacoa, en el norte de la Guajira, es Coquibacoa con /k/ > /ch/: el sitio indígena de Arcaya seg… | toponimo-034 · Oliver 1989 · 2026-09-07 | ★ toponimo-034 · nivel C |
 | amuay | lectura:hipotesis | el topónimo es el etnónimo del clan Amuay, sub-grupo caquetío que controlaba el sur de la península con playa… | toponimo-090 · proyecto · 2026-09-07 | ★ toponimo-090 · nivel C ≡ |
 | cayeruba | lectura:hipotesis | Cayerda (Delmonte 1883), Cayeruba (Esteves 1989) y Cayerúa (mapa 2026) son un solo lugar, el primer asiento d… | toponimo-104 · proyecto · 2026-09-07 · muy probable por la geografía (Esteves y el mapa lo ponen d… | ★ toponimo-104 · nivel C ≡ ⌂ nodo-025 |
 | Cayerda | asiento-de-clan | primer asiento de los Amuayes (Delmonte 1883); grafías Cayerta/'Coyarna' | p. 276 | ◆ ⌂ nodo-025 |
@@ -246,35 +263,30 @@ topónimos de Aruba (material de Pinart, 1882), sin glosa.
 
 paraguaná★≡ (Rodeada del mar), Casibari★ ('there are hard rocks'), Hudishibana★ ('windy plain'), aruba★⌂ (→ 'Oruba. Oruma. Oirubae'), Adicoura★⌂, Amboïna★, Arashi★, Burubunu★, Buynari★, Curaçao★⌂, Macuarima★, Matividiri★, Taratata★, Yatu Bacu★, Balashi★, Onima★, Cariatávo★, Anabui, Anamichi, Andicuri, Angochi, Araburu, Arashi★, Arikok, Aruba★⌂, Avikurari, Ayo, Balashi★, Barbacoa, Basiruti, Behika, Boroncana, Bubali, Bucuti, Budui, Boegoeroei, Burubunu★, Bushiri, Bushiribana, Butucu, Cababuna, Caburi, Cadushi, Cadushi, Camari, Camacuri, Canashito, Caushati, Caruburi, Cashero, Cashunti, Casibari★, Catashi, Catiri, Cawara, Choroni, Cocodoro, Cubeju, Cubou, Cucu, Cudarebo, Curuburi, Cuwana, Daimari, Eayac, Fofoti, Guadirikiri, Guarero, Hadicurari, Hadicuri, Hubada, Hudishibana★, Huliba, Jaburibari, Jucuri, Juditi, Kadiwari, Kamay, Keito, Kimbaima, Kivarcu, Kodekodectu, Koyari, Kudawecha, Kukurui, Kurimiauw, Mabon, Macuarima★, Macubari, Madiki, Mahos, Mahuma, Malmok, Manchebo, Masiduri, Matividiri★, Moko, Nanki, Noka, Paradera, Paraguana★≡, Sasarawichi, Shaba, Shabururi, Shidaharaca, Shiribana, Siribana, Sividivi, Skepou, Suduri, Tarabana, Taratata★, Tibushi, Tikibanaro, Teishi, Turibana, Uditi, Huliba, Uña uña, Urataka, Urirama, Utie, Wakubana, Wao-Wao, Warawao, Warawara, Warerikiri, Wariruri, Wayaca, Weburi, Wiriwari, Yamanota, Yanana, Yara, Yuwana, Yuwiti, Adicoura★⌂, Cariatavo★, Charomba, Chinchó, Choloma, Cocori, Codoko, Cudishi, Curazao★⌂, Maco, Macola, Mahuma, Maniguacoa, Padiki, Parasasa, Wakawa, Wanapa, Wandomi, Wanota, Watamula, Amboina★, Bacuna, Bototó, Buynari★, Cabuja, Caracao, Casicunda, Curuburu, Garati, Guarati, Hobao, Huba, Ishiri, Jua, Karati, Kaumati, Koahara, Macoshi, Macutucao, Malmok, Manparia Cutu, Morotin, Nawati, Nikiboko, Onima★, Orizjan, Roshikiri, Shishiribana, Sorobon, Wamari, Wanapa, Wanico, Warahama, Wasao, Washikemba, Watapana, Wayacá, Wecua, Yatu Bacu★, Yatu, Yuana, Adicoura★⌂ (According to Van Grol, this is the original name of the island Klein Curaçao. The name Nicula is also found i…), Amboïna, Ambuana (pronounce Ambwana) (In the Dominican Republic this name is also found. Amboïna, Amboína is associated with caves or a well. The n…), Arashi★ (nowadays this is one of best sites to fish for warashi (bonefish, Albula vulpes) in Aruba. This makes it like…), Balashi★ (contains the root bala meaning the sea, Balashi is situated near the sea.), Burubunu★ (in the Venezuelan state of Falcón, near Zazárida a small village called Borobuno is found (Cruz Esteves, 1989…), Buynari, Buinare (Nicolaas Federmann passed Bonaire in early 1530, in an account of his voyage which was published in Hagenau i…), Cariatávo, Cariatabo, Careotabo (the name of a cove or small lagoon east of the Schottegat (Hartog, 1968). cari means ‘coast', ‘shore' (Cruz E…), Casibari★ (At this location there is a pile of very large rocks. ca-, ka- is a localizer meaning ‘there is', ‘there are'…), Curaçao, Curazao (Curaçao is definitely not from Portuguese. Both Las Casas and Oviedo mention it very early and although their…), Hudishibana (P8)★ (a calcareous terrace, nowadays the site of a golf course. juri, judi, hudi means ‘wind' (Cruz Esteves, 1989),…), Macuarima★ (Named after a legendary Indian girl with this name, who used to live there (Anonymous, 2004).), Matividiri★ (In Paraguaná a hill with a nearby village is called Matividiro (Cruz Esteves, 1989).), Onima★ (a cave on the North coast of Bonaire, it is also the name of a nearby cove (Boca Onima). Taïno ní is ‘water',…), Taratata, Tatarata (in the Venezuelan state of Falcón, the toponyms: Taratara, Taratare and Tatatarare are found (Cruz Esteves, 1…), Yatu Bacu★ (In Venezuela the suffix –baca is found in place names. Dauguaraubaca is a place along the Río Amacuro, in Eas…)
 
-### `testimonio-miguel` — 37 formas, 46 menciones
+### `testimonio-miguel` — 38 formas, 48 menciones
 
 Miguel Gil Urbina: lecturas de investigación coloquial, tradición local, mapa vivo — deuda sin-procedencia, por diseño.
 
-jurijurebo★≡ (Jurijurebo está en Judibana (Paraguaná); judi y juri son la misma palabra deformada, y el viento es el rasgo …), judibana★≡◆ (el viento es el rasgo dominante del sitio y de Paraguaná entera; judi y juri son la misma palabra deformada, …), judibana★≡◆ (Judibana era el nombre de la hija del cacique Manaure, unida al señor de Jurijurebo, al que mataron con perro…), yauquiba★≡ (vivo en el mapa actual como Yabuquiva, sector del Capubana; con Jadacaquiva hace crecer la familia -quiva/-qu…), dabudare★≡ (vivo en el mapa actual como Davaduvare, sector del Capubana, junto a Uarayadito y Cayerúa), guacurebo★≡ (vivo en el mapa actual como Guacubero, sector del Capubana), maitiruma★≡◆ (el 'manantial azul' cae al pie este del Capubana, donde sigue habiendo agua y uno de los pocos bosques xerófi…), jarayadito★≡ (vivo en el mapa actual como Uarayadito, en el mismo sector que Moruy y Cayerúa), barunú★≡ (vivo en el mapa actual como Parunu, sector del Capubana), cayeruba★≡⌂ («Cayerda no existe, pero Cayerúa sí»: en el mapa actual aparece Cayerúa cerca de Moruy, con Uarayadito en el …), moruy★≡⌂ (del quechua muru 'viruela' o 'pepa'), moruy★≡⌂ (Moruy era un cacique: topónimo < antropónimo, el patrón regional (cf. Manaure)), moruy★≡⌂ (Moruy y Santa Ana (Chamuriana) eran del mismo clan, en órbita del Capubana: Moruy donde se hacía el merejuy p…), chamuriana★≡⌂ («elegida por los nativos debido a la abundancia de agua dulce que bajaba del cerro»), chamuriana★≡⌂ (el pueblo de Santa Ana es fundación colonial (franciscana según Miguel, «los españoles» en 1538 según Esteves…), Judibana★≡◆ (nombre de la hija de Manaure, unida al señor de Jurijurebo (tradición local viva); etimología judi+bana 'el cerro del viento'), Santa Ana⌂ (El nombre original era CHAMURIANA, "elegida por los nativos debido a la abundancia de agua dulce que bajaba d…), Chamuriana★≡⌂ (nombre nativo del sitio de Santa Ana, por el agua dulce que baja del cerro), Moruy★≡⌂ (Versiones de tradición oral que recoge Miguel: (1) Moruy era un CACIQUE; (2) llegaron unos "moros" tan temibl…), Aruba★⌂ (En «Arubanas» (los indios de Aruba, Altoaguirre [1768] vía Oliver p. 256) Miguel ve otra vez el formante bana…), Cayerda◆⌂ («Cayerda no existe, pero Cayerúa sí» — Miguel, sobre el mapa actual. La aldea que Delmonte da como asiento pr…), Curiana (¿Curi- (Curiana, Coriana) y juri 'viento' son la misma palabra con dos pronunciaciones, una de Coro y otra de…), Capubana (el Cerro Santa Ana = Cerro de Capú (D9); centro sagrado con Moruy, Chamuriana, Cayerúa y Maitiruma en órbita), Uarayadito◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Davaduvare◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Abudure★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Machuruca★≡◆⌂ (topónimo vivo en las fotos del mapa (sector del Capubana)), Caseto★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), La Rinconada★◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Jadacaquiva★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Yabuquiva◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Amaraya★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Adaure★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Maicara★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Buchuaco≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Charaima★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Baraived★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Cocodite★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Parunu◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Guacubero◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Jacuque★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Cayerúa◆⌂ (topónimo vivo en las fotos del mapa (sector del Capubana)), El Supí★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Pedregalito★◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Maitiruma★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Judibana★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana))
+jurijurebo★≡ (Jurijurebo está en Judibana (Paraguaná); judi y juri son la misma palabra deformada, y el viento es el rasgo …), judibana★≡◆ (el viento es el rasgo dominante del sitio y de Paraguaná entera; judi y juri son la misma palabra deformada, …), judibana★≡◆ (Judibana era el nombre de la hija del cacique Manaure, unida al señor de Jurijurebo, al que mataron con perro…), yauquiba★≡ (vivo en el mapa actual como Yabuquiva, sector del Capubana; con Jadacaquiva hace crecer la familia -quiva/-qu…), capuhana★≡ (el Capubana es el Cerro Santa Ana (el Cerro de Capú, D9/Velasco) y el centro sagrado del sector: Moruy, donde…), dabudare★≡ (vivo en el mapa actual como Davaduvare, sector del Capubana, junto a Uarayadito y Cayerúa), curiana★ (curi- (Curiana, Coriana) y juri 'viento' son la misma palabra con dos pronunciaciones, una de Coro y otra de …), guacurebo★≡ (vivo en el mapa actual como Guacubero, sector del Capubana), maitiruma★≡◆ (el 'manantial azul' cae al pie este del Capubana, donde sigue habiendo agua y uno de los pocos bosques xerófi…), jarayadito★≡ (vivo en el mapa actual como Uarayadito, en el mismo sector que Moruy y Cayerúa), barunú★≡ (vivo en el mapa actual como Parunu, sector del Capubana), cayeruba★≡⌂ («Cayerda no existe, pero Cayerúa sí»: en el mapa actual aparece Cayerúa cerca de Moruy, con Uarayadito en el …), moruy★≡⌂ (del quechua muru 'viruela' o 'pepa'), moruy★≡⌂ (Moruy era un cacique: topónimo < antropónimo, el patrón regional (cf. Manaure)), moruy★≡⌂ (Moruy y Santa Ana (Chamuriana) eran del mismo clan, en órbita del Capubana: Moruy donde se hacía el merejuy p…), chamuriana★≡⌂ («elegida por los nativos debido a la abundancia de agua dulce que bajaba del cerro»), chamuriana★≡⌂ (el pueblo de Santa Ana es fundación colonial (franciscana según Miguel, «los españoles» en 1538 según Esteves…), Judibana★≡◆ (nombre de la hija de Manaure, unida al señor de Jurijurebo (tradición local viva); etimología judi+bana 'el cerro del viento'), Santa Ana⌂ (El nombre original era CHAMURIANA, "elegida por los nativos debido a la abundancia de agua dulce que bajaba d…), Chamuriana★≡⌂ (nombre nativo del sitio de Santa Ana, por el agua dulce que baja del cerro), Moruy★≡⌂ (Versiones de tradición oral que recoge Miguel: (1) Moruy era un CACIQUE; (2) llegaron unos "moros" tan temibl…), Aruba★⌂ (En «Arubanas» (los indios de Aruba, Altoaguirre [1768] vía Oliver p. 256) Miguel ve otra vez el formante bana…), Cayerda◆⌂ («Cayerda no existe, pero Cayerúa sí» — Miguel, sobre el mapa actual. La aldea que Delmonte da como asiento pr…), Curiana★ (¿Curi- (Curiana, Coriana) y juri 'viento' son la misma palabra con dos pronunciaciones, una de Coro y otra de…), Capubana (el Cerro Santa Ana = Cerro de Capú (D9); centro sagrado con Moruy, Chamuriana, Cayerúa y Maitiruma en órbita), Uarayadito◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Davaduvare◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Abudure★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Machuruca★≡◆⌂ (topónimo vivo en las fotos del mapa (sector del Capubana)), Caseto★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), La Rinconada★◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Jadacaquiva★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Yabuquiva◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Amaraya★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Adaure★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Maicara★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Buchuaco≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Charaima★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Baraived★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Cocodite★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Parunu◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Guacubero◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Jacuque★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Cayerúa◆⌂ (topónimo vivo en las fotos del mapa (sector del Capubana)), El Supí★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Pedregalito★◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Maitiruma★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana)), Judibana★≡◆ (topónimo vivo en las fotos del mapa (sector del Capubana))
 
-### `proyecto` — 4 formas, 4 menciones
+### `proyecto` — 5 formas, 5 menciones
 
 lecturas analíticas del propio proyecto registradas en el canon (segmentaciones propias, con su veredicto o su issue).
 
 | Forma | Tipo | Lo que dice la fuente | Ref. | Cruces |
 |---|---|---|---|---|
 | judibana | lectura:hipotesis | doña Juana, la mujer del señor de Hurehurebo bautizada en casa de Ampiés (Castellanos 1589, línea 48166), ser… | toponimo-075 · proyecto · 2026-08-25 · no demostrada: la homofonía puede ser casual y la tradición… | ★ toponimo-075 · nivel A ≡ ◆ |
+| quiquiba | lectura:etimologia-analitica | qui~quiba (reduplicación con valor plural, como juri → jurijurebo) + bacoa 'lugar de' = 'lugar de las piedras… | toponimo-034 · proyecto · 2026-08-25 · rehabilitado a nivel C el 2026-09-07 (Miguel: lo del 25 de … | ★ toponimo-034 · nivel C |
 | paraguaná | lectura:etimologia-analitica | para 'agua en grandes cantidades' (Zavala #190) + gua 'terreno cercado' (#122) + na 'como, semejante' (#184) … | toponimo-018 · proyecto · 2026-08-25 · pendiente: #109 (abierto) | ★ toponimo-018 · nivel C ≡ |
 | jadacaquiva | lectura:hipotesis | jada- sería el mismo jadi-/jaja- de Jadícuar 'jajatal' (jajato, lexicón) + quiva 'piedra': 'las piedras del j… | toponimo-083 · proyecto · 2026-09-06 · sin apoyo independiente; la correspondencia d~j de jadicuar… | ★ toponimo-083 · nivel C ≡ ◆ |
 | todariquiba | lectura:hipotesis | toda- (Zavala #250, desinencia sin valor) + ri + quiba 'piedra': la forma atestiguada de 1538 y 1589 se segme… | toponimo-094 · proyecto · 2026-09-07 · pendiente de que toda- reciba glosa en otra fuente | ★ toponimo-094 · nivel C ≡ ⌂ nodo-001 |
 
-### `sin-procedencia` — 8 formas, 8 menciones
+### `sin-procedencia` — 2 formas, 2 menciones
 
 entradas del canon cuya fuente no se pudo declarar ni inferir — deuda.
 
 | Forma | Tipo | Lo que dice la fuente | Ref. | Cruces |
 |---|---|---|---|---|
-| hurraque | canon | Hurraqui en Castellanos; «pueblo caquetío mencionado por Juan de Castellanos» en Esteves p. 43, que supone Ju… | toponimo-096 · nivel descartado · topónimo · fuente deuda | ★ toponimo-096 · nivel descartado ≡ |
-| zazarida | canon | Zacerida en Castellanos; Sacerida/Zazárida en Arcaya; carta de Bastidas 1538 vía Oliver p. 251, nodo-006; hoy… | toponimo-097 · nivel descartado · topónimo · fuente deuda | ★ toponimo-097 · nivel descartado ⌂ nodo-006 |
-| carao | canon | Castellanos; «Arcaya lo suponía en el actual Carazao» | toponimo-098 · nivel descartado · topónimo · fuente deuda | ★ toponimo-098 · nivel descartado |
-| tomodore | canon | Tamadoré en Castellanos; Tomadoré cerca de La Vela según Arcaya; carta de Bastidas 1538 vía Oliver p. 251, no… | toponimo-099 · nivel descartado · topónimo · fuente deuda | ★ toponimo-099 · nivel descartado ⌂ nodo-004 |
-| capatarida | canon | Capatarida en Castellanos; carta de Bastidas 1538 vía Oliver p. 251, nodo-007; hoy Capatárida, capital del mu… | toponimo-100 · nivel descartado · topónimo · fuente deuda | ★ toponimo-100 · nivel descartado ⌂ nodo-007 |
-| carona | canon | Castellanos; Arcaya: «ni el nombre queda» — pues aquí está, en 1589 | toponimo-101 · nivel descartado · topónimo · fuente deuda | ★ toponimo-101 · nivel descartado |
 | la rinconada | canon | mapa vivo, sector del Capubana; fotos de Miguel 2026-09-01 | toponimo-106 · nivel descartado · topónimo · fuente deuda | ★ toponimo-106 · nivel descartado ◆ |
 | pedregalito | canon | mapa vivo, sector del Capubana; fotos de Miguel 2026-09-01 | toponimo-107 · nivel descartado · topónimo · fuente deuda | ★ toponimo-107 · nivel descartado ◆ |
 
@@ -378,21 +390,21 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Canashito |  | van-buurt-2014 |  |  |  |  |
 | Capacheruda |  | esteves-1989 |  | ≡ |  |  |
 | capadare |  | zavala-reyes-2015, medina-colina-sxx | toponimo-016 · nivel C |  |  |  |
-| capatarida | Capatarida, Capatárida | sin-procedencia, castellanos-elegias | toponimo-100 · nivel descartado |  |  | nodo-007 |
+| capatarida | Capatarida, Capatárida | castellanos-elegias | toponimo-100 · nivel descartado |  |  | nodo-007 |
 | Capubana |  | testimonio-miguel |  |  |  |  |
-| Capuhana |  | esteves-1989 |  | ≡ |  |  |
+| capuhana | Capuhana | esteves-1989, testimonio-miguel | toponimo-113 · nivel B | ≡ |  |  |
 | caquetío |  | zavala-reyes-2015 | toponimo-047 · nivel descartado |  |  |  |
 | Caracao |  | van-buurt-2014 |  |  |  |  |
 | Caradacagua |  | esteves-1989 |  | ≡ |  |  |
 | Carajaima |  | esteves-1989 |  | ≡ |  |  |
-| carao | Carao | sin-procedencia, castellanos-elegias | toponimo-098 · nivel descartado |  |  |  |
+| carao | Carao | castellanos-elegias | toponimo-098 · nivel descartado |  |  |  |
 | Cararapa |  | esteves-1989 |  | ≡ |  |  |
 | Carayapa |  | moron-2012-petroglifos |  |  |  |  |
 | Cariatávo | Cariatavo | van-buurt-2014 | toponimo-074 · nivel descartado |  |  |  |
 | Cariatávo, Cariatabo, Careotabo |  | van-buurt-2014 |  |  |  |  |
 | Cariguariana |  | esteves-1989 |  | ≡ |  |  |
 | Carirubana |  | esteves-1989, medina-colina-sxx |  | ≡ |  |  |
-| carona | Carona | sin-procedencia, castellanos-elegias | toponimo-101 · nivel descartado |  |  |  |
+| carona | Carona | castellanos-elegias | toponimo-101 · nivel descartado |  |  |  |
 | Caruburi |  | van-buurt-2014 |  |  |  |  |
 | Caruca |  | esteves-1989 |  | ≡ |  |  |
 | caseto | Caseto | esteves-1989, testimonio-miguel | toponimo-088 · nivel C | ≡ | ◆ |  |
@@ -434,7 +446,6 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Cocorote |  | arcaya-1920 |  |  |  |  |
 | Codoko |  | van-buurt-2014 |  |  |  |  |
 | Coduto |  | esteves-1989 |  | ≡ |  |  |
-| Coriana | Curiana, Coro | gonzalez-batista-nombre-de-coro, arcaya-1920, testimonio-miguel |  |  |  |  |
 | Corobore |  | arcaya-1920 |  |  |  |  |
 | corocoro | Corocoro | gonzalez-batista-nombre-de-coro, arcaya-1920 |  |  |  |  |
 | coroque |  | zavala-reyes-2015 | toponimo-052 · nivel descartado |  |  |  |
@@ -452,7 +463,7 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Cude |  | esteves-1989 |  | ≡ |  |  |
 | Cudishi |  | van-buurt-2014 |  |  |  |  |
 | Cueva del Indio (Morrocoy) |  | moron-2012-petroglifos |  |  |  |  |
-| La Cuiba | Aguas Termales de Agua Clara, Pozos del Saladillo | moron-2012-petroglifos |  |  |  |  |
+| la cuiba | La Cuiba, Aguas Termales de Agua Clara, Pozos del Saladillo | moron-2012-petroglifos | toponimo-112 · nivel C |  |  |  |
 | Cujicana |  | esteves-1989 |  | ≡ |  |  |
 | Cukuroi |  | gatschet-1885 |  |  |  |  |
 | Cumaraguas |  | esteves-1989 |  | ≡ |  |  |
@@ -462,6 +473,7 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Curaçao | Curazao | van-buurt-2014 | toponimo-067 · nivel descartado |  |  | nodo-009 |
 | Curaçao, Curazao |  | van-buurt-2014 |  |  |  |  |
 | Curaidebo | Curaridebo | esteves-1989, gonzalez-batista-nombre-de-coro |  | ≡ |  |  |
+| curiana | Coriana, Curiana, Coro | arcaya-1920, gonzalez-batista-nombre-de-coro, castellanos-elegias, testimonio-miguel, oliver-1989-cap3 | toponimo-111 · nivel C |  |  |  |
 | Curuburi | Corobori | van-buurt-2014 |  |  |  |  |
 | Curuburu |  | van-buurt-2014 |  |  |  |  |
 | Cuwana |  | van-buurt-2014 |  |  |  |  |
@@ -519,7 +531,7 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Hudishibana | Hudishibana (P8) | van-buurt-2014 | toponimo-027 · nivel C |  |  |  |
 | Huliba | Uliba | van-buurt-2014 |  |  |  |  |
 | Hurihurebo |  | velasco-2015-resistencia |  |  |  |  |
-| hurraque | Hurraque, Hurraqui | sin-procedencia, esteves-1989, castellanos-elegias | toponimo-096 · nivel descartado | ≡ |  |  |
+| hurraque | Hurraque, Hurraqui | castellanos-elegias, esteves-1989 | toponimo-096 · nivel descartado | ≡ |  |  |
 | iboa |  | zavala-reyes-2015 | toponimo-042 · nivel descartado |  |  |  |
 | Imujo |  | esteves-1989 |  | ≡ |  |  |
 | Ishiri |  | van-buurt-2014 |  |  |  |  |
@@ -644,7 +656,7 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | quiciroata |  | zavala-reyes-2015 | toponimo-033 · nivel descartado |  |  |  |
 | Quipayú |  | esteves-1989 |  | ≡ |  |  |
 | Quipital |  | esteves-1989 |  | ≡ |  |  |
-| quiquiba | Quiquibacoa, Coquibacoa, Quiquiba | zavala-reyes-2015, arcaya-1920 | toponimo-034 · nivel descartado |  |  |  |
+| quiquiba | Quiquibacoa, Coquibacoa, Quiquiba | arcaya-1920, proyecto, oliver-1989-cap3 | toponimo-034 · nivel C |  |  |  |
 | Quitaire |  | esteves-1989 |  | ≡ |  |  |
 | Quiyegua |  | esteves-1989 |  | ≡ |  |  |
 | El Ramonal |  | moron-2012-petroglifos |  |  |  |  |
@@ -711,7 +723,7 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Tobagía |  | esteves-1989 |  | ≡ |  |  |
 | todarahuato |  | zavala-reyes-2015, medina-colina-sxx | toponimo-045 · nivel descartado |  |  |  |
 | todariquiba | Todariquiba, Todariquibo | esteves-1989, proyecto, castellanos-elegias, velasco-2015-resistencia | toponimo-094 · nivel C | ≡ |  | nodo-001 |
-| tomodore |  | sin-procedencia | toponimo-099 · nivel descartado |  |  | nodo-004 |
+| tomodore |  | castellanos-elegias | toponimo-099 · nivel descartado |  |  | nodo-004 |
 | Tubarao |  | esteves-1989 |  | ≡ |  |  |
 | tumarure |  | zavala-reyes-2015 | toponimo-037 · nivel descartado |  |  |  |
 | Tumarusa |  | esteves-1989 |  | ≡ |  |  |
@@ -778,4 +790,4 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Yuwana | Yuana | van-buurt-2014 |  |  |  |  |
 | Yuwiti | Yuiti | van-buurt-2014 |  |  |  |  |
 | zamurano |  | zavala-reyes-2015 | toponimo-053 · nivel descartado |  |  |  |
-| zazarida | Zacerida, Zazárida, Sacerida | sin-procedencia, castellanos-elegias | toponimo-097 · nivel descartado |  |  | nodo-006 |
+| zazarida | Zacerida, Zazárida, Sacerida | castellanos-elegias | toponimo-097 · nivel descartado |  |  | nodo-006 |

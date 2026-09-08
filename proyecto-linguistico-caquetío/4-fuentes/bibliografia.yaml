@@ -1,7 +1,7 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 58
-  en_repo: 38
+  obras: 59
+  en_repo: 39
   solo_citadas: 20
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
@@ -545,6 +545,26 @@ obras:
   aliases:
   - Oliver 1989 cap. 4
   - Oliver Chapter 4 Archaeology
+  en_repo: true
+- id: osm-kaketiana
+  obra: OpenStreetMap — el mapa vivo de la Kaketiana (volcado por regiones)
+  autor: OpenStreetMap contributors
+  anio: '2026'
+  publicacion: OpenStreetMap, consultado vía Overpass API (https://overpass-api.de) el 2026-09-07. Licencia
+    ODbL 1.0.
+  genero: datos
+  local:
+  - fuentes_caquetios/osm_kaketiana/*.json (una caja por archivo; la consulta, la caja y la fecha van
+    en `_curiana`)
+  paginas: '— (datos: 1.696 nombres con coordenadas en cuatro regiones)'
+  acceso: 'Libre. Se regenera con `python curiana_sim/barrer_mapa.py --descargar`; es decisión de Miguel
+    (2026-09-07: «vamos con OSM»)'
+  aliases:
+  - OSM
+  - OpenStreetMap
+  - el mapa vivo
+  - osm-kaketiana
+  - barrido del mapa
   en_repo: true
 - id: oviedo-y-banos
   obra: Historia de la conquista y población de la provincia de Venezuela

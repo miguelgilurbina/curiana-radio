@@ -68,11 +68,10 @@ muestreo F10 de Miguel, **9** el exportador #42).
 1. **El muestreo F10** — verificar ~15-20 citas del corpus al azar (que la
    página exista y diga lo que el hecho afirma). Es la condición 5 del gate y
    es trabajo humano por definición.
-2. **Publicar los 2 borradores** de `6-fusion/issues-pendientes/`:
-   `issue-repertorio-vs-filiacion.md` y `issue-esquema-lecturas-toponimos.md`
-   (`gh issue create --body-file ...`). Y **reescribir** el tercero
-   (`issue-pdfs-fuentes-aporte.md`): su premisa describe una wiki de fuentes
-   que se descartó el 08-24.
+2. ~~Publicar los borradores de `6-fusion/issues-pendientes/`~~ **hecho el
+   2026-09-07**: #119 (repertorio vs. filiación), #120 (PDF tras aporte), el
+   comentario de #109 (cerrado) y el de D14 (#83); el de lecturas se archivó
+   como implementado. La cola de borradores está en cero.
 3. **La decisión de una línea sobre repertorio** para el protocolo del run 1:
    *"el run 1 se mide contra filiación, como decisión de modelado declarada;
    repertorio queda para la era 2"* — o lo contrario. Sin esa línea, el run
@@ -186,8 +185,17 @@ censo de -ana en Esteves, mismo día: ninguna forma glosada 'lugar de'
 `issues-pendientes/comentario-109-censo-ana-esteves.md`). **#109 decidido
 (B, Miguel, mismo día)**: la glosa 'lugar de' se retira, `-ana` es
 `morfema-011` sin glosa, la lista de -ana queda viva en el censo y Jayana
-entra al canon (`toponimo-110`). Falta publicar el comentario y cerrar el
-issue.
+entra al canon (`toponimo-110`). Comentario publicado y #109 cerrado.
+
+**Mismo día, tarde**: las lecturas del 25 de agosto están fusionadas (Miguel:
+«que no quede nada pendiente por ahí sin guardar o fusionar»): `curiana` es
+`toponimo-111` (C, seis lecturas: González Batista, Arcaya, Castellanos, la
+hipótesis curi ~ juri, el Coria-na de Oliver), `quiquiba` se rehabilitó a C con
+su id 034, `la cuiba` es `toponimo-112` (C), `capuhana` es `toponimo-113` (B, con
+el centro sagrado de Miguel como lectura), los cuatro *Quicer-* son antropónimos
+de Barquisimeto, y el cognado 'piedra' tiene CQ quiva. Y el **barrido del mapa
+vivo** está hecho con OSM (`barrer_mapa.py`, `6-fusion/toponimos_mapa_kaketiana.yaml`,
+ficha `osm-kaketiana`): lo nuevo de Paraguaná es el lote siguiente.
 
 ### B.6 · Oliver §3.2.4 — los caribes ✅ (minado el 2026-09-07)
 
