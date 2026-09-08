@@ -3628,3 +3628,74 @@ descartes:
       anota por cobertura. Nota de cobertura: el dictado salta de la
       p. 95 (D) a la p. 127 (G) — las letras E y F quedan sin declarar.
 
+  # ── Sesión del 2026-09-07 (segunda entrega del dictado) ──
+  - voz: debudeque
+    glosa_libro: "símil de la paledonia"
+    pagina: null            # ⚠️ PENDIENTE — dictada sin página (¿letra D, pp. 89-95?)
+    campo: comida (dulce)
+    segun_dictado: true
+    dictado: 2026-09-07
+    identificacion: >-
+      Dulce de Falcón: torta hecha con pan viejo y papelón (o panela), que
+      se corta en trozos rectangulares «parecidos a ladrillos de adobe»
+      (recetarios y blogs falconianos, consultados el 2026-09-07). La
+      paledonia con la que Medina la compara es la catalina o cuca: galleta
+      o torta de harina de trigo y melado de papelón con canela, clavo y
+      anís; el nombre paledonia es el del Zulia y los Andes.
+    cruce:
+      lexicon: >-
+        nada por forma entera. Por la raíz: DABUDA 'barro de loza'
+        [caquetío-atestiguado, Zavala #99 (HB)], y la variante escrita
+        «dabudeque» que la web trae al lado de «debudeque» empata con ella
+        letra a letra. El referente ayuda: el dulce se corta en ladrillos de
+        adobe. Sería 'lo de barro, lo hecho como adobe' — nombre por el
+        aspecto, no por el ingrediente.
+      por_glosa: "ningún dulce en el lexicón; el campo de lo dulce caquetío es la miel (harifuche 'maíz tostado y miel', ruba 'abeja') y el dato 'fruto del cardón'"
+      cognados: nada
+      toponimos: >-
+        ⭐ la raíz dabuda está en el canon dos veces: DABUDARE (toponimo-011,
+        B, 'sitio de extracción de barro'; Dabadubare en Esteves p. 37 «Dabuda:
+        barro de loza») y ABUDURE (toponimo-076, B, dabuda + ure). Es el
+        criterio 5 del protocolo, si la raíz es la misma.
+      a2: nada
+      fonotactica: >-
+        pasa: cuatro sílabas CV (de-bu-de-que), consonantes d, b, k y vocales
+        e, u, todas del inventario caquetío; cf. dabuda, budare, judibana.
+      fuera_del_repo: >-
+        No está en el DRAE ni en el lexicón de Alvarado 1921 (cero en el
+        repo, verificado). En la web es dulce típico de Falcón y de la
+        península, con dos grafías, debudeque y dabudeque, y la descripción
+        de los «ladrillitos de adobe» (Gastronomía del estado Falcón; blogs
+        de comidas criollas falconianas; recetarios de la UPEL Paraguaná).
+    filtros:
+      "1 castellano": "no restituye: ni raíz ni sufijo castellanos; la terminación -eque no es la de un derivado español (cf. -aque/-eque en bajareque, cacique — voces indígenas)"
+      "2 papiamento/neerlandés": "no encontrado (el bolo de pan viejo aruberoano es «bolo di pan»); pendiente de diccionario"
+      "3 wayuu": "no está en VOCABULARIO_BASE wayuu; no es préstamo wayuu conocido"
+      "4 panhispánico": "no: solo Falcón/Paraguaná — es lo que la hace interesante"
+      "5 africanismos": "no reconocido"
+      "6 caribe/jirajaroide": "nada"
+    criterios_positivos:
+      "1 campo local": "a medias — el dulce es colonial (pan de trigo, papelón), pero el nombre es local e intraducible"
+      "2 distribución restringida": "sí — Falcón/Paraguaná"
+      "3 fonotáctica": "pasa"
+      "4 cognado": "no"
+      "5 respaldo toponímico": "sí, si la raíz es dabuda: Dabudare, Abudure (nivel B en el canon)"
+      "6 atestación colonial": "no"
+    veredicto: C
+    razon: >
+      Plausible, no más: sobrevive a los descartes (no es castellano, ni
+      panhispánico, ni wayuu conocido) y cumple dos criterios, distribución
+      restringida y respaldo toponímico — el segundo solo si dabudeque es la
+      forma primaria y la raíz es dabuda 'barro de loza', lo que el
+      referente («ladrillitos de adobe») hace verosímil pero no prueba. El
+      REFERENTE es colonial (pan de trigo, papelón): si la etimología vale,
+      es un nombre nuevo hecho con una raíz vieja, como datera con dato —
+      evidencia de que dabuda seguía viva y productiva, no de sustrato
+      precontacto (regla 3). Hipotético, solo corpus. Lo que la subiría a B:
+      que Medina la escriba dabudeque o registre la variante; una segunda
+      fuente falconiana con la etimología del adobe; la página.
+    pendiente_miguel: >-
+      la página del libro, y si Medina la escribe con de- o con da- (la web
+      trae las dos). Si dice dabudeque, el cruce con dabuda pasa de
+      hipótesis a lectura con apoyo.
+
