@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-07**.
 
-**1791 ítems propuestos** en 32 propuestas, más **4 issue(s)/comentario(s) redactados sin publicar**.
+**1791 ítems propuestos** en 32 propuestas, más **5 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -78,6 +78,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | Archivo | Qué es |
 |---|---|
 | `comentario-109-censo-ana-esteves.md` | El censo de -ana en Esteves está hecho: cero casos de 'lugar de' |
+| `comentario-83-d14-occidental.md` | Hay una quinta candidata, y trae la ruta de contacto puesta: la esfera occidental (2026-09 |
 | `issue-esquema-lecturas-toponimos.md` | El registro de topónimos necesita una tercera voz: la de la tradición |
 | `issue-pdfs-fuentes-aporte.md` | Servir los PDF del vault desde `/kaketiana/fuentes`, tras un aporte voluntario |
 | `issue-repertorio-vs-filiacion.md` | El lexicón responde "¿de qué lengua es esta palabra?" y lo usamos como si respondiera "¿la |
