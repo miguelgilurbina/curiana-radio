@@ -17,11 +17,11 @@
 # ─────────────────────────────────────────────────────────────────────────
 meta:
   recogido: '2026-08-25'
-  estado: cola-de-trabajo   # lote 1 (2026-09-06, los del mapa de Miguel) y lote 2 (2026-09-07, los «caribe insular»; Maitiruma fue en el 1) procesados
+  estado: cola-de-trabajo   # lote 7 (2026-09-07, el mapa vivo OSM contra Esteves: 18 nombres) · lote 1 (2026-09-06, los del mapa de Miguel) y lote 2 (2026-09-07, los «caribe insular»; Maitiruma fue en el 1) procesados
   obra: esteves-1989
   total_indice: 186
-  ya_en_canon: 35
-  por_procesar: 151
+  ya_en_canon: 54
+  por_procesar: 133
 
 # Los que YA están en 2-lengua/toponimos.yaml (referencia cruzada):
 ya_registrados:
@@ -45,6 +45,25 @@ ya_registrados:
   - {forma: Maitiruma, canon: toponimo-078, lote: 2026-09-06}
   - {forma: Supí, canon: toponimo-077, lote: 2026-09-06}
   - {forma: Jayana, canon: toponimo-110, lote: 2026-09-07}   # #109 decisión B: primer -ana sin glosa de la lista viva
+  - {forma: Asaro, canon: toponimo-126, lote: 2026-09-07-osm}
+  - {forma: Bajabaroa, canon: toponimo-120, lote: 2026-09-07-osm}
+  - {forma: Baracara, canon: toponimo-127, lote: 2026-09-07-osm}
+  - {forma: Bariquí, canon: toponimo-114, lote: 2026-09-07-osm}
+  - {forma: Bibuche, canon: toponimo-119, lote: 2026-09-07-osm}
+  - {forma: Coabana, canon: toponimo-116, lote: 2026-09-07-osm}
+  - {forma: Cumujacoa, canon: toponimo-115, lote: 2026-09-07-osm}
+  - {forma: Caruca, canon: toponimo-118, lote: 2026-09-07-osm}
+  - {forma: Chiguaral, canon: toponimo-124, lote: 2026-09-07-osm}
+  - {forma: Guacuira, canon: toponimo-117, lote: 2026-09-07-osm}
+  - {forma: Guacujúa, canon: toponimo-128, lote: 2026-09-07-osm}
+  - {forma: Oripopo, canon: toponimo-125, lote: 2026-09-07-osm}
+  - {forma: Pitajaya, canon: toponimo-121, lote: 2026-09-07-osm}
+  - {forma: Sabarigua, canon: toponimo-122, lote: 2026-09-07-osm}
+  - {forma: Sibidigual, canon: toponimo-123, lote: 2026-09-07-osm}
+  - {forma: Tequeguacare, canon: toponimo-129, lote: 2026-09-07-osm}
+  - {forma: Guarama, canon: toponimo-131, lote: 2026-09-07-osm}
+  - {forma: Capuhana, canon: toponimo-113, lote: 2026-09-07-osm}
+  - {forma: Sisibauco, canon: toponimo-130, lote: 2026-09-07-osm}   # era el «[ilegible …Sisibaúco]» del índice; lo resolvió el mapa vivo
   - {forma: Amuay, canon: toponimo-090, lote: 2026-09-07, estrato: no-caquetio-segun-esteves}
   - {forma: Elegüey, canon: toponimo-091, lote: 2026-09-07, estrato: no-caquetio-segun-esteves}
   - {forma: Jamaica, canon: toponimo-093, lote: 2026-09-07, estrato: no-caquetio-segun-esteves}
@@ -69,19 +88,14 @@ por_procesar:
   - {forma: Aguaque}
   - {forma: Antuní}
   - {forma: Arajó}
-  - {forma: Asaro}
   - {forma: Asubure}
   - {forma: Avotuca}
   - {forma: Babahuro}
-  - {forma: Bajabaroa}
   - {forma: Bajarigua}
   - {forma: Barabara}
-  - {forma: Baracara}
   - {forma: Barbasco}
-  - {forma: Bariquí}
   - {forma: Barisigua}
   - {forma: Bibidure}
-  - {forma: Bibuche}
   - {forma: Biniche}
   - {forma: Bucuruy}
   - {forma: Buchaquiba}
@@ -92,17 +106,14 @@ por_procesar:
   - {forma: Camoruco}
   - {forma: Camunare}
   - {forma: Capacheruda}
-  - {forma: Capuhana}
   - {forma: Caradacagua}
   - {forma: Carajaima}
   - {forma: Cararapa}
   - {forma: Cariguariana}
   - {forma: Carirubana}
-  - {forma: Caruca}
   - {forma: Caujarito}
   - {forma: Cayude}
   - {forma: Cimiro}
-  - {forma: Coabana}
   - {forma: Coduto}
   - {forma: Cuara}
   - {forma: Cubiano}
@@ -111,13 +122,11 @@ por_procesar:
   - {forma: Cude}
   - {forma: Cujicana}
   - {forma: Cumaraguas}
-  - {forma: Cumujacoa}
   - {forma: Cunacho}
   - {forma: Curaidebo}
   - {forma: Cuzubitos}
   - {forma: Chaure}
   - {forma: Chichibana}
-  - {forma: Chiguaral}
   - {forma: Chirache}
   - {forma: Chuchube}
   - {forma: Chujaro}
@@ -126,12 +135,9 @@ por_procesar:
   - {forma: Duraguaco}
   - {forma: Garrapata}
   - {forma: Gisebo}
-  - {forma: Guacuira}
-  - {forma: Guacujúa}
   - {forma: Guachaco}
   - {forma: Guachunepe}
   - {forma: Guanadito}
-  - {forma: Guarama}
   - {forma: Guaranao}
   - {forma: Guarataro}
   - {forma: Guaricure}
@@ -166,20 +172,17 @@ por_procesar:
   - {forma: Niraba}
   - {forma: Nonocoti}
   - {forma: Oboque}
-  - {forma: Oripopo}
   - {forma: Paguara}
   - {forma: Perabay}
   - {forma: Peticuare}
   - {forma: Pipiacoa}
   - {forma: Pipiribana}
-  - {forma: Pitajaya}
   - {forma: Pury}
   - {forma: Quibarute}
   - {forma: Quitaire}
   - {forma: Quipital}
   - {forma: Quipayú}
   - {forma: Quiyegua}
-  - {forma: Sabarigua}
   - {forma: Sacuragua}
   - {forma: Saguatumo}
   - {forma: Sanajaquí}
@@ -188,7 +191,6 @@ por_procesar:
   - {forma: Sarinao}
   - {forma: Saruro}
   - {forma: Sicaname}
-  - {forma: Sibidigual}
   - {forma: Siraba}
   - {forma: Supideo}
   - {forma: Suriquiva}
@@ -197,7 +199,6 @@ por_procesar:
   - {forma: Taque}
   - {forma: Tacuato}
   - {forma: Tausabana}
-  - {forma: Tequeguacare}
   - {forma: Ticuí}
   - {forma: Tiguadare}
   - {forma: Tijuro}

@@ -1403,6 +1403,44 @@ Lo que dejó el lote, aparte de las entradas:
 - Las dos páginas dañadas por el OCR (30 y 52) se leyeron en la imagen
   renderizada del PDF: es el camino cuando la línea que decide está borrosa.
 
+## Lote 7 (2026-09-07): el mapa vivo contra el libro
+
+**Criterio.** Los nombres de Paraguaná que el barrido OSM (`barrer_mapa.py`,
+[[osm-kaketiana]]) dejó como «nuevos» o como «aproximados»: 16 y 20. Miguel:
+«dale, procésalo».
+
+**Qué entró.** Nivel B: **Bariquí** (p. 22: *bara* + *quire* 'palo colorado',
+el árbol de la tinta; *quire* recurre en Sanajaquire, p. 58; Alvarado da la
+planta a los ayamanes). Nivel C, trece: Cumujacoa (p. 33, 'lugar de los
+zamuros' sobre Curumubacoa enmendado), Coabana (p. 31, *coa* + *bana*; «los
+vecinos dicen Cuabana», y el mapa también), Guacuira (p. 38, dos versiones
+orales con reserva; Martí escribió Guaimaguacuira), Caruca (p. 28, la paja de
+la torta de barro de los techos; recurre en Machuruca), Bibuche (p. 23, *buche*
+'melocacto'; Chibuche, Chivuche), Bajabaroa (p. 19, 'el caño de Baroa'; el
+mapa lo resegmentó en castellano: Bajo Aroa), Pitajaya (p. 56, voz taína del
+castellano por el susucure), Sabarigua y Sibidigual (pp. 57 y 60, el arbusto
+*sibidigua*), Chiguaral (p. 36, *chiguate*), Oripopo (p. 55, 'zamuro' andino
+según Esteves: estrato timote-cuica como lectura suya), Asaro (p. 17, ~ wayuu
+Sarosaro), Baracara (p. 19, *bara-*; Maracara en 1881). Descartados sin glosa:
+Guacujúa (p. 38), Tequeguacare (p. 62, tres formas), **Sisibauco** (p. 60: era
+el «[ilegible …Sisibaúco]» del índice y el mapa lo resolvió), Guarama (p. 41,
+«podría ser la misma Jayana»; y el mapa trae Nueva Jayama junto a Amuaicito).
+
+**Lo que el mapa dejó sin fuente**, registrado con coordenadas y deuda:
+Cumairebo (-ebo), Divacoa (-coa), Gusimu, Tabe, Urumare (-are), Pilancón, La
+Miraba. Y cuatro castellanos que el filtro no cazó: Villa Real, Golfete de
+Coro, La Macolla, Buchal (*buche* + -al).
+
+**Qué dejó.** Tres permutaciones nuevas para la skill: la **falsa
+segmentación castellana** (Bajabaroa → Bajo Aroa), la **ch- de la forma
+hablada** (Bibuche → Chibuche → Chivuche) y **u~a / i~o** en la última sílaba
+(Abudure/Abudare, Cumujacoa/Cumajacoa, Oripopo/Oropopo). Dos fitónimos con
+recurrencia interna (*sibidigua* ×2, *chiguate/chiguare* ×2) y un formante
+nuevo con dos casos (*quire* 'color'). Y la confirmación de la regla de Miguel
+al revés: **el mapa a veces conserva mejor que el libro** (Sibarigua está más
+cerca de *sibidigua* que la cabecera Sabarigua; Cuabana es la forma que la
+gente dice).
+
 ## El censo de -ana para #109 (2026-09-07)
 
 **Qué se preguntó.** Cuántos topónimos en -ana/-aná tiene Esteves y cuántos

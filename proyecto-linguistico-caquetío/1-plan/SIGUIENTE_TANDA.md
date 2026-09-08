@@ -195,7 +195,12 @@ su id 034, `la cuiba` es `toponimo-112` (C), `capuhana` es `toponimo-113` (B, co
 el centro sagrado de Miguel como lectura), los cuatro *Quicer-* son antropónimos
 de Barquisimeto, y el cognado 'piedra' tiene CQ quiva. Y el **barrido del mapa
 vivo** está hecho con OSM (`barrer_mapa.py`, `6-fusion/toponimos_mapa_kaketiana.yaml`,
-ficha `osm-kaketiana`): lo nuevo de Paraguaná es el lote siguiente.
+ficha `osm-kaketiana`). Y el **lote 7** (mismo día, «dale, procésalo»): los 36
+del barrido de Paraguaná procesados — Bariquí (B), trece C, cuatro descartados
+de Esteves (Sisibauco era el «ilegible» del índice), siete del mapa sin fuente
+con coordenadas, cuatro castellanos; ids 114-142. Índice de Esteves: 54 en
+canon, 133 en cola. El dictado de Medina sigue en paralelo (debudeque C,
+dividive D + mc-mundo-021; disey ya estaba).
 
 ### B.6 · Oliver §3.2.4 — los caribes ✅ (minado el 2026-09-07)
 

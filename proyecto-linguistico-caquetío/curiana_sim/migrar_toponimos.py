@@ -68,6 +68,9 @@ OBRA_POR_FUENTE = {
     "oliver-1989-cap3": "oliver-1989-cap3",
     "velasco-2015-resistencia": "velasco-2015-resistencia",
     "castellanos-elegias": "castellanos-elegias",
+    # 2026-09-07: el mapa vivo (OSM) como capa de datos citable para
+    # existencia y coordenadas, nunca para glosa.
+    "osm-kaketiana": "osm-kaketiana",
 }
 
 

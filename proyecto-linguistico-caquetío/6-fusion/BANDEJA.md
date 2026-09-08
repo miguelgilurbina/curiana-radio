@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-07**.
 
-**1803 ítems propuestos** en 32 propuestas, más **0 issue(s)/comentario(s) redactados sin publicar**.
+**1809 ítems propuestos** en 32 propuestas, más **0 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -32,7 +32,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-09-01.yaml` | ? | 0 |  |
 | `frase_saludo_mitare.yaml` | ? | 2 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
-| `medina_colina_dictado.yaml` | ? | 63 |  |
+| `medina_colina_dictado.yaml` | ? | 64 |  |
 | `migracion_lemas_fase2.yaml` | ? | 79 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
 | `oliver_324_caribes.yaml` | ? | 0 | ⚠️ no parsea: mapping values are not allowed here
@@ -49,7 +49,7 @@ editar_a_mano: no
 | `tabla_a9_oliver.yaml` | oliver-1989-cap2 | 49 |  |
 | `toponimia_coro_espina.yaml` | gonzalez-batista-nombre-de-coro | 5 |  |
 | `toponimia_paraguana_miguel.yaml` | ? | 5 |  |
-| `toponimos_esteves_indice.yaml` | esteves-1989 | 151 |  |
+| `toponimos_esteves_indice.yaml` | esteves-1989 | 133 |  |
 | `velasco_primarios_agi.yaml` | velasco-2015-resistencia | 4 |  |
 
 Vistas generadas en `6-fusion/` (no cuentan: juntan lo que ya está arriba):
@@ -68,7 +68,7 @@ falsa y se corrigió). Entradas contadas por patrón de dict.
 | `lexicon_alvarado.py` | alvarado-1921 | 217 | lo importan generar_tablero y auditar_82 |
 | `lexicon_gatschet.py` | gatschet-1885 | 88 | lo importan generar_tablero y auditar_82 |
 | `lexicon_van_buurt.py` | van-buurt-2014 | 231 | lo importan generar_tablero y auditar_82 |
-| `lexicon_toponimos.py` | varias (F11) | 118 | lo importa migrar_toponimos |
+| `lexicon_toponimos.py` | varias (F11) | 141 | lo importa migrar_toponimos |
 | `lexicon_candidatos.py` | aisladas 2026-06-28 | 441 | lo importa generar_tablero |
 
 ## Redactado y sin publicar (`6-fusion/issues-pendientes/`)

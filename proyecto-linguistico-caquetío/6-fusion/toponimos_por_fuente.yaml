@@ -9,16 +9,16 @@ meta:
     de fusión.'
   marcas: ★ en el canon · ≡ en el índice de Esteves · ◆ en el mapa de Miguel · ⌂ en asentamientos.yaml
   resumen:
-    menciones: 696
-    formas_distintas: 495
-    fuentes: 14
+    menciones: 732
+    formas_distintas: 507
+    fuentes: 15
     por_fuente:
       zavala-reyes-2015:
         menciones: 57
         formas: 57
       esteves-1989:
-        menciones: 233
-        formas: 191
+        menciones: 257
+        formas: 192
       castellanos-elegias:
         menciones: 19
         formas: 16
@@ -38,7 +38,7 @@ meta:
         menciones: 9
         formas: 8
       medina-colina-sxx:
-        menciones: 22
+        menciones: 23
         formas: 20
       gatschet-1885:
         menciones: 31
@@ -53,11 +53,14 @@ meta:
         menciones: 5
         formas: 5
       sin-procedencia:
-        menciones: 2
-        formas: 2
-    en_canon: 113
+        menciones: 6
+        formas: 6
+      osm-kaketiana:
+        menciones: 7
+        formas: 7
+    en_canon: 142
     en_nodos: 18
-    sin_canon_ni_nodo: 377
+    sin_canon_ni_nodo: 360
     cruces:
       mapa_de_miguel_en_esteves:
       - Buchuaco
@@ -425,8 +428,8 @@ por_fuente:
 - obra: esteves-1989
   en_bibliografia: true
   descripcion: 'el índice ''Topónimos compilados'' de Paraguaná (pp. 68-69): la cola de la campaña'
-  menciones: 233
-  formas: 191
+  menciones: 257
+  formas: 192
   toponimos:
   - forma: judibana
     tipo: canon
@@ -444,6 +447,18 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml
     dato: 'Yabu-quiba: la piedra del yabo, árbol resinoso'
     ref: toponimo-105 · nivel A · topónimo · fuente procedencia
+  - forma: bariquí
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: «Bariquire, que es la forma plena, es un árbol tanante que da una tinta como óxido de hierro y, según
+      hemos l…
+    ref: toponimo-114 · nivel B · topónimo · fuente procedencia
+  - forma: bariquí
+    tipo: lectura:glosa-fuente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: '«Barquís: especie de planta sarmentosa de Occidente; tinta que usaban para pintarse los indios ayamanes»'
+    ref: toponimo-114 · Lisandro Alvarado, Glosario de voces indígenas, vía Esteves 1989 · 2026-09-07 · segunda
+      atestación de la planta y de su uso; Alvarado la da…
   - forma: capuhana
     tipo: canon
     donde: 2-lengua/toponimos.yaml
@@ -477,6 +492,107 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml
     dato: 'los dos buches. Buche: cardo, Aco: par, casal, pareja'
     ref: toponimo-086 · nivel B · topónimo · fuente procedencia
+  - forma: cumujacoa
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: «Cumuyacoa es como está escrito en ese censo [1881]. La voz, considerada como una alteración de Curumubacoa,
+      …
+    ref: toponimo-115 · nivel C · topónimo · fuente procedencia
+  - forma: coabana
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: '«El topónimo es una voz compuesta que dice: el cerro de las coas. Coa es un tosco instrumento de labranza,
+      un…'
+    ref: toponimo-116 · nivel C · topónimo · fuente procedencia
+  - forma: guacuira
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: '«Dos versiones orales hemos obtenido sobre el origen del nombre. La primera: que proviene de guacoa,
+      ave de c…'
+    ref: toponimo-117 · nivel C · topónimo · fuente procedencia
+  - forma: guacuira
+    tipo: lectura:etimologia-popular
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: de guacoa, ave de cacería, en diminutivo
+    ref: 'toponimo-117 · versión oral recogida por Esteves 1989 · 2026-09-07 · Esteves: «con reservas porque el
+      lugar anteriormente tuvo o…'
+  - forma: guacuira
+    tipo: lectura:etimologia-popular
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: de guaco, nombre de una hierba
+    ref: toponimo-117 · versión oral recogida por Esteves 1989 · 2026-09-07 · misma reserva de Esteves; guaco es
+      voz panamericana (Mikani…
+  - forma: caruca
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: «Caruca es una hierba áspera que se usaba para la preparación de la torta de barro con que cubrían los
+      techos…
+    ref: toponimo-118 · nivel C · topónimo · fuente procedencia
+  - forma: bibuche
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: «Fundo pecuario al noroeste de Pueblo Nuevo, punto de referencia en los linderos de las tierras comuneras
+      de …
+    ref: toponimo-119 · nivel C · topónimo · fuente procedencia
+  - forma: bajabaroa
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: «Sitio costeño al oeste del Cabo de San Román. Se nos ha informado que Baroa era el nombre de un cacique,
+      per…
+    ref: toponimo-120 · nivel C · topónimo · fuente procedencia
+  - forma: pitajaya
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: «La Pitajaya, aldea de Buenavista. Doce casas y 71 vecinos registra en el censo de 1881. Pitajaya es otro
+      nom…
+    ref: toponimo-121 · nivel C · topónimo · fuente procedencia
+  - forma: sabarigua
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: «Aldea del municipio Adícora, al norte de la población de Santa Cruz, la de Pueblo Nuevo. Puede ser una
+      alter…
+    ref: toponimo-122 · nivel C · topónimo · fuente procedencia
+  - forma: sibidigual
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: «Lugar cercano a la aldea de Matividiro, pertenece al municipio Buenavista. Sibidigual, colectivo abundancial…
+    ref: toponimo-123 · nivel C · topónimo · fuente procedencia
+  - forma: chiguaral
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: '«Lugar del municipio Jadacaquiva. Tenía en 1881 más de ochenta vecinos. Chiguaral: colectivo de chiguate,
+      pla…'
+    ref: toponimo-124 · nivel C · topónimo · fuente procedencia
+  - forma: oripopo
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: «Lugar cercano a la aldea de Cumujacoa. Oripopo es zamuro en dialectos andinos, lo que indica —ya lo hemos
+      ba…
+    ref: toponimo-125 · nivel C · topónimo · fuente procedencia
+  - forma: oripopo
+    tipo: lectura:hipotesis
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: 'oripopo ''zamuro'' en dialectos andinos: huella de la lengua timote-cuica en Paraguaná'
+    ref: 'toponimo-125 · Esteves 1989 · 2026-09-07 · estrato atribuido por el autor, sin fuente andina citada: l…'
+  - forma: asaro
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: «Hay una gran semejanza con Sarosaro, un topónimo de La Guajira… Respecto de este Sarosaro guajiro, que
+      es pl…
+    ref: toponimo-126 · nivel C · topónimo · fuente procedencia
+  - forma: baracara
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: «Maracara se lee en el censo de 1881, pero Baracara es como está escrito en la historia de Paraguaná del
+      Dr. …
+    ref: toponimo-127 · nivel C · topónimo · fuente procedencia
+  - forma: baracara
+    tipo: lectura:etimologia-popular
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: provino de una expresión insolente pronunciada por un quisquilloso cacique en momentos en que le disputaba
+      al…
+    ref: 'toponimo-127 · versión recogida por Esteves 1989 · 2026-09-07 · Esteves: «una versión muy pintoresca»;
+      anécdota, no etimolo…'
   - forma: paraguaná
     tipo: lectura:glosa-fuente
     donde: 2-lengua/toponimos.yaml §lecturas
@@ -695,6 +811,30 @@ por_fuente:
     dato: antiguo fundo pecuario cerca de Amuaicito, hoy caserío del municipio Los Taques; con Adícora, único puerto
       de…
     ref: toponimo-110 · nivel descartado · topónimo · fuente procedencia
+  - forma: guacujúa
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: 'aldea del municipio Moruy; censo de 1881: 14 casas, 97 vecinos; «la grafía Huacujúa, que aparece en un
+      mapa d…'
+    ref: toponimo-128 · nivel descartado · topónimo · fuente procedencia
+  - forma: tequeguacare
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: aldea del municipio Moruy; «Tequeguacure es como está escrito en la Ley de División Territorial, tal vez
+      por …
+    ref: toponimo-129 · nivel descartado · topónimo · fuente procedencia
+  - forma: sisibauco
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: lugar y quebrada en el municipio Baraived; «paraje frondoso donde abundan los yacures, árboles de verdor
+      pere…
+    ref: toponimo-130 · nivel descartado · topónimo · fuente procedencia
+  - forma: guarama
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: lugar costeño «señalado en un antiguo mapa, localizado en el punto donde hoy está Amuaicito. Podría ser
+      la mi…
+    ref: toponimo-131 · nivel descartado · topónimo · fuente procedencia
   - forma: Guacurebo
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
@@ -775,6 +915,82 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
     ref: toponimo-110
+  - forma: Asaro
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-126
+  - forma: Bajabaroa
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-120
+  - forma: Baracara
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-127
+  - forma: Bariquí
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-114
+  - forma: Bibuche
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-119
+  - forma: Coabana
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-116
+  - forma: Cumujacoa
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-115
+  - forma: Caruca
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-118
+  - forma: Chiguaral
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-124
+  - forma: Guacuira
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-117
+  - forma: Guacujúa
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-128
+  - forma: Oripopo
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-125
+  - forma: Pitajaya
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-121
+  - forma: Sabarigua
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-122
+  - forma: Sibidigual
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-123
+  - forma: Tequeguacare
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-129
+  - forma: Guarama
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-131
+  - forma: Capuhana
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-113
+  - forma: Sisibauco
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-130
   - forma: Amuay
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
@@ -850,9 +1066,6 @@ por_fuente:
   - forma: Arajó
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Asaro
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Asubure
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
@@ -862,31 +1075,19 @@ por_fuente:
   - forma: Babahuro
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Bajabaroa
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Bajarigua
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Barabara
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Baracara
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Barbasco
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Bariquí
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Barisigua
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Bibidure
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Bibuche
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Biniche
@@ -919,9 +1120,6 @@ por_fuente:
   - forma: Capacheruda
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Capuhana
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Caradacagua
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
@@ -937,9 +1135,6 @@ por_fuente:
   - forma: Carirubana
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Caruca
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Caujarito
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
@@ -947,9 +1142,6 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Cimiro
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Coabana
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Coduto
@@ -976,9 +1168,6 @@ por_fuente:
   - forma: Cumaraguas
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Cumujacoa
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Cunacho
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
@@ -992,9 +1181,6 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Chichibana
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Chiguaral
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Chirache
@@ -1021,12 +1207,6 @@ por_fuente:
   - forma: Gisebo
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Guacuira
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Guacujúa
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Guachaco
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
@@ -1034,9 +1214,6 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Guanadito
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Guarama
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Guaranao
@@ -1141,9 +1318,6 @@ por_fuente:
   - forma: Oboque
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Oripopo
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Paguara
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
@@ -1157,9 +1331,6 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Pipiribana
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Pitajaya
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Pury
@@ -1178,9 +1349,6 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Quiyegua
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Sabarigua
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Sacuragua
@@ -1207,9 +1375,6 @@ por_fuente:
   - forma: Sicaname
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Sibidigual
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Siraba
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
@@ -1232,9 +1397,6 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Tausabana
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Tequeguacare
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Ticuí
@@ -1800,7 +1962,7 @@ por_fuente:
   en_bibliografia: true
   descripcion: 'lo que el dictado toca: voces que son topónimo en Esteves, lo mandado a la cola, y los pueblos del
     autor (s. XX)'
-  menciones: 22
+  menciones: 23
   formas: 20
   toponimos:
   - forma: Saruro
@@ -1916,6 +2078,13 @@ por_fuente:
     dato: 'ISOGLOSA INTRAPENINSULAR: al lagarto amarillo lo llaman gualamo «en las poblaciones de Tacuato y Santa
       Ana»; …'
     ref: p. 130
+    epoca: s. XX
+  - forma: Adícora
+    tipo: isoglosa
+    donde: 6-fusion/medina_colina_dictado.yaml §datos_mundo:mc-mundo-021
+    dato: El dividive («árbol silvestre de nuestros montes cuyo fruto es astringente, liviano») «fue muy apreciado
+      como…
+    ref: p. None
     epoca: s. XX
 - obra: gatschet-1885
   en_bibliografia: true
@@ -3515,8 +3684,8 @@ por_fuente:
 - obra: sin-procedencia
   en_bibliografia: false
   descripcion: entradas del canon cuya fuente no se pudo declarar ni inferir — deuda
-  menciones: 2
-  formas: 2
+  menciones: 6
+  formas: 6
   toponimos:
   - forma: la rinconada
     tipo: canon
@@ -3528,6 +3697,73 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml
     dato: mapa vivo, sector del Capubana; fotos de Miguel 2026-09-01
     ref: toponimo-107 · nivel descartado · topónimo · fuente deuda
+  - forma: villa real
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: OSM 2026, lugar, 12.054 -69.982
+    ref: toponimo-139 · nivel descartado · topónimo · fuente deuda
+  - forma: golfete de coro
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: 'OSM 2026, bahía, 11.556 -69.974: el nombre castellano del golfo interior; Coro es el nombre que importa,
+      y ti…'
+    ref: toponimo-140 · nivel descartado · topónimo · fuente deuda
+  - forma: la macolla
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: 'OSM 2026, lugar 12.090 -70.204 y Punta Macolla 12.083 -70.217: macolla es castellano, ''conjunto de vástagos
+      d…'
+    ref: toponimo-141 · nivel descartado · topónimo · fuente deuda
+  - forma: buchal
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: 'OSM 2026, poblado, 11.960 -69.842: colectivo castellano -al sobre buche ''melocacto'' [caquetío-atestiguado];
+      c…'
+    ref: toponimo-142 · nivel descartado · topónimo · fuente deuda
+- obra: osm-kaketiana
+  en_bibliografia: true
+  descripcion: ''
+  menciones: 7
+  formas: 7
+  toponimos:
+  - forma: cumairebo
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: lugar, 12.003 -69.920, Paraguaná; termina en -ebo 'paso, camino', y se parece a Cumarebo, el puerto del
+      Golfe…
+    ref: toponimo-132 · nivel descartado · topónimo · fuente procedencia
+  - forma: divacoa
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: 'poblado, 11.783 -69.936; termina en -coa como los -bacoa ''lugar de'': ¿di(ba)coa con haplología? Sin
+      fuente no…'
+    ref: toponimo-133 · nivel descartado · topónimo · fuente procedencia
+  - forma: gusimu
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: lugar, 12.098 -70.178
+    ref: toponimo-134 · nivel descartado · topónimo · fuente procedencia
+  - forma: tabe
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: lugar, 11.917 -70.104
+    ref: toponimo-135 · nivel descartado · topónimo · fuente procedencia
+  - forma: urumare
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: lugar, 11.924 -70.152; termina en -are 'sitio de' (morfema-002); cf. Urumaco en Falcón occidental
+    ref: toponimo-136 · nivel descartado · topónimo · fuente procedencia
+  - forma: pilancón
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: poblado, 11.833 -69.927; suena castellano (-ón) pero no restituye a ninguna palabra conocida
+    ref: toponimo-137 · nivel descartado · topónimo · fuente procedencia
+  - forma: la miraba
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: poblado, 11.834 -70.054, y Cerro La Miraba, 11.850 -70.046; con artículo castellano y sin fuente; no es
+      Miraca
+    ref: toponimo-138 · nivel descartado · topónimo · fuente procedencia
 indice_de_formas:
 - forma: abudure
   variantes:
@@ -3629,6 +3865,7 @@ indice_de_formas:
   - esteves-1989 · indice · toponimo-024
   - moron-2012-petroglifos · estacion-rupestre
   - medina-colina-sxx · lugar-s-xx
+  - medina-colina-sxx · isoglosa · p. None
 - forma: Adicoura
   variantes: []
   fuentes:
@@ -3899,17 +4136,19 @@ indice_de_formas:
   - van-buurt-2014 · canon · toponimo-051 · nivel descartado · topónimo · fuente inferida-por-cruce
   - van-buurt-2014 · indice-abc · §7
   - testimonio-miguel · hipotesis-de-miguel
-- forma: Asaro
-  variantes: []
+- forma: asaro
+  variantes:
+  - Asaro
   fuentes:
   - esteves-1989
   cruces:
-    en_canon: null
+    en_canon: toponimo-126 · nivel C
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-126 · nivel C · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-126
 - forma: Asubure
   variantes: []
   fuentes:
@@ -3976,17 +4215,19 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - van-buurt-2014 · indice-abc · §7
-- forma: Bajabaroa
-  variantes: []
+- forma: bajabaroa
+  variantes:
+  - Bajabaroa
   fuentes:
   - esteves-1989
   cruces:
-    en_canon: null
+    en_canon: toponimo-120 · nivel C
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-120 · nivel C · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-120
 - forma: Bajarigua
   variantes: []
   fuentes:
@@ -4022,17 +4263,21 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: Baracara
-  variantes: []
+- forma: baracara
+  variantes:
+  - Baracara
   fuentes:
   - esteves-1989
   cruces:
-    en_canon: null
+    en_canon: toponimo-127 · nivel C
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-127 · nivel C · topónimo · fuente procedencia
+  - 'esteves-1989 · lectura:etimologia-popular · toponimo-127 · versión recogida por Esteves 1989 · 2026-09-07 ·
+    Esteves: «una versión muy pintoresca»; anécdota, no etimolo…'
+  - esteves-1989 · indice · toponimo-127
 - forma: baracoica
   variantes: []
   fuentes:
@@ -4083,17 +4328,21 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: Bariquí
-  variantes: []
+- forma: bariquí
+  variantes:
+  - Bariquí
   fuentes:
   - esteves-1989
   cruces:
-    en_canon: null
+    en_canon: toponimo-114 · nivel B
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-114 · nivel B · topónimo · fuente procedencia
+  - esteves-1989 · lectura:glosa-fuente · toponimo-114 · Lisandro Alvarado, Glosario de voces indígenas, vía Esteves
+    1989 · 2026-09-07 · segunda atestación de la planta y de su uso; Alvarado la da…
+  - esteves-1989 · indice · toponimo-114
 - forma: bariquisimeto
   variantes: []
   fuentes:
@@ -4200,17 +4449,19 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: Bibuche
-  variantes: []
+- forma: bibuche
+  variantes:
+  - Bibuche
   fuentes:
   - esteves-1989
   cruces:
-    en_canon: null
+    en_canon: toponimo-119 · nivel C
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-119 · nivel C · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-119
 - forma: Biniche
   variantes: []
   fuentes:
@@ -4278,6 +4529,17 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - van-buurt-2014 · indice-abc · §7
+- forma: buchal
+  variantes: []
+  fuentes:
+  - sin-procedencia
+  cruces:
+    en_canon: toponimo-142 · nivel descartado
+    en_esteves: false
+    en_mapa_miguel: false
+    en_nodos: null
+  menciones:
+  - sin-procedencia · canon · toponimo-142 · nivel descartado · topónimo · fuente deuda
 - forma: Buchaquiba
   variantes: []
   fuentes:
@@ -4674,7 +4936,7 @@ indice_de_formas:
     modelo espacial (Claude, 2026-09-01):…
   - esteves-1989 · lectura:tradicion-local · toponimo-113 · tradición local recogida por Francisco Tamayo, vía Esteves
     1989 · 2026-09-07
-  - esteves-1989 · indice
+  - esteves-1989 · indice · toponimo-113
 - forma: caquetío
   variantes: []
   fuentes:
@@ -4826,17 +5088,19 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - van-buurt-2014 · indice-abc · §7
-- forma: Caruca
-  variantes: []
+- forma: caruca
+  variantes:
+  - Caruca
   fuentes:
   - esteves-1989
   cruces:
-    en_canon: null
+    en_canon: toponimo-118 · nivel C
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-118 · nivel C · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-118
 - forma: caseto
   variantes:
   - Caseto
@@ -5110,17 +5374,19 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: Chiguaral
-  variantes: []
+- forma: chiguaral
+  variantes:
+  - Chiguaral
   fuentes:
   - esteves-1989
   cruces:
-    en_canon: null
+    en_canon: toponimo-124 · nivel C
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-124 · nivel C · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-124
 - forma: Chinchó
   variantes:
   - Chinchorro
@@ -5223,17 +5489,19 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: Coabana
-  variantes: []
+- forma: coabana
+  variantes:
+  - Coabana
   fuentes:
   - esteves-1989
   cruces:
-    en_canon: null
+    en_canon: toponimo-116 · nivel C
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-116 · nivel C · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-116
 - forma: cocodite
   variantes:
   - Cocodite
@@ -5535,6 +5803,17 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - gatschet-1885 · indice-aruba · Pinart 1882
+- forma: cumairebo
+  variantes: []
+  fuentes:
+  - osm-kaketiana
+  cruces:
+    en_canon: toponimo-132 · nivel descartado
+    en_esteves: false
+    en_mapa_miguel: false
+    en_nodos: null
+  menciones:
+  - osm-kaketiana · canon · toponimo-132 · nivel descartado · topónimo · fuente procedencia
 - forma: Cumaraguas
   variantes: []
   fuentes:
@@ -5560,17 +5839,19 @@ indice_de_formas:
   menciones:
   - zavala-reyes-2015 · canon · toponimo-004 · nivel A · topónimo · fuente procedencia
   - castellanos-elegias · lista-1589 · II, Elegía 1
-- forma: Cumujacoa
-  variantes: []
+- forma: cumujacoa
+  variantes:
+  - Cumujacoa
   fuentes:
   - esteves-1989
   cruces:
-    en_canon: null
+    en_canon: toponimo-115 · nivel C
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-115 · nivel C · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-115
 - forma: Cunacho
   variantes: []
   fuentes:
@@ -5773,6 +6054,17 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
+- forma: divacoa
+  variantes: []
+  fuentes:
+  - osm-kaketiana
+  cruces:
+    en_canon: toponimo-133 · nivel descartado
+    en_esteves: false
+    en_mapa_miguel: false
+    en_nodos: null
+  menciones:
+  - osm-kaketiana · canon · toponimo-133 · nivel descartado · topónimo · fuente procedencia
 - forma: doaca
   variantes: []
   fuentes:
@@ -5865,6 +6157,17 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
+- forma: golfete de coro
+  variantes: []
+  fuentes:
+  - sin-procedencia
+  cruces:
+    en_canon: toponimo-140 · nivel descartado
+    en_esteves: false
+    en_mapa_miguel: false
+    en_nodos: null
+  menciones:
+  - sin-procedencia · canon · toponimo-140 · nivel descartado · topónimo · fuente deuda
 - forma: Gorybacoa
   variantes: []
   fuentes:
@@ -5922,28 +6225,36 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - testimonio-miguel · mapa · 2026-09-01
-- forma: Guacuira
-  variantes: []
+- forma: guacuira
+  variantes:
+  - Guacuira
   fuentes:
   - esteves-1989
   cruces:
-    en_canon: null
+    en_canon: toponimo-117 · nivel C
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
-- forma: Guacujúa
-  variantes: []
+  - esteves-1989 · canon · toponimo-117 · nivel C · topónimo · fuente procedencia
+  - 'esteves-1989 · lectura:etimologia-popular · toponimo-117 · versión oral recogida por Esteves 1989 · 2026-09-07
+    · Esteves: «con reservas porque el lugar anteriormente tuvo o…'
+  - esteves-1989 · lectura:etimologia-popular · toponimo-117 · versión oral recogida por Esteves 1989 · 2026-09-07
+    · misma reserva de Esteves; guaco es voz panamericana (Mikani…
+  - esteves-1989 · indice · toponimo-117
+- forma: guacujúa
+  variantes:
+  - Guacujúa
   fuentes:
   - esteves-1989
   cruces:
-    en_canon: null
+    en_canon: toponimo-128 · nivel descartado
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-128 · nivel descartado · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-128
 - forma: guacurebo
   variantes:
   - Guacurebo
@@ -6057,17 +6368,19 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - zavala-reyes-2015 · canon · toponimo-058 · nivel descartado · topónimo · fuente inferida-por-cruce
-- forma: Guarama
-  variantes: []
+- forma: guarama
+  variantes:
+  - Guarama
   fuentes:
   - esteves-1989
   cruces:
-    en_canon: null
+    en_canon: toponimo-131 · nivel descartado
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-131 · nivel descartado · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-131
 - forma: Guaranao
   variantes: []
   fuentes:
@@ -6183,6 +6496,17 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
+- forma: gusimu
+  variantes: []
+  fuentes:
+  - osm-kaketiana
+  cruces:
+    en_canon: toponimo-134 · nivel descartado
+    en_esteves: false
+    en_mapa_miguel: false
+    en_nodos: null
+  menciones:
+  - osm-kaketiana · canon · toponimo-134 · nivel descartado · topónimo · fuente procedencia
 - forma: Hadicurari
   variantes: []
   fuentes:
@@ -6939,6 +7263,17 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - van-buurt-2014 · indice-abc · §7
+- forma: la macolla
+  variantes: []
+  fuentes:
+  - sin-procedencia
+  cruces:
+    en_canon: toponimo-141 · nivel descartado
+    en_esteves: false
+    en_mapa_miguel: false
+    en_nodos: null
+  menciones:
+  - sin-procedencia · canon · toponimo-141 · nivel descartado · topónimo · fuente deuda
 - forma: Macoshi
   variantes: []
   fuentes:
@@ -7244,6 +7579,17 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
+- forma: la miraba
+  variantes: []
+  fuentes:
+  - osm-kaketiana
+  cruces:
+    en_canon: toponimo-138 · nivel descartado
+    en_esteves: false
+    en_mapa_miguel: false
+    en_nodos: null
+  menciones:
+  - osm-kaketiana · canon · toponimo-138 · nivel descartado · topónimo · fuente procedencia
 - forma: miraca
   variantes:
   - Miraca
@@ -7436,17 +7782,21 @@ indice_de_formas:
   - van-buurt-2014 · canon · toponimo-073 · nivel descartado · topónimo · fuente inferida-por-cruce
   - van-buurt-2014 · indice-abc · §7
   - van-buurt-2014 · lectura · §8-10
-- forma: Oripopo
-  variantes: []
+- forma: oripopo
+  variantes:
+  - Oripopo
   fuentes:
   - esteves-1989
   cruces:
-    en_canon: null
+    en_canon: toponimo-125 · nivel C
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-125 · nivel C · topónimo · fuente procedencia
+  - 'esteves-1989 · lectura:hipotesis · toponimo-125 · Esteves 1989 · 2026-09-07 · estrato atribuido por el autor,
+    sin fuente andina citada: l…'
+  - esteves-1989 · indice · toponimo-125
 - forma: Orizjan
   variantes: []
   fuentes:
@@ -7632,6 +7982,17 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - moron-2012-petroglifos · estacion-rupestre
+- forma: pilancón
+  variantes: []
+  fuentes:
+  - osm-kaketiana
+  cruces:
+    en_canon: toponimo-137 · nivel descartado
+    en_esteves: false
+    en_mapa_miguel: false
+    en_nodos: null
+  menciones:
+  - osm-kaketiana · canon · toponimo-137 · nivel descartado · topónimo · fuente procedencia
 - forma: Pipiacoa
   variantes: []
   fuentes:
@@ -7654,17 +8015,19 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: Pitajaya
-  variantes: []
+- forma: pitajaya
+  variantes:
+  - Pitajaya
   fuentes:
   - esteves-1989
   cruces:
-    en_canon: null
+    en_canon: toponimo-121 · nivel C
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-121 · nivel C · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-121
 - forma: Playa de Cucuruchú
   variantes: []
   fuentes:
@@ -7941,17 +8304,19 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - van-buurt-2014 · indice-abc · §7
-- forma: Sabarigua
-  variantes: []
+- forma: sabarigua
+  variantes:
+  - Sabarigua
   fuentes:
   - esteves-1989
   cruces:
-    en_canon: null
+    en_canon: toponimo-122 · nivel C
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-122 · nivel C · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-122
 - forma: Sacuragua
   variantes: []
   fuentes:
@@ -8151,17 +8516,19 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - van-buurt-2014 · indice-abc · §7
-- forma: Sibidigual
-  variantes: []
+- forma: sibidigual
+  variantes:
+  - Sibidigual
   fuentes:
   - esteves-1989
   cruces:
-    en_canon: null
+    en_canon: toponimo-123 · nivel C
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-123 · nivel C · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-123
 - forma: Sicaname
   variantes: []
   fuentes:
@@ -8206,6 +8573,19 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - van-buurt-2014 · indice-abc · §7
+- forma: sisibauco
+  variantes:
+  - Sisibauco
+  fuentes:
+  - esteves-1989
+  cruces:
+    en_canon: toponimo-130 · nivel descartado
+    en_esteves: true
+    en_mapa_miguel: false
+    en_nodos: null
+  menciones:
+  - esteves-1989 · canon · toponimo-130 · nivel descartado · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-130
 - forma: Sividivi
   variantes: []
   fuentes:
@@ -8293,6 +8673,17 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
+- forma: tabe
+  variantes: []
+  fuentes:
+  - osm-kaketiana
+  cruces:
+    en_canon: toponimo-135 · nivel descartado
+    en_esteves: false
+    en_mapa_miguel: false
+    en_nodos: null
+  menciones:
+  - osm-kaketiana · canon · toponimo-135 · nivel descartado · topónimo · fuente procedencia
 - forma: tabicure
   variantes: []
   fuentes:
@@ -8493,17 +8884,19 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - van-buurt-2014 · indice-abc · §7
-- forma: Tequeguacare
-  variantes: []
+- forma: tequeguacare
+  variantes:
+  - Tequeguacare
   fuentes:
   - esteves-1989
   cruces:
-    en_canon: null
+    en_canon: toponimo-129 · nivel descartado
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-129 · nivel descartado · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-129
 - forma: Tibushi
   variantes: []
   fuentes:
@@ -8802,6 +9195,17 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - van-buurt-2014 · indice-abc · §7
+- forma: urumare
+  variantes: []
+  fuentes:
+  - osm-kaketiana
+  cruces:
+    en_canon: toponimo-136 · nivel descartado
+    en_esteves: false
+    en_mapa_miguel: false
+    en_nodos: null
+  menciones:
+  - osm-kaketiana · canon · toponimo-136 · nivel descartado · topónimo · fuente procedencia
 - forma: Urupagua
   variantes: []
   fuentes:
@@ -8857,6 +9261,17 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - moron-2012-petroglifos · estacion-rupestre
+- forma: villa real
+  variantes: []
+  fuentes:
+  - sin-procedencia
+  cruces:
+    en_canon: toponimo-139 · nivel descartado
+    en_esteves: false
+    en_mapa_miguel: false
+    en_nodos: null
+  menciones:
+  - sin-procedencia · canon · toponimo-139 · nivel descartado · topónimo · fuente deuda
 - forma: El Vínculo
   variantes: []
   fuentes:

@@ -39,6 +39,9 @@ FUENTES = (
 
 NIVEL_A = {
     "jurijurebo": {
+        "mapa_vivo": "OSM 2026: «Jurujurebo», poblado, 12.049 -69.940 — al norte de "
+                     "Pueblo Nuevo y cerca de El Vínculo, donde Esteves lo sitúa "
+                     "(p. 47); u por i en la segunda sílaba.",
         "clase": "topónimo",
         "fuente": "zavala-reyes-2015",
         "glosa_fuente": "Paso de los vientos",
@@ -273,6 +276,48 @@ NIVEL_A = {
 # ───────────────────────────────────────────────────────────────────────────
 
 NIVEL_B = {
+    # ── Lote 7 (2026-09-07): el barrido del mapa vivo (OSM) contra Esteves.
+    # Criterio: nombres vivos de Paraguaná que el cruce aproximado de
+    # barrer_mapa.py emparejó con una entrada de Esteves, más los que no
+    # están en ninguna fuente. Ver 4-fuentes/esteves-1989.md §lote 7. ──
+    "bariquí": {
+        "id": "toponimo-114", "clase": "topónimo", "fuente": "esteves-1989",
+        "pagina": 22,
+        "glosa_fuente": "«Bariquire, que es la forma plena, es un árbol tanante "
+                        "que da una tinta como óxido de hierro y, según hemos "
+                        "leído, con esa tinta se pintaban los aborígenes en ciertas "
+                        "ceremonias religiosas. Bariquire dice: palo colorado. "
+                        "Bara: palo, árbol. Quire: colorado»",
+        "segmentacion": "bara + quire   [Bariquire; -re cae en la forma viva]",
+        "morfemas": {
+            "bara": "palo, árbol  [caquetío-atestiguado, Zavala #29; #101 resuelto "
+                    "con Esteves y van Buurt diciendo lo mismo]",
+            "quire": "color, colorado  [Esteves; recurre en Sanajaquí < "
+                     "Sanajaquire, «Quire: color», p. 58]",
+        },
+        "glosa_reconstruida": "palo colorado: el árbol de la tinta",
+        "razon": "bara está atestiguado y quire es nuevo con recurrencia 2 en "
+                 "Esteves (Bariquire, Sanajaquire) y glosa consistente 'color'. "
+                 "B y no A porque quire solo lo da Esteves. Alvarado (Glosario) "
+                 "trae la planta: «Barquís, planta sarmentosa de Occidente; tinta "
+                 "que usaban para pintarse los indios ayamanes».",
+        "observacion": "Lugar del municipio Jadacaquiva; censo de 1881: 7 casas, "
+                       "50 vecinos. Esteves lo cuenta entre la toponimia indígena "
+                       "de Paraguaná con Baraived, Baracara y Barunú (p. 22). En el "
+                       "mapa vivo: «El Variquí» (OSM 2026, lugar, 12.013 -70.079), "
+                       "b~v y artículo castellano.",
+        "lecturas": [
+            {"tipo": "glosa-fuente",
+             "lectura": "«Barquís: especie de planta sarmentosa de Occidente; "
+                        "tinta que usaban para pintarse los indios ayamanes»",
+             "quien": "Lisandro Alvarado, Glosario de voces indígenas, vía Esteves "
+                      "1989", "fecha": "2026-09-07", "eje": "ambos",
+             "procedencia": dict(obra="esteves-1989", pagina=22),
+             "veredicto": "segunda atestación de la planta y de su uso; Alvarado la "
+                          "da a los ayamanes, no a los caquetíos: el fitónimo es "
+                          "regional"},
+        ],
+    },
     # ── Lote 6 (2026-09-07): del censo de -ana para #109. Es el capubana
     # 'duende del cerro' de Zavala #61, escrito por Esteves con h. Y la
     # percha de la hipótesis del centro sagrado de Miguel (2026-09-01). ──
@@ -343,6 +388,8 @@ NIVEL_B = {
                  "'árbol'. Recurre en `guadabacoa` 'Arboleda' (wa-ada-bacoa).",
     },
     "guadabacoa": {
+        "mapa_vivo": "OSM 2026: «Guaydabacos», lugar, 12.041 -70.065 — la grafía "
+                     "de Esteves (Guaidabacoa) con y, y una -s final.",
         "clase": "topónimo", "fuente": "zavala-reyes-2015",
         "glosa_fuente": "Arboleda",
         "segmentacion": "wa- + ada + bacoa   [haplología de -a-]",
@@ -468,6 +515,8 @@ NIVEL_B = {
     # que están en el índice del libro. Ids explícitos desde 075: los 74 de
     # arriba no se mueven (otros archivos los citan). `pagina` es la del libro.
     "abudure": {
+        "mapa_vivo": "OSM 2026: «Abudare», lugar, 11.803 -70.015 — u > a en la "
+                     "última sílaba; cf. la vacilación -ure/-are de Esteves.",
         "id": "toponimo-076",
         "clase": "topónimo", "fuente": "esteves-1989", "pagina": 11,
         "glosa_fuente": "sitio de donde se extrae barro de las raíces",
@@ -613,6 +662,288 @@ MORFEMAS_DESPEJADOS = {
 # ───────────────────────────────────────────────────────────────────────────
 
 NIVEL_C = {
+    # ── Lote 7 (2026-09-07): el mapa vivo (OSM) contra Esteves. Cada uno
+    # trae la forma viva con coordenadas y la entrada del libro. ──
+    "cumujacoa": {
+        "id": "toponimo-115", "clase": "topónimo", "fuente": "esteves-1989",
+        "pagina": 33,
+        "glosa_fuente": "«Cumuyacoa es como está escrito en ese censo [1881]. La voz, "
+                        "considerada como una alteración de Curumubacoa, quiere "
+                        "decir: lugar de los zamuros. Curumu: zamuro. Bacoa: lugar»",
+        "segmentacion": "curumu + bacoa   [Curumubacoa, según Esteves; con síncopa]",
+        "morfemas": {
+            "curumu": "zamuro  [solo Esteves; no está en el lexicón]",
+            "bacoa": "lugar, paraje  [atestiguado; morfema-001]",
+        },
+        "glosa_reconstruida": "lugar de los zamuros",
+        "razon": "bacoa cierra su mitad; curumu 'zamuro' lo da Esteves una sola vez "
+                 "y sobre una forma enmendada (Curumubacoa), como Tubariquiba: C. "
+                 "Oripopo, vecino, «es zamuro en dialectos andinos» (p. 55): dos "
+                 "nombres de zamuro en el mismo sector, uno caquetío y otro "
+                 "andino según Esteves.",
+        "observacion": "Aldea del municipio Los Taques; censo de 1881: 9 casas, 65 "
+                       "habitantes, escrito Cumuyacoa. Mapa vivo: «Cumajacoa» (OSM "
+                       "2026, lugar, 11.823 -70.181), u~a.",
+    },
+    "coabana": {
+        "id": "toponimo-116", "clase": "topónimo", "fuente": "esteves-1989",
+        "pagina": 31,
+        "glosa_fuente": "«El topónimo es una voz compuesta que dice: el cerro de las "
+                        "coas. Coa es un tosco instrumento de labranza, un palo "
+                        "aguzado para abrir el surco. Bana: cerro»",
+        "segmentacion": "coa + bana",
+        "morfemas": {
+            "coa": "palo de labranza  [Esteves; voz antillana (taína) lexicalizada "
+                   "en el castellano de América: no está en el lexicón]",
+            "bana": "cerro, sitio alto  [D9, atestiguado]",
+        },
+        "glosa_reconstruida": "el cerro de las coas",
+        "razon": "bana atestiguado y núcleo al final, como en los demás -bana de "
+                 "Esteves; coa solo aparece aquí y es palabra taína del castellano "
+                 "general (DRAE): si el compuesto es caquetío, coa es préstamo o "
+                 "cognado arahuaco, y eso no se decide con un caso. C.",
+        "observacion": "Aldea del municipio Pueblo Nuevo; censo de 1881: 37 casas, "
+                       "221 habitantes. «Los vecinos dicen: Cuabana», y así lo "
+                       "escribe el mapa vivo (OSM 2026, sector, 11.940 -69.928): la "
+                       "forma hablada le gana a la cabecera del libro.",
+    },
+    "guacuira": {
+        "id": "toponimo-117", "clase": "topónimo", "fuente": "esteves-1989",
+        "pagina": 38,
+        "glosa_fuente": "«Dos versiones orales hemos obtenido sobre el origen del "
+                        "nombre. La primera: que proviene de guacoa, ave de cacería, "
+                        "en su forma diminutiva. La segunda: que viene de guaco, "
+                        "nombre de una hierba. Sin embargo, ambas versiones hay que "
+                        "recibirlas con reservas porque el lugar anteriormente tuvo "
+                        "otros nombres. El obispo Martí escribió Guaimaguacuira»",
+        "segmentacion": "guacu- + -ira   [guacoa 'ave' en diminutivo, según una de las dos versiones]",
+        "morfemas": {
+            "guacoa": "ave de cacería  [Esteves; recurre en Guacurebo 'el paso de la "
+                      "guacoa' (toponimo-021) y en Guacujúa]",
+        },
+        "razon": "el primer elemento recurre (guacoa: Guacurebo, Guacujúa) pero la "
+                 "propia fuente pone las dos versiones en reserva, y la forma de "
+                 "Martí (Guaimaguacuira) muestra que el nombre se acortó: C, sin "
+                 "glosa reconstruida.",
+        "observacion": "Extenso valle al este de Pueblo Nuevo y población importante "
+                       "del municipio; censo de 1881: 84 casas, 593 habitantes. Mapa "
+                       "vivo: «Guaquira Abajo» y «Guaquira Arriba» (OSM 2026, "
+                       "poblados, 11.932 -69.893 y 11.940 -69.887), c > qu.",
+        "lecturas": [
+            {"tipo": "etimologia-popular",
+             "lectura": "de guacoa, ave de cacería, en diminutivo",
+             "quien": "versión oral recogida por Esteves 1989", "fecha": "2026-09-07",
+             "eje": "significado", "procedencia": dict(obra="esteves-1989", pagina=38),
+             "veredicto": "Esteves: «con reservas porque el lugar anteriormente tuvo "
+                          "otros nombres»"},
+            {"tipo": "etimologia-popular",
+             "lectura": "de guaco, nombre de una hierba",
+             "quien": "versión oral recogida por Esteves 1989", "fecha": "2026-09-07",
+             "eje": "significado", "procedencia": dict(obra="esteves-1989", pagina=38),
+             "veredicto": "misma reserva de Esteves; guaco es voz panamericana "
+                          "(Mikania), no discrimina"},
+        ],
+    },
+    "caruca": {
+        "id": "toponimo-118", "clase": "topónimo", "fuente": "esteves-1989",
+        "pagina": 28,
+        "glosa_fuente": "«Caruca es una hierba áspera que se usaba para la preparación "
+                        "de la torta de barro con que cubrían los techos de las casas "
+                        "humildes»",
+        "segmentacion": "caruca (fitónimo, sin composición)",
+        "razon": "fitónimo con glosa de fuente y recurrencia: Machuruca «viene de "
+                 "caruca, paja» (toponimo-084, p. 49). C como Caseto: planta sin "
+                 "componer. Y es dato de técnica: la paja de la torta de barro de "
+                 "los techos, con el tococoro de la arquitectura coriana.",
+        "observacion": "Lugar en el camino de Pueblo Nuevo a El Vínculo. Mapa vivo: "
+                       "«Curuca» (OSM 2026, lugar, 12.096 -69.953), a~u.",
+    },
+    "bibuche": {
+        "id": "toponimo-119", "clase": "topónimo", "fuente": "esteves-1989",
+        "pagina": 23,
+        "glosa_fuente": "«Fundo pecuario al noroeste de Pueblo Nuevo, punto de "
+                        "referencia en los linderos de las tierras comuneras de "
+                        "Roncador y Curaidebo. También lo llaman: Chibuche. Buche: "
+                        "melocacto, cardo globoso, rastrero»",
+        "segmentacion": "bi- + buche",
+        "morfemas": {
+            "buche": "melocacto, cardo globoso rastrero  [caquetío-atestiguado, "
+                     "Zavala; recurre en Buchuhaco (toponimo-086), Buchaquiva y "
+                     "Buchal]",
+        },
+        "razon": "buche cierra su mitad con recurrencia; bi- no tiene glosa. C. "
+                 "Tres formas del mismo nombre: Bibuche (cabecera), Chibuche "
+                 "(«también lo llaman»), Chivuche (mapa vivo).",
+        "observacion": "Mapa vivo: «Chivuche» (OSM 2026, lugar, 12.026 -70.033), al "
+                       "noroeste de Pueblo Nuevo como dice Esteves; b~v y la ch- de "
+                       "la forma hablada.",
+    },
+    "bajabaroa": {
+        "id": "toponimo-120", "clase": "topónimo", "fuente": "esteves-1989",
+        "pagina": 19,
+        "glosa_fuente": "«Sitio costeño al oeste del Cabo de San Román. Se nos ha "
+                        "informado que Baroa era el nombre de un cacique, pero el "
+                        "dato tiene poca fuerza histórica. En este caso, el topónimo "
+                        "querrá decir: el caño de Baroa, ya que baba y baja, "
+                        "indistintamente significan: caño»",
+        "segmentacion": "baja + baroa",
+        "morfemas": {
+            "baja": "caño  [Esteves: «baba y baja, indistintamente»; el lexicón tiene "
+                    "baba 'padre' (reconstruido), otra palabra]",
+            "baroa": "nombre de cacique, según informante; «poca fuerza histórica»",
+        },
+        "glosa_reconstruida": "el caño de Baroa (según Esteves)",
+        "razon": "baja 'caño' solo lo da Esteves y el segundo elemento es un "
+                 "antropónimo de oídas: C. Lo firme es el referente: puerto de "
+                 "aguas profundas donde fondeaban barcas de tres palos a cargar "
+                 "bosta (estiércol caprino); ensenada de algas de agar-agar.",
+        "observacion": "Mapa vivo: «Bajo Aroa» (OSM 2026, lugar, 12.186 -70.033), al "
+                       "oeste del Cabo San Román como dice Esteves: el nombre se "
+                       "resegmentó en castellano como bajo + Aroa (Aroa es topónimo "
+                       "en otras partes del país; «parece voz ayamán», p. 31). "
+                       "Permutación nueva para la skill: la falsa segmentación "
+                       "castellana.",
+    },
+    "pitajaya": {
+        "id": "toponimo-121", "clase": "topónimo", "fuente": "esteves-1989",
+        "pagina": 56,
+        "glosa_fuente": "«La Pitajaya, aldea de Buenavista. Doce casas y 71 vecinos "
+                        "registra en el censo de 1881. Pitajaya es otro nombre "
+                        "indígena de nuestro susucure, cardo seudo-parásito que da "
+                        "una fruta de piel y pulpa roja»",
+        "segmentacion": "pitajaya (fitónimo, sin composición)",
+        "razon": "fitónimo con glosa: C como Caseto. Pero pitahaya es voz TAÍNA "
+                 "lexicalizada en el castellano general (DRAE): el nombre del lugar "
+                 "puede ser la palabra castellana para el cardo, no la caquetía. "
+                 "Esteves la llama «otro nombre indígena» sin decir de qué lengua; "
+                 "la caquetía documentada del cardo es susucure.",
+        "observacion": "Mapa vivo: «La Pitahaya» (OSM 2026, poblado, 11.870 -69.923), "
+                       "con la h etimológica del castellano.",
+    },
+    "sabarigua": {
+        "id": "toponimo-122", "clase": "topónimo", "fuente": "esteves-1989",
+        "pagina": 57,
+        "glosa_fuente": "«Aldea del municipio Adícora, al norte de la población de "
+                        "Santa Cruz, la de Pueblo Nuevo. Puede ser una alteración de "
+                        "Sibidigua, arbusto euforbiáceo»",
+        "segmentacion": "sabarigua (< sibidigua, fitónimo, según Esteves)",
+        "razon": "fitónimo por conjetura de la fuente («puede ser»): C. La forma "
+                 "viva, Sibarigua, está más cerca de sibidigua que la cabecera del "
+                 "libro: apoya la conjetura.",
+        "observacion": "Mapa vivo: «Sibarigua» (OSM 2026, lugar, 11.991 -69.879), al "
+                       "norte de Santa Cruz como dice Esteves. Sibidigua recurre en "
+                       "Sibidigual (toponimo-123).",
+    },
+    "sibidigual": {
+        "id": "toponimo-123", "clase": "topónimo", "fuente": "esteves-1989",
+        "pagina": 60,
+        "glosa_fuente": "«Lugar cercano a la aldea de Matividiro, pertenece al "
+                        "municipio Buenavista. Sibidigual, colectivo abundancial de "
+                        "Sibidigua, arbusto euforbiáceo»",
+        "segmentacion": "sibidigua + -al   [fitónimo + colectivo castellano]",
+        "morfemas": {
+            "sibidigua": "arbusto euforbiáceo  [Esteves; recurre en Sabarigua]",
+        },
+        "razon": "el dato es el fitónimo sibidigua, con recurrencia 2 en Esteves; el "
+                 "-al es el colectivo castellano (como Chiguaral, Cujisal): nombre "
+                 "híbrido sobre raíz indígena. C.",
+        "observacion": "Mapa vivo: «Cividual» (OSM 2026, lugar, 11.753 -69.806), junto "
+                       "a Matividiro como dice Esteves: s > c, b > v y una sílaba "
+                       "menos. Es de los que el cruce exacto llamaba nuevo.",
+    },
+    "chiguaral": {
+        "id": "toponimo-124", "clase": "topónimo", "fuente": "esteves-1989",
+        "pagina": 36,
+        "glosa_fuente": "«Lugar del municipio Jadacaquiva. Tenía en 1881 más de "
+                        "ochenta vecinos. Chiguaral: colectivo de chiguate, planta "
+                        "frutal, una melastomácea de fruta muy sabrosa»",
+        "segmentacion": "chiguate/chiguare + -al   [fitónimo + colectivo castellano]",
+        "morfemas": {
+            "chiguate": "planta frutal, melastomácea  [Esteves; como chiguare en "
+                        "Juderecal: «árbol ramoso, parecido al chiguare», p. 47]",
+        },
+        "razon": "fitónimo con glosa y segunda mención (chiguare, p. 47), colectivo "
+                 "castellano encima: C, como Sibidigual.",
+        "observacion": "Mapa vivo: «El Chiguare» (OSM 2026, lugar, 11.979 -70.158): la "
+                       "planta con artículo, sin el colectivo; probablemente el "
+                       "mismo lugar o uno vecino en Jadacaquiva.",
+    },
+    "oripopo": {
+        "id": "toponimo-125", "clase": "topónimo", "fuente": "esteves-1989",
+        "pagina": 55,
+        "glosa_fuente": "«Lugar cercano a la aldea de Cumujacoa. Oripopo es zamuro en "
+                        "dialectos andinos, lo que indica —ya lo hemos barruntado— "
+                        "que la lengua timote-cuica dejó su huella en Paraguaná. Por "
+                        "otra parte, la cercanía de Cumujacoa es muy significativa, "
+                        "ya que Cumujacoa quiere decir: lugar de los zamuros»",
+        "segmentacion": "oripopo (zamuro, en lengua andina según Esteves)",
+        "razon": "la fuente da la glosa con morfemas de otra lengua: C, como "
+                 "Maitiruma. El «estrato timote-cuica» es inferencia de Esteves "
+                 "(como el «caribe insular»): se registra como lectura suya, no como "
+                 "dato. Lo verificable es el par de zamuros vecinos.",
+        "observacion": "Mapa vivo: «Oropopo» (OSM 2026, lugar, 11.884 -70.203), i~o, "
+                       "al lado de Cumajacoa como dice Esteves.",
+        "lecturas": [
+            {"tipo": "hipotesis",
+             "lectura": "oripopo 'zamuro' en dialectos andinos: huella de la lengua "
+                        "timote-cuica en Paraguaná",
+             "quien": "Esteves 1989", "fecha": "2026-09-07", "eje": "significado",
+             "procedencia": dict(obra="esteves-1989", pagina=55),
+             "veredicto": "estrato atribuido por el autor, sin fuente andina citada: "
+                          "lectura suya. Comprobar oripopo en un léxico timote-cuica "
+                          "antes de darle estrato"},
+        ],
+    },
+    "asaro": {
+        "id": "toponimo-126", "clase": "topónimo", "fuente": "esteves-1989",
+        "pagina": 17,
+        "glosa_fuente": "«Hay una gran semejanza con Sarosaro, un topónimo de La "
+                        "Guajira… Respecto de este Sarosaro guajiro, que es plural por "
+                        "duplicación, hemos averiguado que es un árbol cuya madera "
+                        "blanda la utilizaban o utilizan los guajiros para obtener el "
+                        "fuego por frotación»",
+        "segmentacion": "asaro (~ saro, fitónimo wayuu según Esteves)",
+        "razon": "la fuente compara con un fitónimo de otra lengua (wayuu Sarosaro) "
+                 "sin segmentar: C por la vía de Maitiruma, con la cautela de que "
+                 "es semejanza, no etimología. Y el lugar es reciente: «no lo "
+                 "mencionan los censos poblacionales del siglo pasado».",
+        "observacion": "Aldea del municipio Pueblo Nuevo, vecindario relativamente "
+                       "nuevo. Mapa vivo: «Azaro» (OSM 2026, poblado, 11.969 "
+                       "-69.960), s~z.",
+    },
+    "baracara": {
+        "id": "toponimo-127", "clase": "topónimo", "fuente": "esteves-1989",
+        "pagina": 19,
+        "glosa_fuente": "«Maracara se lee en el censo de 1881, pero Baracara es como "
+                        "está escrito en la historia de Paraguaná del Dr. Pedro "
+                        "Manuel Arcaya, quien manejó documentos de primera mano»; "
+                        "Esteves la cuenta entre la toponimia indígena de Paraguaná "
+                        "con bara- («Bara… en lengua caquetía era voz general para "
+                        "toda clase de árbol», p. 22)",
+        "segmentacion": "bara + -cara",
+        "morfemas": {
+            "bara": "palo, árbol  [caquetío-atestiguado, Zavala #29; #101]",
+        },
+        "razon": "bara cierra su mitad (y Esteves lo afirma para este nombre); -cara "
+                 "no tiene glosa. C. La etimología popular (una «expresión "
+                 "insolente» de un cacique en disputa) va como lectura con la "
+                 "reserva de Esteves, «muy pintoresca».",
+        "observacion": "Aldea entre Santa Ana y Moruy; censo de 1881: 2 casas, 15 "
+                       "vecinos (Padrón de Moruy), escrito Maracara. Mapa vivo: "
+                       "«Varacara» (OSM 2026, poblado, 11.798 -69.974), b~v. Tres "
+                       "grafías fechadas: Maracara 1881, Baracara (Arcaya), Varacara "
+                       "2026.",
+        "lecturas": [
+            {"tipo": "etimologia-popular",
+             "lectura": "provino de una expresión insolente pronunciada por un "
+                        "quisquilloso cacique en momentos en que le disputaba al "
+                        "cacique vecino ciertos fueros jurisdiccionales",
+             "quien": "versión recogida por Esteves 1989", "fecha": "2026-09-07",
+             "eje": "significado", "procedencia": dict(obra="esteves-1989", pagina=19),
+             "veredicto": "Esteves: «una versión muy pintoresca»; anécdota, no "
+                          "etimología"},
+        ],
+    },
     # ── Las lecturas del 25 de agosto, fusionadas el 2026-09-07 por orden de
     # Miguel («que no quede nada pendiente por ahí sin guardar o fusionar»).
     # Venían sueltas en toponimia_coro_espina.yaml, lengua_toponimia_quibacoa.yaml
@@ -1585,10 +1916,24 @@ DESCARTES = {
         "razon": "el nombre es transparente en castellano; no hay sustrato que "
                  "despejar. Se registra para que el barrido del mapa no lo "
                  "vuelva a proponer.",
-        "ids": {"la rinconada": "toponimo-106", "pedregalito": "toponimo-107"},
+        "ids": {"la rinconada": "toponimo-106", "pedregalito": "toponimo-107",
+                "villa real": "toponimo-139", "golfete de coro": "toponimo-140",
+                "la macolla": "toponimo-141", "buchal": "toponimo-142"},
         "formas": [
             "la rinconada (mapa vivo, sector del Capubana; fotos de Miguel 2026-09-01)",
             "pedregalito (mapa vivo, sector del Capubana; fotos de Miguel 2026-09-01)",
+            # Lote 7 (2026-09-07): los que el filtro castellano de barrer_mapa.py
+            # dejó pasar y se clasifican a mano.
+            "villa real (OSM 2026, lugar, 12.054 -69.982)",
+            "golfete de coro (OSM 2026, bahía, 11.556 -69.974: el nombre castellano "
+            "del golfo interior; Coro es el nombre que importa, y tiene entrada: "
+            "curiana, toponimo-111)",
+            "la macolla (OSM 2026, lugar 12.090 -70.204 y Punta Macolla 12.083 "
+            "-70.217: macolla es castellano, 'conjunto de vástagos de un pie'; no "
+            "es la Macola de la mesa)",
+            "buchal (OSM 2026, poblado, 11.960 -69.842: colectivo castellano -al "
+            "sobre buche 'melocacto' [caquetío-atestiguado]; como Cujisal. El dato "
+            "es que buche sigue vivo: cf. Bibuche, Buchuhaco, Buchaquiva)",
         ],
     },
     # La campaña de Esteves 1989, lote 1 (2026-09-06). El grupo trae `fuente`,
@@ -1603,9 +1948,12 @@ DESCARTES = {
         "fuente": "esteves-1989",
         "ids": {"charaima": "toponimo-082", "jacuque": "toponimo-089",
                 "elegüey": "toponimo-091", "maragüey": "toponimo-092",
-                "jamaica": "toponimo-093", "jayana": "toponimo-110"},
+                "jamaica": "toponimo-093", "jayana": "toponimo-110",
+                "guacujúa": "toponimo-128", "tequeguacare": "toponimo-129",
+                "sisibauco": "toponimo-130", "guarama": "toponimo-131"},
         "paginas": {"charaima": 35, "jacuque": 44, "elegüey": 37, "maragüey": 37,
-                    "jamaica": 46, "jayana": 46},
+                    "jamaica": 46, "jayana": 46, "guacujúa": 38, "tequeguacare": 62,
+                    "sisibauco": 60, "guarama": 41},
         "formas": [
             "charaima (población entre Adícora y Baraived; censo 1881: 79 casas, "
             "527 habitantes; nombre primitivo Charaide en su Título de "
@@ -1639,7 +1987,61 @@ DESCARTES = {
             "Resguardo Marítimo en la Colonia, habilitado en 1834 para exportar "
             "ganado en pie; Esteves cree que es el Guarama de un mapa antiguo; "
             "sin glosa; termina en -ana, formante sin glosa desde #109: está en "
-            "la lista viva de 6-fusion/censo_ana_esteves_109.yaml)",
+            "la lista viva de 6-fusion/censo_ana_esteves_109.yaml. Mapa vivo: "
+            "«Nueva Jayama», poblado, OSM 2026, 11.794 -70.198, junto a "
+            "Amuaicito: el nombre sigue vivo, con m por n)",
+            # Lote 7 (2026-09-07): los del mapa vivo que Esteves trae sin glosa.
+            "guacujúa (aldea del municipio Moruy; censo de 1881: 14 casas, 97 "
+            "vecinos; «la grafía Huacujúa, que aparece en un mapa de reciente "
+            "confección, la consideramos una infición anglicada»; «en la voz "
+            "inciden los nombres de dos aves: guacoa y tijúa, pero la incidencia "
+            "no aclara nada», y en Cucurubano, p. 32, «parece voz onomatopéyica». "
+            "Mapa vivo: «Guacujún», poblado, OSM 2026, 11.827 -70.073)",
+            "tequeguacare (aldea del municipio Moruy; «Tequeguacure es como está "
+            "escrito en la Ley de División Territorial, tal vez por equivocación "
+            "de la persona que copió el texto. Nada tenemos que informar sobre el "
+            "significado de esta voz compuesta». Tres formas: Tequeguacare "
+            "(cabecera e índice), Tequeguacure (Ley), «Teteguacure» en el mapa "
+            "vivo, OSM 2026, 11.811 -70.062; cf. Guacurebo / Guasurebo)",
+            "sisibauco (lugar y quebrada en el municipio Baraived; «paraje "
+            "frondoso donde abundan los yacures, árboles de verdor perenne»; sin "
+            "glosa del nombre. Es el «[ilegible …Sisibaúco]» del índice, resuelto "
+            "por el mapa vivo: «Sisibauco», lugar, OSM 2026, 11.875 -69.847)",
+            "guarama (lugar costeño «señalado en un antiguo mapa, localizado en "
+            "el punto donde hoy está Amuaicito. Podría ser la misma Jayana»; sin "
+            "glosa; no está en el mapa vivo: sobrevive, si acaso, como Jayana / "
+            "Nueva Jayama)",
+        ],
+    },
+    # Lote 7 (2026-09-07): lo que el mapa vivo trae y NINGUNA fuente impresa del
+    # proyecto nombra (Esteves 0, verificado con permutación y sin tildes;
+    # Zavala 0; Medina 0). Se registra con coordenadas para el inventario de
+    # nodos y para que el barrido no lo vuelva a levantar; sube cuando una obra
+    # lo nombre. Regla 3: nombre vivo en 2026, época moderna hasta nuevo aviso.
+    "mapa vivo (OSM 2026): nombre indígena o dudoso sin fuente impresa": {
+        "razon": "el nombre está vivo en el mapa de 2026, con coordenadas, y "
+                 "ninguna fuente impresa del proyecto lo trae: sin glosa no hay "
+                 "ecuación. Se registra con deuda declarada; entra en C o mejor "
+                 "cuando una obra lo nombre.",
+        "fuente": "osm-kaketiana",
+        "ids": {"cumairebo": "toponimo-132", "divacoa": "toponimo-133",
+                "gusimu": "toponimo-134", "tabe": "toponimo-135",
+                "urumare": "toponimo-136", "pilancón": "toponimo-137",
+                "la miraba": "toponimo-138"},
+        "formas": [
+            "cumairebo (lugar, 12.003 -69.920, Paraguaná; termina en -ebo 'paso, "
+            "camino', y se parece a Cumarebo, el puerto del Golfete que ya está en "
+            "el canon: ¿el mismo nombre repetido, o -ebo sobre otra raíz?)",
+            "divacoa (poblado, 11.783 -69.936; termina en -coa como los -bacoa "
+            "'lugar de': ¿di(ba)coa con haplología? Sin fuente no se segmenta)",
+            "gusimu (lugar, 12.098 -70.178)",
+            "tabe (lugar, 11.917 -70.104)",
+            "urumare (lugar, 11.924 -70.152; termina en -are 'sitio de' "
+            "(morfema-002); cf. Urumaco en Falcón occidental)",
+            "pilancón (poblado, 11.833 -69.927; suena castellano (-ón) pero no "
+            "restituye a ninguna palabra conocida)",
+            "la miraba (poblado, 11.834 -70.054, y Cerro La Miraba, 11.850 "
+            "-70.046; con artículo castellano y sin fuente; no es Miraca)",
         ],
     },
     "glosa meramente referencial": {

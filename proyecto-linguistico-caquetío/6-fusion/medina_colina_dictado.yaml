@@ -610,6 +610,30 @@ datos_mundo:
       da más pares «en X le dicen A, en el resto B», se junta la serie.
     segun_dictado: true
 
+  - id: mc-mundo-021
+    esfera: ecologia / economia
+    hecho: >
+      El dividive («árbol silvestre de nuestros montes cuyo fruto es
+      astringente, liviano») «fue muy apreciado como materia prima para
+      curtir pieles, por lo que se constituyó en material de exportación
+      por el puerto de Adícora hacia Europa entre los años 1900 a 1920».
+    voz_origen: dividive
+    lugares: [Adícora]   # el puerto de la exportación
+    pagina: null         # ⚠️ PENDIENTE — dictado sin página (letra D)
+    epoca: 1900-1920
+    lectura: >
+      Regla 3, dos veces: el hecho es del siglo XX y el comercio es
+      colonial-republicano (curtido de pieles para Europa). Lo que sí toca
+      al mundo simulado es el ÁRBOL y su uso: el corpus ya tiene el
+      dividivi (watapana) como fuente de taninos del monte espinoso del
+      Golfete (ecologia.yaml), y Esteves p. 23 lee Bibidure como 'raíz de
+      dividive' (Dividibure), «árbol leguminoso, tintóreo, que en Oriente
+      llaman guatapanare». Y un dato para el nodo: Adícora como puerto de
+      salida de la península, el mismo que en 1834 compartía con Jayana el
+      Resguardo Marítimo (Esteves p. 47). Cadena de continuidad económica
+      del tanino, no de la lengua.
+    segun_dictado: true
+
 # Formato de entrada (ver bitácora §Formato de captura):
 # - voz: <tal como la escribe Medina Colina>
 #   glosa_libro: "<textual, corta>"
@@ -3698,4 +3722,66 @@ descartes:
       la página del libro, y si Medina la escribe con de- o con da- (la web
       trae las dos). Si dice dabudeque, el cruce con dabuda pasa de
       hipótesis a lectura con apoyo.
+
+  # disey, dictada de nuevo el 2026-09-07: YA estaba (2026-09-01, p. 95, C).
+  # No se duplica.
+  - voz: dividive
+    glosa_libro: >-
+      árbol silvestre de nuestros montes cuyo fruto es astringente,
+      liviano; fue muy apreciado como materia prima para curtir pieles,
+      por lo que se constituyó en material de exportación por el puerto
+      de Adícora hacia Europa entre los años 1900 a 1920.
+    pagina: null            # ⚠️ PENDIENTE — dictada sin página (letra D)
+    campo: flora / oficio (curtido)
+    segun_dictado: true
+    dictado: 2026-09-07
+    identificacion: "Caesalpinia coriaria, el dividivi; el fruto (vainas retorcidas) es rico en taninos"
+    cruce:
+      lexicon: >-
+        ⭐ CASA: dibidibe 'árbol cuyo fruto es una baya que da tinta'
+        [caquetío-atestiguado, Zavala #112 (E), forma_fuente dividive] — la
+        (E) es Esteves: la atestación caquetía viene de este mismo circuito
+        paraguanero. Y watapana 'árbol dividivi' está en el lexicón como
+        caribe-cumanagoto desde D10 (Alvarado p. 163: guatapanar < cum.
+        araguatapanár 'oreja de araguato'). Dos nombres para el mismo árbol,
+        cada uno con su lengua.
+      por_glosa: "el corpus ya lo tiene: ecologia.yaml (dividivi / watapana, fuente de taninos del monte espinoso del Golfete)"
+      cognados: nada
+      toponimos: >-
+        Esteves p. 23: Bibidure «puede ser una alteración de Dividibure, que
+        significa: raíz de dividive, árbol leguminoso, tintóreo, que en
+        Oriente llaman guatapanare». Un topónimo con el árbol dentro, si la
+        enmienda vale. Gatschet 1885 lo trae en Aruba (dividivi, atestiguada).
+      a2: nada
+      fonotactica: pasa (dibidibe)
+      fuera_del_repo: >-
+        Alvarado 1921 p. 132 s.v. DIVIDIVE (leguminosa, «árbol que se alza a
+        30 ó 40 y más pies»), tratada en lexicon_alvarado como F4: nombre
+        panvenezolano y pancaribeño de Caesalpinia coriaria. DRAE: dividivi,
+        voz caribe.
+    filtros:
+      "1 castellano": "no restituye"
+      "2 papiamento": "no: en Aruba y Curazao el árbol es watapana (la voz cumanagota), y dividivi también circula"
+      "3 wayuu": "no es préstamo wayuu"
+      "4 panhispánico/pancaribeño": "SÍ — nombre general del árbol en Venezuela, Colombia y el Caribe: no discrimina Paraguaná"
+      "6 caribe": "el DRAE la da como voz caribe; el otro nombre (watapana) es cumanagoto seguro"
+    criterios_positivos:
+      "1 campo local": "sí — flora del monte espinoso y técnica (el curtido)"
+      "2 distribución restringida": "no — pancaribeña"
+      "5 respaldo toponímico": "sí, débil — Bibidure < Dividibure, enmienda de Esteves"
+    veredicto: D
+    razon: >
+      Como bajareque: voz pancaribeña (filtro 4), de probable origen
+      caribe, que no aporta sustrato PARAGUANERO nuevo. Pero está en boca
+      caquetía por Esteves (Zavala #112) y el lexicón ya la tiene como
+      caquetío-atestiguado: la vara de Miguel del 2026-09-01 —repertorio,
+      no filiación— la deja donde está. Lo que Medina añade no es lengua,
+      es economía: el tanino exportado por Adícora en 1900-1920, que va a
+      mc-mundo-021 (regla 3: siglo XX). D para el dictado, atestación viva
+      de la planta y de su uso en la península.
+    alerta_canon: >-
+      El lexicón tiene DOS entradas para el mismo árbol con dos filiaciones
+      (dibidibe caquetío-atestiguado; watapana caribe-cumanagoto). No es
+      contradicción —dos pueblos, dos nombres— pero conviene que las dos
+      notas se citen: hoy no se cruzan.
 
