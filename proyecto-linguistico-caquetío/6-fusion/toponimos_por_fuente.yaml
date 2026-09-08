@@ -9,7 +9,7 @@ meta:
     de fusión.'
   marcas: ★ en el canon · ≡ en el índice de Esteves · ◆ en el mapa de Miguel · ⌂ en asentamientos.yaml
   resumen:
-    menciones: 732
+    menciones: 734
     formas_distintas: 507
     fuentes: 15
     por_fuente:
@@ -17,7 +17,7 @@ meta:
         menciones: 57
         formas: 57
       esteves-1989:
-        menciones: 257
+        menciones: 258
         formas: 192
       castellanos-elegias:
         menciones: 19
@@ -38,8 +38,8 @@ meta:
         menciones: 9
         formas: 8
       medina-colina-sxx:
-        menciones: 23
-        formas: 20
+        menciones: 24
+        formas: 21
       gatschet-1885:
         menciones: 31
         formas: 30
@@ -58,9 +58,9 @@ meta:
       osm-kaketiana:
         menciones: 7
         formas: 7
-    en_canon: 142
+    en_canon: 143
     en_nodos: 18
-    sin_canon_ni_nodo: 360
+    sin_canon_ni_nodo: 359
     cruces:
       mapa_de_miguel_en_esteves:
       - Buchuaco
@@ -107,10 +107,12 @@ meta:
       - Guachaco
       - Saruro
       - Tacuato
+      - guarataro
       - moruy
       medina_colina_en_canon:
       - cabudare
       - capadare
+      - guarataro
       - moruy
       - todarahuato
       en_mas_de_dos_fuentes:
@@ -428,7 +430,7 @@ por_fuente:
 - obra: esteves-1989
   en_bibliografia: true
   descripcion: 'el índice ''Topónimos compilados'' de Paraguaná (pp. 68-69): la cola de la campaña'
-  menciones: 257
+  menciones: 258
   formas: 192
   toponimos:
   - forma: judibana
@@ -459,6 +461,12 @@ por_fuente:
     dato: '«Barquís: especie de planta sarmentosa de Occidente; tinta que usaban para pintarse los indios ayamanes»'
     ref: toponimo-114 · Lisandro Alvarado, Glosario de voces indígenas, vía Esteves 1989 · 2026-09-07 · segunda
       atestación de la planta y de su uso; Alvarado la da…
+  - forma: guarataro
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: «Lugar del municipio Pueblo Nuevo, entre Guacuira y Santa Cruz. En el censo de 1881 tenía 16 casas y 88
+      vecin…
+    ref: toponimo-143 · nivel B · topónimo · fuente procedencia
   - forma: capuhana
     tipo: canon
     donde: 2-lengua/toponimos.yaml
@@ -991,6 +999,10 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
     ref: toponimo-130
+  - forma: Guarataro
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-143
   - forma: Amuay
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
@@ -1217,9 +1229,6 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Guaranao
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Guarataro
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Guaricure
@@ -1962,9 +1971,16 @@ por_fuente:
   en_bibliografia: true
   descripcion: 'lo que el dictado toca: voces que son topónimo en Esteves, lo mandado a la cola, y los pueblos del
     autor (s. XX)'
-  menciones: 23
-  formas: 20
+  menciones: 24
+  formas: 21
   toponimos:
+  - forma: guarataro
+    tipo: lectura:glosa-fuente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: «es una especie de tierra con grano especial que, unido al barro de loza, es la materia prima para la
+      alfarer…
+    ref: toponimo-143 · Medina Colina (dictado de Miguel) · 2026-09-07 · segunda atestación viva, independiente
+      de Esteves, y más pr…
   - forma: Saruro
     tipo: referido-por-voz
     donde: 6-fusion/medina_colina_dictado.yaml §entradas:saruro
@@ -6394,17 +6410,22 @@ indice_de_formas:
   menciones:
   - esteves-1989 · indice
   - oliver-1989-cap3 · clan · pp. 275-276
-- forma: Guarataro
-  variantes: []
+- forma: guarataro
+  variantes:
+  - Guarataro
   fuentes:
   - esteves-1989
+  - medina-colina-sxx
   cruces:
-    en_canon: null
+    en_canon: toponimo-143 · nivel B
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-143 · nivel B · topónimo · fuente procedencia
+  - medina-colina-sxx · lectura:glosa-fuente · toponimo-143 · Medina Colina (dictado de Miguel) · 2026-09-07 · segunda
+    atestación viva, independiente de Esteves, y más pr…
+  - esteves-1989 · indice · toponimo-143
 - forma: Guarero
   variantes: []
   fuentes:

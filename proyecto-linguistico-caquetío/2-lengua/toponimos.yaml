@@ -1,14 +1,14 @@
 meta:
   generado_por: curiana_sim/migrar_toponimos.py
-  toponimos: 142
+  toponimos: 143
   por_nivel:
     A: 8
-    B: 12
+    B: 13
     C: 47
     descartado: 75
-  con_procedencia: 81
-  con_lecturas: 29
-  lecturas: 60
+  con_procedencia: 82
+  con_lecturas: 30
+  lecturas: 61
   con_definicion_aceptada: 0
   corroboraciones_del_lexicon: 17
   nota: 'El nivel de confianza es un CAMPO, no un contenedor: antes eran NIVEL_A/B/C separados y para
@@ -247,6 +247,40 @@ toponimos:
   procedencia:
     obra: esteves-1989
     pagina: 22
+- id: toponimo-143
+  forma: guarataro
+  nivel: B
+  clase: topónimo
+  glosa_fuente: «Lugar del municipio Pueblo Nuevo, entre Guacuira y Santa Cruz. En el censo de 1881 tenía
+    16 casas y 88 vecinos; hoy el vecindario está integrado a la aldea de Guacuira Arriba y lo nombran
+    La Hoyada. Guarataro es un barro de loza, gomoso, con que fabrican budares y ollas. Hay abundancia
+    de este material en el lugar»
+  segmentacion: guarataro (materia, sin composición)
+  morfemas:
+    guarataro: 'barro de loza para budares y ollas  [caquetío-atestiguado, Zavala #141 (E) = Esteves;
+      lexicón warataro]; Medina Colina: la tierra de grano que se mezcla con el barro de loza, el desgrasante'
+  glosa_reconstruida: 'el guarataro: el sitio de la tierra de alfarero'
+  razon: 'un lexema atestiguado por dos fuentes independientes con glosa consistente (Esteves 1989 y Medina
+    Colina, s. XX) y el referente en el sitio («hay abundancia de este material en el lugar»): B, como
+    Abudure. No A porque no hay atestación colonial y el nombre no compone. Es el principio toponímico
+    en limpio: el nombre dice lo que hay.'
+  observacion: 'El lugar cambió de nombre: hoy La Hoyada, dentro de Guacuira Arriba (OSM 2026: Guaquira
+    Arriba, 11.940 -69.887). Par de materias de la olla en caquetío: dabuda ''barro de loza'' (Dabudare)
+    y guarataro (aquí). En el resto de Venezuela guarataro es ''guijarro''.'
+  lecturas:
+  - tipo: glosa-fuente
+    lectura: «es una especie de tierra con grano especial que, unido al barro de loza, es la materia prima
+      para la alfarería»
+    quien: Medina Colina (dictado de Miguel)
+    fecha: '2026-09-07'
+    eje: significado
+    procedencia:
+      obra: medina-colina-sxx
+    veredicto: 'segunda atestación viva, independiente de Esteves, y más precisa: desgrasante, no barro.
+      Página pendiente.'
+  procedencia:
+    obra: esteves-1989
+    pagina: 41
 - id: toponimo-113
   forma: capuhana
   nivel: B

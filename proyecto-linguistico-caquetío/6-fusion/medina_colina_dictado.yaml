@@ -634,6 +634,24 @@ datos_mundo:
       del tanino, no de la lengua.
     segun_dictado: true
 
+  - id: mc-mundo-022
+    esfera: ecologia / economia domestica
+    hecho: >
+      El guarapo (agua endulzada con panela) «en muchas oportunidades sirvió
+      de compaña a la arepa, pues las situaciones eran críticas»; «este
+      guarapo frecuentemente era blanqueado con leche de cabra».
+    voz_origen: guarapo
+    pagina: null         # ⚠️ PENDIENTE
+    epoca: s. XX
+    lectura: >
+      Comida de escasez de la Paraguaná del XX, y la cabra como fuente de
+      leche de la casa: el corpus tiene la economía caprina como colonial
+      (regla 3), y esto la muestra en la mesa. Ninguna proyección al mundo
+      simulado; se registra para el casting de nodos de la era 2 (el
+      conuco pobre, la cabra) y como par con datera/dato: el arepa-guarapo
+      es el menú de crisis, el cardón es el otro.
+    segun_dictado: true
+
 # Formato de entrada (ver bitácora §Formato de captura):
 # - voz: <tal como la escribe Medina Colina>
 #   glosa_libro: "<textual, corta>"
@@ -1877,6 +1895,8 @@ entradas:
     campo: fauna
     segun_dictado: true
     dictado: 2026-09-01
+    redictada_2026-09-07: >-
+      la segunda lectura añade: «muy perseguida por los muchachos por su carne, que era exquisita asada a las brasas». Dato de caza doméstica del XX; el ave cae en el corpus (fauna) con su uso.
     cruce:
       lexicon: "= WAKOA 'paloma' [caquetío-atestiguado, Zavala Reyes 2015 #127 (HB = Hernández Baño), forma_fuente guacoa]. Serie caquetía de palomas: wakoa, tauta, tigi, tijua (+ chenga del dictado)"
       cognados: nada
@@ -1945,6 +1965,8 @@ entradas:
     campo: oficio (cal / fuego)
     segun_dictado: true
     dictado: 2026-09-01
+    redictada_2026-09-07: >-
+      la segunda lectura resuelve el hueco del dictado del día 1: los hornos eran «para quemar caracoles, piedras y fabricar cal». Cal de concha: la técnica que Esteves ata a Caramata-caigua («guairón de cal», con caigua 'almeja' en cumanagoto). Dato para el corpus (oficios).
     cruce:
       lexicon: "= WAIRON 'hoguera' [caquetío-atestiguado, Zavala Reyes 2015 #132 (HB = Hernández Baño), forma_fuente guairon]. Mismo campo (fuego), referente especializado (horno de cal)"
       cognados: nada
@@ -2019,6 +2041,8 @@ entradas:
     origen_libro: "el autor da la DISTRIBUCIÓN INTRAPENINSULAR: Tacuato y Santa Ana frente al resto"
     segun_dictado: true
     dictado: 2026-09-01
+    redictada_2026-09-07: >-
+      redictada igual («bisure de color amarillo combinado con gris terroso»; Tacuato y Santa Ana frente al resto): confirma mc-mundo-020 sin añadir.
     identificacion: "lagarto amarillo y gris terroso (¿Cnemidophorus / Ameiva?); especie abierta — puede ser un bisure distinto, no solo otro nombre"
     cruce:
       lexicon: "nada por forma (walamo); por glosa: bisure, tukeke, barbache [caq.] — el campo de los reptiles ya es caquetío atestiguado"
@@ -2049,6 +2073,8 @@ entradas:
     campo: flora
     segun_dictado: true
     dictado: 2026-09-01
+    redictada_2026-09-07: >-
+      redictada igual («árbol venenoso para los animales; hoy escaso, quizá debido a los continuos veranos»): sin añadir.
     cruce:
       lexicon: "nada por forma (wamacho 'guamacho, Pereskia' es parecido difuso, otro árbol); por glosa: urari 'veneno vegetal' [caq. atestiguado] — el caquetío tiene la palabra del veneno, no este árbol"
       cognados: nada
@@ -3784,4 +3810,201 @@ descartes:
       (dibidibe caquetío-atestiguado; watapana caribe-cumanagoto). No es
       contradicción —dos pueblos, dos nombres— pero conviene que las dos
       notas se citen: hoy no se cruzan.
+
+  # ── Letra G, segunda pasada (2026-09-07). guacoa, guairón, gualamo y
+  # guamaro ya estaban del día 1 (pp. 129-130): sus entradas llevan
+  # `redictada_2026-09-07` con lo que la nueva lectura añade. ──
+  - voz: guaral
+    glosa_libro: "fue [una] cuerda hecha de hilo de algodón muy resistente"
+    pagina: null            # ⚠️ PENDIENTE (letra G, ¿130-131?)
+    campo: oficio (cordelería)
+    segun_dictado: true
+    dictado: 2026-09-07
+    cruce:
+      lexicon: "nada por forma. Por glosa: maure 'algodón' [caquetío-atestiguado, Zavala] y la hamaca de algodón (Oliver §3.2.4: pampanillas y hamacas de algodón entre bubures y caquetíos); la cuerda como tal no tiene nombre caquetío en el lexicón"
+      cognados: nada
+      toponimos: nada
+      a2: nada
+      fonotactica: pasa
+      fuera_del_repo: "DRAE: guaral, m. Ven., cordel grueso — venezolanismo general, de origen no localizado. No está en el módulo de Alvarado 1921 (cero en el texto; comprobar en el papel)"
+    filtros:
+      "1 castellano": "no restituye a raíz castellana"
+      "4 nacional": "SÍ — es la palabra general venezolana para el cordel: no discrimina Paraguaná"
+      "2, 3, 5, 6": "sin candidato; el origen queda abierto"
+    criterios_positivos:
+      "1 campo local": "a medias — técnica (cordel de algodón), pero el referente es general"
+      "2 distribución restringida": "no"
+    veredicto: D
+    razon: >
+      Venezolanismo general (filtro 4): la voz no prueba sustrato
+      paraguanero. Lo que Medina fija es el MATERIAL, hilo de algodón, que
+      sí es del mundo simulado (maure). Se anota por cobertura; si Alvarado
+      o Tamayo le dan origen indígena, se reabre como repertorio.
+  - voz: guaramifote
+    glosa_libro: >-
+      todo extranjero que se hiciera presente en nuestra península,
+      mientras no conociera bien o se avecindara en la misma, era
+      calificado con esta palabra. Es palabra popular.
+    pagina: null            # ⚠️ PENDIENTE
+    campo: otro (gentilicio del forastero)
+    origen_libro: "«es palabra popular» (según el autor)"
+    segun_dictado: true
+    dictado: 2026-09-07
+    cruce:
+      lexicon: "nada por forma ni por glosa (el lexicón no tiene 'forastero'; ma-anüiki 'sin habla, extranjero' es construcción del motor)"
+      cognados: nada
+      toponimos: "nada (Guarama, p. 41, es otra cosa: un sitio costeño)"
+      fonotactica: "pasa el filtro estructural, pero la f interior no es consonante del caquetío atestiguado: pinta romance o expresivo"
+      fuera_del_repo: "no aparece en ningún repertorio consultado; única fuente"
+    filtros:
+      "1 castellano": "no restituye a una palabra, pero el autor la marca como creación popular y la f la delata: formación expresiva sobre base desconocida"
+      "2-6": "sin candidato"
+    veredicto: D
+    razon: >
+      «Palabra popular» dicha por el autor (como garuso): creación
+      expresiva, rendimiento nulo para el sustrato por protocolo. Se
+      registra porque es DATO SOCIAL: la península tenía una palabra propia
+      para el que llega y no se avecinda —el enclave de comerciantes que
+      Oliver describe visto desde dentro, cinco siglos después—; sirve al
+      casting de nodos (el foráneo, el visitante caribe del elenco), no al
+      lexicón.
+  - voz: guáramo
+    glosa_libro: >-
+      los viejos, cuando se referían a alguien con mucho valor personal,
+      nada cobarde, decían: «ese hombre tiene mucho guáramo».
+    pagina: null            # ⚠️ PENDIENTE
+    campo: otro (carácter)
+    segun_dictado: true
+    dictado: 2026-09-07
+    cruce:
+      lexicon: "nada por forma ni por glosa"
+      cognados: nada
+      toponimos: "nada (Guarama y Guaranao son topónimos, sin relación demostrable)"
+      fonotactica: pasa
+      fuera_del_repo: "DRAE: guáramo, m. Ven., valor, coraje — venezolanismo general; no está en el módulo de Alvarado 1921"
+    filtros:
+      "4 nacional": "SÍ — de uso en toda Venezuela: no discrimina"
+      "1, 2, 3, 5, 6": "sin candidato; origen abierto"
+    veredicto: D
+    razon: >
+      Venezolanismo general (filtro 4). Campo abstracto (carácter), el menos
+      discriminante del protocolo. Se anota por cobertura.
+  - voz: guarapo
+    glosa_libro: >-
+      fue agua endulzada con panela, y que en muchas oportunidades sirvió
+      de compaña [dictado: «campaña»] a la arepa, pues las situaciones
+      eran críticas. Este guarapo frecuentemente era blanqueado con leche
+      de cabra.
+    pagina: null            # ⚠️ PENDIENTE
+    campo: comida (bebida)
+    segun_dictado: true
+    dictado: 2026-09-07
+    cruce:
+      lexicon: "nada por forma; por glosa: buriche y masato (bebidas de maíz) son las bebidas caquetías del lexicón; ninguna es esta"
+      fonotactica: pasa
+      fuera_del_repo: "DRAE: guarapo, Am., jugo de la caña o bebida fermentada de él (origen discutido: quechua warapu, o africano); panhispánico americano"
+    filtros:
+      "4 panhispánico": "SÍ — americanismo general; el referente (caña, panela) es colonial"
+    veredicto: D
+    razon: >
+      Americanismo general con referente colonial (caña de azúcar): nada
+      de sustrato. Lo que vale es el DATO de mundo: el guarapo con leche de
+      cabra como compaña de la arepa «en situaciones críticas» — la
+      economía de la cabra y la comida de escasez de la Paraguaná del XX,
+      a mc-mundo-022.
+  - voz: guarataro
+    glosa_libro: >-
+      es una especie de tierra con grano especial que, unido al barro de
+      loza, es la materia prima para la alfarería.
+    pagina: null            # ⚠️ PENDIENTE
+    campo: oficio (alfarería) / geografía (materia)
+    segun_dictado: true
+    dictado: 2026-09-07
+    cruce:
+      lexicon: >-
+        ⭐ CASA: warataro 'barro de loza, para la fábrica de budares y
+        ollas' [caquetío-atestiguado, Zavala #141 (E), forma_fuente
+        guarataro]. La (E) es Esteves; Medina es la SEGUNDA atestación,
+        independiente y viva, con un matiz que Esteves no da: no es el
+        barro de loza (dabuda), es la tierra de grano que se le mezcla —
+        el desgrasante del alfarero. Dos palabras caquetías para las dos
+        materias de la olla: dabuda y guarataro.
+      por_glosa: "dabuda 'barro de loza' [caq. atestiguado, Zavala #99]; budare (dictado, B); Dabudare 'sitio de extracción de barro' (toponimo-011)"
+      cognados: nada
+      toponimos: >-
+        ⭐ GUARATARO es topónimo de Paraguaná: Esteves p. 41, lugar del
+        municipio Pueblo Nuevo entre Guacuira y Santa Cruz, censo de 1881
+        16 casas y 88 vecinos, hoy La Hoyada dentro de Guacuira Arriba;
+        «Guarataro es un barro de loza, gomoso, con que fabrican budares y
+        ollas. Hay abundancia de este material en el lugar». Entra al canon
+        como toponimo-143 (B) con esta voz como lectura.
+      a2: nada
+      fonotactica: pasa
+      fuera_del_repo: >-
+        En el resto de Venezuela guarataro es 'piedra, guijarro' (DRAE, Ven.;
+        el sector de El Guarataro en Caracas): la acepción paraguanera
+        —tierra de alfarero— es local y más precisa. No está en el módulo
+        de Alvarado 1921 (comprobar en el papel).
+    filtros:
+      "1 castellano": "no"
+      "4 nacional": "la FORMA es nacional ('guijarro'), la ACEPCIÓN es paraguanera: pasa por la acepción"
+      "2, 3, 5, 6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — técnica (alfarería) y materia del terreno"
+      "2 distribución restringida": "sí, en esta acepción"
+      "5 respaldo toponímico": "SÍ — Guarataro, Esteves p. 41, con el material en el lugar"
+      "6 atestación colonial": "no; Esteves y Medina son del s. XX"
+    veredicto: B
+    razon: >
+      Sobrevive a los filtros por la acepción, campo local, distribución
+      restringida en ese sentido y topónimo con el referente en el sitio:
+      B. Ya está en el lexicón como caquetío-atestiguado por Esteves vía
+      Zavala; Medina es la segunda voz, independiente, y afina la glosa:
+      desgrasante, no barro. Propuesta: en la nota de warataro citar a
+      Medina y la distinción con dabuda; el corpus (oficios: alfarería) gana
+      el par dabuda + guarataro como materias de la olla y del budare.
+  - voz: guarero
+    glosa_libro: >-
+      fue planta enredadera, común en nuestros montes, cuyas ramas se
+      utilizaron para amarrar el embarrado [dictado: «embargado»] de las
+      paredes de la vivienda. Las hojas servían de comida para los
+      marranos.
+    pagina: null            # ⚠️ PENDIENTE
+    campo: flora / casa (bajareque)
+    segun_dictado: true
+    dictado: 2026-09-07
+    cruce:
+      lexicon: "nada por forma; por glosa: bajareke (la técnica de pared, caq. atestiguado por decisión de Miguel del 2026-09-01) y guarero sería el bejuco que la amarra; el lexicón no tiene bejuco de amarre"
+      cognados: nada
+      toponimos: "nada (Guarero es también topónimo de la Guajira venezolana, Zulia — otro lugar, quizá otra palabra)"
+      a2: nada
+      fonotactica: pasa (warero)
+      fuera_del_repo: "no está en el módulo de Alvarado 1921 ni en el DRAE como planta; única fuente para la acepción"
+    filtros:
+      "1 castellano": "no restituye (-ero castellano encima de una raíz que no lo es; cf. tunero, cardonero — o raíz entera guarero)"
+      "2-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — flora y técnica de casa"
+      "2 distribución restringida": "sí — única fuente"
+    veredicto: C
+    razon: >
+      Como bayute: fitónimo local con función precisa (el amarre del
+      bajareque), pasa los filtros y cumple dos criterios; sin cognado ni
+      atestación. C, al corpus (casa). Deuda: identificar la planta.
+  - voz: guargüero
+    glosa_libro: "la tráquea, la manzana de Adán: a eso le llamaron nuestros viejos «los guargüeros»"
+    pagina: null            # ⚠️ PENDIENTE
+    campo: cuerpo
+    segun_dictado: true
+    dictado: 2026-09-07
+    cruce:
+      lexicon: "por glosa, el cuerpo caquetío del lexicón no tiene garganta"
+      fonotactica: pasa
+      fuera_del_repo: "DRAE: guargüero, m., garguero (garganta, gaznate): castellano general, arcaísmo conservado"
+    filtros:
+      "1 castellano": "SÍ — es la palabra castellana garguero/guargüero (DRAE)"
+    veredicto: D
+    razon: >
+      Castellano general, forma arcaizante conservada en el habla rural
+      (filtro 1). Se anota por cobertura.
 

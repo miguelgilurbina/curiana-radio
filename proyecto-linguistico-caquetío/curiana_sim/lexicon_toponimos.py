@@ -318,6 +318,47 @@ NIVEL_B = {
                           "regional"},
         ],
     },
+    # ── Del dictado de Medina Colina (2026-09-07): la voz guarataro trajo
+    # el topónimo, que estaba en la cola de Esteves. ──
+    "guarataro": {
+        "id": "toponimo-143", "clase": "topónimo", "fuente": "esteves-1989",
+        "pagina": 41,
+        "glosa_fuente": "«Lugar del municipio Pueblo Nuevo, entre Guacuira y Santa "
+                        "Cruz. En el censo de 1881 tenía 16 casas y 88 vecinos; hoy "
+                        "el vecindario está integrado a la aldea de Guacuira Arriba "
+                        "y lo nombran La Hoyada. Guarataro es un barro de loza, "
+                        "gomoso, con que fabrican budares y ollas. Hay abundancia de "
+                        "este material en el lugar»",
+        "segmentacion": "guarataro (materia, sin composición)",
+        "morfemas": {
+            "guarataro": "barro de loza para budares y ollas  [caquetío-atestiguado, "
+                         "Zavala #141 (E) = Esteves; lexicón warataro]; Medina "
+                         "Colina: la tierra de grano que se mezcla con el barro de "
+                         "loza, el desgrasante",
+        },
+        "glosa_reconstruida": "el guarataro: el sitio de la tierra de alfarero",
+        "razon": "un lexema atestiguado por dos fuentes independientes con glosa "
+                 "consistente (Esteves 1989 y Medina Colina, s. XX) y el referente "
+                 "en el sitio («hay abundancia de este material en el lugar»): B, "
+                 "como Abudure. No A porque no hay atestación colonial y el nombre "
+                 "no compone. Es el principio toponímico en limpio: el nombre dice "
+                 "lo que hay.",
+        "observacion": "El lugar cambió de nombre: hoy La Hoyada, dentro de Guacuira "
+                       "Arriba (OSM 2026: Guaquira Arriba, 11.940 -69.887). Par de "
+                       "materias de la olla en caquetío: dabuda 'barro de loza' "
+                       "(Dabudare) y guarataro (aquí). En el resto de Venezuela "
+                       "guarataro es 'guijarro'.",
+        "lecturas": [
+            {"tipo": "glosa-fuente",
+             "lectura": "«es una especie de tierra con grano especial que, unido al "
+                        "barro de loza, es la materia prima para la alfarería»",
+             "quien": "Medina Colina (dictado de Miguel)", "fecha": "2026-09-07",
+             "eje": "significado",
+             "procedencia": dict(obra="medina-colina-sxx"),
+             "veredicto": "segunda atestación viva, independiente de Esteves, y más "
+                          "precisa: desgrasante, no barro. Página pendiente."},
+        ],
+    },
     # ── Lote 6 (2026-09-07): del censo de -ana para #109. Es el capubana
     # 'duende del cerro' de Zavala #61, escrito por Esteves con h. Y la
     # percha de la hipótesis del centro sagrado de Miguel (2026-09-01). ──
