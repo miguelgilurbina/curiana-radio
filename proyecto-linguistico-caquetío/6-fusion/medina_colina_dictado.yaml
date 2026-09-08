@@ -652,6 +652,44 @@ datos_mundo:
       es el menú de crisis, el cardón es el otro.
     segun_dictado: true
 
+  - id: mc-mundo-023
+    esfera: cultura material / mar
+    hecho: >
+      La guarura «era un pito o bocina que se hacía con un caracol de mar;
+      producía un sonido agudo que se escuchaba a gran distancia».
+    voz_origen: guarura
+    pagina: null         # ⚠️ PENDIENTE
+    epoca: s. XX (uso vivo en la memoria del autor)
+    lectura: >
+      La bocina de concha es el uso sonoro del botuto (Strombus gigas) que
+      ecologia-016 documenta en la arqueología insular en densidades
+      altísimas: el objeto es precontacto en toda la costa, la palabra es
+      venezolana general. Para la simulación: el instrumento de señal a
+      distancia entre nodos (playa ↔ conuco, canoa ↔ costa) existe en el
+      mundo y tiene materia prima local. Etiqueta: el uso en Paraguaná,
+      atestiguado s. XX; la proyección al XV, por decidir (regla 3).
+    segun_dictado: true
+
+  - id: mc-mundo-024
+    esfera: ecologia / fauna comestible
+    hecho: >
+      La hicotea —en Paraguaná, el morrocoy: «conocido en otras partes del
+      país como morrocoy»— «fue abundante en nuestro medio, hoy casi
+      desaparecido, de unos 30 cm de largo, y era comestible».
+    voz_origen: hicotea
+    pagina: null         # ⚠️ PENDIENTE
+    epoca: s. XX
+    lectura: >
+      El corpus de ecología tiene tortugas marinas y el botuto, no la
+      tortuga de tierra: el morrocoy (Chelonoidis carbonarius) es fauna
+      plausible del monte espinoso precontacto y comida de recolección
+      sin tecnología — el mismo hueco que la guacoa (paloma) y el hayo.
+      Se registra la abundancia pasada y la casi desaparición (s. XX) y
+      el desplazamiento del nombre taíno de la tortuga de agua a la de
+      tierra. Proyección al XV: por decidir, con la cautela de que la
+      fauna moderna ≠ s. XV.
+    segun_dictado: true
+
 # Formato de entrada (ver bitácora §Formato de captura):
 # - voz: <tal como la escribe Medina Colina>
 #   glosa_libro: "<textual, corta>"
@@ -4007,4 +4045,295 @@ descartes:
     razon: >
       Castellano general, forma arcaizante conservada en el habla rural
       (filtro 1). Se anota por cobertura.
+
+  # ── Tercera tanda del 2026-09-07: fin de la G y arranque de la H. ──
+  - voz: guarupepe
+    glosa_libro: >-
+      la auyama madura, cocida, mezclada con leche, que quedara espesa: eso
+      era un guarupepe, comida muy apreciada por nuestra gente.
+    pagina: null            # ⚠️ PENDIENTE
+    campo: comida
+    segun_dictado: true
+    dictado: 2026-09-07
+    cruce:
+      lexicon: "nada por forma; por glosa, el lexicón no tiene auyama ni ningún plato de auyama (la auyama, Cucurbita, es americana; la leche es colonial)"
+      cognados: nada
+      toponimos: nada
+      a2: nada
+      fonotactica: pasa (guarupepe)
+      fuera_del_repo: "no está en el DRAE, en Alvarado (módulo) ni en la web como voz: única fuente"
+    filtros:
+      "1 castellano": "no restituye (¿guaru- + pepe? — pepe es nombre castellano, pero no explica el plato)"
+      "2-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — plato local con ingrediente americano"
+      "2 distribución restringida": "sí — única fuente"
+    veredicto: C
+    razon: >
+      Nombre local de un plato, sin paralelo en ningún repertorio, que
+      pasa los filtros y cumple dos criterios. El plato es mestizo (auyama
+      + leche), como datera y debudeque: si la raíz guaru- es indígena, es
+      nombre nuevo con raíz vieja. C, al corpus (comida). Ojo: Esteves p. 42
+      da GUARU 'cataneja' (el ave) en Guaruguaja — homógrafo, no apoyo.
+  - voz: guarura
+    glosa_libro: >-
+      era un pito o bocina que se hacía con un caracol de mar; producía un
+      sonido agudo que se escuchaba a gran distancia.
+    pagina: null            # ⚠️ PENDIENTE
+    campo: oficio (instrumento) / mar
+    segun_dictado: true
+    dictado: 2026-09-07
+    cruce:
+      lexicon: "nada por forma ni por glosa (no hay 'caracol' ni 'bocina' en el lexicón)"
+      cognados: nada
+      toponimos: nada
+      a2: nada
+      fonotactica: pasa (warura)
+      fuera_del_repo: "DRAE: guarura, Ven., caracol grande usado como bocina; venezolanismo general. No está en el módulo de Alvarado (comprobar el papel: el origen que dan los repertorios es caribe/cumanagoto, sin verificar aquí)"
+    filtros:
+      "4 nacional": "SÍ — venezolanismo general: no discrimina Paraguaná"
+      "6 caribe": "posible origen caribe según los repertorios; sin verificar"
+    criterios_positivos:
+      "1 campo local": "sí — el instrumento de concha es precontacto en toda la costa (el botuto de ecologia-016)"
+    veredicto: D
+    razon: >
+      Venezolanismo general (filtro 4), de probable origen caribe (filtro
+      6): no aporta sustrato paraguanero. El OBJETO sí es del mundo
+      simulado: la bocina de caracol sobre el botuto (Strombus gigas) que la
+      arqueología insular documenta en densidades altísimas; va a
+      mc-mundo-023 con la voz como testimonio vivo del uso.
+  - voz: guasábara
+    glosa_libro: >-
+      es una especie de cactus cuyos brazos o ramas son delgados, largos,
+      con espinas largas que se rompen fácilmente y son muy dolorosas.
+    pagina: null            # ⚠️ PENDIENTE
+    campo: flora
+    segun_dictado: true
+    dictado: 2026-09-07
+    identificacion: "Cylindropuntia caribaea (guasábara), cactus de ramas delgadas y espinas caedizas"
+    cruce:
+      lexicon: "nada por forma; por glosa, el lexicón tiene el cardón (dato 'fruto del cardón'), buche 'melocacto', guasare 'árbol cactáceo' (Esteves p. 42; toponimo-059): tres cactáceas con nombre y ninguna es esta"
+      cognados: nada
+      toponimos: nada
+      a2: nada
+      fonotactica: pasa (wasabara)
+      fuera_del_repo: "nombre venezolano general del cactus (Falcón, Lara, Zulia, Anzoátegui); no está en el módulo de Alvarado (comprobar el papel, que trae la flora); origen no localizado"
+    filtros:
+      "4 nacional": "SÍ — de uso en varias regiones: no discrimina Paraguaná"
+      "1, 2, 3, 5, 6": "sin candidato; origen abierto"
+    criterios_positivos:
+      "1 campo local": "sí — flora del monte espinoso, el paisaje del mundo simulado"
+    veredicto: D
+    razon: >
+      Nombre nacional del cactus (filtro 4): no prueba sustrato
+      paraguanero. Pero es el CUARTO cactus con nombre en el habla de la
+      península (cardón, buche, guasare, guasábara), y el corpus de
+      ecología solo tiene los dos primeros con voz caquetía: se anota como
+      hueco léxico para el minado de flora. Si Alvarado le da origen
+      caribe o arahuaco, se reabre.
+  - voz: guasarapo
+    glosa_libro: >-
+      así denominaron los paraguaneros a los renacuajos de sapos y ranas,
+      que eran comunes en las aguas depositadas en los estanques.
+    pagina: null            # ⚠️ PENDIENTE
+    campo: fauna
+    segun_dictado: true
+    dictado: 2026-09-07
+    cruce:
+      lexicon: "nada; el lexicón no tiene sapo ni renacuajo"
+      fonotactica: pasa
+      fuera_del_repo: "DRAE: gusarapo, m., animalejo de agua estancada, larva — castellano general; guasarapo es su forma con metátesis"
+    filtros:
+      "1 castellano": "SÍ — gusarapo (DRAE) con metátesis gu-sa → gua-sa"
+    veredicto: D
+    razon: >
+      Castellano general con metátesis local (filtro 1). Se anota por
+      cobertura; el detalle de los estanques (jagüeyes) es del mundo del
+      agua escasa.
+  - voz: guasiaco
+    glosa_libro: >-
+      creación del ingenio de nuestro pueblo para identificar al muchacho
+      tonto, bobo, al que cualquiera podía manipular.
+    pagina: null            # ⚠️ PENDIENTE
+    campo: otro (insulto)
+    origen_libro: "«creación del ingenio de nuestro pueblo» (según el autor)"
+    segun_dictado: true
+    dictado: 2026-09-07
+    cruce:
+      lexicon: nada
+      fonotactica: pasa
+      fuera_del_repo: "no localizada"
+    filtros:
+      "1 castellano": "creación expresiva declarada por el autor; los insultos son casi siempre romances (protocolo §4.1)"
+    veredicto: D
+    razon: >
+      Insulto de formación expresiva, marcado como creación popular por el
+      propio autor (como garuso): rendimiento nulo por protocolo. Se anota
+      por cobertura.
+  - voz: guatacare
+    glosa_libro: "árbol común, y cuyos frutos no eran comestibles por el ser humano"
+    pagina: null            # ⚠️ PENDIENTE
+    campo: flora
+    segun_dictado: true
+    dictado: 2026-09-07
+    cruce:
+      lexicon: "nada por forma en el lexicón ni en Zavala"
+      cognados: nada
+      toponimos: >-
+        ⭐ GUATACARE es topónimo de Esteves (p. 42, leída en la imagen: el
+        OCR de esa página es basura): «Lugar del municipio Jadacaquiva; hay
+        también Guatacarita. Ambos lugares aparecen censados en 1881. De las
+        voces sabemos que Guatacare es un árbol perennifolio, hojas grandes
+        y sapidiáceo [?]; Guatacarita es una hierba». Entra al canon como
+        toponimo-144 (C, fitónimo) con esta voz como segunda atestación.
+      a2: nada
+      fonotactica: pasa (watacare)
+      fuera_del_repo: "guatacare / guatacaro es nombre de árbol en el oriente de Venezuela (Anzoátegui, Monagas), zona cumanagota: origen probablemente caribe; no está en el módulo de Alvarado (comprobar el papel)"
+    filtros:
+      "4 nacional": "de uso oriental y falconiano: no exclusivo de Paraguaná"
+      "6 caribe": "posible (área cumanagota); sin verificar"
+    criterios_positivos:
+      "1 campo local": "sí — flora"
+      "2 distribución restringida": "no del todo"
+      "5 respaldo toponímico": "SÍ — Guatacare y Guatacarita, Esteves p. 42, censados en 1881"
+    veredicto: C
+    razon: >
+      Fitónimo con dos atestaciones paraguaneras independientes (Esteves y
+      Medina, glosas compatibles: árbol perennifolio; fruto no comestible)
+      y dos topónimos con el nombre; pero la voz se usa también en el
+      oriente caribe y su origen no está resuelto. C: al corpus (flora) y
+      al canon de topónimos. Termina en -are como Bariquire, Baraivere
+      (¿-are 'sitio de' o parte del fitónimo? se anota).
+  - voz: guayacán
+    glosa_libro: >-
+      árbol que fue común en nuestros montes; es de lento crecimiento,
+      mucho follaje; su madera es de mucha dureza y apreciada para trabajar
+      con ella. Hoy casi extinto de la península.
+    pagina: null            # ⚠️ PENDIENTE
+    campo: flora
+    segun_dictado: true
+    dictado: 2026-09-07
+    identificacion: "Guaiacum officinale / G. sanctum, el guayacán o palo santo"
+    cruce:
+      lexicon: "nada por forma"
+      toponimos: >-
+        GUAYACANAL, Esteves p. 42: caserío de Jadacaquiva, censo de 1881
+        3 casas y 23 vecinos; «la partícula -al colectiviza y españoliza la
+        voz Guayacán, de origen taíno. Guayacán es un árbol zigofiliáceo de
+        madera recia y hojas perennes; su fruto es una baya de sabor
+        amargo, oleosa, medicinal». Entra al canon como toponimo-145
+        (descartado: castellano sobre voz taína).
+      fonotactica: pasa
+      fuera_del_repo: "DRAE: guayacán, del taíno waiacan; panhispánico"
+    filtros:
+      "4 panhispánico": "SÍ — antillanismo panamericano (taíno)"
+    veredicto: D
+    razon: >
+      Antillanismo panamericano (filtro 4), como bajareque y hamaca; el
+      propio Esteves lo llama voz de origen taíno. Lo que Medina aporta es
+      ecología: el guayacán fue común y hoy está casi extinto en la
+      península — dato para el corpus (flora, madera dura).
+  - voz: hamaca
+    glosa_libro: >-
+      es palabra académica, y nuestra gente la dijo en forma correcta:
+      lecho colgante fabricado con lonilla o hilo de algodón.
+    pagina: null            # ⚠️ PENDIENTE (letra H)
+    campo: casa
+    origen_libro: "«es palabra académica» (según el autor)"
+    segun_dictado: true
+    dictado: 2026-09-07
+    cruce:
+      lexicon: >-
+        el lexicón tiene hamaka 'hamaca, red colgante para dormir'
+        [caquetío-reconstruido, forma_fuente hamaca; decisión de colisiones
+        D5 del 2026-08-31] y maure 'fibra de algodón con la que tejían las
+        hamacas' [caquetío-atestiguado]. Alvarado 1921 p. 171 s.v. HAMACA.
+      fonotactica: pasa
+      fuera_del_repo: "DRAE: hamaca, del taíno hamaka; panhispánico"
+    filtros:
+      "4 panhispánico": "SÍ — el antillanismo por excelencia"
+    veredicto: D
+    razon: >
+      Antillanismo panamericano (filtro 4); Medina mismo la da por
+      académica. El dato es el MATERIAL: «lonilla o hilo de algodón» — el
+      maure del lexicón sigue tejiendo hamacas en el XX. Se anota por
+      cobertura; el lexicón ya la tiene como reconstruida, coherente con
+      la vara de repertorio.
+  - voz: jenequén
+    entrada_libro: "Jenequén (dictado; la forma general es henequén)"
+    glosa_libro: >-
+      fue una fibra vegetal que, torcida, constituía un hilo fuerte y,
+      tejido, servía para hacer unos sacos para envasar productos
+      agrícolas.
+    pagina: null            # ⚠️ PENDIENTE
+    campo: flora / oficio (fibra)
+    segun_dictado: true
+    dictado: 2026-09-07
+    cruce:
+      lexicon: "nada por forma; por glosa, cocuiza (kukuisa, agave de fibra) está en el corpus de ecología: la fibra local con nombre caquetío es otra"
+      fonotactica: pasa
+      fuera_del_repo: "DRAE: henequén, m., agave de fibra (Agave fourcroydes); origen incierto, quizá taíno o maya; pancaribeño"
+    filtros:
+      "4 panhispánico": "SÍ — nombre general de la fibra y de los sacos en todo el Caribe"
+    veredicto: D
+    razon: >
+      Pancaribeña (filtro 4) con referente industrial del XX (los sacos de
+      henequén, importados o de fibra local): no es sustrato. La fibra
+      caquetía del corpus es la cocuiza. Se anota por cobertura.
+  - voz: hico
+    entrada_libro: "Hico / Jico"
+    glosa_libro: >-
+      es palabra ingresada al diccionario de la lengua española con el
+      significado de cada una de las cuerdas que sostienen la hamaca
+      [dictado: «la marca»]; por extensión, toda cuerda o soga.
+    pagina: null            # ⚠️ PENDIENTE
+    campo: casa
+    origen_libro: "el autor la da por académica (DRAE)"
+    segun_dictado: true
+    dictado: 2026-09-07
+    cruce:
+      lexicon: "nada por forma; por glosa, ninguna cuerda con nombre en el lexicón (cf. guaral, D)"
+      fonotactica: pasa (hiko)
+      fuera_del_repo: "DRAE: hico, del taíno; cada una de las cuerdas de la hamaca; Antillas y Venezuela"
+    filtros:
+      "4 antillanismo": "SÍ — taíno vía español, como hamaca"
+    veredicto: D
+    razon: >
+      Antillanismo (filtro 4), el mismo circuito de hamaca; Medina lo dice.
+      La extensión paraguanera a 'toda cuerda o soga' es dato de uso, no de
+      sustrato. Se anota por cobertura.
+  - voz: hicotea
+    entrada_libro: "Hicotea / Jicotea"
+    glosa_libro: >-
+      quelonio que fue abundante en nuestro medio, hoy casi desaparecido,
+      de unos 30 cm de largo, y era comestible; conocido en otras partes
+      del país como morrocoy.
+    pagina: null            # ⚠️ PENDIENTE
+    campo: fauna
+    segun_dictado: true
+    dictado: 2026-09-07
+    identificacion: >-
+      Por la glosa («conocido en otras partes del país como morrocoy», 30
+      cm, comestible, «nuestro medio» seco) es el MORROCOY, tortuga
+      terrestre (Chelonoidis carbonarius), no la hicotea de agua dulce
+      (Trachemys) que la palabra nombra en el resto del país: en Paraguaná
+      la voz taína cambió de animal.
+    cruce:
+      lexicon: "nada por forma; por glosa, el lexicón y el corpus no tienen tortuga terrestre (solo tortugas marinas y el botuto en ecologia-016)"
+      cognados: nada
+      toponimos: nada
+      a2: nada
+      fonotactica: pasa
+      fuera_del_repo: "DRAE: jicotea / hicotea, del taíno; Antillas, Colombia, Venezuela: tortuga de agua dulce"
+    filtros:
+      "4 antillanismo": "SÍ — voz taína panhispánica"
+    veredicto: D
+    razon: >
+      Antillanismo (filtro 4): no es sustrato. Pero trae DOS datos: (a)
+      semántico, en Paraguaná hicotea es el morrocoy terrestre, un
+      desplazamiento local del referente (regla 0 de Miguel, significado ≠
+      referente, en el habla); (b) ecológico, un quelonio comestible
+      abundante y hoy casi desaparecido — a mc-mundo-024, porque el corpus
+      no tiene la tortuga de tierra y es fauna precontacto plausible del
+      monte espinoso.
 

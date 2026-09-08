@@ -318,6 +318,37 @@ NIVEL_B = {
                           "regional"},
         ],
     },
+    # ── Del dictado de Medina Colina (2026-09-07): la voz guatacare trajo el
+    # topónimo; la p. 42 de Esteves se leyó en la imagen (el OCR es basura). ──
+    "guatacare": {
+        "id": "toponimo-144", "clase": "topónimo", "fuente": "esteves-1989",
+        "pagina": 42,
+        "glosa_fuente": "«Lugar del municipio Jadacaquiva; hay también Guatacarita. "
+                        "Ambos lugares aparecen censados en 1881. De las voces "
+                        "sabemos que Guatacare es un árbol perennifolio, hojas "
+                        "grandes y sapidiáceo [lectura dudosa de la imagen]; "
+                        "Guatacarita es una hierba»",
+        "segmentacion": "guatacare (fitónimo, sin composición; termina en -are)",
+        "razon": "fitónimo con glosa de fuente y segunda atestación viva "
+                 "(Medina Colina: «árbol común, y cuyos frutos no eran "
+                 "comestibles por el ser humano»), y dos topónimos con el nombre "
+                 "(Guatacare, Guatacarita). C como Caseto: planta sin componer. "
+                 "La voz se usa también en el oriente caribe del país y su "
+                 "origen no está resuelto. Si -are es aquí 'sitio de' "
+                 "(morfema-002) o parte del fitónimo, queda abierto.",
+        "observacion": "Censados en 1881 los dos lugares. No está en el mapa vivo "
+                       "de OSM (0 en el barrido de Paraguaná).",
+        "lecturas": [
+            {"tipo": "glosa-fuente",
+             "lectura": "«árbol común, y cuyos frutos no eran comestibles por el "
+                        "ser humano»",
+             "quien": "Medina Colina (dictado de Miguel)", "fecha": "2026-09-07",
+             "eje": "significado",
+             "procedencia": dict(obra="medina-colina-sxx"),
+             "veredicto": "segunda atestación, independiente de Esteves y "
+                          "compatible. Página pendiente."},
+        ],
+    },
     # ── Del dictado de Medina Colina (2026-09-07): la voz guarataro trajo
     # el topónimo, que estaba en la cola de Esteves. ──
     "guarataro": {
@@ -1953,6 +1984,27 @@ DESCARTES = {
     },
     # Lote 4 (2026-09-07): lo castellano del mapa vivo, registrado y no callado
     # (filtro 1 del protocolo del habla paraguanera).
+    # 2026-09-07, del dictado (guayacán): Esteves mismo lo dice — la partícula
+    # -al «colectiviza y españoliza» una voz taína. No es toponimia caquetía;
+    # se registra para que ni la campaña ni el barrido lo vuelvan a abrir.
+    "Esteves 1989: nombre castellano hecho sobre una voz antillana (taíno)": {
+        "razon": "el nombre es un colectivo castellano (-al) sobre un préstamo "
+                 "taíno del español general: no hay morfema caquetío que "
+                 "despejar. Se registra con su página para que no se vuelva a "
+                 "abrir.",
+        "fuente": "esteves-1989",
+        "ids": {"guayacanal": "toponimo-145"},
+        "paginas": {"guayacanal": 42},
+        "formas": [
+            "guayacanal (caserío del municipio Jadacaquiva; censo de 1881: 3 "
+            "casas, 23 vecinos, «hoy la aldea está más crecida»; «la partícula "
+            "-al colectiviza y españoliza la voz Guayacán, de origen taíno. "
+            "Guayacán es un árbol zigofiliáceo de madera recia y hojas perennes; "
+            "su fruto es una baya de sabor amargo, oleosa, medicinal». Medina "
+            "Colina, dictado 2026-09-07: el guayacán «fue común en nuestros "
+            "montes… hoy casi extinto de la península»)",
+        ],
+    },
     "castellano: nombres del mapa vivo en español": {
         "razon": "el nombre es transparente en castellano; no hay sustrato que "
                  "despejar. Se registra para que el barrido del mapa no lo "

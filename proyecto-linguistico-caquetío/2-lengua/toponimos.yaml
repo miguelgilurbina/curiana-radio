@@ -1,14 +1,14 @@
 meta:
   generado_por: curiana_sim/migrar_toponimos.py
-  toponimos: 143
+  toponimos: 145
   por_nivel:
     A: 8
-    B: 13
+    B: 14
     C: 47
-    descartado: 75
-  con_procedencia: 82
-  con_lecturas: 30
-  lecturas: 61
+    descartado: 76
+  con_procedencia: 84
+  con_lecturas: 31
+  lecturas: 62
   con_definicion_aceptada: 0
   corroboraciones_del_lexicon: 17
   nota: 'El nivel de confianza es un CAMPO, no un contenedor: antes eran NIVEL_A/B/C separados y para
@@ -247,6 +247,31 @@ toponimos:
   procedencia:
     obra: esteves-1989
     pagina: 22
+- id: toponimo-144
+  forma: guatacare
+  nivel: B
+  clase: topónimo
+  glosa_fuente: «Lugar del municipio Jadacaquiva; hay también Guatacarita. Ambos lugares aparecen censados
+    en 1881. De las voces sabemos que Guatacare es un árbol perennifolio, hojas grandes y sapidiáceo [lectura
+    dudosa de la imagen]; Guatacarita es una hierba»
+  segmentacion: guatacare (fitónimo, sin composición; termina en -are)
+  razon: 'fitónimo con glosa de fuente y segunda atestación viva (Medina Colina: «árbol común, y cuyos
+    frutos no eran comestibles por el ser humano»), y dos topónimos con el nombre (Guatacare, Guatacarita).
+    C como Caseto: planta sin componer. La voz se usa también en el oriente caribe del país y su origen
+    no está resuelto. Si -are es aquí ''sitio de'' (morfema-002) o parte del fitónimo, queda abierto.'
+  observacion: Censados en 1881 los dos lugares. No está en el mapa vivo de OSM (0 en el barrido de Paraguaná).
+  lecturas:
+  - tipo: glosa-fuente
+    lectura: «árbol común, y cuyos frutos no eran comestibles por el ser humano»
+    quien: Medina Colina (dictado de Miguel)
+    fecha: '2026-09-07'
+    eje: significado
+    procedencia:
+      obra: medina-colina-sxx
+    veredicto: segunda atestación, independiente de Esteves y compatible. Página pendiente.
+  procedencia:
+    obra: esteves-1989
+    pagina: 42
 - id: toponimo-143
   forma: guarataro
   nivel: B
@@ -1789,6 +1814,20 @@ toponimos:
   procedencia:
     obra: castellanos-elegias
     pagina: 185 (línea 48252)
+- id: toponimo-145
+  forma: guayacanal
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: 'caserío del municipio Jadacaquiva; censo de 1881: 3 casas, 23 vecinos, «hoy la aldea
+    está más crecida»; «la partícula -al colectiviza y españoliza la voz Guayacán, de origen taíno. Guayacán
+    es un árbol zigofiliáceo de madera recia y hojas perennes; su fruto es una baya de sabor amargo, oleosa,
+    medicinal». Medina Colina, dictado 2026-09-07: el guayacán «fue común en nuestros montes… hoy casi
+    extinto de la península»'
+  razon: 'el nombre es un colectivo castellano (-al) sobre un préstamo taíno del español general: no hay
+    morfema caquetío que despejar. Se registra con su página para que no se vuelva a abrir.'
+  procedencia:
+    obra: esteves-1989
+    pagina: 42
 - id: toponimo-106
   forma: la rinconada
   nivel: descartado

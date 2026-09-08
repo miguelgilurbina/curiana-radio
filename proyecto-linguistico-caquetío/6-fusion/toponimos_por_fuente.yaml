@@ -9,7 +9,7 @@ meta:
     de fusión.'
   marcas: ★ en el canon · ≡ en el índice de Esteves · ◆ en el mapa de Miguel · ⌂ en asentamientos.yaml
   resumen:
-    menciones: 734
+    menciones: 737
     formas_distintas: 507
     fuentes: 15
     por_fuente:
@@ -17,7 +17,7 @@ meta:
         menciones: 57
         formas: 57
       esteves-1989:
-        menciones: 258
+        menciones: 260
         formas: 192
       castellanos-elegias:
         menciones: 19
@@ -38,8 +38,8 @@ meta:
         menciones: 9
         formas: 8
       medina-colina-sxx:
-        menciones: 24
-        formas: 21
+        menciones: 25
+        formas: 22
       gatschet-1885:
         menciones: 31
         formas: 30
@@ -58,9 +58,9 @@ meta:
       osm-kaketiana:
         menciones: 7
         formas: 7
-    en_canon: 143
+    en_canon: 145
     en_nodos: 18
-    sin_canon_ni_nodo: 359
+    sin_canon_ni_nodo: 357
     cruces:
       mapa_de_miguel_en_esteves:
       - Buchuaco
@@ -108,11 +108,13 @@ meta:
       - Saruro
       - Tacuato
       - guarataro
+      - guatacare
       - moruy
       medina_colina_en_canon:
       - cabudare
       - capadare
       - guarataro
+      - guatacare
       - moruy
       - todarahuato
       en_mas_de_dos_fuentes:
@@ -430,7 +432,7 @@ por_fuente:
 - obra: esteves-1989
   en_bibliografia: true
   descripcion: 'el índice ''Topónimos compilados'' de Paraguaná (pp. 68-69): la cola de la campaña'
-  menciones: 258
+  menciones: 260
   formas: 192
   toponimos:
   - forma: judibana
@@ -461,6 +463,12 @@ por_fuente:
     dato: '«Barquís: especie de planta sarmentosa de Occidente; tinta que usaban para pintarse los indios ayamanes»'
     ref: toponimo-114 · Lisandro Alvarado, Glosario de voces indígenas, vía Esteves 1989 · 2026-09-07 · segunda
       atestación de la planta y de su uso; Alvarado la da…
+  - forma: guatacare
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: «Lugar del municipio Jadacaquiva; hay también Guatacarita. Ambos lugares aparecen censados en 1881. De
+      las vo…
+    ref: toponimo-144 · nivel B · topónimo · fuente procedencia
   - forma: guarataro
     tipo: canon
     donde: 2-lengua/toponimos.yaml
@@ -783,6 +791,12 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml
     dato: es un árbol cactáceo que exuda una goma medicinal, es el guamacho Pereskia de los botánicos
     ref: toponimo-077 · nivel C · topónimo · fuente procedencia
+  - forma: guayacanal
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: 'caserío del municipio Jadacaquiva; censo de 1881: 3 casas, 23 vecinos, «hoy la aldea está más crecida»;
+      «la p…'
+    ref: toponimo-145 · nivel descartado · topónimo · fuente procedencia
   - forma: charaima
     tipo: canon
     donde: 2-lengua/toponimos.yaml
@@ -1003,6 +1017,14 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
     ref: toponimo-143
+  - forma: Guayacanal
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-145
+  - forma: Guatacare
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-144
   - forma: Amuay
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
@@ -1235,12 +1257,6 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Guaruguaja
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Guatacare
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Guayacanal
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Güica
@@ -1971,9 +1987,15 @@ por_fuente:
   en_bibliografia: true
   descripcion: 'lo que el dictado toca: voces que son topónimo en Esteves, lo mandado a la cola, y los pueblos del
     autor (s. XX)'
-  menciones: 24
-  formas: 21
+  menciones: 25
+  formas: 22
   toponimos:
+  - forma: guatacare
+    tipo: lectura:glosa-fuente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: «árbol común, y cuyos frutos no eran comestibles por el ser humano»
+    ref: toponimo-144 · Medina Colina (dictado de Miguel) · 2026-09-07 · segunda atestación, independiente de Esteves
+      y compatible. …
   - forma: guarataro
     tipo: lectura:glosa-fuente
     donde: 2-lengua/toponimos.yaml §lecturas
@@ -6473,28 +6495,35 @@ indice_de_formas:
   menciones:
   - zavala-reyes-2015 · canon · toponimo-059 · nivel descartado · topónimo · fuente inferida-por-cruce
   - esteves-1989 · indice · toponimo-059
-- forma: Guatacare
-  variantes: []
+- forma: guatacare
+  variantes:
+  - Guatacare
   fuentes:
   - esteves-1989
+  - medina-colina-sxx
   cruces:
-    en_canon: null
+    en_canon: toponimo-144 · nivel B
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
-- forma: Guayacanal
-  variantes: []
+  - esteves-1989 · canon · toponimo-144 · nivel B · topónimo · fuente procedencia
+  - medina-colina-sxx · lectura:glosa-fuente · toponimo-144 · Medina Colina (dictado de Miguel) · 2026-09-07 · segunda
+    atestación, independiente de Esteves y compatible. …
+  - esteves-1989 · indice · toponimo-144
+- forma: guayacanal
+  variantes:
+  - Guayacanal
   fuentes:
   - esteves-1989
   cruces:
-    en_canon: null
+    en_canon: toponimo-145 · nivel descartado
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-145 · nivel descartado · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-145
 - forma: Güica
   variantes: []
   fuentes:

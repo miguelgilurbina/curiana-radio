@@ -20,8 +20,8 @@ meta:
   estado: cola-de-trabajo   # lote 7 (2026-09-07, el mapa vivo OSM contra Esteves: 18 nombres) · lote 1 (2026-09-06, los del mapa de Miguel) y lote 2 (2026-09-07, los «caribe insular»; Maitiruma fue en el 1) procesados
   obra: esteves-1989
   total_indice: 186
-  ya_en_canon: 55
-  por_procesar: 132
+  ya_en_canon: 57
+  por_procesar: 130
 
 # Los que YA están en 2-lengua/toponimos.yaml (referencia cruzada):
 ya_registrados:
@@ -65,6 +65,8 @@ ya_registrados:
   - {forma: Capuhana, canon: toponimo-113, lote: 2026-09-07-osm}
   - {forma: Sisibauco, canon: toponimo-130, lote: 2026-09-07-osm}   # era el «[ilegible …Sisibaúco]» del índice; lo resolvió el mapa vivo
   - {forma: Guarataro, canon: toponimo-143, lote: 2026-09-07-medina}   # lo trajo la voz guarataro del dictado
+  - {forma: Guayacanal, canon: toponimo-145, lote: 2026-09-07-medina}
+  - {forma: Guatacare, canon: toponimo-144, lote: 2026-09-07-medina}
   - {forma: Amuay, canon: toponimo-090, lote: 2026-09-07, estrato: no-caquetio-segun-esteves}
   - {forma: Elegüey, canon: toponimo-091, lote: 2026-09-07, estrato: no-caquetio-segun-esteves}
   - {forma: Jamaica, canon: toponimo-093, lote: 2026-09-07, estrato: no-caquetio-segun-esteves}
@@ -142,8 +144,6 @@ por_procesar:
   - {forma: Guaranao}
   - {forma: Guaricure}
   - {forma: Guaruguaja}
-  - {forma: Guatacare}
-  - {forma: Guayacanal}
   - {forma: Güica}
   - {forma: Güima}
   - {forma: Hayo}

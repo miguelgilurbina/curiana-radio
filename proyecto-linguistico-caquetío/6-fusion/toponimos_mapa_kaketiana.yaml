@@ -25,7 +25,7 @@ meta:
     entradas: 1696
     por_region:
       paraguana: {total: 357, castellano: 225, castellano_con_voz_indigena: 8, neerlandes_papiamento: 0, por_clasificar: 124,
-        de_ellos_en_canon: 36, de_ellos_en_esteves: 81, de_ellos_en_alguna_fuente: 101, aproximados_a_revisar: 15,
+        de_ellos_en_canon: 37, de_ellos_en_esteves: 81, de_ellos_en_alguna_fuente: 101, aproximados_a_revisar: 15,
         nuevos: 8}
       golfete-de-coro: {total: 314, castellano: 169, castellano_con_voz_indigena: 10, neerlandes_papiamento: 0,
         por_clasificar: 135, de_ellos_en_canon: 7, de_ellos_en_esteves: 5, de_ellos_en_alguna_fuente: 17, aproximados_a_revisar: 13,
@@ -4899,9 +4899,10 @@ entradas:
   osm_tag: place=locality
   clase: por-clasificar
   cruce:
-    con: Guayacanal
+    con: guayacanal
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-145 · nivel descartado
     en_esteves: true
 - forma: Guaydabacos
   tipo: lugar

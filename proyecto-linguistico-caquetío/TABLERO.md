@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-07 23:16**.
+<!--GENERADO--> Generado el **2026-09-07 23:23**.
 
 ## ¿Vamos bien?
 
