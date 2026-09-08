@@ -20,8 +20,8 @@ meta:
   estado: cola-de-trabajo   # lote 1 (2026-09-06, los del mapa de Miguel) y lote 2 (2026-09-07, los «caribe insular»; Maitiruma fue en el 1) procesados
   obra: esteves-1989
   total_indice: 186
-  ya_en_canon: 34
-  por_procesar: 152
+  ya_en_canon: 35
+  por_procesar: 151
 
 # Los que YA están en 2-lengua/toponimos.yaml (referencia cruzada):
 ya_registrados:
@@ -44,6 +44,7 @@ ya_registrados:
   - {forma: Maicara, canon: toponimo-085, lote: 2026-09-06}
   - {forma: Maitiruma, canon: toponimo-078, lote: 2026-09-06}
   - {forma: Supí, canon: toponimo-077, lote: 2026-09-06}
+  - {forma: Jayana, canon: toponimo-110, lote: 2026-09-07}   # #109 decisión B: primer -ana sin glosa de la lista viva
   - {forma: Amuay, canon: toponimo-090, lote: 2026-09-07, estrato: no-caquetio-segun-esteves}
   - {forma: Elegüey, canon: toponimo-091, lote: 2026-09-07, estrato: no-caquetio-segun-esteves}
   - {forma: Jamaica, canon: toponimo-093, lote: 2026-09-07, estrato: no-caquetio-segun-esteves}
@@ -147,7 +148,6 @@ por_procesar:
   - {forma: Jabe}
   - {forma: Jagüe}
   - {forma: Jariaca}
-  - {forma: Jayana}
   - {forma: Juderecal}
   - {forma: Juroguagua}
   - {forma: Laguarí}

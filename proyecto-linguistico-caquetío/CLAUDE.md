@@ -155,7 +155,8 @@ Aspectos:   -ka (completivo), -ni (continuativo), -da (prospectivo)
 Posesivos:  ta- (mi), pi- (tu), nü- (su)
 Locativos:  -bana (cerro, sitio alto — D9 resuelta 2026-08-31, seis apoyos;
             homónimo de bana 'hígado' reconstruido), -ana (forma atestiguada,
-            glosa 'lugar de' EN DISPUTA — #109), -ko (interior de)
+            glosa 'lugar de' RETIRADA el 2026-09-07 — #109; el motor la
+            conserva solo como convención canon-simulación), -ko (interior de)
 Neologismos: [forma: componentes = significado]
 ```
 

@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/migrar_toponimos.py
-  morfemas: 10
+  morfemas: 11
   glosados: 6
-  sin_glosa: 4
+  sin_glosa: 5
 morfemas:
 - id: morfema-001
   forma: -bacoa
@@ -155,3 +155,21 @@ morfemas:
   - Kassibari
   nota: ⚠ INDICE_FUENTES ya concluyó que **`-bari` no es un afijo**; van Buurt lo explica como `bara`/`bari`
     'árbol'. Coherente con que aparezca en posición final de topónimos.
+- id: morfema-011
+  forma: -ana
+  glosado: false
+  apariciones: 6
+  ejemplos:
+  - Paraguaná
+  - Curiana
+  - Chamuriana
+  - Cujicana
+  - Jayana
+  - Coria-na (aldea wanebucán de la Guajira, Oliver 1989 cap. 3 p. 207)
+  nota: 'Forma atestiguada, **glosa retirada** (#109, decisión B, 2026-09-07). Tenía ''lugar de'' con
+    dos apoyos, Paraguaná y Curiana; Paraguaná no descompone con ella («Rodeada del mar», «conuco en medio
+    del mar» en Esteves p. 56) y Curiana no tiene glosa de fuente. Censo de Esteves: 13 formas en -ana,
+    6 son -bana, 1 es -bana con h (Capuhana), 2 llevan el -ana en la raíz, 4 sin glosa, 0 ''lugar de''.
+    Compite con na ''como, semejante'' (Zavala #184) y con -ná tónica de Paraguaná. Excluye -bana (#38,
+    resuelto) y los -ana dentro de raíz (guariana, maracapana). El motor conserva -ana ''lugar de'' como
+    convención de la simulación (canon-simulación), no como dato.'

@@ -1,12 +1,12 @@
 meta:
   generado_por: curiana_sim/migrar_toponimos.py
-  toponimos: 109
+  toponimos: 110
   por_nivel:
     A: 8
     B: 10
     C: 31
-    descartado: 60
-  con_procedencia: 41
+    descartado: 61
+  con_procedencia: 42
   con_lecturas: 21
   lecturas: 43
   con_definicion_aceptada: 0
@@ -1279,6 +1279,20 @@ toponimos:
   glosa_fuente: 'lugar de Buenavista formado alrededor de «la casa grande de Jamaica»: con toda probabilidad
     una hacienda bautizada con el nombre de la isla; la glosa que da Esteves, «tierra de los manantiales»,
     es la etimología taína de la isla, de los libros, no un dato local'
+  razon: 'Esteves da referente, censo e historia, pero ninguna glosa propia: solo la etimología popular,
+    que él mismo relativiza. Sin ecuación bilingüe no hay morfema que despejar; se registra para que la
+    campaña no lo vuelva a abrir sin dato nuevo.'
+  procedencia:
+    obra: esteves-1989
+    pagina: 46
+- id: toponimo-110
+  forma: jayana
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: 'antiguo fundo pecuario cerca de Amuaicito, hoy caserío del municipio Los Taques; con
+    Adícora, único puerto de Paraguaná con Resguardo Marítimo en la Colonia, habilitado en 1834 para exportar
+    ganado en pie; Esteves cree que es el Guarama de un mapa antiguo; sin glosa; termina en -ana, formante
+    sin glosa desde #109: está en la lista viva de 6-fusion/censo_ana_esteves_109.yaml'
   razon: 'Esteves da referente, censo e historia, pero ninguna glosa propia: solo la etimología popular,
     que él mismo relativiza. Sin ecuación bilingüe no hay morfema que despejar; se registra para que la
     campaña no lo vuelva a abrir sin dato nuevo.'

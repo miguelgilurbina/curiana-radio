@@ -6429,7 +6429,13 @@ REGLAS_LOCATIVAS: dict[str, dict] = {
             "buco + ana = lugar de la represa",
             "biro + ana = lugar de la sal, salinar",
         ],
-        "evidencia": "Curiana (Zavala 2015), Barquisimeto (*Barqui+sima/ima), Paraguaná (*Para+gua+na)",
+        "evidencia": "CANON-SIMULACIÓN, no dato: la glosa 'lugar de' se retiró del "
+                     "canon de reconstrucción el 2026-09-07 (#109, decisión B de "
+                     "Miguel; el censo de Esteves dio 0 casos y el 'lugar' "
+                     "paraguanero es -bacoa). Se conserva aquí como convención de "
+                     "la simulación. Apoyos que tenía: Curiana (Zavala 2015, sin "
+                     "glosa de fuente), Paraguaná (*Para+gua+na, segmentación "
+                     "abierta), Barquisimeto (*Barqui+sima/ima)",
         "instruccion_agente": (
             "Si necesitas nombrar un lugar, usa la raíz del elemento característico + -ana: "
             "Si hay muchos manglares, ese lugar es 'manglar-ana'. "

@@ -9,7 +9,7 @@ meta:
     de fusión.'
   marcas: ★ en el canon · ≡ en el índice de Esteves · ◆ en el mapa de Miguel · ⌂ en asentamientos.yaml
   resumen:
-    menciones: 680
+    menciones: 681
     formas_distintas: 495
     fuentes: 14
     por_fuente:
@@ -17,7 +17,7 @@ meta:
         menciones: 58
         formas: 58
       esteves-1989:
-        menciones: 230
+        menciones: 231
         formas: 191
       castellanos-elegias:
         menciones: 12
@@ -55,9 +55,9 @@ meta:
       sin-procedencia:
         menciones: 8
         formas: 8
-    en_canon: 109
+    en_canon: 110
     en_nodos: 18
-    sin_canon_ni_nodo: 381
+    sin_canon_ni_nodo: 380
     cruces:
       mapa_de_miguel_en_esteves:
       - Buchuaco
@@ -425,7 +425,7 @@ por_fuente:
 - obra: esteves-1989
   en_bibliografia: true
   descripcion: 'el índice ''Topónimos compilados'' de Paraguaná (pp. 68-69): la cola de la campaña'
-  menciones: 230
+  menciones: 231
   formas: 191
   toponimos:
   - forma: judibana
@@ -677,6 +677,12 @@ por_fuente:
     dato: 'lugar de Buenavista formado alrededor de «la casa grande de Jamaica»: con toda probabilidad una hacienda
       baut…'
     ref: toponimo-093 · nivel descartado · topónimo · fuente procedencia
+  - forma: jayana
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: antiguo fundo pecuario cerca de Amuaicito, hoy caserío del municipio Los Taques; con Adícora, único puerto
+      de…
+    ref: toponimo-110 · nivel descartado · topónimo · fuente procedencia
   - forma: Guacurebo
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
@@ -753,6 +759,10 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
     ref: toponimo-077
+  - forma: Jayana
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-110
   - forma: Amuay
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
@@ -1063,9 +1073,6 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Jariaca
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Jayana
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Juderecal
@@ -6410,17 +6417,19 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
-- forma: Jayana
-  variantes: []
+- forma: jayana
+  variantes:
+  - Jayana
   fuentes:
   - esteves-1989
   cruces:
-    en_canon: null
+    en_canon: toponimo-110 · nivel descartado
     en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
-  - esteves-1989 · indice
+  - esteves-1989 · canon · toponimo-110 · nivel descartado · topónimo · fuente procedencia
+  - esteves-1989 · indice · toponimo-110
 - forma: Jua
   variantes:
   - Juwa

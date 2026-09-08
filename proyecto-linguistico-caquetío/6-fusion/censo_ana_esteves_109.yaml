@@ -12,7 +12,7 @@
 # ─────────────────────────────────────────────────────────────────────────
 meta:
   recogido: '2026-09-07'
-  estado: propuesta
+  estado: decidido   # B, Miguel, 2026-09-07: la glosa 'lugar de' se retira; -ana es morfema-011 (formativo sin glosa); la lista de abajo sigue viva
   obra: esteves-1989
   toca: ["#109", "#38 (-bana)", "toponimo-018 paraguaná", "2-lengua/morfologia.md §3"]
   pregunta: >-
@@ -202,3 +202,23 @@ decision_pendiente:
       apoyo: "Esteves p. 56 + Zavala #122 + orden núcleo-final medido"
       cautela: "sube nivel; es canon de segmentación, no solo de glosa"
   recomendacion_del_proyecto: "B, y C como lectura (ya registrada), no como segmentación canónica hasta que aparezca el morfema del 'rodeada'"
+  decision: >-
+    B (Miguel, 2026-09-07): «vayamos con la B si igual vamos a poder tener
+    más info con más topónimos. Por ejemplo Jayana es uno de esos que suman a
+    la lista de nombres». Aplicado: -ana entra a FORMATIVOS_SIN_GLOSA
+    (morfema-011), morfologia.md y CLAUDE.md lo dicen, Jayana entra al canon
+    (toponimo-110, descartado: sin glosa) y la lista de abajo queda viva.
+
+# ══════════════════════════════════════════════════════════════════
+# 5. LA LISTA VIVA DE -ana (se alimenta con la campaña)
+# ══════════════════════════════════════════════════════════════════
+# Regla: todo topónimo nuevo en -ana/-aná que NO sea -bana ni lleve el -ana
+# dentro de una raíz conocida entra aquí con su fuente y su glosa (o su
+# falta). Si alguna fuente glosa uno como 'lugar de', se reabre #109.
+lista_viva_ana:
+  - {forma: Paraguaná, canon: toponimo-018, glosa: "Rodeada del mar (Zavala); conuco en medio del mar (Esteves p. 56)", segmentacion: abierta}
+  - {forma: Curiana, canon: lexicón (curiana), glosa: "sin glosa de fuente; 'territorio de los caquetíos' (nota de Zavala)", toca: "#33"}
+  - {forma: Chamuriana, canon: toponimo-109, glosa: "ninguna (Esteves p. 35)"}
+  - {forma: Cujicana, canon: por-procesar, glosa: "ninguna (Esteves pp. 32-33)"}
+  - {forma: Jayana, canon: toponimo-110, glosa: "ninguna (Esteves pp. 46-47); = Guarama de un mapa antiguo, según Esteves", nombre_vivo: "caserío de Los Taques"}
+  - {forma: Coria-na, canon: no, fuente: "Oliver 1989 cap. 3 p. 207", glosa: "ninguna; aldea wanebucán de Punta Espada-Chichibacoa, «suspiciously Caquetío»", toca: "#33"}

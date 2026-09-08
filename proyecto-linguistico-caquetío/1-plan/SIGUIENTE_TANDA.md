@@ -183,8 +183,11 @@ distinguiría `-ana` de `-aná` y decide #109).~~ Hecha el 2026-09-07 contra
 Esteves y Zavala: tres correcciones (`paraguaná`, `caquetío`, `aburí`). Y el
 censo de -ana en Esteves, mismo día: ninguna forma glosada 'lugar de'
 (`6-fusion/censo_ana_esteves_109.yaml`; borrador de comentario en
-`issues-pendientes/comentario-109-censo-ana-esteves.md`). #109 espera la
-decisión de Miguel sobre la glosa.
+`issues-pendientes/comentario-109-censo-ana-esteves.md`). **#109 decidido
+(B, Miguel, mismo día)**: la glosa 'lugar de' se retira, `-ana` es
+`morfema-011` sin glosa, la lista de -ana queda viva en el censo y Jayana
+entra al canon (`toponimo-110`). Falta publicar el comentario y cerrar el
+issue.
 
 ### B.6 · Oliver §3.2.4 — los caribes ✅ (minado el 2026-09-07)
 

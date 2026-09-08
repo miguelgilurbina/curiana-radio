@@ -1334,9 +1334,9 @@ DESCARTES = {
         "fuente": "esteves-1989",
         "ids": {"charaima": "toponimo-082", "jacuque": "toponimo-089",
                 "elegüey": "toponimo-091", "maragüey": "toponimo-092",
-                "jamaica": "toponimo-093"},
+                "jamaica": "toponimo-093", "jayana": "toponimo-110"},
         "paginas": {"charaima": 35, "jacuque": 44, "elegüey": 37, "maragüey": 37,
-                    "jamaica": 46},
+                    "jamaica": 46, "jayana": 46},
         "formas": [
             "charaima (población entre Adícora y Baraived; censo 1881: 79 casas, "
             "527 habitantes; nombre primitivo Charaide en su Título de "
@@ -1363,6 +1363,14 @@ DESCARTES = {
             "Jamaica»: con toda probabilidad una hacienda bautizada con el nombre "
             "de la isla; la glosa que da Esteves, «tierra de los manantiales», es "
             "la etimología taína de la isla, de los libros, no un dato local)",
+            # 2026-09-07, con la decisión B de #109: Miguel pidió que los -ana
+            # sin glosa entren a la lista, y nombró a Jayana. Nombre vivo.
+            "jayana (antiguo fundo pecuario cerca de Amuaicito, hoy caserío del "
+            "municipio Los Taques; con Adícora, único puerto de Paraguaná con "
+            "Resguardo Marítimo en la Colonia, habilitado en 1834 para exportar "
+            "ganado en pie; Esteves cree que es el Guarama de un mapa antiguo; "
+            "sin glosa; termina en -ana, formante sin glosa desde #109: está en "
+            "la lista viva de 6-fusion/censo_ana_esteves_109.yaml)",
         ],
     },
     "glosa meramente referencial": {
@@ -1621,6 +1629,31 @@ FORMATIVOS_SIN_GLOSA = {
         "nota": "⚠ INDICE_FUENTES ya concluyó que **`-bari` no es un afijo**; "
                 "van Buurt lo explica como `bara`/`bari` 'árbol'. Coherente "
                 "con que aparezca en posición final de topónimos.",
+    },
+    # #109, decisión B de Miguel (2026-09-07): la forma está atestiguada, la
+    # glosa 'lugar de' se retira. El censo de Esteves dio cero casos glosados
+    # así (6-fusion/censo_ana_esteves_109.yaml): el 'lugar' paraguanero es
+    # -bacoa. Paraguaná dejó de sostenerla (segmentación abierta) y Curiana
+    # tiene expediente propio (#33). La lista de abajo es VIVA: cada -ana
+    # nuevo sin glosa entra aquí; si una fuente glosa uno como 'lugar de', se
+    # reabre #109.
+    "-ana": {
+        "apariciones": 6,
+        "ejemplos": ["Paraguaná", "Curiana", "Chamuriana", "Cujicana",
+                     "Jayana", "Coria-na (aldea wanebucán de la Guajira, "
+                     "Oliver 1989 cap. 3 p. 207)"],
+        "nota": "Forma atestiguada, **glosa retirada** (#109, decisión B, "
+                "2026-09-07). Tenía 'lugar de' con dos apoyos, Paraguaná y "
+                "Curiana; Paraguaná no descompone con ella («Rodeada del mar», "
+                "«conuco en medio del mar» en Esteves p. 56) y Curiana no "
+                "tiene glosa de fuente. Censo de Esteves: 13 formas en -ana, "
+                "6 son -bana, 1 es -bana con h (Capuhana), 2 llevan el -ana en "
+                "la raíz, 4 sin glosa, 0 'lugar de'. Compite con na 'como, "
+                "semejante' (Zavala #184) y con -ná tónica de Paraguaná. "
+                "Excluye -bana (#38, resuelto) y los -ana dentro de raíz "
+                "(guariana, maracapana). El motor conserva -ana 'lugar de' "
+                "como convención de la simulación (canon-simulación), no "
+                "como dato.",
     },
 }
 

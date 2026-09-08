@@ -82,6 +82,17 @@ censo a cero, las opciones:
 Recomendación del proyecto: **B**, y C solo como lectura (ya está) hasta que
 aparezca el morfema del 'rodeada'.
 
+### Decisión: B (2026-09-07)
+
+Se retira la glosa 'lugar de'. `-ana` queda como forma atestiguada sin glosa
+(`morfema-011` en `morfemas.yaml`), Paraguaná deja de sostenerla y Curiana
+sigue en #33. La lista de -ana sin glosa queda **viva** en
+`6-fusion/censo_ana_esteves_109.yaml` y se alimenta con la campaña: Jayana
+entra hoy al canon (`toponimo-110`) como primer caso nombrado. Si una fuente
+glosa un -ana como 'lugar de', esto se reabre. El motor conserva `-ana`
+'lugar de' como convención de la simulación, etiquetada canon-simulación, no
+como dato. Este issue puede cerrarse.
+
 ---
 *Medido sobre `fuentes_caquetios/Esteves_1989_Toponimos_Paraguana_{1,2,3}.ocr.txt`
 (pdf → impresa: +6 / +25 / +55); cada entrada leída en su página. Zavala:
