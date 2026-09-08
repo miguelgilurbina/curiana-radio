@@ -196,6 +196,23 @@ rastro alguno** en Alvarado.
    (pesca, marea, médano, salina) sobre los 1442 restantes podría dar más, con
    rendimiento decreciente y riesgo creciente de falso positivo.
 
+## El texto completo frente al módulo (2026-09-08)
+
+`lexicon_alvarado.py` es una **curación**, no el glosario entero: al pasar
+por `pdftotext` las 43 voces de veredicto C del dictado de Medina Colina
+(`6-fusion/medina_colina_dictado.yaml`), doce aparecieron en el texto que el
+módulo no trae: bayure (p. 25, «especie de abeja silvestre»), barisigua
+(p. 23, Coro y Zulia), camuro (p. 51, del guajiro *amuru*), carebe (p. 62, la
+cuchara de totumo del occidente), cuaguaro (p. 97, Falcón), chiguare y
+chiguaral (p. 120, Coro), guatacare (p. 162, con taxón), lefaria (p. 184, el
+fruto del cardón, occidente), siguato (p. 277 → ciguato), tapiramo (p. 284,
+«en el país»), titirijí (p. 291, *Asio*), urupagua y urupaguita (p. 305,
+«pasto de cabras, Coro»). Seis subieron a B por segunda fuente localizada
+en el occidente; cuatro bajaron a D porque Alvarado las da como nacionales o
+como préstamo wayuu. **Regla 6 en carne propia**: un cero en el módulo no es
+un cero en Alvarado. Para cualquier voz nueva, buscar en el texto completo
+(`pdftotext`, página impresa = pdf − 30), no en `lexicon_alvarado.py`.
+
 ## Enlaces
 
 [[02_protocolo_habla_paraguanera]] · [[zavala-reyes-2015]] · [[van-buurt-2014]] · [[gatschet-1885]] · [[oviedo-y-valdes-1851]]

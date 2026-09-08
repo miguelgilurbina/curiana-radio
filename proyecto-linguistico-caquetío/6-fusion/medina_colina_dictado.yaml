@@ -991,6 +991,9 @@ entradas:
       "4 cognado regular": "no"
       "5 respaldo toponímico": "SÍ — Las Barisiguas (Dabajuro, Falcón occidental: el corazón de la tradición dabajuroide, la cerámica de los caquetíos costeros). Fuente débil (blog) con coordenadas; verificar en mapa"
       "6 atestación colonial": "no; pero sí atestación CIENTÍFICA del nombre común (Avendaño & Castillo 2014)"
+    alvarado_1921_texto_completo: >-
+      p. 23: «Barisigua. Árbol indeterminado de Coro y Zulia». Hallado el 2026-09-08 al pasar las voces C por el
+      texto completo del glosario (lexicon_alvarado.py es un subconjunto). segunda fuente, Coro y Zulia.
     veredicto: B
     razon: >
       Subió de C a B el mismo día: sobrevive a los seis descartes y cumple
@@ -1073,7 +1076,11 @@ entradas:
       "4 cognado regular": "no"
       "5 respaldo toponímico": "no"
       "6 atestación previa": "no"
-    veredicto: C
+    alvarado_1921_texto_completo: >-
+      p. 25: «Bayure. Especie de abeja silvestre». Hallado el 2026-09-08 al pasar las voces C por el
+      texto completo del glosario (lexicon_alvarado.py es un subconjunto). segunda fuente independiente (1921), mismo referente; Alvarado no localiza: sube a B con la distribución como duda.
+    veredicto: B
+    veredicto_anterior: C   # cambiado el 2026-09-08 por Alvarado a texto completo
     razon: >
       Sobrevive a los seis descartes con dos criterios positivos (campo
       local, distribución restringida): NIVEL C, plausible — al corpus
@@ -1166,7 +1173,11 @@ entradas:
       "1 campo local": "sí — fitónimo de especie de cactácea"
       "2 distribución restringida": "sí en Paraguaná (Medina Colina); Alvarado la conoce, así que circula al menos en Falcón/Lara"
       "6 atestación previa": "parcial — mención de Alvarado 1921, no lematizada"
-    veredicto: C
+    alvarado_1921_texto_completo: >-
+      p. 184: «Lefaria. Fruto del cardón o cirio ordinario. Sinn. aurero, agorero, breva. El cardón de lefaria (Cereus sp.) es un árbol muy abundante en la parte occidental y cálida del país» (y p. 16: «verde como la lefaria y redondo como el dato»). Hallado el 2026-09-08 al pasar las voces C por el
+      texto completo del glosario (lexicon_alvarado.py es un subconjunto). segunda fuente, occidente, y el par lefaria/dato de Alvarado es el mismo del lexicón (dato 'fruto del cardón').
+    veredicto: B
+    veredicto_anterior: C   # cambiado el 2026-09-08 por Alvarado a texto completo
     razon: >
       Fitónimo de cardón sin forma en el canon: sobrevive a los descartes,
       campo local y distribución regional, con la mención de Alvarado como
@@ -1505,7 +1516,11 @@ entradas:
     criterios_positivos:
       "1 campo local": "sí — vasija de calabaza, referente precontacto (el conuco, la empalizada, la tapara)"
       "2 distribución restringida": "sí — única fuente, y contrastada por el autor con el nacional"
-    veredicto: C
+    alvarado_1921_texto_completo: >-
+      p. 51: «Camuro. Crescentia cucurbitina. La planta, el fruto y la vasija con este aderezada tienen igual nombre en el Zulia. Del guajiro amuru, árbol de las calabazas, según A. Rojas». Hallado el 2026-09-08 al pasar las voces C por el
+      texto completo del glosario (lexicon_alvarado.py es un subconjunto). Alvarado lo da como zuliano y del guajiro amuru: filtro 3 (préstamo wayuu), baja a D.
+    veredicto: D
+    veredicto_anterior: C   # cambiado el 2026-09-08 por Alvarado a texto completo
     razon: >
       Nombre local de la vasija de Lagenaria frente al nacional camaso:
       pasa los filtros, campo local y distribución restringida, sin cognado
@@ -1723,7 +1738,11 @@ entradas:
     criterios_positivos:
       "1 campo local": "sí — fitónimo de especie con fruto comestible"
       "2 distribución restringida": "sí — única fuente"
-    veredicto: C
+    alvarado_1921_texto_completo: >-
+      p. 120: «Chiguare. Árbol indeterminado de Coro. D. t. chihuare» y «Chiguaral. Lugar poblado de chiguares». Hallado el 2026-09-08 al pasar las voces C por el
+      texto completo del glosario (lexicon_alvarado.py es un subconjunto). segunda fuente, localizada en Coro; y el colectivo chiguaral como topónimo, que Esteves p. 36 confirma (toponimo-124).
+    veredicto: B
+    veredicto_anterior: C   # cambiado el 2026-09-08 por Alvarado a texto completo
     razon: >
       Fitónimo de bejuco frutal sin forma en el canon, en un campo (los
       bejucos) que el caquetío atestiguado ya nombra por tipo (naure, aka,
@@ -1944,7 +1963,11 @@ entradas:
     criterios_positivos:
       "1 campo local": "sí — fitónimo de especie con dos usos técnicos (cerca del conuco, armazón de la casa de bahareque)"
       "2 distribución restringida": "sí — única fuente"
-    veredicto: C
+    alvarado_1921_texto_completo: >-
+      p. 97: «Cuaguaro. Árbol de madera amarilla o de un rojizo jaspeado, tal cual nodosa, compacta, astillosa. Haylo en el estado Falcón». Hallado el 2026-09-08 al pasar las voces C por el
+      texto completo del glosario (lexicon_alvarado.py es un subconjunto). segunda fuente, localizada en Falcón, con la madera descrita.
+    veredicto: B
+    veredicto_anterior: C   # cambiado el 2026-09-08 por Alvarado a texto completo
     razon: >
       Fitónimo de madera de construcción sin forma en el canon, con los
       dos usos que definen la casa y el conuco caquetíos (cerca y armazón
@@ -3158,7 +3181,11 @@ descartes:
       lexicon: "nada por forma (cognado-050 caribe es ruido); por glosa: kudan 'servir' [caq.], wayuu aliita 'totuma' — nada para 'cucharón'"
       fonotactica: pasa
       fuera_del_repo: "no está en Alvarado 1921"
-    veredicto: C
+    alvarado_1921_texto_completo: >-
+      p. 62: «Carebe. Especie de cuchara, de forma oval, a la que sirve de mango la parte más angosta del óvalo. Fabrícala del fruto del totumo y úsala en Occidente la gente campesina. Sin. pichagua. Cf. el guajibo kariepa, cuchara». Hallado el 2026-09-08 al pasar las voces C por el
+      texto completo del glosario (lexicon_alvarado.py es un subconjunto). segunda fuente, occidente; Alvarado propone el guahibo kariepa: contacto (cf. etnia-001 cuiba, guahibo).
+    veredicto: B
+    veredicto_anterior: C   # cambiado el 2026-09-08 por Alvarado a texto completo
     certeza: baja
     razon: >
       Utensilio de tapara con mango: referente precontacto (la totuma
@@ -4323,6 +4350,9 @@ descartes:
       "1 campo local": "sí — flora"
       "2 distribución restringida": "no del todo"
       "5 respaldo toponímico": "SÍ — Guatacare y Guatacarita, Esteves p. 42, censados en 1881"
+    alvarado_1921_texto_completo: >-
+      p. 162: «Guatacare. Chytroma idatimon. Mirtáceas. Árbol maderable, se eleva como a 40 o 50 pies, muy común en terrenos arcillosos algo húmedos; madera pardusca…» (y p. 11 guatacaro: madera «fuerte, elástica e incorruptible, usada en vigas para techumbre», bajo llano). Hallado el 2026-09-08 al pasar las voces C por el
+      texto completo del glosario (lexicon_alvarado.py es un subconjunto). segunda fuente con taxón, pero Alvarado no la localiza en Coro: se queda en C con la distribución en contra.
     veredicto: C
     razon: >
       Fitónimo con dos atestaciones paraguaneras independientes (Esteves y
@@ -5239,7 +5269,11 @@ descartes:
     criterios_positivos:
       "1 campo local": "sí — el mar, entre pescadores"
       "2 distribución restringida": "sí para el reparto de sentidos"
-    veredicto: C
+    alvarado_1921_texto_completo: >-
+      p. 277: «Siguato. Véase ciguato»; «Siguatera. Véase ciguatera». Hallado el 2026-09-08 al pasar las voces C por el
+      texto completo del glosario (lexicon_alvarado.py es un subconjunto). Alvarado confirma el antillanismo ciguato (filtro 4): baja a D; el valor sigue en la isoglosa mc-mundo-027.
+    veredicto: D
+    veredicto_anterior: C   # cambiado el 2026-09-08 por Alvarado a texto completo
     razon: >
       Con toda probabilidad el antillanismo ciguato (el que se envenena con
       pescado) desdoblado en Paraguaná en dos sentidos por dos comunidades
@@ -5337,7 +5371,11 @@ descartes:
     criterios_positivos:
       "1 campo local": "sí — cultivo, con técnica (el lavado del amargor)"
       "2 distribución restringida": "a medias — occidente"
-    veredicto: C
+    alvarado_1921_texto_completo: >-
+      p. 284: «Tapiramo. Phaseolus sp. Especie de guisante grueso, muy usado como legumbre en el país»; «dar a alguno más palos que a un saco de tapiramos». Hallado el 2026-09-08 al pasar las voces C por el
+      texto completo del glosario (lexicon_alvarado.py es un subconjunto). Alvarado la da como voz de todo el país: filtro 4, baja a D; la técnica del lavado del amargor queda como dato.
+    veredicto: D
+    veredicto_anterior: C   # cambiado el 2026-09-08 por Alvarado a texto completo
     razon: >
       Fitónimo del occidente, sin castellano detrás, con la técnica de
       preparación en la glosa: C, al corpus (conuco). El área es la
@@ -5429,7 +5467,11 @@ descartes:
     criterios_positivos:
       "1 campo local": "sí — fauna"
       "2 distribución restringida": "sí"
-    veredicto: C
+    alvarado_1921_texto_completo: >-
+      p. 291: «Titirijí. Asio accipitrinus. Rapaz nocturna, la mayor entre las de su familia en el país. Cabeza grande y redonda con dos penachos u orejuelas…». Hallado el 2026-09-08 al pasar las voces C por el
+      texto completo del glosario (lexicon_alvarado.py es un subconjunto). Alvarado la registra como nombre venezolano de la especie, sin localizar: filtro 4, baja a D; Medina añade que en Paraguaná desplazó a búho/guarracuco.
+    veredicto: D
+    veredicto_anterior: C   # cambiado el 2026-09-08 por Alvarado a texto completo
     razon: "Nombre local del búho frente al nacional guarracuco: C, al corpus (fauna), con la sospecha de onomatopeya. Ecología: hoy desaparecido."
   - voz: tobeca
     glosa_libro: "con esta palabra identificaron a la perdiz, también llamada chenga"
@@ -5719,6 +5761,9 @@ descartes:
       "3 fonotáctica": "pasa"
       "5 respaldo toponímico": "SÍ — Urupaguaduco, Urupagua (Esteves)"
       "6 atestación colonial": "no; Alvarado 1921"
+    alvarado_1921_texto_completo: >-
+      p. 305: «Urupagua. Árbol indeterminado de Coro… Urupaguita. Yerba que produce una frutilla amarga. Pasto de cabras. Coro». Hallado el 2026-09-08 al pasar las voces C por el
+      texto completo del glosario (lexicon_alvarado.py es un subconjunto). el diminutivo urupaguita 'pasto de cabras, Coro' es la primera clase de Medina (el arbusto de cercas): las dos clases están en Alvarado.
     veredicto: A
     razon: >
       Tres fuentes independientes (Alvarado 1921, Esteves 1989, Medina
