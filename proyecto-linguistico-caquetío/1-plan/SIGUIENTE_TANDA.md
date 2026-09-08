@@ -90,7 +90,7 @@ muestreo F10 de Miguel, **9** el exportador #42).
 
 | # | Qué | De quién | Tamaño |
 |---|---|---|---|
-| 8 | **D11** — contra qué lengua se reconstruye (wayuu 781 vs. lokono 275) | **Miguel**: es decisión, no trabajo. La evidencia está completa desde el 2026-08-31 (`6-fusion/computo_d11_2026-08-31.yaml`) | una decisión |
+| 8 | ~~**D11**~~ **DECIDIDA el 2026-09-08**: rebalancear hacia el eje lokono-taíno, con achagua más adelante (`6-fusion/decisiones_tanda_2026-09-08.yaml`). El gate se levanta cuando la **fase 1** esté aplicada, no al decidir | escriba: minar Perea Alonso 1942, ya en el repo y sin minar | medio |
 | 5 | **F10** — muestreo de 15-20 citas del corpus al azar | **Miguel**: es trabajo humano por definición | una tarde |
 | 9 | **El exportador** (`export_runs_index.py`, #42): exporta 0 turnos con 290 respuestas | escriba | chico |
 
@@ -116,7 +116,8 @@ DESPUÉS del primer run limpio, nunca antes (PLAN_MAESTRO §6.4).
 
 1. **Arreglar el exportador** (escriba, chico). Desbloquea la condición 9 y es
    lo único del gate que no depende de Miguel.
-2. **D11 y F10** (Miguel, en paralelo). Con eso el gate queda en verde.
+2. **F10** (Miguel) y la **fase 1 de D11** (escriba: minar Perea Alonso 1942,
+   926 pp. con texto, ya en el repo). Con eso el gate queda en verde.
 3. **Verificar la asignación norte/sur de los clanes** ([[DISENO_ERA2]] §2 la
    marca EN VERIFICACIÓN: los homónimos modernos parecen invertidos respecto a
    Oliver). Ahora se puede: el barrido OSM tiene las coordenadas. Chico, y hay

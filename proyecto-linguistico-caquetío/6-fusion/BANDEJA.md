@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-08**.
 
-**1889 ítems propuestos** en 32 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
+**1889 ítems propuestos** en 33 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -30,6 +30,7 @@ editar_a_mano: no
 | `decisiones_colisiones_d5_2026-08-31.yaml` | ? | 3 |  |
 | `decisiones_tanda_2026-08-30.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-01.yaml` | ? | 0 |  |
+| `decisiones_tanda_2026-09-08.yaml` | ? | 0 |  |
 | `frase_saludo_mitare.yaml` | ? | 2 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
 | `medina_colina_dictado.yaml` | ? | 141 |  |
@@ -78,6 +79,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 
 | Archivo | Qué es |
 |---|---|
+| `comentario-39-d11-rebalanceo.md` | D11 decidida: se rebalancea hacia el eje lokono-taíno, con achagua más adelante |
 | `comentario-45-tara-medina.md` | Segunda fuente, y viva: para un paraguanero del siglo XX, las taras son los saltamontes |
 
 ---

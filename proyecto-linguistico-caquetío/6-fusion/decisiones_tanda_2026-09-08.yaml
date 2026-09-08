@@ -1,0 +1,135 @@
+# ─────────────────────────────────────────────────────────────────────────
+# DECISIONES DE MIGUEL — tanda del 2026-09-08 (D11)
+#
+# Mismo patrón que las tandas del 08-30 y el 09-01: la decisión queda
+# registrada aquí al tomarse, y se aplica al canon en un aplicador
+# idempotente con --dry-run cuando la tanda cierre. Hasta entonces el canon
+# no se toca (regla 5). Comentario para el issue redactado en
+# 6-fusion/issues-pendientes/comentario-39-d11-rebalanceo.md
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-08'
+  decidido_por: Miguel
+  estado: ABIERTA — D11 decidida en RUMBO; la ejecución va por fases
+
+# ══════════════════════════════════════════════════════════════════
+# DECISIÓN — D11 (#39): de quién se reconstruye el caquetío
+# ══════════════════════════════════════════════════════════════════
+d11:
+  estado: DECIDIDA (2026-09-08) — opción «rebalancear», por fases
+  cierra: la condición 8 del gate, en cuanto la fase 1 esté aplicada
+  decision_literal: >-
+    «Yo creo que deberíamos rebalancear con el lokono y achagua más
+    adelante. Ya que culturalmente son los más cercanos, al igual que el
+    taíno que hemos visto como se comparten ciertas palabras.»
+  lectura_operativa: >-
+    Se rebalancea la comparanda hacia el eje LOKONO-TAÍNO (el arahuaco
+    septentrional insular y de Guayana), con el ACHAGUA como tercera pata
+    a incorporar más adelante. El wayuunaiki NO se retira: deja de ser la
+    hermana por defecto de la que se reconstruye, y pasa a ser una
+    comparanda más — la etnográfica sigue intacta y bien fundada.
+  por_fases:
+    fase_1: >-
+      Importar lokono hasta emparejar el orden de magnitud del wayuu, desde
+      lo que el repo ya tiene (tabla A-2 de Oliver ya explotada; A-1 y A-3
+      a A-7 sin transcribir; Brinton 1871; Perea Alonso 1942 sin minar).
+      No requiere compras.
+    fase_2: >-
+      Achagua. ⚠️ El repo NO tiene fuente achagua propia (medido el
+      2026-09-08): solo tres formas como comparanda en cognados.yaml vía
+      Oliver cap. 2, y etnografía en Gumilla 1791 y Rivero 1883. Hace falta
+      adquirir — ver `adquisiciones` abajo. Por eso «más adelante».
+    fase_3: >-
+      Declarar la etiqueta del núcleo reconstruido. Hoy es guajiro POR
+      CONSTRUCCIÓN (taya, pia, kai, kashi, wuin, eka, piama salen de la
+      columna guajira de la A-2). Rebalancear la comparanda no re-deriva
+      sola la Capa 2: o se re-deriva, o se declara la base guajira como
+      decisión de modelado. Esto sigue abierto y no lo cierra esta tanda.
+
+  evidencia_que_la_sostiene:
+    - >-
+      Oliver 1989 cap. 2 p. 150, verbatim: «it seems reasonable, for the
+      moment, to regard Caquetio as emerging from a similar background to
+      that of Lokono rather than from a Guajiro-Paraujano ancestry». Sus
+      tres apoyos: el prefijo de 1ª persona /dA-/ («only the Lokono and
+      Taino are known to have the same personal prefix»), `-bana` en vez de
+      `-pana`, y la toponimia Guajira-Falcón con «far more differences in
+      sound sequences than similarities».
+    - >-
+      Las tres señales del cómputo del 2026-08-31
+      (computo_d11_2026-08-31.yaml), que convergen: léxico 7-3 a favor del
+      lokono sobre 24 conceptos atestiguados; fonotáctica 79.3% lokono
+      frente a 65.4% wayuu (control castellano 44.7%); colisiones estrictas
+      1-0, y la única que sobrevive es la fila bandera (cati ~ kathi
+      'luna', similitud 1.00 tras fonemizar).
+    - >-
+      La correspondencia de sonido documentada, que no es parecido sino
+      regla: CQ barisi : LK bálisi : WY palíi (cognado-001, Oliver cap. 2
+      p. 142) — el caquetío conserva /b-/ como el lokono, frente al /p-/
+      guajiro.
+    - >-
+      ⭐ CONVERGENCIA INDEPENDIENTE con Antolínez 1944, que el proyecto ya
+      citaba sin conectarlo a D11: «los kaketíos son los más conspicuos
+      representantes de los Arawak de la costa de Guayana, o Lokono... muy
+      afín de la taína». Era opinión de autor; ahora tiene tres números al
+      lado y coincide con la intuición cultural de Miguel.
+    - >-
+      El eco insular en el léxico atestiguado: ateri 'hombre' ~ island
+      carib eieri/*iñeri (0.60), que es el AUTÓNIMO de las Antillas.
+
+  la_parte_taina_con_su_cautela:
+    medido: '2026-09-08'
+    total_entradas_taino: 53
+    tres_clases:
+      reconstruidas_desde_lokono:
+        n: 9
+        cuales: [abba, acoa, aduri, agari, akcicyaa, daca, thigisi, wacusi, wagulo]
+        valen_para_d11: "NO — la nota lo dice: «Reconstrucción hipotética Taíno desde Lok.». Son lokono con otra etiqueta"
+      antillanismos_culturales:
+        n: 35
+        ejemplos: [cacique, maíz, yuca, batata, bohío, ají, tabako, cazabi, caney, nagua, piragua, iwana, manati, cemi, areito, macana, guanin]
+        valen_para_d11: "NO — prueban CONTACTO y repertorio compartido (#119), no parentesco. Ruta: taíno → español → Paraguaná, como se midió con bajareque, hicotea, hico y jején en el dictado"
+      atestiguadas_con_cognado_lokono:
+        n: 9
+        cuales: ["cai 'isla' ~ Lok. kairi", "mayani 'no' ~ Lok. ma", "taita 'padre' ~ Lok. itti", caiman, casabe, cohiba, higuana, tuna, "yamosa 'dos'"]
+        procedencia: brinton-1871
+        valen_para_d11: "SÍ — son las únicas"
+    trampa: >-
+      🔴 Si el rebalanceo cuenta «lokono + taíno» sin separar estas clases,
+      las nueve reconstruidas DESDE el lokono se cuentan dos veces y el
+      resultado sale inflado a favor del eje que se quiere probar. Es el
+      mismo error que produjo el ~80% de fallo de las 441 hipotéticas:
+      transducir y luego contar la transducción como evidencia.
+    correccion_al_pasar: >-
+      `daca` en el lexicón es 'mano' (reconstruida desde el lokono daka), NO
+      la primera persona. El argumento del prefijo /dA-/ es de Oliver sobre
+      la lengua y el lexicón no lo tiene atestiguado: la primera persona del
+      canon es `taya`, de la columna guajira. No resta a la decisión, pero
+      no se cita como apoyo lo que el dato no sostiene.
+  que_no_cambia:
+    - "El wayuu sigue siendo la comparanda ETNOGRÁFICA central (Guerra Curvelo, el palabrero, el sistema normativo)."
+    - "Las 781 entradas wayuu no se borran: se re-encuadran. Borrar dato medido no es rebalancear."
+    - "La columna paraujano/añú (47 entradas, el pariente costero más cercano) queda entre los dos ejes y no se toca."
+    - >-
+      El hallazgo que ningún eje explica: 11 de 24 conceptos atestiguados
+      no se parecen a NINGUNA de las cinco columnas (arena, camino, cerro,
+      mar, grande, oír, raíz, sangre, dos, usted, una-luna). El caquetío
+      tiene fondo propio en el vocabulario básico, y el rebalanceo no debe
+      taparlo.
+
+  adquisiciones_que_desbloquea:
+    lokono:
+      - {obra: "de Goeje 1928, The Arawak Language of Guiana", estado: "el ítem de archive.org es una muestra de 7 pp., no el libro; el texto completo no se localizó libre (KNAW sin resultado). Comprar la reedición de Cambridge o localizar escaneo", prioridad: alta}
+      - {obra: "Bennett 1989, Arawak-English dictionary", estado: "72 pp.; solo en bibliotecas, sin PDF libre", prioridad: media}
+      - {obra: "Perea Alonso 1942, Filología Comparada Arawak, Tomo I", estado: "⭐ YA ESTÁ EN EL REPO, 926 pp., con capa de texto, SIN MINAR", prioridad: alta}
+    achagua:
+      - {obra: "Meléndez Lozano, El «Arte y Vocabulario de la Lengua Achagua» (IAI Berlín)", url: "https://publications.iai.spk-berlin.de/servlets/MCRFileNodeServlet/Document_derivate_00001907/BIA_063_433_447.pdf", estado: "PDF libre, 15 pp.; la descarga automática la bloquea el control anti-robot: la baja Miguel", prioridad: alta}
+      - {obra: "Neira y Rivero 1762, Arte y vocabulario de la lengua achagua", estado: "manuscrito digitalizado (Library of Congress / Real Biblioteca); dominio público, sin OCR: se lee en imagen", prioridad: media}
+      - {obra: "Meléndez Lozano 2011, Diccionario achagua-español (Uniandes)", estado: "JSTOR, de pago", prioridad: baja}
+    taino:
+      - {obra: "—", estado: "el repo ya tiene 45 entradas; lo que falta no es fuente sino la separación préstamo/cognado descrita arriba", prioridad: n/a}
+
+  siguiente_paso_concreto: >-
+    Minar Perea Alonso 1942 (ya en el repo, con texto, 926 pp.) como
+    primera fuente del rebalanceo lokono. Es la única pata de la fase 1 que
+    no depende de una compra ni de una descarga de Miguel.
