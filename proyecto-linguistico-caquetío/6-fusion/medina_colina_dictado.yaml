@@ -14,6 +14,7 @@ meta:
     Dictado curado por Miguel: lectura del ejemplar físico → reconocimiento de
     voz → escriba. La criba de Miguel ES la marca `retro-abstraido`.
   inicio: 2026-09-01
+  cierre: 2026-09-08   # el dictado de las voces que Miguel juzgó caquetías está completo; E-F sin declarar
   protocolo: 5-experimento/disenos/02_protocolo_habla_paraguanera.md
   bitacora: 4-fuentes/medina-colina-sxx.md
   advertencia_transcripcion: >
@@ -214,7 +215,36 @@ aclaratorias_al_lector:
 
 # Cobertura declarada por letra/sección, al cerrarla (regla 6: distinguir
 # «no hay sustrato» de «no se miró»). {letra, vistas: ~n, dictadas: n}
-cobertura: []
+# Cerrada el 2026-09-08 — Miguel: «ya terminamos el libro, o al menos las
+# palabras que yo pensé eran caquetías». Las «vistas» son las que su ojo
+# de paraguanero pasó; las dictadas, las que señaló.
+cobertura:
+  - {letra: A, vistas: "todas", dictadas: 10}
+  - {letra: B, vistas: "todas", dictadas: 19}
+  - {letra: C, vistas: "todas", dictadas: 55}
+  - {letra: D, vistas: "todas", dictadas: 5}
+  - {letra: E, vistas: "sin declarar", dictadas: 0, nota: "Miguel no las declaró; el dictado saltó de la p. 95 (D) a la 127 (G)"}
+  - {letra: F, vistas: "sin declarar", dictadas: 0, nota: "Miguel no las declaró; el dictado saltó de la p. 95 (D) a la 127 (G)"}
+  - {letra: G, vistas: "todas", dictadas: 22}
+  - {letra: H, vistas: "todas", dictadas: 3}
+  - {letra: I, vistas: "todas", dictadas: 3}
+  - {letra: J, vistas: "todas", dictadas: 5}
+  - {letra: K, vistas: "todas", dictadas: 0}
+  - {letra: L, vistas: "todas", dictadas: 1}
+  - {letra: M, vistas: "todas", dictadas: 13}
+  - {letra: N, vistas: "todas", dictadas: 4}
+  - {letra: O, vistas: "todas", dictadas: 1}
+  - {letra: P, vistas: "todas", dictadas: 2}
+  - {letra: Q, vistas: "todas", dictadas: 1}
+  - {letra: R, vistas: "todas", dictadas: 0}
+  - {letra: S, vistas: "todas", dictadas: 11}
+  - {letra: T, vistas: "todas", dictadas: 17}
+  - {letra: U, vistas: "todas", dictadas: 2}
+  - {letra: V, vistas: "todas", dictadas: 0}
+  - {letra: W, vistas: "todas", dictadas: 0}
+  - {letra: X, vistas: "todas", dictadas: 0}
+  - {letra: Y, vistas: "todas", dictadas: 2}
+  - {letra: Z, vistas: "todas", dictadas: 1}
 
 # Patrones de forma que el dictado va mostrando (se anotan; ninguno es
 # etimología por sí solo — regla del protocolo §4.3: la fonotáctica es
@@ -1291,6 +1321,8 @@ entradas:
       "4 cognado con correspondencia regular": "SÍ — lokono budali, con l~r como barisi/bálisi (cognado-001)"
       "5 respaldo toponímico": "sí — Cabudare, Dabudare en el canon (nivel B)"
       "6 atestación colonial": "sí — Codazzi («hudare»), y la voz está en las crónicas del casabe"
+    repo_texto_completo_2026-09-08: >-
+      Jahn 1927 (pdf 461), vocabulario de los indios de Siquisique (jirajara/ayamán, de Párraga): «Budare—budare», la misma palabra en lengua no arahuaca del área: préstamo regional, coherente con el repertorio compartido que la entrada ya decía.
     veredicto: B
     razon: >
       Voz ARAHUACA con cognado lokono de correspondencia regular (l~r, la
@@ -3184,7 +3216,10 @@ descartes:
     alvarado_1921_texto_completo: >-
       p. 62: «Carebe. Especie de cuchara, de forma oval, a la que sirve de mango la parte más angosta del óvalo. Fabrícala del fruto del totumo y úsala en Occidente la gente campesina. Sin. pichagua. Cf. el guajibo kariepa, cuchara». Hallado el 2026-09-08 al pasar las voces C por el
       texto completo del glosario (lexicon_alvarado.py es un subconjunto). segunda fuente, occidente; Alvarado propone el guahibo kariepa: contacto (cf. etnia-001 cuiba, guahibo).
-    veredicto: B
+    repo_texto_completo_2026-09-08: >-
+      ⭐ Gatschet 1885 (Aruba), lista de palabras: «karebe, spoon». Tres fuentes en tres siglos y dos orillas: Aruba 1885 (la capa caquetía insular), el occidente continental 1921 (Alvarado: la cuchara de totumo), Paraguaná 2013 (Medina). Sube a A por atestación insular temprana; CANDIDATA AL LEXICÓN (caquetío-atestiguado por Gatschet, como dabaraida y hubada).
+    veredicto: A
+    veredicto_anterior: B   # cambiado el 2026-09-08 por el barrido del repo a texto completo
     veredicto_anterior: C   # cambiado el 2026-09-08 por Alvarado a texto completo
     certeza: baja
     razon: >
@@ -4178,6 +4213,8 @@ descartes:
     criterios_positivos:
       "1 campo local": "sí — flora y técnica de casa"
       "2 distribución restringida": "sí — única fuente"
+    repo_texto_completo_2026-09-08: >-
+      van Buurt 2014: «Guarero (Sero)», un cerro de Aruba; Jahn 1927 (pdf 170): Guarero, lugar de cultivo en la Guajira («por Macuire, Güincúa y Guarero se cultiva… maíz, frijoles»). La FORMA es topónimo en dos puntos del área caquetía (criterio 5, débil: no confirma el bejuco). Se queda en C con el apoyo anotado.
     veredicto: C
     razon: >
       Como bayure: fitónimo local con función precisa (el amarre del
@@ -4353,7 +4390,10 @@ descartes:
     alvarado_1921_texto_completo: >-
       p. 162: «Guatacare. Chytroma idatimon. Mirtáceas. Árbol maderable, se eleva como a 40 o 50 pies, muy común en terrenos arcillosos algo húmedos; madera pardusca…» (y p. 11 guatacaro: madera «fuerte, elástica e incorruptible, usada en vigas para techumbre», bajo llano). Hallado el 2026-09-08 al pasar las voces C por el
       texto completo del glosario (lexicon_alvarado.py es un subconjunto). segunda fuente con taxón, pero Alvarado no la localiza en Coro: se queda en C con la distribución en contra.
-    veredicto: C
+    repo_texto_completo_2026-09-08: >-
+      van Buurt 2014: «the Papiamentu words watapana, wayaká and watakeli thus seem more original than guatapaná, guayacán, guatacare, guatacaro» — la forma insular WATAKELI existe en el papiamento de las ABC, y van Buurt la tiene por más original que la castellanizada. Cuatro fuentes (Esteves, Alvarado, Medina, van Buurt) y la isla: sube a B.
+    veredicto: B
+    veredicto_anterior: C   # cambiado el 2026-09-08 por el barrido del repo a texto completo
     razon: >
       Fitónimo con dos atestaciones paraguaneras independientes (Esteves y
       Medina, glosas compatibles: árbol perennifolio; fruto no comestible)
@@ -5678,6 +5718,8 @@ descartes:
       "1 campo local": "sí — flora"
       "2 distribución restringida": "sí"
       "5 respaldo toponímico": "SÍ — Tutubacoa"
+    repo_texto_completo_2026-09-08: >-
+      Gatschet 1885 (Aruba), lista de plantas: «tuturutu». Cuarta fuente, insular: Zavala/Esteves, Medina, Gatschet.
     veredicto: A
     razon: >
       Ya atestiguada por Esteves vía Zavala, con topónimo; Medina es la

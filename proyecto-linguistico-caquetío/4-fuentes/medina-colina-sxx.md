@@ -8,7 +8,7 @@ edicion_del_ejemplar: "2ª ed. 2013 (ejemplar físico de Miguel)"
 genero: lexico-regional
 local: "⚠️ FÍSICO — ejemplar de Miguel; entra por dictado curado (+ foto/OCR si hace falta cobertura)"
 capa_texto: no
-estado_minado: en-curso
+estado_minado: dictado-terminado  # 2026-09-08; quedan las páginas de la I a la M y las letras E-F sin declarar
 prioridad: alta
 verificado: 2026-09-01
 aliases: ["Medina Colina", "Del Habla Paraguanera", "habla paraguanera"]
@@ -169,6 +169,38 @@ Queda anotado como idea; si el dictado rinde, merece issue.
 - **2026-09-01** — sesión de dictado iniciada: ficha y prefacio registrados.
   Voces: ver `6-fusion/medina_colina_dictado.yaml` §entradas y §cobertura
   (se actualiza al cerrar cada letra).
+
+## Estado al cierre del dictado (2026-09-08)
+
+Miguel cerró el dictado el 2026-09-08: «ya terminamos el libro, o al menos las
+palabras que yo pensé eran caquetías». El registro
+(`6-fusion/medina_colina_dictado.yaml`) queda con **177 voces** y el
+veredicto del protocolo §5 en cada una: A 20 · B 11 · C 34 · D 112. La
+cobertura por letra está declarada en el YAML (E y F sin declarar: el dictado
+saltó de la p. 95 a la 127). Las sesiones fueron tres: 2026-09-01 (A-D y G,
+ficha, prefacio, aclaratorias), 2026-09-07 (G-H) y 2026-09-08 (I-Z y los
+apellidos de la p. 328).
+
+Lo que el libro dio, en corto: veinte A que son atestaciones vivas de voces
+que el lexicón ya tenía por Zavala (sibidigua con su saludo, tara como
+saltamontes —la segunda fuente de #45—, poporo, yabo, tuturuto…); once B, de
+las que cinco son **candidatas al lexicón** (urupagua, budare, maba, isicagua,
+totocoro); treinta y ocho C para el corpus cultural (el racimo de la miel, los
+frijoles, los cactus, las palomas); y ciento ocho D que dejan datos de mundo
+(mc-mundo-013…029), dos isoglosas intrapeninsulares (gualamo/bisure,
+siguato) y la lista de sustituciones léxicas (onoto por bariki, zamuro por
+curumu). Tres topónimos entraron al canon por esta vía (Guarataro, Guatacare,
+Guayacanal).
+
+**Lo que sigue** (decidido con Miguel el 2026-09-08, puntos 1 y 2): segunda
+fuente para las C en lo que el repo ya tiene a texto completo (Alvarado ya
+pasado: doce hallazgos; luego Perea Alonso 1942, Jahn, Arcaya, Antolínez,
+Brinton, Gatschet, van Buurt, Oliver cap. 2), y los diccionarios que faltan
+(Captain & Captain 2005 para el wayuu, de Goeje 1928 y Bennett 1989 para el
+lokono, Tamayo 1977 para el léxico popular).
+
+**Deuda**: las páginas de la I a la M (dictadas sin página), la de
+debudeque y dividive, y si E y F se miraron.
 
 ## Enlaces
 
