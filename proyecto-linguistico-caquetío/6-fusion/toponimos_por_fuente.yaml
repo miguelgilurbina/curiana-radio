@@ -3,14 +3,14 @@
 # trabaja desde aquí, pero el canon sigue siendo 2-lengua/toponimos.yaml.
 meta:
   generado_por: curiana_sim/juntar_toponimos.py
-  generado: '2026-09-07'
+  generado: '2026-09-08'
   editar_a_mano: no — se edita la fuente y se regenera
   que_es: 'vista: todos los topónimos del proyecto, agrupados por obra y cruzados entre sí. No es canon ni propuesta
     de fusión.'
   marcas: ★ en el canon · ≡ en el índice de Esteves · ◆ en el mapa de Miguel · ⌂ en asentamientos.yaml
   resumen:
-    menciones: 737
-    formas_distintas: 507
+    menciones: 739
+    formas_distintas: 509
     fuentes: 15
     por_fuente:
       zavala-reyes-2015:
@@ -38,8 +38,8 @@ meta:
         menciones: 9
         formas: 8
       medina-colina-sxx:
-        menciones: 25
-        formas: 22
+        menciones: 27
+        formas: 24
       gatschet-1885:
         menciones: 31
         formas: 30
@@ -60,7 +60,7 @@ meta:
         formas: 7
     en_canon: 145
     en_nodos: 18
-    sin_canon_ni_nodo: 357
+    sin_canon_ni_nodo: 359
     cruces:
       mapa_de_miguel_en_esteves:
       - Buchuaco
@@ -1987,8 +1987,8 @@ por_fuente:
   en_bibliografia: true
   descripcion: 'lo que el dictado toca: voces que son topónimo en Esteves, lo mandado a la cola, y los pueblos del
     autor (s. XX)'
-  menciones: 25
-  formas: 22
+  menciones: 27
+  formas: 24
   toponimos:
   - forma: guatacare
     tipo: lectura:glosa-fuente
@@ -2123,6 +2123,20 @@ por_fuente:
     dato: El dividive («árbol silvestre de nuestros montes cuyo fruto es astringente, liviano») «fue muy apreciado
       como…
     ref: p. None
+    epoca: s. XX
+  - forma: oriente de Paraguaná
+    tipo: isoglosa
+    donde: 6-fusion/medina_colina_dictado.yaml §datos_mundo:mc-mundo-027
+    dato: 'ISOGLOSA INTRAPENINSULAR, la segunda del dictado: siguato «en la parte oriental de la península es estar
+      desg…'
+    ref: p. 262
+    epoca: s. XX
+  - forma: occidente de Paraguaná (pescadores)
+    tipo: isoglosa
+    donde: 6-fusion/medina_colina_dictado.yaml §datos_mundo:mc-mundo-027
+    dato: 'ISOGLOSA INTRAPENINSULAR, la segunda del dictado: siguato «en la parte oriental de la península es estar
+      desg…'
+    ref: p. 262
     epoca: s. XX
 - obra: gatschet-1885
   en_bibliografia: true
@@ -7808,6 +7822,17 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice
+- forma: occidente de Paraguaná (pescadores)
+  variantes: []
+  fuentes:
+  - medina-colina-sxx
+  cruces:
+    en_canon: null
+    en_esteves: false
+    en_mapa_miguel: false
+    en_nodos: null
+  menciones:
+  - medina-colina-sxx · isoglosa · p. 262
 - forma: Ocorote
   variantes: []
   fuentes:
@@ -7832,6 +7857,17 @@ indice_de_formas:
   - van-buurt-2014 · canon · toponimo-073 · nivel descartado · topónimo · fuente inferida-por-cruce
   - van-buurt-2014 · indice-abc · §7
   - van-buurt-2014 · lectura · §8-10
+- forma: oriente de Paraguaná
+  variantes: []
+  fuentes:
+  - medina-colina-sxx
+  cruces:
+    en_canon: null
+    en_esteves: false
+    en_mapa_miguel: false
+    en_nodos: null
+  menciones:
+  - medina-colina-sxx · isoglosa · p. 262
 - forma: oripopo
   variantes:
   - Oripopo

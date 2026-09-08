@@ -14,9 +14,9 @@ editar_a_mano: no
 > python curiana_sim/juntar_toponimos.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-07**. Marcas: ★ canon · ≡ Esteves · ◆ mapa de Miguel · ⌂ nodo.
+<!--GENERADO--> Generado el **2026-09-08**. Marcas: ★ canon · ≡ Esteves · ◆ mapa de Miguel · ⌂ nodo.
 
-**507 formas distintas** en **737 menciones** de **15 fuentes**. En el canon: 145. En el registro de nodos: 18. Sin canon ni nodo (la cola pura): 357.
+**509 formas distintas** en **739 menciones** de **15 fuentes**. En el canon: 145. En el registro de nodos: 18. Sin canon ni nodo (la cola pura): 359.
 
 > ⚠️ obra sin ficha en bibliografia.yaml: proyecto
 
@@ -32,7 +32,7 @@ editar_a_mano: no
 | `arcaya-1920` | Quiquibacoa/Coquibacoa, Curiana y la serie Coro-/Curi- | 13 | 10 | 4 | 0 | 0 |
 | `moron-2012-petroglifos` | La Cuiba y las estaciones de arte rupestre de Falcón | 26 | 23 | 2 | 2 | 2 |
 | `oliver-1989-cap3` | los asientos de los dos clanes de Paraguaná según Delmonte 1883 | 9 | 8 | 5 | 4 | 4 |
-| `medina-colina-sxx` | lo que el dictado toca: voces que son topónimo en Esteves, lo mandado a la cola, y los pueblos del autor (s. XX) | 25 | 22 | 6 | 9 | 3 |
+| `medina-colina-sxx` | lo que el dictado toca: voces que son topónimo en Esteves, lo mandado a la cola, y los pueblos del autor (s. XX) | 27 | 24 | 6 | 9 | 3 |
 | `gatschet-1885` | topónimos de Aruba (material de Pinart, 1882), sin glosa | 31 | 30 | 1 | 0 | 0 |
 | `van-buurt-2014` | §7 topónimos de Aruba, Bonaire y Curazao sin glosa; §8-10 las etimologías del autor | 212 | 180 | 18 | 1 | 4 |
 | `testimonio-miguel` (sin ficha) | Miguel Gil Urbina: lecturas de investigación coloquial, tradición local, mapa vivo — deuda sin-procedencia, por diseño | 48 | 38 | 28 | 25 | 8 |
@@ -191,7 +191,7 @@ los asientos de los dos clanes de Paraguaná según Delmonte 1883.
 | Amuay | clan | nombre del clan del sur; Esteves lo atribuye a estrato caribe (conflicto declarado) | pp. 275-276 | ★ toponimo-090 · nivel C ≡ |
 | Guaranao | clan | nombre del clan del norte | pp. 275-276 | ≡ |
 
-### `medina-colina-sxx` — 22 formas, 25 menciones
+### `medina-colina-sxx` — 24 formas, 27 menciones
 
 lo que el dictado toca: voces que son topónimo en Esteves, lo mandado a la cola, y los pueblos del autor (s. XX).
 
@@ -222,6 +222,8 @@ lo que el dictado toca: voces que son topónimo en Esteves, lo mandado a la cola
 | Tacuato | isoglosa | ISOGLOSA INTRAPENINSULAR: al lagarto amarillo lo llaman gualamo «en las poblaciones de Tacuato y Santa Ana»; … | p. 130 | ≡ |
 | Santa Ana | isoglosa | ISOGLOSA INTRAPENINSULAR: al lagarto amarillo lo llaman gualamo «en las poblaciones de Tacuato y Santa Ana»; … | p. 130 | ⌂ nodo-013 |
 | Adícora | isoglosa | El dividive («árbol silvestre de nuestros montes cuyo fruto es astringente, liviano») «fue muy apreciado como… | p. None | ≡ ⌂ nodo-012 |
+| oriente de Paraguaná | isoglosa | ISOGLOSA INTRAPENINSULAR, la segunda del dictado: siguato «en la parte oriental de la península es estar desg… | p. 262 |  |
+| occidente de Paraguaná (pescadores) | isoglosa | ISOGLOSA INTRAPENINSULAR, la segunda del dictado: siguato «en la parte oriental de la península es estar desg… | p. 262 |  |
 
 ### `gatschet-1885` — 30 formas, 31 menciones
 
@@ -648,8 +650,10 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Noka |  | van-buurt-2014 |  |  |  |  |
 | Nonocoti |  | esteves-1989 |  | ≡ |  |  |
 | Oboque |  | esteves-1989 |  | ≡ |  |  |
+| occidente de Paraguaná (pescadores) |  | medina-colina-sxx |  |  |  |  |
 | Ocorote |  | arcaya-1920 |  |  |  |  |
 | Onima |  | van-buurt-2014 | toponimo-073 · nivel descartado |  |  |  |
+| oriente de Paraguaná |  | medina-colina-sxx |  |  |  |  |
 | oripopo | Oripopo | esteves-1989 | toponimo-125 · nivel C | ≡ |  |  |
 | Orizjan |  | van-buurt-2014 |  |  |  |  |
 | pachacuare |  | zavala-reyes-2015 | toponimo-012 · nivel B |  |  |  |

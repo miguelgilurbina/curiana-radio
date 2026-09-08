@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-08**.
 
-**1748 ítems propuestos** en 32 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
+**1890 ítems propuestos** en 32 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -32,10 +32,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-09-01.yaml` | ? | 0 |  |
 | `frase_saludo_mitare.yaml` | ? | 2 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
-| `medina_colina_dictado.yaml` | ? | 0 | ⚠️ no parsea: mapping values are not allowed here
-  in "<unicode string>", line 771, column 29:
-        epoca: s. XX (y anterior: técnica heredada)
-                                ^ |
+| `medina_colina_dictado.yaml` | ? | 142 |  |
 | `migracion_lemas_fase2.yaml` | ? | 79 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
 | `oliver_324_caribes.yaml` | ? | 0 | ⚠️ no parsea: mapping values are not allowed here
