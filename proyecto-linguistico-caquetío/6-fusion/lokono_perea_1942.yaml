@@ -34,6 +34,11 @@ advertencias:
 - La raíz sale de quitar de la segmentación del PROPIO Perea los segmentos que su Compendio Gramatical
   declara afijos (p. impresa 587). Donde el OCR metió un espacio dentro de un guion la raíz podía salir
   partida; se corrigió pegando los guiones, pero quedan casos.
+- '⚠️ Se cuela ESPAÑOL en unas pocas raíces. La voz lokono es el token en MAYÚSCULAS del lado arawak;
+  cuando una entrada no lo tiene, el regex recoge una palabra española capitalizada del lado de la traducción.
+  Medido el 2026-09-09: 8 de 181 (bien, ella, ellos, llamado, los, nuestros, señal, vosotros). En ESTE
+  fichero siguen listadas, porque es el vaciado en bruto; el módulo `curiana_sim/lexicon_perea.py` las
+  criba con `se_cuela_el_espanol()` y queda en 173 raíces.'
 - 'Las corroboraciones marcadas `glosa_coincide: false` NO son falsas: casi todas son polisemia de una
   misma raíz (abba = uno / otro / alguno / nadie). Necesitan ojo humano, no descarte automático.'
 - 'Trampa que el propio Perea nombra (p. impresa 546): la alternancia r/l hace que la postposición -ruccu

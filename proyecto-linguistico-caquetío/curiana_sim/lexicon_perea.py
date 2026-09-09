@@ -391,9 +391,6 @@ COMPARANDA_LOKONO: dict[str, dict] = {
         {"glosa": 'debajo', "pagina": 507, "hechos": '2-5', "atestaciones": 2},
         {"glosa": 'bajo', "pagina": 499, "hechos": '2-5', "atestaciones": 1},
     ]},
-    "bien": {"total": 3, "acepciones": [
-        {"glosa": 'bien', "pagina": 499, "hechos": '10-33', "atestaciones": 3},
-    ]},
     "canna": {"total": 3, "acepciones": [
         {"glosa": 'oír', "pagina": 399, "hechos": '1-4', "atestaciones": 3},
     ]},
@@ -563,12 +560,6 @@ COMPARANDA_LOKONO: dict[str, dict] = {
     "ehé": {"total": 2, "acepciones": [
         {"glosa": 'sí', "pagina": 534, "hechos": '5-8', "atestaciones": 2},
     ]},
-    "ella": {"total": 2, "acepciones": [
-        {"glosa": 'ella', "pagina": 185, "hechos": '12-14', "atestaciones": 2},
-    ]},
-    "ellos": {"total": 2, "acepciones": [
-        {"glosa": 'les , a ellos', "pagina": 178, "hechos": '4-8', "atestaciones": 2},
-    ]},
     "emelia": {"total": 2, "acepciones": [
         {"glosa": 'nuevo', "pagina": 121, "hechos": '17-18', "atestaciones": 2},
     ]},
@@ -614,17 +605,11 @@ COMPARANDA_LOKONO: dict[str, dict] = {
     "kia-hann": {"total": 2, "acepciones": [
         {"glosa": 'pues', "pagina": 532, "hechos": '2-8', "atestaciones": 2},
     ]},
-    "llamado": {"total": 2, "acepciones": [
-        {"glosa": 'llamar', "pagina": 373, "hechos": '4-18', "atestaciones": 2},
-    ]},
     "lle-ruccu": {"total": 2, "acepciones": [
         {"glosa": 'boca', "pagina": 13, "hechos": '8-35', "atestaciones": 2},
     ]},
     "lluccu-waria": {"total": 2, "acepciones": [
         {"glosa": 'sacar', "pagina": 446, "hechos": '5-9', "atestaciones": 2},
-    ]},
-    "los": {"total": 2, "acepciones": [
-        {"glosa": 'los, a ellos', "pagina": 180, "hechos": '4-3', "atestaciones": 2},
     ]},
     "malli-t-a-coa": {"total": 2, "acepciones": [
         {"glosa": 'ídolo', "pagina": 54, "hechos": '21-25', "atestaciones": 2},
@@ -648,9 +633,6 @@ COMPARANDA_LOKONO: dict[str, dict] = {
     "nnebe-ttoa": {"total": 2, "acepciones": [
         {"glosa": 'esparcir', "pagina": 324, "hechos": '8-1', "atestaciones": 2},
     ]},
-    "nuestros": {"total": 2, "acepciones": [
-        {"glosa": 'nuestros', "pagina": 147, "hechos": '3-13', "atestaciones": 2},
-    ]},
     "oaya": {"total": 2, "acepciones": [
         {"glosa": 'ahogar', "pagina": 229, "hechos": '15-29', "atestaciones": 2},
     ]},
@@ -670,9 +652,6 @@ COMPARANDA_LOKONO: dict[str, dict] = {
     ]},
     "saturdaca": {"total": 2, "acepciones": [
         {"glosa": 'sábado', "pagina": 82, "hechos": '13-14', "atestaciones": 2},
-    ]},
-    "señal": {"total": 2, "acepciones": [
-        {"glosa": 'señalar', "pagina": 455, "hechos": '1-23', "atestaciones": 2},
     ]},
     "sica-n-doa": {"total": 2, "acepciones": [
         {"glosa": 'rebelarse', "pagina": 432, "hechos": '26-19', "atestaciones": 1},
@@ -706,9 +685,6 @@ COMPARANDA_LOKONO: dict[str, dict] = {
     ]},
     "tullu-du": {"total": 2, "acepciones": [
         {"glosa": 'abrir', "pagina": 220, "hechos": '5-10', "atestaciones": 2},
-    ]},
-    "vosotros": {"total": 2, "acepciones": [
-        {"glosa": 'vosotros, vosotras', "pagina": 165, "hechos": '1-8', "atestaciones": 2},
     ]},
     "wacaiya": {"total": 2, "acepciones": [
         {"glosa": 'maldecir', "pagina": 380, "hechos": '23-4', "atestaciones": 2},

@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-09**.
 
-**2094 ítems propuestos** en 36 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
+**2086 ítems propuestos** en 37 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -35,6 +35,7 @@ editar_a_mano: no
 | `frase_saludo_mitare.yaml` | ? | 2 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
 | `lokono_gramatica_perea_1942.yaml` | perea-alonso-1942 | 6 |  |
+| `medicion_contaminacion_score_2026-09-09.yaml` | ? | 0 |  |
 | `medina_colina_dictado.yaml` | ? | 141 |  |
 | `migracion_lemas_fase2.yaml` | ? | 79 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
@@ -74,7 +75,7 @@ falsa y se corrigió). Entradas contadas por patrón de dict.
 | `lexicon_van_buurt.py` | van-buurt-2014 | 231 | lo importan generar_tablero y auditar_82 |
 | `lexicon_toponimos.py` | varias (F11) | 147 | lo importa migrar_toponimos |
 | `lexicon_candidatos.py` | aisladas 2026-06-28 | 441 | lo importa generar_tablero |
-| `lexicon_perea.py` | perea-alonso-1942 | 181 | comparanda lokono; el motor NO lo importa a propósito (ver su cabecera) |
+| `lexicon_perea.py` | perea-alonso-1942 | 173 | comparanda lokono; el motor NO lo importa a propósito (ver su cabecera) |
 
 ## Redactado y sin publicar (`6-fusion/issues-pendientes/`)
 

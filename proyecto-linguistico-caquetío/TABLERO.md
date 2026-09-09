@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-09 10:31**.
+<!--GENERADO--> Generado el **2026-09-09 11:35**.
 
 ## ¿Vamos bien?
 
@@ -250,7 +250,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | 5 | ⚪ | Citas del corpus verificadas por muestreo (F10) | **no automedible**: que la cita *resuelva* (que la página exista) es trabajo humano. Medible sí: 166/166 hechos **tienen** `referencia` |
 | 6 | 🔴 | D1, D3 y D5 tomadas | abiertas: D1, D3, D5 — D1 · D3 · D5 |
 | 7 | 🔴 | La glosa de `-bana` resuelta | abiertas: D9 — D9 |
-| 8 | 🔴 | El desbalance wayunaiki/lokono resuelto | abiertas: D11 — D11 · medido: wayunaiki 781 vs. lokono 275 (2.8 a 1) · + 181 raíces lokono propuestas por Perea 1942, sin fusionar (fase 1 de D11); con ellas quedaría 781 vs. 456 (1.7 a 1) |
+| 8 | 🔴 | El desbalance wayunaiki/lokono resuelto | abiertas: D11 — D11 · medido: wayunaiki 781 vs. lokono 275 (2.8 a 1) · + 173 raíces lokono propuestas por Perea 1942, sin fusionar (fase 1 de D11); con ellas quedaría 781 vs. 448 (1.7 a 1) |
 | 9 | ⚪ | `export_runs_index.py` reparado | **no automedible sin correr un export contra la base** (ver [[04_protocolo_run_1_era_auditada]] §2.9) |
 
 🟢 cumplida · 🔴 no cumplida · ⚪ no automedible (necesita criterio humano o correr algo)
@@ -270,7 +270,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1090 en 354 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 1090 en 356 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 246 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 

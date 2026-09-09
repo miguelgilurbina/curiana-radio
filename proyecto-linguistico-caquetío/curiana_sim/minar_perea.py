@@ -345,10 +345,34 @@ def emitir_modulo(nuevas, claves_lexicon, seco=False):
         s = re.sub(r"[«»\"]", "", s)
         return re.sub(r"\s+", " ", s).strip(" .,;-").lower()
 
-    sel = {}
+    def se_cuela_el_espanol(raiz, glosas):
+        """La voz lokono es el token en MAYÚSCULAS del lado arawak. Cuando una
+        entrada no lo tiene (o el OCR lo perdió), el regex puede recoger una
+        palabra ESPAÑOLA capitalizada del lado de la traducción. Se detecta
+        porque la raíz coincide con su propia glosa: ella -> «ella», los ->
+        «los, a ellos», bien -> «bien», llamado -> «llamar». Medido el
+        2026-09-09: colaban 5 de 186."""
+        rb = base(raiz).replace("-", "")
+        for g in glosas:
+            for w in re.findall(r"[a-zñáéíóú]{2,}", g.lower()):
+                wb = base(w)
+                if rb == wb:
+                    return True
+                # prefijo común largo: llamado / «llamar» comparten «llama»
+                i = 0
+                while i < min(len(rb), len(wb)) and rb[i] == wb[i]:
+                    i += 1
+                if i >= 5:
+                    return True
+        return False
+
+    sel, colados = {}, []
     for r, fs in por_raiz.items():
         total = sum(f["atestaciones"] for f in fs)
         if total < 2:
+            continue
+        if se_cuela_el_espanol(r, [limpia(f["concepto_es"]) for f in fs]):
+            colados.append(r)
             continue
         acep, vistas = [], set()
         for f in sorted(fs, key=lambda f: -f["atestaciones"]):
@@ -364,6 +388,8 @@ def emitir_modulo(nuevas, claves_lexicon, seco=False):
         sel[r] = {"acepciones": acep[:5], "total": total, "choca": r in claves_lexicon}
 
     choques = sorted(r for r in sel if sel[r]["choca"])
+    if colados:
+        print("  descartadas por colarse el español:", ", ".join(sorted(colados)))
     L = [CABECERA_MODULO,
          "# forma -> {acepciones: [{glosa, pagina, hechos?, atestaciones}], total}",
          "COMPARANDA_LOKONO: dict[str, dict] = {"]
@@ -523,6 +549,13 @@ def main():
             "que su Compendio Gramatical declara afijos (p. impresa 587). Donde el OCR "
             "metió un espacio dentro de un guion la raíz podía salir partida; se "
             "corrigió pegando los guiones, pero quedan casos.",
+            "⚠️ Se cuela ESPAÑOL en unas pocas raíces. La voz lokono es el token en "
+            "MAYÚSCULAS del lado arawak; cuando una entrada no lo tiene, el regex "
+            "recoge una palabra española capitalizada del lado de la traducción. "
+            "Medido el 2026-09-09: 8 de 181 (bien, ella, ellos, llamado, los, "
+            "nuestros, señal, vosotros). En ESTE fichero siguen listadas, porque es "
+            "el vaciado en bruto; el módulo `curiana_sim/lexicon_perea.py` las criba "
+            "con `se_cuela_el_espanol()` y queda en 173 raíces.",
             "Las corroboraciones marcadas `glosa_coincide: false` NO son falsas: casi "
             "todas son polisemia de una misma raíz (abba = uno / otro / alguno / "
             "nadie). Necesitan ojo humano, no descarte automático.",
