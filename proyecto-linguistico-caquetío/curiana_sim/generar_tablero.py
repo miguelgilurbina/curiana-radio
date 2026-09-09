@@ -472,6 +472,20 @@ def medir_gate(lex, censo, fuentes, corpus, decisiones):
             razon += " · medido: wayunaiki %d vs. lokono %d (%.1f a 1)" % (
                 n.get("wayunaiki", 0), n["lokono"],
                 n.get("wayunaiki", 0) / float(n["lokono"]))
+            # La fase 1 de D11 vive fuera de VOCABULARIO_BASE a propósito
+            # (ver la cabecera de lexicon_perea.py): se declara aparte para no
+            # confundir lo propuesto con lo que está en canon.
+            try:
+                sys.path.insert(0, AQUI)
+                from lexicon_perea import COMPARANDA_LOKONO as _P
+                nuevo_total = n["lokono"] + len(_P)
+                razon += (" · + %d raíces lokono propuestas por Perea 1942, sin "
+                          "fusionar (fase 1 de D11); con ellas quedaría %d vs. "
+                          "%d (%.1f a 1)" % (
+                              len(_P), n.get("wayunaiki", 0), nuevo_total,
+                              n.get("wayunaiki", 0) / float(nuevo_total)))
+            except Exception:
+                pass
     filas.append((8, "El desbalance wayunaiki/lokono resuelto", ok8, razon))
 
     # 9 — exportador

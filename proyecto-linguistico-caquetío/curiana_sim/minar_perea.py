@@ -276,6 +276,135 @@ AUDITORIA_A2 = yaml.safe_load(io.open(
     os.path.join(RAIZ_REPO, "6-fusion", "auditoria_a2_perea.yaml")) else None
 
 
+# ─────────────────────────────────────────────────────────────────────────
+# 8. el módulo de comparanda — lexicon_perea.py
+#
+# ⚠️ NO se importa desde curiana_lexicon, y es a propósito: `palabras_activas()`
+# no filtra por `fuente` y `score_linguistico()` cuenta como arahuaco cualquier
+# token de VOCABULARIO_BASE, con match por SUBCADENA. Meter comparanda ahí
+# movería la métrica insignia. Ver la cabecera del módulo generado.
+# ─────────────────────────────────────────────────────────────────────────
+MODULO = os.path.join(RAIZ_REPO, "curiana_sim", "lexicon_perea.py")
+
+CABECERA_MODULO = '''# -*- coding: utf-8 -*-
+"""
+lexicon_perea.py — comparanda LOKONO de Perea y Alonso 1942 (Fraseario).
+
+GENERADO por `curiana_sim/minar_perea.py`. No se edita a mano.
+
+Fase 1 de D11 (#39): rebalancear la comparanda hacia el eje lokono-taíno.
+Propuesta completa y método en `6-fusion/lokono_perea_1942.yaml`.
+
+⚠️  ESTE MÓDULO NO SE IMPORTA DESDE `curiana_lexicon`, Y ES A PROPÓSITO.
+
+    `palabras_activas()` devuelve TODAS las claves de VOCABULARIO_BASE sin
+    filtrar por `fuente`, y `score_linguistico()` cuenta como arahuaco
+    cualquier token que esté ahí. `detectar_uso_vocabulario()` además casa
+    por SUBCADENA. Meter estas voces en VOCABULARIO_BASE movería la métrica
+    insignia del proyecto y rompería la comparabilidad con los runs ya
+    publicados — el mismo motivo por el que D3 dejó `normalizar_por_dialecto`
+    sin cablear. Y sería peor que en abstracto: entre estas raíces hay
+    homógrafos del español (`dia`, `uma`, `sica`, `iri`, `baha`, `adi`) que
+    con el match por subcadena casarían con «día», «estudia», «medía»...
+
+    Estas voces son COMPARANDA: sirven para comparar de qué lengua se
+    reconstruye el caquetío. No son vocabulario que los agentes hablen.
+
+Etiqueta: `atestiguado` en LOKONO — no en caquetío. Cada acepción trae la
+página impresa de Perea y, cuando el ejemplo lo permitía, el capítulo y
+versículo de los Hechos de los Apóstoles en la versión de Schultz (1802),
+que es el texto que Perea vació. Las citas abreviadas del tipo «-24» (mismo
+capítulo, otro versículo) se descartan: sin capítulo no son ancla.
+"""
+
+OBRA = "perea-alonso-1942"
+LENGUA = "lokono"
+ESTRATO = "lokono de 1802 (Schultz), anterior al de Brett 1849 y al de Goeje"
+
+'''
+
+
+def _py(s):
+    return "'" + s.replace("\\", "\\\\").replace("'", "\\'") + "'"
+
+
+def emitir_modulo(nuevas, claves_lexicon, seco=False):
+    """Agrupa las raíces nuevas por forma y emite `lexicon_perea.py`.
+
+    Entra una raíz cuando la suma de sus atestaciones es >= 2. Las acepciones
+    NO se funden en una glosa: se listan por separado, porque varias raíces
+    reúnen conceptos que la segmentación pudo haber juntado de más y fundirlas
+    escondería eso (regla 2: en duda, degradar).
+    """
+    por_raiz = collections.defaultdict(list)
+    for f in nuevas:
+        por_raiz[f["raiz"]].append(f)
+
+    def limpia(s):
+        s = re.sub(r"\s*\(.*?\)\s*", " ", s)
+        s = re.sub(r"[«»\"]", "", s)
+        return re.sub(r"\s+", " ", s).strip(" .,;-").lower()
+
+    sel = {}
+    for r, fs in por_raiz.items():
+        total = sum(f["atestaciones"] for f in fs)
+        if total < 2:
+            continue
+        acep, vistas = [], set()
+        for f in sorted(fs, key=lambda f: -f["atestaciones"]):
+            g = limpia(f["concepto_es"])
+            if not g or g in vistas:
+                continue
+            vistas.add(g)
+            a = {"glosa": g, "pagina": f["pagina"], "atestaciones": f["atestaciones"]}
+            cita = f.get("cita_hechos") or ""
+            if cita and not cita.startswith("-"):
+                a["hechos"] = cita
+            acep.append(a)
+        sel[r] = {"acepciones": acep[:5], "total": total, "choca": r in claves_lexicon}
+
+    choques = sorted(r for r in sel if sel[r]["choca"])
+    L = [CABECERA_MODULO,
+         "# forma -> {acepciones: [{glosa, pagina, hechos?, atestaciones}], total}",
+         "COMPARANDA_LOKONO: dict[str, dict] = {"]
+    for r in sorted(sel, key=lambda x: (-sel[x]["total"], x)):
+        e = sel[r]
+        L.append(f"    {_py(r)}: {{\"total\": {e['total']}, \"acepciones\": [")
+        for a in e["acepciones"]:
+            s = f"{{\"glosa\": {_py(a['glosa'])}, \"pagina\": {a['pagina']}"
+            if "hechos" in a:
+                s += f", \"hechos\": {_py(a['hechos'])}"
+            L.append(f"        {s}, \"atestaciones\": {a['atestaciones']}}},")
+        marca = "  # homografo de una clave del lexicon" if e["choca"] else ""
+        L.append(f"    ]}},{marca}")
+    L += ["}", "",
+          "# Raices cuya forma coincide con una clave YA existente en VOCABULARIO_BASE.",
+          "# No son necesariamente el mismo morfema: se listan para que la fusion las",
+          "# mire a mano. (Perea avisa en su p. 546 de la alternancia r/l que hace",
+          "# colisionar -ruccu ~ -luccu con luccu «hombre».)",
+          "HOMOGRAFOS_CON_EL_LEXICON = " + repr(choques), "", "",
+          "def resumen() -> str:",
+          "    n = len(COMPARANDA_LOKONO)",
+          "    ac = sum(len(e[\"acepciones\"]) for e in COMPARANDA_LOKONO.values())",
+          "    at = sum(e[\"total\"] for e in COMPARANDA_LOKONO.values())",
+          "    return (f\"Perea 1942 — {n} raices lokono, {ac} acepciones, \"",
+          "            f\"{at} atestaciones; {len(HOMOGRAFOS_CON_EL_LEXICON)} homografos\")",
+          "", "",
+          "if __name__ == \"__main__\":",
+          "    import io as _io, sys as _sys",
+          "    if hasattr(_sys.stdout, \"buffer\"):",
+          "        _sys.stdout = _io.TextIOWrapper(_sys.stdout.buffer, encoding=\"utf-8\",",
+          "                                        errors=\"replace\")",
+          "    print(resumen())", ""]
+    texto = "\n".join(L)
+    compile(texto, MODULO, "exec")        # VALIDAR antes de escribir
+    if not seco:
+        io.open(MODULO, "w", encoding="utf-8", newline="\n").write(texto)
+    print(f"lexicon_perea.py: {len(sel)} raices, "
+          f"{sum(len(e['acepciones']) for e in sel.values())} acepciones, "
+          f"{len(choques)} homografos" + (" (--dry-run)" if seco else ""))
+
+
 def main():
     seco = "--dry-run" in sys.argv
     paginas = cargar_texto()
@@ -406,6 +535,9 @@ def main():
     }
     if AUDITORIA_A2:
         doc["auditoria_columna_lokono_de_la_A2"] = AUDITORIA_A2
+
+    from curiana_lexicon import VOCABULARIO_BASE as _V
+    emitir_modulo(nuevas, set(_V), seco=seco)
 
     texto = yaml.safe_dump(doc, allow_unicode=True, sort_keys=False, width=100)
     yaml.safe_load(texto)          # VALIDAR antes de escribir (trampa 2026-09-08)
