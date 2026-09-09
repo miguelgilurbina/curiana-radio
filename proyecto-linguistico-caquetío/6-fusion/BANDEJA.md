@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-09**.
 
-**2056 ítems propuestos** en 37 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
+**2056 ítems propuestos** en 37 propuestas, más **4 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -86,6 +86,8 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 |---|---|
 | `comentario-39-d11-rebalanceo.md` | D11 decidida: se rebalancea hacia el eje lokono-taíno, con achagua más adelante |
 | `comentario-45-tara-medina.md` | Segunda fuente, y viva: para un paraguanero del siglo XX, las taras son los saltamontes |
+| `decision-era2-retroabstraido.md` | Decisión de modelo para la era 2: el habla que no se puede atestiguar |
+| `fallo-miguel-nivel-C-medina.md` | Las 33 voces de nivel C — esperan tu fallo |
 
 ---
 
