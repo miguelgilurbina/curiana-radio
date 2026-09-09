@@ -15,13 +15,14 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-08**.
 
-**1889 ítems propuestos** en 33 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
+**1907 ítems propuestos** en 34 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
 | Archivo | Obra | Ítems | Aviso |
 |---|---|---|---|
 | `antolinez_1946_capo_y_ortografia.yaml` | antolinez-1946-hacia-el-indio | 3 |  |
+| `auditoria_a2_perea.yaml` | ? | 18 |  |
 | `bachaco_y_gu_es_w.yaml` | alvarado-1921 | 0 |  |
 | `castellanos_1589_toponimos.yaml` | castellanos-elegias | 0 |  |
 | `censo_ana_esteves_109.yaml` | esteves-1989 | 13 |  |
@@ -55,6 +56,7 @@ editar_a_mano: no
 
 Vistas generadas en `6-fusion/` (no cuentan: juntan lo que ya está arriba):
 
+- `lokono_perea_1942.yaml` — generado por `curiana_sim/minar_perea.py`
 - `toponimos_mapa_kaketiana.yaml` — generado por `curiana_sim/barrer_mapa.py`
 - `toponimos_por_fuente.yaml` — generado por `curiana_sim/juntar_toponimos.py`
 

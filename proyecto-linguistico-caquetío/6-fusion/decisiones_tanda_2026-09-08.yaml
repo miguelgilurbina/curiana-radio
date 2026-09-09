@@ -130,6 +130,45 @@ d11:
       - {obra: "—", estado: "el repo ya tiene 45 entradas; lo que falta no es fuente sino la separación préstamo/cognado descrita arriba", prioridad: n/a}
 
   siguiente_paso_concreto: >-
-    Minar Perea Alonso 1942 (ya en el repo, con texto, 926 pp.) como
-    primera fuente del rebalanceo lokono. Es la única pata de la fase 1 que
-    no depende de una compra ni de una descarga de Miguel.
+    HECHO el 2026-09-08. Ver `fase_1_primera_fuente` abajo. El siguiente es
+    la Parte II de Perea (Compendio Gramatical, pp. 545-700, sin minar) o
+    las tablas A-1 y A-3 a A-7 de Oliver, sin transcribir.
+
+  fase_1_primera_fuente:
+    obra: perea-alonso-1942
+    minada: '2026-09-08'
+    propuesta: 6-fusion/lokono_perea_1942.yaml
+    script: curiana_sim/minar_perea.py
+    que_resulto_ser: >-
+      No era «gramática lokono pura» como decía la ficha que la descartó el
+      2026-07-29: su Parte I es la CONCORDANCIA LOKONO de los Hechos de los
+      Apóstoles en la traducción de Theodor Schultz, 1802, con 1.060 conceptos,
+      cada forma citada por capítulo-versículo y ya segmentada en morfemas por
+      el autor. La ficha la había cerrado por la pregunta de entonces
+      (cognados caquetíos), no por lo que la obra tiene.
+    cosecha: {raices_lokono: 724, corroboran_el_lexicon: 38, nuevas: 686,
+              nuevas_con_dos_o_mas_atestaciones: 201}
+    lo_que_NO_cubre: >-
+      El campo semántico es el de los Hechos, no el de la costa caribe.
+      Verificado: no hay entrada para agua, árbol, arena, raíz, pez ni casa.
+      Equilibra la columna wayuu en gramática, partículas, cuerpo, parentesco
+      y abstractos; deja intacto el hueco del léxico ecológico y material, que
+      es donde el caquetío atestiguado tiene más masa. Ese hueco sigue
+      necesitando de Goeje 1928 o Bennett 1989.
+    auditoria_que_trajo_de_regalo:
+      archivo: 6-fusion/auditoria_a2_perea.yaml
+      que_es: >-
+        La columna lokono de la tabla A-2 de Oliver contrastada por primera vez
+        contra una fuente primaria INDEPENDIENTE (las entradas lokono del
+        lexicón vienen de Goeje 1928 y Brinton 1871, y Oliver bebe de los
+        mismos). De 18 filas: 12 confirman, 2 divergen (sangre, grande), 1
+        parcial, 3 no medibles por el campo semántico del libro.
+      lo_que_le_hace_a_d11: >-
+        La fila bandera —CQ cati ~ LK kathi, similitud 1.00— deja de apoyarse
+        en una sola columna: Schultz escribe `catti` en Hechos 2-20 («dia
+        tu-ppa CATTI ù-ttù bia» = «como también la luna en sangre»). Y el par
+        CQ dare ~ LK d-ari de Oliver p. 147 queda atestiguado en Hechos 7-54
+        («crujían SUS DIENTES», na-ri-sibu).
+    estado: >-
+      PROPUESTA, no fusionada (regla 5). La condición 8 del gate sigue sin
+      levantarse hasta que la fusión entre al lexicón.

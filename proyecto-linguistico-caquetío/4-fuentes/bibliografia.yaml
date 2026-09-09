@@ -614,7 +614,7 @@ obras:
   en_repo: false
 - id: perea-alonso-1942
   obra: Filología comparada de las lenguas y dialectos arawak, tomo I
-  autor: Perea y Alonso, Sigfrido
+  autor: Perea y Alonso, Sixto
   anio: 1942
   genero: gramatica
   local:
@@ -622,6 +622,7 @@ obras:
   paginas: 926
   aliases:
   - Perea Alonso 1942
+  - Perea y Alonso 1942
   - Filología comparada arawak
   en_repo: true
 - id: perez-de-tolosa-1546

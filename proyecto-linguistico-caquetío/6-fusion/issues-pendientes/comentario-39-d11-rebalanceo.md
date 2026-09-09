@@ -80,3 +80,67 @@ con qué mezcla y cuánto fondo propio se reconstruye.
 
 La condición 8 se levanta **cuando la fase 1 esté aplicada**, no al tomar la
 decisión: el gate mide dato, no intención.
+
+---
+
+## Fase 1, primera fuente: Perea y Alonso 1942 minada (2026-09-08)
+
+Propuesta en `6-fusion/lokono_perea_1942.yaml`, reproducible con
+`curiana_sim/minar_perea.py`.
+
+**Estaba descartada, y lo estaba por la pregunta equivocada.** La ficha la cerró
+el 2026-07-29 como *"gramática lokono pura, no comparativa"* — cierto para lo
+que se le preguntaba entonces (cognados caquetíos), y falso como descripción de
+la obra. Su Parte I es la **concordancia lokono de los Hechos de los Apóstoles**
+en la traducción de Theodor Schultz, 1802: **1.060 conceptos**, cada forma
+citada por capítulo-versículo y ya segmentada en morfemas por el propio Perea.
+
+| | |
+|---|---|
+| Raíces lokono aisladas tras criba | **724** |
+| Corroboran una entrada del lexicón | 38 (12 con la glosa también) |
+| **Nuevas** | **686**, de ellas **201 con dos o más atestaciones** |
+
+Contra las 275 entradas lokono actuales y las 781 wayuu, esto mueve el orden de
+magnitud de la columna.
+
+### Lo que trajo de regalo: la columna A-2 auditada
+
+`6-fusion/auditoria_a2_perea.yaml`. La columna lokono de la tabla A-2 es la que
+sostiene esta decisión, y nunca se había contrastado contra una fuente primaria
+**independiente**: las entradas lokono del lexicón vienen de Goeje 1928 y
+Brinton 1871, y Oliver bebe de los mismos. Perea vacía a Schultz 1802 directo.
+
+De 18 filas: **12 confirman, 2 divergen** (sangre, grande), 1 parcial, 3 no son
+medibles porque los Hechos no dicen esas palabras.
+
+Y las dos filas que más usamos quedan con atestación primaria:
+
+- **luna** — `catti`, Hechos 2-20: *«dia tu-ppa CATTI ù-ttù bia»* = «como también
+  la LUNA en sangre» (pp. 60 y 66). La fila bandera del cómputo del 2026-08-31
+  ya no depende de una sola columna de una sola tabla.
+- **diente** — `na-ri-sibu`, Hechos 7-54: «crujían SUS DIENTES» (p. 32). Atestigua
+  la raíz `-ri` que Oliver empareja con el caquetío *dare* en su p. 147.
+
+### 🔴 Y lo que esta fuente NO puede hacer
+
+El Fraseario es la concordancia de **un libro**, y ese libro narra el
+Mediterráneo del siglo I. Verificado buscando el lema exacto: **no hay entrada
+para agua, árbol, arena, raíz, pez ni casa**.
+
+O sea: **no equilibra la columna wayuu concepto por concepto**. La equilibra en
+gramática, partículas, cuerpo, parentesco y vocabulario abstracto, y deja
+intacto el hueco del léxico ecológico y material — que es justo donde el
+caquetío atestiguado tiene más masa. Para ese hueco siguen haciendo falta
+de Goeje 1928 o Bennett 1989, que son las dos compras de la lista.
+
+### Un apunte sobre `daca`
+
+El lexicón reconstruye el taíno `daca` 'mano' desde un supuesto lokono *daka*.
+Perea da la mano lokono como **`-ccabbu`**, con cinco atestaciones
+(`lù-ccabbu` 'su mano', `bu-ccabbu` 'tu mano', `na-ccabbu` 'sus manos'), que es
+la forma `akkabu` que el lexicón ya tiene por otra vía. No resuelve de dónde
+salió *daka*, pero confirma que ahí hay algo que revisar.
+
+**El gate no se mueve todavía**: esto es propuesta, no fusión. La condición 8 se
+levanta cuando la fusión entre al lexicón.

@@ -1,0 +1,5568 @@
+meta:
+  generado_por: curiana_sim/minar_perea.py
+  obra: perea-alonso-1942
+  que_es: Fraseario analógico del arawak (LOKONO) de las Guayanas Holandesa e Inglesa, extractado por
+    Perea del texto bíblico de Theodor Schultz, 1802 — «Act Apostel-nu», los Hechos de los Apóstoles.
+    Cada entrada da el concepto en español con sus glosas latina, portuguesa, francesa e inglesa, y debajo
+    las frases lokono donde la voz aparece, citadas por capítulo-versículo y ya segmentadas en morfemas
+    por el propio Perea.
+  estrato: 'Lokono de 1802, no el moderno. El propio Perea documenta que el arawak de Brett 1849 ya diverge:
+    «la g sustituye con frecuencia a la k de los Moravos, y la i, u, t de aquéllos se ha transformado
+    en e, o, cx» (p. impresa 546). Es un estrato más cercano en el tiempo a los documentos caquetíos que
+    Goeje 1928, Brinton 1871 o Pet 1987.'
+  cobertura_medida:
+    entradas_numeradas: 1060
+    parseadas: 1040
+    raices_conservadas: 724
+    corroboran_el_lexicon: 38
+    de_esas_con_glosa_coincidente: 12
+    nuevas: 686
+    paginas_impresas_ausentes_del_escaneo: 29
+  desfase: 'el Fraseario ocupa pdf 165-763 = impresas 1-541, pero el escaneo repite pliegos: hay que leer
+    el número impreso de cada página, no sumar una constante'
+  etiqueta_propuesta: 'comparanda lokono atestiguada. No entra al canon por sí sola: minar propone, humano
+    fusiona'
+advertencias:
+- 'El texto es una TRADUCCIÓN DEL ALEMÁN hecha por misioneros moravos. El propio Perea avisa (p. impresa
+  CVII): «no son de extrañar los abundantes neologismos, exotismos, supresiones y aditamentos». Se cribaron
+  germanismos, hispanismos y voces cristianas sin forma nativa.'
+- 'El campo semántico es el de los Hechos de los Apóstoles, no el de la costa caribe. Verificado: no hay
+  entrada para agua, árbol, arena, raíz, pez ni casa. Esta fuente NO equilibra la columna wayuu concepto
+  por concepto: la equilibra en gramática, partículas, cuerpo, parentesco y vocabulario abstracto.'
+- La raíz sale de quitar de la segmentación del PROPIO Perea los segmentos que su Compendio Gramatical
+  declara afijos (p. impresa 587). Donde el OCR metió un espacio dentro de un guion la raíz podía salir
+  partida; se corrigió pegando los guiones, pero quedan casos.
+- 'Las corroboraciones marcadas `glosa_coincide: false` NO son falsas: casi todas son polisemia de una
+  misma raíz (abba = uno / otro / alguno / nadie). Necesitan ojo humano, no descarte automático.'
+- 'Trampa que el propio Perea nombra (p. impresa 546): la alternancia r/l hace que la postposición -ruccu
+  ~ -luccu «en, dentro» colisione con luccu «hombre, persona, indio». El cruce la reencontró sola.'
+corroboraciones:
+- raiz: abba
+  concepto_es: OTRO
+  pagina: 121
+  atestaciones: 11
+  entrada_n: 352
+  cita_hechos: 7-18
+  ejemplo: ABBA coning = OTRO rey.
+  ya_en_lexicon: aba
+  glosa_lexicon: uno, un (numeral y artículo indefinido)
+  glosa_coincide: false
+- raiz: casaccu
+  concepto_es: CIELO
+  pagina: 21
+  atestaciones: 10
+  entrada_n: 49
+  cita_hechos: 1-10
+  ejemplo: ru * hacia el CIELO. hamma a-dina-ma-coa-ha a-ddiki-n CASACCU muniru ? = qué estáis mirando
+    hacia el CIELO ? Jesus a-nnica-hù-killi hu-uria CAS
+  ya_en_lexicon: kassaku
+  glosa_lexicon: firmamento, bóveda celeste
+  glosa_coincide: false
+- raiz: wadi-li
+  concepto_es: VARÓN
+  pagina: 100
+  atestaciones: 9
+  entrada_n: 279
+  cita_hechos: 1-10
+  ejemplo: biama WADI-LI-NU = dos VARONES .
+  ya_en_lexicon: wadili
+  glosa_lexicon: hombre, varón (forma genérica de sexo masculino)
+  glosa_coincide: true
+- raiz: wadi-li
+  concepto_es: HOMBRE ; ( v. persona, gente ; veinte ; varón ; pueblo )
+  pagina: 52
+  atestaciones: 7
+  entrada_n: 127
+  cita_hechos: 3-2
+  ejemplo: abba WADI-LI = un HOMBRE (varón ) .
+  ya_en_lexicon: wadili
+  glosa_lexicon: hombre, varón (forma genérica de sexo masculino)
+  glosa_coincide: true
+- raiz: cabbuin
+  concepto_es: TRES
+  pagina: 130
+  atestaciones: 7
+  entrada_n: 380
+  cita_hechos: 7-20
+  ejemplo: CABBUIN catti = TRES meses.
+  ya_en_lexicon: kabbuhin
+  glosa_lexicon: tres (forma Brinton 1871, variante de kabyn)
+  glosa_coincide: true
+- raiz: abba
+  concepto_es: UN, UNA, UNOS, UNAS
+  pagina: 5
+  atestaciones: 5
+  entrada_n: 2
+  cita_hechos: 1-9
+  ejemplo: ABBA wura-ru = UNA nube.
+  ya_en_lexicon: aba
+  glosa_lexicon: uno, un (numeral y artículo indefinido)
+  glosa_coincide: false
+- raiz: biama
+  concepto_es: CUARENTA
+  pagina: 111
+  atestaciones: 5
+  entrada_n: 316
+  cita_hechos: 1-3
+  ejemplo: BIAMA LUCCU ca-sacca-bbu-hu = CUARENTA días. (dos veintes ) .
+  ya_en_lexicon: biama
+  glosa_lexicon: dos (forma Brinton 1871, variante de bian)
+  glosa_coincide: false
+- raiz: abba
+  concepto_es: POCO
+  pagina: 123
+  atestaciones: 5
+  entrada_n: 357
+  cita_hechos: 12-17
+  ejemplo: 1-a-cunna ABBA-MUNIRU = fué a OTRO LUGAR.
+  ya_en_lexicon: aba
+  glosa_lexicon: uno, un (numeral y artículo indefinido)
+  glosa_coincide: false
+- raiz: abba
+  concepto_es: NADIE
+  pagina: 213
+  atestaciones: 5
+  entrada_n: 464
+  cita_hechos: 17-4
+  ejemplo: ABBA-NU n-e-benna a-sica-ca l-adia-n ame hidda = ALGUNOS de ellos creyeron en su palabra.
+  ya_en_lexicon: aba
+  glosa_lexicon: uno, un (numeral y artículo indefinido)
+  glosa_coincide: false
+- raiz: cuba
+  concepto_es: SER (v . Estar, Haber, Existir )
+  pagina: 456
+  atestaciones: 4
+  entrada_n: 930
+  cita_hechos: 2-4
+  ejemplo: na-makua ... ebe-KITTOA ù-sa-tti ù-ya-hù abbu = todos FUERON llenos del Espíritu Santo .
+  ya_en_lexicon: kuba
+  glosa_lexicon: signo de tiempo pasado (prefijo/sufijo temporal)
+  glosa_coincide: false
+- raiz: lluccu
+  concepto_es: COMO
+  pagina: 500
+  atestaciones: 4
+  entrada_n: 994
+  cita_hechos: 2-3
+  ejemplo: hikki-hi ehelu-du-n DIA = COMO llamas de fuego .
+  ya_en_lexicon: lukku
+  glosa_lexicon: hombre, persona arahuacana (autónimo masculino)
+  glosa_coincide: false
+- raiz: cuba
+  concepto_es: PATRIARCA ( v. padre )
+  pagina: 78
+  atestaciones: 3
+  entrada_n: 199
+  cita_hechos: 2-29
+  ejemplo: CUBA-CA-DDI ù-sa-tti David = el santo PATRIARCA David .
+  ya_en_lexicon: kuba
+  glosa_lexicon: signo de tiempo pasado (prefijo/sufijo temporal)
+  glosa_coincide: false
+- raiz: hadda-lli
+  concepto_es: SOL (v. correr )
+  pagina: 92
+  atestaciones: 3
+  entrada_n: 247
+  cita_hechos: 2-20
+  ejemplo: HADDA-LLI ebesu-pa wulli-ru-cu-hu ( sic ) bia = el SOL se volverá en tinieblas.
+  ya_en_lexicon: hadalli
+  glosa_lexicon: sol (forma Lokono)
+  glosa_coincide: true
+- raiz: biama
+  concepto_es: DOS
+  pagina: 113
+  atestaciones: 3
+  entrada_n: 323
+  cita_hechos: 1-10
+  ejemplo: BIAMA wadi-li-nu = DOS varones.
+  ya_en_lexicon: biama
+  glosa_lexicon: dos (forma Brinton 1871, variante de bian)
+  glosa_coincide: true
+- raiz: abba
+  concepto_es: UNO
+  pagina: 210
+  atestaciones: 3
+  entrada_n: 461
+  cita_hechos: 7-24
+  ejemplo: ju-mùn-ni-ke lu-i a-ddica ABBA-lu-wai = como viere a UNO.
+  ya_en_lexicon: aba
+  glosa_lexicon: uno, un (numeral y artículo indefinido)
+  glosa_coincide: true
+- raiz: lluccu
+  concepto_es: CONFORMAR
+  pagina: 263
+  atestaciones: 3
+  entrada_n: 605
+  cita_hechos: 13-22
+  ejemplo: lu-i ke a-ni-pa tu-makua d-a-nsi-sia U-LLUCCU-DITTU = él hará todo CONFORME a mi voluntad.
+  ya_en_lexicon: lukku
+  glosa_lexicon: hombre, persona arahuacana (autónimo masculino)
+  glosa_coincide: false
+- raiz: lluccu
+  concepto_es: SEGÚN
+  pagina: 534
+  atestaciones: 3
+  entrada_n: 1046
+  cita_hechos: 4-35
+  ejemplo: n-a-mùn-hitti-sia U-LLUCCU-DI = SEGÚN habían menester .
+  ya_en_lexicon: lukku
+  glosa_lexicon: hombre, persona arahuacana (autónimo masculino)
+  glosa_coincide: false
+- raiz: cairi
+  concepto_es: ISLA
+  pagina: 56
+  atestaciones: 2
+  entrada_n: 135
+  cita_hechos: 13-6
+  ejemplo: CAIRI ubandi Paphos muniru = más allá de la ISLA. hasta Pafos.
+  ya_en_lexicon: kairi
+  glosa_lexicon: isla, territorio insular
+  glosa_coincide: true
+- raiz: isi
+  concepto_es: DERECHO, recto
+  pagina: 112
+  atestaciones: 2
+  entrada_n: 319
+  cita_hechos: 14-10
+  ejemplo: M-ISI-RE-bu-pa a-dina-mùn bu-cutti abbu = ponte DERECHO por tus pies.
+  ya_en_lexicon: isii
+  glosa_lexicon: semilla
+  glosa_coincide: false
+- raiz: biama
+  concepto_es: = SIETE (v. semana )
+  pagina: 127
+  atestaciones: 2
+  entrada_n: 373
+  cita_hechos: 13-19
+  ejemplo: BIAMA-TTI-MANN ( sic) ùkkùrkùa-hù-nnu = SIETE naciones .
+  ya_en_lexicon: biama
+  glosa_lexicon: dos (forma Brinton 1871, variante de bian)
+  glosa_coincide: false
+- raiz: abba
+  concepto_es: ALGUNO, ALGUNA, ALGO
+  pagina: 211
+  atestaciones: 2
+  entrada_n: 463
+  cita_hechos: 4-32
+  ejemplo: ABBA kùsa = o ALGO.
+  ya_en_lexicon: aba
+  glosa_lexicon: uno, un (numeral y artículo indefinido)
+  glosa_coincide: false
+- raiz: buru
+  concepto_es: HERIR, ( v. Golpear, Matar, Cortar)
+  pagina: 355
+  atestaciones: 2
+  entrada_n: 760
+  cita_hechos: 12-7
+  ejemplo: lihi engel A-BURÙ-CA-i Petrus a-ruma u-cunna = aquel ángel HIRIÓ ( golpeó ) a Pedro en un lado.
+  ya_en_lexicon: buru
+  glosa_lexicon: cielo, firmamento
+  glosa_coincide: false
+- raiz: itte
+  concepto_es: ENTRAÑA
+  pagina: 39
+  atestaciones: 1
+  entrada_n: 85
+  cita_hechos: 1-18
+  ejemplo: tu-makua L-ITTE = todas SUS ENTRAÑAS .
+  ya_en_lexicon: ite
+  glosa_lexicon: vientre, barriga
+  glosa_coincide: false
+- raiz: luccu
+  concepto_es: PERSONA (v . gente, hombre )
+  pagina: 78
+  atestaciones: 1
+  entrada_n: 202
+  cita_hechos: 10-34
+  ejemplo: na-makua LUCCU-HU = toda PERSONA. NOMBRES 79
+  ya_en_lexicon: lukku
+  glosa_lexicon: hombre, persona arahuacana (autónimo masculino)
+  glosa_coincide: true
+- raiz: siba
+  concepto_es: PIEDRA (v. cárcel )
+  pagina: 80
+  atestaciones: 1
+  entrada_n: 204
+  cita_hechos: 5-26
+  ejemplo: SIBA abbu = con PIEDRAS.
+  ya_en_lexicon: siba
+  glosa_lexicon: piedra, roca
+  glosa_coincide: true
+- raiz: abba
+  concepto_es: CIENTO
+  pagina: 109
+  atestaciones: 1
+  entrada_n: 309
+  cita_hechos: 1-15
+  ejemplo: ABBA-TI-MAN LUCCU tu-iyuhu = = CIENTO VEIN
+  ya_en_lexicon: aba
+  glosa_lexicon: uno, un (numeral y artículo indefinido)
+  glosa_coincide: false
+- raiz: bibiti
+  concepto_es: CUATRO (v . dos )
+  pagina: 111
+  atestaciones: 1
+  entrada_n: 317
+  cita_hechos: 7-6
+  ejemplo: BIBITI hundert wiyua = CUATRO cientos años .
+  ya_en_lexicon: bibiti
+  glosa_lexicon: cuatro (forma Brinton 1871, variante de bithi)
+  glosa_coincide: true
+- raiz: abba
+  concepto_es: UNO
+  pagina: 131
+  atestaciones: 1
+  entrada_n: 383
+  cita_hechos: 18-11
+  ejemplo: ABBA wiyua, abba-ti-mann catti tu-pakùtta-n = UN
+  ya_en_lexicon: aba
+  glosa_lexicon: uno, un (numeral y artículo indefinido)
+  glosa_coincide: true
+- raiz: hallicai
+  concepto_es: QUIEN
+  pagina: 204
+  atestaciones: 1
+  entrada_n: 458
+  cita_hechos: 1-20
+  ejemplo: HALLICAI curu ca-sicoa-ma tu-lluccu-mùn baddia = no haya QUIEN habite en ella. 7
+  ya_en_lexicon: halikan
+  glosa_lexicon: quién
+  glosa_coincide: true
+- raiz: balli
+  concepto_es: ACABAR
+  pagina: 221
+  atestaciones: 1
+  entrada_n: 476
+  cita_hechos: 21-27
+  ejemplo: tucuda biama-tti-man casaccabbu A-BALLI-N m-a-ni-ca ibiti-can = cuando estaban por ACABARSE
+    los siete días .
+  ya_en_lexicon: balli
+  glosa_lexicon: árbol, madera (forma Lokono)
+  glosa_coincide: false
+- raiz: dalli
+  concepto_es: CONCURRIR
+  pagina: 261
+  atestaciones: 1
+  entrada_n: 598
+  cita_hechos: 3-11
+  ejemplo: na-makua luccu-nnu A-DALLI-DA n-ibiti = todo el pueblo CONCURRIÓ a ellos.
+  ya_en_lexicon: dalli
+  glosa_lexicon: padre (mi padre, forma poseída)
+  glosa_coincide: false
+- raiz: lluccu
+  concepto_es: CONFUNDIR
+  pagina: 264
+  atestaciones: 1
+  entrada_n: 607
+  cita_hechos: 2-6
+  ejemplo: M-A-LLUCCU--N ti dia n-a cubá hinna = ESTABAN CONFUSOS .
+  ya_en_lexicon: lukku
+  glosa_lexicon: hombre, persona arahuacana (autónimo masculino)
+  glosa_coincide: false
+- raiz: cuba
+  concepto_es: HEREDAR
+  pagina: 355
+  atestaciones: 1
+  entrada_n: 759
+  cita_hechos: 5-3
+  ejemplo: tti-kebbe-sia-n tu-ccudaha a-iyucaia-hù-sia-ru U-CUBA-N ù-yauna uria ? = defraudaste el precio
+    de la venta de la HEREDAD ?
+  ya_en_lexicon: kuba
+  glosa_lexicon: signo de tiempo pasado (prefijo/sufijo temporal)
+  glosa_coincide: false
+- raiz: dalli
+  concepto_es: LANZAR
+  pagina: 368
+  atestaciones: 1
+  entrada_n: 789
+  cita_hechos: 14-14
+  ejemplo: N-A-DALLI-DA bahasu-bule-mùn-ti u-iyuhu u-ccuburuccu-mùn = SE LANZARON al gentío (corrieron
+    hacia) .
+  ya_en_lexicon: dalli
+  glosa_lexicon: padre (mi padre, forma poseída)
+  glosa_coincide: false
+- raiz: lluccu
+  concepto_es: REPARTIR ( v. Dividir )
+  pagina: 437
+  atestaciones: 1
+  entrada_n: 898
+  cita_hechos: 13-19
+  ejemplo: lu-i A-LLUCCU-DA-CA tu-hu huiuru ba-wa-n, nawaya n-a-n-bia-n = REPARTIÓ la tierra de ellos
+    , para que fuera suya.
+  ya_en_lexicon: lukku
+  glosa_lexicon: hombre, persona arahuacana (autónimo masculino)
+  glosa_coincide: false
+- raiz: buru
+  concepto_es: SOBRELLEVAR
+  pagina: 463
+  atestaciones: 1
+  entrada_n: 933
+  cita_hechos: 20-35
+  ejemplo: A-BURU-WA-TTU-N-NI ye ma-tatta-ti u-cunna = SOBRELLEVAR a los débiles .
+  ya_en_lexicon: buru
+  glosa_lexicon: cielo, firmamento
+  glosa_coincide: false
+- raiz: ansi
+  concepto_es: CON, ( para con )
+  pagina: 501
+  atestaciones: 1
+  entrada_n: 995
+  cita_hechos: 7-19
+  ejemplo: wa-bura-tti ANSI = CON nuestros antepasados ( con respecto a)
+  ya_en_lexicon: ansi
+  glosa_lexicon: fuerza vital, energía de vida
+  glosa_coincide: false
+- raiz: abba
+  concepto_es: SÚBITAMENTE, DE REPENTE
+  pagina: 537
+  atestaciones: 1
+  entrada_n: 1054
+  cita_hechos: 9-3
+  ejemplo: ABBA-CA-REN abba a-rule-ti = SÚBITAMENTE una luz.
+  ya_en_lexicon: aba
+  glosa_lexicon: uno, un (numeral y artículo indefinido)
+  glosa_coincide: false
+nuevas_con_dos_o_mas_atestaciones:
+- raiz: makua
+  concepto_es: TODO
+  pagina: 215
+  atestaciones: 16
+  entrada_n: 466
+  cita_hechos: 2-4
+  ejemplo: NA-MAKUA l-a-nsinia-nnu ebeki-ttoa ù-sa-tti ù-yahù abbu = fueron TODOS llenos del Espíritu
+    Santo.
+- raiz: iri
+  concepto_es: NOMBRAR
+  pagina: 395
+  atestaciones: 14
+  entrada_n: 828
+  cita_hechos: 2-38
+  ejemplo: Jesus IRI u-lluccu-mùn = en el NOMBRE de Jesús .
+- raiz: uma
+  concepto_es: CON, (compañía )
+  pagina: 502
+  atestaciones: 13
+  entrada_n: 997
+  cita_hechos: 1-14
+  ejemplo: hiaru-nu UMA = CON las mujeres . Maria Jesus u-yu UMA = CON María la madre de Jesús .
+- raiz: dumma
+  concepto_es: PORQUE
+  pagina: 531
+  atestaciones: 12
+  entrada_n: 1041
+  cita_hechos: 4-3
+  ejemplo: bakkùllama hiddan U-DUMMA = pues , PORQUE era tarde.
+- raiz: ditti
+  concepto_es: HIJO (v. criado, siervo )
+  pagina: 51
+  atestaciones: 10
+  entrada_n: 126
+  cita_hechos: 1-13
+  ejemplo: Alphei A-DITTI = HIJO de Alfeo.
+- raiz: hidda
+  concepto_es: ASÍ
+  pagina: 497
+  atestaciones: 9
+  entrada_n: 986
+  cita_hechos: 1-11
+  ejemplo: a-ndi-pa-te ... DIN = ASÍ vendrá .
+- raiz: baha
+  concepto_es: CASO (v. Tal vez )
+  pagina: 491
+  atestaciones: 9
+  entrada_n: 976
+  cita_hechos: 2-7
+  ejemplo: Galilea-cunna-n-a m-a-ni-n-a naha BAHA? = ...
+- raiz: llua
+  concepto_es: CORAZÓN
+  pagina: 23
+  atestaciones: 9
+  entrada_n: 56
+  cita_hechos: 2-26
+  ejemplo: DA-LLUA halli-kebbe = MI CORAZÓN se alegró .
+- raiz: dia
+  concepto_es: DECIR
+  pagina: 280
+  atestaciones: 9
+  entrada_n: 644
+  cita_hechos: '-24'
+  ejemplo: 't-a-coa-nti u-mùn, na-i biama-nnu u-cunna-mùn, hiddia-man A-DIA-N abbu = mientras rogaban
+    a Dios por los dos , DIJERON de este modo :'
+- raiz: sikua
+  concepto_es: '- CASA (v. familia, parentela )'
+  pagina: 19
+  atestaciones: 8
+  entrada_n: 45
+  cita_hechos: 2-2
+  ejemplo: 'kia ebe-kitta BAHÚ tu-man el cual hinchió toda la CASA. [ cf. Al : BAU = edificación, construcción,
+    obra ] ?? ] .'
+- raiz: ya-luccu
+  concepto_es: CONTRA
+  pagina: 503
+  atestaciones: 8
+  entrada_n: 998
+  cita_hechos: 4-14
+  ejemplo: m-a-mmalli-n rubu hinna hamma-talli a-dia-n kia Ù-YA-LUCCU = no podían decir nada en CONTRA.
+- raiz: iyuhu
+  concepto_es: MULTITUD, (v. muchedumbre, pueblo )
+  pagina: 69
+  atestaciones: 8
+  entrada_n: 177
+  cita_hechos: 2-6
+  ejemplo: NA-IYUHU a-hùrkùela-ca = juntóse SU MULTITUD .
+- raiz: adi
+  concepto_es: SOBRE
+  pagina: 536
+  atestaciones: 8
+  entrada_n: 1052
+  cita_hechos: 2-3
+  ejemplo: m-a-yauwa-coa-n na-makua na-man ADI = se asentó SOBRE cada uno de ellos .
+- raiz: wabu-ruccu
+  concepto_es: CAMINO
+  pagina: 16
+  atestaciones: 7
+  entrada_n: 37
+  cita_hechos: 10-9
+  ejemplo: WABU-RUCCU luccu ( sic ) n-a-ni-ca stadt ibiti = yendo ellos en CAMINO hacia la ciudad .
+- raiz: muniru
+  concepto_es: HASTA
+  pagina: 516
+  atestaciones: 7
+  entrada_n: 1018
+  cita_hechos: 1-2
+  ejemplo: ca-sacca-bbu-hù MUNIRU ren = HASTA el día .
+- raiz: huda
+  concepto_es: MORIR (v. Matar, Expirar, Irse )
+  pagina: 390
+  atestaciones: 7
+  entrada_n: 818
+  cita_hechos: 3-15
+  ejemplo: -kùnne-ca-cutta W-a-malli-t-a-coa-n-tiu-mùn A-HUDA-HÙ u-lluccu-aria ba = al cual Dios ha levantado
+    de la MUERTE.
+- raiz: dia
+  concepto_es: PALABRA (v. hablar, decir )
+  pagina: 75
+  atestaciones: 7
+  entrada_n: 192
+  cita_hechos: 2-22
+  ejemplo: a-canna-bu-té D-A-DIA-N hu-mùn = oíd estas MIS PALABRAS (mi decir ) a vosotros.
+- raiz: hamma
+  concepto_es: POR QUÉ ?
+  pagina: 530
+  atestaciones: 7
+  entrada_n: 1040
+  cita_hechos: 3-12
+  ejemplo: HAMMA BIA ? = POR QUÉ ... ?
+- raiz: waria
+  concepto_es: DESDE (v. De, orig. )
+  pagina: 508
+  atestaciones: 6
+  entrada_n: 1005
+  cita_hechos: 1-11
+  ejemplo: Jesus a-nnica-hù-killi hu-URIA = Jesús que ha tomado DESDE (de) vosotros.
+- raiz: ibikiddu-lli-a
+  concepto_es: MANCEBO ( v . mozo )
+  pagina: 63
+  atestaciones: 6
+  entrada_n: 160
+  cita_hechos: 2-17
+  ejemplo: H-IBIKIDDU-LLI-A-NNU = VUESTROS MAN-CEBOS .
+- raiz: bara
+  concepto_es: MAR
+  pagina: 65
+  atestaciones: 6
+  entrada_n: 163
+  cita_hechos: 7-36
+  ejemplo: Culeru BARA = el MAR Bermejo.
+- raiz: abbu
+  concepto_es: POR
+  pagina: 528
+  atestaciones: 6
+  entrada_n: 1039
+  cita_hechos: 1-2
+  ejemplo: l-ikisi-sa-hù-sia-nnu apostel-nu u-mùn ù-sa-tti ù-ya-hù ABBU = habiéndoles dado a los apóstoles
+    POR el Espíritu Santo .
+- raiz: putti
+  concepto_es: SALIR
+  pagina: 448
+  atestaciones: 6
+  entrada_n: 917
+  cita_hechos: 4-15
+  ejemplo: N-A-PUTTI-KI-DI-KITTI-N-BENNA na-nna-can-ni-ruccu-waria ye = HABIÉNDO-les ORDENADO que SALIESEN
+    del concilio.
+- raiz: haca
+  concepto_es: TESTIFICAR (v. Atestiguar)
+  pagina: 468
+  atestaciones: 6
+  entrada_n: 947
+  cita_hechos: 1-8
+  ejemplo: A-HACA-TI bia baddia hui da-cunna-mùn na-mùn = me ATESTIGUARÉIS ante ellos (me seréis TESTIGOS
+    ) . VERBOS, PARTICIPIO
+- raiz: wiyua
+  concepto_es: AÑO
+  pagina: 10
+  atestaciones: 5
+  entrada_n: 16
+  cita_hechos: 4-22
+  ejemplo: biama luccu WIYUA = cuarenta AÑOS .
+- raiz: benna
+  concepto_es: CUANDO
+  pagina: 504
+  atestaciones: 5
+  entrada_n: 999
+  cita_hechos: 5-23
+  ejemplo: wa-tullu-du-n-BENNA-n = CUANDO abrimos.
+- raiz: uria
+  concepto_es: DE
+  pagina: 505
+  atestaciones: 5
+  entrada_n: 1001
+  cita_hechos: 2-10
+  ejemplo: ma-wai-kille-tti Cyrenen URIA = que está no lejos DE Cirene. ( orig. ) .
+- raiz: haca
+  concepto_es: HABLAR (v. Conversar, Decir )
+  pagina: 342
+  atestaciones: 5
+  entrada_n: 754
+  cita_hechos: 1-1
+  ejemplo: D-A-HACA-CA hidda tu-makua Jesus a-ni-sia = HE HABLADO de todas las cosas que Jesús hizo .
+- raiz: dia
+  concepto_es: LENGUA, idioma (v. decir)
+  pagina: 57
+  atestaciones: 5
+  entrada_n: 141
+  cita_hechos: 2-4
+  ejemplo: n-a-usa baddia abba-nu A-DIA-N u lluccu a-haca-n = y comenzaron a hablar en otras LENGUAS .
+- raiz: ccabbu
+  concepto_es: MANO (v. brazo, cinco, veinte )
+  pagina: 63
+  atestaciones: 5
+  entrada_n: 161
+  cita_hechos: 3-7
+  ejemplo: ABBU u-usa-maria Pedro tomándole SU MANO, la derecha . [ ???] [ ca-bbu = la que toma ] ?]
+- raiz: bura
+  concepto_es: PADRE
+  pagina: 123
+  atestaciones: 5
+  entrada_n: 191
+  cita_hechos: 2-33
+  ejemplo: L-ITTI a-iyu-mùn-cun-di = SU PADRE que está arriba.
+- raiz: yu-mùn
+  concepto_es: ALLÍ
+  pagina: 493
+  atestaciones: 4
+  entrada_n: 980
+  cita_hechos: 10-18
+  ejemplo: rus que Pedro estaba ALLÍ . Petrus a-dumki-n TU-LLUCCU-MÙN u-cunna-mùn = acerca de si Pedro
+    posaba ALLÍ.
+- raiz: tuyucu
+  concepto_es: ANCIANO
+  pagina: 9
+  atestaciones: 4
+  entrada_n: 12
+  cita_hechos: 4-5
+  ejemplo: na-i TUYUCU-TI = ellos los ANCIANOS . [-?] .
+- raiz: cuttu
+  concepto_es: AYUNAR
+  pagina: 247
+  atestaciones: 4
+  entrada_n: 558
+  cita_hechos: 10-30
+  ejemplo: M-A-CUTTU-N-MA d-a-ni-ca = YO ESTABA AYUNO .
+- raiz: sucusa
+  concepto_es: BAUTIZAR
+  pagina: 248
+  atestaciones: 4
+  entrada_n: 561
+  cita_hechos: 1-5
+  ejemplo: bu BAUTIZÓ al pueblo con agua. hu-i A-SUCUSA-HU-RA ùsa-ttiù-ya-hù abbu = vosotros SERÉIS BAUTIZADOS
+    por el Espíritu Santo.
+- raiz: abbu
+  concepto_es: CON, (instrumento )
+  pagina: 501
+  atestaciones: 4
+  entrada_n: 996
+  cita_hechos: '-5'
+  ejemplo: wuni-abu ABBU CON agua. ù-sa-tti ù-ya-hù ABBU = CON el Espíritu Santo .
+- raiz: hamma-talli
+  concepto_es: COSA
+  pagina: 25
+  atestaciones: 4
+  entrada_n: 59
+  cita_hechos: 1-1
+  ejemplo: TU-makua = todas las COSAS.
+- raiz: kia
+  concepto_es: DESPUÉS
+  pagina: 508
+  atestaciones: 4
+  entrada_n: 1006
+  cita_hechos: 9-37
+  ejemplo: b-A-DIKKI-TI-DESPUÉS de ti. t-ipiru n-a-ni-BENNA a-sucusu-n = DESPUÉS que hubieron lavado su
+    cuerpo.
+- raiz: biama-cutti-hi
+  concepto_es: DOCE (v. dos, diez, pie )
+  pagina: 112
+  atestaciones: 4
+  entrada_n: 322
+  cita_hechos: 6-2
+  ejemplo: BIAMA-CUTTI-HI-BENNA-NNU apostel-nu = los DOCE apóstoles .
+- raiz: adi-acu
+  concepto_es: ENCIMA, ( v. Arriba, Sobre )
+  pagina: 513
+  atestaciones: 4
+  entrada_n: 1011
+  cita_hechos: 6-6
+  ejemplo: DI-ACU les pusieron las manos ENCIMA de sus cabezas . (adi-sobre ; acu = en) .
+- raiz: malli-cutta
+  concepto_es: ENSEÑAR
+  pagina: 311
+  atestaciones: 4
+  entrada_n: 707
+  cita_hechos: 4-2
+  ejemplo: N-A-MALLI-CUTTA-N u-cunna-ye lucu-nnu = de que ENSEÑARAN al pueblo .
+- raiz: abba-waria
+  concepto_es: EXTRANJERO
+  pagina: 44
+  atestaciones: 4
+  entrada_n: 99
+  cita_hechos: 2-10
+  ejemplo: ABBA-WARIA-TTI Roma-mùn ca-sicoa-ti-be = EX-TRANJEROS habitantes en Roma.
+- raiz: dannu
+  concepto_es: HOY
+  pagina: 517
+  atestaciones: 4
+  entrada_n: 1019
+  cita_hechos: 19-40
+  ejemplo: kia DANNU-HU a-ni-hù-sia u-dumma = por lo hecho HOY .
+- raiz: cun-te
+  concepto_es: IR (v. Andar, Caminar )
+  pagina: 362
+  atestaciones: 4
+  entrada_n: 784
+  cita_hechos: 5-20
+  ejemplo: -N a-iyu-muniru din como le habéis visto IRSE al cielo . H-A-CUN-TE !! = ID !!
+- raiz: lesi
+  concepto_es: LEER
+  pagina: 369
+  atestaciones: 4
+  entrada_n: 792
+  cita_hechos: 8-28
+  ejemplo: 'A-LESI-DA [ . : L : lexi ] ? ] prophet ESAIA ù-cartan u-banna-mùn = LEYENDO el libro del profeta
+    ISAÍAS .'
+- raiz: irei
+  concepto_es: MUJER, esposa
+  pagina: 69
+  atestaciones: 4
+  entrada_n: 176
+  cita_hechos: 5-1
+  ejemplo: L-IREI-TU Saphira mutti = y Safira, SU MUJER.
+- raiz: hitte
+  concepto_es: MÁS ( advr. )
+  pagina: 520
+  atestaciones: 4
+  entrada_n: 1025
+  cita_hechos: 5-14
+  ejemplo: HITTE n-a a-wahù-n-tu-nnua = se aumentaba MÁS (mucho) .
+- raiz: ipil
+  concepto_es: 'PRÍNCIPE (v . señor ) ; [ cf. N : pilli ]'
+  pagina: 82
+  atestaciones: 4
+  entrada_n: 215
+  cita_hechos: 3-17
+  ejemplo: H-A-DAINA-SIA-NNU uma = con VUESTROS PRÍNCIPES .
+- raiz: tti
+  concepto_es: QUE
+  pagina: 199
+  atestaciones: 4
+  entrada_n: 457
+  cita_hechos: 2-7
+  ejemplo: gallilea-cunna-na m-a-ni-na naha na-makua-kebé ahaca-TI-bu baha ? = no son acaso galileos todos
+    estos QUE hablan ?
+- raiz: sa-kebe
+  concepto_es: SANTO
+  pagina: 126
+  atestaciones: 4
+  entrada_n: 368
+  cita_hechos: 1-2
+  ejemplo: Ù-SA-TTI ù-ya-hu = Espíritu SANTO .
+- raiz: sica
+  concepto_es: SERVIR
+  pagina: 462
+  atestaciones: 4
+  entrada_n: 931
+  cita_hechos: 7-6
+  ejemplo: yu-mùn-cunna-na A-HAYARU-DU-N-NI-PA ye = los de allí los REDUCIRÍAN a SERVIDUMBRE .
+- raiz: daiya
+  concepto_es: SEÑOR
+  pagina: 90
+  atestaciones: 4
+  entrada_n: 243
+  cita_hechos: 2-20
+  ejemplo: A-DAIYA-HU ù-ccasacca-bbu-n a-ndi-n u-bura = antes que venga el día del SEÑOR .
+- raiz: rubu-ùn
+  concepto_es: SÓLO, SOLAMENTE
+  pagina: 536
+  atestaciones: 4
+  entrada_n: 1053
+  cita_hechos: 19-26
+  ejemplo: Ephesus-cunna-na RUBU-ÙN cu.лu de Efeso. no SÓLO a los-27 RUBU-ÙN cuлu = no SOLAMENTE.
+- raiz: wunabu
+  concepto_es: 'TIERRA, ( La, el mundo :'
+  pagina: 95
+  atestaciones: 4
+  entrada_n: 264
+  cita_hechos: 1-8
+  ejemplo: tu-makua WUNABU u-cunna-man = por toda la TIERRA .
+- raiz: ddiki
+  concepto_es: VER
+  pagina: 479
+  atestaciones: 4
+  entrada_n: 966
+  cita_hechos: 2-17
+  ejemplo: h-ibiki-ddu-llia-nnu A-DDIKI-N m-a-ppa Ù-RAIYA = vuestros mancebos VERÁN VISIONES .
+- raiz: baddia
+  concepto_es: Y, ( v. también )
+  pagina: 538
+  atestaciones: 4
+  entrada_n: 1059
+  cita_hechos: 1-7
+  ejemplo: CANN Jesus a-onnaba-ca na-mùn = Y Jesús les con-testó .
+- raiz: isibu
+  concepto_es: '- PUERTA ( v. frente, casa )'
+  pagina: 85
+  atestaciones: 3
+  entrada_n: 223
+  cita_hechos: 3-2
+  ejemplo: kerki ISIBU = la PUERTA del templo .
+- raiz: iyuru
+  concepto_es: '- TRAER'
+  pagina: 471
+  atestaciones: 3
+  entrada_n: 950
+  cita_hechos: 4-34
+  ejemplo: 'N-A-SICA apostel-nu u-cutti a-mùn-ni-n = lo TRAÍAN (ponían) a los pies de los apóstoles .
+    472 Arw) ARAWAK 2 : F'
+- raiz: mùn
+  concepto_es: A
+  pagina: null
+  atestaciones: 3
+  entrada_n: 975
+  cita_hechos: 1-3
+  ejemplo: a-ditti-li-ttoa-cubá ... l-a-nsi-sia-nnu U-MÙN = se presentó A sus discípulos .
+- raiz: uria
+  concepto_es: APARTAR
+  pagina: 238
+  atestaciones: 3
+  entrada_n: 526
+  cita_hechos: 7-39
+  ejemplo: N-A-SIPU-DA-CA na-lua-monnua abbu Egypte-mùn = SE APARTARON de corazón a Egipto.
+- raiz: cui-kitta
+  concepto_es: ARREPENTIRSE
+  pagina: 241
+  atestaciones: 3
+  entrada_n: 539
+  cita_hechos: 2-38
+  ejemplo: H-A-CUI-KITTA-TÉ hu-mawa m-a-mmalli-hù u-cuburuccu abbu a-boa-ttu uria = ARREPENTÍOS de
+- raiz: kia-hanna
+  concepto_es: ASÍ ; ( conj . )
+  pagina: 498
+  atestaciones: 3
+  entrada_n: 987
+  cita_hechos: 3-19
+  ejemplo: ù-ùsa-dù-kittu-nnua rubu h-a-li KIA-HANN = ASİ PUES arrepentíos .
+- raiz: bien
+  concepto_es: BIEN
+  pagina: 499
+  atestaciones: 3
+  entrada_n: 992
+  cita_hechos: 10-33
+  ejemplo: Ú-SA-NÚ-wai b-a-ndi-n-ni-bu da-mùn = has hecho BIEN viniendo a mí.
+- raiz: dumma
+  concepto_es: CAUSAR
+  pagina: 253
+  atestaciones: 3
+  entrada_n: 575
+  cita_hechos: 10-21
+  ejemplo: HAMMA HU u-dumma h-a-nda yaha-materu ? = cuál es la CAUSA por que habéis venido ?
+- raiz: ibiti
+  concepto_es: CERCA
+  pagina: 500
+  atestaciones: 3
+  entrada_n: 993
+  cita_hechos: 1-12
+  ejemplo: MA-WAKILLE-TTU Jerusalem uria = CERCA ( no lejos ) de Jerusalem .
+- raiz: sa-maria
+  concepto_es: DERECHA (mano, diestra )
+  pagina: 28
+  atestaciones: 3
+  entrada_n: 67
+  cita_hechos: 2-25
+  ejemplo: DÙ-Ù-SA-MARIA-ca i = él está a MI DERECHA O Diestra .
+- raiz: nsi
+  concepto_es: DISCIPULO
+  pagina: 36
+  atestaciones: 3
+  entrada_n: 78
+  cita_hechos: 6-1
+  ejemplo: Jesus CA-NSI-SIA-NNU = los DISCIPULOS (los fieles ) de Jesús .
+- raiz: sacca-bbu
+  concepto_es: DÍA
+  pagina: null
+  atestaciones: 3
+  entrada_n: 69
+  cita_hechos: 1-2
+  ejemplo: CA-SACCA-BBU-HÙ muniru ren = hasta el DÍA . [-?] .
+- raiz: ikisi
+  concepto_es: ESCOGER
+  pagina: 321
+  atestaciones: 3
+  entrada_n: 717
+  cita_hechos: 8-24
+  ejemplo: tta-té u, halli-ca-i na-i biaman i-benna-tti bu-i b-oaya B-IKISI-DA-CA = muéstranos , cual
+    de los dos ESCOGES para ti.
+- raiz: iyuhu
+  concepto_es: GENTE (v. hombre, persona, muchedumbre, número )
+  pagina: 47
+  atestaciones: 3
+  entrada_n: 113
+  cita_hechos: 4-25
+  ejemplo: 'hamma u-dumma bahá HEIDI-NU a-masi-ca-n-doa da-mùn ? = por qué las GENTES ( los paganos )
+    han bramado contra mí ? [ . : Al : '
+- raiz: ùsanu-wai
+  concepto_es: GLORIFICAR
+  pagina: 335
+  atestaciones: 3
+  entrada_n: 744
+  cita_hechos: 3-13
+  ejemplo: A-DAIYA-HÙ-KITTOA hinna i Jesus l-ikinni-can l-addi-tti = HA GLORIFICADO a su hijo único ,
+    Jesús .
+- raiz: halli-kebbe
+  concepto_es: GOZAR
+  pagina: 336
+  atestaciones: 3
+  entrada_n: 746
+  cita_hechos: 2-28
+  ejemplo: bù-be-kitti-pa HALLI-KEBBE-HÙ abbu bu-sibu-amonnua-de = me henchirás de GOZO en tu presencia
+    .
+- raiz: ñaden
+  concepto_es: GRACIA
+  pagina: 48
+  atestaciones: 3
+  entrada_n: 115
+  cita_hechos: 4-33
+  ejemplo: ipiu-tu Ù-SEICA-HÙ = gran GRACIA .
+- raiz: uttiki
+  concepto_es: HALLAR, (v. Encontrar )
+  pagina: 352
+  atestaciones: 3
+  entrada_n: 756
+  cita_hechos: 5-22
+  ejemplo: M-A-UTTIKI-N kebé n-a hùa hamma-talli = NO hạ biendo HALLADO algo. M-A-UTTIKI-N n-a tu-luccu-mùn-ni-ye
+    = NO lo
+- raiz: huki
+  concepto_es: HERMANO (CF. Quand ; )
+  pagina: 49
+  atestaciones: 3
+  entrada_n: 121
+  cita_hechos: 1-13
+  ejemplo: Jacobus U-HUKI-TI = HERMANO de Jacobo.
+- raiz: ttùdda
+  concepto_es: HUIR (v. Fugar, Escapar )
+  pagina: 357
+  atestaciones: 3
+  entrada_n: 766
+  cita_hechos: 7-29
+  ejemplo: Moises A-TTÙDDA yu-waria = Moisés HUYÓ de allí .
+- raiz: iribé
+  concepto_es: INMUNDO (v. limpio, puro )
+  pagina: 117
+  atestaciones: 3
+  entrada_n: 337
+  cita_hechos: 8-7
+  ejemplo: I ù-ya-hu-nnu espíritus INMUNDOS . abba-hùn hamma-talli IRIBÉ-TU [ ? ] = ninguna cosa INMUNDA.
+- raiz: catti
+  concepto_es: MES (v. luna )
+  pagina: 66
+  atestaciones: 3
+  entrada_n: 166
+  cita_hechos: 7-20
+  ejemplo: cabbuin CATTI = tres MESES .
+- raiz: cun
+  concepto_es: NACER
+  pagina: 393
+  atestaciones: 3
+  entrada_n: 823
+  cita_hechos: 7-20
+  ejemplo: Cypern-CUN-DI ba = y NATURAL de Chipre. icca ren cubä Moses A-PUTTIKI-DI-N = en aquel tie
+- raiz: meyu
+  concepto_es: NAVEGAR
+  pagina: 394
+  atestaciones: 3
+  entrada_n: 825
+  cita_hechos: 14-26
+  ejemplo: yu-waria N-A-USA BARA-DI MEYU U-LLUCCU Antiochia-muniru = de allí NAVEGARON (fueron por mar
+    embarcados ) hacia Antioquía.
+- raiz: cumu
+  concepto_es: NO, (absoluto )
+  pagina: 524
+  atestaciones: 3
+  entrada_n: 1032
+  cita_hechos: 4-12
+  ejemplo: abba-CUMU iri = NO (hay) otro nombre.
+- raiz: iyuhu
+  concepto_es: NÚMERO
+  pagina: 72
+  atestaciones: 3
+  entrada_n: 182
+  cita_hechos: 1-15
+  ejemplo: abba-ti-man luccu TU-IYUHU = en NÚMERO de ciento veinte.
+- raiz: sica
+  concepto_es: OBEDECER (v. Creer )
+  pagina: 398
+  atestaciones: 3
+  entrada_n: 830
+  cita_hechos: 4-19
+  ejemplo: W-A-SICA-CU-MA baha hu-i ame = que os OBE-DEZCAMOS .
+- raiz: cuya-bua
+  concepto_es: ORAR (v . Rezar, Rogar )
+  pagina: 404
+  atestaciones: 3
+  entrada_n: 835
+  cita_hechos: 1-14
+  ejemplo: A-CUYA-BOA-HÙ = la ORACIÓN .
+- raiz: canna
+  concepto_es: OÍR
+  pagina: 399
+  atestaciones: 3
+  entrada_n: 833
+  cita_hechos: 1-4
+  ejemplo: Jesus a-dia-sia u-cunna-mùn N-A-CANNA-BÙ-N u-lluccu-di = por lo que oisteis con respecto a
+    lo dicho por Jesús.
+- raiz: mùn
+  concepto_es: PARA
+  pagina: 527
+  atestaciones: 3
+  entrada_n: 1036
+  cita_hechos: 1-25
+  ejemplo: a-haca-ti BIA i = PARA (que sea ) testigo él.
+- raiz: sica
+  concepto_es: PECAR
+  pagina: 411
+  atestaciones: 3
+  entrada_n: 846
+  cita_hechos: 5-31
+  ejemplo: kia-ké N-A-M-A-SICA-N uria a-haica-sia-coa-na-wa = para anular de ellos SUS PECADOS .
+- raiz: huda
+  concepto_es: RESUCITAR (Levantar de los muertos )
+  pagina: 440
+  atestaciones: 3
+  entrada_n: 907
+  cita_hechos: 1-22
+  ejemplo: Christus A-KUNNE-CU-N-NUA = la RESURREC-CIÓN de Cristo .
+- raiz: cullu-siba-ttoa
+  concepto_es: RODILLA
+  pagina: 88
+  atestaciones: 3
+  entrada_n: 232
+  cita_hechos: 9-40
+  ejemplo: L-A-CULLU-SIBA-TTOA-CA = PUESTO de RO-DILLAS . [ ??? ]
+- raiz: cuya
+  concepto_es: ROGAR (v . Pedir, Rezar )
+  pagina: 442
+  atestaciones: 3
+  entrada_n: 911
+  cita_hechos: 10-48
+  ejemplo: elipe . n-immecu-da-ye biama-n wadili-nu l-ibiti , N-A-CUYA-BÙ-N-TTI i = le enviaron dos varones
+    que le ROGARAN. a-sucusa-li-a-nnu A-CUYA-BA hi
+- raiz: sacca-bbu
+  concepto_es: TIEMPO
+  pagina: 94
+  atestaciones: 3
+  entrada_n: 263
+  cita_hechos: 1-7
+  ejemplo: WIYUA CA-SACCA-BBU-HÙ = los TIEMPOS (años y días) .
+- raiz: onaica
+  concepto_es: TRIBULACIÓN ( v . miseria, necesidad )
+  pagina: 98
+  atestaciones: 3
+  entrada_n: 269
+  cita_hechos: 7-10
+  ejemplo: tu-makua L-A-M-ONAICA = todas sus TRIBULACIONES .
+- raiz: iyucana
+  concepto_es: VENDER
+  pagina: 474
+  atestaciones: 3
+  entrada_n: 962
+  cita_hechos: 3-45
+  ejemplo: cos VENDÍAN sus campos y sus casas . a-nda N-A-IYUCANA-HÙ u-yauna abbu = venían con el precio
+    de la venta. VERBOS, PARTICIPIOS Y VERBALES 475 V
+- raiz: cuyoa
+  concepto_es: VOLVER
+  pagina: 486
+  atestaciones: 3
+  entrada_n: 972
+  cita_hechos: 5-22
+  ejemplo: kia-hanna N-A-CUYOA a-daina-sia-nnu ibiti ba = y por lo cual VOLVIERON a los señores .
+- raiz: uria
+  concepto_es: '''UERA'
+  pagina: 515
+  atestaciones: 2
+  entrada_n: 1016
+  cita_hechos: 7-58
+  ejemplo: a-putti-ki-di-kitta na-URIA ye = que los echaran FUERA de ellos. a-ttùrkù-dù-n stadt U-LLUCCU-WARIA
+    i l
+- raiz: ddiki
+  concepto_es: '- MIRAR (v. Ver)'
+  pagina: 389
+  atestaciones: 2
+  entrada_n: 815
+  cita_hechos: 1-11
+  ejemplo: hamma a-dina-ma-coa-ba A-DDIKI-N casaccu-muni-ru ? = qué estáis MIRANDO al cielo ?
+- raiz: tullu-du
+  concepto_es: ABRIR
+  pagina: 220
+  atestaciones: 2
+  entrada_n: 473
+  cita_hechos: 5-10
+  ejemplo: gel A-TTULLU-DA casaccuda u-cunna kia ca-tattadù-coa-na-ttu bahù isibu = el ángel ABRIENDO
+    de noche las puertas de la cárcel (la casa de los-23
+- raiz: uma
+  concepto_es: ACOMPAÑAR
+  pagina: 222
+  atestaciones: 2
+  entrada_n: 482
+  cita_hechos: 9-30
+  ejemplo: N-A-SICA-CA Cesarea-muniru L-UMA = ACOMPAÑÁRONLO (fueron con él) hasta Cesarea VERBOS, PARTICIPIOS
+    Y VERB
+- raiz: disia
+  concepto_es: ACOSTUMBRAR
+  pagina: 225
+  atestaciones: 2
+  entrada_n: 487
+  cita_hechos: 17-2
+  ejemplo: TIBENTIN [ ? [ Paulus a-cudoa tu-lluccu-mùn n-ibiti = Pablo, como ACOSTUMBRABA, entró a ellos
+    .
+- raiz: cuya-bua
+  concepto_es: ADORAR
+  pagina: 227
+  atestaciones: 2
+  entrada_n: 491
+  cita_hechos: 8-27
+  ejemplo: estras oraciones . a-ndi-ti-cubá A-CUYA-BUA-HÙ ibiti Jerusalem-mini-ru = había venido a Jerusalem
+    para la ADORACIÓN.
+- raiz: oaya
+  concepto_es: AHOGAR
+  pagina: 229
+  atestaciones: 2
+  entrada_n: 501
+  cita_hechos: 15-29
+  ejemplo: DO ( muerto por sí) . m-a-cuttu-n h-a-li T-OAYA A-HUDA-RU illikin abbu = ni comáis animal AHOGADO
+    (muerto de por sí) .
+- raiz: ùsanu-wa-i
+  concepto_es: ALABAR
+  pagina: 229
+  atestaciones: 2
+  entrada_n: 502
+  cita_hechos: 2-47
+  ejemplo: ÙSANU-WA-I rubu n-a Gott u-mùn = ALABANDO a Dios [hosanna ?]
+- raiz: llua
+  concepto_es: ALMA; espíritu, ánimo, corazón
+  pagina: 8
+  atestaciones: 2
+  entrada_n: 9
+  cita_hechos: 2-27
+  ejemplo: DA-LLUA = MI ALMA.
+- raiz: bura-mùn
+  concepto_es: ANTES
+  pagina: 496
+  atestaciones: 2
+  entrada_n: 982
+  cita_hechos: 1-16
+  ejemplo: David WAKILLI a-bulli-tisia = David escribió ANTES (olim) .
+- raiz: haca
+  concepto_es: ANUNCIAR
+  pagina: 234
+  atestaciones: 2
+  entrada_n: 519
+  cita_hechos: 8-4
+  ejemplo: N-A-HACA-CA a-dia-hù na-mùn = ANUNCIÁNDO-les la palabra .
+- raiz: raiya-ttoa
+  concepto_es: APARECER
+  pagina: 236
+  atestaciones: 2
+  entrada_n: 523
+  cita_hechos: 1-3
+  ejemplo: 'LU-RAIYA-TTOA-CUBA biama luccu-hu (sic ) casaccabbu-hù u-cunna-man-ye = APARECIÉNDOles por
+    cuarenta días . VERBOS. PARTICIPIOS Y VERBALES 237 '
+- raiz: tuhu
+  concepto_es: AQUEL, AQUELLA, AQUELLO, AQUELLOS, AQUELLAS
+  pagina: 197
+  atestaciones: 2
+  entrada_n: 455
+  cita_hechos: 1-15
+  ejemplo: TUHU drau casaccabbu-hù = en AQUELLOS días .
+- raiz: yaha
+  concepto_es: AQUÍ
+  pagina: 496
+  atestaciones: 2
+  entrada_n: 984
+  cita_hechos: 16-28
+  ejemplo: wa-makua YAHA-coa u = todos nosotros estamos AQUÍ .
+- raiz: pahia
+  concepto_es: ATÓNITO ( v. asombrado, maravillado )
+  pagina: 108
+  atestaciones: 2
+  entrada_n: 302
+  cita_hechos: 3-11
+  ejemplo: PAHIA = ATÓNITOS .
+- raiz: baddia
+  concepto_es: AUN
+  pagina: 498
+  atestaciones: 2
+  entrada_n: 989
+  cita_hechos: 5-16
+  ejemplo: u-iyuhu a-nda BADDIA yu-waria = AUN muchos venían de allí.
+- raiz: lle-ruccu
+  concepto_es: BOCA
+  pagina: 13
+  atestaciones: 2
+  entrada_n: 25
+  cita_hechos: 8-35
+  ejemplo: Philippus a-tullu-da LÙ-LLE-RUCCU = abriendo SU BOCA. Felipe
+- raiz: makua
+  concepto_es: CADA UNO
+  pagina: 211
+  atestaciones: 2
+  entrada_n: 462
+  cita_hechos: 2-3
+  ejemplo: m-a-yauwa-coa-n NA-MAKUA na-man adi = que se sentó sobre CADA UNO de ellos.
+- raiz: isibu
+  concepto_es: CARA, faz, rostro
+  pagina: 17
+  atestaciones: 2
+  entrada_n: 39
+  cita_hechos: 6-15
+  ejemplo: abba engel ISIBU dia t-a a-raiya-ttoa L-ISIBU = como el ROSTRO de un ángel se parecía su ROSTRO
+    .
+- raiz: cuttu
+  concepto_es: COMER
+  pagina: 258
+  atestaciones: 2
+  entrada_n: 587
+  cita_hechos: 10-10
+  ejemplo: kia-ni-benna hamu-sia i , ica L-A-KI-N-HITTI-CU-MA = como sintiera hambre, QUISO COMER . u-ùsa-dù-n
+    n-a-ni-ca LU-CUTTU-NNI-
+- raiz: boa
+  concepto_es: CRIMEN, delito
+  pagina: 26
+  atestaciones: 2
+  entrada_n: 61
+  cita_hechos: 25-5
+  ejemplo: hamma-talli A-BOA-TTU = alguna cosa CRIMINAL . NOMBRES 27
+- raiz: siki
+  concepto_es: DAR
+  pagina: 278
+  atestaciones: 2
+  entrada_n: 642
+  cita_hechos: 2-4
+  ejemplo: ù-sa-tti ù-ya-hù A-SIKI-SIA na-mùn u-lluccu-di-ren = como el Espíritu Santo les DABA.
+- raiz: abbu-mùn
+  concepto_es: DEBAJO (v. Bajo, Abajo )
+  pagina: 507
+  atestaciones: 2
+  entrada_n: 1002
+  cita_hechos: 2-5
+  ejemplo: ca-saccu ABBU-MÙN-tti = que están DEBAJO del cielo .
+- raiz: cuya
+  concepto_es: DEMANDAR
+  pagina: 294
+  atestaciones: 2
+  entrada_n: 650
+  cita_hechos: 9-2
+  ejemplo: LU-CUYA-BA-CA ikisi dia-maru carta = DEMANDÓ (rogó) (pidió ) letras ( cartas ) entonces .
+- raiz: cun-du
+  concepto_es: DESIERTO
+  pagina: 28
+  atestaciones: 2
+  entrada_n: 68
+  cita_hechos: 1-20
+  ejemplo: lù-sikua A-MA-LLUCCU-DU-DA-HÙ-PA = SEA DESIERTA su casa .
+- raiz: haca
+  concepto_es: DESPEDAZAR
+  pagina: 300
+  atestaciones: 2
+  entrada_n: 666
+  cita_hechos: 23-10
+  ejemplo: 'N-A-PAYA-MA-I Paulus = que lo DESPEDAZARAN (mataran) a Pablo. —667. DESPEDIR ; L: dimittere, '
+- raiz: haca
+  concepto_es: DISPUTAR
+  pagina: 303
+  atestaciones: 2
+  entrada_n: 680
+  cita_hechos: 17-2
+  ejemplo: '1-a KÙDDÙKÙSI-N grece-nu judu-nnu u-mùn baddia = DISPUTANDO con los griegos y los judíos.
+    L-A-DIA-CA a-bulli-ta-hù-sia '
+- raiz: malli-cutta
+  concepto_es: DOCTRINA
+  pagina: 38
+  atestaciones: 2
+  entrada_n: 80
+  cita_hechos: 2-42
+  ejemplo: apostel-nu A-HACA-N ame a-sica-wa-coa rubu n-a = ellos perseveraban en la DOCTRINA de los apóstoles
+    .
+- raiz: bulle
+  concepto_es: ECHAR
+  pagina: 306
+  atestaciones: 2
+  entrada_n: 687
+  cita_hechos: 13-50
+  ejemplo: N-A-BULLE-DA na-ccabbu-ra uria-baddia ye = los ECHARON de sus términos .
+- raiz: ella
+  concepto_es: ELLA
+  pagina: 185
+  atestaciones: 2
+  entrada_n: 431
+  cita_hechos: 12-14
+  ejemplo: '-cusi-way ELLA abrió sus ojos . T-a-canna-bùn benna Petrus a-dia-ni-wa = oyendo ELLA la voz
+    de Pedro . TU-dalli-da n-ibiti corrió ELLA a ellos '
+- raiz: tuhu
+  concepto_es: ELLO, LO
+  pagina: 187
+  atestaciones: 2
+  entrada_n: 440
+  cita_hechos: 4-24
+  ejemplo: TUHU diaлu a-canna-bùn n-a-ni-ca = y ellos ha-biéndoLO oído .
+- raiz: ima
+  concepto_es: ENEMIGO
+  pagina: 39
+  atestaciones: 2
+  entrada_n: 84
+  cita_hechos: 2-35
+  ejemplo: CA-IMA-TTI bu-mùn bu-cutti a-habula-wa – = tus ENEMIGOS ( los que te odian ) de estrado de
+    tus
+- raiz: ditti
+  concepto_es: ENTENDER
+  pagina: 313
+  atestaciones: 2
+  entrada_n: 709
+  cita_hechos: 7-25
+  ejemplo: lu-bukei-nu-tti n-a-ni-bia A-DITTI-N = sus hermanos ENTENDÍAN . B-A-DITTA-NU bu-lesi-da-bu-cuiu
+    u-cunna-mùn b
+- raiz: icca
+  concepto_es: ENTONCES
+  pagina: 513
+  atestaciones: 2
+  entrada_n: 1012
+  cita_hechos: 7-1
+  ejemplo: ICCA ipilli-be-ti Priester = ENTONCES el sumo sa-cerdote .
+- raiz: uria
+  concepto_es: ENTRE
+  pagina: 514
+  atestaciones: 2
+  entrada_n: 1013
+  cita_hechos: 1-22
+  ejemplo: wa-URIA = DE ENTRE nosotros .
+- raiz: siki
+  concepto_es: ENTREGAR
+  pagina: 317
+  atestaciones: 2
+  entrada_n: 713
+  cita_hechos: 3-13
+  ejemplo: lu-i ke-wai hu-i A-SIKI-TTI-N Pilatus isibu-monnua i = a él vosotros lo ENTREGASTEIS ante Pilato.
+- raiz: ime
+  concepto_es: ENVIAR
+  pagina: 318
+  atestaciones: 2
+  entrada_n: 714
+  cita_hechos: 3-20
+  ejemplo: lu-i IMME-CU-DU-N benna-i Jesus Christus = EN-VIARÁ [ habiendo enviado ] ? ] a Jesucristo.
+- raiz: nnebe-ttoa
+  concepto_es: ESPARCIR
+  pagina: 324
+  atestaciones: 2
+  entrada_n: 722
+  cita_hechos: 8-1
+  ejemplo: N-A-NNEBE-TTOA na-uri-coa-wa haian Judea u-cun-na-man = FUERON ESPARCIDOS por las tierras de
+    Judea.
+- raiz: iya
+  concepto_es: ESPÍRITU
+  pagina: 40
+  atestaciones: 2
+  entrada_n: 91
+  cita_hechos: 1-2
+  ejemplo: ù-sa-tti U-YA-HU = el ESPIRITU Santo .
+- raiz: mei-cuxu
+  concepto_es: EUNUCO
+  pagina: 43
+  atestaciones: 2
+  entrada_n: 97
+  cita_hechos: 8-27
+  ejemplo: abba MEI-CUXU [-?] = un EUNUCO .
+- raiz: wurebu
+  concepto_es: FORNICAR
+  pagina: 333
+  atestaciones: 2
+  entrada_n: 739
+  cita_hechos: 15-20
+  ejemplo: WUREBU uria ba = y de FORNICACIÓN .
+- raiz: sima-sima
+  concepto_es: GRITAR
+  pagina: 336
+  atestaciones: 2
+  entrada_n: 747
+  cita_hechos: 19-32
+  ejemplo: yu-mùn-ni-ke abba-nu A-SIMA-SIMA-DA tuhu = unos GRITABAN esto . VERBOS, PARTICIPIOS Y VERBALES
+    337 Gritar.
+- raiz: ikitta
+  concepto_es: GUARDAR, (v. Custodiar )
+  pagina: 337
+  atestaciones: 2
+  entrada_n: 748
+  cita_hechos: '-6'
+  ejemplo: abba-nu IKITTA-TI IKITTA-CA kia bahù isibu-mùn ba = algunos GUARDAS GUARDABAN frente a la casa.
+- raiz: hada-cuttu
+  concepto_es: INFORMAR
+  pagina: 359
+  atestaciones: 2
+  entrada_n: 774
+  cita_hechos: 25-26
+  ejemplo: a de esto. tu-makua u-dumma ù-sa-n D-A-HADA-CUTTU-N-BENNA lu-cunna-mùn = por todo lo cual,
+    HECHA por MÍ debida INFORMACIÓN acerca de él.
+- raiz: boa
+  concepto_es: INVOCAR
+  pagina: 361
+  atestaciones: 2
+  entrada_n: 783
+  cita_hechos: 2-21
+  ejemplo: na-makua A-CUYA-BUA-TI A-daiya-hù u-mùn = todo aquel que INVOCARE al Señor.
+- raiz: abbu-coa
+  concepto_es: JUNTAR
+  pagina: 364
+  atestaciones: 2
+  entrada_n: 785
+  cita_hechos: 1-6
+  ejemplo: na-i A-HÙRKE-DA-TI n-abbu-coa-wa Jesus a-mùn = los que se HABÍAN JUNTADO con Jesús .
+- raiz: ellos
+  concepto_es: LES , a ELLOS, ( ms. o cm. ) , ( dativo )
+  pagina: 178
+  atestaciones: 2
+  entrada_n: 428
+  cita_hechos: 4-8
+  ejemplo: ' N-ibiti blo corrió a ELLOS. Petrus ... a-onna-ca N-adia-n todo el pue = entonces Pedro LES
+    contestó a sus palabras ?/'
+- raiz: statuta
+  concepto_es: LEY
+  pagina: 58
+  atestaciones: 2
+  entrada_n: 144
+  cita_hechos: 6-13
+  ejemplo: 'STATUTA ù-ya-luccu = contra la LEY . [ . : L : ]'
+- raiz: mmayu-n-ni-hùa
+  concepto_es: LIBRAR ( v. Libertar, Soltar )
+  pagina: 272
+  atestaciones: 2
+  entrada_n: 794
+  cita_hechos: 7-10
+  ejemplo: LU-PUSI-DA baddia tu-makua l-a-monaica-n uria i = le LIBRÓ de todas sus tribulaciones .
+- raiz: mùn-hitti
+  concepto_es: LIMOSNA
+  pagina: 59
+  atestaciones: 2
+  entrada_n: 147
+  cita_hechos: 9-36
+  ejemplo: -MÙN-HITTI-SIA recibía SU LIMOSNA. t-isiki-n N-A-MÙN-HITTI-SIA u-dumma = por SUS 10
+- raiz: kkürkùa
+  concepto_es: LINAJE ( v. familia, generación, descendencia ; nación )
+  pagina: 59
+  atestaciones: 2
+  entrada_n: 148
+  cita_hechos: 7-13
+  ejemplo: Joseph Ù-KKÙRKÙA = el LINAJE de José.
+- raiz: llamado
+  concepto_es: LLAMAR ( v . Nombrar )
+  pagina: 373
+  atestaciones: 2
+  entrada_n: 797
+  cita_hechos: 4-18
+  ejemplo: mal (nombre o apodo ) Justo. N-A-SIMA-KI-N-BENNA-YE LLAMADO . = HABIÉNDOLOS
+- raiz: ibe
+  concepto_es: LLENAR
+  pagina: 378
+  atestaciones: 2
+  entrada_n: 799
+  cita_hechos: 4-8
+  ejemplo: Petrus IBÉ ù-sa-tti m-a-ribe-n-iti ù-ya-hù abbu = Pedro LLENO del Espíritu Puro y Santo .
+- raiz: cudu-cutta
+  concepto_es: LLEVAR
+  pagina: 378
+  atestaciones: 2
+  entrada_n: 800
+  cita_hechos: 15-10
+  ejemplo: wa-tti-nu-tti, wa-i baddia m-a-mmalli-sia A-NNIKI-N-NI-N = ni nuestros padres ni nosotros lo
+    pudimos LLEVAR.
+- raiz: los
+  concepto_es: LOS, a ELLOS (ms. o cm. ) , (acusativo)
+  pagina: 180
+  atestaciones: 2
+  entrada_n: 429
+  cita_hechos: 4-3
+  ejemplo: n-a-sicaca-tatta-dù-coa-na-ttu bahù u-lluccu-mùn, mauttia ubura-YE = al día siguiente, LOS
+    pu-sieron en la Cárcel.
+- raiz: rule
+  concepto_es: LUZ
+  pagina: 61
+  atestaciones: 2
+  entrada_n: 153
+  cita_hechos: 9-3
+  ejemplo: abba A-RULE-TI = una LUZ.
+- raiz: wacaiya
+  concepto_es: MALDECIR
+  pagina: 380
+  atestaciones: 2
+  entrada_n: 804
+  cita_hechos: 23-4
+  ejemplo: ipilli-be-tti priester u-mùn WACAIYA-TTU A-DIAHÙ baha B-A-SICU-MA ? = al sumo sacerdote MALDICES
+    ?
+- raiz: boa
+  concepto_es: MALO
+  pagina: 117
+  atestaciones: 2
+  entrada_n: 341
+  cita_hechos: 17-5
+  ejemplo: abba-nu M-A-CUBU-RUCCUA-TI = algunos (hombres ) MALOS .
+- raiz: tatta
+  concepto_es: MANDAR ( v. Ordenar, Decir )
+  pagina: 381
+  atestaciones: 2
+  entrada_n: 806
+  cita_hechos: 4-15
+  ejemplo: N-A-PUTTIKI-DI-KITTI-N-BENNA na-nnaca-n-ni-ruccu-waria-ye apostel-nu = MANDARON a los opóstoles
+    que se fueran de entre ellos .
+- raiz: manswa
+  concepto_es: MARAVILLA
+  pagina: 66
+  atestaciones: 2
+  entrada_n: 164
+  cita_hechos: 2-11
+  ejemplo: MANSWA-TTU A-NI-SIA = las MARAVILLAS (hechos maravillosos ) .
+- raiz: manswa
+  concepto_es: MILAGRO (v. maravilla )
+  pagina: 67
+  atestaciones: 2
+  entrada_n: 168
+  cita_hechos: 5-12
+  ejemplo: yuhu-u-kebe MANSWA-TTU a-ni-hù-sia = muchos MILAGROS fueron hechos .
+- raiz: awa
+  concepto_es: MISMO
+  pagina: 118
+  atestaciones: 2
+  entrada_n: 344
+  cita_hechos: 1-11
+  ejemplo: LI-RAHA Jesus = este MISMO Jesús .
+- raiz: hitte
+  concepto_es: MUCHO (MUY )
+  pagina: 322
+  atestaciones: 2
+  entrada_n: 1029
+  cita_hechos: 6-7
+  ejemplo: u-iyuhu HITTE-N = se multiplicaba MUCHO .
+- raiz: wunabu
+  concepto_es: MUNDO, tierra, siglo, humanidad
+  pagina: 70
+  atestaciones: 2
+  entrada_n: 178
+  cita_hechos: 17-24
+  ejemplo: Gott a-malli-ti-ti-cuha-li WUNABU = = Dios hizo el MUNDO.
+- raiz: seme
+  concepto_es: MÁGICO, mago
+  pagina: 62
+  atestaciones: 2
+  entrada_n: 157
+  cita_hechos: 8-9
+  ejemplo: ipil-ti SEME-TTI cubá i = había sido un MÁGICO
+- raiz: kusa
+  concepto_es: NI
+  pagina: 523
+  atestaciones: 2
+  entrada_n: 1031
+  cita_hechos: 2-27
+  ejemplo: M-a-nsi-bu-pa BADDIA = NI permitirás .
+- raiz: maiyana-ttoa
+  concepto_es: NOTORIO (v. conocer, manifestar)
+  pagina: 120
+  atestaciones: 2
+  entrada_n: 347
+  cita_hechos: 4-10
+  ejemplo: kia-hanna A-DITTI-KITTA-HÙ-CA-HÚ = por tanto SEAOS NOTORIO.
+- raiz: nuestros
+  concepto_es: NUESTROS, ( masculino o común)
+  pagina: 147
+  atestaciones: 2
+  entrada_n: 403
+  cita_hechos: 3-13
+  ejemplo: WA-bura-tti U-malli-ta-coa-nti = el Dios de NUES-TROS padres (antepasados ) . WA-bura-tti U-malli-ta-co
+- raiz: emelia
+  concepto_es: NUEVO
+  pagina: 121
+  atestaciones: 2
+  entrada_n: 348
+  cita_hechos: 17-18
+  ejemplo: EMELIA-TTI u-malli-t-a-coa-na-nu-tti = NUEVOS dioses.
+- raiz: kusa
+  concepto_es: O
+  pagina: 526
+  atestaciones: 2
+  entrada_n: 1035
+  cita_hechos: 3-12
+  ejemplo: na-waya ù-tatta-wa u-cunna u-inicu KÙSA u-mùn = por nuestra propia virtud O piedad .
+- raiz: mehli
+  concepto_es: PAN
+  pagina: 77
+  atestaciones: 2
+  entrada_n: 193
+  cita_hechos: 2-42
+  ejemplo: 'n-a-cai-da-bu-n MEHLI = partiendo ellos el PAN [ . : Al : ]'
+- raiz: bbuna
+  concepto_es: PARALÍTICO
+  pagina: 77
+  atestaciones: 2
+  entrada_n: 194
+  cita_hechos: 8-7
+  ejemplo: yuhu-lli M-A-BBUNA = muchos PARALÍTICOS .
+- raiz: cani
+  concepto_es: PARTIR (v. Repartir, Dividir )
+  pagina: null
+  atestaciones: 2
+  entrada_n: 844
+  cita_hechos: 20-7
+  ejemplo: A-CANI-DA-BU-N mehli yaha-maria taha-maria nasikua-mùn = PARTIENDO el pan en una u otra de
+    sus casas . n-abbu-coa-wa mehli A-CA
+- raiz: wùseica-da-hitti
+  concepto_es: PAZ
+  pagina: 78
+  atestaciones: 2
+  entrada_n: 201
+  cita_hechos: 7-26
+  ejemplo: LÙ-WÙSEICA-DA-HITTI-CA ye = los PONÍA en PAZ .
+- raiz: cubu-ruccu-a-monnua
+  concepto_es: PERMITIR
+  pagina: 414
+  atestaciones: 2
+  entrada_n: 854
+  cita_hechos: 21-39
+  ejemplo: uya-ba kia-hanna bu-mùn, bu-sa, B-A-HACACUTTA-LI-TE luccu-nnu u-mùn de = ruégote, vamos , que
+    PERMITAS que yo HABLE al pueblo.
+- raiz: iyumu
+  concepto_es: PERSUADIR
+  pagina: 416
+  atestaciones: 2
+  entrada_n: 858
+  cita_hechos: 13-43
+  ejemplo: A-IYUMU-DA-NI-YE = los PERSUADÍAN .
+- raiz: sica
+  concepto_es: PIADOSO, pío
+  pagina: 123
+  atestaciones: 2
+  entrada_n: 356
+  cita_hechos: 8-2
+  ejemplo: abba-nu A-SICA-TI = algunos (varones PIADOSOS
+- raiz: dinamu-kitta
+  concepto_es: PRESENTAR
+  pagina: 425
+  atestaciones: 2
+  entrada_n: 870
+  cita_hechos: 2-28
+  ejemplo: bù-be-kitti-pa halli-kebbe-hù abbu BU-SIBUA-MON-NUA-DE = me henchirás de gozo con TU PRESENCIA
+    .
+- raiz: ttene-nnua
+  concepto_es: PRIMERO (v. principio, delante, antes )
+  pagina: 124
+  atestaciones: 2
+  entrada_n: 359
+  cita_hechos: 7-12
+  ejemplo: A-TTENÉ-NNUA = PRIMERA VEZ .
+- raiz: huyuru
+  concepto_es: PROVINCIA (v. campo, país, región )
+  pagina: 83
+  atestaciones: 2
+  entrada_n: 221
+  cita_hechos: 13-49
+  ejemplo: tuhu HUYURU u-cunna-man = por toda aquella PROVINCIA.
+- raiz: kia-hann
+  concepto_es: PUES
+  pagina: 532
+  atestaciones: 2
+  entrada_n: 1043
+  cita_hechos: 2-8
+  ejemplo: halli-ca-KEBE-WA wa-i a-canna-bùn .... ? = cómo PUES nosotros oímos ... ?
+- raiz: makua
+  concepto_es: PÚBLICO
+  pagina: 125
+  atestaciones: 2
+  entrada_n: 363
+  cita_hechos: 16-37
+  ejemplo: NA-MAKUA U-MÙ-CANNA = PÚBLICAMENTE .
+- raiz: bbuku
+  concepto_es: RECIBIR
+  pagina: 432
+  atestaciones: 2
+  entrada_n: 886
+  cita_hechos: 1-8
+  ejemplo: hu-i CA-BBU-KU-PA ù-sa-tti ù-ya-hù ù-tatta-hù ucunna = RECIBIRÉIS el Espíritu Santo . VERBOS,
+    PARTICIPIOS Y VERBALES 433 Reci
+- raiz: onna
+  concepto_es: RESPONDER
+  pagina: 438
+  atestaciones: 2
+  entrada_n: 904
+  cita_hechos: 3-12
+  ejemplo: 'hiddia re l-a A-ONNA-CA n-a-dia-n = así RESPON-DIÓ a lo que decían : Petrus Johannes mutti
+    A-ONNA-BA-CA-N '
+- raiz: isibu
+  concepto_es: ROSTRO (v . cara, faz ; delante, puerta )
+  pagina: 88
+  atestaciones: 2
+  entrada_n: 234
+  cita_hechos: 6-15
+  ejemplo: abba engel ISIBU dia t-a a-raiya-ttoa L-ISIBU = vieron SU ROSTRO como el ROSTRO de un ángel.
+- raiz: lluccu-waria
+  concepto_es: SACAR
+  pagina: 446
+  atestaciones: 2
+  entrada_n: 914
+  cita_hechos: 5-9
+  ejemplo: N-ANNIKI-N-TI-BU YAHA-RIA = TE SACARÁN de aquí.
+- raiz: sura
+  concepto_es: SALA
+  pagina: 82
+  atestaciones: 2
+  entrada_n: 238
+  cita_hechos: 9-37
+  ejemplo: n-a-sica SURA u-banna-n = pusieron en una SALA. ( la) .
+- raiz: ttenna
+  concepto_es: SANGRE
+  pagina: 82
+  atestaciones: 2
+  entrada_n: 240
+  cita_hechos: 2-19
+  ejemplo: U-TTENNA-HÙ hikki-hi cu , cullehe-lli baddia = SANGRE y fuego y también vapor de humo .
+- raiz: bulita
+  concepto_es: SCRIBIR
+  pagina: 321
+  atestaciones: 2
+  entrada_n: 718
+  cita_hechos: 1-20
+  ejemplo: David A-BULITI-SIA cuba wakilli tu-bura-mùn lucarta-n-Psalmu u-banna = hace tiempo que sobre
+    esto fué ESCRITO por David en el libro de los Sa
+- raiz: dikki
+  concepto_es: SEMBRAR (v. Semilla, Simiente, Grano )
+  pagina: 454
+  atestaciones: 2
+  entrada_n: 925
+  cita_hechos: 3-25
+  ejemplo: bu-i Ù-KKÜRKÙA uria = de tu SIMIENTE (raza, pueblo) .
+- raiz: balti
+  concepto_es: SENTARSE
+  pagina: 454
+  atestaciones: 2
+  entrada_n: 926
+  cita_hechos: 2-2
+  ejemplo: N-A-BALTI-N = ESTABAN SENTADOS .
+- raiz: señal
+  concepto_es: SEÑALAR
+  pagina: 455
+  atestaciones: 2
+  entrada_n: 927
+  cita_hechos: 1-23
+  ejemplo: icca N-A-DINAMU-KITTA ye biama-nnu na-mùcanna = y SEÑALARON a dos de entre ellos.
+- raiz: rubu-ùn
+  concepto_es: SINO
+  pagina: 535
+  atestaciones: 2
+  entrada_n: 1051
+  cita_hechos: 10-41
+  ejemplo: CANN wa-i ... u-mùn RUBU-ÙN = SINO a nosotros .
+- raiz: nda
+  concepto_es: SOBREVENIR
+  pagina: 464
+  atestaciones: 2
+  entrada_n: 934
+  cita_hechos: 4-1
+  ejemplo: kerki ipil-ti a-daiya-hùn, saduceer-nu mutti A-NDA n-ibiti = SOBREVINIERON (vinieron ) a ellos
+    el
+- raiz: ipilli
+  concepto_es: SUMO
+  pagina: 128
+  atestaciones: 2
+  entrada_n: 375
+  cita_hechos: 23-4
+  ejemplo: IPILLI-BE-TTI priester = SUMO sacerdote.
+- raiz: saturdaca
+  concepto_es: SÁBADO
+  pagina: 82
+  atestaciones: 2
+  entrada_n: 236
+  cita_hechos: 13-14
+  ejemplo: 'SATURDACA u-cunna = en un SÁBADO . [ . : Al : ]'
+- raiz: ehé
+  concepto_es: SÍ, ( adv. )
+  pagina: 534
+  atestaciones: 2
+  entrada_n: 1047
+  cita_hechos: 5-8
+  ejemplo: EHÉ, tikin = SÍ, en tanto .
+- raiz: onna
+  concepto_es: TOMAR (v. Asir, Mano )
+  pagina: 470
+  atestaciones: 2
+  entrada_n: 948
+  cita_hechos: 5-6
+  ejemplo: abba-nu A-NNICA-N 1-ipitu bahù u-lluccu-waria = TOMARON algunos su cuerpo de dentro la casa
+    .
+- raiz: abbu-coa
+  concepto_es: UNÁNIME
+  pagina: 130
+  atestaciones: 2
+  entrada_n: 382
+  cita_hechos: 1-14
+  ejemplo: N-ABBU-COA-WA = UNÁNIMES .
+- raiz: iyaon
+  concepto_es: UZGAR
+  pagina: 367
+  atestaciones: 2
+  entrada_n: 788
+  cita_hechos: 3-13
+  ejemplo: lihi a-pusi-da-HITTI-CA balli-ni = JUZGANDO él que había de ser suelto .
+- raiz: wadu-lli
+  concepto_es: VIENTO
+  pagina: 102
+  atestaciones: 2
+  entrada_n: 287
+  cita_hechos: 2-2
+  ejemplo: ca-ima-ttu A-WADU-LLI = un VIENTO recio.
+- raiz: tatta
+  concepto_es: VIRTUD, fuerza, poder
+  pagina: 102
+  atestaciones: 2
+  entrada_n: 288
+  cita_hechos: 1-8
+  ejemplo: ù-sa-tti ù-ya-hù Ù-TATTA-HÙ = la VIRTUD del Espíritu Santo.
+- raiz: vosotros
+  concepto_es: VOSOTROS, VOSOTRAS, (varios casos )
+  pagina: 165
+  atestaciones: 2
+  entrada_n: 417
+  cita_hechos: 1-8
+  ejemplo: a-nditti-pa HU-cunna-mùn = vendrá sobre VOS-OTROS .
+- raiz: tatta
+  concepto_es: VOTO, promesa
+  pagina: 104
+  atestaciones: 2
+  entrada_n: 292
+  cita_hechos: 21-23
+  ejemplo: TATTA-TU A-DIA-HÙ = VOTO ( palabra reforzada) .
+- raiz: dia
+  concepto_es: VOZ (v. hablar, decir, oír )
+  pagina: 104
+  atestaciones: 2
+  entrada_n: 293
+  cita_hechos: 7-31
+  ejemplo: Jehowah A-DIA-HỦ a-sica-hù-sia lu-mùn = fué echa a él la VOZ de Jehová.
+- raiz: cubu-ruccu
+  concepto_es: ÁNIMO, (v. mente, pensamiento )
+  pagina: 10
+  atestaciones: 2
+  entrada_n: 15
+  cita_hechos: 14-22
+  ejemplo: n-a-tatta-doa n-a-malli-cutta-sia-nnu U-CCUBURUCCU-WA = fortalecieron los ÁNIMOS de sus
+- raiz: malli-t-a-coa
+  concepto_es: ÍDOLO
+  pagina: 54
+  atestaciones: 2
+  entrada_n: 130
+  cita_hechos: 21-25
+  ejemplo: mulli-ca-di-tti U-MALLI-T-A-COA-NA-NU-TTI- = los ÍDOLOS (dioses embusteros ) .
+nuevas_con_una_atestacion:
+- raiz: boa-hù-dda
+  concepto_es: '- ASOLAR'
+  pagina: 244
+  atestaciones: 1
+  entrada_n: 546
+  cita_hechos: 8-3
+  ejemplo: A-BOA-HÙ-DDA A-ÙBU-CUTTU-N diaлu Gott ca-nsi-sia-nnu na u-re-coa-wa-ye = entonces Saulo ASOLABA
+    la iglesia.
+- raiz: bele
+  concepto_es: '- COJO'
+  pagina: 23
+  atestaciones: 1
+  entrada_n: 54
+  cita_hechos: 3-2
+  ejemplo: abba wadili BELE-TI = cierto varón COJO.
+- raiz: iyuhu
+  concepto_es: '- CONJURAR'
+  pagina: 264
+  atestaciones: 1
+  entrada_n: 610
+  cita_hechos: 23-13
+  ejemplo: N-A-IYUHU N-ABBU-COA-WA Paulus ù-ya-luccu = SE CONJURARON contra Pablo.
+- raiz: priester
+  concepto_es: '- SACERDOTE'
+  pagina: 82
+  atestaciones: 1
+  entrada_n: 237
+  cita_hechos: '-6'
+  ejemplo: ipil-ti PRIESTER-NU = el príncipe de los SACERDOTES . etc. , etc.
+- raiz: ti-biama-tte-du-nnua
+  concepto_es: = = SEGUNDO (v. dos, seguir )
+  pagina: 126
+  atestaciones: 1
+  entrada_n: 369
+  cita_hechos: 7-12
+  ejemplo: TI-BIAMA-TTE-DU-NNUA = en la SEGUNDA vez .
+- raiz: hitti-i
+  concepto_es: = CREER
+  pagina: 273
+  atestaciones: 1
+  entrada_n: 634
+  cita_hechos: 2-44
+  ejemplo: na-makua N-A-HITTI-I = todos los CREYENTES.
+- raiz: hallira
+  concepto_es: = VASO
+  pagina: 101
+  atestaciones: 1
+  entrada_n: 280
+  cita_hechos: 10-11
+  ejemplo: ipiu-tu HALLIRA-RU a-ttucu-du-n = un gran VASO descendía.
+- raiz: ttucu
+  concepto_es: ABAJO (v . Bajo )
+  pagina: 491
+  atestaciones: 1
+  entrada_n: 975
+  cita_hechos: 11-5
+  ejemplo: A-TTUCU-DA-HÙ-N ca-saccu-waria = ABAJADO del cielo .
+- raiz: buya
+  concepto_es: ABASTECER
+  pagina: null
+  atestaciones: 1
+  entrada_n: 470
+  cita_hechos: 12-20
+  ejemplo: na-huuru-cunna-na A-BUYA-CUBA hinna coning u-huuru-waria u-cunna-ria = los campesinos ERAN
+    ABASTECIDOS por los campos del rey.-
+- raiz: nneca
+  concepto_es: ABRAZAR
+  pagina: null
+  atestaciones: 1
+  entrada_n: 472
+  cita_hechos: 21-6
+  ejemplo: 'L-A-NNECA-CA hiddia-muttu l-a-dia-n abbu l-uma = -ABRAZÁNDOLE dijo : W-A-HA-CUBA-NI-NENNA
+    wa-mùn-ni-coa-wa = ABRAZÁNDON'
+- raiz: ùbu-nnua-kebe-cu-pa
+  concepto_es: ABSTENERSE
+  pagina: 221
+  atestaciones: 1
+  entrada_n: 474
+  cita_hechos: 21-25
+  ejemplo: ' aconsejaremos : que OS ABSTENGÁIS de tikin A-UBU-NNUA-KEBE n-a-ni-bia = solamente que SE
+    ABSTENGAN .'
+- raiz: uttoa
+  concepto_es: ACCEDER
+  pagina: 222
+  atestaciones: 1
+  entrada_n: 477
+  cita_hechos: 18-20
+  ejemplo: LU-UTTOA cuлu = ÉL no ACCEDIÓ .
+- raiz: ttica-ha-nhitti
+  concepto_es: ACECHAR, ( v. asechar )
+  pagina: 222
+  atestaciones: 1
+  entrada_n: 478
+  cita_hechos: 23-21
+  ejemplo: biama luccu adi-ti yuhu-n wadili-nu A-TTICA-HA-NHITTI-CA i = más de cuarenta hombres reunidos
+    le ACECHAN (vigilan ) .
+- raiz: iyauna
+  concepto_es: ACEPTAR
+  pagina: 222
+  atestaciones: 1
+  entrada_n: 479
+  cita_hechos: 10-34
+  ejemplo: Gott a-cusi u-mù-canna na-makua luccu-hu hùùkù-ré CA-IYAUNA-N = a los ojos de Dios no se hace
+    ACEPCIÓN (aprecio ) de persona.
+- raiz: cunna-mùn
+  concepto_es: ACERCA
+  pagina: 492
+  atestaciones: 1
+  entrada_n: 977
+  cita_hechos: 4-9
+  ejemplo: ù-ùsa-dù-kittoa U-CUNNA-MÙN = ACERCA del beneficio .
+- raiz: acontecido
+  concepto_es: ACONTECER
+  pagina: 224
+  atestaciones: 1
+  entrada_n: 484
+  cita_hechos: 7-40
+  ejemplo: Moses ke-wai u-mùn A-NI-HU-CA baha ? = al tal
+- raiz: ikisi
+  concepto_es: ACORDAR
+  pagina: 224
+  atestaciones: 1
+  entrada_n: 485
+  cita_hechos: 21-25
+  ejemplo: wa-i W-IKISI-TU wa-waya a-bulli-t-a-cuba = HE-MOS ACORDADO escribir.
+- raiz: cubu-ruccu-a-ttoa
+  concepto_es: ACORDARSE
+  pagina: 224
+  atestaciones: 1
+  entrada_n: 486
+  cita_hechos: 11-16
+  ejemplo: eben D-A-CUBU-RUCCU-A-TTOA-CA hiddiamuttu A-daiya-hù a-dia-sia-cuba-ru = entonces ME ACORDÉ
+    del dicho del Señor. VERBOS, PARTICIPIOS Y VERBALES
+- raiz: dalli-da-te
+  concepto_es: ACUDIR
+  pagina: 225
+  atestaciones: 1
+  entrada_n: 488
+  cita_hechos: 8-30
+  ejemplo: Philippus A-DALLI-DA-TE t-ibiti = ACUDIENDO Felipe allí.
+- raiz: disa
+  concepto_es: ACUSAR
+  pagina: 225
+  atestaciones: 1
+  entrada_n: 489
+  cita_hechos: 22-30
+  ejemplo: i-ca , hamma kebé u-dumma judu-nnu A-DISA-CA-N lù-ya-luccu u-cunna-mùn = que-riendo saber la
+    causa por qué le ACUSABAN los judíos . 226 Arw ) A
+- raiz: yumu-yumu
+  concepto_es: ADIVINAR
+  pagina: 227
+  atestaciones: 1
+  entrada_n: 490
+  cita_hechos: 16-16
+  ejemplo: tu-i-YUMU-YUMU--DA-RU m-a-ni-ki-coa-muttu tu-· bura-mùn = la cual PROFETIZABA.
+- raiz: ditti
+  concepto_es: AFIRMAR
+  pagina: 227
+  atestaciones: 1
+  entrada_n: 493
+  cita_hechos: 9-22
+  ejemplo: L-A-DITTI-KITTI-N lu-i Jesus Christus 1-ikinni-ca-n = AFIRMANDO que éste era Jesucristo .
+- raiz: tatta
+  concepto_es: AFIRMAR, ( dar firmeza )
+  pagina: 228
+  atestaciones: 1
+  entrada_n: 494
+  cita_hechos: 3-7
+  ejemplo: utta hidda-i, ni-keben lu-cutti-wa, lu-cuлu cu TATTA-BU-DDI-CA hidda-n = le levantó, y sus
+    pies y tobillos FUERON AFIRMADOS .
+- raiz: iyula
+  concepto_es: AFRENTAR
+  pagina: 228
+  atestaciones: 1
+  entrada_n: 496
+  cita_hechos: 14-5
+  ejemplo: N-A-IYULA-TTU-TI-YE apostel-nu ansi = para AFRENTARLOS a los apóstoles.
+- raiz: uma-ttoa
+  concepto_es: AGOLPARSE
+  pagina: 228
+  atestaciones: 1
+  entrada_n: 497
+  cita_hechos: 16-22
+  ejemplo: a-hùrkù-da-ti u-iyuhu A-UMA-TTOA-BU hinna hùrkù-ren na-mùn = reuniéndose en gran número SE
+    AGOLPARON contra ellos .
+- raiz: agrada
+  concepto_es: AGRADAR
+  pagina: 228
+  atestaciones: 1
+  entrada_n: 498
+  cita_hechos: 12-3
+  ejemplo: os que lo creen, Dios a-ddiki-n l-a-ni-ca judu-nnu HABBUBIRI-T-A-LI-SI = viendo que HABÍA AGRADADO
+    a los judíos . VERBOS, PARTICIPIOS Y VERBALE
+- raiz: wacanu
+  concepto_es: AHORA
+  pagina: 492
+  atestaciones: 1
+  entrada_n: 978
+  cita_hechos: 18-6
+  ejemplo: itta-bu-te AHORA entiendo . DANNU-HU n-a-putti-ki-da-hitti-cu-ma ... u = AHORA nos echan. DANNU-HU-waria
+    = desde AHORA. 26
+- raiz: iyu-muniri
+  concepto_es: AIRE
+  pagina: null
+  atestaciones: 1
+  entrada_n: 5
+  cita_hechos: 22-23
+  ejemplo: 'a-paddu-cuttu-n tù-ca-tulle-hù A-IYU-MUNIRI = echando polvo al AIRE . 8 Arw) ARAWAK 2 : Fraseario'
+- raiz: palettiyu
+  concepto_es: AJENO
+  pagina: null
+  atestaciones: 1
+  entrada_n: 298
+  cita_hechos: 7-6
+  ejemplo: abba huuru-mùn PALETTIYU a-mùn = en una tierra AJENA (de bárbaros ) .
+- raiz: sima
+  concepto_es: ALARIDOS (Dar
+  pagina: 230
+  atestaciones: 1
+  entrada_n: 504
+  cita_hechos: 19-28
+  ejemplo: 'A-SIMA-CA-N, a-dia-n baddia hiddi-n = DIERON ALARIDO, diciendo :'
+- raiz: wulisebeyu
+  concepto_es: ALBA
+  pagina: 8
+  atestaciones: 1
+  entrada_n: 7
+  cita_hechos: 20-11
+  ejemplo: WULISEBEYU ibiti = hasta el ALBA.
+- raiz: halli-kebbe
+  concepto_es: ALEGRAR
+  pagina: 231
+  atestaciones: 1
+  entrada_n: 509
+  cita_hechos: 2-26
+  ejemplo: da-llua HALLI-KEBBE = mi corazón SE ALEGRÓ .
+- raiz: sana
+  concepto_es: ALGUACIL
+  pagina: 8
+  atestaciones: 1
+  entrada_n: 8
+  cita_hechos: 16-35
+  ejemplo: capitai-nu immecu-da-ye NA-SANA-NU-TTI = los magistrados enviaron a SUS ALGUACILES .
+- raiz: bulle
+  concepto_es: ALIJAR
+  pagina: 231
+  atestaciones: 1
+  entrada_n: 511
+  cita_hechos: 27-18
+  ejemplo: ia-ni-benna mayu u-lluccuwaria TANNAGANA u-cunna-ttu , bara iraccu-mùn = al día siguiente ALIJARON
+    la nave (tirando la carga al fondo del mar )
+- raiz: bulle
+  concepto_es: ALIVIAR
+  pagina: 232
+  atestaciones: 1
+  entrada_n: 513
+  cita_hechos: 27-38
+  ejemplo: N-A-BULLE-DA meyu u-lluccu-waria A-ICAR mehli iwi bara iraccu-mùn = ALIVIABAN la nave ECHANDO
+    de ella la CARGA de trigo al fondo del mar.
+- raiz: taha-maria
+  concepto_es: ALLÁ
+  pagina: 493
+  atestaciones: 1
+  entrada_n: 979
+  cita_hechos: 7-43
+  ejemplo: taha-wai Babylonia u-hururu TAHA-MARIA = (allá lejos ) , MÁS ALLÁ del territorio de Babilonia.
+- raiz: ti-kira
+  concepto_es: ALREDEDOR
+  pagina: 493
+  atestaciones: 1
+  entrada_n: 978
+  cita_hechos: 14-6
+  ejemplo: TI-KIRA-DDI MARIA ba = y por todo ALREDEDOR.
+- raiz: ipilli
+  concepto_es: ALTO
+  pagina: null
+  atestaciones: 1
+  entrada_n: 299
+  cita_hechos: 7-48
+  ejemplo: ADI-TI-KILL = = el ALTÍSIMO .
+- raiz: nsi
+  concepto_es: AMAR
+  pagina: 232
+  atestaciones: 1
+  entrada_n: 515
+  cita_hechos: 15-25
+  ejemplo: a-cu-nti-bia W-A-NSI-SIA-NNU Barnabas Paulus mutti una h-ibiti = y enviarlos os juntos con
+    nuestros AMADOS Bernabas y Pablo.
+- raiz: tatta
+  concepto_es: AMENAZAR
+  pagina: 232
+  atestaciones: 1
+  entrada_n: 516
+  cita_hechos: 9-1
+  ejemplo: Saulus A-IMA-IMA-HA-COA-RÉ l-ani-ca = Pablo (respirando ) AMENAZAS . VERBOS, PARTICIPIOS Y
+    VERBALES 233
+- raiz: nsi
+  concepto_es: AMIGO
+  pagina: 8
+  atestaciones: 1
+  entrada_n: 10
+  cita_hechos: 19-31
+  ejemplo: abba-nu CA-NSI-TTI = algunos AMIGOS .
+- raiz: daiyana
+  concepto_es: AMO
+  pagina: 8
+  atestaciones: 1
+  entrada_n: 11
+  cita_hechos: 12-3
+  ejemplo: 'M-A-BURAHADIKI-TTU mehli abbu = con pan ACIMO ( sin levadura ) . AGUA ; L : aqua, P : agua,
+    F : eau, I'
+- raiz: iyumuda
+  concepto_es: AMONESTAR
+  pagina: 233
+  atestaciones: 1
+  entrada_n: 517
+  ejemplo: i-ca-kebé d-a cubá kùddù-kùsu-ni-n A-IYUMUDA-N ..... h-uma-mutti u-mùn = como con lágrimas
+    HE AMONESTADO a cada uno de vosotros.
+- raiz: iyaha-ddù
+  concepto_es: ANDAR, CAMINAR, IR
+  pagina: 233
+  atestaciones: 1
+  entrada_n: 518
+  cita_hechos: 3-6
+  ejemplo: bu-usu-pa A-IYAHA-DDÙ-N ! = levántate y ANDA !
+- raiz: illikin
+  concepto_es: ANIMAL (v. bestia )
+  pagina: 10
+  atestaciones: 1
+  entrada_n: 14
+  cita_hechos: 10-12
+  ejemplo: tu-makua bibiti ca-cutti-tu wunabu u-banna-ttu ILLIKIN = todos los ANIMALES de cuatro patas
+    de la tierra.
+- raiz: bbura
+  concepto_es: ANTE ( Delante )
+  pagina: 495
+  atestaciones: 1
+  entrada_n: 981
+  cita_hechos: 7-40
+  ejemplo: n-a-cunnu-n-ti wa-BBURA-HÙ = que vayan DE-. LANTE de nosotros .
+- raiz: dina
+  concepto_es: ANTE ( v. Presentar, Aparecer )
+  pagina: 495
+  atestaciones: 1
+  entrada_n: 980
+  cita_hechos: 25-10
+  ejemplo: D-A-DINA-MA-BU ... a-dia-coa-na a-habula a-MÙN = estoy ANTE el tribunal.
+- raiz: buyoa
+  concepto_es: ANTENER
+  pagina: 383
+  atestaciones: 1
+  entrada_n: 808
+  cita_hechos: 14-17
+  ejemplo: l-a-cubá baddia ebe-kitti-n-ni-u wa-llua A-BUYOA-HÙ abbu = hinchiendo nuestro corazón de MANTENIMIENTO
+    .
+- raiz: apaciguaron
+  concepto_es: APACIGUAR
+  pagina: 236
+  atestaciones: 1
+  entrada_n: 522
+  cita_hechos: 19-35
+  ejemplo: ' ofrecerles sacrificios . fiscal A-ÙBU-CUTTU-N l-a-ni-benna tu-uria ye = el fiscal HABIÉNDOlos
+    APACIGUADO .'
+- raiz: alinua
+  concepto_es: APAREJAR
+  pagina: 237
+  atestaciones: 1
+  entrada_n: 524
+  cita_hechos: 27-19
+  ejemplo: wa-cabbu-wa abbu w-a-bulle-da mevu u-lluccu-waria T-ALINUA = con nuestras manos arrojamos de
+    la nave SUS APAREJOS .
+- raiz: mulli
+  concepto_es: APARENTAR
+  pagina: 237
+  atestaciones: 1
+  entrada_n: 525
+  cita_hechos: 27-30
+  ejemplo: t-isi-ruccu-waria wattuba-ddù-pa-n anker--na MULLI-CA-HU abbu = APARENTANDO (con mentira) que
+    querían echar el ancla desde proa. 238 A
+- raiz: monnua
+  concepto_es: APARTE
+  pagina: 496
+  atestaciones: 1
+  entrada_n: 983
+  cita_hechos: 23-19
+  ejemplo: l-acu-doa abba TU-MONNUA-TTU ù-ttaca a u-lluccu l-uma = retirándose APARTE con él en un cobertizo
+    .
+- raiz: sicu-nnua
+  concepto_es: APELAR
+  pagina: 238
+  atestaciones: 1
+  entrada_n: 527
+  cita_hechos: 25-11
+  ejemplo: A-SICU-NNUA kebé d-a-ppa Kaiser isibu-mùn-ni-de = APELÓ ante el César. VERBOS. PARTICIPIOS
+    Y VERBALES 239 Apelar-12 Kais
+- raiz: sula-bandi
+  concepto_es: APOSENTAR
+  pagina: 239
+  atestaciones: 1
+  entrada_n: 529
+  cita_hechos: 20-8
+  ejemplo: abbu a-callime-tta-hù-sia-cubá SULA-BANDI-TTU-CUчU n-a-hùrke-da-coa-na = con muchas lámparas
+    se alumbraba el APOSENTO alto donde se reunían.
+- raiz: sura-bandi
+  concepto_es: APOSENTO, ( v. posar)
+  pagina: 11
+  atestaciones: 1
+  entrada_n: 17
+  cita_hechos: 20-8
+  ejemplo: a-callimetta-hu-sia-cubá SULA-BANDI-TTU-CU = alumbraban el APOSENTO ALTO . [ ??? ] .
+- raiz: nda-hitti
+  concepto_es: APRESURAR
+  pagina: 240
+  atestaciones: 1
+  entrada_n: 531
+  cita_hechos: 20-16
+  ejemplo: L-A-NDA-HITTI-CA Pinsk daca u-cunna Jerusalem muniru hinna = SE APRESURABA (para hacer ) la
+    fiesta de Pentecostés en Jerusalem .
+- raiz: tatta
+  concepto_es: APRETAR
+  pagina: 240
+  atestaciones: 1
+  entrada_n: 532
+  cita_hechos: 16-24
+  ejemplo: LU-TATTA-DA ipiau-tu adda u-cunna na-cutti-wa-ba = les APRETÓ ( ató) los pies en el cepo (
+    madero) .
+- raiz: ùsa-hua
+  concepto_es: APROVECHAR
+  pagina: 240
+  atestaciones: 1
+  entrada_n: 534
+  cita_hechos: 18-27
+  ejemplo: a-buru-wa-ttù-nni-ye a-sica-ti W-amalli-t-a-coa-nti ame lu-gnaden abbu = APROVECHÓ a los que
+    habían creído en Dios , por su gracia.
+- raiz: wadi-kebe-muttu
+  concepto_es: ARENGAR
+  pagina: 240
+  atestaciones: 1
+  entrada_n: 535
+  ejemplo: 'uer, I : to harangue. l-a-haca-ca abba WADI-KEBE-MUTTU A-DIA-HÙ na-mùn = les habló con una
+    ARENGA.'
+- raiz: hittaua
+  concepto_es: ARGÜIR
+  pagina: 240
+  atestaciones: 1
+  entrada_n: 536
+  cita_hechos: 19-40
+  ejemplo: I-HITTAUA-HU-NNI-CA kia dannubu a-ni-hù-sia udumma u = que por ello SEAMOS ARGÜÍDOS de sedición
+    . VERBOS, PARTICIPIOS Y VERBA
+- raiz: cutta
+  concepto_es: ARREBATAR
+  pagina: 241
+  atestaciones: 1
+  entrada_n: 537
+  cita_hechos: 6-12
+  ejemplo: n-a-usa l-ibiti , N-A-BU-CUTTA i = arremetiendo , le ARREBATARON .
+- raiz: usa
+  concepto_es: ARREMETER
+  pagina: 241
+  atestaciones: 1
+  entrada_n: 538
+  cita_hechos: 6-12
+  ejemplo: N-A-USA 1-ibiti = ARREMETIÉNDO-le.
+- raiz: iyu-mun
+  concepto_es: ARRIBA
+  pagina: 496
+  atestaciones: 1
+  entrada_n: 985
+  cita_hechos: 2-19
+  ejemplo: A-IYU-MUN ca-saccu u-banna = ARRIBA en el cielo. ADVERBIOS, PREPOSICIONES Y CONJUNCIONES 497
+- raiz: nda-bu-te
+  concepto_es: ARRIBAR
+  pagina: 242
+  atestaciones: 1
+  entrada_n: 540
+  cita_hechos: 13-13
+  ejemplo: N-A-NDA-BU-TE hidda Pamphilia cundu-ttu stadt-t-iri Perge-mùn = ARRIBARON (vinieron ) a una
+    ciudad de Panfilia, su nombre Perge.
+- raiz: ani-hitti
+  concepto_es: ASECHAR, (v. acechar )
+  pagina: 242
+  atestaciones: 1
+  entrada_n: 542
+  cita_hechos: 9-24
+  ejemplo: Saulus u-mùn ca-maiyana hidda-n yidia-muttu N-ANI-HITTI-SIA lu-mùn = a Pablo le eran conocidas
+    las ASECHANZAS de ellos . VERBOS, PARTICIPIO
+- raiz: yauwa-coa
+  concepto_es: ASENTAR
+  pagina: 243
+  atestaciones: 1
+  entrada_n: 543
+  cita_hechos: 2-3
+  ejemplo: MA-YAUWA-COA-N na-makua na-man adi = que SE ASENTÓ sobre cada uno de ellos .
+- raiz: sica
+  concepto_es: ASENTIR
+  pagina: 243
+  atestaciones: 1
+  entrada_n: 544
+  cita_hechos: 28-24
+  ejemplo: ' A-SICA-CA hidda l-a-dia-sia-bi-ru algunos ASENTÍAN a lo que se decía. = '
+- raiz: baddia
+  concepto_es: ASIMISMO
+  pagina: 498
+  atestaciones: 1
+  entrada_n: 988
+  cita_hechos: 11-30
+  ejemplo: idia re n-a-ni-sia-cubá BADDIA = lo cual ASI
+- raiz: tatta-dù-nti
+  concepto_es: ASISTIR
+  pagina: 243
+  atestaciones: 1
+  entrada_n: 545
+  cita_hechos: 27-3
+  ejemplo: 'LU-TATTA-DÙ-NTI la-nsi-wa-na-mùn = para que fuera de ellos FUERA ASISTIDO . 23 244 Arw) ARAWAK
+    2 : Frasea'
+- raiz: nni
+  concepto_es: ATAR
+  pagina: 244
+  atestaciones: 1
+  entrada_n: 548
+  cita_hechos: 21-11
+  ejemplo: L-A-KKÙµÙ-NNI-BENNA l-oaya lu-ccabu-wa lu-cutti cu t-abbu = ATÁNDO-SE con él sus manos y pies
+    . yidia-kebé n-a-ppa judu-nnu A-KKÙR
+- raiz: pahia
+  concepto_es: ATONTAR
+  pagina: 245
+  atestaciones: 1
+  entrada_n: 550
+  cita_hechos: 2-7
+  ejemplo: na-makua a-bucoa ù-ya, PAHIA = todos asombrados y ATÓNITOS . etc., etc., id.
+- raiz: iyulatta
+  concepto_es: ATORMENTAR
+  pagina: 245
+  atestaciones: 1
+  entrada_n: 551
+  cita_hechos: 5-16
+  ejemplo: A-IYULATTA-HÙ-SIA-NNU yawa-hù u-mùn = a los
+- raiz: yaha-i-yaha-ddu
+  concepto_es: ATRAVESAR
+  pagina: 246
+  atestaciones: 1
+  entrada_n: 552
+  cita_hechos: 13-6
+  ejemplo: NA-I-YAHA-I-YAHA-DDU-N benna kia cairi u-bandi = y HABIENDO ELLOS ATRAVESADO la isla.
+- raiz: iyuhu
+  concepto_es: AUMENTAR
+  pagina: 246
+  atestaciones: 1
+  entrada_n: 553
+  cita_hechos: 16-5
+  ejemplo: hitte-kebé t-a CA-IYUHU-N ba = = (las iglesias ) ERAN muy aumentadas .
+- raiz: usa
+  concepto_es: AUSTRO, ( Viento del Sur )
+  pagina: 12
+  atestaciones: 1
+  entrada_n: 19
+  cita_hechos: 27-13
+  ejemplo: awadu-lli USA [ ? ] t-a-ni-ca = soplando el AUSTRO .
+- raiz: maiyana
+  concepto_es: AVISAR
+  pagina: 246
+  atestaciones: 1
+  entrada_n: 555
+  cita_hechos: 22-26
+  ejemplo: dda-n-fué dado AVISO al jefe de los soldados . A-MAIYANA-TTOA-N lu-mùn = le dió AVISO.
+- raiz: raiya
+  concepto_es: AVISTAR
+  pagina: 247
+  atestaciones: 1
+  entrada_n: 556
+  cita_hechos: 21-3
+  ejemplo: Cypern ù-llebu CA-RAIYA-NI-BENNA wa-mùn = cuando AVISTAMOS (nos fueron visibles ) las costas
+    de Cipre.
+- raiz: miaca
+  concepto_es: AYER
+  pagina: 499
+  atestaciones: 1
+  entrada_n: 990
+  cita_hechos: 7-28
+  ejemplo: MIACA bu-paiù-n-bu-nna-li egypten-cun-di din = como mataste AYER al egipcio.
+- raiz: buruwa-tta-te
+  concepto_es: AYUDAR
+  pagina: 247
+  atestaciones: 1
+  entrada_n: 557
+  cita_hechos: 16-9
+  ejemplo: BU-BURUWA-TTA-TE u = AYÚDA-nos .
+- raiz: macoalite-di-kitta
+  concepto_es: AZOTAR
+  pagina: 247
+  atestaciones: 1
+  entrada_n: 559
+  cita_hechos: 16-22
+  ejemplo: N-A-MACOALITE-DI-KITTA-YE = LOS MANDARON AZOTAR CON VARAS . mansawa-kebé N-A-MACOALITE-DÙ-NNI-YE
+    a
+- raiz: sura
+  concepto_es: AZOTEA
+  pagina: 12
+  atestaciones: 1
+  entrada_n: 21
+  cita_hechos: 10-9
+  ejemplo: Petrus a-muda SURA U-BANNA a-cuya-bua-hu ibiti = Pedro subió a la AZOTEA a orar .
+- raiz: rucu-du-cutta-i
+  concepto_es: BAJAR
+  pagina: 248
+  atestaciones: 1
+  entrada_n: 560
+  ejemplo: 'r, F : descendre, I : to go down. N-A-WA-RUCU-DU-CUTTA-I abba tau abbu = = LO BAJARON con
+    una soga.'
+- raiz: abbu-mùn
+  concepto_es: BAJO
+  pagina: 499
+  atestaciones: 1
+  entrada_n: 991
+  cita_hechos: 2-5
+  ejemplo: ca-saccu ABBU-MÙN-TI = BAJO ( debajo ) el cielo.
+- raiz: meyu
+  concepto_es: BARCO, buque, nave, navío
+  pagina: 12
+  atestaciones: 1
+  entrada_n: 22
+  cita_hechos: 20-13
+  ejemplo: w-a-usa-bu-te MEYU uma-mùn = 3 subimos en el NAVÍO.
+- raiz: tti
+  concepto_es: BEBER
+  pagina: 250
+  atestaciones: 1
+  entrada_n: 562
+  cita_hechos: 9-9
+  ejemplo: m-a-cuttu-n-ma i, M-A-TTI-N rubu i-a cu = no comió ni tampoco BEBIÓ. a-cuttu-ti-cuba-nu , W-A-TTI-TI-CUBA-NU
+    1-u
+- raiz: ùwùsa-dù
+  concepto_es: BENDECIR
+  pagina: 250
+  atestaciones: 1
+  entrada_n: 563
+  cita_hechos: '-26'
+  ejemplo: immecu-da-cuba banya i , ÙWÙSA-DÙ-N la-ni-bia hù = pues , lo mandó para que os BENDIJESE .
+- raiz: cule
+  concepto_es: BERMEJO, colorado, rojo
+  pagina: 108
+  atestaciones: 1
+  entrada_n: 304
+  cita_hechos: 7-36
+  ejemplo: CULE-RU Bara = el Mar BERMEJO.
+- raiz: imita-mita-du
+  concepto_es: BLASFEMAR
+  pagina: 250
+  atestaciones: 1
+  entrada_n: 566
+  cita_hechos: 13-45
+  ejemplo: -dia-dù-n Paulus a-haca-sia-bi-cuu ù-ya-luccu IMITA-MITA-DU-N baddia-n = comenzaron pues, a
+    discutir contra Pablo no oyen
+- raiz: mmole-hùa
+  concepto_es: BORRACHO, ebrio
+  pagina: 108
+  atestaciones: 1
+  entrada_n: 306
+  cita_hechos: '-15'
+  ejemplo: M-A-MMOLE-HÙA ye = no ESTÁN BORRACHOS.
+- raiz: nada-hù-nni-bia
+  concepto_es: 'BORRAR :'
+  pagina: 251
+  atestaciones: 1
+  entrada_n: 567
+  cita_hechos: 3-19
+  ejemplo: hu-masi-can A-NADA-HÙ-NNI-BIA-N hu-uria = para que SEAN BORRADOS vuestros pecados .
+- raiz: masi-ca-n-doa
+  concepto_es: BRAMAR
+  pagina: 251
+  atestaciones: 1
+  entrada_n: 568
+  cita_hechos: 4-25
+  ejemplo: hamma u-dumma bahá heidi-nu A-MASI-CA-N-DOA da-mùn ? = = por qué me HAN BRAMADO las gentes
+    ?
+- raiz: owa-hu-dda-te
+  concepto_es: BUSCAR
+  pagina: 252
+  atestaciones: 1
+  entrada_n: 570
+  cita_hechos: 6-3
+  ejemplo: H-OWA-HU-DDA-TE biama-ti-man ù-sa-tti wadili-nu = BUSCAD siete probados varones .
+- raiz: pallettiyu
+  concepto_es: BÁRBARO
+  pagina: 108
+  atestaciones: 1
+  entrada_n: 303
+  cita_hechos: '-4'
+  ejemplo: PALLETTIYU a-ddiki-n = viendo los BÁRBAROS .
+- raiz: tau
+  concepto_es: CABO, cable
+  pagina: 15
+  atestaciones: 1
+  entrada_n: 31
+  cita_hechos: 27-32
+  ejemplo: 'soldaru-nu a-sucá boot u-cunna-ttu TAU = los soldados cortaron los CABOS del esquife. [ .
+    : A: ]'
+- raiz: cullabu-luccu
+  concepto_es: CABO, estremo
+  pagina: 14
+  atestaciones: 1
+  entrada_n: 30
+  cita_hechos: 10-11
+  ejemplo: bibiti LU-CULLABU-LUCCU a-kkù.a-da-n = atado
+- raiz: monda-doa
+  concepto_es: CALLAR
+  pagina: 252
+  atestaciones: 1
+  entrada_n: 571
+  cita_hechos: 15-12
+  ejemplo: icca na-iyuhu A-MONDA-DOA = y la multitud CALLÓ . na-aha A-ÙBU-NNUA-BENNA A-DIA-N = ellos
+- raiz: wabu-ruccu-mùn
+  concepto_es: CALLE
+  pagina: 15
+  atestaciones: 1
+  entrada_n: 35
+  cita_hechos: 5-15
+  ejemplo: WABU-RUCCU-MÙN = EN LA CALLE .
+- raiz: acu-luccu-waria
+  concepto_es: CALOR
+  pagina: 15
+  atestaciones: 1
+  entrada_n: 33
+  cita_hechos: 28-3
+  ejemplo: TI ACU-LUCCU-WARIA = (huyendo ) CALOR . DEL
+- raiz: sapatun
+  concepto_es: CALZADO, zapato
+  pagina: 15
+  atestaciones: 1
+  entrada_n: 34
+  cita_hechos: 13-25
+  ejemplo: 'LU-SAPATUN lu-cutti = EL CALZADO de sus pies . [.: E: ]'
+- raiz: yaccada-coa
+  concepto_es: CAMA, lecho
+  pagina: 15
+  atestaciones: 1
+  entrada_n: 36
+  cita_hechos: 9-33
+  ejemplo: LU-YACCADA-COA-NA 'luccu = en SU CAMA-34
+- raiz: iyi-n-toa
+  concepto_es: CANTAR
+  pagina: 253
+  atestaciones: 1
+  entrada_n: 572
+  cita_hechos: 16-25
+  ejemplo: ù-sanùwai n-a A-IYI-N-TOA Gott u-mùn = CANTABAN himnos a Dios .
+- raiz: kùddù
+  concepto_es: CARGAR
+  pagina: 253
+  atestaciones: 1
+  entrada_n: 573
+  cita_hechos: 15-28
+  ejemplo: abba-can cuлu KÙDDÙ-TU — = ninguna CARGA (obli
+- raiz: ipiru
+  concepto_es: CARNE del cuerpo
+  pagina: 18
+  atestaciones: 1
+  entrada_n: 42
+  cita_hechos: 2-26
+  ejemplo: D-IPIRU = MI CARNE .
+- raiz: wagen
+  concepto_es: CARRO
+  pagina: 18
+  atestaciones: 1
+  entrada_n: 43
+  cita_hechos: 8-28
+  ejemplo: 'LU-WAGEN u-lluccu = en SU CARRO. [ . : Al ; ]'
+- raiz: iyula
+  concepto_es: CASTIGAR
+  pagina: 253
+  atestaciones: 1
+  entrada_n: 574
+  cita_hechos: 4-21
+  ejemplo: é n-a hùa hamma-ta-lli, ca-dummattu-ma N-A-IYULA-TTÙ-N apostel-nu ansi = no
+- raiz: bibiti-cutti-hi
+  concepto_es: CATORCE
+  pagina: 109
+  atestaciones: 1
+  entrada_n: 308
+  cita_hechos: 27-27
+  ejemplo: BIBITI-CUTTI-HI-BENNA wulica-hù = la DÉCIMA CUARTA noche.
+- raiz: simi
+  concepto_es: CELAR
+  pagina: 254
+  atestaciones: 1
+  entrada_n: 576
+  cita_hechos: 5-17
+  ejemplo: cu manswa-cu n-a SIMI-CA-N = se llenaron de CELO .
+- raiz: capitain
+  concepto_es: CENTURIÓN
+  pagina: 20
+  atestaciones: 1
+  entrada_n: 46
+  cita_hechos: 10-1
+  ejemplo: 'soldaru-nu u-iyuhu CAPITAIN = CENTURIÓN. [.: F :]'
+- raiz: ipixu
+  concepto_es: CEPO
+  pagina: 20
+  atestaciones: 1
+  entrada_n: 47
+  cita_hechos: 16-24
+  ejemplo: lù-tatta-da IPIXU-TU ADDA u-cunna na-cutti-wa = les apretó los pies en un CEPO ( madero grueso
+    ) . NOMBRES 21 48--CIEG
+- raiz: ikira
+  concepto_es: CERCAR
+  pagina: 255
+  atestaciones: 1
+  entrada_n: 578
+  cita_hechos: 9-3
+  ejemplo: abba a-rule-ti a-kùn-da casaccu-waria L-IKIRA-DI = una luz se levantó del cielo que lo CERCÓ
+    ( a su alrededor ) .
+- raiz: tatta
+  concepto_es: CERRAR
+  pagina: 255
+  atestaciones: 1
+  entrada_n: 579
+  cita_hechos: 21-30
+  ejemplo: ni-kebekerki bahù-sibu A-TATTA-DA-HÙ-CA-N badya = luego las puertas del templo FUERON CERRADAS
+    .
+- raiz: ubu-nnua-nti
+  concepto_es: CESAR
+  pagina: 255
+  atestaciones: 1
+  entrada_n: 580
+  cita_hechos: 7-19
+  ejemplo: N-A-UBU-NNUA-NTI a-hacu-bù-n = para que CE
+- raiz: adepusu-doa-li-te
+  concepto_es: CEÑIR
+  pagina: 255
+  atestaciones: 1
+  entrada_n: 577
+  cita_hechos: 12-8
+  ejemplo: B-ADEPUSU-DOA-LI-TE = CÍÑETE .
+- raiz: kidduahei
+  concepto_es: CIERTO
+  pagina: 109
+  atestaciones: 1
+  entrada_n: 310
+  cita_hechos: 21-34
+  ejemplo: m-a-ditti-n ruku l-a-ni-ca KIDDUAHEI-NI-HÙ u-cunna-mùn = no entendían nada de CIERTO acerca
+    de él.
+- raiz: abba-li-wai
+  concepto_es: CIERTO
+  pagina: 109
+  atestaciones: 1
+  entrada_n: 311
+  cita_hechos: 24-1
+  ejemplo: ABBA-LI-WAI (sic ) ca-canna-bu-coa-n-ti = CIERTO orador .
+- raiz: ddikiba-lli
+  concepto_es: CIMIENTO
+  pagina: 22
+  atestaciones: 1
+  entrada_n: 50
+  cita_hechos: 16-26
+  ejemplo: ca-tatta-dù-coa-na-ttu bahù A-DDIKIBA-LLI = los CIMIENTOS de la cárcel.
+- raiz: funfzig
+  concepto_es: CINCUENTA
+  pagina: 110
+  atestaciones: 1
+  entrada_n: 313
+  cita_hechos: 13-20
+  ejemplo: 'bibiti hundert FUNFZIG [.: Al : ] wiyua = cuatro cientos CINCUENTA años.'
+- raiz: sima
+  concepto_es: CLAMAR
+  pagina: 256
+  atestaciones: 1
+  entrada_n: 583
+  cita_hechos: 7-60
+  ejemplo: manswa cu l-a ca-canna-kù-n A-SIMA-CA-N = CLAMÓ a gran voz.
+- raiz: ansi-rubu
+  concepto_es: CODICIAR
+  pagina: 257
+  atestaciones: 1
+  entrada_n: 584
+  cita_hechos: 20-33
+  ejemplo: RUBU-DA-CUBA-N platta, cauculli ù-sahua-bu kùsa , a-ke-hù diau hu-uria = NO HE CODICIADO la
+    plata , el oro, o la riqueza o vestido de vosotros.
+- raiz: waki-ddu-nnua
+  concepto_es: COLGAR
+  pagina: 257
+  atestaciones: 1
+  entrada_n: 585
+  cita_hechos: 1-18
+  ejemplo: A-WAKI-DDU-NNUA = SE COLGÓ .
+- raiz: usa
+  concepto_es: COMENZAR
+  pagina: 257
+  atestaciones: 1
+  entrada_n: 586
+  cita_hechos: 2-4
+  ejemplo: N-A-USA baddia abba-nu a-dia-n u-lluccu a-haca-n = COMENZARON a hablar en otras lenguas .
+- raiz: ndi
+  concepto_es: COMPARECER
+  pagina: 259
+  atestaciones: 1
+  entrada_n: 589
+  cita_hechos: 24-19
+  ejemplo: yu-mùn-ti a-uttiki-nni-de A-NDI-NNI-CA B-ACUSI u-mù-canna yaha-muteru = aquí mis acusadores
+    debieron COMPARECER ( venir ) ante ti , en este lu
+- raiz: usa
+  concepto_es: COMPLETAR
+  pagina: 259
+  atestaciones: 1
+  entrada_n: 590
+  cita_hechos: 3-16
+  ejemplo: LÙ-USA-DA-CUBÁ hinna = sanó COMPLETAMENTE .
+- raiz: iya
+  concepto_es: COMPUNGIRSE
+  pagina: 260
+  atestaciones: 1
+  entrada_n: 592
+  cita_hechos: 2-37
+  ejemplo: manswa-cu t-a A-IYA-CA-N n-a-llua = fueron COMPUNGIDOS grandemente de corazón.
+- raiz: abbucoa
+  concepto_es: COMULGAR
+  pagina: 260
+  atestaciones: 1
+  entrada_n: 593
+  cita_hechos: 2-42
+  ejemplo: a-haca--n ame a-sica-wa-coa rubu-n-a hidda, N-ABBUCOA-WA rubu-n-a = perseveraban en la doctrina
+    y en la COMUNIÓN.
+- raiz: iribe
+  concepto_es: COMÚN
+  pagina: 110
+  atestaciones: 1
+  entrada_n: 315
+  cita_hechos: 10-14
+  ejemplo: abba-hù-n hamma-talli IRIBE-TU = cualquier cosa COMÚN .
+- raiz: ditti
+  concepto_es: CONCERNIR
+  pagina: 260
+  atestaciones: 1
+  entrada_n: 594
+  cita_hechos: 28-23
+  ejemplo: A-DITTI-KITTI-Nna-mùn-ni Jesus = HACIÉDOLES CONOCER io ( CONCERNIENTE ) a Jesús .
+- raiz: ibe-ttira
+  concepto_es: CONCERTAR
+  pagina: 260
+  atestaciones: 1
+  entrada_n: 595
+  cita_hechos: 3-25
+  ejemplo: u ù-sa-nu-tti hùa hù , Gott IBE-TTIRA-HÙ-sia-TTI ù-sa-nu-tti baddia hù = de aquellos profetas
+    los hijos sois vosotros , y también del pacto CON
+- raiz: ttiki
+  concepto_es: CONCITAR
+  pagina: 260
+  atestaciones: 1
+  entrada_n: 596
+  cita_hechos: 13-50
+  ejemplo: judu-nnu A-TTIKI-DA-CA-YE a-sica-hitti-ti, ù-sa-tti hiaru-nu ba [ ? ] = los judíos CONCITARON
+    a fieles y honestas mujeres . VERBOS, PARTICIPIO
+- raiz: hada-cuttu-nni-ma-hùa
+  concepto_es: CONDENAR
+  pagina: 261
+  atestaciones: 1
+  entrada_n: 599
+  cita_hechos: 16-37
+  ejemplo: M-A-HADA-CUTTU-NNI-MA-HÙA n-a ma-coaliteda-bu-na u = sin SER CONDENADOS nos azo
+- raiz: dia
+  concepto_es: CONFERIR
+  pagina: 262
+  atestaciones: 1
+  entrada_n: 601
+  cita_hechos: 4-15
+  ejemplo: N-A-DIA-CA n-abbu-coa-wa = CONFERÍAN (conversaban) entre sí.
+- raiz: misi
+  concepto_es: CONFESAR
+  pagina: 262
+  atestaciones: 1
+  entrada_n: 602
+  cita_hechos: 23-8
+  ejemplo: r-nu m-a-ni rubu n-a чidi-n, N-A-HITTI-N tu-makua u-ma-n u-mùn u-dumma = los fariseos
+- raiz: halli-kebbe
+  concepto_es: CONFIAR
+  pagina: 262
+  atestaciones: 1
+  entrada_n: 603
+  cita_hechos: 18-26
+  ejemplo: RI-HÙA lu-i a-haca-haca-dù-n ha-blaba CONFIADAMENTE. M-A-MMANU-NNI-HÙA = CONFIADOS ( sin temor)
+    . lihi ke a-usa M-A-MMAYU-NNI-HÙA a-dia-dia-dù-
+- raiz: hùhùkù
+  concepto_es: CONGREGAR
+  pagina: 264
+  atestaciones: 1
+  entrada_n: 609
+  cita_hechos: 4-31
+  ejemplo: bahù ca-lluccu-mùn-tu N-A-HÙHÙKÙ-DA-N ( sic ) a-1ucusa-n = la casa en que ESTABAN CONGREGADOS
+    tembló .
+- raiz: ditti
+  concepto_es: CONOCER
+  pagina: 265
+  atestaciones: 1
+  entrada_n: 612
+  cita_hechos: 3-10
+  ejemplo: N-A-DITTI-SIA hidda-i = le CONOCÍAN .
+- raiz: halli-kebbe
+  concepto_es: CONSENTIR
+  pagina: 266
+  atestaciones: 1
+  entrada_n: 613
+  cita_hechos: 8-1
+  ejemplo: Saulus HALLI-KEBBE baddia Stephanus heicani-bu u-cunna-mùn = Saulo CONSENTÍA en la muerte de
+    Esteban.
+- raiz: iya-cuttu-nnua
+  concepto_es: CONSOLAR
+  pagina: 266
+  atestaciones: 1
+  entrada_n: 615
+  cita_hechos: 9-31
+  ejemplo: na-llua A-IYA-CUTTU-NNUA ù-sa-tti ù-ua-hù umùn = sus corazones ERAN CONSOLADOS por el Espíritu
+    Santo. VERBOS. PARTICIPI
+- raiz: adia
+  concepto_es: CONSULTAR
+  pagina: 267
+  atestaciones: 1
+  entrada_n: 619
+  cita_hechos: 5-33
+  ejemplo: 'N-ADIA-CA N-ABBU-COA-WA ba = CONSULTABAN entre sí. 268 Arw ) ARAWAK 2 : Fraseario'
+- raiz: ikisi
+  concepto_es: CONTAR, ENUMERAR
+  pagina: 269
+  atestaciones: 1
+  entrada_n: 622
+  cita_hechos: 8-33
+  ejemplo: cann halli-ca-i baha malli-cu-cu-ma IKISI-DI-N lù-cakù oa-di ? = mas , quién podrá CONTAR su
+    generación ?
+- raiz: haca
+  concepto_es: CONTAR, NARRAR
+  pagina: 268
+  atestaciones: 1
+  entrada_n: 621
+  cita_hechos: 4-23
+  ejemplo: ipillibe-tti priester-nu , tuyucu-ti mutti a-dia-sia na-mùn u-cuna mùn = CONTARON todo lo que
+    los príncipes de los sacerdotes y los ancianos le
+- raiz: ima-ima-da-i
+  concepto_es: CONTENDER
+  pagina: 269
+  atestaciones: 1
+  entrada_n: 623
+  cita_hechos: 12-2
+  ejemplo: A-IMA-IMA-DA-I, hiddia n-a lu-mùn = CONTEN DÍAN contra ÉL.
+- raiz: ditti-sia-i
+  concepto_es: CONTENERSE
+  pagina: 269
+  atestaciones: 1
+  entrada_n: 624
+  cita_hechos: 19-15
+  ejemplo: D-A-DITTI-SIA-I Jesus = le CONOZCO a Jesús .
+- raiz: haca-sia-bi-cuxu
+  concepto_es: CONTRADECIR
+  pagina: 270
+  atestaciones: 1
+  entrada_n: 625
+  cita_hechos: 13-45
+  ejemplo: A-HACA-SIA-BI-CUXU Ù-YA-LUCCU, imita-mita-dùn baddia-n = CONTRADICIENDO blasfe-mando .
+- raiz: ditti-kitta
+  concepto_es: CONVENCER
+  pagina: 270
+  atestaciones: 1
+  entrada_n: 626
+  cita_hechos: 18-28
+  ejemplo: kùddù-kù-si-n-rubu-l-a A-DITTI-KITTA-YE judu-nnu u-mùn = públicamente CONVENCÍA a los judíos.
+- raiz: iyaha-dda
+  concepto_es: CONVERSAR
+  pagina: 270
+  atestaciones: 1
+  entrada_n: 628
+  cita_hechos: 23-1
+  ejemplo: D-A-IYAHA-DDA-CUBA Gott u-mù-canna dannu-hu muniru man = HE CONVERSADO delante de Dios hasta
+    el día de hoy. VERBOS. PARTICIPIOS
+- raiz: iyuhuwa
+  concepto_es: CONVERTIR
+  pagina: 271
+  atestaciones: 1
+  entrada_n: 629
+  cita_hechos: 2-10
+  ejemplo: judu-nnu, a-nni-ca-hù-sia-nnu judu-nnu U-IYUHUWA mutti = (tanto) judíos , como CONVERTIDOS
+    3
+- raiz: hùrkù-da-cutta
+  concepto_es: CONVOCAR
+  pagina: 271
+  atestaciones: 1
+  entrada_n: 630
+  cita_hechos: 6-2
+  ejemplo: N-A-HÙRKÙ-DA-CUTTA baddia ye a-daina-sia-nnu = CONVOCARON los a los señores . apostel-nu A-HÜRKÙ-DA-CUTTA-YE
+    a-sica-t
+- raiz: sicapu
+  concepto_es: CORDERO
+  pagina: 24
+  atestaciones: 1
+  entrada_n: 57
+  cita_hechos: 8-32
+  ejemplo: SICAPU Ù-SA = CORDERO . NOMBRES 25
+- raiz: humma-du
+  concepto_es: CORRER
+  pagina: 272
+  atestaciones: 1
+  entrada_n: 631
+  cita_hechos: 2-2
+  ejemplo: caima-ttu a-waduli A-HUMMA-DU-N = un viento recio que CORRÍA.
+- raiz: cullun
+  concepto_es: CORROMPER
+  pagina: 272
+  atestaciones: 1
+  entrada_n: 632
+  cita_hechos: 13-34
+  ejemplo: 1-ipiru M-A-TURU-N-MAN-TI u-cunna-mùn ba = para que su cuerpo NO SE CORROMPIERA.
+- raiz: suca
+  concepto_es: CORTAR
+  pagina: 272
+  atestaciones: 1
+  entrada_n: 633
+  cita_hechos: 27-32
+  ejemplo: soldaru-nu A-SUCA boot u-cunna-mùn tau = los soldados CORTARON los cabos del bote. VERBOS,
+    PARTICIPIOS Y VERBAL
+- raiz: ibiki-ddoa
+  concepto_es: CRIAR
+  pagina: 275
+  atestaciones: 1
+  entrada_n: 635
+  cita_hechos: 12-1
+  ejemplo: Manahen IBIKI-DDOA-TI ipilti a-daiya-hù Herodes = Manahen HABÍA SIDO CRIADO con el gran señor
+    Herodes.
+- raiz: balla
+  concepto_es: CRUCIFICAR
+  pagina: 276
+  atestaciones: 1
+  entrada_n: 636
+  cita_hechos: 2-23
+  ejemplo: CA-BALLA ADDA u-cunna-i = CRUCIFICÁNDO-le (fijándolo en un madero) .
+- raiz: ttana-du
+  concepto_es: CRUJIR
+  pagina: 276
+  atestaciones: 1
+  entrada_n: 637
+  cita_hechos: 7-54
+  ejemplo: A-TTANA-DU-N n-a-ri-sibu n-a-ima-haca-n-du-nnua lu-mùn u-dumma = CRUJÍAN sus dientes enconados
+    contra él.
+- raiz: ttu
+  concepto_es: CUAL
+  pagina: 205
+  atestaciones: 1
+  entrada_n: 459
+  cita_hechos: 1-12
+  ejemplo: ', kia huuru-isiwaria, iri oli u-huu-ra, ma-waikille-TTU Jerusalem uria = volvieron a Jerusalem,
+    del monte su nombre, de las Olivas , el CUAL no'
+- raiz: makua
+  concepto_es: CUALQUIERA
+  pagina: 218
+  atestaciones: 1
+  entrada_n: 468
+  cita_hechos: 3-23
+  ejemplo: NA-MAKUA m-a-sica-nti = CUALQUIERA que no creyera.
+- raiz: halli
+  concepto_es: CUANTO
+  pagina: 505
+  atestaciones: 1
+  entrada_n: 1000
+  cita_hechos: 9-16
+  ejemplo: HALLI-CA kebe-ni-bia-pa lu-yula-ttù-n l-ansi-wa = CUANTO le sea menester sufrir.
+- raiz: hada-cutta-coa
+  concepto_es: CUESTIÓN, asunto
+  pagina: 27
+  atestaciones: 1
+  entrada_n: 65
+  cita_hechos: 15-2
+  ejemplo: tuhu A-HADA-CUTTA-COA-NA u-dumma = sobre esta CUESTIÓN .
+- raiz: ùsa-dù
+  concepto_es: CURAR
+  pagina: 277
+  atestaciones: 1
+  entrada_n: 639
+  cita_hechos: 5-16
+  ejemplo: na-ma-mutti Ù-ÙSA-DÙ KITTOA n-a-caui uria hidda = los cuales ERAN CURADOS de sus enfermedades.
+- raiz: ttica-ha
+  concepto_es: DAÑAR
+  pagina: 277
+  atestaciones: 1
+  entrada_n: 641
+  cita_hechos: 21-10
+  ejemplo: r-21 ica m-a-uttiki-nni-cuba-ma-u tuhu diaju manswa-ttu CAMONAICA yaha = y no habríamos encontrado
+    este grandísimo DAÑO ahora.
+- raiz: statuta
+  concepto_es: DECRETAR
+  pagina: 292
+  atestaciones: 1
+  entrada_n: 646
+  cita_hechos: 17-7
+  ejemplo: na-i-ke-wai na-makua a-m-a-sica-n-toa Caiser a-sikisia STATUTA ame = todos estos desobedecen
+    a los DECRETOS dados por el César.
+- raiz: yu-mùn-ti-na-da-i
+  concepto_es: DEFENDER
+  pagina: 293
+  atestaciones: 1
+  entrada_n: 647
+  cita_hechos: 7-24
+  ejemplo: kia-hanna LU-YU-MÙN-TI-NA-DA-I = así pues , LE DEFENDIÓ .
+- raiz: iya-catta
+  concepto_es: DEFRAUDAR
+  pagina: 293
+  atestaciones: 1
+  entrada_n: 648
+  cita_hechos: 5-2
+  ejemplo: l-a-ni-ca-ru platta ibenna lu-i A-IYA-CATTA-N = DEFRAUDÓ del precio.
+- raiz: ùbu-nnua
+  concepto_es: DEJAR
+  pagina: 293
+  atestaciones: 1
+  entrada_n: 649
+  cita_hechos: 6-2
+  ejemplo: wa-i m-a-malli-pa A-ÙBU-NNUA a-haca-n = nosotros no podemos DEJAR de decir. W-A-ÙBOA-MA Gott
+    a-dia-hù uria = q
+- raiz: adi
+  concepto_es: DELANTE, ( v . Ante )
+  pagina: 507
+  atestaciones: 1
+  entrada_n: 1003
+  cita_hechos: 20-16
+  ejemplo: 'a-balli-ni-bia Ephessus ADI = pasar ADELANTE de Efeso. 508 Arw) ARAWAK 2 : Fraseario'
+- raiz: lluccu-mùn
+  concepto_es: 'DENTRO, (Adentro ) , (v. En I : In )'
+  pagina: 508
+  atestaciones: 1
+  entrada_n: 1004
+  cita_hechos: 19-8
+  ejemplo: kerki U-LLUCCU-MÙN = 3 DENTRO del tempic
+- raiz: dia
+  concepto_es: DENUNCIAR
+  pagina: 295
+  atestaciones: 1
+  entrada_n: 651
+  cita_hechos: 5-28
+  ejemplo: M-A-DIA-NI-WA-CUBÁ hù tatta ren ? = NO os
+- raiz: dumma-ttu-n-ni-bia
+  concepto_es: DER ( v. Hacer )
+  pagina: 417
+  atestaciones: 1
+  entrada_n: 861
+  cita_hechos: '-12'
+  ejemplo: CA-DUMMA-TTU-N-NI-BIA-YE ù-sa-dù-kitu-n-nua = POR EL CUAL PUEDAN ser salvos .
+- raiz: ipilla-ddoa
+  concepto_es: DERRAMAR
+  pagina: 295
+  atestaciones: 1
+  entrada_n: 652
+  cita_hechos: 1-18
+  ejemplo: 'na-makual-itte baddia IPILLA-DDOA wunabu-mùn = '
+- raiz: ttunu
+  concepto_es: DERRIBAR
+  pagina: 296
+  atestaciones: 1
+  entrada_n: 653
+  cita_hechos: 10-25
+  ejemplo: LU-TTUNU-DA lu-cutti u-mùn = DERRIBÁNDOSE ÉL a sus pies .
+- raiz: bulle-he-da-wabu-kebe-hù-pa
+  concepto_es: DESARRAIGAR
+  pagina: 296
+  atestaciones: 1
+  entrada_n: 655
+  cita_hechos: 3-23
+  ejemplo: -BULLE-HE-DA-WABU-KEBE-HÙ-PA haian Gott ù-sa-nu-tti u-ccubu-ruccu-aria = SERÁ DESARRAIGADA
+    de entre los siervos de Dios.
+- raiz: nda
+  concepto_es: DESCENDER, BAJAR
+  pagina: 297
+  atestaciones: 1
+  entrada_n: 659
+  cita_hechos: 7-15
+  ejemplo: Jacob A-NDA Egypten-mùn hidda = así, Jacob DESCENDIÓ (vino ) a Egipto.
+- raiz: canna-na-hitti
+  concepto_es: DESEAR
+  pagina: 298
+  atestaciones: 1
+  entrada_n: 660
+  cita_hechos: 13-7
+  ejemplo: ' Barnabas Saulus mutti, L-A-CANNA-NA-HITTI-CA Gott a-dia-hù ucunna-mùn = este señor , llamando
+    a Bernabé y a Pablo, DESEABA OÍR de ellos la pal'
+- raiz: tturku
+  concepto_es: DESECHAR
+  pagina: 299
+  atestaciones: 1
+  entrada_n: 661
+  cita_hechos: 7-39
+  ejemplo: N-A-TTURKU-DA na-urua-i = le DESECHARON de sí.
+- raiz: cuyu-cutta
+  concepto_es: DESPACHAR
+  pagina: 299
+  atestaciones: 1
+  entrada_n: 665
+  cita_hechos: 4-21
+  ejemplo: 'N-A-CUYU-CUTTA na uria-ye ba = ellos entonces los DESPACHARON . 300 Arw ) ARAWAK 2 : Fraseario'
+- raiz: hannubu-kitta-i
+  concepto_es: DESPERTAR
+  pagina: 300
+  atestaciones: 1
+  entrada_n: 668
+  cita_hechos: 12-7
+  ejemplo: L-A-HANNUBU-KITTA-I = LE DESPERTÓ .
+- raiz: yaca-da-kebe
+  concepto_es: DESTRUIR
+  pagina: 300
+  atestaciones: 1
+  entrada_n: 669
+  cita_hechos: 6-14
+  ejemplo: areth-cundi a-boa-hù-ddu-pa tuhu e-a-hùr-ke-da-coa-na A-YACA-DA-KEBE-N = que Jesús de Nazareth
+    profanaría esta nuestra sinagoga DESTRUYENDO-la.
+- raiz: boa-hu-ddu-nnua-rubu
+  concepto_es: DESVANECER
+  pagina: 301
+  atestaciones: 1
+  entrada_n: 670
+  cita_hechos: 13-41
+  ejemplo: A-BOA-HU-DDU-NNUA-RUBU hu-ppa = DESVANECEOS .
+- raiz: ikisi
+  concepto_es: DETERMINAR
+  pagina: 301
+  atestaciones: 1
+  entrada_n: 672
+  cita_hechos: 2-23
+  ejemplo: l-óaya L-IKISI-TU a-sicu-nnua benna = por DETERMINADO consejo .
+- raiz: yawa
+  concepto_es: DIABLO
+  pagina: 32
+  atestaciones: 1
+  entrada_n: 70
+  cita_hechos: 10-38
+  ejemplo: YAWA-HÙ u-mùn a-jyulatta-hù-sia-nnu = los ator-mentados por el DIABLO. [ cf. Jehová, Devi ]
+    , Teufel] .
+- raiz: halli-kebbe
+  concepto_es: DICHOSO
+  pagina: 112
+  atestaciones: 1
+  entrada_n: 320
+  cita_hechos: 26-2
+  ejemplo: manswa-kebé d-a HALLI-KEBBE-N = me tengo por muy DICHOSO.
+- raiz: ri-sibu
+  concepto_es: DIENTE
+  pagina: 32
+  atestaciones: 1
+  entrada_n: 71
+  cita_hechos: 7-54
+  ejemplo: a-taлa-du-n NA-RI-SIBU = = crujían SUS DIENTES .
+- raiz: biama-da-ccabbu
+  concepto_es: DIEZ (v. cinco, mano, lado )
+  pagina: 112
+  atestaciones: 1
+  entrada_n: 321
+  cita_hechos: 25-6
+  ejemplo: BIAMA-DA-CCABBU = DIEZ.
+- raiz: pucu
+  concepto_es: DIFERENCIA
+  pagina: 32
+  atestaciones: 1
+  entrada_n: 73
+  cita_hechos: 15-9
+  ejemplo: lu-i cuлu A-PUCU-DA wa-uria-ye = él no HIZO DIFERENCIA entre ellos y nosotros.
+- raiz: platta
+  concepto_es: DINERO
+  pagina: 32
+  atestaciones: 1
+  entrada_n: 76
+  cita_hechos: 7-16
+  ejemplo: 'PLATTA abbu = = por, con DINERO. [. : E : ] NOMBRES 33'
+- raiz: malli-kebé
+  concepto_es: DISCORDAR
+  pagina: 302
+  atestaciones: 1
+  entrada_n: 674
+  cita_hechos: 28-25
+  ejemplo: M-A-MALLI-KEBÉ m-a-ni-ca hùrkù-kù N-A-CUBURUCCU = como estuvieran entre sí discordes (no pudiendo
+    juntar sus pareceres )
+- raiz: dia
+  concepto_es: DISCURRIR
+  pagina: 302
+  atestaciones: 1
+  entrada_n: 675
+  cita_hechos: 20-7
+  ejemplo: ca-inicu-cu-cu L-A-DIA-CA = prolongando SU DISCURSO .
+- raiz: imaha-hitti
+  concepto_es: DISENTIR
+  pagina: 302
+  atestaciones: 1
+  entrada_n: 676
+  cita_hechos: 23-7
+  ejemplo: phariseer-nu saduceer-nu mutti A-IMAHA-HITTI-CA na-iya-luccu-coa-wa = HUBO DISENSIÓN entre
+    los fariseos y los saduceos .
+- raiz: ditti-nma-hùa
+  concepto_es: DISIMULAR
+  pagina: 303
+  atestaciones: 1
+  entrada_n: 678
+  cita_hechos: 17-30
+  ejemplo: lu-moлua Gott a-haica-sia hidda kia M-A-DITTI-NMA-HÙA = HABIENDO Dios DISIMULADO esa ignorancia.
+- raiz: pudu
+  concepto_es: DIVIDIR
+  pagina: 304
+  atestaciones: 1
+  entrada_n: 682
+  cita_hechos: 23-7
+  ejemplo: na-iyuhu A-PUDU-CA na-ure-coa-wa hidda = así la multitud FUÉ DIVIDIDA.
+- raiz: ttaba
+  concepto_es: DIVULGAR
+  pagina: 304
+  atestaciones: 1
+  entrada_n: 683
+  cita_hechos: 4-17
+  ejemplo: tuhu n-a-ni-sia m-a-ni-bia A-TTABA-N tu-makua-di baddia = para que estos hechos no SE DIVULGARAN
+    entre la multitud . VERBOS, PAR
+- raiz: haca
+  concepto_es: DOCTOR
+  pagina: 38
+  atestaciones: 1
+  entrada_n: 79
+  cita_hechos: 5-34
+  ejemplo: A-HACA-HU A-LI-N = DOCTOR, (obrero del decir) .
+- raiz: ucané
+  concepto_es: DOLER
+  pagina: 305
+  atestaciones: 1
+  entrada_n: 684
+  cita_hechos: 20-38
+  ejemplo: '(debilidades ) de la muerte. manswa-ttu N-UCANÉ, l-a-dia-sia-bi-ru : = grande SU DOLOR, por
+    lo que había dicho :'
+- raiz: yu-waria
+  concepto_es: DONDE ( v. Adonde, En donde, Por donde )
+  pagina: 510
+  atestaciones: 1
+  entrada_n: 1008
+  cita_hechos: 14-26
+  ejemplo: YU-WARIA = DE DONDE.
+- raiz: dum
+  concepto_es: DORMIR
+  pagina: 305
+  atestaciones: 1
+  entrada_n: 685
+  cita_hechos: 12-6
+  ejemplo: Petrus A-DUM-CA biama soldaru-nu a-nna-ca-ni-ruccu-di = Pedro DORMÍA entre dos soldados [ Cf.
+    ESTAR] .
+- raiz: ditti
+  concepto_es: DUDAR
+  pagina: 305
+  atestaciones: 1
+  entrada_n: 686
+  cita_hechos: 5-24
+  ejemplo: M-A-DITTI-NNI rubu-na halli-ca-kebé t-a-ni-bia-pa = DUDABAN (no sabían ) en que vendría a parar
+    aquello.
+- raiz: malli-ta
+  concepto_es: EDIFICAR
+  pagina: 307
+  atestaciones: 1
+  entrada_n: 688
+  cita_hechos: 7-47
+  ejemplo: A-MALLI-TA Gott u-mùn abba ipiu-tu ù-sa-ttu ùsikua = EDIFICÓ ( hizo ) a Dios una gran casa
+    santa .
+- raiz: maiyana-ttoa
+  concepto_es: EFERIR
+  pagina: 435
+  atestaciones: 1
+  entrada_n: 889
+  cita_hechos: 15-4
+  ejemplo: N-A-MAIYANA-TTOA hidda na-mùn = así que les REFIRIERON .
+- raiz: soldar
+  concepto_es: EJÉRCITO
+  pagina: 39
+  atestaciones: 1
+  entrada_n: 82
+  cita_hechos: 28-18
+  ejemplo: 'SOLDAR-NU a-daina-sia u-mùn = el prefecto de los EJÉRCITOS ( soldados ) [ . : Al : o E. ]'
+- raiz: ica
+  concepto_es: EMBARCAR
+  pagina: 308
+  atestaciones: 1
+  entrada_n: 690
+  cita_hechos: 21-2
+  ejemplo: W-A-ICA ( MEYU) tu-lluccu-mùn = NOS EMBAR
+- raiz: mohua
+  concepto_es: EMPERO, ( v. Pero, Mas, Sin embargo )
+  pagina: 511
+  atestaciones: 1
+  entrada_n: 1009
+  cita_hechos: 3-18
+  ejemplo: lu-MOHUA Gott = EMPERO Dios .
+- raiz: tturku-dù
+  concepto_es: EMPUJAR
+  pagina: 308
+  atestaciones: 1
+  entrada_n: 691
+  cita_hechos: 19-33
+  ejemplo: judu-nnu A-TTURKU-DÙ-N n-a-ni-ca na uria = los judíos EMPUJÁNDOLO (apartándolo ) de sí.
+- raiz: mùn
+  concepto_es: EN
+  pagina: 511
+  atestaciones: 1
+  entrada_n: 1010
+  cita_hechos: 1-8
+  ejemplo: Jerusalem MÙN = EN Jerusalem. Judea U-CUNNA-man EN toda Judea. Samaria baddia U-CUNNA-
+- raiz: seme-tti-kill
+  concepto_es: ENCANTAR
+  pagina: 308
+  atestaciones: 1
+  entrada_n: 693
+  cita_hechos: 13-8
+  ejemplo: SEME-TTI-KILL, a-sa-cuttu-ti Elymas cu = y resistiéndole Elimas el ENCANTADOR .
+- raiz: malli
+  concepto_es: ENCENDER
+  pagina: 308
+  atestaciones: 1
+  entrada_n: 695
+  cita_hechos: 28-2
+  ejemplo: 'ipiлu-tu hikki-hù N-A-MALLI-TI-N benna = HABIENDO ELLOS ENCENDIDO (hecho) un gran fuego. VERBOS,
+    PARTICIPIOS Y '
+- raiz: sica
+  concepto_es: ENCERRAR
+  pagina: 309
+  atestaciones: 1
+  entrada_n: 696
+  cita_hechos: 26-10
+  ejemplo: DA-SICA-CUBA siba u-lluccu-mùn-ni-ye = YO los ENCERRÉ en la cárcel (puse) .
+- raiz: cuya-bu-a
+  concepto_es: ENCOMENDAR
+  pagina: 309
+  atestaciones: 1
+  entrada_n: 697
+  cita_hechos: 14-23
+  ejemplo: A-CUYA-BU-A-CA n-a-malli-t-a-coa-n-ti u-mùn = ENCOMENDARON a su Dios (rogaron a) .
+- raiz: iyaca-ttoa
+  concepto_es: ENCUBRIR
+  pagina: 309
+  atestaciones: 1
+  entrada_n: 698
+  cita_hechos: 16-37
+  ejemplo: A-IYACA-TTOA-HỦ 'LUCCU = ENCUBIERTAMENTE.
+- raiz: cayi
+  concepto_es: ENFERMARSE
+  pagina: 309
+  atestaciones: 1
+  entrada_n: 700
+  cita_hechos: 10-12
+  ejemplo: ' de ellos. y así, la EN--35 a-buru-wa-ttù-n-ti-ye M-A-TATTA-TI u-cunna = por'
+- raiz: iyaudi
+  concepto_es: ENFURECER
+  pagina: 310
+  atestaciones: 1
+  entrada_n: 701
+  cita_hechos: 26-11
+  ejemplo: A-IYAUDI-TTI dia d-a cubá na-iya-luccu ba = ENFURECIDO yo contra ellos .
+- raiz: boa-hù-dda-kebe
+  concepto_es: ENGAÑAR
+  pagina: 310
+  atestaciones: 1
+  entrada_n: 702
+  cita_hechos: 8-9
+  ejemplo: A-BOA-HÙ-DDA-KEBE-YE Samaria-cunna-na = HABÍA ENGAÑADO a los samaritanos.
+- raiz: tatta
+  concepto_es: ENGROSAR
+  pagina: 311
+  atestaciones: 1
+  entrada_n: 704
+  cita_hechos: 28-27
+  ejemplo: tuhu ù-kùrkù-a-hù u-llua manswa-cu-t-a TATTA-N = el corazón de este pueblo HA ENGROSADO ( se
+    ha endurecido) .-
+- raiz: ipinu-ttoa
+  concepto_es: ENSALZAR
+  pagina: 311
+  atestaciones: 1
+  entrada_n: 706
+  cita_hechos: 13-17
+  ejemplo: L-IPINU-TTOA-N kia ù-kkùrkù-a = ENSALZÓ al
+- raiz: ren
+  concepto_es: ENTERO
+  pagina: 113
+  atestaciones: 1
+  entrada_n: 324
+  cita_hechos: 28-30
+  ejemplo: biama wiyua REN = dos años ENTEROS .
+- raiz: cana-ta
+  concepto_es: ENTERRAR
+  pagina: 314
+  atestaciones: 1
+  entrada_n: 710
+  cita_hechos: 8-2
+  ejemplo: 'abba-nu a-sica-ti A-CANA-TA Stephanus ipiru = algunos llevaron a ENTERRAR el cuerpo de Esteban.
+    VERBOS, PARTICIPIOS '
+- raiz: pahia
+  concepto_es: ENTONTECERSE
+  pagina: 315
+  atestaciones: 1
+  entrada_n: 711
+  cita_hechos: 13-41
+  ejemplo: PAHIA--h-a-li = ENTONTECEOS .
+- raiz: ditti-pa
+  concepto_es: ERCIBIR
+  pagina: 413
+  atestaciones: 1
+  entrada_n: 849
+  cita_hechos: 28-26
+  ejemplo: (hu-i ) M-A-DITTI-PA-N = (vosotros ) NO PERCIBIRÉIS .
+- raiz: haica-pa
+  concepto_es: ERDER
+  pagina: 413
+  atestaciones: 1
+  entrada_n: 850
+  cita_hechos: 27-22
+  ejemplo: halli-ca-i cuiu w-ebenna-tti HAICA-PA = ninguno de nosotros SE PERDERÁ (perecerá ) .
+- raiz: hitte
+  concepto_es: ERSEVERAR
+  pagina: 415
+  atestaciones: 1
+  entrada_n: 856
+  cita_hechos: 12-16
+  ejemplo: cann Petrus HITTE RUBU l-a a-cula-ttù-n = mas , Pedro PERSEVERABA en golpear ( más llamaba
+    a la puerta ) . 416 A
+- raiz: ttica-ha
+  concepto_es: ESCAPAR
+  pagina: 321
+  atestaciones: 1
+  entrada_n: 716
+  cita_hechos: '-4'
+  ejemplo: bara A-TTICA-HA-NI-CA cuлu ballin-i = ESCA-PADO apenas del mar.
+- raiz: ditti-n-ni-bia
+  concepto_es: ESCUCHAR
+  pagina: 323
+  atestaciones: 1
+  entrada_n: 718
+  cita_hechos: 12-13
+  ejemplo: 'a-nda t-a-mùn T-A-DITTI-N-NI-BIA-N = fué ( ella ) a ESCUCHAR (enterarse ) .-719ESCUDRIÑAR
+    ; L : scrutari, P'
+- raiz: bucu-nnua
+  concepto_es: ESPANTARSE
+  pagina: 323
+  atestaciones: 1
+  entrada_n: 721
+  cita_hechos: 3-10
+  ejemplo: A-BUCU-NNUA Ù-YA abbu = con ESPANTO .
+- raiz: waba-dù-n-ni-bia
+  concepto_es: 'ESPERAR :'
+  pagina: 324
+  atestaciones: 1
+  entrada_n: 723
+  cita_hechos: 1-4
+  ejemplo: mùn badya , Awa-wa — a-iyu-mùn-cun-di — a-sica-hitti-sia na-mùn u-bura = (que) ESPERASEN allí
+    lo que el Padre que está arriba les prometió ante
+- raiz: huda
+  concepto_es: ESPIRAR
+  pagina: 325
+  atestaciones: 1
+  entrada_n: 724
+  cita_hechos: 12-23
+  ejemplo: a-ke-hù-ca-n ise-hù-nnu [ ...] u-mùn, LU-ÙBOA A-HÁCU-BÚ-N tu-cunna-ria = su cuerpo fué comido
+    de gusanos y por esto ESPIRÓ .
+- raiz: ttimetta-ruhabba
+  concepto_es: ESPUERTA
+  pagina: 43
+  atestaciones: 1
+  entrada_n: 92
+  cita_hechos: 9-25
+  ejemplo: n-a-wa-rucu-du-cutta-i [-? ] abba tau abbu A-TTIMETTA-RUHABBA u-lluccu = con un cable le hicieron
+    bajar, dentro de una ESPUERTA.
+- raiz: bootu
+  concepto_es: ESQUIFE, bote, canoa, lancha
+  pagina: 43
+  atestaciones: 1
+  entrada_n: 93
+  cita_hechos: 27-16
+  ejemplo: 'w-a-bu-cutta BOOTU = pudimos ganar el ESQUIFE . [. : Al : ]'
+- raiz: ddi-coa
+  concepto_es: ESTAR
+  pagina: 326
+  atestaciones: 1
+  entrada_n: 726
+  cita_hechos: 1-4
+  ejemplo: l-a-hùrki-da-cuttu-n-benna-ye L-A-DDI-COA = ES-TANDO junto con ellos.
+- raiz: kia-haddunnua
+  concepto_es: ESTIMAR
+  pagina: 331
+  atestaciones: 1
+  entrada_n: 727
+  cita_hechos: 11-17
+  ejemplo: halli-ca-kebé malli-ccucù-ma-de da-i I-KIA-HADDUNNUA Gott uria ye ? = quién era yo que pudiese
+    ESTORBARLE a Dios (alejándolos de él ) .
+- raiz: habula
+  concepto_es: ESTRADO ; (v. escabel, asiento )
+  pagina: 43
+  atestaciones: 1
+  entrada_n: 94
+  cita_hechos: 7-49
+  ejemplo: wunabu u-man da-cutti A-HABULA hùa ba !! = la tierra es el ESTRADO de mis pies.
+- raiz: tatta
+  concepto_es: ESTRECHO
+  pagina: 113
+  atestaciones: 1
+  entrada_n: 325
+  cita_hechos: 5-28
+  ejemplo: TATTA REN = ESTRECHAMENTE (con toda fuerza) .
+- raiz: canna-kù
+  concepto_es: ESTRUENDO
+  pagina: 43
+  atestaciones: 1
+  entrada_n: 96
+  cita_hechos: '-6'
+  ejemplo: tuhu CA-CANNA-KÙ-CU = este ESTRUENDO.
+- raiz: imme-wabu
+  concepto_es: ETERNO
+  pagina: 113
+  atestaciones: 1
+  entrada_n: 326
+  cita_hechos: 13-46
+  ejemplo: IMME-WABU-TTU cakù-hù = la vida ETERNA . (o. immehuabuttu ) .
+- raiz: uttiki
+  concepto_es: EVITAR
+  pagina: 331
+  atestaciones: 1
+  entrada_n: 728
+  cita_hechos: 27-21
+  ejemplo: ica M-A-UTTIKI-N-NI-CUBA-MA-U dia-ma-ru manswa-ttu ca-monaica-hù yaha = y HABRÍAMOS EVITADO
+    (no habríamos encontrado) este gran daño aquí.
+- raiz: exhortaba
+  concepto_es: EXHORTAR
+  pagina: 332
+  atestaciones: 1
+  entrada_n: 730
+  cita_hechos: 11-23
+  ejemplo: ' testificaba y EXHORTABA. CABBU-HÙ-RI-CA-I, A-CUYA-BA-YE na-makua-kebé = CON LAS MANOS JUNTAS
+    [ ?] LES EX-HORTABA (rogaba ) a todos .'
+- raiz: seme
+  concepto_es: EXORCIZAR
+  pagina: 332
+  atestaciones: 1
+  entrada_n: 731
+  cita_hechos: 19-13
+  ejemplo: SEME-TTI dia mutti ke-wai ba = EXORCISTAS por cierto, también.
+- raiz: siki
+  concepto_es: EXPONER
+  pagina: 332
+  atestaciones: 1
+  entrada_n: 732
+  cita_hechos: 15-26
+  ejemplo: A-SIKI-TTI-CUBA-NU na cakù-wa ( sic ) na urua = HAN EXPUESTO sus vidas.
+- raiz: abba-wariatti
+  concepto_es: EXTRAÑAR
+  pagina: 333
+  atestaciones: 1
+  entrada_n: 735
+  cita_hechos: 26-11
+  ejemplo: wahù-ddù-n n-ibiti taha-wai ABBA-WARIATTI stadt-nu u-lluccu-muniru ren = los perseguí hasta
+    en las ciudades EXTRAÑAS .
+- raiz: tatta
+  concepto_es: FACULTAD, potestad, poder
+  pagina: 44
+  atestaciones: 1
+  entrada_n: 100
+  cita_hechos: 9-14
+  ejemplo: ca-bbukù-n U-TATTA-HÙ = recibió FACULTAD .
+- raiz: iyuhunnu
+  concepto_es: FAMILIA
+  pagina: 44
+  atestaciones: 1
+  entrada_n: 101
+  cita_hechos: 10-24
+  ejemplo: 'dia ye l-a-ha-nu, LU-IYUHUNNU muttu l-ibiti-wa habiendo también convo- = '
+- raiz: banna-mutti
+  concepto_es: FAZ
+  pagina: 45
+  atestaciones: 1
+  entrada_n: 102
+  cita_hechos: 17-26
+  ejemplo: na-makua wunabu U-BANNA-MUTTI = ante la FAZ de la tierra ( sobre la tierra ) .
+- raiz: dumma
+  concepto_es: FE
+  pagina: 45
+  atestaciones: 1
+  entrada_n: 103
+  cita_hechos: 3-16
+  ejemplo: lu-i iri U-DUMMA = en FE de su nombre (en razón ) .
+- raiz: bele
+  concepto_es: FERVOR
+  pagina: 45
+  atestaciones: 1
+  entrada_n: 104
+  cita_hechos: 18-25
+  ejemplo: BELE-TU ibittu-nnua ti dia muttu u-llua abbu = FERVIENTE de corazón . [ ?]
+- raiz: malli-t-a-coa-na-tti-bia
+  concepto_es: FIGURAR
+  pagina: 333
+  atestaciones: 1
+  entrada_n: 736
+  cita_hechos: 7-43
+  ejemplo: HU-MALLI-T-A-COA-NA-TTI-BIA hu-monnua rubuùn ame h-isica-ca = figuras (ídolos ) para vosotros
+    creer en ellos .
+- raiz: sica
+  concepto_es: FORZAR
+  pagina: 334
+  atestaciones: 1
+  entrada_n: 740
+  cita_hechos: 26-11
+  ejemplo: D-A-M-A-SICA-N-DI-KITTI-n Gott a-dia-hù ame-ye = los FORCÉ A NO CREER en la palabra de Dios.
+- raiz: sa-mmu-cu-doa
+  concepto_es: FRUTO
+  pagina: 46
+  atestaciones: 1
+  entrada_n: 110
+  cita_hechos: 14-17
+  ejemplo: wabu-nna-hù-sia A-SA-MMU-CU-DOA tu-dumma = tiempos FRUCTÍFEROS .
+- raiz: hikki
+  concepto_es: FUEGO
+  pagina: 46
+  atestaciones: 1
+  entrada_n: 111
+  cita_hechos: 19-19
+  ejemplo: HIKKI-HIa-cu-luccu-mùn-ni-n = adentro del FUEGO . NOMBRES 47 Fuego. 28
+- raiz: aiyaonta-hù-sia-bia
+  concepto_es: GANAR
+  pagina: 334
+  atestaciones: 1
+  entrada_n: 742
+  cita_hechos: 8-20
+  ejemplo: -coa-n-ti a-siki-sia-ru ù-tatta-hù AIYAONTA-HÙ-SIA-BIA-MA platta abbu- = que el don de la potestad
+    de Dios SEA GANADO con
+- raiz: mácu
+  concepto_es: GEMIR
+  pagina: 335
+  atestaciones: 1
+  entrada_n: 743
+  cita_hechos: 7-34
+  ejemplo: d-a-canna-ha ipiïu-n N-A-MÁCU-RÙ-N baddia = he oído el GEMIDO DE ELLOS.
+- raiz: yuhu
+  concepto_es: GENERACIÓN (v. engendrar, número, descendencia )
+  pagina: 47
+  atestaciones: 1
+  entrada_n: 112
+  cita_hechos: 2-40
+  ejemplo: m-a-cubu-ruccu-a-tti U-YUHU = perversa GENERACIÓN.
+- raiz: treppa
+  concepto_es: GRADA (v. escalón )
+  pagina: 48
+  atestaciones: 1
+  entrada_n: 116
+  cita_hechos: 21-35
+  ejemplo: 'Paulus a-ndi-n-ni-benna ... TREPPA ibiti [ . : Al : ] = habiendo Pablo llegado a las GRADAS
+    . Paulus a-muda kia TREPPA adiacu '
+- raiz: manswa
+  concepto_es: GRANDE
+  pagina: 114
+  atestaciones: 1
+  entrada_n: 327
+  cita_hechos: 4-33
+  ejemplo: MANSWA-TTU u-tatta-hu-GRAN esfuerzo . IPINU-TU ù-seica-hu = GRAN gracia.
+- raiz: iwi
+  concepto_es: GRANO, ( v. semilla, trigo )
+  pagina: 49
+  atestaciones: 1
+  entrada_n: 117
+  cita_hechos: 27-38
+  ejemplo: mehli IWI = GRANO del pan ( trigo ) .
+- raiz: canetta
+  concepto_es: GUIRNALDA
+  pagina: 49
+  atestaciones: 1
+  entrada_n: 118
+  cita_hechos: 14-13
+  ejemplo: 'CANETTA abbu [ . : ? ] = con GUIRNALDAS .'
+- raiz: ise
+  concepto_es: GUSANO
+  pagina: 49
+  atestaciones: 1
+  entrada_n: 119
+  cita_hechos: 12-23
+  ejemplo: 1-ipiru a-ke-hù-ca-n ISE-HÙ-NNU [ ??? ] u-mùn = su cuerpo fué comido de GUSANOS (Atención a
+    este plural) .
+- raiz: cuttu
+  concepto_es: GUSTAR
+  pagina: 339
+  atestaciones: 1
+  entrada_n: 751
+  cita_hechos: 20-11
+  ejemplo: A-CUTTU-N HAMMA-TALLI abbu baddia = y GUSTANDO [comiendo algo] .
+- raiz: mùn
+  concepto_es: HABER (v. Tener )
+  pagina: 339
+  atestaciones: 1
+  entrada_n: 752
+  cita_hechos: 2-45
+  ejemplo: uccu-dan na-wan na-ma-mutti u-mùn N-A-MÙN HITTI-SIA u-lluccu-di baddia = y como cada uno de
+    ellos HABÍA MENESTER .
+- raiz: hechas
+  concepto_es: HACER ( v. Obrar )
+  pagina: 346
+  atestaciones: 1
+  entrada_n: 755
+  cita_hechos: 1-1
+  ejemplo: ca-ca hidda tu-makua Jesus A-NI-SIA a-mallicutta-sia muttu u-cunna-mùn = he hablado acerca
+    de lo HECHO y enseñado por Jesús..
+- raiz: hamu
+  concepto_es: HAMBRE (Tener
+  pagina: 354
+  atestaciones: 1
+  entrada_n: 757
+  cita_hechos: 10-10
+  ejemplo: ipiu-tu HAMU-SIA-HÙ = una gran HAMBRE . [ sic ] kia-ni-benna HAMU-SIA-i = aconteció que él
+    T
+- raiz: sipara-lli
+  concepto_es: HIERRO
+  pagina: 51
+  atestaciones: 1
+  entrada_n: 124
+  cita_hechos: 12-10
+  ejemplo: SIPARA-LLI-tabahu-sibu = la puerta de HIERRO. [ v. Hiel]
+- raiz: ttu
+  concepto_es: HIJA
+  pagina: 51
+  atestaciones: 1
+  entrada_n: 125
+  cita_hechos: 2-17
+  ejemplo: h-a-ditti-nu-tti HU-TU-NU-TTI mutti = vuestros hijos y VUESTRAS HIJAS ( sic ) .
+- raiz: halli-kemme
+  concepto_es: HOLGARSE
+  pagina: 356
+  atestaciones: 1
+  entrada_n: 763
+  cita_hechos: 7-41
+  ejemplo: HALLI-KEMME cu N-A na-ccabbu-wa abbu a-malliti-sia-ru u-mùn = SE HOLGARON en la obra de sus
+    propias manos .
+- raiz: ikitta
+  concepto_es: HONRAR
+  pagina: 356
+  atestaciones: 1
+  entrada_n: 764
+  cita_hechos: 18-13
+  ejemplo: lihi a-ttiki-da-ca-ye lucu-nnu ( sic ) , N-IKITTA-MA-i Gott = él persuade a los hombres, a
+    HONRAR a Dios .
+- raiz: dum-kitta
+  concepto_es: HOSPEDAR
+  pagina: 357
+  atestaciones: 1
+  entrada_n: 765
+  cita_hechos: 17-21
+  ejemplo: 'L-A-DUM-KITTA baddia kia ù-sikua-mùn-ni-ye = los HOSPEDÓ en la casa (los hizo estar ) . L-A-DUM-KITTA
+    lù-sikua-mùn '
+- raiz: iya-cattù
+  concepto_es: HUIR
+  pagina: 435
+  atestaciones: 1
+  entrada_n: 891
+  cita_hechos: 20-27
+  ejemplo: tt ca-nsi-sia wa-mùn u-cunna-mùntu a-dia-hù D-A-IYA-CATTÙ-N hu-uria de = no HE REHUÍDO de anunciaros
+    nada de lo que Dios exige de nosotros . 35
+- raiz: kkùrkùa
+  concepto_es: IGLESIA ( v. rebaño )
+  pagina: 54
+  atestaciones: 1
+  entrada_n: 131
+  cita_hechos: 5-11
+  ejemplo: Jesus Ù-KKÙRKÙA = la IGLESIA de Jesús (la congregación ) .
+- raiz: ditti-n-ma-bùa
+  concepto_es: IGNORAR, (v. Saber )
+  pagina: 358
+  atestaciones: 1
+  entrada_n: 768
+  cita_hechos: 3-17
+  ejemplo: hui M-A-DITTI-N-MA-BÙA yidia-muttu-cubá a-ni-ni = vosotros por IGNORANCIA habéis hecho esto.
+- raiz: ikiaha-ddu
+  concepto_es: IMPEDIR
+  pagina: 358
+  atestaciones: 1
+  entrada_n: 769
+  cita_hechos: 8-6
+  ejemplo: hamma-hù bahá IKIAHA-DDU-N-NI-CA-N a-sucusucuttu-n-nua uria de? = qué impide que yo sea bautizado
+    ?
+- raiz: malli
+  concepto_es: IMPOSIBLE (v. poder)
+  pagina: 116
+  atestaciones: 1
+  entrada_n: 332
+  cita_hechos: 2-24
+  ejemplo: M-A-MALLI-kebe-ca = era IMPOSIBLE .
+- raiz: iyaon-ti-n-rubu-bali
+  concepto_es: IMPUTAR
+  pagina: 359
+  atestaciones: 1
+  entrada_n: 771
+  cita_hechos: 7-60
+  ejemplo: A-daiya-hù , M-A-IYAON-TI-N-RUBU-BALI na-mùn tuhu na-m-a-sica-ni-hù = Señor, NO les IMPUTES
+    este su pecado.
+- raiz: bia
+  concepto_es: IN (a (v. Para )
+  pagina: 515
+  atestaciones: 1
+  entrada_n: 1015
+  cita_hechos: 3-26
+  ejemplo: ù-wùsa-dù-n 1-a-ni-BIA hù = a FIN de que (para que) os bendijese .
+- raiz: ttiki
+  concepto_es: INCITAR (v. Inducir)
+  pagina: 359
+  atestaciones: 1
+  entrada_n: 772
+  cita_hechos: 14-2
+  ejemplo: judu-nnu A-TTIKI-DA-CA a-imaha-cutta-baddia-ye heidi-nu = los judíos INCITARON e irritaron
+    a los gentiles .
+- raiz: balta
+  concepto_es: INCORPORARSE (v. Levantarse)
+  pagina: 359
+  atestaciones: 1
+  entrada_n: 773
+  cita_hechos: 9-40
+  ejemplo: a-ddiki-n t-a-ni-ca-i Petrus, TU-BALTA = viendo ella a Pedro, INCORPORÓSE .
+- raiz: sica-ni-coa
+  concepto_es: INCREDULO
+  pagina: 55
+  atestaciones: 1
+  entrada_n: 132
+  cita_hechos: 14-2
+  ejemplo: M-A-SICA-NI-COA-mutti judu-nnu = y los judíos INCREDULOS .
+- raiz: sica-ni-coa
+  concepto_es: 'INCREDULO :'
+  pagina: 116
+  atestaciones: 1
+  entrada_n: 334
+  cita_hechos: 14-2
+  ejemplo: M-A-SICA-NI-COA mutti judu-nnu = y los judíos INCREDULOS.
+- raiz: ihitti-a
+  concepto_es: INFIERNO (v. sepulcro )
+  pagina: 56
+  atestaciones: 1
+  entrada_n: 133
+  cita_hechos: '-31'
+  ejemplo: L-IHITTI-A-TTI-NA u-lluccu-mùn = en SU INFIERNO .
+- raiz: ima-ima-doa
+  concepto_es: INJURIAR
+  pagina: 359
+  atestaciones: 1
+  entrada_n: 775
+  cita_hechos: 7-26
+  ejemplo: mma u-dumma HU-M-A-IMA-IMA-DOA-CA humùn-ni-coa-wa , cahuke-ti hùa-hù ? = por qué OS INJURIAIS
+    unos a otros , siendo hermanos ?
+- raiz: hada-cuttu
+  concepto_es: INQUIRIR
+  pagina: 360
+  atestaciones: 1
+  entrada_n: 776
+  cita_hechos: 12-19
+  ejemplo: L-A-HADA-CUTTU-N baddia ye soldaru-nu = HECHA INQUISICIÓN de los soldados ( habiendo preguntado
+    a los soldados
+- raiz: bullitù-kù
+  concepto_es: INSCRIBIR
+  pagina: 360
+  atestaciones: 1
+  entrada_n: 777
+  cita_hechos: 17-23
+  ejemplo: 'a-iyu-mùn-tu-coa-na-wa , hiddia-muttu T-A-BULLITÙ-KÙ tu-cunna-wa = en el cual estaba esta
+    INSCRIPCIÓN :'
+- raiz: malli-cutta
+  concepto_es: INSTRUÍR (v. Enseñar )
+  pagina: 360
+  atestaciones: 1
+  entrada_n: 778
+  cita_hechos: 18-25
+  ejemplo: A-MALLI-CUTTA-SIA-CUBA i lihi = éste ERA INSTRUÍDO .
+- raiz: haica-doa
+  concepto_es: INTERPRETAR
+  pagina: 360
+  atestaciones: 1
+  entrada_n: 779
+  cita_hechos: 4-36
+  ejemplo: A-HAICA-DOA-HÙ u-ccubu-ruccu a-ditti = que se
+- raiz: haca
+  concepto_es: INTIMAR (v. Ordenar, Mandar )
+  pagina: 361
+  atestaciones: 1
+  entrada_n: 781
+  cita_hechos: 23-30
+  ejemplo: te palabra) . D-A-HACA-CUBA ihittira-tti-cu-nnu lù-yaluccu u-mùn badya = INTIMANDO ( diciendo
+    ) también a los que acusan contra él .
+- raiz: mimili
+  concepto_es: INVERNAR
+  pagina: 361
+  atestaciones: 1
+  entrada_n: 782
+  cita_hechos: 28-11
+  ejemplo: abba MIMILI-CA u-cunna-man tuhu cairi mùn-ni-cuba-ru ... meyu u-lluccu = nos embarcamos en
+    una nave que había INVERNADO en la isla.
+- raiz: ima-ttu-nnua
+  concepto_es: IRA
+  pagina: 56
+  atestaciones: 1
+  entrada_n: 134
+  cita_hechos: 19-28
+  ejemplo: maswa cu n-a A-IMA-TTU-NNUA = = y SE LLENARON de gran IRA.
+- raiz: pusi
+  concepto_es: JUSTIFICAR
+  pagina: 366
+  atestaciones: 1
+  entrada_n: 787
+  cita_hechos: 13-39
+  ejemplo: m-a-malli-ma-sia A-PUSI-DI-N-NI-YE = no pueden SER JUSTIFICADOS .
+- raiz: ruma
+  concepto_es: LADO
+  pagina: 56
+  atestaciones: 1
+  entrada_n: 136
+  cita_hechos: 12-7
+  ejemplo: enhel a-burù-ca i Petrus A-RUMA u cunna = el ángel hirió a Pedro en el LADO.
+- raiz: ttu-ba-ddù-pa
+  concepto_es: LARGAR (v. Soltar )
+  pagina: 368
+  atestaciones: 1
+  entrada_n: 790
+  ejemplo: t go. t-isi-ruccu-waria W-A-TTU-BA-DDÙ-PA-N anker, n-amulli-ca-hù abbu = con el engaño de LARGAR
+    las anclas de proa.
+- raiz: kuddù-kù-si
+  concepto_es: LARGO
+  pagina: 117
+  atestaciones: 1
+  entrada_n: 338
+  cita_hechos: '-11'
+  ejemplo: KUDDÙ-KÙ-SI-N ba l-a-dia-dù-n na-mùn = les habló LARGAMENTE .
+- raiz: lihi
+  concepto_es: LE, a ÉL, ( dativo )
+  pagina: 169
+  atestaciones: 1
+  entrada_n: 423
+  cita_hechos: 2-30
+  ejemplo: Gott LU-mùn , A-sica-cuba-ru = habiéndoLE Dios jurado .
+- raiz: wakille-ria
+  concepto_es: LEJOS
+  pagina: 518
+  atestaciones: 1
+  entrada_n: 1021
+  cita_hechos: 2-39
+  ejemplo: na-makua WAKILLE-RIA-tti = todos los que están LEJOS.
+- raiz: ehelu-du
+  concepto_es: LENGUA, (anatómica )
+  pagina: 57
+  atestaciones: 1
+  entrada_n: 140
+  cita_hechos: 2-3
+  ejemplo: hikki-hi EHELU-DU-N dia = como LENGUAS de fuego. [ Llamas ?]
+- raiz: buraha-di-kittu
+  concepto_es: LEVADURA (v . ácimo )
+  pagina: 58
+  atestaciones: 1
+  entrada_n: 143
+  cita_hechos: 12-3
+  ejemplo: M-A-BURAHA-DI-KITTU mehli = panes sin LEVADURA (ácimos ) .-
+- raiz: kimisa
+  concepto_es: LIENZO (v. ropa , camisa )
+  pagina: 58
+  atestaciones: 1
+  entrada_n: 146
+  cita_hechos: 11-5
+  ejemplo: KIMISA dia-maru a-ke = como un LIENZO para vestidos . NOMBRES 59
+- raiz: imeni-cuttu
+  concepto_es: LIGAR (v. Atar )
+  pagina: 272
+  atestaciones: 1
+  entrada_n: 795
+  cita_hechos: 20-22
+  ejemplo: ù-sa-tti ù-ya-hù u-mùn IMENI-CUTTU-SIA hunna de = LIGADO yo en espíritu santo . VERBOS, PARTICIPIOS
+    Y VERBALES 373
+- raiz: ribe
+  concepto_es: LIMPIAR (v. Lavar)
+  pagina: 373
+  atestaciones: 1
+  entrada_n: 796
+  cita_hechos: 10-15
+  ejemplo: Gott A-M-A-RIBE-N-DA-HÙ-SIA, cuлu m-eribe-n-ti-n-bu-pa = LO QUE Dios LIMPIÓ, no lo llames im
+- raiz: wù-sia-ti-n-i
+  concepto_es: LLORAR (v. Lágrima)
+  pagina: 380
+  atestaciones: 1
+  entrada_n: 801
+  cita_hechos: 8-2
+  ejemplo: manswa cu n-a Ù-WÙ-SIA-TI-N-I = hicieron gran LLANTO sobre él.
+- raiz: yaudi
+  concepto_es: LOCO
+  pagina: 60
+  atestaciones: 1
+  entrada_n: 150
+  cita_hechos: 12-15
+  ejemplo: A-YAUDI-TU a bu-i baha !! = acaso estás LOCA !! 26
+- raiz: ni-kebe
+  concepto_es: LUEGO
+  pagina: 518
+  atestaciones: 1
+  entrada_n: 1022
+  cita_hechos: 3-7
+  ejemplo: NI-KEBE-N lu-cutti-wa, lu-cuiu cu tatta-bu-ddi-ca = LUEGO fueron afirmados sus pies y sus tobillos
+    .
+- raiz: ya-luccu-du
+  concepto_es: LUGAR
+  pagina: 60
+  atestaciones: 1
+  entrada_n: 151
+  cita_hechos: 1-25
+  ejemplo: 'U-YA-LUCCU-DU-WA bia i = para IRSE A SU LUGAR . 431 BAHÙ ca-lluccu-mùn tu n-a-hù… ukù-da-n
+    === '
+- raiz: catti
+  concepto_es: LUNA (v . mes )
+  pagina: 60
+  atestaciones: 1
+  entrada_n: 152
+  cita_hechos: 2-20
+  ejemplo: dia tu-ppa CATTI ù-ttù bia = como también la LUNA en sangre (se convertirá) . NOMBRES 61
+- raiz: ikira
+  concepto_es: LÁGRIMA
+  pagina: 56
+  atestaciones: 1
+  entrada_n: 137
+  cita_hechos: 20-19
+  ejemplo: D-IKIRA abba = con MIS LÁGRIMAS .
+- raiz: mmali-kebe
+  concepto_es: LÍCITO
+  pagina: 117
+  atestaciones: 1
+  entrada_n: 340
+  cita_hechos: 16-21
+  ejemplo: ca-lluccu-di-curu wa-i M-A-MMALI-KEBE-CA w-a-ni-n = de acuerdo con los cuales no nos es LÍ-CITO
+    obrar.
+- raiz: dda
+  concepto_es: MADERO (v . palo, árbol )
+  pagina: 61
+  atestaciones: 1
+  entrada_n: 155
+  cita_hechos: 10-39
+  ejemplo: n-a-iyuhu-du-cutta A-DDA u-cunna ba i = y colgándolo ellos de un MADERO .
+- raiz: sanù-wai
+  concepto_es: MAGNIFICAR
+  pagina: 380
+  atestaciones: 1
+  entrada_n: 803
+  cita_hechos: 10-46
+  ejemplo: 'Ù-SANÙ-WAI m-an N-A-MALLI-T-A-COA-N-TI umùn baddia = y MAGNIFICABAN a su Dios . [ cf. H :
+    hosannah ] .'
+- raiz: boa
+  concepto_es: MAL
+  pagina: 519
+  atestaciones: 1
+  entrada_n: 1023
+  cita_hechos: 24-20
+  ejemplo: 'halli-ca-kebe-muttu A-BOA-ttu = alguna cosa MAL hecha . 520 Arw) ARAWAK 2 : Fraseario'
+- raiz: pamu-n-nnua
+  concepto_es: MAL (nombre )
+  pagina: 62
+  atestaciones: 1
+  entrada_n: 159
+  cita_hechos: 16-28
+  ejemplo: M-A-PAMU-N-NNUA bali b-óaya !! NO TE = HAGAS MAL !! (no te hieras o mates o lastimes ) . hallica-i
+    cuu A-IYUL
+- raiz: iyula-tta
+  concepto_es: MALTRATAR
+  pagina: 381
+  atestaciones: 1
+  entrada_n: 805
+  cita_hechos: '-19'
+  ejemplo: manswan l-a A-IYULA-TTA wa-bura-tti ansi = él MALTRATÓ en gran manera a nuestros antepasados.
+- raiz: raiya-ru-pa
+  concepto_es: MANIFESTAR
+  pagina: 383
+  atestaciones: 1
+  entrada_n: 807
+  cita_hechos: 2-20
+  ejemplo: -ha ipiлu-cuлu CA-RAIYA-RU-PA A-daiya-hù ù-ccasaccabu-n a-ndi-n u-bura = antes que venga este
+    día del Señor, grande y MANIFIESTO .
+- raiz: ire
+  concepto_es: MARIDO
+  pagina: 66
+  atestaciones: 1
+  entrada_n: 165
+  cita_hechos: '-10'
+  ejemplo: T-IRE-TI a-mùn = con , junto a SU MARIDO .
+- raiz: mauttia
+  concepto_es: MAÑANA ( La
+  pagina: 520
+  atestaciones: 1
+  entrada_n: 1024
+  cita_hechos: 5-21
+  ejemplo: n-a-cudoa hidda MAUTTIA-BU-REN = entraron DE ΜΑΝΑΝΑ.
+- raiz: annakuddi
+  concepto_es: MEDIO
+  pagina: 118
+  atestaciones: 1
+  entrada_n: 342
+  cita_hechos: 16-25
+  ejemplo: ca-saccu-da ANNAKUDDI-BU u-cunna = a MEDIA noche .
+- raiz: cuttu
+  concepto_es: MENESTER (v. Necesitar ; Deber )
+  pagina: 386
+  atestaciones: 1
+  entrada_n: 810
+  cita_hechos: 3-21
+  ejemplo: 'lu-i-ke-wai A-BU-CUTTU-N lu-ppa casaccu lu-mon-nua = al cual es MENESTER que el cielo TENGA.
+    i-benna-ria asica-hù-sia-cubá '
+- raiz: mutta-rubu-mutti-de
+  concepto_es: MENOSPRECIAR
+  pagina: 387
+  atestaciones: 1
+  entrada_n: 811
+  cita_hechos: 13-41
+  ejemplo: griegos) ?] h-a-ddica-te, A-MUTTA-RUBU-MUTTI-DE = mirad, oh MIS DESPRECIADORES.
+- raiz: mulli
+  concepto_es: MENTIR
+  pagina: 387
+  atestaciones: 1
+  entrada_n: 812
+  cita_hechos: 5-3
+  ejemplo: BU-MULLI-DA-N-TI ù-sa-tti ù-ya-hù u-mùn = que MINTIESES al Espíritu Santo .
+- raiz: cudu-cuttu
+  concepto_es: METER (v. Entrar, Poner )
+  pagina: 387
+  atestaciones: 1
+  entrada_n: 813
+  cita_hechos: 10-23
+  ejemplo: tta-dù-coa-na-ttu bahủ tumakua abbu-mùn-tu ùttaca a u-lluccu-mùn-ni-ye = los METIÓ ( echó )
+    en lo más interior de la cárcel .
+- raiz: haca
+  concepto_es: MINISTRAR (v. Administrar, Atender )
+  pagina: 388
+  atestaciones: 1
+  entrada_n: 814
+  cita_hechos: 1-17
+  ejemplo: A-HACA-TI bia i lu-cunna-mùn wa-ma ren = tenía-25
+- raiz: dumma
+  concepto_es: MODO (MANERA ) , ( v . Como )
+  pagina: 322
+  atestaciones: 1
+  entrada_n: 1028
+  cita_hechos: 4-9
+  ejemplo: CA-DUMMA-TTU = DE QUE MODO .
+- raiz: seme
+  concepto_es: MOSTO
+  pagina: 67
+  atestaciones: 1
+  entrada_n: 171
+  cita_hechos: 2-13
+  ejemplo: 'somole-ye SEME-TU WINU abbu = están borrachos de MOSTO. [ winu, . : E : ]'
+- raiz: du-cutta-te
+  concepto_es: MOSTRAR ( v . Ver )
+  pagina: 292
+  atestaciones: 1
+  entrada_n: 819
+  cita_hechos: 1-24
+  ejemplo: BU-DU-CUTTA-TE U = MUÉSTRA-nos.
+- raiz: tuiyula-ddù-kù
+  concepto_es: MOVER
+  pagina: 393
+  atestaciones: 1
+  entrada_n: 820
+  cita_hechos: 27-41
+  ejemplo: t-isiri hatta kebé hiddan, m-a-mmalli-kebe-ca TUIYULA-DDÙ-KÙ = y la proa hincada, no podía
+    MOVERSE .
+- raiz: hiaru
+  concepto_es: MUJER, hembra
+  pagina: 68
+  atestaciones: 1
+  entrada_n: 175
+  cita_hechos: 5-14
+  ejemplo: yuhu-lli wadi-li-nu HIARU-NU mutti = muchos hombres y MUJERES .
+- raiz: hunna-hunna-dù
+  concepto_es: MURMURAR
+  pagina: 393
+  atestaciones: 1
+  entrada_n: 822
+  cita_hechos: 6-1
+  ejemplo: ica-ké graece-nu a-usù-n A-HUNNA-HUNNA-DÙ-N hebraer-nu u-yaluccu = así pues los griegos empezaron
+    a MURMURAR contra los hebreos .
+- raiz: kkürkùa
+  concepto_es: NACIÓN, pueblo, familia
+  pagina: 70
+  atestaciones: 1
+  entrada_n: 179
+  cita_hechos: 2-5
+  ejemplo: na-makua ... Ù-KKÜRKÙA-HÙ = toda NACIÓN .
+- raiz: hamma-ta-lli
+  concepto_es: NADA
+  pagina: 218
+  atestaciones: 1
+  entrada_n: 467
+  cita_hechos: 4-14
+  ejemplo: na-moлua m-ammalli-n rubu hinna HAMMA-TA-LLI a-dia-n kia ù-ya-luccu = no podían decir NADA
+    (cosa) en contra.
+- raiz: ttimu
+  concepto_es: NADAR
+  pagina: 394
+  atestaciones: 1
+  entrada_n: 824
+  cita_hechos: 27-42
+  ejemplo: n-a-ttùddù-n-kebe-n-a-n-ti N-A-TTIMU-N abbu = que no se fugasen NADANDO.
+- raiz: halle
+  concepto_es: NECESITAR
+  pagina: 395
+  atestaciones: 1
+  entrada_n: 826
+  cita_hechos: 4-34
+  ejemplo: abba-cuлu M-A-HALLE-TI na-nnaha-n-ni-ruccu-mùncubà = ningún NECESITADO había entre ellos .
+- raiz: mulli-da-ni-benna-i
+  concepto_es: NEGAR
+  pagina: 395
+  atestaciones: 1
+  entrada_n: 827
+  cita_hechos: 3-14
+  ejemplo: hu-moлua A-MULLI-DA-NI-BENNA-I = mas voSotros LO NEGASTEIS . wa-i baddia m-a-mmali-n rubu wa
+    EBERU-N-NU
+- raiz: hallu
+  concepto_es: NINGUNO
+  pagina: 214
+  atestaciones: 1
+  entrada_n: 465
+  cita_hechos: 11-8
+  ejemplo: ABBA-CUNU m-a-halle-ti na-nnaha-nni-ruccu-mùn-cubá = NINGÚN necesitado había entre ellos .
+    HALLI-CA-I CUMU luccu-hu d-a-mat
+- raiz: saccu
+  concepto_es: NOCHE (cf. día, cielo )
+  pagina: 71
+  atestaciones: 1
+  entrada_n: 180
+  cita_hechos: 5-19
+  ejemplo: CA-SACCU-DA u-cunna = de, por la NOCHE. 9
+- raiz: dittoa-li
+  concepto_es: NOTICIAR (v. Notorio )
+  pagina: 397
+  atestaciones: 1
+  entrada_n: 829
+  cita_hechos: 2-14
+  ejemplo: H-A-DITTOA-LI = os sea NOTORIO ( sabed, cono-ced) .
+- raiz: wura
+  concepto_es: NUBE
+  pagina: 72
+  atestaciones: 1
+  entrada_n: 181
+  cita_hechos: 14-17
+  ejemplo: wuin WURA-RU = NUBES de lluvia.
+- raiz: ni-bu-te
+  concepto_es: OBRAR; (v. Hacer)
+  pagina: 398
+  atestaciones: 1
+  entrada_n: 831
+  cita_hechos: 13-2
+  ejemplo: ca-maiyana-cu-muttu yuhuu-kebé Ù-SA-TTU t-a-nisia = y también era conocida por el gran número
+    de BUENAS (OBRAS ) que hacía
+- raiz: te-cabbuin-te-man-ni-le
+  concepto_es: OCTAVO
+  pagina: 121
+  atestaciones: 1
+  entrada_n: 349
+  cita_hechos: 7-8
+  ejemplo: TE-CABBUIN-TE-MAN-NI-LE ca-sacca-bbu-hù = el OCTAVO día.
+- raiz: lini
+  concepto_es: OFICIO
+  pagina: 72
+  atestaciones: 1
+  entrada_n: 183
+  cita_hechos: 19-25
+  ejemplo: platta A-LINI-NU OFICIALES plateros . tuccuda WA-MALLI-TI-SIA-RU abbu = = con este OFICIO nuestro.
+- raiz: sica
+  concepto_es: OFRECER
+  pagina: 399
+  atestaciones: 1
+  entrada_n: 832
+  cita_hechos: 7-41
+  ejemplo: N-A-SICA tu-mùn oser = le OFRECIERON sacrificio (oser Al:)
+- raiz: cunnu-cuttu-nti
+  concepto_es: ONDUCIR
+  pagina: 261
+  atestaciones: 1
+  entrada_n: 600
+  cita_hechos: 13-11
+  ejemplo: 'A-CUNNU-CUTTU-NTI daddia i ibiti = quien le CONDUJESE [ ?] . 262 Arw) ARAWAK 2 : Fraseario'
+- raiz: aiyula-tta
+  concepto_es: OPRIMIR
+  pagina: 404
+  atestaciones: 1
+  entrada_n: 834
+  cita_hechos: 10-38
+  ejemplo: sa-dù-n baddia ye na-makua yawa-hù u-mùn AIYULA-TTA-HÙ-SIA-NNU tu uria = sanando a todos los
+    OPRIMIDOS del diablo.
+- raiz: muda
+  concepto_es: ORAR ( v . Habitar, Residir, Vivir )
+  pagina: 389
+  atestaciones: 1
+  entrada_n: 817
+  cita_hechos: 1-13
+  ejemplo: 'N-A-MUDA sura-ban-di hiddia-mutti Jesus ca-nsisia-nu = en una sala donde MORABAN los discípulos
+    de Jesùs. 390 Arw ) ARAWAK 2 '
+- raiz: statuta
+  concepto_es: ORDENAR (v. Mandar )
+  pagina: 406
+  atestaciones: 1
+  entrada_n: 836
+  cita_hechos: 6-14
+  ejemplo: 1-isiki-n hidda-pa wa-mùn abba STATUTA ba = y nos dará otra ORDENANZA .
+- raiz: llebu-mùn
+  concepto_es: ORILLA, costa, labio
+  pagina: 73
+  atestaciones: 1
+  entrada_n: 186
+  cita_hechos: 27-39
+  ejemplo: TÙ-LLEBU abbu = con SU ORILLA.
+- raiz: caxucu-lli
+  concepto_es: ORO
+  pagina: 73
+  atestaciones: 1
+  entrada_n: 187
+  cita_hechos: 20-33
+  ejemplo: CAXUCU-LLI = ORO.
+- raiz: malli
+  concepto_es: OSAR (v. Atreverse )
+  pagina: 406
+  atestaciones: 1
+  entrada_n: 837
+  cita_hechos: 5-13
+  ejemplo: M-A-MALLI-CA a-iyula-ttù-n n-ansi = no OSABAN (podían ) juntarse con ellos.
+- raiz: haule
+  concepto_es: PARED
+  pagina: 77
+  atestaciones: 1
+  entrada_n: 195
+  cita_hechos: 23-3
+  ejemplo: HAULE ti dia kebé = como PARED BLANQUEADA .
+- raiz: yuhu
+  concepto_es: 'PARIENTE :'
+  pagina: 77
+  atestaciones: 1
+  entrada_n: 196
+  cita_hechos: 7-3
+  ejemplo: BU-YUHU-NNU = TU PARENTELA ( tus parientes) .
+- raiz: wai-kille
+  concepto_es: PARTE, lugar, ( v. campo, región, provincia )
+  pagina: 77
+  atestaciones: 1
+  entrada_n: 197
+  cita_hechos: 2-10
+  ejemplo: MA-WAI-KILLE-TTI Cyrenen uria = A LA OTRA PARTE de Cirene . [ ??]
+- raiz: cunnu
+  concepto_es: PARTIR ( Irse )
+  pagina: 408
+  atestaciones: 1
+  entrada_n: 843
+  cita_hechos: 16-10
+  ejemplo: ni-kebe-ca yuran w-a-nsi A-CUNNU-N Maced muniru = luego procuramos PARTIR a Macet na W-A-CUYU-N-NUA-BENNA
+    Troas uria-PAR
+- raiz: iyaha-dda
+  concepto_es: PASAR
+  pagina: 410
+  atestaciones: 1
+  entrada_n: 845
+  cita_hechos: 8-40
+  ejemplo: yu-mùn A-IYAHA-DDA la-nica-tu-makua-di = PASANDO él allí por todas partes.
+- raiz: bura
+  concepto_es: PATRIA
+  pagina: 78
+  atestaciones: 1
+  entrada_n: 198
+  cita_hechos: 28-17
+  ejemplo: disia-ni-ye WA-BURA-TTI u-yaluccu = contra los ritos de la PATRIA (de los antepasados ) .
+- raiz: rubu
+  concepto_es: PEQUEÑO ( v. hijo, niño )
+  pagina: 123
+  atestaciones: 1
+  entrada_n: 353
+  cita_hechos: 19-23
+  ejemplo: NI RUBU cuлu = = no PEQUEÑO.
+- raiz: ttiki-di-pa
+  concepto_es: PERECER
+  pagina: 414
+  atestaciones: 1
+  entrada_n: 852
+  cita_hechos: 27-34
+  ejemplo: abba-can cuлu u-baia A-TTIKI-DI-PA h-isi adi-acuwaria = ni un cabello de vuestra cabeza PERECERÁ.
+- raiz: hitti-n-coa
+  concepto_es: PERMANECER
+  pagina: 414
+  atestaciones: 1
+  entrada_n: 853
+  cita_hechos: 14-22
+  ejemplo: da cu baddia ye, M-A-HITTI-N-COA-RE n-a-ni-bia nù-ùsa-da-coa-n-ti umùn = exhortándoles a que
+    PERMANECIESEN en su fe.
+- raiz: icca
+  concepto_es: PERO ( v . Mas, Empero )
+  pagina: 528
+  atestaciones: 1
+  entrada_n: 1037
+  cita_hechos: 5-25
+  ejemplo: ICCA abba-lù-wai a-nda n-ibiti = PERO alguno vino a ellos.
+- raiz: iyula-ttù-kütta
+  concepto_es: PERSEGUIR
+  pagina: 415
+  atestaciones: 1
+  entrada_n: 855
+  cita_hechos: 18-50
+  ejemplo: N-A-IYULA-TTÙ-KÜTTA-N-TI-YE (sic ) Barnabas Paulus mutti ansi = LEVANTARON PERSECU-SIÓN contra
+    Bernabé y Pablo .
+- raiz: ccubu-ruccu-a
+  concepto_es: PERVERSO
+  pagina: 123
+  atestaciones: 1
+  entrada_n: 354
+  cita_hechos: 2-40
+  ejemplo: naha M-A-CCUBU-RUCCU-A-TI u-yuhu = esta PERVERSA generación .
+- raiz: platta
+  concepto_es: PLATA, dinero ( v . moneda )
+  pagina: 80
+  atestaciones: 1
+  entrada_n: 206
+  cita_hechos: 17-29
+  ejemplo: 'PLATTA, siba cusa = PLATA o piedra [ . : E : ] . etc. , etc.'
+- raiz: cattule
+  concepto_es: POLVO
+  pagina: 81
+  atestaciones: 1
+  entrada_n: 209
+  cita_hechos: 22-23
+  ejemplo: a-paddu-cuttu-n TÙ-CATTULE a-iyu-muniru = echando POLVO al aire.
+- raiz: dina
+  concepto_es: PONER
+  pagina: 418
+  atestaciones: 1
+  entrada_n: 862
+  ejemplo: ', I : to put. biama-nnu wadili-nu hallira-tti ca-ke-n A-DINA-MA na-mùn = dos varones con vestido
+    blanco SE PU'
+- raiz: ipil
+  concepto_es: PONTÍFICE
+  pagina: 81
+  atestaciones: 1
+  entrada_n: 210
+  cita_hechos: 5-24
+  ejemplo: IPIL-TI PRIESTER = el PONTÍFICE . ( el principal sacerdote ) .
+- raiz: sicoa-ti-kill
+  concepto_es: POSAR (v. Pernoctar, Dormir, Alojarse )
+  pagina: 420
+  atestaciones: 1
+  entrada_n: 863
+  cita_hechos: 10-6
+  ejemplo: n-a-uttiki-pa-i CA-SICOA-TI-KILL bara ù-llebbu-mùn = le encontrarán POSANDO en la costa del
+    mar.
+- raiz: huhuru
+  concepto_es: POSEER (v. Haber, Tener )
+  pagina: 421
+  atestaciones: 1
+  entrada_n: 864
+  cita_hechos: '-45'
+  ejemplo: n-a-nda t-abbu ba Josua uma tuhu heidi-nu U-HUHURU-muniru = vinieron con esto con Josué a la
+    POSESIÓN de los gentiles . —
+- raiz: ittiki
+  concepto_es: POSTRARSE
+  pagina: 421
+  atestaciones: 1
+  entrada_n: 865
+  cita_hechos: 20-9
+  ejemplo: L-ITTIKI-DA a-dum-ca-hù u-lluccu = POSTRADO (caído en ) del sueño .
+- raiz: ddiki
+  concepto_es: POSTRERO, último
+  pagina: 124
+  atestaciones: 1
+  entrada_n: 358
+  cita_hechos: 2-17
+  ejemplo: A-DDIKI-TTU ca-sacca-bbu-hù u-cunna = en los POSTREROS días.
+- raiz: yauna
+  concepto_es: PRECIO
+  pagina: 81
+  atestaciones: 1
+  entrada_n: 213
+  cita_hechos: 19-19
+  ejemplo: na-carta-n Ù-YAUNA = el PRECIO de sus libros .
+- raiz: haca
+  concepto_es: PREDICAR
+  pagina: 421
+  atestaciones: 1
+  entrada_n: 867
+  cita_hechos: 9-20
+  ejemplo: 1-usa hidda A-HACA-N judu-nnu u-kerki así co- = menzó a PREDICAR en el templo de los judíos
+    .
+- raiz: hada-cutta
+  concepto_es: PREGUNTAR ( Interrogar )
+  pagina: 422
+  atestaciones: 1
+  entrada_n: 868
+  cita_hechos: 4-7
+  ejemplo: N-A-HADA-CUTTA-YE = LES PREGUNTARON.
+- raiz: prendieron
+  concepto_es: PRENDER
+  pagina: 423
+  atestaciones: 1
+  entrada_n: 869
+  cita_hechos: 2-23
+  ejemplo: de los que PRENDIERON a Jesús . lu-i-ké ... hu-i HU-BU-CUTTA-CUBA-I = a éste , vosotros LO
+    PRENDISTEIS. 9
+- raiz: ipilli
+  concepto_es: PREPÓSITO
+  pagina: 81
+  atestaciones: 1
+  entrada_n: 214
+  cita_hechos: 18-8
+  ejemplo: 'kerki IPILLI-BE-TTI = el PREPÓSITO del templo . 82 Arw )ARAWAK 2 : Fraseario'
+- raiz: ehera
+  concepto_es: PRESTO ( v. Pronto, Prisa )
+  pagina: 532
+  atestaciones: 1
+  entrada_n: 1042
+  cita_hechos: 12-7
+  ejemplo: b-a-cùnne-coa-te M-EHERA-hua bu = levántate PRESTAMENTE .
+- raiz: uakunna
+  concepto_es: PREVALECER
+  pagina: 426
+  atestaciones: 1
+  entrada_n: 871
+  cita_hechos: 19-20
+  ejemplo: CA-UAKUNNA-N tu-makua abba adi-n ba = PREVALECÍA sobre cualquier otra.
+- raiz: daina
+  concepto_es: PRINCIPAL
+  pagina: 124
+  atestaciones: 1
+  entrada_n: 360
+  cita_hechos: 13-50
+  ejemplo: abba-nu yu-mùn-ti A-DAINA-SIA-NNU = algunos PRINCIPALES de allí.
+- raiz: usù
+  concepto_es: PRINCIPIAR (v. Comenzar)
+  pagina: 426
+  atestaciones: 1
+  entrada_n: 872
+  cita_hechos: 11-15
+  ejemplo: A-USÙ-N-DA-NI-CA a-dia-nna-mùn = PRINCIPIANDO a hablarles .
+- raiz: heraba-te
+  concepto_es: PRISA
+  pagina: 82
+  atestaciones: 1
+  entrada_n: 216
+  cita_hechos: 22-18
+  ejemplo: M-HERABA-TE , wabu-di-kebe-pa bu-putti-di-n Jerusalem uria = DATE PRISA, sal prestamente de
+    Jerusalem . NOMBRES 83
+- raiz: isi-ruccu-waria
+  concepto_es: PROA (v. Nariz)
+  pagina: 83
+  atestaciones: 1
+  entrada_n: 217
+  cita_hechos: 27-30
+  ejemplo: T-ISI-RUCCU-WARIA ... anker = las anclas DE PROA.
+- raiz: ikidduahei-n-din
+  concepto_es: PROBAR ( Dar pruebas )
+  pagina: 426
+  atestaciones: 1
+  entrada_n: 873
+  cita_hechos: 24-13
+  ejemplo: m-a-mmalli-kebe-ca-ye IKIDDUAHEI-N-DIN ba = ni
+- raiz: wahù-dda
+  concepto_es: PROCURAR
+  pagina: 427
+  atestaciones: 1
+  entrada_n: 874
+  cita_hechos: 9-29
+  ejemplo: na-mo.лua na-i A-WAHÙ-DDA n-a-parù-n-ti i ibiti = mas, ellos PROCURABAN (esperaban ) matarlo
+    .
+- raiz: manswa
+  concepto_es: PRODIGIO (v. maravilla, milagro)
+  pagina: 83
+  atestaciones: 1
+  entrada_n: 218
+  cita_hechos: 2-19
+  ejemplo: MANSWA-TTU kebe da-i a-ni-pa = haré PRODIGIOS .
+- raiz: ikisi
+  concepto_es: PROMETER
+  pagina: 428
+  atestaciones: 1
+  entrada_n: 877
+  cita_hechos: 13-23
+  ejemplo: 1-óaya wakill L-IKISI-SIA A-DIA-HÙ u-lluccu-di = conforme a SU PROMESA dada por el mismo en
+    otro tiempo ( la palabra da
+- raiz: sica-coa-n-a-ni-bia
+  concepto_es: PROPONER
+  pagina: 429
+  atestaciones: 1
+  entrada_n: 878
+  cita_hechos: 11-23
+  ejemplo: tatta-ré A-SICA-COA-N-A-NI-BIA = que PERMANECIESEN EN EL PROPÓSITO firme .
+- raiz: bia-hitti
+  concepto_es: PROSÉLITO
+  pagina: 83
+  atestaciones: 1
+  entrada_n: 220
+  cita_hechos: 13-43
+  ejemplo: a-sica-tti judu-nnu BIA-HITTI-TI mutti = judíos creyentes y PROSELITOS .
+- raiz: biama-te
+  concepto_es: PRÓJIMO (v. dos )
+  pagina: 83
+  atestaciones: 1
+  entrada_n: 219
+  cita_hechos: 7-27
+  ejemplo: ca-ima-tti-kill L-I-BIAMA-TE-TTI u-mùn = el que injuriaba a SU PRÓJIMO.
+- raiz: llebutta
+  concepto_es: PUERTO
+  pagina: 85
+  atestaciones: 1
+  entrada_n: 224
+  cita_hechos: 20-15
+  ejemplo: W-A-LLEBUTTA-CA Samos a-mùn = TOMAMOS PUERTO (desembarcamos en Samos.
+- raiz: ùsa-du-n-nua
+  concepto_es: PURIFICAR
+  pagina: 429
+  atestaciones: 1
+  entrada_n: 880
+  cita_hechos: 21-24
+  ejemplo: 'Ù-ÙSA-DU-N-NUA bu-monnua na-ma ren = PURI-FÍCATE tú con ellos (santifícate ) . 430 Arw) ARAWAK
+    2 : Fraseari'
+- raiz: ttacana
+  concepto_es: PÓRTICO
+  pagina: 81
+  atestaciones: 1
+  entrada_n: 212
+  cita_hechos: 3-11
+  ejemplo: bahù Ù-TTACANA = el PÓRTICO de la casa.
+- raiz: bia
+  concepto_es: QUE, ( conj . )
+  pagina: 533
+  atestaciones: 1
+  entrada_n: 1044
+  cita_hechos: 1-25
+  ejemplo: a-haca-ti BIA i = PARA QUE él sea testigo.
+- raiz: yaukua
+  concepto_es: QUEDAR
+  pagina: 430
+  atestaciones: 1
+  entrada_n: 881
+  cita_hechos: 5-4
+  ejemplo: -a-ni-hùa-n ! [ ? ] ù-sa-ni-ma bui B-A-NI-MAN ica bu-monnua ... bahá ? = reteniéndola ! acaso
+    no te QUEDABA a ti ?
+- raiz: pana-hitte
+  concepto_es: QUERER (v. Amar, Desear )
+  pagina: 431
+  atestaciones: 1
+  entrada_n: 883
+  cita_hechos: 7-28
+  ejemplo: BU-PANA-HITTE-CU-MA bahá de ? = QUIERES TÚ MATARME ?
+- raiz: abba-maria
+  concepto_es: QUINCE
+  pagina: 125
+  atestaciones: 1
+  entrada_n: 364
+  cita_hechos: 27-28
+  ejemplo: ABBA-MARIA CUTTI-HI-BENNA = quince (puesto a un lado uno de los pies ) .
+- raiz: baha
+  concepto_es: QUIZÁS, (v. Acaso )
+  pagina: 533
+  atestaciones: 1
+  entrada_n: 1045
+  ejemplo: 'peutêtre, I : it may be, perhaps . l-a-naica-sia-ni-ca ... bu-mùn BAHA = QUIZÁS te sea perdonado.
+    534 Arw ) ARAWAK 2 : Fraseario'
+- raiz: dia-sia-sa
+  concepto_es: RAZÓN
+  pagina: 86
+  atestaciones: 1
+  entrada_n: 225
+  cita_hechos: 22-1
+  ejemplo: h-a-canna-ba-te D-A-DIA-SIA-SA = oíd mi RAZÓN.
+- raiz: haica-sia-coa
+  concepto_es: RDONAR
+  pagina: 413
+  atestaciones: 1
+  entrada_n: 851
+  cita_hechos: 2-38
+  ejemplo: hu-m-a-sica-n A-HAICA-SIA-COA-NA-WA = para PERDÓN de vuestros pecados (para que se den por
+    muertos, por no e
+- raiz: ukkùrkua
+  concepto_es: REBAÑO
+  pagina: 86
+  atestaciones: 1
+  entrada_n: 226
+  cita_hechos: 20-28
+  ejemplo: 'ikita-ni-ye Gott UKKÙRKUA vigilad el REBAÑO de Dios. = '
+- raiz: sica-n-doa
+  concepto_es: REBELARSE
+  pagina: 432
+  atestaciones: 1
+  entrada_n: 885
+  cita_hechos: 26-19
+  ejemplo: D-A-M-A-SICA-N-DOA cuлu = no FUÍ REBELDE (incrédulo ) .
+- raiz: sica-n-doa
+  concepto_es: REBELDE
+  pagina: 86
+  atestaciones: 1
+  entrada_n: 227
+  cita_hechos: 26-19
+  ejemplo: D-A-M-A-SICA-N-DOA cuлu = no FUÍ REBELDE
+- raiz: nniki-dda
+  concepto_es: RECOGER
+  pagina: 435
+  atestaciones: 1
+  entrada_n: 887
+  cita_hechos: 10-16
+  ejemplo: kimisa dia-maru A-NNIKI-DDA-HÙ-CUBA casaccumuniru hidda ba = así el vaso (como lienzo ) FUÉ
+    RECOGIDO (recibido ) hacia el cielo .
+- raiz: tturku
+  concepto_es: REMPUJAR
+  pagina: 436
+  atestaciones: 1
+  entrada_n: 895
+  cita_hechos: 7-27
+  ejemplo: (lu-i ) A-TTURKU-DA lu-uria i Moses = lo REMPUJÓ (apartó de sí ) a Moisés .
+- raiz: ùùsa-dù-pa
+  concepto_es: REPARAR ( v. Restaurar )
+  pagina: 437
+  atestaciones: 1
+  entrada_n: 897
+  cita_hechos: 15-16
+  ejemplo: tu-cunna a-boa-hù-dda-ru D-ÙÙSA-DÙ-PA = REPARARÉ sus ruinas (a ésta convertiré su mal en bien)
+    .
+- raiz: reposo
+  concepto_es: REPOSAR
+  pagina: 437
+  atestaciones: 1
+  entrada_n: 899
+  cita_hechos: 20-15
+  ejemplo: lugar de mi REPOSO ? W-A-M-A-YAU-DOA Trogyllion-mùn = HABIENDO NOSOTROS REPOSADO en Trogilio
+    .
+- raiz: ima
+  concepto_es: RESENTIR
+  pagina: 437
+  atestaciones: 1
+  entrada_n: 900
+  cita_hechos: 4-2
+  ejemplo: CA-IMA-N Jesus ca-nsi-sia-nnu u-mùn = RESENTIDOS con los fieles de Jesús .
+- raiz: hacu-bù-cutta
+  concepto_es: RESPIRAR
+  pagina: 438
+  atestaciones: 1
+  entrada_n: 902
+  cita_hechos: 17-25
+  ejemplo: (lu-i) L-A-HACU-BÙ-CUTTA ye na-makua baddia = les da también a todos RESPIRACIÓN. [ ? ]
+- raiz: callime
+  concepto_es: RESPLANDECER
+  pagina: 438
+  atestaciones: 1
+  entrada_n: 903
+  cita_hechos: 12-7
+  ejemplo: abba a-rule-ti A-KÙN-da tu-lluccu-mùn ba = = y una luz RESPLANDECIÓ adentro .
+- raiz: iya-luccu-du-du
+  concepto_es: RESTAURAR
+  pagina: 439
+  atestaciones: 1
+  entrada_n: 905
+  cita_hechos: 15-16
+  ejemplo: -DU-DU-N d-a-ppa kia a-ccuurusuttu David a-cuya-bua-coa-na-ttu ù-sikua = RESTAURARÉ el templo
+    de David que estaba caído.
+- raiz: siki-pa
+  concepto_es: RESTITUÍR
+  pagina: 439
+  atestaciones: 1
+  entrada_n: 906
+  cita_hechos: 1-6
+  ejemplo: baha ica diaru israeli-nu u-mùn , n-adaiyana-sia-coa-na bia hidda ba ? = RESTITUIRÁS como (conviene
+    ) a los israelitas su reino ? 440 Arw) ARAW
+- raiz: llebu
+  concepto_es: RIBERA (v. costa, orilla, labio )
+  pagina: 87
+  atestaciones: 1
+  entrada_n: 230
+  cita_hechos: 21-5
+  ejemplo: Ù-LLEBU-mùn = en la RIBERA.
+- raiz: iyaca-ttoa
+  concepto_es: RINCÓN
+  pagina: 87
+  atestaciones: 1
+  entrada_n: 231
+  cita_hechos: 26-26
+  ejemplo: A-IYACA-TTOA-HÙ luccu = en un RINCÓN. RÍO ( v. Agua ) .
+- raiz: causa-ca-i
+  concepto_es: RODEAR
+  pagina: 442
+  atestaciones: 1
+  entrada_n: 910
+  cita_hechos: 9-39
+  ejemplo: na-makua buttuba-tti hiaru-nu A-CAUSA-CA-I Petrus = todas las mujeres viudas RODEARON a Pedro.
+- raiz: ttuke
+  concepto_es: ROMPER
+  pagina: 443
+  atestaciones: 1
+  entrada_n: 912
+  cita_hechos: 14-14
+  ejemplo: N-A-TTUKE-DA na-waia na-cunna-ttu ù-capputin = ROMPIENDO sus propias ropas.
+- raiz: boa-hù-dda
+  concepto_es: RUINA
+  pagina: 88
+  atestaciones: 1
+  entrada_n: 235
+  cita_hechos: 15-16
+  ejemplo: tu-cunna A-BOA-HÙ-DDA-RU dù-ùsa-dù-pa = repararé sus RUINAS. NOMBRES 82
+- raiz: ditti-kitta-hù-sia-bia
+  concepto_es: SABER
+  pagina: 443
+  atestaciones: 1
+  entrada_n: 913
+  cita_hechos: 1-7
+  ejemplo: hu-i cuiu u-mùn A-DITTI-KITTA-HÙ-SIA-BIA-TTU = no a vosotros ES DADO SABER .
+- raiz: sappatu
+  concepto_es: SALARIO (v. precio)
+  pagina: 82
+  atestaciones: 1
+  entrada_n: 239
+  cita_hechos: 12-8
+  ejemplo: BU-SAPPATU bu-sica bu-cunna-wa = ponte TUS SANDALIAS .
+- raiz: pparca
+  concepto_es: SALTEADOR
+  pagina: 125
+  atestaciones: 1
+  entrada_n: 367
+  cita_hechos: 21-38
+  ejemplo: 'bibiti tausend CA-PPARCA-TTU-CU-NNU = cuatro mil SALTEADORES . 126 Arw) ARAWAK 2 : Fraseario'
+- raiz: sa-kebé
+  concepto_es: SALVAR
+  pagina: 450
+  atestaciones: 1
+  entrada_n: 921
+  cita_hechos: 2-21
+  ejemplo: Ù-SA-KEBÉ n-a-ppa = serán SALVOS .
+- raiz: ùsa-dù-kittu-llia
+  concepto_es: SANAR
+  pagina: 452
+  atestaciones: 1
+  entrada_n: 922
+  cita_hechos: 3-11
+  ejemplo: li-raha bele-ti-cuba-li wacaлuhu Ù-ÙSA-DÙ-KITTU-LLIA-TI = aquel tullido ahora SANADO (ya sano)
+    .
+- raiz: mautia
+  concepto_es: SEGUIR
+  pagina: 453
+  atestaciones: 1
+  entrada_n: 924
+  cita_hechos: '-5'
+  ejemplo: MAUTIA ipil-ti n-a-daiya-hù-nnu = AL DÍA SI-GUIENTE el jefe de los señores .
+- raiz: abba-ti-mann
+  concepto_es: SEIS
+  pagina: 126
+  atestaciones: 1
+  entrada_n: 370
+  cita_hechos: 18-11
+  ejemplo: ABBA-TI-MANN catti = SEIS meses . aquellos ADJETIVOS 127
+- raiz: dia
+  concepto_es: SEMEJANTE ( v. como, parecido, prójimo, hombre )
+  pagina: 127
+  atestaciones: 1
+  entrada_n: 371
+  cita_hechos: 14-11
+  ejemplo: u-malli-t-a-coa-na-nu-tti luccu-nnu DIA = dioses SEMEJANTES ( como) a hombres .
+- raiz: pucu
+  concepto_es: SEPARAR
+  pagina: 455
+  atestaciones: 1
+  entrada_n: 928
+  cita_hechos: 19-9
+  ejemplo: L-A-PUCU-DA ye lu-malli-cutta-sia-nnu na-ure-coawa (sic ) = SEPARÓ de ellos a sus discípulos
+    .
+- raiz: ihittia
+  concepto_es: SEPULCRO
+  pagina: 16
+  atestaciones: 1
+  entrada_n: 244
+  cita_hechos: 2-29
+  ejemplo: L-IHITTIA-TTI-NA w-a-mùn ni-ca coa = SU SE-PULCRO está entre nosotros .
+- raiz: hitti
+  concepto_es: SEPULTAR (v. Enterrar )
+  pagina: 455
+  atestaciones: 1
+  entrada_n: 929
+  cita_hechos: 13-29
+  ejemplo: n-a-sica HITTI u-lluccu-mùn hidda = así pues, lo pu-sieron en un SEPULCRO .
+- raiz: ime-wabu
+  concepto_es: SIEMPRE
+  pagina: 535
+  atestaciones: 1
+  entrada_n: 1049
+  ejemplo: 'semper, P : sempre, F : toujours, I : ever. IME-WABU = SIEMPRE [ Goeje le atribuye al A; esta
+    forma que no he podido comproba'
+- raiz: kkürkùa
+  concepto_es: SIMIENTE (v . semilla, grano, descendencia )
+  pagina: 16
+  atestaciones: 1
+  entrada_n: 245
+  cita_hechos: 3-25
+  ejemplo: bu-i U-KKÜRKÙA = tu SIMIENTE . ( raza, descen-dencia ) .
+- raiz: cumu
+  concepto_es: SIN
+  pagina: 535
+  atestaciones: 1
+  entrada_n: 1050
+  cita_hechos: 5-26
+  ejemplo: (lu-i ) a-onnaki-n-ti tatta-hù CUMU abbu ye = trájolos SIN violencia.
+- raiz: ttiki
+  concepto_es: SOBORNAR
+  pagina: 463
+  atestaciones: 1
+  entrada_n: 932
+  cita_hechos: 12-20
+  ejemplo: N-A-TTIKI-DA-NI-BENNA i coning ipil-ti ù-sa-n-ti = SOBORNÁNDO-lo ELLOS al jefe de los criados
+    del rey .
+- raiz: adi
+  concepto_es: SOBREPUJAR
+  pagina: 463
+  atestaciones: 1
+  entrada_n: 934
+  cita_hechos: 26-13
+  ejemplo: 'abba a-rule-ti haddalli ADI-TU callimen = una luz que SOBREPUJABA la claridad del sol. 464
+    Arw ) ARAWAK 2 : Fras'
+- raiz: disia
+  concepto_es: SOLER
+  pagina: 464
+  atestaciones: 1
+  entrada_n: 935
+  cita_hechos: 16-13
+  ejemplo: yu-mùn-tu-cubá ye DISIA-N a-cuya-bua-n n-abbucoa-wa = donde SOLÍAN orar en común.
+- raiz: pusi-doa
+  concepto_es: SOLTAR
+  pagina: 464
+  atestaciones: 1
+  entrada_n: 936
+  cita_hechos: 16-26
+  ejemplo: callena A-PUSI-DOA-CA na-makua uria baddia = y las cadenas de todos SE SOLTARON.
+- raiz: balla
+  concepto_es: SONDA
+  pagina: 92
+  atestaciones: 1
+  entrada_n: 250
+  cita_hechos: 27-28
+  ejemplo: 'a-ttuba-ddù-n BALLA = echando la SONDA. [.: E : ]'
+- raiz: wakai-a-ttubù
+  concepto_es: SOÑAR
+  pagina: 465
+  atestaciones: 1
+  entrada_n: 937
+  cita_hechos: 2-17
+  ejemplo: hù ebébe-nu A-WAKAI-A-TTUBÙ-N n-a-ppa = vuestros viejos SOÑARÁN SUEÑOS .
+- raiz: muda
+  concepto_es: SUBIR (v . Ascender )
+  pagina: 465
+  atestaciones: 1
+  entrada_n: 939
+  cita_hechos: 2-34
+  ejemplo: David M-A-MUDA-CUBA casaccu-muniru = David NO SUBIÓ a los cielos .
+- raiz: wunapu
+  concepto_es: SUELO (v. tierra )
+  pagina: 92
+  atestaciones: 1
+  entrada_n: 251
+  cita_hechos: 22-7
+  ejemplo: d-a-ttiki-da WUNAPU-DDI (sic) = caí EN EL SUELO .
+- raiz: ditti-kitta
+  concepto_es: SUERTE (v. azar )
+  pagina: 92
+  atestaciones: 1
+  entrada_n: 252
+  cita_hechos: 1-26
+  ejemplo: A-DITTI-KITTA-HÙ n-a-ni-ca = ECHARON SUERTES . Mathias ke A-DITTI-KITTA-HÙ-CA FUÉ la SUERTE
+    de Matí
+- raiz: yuhu-yu
+  concepto_es: SUMA, cantidad
+  pagina: 93
+  atestaciones: 1
+  entrada_n: 253
+  cita_hechos: 22-28
+  ejemplo: YUHU-YU platta abbu = con SUMA de plata .
+- raiz: isi-ru-cu-mùn
+  concepto_es: SUPERIOR
+  pagina: 128
+  atestaciones: 1
+  entrada_n: 376
+  cita_hechos: 19-1
+  ejemplo: T-ISI-RU-CU-MÙN-TU u-huuru u-bandi = por las regiones SUPERIORES (montañesas ) .
+- raiz: sica-hitti-ii
+  concepto_es: SUPERSTICIÓN
+  pagina: 93
+  atestaciones: 1
+  entrada_n: 254
+  cita_hechos: 17-22
+  ejemplo: A-SICA-HITTI-II dia balli-ni hù = vosotros, por cierto, como SUPERSTICIOSOS .
+- raiz: wallebu
+  concepto_es: SUR (v. mediodía )
+  pagina: 93
+  atestaciones: 1
+  entrada_n: 255
+  cita_hechos: 28-13
+  ejemplo: a-wadu-li a-usa WALLEBU-waria = comenzó el viento del SUR .
+- raiz: hidda
+  concepto_es: TAL
+  pagina: 128
+  atestaciones: 1
+  entrada_n: 377
+  cita_hechos: 1-19
+  ejemplo: tuhu ca-maiyana HIDDA-N = esto fué conocido de TAL manera.
+- raiz: hidda
+  concepto_es: TAL
+  pagina: 218
+  atestaciones: 1
+  entrada_n: 469
+  cita_hechos: 1-19
+  ejemplo: tuhu ca-maiyana HIDDA-N = esto fué conocido de TAL manera.
+- raiz: baddia
+  concepto_es: TAMBIÉN (v. Y)
+  pagina: 537
+  atestaciones: 1
+  entrada_n: 1055
+  cita_hechos: 6-7
+  ejemplo: dia l-a-ù-sa-tti ù-ya-hù BADDIA = como TAMBIÉN el Espíritu Santo. ipiau-tu u-ijuhu priester-nu
+    a-sica-ca
+- raiz: ttabu
+  concepto_es: TAPAR
+  pagina: 466
+  atestaciones: 1
+  entrada_n: 941
+  cita_hechos: 7-57
+  ejemplo: A-TTABU-N na-ccuyuccu-wa = TAPÁRON ( se ) sus oídos.
+- raiz: payu
+  concepto_es: TAR (v. Herir )
+  pagina: 383
+  atestaciones: 1
+  entrada_n: 809
+  cita_hechos: 3-15
+  ejemplo: HU-PAYU-KITTI-N baddia i = y HACIENDO-lo VOSOTROS MATAR. hu-i A-PAX U-CUBA-I W-a-daiya-hù-n
+    cakù-
+- raiz: bakkula
+  concepto_es: TARDE (La
+  pagina: 93
+  atestaciones: 1
+  entrada_n: 257
+  cita_hechos: 28-23
+  ejemplo: mauttica u-waria-ma BAKKULA-MA muniru ren = desde la mañana hasta la TARDE .
+- raiz: xucusa
+  concepto_es: TEMBLAR
+  pagina: 466
+  atestaciones: 1
+  entrada_n: 942
+  cita_hechos: 4-31
+  ejemplo: bahù ca-lluccu-mùn-tu n-a-hù ùkỳ-da-n A-XUCUSA-N = la casa donde estaban congregados TEMBLO
+- raiz: hamma
+  concepto_es: TEMER
+  pagina: 466
+  atestaciones: 1
+  entrada_n: 943
+  cita_hechos: 5-5
+  ejemplo: manswa-cu n-a HAMMA-U-N = (sintieron) un gran TEMOR .
+- raiz: siba-siba
+  concepto_es: TEMPESTAD
+  pagina: 93
+  atestaciones: 1
+  entrada_n: 258
+  cita_hechos: 27-18
+  ejemplo: manswa-ttu SIBA-SIBA-RU = espantosa TEMPESTAD.
+- raiz: mun
+  concepto_es: TENER (v. Haber )
+  pagina: 467
+  atestaciones: 1
+  entrada_n: 944
+  cita_hechos: 3-6
+  ejemplo: n NO TENGO plata ni oro.-TAPES kihia D-A-MÙN-TU a-siki-n-da-ppa bu-mùn = mas , LO QUE TENGO
+    te doy.
+- raiz: usa
+  concepto_es: TENTAR, PROBAR (v . Ensayar)
+  pagina: 468
+  atestaciones: 1
+  entrada_n: 946
+  cita_hechos: 19-13
+  ejemplo: u ... A-USA baddia a-sani-ni A-daiya-hù Jesus iri ca-iyawa-n-ti-nu adi = algunos TENTARON de
+    invocar el nombre del Señor sobre los endemoniados
+- raiz: te-cabbuin-te-du-nnua
+  concepto_es: TERCERO
+  pagina: 128
+  atestaciones: 1
+  entrada_n: 378
+  cita_hechos: 27-19
+  ejemplo: TE-CABBUIN-TE-DU-NNUA = al TERCER ( día ) .
+- raiz: wunabu
+  concepto_es: TIERRA, suelo
+  pagina: 96
+  atestaciones: 1
+  entrada_n: 265
+  cita_hechos: 9-4
+  ejemplo: l-ittiki-dù-n benna WUNABU-mùn = cayendo en TIERRA .
+- raiz: wulli-ruccu-ddoa
+  concepto_es: TINIEBLAS (v. oscuridad)
+  pagina: 97
+  atestaciones: 1
+  entrada_n: 266
+  cita_hechos: 13-11
+  ejemplo: l-a-cusi-wa A-WULLI-RUCCU-DDOA = sus ojos se ENTENEBRECIERON.
+- raiz: cuhu
+  concepto_es: TOBILLO
+  pagina: 97
+  atestaciones: 1
+  entrada_n: 267
+  cita_hechos: 3-7
+  ejemplo: 'lu-cutti-wa LU-CUHU cu = sus pies y SUS TOBILLOS . 98 Arw) ARAWAK 2 : Fraseario'
+- raiz: makua
+  concepto_es: TODO
+  pagina: 128
+  atestaciones: 1
+  entrada_n: 379
+  cita_hechos: '-5'
+  ejemplo: NA-MAKUA ... ù-kkùrkùa-hù ibenna-tti = de TODAS las naciones.
+- raiz: di-kitta
+  concepto_es: TRASLADAR
+  pagina: 473
+  atestaciones: 1
+  entrada_n: 951
+  cita_hechos: 7-16
+  ejemplo: n-abbu-nna A-DI-KITTA-HÙ-SIA-cuba , Sichem-muniru = los cuales FUERON TRASLADADOS a Siquem
+    .
+- raiz: waikille-du-pa
+  concepto_es: TRASPORTAR
+  pagina: 473
+  atestaciones: 1
+  entrada_n: 953
+  cita_hechos: 7-43
+  ejemplo: ké u-dumma taha-wai Babilonia u-huлura tahamaria D-A-WAIKILLE-DU-PA-HÙ = por lo que OS TRASPORTARÉ
+    más allá de Babilonia .
+- raiz: halli-kebbe-du
+  concepto_es: TRASTORNAR
+  pagina: 473
+  atestaciones: 1
+  entrada_n: 955
+  cita_hechos: 15-24
+  ejemplo: A-M-A-HALLI-KEBBE-DU-N t-abbu-ba hu-llua = TRASTORNANDO (entristeciendo ) con ello vuestros
+    corazones .
+- raiz: biaki
+  concepto_es: TRATAR
+  pagina: 473
+  atestaciones: 1
+  entrada_n: 956
+  cita_hechos: 27-3
+  ejemplo: 'Julius BIAKI-CA-CUBA Paulus u-mùn = Julio TRATÓ CON HUMANIDAD (fué benévolo ) a Pablo. 474
+    Arw) ARAWAK 2 :'
+- raiz: kkürkùa
+  concepto_es: TRIBU (v. familia, nación )
+  pagina: 98
+  atestaciones: 1
+  entrada_n: 268
+  cita_hechos: 13-21
+  ejemplo: Benyamin Ù-KKÜRKÙA i-benna-ti-kill = de la
+- raiz: dia-coa
+  concepto_es: TRIBUNAL
+  pagina: 98
+  atestaciones: 1
+  entrada_n: 270
+  cita_hechos: '-10'
+  ejemplo: a-daiya-hù A-DIA-COA-NA a-hadula a-mùn = ante la sede del TRIBUNAL señorial .
+- raiz: yoa
+  concepto_es: TRIGO
+  pagina: 66
+  atestaciones: 1
+  entrada_n: 272
+  cita_hechos: 7-12
+  ejemplo: Egypten mùn C-A BU-YOA-NI-N = HABÍA TRIGO (alimento ) en Egipto.
+- raiz: balti-coa
+  concepto_es: TRONO (v. sede, asiento )
+  pagina: 66
+  atestaciones: 1
+  entrada_n: 273
+  cita_hechos: 7-49
+  ejemplo: ca-saccu DA-BALTI-COA-NA hua-ca-n = el cielo es MI TRONO.
+- raiz: halli
+  concepto_es: TÉRMINO, (v. jurisdicción )
+  pagina: 94
+  atestaciones: 1
+  entrada_n: 260
+  cita_hechos: 17-26
+  ejemplo: HALLI-DI na ca-sucoa-ni-bia ba u-cunna-mùn = y los TÉRMINOS de su habitación .
+- raiz: ake
+  concepto_es: TÚNICA (v. vestido )
+  pagina: 66
+  atestaciones: 1
+  entrada_n: 276
+  cita_hechos: 9-39
+  ejemplo: tu-makua AKE = todas las TÚNICAS .
+- raiz: ùùsa
+  concepto_es: UNGIR
+  pagina: 474
+  atestaciones: 1
+  entrada_n: 957
+  cita_hechos: 10-38
+  ejemplo: halli-ca l-a Gott ÙÙSA-DA-CUBÁ i Jesus = como Dios le UNGIÓ a Jesús .
+- raiz: mulli
+  concepto_es: USAR
+  pagina: 474
+  atestaciones: 1
+  entrada_n: 958
+  cita_hechos: 7-19
+  ejemplo: lihi A-MULLI-DA-CA wa-kkurkùa u-mùn = – éste, USANDO de ASTUCIA ( engañando) a nuestro linaje
+    .
+- raiz: cua
+  concepto_es: VANO
+  pagina: 131
+  atestaciones: 1
+  entrada_n: 384
+  cita_hechos: 14-15
+  ejemplo: idia-muttu M-A-CUA-HÙ-TTU a-boa-ttu uria = de estas cosas VANAS y malas . [ Cf. el-KUA de ù-sikua
+    ].
+- raiz: kùnne-coa
+  concepto_es: VANTAR
+  pagina: 369
+  atestaciones: 1
+  entrada_n: 793
+  cita_hechos: 1-15
+  ejemplo: 'Petrus A-KÙNNE-COA na-nnacan-ni-ruccu-mùn = Pedro LEVANTÁNDOSE entre ellos . 370 Arw) ARAWAK
+    2 : Fraseario Levanta'
+- raiz: cullebe-lli
+  concepto_es: VAPOR
+  pagina: 66
+  atestaciones: 1
+  entrada_n: 277
+  cita_hechos: 2-19
+  ejemplo: 'CULLEBE-LLI = VAPOR de HUMO . 14 100 Arw ) ARAWAK 2 : Fraseario'
+- raiz: küddù-kùsi-n-rubu
+  concepto_es: VEHEMENTE
+  pagina: 131
+  atestaciones: 1
+  entrada_n: 385
+  cita_hechos: 18-28
+  ejemplo: KÜDDÙ-KÙSI-N-RUBU = con GRAN VEHEMENCIA.
+- raiz: yaontoa-i
+  concepto_es: VENGAR
+  pagina: 475
+  atestaciones: 1
+  entrada_n: 964
+  cita_hechos: 7-24
+  ejemplo: LÙ-YAONTOA-I ca-ima-tti-kill u-mùn = VENGÓ al injuriado .
+- raiz: fenster
+  concepto_es: VENTANA
+  pagina: 101
+  atestaciones: 1
+  entrada_n: 281
+  cita_hechos: 20-9
+  ejemplo: 'FENSTER u-lluccu = en la VENTANA. [ . : Al : ]'
+- raiz: ballin
+  concepto_es: VERDAD
+  pagina: 101
+  atestaciones: 1
+  entrada_n: 282
+  cita_hechos: 10-34
+  ejemplo: ' ( sic ) BALLIN oyendo a la VERDAD la voz . WACCANU-HU d-a-ditta-bu-te = hallo a la VER'
+- raiz: ttene-nnua
+  concepto_es: VEZ
+  pagina: 102
+  atestaciones: 1
+  entrada_n: 283
+  cita_hechos: 7-12
+  ejemplo: A-TTENE-NNUA = la PRIMERA VEZ .
+- raiz: ebebe
+  concepto_es: VIEJO, anciano
+  pagina: 102
+  atestaciones: 1
+  entrada_n: 285
+  cita_hechos: 2-17
+  ejemplo: hù EBEBE-NU = vuestros VIEJOS . NOMBRES 102
+- raiz: iribe
+  concepto_es: VIOLAR
+  pagina: 484
+  atestaciones: 1
+  entrada_n: 968
+  cita_hechos: 24-6
+  ejemplo: lu-i IRIBE-N-DA wa-kerki badya = el cual también VIOLÓ (maculó) nuestro templo.
+- raiz: llammu-luccu
+  concepto_es: VIOLENTAR
+  pagina: 484
+  atestaciones: 1
+  entrada_n: 969
+  cita_hechos: 21-35
+  ejemplo: manswa-ttu A-LLAMMU-LUCCU-DA-HÙ u-dumma = a causa de la gran VIOLENCIA (alboroto ) del
+- raiz: ddica
+  concepto_es: VISITAR, (v. ver )
+  pagina: 485
+  atestaciones: 1
+  entrada_n: 970
+  cita_hechos: 7-23
+  ejemplo: d-a-hunnu-pa D-A-DDICA-N-TI-YE da-hukei-nu-tti = tengo ganas de VISITAR a mis hermanos .
+- raiz: buttuba
+  concepto_es: VIUDA
+  pagina: 102
+  atestaciones: 1
+  entrada_n: 289
+  cita_hechos: '-41'
+  ejemplo: BUTTUBA-TTI hiaru-nu mutti = y las mujeres VIUDAS .
+- raiz: ku-tti-wabu
+  concepto_es: VIVIR
+  pagina: 485
+  atestaciones: 1
+  entrada_n: 971
+  cita_hechos: 1-3
+  ejemplo: l-a-kùnne-cu-n-nua CA-KU-N = se levantó VIVO.
+- raiz: nsi
+  concepto_es: VOLUNTAD
+  pagina: 102
+  atestaciones: 1
+  entrada_n: 290
+  cita_hechos: 13-36
+  ejemplo: Gott CA-NSI-SIA u-lluccu-di = conforme a la VOLUNTAD de Dios.
+- raiz: isipu
+  concepto_es: VOLVERSE, (darse vuelta )
+  pagina: 487
+  atestaciones: 1
+  entrada_n: 974
+  cita_hechos: 9-40
+  ejemplo: L-ISIPU-DA-CA kia-ni-benna kia a-huda-ru ipiru ibiti = habiéndose VUELTO al cuerpo de la muerta
+    .
+- raiz: dia
+  concepto_es: VOTO
+  pagina: 104
+  atestaciones: 1
+  entrada_n: 291
+  cita_hechos: 26-10
+  ejemplo: da-i da-waya A-DIA-SIA-cubá na-iya-luccu = yo DI MI VOTO contra ellos .
+- raiz: vuestros
+  concepto_es: VUESTROS, VUESTRAS
+  pagina: 167
+  atestaciones: 1
+  entrada_n: 421
+  cita_hechos: 2-17
+  ejemplo: -u-tu-nu-tti mutti VUESTROS hijos y VUESTRAS hijas. H-ibikiddullia-nnu = VUESTROS mancebos
+    . HU ebébe-nu a-wacai-uttu-bù-n VUESTROS viejos .
+- raiz: wuri
+  concepto_es: VÍBORA
+  pagina: 102
+  atestaciones: 1
+  entrada_n: 284
+  cita_hechos: '-4'
+  ejemplo: a-ddiki-n m-a-ni-ca WURI = a lo que vieron la VÍ-BORA.
+- raiz: kebé
+  concepto_es: YA (v. Ahora, Hoy )
+  pagina: 541
+  atestaciones: 1
+  entrada_n: 1060
+  cita_hechos: 15-7
+  ejemplo: wakilli-KEBÉ = YA hace algún tiempo . [ ?]
+- raiz: sappatun
+  concepto_es: ZAPATO, calzado
+  pagina: 106
+  atestaciones: 1
+  entrada_n: 296
+  cita_hechos: 7-33
+  ejemplo: BU-SAPPATUN = TUS ZAPATOS .
+- raiz: ima-ttoa
+  concepto_es: ¿ GAÑAR
+  pagina: 435
+  atestaciones: 1
+  entrada_n: 890
+  cita_hechos: 5-33
+  ejemplo: maswa-kebé N-A-IMA-TTOA = REGAÑABAN grandemente .
+- raiz: tuhu
+  concepto_es: ÉSTE , ÉSTA, ESTO, ÉSTOS, ÉSTAS
+  pagina: 148
+  atestaciones: 1
+  entrada_n: 406
+  cita_hechos: 1-5
+  ejemplo: TUHU casaccabbu-hù a-dikki = pasados ESTOS días .
+- raiz: kia-hadda
+  concepto_es: 巴 PARAR ( cesar el movimiento )
+  pagina: 407
+  atestaciones: 1
+  entrada_n: 840
+  cita_hechos: 8-38
+  ejemplo: 'LI-KIA-HADDA kia-hann wagen a-cunnu-n uria = por tanto , PARÓ el andar del carro . t-840 a-PARAR
+    (v. Posar) ; L : h'
+auditoria_columna_lokono_de_la_A2:
+  que_mide: Si la columna lokono sobre la que se apoya D11 se sostiene cuando se la contrasta con el lokono
+    de 1802, un estrato medio siglo anterior al de Brett y siglo y pico anterior al de Goeje.
+  fuente_del_contraste: perea-alonso-1942 (Fraseario, parte I)
+  medido: '2026-09-08'
+  resultado:
+    confirma: 12
+    diverge: 2
+    parcial: 1
+    no_medible: 3
+    de: 18
+  filas:
+  - concepto: luna
+    a2: kathi
+    perea: catti
+    pagina: 60
+    cita: 2-20
+    veredicto: confirma
+  - concepto: sol
+    a2: hadali
+    perea: hadda-lli
+    pagina: 92
+    cita: 2-20
+    veredicto: confirma
+  - concepto: piedra
+    a2: siba/-siban
+    perea: siba
+    pagina: 80
+    cita: null
+    veredicto: confirma
+  - concepto: hombre
+    a2: oadili
+    perea: wadi-li
+    pagina: 100
+    cita: null
+    veredicto: confirma
+    nota: 'la oa- de Goeje es la w- de Perea: misma voz, dos ortografías'
+  - concepto: mujer
+    a2: hiaro
+    perea: hiaru
+    pagina: 68
+    cita: null
+    veredicto: confirma
+  - concepto: camino
+    a2: oaboroko/abonaha
+    perea: wabu-ruccu
+    pagina: 16
+    cita: 2-28
+    veredicto: confirma
+  - concepto: diente
+    a2: arii/-ari/*dari
+    perea: na-ri-sibu
+    pagina: 32
+    cita: 7-54
+    veredicto: confirma
+    nota: confirma la raíz -ri que Oliver empareja con el caquetío dare (cap. 2 p. 147)
+  - concepto: uno
+    a2: aba-
+    perea: abba
+    pagina: 5
+    cita: null
+    veredicto: confirma
+  - concepto: dos
+    a2: biama/bian
+    perea: biama
+    pagina: 113
+    cita: null
+    veredicto: confirma
+  - concepto: oir
+    a2: kanabon/*kanabun
+    perea: canna
+    pagina: 399
+    cita: null
+    veredicto: confirma
+  - concepto: tu
+    a2: bii
+    perea: bu-/b-
+    pagina: 165
+    cita: null
+    veredicto: confirma
+  - concepto: monte
+    a2: hororo
+    perea: huuru-isi
+    pagina: 67
+    cita: 1-12
+    veredicto: confirma
+    nota: lit. «cabeza de»; el propio Perea remite a cabeza en la entrada
+  - concepto: sangre
+    a2: ithihi/-china
+    perea: u-ttenna-hu
+    pagina: 82
+    cita: 2-19
+    veredicto: diverge
+    nota: Schultz no usa la voz que da la A-2; queda como pregunta abierta, no como error de nadie
+  - concepto: grande
+    a2: firo/fili-
+    perea: manswa ~ ipixu
+    pagina: 114
+    cita: 4-33
+    veredicto: diverge
+  - concepto: arbol
+    a2: ada/kunnuku
+    perea: a-dda
+    pagina: 61
+    cita: 10-39
+    veredicto: parcial
+    nota: aparece bajo MADERO, no bajo árbol; el concepto «árbol» no tiene entrada propia
+  - concepto: arena
+    a2: mothoko
+    perea: null
+    veredicto: 'no medible: los Hechos no dicen arena'
+  - concepto: raiz
+    a2: iikirahi/-ikira
+    perea: null
+    veredicto: no medible
+  - concepto: agua
+    a2: oniabo/-nia
+    perea: null
+    veredicto: 'no medible: no hay entrada AGUA en el Fraseario'
+  lectura: 'Doce de las catorce filas medibles confirman la columna. Las dos que divergen (sangre, grande)
+    no la desmienten: dicen que Schultz usa otra voz para ese concepto, lo que en un texto traducido del
+    alemán puede ser elección del traductor. Las cuatro no medibles lo son por el campo semántico del
+    libro, no por la lengua.'
+  lo_que_esto_cambia_para_d11: 'La fila bandera del cómputo del 2026-08-31 —caquetío cati ~ lokono kathi,
+    similitud 1.00— deja de apoyarse en una sola columna de una sola tabla: Schultz la escribe catti en
+    Hechos 2-20 («dia tu-ppa CATTI ù-ttù bia» = «como también la luna en sangre»), y Perea la recoge dos
+    veces, en las entradas LUNA (p. 60) y MES (p. 66). Y el par CQ dare ~ LK d-ari, que Oliver anota en
+    su p. 147, queda atestiguado en Hechos 7-54 («a-tanna-du-n NA-RI-SIBU» = «crujían sus dientes»).'
