@@ -12,7 +12,7 @@ prioridad: alta
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
 verificado: 2026-09-08
 minado: 2026-09-08
-cobertura: "Parte I (Fraseario, pp. 1-541) vaciada por script. Parte II (Compendio Gramatical, pp. 545-~700) sin minar. Introducción (Río de la Plata) fuera de alcance."
+cobertura: "Parte I (Fraseario, pp. 1-541) vaciada por script. Parte II (Compendio Gramatical) leída a mano hasta la p. 601; el verbo (pp. 602-680) sin minar. Introducción (Río de la Plata) fuera de alcance."
 aliases: ["Perea Alonso 1942", "Perea y Alonso 1942", "Filología comparada arawak"]
 ---
 
@@ -47,7 +47,7 @@ sirven al proyecto:
 |---|---|---|
 | Introducción | I-CX | *Apuntes para la prehistoria indígena del Río de la Plata*: la tesis de que charrúas, chanás, guenoas y minuanes hablaban dialectos arawak. **Fuera de nuestro alcance.** Trae un vocabulario chaná/guenoa/charrúa/minuán con comparanda arawak al margen |
 | **I — Fraseario** | **1-541** | **Concordancia lokono de los Hechos de los Apóstoles.** El material |
-| II — Compendio Gramatical | 545-~700 | Fonética, morfología y sintaxis del lokono, sobre Schumann y Quand. **Sin minar** |
+| **II — Compendio Gramatical** | **545-~700** | **Fonética, morfología y sintaxis del lokono**, sobre Schumann y Quand. Minado hasta la p. 601; el verbo (602-680), no |
 
 El **Fraseario** es la pieza. Perea vació el texto bíblico de **Theodor
 Schultz, 1802** —*Act Apostel-nu*, los Hechos de los Apóstoles, traducido del
@@ -87,8 +87,9 @@ primaria **independiente** — las entradas lokono del lexicón vienen de Goeje
 1928 y Brinton 1871, y Oliver bebe de los mismos. Perea vacía a Schultz 1802
 directamente.
 
-De las 18 filas: **12 confirman, 2 divergen (sangre, grande), 1 parcial, 3 no
-son medibles** porque los Hechos no dicen esas palabras.
+De las 18 filas: **14 confirman, 2 divergen** (sangre, grande) y **2 están
+ausentes de la obra entera** (arena, raíz). La primera pasada dio 12/2/1/3 y
+estaba mal medida — ver el aviso más abajo.
 
 Y las dos filas que el proyecto más usa quedan con atestación primaria:
 
@@ -125,8 +126,14 @@ contra la entrada `lukku` 'hombre, persona' del lexicón. Homónimos, no cognado
 
 **El Fraseario es la concordancia de un libro, y ese libro es los Hechos de los
 Apóstoles.** Su campo semántico es el de una narración mediterránea del siglo I.
-Verificado buscando el lema exacto: **no hay entrada para agua, árbol, arena,
-raíz, pez ni casa**.
+Buscando el lema exacto: **no hay entrada para agua, árbol, arena, raíz, pez ni
+casa**.
+
+⚠️ Y el aviso que me tuve que hacer a mí mismo el mismo día: **el índice de
+lemas no es la obra**. Agua (`wuni-abu`) y árbol (`adda`) sí están, en el
+Compendio Gramatical, pp. 559 y 556. La primera pasada de la auditoría los dio
+por no medibles porque sólo había buscado en el Fraseario. Arena y raíz sí
+faltan de las 926 páginas — eso está verificado contra la obra entera.
 
 Consecuencia operativa para la fase 1 de D11: esta fuente **no equilibra la
 columna wayuu concepto por concepto**. La equilibra en gramática, partículas,
@@ -134,8 +141,9 @@ partes del cuerpo, parentesco y vocabulario abstracto — y deja intacto el huec
 del léxico ecológico y material, que es justo donde el caquetío atestiguado
 tiene más masa. Para ese hueco hacen falta de Goeje 1928 o Bennett 1989.
 
-Tampoco toca ninguna otra esfera: no da geografía política, ni parentesco
-caquetío, ni ecología. Es una fuente de **una sola esfera** a propósito.
+Del Fraseario no sale nada de otras esferas: ni geografía política, ni
+ecología, ni parentesco. El **Compendio** sí — la terminología de parentesco de
+su p. 556 va a la esfera de mundo, no al lexicón.
 
 ## Cómo se lee este PDF (para quien vuelva)
 
@@ -156,12 +164,63 @@ caquetío, ni ecología. Es una fuente de **una sola esfera** a propósito.
   material está **más cerca en el tiempo** de los documentos caquetíos que
   Goeje 1928, Brinton 1871 o Pet 1987.
 
+## La Parte II: el Compendio Gramatical (minado el 2026-09-08)
+
+Propuesta en `6-fusion/lokono_gramatica_perea_1942.yaml`. Leída a mano —son
+paradigmas y prosa, no entradas repetidas— hasta la p. 601.
+
+Lo que da, y que el proyecto no tenía de ninguna lengua hermana con paradigma
+completo:
+
+- **Índices personales** (p. 587, de Schumann): `da-` mi, `bu-` tu, `lù-` su
+  (vr.), `tù-` su (nv.), `wa-` nuestro, `hù-` vuestro, `na-` su (pl.), `u-/ù-`
+  absoluto. Y la forma libre `de` = 'yo' (p. 550) — el prefijo /da-/ que Oliver
+  invoca como su primer apoyo de D11, con paradigma.
+- **Género varonil / no varonil**, no masculino/femenino (p. 554): `-ti/-tti`
+  vr., `-tu/-ttu` nv., plural `-nu`. El no varonil cubre mujeres, animales y
+  cosas. Esto es lo que valida el inventario de afijos con que se aisló la raíz
+  en el Fraseario.
+- **Atributivo `k-` frente a privativo `m-`**, con par mínimo: `k-ere-u-ti`
+  'casado' / `m-ere-u-ti` 'soltero' (p. 555). Le quita el aire de recurso *ad
+  hoc* a la lectura que Oliver propone del `ki-` de *bariki*.
+- **El sistema pentevigesimal** (pp. 565-568): 5 = `abba-te-cabbe` 'una mano',
+  10 = `bi-ama-te-ccabbu` 'dos manos', **20 = `abba luccu` 'un hombre'**. Con la
+  cautela del propio Perea sobre si los numerales de los moravos son auténticos.
+- **`-cundi` / `-cunna-tu` / `-cunna-na` = 'gente de, vecino de, habitante de'**
+  (p. 565): `Berbice-cundi`, y en el texto `egypten-cun-di` 'el egipcio'. El
+  mecanismo lokono para hacer gentilicio sobre topónimo. El caquetío no tiene
+  uno declarado en el canon.
+- **Una terminología de parentesco cruzada** (p. 556) — va a la esfera de mundo,
+  no al lexicón: `a-ttilliki-tti` 'hermano **de mujer**' frente a `u-yurda-tu`
+  'hermana **de varón**', `a-buki-ti` 'hermano mayor de varón' frente a
+  `ittilla-tu` 'hermana mayor de mujer'. Raíces distintas según el sexo del
+  hablante, no sólo terminación.
+
+### Y lo que toca decisiones ya tomadas
+
+Con la cautela escrita al lado en la propuesta: esto es evidencia **comparativa
+de una lengua hermana**, no evidencia sobre el caquetío.
+
+- **`u-banna` = 'sobre, encima, la superficie de'**, ocho o más apariciones:
+  *wunabu u-banna-man* 'por sobre toda la tierra', *SURA u-banna* 'la azotea',
+  *casaccu u-banna* 'arriba en el cielo'. Es el mismo campo semántico con que
+  **D9** resolvió el caquetío `-bana` 'cerro, sitio alto'. Y en lokono `pana` es
+  otra raíz por completo — 'matar, herir' —, así que la oposición b/p que Oliver
+  usa como segundo apoyo separa aquí dos morfemas, no dos grafías.
+- **Un `-na` locativo-instrumental** sobre la durativa `-coa-/-kua-` (p. 561):
+  `a-hùrki-da-coa-na` 'lugar de reunión', `a-balti-coa-na` 'asiento'. No
+  resucita la glosa 'lugar de' de `-ana` que **#109** retiró —el censo de
+  Esteves midió cero y sigue midiendo cero—, pero dice que la hipótesis no era
+  absurda: era insostenible *con el dato caquetío*.
+- **`-ccabbu` 'mano'**, confirmada además por los numerales. Refuerza que el
+  `daca` 'mano' reconstruido desde un supuesto lokono *daka* hay que revisarlo:
+  Perea no da *daka* en ninguna parte.
+
 ## Qué falta
 
-- **La Parte II, el Compendio Gramatical** (pp. 545-~700): fonética, artículo,
-  género, número, caso, posesivos, verbo, sintaxis. Es el mejor material del
-  repo para contrastar la morfología del caquetío reconstruido, y sigue sin
-  minar. El paradigma posesivo está en la p. 587.
+- **El verbo** (pp. 602-680): paradigmas completos de conjugación —`iyaha`,
+  `ttuba`, `sonnucu`, `halli`, `kebbe`, `hadubu`—, aspecto y modo. Es lo único
+  que queda del tomo I.
 - Las **201 raíces nuevas con dos o más atestaciones** esperan fusión humana.
 - Las **486 con una sola** son cola, no lote.
 - La **introducción rioplatense** trae comparanda arawak general (`WUNI` agua ~

@@ -1,0 +1,326 @@
+# ─────────────────────────────────────────────────────────────────────────
+# COMPENDIO GRAMATICAL de Perea y Alonso 1942 (parte II, pp. impresas 545-700)
+# — la morfología del lokono de 1802, leída a mano.
+#
+# Es la otra mitad de la fase 1 de D11. El Fraseario (parte I) dio léxico
+# (6-fusion/lokono_perea_1942.yaml); esto da ESTRUCTURA, que es lo que el
+# proyecto no tenía de ninguna lengua hermana con paradigma completo.
+#
+# Regla 5: propuesta, no fusión. Regla 7: reparte por esferas, no todo al
+# lexicón — hay material de parentesco y de numeración que no es léxico.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  obra: perea-alonso-1942
+  parte: 'II — Compendio Gramatical de la lengua arawak de las Guayanas Holandesa e Inglesa'
+  paginas_impresas: '545-700 (pdf 765-913)'
+  minado: '2026-09-08'
+  fuentes_de_Perea: >-
+    Schumann 1755 (gramática y vocabulario manuscritos), Schultz 1802 (el texto
+    de los Hechos), Quand 1808. Perea los cita con sigla: Sm; Sl; Qn;
+  metodo: >-
+    Leído a mano, página por página, no extraído por script: son paradigmas y
+    prosa, no entradas repetidas. Cada ficha lleva su página impresa.
+  etiqueta_propuesta: >-
+    comparanda lokono atestiguada. Ninguna de estas formas es caquetía ni entra
+    al canon por sí sola.
+
+# ══════════════════════════════════════════════════════════════════════
+# AFIJOS — el inventario que usa el vaciado del Fraseario
+# ══════════════════════════════════════════════════════════════════════
+afijos:
+  tipologia:
+    pagina: 550
+    cita: >-
+      «el idioma, desde el punto de vista prosódico, presenta el aspecto de
+      monosilábico, pero en la forma que suele escribirse, parece más bien
+      aglutinante, con tendencia al polisintetismo»
+    nota: >-
+      Perea marca con guion los elementos SEMÁNTICOS, no los silábicos, y avisa
+      de que no coinciden: «a/bu/le-dùn/nua» frente a «a-bule-dù-n-nua». Por eso
+      su segmentación se puede usar como base para aislar raíces.
+  indices_personales:
+    pagina: 587
+    fuente_interna: Schumann pp. 172-174, sobre u-si-kua-hù 'la casa'
+    paradigma:
+      da-: 'mi (1 sg.) — da-si-kua = mi casa'
+      bu-: 'tu (2 sg.) — bu-si-kua'
+      'lù-': 'su, de él (3 vr.) — lù-si-kua'
+      'tù-': 'su, de ella o de cosa (3 nv.) — tù-si-kua'
+      wa-: 'nuestro (1 pl.) — wa-si-kua'
+      'hù-': 'vuestro (2 pl.) — hù-si-kua'
+      na-: 'su, de ellos (3 pl.) — na-si-kua'
+      'u-, ù-': 'índice absoluto o genérico: u-si-kua-hù = LA casa, sin poseedor'
+    posesivos_absolutos:
+      pagina: 586
+      fuente_interna: Quand
+      formas: [da-kía mío, bo-kía tuyo, li-kía suyo, tu-eaha suyo de ella, wa-kía nuestro, hù-kía vuestro, na-kía suyo de ellos]
+    lo_que_toca_a_d11: >-
+      Perea da además la forma libre: «de = yo, a mí, me» (p. 550). El prefijo
+      /da-/ de 1.ª persona que Oliver invoca como su primer apoyo —«only the
+      Lokono and Taino are known to have the same personal prefix»— queda aquí
+      con paradigma completo. Sigue en pie la corrección del 2026-09-08: el
+      lexicón NO tiene esa 1.ª persona atestiguada en caquetío; su `taya` sale
+      de la columna guajira.
+  genero:
+    pagina: 554
+    regla: >-
+      No hay género gramatical: hay género VARONIL (vr.) y NO VARONIL (nv.). El
+      varonil comprende a los varones; el no varonil, a las mujeres, a los
+      animales de ambos sexos y a todas las cosas.
+    indices: {vocalicos: 'i (vr.) / u (nv.)', consonanticos: 'l (vr.) / r (nv.)'}
+    sufijos: {'-ti / -tti': varonil, '-tu / -ttu': 'no varonil', '-nu': 'plural, común'}
+    ejemplos: ['ùsa-tti / ùsa-ttu = bueno / buena', 'elon-ti / elon-tu = niño / niña',
+               'c-a-nsi-ti / c-a-nsi-tu = amante vr. / nv.', 'ipi-lli / ipi-u-tu = grande vr. / nv.']
+    curiosidad: >-
+      Las terminaciones genéricas aparecen también en seres asexuados —hadda-li
+      'sol' (vr.), ha-ru 'blancura' (nv.)—; Perea recoge la interpretación de
+      que lo pujante va en varonil y lo blando en no varonil, y la deja como
+      interpretación ajena, no como regla suya (p. 555).
+  numero:
+    pagina: 556
+    regla: 'plural pospuesto -nu: wadi-li-nu «varones», hia-ru-nu «mujeres»'
+    excepcion: >-
+      Los irracionales no distinguen número: keyu «venado, venados», siba
+      «piedra, piedras», adda «árbol, árboles», a-wadu-lli «viento, vientos».
+      Sólo en Schultz aparecen pluralizados algunos animales (cuddibiyu-nu
+      «aves», ise-hù-n-nu «gusanos») — huella del traductor alemán.
+  atributivo_y_privativo:
+    pagina: 555
+    par_minimo: 'k-ere-u-ti «casado» / m-ere-u-ti «soltero»; k-ere-ti-tu «casada» / m-ere-ti-tu «soltera»'
+    otros: ['c-a-nsi-ti «amante» (el que tiene afecto)', 'c-a-canna-kù-cu «vozarrón»', 'c-a-ima-ti «malo, perverso» (p. 563)']
+    lo_que_toca_a_cognado_002: >-
+      Oliver propone leer el `ki-` de bariki como el prefijo atributivo /kV-/
+      («que tiene la cualidad de») y no como el lexema 'rojo', y él mismo marca
+      la etimología como poco clara (n. 40, p. 143). El prefijo existe en
+      lokono con par mínimo frente al privativo m-. Eso no prueba la lectura de
+      bariki, pero le quita el aire de recurso ad hoc: es morfología corriente
+      de la familia.
+  diminutivo:
+    pagina: 562
+    forma: '-can'
+    ejemplos: ['hia-ru-can = mujercita', 'wadi-li-can = varoncito', 'elon-ti-can = pequeñuelo']
+  aumentativo:
+    pagina: 562
+    forma: '-cu / -kù, o el adverbio pospuesto wabu «grande, mucho»'
+    ejemplos: ['c-a-canna-kù-cu = vozarrón', 'luccu wabu = hombre magno, hombrón']
+  instrumental_y_local:
+    pagina: 561
+    forma: '-na (sufijo), a menudo sobre -coa- / -kua-'
+    cita_literal: >-
+      «INSTRUMENTAL y LOCAL. Tales nombres se caracterizan por medio del sfj.
+      -na, aunque son pocos los vocablos así formados.»
+    ejemplos:
+      - 'a-hùrki-da-coa-na = lugar de reunión (sinagoga)'
+      - 'a-balti-coa-na = silla, asiento'
+      - 'yaccada-coa-na = lecho, cama'
+      - 'diki-kua-na = espejo'
+    particula_coa: >-
+      Perea llama a -coa- / -kua- «partícula de estabilidad o duración» (p. 562).
+    aviso: 'él mismo dice que son POCOS los vocablos así formados: no es un sufijo productivo'
+  gente_de_habitante_de:
+    pagina: 565
+    formas: {'-cundi': 'vr.', '-cunna-tu': 'nv.', '-cunna-na': 'pl. común'}
+    ejemplos:
+      - 'Berbice-cundi = natural, vecino o procedente de Berbice'
+      - 'Berbice-cunna-tu = mujer, animal o cosa de Berbice'
+      - 'Berbice-cunna-na = personas, animales o cosas de Berbice'
+      - 'egypten-cun-di = el egipcio (Hechos 7-28, Fraseario p. 384)'
+    por_que_importa: >-
+      Es el mecanismo lokono para formar gentilicios sobre topónimo. El
+      caquetío no tiene uno declarado en el canon.
+  todo_mismo_propio:
+    pagina: 565
+    todo: '-man / -makua: da-makua «todo yo», na-makua «todos ellos»'
+    mismo: '-waya / -oaya / -aya: da-waya «yo mismo», lu-aya «él mismo»'
+    propio: '-wa (o -ani): w-a-dia-ni-wa «nuestra lengua propia», lu-tenna-wa «su sangre propia»'
+  casos:
+    pagina: '557-559'
+    regla: 'no hay declinación: las relaciones van por posposición'
+    posposiciones:
+      'u-mùn': 'dativo — n-a-dia-ca Petrus u-mùn «dijeron a Pedro»'
+      'uria / waria': 'ablativo, procedencia — Italia waria «de Italia»'
+      abbu: 'instrumental y agente — wuni-abu abbu «con agua», engel abbu «por el ángel»'
+      uma: 'compañía — hia-ru-nu uma «con las mujeres»'
+      muniru: 'dirección — Jerusalem muniru «a Jerusalén»'
+      'u-banna': 'sobre, encima, la superficie de — ver hallazgos'
+
+# ══════════════════════════════════════════════════════════════════════
+# NUMERACIÓN — sistema pentevigesimal, por dedos
+# ══════════════════════════════════════════════════════════════════════
+numerales:
+  pagina: '565-568'
+  cita_literal: >-
+    «Los Arawak cuentan por el sistema pente-vigesimal, por dedos, una mano, dos
+    manos, dos manos y un pie, dos manos y dos pies, o sea un hombre.»
+  serie:
+    1: abba
+    2: bi-ama
+    3: c-a-bbu-hin
+    4: bi-bi-ti
+    5: 'abba-te-cabbe — «una mano» (cabbu = mano)'
+    6: abba-ti-man
+    7: bi-ama-tti-man
+    8: c-a-bbu-hin-ti-man
+    10: 'bi-ama-te-ccabbu — «dos manos»'
+    11: 'abba-cutti-hi-benna — cutti = pie'
+    15: abba-maria-cutti-hi-benna
+    20: 'abba luccu — «un hombre»'
+    40: bi-ama luccu
+    60: c-a-bbu-hin luccu
+    100: abba-te-cabbe luccu-ti
+  la_cautela_del_propio_autor:
+    pagina: 567
+    cita: >-
+      «Ignoramos hasta qué punto puedan considerarse como auténticos los
+      numerales dados por los Moravos, pues es bien conocida la tendencia de los
+      misioneros de perfeccionar los idiomas de los salvajes.»
+    lectura: >-
+      Perea sostiene igual que el sistema pentevigesimal SÍ es genuino, y lo
+      empareja con el náwatl, el maya, las lenguas célticas y el vasco.
+  abba_es_polisemico:
+    pagina: 568
+    fuente_interna: Vocabulario de Schumann
+    derivados: ['abba-cuиu = nadie, ninguno', 'abba-ha = todavía uno más',
+                'abba-lu-ai wadi-li = cierto varón', 'abba-ru-ai hia-ru = cierta mujer',
+                'abba-ru-ti / -tu = primero / primera', 'abba-hù = una vez',
+                'abba-hù-ren = sólo una vez', 'abba-luccu = un hombre; veinte']
+    por_que_importa: >-
+      Explica y valida las veintiséis «corroboraciones sólo por forma» del
+      vaciado del Fraseario, donde abba salía glosado uno / otro / alguno /
+      nadie / ciento / poco. No eran ruido: es la polisemia de una raíz, y el
+      vocabulario de Schumann la documenta.
+
+# ══════════════════════════════════════════════════════════════════════
+# PARENTESCO — esto NO es léxico suelto, es una terminología (esfera mundo)
+# ══════════════════════════════════════════════════════════════════════
+parentesco:
+  pagina: 556
+  hallazgo: >-
+    El lokono distingue los hermanos POR EL SEXO DEL HABLANTE, con raíces
+    distintas, no sólo con la terminación genérica. Es una terminología cruzada,
+    no una lista de palabras.
+  terminos:
+    - {forma: itti, glosa: padre}
+    - {forma: 'u-yu', glosa: madre}
+    - {forma: 'a-di-tti', glosa: hijo}
+    - {forma: 'u-ttu', glosa: hija}
+    - {forma: 'a-ttilliki-tti', glosa: 'hermano DE MUJER'}
+    - {forma: 'u-yurda-tu', glosa: 'hermana DE VARÓN'}
+    - {forma: 'a-buki-ti', glosa: 'hermano mayor de varón'}
+    - {forma: 'ittilla-tu', glosa: 'hermana mayor de mujer'}
+    - {forma: 'ire-ti', glosa: marido}
+    - {forma: 'ire-tu', glosa: esposa}
+    - {forma: 'a-buti', glosa: 'vecino (p. 550)'}
+  a_que_esfera_va: 3-mundo/corpus/parentesco.yaml
+  con_que_conecta: >-
+    La sesión 1/4 del corpus cultural dejó el precontacto caquetío como
+    MATRILINEAL, con el dato patrilineal de Oliver reasignado al cacicazgo
+    colonial. Una terminología de hermanos diferenciada por sexo del hablante en
+    la lengua hermana más cercana es contexto para esa lectura — no es prueba de
+    nada caquetío, y no debe usarse como tal.
+  sexo_de_los_animales:
+    pagina: 555
+    regla: 'se pospone wadi-li «varón» → macho, o hia-ru «mujer» → hembra'
+    ejemplos: ['beyu wadi-li = venado macho', 'beyu hia-ru = venada', 'baca hia-ru = vaca']
+
+# ══════════════════════════════════════════════════════════════════════
+# LO QUE TOCA DECISIONES YA TOMADAS — evidencia comparativa, no caquetía
+# ══════════════════════════════════════════════════════════════════════
+hallazgos_que_tocan_decisiones_abiertas:
+
+  - id: banna-D9
+    toca: 'D9 (-bana «cerro, sitio alto», resuelta 2026-08-31 con seis apoyos) y el segundo argumento de Oliver para D11'
+    hallazgo: >-
+      El lokono atestigua `u-banna` como posposición locativa «sobre, encima,
+      la superficie de», con ocho o más apariciones en el texto de Schultz.
+    atestaciones:
+      - 'wunabu u-banna-man = por sobre toda la tierra (Hechos 1-8)'
+      - 'wunabu u-banna-ttu illikin = los animales de la tierra (Hechos 10-12)'
+      - 'SURA u-banna = la AZOTEA, lit. lo alto encima (Hechos 10-9, Fraseario p. 12)'
+      - 'casaccu u-banna = arriba en el cielo (Hechos 2-19)'
+      - 'wunabu u-banna-mutti = sobre la faz de la tierra (Hechos 17-26)'
+    y_ademas: >-
+      En lokono `pana` es otra raíz por completo: «matar, herir» —bu-pana-hitte
+      «¿quieres matarme?» (Hechos 7-28), a-pana-hitti «procurando matarle»
+      (21-31)—. O sea que banna y pana no son variantes ortográficas de lo
+      mismo: contrastan.
+    lectura_prudente: >-
+      Oliver da como segundo apoyo de la filiación lokono que el caquetío tenga
+      `-bana` y no `-pana`. Aquí se ve que en lokono la oposición b/p separa dos
+      morfemas distintos, y que el de b- es locativo y de altura, que es
+      exactamente el campo semántico con que D9 resolvió el caquetío `-bana`.
+      Lo que NO se puede afirmar desde aquí es que el `-banna` de Perea sea el
+      mismo morfema que el `*pana` 'casa' de la comparativa arahuaca: eso hay
+      que verificarlo con una fuente que lo trate como tal.
+    accion_propuesta: 'añadir la evidencia a las notas de -bana y comentar en el issue de D9; no reescribir la glosa'
+
+  - id: na-locativo-109
+    toca: '#109 (la glosa «lugar de» de -ana, retirada el 2026-09-07)'
+    hallazgo: >-
+      El lokono forma nombres de lugar e instrumento con el sufijo `-na`, casi
+      siempre sobre la partícula durativa `-coa-` / `-kua-`: a-hùrki-da-coa-na
+      «lugar de reunión», a-balti-coa-na «asiento», yaccada-coa-na «lecho»,
+      diki-kua-na «espejo» (p. 561).
+    lectura_prudente: >-
+      Es evidencia COMPARATIVA de una lengua hermana, no evidencia sobre el
+      caquetío. El censo de Esteves midió cero casos de «lugar de» para -ana y
+      esa medición no cambia. Lo que esto aporta es que un `-na` locativo existe
+      en la familia, así que la hipótesis retirada no era absurda: era
+      insostenible CON EL DATO CAQUETÍO. Y el propio Perea avisa de que «son
+      pocos los vocablos así formados».
+    accion_propuesta: 'anotarlo en la lista viva del censo de -ana como comparandum lokono, con esta cautela escrita al lado'
+
+  - id: coa-morfema-001
+    toca: 'morfema-001 (-bacoa «bosque, arboleda»), el mejor sostenido del inventario'
+    hallazgo: >-
+      En lokono `-coa-` / `-kua-` es partícula de estabilidad o duración
+      (p. 562), y aparece dentro de las formaciones locativas en `-coa-na`.
+    lectura_prudente: >-
+      No contradice a morfema-001, que se apoya en cinco topónimos glosados más
+      el `-baca` «grupo, matorral, espesura» de Alvarado. Sólo abre la pregunta
+      de si el `-coa` final de Adabacoa, Guadabacoa o Quibacoas es el mismo
+      elemento. Queda como pregunta anotada, no como conflicto.
+
+  - id: ccabbu-daca
+    toca: 'la corrección del 2026-09-08 sobre `daca`'
+    hallazgo: >-
+      La mano en lokono es `-ccabbu`, con cinco atestaciones poseídas en el
+      Fraseario (lù-ccabbu, bu-ccabbu, na-ccabbu) y con el numeral que la
+      confirma: 5 = abba-te-cabbe «una mano», 10 = bi-ama-te-ccabbu «dos manos».
+    lectura_prudente: >-
+      El lexicón ya tiene `akkabu` «mano, usada en numerales» por otra vía, y
+      además un taíno `daca` «mano» reconstruido desde un supuesto lokono
+      *daka*. Perea no da *daka* en ningún lugar. No resuelve de dónde salió,
+      pero refuerza que esa reconstrucción hay que revisarla.
+
+  - id: guanahani
+    toca: 'toponimia antillana (no el canon caquetío)'
+    hallazgo: >-
+      Al explicar el sufijo `-wa`/`-ani` «propio», Perea desliza entre corchetes
+      y con su propia marca de duda: «[Guana-hani, Wana-h-ani = [Isla] propia de
+      los Waná] [?]» (p. 565).
+    lectura_prudente: >-
+      Es etimología de autor con duda declarada por el autor. Si entra a algún
+      sitio, entra como `lectura` de tipo etimologia-analitica con la duda
+      incluida, nunca como glosa.
+
+# ══════════════════════════════════════════════════════════════════════
+lo_que_el_compendio_no_trae:
+  - >-
+    Nada de la costa caribe: ni un topónimo venezolano, ni una etnia del
+    Golfete, ni una palabra caquetía. Perea no conoció el caquetío.
+  - >-
+    Nada de ecología americana más allá de lo que pide el texto bíblico. Los
+    ejemplos botánicos y zoológicos son adda «árbol», siba «piedra», keyu
+    «venado», hime «pez», cuddibiyu «ave», baca «vacuno» (préstamo).
+  - >-
+    El verbo ocupa de la p. 602 a la ~680 y AQUÍ NO SE MINÓ: son paradigmas de
+    conjugación completos (iyaha, ttuba, sonnucu, halli, kebbe, hadubu) que
+    merecen su propia sesión si el proyecto llega a necesitar aspecto y modo.
+
+deuda_que_genera:
+  - 'El verbo lokono (pp. 602-680) sin minar: es lo único que queda del tomo I.'
+  - >-
+    Los tomos II a V nunca llegaron al repo. El tomo III iba a ser el
+    VOCABULARIO ARAWAK-ESPAÑOL, que es exactamente lo que la fase 1 de D11
+    querría. Averiguar si se publicó.

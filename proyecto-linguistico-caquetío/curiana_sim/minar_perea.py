@@ -22,7 +22,8 @@ CÓMO SE EXTRAE
 QUÉ NO ES
     No es un diccionario de la lengua: es la concordancia de UN libro. Su campo
     semántico es el de los Hechos, no el de la costa caribe. Medido: no hay
-    entrada para agua, árbol, arena, raíz, pez ni casa.
+    ENTRADA para agua, árbol, arena, raíz, pez ni casa — aunque agua y árbol sí
+    aparecen en el Compendio Gramatical (parte II), que se minó aparte.
 
 Uso:  python curiana_sim/minar_perea.py [--dry-run]
 """
@@ -381,8 +382,11 @@ def main():
             "neologismos, exotismos, supresiones y aditamentos». Se cribaron "
             "germanismos, hispanismos y voces cristianas sin forma nativa.",
             "El campo semántico es el de los Hechos de los Apóstoles, no el de la costa "
-            "caribe. Verificado: no hay entrada para agua, árbol, arena, raíz, pez ni "
-            "casa. Esta fuente NO equilibra la columna wayuu concepto por concepto: la "
+            "caribe. Verificado: el Fraseario no tiene ENTRADA propia para agua, árbol, "
+            "arena, raíz, pez ni casa. Aviso medido el mismo día: agua (wuni-abu) y "
+            "árbol (adda) sí están en el Compendio Gramatical, pp. 556 y 559 — el "
+            "índice de lemas no es la obra. Arena y raíz sí faltan de las 926 páginas. "
+            "Esta fuente NO equilibra la columna wayuu concepto por concepto: la "
             "equilibra en gramática, partículas, cuerpo, parentesco y vocabulario "
             "abstracto.",
             "La raíz sale de quitar de la segmentación del PROPIO Perea los segmentos "

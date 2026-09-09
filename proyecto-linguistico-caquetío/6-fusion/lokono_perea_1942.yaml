@@ -26,8 +26,10 @@ advertencias:
 - 'El texto es una TRADUCCIÓN DEL ALEMÁN hecha por misioneros moravos. El propio Perea avisa (p. impresa
   CVII): «no son de extrañar los abundantes neologismos, exotismos, supresiones y aditamentos». Se cribaron
   germanismos, hispanismos y voces cristianas sin forma nativa.'
-- 'El campo semántico es el de los Hechos de los Apóstoles, no el de la costa caribe. Verificado: no hay
-  entrada para agua, árbol, arena, raíz, pez ni casa. Esta fuente NO equilibra la columna wayuu concepto
+- 'El campo semántico es el de los Hechos de los Apóstoles, no el de la costa caribe. Verificado: el Fraseario
+  no tiene ENTRADA propia para agua, árbol, arena, raíz, pez ni casa. Aviso medido el mismo día: agua
+  (wuni-abu) y árbol (adda) sí están en el Compendio Gramatical, pp. 556 y 559 — el índice de lemas no
+  es la obra. Arena y raíz sí faltan de las 926 páginas. Esta fuente NO equilibra la columna wayuu concepto
   por concepto: la equilibra en gramática, partículas, cuerpo, parentesco y vocabulario abstracto.'
 - La raíz sale de quitar de la segmentación del PROPIO Perea los segmentos que su Compendio Gramatical
   declara afijos (p. impresa 587). Donde el OCR metió un espacio dentro de un guion la raíz podía salir
@@ -5441,14 +5443,17 @@ nuevas_con_una_atestacion:
 auditoria_columna_lokono_de_la_A2:
   que_mide: Si la columna lokono sobre la que se apoya D11 se sostiene cuando se la contrasta con el lokono
     de 1802, un estrato medio siglo anterior al de Brett y siglo y pico anterior al de Goeje.
-  fuente_del_contraste: perea-alonso-1942 (Fraseario, parte I)
+  fuente_del_contraste: perea-alonso-1942 (Fraseario parte I + Compendio Gramatical parte II)
   medido: '2026-09-08'
   resultado:
-    confirma: 12
+    confirma: 14
     diverge: 2
-    parcial: 1
-    no_medible: 3
+    ausente_de_toda_la_obra: 2
     de: 18
+  corregido: 'Primera pasada (2026-09-08, mañana): 12 confirma / 2 diverge / 1 parcial / 3 no medibles.
+    Estaba mal medida: sólo se habia buscado en el ÍNDICE DE LEMAS del Fraseario. Agua y árbol no tienen
+    entrada propia ahí, pero sí aparecen en el Compendio Gramatical, con cita. Un cero hay que verificarlo
+    contra la obra entera, no contra el índice.'
   filas:
   - concepto: luna
     a2: kathi
@@ -5525,42 +5530,55 @@ auditoria_columna_lokono_de_la_A2:
     cita: 1-12
     veredicto: confirma
     nota: lit. «cabeza de»; el propio Perea remite a cabeza en la entrada
+  - concepto: arbol
+    a2: ada/kunnuku
+    perea: adda
+    pagina: 556
+    cita: null
+    veredicto: confirma
+    nota: p. 556 «adda = árbol, árboles» en la lista de nombres sin distinción numérica; p. 562 «adda
+      iwi = fruto del árbol», «iwi adda = árbol de fruto, frutal». En el Fraseario sólo asomaba bajo MADERO
+  - concepto: agua
+    a2: oniabo/-nia
+    perea: wuni-abu
+    pagina: 559
+    cita: 1-5
+    veredicto: confirma
+    nota: p. 559 «wuni-abu abbu = con agua (instrumento)»; p. 651 cita Hechos 1-5 «Johannes a-sucusa-cuba
+      luccu-nnu Wuniabu abbu rubu-ùn» = «Juan bautizó a los hombres con agua solamente». El oniabo de
+      la A-2 es este wuni-abu
   - concepto: sangre
     a2: ithihi/-china
-    perea: u-ttenna-hu
+    perea: -tenna
     pagina: 82
     cita: 2-19
     veredicto: diverge
-    nota: Schultz no usa la voz que da la A-2; queda como pregunta abierta, no como error de nadie
+    nota: 'sostenido en tres lugares independientes: ù-ttenna-hù en el Fraseario p. 82, lu-tenna-wa «su
+      sangre propia» p. 565, lù-tenna abu p. 602. Schultz no usa la voz de la A-2; queda como pregunta
+      abierta, no como error de nadie'
   - concepto: grande
     a2: firo/fili-
-    perea: manswa ~ ipixu
-    pagina: 114
-    cita: 4-33
+    perea: ipi-lli (vr.) ~ ipi-ru-tu (nv.)
+    pagina: 563
+    cita: null
     veredicto: diverge
-  - concepto: arbol
-    a2: ada/kunnuku
-    perea: a-dda
-    pagina: 61
-    cita: 10-39
-    veredicto: parcial
-    nota: aparece bajo MADERO, no bajo árbol; el concepto «árbol» no tiene entrada propia
+    nota: paradigma completo en pp. 554, 563, 564 y 638, no un caso suelto. ¿Podrían firo e ipi-ru ser
+      la misma raíz? La panfonética de Perea no tiene /f/ («la f sólo se emplea en palabras exóticas»,
+      p. 546), así que la f- de Goeje no tiene correspondencia declarada aquí. Se deja como pregunta,
+      no como identificación
   - concepto: arena
     a2: mothoko
     perea: null
-    veredicto: 'no medible: los Hechos no dicen arena'
+    veredicto: 'ausente de toda la obra: ni el Fraseario ni el Compendio la dicen (buscado mothoko/motoko
+      y «arena» en las 926 pp.)'
   - concepto: raiz
     a2: iikirahi/-ikira
     perea: null
-    veredicto: no medible
-  - concepto: agua
-    a2: oniabo/-nia
-    perea: null
-    veredicto: 'no medible: no hay entrada AGUA en el Fraseario'
-  lectura: 'Doce de las catorce filas medibles confirman la columna. Las dos que divergen (sangre, grande)
-    no la desmienten: dicen que Schultz usa otra voz para ese concepto, lo que en un texto traducido del
-    alemán puede ser elección del traductor. Las cuatro no medibles lo son por el campo semántico del
-    libro, no por la lengua.'
+    veredicto: 'ausente de toda la obra: las apariciones de «raíz» son todas gramaticales (buscado iikira/ikira)'
+  lectura: 'Catorce de las dieciséis filas medibles confirman la columna. Las dos que divergen (sangre,
+    grande) no la desmienten: dicen que Schultz usa otra voz para ese concepto, lo que en un texto traducido
+    del alemán puede ser elección del traductor — aunque ambas están sostenidas en tres o cuatro lugares
+    del libro, no en un caso suelto. Las dos ausentes lo están de la obra entera.'
   lo_que_esto_cambia_para_d11: 'La fila bandera del cómputo del 2026-08-31 —caquetío cati ~ lokono kathi,
     similitud 1.00— deja de apoyarse en una sola columna de una sola tabla: Schultz la escribe catti en
     Hechos 2-20 («dia tu-ppa CATTI ù-ttù bia» = «como también la luna en sangre»), y Perea la recoge dos

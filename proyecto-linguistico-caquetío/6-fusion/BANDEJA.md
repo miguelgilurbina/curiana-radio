@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-08**.
 
-**1907 ítems propuestos** en 34 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
+**1912 ítems propuestos** en 35 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -34,6 +34,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-09-08.yaml` | ? | 0 |  |
 | `frase_saludo_mitare.yaml` | ? | 2 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
+| `lokono_gramatica_perea_1942.yaml` | perea-alonso-1942 | 5 |  |
 | `medina_colina_dictado.yaml` | ? | 141 |  |
 | `migracion_lemas_fase2.yaml` | ? | 79 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
