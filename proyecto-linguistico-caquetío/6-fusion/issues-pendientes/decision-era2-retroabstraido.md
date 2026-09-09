@@ -12,6 +12,23 @@ por tanto, qué mide el proyecto. Va al tablero con label `decision`.
 
 ---
 
+## ⚠️ ACTUALIZACIÓN (2026-09-09, más tarde): la pregunta estaba mal planteada
+
+Miguel propuso después que **la capa léxica sea un parámetro de cada run**. Eso
+disuelve esta decisión: no hay que elegir de una vez si las voces intuidas
+entran al habla — se corre un brazo con ellas y otro sin ellas, y se mide la
+diferencia. Igual que `--ablacion` hace con el andamiaje de convergencia.
+
+Ver `5-experimento/disenos/05_perfiles_de_run.md`. Las tres opciones de más
+abajo siguen siendo el mapa de lo que está en juego, pero **ya no hay que
+escoger una**: pasan a ser tres perfiles de run que se corren y se comparan.
+
+Lo que sí sigue haciendo falta decidir es la **etiqueta**
+(`caquetío-retroabstraido` como capa propia), porque sin ella no hay nada que
+encender ni apagar por perfil.
+
+---
+
 ## Lo que está en juego, medido
 
 Las voces de nivel **B** (11) y **C** (33) del dictado suman **44**, de las
