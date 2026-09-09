@@ -2351,6 +2351,955 @@ entradas:
       -ibo en ucibo 'chaquira', -bo en habo): dentro de la cadencia
       atestiguada.
 
+  # ── Movidas aquí el 2026-09-09 (aplicar_medina.py): estas voces
+  # llevaban veredicto A, B o C y estaban archivadas bajo `descartes`
+  # porque las tandas de días distintos se pegaron en la lista
+  # equivocada. Ni un veredicto cambió: sólo su sitio.
+  - voz: carebe
+    lectura_de_oido: "dictado «Caribe, Carebe» — leído carebe; cotejar"
+    glosa_libro: >-
+      con esta palabra, propia del pueblo, se identificaba una especie de
+      cucharón que se hacía con media tapara y que era atravesada por sus
+      bordes por un mango de madera. Era utilizado para servir comida.
+    pagina: 64
+    campo: casa (utensilio)
+    origen_libro: "«palabra propia del pueblo»"
+    segun_dictado: true
+    dictado: 2026-09-01
+    dudosa: true
+    cruce:
+      lexicon: "nada por forma (cognado-050 caribe es ruido); por glosa: kudan 'servir' [caq.], wayuu aliita 'totuma' — nada para 'cucharón'"
+      fonotactica: pasa
+      fuera_del_repo: "no está en Alvarado 1921"
+    alvarado_1921_texto_completo: >-
+      p. 62: «Carebe. Especie de cuchara, de forma oval, a la que sirve de mango la parte más angosta del óvalo. Fabrícala del fruto del totumo y úsala en Occidente la gente campesina. Sin. pichagua. Cf. el guajibo kariepa, cuchara». Hallado el 2026-09-08 al pasar las voces C por el
+      texto completo del glosario (lexicon_alvarado.py es un subconjunto). segunda fuente, occidente; Alvarado propone el guahibo kariepa: contacto (cf. etnia-001 cuiba, guahibo).
+    repo_texto_completo_2026-09-08: >-
+      ⭐ Gatschet 1885 (Aruba), lista de palabras: «karebe, spoon». Tres fuentes en tres siglos y dos orillas: Aruba 1885 (la capa caquetía insular), el occidente continental 1921 (Alvarado: la cuchara de totumo), Paraguaná 2013 (Medina). Sube a A por atestación insular temprana; CANDIDATA AL LEXICÓN (caquetío-atestiguado por Gatschet, como dabaraida y hubada).
+    veredicto: A
+    veredicto_anterior: B   # cambiado el 2026-09-08 por el barrido del repo a texto completo
+    veredicto_anterior: C   # cambiado el 2026-09-08 por Alvarado a texto completo
+    certeza: baja
+    razon: >
+      Utensilio de tapara con mango: referente precontacto (la totuma
+      como cucharón es pancaribeña) y nombre local sin etimología
+      castellana. Pasa los filtros; campo local y distribución restringida
+      por única fuente; sin cognado ni atestación. C-baja: al corpus
+      (casa/oficio) como hipotético, junto a camuro — el par tapara-vasija
+      / tapara-cucharón con nombres propios.
+
+  - voz: debudeque
+    glosa_libro: "símil de la paledonia"
+    pagina: null            # ⚠️ PENDIENTE — dictada sin página (¿letra D, pp. 89-95?)
+    campo: comida (dulce)
+    segun_dictado: true
+    dictado: 2026-09-07
+    identificacion: >-
+      Dulce de Falcón: torta hecha con pan viejo y papelón (o panela), que
+      se corta en trozos rectangulares «parecidos a ladrillos de adobe»
+      (recetarios y blogs falconianos, consultados el 2026-09-07). La
+      paledonia con la que Medina la compara es la catalina o cuca: galleta
+      o torta de harina de trigo y melado de papelón con canela, clavo y
+      anís; el nombre paledonia es el del Zulia y los Andes.
+    cruce:
+      lexicon: >-
+        nada por forma entera. Por la raíz: DABUDA 'barro de loza'
+        [caquetío-atestiguado, Zavala #99 (HB)], y la variante escrita
+        «dabudeque» que la web trae al lado de «debudeque» empata con ella
+        letra a letra. El referente ayuda: el dulce se corta en ladrillos de
+        adobe. Sería 'lo de barro, lo hecho como adobe' — nombre por el
+        aspecto, no por el ingrediente.
+      por_glosa: "ningún dulce en el lexicón; el campo de lo dulce caquetío es la miel (harifuche 'maíz tostado y miel', ruba 'abeja') y el dato 'fruto del cardón'"
+      cognados: nada
+      toponimos: >-
+        ⭐ la raíz dabuda está en el canon dos veces: DABUDARE (toponimo-011,
+        B, 'sitio de extracción de barro'; Dabadubare en Esteves p. 37 «Dabuda:
+        barro de loza») y ABUDURE (toponimo-076, B, dabuda + ure). Es el
+        criterio 5 del protocolo, si la raíz es la misma.
+      a2: nada
+      fonotactica: >-
+        pasa: cuatro sílabas CV (de-bu-de-que), consonantes d, b, k y vocales
+        e, u, todas del inventario caquetío; cf. dabuda, budare, judibana.
+      fuera_del_repo: >-
+        No está en el DRAE ni en el lexicón de Alvarado 1921 (cero en el
+        repo, verificado). En la web es dulce típico de Falcón y de la
+        península, con dos grafías, debudeque y dabudeque, y la descripción
+        de los «ladrillitos de adobe» (Gastronomía del estado Falcón; blogs
+        de comidas criollas falconianas; recetarios de la UPEL Paraguaná).
+    filtros:
+      "1 castellano": "no restituye: ni raíz ni sufijo castellanos; la terminación -eque no es la de un derivado español (cf. -aque/-eque en bajareque, cacique — voces indígenas)"
+      "2 papiamento/neerlandés": "no encontrado (el bolo de pan viejo aruberoano es «bolo di pan»); pendiente de diccionario"
+      "3 wayuu": "no está en VOCABULARIO_BASE wayuu; no es préstamo wayuu conocido"
+      "4 panhispánico": "no: solo Falcón/Paraguaná — es lo que la hace interesante"
+      "5 africanismos": "no reconocido"
+      "6 caribe/jirajaroide": "nada"
+    criterios_positivos:
+      "1 campo local": "a medias — el dulce es colonial (pan de trigo, papelón), pero el nombre es local e intraducible"
+      "2 distribución restringida": "sí — Falcón/Paraguaná"
+      "3 fonotáctica": "pasa"
+      "4 cognado": "no"
+      "5 respaldo toponímico": "sí, si la raíz es dabuda: Dabudare, Abudure (nivel B en el canon)"
+      "6 atestación colonial": "no"
+    veredicto: C
+    razon: >
+      Plausible, no más: sobrevive a los descartes (no es castellano, ni
+      panhispánico, ni wayuu conocido) y cumple dos criterios, distribución
+      restringida y respaldo toponímico — el segundo solo si dabudeque es la
+      forma primaria y la raíz es dabuda 'barro de loza', lo que el
+      referente («ladrillitos de adobe») hace verosímil pero no prueba. El
+      REFERENTE es colonial (pan de trigo, papelón): si la etimología vale,
+      es un nombre nuevo hecho con una raíz vieja, como datera con dato —
+      evidencia de que dabuda seguía viva y productiva, no de sustrato
+      precontacto (regla 3). Hipotético, solo corpus. Lo que la subiría a B:
+      que Medina la escriba dabudeque o registre la variante; una segunda
+      fuente falconiana con la etimología del adobe; la página.
+    cotejo_2026-09-08: >-
+      Miguel confirma DEBUDEQUE, con de-. La variante dabudeque es de la
+      web, no del libro: el cruce con dabuda 'barro de loza' se queda en
+      hipótesis (pide a > e en la primera sílaba, o que la forma con da-
+      sea la más vieja). Página, pendiente.
+
+  # disey, dictada de nuevo el 2026-09-07: YA estaba (2026-09-01, p. 95, C).
+  # No se duplica.
+  - voz: guarataro
+    glosa_libro: >-
+      es una especie de tierra con grano especial que, unido al barro de
+      loza, es la materia prima para la alfarería.
+    pagina: null            # ⚠️ PENDIENTE
+    campo: oficio (alfarería) / geografía (materia)
+    segun_dictado: true
+    dictado: 2026-09-07
+    cruce:
+      lexicon: >-
+        ⭐ CASA: warataro 'barro de loza, para la fábrica de budares y
+        ollas' [caquetío-atestiguado, Zavala #141 (E), forma_fuente
+        guarataro]. La (E) es Esteves; Medina es la SEGUNDA atestación,
+        independiente y viva, con un matiz que Esteves no da: no es el
+        barro de loza (dabuda), es la tierra de grano que se le mezcla —
+        el desgrasante del alfarero. Dos palabras caquetías para las dos
+        materias de la olla: dabuda y guarataro.
+      por_glosa: "dabuda 'barro de loza' [caq. atestiguado, Zavala #99]; budare (dictado, B); Dabudare 'sitio de extracción de barro' (toponimo-011)"
+      cognados: nada
+      toponimos: >-
+        ⭐ GUARATARO es topónimo de Paraguaná: Esteves p. 41, lugar del
+        municipio Pueblo Nuevo entre Guacuira y Santa Cruz, censo de 1881
+        16 casas y 88 vecinos, hoy La Hoyada dentro de Guacuira Arriba;
+        «Guarataro es un barro de loza, gomoso, con que fabrican budares y
+        ollas. Hay abundancia de este material en el lugar». Entra al canon
+        como toponimo-143 (B) con esta voz como lectura.
+      a2: nada
+      fonotactica: pasa
+      fuera_del_repo: >-
+        En el resto de Venezuela guarataro es 'piedra, guijarro' (DRAE, Ven.;
+        el sector de El Guarataro en Caracas): la acepción paraguanera
+        —tierra de alfarero— es local y más precisa. No está en el módulo
+        de Alvarado 1921 (comprobar en el papel).
+    filtros:
+      "1 castellano": "no"
+      "4 nacional": "la FORMA es nacional ('guijarro'), la ACEPCIÓN es paraguanera: pasa por la acepción"
+      "2, 3, 5, 6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — técnica (alfarería) y materia del terreno"
+      "2 distribución restringida": "sí, en esta acepción"
+      "5 respaldo toponímico": "SÍ — Guarataro, Esteves p. 41, con el material en el lugar"
+      "6 atestación colonial": "no; Esteves y Medina son del s. XX"
+    veredicto: B
+    razon: >
+      Sobrevive a los filtros por la acepción, campo local, distribución
+      restringida en ese sentido y topónimo con el referente en el sitio:
+      B. Ya está en el lexicón como caquetío-atestiguado por Esteves vía
+      Zavala; Medina es la segunda voz, independiente, y afina la glosa:
+      desgrasante, no barro. Propuesta: en la nota de warataro citar a
+      Medina y la distinción con dabuda; el corpus (oficios: alfarería) gana
+      el par dabuda + guarataro como materias de la olla y del budare.
+  - voz: guarero
+    glosa_libro: >-
+      fue planta enredadera, común en nuestros montes, cuyas ramas se
+      utilizaron para amarrar el embarrado [dictado: «embargado»] de las
+      paredes de la vivienda. Las hojas servían de comida para los
+      marranos.
+    pagina: null            # ⚠️ PENDIENTE
+    campo: flora / casa (bajareque)
+    segun_dictado: true
+    dictado: 2026-09-07
+    cruce:
+      lexicon: "nada por forma; por glosa: bajareke (la técnica de pared, caq. atestiguado por decisión de Miguel del 2026-09-01) y guarero sería el bejuco que la amarra; el lexicón no tiene bejuco de amarre"
+      cognados: nada
+      toponimos: "nada (Guarero es también topónimo de la Guajira venezolana, Zulia — otro lugar, quizá otra palabra)"
+      a2: nada
+      fonotactica: pasa (warero)
+      fuera_del_repo: "no está en el módulo de Alvarado 1921 ni en el DRAE como planta; única fuente para la acepción"
+    filtros:
+      "1 castellano": "no restituye (-ero castellano encima de una raíz que no lo es; cf. tunero, cardonero — o raíz entera guarero)"
+      "2-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — flora y técnica de casa"
+      "2 distribución restringida": "sí — única fuente"
+    repo_texto_completo_2026-09-08: >-
+      van Buurt 2014: «Guarero (Sero)», un cerro de Aruba; Jahn 1927 (pdf 170): Guarero, lugar de cultivo en la Guajira («por Macuire, Güincúa y Guarero se cultiva… maíz, frijoles»). La FORMA es topónimo en dos puntos del área caquetía (criterio 5, débil: no confirma el bejuco). Se queda en C con el apoyo anotado.
+    veredicto: C
+    razon: >
+      Como bayure: fitónimo local con función precisa (el amarre del
+      bajareque), pasa los filtros y cumple dos criterios; sin cognado ni
+      atestación. C, al corpus (casa). Deuda: identificar la planta.
+  - voz: guarupepe
+    glosa_libro: >-
+      la auyama madura, cocida, mezclada con leche, que quedara espesa: eso
+      era un guarupepe, comida muy apreciada por nuestra gente.
+    pagina: null            # ⚠️ PENDIENTE
+    campo: comida
+    segun_dictado: true
+    dictado: 2026-09-07
+    cruce:
+      lexicon: "nada por forma; por glosa, el lexicón no tiene auyama ni ningún plato de auyama (la auyama, Cucurbita, es americana; la leche es colonial)"
+      cognados: nada
+      toponimos: nada
+      a2: nada
+      fonotactica: pasa (guarupepe)
+      fuera_del_repo: "no está en el DRAE, en Alvarado (módulo) ni en la web como voz: única fuente"
+    filtros:
+      "1 castellano": "no restituye (¿guaru- + pepe? — pepe es nombre castellano, pero no explica el plato)"
+      "2-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — plato local con ingrediente americano"
+      "2 distribución restringida": "sí — única fuente"
+    veredicto: C
+    razon: >
+      Nombre local de un plato, sin paralelo en ningún repertorio, que
+      pasa los filtros y cumple dos criterios. El plato es mestizo (auyama
+      + leche), como datera y debudeque: si la raíz guaru- es indígena, es
+      nombre nuevo con raíz vieja. C, al corpus (comida). Ojo: Esteves p. 42
+      da GUARU 'cataneja' (el ave) en Guaruguaja — homógrafo, no apoyo.
+  - voz: guatacare
+    glosa_libro: "árbol común, y cuyos frutos no eran comestibles por el ser humano"
+    pagina: null            # ⚠️ PENDIENTE
+    campo: flora
+    segun_dictado: true
+    dictado: 2026-09-07
+    cruce:
+      lexicon: "nada por forma en el lexicón ni en Zavala"
+      cognados: nada
+      toponimos: >-
+        ⭐ GUATACARE es topónimo de Esteves (p. 42, leída en la imagen: el
+        OCR de esa página es basura): «Lugar del municipio Jadacaquiva; hay
+        también Guatacarita. Ambos lugares aparecen censados en 1881. De las
+        voces sabemos que Guatacare es un árbol perennifolio, hojas grandes
+        y sapidiáceo [?]; Guatacarita es una hierba». Entra al canon como
+        toponimo-144 (C, fitónimo) con esta voz como segunda atestación.
+      a2: nada
+      fonotactica: pasa (watacare)
+      fuera_del_repo: "guatacare / guatacaro es nombre de árbol en el oriente de Venezuela (Anzoátegui, Monagas), zona cumanagota: origen probablemente caribe; no está en el módulo de Alvarado (comprobar el papel)"
+    filtros:
+      "4 nacional": "de uso oriental y falconiano: no exclusivo de Paraguaná"
+      "6 caribe": "posible (área cumanagota); sin verificar"
+    criterios_positivos:
+      "1 campo local": "sí — flora"
+      "2 distribución restringida": "no del todo"
+      "5 respaldo toponímico": "SÍ — Guatacare y Guatacarita, Esteves p. 42, censados en 1881"
+    alvarado_1921_texto_completo: >-
+      p. 162: «Guatacare. Chytroma idatimon. Mirtáceas. Árbol maderable, se eleva como a 40 o 50 pies, muy común en terrenos arcillosos algo húmedos; madera pardusca…» (y p. 11 guatacaro: madera «fuerte, elástica e incorruptible, usada en vigas para techumbre», bajo llano). Hallado el 2026-09-08 al pasar las voces C por el
+      texto completo del glosario (lexicon_alvarado.py es un subconjunto). segunda fuente con taxón, pero Alvarado no la localiza en Coro: se queda en C con la distribución en contra.
+    repo_texto_completo_2026-09-08: >-
+      van Buurt 2014: «the Papiamentu words watapana, wayaká and watakeli thus seem more original than guatapaná, guayacán, guatacare, guatacaro» — la forma insular WATAKELI existe en el papiamento de las ABC, y van Buurt la tiene por más original que la castellanizada. Cuatro fuentes (Esteves, Alvarado, Medina, van Buurt) y la isla: sube a B.
+    veredicto: B
+    veredicto_anterior: C   # cambiado el 2026-09-08 por el barrido del repo a texto completo
+    razon: >
+      Fitónimo con dos atestaciones paraguaneras independientes (Esteves y
+      Medina, glosas compatibles: árbol perennifolio; fruto no comestible)
+      y dos topónimos con el nombre; pero la voz se usa también en el
+      oriente caribe y su origen no está resuelto. C: al corpus (flora) y
+      al canon de topónimos. Termina en -are como Bariquire, Baraivere
+      (¿-are 'sitio de' o parte del fitónimo? se anota).
+  - voz: igüira
+    glosa_libro: "fue paloma silvestre del tamaño de la casera; abundante en épocas pasadas, hoy en vías de extinción; de carne muy apreciada"
+    pagina: null            # ⚠️ PENDIENTE
+    campo: fauna
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: "nada por forma; por glosa, la otra paloma tiene nombre caquetío: wakoa/guacoa 'paloma' [caq. atestiguado, Zavala #127 (HB); Alvarado p. 143: Columba corensis y C. speciosa, palomas de Coro y el Zulia]. Dos palomas con nombre distinto: guacoa la grande de cacería, igüira la del tamaño de la casera"
+      cognados: nada
+      toponimos: nada
+      a2: nada
+      fonotactica: pasa (iwira)
+      fuera_del_repo: "no está en el módulo de Alvarado ni en el DRAE; única fuente"
+    filtros:
+      "1 castellano": "no restituye"
+      "2-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — fauna de caza"
+      "2 distribución restringida": "sí — única fuente"
+    veredicto: C
+    razon: >
+      Nombre local de una segunda paloma, junto a la guacoa atestiguada:
+      pasa los filtros y cumple dos criterios; sin cognado ni atestación.
+      C, al corpus (fauna). Deuda: identificar la especie.
+  - voz: isicagua
+    glosa_libro: "árbol de nuestros montes utilizado en la medicina empírica para tratar hernias"
+    pagina: null            # ⚠️ PENDIENTE
+    campo: flora (medicinal)
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: "nada por forma en el lexicón ni en Zavala"
+      cognados: nada
+      toponimos: "nada; termina en -agua como sibidigua, dibaragua, quihuagua (¿formante de fitónimo?)"
+      a2: nada
+      fonotactica: pasa (isikawa)
+      fuera_del_repo: >-
+        ⭐ Alvarado 1921 p. 176, ISICÁGUA: «Árbol medicinal de Coro, que
+        cree Ernst pueda ser una especie de Protium» (nivel B en
+        lexicon_alvarado: árbol de Coro, sin filtro). Segunda atestación,
+        independiente y anterior en un siglo, con el MISMO rasgo: árbol
+        medicinal, y localizado en Coro.
+    filtros:
+      "1 castellano": "no"
+      "2 papiamento": "no"
+      "3 wayuu": "no"
+      "4 nacional": "no — solo Coro (Alvarado) y Paraguaná (Medina)"
+      "5, 6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — flora medicinal del monte"
+      "2 distribución restringida": "SÍ — Coro y Paraguaná, y nada más"
+      "3 fonotáctica": "pasa"
+      "4 cognado": "no"
+      "5 respaldo toponímico": "no (el -agua final se anota)"
+      "6 atestación colonial": "no; 1921 es la más antigua"
+    veredicto: B
+    razon: >
+      Sobrevive a los seis filtros, campo local, distribución restringida
+      a la Curiana, y dos atestaciones independientes (Alvarado 1921,
+      Medina 2013) que coinciden en el rasgo. Sin cognado: B por la
+      convergencia documental, no por la comparación. Candidata al corpus
+      (flora medicinal) y a la lista de candidatas al lexicón con etiqueta
+      a decidir por Miguel (dos fuentes, ninguna colonial: reconstruido,
+      no atestiguado). Deuda: Ernst y el Protium.
+  - voz: maba
+    glosa_libro: "[con mebi y bayure] son tres denominaciones para identificar al panal de las abejas"
+    pagina: null            # ⚠️ PENDIENTE (letra M, antes de la p. 175)
+    campo: fauna / oficio (miel)
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: >-
+        nada por forma. Por glosa: el lexicón tiene RUBA 'abeja silvestre
+        negra de Coro' [caq. atestiguado], harifuche 'maíz tostado y miel',
+        y wayuu mapase 'cera de abeja'. Y bayure (dictado, C): abeja sin
+        aguijón y su casa. La miel y el panal caquetíos no tienen voz en el
+        lexicón: aquí llegan TRES de golpe (maba, mebi, bayure), más mavita
+        y memerea, más la abeja zamuro (s.v. zamuro).
+      cognados: >-
+        ⭐ candidato: lokono MABA 'miel' y wayuu MAAPA 'miel, abeja'
+        (fuera del repo: de Goeje / Bennett; Captain & Captain — ninguno
+        de los dos está en VOCABULARIO_BASE, que no tiene 'miel'). Si vale,
+        maba : maapa es la correspondencia b caquetío : p wayuu de
+        cognado-001 (barisi : palíi), y la raíz es panarahuaca *maba.
+      toponimos: nada
+      a2: nada
+      fonotactica: pasa
+      fuera_del_repo: "no está en el DRAE ni en el módulo de Alvarado como 'panal'; comprobar de Goeje 1928 (lokono maba) y Captain 2005 (wayuu maapa)"
+    filtros:
+      "1 castellano": "no"
+      "2 papiamento": "no"
+      "3 wayuu": "no idéntica (maapa ≠ maba): correspondencia regular, no préstamo — es justo el «punto dulce» del criterio 4"
+      "4-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — apicultura silvestre"
+      "2 distribución restringida": "sí — única fuente para esta forma"
+      "3 fonotáctica": "pasa"
+      "4 cognado con correspondencia regular": "SÍ, si se verifica: lokono maba, wayuu maapa"
+    veredicto: B
+    razon: >
+      La mejor de la tanda: sobrevive a los filtros, campo local,
+      distribución restringida, y un cognado arahuaco con la
+      correspondencia b : p que el proyecto ya tiene medida (cognado-001).
+      B (retro-abstraído), condicionado a verificar maba/maapa en papel;
+      si se verifica, candidata al lexicón como reconstruida y al set de
+      cognados ('miel'). El panal, no la abeja: en lokono maba es la miel;
+      la extensión miel → panal es normal.
+  - voz: mebi
+    glosa_libro: "[con maba y bayure] son tres denominaciones para identificar al panal de las abejas"
+    pagina: null            # ⚠️ PENDIENTE
+    campo: fauna / oficio (miel)
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: "nada; ver maba"
+      cognados: nada
+      fonotactica: pasa
+      fuera_del_repo: "no localizada; única fuente"
+    filtros:
+      "1-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí"
+      "2 distribución restringida": "sí — única fuente"
+    veredicto: C
+    razon: >
+      Segundo nombre del panal, sin paralelo: C, al corpus (miel). Que haya
+      TRES nombres para el panal (maba, mebi, bayure) sugiere tres cosas
+      distintas que el autor ya no distingue — quizá tres abejas, como
+      bayure y la abeja zamuro. Deuda: preguntar a Miguel si su gente los
+      diferencia.
+  - voz: machire
+    glosa_libro: >-
+      es producto del ingenio de nuestro pueblo para designar la harina del
+      maíz que presenta en su textura mucha granulación y, por lo tanto,
+      dará una arepa de baja calidad, por lo que es recomendable volver a
+      moler para que quede chirita, o sea fina, y así una buena arepa.
+    pagina: null            # ⚠️ PENDIENTE
+    campo: comida (maíz)
+    origen_libro: "«producto del ingenio de nuestro pueblo» (según el autor)"
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: >-
+        nada por forma. Ya estaba anotada en este dictado por la morfología
+        (día 1): machire 'masa granulosa' frente a chirita 'masa fina' —
+        el privativo arahuaco ma- (madunaka; wayuu ma-) en uso vivo,
+        hipótesis; y la final -re, la más recurrente del dictado (cadare,
+        cachinare, catanare, chiguare, chipare, machire), que el canon tiene
+        como morfema-002 en topónimos.
+      fonotactica: pasa
+      fuera_del_repo: "no localizada fuera de Paraguaná"
+    filtros:
+      "1 castellano": "el autor la da por creación popular, pero no restituye a nada castellano; la segmentación ma- + chire es arahuaca si vale"
+      "2-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — técnica del maíz"
+      "2 distribución restringida": "sí — única fuente"
+      "3 fonotáctica": "pasa"
+    veredicto: C
+    razon: >
+      Contra la marca del autor («ingenio del pueblo»), la forma se deja
+      analizar: ma- privativo + chir- (la raíz de chirita 'fina') = 'no
+      fina', que es exactamente lo que glosa. C: hipótesis morfológica
+      registrada con su condición — que chir- aparezca suelto o en otra
+      composición. Si vale, es el privativo arahuaco vivo en Paraguaná en
+      el siglo XX, y eso es dato de lengua, no de habla.
+  - voz: buchuco
+    glosa_libro: "[s.v. mapire] también se conoció como buchuco"
+    pagina: 179
+    campo: casa / oficio (fibra)
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: "nada por forma; buche 'melocacto' [caq. atestiguado] es homógrafo parcial sin relación de sentido; el sufijo -uco es de REGLAS_ZAVALA (afijo caquetío atestiguado: cf. Sisibauco, Urupaguaduco 'quebrada')"
+      fonotactica: pasa
+      fuera_del_repo: "no localizada fuera de Paraguaná"
+    filtros:
+      "1-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — el bolso de fibra"
+      "2 distribución restringida": "sí — única fuente, frente al nacional mapire"
+      "3 fonotáctica": "pasa, y con sufijo caquetío"
+    veredicto: C
+    razon: >
+      Nombre local frente al nacional (mapire), con el sufijo -uco que el
+      caquetío atestiguado usa: C, al corpus (casa/fibra). Lo que la subiría:
+      la raíz buch- en otra palabra de tejido o recipiente.
+  - voz: marite
+    glosa_libro: "así llamaron a la planta acuática que se desarrolla en la superficie del agua depositada en los estanques"
+    pagina: 180
+    campo: flora (agua)
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: "nada (lokono mariti 'maíz' es ruido)"
+      fonotactica: pasa
+      fuera_del_repo: "no localizada; única fuente (la planta: ¿lenteja de agua, Lemna?)"
+    filtros:
+      "1-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — flora del jagüey"
+      "2 distribución restringida": "sí"
+    veredicto: C
+    razon: "Fitónimo local del agua estancada, única fuente: C, al corpus (flora). Deuda: la especie."
+  - voz: matejea
+    glosa_libro: "así se denominó a la vivienda hecha por las avispas"
+    pagina: 181
+    campo: fauna / casa
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: "nada; ver el racimo de la miel en maba"
+      fonotactica: pasa
+      fuera_del_repo: "no localizada; única fuente"
+    filtros:
+      "1-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí"
+      "2 distribución restringida": "sí"
+    veredicto: C
+    razon: "Nombre del avispero, sin paralelo: C, al corpus (fauna). Quinto nombre del racimo abejas/avispas del dictado."
+  - voz: memerea
+    glosa_libro: "con este nombre se conoció a los panales de las abejas, generalmente localizados en troncos secos"
+    pagina: 183
+    campo: fauna / oficio (miel)
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: "nada; ver maba. Coincide con bayure (día 1): «casa… generalmente en palos secos y huecos» — ¿el panal de la abeja bayure?"
+      fonotactica: pasa (reduplicación me-me-)
+      fuera_del_repo: "no localizada; única fuente"
+    filtros:
+      "1-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí"
+      "2 distribución restringida": "sí"
+    veredicto: C
+    razon: >
+      Otro nombre del panal, con el rasgo del tronco seco que bayure ya
+      traía: C. El racimo completo de la miel paraguanera queda así: maba,
+      mebi, bayure, mavita, memerea, matejea (avispas), zamuro
+      (abeja hedionda) — siete voces donde el lexicón tenía una (ruba).
+      Es el hueco léxico mejor documentado del dictado.
+  - voz: naguata
+    glosa_libro: "se denominó así a la auyama que estaba en pleno proceso de desarrollo"
+    pagina: 193
+    campo: flora / comida
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: "nada por forma (nagua es otra cosa); por glosa, la auyama no tiene voz en el lexicón, y aquí aparece con dos estados nombrados: naguata (en desarrollo) y guarupepe (el plato de la madura)"
+      fonotactica: pasa
+      fuera_del_repo: "no localizada; única fuente"
+    filtros:
+      "1-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — cultivo, con estado de madurez nombrado"
+      "2 distribución restringida": "sí"
+    veredicto: C
+    razon: >
+      Nombre de un estado de la auyama, sin paralelo: C, al corpus
+      (conuco). Las lenguas de cultivadores nombran los estados del fruto
+      (cf. jojoto para el maíz tierno, sarutaco para el punto medio): esta
+      es la voz local para uno de ellos.
+  - voz: poporo
+    glosa_libro: "así denominaron nuestros viejos a la hinchazón propia de aquel que se había golpeado"
+    pagina: 230
+    campo: cuerpo
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: >-
+        ⭐ CASA: poporo 'maza-porra, arma de combate ceremonial'
+        [caquetío-atestiguado; Alvarado 1921 p. 255: «Arma, a manera de
+        porra, usada por los antiguos Caquetíos y los Guajiros. Ref.
+        Castellanos, Eleg. I; Cf. Bapóron, Tolondro, lobanillo || chichón,
+        tumor, o cosa así»]. Alvarado ya registra las DOS acepciones —el
+        arma y el chichón— y Medina atestigua la segunda viva en Paraguaná.
+      fonotactica: pasa
+      fuera_del_repo: "DRAE: poporo, Ven. y Col., chichón; en Colombia también el recipiente de cal de los kogi (otra palabra)"
+    filtros:
+      "4 nacional": "la acepción 'chichón' es venezolana general; la del arma es la caquetía"
+    criterios_positivos:
+      "6 atestación colonial": "sí, del arma: Castellanos vía Alvarado; y Alvarado la da EXPLÍCITAMENTE a los caquetíos, la única voz de su glosario con esa atribución"
+    veredicto: A
+    razon: >
+      La palabra ya es caquetío-atestiguada en el lexicón (el arma), con
+      atribución explícita de Alvarado y cita de Castellanos; Medina
+      atestigua en Paraguaná la acepción derivada (el chichón que deja el
+      poporo), que Alvarado también trae. A por la voz; el sentido
+      paraguanero va a la nota del lexicón como extensión semántica viva
+      (arma → golpe → hinchazón). Nada que fusionar salvo la nota.
+  - voz: quihuagua
+    glosa_libro: "una variedad de frijol común en épocas pasadas y muy nutritiva"
+    pagina: 237
+    campo: flora / comida (conuco)
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: "nada por forma; por glosa, el frijol caquetío del corpus es la caraota (#105, étimo foráneo según Oliver): aquí llegan tres frijoles con nombre (quihuagua, tapirama, urubana)"
+      toponimos: "termina en -agua (sibidigua, isicagua, dibaragua): ¿formante de fitónimo?"
+      fonotactica: pasa (kiwawa)
+      fuera_del_repo: "no localizada; única fuente"
+    filtros:
+      "1-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — cultivo"
+      "2 distribución restringida": "sí"
+    veredicto: C
+    razon: >
+      Nombre local de una variedad de frijol, única fuente: C, al corpus
+      (conuco). Con tapirama y urubana forma la serie de los frijoles
+      paraguaneros del XX; cruzar con #105 (caraota).
+  - voz: sarutaco
+    glosa_libro: >-
+      para los paraguaneros, todo cuanto estuviese en su punto medio de
+      perfección estaba sarutaco: frutas a medio madurar, carne a medio
+      asar o medio cocida. En el estado Lara le dicen así solo a los
+      cambures a medio madurar.
+    pagina: 260
+    campo: comida / otro
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: "nada por forma; saruro 'boa' [caq.] es homógrafo parcial sin relación; -taco: cf. tacaduto (Esteves: «expresa la quebrada del taque»), taque 'salina'"
+      fonotactica: pasa
+      fuera_del_repo: "no está en el DRAE; regional del occidente (Lara y Falcón, según el autor)"
+    filtros:
+      "4 nacional": "regional (Lara + Falcón), no nacional"
+      "1, 2, 3, 5, 6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "a medias — estado de la comida"
+      "2 distribución restringida": "sí — occidente"
+    veredicto: C
+    razon: >
+      Voz del occidente sin paralelo castellano, con un reparto semántico
+      que el autor mide (general en Paraguaná, solo cambures en Lara): C.
+      Lo que la subiría: Alvarado o Tamayo con origen. El área Lara-Falcón
+      es el área caquetía (Barquisimeto y la costa): compatible, no
+      probatorio.
+  - voz: seretón
+    glosa_libro: >-
+      forma parte del folclor y consistía en que se tenía la certeza de que
+      existían hombres con la facultad de transformarse en animales
+      pequeños y generalmente domésticos, pues los mismos tenían pacto
+      diabólico, lo que les permitía esa transformación previo el paso de
+      desnudarse completamente y ocultar la ropa. Se dice de seretones a
+      quienes les descubrieron la ropa y se la cambiaron de sitio, por lo
+      que no pudieron o les resultó difícil recuperar su identidad.
+    pagina: 262
+    campo: creencia
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: "nada por forma; por glosa, el corpus de creencia no tiene metamorfosis animal"
+      fonotactica: pasa
+      fuera_del_repo: "no localizada como voz; el motivo (el brujo que se vuelve animal y pierde la ropa) es panamericano y europeo"
+    filtros:
+      "1 castellano": "no restituye; -ón puede ser castellano"
+      "2-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "a medias — creencia, con nombre propio"
+      "2 distribución restringida": "sí — única fuente"
+    veredicto: C
+    razon: >
+      La voz es única fuente y el campo (creencia) es de los que el
+      protocolo no favorece; C por el nombre propio de una figura del
+      folclor local. El VALOR está en el motivo, que va a mc-mundo-026.
+  - voz: sibidigua
+    entrada_libro: "Sibidigua (dictado: «sividigua»)"
+    glosa_libro: >-
+      es planta silvestre de aplicación medicinal; aún se encuentra en
+      nuestros escasos montes. Es palabra popular: entre los años 50 y 80
+      fue frecuente escuchar, en nuestra Paraguaná, que como saludo
+      utilizaron la frase «¿cómo está la sibidigua?».
+    pagina: 263
+    campo: flora (medicinal) / habla (saludo)
+    segun_dictado: true
+    dictado: 2026-09-08
+    identificacion: "Jatropha gossypifolia, la tuatúa (Zavala, Alvarado)"
+    cruce:
+      lexicon: >-
+        ⭐ CASA: sibidiwa 'arbusto euforbiáceo, Jatropha gossypifolia'
+        [caquetío-atestiguado, Zavala #226 (E+A)]; Alvarado 1921 p. 277
+        SIBIDÍGUA: «Túatúa. Voz us. en Lara y Falcón». Tres fuentes:
+        Esteves, Alvarado, Medina.
+      toponimos: "⭐ dos topónimos del canon con la planta: Sibidigual (toponimo-123, C) y Sabarigua (toponimo-122, C), los dos de Esteves; y Cividual en el mapa vivo"
+      fonotactica: pasa (sibidiwa)
+      fuera_del_repo: "Alvarado p. 277; no está en el DRAE"
+    filtros:
+      "1 castellano": "no"
+      "2 papiamento": "no"
+      "3 wayuu": "no"
+      "4 nacional": "no — Lara y Falcón (Alvarado)"
+      "5, 6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — flora medicinal"
+      "2 distribución restringida": "sí — occidente, área caquetía"
+      "3 fonotáctica": "pasa"
+      "5 respaldo toponímico": "SÍ — Sibidigual, Sabarigua (Esteves)"
+    veredicto: A
+    razon: >
+      Ya caquetío-atestiguada en el lexicón por dos fuentes, con dos
+      topónimos en el canon; Medina es la tercera atestación, viva, y
+      añade el USO: la planta como metáfora del estado de las cosas en un
+      saludo («¿cómo está la sibidigua?», años 50-80) — una fórmula de
+      saludo paraguanera del XX con una palabra caquetía dentro, que va
+      al lado de la fórmula de Mitare (frase_saludo_mitare.yaml) como
+      dato de habla. A; nada que fusionar salvo la nota del lexicón (uso,
+      medicina) y el saludo al corpus.
+  - voz: tara
+    glosa_libro: >-
+      [primera acepción, académica: tara, defecto o enfermedad hereditaria
+      — dictado confuso]; para nuestros paraguaneros, todos los saltamontes
+      y animales parecidos fueron unas taras.
+    pagina: 272
+    campo: fauna
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: >-
+        ⭐ CASA CON #45: tara 'langosta; también mariposa, polilla'
+        [caquetío-atestiguado; RESUELTO el 2026-08-24 (#45) contra la
+        glosa anterior 'venado']. Medina, con su gente, dice SALTAMONTES:
+        es la langosta de la resolución, confirmada en boca paraguanera
+        del siglo XX, sin que el autor conozca el expediente. Es la
+        segunda fuente independiente que #45 pedía.
+      toponimos: "Taratata, tarai, taratarare en el canon (la raíz tara- en topónimos, con la cautela de que taratore es 'sabana' en Zavala #241)"
+      fonotactica: pasa
+      fuera_del_repo: "Alvarado p. 283 la trae como mención (Ta Táo?); el DRAE tiene tara solo como defecto (castellano): la acepción 'saltamontes' NO es castellana"
+    filtros:
+      "1 castellano": "no para 'saltamontes'; sí para 'defecto', que es otra palabra"
+      "2-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — fauna"
+      "2 distribución restringida": "sí — Paraguaná"
+      "5 respaldo toponímico": "sí — tara- en el canon"
+      "6 atestación": "sí — Zavala (la del lexicón) + esta"
+    veredicto: A
+    razon: >
+      Confirma #45 desde fuera: la tara caquetía es el saltamontes /
+      langosta, no el venado. A; el destino es un COMENTARIO en #45 con
+      esta cita (borrador en issues-pendientes/comentario-45-tara-medina.md)
+      y la nota del lexicón. Que la voz siguiera viva en el XX con ese
+      sentido es lo que el issue no tenía.
+  - voz: teco
+    glosa_libro: "es planta xerófita [dictado: «cerófita»] de hojas lanceoladas, cortas y con espinas por sus bordes, resistente a los veranos, y cuando llueve da unos frutos muy dulces"
+    pagina: 274
+    campo: flora (fruto)
+    segun_dictado: true
+    dictado: 2026-09-08
+    identificacion: "por las hojas lanceoladas con espinas marginales y el fruto dulce, una bromelia terrestre (¿Bromelia chrysantha, el 'maya' / 'piñuela'?)"
+    cruce:
+      lexicon: "nada por forma; por glosa, ninguna bromelia en el lexicón"
+      fonotactica: pasa
+      fuera_del_repo: "no localizada; única fuente"
+    filtros:
+      "1-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — flora comestible del monte"
+      "2 distribución restringida": "sí"
+    veredicto: C
+    razon: "Fitónimo local de fruto comestible, única fuente: C, al corpus (flora). Deuda: la especie."
+  - voz: tobeca
+    glosa_libro: "con esta palabra identificaron a la perdiz, también llamada chenga"
+    pagina: 279
+    campo: fauna
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: "nada por forma; chenga ya está en el dictado (final -nga, ajena al caquetío medido)"
+      fonotactica: pasa
+      fuera_del_repo: "no localizada; única fuente"
+    filtros:
+      "1-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — fauna de caza"
+      "2 distribución restringida": "sí"
+    veredicto: C
+    razon: "Segundo nombre local de la perdiz (con chenga): C, al corpus (fauna). Dos nombres, ¿dos aves (Colinus y Crypturellus)? Deuda."
+  - voz: totocoro
+    glosa_libro: >-
+      así se denominó la madera de los brazos del cardón seco, o sea, al
+      corazón del mismo, que es la parte sólida de él; se obtenía el cañizo
+      para el techo de la vivienda.
+    pagina: 281
+    campo: flora / casa (techo)
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: >-
+        ⭐ NO está en el lexicón, pero sí en 6-fusion/toponimia_coro_espina.yaml
+        (González Batista, 2026-08-25): «totocoro: las varas secas del
+        cardón, el varillaje» — con tococoro 'el cardón' y datococoro
+        'árbol espinoso que da fruta', todos sobre coro 'espina' (D10 tiene
+        coro 'cardón grande' como hipotético). Medina es la SEGUNDA
+        atestación de totocoro, independiente, y coincide en el referente:
+        la madera seca del cardón para el techo.
+      fonotactica: pasa (reduplicación to-to-)
+      fuera_del_repo: "no está en el DRAE; voz de la arquitectura tradicional falconiana («techos de tococoro y torta»)"
+    filtros:
+      "1 castellano": "no"
+      "2-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — técnica de casa con el cardón, el árbol del paisaje"
+      "2 distribución restringida": "sí — Coro y Paraguaná"
+      "3 fonotáctica": "pasa"
+      "5 respaldo toponímico": "indirecto — la serie Coro-/Curi- (Arcaya p. 170)"
+    veredicto: B
+    razon: >
+      Dos fuentes independientes (González Batista, Medina) para una voz
+      viva de la técnica del cardón, con segmentación propuesta (to
+      'palo' + coro 'espina/cardón') que toca D10 y la lectura de Coriana:
+      B. Propuesta: candidata al lexicón (totocoro 'madera seca del
+      cardón, cañizo') y APOYO a coro = 'cardón/espina' — es la palabra
+      que González Batista ponía como prueba y ahora tiene segundo testigo.
+  - voz: tura
+    glosa_libro: "cuando la mazorca del maíz tenía pocos granos, nuestros mayores decían que era pura tura"
+    pagina: 287
+    campo: flora / comida (maíz)
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: >-
+        nada por forma en el lexicón. TRES tura distintas en el repo: (1)
+        Esteves p. 66, topónimo TURA en Baraived «Hato de Jura… Jura, juri:
+        ventarrón» (la del viento, con T por J en la cadena escrita); (2)
+        Alvarado p. 301, TURA «especie de bambú… E. Lara; baile de Tura,
+        baile indígena» (F6: la tura de los ayamanes); (3) esta: la mazorca
+        vana. Homónimos, salvo prueba.
+      fonotactica: pasa
+      fuera_del_repo: "Alvarado p. 301; el baile de las Turas es de Lara/Falcón (ayamán/jirajara)"
+    filtros:
+      "1 castellano": "no"
+      "4 nacional": "no para esta acepción"
+      "6 jirajaroide": "posible por el área (la Tura de los ayamanes), sin relación de sentido"
+    criterios_positivos:
+      "1 campo local": "sí — el maíz"
+      "2 distribución restringida": "sí — única fuente para 'mazorca vana'"
+    veredicto: C
+    razon: >
+      Acepción local sin castellano detrás y con dos homónimos en el área,
+      ninguno con el mismo sentido: C, al corpus (conuco), con los tres
+      tura declarados para que nadie los funda. Lo que la subiría: que
+      «tura» aparezca en otra fuente con sentido de 'vacío, vano'.
+  - voz: tuturuto
+    glosa_libro: "fue una planta venenosa y sin ninguna utilidad para el paraguanero"
+    pagina: 288
+    campo: flora
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: >-
+        ⭐ CASA: tuturutos 'hierba de propiedades eméticas, usada para
+        cuajar quesos' [caquetío-atestiguado, Zavala (E)]; Esteves p. 66:
+        Tutubacoa «el lugar de los tuturutos» (topónimo, en la cola).
+        CONFLICTO de glosa: Esteves le da uso (emética, cuaja el queso),
+        Medina dice «venenosa y sin ninguna utilidad». Compatible —lo
+        emético es tóxico a otra dosis— pero es un desacuerdo de uso
+        entre dos paraguaneros, y se declara.
+      toponimos: "Tutubacoa (Esteves p. 66; índice por procesar)"
+      fonotactica: pasa (reduplicación tu-tu-)
+      fuera_del_repo: "no está en el DRAE ni en el módulo de Alvarado"
+    filtros:
+      "1-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — flora"
+      "2 distribución restringida": "sí"
+      "5 respaldo toponímico": "SÍ — Tutubacoa"
+    repo_texto_completo_2026-09-08: >-
+      Gatschet 1885 (Aruba), lista de plantas: «tuturutu». Cuarta fuente, insular: Zavala/Esteves, Medina, Gatschet.
+    veredicto: A
+    razon: >
+      Ya atestiguada por Esteves vía Zavala, con topónimo; Medina es la
+      segunda voz y trae un conflicto de uso que va a la nota del lexicón
+      (D7: las dos glosas quedan). A; y Tutubacoa a la campaña con esta
+      voz como lectura cuando se procese.
+  - voz: urubana
+    glosa_libro: >-
+      fue un frijol de color morado, sabor agradable, y que por llegar a
+      Paraguaná desde la isla de Aruba se denominó urubana, sin que eso
+      quiera decir que esa isla es su origen, pues allí solo producen
+      negros [frijoles].
+    pagina: 291
+    campo: flora / comida (conuco)
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: "nada por forma; ver quihuagua y tapirama"
+      toponimos: >-
+        ⭐ el autor mismo segmenta: Aruba + -na/-ana → urubana 'el (frijol)
+        de Aruba'. Es la hipótesis de Miguel sobre «Arubanas» (los indios
+        de Aruba en Altolaguirre 1768, toponimia_paraguana_miguel.yaml
+        §Aruba / Arubanas) vista desde el habla: un derivado vivo de Aruba
+        con -ana que significa 'procedente de'. Toca #109 (la lista viva
+        de -ana) y D2/#33: aquí -ana no es 'lugar de' sino 'de, procedente
+        de' — o el gentilicio castellano -ano/-ana (arubano) con la vocal
+        cambiada. Las dos lecturas se registran.
+      fonotactica: pasa
+      fuera_del_repo: "no localizada; única fuente"
+    filtros:
+      "1 castellano": "posible: arubana (gentilicio castellano) con a > u por asimilación — no se descarta"
+      "2 papiamento": "el frijol viene de Aruba, la palabra puede venir con él (papiamento: bonchi 'frijol'; arubano/arubiano)"
+      "3-6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — cultivo"
+      "2 distribución restringida": "sí"
+      "5 respaldo toponímico": "el nombre lleva un topónimo dentro"
+    veredicto: C
+    razon: >
+      Fitónimo local con etimología dada por el propio autor (de Aruba):
+      C. El valor no es el frijol, es el SUFIJO: un -ana/-na vivo en el
+      XX con sentido 'de, procedente de' sobre un topónimo, que es o el
+      gentilicio castellano deformado o el formante que #109 acaba de
+      dejar sin glosa. Registrado en la lista viva de -ana y en la
+      hipótesis de Miguel sobre Arubanas.
+  - voz: urupagua
+    glosa_libro: >-
+      existen dos clases de urupagua: en Paraguaná solo se conoce como tal
+      al arbusto espinoso cuya única utilidad es servir para hacer cercas
+      en los conucos, por ser espinoso; la otra es un árbol que solo se
+      encuentra en la serranía coriana y cuyos frutos, por ser amargos,
+      sirvieron para decir «tiene más coraje que el que se comió la primera
+      urupagua»; este fruto tiene que ser hervido por varias horas.
+    pagina: 292
+    campo: flora
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: >-
+        NO está en el lexicón ni en Zavala. Alvarado 1921 p. 305 URUPÁGUA:
+        «Árbol indeterminado de Coro. Fruto elipsoide, cuando seco, de 1½
+        pulgada de largo, con cáscara dura y un contenido libre, compacto,
+        harinoso, amarillento» (nivel B en lexicon_alvarado: «la ciencia
+        no supo darle taxón: señal de voz local no castellanizable») — es
+        la SEGUNDA clase de Medina, el árbol de la sierra de fruto amargo.
+      toponimos: >-
+        ⭐ Esteves: URUPAGUADUCO «la quebrada de las urupaguas» (p. 71) y
+        URUPAGUA, los dos en el índice (por procesar); el primero con -duco
+        'quebrada' (Tacaduto «la quebrada del taque», uto 'cauce').
+      fonotactica: pasa (urupawa)
+      fuera_del_repo: "Alvarado p. 305; no está en el DRAE"
+    filtros:
+      "1 castellano": "no"
+      "2 papiamento": "no"
+      "3 wayuu": "no"
+      "4 nacional": "no — Coro y Paraguaná"
+      "5, 6": "sin candidato"
+    criterios_positivos:
+      "1 campo local": "sí — flora, cerca de conuco, y refrán"
+      "2 distribución restringida": "sí — Coro (Alvarado) y Paraguaná (Medina, Esteves)"
+      "3 fonotáctica": "pasa"
+      "5 respaldo toponímico": "SÍ — Urupaguaduco, Urupagua (Esteves)"
+      "6 atestación colonial": "no; Alvarado 1921"
+    alvarado_1921_texto_completo: >-
+      p. 305: «Urupagua. Árbol indeterminado de Coro… Urupaguita. Yerba que produce una frutilla amarga. Pasto de cabras. Coro». Hallado el 2026-09-08 al pasar las voces C por el
+      texto completo del glosario (lexicon_alvarado.py es un subconjunto). el diminutivo urupaguita 'pasto de cabras, Coro' es la primera clase de Medina (el arbusto de cercas): las dos clases están en Alvarado.
+    veredicto: A
+    razon: >
+      Tres fuentes independientes (Alvarado 1921, Esteves 1989, Medina
+      2013), dos topónimos en Esteves, distribución restringida a la
+      Curiana, y NO está en el lexicón: A por la vía toponímica, y
+      CANDIDATA AL LEXICÓN con etiqueta a decidir (reconstruido por
+      convergencia, no atestiguado en boca caquetía). Medina añade las dos
+      clases (el arbusto de cercas en Paraguaná, el árbol de fruto amargo
+      en la sierra) y un refrán con la planta dentro. Deuda: procesar
+      Urupagua y Urupaguaduco en la campaña con esta voz como lectura.
+  - voz: yabo
+    glosa_libro: "árbol de madera dura, propio para hacer trompos y elaborar lejía"
+    pagina: 305
+    campo: flora
+    segun_dictado: true
+    dictado: 2026-09-08
+    cruce:
+      lexicon: "⭐ CASA: yabo 'Cercidium viride, árbol resinoso' [caquetío-atestiguado, Zavala #278 (E+A+AM)]; Alvarado p. 307 YABO; Esteves p. 43: Güica «es otro nombre indígena que tiene el árbol que llamamos Yabo»"
+      toponimos: "⭐ Yabuquiva/Yauquiba (toponimo-105, nivel A: el mapa conserva la b del étimo yabo); Güica (Esteves p. 43, el otro nombre del árbol, en la cola)"
+      fonotactica: pasa
+      fuera_del_repo: "Alvarado p. 307"
+    filtros:
+      "1-6": "sin candidato (voz local del occidente)"
+    criterios_positivos:
+      "1 campo local": "sí — flora y técnica (trompos, lejía)"
+      "2 distribución restringida": "sí — occidente"
+      "5 respaldo toponímico": "SÍ — Yabuquiva, nivel A"
+    veredicto: A
+    razon: >
+      Ya caquetío-atestiguado con tres fuentes y un topónimo de nivel A;
+      Medina es la cuarta voz y añade los usos (madera dura para trompos,
+      ceniza para lejía). A; a la nota del lexicón.
+
 # Nivel D con su razón: un descarte documentado ahorra re-minarla.
 descartes:
   - voz: abofao
@@ -3197,39 +4146,6 @@ descartes:
       base castellana (¿capuz/capucha 'cubierta' → capusa?) más que
       sustrato. Dudosa por falta de etimología cerrada.
 
-  - voz: carebe
-    lectura_de_oido: "dictado «Caribe, Carebe» — leído carebe; cotejar"
-    glosa_libro: >-
-      con esta palabra, propia del pueblo, se identificaba una especie de
-      cucharón que se hacía con media tapara y que era atravesada por sus
-      bordes por un mango de madera. Era utilizado para servir comida.
-    pagina: 64
-    campo: casa (utensilio)
-    origen_libro: "«palabra propia del pueblo»"
-    segun_dictado: true
-    dictado: 2026-09-01
-    dudosa: true
-    cruce:
-      lexicon: "nada por forma (cognado-050 caribe es ruido); por glosa: kudan 'servir' [caq.], wayuu aliita 'totuma' — nada para 'cucharón'"
-      fonotactica: pasa
-      fuera_del_repo: "no está en Alvarado 1921"
-    alvarado_1921_texto_completo: >-
-      p. 62: «Carebe. Especie de cuchara, de forma oval, a la que sirve de mango la parte más angosta del óvalo. Fabrícala del fruto del totumo y úsala en Occidente la gente campesina. Sin. pichagua. Cf. el guajibo kariepa, cuchara». Hallado el 2026-09-08 al pasar las voces C por el
-      texto completo del glosario (lexicon_alvarado.py es un subconjunto). segunda fuente, occidente; Alvarado propone el guahibo kariepa: contacto (cf. etnia-001 cuiba, guahibo).
-    repo_texto_completo_2026-09-08: >-
-      ⭐ Gatschet 1885 (Aruba), lista de palabras: «karebe, spoon». Tres fuentes en tres siglos y dos orillas: Aruba 1885 (la capa caquetía insular), el occidente continental 1921 (Alvarado: la cuchara de totumo), Paraguaná 2013 (Medina). Sube a A por atestación insular temprana; CANDIDATA AL LEXICÓN (caquetío-atestiguado por Gatschet, como dabaraida y hubada).
-    veredicto: A
-    veredicto_anterior: B   # cambiado el 2026-09-08 por el barrido del repo a texto completo
-    veredicto_anterior: C   # cambiado el 2026-09-08 por Alvarado a texto completo
-    certeza: baja
-    razon: >
-      Utensilio de tapara con mango: referente precontacto (la totuma
-      como cucharón es pancaribeña) y nombre local sin etimología
-      castellana. Pasa los filtros; campo local y distribución restringida
-      por única fuente; sin cognado ni atestación. C-baja: al corpus
-      (casa/oficio) como hipotético, junto a camuro — el par tapara-vasija
-      / tapara-cucharón con nombres propios.
-
   - voz: cataneja
     glosa_libro: >-
       ave carroñera, muy parecida al zamuro, pero con la cabeza sin
@@ -3905,79 +4821,6 @@ descartes:
       p. 95 (D) a la p. 127 (G) — las letras E y F quedan sin declarar.
 
   # ── Sesión del 2026-09-07 (segunda entrega del dictado) ──
-  - voz: debudeque
-    glosa_libro: "símil de la paledonia"
-    pagina: null            # ⚠️ PENDIENTE — dictada sin página (¿letra D, pp. 89-95?)
-    campo: comida (dulce)
-    segun_dictado: true
-    dictado: 2026-09-07
-    identificacion: >-
-      Dulce de Falcón: torta hecha con pan viejo y papelón (o panela), que
-      se corta en trozos rectangulares «parecidos a ladrillos de adobe»
-      (recetarios y blogs falconianos, consultados el 2026-09-07). La
-      paledonia con la que Medina la compara es la catalina o cuca: galleta
-      o torta de harina de trigo y melado de papelón con canela, clavo y
-      anís; el nombre paledonia es el del Zulia y los Andes.
-    cruce:
-      lexicon: >-
-        nada por forma entera. Por la raíz: DABUDA 'barro de loza'
-        [caquetío-atestiguado, Zavala #99 (HB)], y la variante escrita
-        «dabudeque» que la web trae al lado de «debudeque» empata con ella
-        letra a letra. El referente ayuda: el dulce se corta en ladrillos de
-        adobe. Sería 'lo de barro, lo hecho como adobe' — nombre por el
-        aspecto, no por el ingrediente.
-      por_glosa: "ningún dulce en el lexicón; el campo de lo dulce caquetío es la miel (harifuche 'maíz tostado y miel', ruba 'abeja') y el dato 'fruto del cardón'"
-      cognados: nada
-      toponimos: >-
-        ⭐ la raíz dabuda está en el canon dos veces: DABUDARE (toponimo-011,
-        B, 'sitio de extracción de barro'; Dabadubare en Esteves p. 37 «Dabuda:
-        barro de loza») y ABUDURE (toponimo-076, B, dabuda + ure). Es el
-        criterio 5 del protocolo, si la raíz es la misma.
-      a2: nada
-      fonotactica: >-
-        pasa: cuatro sílabas CV (de-bu-de-que), consonantes d, b, k y vocales
-        e, u, todas del inventario caquetío; cf. dabuda, budare, judibana.
-      fuera_del_repo: >-
-        No está en el DRAE ni en el lexicón de Alvarado 1921 (cero en el
-        repo, verificado). En la web es dulce típico de Falcón y de la
-        península, con dos grafías, debudeque y dabudeque, y la descripción
-        de los «ladrillitos de adobe» (Gastronomía del estado Falcón; blogs
-        de comidas criollas falconianas; recetarios de la UPEL Paraguaná).
-    filtros:
-      "1 castellano": "no restituye: ni raíz ni sufijo castellanos; la terminación -eque no es la de un derivado español (cf. -aque/-eque en bajareque, cacique — voces indígenas)"
-      "2 papiamento/neerlandés": "no encontrado (el bolo de pan viejo aruberoano es «bolo di pan»); pendiente de diccionario"
-      "3 wayuu": "no está en VOCABULARIO_BASE wayuu; no es préstamo wayuu conocido"
-      "4 panhispánico": "no: solo Falcón/Paraguaná — es lo que la hace interesante"
-      "5 africanismos": "no reconocido"
-      "6 caribe/jirajaroide": "nada"
-    criterios_positivos:
-      "1 campo local": "a medias — el dulce es colonial (pan de trigo, papelón), pero el nombre es local e intraducible"
-      "2 distribución restringida": "sí — Falcón/Paraguaná"
-      "3 fonotáctica": "pasa"
-      "4 cognado": "no"
-      "5 respaldo toponímico": "sí, si la raíz es dabuda: Dabudare, Abudure (nivel B en el canon)"
-      "6 atestación colonial": "no"
-    veredicto: C
-    razon: >
-      Plausible, no más: sobrevive a los descartes (no es castellano, ni
-      panhispánico, ni wayuu conocido) y cumple dos criterios, distribución
-      restringida y respaldo toponímico — el segundo solo si dabudeque es la
-      forma primaria y la raíz es dabuda 'barro de loza', lo que el
-      referente («ladrillitos de adobe») hace verosímil pero no prueba. El
-      REFERENTE es colonial (pan de trigo, papelón): si la etimología vale,
-      es un nombre nuevo hecho con una raíz vieja, como datera con dato —
-      evidencia de que dabuda seguía viva y productiva, no de sustrato
-      precontacto (regla 3). Hipotético, solo corpus. Lo que la subiría a B:
-      que Medina la escriba dabudeque o registre la variante; una segunda
-      fuente falconiana con la etimología del adobe; la página.
-    cotejo_2026-09-08: >-
-      Miguel confirma DEBUDEQUE, con de-. La variante dabudeque es de la
-      web, no del libro: el cruce con dabuda 'barro de loza' se queda en
-      hipótesis (pide a > e en la primera sílaba, o que la forma con da-
-      sea la más vieja). Página, pendiente.
-
-  # disey, dictada de nuevo el 2026-09-07: YA estaba (2026-09-01, p. 95, C).
-  # No se duplica.
   - voz: dividive
     glosa_libro: >-
       árbol silvestre de nuestros montes cuyo fruto es astringente,
@@ -4139,87 +4982,6 @@ descartes:
       cabra como compaña de la arepa «en situaciones críticas» — la
       economía de la cabra y la comida de escasez de la Paraguaná del XX,
       a mc-mundo-022.
-  - voz: guarataro
-    glosa_libro: >-
-      es una especie de tierra con grano especial que, unido al barro de
-      loza, es la materia prima para la alfarería.
-    pagina: null            # ⚠️ PENDIENTE
-    campo: oficio (alfarería) / geografía (materia)
-    segun_dictado: true
-    dictado: 2026-09-07
-    cruce:
-      lexicon: >-
-        ⭐ CASA: warataro 'barro de loza, para la fábrica de budares y
-        ollas' [caquetío-atestiguado, Zavala #141 (E), forma_fuente
-        guarataro]. La (E) es Esteves; Medina es la SEGUNDA atestación,
-        independiente y viva, con un matiz que Esteves no da: no es el
-        barro de loza (dabuda), es la tierra de grano que se le mezcla —
-        el desgrasante del alfarero. Dos palabras caquetías para las dos
-        materias de la olla: dabuda y guarataro.
-      por_glosa: "dabuda 'barro de loza' [caq. atestiguado, Zavala #99]; budare (dictado, B); Dabudare 'sitio de extracción de barro' (toponimo-011)"
-      cognados: nada
-      toponimos: >-
-        ⭐ GUARATARO es topónimo de Paraguaná: Esteves p. 41, lugar del
-        municipio Pueblo Nuevo entre Guacuira y Santa Cruz, censo de 1881
-        16 casas y 88 vecinos, hoy La Hoyada dentro de Guacuira Arriba;
-        «Guarataro es un barro de loza, gomoso, con que fabrican budares y
-        ollas. Hay abundancia de este material en el lugar». Entra al canon
-        como toponimo-143 (B) con esta voz como lectura.
-      a2: nada
-      fonotactica: pasa
-      fuera_del_repo: >-
-        En el resto de Venezuela guarataro es 'piedra, guijarro' (DRAE, Ven.;
-        el sector de El Guarataro en Caracas): la acepción paraguanera
-        —tierra de alfarero— es local y más precisa. No está en el módulo
-        de Alvarado 1921 (comprobar en el papel).
-    filtros:
-      "1 castellano": "no"
-      "4 nacional": "la FORMA es nacional ('guijarro'), la ACEPCIÓN es paraguanera: pasa por la acepción"
-      "2, 3, 5, 6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí — técnica (alfarería) y materia del terreno"
-      "2 distribución restringida": "sí, en esta acepción"
-      "5 respaldo toponímico": "SÍ — Guarataro, Esteves p. 41, con el material en el lugar"
-      "6 atestación colonial": "no; Esteves y Medina son del s. XX"
-    veredicto: B
-    razon: >
-      Sobrevive a los filtros por la acepción, campo local, distribución
-      restringida en ese sentido y topónimo con el referente en el sitio:
-      B. Ya está en el lexicón como caquetío-atestiguado por Esteves vía
-      Zavala; Medina es la segunda voz, independiente, y afina la glosa:
-      desgrasante, no barro. Propuesta: en la nota de warataro citar a
-      Medina y la distinción con dabuda; el corpus (oficios: alfarería) gana
-      el par dabuda + guarataro como materias de la olla y del budare.
-  - voz: guarero
-    glosa_libro: >-
-      fue planta enredadera, común en nuestros montes, cuyas ramas se
-      utilizaron para amarrar el embarrado [dictado: «embargado»] de las
-      paredes de la vivienda. Las hojas servían de comida para los
-      marranos.
-    pagina: null            # ⚠️ PENDIENTE
-    campo: flora / casa (bajareque)
-    segun_dictado: true
-    dictado: 2026-09-07
-    cruce:
-      lexicon: "nada por forma; por glosa: bajareke (la técnica de pared, caq. atestiguado por decisión de Miguel del 2026-09-01) y guarero sería el bejuco que la amarra; el lexicón no tiene bejuco de amarre"
-      cognados: nada
-      toponimos: "nada (Guarero es también topónimo de la Guajira venezolana, Zulia — otro lugar, quizá otra palabra)"
-      a2: nada
-      fonotactica: pasa (warero)
-      fuera_del_repo: "no está en el módulo de Alvarado 1921 ni en el DRAE como planta; única fuente para la acepción"
-    filtros:
-      "1 castellano": "no restituye (-ero castellano encima de una raíz que no lo es; cf. tunero, cardonero — o raíz entera guarero)"
-      "2-6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí — flora y técnica de casa"
-      "2 distribución restringida": "sí — única fuente"
-    repo_texto_completo_2026-09-08: >-
-      van Buurt 2014: «Guarero (Sero)», un cerro de Aruba; Jahn 1927 (pdf 170): Guarero, lugar de cultivo en la Guajira («por Macuire, Güincúa y Guarero se cultiva… maíz, frijoles»). La FORMA es topónimo en dos puntos del área caquetía (criterio 5, débil: no confirma el bejuco). Se queda en C con el apoyo anotado.
-    veredicto: C
-    razon: >
-      Como bayure: fitónimo local con función precisa (el amarre del
-      bajareque), pasa los filtros y cumple dos criterios; sin cognado ni
-      atestación. C, al corpus (casa). Deuda: identificar la planta.
   - voz: guargüero
     glosa_libro: "la tráquea, la manzana de Adán: a eso le llamaron nuestros viejos «los guargüeros»"
     pagina: null            # ⚠️ PENDIENTE
@@ -4238,34 +5000,6 @@ descartes:
       (filtro 1). Se anota por cobertura.
 
   # ── Tercera tanda del 2026-09-07: fin de la G y arranque de la H. ──
-  - voz: guarupepe
-    glosa_libro: >-
-      la auyama madura, cocida, mezclada con leche, que quedara espesa: eso
-      era un guarupepe, comida muy apreciada por nuestra gente.
-    pagina: null            # ⚠️ PENDIENTE
-    campo: comida
-    segun_dictado: true
-    dictado: 2026-09-07
-    cruce:
-      lexicon: "nada por forma; por glosa, el lexicón no tiene auyama ni ningún plato de auyama (la auyama, Cucurbita, es americana; la leche es colonial)"
-      cognados: nada
-      toponimos: nada
-      a2: nada
-      fonotactica: pasa (guarupepe)
-      fuera_del_repo: "no está en el DRAE, en Alvarado (módulo) ni en la web como voz: única fuente"
-    filtros:
-      "1 castellano": "no restituye (¿guaru- + pepe? — pepe es nombre castellano, pero no explica el plato)"
-      "2-6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí — plato local con ingrediente americano"
-      "2 distribución restringida": "sí — única fuente"
-    veredicto: C
-    razon: >
-      Nombre local de un plato, sin paralelo en ningún repertorio, que
-      pasa los filtros y cumple dos criterios. El plato es mestizo (auyama
-      + leche), como datera y debudeque: si la raíz guaru- es indígena, es
-      nombre nuevo con raíz vieja. C, al corpus (comida). Ojo: Esteves p. 42
-      da GUARU 'cataneja' (el ave) en Guaruguaja — homógrafo, no apoyo.
   - voz: guarura
     glosa_libro: >-
       era un pito o bocina que se hacía con un caracol de mar; producía un
@@ -4361,46 +5095,6 @@ descartes:
       Insulto de formación expresiva, marcado como creación popular por el
       propio autor (como garuso): rendimiento nulo por protocolo. Se anota
       por cobertura.
-  - voz: guatacare
-    glosa_libro: "árbol común, y cuyos frutos no eran comestibles por el ser humano"
-    pagina: null            # ⚠️ PENDIENTE
-    campo: flora
-    segun_dictado: true
-    dictado: 2026-09-07
-    cruce:
-      lexicon: "nada por forma en el lexicón ni en Zavala"
-      cognados: nada
-      toponimos: >-
-        ⭐ GUATACARE es topónimo de Esteves (p. 42, leída en la imagen: el
-        OCR de esa página es basura): «Lugar del municipio Jadacaquiva; hay
-        también Guatacarita. Ambos lugares aparecen censados en 1881. De las
-        voces sabemos que Guatacare es un árbol perennifolio, hojas grandes
-        y sapidiáceo [?]; Guatacarita es una hierba». Entra al canon como
-        toponimo-144 (C, fitónimo) con esta voz como segunda atestación.
-      a2: nada
-      fonotactica: pasa (watacare)
-      fuera_del_repo: "guatacare / guatacaro es nombre de árbol en el oriente de Venezuela (Anzoátegui, Monagas), zona cumanagota: origen probablemente caribe; no está en el módulo de Alvarado (comprobar el papel)"
-    filtros:
-      "4 nacional": "de uso oriental y falconiano: no exclusivo de Paraguaná"
-      "6 caribe": "posible (área cumanagota); sin verificar"
-    criterios_positivos:
-      "1 campo local": "sí — flora"
-      "2 distribución restringida": "no del todo"
-      "5 respaldo toponímico": "SÍ — Guatacare y Guatacarita, Esteves p. 42, censados en 1881"
-    alvarado_1921_texto_completo: >-
-      p. 162: «Guatacare. Chytroma idatimon. Mirtáceas. Árbol maderable, se eleva como a 40 o 50 pies, muy común en terrenos arcillosos algo húmedos; madera pardusca…» (y p. 11 guatacaro: madera «fuerte, elástica e incorruptible, usada en vigas para techumbre», bajo llano). Hallado el 2026-09-08 al pasar las voces C por el
-      texto completo del glosario (lexicon_alvarado.py es un subconjunto). segunda fuente con taxón, pero Alvarado no la localiza en Coro: se queda en C con la distribución en contra.
-    repo_texto_completo_2026-09-08: >-
-      van Buurt 2014: «the Papiamentu words watapana, wayaká and watakeli thus seem more original than guatapaná, guayacán, guatacare, guatacaro» — la forma insular WATAKELI existe en el papiamento de las ABC, y van Buurt la tiene por más original que la castellanizada. Cuatro fuentes (Esteves, Alvarado, Medina, van Buurt) y la isla: sube a B.
-    veredicto: B
-    veredicto_anterior: C   # cambiado el 2026-09-08 por el barrido del repo a texto completo
-    razon: >
-      Fitónimo con dos atestaciones paraguaneras independientes (Esteves y
-      Medina, glosas compatibles: árbol perennifolio; fruto no comestible)
-      y dos topónimos con el nombre; pero la voz se usa también en el
-      oriente caribe y su origen no está resuelto. C: al corpus (flora) y
-      al canon de topónimos. Termina en -are como Bariquire, Baraivere
-      (¿-are 'sitio de' o parte del fitónimo? se anota).
   - voz: guayacán
     glosa_libro: >-
       árbol que fue común en nuestros montes; es de lento crecimiento,
@@ -4554,70 +5248,6 @@ descartes:
       Antillanismo (filtro 4), aunque arahuaca de origen. Dato de dieta:
       carne y huevos — la iguana como caza del monte espinoso. Se anota
       por cobertura.
-  - voz: igüira
-    glosa_libro: "fue paloma silvestre del tamaño de la casera; abundante en épocas pasadas, hoy en vías de extinción; de carne muy apreciada"
-    pagina: null            # ⚠️ PENDIENTE
-    campo: fauna
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: "nada por forma; por glosa, la otra paloma tiene nombre caquetío: wakoa/guacoa 'paloma' [caq. atestiguado, Zavala #127 (HB); Alvarado p. 143: Columba corensis y C. speciosa, palomas de Coro y el Zulia]. Dos palomas con nombre distinto: guacoa la grande de cacería, igüira la del tamaño de la casera"
-      cognados: nada
-      toponimos: nada
-      a2: nada
-      fonotactica: pasa (iwira)
-      fuera_del_repo: "no está en el módulo de Alvarado ni en el DRAE; única fuente"
-    filtros:
-      "1 castellano": "no restituye"
-      "2-6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí — fauna de caza"
-      "2 distribución restringida": "sí — única fuente"
-    veredicto: C
-    razon: >
-      Nombre local de una segunda paloma, junto a la guacoa atestiguada:
-      pasa los filtros y cumple dos criterios; sin cognado ni atestación.
-      C, al corpus (fauna). Deuda: identificar la especie.
-  - voz: isicagua
-    glosa_libro: "árbol de nuestros montes utilizado en la medicina empírica para tratar hernias"
-    pagina: null            # ⚠️ PENDIENTE
-    campo: flora (medicinal)
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: "nada por forma en el lexicón ni en Zavala"
-      cognados: nada
-      toponimos: "nada; termina en -agua como sibidigua, dibaragua, quihuagua (¿formante de fitónimo?)"
-      a2: nada
-      fonotactica: pasa (isikawa)
-      fuera_del_repo: >-
-        ⭐ Alvarado 1921 p. 176, ISICÁGUA: «Árbol medicinal de Coro, que
-        cree Ernst pueda ser una especie de Protium» (nivel B en
-        lexicon_alvarado: árbol de Coro, sin filtro). Segunda atestación,
-        independiente y anterior en un siglo, con el MISMO rasgo: árbol
-        medicinal, y localizado en Coro.
-    filtros:
-      "1 castellano": "no"
-      "2 papiamento": "no"
-      "3 wayuu": "no"
-      "4 nacional": "no — solo Coro (Alvarado) y Paraguaná (Medina)"
-      "5, 6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí — flora medicinal del monte"
-      "2 distribución restringida": "SÍ — Coro y Paraguaná, y nada más"
-      "3 fonotáctica": "pasa"
-      "4 cognado": "no"
-      "5 respaldo toponímico": "no (el -agua final se anota)"
-      "6 atestación colonial": "no; 1921 es la más antigua"
-    veredicto: B
-    razon: >
-      Sobrevive a los seis filtros, campo local, distribución restringida
-      a la Curiana, y dos atestaciones independientes (Alvarado 1921,
-      Medina 2013) que coinciden en el rasgo. Sin cognado: B por la
-      convergencia documental, no por la comparación. Candidata al corpus
-      (flora medicinal) y a la lista de candidatas al lexicón con etiqueta
-      a decidir por Miguel (dos fuentes, ninguna colonial: reconstruido,
-      no atestiguado). Deuda: Ernst y el Protium.
   - voz: jagüey
     glosa_libro: >-
       nuestros viejos denominaron así a la perforación que se hacía en la
@@ -4693,72 +5323,6 @@ descartes:
     razon: >
       Venezolanismo general (filtro 4). La extensión paraguanera a «toda
       fruta tierna» es dato de habla. Se anota por cobertura.
-  - voz: maba
-    glosa_libro: "[con mebi y bayure] son tres denominaciones para identificar al panal de las abejas"
-    pagina: null            # ⚠️ PENDIENTE (letra M, antes de la p. 175)
-    campo: fauna / oficio (miel)
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: >-
-        nada por forma. Por glosa: el lexicón tiene RUBA 'abeja silvestre
-        negra de Coro' [caq. atestiguado], harifuche 'maíz tostado y miel',
-        y wayuu mapase 'cera de abeja'. Y bayure (dictado, C): abeja sin
-        aguijón y su casa. La miel y el panal caquetíos no tienen voz en el
-        lexicón: aquí llegan TRES de golpe (maba, mebi, bayure), más mavita
-        y memerea, más la abeja zamuro (s.v. zamuro).
-      cognados: >-
-        ⭐ candidato: lokono MABA 'miel' y wayuu MAAPA 'miel, abeja'
-        (fuera del repo: de Goeje / Bennett; Captain & Captain — ninguno
-        de los dos está en VOCABULARIO_BASE, que no tiene 'miel'). Si vale,
-        maba : maapa es la correspondencia b caquetío : p wayuu de
-        cognado-001 (barisi : palíi), y la raíz es panarahuaca *maba.
-      toponimos: nada
-      a2: nada
-      fonotactica: pasa
-      fuera_del_repo: "no está en el DRAE ni en el módulo de Alvarado como 'panal'; comprobar de Goeje 1928 (lokono maba) y Captain 2005 (wayuu maapa)"
-    filtros:
-      "1 castellano": "no"
-      "2 papiamento": "no"
-      "3 wayuu": "no idéntica (maapa ≠ maba): correspondencia regular, no préstamo — es justo el «punto dulce» del criterio 4"
-      "4-6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí — apicultura silvestre"
-      "2 distribución restringida": "sí — única fuente para esta forma"
-      "3 fonotáctica": "pasa"
-      "4 cognado con correspondencia regular": "SÍ, si se verifica: lokono maba, wayuu maapa"
-    veredicto: B
-    razon: >
-      La mejor de la tanda: sobrevive a los filtros, campo local,
-      distribución restringida, y un cognado arahuaco con la
-      correspondencia b : p que el proyecto ya tiene medida (cognado-001).
-      B (retro-abstraído), condicionado a verificar maba/maapa en papel;
-      si se verifica, candidata al lexicón como reconstruida y al set de
-      cognados ('miel'). El panal, no la abeja: en lokono maba es la miel;
-      la extensión miel → panal es normal.
-  - voz: mebi
-    glosa_libro: "[con maba y bayure] son tres denominaciones para identificar al panal de las abejas"
-    pagina: null            # ⚠️ PENDIENTE
-    campo: fauna / oficio (miel)
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: "nada; ver maba"
-      cognados: nada
-      fonotactica: pasa
-      fuera_del_repo: "no localizada; única fuente"
-    filtros:
-      "1-6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí"
-      "2 distribución restringida": "sí — única fuente"
-    veredicto: C
-    razon: >
-      Segundo nombre del panal, sin paralelo: C, al corpus (miel). Que haya
-      TRES nombres para el panal (maba, mebi, bayure) sugiere tres cosas
-      distintas que el autor ya no distingue — quizá tres abejas, como
-      bayure y la abeja zamuro. Deuda: preguntar a Miguel si su gente los
-      diferencia.
   - voz: macana
     glosa_libro: "en Paraguaná se utilizó por nuestros viejos para referirse a algo muy grande o desproporcionado"
     pagina: null            # ⚠️ PENDIENTE
@@ -4773,42 +5337,6 @@ descartes:
       "4 antillanismo": "SÍ"
     veredicto: D
     razon: "Antillanismo (filtro 4); la acepción 'grande, desproporcionado' es extensión general venezolana. Se anota por cobertura."
-  - voz: machire
-    glosa_libro: >-
-      es producto del ingenio de nuestro pueblo para designar la harina del
-      maíz que presenta en su textura mucha granulación y, por lo tanto,
-      dará una arepa de baja calidad, por lo que es recomendable volver a
-      moler para que quede chirita, o sea fina, y así una buena arepa.
-    pagina: null            # ⚠️ PENDIENTE
-    campo: comida (maíz)
-    origen_libro: "«producto del ingenio de nuestro pueblo» (según el autor)"
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: >-
-        nada por forma. Ya estaba anotada en este dictado por la morfología
-        (día 1): machire 'masa granulosa' frente a chirita 'masa fina' —
-        el privativo arahuaco ma- (madunaka; wayuu ma-) en uso vivo,
-        hipótesis; y la final -re, la más recurrente del dictado (cadare,
-        cachinare, catanare, chiguare, chipare, machire), que el canon tiene
-        como morfema-002 en topónimos.
-      fonotactica: pasa
-      fuera_del_repo: "no localizada fuera de Paraguaná"
-    filtros:
-      "1 castellano": "el autor la da por creación popular, pero no restituye a nada castellano; la segmentación ma- + chire es arahuaca si vale"
-      "2-6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí — técnica del maíz"
-      "2 distribución restringida": "sí — única fuente"
-      "3 fonotáctica": "pasa"
-    veredicto: C
-    razon: >
-      Contra la marca del autor («ingenio del pueblo»), la forma se deja
-      analizar: ma- privativo + chir- (la raíz de chirita 'fina') = 'no
-      fina', que es exactamente lo que glosa. C: hipótesis morfológica
-      registrada con su condición — que chir- aparezca suelto o en otra
-      composición. Si vale, es el privativo arahuaco vivo en Paraguaná en
-      el siglo XX, y eso es dato de lengua, no de habla.
   - voz: maguey
     glosa_libro: "la espiga o vara larga a cuyo extremo superior la planta de sisal o cocuy, como le conocemos en Falcón, produce su inflorescencia"
     pagina: null            # ⚠️ PENDIENTE
@@ -4892,61 +5420,6 @@ descartes:
     razon: >
       Venezolanismo general (filtro 4). El sinónimo BUCHUCO sí es local: va
       con entrada propia (C).
-  - voz: buchuco
-    glosa_libro: "[s.v. mapire] también se conoció como buchuco"
-    pagina: 179
-    campo: casa / oficio (fibra)
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: "nada por forma; buche 'melocacto' [caq. atestiguado] es homógrafo parcial sin relación de sentido; el sufijo -uco es de REGLAS_ZAVALA (afijo caquetío atestiguado: cf. Sisibauco, Urupaguaduco 'quebrada')"
-      fonotactica: pasa
-      fuera_del_repo: "no localizada fuera de Paraguaná"
-    filtros:
-      "1-6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí — el bolso de fibra"
-      "2 distribución restringida": "sí — única fuente, frente al nacional mapire"
-      "3 fonotáctica": "pasa, y con sufijo caquetío"
-    veredicto: C
-    razon: >
-      Nombre local frente al nacional (mapire), con el sufijo -uco que el
-      caquetío atestiguado usa: C, al corpus (casa/fibra). Lo que la subiría:
-      la raíz buch- en otra palabra de tejido o recipiente.
-  - voz: marite
-    glosa_libro: "así llamaron a la planta acuática que se desarrolla en la superficie del agua depositada en los estanques"
-    pagina: 180
-    campo: flora (agua)
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: "nada (lokono mariti 'maíz' es ruido)"
-      fonotactica: pasa
-      fuera_del_repo: "no localizada; única fuente (la planta: ¿lenteja de agua, Lemna?)"
-    filtros:
-      "1-6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí — flora del jagüey"
-      "2 distribución restringida": "sí"
-    veredicto: C
-    razon: "Fitónimo local del agua estancada, única fuente: C, al corpus (flora). Deuda: la especie."
-  - voz: matejea
-    glosa_libro: "así se denominó a la vivienda hecha por las avispas"
-    pagina: 181
-    campo: fauna / casa
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: "nada; ver el racimo de la miel en maba"
-      fonotactica: pasa
-      fuera_del_repo: "no localizada; única fuente"
-    filtros:
-      "1-6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí"
-      "2 distribución restringida": "sí"
-    veredicto: C
-    razon: "Nombre del avispero, sin paralelo: C, al corpus (fauna). Quinto nombre del racimo abejas/avispas del dictado."
   - voz: mavita
     glosa_libro: "dos connotaciones le dieron los paraguaneros a esta palabra: una, para identificar un panal de abejas; y dos, para referirse a la mala suerte que acompañaba a determinadas personas"
     pagina: "181-182"
@@ -4966,28 +5439,6 @@ descartes:
       «se le pega» a uno— o una homonimia con maba. Se anota junto al
       racimo de la miel; si el papel separa las dos, la acepción 'panal'
       se reabre como C.
-  - voz: memerea
-    glosa_libro: "con este nombre se conoció a los panales de las abejas, generalmente localizados en troncos secos"
-    pagina: 183
-    campo: fauna / oficio (miel)
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: "nada; ver maba. Coincide con bayure (día 1): «casa… generalmente en palos secos y huecos» — ¿el panal de la abeja bayure?"
-      fonotactica: pasa (reduplicación me-me-)
-      fuera_del_repo: "no localizada; única fuente"
-    filtros:
-      "1-6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí"
-      "2 distribución restringida": "sí"
-    veredicto: C
-    razon: >
-      Otro nombre del panal, con el rasgo del tronco seco que bayure ya
-      traía: C. El racimo completo de la miel paraguanera queda así: maba,
-      mebi, bayure, mavita, memerea, matejea (avispas), zamuro
-      (abeja hedionda) — siete voces donde el lexicón tenía una (ruba).
-      Es el hueco léxico mejor documentado del dictado.
   - voz: muchilas
     glosa_libro: "así llamaron a las partes sexuales del varón, específicamente a los testículos"
     pagina: 189
@@ -5020,27 +5471,6 @@ descartes:
       "4 antillanismo": "SÍ — el autor lo dice"
     veredicto: D
     razon: "Antillanismo (filtro 4), declarado por el autor; la forma sin e- es la conservadora. Se anota por cobertura."
-  - voz: naguata
-    glosa_libro: "se denominó así a la auyama que estaba en pleno proceso de desarrollo"
-    pagina: 193
-    campo: flora / comida
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: "nada por forma (nagua es otra cosa); por glosa, la auyama no tiene voz en el lexicón, y aquí aparece con dos estados nombrados: naguata (en desarrollo) y guarupepe (el plato de la madura)"
-      fonotactica: pasa
-      fuera_del_repo: "no localizada; única fuente"
-    filtros:
-      "1-6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí — cultivo, con estado de madurez nombrado"
-      "2 distribución restringida": "sí"
-    veredicto: C
-    razon: >
-      Nombre de un estado de la auyama, sin paralelo: C, al corpus
-      (conuco). Las lenguas de cultivadores nombran los estados del fruto
-      (cf. jojoto para el maíz tierno, sarutaco para el punto medio): esta
-      es la voz local para uno de ellos.
   - voz: naiboa
     glosa_libro: >-
       es palabra que se usó como una negativa rotunda en los años que
@@ -5098,55 +5528,6 @@ descartes:
       (taíno). Que Paraguaná diga onoto y no bariki en el XX es dato de
       SUSTITUCIÓN léxica: la voz caquetía del achiote no sobrevivió en el
       habla; se anota para el issue de repertorio.
-  - voz: poporo
-    glosa_libro: "así denominaron nuestros viejos a la hinchazón propia de aquel que se había golpeado"
-    pagina: 230
-    campo: cuerpo
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: >-
-        ⭐ CASA: poporo 'maza-porra, arma de combate ceremonial'
-        [caquetío-atestiguado; Alvarado 1921 p. 255: «Arma, a manera de
-        porra, usada por los antiguos Caquetíos y los Guajiros. Ref.
-        Castellanos, Eleg. I; Cf. Bapóron, Tolondro, lobanillo || chichón,
-        tumor, o cosa así»]. Alvarado ya registra las DOS acepciones —el
-        arma y el chichón— y Medina atestigua la segunda viva en Paraguaná.
-      fonotactica: pasa
-      fuera_del_repo: "DRAE: poporo, Ven. y Col., chichón; en Colombia también el recipiente de cal de los kogi (otra palabra)"
-    filtros:
-      "4 nacional": "la acepción 'chichón' es venezolana general; la del arma es la caquetía"
-    criterios_positivos:
-      "6 atestación colonial": "sí, del arma: Castellanos vía Alvarado; y Alvarado la da EXPLÍCITAMENTE a los caquetíos, la única voz de su glosario con esa atribución"
-    veredicto: A
-    razon: >
-      La palabra ya es caquetío-atestiguada en el lexicón (el arma), con
-      atribución explícita de Alvarado y cita de Castellanos; Medina
-      atestigua en Paraguaná la acepción derivada (el chichón que deja el
-      poporo), que Alvarado también trae. A por la voz; el sentido
-      paraguanero va a la nota del lexicón como extensión semántica viva
-      (arma → golpe → hinchazón). Nada que fusionar salvo la nota.
-  - voz: quihuagua
-    glosa_libro: "una variedad de frijol común en épocas pasadas y muy nutritiva"
-    pagina: 237
-    campo: flora / comida (conuco)
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: "nada por forma; por glosa, el frijol caquetío del corpus es la caraota (#105, étimo foráneo según Oliver): aquí llegan tres frijoles con nombre (quihuagua, tapirama, urubana)"
-      toponimos: "termina en -agua (sibidigua, isicagua, dibaragua): ¿formante de fitónimo?"
-      fonotactica: pasa (kiwawa)
-      fuera_del_repo: "no localizada; única fuente"
-    filtros:
-      "1-6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí — cultivo"
-      "2 distribución restringida": "sí"
-    veredicto: C
-    razon: >
-      Nombre local de una variedad de frijol, única fuente: C, al corpus
-      (conuco). Con tapirama y urubana forma la serie de los frijoles
-      paraguaneros del XX; cruzar con #105 (caraota).
   - voz: sábila
     glosa_libro: "es el aloe vera de los botánicos, planta muy conocida y común en nuestros suelos escasos de lluvia"
     pagina: 257
@@ -5180,33 +5561,6 @@ descartes:
       "1 castellano": "SÍ"
     veredicto: D
     razon: "Castellano (filtro 1), declarado por el autor. Se anota por cobertura."
-  - voz: sarutaco
-    glosa_libro: >-
-      para los paraguaneros, todo cuanto estuviese en su punto medio de
-      perfección estaba sarutaco: frutas a medio madurar, carne a medio
-      asar o medio cocida. En el estado Lara le dicen así solo a los
-      cambures a medio madurar.
-    pagina: 260
-    campo: comida / otro
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: "nada por forma; saruro 'boa' [caq.] es homógrafo parcial sin relación; -taco: cf. tacaduto (Esteves: «expresa la quebrada del taque»), taque 'salina'"
-      fonotactica: pasa
-      fuera_del_repo: "no está en el DRAE; regional del occidente (Lara y Falcón, según el autor)"
-    filtros:
-      "4 nacional": "regional (Lara + Falcón), no nacional"
-      "1, 2, 3, 5, 6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "a medias — estado de la comida"
-      "2 distribución restringida": "sí — occidente"
-    veredicto: C
-    razon: >
-      Voz del occidente sin paralelo castellano, con un reparto semántico
-      que el autor mide (general en Paraguaná, solo cambures en Lara): C.
-      Lo que la subiría: Alvarado o Tamayo con origen. El área Lara-Falcón
-      es el área caquetía (Barquisimeto y la costa): compatible, no
-      probatorio.
   - voz: semeruco
     glosa_libro: >-
       fruta silvestre de nuestros montes, rica en calcio y otras vitaminas.
@@ -5262,34 +5616,6 @@ descartes:
       "1 castellano": "expresiva; campo abstracto"
     veredicto: D
     razon: "Expresiva, campo abstracto: D por protocolo. Se anota la terminación -eque, tercera del dictado (debudeque, serembeque; bajareque)."
-  - voz: seretón
-    glosa_libro: >-
-      forma parte del folclor y consistía en que se tenía la certeza de que
-      existían hombres con la facultad de transformarse en animales
-      pequeños y generalmente domésticos, pues los mismos tenían pacto
-      diabólico, lo que les permitía esa transformación previo el paso de
-      desnudarse completamente y ocultar la ropa. Se dice de seretones a
-      quienes les descubrieron la ropa y se la cambiaron de sitio, por lo
-      que no pudieron o les resultó difícil recuperar su identidad.
-    pagina: 262
-    campo: creencia
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: "nada por forma; por glosa, el corpus de creencia no tiene metamorfosis animal"
-      fonotactica: pasa
-      fuera_del_repo: "no localizada como voz; el motivo (el brujo que se vuelve animal y pierde la ropa) es panamericano y europeo"
-    filtros:
-      "1 castellano": "no restituye; -ón puede ser castellano"
-      "2-6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "a medias — creencia, con nombre propio"
-      "2 distribución restringida": "sí — única fuente"
-    veredicto: C
-    razon: >
-      La voz es única fuente y el campo (creencia) es de los que el
-      protocolo no favorece; C por el nombre propio de una figura del
-      folclor local. El VALOR está en el motivo, que va a mc-mundo-026.
   - voz: siguato
     glosa_libro: >-
       en la parte oriental de la península es estar desganado, apático,
@@ -5320,48 +5646,6 @@ descartes:
       —los pescadores del occidente guardan el pescado, el oriente guarda
       el ánimo—. C por la duda del origen; el valor está en la isoglosa,
       mc-mundo-027, la segunda del dictado.
-  - voz: sibidigua
-    entrada_libro: "Sibidigua (dictado: «sividigua»)"
-    glosa_libro: >-
-      es planta silvestre de aplicación medicinal; aún se encuentra en
-      nuestros escasos montes. Es palabra popular: entre los años 50 y 80
-      fue frecuente escuchar, en nuestra Paraguaná, que como saludo
-      utilizaron la frase «¿cómo está la sibidigua?».
-    pagina: 263
-    campo: flora (medicinal) / habla (saludo)
-    segun_dictado: true
-    dictado: 2026-09-08
-    identificacion: "Jatropha gossypifolia, la tuatúa (Zavala, Alvarado)"
-    cruce:
-      lexicon: >-
-        ⭐ CASA: sibidiwa 'arbusto euforbiáceo, Jatropha gossypifolia'
-        [caquetío-atestiguado, Zavala #226 (E+A)]; Alvarado 1921 p. 277
-        SIBIDÍGUA: «Túatúa. Voz us. en Lara y Falcón». Tres fuentes:
-        Esteves, Alvarado, Medina.
-      toponimos: "⭐ dos topónimos del canon con la planta: Sibidigual (toponimo-123, C) y Sabarigua (toponimo-122, C), los dos de Esteves; y Cividual en el mapa vivo"
-      fonotactica: pasa (sibidiwa)
-      fuera_del_repo: "Alvarado p. 277; no está en el DRAE"
-    filtros:
-      "1 castellano": "no"
-      "2 papiamento": "no"
-      "3 wayuu": "no"
-      "4 nacional": "no — Lara y Falcón (Alvarado)"
-      "5, 6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí — flora medicinal"
-      "2 distribución restringida": "sí — occidente, área caquetía"
-      "3 fonotáctica": "pasa"
-      "5 respaldo toponímico": "SÍ — Sibidigual, Sabarigua (Esteves)"
-    veredicto: A
-    razon: >
-      Ya caquetío-atestiguada en el lexicón por dos fuentes, con dos
-      topónimos en el canon; Medina es la tercera atestación, viva, y
-      añade el USO: la planta como metáfora del estado de las cosas en un
-      saludo («¿cómo está la sibidigua?», años 50-80) — una fórmula de
-      saludo paraguanera del XX con una palabra caquetía dentro, que va
-      al lado de la fórmula de Mitare (frase_saludo_mitare.yaml) como
-      dato de habla. A; nada que fusionar salvo la nota del lexicón (uso,
-      medicina) y el saludo al corpus.
   - voz: tacamajaca
     glosa_libro: "dos connotaciones le dieron nuestros abuelos a esta palabra: la una, para referirse al hombre valiente, recio, fuerte; y la otra, para referirse al hombre de mal carácter"
     pagina: 269
@@ -5420,59 +5704,6 @@ descartes:
       Fitónimo del occidente, sin castellano detrás, con la técnica de
       preparación en la glosa: C, al corpus (conuco). El área es la
       caquetía; Alvarado en papel decide si sube.
-  - voz: tara
-    glosa_libro: >-
-      [primera acepción, académica: tara, defecto o enfermedad hereditaria
-      — dictado confuso]; para nuestros paraguaneros, todos los saltamontes
-      y animales parecidos fueron unas taras.
-    pagina: 272
-    campo: fauna
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: >-
-        ⭐ CASA CON #45: tara 'langosta; también mariposa, polilla'
-        [caquetío-atestiguado; RESUELTO el 2026-08-24 (#45) contra la
-        glosa anterior 'venado']. Medina, con su gente, dice SALTAMONTES:
-        es la langosta de la resolución, confirmada en boca paraguanera
-        del siglo XX, sin que el autor conozca el expediente. Es la
-        segunda fuente independiente que #45 pedía.
-      toponimos: "Taratata, tarai, taratarare en el canon (la raíz tara- en topónimos, con la cautela de que taratore es 'sabana' en Zavala #241)"
-      fonotactica: pasa
-      fuera_del_repo: "Alvarado p. 283 la trae como mención (Ta Táo?); el DRAE tiene tara solo como defecto (castellano): la acepción 'saltamontes' NO es castellana"
-    filtros:
-      "1 castellano": "no para 'saltamontes'; sí para 'defecto', que es otra palabra"
-      "2-6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí — fauna"
-      "2 distribución restringida": "sí — Paraguaná"
-      "5 respaldo toponímico": "sí — tara- en el canon"
-      "6 atestación": "sí — Zavala (la del lexicón) + esta"
-    veredicto: A
-    razon: >
-      Confirma #45 desde fuera: la tara caquetía es el saltamontes /
-      langosta, no el venado. A; el destino es un COMENTARIO en #45 con
-      esta cita (borrador en issues-pendientes/comentario-45-tara-medina.md)
-      y la nota del lexicón. Que la voz siguiera viva en el XX con ese
-      sentido es lo que el issue no tenía.
-  - voz: teco
-    glosa_libro: "es planta xerófita [dictado: «cerófita»] de hojas lanceoladas, cortas y con espinas por sus bordes, resistente a los veranos, y cuando llueve da unos frutos muy dulces"
-    pagina: 274
-    campo: flora (fruto)
-    segun_dictado: true
-    dictado: 2026-09-08
-    identificacion: "por las hojas lanceoladas con espinas marginales y el fruto dulce, una bromelia terrestre (¿Bromelia chrysantha, el 'maya' / 'piñuela'?)"
-    cruce:
-      lexicon: "nada por forma; por glosa, ninguna bromelia en el lexicón"
-      fonotactica: pasa
-      fuera_del_repo: "no localizada; única fuente"
-    filtros:
-      "1-6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí — flora comestible del monte"
-      "2 distribución restringida": "sí"
-    veredicto: C
-    razon: "Fitónimo local de fruto comestible, única fuente: C, al corpus (flora). Deuda: la especie."
   - voz: tiquitaque
     glosa_libro: "vocablo que utilizaron los abuelos para referirse a la persona presumida, que se mostrase orgullosa de su apariencia y con mucha afectación"
     pagina: 277
@@ -5513,59 +5744,6 @@ descartes:
     veredicto: D
     veredicto_anterior: C   # cambiado el 2026-09-08 por Alvarado a texto completo
     razon: "Nombre local del búho frente al nacional guarracuco: C, al corpus (fauna), con la sospecha de onomatopeya. Ecología: hoy desaparecido."
-  - voz: tobeca
-    glosa_libro: "con esta palabra identificaron a la perdiz, también llamada chenga"
-    pagina: 279
-    campo: fauna
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: "nada por forma; chenga ya está en el dictado (final -nga, ajena al caquetío medido)"
-      fonotactica: pasa
-      fuera_del_repo: "no localizada; única fuente"
-    filtros:
-      "1-6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí — fauna de caza"
-      "2 distribución restringida": "sí"
-    veredicto: C
-    razon: "Segundo nombre local de la perdiz (con chenga): C, al corpus (fauna). Dos nombres, ¿dos aves (Colinus y Crypturellus)? Deuda."
-  - voz: totocoro
-    glosa_libro: >-
-      así se denominó la madera de los brazos del cardón seco, o sea, al
-      corazón del mismo, que es la parte sólida de él; se obtenía el cañizo
-      para el techo de la vivienda.
-    pagina: 281
-    campo: flora / casa (techo)
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: >-
-        ⭐ NO está en el lexicón, pero sí en 6-fusion/toponimia_coro_espina.yaml
-        (González Batista, 2026-08-25): «totocoro: las varas secas del
-        cardón, el varillaje» — con tococoro 'el cardón' y datococoro
-        'árbol espinoso que da fruta', todos sobre coro 'espina' (D10 tiene
-        coro 'cardón grande' como hipotético). Medina es la SEGUNDA
-        atestación de totocoro, independiente, y coincide en el referente:
-        la madera seca del cardón para el techo.
-      fonotactica: pasa (reduplicación to-to-)
-      fuera_del_repo: "no está en el DRAE; voz de la arquitectura tradicional falconiana («techos de tococoro y torta»)"
-    filtros:
-      "1 castellano": "no"
-      "2-6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí — técnica de casa con el cardón, el árbol del paisaje"
-      "2 distribución restringida": "sí — Coro y Paraguaná"
-      "3 fonotáctica": "pasa"
-      "5 respaldo toponímico": "indirecto — la serie Coro-/Curi- (Arcaya p. 170)"
-    veredicto: B
-    razon: >
-      Dos fuentes independientes (González Batista, Medina) para una voz
-      viva de la técnica del cardón, con segmentación propuesta (to
-      'palo' + coro 'espina/cardón') que toca D10 y la lectura de Coriana:
-      B. Propuesta: candidata al lexicón (totocoro 'madera seca del
-      cardón, cañizo') y APOYO a coro = 'cardón/espina' — es la palabra
-      que González Batista ponía como prueba y ahora tiene segundo testigo.
   - voz: totuma
     glosa_libro: >-
       eran los envases que se obtenían al serrar por mitades los frutos del
@@ -5634,35 +5812,6 @@ descartes:
       "4 nacional": "SÍ"
     veredicto: D
     razon: "Venezolanismo general (filtro 4). Tercer lagarto con nombre (bisure, gualamo, tuqueque). Se anota por cobertura."
-  - voz: tura
-    glosa_libro: "cuando la mazorca del maíz tenía pocos granos, nuestros mayores decían que era pura tura"
-    pagina: 287
-    campo: flora / comida (maíz)
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: >-
-        nada por forma en el lexicón. TRES tura distintas en el repo: (1)
-        Esteves p. 66, topónimo TURA en Baraived «Hato de Jura… Jura, juri:
-        ventarrón» (la del viento, con T por J en la cadena escrita); (2)
-        Alvarado p. 301, TURA «especie de bambú… E. Lara; baile de Tura,
-        baile indígena» (F6: la tura de los ayamanes); (3) esta: la mazorca
-        vana. Homónimos, salvo prueba.
-      fonotactica: pasa
-      fuera_del_repo: "Alvarado p. 301; el baile de las Turas es de Lara/Falcón (ayamán/jirajara)"
-    filtros:
-      "1 castellano": "no"
-      "4 nacional": "no para esta acepción"
-      "6 jirajaroide": "posible por el área (la Tura de los ayamanes), sin relación de sentido"
-    criterios_positivos:
-      "1 campo local": "sí — el maíz"
-      "2 distribución restringida": "sí — única fuente para 'mazorca vana'"
-    veredicto: C
-    razon: >
-      Acepción local sin castellano detrás y con dos homónimos en el área,
-      ninguno con el mismo sentido: C, al corpus (conuco), con los tres
-      tura declarados para que nadie los funda. Lo que la subiría: que
-      «tura» aparezca en otra fuente con sentido de 'vacío, vano'.
   - voz: turupial
     glosa_libro: "como turpial, esta palabra ingresó al diccionario; nuestros viejos le intercalaban una u al pronunciarla; es ave canora de nuestros montes"
     pagina: 288
@@ -5694,150 +5843,6 @@ descartes:
       "4 panhispánico": "SÍ"
     veredicto: D
     razon: "Americanismo general (filtro 4). Se anota por cobertura; con jojoto, tura y tusa, el maíz tiene tres estados nombrados en el habla."
-  - voz: tuturuto
-    glosa_libro: "fue una planta venenosa y sin ninguna utilidad para el paraguanero"
-    pagina: 288
-    campo: flora
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: >-
-        ⭐ CASA: tuturutos 'hierba de propiedades eméticas, usada para
-        cuajar quesos' [caquetío-atestiguado, Zavala (E)]; Esteves p. 66:
-        Tutubacoa «el lugar de los tuturutos» (topónimo, en la cola).
-        CONFLICTO de glosa: Esteves le da uso (emética, cuaja el queso),
-        Medina dice «venenosa y sin ninguna utilidad». Compatible —lo
-        emético es tóxico a otra dosis— pero es un desacuerdo de uso
-        entre dos paraguaneros, y se declara.
-      toponimos: "Tutubacoa (Esteves p. 66; índice por procesar)"
-      fonotactica: pasa (reduplicación tu-tu-)
-      fuera_del_repo: "no está en el DRAE ni en el módulo de Alvarado"
-    filtros:
-      "1-6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí — flora"
-      "2 distribución restringida": "sí"
-      "5 respaldo toponímico": "SÍ — Tutubacoa"
-    repo_texto_completo_2026-09-08: >-
-      Gatschet 1885 (Aruba), lista de plantas: «tuturutu». Cuarta fuente, insular: Zavala/Esteves, Medina, Gatschet.
-    veredicto: A
-    razon: >
-      Ya atestiguada por Esteves vía Zavala, con topónimo; Medina es la
-      segunda voz y trae un conflicto de uso que va a la nota del lexicón
-      (D7: las dos glosas quedan). A; y Tutubacoa a la campaña con esta
-      voz como lectura cuando se procese.
-  - voz: urubana
-    glosa_libro: >-
-      fue un frijol de color morado, sabor agradable, y que por llegar a
-      Paraguaná desde la isla de Aruba se denominó urubana, sin que eso
-      quiera decir que esa isla es su origen, pues allí solo producen
-      negros [frijoles].
-    pagina: 291
-    campo: flora / comida (conuco)
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: "nada por forma; ver quihuagua y tapirama"
-      toponimos: >-
-        ⭐ el autor mismo segmenta: Aruba + -na/-ana → urubana 'el (frijol)
-        de Aruba'. Es la hipótesis de Miguel sobre «Arubanas» (los indios
-        de Aruba en Altolaguirre 1768, toponimia_paraguana_miguel.yaml
-        §Aruba / Arubanas) vista desde el habla: un derivado vivo de Aruba
-        con -ana que significa 'procedente de'. Toca #109 (la lista viva
-        de -ana) y D2/#33: aquí -ana no es 'lugar de' sino 'de, procedente
-        de' — o el gentilicio castellano -ano/-ana (arubano) con la vocal
-        cambiada. Las dos lecturas se registran.
-      fonotactica: pasa
-      fuera_del_repo: "no localizada; única fuente"
-    filtros:
-      "1 castellano": "posible: arubana (gentilicio castellano) con a > u por asimilación — no se descarta"
-      "2 papiamento": "el frijol viene de Aruba, la palabra puede venir con él (papiamento: bonchi 'frijol'; arubano/arubiano)"
-      "3-6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí — cultivo"
-      "2 distribución restringida": "sí"
-      "5 respaldo toponímico": "el nombre lleva un topónimo dentro"
-    veredicto: C
-    razon: >
-      Fitónimo local con etimología dada por el propio autor (de Aruba):
-      C. El valor no es el frijol, es el SUFIJO: un -ana/-na vivo en el
-      XX con sentido 'de, procedente de' sobre un topónimo, que es o el
-      gentilicio castellano deformado o el formante que #109 acaba de
-      dejar sin glosa. Registrado en la lista viva de -ana y en la
-      hipótesis de Miguel sobre Arubanas.
-  - voz: urupagua
-    glosa_libro: >-
-      existen dos clases de urupagua: en Paraguaná solo se conoce como tal
-      al arbusto espinoso cuya única utilidad es servir para hacer cercas
-      en los conucos, por ser espinoso; la otra es un árbol que solo se
-      encuentra en la serranía coriana y cuyos frutos, por ser amargos,
-      sirvieron para decir «tiene más coraje que el que se comió la primera
-      urupagua»; este fruto tiene que ser hervido por varias horas.
-    pagina: 292
-    campo: flora
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: >-
-        NO está en el lexicón ni en Zavala. Alvarado 1921 p. 305 URUPÁGUA:
-        «Árbol indeterminado de Coro. Fruto elipsoide, cuando seco, de 1½
-        pulgada de largo, con cáscara dura y un contenido libre, compacto,
-        harinoso, amarillento» (nivel B en lexicon_alvarado: «la ciencia
-        no supo darle taxón: señal de voz local no castellanizable») — es
-        la SEGUNDA clase de Medina, el árbol de la sierra de fruto amargo.
-      toponimos: >-
-        ⭐ Esteves: URUPAGUADUCO «la quebrada de las urupaguas» (p. 71) y
-        URUPAGUA, los dos en el índice (por procesar); el primero con -duco
-        'quebrada' (Tacaduto «la quebrada del taque», uto 'cauce').
-      fonotactica: pasa (urupawa)
-      fuera_del_repo: "Alvarado p. 305; no está en el DRAE"
-    filtros:
-      "1 castellano": "no"
-      "2 papiamento": "no"
-      "3 wayuu": "no"
-      "4 nacional": "no — Coro y Paraguaná"
-      "5, 6": "sin candidato"
-    criterios_positivos:
-      "1 campo local": "sí — flora, cerca de conuco, y refrán"
-      "2 distribución restringida": "sí — Coro (Alvarado) y Paraguaná (Medina, Esteves)"
-      "3 fonotáctica": "pasa"
-      "5 respaldo toponímico": "SÍ — Urupaguaduco, Urupagua (Esteves)"
-      "6 atestación colonial": "no; Alvarado 1921"
-    alvarado_1921_texto_completo: >-
-      p. 305: «Urupagua. Árbol indeterminado de Coro… Urupaguita. Yerba que produce una frutilla amarga. Pasto de cabras. Coro». Hallado el 2026-09-08 al pasar las voces C por el
-      texto completo del glosario (lexicon_alvarado.py es un subconjunto). el diminutivo urupaguita 'pasto de cabras, Coro' es la primera clase de Medina (el arbusto de cercas): las dos clases están en Alvarado.
-    veredicto: A
-    razon: >
-      Tres fuentes independientes (Alvarado 1921, Esteves 1989, Medina
-      2013), dos topónimos en Esteves, distribución restringida a la
-      Curiana, y NO está en el lexicón: A por la vía toponímica, y
-      CANDIDATA AL LEXICÓN con etiqueta a decidir (reconstruido por
-      convergencia, no atestiguado en boca caquetía). Medina añade las dos
-      clases (el arbusto de cercas en Paraguaná, el árbol de fruto amargo
-      en la sierra) y un refrán con la planta dentro. Deuda: procesar
-      Urupagua y Urupaguaduco en la campaña con esta voz como lectura.
-  - voz: yabo
-    glosa_libro: "árbol de madera dura, propio para hacer trompos y elaborar lejía"
-    pagina: 305
-    campo: flora
-    segun_dictado: true
-    dictado: 2026-09-08
-    cruce:
-      lexicon: "⭐ CASA: yabo 'Cercidium viride, árbol resinoso' [caquetío-atestiguado, Zavala #278 (E+A+AM)]; Alvarado p. 307 YABO; Esteves p. 43: Güica «es otro nombre indígena que tiene el árbol que llamamos Yabo»"
-      toponimos: "⭐ Yabuquiva/Yauquiba (toponimo-105, nivel A: el mapa conserva la b del étimo yabo); Güica (Esteves p. 43, el otro nombre del árbol, en la cola)"
-      fonotactica: pasa
-      fuera_del_repo: "Alvarado p. 307"
-    filtros:
-      "1-6": "sin candidato (voz local del occidente)"
-    criterios_positivos:
-      "1 campo local": "sí — flora y técnica (trompos, lejía)"
-      "2 distribución restringida": "sí — occidente"
-      "5 respaldo toponímico": "SÍ — Yabuquiva, nivel A"
-    veredicto: A
-    razon: >
-      Ya caquetío-atestiguado con tres fuentes y un topónimo de nivel A;
-      Medina es la cuarta voz y añade los usos (madera dura para trompos,
-      ceniza para lejía). A; a la nota del lexicón.
   - voz: yaguaza
     glosa_libro: "es ave comestible propia de las aguas cenagosas, hoy extinguida en nuestra península"
     pagina: 305

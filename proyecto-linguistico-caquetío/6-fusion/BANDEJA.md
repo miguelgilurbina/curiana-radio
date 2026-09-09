@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-09**.
 
-**2086 ítems propuestos** en 37 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
+**2056 ítems propuestos** en 37 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -36,7 +36,7 @@ editar_a_mano: no
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
 | `lokono_gramatica_perea_1942.yaml` | perea-alonso-1942 | 6 |  |
 | `medicion_contaminacion_score_2026-09-09.yaml` | ? | 0 |  |
-| `medina_colina_dictado.yaml` | ? | 141 |  |
+| `medina_colina_dictado.yaml` | ? | 111 |  |
 | `migracion_lemas_fase2.yaml` | ? | 79 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
 | `oliver_324_caribes.yaml` | ? | 0 | ⚠️ no parsea: mapping values are not allowed here

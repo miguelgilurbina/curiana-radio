@@ -206,3 +206,32 @@ debudeque y dividive, y si E y F se miraron.
 
 [[02_protocolo_habla_paraguanera]] · [[esteves-1989]] ·
 [[oliver-1989-apendice-a]] · [[metodo-comparativo]] · [[lexicon]]
+
+<!-- CORROBORACIONES-MEDINA -->
+
+### Lo que el dictado corroboró (nivel A, 2026-09)
+
+Estas voces **ya estaban en el canon**: lo que el dictado añade es una
+atestación viva del siglo XX y, en varias, el uso. Es el rendimiento real
+de la sesión — no vocabulario nuevo, sino entradas que pasan de una fuente
+a dos o tres independientes. Las notas del lexicón NO se tocan: catorce de
+estas entradas viven en `lexicon_zavala.py`, que es generado.
+
+| Voz dictada | Lema en el canon | Glosa del canon | p. Medina | Lo que dice Medina |
+|---|---|---|---|---|
+| bisure | `bisure` | lagartija | 130 | [por la entrada gualamo] lagarto; el nombre general en Paraguaná del reptil que en Tacuato y Santa Ana llaman gualamo |
+| buche | `buche` | planta xerofita, melocato, cardo globoso, rastrero | 49-50 | es la palabra académica y nuestro pueblo la utilizó en algunas de sus acepciones. En las aves, bolsa formada por el esófago en la que los alimentos pe |
+| cachicamo | `kachikamo` | armadillo (Dasypus novemcinctus) | 57 | así denominaron nuestros viejos al animal conocido en otras latitudes como armadillo. |
+| cacuro | `kakuro` | pequeña avispa negra | 57 | con este nombre nuestros viejos denominaron a la conocida avispa, y por ser esta muy agresiva cuando se molestaba, por lo general llamaban así a la pe |
+| caseto | `kaseto` | planta herbácea | 65 | planta silvestre en nuestros montes, de una altura de no más de dos metros, de ninguna utilidad para el campesino. |
+| caujaro | `kaujaro` | árbol de madera blanda, fruta mucilaginosa, del género cordi | 65 | arbusto común en nuestros montes, de fruto comestible y de agradable sabor. |
+| chiriguare | `chiriware` | gavilán, ave rapaz grande | — | es un ave de rapiña, de mayor envergadura que el gavilán [dictado: «el rapiño»], casi del tamaño de un zamuro. Era muy temido por los criadores de gal |
+| chuchube | `chuchube` | paraulata | 74 | nombre inventado por nuestros viejos para identificar al pájaro que en otras regiones del país conocen con el nombre de paraulata. |
+| dara | `dara` | alcaraván | 89 | con este nombre nominó nuestra gente al ave común en nuestros campos y que el resto del país conoce como alcaraván. |
+| guacoa | `wakoa` | paloma | 129-130 | fue paloma silvestre en épocas pasadas, muy abundante en nuestro monte, hoy casi extinta. |
+| guairón | `wairon` | hoguera | 130 | con este nombre se denominaron los hornos rústicos que se hacían en tierra para calcinar [dictado: «que marcara cuáles»; cotejar] piedras y fabricar c |
+| poporo | `poporo` | maza-porra, arma de combate ceremonial | 230 | así denominaron nuestros viejos a la hinchazón propia de aquel que se había golpeado |
+| saruro | `saruro` | boa, serpiente no venenosa | 41 | [bajo la entrada «bajear»] la serpiente que en otros lugares del país denominan tragavenados, nuestra gente la conoció como saruro. |
+| sibidigua | `sibidiwa` | arbusto euforbiaceo. Jatrofa Gossy Pifolia | 263 | es planta silvestre de aplicación medicinal; aún se encuentra en nuestros escasos montes. Es palabra popular: entre los años 50 y 80 fue frecuente esc |
+| tara | `tara` | langosta; tambien mariposa, polilla | 272 | [primera acepción, académica: tara, defecto o enfermedad hereditaria — dictado confuso]; para nuestros paraguaneros, todos los saltamontes y animales  |
+| yabo | `yabo` | cercidium Virid. Arbol resinoso | 305 | árbol de madera dura, propio para hacer trompos y elaborar lejía |

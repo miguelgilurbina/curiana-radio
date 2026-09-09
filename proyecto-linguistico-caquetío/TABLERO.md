@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-09 11:35**.
+<!--GENERADO--> Generado el **2026-09-09 12:38**.
 
 ## ¿Vamos bien?
 
@@ -21,7 +21,7 @@ editar_a_mano: no
 |---|---|---|---|
 | Entradas del lexicón **sin cita** | **0** | 82 (2026-07-21) | 🟢 −82 |
 | Hechos del corpus **con referencia** | **166 / 166** | — | 🟢 |
-| Tests del motor | **246 en verde** | 0 rojos | 🟢 |
+| Tests del motor | **248 en verde** | 0 rojos | 🟢 |
 | Gate para reanudar simulaciones | **3 de 9** condiciones | faltan 6 | 🔴 |
 
 **Lo que bloquea hoy:** pares c/k (F2 · D5) · decisiones D1/D3/D5 · glosa de `-bana` (D9) · wayunaiki vs. lokono (D11).
@@ -35,14 +35,14 @@ Detalle de cada número: [lexicón](#1-el-lexicón) · [fuentes](#2-las-fuentes)
 
 Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 
-**1500 entradas activas** en `VOCABULARIO_BASE`.
+**1502 entradas activas** en `VOCABULARIO_BASE`.
 
 ### Por lengua (categoría normalizada)
 
 | Lengua (`normalize_source_language()`) | n | % del lexicón |
 |---|---|---|
-| wayunaiki | 781 | 52.1% |
-| caquetío | 299 | 19.9% |
+| wayunaiki | 781 | 52.0% |
+| caquetío | 301 | 20.0% |
 | lokono | 275 | 18.3% |
 | taíno | 57 | 3.8% |
 | paraujano | 47 | 3.1% |
@@ -59,7 +59,7 @@ Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 |---|---|
 | wayunaiki | 769 |
 | lokono | 247 |
-| caquetío-atestiguado | 222 |
+| caquetío-atestiguado | 224 |
 | caquetío-reconstruido | 68 |
 | paraujano | 47 |
 | taíno | 36 |
@@ -89,11 +89,11 @@ Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 
 | Capa | n | Qué significa |
 |---|---|---|
-| `caquetío-atestiguado` | 222 | dato histórico citable a fuente concreta |
+| `caquetío-atestiguado` | 224 | dato histórico citable a fuente concreta |
 | `caquetío-reconstruido` | 68 | vocabulario de trabajo del proyecto |
 | `caquetío-hipotético` | 3 | baja de tier por D10 — la lengua no se discute, la confianza sí |
 | `caquetío` a secas / topónimo | 6 | sin capa declarada en el campo `fuente` |
-| **total familia caquetía** | **299** |  |
+| **total familia caquetía** | **301** |  |
 
 Fuera del habla activa: **441** candidatas `hipotético-no-verificado` en `lexicon_candidatos.py` (aisladas el 2026-06-28) y **1** entrada(s) en `FUERA_DEL_HABLA` (`piache`).
 
@@ -103,13 +103,13 @@ Entradas de familia caquetía **sin nada en `notas`**: **0** (eran 82 el 2026-07
 
 ### Quién sostiene el «atestiguado»
 
-Cuántas de las 299 entradas de familia caquetía **con `notas`** citan a cada obra. Los patrones de búsqueda salen del `autor` y los `aliases` de cada nota de `4-fuentes/`, así que una obra nueva aparece sola aquí.
+Cuántas de las 301 entradas de familia caquetía **con `notas`** citan a cada obra. Los patrones de búsqueda salen del `autor` y los `aliases` de cada nota de `4-fuentes/`, así que una obra nueva aparece sola aquí.
 
 | Obra | Entradas que la citan | % de las citadas |
 |---|---|---|
 | [[zavala-reyes-2015]] | 222 | 74% |
 | [[zavala-reyes-2018]] | 222 | 74% |
-| [[alvarado-1921]] | 14 | 5% |
+| [[alvarado-1921]] | 16 | 5% |
 | [[oliver-1989-apendice-a]] | 14 | 5% |
 | [[oliver-1989-cap2]] | 14 | 5% |
 | [[oliver-1989-cap3-vecinos]] | 14 | 5% |
@@ -118,10 +118,11 @@ Cuántas de las 299 entradas de familia caquetía **con `notas`** citan a cada o
 | [[van-buurt-2014]] | 13 | 4% |
 | [[arcaya-1920]] | 10 | 3% |
 | [[arcaya-obra-inedita-1995]] | 10 | 3% |
+| [[gatschet-1885]] | 4 | 1% |
 | [[brinton-1871]] | 4 | 1% |
 | [[castellanos-elegias]] | 3 | 1% |
-| [[gatschet-1885]] | 3 | 1% |
 | [[oviedo-y-valdes-1851]] | 2 | 1% |
+| [[medina-colina-sxx]] | 2 | 1% |
 | [[jahn-1927]] | 1 | 0% |
 | [[ballesteros-1550]] | 1 | 0% |
 
@@ -157,7 +158,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[zavala-reyes-2015]] | completo-con-reserva | alta | si | 164 | 222 | 7 |
 | [[brinton-1871]] | minado | hecha | si | 84 | 4 | 0 |
 | [[jahn-1927]] | minado | media | si | 4 | 1 | 16 |
-| [[gatschet-1885]] | minado | alta | si | 4 | 3 | 0 |
+| [[gatschet-1885]] | minado | alta | si | 4 | 4 | 0 |
 | [[oliver-1989-cap3]] | minado | media | si | 2 | 14 | 15 |
 | [[oviedo-y-valdes-1851]] | no-disponible | alta | no | 2 | 2 | 7 |
 | [[oliver-1989-cap2]] | minado | alta | parcial | 2 | 14 | 2 |
@@ -173,7 +174,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[keegan-1989]] | segunda-mano | media | — | 0 | 0 | 2 |
 | [[vansina-ong]] | segunda-mano | baja | — | 0 | 0 | 2 |
 | [[adam-1879]] | minado | hecha | si | 0 | 0 | 1 |
-| [[alvarado-1921]] | minado | media | si | 0 | 14 | 1 |
+| [[alvarado-1921]] | minado | media | si | 0 | 16 | 1 |
 | [[angleria-1892]] | parcial | media | si | 0 | 0 | 1 |
 | [[oviedo-y-banos]] | minado | baja | si | 0 | 0 | 1 |
 | [[van-buurt-2014]] | minado | alta | si | 0 | 13 | 1 |
@@ -193,7 +194,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[gumilla-1791]] | no-disponible | baja | no | 0 | 0 | 0 |
 | [[las-casas-1875]] | minado | baja | si | 0 | 0 | 0 |
 | [[martinez-cruzado-2003]] | minado | alta | si | 0 | 0 | 0 |
-| [[medina-colina-sxx]] | dictado-terminado | alta | no | 0 | 0 | 0 |
+| [[medina-colina-sxx]] | dictado-terminado | alta | no | 0 | 2 | 0 |
 | [[moreno-mayar-2018]] | sin-minar | baja | si | 0 | 0 | 0 |
 | [[moron-2012-petroglifos]] | minado | alta | si | 0 | 0 | 0 |
 | [[moron-guillermo-historia-venezuela]] | no-disponible | media | no | 0 | 0 | 0 |
@@ -270,8 +271,8 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1090 en 356 notas indexadas | 🟢 0 rotos |
-| Tests (`curiana_sim/tests/`) | 246 passed, 0 failed | 🟢 |
+| Wikilinks | 1090 en 357 notas indexadas | 🟢 0 rotos |
+| Tests (`curiana_sim/tests/`) | 248 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
 **Avisos de `curiana_polities.py::coherencia_del_canon()`:**
