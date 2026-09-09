@@ -2,18 +2,32 @@
 # AUDITORÍA de la columna LOKONO de la tabla A-2 de Oliver (cap. 2)
 # contra el texto de Schultz 1802 vaciado por Perea y Alonso 1942.
 #
-# Por qué importa: D11 se decidió sobre esa columna. Hasta hoy el proyecto
-# no la había contrastado con una fuente primaria independiente. Perea lo es:
-# vacía a Schultz 1802 directamente, y no depende de Goeje 1928 ni de
-# Brinton 1871, que son de donde vienen las entradas lokono del lexicón.
+# 🔴 CORRECCIÓN (2026-09-09). La primera versión de este archivo decía que
+# Perea era una fuente INDEPENDIENTE de Oliver. Es falso, y lo desmiente el
+# propio Oliver en el mismo capítulo: al reseñar las fuentes del lokono
+# escribe que las obras de Quandt y Schultz «have been the subject of a small
+# paper by Brinton (1871) and a very detailed philological analysis by Silvio
+# Perea y Alonso (1942)», y más adelante cita «(Perea y Alonso 1942)» como la
+# fuente de sus etimologías lokono. Perea es UNA DE LAS FUENTES DE OLIVER.
+#
+# Lo que esto convierte a esta tabla: de corroboración independiente en
+# CONTROL DE TRANSMISIÓN. No prueba que la columna sea cierta; prueba que es
+# fiel a la fuente que Oliver usó. Vale para detectar deriva y errores de
+# copia, no para sumar un voto a D11. Es exactamente la trampa del §8 del
+# protocolo —la corroboración falsa de Jahn citando el mismo apéndice de
+# Oviedo— y esta vez me tocó a mí.
 #
 # Cada fila se LEYÓ en el texto —Fraseario y Compendio Gramatical—, no sale
 # del cruce automático.
 # ─────────────────────────────────────────────────────────────────────────
 que_mide: >-
-  Si la columna lokono sobre la que se apoya D11 se sostiene cuando se la
-  contrasta con el lokono de 1802, un estrato medio siglo anterior al de
-  Brett y siglo y pico anterior al de Goeje.
+  Si la columna lokono sobre la que se apoya D11 es FIEL a la fuente que
+  Oliver dice haber usado. No es una prueba independiente: es un control de
+  transmisión. Ver la corrección de la cabecera.
+independencia: >-
+  NINGUNA. Oliver cita a Perea y Alonso 1942 como fuente suya de lokono
+  (cap. 2, reseña de fuentes y etimologías). Las catorce coincidencias son
+  consistencia, no confirmación.
 fuente_del_contraste: perea-alonso-1942 (Fraseario parte I + Compendio Gramatical parte II)
 medido: '2026-09-08'
 
@@ -57,18 +71,24 @@ filas:
   - {concepto: raiz,   a2: iikirahi/-ikira,   perea: null, veredicto: 'ausente de toda la obra: las apariciones de «raíz» son todas gramaticales (buscado iikira/ikira)'}
 
 lectura: >-
-  Catorce de las dieciséis filas medibles confirman la columna. Las dos que
-  divergen (sangre, grande) no la desmienten: dicen que Schultz usa otra voz
-  para ese concepto, lo que en un texto traducido del alemán puede ser
-  elección del traductor — aunque ambas están sostenidas en tres o cuatro
-  lugares del libro, no en un caso suelto. Las dos ausentes lo están de la
-  obra entera.
+  Catorce de las dieciséis filas medibles coinciden con la columna: la
+  transmisión Perea → Oliver es fiel. Lo que de verdad aporta esta tabla, una
+  vez retirada la pretensión de independencia, es otra cosa y sigue siendo
+  útil: (1) ANCLA. Oliver da las formas lokono sin cita; Perea las da con
+  capítulo y versículo del texto de Schultz, así que ahora se pueden verificar
+  una a una en un texto primario. (2) Las dos DIVERGENCIAS (sangre, grande)
+  pasan a ser más interesantes, no menos: son puntos donde la columna de
+  Oliver se aparta de una fuente que él mismo reseñó, y cada una está
+  sostenida en tres o cuatro lugares del libro. (3) Las dos ausentes lo están
+  de la obra entera.
 
 lo_que_esto_cambia_para_d11: >-
-  La fila bandera del cómputo del 2026-08-31 —caquetío cati ~ lokono kathi,
-  similitud 1.00— deja de apoyarse en una sola columna de una sola tabla:
-  Schultz la escribe catti en Hechos 2-20 («dia tu-ppa CATTI ù-ttù bia» = «como
-  también la luna en sangre»), y Perea la recoge dos veces, en las entradas
-  LUNA (p. 60) y MES (p. 66). Y el par CQ dare ~ LK d-ari, que Oliver anota en
-  su p. 147, queda atestiguado en Hechos 7-54 («a-tanna-du-n NA-RI-SIBU» =
-  «crujían sus dientes»).
+  Menos de lo que escribí en la primera versión. NO añade un voto independiente
+  a favor del eje lokono. Lo que hace es dar ANCLA TEXTUAL a dos filas que el
+  proyecto usa mucho: el lokono kathi 'luna' es el catti de Hechos 2-20 («dia
+  tu-ppa CATTI ù-ttù bia» = «como también la luna en sangre»), recogido por
+  Perea en las entradas LUNA (p. 60) y MES (p. 66); y el d-ari 'mi diente' que
+  Oliver empareja con el caquetío dare en su p. 147 está en Hechos 7-54
+  («crujían SUS DIENTES», na-ri-sibu). Poder señalar el versículo no es poca
+  cosa —hasta hoy esas formas eran celdas de una tabla— pero es verificabilidad,
+  no evidencia nueva.

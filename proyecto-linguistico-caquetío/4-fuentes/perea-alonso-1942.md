@@ -81,17 +81,32 @@ entradas y la wayuu 781. Esta fuente sola aporta 686 candidatas nuevas.
 
 ### El hallazgo que más pesa: la columna A-2 auditada
 
-`6-fusion/auditoria_a2_perea.yaml`. La columna lokono de la tabla A-2 de Oliver
-es la que sostiene D11, y hasta hoy nadie la había contrastado con una fuente
-primaria **independiente** — las entradas lokono del lexicón vienen de Goeje
-1928 y Brinton 1871, y Oliver bebe de los mismos. Perea vacía a Schultz 1802
-directamente.
+`6-fusion/auditoria_a2_perea.yaml`.
 
-De las 18 filas: **14 confirman, 2 divergen** (sangre, grande) y **2 están
+🔴 **Corrección del 2026-09-09.** Escribí que esta auditoría contrastaba la
+columna de Oliver contra una fuente **independiente**. Es falso, y lo desmiente
+el propio Oliver: al reseñar las fuentes del lokono en su capítulo 2 dice que
+las obras de Quandt y Schultz *«have been the subject of a small paper by
+Brinton (1871) and a very detailed philological analysis by Silvio Perea y
+Alonso (1942)»*, y más adelante cita *«(Perea y Alonso 1942)»* como la fuente
+de sus etimologías lokono. **Perea es una de las fuentes de Oliver.**
+
+Eso convierte la tabla en otra cosa: no es corroboración, es **control de
+transmisión**. Dice que la columna es fiel a la fuente que Oliver usó — útil
+para detectar deriva y errores de copia, inútil como voto a favor de D11. Es la
+trampa del §8 del protocolo de minado, la misma de Jahn citando el apéndice de
+Oviedo. Lo que sí queda en pie: Oliver da las formas **sin cita**, y Perea las
+da con capítulo y versículo, así que ahora son verificables una a una.
+
+De las 18 filas: **14 coinciden, 2 divergen** (sangre, grande) y **2 están
 ausentes de la obra entera** (arena, raíz). La primera pasada dio 12/2/1/3 y
 estaba mal medida — ver el aviso más abajo.
 
-Y las dos filas que el proyecto más usa quedan con atestación primaria:
+Las dos divergencias son ahora lo más interesante de la tabla: son puntos donde
+la columna de Oliver se aparta de una fuente que él mismo reseñó, y cada una
+está sostenida en tres o cuatro lugares del libro.
+
+Y las dos filas que el proyecto más usa quedan **ancladas a un versículo**:
 
 - **luna**: `catti`, Hechos 2-20, *«dia tu-ppa CATTI ù-ttù bia»* = «como también
   la LUNA en sangre» (pp. 60 y 66). La fila bandera del cómputo del 2026-08-31
@@ -203,10 +218,18 @@ de una lengua hermana**, no evidencia sobre el caquetío.
 
 - **`u-banna` = 'sobre, encima, la superficie de'**, ocho o más apariciones:
   *wunabu u-banna-man* 'por sobre toda la tierra', *SURA u-banna* 'la azotea',
-  *casaccu u-banna* 'arriba en el cielo'. Es el mismo campo semántico con que
-  **D9** resolvió el caquetío `-bana` 'cerro, sitio alto'. Y en lokono `pana` es
-  otra raíz por completo — 'matar, herir' —, así que la oposición b/p que Oliver
-  usa como segundo apoyo separa aquí dos morfemas, no dos grafías.
+  *casaccu u-banna* 'arriba en el cielo'. **Corregido el 2026-09-09**: escribí
+  que era «el mismo campo semántico» que el `-bana` 'cerro, sitio alto' de D9, y
+  no lo es. Oliver mismo glosa el `-bana` lokono como *'surrounding'*,
+  *'expanse'* y *'roof, cover'* — **sin citar de dónde** —, y lo que Perea aporta
+  son justo las atestaciones que a esa glosa le faltaban. Eso queda **más cerca
+  del 'ancho, llano' de van Buurt** que del 'cerro' de D9. No derriba D9, que se
+  apoya en seis apoyos venezolanos y en el lema directo de Zavala; pero mi
+  lectura estaba forzada hacia la conclusión que me convenía.
+  Lo que sí sostiene, y es el argumento real de Oliver, es la **b**: su apoyo es
+  *«-bana instead of -pana»*, o sea la misma correspondencia b/p de
+  *barisi* : *palii*. Y en lokono `pana` es otra raíz por completo — 'matar,
+  herir' —, así que la b- de `-banna` no es un accidente de transcripción.
 - **Un `-na` locativo-instrumental** sobre la durativa `-coa-/-kua-` (p. 561):
   `a-hùrki-da-coa-na` 'lugar de reunión', `a-balti-coa-na` 'asiento'. No
   resucita la glosa 'lugar de' de `-ana` que **#109** retiró —el censo de

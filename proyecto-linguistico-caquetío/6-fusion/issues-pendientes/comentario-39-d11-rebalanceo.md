@@ -104,23 +104,34 @@ citada por capítulo-versículo y ya segmentada en morfemas por el propio Perea.
 Contra las 275 entradas lokono actuales y las 781 wayuu, esto mueve el orden de
 magnitud de la columna.
 
-### Lo que trajo de regalo: la columna A-2 auditada
+### La columna A-2, auditada — y una corrección importante
 
-`6-fusion/auditoria_a2_perea.yaml`. La columna lokono de la tabla A-2 es la que
-sostiene esta decisión, y nunca se había contrastado contra una fuente primaria
-**independiente**: las entradas lokono del lexicón vienen de Goeje 1928 y
-Brinton 1871, y Oliver bebe de los mismos. Perea vacía a Schultz 1802 directo.
+`6-fusion/auditoria_a2_perea.yaml`. De 18 filas: **14 coinciden, 2 divergen**
+(sangre, grande) y **2 están ausentes de toda la obra** (arena, raíz).
 
-De 18 filas: **12 confirman, 2 divergen** (sangre, grande), 1 parcial, 3 no son
-medibles porque los Hechos no dicen esas palabras.
+🔴 **Escribí primero que esto contrastaba la columna de Oliver contra una fuente
+independiente. Es falso.** Lo desmiente el propio Oliver: en la reseña de
+fuentes del lokono de su capítulo 2 dice que las obras de Quandt y Schultz
+*«have been the subject of a small paper by Brinton (1871) and a very detailed
+philological analysis by Silvio Perea y Alonso (1942)»*, y más adelante cita
+*«(Perea y Alonso 1942)»* como la fuente de sus etimologías lokono. **Perea es
+una de las fuentes de Oliver.**
 
-Y las dos filas que más usamos quedan con atestación primaria:
+Así que esta tabla **no suma un voto a D11**. Es un **control de transmisión**:
+dice que la columna es fiel a la fuente que Oliver usó. Es la trampa del §8 del
+protocolo de minado —la corroboración falsa, como Jahn citando el mismo apéndice
+de Oviedo—, y esta vez caí yo.
 
-- **luna** — `catti`, Hechos 2-20: *«dia tu-ppa CATTI ù-ttù bia»* = «como también
-  la LUNA en sangre» (pp. 60 y 66). La fila bandera del cómputo del 2026-08-31
-  ya no depende de una sola columna de una sola tabla.
-- **diente** — `na-ri-sibu`, Hechos 7-54: «crujían SUS DIENTES» (p. 32). Atestigua
-  la raíz `-ri` que Oliver empareja con el caquetío *dare* en su p. 147.
+Lo que sí queda, y no es poco:
+
+- **Ancla textual.** Oliver da las formas lokono **sin cita**. Perea las da con
+  capítulo y versículo, así que ahora se verifican una a una: el `kathi` 'luna'
+  es el `catti` de Hechos 2-20 *(«dia tu-ppa CATTI ù-ttù bia»* = «como también la
+  LUNA en sangre», pp. 60 y 66), y el `d-ari` que Oliver empareja con el caquetío
+  *dare* en su p. 147 está en Hechos 7-54 («crujían SUS DIENTES»).
+- **Las dos divergencias pasan a ser lo interesante**: son puntos donde la
+  columna de Oliver se aparta de una fuente que él mismo reseñó, y cada una está
+  sostenida en tres o cuatro lugares del libro.
 
 ### 🔴 Y lo que esta fuente NO puede hacer
 

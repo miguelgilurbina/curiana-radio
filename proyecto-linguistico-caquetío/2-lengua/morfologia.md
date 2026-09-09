@@ -63,7 +63,20 @@ cognados wayunaiki, no en dato caquetío** — lo declaran ellas mismas en un ca
 | `-naiki` | 'lengua de, habla de' | WY `-naiki` |
 | `-ana` | formante toponímico, **sin glosa** (la 'lugar de' se retiró: #109, 2026-09-07) | ver §3 |
 | `-gua` | región, área amplia | topónimos de Falcón y Sucre |
-| `-bana` | **'orilla / borde'** — sin cita | ver §3 |
+| `-bana` | **'cerro, sitio alto'** — D9 resuelta 2026-08-31, seis apoyos | ver §3 |
+
+> **El alcance de D11 fase 3, medido el 2026-09-08.** Las tres marcas de
+> aspecto —`-ka`, `-ni`, `-da`— salen **enteras** del wayunaiki, como declara la
+> tabla de arriba. Así que «declarar la etiqueta del núcleo reconstruido» (la
+> fase 3 de D11, que quedó abierta) no afecta sólo a la Capa 2 léxica (`taya`,
+> `pia`, `kai`, `kashi`, `wuin`, `eka`, `piama`): afecta al sistema de aspecto
+> completo. Las tres tienen homógrafo en lokono con otro valor declarado —`-ca`
+> es ahí la raíz del verbo *ser/estar*, `-ni` el auxiliar `a-ni-n` *ser, estar,
+> hacer*, y `-da/-dda` la partícula del presente que ni Perea ni Goeje saben
+> explicar—, pero **eso no se afirma como cognación**: son formas de dos letras,
+> y medir parecido en formas así es lo que produjo el 80% de fallo de las 441
+> hipotéticas. Detalle y páginas en
+> `6-fusion/lokono_gramatica_perea_1942.yaml` §verbo.
 
 `ka-` y `wa-` tienen apoyo insular independiente: [[van-buurt-2014]] §8 da `ka-`
 como localizador *'hay, existe(n)'* (*Casibari* = 'hay rocas duras') y §6 da

@@ -12,7 +12,7 @@
 meta:
   obra: perea-alonso-1942
   parte: 'II — Compendio Gramatical de la lengua arawak de las Guayanas Holandesa e Inglesa'
-  paginas_impresas: '545-700 (pdf 765-913)'
+  paginas_impresas: '545-700 (pdf 765-913). Minadas 545-608; los paradigmas conjugacionales (609-680) quedan sin vaciar'
   minado: '2026-09-08'
   fuentes_de_Perea: >-
     Schumann 1755 (gramática y vocabulario manuscritos), Schultz 1802 (el texto
@@ -244,15 +244,54 @@ hallazgos_que_tocan_decisiones_abiertas:
       «¿quieres matarme?» (Hechos 7-28), a-pana-hitti «procurando matarle»
       (21-31)—. O sea que banna y pana no son variantes ortográficas de lo
       mismo: contrastan.
-    lectura_prudente: >-
-      Oliver da como segundo apoyo de la filiación lokono que el caquetío tenga
-      `-bana` y no `-pana`. Aquí se ve que en lokono la oposición b/p separa dos
-      morfemas distintos, y que el de b- es locativo y de altura, que es
-      exactamente el campo semántico con que D9 resolvió el caquetío `-bana`.
-      Lo que NO se puede afirmar desde aquí es que el `-banna` de Perea sea el
-      mismo morfema que el `*pana` 'casa' de la comparativa arahuaca: eso hay
-      que verificarlo con una fuente que lo trate como tal.
-    accion_propuesta: 'añadir la evidencia a las notas de -bana y comentar en el issue de D9; no reescribir la glosa'
+    lectura_corregida_2026-09-09: >-
+      La primera redacción decía que este `-banna` caía «exactamente» en el campo
+      semántico con que D9 resolvió el caquetío `-bana` ('cerro, sitio alto').
+      Leído Oliver cap. 2 §j, eso estaba forzado. Lo que Oliver mismo dice del
+      lokono es que `-bana` significa «'surrounding' or 'expanse'» y se usa «in
+      the sense of 'roof' (e.g. cover)» — y lo dice SIN CITAR de dónde. Lo que
+      Perea aporta son justo esas atestaciones que faltaban. Y 'sobre, encima,
+      superficie' queda más cerca del «ancho, llano» de van Buurt que del 'cerro'
+      de D9. No derriba D9, que se apoya en seis apoyos venezolanos y en el lema
+      directo de Zavala #26; pero tampoco lo refuerza, y presentarlo como refuerzo
+      era leer hacia la conclusión que convenía.
+    lo_que_si_sostiene: >-
+      El argumento REAL de Oliver, que es fonológico y no semántico: su apoyo es
+      «-bana instead of -pana» (p. 150), o sea la misma correspondencia b/p de
+      barisi : bálisi : palíi. Que en lokono `pana` sea otra raíz por completo
+      —'matar, herir'— muestra que b y p contrastan ahí, así que la b- de
+      `-banna` no es un accidente de transcripción. Eso sí es apoyo, y es apoyo
+      de la pieza que Oliver de verdad usa.
+    la_familia_del_morfema: >-
+      Oliver la traza en el mismo §j: /-bana/ ~ /-pana/ aparece en toda la
+      familia glosando 'hoja', 'hígado' y 'casa' — guajiro a-pana 'hoja', taíno
+      pana-pe(n) y el antropónimo Agüey-bana, piapoco a-ban() 'hoja', baré
+      da-bana 'hoja', pani-/bani- 'casa' en Noble 1965. El `bana-2` 'hígado' que
+      el lexicón reconstruye desde el lokono ebana es parte de esa misma serie.
+    accion_propuesta: >-
+      Añadir la evidencia a las notas de -bana como atestación del lado LOKONO
+      con cita, y decir en el issue de D9 que no cambia la glosa caquetía. No
+      reescribir ninguna glosa.
+
+  - id: perea-es-fuente-de-oliver
+    toca: 'la independencia de toda la auditoría de la A-2, y cualquier futura corroboración con esta obra'
+    hallazgo: >-
+      Oliver cap. 2 reseña las fuentes del lokono y escribe que las obras de
+      Quandt y Schultz «have been the subject of a small paper by Brinton (1871)
+      and a very detailed philological analysis by Silvio Perea y Alonso
+      (1942)». Más adelante: «For the etymology of these terms, I have only
+      found close relationships with Lokono (Perea y Alonso 1942), and Taíno
+      (Perea and Perea 1941)». Y para el sufijo -coa: «I would agree with Perea
+      and Perea that -coa can gloss as a superlative of the preposition 'in' or
+      'on'».
+    consecuencia: >-
+      🔴 Perea NO es independiente de Oliver: es una de sus fuentes. Todo lo que
+      esta obra confirme de Oliver es CONTROL DE TRANSMISIÓN, no corroboración.
+      Corregido en auditoria_a2_perea.yaml, en la ficha, en el archivo de
+      decisiones y en el borrador de #39.
+    de_paso: >-
+      Oliver lo llama «Silvio» Perea y Alonso; el repo lo tenía como «Sigfrido»;
+      el libro dice «Sixto» diecisiete veces. Gana el libro.
 
   - id: na-locativo-109
     toca: '#109 (la glosa «lugar de» de -ana, retirada el 2026-09-07)'
@@ -305,6 +344,109 @@ hallazgos_que_tocan_decisiones_abiertas:
       incluida, nunca como glosa.
 
 # ══════════════════════════════════════════════════════════════════════
+# EL VERBO (pp. 597-608) — el sistema declarado, y la sospecha del autor
+# ══════════════════════════════════════════════════════════════════════
+verbo:
+  paginas: '597-608. Los paradigmas conjugacionales completos siguen hasta la ~680 y NO se vaciaron'
+  el_auxiliar_a:
+    pagina: '602-603'
+    hallazgo: >-
+      La raíz A es el auxiliar universal. Con índice personal y sin más suple
+      «ser, estar, hacer» y hasta «decir»: d-a «soy, estoy, hago, digo», b-a,
+      l-a (vr.), t-a (nv.), w-a, h-a, n-a. Schultz la usa elípticamente para
+      «dijo»: «l-a Jesus na-mùn» = «(dijo) Jesús a ellos».
+    infinitivo: 'a---n con el radical infijo: a-buli-ti-n «escribir», a-boa-n «enfermarse»'
+    participios: 'a-sica-ti «creyente» vr. / a-sica-tu nv.; a-huda-li «el muerto» / a-huda-ru «la muerta»'
+  tiempos:
+    pagina: '605-606'
+    fuente_interna: Schumann
+    paradigma_sobre: 'a-iyaha-ddi-n «andar, caminar»'
+    formas:
+      presente: 'terminación del infinitivo en -a — d-a-iyaha-dda «ando»'
+      preterito_inmediato: '-bi — d-a-iyaha-ddibi «he andado»'
+      preterito_absoluto: '-buna, y en Schultz casi siempre -bu — d-a-iyaha-buna «anduve»'
+      preterito_remoto: 'presente + -cuba — d-a-iyaha-dda-cuba «anduve hace mucho»'
+      futuro: '-n → -pa — d-a-iyaha-ddi-pa «andaré»'
+    nota: >-
+      El -cuba del pretérito remoto es el `kuba` que el lexicón ya tiene como
+      «signo de tiempo pasado». Queda confirmado con paradigma.
+  modos:
+    pagina: 607
+    infinitivo: '-n'
+    indicativo: 'la radical, con o sin sufijo temporal'
+    imperativo: '-te — b-a-cun-te! «¡ve tú!»'
+    subjuntivo_u_opcional: '-ma — bu-yaha-dda-ma «que tú andes»'
+  voz:
+    pagina: '598-599'
+    reflexivo_medio: '-n-nua (Brett -n-wa) — a-sucu-n «cortar» → a-sucu-n-nua «cortarse»'
+    causativo: '-kitti- / -cuttu- — a-sucusu-n «lavar» → a-sucusu-cuttu-n «hacer lavar»'
+    pasivo_del_causativo: '-kittu-n-nua — a-sucusu-cuttu-n-nua «ser hecho lavar»'
+    pasivo_propio: '-hùn, sólo en Quand — a-sucusu-hùn «ser lavado»'
+    nota: >-
+      Perea deduce que `kitti` es a su vez raíz de un verbo a-kitti-n «hacer
+      hacer, causar», con armonía vocálica -i → -u ante -n-nua.
+  clases: >-
+    Cinco conjugaciones por terminación del infinitivo (-in/-ùn/-un, -an,
+    -n-nua, -en, y la quinta que forma el presente con el auxiliar -ca), más dos
+    que Perea discute y no acepta: señala que los ejemplos de la supuesta
+    séptima clase de Schumann son los mismos de la primera, «lo cual nos sume en
+    una inevitable perplejidad» (p. 608).
+  la_particula_que_nadie_explica:
+    pagina: 604
+    cita: >-
+      «interviene, en la gran mayoría de los verbos, un elemento, la partícula
+      -di, -ddi, -du, -ddu, -dù, -ddù, -dda, y -ddoa que, sin formar parte de la
+      raíz, desempeña un oficio determinante que no siempre llega a adivinarse.
+      GOEJE... deja sin explicación plausible esta partícula y hasta parece
+      afectar de ignorarla.»
+    lo_unico_que_se_sabe: >-
+      Que la vocal pasa a -a en los presentes de indicativo, imperativo y
+      subjuntivo, y en el pretérito remoto.
+
+  sospecha_del_autor_sobre_los_preteritos:
+    pagina: 606
+    cita: >-
+      «SCHULTZ parece hacer caso omiso de los pretéritos, traduciéndolos, por
+      regla general, por un presente, lo cual nos hace suponer que todo el
+      mecanismo temporal de los pretéritos sea tan sólo uno de los tantos
+      perfeccionamientos a priori de los misioneros, y que SCHULTZ haya querido
+      ceñirse más estrictamente al modo imperfecto de expresarse los Arawak,
+      énfasis narrativo, empleando el presente como pretérito histórico.»
+    por_que_importa: >-
+      Es el gramático de la obra diciendo que el aparato de TIEMPO que su propia
+      fuente declara probablemente no es de la lengua sino del misionero, y que
+      lo que la lengua hacía era un presente narrativo con énfasis. El proyecto
+      modela el caquetío con ASPECTO, no con tiempo. Es convergencia
+      independiente a favor de esa elección de modelado — no prueba, porque es
+      juicio de autor; pero es juicio con su razón dicha: el uso del traductor
+      contradice el paradigma del gramático.
+
+  las_tres_marcas_de_aspecto_del_canon:
+    que_se_midio: >-
+      2-lengua/morfologia.md §2 declara la base de las tres marcas de aspecto del
+      caquetío reconstruido, y las tres salen del WAYUUNAIKI: -ka completivo (WY
+      tríada A en contexto de pasado), -ni continuativo (WY -iraa), -da
+      prospectivo (WY -ee desiderativo + tríada C).
+    observacion:
+      - '-ca es en lokono la raíz del verbo sustantivo SER, ESTAR (pp. 584 y 608): «cakù-ca de» = «vivo, soy viviente»; «d-a-nsi-ca» = «amo, soy amante»'
+      - '-ni es a-ni-n «ser, estar, hacer» (p. 602), el auxiliar universal'
+      - '-da/-dda es la partícula que marca el presente y que ni Perea ni Goeje logran explicar (p. 604)'
+    lo_que_NO_se_afirma: >-
+      Que sean cognados. Podría ser cognación con desplazamiento semántico,
+      podría ser coincidencia entre formas cortísimas, podría ser artefacto de
+      la reconstrucción. No se resuelve desde aquí, y medir parecido de formas
+      de dos letras es justo lo que produjo el 80% de fallo de las 441
+      hipotéticas.
+    lo_que_SI_se_afirma: >-
+      Que la morfología verbal del caquetío del canon es hoy íntegramente
+      wayuu-derivada, y que la propia nota lo declara. La fase 3 de D11
+      —«declarar la etiqueta del núcleo reconstruido»— no afecta sólo a la Capa 2
+      léxica (taya, pia, kai, kashi, wuin, eka, piama): afecta al sistema de
+      aspecto entero. Eso amplía el alcance de la decisión que quedó abierta, y
+      conviene que quede dicho antes de aplicarla.
+    a_donde_va: 'comentario para D11 (#39), fase 3; y nota en 2-lengua/morfologia.md §2'
+
+# ══════════════════════════════════════════════════════════════════════
 lo_que_el_compendio_no_trae:
   - >-
     Nada de la costa caribe: ni un topónimo venezolano, ni una etnia del
@@ -314,12 +456,20 @@ lo_que_el_compendio_no_trae:
     ejemplos botánicos y zoológicos son adda «árbol», siba «piedra», keyu
     «venado», hime «pez», cuddibiyu «ave», baca «vacuno» (préstamo).
   - >-
-    El verbo ocupa de la p. 602 a la ~680 y AQUÍ NO SE MINÓ: son paradigmas de
-    conjugación completos (iyaha, ttuba, sonnucu, halli, kebbe, hadubu) que
-    merecen su propia sesión si el proyecto llega a necesitar aspecto y modo.
+    Los PARADIGMAS conjugacionales completos (pp. 609-680) siguen sin vaciar:
+    iyaha, ttuba, sonnucu, halli, kebbe, hadubu, cada uno en sus cuatro modos y
+    cinco tiempos. El sistema está descrito arriba; lo que falta son las tablas,
+    y sólo hacen falta si el proyecto llega a conjugar de verdad.
 
 deuda_que_genera:
-  - 'El verbo lokono (pp. 602-680) sin minar: es lo único que queda del tomo I.'
+  - >-
+    Los paradigmas conjugacionales (pp. 609-680) sin vaciar: es lo único que
+    queda del tomo I.
+  - >-
+    2-lengua/morfologia.md tiene una fila rancia: la tabla de su §2 sigue dando
+    `-bana` como «'orilla / borde' — sin cita» cuando el cuerpo de la misma nota
+    (§3) registra D9 resuelta el 2026-08-31 con 'cerro, sitio alto' y seis
+    apoyos, y con cero para 'orilla'. Corregida al anotar esto.
   - >-
     Los tomos II a V nunca llegaron al repo. El tomo III iba a ser el
     VOCABULARIO ARAWAK-ESPAÑOL, que es exactamente lo que la fase 1 de D11
