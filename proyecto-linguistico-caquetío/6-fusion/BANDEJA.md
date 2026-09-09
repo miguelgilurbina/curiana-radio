@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-09**.
 
-**2056 ítems propuestos** en 37 propuestas, más **4 issue(s)/comentario(s) redactados sin publicar**.
+**2069 ítems propuestos** en 38 propuestas, más **4 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -24,6 +24,7 @@ editar_a_mano: no
 | `antolinez_1946_capo_y_ortografia.yaml` | antolinez-1946-hacia-el-indio | 3 |  |
 | `auditoria_a2_perea.yaml` | ? | 18 |  |
 | `bachaco_y_gu_es_w.yaml` | alvarado-1921 | 0 |  |
+| `barrido_web_medina_2026-09-09.yaml` | ? | 13 |  |
 | `castellanos_1589_toponimos.yaml` | castellanos-elegias | 0 |  |
 | `censo_ana_esteves_109.yaml` | esteves-1989 | 13 |  |
 | `colores_caquetios.yaml` | ? | 4 |  |

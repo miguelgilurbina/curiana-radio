@@ -1,0 +1,244 @@
+# ─────────────────────────────────────────────────────────────────────────
+# BARRIDO WEB de las voces B y C del dictado de Medina Colina
+#
+# Miguel pidió «un escaneo en internet sobre estas palabras» antes de fallar
+# las de nivel C. Esto es ese barrido: 44 voces consultadas, 12 con
+# corroboración externa que NO estaba en el repo.
+#
+# 🔴 REGLA 6 A ESCALA WEB: que una búsqueda no devuelva nada NO prueba que la
+# voz no exista. Prueba que no está indexada. Son palabras de registro oral y
+# local; lo que hay sobre ellas está en papel en Coro, no en Google. El «sin
+# rastro» de abajo baja la prioridad de la búsqueda, no la de la voz.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-09'
+  pedido_por: Miguel
+  voces_consultadas: 44
+  con_corroboracion_externa: 12
+  destino: 'insumo para el fallo de Miguel sobre las 33 voces de nivel C'
+  advertencia: >-
+    Ninguna de estas fuentes dice «caquetío». Dicen que la voz existe, dónde y
+    qué nombra. Eso resuelve el primer eslabón de la cadena (paraguanerismo
+    real, no invención del autor) y no toca el segundo (¿sustrato?, ¿de cuál
+    estrato?). La etiqueta no sube sola por esto.
+
+# ══════════════════════════════════════════════════════════════════════
+# LA FUENTE QUE MÁS RINDIÓ: el Cerro Santa Ana
+# ══════════════════════════════════════════════════════════════════════
+cerro_santa_ana:
+  url: https://costadevenezuela.com/2009/05/04/monumento-natural-cerro-santa-ana/
+  que_es: >-
+    Ficha del Monumento Natural Cerro Santa Ana (Paraguaná), con listados de
+    fauna y flora por piso ecológico. El sitio exacto de la simulación.
+  por_que_vale: >-
+    Confirma CUATRO voces del dictado y, de paso, TRES que ya estaban en el
+    canon —chuchube, paloma guacoa, buche—, lo que valida la fuente contra
+    material que ya sabíamos cierto.
+  cita_aves: '«la igüira y el perico cara sucia» · «la chenga, el chuchube, la paloma guacoa, la torcaza, la tortolita»'
+  cita_flora: '«mata de arco, basirigua de cerro, guamaro, azucena de monte» · «cujíes, cardones, tunas y buches»'
+  hallazgo_lateral: >-
+    ⭐ «basirigua de cerro» es `barisigua` con metátesis. O sea que barisigua
+    está DOS veces en el mismo macizo: como planta y como el caserío Las
+    Barisiguas del municipio Dabajuro.
+
+# ══════════════════════════════════════════════════════════════════════
+corroboradas:
+
+  # ── nivel B ──────────────────────────────────────────────────────────
+  - voz: maba
+    nivel_actual: B
+    glosa_medina: 'panal de las abejas (con mebi y bayure)'
+    fuente_externa: >-
+      Vit, P. et al. «Conociendo la miel de Melipona favosa en la Península de
+      Paraguaná, estado Falcón, Venezuela». Revista del Instituto Nacional de
+      Higiene / SciELO Venezuela, 2012.
+    cita: '«en Venezuela, esta abeja se conoce coloquialmente como erica y maba, la cual también habita en la Península de Paraguaná»'
+    url: https://ve.scielo.org/scielo.php?script=sci_arttext&pid=S0798-04772012000100003
+    peso: >-
+      ⭐ La mejor del barrido: fuente académica revisada, geográficamente
+      exacta (Paraguaná), y da la especie —Melipona favosa, abeja sin aguijón—.
+      Medina dice «panal»; el paper dice «la abeja». Misma voz, referente
+      contiguo. Aporta además `erica` como otro nombre local, que el proyecto
+      no tenía.
+    propuesta: 'B → A. Dos fuentes independientes y localizadas.'
+
+  - voz: lefaria
+    nivel_actual: B
+    glosa_medina: 'cardón cuyo fruto se llamaba breva; su tallo sin espinas'
+    fuente_externa: >-
+      Jardín Botánico de Mérida (ULA), ficha «Cardón lefaria»; Acta Botánica
+      Venezuelica; Fundación Bigott, «Noble árbol de Lefaria» de José Esteban
+      Pérez Sira.
+    cita: '«Rica Breva, dulce Dato, deliciosas frutas varias, noble árbol de la Lefaria» · el cardón lefaria (Cereus repandus / Stenocereus griseus) crece en dos localidades de la Península de Paraguaná'
+    url: http://vereda.ula.ve/jardin_botanico/areas-tematicas/jardin-xerofitico/cardon-lefaria/
+    peso: >-
+      Nombre botánico corriente, con institución detrás y taxón asignado. La
+      glosa de Medina —cardón de fruto llamado breva— casa exactamente.
+    propuesta: 'B → A. Institucional, con taxón, y localizado en Paraguaná.'
+
+  - voz: barisigua
+    nivel_actual: B
+    glosa_medina: 'árbol de hasta ocho metros, abundante antes, hoy escaso'
+    fuente_externa: 'Nomenclátor de poblados de Falcón (gelvez.com.ve) + ficha del Cerro Santa Ana'
+    cita: '«Las Barisiguas» es uno de los 16 caseríos del municipio Dabajuro · «basirigua de cerro» entre la flora del Cerro Santa Ana'
+    peso: >-
+      ⭐ Topónimo VIVO en territorio caquetío —Dabajuro—, más la planta
+      registrada en el Cerro Santa Ana con metátesis. Es la misma vía que llevó
+      a `urupagua` al nivel A: nombre de planta + topónimo que lo conserva.
+    propuesta: 'B → A por vía toponímica. Y el caserío, a la campaña de topónimos.'
+
+  - voz: guatacare
+    nivel_actual: B
+    glosa_medina: 'árbol común cuyos frutos no eran comestibles'
+    fuente_externa: 'Diccionario de americanismos (ASALE), s.v. guatacare'
+    cita: '«árbol venezolano de hasta 6 m, hojas alternas y flores blancas de cáliz acampanado, fruto en drupa» — Bourreria cumanensis (Boraginaceae); también «guatacare blanco», Ehretia exsucca'
+    url: https://www.asale.org/damer/guatacare
+    peso: >-
+      Está en el diccionario académico panhispánico con taxón. Y el canon ya
+      tiene el topónimo Guatacare por Esteves.
+    propuesta: 'B → A. Diccionario académico + topónimo en el canon.'
+
+  # ── nivel C ──────────────────────────────────────────────────────────
+  - voz: igüira
+    nivel_actual: C
+    glosa_medina: 'paloma silvestre del tamaño de la casera, hoy en vías de extinción'
+    fuente_externa: 'Ficha del Monumento Natural Cerro Santa Ana'
+    cita: '«la igüira y el perico cara sucia»'
+    peso: 'Atestiguada en el sitio exacto, junto a voces ya canónicas.'
+    propuesta: 'C → B.'
+
+  - voz: chenga
+    nivel_actual: C
+    glosa_medina: 'paloma perdiz, abundante antes, hoy casi extinta'
+    fuente_externa: 'Ficha del Monumento Natural Cerro Santa Ana'
+    cita: '«la chenga, el chuchube, la paloma guacoa»'
+    peso: >-
+      Aparece EN LA MISMA ENUMERACIÓN que chuchube y guacoa, las dos ya
+      caquetío-atestiguado en el canon. Compañía que pesa.
+    propuesta: 'C → B.'
+
+  - voz: guamaro
+    nivel_actual: C
+    glosa_medina: 'árbol venenoso para los animales, hoy escaso'
+    fuente_externa: 'Ficha del Monumento Natural Cerro Santa Ana'
+    cita: '«mata de arco, basirigua de cerro, guamaro, azucena de monte»'
+    peso: 'Flora del macizo, en lista con basirigua.'
+    propuesta: 'C → B.'
+
+  - voz: chamaco
+    nivel_actual: C
+    glosa_medina: 'pájaro carpintero'
+    fuente_externa: 'Guía de ecoturismo de Paraguaná (venaparaguana.com)'
+    cita: 'entre la avifauna del cerro Santa Ana, «chamaco» o «carpintero»'
+    peso: >-
+      Confirmada con la glosa idéntica y en el sitio. Reserva: `chamaco` es
+      además palabra corriente en México y Centroamérica con otro sentido
+      («muchacho»), homonimia que hay que declarar.
+    propuesta: 'C → B, con la homonimia anotada.'
+
+  - voz: chevebe
+    nivel_actual: C
+    glosa_medina: 'la langosta; otros le llaman de otro modo'
+    fuente_externa: >-
+      Prensa venezolana y entomología: José Clavido, entomólogo de la Facultad
+      de Agronomía de la UCV, identifica el insecto como «cheveve». Blog «El
+      Cheveve de Paraguaná» (Steemit, @emiliomoron).
+    cita: 'insecto semejante al saltamontes pero mucho mayor, ~15 cm; avistamientos en Punto Fijo, Falcón'
+    peso: >-
+      Bien atestiguada y con especialista detrás, PERO de distribución
+      venezolana amplia, no restringida a la Curiana — lo que debilita el
+      criterio de distribución. La grafía corriente es `cheveve`, no `chevebe`.
+    propuesta: 'C → B, con la reserva de distribución y la variante gráfica.'
+
+  - voz: machire
+    nivel_actual: C
+    glosa_medina: 'la harina del maíz de textura gruesa'
+    fuente_externa: 'Fundación Empresas Polar, «Glosario agroalimentario del maíz»'
+    cita: '«machire»: masa de maíz o harina, en los estados Lara y Falcón'
+    url: https://bibliofep.fundacionempresaspolar.org/media/1378250/libro-el-maiz-10-glosario-y-bibliografia.pdf
+    peso: >-
+      Glosario especializado, con la distribución dicha (Lara y Falcón). Polar
+      es fuente que el proyecto ya usó para `arifuque`.
+    propuesta: 'C → B.'
+
+  - voz: chirita
+    nivel_actual: C
+    glosa_medina: 'la masa de maíz cuando está muy fina, lista para la arepa'
+    fuente_externa: 'Fundación Empresas Polar, «Glosario agroalimentario del maíz»'
+    cita: '«chirita»: masa de maíz bien molida, en el estado Falcón'
+    peso: >-
+      Confirmada con la glosa casi literal y localizada SOLO en Falcón, que es
+      distribución más restringida que machire.
+    propuesta: 'C → B. El par chirita (fina) / machire (gruesa) queda entero.'
+
+  - voz: tura
+    nivel_actual: C
+    glosa_medina: 'cuando la mazorca tenía pocos granos era «pura tura»'
+    fuente_externa: 'Fundación Empresas Polar, «Glosario agroalimentario del maíz»'
+    cita: '«tura»: maíz tierno en Falcón, dado como sinónimo de «chunaure», mazorca tierna de maíz'
+    peso: >-
+      ⭐ Y `chunaure` está en el índice de topónimos de Esteves que el proyecto
+      tiene en cola. El glosario acaba de emparejar una voz del dictado con un
+      topónimo del canon.
+    propuesta: 'C → B. Y cruzar Chunaure en la campaña de topónimos con esta voz.'
+
+  - voz: seretón
+    nivel_actual: C
+    glosa_medina: 'hombres con la facultad de transformarse'
+    fuente_externa: 'Folclor falconiano recogido en varias fuentes populares'
+    cita: >-
+      «los seretones son personas que tienen la capacidad de transformarse en
+      animales para vigilar y castigar a sus enemigos... un grupo, similar a
+      una secta, que guarda celosamente esta práctica»
+    peso: >-
+      Creencia viva y bien documentada de Falcón. OJO: no confundir con el
+      `ceretón`, que es otra criatura —un enano de sombrero de la Sierra de
+      Falcón, atribuido a los Welser alemanes del s. XVI—.
+    propuesta: >-
+      NO al lexicón: esto es dato de CREENCIA. Va a 3-mundo/corpus/creencia.yaml,
+      y conecta con el material de piache/boratio: transformación en animal como
+      facultad de un especialista. Con la marca de época (s. XX) y sin proyectar
+      al precontacto (regla 3).
+
+# ══════════════════════════════════════════════════════════════════════
+sin_rastro_en_la_web:
+  advertencia: >-
+    🔴 Esto NO es un descarte. Es que no están indexadas. Son voces de registro
+    oral, local y en muchos casos ya en desuso; lo que existe sobre ellas está
+    en papel en bibliotecas de Coro. Que Google no las tenga baja la prioridad
+    de VOLVER A BUSCAR EN LA WEB, no la de la voz.
+  nivel_B: [bayure, budare, chiguare, cuaguaro, isicagua, mebi, totocoro]
+  nivel_C: [buchuco, busuga, cachinare, cadare, curubo, debudeque, disey, gatiao,
+            guacuquero, gualamo, guanariji, guarero, guarupepe, marite, matejea,
+            memerea, naguata, quihuagua, sarutaco, susucure, teco, tobeca, urubana]
+  notas_utiles:
+    - >-
+      `disey`: no aparece, pero la palabra de su glosa sí — `topia` está en el
+      Diccionario de la lengua española y en el de americanismos como «cada una
+      de las tres piedras del fogón» en Venezuela. El referente está confirmado;
+      el nombre, no.
+    - >-
+      `guanariji` y `susucure`: los frutos del cardón se llaman `dato` en el uso
+      corriente de Falcón y Lara. Que Medina dé dos nombres más específicos es
+      argumento a favor, no en contra: el registro corriente ha simplificado.
+    - >-
+      `guacuquero` y `memerea`: los nombres venezolanos documentados de abejas
+      sin aguijón son guanota, erica, rubita y conguita. Ninguno casa. Pero el
+      mismo paper confirma que en Paraguaná se dice `maba`, que tampoco está en
+      esa lista de cuatro — o sea que la lista no agota el uso local.
+
+# ══════════════════════════════════════════════════════════════════════
+resumen_para_el_fallo:
+  suben_de_B_a_A: [maba, lefaria, barisigua, guatacare]
+  suben_de_C_a_B: [igüira, chenga, guamaro, chamaco, chevebe, machire, chirita, tura]
+  al_corpus_de_creencia: [seretón]
+  siguen_como_estaban: 31
+  lo_que_esto_no_hace: >-
+    No convierte ninguna voz en caquetía. Todas estas fuentes dicen que la
+    palabra existe, dónde se usa y qué nombra — el primer eslabón. El segundo
+    —si el sustrato es caquetío— sigue sin tocar, y por eso ninguna sube a
+    `caquetío-atestiguado` sin que Miguel lo decida.
+  deuda_nueva:
+    - 'El caserío Las Barisiguas (mun. Dabajuro) a la campaña de topónimos.'
+    - 'Chunaure, ya en la cola de Esteves, ahora tiene la voz `tura` como lectura.'
+    - '`erica`, segundo nombre local de la Melipona favosa, no está en ningún sitio del repo.'
