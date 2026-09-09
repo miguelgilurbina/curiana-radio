@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-09**.
 
-**1913 ítems propuestos** en 35 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
+**2094 ítems propuestos** en 36 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -74,6 +74,7 @@ falsa y se corrigió). Entradas contadas por patrón de dict.
 | `lexicon_van_buurt.py` | van-buurt-2014 | 231 | lo importan generar_tablero y auditar_82 |
 | `lexicon_toponimos.py` | varias (F11) | 147 | lo importa migrar_toponimos |
 | `lexicon_candidatos.py` | aisladas 2026-06-28 | 441 | lo importa generar_tablero |
+| `lexicon_perea.py` | perea-alonso-1942 | 181 | comparanda lokono; el motor NO lo importa a propósito (ver su cabecera) |
 
 ## Redactado y sin publicar (`6-fusion/issues-pendientes/`)
 

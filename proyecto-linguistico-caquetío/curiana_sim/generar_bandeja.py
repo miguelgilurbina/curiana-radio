@@ -35,6 +35,9 @@ LEXICON_PROPUESTAS = {
     "lexicon_van_buurt.py": ("van-buurt-2014", "lo importan generar_tablero y auditar_82"),
     "lexicon_toponimos.py": ("varias (F11)", "lo importa migrar_toponimos"),
     "lexicon_candidatos.py": ("aisladas 2026-06-28", "lo importa generar_tablero"),
+    "lexicon_perea.py": ("perea-alonso-1942",
+                         "comparanda lokono; el motor NO lo importa a propósito "
+                         "(ver su cabecera)"),
 }
 
 ENTRADA_PY = re.compile(r'^\s*"[^"]+":\s*\{', re.MULTILINE)

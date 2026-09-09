@@ -369,7 +369,8 @@ def emitir_modulo(nuevas, claves_lexicon, seco=False):
          "COMPARANDA_LOKONO: dict[str, dict] = {"]
     for r in sorted(sel, key=lambda x: (-sel[x]["total"], x)):
         e = sel[r]
-        L.append(f"    {_py(r)}: {{\"total\": {e['total']}, \"acepciones\": [")
+        # clave entre comillas dobles: es lo que cuenta el indexador de la BANDEJA
+        L.append(f'    "{r}": {{"total": {e["total"]}, "acepciones": [')
         for a in e["acepciones"]:
             s = f"{{\"glosa\": {_py(a['glosa'])}, \"pagina\": {a['pagina']}"
             if "hechos" in a:
