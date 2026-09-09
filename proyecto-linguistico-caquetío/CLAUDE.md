@@ -59,6 +59,8 @@ cura y se publica en Curiana Radio (`/kaketiana`).
 | **`2-lengua/toponimos.yaml` no se edita a mano** | Es generado desde `lexicon_toponimos.py` por `migrar_toponimos.py`. Dos commits (2026-08-30/31) lo editaron directo y la siguiente regeneración deshizo 25 entradas. Se edita el módulo y se regenera; `test_el_canon_de_toponimos_es_lo_que_emite_el_migrador` lo vigila |
 | **La consola de Windows es cp1252** | Todo script que imprima `─`, `✓` o acentos necesita `_forzar_utf8()` bajo `__main__` |
 | **`pct_caquetio` está saturada** | 91% de las respuestas en 1.0. **No la uses para comparar agentes** — usa `score`. Issue #69 |
+| **`palabras_caquetias` no era lo que decía su nombre** | Devolvía TODAS las voces arahuacas, y de ahí comen el contagio léxico, la competencia de formas, el idiolecto, el campo léxico de la koiné y `words_used`: una voz wayuu o lokono se habría propagado como propia. Arreglado el 2026-09-09 (`palabras_arahuacas` guarda la lista completa). Antes de tocar un campo, mirar quién lo consume — el nombre miente |
+| **El 80% del lexicón no es caquetío** | 1.201 de 1.500 claves son comparanda (wayuu, lokono, taíno...). No llega al hablante porque el muestreador del prompt SÍ filtra por `fuente`, pero `palabras_activas()` no filtra: cualquier consumidor que la use está viendo las cinco lenguas. Medido en `6-fusion/medicion_contaminacion_score_2026-09-09.yaml` |
 | **La longitud del prompt predice el score** | r = −0.48. Cualquier análisis por agente tiene que controlarla, o estarás midiendo cuánto escribiste tú. Ver `ANALISIS_BASE_2026-08-06.md` |
 
 ---
