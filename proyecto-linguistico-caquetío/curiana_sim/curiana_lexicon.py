@@ -7077,13 +7077,47 @@ def extraer_neologismos_del_texto(
     return neos
 
 
+# Un morfema empieza y acaba en frontera: principio o fin de texto,
+# espacio, guion (que es como se escribe aqui la composicion) o signo
+# de puntuacion.
+_LIMITE_MORFEMA = frozenset(
+    [""] + list(" \t\n\r") + list("-") + list("\u2013\u2014")
+    + list(".,;:!?()[]{}/\"'") + list("\u00ab\u00bb\u2026"))
+
+
 def detectar_uso_vocabulario(texto: str, lexico: "LexicoComunitario") -> list:
-    """Detecta qué palabras del vocabulario conocido aparecen en el texto."""
+    """Detecta qué palabras del vocabulario conocido aparecen en el texto.
+
+    ⚠ NINGÚN módulo del motor la llama (medido el 2026-09-09): el pipeline usa
+    `score_linguistico()`, que tokeniza. Se conserva porque es la forma natural
+    de preguntar «qué morfemas del lexicón hay aquí» y la usan mediciones
+    sueltas.
+
+    Casaba por SUBCADENA en cualquier posición: el 77% de sus detecciones caían
+    dentro de otra palabra. Buena parte era legítima —en una lengua aglutinante
+    `sima` y `bana` SÍ están dentro de `sima-bana`—, pero también disparaban
+    claves cortas de otra lengua por pura coincidencia de letras: `bi` dentro de
+    `biro`, `li` dentro de `kali-taro`, 409 veces cada una. Ahora el match
+    respeta el límite de morfema.
+    """
     texto_lower = texto.lower()
     usadas = []
     for palabra in lexico.palabras_activas():
-        if palabra in texto_lower:
-            usadas.append(palabra)
+        if not palabra:
+            continue
+        aguja = palabra.lower()
+        desde = 0
+        while True:
+            i = texto_lower.find(aguja, desde)
+            if i < 0:
+                break
+            izq = texto_lower[i - 1] if i else ""
+            j = i + len(aguja)
+            der = texto_lower[j] if j < len(texto_lower) else ""
+            if izq in _LIMITE_MORFEMA and der in _LIMITE_MORFEMA:
+                usadas.append(palabra)
+                break
+            desde = i + 1
     return usadas
 
 
@@ -7177,8 +7211,11 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
     caquetío DOMINE — no basta con "no hablar español"; hablar wayunaiki
     en vez de caquetío también es una fuga, solo que más sutil.
 
-    Retorna: palabras_caquetias, neologismos_propuestos, aspectos_usados,
-             densidad, pct_caquetio_especifico, otro_arahuaco, palabras_otro_arahuaco,
+    Retorna: palabras_caquetias (SOLO caquetío: es lo que consumen el contagio,
+             la competencia de formas, el idiolecto y `words_used`),
+             palabras_arahuacas (todas las arahuacas, caquetío incluido),
+             neologismos_propuestos, aspectos_usados, densidad,
+             pct_caquetio_especifico, otro_arahuaco, palabras_otro_arahuaco,
              espanol_funcional, score (0-10), observacion.
     """
     limpio = _normalizar(texto)
@@ -7283,7 +7320,17 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
     if score < 5: obs.append("⚠ score bajo — activar rescate")
 
     return {
-        "palabras_caquetias": list(dict.fromkeys(usadas)),
+        # 2026-09-09: este campo devolvía `usadas` ENTERO — o sea, también las
+        # voces de otra lengua arahuaca, pese al nombre. Sus consumidores lo
+        # tratan como caquetío: el contagio léxico, la competencia de formas, el
+        # idiolecto del agente, el campo léxico de la koiné y la columna
+        # `words_used` de la base. Una voz wayuu o lokono habría entrado ahí
+        # como si fuera propia. Medido ANTES de tocarlo: en las 1.227 respuestas
+        # guardadas `otro_arahuaco` es 0 en todas, así que el cambio no altera
+        # ningún dato existente — arregla un defecto latente y no mueve la
+        # métrica. Ver 6-fusion/medicion_contaminacion_score_2026-09-09.yaml.
+        "palabras_caquetias": list(dict.fromkeys(caquetio_tokens)),
+        "palabras_arahuacas": list(dict.fromkeys(usadas)),
         "neologismos_propuestos": [m[0] for m in neos],
         "aspectos_usados": aspectos,
         "densidad": round(densidad, 3),

@@ -145,3 +145,42 @@ def test_word_source_language_conserva_la_lengua_hermana():
 def test_word_source_language_vacio_es_none():
     from curiana_database import word_source_language
     assert word_source_language("") is None
+
+
+# ── cables trampa de la tanda 2026-09-09 ──────────────────────────────
+# Los dos defectos que encontró la medición de contaminación del score
+# (6-fusion/medicion_contaminacion_score_2026-09-09.yaml).
+
+def test_palabras_caquetias_no_incluye_otra_lengua_arahuaca():
+    """El campo alimenta el contagio léxico, la competencia de formas, el
+    idiolecto y `words_used`: todos lo tratan como caquetío. Si vuelve a
+    devolver `usadas` entero, una voz wayuu o lokono se propagaría como
+    propia."""
+    from curiana_lexicon import VOCABULARIO_BASE, score_linguistico
+
+    intruso = next(
+        (k for k, e in VOCABULARIO_BASE.items()
+         if e.get("fuente") == "lokono" and len(k) >= 5 and "-" not in k),
+        None)
+    assert intruso, "no hay ninguna entrada lokono con la que probar"
+
+    lex = _lexico()
+    r = score_linguistico(f"Taya wana-ka {intruso} bara-bana.", lex)
+    assert intruso in r["palabras_arahuacas"], (
+        "la voz lokono debe contarse como arahuaca (densidad)")
+    assert intruso not in r["palabras_caquetias"], (
+        f"'{intruso}' es lokono y se coló en palabras_caquetias")
+    assert intruso in r["palabras_otro_arahuaco"]
+
+
+def test_deteccion_de_vocabulario_respeta_el_limite_de_morfema():
+    """Casaba por subcadena en cualquier posición: `li` disparaba dentro de
+    `kali-taro` y `bi` dentro de `biro`, 409 veces cada una."""
+    from curiana_lexicon import detectar_uso_vocabulario
+
+    lex = _lexico()
+    hallado = set(detectar_uso_vocabulario("kali-taro biro sima-bana", lex))
+    assert "kali" in hallado and "sima" in hallado and "bana" in hallado, (
+        "los morfemas de un compuesto SÍ deben detectarse")
+    assert "li" not in hallado, "'li' casó dentro de 'kali-taro'"
+    assert "bi" not in hallado, "'bi' casó dentro de 'biro'"

@@ -88,7 +88,7 @@ c_el_riesgo_que_si_esta_vivo:
   nota: >-
     Eran 12 antes de la criba del mismo día: `bien`, `ella`, `ellos`,
     `llamado`, `los`, `nuestros`, `señal` y `vosotros` no eran voces lokono
-    sino palabras ESPAÑOLAS que se colaron como raíz — ver `d_defecto_corregido`.
+    sino palabras ESPAÑOLAS que se colaron como raíz — ver la sección d.
 
 # ══════════════════════════════════════════════════════════════════════
 d_defecto_corregido_en_la_propia_propuesta:
@@ -111,7 +111,7 @@ d_defecto_corregido_en_la_propia_propuesta:
     no miraba si la propia extracción había fallado.
 
 # ══════════════════════════════════════════════════════════════════════
-e_lo_que_si_es_un_defecto_medible:
+e_el_defecto_que_media_pero_no_afectaba_a_nadie:
   donde: 'curiana_lexicon.py::detectar_uso_vocabulario() (~línea 7078)'
   que_hace: 'casa por SUBCADENA — `if palabra in texto_lower`'
   medido:
@@ -128,10 +128,46 @@ e_lo_que_si_es_un_defecto_medible:
     `bi` [lokono] dentro de `biro` (409 veces), `li` [lokono] dentro de
     `kali-taro` (409 veces). Ahí la subcadena no detecta un morfema: detecta
     una coincidencia de letras.
-  a_donde_va: >-
-    `detectar_uso_vocabulario()` alimenta el campo `palabras_caquetias` del
-    registro, no el score. Es un defecto de REPORTE, no de métrica — y el
-    campo además está mal llamado, porque incluye voces de otras lenguas.
+  correccion_a_donde_va: >-
+    🔴 Escribí que `detectar_uso_vocabulario()` alimenta el campo
+    `palabras_caquetias`. Es falso, y lo desmiente un grep: NINGÚN módulo del
+    motor la llama. Sólo la llamaba mi propio script de medición. Es código
+    muerto en el pipeline, así que su 77% no tenía consecuencia ninguna.
+  arreglado: >-
+    Aun así se arregló, porque la función es la forma natural de preguntar qué
+    morfemas del lexicón hay en un texto y la usan mediciones sueltas. Ahora el
+    match respeta el límite de morfema (inicio o fin de palabra, o junto a un
+    guion). Detecciones: 15.951 → 9.816; las que caen dentro de otra palabra,
+    12.270 → 6.135, y las que quedan son morfemas legítimos de un compuesto.
+
+# ══════════════════════════════════════════════════════════════════════
+f_el_defecto_que_SI_estaba_vivo:
+  donde: 'curiana_lexicon.py::score_linguistico(), el campo que devuelve'
+  que_pasaba: >-
+    El campo `palabras_caquetias` devolvía `usadas` ENTERO — todas las voces
+    arahuacas reconocidas, no sólo las caquetías, pese al nombre. La función ya
+    calculaba `caquetio_tokens` por separado para puntuar, pero devolvía la
+    lista sin filtrar.
+  por_que_importa: >-
+    Sus consumidores lo tratan como caquetío, y no son de adorno:
+    · `curiana_orchestrator_v2.py` propaga esas formas por CONTAGIO LÉXICO
+    · las inscribe en la COMPETENCIA de formas rivales
+    · las registra en el IDIOLECTO del agente y en el CAMPO LÉXICO de la koiné,
+      que es de donde salen las métricas de convergencia
+    · las persiste como `words_used` en la base
+    O sea: una voz wayuu o lokono en boca de un agente se habría propagado y
+    habría contado como convergencia caquetía.
+  arreglo: >-
+    `palabras_caquetias` pasa a contener sólo caquetío; se añade
+    `palabras_arahuacas` con todas, para no perder nada.
+  verificado_antes_de_tocarlo: >-
+    En las 1.227 respuestas guardadas, `palabras_caquetias` y
+    `palabras_arahuacas` coinciden en las 1.227. El arreglo NO altera ningún
+    dato existente: cierra una puerta que todavía no se había cruzado.
+  cables_trampa: >-
+    Dos tests nuevos en `curiana_sim/tests/test_lexicon.py`:
+    `test_palabras_caquetias_no_incluye_otra_lengua_arahuaca` y
+    `test_deteccion_de_vocabulario_respeta_el_limite_de_morfema`.
 
 # ══════════════════════════════════════════════════════════════════════
 conclusion:
@@ -140,14 +176,14 @@ conclusion:
     de ninguna de las 1.227 respuestas medidas. La separación en
     `lexicon_perea.py` sigue siendo lo correcto —son comparanda, no vocabulario
     del hablante— pero por razón de modelado, no porque el dato obligara.
+  arreglado_el_mismo_dia:
+    - 'El campo `palabras_caquetias` ya sólo contiene caquetío (ver f_el_defecto_que_SI_estaba_vivo).'
+    - 'El match por subcadena ya respeta el límite de morfema.'
+    - 'Dos cables trampa en tests/test_lexicon.py para que no vuelvan.'
   lo_que_queda_abierto:
     - >-
       Si `palabras_activas()` debe filtrar por `fuente`. Hoy no cambia nada
-      medible, así que no hay prisa; y si algún día cambia, cambia la métrica
-      insignia y eso es decisión, no arreglo (el precedente es D3/#34).
-    - >-
-      Renombrar `palabras_caquetias` o hacer que sólo contenga caquetío. Es
-      barato y quita una confusión real.
-    - >-
-      El match por subcadena: acotarlo a límites de morfema (separadores `-`)
-      en vez de a cualquier posición.
+      medible —cero de 1.227—, así que no hay prisa; y si algún día cambiara,
+      cambiaría la métrica insignia, y eso es decisión de Miguel, no arreglo.
+      El precedente es D3 (#34), que dejó `normalizar_por_dialecto()` sin
+      cablear exactamente por esto.
