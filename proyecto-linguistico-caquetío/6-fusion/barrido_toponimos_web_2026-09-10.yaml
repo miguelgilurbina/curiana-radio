@@ -484,3 +484,108 @@ balance:
     - '1. Barrido web de los 58 que Esteves registra sin glosar: tienen referente firme y sólo falta la etimología popular.'
     - '2. Los 22 «sin tocar», empezando por mirar en la IMAGEN los que el OCR pierde.'
     - '3. Verificar en imagen las 16 glosas de Esteves antes de citarlas.'
+
+# ══════════════════════════════════════════════════════════════════════
+# TERCER TRAMO — los que Esteves registra pero no glosa
+# ══════════════════════════════════════════════════════════════════════
+tercer_tramo:
+  criterio: >-
+    De los 58 que Esteves registra con referente, municipio y distrito pero sin
+    etimología, se les pasa el barrido web a ver si la divulgación local
+    recogió la glosa que él no puso.
+
+  ecuaciones_que_cierran_con_voces_atestiguadas:
+
+    - forma: Carirubana
+      hallazgo: >-
+        «Carirubana significa ORILLA DEL PEÑÓN, la orilla del cerro, donde
+        CARI es orilla y BANA sitio alto».
+      por_que_importa: >-
+        ⭐⭐⭐ Las DOS piezas están en el lexicón como caquetío-atestiguado:
+        `cari` 'orilla del mar, costa' y el `bana` de D9. La suma da el
+        referente y de paso CONFIRMA D9 —`-bana` = 'sitio alto'— desde la
+        etimología popular, por un canal que no es ninguno de sus seis apoyos.
+        Y no es un nombre menor: Carirubana es todo un municipio, el de Punto
+        Fijo.
+      queda_por_explicar: 'la `-ru-` de en medio; ni la fuente ni el canon la despejan'
+
+    - forma: Cayude
+      hallazgo: '«árbol frutal, guanábano silvestre»'
+      por_que_importa: >-
+        ⭐ Es LITERALMENTE la glosa que el lexicón tiene para `kayude`. Y el
+        Centro de Historia de Paraguaná da «los cayudes» como uno de los grupos
+        del Golfete: el clan lleva el nombre del árbol.
+
+    - forma: Caseto
+      hallazgo: '«nombre indígena de una planta medicinal y aromática»'
+      por_que_importa: >-
+        El lexicón tiene `kaseto` 'planta herbácea' y Medina la dicta como
+        arbusto sin utilidad. La web añade MEDICINAL y AROMÁTICA — que
+        contradice el «de ninguna utilidad para el campesino» de Medina. Se
+        declaran las dos.
+
+  la_lista_de_clanes_confirmada:
+    hallazgo: >-
+      El pasaje de Tacuato aparece completo en otra fuente y añade un dato:
+      «los guasicures DE CASETO».
+    por_que_importa: >-
+      ⭐⭐ Ata el grupo `guasicure` a un lugar concreto —Caseto— que además es
+      voz atestiguada del lexicón y del dictado. La lista de grupos del Golfete
+      queda así: Guaranaos (tribu mayor), y dentro Tacuato, Corubo, Cayude y
+      Guasicure de Caseto. Cuatro de esos cinco nombres están en la lista de
+      Miguel como topónimos.
+
+  otros_hallazgos:
+    - forma: Charaima
+      hallazgo: >-
+        «El nombre primitivo era CHARAIDE, y sufrió modificaciones por eufonía.
+        Se sospecha relación con el cacique CHARAIMA de la Isla de Margarita,
+        abuelo del guayquerí Francisco Fajardo, primer fundador de Caracas».
+      lo_que_ata: >-
+        ⭐ `Charaide` tiene la misma terminación que `Curaide`, la base que
+        Esteves da para Curaidebo. Dos nombres en -aide en la misma zona: hay
+        formante, o al menos patrón. Y el vínculo con el cacique margariteño es
+        perseguible por vía histórica, no lingüística.
+    - forma: Maicara
+      hallazgo: '«En un documento antiguo se ha leído: MAICUARE, quizás este es su nombre primitivo»'
+      lo_que_ata: >-
+        ⭐⭐ `-cuare` es el `cuar` cumanagoto que Esteves usa para explicar
+        Adícora («jadícuar»), glosado 'aglomeración, abundancia', y que él
+        mismo equipara al `tuba` caquetío. Si Maicara viene de Maicuare, es el
+        mismo colectivo. Tercer nombre de la serie, con `-rao` de Cabarao.
+    - forma: Jadagua
+      hallazgo: >-
+        «Según sus habitantes, de dos voces caquetías: JADA, tropas que venían
+        de lejos, y GUA, lugar donde abunda el agua dulce de manantial».
+      lectura_prudente: >-
+        ⚠️ «Tropas que venían de lejos» no es glosa de una raíz, es una
+        narración. La parte de `gua` sí es tratable: el canon tiene `-gua`
+        'región, área amplia' y Zavala da `gua` 'conuco'. Se registra partido.
+    - forma: Guaguana
+      hallazgo: >-
+        Fuente honesta: «la partícula GUA se usa mucho en topónimos venezolanos
+        y tiene MUCHOS significados, lo que hace difícil determinar el
+        significado de este nombre».
+      por_que_vale: >-
+        Un divulgador diciendo «no se puede saber» vale más que diez que
+        inventan. Se registra como no-glosa declarada.
+    - forma: Adaure
+      hallazgo: '«se cree que una mujer llamada Juana de Campos fundó un hato llamado Adaure»'
+      lectura_prudente: 'explicación COLONIAL del uso del nombre, no etimología de la voz'
+    - forma: Guayacanal
+      hallazgo: 'colectivo castellano de `guayacán`: el sitio donde abundaban'
+      lectura_prudente: 'formación CASTELLANA sobre voz indígena; el nombre del árbol es lo indígena, el -al no'
+    - forma: Muaco
+      hallazgo: 'sin etimología; es el yacimiento paleoindio excavado por Cruxent en 1959-60, a 2 km de Taima-Taima'
+      nota: 'el repo tiene Rouse y Cruxent 1963; el dato es arqueológico, no lingüístico'
+    - forma: Guica
+      hallazgo: 'quebrada; aparece también como CUICA'
+      nota: 'la alternancia g~c inicial es la permutación laxa que la campaña ya usa'
+
+  sin_hallazgo_en_este_tramo: [Abudure, Cumajacoa, Guacurebo, Tiraya, Sabaneta, Corubo, Guasare, Capadare]
+  nota_capadare: >-
+    ⚠️ Capadare tiene una etimología en circulación —«del tabaco: las hojas
+    grandes las llamaban CAPAS, y DARE del sufijo dar, trueque»— que es
+    RESEGMENTACIÓN CASTELLANA, como 'capa de tierra árida' para Capatárida.
+    Se descarta como glosa y se registra como ejemplar del patrón. El `-dare`
+    real recurre en la zona: Capadare, Codore, Dabadubare.
