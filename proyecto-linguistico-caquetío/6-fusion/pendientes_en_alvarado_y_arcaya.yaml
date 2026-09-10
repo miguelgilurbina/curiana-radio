@@ -1,0 +1,320 @@
+# ══════════════════════════════════════════════════════════════════════
+# Los pendientes de la lista de Miguel, contra dos fuentes DEL REPO
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  fecha: 2026-09-10
+  campana: 'dictado de 141 topónimos de Paraguaná y Falcón (2026-09-10)'
+  de_donde_sale: >-
+    A mitad del barrido web de los nombres que Esteves registra sin glosar cayó
+    la cuenta de que dos fuentes YA EN EL REPO responden mejor que la web:
+    Alvarado 1921 es un GLOSARIO DE VOCES INDÍGENAS —un diccionario, justo lo
+    que hacía falta— y Arcaya 1920 abre con un capítulo geográfico que nombra
+    los ríos y cerros de Falcón uno por uno. Ninguna de las dos se había
+    cruzado con la lista.
+  por_que_importa_el_orden: >-
+    ⚠️ Lección de método: se estaban gastando búsquedas web en nombres cuya
+    respuesta estaba a un grep de distancia, y con cita. Antes de salir a la
+    web, agotar el repo. Va a la skill.
+  advertencia_de_pagina: >-
+    Las páginas van como RANGO porque se derivan de las cabeceras del OCR, no
+    de la caja del número. Antes de citar cualquiera de estas entradas fuera
+    de este archivo hay que verla en la imagen.
+
+# ══════════════════════════════════════════════════════════════════════
+# I. ALVARADO 1921 — ocho entradas de cabecera
+# ══════════════════════════════════════════════════════════════════════
+alvarado_1921:
+  obra: alvarado-1921
+  que_es: 'Glosario de Voces Indígenas de Venezuela — diccionario, no crónica'
+  cruzados: 61
+  con_entrada: 8
+
+  entradas:
+    - forma: Araguán
+      pagina_aprox: '6-11'
+      cita: >-
+        «ARAGUAN. Árbol indeterminado de Lara y Falcón, cuya madera, de un gris
+        claro, pesada, con líneas de un gris más oscuro a lo largo, es usada en
+        la construcción civil».
+      por_que_importa: >-
+        ⭐⭐ Estaba en el grupo de los VEINTIÚN «sin tocar»: ni glosa de Esteves,
+        ni web, ni presencia en Esteves. Y resulta que Alvarado no solo lo
+        glosa: lo LOCALIZA en Lara y Falcón, que es exactamente la región de
+        Miguel. De cero absoluto a nombre de árbol con área declarada.
+      nota: 'la entrada siguiente es ARAGUANEI (Tecoma spectabilis); son voces distintas'
+
+    - forma: Sanare
+      pagina_aprox: '272-274'
+      cita: '«SANARE. Árbol de Barquisimeto de madera fibrosa, liviana, amarillenta».'
+      por_que_importa: >-
+        ⭐ Confirma desde una fuente del repo lo que la web decía de oídas. Y
+        con Arcaya —que da un río Sanare en Falcón— el nombre queda: es un
+        árbol, y hay un río que lo lleva.
+      contra_la_etimologia_facil: >-
+        Circula «Sanare significa curar, del latín sanare». Alvarado da un
+        árbol y Arcaya un río de Falcón: la coincidencia con el verbo latino es
+        de la misma clase que el «coro = viento» que Arcaya ya desmontó.
+
+    - forma: Curarí
+      pagina_aprox: '99-112'
+      cita: >-
+        «CURARI. Árbol de la región occidental (Barquisimeto, Zulia), propio
+        para la construcción civil; madera bastante pesada, dura, de color
+        pardusco con vetas más oscuras, bastante compacta: raja fácilmente y es
+        de mucha duración. Probablemente una bignoniácea. D. t. CURARIRU».
+      ojo: >-
+        ⚠️ NO confundir con el `curare` veneno, que Alvarado trata aparte y da
+        «voz tomada del car. kurari; en mac. y tupi urari». Son dos entradas
+        vecinas y el OCR las junta. La del topónimo es el árbol.
+
+    - forma: Dividive
+      pagina_aprox: '128-133'
+      cita: >-
+        «DIVIDIVE. Caesalpinia coriaria. Leguminosas. Árbol que se alza a 30 o
+        40 y más pies, inerme, ramoso, corto de tronco, asaz corpulento (24 a
+        30 pulgadas de diámetro); hojas bipinadas…».
+      lo_que_ata: >-
+        ⭐ Alvarado da además el sinónimo GUATAPANAR para el mismo árbol y lo
+        explica: «del cum. ARAGUATAPANAR, oreja de araguato, por la forma del
+        fruto». Con la ARAGUATA de Esteves —«abeja peluda del color del mono
+        araguato»— van dos nombres distintos derivados del mismo animal por
+        dos rasgos distintos, color y forma. El araguato es productivo.
+
+    - forma: Cocuy
+      pagina_aprox: '83-85'
+      cita: >-
+        «COCUY. Alcohol extraído del rizoma de la agave, asado, exprimido,
+        fermentado y destilado. Es el licor que en Méjico llaman mezcal. […]
+        D. t. CUCUI, QUE ES LA FORMA PRIMITIVA».
+      por_que_importa: >-
+        ⭐ Alvarado declara cuál es la forma PRIMITIVA —`cucui`, no `cocuy`— y
+        eso es exactamente lo que hace falta para lematizar. Nótese que la
+        dirección u→o es la misma que él documenta como permutación general.
+      y_ademas: >-
+        Bajo CAROREÑO cita a Cisneros (1764): «cucuí, de que se saca una
+        mistela muy medicinal, en la misma jurisdicción (de Carora)». El licor
+        y la planta están atados a la comarca desde el s. XVIII.
+
+    - forma: Chiriguare
+      pagina_aprox: '126-128'
+      cita: >-
+        «[…] después que samuro come, CHIRIGUARE roe: alusión al hábito del
+        chiriguare de roer los huesos de las carroñas. Cf. CARICARE». Y en el
+        refranero: «samuro no cae en trampa, ni chiriguare en batea».
+      lo_que_ata: >-
+        ⭐ Es un ave carroñera, y Alvarado remite a CARICARE — que es el
+        caracara. En la lista de Miguel está también CARACARA: los dos nombres
+        pueden ser del mismo bicho, y eso se mide mirando la entrada CARICARE.
+      esfera: 'ecología (fauna) además de topónimos'
+
+    - forma: Píritu
+      pagina_aprox: '253-254'
+      cita: >-
+        «BACTRIS PIRITU» — la palma. Y bajo GUARUMA: «pequeña palmera,
+        semejante al PIRITU de que fabrican sebucanes en la costa de
+        Barlovento». Bajo JUVITA: «Bactris sp. Ver PIRITU».
+      con_lo_de_fuera: >-
+        La divulgación da Píritu del cumanagoto 'palma pequeña'. Alvarado no
+        etimologiza pero SÍ da el taxón, y Arcaya confirma que hay un Píritu en
+        Falcón —el ramal norte de la cordillera termina allí, pasado el Ricoa—.
+        Miguel tenía razón otra vez: el suyo no es el de Anzoátegui.
+
+    - forma: Bucaral
+      pagina_aprox: '33-34'
+      cita: '«sitio abundante en bucares, o plantación de ellos»'
+      lectura_prudente: >-
+        Colectivo CASTELLANO sobre voz indígena (`bucare`), igual que
+        Guayacanal sobre `guayacán`. Lo indígena es el árbol, no el `-al`.
+
+  el_hallazgo_de_metodo:
+    donde: 'prólogo, antes de la p. 1 impresa'
+    cita: >-
+      «Las tribus indígenas suelen confundir la E y la I, la O y la U, en su
+      pronunciación, diciendo CACURE o CACURI, CATUMARE o CATUMARI, CURARE o
+      CURARI, GUAYOCO o GUAYUCO, MOROJOI o MORUJUI. Por efecto de la
+      disimilación hoy se escribe generalmente COCUI, COCUIZA, COCUYO, TOTUMA,
+      aunque primitivamente se decía CUCUI, CUCUIZA, CUCUYO, TUTUMA».
+    por_que_importa: >-
+      ⭐⭐⭐ Esta campaña viene usando una «permutación laxa» (j~s~u~h inicial,
+      b~v~p) como HEURÍSTICA de búsqueda, declarada como conveniencia y sin
+      apoyo citado. Aquí hay un apoyo: Alvarado 1921 documenta e~i y o~u como
+      fenómeno regular, con cinco pares de ejemplo, y da la dirección
+      histórica (u primitiva → o moderna).
+    lo_que_NO_dice: >-
+      ⚠️ No cubre las consonantes de la permutación laxa. Alvarado sigue
+      diciendo «en las consonantes acaece lo mismo» pero el pasaje continúa
+      más allá de lo extraído: hay que leerlo antes de extender la cita.
+    accion: >-
+      Llevar la cita a `2-lengua/metodo-comparativo.md`, donde la permutación
+      laxa vive hoy sin fuente. Y si el pasaje de consonantes dice lo que
+      parece, la heurística entera deja de ser conveniencia.
+
+# ══════════════════════════════════════════════════════════════════════
+# II. ARCAYA 1920 — el capítulo geográfico, que nadie había mirado
+# ══════════════════════════════════════════════════════════════════════
+arcaya_1920:
+  obra: arcaya-1920
+  estado_previo: >-
+    La nota lo da como `minado`, con cobertura «religión/familia (sesión 3) +
+    pp. 97-100, el oficio del boratio». El capítulo I —la geografía física de
+    Falcón, pp. 12-19— no estaba tocado, y es un CENSO DE HIDRÓNIMOS Y
+    ORÓNIMOS. Deuda de cobertura, no de la fuente.
+
+  nota_de_los_nuevos: 'estos tres NO aparecían en ningún archivo del repo antes de hoy'
+  referentes_nuevos:
+    - forma: Siburúa
+      paginas: '15 y 277-279'
+      cita_1: >-
+        «el río Yenemo, llamado después Río Seco […] y el río de Coro, formado
+        por los riachuelos de SIBURÚA, MEACHICHE y SAN ANTONIO».
+      cita_2: >-
+        «Los jirajaras y ajaguas se mostraban tranquilos, sujetos a sus
+        encomenderos […] Se habían formado con ellos pequeños grupos en
+        CARIAGUA, MAPIARE, SIBURÚA, UTAQUIRE, ACURIGUA, QUIRAGUA y otros
+        puntos, donde trabajaban en las plantaciones o hatos de los españoles».
+      por_que_importa: >-
+        ⭐⭐ Dos cosas a la vez. (1) Referente: es uno de los tres riachuelos
+        que FORMAN el río de Coro — no un arroyo cualquiera, sino cabecera del
+        río de la capital. (2) Adscripción étnica: Arcaya lo pone en la lista
+        de sitios donde el encomendero agrupó JIRAJARAS Y AJAGUAS. `Ajagua` es
+        la grafía de Arcaya para achagua.
+      y_la_regla_4: >-
+        ⚠️ Ojo con la lectura fácil. Esto es dato COLONIAL de reducción, no de
+        poblamiento precontacto: dice dónde los pusieron los encomenderos, no
+        de quién era el sitio en el s. XV. El nombre puede ser caquetío y la
+        población colonial jirajara sin contradicción. Se registra partido.
+      y_para_miguel: >-
+        Es la primera vez en esta campaña que aparece ACHAGUA en suelo de
+        Falcón por una fuente del repo. Miguel pidió mirar el achagua «que
+        tiene relación directa con los caquetíos»: aquí hay un anclaje
+        geográfico, aunque sea colonial.
+      y_ademas: 'ACURIGUA, que ya estaba revisado en el barrido, sale en la misma lista'
+
+    - forma: Caidie
+      paginas: '13-19'
+      cita: >-
+        «el de JACURA, que tiene como su afluente al CAIDIE, y al CAPADARE».
+      por_que_importa: >-
+        ⭐ Otro de los VEINTIÚN «sin tocar». Queda con referente: río, afluente
+        del Jacura. Y el Jacura ya estaba revisado, así que el sistema fluvial
+        se cierra: Jacura ← Caidie + Capadare.
+
+    - forma: Guaruguaro
+      paginas: 'capítulo I, la demarcación'
+      cita: >-
+        «desde la Punta de Oribor en la costa del golfo o saco de Maracaibo,
+        hacia el sureste, yendo por GUARUGUARO, hasta encontrar el río
+        Cocuicita, cuyo curso se sigue, pasando por Los Tablazos, hasta su
+        nacimiento […] en las filas o cumbres de la serranía de Siruma».
+      por_que_importa: >-
+        ⭐ Tercero de los «sin tocar» que cae. Es un punto de la frontera
+        Falcón–Zulia, en el borde del golfo. Y es REDUPLICADO —guaru-guaro—,
+        que con Mirimire, Taratara, Tapatapa, Chichiriviche y Barabara hace
+        seis para el censo de reduplicaciones que quedó propuesto.
+
+  referentes_confirmados:
+    - forma: Araurima
+      cita: >-
+        «varios ríos que penetran al territorio de los estados Lara y Yaracuy,
+        y otros que caen al Tocuyo en el territorio de Falcón. Estos son el de
+        Los Remedios, el GUAIDIMA y el ARAURIMA».
+      lo_que_ata: >-
+        ⭐ Río, y aparece PAREADO con GUAIDIMA. Los dos en `-ima`, que es uno
+        de los seis afijos atestiguados de REGLAS_ZAVALA (diminutivo/derivativo
+        según la nota de morfología). Dos hidrónimos vecinos con el mismo
+        final piden censo, como se hizo con `-ana` en #109.
+    - forma: Cauca
+      cita: >-
+        «varios ríos que bajan de dicha sección montañosa, y son el MATÍCORA,
+        el BOROJÓ, el CAPATÁRIDA, el ZAZÁRIDA y el CAUCA».
+      lo_que_ata: >-
+        Río de la vertiente Buchivacoa–Democracia, y en compañía de cuatro
+        nombres que la campaña ya tiene revisados. Cierra la serie.
+    - forma: Píritu
+      cita: >-
+        «Otra [ramificación] se prolonga hasta PÍRITU, después de bajarse para
+        darle paso al río de Ricoa».
+      lo_que_ata: 'confirma un Píritu FALCONIANO, distinto del de Anzoátegui'
+    - forma: Sanare
+      cita: >-
+        «en la costa de la boca del Tocuyo a la del Yaracuy mueren en el mar el
+        SANARE y el AROA».
+      lo_que_ata: 'río de Falcón; con Alvarado, el árbol que lo nombra'
+    - forma: Aroa
+      cita: 'el mismo pasaje; y «el Tocuyo y el Aroa, que son navegables»'
+      ojo: >-
+        ⚠️ Alvarado NO tiene entrada para AROA: solo lo menciona como geografía
+        («selvas de Aroa», «río Aroa»). La glosa que circula —'tigre, jaguar'
+        en lengua chibchense— NO está en ninguna fuente del repo. Queda como
+        pendiente de fuente, no como glosa.
+    - forma: Caujarao
+      cita: >-
+        «una [cadena de colinas] va de oeste a este desde CHUCHURE, al pie del
+        Palmar; pasa por CAUJARAO, a pocos kilómetros al sur de Coro, y sigue
+        por ANGOLETA, TARUMA, BUTARE y GUAIBACOA».
+      lo_que_ata: >-
+        ⭐ La cadena entera es una lista de topónimos indígenas contiguos. Y
+        TARUMA está a una vocal de TARAMA, que es de los «sin tocar» de Miguel:
+        candidato serio a ser el mismo nombre.
+    - forma: Urucure
+      cita: >-
+        «desde los cerros del PALMAR y URUCURE hacia el este se eleva
+        rápidamente [la Sierra de San Luis], formando dos grandes crestas en
+        cuyo centro está el alto valle de CURIMAGUA».
+      por_que_importa: >-
+        ⭐ Es orónimo, cerro. Y termina en `-ure`, el morfema en disputa que
+        Esteves glosa 'raíz' y la toponimia lee 'sitio de'. Un CERRO llamado
+        Urucure encaja mejor con 'sitio de' que con 'raíz'. Suma a morfema-002.
+    - forma: Maparari
+      cita: >-
+        «Las montañas siguen […] con los nombres de Buena Vista, CHURUGUARA,
+        MAPARARI, Agua Blanca (Distrito Federación), Agua Linda, GUARARIPANA
+        (Distrito Acosta)».
+      lo_que_ata: >-
+        Montaña. Y Churuguara ya tiene glosa de Esteves, así que el vecino
+        queda situado. GUARARIPANA es nombre nuevo para el repo.
+      ojo: >-
+        ⚠️ Alvarado tiene MAPANARE/MAPANARI (la serpiente) y el parecido tienta.
+        Maparari vs. mapanari es r~n en posición interior, que NO está entre las
+        permutaciones documentadas. No se propone.
+    - forma: Carazao
+      paginas: '92-93'
+      cita: >-
+        «CARAO, que suponemos estaba en el sitio del actual vecindario de
+        CARAZAO, a no mucha distancia de MITARE; y HURRAQUE, CARONA y
+        TADARIQUIBA, de los cuales ni el nombre queda».
+      por_que_importa: >-
+        ⭐⭐ Arcaya identifica Carazao con CARAO, poblado indígena del s. XVI.
+        El nombre vivo conserva el viejo con un `-zao` añadido. Y el mismo
+        pasaje da la lista de los que SÍ se perdieron —Hurraque, Carona,
+        Todariquiba— y sitúa HUREHUREBO/JURIJUREBO en Paraguaná.
+      permutacion_en_el_propio_texto: >-
+        ⭐ Arcaya escribe «hurehurebo o jurijurebo» en la misma frase: la
+        alternancia h~j que la campaña usa como heurística está DOCUMENTADA
+        aquí sobre un topónimo concreto.
+
+# ══════════════════════════════════════════════════════════════════════
+# III. Lo que esto mueve, y lo que no
+# ══════════════════════════════════════════════════════════════════════
+balance:
+  de_los_21_sin_tocar: >-
+    Caen tres: ARAGUÁN (glosa de Alvarado, localizado en Lara y Falcón), CAIDIE
+    (río, afluente del Jacura) y GUARUGUARO (punto de la frontera con Zulia).
+    Y aparece un candidato para un cuarto: TARAMA ~ TARUMA de la cadena de
+    Caujarao.
+  nombres_nuevos_para_el_repo: [Guaidima, Guararipana, Meachiche, Chuchure, Angoleta, Butare, Utaquire, Quiragua, Mapiare, Cariagua, Cocuicita, Oribor]
+  lo_que_NO_se_toca:
+    - 'ninguna de estas entra al lexicón ni al canon de topónimos: son propuesta'
+    - >-
+      la adscripción jirajara-ajagua de Siburúa y Acurigua es COLONIAL; no se
+      proyecta al s. XV sin decisión explícita (regla 3)
+    - >-
+      el «Aroa = tigre en chibchense» de la web no tiene fuente en el repo y no
+      se registra como glosa
+  deuda_nueva:
+    - 'verificar en imagen las ocho entradas de Alvarado y las páginas de Arcaya'
+    - 'leer el pasaje de CONSONANTES del prólogo de Alvarado, que quedó cortado'
+    - 'mirar CARICARE en Alvarado, por si Chiriguare y Caracara son el mismo bicho'
+    - 'actualizar la cobertura de la nota de Arcaya: el capítulo geográfico ya no es hueco'
+    - 'censo de reduplicaciones de Falcón: van seis'
+    - 'censo de `-ima`: Araurima, Guaidima, y los que salgan'

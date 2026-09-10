@@ -12,7 +12,9 @@ estado_minado: minado
 prioridad: media
 tareas: [F3]
 sostiene: {hechos_corpus: 1, entradas_lexicon: 0, entradas_lexicon_corroboradas: 39, cadena_custodia_zavala_A: "24/26"}
-verificado: 2026-08-03
+cobertura: "cadena de custodia Zavala (2026-08-03) + los 61 topónimos pendientes del dictado de Miguel (2026-09-10)"
+verificado: 2026-09-10
+minado: 2026-09-10
 aliases: ["Alvarado 1921", "Glosario de voces indígenas"]
 ---
 
@@ -216,3 +218,37 @@ un cero en Alvarado. Para cualquier voz nueva, buscar en el texto completo
 ## Enlaces
 
 [[02_protocolo_habla_paraguanera]] · [[zavala-reyes-2015]] · [[van-buurt-2014]] · [[gatschet-1885]] · [[oviedo-y-valdes-1851]]
+
+---
+
+## 2026-09-10 — los pendientes del dictado de topónimos
+
+**Qué se le preguntó.** Miguel dictó 141 topónimos de Paraguaná y Falcón. De
+ellos, 61 seguían sin glosa después de pasar por Esteves y por el barrido web.
+Se cruzaron los 61 contra el glosario.
+
+**Qué dio: ocho entradas de cabecera.** Araguán, Sanare, Curarí, Dividive,
+Cocuy, Chiriguare, Píritu y Bucaral. La que más pesa es **ARAGUÁN** —«árbol
+indeterminado de **Lara y Falcón**»— porque estaba en el grupo de los que no
+tenían ni referente: ni glosa, ni web, ni mención en Esteves.
+
+**Y una cita de método que no se buscaba.** El prólogo documenta la permutación
+vocálica como fenómeno regular —«suelen confundir la E y la I, la O y la U […]
+CURARE o CURARI, GUAYOCO o GUAYUCO»— y declara la dirección histórica (`cucui`
+primitivo → `cocuy` moderno). La campaña venía usando una «permutación laxa»
+declarada como conveniencia y **sin fuente**: aquí hay fuente para la mitad
+vocálica. Ver `6-fusion/pendientes_en_alvarado_y_arcaya.yaml`.
+
+**Qué NO dio.** Nada para 53 de los 61, y en particular nada para **Aroa**, que
+solo aparece como geografía («selvas de Aroa», «río Aroa»): la glosa 'tigre,
+jaguar' que circula por la web no tiene apoyo aquí.
+
+**Deuda que deja.** (1) Leer el pasaje de **consonantes** del prólogo, que
+quedó cortado en la extracción — si dice lo que parece, la permutación laxa
+entera deja de ser conveniencia. (2) Mirar **CARICARE**, por si Chiriguare y
+Caracara son el mismo bicho. (3) Verificar las ocho entradas en la imagen: las
+páginas de aquí salen de las cabeceras del OCR, no de la caja del número.
+
+**Lección de método.** Se estaban gastando búsquedas web en nombres cuya
+respuesta estaba a un `grep` de esta obra. Antes de salir a la web, agotar el
+repo — sobre todo cuando hay un **glosario** dentro.

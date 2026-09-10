@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-10**.
 
-**2094 ítems propuestos** en 40 propuestas, más **4 issue(s)/comentario(s) redactados sin publicar**.
+**2094 ítems propuestos** en 41 propuestas, más **4 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -47,6 +47,7 @@ editar_a_mano: no
      ... os bubures» (Oviedo y Valdés [6]: 33); «basically the same natio ... 
                                          ^ |
 | `paraguana_dos_clanes.yaml` | oliver-1989-cap3 | 5 |  |
+| `pendientes_en_alvarado_y_arcaya.yaml` | ? | 0 |  |
 | `petroglifos_y_manaure.yaml` | moron-2012-petroglifos | 4 |  |
 | `polities_no_costeras_federmann.yaml` | ? | 16 |  |
 | `tabla15_c14_oliver.yaml` | oliver-1989-cap4 | 23 |  |

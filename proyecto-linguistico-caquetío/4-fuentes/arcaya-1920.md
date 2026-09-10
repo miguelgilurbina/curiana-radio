@@ -9,10 +9,10 @@ paginas: 348
 capa_texto: si
 estado_minado: minado
 prioridad: media
-cobertura: "religion/familia (sesion 3) + pp. 97-100, el oficio del boratio (2026-08-04)"
+cobertura: "religión/familia (sesión 3) + pp. 97-100, el oficio del boratio (2026-08-04) + cap. I, la geografía física de Falcón, pp. 12-19 (2026-09-10)"
 sostiene: {hechos_corpus: 13, entradas_lexicon: 1, ritos_documentados: 3}
-verificado: 2026-08-04
-minado: 2026-08-04
+verificado: 2026-09-10
+minado: 2026-09-10
 aliases: ["Arcaya 1920", "Historia del Estado Falcón"]
 ---
 
@@ -155,3 +155,51 @@ profetiza — no que no haya especialistas. Ver [[polities-caquetias]]; el rasgo
 ## Enlaces
 
 [[03_creencia_caquetia]] · [[oviedo-y-valdes-1851]] · [[jahn-1927]] · [[zavala-reyes-2015]]
+
+---
+
+## 2026-09-10 — el capítulo geográfico, que estaba sin tocar
+
+**El hueco.** Esta nota daba la obra por `minado` con cobertura de religión,
+familia y el oficio del boratio. Pero el **capítulo I** —la geografía física de
+Falcón, pp. 12-19— es un **censo de hidrónimos y orónimos**: nombra los ríos y
+los cerros del estado uno por uno. No se había mirado. Deuda de cobertura del
+minador, no límite de la fuente.
+
+**Tres referentes que no estaban en ninguna parte del repo:**
+
+- **Siburúa** — uno de los tres riachuelos que **forman el río de Coro** (con
+  Meachiche y San Antonio), p. 15. Y, doscientas páginas después, en la lista de
+  sitios donde el encomendero agrupó a **jirajaras y ajaguas**: «se habían
+  formado con ellos pequeños grupos en Cariagua, Mapiare, **Siburúa**,
+  Utaquire, **Acurigua**, Quiragua». ⚠️ Es dato **colonial de reducción**, no de
+  poblamiento precontacto: dice dónde los pusieron, no de quién era el sitio en
+  el s. XV (regla 3). Pero es la primera vez en esta campaña que aparece
+  **achagua** —`ajagua` en la grafía de Arcaya— con anclaje geográfico en
+  Falcón por una fuente del repo.
+- **Caidie** — río, afluente del Jacura, junto con el Capadare.
+- **Guaruguaro** — punto de la demarcación con Zulia, entre la Punta de Oribor y
+  el río Cocuicita.
+
+**Ocho referentes más, confirmados:** Araurima (río, pareado con **Guaidima** —
+los dos en `-ima`), Cauca, Píritu (¡falconiano, no el de Anzoátegui!), Sanare,
+Aroa, Caujarao, Urucure (cerro de la Sierra de San Luis, y termina en el `-ure`
+en disputa) y Maparari.
+
+**Y una identificación:** «Carao, que suponemos estaba en el sitio del actual
+vecindario de **Carazao**, a no mucha distancia de Mitare; y Hurraque, Carona y
+**Todariquiba**, de los cuales ni el nombre queda» (pp. 92-93). El nombre vivo
+conserva el viejo. En la misma página escribe «**hurehurebo o jurijurebo**»: la
+alternancia h~j que la campaña usa como heurística, documentada sobre un
+topónimo concreto.
+
+**Lo que ya estaba y se confirma.** La refutación del «coro = viento» de
+Castellanos, la serie coro-/curi- con la etimología guajira (`koori` avispa,
+`kuru` lagartija) y la cita de Ballesteros 1550 sobre el `buco` estaban ya
+recogidas — [[ballesteros-1550]], `6-fusion/toponimia_coro_espina.yaml`. No son
+hallazgo nuevo y no se cuentan como tal.
+
+**Deuda.** Verificar las páginas en la imagen (aquí salen de las cabeceras del
+OCR). Y hay doce nombres nuevos para el repo en estos pasajes —Guaidima,
+Guararipana, Meachiche, Chuchure, Angoleta, Butare, Utaquire, Quiragua,
+Mapiare, Cariagua, Cocuicita, Oribor— sin procesar.
