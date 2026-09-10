@@ -298,7 +298,109 @@ cola_de_mapa:
 # que sigue vivo ES dato, aunque su etimología no lo sea.
 # ─────────────────────────────────────────────────────────────────────────
 cola_de_etimologia_coloquial:
-  estado: abierta — esperando el dictado de Miguel
+  estado: 'primera tanda barrida el 2026-09-10: Judibana, Amuay, Jayana, Adaro'
   abierta: '2026-09-10'
   protocolo: 'skill campana-toponimos; las lecturas van al campo `lecturas` de 2-lengua/toponimos.yaml'
-  nombres: []
+
+  nombres:
+
+    - forma: judibana
+      en_canon: 'toponimo-075, nivel A, 4 lecturas'
+      hallazgo_web: >-
+        La etimología que circula es EXACTAMENTE la del canon: «judi» o «juri»
+        es viento y «bana» es sitio alto. Y el lexicón ya tiene `juri`
+        'viento, ventarrón' como caquetío-atestiguado.
+      por_que_importa: >-
+        ⭐ Corroboración COLOQUIAL de D9. La decisión resolvió `-bana` = 'cerro,
+        sitio alto' con seis apoyos documentales; esto añade que la glosa vive
+        en el habla, por un canal que no es ninguna de esas seis fuentes. No
+        sube la etiqueta —el habla no es procedencia— pero dice que la lectura
+        no es de gabinete.
+      la_leyenda: >-
+        Judibana, hija del cacique MANAURE y de Yanara, casada con
+        «Hurehurebo»; perdió una pierna en el Asalto de los Taques de 1526 y
+        fue llevada esclava a Santo Domingo, donde la liberó Juan de Ampíes.
+        La llaman «la primera heroína de Venezuela».
+      cruce_con_el_canon: >-
+        `Hurehurebo` es el `Jurijurebo` de la tradición local que el canon ya
+        recoge en este mismo topónimo: dos variantes del mismo nombre. Pero el
+        canon la da como ESPOSA del Gran Cacique de Jurijurebo y la versión
+        popular como HIJA de Manaure. Dos variantes de la misma tradición, y se
+        declaran las dos.
+      aviso_regla_3: >-
+        🔴 La leyenda es COLONIAL —1526, bucaneros, Juan de Ampíes— y no se
+        proyecta al s. XIV-XV de la simulación. Vale como lectura sobre el
+        NOMBRE, no como hecho del mundo simulado.
+      tipo_de_lectura: [etimologia-popular, tradicion-local]
+      deuda: sin-procedencia
+
+    - forma: amuay
+      en_canon: 'toponimo-090, nivel C, registrado por el etnónimo'
+      hallazgo_web: >-
+        La etimología que circula es «región de los vientos y de las aguas
+        encontradas», atribuida al caquetío. Es una TERCERA glosa: el canon ya
+        tenía la 'cueva grande' de Esteves y la 'muelle' de 1924 que él
+        descarta.
+      por_que_importa: >-
+        ⭐⭐ Lo que vale no es la glosa sino la frase que la acompaña: «sus
+        primeros habitantes pertenecieron a la tribu AMUAYES, quienes poblaron
+        la Península junto con los MORUYES». La tradición popular nombra los
+        MISMOS DOS CLANES que el canon tiene por Delmonte 1883 vía Oliver
+        (paraguana_dos_clanes.yaml), por un canal independiente. Y Moruy es uno
+        de los dos nodos de la era 2.
+      lectura_prudente: >-
+        La glosa de los vientos y las aguas no despeja con ningún morfema del
+        canon y tiene pinta de etimología de folleto turístico. Se registra
+        como `etimologia-popular`, que es lo que es. La corroboración de los
+        dos clanes, en cambio, es dato etnohistórico y vale por sí sola.
+      tipo_de_lectura: [etimologia-popular]
+      deuda: sin-procedencia
+
+    - forma: jayana
+      en_canon: 'toponimo-110, nivel descartado — Esteves da referente e historia, ninguna glosa'
+      hallazgo_web: >-
+        «El nombre Jayana es el de una princesa indígena que sus fundadores
+        asignaron al poblado». Caserío del municipio Los Taques, dividido en
+        Jayana Centro, Norte y Sur; sus primeros habitantes criaban chivos y
+        ovejas. A 7,7 km de Judibana.
+      el_patron_que_asoma: >-
+        Judibana y Jayana están a ocho kilómetros y las DOS se explican
+        localmente como nombre de princesa indígena. Eso no es etimología: es
+        un patrón de la tradición nombradora de la península —resolver un
+        topónimo opaco con una princesa— y conviene anotarlo como patrón. Sirve
+        para leer con cautela cualquier otra «princesa» que salga en el barrido.
+      correccion_al_canon: >-
+        La nota del canon dice que el nombre sigue vivo «con m por n» por el
+        «Nueva Jayama» del OSM. Medido ahora: lo que existe es un parque
+        residencial «Nueva Jayana», y la grafía con m parece errata del mapa,
+        no variante viva. El caserío histórico se llama Jayana, con n.
+      vecinos_que_ya_son_canon: [Coduto, Cumujacoa, Totubacoa, Amuay, Guanadito]
+      tipo_de_lectura: [etimologia-popular]
+      deuda: sin-procedencia
+
+    - forma: adaro
+      en_canon: 'NO — está en el índice de Esteves y en la cola, sin procesar'
+      hallazgo_web: >-
+        Es una de las pequeñas penínsulas de la costa de Los Taques, junto a
+        Punta Salinas, Punta Los Taques, Punta Culata, Punta Judibana, las
+        bahías de Amuay y Judibana, y la península de CHIGUARE. Ninguna
+        etimología coloquial encontrada.
+      lo_que_si_hay: >-
+        Esteves lo despeja: «de `dara`, con prótesis vocálica y disimilación
+        a>o». Y `dara` está en el lexicón como caquetío-ATESTIGUADO, glosado
+        'alcaraván' — el ave. Adaro sería el paraje del alcaraván, con la misma
+        prótesis vocálica que Esteves documenta como patrón.
+      cruce_con_el_dictado: >-
+        ⭐ `dara` es además voz de NIVEL A del dictado de Medina Colina: el ave
+        sigue viva en el habla paraguanera. Topónimo, lexicón y habla del s. XX
+        sobre la misma palabra.
+      y_ademas: >-
+        ⭐ `CHIGUARE` aparece aquí como península menor de Los Taques. Chiguare
+        es voz de NIVEL B del dictado —planta enredadera— y el barrido web no le
+        había encontrado nada. Resulta que es también topónimo: va a la cola de
+        la campaña con esta lectura.
+      propuesta: >-
+        Candidato claro al canon: referente geográfico vivo, etimología de
+        fuente citable y base léxica atestiguada. Procesarlo en la próxima
+        tanda de la campaña de topónimos.
+      tipo_de_lectura: [etimologia-analitica]
