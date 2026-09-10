@@ -13,9 +13,9 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-09**.
+<!--GENERADO--> Generado el **2026-09-10**.
 
-**2069 ítems propuestos** en 38 propuestas, más **4 issue(s)/comentario(s) redactados sin publicar**.
+**2094 ítems propuestos** en 40 propuestas, más **4 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -24,6 +24,7 @@ editar_a_mano: no
 | `antolinez_1946_capo_y_ortografia.yaml` | antolinez-1946-hacia-el-indio | 3 |  |
 | `auditoria_a2_perea.yaml` | ? | 18 |  |
 | `bachaco_y_gu_es_w.yaml` | alvarado-1921 | 0 |  |
+| `barrido_toponimos_web_2026-09-10.yaml` | ? | 9 |  |
 | `barrido_web_medina_2026-09-09.yaml` | ? | 13 |  |
 | `castellanos_1589_toponimos.yaml` | castellanos-elegias | 0 |  |
 | `censo_ana_esteves_109.yaml` | esteves-1989 | 13 |  |
@@ -33,6 +34,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-08-30.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-01.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-08.yaml` | ? | 0 |  |
+| `esteves_parte2_falcon.yaml` | esteves-1989 | 16 |  |
 | `frase_saludo_mitare.yaml` | ? | 2 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
 | `lokono_gramatica_perea_1942.yaml` | perea-alonso-1942 | 6 |  |

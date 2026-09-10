@@ -1124,7 +1124,7 @@ finales de cada lote y el Índice General (pp. 147-149):
 | **71** | **informantes orales** — nombre, pueblo, año de nacimiento | 3 |
 | **70-72** | **FUENTES BIBLIOGRÁFICAS** | 3 |
 | **73-80** | **APÉNDICE** — artículos ensayísticos | 4 |
-| **81-144** | **PARTE II — "otros topónimos indígenas del ESTADO FALCÓN"** | 4-6 |
+| **81-144** | **PARTE II — "otros topónimos indígenas del ESTADO FALCÓN"** | 4-6 | ✅ **MINADA el 2026-09-10** — 387 entradas, 139 con glosa; ver `6-fusion/esteves_parte2_falcon.yaml` |
 | 145-146 | biografía del autor | 6 |
 | ~147-154 | Resumen numerado (**413 topónimos**) e Índice General | 6 |
 
