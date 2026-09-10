@@ -1,20 +1,55 @@
 meta:
   generado_por: curiana_sim/migrar_toponimos.py
-  toponimos: 145
+  toponimos: 178
   por_nivel:
-    A: 8
-    B: 14
-    C: 47
-    descartado: 76
-  con_procedencia: 84
-  con_lecturas: 31
-  lecturas: 62
+    A: 9
+    B: 16
+    C: 51
+    descartado: 102
+  con_procedencia: 116
+  con_lecturas: 33
+  lecturas: 64
   con_definicion_aceptada: 0
   corroboraciones_del_lexicon: 17
   nota: 'El nivel de confianza es un CAMPO, no un contenedor: antes eran NIVEL_A/B/C separados y para
     listar todos los topónimos había que unir tres dicts. La prosa (reduplicación, conflictos, veredicto
     sobre antropónimos) vive en 2-lengua/toponimia.md, no aquí.'
 toponimos:
+- id: toponimo-146
+  forma: caracubana
+  nivel: A
+  clase: topónimo
+  deuda: sin-pagina
+  glosa_fuente: cerro poblado de caracara
+  segmentacion: caracu(ara) + bana
+  morfemas:
+    caracara: ave rapaz (Caracara cheriway)  [Alvarado 1921 y van Buurt 2014, que da el papiamentu warawara
+      para la misma ave]
+    bana: cerro, sitio alto  [lexicón, caquetío-atestiguado; D9 resuelta 2026-08-31 con seis apoyos]
+  glosa_reconstruida: caracara + cerro = 'cerro poblado de caracara'
+  razon: 'Esteves segmenta y glosa él mismo, y las dos piezas estaban atestiguadas antes por otras fuentes.
+    Y la entrada hace más que cerrar su propia ecuación: es la vez que ESTEVES glosa `-bana` como ''cerro''
+    sobre un topónimo, que era justo lo que D9 había tenido que reconstruir. El formante recurre 14 veces
+    en su propio gazetteer (achichibana, chichabana, chichibana, coabana, dibana, gibana, guacabana, judibana,
+    pipiribana, tausabana, tautabana, carirubana, caracubana).'
+  observacion: 'Caserío del municipio Borojó, Distrito Democracia. ⚠️ La glosa se había PERDIDO en el
+    minado automático: el OCR se come el paréntesis de cierre —lee «(Caracu- bana: …» y mete ruido detrás—
+    y el extractor la daba por entrada sin glosa. Arreglado en glosas_esteves_parte2.py el 2026-09-10;
+    verificar en la IMAGEN antes de citarla fuera del repo. CARACARA está también en la lista dictada
+    por Miguel como topónimo aparte: son el mismo hecho visto dos veces.'
+  lecturas:
+  - tipo: glosa-fuente
+    lectura: «otra raíz que llaman caracara, la cual muelen en cueros de venados» — un tubérculo comestible,
+      no un ave
+    quien: Castellanos, Elegías
+    fecha: '2026-09-10'
+    eje: significado
+    procedencia:
+      obra: castellanos-elegias
+    veredicto: referente alternativo para la misma forma. La glosa de Esteves —'cerro POBLADO de caracara'—
+      encaja mejor con el ave. Se declara y no se elige.
+  procedencia:
+    obra: esteves-1989
 - id: toponimo-001
   forma: jurijurebo
   nivel: A
@@ -213,6 +248,54 @@ toponimos:
   procedencia:
     obra: esteves-1989
     pagina: 67
+- id: toponimo-147
+  forma: bariquire
+  nivel: B
+  clase: topónimo
+  glosa_fuente: árbol tintóreo
+  segmentacion: bara + quire
+  morfemas:
+    bara: 'árbol  [despejado en la campaña: Baraived = bara + bere ''amargo'']'
+    quire: 'color  [NUEVO — glosado por Esteves aquí; recurre 4 veces en su gazetteer: autaquire, bariquire,
+      sanajagquire, utaquire]'
+  glosa_reconstruida: árbol + color = 'árbol tintóreo'
+  razon: 'Nivel B y no A porque `quire` es morfema nuevo: lo glosa una sola fuente. Pero cumple la condición
+    de B —recurrencia 4 y glosa consistente— y la otra mitad, `bara`, ya estaba despejada en otro nombre
+    y otro distrito. La ecuación cierra sin residuo.'
+  observacion: 'Dos referentes: «El Barigüí, aldea del municipio Puerto Cumarebo, Distrito Zamora» y «El
+    Bariquisal, quebrada y lugar boscoso en el municipio Guaibacoa, Distrito Colina». La forma que Miguel
+    dictó es BARIQUIS, que es la base de El Bariquisal con el `-al` colectivo castellano encima — el mismo
+    caso que Guayacanal y Cacetal. ⚠️ No confundir con Bariquisimeto, que tiene entrada propia y otra
+    glosa (''río de aguas turbias'').'
+  procedencia:
+    obra: esteves-1989
+- id: toponimo-148
+  forma: carirubana
+  nivel: B
+  clase: topónimo
+  segmentacion: cari + (ru) + bana
+  morfemas:
+    cari: orilla del mar, costa  [lexicón, caquetío-atestiguado]
+    bana: cerro, sitio alto  [lexicón, caquetío-atestiguado; D9]
+    ru: SIN DESPEJAR — ni la fuente ni el canon lo explican
+  glosa_reconstruida: orilla + cerro = 'la orilla del cerro'
+  razon: Las dos piezas grandes estaban atestiguadas y la suma da el referente. Es B y no A porque queda
+    un residuo sin explicar —la `-ru-` de en medio— y porque la glosa no viene de una fuente impresa del
+    canon sino de etimología popular recogida en el barrido (va en lecturas, no en glosa_fuente).
+  observacion: Municipio de Punto Fijo, uno de los nombres vivos más grandes de la península. La etimología
+    popular coincide EXACTA con la glosa que D9 tuvo que reconstruir para `bana`, y por un canal que no
+    es ninguno de sus seis apoyos.
+  lecturas:
+  - tipo: etimologia-popular
+    lectura: «Carirubana significa orilla del peñón, la orilla del cerro, en donde CARI es orilla y BANA
+      sitio alto»
+    quien: divulgación local
+    fecha: '2026-09-10'
+    eje: significado
+    veredicto: '⭐ vale como CORROBORACIÓN independiente de la glosa de `bana`, no como fuente de la entrada:
+      las dos piezas ya estaban en el lexicón antes de leerla. Registro: 6-fusion/barrido_toponimos_web_2026-09-10.yaml'
+  procedencia:
+    obra: esteves-1989
 - id: toponimo-114
   forma: bariquí
   nivel: B
@@ -542,6 +625,73 @@ toponimos:
   procedencia:
     obra: esteves-1989
     pagina: 24
+- id: toponimo-149
+  forma: usera
+  nivel: C
+  clase: topónimo
+  glosa_fuente: seco, arenoso
+  segmentacion: usera (sin componer)
+  morfemas:
+    usera: 'seco, arenoso  [lexicón, caquetío-atestiguado, Zavala #275 (AM = Angulo Molina)]'
+  glosa_reconstruida: '''seco, arenoso'''
+  razon: 'El topónimo ES la palabra, sin afijo que despejar, y la voz estaba en el lexicón desde antes
+    por una fuente independiente del gazetteer. Entra en C —y no más arriba— porque no hay composición
+    que verificar: la ecuación es de una sola pieza, y una coincidencia de forma con una voz del glosario
+    no prueba por sí sola que el sitio se llame así POR eso.'
+  observacion: 'Aldea del municipio Sucre, Distrito Bolívar (Esteves). La glosa describe el terreno de
+    media Paraguaná, lo que la hace verosímil; confirmarlo es cosa del mapa. Nadie había cruzado el lexicón
+    con la lista de nombres: la voz estaba dentro y el topónimo fuera.'
+  procedencia:
+    obra: zavala-reyes-2015
+- id: toponimo-150
+  forma: guay
+  nivel: C
+  clase: topónimo
+  glosa_fuente: árbol parecido a la ceiba
+  segmentacion: guay (sin componer)
+  morfemas:
+    guay: árbol parecido a la ceiba  [lexicón, caquetío-atestiguado, lema `way`]
+  glosa_reconstruida: '''el guay'', el árbol'
+  razon: 'Fitónimo sin componer: la forma es la voz del árbol, ya atestiguada. Esteves la despeja dos
+    veces en otros nombres —«cai es una alteración de guay, árbol parecido a la ceiba; bacoa es lugar:
+    sitio de los guayes» y, para Guaimure, «raíz de guay»— pero de la entrada GUAY sola no da glosa.'
+  observacion: '⚠️ La entrada de Esteves para GUAY cae en una página de índice que el OCR destroza: hay
+    que ir a la imagen para leer su referente. Lo que sí queda firme es la voz.'
+  procedencia:
+    obra: esteves-1989
+- id: toponimo-151
+  forma: borobo
+  nivel: C
+  clase: topónimo
+  glosa_fuente: arbusto apocináceo de flores muy pequeñas
+  segmentacion: boro~boro (reduplicación)
+  morfemas:
+    boroboro: arbusto apocináceo de flores muy pequeñas, abundante en las llanuras cálidas  [Esteves]
+  glosa_reconstruida: '''el boroboro'', la planta'
+  razon: 'Fitónimo. La glosa la da Esteves de refilón, al explicar BEREBORO: «puede ser una alteración
+    de BOROBORO, arbusto apocináceo…». Entra en C porque la planta no está en el lexicón y la identificación
+    Borobo = boroboro es del propio Esteves pero en condicional.'
+  observacion: 'Séptima REDUPLICACIÓN del corpus falconiano, con Mirimire, Taratara, Tapatapa, Chichiriviche,
+    Barabara y Guaruguaro. Esteves declara en Barabara que la duplicación «es plural por duplicación»:
+    el censo de reduplicaciones ya tiene material para medirse.'
+  procedencia:
+    obra: esteves-1989
+- id: toponimo-152
+  forma: araguan
+  nivel: C
+  clase: topónimo
+  glosa_fuente: árbol indeterminado de Lara y Falcón
+  segmentacion: araguán (sin componer)
+  morfemas:
+    araguan: árbol de madera gris clara, pesada, usada en construcción civil  [Alvarado 1921]
+  glosa_reconstruida: '''el araguán'', el árbol'
+  razon: Fitónimo sin componer. Estaba en el grupo sin NADA —ni glosa, ni web, ni mención en Esteves—
+    y lo resolvió el Glosario de Alvarado, que además lo LOCALIZA en Lara y Falcón. Entra en C porque
+    Alvarado no declara de qué lengua es la voz.
+  observacion: '⚠️ ARAGUÁN ≠ ARAGUANEY. Alvarado los trata como dos entradas seguidas y distintas: araguanei
+    es Tecoma spectabilis, el araguaney. Están pegadas en la página y es fácil fundirlas.'
+  procedencia: null
+  deuda: sin-procedencia
 - id: toponimo-115
   forma: cumujacoa
   nivel: C
@@ -1742,6 +1892,319 @@ toponimos:
   procedencia:
     obra: esteves-1989
     pagina: 61
+- id: toponimo-153
+  forma: acaboa
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: lugar pecuario al norte del municipio Jadacaquiva; en el censo de 1881 San José de Acaboa
+    tenía dos casas y once vecinos; «nombre antiguo que aparece anotado varias veces en un libro de bautismos»
+    — rastro documental colonial
+  razon: 'Esteves da referente, municipio y distrito, pero ningún paréntesis etimológico; el barrido web
+    tampoco devolvió glosa y ningún morfema del canon alinea sin forzar. Se registran para que la campaña
+    no los vuelva a abrir sin dato nuevo. Descartado = sin etimología despejable, NO «no existió»: son
+    nombres vivos, y eso es dato (Miguel, 2026-09-07).'
+  procedencia:
+    obra: esteves-1989
+- id: toponimo-154
+  forma: aguaque
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: fundo pecuario a dos leguas al norte de Pueblo Nuevo; lugar de nacimiento de la heroína
+    Josefa Camejo, declarado monumento histórico en junio de 1982
+  razon: 'Esteves da referente, municipio y distrito, pero ningún paréntesis etimológico; el barrido web
+    tampoco devolvió glosa y ningún morfema del canon alinea sin forzar. Se registran para que la campaña
+    no los vuelva a abrir sin dato nuevo. Descartado = sin etimología despejable, NO «no existió»: son
+    nombres vivos, y eso es dato (Miguel, 2026-09-07).'
+  procedencia:
+    obra: esteves-1989
+- id: toponimo-155
+  forma: aracua
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: población capital del municipio Aracua, Distrito Bolívar; Oliver lo sitúa en la ruta de
+    Federmann de 1530, en territorio jirajara, al norte de una tierra de nadie
+  razon: 'Esteves da referente, municipio y distrito, pero ningún paréntesis etimológico; el barrido web
+    tampoco devolvió glosa y ningún morfema del canon alinea sin forzar. Se registran para que la campaña
+    no los vuelva a abrir sin dato nuevo. Descartado = sin etimología despejable, NO «no existió»: son
+    nombres vivos, y eso es dato (Miguel, 2026-09-07).'
+  procedencia:
+    obra: esteves-1989
+- id: toponimo-156
+  forma: capana
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: Punta Capana, sitio costeño del Distrito Buchivacoa, en la desembocadura del río Borojó
+  razon: 'Esteves da referente, municipio y distrito, pero ningún paréntesis etimológico; el barrido web
+    tampoco devolvió glosa y ningún morfema del canon alinea sin forzar. Se registran para que la campaña
+    no los vuelva a abrir sin dato nuevo. Descartado = sin etimología despejable, NO «no existió»: son
+    nombres vivos, y eso es dato (Miguel, 2026-09-07).'
+  procedencia:
+    obra: esteves-1989
+- id: toponimo-157
+  forma: cueparo
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: aldea del municipio Jacura, Distrito Acosta; en el gazetteer vivo aparece como QUEPARO,
+    mismo municipio
+  razon: 'Esteves da referente, municipio y distrito, pero ningún paréntesis etimológico; el barrido web
+    tampoco devolvió glosa y ningún morfema del canon alinea sin forzar. Se registran para que la campaña
+    no los vuelva a abrir sin dato nuevo. Descartado = sin etimología despejable, NO «no existió»: son
+    nombres vivos, y eso es dato (Miguel, 2026-09-07).'
+  procedencia:
+    obra: esteves-1989
+- id: toponimo-158
+  forma: cururupare
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: caserío del municipio Piedra Grande; Arcaya lo incluye en la serie coro-/curi- «de lugares
+    en las regiones ocupadas por los caquetíos», con la etimología guajira propuesta koori 'avispa' o
+    kuru 'lagartija'
+  razon: 'Esteves da referente, municipio y distrito, pero ningún paréntesis etimológico; el barrido web
+    tampoco devolvió glosa y ningún morfema del canon alinea sin forzar. Se registran para que la campaña
+    no los vuelva a abrir sin dato nuevo. Descartado = sin etimología despejable, NO «no existió»: son
+    nombres vivos, y eso es dato (Miguel, 2026-09-07).'
+  procedencia:
+    obra: esteves-1989
+- id: toponimo-159
+  forma: macuare
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: I - aldea del municipio Colina, Distrito Petit; II - caserío del municipio San Luis, Distrito
+    Bolívar
+  razon: 'Esteves da referente, municipio y distrito, pero ningún paréntesis etimológico; el barrido web
+    tampoco devolvió glosa y ningún morfema del canon alinea sin forzar. Se registran para que la campaña
+    no los vuelva a abrir sin dato nuevo. Descartado = sin etimología despejable, NO «no existió»: son
+    nombres vivos, y eso es dato (Miguel, 2026-09-07).'
+  procedencia:
+    obra: esteves-1989
+- id: toponimo-160
+  forma: omomo
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: caserío del municipio Casigua, Distrito Mauroa
+  razon: 'Esteves da referente, municipio y distrito, pero ningún paréntesis etimológico; el barrido web
+    tampoco devolvió glosa y ningún morfema del canon alinea sin forzar. Se registran para que la campaña
+    no los vuelva a abrir sin dato nuevo. Descartado = sin etimología despejable, NO «no existió»: son
+    nombres vivos, y eso es dato (Miguel, 2026-09-07).'
+  procedencia:
+    obra: esteves-1989
+- id: toponimo-161
+  forma: sauca
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: puerto y pueblo al norte de Píritu, Distrito Zamora; «hay salinas» — dato de comercio,
+    de la misma clase que el curubo para la cal
+  razon: 'Esteves da referente, municipio y distrito, pero ningún paréntesis etimológico; el barrido web
+    tampoco devolvió glosa y ningún morfema del canon alinea sin forzar. Se registran para que la campaña
+    no los vuelva a abrir sin dato nuevo. Descartado = sin etimología despejable, NO «no existió»: son
+    nombres vivos, y eso es dato (Miguel, 2026-09-07).'
+  procedencia:
+    obra: esteves-1989
+- id: toponimo-162
+  forma: tacamire
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: 'cerro, pueblo y río al sureste de Agualinda, Distrito Acosta; termina en `-mire` como
+    Mirimire, y son los dos únicos del gazetteer: si la intuición de Miguel sobre `miri` se comprueba
+    algún día, este es el segundo sitio donde mirar'
+  razon: 'Esteves da referente, municipio y distrito, pero ningún paréntesis etimológico; el barrido web
+    tampoco devolvió glosa y ningún morfema del canon alinea sin forzar. Se registran para que la campaña
+    no los vuelva a abrir sin dato nuevo. Descartado = sin etimología despejable, NO «no existió»: son
+    nombres vivos, y eso es dato (Miguel, 2026-09-07).'
+  procedencia:
+    obra: esteves-1989
+- id: toponimo-163
+  forma: tucurere
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: 'I - río que desagua cerca de San Juan de los Cayos: lleva el nombre de Capadare en su
+    nacimiento, Tucurere en medio y río Mangle en la desembocadura; II - aldea del municipio San Francisco
+    (Mirimire), Distrito Acosta'
+  razon: 'Esteves da referente, municipio y distrito, pero ningún paréntesis etimológico; el barrido web
+    tampoco devolvió glosa y ningún morfema del canon alinea sin forzar. Se registran para que la campaña
+    no los vuelva a abrir sin dato nuevo. Descartado = sin etimología despejable, NO «no existió»: son
+    nombres vivos, y eso es dato (Miguel, 2026-09-07).'
+  procedencia:
+    obra: esteves-1989
+- id: toponimo-164
+  forma: turamaco
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: caserío del municipio Mitare, Distrito Miranda
+  razon: 'Esteves da referente, municipio y distrito, pero ningún paréntesis etimológico; el barrido web
+    tampoco devolvió glosa y ningún morfema del canon alinea sin forzar. Se registran para que la campaña
+    no los vuelva a abrir sin dato nuevo. Descartado = sin etimología despejable, NO «no existió»: son
+    nombres vivos, y eso es dato (Miguel, 2026-09-07).'
+  procedencia:
+    obra: esteves-1989
+- id: toponimo-165
+  forma: siburua
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: uno de los tres riachuelos que FORMAN el río de Coro, con Meachiche y San Antonio; y en
+    la lista de sitios donde el encomendero agrupó «jirajaras y ajaguas» — dato COLONIAL de reducción,
+    no de poblamiento precontacto
+  razon: No están en el gazetteer de Esteves. El referente sale del capítulo geográfico de Arcaya 1920
+    —un censo de los ríos y cerros de Falcón que nadie había minado— o del gazetteer vivo. Sin glosa en
+    ninguna fuente. Se registran con su referente para que existan en la mesa y el barrido del mapa pueda
+    geolocalizarlos.
+  procedencia:
+    obra: arcaya-1920
+- id: toponimo-166
+  forma: caidie
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: río, afluente del Jacura junto con el Capadare; en el gazetteer vivo, CAIDI, poblado del
+    municipio San Francisco
+  razon: No están en el gazetteer de Esteves. El referente sale del capítulo geográfico de Arcaya 1920
+    —un censo de los ríos y cerros de Falcón que nadie había minado— o del gazetteer vivo. Sin glosa en
+    ninguna fuente. Se registran con su referente para que existan en la mesa y el barrido del mapa pueda
+    geolocalizarlos.
+  procedencia:
+    obra: arcaya-1920
+- id: toponimo-167
+  forma: guaruguaro
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: punto de la demarcación con Zulia, entre la Punta de Oribor y el río Cocuicita; reduplicado
+  razon: No están en el gazetteer de Esteves. El referente sale del capítulo geográfico de Arcaya 1920
+    —un censo de los ríos y cerros de Falcón que nadie había minado— o del gazetteer vivo. Sin glosa en
+    ninguna fuente. Se registran con su referente para que existan en la mesa y el barrido del mapa pueda
+    geolocalizarlos.
+  procedencia:
+    obra: arcaya-1920
+- id: toponimo-168
+  forma: araurima
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: río que cae al Tocuyo en territorio de Falcón, pareado con el GUAIDIMA — los dos en `-ima`;
+    y hoy es una de las tres parroquias del municipio Jacura
+  razon: No están en el gazetteer de Esteves. El referente sale del capítulo geográfico de Arcaya 1920
+    —un censo de los ríos y cerros de Falcón que nadie había minado— o del gazetteer vivo. Sin glosa en
+    ninguna fuente. Se registran con su referente para que existan en la mesa y el barrido del mapa pueda
+    geolocalizarlos.
+  procedencia:
+    obra: arcaya-1920
+- id: toponimo-169
+  forma: cauca
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: río de la vertiente Buchivacoa-Democracia, con el Matícora, el Borojó, el Capatárida y
+    el Zazárida
+  razon: No están en el gazetteer de Esteves. El referente sale del capítulo geográfico de Arcaya 1920
+    —un censo de los ríos y cerros de Falcón que nadie había minado— o del gazetteer vivo. Sin glosa en
+    ninguna fuente. Se registran con su referente para que existan en la mesa y el barrido del mapa pueda
+    geolocalizarlos.
+  procedencia:
+    obra: arcaya-1920
+- id: toponimo-170
+  forma: caujarao
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: cadena de colinas al sur de Coro, que va desde Chuchure por Angoleta, Taruma, Butare y
+    Guaibacoa; ⚠️ TARUMA está a una vocal del TARAMA que Miguel dictó
+  razon: No están en el gazetteer de Esteves. El referente sale del capítulo geográfico de Arcaya 1920
+    —un censo de los ríos y cerros de Falcón que nadie había minado— o del gazetteer vivo. Sin glosa en
+    ninguna fuente. Se registran con su referente para que existan en la mesa y el barrido del mapa pueda
+    geolocalizarlos.
+  procedencia:
+    obra: arcaya-1920
+- id: toponimo-171
+  forma: urucure
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: cerro de la Sierra de San Luis, con El Palmar; termina en el `-ure` en disputa —Esteves
+    lo glosa 'raíz', la toponimia lee 'sitio de'— y que sea un CERRO favorece la segunda lectura
+  razon: No están en el gazetteer de Esteves. El referente sale del capítulo geográfico de Arcaya 1920
+    —un censo de los ríos y cerros de Falcón que nadie había minado— o del gazetteer vivo. Sin glosa en
+    ninguna fuente. Se registran con su referente para que existan en la mesa y el barrido del mapa pueda
+    geolocalizarlos.
+  procedencia:
+    obra: arcaya-1920
+- id: toponimo-172
+  forma: maparari
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: 'montaña del Distrito Federación, junto a Churuguara; ⚠️ el parecido con MAPANARE, la
+    serpiente, exige r~n interior, que NO está entre las permutaciones documentadas: no se propone'
+  razon: No están en el gazetteer de Esteves. El referente sale del capítulo geográfico de Arcaya 1920
+    —un censo de los ríos y cerros de Falcón que nadie había minado— o del gazetteer vivo. Sin glosa en
+    ninguna fuente. Se registran con su referente para que existan en la mesa y el barrido del mapa pueda
+    geolocalizarlos.
+  procedencia:
+    obra: arcaya-1920
+- id: toponimo-173
+  forma: sividigua
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: 'poblado del municipio Buchivacoa, 51 m s.n.m.; ⚠️ circula una etimología quechua —«ir
+    por amuleto y extraño»— que se descarta: el quechua no tiene contacto documentado con la toponimia
+    falconiana'
+  razon: No están en el gazetteer de Esteves. El referente sale del capítulo geográfico de Arcaya 1920
+    —un censo de los ríos y cerros de Falcón que nadie había minado— o del gazetteer vivo. Sin glosa en
+    ninguna fuente. Se registran con su referente para que existan en la mesa y el barrido del mapa pueda
+    geolocalizarlos.
+  procedencia:
+    obra: arcaya-1920
+- id: toponimo-174
+  forma: murucusa
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: pueblo de Falcón, citado en un estudio de la cuenca
+  razon: No están en el gazetteer de Esteves. El referente sale del capítulo geográfico de Arcaya 1920
+    —un censo de los ríos y cerros de Falcón que nadie había minado— o del gazetteer vivo. Sin glosa en
+    ninguna fuente. Se registran con su referente para que existan en la mesa y el barrido del mapa pueda
+    geolocalizarlos.
+  procedencia:
+    obra: arcaya-1920
+- id: toponimo-175
+  forma: botucare
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: municipio Miranda
+  razon: No están en el gazetteer de Esteves. El referente sale del capítulo geográfico de Arcaya 1920
+    —un censo de los ríos y cerros de Falcón que nadie había minado— o del gazetteer vivo. Sin glosa en
+    ninguna fuente. Se registran con su referente para que existan en la mesa y el barrido del mapa pueda
+    geolocalizarlos.
+  procedencia:
+    obra: arcaya-1920
+- id: toponimo-176
+  forma: caduto
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: 'municipio Carirubana, Paraguaná; Arcaya lista CODUTO y CURARADUTO entre los nombres «de
+    lugares en las regiones ocupadas por los caquetíos», y Miguel dictó además CODORE: el formante `-duto`
+    merece censo'
+  razon: No están en el gazetteer de Esteves. El referente sale del capítulo geográfico de Arcaya 1920
+    —un censo de los ríos y cerros de Falcón que nadie había minado— o del gazetteer vivo. Sin glosa en
+    ninguna fuente. Se registran con su referente para que existan en la mesa y el barrido del mapa pueda
+    geolocalizarlos.
+  procedencia:
+    obra: arcaya-1920
+- id: toponimo-177
+  forma: tibana
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: municipio Monseñor Iturriza, a 5,9 km al noroeste de Santa Ana; termina en `-bana`, que
+    Esteves glosa 'cerro' — falta saber si el sitio lo es, y eso lo dice el mapa
+  razon: No están en el gazetteer de Esteves. El referente sale del capítulo geográfico de Arcaya 1920
+    —un censo de los ríos y cerros de Falcón que nadie había minado— o del gazetteer vivo. Sin glosa en
+    ninguna fuente. Se registran con su referente para que existan en la mesa y el barrido del mapa pueda
+    geolocalizarlos.
+  procedencia:
+    obra: arcaya-1920
+- id: toponimo-178
+  forma: origuasa
+  nivel: descartado
+  clase: topónimo
+  glosa_fuente: aldea junto a GUAMURE —el Guaimure que Esteves glosa «raíz de guay; ure, raíz»— en el
+    municipio Jacura
+  razon: No están en el gazetteer de Esteves. El referente sale del capítulo geográfico de Arcaya 1920
+    —un censo de los ríos y cerros de Falcón que nadie había minado— o del gazetteer vivo. Sin glosa en
+    ninguna fuente. Se registran con su referente para que existan en la mesa y el barrido del mapa pueda
+    geolocalizarlos.
+  procedencia:
+    obra: arcaya-1920
 - id: toponimo-096
   forma: hurraque
   nivel: descartado

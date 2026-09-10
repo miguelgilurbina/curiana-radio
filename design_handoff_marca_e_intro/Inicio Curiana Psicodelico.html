@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curiana Radio · Intro psicodélica</title>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.184.0/build/three.module.js",
+    "three/addons/controls/OrbitControls.js": "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js",
+    "three/addons/exporters/OBJExporter.js": "https://unpkg.com/three@0.184.0/examples/jsm/exporters/OBJExporter.js",
+    "three/addons/exporters/GLTFExporter.js": "https://unpkg.com/three@0.184.0/examples/jsm/exporters/GLTFExporter.js"
+  },
+  "integrity": {
+    "https://unpkg.com/three@0.184.0/build/three.module.js": "sha384-8FCZ1eVO6it4+pbec2aDtnTrwjWXZLJRC+MAGCIPDgsYnUrl/E0A2YlF8ioMKI/J",
+    "https://unpkg.com/three@0.184.0/build/three.core.js": "sha384-dw2ooPewaEIrAgl6oFDBmmBWCE9oW9LxRGcfwZ0hLvEprzo202wXl7vCYHRlSnOT",
+    "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js": "sha384-4rziNxOBZKQ69i+w+f89KJ55TCYquwchVbByQwmaOeIOXdOU2PLDn3kOfXHwIJC9",
+    "https://unpkg.com/three@0.184.0/examples/jsm/exporters/OBJExporter.js": "sha384-nbwtoZENJD3Vq+ACK0CuGQdPMuDWHkamC2KJD70EV5nfg6jQjfppKOea07YJN+N3",
+    "https://unpkg.com/three@0.184.0/examples/jsm/exporters/GLTFExporter.js": "sha384-VofkvpG6HERhFCYbsUOHeNXBCqID2nfqkQqnVzE1jc/oPcz+qJ13ADdXH08hE+cQ"
+  }
+}
+</script>
+<style>
+  html,body{margin:0;height:100%;background:#23224f;overflow:hidden;
+    font-family:ui-monospace,"Cascadia Mono",Consolas,Menlo,monospace}
+  #lienzo{position:fixed;inset:0;display:block}
+  /* trama de semitono + scanlines: el registro de arte, encima del 3D */
+  #trama{position:fixed;inset:0;z-index:1;pointer-events:none;mix-blend-mode:multiply;opacity:.5;
+    background:radial-gradient(circle, rgba(20,10,30,.9) 0.8px, transparent 1.5px);
+    background-size:5px 5px}
+  #scan{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.14;
+    background:repeating-linear-gradient(0deg, transparent 0 2px, rgba(0,0,0,.7) 2px 3px)}
+  .ui{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;
+    justify-content:space-between;padding:6vh 24px 6vh;pointer-events:none;z-index:2}
+  .marca{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+  /* misregistro de imprenta: la tinta roja y la azul no coinciden */
+  .nombre{font-size:15px;letter-spacing:.62em;text-indent:.62em;color:#f3ead4;
+    text-transform:uppercase;animation:misregistro 7s ease-in-out infinite}
+  @keyframes misregistro{
+    0%,100%{text-shadow:2px 0 0 #b64924, -2px 0 0 #26396a}
+    25%{text-shadow:3px 1px 0 #b64924, -2px -1px 0 #26396a}
+    50%{text-shadow:1px -1px 0 #b64924, -3px 1px 0 #26396a}
+    75%{text-shadow:2px 1px 0 #b64924, -1px -2px 0 #26396a}}
+  .badge{font-family:Inter,system-ui,sans-serif;font-weight:700;font-size:13px;letter-spacing:.12em;
+    background:#FF6B35;color:#fff;padding:6px 14px;border-radius:3px}
+  .pie{display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center}
+  .estado{font-size:10px;letter-spacing:.34em;text-indent:.34em;color:#c7c91c;text-transform:uppercase}
+  .estado .punto{display:inline-block;width:7px;height:7px;border-radius:9999px;background:#FF6B35;
+    margin-right:9px;vertical-align:1px;animation:pulso 1.1s steps(2) infinite}
+  @keyframes pulso{0%,100%{opacity:1}50%{opacity:.15}}
+  #sintonizar{white-space:nowrap;pointer-events:auto;cursor:pointer;background:rgba(35,34,79,.35);border:1px solid #c7c91c;
+    color:#c7c91c;font:inherit;font-size:12px;letter-spacing:.26em;text-indent:.26em;
+    padding:16px 30px;border-radius:2px;transition:all .3s cubic-bezier(.22,1,.36,1)}
+  #sintonizar:hover{background:#c7c91c;color:#23224f}
+  .proverbio{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:13px;
+    color:rgba(243,234,212,.7);max-width:36ch;line-height:1.6}
+  #velo{position:fixed;inset:0;background:#f3ead4;opacity:0;pointer-events:none;z-index:3;
+    transition:opacity 1.1s cubic-bezier(.22,1,.36,1)}
+  @media (prefers-reduced-motion: reduce){
+    .nombre{animation:none;text-shadow:2px 0 0 #b64924, -2px 0 0 #26396a}
+    .estado .punto{animation:none}}
+</style>
+</head>
+<body>
+<canvas id="lienzo"></canvas>
+<div id="trama"></div>
+<div id="scan"></div>
+<div class="ui">
+  <div class="marca">
+    <div class="nombre">Curiana Radio</div>
+    <div class="badge">88.8 FM</div>
+  </div>
+  <div class="pie">
+    <div class="estado"><span class="punto"></span>Interferencia · señal de otro tiempo</div>
+    <button id="sintonizar">[ SINTONIZAR → ]</button>
+    <div class="proverbio">«No es propaganda para el cambio — es propaganda desde después.»</div>
+  </div>
+</div>
+<div id="velo"></div>
+<script type="module">
+import * as THREE from 'three';
+
+// ---- calcar la espiral del PNG original ----
+const bmp = await createImageBitmap(await (await fetch('uploads/Curiana  PNG.png')).blob());
+const S = 180;
+const cv = document.createElement('canvas'); cv.width = cv.height = S;
+const c2 = cv.getContext('2d', { willReadFrequently: true });
+c2.drawImage(bmp, 0, 0, S, S);
+const px = c2.getImageData(0, 0, S, S).data;
+const solid = (x, y) => {
+  if (x < 0 || y < 0 || x >= S || y >= S) return 0;
+  const i = (y * S + x) * 4;
+  return px[i + 3] > 120 && (px[i] + px[i + 1] + px[i + 2]) < 400 ? 1 : 0;
+};
+const W2 = (S + 3) * 2;
+const pid = p => Math.round(p[0] * 2 + 2) * W2 + Math.round(p[1] * 2 + 2);
+const segs = [];
+for (let y = -1; y < S; y++) for (let x = -1; x < S; x++) {
+  const tl = solid(x, y), tr = solid(x + 1, y), br = solid(x + 1, y + 1), bl = solid(x, y + 1);
+  const cs = tl * 8 + tr * 4 + br * 2 + bl;
+  if (cs === 0 || cs === 15) continue;
+  const T = [x + 0.5, y], R = [x + 1, y + 0.5], B = [x + 0.5, y + 1], L = [x, y + 0.5];
+  const put = (a, b) => segs.push({ a, b, ia: pid(a), ib: pid(b), usado: false });
+  if (cs === 1 || cs === 14) put(L, B);
+  else if (cs === 2 || cs === 13) put(B, R);
+  else if (cs === 3 || cs === 12) put(L, R);
+  else if (cs === 4 || cs === 11) put(T, R);
+  else if (cs === 6 || cs === 9) put(T, B);
+  else if (cs === 7 || cs === 8) put(L, T);
+  else if (cs === 5) { put(L, T); put(B, R); }
+  else { put(T, R); put(L, B); }
+}
+const adj = new Map();
+segs.forEach((s, i) => {
+  for (const k of [s.ia, s.ib]) { let l = adj.get(k); if (!l) adj.set(k, l = []); l.push(i); }
+});
+const lazos = [];
+for (let i = 0; i < segs.length; i++) {
+  if (segs[i].usado) continue;
+  segs[i].usado = true;
+  const lazo = [segs[i].a, segs[i].b];
+  let cur = segs[i].ib;
+  while (true) {
+    const cand = (adj.get(cur) || []).find(j => !segs[j].usado);
+    if (cand === undefined) break;
+    const sg = segs[cand]; sg.usado = true;
+    if (sg.ia === cur) { lazo.push(sg.b); cur = sg.ib; }
+    else { lazo.push(sg.a); cur = sg.ia; }
+  }
+  if (lazo.length > 24) lazos.push(lazo);
+}
+const aPts = lazo => {
+  let p = lazo;
+  for (let pass = 0; pass < 2; pass++)
+    p = p.map((q, i) => {
+      const a = p[(i - 1 + p.length) % p.length], b = p[(i + 1) % p.length];
+      return [(a[0] + q[0] * 2 + b[0]) / 4, (a[1] + q[1] * 2 + b[1]) / 4];
+    });
+  return p.filter((_, i) => i % 2 === 0)
+    .map(q => new THREE.Vector2((q[0] - S / 2) / S, (S / 2 - q[1]) / S));
+};
+const area = pts => Math.abs(pts.reduce((s, p, i) => {
+  const q = pts[(i + 1) % pts.length]; return s + p.x * q.y - q.x * p.y;
+}, 0) / 2);
+const formas = lazos.map(aPts).filter(p => area(p) > 0.001).sort((a, b) => area(b) - area(a));
+const shape = new THREE.Shape(formas[0]);
+for (const h of formas.slice(1)) shape.holes.push(new THREE.Path(h));
+
+// ---- escena ----
+const canvas = document.getElementById('lienzo');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(44, 1, 0.1, 40);
+camera.position.set(0, 0, 2.7);
+
+// fondo: warp psicodélico en shader — la paleta del ARTE (ácido, índigo, ocre, rojo)
+const fondoU = { t: { value: 0 }, marea: { value: 1 } };
+const fondo = new THREE.Mesh(
+  new THREE.PlaneGeometry(2, 2),
+  new THREE.ShaderMaterial({
+    uniforms: fondoU, depthWrite: false, depthTest: false,
+    vertexShader: 'varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 1.0, 1.0); }',
+    fragmentShader: `
+      varying vec2 vUv; uniform float t; uniform float marea;
+      void main(){
+        vec2 p = vUv - 0.5;
+        float r = length(p) + 1e-4;
+        float a = atan(p.y, p.x);
+        // el remolino: las bandas espirales se interfieren
+        float s1 = sin(a*3.0 + log(r)*7.0 - t*0.55*marea);
+        float s2 = sin(a*5.0 - log(r)*11.0 + t*0.4*marea + sin(t*0.21)*2.0);
+        float m = s1*0.6 + s2*0.4;
+        vec3 acido  = vec3(0.780, 0.788, 0.110);
+        vec3 indigo = vec3(0.149, 0.224, 0.416);
+        vec3 ocre   = vec3(0.765, 0.404, 0.071);
+        vec3 rojo   = vec3(0.714, 0.286, 0.141);
+        vec3 col = mix(indigo, ocre, smoothstep(-0.9, 0.9, m));
+        col = mix(col, acido, smoothstep(0.55, 0.95, s2) * 0.85);
+        col = mix(col, rojo, smoothstep(0.6, 1.0, s1) * 0.6);
+        col = mix(col, indigo*0.55, smoothstep(0.32, 0.85, r));   // viñeta a la noche ultramar
+        // posterizar: registro de serigrafía, no de degradado
+        col = floor(col * 5.0 + 0.5) / 5.0;
+        gl_FragColor = vec4(col, 1.0);
+      }`,
+  })
+);
+fondo.renderOrder = -1; fondo.frustumCulled = false;
+scene.add(fondo);
+
+// ---- el túnel de espirales: la original al frente, ecos serigráficos detrás ----
+const PROF = 0.09;
+const geo = new THREE.ExtrudeGeometry(shape, {
+  depth: PROF, steps: 1, curveSegments: 8,
+  bevelEnabled: true, bevelThickness: 0.012, bevelSize: 0.01, bevelSegments: 3,
+});
+geo.translate(0, 0, -PROF / 2);
+geo.computeBoundingBox();
+const cbb = geo.boundingBox.getCenter(new THREE.Vector3());
+geo.translate(-cbb.x, -cbb.y, -cbb.z);
+
+scene.add(new THREE.HemisphereLight(0xf3ead4, 0x23224f, 0.9));
+const calida = new THREE.DirectionalLight(0xffb08a, 1.7);
+calida.position.set(1.6, 1.4, 2); scene.add(calida);
+const acida = new THREE.DirectionalLight(0xc7c91c, 0.8);
+acida.position.set(-2, -1, 1); scene.add(acida);
+
+const frente = new THREE.Mesh(geo,
+  new THREE.MeshStandardMaterial({ color: 0xb8502e, roughness: 0.5, metalness: 0.12 }));
+frente.scale.setScalar(1.3);
+scene.add(frente);
+
+const tintas = [0xc7c91c, 0x26396a, 0xc36712, 0xb64924, 0xf3ead4, 0x2154c5];
+const ecos = [];
+for (let i = 0; i < 6; i++) {
+  const m = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({
+    color: tintas[i % tintas.length], transparent: true, opacity: 0.85 - i * 0.11,
+  }));
+  m.scale.setScalar(1.3 + (i + 1) * 0.52);
+  m.position.z = -0.55 * (i + 1);
+  scene.add(m); ecos.push(m);
+}
+
+// ---- movimiento ----
+const lento = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let velocidad = lento ? 0 : 1, dolly = 0, mx = 0, my = 0;
+if (lento) fondoU.marea.value = 0;
+addEventListener('pointermove', e => {
+  mx = (e.clientX / innerWidth - 0.5) * 2;
+  my = (e.clientY / innerHeight - 0.5) * 2;
+});
+function encuadre() {
+  renderer.setSize(innerWidth, innerHeight, false);
+  camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix();
+}
+addEventListener('resize', encuadre); encuadre();
+
+const t0 = performance.now();
+renderer.setAnimationLoop(() => {
+  const t = (performance.now() - t0) / 1000;
+  fondoU.t.value = t * velocidad ** 0.5 + (velocidad > 1 ? t * velocidad * 0.2 : 0);
+  frente.rotation.y += 0.004 * velocidad;
+  frente.rotation.x = -0.28 + (lento ? 0 : Math.sin(t * 0.5) * 0.05) + my * 0.12;
+  frente.rotation.z = mx * 0.06;
+  frente.position.y = lento ? 0 : Math.sin(t * 0.8) * 0.03;
+  ecos.forEach((m, i) => {
+    m.rotation.z += (i % 2 ? -1 : 1) * 0.0035 * velocidad * (1 + i * 0.25);
+    const puls = lento ? 0 : Math.sin(t * 1.1 + i * 0.9) * 0.02;
+    m.scale.setScalar(1.3 + (i + 1) * 0.52 + puls);
+  });
+  camera.position.z = 2.7 - dolly;
+  camera.lookAt(0, 0, 0);
+  renderer.render(scene, camera);
+});
+
+// ---- sintonizar: el remolino se traga la cámara y amanece en la landing ----
+const velo = document.getElementById('velo');
+document.getElementById('sintonizar').addEventListener('click', () => {
+  if (lento) { location.href = 'Landing Curiana Radio.dc.html'; return; }
+  const dur = 1600, ini = performance.now();
+  const paso = now => {
+    const k = Math.min((now - ini) / dur, 1);
+    const e = 1 - Math.pow(1 - k, 3);
+    velocidad = 1 + e * 26;
+    dolly = e * 2.35;
+    if (k > 0.45) velo.style.opacity = String((k - 0.45) / 0.55);
+    if (k < 1) requestAnimationFrame(paso);
+    else location.href = 'Landing Curiana Radio.dc.html';
+  };
+  requestAnimationFrame(paso);
+});
+</script>
+</body>
+</html>
