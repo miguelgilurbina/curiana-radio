@@ -95,9 +95,20 @@ comparar el caquetío casi nunca se parece.
    experimento medible en vez de en una decisión a ciegas. Es lo más caro de
    montar y lo único que **responde** en vez de elegir.
 
-⚠️ Nota aparte sobre `bana`: está en la lista de las 23, pero hoy Esteves lo
-glosó 'cerro' sobre el topónimo Caracubana. Esa entrada puede salir de la deuda
-por la vía buena —atestación— antes que por la de la re-derivación.
+### 🔴 Y una corrección mía, al aplicar
+
+Escribí que `bana` podía salir de la deuda «por la vía buena», porque hoy
+Esteves lo glosó 'cerro' sobre Caracubana. **Es falso, y lo vi al ir a
+aplicarlo.** Son dos entradas distintas, y la decisión D9 ya las declaró
+homónimas: `bana-1` 'cerro, sitio alto' es **caquetío-atestiguado** por Zavala
+y nunca estuvo en esta deuda; el `bana` de las 23 es **'hígado'**, que sí es
+reconstruido desde el wayuu. La glosa de Esteves refuerza el primero y no toca
+al segundo. La deuda sigue siendo de 23.
+
+### Decidido
+
+**2026-09-10 — Miguel: «me parece ese reetiquetado».** Opción 1. Aplicado el
+mismo día sobre las 23 entradas: solo `notas`, ni una forma tocada.
 
 Medición: `6-fusion/scripts/medir_deuda_d11.py`. Registro:
 `6-fusion/jahn_vocabularios_comparados.yaml`.

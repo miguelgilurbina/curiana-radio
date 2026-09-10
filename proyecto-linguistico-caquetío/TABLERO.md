@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-10 18:26**.
+<!--GENERADO--> Generado el **2026-09-10 19:21**.
 
 ## ¿Vamos bien?
 
@@ -107,14 +107,14 @@ Cuántas de las 301 entradas de familia caquetía **con `notas`** citan a cada o
 
 | Obra | Entradas que la citan | % de las citadas |
 |---|---|---|
-| [[zavala-reyes-2015]] | 222 | 74% |
-| [[zavala-reyes-2018]] | 222 | 74% |
+| [[zavala-reyes-2015]] | 221 | 73% |
+| [[zavala-reyes-2018]] | 221 | 73% |
 | [[alvarado-1921]] | 16 | 5% |
-| [[oliver-1989-apendice-a]] | 14 | 5% |
-| [[oliver-1989-cap2]] | 14 | 5% |
-| [[oliver-1989-cap3-vecinos]] | 14 | 5% |
-| [[oliver-1989-cap3]] | 14 | 5% |
-| [[oliver-1989-cap4]] | 14 | 5% |
+| [[oliver-1989-apendice-a]] | 13 | 4% |
+| [[oliver-1989-cap2]] | 13 | 4% |
+| [[oliver-1989-cap3-vecinos]] | 13 | 4% |
+| [[oliver-1989-cap3]] | 13 | 4% |
+| [[oliver-1989-cap4]] | 13 | 4% |
 | [[van-buurt-2014]] | 13 | 4% |
 | [[arcaya-1920]] | 10 | 3% |
 | [[arcaya-obra-inedita-1995]] | 10 | 3% |
@@ -126,7 +126,7 @@ Cuántas de las 301 entradas de familia caquetía **con `notas`** citan a cada o
 | [[jahn-1927]] | 1 | 0% |
 | [[ballesteros-1550]] | 1 | 0% |
 
-Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas con `notas` que no citan a ninguna obra del vault: **64**.
+Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas con `notas` que no citan a ninguna obra del vault: **65**.
 
 ---
 
@@ -155,13 +155,13 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 
 | Nota | minado | prioridad | capa texto | lexicón (declarado) | lexicón (medido) | hechos corpus |
 |---|---|---|---|---|---|---|
-| [[zavala-reyes-2015]] | completo-con-reserva | alta | si | 164 | 222 | 7 |
+| [[zavala-reyes-2015]] | completo-con-reserva | alta | si | 164 | 221 | 7 |
 | [[brinton-1871]] | minado | hecha | si | 84 | 4 | 0 |
 | [[jahn-1927]] | minado | media | si | 4 | 1 | 16 |
 | [[gatschet-1885]] | minado | alta | si | 4 | 4 | 0 |
-| [[oliver-1989-cap3]] | minado | media | si | 2 | 14 | 15 |
+| [[oliver-1989-cap3]] | minado | media | si | 2 | 13 | 15 |
 | [[oviedo-y-valdes-1851]] | no-disponible | alta | no | 2 | 2 | 7 |
-| [[oliver-1989-cap2]] | minado | alta | parcial | 2 | 14 | 2 |
+| [[oliver-1989-cap2]] | minado | alta | parcial | 2 | 13 | 2 |
 | [[arcaya-1920]] | minado | media | si | 1 | 10 | 13 |
 | [[ballesteros-1550]] | segunda-mano | alta | no | 1 | 1 | 0 |
 | [[camacho-2011]] | minado | hecha | si | 0 | 0 | 16 |
@@ -199,9 +199,9 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[moron-2012-petroglifos]] | minado | alta | si | 0 | 0 | 0 |
 | [[moron-guillermo-historia-venezuela]] | no-disponible | media | no | 0 | 0 | 0 |
 | [[nueva-segovia-1579]] | no-disponible | media | no | 0 | 0 | 0 |
-| [[oliver-1989-apendice-a]] | parcial | alta | no | 0 | 14 | 0 |
-| [[oliver-1989-cap3-vecinos]] | parcial | alta | ocr-parcial | 0 | 14 | 0 |
-| [[oliver-1989-cap4]] | parcial | alta | si | 0 | 14 | 0 |
+| [[oliver-1989-apendice-a]] | parcial | alta | no | 0 | 13 | 0 |
+| [[oliver-1989-cap3-vecinos]] | parcial | alta | ocr-parcial | 0 | 13 | 0 |
+| [[oliver-1989-cap4]] | parcial | alta | si | 0 | 13 | 0 |
 | [[osm-kaketiana]] | en-curso | media | datos | 0 | 0 | 0 |
 | [[perea-alonso-1942]] | minada-parcial | alta | si | 0 | 0 | 0 |
 | [[perez-de-tolosa-1546]] | no-disponible | alta | no | 0 | 0 | 0 |
@@ -213,7 +213,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[steward-1949]] | no-disponible | baja | no | 0 | 0 | 0 |
 | [[urbina-jimenez-2007-2011]] | parcial | alta | si | 0 | 0 | 0 |
 | [[velasco-2015-resistencia]] | minado | alta | si | 0 | 0 | 0 |
-| [[zavala-reyes-2018]] | minado | alta | si | 0 | 222 | 0 |
+| [[zavala-reyes-2018]] | minado | alta | si | 0 | 221 | 0 |
 
 </details>
 
@@ -271,7 +271,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1095 en 376 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 1097 en 383 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 257 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
