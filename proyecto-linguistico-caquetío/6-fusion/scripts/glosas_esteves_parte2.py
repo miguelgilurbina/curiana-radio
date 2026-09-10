@@ -11,6 +11,10 @@ E = json.load(io.open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
 
 # la glosa va entre paréntesis al final de la entrada
 PAREN = re.compile(r"\(([^)]{3,400})\)")
+# …pero el OCR se come el paréntesis de CIERRE a veces, y ahí se perdían glosas:
+# CARACUBANA «cerro poblado de caracara» y BOROJÓ «es chibcha» caían fuera.
+# Medido 2026-09-10: seis entradas más al admitir el paréntesis huérfano.
+HUERFANO = re.compile(r"\(([^)]{3,240})$")
 
 def base(s):
     s = unicodedata.normalize("NFD", s.lower())
@@ -27,7 +31,8 @@ def fon(s):
 
 con_glosa = {}
 for n, e in E.items():
-    m = PAREN.search(e["cuerpo"])
+    _c = re.sub(r"\s+", " ", e["cuerpo"])
+    m = PAREN.search(_c) or HUERFANO.search(_c)
     if m:
         g = " ".join(m.group(1).split())
         # descartar los paréntesis que sólo son advertencias del autor

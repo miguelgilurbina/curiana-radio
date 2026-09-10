@@ -160,6 +160,13 @@
   "tipo": null,
   "glosa": "Bisure: lagarto común"
  },
+ "BOROJÓ": {
+  "cuerpo": "Población capital del municipio Borojó, Distrito Buchivacoa. / Río que pasa por esa población. (Borojó es chibcha: un árbol frutal. 90",
+  "municipio": "Borojó",
+  "distrito": "Buchivacoa",
+  "tipo": "río",
+  "glosa": "Borojó es chibcha: un árbol frutal. 90"
+ },
  "BUCHAL": {
   "cuerpo": "El Buchal, aldea del municipio Dabajuro, Distrito Buchiva- coa. (Buchal, colectivo de buche: cardo globoso, melocacto).",
   "municipio": "Dabajuro",
@@ -194,6 +201,13 @@
   "distrito": "Democracia",
   "tipo": "aldea",
   "glosa": "Diminu- tivo de Cabure"
+ },
+ "CACETAL": {
+  "cuerpo": "El Cacetal, aldea del municipio Mene de Mauroa, Distrito Mauroa. (Cacetal, colectivo de Caceto, planta herbácea, una mal- vácea.",
+  "municipio": "Mene",
+  "distrito": "Mauroa",
+  "tipo": "aldea",
+  "glosa": "Cacetal, colectivo de Caceto, planta herbácea, una mal- vácea."
  },
  "CACIMBA": {
   "cuerpo": "Manantial en el municipio Pueblo Cumarebo, Distrito Za- mora. (Cacimba: jagiey).",
@@ -306,6 +320,13 @@
   "distrito": "Federación",
   "tipo": "caserío",
   "glosa": "Cara- bobo: una palma que se conoce con distintos nombres: jipijapa, iraca, etc."
+ },
+ "CARACUBANA": {
+  "cuerpo": "Caserío del municipio Borojó, Distrito Democracia, (Caracu- bana: cerro poblado de caracara. 9% es! Artesanía miraquense. (S]",
+  "municipio": "Borojó",
+  "distrito": "Democracia",
+  "tipo": "caserío",
+  "glosa": "Caracu- bana: cerro poblado de caracara. 9% es! Artesanía miraquense. (S]"
  },
  "CARAMABURE": {
   "cuerpo": "Aldea del municipio Capatárida, Distrito Buchivacos (Cara mabure: raíz de las caramas 0 raíz de la ramazón: carama es final que ramazón),",
@@ -587,6 +608,13 @@
   "tipo": "caserío",
   "glosa": "Mirimire;, . Ácos- ta. / II - Caserío del municipio Jacura, Ácosta, / II] - : . erío del municipio Agualinda, Dto. Acosta. (Guacharaca: gallir. «ilvestre, muy ruidosa"
  },
+ "GUAGUA": {
+  "cuerpo": "Caserío del municipio Guzmán Guillermo, Distrito Miranda. (Guagua: caña arborescente de tallo cilíndrico y hueco, guasdua.",
+  "municipio": "Guzmán",
+  "distrito": "Miranda",
+  "tipo": "caserío",
+  "glosa": "Guagua: caña arborescente de tallo cilíndrico y hueco, guasdua."
+ },
  "GUAIBACOA": {
   "cuerpo": "Pueblo capital del municipio Guaibacoa, Distrito Colina. (Guaibacoa: lugar de los guays).",
   "municipio": "Guaibacoa",
@@ -601,6 +629,13 @@
   "tipo": "aldea",
   "glosa": "Gzai- mure: raíz de guay; “ure”, raíz"
  },
+ "GUAICAL": {
+  "cuerpo": "El Guaical, cerro cerca de Mirimire, Distrito Acosta. (Guat- ca, planta sarmentosa, armada de grandes espinas; su savia es medicinal para la vista.",
+  "municipio": null,
+  "distrito": "Acosta",
+  "tipo": "cerro",
+  "glosa": "Guat- ca, planta sarmentosa, armada de grandes espinas; su savia es medicinal para la vista."
+ },
  "GUAMACHO": {
   "cuerpo": "Población perteneciente al muni. (Guamacho: árbol cactáceo).",
   "municipio": null,
@@ -614,6 +649,13 @@
   "distrito": null,
   "tipo": "caserío",
   "glosa": "Gua- nábano: árbol frutal"
+ },
+ "GUARACARO": {
+  "cuerpo": "Lugar de Casicure. (Guaracaro: planta herbáccs, anual, que produce un grano alimenticio, una tapirama silvestre.",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null,
+  "glosa": "Guaracaro: planta herbáccs, anual, que produce un grano alimenticio, una tapirama silvestre."
  },
  "GUARECAL": {
   "cuerpo": "Aldea del municipio Píritu, Distrito Zamora. (Guareque, voz chaima, sapo).",

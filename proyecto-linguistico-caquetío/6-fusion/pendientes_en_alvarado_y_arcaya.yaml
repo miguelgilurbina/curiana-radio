@@ -318,3 +318,233 @@ balance:
     - 'actualizar la cobertura de la nota de Arcaya: el capítulo geográfico ya no es hueco'
     - 'censo de reduplicaciones de Falcón: van seis'
     - 'censo de `-ima`: Araurima, Guaidima, y los que salgan'
+
+# ══════════════════════════════════════════════════════════════════════
+# IV. SEGUNDA VUELTA — los 41 restantes contra las 29 fuentes extraídas
+# ══════════════════════════════════════════════════════════════════════
+segunda_vuelta:
+  metodo: >-
+    Ya con la lección aprendida, el cruce se hizo contra TODO el texto que el
+    repo tiene extraído: 13 `.txt` en `fuentes_caquetios/` más 16 extracciones
+    de trabajo. 29 de los 41 aparecen en alguna. Lo que sigue es solo lo que
+    aporta glosa, referente o filiación — no la mera mención.
+
+  # ── lo que más pesa ──────────────────────────────────────────────
+  tres_toponimos_que_SON_una_voz_atestiguada:
+    de_donde: 'Zavala Reyes 2015, el glosario que ya es canon del proyecto'
+    por_que_no_se_habia_visto: >-
+      Porque el lexicón las tiene como PALABRAS y nadie las había cruzado con
+      la lista de NOMBRES DE LUGAR. La voz estaba dentro, el topónimo fuera, y
+      entre las dos no había puente. Ese puente es justo el trabajo de la
+      campaña.
+    casos:
+      - forma: Usera
+        entrada: 'Zavala #275 (AM): «seco, arenoso»'
+        sigla: 'AM = Angulo Molina — independiente de Esteves y de Arcaya'
+        referente: 'Aldea del municipio Sucre, Distrito Bolívar (Esteves, Parte II)'
+        lectura: >-
+          ⭐⭐⭐ Coincidencia EXACTA, sin afijo que despejar: el topónimo es la
+          palabra. Y la glosa describe el terreno de media Paraguaná. De los
+          casos más limpios que ha dado la campaña.
+        nivel_propuesto: 'A — ecuación bilingüe completa, fuente independiente del gazetteer'
+      - forma: Tarica
+        entrada: 'Zavala #242 (AM): «laguna»'
+        sigla: 'AM = Angulo Molina'
+        referente: '⚠️ NO aparece en Esteves Parte II. Referente por confirmar'
+        lectura: >-
+          ⭐⭐ También exacta. Estaba entre los que no tenían NADA —ni glosa, ni
+          web, ni mención en Esteves— y resulta ser una voz del canon. Falta
+          el referente: sin él no se puede comprobar que la laguna exista.
+        nivel_propuesto: 'B hasta que aparezca el referente; A si el sitio es o fue laguna'
+      - forma: Chipare
+        entrada: 'Zavala #82 (E): «matapalo»'
+        conflicto: >-
+          ⚠️⚠️ DOS glosas para la misma forma, y las dos citables:
+          (1) `chipare` = 'matapalo' — Zavala #82, sigla **E = Juan Esteves**.
+          (2) `chipare`/`cipa` = 'piedra' — Arcaya 1920 p. 36, por la raíz
+              arahuaca `ipa`/`iba`, ya recogido en `3-mundo/etnias.yaml` al
+              explicar el etnónimo CHIPARAGOTO.
+        la_independencia: >-
+          🔴 Cuidado con contarlas como dos apoyos: la glosa 'matapalo' viene
+          de ESTEVES, que es la misma fuente del gazetteer de topónimos. No
+          corrobora, transmite. La de Arcaya sí es independiente.
+        lectura: >-
+          No se decide aquí. Se declara el conflicto y se levanta: si
+          Chiparagoto es 'gente de la piedra', el topónimo Chipare debería
+          serlo también, y entonces la de Zavala es una glosa de otra cosa que
+          comparte forma.
+
+  # ── y una glosa que el extractor había perdido ───────────────────
+  la_glosa_que_el_OCR_se_comio:
+    forma: Caracubana
+    entrada_verbatim: >-
+      «CARACUBANA. Caserío del municipio Borojó, Distrito Democracia.
+      (Caracubana: CERRO POBLADO DE CARACARA)».
+    por_que_estaba_perdida: >-
+      El extractor de glosas de la Parte II busca el paréntesis final de cada
+      entrada. Aquí el OCR partió la palabra —«(Caracu- bana: …»— y metió ruido
+      detrás («9% es!»), así que la entrada cayó del lado de «sin glosa». Salió
+      al leer las entradas a mano.
+    lo_que_cierra:
+      - >-
+        ⭐⭐⭐ `-bana` = **'cerro'**, dicho por Esteves sin rodeos. Es el TERCER
+        apoyo que aparece HOY para D9, después de Carirubana («bana: sitio
+        alto», etimología popular) y del `u-banna` de Perea. Y este es el más
+        fuerte de los tres, porque es el autor del gazetteer glosando su propio
+        material.
+      - >-
+        ⭐ Ata **Caracara**, que está aparte en la lista de Miguel, como el ave
+        que puebla el cerro. Los dos nombres son el mismo hecho visto dos veces.
+    aviso: 'verificar en la IMAGEN — esta entrada es justo la que el OCR maltrató'
+    accion: 'repasar a mano TODAS las entradas que el extractor dio por «sin glosa»: puede haber más'
+
+  # ── afijos ───────────────────────────────────────────────────────
+  el_diminutivo_iro:
+    entrada: >-
+      «COROQUIDIRO. Aldea del municipio Capatárida, Distrito Buchivacoa. (…
+      conocemos la desinencia "IRO", QUE ES DIMINUTIVO)».
+    lo_que_confirma: >-
+      ⭐⭐ `-iro` es uno de los seis afijos atestiguados de REGLAS_ZAVALA, donde
+      entró como diminutivo por Zavala. Aquí lo declara Esteves, y sobre un
+      topónimo. Segundo apoyo, y de otra fuente.
+    y_la_serie: >-
+      Arcaya lista «coro, corocoro, corocorote, COROQUI, COROQUIDE,
+      COROQUIDIRO…». Con el diminutivo declarado, la serie se lee sola:
+      Coroquide → Coroquidiro, 'el Coroquide pequeño'. Es una derivación
+      interna al caquetío documentada en dos fuentes.
+
+  # ── referentes que salen de Esteves aunque no glose ─────────────
+  referentes_de_la_parte_II:
+    - {forma: Aracua,     referente: 'población capital del municipio Aracua, Distrito Bolívar'}
+    - {forma: Capana,     referente: 'Punta Capana, sitio costeño, en la desembocadura del río Borojó'}
+    - {forma: Cueparo,    referente: 'aldea del municipio Jacura, Distrito Acosta'}
+    - {forma: Cururupare, referente: 'caserío del municipio Piedra Grande'}
+    - {forma: Omomo,      referente: 'caserío del municipio Casigua, Distrito Mauroa'}
+    - {forma: Turamaco,   referente: 'caserío del municipio Mitare, Distrito Miranda'}
+    - {forma: Usera,      referente: 'aldea del municipio Sucre, Distrito Bolívar'}
+    - forma: Sauca
+      referente: 'puerto y pueblo al norte de Píritu, Distrito Zamora'
+      dato_economico: >-
+        ⭐ «HAY SALINAS». Es dato de comercio, de la misma clase que el curubo
+        para la cal: la sal es la mercancía que el canon ya reconoce en Borojó
+        («salina de Coro, comercio de la sal», Zavala #44). Y Zavala #237 da
+        `taques` (AM) = 'salina'. Sauca entra en el mapa económico.
+    - forma: Tacamire
+      referente: 'cerro, pueblo y río al sureste de Agualinda, Distrito Acosta'
+      lead: >-
+        ⭐ Termina en `-mire`, como MIRIMIRE. Si la intuición de Miguel sobre
+        `miri` va a comprobarse alguna vez, Tacamire es el segundo sitio donde
+        mirar: dos nombres con el mismo final en el mismo distrito no son
+        casualidad barata. NO es apoyo todavía — es dónde buscar.
+
+  # ── filiación étnica: lo que Miguel pidió sobre el achagua ──────
+  el_achagua_en_falcon:
+    fuente: 'Jahn 1927, Aborígenes del Occidente de Venezuela'
+    cita: >-
+      «Afines de los caquetíos, y como estos pertenecientes a la gran familia
+      aruaca, eran los indios XAGUAS, AJAGUAS o ACHAGUAS que poblaban las
+      SABANAS DE CARORA HASTA PEDREGAL EN EL ESTADO FALCÓN, colindando por el
+      este y norte con los gayones, jirajaras y caquetíos, y que se extendían
+      al oeste hasta la sierra de Ciruma o Empalado […]. Estos xaguas son
+      IDÉNTICOS CON LOS ACHAGUAS de la región del [Meta]».
+    por_que_importa: >-
+      ⭐⭐⭐ Miguel pidió mirar el achagua «que tiene relación directa con los
+      caquetíos». Esto es más que una relación: Jahn los pone de VECINOS
+      DIRECTOS, en suelo de Falcón, hasta Pedregal, y los declara la misma
+      gente que los achaguas del Meta — que son los que tienen diccionario
+      (Neira y Ribero 1762). El puente entre el caquetío y una lengua arahuaca
+      bien documentada tiene, por fin, un anclaje geográfico citado.
+    y_el_otro_apoyo: >-
+      Arcaya coincide desde otro ángulo: «los jirajaras y AJAGUAS […] se habían
+      formado con ellos pequeños grupos en Cariagua, Mapiare, Siburúa,
+      Utaquire, Acurigua, Quiragua». Dato colonial de reducción, pero la misma
+      grafía y la misma comarca.
+    y_una_tercera_voz: >-
+      Jahn también dice que las tierras «pobres» de Barquisimeto y Carora
+      estaban «ocupadas por CAQUETÍOS, GAYONES Y XAGUAS» — que es exactamente
+      lo que Miguel señaló de Oliver sobre Barquisimeto y Yaracuy. Tres
+      fuentes diciendo lo mismo.
+    lo_que_NO_autoriza: >-
+      ⚠️ Vecindad y parentesco de familia NO son licencia para traspasar léxico
+      achagua al caquetío. Es el argumento para PEDIR la fuente achagua
+      (Meléndez, o Neira y Ribero), no para dar cognados por buenos.
+
+  # ── otros hallazgos ──────────────────────────────────────────────
+  otros:
+    - forma: Sarinao
+      fuente: 'Oliver 1989, cap. 3, fig. 43'
+      cita: >-
+        «Pola Urbina, of the caserío of SARINAO IN PARAGUANÁ, showing the
+        author how she adds a clay layer of reinforcement to the bottom of her
+        globular olla and pressing the reinforcement with a TUZA (corn cob),
+        leaving negative cupule».
+      lo_que_da: >-
+        ⭐ Referente confirmado —caserío de Paraguaná— y de regalo un dato de
+        oficio: la técnica alfarera con tuza, fotografiada en 1982. Esfera de
+        transmisión del saber, no solo topónimo.
+    - forma: Aracua
+      fuente: 'Oliver 1989, cap. 3'
+      cita: >-
+        «between the first jirajara village (Quiragua?) in San Luis and the
+        village of Hittoua, located S.E. of Churuguara, Federmann had traveled
+        for five days, crossing the Cruz de Tara-Tara valley, and ACROSS ARACUA.
+        South of this village there was a NO-MAN'S-LAND buffer zone».
+      lo_que_da: >-
+        ⭐ Aracua está en la ruta de Federmann de 1530, en territorio jirajara,
+        y justo al norte de una tierra de nadie. Es geografía política, no
+        etimología — pero sitúa el nombre en el siglo XVI.
+    - forma: Caracara
+      fuentes_dos:
+        - >-
+          van Buurt 2014: `warawara` (a, c, b) = «the crested caracara (Caracara
+          cheriway syn. Polyborus plancus)». En papiamentu/aruba el ave se llama
+          WARAWARA, no caracara: la forma `caracara` es la castellana.
+        - >-
+          Castellanos, Elegías: «ansimismo provee de harina otra raíz que llaman
+          CARACARA, la cual muelen en cueros de venados en hoyos muy tupidos y
+          pisados».
+      lectura: >-
+        ⚠️ Dos referentes distintos para la misma forma: un ave rapaz y una raíz
+        comestible que se muele para harina. La glosa de Esteves para
+        Caracubana —«cerro poblado de caracara»— encaja mejor con el AVE.
+        Se declaran las dos y no se elige.
+    - forma: Guacoa
+      hallazgo: >-
+        ⭐⭐ van Buurt 2014: «warwacowa, warwacoha, warbacoa (a, b), barbacoa (a)
+        — the bare-eyed pigeon (Columba corensis), CAQUETÍO WAKOA, LOKONO
+        WAKOKWA. Warwacoha is the original form; this has later corrupted into
+        barbacoa».
+      por_que_importa: >-
+        No es de la lista de Miguel, pero cierra un triángulo que la campaña
+        abrió esta semana: Esteves Parte II glosa GUACOA «ave de cacería;
+        Columba corensis»; el lexicón la tiene por Hernández Baño; y van Buurt
+        da el caquetío `wakoa` CON EL MISMO TAXÓN y el cognado lokono
+        `wakokwa`. Tres fuentes, un taxón, y un cognado arahuaco.
+
+  # ── los ceros, que también se declaran ───────────────────────────
+  negativos_medidos:
+    - >-
+      ARAURE: la única mención en el repo es «San Antonio de Araure in
+      Acarigua» (Oliver, misiones de 1671-1745) — el de Portuguesa, no el de
+      Miguel. El suyo sigue sin referente.
+    - >-
+      GUAY: la entrada de Esteves cae en una página de índice que el OCR
+      destroza; y la aparición en Perea es una ficha bibliográfica («Figueira,
+      Guay, Montevideo 1892»). Ninguna de las dos sirve. Hay que ir a la imagen.
+    - >-
+      PURE / SAMARIA / VIANA / TUQUE / SAUCA / CAPANA: aparecen mucho pero como
+      palabra corriente en inglés o castellano, o como apellido. El filtro las
+      marca ⚠ ruidosas y no se cuentan.
+    - >-
+      Sin rastro en NINGUNA de las 29 fuentes: Bariquis, Borobo, Botucare,
+      Caduto, Davaduvare, Jacure, Murucusa, Origuasa, Quisiro, Sividigua,
+      Tarama, Tibana. Doce nombres que solo existen porque Miguel los sabe.
+      ⚠️ Y eso mide el alcance del repo, no su existencia (regla 6): tres veces
+      esta semana un cero se convirtió en dato al abrir otra fuente.
+
+  deuda_que_deja:
+    - 'repasar a mano las entradas de la Parte II que el extractor dio por «sin glosa»: Caracubana demuestra que hay glosas ahí'
+    - 'el referente de Tarica: sin él la ecuación no se puede comprobar'
+    - 'resolver el conflicto chipare = matapalo (Esteves) vs. piedra (Arcaya)'
+    - 'pedir la fuente achagua: ahora hay argumento geográfico citado para justificarlo'
+    - 'Tacamire y Mirimire: el final `-mire` merece censo'

@@ -434,3 +434,63 @@ otras_glosas_de_esta_pasada:
   - "MORROCOY: «quelónido»"
   - "CALEMBE: «voz africana o africanizada» — descarte con razón declarada, como Tapatapa"
   - "MANAURE: «Cerro donde nace el río Ricoa» ⭐ el nombre del cacique mayor del canon, como orónimo. Dato para la esfera, no glosa."
+
+# ══════════════════════════════════════════════════════════════════════
+# CUARTA PASADA — las glosas que el extractor perdía
+# ══════════════════════════════════════════════════════════════════════
+glosas_recuperadas_2026_09_10:
+  el_bug: >-
+    El extractor buscaba la glosa entre paréntesis, `\(...\)`. Pero el OCR se
+    come el paréntesis de CIERRE en algunas entradas, y esas caían del lado de
+    «sin glosa». Se descubrió leyendo CARACUBANA a mano.
+  la_medicion: 'seis entradas más al admitir el paréntesis huérfano: 139 → 145 glosas'
+  arreglado_en: '6-fusion/scripts/glosas_esteves_parte2.py'
+
+  lo_que_devolvio:
+
+    - forma: Caracubana
+      glosa: '«Caracubana: CERRO POBLADO DE CARACARA»'
+      peso: >-
+        ⭐⭐⭐ La más importante de las seis. `-bana` = 'cerro', declarado por el
+        propio Esteves sobre un topónimo. Tercer apoyo de D9 aparecido hoy, y
+        el más fuerte de los tres. Y ata CARACARA, que Miguel dictó aparte.
+
+    - forma: Borojó
+      glosa: '«BOROJÓ ES CHIBCHA: un árbol frutal»'
+      peso: >-
+        ⭐⭐ Declaración de FILIACIÓN, y choca de frente con el canon.
+      el_conflicto: >-
+        🔴 El lexicón tiene `borojo` como **caquetío-atestiguado**, «salina,
+        lago salado de Coro», por Zavala #44 (AM) «Salina de Coro, comercio de
+        la sal». Esteves dice que es CHIBCHA y que es un ÁRBOL FRUTAL. No
+        coinciden ni en la lengua ni en el referente.
+      como_se_lee: >-
+        No se toca la entrada. Se anota la evidencia y se levanta issue, que es
+        lo que manda el protocolo cuando una fuente contradice al lexicón.
+        Nótese que hay una lectura que salva las dos: el ÁRBOL da nombre al
+        sitio y el SITIO es donde está la salina — pero eso es conjetura mía,
+        no dato, y la filiación chibcha seguiría en pie.
+      y_ademas: >-
+        Si Esteves acierta, `borojo` deja de ser voz caquetía y sale de la capa
+        atestiguada. Es de las pocas veces que una minería puede QUITAR del
+        lexicón en vez de añadir. Con más razón: verificar en la imagen.
+
+    - forma: Cacetal
+      glosa: '«CACETAL, colectivo de CACETO, planta herbácea, una MALVÁCEA»'
+      peso: >-
+        ⭐ Añade la FAMILIA BOTÁNICA a `caseto`/`caceto`, que el lexicón tiene
+        como 'planta herbácea' y Medina dictó como arbusto sin utilidad. Con la
+        web —«planta medicinal y aromática»— ya son tres descripciones. Las
+        malváceas son mucilaginosas y de uso medicinal corriente: la web y
+        Esteves se apoyan, y Medina discrepa.
+      y_la_grafia: 'CACETO con c- confirma la alternancia con CASETO; el lexicón lema por `kaseto`'
+
+    - {forma: Guagua,    glosa: '«caña arborescente de tallo cilíndrico y hueco, guadua»'}
+    - {forma: Guaical,   glosa: '«GUAICA, planta sarmentosa, armada de grandes espinas; su savia es medicinal para la vista»'}
+    - {forma: Guaracaro, glosa: '«planta herbácea, anual, que produce un grano alimenticio, una TAPIRAMA silvestre»'}
+
+  aviso_general: >-
+    ⚠️ Las seis salen justo de entradas donde el OCR falló —por eso se
+    perdieron—. Ninguna se cita fuera de este archivo sin verla en la imagen.
+    En CARACUBANA el OCR lee «Caracu- bana» partido y mete «9% es!» detrás; en
+    GUAICAL lee «Guat-ca».
