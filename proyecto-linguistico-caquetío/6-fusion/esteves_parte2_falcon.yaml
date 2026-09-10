@@ -306,3 +306,57 @@ cruce_con_el_dictado_de_medina:
     que es el `memerea` del dictado con otra terminación: el cruce por forma
     exacta la pierde. Cuando una voz del dictado no aparezca, hay que mirar
     también su vecindad fonética antes de dar el cero por bueno.
+
+# ══════════════════════════════════════════════════════════════════════
+# TERCERA PASADA — lo que salió buscando Mirimire
+# ══════════════════════════════════════════════════════════════════════
+mirimire:
+  entrada_completa: >-
+    «MIRIMIRE. I - Población capital del municipio San Francisco, Distrito
+    Acosta. / II - Mirimirito, aldea del municipio San Francisco (Mirimire). /
+    III - La Guacharaca de Mirimire, aldea de Mirimire». (p. impresa 123)
+  veredicto: >-
+    SIN GLOSA. Esteves lo registra con sus tres referentes y no le da
+    etimología ni paréntesis — como hizo con Jayana en la Parte I. En la
+    escala de la campaña es `descartado`: no porque el nombre no sea indígena,
+    sino porque no hay ecuación bilingüe que despejar.
+  lo_unico_que_se_puede_decir: >-
+    Es una REDUPLICACIÓN: miri-miri. Y eso no es especulación, porque el propio
+    Esteves documenta el recurso en la misma Parte II al glosar BARABARA
+    «que es plural por duplicación». Con Taratara, Tapatapa y Chichiriviche
+    (chi-chi) son cinco nombres reduplicados en el estado.
+  accion_propuesta: >-
+    Censar las reduplicaciones de Falcón como se hizo con `-ana` en #109. Si
+    Esteves declara que la duplicación es plural en un caso, la pregunta es si
+    lo es en todos — y eso se mide, no se supone.
+
+# ⭐⭐ EL HALLAZGO QUE VALE MÁS QUE MIRIMIRE
+el_sufijo_ure:
+  entrada: >-
+    «GUAIMURE. Aldea del municipio Capatárida, Distrito Buchivacoa.
+    (Guaimure: raíz de guay; "ure", raíz)». (p. impresa 112)
+  por_que_importa: >-
+    ⭐⭐ Resuelve de dónde sale una glosa que el proyecto tenía EN DISPUTA. La
+    nota de morfemas dice: «van Buurt §5 recoge `-ure` (papiamentu -huri/-uri)
+    glosado 'raíz' por Cruz Esteves 1989, y lo declara equivalente al `-ure`
+    continental. La evidencia toponímica dice 'sitio de'. Glosa en disputa».
+    Pues aquí está la fuente de van Buurt, de primera mano y con su ejemplo:
+    Esteves glosa `-ure` = 'raíz' y lo despeja sobre `guay`, voz atestiguada.
+  lo_que_cambia: >-
+    No cambia el veredicto —morfema-002 tiene cinco topónimos que dicen 'sitio
+    de'— pero cambia el ESTADO de la disputa: ya no es «van Buurt cita a
+    Esteves» de oídas, es la página de Esteves con su ejemplo delante. La
+    disputa `-are`/`-ure` se puede reabrir con material, no con referencias.
+  aviso: 'verificar en la imagen: el OCR lee «Gzaimure» y «Guat-ca» en la misma página'
+
+otras_glosas_de_esta_pasada:
+  - "CUBE / CUDE: «ente sobrenatural, fantasma» — es la misma voz que el CUME de la pasada anterior; tres grafías del mismo ser. Esfera de CREENCIA."
+  - "GUACOA: «ave de cacería; columba corensis» ⭐ el lexicón la tiene como 'paloma' por Hernández Baño y Medina la dicta como paloma silvestre casi extinta: aquí llega el TAXÓN y el dato de que era pieza de caza."
+  - "ARAGUATA: «abeja peluda del color del mono araguato, pelo rojo oscuro. De ahí la homonimia» ⭐ otra abeja para el racimo de la miel, y con la homonimia declarada por el autor."
+  - "GUACHARACA: «gallina silvestre, muy ruidosa»"
+  - "MACANILLA: «palmera de la que se extrae fibra para tejer HAMACAS» — oficio"
+  - "GUAICA: «planta sarmentosa, armada de grandes espinas; su savia es medicinal para la vista» — flora medicinal"
+  - "GUAGUA: «caña arborescente de tallo cilíndrico y hueco, guadua»"
+  - "MORROCOY: «quelónido»"
+  - "CALEMBE: «voz africana o africanizada» — descarte con razón declarada, como Tapatapa"
+  - "MANAURE: «Cerro donde nace el río Ricoa» ⭐ el nombre del cacique mayor del canon, como orónimo. Dato para la esfera, no glosa."
