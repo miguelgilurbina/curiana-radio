@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-10**.
 
-**2094 ítems propuestos** en 41 propuestas, más **5 issue(s)/comentario(s) redactados sin publicar**.
+**2101 ítems propuestos** en 42 propuestas, más **5 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -59,6 +59,7 @@ editar_a_mano: no
 | `toponimia_paraguana_miguel.yaml` | ? | 5 |  |
 | `toponimos_esteves_indice.yaml` | esteves-1989 | 130 |  |
 | `velasco_primarios_agi.yaml` | velasco-2015-resistencia | 4 |  |
+| `voces_de_miguel_2026-09-10.yaml` | ? | 7 |  |
 
 Vistas generadas en `6-fusion/` (no cuentan: juntan lo que ya está arriba):
 
