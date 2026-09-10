@@ -7504,8 +7504,41 @@ def _muestra_ponderada(opciones, n, pesos):
     return sorted(opciones, key=clave, reverse=True)[:n]
 
 
+# ── Capa epistémica de una entrada, para los perfiles de run ──────────
+# Ver 5-experimento/perfiles_de_run.yaml y curiana_sim/curiana_perfiles.py.
+# Un perfil declara qué capas VEN los agentes; esto dice a cuál pertenece
+# cada entrada. Se resuelve sobre el `fuente` crudo y no sobre la categoría
+# normalizada, porque la normalización manda todas las caquetías al mismo
+# saco — que es justo lo que aquí hay que distinguir.
+_CAPA_POR_SUFIJO = (
+    ("retroabstraido", "caquetío-retroabstraido"),
+    ("retro-abstraido", "caquetío-retroabstraido"),
+    ("hipotético", "caquetío-hipotético"),
+    ("hipotetico", "caquetío-hipotético"),
+    ("reconstruido", "caquetío-reconstruido"),
+    ("atestiguado", "caquetío-atestiguado"),
+)
+
+
+def capa_epistemica(fuente: str) -> Optional[str]:
+    """La capa de una entrada caquetía, o None si no es caquetía.
+
+    `caquetío` a secas se trata como atestiguado: son seis entradas viejas
+    sin precisar, y degradarlas a hipotético sería inventar una duda que
+    nadie declaró.
+    """
+    f = (fuente or "").lower()
+    if "caquetio" not in f and "caquetío" not in f:
+        return None
+    for marca, capa in _CAPA_POR_SUFIJO:
+        if marca in f:
+            return capa
+    return "caquetío-atestiguado"
+
+
 def muestra_caquetio_dinamica(n_por_categoria: int = 18, contexto: str = "",
-                              pesos: "Optional[dict]" = None) -> str:
+                              pesos: "Optional[dict]" = None,
+                              capas: "Optional[frozenset]" = None) -> str:
     """
     Muestra rotativa de vocabulario caquetío (atestiguado + reconstruido),
     agrupada por categoría semántica. Si se pasa `contexto` (evento del
@@ -7519,16 +7552,27 @@ def muestra_caquetio_dinamica(n_por_categoria: int = 18, contexto: str = "",
     (las formas que la comunidad usa más se muestran más → se afianzan). Es el
     muestreo rich-get-richer del diseño koiné.
 
-    Solo entran palabras normalizadas a la familia "caquetío" (incluye
-    caquetío-atestiguado y caquetío-reconstruido) — wayunaiki/lokono/taíno
-    quedan fuera de esta muestra a propósito: son de respaldo, no la
-    prioridad.
+    Solo entran palabras normalizadas a la familia "caquetío" —
+    wayunaiki/lokono/taíno quedan fuera a propósito: son comparanda, no la
+    lengua del hablante.
+
+    `capas` (opcional): el conjunto de capas epistémicas del perfil de run
+    activo (ver curiana_sim/curiana_perfiles.py). Si se pasa, sólo entran las
+    entradas de esas capas — así un brazo `atestiguado` no ve lo reconstruido
+    y uno `suelto` sí ve lo retro-abstraído. Si es None, entran todas las
+    caquetías, que es como se corrió la era 1.
+
+    ⚠️ Esto cambia lo que el agente VE, no lo que se le PUNTÚA: el score
+    cuenta siempre contra todas las capas, o la diferencia entre brazos sería
+    un artefacto del instrumento.
     """
     from curiana_database import normalize_source_language
 
     por_categoria: dict[str, list[tuple[str, str]]] = {}
     for palabra, datos in VOCABULARIO_BASE.items():
         if normalize_source_language(datos.get("fuente", "")) != "caquetío":
+            continue
+        if capas is not None and capa_epistemica(datos.get("fuente", "")) not in capas:
             continue
         cat = datos.get("categoria") or datos.get("cat") or "otros"
         sig = datos.get("sig") or datos.get("es") or ""
@@ -7559,7 +7603,8 @@ def muestra_caquetio_dinamica(n_por_categoria: int = 18, contexto: str = "",
 
 
 def vocabulario_para_agente(tier: int, lexico: "LexicoComunitario", contexto: str = "",
-                            pesos: "Optional[dict]" = None) -> str:
+                            pesos: "Optional[dict]" = None,
+                            capas: "Optional[frozenset]" = None) -> str:
     """
     Genera el bloque de léxico + reglas apropiado para cada tier.
     Tier I: completo con identidad nativa. Tier II: breve. Tier III: solo sufijos.
@@ -7590,7 +7635,8 @@ def vocabulario_para_agente(tier: int, lexico: "LexicoComunitario", contexto: st
     partes = [base]
     if tier <= 2:
         muestra = muestra_caquetio_dinamica(
-            n_por_categoria=20 if tier == 1 else 12, contexto=contexto, pesos=pesos
+            n_por_categoria=20 if tier == 1 else 12, contexto=contexto,
+            pesos=pesos, capas=capas
         )
         if muestra:
             partes.append(muestra)

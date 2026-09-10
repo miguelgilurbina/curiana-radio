@@ -1,0 +1,87 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PERFILES DE RUN — los parámetros de cada simulación, declarados.
+#
+# Diseño: 5-experimento/disenos/05_perfiles_de_run.md
+# Cargador: curiana_sim/curiana_perfiles.py
+# Uso:      python curiana_orchestrator_v2.py --auto 30 --perfil suelto
+#
+# El perfil RESUELTO (no su nombre) se escribe entero en
+# `simulation_runs.config`, para que un run de hace seis meses siga diciendo
+# con qué se corrió aunque el perfil haya cambiado después.
+#
+# DOS EJES ORTOGONALES, y no se mezclan:
+#   A. `capas_lexicas` — qué lengua VEN los agentes.
+#   B. `andamiaje`     — cuánta inyección de convergencia hay (lo de --ablacion).
+# Se pueden cruzar: un `suelto` con andamiaje y otro sin él son dos
+# experimentos distintos.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  version: 1
+  fecha: '2026-09-10'
+
+# 🔴 FIJO EN TODOS LOS PERFILES. Contra qué se PUNTÚA, que no es lo mismo que
+# qué entra al prompt. Si el score se moviera con el perfil, la diferencia
+# entre brazos sería un artefacto del instrumento y no del habla — la lección
+# de la fase 1: «el instrumento medía en parte a sus autores».
+capas_de_score:
+  - caquetío-atestiguado
+  - caquetío-reconstruido
+  - caquetío-hipotético
+  - caquetío-retroabstraido
+
+perfiles:
+
+  base:
+    descripcion: >-
+      Como se corrió la era 1. La línea de comparación con todo lo publicado.
+    capas_lexicas: [caquetío-atestiguado, caquetío-reconstruido, caquetío-hipotético]
+    andamiaje: completo
+    pregunta: '¿Qué hace la comunidad con el lexicón tal como está hoy?'
+
+  atestiguado:
+    descripcion: >-
+      El brazo duro: sólo lo que una fuente colonial o toponímica sostiene.
+      Nada reconstruido, nada intuido.
+    capas_lexicas: [caquetío-atestiguado]
+    andamiaje: completo
+    pregunta: '¿Alcanza el caquetío que podemos PROBAR para que una comunidad hable?'
+
+  suelto:
+    descripcion: >-
+      El brazo de la coloquialidad. Suma lo que la tradición oral sostiene
+      aunque no podamos atestiguarlo como caquetío — el dictado de Medina.
+    capas_lexicas: [caquetío-atestiguado, caquetío-reconstruido,
+                    caquetío-hipotético, caquetío-retroabstraido]
+    andamiaje: completo
+    pregunta: >-
+      ¿Qué cambia al añadir lo que sólo sostiene la tradición oral? La
+      diferencia con `base` es la medida del aporte de Medina Colina al habla.
+
+  control:
+    descripcion: >-
+      Ablación: `base` sin las inyecciones que empujan la convergencia
+      (sugerencias de contagio, competencias abiertas, muestreo ponderado).
+    capas_lexicas: [caquetío-atestiguado, caquetío-reconstruido, caquetío-hipotético]
+    andamiaje: ninguno
+    pregunta: '¿Cuánta convergencia es emergente y cuánta la induce el andamiaje?'
+
+  suelto-control:
+    descripcion: 'El cruce: la coloquialidad sin andamiaje.'
+    capas_lexicas: [caquetío-atestiguado, caquetío-reconstruido,
+                    caquetío-hipotético, caquetío-retroabstraido]
+    andamiaje: ninguno
+    pregunta: >-
+      ¿Las voces retro-abstraídas se contagian solas, o sólo cuando el
+      andamiaje las empuja?
+
+# Las capas que existen hoy en el lexicón, con lo que significa cada una.
+# `curiana_perfiles.py` comprueba que un perfil no pida una capa inexistente.
+capas_conocidas:
+  caquetío-atestiguado: 'una fuente colonial, toponímica o de campo lo sostiene'
+  caquetío-reconstruido: 'derivado por regla desde una lengua hermana (método comparativo)'
+  caquetío-hipotético: 'la FORMA se propuso; no está documentada'
+  caquetío-retroabstraido: >-
+    la palabra existe y está documentada en boca viva; lo incierto no es la
+    forma sino el SUSTRATO — si viene del caquetío. Es la marca del dictado
+    de Medina Colina (protocolo 02, §5).
+  caquetío: 'etiqueta antigua sin precisar; se trata como atestiguado'

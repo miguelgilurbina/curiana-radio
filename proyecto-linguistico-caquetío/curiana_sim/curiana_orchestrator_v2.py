@@ -190,6 +190,7 @@ def call_agent(
     competencia: Optional["CompetenciaLexica"] = None,
     campo: Optional[CampoLexico] = None,
     ablacion: bool = False,
+    capas: Optional[frozenset] = None,
 ) -> str:
     agent = ALL_AGENTS.get(agent_name)
     if not agent:
@@ -227,7 +228,7 @@ def call_agent(
     contexto_turno = f"{world_context} {ubicacion} {user_message}"
     pesos_campo = campo.pesos if (campo is not None and not ablacion) else None
     bloque_lexico = vocabulario_para_agente(
-        tier, lexico, contexto=contexto_turno, pesos=pesos_campo
+        tier, lexico, contexto=contexto_turno, pesos=pesos_campo, capas=capas
     )
 
     # Feedback lingüístico si el agente tuvo score bajo
@@ -390,6 +391,7 @@ def run_turn(
     competencia: Optional[CompetenciaLexica] = None,
     naming_referente: Optional[dict] = None,
     ablacion: bool = False,
+    capas: Optional[frozenset] = None,
     db_fallos: Optional[Counter] = None,
 ) -> list[dict]:
     interactions = []
@@ -490,7 +492,7 @@ def run_turn(
         response = call_agent(
             client, agent_name, state, lexico, observer, stimulus, mem,
             difusion=difusion, idiolectos=idiolectos, competencia=competencia,
-            campo=campo, ablacion=ablacion,
+            campo=campo, ablacion=ablacion, capas=capas,
         )
 
         interactions.append({
@@ -788,6 +790,7 @@ def auto_mode(
     verbose: bool = True,
     perfiles: bool = False,
     ablacion: bool = False,
+    perfil: Optional["Perfil"] = None,
 ):
     """
     Corre N turnos automáticamente.
@@ -839,10 +842,24 @@ def auto_mode(
     print(f"  base: {resumen_huella(_h)}")
     if _h.get("motor_sucio"):
         print("  ⚠ árbol sucio: este run NO será citable (ver huella_de_base.py)")
+
+    # El PERFIL manda sobre los flags sueltos: si viene uno, su `andamiaje`
+    # decide la ablación, y sus capas deciden qué lengua ven los agentes. El
+    # perfil RESUELTO se guarda entero en config —no su nombre— para que este
+    # run siga diciendo con qué se corrió aunque el perfil cambie después.
+    # Ver 5-experimento/disenos/05_perfiles_de_run.md.
+    if perfil is None:
+        from curiana_perfiles import cargar_perfil
+        perfil = cargar_perfil()
+    ablacion = perfil.ablacion
+    capas = perfil.capas
+    print(f"  perfil: {perfil.nombre} — {len(capas)} capa(s) léxica(s), "
+          f"andamiaje {perfil.andamiaje}")
+
     run_id = db.create_run(
         model=MODEL,
-        config={"max_turns": turnos, "mode": "auto", "ablacion": ablacion,
-                **_h},
+        config={"max_turns": turnos, "mode": "auto",
+                **perfil.como_config(), **_h},
     )
     # Re-crear cliente con run_id para que LangSmith use el proyecto correcto
     client = get_client(run_id)
@@ -870,7 +887,7 @@ def auto_mode(
             verbose=verbose, db=db, run_id=run_id,
             difusion=difusion, idiolectos=idiolectos, campo=campo,
             competencia=competencia, naming_referente=naming_referente,
-            ablacion=ablacion, db_fallos=db_fallos,
+            ablacion=ablacion, capas=capas, db_fallos=db_fallos,
         )
         participantes.update(i["agent"] for i in interactions)
 
@@ -1032,6 +1049,18 @@ if __name__ == "__main__":
              "frases célebres) vía el Observer y guardarlos en Supabase."
     )
     parser.add_argument(
+        "--perfil", type=str, default=None,
+        help="Perfil de run declarado en 5-experimento/perfiles_de_run.yaml "
+             "(base, atestiguado, suelto, control, suelto-control). Define qué "
+             "capas del lexicón ven los agentes y si hay andamiaje de "
+             "convergencia. Se guarda resuelto en simulation_runs.config. "
+             "Sin él se usa `base`, que es como se corrió la era 1."
+    )
+    parser.add_argument(
+        "--listar-perfiles", action="store_true",
+        help="Lista los perfiles disponibles y sale."
+    )
+    parser.add_argument(
         "--ablacion", action="store_true",
         help="Run de CONTROL: apaga las inyecciones de prompt que empujan la "
              "convergencia (sugerencias de contagio, competencias abiertas, "
@@ -1040,11 +1069,25 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
+    from curiana_perfiles import cargar_perfil, nombres as _nombres_perfil
+    if args.listar_perfiles:
+        import curiana_perfiles
+        curiana_perfiles.main()
+        sys.exit(0)
+    # --ablacion sigue funcionando solo: es el atajo al perfil `control`.
+    if args.perfil:
+        perfil = cargar_perfil(args.perfil)
+    elif args.ablacion:
+        perfil = cargar_perfil("control")
+    else:
+        perfil = cargar_perfil()
+
     client = get_client()
 
     if args.anio:
         auto_mode(client, 240, reporte_anual=True, verbose=not args.silencioso,
-                   perfiles=args.perfiles, ablacion=args.ablacion)
+                   perfiles=args.perfiles, ablacion=args.ablacion,
+                   perfil=perfil)
     elif args.auto > 0:
         auto_mode(
             client, args.auto,
@@ -1052,6 +1095,7 @@ if __name__ == "__main__":
             verbose=not args.silencioso,
             perfiles=args.perfiles,
             ablacion=args.ablacion,
+            perfil=perfil,
         )
     else:
         interactive_mode(client)

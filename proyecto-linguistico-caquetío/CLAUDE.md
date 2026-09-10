@@ -101,12 +101,21 @@ python curiana_database.py seed   # siembra el lexicón activo
 ### Correr simulación
 
 ```bash
-python curiana_orchestrator_v2.py --auto 30 --perfiles --reporte
+python curiana_orchestrator_v2.py --auto 30 --perfil base --perfiles --reporte
+#   --perfil    QUÉ capas del lexicón ven los agentes y si hay andamiaje.
+#               base · atestiguado · suelto · control · suelto-control
+#               Se guarda RESUELTO en simulation_runs.config. Por defecto: base
+#   --listar-perfiles   los perfiles disponibles, con su pregunta
 #   --perfiles  perfiles curados por agente al cerrar (agent_profiles/quotes)
 #   --reporte   reporte anual LLM al completar cada año simulado
-#   --ablacion  run de CONTROL: apaga las inyecciones que empujan convergencia.
-#               La evidencia de koineización es la DIFERENCIA normal vs. ablación
+#   --ablacion  atajo al perfil `control`. La evidencia de koineización es la
+#               DIFERENCIA normal vs. ablación
 ```
+
+⚠️ Los perfiles cambian lo que el agente **ve**, nunca con qué se le **puntúa**:
+`capas_de_score` es fijo en todos y hay un test que lo vigila. Si el score se
+moviera con el perfil, la diferencia entre brazos sería un artefacto del
+instrumento. Diseño en `5-experimento/disenos/05_perfiles_de_run.md`.
 
 ---
 
