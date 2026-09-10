@@ -1,0 +1,206 @@
+# ─────────────────────────────────────────────────────────────────────────
+# BARRIDO WEB de la lista de topónimos de Miguel (2026-09-10)
+#
+# 136 nombres únicos, investigados online uno a uno buscando la etimología
+# que circula en el habla y en la divulgación local. Lista y cruce contra el
+# canon en `6-fusion/toponimia_paraguana_miguel.yaml`.
+#
+# 🔴 NINGUNA de estas fuentes es procedencia citable en el sentido de la
+# regla 8: son blogs, prensa local y divulgación. Lo que aportan es (a) que
+# el nombre existe y dónde, (b) qué segmentación oye la gente, y (c) de vez
+# en cuando, un dato etnohistórico que sí se puede perseguir hasta una
+# fuente. Todo entra con `deuda: sin-procedencia`.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-10'
+  estado: en curso
+  lista: 6-fusion/toponimia_paraguana_miguel.yaml#lista_dictada_2026-09-10
+  investigados_hasta_ahora: 12
+
+# ══════════════════════════════════════════════════════════════════════
+# LO QUE RESUELVE GRUPOS ENTEROS: los sufijos
+# ══════════════════════════════════════════════════════════════════════
+formantes:
+
+  - forma: '-ebo (variante -ebe en Aruba)'
+    glosa_que_circula: "'camino de', 'paso de' — sufijo locativo caquetío"
+    fuente: 'apellidoyajure.blogspot.com, «Vocablos indígenas: sufijo -ebo»'
+    serie_que_da:
+      - "Cumarebo = 'camino del cacique Cumare'"
+      - "Guacurebo = 'camino de Guacure'"
+      - "Jurijurebo / Hurihurebo = 'camino del viento' (juri jure = viento)"
+      - "Guasurebo (Yaracuy) = 'camino de Guasure'"
+      - "Curaidebo = de 'Curaide'"
+      - 'Miquirebo, Turijurebo, Curuquebo, Moyebo, Guayurebo'
+      - 'Kudarebe (Aruba), con la variante -ebe'
+    por_que_importa: >-
+      ⭐⭐ Convergencia con OLIVER, que en su lista de sufijos toponímicos
+      caquetíos (cap. 2 §j) incluye «(e)-bo». Una fuente académica y una
+      divulgativa, sin relación entre sí, dan el mismo formante. Y la serie es
+      productiva: nombre propio + -ebo, igual que -goto en caribe.
+    y_lo_que_ata: >-
+      ⭐ `Jurijurebo` = 'camino del viento' usa `juri` 'viento', que el lexicón
+      tiene como caquetío-ATESTIGUADO — y es la misma raíz de `Judibana`
+      'cerro del viento'. Los dos nombres están en el canon, la leyenda local
+      los casa (Judibana esposa del cacique de Jurijurebo) y ahora comparten
+      etimología. Tres vías que convergen en la misma palabra.
+    accion: 'candidato a morfema propio en morfemas.yaml; hoy no está'
+
+  - forma: '-coa'
+    glosa_que_circula: "'lugar', 'pueblo', 'nación'"
+    fuente: 'apellidoyajure.blogspot.com, «Vocablos indígenas: sufijo -coa»'
+    serie_que_da:
+      - "Coquivacoa (Zulia) = 'nación de las piedras'"
+      - "Chivacoa (Yaracuy) = 'pueblo de piedras'"
+      - 'Buchivacoa (Falcón), Cumajacoa (Paraguaná), Zazarivacoa (Yaracuy)'
+      - "Cumanacoa (Sucre) = 'pueblo de la planta cumana'"
+      - 'Tumbacoa (Lara), Tacoa (La Guaira), Arimacoa (Nueva Esparta)'
+    conflicto_con_el_canon: >-
+      ⚠️ El canon tiene `-bacoa` como morfema-001, glosado 'bosque, arboleda,
+      paraje cubierto de', con cinco apoyos y el `-baca` 'matorral, espesura'
+      de Alvarado. Esta fuente corta distinto: `-coa` = 'lugar' y lo de delante
+      es la raíz, de modo que Chivacoa sería 'lugar de piedras'.
+    lo_que_hace_atractivo_al_corte_alternativo: >-
+      Que despeja con voces ATESTIGUADAS del propio lexicón: `quiva`/`cuiva` es
+      'piedra' en caquetío, así que Chivacoa = quiva + coa sale entero sin
+      pedir nada prestado. Y `Coquivacoa` es el nombre de la esfera occidental
+      de Oliver, la quinta polity del proyecto.
+    lectura_prudente: >-
+      No se toca morfema-001: tiene cinco apoyos glosados y corroboración
+      independiente de Alvarado, contra una glosa de blog. Pero la
+      segmentación alternativa queda ANOTADA, porque explica un subconjunto
+      —los `-vacoa` con raíz de piedra— que la glosa 'bosque' no explica bien.
+      Es material para el issue de morfemas, no para cambiar nada hoy.
+
+# ══════════════════════════════════════════════════════════════════════
+# HALLAZGOS POR NOMBRE
+# ══════════════════════════════════════════════════════════════════════
+nombres:
+
+  - forma: Adícora
+    en_canon: sí
+    hallazgo: >-
+      «Adícora quiere decir jajatal, hierba halófila de terrenos salobres. Esta
+      voz indígena primitivamente era JADÍCUAR, ha venido pasando por
+      JATÍCORA, por JADÍCORA, por ARÍKULA, hasta llegar hoy a Adícora».
+    por_que_importa: >-
+      ⭐⭐ Coincide con la lectura que el canon ya tiene por Esteves —«jade
+      'jajato' + cuar»— y además da la CADENA COMPLETA de deformación, que el
+      canon no tenía. `jajato` es voz del lexicón. Es el mejor caso del barrido
+      hasta ahora: etimología popular y etimología de autor dicen lo mismo.
+    deuda: sin-procedencia
+
+  - forma: Tacuato
+    en_canon: 'no (está en el barrido OSM)'
+    hallazgo: >-
+      «Población antigua donde pernoctaban indígenas caquetíos de la TRIBU DE
+      LOS GUARANAOS que la constituían los TACUATO, los cuales poblaban las
+      costas y el golfete de Coro conjuntamente con LOS CORUBOS, LOS CAYUDES y
+      LOS GUASICURES».
+    por_que_importa: >-
+      ⭐⭐⭐ El hallazgo estructural del barrido. Da una lista de grupos del
+      Golfete de Coro, y TRES de esos nombres están en la lista de Miguel como
+      topónimos: Tacuato, Corubo y Cayude. O sea que —como Amuay y Moruy— son
+      ETNÓNIMOS que quedaron de topónimo. Y `Guaranao`, que Miguel también
+      dictó, aparece aquí como nombre de la tribu mayor, no del lugar.
+      El lexicón tiene `waranao` 'salado, ácido' y `kayude` 'guanábano
+      silvestre' como caquetío-atestiguado: grupos nombrados con palabras de
+      la lengua.
+    cruces_que_abre: [Corubo, Cayude, Guaranao, Guasicure]
+    accion_propuesta: >-
+      Perseguir esta lista hasta una fuente citable —huele a Hernández Baño o
+      a Arcaya— y, si aparece, va a `3-mundo/etnias.yaml` como registro de
+      grupos de la polity costera, no sólo al canon toponímico.
+    deuda: sin-procedencia
+
+  - forma: Borojó
+    en_canon: 'no (está en el barrido OSM)'
+    hallazgo: >-
+      Dos etimologías en circulación: (1) del cacique BOROBO que existió en el
+      lugar; (2) «término de las tribus caquetías cuya definición sería
+      BORO = sal y JO = lugar, es decir, LUGAR DE SAL». Y una tercera, de
+      relieve: «cantarillo de arcilla».
+    por_que_importa: >-
+      ⭐⭐ El lexicón tiene `borojo` como caquetío-ATESTIGUADO glosado 'salina,
+      lago salado de Coro'. La etimología popular no sólo coincide: la
+      SEGMENTA en boro + jo y le da 'lugar de sal'. Es una ecuación bilingüe
+      que sale de la calle y casa con el canon.
+      Y ojo: `Borobo`, el cacique, TAMBIÉN está en la lista de Miguel. Puede
+      que Borojó y Borobo sean el mismo nombre.
+    dato_etnohistorico: >-
+      «Los primeros habitantes de Borojó fueron los PARAUJANOS de origen
+      arawaco, aproximadamente en el siglo XV, provenientes de la Laguna de
+      Sinamaica, estado Zulia». El paraujano/añú es la columna del pariente
+      costero más cercano que D11 abrió. Si esto se sostiene, es presencia añú
+      en Falcón — dato de esfera, no de lengua. Perseguir.
+    deuda: sin-procedencia
+
+  - forma: Capatárida
+    en_canon: sí
+    hallazgo: >-
+      «El significado sigue siendo un enigma». Circulan 'capa de tierra
+      árida', 'Pantera Grande' y 'Has encontrado al Jefe Sagrado', las dos
+      últimas atribuidas al QUECHUA. Es la capital del municipio Buchivacoa y
+      «antiguo asentamiento de indios caquetíos».
+    lectura: >-
+      🔴 'Capa de tierra árida' es un caso de libro de RESEGMENTACIÓN
+      CASTELLANA FALSA — la misma trampa que esta campaña ya midió con
+      Bajabaroa → «Bajo Aroa». Y las lecturas quechuas no tienen nada que
+      hacer en Falcón. Lo único aprovechable es la nota etnohistórica.
+      Se registra como ejemplo del patrón, no como etimología.
+    deuda: sin-procedencia
+
+  - forma: Zazárida
+    en_canon: sí
+    hallazgo: >-
+      «Raíz Zaza o Sasa sin significado documentado; se repite como raíz en
+      algunos topónimos. Una posibilidad es que sea el lugar de Zaza, quizás
+      nombre de persona, animal o planta local». Parroquia del municipio
+      Buchivacoa.
+    lo_que_si_se_ve: >-
+      ⭐ El formante `-rida` se repite en el MISMO municipio: Capatá-rida y
+      Zazá-rida son las dos de Buchivacoa. Dos nombres vecinos con la misma
+      terminación es indicio de formante, no de casualidad. Y el blog del
+      sufijo -coa da `Zazarivacoa` en Yaracuy, que ataría Zaza- con -vacoa.
+    accion_propuesta: 'censar los -rida de Falcón, como se hizo con -ana en #109'
+    deuda: sin-procedencia
+
+  - forma: Miraca
+    en_canon: 'sí — nodo-031'
+    hallazgo: >-
+      «Una de las poblaciones caquetías que han conservado su nombre indígena.
+      Persistió como poblado caquetío, favorecida por su proximidad a Adícora,
+      y persiste como centro de preservación del quehacer LOCERO prehispánico
+      caquetío».
+    por_que_importa: >-
+      No da etimología, pero sí un dato de oficio que el corpus puede usar:
+      Miraca como centro alfarero con continuidad prehispánica. Encaja con el
+      `curubo` del dictado —la concha para bruñir la loza— y con los alfareros
+      del elenco. Va a la esfera de oficios, con su marca de época.
+    deuda: sin-procedencia
+
+# ══════════════════════════════════════════════════════════════════════
+sin_hallazgo_util:
+  - {forma: Guaranao, nota: 'nada sobre el nombre; pero ver Tacuato, donde sale como etnónimo'}
+  - {forma: Matícora, nota: 'sólo que es un río del sur de Buchivacoa'}
+
+# ══════════════════════════════════════════════════════════════════════
+fuentes_que_este_barrido_identifica:
+  - obra: 'Hernández Baño, Adrián — «Los Caquetíos de Falcón» (1984), INCUDEF, Coro'
+    por_que: >-
+      ⭐ Es la compilación de referencia sobre los caquetíos de Falcón, y el
+      proyecto YA cita a Hernández Baño de segunda mano, vía el glosario de
+      Zavala (la sigla HB). Tenerlo de primera mano cerraría muchas cadenas.
+      ADQUISICIÓN a buscar.
+  - obra: 'apellidoyajure.blogspot.com'
+    por_que: >-
+      Investigador aficionado con posts monográficos sobre formantes caquetíos
+      (-ebo, -coa) y antroponimia. No es fuente citable, pero es un buen mapa
+      de por dónde buscar. Sus series coinciden con Oliver en `-ebo`.
+  - obra: 'lubesinho-folkloreando.blogspot.com, «Vocabulario caquetío»'
+    por_que: >-
+      ⚠️ NO es fuente nueva: es el glosario de 288 entradas de Zavala Reyes
+      republicado, que el proyecto ya minó entero (F7, 288/288). Sirve sólo
+      para confirmar las siglas de autoría que el proyecto ya usa: PMA =
+      Pedro Manuel Arcaya, HB = Adrián Hernández Baño, E = Esteves,
+      AM = Angulo Molina, A = Alvarado, CGB = González Batista.
