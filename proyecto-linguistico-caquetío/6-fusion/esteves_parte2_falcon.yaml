@@ -349,6 +349,51 @@ mirimire:
       acentuación que conviene no perder: en esta campaña las tildes ya
       movieron tres lemas del canon.
     - 'En un decreto de 1885 aparece sólo como «aldea de campesinos».'
+  hipotesis_de_miguel_2026-09-10:
+    lo_que_dice: >-
+      «No sé dónde había leído que el `miri` era un tipo de arbusto. Y Mirimire
+      era justamente un lugar de muchos de estos».
+    busqueda_hecha: >-
+      🔴 NO CORROBORADA, y buscada en todo lo que el proyecto puede alcanzar:
+      el lexicón (nada que empiece por miri-), Esteves entero —partes I y II—
+      donde `miri` sólo aparece DENTRO de Mirimire, Alvarado 1921 a texto
+      completo, van Buurt, Gatschet, y dos búsquedas web específicas de «miri
+      arbusto Venezuela» y «mirimire planta». Cero en todas. El herbario de
+      Coro, que sería el sitio, corta la conexión.
+    por_que_NO_se_descarta: >-
+      Porque no encontrarla mide lo que alcanzo, no lo que existe — la regla 6,
+      que en esta misma campaña ya falló tres veces a favor del dato: `teco` y
+      `cuaguaro` no aparecían en la web y estaban en Esteves; las voces del
+      dictado sin rastro resultaron estar en la Parte II. Miguel lo leyó en
+      algún sitio, y el sitio existe aunque yo no llegue.
+    lo_que_la_hace_COHERENTE: >-
+      ⭐ Y esto es lo que la hace valiosa aunque esté sin fuente: encaja con DOS
+      patrones que esta campaña midió por separado, y no fue construida para
+      encajar con ellos.
+    los_dos_patrones:
+      - >-
+        LA REDUPLICACIÓN ES PLURAL. No es conjetura: el propio Esteves lo dice
+        en la Parte II al glosar BARABARA «que es plural por duplicación». Si
+        miri-miri es plural de `miri`, la lectura «lugar de muchos miri» sale
+        de la propia gramática que el autor declara.
+      - >-
+        EN ESTA REGIÓN LOS PARAJES SE NOMBRAN CON SU PLANTA O SU BICHO. Medido
+        en esta misma campaña: Adaro < `dara` el alcaraván, Yabuquiva < `yabo` +
+        `quiva` 'yabal pedregoso', Buchuaco < `buche` el cardo, Baraived <
+        `bara` 'árbol' + `bere` 'amargo', Sividigua, Chiguare, Guaibacoa 'lugar
+        de los guays', Baragua < `cuaguaro`. Un arbusto nombrando un cerro es
+        exactamente lo esperable.
+    y_la_geografia_ayuda: >-
+      El nombre cubre CERRO, RÍO y PUEBLO. Un arbusto que tapiza una ladera
+      nombra primero el cerro y después lo que se funda debajo — que es el
+      orden que los tres referentes sugieren.
+    estado: 'hipótesis con dos apoyos estructurales y CERO atestación léxica. No entra a ningún sitio hasta que aparezca el `miri`.'
+    donde_buscarlo:
+      - '«Mirimire en crónicas» (Barroso, UNEFM 2024) — el servidor rechaza la conexión; descarga de Miguel'
+      - 'Hernández Baño, «Los Caquetíos de Falcón» (1984) — no está en el repo, adquisición pendiente'
+      - 'Herbario CORO, «Flora de Falcón» — la web corta la conexión (ECONNRESET); reintentar'
+      - 'Y la pregunta más barata: que Miguel recuerde DÓNDE lo leyó'
+
   adquisicion_identificada:
     obra: '«Mirimire en crónicas», de José del Carmen «el negro» Barroso'
     editorial: 'Fondo Editorial UNEFM (Universidad Nacional Experimental Francisco de Miranda), 2024-11-03'
