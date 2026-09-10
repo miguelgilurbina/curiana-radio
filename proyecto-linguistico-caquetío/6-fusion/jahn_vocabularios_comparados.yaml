@@ -358,3 +358,48 @@ guajiro_paraujano_cruzado:
     - 'parsear el bloque jirajara-ayomán (pdf 468-471), que sirve para descartar'
     - 'decidir si cognado-016 y cognado-019 son el mismo, que el validador ya avisa'
     - 'subir CURARÍ con el taxón de Jahn'
+
+# ══════════════════════════════════════════════════════════════════════
+# CORRECCIÓN DE MIGUEL — la circularidad era la mitad del problema
+# ══════════════════════════════════════════════════════════════════════
+correccion_de_miguel_2026_09_10:
+  lo_que_dijo: >-
+    «Pero ojo, eso de caquetío reconstruido fue cuando lo hicimos desde el
+    wayuu, pero luego establecimos que realmente el caquetío como lengua tiene
+    más relación con el lokono y el achagua».
+  en_que_me_quede_corto: >-
+    Yo escribí que la coincidencia numerales↔guajiro era «circular, descartar
+    como prueba». Cierto y corto. El problema no es solo que la PRUEBA no
+    valga: es que la ENTRADA se hizo con la hermana que D11 jubiló. La
+    circularidad era el síntoma; la deuda de D11 es la enfermedad.
+  lo_medido:
+    entradas_reconstruidas_total: 68
+    justificadas_por_wayuu: 23
+    justificadas_por_lokono: 26
+    justificadas_por_taino: 3
+    sin_declarar_o_otra: 16
+    las_23: [anüiki, apünüin, bana, jarai, kapua, kasha, kashi, kira, naba,
+             naya, nüma, pia, piama, pienchi, pütchi, sulu, taya, tüshi, wana,
+             wanee, wanü, waya, yama]
+  lo_que_pesan: >-
+    🔴 Ahí está el SISTEMA PRONOMINAL COMPLETO y los cinco numerales — las
+    piezas que salen en cada frase de los 60 agentes y las que CLAUDE.md
+    imprime en su bloque de morfología. Y no hay NI UN pronombre caquetío
+    atestiguado: los cinco son reconstruidos, y los cinco son la forma wayuu
+    letra por letra.
+  contraste_con_el_lokono:
+    apoya: 0
+    discrepa: 9
+    el_lokono_del_lexicon_no_cubre: 14
+    aviso: >-
+      ⚠️ ese 14 mide NUESTROS datos lokono, no el lokono (regla 6). Para los
+      pronombres sí hay respuesta: el lexicón ya tiene `de` 'yo', `bi` 'tú',
+      `we` 'nosotros', y Perea 1942 los confirma —`wai` aparece 231 veces—.
+    el_caso_mas_claro: >-
+      Los numerales: caquetío `wanee`/`piama`/`apünüin`/`pienchi` frente a
+      lokono `aba`/`bian`/`kabyn`/`bithi`. No son dos variantes: son dos
+      sistemas.
+  donde_se_decide: '6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md'
+  y_una_buena_noticia: >-
+    `bana` está en las 23, pero hoy Esteves lo glosó 'cerro' sobre Caracubana.
+    Puede salir de la deuda por atestación en vez de por re-derivación.
