@@ -1673,6 +1673,302 @@ achagua:
     achagua: irago
 jirajara_ayoman:
   paginas_pdf: 468-471
-  estado: SIN PARSEAR — pendiente
-  para_que_sirve: 'son los vecinos NO arahuacos de la sierra. Sirven para DESCARTAR: si una
-    voz «caquetía» aparece en jirajara y no en las arahuacas, hay que mirarla dos veces.'
+  filas: 96
+  columnas: ESPAÑOL | JIRAJARA | AYOMÁN
+  que_son: los vecinos NO arahuacos de la sierra de Falcón y Lara. Otra familia — jirajaroide
+    — y por eso el contraste vale.
+  jahn_marca_los_prestamos: '⭐ escribe «(esp.)» donde la voz es castellana: carato `kasagúé
+    (esp.)`, casamiento `macét (esp.)`. Lo no marcado es indígena para él.'
+  aviso_rule_3: '⚠️ buena parte de la lista son objetos y animales COLONIALES —gallina, gallo,
+    gato, machete, hacha, escardilla—: esas filas fechan el contacto del s. XIX-XX, no el
+    precontacto.'
+  verificado_en_imagen: pdf 470 (p. impresa 390). El OCR desplazaba una fila y se corrigió
+  voces:
+  - es: Cabeza (mi)
+    jirajara: ak-tégui
+    ayoman: a-togh
+  - es: Ojo (mi)
+    jirajara: a-uñán
+    ayoman: a-kivóugh
+  - es: Boca (mi)
+    jirajara: a-gúspo
+    ayoman: a-gip
+  - es: Nariz (mi)
+    jirajara: a-kingán
+    ayoman: a-kin
+  - es: Oreja (mi)
+    jirajara: a-teég
+    ayoman: a-hóui
+  - es: Barba
+    jirajara: ustenagúé
+    ayoman: a-pougísh
+  - es: Mano (mi)
+    jirajara: a-mánt
+    ayoman: -a-mán
+  - es: Pierna
+    jirajara: hisganipipán
+    ayoman: a-sahan-ipip
+  - es: Pie (mi)
+    jirajara: a-ngán
+    ayoman: a-sengán
+  - es: Vientre (mi)
+    jirajara: a-yú
+    ayoman: a-poh
+  - es: Espinazo (mi)
+    jirajara: a-yoguició
+    ayoman: a-yogishíbo
+  - es: Rodilla (mi)
+    jirajara: a-tashán
+    ayoman: a-tostián
+  - es: Uña (mi)
+    jirajara: a-guigusé
+    ayoman: a-kiyoud
+  - es: Agua
+    jirajara: ing
+    ayoman: ing
+  - es: Lluvia
+    jirajara: kat
+    ayoman: géui
+  - es: Cielo
+    jirajara: ingúiét
+    ayoman: ñi-RÁ
+  - es: Sol
+    jirajara: yuaú
+    ayoman: in
+  - es: Viento
+    jirajara: titate
+    ayoman: estéd
+  - es: Frío
+    jirajara: tatát
+    ayoman: tachát
+  - es: Fuego
+    jirajara: dueg
+    ayoman: dúg
+  - es: Leña
+    jirajara: sisp
+    ayoman: sip
+  - es: Braza
+    jirajara: duchir
+    ayoman: kach
+  - es: Pueblo
+    jirajara: teréya
+    ayoman: ''
+  - es: Médico
+    jirajara: gasgád
+    ayoman: gasgá
+  - es: Muerto
+    jirajara: kusine
+    ayoman: kushíni
+  - es: Baile (tura)
+    jirajara: esterkuye, prarard
+    ayoman: ''
+  - es: Esposa
+    jirajara: esol
+    ayoman: senha
+  - es: Hijo
+    jirajara: eunú
+    ayoman: ''
+  - es: Sal
+    jirajara: tumané
+    ayoman: tóroról.
+  - es: Relámpago
+    jirajara: sekuni
+    ayoman: ''
+  - es: Trueno
+    jirajara: iruruoní
+    ayoman: daktá
+  - es: Quebrada
+    jirajara: sat
+    ayoman: kururú
+  - es: Chinchorro
+    jirajara: dotak
+    ayoman: kúgh
+  - es: Totuma
+    jirajara: kururú
+    ayoman: piguió
+  - es: Tapara
+    jirajara: kub
+    ayoman: dipegha
+  - es: Olla
+    jirajara: pigró
+    ayoman: ''
+  - es: Cuchara
+    jirajara: dipigué
+    ayoman: batá (tinaja)
+  - es: Tierras, terrenos
+    jirajara: gúedap
+    ayoman: ''
+  - es: batá
+    jirajara: sim
+    ayoman: ''
+  - es: Batea
+    jirajara: digueyé
+    ayoman: ''
+  - es: Mazamorra
+    jirajara: sul
+    ayoman: shpepé
+  - es: Carato
+    jirajara: kasagúé (esp.)
+    ayoman: pishú
+  - es: Casamiento
+    jirajara: ispepé
+    ayoman: macét (esp.)
+  - es: Flecha
+    jirajara: pisiú
+    ayoman: asará “
+  - es: Cuchillo
+    jirajara: masép (esp.)
+    ayoman: kamrá
+  - es: Machete
+    jirajara: asará
+    ayoman: yúsh
+  - es: Escardilla
+    jirajara: kamard
+    ayoman: senhá
+  - es: Hacha
+    jirajara: wyit
+    ayoman: paghó
+  - es: Hombre
+    jirajara: siepúk
+    ayoman: éyl
+  - es: Mujer
+    jirajara: pagóg
+    ayoman: ''
+  - es: Piedra
+    jirajara: dox
+    ayoman: ''
+  - es: Yuca
+    jirajara: hogón
+    ayoman: shoh
+  - es: Tabaco
+    jirajara: soÓ
+    ayoman: gagáp
+  - es: Casa
+    jirajara: gagáp
+    ayoman: boshín
+  - es: Tigre (Felis onza)
+    jirajara: bosin
+    ayoman: ''
+  - es: León (Felis conco-
+    jirajara: ;
+    ayoman: mohorí
+  - es: lor) (puma)
+    jirajara: bosín-sug
+    ayoman: dúch
+  - es: yoyé
+    jirajara: perú
+    ayoman: ''
+  - es: Danta (Tapirussp.)
+    jirajara: aréu
+    ayoman: ''
+  - es: Zorro (Canis Aza-
+    jirajara: moort
+    ayoman: ''
+  - es: duj
+    jirajara: dóu
+    ayoman: ''
+  - es: rae)
+    jirajara: takumará
+    ayoman: ''
+  - es: Araguato
+    jirajara: perú
+    ayoman: degaró
+  - es: Pereza
+    jirajara: arok
+    ayoman: hué
+  - es: Perro
+    jirajara: mús
+    ayoman: shuhuí
+  - es: Mapurite (Mephi-
+    jirajara: yu
+    ayoman: agúi
+  - es: moné
+    jirajara: arauá
+    ayoman: ''
+  - es: tis)
+    jirajara: akurí
+    ayoman: ''
+  - es: dok
+    jirajara: huhi
+    ayoman: ''
+  - es: Gato
+    jirajara: nñamurí
+    ayoman: huhí-tan-ña
+  - es: Gato cerval
+    jirajara: baú
+    ayoman: ''
+  - es: Marrano
+    jirajara: mondúj
+    ayoman: ''
+  - es: Cachicamo (Dasy-
+    jirajara: degaró
+    ayoman: ''
+  - es: pus sp.)
+    jirajara: idok
+    ayoman: ''
+  - es: Morrocoy
+    jirajara: gúé
+    ayoman: ''
+  - es: Pescado
+    jirajara: suí
+    ayoman: ''
+  - es: Chácharo
+    jirajara: tog
+    ayoman: ''
+  - es: Gallo
+    jirajara: agút
+    ayoman: ''
+  - es: Gallina
+    jirajara: araguá
+    ayoman: ''
+  - es: Guaca
+    jirajara: tub
+    ayoman: ''
+  - es: Guacharaca
+    jirajara: tub-taumá
+    ayoman: ''
+  - es: Cienpiés (Scolo-
+    jirajara: siyóp
+    ayoman: koñir
+  - es: pendra)
+    jirajara: koni
+    ayoman: ñáru
+  - es: Bueno, bonito
+    jirajara: yusimá
+    ayoman: ''
+  - es: Bien de salud
+    jirajara: nianye
+    ayoman: ''
+  - es: Enfermo
+    jirajara: pok diú.
+    ayoman: ''
+  - es: Conuco
+    jirajara: gúe ub!
+    ayoman: ''
+  - es: Mucha lluvia
+    jirajara: angúi tereya
+    ayoman: ''
+  - es: Cerro grande
+    jirajara: angúti fruye
+    ayoman: ''
+  - es: Buenos días!
+    jirajara: aktégui sigúigauni
+    ayoman: ''
+  - es: Voy al pueblo
+    jirajara: gekyeú
+    ayoman: ''
+  - es: Voy a Siquisique
+    jirajara: tanuoy
+    ayoman: ''
+  - es: Tengo hambre
+    jirajara: apasi mamán
+    ayoman: ''
+  - es: Voy a comer
+    jirajara: eunú ayayíi que-
+    ayoman: ''
+  - es: mano
+    jirajara: yebu porimi?
+    ayoman: ''
+  - es: Mi hijo llora de
+    jirajara: aparimí ñianye
+    ayoman: ''

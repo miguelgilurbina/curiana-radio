@@ -80,6 +80,26 @@ generoso (`grep -o ".\{300\}PATRÓN.\{400\}"`) y **lee lo que hay alrededor**.
 Localiza la **página impresa**, no la del PDF. Suelen diferir por un desfase
 constante que se calcula una vez (en Antczak: pdf + 130 = impresa).
 
+### Y una coincidencia con el vecino NO es un descarte
+
+Miguel, 2026-09-10: *«hay palabras que pueden compartirse entre etnias»*.
+Corrige un reflejo fácil: encontrar una voz «caquetía» en la lengua del vecino
+no la descalifica — prueba **contacto**, que es lo que se espera de pueblos que
+comerciaban.
+
+Lo que decide no es **si** se comparte, sino **qué**:
+
+| Dominio | Qué significa que se comparta |
+|---|---|
+| plantas, bichos, mercancías, utensilios | préstamo areal: dato de comercio y vecindad. Normal, y **no** descarta nada |
+| pronombres, numerales, morfemas gramaticales | dato de **filiación**: si aparece, hay que dudar de la clasificación |
+
+El caso medido: **`picure`** 'agutí' es idéntico en jirajara y ayomán (`akuri`,
+Jahn p. 390), Alvarado lo declara *«el nombre que tiene en varias lenguas de la
+familia caribe»*, y vive en el castellano regional. Tres familias sin
+parentesco, una palabra. Yo lo había descartado como candidato «porque es
+caribe»: el descarte no valía.
+
 ## 4. Repartir el hallazgo por esferas, no solo al lexicón
 
 **Esta es la parte que se venía haciendo mal.** Medido el 2026-08-06: de 30
