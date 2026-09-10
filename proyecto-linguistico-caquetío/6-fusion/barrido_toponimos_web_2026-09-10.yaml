@@ -420,10 +420,18 @@ por_que_se_para:
       cita, da glosa, y tiene informantes orales con nombre, pueblo y año de
       nacimiento.
     petare: >-
-      ⭐ Y aparece PETARE, que yo había dado por lapsus del dictado y que Miguel
-      corrigió diciendo que estaba en Falcón. Está en la Parte II de Esteves.
-      Tenía razón él y me equivoqué dos veces con el mismo nombre: primero al
-      repartirlo a Miranda, después al decir que no estaba en el libro.
+      🔴 RETIRADO el 2026-09-10, el mismo día. Escribí que PETARE «está en la
+      Parte II de Esteves» a partir de un grep. Al leer el pasaje con contexto,
+      la única aparición del nombre en los tomos 4-6 está en la BIOGRAFÍA DEL
+      AUTOR: la lista de municipalidades que han reconocido a Esteves —«Coro
+      (1972), Puerto Cabello (1973 y 1981), Cumaná (1974), Guanare (1982),
+      PETARE (1983) y Caracas (1983)»—. No es una entrada del gazetteer.
+    petare_lo_que_queda_en_pie: >-
+      Que Miguel dijera que su Petare está en Falcón sigue sin refutarse: lo
+      único que cambia es que Esteves NO lo respalda. Petare vuelve a la cola
+      sin referente. Y la lección es la de siempre, esta vez al revés: un grep
+      con resultado tampoco es un dato hasta que lees el pasaje. El cero hay
+      que verificarlo, y el uno también.
     los_17_que_no_estan: [Azaro, Botucare, Caidie, Cumairebo, Cumajacoa,
                           Davaduvare, Duvisí, Jacure, Macolla, Quisiro, Samaria,
                           Sividigua, Tarama, Tarica, Tibana, Tomoporo, Yabuquiva]

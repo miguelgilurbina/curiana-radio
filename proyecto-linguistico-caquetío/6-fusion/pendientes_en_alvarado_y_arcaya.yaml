@@ -548,3 +548,178 @@ segunda_vuelta:
     - 'resolver el conflicto chipare = matapalo (Esteves) vs. piedra (Arcaya)'
     - 'pedir la fuente achagua: ahora hay argumento geográfico citado para justificarlo'
     - 'Tacamire y Mirimire: el final `-mire` merece censo'
+
+# ══════════════════════════════════════════════════════════════════════
+# V. TERCERA VUELTA — la Parte I de Esteves, leída a mano
+# ══════════════════════════════════════════════════════════════════════
+tercera_vuelta:
+  por_que: >-
+    Los que quedaban se buscaron en los tomos 1-3 (Parte I, Paraguaná), que se
+    habían minado por lote pero no contra esta lista. Y esta vez se leyeron los
+    pasajes con contexto ancho en vez de contar apariciones — que es como
+    salieron las dos glosas grandes y los dos errores.
+
+  glosas_completas:
+
+    - forma: Guay
+      cita: >-
+        «CAI es una alteración de GUAY, ÁRBOL PARECIDO A LA CEIBA. BACOA es
+        lugar, paraje. O sea que el topónimo expresa: SITIO DE LOS GUAYES».
+      peso: >-
+        ⭐⭐⭐ Glosa limpia para un nombre que estaba en el grupo sin nada, y de
+        paso resuelve tres cosas más: (1) explica GUAIBACOA y CAIBACOA como el
+        mismo nombre; (2) declara la alternancia CAI ~ GUAY, que es aféresis de
+        la `gu-`; (3) da el árbol con comparación botánica, no con una
+        abstracción.
+      y_lo_que_ata: >-
+        `guay` es la base que Esteves usa para GUAIMURE («raíz de guay; "ure",
+        raíz») en la Parte II. Con esto, `guay` pasa de pieza suelta a voz con
+        referente botánico y dos topónimos que la despejan.
+      nivel_propuesto: 'A — ecuación bilingüe completa dada por la fuente'
+
+    - forma: Bariquis
+      cita: >-
+        «BARIQUI. I - El Barigüí, aldea del municipio Puerto Cumarebo, Distrito
+        Zamora. / II - EL BARIQUISAL, quebrada y lugar boscoso en el municipio
+        Guaibacoa, Distrito Colina. (BARIGÜÍ: ÁRBOL TINTÓREO; BARA, ÁRBOL;
+        QUIRE, COLOR)».
+      peso: >-
+        ⭐⭐⭐ Segmentación completa, y una de las dos piezas YA ESTÁ despejada:
+        `bara` = 'árbol' es la misma que la campaña usó para BARAIVED (`bara` +
+        `bere` 'amargo'). O sea que esto no es una glosa aislada: es la segunda
+        aparición de `bara` con el mismo valor, en otro nombre, en otro
+        distrito.
+      morfema_nuevo: >-
+        ⭐ `QUIRE` = 'color'. No está en `2-lengua/morfemas.yaml`. Entra a la
+        cola como morfema candidato, con este único apoyo por ahora.
+      y_el_bariquisal: >-
+        La forma de Miguel es BARIQUIS, que es justo la base de «El Bariquisal»
+        —con el `-al` colectivo castellano encima, como Guayacanal y Cacetal—.
+        Su nombre y el de Esteves son el mismo.
+
+  referentes_que_faltaban:
+    - forma: Acaboa
+      referente: >-
+        «Lugar pecuario en la parte norteña del territorio del municipio de
+        Jadacaquiva. En el censo de 1881, SAN JOSÉ DE ACABOA tenía dos casas y
+        once vecinos. Nombre antiguo que aparece anotado varias veces en un
+        LIBRO DE BAUTISMOS».
+      valor: '⭐ el libro de bautismos es rastro documental colonial: el nombre es viejo, no reciente'
+    - forma: Aguaque
+      referente: >-
+        «Fundo pecuario a dos leguas al norte de Pueblo Nuevo. Sitio histórico
+        porque fue el LUGAR DE NACIMIENTO DE LA HEROÍNA JOSEFA CAMEJO.
+        Recientemente, en junio de 1982, el gobierno nacional decretó monumento
+        histórico a ese sitio».
+    - forma: Cujicana
+      referente: >-
+        «Anteriormente era un potrero en el territorio del municipio
+        Carirubana y hoy es una zona residencial de la ciudad de Punto Fijo.
+        Existió allí un fundo pecuario que perteneció a doña Juana Acosta».
+      lead: 'la base parece `cuji` (Prosopis), el árbol más corriente del médano; el `-cana` no se explica'
+    - forma: Macuare
+      referente: '«I - aldea del municipio Colina, Distrito Petit. / II - caserío del municipio San Luis, Distrito Bolívar»'
+    - forma: Tucurere
+      referente: >-
+        «I - río que desagua cerca de San Juan de los Cayos; tiene el nombre de
+        RÍO MANGLE en la desembocadura y de CAPADARE en su nacimiento. / II -
+        aldea del municipio San Francisco (Mirimire), Distrito Acosta».
+      valor: >-
+        ⭐ Un mismo río con TRES nombres según el tramo — Capadare arriba,
+        Tucurere en medio, Mangle en la boca. Es un hecho de cómo se nombra el
+        agua en esta región, y explica por qué el mismo curso aparece tres
+        veces en las listas como si fueran tres.
+    - forma: Borobo
+      hallazgo: >-
+        La entrada vecina BEREBORO dice: «puede ser una alteración de BOROBORO,
+        ARBUSTO APOCINÁCEO DE FLORES MUY PEQUEÑAS, esta planta es abundante en
+        las llanuras cálidas».
+      lectura: >-
+        ⭐ `boroboro` es planta, y BOROBO es su forma corta o su variante. Y es
+        otra REDUPLICACIÓN: con Mirimire, Taratara, Tapatapa, Chichiriviche,
+        Barabara y Guaruguaro van SIETE. El censo de reduplicaciones ya no es
+        una curiosidad, es un patrón que pide medirse.
+
+  el_chipare_se_afila:
+    hallazgo: >-
+      Esteves da las dos entradas: «CHIPARE. I - caserío del municipio
+      Guaibacoa, Distrito Colina. / II - quebrada al oeste de La Soledad,
+      Distrito Zamora» y, aparte, «IPARE. Caserío del municipio Guzmán
+      Guillermo, Distrito Miranda. (IPARE: AFÉRESIS DE CHIPARE, MATAPALO)».
+    por_que_importa: >-
+      ⭐⭐ El conflicto con Arcaya deja de ser abstracto y cae sobre la misma
+      forma. Arcaya dice que la raíz arahuaca `IPA`/`IBA` significa 'piedra' y
+      que de ahí sale Chiparagoto 'gente de la piedra'. Esteves dice que
+      `IPARE` es aféresis de `chipare` y que significa 'matapalo'. Los dos
+      analizan la MISMA pieza `ipa(re)` y le dan valores incompatibles.
+    y_lo_que_lo_decide: >-
+      No lo decido aquí. Pero hay una prueba barata: si `ipa` = 'piedra' es
+      arahuaco general, tiene que aparecer en las comparandas —wayuu, lokono,
+      paraujano, taíno— que el repo ya tiene tabuladas. Eso se mide.
+    a_favor_de_arcaya: 'él mismo cita el guajiro `ipa` piedra e `iparcoa` cascajo'
+
+# ══════════════════════════════════════════════════════════════════════
+# VI. DOS CADENAS DE CITA QUE NO CIERRAN
+# ══════════════════════════════════════════════════════════════════════
+citas_que_no_se_verifican:
+  aviso: >-
+    🔴 Las dos salieron de comprobar en la fuente lo que otro decía de ella.
+    Es la misma disciplina que ya pilló a Perea↔Oliver y a Esteves↔Zavala, y
+    van cuatro en esta campaña.
+
+  capadare_diente_de_tigre:
+    lo_que_dice_esteves: '«(CAPADARE: DIENTE DE TIGRE, SEGÚN LISANDRO ALVARADO)»'
+    lo_que_dice_alvarado: >-
+      🔴 En el Glosario de voces indígenas de 1921, la ÚNICA entrada CAPADARE
+      es: «denominación comercial dada a los cigarros elaborados con tabaco de
+      Capadare (E. Falcón)». Es el puro; no hay etimología. Y la expresión
+      «diente de tigre» NO APARECE en toda la obra: cero ocurrencias.
+    veredicto: >-
+      La atribución NO SE VERIFICA en el Glosario. Puede estar en otra obra de
+      Alvarado —escribió también «Datos etnográficos de Venezuela» y los
+      «Glosarios del bajo español»— o ser una atribución equivocada de Esteves.
+      Hasta que aparezca la página, la glosa 'diente de tigre' NO se usa.
+    lo_que_corrige: >-
+      En el segundo tramo del barrido web di Capadare por «sin hallazgo» y
+      descarté la etimología popular del tabaco. Sigue descartada, pero ahora
+      hay además una glosa erudita en circulación — y sin respaldo localizable.
+
+  carora_cigarra_en_guajiro:
+    lo_que_circula: >-
+      La divulgación atribuye a Pedro Manuel Arcaya: «Carora es KARIRA o
+      KURURA ("cigarra" en guajiro)».
+    lo_que_dice_el_texto: >-
+      🔴 En «Historia del Estado Falcón» (tomo I), que es el Arcaya que el repo
+      tiene, NO aparece ninguna de las cuatro: `cigarra`, `karira`, `kurura`,
+      `carira`. Cero ocurrencias de las cuatro.
+    veredicto: >-
+      O está en otra obra de Arcaya —fue autor prolífico y el repo tiene además
+      una «obra inédita» de 1995— o la atribución es de segunda mano mal
+      hecha. No se usa.
+    lo_que_si_dice_arcaya: >-
+      Lo que sí está, y ya estaba recogido, es la serie coro-/curi- con la
+      etimología guajira propuesta: «koori, AVISPA, o kuru, LAGARTIJA». Nótese
+      que `kurura` se parece a `kuru`: puede ser que la divulgación mezclara
+      esa nota con Carora, que Arcaya nombra en otro contexto y sin
+      etimologizar.
+
+  y_una_correccion_mia:
+    forma: Petare
+    lo_que_escribi: '«Está en la Parte II de Esteves», el 2026-09-10'
+    lo_que_es: >-
+      🔴 Falso. La única aparición del nombre en los tomos 4-6 está en la
+      BIOGRAFÍA DEL AUTOR: las municipalidades que lo han reconocido, «Coro
+      (1972), Puerto Cabello (1973 y 1981), Cumaná (1974), Guanare (1982),
+      PETARE (1983) y Caracas (1983)». Lo di por entrada del gazetteer sin
+      leer el pasaje.
+    la_leccion: >-
+      El cero hay que verificarlo — y el UNO también. Un grep con resultado no
+      es un dato hasta que se lee alrededor. Retirado en su sitio.
+    lo_que_no_cambia: >-
+      Que el Petare de Miguel esté en Falcón sigue sin refutarse. Lo único que
+      se cae es que Esteves lo respalde.
+
+  morfemas_sueltos_de_paso:
+    - "`aca` = 'bejuco' — Esteves, s.v. ACARITE «(aca: bejuco)». No está en morfemas.yaml"
+    - "`quire` = 'color' — Esteves, s.v. BARIQUI. Tampoco está"
+    - "`chipe` = 'almeja' — Esteves, s.v. LOS CHIPES. Fauna marina, para la esfera de ecología"
