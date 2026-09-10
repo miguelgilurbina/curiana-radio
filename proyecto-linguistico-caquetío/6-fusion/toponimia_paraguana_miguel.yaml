@@ -404,3 +404,118 @@ cola_de_etimologia_coloquial:
         fuente citable y base léxica atestiguada. Procesarlo en la próxima
         tanda de la campaña de topónimos.
       tipo_de_lectura: [etimologia-analitica]
+
+# ─────────────────────────────────────────────────────────────────────────
+# LISTA DICTADA POR MIGUEL — 2026-09-10
+#
+# 141 nombres dictados de un tirón: Paraguaná primero, después el resto de
+# Falcón (con algunos de Lara, Yaracuy, Zulia y Trujillo que se cuelan y van
+# marcados). Cruzados contra el canon, el índice de Esteves, el barrido OSM y
+# el lexicón, con la permutación laxa de la campaña (j~s~u~h, b~v~p).
+#
+# Script del cruce: scratchpad de la sesión; el resultado se conserva aquí.
+# ─────────────────────────────────────────────────────────────────────────
+lista_dictada_2026-09-10:
+  dictados: 141
+  unicos: 136
+  repetidos_en_el_dictado: [Bariro, Botucare, Caidie, Cueparo, Mapararí]
+
+  ya_en_canon:
+    n: 36
+    formas: [Abudure, Acaboa, Adaure, Adicora, Araure, Araurima, Azaro, Baraived,
+             Bariquis, Buchuaco, Capadare, Capana, Capatárida, Caracara, Carora,
+             Caseto, Cayerúa, Charaima, Cocodite, Cumairebo, Cumajacoa, Cumarebo,
+             Guacuira, Guacurebo, Guasare, Guayacanal, Jacuque, Jacure, Machuruca,
+             Maicara, Miraca, Sividigua, Tarama, Taratara, Yabuquiva, Zazárida]
+
+  en_el_barrido_osm_sin_procesar:
+    n: 24
+    formas: [Acurigua, Bariro, Borojó, Carazao, Carirubana, Casigua, Cauca, Chipare,
+             Corubo, Cuajaracume, Davaduvare, Guaguana, Guaranao, Guate, Jadagua,
+             Mitare, Quitaire, Sabaneta, Sacuragua, Sarinao, Tacuato, Tiraya,
+             Tucacas, Yaima]
+    nota: 'el nombre está vivo en el mapa; falta procesarlo por la campaña'
+
+  nuevos_para_el_repo:
+    n: 76
+    formas: [Aguaque, Aguide, Aracua, Araguan, Aroa, Borobo, Botucare, Bucaral,
+             Buchivacoa, Cabure, Caduto, Caidie, Camachima, Camare, Caracubana,
+             Caujarao, Cayude, Chichiriviche, Chiriguare, Churuguara, Cocuy, Codore,
+             Copey, Coroquidiro, Cueparo, Cujicana, Cumaragua, Curarí, Curimagua,
+             Cururupare, Dividive, Duvisí, Guacharaca, Guanabano, Guaruguaro, Guay,
+             Guica, Hueque, Jacura, Macolla, Macuare, Mapararí, Maquigue, Matícora,
+             Mirimire, Muaco, Murucusa, Omomo, Origuasa, Pecaya, Petare, Piritú,
+             Pure, Purureche, Quisiro, Samaria, Sanare, Sauca, Siburúa, Tacamire,
+             Taguaqui, Taparoy, Tapatapa, Tarica, Tibana, Tocuyo, Tomoporo,
+             Tucurere, Tumatey, Tupure, Tuque, Turamaco, Urucure, Usera, Viana,
+             Yaracal]
+
+  # ══════════════════════════════════════════════════════════════════
+  # ⭐ LO QUE MÁS VALE: el nombre reposa sobre una palabra ATESTIGUADA
+  # ══════════════════════════════════════════════════════════════════
+  # Veintiuno de los 136 tienen como base una entrada del lexicón, y casi
+  # todas `caquetío-atestiguado`. Es la vía más fuerte que tiene la campaña
+  # —la misma por la que `urupagua` llegó al nivel A—: topónimo vivo +
+  # palabra atestiguada = ecuación bilingüe sin necesidad de glosa de autor.
+  con_base_lexica_atestiguada:
+    n: 21
+    pares:
+      - {toponimo: Jacuque,    voz: jakuke,     glosa: 'regar, irrigar'}
+      - {toponimo: Guaranao,   voz: waranao,    glosa: 'salado, ácido'}
+      - {toponimo: Cayude,     voz: kayude,     glosa: 'árbol frutal, guanábano silvestre, turagua'}
+      - {toponimo: Cumaragua,  voz: kumarawa,   glosa: 'caracol de las costas de Paraguaná'}
+      - {toponimo: Caseto,     voz: kaseto,     glosa: 'planta herbácea'}
+      - {toponimo: Cocuy,      voz: kokuy,      glosa: 'penca; planta que da un vino agradable'}
+      - {toponimo: Tarica,     voz: tarika,     glosa: 'laguna, espejo de agua interior'}
+      - {toponimo: Borojó,     voz: borojo,     glosa: 'salina, lago salado de Coro'}
+      - {toponimo: Sividigua,  voz: sibidiwa,   glosa: 'arbusto euforbiáceo (Jatropha gossypiifolia)'}
+      - {toponimo: Tupure,     voz: tupure,     glosa: 'siembra de cacao'}
+      - {toponimo: Curarí,     voz: kurari,     glosa: 'árbol de roble, tecoma'}
+      - {toponimo: Guay,       voz: way,        glosa: 'árbol parecido a la ceiba'}
+      - {toponimo: Piritú,     voz: piritu,     glosa: 'palmera'}
+      - {toponimo: Hueque,     voz: hueke,      glosa: 'sitio de trabajo'}
+      - {toponimo: Dividive,   voz: dibidibe,   glosa: 'árbol cuyo fruto da tinta'}
+      - {toponimo: Chipare,    voz: chipare,    glosa: 'matapalo'}
+      - {toponimo: Jacura,     voz: jakura,     glosa: 'guardar, conservar, custodiar'}
+      - {toponimo: Usera,      voz: usera,      glosa: 'seco, arenoso'}
+      - {toponimo: Chiriguare, voz: chiriware,  glosa: 'gavilán, ave rapaz grande', etiqueta: 'caquetío (a secas)'}
+      - {toponimo: Churuguara, voz: churuguara, glosa: 'territorio Gayón', etiqueta: 'jirajaroide-contacto — NO caquetío'}
+      - {toponimo: Capana,     voz: kabana,     glosa: 'sabana', aviso: 'casa por la regla laxa p~b; podría ser Capuhana y no kabana — mirar a mano'}
+
+  # ══════════════════════════════════════════════════════════════════
+  cruces_que_abre_la_lista:
+    - >-
+      ⭐ TRES nombres son a la vez topónimo y voz del dictado de Medina:
+      `Sividigua` (nivel A), `Chiriguare` (nivel A, el gavilán) y `Dividive`.
+      Con `Adaro`~`dara` y `Chiguare` de la tanda anterior, ya son cinco. El
+      patrón es claro y vale como criterio: en Paraguaná los parajes se
+      nombran con el bicho o la planta que hay en ellos.
+    - >-
+      🔴 REVISAR MI PROPIO VEREDICTO: descarté `dividive` en nivel D del
+      dictado por pancaribeñismo. Pero `dibidibe` está en el lexicón como
+      caquetío-ATESTIGUADO y además es topónimo. Que la voz haya viajado por
+      el Caribe no impide que también sea caquetía. El descarte fue demasiado
+      duro y hay que rehacerlo.
+    - >-
+      `Churuguara` ya está en el lexicón etiquetado `jirajaroide-contacto`:
+      es territorio Gayón, no caquetío. Buen recordatorio de que la lista
+      cruza fronteras lingüísticas, no sólo administrativas.
+
+  # ══════════════════════════════════════════════════════════════════
+  fuera_de_falcon_que_hay_que_marcar:
+    aviso: >-
+      Regla 4: importar un rasgo de otra polity sin marcarlo es el error que
+      Oliver denuncia. Estos no son de la polity costera y necesitan su
+      etiqueta antes de tocar nada.
+    lara: [Carora, Tocuyo, Sanare, Araure]
+    yaracuy: [Aroa]
+    zulia: [Guaruguaro, Quisiro, Tomoporo]
+    probable_lapsus: >-
+      `Petare` es de Miranda, en el área de Caracas — a 400 km de Falcón.
+      O es un lapsus del dictado o es un homónimo local; preguntar a Miguel
+      antes de procesarlo.
+
+  siguiente_paso: >-
+    Investigar online, uno a uno, empezando por los 21 con base léxica
+    atestiguada: son los que pueden cerrar una ecuación bilingüe. Después los
+    24 del barrido OSM, que ya tienen referente vivo. Los 76 nuevos, al final.
