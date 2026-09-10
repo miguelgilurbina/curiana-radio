@@ -597,3 +597,120 @@ tercer_tramo:
     RESEGMENTACIÓN CASTELLANA, como 'capa de tierra árida' para Capatárida.
     Se descarta como glosa y se registra como ejemplar del patrón. El `-dare`
     real recurre en la zona: Capadare, Codore, Dabadubare.
+
+# ══════════════════════════════════════════════════════════════════════
+# CIERRE — los que no estaban en NINGUNA fuente del repo
+# ══════════════════════════════════════════════════════════════════════
+cierre_del_barrido:
+  quienes_son: >-
+    Los 15 que quedaron después de agotar las 29 fuentes extraídas: no
+    aparecen en Esteves, ni en Alvarado, ni en Arcaya, ni en el canon, ni en
+    la mesa. Existían solo porque Miguel los sabe. Aquí sí toca la web — y lo
+    que se busca es REFERENTE, no etimología: saber que el sitio existe y
+    dónde, que es el paso previo a todo lo demás.
+
+  referentes_confirmados_en_falcon:
+    - {forma: Sividigua,  donde: 'poblado del municipio Buchivacoa, 51 m s.n.m.'}
+    - {forma: Murucusa,   donde: 'pueblo de Falcón, citado en un estudio de la cuenca falconiana (UCV)'}
+    - {forma: Botucare,   donde: 'municipio Miranda'}
+    - {forma: Davaduvare, donde: 'pueblo junto a la localidad de ABUDARE, en Paraguaná'}
+    - forma: Caduto
+      donde: 'municipio Carirubana — Paraguaná'
+      lo_que_ata: >-
+        ⭐⭐ Arcaya lista, entre los nombres «de lugares en las regiones
+        ocupadas por los caquetíos», CODUTO y CURARADUTO. Con Caduto van tres
+        en `-duto`, y Miguel tiene además CODORE en su lista, que Arcaya pone
+        en la misma serie. El formante `-duto` merece censo.
+    - forma: Tibana
+      donde: 'municipio Monseñor Iturriza, a 5,9 km al noroeste de Santa Ana'
+      lo_que_ata: >-
+        ⭐⭐ Termina en `-bana`, y hoy mismo Esteves lo ha glosado 'cerro' al
+        despejar Caracubana. Ti-bana sería el cuarto nombre de la serie con
+        Carirubana, Caracubana y Judibana. Hace falta saber si el sitio es un
+        cerro: eso lo dice el mapa, no la etimología.
+    - forma: Origuasa
+      donde: 'aldea junto a GUAMURE, municipio Jacura'
+      lo_que_ata: >-
+        ⭐ Guamure es el GUAIMURE que Esteves glosa «raíz de guay; "ure",
+        raíz» — el topónimo que hoy resolvió de dónde salía el `-ure` de van
+        Buurt. Origuasa es su vecino.
+    - forma: Jacure
+      donde: 'variante o vecino de JACURA, municipio del sureste del estado'
+      lo_que_ata: >-
+        ⭐ El municipio Jacura tiene tres parroquias: Jacura, Agualinda y
+        ARAURIMA — que es otro nombre de la lista de Miguel, y del que Arcaya
+        daba el río. Segundo apoyo para Araurima, y de otra clase: no es un
+        río nombrado en una crónica, es una parroquia viva.
+
+  de_regalo_dos_que_ya_estaban:
+    - >-
+      CAIDIE aparece en el gazetteer como «CAIDI, municipio San Francisco».
+      Arcaya daba el río; ahora hay poblado, y una segunda grafía.
+    - >-
+      CUEPARO aparece como «QUEPARO, municipio Jacura» — que es exactamente el
+      municipio que Esteves le asigna. Confirma la entrada y da la grafía
+      moderna. ⚠️ Cu-~Que- es la alternancia que la campaña ya usa.
+
+  solo_los_encuentro_fuera_de_falcon:
+    aviso: >-
+      ⚠️ Esto NO refuta a Miguel. Él dijo «todos los que te mandé están en
+      Falcón» y ya me ha corregido con razón. Es lo que la web alcanza, y la
+      web indexa mal los caseríos. Se declara el estado, no un veredicto.
+    casos:
+      - {forma: Tomoporo, la_web_da: 'municipio La Ceiba (Trujillo) y Tomoporo de Agua, municipio Baralt (Zulia)'}
+      - {forma: Araure,   la_web_da: 'municipio de Portuguesa'}
+      - {forma: Quisiro,  la_web_da: 'municipio Miranda (Zulia)'}
+    como_se_cierra: 'con las coordenadas del mapa vivo, que es lo que la mesa ya prevé'
+
+  sin_nada_todavia: [Tarama, Samaria, Viana, Pure]
+  nota_sobre_esos_cuatro: >-
+    Los cuatro son además palabras corrientes del castellano o apellidos, así
+    que el buscador se ahoga en ruido. TARAMA sigue teniendo el candidato de
+    Arcaya —TARUMA, en la cadena de colinas de Caujarao— que es la vía más
+    barata: una vocal de diferencia y la misma comarca.
+
+  una_etimologia_que_se_descarta:
+    forma: Sividigua
+    lo_que_circula: >-
+      Un artículo sobre «los quechuas en Venezuela» glosa Sividigua como «ir
+      por amuleto y extraño».
+    por_que_se_descarta: >-
+      🔴 Porque el quechua no tiene nada que hacer en el occidente de
+      Venezuela: no hay contacto documentado, ni en el repo ni fuera de él,
+      entre el quechua y la toponimia falconiana. Es del mismo género que
+      «Coro = viento» —que Arcaya desmontó en 1920— y que «Sanare = del latín
+      sanare»: se busca la lengua prestigiosa que uno conoce y se fuerza el
+      calce. Se registra para que no se vuelva a abrir.
+
+  balance_final_del_dictado:
+    medido_con: '6-fusion/scripts/balance_lista_toponimos.py'
+    de_136_nombres: 'los que quedan sin nada son cuatro: Tarama, Samaria, Viana, Pure'
+    lo_que_queda_pendiente_y_NO_es_barrido:
+      - 'verificar en imagen todo lo que salió del OCR antes de citarlo fuera de 6-fusion/'
+      - 'las coordenadas del mapa vivo para los tres que solo aparecen fuera del estado'
+      - 'la fusión al canon: nada de esto ha entrado, y eso lo decide Miguel'
+
+  los_tres_que_el_balance_no_veia:
+    nota: >-
+      Revisados en su sitio pero sin entrada `forma` propia, así que el script
+      los contaba como pendientes. Se declaran aquí para que la cifra no mienta.
+    casos:
+      - forma: Carora
+        estado: >-
+          Revisado. Alvarado NO tiene entrada; Esteves solo lo nombra como
+          destino del «camino de Perera» (1854), o sea la ciudad de Lara;
+          Arcaya y Jahn lo tratan como geografía externa. Y la etimología que
+          circula —«karira o kurura, cigarra en guajiro, según Arcaya»— NO se
+          verifica en su texto. Sin referente falconiano y sin glosa citable.
+      - forma: Coroquidiro
+        estado: >-
+          Resuelto: Esteves lo glosa parcialmente al declarar «la desinencia
+          IRO, que es diminutivo», y Arcaya lo pone en la serie coro-/curi-
+          junto a Coroqui y Coroquide. Coroquide → Coroquidiro.
+      - forma: Tuque
+        estado: >-
+          Sin resolver, con un único hilo: Alvarado tiene TAQUE (Caryodendron
+          orinocense, el nogal del estado Lara) y Zavala #236 (E) «árbol
+          nucífero» — la misma voz. ⚠️ Pero Tuque←taque exige a~u, que NO está
+          entre las permutaciones que Alvarado documenta (e~i, o~u). No se
+          propone; queda anotado como hilo.
