@@ -438,3 +438,49 @@ por_que_se_para:
     buscando en la web. Y marcar con su procedencia geográfica todo lo que
     salga: la Parte II cubre sierra y oriente, territorio de otras polities y
     de jirajaras, ayamanes y caribes (regla 4, y la propia ficha lo avisa).
+
+# ══════════════════════════════════════════════════════════════════════
+# BALANCE al 2026-09-10 — qué está revisado y qué falta, nombre por nombre
+# Reproducible: 6-fusion/scripts/balance_lista_toponimos.py
+# ══════════════════════════════════════════════════════════════════════
+balance:
+  lista: 136
+  con_algo_en_firme: 56
+  falta_trabajo_real_en: 80
+
+  glosa_de_esteves_y_mirado_en_web: 4
+  glosa_de_esteves_sin_mirar_en_web: 12
+  mirado_en_web_sin_glosa_de_esteves: 40
+
+  en_esteves_pero_SIN_glosa_y_sin_mirar_en_web:
+    n: 58
+    que_significa: >-
+      Esteves les da entrada —referente, municipio, distrito— pero NINGUNA
+      etimología. No están sin tocar: sabemos dónde están. Lo que falta es
+      pasarles el barrido web, que es donde podría aparecer la etimología
+      popular que Esteves no recogió.
+    formas: [Abudure, Acaboa, Adaure, Aguaque, Aracua, Araurima, Aroa, Bariquis,
+             Borobo, Bucaral, Capadare, Capana, Caracara, Caracubana, Carazao,
+             Carirubana, Carora, Caseto, Cauca, Caujarao, Cayude, Charaima,
+             Chipare, Chiriguare, Cocuy, Coroquidiro, Corubo, Cueparo, Cujicana,
+             Curarí, Cururupare, Dividive, Guacurebo, Guaguana, Guasare, Guay,
+             Guayacanal, Guica, Jadagua, Macuare, Maicara, Mapararí, Muaco,
+             Omomo, Petare, Piritú, Sabaneta, Sanare, Sarinao, Sauca, Siburúa,
+             Tacamire, Tiraya, Tucurere, Tuque, Turamaco, Urucure, Usera]
+
+  sin_tocar:
+    n: 22
+    formas: [Araguan, Araure, Azaro, Botucare, Caduto, Caidie, Cumairebo,
+             Cumajacoa, Davaduvare, Guaruguaro, Jacure, Murucusa, Origuasa,
+             Pure, Quisiro, Samaria, Sividigua, Tarama, Tarica, Tibana,
+             Tomoporo, Viana]
+    aviso: >-
+      ⚠️ «Sin tocar» aquí quiere decir que el cruce automático no los encontró
+      en Esteves, y eso NO prueba que no estén: Cumajacoa, Sividigua, Tarama y
+      Tarica YA están en el canon por Esteves, o sea que el OCR los pierde. La
+      lista mide el OCR tanto como el libro.
+
+  siguiente_paso_por_rendimiento:
+    - '1. Barrido web de los 58 que Esteves registra sin glosar: tienen referente firme y sólo falta la etimología popular.'
+    - '2. Los 22 «sin tocar», empezando por mirar en la IMAGEN los que el OCR pierde.'
+    - '3. Verificar en imagen las 16 glosas de Esteves antes de citarlas.'
