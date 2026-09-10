@@ -199,3 +199,65 @@ balance:
     Todariquiba (pypdf la partía) y «caiquetía» de Oviedo y Baños, van tres.
     ⚠️ Aquí citaba un cuarto —Petare— y se cae: el pasaje resultó ser la
     biografía del autor, no una entrada. Corregido el mismo día.
+
+# ══════════════════════════════════════════════════════════════════════
+# Miguel precisa tres, el mismo día
+# ══════════════════════════════════════════════════════════════════════
+precisiones_de_miguel:
+  lo_que_dijo: >-
+    «Cachube es OMBLIGO, palabra que conozco. Y Picure es un ROEDOR según lo
+    que pude encontrar. Y Taparo es un ÁRBOL QUE DA TAPARAS».
+
+  cachube:
+    estado: '🔴 SIN ATESTACIÓN, y buscada en serio'
+    lo_que_cambia: >-
+      Mi hipótesis era que Cachube fuese variante de `chuchube` 'paraulata'. Se
+      cae: Miguel dice que es OMBLIGO. Es parte del cuerpo, no pájaro.
+    donde_se_busco: >-
+      El lexicón entero —NINGUNA entrada glosa 'ombligo', en ninguna capa—, las
+      29 fuentes extraídas, y una búsqueda de formas del tipo ka/ca/ga/ja +
+      ch/c/k/sh + u + b/v/p en todo el repo. Lo único que sale es `cachupín`,
+      que es castellano para 'español'.
+    lo_que_SI_hay_para_ombligo:
+      - "GUAJIRO `tomótscho` y PARAUJANO `jimatajúi` — Jahn 1927, p. impresa 356"
+      - "`maruto` «ombligo del recién nacido», usado en el alto Llano — Alvarado 1921"
+      - "`bototo` «ombligo, muñoncillo, cordón umbilical», Guárico — Alvarado 1921"
+    y_ninguna_se_parece: >-
+      Ni las dos arahuacas vecinas ni las dos venezolanas se parecen a
+      `cachube`. La forma no tiene pariente localizable.
+    por_que_NO_se_descarta: >-
+      ⭐ Porque es exactamente el material que Miguel definió como la apuesta de
+      la Era 2: «enriquecer lo más posible palabras que no podemos atestiguar
+      como caquetías pero que intuimos por coloquialidad o tradición oral». Una
+      voz de parte del cuerpo que un hablante paraguanero conoce y que ningún
+      diccionario recoge es el caso puro de esa capa — y el lexicón tiene ahí
+      un HUECO declarado: no hay palabra para ombligo.
+    donde_va: >-
+      A la capa suelta, la que solo ve el perfil `suelto` de las runs. NO a
+      `caquetío-atestiguado`. Y el hueco léxico 'ombligo' se declara aparte,
+      porque vale por sí mismo.
+    lo_que_la_haria_subir:
+      - 'que aparezca en Medina Colina, «Del Habla Paraguanera» — la fuente física de Miguel'
+      - 'que aparezca en Hernández Baño, «Los Caquetíos de Falcón» (1984), aún sin adquirir'
+      - 'que Miguel recuerde a quién se la oyó, y de dónde era'
+    pregunta_para_miguel: '¿es el ombligo de cualquiera, o el del recién nacido / el cordón? Alvarado distingue las dos cosas y eso afinaría la búsqueda'
+
+  picure:
+    confirmado: '✅ Miguel confirma roedor, y coincide con Alvarado: «Dasyprocta sp. pl.»'
+    lo_que_no_cambia: >-
+      Sigue sin ser candidata a caquetío: Alvarado declara que «ese es el
+      nombre que tiene en varias lenguas de la FAMILIA CARIBE». El acuerdo es
+      sobre el bicho, no sobre la lengua.
+    lo_que_sigue_valiendo: 'la costumbre de nombrar que trae Jahn — el cacique impone un nombre tomado del reino animal'
+
+  taparo:
+    confirmado: >-
+      ✅ Miguel: «árbol que da taparas». Es literal lo que dice Alvarado en dos
+      entradas seguidas: «TAPARO. Crescentia cucurbitina… árbol parecido al
+      totumo» y «TAPARA. Fruto del taparo, y vasija aderezada con ese fruto».
+      La pareja árbol/fruto queda cerrada por dos vías independientes.
+    lo_que_no_cambia: >-
+      La advertencia de Oliver sigue en pie: el juego arahuaco del calabazo es
+      `kala'pua` (guajiro), `wuirru`/`wuir` (guajiro/paraujano), `wiro` (taíno).
+      `Taparo` no se parece a ninguno. El objeto es del área; la palabra no da
+      señales de ser arahuaca.

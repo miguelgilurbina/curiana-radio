@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-10**.
 
-**2119 ítems propuestos** en 42 propuestas, más **5 issue(s)/comentario(s) redactados sin publicar**.
+**2123 ítems propuestos** en 43 propuestas, más **5 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -36,6 +36,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-09-08.yaml` | ? | 0 |  |
 | `esteves_parte2_falcon.yaml` | esteves-1989 | 16 |  |
 | `frase_saludo_mitare.yaml` | ? | 2 |  |
+| `jahn_vocabularios_comparados.yaml` | jahn-1927 | 4 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
 | `lokono_gramatica_perea_1942.yaml` | perea-alonso-1942 | 6 |  |
 | `medicion_contaminacion_score_2026-09-09.yaml` | ? | 0 |  |

@@ -1,0 +1,113 @@
+# ══════════════════════════════════════════════════════════════════════
+# Jahn 1927 — 25 páginas de vocabulario comparado que nadie había minado
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  fecha: 2026-09-10
+  obra: jahn-1927
+  como_aparecio: >-
+    Buscando `cachube` = 'ombligo'. La palabra no está, pero al buscar
+    'ombligo' en las fuentes salió una FILA DE TABLA en Jahn — y detrás de esa
+    fila hay un apéndice entero de vocabularios comparados.
+  el_hueco: >-
+    La nota de la fuente da `estado_minado: minado`, con cobertura
+    «parentesco/creencia/transmisión + polities y religión costera». El
+    apéndice de vocabularios no estaba tocado. Es la TERCERA vez hoy que
+    `minado` resulta significar «alguien le hizo una pregunta»: pasó con el
+    capítulo geográfico de Arcaya y con el glosario de Alvarado.
+
+# ══════════════════════════════════════════════════════════════════════
+lo_que_hay:
+  medido_con: 'pdftotext -layout sobre las 511 páginas, contando cabeceras de tabla'
+  bloques:
+    - lenguas: 'ESPAÑOL | GUAJIRO | PARAUJANO'
+      paginas_pdf: '435-453'
+      cuantas: 19
+      por_que_importa: >-
+        ⭐⭐ Son las DOS comparandas más cercanas al caquetío, y paraujano es una
+        de las columnas de la tabla A-2 de Oliver que D11 puso a rebalancear.
+        Diecinueve páginas de léxico pareado, por campos semánticos.
+    - lenguas: 'ESPAÑOL | ACHAGUA | OTROS DIALECTOS ARUACOS'
+      paginas_pdf: '457-458'
+      cuantas: 2
+      por_que_importa: >-
+        ⭐⭐⭐ Es el achagua que Miguel pidió. Y viene con NUEVE dialectos
+        arahuacos más para comparar: Karútana, Katapolitani, Siusi, Tariana,
+        Yukúna, Uarekena, Baniva, Yavitero, Ipeka.
+      procedencia_que_declara_jahn: >-
+        «Las voces de este vocabulario corresponden al Achagua de la región del
+        CASANARE en Colombia y son tomadas de las publicadas por el PADRE
+        FABO». O sea: Jahn no es fuente primaria del achagua, es transmisor de
+        Fabo. ⚠️ Eso lo hace control de transmisión respecto de Fabo, no
+        corroboración — la trampa §8 otra vez.
+    - lenguas: 'ESPAÑOL | JIRAJARA | AYOMÁN'
+      paginas_pdf: '468-471'
+      cuantas: 4
+      por_que_importa: >-
+        ⭐ Los vecinos NO arahuacos de la sierra. Sirven para lo contrario que
+        las otras: para descartar. Si una voz «caquetía» aparece en jirajara y
+        no en las arahuacas, hay que mirarla dos veces.
+
+# ══════════════════════════════════════════════════════════════════════
+lo_que_ya_dio_de_entrada:
+
+  el_ombligo:
+    fila: 'Ombligo | guajiro TOMÓTSCHO | paraujano JIMATAJÚI  (p. impresa 356)'
+    para_que_sirve: >-
+      Cierra la búsqueda de `cachube`: ninguna de las dos se le parece. Y de
+      paso llena a medias un hueco del lexicón, que no tiene NINGUNA palabra
+      para 'ombligo' en ninguna capa.
+
+  iba_es_piedra:
+    fila: 'Piedra | achagua IBA | Baniva: IPA, Karútana: HÍPA'
+    por_que_es_grande: >-
+      ⭐⭐⭐ Esto entra directo en el conflicto de CHIPARE que quedó abierto hoy.
+      Arcaya 1920 sostiene que la raíz arahuaca `IPA`/`IBA` significa 'piedra'
+      —y cita el guajiro `ipa`, `iparcoa` 'cascajo'— para explicar Chiparagoto
+      'gente de la piedra'. Esteves, en cambio, glosa `ipare` como «aféresis de
+      chipare, MATAPALO».
+      Aquí hay una tabla que da `iba` = piedra en ACHAGUA, con dos cognados más
+      en otros dos dialectos arahuacos. La reconstrucción de Arcaya deja de ser
+      una ocurrencia suya: es un ítem de vocabulario comparado.
+    lo_que_NO_prueba: >-
+      Que el topónimo Chipare de Falcón venga de ahí. Prueba que la RAÍZ existe
+      con ese valor en la familia. La glosa 'matapalo' de Esteves sigue siendo
+      una atestación local y puede ser una voz distinta que coincide en forma.
+    accion: 'llevarlo al issue del conflicto; sigue sin resolverse, pero ya no está empatado'
+
+# ══════════════════════════════════════════════════════════════════════
+la_trampa_de_esta_fuente:
+  aviso: >-
+    🔴 LAS FILAS ESTÁN DESALINEADAS EN EL OCR. En la página del achagua, la
+    columna de comparandas se desplaza una fila respecto del español a partir
+    de «Piedra», y la propia columna achagua mete `iba` en una línea suelta
+    debajo de «Estrella». Leído en crudo, el OCR dice «Piedra: kapauje» y
+    «Flecha: banísi», que es falso: realineado da Piedra=iba, Flecha=kapauje,
+    Casa=banísi, y entonces cada fila casa con su comparanda (banísi ~ Baniva
+    panísi, con b~p).
+  por_que_pasa: >-
+    Es exactamente la trampa que la skill ya recoge: «las tablas a dos columnas
+    se desalinean». Aquí son TRES columnas y el desfase es de filas, no de
+    columnas — peor, porque el resultado sigue pareciendo una tabla válida.
+  regla_para_quien_la_mine: >-
+    ⚠️ NINGUNA fila de este apéndice se cita sin verla en la IMAGEN. El
+    realineamiento de arriba es mi lectura, no el texto. Y el criterio que la
+    sostiene —que cada fila case con su comparanda— es circular si se usa para
+    realinear y luego para probar el parentesco.
+
+# ══════════════════════════════════════════════════════════════════════
+lo_que_propongo:
+  - >-
+    Minar el bloque ACHAGUA primero (2 páginas): es lo que Miguel pidió, es
+    corto, y da la lista de dialectos arahuacos con los que Jahn compara.
+  - >-
+    Después el bloque GUAJIRO-PARAUJANO (19 páginas), que es el que puede mover
+    D11: paraujano es columna de la A-2 de Oliver.
+  - >-
+    El bloque JIRAJARA-AYOMÁN al final, y para descartar, no para sumar.
+  - >-
+    Y antes de nada: renderizar las páginas a imagen. Sin eso, este apéndice no
+    se puede citar.
+deuda:
+  - 'actualizar la cobertura de la nota de Jahn: el apéndice de vocabularios ya no es hueco'
+  - 'localizar al Padre Fabo: Jahn transmite, no atestigua'
+  - 'el hueco léxico «ombligo» sigue abierto en el lexicón'
