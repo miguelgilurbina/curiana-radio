@@ -273,3 +273,32 @@ cola_de_mapa:
     castellano (toponimo-106, -107). Regla que sale de aquí: antes de decir
     que un nombre del mapa no está en la fuente, permutar la inicial
     (j~s~u~h), b~v~p y r~b, y buscar por la raíz.
+
+# ─────────────────────────────────────────────────────────────────────────
+# COLA DE ETIMOLOGÍA COLOQUIAL — abierta el 2026-09-10
+#
+# Miguel dicta topónimos que conoce; el escriba los investiga online uno a
+# uno buscando la etimología que circula en el habla local, y los cruza
+# contra el canon. Es el mismo camino que ya recorrió `chamuriana` en las
+# `lecturas` de arriba: hallazgo coloquial → deuda declarada → cruce.
+#
+# QUÉ HACE FALTA POR NOMBRE (lo mínimo para que la búsqueda rinda):
+#   1. el nombre como Miguel lo dice, y su grafía si la sabe
+#   2. dónde queda, aunque sea aproximado (municipio, cerca de qué)
+#   3. qué ha oído de su significado, si algo — aunque sea «dicen que»
+#   4. si el nombre sigue vivo o es de los viejos
+#
+# El (3) es el que más rinde: una etimología popular, aunque sea falsa, dice
+# qué segmentación oye la gente, y eso es dato aunque la glosa no lo sea.
+# Va como `lectura` de tipo `etimologia-popular` (esquema de `lecturas`).
+#
+# ⚠️ Una etimología coloquial NO es procedencia. Entra con
+# `deuda: sin-procedencia` hasta que la sostenga una fuente citable, igual
+# que se hizo con chamuriana. Y la regla de la casa sigue en pie: un nombre
+# que sigue vivo ES dato, aunque su etimología no lo sea.
+# ─────────────────────────────────────────────────────────────────────────
+cola_de_etimologia_coloquial:
+  estado: abierta — esperando el dictado de Miguel
+  abierta: '2026-09-10'
+  protocolo: 'skill campana-toponimos; las lecturas van al campo `lecturas` de 2-lengua/toponimos.yaml'
+  nombres: []
