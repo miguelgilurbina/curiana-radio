@@ -502,18 +502,38 @@ lista_dictada_2026-09-10:
       cruza fronteras lingüísticas, no sólo administrativas.
 
   # ══════════════════════════════════════════════════════════════════
-  fuera_de_falcon_que_hay_que_marcar:
-    aviso: >-
-      Regla 4: importar un rasgo de otra polity sin marcarlo es el error que
-      Oliver denuncia. Estos no son de la polity costera y necesitan su
-      etiqueta antes de tocar nada.
-    lara: [Carora, Tocuyo, Sanare, Araure]
-    yaracuy: [Aroa]
-    zulia: [Guaruguaro, Quisiro, Tomoporo]
-    probable_lapsus: >-
-      `Petare` es de Miranda, en el área de Caracas — a 400 km de Falcón.
-      O es un lapsus del dictado o es un homónimo local; preguntar a Miguel
-      antes de procesarlo.
+  homonimos_famosos_fuera_del_estado:
+    correccion: >-
+      🔴 Repartí ocho de estos nombres por Lara, Yaracuy, Zulia y Miranda, y
+      di `Petare` por lapsus. Miguel lo corrige el 2026-09-10: «todos los que
+      te mandé están en Falcón; si hay otros en Lara saldrán cuando pase por
+      ahí». Se retira el reparto: la lista es de Falcón.
+    por_que_me_equivoque: >-
+      Reconocí el homónimo CÉLEBRE y supuse que era el único. La repetición de
+      topónimos es la norma en Venezuela, no la excepción, y quien tiene el
+      mapa delante es Miguel. Reconocer un nombre no es localizarlo.
+    los_que_tienen_homónimo_conocido_en_otro_estado:
+      - {forma: Carora, tambien_en: Lara}
+      - {forma: Tocuyo, tambien_en: 'Lara (El Tocuyo); y en Falcón está Tocuyo de la Costa'}
+      - {forma: Sanare, tambien_en: 'Lara; y hay Sanare en el municipio Acosta de Falcón'}
+      - {forma: Araure, tambien_en: Portuguesa}
+      - {forma: Aroa, tambien_en: 'Yaracuy (río y sierra de Aroa)'}
+      - {forma: Quisiro, tambien_en: Zulia}
+      - {forma: Tomoporo, tambien_en: Trujillo}
+      - {forma: Petare, tambien_en: Miranda}
+      - {forma: Guaruguaro, nota: 'el propio Miguel lo situó en el occidente del Zulia, misma región falconiana'}
+    como_se_resuelve: >-
+      Con COORDENADAS, no con discusión: al procesar cada nombre por la
+      campaña se le busca su punto y ahí queda dicho de qué municipio es y,
+      por tanto, de qué polity. Es un paso que la campaña ya hace.
+    lo_que_el_barrido_osm_dice_hoy: >-
+      El barrido sólo cubre Paraguaná y las ABC, así que no zanja los de
+      Falcón continental. Sí encontró `Bajo Aroa` en Paraguaná (12.186,
+      -70.033) — o sea que un Aroa peninsular existe. ⚠️ Con una cautela ya
+      medida en esta campaña: «Bajo Aroa» es uno de los casos de RESEGMENTACIÓN
+      CASTELLANA FALSA detectados (Bajabaroa → «Bajo Aroa»), así que ese punto
+      concreto puede no ser un Aroa sino un Bajabaroa mal cortado. Otra razón
+      para resolverlo nombre a nombre.
 
   siguiente_paso: >-
     Investigar online, uno a uno, empezando por los 21 con base léxica
