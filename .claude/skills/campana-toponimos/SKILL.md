@@ -79,6 +79,32 @@ Con el nombre en la mano, mide:
 `python curiana_sim/juntar_toponimos.py` ya hace estos cruces; para un nombre
 suelto basta `grep -n -i "nombre" 6-fusion/TOPONIMOS_POR_FUENTE.md`.
 
+### 🔴 Y antes de salir a la web, agotar el repo
+
+Medido el 2026-09-10, y costó media campaña. Se estaban gastando búsquedas web
+—nombre por nombre, con resultados de blog— en topónimos cuya glosa estaba
+dentro del repo, con cita y con página. Al cruzar los 61 pendientes contra dos
+obras que ya estaban ahí salieron **once**.
+
+| Obra | Qué es, y por qué se olvida | Qué dio |
+|---|---|---|
+| **Alvarado 1921** | es un **glosario**: un diccionario de voces indígenas, no una crónica. Se usaba solo para la cadena de custodia de Zavala | 8 entradas de cabecera, entre ellas `Araguán` «árbol de **Lara y Falcón**», que no tenía ni referente |
+| **Arcaya 1920** | el **capítulo I** es un censo de los ríos y cerros de Falcón, uno por uno. La nota lo daba por `minado` — de religión y familia | 3 referentes que no estaban en **ningún** archivo del repo, y 8 confirmados |
+
+La regla, entonces:
+
+1. **Un glosario se consulta como glosario.** Si la obra es un diccionario, el
+   pendiente es una entrada, no un pasaje: `grep` de la voz y leer la línea.
+2. **`estado_minado: minado` no significa agotada.** Significa que alguien le
+   hizo *una* pregunta. Mira `cobertura:` en el frontmatter: si dice
+   "religión/familia", la geografía sigue virgen. La deuda es del minador
+   anterior, no de la fuente.
+3. **La web va después**, y sirve para lo que el repo no tiene: etimología
+   coloquial viva, que es dato de otra clase y se etiqueta como tal.
+
+Un buen cruce de repo cuesta un script de veinte líneas y responde en un
+segundo. Una tanda de búsquedas web cuesta una hora y devuelve blogs.
+
 ## 4. Segmentar y decidir el nivel
 
 La escala está en `lexicon_toponimos.py` y en `2-lengua/toponimia.md`; así se
