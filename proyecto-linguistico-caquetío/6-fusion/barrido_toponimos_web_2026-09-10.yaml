@@ -15,7 +15,7 @@ meta:
   fecha: '2026-09-10'
   estado: en curso
   lista: 6-fusion/toponimia_paraguana_miguel.yaml#lista_dictada_2026-09-10
-  investigados_hasta_ahora: 12
+  investigados_hasta_ahora: 30
 
 # ══════════════════════════════════════════════════════════════════════
 # LO QUE RESUELVE GRUPOS ENTEROS: los sufijos
@@ -204,3 +204,175 @@ fuentes_que_este_barrido_identifica:
       para confirmar las siglas de autoría que el proyecto ya usa: PMA =
       Pedro Manuel Arcaya, HB = Adrián Hernández Baño, E = Esteves,
       AM = Angulo Molina, A = Alvarado, CGB = González Batista.
+
+# ══════════════════════════════════════════════════════════════════════
+# SEGUNDO TRAMO — ecuaciones bilingües que cierran con voces atestiguadas
+# ══════════════════════════════════════════════════════════════════════
+ecuaciones_que_cierran:
+  criterio: >-
+    Nombres donde la etimología que circula despeja con palabras que el
+    lexicón YA tiene como caquetío-atestiguado. Es la vía fuerte: no hace
+    falta creerle al divulgador, porque las dos piezas están atestiguadas por
+    separado y la suma da el referente.
+  casos:
+
+  - forma: Yabuquiva
+    hallazgo: >-
+      «En lengua caquetía la palabra QUIBA significa PIEDRA, así que el nombre
+      antiguo parece significar YABAL PEDREGOSO, siendo yabal un tipo de árbol
+      — el YABO o palo verde».
+    despeja_con: >-
+      ⭐⭐⭐ LAS DOS PIEZAS ESTÁN ATESTIGUADAS: `yabo` y `quiva`/`cuiva` 'piedra'
+      son las dos caquetío-atestiguado en el lexicón. Y `yabo` es además voz de
+      NIVEL A del dictado de Medina: el árbol sigue vivo en el habla. Yabo +
+      quiva = 'yabal pedregoso' sale entero sin pedir nada prestado.
+    veredicto_propuesto: 'el mejor candidato del barrido a subir de nivel'
+
+  - forma: Buchuaco
+    hallazgo: '«los dos buches», donde BUCHE = cardo y ACO = par'
+    despeja_con: >-
+      ⭐⭐ `buche` es caquetío-ATESTIGUADO en el lexicón y voz de NIVEL A del
+      dictado. La ficha del Cerro Santa Ana lo lista entre la flora del piso
+      xerofítico: «cujíes, cardones, tunas y buches».
+    lo_que_abre: >-
+      ⚠️ `aco` = 'par, dos' NO está en el canon, y el numeral 'dos' que el
+      proyecto tiene es `biama` (por el lokono/A-2). Si `aco` fuera un
+      colectivo o un dual caquetío sería morfema nuevo — pero viene de una
+      sola fuente divulgativa. Queda anotado como pregunta, no como morfema.
+    veredicto_propuesto: 'la base `buche` es sólida; el `-aco` hay que verificarlo aparte'
+
+  - forma: Baraived
+    hallazgo: >-
+      «BARA en caquetío era término general para cualquier ÁRBOL, y BARAIVERE
+      es la forma primitiva, con BERE = amargo». Baraived sería deformación de
+      *baraivere*.
+    despeja_con: >-
+      ⭐⭐ `bara` 'palo, árbol' está en el lexicón como caquetío-atestiguado.
+      La cadena baraivere > Baraived es del mismo tipo que la de Adícora
+      (jadícuar > jatícora > jadícora > Adícora), que otra fuente da y que
+      coincide con Esteves.
+    lo_que_abre: >-
+      `bere` 'amargo' no está en el canon. Si se confirmara, sería adjetivo
+      nuevo — y engancha con `urupagua`, el árbol de fruto amargo que acaba de
+      entrar al lexicón por tres fuentes.
+
+  - forma: Borojó
+    ya_registrado_arriba: true
+    resumen: 'boro = sal + jo = lugar; el lexicón tiene `borojo` "salina de Coro" atestiguado'
+
+# ══════════════════════════════════════════════════════════════════════
+# EL NOMBRE DEL PROYECTO, con una advertencia
+# ══════════════════════════════════════════════════════════════════════
+coro_y_curiana:
+  hallazgo: >-
+    «El supuesto origen del nombre de esta ciudad proviene del caquetío con el
+    significado de VIENTO... Se considera que Coro fue una derivación de
+    CURIANA, voz indígena caquetía que significaba CIUDAD DE LOS VIENTOS».
+  la_advertencia: >-
+    🔴 La misma fuente recoge el contraargumento: «la palabra coro podría venir
+    del latín CAURU, viento del noroeste, por lo cual muchos dudan que sea voz
+    autóctona». Es decir: la coincidencia de sentido entre el «viento» caquetío
+    y el «viento» latino es sospechosa precisamente por ser perfecta.
+  que_le_hace_al_canon: >-
+    El canon tiene `curiana` (toponimo-111) leído como 'lugar del cardón'. Esto
+    es una lectura RIVAL —'ciudad de los vientos'— y hay que registrarla como
+    tal, no elegir. Nota: el proyecto se llama Curiana; razón de más para que
+    la etimología de su propio nombre esté declarada con sus dos lecturas y su
+    duda, y no resuelta a conveniencia.
+  y_una_pista: >-
+    Si `curiana` fuera 'de los vientos', ataría con `juri` 'viento'
+    (atestiguado), con Judibana 'cerro del viento' y con Jurijurebo 'camino del
+    viento'. Pero cur- y jur- no son la misma raíz sin más: haría falta una
+    correspondencia, no un parecido. Anotado como hipótesis a verificar.
+
+# ══════════════════════════════════════════════════════════════════════
+otros_del_segundo_tramo:
+
+  - forma: Cumaragua
+    hallazgo: >-
+      «Palabra usada por los caquetíos para nombrar la ESPUMA ROSADA y también
+      LA CIRUELA. También se dice que usaban este nombre para una especie de
+      CANGREJO de caparazón ROJIZO». Existen las Salinas de Cumaraguas.
+    lo_que_ata: >-
+      ⭐ El lexicón tiene `kumarawa` 'caracol de las costas de Paraguaná'. Las
+      cuatro glosas —espuma rosada, ciruela, cangrejo rojizo, caracol— comparten
+      el COLOR, y la espuma rosada es literalmente la de una salina. La lectura
+      que las une es cromática, no zoológica: `kumarawa` podría nombrar el
+      rosado-rojizo antes que el bicho. Hipótesis, anotada.
+
+  - forma: Chichiriviche
+    hallazgo: >-
+      «Viene de la lengua de los caquetíos... CHICHI = lugar o nuestro sitio;
+      VICHE = pez. Chichiriviche = nuestro lugar donde nace el sol y abunda el
+      pez».
+    lectura_prudente: >-
+      ⚠️ La glosa no cuadra con su propia segmentación: si chichi = 'lugar' y
+      viche = 'pez', ¿de dónde sale «donde nace el sol»? Y queda `-ri-` sin
+      explicar. Es el patrón del cronista que traduce un nombre entero y luego
+      reparte las piezas. Se registra la voz, no la glosa.
+
+  - forma: Jadacaquiva
+    hallazgo: '«Jaca significa caballo y Quiva significa piedra»'
+    lectura_prudente: >-
+      🔴 Medio acierto y medio anacronismo. `quiva` 'piedra' SÍ está atestiguado.
+      Pero «caballo» es imposible en un topónimo prehispánico: el caballo llega
+      con los españoles. Es un buen ejemplar de etimología popular que conserva
+      una pieza buena dentro de una explicación imposible — razón para
+      despiezar siempre, en vez de aceptar o descartar entero.
+
+  - forma: Taratara
+    hallazgo: >-
+      «Los indígenas tenían la costumbre de repetir las cosas dos veces, y el
+      nombre se formó porque había una mujer llamada Tara y al visitarla
+      preguntaban ¿Tará Tara?». Capital del municipio Sucre.
+    lectura_prudente: >-
+      Cuento etiológico, no etimología. Pero el dato de la REDUPLICACIÓN es
+      interesante: el canon ya tiene `taratarare` glosado 'hato, conuco' en el
+      inventario de morfemas, y el lexicón tiene `tara` (saltamontes, Medina
+      p. 272). La reduplicación como recurso sí está en la lengua.
+
+  - forma: Cabure
+    hallazgo: '«antiguo asentamiento de indígenas JIRAJARA, fundado en 1769»'
+    por_que_importa: >-
+      ⚠️ Zonificación: la Sierra de Falcón se declara «territorio ancestral de
+      jirajaras, ayamanes y ajaguas». Cabure, Curimagua, Churuguara y Pecaya
+      caen ahí. No son de la polity costera y probablemente ni siquiera son
+      arahuacos — `churuguara` ya está en el lexicón como jirajaroide-contacto.
+      Regla 4: se marcan.
+
+  - forma: Curimagua
+    hallazgo: "«hermoso valle de aguas frescas y limpias»"
+    lectura_prudente: 'glosa descriptiva sin segmentación; y es zona jirajaroide (ver Cabure)'
+
+  - forma: Pecaya
+    hallazgo: 'famosa por el «cocuy pecayero», licor de agave'
+    lo_que_ata: >-
+      `cocuy` es caquetío-ATESTIGUADO en el lexicón: 'penca, planta rizomosa
+      que da un vino agradable'. El oficio del cocuy sigue vivo en Pecaya, lo
+      que da continuidad de uso a una voz del canon. Dato de oficio, no
+      etimología del nombre.
+
+  - forma: Tocuyo
+    hallazgo: >-
+      «De origen CARIBE: TOO = claridad, luz, el día, sol; QUY = criaturas
+      feas pequeñas (luciérnagas); YO = volar».
+    lectura_prudente: >-
+      🔴 Segmentación en tres piezas para dar un compuesto pintoresco, sin
+      paradigma que la sostenga. Se registra el hecho de que se le atribuye
+      origen caribe, no la glosa. Y Tocuyo de la Costa SÍ es de Falcón, lo que
+      confirma a Miguel.
+
+  - forma: Mitare
+    hallazgo: 'río principal del municipio Sucre, 120 km, cuenca del Golfo de Venezuela'
+    nada_de_etimologia: true
+    nota: 'el canon ya tiene `mitare` por otra vía — ver frase_saludo_mitare.yaml'
+
+# ══════════════════════════════════════════════════════════════════════
+listas_de_terceros_que_amplian_la_cola:
+  aviso: 'nombres que salen en las fuentes y NO estaban en la lista de Miguel'
+  paraguana: [Sicaname, Matividiro, Misaray]
+  falcon_oriental: [Chivare, Guacabana, Cuare, Bacoa, Tacarigua, Jatira, Jongo, Guacara]
+  nota: >-
+    ⭐ `Bacoa` aparece como topónimo SUELTO, no como sufijo — es la base de
+    morfema-001 viviendo sola. Y `Guacabana` lleva dentro el `-bana` de D9.
+    Los dos son material directo para el inventario de morfemas.
