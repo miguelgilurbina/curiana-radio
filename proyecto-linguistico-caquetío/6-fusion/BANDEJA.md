@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-10**.
 
-**2123 ítems propuestos** en 43 propuestas, más **5 issue(s)/comentario(s) redactados sin publicar**.
+**2123 ítems propuestos** en 44 propuestas, más **5 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -29,6 +29,7 @@ editar_a_mano: no
 | `castellanos_1589_toponimos.yaml` | castellanos-elegias | 0 |  |
 | `censo_ana_esteves_109.yaml` | esteves-1989 | 13 |  |
 | `colores_caquetios.yaml` | ? | 4 |  |
+| `comparandas_jahn_1927.yaml` | jahn-1927 | 0 |  |
 | `computo_d11_2026-08-31.yaml` | ? | 4 |  |
 | `decisiones_colisiones_d5_2026-08-31.yaml` | ? | 3 |  |
 | `decisiones_tanda_2026-08-30.yaml` | ? | 0 |  |

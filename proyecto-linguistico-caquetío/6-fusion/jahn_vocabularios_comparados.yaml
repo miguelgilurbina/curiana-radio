@@ -246,3 +246,115 @@ lo_que_el_cruce_con_el_caquetio_dio:
     podían «traspasar» palabras: la respuesta que da este cruce es que el
     parentesco autoriza a RECONSTRUIR con método, no a copiar. De 34 voces,
     dos tienen cognado caquetío ya atestiguado y ninguna necesita traspaso.
+
+# ══════════════════════════════════════════════════════════════════════
+# EL BLOQUE GUAJIRO-PARAUJANO — 390 filas, cruzadas
+# ══════════════════════════════════════════════════════════════════════
+guajiro_paraujano_cruzado:
+  parseadas: 390
+  paginas: '17 páginas útiles de las 19 (pdf 435-453)'
+  datos: '6-fusion/comparandas_jahn_1927.yaml — guardadas enteras por encargo de Miguel'
+  metodo: >-
+    Cada fila contra las 301 voces caquetías del lexicón, exigiendo LAS DOS
+    COSAS: mismo concepto y forma parecida. El filtro de significado es
+    obligatorio desde que el test de la regla `k-` falló nueve de once por no
+    tenerlo.
+
+  # ── lo primero, porque casi lo cuelo ──
+  la_circularidad_que_casi_cuelo:
+    lo_que_parecia: >-
+      El cruce devolvió los NUMERALES como el mejor grupo de correspondencias:
+      caquetío `wanee` ~ guajiro `wanésia` 'uno'; `apünüin` ~ `púnei` 'tres';
+      `pienchi` ~ `piénye` 'cuatro'. Tres numerales seguidos es de lo más
+      fuerte que puede dar un cruce léxico.
+    lo_que_es: >-
+      🔴 CIRCULAR, y hay que decirlo antes que nada. Las cuatro entradas de
+      numerales del lexicón son `caquetío-RECONSTRUIDO`, y sus notas dicen
+      literalmente «núcleo fundacional, forma justificada por COGNADO EN
+      WAYUNAIKI». Y el «guajiro» de Jahn ES el wayuunaiki. O sea: se
+      reconstruyó la forma desde el wayuu y ahora el wayuu «la confirma». No
+      confirma nada — devuelve lo que le metimos.
+    a_quien_mas_afecta: >-
+      Lo mismo con `kanoa` y `hamaka`, que salieron en el cruce y son también
+      reconstruidas del núcleo fundacional. Fuera las dos.
+    la_regla_que_deja: >-
+      ⭐ Antes de contar un cognado como apoyo, mirar la CAPA de la entrada
+      caquetía. Si es `caquetío-reconstruido` desde la lengua X, ninguna
+      coincidencia con X vale. Es la trampa §8 —la independencia— aplicada
+      hacia dentro del propio lexicón, no entre fuentes. Van cinco veces esta
+      campaña: Perea↔Oliver, Esteves↔Zavala, Zavala#82↔Esteves, la atribución
+      de Capadare, y esta.
+
+  # ── lo que sí aguanta ──
+  criterio_de_no_circularidad: 'la entrada caquetía es ATESTIGUADA, y la comparanda no es la lengua de la que se reconstruyó'
+  correspondencias_que_no_son_circulares:
+    - concepto: mar
+      caquetio: "`para` «mar, agua extensa (dulce o salada)» — caquetío-atestiguado, Zavala #190 (E+HP)"
+      comparanda: 'PARAUJANO `pará` (p. impresa 363)'
+      peso: >-
+        ⭐⭐ Coincidencia exacta de forma y concepto, y el paraujano no es la
+        lengua de la que se reconstruye nada. El repo ya tenía cognados con
+        `*para` (cognado-016 y cognado-019, y el validador avisa de que quizá
+        sean el mismo): esto los CORROBORA y de paso da el dato para decidir
+        si fusionarlos.
+      y_una_pista: >-
+        La tabla da además paraujano `paráta` = 'DULCE'. Si `para` es 'agua' y
+        `-ta` deriva 'dulce', hay morfología ahí. Es hipótesis, no dato.
+
+    - concepto: árbol
+      caquetio: "`igi` «árbol, matapalo, paují» — caquetío-atestiguado, Zavala #164 (E)"
+      comparanda: 'PARAUJANO `jinghi` (p. impresa 363)'
+      peso: >-
+        ⭐ Cognado nuevo, y por vía no circular. ⚠️ Nótese que la glosa
+        caquetía dice «árbol, MATAPALO» — y matapalo es justo la glosa que
+        Esteves da para `chipare`. Dos voces caquetías distintas para el mismo
+        árbol es raro y merece mirada.
+
+    - concepto: 'buche (Cactus caesius)'
+      caquetio: "`buche` «planta xerófita, melocacto, cardo globoso» — caquetío-atestiguado, Zavala #45 (AM+E)"
+      comparanda: 'GUAJIRO `pusché` (p. impresa 368, VERIFICADA EN IMAGEN)'
+      peso: >-
+        ⭐⭐ Aquí el aporte no es la forma sino el TAXÓN: Jahn escribe la
+        entrada española como «Buche, (Cactus caesius)», o sea que da la
+        especie. El lexicón tenía la glosa botánica en prosa; ahora tiene
+        nombre científico. Y el topónimo BUCHUACO, que la campaña despejó como
+        `buche` + `aco`, gana referente preciso.
+      ojo: 'buche ~ pusché exige b~p, que sí está en la permutación laxa'
+
+    - concepto: 'curarire (Tecoma serratifolia)'
+      caquetio: '— no hay entrada; CURARÍ está en la lista dictada por Miguel, sin resolver'
+      comparanda: 'GUAJIRO `kurátschi` (p. impresa 368, VERIFICADA EN IMAGEN)'
+      peso: >-
+        ⭐⭐⭐ Esto cierra un pendiente del dictado. Alvarado glosaba `curarí`
+        como «árbol de la región occidental… PROBABLEMENTE UNA BIGNONIÁCEA» —
+        una conjetura suya, en cursiva de duda. Jahn da la entrada española
+        como «CURARIRE (Tecoma serratifolia)», y Tecoma ES una bignoniácea.
+        La conjetura de Alvarado queda confirmada con especie, por otra fuente
+        y a través de la forma guajira `kurátschi`.
+      lo_que_habilita: >-
+        CURARÍ puede pasar de «sin resolver» a fitónimo con taxón y con
+        comparanda guajira. Sube de nivel en la próxima tanda.
+
+  # ── el hueco, que es el titular ──
+  el_hueco_medido:
+    cifra: '280 de 381 conceptos distintos de la tabla NO tienen palabra caquetía atestiguada'
+    que_significa: >-
+      ⭐⭐⭐ Casi tres de cada cuatro. Y no es vocabulario exótico: es la lista
+      básica de una encuesta lingüística —partes del cuerpo, parentesco, fauna,
+      flora, colores, verbos de todos los días, los números—. Es la medida más
+      honesta que ha dado esta sesión de lo que el proyecto NO tiene.
+    y_al_reves: >-
+      De las 102 filas cuyo concepto SÍ existe en caquetío, solo 12 dieron
+      parecido de forma, y de esas solo 4 sobreviven al filtro de
+      circularidad. O sea: donde se puede comparar, el caquetío casi nunca se
+      parece al guajiro. Eso también es dato, y va en la dirección de D11 —el
+      wayuu no es la hermana por defecto—.
+    para_que_sirve: >-
+      Un hueco medido prioriza. Con esta lista se puede decir QUÉ preguntarle
+      a la próxima fuente en vez de minar a ver qué sale.
+
+  pendiente:
+    - 'verificar en imagen las páginas de las cuatro correspondencias que no lo están'
+    - 'parsear el bloque jirajara-ayomán (pdf 468-471), que sirve para descartar'
+    - 'decidir si cognado-016 y cognado-019 son el mismo, que el validador ya avisa'
+    - 'subir CURARÍ con el taxón de Jahn'
