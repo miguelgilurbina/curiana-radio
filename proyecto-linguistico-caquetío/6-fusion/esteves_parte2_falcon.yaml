@@ -210,3 +210,99 @@ pendiente:
   - >-
     Verificar en la IMAGEN las entradas que se citen: el OCR parte entradas y
     come diacríticos. Ninguna glosa de aquí es citable sin ese paso.
+
+# ══════════════════════════════════════════════════════════════════════
+# SEGUNDA PASADA (2026-09-10): las 123 glosas que no eran de la lista
+# ══════════════════════════════════════════════════════════════════════
+vocabulario_nuevo_en_las_glosas:
+  medido: >-
+    106 de las 139 glosas no son de la lista de Miguel ni están en el lexicón;
+    48 de ellas traen glosa del tipo «Nombre: cosa».
+
+  las_que_declaran_filiacion:
+    - "CHUNAURE: «voz CAQUETÍA, jojota, mazorca tierna de maíz». ⭐⭐ El glosario del maíz de Fundación Empresas Polar da `chunaure` como mazorca tierna en Falcón, CON `tura` de sinónimo — y `tura` es voz del dictado de Miguel. Tres canales para la misma palabra."
+    - "AUTAQUIRE: «Quire, en AYAMÁN, es color» — vocabulario ayamán, jirajaroide"
+    - "GAYONES: «Gayón: árbol de construcción. Gayones: una tribu AYAMÁN». ⭐ El etnónimo sale de un nombre de árbol."
+    - "GUARECAL: «Guareque, voz CHAIMA, sapo» — caribe"
+    - "TUCUA: «Cúa: cangrejo en CHAIMA» — caribe"
+    - "AVARIA: «del TAMANACO» — caribe"
+
+  formantes:
+    - forma: "-bacoa"
+      entrada: "GUAIBACOA: «lugar de los guays»"
+      por_que_importa: >-
+        ⭐⭐ Esteves corta `-bacoa` como 'LUGAR DE', no como 'bosque'. Es
+        exactamente la segmentación alternativa que el blog del sufijo -coa
+        proponía y que yo había anotado como conjetura de divulgador: ahora la
+        dice una fuente citable. Y despeja con voz atestiguada, porque
+        `guay`/`way` 'árbol parecido a la ceiba' está en el lexicón.
+      que_le_hace_a_morfema_001: >-
+        No lo derriba —morfema-001 tiene cinco apoyos glosados y el `-baca`
+        'matorral, espesura' de Alvarado— pero le pone enfrente una lectura del
+        mismo autor que sostiene varios de esos apoyos. Va al issue de
+        morfemas como conflicto declarado, no como cambio.
+    - forma: "-bana"
+      entrada: "GUACABANA: «el cerro de las cotas»"
+      por_que_importa: >-
+        ⭐⭐ Confirma D9 —`-bana` = 'cerro, sitio alto'— con una entrada que el
+        proyecto no había visto porque está en la Parte II. Cautela: Esteves ya
+        estaba entre los apoyos de D9 vía Zavala, así que es refuerzo del mismo
+        autor, no fuente nueva.
+    - forma: "-rao"
+      entrada: "CABARAO: «de la parte desinencial rao sabemos que significa: aglomeración»"
+      por_que_importa: >-
+        ⭐ Formante NUEVO para el proyecto. Hace juego con dos cosas que el
+        canon ya tiene: el `cuar` cumanagoto 'aglomeración, abundancia' que
+        Esteves usa para explicar Adícora, y el `tuba` caquetío al que él mismo
+        lo equipara. Tres sufijos colectivos en la misma zona.
+      pregunta_abierta: "¿lleva `Guaranao` este -rao/-nao? No se afirma: se anota."
+
+  voces_que_el_lexicon_no_tiene:
+    - "CHIGUARIGUA: «voz compuesta de CHIGUA, nasa, cesto, y ARIGUA, un insecto melífero». ⭐ Dos voces de un golpe, y `arigua` cae justo en el racimo de la miel que abrió el dictado (maba, bayure, mebi, memerea)."
+    - "CAMAYATA: «de Camata, gallina silvestre; Camaya: también cesto, nasa» — segundo 'cesto' junto a chigua"
+    - "CUME: «cume, cube, ser sobrenatural, fantasma». ⭐ Va a la esfera de CREENCIA, no al lexicón sin más."
+    - "CHIPE: «almeja» — el lexicón tiene `kiwa` 'concha de almeja'; son dos palabras distintas"
+    - "IPARE: «aféresis de chipare, matapalo» — `chipare` sí está en el lexicón"
+    - "MEMERÍ: «nido de avispas, colmena» — ver el cruce con el dictado"
+    - "Árboles y plantas: ACARITE «Aca: bejuco» · ARIPINO «árbol maderable» · QUIPITO «árbol rutáceo de corteza olorosa» · TIGUAJE «Tigua: árbol rutáceo» · TACAL «colectivo de taque, árbol nucífero» · TURAGUAL «de Turagua, árbol anonáceo» · TACARIGUA «Tacariguo: árbol bombáceo» · CURIAJA «planta bromeliácea» · POPOTE «planta ciperácea, junco» · ENEA «Ese: planta ciperácea» · CAUDERAL «de Caudero, cují cabrero»"
+    - "Fauna: CARRAOS «ave zancuda de pico desmesurado» · MATACANES «cérvido de poca alzada» · CHUBISCAL «de chubisco, insecto, escarabajo»"
+    - "Casa y paisaje: CACIMBA «jagüey» · CHINCHORRO «hamaca de fique» · SEMERUCO «cereza silvestre» · UBERO «árbol que da la uva de playa» · BUCHAL «colectivo de buche: cardo globoso, melocacto»"
+
+# ══════════════════════════════════════════════════════════════════════
+cruce_con_el_dictado_de_medina:
+  correccion_de_metodo: >-
+    🔴 El primer cruce dio 25 voces del dictado en la Parte II usando raíces de
+    seis caracteres sin límite de palabra, y varias eran falsas: `guanariji`
+    casaba con «Guanare», `urubana` con «Cucurubano», `tura` con «Natural» y
+    «estructura», `guamaro` con «Guamare». Rehecho exigiendo palabra completa,
+    son 19. Una raíz corta sin frontera no busca la palabra: busca las letras.
+  voces_del_dictado_en_la_parte_II: 19
+
+  suben_de_nivel:
+    - voz: teco
+      nivel_actual: C
+      hallazgo: "CURIAJA: «planta bromeliácea, TECO, maya»"
+      por_que: >-
+        ⭐ Medina lo dicta como «planta xerófita de hojas lanceoladas, cortas y
+        con espinas por sus bordes», y el barrido web no encontró NADA. Esteves
+        lo da como sinónimo de curiaja y maya, bromeliácea: coincide con la
+        descripción. Es justo lo que la advertencia del barrido decía — que un
+        cero en la web mide la indexación, no la lengua.
+    - voz: cuaguaro
+      nivel_actual: B
+      hallazgo: "BARAGUA: «árbol de madera de construcción, CUAGUARO»"
+      por_que: >-
+        ⭐ Medina: «árbol de madera dura que se utilizó para hacer las cercas de
+        los conucos y el armazón de las viviendas». Esteves: madera de
+        construcción. Misma glosa por dos vías, y de paso despeja BARAGUA.
+    - voz: budare
+      nivel_actual: B
+      hallazgo: "«(Butare, ¿será budare?)»"
+      por_que: "apoyo débil y en condicional, pero es el autor dudando, no una glosa inventada"
+
+  no_aparecen: [memerea, matejea, marite, curubo, busuga, gatiao, guanariji, urubana, guamaro]
+  aviso_sobre_los_ceros: >-
+    ⚠️ Y sin embargo la Parte II SÍ trae «MEMERÍ: nido de avispas, colmena»,
+    que es el `memerea` del dictado con otra terminación: el cruce por forma
+    exacta la pierde. Cuando una voz del dictado no aparezca, hay que mirar
+    también su vecindad fonética antes de dar el cero por bueno.
