@@ -55,6 +55,23 @@ done
 
 Las crónicas coloniales **no usan la ortografía moderna**. Nunca.
 
+### 🔴 Y un parecido de formas sin filtro de significado es casi todo ruido
+
+Medido el 2026-09-10 sobre el vocabulario achagua de Jahn: al buscar
+correspondencias caquetío↔achagua **por forma**, 7 de 11 «aciertan»; al mirar
+la **glosa**, solo aguantan 2. Cinco falsos de siete. `ishay` 'fuego' casaba
+con `kasha`, que es 'luna'; `ida` 'canoa' y `irago` 'beber' casaban los dos
+con `kira`, que es 'escuchar'.
+
+Es la misma trampa que ya costó 25 falsos positivos en el cruce del dictado de
+Medina (raíces de seis letras sin límite de palabra). La regla:
+
+- **Filtra por significado antes de celebrar la forma.** Un par solo cuenta si
+  coinciden las dos cosas.
+- **Y desconfía de tu propia regla.** Si de dos casos sacas una
+  correspondencia fonética, ponla a predecir: si falla nueve de once, no
+  existe. Lo que queda son los dos cognados que tenías antes de inventarla.
+
 ## 3. Leer los pasajes, no los conteos
 
 Los conteos te llevan a la página; el dato está en el texto. Extrae contexto

@@ -111,3 +111,138 @@ deuda:
   - 'actualizar la cobertura de la nota de Jahn: el apéndice de vocabularios ya no es hueco'
   - 'localizar al Padre Fabo: Jahn transmite, no atestigua'
   - 'el hueco léxico «ombligo» sigue abierto en el lexicón'
+
+# ══════════════════════════════════════════════════════════════════════
+# EL BLOQUE ACHAGUA, MINADO — verificado en imagen el 2026-09-10
+# ══════════════════════════════════════════════════════════════════════
+achagua_minado:
+  paginas: 'impresas 377-378 (pdf 457-458)'
+  entradas: 34
+  verificacion: >-
+    ✅ Las dos páginas se renderizaron a imagen y se leyeron. El
+    realineamiento que el OCR obligaba a suponer resultó CORRECTO: Piedra=iba,
+    Flecha=kapauje, Casa=banísi, Arena=gaina. Las 34 filas de abajo salen de
+    la imagen, no del OCR.
+  procedencia_declarada: >-
+    «Las voces de este vocabulario corresponden al Achagua de la región del
+    CASANARE en Colombia y son tomadas de las publicadas por el PADRE FABO».
+    ⚠️ Jahn transmite a Fabo: control de transmisión, no atestación primaria.
+  comparandas_que_usa: 'Karútana, Katapolitani, Siusi, Tariana, Yukúna, Uarekena, Baniva, Yavitero, Ipeka'
+
+  el_vocabulario:
+    lengua: nuiname
+    diente: nier
+    nariz: nutako
+    ojo: nutói
+    oreja: núbila
+    cabeza: núrita
+    barba: nuchiánoma
+    mano: nukaje
+    pie: nuipa
+    agua: mena
+    rio: unibe
+    fuego: ishay
+    lena: ichaba
+    sol: erre
+    luna: kerre
+    estrella: ivisái
+    piedra: iba
+    flecha: kapauje
+    casa: banísi
+    arena: gaina
+    mujer: inagetua
+    esposa: nuino
+    tabaco: sema
+    tigre: echave
+    leon: mirrianare
+    danta: ema
+    pez: kupai
+    canoa: ida
+    cazabe: berri
+    hermano: nimérre
+    sepultura: nirri
+    barbasco: kuna
+    oir: numike
+    beber: irago
+
+  el_prefijo: >-
+    ⭐ Todas las partes del cuerpo llevan `nu-`, que es el posesivo de primera
+    persona: la lista no da 'diente' sino 'MI diente'. El caquetío marca esa
+    misma casilla con `ta-` (y `nü-` para tercera). O sea: comparten la
+    ESTRUCTURA —nombre inalienable con prefijo posesivo obligatorio— y difieren
+    en el exponente. Eso es afinidad de familia, no préstamo.
+
+# ══════════════════════════════════════════════════════════════════════
+lo_que_el_cruce_con_el_caquetio_dio:
+  metodo: 'las 34 contra las 301 voces caquetías del lexicón, por concepto y por forma'
+
+  dos_cognados_que_aguantan:
+    - concepto: piedra
+      achagua: iba
+      caquetio: 'kiba «piedra» [caquetío-atestiguado]'
+      la_familia_entera: 'Baniva ipa, Karútana hípa, y el guajiro ipa que cita Arcaya'
+      peso: >-
+        ⭐⭐⭐ Coinciden en concepto Y en forma. Y no es un par aislado: la
+        propia tabla de Jahn muestra la alternancia dentro del arahuaco —hípa
+        junto a ipa—, con el caquetío del lado de la consonante inicial.
+    - concepto: danta
+      achagua: ema
+      caquetio: 'kama «tapir, danta (Tapirus terrestris)» [caquetío-atestiguado]'
+      la_familia_entera: 'Uarekena éma, Karútana héma'
+      peso: >-
+        ⭐⭐ Mismo patrón exacto y en la misma tabla: héma / éma / kama. La
+        alternancia inicial k~h~cero está DOCUMENTADA por los datos de Jahn,
+        no supuesta por mí.
+
+  la_hipotesis_que_probe_y_se_cayo:
+    que_probe: >-
+      Con esos dos casos se me ocurrió que el caquetío pusiera una `k-` donde
+      el achagua tiene vocal inicial. Lo puse a prueba sobre las once voces
+      achaguas que empiezan por vocal: para cada una, ¿existe el caquetío que
+      predice?
+    resultado: >-
+      🔴 SE CAE. Por pura forma «aciertan» 7 de 11, pero al mirar el
+      SIGNIFICADO solo aguantan dos —los mismos dos de arriba—. Los otros cinco
+      son ruido: `ishay` 'fuego' casa con `kasha`, que es 'luna'; `ida` 'canoa'
+      y `irago` 'beber' casan los dos con `kira`, que es 'escuchar'.
+    lo_que_enseña: >-
+      ⭐ Que un test de parecido de formas SIN filtro de significado produce
+      mayoría de falsos positivos — 5 de 7 aquí. Es la misma trampa que el
+      cruce del dictado de Medina (25 falsos por buscar raíces de seis letras
+      sin límite de palabra). Va a la caja de trampas.
+    lo_que_queda: >-
+      No hay regla `k-`. Hay DOS cognados léxicos, que es lo que había antes de
+      inventarme la regla, y que ya es bastante: dos ítems de vocabulario
+      básico compartidos entre caquetío y achagua por vía de la familia.
+
+  y_lo_que_esto_le_hace_al_conflicto_de_chipare:
+    recordatorio: >-
+      Arcaya lee `ipa`/`iba` = 'piedra' para explicar CHIPARAGOTO 'gente de la
+      piedra'; Esteves glosa `ipare` como «aféresis de chipare, MATAPALO».
+    a_favor_de_arcaya: >-
+      La raíz existe y está ahora medida: achagua `iba`, Baniva `ipa`,
+      Karútana `hípa`. No era una ocurrencia suya.
+    en_contra_de_arcaya_y_esto_es_nuevo: >-
+      ⚠️ Pero el CAQUETÍO no dice `ipa`: dice `kiba`. Y los topónimos que el
+      canon ya tiene con esa pieza la llevan con k — Yabuquiva, Jadacaquiva.
+      Si Chipare fuese un nombre caquetío de 'piedra', debería aparecer la k.
+      Que no aparezca favorece a Esteves para el TOPÓNIMO.
+    la_salida_que_no_contradice_a_nadie: >-
+      Que Arcaya tenga razón sobre el ETNÓNIMO y Esteves sobre el TOPÓNIMO. El
+      propio corpus dice que Chiparagoto es nombre puesto por vecinos, y el
+      formante `-goto` es caribe: un etnónimo híbrido puesto desde fuera no
+      tiene por qué usar la forma caquetía de la palabra. Es hipótesis, va con
+      su etiqueta.
+
+  el_hueco_que_mide: >-
+    ⭐ 14 de los 34 conceptos NO tienen palabra caquetía atestiguada: nariz,
+    oreja, barba, mano, leña, estrella, flecha, esposa, tigre, león, cazabe,
+    hermano, sepultura, barbasco. Son de vocabulario básico —partes del cuerpo,
+    parentesco, utillaje— y eso mide el tamaño real de lo que falta. Un hueco
+    medido vale.
+
+  lo_que_NO_se_hace: >-
+    🔴 No se traspasa ni una voz achagua al caquetío. Miguel preguntó si se
+    podían «traspasar» palabras: la respuesta que da este cruce es que el
+    parentesco autoriza a RECONSTRUIR con método, no a copiar. De 34 voces,
+    dos tienen cognado caquetío ya atestiguado y ninguna necesita traspaso.
