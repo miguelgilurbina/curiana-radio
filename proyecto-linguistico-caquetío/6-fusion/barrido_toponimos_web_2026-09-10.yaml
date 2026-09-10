@@ -376,3 +376,48 @@ listas_de_terceros_que_amplian_la_cola:
     ⭐ `Bacoa` aparece como topónimo SUELTO, no como sufijo — es la base de
     morfema-001 viviendo sola. Y `Guacabana` lleva dentro el `-bana` de D9.
     Los dos son material directo para el inventario de morfemas.
+
+# ══════════════════════════════════════════════════════════════════════
+# 🔴 EL BARRIDO WEB SE PARA AQUÍ, Y POR UNA BUENA RAZÓN
+# ══════════════════════════════════════════════════════════════════════
+por_que_se_para:
+  fecha: '2026-09-10'
+  que_paso: >-
+    Buscando `Maquigue` salió citada una obra: «Topónimos Indígenas de
+    Paraguaná Y OTROS TOPÓNIMOS INDÍGENAS DEL ESTADO FALCÓN». Es Esteves 1989
+    — el libro que el proyecto lleva meses minando. Y la ficha
+    `4-fuentes/esteves-1989.md` ya tenía la tabla: pp. 11-67 Parte I,
+    Paraguaná, tomos 1-3 (MINADA); pp. 81-144 **PARTE II, «otros topónimos
+    indígenas del estado Falcón», tomos 4-6 (SIN MINAR)**.
+  el_error: >-
+    Estuve buscando en blogs lo que estaba, con página y autor citable, en un
+    libro del estante. Los tomos 4-6 eran los únicos sin OCR, y por eso la
+    Parte II nunca se había tocado. Mismo patrón que con Perea: preguntarle a
+    la fuente equivocada teniendo la buena en casa.
+  lo_que_se_hizo: >-
+    OCR de los tomos 4, 5 y 6 con `ocr_fuente.py` (2026-09-10). Ya están sus
+    `.ocr.txt` junto a los de los tomos 1-3.
+
+  cruce_de_los_93_pendientes:
+    en_la_parte_II_de_esteves: 60
+    en_la_parte_I: 15
+    en_ninguna_parte_del_libro: 18
+    lectura: >-
+      ⭐ 75 de los 93 que quedaban están en Esteves. El barrido web habría
+      tardado treinta búsquedas más para dar peor material: Esteves cita, da
+      glosa, y tiene informantes orales con nombre, pueblo y año de nacimiento.
+    los_18_que_no_estan: [Azaro, Botucare, Caidie, Cumairebo, Cumajacoa,
+                          Davaduvare, Duvisi, Jacure, Murucusa, Petare, Quisiro,
+                          Samaria, Sividigua, Tarama, Tarica, Tibana, Tomoporo,
+                          Usera]
+    aviso_sobre_esos_18: >-
+      ⚠️ El cruce es por raíz de seis caracteres sobre texto OCR, así que un
+      cero aquí puede ser del OCR y no del libro — varios de ellos SÍ están en
+      el canon por Esteves (Cumajacoa, Sividigua, Tarama), lo que prueba que el
+      OCR los perdió. Regla 6: verificar en la imagen antes de concluir.
+
+  siguiente_paso: >-
+    Minar la PARTE II (pp. 81-144) con el protocolo de la campaña, no seguir
+    buscando en la web. Y marcar con su procedencia geográfica todo lo que
+    salga: la Parte II cubre sierra y oriente, territorio de otras polities y
+    de jirajaras, ayamanes y caribes (regla 4, y la propia ficha lo avisa).
