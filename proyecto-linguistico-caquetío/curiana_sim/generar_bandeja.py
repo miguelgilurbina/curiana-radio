@@ -35,6 +35,9 @@ LEXICON_PROPUESTAS = {
     "lexicon_van_buurt.py": ("van-buurt-2014", "lo importan generar_tablero y auditar_82"),
     "lexicon_toponimos.py": ("varias (F11)", "lo importa migrar_toponimos"),
     "lexicon_candidatos.py": ("aisladas 2026-06-28", "lo importa generar_tablero"),
+    "lexicon_perea.py": ("perea-alonso-1942",
+                         "comparanda lokono; el motor NO lo importa a propósito "
+                         "(ver su cabecera)"),
 }
 
 ENTRADA_PY = re.compile(r'^\s*"[^"]+":\s*\{', re.MULTILINE)
@@ -65,6 +68,17 @@ def contar_yaml(ruta):
     return n, obra, aviso
 
 
+def es_vista(ruta):
+    """El `generado_por` de la meta, si el YAML es una vista generada; si no, None."""
+    import yaml
+    try:
+        d = yaml.safe_load(ruta.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+    meta = d.get("meta", {}) if isinstance(d, dict) and isinstance(d.get("meta"), dict) else {}
+    return meta.get("generado_por") or None
+
+
 def titulo_md(ruta):
     for linea in ruta.read_text(encoding="utf-8").splitlines():
         s = linea.strip().lstrip("#").strip()
@@ -79,8 +93,14 @@ def main():
         sys.exit(1)
 
     filas_datos = []
+    filas_vistas = []
     for y in sorted(FUSION.glob("*.yaml")):
         n, obra, aviso = contar_yaml(y)
+        # Una vista generada (meta.generado_por) junta lo que ya está en otras
+        # propuestas: contarla sería contar dos veces. Se lista aparte.
+        if es_vista(y):
+            filas_vistas.append((y.name, es_vista(y)))
+            continue
         filas_datos.append((y.name, obra, n, aviso))
 
     filas_issues = []
@@ -127,6 +147,10 @@ def main():
     ]
     for nombre, obra, n, aviso in filas_datos:
         L.append(f"| `{nombre}` | {obra} | {n} | {aviso} |")
+    if filas_vistas:
+        L += ["", "Vistas generadas en `6-fusion/` (no cuentan: juntan lo que ya está arriba):", ""]
+        for nombre, gen in filas_vistas:
+            L.append(f"- `{nombre}` — generado por `{gen}`")
     L += [
         "",
         "## Propuestas léxicas (`curiana_sim/lexicon_*.py` — indexadas en su sitio)",

@@ -24,6 +24,11 @@ lecturas:
       la abundancia de agua dulce que bajaba del cerro". Hallado por Miguel
       en investigación coloquial (web/crónica local), sin fuente citable
       aún — deuda declarada.
+    procedencia_hallada_2026-09-07: >-
+      Esteves 1989, p. 35: «Antigua aldea indígena en cuyas cercanías los
+      españoles fundaron en 1538 el pueblo de Santa Ana de Paraguaná» —
+      Chamuriana es toponimo-109 en el canon. La frase del agua sigue sin
+      fuente.
     observaciones_del_proyecto:
       - "Chamuriana termina en -ana: el formante cuya glosa está EN DISPUTA (#109) — un dato más para esa cola"
       - "el cerro del que baja el agua es el CERRO SANTA ANA = el Cerro de Capú (Velasco 2015; D9): el complejo capu/bana/agua se toca con este nombre"
@@ -49,6 +54,12 @@ lecturas:
       chicha embriagadora, que consumían en ceremonias religiosas»
       (recogida el 2026-09-01, investigación coloquial, cita textual de
       crónica local sin identificar aún).
+    procedencia_hallada_2026-09-07: >-
+      La «crónica local» de la versión (4) es Esteves 1989, p. 53, palabra
+      por palabra («Es más aceptable considerar la voz como una alteración de
+      merejuy…»); y la (2), «¡Moro... uy!», también está ahí, rechazada como
+      «demasiado infantil». Moruy entró al canon como toponimo-108 con las
+      cuatro versiones en lecturas.
     validacion_de_probabilidad: >-
       (Claude, curaduría acordada) La (2) es etimología de anécdota —
       improbable. La (3) exige préstamo quechua sin ruta — improbable.
@@ -79,6 +90,16 @@ lecturas:
       lectura; probabilidad baja mientras no aparezca segundo apoyo.
       Cf. van Buurt §7 para la toponimia aruberoa real (Sero Warawara...).
 
+    cruce_2026-09-08_medina: >-
+      El segundo apoyo apareció, y por el habla: Medina Colina p. 291,
+      URUBANA, «frijol de color morado… que por llegar a Paraguaná desde la
+      isla de Aruba se denominó urubana». Un derivado vivo de Aruba con
+      -ana/-na que significa 'procedente de': o el gentilicio castellano
+      arubano/-a con a > u, o el mismo formante que Arubanas. Sube a
+      probabilidad media la parte de la hipótesis que dice «el -ana
+      escondido»; y desplaza el sentido: no 'lugar de' sino 'de, que viene
+      de'. Registrado en el dictado (voz urubana, C) y en la lista viva de
+      -ana (#109).
   - toponimo: Cayerda / Cayerúa
     tipo: verificacion-de-mapa (Miguel)
     lectura: >-
@@ -90,6 +111,68 @@ lecturas:
     observaciones_del_proyecto:
       - "Oliver mismo vacila en la grafía: Cayerta/'Coyarna'/Cayerda — el nombre llegó mal copiado por alguna de las cadenas"
       - "las variantes -erda/-erta/-erúa son material para la campaña de topónimos (permutar TODAS las vocales — trampa 1 de la tanda)"
+
+  - toponimo: Curiana / Coro
+    tipo: hipotesis-de-miguel
+    fecha: '2026-09-05'
+    lectura: >-
+      ¿Curi- (Curiana, Coriana) y juri 'viento' son la misma palabra con dos
+      pronunciaciones, una de Coro y otra de Paraguaná? En Paraguaná conviven
+      juri y judi 'viento' (Judibana, Jurijurebo); del lado de Coro está
+      Curiana. Curiana sería entonces 'tierra del viento', paralelo de
+      Judibana 'cerro del viento' y de Jurijurebo 'paso de los vientos'.
+    apoyos_en_el_canon:
+      - "la alternancia c~j EXISTE en el corpus, y del lado de Coro: la fórmula de Mitare, cudan (Arcaya 1995) ~ judan (Cuartín 1905) — frase_saludo_mitare.yaml"
+      - "juri~judi (r~d) ya aceptada para Judibana; h~j medida en D5 (Hurehurebo~Jurijurebo)"
+      - "la serie Coro-/Curi- de Arcaya p. 170 es un formante productivo sin glosa acordada (avispa/lagartija, espina, cardón): 'viento' entra en la competencia con el referente a favor — Castellanos, línea 48219: «aquella tierra muy ventosa»"
+      - "reparto en el índice de Esteves: el viento paraguanero va con jur-/jud- (Judibana, Jurijurebo, Juderecal, Juroguagua, Tijuro); los cur- de Paraguaná llevan otros morfemas (Curaidebo, Guacurebo, Yacure, Guaricure)"
+    validacion_de_probabilidad: >-
+      (Claude, 2026-09-05) BAJA-MEDIA. Frenos: (1) fonología — D5 midió que la
+      h/j inicial alterna también con cero (Hacarigua~Acarigua), lo que
+      describe una aspiración débil, y una /k/ no se cae; el pariente wayuu
+      del viento arranca en h (joutai [houtai]) o w (wawai): la raíz apunta a
+      h/w, no a k, salvo que cudan~judan sea variación real y no dos oídos
+      distintos. (2) Mitare está del lado de Coro: la alternancia c~j no se
+      reparte limpia por región; parece variación de transcripción o libre,
+      no un dialecto con frontera. (3) Castellanos NO es apoyo independiente:
+      «Coro viento quiere decir en lengua generosa» es casi seguro el latín
+      corus/caurus 'viento del noroeste' (el castellano lo heredó como coro
+      'viento noroeste'); por eso Arcaya lo llama error. (4) La segunda mitad
+      depende de #109: si -ana es la comparativa na 'como' y no 'lugar de',
+      Curiana pierde el locativo; y D2 (#33) sigue abierto.
+    que_la_haria_subir:
+      - "un segundo par c~j en el corpus, fuera de Mitare"
+      - "que Esteves (fuente E de juri, Zavala #178) traiga en el cuerpo del libro alguna variante con c/k — tarea de la campaña"
+      - "un topónimo cor-/cur- del lado de Coro con referente claramente ventoso"
+      - "resolver #109 (-ana)"
+    toca: ["#109", "#33 (D2)", "toponimia_coro_espina.yaml §coriana-tierra-de-espinas (compite)", "lexicón: coro (D10, hipotético) y curiana"]
+    cruce_2026-09-07: >-
+      La segunda condición («que Esteves traiga alguna variante con c/k») se
+      midió sobre el OCR de los tres volúmenes: curi/curí/kuri/kurí/cudan/
+      judan = 0 (los únicos cur- son curiosos, Curumu, Curubitos, Curaidet).
+      Lo que Esteves sí trae es la familia con j-, en tres formas: «Judi,
+      jurí: viento» (Judibana, p. 47), «Juri: viento» (Jurijurebo, p. 47) y
+      «Jura, juri: ventarrón» (Tura, p. 66: «Hato de Jura es como está
+      escrito el fundo que fue censado en 1881» — la T actual es corrupción
+      escrita de la J, otra permutación para la skill). Para la hipótesis es
+      NEUTRO, no freno: Esteves solo cubre Paraguaná, donde la hipótesis
+      predice j-. La prueba pasa al lado de Coro: hace falta un cur-/cor-
+      con referente ventoso en fuente coriana, y ninguna de las minadas lo
+      da. La validación se queda en baja-media.
+    cruce_2026-09-07_oliver: >-
+      Al releer Oliver §3.2 para la quinta polity: entre los nombres de aldea
+      WANEBUCÁN del sector Punta Espada-Chichibacoa (Guajira) Oliver lee
+      «Paragua-nil» y «Coria-na», morfemas «suspiciously Caquetío», y lo
+      explica por el nexo comercial con los caquetíos de allí (cap. 3 p. 207).
+      Es un SEGUNDO Coriana, a 400 km de Coro y en boca de otro pueblo. Para
+      #33 (D2): el nombre no es único de Coro, así que o es formación común
+      ('lugar de X', 'tierra de X') o viajó con los comerciantes caquetíos.
+      Para esta hipótesis: si Coria-na se repite donde no hay nada que
+      llamar Coro, la raíz coria- es léxica, no el nombre propio de la
+      ciudad; no dice nada sobre 'viento'. Para #109: Oliver segmenta
+      Coria-na y Paragua-nil — la raíz paragua entera + sufijo, como Zavala
+      #191, y -na como sufijo. Registrado en el censo de -ana.
+    deuda: sin-procedencia
 
 hipotesis_estructural:
 
@@ -177,3 +260,282 @@ cola_de_mapa:
                Jadacaquiva, Yabuquiva, Amaraya, Adaure, Maicara, Buchuaco,
                Charaima, Baraived, Cocodite, Parunu, Guacubero, Jacuque,
                Cayerúa, El Supí, Pedregalito, Maitiruma, Judibana]
+  cruce_2026-09-07: >-
+    Los 23 están en el canon. Los 15 que coincidían con el índice de Esteves
+    entraron en el lote 1 (ids 075-089). Los 8 que «no estaban» estaban con
+    otra grafía, y el mapa vivo resultó a veces más fiel que el libro:
+    Uarayadito = Jarayadito (Esteves p. 46; Sarayadite en 1881; toponimo-102),
+    Davaduvare = Dabadubare (p. 37) = Dabudare de Zavala (toponimo-011),
+    Parunu = Barunú (p. 23; toponimo-103), Cayerúa = Cayeruba (p. 30) =
+    Cayerda de Delmonte (toponimo-104), Yabuquiva = Yauquiba (p. 67; el mapa
+    conserva la b del étimo yabo: toponimo-105, nivel A), Guacubero =
+    Guacurebo (p. 38; toponimo-021). La Rinconada y Pedregalito son
+    castellano (toponimo-106, -107). Regla que sale de aquí: antes de decir
+    que un nombre del mapa no está en la fuente, permutar la inicial
+    (j~s~u~h), b~v~p y r~b, y buscar por la raíz.
+
+# ─────────────────────────────────────────────────────────────────────────
+# COLA DE ETIMOLOGÍA COLOQUIAL — abierta el 2026-09-10
+#
+# Miguel dicta topónimos que conoce; el escriba los investiga online uno a
+# uno buscando la etimología que circula en el habla local, y los cruza
+# contra el canon. Es el mismo camino que ya recorrió `chamuriana` en las
+# `lecturas` de arriba: hallazgo coloquial → deuda declarada → cruce.
+#
+# QUÉ HACE FALTA POR NOMBRE (lo mínimo para que la búsqueda rinda):
+#   1. el nombre como Miguel lo dice, y su grafía si la sabe
+#   2. dónde queda, aunque sea aproximado (municipio, cerca de qué)
+#   3. qué ha oído de su significado, si algo — aunque sea «dicen que»
+#   4. si el nombre sigue vivo o es de los viejos
+#
+# El (3) es el que más rinde: una etimología popular, aunque sea falsa, dice
+# qué segmentación oye la gente, y eso es dato aunque la glosa no lo sea.
+# Va como `lectura` de tipo `etimologia-popular` (esquema de `lecturas`).
+#
+# ⚠️ Una etimología coloquial NO es procedencia. Entra con
+# `deuda: sin-procedencia` hasta que la sostenga una fuente citable, igual
+# que se hizo con chamuriana. Y la regla de la casa sigue en pie: un nombre
+# que sigue vivo ES dato, aunque su etimología no lo sea.
+# ─────────────────────────────────────────────────────────────────────────
+cola_de_etimologia_coloquial:
+  estado: 'primera tanda barrida el 2026-09-10: Judibana, Amuay, Jayana, Adaro'
+  abierta: '2026-09-10'
+  protocolo: 'skill campana-toponimos; las lecturas van al campo `lecturas` de 2-lengua/toponimos.yaml'
+
+  nombres:
+
+    - forma: judibana
+      en_canon: 'toponimo-075, nivel A, 4 lecturas'
+      hallazgo_web: >-
+        La etimología que circula es EXACTAMENTE la del canon: «judi» o «juri»
+        es viento y «bana» es sitio alto. Y el lexicón ya tiene `juri`
+        'viento, ventarrón' como caquetío-atestiguado.
+      por_que_importa: >-
+        ⭐ Corroboración COLOQUIAL de D9. La decisión resolvió `-bana` = 'cerro,
+        sitio alto' con seis apoyos documentales; esto añade que la glosa vive
+        en el habla, por un canal que no es ninguna de esas seis fuentes. No
+        sube la etiqueta —el habla no es procedencia— pero dice que la lectura
+        no es de gabinete.
+      la_leyenda: >-
+        Judibana, hija del cacique MANAURE y de Yanara, casada con
+        «Hurehurebo»; perdió una pierna en el Asalto de los Taques de 1526 y
+        fue llevada esclava a Santo Domingo, donde la liberó Juan de Ampíes.
+        La llaman «la primera heroína de Venezuela».
+      cruce_con_el_canon: >-
+        `Hurehurebo` es el `Jurijurebo` de la tradición local que el canon ya
+        recoge en este mismo topónimo: dos variantes del mismo nombre. Pero el
+        canon la da como ESPOSA del Gran Cacique de Jurijurebo y la versión
+        popular como HIJA de Manaure. Dos variantes de la misma tradición, y se
+        declaran las dos.
+      aviso_regla_3: >-
+        🔴 La leyenda es COLONIAL —1526, bucaneros, Juan de Ampíes— y no se
+        proyecta al s. XIV-XV de la simulación. Vale como lectura sobre el
+        NOMBRE, no como hecho del mundo simulado.
+      tipo_de_lectura: [etimologia-popular, tradicion-local]
+      deuda: sin-procedencia
+
+    - forma: amuay
+      en_canon: 'toponimo-090, nivel C, registrado por el etnónimo'
+      hallazgo_web: >-
+        La etimología que circula es «región de los vientos y de las aguas
+        encontradas», atribuida al caquetío. Es una TERCERA glosa: el canon ya
+        tenía la 'cueva grande' de Esteves y la 'muelle' de 1924 que él
+        descarta.
+      por_que_importa: >-
+        ⭐⭐ Lo que vale no es la glosa sino la frase que la acompaña: «sus
+        primeros habitantes pertenecieron a la tribu AMUAYES, quienes poblaron
+        la Península junto con los MORUYES». La tradición popular nombra los
+        MISMOS DOS CLANES que el canon tiene por Delmonte 1883 vía Oliver
+        (paraguana_dos_clanes.yaml), por un canal independiente. Y Moruy es uno
+        de los dos nodos de la era 2.
+      lectura_prudente: >-
+        La glosa de los vientos y las aguas no despeja con ningún morfema del
+        canon y tiene pinta de etimología de folleto turístico. Se registra
+        como `etimologia-popular`, que es lo que es. La corroboración de los
+        dos clanes, en cambio, es dato etnohistórico y vale por sí sola.
+      tipo_de_lectura: [etimologia-popular]
+      deuda: sin-procedencia
+
+    - forma: jayana
+      en_canon: 'toponimo-110, nivel descartado — Esteves da referente e historia, ninguna glosa'
+      hallazgo_web: >-
+        «El nombre Jayana es el de una princesa indígena que sus fundadores
+        asignaron al poblado». Caserío del municipio Los Taques, dividido en
+        Jayana Centro, Norte y Sur; sus primeros habitantes criaban chivos y
+        ovejas. A 7,7 km de Judibana.
+      el_patron_que_asoma: >-
+        Judibana y Jayana están a ocho kilómetros y las DOS se explican
+        localmente como nombre de princesa indígena. Eso no es etimología: es
+        un patrón de la tradición nombradora de la península —resolver un
+        topónimo opaco con una princesa— y conviene anotarlo como patrón. Sirve
+        para leer con cautela cualquier otra «princesa» que salga en el barrido.
+      correccion_al_canon: >-
+        La nota del canon dice que el nombre sigue vivo «con m por n» por el
+        «Nueva Jayama» del OSM. Medido ahora: lo que existe es un parque
+        residencial «Nueva Jayana», y la grafía con m parece errata del mapa,
+        no variante viva. El caserío histórico se llama Jayana, con n.
+      vecinos_que_ya_son_canon: [Coduto, Cumujacoa, Totubacoa, Amuay, Guanadito]
+      tipo_de_lectura: [etimologia-popular]
+      deuda: sin-procedencia
+
+    - forma: adaro
+      en_canon: 'NO — está en el índice de Esteves y en la cola, sin procesar'
+      hallazgo_web: >-
+        Es una de las pequeñas penínsulas de la costa de Los Taques, junto a
+        Punta Salinas, Punta Los Taques, Punta Culata, Punta Judibana, las
+        bahías de Amuay y Judibana, y la península de CHIGUARE. Ninguna
+        etimología coloquial encontrada.
+      lo_que_si_hay: >-
+        Esteves lo despeja: «de `dara`, con prótesis vocálica y disimilación
+        a>o». Y `dara` está en el lexicón como caquetío-ATESTIGUADO, glosado
+        'alcaraván' — el ave. Adaro sería el paraje del alcaraván, con la misma
+        prótesis vocálica que Esteves documenta como patrón.
+      cruce_con_el_dictado: >-
+        ⭐ `dara` es además voz de NIVEL A del dictado de Medina Colina: el ave
+        sigue viva en el habla paraguanera. Topónimo, lexicón y habla del s. XX
+        sobre la misma palabra.
+      y_ademas: >-
+        ⭐ `CHIGUARE` aparece aquí como península menor de Los Taques. Chiguare
+        es voz de NIVEL B del dictado —planta enredadera— y el barrido web no le
+        había encontrado nada. Resulta que es también topónimo: va a la cola de
+        la campaña con esta lectura.
+      propuesta: >-
+        Candidato claro al canon: referente geográfico vivo, etimología de
+        fuente citable y base léxica atestiguada. Procesarlo en la próxima
+        tanda de la campaña de topónimos.
+      tipo_de_lectura: [etimologia-analitica]
+
+# ─────────────────────────────────────────────────────────────────────────
+# LISTA DICTADA POR MIGUEL — 2026-09-10
+#
+# 141 nombres dictados de un tirón: Paraguaná primero, después el resto de
+# Falcón (con algunos de Lara, Yaracuy, Zulia y Trujillo que se cuelan y van
+# marcados). Cruzados contra el canon, el índice de Esteves, el barrido OSM y
+# el lexicón, con la permutación laxa de la campaña (j~s~u~h, b~v~p).
+#
+# Script del cruce: scratchpad de la sesión; el resultado se conserva aquí.
+# ─────────────────────────────────────────────────────────────────────────
+lista_dictada_2026-09-10:
+  dictados: 141
+  unicos: 136
+  repetidos_en_el_dictado: [Bariro, Botucare, Caidie, Cueparo, Mapararí]
+
+  ya_en_canon:
+    n: 36
+    formas: [Abudure, Acaboa, Adaure, Adicora, Araure, Araurima, Azaro, Baraived,
+             Bariquis, Buchuaco, Capadare, Capana, Capatárida, Caracara, Carora,
+             Caseto, Cayerúa, Charaima, Cocodite, Cumairebo, Cumajacoa, Cumarebo,
+             Guacuira, Guacurebo, Guasare, Guayacanal, Jacuque, Jacure, Machuruca,
+             Maicara, Miraca, Sividigua, Tarama, Taratara, Yabuquiva, Zazárida]
+
+  en_el_barrido_osm_sin_procesar:
+    n: 24
+    formas: [Acurigua, Bariro, Borojó, Carazao, Carirubana, Casigua, Cauca, Chipare,
+             Corubo, Cuajaracume, Davaduvare, Guaguana, Guaranao, Guate, Jadagua,
+             Mitare, Quitaire, Sabaneta, Sacuragua, Sarinao, Tacuato, Tiraya,
+             Tucacas, Yaima]
+    nota: 'el nombre está vivo en el mapa; falta procesarlo por la campaña'
+
+  nuevos_para_el_repo:
+    n: 76
+    formas: [Aguaque, Aguide, Aracua, Araguan, Aroa, Borobo, Botucare, Bucaral,
+             Buchivacoa, Cabure, Caduto, Caidie, Camachima, Camare, Caracubana,
+             Caujarao, Cayude, Chichiriviche, Chiriguare, Churuguara, Cocuy, Codore,
+             Copey, Coroquidiro, Cueparo, Cujicana, Cumaragua, Curarí, Curimagua,
+             Cururupare, Dividive, Duvisí, Guacharaca, Guanabano, Guaruguaro, Guay,
+             Guica, Hueque, Jacura, Macolla, Macuare, Mapararí, Maquigue, Matícora,
+             Mirimire, Muaco, Murucusa, Omomo, Origuasa, Pecaya, Petare, Piritú,
+             Pure, Purureche, Quisiro, Samaria, Sanare, Sauca, Siburúa, Tacamire,
+             Taguaqui, Taparoy, Tapatapa, Tarica, Tibana, Tocuyo, Tomoporo,
+             Tucurere, Tumatey, Tupure, Tuque, Turamaco, Urucure, Usera, Viana,
+             Yaracal]
+
+  # ══════════════════════════════════════════════════════════════════
+  # ⭐ LO QUE MÁS VALE: el nombre reposa sobre una palabra ATESTIGUADA
+  # ══════════════════════════════════════════════════════════════════
+  # Veintiuno de los 136 tienen como base una entrada del lexicón, y casi
+  # todas `caquetío-atestiguado`. Es la vía más fuerte que tiene la campaña
+  # —la misma por la que `urupagua` llegó al nivel A—: topónimo vivo +
+  # palabra atestiguada = ecuación bilingüe sin necesidad de glosa de autor.
+  con_base_lexica_atestiguada:
+    n: 21
+    pares:
+      - {toponimo: Jacuque,    voz: jakuke,     glosa: 'regar, irrigar'}
+      - {toponimo: Guaranao,   voz: waranao,    glosa: 'salado, ácido'}
+      - {toponimo: Cayude,     voz: kayude,     glosa: 'árbol frutal, guanábano silvestre, turagua'}
+      - {toponimo: Cumaragua,  voz: kumarawa,   glosa: 'caracol de las costas de Paraguaná'}
+      - {toponimo: Caseto,     voz: kaseto,     glosa: 'planta herbácea'}
+      - {toponimo: Cocuy,      voz: kokuy,      glosa: 'penca; planta que da un vino agradable'}
+      - {toponimo: Tarica,     voz: tarika,     glosa: 'laguna, espejo de agua interior'}
+      - {toponimo: Borojó,     voz: borojo,     glosa: 'salina, lago salado de Coro'}
+      - {toponimo: Sividigua,  voz: sibidiwa,   glosa: 'arbusto euforbiáceo (Jatropha gossypiifolia)'}
+      - {toponimo: Tupure,     voz: tupure,     glosa: 'siembra de cacao'}
+      - {toponimo: Curarí,     voz: kurari,     glosa: 'árbol de roble, tecoma'}
+      - {toponimo: Guay,       voz: way,        glosa: 'árbol parecido a la ceiba'}
+      - {toponimo: Piritú,     voz: piritu,     glosa: 'palmera'}
+      - {toponimo: Hueque,     voz: hueke,      glosa: 'sitio de trabajo'}
+      - {toponimo: Dividive,   voz: dibidibe,   glosa: 'árbol cuyo fruto da tinta'}
+      - {toponimo: Chipare,    voz: chipare,    glosa: 'matapalo'}
+      - {toponimo: Jacura,     voz: jakura,     glosa: 'guardar, conservar, custodiar'}
+      - {toponimo: Usera,      voz: usera,      glosa: 'seco, arenoso'}
+      - {toponimo: Chiriguare, voz: chiriware,  glosa: 'gavilán, ave rapaz grande', etiqueta: 'caquetío (a secas)'}
+      - {toponimo: Churuguara, voz: churuguara, glosa: 'territorio Gayón', etiqueta: 'jirajaroide-contacto — NO caquetío'}
+      - {toponimo: Capana,     voz: kabana,     glosa: 'sabana', aviso: 'casa por la regla laxa p~b; podría ser Capuhana y no kabana — mirar a mano'}
+
+  # ══════════════════════════════════════════════════════════════════
+  cruces_que_abre_la_lista:
+    - >-
+      ⭐ TRES nombres son a la vez topónimo y voz del dictado de Medina:
+      `Sividigua` (nivel A), `Chiriguare` (nivel A, el gavilán) y `Dividive`.
+      Con `Adaro`~`dara` y `Chiguare` de la tanda anterior, ya son cinco. El
+      patrón es claro y vale como criterio: en Paraguaná los parajes se
+      nombran con el bicho o la planta que hay en ellos.
+    - >-
+      🔴 REVISAR MI PROPIO VEREDICTO: descarté `dividive` en nivel D del
+      dictado por pancaribeñismo. Pero `dibidibe` está en el lexicón como
+      caquetío-ATESTIGUADO y además es topónimo. Que la voz haya viajado por
+      el Caribe no impide que también sea caquetía. El descarte fue demasiado
+      duro y hay que rehacerlo.
+    - >-
+      `Churuguara` ya está en el lexicón etiquetado `jirajaroide-contacto`:
+      es territorio Gayón, no caquetío. Buen recordatorio de que la lista
+      cruza fronteras lingüísticas, no sólo administrativas.
+
+  # ══════════════════════════════════════════════════════════════════
+  homonimos_famosos_fuera_del_estado:
+    correccion: >-
+      🔴 Repartí ocho de estos nombres por Lara, Yaracuy, Zulia y Miranda, y
+      di `Petare` por lapsus. Miguel lo corrige el 2026-09-10: «todos los que
+      te mandé están en Falcón; si hay otros en Lara saldrán cuando pase por
+      ahí». Se retira el reparto: la lista es de Falcón.
+    por_que_me_equivoque: >-
+      Reconocí el homónimo CÉLEBRE y supuse que era el único. La repetición de
+      topónimos es la norma en Venezuela, no la excepción, y quien tiene el
+      mapa delante es Miguel. Reconocer un nombre no es localizarlo.
+    los_que_tienen_homónimo_conocido_en_otro_estado:
+      - {forma: Carora, tambien_en: Lara}
+      - {forma: Tocuyo, tambien_en: 'Lara (El Tocuyo); y en Falcón está Tocuyo de la Costa'}
+      - {forma: Sanare, tambien_en: 'Lara; y hay Sanare en el municipio Acosta de Falcón'}
+      - {forma: Araure, tambien_en: Portuguesa}
+      - {forma: Aroa, tambien_en: 'Yaracuy (río y sierra de Aroa)'}
+      - {forma: Quisiro, tambien_en: Zulia}
+      - {forma: Tomoporo, tambien_en: Trujillo}
+      - {forma: Petare, tambien_en: Miranda}
+      - {forma: Guaruguaro, nota: 'el propio Miguel lo situó en el occidente del Zulia, misma región falconiana'}
+    como_se_resuelve: >-
+      Con COORDENADAS, no con discusión: al procesar cada nombre por la
+      campaña se le busca su punto y ahí queda dicho de qué municipio es y,
+      por tanto, de qué polity. Es un paso que la campaña ya hace.
+    lo_que_el_barrido_osm_dice_hoy: >-
+      El barrido sólo cubre Paraguaná y las ABC, así que no zanja los de
+      Falcón continental. Sí encontró `Bajo Aroa` en Paraguaná (12.186,
+      -70.033) — o sea que un Aroa peninsular existe. ⚠️ Con una cautela ya
+      medida en esta campaña: «Bajo Aroa» es uno de los casos de RESEGMENTACIÓN
+      CASTELLANA FALSA detectados (Bajabaroa → «Bajo Aroa»), así que ese punto
+      concreto puede no ser un Aroa sino un Bajabaroa mal cortado. Otra razón
+      para resolverlo nombre a nombre.
+
+  siguiente_paso: >-
+    Investigar online, uno a uno, empezando por los 21 con base léxica
+    atestiguada: son los que pueden cerrar una ecuación bilingüe. Después los
+    24 del barrido OSM, que ya tienen referente vivo. Los 76 nuevos, al final.

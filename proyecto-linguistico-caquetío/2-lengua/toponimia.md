@@ -28,6 +28,21 @@ mismo. La exclusión es correcta para el **habla**: un agente no debería decir
 Es criptoanálisis con texto plano conocido: se tiene la forma y se tiene el
 significado; se despejan las partes.
 
+**Y hay un principio detrás de los nombres**, enunciado dos veces por vías
+independientes: un topónimo caquetío nombra **el rasgo más característico del
+sitio**, no un dueño ni un suceso. [[gonzalez-batista-nombre-de-coro]]: «el
+examen de los topónimos caquetíos conduce a deducir que éstos referirían lo más
+característico de un sitio, ya sea una aguada, un maizal, la presencia de
+ciertos animales, la abundancia de barro, de piedra, o de arena, pero sobre
+todo la presencia de determinados vegetales». Y la Relación de 1578 sobre la
+provincia de lengua Caraca, cuatro siglos antes y sobre otro pueblo: «los
+barrios e poblazones tienen su nombre derivado de algún árbol, quebrada,
+arroyo, peña u otra cosa señalada que esté en su asiento o cerca dellos». La
+convergencia es fuerte y tiene consecuencias: predice que los antropónimos no
+son topónimos (los cuatro *Quicer-* de Barquisimeto salieron del registro el
+2026-09-07 por eso) y hace verificable en terreno una lectura como *La Cuiba*
+'la piedra', el sitio de los cristales de cuarzo a ras del suelo (`toponimo-112`).
+
 ## El caso que lo destapó: `jurijurebo`
 
 El ejemplo de Miguel, y resultó estar **ya atestiguado pieza por pieza**:
@@ -122,7 +137,7 @@ que el método falle.
 | `yacarebacoa` | "Pueblo del bosque" | `yacare` + `bacoa` |
 | `quibacoas` | "Bosques pedregosos" | `quiba` + `(b)acoa`, haplología |
 | `guacaubana` | "Río escondido" | `waka` 'subterráneo' + `-ubana` |
-| `paraguana` | "Rodeada del mar" | `paragua` 'mar' + `-ana` — **el caso que sostiene `-ana`** ([[morfologia]] §3) |
+| `paraguaná` | "Rodeada del mar" | `paragua` 'mar' + `-ana` — **era el caso que sostenía `-ana`**; desde #109 la segmentación está abierta y Esteves (p. 56) recoge «conuco en medio del mar» ([[morfologia]] §3) |
 
 ## Conflictos que la toponimia destapó
 
@@ -145,6 +160,43 @@ causa común. Es el mismo problema que D5, la política ortográfica c/k
 `lexicon_toponimos.py` **es una propuesta**: `curiana_lexicon.py` no lo importa.
 Misma disciplina que las cuatro minerías del 2026-08-03 — el minador emite,
 el humano adjudica. Ver [[INDICE_FUENTES]].
+
+## La tercera voz: `lecturas` (desde el 2026-09-05)
+
+Cada topónimo tenía dos voces: lo impreso (`glosa_fuente`) y nuestro análisis
+(`segmentacion` + `glosa_reconstruida`). Lo que la tradición local, un
+residente o un autor con etimología propia dicen del nombre no cabía en
+ninguna sin mentir, y se quedaba huérfano en `6-fusion/`. Ahora cuelga del
+topónimo como lista `lecturas`, cada una con autor, fecha, tipo y, si lo
+tiene, veredicto; y las que la simulación necesita pueden llevar una
+`definicion_aceptada_simulacion` con etiqueta `canon-simulacion`, nunca
+atestiguado. El esquema y sus reglas: [[datos-de-lengua]] §«La tercera voz».
+La mesa de trabajo donde se ven todas las lecturas junto a las demás fuentes:
+`6-fusion/TOPONIMOS_POR_FUENTE.md`.
+
+## La campaña (desde 2026-09): cómo entra un topónimo
+
+El método de los cuatro pasos de arriba sigue siendo el análisis; lo que se
+añadió en septiembre de 2026 es el **circuito completo** de un nombre hasta el
+canon, escrito como protocolo en la skill `campana-toponimos` (raíz del repo,
+`.claude/skills/`). En corto: la mesa de trabajo es
+`6-fusion/TOPONIMOS_POR_FUENTE.md`; se elige un lote con criterio dicho; se
+llega a la página del libro (Esteves tiene OCR con desfases anotados); se lee
+la entrada entera; se cruza contra canon, lexicón, morfemas, índice, nodos y
+mapa; se decide el nivel; las voces que no son la glosa impresa ni nuestro
+análisis van a `lecturas`; la entrada se escribe en `lexicon_toponimos.py` con
+id explícito y se regenera; la cola de Esteves se cierra nombre a nombre; y la
+bitácora de la fuente dice qué dejó el lote.
+
+Lo hecho: lote 1 (2026-09-06), los del mapa de Miguel que están en Esteves;
+lote 2 (2026-09-07), los cinco del «caribe insular», cerrados con B.6. Lo que
+sigue, por las dos vías que la skill §9 describe: **el diccionario de Medina
+Colina** ([[medina-colina-sxx]]), cuyo dictado manda topónimos a la cola por
+tres caminos (voz que es topónimo en Esteves, lugar que solo Medina nombra,
+isoglosa por lugar), y el **barrido del mapa vivo de la Kaketiana** topónimo por
+topónimo, cuyo territorio es el de la polity costera ([[polities-caquetias]]).
+Las once ciudades de Castellanos y el resto del índice de Esteves siguen en la
+cola.
 
 ## Lo que queda
 

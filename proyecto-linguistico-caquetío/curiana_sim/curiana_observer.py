@@ -82,6 +82,9 @@ class RegistroInteraccion:
 # II. OBSERVER AGENT
 # ══════════════════════════════════════════════════════════════════════
 
+# El mismo modelo que los agentes; el libro de costos lo necesita por nombre.
+MODEL_OBSERVER = "claude-haiku-4-5-20251001"
+
 OBSERVER_SYSTEM = """Eres el Observador Lingüístico de la simulación comunitaria de la Curiana.
 Tu trabajo es analizar respuestas de agentes y producir reportes sobre la evolución del lenguaje.
 
@@ -104,9 +107,13 @@ class ObserverAgent:
     Genera reportes bajo demanda: por turno, día, estación, o año simulado.
     """
 
-    def __init__(self, client: anthropic.Anthropic, lexico: LexicoComunitario):
+    def __init__(self, client: anthropic.Anthropic, lexico: LexicoComunitario,
+                 costos=None):
         self.client = client
         self.lexico = lexico
+        # Libro de costos del run (curiana_costos.LibroDeCostos) o None: las
+        # tres llamadas LLM del observer se registran ahí si existe.
+        self.costos = costos
         self._historial: list[RegistroInteraccion] = []
         self._scores_por_agente: dict[str, list[float]] = {}
 
@@ -205,11 +212,14 @@ Responde en JSON:
 
         try:
             resp = self.client.messages.create(
-                model="claude-haiku-4-5-20251001",
+                model=MODEL_OBSERVER,
                 max_tokens=400,
                 system=OBSERVER_SYSTEM,
                 messages=[{"role": "user", "content": prompt}],
             )
+            if self.costos is not None:
+                self.costos.registrar("observer_analisis", resp, MODEL_OBSERVER,
+                                      agente=agente)
             return json.loads(resp.content[0].text)
         except Exception:
             return None
@@ -431,11 +441,13 @@ Escribe como un lingüista apasionado que ha vivido este año junto a la comunid
 
         try:
             resp = self.client.messages.create(
-                model="claude-haiku-4-5-20251001",
+                model=MODEL_OBSERVER,
                 max_tokens=700,
                 system=OBSERVER_SYSTEM,
                 messages=[{"role": "user", "content": prompt}],
             )
+            if self.costos is not None:
+                self.costos.registrar("observer_reporte", resp, MODEL_OBSERVER)
             reporte = resp.content[0].text.strip()
             header = f"\n{'╔'+'═'*58+'╗'}\n  REPORTE ANUAL — AÑO SIMULADO {anio_simulado}\n{'╚'+'═'*58+'╝'}\n"
             return header + reporte + "\n"
@@ -506,13 +518,16 @@ Responde SOLO con JSON válido, sin texto adicional, con esta forma exacta:
 
         try:
             resp = self.client.messages.create(
-                model="claude-haiku-4-5-20251001",
+                model=MODEL_OBSERVER,
                 # 1024 no alcanzaba para agentes con muchas intervenciones
                 # (ej. protagonistas con 20+ respuestas): el JSON se cortaba
                 # a mitad de la última cita, rompiendo el parseo.
                 max_tokens=2048,
                 messages=[{"role": "user", "content": prompt}],
             )
+            if self.costos is not None:
+                self.costos.registrar("observer_perfil", resp, MODEL_OBSERVER,
+                                      agente=agente)
             raw = "".join(b.text for b in resp.content if hasattr(b, "text")).strip()
             if raw.startswith("```"):
                 raw = raw.split("```")[1]

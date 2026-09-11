@@ -12,7 +12,7 @@ bandeja: 6-fusion/BANDEJA.md
 > ```
 > python curiana_sim/generar_tablero.py    # el canon, medido
 > python curiana_sim/generar_bandeja.py    # la cola de fusión
-> python curiana_sim/guardianes.py         # los 8 en verde antes de cerrar nada
+> python curiana_sim/guardianes.py         # los 9 en verde antes de cerrar nada
 > ```
 > Los números de esta nota pueden haber envejecido. Los de los generados, no.
 
@@ -68,16 +68,75 @@ muestreo F10 de Miguel, **9** el exportador #42).
 1. **El muestreo F10** — verificar ~15-20 citas del corpus al azar (que la
    página exista y diga lo que el hecho afirma). Es la condición 5 del gate y
    es trabajo humano por definición.
-2. **Publicar los 2 borradores** de `6-fusion/issues-pendientes/`:
-   `issue-repertorio-vs-filiacion.md` y `issue-esquema-lecturas-toponimos.md`
-   (`gh issue create --body-file ...`). Y **reescribir** el tercero
-   (`issue-pdfs-fuentes-aporte.md`): su premisa describe una wiki de fuentes
-   que se descartó el 08-24.
+2. ~~Publicar los borradores de `6-fusion/issues-pendientes/`~~ **hecho el
+   2026-09-07**: #119 (repertorio vs. filiación), #120 (PDF tras aporte), el
+   comentario de #109 (cerrado) y el de D14 (#83); el de lecturas se archivó
+   como implementado. La cola de borradores está en cero.
 3. **La decisión de una línea sobre repertorio** para el protocolo del run 1:
    *"el run 1 se mide contra filiación, como decisión de modelado declarada;
    repertorio queda para la era 2"* — o lo contrario. Sin esa línea, el run
    queda medido con una vara que después puede parecer equivocada.
 4. **Compras físicas** (ver C).
+
+## A-bis · El plan de arranque de la simulación (2026-09-08)
+
+> Miguel preguntó qué falta para empezar a montar la simulación. Esto es la
+> respuesta, medida contra el gate de `TABLERO.md` §4 y la ingeniería de
+> [[DISENO_ERA2]] §8. **Nada de aquí es nuevo trabajo de investigación**: la
+> minería que cerró el 2026-09-08 (Medina Colina, la campaña de topónimos,
+> B.6) dejó el insumo puesto.
+
+### Lo que bloquea el gate: tres cosas
+
+| # | Qué | De quién | Tamaño |
+|---|---|---|---|
+| 8 | ~~**D11**~~ **DECIDIDA el 2026-09-08**: rebalancear hacia el eje lokono-taíno, con achagua más adelante (`6-fusion/decisiones_tanda_2026-09-08.yaml`). El gate se levanta cuando la **fase 1** esté aplicada, no al decidir | escriba: minar Perea Alonso 1942, ya en el repo y sin minar | medio |
+| 5 | **F10** — muestreo de 15-20 citas del corpus al azar | **Miguel**: es trabajo humano por definición | una tarde |
+| 9 | **El exportador** (`export_runs_index.py`, #42): exporta 0 turnos con 290 respuestas | escriba | chico |
+
+Las otras seis condiciones están en verde y medidas. El re-export del sitio va
+DESPUÉS del primer run limpio, nunca antes (PLAN_MAESTRO §6.4).
+
+### Lo que la minería ya resolvió, y conviene no volver a comprar
+
+- **Las semillas léxicas divergentes por nodo**, que [[DISENO_ERA2]] §1 declara
+  condición de que los dos nodos no sean decorado, ya existen **atestiguadas**:
+  las dos isoglosas intrapeninsulares del dictado — `gualamo`/`bisure` (Tacuato
+  y Santa Ana frente al resto, mc-mundo-020) y `siguato` (oriente = el ánimo
+  caído, occidente entre pescadores = el pescado pasado, mc-mundo-027). La
+  segunda reparte además por OFICIO, que es justo el eje playa/conuco de los
+  dos nodos.
+- **La toponimia de los nodos con coordenadas**: 145 topónimos en canon y el
+  barrido OSM (`6-fusion/toponimos_mapa_kaketiana.yaml`), con Moruy, Chamuriana,
+  Cayerúa, Maitiruma y el Capubana localizados.
+- **El registro de vecinos** (`3-mundo/etnias.yaml`, 9.º guardián) y la quinta
+  polity (`occidental`, futura) para cuando el contacto salga de la península.
+
+### El orden de arranque
+
+1. **Arreglar el exportador** (escriba, chico). Desbloquea la condición 9 y es
+   lo único del gate que no depende de Miguel.
+2. **F10** (Miguel) y la **fase 1 de D11** (escriba: minar Perea Alonso 1942,
+   926 pp. con texto, ya en el repo). Con eso el gate queda en verde.
+3. **Verificar la asignación norte/sur de los clanes** ([[DISENO_ERA2]] §2 la
+   marca EN VERIFICACIÓN: los homónimos modernos parecen invertidos respecto a
+   Oliver). Ahora se puede: el barrido OSM tiene las coordenadas. Chico, y hay
+   que hacerlo antes de sembrar los nodos o se siembran al revés.
+4. **Un run corto de la era 1 con la base sellada**, para tener la vara contra
+   la que leer la era 2 (protocolo `04_protocolo_run_1_era_auditada`).
+5. **Las cuatro piezas chicas de la era 2**, en el orden que el propio diseño
+   sugiere: modelo de costos → columna `nodo` en el esquema y pertenencia
+   agente→nodo → semillas por nodo (las isoglosas de arriba) → métricas
+   dentro/entre nodos con detector de meseta.
+6. **Lo grande, después**: episodios serializables, diario por agente y el
+   elenco nuevo desde los linajes. El elenco no es código, es curaduría con
+   Miguel, y puede avanzar en paralelo desde el principio.
+
+### Lo que este plan NO decide
+
+Si el run 1 se mide contra filiación o contra repertorio (#119). Sin esa línea
+escrita, el run queda medido con una vara que después puede parecer
+equivocada — es el punto 3 de la sección A, y sigue esperando.
 
 ## B · La cola de trabajo, por rendimiento
 
@@ -158,19 +217,63 @@ Sesión técnica contra Supabase local (puertos 64321/64322). Condición 9.
 
 ### B.5 · La campaña de topónimos
 
-Implementar `lecturas` en el esquema + `compilar_lengua.py`; retro-poblar
+La mesa de trabajo es `6-fusion/TOPONIMOS_POR_FUENTE.md` (generada por
+`juntar_toponimos.py`, 2026-09-04): todos los topónimos que el proyecto ha
+tocado, por obra, cruzados contra el canon, Esteves, los nodos y el mapa de
+Miguel. Se regenera; no se edita. El protocolo completo es la skill
+`campana-toponimos`. Lotes hechos: 1 (2026-09-06, los del mapa de Miguel en
+Esteves, 15), 2 (2026-09-07, los «caribe insular», 4), 3 (las once ciudades de
+Castellanos, 8 entradas nuevas) y 4 (los ocho del mapa «fuera de Esteves», que
+estaban con otra grafía) y 5 (Moruy, Chamuriana y Adícora: los nodos de la era 2,
+con las procedencias que les faltaban a las lecturas de Miguel). Siguientes, por
+las dos vías de la skill §9: **el diccionario de Medina Colina** (cada sesión
+de dictado cierra con `juntar_toponimos.py`; lo que quede ≡ sin ★ es el lote)
+y el **barrido del mapa vivo de la Kaketiana** (lista con coordenadas por
+región → cruce con la mesa → lo nuevo a la cola con deuda declarada). El resto del índice de Esteves, a su ritmo (la cuenta, en el propio índice).
+
+~~Implementar `lecturas` en el esquema + `compilar_lengua.py`~~ (hecho el
+2026-09-05, con `definicion_aceptada_simulacion`; ver datos-de-lengua.md); retro-poblar
 las ~20 lecturas de la sesión (están en `toponimia_coro_espina.yaml`,
 `lengua_toponimia_quibacoa.yaml`, `petroglifos_y_manaure.yaml`,
 `velasco_primarios_agi.yaml`); y procesar la cola de 182 de
 `toponimos_esteves_indice.yaml`, cruzada con las once ciudades de Castellanos
-y los cinco de Bastidas. La auditoría de tildes va aquí (es lo que
-distinguiría `-ana` de `-aná` y decide #109).
+y los cinco de Bastidas. ~~La auditoría de tildes va aquí (es lo que
+distinguiría `-ana` de `-aná` y decide #109).~~ Hecha el 2026-09-07 contra
+Esteves y Zavala: tres correcciones (`paraguaná`, `caquetío`, `aburí`). Y el
+censo de -ana en Esteves, mismo día: ninguna forma glosada 'lugar de'
+(`6-fusion/censo_ana_esteves_109.yaml`; borrador de comentario en
+`issues-pendientes/comentario-109-censo-ana-esteves.md`). **#109 decidido
+(B, Miguel, mismo día)**: la glosa 'lugar de' se retira, `-ana` es
+`morfema-011` sin glosa, la lista de -ana queda viva en el censo y Jayana
+entra al canon (`toponimo-110`). Comentario publicado y #109 cerrado.
 
-### B.6 · Oliver §3.2.4 — los caribes (pendiente desde la tanda anterior)
+**Mismo día, tarde**: las lecturas del 25 de agosto están fusionadas (Miguel:
+«que no quede nada pendiente por ahí sin guardar o fusionar»): `curiana` es
+`toponimo-111` (C, seis lecturas: González Batista, Arcaya, Castellanos, la
+hipótesis curi ~ juri, el Coria-na de Oliver), `quiquiba` se rehabilitó a C con
+su id 034, `la cuiba` es `toponimo-112` (C), `capuhana` es `toponimo-113` (B, con
+el centro sagrado de Miguel como lectura), los cuatro *Quicer-* son antropónimos
+de Barquisimeto, y el cognado 'piedra' tiene CQ quiva. Y el **barrido del mapa
+vivo** está hecho con OSM (`barrer_mapa.py`, `6-fusion/toponimos_mapa_kaketiana.yaml`,
+ficha `osm-kaketiana`). Y el **lote 7** (mismo día, «dale, procésalo»): los 36
+del barrido de Paraguaná procesados — Bariquí (B), trece C, cuatro descartados
+de Esteves (Sisibauco era el «ilegible» del índice), siete del mapa sin fuente
+con coordenadas, cuatro castellanos; ids 114-142. Índice de Esteves: 54 en
+canon, 133 en cola. El dictado de Medina sigue en paralelo (debudeque C,
+dividive D + mc-mundo-021; disey ya estaba).
 
-pp. impresas 223-230 = pdf 250-257. El estrato que Esteves atribuye a Amuay,
-Elegüey, Maragüey, Jamaica y **Maitiruma** ('manantial azul', caribe
-insular). Pregunta: ¿qué grupos caribes, dónde, con qué contacto?
+### B.6 · Oliver §3.2.4 — los caribes ✅ (minado el 2026-09-07)
+
+pp. impresas 223-230 = pdf 250-257. Respuesta en
+`6-fusion/oliver_324_caribes.yaml`: los grupos de lengua caribe (bubure,
+burede, pemeno, kirikire) están al sur y oeste de Maracaibo; el único contacto
+con caquetíos son los enclaves de la esfera occidental en Juruara. **Paraguaná
+no aparece** y ninguno de los cinco de Esteves tampoco (0/5, medido): el
+«estrato caribe insular» es inferencia fonética suya, y la etiqueta nombra una
+lengua arahuaca. Fusionado el mismo día por decisión de Miguel: los cinco hechos
+son `geografia_politica-009..013`, los cuatro grupos están en `3-mundo/etnias.yaml`
+(registro canon nuevo, con el caribe del elenco como canon-simulación), Amuay
+resuelto a favor de la etnohistoria, Miraca es `nodo-031`.
 
 ### B.7 · Campañas grandes, cuando haya hueco
 

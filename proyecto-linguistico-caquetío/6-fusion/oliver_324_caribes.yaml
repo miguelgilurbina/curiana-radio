@@ -1,0 +1,271 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — Oliver 1989 §3.2.4, los grupos de lengua caribe (pp. 223-230)
+#
+# La tarea B.6 preguntaba: ¿qué grupos de lengua caribe, dónde, con qué
+# contacto con la polity costera / Paraguaná? — y pedía cruzar con los cinco
+# topónimos que Esteves atribuye al «caribe insular» (Amuay, Elegüey,
+# Maragüey, Jamaica, Maitiruma).
+#
+# Minado el 2026-09-07 sobre OCR propio (fuentes_caquetios/
+# Oliver_1989_cap3_s324_caribes.ocr.txt; pdf 250-257 = impresas 223-230).
+# Regla 5: esto es propuesta; la fusión a 3-mundo/etnias.yaml (antes 6-fusion/etnias_en_contacto.yaml) y al
+# corpus la decide el humano. Regla 4: TODO lo de aquí es de la esfera
+# OCCIDENTAL (Maracaibo, Perijá, Guajira), no de la polity costera.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-09-07'
+  estado: fusionado   # 2026-09-07, decisión de Miguel: hechos → geografia_politica-009..013; grupos → 3-mundo/etnias.yaml etnia-004..007; Amuay resuelto
+  obra: oliver-1989-cap3-vecinos
+  paginas: "223-230 (pdf 250-257)"
+  pregunta: "B.6 — grupos de lengua caribe, dónde, y su contacto con los caquetíos; cruce con los cinco «caribe insular» de Esteves"
+
+# ══════════════════════════════════════════════════════════════════
+# 1. LA RESPUESTA CORTA
+# ══════════════════════════════════════════════════════════════════
+respuesta:
+  donde_estan_los_caribes: >-
+    Al sur y al oeste del lago de Maracaibo, no en Falcón: la provincia de
+    Juruara (sur-sureste del lago), las laderas orientales de la Sierra de
+    Perijá, el noreste del lago, y desbordando la sierra hacia el valle del
+    Ranchería y el Magdalena medio. Oliver: «They controlled most of the
+    southern lowlands of Maracaibo, the eastern-northeastern area of Maracaibo
+    Lake, the northernmost Sierra of Perijá, and spilled over the sierra into
+    the Upper-Middle Rancheria» (p. 229).
+  paraguana: >-
+    NO APARECE. Medido sobre el OCR de las ocho páginas: Paraguan- 0, Amuay 0,
+    Elegüey 0, Maragüey 0, Jamaica 0, Maitiruma 0, «insular» 0, «Island» 0,
+    Antill- 1 (una nota al pie sobre el uso español de «caribes» en las
+    Antillas). Las cuatro veces que dice «peninsula» es la Guajira. Falcón
+    aparece una vez («the Coastal Falcón areas», p. 229) como extremo del eje
+    comercial de los caquetíos guajiros. Coro, una (una cita de Martín).
+  contacto_con_caquetios: >-
+    Solo UN grupo caribe tuvo relación con arahuacos: los Bubure de Juruara,
+    entre los cuales había «a few Caquetío villages, such as Parepi», y esa
+    relación «appears to be more than a simple trade partnership» (p. 229).
+    Son los caquetíos de la esfera occidental — enclaves minoritarios entre
+    caribes — no los del Golfete.
+
+# ══════════════════════════════════════════════════════════════════
+# 2. LOS GRUPOS, UNO POR UNO — candidatos para 3-mundo/etnias.yaml (antes 6-fusion/etnias_en_contacto.yaml)
+# ══════════════════════════════════════════════════════════════════
+grupos:
+  - nombre: bubure
+    variantes: [bubures, bugure]
+    familia_linguistica: caribe (Perijá Carib; Durbin 1977)
+    donde: >-
+      dos segmentos: laderas orientales de la Sierra de Perijá, al oeste de la
+      villa de Maracaibo (mapa de c. 1534 en Oviedo y Valdés, Fig. 32), y la
+      provincia de Juruara («Xuara»), sur-sureste del lago
+    polity_caquetia: occidental (Maracaibo) — NO la costera
+    tipo_de_contacto: corresidencia — aldeas caquetías (Parepi) entre los bubures de Juruara
+    intensidad: >-
+      la más alta de todos los caribes: «Of all the Cariban-speaking groups,
+      only the Bubure appear to have had relationships with Arawakan-speaking
+      groups» (p. 229); «more than a simple trade partnership»
+    descripcion_de_epoca: >-
+      Esteban Martín (1534): «domestic» y «peaceful», aldeas de tres o cuatro
+      casas, los hombres con estuche fálico de totuma, las mujeres con
+      pampanillas de algodón (Martín en María 1977: 498)
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "226-229"}
+  - nombre: burede
+    variantes: [coronados]
+    familia_linguistica: caribe (Perijá Carib) — «another nation of Indians but with little differences in the language» respecto a los bubures (Martín 1534)
+    donde: Sierra de Perijá por el río Macomite (Guasare), y el valle del Ranchería, que compartían con los coanaos
+    polity_caquetia: occidental — sin contacto directo documentado con caquetíos
+    nota: >-
+      «crowned like friars» (de ahí coronados). Oliver los cree ancestrales de
+      los yukpa actuales. La única pista de filiación caribe de bubure/burede
+      es que llamaban «Onoto» (palabra caribe para el achiote) al grupo vecino
+      probablemente pre-paraujano — Durbin de acuerdo (n. 152)
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "226"}
+  - nombre: pemeno
+    variantes: [pemono, pemones, pemeos]
+    familia_linguistica: caribe — «hablan como los bubures» (Oviedo y Valdés [6]: 33); «basically the same nation» que los de Perijá (Martín)
+    donde: al este de los bubures de Juruara; y «pemeos» lejos al sur, por el Magdalena, en tierra de pantanos (Martín)
+    polity_caquetia: occidental — comercio, no corresidencia documentada
+    tipo_de_contacto: >-
+      mercado: pemenos y bubures («and possibly the Caquetío as well»)
+      cambiaban productos agrícolas por pescado del lago con kirikires y
+      onotos; Pérez de Tolosa 1546: los onotos «lo venden en sus mercados a los
+      indios bubures de la provincia de Juruara, a trueque de maíz, yuca, y
+      otras cosas»
+    descripcion_de_epoca: pacíficos, más numerosos que los bubures, sin cubrirse, sin flechas envenenadas (Martín en María 1977: 504)
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "226-228"}
+  - nombre: kirikire
+    variantes: [quiriquires, güerigüeris]
+    familia_linguistica: desconocida — «I have a hunch that they were a Carib-speaking group» (Oliver, n. 155)
+    donde: «along the coast and inside the water of the lake itself, many villages constructed with wood» — palafitos; «travel always by canoe» (Oviedo y Valdés [6]: 32)
+    polity_caquetia: occidental — socios de mercado de los pemenos
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "227-228"}
+  - nombre: yukpa
+    variantes: [yuko, yuk'pa, yupe, chake, iroca, japreria, coyaima]
+    familia_linguistica: caribe (Perijá Carib) — los actuales
+    donde: Sierra de Perijá, donde los empujaron primero los barí y luego los colonos (Durbin 1977: 29-30)
+    polity_caquetia: ninguna (época moderna)
+    nota: >-
+      Layrisse y Wilbert 1966: los yukpa se mezclaron intensamente durante
+      ~700 años (desde c. 1250) con una población Diego-negativa, probablemente
+      los barí — alianzas por matrimonio entre chibchas y caribes
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "223-224, 230"}
+  - nombre: caribe costero venezolano
+    variantes: [chayma, cumanagoto, yao, tamanaco]
+    familia_linguistica: caribe (Caribe del Norte, sub-grupo Coastal Carib; Durbin 1977)
+    donde: «along much of the central to eastern coast of Venezuela and parts of the northern Llanos» — al ESTE, lejos de Falcón
+    polity_caquetia: ninguna documentada en esta sección
+    nota: >-
+      Es el estrato al que Esteves atribuye Caradacagua, Manare y el -cuar de
+      Adícora (cumanagoto). Oliver los sitúa en la costa central-oriental: no
+      hay geografía que sostenga cumanagotos en Paraguaná, salvo por préstamo
+      o por la ruta marítima. Sigue siendo atribución léxica de Esteves.
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "223-224"}
+
+# ══════════════════════════════════════════════════════════════════
+# 3. HECHOS PARA LA ESFERA (geografía política / esfera de interacción)
+# ══════════════════════════════════════════════════════════════════
+hechos_propuestos:
+  - id: caribes-ruta-y-cronologia
+    esfera: geografia_politica
+    etiqueta: hipotetico
+    hecho: >-
+      La expansión caribe usó la misma ruta (Llanos → sur de Maracaibo por la
+      depresión del Táchira) que la primera oleada arahuaca (guajiro-paraujano),
+      pero después; y el bastión caribe en el sur del lago y en parte de los
+      Llanos del norte es, según Oliver, la razón de que la expansión arahuaca
+      posterior (la que lleva al caquetío) NO usara esa ruta. Secuencia:
+      arahuaco temprano → caribe en la cuenca de Maracaibo, esta última más o
+      menos contemporánea de la expansión del caquetío ancestral en los Llanos
+      del norte.
+    cronologia: >-
+      Layrisse y Wilbert 1966: el proto-caribe empieza a divergir hace ≥ 4,5
+      milenios (c. 2500 a.C., Bakairi el primer corte); Oliver estima el nodo
+      Caribe del Norte → Coastal Carib etc. hacia 2,3 milenios (n. 148: sin
+      correlación arqueológica hecha).
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "224-225"}
+  - id: caquetios-occidentales-enclaves
+    esfera: geografia_politica
+    etiqueta: atestiguado
+    hecho: >-
+      Los caquetíos de la esfera occidental eran minoría: puestos de frontera
+      en el norte de la Guajira y en Cabo de la Vela–Chichibacoa (donde había
+      agricultura si llovía), y aldeas entre los bubures de Juruara (Parepi).
+      «The Caquetío presence in this broad region is clearly numerically
+      inferior to other groups.» Su presencia en la Guajira la explica el
+      comercio: punto intermedio entre el valle César–Ranchería y «the Coastal
+      Falcón areas».
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "228-229"}
+    toca: "regla 4 — es la polity occidental; y el eje Falcón costero ↔ Guajira como ruta comercial caquetía"
+  - id: caquetios-eligen-socios
+    esfera: geografia_politica
+    etiqueta: atestiguado
+    hecho: >-
+      Los caquetíos guajiros escogieron como socios comerciales a wanebucanes
+      y coanaos, y evitaron toda relación con onotos, kusi'na y guajiros (wayú):
+      «there is not one single reference of Caquetío being in association to
+      any of the latter Arawakan-speaking groups» (p. 229). El comercio era
+      «highly selective between groups»: alianzas formalizadas, no todos con
+      todos.
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "227-229"}
+    toca: "D11 (wayunaiki vs. lokono): la evidencia etnohistórica pone a los caquetíos EVITANDO a los guajiros, no conviviendo"
+  - id: caquetios-siempre-pacificos
+    esfera: geografia_politica
+    etiqueta: hipotetico
+    hecho: >-
+      Frente a los caribes de Perijá y Juruara («almost always described as
+      being peaceful») y a los arahuacos de Maracaibo, «more bellicose and
+      rebellious» (onoto, wayú, kusi'na), «a notable exception to this is the
+      Caquetío, who were always peaceful» (n. 154).
+    reserva: >-
+      viene de las mismas crónicas que inventaron la oposición caribe/guaitiao
+      (§3.2.4.2): «pacífico» es una etiqueta colonial tanto como «caribe».
+      Registrar, no proyectar.
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "227"}
+  - id: mercado-del-lago
+    esfera: geografia_politica
+    etiqueta: atestiguado
+    hecho: >-
+      Sistema de mercado en torno al lago: los onotos y kirikires, «señores de
+      la laguna», que no siembran, venden pescado en sus mercados a los bubures
+      de Juruara a cambio de maíz, yuca «y otras cosas» (Pérez de Tolosa 1546,
+      Oviedo y Valdés [6]: 32).
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "227-228"}
+
+# ══════════════════════════════════════════════════════════════════
+# 4. LENGUA: lo poco que da, y un cruce que sí rinde
+# ══════════════════════════════════════════════════════════════════
+lengua:
+  - id: toponimos-caribes-de-juruara
+    que: >-
+      Oviedo y Valdés ([6]: 32-34) da nombres de aldeas de pemenos y bubures
+      «whose toponyms suggest Carib affiliations»: Roromoni, Aypiare,
+      Carerehota, Aynagoto, Huahuovano.
+    cruce: >-
+      ⭐ AYNAGOTO lleva el formante -goto que Arcaya 1920 (p. 36) da como
+      caribe 'pueblo, gente' en el etnónimo jirajara/xirahara (ver
+      3-mundo/etnias.yaml (antes 6-fusion/etnias_en_contacto.yaml)). Segunda aparición del formante, esta vez en un
+      topónimo de grupo que Oliver clasifica caribe por otra vía: apoyo
+      independiente a la lectura de Arcaya. Los demás no cruzan con nada del
+      canon.
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "227"}
+  - id: onoto-es-caribe
+    que: "«Onoto is the Carib word for achiote or bija» — ya registrado en la nota (conflicto de estratos en la entrada bixa del lexicón)"
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "226"}
+  - id: guaitiao-taino
+    que: "guaitiao 'aliado' es voz taína (p. 225): la oposición caribe/guaitiao se montó sobre una palabra arahuaca — ya en la nota"
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "225"}
+
+# ══════════════════════════════════════════════════════════════════
+# 5. EL CRUCE CON ESTEVES — los cinco «caribe insular», veredicto
+# ══════════════════════════════════════════════════════════════════
+cruce_esteves:
+  medido: >-
+    Ninguno de los cinco aparece en §3.2.4 (0/5, con grafías alternativas
+    probadas). Oliver no discute el «caribe insular» como lengua; la única
+    referencia a las Antillas es la nota 149 sobre la manipulación española de
+    la categoría «caribes» (Sued Badillo 1978, Hulme 1986).
+  lo_que_dice_esteves_y_de_donde_lo_saca: >-
+    Su criterio es fonético y de vocabulario, no documental. Amuay (p. 14):
+    «Por su fonética la voz pertenece al caribe insular, como batey, mamey,
+    caney, carey» — cuatro palabras TAÍNAS que entraron al español en el s. XVI
+    y se dicen en todo el Caribe hispano; sonar como ellas no es un estrato.
+    Elegüey y Maragüey (p. 35): «voz taína, del caribe insular» — mezcla las
+    dos etiquetas; lo que ve es la terminación -güey. Jamaica (p. 46): «tierra
+    de los manantiales», la etimología taína de la isla, de los libros; y el
+    lugar es «la casa grande de Jamaica», con toda probabilidad una hacienda
+    bautizada con el nombre de la isla. Maitiruma (p. 49): mái 'manantial',
+    iruma 'azul', glosas de vocabulario antillano sin cita (Esteves cita a
+    Alvarado, cuyo Glosario etiqueta «caribe insular» siguiendo a Breton).
+  la_etiqueta_esta_mal_puesta: >-
+    El «caribe insular» (la lengua de las Antillas Menores que describe Breton
+    1665, antepasada del garífuna) NO es caribe en su base: es ARAHUACA
+    (iñeri/igneri), con un registro masculino de préstamos caribes. Y el taíno
+    es arahuaco. Así que una coincidencia con «el caribe insular» es, casi
+    siempre, una coincidencia con la familia del propio caquetío — parentesco,
+    no otro pueblo. Para colmo, «caribe» en las crónicas es categoría política
+    («enemigo, esclavizable»), como este mismo §3.2.4 advierte.
+  veredicto: >-
+    El «estrato caribe insular» de Paraguaná es una INFERENCIA de Esteves,
+    léxica y fonética, sin documento detrás, y con la etiqueta lingüística
+    equivocada. Oliver no aporta ningún grupo de lengua caribe en Paraguaná ni
+    en la costa de Falcón: los caribes documentados están al sur y oeste de
+    Maracaibo. Las palabras antillanas en Paraguaná, cuando lo sean, se
+    explican sin ancestría distinta: parentesco arahuaco, el contacto marítimo
+    documentado con las islas en todas las épocas, y nombres coloniales
+    transplantados (Jamaica). Recomendación para el canon: mantener «según
+    Esteves» en la clase de Maitiruma, y resolver el conflicto de Amuay
+    (paraguana_dos_clanes.yaml) a favor de la etnohistoria de Oliver/Delmonte
+    — un clan caquetío con territorio — sobre la fonética de Esteves.
+  que_lo_cerraria: >-
+    (1) Verificar mái e iruma en Breton 1665 o en un léxico taíno, en vez de
+    fiarse de la etiqueta; (2) medir cuántas voces que Alvarado marca «caribe
+    insular» son arahuacas por Breton; (3) si aparece un documento colonial
+    que ponga «caribes» en Paraguaná, recordar que eso significa «enemigos»,
+    no hablantes de caribe.
+
+# ══════════════════════════════════════════════════════════════════
+# 6. LO QUE NO DA (negativas medidas)
+# ══════════════════════════════════════════════════════════════════
+negativas:
+  - "Paraguaná, Coro (salvo una cita), el Golfete, las islas ABC: fuera del alcance de §3.2.4. La polity costera no aparece."
+  - "Ningún topónimo caribe en Falcón. Los únicos topónimos de filiación caribe que Oliver cita son de Juruara (Oviedo)."
+  - "Chayma, Cumanagoto, Yao, Tamanaco: solo en la clasificación de Durbin; sin etnohistoria en esta sección (la de los cumanagotos de Esteves sigue sin geografía que la sostenga)."
+  - "Sin léxico caribe comparado más allá de onoto: la sección es etnohistórica, no lingüística."

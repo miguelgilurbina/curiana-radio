@@ -56,8 +56,11 @@ cura y se publica en Curiana Radio (`/kaketiana`).
 | **Tablas a dos columnas** | Se desalinean sin `-layout`. Extraer las dos veces y comparar |
 | **`lexicon` en PostgREST** | `max_rows`=1000 y hay ~1400 palabras: toda query sin `.range()` se trunca **en silencio**. Ver `loadLexicon()` |
 | **`lexicon_zavala.py` y `lexicon_a2.py` son generados Y se importan** | Regenerarlos **cambia `score_linguistico()`** (zavala: habla; a2: columnas de comparación paraujano/lokono, D11). ⚠️ Los otros `lexicon_*.py` NO los importa el motor, pero **sí el tooling** (`generar_tablero`, `auditar_82`, `migrar_toponimos` — medido 2026-08-15): no se pueden mover de `curiana_sim/` sin romperlo |
+| **`2-lengua/toponimos.yaml` no se edita a mano** | Es generado desde `lexicon_toponimos.py` por `migrar_toponimos.py`. Dos commits (2026-08-30/31) lo editaron directo y la siguiente regeneración deshizo 25 entradas. Se edita el módulo y se regenera; `test_el_canon_de_toponimos_es_lo_que_emite_el_migrador` lo vigila |
 | **La consola de Windows es cp1252** | Todo script que imprima `─`, `✓` o acentos necesita `_forzar_utf8()` bajo `__main__` |
 | **`pct_caquetio` está saturada** | 91% de las respuestas en 1.0. **No la uses para comparar agentes** — usa `score`. Issue #69 |
+| **`palabras_caquetias` no era lo que decía su nombre** | Devolvía TODAS las voces arahuacas, y de ahí comen el contagio léxico, la competencia de formas, el idiolecto, el campo léxico de la koiné y `words_used`: una voz wayuu o lokono se habría propagado como propia. Arreglado el 2026-09-09 (`palabras_arahuacas` guarda la lista completa). Antes de tocar un campo, mirar quién lo consume — el nombre miente |
+| **El 80% del lexicón no es caquetío** | 1.201 de 1.500 claves son comparanda (wayuu, lokono, taíno...). No llega al hablante porque el muestreador del prompt SÍ filtra por `fuente`, pero `palabras_activas()` no filtra: cualquier consumidor que la use está viendo las cinco lenguas. Medido en `6-fusion/medicion_contaminacion_score_2026-09-09.yaml` |
 | **La longitud del prompt predice el score** | r = −0.48. Cualquier análisis por agente tiene que controlarla, o estarás midiendo cuánto escribiste tú. Ver `ANALISIS_BASE_2026-08-06.md` |
 
 ---
@@ -68,7 +71,7 @@ cura y se publica en Curiana Radio (`/kaketiana`).
 cd curiana_sim
 pip install -r requirements.txt
 
-python guardianes.py              # los 8 en verde antes de cerrar nada
+python guardianes.py              # los 9 en verde antes de cerrar nada
 python guardianes.py --rapido     # sin los tests (más rápido)
 
 # Los datos de lengua y la bibliografía
@@ -87,6 +90,8 @@ python generar_cronica.py         # reescribe 1-plan/CRONICA.md — cada cambio 
 python analizar_runs.py --todo    # análisis de los runs en la base
 python compilar_corpus.py --check # valida 3-mundo/corpus/
 python compilar_asentamientos.py  # los nodos de la esfera: existencia y época
+python compilar_etnias.py         # los vecinos: con quién, y de qué polity (regla 4)
+python barrer_mapa.py --lote      # el mapa vivo (OSM) cruzado con la mesa de topónimos
 python curiana_polities.py --canon
 
 supabase start                    # Docker local (ver puertos arriba)
@@ -96,12 +101,21 @@ python curiana_database.py seed   # siembra el lexicón activo
 ### Correr simulación
 
 ```bash
-python curiana_orchestrator_v2.py --auto 30 --perfiles --reporte
+python curiana_orchestrator_v2.py --auto 30 --perfil base --perfiles --reporte
+#   --perfil    QUÉ capas del lexicón ven los agentes y si hay andamiaje.
+#               base · atestiguado · suelto · control · suelto-control
+#               Se guarda RESUELTO en simulation_runs.config. Por defecto: base
+#   --listar-perfiles   los perfiles disponibles, con su pregunta
 #   --perfiles  perfiles curados por agente al cerrar (agent_profiles/quotes)
 #   --reporte   reporte anual LLM al completar cada año simulado
-#   --ablacion  run de CONTROL: apaga las inyecciones que empujan convergencia.
-#               La evidencia de koineización es la DIFERENCIA normal vs. ablación
+#   --ablacion  atajo al perfil `control`. La evidencia de koineización es la
+#               DIFERENCIA normal vs. ablación
 ```
+
+⚠️ Los perfiles cambian lo que el agente **ve**, nunca con qué se le **puntúa**:
+`capas_de_score` es fijo en todos y hay un test que lo vigila. Si el score se
+moviera con el perfil, la diferencia entre brazos sería un artefacto del
+instrumento. Diseño en `5-experimento/disenos/05_perfiles_de_run.md`.
 
 ---
 
@@ -114,7 +128,7 @@ TABLERO.md         el estado medido (generado — no se edita a mano)
 2-lengua/          ¿cómo es el caquetío?  lexicon · morfologia · toponimia · metodo-comparativo
                    datos: cognados.yaml · toponimos.yaml · morfemas.yaml (ver datos-de-lengua)
 3-mundo/           ¿cómo era ese pueblo?  5 mapas · polities-caquetias · corpus/ · ensayos/
-                   esfera-de-interaccion · asentamientos.yaml (los nodos)
+                   esfera-de-interaccion · asentamientos.yaml (los nodos) · etnias.yaml (los vecinos)
 4-fuentes/         ¿de dónde lo sabemos?  una nota por obra + INDICE_FUENTES
 5-experimento/     ¿qué probamos?  mapa-motor · ARQUITECTURA · DISENO_KOINE · analisis/
 6-fusion/          la cola de entrada al canon: propuestas de datos + issues sin
@@ -137,7 +151,7 @@ fuentes_caquetios/ los PDF (se citan, no se editan)
 | `curiana_state` | día, estación, locaciones, eventos |
 | `curiana_observer` | scoring, análisis, perfiles curados |
 | `curiana_database` | Supabase + LangSmith |
-| `curiana_polities` | las 4 polities atestiguadas; cuál simulamos |
+| `curiana_polities` | las 4 polities atestiguadas + la occidental (futura esfera, Coquibacoa); cuál simulamos |
 
 **Los wikilinks resuelven por basename**, así que mover una nota no rompe
 enlaces; lo que se rompe son los enlaces markdown relativos.
@@ -153,7 +167,8 @@ Aspectos:   -ka (completivo), -ni (continuativo), -da (prospectivo)
 Posesivos:  ta- (mi), pi- (tu), nü- (su)
 Locativos:  -bana (cerro, sitio alto — D9 resuelta 2026-08-31, seis apoyos;
             homónimo de bana 'hígado' reconstruido), -ana (forma atestiguada,
-            glosa 'lugar de' EN DISPUTA — #109), -ko (interior de)
+            glosa 'lugar de' RETIRADA el 2026-09-07 — #109; el motor la
+            conserva solo como convención canon-simulación), -ko (interior de)
 Neologismos: [forma: componentes = significado]
 ```
 

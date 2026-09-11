@@ -2,10 +2,10 @@
 tipo: nota
 pregunta: "¿Cuántos caquetíos había, y cuál de ellos simulamos?"
 motor: curiana_sim/curiana_polities.py
-polities: 4
+polities: 5   # 4 atestiguadas + occidental (esfera futura, 2026-09-07)
 polity_simulada: costera
-fuentes: [oliver-1989-cap3, jahn-1927, antczak-2017-cariban, oviedo-y-banos]
-medido: 2026-08-04
+fuentes: [oliver-1989-cap3, jahn-1927, antczak-2017-cariban, oviedo-y-banos, arcaya-1920]
+medido: 2026-09-07
 ---
 
 # Las polities caquetías — y cuál es la nuestra
@@ -34,7 +34,7 @@ justo por aplanar esas diferencias.
 documental independiente** — y los bloques salen los mismos. Dos fuentes que no
 se copiaron entre sí describen la misma geografía.
 
-## Las cuatro
+## Las cuatro atestiguadas, y la quinta
 
 | Polity | Territorio | Autoridad | Lo que la distingue |
 |---|---|---|---|
@@ -42,12 +42,50 @@ se copiaron entre sí describen la misma geografía.
 | **barquisimeto** | Valle del Turbio y sabanas de Lara | **Jefe de Paz + Jefe de Guerra**, sin paramount | 23 aldeas fortificadas de ~4.000; el **boratio vive apartado** |
 | **yaracuy** | El valle que ellos llamaban **Vararida** | **Confederación elástica** de 2-4 aldeas | Se unen solo si los atacan con fuerza |
 | **llanos** | Cojedes, Portuguesa, Apure, hasta Casanare | Militar y secular juntos, pero **poco centralizado** | Único con **esclavitud documentada** (solo bajo Cojedes) |
+| **occidental** *(futura)* | La Guajira (Cabo de la Vela; Punta Espada–Chichibacoa), el lago de Maracaibo y Juruara: la **Western Sphere** de Oliver, **Coquibacoa** en los mapas de 1500 | *sin dato* («very little is known about the culture») | **Minoría y avanzada** de la costera: puestos de comercio sal ↔ oro, socios elegidos (wanebucanes, coanaos), wayú evitados |
 
 El detalle, con cita por rasgo y por época, está en el módulo:
 
 ```bash
 python curiana_sim/curiana_polities.py --contrastar costera barquisimeto
 ```
+
+### La quinta: la esfera occidental, futura (2026-09-07)
+
+Miguel decidió modelarla como **esfera futura** porque Oliver trae información
+de esa región en el contexto de **Coquibacoa** —y la trae de sobra: §3.2 de su
+capítulo 3 se titula *The Western Sphere* (pp. 185-230) y es el lago de
+Maracaibo con sus llanuras aluviales, la Guajira semiárida y los valles del
+Ranchería y el César. Coquibacoa es el nombre de la Guajira en el mapa de Juan
+de la Cosa (1500) y en la capitulación de Ojeda del mismo año
+(«Quinquevacoa… donde están las piedras verdes»); Castellanos lo restringe al
+norte-noreste de la península (Macuira, Jarara); y a principios del XVI la
+Gobernación de Venezuela entera se llamó así (Oliver pp. 191, 192, 199, 211).
+
+Lo que se sabe de los caquetíos de ahí cabe en cuatro rasgos, todos con página
+en el módulo: **dónde** (dos sectores de la Guajira, «precisely where some
+limited agriculture was possible», y aldeas entre los bubures de Juruara,
+p. 222); **cómo** (puestos de frontera y avanzada, minoría numérica, siempre en
+las mejores tierras bajas de cultivo, nunca en tierras altas, p. 202); **de qué
+viven** (comercio: sal hacia el interior, oro de Valledupar y la Sierra Nevada
+hacia la costa; socios elegidos, wayú evitados, pp. 189, 222); y **desde
+cuándo** (quizá desde 1200 d.C., con el pico del contacto Guajira ↔ Los Médanos
+**en 1400 d.C., dentro de la ventana de la simulación**, p. 200). Liderazgo,
+demografía y religión son huecos: «very little is known about the culture of
+the Juruara Caquetío», y lo mismo de los guajiros. No se rellenan.
+
+Por qué importa: es **hija de la costera** («undoubtedly originated from
+Coastal Falcón», p. 189) y el único modelo documentado de un enclave caquetío
+que comercia y convive sin fundirse — justo lo que la era 2 necesita. Y trae
+dos regalos para la lengua: entre los nombres de aldea wanebucán de Punta
+Espada–Chichibacoa Oliver lee «Paragua-nil» y «Coria-na», «suspiciously
+Caquetío» (p. 207: toca el nombre Curiana, #33, y el sufijo, #109); y el cabo
+Chichibacoa «suspiciously sounds like Coquibacoa, except for a /k/::/ch/ sound
+shift» (p. 249 n. 94).
+
+> ⚠️ Regla 3: **Coquibacoa como nombre de región es español**. Arcaya 1920
+> (p. 130) lo dice: se llamó así «por el nombre indígena de uno de sus sitios»
+> y luego «se le dio también entonces al Golfo». Lo indígena es el sitio.
 
 ## Lo que el modelo destapó
 
@@ -110,7 +148,9 @@ la fuente.
    Barquisimeto o Yaracuy pondría en escena dos sociedades que hablan la misma
    lengua y organizan el poder al revés. Para la tesis de koiné del proyecto es
    un escenario mejor que el contacto con otra etnia, porque aísla la variable:
-   **misma lengua, distinta sociedad**.
+   **misma lengua, distinta sociedad**. Desde el 2026-09-07 la candidata
+   designada es la **occidental** (estado `futura`): misma lengua, misma
+   matriz costera, y un enclave entre caribes y chibchas.
 4. `etnia` y `polity` son ejes ortogonales y conviene que no se confundan — ver
    la nota de higiene del campo `etnia` en el propio módulo.
 

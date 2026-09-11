@@ -1,0 +1,2324 @@
+{
+ "ABATO": {
+  "cuerpo": "Cerro en el municipio Capatárida, en los límites con el 's- tado Lara. (Advertencia: el territorio del municipio Capatárida, de Norte a Sur tiene una longitud de 100 kilómetros: desde las ori- llas del mar hasta los límites con Lara).",
+  "municipio": "Capatárida",
+  "distrito": null,
+  "tipo": "cerro"
+ },
+ "ACACA": {
+  "cuerpo": "Nombre de una quebrada que es referencia en los linderos del municipio Agualarga, Distrito Federación. (Acaca es una forma adjetival de Aca, nombre de una planta bejucosa; es como si dijé- ramos: abejucada).",
+  "municipio": "Agualarga",
+  "distrito": "Federación",
+  "tipo": "quebrada"
+ },
+ "ACANES": {
+  "cuerpo": "Lugar que a lo que hemos averiguado, debe estar ubicado en el territorio del Distrito Petit; lo hallamos mencionado en los sitios enumerados en el “Camino de Perera”, obra vial hecha en 1854 para comunicar a Carora con Cumarebo).",
+  "municipio": null,
+  "distrito": "Petit",
+  "tipo": null
+ },
+ "ACARITE": {
+  "cuerpo": "Aldea del municipio Curimagua, Distrito Petit. (Aca: bejuco).",
+  "municipio": "Curimagua",
+  "distrito": "Petit",
+  "tipo": "aldea"
+ },
+ "ACATUTO": {
+  "cuerpo": "Zona selvática, maderera, en cl municipio Píritu, Distrito Za- mora. El nombre lo lleva también una aldea de ese municipio. (Li- teralmente expresa: el bejuco de la quebrada, pero, conforme a la sintaxis de la lengua cnquetía, la construcción es a la inversa: la quebrada de los bejucos, Aca: bejuco; ufo: quebrada). D”",
+  "municipio": "Píritu",
+  "distrito": "Za",
+  "tipo": "aldea"
+ },
+ "I -": {
+  "cuerpo": "El Curarí, aldea del municipio Cabure, Distrito Petit. / II - Los Curarides, aldea del municipio Purureche, Distrito Democra- cia. / III - El Curarí, aldea del municipio Píritu, Distrito Zamora. / IV - El Curaridal, aldea del municipio Zazárida, Distrito Buchi- vacoa. / V - El Curaridal, aldea del municipio Pedregal, Distrito Democracia. / VI - El Curaricito, aldea del municipio San Fran- cisco (Mirimire), Distrito Acosta. / VII - Nombre que dan al Río Hueque en su desembocadura. / VIII - En los tiempos coloniales, El Curaridal era el nombre que le daban a la población de San Félix de Mauroa.",
+  "municipio": "Cabure",
+  "distrito": "Petit",
+  "tipo": "aldea"
+ },
+ "AGUIDE": {
+  "cuerpo": "Puerto y pueblo perteneciente al municipio La Pastora, Dis- trito Acosta. (Es voz taína, caribe insular).",
+  "municipio": "La",
+  "distrito": null,
+  "tipo": "pueblo"
+ },
+ "AGUIMA": {
+  "cuerpo": "Punto costeño al Norte del pueblo de Píritu, Distrito Zamora; el nombre lo lleva también una posesión comunera de ese mismo municipio. (Voz taína).",
+  "municipio": null,
+  "distrito": "Zamora",
+  "tipo": "pueblo"
+ },
+ "AGUIRARO": {
+  "cuerpo": "Lugar en el municipio San Luis, Distrito Bolívar. (Primitiva- mente: Agiirare).",
+  "municipio": "San",
+  "distrito": "Bolívar",
+  "tipo": null
+ },
+ "AMONES": {
+  "cuerpo": "Los Amones, aldea del municipio Borojó, Distrito Buchiva- coa. (Puede ser una aféresis de Mamones; mamón: árbol frutal).",
+  "municipio": "Borojó",
+  "distrito": "Buchiva",
+  "tipo": "aldea"
+ },
+ "APARITO": {
+  "cuerpo": "Lugar en el municipio Casigua, Distrito Mauroa. (Puede ser una aféresis de “taparito” diminutivo de “taparo”, árbol de fruto voluminoso).",
+  "municipio": "Casigua",
+  "distrito": "Mauroa",
+  "tipo": null
+ },
+ "APURITE": {
+  "cuerpo": "Caserío del municipio La Pastora, Distrito Acosta. (Aféresis de mapurite: mofeta almizclosa). 84",
+  "municipio": "La",
+  "distrito": "Acosta",
+  "tipo": "caserío"
+ },
+ "ARABEBURE": {
+  "cuerpo": "Aldea del municipio Casigua, Distrito Macs guo: lo hallamos mencionado en papeles de la Coi",
+  "municipio": "Casigua",
+  "distrito": "Macs",
+  "tipo": "aldea"
+ },
+ "ARACAGUARE": {
+  "cuerpo": "Aldea del municipio Borojó, Distrito Buchivacoa.",
+  "municipio": "Borojó",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "ARACUA": {
+  "cuerpo": "Población capital del municipio del mismo nombre, Distrito Bolívar. Antiguamente era llamado municipio Marzal, capital Ara- cua, en homenaje al Dr. Antonio Marzal, prestigioso hombre pú- blico que fue Presidente de Estado en 1877; esta eponimía subsis- tió hasta 1930.",
+  "municipio": "del",
+  "distrito": "Bolívar",
+  "tipo": null
+ },
+ "ARAGUATA": {
+  "cuerpo": "Quebrada que cruza el territorio del municipio Libertador (San Lorenzo o Mene de Acosta), Distrito Acosta. (Araguata es una abeja peluda del color del mono araguato, pelo rojo oscuro. De ahí la homonimia).",
+  "municipio": "Libertador",
+  "distrito": "Acosta",
+  "tipo": "quebrada"
+ },
+ "ARAGUÍ": {
+  "cuerpo": "Aldea del municipio San Francisco (Mirimire), Distrito Acosta.",
+  "municipio": "San",
+  "distrito": "Acosta",
+  "tipo": "aldea"
+ },
+ "ARAGÚUITO": {
+  "cuerpo": "Caserío perteneciente al municipio Unión, Distrito Federa- ción. La grafía es dudosa: Areguito está escrito en la Ley de Di- visión Territorial, y Aragiito es como la pronuncia el pueblo).",
+  "municipio": "Unión",
+  "distrito": "Federa",
+  "tipo": "caserío"
+ },
+ "ARAICA": {
+  "cuerpo": "Caserío del municipio Agualarga, Distrito Federación.",
+  "municipio": "Agualarga",
+  "distrito": "Federación",
+  "tipo": "caserío"
+ },
+ "ARAJÓ": {
+  "cuerpo": "Las Cañadas de Arajó, caserío del municipio Sabaneta, Dis- trito Miranda. 85 es!",
+  "municipio": "Sabaneta",
+  "distrito": null,
+  "tipo": "caserío"
+ },
+ "ARAJU": {
+  "cuerpo": "Aldea del municipio Agualarga, Distrito Federación.",
+  "municipio": "Agualarga",
+  "distrito": "Federación",
+  "tipo": "aldea"
+ },
+ "ARANDIMA": {
+  "cuerpo": "Río que corre de Norte a Sur en los linderos meridionales del municipio Agualinda, Distrito Acosta, Es afluente del Pío Tocuyo.",
+  "municipio": "Agualinda",
+  "distrito": "Acosta",
+  "tipo": "río"
+ },
+ "ARAURIMA": {
+  "cuerpo": "1 - Aldea del municipio Jacura, Distrito Acosta. / II - Co- lonia Araurima: zona agrícola y ganadera que, también, pertenece al municipio Jacura. / III - Río afluente del Tocuyo.",
+  "municipio": "Jacura",
+  "distrito": "Acosta",
+  "tipo": "aldea"
+ },
+ "ARIAGUA": {
+  "cuerpo": "Caserío del municipio Capatárida, Distrito Buchivacoa.",
+  "municipio": "Capatárida",
+  "distrito": "Buchivacoa",
+  "tipo": "caserío"
+ },
+ "ARIBANACHE": {
+  "cuerpo": "Cueva localizada en un cerro del mismo nombre, a ocho ki- lómetros al Sureste de la población de Urumaco, Distrito De- mocracia.",
+  "municipio": null,
+  "distrito": "De",
+  "tipo": "cerro"
+ },
+ "ARIPINO": {
+  "cuerpo": "Cerro que es punto de referencia entre los linderos de los Distritos Petit y Miranda. (Aripino: árbol maderable).",
+  "municipio": null,
+  "distrito": null,
+  "tipo": "cerro"
+ },
+ "AUTAQUIRE": {
+  "cuerpo": "Extinta comunidad indígena que estuvo asentada en un lu- par a 30 kilómetros al Sur de la población de Pedregal, (Quire, en ayamán, es color). 86 es!",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "AVARIA": {
+  "cuerpo": "Municipio Avaria, capital Tupure, Distrito Po A na ganadera. (Avaria, del tamanaco a1waree, rabit delfo).",
+  "municipio": "Avaria",
+  "distrito": "Po",
+  "tipo": null
+ },
+ "BACHACAL": {
+  "cuerpo": "El Bachacal, aldea del municipio Jacura, Distrito Acosta. “Es chacal: colectivo de bachaco; voz tamanaca: chíauco, hormiga gran de, rojiza).",
+  "municipio": "Jacura",
+  "distrito": "Acosta",
+  "tipo": "aldea"
+ },
+ "BAITOITA": {
+  "cuerpo": "Caserío del municipio Pedregal, Distrito Democracia. (Bartoí- ta, diminutivo de baitoa, árbol ulmáceo, sinónimo de membrillo).",
+  "municipio": "Pedregal",
+  "distrito": "Democracia",
+  "tipo": "caserío"
+ },
+ "BARABARA": {
+  "cuerpo": "Zona selvática en el municipio Píritu, Distrito Zamora. Exis- tió en esas sabanas una población con ese nombre, que desapareció por el paludismo. El obispo Mariano Martí visitó ese pueblo en 1773 y describió su iglesia, de la que aún hay vestigios. (Barabara, que es plural por duplicación, es voz con que se designa a un árbol caparidáceo, más conocido con el nombre de Olivo. Datos de Li- sandro Alvarado: “Glosario de Voces Indígenas”).",
+  "municipio": "Píritu",
+  "distrito": "Zamora",
+  "tipo": "pueblo"
+ },
+ "BARAGUA": {
+  "cuerpo": "Río que nace en los linderos meridionales del municipio Ca- patárida y corre hacia el Estado Lara. Una serranía lleva también ese nombre. (Baragua: árbol de madera de construcción, cuaguaro).",
+  "municipio": "Ca",
+  "distrito": null,
+  "tipo": "río"
+ },
+ "BARICUA": {
+  "cuerpo": "Aldea del municipio Pedregal, Distrito Democracia. (Puede ser una alteración de Barigua; ver más adelante). 87 y tom Comares",
+  "municipio": "Pedregal",
+  "distrito": "Democracia",
+  "tipo": "aldea"
+ },
+ "BARIRO": {
+  "cuerpo": "Población capital del municipio Bariro, Distrito Buchivacoa. El municipio es de reciente creación, a expensas del territorio del municipio Dabajuro. Zona agrícola y ganadera. (La desinencia “iro” es diminutivo de voces indígenas).",
+  "municipio": "Bariro",
+  "distrito": "Buchivacoa",
+  "tipo": null
+ },
+ "BARISIGUA": {
+  "cuerpo": "Aldea del municipio Dabajuro, Distrito Buchivacoa. (Barisi- gua es un árbol corpulento de madera liviana, significa palo blando),",
+  "municipio": "Dabajuro",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "BARUCHE": {
+  "cuerpo": "Aldea del municipio Capatárida, Distrito Buchivacoa.",
+  "municipio": "Capatárida",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "BEREBORO": {
+  "cuerpo": "Aldea del municipio Independencia, Distrito Federación. (Pue- de ser una alteración de Boroboro, arbusto apocináceo de flores muy pequeñas, Esta planta es abundante en las llanuras cálidas). 88 \"a “(20m pe «Te L á Petroglifo de Misaray. (",
+  "municipio": "Independencia",
+  "distrito": "Federación",
+  "tipo": "aldea"
+ },
+ "BIDARE": {
+  "cuerpo": "Aldea del municipio Borojó, Distrito Buchivacoa. ¿Será bu. dare?",
+  "municipio": "Borojó",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "BISURE": {
+  "cuerpo": "La Cuesta de los Bisures, serie de cerros que son linderos de los municipios Bruzual y Zazárida en los distritos Democracia y Buchivacoa, respectivamente, (Bisure: lagarto común).",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "BOBO Y": {
+  "cuerpo": "Caserío del municipio Churuguara, Distrito Federación. Pa- rece voz onomatopéyica. Sin embargo, puede ser apócope de Bo- hoyo, que en Cuba es voz general para toda clase de lagartos.",
+  "municipio": "Churuguara",
+  "distrito": "Federación",
+  "tipo": "caserío"
+ },
+ "BORABLE": {
+  "cuerpo": "Borable Arriba y Borable Abajo son dos caseríos lindantes, que pertenecen al municipio Casigua, Distrito Mauroa.",
+  "municipio": "Casigua",
+  "distrito": "Mauroa",
+  "tipo": null
+ },
+ "BORAURE": {
+  "cuerpo": "Nombre de una antigua posesión comunera en el antiguo Can- tón Casicure.",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "BOROBUNO": {
+  "cuerpo": "Caserío del municipio Zazárida, Distrito Buchivacoa.",
+  "municipio": "Zazárida",
+  "distrito": "Buchivacoa",
+  "tipo": "caserío"
+ },
+ "BOROJÓ": {
+  "cuerpo": "Población capital del municipio Borojó, Distrito Buchivacoa. / Río que pasa por esa población. (Borojó es chibcha: un árbol frutal. 90",
+  "municipio": "Borojó",
+  "distrito": "Buchivacoa",
+  "tipo": "río"
+ },
+ "BOSUGO": {
+  "cuerpo": "l- El Bosugo, caserío del municipoos Borojó E El Bosugo, aldea del municipio nión, Dicrimo | suga, bosúa, bosuga: árbol rutáceo, tintoroo)",
+  "municipio": "nión",
+  "distrito": null,
+  "tipo": "caserío"
+ },
+ "BOTOMANON": {
+  "cuerpo": "Caserío del municipio Independencia, Distrito Federación",
+  "municipio": "Independencia",
+  "distrito": "Federación",
+  "tipo": "caserío"
+ },
+ "II -": {
+  "cuerpo": "Punta de Zamuro, sitio costeño en el litoral de Píriru, Distrito Zamora. / III - El Zamurito, caserío del municipio Capatárida, Bu- chivacoa. / IV - El Zamuro, caserío del municipio Dabajuro, Dis- trito Buchivacoa.",
+  "municipio": "Capatárida",
+  "distrito": "Zamora",
+  "tipo": "punta"
+ },
+ "BUCHAL": {
+  "cuerpo": "El Buchal, aldea del municipio Dabajuro, Distrito Buchiva- coa. (Buchal, colectivo de buche: cardo globoso, melocacto).",
+  "municipio": "Dabajuro",
+  "distrito": "Buchiva",
+  "tipo": "aldea"
+ },
+ "BURCUERA": {
+  "cuerpo": "Mesa de Burguera, caserío del municipio Mene de Mauroa, Distrito Mauroa. (Burguera no es voz indígena, sino un apellido español, lo registramos para despejar el equívoco). 91",
+  "municipio": "Mene",
+  "distrito": "Mauroa",
+  "tipo": "caserío"
+ },
+ "CABARAO": {
+  "cuerpo": "Caserío del municipio Sabaneta, Distrito Miranda. (De la par- te desinencial “rao”, sabemos que significa: aglomeración).",
+  "municipio": "Sabaneta",
+  "distrito": "Miranda",
+  "tipo": "caserío"
+ },
+ "CABURE": {
+  "cuerpo": "Población capital del municipio Cabure y del Distrito Petit. (Si Cabure es alteración de Cambure (síncopa), entonces es voz africana).",
+  "municipio": "Cabure",
+  "distrito": "Petit",
+  "tipo": null
+ },
+ "CABURITO": {
+  "cuerpo": "Aldea del municipio Bruzual, Distrito Democracia. (Diminu- tivo de Cabure).",
+  "municipio": "Bruzual",
+  "distrito": "Democracia",
+  "tipo": "aldea"
+ },
+ "CACETAL": {
+  "cuerpo": "El Cacetal, aldea del municipio Mene de Mauroa, Distrito Mauroa. (Cacetal, colectivo de Caceto, planta herbácea, una mal- vácea.",
+  "municipio": "Mene",
+  "distrito": "Mauroa",
+  "tipo": "aldea"
+ },
+ "CACIMBA": {
+  "cuerpo": "Manantial en el municipio Pueblo Cumarebo, Distrito Za- mora. (Cacimba: jagiey).",
+  "municipio": "Pueblo",
+  "distrito": "Za",
+  "tipo": "pueblo"
+ },
+ "CACURO": {
+  "cuerpo": "Caserío del municipio Churuguara, Distrito Federación. (Ca- curo: pequeña avispa negra cuyo aguijonazo es muy doloroso y pro- duce hinchazón).",
+  "municipio": "Churuguara",
+  "distrito": "Federación",
+  "tipo": "caserío"
+ },
+ "CACHIMBO": {
+  "cuerpo": "La Quebrada del Cachimbo, en el municipio Casigua, Distrito Mauroa. (Cachimbo es un pequeño árbol de tallos cilíndricos y hue- cos que usan para fabricar “cachimbos”, objetos para fumar). 92 es!",
+  "municipio": "Casigua",
+  "distrito": "Mauroa",
+  "tipo": "quebrada"
+ },
+ "CADILLARES": {
+  "cuerpo": "Aldea del municipio San Juan de los Cayos, 1 oisito Acotfa (Cadillares, colectivo de Cadillo, hierba con espias panchosas) , 1 £",
+  "municipio": "San",
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "CADUCE": {
+  "cuerpo": "Cerro al Sur de la población de Urumaco, Distrito Democracia. (La última sílaba, silbante, como “che”).",
+  "municipio": null,
+  "distrito": "Democracia",
+  "tipo": "cerro"
+ },
+ "CAIMITO": {
+  "cuerpo": "El Caimito, cerro cerca de la población de Mapararí, Distrito Federación. (Caimito: árbol sapotáceo, frutal).",
+  "municipio": null,
+  "distrito": "Federación",
+  "tipo": "cerro"
+ },
+ "CALEMBE": {
+  "cuerpo": "Aldea del municipio Urumaco, Distrito Democracia. (Calembe es voz africana o africanizada; significa ropa raída).",
+  "municipio": "Urumaco",
+  "distrito": "Democracia",
+  "tipo": "aldea"
+ },
+ "CAMACHIMA": {
+  "cuerpo": "Pueblo del municipio Capadare, Distrito Acosta. (Hemos no- tado que la desinencia “ima”, que significa humedad en caquetío, está presente en muchos topónimos de los distritos orientales del Estado).",
+  "municipio": "Capadare",
+  "distrito": "Acosta",
+  "tipo": "pueblo"
+ },
+ "CAMAYATA": {
+  "cuerpo": "Paso en el río Tocuyo, en el municipio Agualinda, Distrito Acosta. (Camayata, proviene de Camata, gallina silvestre; Camaya: también significa cesto, nasa. Ambas son voces cumanagotas).",
+  "municipio": "Agualinda",
+  "distrito": "Acosta",
+  "tipo": "río"
+ },
+ "CAMBUYÓN": {
+  "cuerpo": "Caserío del municipio Mapararí, Distrito Federación. (Cam- buyón es un americanismo de amplia difusión en Centro América y Colombia, con la significación de lío, enredo, etc. Aquí, en Vene- zuela, es cambalache, permuta, etc.).",
+  "municipio": "Mapararí",
+  "distrito": "Federación",
+  "tipo": "caserío"
+ },
+ "CAMPECHE": {
+  "cuerpo": "[ - Aldea del municipio Tocuyo de la Costa, Distrito Silva. /",
+  "municipio": "Tocuyo",
+  "distrito": "Silva",
+  "tipo": "aldea"
+ },
+ "CAMURUJURE": {
+  "cuerpo": "Aldea del municipio Dabajuro, Distrito Buchivacoa. (El topó- nimo, interpretado como una voz compuesta, significaría: raíz de camuro; “ure”: raíz, y camuro, planta cucubirtácea).",
+  "municipio": "Dabajuro",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "CAMURURÍA": {
+  "cuerpo": "Aldea del municipio Jacura, Distrito Acosta. (En el sustantivo compuesto está presente la voz “camuro” y de la partícula final desconocemos su significado).",
+  "municipio": "Jacura",
+  "distrito": "Acosta",
+  "tipo": "aldea"
+ },
+ "CANIDE": {
+  "cuerpo": "Caserío del municipio Curimagits, +. mos más nada).",
+  "municipio": "Curimagits",
+  "distrito": null,
+  "tipo": "caserío"
+ },
+ "CAÑAFISTOLA": {
+  "cuerpo": "Lugar de referencia en los linderos del municipio Avaria, Dis- trito Democracia. (Cañafistola: un árbol cuya legumbre contiene una pulpa ne- gra, dulce, comestible. Se dice que esta pulpa es medicinal, pero con la superstición de que hay que recogerla en Viernes Santo). Cañaflota la nombran en Maracaibo. No parece voz indígena.",
+  "municipio": "Avaria",
+  "distrito": null,
+  "tipo": null
+ },
+ "CAOBAL": {
+  "cuerpo": "Aldea del municipio Agualinda, Distrito Acosta. (Caobal, co- lectivo de caoba, árbol meliáceo de madera preciosa).",
+  "municipio": "Agualinda",
+  "distrito": "Acosta",
+  "tipo": "aldea"
+ },
+ "CAPANA": {
+  "cuerpo": "Punta Capana, sitio costeño en el Distrito Buchivacoa. En la desembocadura del Río Borojó. 95 es!",
+  "municipio": null,
+  "distrito": "Buchivacoa",
+  "tipo": "punta"
+ },
+ "CAQUETILLO": {
+  "cuerpo": "Caserío del municipio Guzmán Guillermo, Distrito Miranda. (Caquetillo: árbol que da buena madera de construcción, resistente a la humedad). (Caquetillo, voz afín de caquetío, según Lisandro Alvarado).",
+  "municipio": "Guzmán",
+  "distrito": "Miranda",
+  "tipo": "caserío"
+ },
+ "CARABOBO": {
+  "cuerpo": "Caserío del municipio Agualarga, Distrito Federación. (Cara- bobo: una palma que se conoce con distintos nombres: jipijapa, iraca, etc.).",
+  "municipio": "Agualarga",
+  "distrito": "Federación",
+  "tipo": "caserío"
+ },
+ "CARACUBANA": {
+  "cuerpo": "Caserío del municipio Borojó, Distrito Democracia, (Caracu- bana: cerro poblado de caracara. 9% es! Artesanía miraquense. (S]",
+  "municipio": "Borojó",
+  "distrito": "Democracia",
+  "tipo": "caserío"
+ },
+ "CARAGUAO": {
+  "cuerpo": "Manantial u ojo de agua en el municipio Pueblo Cumarebo, Distrito Zamora,",
+  "municipio": "Pueblo",
+  "distrito": "Zamora",
+  "tipo": "pueblo"
+ },
+ "CARAMABURE": {
+  "cuerpo": "Aldea del municipio Capatárida, Distrito Buchivacos (Cara mabure: raíz de las caramas 0 raíz de la ramazón: carama es final que ramazón),",
+  "municipio": "Capatárida",
+  "distrito": "Buchivacos",
+  "tipo": "aldea"
+ },
+ "CARAMÓN": {
+  "cuerpo": "Ceserío del municipio Sucre, Distrito Bolívar, (Parece un hi porístico de Carlos Ramón).",
+  "municipio": "Sucre",
+  "distrito": "Bolívar",
+  "tipo": null
+ },
+ "CARAPA": {
+  "cuerpo": "T- Carapa, lugar en los linderos del municipio Tocuyo de la Costa, Distrito Silva. / 11 - Cararapa, quebrada en el municipio Unión, Distrito Federación. (Cararapa, epéntesis de Carapa, y Carapa: árbol resinoso).",
+  "municipio": "Tocuyo",
+  "distrito": "Silva",
+  "tipo": "quebrada"
+ },
+ "CARATIBANO": {
+  "cuerpo": "Caratibano, aldea del municipio Píritu, Distrito Zamora, (Ca- ritibano, mejor que Caratibano, es un árbol de madera recia, Di- cen también: Carativá).",
+  "municipio": "Píritu",
+  "distrito": "Zamora",
+  "tipo": "aldea"
+ },
+ "CARAZAO": {
+  "cuerpo": "Población perteneciente al municipio Sabaneta, Distrito Mt- randa,",
+  "municipio": "Sabaneta",
+  "distrito": "Mt",
+  "tipo": null
+ },
+ "CAREPANO": {
+  "cuerpo": "Río en el territorio del municipio Agualinda, Distrito Acosta,",
+  "municipio": "Agualinda",
+  "distrito": "Acosta",
+  "tipo": "río"
+ },
+ "CARIACUA": {
+  "cuerpo": "Río que cruza la población de San Luis, Distrito Bolívar, 98 (S]",
+  "municipio": null,
+  "distrito": "Bolívar",
+  "tipo": "río"
+ },
+ "CARICUCHE": {
+  "cuerpo": "Aldea del municipio Píritu, Distrito Zamora.",
+  "municipio": "Píritu",
+  "distrito": "Zamora",
+  "tipo": "aldea"
+ },
+ "CARRAOS": {
+  "cuerpo": "Los Carraos, aldea del municipio Dabajuro, Distrito Buchiva- coa. (Carrao: ave zancuda de pico desmesurado, más largo que la cabeza).",
+  "municipio": "Dabajuro",
+  "distrito": "Buchiva",
+  "tipo": "aldea"
+ },
+ "CASANARE": {
+  "cuerpo": "Lugar mencionado en los linderos del extremo Sur de los Dis- tritos Democracia y Buchivacoa, en los confines con Lara.",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "CASICURE": {
+  "cuerpo": "Nombre del litoral falconiano comprendido desde el golfete de Coro hasta el Caño Oribor en los límites con el Estado Zulia. Se extiende por las costas de los distritos Miranda, Democracia, Buchivacoa y Mauora. A finales de la Colonia, se le conocía como el Partido de Ca- sicure con la capital en Casigua, y después, en la República, como Cantón Casicure con la capital en Capatárida. (Casicure: raíz de cacito; cacito: cacto de tallo aplanado que se extiende por el suelo), 99 es!",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "CASIGUA": {
+  "cuerpo": "Población capital del municipio del mismo nombre, Distrito Mauroa. (Cacigua, con “c” para diferenciarla de la voz geográfica, es una planta herbácea, enredadera, marantácea: maranta casupo).",
+  "municipio": "del",
+  "distrito": "Mauroa",
+  "tipo": null
+ },
+ "CASIMONURE": {
+  "cuerpo": "Manantial u ojo de agua en el municipio Pueblo Cumarebo, Distrito Zamora.",
+  "municipio": "Pueblo",
+  "distrito": "Zamora",
+  "tipo": "pueblo"
+ },
+ "CAUCA": {
+  "cuerpo": "[ - Aldea del municipio Urumaco, Distrito Democracia. /",
+  "municipio": "Urumaco",
+  "distrito": "Democracia",
+  "tipo": "aldea"
+ },
+ "CAUDERAL": {
+  "cuerpo": "El Cauderal, caserío del municipio Borojó, Distrito Buchiva- coa. (Cauderal, colectivo de Caudero, árbol leguminoso de mediano porte, cují cabrero). “",
+  "municipio": "Borojó",
+  "distrito": "Buchiva",
+  "tipo": "caserío"
+ },
+ "CAUJARO": {
+  "cuerpo": "Caserío del municipio Mitare, Distrito Miranda. (Caujaro, ár- bol de madera blanda, ramos inermes, fruta muciliginosa. Del gé- nero Cordia).",
+  "municipio": "Mitare",
+  "distrito": "Miranda",
+  "tipo": "caserío"
+ },
+ "CAUJARAO": {
+  "cuerpo": "[ - Caserío perteneciente a San Antonio, municipio urbano del Distrito Miranda. / II - Caujarao, significa: aglomeración de cau- jaros, caujaral).",
+  "municipio": "urbano",
+  "distrito": "Miranda",
+  "tipo": "caserío"
+ },
+ "JOUUEIQUEJ": {
+  "cuerpo": "e) 101 “(vso1gy viueyd “aarsr “Ánzos ap oAriDajoo :/P£1J07) voneiapay *erensnany ap VQDEIgOd e, ap a110N JE IEÍNT TVANI2IOD \"(2291) arayxa anb vi ap ejurjd :0777509) “aVuSUITANDadsal “Enn7 Pp epuemy 4 voyrg ap romry sonnsig so us E1NZ Á Ue",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "SOPEISY": {
+  "cuerpo": "sa ap sara so] r.ruas anb ory - A / \"Tunoj olmISIg “E3nI Voy ordorma Pp ray - AT / ome o1NsIg “ensistj Ordo una pp ra y - UN 79d ANISIg Pp TUTO Ordprunt ¡p rap NN TpoRMy onnsIg \"amy ordDrunt ¡Sp oNasPj - ] VZINIO)>I \"(osopraa alvumjd ap rworg) \"TJ0UE7 oras “ogatun) ajgang deu [a ya JENUEUEJ - J] / TpuEl y exzsg amy ordnunt a ya rpezganb 4 ouasfj - ] d310Y092092 \"(FrUa5Ipu] aluamajg1sod “opiypede un sa *.s,, y CEN) PAM CNESIg IP Us orden Pp Ep VYIdI>I -(ONFEMINDUE sa FOSA] Ns :SDso0UISAl VOS OIM NS Á TZaMO) TT -oyuaunid Dr] pá mar apro CosourEMSa| JOqIr “odiar ap adonodr “a42)) \"RISOOY OI <1g t",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "TIP CNA": {
+  "cuerpo": "“DJ: Ojgang US rnUFUrM “PQR) PT - 4] ODIA ONDA UNM) adn [ap rapyr Eg) 7] - 17 TOM COS 'ROMPA ap au ap OLAsE “POR PT Tormo cun quen 2) Pape “Eg PT -] Y YIF9I",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "COCUYITO": {
+  "cuerpo": "Aldea del municipio Jacura, Distrito Acosta. (Cocuyi!o. di. minutivo de cocouyo, luciérnaga, o planta tierna de cocuy, + €).",
+  "municipio": "Jacura",
+  "distrito": "Acosta",
+  "tipo": "aldea"
+ },
+ "CODORE": {
+  "cuerpo": "Salinas y aldea del municipio Urumaco, Distrito Democracia.",
+  "municipio": "Urumaco",
+  "distrito": "Democracia",
+  "tipo": "aldea"
+ },
+ "COJINA": {
+  "cuerpo": "Río que desagua en el Golfete de Coro, Distrito Miranda.",
+  "municipio": null,
+  "distrito": "Miranda",
+  "tipo": "río"
+ },
+ "COLACHO": {
+  "cuerpo": "Caserío del municipio Urumaco, Distrito Democracia. (Co- lacho, hipocorístico de Nicolás).",
+  "municipio": "Urumaco",
+  "distrito": "Democracia",
+  "tipo": "caserío"
+ },
+ "CONCHONCHAS": {
+  "cuerpo": "Las Conchonchas, poza en el Municipio Pedregal.",
+  "municipio": "Pedregal",
+  "distrito": null,
+  "tipo": null
+ },
+ "COPEY": {
+  "cuerpo": "[ - Aldea del Municipio Seque, Distrito Buchivacoa. / II - Al- dea del Municipio Guzmán Guillermo, Distrito Miranda. / III - Aldea del Municipio Avaria, Distrito Democracia. / IV - Aldea del Municipio Aguaclara, Distrito Democracia. (Copey, palmera del género clusia).",
+  "municipio": "Seque",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "COROPAL": {
+  "cuerpo": "Aldea del Municipio Guzmán Guillermo, Distrito Miranda. (Puede ser una disimilación de Corozal. (Ver más adelante). 102 es! Extracción de sal, (S]",
+  "municipio": "Guzmán",
+  "distrito": "Miranda",
+  "tipo": "aldea"
+ },
+ "COROQUIDIRO": {
+  "cuerpo": "Aldea del Municipio Capatárida, Distrito Buchíiva do conocemos la desinencia “iro”, que es diminutivo).",
+  "municipio": "Capatárida",
+  "distrito": "Buchíiva",
+  "tipo": "aldea"
+ },
+ "COROZO": {
+  "cuerpo": "] - El Corozo, aldea del municipio Colina del Distrito -",
+  "municipio": "Colina",
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "CUARAJACUME": {
+  "cuerpo": "Aldea que una parte pertenece al municipio Urumaco, Distrito Democracia, y la otra parte al municipio Zazárida, Distrito Bu- chuivacoa.",
+  "municipio": "Urumaco",
+  "distrito": "Democracia",
+  "tipo": "aldea"
+ },
+ "CUARE": {
+  "cuerpo": "Cuare (Altamira), caserío del municipio Borojó, Distriro Bu- chivacoa.",
+  "municipio": "Borojó",
+  "distrito": null,
+  "tipo": "caserío"
+ },
+ "CUEPARO": {
+  "cuerpo": "Aldea del municipio Jacura, Distrito Acosta. 104 es!",
+  "municipio": "Jacura",
+  "distrito": "Acosta",
+  "tipo": "aldea"
+ },
+ "CUIBA": {
+  "cuerpo": "Las Cuibas, caserío del municipio Pedregal, Democracia. / 1; La Cuibita, caserío del municipio Aguaclara, Democracia. En «in bas aldeas hay fuentes termales.",
+  "municipio": "Pedregal",
+  "distrito": null,
+  "tipo": "caserío"
+ },
+ "CUMAREBO": {
+  "cuerpo": "Nombre del antiguo cantón que es hoy el Distrito Zamora. Hay Puerto Cumarebo, que es la capital del Distrito, y Pueblo Cu- marebo, un municipio del mismo Distrito. Cumarebito es una aldea del municipio Pueblo Cumarebo. (Cumarebo significa: el camino del cacique Cumare: paso, senda y Cumare, el cacique). [4 » ebo",
+  "municipio": "del",
+  "distrito": "Zamora",
+  "tipo": "pueblo"
+ },
+ "CUME": {
+  "cuerpo": "Aldea del municipio Borojó, Distrito Buchivacoa. (Cume, cu- be, ser sobrenatural, fantasma).",
+  "municipio": "Borojó",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "CUQUÍA": {
+  "cuerpo": "Aldea del municipio Capatárida, Buchivacoa.",
+  "municipio": "Capatárida",
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "CURAIRIMA": {
+  "cuerpo": "Aldea del municipio Cabure, Distrito Petit. (Irima: humedad).",
+  "municipio": "Cabure",
+  "distrito": "Petit",
+  "tipo": "aldea"
+ },
+ "CURAMACO": {
+  "cuerpo": "Aldea del municipio Pedregal, Distrito Democracia. Aca: par, casal, pareja. 105 es!",
+  "municipio": "Pedregal",
+  "distrito": "Democracia",
+  "tipo": "aldea"
+ },
+ "CURAMICHATE": {
+  "cuerpo": "Puerto y pueblo en el municipio La Pastora. [1 minas de carbón, arena y sal.",
+  "municipio": "La",
+  "distrito": null,
+  "tipo": "pueblo"
+ },
+ "CURAZAO": {
+  "cuerpo": "Pueblo del municipio Casigua, Distrito Mauroa.",
+  "municipio": "Casigua",
+  "distrito": "Mauroa",
+  "tipo": "pueblo"
+ },
+ "CURIAJA": {
+  "cuerpo": "Sitio señalado en los linderos del municipio Casigua. (Curiaja, planta bromeliácea, teco, maya).",
+  "municipio": "Casigua",
+  "distrito": null,
+  "tipo": "sitio"
+ },
+ "CURIMAGUA": {
+  "cuerpo": "Población capital del municipio Curimagua, Distrito Petit. (Puede que provenga de Curi, pequeño roedor, acure, picure).",
+  "municipio": "Curimagua",
+  "distrito": "Petit",
+  "tipo": null
+ },
+ "CURUQUEBO": {
+  "cuerpo": "Aldea del municipio Zazárida, Distrito Buchivacoa. El paso de la paloma.",
+  "municipio": "Zazárida",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "CURUQUIDES": {
+  "cuerpo": "Aldea del municipio Zazárida, Distrito Buchivacoa. 106 es!",
+  "municipio": "Zazárida",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "CURURUPARE": {
+  "cuerpo": "Caserío del municipio Piedra Grande,",
+  "municipio": "Piedra",
+  "distrito": null,
+  "tipo": "caserío"
+ },
+ "CHIBARE": {
+  "cuerpo": "Montaña al Oeste de Chichiriviche, Distrito Silva. (Chibare, aféresis de Achivare, variedad de matapalo cuya madera es de po- ca utilidad).",
+  "municipio": null,
+  "distrito": "Silva",
+  "tipo": null
+ },
+ "CHICAGUA": {
+  "cuerpo": "Pequeña península en el golfete de Coro, Distrito Miranda.",
+  "municipio": null,
+  "distrito": "Miranda",
+  "tipo": null
+ },
+ "CHIDARE": {
+  "cuerpo": "Aldea del municipio Capatárida, Distrito Buchivacoa.",
+  "municipio": "Capatárida",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "CHICHIRIVICHE": {
+  "cuerpo": "Puerto y población, capital del municipio Chichiriviche, Dis- trito Silva.",
+  "municipio": "Chichiriviche",
+  "distrito": null,
+  "tipo": null
+ },
+ "CHIGUARIGUA": {
+  "cuerpo": "Caserío del municipio Agualinda, Distrito Acosta. (Voz com- , . puesta de “chigua”, nasa, cesto, y “arigua”, un insecto melífero). 107 es!",
+  "municipio": "Agualinda",
+  "distrito": "Acosta",
+  "tipo": "caserío"
+ },
+ "CHIMPIRE": {
+  "cuerpo": "[- Barrio urbano de la población de Pedregal, 1: » Demo- cracia. / II - Aldea del municipio Píritu, Distrito Zam . * IT - Aldea del municipio Mapararí, Distrito Federación.",
+  "municipio": "Píritu",
+  "distrito": "Zam",
+  "tipo": "aldea"
+ },
+ "CHINCHORRO": {
+  "cuerpo": "El Chinchorro, caserío del municipio Agualinda, Distrito Acos- ta. (Chinchorro: hamaca de fique).",
+  "municipio": "Agualinda",
+  "distrito": "Acos",
+  "tipo": "caserío"
+ },
+ "CHIPE": {
+  "cuerpo": "Los Chipes, caserío del municipio Mitare, Distrito Miranda. (Chipe: almeja).",
+  "municipio": "Mitare",
+  "distrito": "Miranda",
+  "tipo": "caserío"
+ },
+ "CHIQUICHIQUE": {
+  "cuerpo": "Río que corre en el Distrito Silva. (Chiquichique: planta ab- bustiva, leguminosa, medicinal, “cassia obtusifolia”. En Guayana, palmera gigante, la “Leopoldina Piasaba”).",
+  "municipio": null,
+  "distrito": "Silva",
+  "tipo": "río"
+ },
+ "CHOROTE": {
+  "cuerpo": "Aldea del municipio Capatárida, Distrito Buchivacoa. (Choro- le: voz cumanagota, tiesto de barro, útil de cocina).",
+  "municipio": "Capatárida",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "CHUBISCAL": {
+  "cuerpo": "Caserío del municipio Unión, Distrito Federación. (Chubiscal: colectivo de chubisco, insecto, escarabajo, congorroncho). 108",
+  "municipio": "Unión",
+  "distrito": "Federación",
+  "tipo": "caserío"
+ },
+ "CHUCHURE": {
+  "cuerpo": "fis Aldea del municipio Sabaneta, Distrito hfiranmda. tí una alteración de Chuchube, pájaro canoro).",
+  "municipio": "Sabaneta",
+  "distrito": "hfiranmda",
+  "tipo": "aldea"
+ },
+ "CHUNAURE": {
+  "cuerpo": "Lugar desaparecido; en antiguos papeles se menciona el fun- do, ubicado en el Cantón Casicure. (Chunaure: voz caquetía, jojota mazorca tierna de maíz).",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "CHURUGUARA": {
+  "cuerpo": "Población capital del municipio Churuguara y del Distrito Fe- deración. (Sin explicar el significado, Alfredo Jahn registra la voz: Axodawara. “Aborígenes del Occidente de Venezuela”).",
+  "municipio": "Churuguara",
+  "distrito": "Fe",
+  "tipo": null
+ },
+ "DABAJURO": {
+  "cuerpo": "Pablación capital del municipio Dabajuro, Distrito Buchiva- coa. (Dabajuro: nombre de un cacique. Era pichicate: ¡daba a ju- ro!).",
+  "municipio": "Dabajuro",
+  "distrito": "Buchiva",
+  "tipo": null
+ },
+ "DANTA": {
+  "cuerpo": "La Danta, aldea del municipio Unión, Distrito Federación",
+  "municipio": "Unión",
+  "distrito": "Federación",
+  "tipo": "aldea"
+ },
+ "DARA": {
+  "cuerpo": "Las Daras, caserío del municipio Pecaya, Distrito Bolívar. (Dara, ave corredora, muy ruidosa, el alcaraván). 109 es!",
+  "municipio": "Pecaya",
+  "distrito": "Bolívar",
+  "tipo": "caserío"
+ },
+ "DATUARA": {
+  "cuerpo": "Quebrada en el municipio Borojó, Distrito 5 coa.",
+  "municipio": "Borojó",
+  "distrito": null,
+  "tipo": "quebrada"
+ },
+ "DECORE": {
+  "cuerpo": "Aldea del municipio Mapararí, Distrito Federa",
+  "municipio": "Mapararí",
+  "distrito": "Federa",
+  "tipo": "aldea"
+ },
+ "DIBANA": {
+  "cuerpo": "Caserío del municipio Tocuyo de la Costa, Distrito Silva. (Es una alteración de Gibana, que significa cerro amarillo).",
+  "municipio": "Tocuyo",
+  "distrito": "Silva",
+  "tipo": "caserío"
+ },
+ "DOCHE": {
+  "cuerpo": "Cerro en los linderos del municipio San Juan de los Cayos. Dto. Acosta.",
+  "municipio": "San",
+  "distrito": null,
+  "tipo": "cerro"
+ },
+ "DUBISI": {
+  "cuerpo": "Población perteneciente al municipio Mapararí, Dto. Fede- ración. (Es un apellido de las tribus ayamanes).",
+  "municipio": "Mapararí",
+  "distrito": null,
+  "tipo": null
+ },
+ "DUIZA": {
+  "cuerpo": "Aldea del municipio Pecaya, Distrito Bolívar.",
+  "municipio": "Pecaya",
+  "distrito": "Bolívar",
+  "tipo": "aldea"
+ },
+ "ENEA": {
+  "cuerpo": "La Enea, caserío del municipio Jacura, Distrito Acosta. (Ese: planta ciperácea). 110 es!",
+  "municipio": "Jacura",
+  "distrito": "Acosta",
+  "tipo": "caserío"
+ },
+ "EROA": {
+  "cuerpo": "Aldea del municipio Zazárida y / municipio.",
+  "municipio": "Zazárida",
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "ESCUQUE": {
+  "cuerpo": "Manantial en el municipio Pueblo ' TE, (Voz cuica-timote adoptada).",
+  "municipio": "Pueblo",
+  "distrito": null,
+  "tipo": "pueblo"
+ },
+ "GAYONES": {
+  "cuerpo": "Los Gayones, aldea del municipio Churuguara, Dto. Federa ción. (Gayón: árbol de construcción. Gayones: una tribu ayamán).",
+  "municipio": "Churuguara",
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "GUACA": {
+  "cuerpo": "Río que es afluente del río Tocuyo, Dto. Silva. (Guaca: ave, cotorra).",
+  "municipio": null,
+  "distrito": null,
+  "tipo": "río"
+ },
+ "GUACABANA": {
+  "cuerpo": "Aldea del municipio Chichiriviche, Dto. Silva. (Guacabana: el cerro de las cotas).",
+  "municipio": "Chichiriviche",
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "CUACHARA": {
+  "cuerpo": "Cerro cercano a la población de Cabure, Distrito Petit. L11",
+  "municipio": null,
+  "distrito": "Petit",
+  "tipo": "cerro"
+ },
+ "GUACHARACA": {
+  "cuerpo": "Caserío del municipio San Francisco (Mirimire;, . Ácos- ta. / II - Caserío del municipio Jacura, Ácosta, / II] - : . erío del municipio Agualinda, Dto. Acosta. (Guacharaca: gallir. «ilvestre, muy ruidosa).",
+  "municipio": "San",
+  "distrito": null,
+  "tipo": "caserío"
+ },
+ "GUAGUA": {
+  "cuerpo": "Caserío del municipio Guzmán Guillermo, Distrito Miranda. (Guagua: caña arborescente de tallo cilíndrico y hueco, guasdua.",
+  "municipio": "Guzmán",
+  "distrito": "Miranda",
+  "tipo": "caserío"
+ },
+ "GUAGUANA": {
+  "cuerpo": "Aldea del municipio Casigua, Distrito Mauroa.",
+  "municipio": "Casigua",
+  "distrito": "Mauroa",
+  "tipo": "aldea"
+ },
+ "GUAIBACOA": {
+  "cuerpo": "Pueblo capital del municipio Guaibacoa, Distrito Colina. (Guaibacoa: lugar de los guays).",
+  "municipio": "Guaibacoa",
+  "distrito": "Colina",
+  "tipo": "pueblo"
+ },
+ "GUAIMURE": {
+  "cuerpo": "Aldea del municipio Capatárida, Distrito Buchivacoa. (Gzai- mure: raíz de guay; “ure”, raíz).",
+  "municipio": "Capatárida",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "GUAICAL": {
+  "cuerpo": "El Guaical, cerro cerca de Mirimire, Distrito Acosta. (Guat- ca, planta sarmentosa, armada de grandes espinas; su savia es medicinal para la vista.",
+  "municipio": null,
+  "distrito": "Acosta",
+  "tipo": "cerro"
+ },
+ "GUAICARA": {
+  "cuerpo": "Aldea del municipio Sabaneta, Distrito Miranda.",
+  "municipio": "Sabaneta",
+  "distrito": "Miranda",
+  "tipo": "aldea"
+ },
+ "CUAIDIMA": {
+  "cuerpo": "Aldea del municipio Capadare, Dto. Acosta.",
+  "municipio": "Capadare",
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "CUAJIRO": {
+  "cuerpo": "Aldea del municipio Bariro, Distrito Buchivacoa. 112 es!",
+  "municipio": "Bariro",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "GUAMACHO": {
+  "cuerpo": "Población perteneciente al muni. (Guamacho: árbol cactáceo).",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "GUAMAL": {
+  "cuerpo": "Lugar del municipio Macoruca, Distrito fa fruta del guamo).",
+  "municipio": "Macoruca",
+  "distrito": "fa",
+  "tipo": null
+ },
+ "GUAMAY": {
+  "cuerpo": "Lugar del municipio Aracua, Distrito Bolívar.",
+  "municipio": "Aracua",
+  "distrito": "Bolívar",
+  "tipo": null
+ },
+ "GUAMO": {
+  "cuerpo": "El Guamo, aldea del municipio Mapararí. Distrito Federación.",
+  "municipio": "Mapararí",
+  "distrito": "Federación",
+  "tipo": "aldea"
+ },
+ "GUAMARE": {
+  "cuerpo": "Aldea del municipio Jacura, Distrito Acosta.",
+  "municipio": "Jacura",
+  "distrito": "Acosta",
+  "tipo": "aldea"
+ },
+ "GUANÁAÁBANO": {
+  "cuerpo": "El Guanábano, caserío del municipio Puerto Cumarebo (Gua- nábano: árbol frutal).",
+  "municipio": "Puerto",
+  "distrito": null,
+  "tipo": "caserío"
+ },
+ "GUANACHANA": {
+  "cuerpo": "Quebrada y ciénaga en el municipio Jacura, Dto. Acosta y lin- dero meridional del Distrito Zamora.",
+  "municipio": "Jacura",
+  "distrito": "Zamora",
+  "tipo": "quebrada"
+ },
+ "GUARA": {
+  "cuerpo": "Caserío del municipio Chichiriviche, Distrito Silva.",
+  "municipio": "Chichiriviche",
+  "distrito": "Silva",
+  "tipo": "caserío"
+ },
+ "GCGUARABITA": {
+  "cuerpo": "Aldea del municipio Aracua, Dto. Bolívar Guarabito, aldea del municipio Bariro, Dto. Buchivacoa.",
+  "municipio": "Aracua",
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "GUARACARO": {
+  "cuerpo": "Lugar de Casicure. (Guaracaro: planta herbáccs, anual, que produce un grano alimenticio, una tapirama silvestre.",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "GUARATAL": {
+  "cuerpo": "Río afluente del Gieque, Dto. Colina.",
+  "municipio": null,
+  "distrito": null,
+  "tipo": "río"
+ },
+ "GUAREBOBO": {
+  "cuerpo": "Aldea del municipio Borojó, Distrito Buchivacoa.",
+  "municipio": "Borojó",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "GUARECAL": {
+  "cuerpo": "Aldea del municipio Píritu, Distrito Zamora. (Guareque, voz chaima, sapo).",
+  "municipio": "Píritu",
+  "distrito": "Zamora",
+  "tipo": "aldea"
+ },
+ "GUARIRO": {
+  "cuerpo": "Cerro cerca de Capatárida, Dto. Buchivacoa.",
+  "municipio": null,
+  "distrito": null,
+  "tipo": "cerro"
+ },
+ "GUASIMA": {
+  "cuerpo": "La Guásima, aldea del municipio Cabure, Distrito Petit.",
+  "municipio": "Cabure",
+  "distrito": "Petit",
+  "tipo": "aldea"
+ },
+ "CUASIQUÍ": {
+  "cuerpo": "Caserío del municipio Pecaya, Distrito Bolívar.",
+  "municipio": "Pecaya",
+  "distrito": "Bolívar",
+  "tipo": "caserío"
+ },
+ "CUATACARA": {
+  "cuerpo": "Lugar nombrado en los linderos del municipio Capatárida, Distrito Buchivacoa. 114 es! Casa de Josefa Camejo, en Paraguaná, (S]",
+  "municipio": "Capatárida",
+  "distrito": "Buchivacoa",
+  "tipo": "casa"
+ },
+ "GUATARIMA": {
+  "cuerpo": "Aldea del municipio Curimagua, Distrito Y<",
+  "municipio": "Curimagua",
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "GUATE": {
+  "cuerpo": "[ - (Puente Huate). Caserío del municipio Guzman Guillermo, Distrito Miranda.",
+  "municipio": "Guzman",
+  "distrito": "Miranda",
+  "tipo": "caserío"
+ },
+ "GUAY": {
+  "cuerpo": "«+===..... recon. 116 Guayabal ..........---- 116 Cuaimocho ...:=+:«.... 116 Guayana ......_..—..... 116 Gúedeque ............. 116 Gieque ........—.—...... 116 Guide ..........==... 116 Guinea .........-..... 117 Cin +:-.=::::....... 117 Icacales .......: ec... 117 ÍCUIZa ,.i:..nii-iuriaoo 117 Jg0y +-.........e..... 117 INirgus +-«r==e=....... 117 Iparaguaro ...........”. 117 [PAE =:-.00-=-5 5.0.\" 117 Lua! e. errres-. 117 17 MEUETP Tp TE PTU 118 152 Isiro Itowa Jabilla Jacura Jadagua Jajatal ................ ” . . movi. y error.",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "GUAYABAL": {
+  "cuerpo": "Lugar selvático, zona maderera, al Este de Jacura y al Oeste de San Lorenzo, Dto. Acosta.",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "GUAIMOCHO": {
+  "cuerpo": "Aldea del municipio Capatárida, Distrito Buchivacoa.",
+  "municipio": "Capatárida",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "GUAYANA": {
+  "cuerpo": "La Guayana, aldea del municipio Agualinda, Distrito Acosta.",
+  "municipio": "Agualinda",
+  "distrito": "Acosta",
+  "tipo": "aldea"
+ },
+ "GUEDEQUE": {
+  "cuerpo": "Paso en el río Pedregal, Distrito Democracia.",
+  "municipio": null,
+  "distrito": "Democracia",
+  "tipo": "río"
+ },
+ "GUEQUE": {
+  "cuerpo": "[ - Río que nace en el Distrito Petit y desemboca en las costas del Distrito Zamora. / II - Aldea del municipio Colina del Distrito Petit. / III - Montaña de Gieque, aldea del municipio Píritu.",
+  "municipio": "Colina",
+  "distrito": "Petit",
+  "tipo": "río"
+ },
+ "CUIDE": {
+  "cuerpo": "Boca de Gúiide. Lugar en el municipio Guzmán Guillermo, Distrito Miranda. 116 es!",
+  "municipio": "Guzmán",
+  "distrito": "Miranda",
+  "tipo": null
+ },
+ "GUINEA": {
+  "cuerpo": "La Guinea, aldea del municipio /.--",
+  "municipio": null,
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "GUINI": {
+  "cuerpo": "Manantial u ojo de agua en el mus: Distrito Zamora.",
+  "municipio": null,
+  "distrito": "Zamora",
+  "tipo": null
+ },
+ "ICACALES": {
+  "cuerpo": "Los Icacales, aldea del municipio La Pastora, Distrito Acosta. (Icaco, arbolillo frutal).",
+  "municipio": "La",
+  "distrito": "Acosta",
+  "tipo": "aldea"
+ },
+ "ICUIZA": {
+  "cuerpo": "Quebrada y también aldea en el municipio Jacura, Distrito Acosta.",
+  "municipio": "Jacura",
+  "distrito": "Acosta",
+  "tipo": "quebrada"
+ },
+ "IGUY": {
+  "cuerpo": "Cerro señalado en los linderos del municipio Acurigua, Distrito Colina. (Igií: árbol, matapalo, paují).",
+  "municipio": "Acurigua",
+  "distrito": "Colina",
+  "tipo": "cerro"
+ },
+ "INIRGUA": {
+  "cuerpo": "Aldea del municipio Guzmán Guillermo, Distrito Miranda.",
+  "municipio": "Guzmán",
+  "distrito": "Miranda",
+  "tipo": "aldea"
+ },
+ "IPARAGUARO": {
+  "cuerpo": "Lugar que a lo que consideramos fue o es un fundo pecuario; no hemos precisado su ubicación. Lo documentamos de Pedro Ma- nuel Arcaya en su obra “Población de Origen Europeo de Coro”).",
+  "municipio": null,
+  "distrito": null,
+  "tipo": "fundo"
+ },
+ "IPARE": {
+  "cuerpo": "Caserío del municipio Guzmán Guillermo, Distrito Miranda. (Ipare: aféresis de chipare, matapalo).",
+  "municipio": "Guzmán",
+  "distrito": "Miranda",
+  "tipo": "caserío"
+ },
+ "IQUITAL": {
+  "cuerpo": "Lugar nombrado en los linderos del municipio Dabajuro, Dis- trito Buchivacoa. 117 es!",
+  "municipio": "Dabajuro",
+  "distrito": null,
+  "tipo": null
+ },
+ "TRACA": {
+  "cuerpo": "[ - Cerro cerca de Acurigua, Dto. Colina. / 11 - !racal, caserío en el municipio Sabaneta, Distrito Miranda. (lrac:. pImera cono- cida en otros lugares con los nombres de jipijapa, p:!'ma carabobo, atadera, etc.).",
+  "municipio": "Sabaneta",
+  "distrito": "Miranda",
+  "tipo": "cerro"
+ },
+ "IRIMA": {
+  "cuerpo": "Caserío del municipio Guzmán Guillermo, Distrito Miranda.",
+  "municipio": "Guzmán",
+  "distrito": "Miranda",
+  "tipo": "caserío"
+ },
+ "ISIRO": {
+  "cuerpo": "Lugar del municipio Guzmán Guillermo, Distrito Miranda. Hoy hay una gran represa. (Isiro: árbol sapindáceo).",
+  "municipio": "Guzmán",
+  "distrito": "Miranda",
+  "tipo": null
+ },
+ "ITOWA": {
+  "cuerpo": "Antiguo nombre indígena de Churuguara.",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "JABILLA": {
+  "cuerpo": "] - Las Jabillas, aldea del municipio Seque, Distrito Buchi- vacoa. / II - El Jabillal, aldea del municipio Mapararí, Distrito Federación. (Jabillo: árbol maderable).",
+  "municipio": "Seque",
+  "distrito": "Buchi",
+  "tipo": "aldea"
+ },
+ "JACURA": {
+  "cuerpo": "Población capital del municipio del mismo nombre, Distrito Acosta.",
+  "municipio": "del",
+  "distrito": "Acosta",
+  "tipo": null
+ },
+ "JADAGUA": {
+  "cuerpo": "Aldea del municipio Casigua, Distrito Mauroa.",
+  "municipio": "Casigua",
+  "distrito": "Mauroa",
+  "tipo": "aldea"
+ },
+ "JAJATAL": {
+  "cuerpo": "Sabanas de Chichiriviche, Distrito Silva. (Jajato: hierba de terrenos salobres).",
+  "municipio": null,
+  "distrito": "Silva",
+  "tipo": null
+ },
+ "JATIRA": {
+  "cuerpo": "Ciénega o laguna en el territorio del municipio San Juan de los Cayos, Distrito Acosta. 118 es!",
+  "municipio": "San",
+  "distrito": "Acosta",
+  "tipo": "laguna"
+ },
+ "JEBE": {
+  "cuerpo": "1 - El Jebe, aldea del municipio Per cia. / II - El Jebe, aldea del municipio Distrito Miranda. / III - El Jebito, caserío Distrito Miranda. (Arbol maderable).",
+  "municipio": "Per",
+  "distrito": "Miranda",
+  "tipo": "aldea"
+ },
+ "JOBO": {
+  "cuerpo": "El Jobo, aldea del municipio Pedregal, Distrito Democracia. (Jobo: un árbol cuya drupa es comestible).",
+  "municipio": "Pedregal",
+  "distrito": "Democracia",
+  "tipo": "aldea"
+ },
+ "JUBUY": {
+  "cuerpo": "Aldea del municipio Borojó, Distrito Buchivacoa.",
+  "municipio": "Borojó",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "JURITIBA": {
+  "cuerpo": "Aldea del municipio Borojó, Distrito Buchivacoa.",
+  "municipio": "Borojó",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "MACORUCA": {
+  "cuerpo": "Pueblo del Distrito Colina, que antiguamente era la capital del municipio Macoruca; hoy es una aldea de ese municipio y la capital es Turagual.",
+  "municipio": "Macoruca",
+  "distrito": "Colina",
+  "tipo": "pueblo"
+ },
+ "MACUQUITA": {
+  "cuerpo": "Aldea de Guzmán Guillermo, Distrito Miranda.",
+  "municipio": null,
+  "distrito": "Miranda",
+  "tipo": "aldea"
+ },
+ "MAGUAY": {
+  "cuerpo": "[ - Caserío de Pecaya, Distrito Bolívar. / 11 - nldea del muní- cipio Acurigua, Distrito Colina.",
+  "municipio": null,
+  "distrito": "Bolívar",
+  "tipo": "caserío"
+ },
+ "MAICA": {
+  "cuerpo": "Caserío del municipio Piedra Grande, Distrito Democracia.",
+  "municipio": "Piedra",
+  "distrito": "Democracia",
+  "tipo": "caserío"
+ },
+ "MAIPANA": {
+  "cuerpo": "Lugar de Acurigua, Distrito Colina.",
+  "municipio": null,
+  "distrito": "Colina",
+  "tipo": null
+ },
+ "MAJAGUAL": {
+  "cuerpo": "Pueblo del municipio Mitare, Distrito Miranda.",
+  "municipio": "Mitare",
+  "distrito": "Miranda",
+  "tipo": "pueblo"
+ },
+ "MAJAGUILLO": {
+  "cuerpo": "Caserío del municipio Guaibacoa, Distrito Colina.",
+  "municipio": "Guaibacoa",
+  "distrito": "Colina",
+  "tipo": "caserío"
+ },
+ "MAMITAL": {
+  "cuerpo": "Caserío del municipio Unión, Distrito Federación.",
+  "municipio": "Unión",
+  "distrito": "Federación",
+  "tipo": "caserío"
+ },
+ "MAMPOSTAL": {
+  "cuerpo": "Cerro en los linderos meridionales del Distrito Zamora. 120 es!",
+  "municipio": null,
+  "distrito": "Zamora",
+  "tipo": "cerro"
+ },
+ "MANAURE": {
+  "cuerpo": "Cerro donde nace el río Ricos, *",
+  "municipio": null,
+  "distrito": null,
+  "tipo": "cerro"
+ },
+ "MANGLE": {
+  "cuerpo": "1 - Boca de Mangle, aldea del municipio 521 luis de los Cayos, Distrito Acosta. / II - El Mangle, aldea del municipio San Fran cisco (Mirimire), Acosta. / TII - Río Mangle, nombre que toma el río Capadare en su desembocadura. / 1V - El Manglar, caserío del municipio Puerto Cumarebo, Zamora.",
+  "municipio": "San",
+  "distrito": "Acosta",
+  "tipo": "aldea"
+ },
+ "MAPARÁ": {
+  "cuerpo": "Caserío del municipio Churuguara, Distrito Federación.",
+  "municipio": "Churuguara",
+  "distrito": "Federación",
+  "tipo": "caserío"
+ },
+ "MAPARARÍ": {
+  "cuerpo": "Población capital del municipio Mapararí, Distrito Federación.",
+  "municipio": "Mapararí",
+  "distrito": "Federación",
+  "tipo": null
+ },
+ "MAPIARE": {
+  "cuerpo": "Lugar de Churuguara en el Distrito Federación. Otrora fue una comunidad indígena que desapareció. Hoy es sitio arqueológico.",
+  "municipio": null,
+  "distrito": "Federación",
+  "tipo": "sitio"
+ },
+ "MAPORAL": {
+  "cuerpo": "Caserío del municipio Agualarga, Distrito Federación.",
+  "municipio": "Agualarga",
+  "distrito": "Federación",
+  "tipo": "caserío"
+ },
+ "MARAGUEY": {
+  "cuerpo": "Punta de Maragiiey, lugar costeño en el golfete de Coro, Dis- trito Miranda.",
+  "municipio": null,
+  "distrito": null,
+  "tipo": "punta"
+ },
+ "MARIPIOTA": {
+  "cuerpo": "Aldea del municipio Sucre (La Cruz), Distrito Bolívar.",
+  "municipio": "Sucre",
+  "distrito": "Bolívar",
+  "tipo": "aldea"
+ },
+ "MASAGUAL": {
+  "cuerpo": "El Masagual, aldea del municipio Mitare, Distrito Miranda. 121 es!",
+  "municipio": "Mitare",
+  "distrito": "Miranda",
+  "tipo": "aldea"
+ },
+ "MASUI": {
+  "cuerpo": "Aldea del municipio Casigua, Distrito Mauroa.",
+  "municipio": "Casigua",
+  "distrito": "Mauroa",
+  "tipo": "aldea"
+ },
+ "MATACANES": {
+  "cuerpo": "Aldea del municipio Guzmán Guillermo, Distrito Miranda. (Matacán: cérvido de poco alzada).",
+  "municipio": "Guzmán",
+  "distrito": "Miranda",
+  "tipo": "aldea"
+ },
+ "MATACARA": {
+  "cuerpo": "Aldea de Pedregal. / Matacarita: quebrada, lindero del muni- cipio Bruzual, Dto. Democracia.",
+  "municipio": null,
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "MATARUCA": {
+  "cuerpo": "Población perteneciente al municipio La Vela, Distrito Colina",
+  "municipio": "La",
+  "distrito": "Colina",
+  "tipo": null
+ },
+ "MAUROA": {
+  "cuerpo": "Nombre de un Distrito del Estado Falcón, formado por los municipios Mene de Mauroa (su capital), Casigua y San Félix. (Mauroa: apellido de un cacique).",
+  "municipio": null,
+  "distrito": "del",
+  "tipo": null
+ },
+ "MAYARES": {
+  "cuerpo": "Lugar y quebrada que es lindero del municipio Casigua, Dis- trito Mauroa. (Mayares: colectivo de maya: planta bromeliácea).",
+  "municipio": "Casigua",
+  "distrito": null,
+  "tipo": "quebrada"
+ },
+ "MAZUCA": {
+  "cuerpo": "Aldea del municipio Capatárida. Distrito Buchivacoa. 122 1 es!",
+  "municipio": "Capatárida",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "MEACHICHE": {
+  "cuerpo": "Río y aldea en el municipio Guzr: Miranda.",
+  "municipio": "Guzr",
+  "distrito": null,
+  "tipo": "río"
+ },
+ "MECOCAL": {
+  "cuerpo": "Aldea del municipio Jacura, Distrito Acosta.",
+  "municipio": "Jacura",
+  "distrito": "Acosta",
+  "tipo": "aldea"
+ },
+ "IT -": {
+  "cuerpo": "Aldea de Churuguara, Distrito Federación, / II - Aldea del municipio Mapararí, Distrito Federación. (Memerí: nido de avispas, colmena).",
+  "municipio": "Mapararí",
+  "distrito": "Federación",
+  "tipo": "aldea"
+ },
+ "MENE": {
+  "cuerpo": "[ - Mene de Acosta o San Lorenzo, población capital del muni- cipio Libertador, Distrito Acosta. / II - Mene de Mauroa, capital del Distrito Mauroa. (Mene: betún, asfalto).",
+  "municipio": null,
+  "distrito": "Acosta",
+  "tipo": null
+ },
+ "MIDE": {
+  "cuerpo": "Caserío del municipio Bruzual, Distrito Democracia.",
+  "municipio": "Bruzual",
+  "distrito": "Democracia",
+  "tipo": "caserío"
+ },
+ "MITARE": {
+  "cuerpo": "Población capital del municipio Mitare, Distrito Miranda.",
+  "municipio": "Mitare",
+  "distrito": "Miranda",
+  "tipo": null
+ },
+ "MORUCA": {
+  "cuerpo": "Cerro y caserío de Bruzual, Distrito Democracia.",
+  "municipio": null,
+  "distrito": "Democracia",
+  "tipo": "cerro"
+ },
+ "MOROTURO": {
+  "cuerpo": "Río y pueblo de Federación en los límites con el Estado Lara. 123 es!",
+  "municipio": null,
+  "distrito": null,
+  "tipo": "río"
+ },
+ "MORROCOY": {
+  "cuerpo": "Población del municipio Tucacas, Dto. Silva. (Cuelónido).",
+  "municipio": "Tucacas",
+  "distrito": null,
+  "tipo": null
+ },
+ "MOTURO": {
+  "cuerpo": "Lugar en el municipio Pueblo Cumarebo, Dtto. Zamora. Hay también Moturito, perteneciente a ese mismo municipio.",
+  "municipio": "Pueblo",
+  "distrito": null,
+  "tipo": "pueblo"
+ },
+ "MOYEPO": {
+  "cuerpo": "El Moyepo, aldea del municipio Macoruca, Distrito Colina.",
+  "municipio": "Macoruca",
+  "distrito": "Colina",
+  "tipo": "aldea"
+ },
+ "MUACO": {
+  "cuerpo": "| Puerto natural al Este de La Vela, Distrito Colina.",
+  "municipio": null,
+  "distrito": "Colina",
+  "tipo": null
+ },
+ "MUCARO": {
+  "cuerpo": "Manantial en el municipio Bruzual, Distrito Democracia.",
+  "municipio": "Bruzual",
+  "distrito": "Democracia",
+  "tipo": null
+ },
+ "MUCURÍA": {
+  "cuerpo": "Aldea del municipio La Pastora, Distrito Acosta.",
+  "municipio": "La",
+  "distrito": "Acosta",
+  "tipo": "aldea"
+ },
+ "MUCURUTÁA": {
+  "cuerpo": "Quebrada de Zazárida, Distrito Buchivacoa.",
+  "municipio": null,
+  "distrito": "Buchivacoa",
+  "tipo": "quebrada"
+ },
+ "MUCURUSA": {
+  "cuerpo": "Aldea del municipio Cabure, Petit.",
+  "municipio": "Cabure",
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "MUMUCHE": {
+  "cuerpo": "[ - Cerro entre Agualinda y Jacura. / II - Aldea del municipio Jacura, Distrito Acosta.",
+  "municipio": "Jacura",
+  "distrito": "Acosta",
+  "tipo": "cerro"
+ },
+ "MURENDE": {
+  "cuerpo": "Aldea del municipio Churuguara, Distrito Federación.",
+  "municipio": "Churuguara",
+  "distrito": "Federación",
+  "tipo": "aldea"
+ },
+ "NAFIA": {
+  "cuerpo": "Cerro que es lindero meridional del Distrito Bolívar. 124 es!",
+  "municipio": null,
+  "distrito": "Bolívar",
+  "tipo": "cerro"
+ },
+ "NAGUAO": {
+  "cuerpo": "Quebrada en el municipio Dabajuro, - +: Pueluvacoa,",
+  "municipio": "Dabajuro",
+  "distrito": null,
+  "tipo": "quebrada"
+ },
+ "NORUGA": {
+  "cuerpo": "Cerro en el Distrito Democracia.",
+  "municipio": null,
+  "distrito": "Democracia",
+  "tipo": "cerro"
+ },
+ "NOTO": {
+  "cuerpo": "Río afluente del Hueque.",
+  "municipio": null,
+  "distrito": null,
+  "tipo": "río"
+ },
+ "NUMANUMAM": {
+  "cuerpo": "Caserío del municipio Unión, Distrito Federación.",
+  "municipio": "Unión",
+  "distrito": "Federación",
+  "tipo": "caserío"
+ },
+ "OCOROTE": {
+  "cuerpo": "Aldea del municipio Mitare, Distrito Miranda.",
+  "municipio": "Mitare",
+  "distrito": "Miranda",
+  "tipo": "aldea"
+ },
+ "OMOMO": {
+  "cuerpo": "Caserío del municipio Casigua, Distrito Mauroa.",
+  "municipio": "Casigua",
+  "distrito": "Mauroa",
+  "tipo": "caserío"
+ },
+ "ORIBOR": {
+  "cuerpo": "Lugar costeño en el municipio San Félix, Distrito Mauroa. El Caño de Oribor señala el límite del Estado Falcón con el Estado Zulia.",
+  "municipio": "San",
+  "distrito": "Mauroa",
+  "tipo": null
+ },
+ "ORIGUETE": {
+  "cuerpo": "Quebrada que es lindero del municipio Capadare, Dtto. Acosta.",
+  "municipio": "Capadare",
+  "distrito": null,
+  "tipo": "quebrada"
+ },
+ "ORIGUAZA": {
+  "cuerpo": "Aldea y quebrada del municipio Jacura, Distrito Acosta.",
+  "municipio": "Jacura",
+  "distrito": "Acosta",
+  "tipo": "aldea"
+ },
+ "OROCODONES": {
+  "cuerpo": "Lugar del municipio Capatárida, Distrito Buchivacoa. 125 es!",
+  "municipio": "Capatárida",
+  "distrito": "Buchivacoa",
+  "tipo": null
+ },
+ "PAGUA": {
+  "cuerpo": "Caserío del municipio Colina del Distrito Petir.",
+  "municipio": "Colina",
+  "distrito": "Petir",
+  "tipo": "caserío"
+ },
+ "PARACOTO": {
+  "cuerpo": "Aldea de Mapararí, Federación.",
+  "municipio": null,
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "PARAGUITO": {
+  "cuerpo": "Lugar del municipio Purureche, Dtto. Democracia.",
+  "municipio": "Purureche",
+  "distrito": null,
+  "tipo": null
+ },
+ "PAIDO": {
+  "cuerpo": "Aldea del municipio Capatárida, Dtto. Buchivacoa.",
+  "municipio": "Capatárida",
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "PARAPARA": {
+  "cuerpo": "Aldea del municipio Tocuyo de la Costa, Dto. Silva. (Para- para: semilla del paraparo, árbol elevado, sapindus saponaria, la fruta de este árbol contiene una pulpa viscosa y amarga y se usa en lugar de jabón; las semillas son negras).",
+  "municipio": "Tocuyo",
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "PARAPOY": {
+  "cuerpo": "Lugar del municipio Mapararí, Dtto. Federación.",
+  "municipio": "Mapararí",
+  "distrito": null,
+  "tipo": null
+ },
+ "PARUCIA": {
+  "cuerpo": "Caserío del municipio Churuguara, Distrito Federación.",
+  "municipio": "Churuguara",
+  "distrito": "Federación",
+  "tipo": "caserío"
+ },
+ "PARUPANO": {
+  "cuerpo": "Caserío del municipio Mapararí, Distrito Federación.",
+  "municipio": "Mapararí",
+  "distrito": "Federación",
+  "tipo": "caserío"
+ },
+ "PAUJI": {
+  "cuerpo": "[ - El Paují, aldea de Churuguara, Federación. / II - El Paují, aldea del municipio Pueblo Cumarebo, Zamora. / III - El Paujizal, aldea del municipio Borojó, Buchivavoa. / IV - El Paují, río en el Distrito Miranda. (Paují: ave gallinácea de carne muy apreciada. Paují: árbol sapotáceo). 126 es!",
+  "municipio": "Pueblo",
+  "distrito": "Miranda",
+  "tipo": "aldea"
+ },
+ "PECAYA": {
+  "cuerpo": "Población capital del municipio del -: 5550. Distrito Bolívar.",
+  "municipio": "del",
+  "distrito": "Bolívar",
+  "tipo": null
+ },
+ "PEREGUEY": {
+  "cuerpo": "Aldea del municipio San Luis, Distrito Bolívar.",
+  "municipio": "San",
+  "distrito": "Bolívar",
+  "tipo": "aldea"
+ },
+ "PIRITU": {
+  "cuerpo": "] - Población capital del municipio Píritu, Dtto. Zamora. / 11 - San José de Píritu, aldea del municipio Píritu, Zamora. /",
+  "municipio": "Píritu",
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "IV -": {
+  "cuerpo": "Pirital, lugar del municipio Churuguara, Federación. / V - Pí- ritu, aldea del municipio Jacura, Distrito Acosta. / VI - Alto de Píritu, serranía que sirve de lindero del municipio Capatárida, Bu- chivacoa. (Piritu: una palmera).",
+  "municipio": "Churuguara",
+  "distrito": "Acosta",
+  "tipo": "aldea"
+ },
+ "PONJUICITO": {
+  "cuerpo": "El Alto de Ponjuicito, aldea del municipio Avaria, Drto. De- mocracia.",
+  "municipio": "Avaria",
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "POPOTE": {
+  "cuerpo": "[ - Aldea del municipio Urumaco, Dro. Democracia. / II - El Popotal, posesión comunera en el Dto. Zamora. (Popote: planta ciperácea, junco).",
+  "municipio": "Urumaco",
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "POROPOY": {
+  "cuerpo": "Aldea del municipio Unión, Distrito Federación.",
+  "municipio": "Unión",
+  "distrito": "Federación",
+  "tipo": "aldea"
+ },
+ "PUNDO": {
+  "cuerpo": "Pueblo del municipio Boca de Aroa, Distrito Silva. (Pundo es un topónimo antillano; en Curazao la zona comercial de la ciudad la llaman Punda). 127 es!",
+  "municipio": "Boca",
+  "distrito": "Silva",
+  "tipo": "pueblo"
+ },
+ "PURURECHE": {
+  "cuerpo": "Población capital del municipio del mismo nomnbr-, Distrito Democracia.",
+  "municipio": "del",
+  "distrito": "Democracia",
+  "tipo": null
+ },
+ "QUEBRAHUTO": {
+  "cuerpo": "Aldea del municipio Puerto Cumarebo, Distrito Zamora. (Ge- neralmente se tiene aceptado que la procedencia del topónimo débese a von Felipe de Hutten, el alemán conquistador que pasaría por allí en 1540, pero de un examen de la voz, hemos llegado a la con- clusión de que es un vocablo híbrido de español y caquetío, en cierto modo pleonástico, ya que la radical “quebra” es apócope de quebrada (español) y la desinencia “uto”, en caquetío, significa quebrada).",
+  "municipio": "Puerto",
+  "distrito": "Zamora",
+  "tipo": "aldea"
+ },
+ "QUEREREPA": {
+  "cuerpo": "Nombre de una laguna o extensa ciénega en el territorio del municipio Píritu, Distrito Zamora. (Puede ser una epéntesis de Querepa: yuca amarga).",
+  "municipio": "Píritu",
+  "distrito": "Zamora",
+  "tipo": "laguna"
+ },
+ "QUIBUCARA": {
+  "cuerpo": "Quebrada de Tocópero, Dtto. Zamora. (Puede ser alteración de Sibucara, árbol de corteza fibrosa. Sin embargo, “quiba”, en caquetío, es pedruzco).",
+  "municipio": null,
+  "distrito": null,
+  "tipo": "quebrada"
+ },
+ "QUIMBO": {
+  "cuerpo": "Los Quimbos, aldea del municipio Pedregal, Dtto. Democra- cia. (Quimba es voz chibcha que significa: sandalia, alpargata). _ QUIGCGUA e, Aldea del municipio Capatárida, Distrito Buchivacoa. (Qui- gua: crustáceo).",
+  "municipio": "Pedregal",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "QUIPITO": {
+  "cuerpo": "Cerro en los linderos del Distrito Bolívar (Quipito: árbol ru- táceo de corteza olorosa. Sándalo de playa lo llamaron los espa- ñoles). 128 es! Trabajando la cerámica. (S]",
+  "municipio": null,
+  "distrito": "Bolívar",
+  "tipo": "cerro"
+ },
+ "QUIRAGUA": {
+  "cuerpo": "] - Aldea del municipio Jacura, Distrito Acos:... + II - Aldea del municipio Puerto Cumarebo, Distrito Zamora. / HI - Aldea del municipio Guzmán Guillermo, Distrito Miranda. / IV - Ciéna- ga de Quiragua, otra aldea del municipio Guzmán Guillermo.",
+  "municipio": "Jacura",
+  "distrito": "Acos",
+  "tipo": "aldea"
+ },
+ "QUIRIBERTIA": {
+  "cuerpo": "Aldea del municipio Tocuyo de la Costa, Distrito Silva.",
+  "municipio": "Tocuyo",
+  "distrito": "Silva",
+  "tipo": "aldea"
+ },
+ "QUITARAGUA": {
+  "cuerpo": "Aldea del municipio San Luis, Distrito Bolívar.",
+  "municipio": "San",
+  "distrito": "Bolívar",
+  "tipo": "aldea"
+ },
+ "III -": {
+  "cuerpo": "Puente Ricoa, aldea del municipio Tocópero. / IV - Ricoa, aldea del municipio Capatárida, Distrito Buchivacoa.",
+  "municipio": "Tocópero",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "SACURAGUA": {
+  "cuerpo": "Aldea del municipio Puerto Cumarebo, Distrito Zamora. El cerro de Sacuragua es uno de los más elevados del Distrito: tiene 488 metros sobre el nivel del mar.",
+  "municipio": "Puerto",
+  "distrito": "Zamora",
+  "tipo": "aldea"
+ },
+ "SAHOA": {
+  "cuerpo": "Aldea del Municipio Churuguara, Distrito Federación.",
+  "municipio": "Churuguara",
+  "distrito": "Federación",
+  "tipo": "aldea"
+ },
+ "SANARE": {
+  "cuerpo": "Río y pueblo del municipio Tucacas, Distrito Silva. Arbol.",
+  "municipio": "Tucacas",
+  "distrito": "Silva",
+  "tipo": "río"
+ },
+ "SARURO": {
+  "cuerpo": "El Saruro, aldea del municipio Bruzual, Distrito Democracia. (Saruro: culebra no venenosa, boa constrictora).",
+  "municipio": "Bruzual",
+  "distrito": "Democracia",
+  "tipo": "aldea"
+ },
+ "SAUCA": {
+  "cuerpo": "Puerto y pueblo al Norte de la población de Píritu y pertene- ciente a ese municipio, Distrito Zamora. Hay salinas.",
+  "municipio": null,
+  "distrito": "Zamora",
+  "tipo": "pueblo"
+ },
+ "SEMERUCO": {
+  "cuerpo": "Aldea del Municipio Acurigua, Distrito Colina. II - El Seme- rucal, caserío del municipio Mitare, Distrito Miranda. (Semeruco: cereza silvestre).",
+  "municipio": "Acurigua",
+  "distrito": "Colina",
+  "tipo": "aldea"
+ },
+ "SEQUE": {
+  "cuerpo": "Municipio del Distrito Buchivacoa. La capital es San José de Segue. Sécua: árbol.",
+  "municipio": "del",
+  "distrito": "Buchivacoa",
+  "tipo": null
+ },
+ "SIBUCARA": {
+  "cuerpo": "Lugar en el municipio Purureche, Distrito Democracia. (Sibu- cara: árbol corpulento de corteza fibrosa).",
+  "municipio": "Purureche",
+  "distrito": "Democracia",
+  "tipo": null
+ },
+ "SIBURÚA": {
+  "cuerpo": "Pueblo y manantial en el municipio Guzmán Guillermo, Dis- trito Miranda.",
+  "municipio": "Guzmán",
+  "distrito": null,
+  "tipo": "pueblo"
+ },
+ "SOCOPO": {
+  "cuerpo": "Cerro de considerable altura en el territorio del municipio Casigua, Distrito Mauroa, (Socopo tiene 1571 metros sobre el nivel del mar). 131 es!",
+  "municipio": "Casigua",
+  "distrito": "Mauroa",
+  "tipo": "cerro"
+ },
+ "SUEY": {
+  "cuerpo": "Caserío del municipio Bruzual, Distrito Democracia,",
+  "municipio": "Bruzual",
+  "distrito": "Democracia",
+  "tipo": "caserío"
+ },
+ "SUITE": {
+  "cuerpo": "Aldea costeña, Puerto Suite, municipio Borojó, Distrito Buchi- vacoa.",
+  "municipio": "Borojó",
+  "distrito": "Buchi",
+  "tipo": "aldea"
+ },
+ "SURUY": {
+  "cuerpo": "Aldea del municipio Independencia, Distrito Federación. (Su- sure: es un atbolillo que produce una frutilla negra de sabor agra- deble, codiciada de los pájaros. Una melastomácea).",
+  "municipio": "Independencia",
+  "distrito": "Federación",
+  "tipo": "aldea"
+ },
+ "TACAL": {
+  "cuerpo": "Serie de cerros al Este del Distrito Buchivacoa, linderos de este Distrito con el Distrito Democracia. Formación Tacal, se lee en tex- tos estratigráficos. (Tacal, colectivo de taque, árbol nucífero).",
+  "municipio": null,
+  "distrito": "Buchivacoa",
+  "tipo": null
+ },
+ "TACAMIRE": {
+  "cuerpo": "Cerro, pueblo y río al Sureste de Agualinda, Distrito Acosta.",
+  "municipio": null,
+  "distrito": "Acosta",
+  "tipo": "cerro"
+ },
+ "TACARIGUA": {
+  "cuerpo": "Caserío del municipio Libertador, Acosta. (Tacariguo: árbol bombáceo).",
+  "municipio": "Libertador",
+  "distrito": null,
+  "tipo": "caserío"
+ },
+ "TAGUAQUÍI": {
+  "cuerpo": "Aldea del municipio Píritu, Distrito Zamora. (Taguaquí: aca- cia, árbol espinoso, juva, úbeda). 132 es!",
+  "municipio": "Píritu",
+  "distrito": "Zamora",
+  "tipo": "aldea"
+ },
+ "TAICA": {
+  "cuerpo": "Aldea del municipio Pueblo Cumarcho, Distrito Zamora.",
+  "municipio": "Pueblo",
+  "distrito": "Zamora",
+  "tipo": "aldea"
+ },
+ "TAIMATAIMA": {
+  "cuerpo": "Lugar cercano a La Vela de Coro, Distrito Colina. Sitio arqueo- lógico.",
+  "municipio": null,
+  "distrito": "Colina",
+  "tipo": "sitio"
+ },
+ "TAPACUY": {
+  "cuerpo": "Lugar de Mapararí, lindero con el municipio Unión, Distrito Federación.",
+  "municipio": "Unión",
+  "distrito": "Federación",
+  "tipo": null
+ },
+ "TAPAROY": {
+  "cuerpo": "Caserío del municipio Agua Larga, Distrito Federación.",
+  "municipio": "Agua",
+  "distrito": "Federación",
+  "tipo": "caserío"
+ },
+ "TAPATAPA": {
+  "cuerpo": "Caserío del municipio Unión, Distrito Federación. (Tapatapa es una voz africana que indica movimiento).",
+  "municipio": "Unión",
+  "distrito": "Federación",
+  "tipo": "caserío"
+ },
+ "TARANA": {
+  "cuerpo": "Caserío del municipio Zazárida, Distrito Buchivacoa.",
+  "municipio": "Zazárida",
+  "distrito": "Buchivacoa",
+  "tipo": "caserío"
+ },
+ "TARUMA": {
+  "cuerpo": "Valle al Poniente del nacimiento del río Coro, municipio Guz- mán Guillermo.",
+  "municipio": "Guz",
+  "distrito": null,
+  "tipo": "valle"
+ },
+ "TATARI": {
+  "cuerpo": "Aldea del municipio Agualarga, Distrito Federación.",
+  "municipio": "Agualarga",
+  "distrito": "Federación",
+  "tipo": "aldea"
+ },
+ "TIGUAJE": {
+  "cuerpo": "Caserío del municipio Borojó, Buchivacoa; aledaño al lugar hay un campo petrolero, (Tigua: árbol rutáceo).",
+  "municipio": "Borojó",
+  "distrito": null,
+  "tipo": "caserío"
+ },
+ "TOBACOA": {
+  "cuerpo": "Aldea del municipio Capatárida, Distrito Buchivacoa.",
+  "municipio": "Capatárida",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "TOCÓPERO": {
+  "cuerpo": "Población capital del municipio del mismo nombre, Distrito Zamora.",
+  "municipio": "del",
+  "distrito": "Zamora",
+  "tipo": null
+ },
+ "TOCUYITO": {
+  "cuerpo": "Lugar en el Istmo de Médanos; pertenece al municipio San Gabriel, Dtto. Miranda.",
+  "municipio": "San",
+  "distrito": null,
+  "tipo": null
+ },
+ "TOCOCO": {
+  "cuerpo": "Aldea del municipio Jacura, Acosta. (Togogo: ave ansérida). 134 es!",
+  "municipio": "Jacura",
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "TOMODORE": {
+  "cuerpo": "Lugar en el municipio Guaibacoa, Distrito Colina.",
+  "municipio": "Guaibacoa",
+  "distrito": "Colina",
+  "tipo": null
+ },
+ "TOROY": {
+  "cuerpo": "Caserío del municipio Pecaya, Distrito Bolívar.",
+  "municipio": "Pecaya",
+  "distrito": "Bolívar",
+  "tipo": "caserío"
+ },
+ "TUCACAS": {
+  "cuerpo": "Población capital del municipio Tucacas y del Distrito Silva. (Tucacas: cangrejal).",
+  "municipio": "Tucacas",
+  "distrito": "Silva",
+  "tipo": null
+ },
+ "TUCUA": {
+  "cuerpo": "Caserío del municipio Zazárida, Dtto. Buchivacoa. (Cúa: can- grejo en chaima).",
+  "municipio": "Zazárida",
+  "distrito": null,
+  "tipo": "caserío"
+ },
+ "TUCUDURE": {
+  "cuerpo": "Montañuela en el municipio Puerto Cumarebo. / II - Lindero de la posesión de La Candelaria, Zamora.",
+  "municipio": "Puerto",
+  "distrito": null,
+  "tipo": null
+ },
+ "TUCUPIDO": {
+  "cuerpo": "Puerto y aldea del municipio Puerto Cumarebo. En el puerto existió un muelle petrolero.",
+  "municipio": "Puerto",
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "TUNAPÉ": {
+  "cuerpo": "Cerro que fija linderos de los municipios Guaibacoa y Acuri- gua, Dito. Colina, 135 es!",
+  "municipio": null,
+  "distrito": null,
+  "tipo": "cerro"
+ },
+ "TUPI": {
+  "cuerpo": "Pueblo que es asiento de la capital del municipio Ir 1--—aden- cia, Federación.",
+  "municipio": "Ir",
+  "distrito": null,
+  "tipo": "pueblo"
+ },
+ "TUPIOPA": {
+  "cuerpo": "Fila de cerros entre los municipios San Luis y Aracia, Dis trito Bolívar.",
+  "municipio": null,
+  "distrito": null,
+  "tipo": "fila"
+ },
+ "TUPURE": {
+  "cuerpo": "Población capital del municipio Avaria, Distrito Democracia. Tupurito: caserío del municipio Dabajuro, Distrito Buchivacoa.",
+  "municipio": "Avaria",
+  "distrito": "Democracia",
+  "tipo": "caserío"
+ },
+ "TUQUEQUE": {
+  "cuerpo": "Cerro cerca de Puerto Cumarebo, Dtto. Zamora. ( Tuqueque: lagarto casero).",
+  "municipio": null,
+  "distrito": null,
+  "tipo": "cerro"
+ },
+ "TURAGUAL": {
+  "cuerpo": "El Turagual, población capital del municipio Macoruca, Dis- trito Colina. (Turagual, colectivo de Turagua: árbol anonáceo).",
+  "municipio": "Macoruca",
+  "distrito": null,
+  "tipo": null
+ },
+ "TURUGCGUAPO": {
+  "cuerpo": "Cerro cerca de Puerto Cumarebo, Distrito Zamora.",
+  "municipio": null,
+  "distrito": "Zamora",
+  "tipo": "cerro"
+ },
+ "TURAMACO": {
+  "cuerpo": "Caserío del municipio Mitare, Distrito Miranda.",
+  "municipio": "Mitare",
+  "distrito": "Miranda",
+  "tipo": "caserío"
+ },
+ "TUREN": {
+  "cuerpo": "Posesión comunera del Distrito Zamora. 136",
+  "municipio": null,
+  "distrito": "Zamora",
+  "tipo": null
+ },
+ "TURUPIA": {
+  "cuerpo": "Aldea del municipio Pueblo Cumarcho, 70mora. Turopía árbol espinoso).",
+  "municipio": "Pueblo",
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "TUY": {
+  "cuerpo": "[ - El Tuy, caserío del municipio Churuguara. * IE - Fl Tay caserio del municipio Unión, Federación. (Tui árbol maderable —n ob).",
+  "municipio": "Churuguara",
+  "distrito": null,
+  "tipo": "caserío"
+ },
+ "UBERO": {
+  "cuerpo": "] - Uberito, caserío del municipio Mene de Mauroa, Distrito Mauroa. / 11 - Punta de Ubero, lugar costeño de San Juan de los Cavos, Acosta. (Ubero: árbol coposo que da la uva de playa).",
+  "municipio": "Mene",
+  "distrito": "Mauroa",
+  "tipo": "caserío"
+ },
+ "UMARE": {
+  "cuerpo": "Las Tetas de Umare, cerros en los linderos occidentales del municipio Agualinda, Distrito Acosta.",
+  "municipio": "Agualinda",
+  "distrito": "Acosta",
+  "tipo": null
+ },
+ "UMORIA": {
+  "cuerpo": "1 - Río afluente del Caidí, nace en el Dtto. Petit. / II - Saba- nas de Umoría, aldea del municipio Cabura, Dito. Petit.",
+  "municipio": "Cabura",
+  "distrito": null,
+  "tipo": "río"
+ },
+ "UPIPE": {
+  "cuerpo": "Río afluente del Hueque, corre por los distritos Colina y Za- mora; en sus comienzos le dan el nombre de Upire.",
+  "municipio": null,
+  "distrito": null,
+  "tipo": "río"
+ },
+ "URIA": {
+  "cuerpo": "] - Caserío del municipio Curimagua, Petit. / II - Las Urias, caserío del municipio Colina, Dtto. Petit.",
+  "municipio": "Curimagua",
+  "distrito": null,
+  "tipo": "caserío"
+ },
+ "URUCURE": {
+  "cuerpo": "Cerro al Sur del Dto. Miranda y al Norte de Petit y Bolívar 137 uo”",
+  "municipio": null,
+  "distrito": null,
+  "tipo": "cerro"
+ },
+ "URUMACO": {
+  "cuerpo": "Población capital del Municipio Urumaco, Dtto. Democracia.",
+  "municipio": "Urumaco",
+  "distrito": null,
+  "tipo": null
+ },
+ "URUY": {
+  "cuerpo": "El Uruy, caserío del municipio San Francisco (Mirimirc), Dto. Acosta.",
+  "municipio": "San",
+  "distrito": null,
+  "tipo": "caserío"
+ },
+ "USERA": {
+  "cuerpo": "Aldea del municipio Sucre, Distrito Bolívar.",
+  "municipio": "Sucre",
+  "distrito": "Bolívar",
+  "tipo": "aldea"
+ },
+ "UTAQUIRE": {
+  "cuerpo": "Caserío del municipio Urumaco, Dtto. Democracia.",
+  "municipio": "Urumaco",
+  "distrito": null,
+  "tipo": "caserío"
+ },
+ "YABO": {
+  "cuerpo": "[ - El Yabito, aldea de Dabajuro, Buchivavoa. / II - El Yabo, caserío de Pedregal, Democracia. / III - El Yabito, aldea de Piedra Grande, Democracia. / IV - El Yabal, caserío del municipio Bru- zual, Democracia. / V - El Yabalito, caserío de Pedregal, Democra- cia. / VI - Matica de Yabo, caserío del municipio Zazárida, Buchi- vacoa. / VII - El Yabal, caserío de Guaibacoa, Dtto. Colina. (Y abo: árbol resinoso).",
+  "municipio": "Bru",
+  "distrito": null,
+  "tipo": "aldea"
+ },
+ "Y ACUMARA": {
+  "cuerpo": "Caserío del municipio San Francisco (Mirimire), Dtto. Acosta.",
+  "municipio": "San",
+  "distrito": null,
+  "tipo": "caserío"
+ },
+ "YAPAMÁTICO": {
+  "cuerpo": "Caserío del municipio Guzmán Guillermo, Distrito Miranda.",
+  "municipio": "Guzmán",
+  "distrito": "Miranda",
+  "tipo": "caserío"
+ },
+ "YARACUSITA": {
+  "cuerpo": "Punto costeño al Norte de Tocópero, Distrito Zamora.",
+  "municipio": null,
+  "distrito": "Zamora",
+  "tipo": null
+ },
+ "YARACAL": {
+  "cuerpo": "Población perteneciente al municipio Libertador, Acosta. 138 es!",
+  "municipio": "Libertador",
+  "distrito": null,
+  "tipo": null
+ },
+ "YARACUY": {
+  "cuerpo": "1 - Boca de Yaracuy, caserío del municipio Boca de Aroa, Dis- trito Silva, a orillas del río Yaracuy, línea divisoria de los Estados Yaracuy y Falcón. / II - Yaracuy, cerro cerca de Pueblo Cumarebo, Zamora.",
+  "municipio": "Boca",
+  "distrito": null,
+  "tipo": "caserío"
+ },
+ "YUMARE": {
+  "cuerpo": "Aldea del municipio Bolívar (Palmasola), Distrito Silva.",
+  "municipio": "Bolívar",
+  "distrito": "Silva",
+  "tipo": "aldea"
+ },
+ "YUQUIQUE": {
+  "cuerpo": "Aldea del municipio Capatárida, Distrito Buchivacoa.",
+  "municipio": "Capatárida",
+  "distrito": "Buchivacoa",
+  "tipo": "aldea"
+ },
+ "ZAMURO": {
+  "cuerpo": "1 - El Zamuro, aldea del municipio Casigua, Distrito Mauroa. /",
+  "municipio": "Casigua",
+  "distrito": "Mauroa",
+  "tipo": "aldea"
+ },
+ "ZAZÁRIDA": {
+  "cuerpo": "[ - Población capital del municipio Zazárida, Distrito Buchi- vacoa. / II - Boca de Zazárida, aldea del municipio Zarárida, Bu- chivacoa. / III - Cerro de Zazárida, la mayor elevación geográfica del Distrito Zamora en el municipio La Soledad: 527 metros sobre el nivel del mar. / IV - Aldea del municipio Puerto Cumarebo, Zamora. / V - Aldea del municipio San Luis, Bolívar. 139 es! Abato Ácaca Acanes Acarite Acatuto Acurigua Agiide Agiima Agiiraro Amones Aparito Apurite Arabebure Aracaguare Aracua Araguata Araguí Aragiito Araica Arajó Arajú Arandima Araurima Ariagua Aribanache Aripino Aroa Autaq",
+  "municipio": "Zazárida",
+  "distrito": "Buchi",
+  "tipo": "aldea"
+ },
+ "RESUMEN": {
+  "cuerpo": "Baricua Barigua Barimisal Bariquí Bariro Barisigua Baruche Bereboro Bidare Bisure Bobare Boboy Borable Boraure Borobuno Borojó Bosugo Botomanón Botoroa Bucaral Buchal Buchivacoa Burguera Butare Cabarao Cabure Caburito Cacetal Cacimba Cacuro Cachimbo Cadillares Caduce Caidí Caimito Calembe Camachima Camare Camayata Cambuyón Campeche Camurujure Camururía Canapo Canide Canoa Cañafístola Caobal Capadare Capana Capatárida Caquetillo Carabobo Caracara Caracolí Caracubana Caraguao Caramabure Caramón Carapa Caratibano Carazao Carépano Cariagua Caricuche Caritupe es! 100 101 102 103 104 105 106 107 108",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "ELL AUTOR": {
+  "cuerpo": "Nació en El Hato (Paraguaná, Estado Falcón) el 24 de no- viembre de 1922. Con meritorio esfuerzo comenzó su formación intelectual en Maracaibo sin llegar a diplomarse. Por cuenta propia 145 (S] y con paciente espíritu escudriñador, ha dedicado su v.d: a la lec- tura, el estudio y la investigación lingiiística, histórica y cultural de Falcón. Poeta, articulista en periódicos y revistas, miembro fundador de los grupos literarios Coro y Península, cronista de Pueblo Nuevo desde 1971, miembro fundador de la Asociación de Cronistas Ofi- ciales de Venezuela en 1972, individuo de número del Centro de",
+  "municipio": null,
+  "distrito": null,
+  "tipo": "pueblo"
+ },
+ "INDICE GENERAL": {
+  "cuerpo": "Introducción .......... 7 Buenibativa Topónimos indígenas de Caibacoa ..............",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "PPP": {
+  "cuerpo": "9 Cafgale, «ias: Forvunaa",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "ADUCOE": {
+  "cuerpo": "-e=.eoooaani: 11 Camoruco ............. ACItoR <<....ies= xao. 11 Camunare ............. AUS” <ac:iroioeaixo. 12 Capacherua Adaure <-<=siresconro=s 13 Capuhana ............. Adora :::::=:........ 14 Caradacagua ASuaque .:.==.=encivs 14 Carajaima ............. AIAraya :.«<-=<s=ricaoos 14 Caratapa +=:i::avecmno>",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "ARWÍAY": {
+  "cuerpo": "+s-==..ineoniña. 14 Cariguariana",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "ABU": {
+  "cuerpo": "-=u=csaecrurnes 16 Carirubana Argjó ==e-s=a-oriarraa 17 CAfuca -e=enaonaaa:ve: ASalO =«saconarcisoras 17 Caseto ».-=:==<..... ». Asubure ....s.rsvess 18 Caujarito ==.===......... AYyolata +..:t0-..000.. 18 Cayeruba -............ Bababnuro <:-=..e....... 18 Cayudé «+-«.isis=r.ees Bajabaroa ..—.icccran “ - 1 9 Cimir O .sconcrraareaczeó Bajariguá -......000-..- 19 Coabana -............. Barabara .........e.e.. 19 Cocodite «-==-...c..... Baracara .......eeeeeo.. 19 Coduto ..-............ Baraived .......e...eo... 21 Cuara ...s:ircovencco Barbasco .............. 22 Cubiano ...........eo.. Baríqui +",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "O MPRETILELESE EL": {
+  "cuerpo": "23 Cucuy .....e.e=eee.... Darunl :-.i-.ezoaiao: 23 Cude ........eeíesaco. Bibidure ............e.. 23 Cujicana .............. Dibuche ,:---::-::::++ 23 Camaraguas Diniclie ::..e-rcraiorias 23 Cumujacoa Bucnryy +-.e..r...aris 24 Cunacho .......ee..... Buchaquiva ............ 24 Curaidebo ........—..... Buchuhaco ............. 24 Cuzubitos ......e.me... Buenevara ............. 24 Chamuriana es! Charaima Chaure Chichibana Chiguaral Chirache",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "PEE EL EA": {
+  "cuerpo": "js. »evmramrrne.. q ore... . . . e ormarro o me . . ._emrrrreoroo s e. e ets arermman Tara e xmycanHecno ra za nians . eme.",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "EEE": {
+  "cuerpo": "Jadacaquiva 45 Jamaica ..... Y Jarayadito 4 Jariaca ....... se Jayana \"TELE 46 Juderecal 47 Judibana ..... 47 Juroguagua ....... 7 Laguarí .............. 49 Macs ,....:......... 43 Machuruca ............ 49 Malcara :======-.e..... 49 Maitífuma :............ 49 Mapad( ,:.=---.«=..... 50 Manate ,:::==.5000... 50 Manichare ......-...-.. 50 Maquigua -............ 50 Maracapana ........... 50 Matacán +::........... 51 Matividito --.......... 51 Matuto -........-..... 51 Michiaco ,:...-.-..-..-. 51 Miraca +:==.-..-...... 32 Misaray ....e.rreeeer- 32 Moruy .....e.-.-e.eeeoor 52 Muaco ¿s+=e.eoeme.ror ",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "SACUIMIEUA": {
+  "cuerpo": "-:........... 58 Saguatumo ............ 58 Sanajaquí -............. 58 Sanquinche -.......... 58 Sarah +=<s-......... 28",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "SANDAO": {
+  "cuerpo": "<-=.......e.... 60 SAruo --:=:.:......... 60",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "SICADAME": {
+  "cuerpo": ".........e.... 60 SINdIgaal +«==c.-..o... 60 SITall ««-escenráauenaa 60 SIsibalico ............. 60",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "SUPL": {
+  "cuerpo": "<+==:=..rremeco. 61 Sapileo ++-=cacónnoss 61 Suriquiba ............. 61 Tatal «-«.....e.sexues 61 Tacaduto +:=«.......... 61 Taque estaran: 61 Tacuaio +=<=::s=:...... 62 Tausabana --=-:........ 62 Tequeguacare .......... 62 . GINA 63 Tiguadare ............. 63 Tijuro ................ 63 Tiraya -....eeeíeeeaoo. 63 Tiguiba ............... 63 Tobagía --.--......... 64 Todariquiba ........... 64 Tubarso ........:..... 64 Tumarusa ........ .... 64 Tumatey -....... ..... 64 Tura ....:..... ...... 66 Tutubacoa TETAS 66 Urupagua -............. 66 Urupa guaduco in AA 66",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "CUE": {
+  "cuerpo": "aa Es 67 Yapuafiiia -...........",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "YAA": {
+  "cuerpo": "+24. iii. eii. YU 24.95:7 00.00... Vauquila :.:.......... Topónimos Compilados ..",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "FUENTES": {
+  "cuerpo": "............",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "ESTADO FALCON": {
+  "cuerpo": ". Abato »««w=«2.nmum... Acanes u«=.eszuiauñas Ácarite ««==convvesrnina ACatulo +e..eec-cónces. ACurigla =...coovesvana Aguide :....s..c...... Agúlma ......cone...v. AgUitalo -....e.esíivo. Amones :sic:=.ne.0... ApDAtito «==:==scvsvavoei ADULIte «scancaseumeros Arabebure ............ Aracaguare ........e... Afacua :«==.u..ee.in... Aragista ««==c......... AtTastl ««cosurezane... ATABUito +«.—.emvcneño.",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "NEGICA": {
+  "cuerpo": "es. vucnnane ames ATajá «=-.....cmecum. Arancima ::.....r...í. Araurima .......e—.e—...",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "ATUEUS": {
+  "cuerpo": "=.-0---.evc.... Aribanache ,........... Aripino ..... AÑOS. »«dueniciaea ias",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "AULIQUÍILE": {
+  "cuerpo": "+<==-=-...... Avaría .............c.. Rachacal: +15. .=-:=.... Baitolta :.........ew.. 87 Darabara -.-=........-.: 87 Baragua --............ 87 Daricuá +............. 87 Barigua ............e.. 88 Barimisal ........ e... 88 Bariguí ......e........ 88 Bariro ........rrervoo. 88 Barisigua .........e.... 88 Baruche .........r..oo. 88 Bereboro ..........e.e. 88 Bidare :......r. eve... 90 BIsufe +..«..iseraree.: 90 Bobate +:-r-.r:..e..... 90 Boboy :..=«c.rsemess 90 Borable ............e.. 90 BÓLAaure :....+.rrz...... 90 Borobuno ........:«-.. 90 Borojó :==..ec..eici.. 90 Bosugo ................ 91 ",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "EEE UE": {
+  "cuerpo": "(A surcar... Campeche ............ Camurujure ............ Camururía Canoa Caobal Capadare Capana Capatári Caquetillo Carabobo Caracara Caracolí Caracubana Caraguao Caramabure Caramón Carapa . Caratibano Carazao Carépano Cariagua Caricuch Caritupe Carraos Carrizal Casanare Casicure Casigua Casimonure Cauca . Cauderal Caujaro Caujarao Cayude",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "O REA": {
+  "cuerpo": "¿Nu cirpese in eaadeniooceneo. enaooaoooreo. osea AT enorodeano.",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "RRE": {
+  "cuerpo": "o dea sexunuceze. urerooorern. enacroracaoo. NT Eta noranono.",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "EROGROMIEZ": {
+  "cuerpo": "enerenacoaeo. e MD",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "ER REA": {
+  "cuerpo": "caleCEEtaalaze enoronerene. is ERRE. e rncorororocos PT",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "UN ENERO": {
+  "cuerpo": "enenrdorenere. le mEmaña «TR enenoroaaao. Su disneneeo er md tas samas ¿ti re e e ea as",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "ERA ERES": {
+  "cuerpo": "eddie sia e *. _. e e mad ro rde e o o O > NO On On MN UN “A UL UN y % Caba :++smsnunenri.. 101 Cerey \"ETE ELE E 101 Gibita ..-:--.-e........ 101 Cocorole ..:--.<i...... 101 COoCcuiza ::.-sísaasirona 101",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "NA O": {
+  "cuerpo": "101 Cocuyito ...........e.. 102 Codore +....s..rimoi. 102 Gogollal ...:-.=«-..0... 102 COjina =::.:1-.reeeeoo 102 Colacho :«=.:.:...:n.sz.. 102 Conchonchas ........... 102",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "APT TT E": {
+  "cuerpo": "102 COrapal +. ...cev.s..... 102 Coroquidiro ........... 104 Corgzo :«=+:amuuasna: 104 COrubo =«:sscecmacanas 104 Cuarajacume ........... 104 Cale -+<esssauen:roos 104 QUbe ::1-4duansuaó rie. 104 Cueparo =<=6sicosnesa: 104 Cuiba +-+:265+s:950mis 105 Cují AECE EE EEE 105 Cumarebo ............. 105 Cume «..-isirmeovamaa 105 Cuquía ...-.-..—....... 105 Curairima .-.....—...e.. 105 Curamaco ........e.w... 105 Curamichate ........... 106 Curafí .«-serraciacan 106 Curazao ......e.ee.e... 106 Curiaja ..........e.... 106 Curimagua ............ 106 Curuguebo ............ 106 Curuguides ............ 106",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "PELAS RAEE E AM": {
+  "cuerpo": ",... rea remera. Jubuy .....-..ee-e.... Juritiba Macanillas Macaruca Macuquita Macuare Maguay Maica Maipana Maicillar Majagual Majagiillo Mamital Mamón Mampostal Manaure Mangle Mapará Mapararí Mapiare Maporal Maragiiey Maripiota Masagual Majagual ...........-.. Masuí Matacanes Matatafa ,..eoi=rocc.a Mataruca Matícora . . e e ora reo. . «e oo0oae o ooo ce . e «e sosreoesoo o or coo s . . . e e . . - .... . . e « e e noro rd mrrero aan cana pena. ren mi. 113 118 115 114 118 113 118 118 119 119 119 119 119 119 119 119 120 120 120 120 120 120 120 120 120 121 Mauroa ...._ee.ee.... 122 Parupano ....",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "TN ERE TT ERES": {
+  "cuerpo": "123 Quebrahuto ........... 128 MotOturo +::.-........ 123 Quererepa ............. 128 Morrocoy -............ 124 Quibucara ,..........-. 128 Noio ...._......... 124 Quimbo .............. 128 Moyepo -........—..... 124 Quigua ::..e+e.i..... 128 Muado :....e.cíneróss 124 Quipito ............... 128 Mucaro .........e..... 124 Quiragua .............. 130 Mucuría +............. 124 Quiribería ............. 130 Mucurutá ............. 124 Quitaragua ............ 130 MIOCUZUSA: +... ....... 124 RICOS rueecinz cancer: 130 Mumuche ............. 124 Sacuragua .....-....... 130 Murncade -............. 124",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ },
+ "FES MES": {
+  "cuerpo": "= - - Le MEN ..",
+  "municipio": null,
+  "distrito": null,
+  "tipo": null
+ }
+}

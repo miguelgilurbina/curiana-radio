@@ -1,0 +1,94 @@
+# ─────────────────────────────────────────────────────────────────────────
+# AUDITORÍA de la columna LOKONO de la tabla A-2 de Oliver (cap. 2)
+# contra el texto de Schultz 1802 vaciado por Perea y Alonso 1942.
+#
+# 🔴 CORRECCIÓN (2026-09-09). La primera versión de este archivo decía que
+# Perea era una fuente INDEPENDIENTE de Oliver. Es falso, y lo desmiente el
+# propio Oliver en el mismo capítulo: al reseñar las fuentes del lokono
+# escribe que las obras de Quandt y Schultz «have been the subject of a small
+# paper by Brinton (1871) and a very detailed philological analysis by Silvio
+# Perea y Alonso (1942)», y más adelante cita «(Perea y Alonso 1942)» como la
+# fuente de sus etimologías lokono. Perea es UNA DE LAS FUENTES DE OLIVER.
+#
+# Lo que esto convierte a esta tabla: de corroboración independiente en
+# CONTROL DE TRANSMISIÓN. No prueba que la columna sea cierta; prueba que es
+# fiel a la fuente que Oliver usó. Vale para detectar deriva y errores de
+# copia, no para sumar un voto a D11. Es exactamente la trampa del §8 del
+# protocolo —la corroboración falsa de Jahn citando el mismo apéndice de
+# Oviedo— y esta vez me tocó a mí.
+#
+# Cada fila se LEYÓ en el texto —Fraseario y Compendio Gramatical—, no sale
+# del cruce automático.
+# ─────────────────────────────────────────────────────────────────────────
+que_mide: >-
+  Si la columna lokono sobre la que se apoya D11 es FIEL a la fuente que
+  Oliver dice haber usado. No es una prueba independiente: es un control de
+  transmisión. Ver la corrección de la cabecera.
+independencia: >-
+  NINGUNA. Oliver cita a Perea y Alonso 1942 como fuente suya de lokono
+  (cap. 2, reseña de fuentes y etimologías). Las catorce coincidencias son
+  consistencia, no confirmación.
+fuente_del_contraste: perea-alonso-1942 (Fraseario parte I + Compendio Gramatical parte II)
+medido: '2026-09-08'
+
+resultado:
+  confirma: 14
+  diverge: 2
+  ausente_de_toda_la_obra: 2
+  de: 18
+corregido: >-
+  Primera pasada (2026-09-08, mañana): 12 confirma / 2 diverge / 1 parcial /
+  3 no medibles. Estaba mal medida: sólo se habia buscado en el ÍNDICE DE
+  LEMAS del Fraseario. Agua y árbol no tienen entrada propia ahí, pero sí
+  aparecen en el Compendio Gramatical, con cita. Un cero hay que verificarlo
+  contra la obra entera, no contra el índice.
+
+filas:
+  - {concepto: luna,   a2: kathi,             perea: catti,        pagina: 60,  cita: '2-20', veredicto: confirma}
+  - {concepto: sol,    a2: hadali,            perea: hadda-lli,    pagina: 92,  cita: '2-20', veredicto: confirma}
+  - {concepto: piedra, a2: siba/-siban,       perea: siba,         pagina: 80,  cita: null,   veredicto: confirma}
+  - {concepto: hombre, a2: oadili,            perea: wadi-li,      pagina: 100, cita: null,   veredicto: confirma,
+     nota: 'la oa- de Goeje es la w- de Perea: misma voz, dos ortografías'}
+  - {concepto: mujer,  a2: hiaro,             perea: hiaru,        pagina: 68,  cita: null,   veredicto: confirma}
+  - {concepto: camino, a2: oaboroko/abonaha,  perea: wabu-ruccu,   pagina: 16,  cita: '2-28', veredicto: confirma}
+  - {concepto: diente, a2: arii/-ari/*dari,   perea: na-ri-sibu,   pagina: 32,  cita: '7-54', veredicto: confirma,
+     nota: 'confirma la raíz -ri que Oliver empareja con el caquetío dare (cap. 2 p. 147)'}
+  - {concepto: uno,    a2: aba-,              perea: abba,         pagina: 5,   cita: null,   veredicto: confirma}
+  - {concepto: dos,    a2: biama/bian,        perea: biama,        pagina: 113, cita: null,   veredicto: confirma}
+  - {concepto: oir,    a2: kanabon/*kanabun,  perea: canna,        pagina: 399, cita: null,   veredicto: confirma}
+  - {concepto: tu,     a2: bii,               perea: bu-/b-,       pagina: 165, cita: null,   veredicto: confirma}
+  - {concepto: monte,  a2: hororo,            perea: huuru-isi,    pagina: 67,  cita: '1-12', veredicto: confirma,
+     nota: 'lit. «cabeza de»; el propio Perea remite a cabeza en la entrada'}
+  - {concepto: arbol,  a2: ada/kunnuku,       perea: adda,         pagina: 556, cita: null,   veredicto: confirma,
+     nota: 'p. 556 «adda = árbol, árboles» en la lista de nombres sin distinción numérica; p. 562 «adda iwi = fruto del árbol», «iwi adda = árbol de fruto, frutal». En el Fraseario sólo asomaba bajo MADERO'}
+  - {concepto: agua,   a2: oniabo/-nia,       perea: wuni-abu,     pagina: 559, cita: '1-5',  veredicto: confirma,
+     nota: 'p. 559 «wuni-abu abbu = con agua (instrumento)»; p. 651 cita Hechos 1-5 «Johannes a-sucusa-cuba luccu-nnu Wuniabu abbu rubu-ùn» = «Juan bautizó a los hombres con agua solamente». El oniabo de la A-2 es este wuni-abu'}
+  - {concepto: sangre, a2: ithihi/-china,     perea: -tenna,       pagina: 82,  cita: '2-19', veredicto: diverge,
+     nota: 'sostenido en tres lugares independientes: ù-ttenna-hù en el Fraseario p. 82, lu-tenna-wa «su sangre propia» p. 565, lù-tenna abu p. 602. Schultz no usa la voz de la A-2; queda como pregunta abierta, no como error de nadie'}
+  - {concepto: grande, a2: firo/fili-,        perea: ipi-lli (vr.) ~ ipi-ru-tu (nv.), pagina: 563, cita: null, veredicto: diverge,
+     nota: 'paradigma completo en pp. 554, 563, 564 y 638, no un caso suelto. ¿Podrían firo e ipi-ru ser la misma raíz? La panfonética de Perea no tiene /f/ («la f sólo se emplea en palabras exóticas», p. 546), así que la f- de Goeje no tiene correspondencia declarada aquí. Se deja como pregunta, no como identificación'}
+  - {concepto: arena,  a2: mothoko,           perea: null, veredicto: 'ausente de toda la obra: ni el Fraseario ni el Compendio la dicen (buscado mothoko/motoko y «arena» en las 926 pp.)'}
+  - {concepto: raiz,   a2: iikirahi/-ikira,   perea: null, veredicto: 'ausente de toda la obra: las apariciones de «raíz» son todas gramaticales (buscado iikira/ikira)'}
+
+lectura: >-
+  Catorce de las dieciséis filas medibles coinciden con la columna: la
+  transmisión Perea → Oliver es fiel. Lo que de verdad aporta esta tabla, una
+  vez retirada la pretensión de independencia, es otra cosa y sigue siendo
+  útil: (1) ANCLA. Oliver da las formas lokono sin cita; Perea las da con
+  capítulo y versículo del texto de Schultz, así que ahora se pueden verificar
+  una a una en un texto primario. (2) Las dos DIVERGENCIAS (sangre, grande)
+  pasan a ser más interesantes, no menos: son puntos donde la columna de
+  Oliver se aparta de una fuente que él mismo reseñó, y cada una está
+  sostenida en tres o cuatro lugares del libro. (3) Las dos ausentes lo están
+  de la obra entera.
+
+lo_que_esto_cambia_para_d11: >-
+  Menos de lo que escribí en la primera versión. NO añade un voto independiente
+  a favor del eje lokono. Lo que hace es dar ANCLA TEXTUAL a dos filas que el
+  proyecto usa mucho: el lokono kathi 'luna' es el catti de Hechos 2-20 («dia
+  tu-ppa CATTI ù-ttù bia» = «como también la luna en sangre»), recogido por
+  Perea en las entradas LUNA (p. 60) y MES (p. 66); y el d-ari 'mi diente' que
+  Oliver empareja con el caquetío dare en su p. 147 está en Hechos 7-54
+  («crujían SUS DIENTES», na-ri-sibu). Poder señalar el versículo no es poca
+  cosa —hasta hoy esas formas eran celdas de una tabla— pero es verificabilidad,
+  no evidencia nueva.

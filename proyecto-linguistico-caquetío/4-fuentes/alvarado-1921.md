@@ -12,7 +12,9 @@ estado_minado: minado
 prioridad: media
 tareas: [F3]
 sostiene: {hechos_corpus: 1, entradas_lexicon: 0, entradas_lexicon_corroboradas: 39, cadena_custodia_zavala_A: "24/26"}
-verificado: 2026-08-03
+cobertura: "cadena de custodia Zavala (2026-08-03) + los 61 topónimos pendientes del dictado de Miguel (2026-09-10)"
+verificado: 2026-09-10
+minado: 2026-09-10
 aliases: ["Alvarado 1921", "Glosario de voces indígenas"]
 ---
 
@@ -196,6 +198,57 @@ rastro alguno** en Alvarado.
    (pesca, marea, médano, salina) sobre los 1442 restantes podría dar más, con
    rendimiento decreciente y riesgo creciente de falso positivo.
 
+## El texto completo frente al módulo (2026-09-08)
+
+`lexicon_alvarado.py` es una **curación**, no el glosario entero: al pasar
+por `pdftotext` las 43 voces de veredicto C del dictado de Medina Colina
+(`6-fusion/medina_colina_dictado.yaml`), doce aparecieron en el texto que el
+módulo no trae: bayure (p. 25, «especie de abeja silvestre»), barisigua
+(p. 23, Coro y Zulia), camuro (p. 51, del guajiro *amuru*), carebe (p. 62, la
+cuchara de totumo del occidente), cuaguaro (p. 97, Falcón), chiguare y
+chiguaral (p. 120, Coro), guatacare (p. 162, con taxón), lefaria (p. 184, el
+fruto del cardón, occidente), siguato (p. 277 → ciguato), tapiramo (p. 284,
+«en el país»), titirijí (p. 291, *Asio*), urupagua y urupaguita (p. 305,
+«pasto de cabras, Coro»). Seis subieron a B por segunda fuente localizada
+en el occidente; cuatro bajaron a D porque Alvarado las da como nacionales o
+como préstamo wayuu. **Regla 6 en carne propia**: un cero en el módulo no es
+un cero en Alvarado. Para cualquier voz nueva, buscar en el texto completo
+(`pdftotext`, página impresa = pdf − 30), no en `lexicon_alvarado.py`.
+
 ## Enlaces
 
 [[02_protocolo_habla_paraguanera]] · [[zavala-reyes-2015]] · [[van-buurt-2014]] · [[gatschet-1885]] · [[oviedo-y-valdes-1851]]
+
+---
+
+## 2026-09-10 — los pendientes del dictado de topónimos
+
+**Qué se le preguntó.** Miguel dictó 141 topónimos de Paraguaná y Falcón. De
+ellos, 61 seguían sin glosa después de pasar por Esteves y por el barrido web.
+Se cruzaron los 61 contra el glosario.
+
+**Qué dio: ocho entradas de cabecera.** Araguán, Sanare, Curarí, Dividive,
+Cocuy, Chiriguare, Píritu y Bucaral. La que más pesa es **ARAGUÁN** —«árbol
+indeterminado de **Lara y Falcón**»— porque estaba en el grupo de los que no
+tenían ni referente: ni glosa, ni web, ni mención en Esteves.
+
+**Y una cita de método que no se buscaba.** El prólogo documenta la permutación
+vocálica como fenómeno regular —«suelen confundir la E y la I, la O y la U […]
+CURARE o CURARI, GUAYOCO o GUAYUCO»— y declara la dirección histórica (`cucui`
+primitivo → `cocuy` moderno). La campaña venía usando una «permutación laxa»
+declarada como conveniencia y **sin fuente**: aquí hay fuente para la mitad
+vocálica. Ver `6-fusion/pendientes_en_alvarado_y_arcaya.yaml`.
+
+**Qué NO dio.** Nada para 53 de los 61, y en particular nada para **Aroa**, que
+solo aparece como geografía («selvas de Aroa», «río Aroa»): la glosa 'tigre,
+jaguar' que circula por la web no tiene apoyo aquí.
+
+**Deuda que deja.** (1) Leer el pasaje de **consonantes** del prólogo, que
+quedó cortado en la extracción — si dice lo que parece, la permutación laxa
+entera deja de ser conveniencia. (2) Mirar **CARICARE**, por si Chiriguare y
+Caracara son el mismo bicho. (3) Verificar las ocho entradas en la imagen: las
+páginas de aquí salen de las cabeceras del OCR, no de la caja del número.
+
+**Lección de método.** Se estaban gastando búsquedas web en nombres cuya
+respuesta estaba a un `grep` de esta obra. Antes de salir a la web, agotar el
+repo — sobre todo cuando hay un **glosario** dentro.

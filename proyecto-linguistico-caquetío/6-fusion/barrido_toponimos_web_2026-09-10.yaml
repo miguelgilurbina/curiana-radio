@@ -1,0 +1,716 @@
+# ─────────────────────────────────────────────────────────────────────────
+# BARRIDO WEB de la lista de topónimos de Miguel (2026-09-10)
+#
+# 136 nombres únicos, investigados online uno a uno buscando la etimología
+# que circula en el habla y en la divulgación local. Lista y cruce contra el
+# canon en `6-fusion/toponimia_paraguana_miguel.yaml`.
+#
+# 🔴 NINGUNA de estas fuentes es procedencia citable en el sentido de la
+# regla 8: son blogs, prensa local y divulgación. Lo que aportan es (a) que
+# el nombre existe y dónde, (b) qué segmentación oye la gente, y (c) de vez
+# en cuando, un dato etnohistórico que sí se puede perseguir hasta una
+# fuente. Todo entra con `deuda: sin-procedencia`.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-10'
+  estado: en curso
+  lista: 6-fusion/toponimia_paraguana_miguel.yaml#lista_dictada_2026-09-10
+  investigados_hasta_ahora: 30
+
+# ══════════════════════════════════════════════════════════════════════
+# LO QUE RESUELVE GRUPOS ENTEROS: los sufijos
+# ══════════════════════════════════════════════════════════════════════
+formantes:
+
+  - forma: '-ebo (variante -ebe en Aruba)'
+    glosa_que_circula: "'camino de', 'paso de' — sufijo locativo caquetío"
+    fuente: 'apellidoyajure.blogspot.com, «Vocablos indígenas: sufijo -ebo»'
+    serie_que_da:
+      - "Cumarebo = 'camino del cacique Cumare'"
+      - "Guacurebo = 'camino de Guacure'"
+      - "Jurijurebo / Hurihurebo = 'camino del viento' (juri jure = viento)"
+      - "Guasurebo (Yaracuy) = 'camino de Guasure'"
+      - "Curaidebo = de 'Curaide'"
+      - 'Miquirebo, Turijurebo, Curuquebo, Moyebo, Guayurebo'
+      - 'Kudarebe (Aruba), con la variante -ebe'
+    por_que_importa: >-
+      ⭐⭐ Convergencia con OLIVER, que en su lista de sufijos toponímicos
+      caquetíos (cap. 2 §j) incluye «(e)-bo». Una fuente académica y una
+      divulgativa, sin relación entre sí, dan el mismo formante. Y la serie es
+      productiva: nombre propio + -ebo, igual que -goto en caribe.
+    y_lo_que_ata: >-
+      ⭐ `Jurijurebo` = 'camino del viento' usa `juri` 'viento', que el lexicón
+      tiene como caquetío-ATESTIGUADO — y es la misma raíz de `Judibana`
+      'cerro del viento'. Los dos nombres están en el canon, la leyenda local
+      los casa (Judibana esposa del cacique de Jurijurebo) y ahora comparten
+      etimología. Tres vías que convergen en la misma palabra.
+    accion: 'candidato a morfema propio en morfemas.yaml; hoy no está'
+
+  - forma: '-coa'
+    glosa_que_circula: "'lugar', 'pueblo', 'nación'"
+    fuente: 'apellidoyajure.blogspot.com, «Vocablos indígenas: sufijo -coa»'
+    serie_que_da:
+      - "Coquivacoa (Zulia) = 'nación de las piedras'"
+      - "Chivacoa (Yaracuy) = 'pueblo de piedras'"
+      - 'Buchivacoa (Falcón), Cumajacoa (Paraguaná), Zazarivacoa (Yaracuy)'
+      - "Cumanacoa (Sucre) = 'pueblo de la planta cumana'"
+      - 'Tumbacoa (Lara), Tacoa (La Guaira), Arimacoa (Nueva Esparta)'
+    conflicto_con_el_canon: >-
+      ⚠️ El canon tiene `-bacoa` como morfema-001, glosado 'bosque, arboleda,
+      paraje cubierto de', con cinco apoyos y el `-baca` 'matorral, espesura'
+      de Alvarado. Esta fuente corta distinto: `-coa` = 'lugar' y lo de delante
+      es la raíz, de modo que Chivacoa sería 'lugar de piedras'.
+    lo_que_hace_atractivo_al_corte_alternativo: >-
+      Que despeja con voces ATESTIGUADAS del propio lexicón: `quiva`/`cuiva` es
+      'piedra' en caquetío, así que Chivacoa = quiva + coa sale entero sin
+      pedir nada prestado. Y `Coquivacoa` es el nombre de la esfera occidental
+      de Oliver, la quinta polity del proyecto.
+    lectura_prudente: >-
+      No se toca morfema-001: tiene cinco apoyos glosados y corroboración
+      independiente de Alvarado, contra una glosa de blog. Pero la
+      segmentación alternativa queda ANOTADA, porque explica un subconjunto
+      —los `-vacoa` con raíz de piedra— que la glosa 'bosque' no explica bien.
+      Es material para el issue de morfemas, no para cambiar nada hoy.
+
+# ══════════════════════════════════════════════════════════════════════
+# HALLAZGOS POR NOMBRE
+# ══════════════════════════════════════════════════════════════════════
+nombres:
+
+  - forma: Adícora
+    en_canon: sí
+    hallazgo: >-
+      «Adícora quiere decir jajatal, hierba halófila de terrenos salobres. Esta
+      voz indígena primitivamente era JADÍCUAR, ha venido pasando por
+      JATÍCORA, por JADÍCORA, por ARÍKULA, hasta llegar hoy a Adícora».
+    por_que_importa: >-
+      ⭐⭐ Coincide con la lectura que el canon ya tiene por Esteves —«jade
+      'jajato' + cuar»— y además da la CADENA COMPLETA de deformación, que el
+      canon no tenía. `jajato` es voz del lexicón. Es el mejor caso del barrido
+      hasta ahora: etimología popular y etimología de autor dicen lo mismo.
+    deuda: sin-procedencia
+
+  - forma: Tacuato
+    en_canon: 'no (está en el barrido OSM)'
+    hallazgo: >-
+      «Población antigua donde pernoctaban indígenas caquetíos de la TRIBU DE
+      LOS GUARANAOS que la constituían los TACUATO, los cuales poblaban las
+      costas y el golfete de Coro conjuntamente con LOS CORUBOS, LOS CAYUDES y
+      LOS GUASICURES».
+    por_que_importa: >-
+      ⭐⭐⭐ El hallazgo estructural del barrido. Da una lista de grupos del
+      Golfete de Coro, y TRES de esos nombres están en la lista de Miguel como
+      topónimos: Tacuato, Corubo y Cayude. O sea que —como Amuay y Moruy— son
+      ETNÓNIMOS que quedaron de topónimo. Y `Guaranao`, que Miguel también
+      dictó, aparece aquí como nombre de la tribu mayor, no del lugar.
+      El lexicón tiene `waranao` 'salado, ácido' y `kayude` 'guanábano
+      silvestre' como caquetío-atestiguado: grupos nombrados con palabras de
+      la lengua.
+    cruces_que_abre: [Corubo, Cayude, Guaranao, Guasicure]
+    accion_propuesta: >-
+      Perseguir esta lista hasta una fuente citable —huele a Hernández Baño o
+      a Arcaya— y, si aparece, va a `3-mundo/etnias.yaml` como registro de
+      grupos de la polity costera, no sólo al canon toponímico.
+    deuda: sin-procedencia
+
+  - forma: Borojó
+    en_canon: 'no (está en el barrido OSM)'
+    hallazgo: >-
+      Dos etimologías en circulación: (1) del cacique BOROBO que existió en el
+      lugar; (2) «término de las tribus caquetías cuya definición sería
+      BORO = sal y JO = lugar, es decir, LUGAR DE SAL». Y una tercera, de
+      relieve: «cantarillo de arcilla».
+    por_que_importa: >-
+      ⭐⭐ El lexicón tiene `borojo` como caquetío-ATESTIGUADO glosado 'salina,
+      lago salado de Coro'. La etimología popular no sólo coincide: la
+      SEGMENTA en boro + jo y le da 'lugar de sal'. Es una ecuación bilingüe
+      que sale de la calle y casa con el canon.
+      Y ojo: `Borobo`, el cacique, TAMBIÉN está en la lista de Miguel. Puede
+      que Borojó y Borobo sean el mismo nombre.
+    dato_etnohistorico: >-
+      «Los primeros habitantes de Borojó fueron los PARAUJANOS de origen
+      arawaco, aproximadamente en el siglo XV, provenientes de la Laguna de
+      Sinamaica, estado Zulia». El paraujano/añú es la columna del pariente
+      costero más cercano que D11 abrió. Si esto se sostiene, es presencia añú
+      en Falcón — dato de esfera, no de lengua. Perseguir.
+    deuda: sin-procedencia
+
+  - forma: Capatárida
+    en_canon: sí
+    hallazgo: >-
+      «El significado sigue siendo un enigma». Circulan 'capa de tierra
+      árida', 'Pantera Grande' y 'Has encontrado al Jefe Sagrado', las dos
+      últimas atribuidas al QUECHUA. Es la capital del municipio Buchivacoa y
+      «antiguo asentamiento de indios caquetíos».
+    lectura: >-
+      🔴 'Capa de tierra árida' es un caso de libro de RESEGMENTACIÓN
+      CASTELLANA FALSA — la misma trampa que esta campaña ya midió con
+      Bajabaroa → «Bajo Aroa». Y las lecturas quechuas no tienen nada que
+      hacer en Falcón. Lo único aprovechable es la nota etnohistórica.
+      Se registra como ejemplo del patrón, no como etimología.
+    deuda: sin-procedencia
+
+  - forma: Zazárida
+    en_canon: sí
+    hallazgo: >-
+      «Raíz Zaza o Sasa sin significado documentado; se repite como raíz en
+      algunos topónimos. Una posibilidad es que sea el lugar de Zaza, quizás
+      nombre de persona, animal o planta local». Parroquia del municipio
+      Buchivacoa.
+    lo_que_si_se_ve: >-
+      ⭐ El formante `-rida` se repite en el MISMO municipio: Capatá-rida y
+      Zazá-rida son las dos de Buchivacoa. Dos nombres vecinos con la misma
+      terminación es indicio de formante, no de casualidad. Y el blog del
+      sufijo -coa da `Zazarivacoa` en Yaracuy, que ataría Zaza- con -vacoa.
+    accion_propuesta: 'censar los -rida de Falcón, como se hizo con -ana en #109'
+    deuda: sin-procedencia
+
+  - forma: Miraca
+    en_canon: 'sí — nodo-031'
+    hallazgo: >-
+      «Una de las poblaciones caquetías que han conservado su nombre indígena.
+      Persistió como poblado caquetío, favorecida por su proximidad a Adícora,
+      y persiste como centro de preservación del quehacer LOCERO prehispánico
+      caquetío».
+    por_que_importa: >-
+      No da etimología, pero sí un dato de oficio que el corpus puede usar:
+      Miraca como centro alfarero con continuidad prehispánica. Encaja con el
+      `curubo` del dictado —la concha para bruñir la loza— y con los alfareros
+      del elenco. Va a la esfera de oficios, con su marca de época.
+    deuda: sin-procedencia
+
+# ══════════════════════════════════════════════════════════════════════
+sin_hallazgo_util:
+  - {forma: Guaranao, nota: 'nada sobre el nombre; pero ver Tacuato, donde sale como etnónimo'}
+  - {forma: Matícora, nota: 'sólo que es un río del sur de Buchivacoa'}
+
+# ══════════════════════════════════════════════════════════════════════
+fuentes_que_este_barrido_identifica:
+  - obra: 'Hernández Baño, Adrián — «Los Caquetíos de Falcón» (1984), INCUDEF, Coro'
+    por_que: >-
+      ⭐ Es la compilación de referencia sobre los caquetíos de Falcón, y el
+      proyecto YA cita a Hernández Baño de segunda mano, vía el glosario de
+      Zavala (la sigla HB). Tenerlo de primera mano cerraría muchas cadenas.
+      ADQUISICIÓN a buscar.
+  - obra: 'apellidoyajure.blogspot.com'
+    por_que: >-
+      Investigador aficionado con posts monográficos sobre formantes caquetíos
+      (-ebo, -coa) y antroponimia. No es fuente citable, pero es un buen mapa
+      de por dónde buscar. Sus series coinciden con Oliver en `-ebo`.
+  - obra: 'lubesinho-folkloreando.blogspot.com, «Vocabulario caquetío»'
+    por_que: >-
+      ⚠️ NO es fuente nueva: es el glosario de 288 entradas de Zavala Reyes
+      republicado, que el proyecto ya minó entero (F7, 288/288). Sirve sólo
+      para confirmar las siglas de autoría que el proyecto ya usa: PMA =
+      Pedro Manuel Arcaya, HB = Adrián Hernández Baño, E = Esteves,
+      AM = Angulo Molina, A = Alvarado, CGB = González Batista.
+
+# ══════════════════════════════════════════════════════════════════════
+# SEGUNDO TRAMO — ecuaciones bilingües que cierran con voces atestiguadas
+# ══════════════════════════════════════════════════════════════════════
+ecuaciones_que_cierran:
+  criterio: >-
+    Nombres donde la etimología que circula despeja con palabras que el
+    lexicón YA tiene como caquetío-atestiguado. Es la vía fuerte: no hace
+    falta creerle al divulgador, porque las dos piezas están atestiguadas por
+    separado y la suma da el referente.
+  casos:
+
+  - forma: Yabuquiva
+    hallazgo: >-
+      «En lengua caquetía la palabra QUIBA significa PIEDRA, así que el nombre
+      antiguo parece significar YABAL PEDREGOSO, siendo yabal un tipo de árbol
+      — el YABO o palo verde».
+    despeja_con: >-
+      ⭐⭐⭐ LAS DOS PIEZAS ESTÁN ATESTIGUADAS: `yabo` y `quiva`/`cuiva` 'piedra'
+      son las dos caquetío-atestiguado en el lexicón. Y `yabo` es además voz de
+      NIVEL A del dictado de Medina: el árbol sigue vivo en el habla. Yabo +
+      quiva = 'yabal pedregoso' sale entero sin pedir nada prestado.
+    veredicto_propuesto: 'el mejor candidato del barrido a subir de nivel'
+
+  - forma: Buchuaco
+    hallazgo: '«los dos buches», donde BUCHE = cardo y ACO = par'
+    despeja_con: >-
+      ⭐⭐ `buche` es caquetío-ATESTIGUADO en el lexicón y voz de NIVEL A del
+      dictado. La ficha del Cerro Santa Ana lo lista entre la flora del piso
+      xerofítico: «cujíes, cardones, tunas y buches».
+    lo_que_abre: >-
+      ⚠️ `aco` = 'par, dos' NO está en el canon, y el numeral 'dos' que el
+      proyecto tiene es `biama` (por el lokono/A-2). Si `aco` fuera un
+      colectivo o un dual caquetío sería morfema nuevo — pero viene de una
+      sola fuente divulgativa. Queda anotado como pregunta, no como morfema.
+    veredicto_propuesto: 'la base `buche` es sólida; el `-aco` hay que verificarlo aparte'
+
+  - forma: Baraived
+    hallazgo: >-
+      «BARA en caquetío era término general para cualquier ÁRBOL, y BARAIVERE
+      es la forma primitiva, con BERE = amargo». Baraived sería deformación de
+      *baraivere*.
+    despeja_con: >-
+      ⭐⭐ `bara` 'palo, árbol' está en el lexicón como caquetío-atestiguado.
+      La cadena baraivere > Baraived es del mismo tipo que la de Adícora
+      (jadícuar > jatícora > jadícora > Adícora), que otra fuente da y que
+      coincide con Esteves.
+    lo_que_abre: >-
+      `bere` 'amargo' no está en el canon. Si se confirmara, sería adjetivo
+      nuevo — y engancha con `urupagua`, el árbol de fruto amargo que acaba de
+      entrar al lexicón por tres fuentes.
+
+  - forma: Borojó
+    ya_registrado_arriba: true
+    resumen: 'boro = sal + jo = lugar; el lexicón tiene `borojo` "salina de Coro" atestiguado'
+
+# ══════════════════════════════════════════════════════════════════════
+# EL NOMBRE DEL PROYECTO, con una advertencia
+# ══════════════════════════════════════════════════════════════════════
+coro_y_curiana:
+  hallazgo: >-
+    «El supuesto origen del nombre de esta ciudad proviene del caquetío con el
+    significado de VIENTO... Se considera que Coro fue una derivación de
+    CURIANA, voz indígena caquetía que significaba CIUDAD DE LOS VIENTOS».
+  la_advertencia: >-
+    🔴 La misma fuente recoge el contraargumento: «la palabra coro podría venir
+    del latín CAURU, viento del noroeste, por lo cual muchos dudan que sea voz
+    autóctona». Es decir: la coincidencia de sentido entre el «viento» caquetío
+    y el «viento» latino es sospechosa precisamente por ser perfecta.
+  que_le_hace_al_canon: >-
+    El canon tiene `curiana` (toponimo-111) leído como 'lugar del cardón'. Esto
+    es una lectura RIVAL —'ciudad de los vientos'— y hay que registrarla como
+    tal, no elegir. Nota: el proyecto se llama Curiana; razón de más para que
+    la etimología de su propio nombre esté declarada con sus dos lecturas y su
+    duda, y no resuelta a conveniencia.
+  y_una_pista: >-
+    Si `curiana` fuera 'de los vientos', ataría con `juri` 'viento'
+    (atestiguado), con Judibana 'cerro del viento' y con Jurijurebo 'camino del
+    viento'. Pero cur- y jur- no son la misma raíz sin más: haría falta una
+    correspondencia, no un parecido. Anotado como hipótesis a verificar.
+
+# ══════════════════════════════════════════════════════════════════════
+otros_del_segundo_tramo:
+
+  - forma: Cumaragua
+    hallazgo: >-
+      «Palabra usada por los caquetíos para nombrar la ESPUMA ROSADA y también
+      LA CIRUELA. También se dice que usaban este nombre para una especie de
+      CANGREJO de caparazón ROJIZO». Existen las Salinas de Cumaraguas.
+    lo_que_ata: >-
+      ⭐ El lexicón tiene `kumarawa` 'caracol de las costas de Paraguaná'. Las
+      cuatro glosas —espuma rosada, ciruela, cangrejo rojizo, caracol— comparten
+      el COLOR, y la espuma rosada es literalmente la de una salina. La lectura
+      que las une es cromática, no zoológica: `kumarawa` podría nombrar el
+      rosado-rojizo antes que el bicho. Hipótesis, anotada.
+
+  - forma: Chichiriviche
+    hallazgo: >-
+      «Viene de la lengua de los caquetíos... CHICHI = lugar o nuestro sitio;
+      VICHE = pez. Chichiriviche = nuestro lugar donde nace el sol y abunda el
+      pez».
+    lectura_prudente: >-
+      ⚠️ La glosa no cuadra con su propia segmentación: si chichi = 'lugar' y
+      viche = 'pez', ¿de dónde sale «donde nace el sol»? Y queda `-ri-` sin
+      explicar. Es el patrón del cronista que traduce un nombre entero y luego
+      reparte las piezas. Se registra la voz, no la glosa.
+
+  - forma: Jadacaquiva
+    hallazgo: '«Jaca significa caballo y Quiva significa piedra»'
+    lectura_prudente: >-
+      🔴 Medio acierto y medio anacronismo. `quiva` 'piedra' SÍ está atestiguado.
+      Pero «caballo» es imposible en un topónimo prehispánico: el caballo llega
+      con los españoles. Es un buen ejemplar de etimología popular que conserva
+      una pieza buena dentro de una explicación imposible — razón para
+      despiezar siempre, en vez de aceptar o descartar entero.
+
+  - forma: Taratara
+    hallazgo: >-
+      «Los indígenas tenían la costumbre de repetir las cosas dos veces, y el
+      nombre se formó porque había una mujer llamada Tara y al visitarla
+      preguntaban ¿Tará Tara?». Capital del municipio Sucre.
+    lectura_prudente: >-
+      Cuento etiológico, no etimología. Pero el dato de la REDUPLICACIÓN es
+      interesante: el canon ya tiene `taratarare` glosado 'hato, conuco' en el
+      inventario de morfemas, y el lexicón tiene `tara` (saltamontes, Medina
+      p. 272). La reduplicación como recurso sí está en la lengua.
+
+  - forma: Cabure
+    hallazgo: '«antiguo asentamiento de indígenas JIRAJARA, fundado en 1769»'
+    por_que_importa: >-
+      ⚠️ Zonificación: la Sierra de Falcón se declara «territorio ancestral de
+      jirajaras, ayamanes y ajaguas». Cabure, Curimagua, Churuguara y Pecaya
+      caen ahí. No son de la polity costera y probablemente ni siquiera son
+      arahuacos — `churuguara` ya está en el lexicón como jirajaroide-contacto.
+      Regla 4: se marcan.
+
+  - forma: Curimagua
+    hallazgo: "«hermoso valle de aguas frescas y limpias»"
+    lectura_prudente: 'glosa descriptiva sin segmentación; y es zona jirajaroide (ver Cabure)'
+
+  - forma: Pecaya
+    hallazgo: 'famosa por el «cocuy pecayero», licor de agave'
+    lo_que_ata: >-
+      `cocuy` es caquetío-ATESTIGUADO en el lexicón: 'penca, planta rizomosa
+      que da un vino agradable'. El oficio del cocuy sigue vivo en Pecaya, lo
+      que da continuidad de uso a una voz del canon. Dato de oficio, no
+      etimología del nombre.
+
+  - forma: Tocuyo
+    hallazgo: >-
+      «De origen CARIBE: TOO = claridad, luz, el día, sol; QUY = criaturas
+      feas pequeñas (luciérnagas); YO = volar».
+    lectura_prudente: >-
+      🔴 Segmentación en tres piezas para dar un compuesto pintoresco, sin
+      paradigma que la sostenga. Se registra el hecho de que se le atribuye
+      origen caribe, no la glosa. Y Tocuyo de la Costa SÍ es de Falcón, lo que
+      confirma a Miguel.
+
+  - forma: Mitare
+    hallazgo: 'río principal del municipio Sucre, 120 km, cuenca del Golfo de Venezuela'
+    nada_de_etimologia: true
+    nota: 'el canon ya tiene `mitare` por otra vía — ver frase_saludo_mitare.yaml'
+
+# ══════════════════════════════════════════════════════════════════════
+listas_de_terceros_que_amplian_la_cola:
+  aviso: 'nombres que salen en las fuentes y NO estaban en la lista de Miguel'
+  paraguana: [Sicaname, Matividiro, Misaray]
+  falcon_oriental: [Chivare, Guacabana, Cuare, Bacoa, Tacarigua, Jatira, Jongo, Guacara]
+  nota: >-
+    ⭐ `Bacoa` aparece como topónimo SUELTO, no como sufijo — es la base de
+    morfema-001 viviendo sola. Y `Guacabana` lleva dentro el `-bana` de D9.
+    Los dos son material directo para el inventario de morfemas.
+
+# ══════════════════════════════════════════════════════════════════════
+# 🔴 EL BARRIDO WEB SE PARA AQUÍ, Y POR UNA BUENA RAZÓN
+# ══════════════════════════════════════════════════════════════════════
+por_que_se_para:
+  fecha: '2026-09-10'
+  que_paso: >-
+    Buscando `Maquigue` salió citada una obra: «Topónimos Indígenas de
+    Paraguaná Y OTROS TOPÓNIMOS INDÍGENAS DEL ESTADO FALCÓN». Es Esteves 1989
+    — el libro que el proyecto lleva meses minando. Y la ficha
+    `4-fuentes/esteves-1989.md` ya tenía la tabla: pp. 11-67 Parte I,
+    Paraguaná, tomos 1-3 (MINADA); pp. 81-144 **PARTE II, «otros topónimos
+    indígenas del estado Falcón», tomos 4-6 (SIN MINAR)**.
+  el_error: >-
+    Estuve buscando en blogs lo que estaba, con página y autor citable, en un
+    libro del estante. Los tomos 4-6 eran los únicos sin OCR, y por eso la
+    Parte II nunca se había tocado. Mismo patrón que con Perea: preguntarle a
+    la fuente equivocada teniendo la buena en casa.
+  lo_que_se_hizo: >-
+    OCR de los tomos 4, 5 y 6 con `ocr_fuente.py` (2026-09-10). Ya están sus
+    `.ocr.txt` junto a los de los tomos 1-3.
+
+  correccion_del_conteo:
+    que_paso: >-
+      🔴 El primer cruce se hizo con el tomo 6 A MEDIAS: lo commiteé mientras
+      el OCR seguía escribiendo, con 8.084 de sus 31.416 bytes finales. Los
+      números de esa pasada (60/15/18) eran de un texto incompleto. Rehecho
+      con la Parte II entera (87.280 caracteres).
+    la_leccion: >-
+      No commitear la salida de un proceso en segundo plano hasta que el
+      proceso diga que terminó. Parecía completo porque tenía contenido.
+
+  cruce_de_los_136_contra_esteves_entero:
+    solo_parte_I: 15
+    solo_parte_II: 58
+    en_las_dos_partes: 46
+    en_ninguna: 17
+    cobertura: '119 de 136 — el 88%'
+    lectura: >-
+      ⭐⭐ Esteves cubre casi nueve de cada diez nombres de la lista. El barrido
+      web habría tardado treinta búsquedas más para dar peor material: Esteves
+      cita, da glosa, y tiene informantes orales con nombre, pueblo y año de
+      nacimiento.
+    petare: >-
+      🔴 RETIRADO el 2026-09-10, el mismo día. Escribí que PETARE «está en la
+      Parte II de Esteves» a partir de un grep. Al leer el pasaje con contexto,
+      la única aparición del nombre en los tomos 4-6 está en la BIOGRAFÍA DEL
+      AUTOR: la lista de municipalidades que han reconocido a Esteves —«Coro
+      (1972), Puerto Cabello (1973 y 1981), Cumaná (1974), Guanare (1982),
+      PETARE (1983) y Caracas (1983)»—. No es una entrada del gazetteer.
+    petare_lo_que_queda_en_pie: >-
+      Que Miguel dijera que su Petare está en Falcón sigue sin refutarse: lo
+      único que cambia es que Esteves NO lo respalda. Petare vuelve a la cola
+      sin referente. Y la lección es la de siempre, esta vez al revés: un grep
+      con resultado tampoco es un dato hasta que lees el pasaje. El cero hay
+      que verificarlo, y el uno también.
+    los_17_que_no_estan: [Azaro, Botucare, Caidie, Cumairebo, Cumajacoa,
+                          Davaduvare, Duvisí, Jacure, Macolla, Quisiro, Samaria,
+                          Sividigua, Tarama, Tarica, Tibana, Tomoporo, Yabuquiva]
+    aviso_sobre_esos_17: >-
+      ⚠️ Sigue siendo un cruce por raíz de seis caracteres sobre OCR. Cuatro de
+      ellos —Cumajacoa, Sividigua, Tarama, Yabuquiva— SÍ están en el canon por
+      Esteves, lo que prueba que el OCR los pierde. Un cero aquí mide el OCR,
+      no el libro. Regla 6: verificar en la imagen.
+
+  siguiente_paso: >-
+    Minar la PARTE II (pp. 81-144) con el protocolo de la campaña, no seguir
+    buscando en la web. Y marcar con su procedencia geográfica todo lo que
+    salga: la Parte II cubre sierra y oriente, territorio de otras polities y
+    de jirajaras, ayamanes y caribes (regla 4, y la propia ficha lo avisa).
+
+# ══════════════════════════════════════════════════════════════════════
+# BALANCE al 2026-09-10 — qué está revisado y qué falta, nombre por nombre
+# Reproducible: 6-fusion/scripts/balance_lista_toponimos.py
+# ══════════════════════════════════════════════════════════════════════
+balance:
+  lista: 136
+  con_algo_en_firme: 56
+  falta_trabajo_real_en: 80
+
+  glosa_de_esteves_y_mirado_en_web: 4
+  glosa_de_esteves_sin_mirar_en_web: 12
+  mirado_en_web_sin_glosa_de_esteves: 40
+
+  en_esteves_pero_SIN_glosa_y_sin_mirar_en_web:
+    n: 58
+    que_significa: >-
+      Esteves les da entrada —referente, municipio, distrito— pero NINGUNA
+      etimología. No están sin tocar: sabemos dónde están. Lo que falta es
+      pasarles el barrido web, que es donde podría aparecer la etimología
+      popular que Esteves no recogió.
+    formas: [Abudure, Acaboa, Adaure, Aguaque, Aracua, Araurima, Aroa, Bariquis,
+             Borobo, Bucaral, Capadare, Capana, Caracara, Caracubana, Carazao,
+             Carirubana, Carora, Caseto, Cauca, Caujarao, Cayude, Charaima,
+             Chipare, Chiriguare, Cocuy, Coroquidiro, Corubo, Cueparo, Cujicana,
+             Curarí, Cururupare, Dividive, Guacurebo, Guaguana, Guasare, Guay,
+             Guayacanal, Guica, Jadagua, Macuare, Maicara, Mapararí, Muaco,
+             Omomo, Petare, Piritú, Sabaneta, Sanare, Sarinao, Sauca, Siburúa,
+             Tacamire, Tiraya, Tucurere, Tuque, Turamaco, Urucure, Usera]
+
+  sin_tocar:
+    n: 22
+    formas: [Araguan, Araure, Azaro, Botucare, Caduto, Caidie, Cumairebo,
+             Cumajacoa, Davaduvare, Guaruguaro, Jacure, Murucusa, Origuasa,
+             Pure, Quisiro, Samaria, Sividigua, Tarama, Tarica, Tibana,
+             Tomoporo, Viana]
+    aviso: >-
+      ⚠️ «Sin tocar» aquí quiere decir que el cruce automático no los encontró
+      en Esteves, y eso NO prueba que no estén: Cumajacoa, Sividigua, Tarama y
+      Tarica YA están en el canon por Esteves, o sea que el OCR los pierde. La
+      lista mide el OCR tanto como el libro.
+
+  siguiente_paso_por_rendimiento:
+    - '1. Barrido web de los 58 que Esteves registra sin glosar: tienen referente firme y sólo falta la etimología popular.'
+    - '2. Los 22 «sin tocar», empezando por mirar en la IMAGEN los que el OCR pierde.'
+    - '3. Verificar en imagen las 16 glosas de Esteves antes de citarlas.'
+
+# ══════════════════════════════════════════════════════════════════════
+# TERCER TRAMO — los que Esteves registra pero no glosa
+# ══════════════════════════════════════════════════════════════════════
+tercer_tramo:
+  criterio: >-
+    De los 58 que Esteves registra con referente, municipio y distrito pero sin
+    etimología, se les pasa el barrido web a ver si la divulgación local
+    recogió la glosa que él no puso.
+
+  ecuaciones_que_cierran_con_voces_atestiguadas:
+
+    - forma: Carirubana
+      hallazgo: >-
+        «Carirubana significa ORILLA DEL PEÑÓN, la orilla del cerro, donde
+        CARI es orilla y BANA sitio alto».
+      por_que_importa: >-
+        ⭐⭐⭐ Las DOS piezas están en el lexicón como caquetío-atestiguado:
+        `cari` 'orilla del mar, costa' y el `bana` de D9. La suma da el
+        referente y de paso CONFIRMA D9 —`-bana` = 'sitio alto'— desde la
+        etimología popular, por un canal que no es ninguno de sus seis apoyos.
+        Y no es un nombre menor: Carirubana es todo un municipio, el de Punto
+        Fijo.
+      queda_por_explicar: 'la `-ru-` de en medio; ni la fuente ni el canon la despejan'
+
+    - forma: Cayude
+      hallazgo: '«árbol frutal, guanábano silvestre»'
+      por_que_importa: >-
+        ⭐ Es LITERALMENTE la glosa que el lexicón tiene para `kayude`. Y el
+        Centro de Historia de Paraguaná da «los cayudes» como uno de los grupos
+        del Golfete: el clan lleva el nombre del árbol.
+
+    - forma: Caseto
+      hallazgo: '«nombre indígena de una planta medicinal y aromática»'
+      por_que_importa: >-
+        El lexicón tiene `kaseto` 'planta herbácea' y Medina la dicta como
+        arbusto sin utilidad. La web añade MEDICINAL y AROMÁTICA — que
+        contradice el «de ninguna utilidad para el campesino» de Medina. Se
+        declaran las dos.
+
+  la_lista_de_clanes_confirmada:
+    hallazgo: >-
+      El pasaje de Tacuato aparece completo en otra fuente y añade un dato:
+      «los guasicures DE CASETO».
+    por_que_importa: >-
+      ⭐⭐ Ata el grupo `guasicure` a un lugar concreto —Caseto— que además es
+      voz atestiguada del lexicón y del dictado. La lista de grupos del Golfete
+      queda así: Guaranaos (tribu mayor), y dentro Tacuato, Corubo, Cayude y
+      Guasicure de Caseto. Cuatro de esos cinco nombres están en la lista de
+      Miguel como topónimos.
+
+  otros_hallazgos:
+    - forma: Charaima
+      hallazgo: >-
+        «El nombre primitivo era CHARAIDE, y sufrió modificaciones por eufonía.
+        Se sospecha relación con el cacique CHARAIMA de la Isla de Margarita,
+        abuelo del guayquerí Francisco Fajardo, primer fundador de Caracas».
+      lo_que_ata: >-
+        ⭐ `Charaide` tiene la misma terminación que `Curaide`, la base que
+        Esteves da para Curaidebo. Dos nombres en -aide en la misma zona: hay
+        formante, o al menos patrón. Y el vínculo con el cacique margariteño es
+        perseguible por vía histórica, no lingüística.
+    - forma: Maicara
+      hallazgo: '«En un documento antiguo se ha leído: MAICUARE, quizás este es su nombre primitivo»'
+      lo_que_ata: >-
+        ⭐⭐ `-cuare` es el `cuar` cumanagoto que Esteves usa para explicar
+        Adícora («jadícuar»), glosado 'aglomeración, abundancia', y que él
+        mismo equipara al `tuba` caquetío. Si Maicara viene de Maicuare, es el
+        mismo colectivo. Tercer nombre de la serie, con `-rao` de Cabarao.
+    - forma: Jadagua
+      hallazgo: >-
+        «Según sus habitantes, de dos voces caquetías: JADA, tropas que venían
+        de lejos, y GUA, lugar donde abunda el agua dulce de manantial».
+      lectura_prudente: >-
+        ⚠️ «Tropas que venían de lejos» no es glosa de una raíz, es una
+        narración. La parte de `gua` sí es tratable: el canon tiene `-gua`
+        'región, área amplia' y Zavala da `gua` 'conuco'. Se registra partido.
+    - forma: Guaguana
+      hallazgo: >-
+        Fuente honesta: «la partícula GUA se usa mucho en topónimos venezolanos
+        y tiene MUCHOS significados, lo que hace difícil determinar el
+        significado de este nombre».
+      por_que_vale: >-
+        Un divulgador diciendo «no se puede saber» vale más que diez que
+        inventan. Se registra como no-glosa declarada.
+    - forma: Adaure
+      hallazgo: '«se cree que una mujer llamada Juana de Campos fundó un hato llamado Adaure»'
+      lectura_prudente: 'explicación COLONIAL del uso del nombre, no etimología de la voz'
+    - forma: Guayacanal
+      hallazgo: 'colectivo castellano de `guayacán`: el sitio donde abundaban'
+      lectura_prudente: 'formación CASTELLANA sobre voz indígena; el nombre del árbol es lo indígena, el -al no'
+    - forma: Muaco
+      hallazgo: 'sin etimología; es el yacimiento paleoindio excavado por Cruxent en 1959-60, a 2 km de Taima-Taima'
+      nota: 'el repo tiene Rouse y Cruxent 1963; el dato es arqueológico, no lingüístico'
+    - forma: Guica
+      hallazgo: 'quebrada; aparece también como CUICA'
+      nota: 'la alternancia g~c inicial es la permutación laxa que la campaña ya usa'
+
+  sin_hallazgo_en_este_tramo: [Abudure, Cumajacoa, Guacurebo, Tiraya, Sabaneta, Corubo, Guasare, Capadare]
+  nota_capadare: >-
+    ⚠️ Capadare tiene una etimología en circulación —«del tabaco: las hojas
+    grandes las llamaban CAPAS, y DARE del sufijo dar, trueque»— que es
+    RESEGMENTACIÓN CASTELLANA, como 'capa de tierra árida' para Capatárida.
+    Se descarta como glosa y se registra como ejemplar del patrón. El `-dare`
+    real recurre en la zona: Capadare, Codore, Dabadubare.
+
+# ══════════════════════════════════════════════════════════════════════
+# CIERRE — los que no estaban en NINGUNA fuente del repo
+# ══════════════════════════════════════════════════════════════════════
+cierre_del_barrido:
+  quienes_son: >-
+    Los 15 que quedaron después de agotar las 29 fuentes extraídas: no
+    aparecen en Esteves, ni en Alvarado, ni en Arcaya, ni en el canon, ni en
+    la mesa. Existían solo porque Miguel los sabe. Aquí sí toca la web — y lo
+    que se busca es REFERENTE, no etimología: saber que el sitio existe y
+    dónde, que es el paso previo a todo lo demás.
+
+  referentes_confirmados_en_falcon:
+    - {forma: Sividigua,  donde: 'poblado del municipio Buchivacoa, 51 m s.n.m.'}
+    - {forma: Murucusa,   donde: 'pueblo de Falcón, citado en un estudio de la cuenca falconiana (UCV)'}
+    - {forma: Botucare,   donde: 'municipio Miranda'}
+    - {forma: Davaduvare, donde: 'pueblo junto a la localidad de ABUDARE, en Paraguaná'}
+    - forma: Caduto
+      donde: 'municipio Carirubana — Paraguaná'
+      lo_que_ata: >-
+        ⭐⭐ Arcaya lista, entre los nombres «de lugares en las regiones
+        ocupadas por los caquetíos», CODUTO y CURARADUTO. Con Caduto van tres
+        en `-duto`, y Miguel tiene además CODORE en su lista, que Arcaya pone
+        en la misma serie. El formante `-duto` merece censo.
+    - forma: Tibana
+      donde: 'municipio Monseñor Iturriza, a 5,9 km al noroeste de Santa Ana'
+      lo_que_ata: >-
+        ⭐⭐ Termina en `-bana`, y hoy mismo Esteves lo ha glosado 'cerro' al
+        despejar Caracubana. Ti-bana sería el cuarto nombre de la serie con
+        Carirubana, Caracubana y Judibana. Hace falta saber si el sitio es un
+        cerro: eso lo dice el mapa, no la etimología.
+    - forma: Origuasa
+      donde: 'aldea junto a GUAMURE, municipio Jacura'
+      lo_que_ata: >-
+        ⭐ Guamure es el GUAIMURE que Esteves glosa «raíz de guay; "ure",
+        raíz» — el topónimo que hoy resolvió de dónde salía el `-ure` de van
+        Buurt. Origuasa es su vecino.
+    - forma: Jacure
+      donde: 'variante o vecino de JACURA, municipio del sureste del estado'
+      lo_que_ata: >-
+        ⭐ El municipio Jacura tiene tres parroquias: Jacura, Agualinda y
+        ARAURIMA — que es otro nombre de la lista de Miguel, y del que Arcaya
+        daba el río. Segundo apoyo para Araurima, y de otra clase: no es un
+        río nombrado en una crónica, es una parroquia viva.
+
+  de_regalo_dos_que_ya_estaban:
+    - >-
+      CAIDIE aparece en el gazetteer como «CAIDI, municipio San Francisco».
+      Arcaya daba el río; ahora hay poblado, y una segunda grafía.
+    - >-
+      CUEPARO aparece como «QUEPARO, municipio Jacura» — que es exactamente el
+      municipio que Esteves le asigna. Confirma la entrada y da la grafía
+      moderna. ⚠️ Cu-~Que- es la alternancia que la campaña ya usa.
+
+  solo_los_encuentro_fuera_de_falcon:
+    aviso: >-
+      ⚠️ Esto NO refuta a Miguel. Él dijo «todos los que te mandé están en
+      Falcón» y ya me ha corregido con razón. Es lo que la web alcanza, y la
+      web indexa mal los caseríos. Se declara el estado, no un veredicto.
+    casos:
+      - {forma: Tomoporo, la_web_da: 'municipio La Ceiba (Trujillo) y Tomoporo de Agua, municipio Baralt (Zulia)'}
+      - {forma: Araure,   la_web_da: 'municipio de Portuguesa'}
+      - {forma: Quisiro,  la_web_da: 'municipio Miranda (Zulia)'}
+    como_se_cierra: 'con las coordenadas del mapa vivo, que es lo que la mesa ya prevé'
+
+  sin_nada_todavia: [Tarama, Samaria, Viana, Pure]
+  nota_sobre_esos_cuatro: >-
+    Los cuatro son además palabras corrientes del castellano o apellidos, así
+    que el buscador se ahoga en ruido. TARAMA sigue teniendo el candidato de
+    Arcaya —TARUMA, en la cadena de colinas de Caujarao— que es la vía más
+    barata: una vocal de diferencia y la misma comarca.
+
+  una_etimologia_que_se_descarta:
+    forma: Sividigua
+    lo_que_circula: >-
+      Un artículo sobre «los quechuas en Venezuela» glosa Sividigua como «ir
+      por amuleto y extraño».
+    por_que_se_descarta: >-
+      🔴 Porque el quechua no tiene nada que hacer en el occidente de
+      Venezuela: no hay contacto documentado, ni en el repo ni fuera de él,
+      entre el quechua y la toponimia falconiana. Es del mismo género que
+      «Coro = viento» —que Arcaya desmontó en 1920— y que «Sanare = del latín
+      sanare»: se busca la lengua prestigiosa que uno conoce y se fuerza el
+      calce. Se registra para que no se vuelva a abrir.
+
+  balance_final_del_dictado:
+    medido_con: '6-fusion/scripts/balance_lista_toponimos.py'
+    de_136_nombres: 'los que quedan sin nada son cuatro: Tarama, Samaria, Viana, Pure'
+    lo_que_queda_pendiente_y_NO_es_barrido:
+      - 'verificar en imagen todo lo que salió del OCR antes de citarlo fuera de 6-fusion/'
+      - 'las coordenadas del mapa vivo para los tres que solo aparecen fuera del estado'
+      - 'la fusión al canon: nada de esto ha entrado, y eso lo decide Miguel'
+
+  los_tres_que_el_balance_no_veia:
+    nota: >-
+      Revisados en su sitio pero sin entrada `forma` propia, así que el script
+      los contaba como pendientes. Se declaran aquí para que la cifra no mienta.
+    casos:
+      - forma: Carora
+        estado: >-
+          Revisado. Alvarado NO tiene entrada; Esteves solo lo nombra como
+          destino del «camino de Perera» (1854), o sea la ciudad de Lara;
+          Arcaya y Jahn lo tratan como geografía externa. Y la etimología que
+          circula —«karira o kurura, cigarra en guajiro, según Arcaya»— NO se
+          verifica en su texto. Sin referente falconiano y sin glosa citable.
+      - forma: Coroquidiro
+        estado: >-
+          Resuelto: Esteves lo glosa parcialmente al declarar «la desinencia
+          IRO, que es diminutivo», y Arcaya lo pone en la serie coro-/curi-
+          junto a Coroqui y Coroquide. Coroquide → Coroquidiro.
+      - forma: Tuque
+        estado: >-
+          Sin resolver, con un único hilo: Alvarado tiene TAQUE (Caryodendron
+          orinocense, el nogal del estado Lara) y Zavala #236 (E) «árbol
+          nucífero» — la misma voz. ⚠️ Pero Tuque←taque exige a~u, que NO está
+          entre las permutaciones que Alvarado documenta (e~i, o~u). No se
+          propone; queda anotado como hilo.

@@ -11,7 +11,7 @@
 # ─────────────────────────────────────────────────────────────────────────
 meta:
   recogido: '2026-08-25'
-  estado: sin-fusionar
+  estado: fusionado-parcial   # 2026-09-07: La Cuiba → toponimo-112 (C) con sus dos lecturas; las ~20 estaciones de petroglifos siguen en la mesa como cola; Maitiruma resuelto (lote 2 y B.6); el resto (Manaure, cemíes, esfera arte) sigue como propuesta
   obra: moron-2012-petroglifos
 
 # ══════════════════════════════════════════════════════════════════
@@ -158,7 +158,7 @@ toponimia:
       Refuerza el conjunto de cognados 'piedra' de lengua_toponimia_quibacoa.yaml
       (ipa / siba / quiva / cuiva) con un caso toponímico verificable en terreno.
     reserva: >-
-      ⚠️ NO confundir con la etnia cuiba (etnias_en_contacto.yaml#etnia-001).
+      ⚠️ NO confundir con la etnia cuiba (3-mundo/etnias.yaml (antes 6-fusion/etnias_en_contacto.yaml)#etnia-001).
       La homografía es la misma que ya quedó anotada allí como hipótesis sin
       verificar. Este dato no la resuelve — pero hace la coincidencia más
       llamativa, porque ahora hay un lugar de piedras llamado La Cuiba.

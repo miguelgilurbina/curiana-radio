@@ -5,11 +5,11 @@ autor: "Oliver, José R."
 anio: 1989
 genero: etnohistoria
 local: "fuentes_caquetios/Oliver_1989_Tesis_Arawakan_NW_Venezuela_UCL.pdf — impresas 213-250 = pdf 240-277 (offset -27)"
-capa_texto: no
+capa_texto: ocr-parcial  # §3.2.4 (pdf 250-257) en fuentes_caquetios/Oliver_1989_cap3_s324_caribes.ocr.txt desde 2026-09-07; el resto sigue sin capa
 acceso: "Libre — la tesis completa (823 pp., incluye esta sección) está en UCL Discovery, depositada por el propio Oliver: PDF https://discovery.ucl.ac.uk/id/eprint/10157455/1/Oliver_10157455_thesis_redacted.pdf · ficha https://discovery.ucl.ac.uk/id/eprint/10157455/. Verificado en el rastreo de 2026-08-14."
 estado_minado: parcial
 prioridad: alta
-verificado: 2026-08-17
+verificado: 2026-09-07
 aliases: ["Oliver 1989 §3.3", "los vecinos de los caquetíos", "jirajaranos"]
 ---
 
@@ -266,6 +266,41 @@ vocabulario jirajarano: un préstamo caribe dentro del jirajarano.
   Viene de las crónicas — las mismas que inventaron la oposición
   caribe/guaitiao, que este capítulo advierte no tomar al pie de la letra.
 
+### B.6, minada (2026-09-07): dónde están los caribes, y dónde no
+
+La pregunta era: ¿qué grupos de lengua caribe, dónde, con qué contacto con la
+polity costera / Paraguaná?, y cruzar con los cinco topónimos que
+[[esteves-1989]] atribuye al «caribe insular». Se leyeron las ocho páginas
+enteras sobre OCR propio (esta vez guardado en el repo, no en el scratchpad:
+la pasada del 08-17 se perdió). Propuesta completa en
+`6-fusion/oliver_324_caribes.yaml`.
+
+- **Los caribes de Oliver están al sur y oeste del lago de Maracaibo**: bubures
+  (Perijá y Juruara), buredes o «coronados» (Perijá, ancestrales de los yukpa),
+  pemenos (este de Juruara, y «pemeos» hasta el Magdalena), kirikires (palafitos
+  del lago, «hunch» de caribe). Los del **Caribe Costero Venezolano** (chayma,
+  cumanagoto, yao, tamanaco) son la costa central y oriental — lejos de Falcón.
+- **Contacto con caquetíos: solo los bubures de Juruara**, con aldeas caquetías
+  en medio (Parepi) y una relación «more than a simple trade partnership»
+  (p. 229). Son los caquetíos de la esfera occidental — regla 4 — minoría y
+  enclave. Los caquetíos guajiros eligieron socios (wanebucanes, coanaos) y
+  evitaron a onotos, kusi'na y guajiros: «not one single reference» de
+  asociación (p. 229).
+- **Paraguaná no aparece.** Medido sobre el OCR: Paraguan- 0, Amuay 0, Elegüey
+  0, Maragüey 0, Jamaica 0, Maitiruma 0, «insular» 0, «Island» 0; «peninsula»
+  es siempre la Guajira; Falcón, una vez, como extremo del eje comercial. El
+  «estrato caribe insular» de Esteves queda como lo que es: inferencia fonética
+  suya, con una etiqueta que nombra una lengua arahuaca (ver la advertencia en
+  su nota).
+- **Un cruce que sí rinde**: entre los topónimos «de filiación caribe» de
+  Juruara que da Oviedo (Roromoni, Aypiare, Carerehota, **Aynagoto**,
+  Huahuovano, p. 227) hay un -goto, el formante que Arcaya lee como caribe
+  'pueblo, gente' en xirahara. Apoyo independiente a Arcaya.
+- Cronología (Layrisse y Wilbert 1966 vía Oliver): proto-caribe diverge hace
+  ≥ 4,5 milenios; el nodo del Caribe del Norte, hacia 2,3; la expansión caribe
+  al Maracaibo es más o menos contemporánea de la del caquetío ancestral en
+  los Llanos del norte (pp. 224-225).
+
 ### 🔴 Un conflicto de estratos en el lexicón
 
 Oliver anota al paso: ***"Onoto is the Carib word for achiote or bija"***. Pero
@@ -307,7 +342,7 @@ varias lenguas sobre un referente.
 1. **Transcribir la Tabla A-8** a ojo (2 páginas): es el vocabulario jirajarano.
 2. Minar **§3.2.3 (chibchas)** — toca directamente la decisión de `hayo` y
    `caraota` como préstamos de contacto chibcha.
-3. Minar **§3.2.4 (caribes)** y **§3.3.3 (chipas de Aroa)**.
+3. ~~Minar **§3.2.4 (caribes)**~~ (hecho el 2026-09-07, ver arriba) y **§3.3.3 (chipas de Aroa)**.
 4. **§3.8**, la comparación entre el caquetío costero y el de
    Barquisimeto-Yaracuy: es el fundamento de la regla 4, que hoy citamos de
    oídas.

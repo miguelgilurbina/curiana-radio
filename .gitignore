@@ -49,3 +49,7 @@ next-env.d.ts
 
 # revision A-2: renders de paginas de la tesis de Oliver (copyright) - no suben
 revision-a2/
+
+# Handoff de diseño: se queda en disco, fuera del control de versiones.
+# Miguel lo pidió el 2026-09-10 y se coló dos veces por `git add -A`.
+design_handoff_marca_e_intro/

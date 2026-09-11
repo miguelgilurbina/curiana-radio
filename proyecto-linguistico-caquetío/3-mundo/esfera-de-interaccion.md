@@ -236,11 +236,33 @@ cartas de 1538 y 1550, y una carta de 1538 no dice nada de 1450.
 El validador lo protege con una regla ejecutable: `precontacto: si` **exige**
 `precontacto_razon`, y no puede convivir con `atestacion: colonial`.
 
+### El registro de vecinos, y lo que su validador protege
+
+`3-mundo/etnias.yaml` es el hermano del de nodos: aquel dice **dónde** estaba
+la esfera, este dice **con quién**. Una ficha por pueblo documentado en
+contacto con los caquetíos —familia lingüística, lugar, tipo de contacto,
+fuente— y, obligatorio y de vocabulario cerrado, **a qué polity caquetía
+toca** (`polity_caquetia`). Medido el 2026-09-07 sobre 8 fichas: ningún pueblo
+documentado toca la polity costera. Los cuibas están en los Llanos, los
+ciparicotos en Yaracuy, los cuatro grupos caribes de Oliver §3.2.4 al sur y
+oeste de Maracaibo. El único vecino de la Curiana es el caribe del elenco, y
+es canon-simulación.
+
+`compilar_etnias.py` (9.º guardián) es la regla 4 en código: `polity_caquetia:
+costera` **exige** una `procedencia.obra` que documente ese contacto o
+`etiqueta: canon-simulacion`; y lo canon-simulación declara `deuda:
+sin-procedencia`. Sin eso, un vecino de Barquisimeto se desliza al Golfete sin
+que nadie lo note. La esfera `occidental` (la Guajira, el lago de Maracaibo,
+Juruara: la *Western Sphere* de Oliver §3.2, Coquibacoa en los mapas de 1500)
+entró a `curiana_polities.py` el 2026-09-07 como quinta polity con estado
+`futura`, por decisión de Miguel: se modela como esfera futura, no se simula.
+Ver [[polities-caquetias]].
+
 ## 5. Lo que hay que construir
 
 | # | Qué | Por qué |
 |---|---|---|
-| 1 | ~~**Registro de nodos**~~ | ✅ **hecho**: `3-mundo/asentamientos.yaml`, 13 nodos, 4 huecos declarados, 8.º guardián |
+| 1 | ~~**Registro de nodos**~~ | ✅ **hecho**: `3-mundo/asentamientos.yaml`, 13 nodos, 4 huecos declarados, 8.º guardián. Y el de vecinos, `etnias.yaml`, con el 9.º (2026-09-07) |
 | 2 | Minar Paraguaná específicamente (Arcaya trabajó los archivos de Coro) | falta la mitad de los topónimos y no sabemos cuáles son precontacto |
 | 3 | Que la simulación declare su nodo, como ya declara su polity | `huella_de_base.py` ya sella `polity`; falta `nodo` |
 | 4 | Variación dialectal **por nodo**, no por agente suelto | es la condición para que «koiné» signifique algo |
@@ -261,6 +283,9 @@ Honestidad primero, porque son huecos reales:
   eso no alcanza para modelar un nodo bilingüe.
 - **Si los guaycaríes eran un grupo distinto o una denominación de otra cosa.**
   Son 4 agentes del elenco y no hay nota de fuente que los sostenga.
+  (2026-09-07: el registro de pueblos en contacto ya existe, `etnias.yaml`,
+  con los guayqueríes como etnia-002 y el caribe del elenco como etnia-008,
+  canon-simulación; el hueco de los guaycaríes sigue.)
 
 Los tres son trabajo de minería, no de diseño. **Ninguno se resuelve
 decidiéndolo.**

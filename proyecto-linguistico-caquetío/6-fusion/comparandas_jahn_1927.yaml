@@ -1,0 +1,1974 @@
+# ══════════════════════════════════════════════════════════════════════
+# COMPARANDAS — el vocabulario de los vecinos, guardado tal cual
+# ══════════════════════════════════════════════════════════════════════
+# 🔴 ESTO NO ES CAQUETÍO. Ni una sola de estas voces entra al lexicón ni al
+#    habla de los agentes. Son las lenguas de la zona cultural que el caquetío
+#    compartía, guardadas para poder COMPARAR — que es cosa distinta de
+#    copiar. La trampa que CLAUDE.md ya mide: el 80% del lexicón son
+#    comparandas y hay consumidores que no filtran por `fuente`. Este archivo
+#    vive en 6-fusion/ y no lo importa nadie.
+#
+# Encargo de Miguel, 2026-09-10: «guardemos todas estas palabras que estamos
+# aprendiendo de estos lenguajes de la zona cultural que compartían los
+# caquetíos, más adelante nos pueden ayudar».
+
+meta:
+  fecha: '2026-09-10'
+  obra: jahn-1927
+  que_es: el apéndice de vocabularios comparados de Jahn 1927, que la nota de la fuente no
+    registraba. Localizado buscando `cachube` 'ombligo'.
+  advertencia: 🔴 comparandas, NO caquetío. No se importa desde el motor y ninguna voz se traspasa
+    sin método (regla 5).
+  estado_del_texto: 'parseado del OCR con `-layout`, cortando por hueco de dos espacios y
+    no por posición de columna —la cabecera va centrada y partía las palabras—. VERIFICADAS
+    EN IMAGEN: las dos páginas del achagua (pdf 457-458) y la de los numerales (pdf 448).
+    El resto NO: verificar antes de citar.'
+guajiro_paraujano:
+  paginas_pdf: 435-453
+  paginas_impresas: aprox. 355-373
+  filas: 390
+  columnas: ESPAÑOL | GUAJIRO | PARAUJANO
+  por_que_importan: son las dos comparandas más cercanas al caquetío, y el paraujano es una
+    de las columnas de la tabla A-2 de Oliver que la decisión D11 puso a rebalancear.
+  aviso_de_forma: '⚠️ las partes del cuerpo llevan el posesivo `ta-`/`te-`/`to-`/`wa-` pegado:
+    la tabla da ''MI diente'', no ''diente''. El radical hay que despejarlo, y despejarlo
+    mal produce falsos — a `wanésia` ''uno'' le quité un `wa-` que no era posesivo.'
+  voces:
+  - es: Cabeza (mi)
+    guajiro: tekt
+    paraujano: táki
+    p: '?'
+  - es: Cabeza (nuestra)
+    guajiro: weskí
+    paraujano: wáki
+    p: '?'
+  - es: Cabello (mi)
+    guajiro: tawála
+    paraujano: tawála
+    p: '?'
+  - es: Cara
+    guajiro: toupúna (h)
+    paraujano: terúh
+    p: '?'
+  - es: Frente
+    guajiro: teipálu
+    paraujano: telporú
+    p: '?'
+  - es: Nariz
+    guajiro: teitsch
+    paraujano: télyi
+    p: '?'
+  - es: Ventanas de nariz
+    guajiro: teitschiru
+    paraujano: ''
+    p: '?'
+  - es: Boca
+    guajiro: táneke
+    paraujano: t-óunaga
+    p: '?'
+  - es: Labio
+    guajiro: téimate
+    paraujano: téimata
+    p: '?'
+  - es: Diente
+    guajiro: tál
+    paraujano: tál
+    p: '?'
+  - es: Lengua
+    guajiro: tayé
+    paraujano: tebénye
+    p: '?'
+  - es: Oreja
+    guajiro: tasché
+    paraujano: tachó
+    p: '?'
+  - es: Ojo
+    guajiro: tóu
+    paraujano: toú
+    p: '?'
+  - es: Párpado
+    guajiro: sutá-tóu
+    paraujano: tóuta
+    p: '?'
+  - es: Cejas
+    guajiro: tartli
+    paraujano: ''
+    p: '?'
+  - es: Pestaña
+    guajiro: tarámalau
+    paraujano: talúye
+    p: '?'
+  - es: Barba
+    guajiro: talima
+    paraujano: téima
+    p: '?'
+  - es: Bigote
+    guajiro: téima
+    paraujano: tayuye
+    p: '?'
+  - es: Mentón
+    guajiro: teyélye
+    paraujano: ''
+    p: '?'
+  - es: Cuello
+    guajiro: tamula-pund
+    paraujano: t-ógoin
+    p: '356'
+  - es: Laringe
+    guajiro: tóroloin
+    paraujano: hla-tógoin
+    p: '356'
+  - es: Nuca
+    guajiro: tanútpa (h)
+    paraujano: t-ánkhe
+    p: '356'
+  - es: Pecho
+    guajiro: talúwet
+    paraujano: t-aténtin
+    p: '356'
+  - es: Teta de hombre
+    guajiro: tatschira
+    paraujano: ''
+    p: '356'
+  - es: Teta de mujer
+    guajiro: tatschira
+    paraujano: t-ayíri
+    p: '356'
+  - es: Pezón
+    guajiro: sou-tatschira
+    paraujano: ''
+    p: '356'
+  - es: Hombro
+    guajiro: tatunákti
+    paraujano: t opú tóp
+    p: '356'
+  - es: Espalda
+    guajiro: tasáp
+    paraujano: ''
+    p: '356'
+  - es: Paleta
+    guajiro: talépia
+    paraujano: t-euye
+    p: '356'
+  - es: Cintura
+    guajiro: tasé-rúpuna
+    paraujano: tapárin
+    p: '356'
+  - es: Costillas
+    guajiro: tawátse
+    paraujano: tayú, tayú
+    p: '356'
+  - es: Vientre (mi)
+    guajiro: taléh
+    paraujano: wayú
+    p: '356'
+  - es: Vientre (nuestro)
+    guajiro: waléh
+    paraujano: tómoyoh
+    p: '356'
+  - es: Ombligo
+    guajiro: tomótscho
+    paraujano: jimatajúi
+    p: '356'
+  - es: Nalgas
+    guajiro: síruku-téiyo
+    paraujano: téu, wichá
+    p: '356'
+  - es: Pene
+    guajiro: téra
+    paraujano: ''
+    p: '356'
+  - es: Testículos
+    guajiro: tashúh
+    paraujano: to-tólogoin
+    p: '356'
+  - es: Escroto
+    guajiro: tashúkut
+    paraujano: ''
+    p: '356'
+  - es: Glande
+    guajiro: nkídere
+    paraujano: t ébert
+    p: '356'
+  - es: Vulva
+    guajiro: shiére
+    paraujano: ''
+    p: '356'
+  - es: Clítoris
+    guajiro: aúj, aúch
+    paraujano: tayí-noghó
+    p: '356'
+  - es: Pelos del pubis
+    guajiro: tayúrku
+    paraujano: tádene
+    p: '356'
+  - es: Espinazo
+    guajiro: shípsi-tasáp
+    paraujano: táp
+    p: '356'
+  - es: Vejiga
+    guajiro: tashíre-esá
+    paraujano: ''
+    p: '356'
+  - es: Axila, sobaco
+    guajiro: tatúnalu
+    paraujano: yó-táp
+    p: '356'
+  - es: Brazo
+    guajiro: tatúna
+    paraujano: jíyi-tap
+    p: '356'
+  - es: Mano
+    guajiro: tajápki
+    paraujano: ''
+    p: '356'
+  - es: Planta de la mano
+    guajiro: tajápa
+    paraujano: ''
+    p: '356'
+  - es: Dedos de la mano
+    guajiro: tajápira
+    paraujano: ''
+    p: '356'
+  - es: Uñas de la mano
+    guajiro: tapátaush
+    paraujano: ''
+    p: '356'
+  - es: Dedo pulgar
+    guajiro: sóushu-tajdp
+    paraujano: ''
+    p: '356'
+  - es: Dedo índice
+    guajiro: chón-tajáp
+    paraujano: ''
+    p: '356'
+  - es: Dedo medio
+    guajiro: mpaya-tajáp
+    paraujano: ''
+    p: '356'
+  - es: Dedo anular
+    guajiro: nimúlie-tajáp
+    paraujano: tat-ótro (h)
+    p: '357'
+  - es: inchónchon-tajáp
+    guajiro: tabói
+    paraujano: ''
+    p: '357'
+  - es: Dedo meñique
+    guajiro: tasátala
+    paraujano: tai-ótro (h)
+    p: '357'
+  - es: tarúth
+    guajiro: tapú (h)
+    paraujano: ''
+    p: '357'
+  - es: Codo
+    guajiro: tasápain
+    paraujano: ''
+    p: '357'
+  - es: ta túnashi
+    guajiro: tapát
+    paraujano: ''
+    p: '357'
+  - es: Muslo
+    guajiro: táloen
+    paraujano: uchóyu-tapát
+    p: '357'
+  - es: tául
+    guajiro: jiyi-tapát
+    paraujano: ''
+    p: '357'
+  - es: Rodilla
+    guajiro: tóulish
+    paraujano: ''
+    p: '357'
+  - es: spáta-táulish
+    guajiro: tayó
+    paraujano: ''
+    p: '357'
+  - es: Pantorrilla
+    guajiro: táulpa
+    paraujano: ''
+    p: '357'
+  - es: Tobillo
+    guajiro: tasíru
+    paraujano: ''
+    p: '357'
+  - es: Pié
+    guajiro: téiyo
+    paraujano: ''
+    p: '357'
+  - es: Dedos del pié
+    guajiro: Ttapána
+    paraujano: ''
+    p: '357'
+  - es: Uñas del pié'
+    guajiro: tamótolo
+    paraujano: ''
+    p: '357'
+  - es: Planta del ¡pié
+    guajiro: sipse-tekt
+    paraujano: ''
+    p: '357'
+  - es: ICoxis
+    guajiro: talúmashi
+    paraujano: ''
+    p: '357'
+  - es: Ano
+    guajiro: tawd
+    paraujano: ''
+    p: '357'
+  - es: Intestino
+    guajiro: shíra
+    paraujano: ''
+    p: '357'
+  - es: Higado
+    guajiro: -—
+    paraujano: tajuástain
+    p: '357'
+  - es: Bofe
+    guajiro: '|'
+    paraujano: ''
+    p: '357'
+  - es: Sangre
+    guajiro: '|'
+    paraujano: ''
+    p: '357'
+  - es: Indio guajiro (sing)
+    guajiro: wáira, guaira
+    paraujano: mógúra
+    p: '357'
+  - es: Indios guajiros
+    guajiro: wayú, guayú
+    paraujano: ''
+    p: '357'
+  - es: Indio paraujano
+    guajiro: paráuja
+    paraujano: ayáuna
+    p: '358'
+  - es: Indio motilón
+    guajiro: sapuána
+    paraujano: ''
+    p: '358'
+  - es: Extranjero en ge-
+    guajiro: ayáuna-ingríe *?
+    paraujano: ''
+    p: '358'
+  - es: neral
+    guajiro: arihúna, alijúna
+    paraujano: éich, éichire
+    p: '358'
+  - es: alijúna-kasúta
+    guajiro: hniére
+    paraujano: ''
+    p: '358'
+  - es: Extranjero blanco
+    guajiro: alijúna-mutsía
+    paraujano: jebích
+    p: '358'
+  - es: alijúna-mékolo
+    guajiro: jebí-yiya
+    paraujano: ''
+    p: '358'
+  - es: w
+    guajiro: negro
+    paraujano: alijúna-pañúr >
+    p: '358'
+  - es: alijúna-wúlestai
+    guajiro: tén, tóin
+    paraujano: ''
+    p: '358'
+  - es: Español, criollo
+    guajiro: jiér
+    paraujano: tamúiñi
+    p: '358'
+  - es: Hombre rubio
+    guajiro: Jjiérchon-tepítsch
+    paraujano: téimiyli
+    p: '358'
+  - es: pushí
+    guajiro: téimiyu
+    paraujano: ''
+    p: '358'
+  - es: Gentes, indios
+    guajiro: púi
+    paraujano: tadóui (a)
+    p: '358'
+  - es: tawára
+    guajiro: tahóui (a)
+    paraujano: ''
+    p: '358'
+  - es: Hombre
+    guajiro: tespáia
+    paraujano: ''
+    p: '358'
+  - es: temúlia
+    guajiro: tóubja
+    paraujano: ''
+    p: '358'
+  - es: Mujer
+    guajiro: tespáia
+    paraujano: ''
+    p: '358'
+  - es: Niño
+    guajiro: tétschi
+    paraujano: ''
+    p: '358'
+  - es: Niña
+    guajiro: tatúshi
+    paraujano: ''
+    p: '358'
+  - es: bra
+    guajiro: tálriín, táloin
+    paraujano: ''
+    p: '358'
+  - es: Tío materno
+    guajiro: tapári, tarágla
+    paraujano: ''
+    p: '358'
+  - es: Tio paterno
+    guajiro: táta
+    paraujano: ''
+    p: '358'
+  - es: (1) Probablemente guardan
+    guajiro: el recuerdo del nombre de sus antiguos
+    paraujano: ''
+    p: '358'
+  - es: rivales en la Península y designan
+    guajiro: con él indistintamente a los que no son de
+    paraujano: ''
+    p: '358'
+  - es: Tía materna
+    guajiro: táhir, táirhe
+    paraujano: béiye
+    p: '359'
+  - es: Varón, macho
+    guajiro: jimáli, jimá-ai
+    paraujano: ''
+    p: '359'
+  - es: Hijo
+    guajiro: tachón
+    paraujano: atál
+    p: '359'
+  - es: Hija
+    guajiro: tachón-jier
+    paraujano: tachón
+    p: '359'
+  - es: Hembra adulta
+    guajiro: majáil (r)
+    paraujano: tachón-niére
+    p: '359'
+  - es: Sobrino (mi)
+    guajiro: wasíp
+    paraujano: téup
+    p: '359'
+  - es: nasíp
+    guajiro: weúp
+    paraujano: ''
+    p: '359'
+  - es: Sobrino (nuestro)
+    guajiro: tasipo-jler
+    paraujano: neúp
+    p: '359'
+  - es: Sobrino (de él)
+    guajiro: tashimía
+    paraujano: ''
+    p: '359'
+  - es: Sobrina
+    guajiro: témeshu
+    paraujano: tónglo
+    p: '359'
+  - es: Suegro
+    guajiro: táne, táintsch
+    paraujano: tóu-1yÍ
+    p: '359'
+  - es: Suegra
+    guajiro: talénu
+    paraujano: tarét
+    p: '359'
+  - es: Cuñado
+    guajiro: arágla
+    paraujano: ''
+    p: '359'
+  - es: Cuñada
+    guajiro: arágla, alágla
+    paraujano: areurd
+    p: '359'
+  - es: Anciano
+    guajiro: arágla-jiér
+    paraujano: juraure
+    p: '359'
+  - es: Jefe
+    guajiro: areurága
+    paraujano: ''
+    p: '359'
+  - es: Anciana
+    guajiro: jimó or (h)
+    paraujano: ''
+    p: '359'
+  - es: Muchacha cerca de
+    guajiro: majail(r)
+    paraujano: ''
+    p: '359'
+  - es: la pubertad
+    guajiro: aúk-tétschinr (e)
+    paraujano: ''
+    p: '359'
+  - es: Mujer soltera
+    guajiro: inchón-tawála
+    paraujano: ''
+    p: '359'
+  - es: Mujer casada
+    guajiro: inchón-tawála-jier
+    paraujano: ''
+    p: '359'
+  - es: Mujer viuda
+    guajiro: tsá-wayúkai
+    paraujano: ''
+    p: '359'
+  - es: Primo hermano
+    guajiro: tsá-wayúkor
+    paraujano: ''
+    p: '359'
+  - es: Aquel indio
+    guajiro: C. CASA Y AJUAR
+    paraujano: ''
+    p: '359'
+  - es: Casa
+    guajiro: mitsche
+    paraujano: jála
+    p: '359'
+  - es: Mi casa (hogar)
+    guajiro: tepie
+    paraujano: tapine
+    p: '359'
+  - es: Casas, plural
+    guajiro: piina-mijka
+    paraujano: nounagd
+    p: '359'
+  - es: Techo
+    guajiro: torója
+    paraujano: júrgugoh
+    p: '359'
+  - es: Horcón
+    guajiro: mitschuí
+    paraujano: piráu
+    p: '359'
+  - es: Canoa
+    guajiro: anúa
+    paraujano: ''
+    p: '359'
+  - es: Canalete
+    guajiro: léma
+    paraujano: kuir(e)
+    p: '360'
+  - es: Anzuelo
+    guajiro: kulíra
+    paraujano: jáppu
+    p: '360'
+  - es: Cordel
+    guajiro: kuliráp
+    paraujano: jamáj
+    p: '360'
+  - es: Hamaca
+    guajiro: jamaj
+    paraujano: kiíg-gigah
+    p: '360'
+  - es: Fogón
+    guajiro: téli-kij
+    paraujano: palanghe
+    p: '360'
+  - es: Palanca
+    guajiro: ushúj
+    paraujano: arit
+    p: '360'
+  - es: Olla
+    guajiro: japúin
+    paraujano: warích
+    p: '360'
+  - es: Tapara
+    guajiro: alép
+    paraujano: ''
+    p: '360'
+  - es: Cuchara
+    guajiro: meéh
+    paraujano: ''
+    p: '360'
+  - es: Cuchillo
+    guajiro: kára-mára
+    paraujano: ''
+    p: '360'
+  - es: Tinaja
+    guajiro: amútschi
+    paraujano: wréich, uréch
+    p: '360'
+  - es: urrátschi
+    guajiro: wakét, warái
+    paraujano: ''
+    p: '360'
+  - es: Pimpina
+    guajiro: jatúj
+    paraujano: oiel
+    p: '360'
+  - es: Arco
+    guajiro: mátshe-iúna
+    paraujano: ''
+    p: '360'
+  - es: Flecha
+    guajiro: siwárrai
+    paraujano: árana
+    p: '360'
+  - es: Fusil
+    guajiro: wátin
+    paraujano: ''
+    p: '360'
+  - es: taját-játu
+    guajiro: táchi
+    paraujano: ''
+    p: '360'
+  - es: Flecha de paletilla
+    guajiro: urrál-tschip
+    paraujano: tikire
+    p: '360'
+  - es: Flecha de pescar
+    guajiro: shipi-taját
+    paraujano: tabudún
+    p: '360'
+  - es: Flecha para cone-
+    guajiro: shitshiíru-ta ját
+    paraujano: pot
+    p: '360'
+  - es: ¿mála (Ah)
+    guajiro: kamis O
+    paraujano: ''
+    p: '360'
+  - es: Cuerda del arco
+    guajiro: sau-imála
+    paraujano: ''
+    p: '360'
+  - es: Verada de la flecha
+    guajiro: wóm, guómo
+    paraujano: ''
+    p: '360'
+  - es: Flecha envenenada
+    guajiro: táttshe
+    paraujano: ''
+    p: '360'
+  - es: Veneno para id
+    guajiro: nattshe-híeyu
+    paraujano: ''
+    p: '360'
+  - es: Sombrero
+    guajiro: japúna
+    paraujano: ''
+    p: '360'
+  - es: Guayuco de hom-
+    guajiro: katúnase
+    paraujano: ''
+    p: '360'
+  - es: Muerte
+    guajiro: túk-titsh
+    paraujano: óu-dagá
+    p: '362'
+  - es: Sombra humana
+    guajiro: wayótse
+    paraujano: ''
+    p: '362'
+  - es: Curandero
+    guajiro: aúktschi
+    paraujano: takáp
+    p: '362'
+  - es: Curandera
+    guajiro: áuktso
+    paraujano: ''
+    p: '362'
+  - es: Enfermedad
+    guajiro: ayúle
+    paraujano: ''
+    p: '362'
+  - es: Tabaco
+    guajiro: -yili
+    paraujano: ''
+    p: '362'
+  - es: Baile de chicha
+    guajiro: oyónaja
+    paraujano: ''
+    p: '362'
+  - es: 1d. de cabrito
+    guajiro: kaúra-yauá
+    paraujano: ''
+    p: '362'
+  - es: Viruelas
+    guajiro: truéira
+    paraujano: ''
+    p: '362'
+  - es: Fiebre
+    guajiro: aúshua
+    paraujano: ''
+    p: '362'
+  - es: Catarro
+    guajiro: shonót
+    paraujano: ''
+    p: '362'
+  - es: Diarreas
+    guajiro: ¿ja
+    paraujano: ''
+    p: '362'
+  - es: Dolor de cabeza
+    guajiro: wats-tekí
+    paraujano: ''
+    p: '362'
+  - es: Dolor de muelas
+    guajiro: ats-tái
+    paraujano: ''
+    p: '362'
+  - es: Dolor de estómago
+    guajiro: ais-tájen
+    paraujano: ''
+    p: '362'
+  - es: Disentería
+    guajiro: mágli
+    paraujano: ''
+    p: '362'
+  - es: Tumor
+    guajiro: shutá
+    paraujano: ''
+    p: '362'
+  - es: drino
+    guajiro: sáloe
+    paraujano: ''
+    p: '362'
+  - es: Llaga
+    guajiro: wún-nuu
+    paraujano: ''
+    p: '362'
+  - es: Cielo
+    guajiro: sirúma
+    paraujano: jiráma
+    p: '362'
+  - es: Sol
+    guajiro: kat
+    paraujano: ''
+    p: '362'
+  - es: '- Luna'
+    guajiro: kashí
+    paraujano: kéi-kei; kai-kai
+    p: '362'
+  - es: Nube
+    guajiro: shiliwála .
+    paraujano: kéichare
+    p: '362'
+  - es: Viento
+    guajiro: siIrúma
+    paraujano: ''
+    p: '362'
+  - es: Lluvia
+    guajiro: jáutai
+    paraujano: jatúge
+    p: '362'
+  - es: Trueno
+    guajiro: júya
+    paraujano: ''
+    p: '362'
+  - es: Relámpago
+    guajiro: nubbah (esp.)
+    paraujano: ''
+    p: '362'
+  - es: Frio
+    guajiro: Ptúru-la-júya
+    paraujano: ''
+    p: '362'
+  - es: Calor
+    guajiro: '| kápula-júya'
+    paraujano: oúg dei
+    p: '362'
+  - es: hi walátsch (e)
+    guajiro: wiagha
+    paraujano: ''
+    p: '362'
+  - es: Agua
+    guajiro: wín
+    paraujano: win
+    p: '363'
+  - es: Fuego
+    guajiro: sikó
+    paraujano: chighe; chigiga
+    p: '363'
+  - es: Tierra
+    guajiro: máj, mách
+    paraujano: mógho
+    p: '363'
+  - es: Arena
+    guajiro: máj
+    paraujano: mó
+    p: '363'
+  - es: Piedra
+    guajiro: ipáh
+    paraujano: úb-bah; bág-gah
+    p: '363'
+  - es: Leña
+    guajiro: sikih
+    paraujano: chighe
+    p: '363'
+  - es: Arbol
+    guajiro: wúnuj
+    paraujano: jinghi
+    p: '363'
+  - es: Mar
+    guajiro: palá
+    paraujano: pará
+    p: '363'
+  - es: Caño, rio
+    guajiro: luápo
+    paraujano: éima
+    p: '363'
+  - es: Playa de mar
+    guajiro: sóp-palá (h);
+    paraujano: arétsche
+    p: '363'
+  - es: Playa de lago
+    guajiro: pará-ru
+    paraujano: wóbu (h)
+    p: '363'
+  - es: Camino
+    guajiro: sópo-nawín
+    paraujano: ''
+    p: '363'
+  - es: Ola
+    guajiro: wapúj
+    paraujano: tschú; chú
+    p: '363'
+  - es: Corriente
+    guajiro: shíshi-win
+    paraujano: ''
+    p: '363'
+  - es: Sal
+    guajiro: kawatshiras-winka
+    paraujano: waperón
+    p: '363'
+  - es: Papelón
+    guajiro: panéra “>
+    paraujano: útschi
+    p: '363'
+  - es: Cerro, montaña
+    guajiro: ji-tschipa
+    paraujano: arétsch
+    p: '363'
+  - es: Sabana
+    guajiro: unáp
+    paraujano: ''
+    p: '363'
+  - es: Bosque
+    guajiro: kayúge; kayóui
+    paraujano: ''
+    p: '363'
+  - es: Laguna
+    guajiro: espéds
+    paraujano: ayip (e)
+    p: '363'
+  - es: Bajío
+    guajiro: wíinshi
+    paraujano: nórda
+    p: '363'
+  - es: Manantial, casimba
+    guajiro: láj; lách
+    paraujano: perún
+    p: '363'
+  - es: Pozo, jagúey
+    guajiro: jasál
+    paraujano: ''
+    p: '363'
+  - es: Médano
+    guajiro: parálie
+    paraujano: ''
+    p: '363'
+  - es: Salina
+    guajiro: kahí
+    paraujano: ''
+    p: '363'
+  - es: Día
+    guajiro: atpá
+    paraujano: ''
+    p: '363'
+  - es: Ayer
+    guajiro: sau-kalít
+    paraujano: ayelyé
+    p: '364'
+  - es: Hoy
+    guajiro: ta-wátta
+    paraujano: uayé
+    p: '364'
+  - es: Mañana
+    guajiro: uane-kashí
+    paraujano: uát
+    p: '364'
+  - es: Pasado mañana
+    guajiro: kál
+    paraujano: máni-gel-gei
+    p: '364'
+  - es: Mes (una luna)
+    guajiro: sawál
+    paraujano: kei
+    p: '364'
+  - es: Semana (6 dias)
+    guajiro: ali-úka
+    paraujano: ''
+    p: '364'
+  - es: Dia
+    guajiro: '|'
+    paraujano: mdálieh
+    p: '364'
+  - es: kaléu
+    guajiro: gíma
+    paraujano: ''
+    p: '364'
+  - es: Año (un invierno)
+    guajiro: piyúpa
+    paraujano: ayip
+    p: '364'
+  - es: Noche
+    guajiro: wátta-tschamále
+    paraujano: jadú-biyéh
+    p: '364'
+  - es: Mañana (a. m.)
+    guajiro: pejése; pehése
+    paraujano: ''
+    p: '364'
+  - es: Madrugada
+    guajiro: tekie
+    paraujano: jayúb
+    p: '364'
+  - es: Medio día (m.)
+    guajiro: kayú (h)
+    paraujano: ''
+    p: '364'
+  - es: Tarde (vésper)
+    guajiro: aí-biyeh
+    paraujano: ''
+    p: '364'
+  - es: Caballo
+    guajiro: G. ANIMALES
+    paraujano: áma
+    p: '364'
+  - es: Burro, borrico
+    guajiro: múra
+    paraujano: ''
+    p: '364'
+  - es: Perro
+    guajiro: áma
+    paraujano: teri; yérghei
+    p: '364'
+  - es: Vaca
+    guajiro: pulíko “?
+    paraujano: pá
+    p: '364'
+  - es: Picure (Dasyprocta
+    guajiro: matschantíire
+    paraujano: karéir; kaléira
+    p: '?'
+  - es: aguti)
+    guajiro: nóreh
+    paraujano: ''
+    p: '?'
+  - es: Cerdo, puerco
+    guajiro: páña
+    paraujano: káchepour
+    p: '?'
+  - es: Cochino de monte
+    guajiro: káuro
+    paraujano: ''
+    p: '?'
+  - es: Váquira (Dicotyles
+    guajiro: pútschi
+    paraujano: ''
+    p: '?'
+  - es: torquatus)
+    guajiro: karéira
+    paraujano: múgh
+    p: '?'
+  - es: Tigre (Felis onza)
+    guajiro: guasáschi; watash
+    paraujano: ''
+    p: '?'
+  - es: León (Felis conco-
+    guajiro: kéibt
+    paraujano: ''
+    p: '?'
+  - es: gualire; wállire
+    guajiro: guánah
+    paraujano: ''
+    p: '?'
+  - es: lor)
+    guajiro: káura
+    paraujano: ''
+    p: '?'
+  - es: Cabra
+    guajiro: músa; kat
+    paraujano: ''
+    p: '?'
+  - es: Conejo (Lepus bra-
+    guajiro: kókotsche
+    paraujano: ''
+    p: '?'
+  - es: silensis)
+    guajiro: jutschi
+    paraujano: ''
+    p: '?'
+  - es: Rata
+    guajiro: alítscho
+    paraujano: ''
+    p: '?'
+  - es: Mono (Ateles o Ce-
+    guajiro: arnéru
+    paraujano: ''
+    p: '?'
+  - es: bus sp.)
+    guajiro: iráma
+    paraujano: ''
+    p: '?'
+  - es: Ardilla (Sciurus
+    guajiro: uydla
+    paraujano: ''
+    p: '?'
+  - es: aestuans)
+    guajiro: iguána
+    paraujano: ''
+    p: '?'
+  - es: Venado (Cervus
+    guajiro: yáuli
+    paraujano: ''
+    p: '?'
+  - es: rufus)
+    guajiro: kapáñese
+    paraujano: ''
+    p: '?'
+  - es: Mero (Serranus
+    guajiro: malíjigua
+    paraujano: jinghi; jikt
+    p: '367'
+  - es: punctulatus)
+    guajiro: jikiga-mang
+    paraujano: ''
+    p: '367'
+  - es: siyú
+    guajiro: kurán
+    paraujano: ''
+    p: '367'
+  - es: Bagre (Platystoma
+    guajiro: jikiga-guiné
+    paraujano: ''
+    p: '367'
+  - es: planiceps)
+    guajiro: ár(1)sha
+    paraujano: jikiga-kokóu
+    p: '367'
+  - es: Raya (Trygon his-
+    guajiro: Jáyapa
+    paraujano: ''
+    p: '367'
+  - es: mapúl
+    guajiro: kok
+    paraujano: ''
+    p: '367'
+  - es: trix)
+    guajiro: jeiyú
+    paraujano: guaramahíri
+    p: '367'
+  - es: Pulga
+    guajiro: armási
+    paraujano: guai-mahí
+    p: '367'
+  - es: Piojo
+    guajiro: sumúlira
+    paraujano: jikiga-dividive
+    p: '367'
+  - es: Hormiga
+    guajiro: mál
+    paraujano: ''
+    p: '367'
+  - es: Arbol
+    guajiro: wúnuj
+    paraujano: ''
+    p: '367'
+  - es: Mango
+    guajiro: máng
+    paraujano: ''
+    p: '367'
+  - es: radisiaca)
+    guajiro: kurána
+    paraujano: ''
+    p: '367'
+  - es: Cambur, guineo
+    guajiro: kinéua
+    paraujano: ''
+    p: '367'
+  - es: Cacao
+    guajiro: tschukuláta
+    paraujano: ''
+    p: '367'
+  - es: Caña dulce
+    guajiro: kána
+    paraujano: ''
+    p: '367'
+  - es: nucifera)
+    guajiro: kok
+    paraujano: ''
+    p: '367'
+  - es: sa)
+    guajiro: átsch-pía
+    paraujano: ''
+    p: '367'
+  - es: Mangle rojo (Rhi-
+    guajiro: nt
+    paraujano: ''
+    p: '367'
+  - es: nia coriaria)
+    guajiro: tschi
+    paraujano: ''
+    p: '367'
+  - es: Maiz
+    guajiro: mátschi
+    paraujano: ''
+    p: '367'
+  - es: Auyama (Cucurbi-
+    guajiro: wire
+    paraujano: gúir
+    p: '368'
+  - es: ta pepo)
+    guajiro: al
+    paraujano: éu
+    p: '368'
+  - es: Yuca (Manihot)
+    guajiro: malítsche
+    paraujano: ''
+    p: '368'
+  - es: Bucare (Erythrina
+    guajiro: jupétschi
+    paraujano: ''
+    p: '368'
+  - es: umbrosa)
+    guajiro: palénsa
+    paraujano: ''
+    p: '368'
+  - es: via sp.)
+    guajiro: yosú-ulie
+    paraujano: ''
+    p: '368'
+  - es: serratifolia)
+    guajiro: yosúh
+    paraujano: ''
+    p: '368'
+  - es: Vera (Bulnesia ar-
+    guajiro: jáya-jáya
+    paraujano: ''
+    p: '368'
+  - es: Cardón (Cereus
+    guajiro: maú-liulí
+    paraujano: ''
+    p: '368'
+  - es: Uno
+    guajiro: I. NUMEROS
+    paraujano: mánel
+    p: '368'
+  - es: Dos
+    guajiro: pímu; pími
+    paraujano: ''
+    p: '368'
+  - es: Tres
+    guajiro: wanésia
+    paraujano: apáni.
+    p: '368'
+  - es: Cuatro
+    guajiro: piáma
+    paraujano: pinye
+    p: '368'
+  - es: Cinco
+    guajiro: púnei
+    paraujano: ''
+    p: '368'
+  - es: Sels
+    guajiro: piénye
+    paraujano: pijádda
+    p: '368'
+  - es: Siete
+    guajiro: jarál
+    paraujano: ''
+    p: '368'
+  - es: ai-pirúa
+    guajiro: epéremit; aprémi
+    paraujano: ''
+    p: '368'
+  - es: rd
+    guajiro: poró-púneimi
+    paraujano: ''
+    p: '369'
+  - es: JU
+    guajiro: poró-jaráilimi
+    paraujano: ''
+    p: '369'
+  - es: Poco
+    guajiro: piényitua-poró (n)
+    paraujano: ''
+    p: '369'
+  - es: Mitad
+    guajiro: jaraitua-poró (n)
+    paraujano: ''
+    p: '369'
+  - es: porótua-poró (NR)
+    guajiro: káihe
+    paraujano: ''
+    p: '369'
+  - es: máima
+    guajiro: japáninya
+    paraujano: ''
+    p: '369'
+  - es: Yo
+    guajiro: “
+    paraujano: te
+    p: '369'
+  - es: Mío
+    guajiro: tayd
+    paraujano: piá
+    p: '369'
+  - es: Tú
+    guajiro: tainhen
+    paraujano: p
+    p: '369'
+  - es: Tuyo
+    guajiro: pid
+    paraujano: niah
+    p: '369'
+  - es: El, ella
+    guajiro: páinhen
+    paraujano: n
+    p: '369'
+  - es: Suyo, de él
+    guajiro: nía
+    paraujano: ''
+    p: '369'
+  - es: Nosotros
+    guajiro: wayá, wayú
+    paraujano: we
+    p: '370'
+  - es: EMos
+    guajiro: wáinhen
+    paraujano: w,
+    p: '370'
+  - es: naráirua
+    guajiro: niágan
+    paraujano: ''
+    p: '370'
+  - es: Si
+    guajiro: ja
+    paraujano: ajá
+    p: '370'
+  - es: nojó
+    guajiro: nóu
+    paraujano: ''
+    p: '370'
+  - es: Blanco
+    guajiro: kasúta
+    paraujano: blank (esp.)
+    p: '370'
+  - es: Negro
+    guajiro: mútsie
+    paraujano: mégoro (esp.)
+    p: '370'
+  - es: Rojo
+    guajiro: shotórg
+    paraujano: jébagar
+    p: '370'
+  - es: Amarillo
+    guajiro: siéssin
+    paraujano: ''
+    p: '370'
+  - es: Verde
+    guajiro: kalé-kaléuka
+    paraujano: amariya (esp.)
+    p: '370'
+  - es: Azul
+    guajiro: wíittos
+    paraujano: verda (esp.)
+    p: '370'
+  - es: Morado, lila
+    guajiro: asúl (esp.)
+    paraujano: ''
+    p: '370'
+  - es: XHL ADJETIVOS
+    guajiro: pirh
+    paraujano: ''
+    p: '370'
+  - es: Pequeño
+    guajiro: muléu
+    paraujano: yoúghe
+    p: '370'
+  - es: Bueno
+    guajiro: jauí-útschon
+    paraujano: ''
+    p: '370'
+  - es: Malo
+    guajiro: anása
+    paraujano: jéddiga
+    p: '370'
+  - es: Malvado
+    guajiro: majús
+    paraujano: ''
+    p: '370'
+  - es: Bello, bonita
+    guajiro: majulás
+    paraujano: kamá-chichirí
+    p: '370'
+  - es: Feo
+    guajiro: aná-tschónse
+    paraujano: ''
+    p: '370'
+  - es: Nuevo
+    guajiro: mojús
+    paraujano: kóulrai
+    p: '370'
+  - es: Viejo
+    guajiro: Jekét
+    paraujano: ''
+    p: '370'
+  - es: Enfermo
+    guajiro: muliéuiri
+    paraujano: anatschárri
+    p: '370'
+  - es: Seco
+    guajiro: ayúschi
+    paraujano: móughe
+    p: '370'
+  - es: Húmedo
+    guajiro: Josós
+    paraujano: jirórgho
+    p: '370'
+  - es: Dulce
+    guajiro: ischirtsí
+    paraujano: paráta
+    p: '370'
+  - es: Amargo
+    guajiro: jeméds
+    paraujano: áig geh
+    p: '370'
+  - es: shist
+    guajiro: járadu
+    paraujano: ''
+    p: '370'
+  - es: Claro
+    guajiro: anáuls
+    paraujano: kláru (esp.)
+    p: '371'
+  - es: Alegre
+    guajiro: piyúsish
+    paraujano: kayingh
+    p: '371'
+  - es: Rico
+    guajiro: taláts (1)
+    paraujano: páyaguel
+    p: '371'
+  - es: Largo
+    guajiro: mujántschi
+    paraujano: ''
+    p: '371'
+  - es: Flaco
+    guajiro: guashir (e)
+    paraujano: gúir
+    p: '371'
+  - es: Redondo
+    guajiro: unáui-kijitsch
+    paraujano: kama míinya
+    p: '371'
+  - es: Alto
+    guajiro: muléu-segú
+    paraujano: yóu
+    p: '371'
+  - es: Hondo
+    guajiro: jédige
+    paraujano: ''
+    p: '371'
+  - es: Duro
+    guajiro: mórso-tschdinsch .
+    paraujano: ógli-yóu
+    p: '371'
+  - es: Blando
+    guajiro: kóugdu
+    paraujano: ''
+    p: '371'
+  - es: Pesado
+    guajiro: aguayótsch
+    paraujano: ''
+    p: '371'
+  - es: Liviano
+    guajiro: kálsisch
+    paraujano: ''
+    p: '371'
+  - es: Frio
+    guajiro: lakáyas
+    paraujano: ''
+    p: '371'
+  - es: Aspero
+    guajiro: wáta-pule
+    paraujano: káburou
+    p: '371'
+  - es: Cortante
+    guajiro: kéinots
+    paraujano: ''
+    p: '371'
+  - es: Débil
+    guajiro: ischestschés
+    paraujano: ''
+    p: '371'
+  - es: Muerto
+    guajiro: jawawás (e)
+    paraujano: ''
+    p: '371'
+  - es: Limpio
+    guajiro: jawáts
+    paraujano: ''
+    p: '371'
+  - es: Perezoso
+    guajiro: jamámatschon
+    paraujano: ''
+    p: '371'
+  - es: Cobarde
+    guajiro: jaís
+    paraujano: ''
+    p: '371'
+  - es: Amigo (mi)
+    guajiro: ta-túnahut
+    paraujano: óulu
+    p: '372'
+  - es: Enemigo
+    guajiro: tagnú
+    paraujano: ''
+    p: '372'
+  - es: Agrio
+    guajiro: jashúje
+    paraujano: ''
+    p: '372'
+  - es: Comer
+    guajiro: XIV. VERBOS
+    paraujano: ''
+    p: '372'
+  - es: Dormir
+    guajiro: weskúin
+    paraujano: ''
+    p: '372'
+  - es: Caminar
+    guajiro: wasúlin
+    paraujano: ''
+    p: '372'
+  - es: Correr
+    guajiro: atúnka
+    paraujano: ''
+    p: '372'
+  - es: Cocinar
+    guajiro: waráita
+    paraujano: ''
+    p: '372'
+  - es: Pescar
+    guajiro: awáttawa
+    paraujano: ''
+    p: '372'
+  - es: Cazar
+    guajiro: jála-kajuá
+    paraujano: ''
+    p: '372'
+  - es: Nadar
+    guajiro: aúno-já
+    paraujano: ''
+    p: '372'
+  - es: Lavar
+    guajiro: ólojo
+    paraujano: ''
+    p: '372'
+  - es: Orinar
+    guajiro: katénna
+    paraujano: ''
+    p: '372'
+  - es: Evacuar
+    guajiro: shíjawa
+    paraujano: ''
+    p: '372'
+  - es: Cohabitar
+    guajiro: shíta
+    paraujano: ''
+    p: '372'
+  - es: Parir
+    guajiro: áura-jawá
+    paraujano: ''
+    p: '372'
+  - es: Sembrar
+    guajiro: síkawa
+    paraujano: ''
+    p: '372'
+  - es: Fumar
+    guajiro: jeméiyula
+    paraujano: ''
+    p: '372'
+  - es: Subir, trepar
+    guajiro: punajd
+    paraujano: ''
+    p: '372'
+  - es: Bajar
+    guajiro: askámuja
+    paraujano: ''
+    p: '372'
+  - es: Saltar
+    guajiro: alíka
+    paraujano: ''
+    p: '372'
+  - es: Llamar
+    guajiro: shákata
+    paraujano: ''
+    p: '372'
+  - es: Hablar
+    guajiro: awátta
+    paraujano: ''
+    p: '372'
+  - es: Gritar
+    guajiro: énaha
+    paraujano: ''
+    p: '372'
+  - es: Soplar
+    guajiro: áshaua
+    paraujano: ''
+    p: '372'
+  - es: Escupir
+    guajiro: awáta
+    paraujano: ''
+    p: '372'
+  - es: Cortar
+    guajiro: ajúja
+    paraujano: ''
+    p: '372'
+  - es: Quemar
+    guajiro: jétta
+    paraujano: ''
+    p: '372'
+  - es: Matar
+    guajiro: joiostówa
+    paraujano: ''
+    p: '372'
+  - es: Disparar el arco
+    guajiro: aajá
+    paraujano: ''
+    p: '372'
+  - es: Disparar el fusil
+    guajiro: aúkta
+    paraujano: ''
+    p: '372'
+  - es: ¡Coser
+    guajiro: ayá-pujá
+    paraujano: ''
+    p: '373'
+  - es: Pintar
+    guajiro: shóoja
+    paraujano: ''
+    p: '373'
+  - es: Tatuar
+    guajiro: ehíik-taud
+    paraujano: ''
+    p: '373'
+  - es: Puyar
+    guajiro: ashé-etá
+    paraujano: ''
+    p: '373'
+  - es: Abofetear
+    guajiro: '|'
+    paraujano: át-kawdá
+    p: '373'
+  - es: Cantar
+    guajiro: aúsa-jirajuá
+    paraujano: ''
+    p: '373'
+  - es: Hilar
+    guajiro: apásta-jáua
+    paraujano: ''
+    p: '373'
+  - es: Tejer
+    guajiro: ajútta
+    paraujano: ''
+    p: '373'
+  - es: Pelear
+    guajiro: awálaja
+    paraujano: ''
+    p: '373'
+achagua:
+  paginas_pdf: 457-458
+  paginas_impresas: 377-378
+  filas: 34
+  columnas: ESPAÑOL | ACHAGUA | otros nueve dialectos aruacos
+  procedencia: 'Jahn declara tomarlas del PADRE FABO, achagua del Casanare (Colombia). ⚠️
+    transmite, no atestigua: control de transmisión respecto de Fabo.'
+  verificado_en_imagen: true
+  voces:
+  - es: lengua
+    achagua: nuiname
+  - es: diente
+    achagua: nier
+  - es: nariz
+    achagua: nutako
+  - es: ojo
+    achagua: nutói
+  - es: oreja
+    achagua: núbila
+  - es: cabeza
+    achagua: núrita
+  - es: barba
+    achagua: nuchiánoma
+  - es: mano
+    achagua: nukaje
+  - es: pie
+    achagua: nuipa
+  - es: agua
+    achagua: mena
+  - es: río
+    achagua: unibe
+  - es: fuego
+    achagua: ishay
+  - es: leña
+    achagua: ichaba
+  - es: sol
+    achagua: erre
+  - es: luna
+    achagua: kerre
+  - es: estrella
+    achagua: ivisái
+  - es: piedra
+    achagua: iba
+  - es: flecha
+    achagua: kapauje
+  - es: casa
+    achagua: banísi
+  - es: arena
+    achagua: gaina
+  - es: mujer
+    achagua: inagetua
+  - es: esposa
+    achagua: nuino
+  - es: tabaco
+    achagua: sema
+  - es: tigre
+    achagua: echave
+  - es: león
+    achagua: mirrianare
+  - es: danta
+    achagua: ema
+  - es: pez
+    achagua: kupai
+  - es: canoa
+    achagua: ida
+  - es: cazabe
+    achagua: berri
+  - es: hermano
+    achagua: nimérre
+  - es: sepultura
+    achagua: nirri
+  - es: barbasco
+    achagua: kuna
+  - es: oír
+    achagua: numike
+  - es: beber
+    achagua: irago
+jirajara_ayoman:
+  paginas_pdf: 468-471
+  filas: 96
+  columnas: ESPAÑOL | JIRAJARA | AYOMÁN
+  que_son: los vecinos NO arahuacos de la sierra de Falcón y Lara. Otra familia — jirajaroide
+    — y por eso el contraste vale.
+  jahn_marca_los_prestamos: '⭐ escribe «(esp.)» donde la voz es castellana: carato `kasagúé
+    (esp.)`, casamiento `macét (esp.)`. Lo no marcado es indígena para él.'
+  aviso_rule_3: '⚠️ buena parte de la lista son objetos y animales COLONIALES —gallina, gallo,
+    gato, machete, hacha, escardilla—: esas filas fechan el contacto del s. XIX-XX, no el
+    precontacto.'
+  verificado_en_imagen: pdf 470 (p. impresa 390). El OCR desplazaba una fila y se corrigió
+  voces:
+  - es: Cabeza (mi)
+    jirajara: ak-tégui
+    ayoman: a-togh
+  - es: Ojo (mi)
+    jirajara: a-uñán
+    ayoman: a-kivóugh
+  - es: Boca (mi)
+    jirajara: a-gúspo
+    ayoman: a-gip
+  - es: Nariz (mi)
+    jirajara: a-kingán
+    ayoman: a-kin
+  - es: Oreja (mi)
+    jirajara: a-teég
+    ayoman: a-hóui
+  - es: Barba
+    jirajara: ustenagúé
+    ayoman: a-pougísh
+  - es: Mano (mi)
+    jirajara: a-mánt
+    ayoman: -a-mán
+  - es: Pierna
+    jirajara: hisganipipán
+    ayoman: a-sahan-ipip
+  - es: Pie (mi)
+    jirajara: a-ngán
+    ayoman: a-sengán
+  - es: Vientre (mi)
+    jirajara: a-yú
+    ayoman: a-poh
+  - es: Espinazo (mi)
+    jirajara: a-yoguició
+    ayoman: a-yogishíbo
+  - es: Rodilla (mi)
+    jirajara: a-tashán
+    ayoman: a-tostián
+  - es: Uña (mi)
+    jirajara: a-guigusé
+    ayoman: a-kiyoud
+  - es: Agua
+    jirajara: ing
+    ayoman: ing
+  - es: Lluvia
+    jirajara: kat
+    ayoman: géui
+  - es: Cielo
+    jirajara: ingúiét
+    ayoman: ñi-RÁ
+  - es: Sol
+    jirajara: yuaú
+    ayoman: in
+  - es: Viento
+    jirajara: titate
+    ayoman: estéd
+  - es: Frío
+    jirajara: tatát
+    ayoman: tachát
+  - es: Fuego
+    jirajara: dueg
+    ayoman: dúg
+  - es: Leña
+    jirajara: sisp
+    ayoman: sip
+  - es: Braza
+    jirajara: duchir
+    ayoman: kach
+  - es: Pueblo
+    jirajara: teréya
+    ayoman: ''
+  - es: Médico
+    jirajara: gasgád
+    ayoman: gasgá
+  - es: Muerto
+    jirajara: kusine
+    ayoman: kushíni
+  - es: Baile (tura)
+    jirajara: esterkuye, prarard
+    ayoman: ''
+  - es: Esposa
+    jirajara: esol
+    ayoman: senha
+  - es: Hijo
+    jirajara: eunú
+    ayoman: ''
+  - es: Sal
+    jirajara: tumané
+    ayoman: tóroról.
+  - es: Relámpago
+    jirajara: sekuni
+    ayoman: ''
+  - es: Trueno
+    jirajara: iruruoní
+    ayoman: daktá
+  - es: Quebrada
+    jirajara: sat
+    ayoman: kururú
+  - es: Chinchorro
+    jirajara: dotak
+    ayoman: kúgh
+  - es: Totuma
+    jirajara: kururú
+    ayoman: piguió
+  - es: Tapara
+    jirajara: kub
+    ayoman: dipegha
+  - es: Olla
+    jirajara: pigró
+    ayoman: ''
+  - es: Cuchara
+    jirajara: dipigué
+    ayoman: batá (tinaja)
+  - es: Tierras, terrenos
+    jirajara: gúedap
+    ayoman: ''
+  - es: batá
+    jirajara: sim
+    ayoman: ''
+  - es: Batea
+    jirajara: digueyé
+    ayoman: ''
+  - es: Mazamorra
+    jirajara: sul
+    ayoman: shpepé
+  - es: Carato
+    jirajara: kasagúé (esp.)
+    ayoman: pishú
+  - es: Casamiento
+    jirajara: ispepé
+    ayoman: macét (esp.)
+  - es: Flecha
+    jirajara: pisiú
+    ayoman: asará “
+  - es: Cuchillo
+    jirajara: masép (esp.)
+    ayoman: kamrá
+  - es: Machete
+    jirajara: asará
+    ayoman: yúsh
+  - es: Escardilla
+    jirajara: kamard
+    ayoman: senhá
+  - es: Hacha
+    jirajara: wyit
+    ayoman: paghó
+  - es: Hombre
+    jirajara: siepúk
+    ayoman: éyl
+  - es: Mujer
+    jirajara: pagóg
+    ayoman: ''
+  - es: Piedra
+    jirajara: dox
+    ayoman: ''
+  - es: Yuca
+    jirajara: hogón
+    ayoman: shoh
+  - es: Tabaco
+    jirajara: soÓ
+    ayoman: gagáp
+  - es: Casa
+    jirajara: gagáp
+    ayoman: boshín
+  - es: Tigre (Felis onza)
+    jirajara: bosin
+    ayoman: ''
+  - es: León (Felis conco-
+    jirajara: ;
+    ayoman: mohorí
+  - es: lor) (puma)
+    jirajara: bosín-sug
+    ayoman: dúch
+  - es: yoyé
+    jirajara: perú
+    ayoman: ''
+  - es: Danta (Tapirussp.)
+    jirajara: aréu
+    ayoman: ''
+  - es: Zorro (Canis Aza-
+    jirajara: moort
+    ayoman: ''
+  - es: duj
+    jirajara: dóu
+    ayoman: ''
+  - es: rae)
+    jirajara: takumará
+    ayoman: ''
+  - es: Araguato
+    jirajara: perú
+    ayoman: degaró
+  - es: Pereza
+    jirajara: arok
+    ayoman: hué
+  - es: Perro
+    jirajara: mús
+    ayoman: shuhuí
+  - es: Mapurite (Mephi-
+    jirajara: yu
+    ayoman: agúi
+  - es: moné
+    jirajara: arauá
+    ayoman: ''
+  - es: tis)
+    jirajara: akurí
+    ayoman: ''
+  - es: dok
+    jirajara: huhi
+    ayoman: ''
+  - es: Gato
+    jirajara: nñamurí
+    ayoman: huhí-tan-ña
+  - es: Gato cerval
+    jirajara: baú
+    ayoman: ''
+  - es: Marrano
+    jirajara: mondúj
+    ayoman: ''
+  - es: Cachicamo (Dasy-
+    jirajara: degaró
+    ayoman: ''
+  - es: pus sp.)
+    jirajara: idok
+    ayoman: ''
+  - es: Morrocoy
+    jirajara: gúé
+    ayoman: ''
+  - es: Pescado
+    jirajara: suí
+    ayoman: ''
+  - es: Chácharo
+    jirajara: tog
+    ayoman: ''
+  - es: Gallo
+    jirajara: agút
+    ayoman: ''
+  - es: Gallina
+    jirajara: araguá
+    ayoman: ''
+  - es: Guaca
+    jirajara: tub
+    ayoman: ''
+  - es: Guacharaca
+    jirajara: tub-taumá
+    ayoman: ''
+  - es: Cienpiés (Scolo-
+    jirajara: siyóp
+    ayoman: koñir
+  - es: pendra)
+    jirajara: koni
+    ayoman: ñáru
+  - es: Bueno, bonito
+    jirajara: yusimá
+    ayoman: ''
+  - es: Bien de salud
+    jirajara: nianye
+    ayoman: ''
+  - es: Enfermo
+    jirajara: pok diú.
+    ayoman: ''
+  - es: Conuco
+    jirajara: gúe ub!
+    ayoman: ''
+  - es: Mucha lluvia
+    jirajara: angúi tereya
+    ayoman: ''
+  - es: Cerro grande
+    jirajara: angúti fruye
+    ayoman: ''
+  - es: Buenos días!
+    jirajara: aktégui sigúigauni
+    ayoman: ''
+  - es: Voy al pueblo
+    jirajara: gekyeú
+    ayoman: ''
+  - es: Voy a Siquisique
+    jirajara: tanuoy
+    ayoman: ''
+  - es: Tengo hambre
+    jirajara: apasi mamán
+    ayoman: ''
+  - es: Voy a comer
+    jirajara: eunú ayayíi que-
+    ayoman: ''
+  - es: mano
+    jirajara: yebu porimi?
+    ayoman: ''
+  - es: Mi hijo llora de
+    jirajara: aparimí ñianye
+    ayoman: ''

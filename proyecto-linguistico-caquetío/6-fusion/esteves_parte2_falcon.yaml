@@ -1,0 +1,496 @@
+# ─────────────────────────────────────────────────────────────────────────
+# ESTEVES 1989, PARTE II — «Otros topónimos indígenas del estado Falcón»
+# pp. impresas 81-144 · tomos 4-6 del PDF · minada el 2026-09-10
+#
+# La mitad del libro que el proyecto NUNCA había tocado, porque los tomos 4-6
+# eran los únicos sin OCR. Se descubrió persiguiendo la lista de topónimos que
+# dictó Miguel: buscando uno de ellos en la web salió citada la obra entera,
+# y la ficha `4-fuentes/esteves-1989.md` ya tenía la tabla que lo decía.
+#
+# ⚠️ REGLA 4: la Parte II NO es Paraguaná. Cubre sierra, oriente y occidente
+# del estado — territorio de otras polities y de jirajaras, ayamanes, gayones
+# y caribes. Nada de aquí entra al canon costero sin su marca geográfica, y
+# por suerte Esteves da municipio y distrito en casi todas las entradas.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  obra: esteves-1989
+  parte: 'II — Otros topónimos indígenas del estado Falcón'
+  paginas_impresas: '81-144'
+  tomos_pdf: [4, 5, 6]
+  desfase: 'impresa = pdf + 72 en el tomo 4 (el número va al PIE de la página en el OCR)'
+  minado: '2026-09-10'
+  metodo: >-
+    OCR con `ocr_fuente.py` y extracción por script: las entradas tienen
+    formato fijo —NOMBRE en mayúsculas, tipo de lugar, «municipio X, Distrito
+    Y», y la glosa entre paréntesis—. Script en 6-fusion/scripts/.
+  advertencia_ocr: >-
+    🔴 Es OCR, no transcripción. Las glosas de aquí sirven para llegar a la
+    página; la cita se saca de la imagen. Hay entradas partidas y nombres mal
+    leídos («Y abo» por Yabo, «Togogo» por Tococo, «Ácosta» por Acosta).
+
+cobertura_medida:
+  entradas_parseadas: 387
+  con_municipio: 286
+  con_distrito: 256
+  con_glosa_entre_parentesis: 139
+  de_la_lista_de_miguel_con_glosa: 16
+  formas_que_ya_estan_en_el_lexicon: 18
+
+# ══════════════════════════════════════════════════════════════════════
+# 🔴 LA INDEPENDENCIA, MEDIDA ANTES DE CONTAR NADA
+# ══════════════════════════════════════════════════════════════════════
+independencia:
+  el_problema: >-
+    Dieciocho entradas de la Parte II coinciden en forma Y glosa con entradas
+    del lexicón. Parece corroboración masiva. No lo es del todo.
+  lo_que_se_midio: >-
+    El lexicón cita a Esteves de segunda mano: en el glosario de Zavala Reyes
+    la sigla **E es Juan Esteves**. Comprobado entrada por entrada: `dara` es
+    «Zavala #102 (HB+E)», `bisure` «#41 (HB+E)», `yabo` «#278 (E+A+AM)`,
+    `kakuro` «#54 (E+A)». Es decir, Esteves ya estaba dentro.
+  consecuencia: >-
+    Para esas entradas, esto es CONTROL DE TRANSMISIÓN —la glosa del lexicón es
+    fiel a su fuente— y no una segunda atestación. Es la misma trampa del §8
+    del protocolo con la que ya tropecé con Perea y Oliver hace dos días.
+  lo_que_SÍ_es_nuevo:
+    - >-
+      ⭐ LA DISTRIBUCIÓN GEOGRÁFICA. El lexicón tenía estas voces como
+      vocabulario; la Parte II las muestra como TOPÓNIMOS repartidos por todo
+      el estado, con municipio y distrito. Que `dara`, `saruro`, `yabo` o
+      `cacuro` den nombre a lugares en Petit, Acosta, Zamora y Buchivacoa es un
+      dato de extensión que el lexicón no tenía.
+    - >-
+      Las entradas donde Zavala NO cita a Esteves. `isiro` viene con sigla (A),
+      sólo Alvarado: ahí la Parte II sí es segunda fuente.
+    - 'Dos conflictos de glosa y una variante gráfica — ver `conflictos`.'
+
+# ══════════════════════════════════════════════════════════════════════
+# LO QUE RESPONDE A LA LISTA DE MIGUEL
+# ══════════════════════════════════════════════════════════════════════
+de_la_lista_de_miguel:
+
+  - forma: Cumarebo
+    lugar: 'Distrito Zamora'
+    glosa_esteves: '«Cumarebo significa: el camino del cacique Cumare: paso, senda y Cumare, el cacique»'
+    por_que_importa: >-
+      ⭐⭐ Es LA MISMA glosa que el blog de apellidoyajure daba para el sufijo
+      `-ebo`. O sea que el blog copiaba a Esteves: la fuente divulgativa que
+      encontré en el barrido web resulta ser esta página. Ahora la tenemos con
+      autor y página en vez de con URL.
+    lo_que_confirma: "`-ebo` = 'camino, paso, senda' — y con ello Jurijurebo 'camino del viento'"
+
+  - forma: Camachima
+    lugar: 'municipio Capadare, Distrito Acosta'
+    glosa_esteves: >-
+      «Hemos notado que la desinencia "ima", que significa HUMEDAD en caquetío,
+      está presente en muchos topónimos»
+    por_que_importa: >-
+      ⭐ Confirma `-ima` 'humedad, quebrada', que el proyecto ya tiene en
+      REGLAS_ZAVALA por Zavala #165. Con la cautela de independencia de arriba:
+      Zavala cita a Esteves, así que probablemente es la misma voz. Lo NUEVO es
+      la observación distribucional del propio Esteves: «está presente en
+      muchos topónimos».
+
+  - forma: Bariro
+    lugar: 'municipio Bariro, Distrito Buchivacoa'
+    glosa_esteves: '«La desinencia "iro" es diminutivo de voces indígenas»'
+    por_que_importa: >-
+      ⭐ Confirma `-iro` diminutivo, que también está en REGLAS_ZAVALA. Misma
+      cautela de independencia.
+
+  - forma: Tucacas
+    lugar: 'municipio Tucacas, Distrito Silva'
+    glosa_esteves: '«Tucacas: cangrejal»'
+    nota: 'y queda zanjado que es de Falcón, como decía Miguel'
+
+  - forma: Aguide
+    lugar: 'municipio La Pastora, Distrito Acosta'
+    glosa_esteves: '«Es voz taína, caribe insular»'
+    aviso: >-
+      ⚠️ «Taína, caribe insular» es la misma confusión que el proyecto ya midió
+      en Amuay: el caribe insular de Breton es lengua ARAHUACA, no caribe, y el
+      taíno es otra cosa. Se registra la atribución, no se acepta.
+
+  - forma: Duvisí
+    lugar: 'municipio Mapararí'
+    glosa_esteves: '«Es un apellido de las tribus AYAMANES»'
+    por_que_importa: 'filiación jirajaroide declarada por el autor — regla 4, no es caquetío'
+
+  - forma: Tapatapa
+    lugar: 'municipio Unión, Distrito Federación'
+    glosa_esteves: '«Tapatapa es una voz AFRICANA que indica movimiento»'
+    veredicto: 'DESCARTE con razón declarada por el autor'
+
+  - forma: Curimagua
+    lugar: 'municipio Curimagua, Distrito Petit'
+    glosa_esteves: '«Puede que provenga de Curi, pequeño roedor, acure, picure»'
+    nota: >-
+      Contradice la glosa de folleto que dio el barrido web («hermoso valle de
+      aguas frescas y limpias»). La de Esteves es analítica y la otra es
+      descriptiva: se quedan las dos, marcadas por tipo.
+
+  - forma: Cabure
+    lugar: 'municipio Cabure, Distrito Petit'
+    glosa_esteves: '«Si Cabure es alteración de Cambure (síncopa...)»'
+    nota: 'el propio autor lo deja en condicional'
+
+  - forma: Casigua
+    lugar: 'Distrito Mauroa'
+    glosa_esteves: >-
+      «Cacigua, con "c" para diferenciarla de la voz geográfica, es una planta
+      herbácea, enredadera, marantácea»
+
+  - forma: Copey
+    lugar: 'municipio Seque, Distrito Buchivacoa'
+    glosa_esteves: '«Copey, palmera del género clusia»'
+
+  - forma: Taguaqui
+    lugar: 'municipio Píritu, Distrito Zamora'
+    glosa_esteves: '«Taguaquí: acacia, árbol espinoso, juva, úbeda»'
+
+  - forma: Guanabano
+    lugar: 'Puerto...'
+    glosa_esteves: '«Guanábano: árbol frutal»'
+
+  - forma: Churuguara
+    lugar: 'municipio Churuguara, Distrito Federación'
+    glosa_esteves: >-
+      «Sin explicar el significado, Alfredo JAHN registra la voz: Axodawara»
+      («Aborígenes del Occidente de Venezuela»)
+    por_que_importa: >-
+      ⭐ Da la forma que Jahn recoge, `Axodawara`, para lo que hoy es
+      Churuguara. El lexicón tiene `churuguara` como jirajaroide-contacto: esto
+      añade la grafía del s. XIX y la referencia a Jahn, que el repo TIENE.
+      Perseguible hasta fuente primaria.
+
+  - forma: Guate
+    lugar: 'municipio Guzmán, Distrito Miranda'
+    glosa_esteves: '«Puente Huate»'
+
+  - forma: Guacharaca
+    lugar: 'varios: Mirimire/Acosta, Jacura/Acosta, Agualarga'
+    glosa_esteves: 'entrada partida por el OCR; hay tres referentes'
+    accion: 'releer en la imagen'
+
+# ══════════════════════════════════════════════════════════════════════
+conflictos:
+  - forma: casicure
+    lexicon: "'levante, este'"
+    esteves_parte_II: "«raíz de cacito; cacito: cacto de tallo aplanado»"
+    lectura: >-
+      ⚠️ Son glosas incompatibles: un punto cardinal y un cactus. Hay que mirar
+      la página, porque una de las dos está mal atribuida. Issue.
+  - forma: pauji
+    lexicon: "'árbol espinoso de fruto pequeño (Bumelia buxifolia)'"
+    esteves_parte_II: "«Paují: ave gallinácea de carne muy apreciada. Paují: árbol s...»"
+    lectura: 'homonimia declarada por el propio Esteves: el ave y el árbol. El lexicón sólo tiene el árbol'
+  - forma: tokoko
+    lexicon: "'flamenco o ibis, ave roja de la laguna'"
+    esteves_parte_II: "«Togogo: ave ansérida»"
+    lectura: 'variante gráfica tococo ~ togogo; misma ave'
+
+# ══════════════════════════════════════════════════════════════════════
+filiaciones_que_esteves_declara:
+  nota: 'sobre las 139 glosas de la Parte II, cuántas veces nombra cada lengua'
+  caquetio: 5
+  ayaman: 3
+  taino: 2
+  cumanagoto: 2
+  chaima: 2
+  caribe: 1
+  gayon: 1
+  lectura: >-
+    Esteves atribuye filiación pocas veces y reparte entre seis lenguas. Es
+    coherente con lo que el proyecto ya sabe del estado: Falcón no es
+    monolingüe, y la Parte II cubre precisamente las zonas donde no es caquetío.
+
+pendiente:
+  - 'Las 123 glosas de la Parte II que NO son de la lista de Miguel, sin repasar.'
+  - 'Los 17 nombres de la lista que no aparecen en ninguna parte del libro.'
+  - >-
+    Verificar en la IMAGEN las entradas que se citen: el OCR parte entradas y
+    come diacríticos. Ninguna glosa de aquí es citable sin ese paso.
+
+# ══════════════════════════════════════════════════════════════════════
+# SEGUNDA PASADA (2026-09-10): las 123 glosas que no eran de la lista
+# ══════════════════════════════════════════════════════════════════════
+vocabulario_nuevo_en_las_glosas:
+  medido: >-
+    106 de las 139 glosas no son de la lista de Miguel ni están en el lexicón;
+    48 de ellas traen glosa del tipo «Nombre: cosa».
+
+  las_que_declaran_filiacion:
+    - "CHUNAURE: «voz CAQUETÍA, jojota, mazorca tierna de maíz». ⭐⭐ El glosario del maíz de Fundación Empresas Polar da `chunaure` como mazorca tierna en Falcón, CON `tura` de sinónimo — y `tura` es voz del dictado de Miguel. Tres canales para la misma palabra."
+    - "AUTAQUIRE: «Quire, en AYAMÁN, es color» — vocabulario ayamán, jirajaroide"
+    - "GAYONES: «Gayón: árbol de construcción. Gayones: una tribu AYAMÁN». ⭐ El etnónimo sale de un nombre de árbol."
+    - "GUARECAL: «Guareque, voz CHAIMA, sapo» — caribe"
+    - "TUCUA: «Cúa: cangrejo en CHAIMA» — caribe"
+    - "AVARIA: «del TAMANACO» — caribe"
+
+  formantes:
+    - forma: "-bacoa"
+      entrada: "GUAIBACOA: «lugar de los guays»"
+      por_que_importa: >-
+        ⭐⭐ Esteves corta `-bacoa` como 'LUGAR DE', no como 'bosque'. Es
+        exactamente la segmentación alternativa que el blog del sufijo -coa
+        proponía y que yo había anotado como conjetura de divulgador: ahora la
+        dice una fuente citable. Y despeja con voz atestiguada, porque
+        `guay`/`way` 'árbol parecido a la ceiba' está en el lexicón.
+      que_le_hace_a_morfema_001: >-
+        No lo derriba —morfema-001 tiene cinco apoyos glosados y el `-baca`
+        'matorral, espesura' de Alvarado— pero le pone enfrente una lectura del
+        mismo autor que sostiene varios de esos apoyos. Va al issue de
+        morfemas como conflicto declarado, no como cambio.
+    - forma: "-bana"
+      entrada: "GUACABANA: «el cerro de las cotas»"
+      por_que_importa: >-
+        ⭐⭐ Confirma D9 —`-bana` = 'cerro, sitio alto'— con una entrada que el
+        proyecto no había visto porque está en la Parte II. Cautela: Esteves ya
+        estaba entre los apoyos de D9 vía Zavala, así que es refuerzo del mismo
+        autor, no fuente nueva.
+    - forma: "-rao"
+      entrada: "CABARAO: «de la parte desinencial rao sabemos que significa: aglomeración»"
+      por_que_importa: >-
+        ⭐ Formante NUEVO para el proyecto. Hace juego con dos cosas que el
+        canon ya tiene: el `cuar` cumanagoto 'aglomeración, abundancia' que
+        Esteves usa para explicar Adícora, y el `tuba` caquetío al que él mismo
+        lo equipara. Tres sufijos colectivos en la misma zona.
+      pregunta_abierta: "¿lleva `Guaranao` este -rao/-nao? No se afirma: se anota."
+
+  voces_que_el_lexicon_no_tiene:
+    - "CHIGUARIGUA: «voz compuesta de CHIGUA, nasa, cesto, y ARIGUA, un insecto melífero». ⭐ Dos voces de un golpe, y `arigua` cae justo en el racimo de la miel que abrió el dictado (maba, bayure, mebi, memerea)."
+    - "CAMAYATA: «de Camata, gallina silvestre; Camaya: también cesto, nasa» — segundo 'cesto' junto a chigua"
+    - "CUME: «cume, cube, ser sobrenatural, fantasma». ⭐ Va a la esfera de CREENCIA, no al lexicón sin más."
+    - "CHIPE: «almeja» — el lexicón tiene `kiwa` 'concha de almeja'; son dos palabras distintas"
+    - "IPARE: «aféresis de chipare, matapalo» — `chipare` sí está en el lexicón"
+    - "MEMERÍ: «nido de avispas, colmena» — ver el cruce con el dictado"
+    - "Árboles y plantas: ACARITE «Aca: bejuco» · ARIPINO «árbol maderable» · QUIPITO «árbol rutáceo de corteza olorosa» · TIGUAJE «Tigua: árbol rutáceo» · TACAL «colectivo de taque, árbol nucífero» · TURAGUAL «de Turagua, árbol anonáceo» · TACARIGUA «Tacariguo: árbol bombáceo» · CURIAJA «planta bromeliácea» · POPOTE «planta ciperácea, junco» · ENEA «Ese: planta ciperácea» · CAUDERAL «de Caudero, cují cabrero»"
+    - "Fauna: CARRAOS «ave zancuda de pico desmesurado» · MATACANES «cérvido de poca alzada» · CHUBISCAL «de chubisco, insecto, escarabajo»"
+    - "Casa y paisaje: CACIMBA «jagüey» · CHINCHORRO «hamaca de fique» · SEMERUCO «cereza silvestre» · UBERO «árbol que da la uva de playa» · BUCHAL «colectivo de buche: cardo globoso, melocacto»"
+
+# ══════════════════════════════════════════════════════════════════════
+cruce_con_el_dictado_de_medina:
+  correccion_de_metodo: >-
+    🔴 El primer cruce dio 25 voces del dictado en la Parte II usando raíces de
+    seis caracteres sin límite de palabra, y varias eran falsas: `guanariji`
+    casaba con «Guanare», `urubana` con «Cucurubano», `tura` con «Natural» y
+    «estructura», `guamaro` con «Guamare». Rehecho exigiendo palabra completa,
+    son 19. Una raíz corta sin frontera no busca la palabra: busca las letras.
+  voces_del_dictado_en_la_parte_II: 19
+
+  suben_de_nivel:
+    - voz: teco
+      nivel_actual: C
+      hallazgo: "CURIAJA: «planta bromeliácea, TECO, maya»"
+      por_que: >-
+        ⭐ Medina lo dicta como «planta xerófita de hojas lanceoladas, cortas y
+        con espinas por sus bordes», y el barrido web no encontró NADA. Esteves
+        lo da como sinónimo de curiaja y maya, bromeliácea: coincide con la
+        descripción. Es justo lo que la advertencia del barrido decía — que un
+        cero en la web mide la indexación, no la lengua.
+    - voz: cuaguaro
+      nivel_actual: B
+      hallazgo: "BARAGUA: «árbol de madera de construcción, CUAGUARO»"
+      por_que: >-
+        ⭐ Medina: «árbol de madera dura que se utilizó para hacer las cercas de
+        los conucos y el armazón de las viviendas». Esteves: madera de
+        construcción. Misma glosa por dos vías, y de paso despeja BARAGUA.
+    - voz: budare
+      nivel_actual: B
+      hallazgo: "«(Butare, ¿será budare?)»"
+      por_que: "apoyo débil y en condicional, pero es el autor dudando, no una glosa inventada"
+
+  no_aparecen: [memerea, matejea, marite, curubo, busuga, gatiao, guanariji, urubana, guamaro]
+  aviso_sobre_los_ceros: >-
+    ⚠️ Y sin embargo la Parte II SÍ trae «MEMERÍ: nido de avispas, colmena»,
+    que es el `memerea` del dictado con otra terminación: el cruce por forma
+    exacta la pierde. Cuando una voz del dictado no aparezca, hay que mirar
+    también su vecindad fonética antes de dar el cero por bueno.
+
+# ══════════════════════════════════════════════════════════════════════
+# TERCERA PASADA — lo que salió buscando Mirimire
+# ══════════════════════════════════════════════════════════════════════
+mirimire:
+  entrada_completa: >-
+    «MIRIMIRE. I - Población capital del municipio San Francisco, Distrito
+    Acosta. / II - Mirimirito, aldea del municipio San Francisco (Mirimire). /
+    III - La Guacharaca de Mirimire, aldea de Mirimire». (p. impresa 123)
+  veredicto: >-
+    SIN GLOSA. Esteves lo registra con sus tres referentes y no le da
+    etimología ni paréntesis — como hizo con Jayana en la Parte I. En la
+    escala de la campaña es `descartado`: no porque el nombre no sea indígena,
+    sino porque no hay ecuación bilingüe que despejar.
+  lo_unico_que_se_puede_decir: >-
+    Es una REDUPLICACIÓN: miri-miri. Y eso no es especulación, porque el propio
+    Esteves documenta el recurso en la misma Parte II al glosar BARABARA
+    «que es plural por duplicación». Con Taratara, Tapatapa y Chichiriviche
+    (chi-chi) son cinco nombres reduplicados en el estado.
+  accion_propuesta: >-
+    Censar las reduplicaciones de Falcón como se hizo con `-ana` en #109. Si
+    Esteves declara que la duplicación es plural en un caso, la pregunta es si
+    lo es en todos — y eso se mide, no se supone.
+
+  barrido_web_2026-09-10: >-
+    Buscado a solas, no dentro de una consulta agrupada. La web TAMPOCO lo
+    glosa: ni etimología, ni lengua, ni leyenda del nombre. Dos fuentes
+    independientes —Esteves y la divulgación local— registran el nombre y
+    ninguna lo explica. Eso ya es un resultado: el silencio es coincidente.
+  lo_que_si_aporta_la_web:
+    - >-
+      ⭐ El nombre no es sólo del pueblo: hay CERRO MIRÍMIRE —esdrújulo, con
+      tilde— y RÍO MIRIMIRE. «La zona central, donde se ubican Mirimire,
+      Mirimirito, Belén y El Cristo, corresponde a un área montañosa, situada
+      sobre la formación del cerro Mirímire». Esteves da tres referentes y NO
+      menciona ni el cerro ni el río.
+    - >-
+      Que el mismo nombre cubra cerro, río y pueblo apunta a que nombró primero
+      el accidente y después el poblado — el patrón normal. Y la tilde del
+      cerro (Mirímire) frente al pueblo (Mirimire) es una diferencia de
+      acentuación que conviene no perder: en esta campaña las tildes ya
+      movieron tres lemas del canon.
+    - 'En un decreto de 1885 aparece sólo como «aldea de campesinos».'
+  hipotesis_de_miguel_2026-09-10:
+    lo_que_dice: >-
+      «No sé dónde había leído que el `miri` era un tipo de arbusto. Y Mirimire
+      era justamente un lugar de muchos de estos».
+    busqueda_hecha: >-
+      🔴 NO CORROBORADA, y buscada en todo lo que el proyecto puede alcanzar:
+      el lexicón (nada que empiece por miri-), Esteves entero —partes I y II—
+      donde `miri` sólo aparece DENTRO de Mirimire, Alvarado 1921 a texto
+      completo, van Buurt, Gatschet, y dos búsquedas web específicas de «miri
+      arbusto Venezuela» y «mirimire planta». Cero en todas. El herbario de
+      Coro, que sería el sitio, corta la conexión.
+    por_que_NO_se_descarta: >-
+      Porque no encontrarla mide lo que alcanzo, no lo que existe — la regla 6,
+      que en esta misma campaña ya falló tres veces a favor del dato: `teco` y
+      `cuaguaro` no aparecían en la web y estaban en Esteves; las voces del
+      dictado sin rastro resultaron estar en la Parte II. Miguel lo leyó en
+      algún sitio, y el sitio existe aunque yo no llegue.
+    lo_que_la_hace_COHERENTE: >-
+      ⭐ Y esto es lo que la hace valiosa aunque esté sin fuente: encaja con DOS
+      patrones que esta campaña midió por separado, y no fue construida para
+      encajar con ellos.
+    los_dos_patrones:
+      - >-
+        LA REDUPLICACIÓN ES PLURAL. No es conjetura: el propio Esteves lo dice
+        en la Parte II al glosar BARABARA «que es plural por duplicación». Si
+        miri-miri es plural de `miri`, la lectura «lugar de muchos miri» sale
+        de la propia gramática que el autor declara.
+      - >-
+        EN ESTA REGIÓN LOS PARAJES SE NOMBRAN CON SU PLANTA O SU BICHO. Medido
+        en esta misma campaña: Adaro < `dara` el alcaraván, Yabuquiva < `yabo` +
+        `quiva` 'yabal pedregoso', Buchuaco < `buche` el cardo, Baraived <
+        `bara` 'árbol' + `bere` 'amargo', Sividigua, Chiguare, Guaibacoa 'lugar
+        de los guays', Baragua < `cuaguaro`. Un arbusto nombrando un cerro es
+        exactamente lo esperable.
+    y_la_geografia_ayuda: >-
+      El nombre cubre CERRO, RÍO y PUEBLO. Un arbusto que tapiza una ladera
+      nombra primero el cerro y después lo que se funda debajo — que es el
+      orden que los tres referentes sugieren.
+    estado: 'hipótesis con dos apoyos estructurales y CERO atestación léxica. No entra a ningún sitio hasta que aparezca el `miri`.'
+    donde_buscarlo:
+      - '«Mirimire en crónicas» (Barroso, UNEFM 2024) — el servidor rechaza la conexión; descarga de Miguel'
+      - 'Hernández Baño, «Los Caquetíos de Falcón» (1984) — no está en el repo, adquisición pendiente'
+      - 'Herbario CORO, «Flora de Falcón» — la web corta la conexión (ECONNRESET); reintentar'
+      - 'Y la pregunta más barata: que Miguel recuerde DÓNDE lo leyó'
+
+  adquisicion_identificada:
+    obra: '«Mirimire en crónicas», de José del Carmen «el negro» Barroso'
+    editorial: 'Fondo Editorial UNEFM (Universidad Nacional Experimental Francisco de Miranda), 2024-11-03'
+    formato: 'PDF digital, con ISBN en el catálogo del CENAL'
+    estado: >-
+      🔴 El servidor de la UNEFM rechaza la conexión desde aquí
+      (ECONNREFUSED). Es descarga para Miguel. Un libro de crónicas de la
+      universidad del propio estado es justo donde estaría la etimología si
+      alguien la recogió.
+
+# ⭐⭐ EL HALLAZGO QUE VALE MÁS QUE MIRIMIRE
+el_sufijo_ure:
+  entrada: >-
+    «GUAIMURE. Aldea del municipio Capatárida, Distrito Buchivacoa.
+    (Guaimure: raíz de guay; "ure", raíz)». (p. impresa 112)
+  por_que_importa: >-
+    ⭐⭐ Resuelve de dónde sale una glosa que el proyecto tenía EN DISPUTA. La
+    nota de morfemas dice: «van Buurt §5 recoge `-ure` (papiamentu -huri/-uri)
+    glosado 'raíz' por Cruz Esteves 1989, y lo declara equivalente al `-ure`
+    continental. La evidencia toponímica dice 'sitio de'. Glosa en disputa».
+    Pues aquí está la fuente de van Buurt, de primera mano y con su ejemplo:
+    Esteves glosa `-ure` = 'raíz' y lo despeja sobre `guay`, voz atestiguada.
+  lo_que_cambia: >-
+    No cambia el veredicto —morfema-002 tiene cinco topónimos que dicen 'sitio
+    de'— pero cambia el ESTADO de la disputa: ya no es «van Buurt cita a
+    Esteves» de oídas, es la página de Esteves con su ejemplo delante. La
+    disputa `-are`/`-ure` se puede reabrir con material, no con referencias.
+  aviso: 'verificar en la imagen: el OCR lee «Gzaimure» y «Guat-ca» en la misma página'
+
+otras_glosas_de_esta_pasada:
+  - "CUBE / CUDE: «ente sobrenatural, fantasma» — es la misma voz que el CUME de la pasada anterior; tres grafías del mismo ser. Esfera de CREENCIA."
+  - "GUACOA: «ave de cacería; columba corensis» ⭐ el lexicón la tiene como 'paloma' por Hernández Baño y Medina la dicta como paloma silvestre casi extinta: aquí llega el TAXÓN y el dato de que era pieza de caza."
+  - "ARAGUATA: «abeja peluda del color del mono araguato, pelo rojo oscuro. De ahí la homonimia» ⭐ otra abeja para el racimo de la miel, y con la homonimia declarada por el autor."
+  - "GUACHARACA: «gallina silvestre, muy ruidosa»"
+  - "MACANILLA: «palmera de la que se extrae fibra para tejer HAMACAS» — oficio"
+  - "GUAICA: «planta sarmentosa, armada de grandes espinas; su savia es medicinal para la vista» — flora medicinal"
+  - "GUAGUA: «caña arborescente de tallo cilíndrico y hueco, guadua»"
+  - "MORROCOY: «quelónido»"
+  - "CALEMBE: «voz africana o africanizada» — descarte con razón declarada, como Tapatapa"
+  - "MANAURE: «Cerro donde nace el río Ricoa» ⭐ el nombre del cacique mayor del canon, como orónimo. Dato para la esfera, no glosa."
+
+# ══════════════════════════════════════════════════════════════════════
+# CUARTA PASADA — las glosas que el extractor perdía
+# ══════════════════════════════════════════════════════════════════════
+glosas_recuperadas_2026_09_10:
+  el_bug: >-
+    El extractor buscaba la glosa entre paréntesis, `\(...\)`. Pero el OCR se
+    come el paréntesis de CIERRE en algunas entradas, y esas caían del lado de
+    «sin glosa». Se descubrió leyendo CARACUBANA a mano.
+  la_medicion: 'seis entradas más al admitir el paréntesis huérfano: 139 → 145 glosas'
+  arreglado_en: '6-fusion/scripts/glosas_esteves_parte2.py'
+
+  lo_que_devolvio:
+
+    - forma: Caracubana
+      glosa: '«Caracubana: CERRO POBLADO DE CARACARA»'
+      peso: >-
+        ⭐⭐⭐ La más importante de las seis. `-bana` = 'cerro', declarado por el
+        propio Esteves sobre un topónimo. Tercer apoyo de D9 aparecido hoy, y
+        el más fuerte de los tres. Y ata CARACARA, que Miguel dictó aparte.
+
+    - forma: Borojó
+      glosa: '«BOROJÓ ES CHIBCHA: un árbol frutal»'
+      peso: >-
+        ⭐⭐ Declaración de FILIACIÓN, y choca de frente con el canon.
+      el_conflicto: >-
+        🔴 El lexicón tiene `borojo` como **caquetío-atestiguado**, «salina,
+        lago salado de Coro», por Zavala #44 (AM) «Salina de Coro, comercio de
+        la sal». Esteves dice que es CHIBCHA y que es un ÁRBOL FRUTAL. No
+        coinciden ni en la lengua ni en el referente.
+      como_se_lee: >-
+        No se toca la entrada. Se anota la evidencia y se levanta issue, que es
+        lo que manda el protocolo cuando una fuente contradice al lexicón.
+        Nótese que hay una lectura que salva las dos: el ÁRBOL da nombre al
+        sitio y el SITIO es donde está la salina — pero eso es conjetura mía,
+        no dato, y la filiación chibcha seguiría en pie.
+      y_ademas: >-
+        Si Esteves acierta, `borojo` deja de ser voz caquetía y sale de la capa
+        atestiguada. Es de las pocas veces que una minería puede QUITAR del
+        lexicón en vez de añadir. Con más razón: verificar en la imagen.
+
+    - forma: Cacetal
+      glosa: '«CACETAL, colectivo de CACETO, planta herbácea, una MALVÁCEA»'
+      peso: >-
+        ⭐ Añade la FAMILIA BOTÁNICA a `caseto`/`caceto`, que el lexicón tiene
+        como 'planta herbácea' y Medina dictó como arbusto sin utilidad. Con la
+        web —«planta medicinal y aromática»— ya son tres descripciones. Las
+        malváceas son mucilaginosas y de uso medicinal corriente: la web y
+        Esteves se apoyan, y Medina discrepa.
+      y_la_grafia: 'CACETO con c- confirma la alternancia con CASETO; el lexicón lema por `kaseto`'
+
+    - {forma: Guagua,    glosa: '«caña arborescente de tallo cilíndrico y hueco, guadua»'}
+    - {forma: Guaical,   glosa: '«GUAICA, planta sarmentosa, armada de grandes espinas; su savia es medicinal para la vista»'}
+    - {forma: Guaracaro, glosa: '«planta herbácea, anual, que produce un grano alimenticio, una TAPIRAMA silvestre»'}
+
+  aviso_general: >-
+    ⚠️ Las seis salen justo de entradas donde el OCR falló —por eso se
+    perdieron—. Ninguna se cita fuera de este archivo sin verla en la imagen.
+    En CARACUBANA el OCR lee «Caracu- bana» partido y mete «9% es!» detrás; en
+    GUAICAL lee «Guat-ca».

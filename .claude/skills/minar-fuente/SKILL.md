@@ -55,6 +55,23 @@ done
 
 Las crónicas coloniales **no usan la ortografía moderna**. Nunca.
 
+### 🔴 Y un parecido de formas sin filtro de significado es casi todo ruido
+
+Medido el 2026-09-10 sobre el vocabulario achagua de Jahn: al buscar
+correspondencias caquetío↔achagua **por forma**, 7 de 11 «aciertan»; al mirar
+la **glosa**, solo aguantan 2. Cinco falsos de siete. `ishay` 'fuego' casaba
+con `kasha`, que es 'luna'; `ida` 'canoa' y `irago` 'beber' casaban los dos
+con `kira`, que es 'escuchar'.
+
+Es la misma trampa que ya costó 25 falsos positivos en el cruce del dictado de
+Medina (raíces de seis letras sin límite de palabra). La regla:
+
+- **Filtra por significado antes de celebrar la forma.** Un par solo cuenta si
+  coinciden las dos cosas.
+- **Y desconfía de tu propia regla.** Si de dos casos sacas una
+  correspondencia fonética, ponla a predecir: si falla nueve de once, no
+  existe. Lo que queda son los dos cognados que tenías antes de inventarla.
+
 ## 3. Leer los pasajes, no los conteos
 
 Los conteos te llevan a la página; el dato está en el texto. Extrae contexto
@@ -62,6 +79,26 @@ generoso (`grep -o ".\{300\}PATRÓN.\{400\}"`) y **lee lo que hay alrededor**.
 
 Localiza la **página impresa**, no la del PDF. Suelen diferir por un desfase
 constante que se calcula una vez (en Antczak: pdf + 130 = impresa).
+
+### Y una coincidencia con el vecino NO es un descarte
+
+Miguel, 2026-09-10: *«hay palabras que pueden compartirse entre etnias»*.
+Corrige un reflejo fácil: encontrar una voz «caquetía» en la lengua del vecino
+no la descalifica — prueba **contacto**, que es lo que se espera de pueblos que
+comerciaban.
+
+Lo que decide no es **si** se comparte, sino **qué**:
+
+| Dominio | Qué significa que se comparta |
+|---|---|
+| plantas, bichos, mercancías, utensilios | préstamo areal: dato de comercio y vecindad. Normal, y **no** descarta nada |
+| pronombres, numerales, morfemas gramaticales | dato de **filiación**: si aparece, hay que dudar de la clasificación |
+
+El caso medido: **`picure`** 'agutí' es idéntico en jirajara y ayomán (`akuri`,
+Jahn p. 390), Alvarado lo declara *«el nombre que tiene en varias lenguas de la
+familia caribe»*, y vive en el castellano regional. Tres familias sin
+parentesco, una palabra. Yo lo había descartado como candidato «porque es
+caribe»: el descarte no valía.
 
 ## 4. Repartir el hallazgo por esferas, no solo al lexicón
 

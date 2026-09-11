@@ -45,6 +45,7 @@ Uso:
 import argparse
 import io
 import os
+import re
 import sys
 
 import yaml
@@ -59,7 +60,29 @@ OBRA_POR_FUENTE = {
     "zavala-reyes-2015": "zavala-reyes-2015",
     "van-buurt-2014": "van-buurt-2014",
     "gatschet-1885": "gatschet-1885",
+    "esteves-1989": "esteves-1989",
+    # 2026-09-07: las lecturas del 25 de agosto entran al canon con su obra.
+    "arcaya-1920": "arcaya-1920",
+    "moron-2012-petroglifos": "moron-2012-petroglifos",
+    "gonzalez-batista-nombre-de-coro": "gonzalez-batista-nombre-de-coro",
+    "oliver-1989-cap3": "oliver-1989-cap3",
+    "velasco-2015-resistencia": "velasco-2015-resistencia",
+    "castellanos-elegias": "castellanos-elegias",
+    # 2026-09-07: el mapa vivo (OSM) como capa de datos citable para
+    # existencia y coordenadas, nunca para glosa.
+    "osm-kaketiana": "osm-kaketiana",
 }
+
+
+def _procedencia(e):
+    """`fuente` → clave foránea; `pagina`, si la entrada la trae, viaja dentro."""
+    obra = OBRA_POR_FUENTE.get(e.get("fuente"))
+    if not obra:
+        return None
+    proc = {"obra": obra}
+    if e.get("pagina") is not None:
+        proc["pagina"] = e["pagina"]
+    return proc
 
 
 def _forzar_utf8() -> None:
@@ -76,38 +99,77 @@ def _limpio(d: dict, saltar=()) -> dict:
 
 def toponimos(T):
     """NIVEL_A/B/C + DESCARTES → una lista con `nivel` como campo."""
+    # Los ids son claves que citan otros archivos (índice de Esteves, dictado,
+    # lecturas, asentamientos): tienen que ser ESTABLES. Los 74 originales se
+    # numeran por orden, como siempre; toda entrada nueva trae su `id`
+    # explícito (toponimo-075 en adelante) y no mueve el contador.
     registros = []
     n = 0
     for nivel, contenedor in (("A", T.NIVEL_A), ("B", T.NIVEL_B), ("C", T.NIVEL_C)):
         for forma, e in contenedor.items():
-            n += 1
+            if e.get("id"):
+                rid = e["id"]
+            else:
+                n += 1
+                rid = f"toponimo-{n:03d}"
             reg = {
-                "id": f"toponimo-{n:03d}",
+                "id": rid,
                 "forma": forma,
                 "nivel": nivel,
                 "clase": e.get("clase", "topónimo"),
             }
-            reg.update(_limpio(e, saltar=("clase", "fuente")))
-            obra = OBRA_POR_FUENTE.get(e.get("fuente"))
-            reg["procedencia"] = {"obra": obra} if obra else None
-            if not obra:
+            reg.update(_limpio(e, saltar=("id", "clase", "fuente", "pagina")))
+            reg["procedencia"] = _procedencia(e)
+            if not reg["procedencia"]:
                 reg["deuda"] = "sin-procedencia"
             registros.append(reg)
 
     # DESCARTES viene indexado por RAZÓN, con una lista de formas dentro. Se
     # expande a un registro por forma: la unidad es el topónimo, no el motivo.
+    # La glosa viene DENTRO de la forma, «dabajuro (Población de Falcón)»: se
+    # separa a `glosa_fuente` (el bug de forma, arreglado el 2026-08-30 sobre
+    # el YAML y aquí desde el 2026-09-06 para que regenerar no lo deshaga).
+    # Las flechas («cemirucos → 'Semerucos'») no son glosa y se quedan.
+    # Un grupo de DESCARTES puede traer `fuente` y `paginas` {forma: página}
+    # (los de Esteves) y `ids` {forma: id} para no mover el contador. Y
+    # `reubicados` [formas]: nombres que SIGUEN en la lista para que el
+    # contador no se mueva, pero que ya no se emiten desde aquí porque viven
+    # en otro sitio con su id explícito (quiquiba → NIVEL_C toponimo-034; los
+    # cuatro Quicer- → el grupo de antropónimos, 030-033). Es lo que permite
+    # rehabilitar o reclasificar un original sin mover a los demás.
+    # `clase` y `polity` de grupo viajan a cada forma (los antropónimos de
+    # Barquisimeto: regla 4).
     for razon, e in T.DESCARTES.items():
+        ids = e.get("ids", {})
+        paginas = e.get("paginas", {})
+        reubicados = set(e.get("reubicados", []))
         for forma in e.get("formas", []):
-            n += 1
-            registros.append({
-                "id": f"toponimo-{n:03d}",
-                "forma": forma,
+            m = re.match(r"^(.+?)\s+\((.+)\)$", forma)
+            base = m.group(1) if m else forma
+            if base in reubicados:
+                n += 1
+                continue
+            if base in ids:
+                rid = ids[base]
+            else:
+                n += 1
+                rid = f"toponimo-{n:03d}"
+            reg = {
+                "id": rid,
+                "forma": base,
                 "nivel": "descartado",
-                "clase": "topónimo",
-                "razon": e.get("razon") or razon,
-                "procedencia": None,
-                "deuda": "sin-procedencia",
-            })
+                "clase": e.get("clase", "topónimo"),
+            }
+            if e.get("polity"):
+                reg["polity"] = e["polity"]
+            if m:
+                reg["glosa_fuente"] = m.group(2)
+            reg["razon"] = e.get("razon") or razon
+            reg["procedencia"] = _procedencia({"fuente": e.get("fuente"),
+                                               "pagina": paginas.get(base)})
+            if not reg["procedencia"]:
+                reg["deuda"] = "sin-procedencia"
+            registros.append(reg)
     return registros
 
 
@@ -160,6 +222,11 @@ def main(argv=None) -> int:
             "toponimos": len(tops),
             "por_nivel": por_nivel,
             "con_procedencia": sum(1 for r in tops if r.get("procedencia")),
+            # La tercera voz (2026-09-05): lecturas que cuelgan del topónimo sin
+            # pisar glosa_fuente ni segmentacion. Ver datos-de-lengua.md.
+            "con_lecturas": sum(1 for r in tops if r.get("lecturas")),
+            "lecturas": sum(len(r.get("lecturas") or []) for r in tops),
+            "con_definicion_aceptada": sum(1 for r in tops if r.get("definicion_aceptada_simulacion")),
             "corroboraciones_del_lexicon": len(corrs),
             "nota": ("El nivel de confianza es un CAMPO, no un contenedor: "
                      "antes eran NIVEL_A/B/C separados y para listar todos los "
@@ -195,6 +262,9 @@ def main(argv=None) -> int:
 
     print(f"\n  topónimos: {len(tops)}  {por_nivel}")
     print(f"  con procedencia: {doc_top['meta']['con_procedencia']}/{len(tops)}")
+    print(f"  con lecturas: {doc_top['meta']['con_lecturas']} "
+          f"({doc_top['meta']['lecturas']} lecturas; "
+          f"{doc_top['meta']['con_definicion_aceptada']} con definición aceptada)")
     print(f"  morfemas: {len(morfs)}  ({doc_mor['meta']['glosados']} glosados)")
     print(f"  corroboraciones del lexicón: {len(corrs)}")
     print("\n  ⚠ La prosa NO se migró (reduplicación, conflictos, veredicto de")

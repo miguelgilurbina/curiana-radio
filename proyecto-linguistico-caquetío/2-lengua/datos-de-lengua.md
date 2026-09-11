@@ -166,6 +166,80 @@ de cabecera desaparecían. Sobre datos de investigación curados eso es
 inaceptable. La versión buena inserta el bloque **como texto**: el diff son 58
 inserciones y **cero borrados**.
 
+## Topónimos: la tercera voz — `lecturas` (2026-09-05)
+
+Un topónimo tenía dos voces: `glosa_fuente` (lo impreso en la fuente del
+registro) y `segmentacion` + `glosa_reconstruida` (nuestro análisis). Lo que un
+residente, la tradición del sitio, un cronista o un autor con etimología propia
+dicen del nombre no cabía en ninguna de las dos sin mentir, y se aparcaba en
+`6-fusion/` sin colgar del topónimo al que pertenece. Desde el 2026-09-05
+cuelga de él:
+
+```yaml
+- id: toponimo-001
+  forma: jurijurebo
+  # ... glosa_fuente, segmentacion, razon: intactos ...
+  lecturas:
+    - tipo: etimologia-analitica
+      lectura: "hure 'arena' -> hurehure 'arenal' -> hurehurebo 'lugar de muchos arenales'"
+      quien: González Batista
+      fecha: 2026-08-25
+      eje: significado
+      procedencia: {obra: gonzalez-batista-nombre-de-coro}
+      veredicto: "descartada como lectura principal (2026-08-25): Zavala tiene glosa impresa…"
+    - tipo: testimonio-residente
+      lectura: "Jurijurebo está en Judibana; judi y juri son la misma palabra deformada"
+      quien: Miguel Gil Urbina, residente en Judibana
+      fecha: 2026-08-25
+      eje: referente
+  definicion_aceptada_simulacion:      # solo cuando la simulación lo necesita
+    definicion: "…"
+    quien: Miguel
+    fecha: 2026-09-01
+    etiqueta: canon-simulacion         # nunca atestiguado: el validador lo rechaza
+    validacion: "(Claude) la probabilidad, y por qué"
+```
+
+### Los tipos, con su peso declarado
+
+| `tipo` | Qué es | Peso |
+|---|---|---|
+| `glosa-fuente` | otra fuente impresa con glosa distinta a la del registro | el más alto |
+| `etimologia-analitica` | segmentación con morfemas atestiguados, nuestra o de un autor | según sus apoyos |
+| `etimologia-de-cronista` | la glosa que da un cronista (Castellanos: «Coro viento quiere decir») | pista, no atestación |
+| `testimonio-residente` | hablante o residente actual, con nombre | categoría propia, como el dictado curado |
+| `tradicion-local` | lo que la comunidad del sitio dice (Morón, cronistas locales) | `retro-abstraido` |
+| `etimologia-popular` | recibida sin fuente citable (Wikipedia, blogs) | la más baja; se registra para no re-investigarla |
+| `hipotesis` | una lectura propuesta para validar; la validación queda como rastro | la que le dé la validación |
+
+### Las reglas
+
+0. **Significado ≠ referente** (principio de Miguel, 2026-08-25): qué significa
+   el nombre y a qué o a quién nombra son ejes independientes. Cada lectura
+   puede declararlo en `eje` (`significado`, `referente`, `ambos`).
+1. **Ninguna lectura pisa a otra.** Es una lista; conviven.
+2. **Toda lectura declara `quien` y `fecha`; si cita, `procedencia.obra` se
+   comprueba contra la bibliografía.** Sin autor no entra: es la regla 8
+   aplicada a opiniones.
+3. **`glosa_fuente` no cambia de significado**: sigue siendo solo lo impreso
+   en la fuente primaria del registro.
+4. **Cuando dos lecturas chocan, las dos quedan**, con el `veredicto` si ya se
+   falló (jurijurebo: 'paso de los vientos' vs. 'lugar de arenales').
+5. **`definicion_aceptada_simulacion` lleva `etiqueta: canon-simulacion`
+   obligatoria.** Es la capa de decisión (Miguel, 2026-09-01): una lengua
+   muerta exige posturas y el proyecto las declara, sin llamarlas atestiguadas.
+
+### Dónde se escriben y quién las lee
+
+Se escriben en `curiana_sim/lexicon_toponimos.py`, la propuesta curada a mano,
+de donde `migrar_toponimos.py` las vuelca a `toponimos.yaml` y las cuenta en
+`meta`. `compilar_lengua.py` las valida (tipos cerrados, autor y fecha, obra
+citada). `juntar_toponimos.py` las muestra en `6-fusion/TOPONIMOS_POR_FUENTE.md`
+junto a las demás fuentes, firmadas por quien las hizo. Una lectura que
+rehabilita un `descartado` se registra al subirlo de nivel, que es la decisión.
+Las lecturas que todavía viven en `6-fusion/` sin colgar de su topónimo se
+listan en `issues-pendientes/issue-esquema-lecturas-toponimos.md`.
+
 ## Lo que falta
 
 1. **Los 38 ambiguos**, con un `procedencia` que exprese la cadena

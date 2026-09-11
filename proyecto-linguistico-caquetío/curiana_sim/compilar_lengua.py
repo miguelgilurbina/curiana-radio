@@ -28,6 +28,10 @@ QUÉ VALIDA
 4. **Topónimos** — `nivel` legal (A/B/C/descartado), y que los morfemas citados
    en `morfemas` existan como entrada del lexicón o como morfema despejado.
 5. **Corroboraciones** — la palabra corroborada existe en `VOCABULARIO_BASE`.
+6. **Lecturas** (la tercera voz, 2026-09-05) — cada `lecturas[]` de un topónimo
+   tiene `tipo` cerrado, `lectura`, `quien` y `fecha`; si cita, su `obra`
+   existe. Y `definicion_aceptada_simulacion` lleva SIEMPRE la etiqueta
+   `canon-simulacion`: el proyecto toma posición sin llamarla atestiguada.
 
 Uso:
     python compilar_lengua.py            # informe
@@ -49,6 +53,32 @@ DIR_LENGUA = os.path.join(REPO, "2-lengua")
 BIBLIOGRAFIA = os.path.join(REPO, "4-fuentes", "bibliografia.yaml")
 
 NIVELES_TOPONIMO = ("A", "B", "C", "descartado")
+
+# La tercera voz de un topónimo: lo que un residente, la tradición del sitio,
+# un cronista o un autor con etimología propia dicen del nombre — sin pisar
+# `glosa_fuente` (lo impreso) ni `segmentacion` (nuestro análisis). La lista
+# es cerrada a propósito: el tipo declara el peso. Esquema y reglas en
+# 2-lengua/datos-de-lengua.md §«La tercera voz».
+TIPOS_LECTURA = (
+    "glosa-fuente",            # otra fuente impresa con glosa distinta a la del registro
+    "etimologia-analitica",    # segmentación con morfemas, nuestra o de un autor
+    "etimologia-de-cronista",  # la glosa que da un cronista (Castellanos: «Coro viento»)
+    "testimonio-residente",    # hablante o residente actual, con nombre
+    "tradicion-local",         # lo que la comunidad del sitio dice (retro-abstraido)
+    "etimologia-popular",      # recibida sin fuente citable; se registra para no re-investigarla
+    "hipotesis",               # propuesta para validar; la validación queda como rastro
+)
+# Significado ≠ referente (principio de Miguel, 2026-08-25): una lectura dice
+# sobre qué eje habla — qué significa el nombre, o a qué o a quién nombra.
+EJES_LECTURA = ("significado", "referente", "ambos")
+CAMPOS_LECTURA = {"tipo", "lectura", "quien", "fecha", "eje", "apoyo",
+                  "procedencia", "veredicto", "validacion"}
+# La capa de decisión (Miguel, 2026-09-01): para los topónimos que la
+# simulación necesita, el proyecto adopta una definición — y la etiqueta dice
+# la verdad: canon-simulacion, nunca atestiguado.
+ETIQUETA_DEFINICION = "canon-simulacion"
+CAMPOS_DEFINICION = {"definicion", "quien", "fecha", "etiqueta", "validacion",
+                     "lecturas_base"}
 
 # Dos clases de lengua, y la distinción no es cosmética:
 #
@@ -207,6 +237,79 @@ def validar_cognados(doc, obras):
     return problemas
 
 
+def _validar_obra_citada(proc, obras, donde):
+    """`procedencia` opcional de una lectura: si está, tiene `obra` y existe."""
+    if not isinstance(proc, dict):
+        return [_err("procedencia-mal-formada", donde,
+                     f"es {type(proc).__name__}, se esperaba dict")]
+    obra = proc.get("obra")
+    if not obra:
+        return [_err("procedencia-sin-obra", donde, "`procedencia` sin campo `obra`")]
+    if obras is not None and obra not in obras:
+        return [_err("obra-fantasma", donde,
+                     f"cita la obra `{obra}`, que no está en la bibliografía")]
+    return []
+
+
+def validar_lecturas(r, donde, obras):
+    """La tercera voz: cada lectura con tipo cerrado, autor y fecha (sin autor
+    no entra — es la regla 8 aplicada a opiniones), y la definición aceptada
+    para la simulación siempre etiquetada canon-simulacion."""
+    problemas = []
+    lecturas = r.get("lecturas")
+    if lecturas is not None:
+        if not isinstance(lecturas, list):
+            problemas.append(_err("lecturas-mal-formadas", donde,
+                                  f"`lecturas` es {type(lecturas).__name__}, se esperaba lista"))
+            lecturas = []
+        for i, l in enumerate(lecturas):
+            d = f"{donde}/lecturas[{i}]"
+            if not isinstance(l, dict):
+                problemas.append(_err("lectura-mal-formada", d, "no es un mapa"))
+                continue
+            if l.get("tipo") not in TIPOS_LECTURA:
+                problemas.append(_err(
+                    "lectura-tipo-ilegal", d,
+                    f"`tipo: {l.get('tipo')}` no es legal "
+                    f"(legales: {', '.join(TIPOS_LECTURA)})"))
+            if not str(l.get("lectura") or "").strip():
+                problemas.append(_err("lectura-vacia", d, "sin `lectura`"))
+            if not str(l.get("quien") or "").strip():
+                problemas.append(_err("lectura-sin-autor", d,
+                                      "sin `quien` — sin autor no entra"))
+            if not l.get("fecha"):
+                problemas.append(_err("lectura-sin-fecha", d, "sin `fecha`"))
+            if "eje" in l and l["eje"] not in EJES_LECTURA:
+                problemas.append(_err(
+                    "lectura-eje-ilegal", d,
+                    f"`eje: {l['eje']}` no es legal (legales: {', '.join(EJES_LECTURA)})"))
+            if "procedencia" in l:
+                problemas += _validar_obra_citada(l["procedencia"], obras, d)
+            for extra in sorted(set(l) - CAMPOS_LECTURA):
+                problemas.append(_avi("lectura-campo-desconocido", d,
+                                      f"campo `{extra}` no está en el esquema"))
+
+    defn = r.get("definicion_aceptada_simulacion")
+    if defn is not None:
+        d = f"{donde}/definicion_aceptada_simulacion"
+        if not isinstance(defn, dict):
+            problemas.append(_err("definicion-mal-formada", d, "no es un mapa"))
+            return problemas
+        for campo in ("definicion", "quien", "fecha"):
+            if not defn.get(campo):
+                problemas.append(_err("definicion-incompleta", d, f"sin `{campo}`"))
+        if defn.get("etiqueta") != ETIQUETA_DEFINICION:
+            problemas.append(_err(
+                "definicion-etiqueta-ilegal", d,
+                f"`etiqueta: {defn.get('etiqueta')}` — una definición aceptada "
+                f"para la simulación lleva siempre `{ETIQUETA_DEFINICION}`, "
+                "nunca atestiguado"))
+        for extra in sorted(set(defn) - CAMPOS_DEFINICION):
+            problemas.append(_avi("definicion-campo-desconocido", d,
+                                  f"campo `{extra}` no está en el esquema"))
+    return problemas
+
+
 def validar_toponimos(doc, obras, lexico, morfemas_ids):
     problemas = []
     if not doc:
@@ -225,6 +328,7 @@ def validar_toponimos(doc, obras, lexico, morfemas_ids):
                 "nivel-ilegal", donde,
                 f"`nivel: {nivel}` no es legal "
                 f"(legales: {', '.join(NIVELES_TOPONIMO)})"))
+        problemas += validar_lecturas(r, donde, obras)
 
     if lexico:
         for c in doc.get("corroboraciones_lexicon", []):
@@ -298,6 +402,10 @@ def informe(datos, problemas):
     if top:
         m = top.get("meta", {})
         print(f"  topónimos  {m.get('toponimos', '?'):>4}   {m.get('por_nivel', {})}")
+        if "lecturas" in m:
+            print(f"  lecturas   {m.get('lecturas', 0):>4}   "
+                  f"en {m.get('con_lecturas', 0)} topónimo(s); "
+                  f"{m.get('con_definicion_aceptada', 0)} con definición aceptada")
     if mor:
         m = mor.get("meta", {})
         print(f"  morfemas   {m.get('morfemas', '?'):>4}   "

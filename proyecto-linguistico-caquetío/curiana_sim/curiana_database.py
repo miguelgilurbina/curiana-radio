@@ -614,6 +614,17 @@ class CurianaDB:
         result = self.client.table("agent_quotes").insert(row).execute()
         return result.data[0]["id"]
 
+    # ── Libro de costos ───────────────────────────────────────────────
+
+    def save_llm_calls(self, run_id: str, filas: list[dict]) -> int:
+        """Vuelca las llamadas de un turno a `llm_calls` (ver curiana_costos.py).
+        Una fila por llamada al modelo; retorna cuántas escribió."""
+        if not filas:
+            return 0
+        rows = [{"run_id": run_id, **f} for f in filas]
+        self.client.table("llm_calls").insert(rows).execute()
+        return len(rows)
+
 
 # ══════════════════════════════════════════════════════════════════════
 # MODO DEGRADADO (sin Supabase)
@@ -647,6 +658,7 @@ class CurianaDBMock:
     def clear_agent_quotes(self, *a, **kw): pass
     def save_agent_quote(self, *a, **kw) -> str:
         import uuid; return str(uuid.uuid4())
+    def save_llm_calls(self, *a, **kw) -> int: return 0
 
 
 def get_db() -> "CurianaDB | CurianaDBMock":

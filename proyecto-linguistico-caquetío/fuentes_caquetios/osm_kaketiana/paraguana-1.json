@@ -1,0 +1,4424 @@
+{
+"version": 0.6,
+"generator": "Overpass API 0.7.62.11 87bfad18",
+"osm3s": {
+"timestamp_osm_base": "2026-09-08T01:32:17Z",
+"copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+},
+"elements": [
+{
+"type": "node",
+"id": 792183738,
+"lat": 11.6931716,
+"lon": -70.1917178,
+"tags": {
+"capital": "6",
+"loc_name": "Punto Fijo",
+"name": "Punto Fijo",
+"name:en": "Punto Fijo",
+"openGeoDB:postal_codes": "4102",
+"openGeoDB:telephone_area_code": "0269",
+"place": "city",
+"population": "277017",
+"source": "wikipedia",
+"wikidata": "Q1020279",
+"wikipedia": "es:Punto Fijo"
+}
+},
+{
+"type": "node",
+"id": 792185279,
+"lat": 11.6486993,
+"lon": -70.1987302,
+"tags": {
+"is_in": "Paraguana, Estado Falcon, Venezuela",
+"name": "Puerta Maraven",
+"place": "suburb"
+}
+},
+{
+"type": "node",
+"id": 792186766,
+"lat": 11.6175102,
+"lon": -70.2116906,
+"tags": {
+"capital": "7",
+"name": "Punta Cardón",
+"place": "suburb",
+"wikidata": "Q3410865"
+}
+},
+{
+"type": "node",
+"id": 792196168,
+"lat": 11.6360449,
+"lon": -70.2050548,
+"tags": {
+"is_in": "Paraguana, Estado Falcon, Venezuela",
+"name": "Urbanización Brisamar",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 793836769,
+"lat": 11.821914,
+"lon": -69.9826534,
+"tags": {
+"capital": "7",
+"name": "Moruy",
+"place": "town",
+"wikidata": "Q113840076"
+}
+},
+{
+"type": "node",
+"id": 793839384,
+"lat": 11.8742208,
+"lon": -69.9422171,
+"tags": {
+"capital": "7",
+"name": "Buena Vista",
+"place": "town",
+"wikidata": "Q113833916"
+}
+},
+{
+"type": "node",
+"id": 793857883,
+"lat": 11.9481878,
+"lon": -69.9213611,
+"tags": {
+"capital": "6",
+"name": "Pueblo Nuevo",
+"name:ru": "Пуэбло-Нуэво",
+"place": "town",
+"wikidata": "Q600959"
+}
+},
+{
+"type": "node",
+"id": 793860538,
+"lat": 11.9487494,
+"lon": -69.8395644,
+"tags": {
+"capital": "7",
+"name": "El Hato",
+"place": "town",
+"wikidata": "Q113835380"
+}
+},
+{
+"type": "node",
+"id": 793862134,
+"lat": 11.9845187,
+"lon": -69.8214434,
+"tags": {
+"is_in": "Estado Falcón",
+"name": "Buchuaco",
+"place": "town",
+"ref": "Buchuaco"
+}
+},
+{
+"type": "node",
+"id": 793862858,
+"lat": 12.0103157,
+"lon": -69.8341375,
+"tags": {
+"name": "El Supí",
+"place": "town"
+}
+},
+{
+"type": "node",
+"id": 793875451,
+"lat": 12.0685289,
+"lon": -69.9503183,
+"tags": {
+"capital": "7",
+"name": "El Vínculo",
+"place": "town",
+"wikidata": "Q113835404"
+}
+},
+{
+"type": "node",
+"id": 810883014,
+"lat": 11.7125328,
+"lon": -70.1929013,
+"tags": {
+"is_in": "Punto Fijo",
+"name": "Caja de Agua",
+"place": "suburb"
+}
+},
+{
+"type": "node",
+"id": 819553033,
+"lat": 11.6360507,
+"lon": -70.2050532,
+"tags": {
+"is_in": "Paraguana, Estado Falcon, Venezuela",
+"name": "Urb. Brisamar",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 967998523,
+"lat": 11.7749069,
+"lon": -70.2408172,
+"tags": {
+"is_in": "Estado Falcon",
+"name": "Amuay",
+"name:ru": "Амуай",
+"place": "town",
+"ref": "Amuay",
+"wikidata": "Q2271735",
+"wikipedia": "es:Amuay"
+}
+},
+{
+"type": "node",
+"id": 1040402968,
+"lat": 11.7365266,
+"lon": -70.2292557,
+"tags": {
+"name": "Adaro",
+"place": "locality"
+}
+},
+{
+"type": "node",
+"id": 1187278446,
+"lat": 11.8245826,
+"lon": -70.2517878,
+"tags": {
+"capital": "6",
+"loc_name": "Los Taques",
+"name": "Los Taques",
+"official_name": "Santa Cruz de Los Taques",
+"place": "town",
+"source": "IGVSB",
+"wikidata": "Q3472621"
+}
+},
+{
+"type": "node",
+"id": 1189266362,
+"lat": 11.7076238,
+"lon": -69.8411436,
+"tags": {
+"capital": "7",
+"name": "Tacuato",
+"name:ru": "Такуато",
+"place": "town",
+"wikidata": "Q6137917"
+}
+},
+{
+"type": "node",
+"id": 2606132099,
+"lat": 11.6747747,
+"lon": -70.1882604,
+"tags": {
+"name": "Guaranao",
+"place": "suburb"
+}
+},
+{
+"type": "node",
+"id": 3145911812,
+"lat": 12.1740092,
+"lon": -69.9596067,
+"tags": {
+"name": "Puerto Escondido",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 3145958822,
+"lat": 12.1739027,
+"lon": -69.9630191,
+"tags": {
+"name": "Muelle",
+"waterway": "dock"
+}
+},
+{
+"type": "node",
+"id": 3145958823,
+"lat": 12.1746323,
+"lon": -69.9617233,
+"tags": {
+"name": "Muelle",
+"waterway": "dock"
+}
+},
+{
+"type": "node",
+"id": 3709831859,
+"lat": 11.777872,
+"lon": -70.1810505,
+"tags": {
+"name": "Guanadito",
+"place": "town"
+}
+},
+{
+"type": "node",
+"id": 3949335757,
+"lat": 11.900105,
+"lon": -70.0936432,
+"tags": {
+"capital": "7",
+"name": "Jadacaquiva",
+"place": "village",
+"wikidata": "Q3160403",
+"wikipedia": "es:Jadacaquiva"
+}
+},
+{
+"type": "node",
+"id": 4097270640,
+"lat": 12.0464048,
+"lon": -69.8537986,
+"tags": {
+"name": "Tiraya",
+"place": "town"
+}
+},
+{
+"type": "node",
+"id": 4097307300,
+"lat": 12.057978,
+"lon": -69.855538,
+"tags": {
+"name": "Asubure",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 4406329998,
+"lat": 11.7815852,
+"lon": -69.9470341,
+"tags": {
+"capital": "7",
+"name": "Santa Ana",
+"place": "town",
+"wikidata": "Q6120225"
+}
+},
+{
+"type": "node",
+"id": 4406807523,
+"lat": 11.887207,
+"lon": -69.8527275,
+"tags": {
+"capital": "7",
+"name": "Baraived",
+"place": "town",
+"wikidata": "Q113833621"
+}
+},
+{
+"type": "node",
+"id": 4406850987,
+"lat": 11.8213669,
+"lon": -70.2741803,
+"tags": {
+"is_in": "Venezuela",
+"name": "Villa Marina",
+"place": "town"
+}
+},
+{
+"type": "node",
+"id": 4434950214,
+"lat": 11.8182732,
+"lon": -69.9523818,
+"tags": {
+"ele": "830",
+"name": "Cerro Santa Ana",
+"natural": "peak",
+"source": "IGVSB",
+"wikidata": "Q31592651"
+}
+},
+{
+"type": "node",
+"id": 4470188813,
+"lat": 11.7589031,
+"lon": -70.1838641,
+"tags": {
+"capital": "7",
+"name": "Judibana",
+"place": "town",
+"wikidata": "Q3187962"
+}
+},
+{
+"type": "node",
+"id": 4787409050,
+"lat": 11.8366279,
+"lon": -70.1204722,
+"tags": {
+"name": "Los Olivos",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 4792058261,
+"lat": 11.7167667,
+"lon": -70.216762,
+"tags": {
+"name": "Las Piedras",
+"place": "suburb",
+"wikidata": "Q5970700",
+"wikipedia": "en:Las Piedras, Venezuela"
+}
+},
+{
+"type": "node",
+"id": 4825318789,
+"lat": 11.7105138,
+"lon": -69.8228165,
+"tags": {
+"name": "Sector Alcabala",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 4825318790,
+"lat": 11.7076563,
+"lon": -69.8176666,
+"tags": {
+"name": "Sector El Tanque",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 4825318791,
+"lat": 11.7069419,
+"lon": -69.8353048,
+"tags": {
+"name": "Sector Benito Sánchez",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 4825318792,
+"lat": 11.7066057,
+"lon": -69.82861,
+"tags": {
+"name": "Sector Leoncio García",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 4825318793,
+"lat": 11.7110601,
+"lon": -69.8325582,
+"tags": {
+"name": "Sector Pablo Neruda",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 4825318794,
+"lat": 11.7102197,
+"lon": -69.839253,
+"tags": {
+"name": "Sector Centro",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 4825318795,
+"lat": 11.7040844,
+"lon": -69.8398539,
+"tags": {
+"name": "Sector Los Olivos",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 4825318796,
+"lat": 11.7037902,
+"lon": -69.8439308,
+"tags": {
+"name": "Sector Sub-Estación",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 4825318797,
+"lat": 11.7096734,
+"lon": -69.8445316,
+"tags": {
+"name": "Sector Palmasola",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 4825318798,
+"lat": 11.703328,
+"lon": -69.8571487,
+"tags": {
+"name": "Sector Hernández",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 4825318799,
+"lat": 11.7033279,
+"lon": -69.8792931,
+"tags": {
+"name": "Sector Bella Vista",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 4825318800,
+"lat": 11.7005124,
+"lon": -69.8926397,
+"tags": {
+"name": "Sector El Taque",
+"place": "suburb"
+}
+},
+{
+"type": "node",
+"id": 4825318801,
+"lat": 11.6983272,
+"lon": -69.9165436,
+"tags": {
+"name": "Sector Cuara",
+"place": "suburb"
+}
+},
+{
+"type": "node",
+"id": 4834769480,
+"lat": 11.9412519,
+"lon": -70.1165456,
+"tags": {
+"name": "La Guadalupe",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 4834772826,
+"lat": 11.8276553,
+"lon": -70.1229836,
+"tags": {
+"name": "La Cañada",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 5316380763,
+"lat": 11.7159401,
+"lon": -70.1818434,
+"tags": {
+"name": "Distribuidor Santa Elena",
+"place": "locality"
+}
+},
+{
+"type": "node",
+"id": 5506059762,
+"lat": 11.6586618,
+"lon": -69.7490591,
+"tags": {
+"name": "Cararapa",
+"place": "hamlet",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060026,
+"lat": 11.5745945,
+"lon": -69.7627116,
+"tags": {
+"name": "Punta Playa Arena",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060027,
+"lat": 11.7449936,
+"lon": -70.2116811,
+"tags": {
+"name": "Punta Judibana",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060028,
+"lat": 11.7379978,
+"lon": -70.2343404,
+"tags": {
+"name": "Punta Adaro",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060029,
+"lat": 11.7430188,
+"lon": -70.2264226,
+"tags": {
+"name": "Punta Culata",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060030,
+"lat": 11.7578715,
+"lon": -70.2378702,
+"tags": {
+"name": "Punta del Cabo",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060031,
+"lat": 11.6325022,
+"lon": -70.2362073,
+"tags": {
+"name": "Punta Gorda",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060032,
+"lat": 11.6063927,
+"lon": -70.2183277,
+"tags": {
+"name": "La Punta",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060033,
+"lat": 11.6096611,
+"lon": -70.2244967,
+"tags": {
+"name": "Punta La Barra",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060034,
+"lat": 11.9825693,
+"lon": -70.0928164,
+"tags": {
+"name": "Isito",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060035,
+"lat": 11.9843324,
+"lon": -70.1252604,
+"tags": {
+"name": "Hato Lindo",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060036,
+"lat": 11.9959606,
+"lon": -70.1136733,
+"tags": {
+"name": "La Italia",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060037,
+"lat": 11.9355893,
+"lon": -70.2446509,
+"tags": {
+"name": "Hato Abajo",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060038,
+"lat": 11.9241684,
+"lon": -70.2458525,
+"tags": {
+"name": "El Mulato",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060039,
+"lat": 11.9159384,
+"lon": -70.2230645,
+"tags": {
+"name": "San Gregorio",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060040,
+"lat": 12.0059513,
+"lon": -70.1980234,
+"tags": {
+"name": "Conejal",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060041,
+"lat": 11.9676134,
+"lon": -70.1714909,
+"tags": {
+"name": "Jacuque",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060042,
+"lat": 11.9789799,
+"lon": -70.1582194,
+"tags": {
+"name": "El Chiguare",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060043,
+"lat": 11.9708985,
+"lon": -70.149529,
+"tags": {
+"name": "Bella Vista",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060044,
+"lat": 11.9741731,
+"lon": -70.1343155,
+"tags": {
+"name": "Corralito",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060045,
+"lat": 11.9677918,
+"lon": -70.1161623,
+"tags": {
+"name": "Tinaquillo",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060046,
+"lat": 11.9525307,
+"lon": -70.1278138,
+"tags": {
+"name": "San Pedro",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060047,
+"lat": 11.9553437,
+"lon": -70.1345945,
+"tags": {
+"name": "San Salvador",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060127,
+"lat": 11.9477234,
+"lon": -70.0986099,
+"tags": {
+"name": "Isiro",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060128,
+"lat": 11.9431679,
+"lon": -70.0831175,
+"tags": {
+"name": "Sabaneta",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060129,
+"lat": 11.9356522,
+"lon": -70.0928164,
+"tags": {
+"name": "San Vicente",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060130,
+"lat": 11.9290811,
+"lon": -70.1073539,
+"tags": {
+"name": "San Andrés",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060131,
+"lat": 11.9395885,
+"lon": -70.1267302,
+"tags": {
+"name": "Iticuna",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060132,
+"lat": 11.9337628,
+"lon": -70.1123428,
+"tags": {
+"name": "Las Margaritas",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060694,
+"lat": 11.9149096,
+"lon": -70.1125574,
+"tags": {
+"name": "San Enrique",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060695,
+"lat": 11.9169042,
+"lon": -70.1041675,
+"tags": {
+"name": "Tabe",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060696,
+"lat": 11.9199275,
+"lon": -70.1288438,
+"tags": {
+"name": "Berlín",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060697,
+"lat": 11.9305507,
+"lon": -70.1430273,
+"tags": {
+"name": "San Fernando",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060698,
+"lat": 11.9240424,
+"lon": -70.151825,
+"tags": {
+"name": "Urumare",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060699,
+"lat": 11.9138389,
+"lon": -70.1706005,
+"tags": {
+"name": "El Curaridal",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060700,
+"lat": 11.9121382,
+"lon": -70.1526189,
+"tags": {
+"name": "El Carmelo",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060701,
+"lat": 11.9044327,
+"lon": -70.1778317,
+"tags": {
+"name": "Valle Verde",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060702,
+"lat": 11.8973989,
+"lon": -70.1857281,
+"tags": {
+"name": "Los Pozones",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060703,
+"lat": 11.8972939,
+"lon": -70.1991606,
+"tags": {
+"name": "San Antonio",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060704,
+"lat": 11.8862494,
+"lon": -70.1512242,
+"tags": {
+"name": "La Pastora",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060705,
+"lat": 11.8913728,
+"lon": -70.1426411,
+"tags": {
+"name": "Santa Rosalía",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060706,
+"lat": 11.8844436,
+"lon": -70.1730681,
+"tags": {
+"name": "Sabana Grande",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060707,
+"lat": 11.8874463,
+"lon": -70.1829171,
+"tags": {
+"name": "La Sabaneta",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060708,
+"lat": 11.8483356,
+"lon": -70.1096606,
+"tags": {
+"name": "San Rafael",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060709,
+"lat": 11.8642221,
+"lon": -70.130539,
+"tags": {
+"name": "El Guayacanal",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060710,
+"lat": 11.8499842,
+"lon": -70.1725102,
+"tags": {
+"name": "Cubiano",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060711,
+"lat": 11.8296341,
+"lon": -70.1616526,
+"tags": {
+"name": "San Carlos",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060712,
+"lat": 11.8233544,
+"lon": -70.1809645,
+"tags": {
+"name": "Cumajacoa",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060713,
+"lat": 11.8173686,
+"lon": -70.2132797,
+"tags": {
+"name": "Coduto",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060714,
+"lat": 11.8053547,
+"lon": -70.2071214,
+"tags": {
+"name": "Jayana",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060715,
+"lat": 11.8363756,
+"lon": -70.2252531,
+"tags": {
+"name": "El Rosario",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060716,
+"lat": 11.8524097,
+"lon": -70.2055442,
+"tags": {
+"name": "El Tacal",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060717,
+"lat": 11.8835407,
+"lon": -70.2029157,
+"tags": {
+"name": "Oropopo",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060718,
+"lat": 11.9057345,
+"lon": -70.2083874,
+"tags": {
+"name": "Hoyito Arriba",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060719,
+"lat": 11.9095767,
+"lon": -70.2119815,
+"tags": {
+"name": "Las Tres Marías",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060720,
+"lat": 11.9031834,
+"lon": -70.2252531,
+"tags": {
+"name": "El Hoyito",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060722,
+"lat": 11.8705533,
+"lon": -70.2338791,
+"tags": {
+"name": "El Hoyo",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060723,
+"lat": 11.8621641,
+"lon": -70.287931,
+"tags": {
+"name": "El Pico",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060724,
+"lat": 11.8551082,
+"lon": -70.3007627,
+"tags": {
+"name": "Punta Salinas",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060725,
+"lat": 11.9395151,
+"lon": -70.270164,
+"tags": {
+"name": "Punta de Cocuy",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060726,
+"lat": 11.9803023,
+"lon": -70.2571392,
+"tags": {
+"name": "Punta de Jacuque",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060727,
+"lat": 12.1475639,
+"lon": -69.9051476,
+"tags": {
+"name": "Punta de Barco",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060728,
+"lat": 12.1411658,
+"lon": -69.9390292,
+"tags": {
+"name": "Piedras Negras",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060729,
+"lat": 12.1140403,
+"lon": -69.9867296,
+"tags": {
+"name": "El Zaíno",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060730,
+"lat": 12.1449837,
+"lon": -69.9810648,
+"tags": {
+"name": "La Ciénaga",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060732,
+"lat": 12.194339,
+"lon": -70.0147104,
+"tags": {
+"name": "Cabo San Román",
+"place": "hamlet",
+"source": "IGVSB",
+"wikidata": "Q5035036",
+"wikipedia": "es:Cabo San Román"
+}
+},
+{
+"type": "node",
+"id": 5506060733,
+"lat": 12.1858656,
+"lon": -70.0328207,
+"tags": {
+"name": "Bajo Aroa",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060734,
+"lat": 12.1726515,
+"lon": -70.0672388,
+"tags": {
+"name": "Morro de Chaure",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060735,
+"lat": 12.1243412,
+"lon": -70.0605655,
+"tags": {
+"name": "San Lorenzo",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060736,
+"lat": 12.1051866,
+"lon": -70.1000691,
+"tags": {
+"name": "El Vaquero",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060737,
+"lat": 12.1179844,
+"lon": -70.1172781,
+"tags": {
+"name": "Las Cruces",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060778,
+"lat": 12.1117849,
+"lon": -70.1449263,
+"tags": {
+"name": "Punta Macama",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060779,
+"lat": 12.1057426,
+"lon": -70.1400554,
+"tags": {
+"name": "Macama",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060780,
+"lat": 12.0974971,
+"lon": -70.1776171,
+"tags": {
+"alt_name": "Cusimu",
+"name": "Gusimu",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060781,
+"lat": 12.0906467,
+"lon": -70.1793337,
+"tags": {
+"name": "La California",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060782,
+"lat": 12.1049978,
+"lon": -70.1892686,
+"tags": {
+"name": "Punta El Infierno",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060783,
+"lat": 12.0834079,
+"lon": -70.2174103,
+"tags": {
+"name": "Punta Macolla",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060784,
+"lat": 12.0897445,
+"lon": -70.2037525,
+"tags": {
+"name": "La Macolla",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060785,
+"lat": 12.0688458,
+"lon": -70.177896,
+"tags": {
+"name": "Guadalajara",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060786,
+"lat": 12.0592772,
+"lon": -70.1603222,
+"tags": {
+"name": "Orejitas",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060787,
+"lat": 12.0263196,
+"lon": -70.1700318,
+"tags": {
+"name": "La Soledad",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060788,
+"lat": 12.0075463,
+"lon": -70.1473618,
+"tags": {
+"name": "Acaboa",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060789,
+"lat": 12.0077562,
+"lon": -70.1103473,
+"tags": {
+"name": "La Prueba",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060790,
+"lat": 12.0131816,
+"lon": -70.1144028,
+"tags": {
+"name": "San José de Acaboa",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060791,
+"lat": 12.0253018,
+"lon": -70.1203251,
+"tags": {
+"name": "La Vaca",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060792,
+"lat": 12.0405168,
+"lon": -70.1195741,
+"tags": {
+"name": "El Zaíno",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060793,
+"lat": 12.0440213,
+"lon": -70.0928378,
+"tags": {
+"name": "El Trompito",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060794,
+"lat": 12.094885,
+"lon": -70.085435,
+"tags": {
+"name": "El Brasil",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060795,
+"lat": 12.0790646,
+"lon": -70.08492,
+"tags": {
+"name": "La Prueba",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060796,
+"lat": 12.0652996,
+"lon": -70.1047469,
+"tags": {
+"name": "Mamonal",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060797,
+"lat": 12.0604734,
+"lon": -70.0920439,
+"tags": {
+"name": "San Antonio",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060798,
+"lat": 12.0684891,
+"lon": -70.072217,
+"tags": {
+"name": "Buenos Aires",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060799,
+"lat": 12.0630334,
+"lon": -70.0405026,
+"tags": {
+"name": "San Francisco",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060800,
+"lat": 12.0578713,
+"lon": -70.0502873,
+"tags": {
+"name": "Santa Rosa",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060801,
+"lat": 12.0491837,
+"lon": -70.0509739,
+"tags": {
+"name": "Cerro Sabana",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060802,
+"lat": 12.0462877,
+"lon": -70.0662089,
+"tags": {
+"name": "El Mirador",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060803,
+"lat": 12.0413562,
+"lon": -70.0645352,
+"tags": {
+"name": "Guaydabacos",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060804,
+"lat": 12.0316607,
+"lon": -70.0660587,
+"tags": {
+"name": "Las Queseras",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060810,
+"lat": 12.0187748,
+"lon": -70.0832892,
+"tags": {
+"name": "Miraflores",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060811,
+"lat": 12.0131082,
+"lon": -70.0794268,
+"tags": {
+"name": "El Variquí",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060812,
+"lat": 12.0144514,
+"lon": -70.0872803,
+"tags": {
+"name": "Villa Linda",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060813,
+"lat": 12.0113557,
+"lon": -70.0999296,
+"tags": {
+"name": "Piedras Grandes",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060814,
+"lat": 12.004566,
+"lon": -70.0933314,
+"tags": {
+"name": "Sabana Escondida",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060815,
+"lat": 11.9807956,
+"lon": -70.0513387,
+"tags": {
+"name": "San Rafael",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060816,
+"lat": 11.9798195,
+"lon": -70.0396228,
+"tags": {
+"name": "La Correría",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060817,
+"lat": 11.9940296,
+"lon": -70.0665522,
+"tags": {
+"name": "San Antonio de Acaboa",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060818,
+"lat": 12.001402,
+"lon": -70.0470311,
+"tags": {
+"name": "El Estanquecito",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060819,
+"lat": 12.0056049,
+"lon": -70.0485921,
+"tags": {
+"name": "Santa Rosalía",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060820,
+"lat": 12.0120588,
+"lon": -70.0466395,
+"tags": {
+"name": "El Silencio",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060921,
+"lat": 12.0231506,
+"lon": -70.0462854,
+"tags": {
+"name": "El Milagro",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060922,
+"lat": 12.0258054,
+"lon": -70.0334859,
+"tags": {
+"name": "Chivuche",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060923,
+"lat": 12.0185859,
+"lon": -70.0323272,
+"tags": {
+"name": "Punta de Cuestión",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060924,
+"lat": 12.0121217,
+"lon": -70.0247526,
+"tags": {
+"name": "El Centenario",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060925,
+"lat": 12.0087636,
+"lon": -70.009979,
+"tags": {
+"name": "Antuní",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060926,
+"lat": 11.995268,
+"lon": -70.0119424,
+"tags": {
+"name": "San Mateo",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060927,
+"lat": 11.9889187,
+"lon": -70.0062025,
+"tags": {
+"name": "San Antonio",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060928,
+"lat": 11.9864419,
+"lon": -69.9591673,
+"tags": {
+"name": "Cayerua",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060929,
+"lat": 12.0126831,
+"lon": -69.9774653,
+"tags": {
+"name": "Las Delicias",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060930,
+"lat": 12.0119433,
+"lon": -69.9869871,
+"tags": {
+"name": "Los Pozos",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060931,
+"lat": 12.0268338,
+"lon": -70.0138521,
+"tags": {
+"name": "San Joaquín",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060932,
+"lat": 12.0376837,
+"lon": -70.0152684,
+"tags": {
+"name": "Buena Vista",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060933,
+"lat": 12.0465816,
+"lon": -70.0123501,
+"tags": {
+"name": "San Clemente",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060934,
+"lat": 12.0518278,
+"lon": -70.0226069,
+"tags": {
+"name": "Paujicito",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060935,
+"lat": 12.0577874,
+"lon": -70.0252247,
+"tags": {
+"name": "Santa Lucía",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060936,
+"lat": 12.0666636,
+"lon": -70.0285936,
+"tags": {
+"name": "Cardón Grande",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060937,
+"lat": 12.0780154,
+"lon": -70.052433,
+"tags": {
+"name": "El Guayaquil",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060938,
+"lat": 12.0899333,
+"lon": -70.0574327,
+"tags": {
+"name": "El Cairo",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060939,
+"lat": 12.0842682,
+"lon": -70.0372839,
+"tags": {
+"name": "Miraflores",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060940,
+"lat": 12.0934792,
+"lon": -70.0266624,
+"tags": {
+"name": "El Carmelero",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060941,
+"lat": 12.1451516,
+"lon": -70.0386572,
+"tags": {
+"name": "Palmira",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060942,
+"lat": 12.1392988,
+"lon": -70.0075865,
+"tags": {
+"name": "El Imujo",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060943,
+"lat": 12.1119003,
+"lon": -70.0246453,
+"tags": {
+"name": "Las Quebraditas",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060944,
+"lat": 12.102564,
+"lon": -70.0191522,
+"tags": {
+"name": "Palmira",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060945,
+"lat": 12.1045992,
+"lon": -70.0070501,
+"tags": {
+"name": "La Urupagua",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060946,
+"lat": 12.0383552,
+"lon": -69.968319,
+"tags": {
+"name": "El Doral",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060947,
+"lat": 12.0535695,
+"lon": -69.9817729,
+"tags": {
+"name": "Villa Real",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060948,
+"lat": 12.0587107,
+"lon": -69.9894333,
+"tags": {
+"name": "San Antonio",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060949,
+"lat": 12.0632537,
+"lon": -69.9837685,
+"tags": {
+"name": "El Valentín",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060950,
+"lat": 12.0694648,
+"lon": -69.9956238,
+"tags": {
+"name": "Las Carmelitas",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060951,
+"lat": 12.1002771,
+"lon": -69.997716,
+"tags": {
+"name": "El Mamonal",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060952,
+"lat": 12.0936261,
+"lon": -69.9949265,
+"tags": {
+"name": "El Pozón",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060953,
+"lat": 12.0860517,
+"lon": -69.9898625,
+"tags": {
+"name": "Santa Elena",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060954,
+"lat": 12.0819601,
+"lon": -69.9849057,
+"tags": {
+"name": "La Loma",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060955,
+"lat": 12.0965005,
+"lon": -69.9714947,
+"tags": {
+"name": "Bajarigua",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060956,
+"lat": 12.0818972,
+"lon": -69.9667311,
+"tags": {
+"name": "San Juan",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060957,
+"lat": 12.0830932,
+"lon": -69.956528,
+"tags": {
+"name": "Santa María",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060958,
+"lat": 12.0956718,
+"lon": -69.9532771,
+"tags": {
+"name": "Curuca",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060959,
+"lat": 12.0972768,
+"lon": -69.9432349,
+"tags": {
+"name": "San Nicolás",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060960,
+"lat": 12.1036131,
+"lon": -69.9363041,
+"tags": {
+"name": "Las Brisas",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060961,
+"lat": 12.0983259,
+"lon": -69.9329782,
+"tags": {
+"name": "El Zamurito",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060962,
+"lat": 12.0921469,
+"lon": -69.9329889,
+"tags": {
+"name": "San Antonio",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060963,
+"lat": 12.1030886,
+"lon": -69.8939681,
+"tags": {
+"name": "Las Cumaraguas",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060964,
+"lat": 12.1060993,
+"lon": -69.8850525,
+"tags": {
+"name": "Mata Gorda",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060965,
+"lat": 12.0956193,
+"lon": -69.8779822,
+"tags": {
+"name": "Don Juan",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060966,
+"lat": 12.0841738,
+"lon": -69.8724246,
+"tags": {
+"name": "Yaima",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060967,
+"lat": 12.0828466,
+"lon": -69.9259293,
+"tags": {
+"name": "San Francisco",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060980,
+"lat": 12.0537584,
+"lon": -69.9107266,
+"tags": {
+"name": "Cerro El Alto",
+"natural": "peak",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060981,
+"lat": 12.068699,
+"lon": -69.9304676,
+"tags": {
+"name": "El Alto",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060982,
+"lat": 12.0488164,
+"lon": -69.9402094,
+"tags": {
+"name": "Jurujurebo",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060983,
+"lat": 12.0560666,
+"lon": -69.9312079,
+"tags": {
+"name": "Barrialito",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060984,
+"lat": 12.0413562,
+"lon": -69.9346626,
+"tags": {
+"name": "Conejalito",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060985,
+"lat": 12.0137168,
+"lon": -69.944973,
+"tags": {
+"name": "Cerro Pelón",
+"natural": "peak",
+"source": "IGVSB",
+"wikidata": "Q31551652"
+}
+},
+{
+"type": "node",
+"id": 5506060986,
+"lat": 12.0262147,
+"lon": -69.9299312,
+"tags": {
+"name": "Cerro Pelón",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060987,
+"lat": 12.0119119,
+"lon": -69.9208975,
+"tags": {
+"name": "Miramar",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060988,
+"lat": 12.0029709,
+"lon": -69.9197388,
+"tags": {
+"name": "Cumairebo",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506060989,
+"lat": 12.0324372,
+"lon": -69.8636055,
+"tags": {
+"name": "Santa Rita",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061136,
+"lat": 11.9813308,
+"lon": -69.9113274,
+"tags": {
+"name": "Balsamar",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061137,
+"lat": 11.991322,
+"lon": -69.8787117,
+"tags": {
+"name": "Sibarigua",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061138,
+"lat": 11.9939666,
+"lon": -69.8645497,
+"tags": {
+"name": "San Pedro",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061139,
+"lat": 11.9722209,
+"lon": -69.8306251,
+"tags": {
+"name": "Pedregalito",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061140,
+"lat": 11.9748028,
+"lon": -69.8868656,
+"tags": {
+"name": "Santa Cruz",
+"place": "village",
+"source": "IGVSB;local knowledge;gps"
+}
+},
+{
+"type": "node",
+"id": 5506061141,
+"lat": 11.9596681,
+"lon": -69.8420191,
+"tags": {
+"name": "Buchal",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061142,
+"lat": 11.9404388,
+"lon": -69.8866511,
+"tags": {
+"name": "Guaquira Arriba",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061143,
+"lat": 11.9319258,
+"lon": -69.8932171,
+"tags": {
+"name": "Guaquira Abajo",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061144,
+"lat": 11.9140488,
+"lon": -69.877553,
+"tags": {
+"name": "Rosa Matuto",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061145,
+"lat": 11.9031519,
+"lon": -69.8820591,
+"tags": {
+"name": "La Falda",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061146,
+"lat": 11.9324402,
+"lon": -69.8631549,
+"tags": {
+"name": "El Paují",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061147,
+"lat": 11.9208617,
+"lon": -69.8638308,
+"tags": {
+"name": "La Idea",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061148,
+"lat": 11.9303828,
+"lon": -69.8117209,
+"tags": {
+"name": "El Chipero",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061149,
+"lat": 11.9106475,
+"lon": -69.8148966,
+"tags": {
+"name": "Barabara",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061150,
+"lat": 11.8187968,
+"lon": -69.8602796,
+"tags": {
+"name": "Casa Pilatos",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061151,
+"lat": 11.9049576,
+"lon": -69.8509026,
+"tags": {
+"name": "Charaima",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061152,
+"lat": 11.8747425,
+"lon": -69.8465896,
+"tags": {
+"name": "Sisibauco",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061153,
+"lat": 11.8764959,
+"lon": -69.8648608,
+"tags": {
+"name": "Miraca",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061154,
+"lat": 11.8497532,
+"lon": -69.8574901,
+"tags": {
+"name": "Maquigua",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061155,
+"lat": 11.7682595,
+"lon": -69.7857893,
+"tags": {
+"name": "Las Carretillas",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061156,
+"lat": 11.7534284,
+"lon": -69.8061848,
+"tags": {
+"name": "Cividual",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061157,
+"lat": 11.6682288,
+"lon": -69.8739695,
+"tags": {
+"name": "Punta Prudencio",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061158,
+"lat": 11.6846587,
+"lon": -69.8525789,
+"tags": {
+"name": "Punta La Huesa",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061159,
+"lat": 11.677748,
+"lon": -69.8231364,
+"tags": {
+"name": "Punta La Tasajera",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061160,
+"lat": 11.6854179,
+"lon": -69.8031378,
+"tags": {
+"name": "Punta Cabecera",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061161,
+"lat": 11.6752054,
+"lon": -69.7986746,
+"tags": {
+"name": "El Bajo de Supi",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061162,
+"lat": 11.6459737,
+"lon": -69.7828174,
+"tags": {
+"name": "Punta Tembladal",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061163,
+"lat": 11.6277523,
+"lon": -69.7760797,
+"tags": {
+"name": "Punta Fidelino",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061164,
+"lat": 11.6259028,
+"lon": -69.7379065,
+"tags": {
+"name": "Coduto",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061165,
+"lat": 11.6159193,
+"lon": -69.7687197,
+"tags": {
+"name": "Punta Coduto",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061166,
+"lat": 11.8256856,
+"lon": -69.8263121,
+"tags": {
+"name": "Tura",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061167,
+"lat": 11.8314297,
+"lon": -69.8426628,
+"tags": {
+"name": "El Carrizal",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061168,
+"lat": 11.8027607,
+"lon": -69.851718,
+"tags": {
+"name": "La Aguada",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061169,
+"lat": 11.7679654,
+"lon": -69.8494435,
+"tags": {
+"name": "Estanquecitos de Los Taques",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061170,
+"lat": 11.7974152,
+"lon": -69.8498083,
+"tags": {
+"name": "Loma de Miramar",
+"natural": "peak",
+"source": "IGVSB",
+"wikidata": "Q31399791"
+}
+},
+{
+"type": "node",
+"id": 5506061171,
+"lat": 11.7841401,
+"lon": -69.8802782,
+"tags": {
+"name": "Cerro Tausabana",
+"natural": "peak",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061172,
+"lat": 11.7864297,
+"lon": -69.8647428,
+"tags": {
+"name": "Cerro Colorado",
+"natural": "peak",
+"source": "IGVSB",
+"wikidata": "Q31561050"
+}
+},
+{
+"type": "node",
+"id": 5506061173,
+"lat": 11.8004293,
+"lon": -69.9409282,
+"tags": {
+"name": "Siraba",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061174,
+"lat": 11.7620992,
+"lon": -69.8999816,
+"tags": {
+"name": "El Rodeo",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061175,
+"lat": 11.76973,
+"lon": -69.9242878,
+"tags": {
+"name": "El Cerrito",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061176,
+"lat": 11.7830268,
+"lon": -69.9362397,
+"tags": {
+"name": "Divacoa",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061177,
+"lat": 11.783993,
+"lon": -69.9250174,
+"tags": {
+"name": "El Cujisal",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061178,
+"lat": 11.7921404,
+"lon": -69.9152367,
+"tags": {
+"name": "Portachuelo",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061179,
+"lat": 11.843978,
+"lon": -69.8963499,
+"tags": {
+"name": "Cerro Capuana",
+"natural": "peak",
+"source": "IGVSB",
+"wikidata": "Q31398787"
+}
+},
+{
+"type": "node",
+"id": 5506061180,
+"lat": 11.8137141,
+"lon": -69.9006307,
+"tags": {
+"name": "Cruz Verde",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061181,
+"lat": 11.8062579,
+"lon": -69.9069286,
+"tags": {
+"name": "Machuruca",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061182,
+"lat": 11.8226718,
+"lon": -69.8904705,
+"tags": {
+"name": "Maitiruma",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061261,
+"lat": 11.8327213,
+"lon": -69.9270773,
+"tags": {
+"name": "Pilancón",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061262,
+"lat": 11.8425394,
+"lon": -69.9264979,
+"tags": {
+"name": "Misaray",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061263,
+"lat": 11.8524307,
+"lon": -69.9388683,
+"tags": {
+"name": "Cujisal",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061279,
+"lat": 11.8572187,
+"lon": -69.9008882,
+"tags": {
+"name": "Matividiro",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061280,
+"lat": 11.8702068,
+"lon": -69.9226248,
+"tags": {
+"name": "La Pitahaya",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061281,
+"lat": 11.874879,
+"lon": -69.8991823,
+"tags": {
+"name": "Jariaca",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061282,
+"lat": 11.8676449,
+"lon": -69.8913503,
+"tags": {
+"name": "Maicara",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061283,
+"lat": 11.9123692,
+"lon": -69.9390292,
+"tags": {
+"name": "La Ciénaga",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061284,
+"lat": 11.9152035,
+"lon": -69.9237514,
+"tags": {
+"name": "Sacuragua",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061285,
+"lat": 11.9594371,
+"lon": -70.0583554,
+"tags": {
+"name": "Buenos Aires",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061286,
+"lat": 11.9652203,
+"lon": -70.0490534,
+"tags": {
+"name": "La Selva",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061287,
+"lat": 11.9739002,
+"lon": -70.0243986,
+"tags": {
+"name": "San Evaristo",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061288,
+"lat": 11.9842275,
+"lon": -69.9827385,
+"tags": {
+"name": "La Florida",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061289,
+"lat": 11.9775316,
+"lon": -69.9881458,
+"tags": {
+"name": "Buenevara",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061290,
+"lat": 11.9692612,
+"lon": -69.9601865,
+"tags": {
+"name": "Azaro",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061291,
+"lat": 11.9400399,
+"lon": -69.9283219,
+"tags": {
+"name": "Cuabana",
+"place": "suburb",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061292,
+"lat": 11.9613369,
+"lon": -69.9810112,
+"tags": {
+"name": "Cerro Cano",
+"natural": "peak",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061293,
+"lat": 11.9343716,
+"lon": -69.9876309,
+"tags": {
+"name": "San José de Cocodite",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061294,
+"lat": 11.9253861,
+"lon": -70.0038743,
+"tags": {
+"name": "San Carlos",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061295,
+"lat": 11.944501,
+"lon": -70.0013638,
+"tags": {
+"name": "El Barbasco",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061296,
+"lat": 11.9431889,
+"lon": -70.0126291,
+"tags": {
+"name": "Piedra Honda",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061297,
+"lat": 11.9499066,
+"lon": -70.0435925,
+"tags": {
+"name": "Santa Inés",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061298,
+"lat": 11.9441231,
+"lon": -70.0462532,
+"tags": {
+"name": "La Trinidad",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061299,
+"lat": 11.9426746,
+"lon": -70.0587309,
+"tags": {
+"name": "Montalbán",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061300,
+"lat": 11.9322197,
+"lon": -70.0759828,
+"tags": {
+"name": "El Socorro",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061301,
+"lat": 11.9146787,
+"lon": -70.0589132,
+"tags": {
+"name": "Las Clavellinas",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061302,
+"lat": 11.9022911,
+"lon": -70.0632477,
+"tags": {
+"name": "Sicaname",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061303,
+"lat": 11.8829948,
+"lon": -70.0670993,
+"tags": {
+"name": "Amaraya",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061304,
+"lat": 11.8721807,
+"lon": -69.9877167,
+"tags": {
+"capital": "7",
+"name": "Adaure",
+"place": "town",
+"source": "IGVSB",
+"wikidata": "Q113833252"
+}
+},
+{
+"type": "node",
+"id": 5506061305,
+"lat": 11.8564942,
+"lon": -69.9661517,
+"tags": {
+"name": "Balsamar",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061306,
+"lat": 11.8426864,
+"lon": -69.9536634,
+"tags": {
+"name": "Guacurebo",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061307,
+"lat": 11.8406913,
+"lon": -69.9657548,
+"tags": {
+"name": "La Poza",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061308,
+"lat": 11.834937,
+"lon": -69.9719131,
+"tags": {
+"name": "La Bomba",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061309,
+"lat": 11.8417939,
+"lon": -69.9902487,
+"tags": {
+"name": "Los Llanitos",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061310,
+"lat": 11.8228923,
+"lon": -70.008359,
+"tags": {
+"name": "San Nicolás",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061311,
+"lat": 11.8747845,
+"lon": -70.0258255,
+"tags": {
+"name": "Cerro Platero",
+"natural": "peak",
+"source": "IGVSB",
+"wikidata": "Q31592185"
+}
+},
+{
+"type": "node",
+"id": 5506061312,
+"lat": 11.8496272,
+"lon": -70.0462747,
+"tags": {
+"name": "Cerro La Miraba",
+"natural": "peak",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061313,
+"lat": 11.8561057,
+"lon": -70.0798667,
+"tags": {
+"name": "El Román",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061314,
+"lat": 11.8374571,
+"lon": -70.0740194,
+"tags": {
+"name": "Mamonal",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061315,
+"lat": 11.8559062,
+"lon": -70.0206113,
+"tags": {
+"name": "Barunú",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061316,
+"lat": 11.8267568,
+"lon": -70.0268769,
+"tags": {
+"name": "La Negrita",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061317,
+"lat": 11.8413109,
+"lon": -70.0426269,
+"tags": {
+"name": "Tacaduto",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061318,
+"lat": 11.8336349,
+"lon": -70.053978,
+"tags": {
+"name": "La Miraba",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061319,
+"lat": 11.8268618,
+"lon": -70.0732041,
+"tags": {
+"name": "Guacujún",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061320,
+"lat": 11.8112567,
+"lon": -70.0624109,
+"tags": {
+"name": "Teteguacure",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061321,
+"lat": 11.7898325,
+"lon": -70.0779247,
+"tags": {
+"name": "Yabuquiva",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061322,
+"lat": 11.8163605,
+"lon": -69.99542,
+"tags": {
+"name": "Jarayadito",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061323,
+"lat": 11.7948841,
+"lon": -69.9876738,
+"tags": {
+"name": "Tumarusa",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061324,
+"lat": 11.7982763,
+"lon": -69.97437,
+"tags": {
+"name": "Varacara",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061325,
+"lat": 11.7864506,
+"lon": -69.9560237,
+"tags": {
+"is_in": "Santa Ana",
+"name": "Barlovento",
+"place": "suburb",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061326,
+"lat": 11.7744984,
+"lon": -69.9739838,
+"tags": {
+"name": "La Sabaneta",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061327,
+"lat": 11.7567896,
+"lon": -69.9554873,
+"tags": {
+"name": "La Rinconada",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061328,
+"lat": 11.7905046,
+"lon": -70.022639,
+"tags": {
+"name": "Cerro Arajó",
+"natural": "peak",
+"source": "IGVSB",
+"wikidata": "Q31398854"
+}
+},
+{
+"type": "node",
+"id": 5506061329,
+"lat": 11.8024982,
+"lon": -70.014925,
+"tags": {
+"name": "Abudare",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061330,
+"lat": 11.7832578,
+"lon": -70.0170922,
+"tags": {
+"name": "Davaduvare",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061331,
+"lat": 11.7739102,
+"lon": -70.0247956,
+"tags": {
+"name": "Santa Cruz",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061332,
+"lat": 11.762115,
+"lon": -70.0173068,
+"tags": {
+"name": "Caseto",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061333,
+"lat": 11.7316005,
+"lon": -70.0213087,
+"tags": {
+"name": "Santa Fe",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061334,
+"lat": 11.7270571,
+"lon": -70.032531,
+"tags": {
+"name": "Palmero",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061335,
+"lat": 11.7271359,
+"lon": -70.0410283,
+"tags": {
+"name": "Cienaguita",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061336,
+"lat": 11.7626927,
+"lon": -70.0611878,
+"tags": {
+"name": "San Antonio",
+"place": "Guaricure",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061337,
+"lat": 11.7622042,
+"lon": -70.1057339,
+"tags": {
+"name": "Santa Rita",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061338,
+"lat": 11.7470525,
+"lon": -70.1067531,
+"tags": {
+"name": "Quitaire",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061416,
+"lat": 11.7273985,
+"lon": -70.1260758,
+"tags": {
+"name": "San Marcos",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061417,
+"lat": 11.7084996,
+"lon": -70.1193273,
+"tags": {
+"name": "Bella Vista",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061418,
+"lat": 11.7083105,
+"lon": -70.1322663,
+"tags": {
+"name": "San Joaquín",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061419,
+"lat": 11.734962,
+"lon": -70.1251531,
+"tags": {
+"name": "La Trinidad",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061420,
+"lat": 11.7235642,
+"lon": -70.1222777,
+"tags": {
+"name": "San Antonio",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061421,
+"lat": 11.7431764,
+"lon": -70.0794482,
+"tags": {
+"name": "Sarinao",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061493,
+"lat": 11.7272725,
+"lon": -70.0802422,
+"tags": {
+"name": "Cerro Atravesado",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061494,
+"lat": 11.642753,
+"lon": -70.1276636,
+"tags": {
+"name": "Caujarito",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061495,
+"lat": 11.6341152,
+"lon": -70.1332051,
+"tags": {
+"name": "San Ramón",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061496,
+"lat": 11.6226661,
+"lon": -70.1413751,
+"tags": {
+"name": "Tiguadare",
+"place": "village",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061497,
+"lat": 11.6274161,
+"lon": -70.1247668,
+"tags": {
+"name": "La Esperanza",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061498,
+"lat": 11.6396899,
+"lon": -70.0693846,
+"tags": {
+"name": "Matacán",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061499,
+"lat": 11.6611363,
+"lon": -69.9653256,
+"tags": {
+"name": "Punta Miramar",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061500,
+"lat": 11.6630907,
+"lon": -69.9550045,
+"tags": {
+"name": "Punta del Potrero",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061501,
+"lat": 11.6576373,
+"lon": -69.9441791,
+"tags": {
+"name": "Punta Cocuy",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061502,
+"lat": 11.6488529,
+"lon": -69.9250388,
+"tags": {
+"name": "Punta Cuara",
+"natural": "cape",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061503,
+"lat": 11.7006308,
+"lon": -69.9567747,
+"tags": {
+"name": "El Cayude",
+"place": "town",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 5506061504,
+"lat": 11.6765713,
+"lon": -69.9110055,
+"tags": {
+"name": "San Antonio",
+"place": "locality",
+"source": "IGVSB"
+}
+},
+{
+"type": "node",
+"id": 6590135945,
+"lat": 11.8532886,
+"lon": -69.8083203,
+"tags": {
+"alt_name": "La Bocaina",
+"name": "Bocaina",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 7262668353,
+"lat": 11.9402551,
+"lon": -69.8087098,
+"tags": {
+"capital": "7",
+"name": "Adícora",
+"place": "town",
+"wikidata": "Q2825491"
+}
+},
+{
+"type": "node",
+"id": 7899485808,
+"lat": 11.5618674,
+"lon": -70.1351828,
+"tags": {
+"name": "Punta Caimán",
+"natural": "cape",
+"source": "SAGECAN 1994"
+}
+},
+{
+"type": "node",
+"id": 9088684694,
+"lat": 11.7195198,
+"lon": -70.1759434,
+"tags": {
+"name": "Santa Elena",
+"place": "suburb"
+}
+},
+{
+"type": "node",
+"id": 9089615981,
+"lat": 11.7060338,
+"lon": -69.7761456,
+"tags": {
+"name": "Retorno de Adícora",
+"place": "locality"
+}
+},
+{
+"type": "node",
+"id": 9089615982,
+"lat": 11.7016576,
+"lon": -69.8690763,
+"tags": {
+"name": "Retorno de Bella Vista",
+"place": "locality"
+}
+},
+{
+"type": "node",
+"id": 9089615983,
+"lat": 11.6949173,
+"lon": -69.9569316,
+"tags": {
+"name": "Retorno de Cayude",
+"place": "locality"
+}
+},
+{
+"type": "node",
+"id": 9089615984,
+"lat": 11.6899141,
+"lon": -70.0234181,
+"tags": {
+"name": "Retorno de Santa Fe",
+"place": "locality"
+}
+},
+{
+"type": "node",
+"id": 9089615985,
+"lat": 11.6865273,
+"lon": -70.0675479,
+"tags": {
+"name": "Retorno de Sarinao",
+"place": "locality"
+}
+},
+{
+"type": "node",
+"id": 9528184956,
+"lat": 11.5630034,
+"lon": -69.7112326,
+"tags": {
+"name": "La Enramada",
+"place": "locality"
+}
+},
+{
+"type": "node",
+"id": 9699110284,
+"lat": 11.6871322,
+"lon": -70.2054514,
+"tags": {
+"name": "Centro",
+"place": "suburb"
+}
+},
+{
+"type": "node",
+"id": 9737709128,
+"lat": 11.6684216,
+"lon": -70.1916288,
+"tags": {
+"name": "Distribuidor Guaranao",
+"place": "locality"
+}
+},
+{
+"type": "node",
+"id": 9737730698,
+"lat": 11.6936698,
+"lon": -70.2179801,
+"tags": {
+"capital": "7",
+"name": "Carirubana",
+"place": "suburb"
+}
+},
+{
+"type": "node",
+"id": 9737732088,
+"lat": 11.7937619,
+"lon": -70.1984033,
+"tags": {
+"name": "Nueva Jayama",
+"place": "village"
+}
+},
+{
+"type": "node",
+"id": 9747183813,
+"lat": 11.8766622,
+"lon": -70.0234263,
+"tags": {
+"name": "Paraguaná",
+"place": "region",
+"source": "Conocimiento local (2022)"
+}
+},
+{
+"type": "node",
+"id": 10751921804,
+"lat": 12.1726955,
+"lon": -69.9420196,
+"tags": {
+"name": "Playa Angosta",
+"natural": "beach"
+}
+},
+{
+"type": "node",
+"id": 10751921897,
+"lat": 12.1029534,
+"lon": -69.88352,
+"tags": {
+"name": "Playa Ruinas Medano Caribe",
+"natural": "beach"
+}
+},
+{
+"type": "node",
+"id": 10751921901,
+"lat": 12.0841148,
+"lon": -69.8699176,
+"tags": {
+"name": "Playa Yaima",
+"natural": "beach"
+}
+},
+{
+"type": "node",
+"id": 10751921918,
+"lat": 12.0489851,
+"lon": -69.852577,
+"tags": {
+"name": "Playa Tiraya",
+"natural": "beach"
+}
+},
+{
+"type": "node",
+"id": 10751921920,
+"lat": 12.0189909,
+"lon": -69.8465009,
+"tags": {
+"name": "Laguna Boca de Caño",
+"natural": "bay"
+}
+},
+{
+"type": "node",
+"id": 10751921922,
+"lat": 12.0055258,
+"lon": -69.8277511,
+"tags": {
+"name": "Playa El Supi",
+"natural": "beach"
+}
+},
+{
+"type": "node",
+"id": 10754619952,
+"lat": 11.720272,
+"lon": -69.7686629,
+"tags": {
+"name": "Playa El Tamborón",
+"natural": "beach"
+}
+},
+{
+"type": "node",
+"id": 11141258801,
+"lat": 11.5535514,
+"lon": -69.7144747,
+"tags": {
+"name": "La Rojiza",
+"place": "locality",
+"source:name": "local knowledge",
+"source:position": "Maxar (2023)"
+}
+},
+{
+"type": "node",
+"id": 11527564829,
+"lat": 12.1944309,
+"lon": -70.0152252,
+"tags": {
+"name": "Cabo San Román",
+"natural": "cape"
+}
+},
+{
+"type": "node",
+"id": 13632913923,
+"lat": 11.9409206,
+"lon": -69.8122341,
+"tags": {
+"name": "Urbanización Monseñor Pulido Méndez",
+"place": "neighbourhood"
+}
+},
+{
+"type": "node",
+"id": 13706197822,
+"lat": 11.9500064,
+"lon": -69.8133957,
+"tags": {
+"name": "Sector Las Cabañas",
+"place": "neighbourhood"
+}
+},
+{
+"type": "way",
+"id": 93680479,
+"center": {
+"lat": 11.6824981,
+"lon": -70.1958681
+},
+"tags": {
+"name": "Laguna de Guaranao",
+"natural": "water",
+"water": "lake",
+"wikidata": "Q32014924",
+"wikipedia": "es:Parque metropolitano Laguna de Guaranao"
+}
+},
+{
+"type": "way",
+"id": 96900646,
+"center": {
+"lat": 11.9421241,
+"lon": -69.8029387
+},
+"tags": {
+"leisure": "park",
+"name": "Plaza Bolívar",
+"natural": "grass"
+}
+},
+{
+"type": "way",
+"id": 206524570,
+"center": {
+"lat": 11.649264,
+"lon": -70.2216174
+},
+"tags": {
+"addr:city": "Punta Cardon",
+"addr:postcode": "4154",
+"addr:street": "Avenida 12",
+"name": "Plaza Bolívar",
+"place": "square"
+}
+},
+{
+"type": "way",
+"id": 486618880,
+"center": {
+"lat": 11.7964775,
+"lon": -70.2554831
+},
+"tags": {
+"name": "Muelle AstiNave",
+"waterway": "boatyard"
+}
+},
+{
+"type": "way",
+"id": 489698377,
+"center": {
+"lat": 11.7030076,
+"lon": -69.8380564
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 489986272,
+"center": {
+"lat": 11.7010879,
+"lon": -69.8525592
+},
+"tags": {
+"intermittent": "yes",
+"name": "Quebrada Navarrete",
+"waterway": "stream"
+}
+},
+{
+"type": "way",
+"id": 490365293,
+"center": {
+"lat": 11.7105272,
+"lon": -69.8551518
+},
+"tags": {
+"name": "Hato San Nicolás",
+"place": "farm"
+}
+},
+{
+"type": "way",
+"id": 490365294,
+"center": {
+"lat": 11.709973,
+"lon": -69.8506223
+},
+"tags": {
+"name": "Hato El Conde",
+"place": "farm"
+}
+},
+{
+"type": "way",
+"id": 490369206,
+"center": {
+"lat": 11.6961185,
+"lon": -69.8376701
+},
+"tags": {
+"intermittent": "yes",
+"name": "Laguna Estacionaria El Socorro",
+"natural": "water",
+"water": "pond"
+}
+},
+{
+"type": "way",
+"id": 701724903,
+"center": {
+"lat": 11.927676,
+"lon": -69.8082658
+},
+"tags": {
+"name": "Playa Sur Adícora",
+"natural": "beach"
+}
+},
+{
+"type": "way",
+"id": 731763927,
+"center": {
+"lat": 11.9393036,
+"lon": -69.8054495
+},
+"tags": {
+"check_date": "2026-03-11",
+"contact:instagram": "badellkiteclub",
+"contact:whatsapp": "+17864482819",
+"leisure": "sports_centre",
+"name": "Badell Kite Club",
+"natural": "grass",
+"sport": "kitesurfing;windwurfing;wingfoil;wind_sports",
+"website": "https://wa.me/17864482819"
+}
+},
+{
+"type": "way",
+"id": 731800251,
+"center": {
+"lat": 11.9500811,
+"lon": -69.8110276
+},
+"tags": {
+"name": "Playa Norte Adícora",
+"name:en": "North Beach",
+"natural": "beach"
+}
+},
+{
+"type": "way",
+"id": 1156172781,
+"center": {
+"lat": 12.1719704,
+"lon": -69.9397834
+},
+"tags": {
+"name": "Playa De Tumatey",
+"natural": "beach"
+}
+},
+{
+"type": "way",
+"id": 1240701973,
+"center": {
+"lat": 12.1843747,
+"lon": -70.0369053
+},
+"tags": {
+"name": "Médanos de Cabo San Román",
+"natural": "dune",
+"tourism": "attraction"
+}
+},
+{
+"type": "way",
+"id": 1372446166,
+"center": {
+"lat": 11.7716281,
+"lon": -70.2402142
+},
+"tags": {
+"name": "Amuay",
+"place": "city"
+}
+},
+{
+"type": "way",
+"id": 1374785332,
+"center": {
+"lat": 11.7064531,
+"lon": -70.1864005
+},
+"tags": {
+"name": "Punto Fijo",
+"place": "city"
+}
+},
+{
+"type": "way",
+"id": 1374787619,
+"center": {
+"lat": 11.7602918,
+"lon": -70.1902799
+},
+"tags": {
+"name": "Judibana",
+"place": "city"
+}
+},
+{
+"type": "way",
+"id": 1374787919,
+"center": {
+"lat": 11.7788863,
+"lon": -70.1797596
+},
+"tags": {
+"name": "Guanadito",
+"place": "city"
+}
+},
+{
+"type": "way",
+"id": 1374789542,
+"center": {
+"lat": 11.9470291,
+"lon": -69.8143057
+},
+"tags": {
+"capital": "7",
+"name": "Adícora",
+"place": "town",
+"wikidata": "Q2825491"
+}
+},
+{
+"type": "way",
+"id": 1487061306,
+"center": {
+"lat": 11.9407958,
+"lon": -69.8125851
+},
+"tags": {
+"name": "Plaza Monseñor Pulido Méndez",
+"place": "square"
+}
+},
+{
+"type": "way",
+"id": 1489639316,
+"center": {
+"lat": 12.1000964,
+"lon": -69.8798867
+},
+"tags": {
+"name": "Playa Mata Gorda",
+"natural": "beach"
+}
+},
+{
+"type": "relation",
+"id": 2269792,
+"center": {
+"lat": 11.2741903,
+"lon": -69.7093443
+},
+"tags": {
+"ISO3166-2": "VE-I",
+"admin_level": "4",
+"border_type": "entidad federal",
+"boundary": "administrative",
+"name": "Falcón",
+"name:en": "Falcon State",
+"name:es": "Estado Falcón",
+"name:ja": "ファルコン州",
+"place": "state",
+"population": "902847",
+"population:date": "2011",
+"ref": "FA",
+"source:population": "INE (2014)",
+"source:ref": "INTT (2011)",
+"type": "boundary",
+"wikidata": "Q202071",
+"wikipedia": "es:Estado Falcón"
+}
+},
+{
+"type": "relation",
+"id": 9992524,
+"center": {
+"lat": 11.6667645,
+"lon": -71.0556677
+},
+"tags": {
+"name": "Golfo de Venezuela",
+"name:cs": "Venezuelský záliv",
+"name:da": "Venezuelabugten",
+"name:de": "Golf von Venezuela",
+"name:en": "Gulf of Venezuela",
+"name:es": "Golfo de Venezuela",
+"name:fr": "Golfe de Venezuela",
+"name:nl": "Golf van Venezuela",
+"name:ru": "Венесуэльский залив",
+"name:sk": "Venezuelský záliv",
+"natural": "bay",
+"type": "multipolygon",
+"wikidata": "Q210305",
+"wikipedia": "es:Golfo de Venezuela"
+}
+},
+{
+"type": "relation",
+"id": 9993715,
+"center": {
+"lat": 11.5558883,
+"lon": -69.9741841
+},
+"tags": {
+"name": "Golfete de Coro",
+"natural": "bay",
+"type": "multipolygon"
+}
+},
+{
+"type": "relation",
+"id": 13524020,
+"center": {
+"lat": 11.9005198,
+"lon": -70.0316971
+},
+"tags": {
+"name": "Paraguaná Peninsula",
+"natural": "peninsula",
+"type": "multipolygon",
+"wikidata": "Q1851445",
+"wikipedia": "es:Península de Paraguaná"
+}
+}
+],
+"_curiana": {
+"region": "paraguana",
+"caja": [
+11.55,
+-70.35,
+12.25,
+-69.65
+],
+"descargado": "2026-09-07",
+"licencia": "ODbL 1.0 — © OpenStreetMap contributors",
+"consulta": "[out:json][timeout:180];\n(\n  nwr[\"name\"][\"place\"](11.55,-70.35,12.25,-69.65);\n  nwr[\"name\"][\"natural\"](11.55,-70.35,12.25,-69.65);\n  nwr[\"name\"][\"waterway\"](11.55,-70.35,12.25,-69.65);\n  nwr[\"name\"][\"landuse\"~\"salt_pond\"](11.55,-70.35,12.25,-69.65);\n);\nout center tags;"
+}
+}

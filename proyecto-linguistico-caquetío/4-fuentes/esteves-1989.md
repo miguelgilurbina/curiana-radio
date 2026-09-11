@@ -6,7 +6,7 @@ titulo: "Topónimos indígenas de Paraguaná y otros topónimos indígenas del e
 lugar_año: "Caracas, 1989"
 editor: Refinería de Amuay de Lagoven S.A.
 local: "fuentes_caquetios/Esteves_1989_Toponimos_Paraguana_1..6.pdf"
-capa_texto: no  # medido 2026-08-16: 250-450 chars/archivo, solo metadatos. El barrido se hizo por lectura de imagen; pasada de OCR de verificación pendiente
+capa_texto: ocr  # sin capa propia (medido 2026-08-16); OCR local con ocr_fuente.py desde 2026-09-06 (Esteves_1989_..._N.ocr.txt, pista no cita)
 estado_minado: parcial
 prioridad: alta
 medido: 2026-08-11
@@ -214,6 +214,28 @@ precontacto que la carta de Bastidas (1538), no más cerca.
 `3-mundo/asentamientos.yaml`. Lo que sí hace, y es mucho, es dar el **inventario
 de topónimos** y su ubicación — que es justo lo que [#92](https://github.com/miguelgilurbina/curiana-radio/issues/92)
 necesita para dejar de tener a Paraguaná vacía.
+
+### ⚠️ Y una segunda advertencia: el «caribe insular» es inferencia suya (2026-09-07)
+
+Miguel, paraguanero, no reconoce más ancestría que la caquetía, y preguntó de
+dónde saca Esteves su estrato «caribe insular». Del texto sale que es **parecido
+de sonido y consulta de vocabulario, sin documento**: Amuay «por su fonética
+pertenece al caribe insular, como batey, mamey, caney, carey» (p. 14), y esas
+cuatro son voces **taínas** del español general; Elegüey y Maragüey «voz taína,
+del caribe insular» (p. 35), o sea las dos etiquetas juntas por la -güey;
+Jamaica «tierra de los manantiales» (p. 46), la etimología de la isla, en un
+lugar que es «la casa grande de Jamaica», casi seguro hacienda; Maitiruma con
+mái e iruma sin cita (p. 49). Y la etiqueta está mal puesta: **el caribe insular
+de Breton es una lengua arahuaca** (iñeri) con préstamos caribes en el habla de
+los hombres, hermana del taíno y del caquetío. Una coincidencia con él es, casi
+siempre, parentesco de familia, no otro pueblo.
+
+B.6 lo cerró por el otro lado: [[oliver-1989-cap3-vecinos]] §3.2.4 no da ningún
+grupo de lengua caribe en Paraguaná ni en Falcón (medido: 0/5 de los topónimos).
+Veredicto y qué lo cerraría del todo: `6-fusion/oliver_324_caribes.yaml` §5.
+Las atribuciones cumanagotas (Caradacagua, Manare, el -cuar de Adícora) quedan
+en la misma cuarentena: Oliver pone a los cumanagotos en la costa central y
+oriental.
 
 ## Lo minado hasta ahora — 10 de 146 páginas
 
@@ -1102,7 +1124,7 @@ finales de cada lote y el Índice General (pp. 147-149):
 | **71** | **informantes orales** — nombre, pueblo, año de nacimiento | 3 |
 | **70-72** | **FUENTES BIBLIOGRÁFICAS** | 3 |
 | **73-80** | **APÉNDICE** — artículos ensayísticos | 4 |
-| **81-144** | **PARTE II — "otros topónimos indígenas del ESTADO FALCÓN"** | 4-6 |
+| **81-144** | **PARTE II — "otros topónimos indígenas del ESTADO FALCÓN"** | 4-6 | ✅ **MINADA el 2026-09-10** — 387 entradas, 139 con glosa; ver `6-fusion/esteves_parte2_falcon.yaml` |
 | 145-146 | biografía del autor | 6 |
 | ~147-154 | Resumen numerado (**413 topónimos**) e Índice General | 6 |
 
@@ -1320,6 +1342,134 @@ archivos con cita textual y número de página.
 > desde ahí al lexicón o al corpus hay que verificarlo contra la imagen** — ya
 > se detectó un caso donde el resumen automático convertía una conjetura
 > historiográfica en una mención de crónica (ver p. 78 arriba).
+
+## La campaña, lote 1 (2026-09-06) — los del mapa de Miguel
+
+Quince nombres del índice que Miguel tiene vistos en el mapa vivo del sector
+del Capubana entraron al canon (`2-lengua/toponimos.yaml`, ids 075-089), cada
+uno con la glosa de Esteves, su página y, donde la hay, la lectura de Miguel
+colgada en `lecturas`. El reparto por nivel y el detalle están en el canon y
+en `6-fusion/TOPONIMOS_POR_FUENTE.md`; el índice
+(`6-fusion/toponimos_esteves_indice.yaml`) los pasó a `ya_registrados`.
+
+Lo que dejó el lote, aparte de las entradas:
+
+- **El libro ya tiene capa de texto por OCR** (`ocr_fuente.py`, 300 dpi):
+  `fuentes_caquetios/Esteves_1989_Toponimos_Paraguana_N.ocr.txt`, con marcador
+  por página. El desfase pdf → impresa es **+6** en el PDF 1, **+25** en el 2 y
+  **+55** en el 3. Es OCR, no transcripción: sirve para llegar a la página; la
+  cita se comprueba en la imagen. Cuidado con las cabeceras en mayúscula:
+  Esteves escribe BUCHUHACO (con h) donde el mapa dice Buchuaco.
+- **Dos morfemas más con recurrencia**: `aco` 'dos, par' (Buchuhaco p. 24 y
+  Guachaco p. 38, choca con `gudamuen`) y `-dito` colectivo ya con cuatro
+  casos. Y `ure` 'raíz' sigue en conflicto con nuestro -ure ~ -are 'sitio de':
+  en Abudure las dos lecturas dan casi lo mismo.
+- **Esteves recoge etimologías populares y las relativiza él mismo** (Baraived
+  «vara y ved», Caseto < gaceta, Jacuque «¡jaca... huy!», Jadacaquiva «¡jaca...
+  quiba!»): entran como `etimologia-popular` con su veredicto, para que nadie
+  las re-investigue.
+- Un dato para la auditoría de tildes (#109): «en los topónimos indígenas de
+  Paraguaná casi no hay voces agudas» (p. 21, a propósito de Baraivede /
+  Baraivere).
+
+## Lotes 2, 3 y 4 (2026-09-07) — y la regla que salió de ellos
+
+- **Lote 2**: los cinco del «caribe insular», cerrados con B.6 (ver la
+  advertencia arriba): Amuay en C por el etnónimo del clan; Elegüey, Maragüey
+  y Jamaica descartados; Maitiruma ya estaba.
+- **Lote 3**: las ciudades de Castellanos con entrada aquí — Todariquiba
+  (p. 64: Esteves enmienda a Tubariquiba para que dé 'pedregal'), Miraca
+  (p. 52: «en lengua guaraúna es atarraya»; y **Arcaya 1556**: Santa Ana,
+  Moruy, Miraca y Cayeruba ya existían), Hurraque (p. 43, sin sitio). Las
+  demás (Zazárida, Carao, Tomodoré, Capatárida, Carona) van descartadas con
+  procedencia Castellanos y su nodo.
+- **Lote 4**: los ocho del mapa de Miguel que «no estaban» en este libro
+  **estaban con otra grafía**: Uarayadito = Jarayadito (p. 46, y Sarayadite en
+  1881), Davaduvare = Dabadubare (p. 37), Parunu = Barunú (p. 23), Cayerúa =
+  Cayeruba (p. 30, precolombino; Esteves llama a la grafía Cayerúa «nacida de
+  snobismo», y es la del mapa), Yabuquiva = Yauquiba (p. 67: el mapa conserva
+  la b del étimo yabo que la cabecera perdió; nivel A), Guacubero = Guacurebo
+  (p. 38). La regla, ya en la skill: permutar inicial (j~s~u~h), b~v~p, r~b y
+  terminación antes de dar un nombre por ausente. Y la de Miguel: **un nombre
+  que sigue vivo es dato**.
+- **Lote 5**: los nodos de la era 2. Moruy (p. 53: la etimología de merejuy
+  que Miguel había recogido «sin identificar» es esta página, palabra por
+  palabra; «los indios de Moruy eran los más belicosos de Paraguaná», contra el
+  «siempre pacíficos» de las crónicas), Chamuriana (p. 35: «antigua aldea
+  indígena en cuyas cercanías los españoles fundaron en 1538 el pueblo de
+  Santa Ana» — la fuente que le faltaba al nombre nativo del sitio) y Adícora,
+  que es el Jadícuar de Zavala (p. 14 y apéndice p. 73: el mismo nombre en dos
+  fuentes, con la atribución cumanagota del sufijo en cuarentena).
+- Las dos páginas dañadas por el OCR (30 y 52) se leyeron en la imagen
+  renderizada del PDF: es el camino cuando la línea que decide está borrosa.
+
+## Lote 7 (2026-09-07): el mapa vivo contra el libro
+
+**Criterio.** Los nombres de Paraguaná que el barrido OSM (`barrer_mapa.py`,
+[[osm-kaketiana]]) dejó como «nuevos» o como «aproximados»: 16 y 20. Miguel:
+«dale, procésalo».
+
+**Qué entró.** Nivel B: **Bariquí** (p. 22: *bara* + *quire* 'palo colorado',
+el árbol de la tinta; *quire* recurre en Sanajaquire, p. 58; Alvarado da la
+planta a los ayamanes). Nivel C, trece: Cumujacoa (p. 33, 'lugar de los
+zamuros' sobre Curumubacoa enmendado), Coabana (p. 31, *coa* + *bana*; «los
+vecinos dicen Cuabana», y el mapa también), Guacuira (p. 38, dos versiones
+orales con reserva; Martí escribió Guaimaguacuira), Caruca (p. 28, la paja de
+la torta de barro de los techos; recurre en Machuruca), Bibuche (p. 23, *buche*
+'melocacto'; Chibuche, Chivuche), Bajabaroa (p. 19, 'el caño de Baroa'; el
+mapa lo resegmentó en castellano: Bajo Aroa), Pitajaya (p. 56, voz taína del
+castellano por el susucure), Sabarigua y Sibidigual (pp. 57 y 60, el arbusto
+*sibidigua*), Chiguaral (p. 36, *chiguate*), Oripopo (p. 55, 'zamuro' andino
+según Esteves: estrato timote-cuica como lectura suya), Asaro (p. 17, ~ wayuu
+Sarosaro), Baracara (p. 19, *bara-*; Maracara en 1881). Descartados sin glosa:
+Guacujúa (p. 38), Tequeguacare (p. 62, tres formas), **Sisibauco** (p. 60: era
+el «[ilegible …Sisibaúco]» del índice y el mapa lo resolvió), Guarama (p. 41,
+«podría ser la misma Jayana»; y el mapa trae Nueva Jayama junto a Amuaicito).
+
+**Lo que el mapa dejó sin fuente**, registrado con coordenadas y deuda:
+Cumairebo (-ebo), Divacoa (-coa), Gusimu, Tabe, Urumare (-are), Pilancón, La
+Miraba. Y cuatro castellanos que el filtro no cazó: Villa Real, Golfete de
+Coro, La Macolla, Buchal (*buche* + -al).
+
+**Qué dejó.** Tres permutaciones nuevas para la skill: la **falsa
+segmentación castellana** (Bajabaroa → Bajo Aroa), la **ch- de la forma
+hablada** (Bibuche → Chibuche → Chivuche) y **u~a / i~o** en la última sílaba
+(Abudure/Abudare, Cumujacoa/Cumajacoa, Oripopo/Oropopo). Dos fitónimos con
+recurrencia interna (*sibidigua* ×2, *chiguate/chiguare* ×2) y un formante
+nuevo con dos casos (*quire* 'color'). Y la confirmación de la regla de Miguel
+al revés: **el mapa a veces conserva mejor que el libro** (Sibarigua está más
+cerca de *sibidigua* que la cabecera Sabarigua; Cuabana es la forma que la
+gente dice).
+
+## El censo de -ana para #109 (2026-09-07)
+
+**Qué se preguntó.** Cuántos topónimos en -ana/-aná tiene Esteves y cuántos
+glosa como 'lugar de': la condición de cierre que Miguel puso en #109.
+
+**Qué se halló.** 13 formas en -ana en el índice: 6 son `-bana` (#38), 1 es
+`-bana` con h (Capuhana = Capu-hana, «Bana: cerro», p. 26 — el capubana de
+Zavala #61, con el referente dicho: un cerro), 2 llevan el -ana dentro de una
+raíz (Cariguariana < *guariana*, p. 28; Maracapana < 'totumitas', p. 51), 4
+sin glosa (Paraguaná, Chamuriana, Cujicana, Jayana). **Ninguna 'lugar de'.**
+El 'lugar' de Esteves es `bacoa` (Curumubacoa p. 33; Tutubacoa y Datobacoa
+p. 66). Para Paraguaná (p. 56) recoge «conuco en medio del mar» como la
+significación más repetida y firma solo «Para significa agua»: es `para` +
+`gua` 'conuco' (Zavala #122), la segmentación de #109 por otra vía. Y en sus
+compuestos en -bana el núcleo va al final en cinco de seis, contra la objeción
+de orden del issue. Todo en `6-fusion/censo_ana_esteves_109.yaml`; borrador de
+comentario en `issues-pendientes/comentario-109-censo-ana-esteves.md`.
+
+**Qué no se halló.** Ninguna variante con c/k de *juri* 'viento' (curi, kuri,
+cudan, judan: 0 en los tres volúmenes). Lo que hay es la familia con j- en
+tres formas: «Judi, jurí» (p. 47), «Juri» (p. 47) y **«Jura, juri: ventarrón»**
+(Tura, p. 66: «Hato de Jura es como está escrito el fundo que fue censado en
+1881» — la T actual es corrupción escrita de la J). Neutro para la hipótesis
+curi ~ juri de Miguel, que predice j- en Paraguaná; la prueba pasa al lado de
+Coro (`toponimia_paraguana_miguel.yaml` §Curiana / Coro, cruce del día).
+
+**Tildes.** El índice imprime Paraguaná con tilde; el canon la guardaba sin
+ella. Corregido con la auditoría (#109 §3), junto con caquetío y aburí de
+Zavala.
 
 ## Lo que falta
 

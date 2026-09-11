@@ -1,0 +1,274 @@
+# ══════════════════════════════════════════════════════════════════════
+# Siete voces que Miguel añade — animales y árboles que no salían
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  fecha: 2026-09-10
+  lo_que_dijo: >-
+    «También aprovecho de agregar otras palabras que vi por ahí de animales o
+    árboles que no salen. Guayacán, araguaney, picure, yacaré, taparo. Cachube,
+    petaca».
+  metodo: >-
+    Antes de la web, el repo: las siete contra las 29 fuentes extraídas más los
+    lexicones. Regla de hoy.
+  resultado_en_una_linea: >-
+    Una ya está en el lexicón activo, dos son candidatas serias que estaban
+    escondidas por la GRAFÍA, dos no son caquetío pero traen otra cosa, una
+    parece variante de una voz que ya tenemos, y una es azteca.
+
+# ══════════════════════════════════════════════════════════════════════
+voces:
+
+  - forma_de_miguel: Yacaré
+    estado: '🟢 YA ESTÁ, en el lexicón activo'
+    entrada: 'Zavala Reyes 2015 #279 (AM): «yacare: PUEBLO. CAIMÁN»'
+    lo_que_hay_que_saber: >-
+      ⭐ Tiene DOS glosas en la misma entrada, y el canon usa la primera: el
+      topónimo YACAREBACOA está segmentado `yacare` + `bacoa` = 'pueblo del
+      bosque' (Zavala #280). O sea que el proyecto ya usa `yacare` = 'pueblo',
+      no 'caimán'.
+    la_pregunta_que_abre: >-
+      ⚠️ `yacaré` = caimán es voz GUARANÍ conocidísima, y llegó al castellano
+      general por ahí. Que la misma forma signifique además 'pueblo' en un
+      glosario caquetío pide explicación: o son dos palabras homófonas, o una
+      de las dos glosas es un préstamo que se coló en el glosario. La glosa
+      'pueblo' es la que sostiene un topónimo, así que es la más defendible.
+    accion: 'ninguna al lexicón; anotar la duda sobre la acepción caimán'
+
+  - forma_de_miguel: Guayacán
+    estado: '🟡 CANDIDATA — está en el repo, pero como `wayaka` y sin fusionar'
+    donde_esta: 'lexicon_van_buurt.py — propuesta, veredicto `c_plausible`, formas `wayaca`/`wayaka`, islas A/B/C'
+    cita: >-
+      van Buurt 2014: «Lignum vitae (Guaiacum officinale), according to the
+      Spanish cronistas in Taíno it is named GUAYACÁN, a word nowadays also
+      used in Spanish. THIS MAY ALSO BE A CAQUETÍO WORD, the form WAYAKA seems
+      more original than guayacán, and it is a very common indigenous tree».
+    la_regla_de_van_buurt: >-
+      ⭐⭐ Y da la razón fonética, que vale para toda la campaña: «the Papiamentu
+      words WATAPANA, WAYAKA and WATAKELI thus seem more original than
+      GUATAPANA, GUAYACÁN, GUATACARE». Es decir: la `gua-` castellana es
+      adaptación de una `wa-` original. Eso es exactamente la regla del lema
+      fonémico de D5 (`gu` ante vocal → `w`), pero declarada por una fuente en
+      vez de por convención nuestra.
+    y_alvarado: >-
+      «GUAYACÁN. Guaiacum officinale y G. sanctum, zigofiláceas. Es el PALO
+      SANTO, que suele ser confundido con el palo sano o vera, perteneciente a
+      la misma familia botánica». Aporta el taxón y el aviso de confusión.
+    ojo_con_el_toponimo: >-
+      ⚠️ GUAYACANAL, que estaba en el dictado de topónimos, ya está registrado
+      como DESCARTE: Esteves mismo dice que la partícula `-al` «colectiviza y
+      españoliza» una voz taína. Eso descarta el TOPÓNIMO, no la voz. Son dos
+      cosas distintas y conviene no confundirlas.
+    accion: >-
+      Subir `wayaka` de la propuesta de van Buurt a la cola de fusión con la
+      cita completa. Sigue siendo nivel C —van Buurt dice «may also be»— pero
+      con taxón, con regla fonética declarada y con presencia en las tres islas.
+
+  - forma_de_miguel: Araguaney
+    estado: '🟡 CANDIDATA — la grafía moderna lo escondía'
+    el_hallazgo: >-
+      ⭐⭐ `araguaney` no aparece en NINGUNA fuente del repo. Pero `ARAGUANEI`,
+      la grafía de 1921, está en Alvarado con entrada completa: «Tecoma
+      spectabilis. Bignoniáceas. Árbol frondoso, alto de 20 a 25 m., hojas
+      opuestas, largamente pecioladas… flores precoces, AMARILLAS. Madera de
+      corazón, durísima, de un aceitunado oscuro, peso específico 1,25, propia
+      para la construcción civil».
+    la_leccion: >-
+      🔴 Es el mismo error que la skill ya recoge en §2: un cero mide tu
+      consulta, no la fuente. Buscar «araguaney» daba cero y la voz estaba a
+      una letra. Las obras de 1921 no usan la ortografía de hoy.
+    y_ademas: >-
+      Alvarado cita a Pittier: «el araguanei de los alrededores de Caracas, con
+      el cáliz fulvo-velloso, es el T. chrysantha», y «se conocen CUATRO CLASES,
+      y el que más engruesa es el araguanei-amarillo».
+    no_confundir: >-
+      ⚠️⚠️ ARAGUANEI ≠ ARAGUÁN. Alvarado los trata como DOS entradas seguidas y
+      distintas: `araguán` es el «árbol indeterminado de Lara y Falcón» que
+      salió esta misma noche del dictado de topónimos. Están pegadas en la
+      página y es fácil fundirlas. No se fundan.
+    lo_que_falta: 'Alvarado NO declara filiación: no dice de qué lengua es. Sin eso no pasa de candidata'
+
+  - forma_de_miguel: Taparo
+    estado: '🟡 CANDIDATA con una advertencia grande'
+    alvarado: >-
+      «TAPARO. Crescentia cucurbitina. Bignoniáceas. Árbol PARECIDO AL TOTUMO,
+      pero menos coposo y de ramos menos largos y horizontales… fruto ovoideo
+      con una punta obtusa, larga de 3 pulgadas, y con casco quebradizo». Ref.
+      Gilij I.198 — y Gilij está en el repo.
+    y_la_tapara: >-
+      «TAPARA. Fruto del taparo, y VASIJA ADEREZADA CON ESE FRUTO». Con
+      Codazzi: «para hacer la caza de los patos comenzaban por echar al agua
+      muchas taparas». ⭐ Eso es cultura material y técnica de caza a la vez:
+      la tapara flotando como señuelo. Va a la esfera de ecología/subsistencia.
+    la_advertencia: >-
+      🔴 Oliver, cap. 2, da el juego comparativo arahuaco del calabazo y
+      `taparo` NO está en él: «the Guajiro call the TAPARO GRANDE (large
+      variety of bottle gourd) as KALA'PUA and the elongated narrow variety as
+      WUIRRU, which is cognate to Paraujano WUIR and to Taíno WIRO». Las voces
+      arahuacas del calabazo son `kala'pua` y `wuirru`/`wuir`/`wiro`. `Taparo`
+      no se parece a ninguna.
+    lectura: >-
+      El objeto es indudablemente del área; la PALABRA no da señales de ser
+      arahuaca. Candidata débil como voz, fuerte como hecho de cultura material.
+    y_el_toponimo: >-
+      Esteves registra TAPARO («quebrada de Capadare»), TAPARITO ×3 y TAPARITOS
+      — y TAPAROY, que está en la lista de Miguel, como caserío del municipio
+      Agua Larga. El `-ito` de Taparito es diminutivo CASTELLANO; el `-oy` de
+      Taparoy no se explica y merece mirada.
+
+  - forma_de_miguel: Picure
+    estado: '🔴 NO es candidata a caquetío — pero trae algo mejor'
+    alvarado_taxon: >-
+      «PICURE. Dasyprocta sp. pl. Roedores de la familia de los subungulados…
+      el D. aguti es de cabeza larga, hocico puntiagudo, orejas cortas…».
+    alvarado_filiacion: >-
+      🔴 «El acure casero se llama propiamente ACURITO; el de las sabanas, CURI;
+      el de montes, PICURE (acure de monte)… y en efecto ese es el nombre que
+      tiene EN VARIAS LENGUAS DE LA FAMILIA CARIBE». Alvarado la declara
+      caribe, no arahuaca. Se registra el descarte con su razón, que es lo que
+      manda la regla.
+    lo_que_SI_trae: >-
+      ⭐⭐⭐ Jahn 1927, y esto vale más que la palabra: «el indígena que les es
+      impuesto POR EL CACIQUE y que es tomado DEL REINO ANIMAL, como PICURE,
+      VENADO, TUQUEQUE, etc.».
+    por_que_es_grande: >-
+      Es una COSTUMBRE DE NOMBRAR, atestiguada, y toca de lleno lo que el
+      simulador hace: los agentes tienen nombres. Dice tres cosas: (1) el
+      nombre indígena lo IMPONE el cacique, no la familia; (2) se toma del
+      reino animal; (3) convive con otro nombre —el pasaje lo opone al
+      castellano de bautismo—. Va a la esfera de TRANSMISIÓN y a la de
+      PARENTESCO, y es material para revisar cómo se nombran los 60 agentes.
+      ⚠️ Jahn habla de ayamanes/gayones del Tocuyo, no de caquetíos costeros:
+      antes de aplicarlo hay que decidir si se proyecta (regla 4).
+    y_un_tercer_dato: >-
+      Jahn: los sombreros «eran fabricados con la PIEL DEL PICURE (Dasyprocta
+      aguti), para lo cual cavaban en el suelo arcilloso un hoyo con la forma y
+      dimensiones de la cabeza, y sobre este extendían y clavaban el cuero
+      fresco». Oficio, con técnica descrita.
+
+  - forma_de_miguel: Cachube
+    estado: '🟡 PROBABLE VARIANTE de una voz que ya tenemos'
+    sin_rastro: '🔴 `cachube` no aparece en ninguna fuente ni lexicón del repo'
+    la_hipotesis: >-
+      ⭐ Pero `CHUCHUBE` sí: Zavala #85 (HB) «paraulata». Y el lexicón activo
+      tiene `chuchubi` = «sinsonte tropical (Mimus gilvus)» — que ES la
+      paraulata. En papiamentu el pájaro es *chuchubi*. Cachube ~ chuchube es
+      a~u en sílaba inicial.
+    lo_que_la_frena: >-
+      ⚠️ La permutación que Alvarado documenta es e~i y o~u, NO a~u. Así que la
+      variante es plausible por oído pero no por la regla citada. No se
+      propone: se le pregunta a Miguel dónde la oyó y con qué referente, que es
+      el dato que decidiría.
+    pregunta_para_miguel: '¿Cachube es un pájaro? Si es la paraulata, cierra sola.'
+
+  - forma_de_miguel: Petaca
+    estado: '🔴 LA VOZ NO — el objeto SÍ'
+    alvarado: >-
+      «PETACA. Caja de cuero sin curtir, o de caña, cuadrada o alargada, con
+      tapa de lo mismo, usada para transporte, equipajes o víveres. […] DEL
+      AZTECA PETLACALLI, lo mismo. Díjose antes PATACA».
+    veredicto: >-
+      Náhuatl. Llegó con los españoles desde México, como `petate` (petlatl).
+      Descartada como voz caquetía, con la etimología declarada por la fuente.
+    lo_que_SI_vale: >-
+      ⭐ Jahn documenta el OBJETO como industria arahuaca del occidente: «usan
+      el TELAR AROWACK o aruaco y LAS PETACAS de estos»; «también son idénticos
+      los tejidos de caña que ambos ejecutan en formas de CESTOS, PETACAS y
+      ABANICOS PARA SOPLAR EL FUEGO […] revelan una industria textil bien
+      adelantada, y […] en casi todas las industrias corresponde la ma[yor
+      parte a la mujer]».
+    donde_va: >-
+      Cultura material y división del trabajo, no lexicón. Y deja un hueco
+      léxico declarado: si el objeto existía, tenía nombre caquetío, y no lo
+      sabemos. Eso es dato — un hueco medido vale.
+
+# ══════════════════════════════════════════════════════════════════════
+balance:
+  ya_en_el_lexicon_activo: [Yacaré]
+  candidatas_a_la_cola: [Guayacán (wayaka), Araguaney (araguanei), Taparo]
+  descartadas_con_razon:
+    - 'Picure — caribe, declarado por Alvarado'
+    - 'Petaca — náhuatl (petlacalli), declarado por Alvarado'
+  pendiente_de_miguel: ['Cachube: ¿es la paraulata? ¿dónde la oíste?']
+  huecos_lexicos_nuevos:
+    - 'el nombre caquetío de la petaca/cesto: el objeto está documentado, la palabra no'
+    - 'el nombre caquetío del calabazo: las arahuacas vecinas dan kala''pua, wuirru, wuir, wiro; el caquetío falta'
+  lo_que_NO_se_toca: 'ninguna entra al lexicón en esta pasada; son propuesta (regla 5)'
+  para_la_bitacora: >-
+    ⚠️ ARAGUANEY es el tercer caso esta semana en que un cero era de la
+    consulta y no de la fuente: la voz estaba, escrita `araguanei`. Con
+    Todariquiba (pypdf la partía) y «caiquetía» de Oviedo y Baños, van tres.
+    ⚠️ Aquí citaba un cuarto —Petare— y se cae: el pasaje resultó ser la
+    biografía del autor, no una entrada. Corregido el mismo día.
+
+# ══════════════════════════════════════════════════════════════════════
+# Miguel precisa tres, el mismo día
+# ══════════════════════════════════════════════════════════════════════
+precisiones_de_miguel:
+  lo_que_dijo: >-
+    «Cachube es OMBLIGO, palabra que conozco. Y Picure es un ROEDOR según lo
+    que pude encontrar. Y Taparo es un ÁRBOL QUE DA TAPARAS».
+
+  cachube:
+    estado: '🔴 SIN ATESTACIÓN, y buscada en serio'
+    lo_que_cambia: >-
+      Mi hipótesis era que Cachube fuese variante de `chuchube` 'paraulata'. Se
+      cae: Miguel dice que es OMBLIGO. Es parte del cuerpo, no pájaro.
+    donde_se_busco: >-
+      El lexicón entero —NINGUNA entrada glosa 'ombligo', en ninguna capa—, las
+      29 fuentes extraídas, y una búsqueda de formas del tipo ka/ca/ga/ja +
+      ch/c/k/sh + u + b/v/p en todo el repo. Lo único que sale es `cachupín`,
+      que es castellano para 'español'.
+    lo_que_SI_hay_para_ombligo:
+      - "GUAJIRO `tomótscho` y PARAUJANO `jimatajúi` — Jahn 1927, p. impresa 356"
+      - "`maruto` «ombligo del recién nacido», usado en el alto Llano — Alvarado 1921"
+      - "`bototo` «ombligo, muñoncillo, cordón umbilical», Guárico — Alvarado 1921"
+    y_ninguna_se_parece: >-
+      Ni las dos arahuacas vecinas ni las dos venezolanas se parecen a
+      `cachube`. La forma no tiene pariente localizable.
+    por_que_NO_se_descarta: >-
+      ⭐ Porque es exactamente el material que Miguel definió como la apuesta de
+      la Era 2: «enriquecer lo más posible palabras que no podemos atestiguar
+      como caquetías pero que intuimos por coloquialidad o tradición oral». Una
+      voz de parte del cuerpo que un hablante paraguanero conoce y que ningún
+      diccionario recoge es el caso puro de esa capa — y el lexicón tiene ahí
+      un HUECO declarado: no hay palabra para ombligo.
+    donde_va: >-
+      A la capa suelta, la que solo ve el perfil `suelto` de las runs. NO a
+      `caquetío-atestiguado`. Y el hueco léxico 'ombligo' se declara aparte,
+      porque vale por sí mismo.
+    lo_que_la_haria_subir:
+      - 'que aparezca en Medina Colina, «Del Habla Paraguanera» — la fuente física de Miguel'
+      - 'que aparezca en Hernández Baño, «Los Caquetíos de Falcón» (1984), aún sin adquirir'
+      - 'que Miguel recuerde a quién se la oyó, y de dónde era'
+    pregunta_para_miguel: '¿es el ombligo de cualquiera, o el del recién nacido / el cordón? Alvarado distingue las dos cosas y eso afinaría la búsqueda'
+
+  picure:
+    confirmado: '✅ Miguel confirma roedor, y coincide con Alvarado: «Dasyprocta sp. pl.»'
+    RECLASIFICADA_2026_09_10: >-
+      🔴 Escribí «no es candidata a caquetío: Alvarado la declara caribe». El
+      descarte NO VALE, y lo tumba el propio Miguel al decir que hay palabras
+      que se comparten entre etnias. Jahn da `akuri` idéntico en JIRAJARA y
+      AYOMÁN —jirajaroides, ni caribes ni arahuacos— y la voz vive además en el
+      castellano regional. Tres familias sin parentesco y una sola palabra: es
+      un Wanderwort. Que sea «caribe» no impide que los caquetíos la dijeran.
+      Pasa de «descartada por filiación» a «voz areal SIN ATESTACIÓN caquetía»,
+      la misma casilla que `cachube`. 🔴 Y el hueco es real: `akuri`/`acure`/
+      `picure` no está en Zavala ni en ninguna capa del lexicón, y es un bicho
+      que se comía.
+    lo_que_no_cambia: >-
+      Sigue sin ser candidata a caquetío: Alvarado declara que «ese es el
+      nombre que tiene en varias lenguas de la FAMILIA CARIBE». El acuerdo es
+      sobre el bicho, no sobre la lengua.
+    lo_que_sigue_valiendo: 'la costumbre de nombrar que trae Jahn — el cacique impone un nombre tomado del reino animal'
+
+  taparo:
+    confirmado: >-
+      ✅ Miguel: «árbol que da taparas». Es literal lo que dice Alvarado en dos
+      entradas seguidas: «TAPARO. Crescentia cucurbitina… árbol parecido al
+      totumo» y «TAPARA. Fruto del taparo, y vasija aderezada con ese fruto».
+      La pareja árbol/fruto queda cerrada por dos vías independientes.
+    lo_que_no_cambia: >-
+      La advertencia de Oliver sigue en pie: el juego arahuaco del calabazo es
+      `kala'pua` (guajiro), `wuirru`/`wuir` (guajiro/paraujano), `wiro` (taíno).
+      `Taparo` no se parece a ninguno. El objeto es del área; la palabra no da
+      señales de ser arahuaca.

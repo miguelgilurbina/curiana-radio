@@ -1,0 +1,189 @@
+# ─────────────────────────────────────────────────────────────────────────
+# ¿Cuánto infla `score_linguistico()` la comparanda NO caquetía del lexicón?
+#
+# La pregunta salió al fusionar Perea (2026-09-09): `palabras_activas()` no
+# filtra por `fuente`, así que en principio una voz wayuu o lokono cuenta
+# igual que una caquetía. Medido antes de decidir nada.
+#
+# Respuesta corta: HOY NO INFLA NADA. Cero de 1.227 respuestas cambian.
+# Pero el camino existe y está a una palabra de dispararse.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  medido: '2026-09-09'
+  corpus: >-
+    Las 1.227 respuestas guardadas en `curiana_sim/curiana_observer.json`
+    (historial), con su texto completo. Supabase local no estaba levantado;
+    este historial es el mismo dato, en fichero.
+  script: 6-fusion/scripts/medir_contaminacion_score.py
+
+# ══════════════════════════════════════════════════════════════════════
+a_composicion:
+  claves_del_lexicon: 1500
+  caquetio: 299
+  no_caquetio: 1201
+  porcentaje_no_caquetio: '80.1%'
+  desglose:
+    wayunaiki: 781
+    lokono: 275
+    taino: 57
+    paraujano: 47
+    kalinago: 19
+    otras: 22
+  homografas_de_palabra_espanola: 58
+  ejemplos: [abba, auyama, batey, bohío, cacique, caiman, caney, caraota, casabe,
+             cayo, 'de', era, guayaba, iguana, macana, maboya]
+  lectura: >-
+    Cuatro de cada cinco entradas del lexicón NO son caquetías. Es un dato
+    llamativo por sí solo y no es un defecto: son la comparanda con la que se
+    reconstruye. El problema sería que contaran como caquetío al puntuar.
+
+# ══════════════════════════════════════════════════════════════════════
+b_el_score_con_y_sin_la_comparanda:
+  metodo: >-
+    Recalcular `score_linguistico()` sobre las 1.227 respuestas dos veces: tal
+    como está, y con `palabras_activas()` filtrado a claves de familia
+    caquetía. La diferencia es la contaminación.
+  resultado:
+    media_con_comparanda: 7.933
+    media_sin_comparanda: 7.933
+    diferencia_media: 0.000
+    respuestas_que_cambian: 0
+    de: 1227
+    voces_no_caquetias_usadas_por_los_agentes: 0
+  por_que_da_cero: >-
+    Porque los agentes NUNCA ven esas palabras. El muestreador que arma el
+    prompt (`curiana_lexicon.py`, ~línea 7477) SÍ filtra por `fuente`: sólo
+    ofrece caquetío. Así que la comparanda está en la estructura de datos pero
+    no llega al hablante, y por tanto no vuelve en su respuesta.
+  control: >-
+    El recálculo reproduce el score guardado en 821 de 1.227 respuestas (66.9%).
+    Las que no coinciden son anteriores al rediseño de `score_linguistico()` v2
+    (auditoría Opus §2.2): el dato guardado se midió con otra vara. No afecta a
+    esta medición, que compara las dos versiones ENTRE SÍ sobre el mismo texto.
+  lectura: >-
+    La contaminación que temía NO EXISTE en el comportamiento actual. Mi
+    cautela al dejar Perea fuera de VOCABULARIO_BASE fue preventiva, no
+    forzada por el dato — y conviene decirlo así.
+
+# ══════════════════════════════════════════════════════════════════════
+c_el_riesgo_que_si_esta_vivo:
+  donde: 'la ruta existe aunque hoy no se recorra'
+  prueba: >-
+    Metiendo `dia` (raíz lokono, la mejor atestiguada de Perea con 28
+    apariciones) en VOCABULARIO_BASE y puntuando «El dia paso y la gente
+    estudia la sombra», el token `dia` pasa a contarse como arahuaco
+    (`palabras_otro_arahuaco: ['dia']`). Sin él, no.
+  matiz_medido: >-
+    `_normalizar()` NO quita tildes, así que «día» con tilde no casa con la
+    clave `dia`. El disparo necesita que el agente escriba el castellano sin
+    tildes — cosa que un LLM hace a menudo.
+  el_motor_ya_tropezo_con_esto: >-
+    El propio `score_linguistico()` lleva un comentario que lo admite: «una
+    stopword castellana NUNCA cuenta como arahuaco, aunque colisione con una
+    entrada del léxico (de->lokono, una->lokono, para->proto-arahuaco)». Lo
+    parchearon con la blocklist ES_STOPWORDS en vez de filtrar por `fuente`.
+    O sea: el problema ya se dio, se tapó caso a caso, y la causa sigue ahí.
+  cuantas_raices_de_perea_dispararian: 4
+  cuales: [bia, boa, dia, sica]
+  nota: >-
+    Eran 12 antes de la criba del mismo día: `bien`, `ella`, `ellos`,
+    `llamado`, `los`, `nuestros`, `señal` y `vosotros` no eran voces lokono
+    sino palabras ESPAÑOLAS que se colaron como raíz — ver la sección d.
+
+# ══════════════════════════════════════════════════════════════════════
+d_defecto_corregido_en_la_propia_propuesta:
+  que_paso: >-
+    La voz lokono es el token en MAYÚSCULAS del lado arawak de cada igualdad.
+    Cuando una entrada del Fraseario no lo tiene —o el OCR lo perdió— el regex
+    recogía una palabra ESPAÑOLA capitalizada del lado de la traducción. Se
+    detecta porque la raíz coincide con su propia glosa: `ella` → «ella»,
+    `los` → «los, a ellos», `bien` → «bien», `llamado` → «llamar».
+  cuantas: 8
+  cuales: [bien, ella, ellos, llamado, los, nuestros, señal, vosotros]
+  de: 181
+  arreglo: >-
+    Filtro en `minar_perea.py::se_cuela_el_espanol()`: se descarta la raíz si
+    coincide con una palabra de su propia glosa, o si comparten cinco letras
+    iniciales. El módulo queda en 173 raíces y 326 acepciones.
+  lo_que_enseña: >-
+    Medir para responder una pregunta encontró un defecto en otra cosa. La
+    criba de germanismos e hispanismos miraba una lista cerrada de préstamos;
+    no miraba si la propia extracción había fallado.
+
+# ══════════════════════════════════════════════════════════════════════
+e_el_defecto_que_media_pero_no_afectaba_a_nadie:
+  donde: 'curiana_lexicon.py::detectar_uso_vocabulario() (~línea 7078)'
+  que_hace: 'casa por SUBCADENA — `if palabra in texto_lower`'
+  medido:
+    detecciones_totales: 15951
+    solo_casan_dentro_de_otra_palabra: 12270
+    porcentaje: '76.9%'
+  matiz_importante: >-
+    La mayor parte de ese 77% NO es error: son morfemas caquetíos detectados
+    dentro de un compuesto legítimo — `wana` y `ka` dentro de `wana-ka`, `sima`
+    y `bana` dentro de `sima-bana`. En una lengua aglutinante eso es lo que se
+    quiere.
+  los_que_si_son_falsos_positivos: >-
+    Claves cortas de OTRA lengua disparando dentro de una palabra caquetía:
+    `bi` [lokono] dentro de `biro` (409 veces), `li` [lokono] dentro de
+    `kali-taro` (409 veces). Ahí la subcadena no detecta un morfema: detecta
+    una coincidencia de letras.
+  correccion_a_donde_va: >-
+    🔴 Escribí que `detectar_uso_vocabulario()` alimenta el campo
+    `palabras_caquetias`. Es falso, y lo desmiente un grep: NINGÚN módulo del
+    motor la llama. Sólo la llamaba mi propio script de medición. Es código
+    muerto en el pipeline, así que su 77% no tenía consecuencia ninguna.
+  arreglado: >-
+    Aun así se arregló, porque la función es la forma natural de preguntar qué
+    morfemas del lexicón hay en un texto y la usan mediciones sueltas. Ahora el
+    match respeta el límite de morfema (inicio o fin de palabra, o junto a un
+    guion). Detecciones: 15.951 → 9.816; las que caen dentro de otra palabra,
+    12.270 → 6.135, y las que quedan son morfemas legítimos de un compuesto.
+
+# ══════════════════════════════════════════════════════════════════════
+f_el_defecto_que_SI_estaba_vivo:
+  donde: 'curiana_lexicon.py::score_linguistico(), el campo que devuelve'
+  que_pasaba: >-
+    El campo `palabras_caquetias` devolvía `usadas` ENTERO — todas las voces
+    arahuacas reconocidas, no sólo las caquetías, pese al nombre. La función ya
+    calculaba `caquetio_tokens` por separado para puntuar, pero devolvía la
+    lista sin filtrar.
+  por_que_importa: >-
+    Sus consumidores lo tratan como caquetío, y no son de adorno:
+    · `curiana_orchestrator_v2.py` propaga esas formas por CONTAGIO LÉXICO
+    · las inscribe en la COMPETENCIA de formas rivales
+    · las registra en el IDIOLECTO del agente y en el CAMPO LÉXICO de la koiné,
+      que es de donde salen las métricas de convergencia
+    · las persiste como `words_used` en la base
+    O sea: una voz wayuu o lokono en boca de un agente se habría propagado y
+    habría contado como convergencia caquetía.
+  arreglo: >-
+    `palabras_caquetias` pasa a contener sólo caquetío; se añade
+    `palabras_arahuacas` con todas, para no perder nada.
+  verificado_antes_de_tocarlo: >-
+    En las 1.227 respuestas guardadas, `palabras_caquetias` y
+    `palabras_arahuacas` coinciden en las 1.227. El arreglo NO altera ningún
+    dato existente: cierra una puerta que todavía no se había cruzado.
+  cables_trampa: >-
+    Dos tests nuevos en `curiana_sim/tests/test_lexicon.py`:
+    `test_palabras_caquetias_no_incluye_otra_lengua_arahuaca` y
+    `test_deteccion_de_vocabulario_respeta_el_limite_de_morfema`.
+
+# ══════════════════════════════════════════════════════════════════════
+conclusion:
+  para_la_decision_de_hoy: >-
+    Meter las 173 raíces de Perea en VOCABULARIO_BASE no habría movido el score
+    de ninguna de las 1.227 respuestas medidas. La separación en
+    `lexicon_perea.py` sigue siendo lo correcto —son comparanda, no vocabulario
+    del hablante— pero por razón de modelado, no porque el dato obligara.
+  arreglado_el_mismo_dia:
+    - 'El campo `palabras_caquetias` ya sólo contiene caquetío (ver f_el_defecto_que_SI_estaba_vivo).'
+    - 'El match por subcadena ya respeta el límite de morfema.'
+    - 'Dos cables trampa en tests/test_lexicon.py para que no vuelvan.'
+  lo_que_queda_abierto:
+    - >-
+      Si `palabras_activas()` debe filtrar por `fuente`. Hoy no cambia nada
+      medible —cero de 1.227—, así que no hay prisa; y si algún día cambiara,
+      cambiaría la métrica insignia, y eso es decisión de Miguel, no arreglo.
+      El precedente es D3 (#34), que dejó `normalizar_por_dialecto()` sin
+      cablear exactamente por esto.

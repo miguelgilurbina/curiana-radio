@@ -305,6 +305,7 @@ nodos:
 
   - id: nodo-013
     forma: santa-ana
+    variantes: [Chamuriana]
     tipo: asentamiento
     region: paraguana
     etiqueta: atestiguado
@@ -320,6 +321,13 @@ nodos:
       Nombre castellano y de misión: el topónimo es colonial con seguridad,
       aunque el asentamiento pudiera ser anterior con otro nombre. Entra por la
       RUTA que documenta, no por sí mismo.
+
+      (2026-09-07) El nombre anterior existe: CHAMURIANA, «antigua aldea indígena en cuyas
+      cercanías los españoles fundaron en 1538 el pueblo de Santa Ana de Paraguaná», con
+      cerámica indígena y europea (Esteves 1989 p. 35; toponimo-109). Si es el mismo
+      complejo que el sitio FAL-154 del cerro (nodo-024) no está probado: Esteves dice «en
+      cuyas cercanías». Miguel: el pueblo es fundación colonial; el sitio y su agua se
+      llamaban Chamuriana.
 
 # ── Lo que falta, dicho en voz alta ───────────────────────────────────────
 #
@@ -577,6 +585,7 @@ nodos:
 
   - id: nodo-025
     forma: cayerua
+    variantes: [Cayeruba, Cayerda, Cayerta]
     tipo: sitio-arqueologico
     region: paraguana
     etiqueta: atestiguado
@@ -600,6 +609,13 @@ nodos:
       CAUTELA: Cayerúa (Oliver) ~ Cayeruba (Esteves): la equivalencia es muy
       probable pero hay que confirmarla. Y "Dabajuroide" sigue sin fechar la
       ocupación. Sube de `desconocido` a `probable`, no a `si`.
+
+      (2026-09-07) La CAUTELA Cayerúa ~ Cayeruba la cierra la propia fuente: Esteves (p. 30)
+      dice haber visto en un mapa reciente «una grafía —Cayerúa—» de su Cayeruba, «nacida de
+      snobismo»; es la forma del mapa vivo que Miguel verificó. Y es la CAYERDA de Delmonte
+      1883 (vía Oliver p. 276), primer asiento de los Amuayes antes del reasentamiento en
+      Moruy. Arcaya (vía Esteves p. 52): en 1556 existían en Paraguaná Santa Ana, Moruy,
+      Miraca y Cayeruba. Canon de topónimos: toponimo-104.
   - id: nodo-026
     forma: machuruca
     tipo: sitio-arqueologico
@@ -637,6 +653,12 @@ nodos:
     nota: >
       Moruy es hoy un pueblo vivo y Esteves lo usa como referencia geográfica
       de toda la zona. Dabajuroide sin precisar no decide la época.
+
+      (2026-09-07) Pueblo de Paraguaná ya en 1556 (Arcaya vía Esteves p. 52); asiento de los
+      Amuayes tras el reasentamiento desde Cayerda (Delmonte 1883 vía Oliver p. 276); «los
+      indios de Moruy eran los más belicosos de Paraguaná, hay testimonios escritos» de sus
+      peleas por la tierra (Esteves p. 53). Uno de los dos nodos de la era 2. Canon de
+      topónimos: toponimo-108.
 
   - id: nodo-028
     forma: cerro-pelon-chuchube
@@ -691,14 +713,44 @@ nodos:
     nota: >
       Nombre castellano; no aporta al léxico.
 
+  - id: nodo-031
+    forma: miraca
+    tipo: asentamiento
+    region: paraguana
+    etiqueta: atestiguado
+    atestacion: colonial
+    precontacto: desconocido
+    variantes: [Myraca]
+    rol: >
+      Pueblo indígena de Paraguaná con la cadena de atestación más larga del registro:
+      Myraca con su cacique Bonyata en la carta de Bastidas (1538), pueblo existente en
+      1556 (Arcaya vía Esteves), «ciudad de grandísimo momento» entre las once de
+      Castellanos (1589), 79 casas en el censo de 1881, y población viva hoy — «de los
+      cuales sólo existe hoy el pueblo de Miraca», dice Esteves de las tres ciudades de
+      Castellanos. Cinco siglos con el mismo nombre en el mismo sitio.
+    ubicacion: municipio Baraived, Paraguaná (Esteves 1989 p. 52).
+    procedencia:
+      obra: velasco-2015-resistencia
+      detalle: "carta de Bastidas, AGI Legajo 218 f. 2 (8-X-1538), transcrita en 6-fusion/velasco_primarios_agi.yaml; también castellanos-elegias (II-1, línea 48260) y esteves-1989 p. 52"
+    etimologia: sin-resolver
+    nota: >
+      Entra el 2026-09-07 por decisión de Miguel: cierra la parte de Miraca del hueco
+      declarado abajo (#92). Que un nombre siga en uso desde 1538 es dato de continuidad
+      del asentamiento aunque no tenga etimología (la única glosa, 'atarraya' en warao, es
+      de Esteves y sin cita: toponimo-095). Precontacto sigue `desconocido`: 1538 con
+      cacique no alcanza; haría falta arqueología.
+
 huecos:
 
   - que: >
-      Miraca, Moruy, Baraived, Jadacaquiva y los demás poblados de Paraguaná.
+      Los demás poblados de Paraguaná: Baraived, Jadacaquiva, Adaure, Charaima…
+      (Miraca entró como nodo-031 el 2026-09-07; Moruy ya era nodo-027.)
     por_que_no_estan: >
-      No hay en el repo ninguna fuente que los nombre. Ponerlos como
-      `hipotetico` sería inventarlos: no se listan hasta que una fuente los
-      sostenga.
+      Hasta 2026-09 no había en el repo ninguna fuente que los nombrara. Ahora
+      Esteves 1989 los nombra con censo de 1881 y a veces con papeles del s. XVIII
+      (Jadacaquiva: iglesia de 1740; Cocodite: papel de 1590), y
+      2-lengua/toponimos.yaml los tiene. Entran como nodos cuando se decida uno
+      por uno, con su época declarada; ponerlos como precontacto sería inventarlos.
     candidato_a_verificar: >
       `jadicuar` está en toponimos.yaml y SE PARECE a Jadacaquiva. Parecerse no
       es evidencia — hay que comprobarlo, no asumirlo.

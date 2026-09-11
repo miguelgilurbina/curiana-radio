@@ -61,9 +61,22 @@ cognados wayunaiki, no en dato caquetío** — lo declaran ellas mismas en un ca
 | `ka-` | posesivo genérico / asociativo | WY `ka-` |
 | `-kana` | plural colectivo | WY `-kana`, **cognado directo con caquetío** |
 | `-naiki` | 'lengua de, habla de' | WY `-naiki` |
-| `-ana` | topónimo / lugar habitado | ver §3 |
+| `-ana` | formante toponímico, **sin glosa** (la 'lugar de' se retiró: #109, 2026-09-07) | ver §3 |
 | `-gua` | región, área amplia | topónimos de Falcón y Sucre |
-| `-bana` | **'orilla / borde'** — sin cita | ver §3 |
+| `-bana` | **'cerro, sitio alto'** — D9 resuelta 2026-08-31, seis apoyos | ver §3 |
+
+> **El alcance de D11 fase 3, medido el 2026-09-08.** Las tres marcas de
+> aspecto —`-ka`, `-ni`, `-da`— salen **enteras** del wayunaiki, como declara la
+> tabla de arriba. Así que «declarar la etiqueta del núcleo reconstruido» (la
+> fase 3 de D11, que quedó abierta) no afecta sólo a la Capa 2 léxica (`taya`,
+> `pia`, `kai`, `kashi`, `wuin`, `eka`, `piama`): afecta al sistema de aspecto
+> completo. Las tres tienen homógrafo en lokono con otro valor declarado —`-ca`
+> es ahí la raíz del verbo *ser/estar*, `-ni` el auxiliar `a-ni-n` *ser, estar,
+> hacer*, y `-da/-dda` la partícula del presente que ni Perea ni Goeje saben
+> explicar—, pero **eso no se afirma como cognación**: son formas de dos letras,
+> y medir parecido en formas así es lo que produjo el 80% de fallo de las 441
+> hipotéticas. Detalle y páginas en
+> `6-fusion/lokono_gramatica_perea_1942.yaml` §verbo.
 
 `ka-` y `wa-` tienen apoyo insular independiente: [[van-buurt-2014]] §8 da `ka-`
 como localizador *'hay, existe(n)'* (*Casibari* = 'hay rocas duras') y §6 da
@@ -112,7 +125,12 @@ van Buurt, y 'orilla' no explica nada.
 
 > **`-ana` = 'lugar de' está atestiguado, y `-bana` nunca lo estuvo.**
 
-La ecuación que lo cierra la da el propio Zavala: **`paraguana` = *"Rodeada del
+> *(Superado el 2026-09-07. El censo de Esteves dio cero casos de -ana 'lugar
+> de' y Miguel retiró la glosa — decisión B de #109; ver el estado real más
+> abajo. Lo de aquí se deja como historia del argumento: fue la lectura que
+> abrió D9 y la que el censo desmontó.)*
+
+La ecuación que lo cierra la da el propio Zavala: **`paraguaná` = *"Rodeada del
 mar"***, y `para` / `paragua` = 'mar' **ya están en el lexicón como
 `caquetío-atestiguado`**. Despejando: `paragua` + `-na` / `-ana` = el lugar
 definido por el mar. Y `curiana` = *"lugar del cardón"* / territorio de los
@@ -150,8 +168,14 @@ opuestos a los que esta nota preveía:
   escondido' quedan como segmentación dudosa o polisemia pendiente — la
   lectura 'ancho/llano' de van Buurt sigue viva **para ellas**, registrada.
 
-- **`-ana`** — **forma atestiguada, glosa 'lugar de' EN DISPUTA** (#109,
-  ratificado 2026-08-31): el tratamiento que antes tenía `-bana`, invertido.
+- **`-ana`** — **forma atestiguada, glosa 'lugar de' RETIRADA** (#109,
+  decisión B de Miguel, 2026-09-07; antes «en disputa» desde el 2026-08-31):
+  es `morfema-011` en `morfemas.yaml`, formativo sin glosa, con lista viva de
+  casos en `6-fusion/censo_ana_esteves_109.yaml` (Paraguaná, Curiana,
+  Chamuriana, Cujicana, Jayana, y el Coria-na wanebucán de Oliver p. 207).
+  Si una fuente glosa un -ana como 'lugar de', se reabre. El motor conserva
+  `-ana` 'lugar de' como **convención de la simulación**, canon-simulación, no
+  como dato. Lo que sigue es la historia de cómo se llegó aquí.
   *Paraguana* dejó de ser su apoyo — la fuente imprime **Paraguaná** con
   tilde, la glosa «Rodeada del mar» no despeja con 'lugar de', y existe la
   segmentación alternativa `para` + `gua` 'terreno cercado' + `ná` (los tres
@@ -161,6 +185,18 @@ opuestos a los que esta nota preveía:
   González Batista; 'propuesto' — Antolínez 1944): la canónica sigue siendo
   la de Zavala. Lo que zanja la disputa es el **censo de -ana/-aná en los
   topónimos de Esteves + la auditoría de tildes** — trabajo, no decisión.
+  **Censo hecho el 2026-09-07** (`6-fusion/censo_ana_esteves_109.yaml`): de
+  las 13 formas en -ana del índice de Esteves, 6 son `-bana`, 1 es `-bana`
+  con h (Capuhana = Capu-hana, «Bana: cerro»), 2 llevan el -ana dentro de una
+  raíz léxica (Cariguariana < *guariana* 'arbusto'; Maracapana < 'totumitas'),
+  y 4 van sin glosa (Paraguaná, Chamuriana, Cujicana, Jayana). **Ninguna
+  glosada 'lugar de'**: el 'lugar' de Esteves es `bacoa` (Curumubacoa,
+  Tutubacoa, Datobacoa). Para Paraguaná, Esteves (p. 56) recoge «conuco en
+  medio del mar» como la significación más repetida — que es, morfema a
+  morfema, `para` 'agua' + `gua` 'conuco' (Zavala #122), la segmentación de
+  #109 por una vía independiente. Tildes auditadas contra Esteves y Zavala:
+  `paraguaná`, `caquetío` y `aburí` corregidas en el canon. La decisión sobre
+  la glosa 'lugar de' queda para Miguel.
 
 > El mismo patrón se repite en `-are` vs `-ure`: la evidencia toponímica dice
 > 'sitio de', van Buurt §5 dice 'raíz'. Ver [[toponimia]] §conflictos. D9 no es

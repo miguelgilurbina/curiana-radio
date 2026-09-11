@@ -32,8 +32,31 @@ def test_el_modulo_valida():
     assert not problemas, "problemas de dato:\n" + "\n".join(problemas)
 
 
-def test_las_cuatro_polities_atestiguadas_estan():
-    assert set(POLITIES) == {"costera", "barquisimeto", "yaracuy", "llanos"}
+def test_las_cuatro_atestiguadas_y_la_futura_estan():
+    """Cuatro atestiguadas (Oliver/Jahn) y una futura: la esfera occidental,
+    decidida por Miguel el 2026-09-07. Si esta lista cambia, cambió el mapa."""
+    assert set(POLITIES) == {"costera", "barquisimeto", "yaracuy", "llanos",
+                             "occidental"}
+    atestiguadas = {pid for pid, p in POLITIES.items() if p.estado == "atestiguada"}
+    assert atestiguadas == {"costera", "barquisimeto", "yaracuy", "llanos"}
+
+
+def test_la_occidental_es_futura_y_se_cita_como_las_demas():
+    """Una esfera futura no es una licencia: cada rasgo lleva su página, y los
+    huecos (liderazgo, demografía, religión — «very little is known») se
+    quedan visibles."""
+    o = polity("occidental")
+    assert o.estado == "futura"
+    assert o.id != POLITY_SIMULADA
+    assert {"liderazgo", "demografia", "religion"} <= set(o.huecos())
+    assert "Coquibacoa" in o.territorio.valor
+    assert "1400" in o.ceramica.epoca
+
+
+def test_la_simulada_no_puede_ser_futura(monkeypatch):
+    import curiana_polities as CP
+    monkeypatch.setattr(CP, "POLITY_SIMULADA", "occidental")
+    assert any("atestiguada" in p for p in CP.validar())
 
 
 @pytest.mark.parametrize("pid", sorted(POLITIES))
