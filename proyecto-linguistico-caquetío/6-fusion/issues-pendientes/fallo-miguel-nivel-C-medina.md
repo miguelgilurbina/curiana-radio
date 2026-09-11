@@ -180,3 +180,85 @@ Por qué C: Voz del occidente sin paralelo castellano, con un reparto semántico
 *forma parte del folclor y consistía en que se tenía la certeza de que existían hombres con la facultad de transformarse en animales pequeños y generalmente domésticos, pues los mismos tenían pacto diabólico, lo que les permitía esa transformación previo el paso de desnudarse completamente y ocultar *
 
 Por qué C: La voz es única fuente y el campo (creencia) es de los que el protocolo no favorece; C por el nombre propio de una figura del folclor local. El VALOR está en el motivo, que va a mc-mundo-026.
+
+---
+
+# FALLO DE MIGUEL — tanda 1 (2026-09-11)
+
+**11 de 33 falladas. Todas ENTRAN al corpus cultural**, marcadas `hipotetico`,
+que es el destino que el protocolo §5 les declara. Ninguna sube al lexicón
+activo en esta tanda.
+
+## Las cuatro de técnica y oficio
+
+Miguel: *«esas que listas me parece que están bien»*.
+
+| Voz | p. | Por qué entra |
+|---|---|---|
+| `busuga` | 52 | árbol de armazón del bahareque, y corteza que tiñe de amarillo. Toca un hueco declarado: el caquetío atestiguado tiene **cero** términos de color |
+| `guarero` | — | enredadera para amarrar el embarrado de las paredes: el otro lado de la misma técnica |
+| `curubo` | 86 | caracol que los alfareros usaban para pulir. Es el que Miguel reclamó el primer día; además materia prima de la cal |
+| `disey` | 95 | las tres topias del fogón |
+
+⭐ Los cuatro describen **cómo se hacía algo**, no solo qué era. Van a
+`3-mundo/corpus/` en oficios y casa.
+
+## Las que forman sistema
+
+Valen más juntas que sueltas, y por eso entran juntas:
+
+- **El cardón, por especie y por estado**: `guanariji` y `susucure` (p. 49) y
+  `cachinare` (p. 57). Con `dato` y `kaduchi` ya atestiguados, son cuatro
+  términos del mismo campo. Una lengua que distingue el fruto del cardón por
+  especie *y* por si cuajó es la lengua de un pueblo que vivía de recogerlo.
+- **La abeja y el panal**: `mebi`, `memerea`, `guacuquero`.
+
+## Y el seretón, con su verificación
+
+Miguel: *«el ceretón está presente tanto por Federmann y se mantiene hasta el
+día de hoy en mitos; sí o sí nos da riqueza cultural, por lo que lo
+incluiría»*.
+
+**ENTRA**, y por el argumento que él da: no es una voz de oficio sino un hecho
+de creencia con continuidad viva, que es material de corpus por derecho propio.
+
+### Lo que se pudo comprobar y lo que no
+
+🔴 **Federmann NO está en el repo.** Su nota lo declara `estado_minado:
+no-disponible`, `capa_texto: no`, páginas «no localizada», y lleva la tarea
+F12 pendiente. Así que la mención que Miguel recuerda **no se ha podido
+verificar aquí**.
+
+Se buscó lo que sí se podía:
+
+- la FORMA, con permutación laxa (`seretón`/`ceretón`/`cerretón`/`zeretón`…)
+  en los **27 textos extraídos** del repo: **cero**.
+- el CONCEPTO —hombres que se transforman, brujo que vuela, hombre-tigre— en
+  los mismos 27: cero real. Lo que devolvió el barrido fueron falsos positivos
+  de «se transforma en» en contextos ajenos (Perea hablando de una hipótesis
+  que «se transforma en certidumbre», Arcaya de aguaceros que «transforman en
+  jardines» los campos áridos).
+
+⚠️ Eso NO refuta a Miguel: mide el alcance del repo (regla 6). Federmann es
+justamente la fuente que falta.
+
+### Lo que esto convierte en tarea
+
+⭐ Sube la prioridad de **adquirir Federmann 1916**. Deja de ser una fuente
+«media» de la lista F12 y pasa a tener una pregunta concreta esperándola: *¿está
+el seretón ahí?* Si está, el seretón no es nivel C — es un hecho de creencia
+con atestación del siglo XVI y continuidad hasta hoy, que es de lo más fuerte
+que puede tener el corpus.
+
+**Registrado así en el corpus**: entra como `hipotetico` con la lectura de
+Miguel citada, y con la deuda declarada de que la mención en Federmann está
+sin verificar.
+
+---
+
+## Quedan 22 por fallar
+
+flora: `gatiao`, `guamaro`, `marite`, `naguata`, `quihuagua`, `teco`, `tura`,
+`urubana` · fauna: `chamaco`, `chenga`, `chevebe`, `gualamo`, `igüira`,
+`matejea`, `tobeca` · oficio y casa: `buchuco`, `cadare`, `debudeque`,
+`guarupepe`, `machire`, `sarutaco`
