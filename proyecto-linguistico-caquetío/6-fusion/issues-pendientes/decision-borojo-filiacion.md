@@ -52,11 +52,19 @@ Los chibchas no son vecinos disparatados: Jahn los sitúa al oeste, y Aroa lleva
 una glosa chibchense circulando por la divulgación. Pero eso es contexto, no
 prueba.
 
-### Lo que hace falta antes de decidir
+### ✅ Verificado en imagen — 2026-09-11
 
-- 🔴 **Verificar la entrada en la IMAGEN.** Esta glosa se perdía justamente
-  porque el OCR maltrata esa página: se comió el paréntesis de cierre. Antes de
-  mover nada del lexicón hay que ver el original.
+El bloqueo está levantado. Renderizada la **página impresa 90** del tomo 4, la
+entrada dice, tal cual:
+
+> **BOROJÓ.** Población capital del municipio Borojó, Distrito Buchivacoa. /
+> Río que pasa por esa población. (***Borojó* es chibcha: un árbol frutal**.
+
+El OCR no se había inventado nada: solo se comió el paréntesis de cierre, que
+en el original tampoco está —Esteves abre paréntesis y no lo cierra—. La
+atribución chibcha es real y es del autor.
+
+### Lo que hace falta antes de decidir
 - Mirar si Esteves razona la atribución chibcha en algún otro sitio, o si la
   suelta sin argumento (que es como la suelta aquí).
 - Buscar el árbol: si existe un frutal llamado borojó en la zona, la glosa se

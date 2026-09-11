@@ -38,6 +38,37 @@ FUENTES = (
 # que da la fuente se reconstruye con ellos. Son las ecuaciones cerradas.
 
 NIVEL_A = {
+    # ── Fleco del lote 6 (2026-09-11) ──
+    "bisure": {
+        "id": "toponimo-179",
+        "clase": "topónimo",
+        "fuente": "esteves-1989",
+        "pagina": 90,
+        "glosa_fuente": "lagarto común",
+        "segmentacion": "bisure (sin composición)",
+        "morfemas": {
+            "bisure": "lagartija  [lexicón, caquetío-atestiguado, Zavala "
+                      "Reyes 2015 #41 (HB+E)]",
+        },
+        "glosa_reconstruida": "'el bisure', el lagarto",
+        "razon": "Esteves glosa el nombre él mismo —«(Bisure: lagarto "
+                 "común)»— y la voz estaba atestiguada en el lexicón antes, "
+                 "por Zavala y con dos siglas. Zoónimo sin componer: la "
+                 "ecuación cierra entera y sin residuo.",
+        "observacion": "«La Cuesta de los Bisures, serie de cerros que son "
+                       "linderos de los municipios Bruzual y Zazárida en los "
+                       "distritos Democracia y Buchivacoa, respectivamente». "
+                       "✅ VERIFICADO EN IMAGEN (p. impresa 90) el "
+                       "2026-09-11. Salió al comprobar si `visure` —la forma "
+                       "que Miguel y Medina dicen con v— estaba en el "
+                       "lexicón: está, con b, y arrastraba un topónimo "
+                       "glosado que nadie había procesado porque no figuraba "
+                       "en la lista dictada. FORMA VIVA: Miguel y Medina Colina dicen VISURE, con v-; Esteves y Zavala escriben los dos `Bisure`, y D5 lematiza v→b, asi que es la misma voz — b~v es permutacion declarada de la campana. ⚠️ Medina la llama «palabra creada por nuestro pueblo», lo que choca con que Zavala la tenga atestiguada: conflicto ya anotado en el dictado.",
+        # ⚠️ La variante de forma NO va en `lecturas`: el esquema solo admite
+        # eje significado/referente/ambos, y una variante gráfica no es
+        # ninguna de las tres. Va en `observacion`, como manda la skill.
+    },
+
     # ══════════════════════════════════════════════════════════════════
     # Lote 6 (2026-09-10) — el dictado de 141 topónimos de Miguel.
     # Detalle y medición: 6-fusion/pendientes_en_alvarado_y_arcaya.yaml
@@ -849,6 +880,43 @@ MORFEMAS_DESPEJADOS = {
 # ───────────────────────────────────────────────────────────────────────────
 
 NIVEL_C = {
+    # ── Fleco del lote 6 (2026-09-11) ──
+    "curarí": {
+        "id": "toponimo-180",
+        "clase": "topónimo",
+        "fuente": "alvarado-1921",
+        "glosa_fuente": "árbol de la región occidental, propio para la construcción civil",
+        "segmentacion": "curarí (fitónimo, sin composición)",
+        "morfemas": {
+            "curari": "árbol; probablemente una bignoniácea  [Alvarado 1921; "
+                      "d. t. CURARIRU]",
+        },
+        "glosa_reconstruida": "'el curarí', el árbol",
+        "razon": "Fitónimo sin componer, y entra en C porque ninguna fuente "
+                 "declara de qué lengua es la voz. Lo que SÍ se cerró es la "
+                 "especie: Alvarado conjeturaba «PROBABLEMENTE una "
+                 "bignoniácea» y Jahn 1927 da la entrada española como "
+                 "«CURARIRE (Tecoma serratifolia)» con el guajiro "
+                 "`kurátschi` — y Tecoma ES una bignoniácea. La conjetura de "
+                 "Alvarado queda confirmada con especie, por otra fuente y "
+                 "por vía independiente.",
+        "observacion": "De la lista dictada por Miguel el 2026-09-10, donde "
+                       "quedó sin resolver. ⚠️ NO confundir con el `curare` "
+                       "veneno, que Alvarado trata aparte y da «voz tomada "
+                       "del car. kurari; en mac. y tupi urari»: son entradas "
+                       "vecinas y el OCR las junta. Jahn p. impresa 368, "
+                       "✅ verificada en imagen.",
+        "lecturas": [
+            {"tipo": "glosa-fuente",
+             "lectura": "«CURARIRE (Tecoma serratifolia)» — guajiro `kurátschi`",
+             "quien": "Jahn 1927", "fecha": "2026-09-10", "eje": "significado",
+             "procedencia": dict(obra="jahn-1927", pagina=368),
+             "veredicto": "da el taxón que Alvarado solo conjeturaba; la "
+                          "forma guajira `kurátschi` es comparanda, no "
+                          "atestación caquetía"},
+        ],
+    },
+
     # ── Lote 6 (2026-09-10), del dictado de Miguel ──
     "usera": {
         "id": "toponimo-149",

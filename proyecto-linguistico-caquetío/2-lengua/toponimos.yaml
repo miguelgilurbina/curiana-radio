@@ -1,20 +1,43 @@
 meta:
   generado_por: curiana_sim/migrar_toponimos.py
-  toponimos: 178
+  toponimos: 180
   por_nivel:
-    A: 9
+    A: 10
     B: 16
-    C: 51
+    C: 52
     descartado: 102
-  con_procedencia: 116
-  con_lecturas: 33
-  lecturas: 64
+  con_procedencia: 117
+  con_lecturas: 34
+  lecturas: 65
   con_definicion_aceptada: 0
   corroboraciones_del_lexicon: 17
   nota: 'El nivel de confianza es un CAMPO, no un contenedor: antes eran NIVEL_A/B/C separados y para
     listar todos los topónimos había que unir tres dicts. La prosa (reduplicación, conflictos, veredicto
     sobre antropónimos) vive en 2-lengua/toponimia.md, no aquí.'
 toponimos:
+- id: toponimo-179
+  forma: bisure
+  nivel: A
+  clase: topónimo
+  glosa_fuente: lagarto común
+  segmentacion: bisure (sin composición)
+  morfemas:
+    bisure: 'lagartija  [lexicón, caquetío-atestiguado, Zavala Reyes 2015 #41 (HB+E)]'
+  glosa_reconstruida: '''el bisure'', el lagarto'
+  razon: 'Esteves glosa el nombre él mismo —«(Bisure: lagarto común)»— y la voz estaba atestiguada en
+    el lexicón antes, por Zavala y con dos siglas. Zoónimo sin componer: la ecuación cierra entera y sin
+    residuo.'
+  observacion: '«La Cuesta de los Bisures, serie de cerros que son linderos de los municipios Bruzual
+    y Zazárida en los distritos Democracia y Buchivacoa, respectivamente». ✅ VERIFICADO EN IMAGEN (p.
+    impresa 90) el 2026-09-11. Salió al comprobar si `visure` —la forma que Miguel y Medina dicen con
+    v— estaba en el lexicón: está, con b, y arrastraba un topónimo glosado que nadie había procesado porque
+    no figuraba en la lista dictada. FORMA VIVA: Miguel y Medina Colina dicen VISURE, con v-; Esteves
+    y Zavala escriben los dos `Bisure`, y D5 lematiza v→b, asi que es la misma voz — b~v es permutacion
+    declarada de la campana. ⚠️ Medina la llama «palabra creada por nuestro pueblo», lo que choca con
+    que Zavala la tenga atestiguada: conflicto ya anotado en el dictado.'
+  procedencia:
+    obra: esteves-1989
+    pagina: 90
 - id: toponimo-146
   forma: caracubana
   nivel: A
@@ -625,6 +648,36 @@ toponimos:
   procedencia:
     obra: esteves-1989
     pagina: 24
+- id: toponimo-180
+  forma: curarí
+  nivel: C
+  clase: topónimo
+  glosa_fuente: árbol de la región occidental, propio para la construcción civil
+  segmentacion: curarí (fitónimo, sin composición)
+  morfemas:
+    curari: árbol; probablemente una bignoniácea  [Alvarado 1921; d. t. CURARIRU]
+  glosa_reconstruida: '''el curarí'', el árbol'
+  razon: 'Fitónimo sin componer, y entra en C porque ninguna fuente declara de qué lengua es la voz. Lo
+    que SÍ se cerró es la especie: Alvarado conjeturaba «PROBABLEMENTE una bignoniácea» y Jahn 1927 da
+    la entrada española como «CURARIRE (Tecoma serratifolia)» con el guajiro `kurátschi` — y Tecoma ES
+    una bignoniácea. La conjetura de Alvarado queda confirmada con especie, por otra fuente y por vía
+    independiente.'
+  observacion: 'De la lista dictada por Miguel el 2026-09-10, donde quedó sin resolver. ⚠️ NO confundir
+    con el `curare` veneno, que Alvarado trata aparte y da «voz tomada del car. kurari; en mac. y tupi
+    urari»: son entradas vecinas y el OCR las junta. Jahn p. impresa 368, ✅ verificada en imagen.'
+  lecturas:
+  - tipo: glosa-fuente
+    lectura: «CURARIRE (Tecoma serratifolia)» — guajiro `kurátschi`
+    quien: Jahn 1927
+    fecha: '2026-09-10'
+    eje: significado
+    procedencia:
+      obra: jahn-1927
+      pagina: 368
+    veredicto: da el taxón que Alvarado solo conjeturaba; la forma guajira `kurátschi` es comparanda,
+      no atestación caquetía
+  procedencia: null
+  deuda: sin-procedencia
 - id: toponimo-149
   forma: usera
   nivel: C

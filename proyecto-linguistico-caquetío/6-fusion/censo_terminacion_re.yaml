@@ -108,13 +108,29 @@ la_prueba:
 # ══════════════════════════════════════════════════════════════════════
 # 4. Una cifra a mano que quedó vieja
 # ══════════════════════════════════════════════════════════════════════
-morfema_002_desactualizado:
-  lo_que_dice_hoy: '`-are`, recurrencia: 5, sin glosa y sin nivel'
-  lo_medido_hoy: >-
-    🔴 `-are` recurre 15 veces en el canon de topónimos y 14 en la Parte II de
-    Esteves. La cifra 5 es de cuando se escribió y nadie la volvió a medir.
-    Regla 1: o se mide o no se dice.
-  accion: 'actualizar morfema-002 con la recurrencia medida, y declarar de dónde sale'
+morfema_002_no_estaba_desactualizado:
+  lo_que_escribi_primero: >-
+    🔴 Dije que `morfema-002` declaraba «recurrencia: 5» y que la cifra estaba
+    vieja porque yo medía 15 en el canon y 14 en Esteves. FALSO, y lo vi al
+    abrir la entrada: su `5` no cuenta finales en -are. Cuenta «5 de 7
+    APARICIONES EN POSICIÓN FINAL CON GLOSA DESCRIPTIVA que denotan un
+    LUGAR». Es una cifra más cuidadosa que la mía, no una más vieja.
+  lo_que_mide_cada_una: >-
+    Mi 15/14 es el conteo crudo de nombres terminados en -are. El 5/7 de
+    morfema-002 es el subconjunto que además TIENE GLOSA y por tanto se puede
+    juzgar. Denominadores distintos: las dos son correctas y no se comparan.
+  lo_que_si_queda: >-
+    ⭐ El conteo crudo sirve para lo que la entrada no dice: cuántos CANDIDATOS
+    quedan por examinar. De 15 en el canon, solo 7 tenían glosa cuando se
+    escribió morfema-002 — y desde entonces han entrado más glosados
+    (Bariquire con `quire` 'color'). Vale la pena recontar los glosados, no la
+    recurrencia.
+  y_lo_que_la_entrada_ya_dice_y_yo_no_habia_leido: >-
+    `morfema-002` NO está «sin glosa y sin nivel»: tiene `glosado: true` y
+    `glosa_inferida: 'sitio de, paraje de (sufijo locativo)'`, con sus apoyos y
+    sus DOS CONTRAEJEMPLOS declarados (guasare 'árbol cactáceo' y chunare
+    'mazorca tierna', que no denotan lugar). Lo leí de una consulta que
+    truncaba los campos.
 
 # ══════════════════════════════════════════════════════════════════════
 # 5. Lo que abre

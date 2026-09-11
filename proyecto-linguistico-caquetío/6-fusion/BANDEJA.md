@@ -13,9 +13,9 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-10**.
+<!--GENERADO--> Generado el **2026-09-11**.
 
-**2126 ítems propuestos** en 45 propuestas, más **6 issue(s)/comentario(s) redactados sin publicar**.
+**2130 ítems propuestos** en 45 propuestas, más **6 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -81,7 +81,7 @@ falsa y se corrigió). Entradas contadas por patrón de dict.
 | `lexicon_alvarado.py` | alvarado-1921 | 217 | lo importan generar_tablero y auditar_82 |
 | `lexicon_gatschet.py` | gatschet-1885 | 88 | lo importan generar_tablero y auditar_82 |
 | `lexicon_van_buurt.py` | van-buurt-2014 | 231 | lo importan generar_tablero y auditar_82 |
-| `lexicon_toponimos.py` | varias (F11) | 165 | lo importa migrar_toponimos |
+| `lexicon_toponimos.py` | varias (F11) | 169 | lo importa migrar_toponimos |
 | `lexicon_candidatos.py` | aisladas 2026-06-28 | 441 | lo importa generar_tablero |
 | `lexicon_perea.py` | perea-alonso-1942 | 173 | comparanda lokono; el motor NO lo importa a propósito (ver su cabecera) |
 
