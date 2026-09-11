@@ -244,3 +244,48 @@ catire:
     - 'añadir `catire` como entrada `caquetío-retroabstraido`, con la cita de Zavala #71 y la lectura de Miguel'
     - "declarar `deuda: sin-procedencia` sobre el 'hijo' de la glosa de `dare`, o retirarlo"
     - 'barrer los corchetes de las entradas de Zavala: puede haber más voces sin cosechar'
+
+# ══════════════════════════════════════════════════════════════════════
+# EL RECUENTO DE -are, HECHO BIEN — 2026-09-11
+# ══════════════════════════════════════════════════════════════════════
+recuento_de_are:
+  el_encargo: 'recontar los `-are` CON GLOSA, que es lo que mide morfema-002'
+  primer_intento_contaminado: >-
+    🔴 Mi script automático dio «11 de 15 denotan lugar» y está MAL: contaba
+    como 'lugar' las descripciones de REFERENTE. `cururupare` «caserío del
+    municipio Piedra Grande» o `macuare` «aldea del municipio Colina» no
+    glosan nada — dicen qué es el sitio, no qué significa el nombre. Y
+    `urumare` es peor: su glosa CITA el morfema («termina en -are 'sitio de'»),
+    así que contarla es circular.
+  recuento_bueno:
+    toponimos_del_canon_en_are: 15
+    con_glosa_etimologica: 9
+    el_resto: '6 son descripción de referente, no glosa'
+    denotan_lugar: 6
+    no_lo_denotan: 3
+  y_aun_asi_hay_que_afinar_mas:
+    - >-
+      De esos 9, tres no son derivaciones en `-are` sino PALABRAS ENTERAS que
+      acaban en -are: `yacare` 'pueblo, caimán', `guasare` 'árbol cactáceo',
+      `chunare` 'apellido, mazorca tierna'. Contarlas como evidencia del
+      sufijo es contar el final de la raíz.
+    - >-
+      ⚠️ Y `capadare` «diente de tigre» se apoya en la atribución a Lisandro
+      Alvarado que esta misma campaña demostró NO VERIFICABLE: en el Glosario
+      de 1921 la única entrada CAPADARE es el cigarro, y «diente de tigre» no
+      aparece en toda la obra. Usarla como contraejemplo es apoyarse en una
+      cita que no cierra.
+  lo_que_queda_limpio:
+    a_favor: [bobare, cabudare, dabudare, pachacuare, taratarare]
+    cuantos: 5
+    en_contra_limpio: 'ninguno — los tres «en contra» son palabras enteras o cita sin verificar'
+  veredicto: >-
+    ⭐ `morfema-002` declara «5 de 7» y sigue siendo la cifra buena: los
+    apoyos limpios siguen siendo CINCO. Lo que ha crecido con esta campaña es
+    el número de NOMBRES en -are (15 en el canon, 14 en Esteves), no el de
+    glosas que lo despejan. No se toca la entrada.
+  lo_que_si_deja: >-
+    Una lista de candidatos concreta: los 6 que hoy solo tienen referente
+    —Guatacare, Cururupare, Macuare, Botucare, Tequeguacare, Urumare— son
+    donde buscar la séptima y la octava glosa. Si alguna aparece, morfema-002
+    sube de recurrencia con material y no con conteo.
