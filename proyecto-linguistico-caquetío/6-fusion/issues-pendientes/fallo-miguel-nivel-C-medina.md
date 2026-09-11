@@ -276,9 +276,7 @@ hipótesis. El ceretón se abre como voz aparte. Detalle y plan de contraste en
 
 ---
 
-## Quedan 2 por fallar
-
-`machire`, `guarupepe`
+## ✅ Ninguna pendiente — cerrado el 2026-09-11
 
 ---
 
@@ -484,3 +482,80 @@ intercambiaba. Llamarlo paraguanero recortaba justo lo que lo hace interesante.
 ⚠️ Y con el límite que Miguel también pone: los dos nodos de la próxima
 simulación **sí** son de Paraguaná. Que la esfera sea el marco de análisis no
 convierte en paraguanero todo lo que se simula, ni al revés.
+
+---
+
+# FALLO DE MIGUEL — tanda 4 (2026-09-11): **33 de 33. CERRADO.**
+
+Entran las dos últimas: **`machire`** y **`guarupepe`**.
+
+## Y el criterio con que las falla, que vale más que el fallo
+
+> «Yo creo que tanto machire como guarupepe son interesantes porque nos habla
+> de **información que era valiosa para los originarios**. Y si tenemos símiles
+> podemos **afianzarlos geográficamente** para así encontrar **divergencias y
+> distinciones en las distintas polities**.»
+
+Esto convierte una duda de fusión en un **programa de trabajo**, y hay que
+escribirlo como tal porque reordena el material que ya está dentro.
+
+### Primera parte: nombrar una distinción es declarar que importaba
+
+`machire` no es «harina de maíz»: es la harina **de cierta textura**, frente a
+`chirita`, que es la otra. Nadie parte en dos una palabra si la diferencia le da
+igual. La distinción misma es el dato etnográfico — dice dónde ponía el cuidado
+esa gente.
+
+Y visto así, medio nivel C deja de ser «fitónimos sueltos»:
+
+| El par o la serie | Qué distinción marca |
+|---|---|
+| `machire` / `chirita` | la **textura** de la harina de maíz |
+| `naguata` / `guarupepe` | la auyama **en desarrollo** / la auyama **hecha plato** |
+| `guanariji` / `susucure` / `cachinare` (+ `dato`, `kaduchi`) | el fruto del cardón **por especie** y **por si cuajó** |
+| `chenga` / `tobeca` | dos nombres para **el mismo pájaro** |
+| `mebi` / `maba` / `bayure` | **tres** para el panal |
+| `sarutaco` | el **punto medio** de cualquier cosa |
+| `tura` / `chunaure` | el maíz **tierno**, en dos lenguas |
+
+Siete distinciones finas, y casi todas de comida y su preparación.
+
+### Segunda parte: los pares son el instrumento
+
+⭐⭐⭐ Y aquí está lo que Miguel añade y yo no había visto. Un sinónimo no es
+ruido a resolver: **es un punto de medida**. Si `chenga` y `tobeca` nombran la
+misma perdiz, la pregunta útil no es «cuál es la buena» sino **dónde se dice
+cada una**. Lo mismo con `machire`/`chirita`, con `mebi`/`maba`/`bayure`, con
+`tura`/`chunaure`.
+
+Geolocalizar los pares convierte el léxico en un mapa de **divergencias entre
+polities** — que es exactamente la unidad que la regla 4 manda respetar y que
+`esfera-de-interaccion.md` dice que el proyecto había aplanado.
+
+**Y el material para empezar ya está**: el dictado localiza varias voces por
+pueblo —`gualamo` «en Tacuato y Santa Ana»—, Esteves da municipio y distrito
+para cada topónimo, y el mapa vivo tiene coordenadas. Lo que falta no es dato:
+es cruzarlos.
+
+### Lo que esto deja como tarea
+
+- Censar los **pares y series** del dictado y del lexicón: dónde se dice cada
+  variante, con la precisión que la fuente permita.
+- Cruzar ese censo con `curiana_polities.py` y con los nodos de
+  `asentamientos.yaml`.
+- ⚠️ Con el límite de siempre: Medina describe el s. XX. Una divergencia medida
+  hoy no es una divergencia precontacto mientras no se decida proyectarla
+  (regla 3).
+
+---
+
+## Estado final del bloque
+
+**33 de 33 falladas**, en cuatro tandas, más una voz que Miguel añadió de su
+propia memoria (`tapirama`) y que resultó estar en tres fuentes.
+
+- **32 entran** al corpus cultural como `hipotetico`, que es el destino que el
+  protocolo §5 les declara.
+- **1 se descarta**: `chamaco`, por el silencio de Alvarado y la posible
+  dependencia de sus dos fuentes.
+- Ninguna sube al lexicón activo.
