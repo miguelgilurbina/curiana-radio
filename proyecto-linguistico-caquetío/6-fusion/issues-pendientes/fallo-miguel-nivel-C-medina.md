@@ -427,10 +427,60 @@ sino en Venezuela, lo que nos parece indicar que también muchas de las plantas
 que designan son indígenas del país».
 
 **Dónde queda**: con `quihuagua` y `urubana` cierra la **serie de los frijoles
-paraguaneros**, que el dictado ya había agrupado. Y la variación
+de la esfera**, que el dictado ya había agrupado. ⚠️ Escribí «frijoles
+paraguaneros» y Miguel lo corrigió: ver la nota de encuadre al final. Y la variación
 `tapiramo`/`tapirama` es de género, no de raíz.
 
 ## Quedan dos
 
 `machire` — que el barrido ya emparejó con `chirita` como par fina/gruesa — y
 `guarupepe`, la comida de auyama con leche.
+
+---
+
+# ⚠️ CORRECCIÓN DE ENCUADRE — Miguel, 2026-09-11
+
+> «Ojo, paraguaneros no. Yo creo que sí o sí tenemos que cambiar la perspectiva
+> del proyecto: estamos hablando de **Kaketiana, que es un área cultural con
+> muchas etnias y culturas conviviendo e intercambiando**. Obvio que para
+> nuestra próxima simulación, que serán dos nodos de Paraguaná, es importante
+> tener esta info, pero **no es exclusivamente paraguanera**.»
+
+## Por qué no es un matiz
+
+Porque **el proyecto ya tenía esta tesis escrita** y yo recaí contra ella.
+`3-mundo/esfera-de-interaccion.md` (2026-08-08) se titula literalmente *«por
+qué "caquetío" no nombra una etnia»*, y su tesis es que la sociedad del Golfete
+**no era monoétnica** y que tratarla como tal es «un artefacto de la fuente
+colonial, no un hallazgo».
+
+Escribir «los frijoles paraguaneros» es exactamente el aplanamiento que esa
+nota denuncia, solo que cambiando la etiqueta étnica por una regional moderna.
+Paraguaná es una demarcación de hoy; la unidad de intercambio de la que habla
+el corpus es la **esfera**.
+
+## La regla que queda, y que no es «borrar la palabra»
+
+Hay 169 usos de `paraguaner*` en el repo, y **la mayoría son correctos**. La
+distinción:
+
+| Uso | Qué hacer |
+|---|---|
+| **Citar a Medina** — su libro se llama *Del Habla Paraguanera* y él describe Paraguaná | ✅ se respeta: es su palabra y su alcance declarado |
+| **Localizar un dato** — «voz recogida en Tacuato y Santa Ana» | ✅ es precisión geográfica, no encuadre |
+| **Encuadrar lo nuestro** — «la serie de los frijoles paraguaneros», «el habla paraguanera conserva sustrato» | 🔴 se corrige: la unidad es la esfera |
+
+Dicho corto: **la fuente puede ser paraguanera; la conclusión es de la esfera.**
+
+## Y lo que esto le hace al material de esta noche
+
+No lo invalida — lo **agranda**. Si `tura` ata el comercio de maíz de la sierra
+con Coro (Pérez de Tolosa 1546), si `picure` cruza tres familias lingüísticas,
+si el achagua colinda hasta Pedregal (Jahn) y si `tapirama` es voz que Ernst
+declara exclusiva de Venezuela, entonces el vocabulario que Medina recogió en
+Paraguaná **no nació en Paraguaná**: es el sedimento de un área que
+intercambiaba. Llamarlo paraguanero recortaba justo lo que lo hace interesante.
+
+⚠️ Y con el límite que Miguel también pone: los dos nodos de la próxima
+simulación **sí** son de Paraguaná. Que la esfera sea el marco de análisis no
+convierte en paraguanero todo lo que se simula, ni al revés.

@@ -145,6 +145,20 @@ aplicó en los lotes:
   permutación laxa y una distancia de 1-2 antes de llamar «nuevo» a un
   nombre; lo que sale como `aproximado` se revisa a mano, no cuenta.
 
+### Y cuida la etiqueta con la que encuadras
+
+Miguel, 2026-09-11: *«paraguaneros no… estamos hablando de Kaketiana, que es un
+área cultural con muchas etnias y culturas conviviendo e intercambiando»*.
+
+Un topónimo o una voz se **localiza** con precisión —«recogida en Tacuato»,
+«municipio Colina»— pero no se **encuadra** con una comarca moderna. La unidad
+de análisis es la esfera. Citar a Medina como paraguanero es fiel a su libro;
+concluir «la serie de frijoles paraguaneros» es aplanar el área que hace
+interesante el dato.
+
+Y con su límite: los nodos que se simulan **sí** son de Paraguaná. Que la
+esfera sea el marco no convierte en paraguanero todo lo simulado, ni al revés.
+
 ## 5. La tercera voz: `lecturas`
 
 Esquema y reglas en `2-lengua/datos-de-lengua.md` §«La tercera voz». Lo que

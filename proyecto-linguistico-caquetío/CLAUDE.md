@@ -23,7 +23,13 @@ cura y se publica en Curiana Radio (`/kaketiana`).
    simulación es del XIV-XV. No se proyecta sin decidirlo explícitamente.
 4. **Los caquetíos no eran una sola sociedad.** Modelamos la polity **costera**
    (`curiana_polities.py`). Importar un rasgo de Barquisimeto o los Llanos sin
-   marcarlo es el error que Oliver denuncia.
+   marcarlo es el error que Oliver denuncia. Y el reverso, que cuesta más ver
+   (Miguel, 2026-09-11): **la unidad de análisis es la esfera, no una comarca
+   moderna**. La fuente puede ser paraguanera —Medina lo es— pero la conclusión
+   es de la Kaketiana, «un área cultural con muchas etnias conviviendo e
+   intercambiando». Escribir «los frijoles paraguaneros» aplana igual que
+   escribir «los caquetíos», solo que con etiqueta regional en vez de étnica.
+   Ver `3-mundo/esfera-de-interaccion.md`.
 5. **Minar propone, el humano fusiona.** Un minador **nunca** toca
    `curiana_lexicon.py` ni `3-mundo/corpus/`. Deja su propuesta en `6-fusion/`
    (datos en YAML; issues redactados en `issues-pendientes/`) y regenera la
