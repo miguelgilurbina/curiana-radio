@@ -1,0 +1,106 @@
+# ══════════════════════════════════════════════════════════════════════
+# TURA — «puede ser ambas cosas». La tesis de Miguel, verificada
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  fecha: 2026-09-11
+  lo_que_dijo: >-
+    «Puede ser ambas cosas. Oliver comenta que los jirajaras comerciaban maíz
+    con Coro, por lo que puede ser nombre de baile como la mazorca. Y entra
+    dentro de nuestra área de influencia kaketiana».
+  veredicto: >-
+    ✅ Las dos patas se verifican, y la conclusión es más fuerte que la
+    hipótesis: no son homónimos que conviven por casualidad — es **un solo
+    campo semántico**, el del maíz tierno y su fiesta.
+
+# ══════════════════════════════════════════════════════════════════════
+pata_1_el_comercio_de_maiz:
+  fuente: 'Oliver 1989, cap. 3, citando a Pérez de Tolosa [1546] en Arellano 1964:6'
+  cita: >-
+    «Three leagues from the city of Coro one finds the sierras, and these are
+    settled by indians of the nation PIRACORA, who are bellicose and warriors.
+    They are EXCELLENT MAIZE FARMERS, and in the days when we had peace with
+    them [1527-1530], THEY SUPPLIED MAIZE TO THE SPANISH OF THE CITY OF CORO
+    for their subsistence».
+  lo_que_confirma: >-
+    ⭐⭐ Miguel acierta y la cita es de primera mano: un gobernador, en 1546,
+    describiendo el abastecimiento de Coro entre 1527 y 1530. La gente de la
+    sierra —a tres leguas de Coro— eran los agricultores de maíz que daban de
+    comer a la ciudad. El maíz viajaba de la sierra al Golfete, y con él su
+    vocabulario.
+  la_precision_que_hay_que_hacer: >-
+    ⚠️ Pérez de Tolosa los llama «nación PIRACORA», no jirajara. El pasaje está
+    en la sección jirajara de Oliver, pero el etnónimo de la fuente es otro y
+    conviene no colapsarlos: `piracora` es lo que dice el documento.
+
+# ══════════════════════════════════════════════════════════════════════
+pata_2_el_baile_es_del_maiz_tierno:
+  fuente: 'Jahn 1927, sobre los ayomanes'
+  citas:
+    - >-
+      «Entre las pocas costumbres que han conservado de sus antepasados, es la
+      más importante LA FIESTA LLAMADA TURA, la cual se celebra en julio o
+      agosto, EN LA ÉPOCA EN QUE EL MAÍZ ESTÁ JOJOTO, es decir, en que los
+      granos ya desarrollados están aún tiernos».
+    - >-
+      «TURA propiamente es un INSTRUMENTO que se toca en la fiesta, a la cual
+      ha dado su nombre. Es una especie de flauta de 60 centímetros de largo
+      con 5, 7 o 9 notas, construida de UN CARRIZO QUE SE CONOCE CON EL MISMO
+      NOMBRE DEL INSTRUMENTO».
+    - >-
+      «El baile de la tura tiene por base un acto del culto religioso: por
+      medio de ofrendas se procura predisponer favorablemente a los espíritus
+      encargados de LA FRUCTIFICACIÓN DE LAS PLANTAS».
+  lo_que_cambia_la_tesis: >-
+    ⭐⭐⭐ Esto deshace la idea de homonimia. Jahn da una CADENA explícita:
+    el carrizo se llama tura → la flauta hecha de ese carrizo se llama tura →
+    la fiesta donde se toca toma el nombre de la flauta. Y la fiesta se celebra
+    **cuando el maíz está jojoto**, que es exactamente lo que Medina glosa.
+    Baile y mazorca no son dos palabras que suenan igual: son el mismo campo.
+
+# ══════════════════════════════════════════════════════════════════════
+y_la_cadena_se_cierra_con_el_caquetio:
+  el_eslabon: >-
+    ⭐⭐⭐ La Fundación Empresas Polar («Glosario agroalimentario del maíz») da
+    `tura` = maíz tierno en Falcón, **sinónimo de `chunaure`**. Y Esteves
+    glosa CHUNAURE: «voz CAQUETÍA, jojota, mazorca tierna de maíz».
+  lo_que_significa: >-
+    Hay una palabra caquetía declarada —`chunaure`— para exactamente el mismo
+    referente que `tura`. Así que el campo del maíz tierno está cubierto por
+    las dos lenguas del contacto, que es justo lo que se espera de una
+    mercancía que viajaba de la sierra a Coro.
+  la_pregunta_que_abre: >-
+    ¿`tura` es la voz jirajaroide y `chunaure` la caquetía del mismo concepto,
+    conviviendo por el comercio? Es contrastable: `chunaure` está en el índice
+    de topónimos de Esteves, así que hay dónde seguir tirando.
+
+# ══════════════════════════════════════════════════════════════════════
+# 🔴 Y un cuarto homónimo que NO es de este campo
+# ══════════════════════════════════════════════════════════════════════
+el_toponimo_tura_es_otra_cosa:
+  hallazgo: >-
+    El topónimo TURA de Esteves (p. 66) NO pertenece a esta familia. Ya estaba
+    registrado en `toponimia_paraguana_miguel.yaml`: Esteves anota «Hato de
+    JURA es como está escrito el fundo que fue censado en 1881», y lo pone en
+    la familia de «jura, juri: VENTARRÓN» —con `judi`/`juri` 'viento' de
+    Judibana y Jurijurebo—. La `t-` actual es corrupción escrita de la `j-`.
+  por_que_importa: >-
+    ⚠️ Son cuatro cosas compitiendo por una forma corta: el carrizo/flauta/
+    fiesta, la mazorca tierna, el `tara` 'langosta, mariposa' del lexicón
+    (issue #45) y este topónimo que en realidad es `jura` 'ventarrón'. Al
+    registrar la voz hay que decir de cuál se habla.
+
+# ══════════════════════════════════════════════════════════════════════
+fallo:
+  voz: tura
+  entra: true
+  capa: 'corpus cultural, hipotético — y toca DOS esferas'
+  esferas: ['ecología/conuco (el maíz tierno)', 'creencia y transmisión (la fiesta)']
+  razon: >-
+    Entra con la lectura de Miguel citada y verificada. El valor no es el
+    fitónimo: es que una sola voz ata el comercio de maíz sierra→Coro
+    (Pérez de Tolosa 1546), la fiesta de la fructificación (Jahn) y el habla
+    viva de Paraguaná (Medina). Eso es un hecho cultural con tres testigos de
+    tres siglos distintos.
+  lo_que_NO_se_hace: >-
+    No entra al lexicón activo, ni se declara caquetía. La cadena documenta
+    CONTACTO, y la voz caquetía del mismo concepto parece ser `chunaure`.

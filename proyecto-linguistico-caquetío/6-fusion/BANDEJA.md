@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-11**.
 
-**2133 ítems propuestos** en 46 propuestas, más **6 issue(s)/comentario(s) redactados sin publicar**.
+**2133 ítems propuestos** en 47 propuestas, más **6 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -62,6 +62,7 @@ editar_a_mano: no
 | `toponimia_coro_espina.yaml` | gonzalez-batista-nombre-de-coro | 5 |  |
 | `toponimia_paraguana_miguel.yaml` | ? | 5 |  |
 | `toponimos_esteves_indice.yaml` | esteves-1989 | 130 |  |
+| `tura_la_tesis_de_miguel.yaml` | ? | 0 |  |
 | `velasco_primarios_agi.yaml` | velasco-2015-resistencia | 4 |  |
 | `voces_de_miguel_2026-09-10.yaml` | ? | 7 |  |
 
