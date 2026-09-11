@@ -13,10 +13,36 @@ editar_a_mano: no
 > python curiana_sim/generar_cronica.py
 > ```
 
-<!--GENERADO--> Generado el **2026-08-16**. **92 cambios** en main, del 2025-11-30 al 2026-08-13.
+<!--GENERADO--> Generado el **2026-09-11**. **115 cambios** en main, del 2025-11-30 al 2026-09-11.
 
-## 2026-08 — 23 cambio(s)
+## 2026-09 — 5 cambio(s)
 
+- **2026-09-11** `498a64c` Merge pull request #118 from miguelgilurbina/feat/dictado-medina-colina-y-toponimos
+- **2026-09-03** `e21e86f` Merge pull request #117 from miguelgilurbina/feat/marca-e-intro
+- **2026-09-01** `25fa6a9` docs(tablero): D15 cerrada en el tablero (#90) - 8 decisiones abiertas de 13
+- **2026-09-01** `2f6bbac` Merge pull request #116 from miguelgilurbina/feat/dossiers-d1-d3
+- **2026-09-01** `40212df` Merge pull request #115 from miguelgilurbina/feat/d11-lokono-y-anu
+
+## 2026-08 — 41 cambio(s)
+
+- **2026-08-31** `e66e8dc` Merge pull request #114 from miguelgilurbina/feat/tanda-siguiente-y-tabla-a7
+- **2026-08-31** `822048e` Merge pull request #113 from miguelgilurbina/feat/tanda-siguiente-y-tabla-a7
+- **2026-08-31** `54a462d` Merge pull request #112 from miguelgilurbina/feat/lengua-d5-d9-y-cuatro-fuentes
+- **2026-08-30** `ad8b420` Merge pull request #111 from miguelgilurbina/rescate/galeria-plan-y-licencia-badge
+- **2026-08-25** `6cadbb5` Merge pull request #110 from miguelgilurbina/feat/lengua-d5-d9-y-cuatro-fuentes
+- **2026-08-25** `2da39c7` Merge pull request #108 from miguelgilurbina/chore/al-dia-tras-kaketiana
+- **2026-08-25** `7235808` Merge pull request #107 from miguelgilurbina/claude/rastreo-informes-correcciones-376d08
+- **2026-08-24** `a06ad72` Merge pull request #103 from miguelgilurbina/docs/plantilla-tabla-a9
+- **2026-08-18** `dde1447` docs(apendice-a): mapeadas las nueve tablas — y la A-2 es la que faltaba
+- **2026-08-18** `84da0f1` feat(92): las 23 dataciones de la Tabla 15 — ocho caen en la ventana simulada
+- **2026-08-18** `637dd35` audit(lexicon): 7 medibles de 1.413 — y sima-bana depende de D9
+- **2026-08-18** `1929fcf` feat(vecinos): "caribe" no era una etnia, era una categoria de conquista
+- **2026-08-17** `99c9e2c` docs(plan): reescrita SIGUIENTE_TANDA como documento de traspaso
+- **2026-08-17** `6463a1d` audit(corpus): el corpus dice cuanta certeza, pero no certeza sobre QUIEN
+- **2026-08-17** `3424229` feat(vecinos): el vocabulario jirajarano, la ruta de la sal, y la regla 4 en su fuente
+- **2026-08-17** `f765889` feat(92): cerrados los 15 nodos del foco, y los vecinos jirajaranos
+- **2026-08-17** `dc6b6eb` fix(ocr): detectar paginas rotadas — Paraguana estaba invertida y devolvia cero
+- **2026-08-16** `f3ca085` Merge pull request #102 from miguelgilurbina/feat/ocr-fusion-y-la-ola-de-fuentes
 - **2026-08-13** `f0eaf5f` Esteves 1989: el gazeteer de Paraguaná que faltaba (#100)
 - **2026-08-10** `49597d1` feat(galeria): describir las 821 obras mirándolas (#99)
 - **2026-08-10** `dc9177c` feat(galeria): publicar las 821 obras, y dos correcciones del #97 (#98)
