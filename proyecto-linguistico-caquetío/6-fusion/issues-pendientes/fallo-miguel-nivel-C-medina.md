@@ -276,9 +276,9 @@ hipótesis. El ceretón se abre como voz aparte. Detalle y plan de contraste en
 
 ---
 
-## Quedan 14 por fallar
+## Quedan 2 por fallar
 
-`buchuco`, `cadare`, `debudeque`, `gatiao`, `guamaro`, `guarupepe`, `machire`, `marite`, `naguata`, `quihuagua`, `sarutaco`, `teco`, `tura`, `urubana`
+`machire`, `guarupepe`
 
 ---
 
@@ -354,3 +354,83 @@ sube sola.
 ⭐ Y corrige mi propia propuesta del 2026-09-09, que decía «C → B, con la
 homonimia anotada». Esa propuesta se retira: miraba la coincidencia de glosa y
 no la independencia de las fuentes.
+
+---
+
+# FALLO DE MIGUEL — tanda 3 (2026-09-11): flora, casa, y una voz nueva
+
+**Once entran. Van 31 de 33**, y quedan dos sin fallar: `machire` y `guarupepe`.
+
+## Entran
+
+`teco` · `urubana` · `guamaro` · `naguata` · `sarutaco` · `gatiao` · `marite` ·
+`quihuagua` · `buchuco` · `debudeque` · `cadare`
+
+### Las que traen algo además del nombre
+
+- **`teco`** (p. 274) — planta xerófita de hojas lanceoladas y espinosas. Ya
+  falló a favor del dato una vez: la web la dio por inexistente y **Esteves sí
+  la tenía**.
+- **`guamaro`** (p. 130) — árbol venenoso para el ganado, «hoy escaso, quizá
+  debido a los continuos veranos». Es la **única desaparición del libro con
+  causa declarada por el autor**: eso la hace dato de ecología, no solo de flora.
+- **`naguata`** (la auyama en desarrollo) y **`sarutaco`** («todo cuanto
+  estuviese en su punto medio de perfección») — con `cachinare` (el fruto del
+  cardón que no cuajó) forman el sistema de **estados de maduración**. Una
+  lengua que nombra el punto medio de las cosas.
+
+### `urubana`, que entra con la duda de Miguel escrita
+
+Miguel: *«mira, urubana no me cuadra. Pero mantengámoslo»*.
+
+Se conserva **con su reserva anotada**, que es como debe quedar. La glosa de
+Medina —frijol morado «que por llegar a Paraguaná desde la isla de Aruba…»—
+explica el nombre por una etimología de viaje, y ⚠️ la forma termina en
+`-bana`, que Esteves acaba de glosar 'cerro' sobre Caracubana. O es homonimia,
+o el nombre dice otra cosa que «viene de Aruba». La duda de Miguel señala
+exactamente ahí.
+
+### `cadare`, y un testimonio de primera mano
+
+Miguel: *«Cadare efectivamente es sucio o algo mugroso. La conozco y la usé de
+pequeño»*.
+
+⭐⭐ Eso es **testimonio de hablante vivo**, y coincide con Medina, que la glosa
+como suciedad. Sube el peso de la entrada por una vía que ninguna búsqueda da:
+alguien que la usó.
+
+⭐ **Y tiene consecuencia para `morfema-002`.** `cadare` termina en `-are` y
+significa 'suciedad': **no denota lugar**. Se suma a `guasare` 'árbol cactáceo'
+y `chunare` 'mazorca tierna' como **tercer contraejemplo limpio** del sufijo
+locativo — y este viene confirmado por un hablante, no por una glosa de
+diccionario. El recuento del 2026-09-11 dejó cinco apoyos a favor; este es el
+tercero en contra, y hay que anotarlo en la entrada del morfema.
+
+## Y una voz NUEVA que añade Miguel: `tapirama`
+
+Miguel: *«yo creo que igual tapirama debería ser incluido como frijol»*.
+
+✅ **Verificada, y está mejor apoyada que casi todo el nivel C** — tres fuentes,
+y ninguna es Medina:
+
+1. **Zavala Reyes 2015 #138**: «guaracaro (E): **tapirama silvestre**». O sea
+   que el glosario caquetío la usa como término DEFINIDOR de otra voz.
+2. **Esteves 1989**, tomo 5, s.v. GUARACARO —que además es topónimo, «lugar de
+   Casicure»—: «planta herbácea, anual, que produce un grano alimenticio, una
+   **tapirama silvestre**».
+3. **Alvarado 1921** s.v. **TAPIRAMO**: «Phaseolus sp. Especie de guisante
+   grueso, muy usado como legumbre en el país» (ref. Gilij I.194).
+
+⭐⭐⭐ Y Alvarado trae, citando a **Ernst**, un argumento que vale para todo el
+campo: «las palabras **caraota, tapiramo, guaracaro y tapirucuso** no se conocen
+sino en Venezuela, lo que nos parece indicar que también muchas de las plantas
+que designan son indígenas del país».
+
+**Dónde queda**: con `quihuagua` y `urubana` cierra la **serie de los frijoles
+paraguaneros**, que el dictado ya había agrupado. Y la variación
+`tapiramo`/`tapirama` es de género, no de raíz.
+
+## Quedan dos
+
+`machire` — que el barrido ya emparejó con `chirita` como par fina/gruesa — y
+`guarupepe`, la comida de auyama con leche.
