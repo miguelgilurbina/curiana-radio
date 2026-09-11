@@ -132,3 +132,99 @@ pendiente:
     `waya` 'nosotros'. Es la pista más limpia de morfología interna que ha
     dado este censo.
   - 'meter BISURE al canon: Esteves lo glosa «(Bisure: lagarto común)» y la base está atestiguada — candidato a nivel A'
+
+# ══════════════════════════════════════════════════════════════════════
+# CATIRE — la hipótesis de Miguel, 2026-09-10
+# ══════════════════════════════════════════════════════════════════════
+catire:
+  lo_que_dijo: >-
+    «Hay una palabra, CATIRE, que yo siento que justamente es como decir HIJO
+    DE LA LUNA. Como para describir a los españoles por su tez blanca».
+
+  # ── lo que se confirma, y no es poco ──
+  la_mitad_que_la_fuente_ya_hacia:
+    hallazgo: >-
+      ⭐⭐⭐ No hay que reconstruir nada: **Zavala Reyes 2015, glosario #71
+      (CGB)** dice, literal: «CATI: Luna [CATIRE: persona de tez blanca]». El
+      propio glosario caquetío pone `catire` entre corchetes, pegado a la
+      entrada de la luna.
+    lo_que_eso_significa: >-
+      La conexión luna→catire que Miguel intuyó **ya estaba hecha por la
+      fuente**, y por González Batista, que es quien firma esa entrada. No es
+      una corazonada: es una lectura que el glosario sostiene.
+    y_la_base_esta_atestiguada: >-
+      `kati` = 'luna' es **caquetío-atestiguado** en el lexicón (lema fonémico
+      de `cati`, fusionado por D5). Y no está sola: la familia arahuaca la
+      respalda entera — lokono `katsi` y `kathi`, kalinago `kati`, paraujano
+      `keichare`. La palabra para luna es de las más firmes que tenemos.
+    la_metafora_se_sostiene_sola: >-
+      ⭐ Y ni siquiera hace falta 'hijo' para que funcione: la luna es lo
+      PÁLIDO. 'Lunar, de la luna' → 'de tez clara' es una metáfora
+      transparente y de un solo paso. Es la lectura más barata y la que menos
+      asume.
+
+  # ── el problema, que hay que decirlo ──
+  la_mitad_que_no_se_sostiene:
+    la_pieza: >-
+      «Hijo de la luna» necesita que el `-re` venga de `dare` = 'hijo'
+      (kati + dare → katire, con haplología). Y `dare` SÍ está en el lexicón
+      como caquetío-atestiguado, glosado «diente; hijo (extensión metafórica)».
+    el_problema: >-
+      🔴 Su cita NO sostiene el 'hijo'. Las notas de la entrada dicen
+      exactamente: «Zavala Reyes 2015, glosario #103 (HB): *Diente*; Oliver
+      1989 la confirma en Paraguaná». Las dos fuentes dan **diente**. El «hijo
+      (extensión metafórica)» no lo respalda nadie: entró en la glosa sin
+      procedencia, que es lo que la regla 8 obliga a declarar como
+      `deuda: sin-procedencia`.
+    la_consecuencia: >-
+      Con las glosas que SÍ están atestiguadas, `kati` + `dare` daría 'diente
+      de la luna', no 'hijo de la luna'. Y no es una lectura rara: el canon
+      segmenta CAPADARE como `capa-` + `dare` y razona «`dare` = 'diente'
+      está en el lexicón y alinea» — el mismo `dare` de 'diente de tigre'.
+    lo_que_NO_hace: >-
+      ⚠️ Esto no refuta a Miguel. Refuta la pieza que yo pondría para
+      explicarlo. La lectura 'lunar → pálido' no necesita `dare` en absoluto y
+      sigue en pie.
+
+  # ── el hueco ──
+  catire_no_esta_en_el_lexicon:
+    hecho: >-
+      🔴 `catire` NO es una entrada del lexicón, ni en ninguna capa. Está
+      únicamente dentro de las `notas` de `kati`, arrastrado como corchete al
+      importar Zavala #71. La palabra estaba en la fuente y nadie la cosechó.
+    por_que_pasa: >-
+      Porque el importador de Zavala toma el LEMA de cada entrada y mete el
+      resto en notas. Lo que va entre corchetes dentro de una glosa se
+      transcribe pero no se convierte en entrada.
+    y_es_el_unico: >-
+      ✅ MEDIDO, y no es un fallo sistemático: barridos TODOS los corchetes
+      del glosario de Zavala buscando el patrón «forma: glosa» cuyo lema no
+      esté en el lexicón, sale exactamente UNO — `catire`. El importador no
+      se dejó nada más por el camino. (Escribí «puede haber más casos» antes
+      de medirlo; no los hay.)
+    donde_iria: >-
+      A `caquetío-retroabstraido`, la capa que se abrió hoy mismo. Razón:
+      `catire` está documentada —Zavala la recoge— pero es también voz
+      corriente del castellano venezolano, así que lo incierto es el sustrato,
+      no la forma. Es el mismo caso exacto que `chiriware` y `tukeke`.
+
+  # ── y lo que le hace al censo de -re ──
+  lo_que_aporta_al_censo:
+    - >-
+      ⭐ Si `catire` es `kati` + `-re`, sería un `-re` NO TOPONÍMICO — un
+      derivado sobre nombre común, que es justo lo que el censo no encontró
+      («cero de 19» en el léxico). Un contraejemplo así vale mucho: o el censo
+      se matiza, o `catire` no se segmenta así.
+    - >-
+      Y en la misma vecindad del glosario están `kasi`/`cazi` 'sol' (#76 GC) y
+      `cazebo` 'poniente' (#75 GC). El campo semántico de los astros está
+      inusualmente bien cubierto para un lexicón de 301 voces.
+    - >-
+      ⚠️ El paraujano da `keichare` para 'luna' (Jahn) — también en -re, y
+      también sobre una base k-t/k-ch. Si `-re` fuera un formante compartido,
+      aparecería ahí. Es una pista, no una prueba.
+
+  propuesta:
+    - 'añadir `catire` como entrada `caquetío-retroabstraido`, con la cita de Zavala #71 y la lectura de Miguel'
+    - "declarar `deuda: sin-procedencia` sobre el 'hijo' de la glosa de `dare`, o retirarlo"
+    - 'barrer los corchetes de las entradas de Zavala: puede haber más voces sin cosechar'
