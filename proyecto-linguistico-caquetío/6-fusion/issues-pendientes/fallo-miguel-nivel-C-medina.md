@@ -276,9 +276,81 @@ hipótesis. El ceretón se abre como voz aparte. Detalle y plan de contraste en
 
 ---
 
-## Quedan 22 por fallar
+## Quedan 14 por fallar
 
-flora: `gatiao`, `guamaro`, `marite`, `naguata`, `quihuagua`, `teco`, `tura`,
-`urubana` · fauna: `chamaco`, `chenga`, `chevebe`, `gualamo`, `igüira`,
-`matejea`, `tobeca` · oficio y casa: `buchuco`, `cadare`, `debudeque`,
-`guarupepe`, `machire`, `sarutaco`
+`buchuco`, `cadare`, `debudeque`, `gatiao`, `guamaro`, `guarupepe`, `machire`, `marite`, `naguata`, `quihuagua`, `sarutaco`, `teco`, `tura`, `urubana`
+
+---
+
+# FALLO DE MIGUEL — tanda 2 (2026-09-11): la fauna
+
+**Seis entran, una se descarta.** Con la tanda 1 van **18 de 33**.
+
+## Las seis que entran
+
+| Voz | p. | Por qué |
+|---|---|---|
+| `chenga` | 70 | la paloma perdiz, «abundante en nuestros montes, hoy casi…» |
+| `tobeca` | 279 | «la perdiz, también llamada chenga» |
+| `igüira` | — | paloma silvestre del tamaño de la casera, hoy en vías de extinción |
+| `chevebe` | 69-70 | la langosta; «otros le llaman…» |
+| `matejea` | 181 | la vivienda hecha por las avispas |
+| `gualamo` | 130 | «un bisure de color amarillo combinado con…», en Tacuato y Santa Ana |
+
+### Lo que hace valiosa a cada una
+
+- ⭐ **`chenga` y `tobeca` entran COMO PAR**, no sueltas. Medina da las dos para
+  el mismo pájaro, y el dato no es cada nombre: es que **había dos**. Separarlas
+  perdería justo lo que dicen.
+- ⚠️ **`igüira`** convive con `wakoa`/`guacoa` 'paloma', que ya está
+  **atestiguada y con taxón** (*Columba corensis*, por Esteves, Zavala/Hernández
+  Baño y van Buurt). Queda por decidir si son dos especies o la misma con dos
+  nombres — y esa pregunta es el valor de la entrada, no su problema.
+- ⭐⭐ **`chevebe`** puede destrabar el issue **#45**, que lleva abierto desde
+  agosto: si `chevebe` es la langosta, el `tara` del lexicón —glosado «langosta;
+  también mariposa, polilla»— pierde uno de sus dos sentidos y el conflicto que
+  «puede tumbar un argumento del corpus» se decide.
+- **`matejea`** completa el campo del panal por el otro lado: con `mebi`,
+  `memerea` y `guacuquero` (tanda 1) estaba la abeja; ahora está la avispa.
+- ⭐ **`gualamo`** se apoya en `bisure`, que acaba de entrar al canon de
+  topónimos en nivel A, y trae **color** otra vez — el hueco que ya señaló
+  `busuga`. El caquetío atestiguado sigue sin un solo término de color.
+
+## La que se descarta, y por qué
+
+### `chamaco` (p. 67) — pájaro carpintero. NO ENTRA.
+
+Miguel: *«la única que me hace ruido es chamaco; ¿dónde aparece ese nombre?»*.
+Se midió, y el ruido tiene fundamento.
+
+**Dónde aparece**, en dos sitios y los dos modernos:
+
+1. Medina Colina p. 67, la entrada original.
+2. El barrido web del 2026-09-09: una guía de ecoturismo de Paraguaná que lista
+   «chamaco» o «carpintero» entre la avifauna del **cerro Santa Ana**. Entonces
+   propuse subirla de C a B «con la homonimia anotada».
+
+**Las dos razones para no subirla:**
+
+- 🔴 **Alvarado no la tiene.** Su único `chamac-` en toda la obra es
+  `guachamaca`, una apocinácea: otra palabra. Y el silencio pesa, porque
+  Alvarado sí registra `picure`, `tuqueque` y `petaca`, y es minucioso con las
+  aves — da `chocolatero` y *Dendrocolaptes longirostris* para carpinteros. Que
+  una voz de ave de Falcón falte en el *Glosario de voces indígenas de
+  Venezuela* de 1921 significa algo.
+- ⚠️ **Las dos fuentes pueden no ser independientes.** La guía es contemporánea
+  y local: pudo tomar el nombre del propio libro de Medina, o del mismo uso que
+  Medina recogió. No son dos fuentes; pueden ser la misma voz dos veces.
+
+**Dónde queda**: con `cachube` y `picure` — voz que circula, cuyo sustrato no se
+puede declarar caquetío. La diferencia con `petaca` es que de aquella Alvarado
+declaró el origen náhuatl y de esta no dice nada, así que ni siquiera hay
+descarte limpio: hay ausencia.
+
+**Qué la haría subir**: aparecer en Hernández Baño «Los Caquetíos de Falcón»
+(1984, aún sin adquirir) o en cualquier fuente anterior a Medina. Si eso pasa,
+sube sola.
+
+⭐ Y corrige mi propia propuesta del 2026-09-09, que decía «C → B, con la
+homonimia anotada». Esa propuesta se retira: miraba la coincidencia de glosa y
+no la independencia de las fuentes.
