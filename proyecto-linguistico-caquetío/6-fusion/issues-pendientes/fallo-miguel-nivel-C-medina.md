@@ -250,9 +250,29 @@ el seretón ahí?* Si está, el seretón no es nivel C — es un hecho de creenc
 con atestación del siglo XVI y continuidad hasta hoy, que es de lo más fuerte
 que puede tener el corpus.
 
-**Registrado así en el corpus**: entra como `hipotetico` con la lectura de
-Miguel citada, y con la deuda declarada de que la mención en Federmann está
-sin verificar.
+### 🔴 CORREGIDO el mismo día: la mención SÍ existía, y es de la otra grafía
+
+Miguel: *«tú fuiste quien me dijo que habías conseguido información de Ceretón
+de una mención de Federmann»*. Tiene razón, y me equivoqué dos veces.
+
+1. Dije «cero, no verificable» habiendo buscado solo en `fuentes_caquetios/`.
+   El dato estaba en **mis propios registros** —el barrido web del 2026-09-09—
+   y lo había escrito yo dos días antes.
+2. Y lo que encontré entonces cuelga del **ceretón** con c: «un enano de
+   sombrero de la Sierra de Falcón, atribuido a los **Welser alemanes del s.
+   XVI**». Federmann era el agente de los Welser: ahí está el hilo.
+
+Miguel responde con un argumento mejor que el mío: en una cultura de **tradición
+oral** la c/s ante e la pone el escriba, no el hablante, así que son «entes con
+el mismo nombre» y lo que cambió es la versión que sobrevivió. Y al medirlo
+resulta que **D5 (#36) dejó `ce/ci` explícitamente DISPUTADA** —el lematizador
+la protege a propósito— o sea que el canon nunca decidió esto.
+
+**Registrado así en el corpus**: el seretón entra por su propio mérito, con la
+lectura de Miguel citada, y ⚠️ **sin apoyarse en Federmann** — porque esa
+mención es de la otra grafía y su relación es justamente lo que queda en
+hipótesis. El ceretón se abre como voz aparte. Detalle y plan de contraste en
+`6-fusion/ceret_on_hipotesis_miguel.yaml`.
 
 ---
 

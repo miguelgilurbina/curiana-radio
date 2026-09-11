@@ -1,0 +1,129 @@
+# ══════════════════════════════════════════════════════════════════════
+# CERETÓN / SERETÓN — una sola voz, o dos. Hipótesis de Miguel, 2026-09-11
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  de_donde_sale: >-
+    Al fallar las voces de nivel C del dictado de Medina, Miguel recordó que yo
+    le había dado una mención de Federmann. Al buscarla salió que sí existía —
+    en mi propio barrido web del 2026-09-09— pero colgada de la OTRA grafía.
+  estado: 'hipótesis registrada, no resuelta. Toca una decisión que D5 dejó abierta.'
+
+# ══════════════════════════════════════════════════════════════════════
+lo_que_hay_atestiguado:
+  seretón:
+    fuente: 'Medina Colina, Del Habla Paraguanera, p. 262 (dictado 2026-09-08)'
+    registro: 'mc-mundo-026, esfera creencia'
+    cita: >-
+      «Forma parte del folclor y consistía en que se tenía la certeza de que
+      existían hombres con la facultad de transformarse en animales pequeños y
+      generalmente domésticos, pues los mismos tenían pacto diabólico, lo que
+      les permitía esa transformación previo el paso de desnudarse completamente
+      y ocultar la ropa. Se dice de seretones a quienes les descubrieron la ropa
+      y se la cambiaron de sitio, por lo que no pudieron o les resultó difícil
+      recuperar su identidad».
+    epoca: 's. XX, folclor vivo en la memoria del autor'
+    detalle_que_vale: >-
+      ⭐ La ROPA es el ancla de la identidad, y el «pacto diabólico» es
+      reetiquetado cristiano sobre una transformación que el corpus ya tiene
+      por otra vía: el chamanismo del boratio.
+  ceretón:
+    fuente: 'barrido web del 2026-09-09, divulgación falconiana'
+    cita: >-
+      «un enano de sombrero de la Sierra de Falcón, atribuido a los WELSER
+      ALEMANES del s. XVI»
+    por_que_conecta_con_federmann: >-
+      Federmann era el agente de los Welser: el alemán. Ahí está la mención que
+      Miguel recordaba.
+
+# ══════════════════════════════════════════════════════════════════════
+la_hipotesis_de_miguel:
+  lo_que_dijo: >-
+    «Hay que recordar que la cultura que Federmann estaba experimentando era de
+    TRADICIÓN ORAL, así que ceretón/seretón de alguna forma son entes con el
+    mismo nombre. Los Welser al parecer se contactaron con uno, y luego quedó en
+    la memoria colectiva este otro con s».
+  por_que_es_fuerte: >-
+    ⭐⭐ Porque la distinción c/s ante e es una decisión de QUIEN ESCRIBE, no de
+    quien habla. En una cultura sin escritura, dos cronistas del mismo sonido
+    producen dos grafías, y cuatro siglos después parecen dos palabras. Tratar
+    la diferencia ortográfica como diferencia de entidad es el error que la
+    campaña ya evita en topónimos con la permutación laxa.
+  y_lo_que_propone_ademas: >-
+    Una CONTINUIDAD con deriva: los Welser encuentran una criatura en el s. XVI
+    y lo que sobrevive en la memoria colectiva es otra versión del mismo ser.
+    Eso es una hipótesis sobre cómo cambia un relato oral en cuatro siglos, y
+    es contrastable.
+
+# ══════════════════════════════════════════════════════════════════════
+# Dos correcciones mías
+# ══════════════════════════════════════════════════════════════════════
+correcciones:
+  la_primera:
+    lo_que_dije: >-
+      «Cero en todo lo extraído; no se puede verificar la mención de Federmann».
+    por_que_estaba_mal: >-
+      🔴 Mi búsqueda solo miró `fuentes_caquetios/` y el scratchpad. NO miré mis
+      propios registros de 6-fusion, que es donde estaba — en el barrido web del
+      2026-09-09 y en el dictado de Medina. El dato llevaba dos días escrito por
+      mí mismo.
+    la_leccion: >-
+      ⭐ Al comprobar una afirmación propia, el repo incluye LO QUE UNO YA
+      ESCRIBIÓ. Un barrido que solo mira las fuentes primarias se deja fuera la
+      memoria del proyecto.
+  la_segunda:
+    lo_que_dije: >-
+      «Son dos criaturas distintas; no confundir» — apoyándome en una nota mía
+      del 2026-09-09 que decía exactamente eso.
+    por_que_hay_que_cuestionarla: >-
+      🔴 Esa nota trata una diferencia ORTOGRÁFICA como si fuera ontológica, y
+      lo hace en un proyecto cuyo método dice lo contrario. No es que Miguel
+      contradiga al canon: es que el canon nunca decidió esto.
+    lo_medido: >-
+      **D5 (#36) está CERRADA pero dejó `ce/ci` FUERA**. El lematizador lo
+      declara en el código: `re.sub(r"c(?=[eéií])", …)  # proteger ce/ci
+      (disputada)`, y su docstring dice «Conserva tildes, ü, h, CE/CI, x».
+      Comprobado: `lema_fonemico("cereton")` da `cereton` y
+      `lema_fonemico("sereton")` da `sereton` — lemas distintos, a propósito.
+    conclusion: >-
+      Así que la pregunta de Miguel no está resuelta ni a favor ni en contra:
+      cae justo en la casilla que D5 marcó como disputada. Su argumento —en una
+      cultura oral la c/s la pone el escriba— es precisamente el tipo de
+      evidencia que resolvería esa disputa.
+
+  y_un_desfase_en_mis_scripts:
+    hallazgo: >-
+      ⚠️ Los `fonemizar()` que escribí en los scripts de barrido de esta
+      campaña SÍ colapsan `c(?=[ei])→s`, al contrario que el `lema_fonemico`
+      canónico, que la protege. Mis cruces han sido más permisivos que el canon
+      en exactamente este punto.
+    consecuencia: >-
+      Para BUSCAR está bien —una red más ancha no pierde nada—, pero ninguna
+      salida de esos scripts es un lema canónico. Queda declarado para que
+      nadie la trate como tal.
+
+# ══════════════════════════════════════════════════════════════════════
+que_lo_resolveria:
+  - >-
+    🔴 **Federmann 1916**, que sigue sin estar en el repo. Es la fuente que
+    diría si el ceretón está ahí y con qué forma. Su prioridad ya subió a alta
+    por esto mismo.
+  - >-
+    Buscar si la versión del ENANO DE SOMBRERO sobrevive hoy en Falcón junto a
+    la del transformista. Si conviven las dos con el mismo nombre, la hipótesis
+    de Miguel gana mucho; si el enano solo aparece atribuido a los alemanes y
+    nunca en boca local, se debilita.
+  - >-
+    Y una pregunta de método que esto deja planteada: si `ce/ci` sigue
+    disputada, ¿cuántas otras parejas del lexicón están separadas solo por esa
+    grafía? Se puede medir, y sería el material para cerrar D5 del todo.
+
+# ══════════════════════════════════════════════════════════════════════
+lo_que_se_hace_ahora:
+  seretón: >-
+    ENTRA al corpus como falló Miguel, por su propio mérito: es hecho de
+    creencia con detalle etnográfico y continuidad viva. ⚠️ Pero NO se apoya en
+    Federmann, porque esa mención es de la otra grafía y su relación es
+    justamente lo que está en hipótesis.
+  ceretón: >-
+    Se abre como voz aparte, con su cita del barrido y la hipótesis de Miguel
+    colgada. No entra a ningún sitio hasta que haya fuente.
