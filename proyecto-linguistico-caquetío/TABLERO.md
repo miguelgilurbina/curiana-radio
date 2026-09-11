@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-11 12:22**.
+<!--GENERADO--> Generado el **2026-09-11 12:45**.
 
 ## ¿Vamos bien?
 
@@ -36,22 +36,22 @@ Detalle de cada número: [lexicón](#1-el-lexicón) · [fuentes](#2-las-fuentes)
 
 Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 
-**1503 entradas activas** en `VOCABULARIO_BASE`.
+**1676 entradas activas** en `VOCABULARIO_BASE`.
 
 ### Por lengua (categoría normalizada)
 
 | Lengua (`normalize_source_language()`) | n | % del lexicón |
 |---|---|---|
-| wayunaiki | 781 | 52.0% |
-| caquetío | 302 | 20.1% |
-| lokono | 275 | 18.3% |
-| taíno | 57 | 3.8% |
-| paraujano | 47 | 3.1% |
-| kalinago | 19 | 1.3% |
-| jirajaroide-contacto | 7 | 0.5% |
+| wayunaiki | 781 | 46.6% |
+| lokono | 448 | 26.7% |
+| caquetío | 302 | 18.0% |
+| taíno | 57 | 3.4% |
+| paraujano | 47 | 2.8% |
+| kalinago | 19 | 1.1% |
+| jirajaroide-contacto | 7 | 0.4% |
 | proto-arahuaco | 5 | 0.3% |
-| caribe-continental | 4 | 0.3% |
-| kalinago-caribe-overlay | 4 | 0.3% |
+| caribe-continental | 4 | 0.2% |
+| kalinago-caribe-overlay | 4 | 0.2% |
 | español-colonial | 2 | 0.1% |
 
 <details><summary>Los 25 valores de <code>fuente</code> en el dato crudo (F8 quiere sanearlos)</summary>
@@ -59,7 +59,7 @@ Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 | `fuente` crudo | n |
 |---|---|
 | wayunaiki | 769 |
-| lokono | 247 |
+| lokono | 420 |
 | caquetío-atestiguado | 228 |
 | caquetío-reconstruido | 68 |
 | paraujano | 47 |
@@ -252,7 +252,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | 5 | ⚪ | Citas del corpus verificadas por muestreo (F10) | **no automedible**: que la cita *resuelva* (que la página exista) es trabajo humano. Medible sí: 166/166 hechos **tienen** `referencia` |
 | 6 | 🟢 | D1, D3 y D5 tomadas | todas tomadas — [D1](https://github.com/miguelgilurbina/curiana-radio/issues/32) · [D3](https://github.com/miguelgilurbina/curiana-radio/issues/34) · [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) |
 | 7 | 🟢 | La glosa de `-bana` resuelta | todas tomadas — [D9](https://github.com/miguelgilurbina/curiana-radio/issues/38) |
-| 8 | 🔴 | El desbalance wayunaiki/lokono resuelto | abiertas: D11 — [D11](https://github.com/miguelgilurbina/curiana-radio/issues/39) · medido: wayunaiki 781 vs. lokono 275 (2.8 a 1) · + 173 raíces lokono propuestas por Perea 1942, sin fusionar (fase 1 de D11); con ellas quedaría 781 vs. 448 (1.7 a 1) |
+| 8 | 🔴 | El desbalance wayunaiki/lokono resuelto | abiertas: D11 — [D11](https://github.com/miguelgilurbina/curiana-radio/issues/39) · medido: wayunaiki 781 vs. lokono 448 (1.7 a 1) · fase 1 de D11 FUSIONADA: 173 de 173 raíces de Perea ya están en el habla |
 | 9 | ⚪ | `export_runs_index.py` reparado | **no automedible sin correr un export contra la base** (ver [[04_protocolo_run_1_era_auditada]] §2.9) |
 
 🟢 cumplida · 🔴 no cumplida · ⚪ no automedible (necesita criterio humano o correr algo)
