@@ -1,0 +1,134 @@
+# ══════════════════════════════════════════════════════════════════════
+# La terminación -re — censo pedido por Miguel el 2026-09-10
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  de_donde_sale: >-
+    Buscando si `visure` estaba en el lexicón salió `bisure`, y con él sus
+    vecinos de glosario `barsure` 'alma' y el topónimo BISURE. Miguel: «me
+    parece interesante esa terminación -re». Se mide en las tres capas.
+  script: '6-fusion/scripts/censo_terminacion_re.py'
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. No es una impresión: es la terminación más frecuente del gazetteer
+# ══════════════════════════════════════════════════════════════════════
+lo_primero_que_hay_que_descartar:
+  la_objecion: >-
+    «Casi todo acaba en vocal, claro que hay muchos en -re». Hay que medirlo
+    antes de seguir, o el censo entero no dice nada.
+  el_control: >-
+    Contadas TODAS las finales de dos letras de las 387 entradas de la Parte II
+    de Esteves, `-re` es la PRIMERA con 37. Detrás: `-al` 24 (que es el
+    colectivo CASTELLANO de Guayacanal y Cacetal, o sea ni siquiera indígena),
+    `-ro` 22, `-ua` 21, `-ra` 18.
+  veredicto: >-
+    ⭐ La terminación más frecuente del gazetteer de topónimos caquetíos es
+    `-re`, y le saca 13 a la siguiente. La intuición de Miguel se sostiene.
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. El censo, en las tres capas
+# ══════════════════════════════════════════════════════════════════════
+censo:
+  lexicon_caquetio:
+    de: 301
+    en_re: 19
+    porcentaje: '6%'
+    reparto: {'-ure': 12, '-are': 3, '-ere': 2, '-ore': 2}
+    las_doce_en_ure: >-
+      bachure 'maneto', barsure 'alma, esencia vital', bisure 'lagartija',
+      chaure 'lechuza que anida en cuevas de terreno arenoso', kasikure
+      'levante, este', MANAURE 'título laudatorio del señor principal', maure
+      'fibra de algodón', naure 'planta bejucosa', tupure 'siembra de cacao',
+      URE 'raíz', wabarsure 'alma colectiva', yakure 'acacia'.
+    lo_que_salta_a_la_vista: >-
+      ⭐ `ure` = 'raíz' ES una entrada del lexicón por derecho propio,
+      caquetío-atestiguada. O sea que las otras once podrían ser compuestos
+      con ella — que es exactamente como Esteves lee GUAIMURE: «raíz de guay;
+      "ure", raíz».
+  canon_de_toponimos:
+    de: 178
+    en_re: 25
+    porcentaje: '14%'
+    reparto: {'-are': 15, '-ure': 6, '-ire': 2, '-ere': 1, '-ore': 1}
+  gazetteer_esteves_parte_II:
+    de: 387
+    en_re: 36
+    porcentaje: '9%'
+    reparto: {'-ure': 15, '-are': 14, '-ire': 4, '-ore': 3}
+
+  la_asimetria: >-
+    ⭐⭐ En el LEXICÓN manda `-ure` (12 de 19). En el CANON DE TOPÓNIMOS manda
+    `-are` (15 de 25). No es la misma terminación repartida al azar: cada capa
+    prefiere una. Eso pide explicación, y es lo que hace interesante el censo.
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. La prueba que decide: ¿sufijo, o final de raíz?
+# ══════════════════════════════════════════════════════════════════════
+la_prueba:
+  como_se_hace: >-
+    Si `-ure` es SUFIJO, quitarlo tiene que dejar una raíz que exista. Se probó
+    sobre las 19 del lexicón, quitando -ure, -re y -e.
+  resultado_en_el_lexicon: >-
+    🔴 CERO de 19. Ninguna deja raíz atestiguada: `bisure` no deja `bis`,
+    `maure` no deja `mau`, `manaure` no deja `mana`. En el léxico, `-ure` es
+    final de raíz y no hay morfema que despejar.
+  el_cero_tiene_matiz:
+    - >-
+      ⚠️ Regla 6: el lexicón caquetío son 301 palabras. Que la raíz no esté
+      mide nuestro vocabulario, no la lengua.
+    - >-
+      ⭐ Y hay UNA excepción que mi propia prueba no vio porque solo quitaba
+      por el final: `wabarsure` = `wa-` + `barsure`, y `barsure` SÍ está en el
+      lexicón. La única morfología interna de todo el grupo -ure es
+      PREFIJAL, no sufijal.
+
+  resultado_en_los_toponimos: >-
+    ⭐⭐⭐ Y aquí se da la vuelta. En el canon, `-ure` SÍ se separa, y la raíz
+    que queda es atestiguada:
+      · ADAURE  = a- + dar(a) + -ure   — y `dara` es el alcaraván
+      · ABUDURE = (a)dabuda + ure      — con aféresis de la d-
+      · GUAIMURE = guay + ure          — y `guay` es 'árbol parecido a la ceiba'
+    Tres topónimos donde el corte funciona, frente a cero palabras del léxico.
+
+  lo_que_se_concluye: >-
+    ⭐⭐ `-ure` y `-are` se comportan como MORFOLOGÍA TOPONÍMICA, no como
+    derivación léxica general. Se pegan a nombres de lugar sobre bases
+    atestiguadas, y no forman palabras comunes.
+  y_lo_que_eso_le_hace_a_la_disputa:
+    la_disputa: >-
+      `morfema-002` tiene la glosa de `-ure` EN DISPUTA: Esteves y van Buurt
+      dicen 'raíz'; la evidencia toponímica dice 'sitio de'.
+    lo_que_aporta_este_censo: >-
+      Que el formante solo se despeje en topónimos, y nunca en palabras
+      comunes, empuja hacia 'SITIO DE'. Un sustantivo que significa 'raíz'
+      debería poder componer palabras corrientes, y no lo hace ni una vez en
+      301. ⚠️ No lo cierra: `ure` 'raíz' es voz libre atestiguada, y un
+      sustantivo que se gramaticaliza en formante de lugar es un camino
+      normalísimo — las dos cosas pueden ser verdad a la vez, en orden.
+
+# ══════════════════════════════════════════════════════════════════════
+# 4. Una cifra a mano que quedó vieja
+# ══════════════════════════════════════════════════════════════════════
+morfema_002_desactualizado:
+  lo_que_dice_hoy: '`-are`, recurrencia: 5, sin glosa y sin nivel'
+  lo_medido_hoy: >-
+    🔴 `-are` recurre 15 veces en el canon de topónimos y 14 en la Parte II de
+    Esteves. La cifra 5 es de cuando se escribió y nadie la volvió a medir.
+    Regla 1: o se mide o no se dice.
+  accion: 'actualizar morfema-002 con la recurrencia medida, y declarar de dónde sale'
+
+# ══════════════════════════════════════════════════════════════════════
+# 5. Lo que abre
+# ══════════════════════════════════════════════════════════════════════
+pendiente:
+  - >-
+    El `-dare` compite con el `-are`: el lexicón tiene `dare` 'diente; hijo'
+    como palabra, y el canon ya segmenta CAPADARE como `capa-` + `dare`. Antes
+    de dar por bueno un `-are` en un nombre terminado en -dare, hay que
+    preguntarse si no es la palabra `dare` entera. Afecta a Capadare, Bidare,
+    Chidare, Cabudare, Dabadubare, Codore.
+  - >-
+    `wa-` como prefijo: `wabarsure` 'alma colectiva' = wa + barsure 'alma'.
+    Si `wa-` colectiviza, hay que buscarlo en más sitios — y el lexicón tiene
+    `waya` 'nosotros'. Es la pista más limpia de morfología interna que ha
+    dado este censo.
+  - 'meter BISURE al canon: Esteves lo glosa «(Bisure: lagarto común)» y la base está atestiguada — candidato a nivel A'
