@@ -1,7 +1,7 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 59
-  en_repo: 39
+  obras: 62
+  en_repo: 42
   solo_citadas: 20
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
@@ -239,6 +239,22 @@ obras:
   local:
   - fuentes_caquetios/Esteves_1989_Toponimos_Paraguana_1..6.pdf
   en_repo: true
+- id: fabo-1911
+  obra: Idiomas y etnografía de la región oriental de Colombia
+  autor: Fabo, Pedro (fray, O.A.R.)
+  anio: 1911
+  publicacion: Barcelona, José Benet, 1911. 293 pp.
+  genero: gramatica
+  local:
+  - fuentes_caquetios/Fabo_1911_Idiomas_y_Etnografia_Region_Oriental_Colombia.pdf (304 pp. escaneadas,
+    297 con capa de texto) + .txt (OCR de archive.org, 652 KB)
+  paginas: 293
+  aliases:
+  - Fabo 1911
+  - Padre Fabo
+  - Fray Pedro Fabo
+  - Idiomas y etnografía de la región oriental
+  en_repo: true
 - id: federmann-1916
   obra: Narración del primer viaje (ed. 1916)
   autor: Federmann, Nicolás
@@ -452,6 +468,24 @@ obras:
   - Morón Historia de Venezuela
   - Los orígenes históricos de Venezuela
   en_repo: false
+- id: neira-ribero-1762
+  obra: Arte y vocabulario de la lengua achagua
+  autor: Neira, Alonso de (S.J.) y Ribero, Juan (S.J.)
+  anio: 1762
+  publicacion: 'Manuscrito. Terminado el 14 de septiembre de 1762; la copia de la Real Biblioteca es del
+    23 de abril de 1788 (RBPR II/2910): [4] h. + 42 p. + 70 f. + [3] h., 152×104 mm'
+  genero: gramatica
+  local:
+  - fuentes_caquetios/Neira_Ribero_1762_Arte_y_Vocabulario_Lengua_Achagua_RB_II-2910.pdf (102 imágenes
+    IIIF, sin capa de texto) + fuentes_caquetios/neira_ribero_1762/001-102.jpg
+  paginas: 102
+  aliases:
+  - Neira y Ribero 1762
+  - Neyra y Ribero
+  - Arte achagua
+  - Arte y vocabulario achagua
+  - Neira 1762
+  en_repo: true
 - id: nueva-segovia-1579
   obra: Descripción de la Nueva Segovia de la Gobernación de Venezuela de las Indias del Mar Océano
   autor: Arévalo, Gonzalo de y Ruiz de la Parra, Juan (alcaldes)
@@ -598,6 +632,24 @@ obras:
   - Oviedo y Valdés
   - Oviedo 1851
   - Historia general y natural
+  en_repo: true
+- id: pane-c1498
+  obra: Relación acerca de las antigüedades de los indios
+  autor: Pané, fray Ramón
+  anio: 1498
+  publicacion: Escrita c. 1494-1498 en La Española por encargo de Colón. El original se perdió; sobrevive
+    en la traducción italiana de Ulloa (1571) dentro de la Historia de Fernando Colón, y en los extractos
+    de Anglería y Las Casas. El texto del repo es la retraducción castellana que publica Wikisource
+  genero: cronica
+  local:
+  - fuentes_caquetios/Pane_c1498_Relacion_Antiguedades_Indios_wikisource.txt (29 subpáginas, ~8.300 palabras)
+  paginas: 29 capítulos
+  aliases:
+  - Pané
+  - Ramón Pané
+  - Pané 1498
+  - Relación de Pané
+  - Antigüedades de los indios
   en_repo: true
 - id: paz-reverol-2017-2018
   obra: «Hacer los sueños». Una perspectiva wayuu (2017) · Los ritos de muerte y dobles enterramientos
