@@ -40,6 +40,8 @@ meta:
     - 28
     - 29
     - 30
+    - 31
+    - 32
     - 40
     - 41
     - 44
@@ -52,20 +54,326 @@ meta:
     - 53
     - 56
     - 57
+    - 58
+    - 59
+    - 60
+    - 61
+    - 62
+    - 63
+    - 64
+    - 65
+    - 66
+    - 67
+    - 72
+    - 73
+    - 74
+    - 78
+    - 79
+    - 81
+    - 82
+    - 83
+    - 88
+    - 89
+    - 92
+    - 94
+    - 95
     letras_vistas:
     - A
     - B
     - C
     - D
     - E
-    letras_completas: []
-    entradas: 828
-    dudas: 6
-    voces_jahn_calibradas: 0
-    coinciden: 0
-    difieren: 0
-    no_estan: 0
-calibracion_jahn: []
+    - F
+    - G
+    - H
+    - L
+    - M
+    - N
+    - O
+    - P
+    - R
+    - S
+    - T
+    letras_completas:
+    - 'ninguna: no se leyo ninguna letra de punta a punta. Ver `cobertura.pliegos_leidos`'
+    entradas: 2251
+    dudas: 14
+    voces_jahn_calibradas: 34
+    coinciden: 21
+    difieren: 8
+    no_estan: 5
+  censo_de_terminaciones:
+    que_mide: sobre las formas achagua sueltas de `vocabulario` (separadas por coma/vel), cuantas acaban
+      en cada terminacion. Medido por construir.py, no contado a mano
+    formas_contadas: 2410
+    por_terminacion:
+      si: 210
+      ba: 185
+      ri: 149
+      yi: 115
+      cayi: 110
+      na: 100
+      mi: 92
+      are: 26
+      ure: 7
+      re: 4
+      ere: 2
+      ire: 1
+    are_re_total: 40
+    lectura: Fabo declara `-are`/`-re` «propia y exclusiva» del achagua. En esta muestra la terminacion
+      dominante NO es -are sino -si (absoluto de no-poseido) y -yi/-cayi (adjetival). La -re existe pero
+      es minoritaria.
+calibracion_jahn:
+- es: lengua
+  jahn: nuiname
+  manuscrito: nuinene («Entorpecerse la lengua — Cadacaniu nuinene»)
+  pliego: 59
+  lado: der
+  veredicto: coincide
+  nota: no hay lema «Lengua»; la forma sale del ejemplo, poseida. `nu-chuani` es la otra voz, 'mi habla'
+    (pliego 95)
+- es: diente
+  jahn: nier
+  manuscrito: eri («toba de los dientes — Eridare»; «Encia — Eri enita»; «Dolor de muelas — Nuecaicha»)
+  pliego: 95
+  lado: der
+  veredicto: coincide
+  nota: NO HAY LEMA «Diente» en la D — verificado leyendo 52, 53, 56 y 57. La raiz `eri`/`-e-` se recupera
+    de tres entradas laterales
+- es: nariz
+  jahn: nutako
+  manuscrito: no localizada
+  pliego: null
+  lado: null
+  veredicto: no-esta
+  nota: el pliego 78 (N) no se leyo entero; «Sonar narices = Nunurrunau» (pliego 92) no da la raiz
+- es: ojo
+  jahn: nutói
+  manuscrito: '[T]uisi; `nu-tui-ba` = mis ojos; `Juchama-tuisi` = dos ojos'
+  pliego: 78
+  lado: der
+  veredicto: coincide
+  nota: la inicial del lema se lee mal (J o T); la forma poseida y el clasificador numeral la confirman
+    como tui-
+- es: oreja
+  jahn: núbila
+  manuscrito: Bibasi («Oreja»); Jbiri / Nuibi («Oido, oreja»)
+  pliego: 79
+  lado: izq
+  veredicto: difiere
+  nota: dos voces, ninguna igual a `núbila`; comparten la raiz bi-/-bila. Degradado a difiere (regla 2)
+- es: cabeza
+  jahn: núrita
+  manuscrito: Bitasi (absoluto); `nu-bita` poseido («Encalvecer — Aretau nubita»)
+  pliego: 44
+  lado: der
+  veredicto: difiere
+  nota: '`bita` vs `rita`. La raiz -ita es probablemente la misma con distinta consonante de apoyo, pero
+    eso es hipotesis: se degrada'
+- es: barba
+  jahn: nuchiánoma
+  manuscrito: Jinumasi; `nu-rrinuma` («Barbar — Rigiayu nurrinuma»)
+  pliego: 40
+  lado: der
+  veredicto: difiere
+  nota: raiz `-numa`, que es tambien 'boca' (`nunuma`). Jahn añade una silaba `chia-` que aqui no aparece
+- es: mano
+  jahn: nukaje
+  manuscrito: Cageri (absoluto); `ri-cage` = su mano
+  pliego: 74
+  lado: izq
+  veredicto: coincide
+  nota: cf. «Hechuras de sus manos — Ricage menaisa» (pliego 67)
+- es: pie
+  jahn: nuipa
+  manuscrito: Jbari («Pie»); `nu-caba` («Pata mia»)
+  pliego: 83
+  lado: der
+  veredicto: coincide
+  nota: '`ibari` ~ `ipa` con la alternancia b/p habitual del copista; la segunda voz `caba` es la pata'
+- es: agua
+  jahn: mena
+  manuscrito: Vni («Agua — Vni. La corriente del rio = Vninanaba»)
+  pliego: 32
+  lado: izq
+  veredicto: difiere
+  nota: 'HALLAZGO: Jahn da agua=mena y rio=unibe. En el manuscrito AGUA es `uni` y el MAR es `Manoa` (pliego
+    74). La cadena Fabo→Jahn parece haber corrido la pareja un escalon'
+- es: rio
+  jahn: unibe
+  manuscrito: Vnëta («Rio, arroyo»)
+  pliego: 89
+  lado: der
+  veredicto: difiere
+  nota: misma raiz `uni`, distinto sufijo. Ver la nota de `agua`
+- es: fuego
+  jahn: ishay
+  manuscrito: Sichai («Fuego», «Candela», «Lumbre»)
+  pliego: 64
+  lado: der
+  veredicto: coincide
+  nota: tres lemas distintos dan la misma voz (pliegos 45, 64, 73)
+- es: leña
+  jahn: ichaba
+  manuscrito: no localizada como lema
+  pliego: null
+  lado: null
+  veredicto: no-esta
+  nota: la L se leyo desde `Loro` (73); el arranque de la L, donde estaria «Leña», cae en el pliego 71-72
+    izq., no leido. «Abundar — Ychabatra» (pliego 29) contiene la secuencia `ichaba` pero no es prueba
+- es: sol
+  jahn: erre
+  manuscrito: Erri («Sol. = Erri. Alto està el sol = Acayu erri»)
+  pliego: 92
+  lado: izq
+  veredicto: coincide
+  nota: y `erri` es tambien CIELO («En el cielo = Erri irrico», pliego 61). Este hallazgo resuelve de
+    paso el glifo E/C dudoso del copista
+- es: luna
+  jahn: kerre
+  manuscrito: Querri («Luna = Querri. Nueva = Querriquaricuy»)
+  pliego: 73
+  lado: izq
+  veredicto: coincide
+  nota: confirmado por «Eclipse — Querri ichareba» (57) y «Vna luna = Abacoa Quer[re]» (28)
+- es: estrella
+  jahn: ivisái
+  manuscrito: Ybiyai («Estrella — Ybiyai. Cuni llaman al Lucero»)
+  pliego: 62
+  lado: der
+  veredicto: coincide
+  nota: 'la y/s del copista es ambigua: `Ybiyai` o `Ybisai`. cf. «Cabrillas del cielo — Jbinai, Jbiyai»
+    (pliego 44)'
+- es: piedra
+  jahn: iba
+  manuscrito: Jba («Piedra = Jba, quejeda»; «Peña — Jba»)
+  pliego: 83
+  lado: der
+  veredicto: coincide
+- es: flecha
+  jahn: kapauje
+  manuscrito: Querriasui («Flecha»); Caubasui, caubase («Flecha con hierro»)
+  pliego: 64
+  lado: izq
+  veredicto: coincide
+  nota: 'OJO: `kapauje` de Jahn es la flecha CON HIERRO, no la flecha sin mas. La voz generica es `querriasui`'
+- es: casa
+  jahn: banísi
+  manuscrito: Cuita, banisi («Casa = Cuita, banisi. Casa-Palacio = Bania»)
+  pliego: 46
+  lado: der
+  veredicto: coincide
+  nota: confirmado ademas en «la casa de Dios = Dios banisi» (pliego 52) y «Casas = ... rinaba banisi»
+    (46)
+- es: arena
+  jahn: gaina
+  manuscrito: no localizada
+  pliego: null
+  lado: null
+  veredicto: no-esta
+  nota: la A se leyo en los pliegos 28-32 y 44 izq.; «Arena» cae en los pliegos 34-39, no leidos
+- es: mujer
+  jahn: inagetua
+  manuscrito: Jnetua, Jnegetua («Hembra»), pl. Jnaveni
+  pliego: 67
+  lado: der
+  veredicto: coincide
+- es: esposa
+  jahn: nuino
+  manuscrito: no hay lema; «tener muger = Cau[...]caiuna» frente a «tener marido = Canirricayuna»
+  pliego: 94
+  lado: izq
+  veredicto: no-esta
+  nota: 'el marido SI tiene lema: «Marido = Jnirrirri. El mio = Nunirri» (pliego 74). La mujer casada
+    solo aparece como «Casada — Canirricayo» (46), derivada del marido'
+- es: tabaco
+  jahn: sema
+  manuscrito: chema («Fuerte tabaco — Jjuiyi chema»)
+  pliego: 65
+  lado: izq
+  veredicto: coincide
+  nota: no hay lema «Tabaco» en las paginas leidas; la voz sale del ejemplo
+- es: tigre
+  jahn: echave
+  manuscrito: chabi («Vn tigre = Abanai chabí», pliego 28; «Linage de tigre = Chabiberraenay», pliego
+    72)
+  pliego: 72
+  lado: der
+  veredicto: difiere
+  nota: '`chabi` frente a `echave`: probablemente la misma voz con y sin vocal protetica, pero el lema
+    «Tigre» (letra T, pliegos 96-98) no se leyo. Degradado'
+- es: leon
+  jahn: mirrianare
+  manuscrito: no localizada
+  pliego: null
+  lado: null
+  veredicto: no-esta
+  nota: el arranque de la L no se leyo
+- es: danta
+  jahn: ema
+  manuscrito: Ema («Danta animal — Ema»; «Caballo — Ema»)
+  pliego: 52
+  lado: der
+  veredicto: coincide
+  nota: el caballo entro al achagua con el nombre de la danta — dato de contacto
+- es: pez
+  jahn: kupai
+  manuscrito: Cubai («Pescado — Cubai»; «Pez ó pescado = Cubai»)
+  pliego: 83
+  lado: izq
+  veredicto: coincide
+- es: canoa
+  jahn: ida
+  manuscrito: ida («Barca — Junasi ida»; «Embarcacion — Junan, ida»; «Patron de la Nao = Jda minari»)
+  pliego: 58
+  lado: izq
+  veredicto: coincide
+  nota: no hay lema «Canoa» (verificado en la C, pliegos 44-49); la voz esta atestiguada tres veces en
+    otros lemas
+- es: cazabe
+  jahn: berri
+  manuscrito: Jerri («Casabe — Jerri»); Berri («A trueque de casabe — Berri ibem», pliego 28; «Orilla
+    del casabe = Berriribiu», pliego 79)
+  pliego: 46
+  lado: der
+  veredicto: coincide
+  nota: la inicial oscila B/J en la mano del copista; la forma `berri` aparece dos veces fuera del lema
+- es: hermano
+  jahn: nimérre
+  manuscrito: Numerrerri («Hermano menor mio»); Nuberri («Hermano mio»)
+  pliego: 67
+  lado: der
+  veredicto: coincide
+  nota: 'HALLAZGO: el achagua distingue hermano mayor (Nubecanata) / hermano (Nuberri) / hermano menor
+    (Numerrerri), cada uno con su VOCATIVO (tay / tau / Jchu). Jahn recoge solo el menor'
+- es: sepultura
+  jahn: nirri
+  manuscrito: nirri («Enterrar — Nuayu nirri irrico», 'lo pongo dentro de la sepultura')
+  pliego: 59
+  lado: der
+  veredicto: coincide
+  nota: no hay lema «Sepultura» en lo leido; la voz sale del ejemplo
+- es: barbasco
+  jahn: kuna
+  manuscrito: Cuna («Barbasco de raiz — Cuna. De Ojas = Cunai»)
+  pliego: 40
+  lado: der
+  veredicto: coincide
+  nota: y el verbo «Embarbascar — Numau», que es el mismo de «Emborracharse»
+- es: oir
+  jahn: numike
+  manuscrito: Nuemmiuyu, Nuemiu («Oir»)
+  pliego: 78
+  lado: der
+  veredicto: difiere
+  nota: '`nu-emiu` frente a `nu-mike`: comparten la nasal inicial del pronombre y poco mas'
+- es: beber
+  jahn: irago
+  manuscrito: Nuirrau («Beber»); Cairracacayi («Bebedor»); Jarracani («Bebida»)
+  pliego: 41
+  lado: izq
+  veredicto: difiere
+  nota: raiz `-irra-` frente a `-irago`; la g de Jahn no aparece en ninguna de las tres formas del manuscrito
 arte:
   nota: Del arte (pliegos 7-27) se extrajeron SOLO pronombres y numerales, como se encargo. El resto del
     arte (declinaciones, seis conjugaciones, tratados, los capitulos de «equivocos» y el verbo sustantivo,
@@ -236,8 +544,92 @@ arte:
         achagua: Abagirra fresada
         clasificador: aba-girra
     cardinales:
-      estado: pendiente — se recogen del vocabulario segun se lea cada letra
-      formas: []
+      estado: recogidos del VOCABULARIO, no del arte; faltan 3, 4, 6, 7, 10 (sus letras no se leyeron)
+      clave: 'El sistema es de base 5 sobre la mano: `case` es la mano y `abacase` (una mano) es CINCO.
+        `aba-` = uno, `juchama-` = dos. El numeral concuerda con un clasificador segun la clase del objeto
+        contado (ver `uno_con_clasificadores` y el paradigma completo de ''dos'').'
+      formas:
+      - valor: 1
+        forma: aba- + clasificador
+        pliego: 28
+        lado: izq
+      - valor: 2
+        forma: Juchamata (+ clasificador)
+        pliego: 56
+        lado: der
+      - valor: 5
+        forma: Abacase
+        pliego: 48
+        lado: izq
+        nota: «una mano»
+      - valor: 8
+        forma: Matarritaibacage
+        pliego: 78
+        lado: izq
+      - valor: 9
+        forma: Repunicayacaba bacage
+        pliego: 78
+        lado: izq
+      - valor: 11
+        forma: Abacaisanaibana (once hombres)
+        pliego: 79
+        lado: izq
+      - valor: 12
+        forma: Juchamata naibana (vivientes) / Juchamai ribana / Juchamacase
+        pliego: 57
+        lado: izq
+      - valor: 14
+        forma: Repunicaiya cabe naibana (vivientes) / Repunicayacaba rinaba banisi (casas)
+        pliego: 46
+        lado: der
+      - valor: 50
+        forma: Suchamatatacai, Suchamacase ritabare
+        pliego: 48
+        lado: izq
+      - valor: 80
+        forma: Regamicaiacaba tacai
+        pliego: 78
+        lado: izq
+      - valor: 100
+        forma: Abacase tacia
+        pliego: 48
+        lado: izq
+      - valor: 200
+        forma: Juchamacase tacay
+        pliego: 57
+        lado: izq
+        nota: «dos manos» + tacay
+    clasificadores_de_dos:
+      pliego: 56
+      lado: der
+      nota: el paradigma completo, tal como lo da el manuscrito bajo el lema «Dos»
+      formas:
+      - clase: general
+        forma: Juchamata
+      - clase: hombres
+        forma: Juchamana
+      - clase: palos, casas
+        forma: Juchamay
+      - clase: mazorcas
+        forma: Juchamanay
+      - clase: rios
+        forma: Juchamaba
+      - clase: sartas
+        forma: Juchamacoa
+      - clase: venados
+        forma: Juchamaicu
+      - clase: ojos
+        forma: Juchamatuisi
+      - clase: veces
+        forma: Juchamaichana
+      - clase: años ó lunas
+        forma: Juchamacoca
+      - clase: dias
+        forma: Juchamai
+      - clase: lugares
+        forma: Juchamasucu
+        pliego: 57
+        lado: izq
 vocabulario:
 - castellano: A, preposicion
   achagua: Re
@@ -4580,6 +4972,7538 @@ vocabulario:
   letra: E
   ejemplo: Ella = Ruya, Ruade
   nota: confirma los pronombres absolutos del pliego 8
+- castellano: Elado
+  achagua: Casaliniyi
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Elado el mais
+  achagua: tucuyi
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Elar, enfriar
+  achagua: Nucasalinedau
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Elarse, enfriarse
+  achagua: Casaliniuna
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Elarse el mais
+  achagua: tucuni
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Elegir
+  achagua: Nunibau
+  pliego: 58
+  lado: izq
+  letra: E
+  ejemplo: Elegir p.a mi = Numanayumi
+- castellano: Elevar, levantar
+  achagua: Nubarruedau
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Eloquente
+  achagua: Cachuanicayi
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Embarazar
+  achagua: Nubabatuedau
+  pliego: 58
+  lado: izq
+  letra: E
+  ejemplo: Estorbando = Numebatau
+- castellano: Embarazarse
+  achagua: Babatuiyuna
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Embarazo, ocupacion
+  achagua: Babatuicasi
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Embarcar trastes
+  achagua: Nunequiu idarrico
+  pliego: 58
+  lado: izq
+  letra: E
+  nota: '`ida-rrico` = dentro de la canoa'
+- castellano: 'Embarcarse (dicen: bajar)'
+  achagua: Nununcuayu
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Embarcadero
+  achagua: Jurrucuacaban
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Embarcacion
+  achagua: Junan, ida
+  pliego: 58
+  lado: izq
+  letra: E
+  nota: 'CALIBRACION: `ida` = canoa en Jahn'
+- castellano: 'Embargar (dicen: coger)'
+  achagua: Nubinau
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Embarrar
+  achagua: Nubadayu cari
+  pliego: 58
+  lado: izq
+  letra: E
+  nota: '`cari` = barro'
+- castellano: Embarrarse, ensuciarse
+  achagua: Casacoreuna
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Embaucar, engañar
+  achagua: Nucharisuedau
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Embelesarse
+  achagua: Nuedatau, nutuiuba
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Embiar
+  achagua: Nubanuayu
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Embidia
+  achagua: tuicacasi
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Embidiar
+  achagua: Catuicasuna, nutuicacuedau
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Embidioso
+  achagua: Catuicacacayi
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Emblanquecer
+  achagua: Casareu miacani
+  pliego: 58
+  lado: izq
+  letra: E
+  marginal: (Embanquecer
+- castellano: Embarbascar
+  achagua: Numau
+  pliego: 58
+  lado: izq
+  letra: E
+  nota: pescar con barbasco — cf. `Cuna` (pliego 40)
+- castellano: Embarbascarse
+  achagua: Nucamau
+  pliego: 58
+  lado: izq
+  letra: E
+  ejemplo: Emborracharse id est
+- castellano: Embarbascarse, id est, enredarse
+  achagua: Nuebeuba
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Enviudar
+  achagua: Nuichegiayua
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Envolver
+  achagua: Nuisiu, nucabanaidau, nutubiu
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Envoltorio
+  achagua: Bagiriban
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Emboscarse, esconderse
+  achagua: Nubayauba
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Emborracharse
+  achagua: Nucamau
+  pliego: 58
+  lado: izq
+  letra: E
+  ejemplo: Borrachera = Camaibacay
+  nota: 'el mismo verbo que ''embarbascarse'': la borrachera dicha con la pesca con barbasco'
+- castellano: Embotarse
+  achagua: Rinuma edagua
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Embobarse
+  achagua: Numanumauba, numasaraidauba
+  pliego: 58
+  lado: izq
+  letra: E
+- castellano: Embrasar el escudo
+  achagua: Nucuamateguen, imabaresi
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Embudo
+  achagua: tuna, vel Voe
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Encender, quemar
+  achagua: Nuemau
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Encender, arder
+  achagua: Risusunau, ribariu
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Encendido el rostro
+  achagua: Quirrau rinami
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Encerrar
+  achagua: Nubariu, Nubarruedau
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Encia
+  achagua: Eri enita
+  pliego: 58
+  lado: der
+  letra: E
+  nota: '`e-` es la raiz de diente/muela'
+- castellano: Encima
+  achagua: Rita, ritaba, ritare
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Encontrar
+  achagua: Nusunitau
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Encuentro
+  achagua: Jsunitacan
+  pliego: 58
+  lado: der
+  letra: E
+  ejemplo: Encuentro, tope = Jdunucasi
+- castellano: Encogerse
+  achagua: Nuisiuba, nudidiuba
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Encogido, timido
+  achagua: Carruicaisa
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Encorbarse
+  achagua: Natagiuba
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Enconarse
+  achagua: Canareum
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Enconoso
+  achagua: Casanibi, Casanicai
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Encordio
+  achagua: Chamorrumi
+  pliego: 58
+  lado: der
+  letra: E
+  ejemplo: El q.e lo tiene = Chamorrumisa
+- castellano: Encordio seco en las Jngles
+  achagua: tunari
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Encolerizarse
+  achagua: Cabareuna, Ybirriu nubaba
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Encubrir, esconder
+  achagua: Nubayedau
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Encubrirse el sol
+  achagua: Ritamuba
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: En rededor de mi
+  achagua: Nutege
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Enderezar
+  achagua: Numachacamiayu
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Endulzar
+  achagua: Nupusichaidau
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Endurecerse la tierra
+  achagua: Maumi cainabe
+  pliego: 58
+  lado: der
+  letra: E
+  nota: '`cainabe` = tierra/suelo'
+- castellano: Endurecerse la llaga
+  achagua: Cabaniumi
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Enemigo
+  achagua: Ginabigerri, Ginabi
+  pliego: 58
+  lado: der
+  letra: E
+  ejemplo: El mio = Nuginaigerri, pl. Nuginay
+  marginal: (-nay
+- castellano: Enemiga
+  achagua: Ginabigetua
+  pliego: 58
+  lado: der
+  letra: E
+  nota: el sufijo -getua marca el femenino (cf. Ecunaigetua, Ybacaichua)
+- castellano: Enemistad
+  achagua: Ginabicasi
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Enfadar
+  achagua: Nuaquedau, nugiquedau, Numemudau ribaba
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Enfadarse
+  achagua: Cacaniu, Ybirriu nubaba, Cacamijuaita nubaba
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Enfadoso
+  achagua: Jaquederri
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Enfadosam.te
+  achagua: Caquedacanata
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Enfado
+  achagua: Jaquedacasi
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Enfermedad
+  achagua: Barinacaresi, mucumi
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Enfermo
+  achagua: Chainamacayi, mucunisa
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Enfermiso
+  achagua: Ariancaisa
+  pliego: 58
+  lado: der
+  letra: E
+- castellano: Enflaquecer
+  achagua: Nupirraidau
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Enflaquecerse
+  achagua: Nuperrayu
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: En mi ausencia
+  achagua: Nutanageba
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Enfermar
+  achagua: Nuayu rinumaricogeray
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Enfrente de mi
+  achagua: Nusunita
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Enfrente de casa
+  achagua: Cuitaisunita
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Enfriar
+  achagua: Nucasalinedau
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Enfriarse
+  achagua: Casaliniuna
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Engañar
+  achagua: Nucharisuedau, Nunumayubiquedau
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Engaño
+  achagua: Charisuedacaresi
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Engañador
+  achagua: Chacarisuedacacayi
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Engendrar, producir
+  achagua: Numanadau, nubachu
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Engordar
+  achagua: Nuquenaidau
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Engordarse
+  achagua: Quenaiuna
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Engordado
+  achagua: Quenabi, quenayi
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Engrosar
+  achagua: Nubamitaidau
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Engrosado
+  achagua: Banitayi
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Engrudo
+  achagua: Cameyabay
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Engrandecer
+  achagua: Numanudau
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Enlazar
+  achagua: Nucao ribanico, Nubagiu
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Enloquecer
+  achagua: Nubabaidau, Nubabedau
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Enloquecerse
+  achagua: Babauna
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Enloquecido
+  achagua: Mabitege caisa
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Enano
+  achagua: Aurai
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Enmendar
+  achagua: Numachacamiayu
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Enmendarse
+  achagua: Nuebanatauba
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Emohecerse el casabe
+  achagua: Querriumi
+  pliego: 59
+  lado: izq
+  letra: E
+  ejemplo: El hierro = Jrridum, caya[...]
+  marginal: (-um, caya
+- castellano: Enmudecer à otro
+  achagua: Numanumayumi
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Enmudecerse
+  achagua: Maumauna
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Ennegrecerse
+  achagua: Cachasuretaumi
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Enojarse
+  achagua: Cabareuno, cabaretau nubaba, ibirriui nubaba
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Enojar à otro
+  achagua: Nuaquedau
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Enojo
+  achagua: Vare, Guare
+  pliego: 59
+  lado: izq
+  letra: E
+  ejemplo: suio = ribareba
+- castellano: Enojadizo
+  achagua: Carruedacacai
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Eng.to hago esto
+  achagua: Numedacatami geriami
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Enredarse
+  achagua: Nuebeuba
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: En realidad
+  achagua: Jabasurruisa
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Enranciarse
+  achagua: Cabebaniumi
+  pliego: 59
+  lado: izq
+  letra: E
+- castellano: Enriquecer
+  achagua: Nubarruanidau
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Enronquecer
+  achagua: Gerueuba
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Enronquecido
+  achagua: Gueribasasi
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Enroscarse
+  achagua: Nuisiruba
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Ensayarse
+  achagua: Nuenaidauba
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Ensanchar
+  achagua: Numanuaricuedau
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Ensanchar el corazon
+  achagua: Nuchachemidau nubaba
+  pliego: 59
+  lado: der
+  letra: E
+  nota: '`nubaba` = mi corazon/animo, recurrente en el manuscrito'
+- castellano: Ensalzar
+  achagua: Nubacairredau
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Ensartar
+  achagua: Nunubaayu
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Enseñar
+  achagua: Nuebedau, Nuebaidau
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Enseñar mostrando
+  achagua: Nuyedau
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Enseñanza
+  achagua: Ebedacaisi
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Ensobervecerse
+  achagua: Nubacairriayuba
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Ensillar
+  achagua: Nubau silla ritare
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Entontecido
+  achagua: Maubi, mabicaisa
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Ensuciar
+  achagua: Nusacoredau
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: En tanto q.e duermo
+  achagua: Numacata mairrico
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Entender
+  achagua: Nuayurena
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Entendim.to
+  achagua: Bitegesi
+  pliego: 59
+  lado: der
+  letra: E
+  nota: 'de `bita` cabeza: el entendimiento es lo de la cabeza'
+- castellano: Entendido
+  achagua: Cabitegecayi
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Enternecerse
+  achagua: Nubirabiredauba, nuyamayamedauba
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Enternecido llorando
+  achagua: Camaayecayi
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Enterrar
+  achagua: Nuayu nirri irrico
+  pliego: 59
+  lado: der
+  letra: E
+  nota: 'CALIBRACION: `nirri` = sepultura en Jahn; aqui ''lo pongo dentro de la sepultura'''
+- castellano: Entonces
+  achagua: Riyari
+  pliego: 59
+  lado: der
+  letra: E
+  ejemplo: Fut.o = Riyaresu. Preterito = Riyaremi
+- castellano: Entorpecerse la lengua
+  achagua: Cadacaniu nuinene
+  pliego: 59
+  lado: der
+  letra: E
+  nota: 'CALIBRACION: `nu-inene` = mi lengua; Jahn da lengua = nuiname'
+- castellano: Entrada de la casa
+  achagua: Cuita numa
+  pliego: 59
+  lado: der
+  letra: E
+  nota: '`cuita` casa + `numa` boca: la boca de la casa'
+- castellano: Entrar
+  achagua: Nubarrubayuba
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Entrarle
+  achagua: Nubarruedaumi
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Entrar, meter
+  achagua: Nunigiiu
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Entrambos à dos
+  achagua: Juchamatanamao
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Entrañas, lo de adentro de mi
+  achagua: Nuaberricosai
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Entre
+  achagua: Jbe, Jrrere
+  pliego: 59
+  lado: der
+  letra: E
+  ejemplo: El intermedio = Ribecumisai
+- castellano: Entregar
+  achagua: Nuubau, nuinudau
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Entristecerse
+  achagua: Nuaquedau, nugiquedau
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Entristecerse (2)
+  achagua: Cacaniu nubaba, Cacanijucuta, maniu nubaba, nubaba yarratau
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Enturbiar
+  achagua: Nucapucaquedau, nucutecutedau, nucariatedau
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: Enturbiarse
+  achagua: Caryum
+  pliego: 59
+  lado: der
+  letra: E
+- castellano: En vano
+  achagua: Meyaca, meyacasa
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Envanecerse
+  achagua: Nubacairriayuba
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Embararse
+  achagua: Cadacaniuna
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Envarado
+  achagua: Cadacaniyi
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Embejecerse
+  achagua: Nusalirriuba
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Envejecerse la ropa
+  achagua: Saligirratau, vgigirratay
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Envejecida ropa
+  achagua: Vgigirrai
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Enviciarse
+  achagua: Nuisaiyu maricaibe naco
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Envilecer
+  achagua: Numagua unidau
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Envilecerse
+  achagua: Numagua unidauba, cachaminata numidauba
+  pliego: 60
+  lado: izq
+  letra: E
+  marginal: (-ba
+- castellano: Enjambre de Abejas
+  achagua: Mabaianirri imanabaca
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Enjugar la boca
+  achagua: Nucuticutuayu nunuma, nubau
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Enjugar
+  achagua: Numacarrayu
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Enjugarse
+  achagua: Numacarrauba
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Enjuta ropa
+  achagua: Macarrayi
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Enjuto camino
+  achagua: Macarrabai
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Enjundia de gallina
+  achagua: Cabamaiyubica
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Escozor
+  achagua: Caibicay
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Escrivir
+  achagua: Nutanau
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Escrivano
+  achagua: Jtanerri
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Escritura
+  achagua: tanamigirrasi
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Escripcion
+  achagua: Jtanacasi
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Escuchar
+  achagua: Nuemiuyu
+  pliego: 60
+  lado: izq
+  letra: E
+  nota: 'CALIBRACION parcial: Jahn da oir = numike; aqui ''escuchar'' es Nuemiuyu'
+- castellano: Escudriñar
+  achagua: Nucuedau, Nucacuedau, Nuginaidau
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Escudriñador, Espia
+  achagua: Cherrui
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Escupir
+  achagua: Nubisau
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Escopeta
+  achagua: Eno
+  pliego: 60
+  lado: izq
+  letra: E
+  nota: '`Eno` es tambien el dios de las tempestades y ''trueno'' (pliego 56): la escopeta nombrada por
+    el trueno'
+- castellano: Escoplear (dicen golpear)
+  achagua: Nutatau
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Escultura
+  achagua: tananiban
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Escuro
+  achagua: Catabacayi
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Escurecer
+  achagua: Catainareu, Catainuatao
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Escuridad
+  achagua: Catamuabe, cachumarebe
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Escusarse
+  achagua: Nuebau nubicaucha
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Escusar, dar achaque p.a no hacer
+  achagua: Nubarinaidamauba
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Esento
+  achagua: Camaniyi, camaniyimi
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Escurriduras
+  achagua: Ridugicanami
+  pliego: 60
+  lado: izq
+  letra: E
+- castellano: Esencion
+  achagua: Jcamanidacasi, maniri
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Equivocarse
+  achagua: Nunumaiginau
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Exito
+  achagua: Charra
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Erizarse el pelo
+  achagua: Nuichunarerruaya, richarraguayua
+  pliego: 60
+  lado: der
+  letra: E
+  marginal: (-ua
+- castellano: Errar el tiro
+  achagua: Nudiayu, Nucuredau
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Errar lo q.e se busca
+  achagua: Nugiginaichau
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Errar, salir del camino
+  achagua: Nuerrua, nuiginau
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Error
+  achagua: Jgiginacasi
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Errado hombre
+  achagua: Jgiginaicherri
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Essa
+  achagua: Ruasa, ruani
+  pliego: 60
+  lado: der
+  letra: E
+  ejemplo: Ese = Riasa, Riani. pl. Nasanani
+  nota: confirma los demostrativos del pliego 8
+- castellano: Escalera
+  achagua: Curitaiba
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Escaño
+  achagua: Jtidague
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Escama
+  achagua: Cubai ima
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Escarabajo
+  achagua: Jmo
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Escapar
+  achagua: Camaniuna, Nucamanidau
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Escaparse
+  achagua: Nucamanidauba
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Escapado
+  achagua: Camaniyi, Camanicayi
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Escarbar
+  achagua: Nucasau, nucunu
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Escarnecer
+  achagua: Nucunurredau
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Escaso
+  achagua: Camaisaniyi, camaisanicayi
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Escasear
+  achagua: Nudanidau, Numaisanebau
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Esclavo
+  achagua: Macogerri
+  pliego: 60
+  lado: der
+  letra: E
+  ejemplo: El mio = Numacuni
+- castellano: Esclava
+  achagua: Macagetua
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Esclavitud
+  achagua: Macunaican
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Embrutecerse
+  achagua: Nucuesiayua
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Empacharse, tener empacho
+  achagua: Numorracayua
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Empachar
+  achagua: Numorracaidau
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Empasar
+  achagua: Nubadau imiri
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Empanesar
+  achagua: Nubitata riquedau
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Emperesar
+  achagua: Nucaidau
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Empeine
+  achagua: hirrabu, chuba
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Empeler
+  achagua: Nudanayu
+  pliego: 60
+  lado: der
+  letra: E
+  nota: la primera forma esta tachada por el copista
+- castellano: Empeorar
+  achagua: Decurenamau, chainamauna
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Empobrecerse
+  achagua: Numanuma tequedauba
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Empobrecer à otro
+  achagua: Numanuma tequedau
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Empollar
+  achagua: Rurrubayua rirebeita
+  pliego: 60
+  lado: der
+  letra: E
+- castellano: Emponzoñar
+  achagua: Numanesau
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: Empujar
+  achagua: Nudanayu
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: Empuñar
+  achagua: Nubinau
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: En (q.do significa dentro)
+  achagua: Jrrico
+  pliego: 61
+  lado: izq
+  letra: E
+  ejemplo: En el cielo = Erri irrico, id en, dentro del cielo. En, lo qual y no dentro, q.do es cosa liquida
+    = Jaco (En el agua = Vniaco). Quando no es cosa liquida y es local = Naco (En la tierra = Cainabe
+    naco). Quando cosa racional = Jnaco; suelen quitar la J (Creer en Dios Padre = Nuebedau Dios Saricanasi
+    Jnaco; Espiritu Santo naco). En verbal = cata (En viniendo = Nunucata). En temporal (En el invierno
+    = Vniabeyage)
+  nota: 'nota gramatical de los locativos. `Erri irrico` = dentro del cielo: la mejor prueba de que `erri`
+    = cielo'
+- castellano: En adelante
+  achagua: Guaregeyabenami
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: En el interin, ó en ese mismo t.po
+  achagua: Jma irrico
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: En mi lugar
+  achagua: Nuarrumire
+  pliego: 61
+  lado: izq
+  letra: E
+  ejemplo: En tu lugar = Riarrumire
+- castellano: En un cerrar y abrir los ojos, en un inst.e
+  achagua: Guasimiucachu
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: Enamorar, agasajar
+  achagua: Numananedau, nuquerenedau
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: Enagenar
+  achagua: Nucaminariquedau
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: Embijarse
+  achagua: Nutayua
+  pliego: 61
+  lado: izq
+  letra: E
+  nota: pintarse el cuerpo con bija/onoto
+- castellano: Embijar
+  achagua: Nutuayu, nujuruayu, nutanao
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: Embije con q.e se embijan
+  achagua: Quirrabirri Jrru
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: Embestir
+  achagua: Nunigiiu
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: Encallar
+  achagua: Nusidauyu
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: Encalvecer
+  achagua: Aretau nubita
+  pliego: 61
+  lado: izq
+  letra: E
+  nota: '`nu-bita` = mi cabeza, en forma POSEIDA — clave para la comparacion con Jahn `núrita`'
+- castellano: Encaminar, enseñar el camino
+  achagua: Nuyedau anisuba
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: Encañado
+  achagua: Casituarenayi
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: Encantar, curar cantando
+  achagua: Numariu, nutaimariu
+  pliego: 61
+  lado: izq
+  letra: E
+  nota: la cura chamanica por el canto, nombrada por el propio misionero
+- castellano: Encanto tal
+  achagua: Maricai
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: Encantador
+  achagua: Camaricacayi
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: Encanecido
+  achagua: Cacaribi, cacaribibitay
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: Encanecer
+  achagua: Cacaribibitauna
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: Encarecer, pedir caro
+  achagua: Nusamaredau
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: Encarecer, ponderar
+  achagua: Nuenaidau
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: Encarnar, hacerse hombre
+  achagua: Numedauba guanerri
+  pliego: 61
+  lado: izq
+  letra: E
+  nota: '`guanerri` = hombre (cf. guanecataberri)'
+- castellano: Encasar
+  achagua: Nuayuni riarro naco
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: Encenagarse
+  achagua: Nusacoredauba
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: Encensar fuego
+  achagua: Nuchana sichai
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: Escoba
+  achagua: Jchuberi
+  pliego: 61
+  lado: izq
+  letra: E
+- castellano: Escoger
+  achagua: Nunibau
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Esconder
+  achagua: Nubayedau
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Esconderse
+  achagua: Nubayauba
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Escondrijo
+  achagua: Jbayacarrusiba
+  pliego: 61
+  lado: der
+  letra: E
+  ejemplo: A escondidas = Cabeyenita
+- castellano: Escocerme
+  achagua: Caibiu nuriu
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Escoserle, picarle lo q.e le dicen
+  achagua: Nurrueda richuani
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Eximirse
+  achagua: Camaniuna
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Eximir
+  achagua: Nucamanidau
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Esforzar
+  achagua: Nudananedau
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Esforzarse en la salud
+  achagua: Nuebatauba, Nuebanatauba
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Esforzado
+  achagua: Ebanaterriba
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Esfuerzo
+  achagua: Dananisi
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Eslabon
+  achagua: Sichayba
+  pliego: 61
+  lado: der
+  letra: E
+  nota: 'de `sichai` fuego: el eslabon de sacar lumbre'
+- castellano: Espacio, sitio
+  achagua: Jarruna
+  pliego: 61
+  lado: der
+  letra: E
+  ejemplo: Campo = Bachaida. Està despacio = Arramaidauba, Ridecudauba. Haz eso despacio = matamata gimeda
+- castellano: Espacioso
+  achagua: Carramabi, Carraunacayi
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Espacioso grande
+  achagua: Manusucuyu
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Espaldilla
+  achagua: Damuuabaresi
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Espalda mia
+  achagua: Nubasunaba
+  pliego: 61
+  lado: der
+  letra: E
+  ejemplo: A mis espaldas = Nuanagiu
+- castellano: Espaldudo
+  achagua: Manuemabi
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Espantar
+  achagua: Nucarrudau, Nubiquedau
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Espantarse
+  achagua: Nubiquiayua
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Espantajo
+  achagua: Senasi, camube
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Espantadiza cosa
+  achagua: Cabiquiaacacayiba
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Espantarse, admirarse
+  achagua: Nuadedau
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Espanto
+  achagua: Carruicay, Ybiquiacasiba
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Espantoso
+  achagua: Carrunatacayi
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Esparcir
+  achagua: Nucasau
+  pliego: 61
+  lado: der
+  letra: E
+  ejemplo: Agua = Nunoayu
+- castellano: Esparcir la vista
+  achagua: Nuducuayu nutuiba
+  pliego: 61
+  lado: der
+  letra: E
+  nota: '`nu-tui-ba` = mis ojos; Jahn ojo = nutói'
+- castellano: Espejo
+  achagua: Cabaubasi
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Espera, aguarda
+  achagua: Mata, Matasu, matasurra
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Esperar
+  achagua: Nunenida
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Esperanza
+  achagua: Jnemidacasi
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Expresarse
+  achagua: Nubayu
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Espeso
+  achagua: Banitayi
+  pliego: 61
+  lado: der
+  letra: E
+  ejemplo: Monte = Canuniyi
+- castellano: Espesar
+  achagua: Nubamitaidau
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Espetar
+  achagua: Nutuayu, Nudurru
+  pliego: 61
+  lado: der
+  letra: E
+- castellano: Espetar, traspasar
+  achagua: Nubesonaidau ribe
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Espetado tieso
+  achagua: Cadacaniasui
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Espiar
+  achagua: Nucherri unidau
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Espia
+  achagua: Cherini
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Espiga
+  achagua: Eminayi
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Espigar el trigo
+  achagua: Jadurribium
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Esperimentar (dicen enseñarse)
+  achagua: Nuebedauba
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Espina
+  achagua: tubirri
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Espina de pescado
+  achagua: Cubay yage
+  pliego: 62
+  lado: izq
+  letra: E
+  nota: '`cubay` = pescado (cf. Escama = Cubai ima)'
+- castellano: Espinal
+  achagua: tubirrianay
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Espinoso
+  achagua: Catubirricayi
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Espino
+  achagua: Bequen
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Espinilla
+  achagua: Jcabedacun
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Espinazo
+  achagua: Jbarituiyaginasi
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Espiritu, aliento
+  achagua: Careran
+  pliego: 62
+  lado: izq
+  letra: E
+  ejemplo: Espiritu soplo = Jusupibe
+- castellano: Espiritu, alma
+  achagua: Guabasi, Guabauimi
+  pliego: 62
+  lado: izq
+  letra: E
+  nota: '`guabasi` es tambien ''estomago'' en este mismo pliego'
+- castellano: Espinarse
+  achagua: Nutuayua
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Espirar, morir
+  achagua: Nubarinao
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Esprimir
+  achagua: Nuarricaidau
+  pliego: 62
+  lado: izq
+  letra: E
+  ejemplo: Con las manos = Nunigiuayu
+- castellano: Espuela
+  achagua: Ema idurruna
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Espulgar
+  achagua: Nunibau
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Espuma
+  achagua: Carran, v. Caribun
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Espumar, quitar la espuma
+  achagua: Nuedau ricau
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Echar espuma
+  achagua: Cacariberreum
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Esquina
+  achagua: Ridarra
+  pliego: 62
+  lado: izq
+  letra: E
+  ejemplo: Esquinado = Cadarracayi
+- castellano: Esta
+  achagua: Ruasa, Ruane
+  pliego: 62
+  lado: izq
+  letra: E
+  ejemplo: Este = Riasa, riani. pl. nasa, nany
+- castellano: Este, q.do no es racional
+  achagua: Carriade
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Estable, firme
+  achagua: Cabariniyi
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Estado mio
+  achagua: Nuyauba
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Estancia
+  achagua: Jacarrun
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Estadillo
+  achagua: Bitamasi
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Estanque
+  achagua: Carisa
+  pliego: 62
+  lado: izq
+  letra: E
+  ejemplo: Estancarse el agua = Ribayua
+- castellano: Estar
+  achagua: Nuyau, nutuyausa
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Estar en pie
+  achagua: Nubarruayua
+  pliego: 62
+  lado: izq
+  letra: E
+  ejemplo: En cuclillas = Nutuyayaua
+- castellano: Estantillo
+  achagua: Ricababada
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Estender
+  achagua: Nuducuayu
+  pliego: 62
+  lado: izq
+  letra: E
+- castellano: Estera
+  achagua: Damucuma
+  pliego: 62
+  lado: izq
+  letra: E
+  ejemplo: Esterita = Damucu
+- castellano: Estiercol
+  achagua: Jami, Jyasi
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Estercolar
+  achagua: Nunutau
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Esteril muger
+  achagua: Mabecu
+  pliego: 62
+  lado: der
+  letra: E
+  ejemplo: pl. Mabecubemi
+- castellano: Esteril tierra
+  achagua: Marianayi
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Estebado de pies
+  achagua: Carigicabai
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Estitico
+  achagua: Jasubayerri
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Estimar, honrar
+  achagua: Nuayuribaum
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Estomago
+  achagua: Guabasi, Guabasidaure
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Estornudar, toser
+  achagua: Nudequiayu
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Estornudar, sonar las narices
+  achagua: Nuehinau
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Estorbar
+  achagua: Numebatau
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Estragarse el estomago
+  achagua: Cabarita nuabai
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Estrangero
+  achagua: Babachagesai, Quenequenegerri
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Estrechar
+  achagua: Nuarraidau
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Estrecho, apretado
+  achagua: Casiduniyi
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Estregar
+  achagua: Nusuriu
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Estrechura del Rio
+  achagua: Ribaria
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Estrella
+  achagua: Ybiyai
+  pliego: 62
+  lado: der
+  letra: E
+  ejemplo: Cuni llaman al Lucero
+  nota: 'CALIBRACION: Jahn da estrella = ivisái. Y ademas nombra el lucero: `Cuni`'
+- castellano: Estrema cosa
+  achagua: Rimacademi
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Estraño, ageno
+  achagua: Caminaricayi
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Estremo, punta
+  achagua: Rijuata, ridacu
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Estremo, el dejo
+  achagua: Riyauba
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Estrujar
+  achagua: Nubadau
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Escrementos
+  achagua: Suria, yami, Jyasi
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Exhalacion
+  achagua: Agido
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Estribar
+  achagua: Nubadau
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Especialm.te
+  achagua: Chuinisay
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Esto
+  achagua: Riade
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Escoplo
+  achagua: tataubani
+  pliego: 62
+  lado: der
+  letra: E
+  ejemplo: tambien es el martillo
+- castellano: Enclavar
+  achagua: Nutatau
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Enteram.te
+  achagua: Macaita
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Està cerca
+  achagua: Vrrumichaugim
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Estoi aqui
+  achagua: Nurrau Jachi
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Embutir, meter
+  achagua: Numigiiu
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: En el
+  achagua: rinaco
+  pliego: 62
+  lado: der
+  letra: E
+  ejemplo: En si mismo = rinacuba, rinacotaba. En ellos = Nanaco. En si mismo = Nanacuba
+- castellano: Embustero
+  achagua: Jubanumay
+  pliego: 62
+  lado: der
+  letra: E
+- castellano: Embuste
+  achagua: Numarriubica
+  pliego: 62
+  lado: der
+  letra: E
+  ejemplo: La mia = Numumayubica
+- castellano: Entera cosa
+  achagua: Macayi
+  pliego: 63
+  lado: izq
+  letra: E
+- castellano: Esqueleto
+  achagua: Manseperre
+  pliego: 63
+  lado: izq
+  letra: E
+- castellano: El de aqui
+  achagua: Guayasay
+  pliego: 63
+  lado: izq
+  letra: E
+  ejemplo: La de aqui = Guayasau
+- castellano: Ensalmo
+  achagua: Chabicuri
+  pliego: 63
+  lado: izq
+  letra: E
+  nota: el ensalmo curativo
+- castellano: Fabricar
+  achagua: Nubarruedau Cuita
+  pliego: 63
+  lado: izq
+  letra: F
+  nota: cabecera «Castellano F Achagua» en el pliego 63 izq.
+- castellano: Fabrica, obra
+  achagua: Medanicain
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Fabula
+  achagua: Jbaiy
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Facil q.e pide pocas fuerzas
+  achagua: Madananinayisa, mebanatacayisa
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Facil, mudable
+  achagua: Jchaguerriba
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Facilidad
+  achagua: Medananitacay, Mebanatacay
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Facilm.te
+  achagua: Madanaminata
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Falda de ropa
+  achagua: Guarruma numacoa
+  pliego: 63
+  lado: izq
+  letra: F
+  ejemplo: Del monte = Abaca numa
+  marginal: (-ma
+- castellano: Fallecer, morir
+  achagua: Nuchalinau, Nubarinau
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Falible q.e falta
+  achagua: Jsuquerriba
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Falso, mentiroso
+  achagua: Jubinumai
+  pliego: 63
+  lado: izq
+  letra: F
+  ejemplo: Que tira coces = Jbabayerri
+- castellano: Falsedad, mentira
+  achagua: Numari iubica
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Falta, lo q.e falta
+  achagua: Jasucacan, quenamisay
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Falta, culpa
+  achagua: Jtareri
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Falta por hacer
+  achagua: Chaucuata
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Falta
+  achagua: Queniu
+  pliego: 63
+  lado: izq
+  letra: F
+  ejemplo: Haceme falta el P.e = Carrumiu Saricanasi nuriu
+  marginal: (-n nuriu
+- castellano: Faltar
+  achagua: Carrumiu, Chaucuata
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Faltar, lo q.e se acaba
+  achagua: Risucao
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Faltar apagandose
+  achagua: Richacao
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Faltar, necesitar
+  achagua: Nurrumicanaum
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Faltar lo q.e debe haber
+  achagua: Chaucuata
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Faltar, no cumplir
+  achagua: Coacao numisa
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Faltar v.g. el p.a todos
+  achagua: Jda coacao renaricubi
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Faltar la Calentura
+  achagua: Rimetuayua, ribechuayuanucha mucumi
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Falta mucho
+  achagua: Decucha ribecha
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Falto q.e no tiene
+  achagua: Manumatecaisa
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Falto de comida
+  achagua: Mababaida caisa
+  pliego: 63
+  lado: izq
+  letra: F
+  ejemplo: De juicio = Mabitegecaisa
+- castellano: Faldriquera
+  achagua: Jusacaisi
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Fantasia (dicen pensam.to)
+  achagua: Edadacam cariba
+  pliego: 63
+  lado: izq
+  letra: F
+- castellano: Familiar mio
+  achagua: Nutaricai
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Familia
+  achagua: Jmacabenaicasi
+  pliego: 63
+  lado: der
+  letra: F
+  ejemplo: Los de mi fam.a = Numacabenay
+  nota: voz de parentesco
+- castellano: Fara, cierto animal
+  achagua: Amoari
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fatiga
+  achagua: Chamarecai
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fatigar
+  achagua: Nuchamaredau
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fatigarse
+  achagua: Chamareuna, Samona
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fatigado
+  achagua: Chamarecayi, Samuyi
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Favorecer respondiendo
+  achagua: Nuebau ribicaucha
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Favorecer pidiendo p.r otro
+  achagua: Nuemau ribicaucha
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Favor, beneficio
+  achagua: Jnucaisasi, Junamicasi
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fasa
+  achagua: Jriduna, Guaribaisi
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fasar
+  achagua: Nunduayu
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fee, creencia
+  achagua: Ebedacasi
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Feo de rostro
+  achagua: Marianani
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Feliz
+  achagua: Cachumicacayi
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Felicidad
+  achagua: Chumicay
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fecundo
+  achagua: Quenibecayo
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fecunda tierra
+  achagua: Saicanaiyi
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fenecer, acabar
+  achagua: Nusucau
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fervorosam.te
+  achagua: Amoata
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fiarse de otro
+  achagua: Nunenida rinaco
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fiar, dar fiado
+  achagua: Nuanamao
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fiado por pagar
+  achagua: Mabeniyi
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fiel q.e no engaña
+  achagua: Machacarisuedacayisa
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fiel q.e no hurta
+  achagua: Maneducacayisa
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fiel q.e cumple
+  achagua: Camisacacayi
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fiel q.e cree
+  achagua: Ebederri
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fiera cosa
+  achagua: Cabarecayi
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Figura, lo q.e se vee
+  achagua: Jcabacanasi
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Filo de hacha
+  achagua: Churi numa
+  pliego: 63
+  lado: der
+  letra: F
+  nota: '`churi` = hacha (cf. Vn hacha = Ababai churi); `numa` = boca'
+- castellano: Fin, punta
+  achagua: Rijuata, dacusi
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fin, acabam.to
+  achagua: Amarracan, Jsucacan
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fin, lo q.e queda
+  achagua: Renani
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fin, lo ultimo
+  achagua: Jmacadecanini
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: F.nal causa
+  achagua: Chunisay
+  pliego: 63
+  lado: der
+  letra: F
+  ejemplo: Final, lo ultimo = Rimacadenni
+  marginal: fin, dar fin = Risucau, Nunisau. Fin de todas las cosas = Dios
+- castellano: Fingir, engañar
+  achagua: Nucharisuedau
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Firme
+  achagua: Cabariniyi
+  pliego: 63
+  lado: der
+  letra: F
+  ejemplo: Jmutable = Machacayisa
+- castellano: Firmem.te
+  achagua: Cabarinita
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Firmesa
+  achagua: Barinisi
+  pliego: 63
+  lado: der
+  letra: F
+- castellano: Fircar
+  achagua: Nucunurredau
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Fixar, clavar
+  achagua: Nutatau
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Fixar los ojos
+  achagua: Nurratuedau
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Flaco
+  achagua: turraibederri
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Flaco enfermizo
+  achagua: Ariaricaisa
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Flaqueza
+  achagua: turraibederricani
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Flauta
+  achagua: Jba
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Flecha
+  achagua: Querriasui
+  pliego: 64
+  lado: izq
+  letra: F
+  ejemplo: De hierba = Jamiben
+  nota: 'CALIBRACION: Jahn da flecha = kapauje, que aqui es la flecha CON HIERRO (caubase), no esta'
+- castellano: Flecha con hierro
+  achagua: Caubasui, caubase
+  pliego: 64
+  lado: izq
+  letra: F
+  nota: 'CALIBRACION: `caubase` = kapauje de Jahn'
+- castellano: Flechar
+  achagua: Nuchabidau
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Flematico
+  achagua: Carramabi, carramacayi, inurrebi
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Flema, tardanza
+  achagua: Carramacan
+  pliego: 64
+  lado: izq
+  letra: F
+  ejemplo: Humor = Jaberi
+- castellano: Flemon, gargajo
+  achagua: Erruen
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Flor
+  achagua: Jbiri
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Florecer
+  achagua: Quebiumi
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Florido
+  achagua: Quebicayi
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Floxo
+  achagua: Samuyi, Badabadaumi
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Floxedad
+  achagua: Samucay
+  pliego: 64
+  lado: izq
+  letra: F
+  ejemplo: Estar floxo = inurretau nubaba, inurreuna, samuna
+- castellano: Fluxo, olage
+  achagua: Marradaca
+  pliego: 64
+  lado: izq
+  letra: F
+  ejemplo: De Sangre = Jrraitaran
+- castellano: Fogoso
+  achagua: Amoayi
+  pliego: 64
+  lado: izq
+  letra: F
+  ejemplo: Bullicioso = Guariguari
+- castellano: Fomentar, alimentar
+  achagua: Nudabinaoyu
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Fondo
+  achagua: Ricayamiage
+  pliego: 64
+  lado: izq
+  letra: F
+  ejemplo: Echar à fondo = Nupurunayuba
+- castellano: Forastero
+  achagua: Babachagesai
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Forma
+  achagua: Jcabacanasi
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Formar
+  achagua: Nubariquedau, Nuguariquedau
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Forzar
+  achagua: Nuarrudau
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Forcejar
+  achagua: Nubadau
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Forzosa cosa
+  achagua: Rumicanayi
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Formicar
+  achagua: Nubachu
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Formicacion
+  achagua: Buchucasi
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Formicador
+  achagua: Cabachuacacayi, Cabebi, Cabecayi
+  pliego: 64
+  lado: izq
+  letra: F
+  marginal: (-ri ibesi inaveni
+- castellano: Formido
+  achagua: Quenayi
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Fortaleza
+  achagua: Dananisi
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Fortalecido
+  achagua: Cadananiyi
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Fortalecer
+  achagua: Nudananedau
+  pliego: 64
+  lado: izq
+  letra: F
+- castellano: Fortisima cosa, v.g. Dolor
+  achagua: Caibiyi
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Fosa
+  achagua: Vtabi
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Fragoso, pedregoso camino
+  achagua: Cabaminabai
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Fragil, quebradizo
+  achagua: Casuyi, quecayi
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Fragil enfermizo
+  achagua: Ariancaisa
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Fragil de memoria
+  achagua: Camiyagua, chaucacayi
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Franqueza
+  achagua: Junanicasi
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Franco, liberal
+  achagua: Junanicayi
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Fregar, estregar
+  achagua: Nuguesiu, Nusuriu
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Fregar una bestia
+  achagua: Numonidau
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Freir
+  achagua: Nuisayu
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Freidera
+  achagua: Jsacageri
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Frito
+  achagua: Sanicaisi
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Frenesi
+  achagua: Babacai
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Frente
+  achagua: Nanisi itarai
+  pliego: 64
+  lado: der
+  letra: F
+  ejemplo: Enfrente de mi = Nusunita
+- castellano: Fresco, airecito
+  achagua: Jusupube
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Fresco, frio
+  achagua: Casalinibe
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Fresca agua
+  achagua: Casaliniatai
+  pliego: 64
+  lado: der
+  letra: F
+  ejemplo: Fresco Casabe = Berrabirrabai
+- castellano: Fresca carne ó pescado
+  achagua: Guaricayi
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Frio
+  achagua: Casalinibe
+  pliego: 64
+  lado: der
+  letra: F
+  ejemplo: tenerlo = Casaliniuna
+- castellano: Frijoles
+  achagua: Biriti
+  pliego: 64
+  lado: der
+  letra: F
+  nota: misma voz que «Abas — Biriti» del pliego 28
+- castellano: Friam.te
+  achagua: Casalinita
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Freno
+  achagua: Ema numaricosai
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Fruncir, pegar
+  achagua: Nuchanau
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Fruncir los labios
+  achagua: Numoayu, Nulaliba
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Fruta
+  achagua: Jtasi, Berrucasi
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Fruta del Pirico como naranja
+  achagua: Emari
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Frutilla à manera de guindas
+  achagua: Manisi
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Frutal arbol
+  achagua: Catayi
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Fructificar, tener fruto
+  achagua: Cataum
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Fuego
+  achagua: Sichai
+  pliego: 64
+  lado: der
+  letra: F
+  nota: 'CALIBRACION: Jahn da fuego = ishay — coincide'
+- castellano: Fuelles
+  achagua: Jiayubisi, Jguina
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Fuente
+  achagua: Jmibitami
+  pliego: 64
+  lado: der
+  letra: F
+- castellano: Fuera
+  achagua: Banaca
+  pliego: 64
+  lado: der
+  letra: F
+  ejemplo: A fuera = Banabare. De fuera = Benabage. Lo de fuera = Benabege sai. Fuera de eso = Riabenami
+- castellano: Fuerte
+  achagua: Cadananiyi
+  pliego: 65
+  lado: izq
+  letra: F
+- castellano: Fuertem.te
+  achagua: Cadananita
+  pliego: 65
+  lado: izq
+  letra: F
+- castellano: Fuerte tabaco
+  achagua: Jjuiyi chema
+  pliego: 65
+  lado: izq
+  letra: F
+  nota: 'CALIBRACION: `chema` = tabaco; Jahn da sema'
+- castellano: Fugitivo
+  achagua: Cagiacacayi
+  pliego: 65
+  lado: izq
+  letra: F
+- castellano: Gajo, pedazo
+  achagua: Rena
+  pliego: 65
+  lado: izq
+  letra: G
+  nota: cabecera «Castellano G Achagua» en el pliego 65 izq.
+- castellano: Galan
+  achagua: Caiacaibi, Jbacai rriyi
+  pliego: 65
+  lado: izq
+  letra: G
+- castellano: Galapago
+  achagua: Arra, icuri, sapaniro
+  pliego: 65
+  lado: izq
+  letra: G
+- castellano: Galibo (asi dice)
+  achagua: Guabetuacai
+  pliego: 65
+  lado: izq
+  letra: G
+  nota: 'ETNONIMO: los Guahibo, vecinos de los achagua, con nombre achagua'
+- castellano: Gallina
+  achagua: Cabamay
+  pliego: 65
+  lado: izq
+  letra: G
+- castellano: Gallina de monte
+  achagua: Cusara
+  pliego: 65
+  lado: izq
+  letra: G
+- castellano: Gallinazo
+  achagua: Guachuri
+  pliego: 65
+  lado: izq
+  letra: G
+  ejemplo: Pies amarillo = Edapucum
+- castellano: Ganar
+  achagua: Nuenaricu
+  pliego: 65
+  lado: izq
+  letra: G
+  ejemplo: La voluntad = Numananedau
+- castellano: Ganado mio
+  achagua: Nugirranay
+  pliego: 65
+  lado: izq
+  letra: G
+- castellano: Gana, voluntad
+  achagua: Jbabaitacareri
+  pliego: 65
+  lado: izq
+  letra: G
+  ejemplo: De buena gana = chumisacay. De mala gana = Jacarisa
+- castellano: Ganancia, precio
+  achagua: Benium
+  pliego: 65
+  lado: izq
+  letra: G
+- castellano: Ganso, pato carretero
+  achagua: Vnana
+  pliego: 65
+  lado: izq
+  letra: G
+- castellano: Garabato
+  achagua: Mue
+  pliego: 65
+  lado: izq
+  letra: G
+- castellano: Garra
+  achagua: Mari
+  pliego: 65
+  lado: izq
+  letra: G
+- castellano: Garzo de ojos
+  achagua: Cumintui
+  pliego: 65
+  lado: izq
+  letra: G
+- castellano: Garretas, id est, Zejas
+  achagua: Guacacuberi
+  pliego: 65
+  lado: izq
+  letra: G
+- castellano: Gargajo
+  achagua: Erruen
+  pliego: 65
+  lado: izq
+  letra: G
+- castellano: Gargajear
+  achagua: Nubisau, Nunurrunau
+  pliego: 65
+  lado: izq
+  letra: G
+- castellano: Garganta
+  achagua: Basi
+  pliego: 65
+  lado: izq
+  letra: G
+- castellano: Garrapata
+  achagua: Cubari
+  pliego: 65
+  lado: izq
+  letra: G
+- castellano: Garlito
+  achagua: tamubari, anari, gicha, Vgeri, cacha
+  pliego: 65
+  lado: izq
+  letra: G
+  nota: cinco nombres de trampas/nasas de pesca
+- castellano: Gastar
+  achagua: Nupucaidau
+  pliego: 65
+  lado: izq
+  letra: G
+  ejemplo: Templadam.te = Nudanidatau
+- castellano: Gabilan
+  achagua: Guachuariba, Caibayi
+  pliego: 65
+  lado: izq
+  letra: G
+- castellano: Gato
+  achagua: Michi
+  pliego: 65
+  lado: izq
+  letra: G
+- castellano: Gatear
+  achagua: Nuacunau
+  pliego: 65
+  lado: izq
+  letra: G
+- castellano: Garapo
+  achagua: Paruparüma Enibe
+  pliego: 65
+  lado: izq
+  letra: G
+- castellano: Gemir
+  achagua: Nubaba sacomao
+  pliego: 65
+  lado: izq
+  letra: G
+- castellano: Gemido
+  achagua: Guabasi sacomaca
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Gente y Gentio
+  achagua: Guanecatabenay
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Gente de un mismo lenguage
+  achagua: Guachuanibenay
+  pliego: 65
+  lado: der
+  letra: G
+  nota: '''los de una misma habla'' — la lengua como criterio de grupo, dicho en achagua'
+- castellano: Gentil
+  achagua: Magidenacaisa, Ecunai minari
+  pliego: 65
+  lado: der
+  letra: G
+  ejemplo: Plur = Magidenacaisanay. Los Gentiles por no estar bautizados, entran en el Jnfierno desp.s
+    de muertos = Magidenacaisanay quemicare bautismo vmi nabarrubayuba manicatarerre, nabarinacare yabenam
+- castellano: Gentilidad
+  achagua: Ecunaicasi
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Gigante
+  achagua: Manuibai gunecataberri
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Giboso
+  achagua: Cabariyi
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Gigote
+  achagua: Masia
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Glorioso vano
+  achagua: Jbacairriayerriba
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Gloriarse
+  achagua: Nubacairriayua
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Gloria
+  achagua: Saicabe machuacayisa
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Gloton
+  achagua: Marrua, canaibe, Camunibi, Cabetuacacayi
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Golpe
+  achagua: Jmuacasi
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Golpear
+  achagua: Nuimuayu
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Goma de la Cabeza
+  achagua: Curaisi
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Goma de arbol
+  achagua: Aicuba, icosay, icari
+  pliego: 65
+  lado: der
+  letra: G
+  ejemplo: Su leche = Ricay
+- castellano: Gordo
+  achagua: Quenayi, maureyi
+  pliego: 65
+  lado: der
+  letra: G
+  ejemplo: Gordo hombre = Manuiyi
+- castellano: Gordura
+  achagua: Quenacai
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Gorgojo
+  achagua: Bepi, machuba
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Gorgojearse
+  achagua: Bepiyum
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Gota
+  achagua: Ridugicana
+  pliego: 65
+  lado: der
+  letra: G
+  ejemplo: Gota à gota = Dugidugita
+- castellano: Gotera
+  achagua: Rudugicatege
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Gotear
+  achagua: Dugidugiu
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Goteroso, con goteras
+  achagua: Dugidugiyi
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Governalle, timon
+  achagua: Jbaingi
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Governar, mandar
+  achagua: Nubanacareu
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Gov.or mandador
+  achagua: Jbanacarerri
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Gozar, alegrarse
+  achagua: Numirruba
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Gracia, hermosura
+  achagua: Jbacai
+  pliego: 65
+  lado: der
+  letra: G
+  ejemplo: Gracia, chanza = Chacacum
+- castellano: Gracia de Gracia
+  achagua: Mabenisa
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Grada de escalera
+  achagua: Ribarigebasai
+  pliego: 65
+  lado: der
+  letra: G
+- castellano: Grande Dios
+  achagua: Dios manucaicayi
+  pliego: 66
+  lado: izq
+  letra: G
+  ejemplo: Grande hombre = Manuibai
+- castellano: Grande arbol
+  achagua: Manunayi
+  pliego: 66
+  lado: izq
+  letra: G
+  ejemplo: Grande olla = Carrage, manuagiyi
+- castellano: Grandem.te ó en gran manera
+  achagua: Barinama
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Grandeza
+  achagua: Manucaicasi
+  pliego: 66
+  lado: izq
+  letra: G
+  ejemplo: De Corazon = Guabasi manuicay
+- castellano: Grano de mais
+  achagua: Canatui
+  pliego: 66
+  lado: izq
+  letra: G
+  ejemplo: Grano el rostro = Nanini eni
+  nota: '`cana` = maiz + `tui` = ojo/grano'
+- castellano: Granar
+  achagua: Catuiyum
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Granadillo silvestre
+  achagua: Mariata
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Gratificar, pagar
+  achagua: Machacaidau ribem, nuchaguedau
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Grave pesado
+  achagua: Caducuniyi
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Gravedad tal
+  achagua: Ducunisi
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Grave q.e no se rie
+  achagua: Masuicababai
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Grasa
+  achagua: Jubicasi
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Grasiento, lleno de grasa
+  achagua: Jubicayi
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Greda
+  achagua: Jbay
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Gremio, pertenec.te à tal gremio
+  achagua: Ebaba
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Grillo
+  achagua: Gidu
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Gritar
+  achagua: Numaidau
+  pliego: 66
+  lado: izq
+  letra: G
+  ejemplo: Estar gritando = Numaidedau
+- castellano: Grito
+  achagua: Maidacareri
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Griton
+  achagua: Camaidacacayi
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Griteria, ruido
+  achagua: Bitamasi
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Gruesa cosa
+  achagua: Banitay, maureiy
+  pliego: 66
+  lado: izq
+  letra: G
+  ejemplo: VOZ = Manubanau
+- castellano: Gruñir, respingar
+  achagua: Nusamaredau
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Guacamaya
+  achagua: Atarro, età
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Guadua
+  achagua: Jbabi, Jbabay
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Guacarito
+  achagua: Muã, Vmaiba
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Guanda
+  achagua: Jnenderri
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Guardar
+  achagua: Nunemidau
+  pliego: 66
+  lado: izq
+  letra: G
+  ejemplo: Guardar en la Casa = Nuba[...]
+- castellano: Guardar, tener cuidado de algo
+  achagua: Catuiyacauna rinaco, nutuiyao rinaco
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Gargero
+  achagua: Betoacacuasi
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Guia
+  achagua: Jteyerri nabitabe
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Guineo, platano
+  achagua: Cachaba
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Guerrear
+  achagua: Nainoayacaba
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Guerra
+  achagua: Jnoacañyacãba
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Guiar
+  achagua: Nute nabitabe
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Huella mia
+  achagua: Nubami
+  pliego: 66
+  lado: izq
+  letra: G
+- castellano: Grisar
+  achagua: Nuchanau
+  pliego: 66
+  lado: der
+  letra: G
+- castellano: Guiso
+  achagua: Chananiben
+  pliego: 66
+  lado: der
+  letra: G
+- castellano: Guitarra
+  achagua: Berruari
+  pliego: 66
+  lado: der
+  letra: G
+- castellano: Gula
+  achagua: Munisi
+  pliego: 66
+  lado: der
+  letra: G
+- castellano: Gula, apetito de mas y mas
+  achagua: Jatanisi
+  pliego: 66
+  lado: der
+  letra: G
+- castellano: Gusano
+  achagua: Enisi
+  pliego: 66
+  lado: der
+  letra: G
+  ejemplo: Pequeñito = Ematune. Gusanito = Eninda
+- castellano: Gusano q.e se come
+  achagua: Alerru, simota, sicui
+  pliego: 66
+  lado: der
+  letra: G
+  nota: tres gusanos comestibles con nombre propio
+- castellano: Gustar de algo
+  achagua: Jubi nuriu
+  pliego: 66
+  lado: der
+  letra: G
+- castellano: Gusto, sabor
+  achagua: Jubicai
+  pliego: 66
+  lado: der
+  letra: G
+  ejemplo: Gusto alegria = Surrumiasi
+- castellano: Gusto, voluntad
+  achagua: Jbabaitacareri
+  pliego: 66
+  lado: der
+  letra: G
+- castellano: Gustoso
+  achagua: Jubiyi
+  pliego: 66
+  lado: der
+  letra: G
+- castellano: Guayacan
+  achagua: Cabina
+  pliego: 66
+  lado: der
+  letra: G
+- castellano: Hapoco
+  achagua: Chabacasadeca
+  pliego: 66
+  lado: der
+  letra: H
+  nota: cabecera «Castellano H Achagua» en el pliego 66 der.
+- castellano: H.ta q.e se fue un año
+  achagua: Abacoa minucaite camuirriammiba
+  pliego: 66
+  lado: der
+  letra: H
+- castellano: Habitar
+  achagua: Nuyau, Nuyausa, numauba
+  pliego: 66
+  lado: der
+  letra: H
+- castellano: Habituarse
+  achagua: Nuisaiyu
+  pliego: 66
+  lado: der
+  letra: H
+- castellano: Habito ó costumbre
+  achagua: Jsaicasi
+  pliego: 66
+  lado: der
+  letra: H
+  ejemplo: Habito ropa = Jbaresi
+- castellano: Habito, maña sua
+  achagua: Rebami
+  pliego: 66
+  lado: der
+  letra: H
+- castellano: Habituome à la culpa
+  achagua: Nuisayu gicunasi naco
+  pliego: 66
+  lado: der
+  letra: H
+- castellano: Hablar
+  achagua: Nutayu
+  pliego: 66
+  lado: der
+  letra: H
+- castellano: Hablarle
+  achagua: Nutaidaumi
+  pliego: 66
+  lado: der
+  letra: H
+- castellano: Hablarse unos à otros
+  achagua: Nutayu nuriu guacaba
+  pliego: 66
+  lado: der
+  letra: H
+- castellano: Hablar mucho
+  achagua: Nupurtedau nunumaba
+  pliego: 66
+  lado: der
+  letra: H
+  ejemplo: Hablar parito = Nuseredau, sesetanuta. Hablar à gritos = Cherre cherre nuta. Hablar enflautado
+    = Alisatanuta. Hablar predicando = Numirredau. Hablar gordo = Cariamuta rinuma rita
+  nota: 'seis maneras de hablar con nombre propio: registro de habla documentado'
+- castellano: Hablador
+  achagua: Cachuanicayi
+  pliego: 66
+  lado: der
+  letra: H
+- castellano: Haz
+  achagua: Jbain
+  pliego: 66
+  lado: der
+  letra: H
+- castellano: Hacha
+  achagua: Churi
+  pliego: 66
+  lado: der
+  letra: H
+- castellano: Hacer
+  achagua: Numeda
+  pliego: 66
+  lado: der
+  letra: H
+  ejemplo: Hacer mal = Numasidau
+- castellano: Hacer frio
+  achagua: Casaliniu
+  pliego: 66
+  lado: der
+  letra: H
+  ejemplo: Hacer calor = Amoayu. Hacer ollas = Nubadau carrage. Hacer paces = Nuchuniu, numeda chunay
+- castellano: Hacer saber de otro
+  achagua: Nuibau rinaba
+  pliego: 67
+  lado: izq
+  letra: H
+- castellano: Hacerse pedazos
+  achagua: Nupubedauba
+  pliego: 67
+  lado: izq
+  letra: H
+- castellano: Hacerse enfermo
+  achagua: Numuedamauba
+  pliego: 67
+  lado: izq
+  letra: H
+- castellano: Hacer del muerto
+  achagua: Numeda ibarro eba
+  pliego: 67
+  lado: izq
+  letra: H
+- castellano: Hacer claro
+  achagua: Chunidau erri, Chunidaugi
+  pliego: 67
+  lado: izq
+  letra: H
+  ejemplo: Obscuro = Catabacau
+  nota: '`erri` otra vez por cielo/dia'
+- castellano: Hacer la barba
+  achagua: Nuirrau ririnuma
+  pliego: 67
+  lado: izq
+  letra: H
+  nota: '`ri-rinuma` = su barba; comparar Jahn nuchiánoma'
+- castellano: Hazaña ó hecho
+  achagua: Medanicaisi
+  pliego: 67
+  lado: izq
+  letra: H
+- castellano: Hàcia donde vas?
+  achagua: Charegiabami?
+  pliego: 67
+  lado: izq
+  letra: H
+  ejemplo: Hàcia la Ygl.a = Ygl.a itege. Hàcia vajo = Cairricure. Hàcia atras = Riasuminirreba. Hàcia
+    fuera = Banabare. Hàcia dentro = Vrricore. Hacia adelante = Nunanirreba. Hàcia arriba = aguerre
+- castellano: Hacienda
+  achagua: Guarrua
+  pliego: 67
+  lado: izq
+  letra: H
+- castellano: Hacendado
+  achagua: Cabarruanicayi
+  pliego: 67
+  lado: izq
+  letra: H
+- castellano: Halagar
+  achagua: Nuyamayuni, Numananedau
+  pliego: 67
+  lado: izq
+  letra: H
+- castellano: Halagueño
+  achagua: Cayamacacayi, Jmananederri
+  pliego: 67
+  lado: izq
+  letra: H
+- castellano: Hallar
+  achagua: Nuinu
+  pliego: 67
+  lado: izq
+  letra: H
+  ejemplo: Encontrarle = Nusunitaum
+- castellano: Hamaca
+  achagua: Edasi
+  pliego: 67
+  lado: izq
+  letra: H
+  ejemplo: Mia = Nueda
+- castellano: Hambre
+  achagua: Jnaisi
+  pliego: 67
+  lado: izq
+  letra: H
+  ejemplo: tenerla = Jnaisiuna
+- castellano: Hambriento
+  achagua: Jnaisisa
+  pliego: 67
+  lado: izq
+  letra: H
+- castellano: Haragan
+  achagua: Jnuicaisa
+  pliego: 67
+  lado: izq
+  letra: H
+- castellano: Harina
+  achagua: Jnaberi
+  pliego: 67
+  lado: izq
+  letra: H
+  ejemplo: De mais = Cana inabe
+  nota: '`cana` = maiz'
+- castellano: Harnero
+  achagua: hiruri
+  pliego: 67
+  lado: izq
+  letra: H
+- castellano: Hartar
+  achagua: Nuatedau
+  pliego: 67
+  lado: izq
+  letra: H
+- castellano: Hartarse ó satisfacerse de comer
+  achagua: Cababaidauna
+  pliego: 67
+  lado: izq
+  letra: H
+- castellano: Harto
+  achagua: Jatederriba
+  pliego: 67
+  lado: izq
+  letra: H
+- castellano: Hartura
+  achagua: Jatedacasiba
+  pliego: 67
+  lado: izq
+  letra: H
+- castellano: Hasta morir
+  achagua: Nubarinacare giasaibena
+  pliego: 67
+  lado: izq
+  letra: H
+- castellano: Hasta q.do
+  achagua: Chacaritaca
+  pliego: 67
+  lado: izq
+  letra: H
+  ejemplo: Hasta medio dia = Biyecoresu
+- castellano: Hato
+  achagua: Paca ichacare, Baca chacare
+  pliego: 67
+  lado: izq
+  letra: H
+- castellano: Hato, Rancho
+  achagua: Sichaita
+  pliego: 67
+  lado: izq
+  letra: H
+  ejemplo: Hato envoltorio = Bagiribasi
+- castellano: Hastio (dicen aborrecim.to)
+  achagua: Chanicay
+  pliego: 67
+  lado: izq
+  letra: H
+  ejemplo: tenerlo à la comida = Nuchaniu guabaidasi
+- castellano: Hebra de hilo
+  achagua: Abacoa Dumasi
+  pliego: 67
+  lado: izq
+  letra: H
+  nota: '`aba-coa` = una (clasificador de sartas/hebras)'
+- castellano: Hechizar (dicen cocinarle)
+  achagua: Nuchanaum
+  pliego: 67
+  lado: izq
+  letra: H
+  nota: 'el hechizo dicho con el verbo de cocinar: dato de creencia'
+- castellano: Hechizo del bien querer
+  achagua: Marra
+  pliego: 67
+  lado: der
+  letra: H
+  ejemplo: tal hechizo = Marraisa
+  nota: el filtro de amor, con nombre propio
+- castellano: Hecho
+  achagua: Medanicaisi
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Hecho platano
+  achagua: Salirriyi
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Hembra
+  achagua: Jnetua, Jnegetua
+  pliego: 67
+  lado: der
+  letra: H
+  ejemplo: pl. Jnaveni
+  nota: 'CALIBRACION: Jahn da mujer = inagetua — coincide'
+- castellano: Henchirse
+  achagua: Casiamum
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Henchincherse
+  achagua: Nucasiamudau
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Hechuras de sus manos
+  achagua: Ricage menaisa, imedaca
+  pliego: 67
+  lado: der
+  letra: H
+  nota: 'CALIBRACION: `ri-cage` = su mano; Jahn da mano = nukaje'
+- castellano: Hendido
+  achagua: Casiamuiyi
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Hender
+  achagua: Nubeñayu, nuridau
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Henderse la olla
+  achagua: Ribatanao, ribesiayu
+  pliego: 67
+  lado: der
+  letra: H
+  ejemplo: La casa = Rimecuba
+- castellano: Hendedura
+  achagua: Ribeniacagiba
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Heder
+  achagua: Jasayo, Jasayuni, mariurrisani
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Hedor
+  achagua: Jasacasi, Jasabe
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Hediondo
+  achagua: Jasayi
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Hermano maior mio
+  achagua: Nubecanata
+  pliego: 67
+  lado: der
+  letra: H
+  ejemplo: pl. Nubecanatanay
+  nota: 'PARENTESCO: el achagua distingue hermano mayor / hermano / hermano menor, y ademas da la forma
+    VOCATIVA de cada uno'
+- castellano: Hermano mio
+  achagua: Nuberri
+  pliego: 67
+  lado: der
+  letra: H
+  ejemplo: pl. Nuberrinay. Si habla con él = tay
+  nota: vocativo `tay`
+- castellano: Hermana
+  achagua: Nuicherro
+  pliego: 67
+  lado: der
+  letra: H
+  ejemplo: pl. Niuchenay. Si habla con ella = tau
+  nota: vocativo `tau`
+- castellano: Hermano menor mio
+  achagua: Numerrerri
+  pliego: 67
+  lado: der
+  letra: H
+  ejemplo: pl. Numerrinay. Si habla con el = Jchu
+  nota: 'CALIBRACION: Jahn da hermano = nimérre — coincide con el hermano MENOR'
+- castellano: Hermano menor de ella
+  achagua: Ruchamamini ruerri
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Hermano de un vientre
+  achagua: Nugiacaberri
+  pliego: 67
+  lado: der
+  letra: H
+  nota: 'PARENTESCO: hermano uterino, con termino aparte'
+- castellano: Hermana tal
+  achagua: Nugiacabetua
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Herrar el camino (errar)
+  achagua: Nugiginau
+  pliego: 67
+  lado: der
+  letra: H
+  ejemplo: El tiro = Nudiayu
+- castellano: Herrar hablando (errar)
+  achagua: Nugiginaichau
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Herrarse, engañarse
+  achagua: Nucharisuedauba
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Herror tal (error)
+  achagua: Charisuedacarebisa
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Herramienta
+  achagua: Medaubasi
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Herrumbre
+  achagua: Riya
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Hermosa
+  achagua: Jbacaichuayo
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Hermoso
+  achagua: Jbacairre
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Hermosura
+  achagua: Jbacai
+  pliego: 67
+  lado: der
+  letra: H
+  ejemplo: La mia = Nubaca
+- castellano: Hervor
+  achagua: Jasucasi
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Hervir
+  achagua: Riasucau
+  pliego: 67
+  lado: der
+  letra: H
+  ejemplo: Hacer hervir = Nuasucaidau
+- castellano: Hervir à borbollones
+  achagua: Pararparata riasucau
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Herrero
+  achagua: Sipararali, Jbasayerri
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Herir
+  achagua: Numandau, nudurru
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Herirse
+  achagua: Numariuba
+  pliego: 67
+  lado: der
+  letra: H
+- castellano: Librarse
+  achagua: Camamiuna
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Libre, seguro
+  achagua: Camanicayi
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Libertad, seguridad
+  achagua: Manisi
+  pliego: 72
+  lado: der
+  letra: L
+  ejemplo: Alvedrio = Guabasiyusaba
+- castellano: Libro
+  achagua: tatanisirrasi
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Licor
+  achagua: Jaberi
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Liendre
+  achagua: Ottenisi ebe
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Ligeram.te
+  achagua: Mesata
+  pliego: 72
+  lado: der
+  letra: L
+  ejemplo: Aligerarse = Numesedatau
+- castellano: Ligero
+  achagua: Mesayi
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Limar
+  achagua: Nurraidau
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Linde
+  achagua: Rijubana
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Limosnear
+  achagua: Nucurrumiayu
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Limosnero q.e pide
+  achagua: Jcurrumiayerri
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Limosna
+  achagua: Janicaisi
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Limpio
+  achagua: Masacoreyi
+  pliego: 72
+  lado: der
+  letra: L
+  ejemplo: Limpia = Masacoreyisa
+- castellano: Limpiar
+  achagua: Mumetuayu, natanayu
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Linage
+  achagua: Cuisaunasi
+  pliego: 72
+  lado: der
+  letra: L
+  ejemplo: Es de mi linage = Nucuisaunaberri
+  nota: 'PARENTESCO: el linaje tiene nombre propio y forma poseida'
+- castellano: Linage de tigre
+  achagua: Chabiberraenay
+  pliego: 72
+  lado: der
+  letra: L
+  ejemplo: De Papagayos = Quenabeni; Vrribenai payabem
+  nota: LINAJES CON NOMBRE DE ANIMAL — indicio de organizacion clanica totemica. `chabi` = tigre (cf.
+    Jahn echave)
+- castellano: Liquido derretido
+  achagua: Judadanicaisi
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Liso
+  achagua: Queniyi
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Lista
+  achagua: Retuiba, renaibarena
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Liviano, ligero
+  achagua: Mesayi
+  pliego: 72
+  lado: der
+  letra: L
+  ejemplo: Livianos, bofes = Mesanisi
+- castellano: Lirio
+  achagua: tabauri
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Listada ropa
+  achagua: Catuibagirray
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Loar
+  achagua: Nabacairredau
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Lobanillo
+  achagua: tusaisi
+  pliego: 72
+  lado: der
+  letra: L
+  ejemplo: El q.e lo tiene = Jusaisa
+- castellano: Lobrego
+  achagua: Catabacayi
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Lobo de agua
+  achagua: Jebi
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Loco
+  achagua: Mabitecaisa
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Loquear
+  achagua: Babaona
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Locura
+  achagua: Mabitecai
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Lodo
+  achagua: Ebebe
+  pliego: 72
+  lado: der
+  letra: L
+  ejemplo: Lodazal = Badacabe
+- castellano: Lombris
+  achagua: Vmage
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Lomo
+  achagua: Jbanesi
+  pliego: 72
+  lado: der
+  letra: L
+- castellano: Longitud de él ó de ella
+  achagua: Ridecucha
+  pliego: 72
+  lado: der
+  letra: L
+  ejemplo: Suia = Rimachenica
+- castellano: Nuera ó Nuevo
+  achagua: Querri guaricui
+  pliego: 78
+  lado: izq
+  letra: N
+  ejemplo: Camiseta nueva = Gua[rruma] girraisa
+- castellano: Novelero
+  achagua: Jcain minari
+  pliego: 78
+  lado: izq
+  letra: N
+- castellano: Nuera mia
+  achagua: Nunirro
+  pliego: 78
+  lado: izq
+  letra: N
+  nota: PARENTESCO politico
+- castellano: Nube
+  achagua: Casarianayi, Jsanai
+  pliego: 78
+  lado: izq
+  letra: N
+  ejemplo: Del ojo = tuijuren
+- castellano: Nublado
+  achagua: Catamoabe
+  pliego: 78
+  lado: izq
+  letra: N
+  ejemplo: Dia nublado = Catamoayi
+- castellano: Nudo
+  achagua: Resuanina
+  pliego: 78
+  lado: izq
+  letra: N
+  ejemplo: Anudar = Nuesuayuni, Nunduayu
+- castellano: Nudillo de los dedos
+  achagua: Cageri vrrau
+  pliego: 78
+  lado: izq
+  letra: N
+- castellano: Nudoso arbol
+  achagua: Cabarenay
+  pliego: 78
+  lado: izq
+  letra: N
+- castellano: Nuestro
+  achagua: Guanina
+  pliego: 78
+  lado: izq
+  letra: N
+- castellano: Nueve
+  achagua: Repunicayacaba bacage
+  pliego: 78
+  lado: izq
+  letra: N
+  nota: NUMERAL 9
+- castellano: Nuca
+  achagua: Betoacaisi
+  pliego: 78
+  lado: izq
+  letra: N
+- castellano: Nutria
+  achagua: Jebi
+  pliego: 78
+  lado: izq
+  letra: N
+- castellano: No tener nombre, ser gentil
+  achagua: Magidenã
+  pliego: 78
+  lado: izq
+  letra: N
+  ejemplo: Pues el `ma-` es negativo q.do se antepone
+  nota: el propio autor explica el prefijo privativo ma-
+- castellano: Ò de admiracion
+  achagua: Paya! Jabataya! Neba!
+  pliego: 78
+  lado: izq
+  letra: O
+  ejemplo: Ò de admiracion de Mugeres = tau! Amã!
+  nota: 'INTERJECCIONES CON GENERO: el manuscrito distingue la exclamacion de hombre de la de mujer. Cabecera
+    «Castellano O Achagua»'
+- castellano: Ò disjuntivo
+  achagua: Beca
+  pliego: 78
+  lado: izq
+  letra: O
+  ejemplo: Pedro ò Pablo = Pedro Pablo beca
+- castellano: Obediente
+  achagua: Quebedacacayi, ebederri
+  pliego: 78
+  lado: izq
+  letra: O
+- castellano: Obedecer
+  achagua: Nuebeda
+  pliego: 78
+  lado: izq
+  letra: O
+- castellano: Obediencia
+  achagua: Ebedacasi
+  pliego: 78
+  lado: izq
+  letra: O
+- castellano: Obligarse, quedar deudor
+  achagua: Mabemacareuna
+  pliego: 78
+  lado: izq
+  letra: O
+- castellano: Obligacion, deuda
+  achagua: Mabemacaresi
+  pliego: 78
+  lado: izq
+  letra: O
+- castellano: Obra
+  achagua: Medanicaisi
+  pliego: 78
+  lado: izq
+  letra: O
+  ejemplo: Obrage = Medacarriasi
+- castellano: Obrar
+  achagua: Numeda
+  pliego: 78
+  lado: izq
+  letra: O
+- castellano: Obstinado
+  achagua: Casacarecayi
+  pliego: 78
+  lado: izq
+  letra: O
+- castellano: Obstinacion
+  achagua: Jasacaresi
+  pliego: 78
+  lado: izq
+  letra: O
+- castellano: Ocasion p.a pecar (dicen trampa)
+  achagua: Barra
+  pliego: 78
+  lado: izq
+  letra: O
+  ejemplo: La mia = Nubarram. En otra ocasion pasada = Abege mirricate. Otra ocasion futura = Abage irrico
+    baimiari
+- castellano: Ocho
+  achagua: Matarritaibacage
+  pliego: 78
+  lado: izq
+  letra: O
+  nota: NUMERAL 8
+- castellano: Ochenta
+  achagua: Regamicaiacaba tacai
+  pliego: 78
+  lado: izq
+  letra: O
+  nota: NUMERAL 80
+- castellano: Ocioso
+  achagua: Mamedacayisa
+  pliego: 78
+  lado: izq
+  letra: O
+- castellano: Ocio
+  achagua: Mamedacacai
+  pliego: 78
+  lado: der
+  letra: O
+- castellano: Ocupar à otro
+  achagua: Nubabatuedau
+  pliego: 78
+  lado: der
+  letra: O
+- castellano: Ocuparse
+  achagua: Babatuiyuna
+  pliego: 78
+  lado: der
+  letra: O
+- castellano: Ocupacion
+  achagua: Batuicasi
+  pliego: 78
+  lado: der
+  letra: O
+- castellano: Ocupado
+  achagua: Babatuicayi
+  pliego: 78
+  lado: der
+  letra: O
+- castellano: Ocupar, estorbar
+  achagua: Numebatau
+  pliego: 78
+  lado: der
+  letra: O
+- castellano: Ocultar
+  achagua: Nubayedau
+  pliego: 78
+  lado: der
+  letra: O
+- castellano: Ocultarse
+  achagua: Nubarauba
+  pliego: 78
+  lado: der
+  letra: O
+- castellano: Oculto
+  achagua: Jbayerriba
+  pliego: 78
+  lado: der
+  letra: O
+- castellano: Ofender, hacer mal
+  achagua: Cagicunaiuna
+  pliego: 78
+  lado: der
+  letra: O
+- castellano: Ofensa
+  achagua: Jtaresi
+  pliego: 78
+  lado: der
+  letra: O
+- castellano: Oficial
+  achagua: Jmedearri
+  pliego: 78
+  lado: der
+  letra: O
+- castellano: Ofrecer
+  achagua: Nubau
+  pliego: 78
+  lado: der
+  letra: O
+- castellano: Ofrecerse, darse
+  achagua: Nuinudauba
+  pliego: 78
+  lado: der
+  letra: O
+  ejemplo: Ofrecerse à mi vista = Ecunuriu. Ofrecerseme ó decirme el corazon = Caibau nubaba, cababai
+    ricuna
+- castellano: Ofrenda de difuntos
+  achagua: Jrrubaidacasi, vel Jrrubaidamicain
+  pliego: 78
+  lado: der
+  letra: O
+  nota: 'RITO FUNERARIO: la ofrenda a los muertos, con nombre propio'
+- castellano: Ogaño
+  achagua: Camui irrico cariam
+  pliego: 78
+  lado: der
+  letra: O
+- castellano: Oy
+  achagua: Guarege
+  pliego: 78
+  lado: der
+  letra: O
+- castellano: Oido, oreja
+  achagua: Jbiri
+  pliego: 78
+  lado: der
+  letra: O
+  ejemplo: Mio = Nuibi
+  nota: 'CALIBRACION: Jahn da oreja = núbila; aqui `nu-ibi`'
+- castellano: Oido, cosa q.e se oie
+  achagua: Eminicainim
+  pliego: 78
+  lado: der
+  letra: O
+- castellano: Oidor
+  achagua: Emerri
+  pliego: 78
+  lado: der
+  letra: O
+- castellano: Oir
+  achagua: Nuemmiuyu, Nuemiu
+  pliego: 78
+  lado: der
+  letra: O
+  nota: 'CALIBRACION: Jahn da oir = numike'
+- castellano: Oja
+  achagua: Abana
+  pliego: 78
+  lado: der
+  letra: O
+  ejemplo: De Vijao = Are
+- castellano: Ojo
+  achagua: '[T]uisi'
+  pliego: 78
+  lado: der
+  letra: O
+  ejemplo: Ojos q.a ver almas = Guabaimi tuibabare. Dar el ojo = Nusimiu nutuiba rirru. Cerrar los ojos
+    = Nutamu nutuiba. En un abrir y cerrar de ojos = guasimiu cachu guatuiba
+  nota: 'CALIBRACION: Jahn da ojo = nutói; aqui `nu-tui-ba`. Y ademas ''ojos para ver almas'', formula
+    de creencia'
+- castellano: Ojear, hacer mal de ojo
+  achagua: Nubarinaidau tuisiyu
+  pliego: 78
+  lado: der
+  letra: O
+  nota: el mal de ojo, con verbo propio
+- castellano: Ojala
+  achagua: Jasatayo
+  pliego: 78
+  lado: der
+  letra: O
+- castellano: Ola, ola
+  achagua: Baibaya
+  pliego: 78
+  lado: der
+  letra: O
+- castellano: Oler
+  achagua: Numiayu
+  pliego: 78
+  lado: der
+  letra: O
+  ejemplo: Dar olor = Quesanetao, Jumemitau
+- castellano: Oler mal
+  achagua: Jasaiuni, maricatau
+  pliego: 78
+  lado: der
+  letra: O
+  ejemplo: Mal huele = Masirrisami
+- castellano: Olfato
+  achagua: Emiubasi
+  pliego: 78
+  lado: der
+  letra: O
+- castellano: Olor
+  achagua: Jsam
+  pliego: 78
+  lado: der
+  letra: O
+  ejemplo: Hedor = Jasabe
+- castellano: Oloroso
+  achagua: Jumenyi
+  pliego: 78
+  lado: der
+  letra: O
+  ejemplo: Oloroso Arbol = Cabainai
+- castellano: Olla grande
+  achagua: Carrage
+  pliego: 79
+  lado: izq
+  letra: O
+  ejemplo: Pequeña = Vrrua
+- castellano: Ollejo
+  achagua: Jmari
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Olvidar
+  achagua: Numiyaguachao, numiyauba, nutuibarinaichau
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Olvido
+  achagua: Jmiyuaguachaucasi
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Olvidadizo
+  achagua: Camiyauguachacacayi
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Ombligo
+  achagua: Surusi, Mudusi
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Omblingudo
+  achagua: Camuduibai, Cacuruibai
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Once hombres
+  achagua: Abacaisanaibana
+  pliego: 79
+  lado: izq
+  letra: O
+  ejemplo: Once platano = Ababasariba[...]
+  nota: NUMERAL 11 con clasificador
+- castellano: Opilarse
+  achagua: Numorracayua
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Opilado
+  achagua: Debichanarusa, Jmorracayerriba
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Opilacion
+  achagua: Debichanari
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Oponer, contradecir
+  achagua: Nuasacareu
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Opuesto, contradictor
+  achagua: Jasacarerri
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Opuesto, el de enfrente de mi
+  achagua: Nunanige basai
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Oposicion
+  achagua: Jasacaresi
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Oprobrio
+  achagua: Jcuisaidacasi
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Orar, pedir
+  achagua: Nuemau
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Oracion
+  achagua: Emacasi
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Orzuelo
+  achagua: Jurrubisana
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Ordenar, componer
+  achagua: Nuchuniu
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Ordenar mandando
+  achagua: Nubanacareu
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Ordenar Sacerdotes
+  achagua: Numeda Sacerdotebem
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Ordeñar
+  achagua: Nuriquiayu
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Orear, enjugar
+  achagua: Numacarrayu
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Orearse
+  achagua: Numacarrauba
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Oregano
+  achagua: Jabina
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Oreja
+  achagua: Bibasi
+  pliego: 79
+  lado: izq
+  letra: O
+  nota: 'CALIBRACION: Jahn da oreja = núbila. El manuscrito tiene DOS voces: `Jbiri/Nuibi` (oido) y `Bibasi`
+    (oreja)'
+- castellano: Orejudo
+  achagua: Cabibai
+  pliego: 79
+  lado: izq
+  letra: O
+  ejemplo: El q.e no las tiene = Mabibai
+- castellano: Orilla del agua
+  achagua: Rinumacoa vm
+  pliego: 79
+  lado: izq
+  letra: O
+  ejemplo: Del casabe = Berriribiu
+  nota: '`berri` = casabe otra vez'
+- castellano: Orfandad
+  achagua: Maoyecay
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Ormigas grandes, comida de Achaguas
+  achagua: Quiriri
+  pliego: 79
+  lado: izq
+  letra: O
+  nota: 'DIETA: el misionero registra que las hormigas grandes son comida achagua'
+- castellano: Ormigas bravas
+  achagua: Daquiba
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Orinar
+  achagua: Nutacau
+  pliego: 79
+  lado: izq
+  letra: O
+- castellano: Orina
+  achagua: Jnisi
+  pliego: 79
+  lado: izq
+  letra: O
+  ejemplo: tener ganas de orinar, dicen doler la orina = Caibiu nuimi. Si no tienes gana de orinar, empuja
+    = Coacata caibiu gimi gimagirriayu
+- castellano: Loro
+  achagua: Chaibarrum
+  pliego: 73
+  lado: izq
+  letra: L
+- castellano: Lucerna, cierto gusanillo q.e vuela
+  achagua: Cude
+  pliego: 73
+  lado: izq
+  letra: L
+- castellano: Luego
+  achagua: Mata, tatapu
+  pliego: 73
+  lado: izq
+  letra: L
+  ejemplo: Luego al punto = Bateba. al punto q.e rayó el dia = Catabateba quirraca erri
+- castellano: Lugar, sitio
+  achagua: Jarrun
+  pliego: 73
+  lado: izq
+  letra: L
+  ejemplo: Lugar pueblo = Chacaren. Lugar de otro, ó el Vicario = Riarrumirre sai
+- castellano: Lumbre
+  achagua: Sichai
+  pliego: 73
+  lado: izq
+  letra: L
+  nota: 'CALIBRACION: Jahn da fuego = ishay — coincide'
+- castellano: Luna
+  achagua: Querri
+  pliego: 73
+  lado: izq
+  letra: L
+  ejemplo: Nueva = Querriquaricuy. Crec.te = Querriar[...]. Llena = Jarido cabataum
+  nota: 'CALIBRACION: Jahn da luna = kerre — coincide. Y da ademas las fases'
+- castellano: Lunar
+  achagua: Vma, charipu
+  pliego: 73
+  lado: izq
+  letra: L
+- castellano: Lustre, lo q.e se vee
+  achagua: Jcabacanasi
+  pliego: 73
+  lado: izq
+  letra: L
+- castellano: Lucero de la tarde
+  achagua: Carruyi
+  pliego: 73
+  lado: izq
+  letra: L
+  ejemplo: De la mañana = Quisari
+  nota: lucero vespertino y matutino con nombres distintos — astronomia indigena
+- castellano: Lucido
+  achagua: Vcunyi
+  pliego: 73
+  lado: izq
+  letra: L
+- castellano: Luz
+  achagua: Camarrasi
+  pliego: 73
+  lado: izq
+  letra: L
+- castellano: Lucir
+  achagua: Vcuniuna
+  pliego: 73
+  lado: izq
+  letra: L
+  ejemplo: Lucir, alumbrar = Nucanao
+- castellano: Luciernega
+  achagua: Cucui, cude, churime
+  pliego: 73
+  lado: izq
+  letra: L
+- castellano: Llaga
+  achagua: Jchaunasi
+  pliego: 73
+  lado: izq
+  letra: L
+- castellano: Llagarse, tener llagas
+  achagua: Cachaunayuna
+  pliego: 73
+  lado: izq
+  letra: L
+- castellano: Llagado
+  achagua: cachaunacayi
+  pliego: 73
+  lado: izq
+  letra: L
+- castellano: Llama
+  achagua: Sichay inene
+  pliego: 73
+  lado: izq
+  letra: L
+  nota: '`inene` es tambien ''lengua'': la llama es la lengua del fuego'
+- castellano: Llamar
+  achagua: Nuarrimau
+  pliego: 73
+  lado: izq
+  letra: L
+- castellano: Llamarse, ó tener tal nombre
+  achagua: Caidenacayiyuna
+  pliego: 73
+  lado: izq
+  letra: L
+- castellano: Llano
+  achagua: Abananiayisa
+  pliego: 73
+  lado: izq
+  letra: L
+- castellano: Llanura
+  achagua: Bachaida
+  pliego: 73
+  lado: izq
+  letra: L
+- castellano: Llanto
+  achagua: Jchacasi
+  pliego: 73
+  lado: izq
+  letra: L
+- castellano: Llave
+  achagua: Banin numa, tacausa
+  pliego: 73
+  lado: izq
+  letra: L
+- castellano: Llegar
+  achagua: Nuinu
+  pliego: 73
+  lado: izq
+  letra: L
+  ejemplo: Llegar, arrimarse = Nurrunidauba, Vrruni
+- castellano: Llena cosa
+  achagua: Casiamuyi
+  pliego: 73
+  lado: izq
+  letra: L
+  ejemplo: Si femen.o Racion = Casiamutayo
+- castellano: Llenar
+  achagua: Nucasiamudau
+  pliego: 73
+  lado: izq
+  letra: L
+  ejemplo: El que llena = Jcasiamadearri, pl. ut in arte
+- castellano: Llenarse
+  achagua: Casiamuna
+  pliego: 73
+  lado: izq
+  letra: L
+- castellano: Llevar
+  achagua: Nuteyu
+  pliego: 73
+  lado: izq
+  letra: L
+  ejemplo: Llevar guiando = Nute ribitabe
+- castellano: Llevar à cuestas
+  achagua: Nuanagiu
+  pliego: 73
+  lado: izq
+  letra: L
+  ejemplo: al hombro = Nubacu
+- castellano: Llevar en Brasos
+  achagua: Nucuriru
+  pliego: 73
+  lado: izq
+  letra: L
+- castellano: Llover
+  achagua: Riguagua uma
+  pliego: 73
+  lado: izq
+  letra: L
+  ejemplo: Espeso = Sususutau
+- castellano: Llovisnar
+  achagua: Siyarrutau
+  pliego: 73
+  lado: izq
+  letra: L
+- castellano: Llovediza agua
+  achagua: tubaria
+  pliego: 73
+  lado: der
+  letra: L
+  ejemplo: Llovedizo dia = Errinacuiba
+- castellano: Lloverse la casa
+  achagua: Dugidugiu cuita
+  pliego: 73
+  lado: der
+  letra: L
+- castellano: Llorar
+  achagua: Nuichau
+  pliego: 73
+  lado: der
+  letra: L
+- castellano: Lloron
+  achagua: Catuibi, camaoyecayi, catuicayi
+  pliego: 73
+  lado: der
+  letra: L
+- castellano: Lluvia
+  achagua: Vnia
+  pliego: 73
+  lado: der
+  letra: L
+  nota: '`uni` = agua/rio; la lluvia es `unia`'
+- castellano: Le, ó lo
+  achagua: Ni
+  pliego: 73
+  lado: der
+  letra: L
+  ejemplo: Danosle oi = Jiayu guarriuni
+- castellano: Lechuza
+  achagua: Jbida
+  pliego: 73
+  lado: der
+  letra: L
+  ejemplo: Grande = Dumurruco. Otra especie = Besiquetao
+- castellano: Licito, ser licito
+  achagua: Saicatanueba
+  pliego: 73
+  lado: der
+  letra: L
+- castellano: Lacetilla, arponcillo
+  achagua: Cacuari
+  pliego: 73
+  lado: der
+  letra: L
+- castellano: Larga cosa
+  achagua: Macheniyi
+  pliego: 73
+  lado: der
+  letra: L
+- castellano: Macana
+  achagua: Guacaba
+  pliego: 73
+  lado: der
+  letra: M
+  ejemplo: La mia = Nucabamiba
+  nota: cabecera «Castellano M Achagua» en el pliego 73 der.
+- castellano: Macana de enlatar
+  achagua: Juba
+  pliego: 73
+  lado: der
+  letra: M
+- castellano: Macear
+  achagua: Nutatau
+  pliego: 73
+  lado: der
+  letra: M
+- castellano: Macho
+  achagua: Guanarricaberri
+  pliego: 73
+  lado: der
+  letra: M
+- castellano: Machucar
+  achagua: Numadayum
+  pliego: 73
+  lado: der
+  letra: M
+- castellano: Madrasta
+  achagua: Bayinu
+  pliego: 73
+  lado: der
+  letra: M
+  nota: PARENTESCO
+- castellano: Madre
+  achagua: Nao, yatuasi
+  pliego: 73
+  lado: der
+  letra: M
+  ejemplo: mia = Nutua. M.e del Rio = Vni nanaba
+  nota: PARENTESCO. Y la 'Madre del Rio' como entidad nombrada
+- castellano: Madera
+  achagua: Aicuba
+  pliego: 73
+  lado: der
+  letra: M
+- castellano: Madeja de hilo
+  achagua: Dumasi macabai
+  pliego: 73
+  lado: der
+  letra: M
+- castellano: Maduro
+  achagua: Jirriyi
+  pliego: 73
+  lado: der
+  letra: M
+  ejemplo: Echar à madurar = Nucaniu
+- castellano: Magestad, grandeza
+  achagua: Manucaicasi
+  pliego: 73
+  lado: der
+  letra: M
+- castellano: Magno
+  achagua: Manucaicayi
+  pliego: 73
+  lado: der
+  letra: M
+- castellano: Magullar
+  achagua: Nupaquipaquiayu
+  pliego: 73
+  lado: der
+  letra: M
+- castellano: Mayor
+  achagua: Namucaicayi
+  pliego: 73
+  lado: der
+  letra: M
+  ejemplo: Maior de edad q.e otro = Ribechasay
+- castellano: Majar, pilar
+  achagua: Nuarru
+  pliego: 73
+  lado: der
+  letra: M
+- castellano: Mais
+  achagua: Cana
+  pliego: 73
+  lado: der
+  letra: M
+  nota: voz agricola de primer orden
+- castellano: Mal
+  achagua: Maricabe
+  pliego: 73
+  lado: der
+  letra: M
+  ejemplo: Malo = Masiyi
+- castellano: Mal hombre
+  achagua: Mariquerri
+  pliego: 73
+  lado: der
+  letra: M
+  ejemplo: pl. = Maribem, mariquenay
+- castellano: Malam.te
+  achagua: Masi, vel marita
+  pliego: 73
+  lado: der
+  letra: M
+- castellano: Maldad
+  achagua: Maricaibe
+  pliego: 73
+  lado: der
+  letra: M
+- castellano: Macheta
+  achagua: Curuy
+  pliego: 73
+  lado: der
+  letra: M
+- castellano: Malear à otro
+  achagua: Numasidau
+  pliego: 73
+  lado: der
+  letra: M
+- castellano: Maliciar
+  achagua: Cababairricuna
+  pliego: 73
+  lado: der
+  letra: M
+- castellano: Malparir
+  achagua: Nucaidau
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Maleza
+  achagua: Masicay
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Malicioso
+  achagua: Cababairricucayi
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Malicia
+  achagua: Cababairricucan
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Malvado
+  achagua: Dabi, maritasaba
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Malograr
+  achagua: Numeucaydau
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Mamar
+  achagua: Nurrau inisi
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Mamon
+  achagua: Jnisi irrerri
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Manar
+  achagua: Risirrinao
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Manantial
+  achagua: Risirrinacasi
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Manati
+  achagua: Apia
+  pliego: 74
+  lado: izq
+  letra: M
+  nota: fauna acuatica
+- castellano: Mancebo de ella
+  achagua: Rutaricay
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Manceba
+  achagua: Ritaricayo
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Mañana
+  achagua: Caurrucha
+  pliego: 74
+  lado: izq
+  letra: M
+  ejemplo: Mañana por la mañana = caurrucha chaibata. Pasado mañana = Bataige. Desp.s de pasado mañana
+    = Bamecha, y tambien caurrucha bamecha. Esta mañana = Manurresasa, caurruadau, maynureca
+  nota: el calendario corto del achagua, dia a dia
+- castellano: Mancha
+  achagua: Sacorebe
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Manchado
+  achagua: Casacoreyi
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Manchar
+  achagua: Nusacoredau
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Mandar
+  achagua: Nubanacareu
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Mandam.to
+  achagua: Banacareri
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Mandole un Cavallo
+  achagua: Nuibau rinaba ema
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Mandador q.e manda mucho
+  achagua: Cabanacarebi
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Manco
+  achagua: Manacui, macagecaisa
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Mancar
+  achagua: Numirriayu ricage
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Manear
+  achagua: Nubagiu ricaba ema
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Manera, de esta manera
+  achagua: Chade, chaude, chaside, riacachu
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Mango de hacha
+  achagua: Chusi icaba
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Mano
+  achagua: Cageri
+  pliego: 74
+  lado: izq
+  letra: M
+  ejemplo: Mano de pilon = Anabiba
+  nota: 'CALIBRACION: Jahn da mano = nukaje; aqui la forma absoluta `cage-ri` (poseida `ri-cage`, pliego
+    67)'
+- castellano: Manjar
+  achagua: Guabaidasi iyacasi
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Manso
+  achagua: Camananica, Canecatay, Quenaicay
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Mansedumbre
+  achagua: Chumiquebeu, manamicayi, necatay
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Manteca
+  achagua: Jubicasi
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Mantecoso
+  achagua: Caubicayi
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Manta, camiseta de Lana
+  achagua: Carichugirray
+  pliego: 74
+  lado: izq
+  letra: M
+- castellano: Manteles
+  achagua: Riyacama
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Mantener
+  achagua: Nubabinaoyu
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Mantenim.to
+  achagua: Cabicai, Jiacasi, guabaidasi
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Mar
+  achagua: Manoa
+  pliego: 74
+  lado: der
+  letra: M
+  nota: 'voz de geografia: el mar, en una lengua de los Llanos'
+- castellano: Maravilloso
+  achagua: Cadedacanayisa
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Maravillarse
+  achagua: Nuadedau
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Marchitarse
+  achagua: tugitugium
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Marchito
+  achagua: tugitugiyi
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Marino
+  achagua: Manoa say
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Margen del agua, ó el libro
+  achagua: Numacoa
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Marido
+  achagua: Jnirrirri
+  pliego: 74
+  lado: der
+  letra: M
+  ejemplo: El mio = Nunirri. llamandole = Ve. pl. = Jrrirrinai
+  nota: PARENTESCO, con vocativo `Ve`
+- castellano: Mariposa
+  achagua: Atutuma
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Martillo
+  achagua: tataubasi
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Mas
+  achagua: Ribicaubata, Decurenamau
+  pliego: 74
+  lado: der
+  letra: M
+  ejemplo: Mas encima = Ritare. Mas, otra vez = Mabisa. Mas y mas = Canabanisa. Mas sabe Pedro q.e Pablo
+    = Decurenamau quebacayi vyum Pedro, ribacao Pablo. Sic in Casanare; in haxi mena sic = Pedro quebacayi
+    vyum ribicaubata Pablo
+  nota: 'EL AUTOR DISTINGUE DOS HABLAS: «asi en Casanare» frente a la otra. Variacion dialectal declarada
+    dentro del vocabulario'
+- castellano: Mascar
+  achagua: Nubasabasayu
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Masa
+  achagua: Bacabe
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Masato
+  achagua: Amu
+  pliego: 74
+  lado: der
+  letra: M
+  nota: la bebida fermentada
+- castellano: Mazo
+  achagua: tataubari
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Mazorca de mais
+  achagua: Macanayi
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Matalotage
+  achagua: Marruen
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Matar
+  achagua: Nuinuayu, nuinueda
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Matarse
+  achagua: Nuinuayuba
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Matador
+  achagua: Cainuacacayi
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Matadura
+  achagua: Ema inuacagiba
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Matanza
+  achagua: Jnuacasi
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Materia
+  achagua: Amay
+  pliego: 74
+  lado: der
+  letra: M
+  ejemplo: La mia = Nuama
+- castellano: Mazamorra
+  achagua: Cutu, cameyabay
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Mear
+  achagua: Nutacao
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Mecer
+  achagua: Nurrarramedauba
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Medicina
+  achagua: Debe
+  pliego: 74
+  lado: der
+  letra: M
+  ejemplo: La mia = Nuidebe
+- castellano: Medico
+  achagua: Debi minari
+  pliego: 74
+  lado: der
+  letra: M
+  nota: '''dueño de la medicina'''
+- castellano: Meditar
+  achagua: Nuedacananiuyuba, nuedau, nutuiba
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Meditar mas
+  achagua: Nuedau rituina
+  pliego: 74
+  lado: der
+  letra: M
+- castellano: Pasarme
+  achagua: Nuberonau
+  pliego: 81
+  lado: izq
+  letra: P
+  ejemplo: El Rio = Nuchuayu
+- castellano: Pasar, mudar
+  achagua: Nuchaguedau
+  pliego: 81
+  lado: izq
+  letra: P
+  ejemplo: Pasar platanos al sol = Numacarrayu
+- castellano: Pasar travajos
+  achagua: Nuatau nurrumicaba
+  pliego: 81
+  lado: izq
+  letra: P
+  ejemplo: Pasar de parte à parte = Nugedau ribege. Pasarse el papel = Rigiayu ribege
+- castellano: Pasarse, mudarse
+  achagua: Nuchacauba
+  pliego: 81
+  lado: izq
+  letra: P
+  ejemplo: De pasada = Barrusa
+- castellano: Pasar adelante el mal
+  achagua: Decurenamaum
+  pliego: 81
+  lado: izq
+  letra: P
+- castellano: Pasar adelante à otro
+  achagua: Nuberona ribecha
+  pliego: 81
+  lado: izq
+  letra: P
+- castellano: Pasar por delante
+  achagua: Ricubabare, nuberonau
+  pliego: 81
+  lado: izq
+  letra: P
+- castellano: Pasar tiempo
+  achagua: Sebicai
+  pliego: 81
+  lado: izq
+  letra: P
+- castellano: Pasear
+  achagua: Nuginao
+  pliego: 81
+  lado: izq
+  letra: P
+  ejemplo: Pasearle = Nuginaidau
+- castellano: Paseador
+  achagua: Caginacacayi
+  pliego: 81
+  lado: izq
+  letra: P
+- castellano: Pacer (dicen roer)
+  achagua: Nuquerro
+  pliego: 81
+  lado: izq
+  letra: P
+- castellano: Pasagero
+  achagua: Carraligerri, betonerri
+  pliego: 81
+  lado: izq
+  letra: P
+- castellano: Paso de Escalera
+  achagua: Ribaregebasaicuraitaiba
+  pliego: 81
+  lado: izq
+  letra: P
+- castellano: Paso, vado
+  achagua: Jchuacabari
+  pliego: 81
+  lado: izq
+  letra: P
+- castellano: Pasito
+  achagua: Matata
+  pliego: 81
+  lado: izq
+  letra: P
+  ejemplo: Pasito hablar = Nuseredau, sesetanuta
+- castellano: Pasarse, corromperse
+  achagua: Nubagua
+  pliego: 81
+  lado: izq
+  letra: P
+- castellano: Pasmarse, admirarse
+  achagua: Nuadedau
+  pliego: 81
+  lado: izq
+  letra: P
+  ejemplo: Pasmarse = Cadacaniuna, cadacamiuna. Pasmarse, embelesarse = Nuedatau nutuiba
+- castellano: Pasmo, enfermedad
+  achagua: Jdacaniacasiba
+  pliego: 81
+  lado: izq
+  letra: P
+- castellano: Pasmo, admiracion
+  achagua: Jadedacasi
+  pliego: 81
+  lado: izq
+  letra: P
+- castellano: Pastor
+  achagua: Jnemiderri
+  pliego: 81
+  lado: izq
+  letra: P
+  ejemplo: Pastorear = Nunemidau
+- castellano: Pata mia
+  achagua: Nucaba
+  pliego: 81
+  lado: izq
+  letra: P
+  nota: '`caba` = pie/pata; cf. Jahn pie = nuipa'
+- castellano: Patada
+  achagua: Babacaresi
+  pliego: 81
+  lado: izq
+  letra: P
+- castellano: Patear
+  achagua: Nubabedau
+  pliego: 81
+  lado: izq
+  letra: P
+- castellano: Patio
+  achagua: Bachacota
+  pliego: 81
+  lado: izq
+  letra: P
+- castellano: Pato Real
+  achagua: Cumata
+  pliego: 81
+  lado: izq
+  letra: P
+- castellano: Pataia mia (patria)
+  achagua: Nuchacare
+  pliego: 81
+  lado: izq
+  letra: P
+  ejemplo: Compatriota = Nuchacareberri
+  nota: '`chacare` = pueblo; el paisano es ''el de mi pueblo'''
+- castellano: Patron de la Nao
+  achagua: Jda minari
+  pliego: 81
+  lado: izq
+  letra: P
+  ejemplo: Patron q.e me defiende = Eberri nubicaucha
+  nota: '`ida minari` = dueño de la canoa'
+- castellano: Patrocinio
+  achagua: Ebari ribicaucha
+  pliego: 81
+  lado: izq
+  letra: P
+- castellano: Patrocinar
+  achagua: Nuebau ribicaucha
+  pliego: 81
+  lado: izq
+  letra: P
+- castellano: Pasano
+  achagua: Sipui, sijuigerri, sigarraigerri
+  pliego: 81
+  lado: izq
+  letra: P
+  ejemplo: pl. = Sijuinai, giarrainai
+- castellano: Pasarilla
+  achagua: Canibare
+  pliego: 81
+  lado: izq
+  letra: P
+- castellano: Paupil
+  achagua: Chubita
+  pliego: 81
+  lado: izq
+  letra: P
+- castellano: Paz
+  achagua: Chunai
+  pliego: 81
+  lado: der
+  letra: P
+  ejemplo: Quietud = Chumiqueben
+- castellano: Pacifico
+  achagua: Chunai minari
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Pacificar
+  achagua: Numeda chunai, Nuchuniniuna
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Pacificarse, perdonar
+  achagua: Nuyabaidau
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Pavor
+  achagua: Carruicai
+  pliego: 81
+  lado: der
+  letra: P
+  ejemplo: tenerlo = Carruna. Causarlo = Nucarrudau
+- castellano: Pegar añadiendo
+  achagua: Nutucuredau
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Pegar con cola
+  achagua: Nuchanau
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Pegar fuego
+  achagua: Nuchanayu sichai
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Pegarse
+  achagua: Nuchanauba
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Pegarse, arrimarse
+  achagua: Nurrurumuba
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Pegajoso
+  achagua: Cachanacacay
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Peinar
+  achagua: Nugiayu
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Peine
+  achagua: Siaba
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Pelear
+  achagua: Nuerruayu, nunidu
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Pelado
+  achagua: Maichunayi
+  pliego: 81
+  lado: der
+  letra: P
+  ejemplo: Pelado arbol = Mabainay
+- castellano: Pelo
+  achagua: Bitesii
+  pliego: 81
+  lado: der
+  letra: P
+  ejemplo: Pelo, vello = Jchunasi
+- castellano: Peludo
+  achagua: Caichunai
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Pelechar
+  achagua: Rigia ribiteri
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Pegar, cascar
+  achagua: Nuinuayu
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Pabeza de la vela
+  achagua: Rimeni
+  pliego: 81
+  lado: der
+  letra: P
+  ejemplo: Pabilo = Riarrucua
+- castellano: Pabo
+  achagua: Cuiri, marrai
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Pebre
+  achagua: Quisari
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Peca
+  achagua: Carisu
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Pecoso
+  achagua: Cacharipunibe
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Pecado
+  achagua: Gicunasi, itareri
+  pliego: 81
+  lado: der
+  letra: P
+  ejemplo: Pecado de la Carne = Bachucasi
+- castellano: Pecar
+  achagua: Catareuna, cagicunana
+  pliego: 81
+  lado: der
+  letra: P
+  ejemplo: Carnalm.te = Nubachu
+- castellano: Pecar, ofender à otro
+  achagua: Nugicurinaba
+  pliego: 81
+  lado: der
+  letra: P
+  ejemplo: Hacerle daño = Nutaredaum
+- castellano: Pecador
+  achagua: Cagicunacayi, catarecayi
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Pecho mio
+  achagua: Nudurrubita, Nucuta
+  pliego: 81
+  lado: der
+  letra: P
+  ejemplo: Pecho, teta = Jnisi
+- castellano: Pecho por dentro
+  achagua: Nudurrubita
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Pechuga de ave
+  achagua: Riduarridurrue
+  pliego: 81
+  lado: der
+  letra: P
+- castellano: Pedazo
+  achagua: Rijucuimi
+  pliego: 81
+  lado: der
+  letra: P
+  ejemplo: Hacer pedazos = Nujubedau
+- castellano: Pedernal de sacar candela
+  achagua: Sichai minari
+  pliego: 81
+  lado: der
+  letra: P
+  nota: '''dueño del fuego'' — tecnica de encender'
+- castellano: Pedir
+  achagua: Nuemau
+  pliego: 82
+  lado: izq
+  letra: P
+  ejemplo: Con lagrimas = Nurrurumiquedauba. De limosna = Nucurruruniayu
+- castellano: Peticion
+  achagua: Emacasi
+  pliego: 82
+  lado: izq
+  letra: P
+- castellano: Pedigueño
+  achagua: Jcurruruniayerri, Quemacayi
+  pliego: 82
+  lado: izq
+  letra: P
+- castellano: Pedo
+  achagua: Samai
+  pliego: 82
+  lado: izq
+  letra: P
+- castellano: Peerse
+  achagua: Nusamau
+  pliego: 82
+  lado: izq
+  letra: P
+- castellano: Pedregal
+  achagua: Jbapucu
+  pliego: 82
+  lado: izq
+  letra: P
+  nota: de `iba` piedra
+- castellano: Pelea
+  achagua: Jnuacasi yacaba
+  pliego: 82
+  lado: izq
+  letra: P
+- castellano: Peligrar, acercarse al riesgo
+  achagua: Vrraumichauna
+  pliego: 82
+  lado: izq
+  letra: P
+  ejemplo: temer mi peligro = nute nubabanaba. El ageno = Nute ribabana
+- castellano: Peligra, perderse
+  achagua: Numanariaba
+  pliego: 82
+  lado: izq
+  letra: P
+- castellano: Peligro, escollo
+  achagua: Jca
+  pliego: 82
+  lado: izq
+  letra: P
+- castellano: Pelota
+  achagua: Eri, paqui
+  pliego: 82
+  lado: izq
+  letra: P
+- castellano: Pelotear
+  achagua: Nucau nuinuayu eri
+  pliego: 82
+  lado: izq
+  letra: P
+- castellano: Pellejo
+  achagua: Jmanari, imani
+  pliego: 82
+  lado: izq
+  letra: P
+- castellano: Pellisco
+  achagua: Jbichuacasi
+  pliego: 82
+  lado: izq
+  letra: P
+- castellano: Pena, travajo
+  achagua: Runicai
+  pliego: 82
+  lado: izq
+  letra: P
+  ejemplo: Pena paga de culpas = Gicunasi ben[...]. Estar con pena = Masiu nubaba. Darla à otro = Numedagadacananeta
+    ribaba, Nuaquedau ribaba
+- castellano: Peña
+  achagua: Jba
+  pliego: 82
+  lado: izq
+  letra: P
+  nota: 'CALIBRACION: Jahn da piedra = iba — coincide'
+- castellano: Pendencia
+  achagua: Vare
+  pliego: 82
+  lado: izq
+  letra: P
+- castellano: Pendenciero
+  achagua: Cainuacacayi
+  pliego: 82
+  lado: izq
+  letra: P
+- castellano: Pender, colgarse
+  achagua: Nucuayua
+  pliego: 82
+  lado: izq
+  letra: P
+- castellano: Pensar
+  achagua: Nuedacananiuba
+  pliego: 82
+  lado: izq
+  letra: P
+  ejemplo: Hacerle pensar = Nuedacananedau
+- castellano: Pensam.to
+  achagua: Edacanamicasiba
+  pliego: 82
+  lado: izq
+  letra: P
+- castellano: Pensativo
+  achagua: Edacananetacayi
+  pliego: 82
+  lado: izq
+  letra: P
+- castellano: Pequeño hombre
+  achagua: Aurai, chaucuirrimi
+  pliego: 82
+  lado: izq
+  letra: P
+- castellano: Pequeña cosa
+  achagua: Chaucube, chaucurrimi
+  pliego: 82
+  lado: izq
+  letra: P
+- castellano: Pequeñes
+  achagua: Chaucucasi, chaucubecasi
+  pliego: 82
+  lado: izq
+  letra: P
+- castellano: Pequeñito, v.g. Padre
+  achagua: Saricanasirrimi
+  pliego: 82
+  lado: izq
+  letra: P
+- castellano: Pequeñita cosa, chiquita
+  achagua: Chaucuirrimi, Rirrimi
+  pliego: 82
+  lado: izq
+  letra: P
+  ejemplo: 'Este es diminutivo general p.a todo, y lo aplican asi: Barqueta = Jba. Barquetilla = Jdairrimi.
+    Niño = Quira. Niñito = Quirarrimi. Cuerpo = Jnanacay. Cuerpecito = Jnanacayrimi, et sic de ceteris.
+    Pequeñito = Chapicuirrimi'
+  nota: EL DIMINUTIVO `-rrimi`, declarado general por el propio autor. Comparar con el `-iro` de REGLAS_ZAVALA
+- castellano: Percevir, entender
+  achagua: Nuayurena
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Percevir, recevir
+  achagua: Nubinau
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Perder
+  achagua: Numecucaidau
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Perderme
+  achagua: Numecucauba
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Perderseme algo
+  achagua: Numecucau nucha
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Perdicion tal
+  achagua: Mecucasi
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Perderme, arruinarme
+  achagua: Numanariuba
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Perder el camino
+  achagua: Nuginaichau
+  pliego: 82
+  lado: der
+  letra: P
+  ejemplo: El juicio = Mecucau nubitege
+- castellano: Perdido
+  achagua: Mecucayi
+  pliego: 82
+  lado: der
+  letra: P
+  ejemplo: Perdido, Perdedor = Jecucaiderri
+- castellano: Perdiz ó codorniz
+  achagua: chacami
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Perdonar
+  achagua: Nuyabaidau
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Perdon
+  achagua: Jiabaidacãsi
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Perdonador
+  achagua: Caiabadacacayi
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Que no perdona
+  achagua: Maiabaidacacayi
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Perdonable
+  achagua: Caiabaidanacayi
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Jmperdonable
+  achagua: Maiabaidacanacayisa
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Pereza
+  achagua: Jnuicai
+  pliego: 82
+  lado: der
+  letra: P
+  ejemplo: La mia = Nuinumi. tenerla = Jnurretau nubaba
+- castellano: Perezoso
+  achagua: Jnuicaisa
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Perecer
+  achagua: Nuchalinao
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Perecedero
+  achagua: Amarracayi
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Peregrino, el de lejos
+  achagua: Decuchege say
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Peregrinar
+  achagua: Nucurraliayua
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Perico ligero
+  achagua: Macubai
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Permanecer, estar
+  achagua: Nuyausao
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Permitir
+  achagua: Nuideu
+  pliego: 82
+  lado: der
+  letra: P
+  ejemplo: Permision = Jdecasi
+- castellano: Perpetuo
+  achagua: Mamarracayisa
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Perpetuam.te
+  achagua: Machuacasa
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Perplexo estoi
+  achagua: Cugicugiu nubaba
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Pero
+  achagua: Riayucata
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Perro
+  achagua: Auri
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Perseguir, ir detras de el
+  achagua: Nuginaidau ribami
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Perseguidor
+  achagua: Janirri
+  pliego: 82
+  lado: der
+  letra: P
+  ejemplo: pl. = Janai. tu eres mi perseguidor = Nuyanirri vyugi
+- castellano: Peor
+  achagua: Decurenamau masiyi, maninana masiyi
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Persuadir
+  achagua: Nunequiu chuanu
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Pertinar
+  achagua: Casacarecacayi
+  pliego: 82
+  lado: der
+  letra: P
+- castellano: Pertinacia
+  achagua: Jacarecasi
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Peraman
+  achagua: Maimi
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Pesada cosa
+  achagua: Caducuniyi
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Pesar, tantear
+  achagua: Nuenaidau
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Pesar, ser apeso
+  achagua: Caducuniuna
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Pesarme, dolerme
+  achagua: Caibiu nuriu
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Pesar, afliccion
+  achagua: Quedacananetacai
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Pesadam.te
+  achagua: Caducunita
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Pesadumbre activa
+  achagua: Jaquedacasi
+  pliego: 83
+  lado: izq
+  letra: P
+  ejemplo: Reflexiva = Jaquedacariba, Guabari icaicha
+- castellano: Peso, lo q.e pesa
+  achagua: Ducunisi
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Peso donde se pesa
+  achagua: Enaidaubasi
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Pescado
+  achagua: Cubai
+  pliego: 83
+  lado: izq
+  letra: P
+  ejemplo: Pequeño = Maribi
+  nota: 'CALIBRACION: Jahn da pez = kupai — coincide'
+- castellano: Pescar con flecha
+  achagua: Nuchabidau
+  pliego: 83
+  lado: izq
+  letra: P
+  ejemplo: con anzuelo = Nucaudarupa. Con atarraya = Nucau yapaba. Con anzuelo otra vez = Nutemu cubai
+  nota: TECNICAS DE PESCA, una por una
+- castellano: Pescar, coger
+  achagua: Nubinao
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Pescar con garlito
+  achagua: Nutamu
+  pliego: 83
+  lado: izq
+  letra: P
+  ejemplo: Con barbasco = Numau
+  nota: la pesca con barbasco, la misma raiz que 'emborracharse'
+- castellano: Pescar tales pescados
+  achagua: Numaribidau
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Pesqueria donde se pesca
+  achagua: Cubai nata, guaricunirri
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Pesquezo
+  achagua: Guari
+  pliego: 83
+  lado: izq
+  letra: P
+  ejemplo: El mio = Nubã
+- castellano: Pesquisar
+  achagua: Nusatau
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Pestaña mia
+  achagua: Nudauguisi, Nutuisibi
+  pliego: 83
+  lado: izq
+  letra: P
+  nota: '`nu-tui-sibi` = pelo de mi ojo'
+- castellano: Pestañear
+  achagua: Nutuiba, Nusimiu
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Pez ó pescado
+  achagua: Cubai
+  pliego: 83
+  lado: izq
+  letra: P
+  ejemplo: Bagre = Culirri. Cabezon = Vrray. Bocachico = Cabiro. Guabina = Baño. Sardinata ó payara =
+    Quemai. Nicuro = Chamuri. Cachama = Casama. Barbillas = tebacai. Pabon = Ebabai. Curbinata = Que
+  nota: DIEZ PECES CON NOMBRE PROPIO — el mejor pasaje de ictionimia del manuscrito
+- castellano: Piadoso
+  achagua: Catuirrumicacayi
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Piedad
+  achagua: tuirrumica
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Piar
+  achagua: Chichichietau
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Picar hiriendo
+  achagua: Nudurru
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Picar guaduas
+  achagua: Nupaquipaquiayu
+  pliego: 83
+  lado: izq
+  letra: P
+  ejemplo: Picar abipas ó rayas = Na[...]
+- castellano: Picar culebras
+  achagua: Numoayu
+  pliego: 83
+  lado: izq
+  letra: P
+  ejemplo: Picar el agi = caibiu
+- castellano: Picar mosquitos, piojos ó pulgas
+  achagua: Nairrau
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Pica el pescado
+  achagua: Ribinau curupa
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Picar la sarna
+  achagua: simo simoni
+  pliego: 83
+  lado: izq
+  letra: P
+- castellano: Picar à otro hablando
+  achagua: Nutacaibita, Nuaquedau
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Picarse de lo q.e oie
+  achagua: Nurrruedau
+  pliego: 83
+  lado: der
+  letra: P
+  ejemplo: hombre q.e se pica = Carruedacacayi
+- castellano: Picarse, clavarse
+  achagua: Nudurruba
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Picante tabaco
+  achagua: Jjuiyi
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Picadillo
+  achagua: Masia
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Picazon
+  achagua: Jrruedacasi
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Picaro
+  achagua: Dabi, maritasaba
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Pico de Ave
+  achagua: Dacuri
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Pie
+  achagua: Jbari
+  pliego: 83
+  lado: der
+  letra: P
+  ejemplo: Andar a pie = Nucabayua
+  nota: 'CALIBRACION: Jahn da pie = nuipa; aqui `ibari` (absoluto) y `nucaba` (pata mia)'
+- castellano: Pie de Arbol
+  achagua: Aicuba dami
+  pliego: 83
+  lado: der
+  letra: P
+  ejemplo: Pies de platanos = Dudumii
+- castellano: Pie de monte
+  achagua: Ricabacua
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Picure
+  achagua: Giri
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Piedra
+  achagua: Jba, quejeda
+  pliego: 83
+  lado: der
+  letra: P
+  ejemplo: Piedra de Cristal = Guanare. Jaspe = Vaebai. Piedra besar = Nerri iba. Piedra de amolar = Jjururuna
+  nota: 'CALIBRACION: Jahn da piedra = iba — coincide. La ''piedra bezar'' del venado (`nerri` = venado)'
+- castellano: Piedras preciosas
+  achagua: Jure, queque
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Pielago
+  achagua: Manoa
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Pierna
+  achagua: Cabari
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Pieza, aposento
+  achagua: Abarico
+  pliego: 83
+  lado: der
+  letra: P
+  ejemplo: Pieza, pedazo = Rijucuimi
+- castellano: Pilar
+  achagua: Nuurru
+  pliego: 83
+  lado: der
+  letra: P
+  ejemplo: Pilar coluna ó aitinal = Jmi
+- castellano: Pilatadillo
+  achagua: Jurrurunin
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Piloto
+  achagua: Jbaisi, iterri
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Pilon
+  achagua: Ana
+  pliego: 83
+  lado: der
+  letra: P
+  ejemplo: su mano = Anabiba
+  nota: el piIon de pilar el maiz
+- castellano: Pimiento ó agi
+  achagua: Jiaria
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Piña
+  achagua: Nanana
+  pliego: 83
+  lado: der
+  letra: P
+  ejemplo: Agria = Chabibai
+- castellano: Piñuelas
+  achagua: Mamu
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Pintar
+  achagua: Nutanao
+  pliego: 83
+  lado: der
+  letra: P
+  nota: el mismo verbo que 'escribir' (Nutanau)
+- castellano: Pintor
+  achagua: Jtanerri
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Pintura
+  achagua: Enaidasi
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Pintado
+  achagua: Catanayi
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Piojo
+  achagua: Ottenisi, curibau, curiba
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Piojoso
+  achagua: Cubitemicayi
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Pisada
+  achagua: Ribami
+  pliego: 83
+  lado: der
+  letra: P
+  ejemplo: Seguirlas = Nuginaidau ribami
+- castellano: Pisar
+  achagua: Nubabedau
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Pison
+  achagua: Durrubari
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Pita
+  achagua: Erribai
+  pliego: 83
+  lado: der
+  letra: P
+  ejemplo: Sacarla = Nutemu erribai
+- castellano: Pito
+  achagua: Cadacuene
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Plaza
+  achagua: Bachacota
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Plazo
+  achagua: Enari
+  pliego: 83
+  lado: der
+  letra: P
+- castellano: Acto, lo hecho
+  achagua: Medanicaisimi
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Acuchillar
+  achagua: Nudurru
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Acuchillarse
+  achagua: Nudurruacaba, vel Guadurruayucaba
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Acuerdo, relacion
+  achagua: Menacariba
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Acuerdo, estar en su acuerdo
+  achagua: Nuayunubite enaba
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Acusarse
+  achagua: Nuibau, Nunaba
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Acusarle
+  achagua: Nuibau rinaba
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Aceite, jugo
+  achagua: Jaberi
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Adelantarse
+  achagua: Nuabana
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Adelante de mi labranza
+  achagua: Chegeyasa, Nucaginaninaco
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Adentro
+  achagua: Lirrico
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Adentro de cosa liquida
+  achagua: Riaco
+  pliego: 31
+  lado: izq
+  letra: A
+  ejemplo: Riacoumi, vel Jniaco = adentro del agua
+- castellano: Admirarse
+  achagua: Nuadedau
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Admirac.n, interjeccion
+  achagua: Neba! Ayate! Paya!
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Admiracion
+  achagua: Jadedacasi
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Admirac.n de cosa horrorosa
+  achagua: Api! vel Pa!
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Admirable cosa
+  achagua: Cadedacanayisa
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Admirado
+  achagua: Cadedacacayi
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Adeudarse
+  achagua: Camavemacareuna
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Adeudado
+  achagua: Camavemacarecayi
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Aderezar, componer
+  achagua: Nuchuniu
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Aderezar, remendar
+  achagua: Nudegedau
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Aderezar de comer
+  achagua: Nuchanau
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Aderezarse
+  achagua: Nutuayua
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Adredem.te
+  achagua: Ribabagiyusaba
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Adelgazar
+  achagua: Nubiruayu
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Adicion
+  achagua: tucuredacasi
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Adicionar, añadir
+  achagua: Nutucuredau
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Adorar, honrar
+  achagua: Cabaunita, vel Nucabaun
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Adobar, echar sal
+  achagua: Numucayu
+  pliego: 31
+  lado: izq
+  letra: A
+  nota: el verbo de salar
+- castellano: Adormecerse
+  achagua: Numaidagua, Bimbimimutu[...]
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: Adormecer à un Niño
+  achagua: Namaidaumi
+  pliego: 31
+  lado: izq
+  letra: A
+- castellano: A donde, ó donde
+  achagua: tane
+  pliego: 31
+  lado: izq
+  letra: A
+  ejemplo: A donde estás? = tagiane? A donde está? = tatacariami
+- castellano: A donde estabas?
+  achagua: tatacagiacatamim
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: A donde fué?
+  achagua: charetacan Rianimiba?
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Adorote
+  achagua: Quibure
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Adorotar
+  achagua: Nudurriu quiburi
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Adquirir
+  achagua: Nuenaricu
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Advenedizo ó pasagero
+  achagua: Carraligeri
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Adversidad
+  achagua: Manaricay
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Advertir, avisar
+  achagua: Numemidau, vel Nuibau
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Administrar, cuidar
+  achagua: Nunemidau, Nutuiyau rinaco
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Adulto
+  achagua: Manuibay
+  pliego: 31
+  lado: der
+  letra: A
+  ejemplo: plur. = Manuibaveni. Adulta = Manuibacayo
+- castellano: Afear, reprender
+  achagua: Nucaytau
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Afear, hacerlo feo
+  achagua: Numachanidau
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Afecto, amor
+  achagua: Ninari, Jqueminacan
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Afeminado
+  achagua: Canarrucarecayi
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Afectar, desear
+  achagua: Numacatayua
+  pliego: 31
+  lado: der
+  letra: A
+  ejemplo: fingir = Nuenaidau
+- castellano: Aficionarse
+  achagua: Nuqueminauyu
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Afeitarse, embijarse
+  achagua: Nutuayua
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Afeite, unto
+  achagua: Jneri
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Afeitar, cortar el pelo
+  achagua: Nudaru ribiteri
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Afilar
+  achagua: Nusuriu
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Afin, pariente
+  achagua: Nerriman, Enagenagerri, Enagerri
+  pliego: 31
+  lado: der
+  letra: A
+  ejemplo: plural = Enagenay. Mio = Nuenagerri, pl. Nuenagenay
+  nota: 'PARENTESCO: el afin tiene termino propio'
+- castellano: Afilar, limpiar
+  achagua: Numetuayu
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Afligir à otro
+  achagua: Nugiquedau
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Afligirse
+  achagua: Nubabameu yarrata, Samocao, Jucaa, Masiu nubaba
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Afligido
+  achagua: Quedacananetacayi
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Aflorar
+  achagua: Nucarracasedau, Nutamatamedau
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Afrentar
+  achagua: Numabaunidau
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Afrentar, ponerle apodos
+  achagua: Nucuisaidau
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Agachar
+  achagua: Nutagedau
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Agacharse
+  achagua: Nutagiuba
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Agalla de pescuezo
+  achagua: Betuacaisi
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Agallon de pescado
+  achagua: Bisicayi
+  pliego: 31
+  lado: der
+  letra: A
+- castellano: Agarrar
+  achagua: Nubinau, Nucagiu
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Agi
+  achagua: Jaria
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Agarrador
+  achagua: Cacagicacayi, Cabinacacay
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: A gatas, andando
+  achagua: Nuacunau
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Agente
+  achagua: Jmederricay
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Ageno
+  achagua: Caminaricayi
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Agil
+  achagua: Mesayi, Guechuguechuyi
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Agoriado
+  achagua: Cabariyi
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Agora
+  achagua: Chabacasade
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Agora poco ha
+  achagua: Chabacasadeca
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Agonizar
+  achagua: Nubabamucuayu, sereyunuba
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Aguero voluntario
+  achagua: Cayubacaybe
+  pliego: 32
+  lado: izq
+  letra: A
+  nota: 'CREENCIA: el manuscrito distingue el aguero buscado del fortuito'
+- castellano: Aguero fortuito
+  achagua: Emimay
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Agurar, saber por agueros
+  achagua: Nuayurena Caiubacaibeyu
+  pliego: 32
+  lado: izq
+  letra: A
+  nota: 'CREENCIA: la adivinacion por agueros, con verbo propio'
+- castellano: Agotar
+  achagua: Nusuriu, Nusupidau
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Agradar
+  achagua: Ecusaica nuriu
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Agradable
+  achagua: Caninacayi
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Agradecer, dar en retorno
+  achagua: Nuayurisipunitami
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Agregar
+  achagua: Nuabacaidau
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Agregacion
+  achagua: Jabacaidacan
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Agraviar
+  achagua: Catareuna
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Agravio
+  achagua: Jtareri
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Agriar
+  achagua: Camaum
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Agrio
+  achagua: Camayi
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Agua
+  achagua: Vni
+  pliego: 32
+  lado: izq
+  letra: A
+  ejemplo: La corriente del rio = Vninanaba
+  nota: 'CALIBRACION: Jahn da agua = mena y rio = unibe. Aqui AGUA es `uni`. Y `manoa` es el MAR (pliego
+    74). La cadena Fabo→Jahn parece haber corrido un escalon la pareja agua/rio'
+- castellano: Agua llovediza
+  achagua: tubaria
+  pliego: 32
+  lado: izq
+  letra: A
+  ejemplo: Estancada = Jbaierriba
+- castellano: Agua corriente
+  achagua: Carracayi vm
+  pliego: 32
+  lado: izq
+  letra: A
+  ejemplo: Clara = cumayi vel cumatay. turbia = Cariatay. Hedionda = Jasatay
+- castellano: Agua caliente
+  achagua: Amoatayi
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Agua rosada
+  achagua: Jbiriiade
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Aguador
+  achagua: Vmi iterri
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Aguar
+  achagua: Numuruedau vniyu
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Aguacero
+  achagua: Vma
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Aguacero espeso
+  achagua: susuruta
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Agusa
+  achagua: Jridui
+  pliego: 32
+  lado: izq
+  letra: A
+- castellano: Remo
+  achagua: tena
+  pliego: 89
+  lado: izq
+  letra: R
+  nota: misma voz que «Canalete — tena» (pliego 47)
+- castellano: Remedar
+  achagua: Nuenaidau
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Remediar
+  achagua: Nuidebeuyumi
+  pliego: 89
+  lado: izq
+  letra: R
+  ejemplo: Remedio = Debe
+- castellano: Remendar
+  achagua: Nuchurraredau, Nudegedau
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Remiendo
+  achagua: Jdegedacagesi
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Remojar
+  achagua: Nuredeg vmi, Nusabedaumi, nuasueda vmi
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Remolino
+  achagua: Catua
+  pliego: 89
+  lado: izq
+  letra: R
+  ejemplo: De agua = Jucuarrui. Andar al remolino = Nugirricuayua, Nucapucuayua
+- castellano: Remozarse
+  achagua: Nuquiririquedauba
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Renacuajo
+  achagua: Surere
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Rendir, cansarle
+  achagua: Nuchamaredau, Nusamudau
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Rendirse, ceder
+  achagua: Nuidagua
+  pliego: 89
+  lado: izq
+  letra: R
+  ejemplo: Cansarse = Numachamidaugua, Samuna, chamare una
+- castellano: Rendido, cansado
+  achagua: Chamarecayi
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Renovar
+  achagua: Nubariquedau
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Renuevo, retoño
+  achagua: Ririna
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Reñir
+  achagua: Nucaitau
+  pliego: 89
+  lado: izq
+  letra: R
+  ejemplo: Pelear = Nuinuayacaba
+- castellano: Repartir
+  achagua: Nuchugiu
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Repasar, notar
+  achagua: Nuedau rituina
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Repente, presto, brevem.te
+  achagua: Menisa
+  pliego: 89
+  lado: izq
+  letra: R
+  ejemplo: tamb.n significa mucho
+- castellano: Repentinam.te
+  achagua: Barrusa
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Repelar, ó arrancar los cabellos
+  achagua: Nutemu
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Repetir lo q.e otros dicen
+  achagua: Nuenaidau nachuani
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Replicar, contradecir
+  achagua: Nuasacareu
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Reposar, parar
+  achagua: Nuyabau
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Reportarle
+  achagua: Nutenum
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Reportarme
+  achagua: Nuteniba
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Reprender
+  achagua: Numaidau ribitege
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Repartir gente
+  achagua: Nucarrarriayu
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Reprobar
+  achagua: Numeminau
+  pliego: 89
+  lado: izq
+  letra: R
+  ejemplo: Reprobac.n = Jmeminacasi
+- castellano: Representar, mostrar
+  achagua: Nuyedau
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Representar comedia
+  achagua: Nuenaidau
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Representante
+  achagua: Enaiderri
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Resbalar
+  achagua: Nubetunao
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Resbaladizo
+  achagua: Betubetuiyi
+  pliego: 89
+  lado: izq
+  letra: R
+- castellano: Res mia
+  achagua: Nugirra
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Rescatar, comprar
+  achagua: Nubenim
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Resina
+  achagua: Aicuba icai
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Resistir
+  achagua: Nuasacareu
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Resolverse à alg.a cosa
+  achagua: Numenagua
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Resolucion tal
+  achagua: Menacaresiba
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Resollar
+  achagua: Cacaresauna
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Resongar
+  achagua: Numunumumunuedau, Nusamaredau
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Resongon
+  achagua: Casamaredacayi
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Respetar
+  achagua: Cabaunita nucabauni
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Respeto, honra
+  achagua: Guaunisi
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Respetable
+  achagua: Cabaunicayi
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Respiracion
+  achagua: Nusuputu, careresasi
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Resplandecer
+  achagua: Cacamarrayuna
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Resplandor
+  achagua: Camarrasi
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Responder
+  achagua: Nuebau
+  pliego: 89
+  lado: der
+  letra: R
+  ejemplo: Resp.ta = Ebacasi
+- castellano: Restituir
+  achagua: Nuesuedau
+  pliego: 89
+  lado: der
+  letra: R
+  ejemplo: Restituc.n = Esuedacasi
+- castellano: Resucitar
+  achagua: Nubaba esua
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Resucitarle
+  achagua: Nuesuedau ribaba, nucabiayuni
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Resurreccion
+  achagua: Jcabiacaresi
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Retrato
+  achagua: Enaidasi, Enaidena
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Revivir
+  achagua: Guabasi esuayua
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Revolcarse
+  achagua: Nurrurru bayua
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Revolver
+  achagua: Nubebedau
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Rezar
+  achagua: Nusereda, Nurrresaiu
+  pliego: 89
+  lado: der
+  letra: R
+  ejemplo: Rezo = Jseredacan
+- castellano: Rico
+  achagua: Cabarruanicayi
+  pliego: 89
+  lado: der
+  letra: R
+  ejemplo: Riqueza = Guarrua
+- castellano: Rincon
+  achagua: Dugibaricun
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Riña
+  achagua: Jrare, Jcaitacãsi
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Rio, arroyo
+  achagua: Vnëta
+  pliego: 89
+  lado: der
+  letra: R
+  nota: 'CALIBRACION: Jahn da rio = unibe. Aqui `uneta`, y `uni` es agua'
+- castellano: Risa
+  achagua: Jcaidacasi
+  pliego: 89
+  lado: der
+  letra: R
+- castellano: Sin beber
+  achagua: Mairracasa, mairracayisa
+  pliego: 92
+  lado: izq
+  letra: S
+- castellano: Sin dormir
+  achagua: Mamacayisa, mamaiacasa
+  pliego: 92
+  lado: izq
+  letra: S
+- castellano: Sin Madre
+  achagua: Matuayisa
+  pliego: 92
+  lado: izq
+  letra: S
+- castellano: Sin Padre
+  achagua: Masaricanayisa
+  pliego: 92
+  lado: izq
+  letra: S
+- castellano: Sin duda
+  achagua: Majucacayisa
+  pliego: 92
+  lado: izq
+  letra: S
+- castellano: Sin sangre
+  achagua: Mairrenayisa
+  pliego: 92
+  lado: izq
+  letra: S
+- castellano: Sibucana
+  achagua: Jrrica
+  pliego: 92
+  lado: izq
+  letra: S
+  nota: el sebucan, prensa de la yuca
+- castellano: Sitio
+  achagua: Jarrunasi
+  pliego: 92
+  lado: izq
+  letra: S
+- castellano: Sobaco
+  achagua: Nucuage
+  pliego: 92
+  lado: izq
+  letra: S
+- castellano: Sobras
+  achagua: Enami
+  pliego: 92
+  lado: izq
+  letra: S
+- castellano: Sobre
+  achagua: Jta, itaba
+  pliego: 92
+  lado: izq
+  letra: S
+- castellano: Sobervio
+  achagua: Jbacairriayerriba
+  pliego: 92
+  lado: izq
+  letra: S
+  ejemplo: Sobervia = Jbacairriacasi
+- castellano: Sobrina
+  achagua: Nuibiu
+  pliego: 92
+  lado: izq
+  letra: S
+  ejemplo: Sobrino = Nuibi. pl. = Nuibinai
+  nota: PARENTESCO
+- castellano: Sobrenombre mio
+  achagua: Nucuisauna
+  pliego: 92
+  lado: izq
+  letra: S
+- castellano: Soza
+  achagua: Edanarrun
+  pliego: 92
+  lado: izq
+  letra: S
+- castellano: Sol
+  achagua: Erri
+  pliego: 92
+  lado: izq
+  letra: S
+  ejemplo: Hace sol = caibiu caibia. Alto està el sol = Acayu erri. Ya baja el sol = Caina cum, vel riapibenuba
+  nota: 'CALIBRACION: Jahn da sol = erre — coincide. Y `erri` es tambien ''cielo'' (pliego 48): sol y
+    cielo comparten voz'
+- castellano: Solo
+  achagua: Abacaisa
+  pliego: 92
+  lado: izq
+  letra: S
+  ejemplo: Sola = Abacayusa
+- castellano: Solam.te
+  achagua: Abatasa
+  pliego: 92
+  lado: izq
+  letra: S
+  ejemplo: Soledad = Camadanibe
+- castellano: Soledad tengo
+  achagua: Camadanibe nuriu
+  pliego: 92
+  lado: izq
+  letra: S
+- castellano: Soltar
+  achagua: Numacao
+  pliego: 92
+  lado: izq
+  letra: S
+- castellano: Soltera
+  achagua: Manirricayo, manirricaisa
+  pliego: 92
+  lado: izq
+  letra: S
+  ejemplo: pl. = Manirricaisanay
+  nota: 'ma- privativo sobre `nirri` (marido): ''la sin marido'''
+- castellano: Soltero
+  achagua: Mainucaisa
+  pliego: 92
+  lado: izq
+  letra: S
+- castellano: Sombra
+  achagua: tanari, Nutana
+  pliego: 92
+  lado: izq
+  letra: S
+- castellano: Sollozar
+  achagua: Ribaba sacomao
+  pliego: 92
+  lado: izq
+  letra: S
+- castellano: Son, sonido
+  achagua: Bitamasi
+  pliego: 92
+  lado: izq
+  letra: S
+- castellano: Sonoroso
+  achagua: Cabitamacayi
+  pliego: 92
+  lado: izq
+  letra: S
+- castellano: Sonar
+  achagua: Cabitamaum
+  pliego: 92
+  lado: izq
+  letra: S
+  ejemplo: Sonar fuelles = Nugiayu. Sonar narices = Nunurrunau
+- castellano: Relampago
+  achagua: Eno saberrum
+  pliego: 88
+  lado: der
+  letra: R
+  nota: '`Eno` es el dios de las tempestades del pliego 56'
+- castellano: Relampaguear
+  achagua: Berruberrutau
+  pliego: 88
+  lado: der
+  letra: R
+- castellano: Reliquias
+  achagua: Renami
+  pliego: 88
+  lado: der
+  letra: R
+- castellano: Remar
+  achagua: Nuteniayu
+  pliego: 88
+  lado: der
+  letra: R
+- castellano: Remero, boga
+  achagua: Jteniayerri
+  pliego: 88
+  lado: der
+  letra: R
+- castellano: Reir
+  achagua: Nucaidau
+  pliego: 88
+  lado: der
+  letra: R
+- castellano: Regir, guiar
+  achagua: Nute nabitabe
+  pliego: 88
+  lado: der
+  letra: R
+- castellano: Regalar
+  achagua: Guabaidariyu, numananedau
+  pliego: 88
+  lado: der
+  letra: R
+- castellano: Regalo
+  achagua: Jubigi guabaidasi
+  pliego: 88
+  lado: der
+  letra: R
+- castellano: Refrescar
+  achagua: Nuguesidau, nusuriu
+  pliego: 88
+  lado: der
+  letra: R
+- castellano: Refrigerio con hielo
+  achagua: Binatacaresi
+  pliego: 88
+  lado: der
+  letra: R
+- castellano: Reflorecer
+  achagua: Quebium
+  pliego: 88
+  lado: der
+  letra: R
+- castellano: Regar, derramar
+  achagua: Nunoa, Nucasau
+  pliego: 88
+  lado: der
+  letra: R
+- castellano: Redonda cosa
+  achagua: Macasucui
+  pliego: 88
+  lado: der
+  letra: R
+- castellano: Redondo
+  achagua: Atasucayi, Atasucu
+  pliego: 88
+  lado: der
+  letra: R
+- castellano: Redimir
+  achagua: Nucamanidau
+  pliego: 88
+  lado: der
+  letra: R
+- castellano: Red
+  achagua: Japata
+  pliego: 88
+  lado: izq
+  letra: R
+  ejemplo: La mia = Nuyapatani. Pequeña = Du. Echar la red = Nucao yapata
+  nota: arte de pesca
+- castellano: Redentor
+  achagua: Jcamanidearri
+  pliego: 88
+  lado: izq
+  letra: R
+  ejemplo: Redencion = Jcamanidacasi
+- castellano: Reciprocam.te
+  achagua: Vrriamãca
+  pliego: 88
+  lado: izq
+  letra: R
+  ejemplo: tambien significa en retorno. De este termino usan q.do dicen q.e se enfadaron con otro. le
+    retorné enfadandome con él = Vrriamãcarriu nubaba riagicha, y q.do dan algo en retorno
+  nota: 'LA RECIPROCIDAD tiene particula propia: el don devuelto y la ofensa devuelta se dicen igual'
+- castellano: Recoger, agregando
+  achagua: Nuabacaidau
+  pliego: 88
+  lado: izq
+  letra: R
+  ejemplo: Recoger v.g. mais = Nugidaidau
+- castellano: Reconciliar
+  achagua: Numamanedau
+  pliego: 88
+  lado: izq
+  letra: R
+- castellano: Recordar
+  achagua: Nuedacananedau
+  pliego: 88
+  lado: izq
+  letra: R
+  ejemplo: Recordarle = Nucabedau
+- castellano: Recrear
+  achagua: Nunirrrudau
+  pliego: 88
+  lado: izq
+  letra: R
+  ejemplo: Recrearse = Nunirruba
+- castellano: Recreacion
+  achagua: hirrumari
+  pliego: 88
+  lado: izq
+  letra: R
+  ejemplo: Donde se recrean = Jurrudacarrau
+- castellano: Recio hombre
+  achagua: Cabarimiyi
+  pliego: 88
+  lado: izq
+  letra: R
+- castellano: Recio viento
+  achagua: Cadananiyi jusubẽ
+  pliego: 88
+  lado: izq
+  letra: R
+- castellano: Rebentar
+  achagua: Nuridauba
+  pliego: 88
+  lado: izq
+  letra: R
+  ejemplo: La olla = ridubau
+- castellano: Rebaño
+  achagua: Jgiaranaisi
+  pliego: 88
+  lado: izq
+  letra: R
+- castellano: Recibir
+  achagua: Nubinau
+  pliego: 88
+  lado: izq
+  letra: R
+- castellano: tinieblas
+  achagua: Catabacabẽ
+  pliego: 95
+  lado: izq
+  letra: T
+- castellano: tirar acia si
+  achagua: Nutemu
+  pliego: 95
+  lado: izq
+  letra: T
+  ejemplo: tirar arrojar = Nudanayu, Nucau
+- castellano: tirar arrancando
+  achagua: Numidu
+  pliego: 95
+  lado: izq
+  letra: T
+  ejemplo: Arrastrando = Nuarruadau. tendiendo = Nuducuayu
+- castellano: tirar coces
+  achagua: Nubabayu
+  pliego: 95
+  lado: izq
+  letra: T
+  ejemplo: tirar arcabuz = Nuchabidau eno
+  nota: el arcabuz se tira con `eno`, el trueno
+- castellano: tirante, arco
+  achagua: Cabariyi, Chabidausi
+  pliego: 95
+  lado: izq
+  letra: T
+  ejemplo: tirante de la Casa = Ricugiba
+- castellano: tiritar
+  achagua: Nuchechenau
+  pliego: 95
+  lado: izq
+  letra: T
+- castellano: tisne
+  achagua: Catare
+  pliego: 95
+  lado: izq
+  letra: T
+  ejemplo: tisnar = Nucatariayu
+- castellano: tison
+  achagua: Sichai jucui
+  pliego: 95
+  lado: izq
+  letra: T
+- castellano: tixeras
+  achagua: Dacubari
+  pliego: 95
+  lado: izq
+  letra: T
+- castellano: tocar
+  achagua: Nudunu
+  pliego: 95
+  lado: izq
+  letra: T
+  ejemplo: Flautas = nugiayu. Guitarra = nuecu[...]. Campana = Nuinoayu
+- castellano: toche
+  achagua: turupia
+  pliego: 95
+  lado: izq
+  letra: T
+- castellano: todo
+  achagua: Maqueni
+  pliego: 95
+  lado: izq
+  letra: T
+- castellano: tolerar
+  achagua: Nubabaidau
+  pliego: 95
+  lado: izq
+  letra: T
+  ejemplo: tolerancia = Jbabaidacasi
+- castellano: tocino
+  achagua: Puiti ina
+  pliego: 95
+  lado: izq
+  letra: T
+- castellano: tomar
+  achagua: Nubinao
+  pliego: 95
+  lado: izq
+  letra: T
+  ejemplo: Quitando = Nutacayu. à cuestas = Nuagiu. Al hombro = Nubacu. En brazos = nucuriru
+- castellano: tonto
+  achagua: Masarray
+  pliego: 95
+  lado: izq
+  letra: T
+  ejemplo: tonteria = Masarraicai
+- castellano: topar, hallar
+  achagua: Nuinu rinaco
+  pliego: 95
+  lado: izq
+  letra: T
+- castellano: tormento, travajo
+  achagua: Runicay
+  pliego: 95
+  lado: izq
+  letra: T
+- castellano: tornear
+  achagua: Nugirriricuedau
+  pliego: 95
+  lado: der
+  letra: T
+- castellano: torpe deshonesto
+  achagua: Cabeyi
+  pliego: 95
+  lado: der
+  letra: T
+- castellano: torpeza, lujuria
+  achagua: Jbeñ
+  pliego: 95
+  lado: der
+  letra: T
+- castellano: torta
+  achagua: Jure
+  pliego: 95
+  lado: der
+  letra: T
+- castellano: tortola
+  achagua: Bimbicu, vyucu
+  pliego: 95
+  lado: der
+  letra: T
+- castellano: tortuga
+  achagua: Arra
+  pliego: 95
+  lado: der
+  letra: T
+  ejemplo: Grande = Sapanirro. Morrocoi = Jeure
+  nota: tres quelonios distinguidos
+- castellano: torbellino
+  achagua: Catua
+  pliego: 95
+  lado: der
+  letra: T
+  ejemplo: Andar el torbellino = Rigirriricuayua cauri, vel Catua
+- castellano: tos
+  achagua: Jutucasi
+  pliego: 95
+  lado: der
+  letra: T
+  ejemplo: tenerla = Nusuputu, Nudequiayu
+- castellano: tostar mais
+  achagua: Nucamurruayua
+  pliego: 95
+  lado: der
+  letra: T
+- castellano: toba de los dientes
+  achagua: Eridare
+  pliego: 95
+  lado: der
+  letra: T
+  nota: 'CALIBRACION: `eri` = diente (Jahn da diente = nier). No hay entrada «Diente» como lema en la
+    D'
+- castellano: tobillo
+  achagua: Curisibiri
+  pliego: 95
+  lado: der
+  letra: T
+- castellano: talla
+  achagua: Cageri metuna
+  pliego: 95
+  lado: der
+  letra: T
+- castellano: travajo, obra
+  achagua: Medanicaisi
+  pliego: 95
+  lado: der
+  letra: T
+- castellano: travajo, pena
+  achagua: Runicay
+  pliego: 95
+  lado: der
+  letra: T
+  ejemplo: Mio = Nurrurunicaba
+- castellano: travajar
+  achagua: Numeda
+  pliego: 95
+  lado: der
+  letra: T
+- castellano: travajador
+  achagua: Jumenacayi
+  pliego: 95
+  lado: der
+  letra: T
+- castellano: traer
+  achagua: Nuteyu
+  pliego: 95
+  lado: der
+  letra: T
+  ejemplo: Sacar = Nuedau. traer luto = Nucatariayuba
+- castellano: tragar
+  achagua: Nubetuayu, nubetuedau
+  pliego: 95
+  lado: der
+  letra: T
+- castellano: tragon
+  achagua: Cabetuacacayi
+  pliego: 95
+  lado: der
+  letra: T
+- castellano: trago
+  achagua: Jrracasi
+  pliego: 95
+  lado: der
+  letra: T
+- castellano: trama
+  achagua: Rine
+  pliego: 95
+  lado: der
+  letra: T
+  ejemplo: tramar = Nuayu rine
+- castellano: trampa, engaño
+  achagua: charisuedacaresi
+  pliego: 95
+  lado: der
+  letra: T
+  ejemplo: P.a fieras = canuri. P.a las aves = ben, Banatari
+  nota: trampas de caza y de aves con nombre distinto
+- castellano: tranca
+  achagua: Jchaqueri
+  pliego: 95
+  lado: der
+  letra: T
+  ejemplo: trancar = Nuayu richaque
+- castellano: traducir en mi lengua
+  achagua: Nunabedao nuchuani rricore
+  pliego: 95
+  lado: der
+  letra: T
+  nota: '`nu-chuani` = mi habla/lengua — la voz con que el manuscrito nombra el idioma propio'
+- castellano: tras de mi
+  achagua: Nuiñigirrico, nuasumi, natanaseba, Nubapunareba
+  pliego: 95
+  lado: der
+  letra: T
+- castellano: trasladera
+  achagua: Guarrumaba
+  pliego: 95
+  lado: der
+  letra: T
+- castellano: traslucirse
+  achagua: Cuninium
+  pliego: 95
+  lado: der
+  letra: T
+- castellano: traslucientе
+  achagua: Cunisiyi
+  pliego: 95
+  lado: der
+  letra: T
+- castellano: templar, mesclar
+  achagua: Nuayu ribisa, nucuneredau
+  pliego: 94
+  lado: izq
+  letra: T
+- castellano: templarse en comer
+  achagua: Nudanidau, nubabaida
+  pliego: 94
+  lado: izq
+  letra: T
+- castellano: templanza
+  achagua: Jdanidacasiba
+  pliego: 94
+  lado: izq
+  letra: T
+- castellano: tener
+  achagua: Nunumateuyu, juanabau
+  pliego: 94
+  lado: izq
+  letra: T
+- castellano: tener frio
+  achagua: Casalini una, Jbeyu nunaco
+  pliego: 94
+  lado: izq
+  letra: T
+  ejemplo: tener calor = Amoayuna. tener calentura = Mucunisauna. tener hambre = canaiyuna. tener verguenza
+    = Jbaiyuna. tener compasion = Nute rituirrumica. tener muger = Cau[...]caiuna. tener marido = Canirricayuna
+  nota: '''tener mujer'' y ''tener marido'' con verbos propios — lo mas cercano a ''esposa'' que da el
+    manuscrito'
+- castellano: tenebroso
+  achagua: tainamayi, Cataimareyi, catabacayi
+  pliego: 94
+  lado: izq
+  letra: T
+- castellano: teñir
+  achagua: Nusacayu
+  pliego: 94
+  lado: der
+  letra: T
+- castellano: tentar
+  achagua: Nudunu
+  pliego: 94
+  lado: der
+  letra: T
+- castellano: tentar, probar su corazon
+  achagua: Nucacuedau ribaba
+  pliego: 94
+  lado: der
+  letra: T
+- castellano: terco
+  achagua: Casacarecan
+  pliego: 94
+  lado: der
+  letra: T
+- castellano: tercio ó adrrote
+  achagua: Quiburi
+  pliego: 94
+  lado: der
+  letra: T
+- castellano: termino lindero
+  achagua: Rijubana
+  pliego: 94
+  lado: der
+  letra: T
+- castellano: termino orilla
+  achagua: Rinumacoa
+  pliego: 94
+  lado: der
+  letra: T
+- castellano: terminar, poner lindero
+  achagua: Nuyedau rijubanã
+  pliego: 94
+  lado: der
+  letra: T
+- castellano: ternero
+  achagua: Paca enibe
+  pliego: 94
+  lado: der
+  letra: T
+- castellano: ternura
+  achagua: Jamaiamacasi
+  pliego: 94
+  lado: der
+  letra: T
 dudas:
 - pliego: 28
   lado: der
@@ -4604,3 +12528,42 @@ dudas:
   lado: izq
   texto: '«Vna luna = Abacoa Quer-» y «Vn tercio = Abagia ter-», en «Modos de decir uno»: los finales
     de linea entran en el lomo y no se leen enteros'
+- pliego: 47
+  lado: der
+  texto: '«Celestial — [E/C]rrisai» y «Cielo — [E/C]rri» (pliego 48). La inicial es el mismo glifo y se
+    parece a la C de `Cataumi`, pero `Crri` no se pronuncia. Se resolvio POR CONTEXTO al llegar a «Sol.
+    = Erri» (pliego 92) y «En el cielo = Erri irrico» (pliego 61): es E. Queda anotado porque la lectura
+    del glifo suelto sigue siendo ambigua'
+- pliego: 46
+  lado: der
+  texto: '«Casabe — Jerri/Yerri». La inicial es una mayuscula de trazo alto, distinta de la B redonda
+    de `Bania` en la linea de arriba. Pero en el pliego 28 («A trueque de casabe — Berri ibem») y en el
+    79 («Orilla del casabe = Berriribiu») la misma voz lleva B. Jahn da `berri`. No se decide: puede ser
+    alografo del copista'
+- pliego: 78
+  lado: der
+  texto: «Ojo — Juisi/Tuisi». El lema esta escrito con una mayuscula de trazo grueso que lo mismo vale
+    por J que por T. Las formas poseidas del propio renglon (`nutuiba`) y el clasificador numeral `Juchamatuisi`
+    (pliego 56) obligan a leer T, pero el glifo no lo dice solo
+- pliego: 30
+  lado: der
+  texto: «Acomesar — Numiquinchuanini». El castellano se lee `Acomeʃar`, que no es palabra; por el contexto
+    (va entre `Acordarse` y `Acortarse`) y por el achagua (`-chuani` = habla) lo probable es «Aconsejar»,
+    pero no se transcribe lo que no se ve
+- pliego: 44
+  lado: der
+  texto: «Cabuya — Edana rrur[i]». El final entra en el lomo del libro y no se lee entero
+- pliego: 79
+  lado: izq
+  texto: '«Ormigas grandes, comida de Achaguas = Quiriri». Los tres glifos centrales son r/rr y la vocal
+    entre ellos no se distingue: podria ser `Quirriri` o `Quiuri`'
+- pliego: 66
+  lado: der
+  texto: «Haz — Jbain». La voz castellana es corta y la achagua tambien; sin contexto no hay forma de
+    contrastar la lectura
+- pliego: null
+  lado: null
+  texto: 'AVISO GENERAL, no una duda puntual: toda la columna achagua se transcribio por vision de una
+    cursiva del XVIII. Las confusiones sistematicas a vigilar antes de citar una forma como exacta son
+    r/rr (glifo z-like), s larga / r, b/v, y/i, n/u y m/nn. La etiqueta de `meta.etiqueta_propuesta` lo
+    dice: verificar contra la imagen antes de usar una forma como dato'
