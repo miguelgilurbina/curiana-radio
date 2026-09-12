@@ -476,8 +476,9 @@ obras:
     23 de abril de 1788 (RBPR II/2910): [4] h. + 42 p. + 70 f. + [3] h., 152×104 mm'
   genero: gramatica
   local:
-  - fuentes_caquetios/Neira_Ribero_1762_Arte_y_Vocabulario_Lengua_Achagua_RB_II-2910.pdf (102 imágenes
-    IIIF, sin capa de texto) + fuentes_caquetios/neira_ribero_1762/001-102.jpg
+  - 'fuentes_caquetios/Neira_Ribero_1762_Arte_y_Vocabulario_Lengua_Achagua_RB_II-2910.pdf (102 pliegos
+    a 2787×1949 px, sin capa de texto) + fuentes_caquetios/neira_ribero_1762/001-102.jpg — ⚠️ SOLO EN
+    ONEDRIVE, no en git (.gitignore, D8 #37 abierta: son 200 MB)'
   paginas: 102
   aliases:
   - Neira y Ribero 1762
