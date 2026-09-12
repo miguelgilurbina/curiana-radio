@@ -1,0 +1,113 @@
+meta:
+  obra: medina-colina-sxx
+  generado_por: 6-fusion/scripts/tainismos_medina_a_caquetio.py
+  fecha: '2026-09-12'
+  regla_de_miguel: «si están como taíno en otra fuente y son panhispánicas, y el mismo diccionario del habla paraguanera
+    los recoge, deben clasificar como caquetío»
+  capa: 'caquetío-reconstruido — el precedente es kanoa/hamaca/konuko (D5 colisiones 2026-08-31): cognado taíno
+    citado, sin atestación caquetía colonial'
+  que_es_esto: 'las voces del dictado con etimología taína declarada (DRAE/Alvarado en el cruce) que el protocolo
+    descartó como panhispánicas (veredicto D) y que NO están en el lexicón. Regla 5: entrarían como entradas NUEVAS,
+    y eso lo fusiona Miguel voz a voz'
+  ya_aplicado_en_el_lexicon:
+  - iguana (taíno → caquetío-reconstruido)
+  - macana (taíno → caquetío-reconstruido)
+  n: 12
+voces:
+- voz: coa
+  glosa_libro: es el palo de madera aguzado en la punta con que se abrían huecos en la tierra, y donde se depositaba
+    la semilla de la siembra.
+  pagina: 77
+  veredicto_protocolo: D
+  etimologia: origen antillano (taíno); no está en Alvarado 1921 como lema"
+  propuesta: caquetío-reconstruido (cognado taíno + repertorio paraguanero s. XX), como kanoa/hamaca/konuko
+  clave_sugerida: coa
+- voz: comején
+  glosa_libro: así identificó nuestro pueblo a las termitas, pequeños animales que se consumen la parte interna
+    de la madera y le dejan sana la parte exterior. Es palabra académica.
+  pagina: 78
+  veredicto_protocolo: D
+  etimologia: 'de origen taíno (Alvarado, con Las Casas y Castellanos como testigos): la v'
+  propuesta: caquetío-reconstruido (cognado taíno + repertorio paraguanero s. XX), como kanoa/hamaca/konuko
+  clave_sugerida: comejen
+- voz: guayacán
+  glosa_libro: árbol que fue común en nuestros montes; es de lento crecimiento, mucho follaje; su madera es de mucha
+    dureza y apreciada para trabajar con ella. Hoy casi extinto de la península.
+  pagina: null
+  veredicto_protocolo: D
+  etimologia: de origen taíno. Guayacán es un árbol zigofiliáceo de madera recia y hojas
+  propuesta: caquetío-reconstruido (cognado taíno + repertorio paraguanero s. XX), como kanoa/hamaca/konuko
+  clave_sugerida: guayacan
+- voz: hico
+  glosa_libro: 'es palabra ingresada al diccionario de la lengua española con el significado de cada una de las
+    cuerdas que sostienen la hamaca [dictado: «la marca»]; por extensión, toda cuerda o soga.'
+  pagina: null
+  veredicto_protocolo: D
+  etimologia: 'DRAE: hico, del taíno; cada una de las cuerdas de la hamaca; Antillas y Venezuela'
+  propuesta: caquetío-reconstruido (cognado taíno + repertorio paraguanero s. XX), como kanoa/hamaca/konuko
+  clave_sugerida: hico
+- voz: hicotea
+  glosa_libro: quelonio que fue abundante en nuestro medio, hoy casi desaparecido, de unos 30 cm de largo, y era
+    comestible; conocido en otras partes del país como morrocoy.
+  pagina: null
+  veredicto_protocolo: D
+  etimologia: 'DRAE: jicotea / hicotea, del taíno; Antillas, Colombia, Venezuela: tortuga de agua dulce'
+  propuesta: caquetío-reconstruido (cognado taíno + repertorio paraguanero s. XX), como kanoa/hamaca/konuko
+  clave_sugerida: hicotea
+- voz: jaiba
+  glosa_libro: 'dos connotaciones le dieron nuestros viejos [dictado: «viajeros»] a esta palabra: una, identificar
+    a una especie de cangrejo de mar; y la chanza o broma que resultara molesta: «me echó una jaiba Anacleto».'
+  pagina: null
+  veredicto_protocolo: D
+  etimologia: 'DRAE: jaiba, del taíno; cangrejo; Antillas y Caribe continental'
+  propuesta: caquetío-reconstruido (cognado taíno + repertorio paraguanero s. XX), como kanoa/hamaca/konuko
+  clave_sugerida: jaiba
+- voz: jején
+  glosa_libro: especie de mosquito mucho más pequeño que este y cuya picadura es muy molesta; es palabra de origen
+    haitiano [según el autor]
+  pagina: null
+  veredicto_protocolo: D
+  etimologia: 'DRAE: jején, del taíno; panamericano'
+  propuesta: caquetío-reconstruido (cognado taíno + repertorio paraguanero s. XX), como kanoa/hamaca/konuko
+  clave_sugerida: jejen
+- voz: maguey
+  glosa_libro: la espiga o vara larga a cuyo extremo superior la planta de sisal o cocuy, como le conocemos en Falcón,
+    produce su inflorescencia
+  pagina: null
+  veredicto_protocolo: D
+  etimologia: 'DRAE: maguey, del taíno; panamericano (agave)'
+  propuesta: caquetío-reconstruido (cognado taíno + repertorio paraguanero s. XX), como kanoa/hamaca/konuko
+  clave_sugerida: maguey
+- voz: naguas
+  glosa_libro: 'con esta palabra, producto del pueblo llano, nuestros paraguaneros se refirieron a las enaguas de
+    la mujer; es voz taína [dictado: «esbozaina o sea procedente de nuestros indios taínos»].'
+  pagina: 193
+  veredicto_protocolo: D
+  etimologia: 'DRAE: enagua, del taíno nagua'
+  propuesta: caquetío-reconstruido (cognado taíno + repertorio paraguanero s. XX), como kanoa/hamaca/konuko
+  clave_sugerida: naguas
+- voz: nigua
+  glosa_libro: fue insecto común en Paraguaná, hoy desaparecido; las hembras fecundadas excavaban una galería en
+    la piel de los animales y del hombre, y en la misma criaban su descendencia; causaban gran picazón y úlceras
+    graves. Al que sufría un ataque grave de niguas lo llamaron niguatero.
+  pagina: 195
+  veredicto_protocolo: D
+  etimologia: 'DRAE: nigua, del taíno (Tunga penetrans); panamericana; niguatero, Ven.'
+  propuesta: caquetío-reconstruido (cognado taíno + repertorio paraguanero s. XX), como kanoa/hamaca/konuko
+  clave_sugerida: nigua
+- voz: siguato
+  glosa_libro: en la parte oriental de la península es estar desganado, apático, cabizbajo, triste; en la parte
+    occidental, entre pescadores, es el pescado que tiene mal olor, que empieza a descomponerse.
+  pagina: 262
+  veredicto_protocolo: D
+  etimologia: 'DRAE; siguato/ciguato en el Caribe es el envenenado por ciguatera (DRAE: ciguato, del taíno cigua):
+    la acepción occidental (pescado que se descompone)'
+  propuesta: caquetío-reconstruido (cognado taíno + repertorio paraguanero s. XX), como kanoa/hamaca/konuko
+  clave_sugerida: siguato
+- voz: yaguaza
+  glosa_libro: es ave comestible propia de las aguas cenagosas, hoy extinguida en nuestra península
+  pagina: 305
+  veredicto_protocolo: D
+  etimologia: 'DRAE: yaguasa, del taíno; Antillas y Venezuela'
+  propuesta: caquetío-reconstruido (cognado taíno + repertorio paraguanero s. XX), como kanoa/hamaca/konuko
+  clave_sugerida: yaguaza
