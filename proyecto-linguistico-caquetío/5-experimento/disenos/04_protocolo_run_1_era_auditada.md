@@ -146,3 +146,15 @@ pueden comparar.
 ## Enlaces
 
 [[01_que_probaron_los_seis_runs]] · [[LINEA_DE_TIEMPO]] · [[PLAN_MAESTRO]] · [[DISENO_KOINE]] · [[CANON_TIERRA]] · [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision)
+
+## La vara del run 1, firmada (2026-09-12, #119)
+
+> **El run 1 se mide contra filiación, como decisión de modelado declarada;
+> repertorio queda para la era 2.** — Miguel, 2026-09-12.
+
+`score_linguistico()` y `capas_de_score` puntúan por `fuente` (filiación
+etimológica). Un hablante caquetío pudo tener en su repertorio voces taínas o
+caribes (#119 lo argumenta con Federmann, Antolínez y Castellanos); eso se
+modela en la era 2, con dos nodos y contacto interétnico (`3-mundo/etnias.yaml`),
+no en este run. Registro: `6-fusion/decisiones_tanda_2026-09-12.yaml`.
+

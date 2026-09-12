@@ -72,10 +72,9 @@ muestreo F10 de Miguel, **9** el exportador #42).
    2026-09-07**: #119 (repertorio vs. filiación), #120 (PDF tras aporte), el
    comentario de #109 (cerrado) y el de D14 (#83); el de lecturas se archivó
    como implementado. La cola de borradores está en cero.
-3. **La decisión de una línea sobre repertorio** para el protocolo del run 1:
-   *"el run 1 se mide contra filiación, como decisión de modelado declarada;
-   repertorio queda para la era 2"* — o lo contrario. Sin esa línea, el run
-   queda medido con una vara que después puede parecer equivocada.
+3. ~~**La decisión de una línea sobre repertorio** para el protocolo del run 1~~
+   **firmada el 2026-09-12** (#119): *"el run 1 se mide contra filiación, como
+   decisión de modelado declarada; repertorio queda para la era 2"*.
 4. **Compras físicas** (ver C).
 
 ## A-bis · El plan de arranque de la simulación (2026-09-08)

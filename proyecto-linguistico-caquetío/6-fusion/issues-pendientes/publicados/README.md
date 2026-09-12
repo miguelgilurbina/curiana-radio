@@ -21,6 +21,10 @@ revisión encima (el de D9 lleva tres, con dos autocorrecciones).
 | `issue-repertorio-vs-filiacion.md` | issue **#119** (`decision`, `fidelidad`, `motor`) | 2026-09-07 |
 | `issue-pdfs-fuentes-aporte.md` | issue **#120** (`decision`, `jardin`); enlaza a #37 (D8) | 2026-09-07 |
 | `issue-esquema-lecturas-toponimos.md` | **no se publicó: se implementó** (2026-09-05, campo `lecturas` + `definicion_aceptada_simulacion`). Queda el punto 3, retro-poblar las lecturas del 2026-08-25, como trabajo | 2026-09-07 |
+| `comentario-39-d11-rebalanceo.md` | comentario en [#39](https://github.com/miguelgilurbina/curiana-radio/issues/39) (D11): la decisión de rebalancear y sus fases | 2026-09-12 |
+| `comentario-d11-fase-1b-verbos-perea.md` | comentario en [#39](https://github.com/miguelgilurbina/curiana-radio/issues/39): fase 1b, el verbo de Perea | 2026-09-12 |
+| `decision-d11-el-nucleo-reconstruido-del-wayuu.md` | comentario en [#39](https://github.com/miguelgilurbina/curiana-radio/issues/39): fase 3, re-etiquetar sin tocar formas; **#39 cerrada** con el ratio 1,2 a 1 | 2026-09-12 |
+| `decision-clanes-norte-sur.md` | issue **#122** (`decision`): la inversión está dentro del pasaje de Oliver; la lectura de Miguel es la salida 4 | 2026-09-12 |
 
 Nada de esto está fusionado al canon: son argumentos publicados esperando
 decisión humana.

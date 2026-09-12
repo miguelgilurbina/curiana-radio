@@ -1,0 +1,69 @@
+# ─────────────────────────────────────────────────────────────────────────
+# DECISIONES DE MIGUEL — tanda del 2026-09-12
+#
+# Mismo patrón que las tandas del 08-30, 09-01 y 09-08: la decisión queda
+# registrada aquí al tomarse, con la cita literal, y lo que toca al canon
+# se aplica con un script idempotente (los que ya corrieron se citan).
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-12'
+  decidido_por: Miguel
+  estado: CERRADA — cuatro decisiones tomadas, una abierta con la lectura de Miguel registrada
+  publicado: >-
+    #39 cerrada con cuatro comentarios; #37 cerrada; #119 cerrada con la línea
+    firmada; issue nuevo de fase 2 (#121); issue nuevo de los clanes (#122).
+
+d11:
+  issue: 'https://github.com/miguelgilurbina/curiana-radio/issues/39'
+  estado: CERRADA (2026-09-12)
+  decision_literal: '«#39 sí.»'
+  lo_que_cierra: >-
+    La condición 8 del gate. Ratio wayunaiki:lokono 1,2 a 1 (TABLERO.md) tras
+    las fases 1 (173 raíces, 2026-09-11) y 1b (218 verbos, 2026-09-12) y la
+    limpieza de F8. La fase 2 (achagua) sigue en #121; la fase 3 (núcleo
+    reconstruido desde el wayuu) quedó decidida el 2026-09-10 como
+    re-etiquetado sin tocar formas, y la deuda son hoy 32 entradas.
+  aplicado_por: [6-fusion/scripts/fusionar_perea_d11_fase1.py, 6-fusion/scripts/fusionar_perea_verbos_d11_fase1b.py, 6-fusion/scripts/sanear_f8_resto.py]
+
+d8:
+  issue: 'https://github.com/miguelgilurbina/curiana-radio/issues/37'
+  estado: CERRADA (2026-09-12)
+  decision_literal: '«#37 sí.»'
+  lectura_operativa: >-
+    Opción intermedia: el repo archiva lo de acceso abierto y carga liviana;
+    lo pesado vive en OneDrive con .gitignore y la ficha dice dónde está.
+    Aplicado el mismo día: Fabo y Pané en git; Neira y Ribero (200 MB) en
+    OneDrive.
+
+repertorio_119:
+  issue: 'https://github.com/miguelgilurbina/curiana-radio/issues/119'
+  estado: CERRADA (2026-09-12)
+  decision_literal: '«#119 sí.»'
+  linea_firmada: >-
+    El run 1 se mide contra filiación, como decisión de modelado declarada;
+    repertorio queda para la era 2.
+  toca: [5-experimento/disenos/04_protocolo_run_1_era_auditada, 1-plan/SIGUIENTE_TANDA.md §A.3]
+
+tainismos_de_medina:
+  estado: APLICADA (2026-09-12)
+  decision_literal: >-
+    «Si están como taíno en otra fuente y son panhispánicas entonces deben
+    clasificar como caquetío. Además el mismo diccionario de habla paraguanera
+    los clasifica. Ya hemos visto que el caquetío y el taíno compartían muchas
+    cosas.» Y después: «en cuanto a lo de Medina, todas entran como voces nuevas».
+  lectura_operativa: >-
+    caquetío-RECONSTRUIDO, no atestiguado — el precedente kanoa/hamaca/konuko.
+    iguana, macana y nagua re-etiquetadas; once nuevas con clave = lema
+    fonémico D5 (koa, komehén, wayakán, hiko, hikotea, jaiba, jején, magey,
+    niwa, siwato, yawasa).
+  aplicado_por: [6-fusion/scripts/tainismos_medina_a_caquetio.py, 6-fusion/scripts/fusionar_tainismos_medina.py]
+
+clanes_de_paraguana:
+  issue: 'https://github.com/miguelgilurbina/curiana-radio/issues/122'
+  estado: ABIERTA — con la lectura de Miguel registrada como salida 4
+  lectura_de_miguel: >-
+    «Amuay sí está más al norte que Guaranao: Guaranao es una laguna y Amuay
+    un pueblo pesquero en la modernidad. Pero entendemos que Moruy podría ser
+    el centro de los Guaranaos o Moruyes, y los Amuayes en el norte, con
+    Cayerúa.»
+  lo_que_zanja: 'Delmonte 1883 o González Batista 1984 (ninguno en el repo)'

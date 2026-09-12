@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-12 20:23**.
+<!--GENERADO--> Generado el **2026-09-12 20:47**.
 
 ## ¿Vamos bien?
 
@@ -22,10 +22,10 @@ editar_a_mano: no
 | Entradas del lexicón **sin cita** | **0** | 82 (2026-07-21) | 🟢 −82 |
 | Hechos del corpus **con referencia** | **198 / 198** | — | 🟢 |
 | Tests del motor | **269 en verde** | 0 rojos | 🟢 |
-| Gate para reanudar simulaciones | **6 de 9** condiciones | faltan 3 | 🔴 |
-| Decisiones esperando a Miguel | **10 abiertas** | 5 resueltas | 🟡 |
+| Gate para reanudar simulaciones | **7 de 9** condiciones | faltan 2 | 🔴 |
+| Decisiones esperando a Miguel | **8 abiertas** | 8 resueltas | 🟡 |
 
-**Lo que bloquea hoy:** wayunaiki vs. lokono (D11).
+**Ninguna condición del gate está en rojo.**
 Y 2 condición(es) que **nadie puede medir por script**: citas del corpus (F10) · exportador de runs.
 
 Detalle de cada número: [lexicón](#1-el-lexicón) · [fuentes](#2-las-fuentes) · [corpus](#3-el-corpus-cultural) · [gate](#4-el-gate-para-reanudar-simulaciones) · [decisiones](#5-decisiones-e-issues)
@@ -244,7 +244,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | 5 | ⚪ | Citas del corpus verificadas por muestreo (F10) | **no automedible**: que la cita *resuelva* (que la página exista) es trabajo humano. Medible sí: 198/198 hechos **tienen** `referencia` |
 | 6 | 🟢 | D1, D3 y D5 tomadas | todas tomadas — [D1](https://github.com/miguelgilurbina/curiana-radio/issues/32) · [D3](https://github.com/miguelgilurbina/curiana-radio/issues/34) · [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) |
 | 7 | 🟢 | La glosa de `-bana` resuelta | todas tomadas — [D9](https://github.com/miguelgilurbina/curiana-radio/issues/38) |
-| 8 | 🔴 | El desbalance wayunaiki/lokono resuelto | abiertas: D11 — [D11](https://github.com/miguelgilurbina/curiana-radio/issues/39) · medido: wayunaiki 769 vs. lokono 638 (1.2 a 1) · fase 1 de D11 FUSIONADA: 173 de 173 raíces de Perea ya están en el habla |
+| 8 | 🟢 | El desbalance wayunaiki/lokono resuelto | todas tomadas — [D11](https://github.com/miguelgilurbina/curiana-radio/issues/39) · medido: wayunaiki 769 vs. lokono 638 (1.2 a 1) · fase 1 de D11 FUSIONADA: 173 de 173 raíces de Perea ya están en el habla |
 | 9 | ⚪ | `export_runs_index.py` reparado | **no automedible sin correr un export contra la base** (ver [[04_protocolo_run_1_era_auditada]] §2.9) |
 
 🟢 cumplida · 🔴 no cumplida · ⚪ no automedible (necesita criterio humano o correr algo)
@@ -264,18 +264,19 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | D3 | `normalizar_por_dialecto()`: cablearla o eliminarla | ✅ resuelta | [#34](https://github.com/miguelgilurbina/curiana-radio/issues/34) |
 | D4 | Pluralidad de candidatos a la sucesion de Manaure | 🔴 abierta | [#35](https://github.com/miguelgilurbina/curiana-radio/issues/35) |
 | D5 | Politica ortografica c/k del lexicon | ✅ resuelta | [#36](https://github.com/miguelgilurbina/curiana-radio/issues/36) |
-| D8 | ¿El repo archiva copias de las fuentes externas? | 🔴 abierta | [#37](https://github.com/miguelgilurbina/curiana-radio/issues/37) |
+| D8 | ¿El repo archiva copias de las fuentes externas? | ✅ resuelta | [#37](https://github.com/miguelgilurbina/curiana-radio/issues/37) |
 | D9 | La glosa de `-bana` y el hallazgo de `-ana` | ✅ resuelta | [#38](https://github.com/miguelgilurbina/curiana-radio/issues/38) |
-| D11 | El desbalance wayunaiki/lokono del lexicon | 🔴 abierta | [#39](https://github.com/miguelgilurbina/curiana-radio/issues/39) |
+| D11 | El desbalance wayunaiki/lokono del lexicon | ✅ resuelta | [#39](https://github.com/miguelgilurbina/curiana-radio/issues/39) |
 | D12 | La etiqueta de `parentesco-032`: una entrada `atestiguado` con material sin fuente | 🔴 abierta | [#81](https://github.com/miguelgilurbina/curiana-radio/issues/81) |
 | D13 | El hueco léxico de "tío materno": la palabra que le falta a la tesis central | 🔴 abierta | [#82](https://github.com/miguelgilurbina/curiana-radio/issues/82) |
 | D14 | Qué segunda polity se pone en escena | 🔴 abierta | [#83](https://github.com/miguelgilurbina/curiana-radio/issues/83) |
 | D15 | Qué nodo se simula primero: Coro, Paraguaná, o un par desde el principio | ✅ resuelta | [#90](https://github.com/miguelgilurbina/curiana-radio/issues/90) |
+| — | Decisión — Los dos clanes de Paraguaná: ¿manda la frase de Oliver, mandan las aldeas, o la lectura de Miguel? | 🔴 abierta | [#122](https://github.com/miguelgilurbina/curiana-radio/issues/122) |
 | — | Servir los PDF del vault desde `/kaketiana/fuentes`, tras un aporte voluntario | 🔴 abierta | [#120](https://github.com/miguelgilurbina/curiana-radio/issues/120) |
-| — | El lexicón responde "¿de qué lengua es esta palabra?" y lo usamos como si respondiera "¿la usaba un caquetío?" | 🔴 abierta | [#119](https://github.com/miguelgilurbina/curiana-radio/issues/119) |
+| — | El lexicón responde "¿de qué lengua es esta palabra?" y lo usamos como si respondiera "¿la usaba un caquetío?" | ✅ resuelta | [#119](https://github.com/miguelgilurbina/curiana-radio/issues/119) |
 | — | `tara`: ¿venado o mariposa? — puede tumbar un argumento del corpus | 🔴 abierta | [#45](https://github.com/miguelgilurbina/curiana-radio/issues/45) |
 
-**10 abiertas** de 15. Medido contra el tablero, no contra una nota.
+**8 abiertas** de 16. Medido contra el tablero, no contra una nota.
 
 ---
 
@@ -283,7 +284,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1108 en 416 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 1110 en 418 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 269 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
