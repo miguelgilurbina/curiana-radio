@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-12 17:13**.
+<!--GENERADO--> Generado el **2026-09-12 17:18**.
 
 ## ¿Vamos bien?
 
@@ -63,11 +63,11 @@ Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 | caquetío-atestiguado | 228 |
 | caquetío-reconstruido | 68 |
 | paraujano | 47 |
-| taíno | 36 |
+| taíno | 45 |
 | kalinago | 19 |
-| taino | 18 |
 | lokono/proto-arawakan | 14 |
 | lokono/garifuna | 13 |
+| taíno-reconstruido | 9 |
 | wayunaiki-cogn | 7 |
 | jirajaroide-contacto | 7 |
 | wayunaiki/lokono | 5 |
@@ -290,7 +290,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1097 en 400 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 1097 en 402 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 268 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 

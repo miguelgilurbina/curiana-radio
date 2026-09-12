@@ -117,6 +117,9 @@ reconstrucción/hipótesis. Sin excepciones silenciosas.
 6. **F6. Minar Van Buurt 2014** (papiamento: léxico caquetío superviviente).
 7. **F7. Cerrar Zavala al 100%** (las ~20 entradas de parseo manual).
 8. **F8. Sanear los 21 valores de `fuente`** a un conjunto canónico declarado.
+   *Parte taíno hecha el 2026-09-12* (`6-fusion/scripts/sanear_f8_taino.py`): las 18
+   `taino` eran 9 atestiguadas (→ `taíno`) y 9 generadas por regla desde el lokono
+   (→ `taíno-reconstruido`). Quedan 23 valores sin conjunto canónico.
 9. **F9. Conseguir Oviedo y Baños legible** + OCR externo para Arcaya/Jahn si
    hace falta (el entorno no tiene OCR — limitación conocida).
 10. **F10. Verificación de citas del corpus cultural**: los ~156 hechos con

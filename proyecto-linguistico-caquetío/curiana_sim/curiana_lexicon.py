@@ -6095,110 +6095,110 @@ VOCABULARIO_BASE: dict[str, dict] = {
     # --- Taíno hipotético (arahuaco_comparative.py) ---
     "abba": {
         "es": "uno",
-        "fuente": "taino",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. abba; método comparativo arahuacano; Reconstrucción desde Lok. abba (uno); método comparativo arahuaco; confianza: alta",
+        "fuente": "taíno-reconstruido",
+        "notas": "Reconstrucción hipotética Taíno desde Lok. abba; método comparativo arahuacano; Reconstrucción desde Lok. abba (uno); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
         "categoria": "gramatica"
     },
     "acoa": {
         "es": "pie",
-        "fuente": "taino",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. akoa; método comparativo arahuacano; Reconstrucción desde Lok. akoa (pie); método comparativo arahuaco; confianza: alta",
+        "fuente": "taíno-reconstruido",
+        "notas": "Reconstrucción hipotética Taíno desde Lok. akoa; método comparativo arahuacano; Reconstrucción desde Lok. akoa (pie); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
         "categoria": "cuerpo"
     },
     "aduri": {
         "es": "nariz",
-        "fuente": "taino",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. aduri; método comparativo arahuacano; Reconstrucción desde Lok. aduri (nariz); método comparativo arahuaco; confianza: alta",
+        "fuente": "taíno-reconstruido",
+        "notas": "Reconstrucción hipotética Taíno desde Lok. aduri; método comparativo arahuacano; Reconstrucción desde Lok. aduri (nariz); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
         "categoria": "cuerpo"
     },
     "agari": {
         "es": "cabeza",
-        "fuente": "taino",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. abari; método comparativo arahuacano; Reconstrucción desde Lok. abari (cabeza); método comparativo arahuaco; confianza: alta",
+        "fuente": "taíno-reconstruido",
+        "notas": "Reconstrucción hipotética Taíno desde Lok. abari; método comparativo arahuacano; Reconstrucción desde Lok. abari (cabeza); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
         "categoria": "cuerpo"
     },
     "akcicyaa": {
         "es": "espíritu vital",
-        "fuente": "taino",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. akkicyaha; método comparativo arahuacano; Reconstrucción desde Lok. akkicyaha (espíritu vital); método comparativo arahuaco; confianza: alta",
+        "fuente": "taíno-reconstruido",
+        "notas": "Reconstrucción hipotética Taíno desde Lok. akkicyaha; método comparativo arahuacano; Reconstrucción desde Lok. akkicyaha (espíritu vital); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
         "categoria": "ritual"
     },
     "cai": {
         "es": "isla",
-        "fuente": "taino",
-        "notas": "Taíno atestiguado: cai; cognado Lok. kairi; Brinton 1871",
+        "fuente": "taíno",
+        "notas": "Taíno atestiguado: cai; cognado Lok. kairi; Brinton 1871 · F8 (2026-09-12): grafía de `fuente` unificada, `taino` → `taíno`",
         "categoria": "geografia"
     },
     "caiman": {
         "es": "caimán",
-        "fuente": "taino",
-        "notas": "Taíno atestiguado: caiman; cognado Lok. kaiman; Brinton 1871",
+        "fuente": "taíno",
+        "notas": "Taíno atestiguado: caiman; cognado Lok. kaiman; Brinton 1871 · F8 (2026-09-12): grafía de `fuente` unificada, `taino` → `taíno`",
         "categoria": "fauna"
     },
     "casabe": {
         "es": "casabe",
-        "fuente": "taino",
-        "notas": "Taíno atestiguado: casabe; cognado Lok. kasabi; Brinton 1871",
+        "fuente": "taíno",
+        "notas": "Taíno atestiguado: casabe; cognado Lok. kasabi; Brinton 1871 · F8 (2026-09-12): grafía de `fuente` unificada, `taino` → `taíno`",
         "categoria": "alimentos"
     },
     "cohiba": {
         "es": "tabaco",
-        "fuente": "taino",
-        "notas": "Taíno atestiguado: cohiba; cognado Lok. iuli; Brinton 1871",
+        "fuente": "taíno",
+        "notas": "Taíno atestiguado: cohiba; cognado Lok. iuli; Brinton 1871 · F8 (2026-09-12): grafía de `fuente` unificada, `taino` → `taíno`",
         "categoria": "ritual"
     },
     "daca": {
         "es": "mano",
-        "fuente": "taino",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. daka; método comparativo arahuacano; Reconstrucción desde Lok. daka (mano); método comparativo arahuaco; confianza: alta",
+        "fuente": "taíno-reconstruido",
+        "notas": "Reconstrucción hipotética Taíno desde Lok. daka; método comparativo arahuacano; Reconstrucción desde Lok. daka (mano); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
         "categoria": "cuerpo"
     },
     "higuana": {
         "es": "iguana",
-        "fuente": "taino",
-        "notas": "Taíno atestiguado: higuana; cognado Lok. iwana; Brinton 1871",
+        "fuente": "taíno",
+        "notas": "Taíno atestiguado: higuana; cognado Lok. iwana; Brinton 1871 · F8 (2026-09-12): grafía de `fuente` unificada, `taino` → `taíno`",
         "categoria": "fauna"
     },
     "mayani": {
         "es": "no, negación",
-        "fuente": "taino",
-        "notas": "Taíno atestiguado: mayani; cognado Lok. ma; Brinton 1871",
+        "fuente": "taíno",
+        "notas": "Taíno atestiguado: mayani; cognado Lok. ma; Brinton 1871 · F8 (2026-09-12): grafía de `fuente` unificada, `taino` → `taíno`",
         "categoria": "gramatica"
     },
     "taita": {
         "es": "padre",
-        "fuente": "taino",
-        "notas": "Taíno atestiguado: taita; cognado Lok. itti; Brinton 1871",
+        "fuente": "taíno",
+        "notas": "Taíno atestiguado: taita; cognado Lok. itti; Brinton 1871 · F8 (2026-09-12): grafía de `fuente` unificada, `taino` → `taíno`",
         "categoria": "parentesco"
     },
     "thigisi": {
         "es": "diente",
-        "fuente": "taino",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. thibisi; método comparativo arahuacano; Reconstrucción desde Lok. thibisi (diente); método comparativo arahuaco; confianza: alta",
+        "fuente": "taíno-reconstruido",
+        "notas": "Reconstrucción hipotética Taíno desde Lok. thibisi; método comparativo arahuacano; Reconstrucción desde Lok. thibisi (diente); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
         "categoria": "cuerpo"
     },
     "tuna": {
         "es": "agua, río",
-        "fuente": "taino",
-        "notas": "Taíno atestiguado: tuna; cognado Lok. tuna; Brinton 1871",
+        "fuente": "taíno",
+        "notas": "Taíno atestiguado: tuna; cognado Lok. tuna; Brinton 1871 · F8 (2026-09-12): grafía de `fuente` unificada, `taino` → `taíno`",
         "categoria": "geografia"
     },
     "wacusi": {
         "es": "ojo",
-        "fuente": "taino",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. wakusi; método comparativo arahuacano; Reconstrucción desde Lok. wakusi (ojo); método comparativo arahuaco; confianza: alta",
+        "fuente": "taíno-reconstruido",
+        "notas": "Reconstrucción hipotética Taíno desde Lok. wakusi; método comparativo arahuacano; Reconstrucción desde Lok. wakusi (ojo); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
         "categoria": "cuerpo"
     },
     "wagulo": {
         "es": "tortuga",
-        "fuente": "taino",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. wabulo; método comparativo arahuacano; Reconstrucción desde Lok. wabulo (tortuga); método comparativo arahuaco; confianza: alta",
+        "fuente": "taíno-reconstruido",
+        "notas": "Reconstrucción hipotética Taíno desde Lok. wabulo; método comparativo arahuacano; Reconstrucción desde Lok. wabulo (tortuga); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
         "categoria": "fauna"
     },
     "yamosa": {
         "es": "dos",
-        "fuente": "taino",
-        "notas": "Taíno atestiguado: yamosa; cognado Lok. biama; Brinton 1871",
+        "fuente": "taíno",
+        "notas": "Taíno atestiguado: yamosa; cognado Lok. biama; Brinton 1871 · F8 (2026-09-12): grafía de `fuente` unificada, `taino` → `taíno`",
         "categoria": "gramatica"
     },
 

@@ -172,6 +172,11 @@ FAMILIAS = {
     "lokono": "lokono",
     "taíno": "taíno",
     "taino": "taíno",
+    # F8 (2026-09-12): las 9 formas que reconstruir_taino() generó desde el
+    # lokono dejan de contarse como taíno. Van aparte, como el caquetío
+    # reconstruido: si pasan el filtro al 100 % es porque se hicieron con
+    # regla, no porque el taíno se parezca al caquetío.
+    "taíno-reconstruido": "taíno reconstruido",
     # D11 #39 (2026-08-31): la columna añú abre — el pariente costero más
     # cercano entra al comparador (Wilbert 1958-59 vía Oliver A-2).
     "paraujano": "paraujano (añú)",
