@@ -5,7 +5,7 @@ autor: "Neira, Alonso de (S.J.) y Ribero, Juan (S.J.)"
 anio: 1762
 genero: gramatica
 publicacion: "Manuscrito. Terminado el 14 de septiembre de 1762; la copia de la Real Biblioteca es del 23 de abril de 1788 (RBPR II/2910): [4] h. + 42 p. + 70 f. + [3] h., 152×104 mm"
-local: "fuentes_caquetios/Neira_Ribero_1762_Arte_y_Vocabulario_Lengua_Achagua_RB_II-2910.pdf (102 imágenes IIIF, sin capa de texto) + fuentes_caquetios/neira_ribero_1762/001-102.jpg"
+local: "fuentes_caquetios/Neira_Ribero_1762_Arte_y_Vocabulario_Lengua_Achagua_RB_II-2910.pdf (102 pliegos a 2787×1949 px, sin capa de texto) + fuentes_caquetios/neira_ribero_1762/001-102.jpg — ⚠️ SOLO EN ONEDRIVE, no en git (.gitignore, D8 #37 abierta: son 200 MB)"
 paginas: 102
 capa_texto: no
 estado_minado: sin-minar
@@ -42,6 +42,14 @@ limitaciones» (en Zimmermann, *La descripción de las lenguas amerindias en la
 época colonial*), que no está en el repo.
 
 ## Cómo se lee
+
+✅ **Medido el 2026-09-12: se lee bien.** Las imágenes son de resolución
+completa (2787×1949 px por pliego, dos páginas por imagen) y la letra del
+copista de 1788 es una cursiva clara: a resolución nativa se distinguen sin
+esfuerzo las entradas del vocabulario («Azul — Vregirrayi», «Baba — Errusí»,
+«Bacilar — Nubedua»). Lo que no se puede es OCR: es lectura en imagen,
+recorte a recorte (media página por recorte, ~12 entradas cada uno).
+
 
 Manuscrito del XVIII: **no hay OCR y no va a haberlo bueno**. Se lee en
 imagen, página a página, con `pymupdf` para renderizar o directamente los
