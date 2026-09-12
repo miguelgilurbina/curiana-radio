@@ -53,7 +53,31 @@ discrepa es la frase de Oliver (o de González Batista, a quien resume).
   aparece ningún cuarto nombre en lo que el repo tiene: Esteves nombra Moruy
   y Santa Ana sólo como municipios.
 
-## Las tres salidas
+## La lectura de Miguel (2026-09-12), y cómo se reconcilia con Delmonte
+
+> «Amuay sí está más al norte que Guaranao: Guaranao es una laguna y Amuay un
+> pueblo pesquero en la modernidad. Pero entendemos que **Moruy podría ser el
+> centro de los Guaranaos o Moruyes**, y los Amuayes en el norte, con Cayerúa.»
+
+Es una lectura distinta de la de Delmonte en un punto: Delmonte pone a los
+Amuayes «después en Moruy»; Miguel pone Moruy con los Guaranaos/Moruyes. Lo
+que las reconcilia es la **regla 3 (precontacto ≠ colonial)**: el
+reasentamiento que Delmonte describe —y que Oliver «pudo confirmar»— es un
+hecho colonial (reducciones). Si el Moruy de los Amuayes es su aldea de
+reasentamiento y no su territorio de origen, entonces:
+
+- **precontacto**: Amuayes al **norte** (Cayerda/Cayerúa) y **costa oeste**
+  (el homónimo Amuay); Guaranaos en el **centro-sur** (Santa Ana, la laguna
+  de Guaranao al suroeste, y quizá Moruy);
+- **colonial**: los Amuayes reasentados en Moruy, en lo que sería tierra
+  guaranaa — y de ahí que la tradición popular los nombre aparte, «Moruyes».
+
+Con eso, la frase cardinal de Oliver sigue siendo la única pieza que no
+encaja con nada. Lo que **zanja** la lectura: Delmonte 1883 y González
+Batista 1984 (ninguno en el repo), o cualquier padrón colonial de Moruy que
+diga de qué parcialidad eran sus indios.
+
+## Las salidas
 
 1. **Mandan las aldeas** *(recomendación del escriba)*: Amuayes ↔ Moruy
    (norte), Guaranaos ↔ Santa Ana (sur). Son el dato concreto; la frase
@@ -68,5 +92,12 @@ discrepa es la frase de Oliver (o de González Batista, a quien resume).
    era 2 se siembran sin cardinal, sólo con aldea (Moruy / Santa Ana), que es
    lo único que el motor necesita de verdad.
 
-La 3 es compatible con la 1 y no bloquea nada: el diseño dice «nodos
-calcados, no inventados», y las aldeas están calcadas.
+4. **La lectura de Miguel**: Amuayes = norte + costa oeste (Cayerúa, Amuay);
+   Guaranaos/Moruyes = centro-sur (Moruy, Santa Ana, laguna de Guaranao); el
+   Moruy de Delmonte es reasentamiento colonial, no territorio de origen. Es
+   la que mejor cuadra con el mapa y con la tradición popular, y la única que
+   explica «Moruyes» sin inventar un tercer clan. Se siembra con etiqueta
+   `reconstruido` y `deuda: verificar en Delmonte 1883 / González Batista 1984`.
+
+La 3 es compatible con la 1 y con la 4, y no bloquea nada: el diseño dice
+«nodos calcados, no inventados», y las aldeas están calcadas.
