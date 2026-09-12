@@ -146,3 +146,28 @@ correccion_de_erratas:
     265-266 (impresas; pdf 292-293). Verificado a ojo el 2026-09-01 — la
     255 impresa es la Figura 40 (mapa de Juan de la Cosa) y la 256 el viaje
     de Ojeda. Corregir vía aplicador.
+
+verificacion_2026-09-12:
+  que_se_verifico: >-
+    La asignación norte/sur que DISENO_ERA2 §2 dejó «EN VERIFICACIÓN», con las
+    coordenadas del barrido OSM (toponimos_mapa_kaketiana.yaml).
+  aldeas_de_delmonte_en_el_mapa:
+    - {aldea: Cayerúa (Cayerda), clan: Amuayes (primero), lat: 11.986, lon: -69.959}
+    - {aldea: Moruy, clan: Amuayes (después), lat: 11.822, lon: -69.983}
+    - {aldea: Santa Ana, clan: Guaranaos, lat: 11.782, lon: -69.947}
+  homonimos_modernos:
+    - {forma: Amuay, tipo: poblado, lat: 11.775, lon: -70.241}
+    - {forma: Guaranao, tipo: sector, lat: 11.675, lon: -70.188}
+  hallazgo: >-
+    La inversión NO está entre la fuente y el mapa: está dentro del pasaje de
+    Oliver. Su frase cardinal (Amuayes SUR, Guaranaos NORTE) contradice a las
+    tres aldeas que él mismo cita de Delmonte, que ponen a los Amuayes al
+    norte (Cayerúa, Moruy) y a los Guaranaos al sur (Santa Ana). Los homónimos
+    modernos concuerdan con las aldeas, no con la frase.
+  lo_que_recuerda_miguel: >-
+    «Amuayes y Moruyes» en otras fuentes: con Delmonte delante, los Moruyes
+    son con toda probabilidad los Amuayes reasentados en Moruy, nombrados por
+    su aldea nueva. Hipótesis; se verifica con Delmonte 1883 o González
+    Batista 1984, que no están en el repo. «Subgrupos» es la palabra de Oliver.
+  deuda: 'frase cardinal de Oliver (p. 275) invertida respecto a sus propias aldeas; verificar en González Batista 1984'
+  decision: 'pendiente de Miguel — borrador en issues-pendientes/decision-clanes-norte-sur.md'
