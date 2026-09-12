@@ -811,6 +811,774 @@ entradas:
 # empuje. Se listan aquí para que el diseño los conozca.
 # =====================================================================
 
+  # ── NIVEL C DE MEDINA COLINA (flora, fauna, oficio y casa) — fallo de Miguel 2026-09-11, aplicado 2026-09-12 ──
+  # Etiqueta `hipotetico` por protocolo §5. Ver 6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md
+  - id: ecologia-046
+    voz: busuga
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «busuga» — árbol de madera liviana que
+      se utilizó para hacer la armazón de las casas de bahareque. Su corteza se usaba para teñir de color
+      amarillo. Se escuchó decir «tan amarillo como una busuga». Es palabra popular. (Medina Colina, p.
+      52; campo: flora / casa / tinte).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 52 (dictado de Miguel, 2026-09-01); fallo
+      de Miguel del 2026-09-11, tanda 1 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 52
+    dominios:
+    - ecologia
+    - flora
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Fitónimo con técnica: madera de armazón para el bahareque (la tecnología compartida de bajareke)
+      y corteza tintórea amarilla. Sin apoyo externo: C, al corpus (flora/oficios) como hipotético. Toca
+      el registro de colores: el caquetío atestiguado tiene CERO términos de color (colores_caquetios.yaml),
+      y'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-047
+    voz: cachinare
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «cachinare» — es creada por el pueblo
+      para designar con ella el fruto del cardón que no terminó de desarrollarse, que quedó pequeño o no
+      maduró bien. (Medina Colina, p. 57; campo: flora (fruto)).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 57 (dictado de Miguel, 2026-09-01); fallo
+      de Miguel del 2026-09-11, tanda 1 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 57
+    dominios:
+    - ecologia
+    - flora
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Cuarto término del campo «fruto de cardón» en esta sesión: el fruto que no cuajó. Una lengua
+      que distingue el fruto por especie (dato/kaduchi/guanariji) y por estado (cachinare) es una lengua
+      de recolectores de cardón — coherente con la ecología del Golfete. Sin apoyo externo: C, al corpus.
+      Final -a'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-048
+    voz: gatiao
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «gatiao» — árbol cuyas ramas nuestros
+      mayores utilizaron para espantar moscas. (Medina Colina, p. 127; campo: flora).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 127 (dictado de Miguel, 2026-09-01); fallo
+      de Miguel del 2026-09-11, tanda 3 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 127
+    dominios:
+    - ecologia
+    - flora
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Fitónimo con uso, sin forma en el canon ni en Alvarado, y con la final -ao que en el caquetío
+      atestiguado marca palabras de filiación propia (diao, waitiao, datihao, waranao) y NO el participio
+      castellano: es el primer -ao del dictado que cae del lado indígena de la regla práctica fijada al
+      principi'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-049
+    voz: guamaro
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «guamaro» — era un árbol venenoso para
+      los animales. Hoy es escaso en nuestros montes, quizá debido a los continuos veranos. (Medina Colina,
+      p. 130; campo: flora).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 130 (dictado de Miguel, 2026-09-01); fallo
+      de Miguel del 2026-09-11, tanda 3 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 130
+    dominios:
+    - ecologia
+    - flora
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Fitónimo con propiedad (tóxico para el ganado), sin forma en el canon ni en Alvarado; pasa
+      los filtros; final -aro (caujaro, cuaguaro, camuro). C, al corpus (flora). Sexta desaparición del
+      libro, y la primera con causa declarada por el autor: «los continuos veranos» — mc-mundo-019.'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-050
+    voz: guanariji
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «guanariji» — eran las denominaciones
+      de los frutos de determinados cardones. La primera era del cardón de lefaria, la segunda del susucure.
+      (Medina Colina, p. 49; campo: flora (fruto)).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 49 (dictado de Miguel, 2026-09-01); fallo
+      de Miguel del 2026-09-11, tanda 1 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 49
+    dominios:
+    - ecologia
+    - flora
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'El habla paraguanera distinguía los frutos por especie de cardón: breva (lefaria) y guanariji
+      (susucure). Que el lexicón atestiguado ya tenga DOS nombres de fruto de cardón (dato, kaduchi) hace
+      verosímil un tercero. Sin apoyo externo: C. La inicial gua- (/wa-/) es la de guaca/waka, guacoa/wakoa:
+      gra'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-051
+    voz: guarero
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «guarero» — fue planta enredadera, común
+      en nuestros montes, cuyas ramas se utilizaron para amarrar el embarrado [dictado: «embargado»] de
+      las paredes de la vivienda. Las hojas servían de comida para los marranos. (Medina Colina, página
+      no dictada (⚠️ pendiente); campo: flora / casa (bajareque)).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, página no dictada (⚠️ pendiente) (dictado de
+      Miguel, 2026-09-07); fallo de Miguel del 2026-09-11, tanda 1 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+    dominios:
+    - ecologia
+    - flora
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Como bayure: fitónimo local con función precisa (el amarre del bajareque), pasa los filtros
+      y cumple dos criterios; sin cognado ni atestación. C, al corpus (casa). Deuda: identificar la planta.'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-052
+    voz: marite
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «marite» — así llamaron a la planta acuática
+      que se desarrolla en la superficie del agua depositada en los estanques (Medina Colina, p. 180; campo:
+      flora (agua)).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 180 (dictado de Miguel, 2026-09-08); fallo
+      de Miguel del 2026-09-11, tanda 3 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 180
+    dominios:
+    - ecologia
+    - flora
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Fitónimo local del agua estancada, única fuente: C, al corpus (flora). Deuda: la especie.'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-053
+    voz: naguata
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «naguata» — se denominó así a la auyama
+      que estaba en pleno proceso de desarrollo (Medina Colina, p. 193; campo: flora / comida).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 193 (dictado de Miguel, 2026-09-08); fallo
+      de Miguel del 2026-09-11, tanda 3 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 193
+    dominios:
+    - ecologia
+    - flora
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Nombre de un estado de la auyama, sin paralelo: C, al corpus (conuco). Las lenguas de cultivadores
+      nombran los estados del fruto (cf. jojoto para el maíz tierno, sarutaco para el punto medio): esta
+      es la voz local para uno de ellos.'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-054
+    voz: quihuagua
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «quihuagua» — una variedad de frijol común
+      en épocas pasadas y muy nutritiva (Medina Colina, p. 237; campo: flora / comida (conuco)).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 237 (dictado de Miguel, 2026-09-08); fallo
+      de Miguel del 2026-09-11, tanda 3 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 237
+    dominios:
+    - ecologia
+    - flora
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Nombre local de una variedad de frijol, única fuente: C, al corpus (conuco). Con tapirama
+      y urubana forma la serie de los frijoles paraguaneros del XX; cruzar con #105 (caraota).'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-055
+    voz: susucure
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «susucure» — [sin entrada propia hasta
+      ahora] cardón cuyo fruto se llamaba guanariji (Medina Colina, p. 49; campo: flora).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 49 (dictado de Miguel, 2026-09-01); fallo
+      de Miguel del 2026-09-11, tanda 1 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 49
+    dominios:
+    - ecologia
+    - flora
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Como lefaria pero con menos apoyo: sin atestación previa de ningún tipo. Medina Colina es
+      la única fuente. C, al corpus como hipotético. Si el libro trae entrada propia en la S, dictarla con
+      la descripción.'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-056
+    voz: teco
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «teco» — es planta xerófita [dictado:
+      «cerófita»] de hojas lanceoladas, cortas y con espinas por sus bordes, resistente a los veranos, y
+      cuando llueve da unos frutos muy dulces (Medina Colina, p. 274; campo: flora (fruto)).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 274 (dictado de Miguel, 2026-09-08); fallo
+      de Miguel del 2026-09-11, tanda 3 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 274
+    dominios:
+    - ecologia
+    - flora
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Fitónimo local de fruto comestible, única fuente: C, al corpus (flora). Deuda: la especie.'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+    identificacion: por las hojas lanceoladas con espinas marginales y el fruto dulce, una bromelia terrestre
+      (¿Bromelia chrysantha, el 'maya' / 'piñuela'?)
+  - id: ecologia-057
+    voz: tura
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «tura» — cuando la mazorca del maíz tenía
+      pocos granos, nuestros mayores decían que era pura tura (Medina Colina, p. 287; campo: flora / comida
+      (maíz)).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 287 (dictado de Miguel, 2026-09-08); fallo
+      de Miguel del 2026-09-11, tanda 3 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 287
+    dominios:
+    - ecologia
+    - flora
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Acepción local sin castellano detrás y con dos homónimos en el área, ninguno con el mismo
+      sentido: C, al corpus (conuco), con los tres tura declarados para que nadie los funda. Lo que la subiría:
+      que «tura» aparezca en otra fuente con sentido de ''vacío, vano''.'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-058
+    voz: urubana
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «urubana» — fue un frijol de color morado,
+      sabor agradable, y que por llegar a Paraguaná desde la isla de Aruba se denominó urubana, sin que
+      eso quiera decir que esa isla es su origen, pues allí solo producen negros [frijoles]. (Medina Colina,
+      p. 291; campo: flora / comida (conuco)).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 291 (dictado de Miguel, 2026-09-08); fallo
+      de Miguel del 2026-09-11, tanda 3 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 291
+    dominios:
+    - ecologia
+    - flora
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Fitónimo local con etimología dada por el propio autor (de Aruba): C. El valor no es el frijol,
+      es el SUFIJO: un -ana/-na vivo en el XX con sentido ''de, procedente de'' sobre un topónimo, que es
+      o el gentilicio castellano deformado o el formante que #109 acaba de dejar sin glosa. Registrado en
+      la lis'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-059
+    voz: chenga
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «chenga» — voz con que el pueblo identificó
+      a la paloma perdiz. Fue abundante en nuestros montes, hoy casi desaparecida. (Medina Colina, p. 70;
+      campo: fauna).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 70 (dictado de Miguel, 2026-09-01); fallo
+      de Miguel del 2026-09-11, tanda 2 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 70
+    dominios:
+    - ecologia
+    - fauna
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Encaja en la serie caquetía de palomas nombradas por especie (wakoa, tauta, tigi, tijua) y
+      pasa los filtros; pero la final -nga es ajena al caquetío medido y propia de los africanismos, y no
+      hay etimología en ninguna dirección. C-baja: al corpus (fauna) como hipotético, con la reserva fonológica
+      dec'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+    identificacion: paloma perdiz = Leptotila / Geotrygon (paloma de suelo del monte seco); especie abierta
+  - id: ecologia-060
+    voz: chevebe
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «chevebe» — con este nombre, un tanto
+      extraño, nuestros mayores identificaron a la langosta; otros le llaman saltamontes. Es palabra de
+      pueblo. (Medina Colina, p. 69-70; campo: fauna).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 69-70 (dictado de Miguel, 2026-09-01); fallo
+      de Miguel del 2026-09-11, tanda 2 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 69-70
+    dominios:
+    - ecologia
+    - fauna
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Nombre local del saltamontes: pasa los filtros, campo local y distribución restringida, sin
+      cognado ni atestación. C, al corpus (fauna). Final -ebe como carebe (p. 64): dos voces de esta letra
+      con la misma cadencia, ambas sin filiación — se anota, no se afirma.'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-061
+    voz: curubo
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «curubo» — caracol marino cuya caparazón
+      utilizaron los alfareros para pulir los envases que fabricaban, y también para hacer cal mediante
+      su cocción a altas temperaturas. (Medina Colina, p. 86; campo: fauna (mar) / oficio (alfarería, cal)).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 86 (dictado de Miguel, 2026-09-01); fallo
+      de Miguel del 2026-09-11, tanda 1 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 86
+    dominios:
+    - ecologia
+    - fauna
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Nombre de caracol con función (pulir la loza, hacer cal) sin forma en el canon ni en Alvarado;
+      pasa los filtros; campo local y distribución restringida; sin cognado ni atestación. C, al corpus
+      (fauna/oficios). Es la voz que faltaba en mc-mundo-015: la fuente local de la cal del hayo y el instrumento'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+    identificacion: gasterópodo marino de concha gruesa (¿Strombus/Lobatus? ¿Melongena? ¿Cittarium?); especie
+      abierta
+  - id: ecologia-062
+    voz: guacuquero
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «guacuquero» — así denominaron a una abeja
+      de color amarillento que producía una miel muy dulce y también de color amarillo. (Medina Colina,
+      p. 130; campo: fauna / oficio (miel)).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 130 (dictado de Miguel, 2026-09-01); fallo
+      de Miguel del 2026-09-11, tanda 1 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 130
+    dominios:
+    - ecologia
+    - fauna
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Tercer meliponino nombrado (ruba negra, bayure, guacuquero amarilla): la etnoapicultura del
+      monte seco con vocabulario propio, que es lo que el protocolo esperaba encontrar. La forma es probablemente
+      híbrida (base local + -ero castellano), de modo que la voz entera no es sustrato pero su base puede'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+    identificacion: meliponino de color amarillo y miel amarilla (¿Tetragonisca / Scaptotrigona? cf. la
+      «rubita» amarilla de las listas nacionales); especie abierta
+  - id: ecologia-063
+    voz: gualamo
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «gualamo» — así le llaman, en las poblaciones
+      de Tacuato y Santa Ana, a un bisure de color amarillo combinado con gris terroso. En el resto de las
+      poblaciones paraguaneras conserva el nombre de bisure. (Medina Colina, p. 130; campo: fauna).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 130 (dictado de Miguel, 2026-09-01); fallo
+      de Miguel del 2026-09-11, tanda 2 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 130
+    dominios:
+    - ecologia
+    - fauna
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Nombre local del lagarto amarillo en Tacuato y Santa Ana frente al general bisure: pasa los
+      filtros, campo local y la distribución más restringida de todo el dictado. Sin cognado ni atestación:
+      C, al corpus. Lo que importa es la ISOGLOSA (mc-mundo-020): es el primer dato de variación léxica
+      DENTRO d'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+    identificacion: lagarto amarillo y gris terroso (¿Cnemidophorus / Ameiva?); especie abierta — puede
+      ser un bisure distinto, no solo otro nombre
+  - id: ecologia-064
+    voz: igüira
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «igüira» — fue paloma silvestre del tamaño
+      de la casera; abundante en épocas pasadas, hoy en vías de extinción; de carne muy apreciada (Medina
+      Colina, página no dictada (⚠️ pendiente); campo: fauna).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, página no dictada (⚠️ pendiente) (dictado de
+      Miguel, 2026-09-08); fallo de Miguel del 2026-09-11, tanda 2 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+    dominios:
+    - ecologia
+    - fauna
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Nombre local de una segunda paloma, junto a la guacoa atestiguada: pasa los filtros y cumple
+      dos criterios; sin cognado ni atestación. C, al corpus (fauna). Deuda: identificar la especie.'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-065
+    voz: matejea
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «matejea» — así se denominó a la vivienda
+      hecha por las avispas (Medina Colina, p. 181; campo: fauna / casa).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 181 (dictado de Miguel, 2026-09-08); fallo
+      de Miguel del 2026-09-11, tanda 2 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 181
+    dominios:
+    - ecologia
+    - fauna
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Nombre del avispero, sin paralelo: C, al corpus (fauna). Quinto nombre del racimo abejas/avispas
+      del dictado.'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-066
+    voz: mebi
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «mebi» — [con maba y bayure] son tres
+      denominaciones para identificar al panal de las abejas (Medina Colina, página no dictada (⚠️ pendiente);
+      campo: fauna / oficio (miel)).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, página no dictada (⚠️ pendiente) (dictado de
+      Miguel, 2026-09-08); fallo de Miguel del 2026-09-11, tanda 1 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+    dominios:
+    - ecologia
+    - fauna
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Segundo nombre del panal, sin paralelo: C, al corpus (miel). Que haya TRES nombres para el
+      panal (maba, mebi, bayure) sugiere tres cosas distintas que el autor ya no distingue — quizá tres
+      abejas, como bayure y la abeja zamuro. Deuda: preguntar a Miguel si su gente los diferencia.'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-067
+    voz: memerea
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «memerea» — con este nombre se conoció
+      a los panales de las abejas, generalmente localizados en troncos secos (Medina Colina, p. 183; campo:
+      fauna / oficio (miel)).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 183 (dictado de Miguel, 2026-09-08); fallo
+      de Miguel del 2026-09-11, tanda 1 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 183
+    dominios:
+    - ecologia
+    - fauna
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Otro nombre del panal, con el rasgo del tronco seco que bayure ya traía: C. El racimo completo
+      de la miel paraguanera queda así: maba, mebi, bayure, mavita, memerea, matejea (avispas), zamuro (abeja
+      hedionda) — siete voces donde el lexicón tenía una (ruba). Es el hueco léxico mejor documentado del
+      d'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-068
+    voz: tobeca
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «tobeca» — con esta palabra identificaron
+      a la perdiz, también llamada chenga (Medina Colina, p. 279; campo: fauna).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 279 (dictado de Miguel, 2026-09-08); fallo
+      de Miguel del 2026-09-11, tanda 2 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 279
+    dominios:
+    - ecologia
+    - fauna
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Segundo nombre local de la perdiz (con chenga): C, al corpus (fauna). Dos nombres, ¿dos aves
+      (Colinus y Crypturellus)? Deuda.'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-069
+    voz: buchuco
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «buchuco» — [s.v. mapire] también se conoció
+      como buchuco (Medina Colina, p. 179; campo: casa / oficio (fibra)).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 179 (dictado de Miguel, 2026-09-08); fallo
+      de Miguel del 2026-09-11, tanda 3 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 179
+    dominios:
+    - ecologia
+    - oficios
+    - cultura_material
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Nombre local frente al nacional (mapire), con el sufijo -uco que el caquetío atestiguado usa:
+      C, al corpus (casa/fibra). Lo que la subiría: la raíz buch- en otra palabra de tejido o recipiente.'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-070
+    voz: cadare
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «cadare» — la primera fue creada por el
+      pueblo como sinónimo de la segunda, y ambas significaron una suciedad profunda; conforme a la Academia
+      de la Lengua, la segunda es grasa o suciedad de la lana, vestidos u otros. (Medina Colina, p. 57;
+      campo: otro (cuerpo/casa)).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 57 (dictado de Miguel, 2026-09-01); fallo
+      de Miguel del 2026-09-11, tanda 3 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 57
+    dominios:
+    - ecologia
+    - oficios
+    - cultura_material
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Sobrevive a los descartes por falta de etimología, no por mérito: el campo (suciedad) no discrimina
+      y solo la única fuente la hace «restringida». Queda C-baja / dudosa. Lo único que la sostiene es la
+      final -are/-re que Miguel viene marcando (budare, cachinare, y la terminación toponímica más frecuen'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-071
+    voz: debudeque
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «debudeque» — símil de la paledonia (Medina
+      Colina, página no dictada (⚠️ pendiente); campo: comida (dulce)).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, página no dictada (⚠️ pendiente) (dictado de
+      Miguel, 2026-09-07); fallo de Miguel del 2026-09-11, tanda 3 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+    dominios:
+    - ecologia
+    - oficios
+    - cultura_material
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Plausible, no más: sobrevive a los descartes (no es castellano, ni panhispánico, ni wayuu
+      conocido) y cumple dos criterios, distribución restringida y respaldo toponímico — el segundo solo
+      si dabudeque es la forma primaria y la raíz es dabuda ''barro de loza'', lo que el referente («ladrillitos
+      de ado'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+    identificacion: 'Dulce de Falcón: torta hecha con pan viejo y papelón (o panela), que se corta en trozos
+      rectangulares «parecidos a ladrillos de adobe» (recetarios y blogs falconianos, consultados el 2026-09-07).
+      La paledonia con la que Medina la compara es la catalina o cuca: galleta o torta de harina de trigo
+      y melado de papelón con canela, clavo y anís; el nombre paledonia es el del Zulia y los Andes.'
+  - id: ecologia-072
+    voz: disey
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «disey» — nuestras abuelas cocinaban sobre
+      un fuego producido con leña seca, rodeado de tres topias o piedras de igual tamaño sobre las que descansaban
+      la sartén, la olla u otro. A dichas topias se les denominó así. (Medina Colina, p. 95; campo: casa
+      (fogón)).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 95 (dictado de Miguel, 2026-09-01); fallo
+      de Miguel del 2026-09-11, tanda 1 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 95
+    dominios:
+    - ecologia
+    - oficios
+    - cultura_material
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Nombre local de la piedra de fogón frente al nacional topia: pasa los filtros, campo local
+      (la cocina de leña de tres piedras es la del mundo simulado) y distribución restringida; sin cognado
+      ni atestación. C, al corpus (casa/cocina). Final -ey (cf. jagüey, Yabuquiva no; en el canon casi no
+      hay fina'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-073
+    voz: guarupepe
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «guarupepe» — la auyama madura, cocida,
+      mezclada con leche, que quedara espesa: eso era un guarupepe, comida muy apreciada por nuestra gente.
+      (Medina Colina, página no dictada (⚠️ pendiente); campo: comida).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, página no dictada (⚠️ pendiente) (dictado de
+      Miguel, 2026-09-07); fallo de Miguel del 2026-09-11, tanda 4 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+    dominios:
+    - ecologia
+    - oficios
+    - cultura_material
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Nombre local de un plato, sin paralelo en ningún repertorio, que pasa los filtros y cumple
+      dos criterios. El plato es mestizo (auyama + leche), como datera y debudeque: si la raíz guaru- es
+      indígena, es nombre nuevo con raíz vieja. C, al corpus (comida). Ojo: Esteves p. 42 da GUARU ''cataneja''
+      (el av'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-074
+    voz: machire
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «machire» — es producto del ingenio de
+      nuestro pueblo para designar la harina del maíz que presenta en su textura mucha granulación y, por
+      lo tanto, dará una arepa de baja calidad, por lo que es recomendable volver a moler para que quede
+      chirita, o sea fina, y así una buena arepa. (Medina Colina, página no dictada (⚠️ pendiente); campo:
+      comida (maíz)).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, página no dictada (⚠️ pendiente) (dictado de
+      Miguel, 2026-09-08); fallo de Miguel del 2026-09-11, tanda 4 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+    dominios:
+    - ecologia
+    - oficios
+    - cultura_material
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Contra la marca del autor («ingenio del pueblo»), la forma se deja analizar: ma- privativo
+      + chir- (la raíz de chirita ''fina'') = ''no fina'', que es exactamente lo que glosa. C: hipótesis
+      morfológica registrada con su condición — que chir- aparezca suelto o en otra composición. Si vale,
+      es el privativ'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-075
+    voz: sarutaco
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «sarutaco» — para los paraguaneros, todo
+      cuanto estuviese en su punto medio de perfección estaba sarutaco: frutas a medio madurar, carne a
+      medio asar o medio cocida. En el estado Lara le dicen así solo a los cambures a medio madurar. (Medina
+      Colina, p. 260; campo: comida / otro).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 260 (dictado de Miguel, 2026-09-08); fallo
+      de Miguel del 2026-09-11, tanda 3 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 260
+    dominios:
+    - ecologia
+    - oficios
+    - cultura_material
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Voz del occidente sin paralelo castellano, con un reparto semántico que el autor mide (general
+      en Paraguaná, solo cambures en Lara): C. Lo que la subiría: Alvarado o Tamayo con origen. El área
+      Lara-Falcón es el área caquetía (Barquisimeto y la costa): compatible, no probatorio.'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+  - id: ecologia-076
+    voz: tapirama
+    contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «tapirama» — frijol de grano grande, de
+      sabor ligeramente amargo, que obliga a cambiar varias veces el agua en que se cuece; altamente nutritiva;
+      las hay de distintos colores y se les denomina por el mismo: tapirama blanca, tapirama roja, etc.
+      (Medina Colina, p. 271; campo: flora / comida (conuco)).'
+    fuente: hipotetico
+    referencia: Medina Colina 2013, Del Habla Paraguanera, p. 271 (dictado de Miguel, 2026-09-08); fallo
+      de Miguel del 2026-09-11, tanda 3 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md)
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 271
+    dominios:
+    - ecologia
+    - flora
+    - lexico_regional
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Añadida por Miguel de su propia memoria y verificada en tres fuentes, ninguna de ellas Medina:
+      Zavala Reyes 2015 #138 («guaracaro (E): tapirama silvestre»), Esteves 1989 t. 5 s.v. GUARACARO («una
+      tapirama silvestre») y Alvarado 1921 s.v. TAPIRAMO («Phaseolus sp., muy usado como legumbre en el
+      país», ref. Gilij I.194). Entra como hipotético porque el fallo lo fija así para el bloque; promoverla
+      a atestiguada con esas tres citas es decisión aparte de Miguel.'
+    limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+      no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+      no se decida (regla 3). No sube al lexicón activo.
+    identificacion: Phaseolus lunatus, el frijol de Lima (el amargor que se lava es el de los glucósidos
+      cianogénicos de la especie)
+
 huecos_lexicos:
 
   - id: hueco-lex-001

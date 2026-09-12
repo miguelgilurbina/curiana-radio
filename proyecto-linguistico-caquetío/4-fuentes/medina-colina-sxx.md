@@ -202,6 +202,18 @@ lokono, Tamayo 1977 para el léxico popular).
 **Deuda**: las páginas de la I a la M (dictadas sin página), la de
 debudeque y dividive, y si E y F se miraron.
 
+## El nivel C, aplicado al corpus (2026-09-12)
+
+Las 33 voces de nivel C que Miguel falló entre el 10 y el 11 de septiembre
+(`6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md`) ya están en el
+corpus cultural: **31 en `ecologia.yaml`** (flora, fauna, oficio y casa —
+incluida `tapirama`, que Miguel añadió de su memoria) y **1 en
+`creencia.yaml`** (`seretón`). Todas `hipotetico`, ninguna en el lexicón
+activo, cada una con su página, su «por qué C» y el límite de la regla 3
+escrito al lado. Lo aplicó `6-fusion/scripts/fusionar_nivel_c_medina.py`;
+`chamaco` quedó fuera por el silencio de Alvarado. Seis siguen sin página
+(guarero, igüira, mebi, debudeque, guarupepe, machire): están marcadas.
+
 ## Enlaces
 
 [[02_protocolo_habla_paraguanera]] · [[esteves-1989]] ·

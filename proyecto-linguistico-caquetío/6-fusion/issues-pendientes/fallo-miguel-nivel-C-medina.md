@@ -551,6 +551,8 @@ es cruzarlos.
 
 ## Estado final del bloque
 
+✅ **Aplicado al corpus el 2026-09-12** por `6-fusion/scripts/fusionar_nivel_c_medina.py`: 31 hechos en `ecologia.yaml` (ecologia-046 a -076) y 1 en `creencia.yaml` (creencia-019), todos `hipotetico`.
+
 **33 de 33 falladas**, en cuatro tandas, más una voz que Miguel añadió de su
 propia memoria (`tapirama`) y que resultó estar en tres fuentes.
 

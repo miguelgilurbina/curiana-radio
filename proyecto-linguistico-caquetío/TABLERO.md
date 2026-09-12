@@ -13,14 +13,14 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-12 17:18**.
+<!--GENERADO--> Generado el **2026-09-12 17:25**.
 
 ## ¿Vamos bien?
 
 |  | Hoy | Referencia |  |
 |---|---|---|---|
 | Entradas del lexicón **sin cita** | **0** | 82 (2026-07-21) | 🟢 −82 |
-| Hechos del corpus **con referencia** | **166 / 166** | — | 🟢 |
+| Hechos del corpus **con referencia** | **198 / 198** | — | 🟢 |
 | Tests del motor | **268 en verde** | 0 rojos | 🟢 |
 | Gate para reanudar simulaciones | **6 de 9** condiciones | faltan 3 | 🔴 |
 | Decisiones esperando a Miguel | **10 abiertas** | 5 resueltas | 🟡 |
@@ -227,12 +227,12 @@ Mapas: [[mapa-familia]] · [[mapa-ecologia]] · [[mapa-creencia]] · [[mapa-tran
 
 | Archivo | hechos | `atestiguado` | `reconstruido` | `canon-simulacion` | `hipotetico` | `retro-abstraido` | con `referencia` |
 |---|---|---|---|---|---|---|---|
-| `creencia.yaml` | 26 | 11 | 11 |  |  | 4 | 26/26 |
-| `ecologia.yaml` | 54 | 31 | 22 |  | 1 |  | 54/54 |
+| `creencia.yaml` | 27 | 11 | 11 |  | 1 | 4 | 27/27 |
+| `ecologia.yaml` | 85 | 31 | 22 |  | 32 |  | 85/85 |
 | `geografia_politica.yaml` | 13 | 11 |  |  | 2 |  | 13/13 |
 | `parentesco.yaml` | 39 | 14 | 18 |  | 7 |  | 39/39 |
 | `transmision.yaml` | 34 | 13 | 5 | 14 | 2 |  | 34/34 |
-| **total** | **166** | **80** | **56** | **14** | **12** | **4** | **166/166** |
+| **total** | **198** | **80** | **56** | **14** | **44** | **4** | **198/198** |
 
 Además, estructuras del corpus que **no son hechos etiquetados** (y por eso no entran en el total): `genealogia.yaml::linajes` (6), `genealogia.yaml::agentes` (60), `genealogia.yaml::personas_de_fondo` (14).
 
@@ -247,8 +247,8 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | 1 | 🟢 | Lexicón: 0 entradas de familia caquetía sin cita **o sin degradar** (F1) | 0 sin cita (eran 82 el 2026-07-21) |
 | 2 | 🟢 | Pares c/k resueltos (F2) | todas tomadas — [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) · medido: 8 colisiones, 2 dentro del caquetío |
 | 3 | 🟢 | Las 3 fuentes ALTA minadas (F3, F4, F5) | F3 [[alvarado-1921]] minado · F4 [[gatschet-1885]] minado · F5 [[oliver-1989-cap2]] minado |
-| 4 | 🟢 | `compilar_corpus.py` en verde (V2) | **166 hechos, 0 errores, 0 avisos** |
-| 5 | ⚪ | Citas del corpus verificadas por muestreo (F10) | **no automedible**: que la cita *resuelva* (que la página exista) es trabajo humano. Medible sí: 166/166 hechos **tienen** `referencia` |
+| 4 | 🟢 | `compilar_corpus.py` en verde (V2) | **198 hechos, 0 errores, 0 avisos** |
+| 5 | ⚪ | Citas del corpus verificadas por muestreo (F10) | **no automedible**: que la cita *resuelva* (que la página exista) es trabajo humano. Medible sí: 198/198 hechos **tienen** `referencia` |
 | 6 | 🟢 | D1, D3 y D5 tomadas | todas tomadas — [D1](https://github.com/miguelgilurbina/curiana-radio/issues/32) · [D3](https://github.com/miguelgilurbina/curiana-radio/issues/34) · [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) |
 | 7 | 🟢 | La glosa de `-bana` resuelta | todas tomadas — [D9](https://github.com/miguelgilurbina/curiana-radio/issues/38) |
 | 8 | 🔴 | El desbalance wayunaiki/lokono resuelto | abiertas: D11 — [D11](https://github.com/miguelgilurbina/curiana-radio/issues/39) · medido: wayunaiki 781 vs. lokono 666 (1.2 a 1) · fase 1 de D11 FUSIONADA: 173 de 173 raíces de Perea ya están en el habla |
@@ -290,7 +290,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1097 en 402 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 1097 en 403 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 268 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 

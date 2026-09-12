@@ -416,3 +416,34 @@
   implicacion_simulacion: >
     Marca explícita de qué NO importar. Mantiene impecable la frontera
     reconstruido/retro-abstraido.
+
+# ── NIVEL C DE MEDINA COLINA (folclor) — fallo de Miguel 2026-09-11, aplicado 2026-09-12 ──
+# Etiqueta `hipotetico` por protocolo §5. Ver 6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md
+- id: creencia-019
+  voz: seretón
+  contenido: 'VOZ DEL HABLA PARAGUANERA, nivel C del protocolo: «seretón» — forma parte del folclor y
+    consistía en que se tenía la certeza de que existían hombres con la facultad de transformarse en animales
+    pequeños y generalmente domésticos, pues los mismos tenían pacto diabólico, lo que les permitía esa
+    transformación previo el paso de desnudarse completamente y ocultar la ropa. Se dice de seretones
+    a quienes les descubrieron la ropa y se la cambiaron de sitio, por lo que no pudieron o les resultó
+    difícil recuperar su identidad. (Medina Colina, p. 262; campo: creencia).'
+  fuente: hipotetico
+  referencia: Medina Colina 2013, Del Habla Paraguanera, p. 262 (dictado de Miguel, 2026-09-08); fallo
+    de Miguel del 2026-09-11, tanda 1 (6-fusion/issues-pendientes/fallo-miguel-nivel-C-medina.md); la
+    mención de Federmann 1530 (Ceretón) y la lectura de tradición oral de Miguel, en 6-fusion/ceret_on_hipotesis_miguel.yaml
+  procedencia:
+    obra: medina-colina-sxx
+    pagina: 262
+  dominios:
+  - creencia
+  - folclor
+  - lexico_regional
+  agentes_relacionados: []
+  palabra_lexicon: null
+  locacion: null
+  lectura: La voz es única fuente y el campo (creencia) es de los que el protocolo no favorece; C por
+    el nombre propio de una figura del folclor local. El VALOR está en el motivo, que va a mc-mundo-026.
+    ---
+  limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
+    no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
+    no se decida (regla 3). No sube al lexicón activo.
