@@ -12,7 +12,7 @@
 meta:
   obra: perea-alonso-1942
   parte: 'II — Compendio Gramatical de la lengua arawak de las Guayanas Holandesa e Inglesa'
-  paginas_impresas: '545-700 (pdf 765-913). Minadas 545-608; los paradigmas conjugacionales (609-680) quedan sin vaciar'
+  paginas_impresas: '545-684 (pdf 765-912). Minadas 545-608 el 2026-09-08 y 609-684 el 2026-09-12: el tomo está vaciado entero'
   minado: '2026-09-08'
   fuentes_de_Perea: >-
     Schumann 1755 (gramática y vocabulario manuscritos), Schultz 1802 (el texto
@@ -456,15 +456,16 @@ lo_que_el_compendio_no_trae:
     ejemplos botánicos y zoológicos son adda «árbol», siba «piedra», keyu
     «venado», hime «pez», cuddibiyu «ave», baca «vacuno» (préstamo).
   - >-
-    Los PARADIGMAS conjugacionales completos (pp. 609-680) siguen sin vaciar:
-    iyaha, ttuba, sonnucu, halli, kebbe, hadubu, cada uno en sus cuatro modos y
-    cinco tiempos. El sistema está descrito arriba; lo que falta son las tablas,
-    y sólo hacen falta si el proyecto llega a conjugar de verdad.
+    ✅ (2026-09-12) Los PARADIGMAS conjugacionales (pp. 609-684) están vaciados
+    en §verbo_paradigmas, y resultó que entre las tablas iba el VOCABULARIO
+    verbal de Schumann: 239 verbos, en 6-fusion/lokono_verbos_perea_1942.yaml.
+    «Sólo hacen falta si el proyecto llega a conjugar» era verdad de las tablas
+    y falso de las listas.
 
 deuda_que_genera:
   - >-
-    Los paradigmas conjugacionales (pp. 609-680) sin vaciar: es lo único que
-    queda del tomo I.
+    ✅ (2026-09-12) Los paradigmas conjugacionales (pp. 609-684) vaciados. Del
+    tomo I sólo queda fuera la Introducción rioplatense, por decisión.
   - >-
     2-lengua/morfologia.md tiene una fila rancia: la tabla de su §2 sigue dando
     `-bana` como «'orilla / borde' — sin cita» cuando el cuerpo de la misma nota
@@ -474,3 +475,146 @@ deuda_que_genera:
     Los tomos II a V nunca llegaron al repo. El tomo III iba a ser el
     VOCABULARIO ARAWAK-ESPAÑOL, que es exactamente lo que la fase 1 de D11
     querría. Averiguar si se publicó.
+
+# ══════════════════════════════════════════════════════════════════════
+# EL VERBO, pp. 609-684 — los paradigmas de Schumann, vaciados el 2026-09-12
+# (cierra la deuda que `lo_que_el_compendio_no_trae` declaraba arriba)
+# ══════════════════════════════════════════════════════════════════════
+verbo_paradigmas:
+  paginas: >-
+    609-684 (pdf 833-912). Vaciado completo. El VOCABULARIO verbal que traen
+    las listas «se conjugan como X los siguientes» va aparte, en
+    6-fusion/lokono_verbos_perea_1942.yaml (239 verbos, 213 nuevos).
+  fuente_interna: >-
+    SCHUMANN, manuscrito de 1755: paradigmas y vocabulario. Perea los ordena,
+    los completa por inducción (lo marca entre [ ] y [?]) y los critica.
+  las_cinco_conjugaciones:
+    pagina: '609-648'
+    regla: 'se distinguen por la terminación del infinitivo y por dónde va el pronombre'
+    clases:
+      - {conj: '1ª, clase 1', infinitivo: '-in', modelo: 'a-iyaha-ddi-n «andar, caminar»', pagina: 609,
+         pronombre: 'prefijado: d-a-, bù-, li-/tù-, w-a-, hù-, n-a-'}
+      - {conj: '1ª, clase 2', infinitivo: '-ùn', modelo: 'a-ttuba-ddù-n «zambullir»', pagina: 615,
+         pronombre: 'prefijado: d-a-, bu-, lu-/tu-, w-a-, hu-, n-a-'}
+      - {conj: '1ª, clase 3', infinitivo: '-un', modelo: 'a-sonnucu-n «verter, derramar»', pagina: 619,
+         pronombre: prefijado}
+      - {conj: '2ª', infinitivo: '-an', modelo: 'a-iyaha-dda-n «arrancar (yuca)»', pagina: 624,
+         pronombre: prefijado,
+         nota: 'muchos forman un presente en -ca sin distinción de tiempo (d-a-haca-ca «hablo», d-a-dia-ca «digo»): el tiempo lo pone el adverbio (p. 628)'}
+      - {conj: '3ª', infinitivo: '-un-nua', modelo: 'a-iyuhu-dú-n-nua «pender, colgarse»', pagina: 629,
+         pronombre: prefijado,
+         nota: 'voz reflexiva/media. Perea (p. 633) corrige a Schumann: los en -n-nua no causativos «sólo pueden ser reflexivos o asimilados»'}
+      - {conj: '4ª', infinitivo: '-en', modelo: 'halli-kebbe-n «alegrarse»', pagina: 634,
+         pronombre: 'POSPUESTO, forma complementaria: de, bù, i (vr.), n (nv.), u, hù, ye',
+         nota: 'es la clase de los ESTATIVOS — colores, tamaños, sabores, estados: cule-n «ser rojo», ibe-n «estar lleno», hebbe-n «ser viejo». Un subgrupo lleva d-a/b-a pospuesto (m-isi-re d-a «procedo rectamente», p. 638)'}
+      - {conj: '5ª', infinitivo: '-in, presente en -ca', modelo: 'a-mùn-ni-n «estar con, tener»; c-a-nsi-n «amar»; hadubu-tti-n «sudar»', pagina: 640,
+         pronombre: 'pospuesto en los intransitivos (cakù-ca de «vivo»), prefijado en c-a-nsi-n (d-a-nsi-ca «amo»)'}
+  los_dos_juegos_de_pronombres:
+    pagina: '635, 652'
+    conjugativos_prefijados: {1sg: 'd-a- / da-', 2sg: 'b-a- / bu- / bù-', 3vr: 'l-a- / li- / lu-',
+                              3nv: 't-a- / tu- / tù-', 1pl: 'w-a- / wa-', 2pl: 'h-a- / hu- / hù-', 3pl: 'n-a- / na-'}
+    complementarios_pospuestos: {1sg: de, 2sg: 'bu / bù', 3vr: i, 3nv: n, 1pl: u, 2pl: 'hu / hù', 3pl: ye}
+    regla: >-
+      Transitivo → prefijado. Intransitivo, estativo o negativo → pospuesto en
+      forma complementaria (halli-kebbe de «me alegro»; m-a-iyaha-ddi-n-ni-ca de
+      «no ando»). Perea: el uso de Schumann «es por demás arbitrario, sin normas
+      aparentes» (pp. 683-684), y bu/bù alternan «por incuria del tipógrafo» (p. 613).
+    lo_que_toca_a_d11: >-
+      Completa el paradigma pronominal lokono que la ficha de la p. 587 dejó a
+      medias: allí estaban los prefijos posesivos, aquí los sujetos pospuestos.
+      El caquetío del canon no tiene ni un pronombre atestiguado y los cinco
+      reconstruidos son wayuu (decision-d11-el-nucleo-reconstruido-del-wayuu.md).
+      Si alguna vez se re-deriva desde el lokono, éste es el juego completo.
+  inventario_de_sufijos:
+    pagina: '609-612 (paradigma completo del modelo)'
+    infinitivo: '-n'
+    tiempo:
+      presente: 'radical con -a (d-a-iyaha-dda «ando»)'
+      preterito_inmediato: '-bi (d-a-iyaha-ddi-bi «he andado», hoy)'
+      preterito_absoluto: '-buna / -bùna (d-a-iyaha-ddi-buna «anduve»)'
+      preterito_remoto: '-cuba (d-a-iyaha-dda-cuba «anduve, hace mucho»)'
+      futuro: '-pa (d-a-iyaha-ddi-pa «andaré»)'
+    modo:
+      imperativo: '-te / -lte (bù-yaha-dda-te «anda tú»)'
+      subjuntivo: '-ma (d-a-iyaha-dda-ma «ande»); otra forma -n-ni-ca'
+      condicional: '-n-ni-bia-ma / -n-ni-bia-cuba-ma — reconstruido por Perea: Schumann sólo da el pretérito (p. 684)'
+      gerundio: '-ti / -te; final -bia «por, para andar»'
+    participios:
+      activo: '-ti (vr.) / -tu (nv.) / -nu (pl.); agentivo -ha-li-n «andador» (vr.) / -ru (nv.)'
+      pasivo: '-sia (d-a-ddiki-sia «lo visto por mí»); plural -sia-nu sólo para pasivos racionales (p. 612)'
+      nombre_de_accion: '-hù (a-iyaha-dda-hù «andadura»); en los en -en, -hi (halli-kebbe-hi «alegría», c-a-nsi-hi «amor»)'
+    derivacion_verbal:
+      negacion: 'm- / ma- prefijado, con el pronombre pospuesto (pp. 652-668); en el pret. inmediato el pronombre toma di-bi, bi-bi, li-bi… por armonía con -bi'
+      negacion_alternativa: 'adverbio pospuesto curru «no» (OCR cuлu, л = rr): d-a-nsi-ca curru = m-a-nsi d-a «no amo» (p. 665)'
+      reflexivo_medio: '-n-nua (3ª conjugación)'
+      causativo: '-kitti- / -cuttu- (a-ndi-kitti-n «hacer venir»)'
+      reciproco: 'adverbio pospuesto u-mon-ne-coa-wa (Schultz: a-mùn-ni-coa-wa) «unos a otros»; sólo en plural (pp. 648-651)'
+      poquedad: 'infijo -can- «un poco» — el mismo del diminutivo (a-iyaha-dda-cán-ni-n «andar poco», p. 669)'
+      deseo: 'infijo -hitti- «deseo, gusto» (a-ddica-hitti-n «desear ver», p. 671)'
+      exclusivo: 'infijo -rubu- «sólo» (a-dum-ca-rubú-ma-n «sólo dormir», p. 672)'
+      persistencia: 'infijo -coa- «aún, todavía» según Schumann; Perea lo corrige a «ser, estar habitualmente» (p. 675)'
+      intensivo: 'infijo -make- o -cu-, o partícula -ke en vez de -ca (wadi-ca n «es amplio» / wadi-ke n «es muy amplio», p. 679)'
+      reduplicacion: 'total o parcial de la raíz, «recurso frecuente en nuestro Arawak» que Schumann no menciona: a-sucusu-n «lavar» → a-sucu-sucu-n «bautizar»; a-dia-n → a-dia-dia-n «disertar» (p. 679)'
+      eliptico: 'd-a-n «mi hablar, decir, hacer»: el auxiliar A solo, con pronombre, suple el verbo entero; poi! m-a-n «asombrarse» (pp. 680-683)'
+  la_teoria_de_las_clases_segun_quand:
+    pagina: '598-599, 608'
+    regla: 'cualquier nombre, adjetivo o partícula se hace verbo anteponiendo a- o c- y añadiendo las terminaciones verbales'
+    por_que_importa: >-
+      Es la máquina que produce los estativos de la 4ª conjugación. «Rojo» no es
+      un adjetivo en lokono: es el verbo cule-n «ser rojo», y con el atributivo
+      c-/k- y el privativo m- salen los pares (c-ake-n «estar vestido» / m-ake-n
+      «estar desnudo»). Para una retroabstracción caquetía esto dice que buscar
+      «adjetivos» sueltos es buscar en la categoría equivocada.
+  el_juicio_de_perea_sobre_su_fuente:
+    pagina: '683-684'
+    cita: >-
+      «La obra gramatical de SCHUMANN, especialmente en lo que atañe a los
+      verbos, nos causa una impresión poco favorable; su teoría de las
+      conjugaciones parece demasiado lógica [...] y, por otra parte, sin
+      bastante obsecuencia sistemática [...]. SCHULTZ, en su texto, emplea los
+      verbos en forma mucho más elemental [...] supone una mayor adaptación al
+      genio de la lengua.»
+    lectura: >-
+      El gramático de 1942 desconfía del gramático de 1755 y se fía más del
+      traductor de 1802. Para el proyecto eso ordena las capas: las FORMAS de
+      las listas (el vocabulario) son dato; el APARATO de tiempos y modos es
+      construcción misionera mientras Schultz no lo use. Concuerda con la
+      sospecha de la p. 606 ya registrada arriba. (La frase de Perea sobre «la
+      rudimentaria mente salvaje» es suya y de 1942; se cita porque explica su
+      juicio, no porque se comparta.)
+  lo_que_toca_decisiones_abiertas:
+    - id: futuro-pa-vs-prospectivo-da
+      toca: 'D11 fase 3 — el sistema de aspecto del canon es wayuu-derivado (-ka / -ni / -da)'
+      hallazgo: >-
+        El futuro lokono de Schumann es -pa (d-a-iyaha-ddi-pa «andaré»), y en
+        lokono p contrasta con b (Oliver: barisi : palii; Perea: banna ≠ pana). El
+        prospectivo caquetío -da sale del desiderativo wayuu -ee, no de aquí.
+      lo_que_NO_se_afirma: 'cognación alguna entre -pa y -da: son formas de dos letras y el propio Perea duda del aparato temporal'
+      lo_que_SI: 'que si el núcleo se re-deriva desde el lokono (salidas 2 o 3 de la decisión D11), el futuro tiene forma atestiguada con paradigma: -pa'
+    - id: barba-coa-cognado-033
+      toca: 'cognado-033 (barbacoa), que estaba `deuda: sin-procedencia`'
+      hallazgo: >-
+        Perea, p. 651, al explicar -coa: «barba-coa = cañizo, como parrillas,
+        donde se pone habitualmente a secar o ahumar algo». La forma lokono
+        barrahakoa del lexicón (Brinton) queda con segunda fuente y con página.
+      accion: 'procedencia añadida al cognado el 2026-09-12; la deuda pasa a «lado taíno sin cita»'
+    - id: cule-n-y-cognado-002
+      toca: 'cognado-002 (bariki «almagre»), donde Oliver dice que el morfema de «rojo» es -ira-/-ila- y no ki-'
+      hallazgo: 'Schumann/Perea dan «ser rojo» = cule-n (p. 638) y el lexicón tiene roodi (Goeje 1928). Dos raíces para «rojo» en la misma lengua a 170 años de distancia.'
+      lectura_prudente: 'no toca la lectura de bariki. Es dato de que la columna lokono del lexicón MEZCLA ESTRATOS (1755, 1802, 1871, 1928, 1987), y de que «rojo» hay que buscarlo por estrato antes de compararlo con nada caquetío'
+    - id: coa-morfema-001-otra-vez
+      toca: 'morfema-001 (-bacoa) y la pregunta ya anotada arriba (coa-morfema-001)'
+      hallazgo: >-
+        Perea desautoriza a Schumann: -coa no es «aún, todavía» sino «ser, estar
+        habitualmente, existir» (p. 675), con a-balti-coa-na «asiento habitual»,
+        A-malli-t-a-coa-n-ti «el Hacedor de lo existente» y barba-coa. Y en
+        Schultz: yaha-coa u «aquí estamos, existimos» (Hechos 17-28).
+      lectura_prudente: >-
+        refuerza que el -coa de las formaciones locativas es un morfema de
+        estado/permanencia. Sigue sin probar que el -coa de Adabacoa sea éste;
+        pero ahora la hipótesis tiene una glosa lokono con página, no una
+        intuición.
+  lo_que_el_verbo_no_trae:
+    - 'ni un topónimo, ni una etnia, ni una palabra caquetía: Perea no conoció el caquetío'
+    - 'fauna y flora: sólo calli «yuca» y los verbos de pescar, cazar y plantar. El hueco del léxico ecológico sigue en los NOMBRES; se cubre en las ACCIONES'
+    - 'adverbios, posposiciones y conjunciones: Schumann no los trata y Perea remite a la sección de Schultz, que no está en este tomo'

@@ -74,7 +74,11 @@ REGLAS_ORTOGRAFICAS = [
     (r"x",          "sh", "<x> colonial suele valer /ʃ/"),
 ]
 
-_TILDES = str.maketrans("áéíóú", "aeiou")
+# La `ù` es la ü alemana de la Clave Panfonética de Perea 1942 (p. impresa CI),
+# y `à`/`è` son sus vocales mudas/abiertas. Medido el 2026-09-12: sin esta
+# línea la ù se BORRABA de la forma (`ttuba-ddù` → `ttubadd`) y el filtro
+# contaba codas en -d que la fuente no tiene.
+_TILDES = str.maketrans("áéíóúùàè", "aeiouuae")
 
 # ⚠️ CUESTIÓN ABIERTA, deliberadamente NO resuelta aquí.
 # `gua`/`güe` en transcripción colonial puede valer /gwa/ o simplemente /wa/:
@@ -93,7 +97,7 @@ def fonemizar(forma: str, gu_es_w: bool = False) -> str:
     de decisión silenciosa que el proyecto evita.
     """
     f = unicodedata.normalize("NFC", (forma or "").lower())
-    f = re.sub(r"[^a-záéíóúüïöñ]", "", f).translate(_TILDES)
+    f = re.sub(r"[^a-záéíóúüïöñùàè]", "", f).translate(_TILDES)
     f = f.replace("ï", "i").replace("ö", "o")
     if gu_es_w:
         f = re.sub(GU_ES_W[0], GU_ES_W[1], f)
@@ -183,13 +187,44 @@ CASTELLANO = (
 ).split()
 
 
+# ── Ortografías de transcriptor que NO son las del castellano colonial ──
+# Perea y Alonso 1942 transcribe el lokono de los moravos con geminadas que él
+# mismo declara sin valor: «las consonantes dobles alternan con las sencillas
+# sin motivo aparente: l/ll, d/dd, t/tt» (p. impresa 546). Medido el
+# 2026-09-12 sobre 390 entradas suyas: en crudo pasan el 52 %; con la
+# geminada colapsada, el 89-92 % — igual que el lokono de Pet, Goeje y Oliver
+# (84 %). Lo que se medía era al transcriptor, que es justo lo que este módulo
+# promete no medir.
+#
+# 🔴 NO es una regla global. En wayuunaiki la geminada CONTRASTA (a'ttia,
+# tottoolu, akuaippa: 33 formas), y colapsarla en todas las fuentes movería el
+# pase wayuu de 0,654 a 0,693 borrando un contraste real. Por eso se aplica
+# únicamente a las entradas que vienen de Perea, reconocidas por su `notas`.
+# `ll` y `rr` quedan fuera: en la clave de Perea son letras propias, no
+# geminadas.
+MARCA_PEREA = "Perea Alonso 1942"
+GEMINADA_DE_PEREA = re.compile(r"([bcdfghjkmnpqstvxz])\1")
+
+
+def colapsar_geminadas(forma: str) -> str:
+    """`ttuba-ddù` → `tuba-dù`. Sólo para la ortografía de Perea 1942."""
+    return GEMINADA_DE_PEREA.sub(r"\1", forma or "")
+
+
+def forma_comparable(forma: str, entrada: dict) -> str:
+    """La forma con la ortografía del transcriptor ya descontada."""
+    if MARCA_PEREA in (entrada.get("notas") or ""):
+        return colapsar_geminadas(forma)
+    return forma
+
+
 def _grupos_del_lexicon():
     from curiana_lexicon import VOCABULARIO_BASE
     grupos = {}
     for forma, entrada in VOCABULARIO_BASE.items():
         familia = FAMILIAS.get(entrada.get("fuente"))
         if familia:
-            grupos.setdefault(familia, []).append(forma)
+            grupos.setdefault(familia, []).append(forma_comparable(forma, entrada))
     return grupos
 
 

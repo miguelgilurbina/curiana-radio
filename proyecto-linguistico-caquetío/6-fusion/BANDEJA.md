@@ -13,9 +13,9 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-11**.
+<!--GENERADO--> Generado el **2026-09-12**.
 
-**2133 ítems propuestos** en 47 propuestas, más **6 issue(s)/comentario(s) redactados sin publicar**.
+**2133 ítems propuestos** en 47 propuestas, más **7 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -69,6 +69,7 @@ editar_a_mano: no
 Vistas generadas en `6-fusion/` (no cuentan: juntan lo que ya está arriba):
 
 - `lokono_perea_1942.yaml` — generado por `curiana_sim/minar_perea.py`
+- `lokono_verbos_perea_1942.yaml` — generado por `6-fusion/scripts/minar_perea_verbos.py`
 - `toponimos_mapa_kaketiana.yaml` — generado por `curiana_sim/barrer_mapa.py`
 - `toponimos_por_fuente.yaml` — generado por `curiana_sim/juntar_toponimos.py`
 
@@ -96,6 +97,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 |---|---|
 | `comentario-39-d11-rebalanceo.md` | D11 decidida: se rebalancea hacia el eje lokono-taíno, con achagua más adelante |
 | `comentario-45-tara-medina.md` | Segunda fuente, y viva: para un paraguanero del siglo XX, las taras son los saltamontes |
+| `comentario-d11-fase-1b-verbos-perea.md` | Comentario para D11 (#39) — fase 1b: el verbo de Perea, 2026-09-12 |
 | `decision-borojo-filiacion.md` | Borojó: Esteves dice que es **chibcha** y que es un **árbol frutal** |
 | `decision-d11-el-nucleo-reconstruido-del-wayuu.md` | D11 tiene una consecuencia que no se ejecutó: 23 entradas, y los pronombres enteros, se re |
 | `decision-era2-retroabstraido.md` | Decisión de modelo para la era 2: el habla que no se puede atestiguar |
