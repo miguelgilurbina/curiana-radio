@@ -13,6 +13,8 @@ meta:
   - iguana (taíno → caquetío-reconstruido)
   - macana (taíno → caquetío-reconstruido)
   n: 12
+  fusionado: '2026-09-12 — Miguel: «todas entran como voces nuevas». Aplicado por 6-fusion/scripts/fusionar_tainismos_medina.py;
+    nagua re-etiquetada, las otras 11 nuevas con clave = lema fonémico D5'
 voces:
 - voz: coa
   glosa_libro: es el palo de madera aguzado en la punta con que se abrían huecos en la tierra, y donde se depositaba
