@@ -31,6 +31,27 @@ def test_las_tildes_no_crean_fonemas():
     assert F.fonemizar("Zazárida") == F.fonemizar("zazarida")
 
 
+def test_la_u_de_perea_no_se_pierde():
+    """`ù` es la ü alemana de la clave de Perea 1942. Hasta el 2026-09-12 no
+    estaba en la clase de letras y se borraba entera: `ttuba-ddù` quedaba en
+    `ttubadd`, con una coda -d que la fuente no tiene."""
+    assert F.fonemizar("mùn") == F.fonemizar("mun")
+    assert F.fonemizar("ttuba-ddù").endswith("u")
+
+
+def test_las_geminadas_de_perea_se_colapsan_solo_para_perea():
+    """Perea (p. 546): sus geminadas alternan «sin motivo aparente». En
+    wayuunaiki, en cambio, la geminada contrasta — así que el colapso vive en
+    `forma_comparable()` y se aplica por transcriptor, no en `fonemizar()`."""
+    assert F.colapsar_geminadas("ttuba-ddù") == "tuba-dù"
+    assert F.colapsar_geminadas("barrahakoa") == "barrahakoa"     # rr no es geminada
+    perea = {"notas": "Perea Alonso 1942, tomo I …"}
+    otro = {"notas": "Pet 1987"}
+    assert F.forma_comparable("abba", perea) == "aba"
+    assert F.forma_comparable("a'ttia", otro) == "a'ttia"
+    assert F.fonemizar("abba") != F.fonemizar("aba")   # fonemizar sigue sin tocarlas
+
+
 def test_la_regla_gu_es_w_no_se_aplica_sola():
     """Es una cuestión abierta: activarla por defecto sería decidir D5 por la
     puerta de atrás."""

@@ -27,8 +27,8 @@ FUSION = RAIZ / "6-fusion"
 SIM = RAIZ / "curiana_sim"
 
 # Propuestas léxicas vivas en curiana_sim/ y por qué no se mueven.
-# lexicon_zavala.py NO está: es generado Y lo importa el motor (trampa
-# documentada en CLAUDE.md) — ya es canon-adyacente, no cola.
+# lexicon_zavala.py y lexicon_achagua.py NO están: son generados Y los importa
+# el motor (trampa documentada en CLAUDE.md) — ya son canon-adyacentes, no cola.
 LEXICON_PROPUESTAS = {
     "lexicon_alvarado.py": ("alvarado-1921", "lo importan generar_tablero y auditar_82"),
     "lexicon_gatschet.py": ("gatschet-1885", "lo importan generar_tablero y auditar_82"),

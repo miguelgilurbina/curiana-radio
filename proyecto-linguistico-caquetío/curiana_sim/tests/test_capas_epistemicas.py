@@ -92,3 +92,13 @@ def test_la_capa_retroabstraida_no_esta_vacia():
         "La capa retro-abstraída está vacía. El perfil `suelto` la lista en "
         "sus capas_lexicas, así que sin entradas produce exactamente lo mismo "
         "que `base` y el brazo laxo del experimento no mide nada.")
+
+
+def test_ninguna_entrada_sale_del_conjunto_canonico_de_fuentes():
+    """F8 (2026-09-12). Había 25 valores de `fuente`; 23 eran mezclas
+    («lokono/garifuna», «wayunaiki-cogn») que escondían acuñaciones sin cita
+    bajo un pedigrí. Si hace falta un valor nuevo, se declara en
+    FUENTES_CANONICAS con su razón — no se inventa en una entrada."""
+    import curiana_lexicon as CL
+    fuera = sorted({v.get("fuente") for v in CL.VOCABULARIO_BASE.values()} - CL.FUENTES_CANONICAS)
+    assert not fuera, f"valores de `fuente` fuera del conjunto canónico: {fuera}"

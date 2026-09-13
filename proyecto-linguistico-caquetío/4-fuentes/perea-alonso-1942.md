@@ -7,12 +7,12 @@ genero: gramatica
 local: "fuentes_caquetios/Perea_Alonso_1942_Filologia_Comparada_Arawak_TomoI.pdf (926 pp., ÚTIL)"
 paginas: 926
 capa_texto: si
-estado_minado: minada-parcial
+estado_minado: minado
 prioridad: alta
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
 verificado: 2026-09-08
-minado: 2026-09-08
-cobertura: "Parte I (Fraseario, pp. 1-541) vaciada por script. Parte II (Compendio Gramatical) leída a mano hasta la p. 601; el verbo (pp. 602-680) sin minar. Introducción (Río de la Plata) fuera de alcance."
+minado: 2026-09-12
+cobertura: "Parte I (Fraseario, pp. 1-541) vaciada por script; 173 raíces con dos o más atestaciones fusionadas el 2026-09-11 (D11 fase 1). Parte II (Compendio, pp. 545-684) vaciada ENTERA: la gramática a mano (2026-09-08) y el verbo con su vocabulario de Schumann, 239 voces (2026-09-12, D11 fase 1b). Fuera de alcance: la Introducción rioplatense (pp. I-CX) — medido: 0 menciones de achagua, taíno o caquetío, 3 de maipure/baniva — y las 486 raíces del Fraseario con una sola atestación, que son cola."
 aliases: ["Perea Alonso 1942", "Perea y Alonso 1942", "Filología comparada arawak"]
 ---
 
@@ -47,7 +47,7 @@ sirven al proyecto:
 |---|---|---|
 | Introducción | I-CX | *Apuntes para la prehistoria indígena del Río de la Plata*: la tesis de que charrúas, chanás, guenoas y minuanes hablaban dialectos arawak. **Fuera de nuestro alcance.** Trae un vocabulario chaná/guenoa/charrúa/minuán con comparanda arawak al margen |
 | **I — Fraseario** | **1-541** | **Concordancia lokono de los Hechos de los Apóstoles.** El material |
-| **II — Compendio Gramatical** | **545-~700** | **Fonética, morfología y sintaxis del lokono**, sobre Schumann y Quand. Minado hasta la p. 601; el verbo (602-680), no |
+| **II — Compendio Gramatical** | **545-684** | **Fonética, morfología y sintaxis del lokono**, sobre Schumann y Quand. Vaciado entero: la gramática (545-608) el 2026-09-08 y el verbo (609-684) el 2026-09-12 |
 
 El **Fraseario** es la pieza. Perea vació el texto bíblico de **Theodor
 Schultz, 1802** —*Act Apostel-nu*, los Hechos de los Apóstoles, traducido del
@@ -173,6 +173,14 @@ su p. 556 va a la esfera de mundo, no al lexicón.
   co, cu; `k` en ke, ki), `q` = k, `ù` = ü alemana, `x` = sh inglesa, `cx` = ch
   española, `w` = w inglesa. Y él mismo dice (p. 546) que las geminadas alternan
   «sin motivo aparente» — l/ll, d/dd, t/tt — así que para comparar se colapsan.
+- **Las geminadas engañan al filtro fonotáctico.** Medido el 2026-09-12 al
+  fusionar el verbo: las entradas de Perea pasaban el filtro de
+  `curiana_fonotactica.py` al 52 % frente al 84 % del lokono de Pet/Goeje, y
+  el test que protege el orden lokono > wayuu de D11 se puso en rojo. Eran las
+  geminadas (`tt`, `dd`, `kk`) y una `ù` que el normalizador borraba. Arreglado
+  en el instrumento, no en los datos: `forma_comparable()` colapsa la geminada
+  **sólo para las entradas de Perea**, porque en wayuu la geminada contrasta.
+  Tras el arreglo, el lokono pasa al 90 %.
 - **El estrato importa**: esto es lokono de **1802**. Perea documenta que el de
   Brett (1849) ya diverge —«la g sustituye con frecuencia a la k de los Moravos,
   y la i, u, t de aquéllos se ha transformado en e, o, cx»—, de modo que este
@@ -239,13 +247,77 @@ de una lengua hermana**, no evidencia sobre el caquetío.
   `daca` 'mano' reconstruido desde un supuesto lokono *daka* hay que revisarlo:
   Perea no da *daka* en ninguna parte.
 
+## El verbo (pp. 609-684): los paradigmas de Schumann y su vocabulario (vaciado el 2026-09-12)
+
+Propuesta en `6-fusion/lokono_verbos_perea_1942.yaml` (generada por
+`6-fusion/scripts/minar_perea_verbos.py`) y paradigmas en
+`6-fusion/lokono_gramatica_perea_1942.yaml` §`verbo_paradigmas`.
+
+Lo que la ficha decía —«las tablas sólo hacen falta si el proyecto llega a
+conjugar de verdad»— era verdad a medias. Las tablas son de Schumann; pero
+**entre tabla y tabla van las listas «se conjugan como X los siguientes», y
+esas listas son el vocabulario verbal de Schumann (ms. 1755)**: el estrato
+lokono más antiguo del repo, anterior al Fraseario. Leído a mano del OCR,
+página por página, porque las listas se desplazan por columnas y pegan la
+glosa de un verbo al vecino.
+
+| | |
+|---|---|
+| Verbos con glosa y página | **239** |
+| Nuevos para el lexicón | **213** — fusionados como `fuente: lokono`, fase 1b de D11 |
+| Con la misma clave ya en el lexicón (corroboración) | 26 |
+| Corroboraciones por concepto con Oliver A-2 / Pet / Goeje | 20 — `a-dumki-n` ~ `donkon`, `a-tti-n` ~ `ythyn`, `a-rdi-n` ~ `ridin`… |
+| Divergencias con esas fuentes | 6 — «rojo» `cule-n` / `roodi`, «negro» `caii-me-n` / `siwi`, «yuca» `calli` / `yuka` |
+
+### Lo que más pesa
+
+- **Los estativos de la 4ª conjugación son el léxico básico que faltaba**:
+  `cule-n` rojo, `subu-le-n` verde, `caii-me-n` negro, `seme-n` dulce,
+  `sipe-n` amargo, `bele-n` blando, `hebbe-n` viejo, `ibe-n` lleno,
+  `ipi-lli-be-n` grande, `móa-di-n` corto, `ùsa-n` bueno, `c-a-ima-n` malo.
+  En lokono no son adjetivos: son verbos en `-n`, y se niegan con `m-`
+  (`c-ake-n` vestido / `m-ake-n` desnudo). Para una retroabstracción caquetía
+  esto fija la categoría en que hay que buscar.
+- **Las acciones sobre el medio** que el Fraseario no tenía: pescar
+  (`a-budi-di-n`, `a-sia-n` con nasa, `a-yali-di-n` con tóxico vegetal), cazar
+  (`a-maroa-da-n` con flechas de madera), plantar, arrancar yuca, salar,
+  hervir, asar, hilar, tejer, edificar. Y `calli` 'yuca', `barba-coa` 'cañizo
+  para secar o ahumar'.
+- **El segundo juego de pronombres**: los sujetos pospuestos `de, bu, i, n,
+  u, hu, ye`, que completan el paradigma de la p. 587.
+- **El futuro lokono es `-pa`** (`d-a-iyaha-ddi-pa` 'andaré'). El prospectivo
+  `-da` del canon sale del wayuu. No se afirma cognación; se anota para la
+  fase 3 de D11.
+- **`barba-coa`** (p. 651) le da procedencia con página al lado lokono de
+  `cognado-033`, que estaba `sin-procedencia`.
+
+### La ortografía, para quien vuelva
+
+El OCR lee como **`л`** (ele cirílica) uno de los glifos de la Clave
+Panfonética. `Cxaлúa` = *Charrúa* lo fija: **`л` = RR española**. Así
+`cuлu` 'no' es `curru` y `a-лusu-ttu-n` 'edificar' es `a-rrusu-ttu-n`. Hay
+279 en el tomo.
+
+### El juicio de Perea sobre Schumann (pp. 683-684)
+
+«Su teoría de las conjugaciones parece demasiado lógica [...] SCHULTZ, en su
+texto, emplea los verbos en forma mucho más elemental [...] supone una mayor
+adaptación al genio de la lengua.» El gramático desconfía del gramático y se
+fía del traductor. Para nosotros: las **formas** de las listas son dato; el
+**aparato** de tiempos y modos es construcción misionera mientras Schultz no lo
+use. Es la misma sospecha de la p. 606, dicha al final con todas las letras.
+
 ## Qué falta
 
-- **El verbo** (pp. 602-680): paradigmas completos de conjugación —`iyaha`,
-  `ttuba`, `sonnucu`, `halli`, `kebbe`, `hadubu`—, aspecto y modo. Es lo único
-  que queda del tomo I.
-- Las **201 raíces nuevas con dos o más atestaciones** esperan fusión humana.
-- Las **486 con una sola** son cola, no lote.
+- ✅ El verbo (pp. 609-684): vaciado el 2026-09-12. **El tomo I está agotado**
+  salvo la Introducción rioplatense, que se decidió fuera de alcance.
+- ✅ Las raíces del Fraseario con dos o más atestaciones (173 tras la criba)
+  se fusionaron el 2026-09-11 (D11 fase 1).
+- Las **486 con una sola** siguen siendo cola, no lote.
+- ⚠️ Fleco medido de paso: la columna lokono que vino de la tabla A-2 de Oliver
+  tiene los verbos con `cat: sust` (`donkon` 'dormir', `ythyn` 'beber', `andin`
+  'venir', `ridin` 'morder'…). `_RAICES_VERB` sólo cuenta `v_raiz`, así que
+  esas raíces no anclan aspecto. No se tocó: es otra fuente y otra decisión.
 - La **introducción rioplatense** trae comparanda arawak general (`WUNI` agua ~
   maipure/baniva/yavitero `WENI`) que nadie ha mirado.
 - Los tomos II a V nunca se publicaron o no están en el repo; el tomo III iba a

@@ -472,18 +472,38 @@ def medir_gate(lex, censo, fuentes, corpus, decisiones):
             razon += " · medido: wayunaiki %d vs. lokono %d (%.1f a 1)" % (
                 n.get("wayunaiki", 0), n["lokono"],
                 n.get("wayunaiki", 0) / float(n["lokono"]))
-            # La fase 1 de D11 vive fuera de VOCABULARIO_BASE a propósito
-            # (ver la cabecera de lexicon_perea.py): se declara aparte para no
-            # confundir lo propuesto con lo que está en canon.
+            # La fase 1 de D11: las raíces de Perea. Hasta el 2026-09-11
+            # vivían fuera de VOCABULARIO_BASE y esto las daba por «sin
+            # fusionar» A CIEGAS — se fusionaron y el tablero siguió diciendo
+            # que no. Ahora se COMPRUEBA cuántas están dentro, en vez de
+            # suponerlo (regla 1).
             try:
                 sys.path.insert(0, AQUI)
                 from lexicon_perea import COMPARANDA_LOKONO as _P
-                nuevo_total = n["lokono"] + len(_P)
-                razon += (" · + %d raíces lokono propuestas por Perea 1942, sin "
-                          "fusionar (fase 1 de D11); con ellas quedaría %d vs. "
-                          "%d (%.1f a 1)" % (
-                              len(_P), n.get("wayunaiki", 0), nuevo_total,
-                              n.get("wayunaiki", 0) / float(nuevo_total)))
+                from lexicon_perea import HOMOGRAFOS_CON_EL_LEXICON as _H
+                def _claves(r):
+                    # la forma de Perea puede llevar acento que la clave del
+                    # lexicon no lleva (`mun` por `mun` con grave), y los
+                    # homografos van con sufijo de lengua
+                    import unicodedata as _u
+                    pelada = "".join(c for c in _u.normalize("NFD", r)
+                                     if _u.category(c) != "Mn")
+                    for base in {r, pelada}:
+                        yield base
+                        yield "%s-lokono" % base
+                _V = _lexicon().VOCABULARIO_BASE
+                dentro = sum(1 for r in _P if any(k in _V for k in _claves(r)))
+                fuera = len(_P) - dentro
+                if fuera:
+                    total = n["lokono"] + fuera
+                    razon += (" · + %d raíz/raíces lokono de Perea 1942 aún SIN "
+                              "fusionar (fase 1 de D11); con ellas quedaría %d "
+                              "vs. %d (%.1f a 1)" % (
+                                  fuera, n.get("wayunaiki", 0), total,
+                                  n.get("wayunaiki", 0) / float(total)))
+                if dentro:
+                    razon += (" · fase 1 de D11 FUSIONADA: %d de %d raíces de "
+                              "Perea ya están en el habla" % (dentro, len(_P)))
             except Exception:
                 pass
     filas.append((8, "El desbalance wayunaiki/lokono resuelto", ok8, razon))

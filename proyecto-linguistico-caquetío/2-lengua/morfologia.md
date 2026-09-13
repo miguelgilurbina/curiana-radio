@@ -78,6 +78,15 @@ cognados wayunaiki, no en dato caquetío** — lo declaran ellas mismas en un ca
 > hipotéticas. Detalle y páginas en
 > `6-fusion/lokono_gramatica_perea_1942.yaml` §verbo.
 
+> **Añadido el 2026-09-12.** Los paradigmas completos (pp. 609-684) están
+> vaciados en el mismo YAML, §`verbo_paradigmas`. El futuro lokono de Schumann
+> es **`-pa`**, con paradigma (`d-a-iyaha-ddi-pa` 'andaré'); el prospectivo
+> `-da` del canon sale del wayuu `-ee`. No se afirma cognación entre ambos —
+> se anota para la fase 3 de D11: si el núcleo se re-deriva desde el lokono,
+> el futuro tiene forma atestiguada. Y el lokono tiene **dos juegos de
+> pronombre sujeto**: prefijado en los transitivos (`d-a-`, `b-a-`…) y
+> pospuesto en estativos y negativos (`de`, `bu`, `i`, `n`, `u`, `hu`, `ye`).
+
 `ka-` y `wa-` tienen apoyo insular independiente: [[van-buurt-2014]] §8 da `ka-`
 como localizador *'hay, existe(n)'* (*Casibari* = 'hay rocas duras') y §6 da
 `wa-` como prefijo de pluralidad y posesión (de Goeje 1928). Convergen con la

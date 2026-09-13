@@ -7,10 +7,10 @@ genero: cronica
 paginas: "— (no localizada)"
 capa_texto: no
 estado_minado: no-disponible
-prioridad: media
+prioridad: alta
 tareas: [F12]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-08-25
+verificado: 2026-09-11
 aliases: ["Federmann", "Federmann 1916", "Narración de Federmann", "Indianische Historia"]
 ---
 
@@ -78,3 +78,24 @@ que toca [[mapa-familia]].
 primera mano, así que sus citas son una vía puente mientras no esté el texto.
 
 Índice: [[INDICE_FUENTES]]
+
+---
+
+## 2026-09-11 — una pregunta concreta esperando a esta fuente
+
+Miguel, al fallar las voces de nivel C del dictado de Medina: «el ceretón está
+presente tanto por **Federmann** y se mantiene hasta el día de hoy en mitos».
+
+**No se ha podido verificar**: esta obra sigue `no-disponible` en el repo. Se
+buscó lo que sí se podía —la forma con permutación laxa (`seretón`, `ceretón`,
+`cerretón`, `zeretón`) y el concepto del hombre que se transforma— en los **27
+textos extraídos**, y el resultado es **cero** en ambos. Eso mide el alcance
+del repo, no la memoria de Miguel (regla 6): Federmann es justamente el texto
+que falta.
+
+Por eso la prioridad sube de `media` a `alta`. Ya no es «una crónica más que
+convendría tener»: es la fuente que decidiría si el **seretón** es un hecho de
+creencia con atestación del s. XVI y continuidad hasta hoy —de lo más fuerte
+que podría tener el corpus— o solo una voz del habla viva recogida por Medina.
+
+Búsqueda: `6-fusion/scripts/buscar_sereton.py`.

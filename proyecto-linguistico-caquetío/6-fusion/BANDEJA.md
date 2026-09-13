@@ -13,9 +13,9 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-11**.
+<!--GENERADO--> Generado el **2026-09-13**.
 
-**2130 ítems propuestos** en 45 propuestas, más **6 issue(s)/comentario(s) redactados sin publicar**.
+**2137 ítems propuestos** en 48 propuestas, más **0 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -29,6 +29,7 @@ editar_a_mano: no
 | `castellanos_1589_toponimos.yaml` | castellanos-elegias | 0 |  |
 | `censo_ana_esteves_109.yaml` | esteves-1989 | 13 |  |
 | `censo_terminacion_re.yaml` | ? | 3 |  |
+| `ceret_on_hipotesis_miguel.yaml` | ? | 3 |  |
 | `colores_caquetios.yaml` | ? | 4 |  |
 | `comparandas_jahn_1927.yaml` | jahn-1927 | 0 |  |
 | `computo_d11_2026-08-31.yaml` | ? | 4 |  |
@@ -36,6 +37,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-08-30.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-01.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-08.yaml` | ? | 0 |  |
+| `decisiones_tanda_2026-09-12.yaml` | ? | 4 |  |
 | `esteves_parte2_falcon.yaml` | esteves-1989 | 16 |  |
 | `frase_saludo_mitare.yaml` | ? | 2 |  |
 | `jahn_vocabularios_comparados.yaml` | jahn-1927 | 4 |  |
@@ -61,12 +63,17 @@ editar_a_mano: no
 | `toponimia_coro_espina.yaml` | gonzalez-batista-nombre-de-coro | 5 |  |
 | `toponimia_paraguana_miguel.yaml` | ? | 5 |  |
 | `toponimos_esteves_indice.yaml` | esteves-1989 | 130 |  |
+| `tura_la_tesis_de_miguel.yaml` | ? | 0 |  |
 | `velasco_primarios_agi.yaml` | velasco-2015-resistencia | 4 |  |
 | `voces_de_miguel_2026-09-10.yaml` | ? | 7 |  |
 
 Vistas generadas en `6-fusion/` (no cuentan: juntan lo que ya está arriba):
 
+- `achagua_fabo_1911.yaml` — generado por `6-fusion/scripts/minar_fabo_1911_achagua.py`
+- `achagua_neira_ribero_1762.yaml` — generado por `lectura en imagen por el escriba (agente Opus 5). Primera pasada 2026-09-12 (40 pliegos); segunda pasada 2026-09-12, que cierra el vocabulario entero (los 31 pliegos que faltaban), mina la lista de verbos del arte y vuelve sobre las 14 dudas`
 - `lokono_perea_1942.yaml` — generado por `curiana_sim/minar_perea.py`
+- `lokono_verbos_perea_1942.yaml` — generado por `6-fusion/scripts/minar_perea_verbos.py`
+- `tainismos_en_medina.yaml` — generado por `6-fusion/scripts/tainismos_medina_a_caquetio.py`
 - `toponimos_mapa_kaketiana.yaml` — generado por `curiana_sim/barrer_mapa.py`
 - `toponimos_por_fuente.yaml` — generado por `curiana_sim/juntar_toponimos.py`
 
@@ -92,12 +99,6 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 
 | Archivo | Qué es |
 |---|---|
-| `comentario-39-d11-rebalanceo.md` | D11 decidida: se rebalancea hacia el eje lokono-taíno, con achagua más adelante |
-| `comentario-45-tara-medina.md` | Segunda fuente, y viva: para un paraguanero del siglo XX, las taras son los saltamontes |
-| `decision-borojo-filiacion.md` | Borojó: Esteves dice que es **chibcha** y que es un **árbol frutal** |
-| `decision-d11-el-nucleo-reconstruido-del-wayuu.md` | D11 tiene una consecuencia que no se ejecutó: 23 entradas, y los pronombres enteros, se re |
-| `decision-era2-retroabstraido.md` | Decisión de modelo para la era 2: el habla que no se puede atestiguar |
-| `fallo-miguel-nivel-C-medina.md` | Las 33 voces de nivel C — esperan tu fallo |
 
 ---
 

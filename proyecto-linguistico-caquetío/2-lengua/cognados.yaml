@@ -550,8 +550,13 @@ cognados:
     LK: barrahakoa
     TN: barbacoa
   fuente: reconstruido
-  procedencia: null
-  deuda: sin-procedencia
+  procedencia:
+    obra: perea-alonso-1942
+    pagina: 651
+    ancla: barba-coa = cañizo
+  deuda: 'la procedencia cubre el lado LOKONO: Perea 1942 p. 651 «barba-coa = cañizo, como parrillas, donde
+    se pone habitualmente a secar o ahumar algo», dado como ejemplo de -coa «estado, permanencia». El lado
+    taíno sigue sin cita (añadido 2026-09-12; antes: sin-procedencia)'
   clave_origen: barbacoa
 - id: cognado-034
   glosa: persona arahuaca, gente propia

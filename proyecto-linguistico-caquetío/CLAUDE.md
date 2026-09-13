@@ -23,7 +23,13 @@ cura y se publica en Curiana Radio (`/kaketiana`).
    simulación es del XIV-XV. No se proyecta sin decidirlo explícitamente.
 4. **Los caquetíos no eran una sola sociedad.** Modelamos la polity **costera**
    (`curiana_polities.py`). Importar un rasgo de Barquisimeto o los Llanos sin
-   marcarlo es el error que Oliver denuncia.
+   marcarlo es el error que Oliver denuncia. Y el reverso, que cuesta más ver
+   (Miguel, 2026-09-11): **la unidad de análisis es la esfera, no una comarca
+   moderna**. La fuente puede ser paraguanera —Medina lo es— pero la conclusión
+   es de la Kaketiana, «un área cultural con muchas etnias conviviendo e
+   intercambiando». Escribir «los frijoles paraguaneros» aplana igual que
+   escribir «los caquetíos», solo que con etiqueta regional en vez de étnica.
+   Ver `3-mundo/esfera-de-interaccion.md`.
 5. **Minar propone, el humano fusiona.** Un minador **nunca** toca
    `curiana_lexicon.py` ni `3-mundo/corpus/`. Deja su propuesta en `6-fusion/`
    (datos en YAML; issues redactados en `issues-pendientes/`) y regenera la
@@ -55,7 +61,7 @@ cura y se publica en Curiana Radio (`/kaketiana`).
 | **`pypdf` ≠ `pdftotext`** | Producen texto distinto del mismo PDF. Arcaya sale **vacío** con pypdf; `pdftotext` da 467 KB. Y pypdf parte `Todariquiba` en `T odariquiba` |
 | **Tablas a dos columnas** | Se desalinean sin `-layout`. Extraer las dos veces y comparar |
 | **`lexicon` en PostgREST** | `max_rows`=1000 y hay ~1400 palabras: toda query sin `.range()` se trunca **en silencio**. Ver `loadLexicon()` |
-| **`lexicon_zavala.py` y `lexicon_a2.py` son generados Y se importan** | Regenerarlos **cambia `score_linguistico()`** (zavala: habla; a2: columnas de comparación paraujano/lokono, D11). ⚠️ Los otros `lexicon_*.py` NO los importa el motor, pero **sí el tooling** (`generar_tablero`, `auditar_82`, `migrar_toponimos` — medido 2026-08-15): no se pueden mover de `curiana_sim/` sin romperlo |
+| **`lexicon_zavala.py`, `lexicon_a2.py` y `lexicon_achagua.py` son generados Y se importan** | Regenerarlos **cambia `score_linguistico()`** (zavala: habla; a2: columnas de comparación paraujano/lokono, D11; achagua: la comparanda de Neira y Ribero 1762, generada desde el YAML de la transcripción — se corrige el YAML, no el módulo). ⚠️ Los otros `lexicon_*.py` NO los importa el motor, pero **sí el tooling** (`generar_tablero`, `auditar_82`, `migrar_toponimos` — medido 2026-08-15): no se pueden mover de `curiana_sim/` sin romperlo |
 | **`2-lengua/toponimos.yaml` no se edita a mano** | Es generado desde `lexicon_toponimos.py` por `migrar_toponimos.py`. Dos commits (2026-08-30/31) lo editaron directo y la siguiente regeneración deshizo 25 entradas. Se edita el módulo y se regenera; `test_el_canon_de_toponimos_es_lo_que_emite_el_migrador` lo vigila |
 | **La consola de Windows es cp1252** | Todo script que imprima `─`, `✓` o acentos necesita `_forzar_utf8()` bajo `__main__` |
 | **`pct_caquetio` está saturada** | 91% de las respuestas en 1.0. **No la uses para comparar agentes** — usa `score`. Issue #69 |

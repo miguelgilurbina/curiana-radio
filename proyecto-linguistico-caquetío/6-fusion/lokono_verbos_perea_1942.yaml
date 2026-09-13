@@ -1,0 +1,1549 @@
+# ─────────────────────────────────────────────────────────────────────────
+# EL VERBO de Perea y Alonso 1942 (parte II, pp. impresas 609-684) —
+# los paradigmas de SCHUMANN (ms. 1755) y, dentro de ellos, su vocabulario
+# verbal: las listas «se conjugan como X los siguientes».
+#
+# GENERADO por 6-fusion/scripts/minar_perea_verbos.py — la lista está
+# escrita a mano en ese script (leída del OCR página por página), y el
+# script sólo la coteja con el lexicón y la ordena. Para corregir una voz,
+# corrígela allí y regenera.
+#
+# Regla 5: propuesta, no fusión. Regla 8: cada voz lleva su página impresa.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  generado_por: 6-fusion/scripts/minar_perea_verbos.py
+  obra: perea-alonso-1942
+  parte: 'II — Compendio Gramatical, el verbo: pp. impresas 609-684 (pdf 833-912)'
+  minado: '2026-09-12'
+  estrato: 'VOCABULARIO DE SCHUMANN, manuscrito de 1755 (p. 628: «en el vocabulario este verbo significa...»), ordenado
+    por Perea y ampliado a veces con Schultz 1802. Es el estrato lokono más antiguo del repo, anterior al Fraseario.'
+  metodo: 'Leído a mano del OCR de pdftotext. NO se vació por regex: las listas del OCR se desplazan por columnas
+    y pegan la glosa de un verbo al vecino. Cada forma se copió con su página; las dudosas llevan `marcas` (sic
+    / ? / Al / ocr).'
+  ortografia: 'Clave Panfonética de Perea (p. impresa CI): c = /k/, cx = ch, x = sh, ù = ü alemana, y glifos propios
+    para r suave / RR española / R grasseyé / LL. El OCR lee uno de esos glifos como `л`; `Cxaлúa` = Charrúa fija
+    que л = RR. Aquí se translitera a rr.'
+  clave_propuesta: 'la forma de Perea sin el prefijo verbal a- y sin el sufijo de infinitivo -n / -n-nua, con sus
+    guiones: a-dumki-n → dumki. Los estativos con atributivo c-/k- lo conservan (c-a-ima «ser malo» ≠ ima «enemigo»).
+    Es la misma convención que las 173 raíces del Fraseario ya fusionadas.'
+  etiqueta_propuesta: comparanda lokono atestiguada (Schumann 1755 vía Perea 1942). Ninguna es caquetía.
+  cobertura_medida:
+    verbos_listados: 239
+    nuevos_para_el_lexicon: 213
+    ya_en_lexicon_misma_clave: 26
+    corroboraciones_por_concepto_con_otras_fuentes: 20
+    divergencias_con_otras_fuentes: 6
+    voces_sueltas_no_verbales: 7
+
+advertencias:
+- 'Perea, pp. 683-684: la gramática de Schumann «puede ser considerada como un simple ensayo» y de la p. 664 en
+  adelante «asume el carácter de un simple borrador». Los paradigmas de negación, recíprocos y con infijo son reconstrucciones
+  de Perea por inducción, marcadas [ ] y [?] en la fuente. Las LISTAS DE VERBOS no: ésas son el vocabulario, y es
+  lo que aquí se propone.'
+- Perea sospecha (p. 606) que el aparato de TIEMPO de los pretéritos es «perfeccionamiento a priori de los misioneros».
+  Los sufijos -bi / -buna / -cuba / -pa se registran como lo que Schumann declara, no como sistema verificado en
+  el habla.
+- El pronombre va PREFIJADO en los transitivos (d-a-, b-a-, l-a-…) y POSPUESTO en los estativos de la 4ª y 5ª conjugación
+  (halli-kebbe de, cakù-ca de). Perea mismo dice que el empleo de Schumann «es por demás arbitrario» (p. 683).
+- La misma raíz aparece a veces en dos clases con dos vocales (a-canaba-n / a-canabù-n «oír»; a-sucusa-n / a-sucusu-n
+  «lavar»; a-cai-da-n / a-cai-dù-n «romper»). Perea lo atribuye al cambio de la vocal final «según el tiempo verbal
+  o la presencia del acusativo» (p. 614). Son UNA raíz, no dos.
+- 'Homógrafos con el español: casa-n «engendrar», a-carta-n «enterrar», a-manta-n «afilar», a-ca-n «lavarse», a-sa-n
+  «nombrar», ide-n, pere-n, tere-n, case-n, a-usa-n. Si entran al lexicón tienen que ir con clave desambiguada (`-lokono`),
+  porque score_linguistico() cuenta como arahuaco cualquier token igual a una clave y no filtra por fuente.'
+
+# ══ los verbos, por conjugación ══
+verbos:
+- forma: a-iyaha-ddi-n
+  clave: iyaha-ddi
+  glosa: andar, caminar
+  pagina: 609
+  conjugacion: 1-in
+- forma: a-ù-n
+  clave: a-ù
+  glosa: llorar
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-ditti-n
+  clave: ditti
+  glosa: saber, conocer
+  pagina: 614
+  conjugacion: 1-in
+  ya_en_lexicon: ditti
+  glosa_lexicon: hijo (y 4 acepción/es más)
+- forma: a-buli-di-n
+  clave: buli-di
+  glosa: escribir, pintar
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-idi-n
+  clave: idi
+  glosa: ceñir
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-calleme-tti-n
+  clave: calleme-tti
+  glosa: encender
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-m-a-monaica-di-n
+  clave: m-a-monaica-di
+  glosa: 'enriquecer (lit. hacer no-pobre: m- privativo sobre a-monaica «pobre»)'
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-úyi-n
+  clave: úyi
+  glosa: arrancar, coger
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-siki-n
+  clave: siki
+  glosa: dar, poner
+  pagina: 614
+  conjugacion: 1-in
+  ya_en_lexicon: siki
+  glosa_lexicon: dar (y 2 acepción/es más)
+- forma: a-iyaon-tti-n
+  clave: iyaon-tti
+  glosa: comprar
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-balti-n
+  clave: balti
+  glosa: sentarse
+  pagina: 614
+  conjugacion: 1-in
+  ya_en_lexicon: balti
+  glosa_lexicon: sentarse
+- forma: a-budi-di-n
+  clave: budi-di
+  glosa: pescar
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-dibal-di-n
+  clave: dibal-di
+  glosa: '(Al: berbekutten — glosa alemana ilegible en la fuente)'
+  pagina: 614
+  conjugacion: 1-in
+  marcas:
+  - Al
+  - ocr
+- forma: a-dumki-n
+  clave: dumki
+  glosa: dormir, pernoctar, alojarse
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-ùki-tti-n
+  clave: ùki-tti
+  glosa: andar en vehículo
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-man-ti-n
+  clave: man-ti
+  glosa: afilar, aguzar
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-puttùki-di-n
+  clave: puttùki-di
+  glosa: apartarse
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-tti-n
+  clave: tti
+  glosa: beber
+  pagina: 614
+  conjugacion: 1-in
+  ya_en_lexicon: tti
+  glosa_lexicon: que (y 1 acepción/es más)
+- forma: ibbekiki-n
+  clave: ibbekiki
+  glosa: '(Al: bogairen — glosa alemana ilegible en la fuente)'
+  pagina: 614
+  conjugacion: 1-in
+  marcas:
+  - Al
+  - ocr
+- forma: a-malli-n
+  clave: malli
+  glosa: 'hacer (I: to make)'
+  pagina: 614
+  conjugacion: 1-in
+  ya_en_lexicon: malli
+  glosa_lexicon: encender (y 2 acepción/es más)
+- forma: a-balli-n
+  clave: balli
+  glosa: pasar, irse
+  pagina: 614
+  conjugacion: 1-in
+  ya_en_lexicon: balli
+  glosa_lexicon: árbol, madera (forma Lokono)
+- forma: a-púsi-ti-n
+  clave: púsi-ti
+  glosa: libertar
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-diriki-n
+  clave: diriki
+  glosa: afeitar, aderezar
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-uki-n
+  clave: uki
+  glosa: montar en vehículo
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-cui-di-n
+  clave: cui-di
+  glosa: escupir
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-ndi-n
+  clave: ndi
+  glosa: venir
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-nniki-di-n
+  clave: nniki-di
+  glosa: elevar, alzar
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-rdi-n
+  clave: rdi
+  glosa: morder
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-ttiki-n
+  clave: ttiki
+  glosa: cavar, ahondar
+  pagina: 614
+  conjugacion: 1-in
+  ya_en_lexicon: ttiki
+  glosa_lexicon: concitar (y 2 acepción/es más)
+- forma: a-ddiki-n
+  clave: ddiki
+  glosa: ver
+  pagina: 614
+  conjugacion: 1-in
+  ya_en_lexicon: ddiki
+  glosa_lexicon: ver (y 2 acepción/es más)
+- forma: a-bule-di-n
+  clave: bule-di
+  glosa: tirar, echar
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-bule-he-di-n
+  clave: bule-he-di
+  glosa: arrojar, tirar, echar
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-yali-di-n
+  clave: yali-di
+  glosa: envenenar con tóxico vegetal
+  pagina: 614
+  conjugacion: 1-in
+- forma: ibitti-n
+  clave: ibitti
+  glosa: quemar, encender
+  pagina: 614
+  conjugacion: 1-in
+  forma_parecida_en_lexicon:
+    ibiti: cerca
+- forma: a-llihù-ti-n
+  clave: llihù-ti
+  glosa: ungir, untar
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-ndi-kitti-n
+  clave: ndi-kitti
+  glosa: hacer venir (causativo de a-ndi-n)
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-cohùn-ti-n
+  clave: cohùn-ti
+  glosa: plantar
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-ri-di-n
+  clave: ri-di
+  glosa: nombrar, apellidar
+  pagina: 614
+  conjugacion: 1-in
+- forma: a-ttuba-ddù-n
+  clave: ttuba-ddù
+  glosa: zambullir
+  pagina: 615
+  conjugacion: 1-ùn
+- forma: a-dina-mùn
+  clave: dina-mùn
+  glosa: estar presente
+  pagina: 618
+  conjugacion: 1-ùn
+- forma: a-bacubù-n
+  clave: bacubù
+  glosa: respirar, reposar
+  pagina: 618
+  conjugacion: 1-ùn
+- forma: a-canabù-n
+  clave: canabù
+  glosa: oír
+  pagina: 618
+  conjugacion: 1-ùn
+- forma: a-iyaha-dù-n
+  clave: iyaha-dù
+  glosa: asar
+  pagina: 618
+  conjugacion: 1-ùn
+  marcas:
+  - sic
+- forma: a-ccu-dù-n
+  clave: ccu-dù
+  glosa: arrojar, echar
+  pagina: 618
+  conjugacion: 1-ùn
+- forma: a-dalli-dù-n
+  clave: dalli-dù
+  glosa: saltar
+  pagina: 618
+  conjugacion: 1-ùn
+- forma: a-paù-n
+  clave: paù
+  glosa: matar
+  pagina: 618
+  conjugacion: 1-ùn
+- forma: a-cakù-dù-n
+  clave: cakù-dù
+  glosa: avivar
+  pagina: 618
+  conjugacion: 1-ùn
+  marcas:
+  - ocr
+- forma: a-hurke-dù-n
+  clave: hurke-dù
+  glosa: juntarse, reunirse
+  pagina: 618
+  conjugacion: 1-ùn
+- forma: a-burùkù-dù-n
+  clave: burùkù-dù
+  glosa: golpear, herir
+  pagina: 618
+  conjugacion: 1-ùn
+- forma: a-ùsa-dù-n
+  clave: ùsa-dù
+  glosa: hacer bien
+  pagina: 618
+  conjugacion: 1-ùn
+  marcas:
+  - ocr
+- forma: a-iyaca-ttù-n
+  clave: iyaca-ttù
+  glosa: esconder, ocultar
+  pagina: 618
+  conjugacion: 1-ùn
+- forma: a-cai-dù-n
+  clave: cai-dù
+  glosa: romper, quebrar
+  pagina: 618
+  conjugacion: 1-ùn
+- forma: a-bbunnù-n
+  clave: bbunnù
+  glosa: plantar
+  pagina: 619
+  conjugacion: 1-ùn
+- forma: a-ccarku-dù-n
+  clave: ccarku-dù
+  glosa: tejer, trenzar
+  pagina: 619
+  conjugacion: 1-ùn
+- forma: a-patta-dù-n
+  clave: patta-dù
+  glosa: abofetear
+  pagina: 619
+  conjugacion: 1-ùn
+- forma: a-húla-dù-n
+  clave: húla-dù
+  glosa: taladrar, agujerear
+  pagina: 619
+  conjugacion: 1-ùn
+- forma: a-para-dù-n
+  clave: para-dù
+  glosa: cortar madera
+  pagina: 619
+  conjugacion: 1-ùn
+- forma: a-cartù-n
+  clave: cartù
+  glosa: enterrar, sepultar
+  pagina: 619
+  conjugacion: 1-ùn
+- forma: a-ttù-dù-n
+  clave: ttù-dù
+  glosa: huir, escaparse
+  pagina: 619
+  conjugacion: 1-ùn
+- forma: a-yara-dù-n
+  clave: yara-dù
+  glosa: dar zarpazos
+  pagina: 619
+  conjugacion: 1-ùn
+- forma: a-kkùù-n
+  clave: kkùù
+  glosa: atar, ligar
+  pagina: 619
+  conjugacion: 1-ùn
+- forma: a-kùn-dù-n
+  clave: kùn-dù
+  glosa: lucir, orillar
+  pagina: 619
+  conjugacion: 1-ùn
+  marcas:
+  - ocr
+- forma: a-tia-dù-n
+  clave: tia-dù
+  glosa: pasar por, introducir
+  pagina: 619
+  conjugacion: 1-ùn
+- forma: a-ibù-n
+  clave: ibù
+  glosa: dejar, omitir
+  pagina: 619
+  conjugacion: 1-ùn
+- forma: a-ccabba-tù-n
+  clave: ccabba-tù
+  glosa: salar
+  pagina: 619
+  conjugacion: 1-ùn
+- forma: a-iyacu-n-nua-tia-dù-n
+  clave: iyacu-n-nua-tia-dù
+  glosa: atravesar de parte a parte
+  pagina: 619
+  conjugacion: 1-ùn
+- forma: a-cula-ttù-n
+  clave: cula-ttù
+  glosa: golpear, herir
+  pagina: 619
+  conjugacion: 1-ùn
+- forma: a-cúllekù-n
+  clave: cúllekù
+  glosa: esparcir, desparramar
+  pagina: 619
+  conjugacion: 1-ùn
+- forma: a-kùttù-n
+  clave: kùttù
+  glosa: empujar, chocar
+  pagina: 619
+  conjugacion: 1-ùn
+- forma: a-sonnucu-n
+  clave: sonnucu
+  glosa: verter, derramar
+  pagina: 619
+  conjugacion: 1-un
+- forma: a-iyacusu-n
+  clave: iyacusu
+  glosa: apagar
+  pagina: 623
+  conjugacion: 1-un
+- forma: a-ddur-hu-n
+  clave: ddur-hu
+  glosa: tejer, trenzar
+  pagina: 623
+  conjugacion: 1-un
+- forma: a-iyurucu-n
+  clave: iyurucu
+  glosa: llevar, conducir
+  pagina: 623
+  conjugacion: 1-un
+- forma: a-bucu-n
+  clave: bucu
+  glosa: hervir, cocer
+  pagina: 623
+  conjugacion: 1-un
+- forma: a-sucu-n
+  clave: sucu
+  glosa: cortar, mochar
+  pagina: 623
+  conjugacion: 1-un
+- forma: a-cu-du-n
+  clave: cu-du
+  glosa: ablandar con agua
+  pagina: 623
+  conjugacion: 1-un
+- forma: a-rrusu-ttu-n
+  clave: rrusu-ttu
+  glosa: edificar
+  pagina: 623
+  conjugacion: 1-un
+  marcas:
+  - ocr
+- forma: a-sucusu-n
+  clave: sucusu
+  glosa: lavar
+  pagina: 623
+  conjugacion: 1-un
+- forma: a-surcu-du-n
+  clave: surcu-du
+  glosa: emparentar
+  pagina: 623
+  conjugacion: 1-un
+- forma: a-tullu-du-n
+  clave: tullu-du
+  glosa: abrir
+  pagina: 623
+  conjugacion: 1-un
+  ya_en_lexicon: tullu-du
+  glosa_lexicon: abrir
+- forma: a-iyucu-n
+  clave: iyucu
+  glosa: cazar
+  pagina: 623
+  conjugacion: 1-un
+- forma: a-tun-du-n
+  clave: tun-du
+  glosa: toser
+  pagina: 623
+  conjugacion: 1-un
+- forma: a-bucu-ttu-n
+  clave: bucu-ttu
+  glosa: coger, asir
+  pagina: 623
+  conjugacion: 1-un
+- forma: a-cuttu-n
+  clave: cuttu
+  glosa: comer
+  pagina: 623
+  conjugacion: 1-un
+  ya_en_lexicon: cuttu
+  glosa_lexicon: ayunar (y 3 acepción/es más)
+- forma: a-ruru-tu-n
+  clave: ruru-tu
+  glosa: hacer barroso
+  pagina: 623
+  conjugacion: 1-un
+- forma: a-du-cuttu-n
+  clave: du-cuttu
+  glosa: mostrar, enseñar
+  pagina: 623
+  conjugacion: 1-un
+- forma: a-cunnu-n
+  clave: cunnu
+  glosa: ir
+  pagina: 623
+  conjugacion: 1-un
+- forma: a-mor-du-n
+  clave: mor-du
+  glosa: volar
+  pagina: 623
+  conjugacion: 1-un
+- forma: a-su-du-n
+  clave: su-du
+  glosa: raspar, raer
+  pagina: 623
+  conjugacion: 1-un
+- forma: a-púyu-ttu-n
+  clave: púyu-ttu
+  glosa: cargar, agravar
+  pagina: 623
+  conjugacion: 1-un
+- forma: a-ttucu-du-n
+  clave: ttucu-du
+  glosa: bajar, descender
+  pagina: 623
+  conjugacion: 1-un
+- forma: a-turru-du-n
+  clave: turru-du
+  glosa: 'acostarse, echarse (Al: niederliegen)'
+  pagina: 623
+  conjugacion: 1-un
+  marcas:
+  - Al
+  - ocr
+- forma: a-sur-tu-n
+  clave: sur-tu
+  glosa: besar, chupar
+  pagina: 623
+  conjugacion: 1-un
+- forma: a-ttucu-n
+  clave: ttucu
+  glosa: comer chupando
+  pagina: 623
+  conjugacion: 1-un
+- forma: a-hú-du-n
+  clave: hú-du
+  glosa: 'morir (con u larga acentuada: d-a-hú-da «muero», d-a-hú-du-pa «moriré»)'
+  pagina: 623
+  conjugacion: 1-un
+- forma: a-iyaha-dda-n
+  clave: iyaha-dda
+  glosa: arrancar (yuca); en el vocabulario, desarraigar, exhumar
+  pagina: 624
+  conjugacion: 2-an
+  ya_en_lexicon: iyaha-dda
+  glosa_lexicon: conversar (y 1 acepción/es más)
+- forma: a-haca-n
+  clave: haca
+  glosa: hablar
+  pagina: 628
+  conjugacion: 2-an
+  ya_en_lexicon: haca
+  glosa_lexicon: testificar (y 4 acepción/es más)
+- forma: a-iyuca-n
+  clave: iyuca
+  glosa: cazar, perseguir
+  pagina: 628
+  conjugacion: 2-an
+- forma: a-ollasa-n
+  clave: ollasa
+  glosa: hender
+  pagina: 628
+  conjugacion: 2-an
+- forma: a-pana-n
+  clave: pana
+  glosa: 'herir (cf. p. 546: pana «matar, herir»)'
+  pagina: 628
+  conjugacion: 2-an
+  marcas:
+  - ocr
+  ya_en_lexicon: pana
+  glosa_lexicon: uno
+- forma: a-usa-n
+  clave: usa
+  glosa: frotar
+  pagina: 628
+  conjugacion: 2-an
+  ya_en_lexicon: usa
+  glosa_lexicon: arremeter (y 4 acepción/es más)
+- forma: a-hùla-da-n
+  clave: hùla-da
+  glosa: perforar
+  pagina: 628
+  conjugacion: 2-an
+- forma: a-iyucaia-n
+  clave: iyucaia
+  glosa: vender
+  pagina: 628
+  conjugacion: 2-an
+- forma: a-cai-da-n
+  clave: cai-da
+  glosa: quebrar, romper
+  pagina: 628
+  conjugacion: 2-an
+- forma: a-dia-n
+  clave: dia
+  glosa: decir
+  pagina: 628
+  conjugacion: 2-an
+  ya_en_lexicon: dia
+  glosa_lexicon: decir (y 4 acepción/es más)
+- forma: a-suca-n
+  clave: suca
+  glosa: cortar, tronchar
+  pagina: 628
+  conjugacion: 2-an
+- forma: a-onnaba-n
+  clave: onnaba
+  glosa: responder
+  pagina: 628
+  conjugacion: 2-an
+- forma: a-purisa-n
+  clave: purisa
+  glosa: raspar la piel
+  pagina: 628
+  conjugacion: 2-an
+- forma: a-sucusa-n
+  clave: sucusa
+  glosa: lavar
+  pagina: 628
+  conjugacion: 2-an
+  ya_en_lexicon: sucusa
+  glosa_lexicon: bautizar
+- forma: a-ùmaha-n
+  clave: ùmaha
+  glosa: hostilizar
+  pagina: 628
+  conjugacion: 2-an
+- forma: a-ca-n
+  clave: ca
+  glosa: lavarse
+  pagina: 628
+  conjugacion: 2-an
+- forma: a-canaba-n
+  clave: canaba
+  glosa: oír
+  pagina: 628
+  conjugacion: 2-an
+- forma: a-ccu-da-n
+  clave: ccu-da
+  glosa: hilar
+  pagina: 628
+  conjugacion: 2-an
+- forma: a-carta-n
+  clave: carta
+  glosa: enterrar
+  pagina: 629
+  conjugacion: 2-an
+- forma: a-ccura-n
+  clave: ccura
+  glosa: cocer [¿coser?]
+  pagina: 629
+  conjugacion: 2-an
+  marcas:
+  - '?'
+- forma: a-sica-n
+  clave: sica
+  glosa: creer, oír
+  pagina: 629
+  conjugacion: 2-an
+  ya_en_lexicon: sica
+  glosa_lexicon: servir (y 4 acepción/es más)
+- forma: a-muli-da-n
+  clave: muli-da
+  glosa: engañar
+  pagina: 629
+  conjugacion: 2-an
+- forma: a-ddura-n
+  clave: ddura
+  glosa: tejer, trenzar
+  pagina: 629
+  conjugacion: 2-an
+- forma: ikkia-n
+  clave: ikkia
+  glosa: evacuar el cuerpo
+  pagina: 629
+  conjugacion: 2-an
+- forma: a-sina-n
+  clave: sina
+  glosa: descaminar
+  pagina: 629
+  conjugacion: 2-an
+- forma: a-cuyabua-n
+  clave: cuyabua
+  glosa: golpear, herir
+  pagina: 629
+  conjugacion: 2-an
+  forma_parecida_en_lexicon:
+    cuya-bua: orar (y 1 acepción/es más)
+- forma: a-lamma-da-n
+  clave: lamma-da
+  glosa: tambalearse
+  pagina: 629
+  conjugacion: 2-an
+- forma: a-manta-n
+  clave: manta
+  glosa: afilar
+  pagina: 629
+  conjugacion: 2-an
+- forma: a-nnaca-n
+  clave: nnaca
+  glosa: empuñar
+  pagina: 629
+  conjugacion: 2-an
+- forma: a-tticaha-n
+  clave: tticaha
+  glosa: ahogarse
+  pagina: 629
+  conjugacion: 2-an
+  forma_parecida_en_lexicon:
+    ttica-ha: dañar (y 1 acepción/es más)
+- forma: a-sia-n
+  clave: sia
+  glosa: pescar con nasa
+  pagina: 629
+  conjugacion: 2-an
+  ya_en_lexicon: sia
+  glosa_lexicon: sufijo relativizador de objeto (-sia)
+- forma: a-sa-n
+  clave: sa
+  glosa: nombrar
+  pagina: 629
+  conjugacion: 2-an
+- forma: a-ùca-n
+  clave: ùca
+  glosa: casarse
+  pagina: 629
+  conjugacion: 2-an
+- forma: a-ddaca-n
+  clave: ddaca
+  glosa: soltar agua
+  pagina: 629
+  conjugacion: 2-an
+- forma: a-saca-da-n
+  clave: saca-da
+  glosa: encontrar
+  pagina: 629
+  conjugacion: 2-an
+- forma: a-cuikita-n
+  clave: cuikita
+  glosa: retornar, volver
+  pagina: 629
+  conjugacion: 2-an
+  forma_parecida_en_lexicon:
+    cui-kitta: arrepentirse
+- forma: a-llucu-da-n
+  clave: llucu-da
+  glosa: exponer, mostrar
+  pagina: 629
+  conjugacion: 2-an
+- forma: a-mali-cutta-n
+  clave: mali-cutta
+  glosa: enseñar
+  pagina: 629
+  conjugacion: 2-an
+  forma_parecida_en_lexicon:
+    malli-cutta: enseñar (y 2 acepción/es más)
+- forma: a-maroa-da-n
+  clave: maroa-da
+  glosa: cazar con flechas de madera
+  pagina: 629
+  conjugacion: 2-an
+- forma: a-mali-cuttu-a-n
+  clave: mali-cuttu-a
+  glosa: aprender
+  pagina: 629
+  conjugacion: 2-an
+- forma: c-a-bbura-n
+  clave: c-a-bbura
+  glosa: ser amplio, vasto (m-a-bbura-n «ser angosto»)
+  pagina: 629
+  conjugacion: 2-an
+  forma_parecida_en_lexicon:
+    bura: padre (y 1 acepción/es más)
+- forma: a-iyuhu-dú-n-nua
+  clave: iyuhu-dú
+  glosa: 'pender, estar colgado (Perea: sólo puede ser «colgarse»; a-iyubu-du-n «colgar, ahorcar» es el transitivo)'
+  pagina: 629
+  conjugacion: 3-n-nua
+- forma: a-bucú-n-nua
+  clave: bucú
+  glosa: cocerse
+  pagina: 633
+  conjugacion: 3-n-nua
+- forma: a-ùbú-n-nua
+  clave: ùbú
+  glosa: cesar, acabar
+  pagina: 633
+  conjugacion: 3-n-nua
+- forma: a-dittú-n-nua
+  clave: dittú
+  glosa: conocerse
+  pagina: 633
+  conjugacion: 3-n-nua
+- forma: a-pusi-dú-n-nua
+  clave: pusi-dú
+  glosa: librarse
+  pagina: 633
+  conjugacion: 3-n-nua
+- forma: a-sikillú-n-nua
+  clave: sikillú
+  glosa: 'ser envuelto (Al: eingewickelt werden)'
+  pagina: 633
+  conjugacion: 3-n-nua
+  marcas:
+  - Al
+- forma: a-huducullú-n-nua
+  clave: huducullú
+  glosa: suicidarse
+  pagina: 633
+  conjugacion: 3-n-nua
+- forma: a-cu-dú-n-nua
+  clave: cu-dú
+  glosa: introducirse
+  pagina: 633
+  conjugacion: 3-n-nua
+- forma: a-idi-kittú-n-nua
+  clave: idi-kittú
+  glosa: ser ceñido
+  pagina: 633
+  conjugacion: 3-n-nua
+- forma: a-huke-dú-n-nua
+  clave: huke-dú
+  glosa: perderse
+  pagina: 633
+  conjugacion: 3-n-nua
+- forma: a-buli-dú-n-nua
+  clave: buli-dú
+  glosa: pintarse
+  pagina: 633
+  conjugacion: 3-n-nua
+- forma: a-ddele-dú-n-nua
+  clave: ddele-dú
+  glosa: anclarse
+  pagina: 633
+  conjugacion: 3-n-nua
+- forma: a-dibaldi-kittú-n-nua
+  clave: dibaldi-kittú
+  glosa: acostumbrarse a dar
+  pagina: 633
+  conjugacion: 3-n-nua
+  marcas:
+  - ocr
+- forma: e-besú-n-nua
+  clave: besú
+  glosa: florecerse
+  pagina: 633
+  conjugacion: 3-n-nua
+- forma: a-hudú-n-nua
+  clave: hudú
+  glosa: curvarse
+  pagina: 633
+  conjugacion: 3-n-nua
+- forma: a-huca-dù-n-nua
+  clave: huca-dù
+  glosa: estar agujereado
+  pagina: 633
+  conjugacion: 3-n-nua
+- forma: a-iyacusú-n-nua
+  clave: iyacusú
+  glosa: apagarse
+  pagina: 634
+  conjugacion: 3-n-nua
+- forma: a-uma-ttú-n-nua
+  clave: uma-ttú
+  glosa: ser malo
+  pagina: 634
+  conjugacion: 3-n-nua
+- forma: a-iyucú-n-nua
+  clave: iyucú
+  glosa: cazarse
+  pagina: 634
+  conjugacion: 3-n-nua
+- forma: ibi-ttú-n-nua
+  clave: ibi-ttú
+  glosa: arder
+  pagina: 634
+  conjugacion: 3-n-nua
+- forma: a-iyabu-dù-kittú-n-nua
+  clave: iyabu-dù-kittú
+  glosa: asarse
+  pagina: 634
+  conjugacion: 3-n-nua
+- forma: a-iyahacú-n-nua
+  clave: iyahacú
+  glosa: atravesar, pasar por entre
+  pagina: 634
+  conjugacion: 3-n-nua
+- forma: a-sucú-n-nua
+  clave: sucú
+  glosa: cortarse
+  pagina: 634
+  conjugacion: 3-n-nua
+- forma: a-ùn-ttú-n-nua
+  clave: ùn-ttú
+  glosa: vencer [?]
+  pagina: 634
+  conjugacion: 3-n-nua
+  marcas:
+  - '?'
+- forma: a-rdú-n-nua
+  clave: rdú
+  glosa: envanecerse
+  pagina: 634
+  conjugacion: 3-n-nua
+- forma: halli-kebbe-n
+  clave: halli-kebbe
+  glosa: alegrarse, complacerse (halli-kebbe-hi «alegría»; da-halli-kebbe «mi alegría»)
+  pagina: 634
+  conjugacion: 4-en
+  ya_en_lexicon: halli-kebbe
+  glosa_lexicon: gozar (y 4 acepción/es más)
+- forma: catti-kebe-n
+  clave: catti-kebe
+  glosa: 'robar (p. 664: c-a-tti-kebe-n «robar, hurtar»)'
+  pagina: 638
+  conjugacion: 4-en
+  marcas:
+  - sic
+- forma: haule-n
+  clave: haule
+  glosa: ser ruin
+  pagina: 638
+  conjugacion: 4-en
+- forma: ibe-n
+  clave: ibe
+  glosa: estar lleno
+  pagina: 638
+  conjugacion: 4-en
+  ya_en_lexicon: ibe
+  glosa_lexicon: llenar
+- forma: caii-me-n
+  clave: caii-me
+  glosa: ser negro
+  pagina: 638
+  conjugacion: 4-en
+- forma: ereke-n
+  clave: ereke
+  glosa: desherbar, sacar la hierba
+  pagina: 638
+  conjugacion: 4-en
+- forma: ca-me-n
+  clave: ca-me
+  glosa: 'oler, ser oloroso, dar olor de sí (p. 664: ca-eme-n)'
+  pagina: 638
+  conjugacion: 4-en
+- forma: case-n
+  clave: case
+  glosa: estar agusanado
+  pagina: 638
+  conjugacion: 4-en
+- forma: pere-n
+  clave: pere
+  glosa: estar furioso, airado
+  pagina: 638
+  conjugacion: 4-en
+- forma: waikille-n
+  clave: waikille
+  glosa: 'estar lejos (p. 665: wai-kille-n «ser ancho»)'
+  pagina: 638
+  conjugacion: 4-en
+- forma: m-ake-n
+  clave: m-ake
+  glosa: estar desnudo (privativo de c-ake-n «estar vestido»)
+  pagina: 638
+  conjugacion: 4-en
+- forma: ma-yukehe-n
+  clave: m-yukehe
+  glosa: 'no estar loco (privativo: *yukehe- «loco»)'
+  pagina: 638
+  conjugacion: 4-en
+- forma: iribe-n
+  clave: iribe
+  glosa: ser impuro
+  pagina: 638
+  conjugacion: 4-en
+  ya_en_lexicon: iribe
+  glosa_lexicon: común (y 1 acepción/es más)
+- forma: hehe-n
+  clave: hehe
+  glosa: ser pálido
+  pagina: 638
+  conjugacion: 4-en
+- forma: ipi-lli-be-n
+  clave: ipi-lli-be
+  glosa: ser grande (vr.; ipi-ru-be-n nv.)
+  pagina: 638
+  conjugacion: 4-en
+- forma: c-ake-n
+  clave: c-ake
+  glosa: estar vestido, cubierto
+  pagina: 638
+  conjugacion: 4-en
+- forma: bele-n
+  clave: bele
+  glosa: ser blando
+  pagina: 638
+  conjugacion: 4-en
+  ya_en_lexicon: bele
+  glosa_lexicon: cojo (y 1 acepción/es más)
+- forma: sipe-n
+  clave: sipe
+  glosa: ser amargo [?]
+  pagina: 638
+  conjugacion: 4-en
+  marcas:
+  - '?'
+- forma: hebbe-n
+  clave: hebbe
+  glosa: ser viejo, anciano
+  pagina: 638
+  conjugacion: 4-en
+- forma: calli-me-n
+  clave: calli-me
+  glosa: lucir, brillar
+  pagina: 638
+  conjugacion: 4-en
+- forma: ide-n
+  clave: ide
+  glosa: estar muy cocido
+  pagina: 638
+  conjugacion: 4-en
+- forma: cule-n
+  clave: cule
+  glosa: ser rojo, colorado
+  pagina: 638
+  conjugacion: 4-en
+- forma: were-be-n
+  clave: were-be
+  glosa: 'estar caliente (p. 665: tere-n)'
+  pagina: 638
+  conjugacion: 4-en
+- forma: subu-le-n
+  clave: subu-le
+  glosa: ser verde
+  pagina: 638
+  conjugacion: 4-en
+- forma: ma-mole-n
+  clave: m-mole
+  glosa: 'no estar ebrio (p. 664: sommole-n «estar ebrio»)'
+  pagina: 638
+  conjugacion: 4-en
+- forma: m-isi-re-n
+  clave: m-isi-re
+  glosa: proceder rectamente (pronombre d-a, b-a… pospuesto)
+  pagina: 638
+  conjugacion: 4-en
+- forma: yiba-na-n
+  clave: yiba-na
+  glosa: retrasarse, quedarse atrás
+  pagina: 639
+  conjugacion: 4-en
+- forma: c-a-monai-ca-n
+  clave: c-a-monai-ca
+  glosa: ser pobre
+  pagina: 639
+  conjugacion: 4-en
+- forma: c-a-sicoa-n
+  clave: c-a-sicoa
+  glosa: habitar, residir
+  pagina: 639
+  conjugacion: 4-en
+- forma: casa-n
+  clave: casa
+  glosa: 'engendrar (p. 664: c-a-sa-n; m-a-sa-n «no tener hijos»)'
+  pagina: 639
+  conjugacion: 4-en
+- forma: c-a-ima-n
+  clave: c-a-ima
+  glosa: 'ser malo (p. 664: c-a-ima-ca-n)'
+  pagina: 639
+  conjugacion: 4-en
+  forma_parecida_en_lexicon:
+    ima: enemigo (y 1 acepción/es más)
+- forma: emelie-n
+  clave: emelie
+  glosa: ser nuevo, reciente (emelia de «soy nuevo»)
+  pagina: 639
+  conjugacion: 4-en
+- forma: c-a-raiyè-n
+  clave: c-a-raiyè
+  glosa: aparecer
+  pagina: 639
+  conjugacion: 4-en
+- forma: yaha-ddi-a-n
+  clave: yaha-ddi-a
+  glosa: 'estar cerca (p. 639: vaha-di-è-n)'
+  pagina: 665
+  conjugacion: 4-en
+- forma: ùttùa-n
+  clave: ùttùa
+  glosa: 'ser sangriento, estar ensangrentado (p. 639: yittùè-n)'
+  pagina: 665
+  conjugacion: 4-en
+- forma: sommole-n
+  clave: sommole
+  glosa: estar ebrio
+  pagina: 664
+  conjugacion: 4-en
+- forma: k-eme-kebbù-n
+  clave: k-eme-kebbù
+  glosa: 'trabajar (p. 648: keme-kebbu-n «estar atareado»)'
+  pagina: 664
+  conjugacion: 4-en
+- forma: seme-n
+  clave: seme
+  glosa: ser dulce
+  pagina: 665
+  conjugacion: 4-en
+  ya_en_lexicon: seme
+  glosa_lexicon: mágico, mago (y 2 acepción/es más)
+- forma: tere-n
+  clave: tere
+  glosa: estar caliente
+  pagina: 664
+  conjugacion: 4-en
+- forma: wuré-n
+  clave: wuré
+  glosa: 'guiar (Sl: fornicar)'
+  pagina: 665
+  conjugacion: 4-en
+- forma: mihite-n
+  clave: mihite
+  glosa: estar cansado
+  pagina: 665
+  conjugacion: 4-en
+- forma: wasi-n
+  clave: wasi
+  glosa: ser amplio
+  pagina: 665
+  conjugacion: 4-en
+- forma: wai-kille-n
+  clave: wai-kille
+  glosa: ser ancho
+  pagina: 665
+  conjugacion: 4-en
+- forma: ùsa-n
+  clave: ùsa
+  glosa: ser bueno (mù-ùsa-n «no ser bueno»)
+  pagina: 665
+  conjugacion: 4-en
+  forma_parecida_en_lexicon:
+    usa: arremeter (y 4 acepción/es más)
+- forma: wadi-n
+  clave: wadi
+  glosa: ser amplio (wadi-ke n «es muy amplio»)
+  pagina: 679
+  conjugacion: 4-en
+- forma: móa-di-n
+  clave: móa-di
+  glosa: ser corto
+  pagina: 679
+  conjugacion: 4-en
+- forma: a-mùn-ni-n
+  clave: mùn-ni
+  glosa: 'estar con, haber, tener (Schumann: c-a-mùn-ni-n «haber, tener»; m-a-mùn-ni-n «carecer»)'
+  pagina: 640
+  conjugacion: 5-ca
+- forma: c-a-nsi-n
+  clave: c-a-nsi
+  glosa: amar, querer (c-a-nsi-hi «amor, querencia»; c-a-nsi-sia «amado»)
+  pagina: 644
+  conjugacion: 5-ca
+  forma_parecida_en_lexicon:
+    nsi: discipulo (y 3 acepción/es más)
+- forma: cai-n
+  clave: cai
+  glosa: estar enfermo (cari-ca de «estoy enfermo»)
+  pagina: 644
+  conjugacion: 5-ca
+  ya_en_lexicon: cai
+  glosa_lexicon: isla
+- forma: hadubu-tti-n
+  clave: hadubu-tti
+  glosa: sudar
+  pagina: 647
+  conjugacion: 5-ca
+- forma: cakù-n
+  clave: cakù
+  glosa: vivir (cakù-ca de «vivo»)
+  pagina: 647
+  conjugacion: 5-ca
+- forma: hamaru-n
+  clave: hamaru
+  glosa: 'estar asustado (?) (p. 668: hamma-ru-ca bu «estás con miedo»)'
+  pagina: 647
+  conjugacion: 5-ca
+  marcas:
+  - '?'
+- forma: a-boa-n
+  clave: boa
+  glosa: estar enfermo
+  pagina: 647
+  conjugacion: 5-ca
+  ya_en_lexicon: boa
+  glosa_lexicon: crimen, delito (y 3 acepción/es más)
+- forma: hiccu-li-n
+  clave: hiccu-li
+  glosa: ser cojo
+  pagina: 647
+  conjugacion: 5-ca
+- forma: c-a-lluccu-n
+  clave: c-a-lluccu
+  glosa: no estar vacío
+  pagina: 647
+  conjugacion: 5-ca
+- forma: a-daiya-hù-n
+  clave: daiya-hù
+  glosa: 'estar despierto (p. 668: a-daiya-hù-ca bu «eres señor, distinguido»; p. 676: Gott a-daiya-coa-coa-na «el
+    reino de Dios»)'
+  pagina: 647
+  conjugacion: 5-ca
+- forma: a-nnakù-di-n
+  clave: nnakù-di
+  glosa: estar en medio, entre
+  pagina: 647
+  conjugacion: 5-ca
+- forma: a-bu-luccu-du-n
+  clave: bu-luccu-du
+  glosa: estar en punta
+  pagina: 647
+  conjugacion: 5-ca
+- forma: tu-rubu-ddi-n
+  clave: tu-rubu-ddi
+  glosa: estar cansado
+  pagina: 647
+  conjugacion: 5-ca
+- forma: haburù-n
+  clave: haburù
+  glosa: estar avergonzado (haburu-ca de «me avergüenzo»)
+  pagina: 648
+  conjugacion: 5-ca
+- forma: k-ere-ti-n
+  clave: k-ere-ti
+  glosa: estar casada (k-ere-u-n «estar casado»; k-ere-ru-ca «tengo mujer»)
+  pagina: 648
+  conjugacion: 5-ca
+- forma: c-a-ddibeu-n
+  clave: c-a-ddibeu
+  glosa: ser grueso
+  pagina: 648
+  conjugacion: 5-ca
+- forma: kebéru-n
+  clave: kebéru
+  glosa: 'ser disimulado (p. 668: k-ebe-ru-ca de «yo oculto»)'
+  pagina: 648
+  conjugacion: 5-ca
+- forma: hammarù-n
+  clave: hammarù
+  glosa: estar acobardado (?)
+  pagina: 648
+  conjugacion: 5-ca
+  marcas:
+  - '?'
+- forma: coa-llaba-n
+  clave: coa-llaba
+  glosa: estar al lado
+  pagina: 648
+  conjugacion: 5-ca
+- forma: a-ni-n
+  clave: ni
+  glosa: 'hacer (I: to do); el auxiliar universal'
+  pagina: 648
+  conjugacion: 5-ca
+- forma: ebeta-n
+  clave: ebeta
+  glosa: retardar
+  pagina: 650
+  conjugacion: recíproco
+- forma: ikitta-n
+  clave: ikitta
+  glosa: servir, atender
+  pagina: 650
+  conjugacion: recíproco
+  ya_en_lexicon: ikitta
+  glosa_lexicon: guardar (y 1 acepción/es más)
+- forma: a-tteki-da-n
+  clave: tteki-da
+  glosa: persuadir
+  pagina: 650
+  conjugacion: recíproco
+- forma: c-a-cubu-ruccu-n
+  clave: c-a-cubu-ruccu
+  glosa: acordarse (m-a-cubu-ruccu-ca de «no me acuerdo»)
+  pagina: 666
+  conjugacion: 5-ca
+  forma_parecida_en_lexicon:
+    cubu-ruccu: ánimo
+- forma: a-ddica-hitti-n
+  clave: ddica-hitti
+  glosa: desear ver (verbo de deseo con -hitti-)
+  pagina: 671
+  conjugacion: deseo
+- forma: a-tta-hitti-n
+  clave: tta-hitti
+  glosa: tener sed, gana de beber (m-a-tta-hitti-n «no tener sed»)
+  pagina: 672
+  conjugacion: deseo
+- forma: a-dum-ca-rubú-ma-n
+  clave: dum-ca-rubú-ma
+  glosa: sólo dormir (a-dum-ca «dormir» + -rubu- exclusivo)
+  pagina: 672
+  conjugacion: exclusivo
+- forma: a-sima-ca-n
+  clave: sima-ca
+  glosa: gritar, llamar (reduplicado a-sima-sima-ca-n «clamorear», Hechos 19-32)
+  pagina: 679
+  conjugacion: reduplicación
+- forma: a-sucu-sucu-n
+  clave: sucu-sucu
+  glosa: bautizar (reduplicación de a-sucusu-n «lavar»)
+  pagina: 679
+  conjugacion: reduplicación
+- forma: a-dia-dia-n
+  clave: dia-dia
+  glosa: disertar (reduplicación de a-dia-n «hablar», Hechos 24-25)
+  pagina: 679
+  conjugacion: reduplicación
+- forma: a-haca-haca-n
+  clave: haca-haca
+  glosa: predicar (reduplicación de a-haca-n «decir», Hechos 10-42)
+  pagina: 679
+  conjugacion: reduplicación
+- forma: poi! m-a-n
+  clave: poi-m-a
+  glosa: decir ¡ah!, asombrarse (verbo elíptico sobre la interjección poi!)
+  pagina: 682
+  conjugacion: elíptico
+
+# ══ voces no verbales que salen de paso ══
+sueltas:
+- forma: calli
+  clave: calli
+  glosa: yuca (kia calli «esta yuca», da-calle «mi yuca»)
+  pagina: 628
+  cat: sust
+- forma: barba-coa
+  clave: barba-coa
+  glosa: cañizo, como parrillas, donde se pone habitualmente a secar o ahumar algo (Perea lo da como ejemplo de
+    -coa «estado, permanencia»)
+  pagina: 651
+  cat: sust
+- forma: curru
+  clave: curru
+  glosa: 'no (adverbio pospuesto que sustituye a la m- de negación: m-a-nsi d-a = d-a-nsi-ca curru). OCR «cuлu»,
+    л = rr'
+  pagina: 665
+  cat: part
+  marcas:
+  - ocr
+- forma: make
+  clave: make
+  glosa: mucho, con vehemencia (adv.; make d-a «hablo con vehemencia»; infijo intensivo -make-)
+  pagina: 676
+  cat: part
+- forma: rubu
+  clave: rubu
+  glosa: 'sólo; poco; apenas (Perea: «sobre rubu habría mucho que hablar»; Hechos 1-5, 12-18)'
+  pagina: 651
+  cat: part
+- forma: hitti-ha
+  clave: hitti-ha
+  glosa: gusto, deseo (infijo -hitti- de los verbos de deseo)
+  pagina: 651
+  cat: sust
+- forma: lu-luccu-mùn-ti
+  clave: lu-luccu-mùn-ti
+  glosa: los que están con él [sus amigos] [?]
+  pagina: 666
+  cat: sust
+  marcas:
+  - '?'
+
+# ══ corroboraciones POR CONCEPTO con la columna lokono de otras fuentes (segunda atestación, estrato 1755) ══
+corroboraciones_por_concepto:
+- perea: a-dumki-n
+  lexicon: donkon
+  concepto: dormir
+  glosa_lexicon: dormir
+  de_donde_viene: Oliver 1989, Apéndice A, Tabla A-2, columna arawak/lokono, fila 60 'sl
+- perea: a-tti-n
+  lexicon: ythyn
+  concepto: beber
+  glosa_lexicon: beber
+  de_donde_viene: Lok. ythyn; 'beber'; ythysia 'bebida' (nominalización); kathysia 'tene
+- perea: a-ndi-n
+  lexicon: andin
+  concepto: venir
+  glosa_lexicon: venir
+  de_donde_viene: Oliver 1989, Apéndice A, Tabla A-2, columna arawak/lokono, fila 66 'co
+- perea: a-rdi-n
+  lexicon: ridin
+  concepto: morder
+  glosa_lexicon: morder
+  de_donde_viene: Oliver 1989, Apéndice A, Tabla A-2, columna arawak/lokono, fila 56 'bi
+- perea: a-canaba-n
+  lexicon: kanabyn
+  concepto: oír
+  glosa_lexicon: oír, escuchar
+  de_donde_viene: 'Lok. kanabyn; ''oír/escuchar''; to hiaro kanaba-fa to kodibio-be khonan '
+- perea: a-bucu-n
+  lexicon: bokon
+  concepto: hervir, cocer
+  glosa_lexicon: cocinar, hervir
+  de_donde_viene: Lok. bokon; 'cocinar/hervir'; bokonoa 'ser cocinado/hervirse' (pasivo/
+- perea: a-mor-du-n
+  lexicon: morodon
+  concepto: volar
+  glosa_lexicon: volar
+  de_donde_viene: Oliver 1989, Apéndice A, Tabla A-2, columna arawak/lokono, fila 64 'fl
+- perea: a-paù-n
+  lexicon: aparrun
+  concepto: matar
+  glosa_lexicon: matar (forma alternativa)
+  de_donde_viene: Lok. aparrun; 'matar'; apparahun 'muerto'; cognado Taíno operito (muer
+- perea: ibitti-n
+  lexicon: bithin
+  concepto: quemar, arder
+  glosa_lexicon: arder, quemar
+  de_donde_viene: Oliver 1989, Apéndice A, Tabla A-2, columna arawak/lokono, fila 84 'bu
+- perea: a-siki-n
+  lexicon: sikin
+  concepto: dar, poner
+  glosa_lexicon: dar, poner
+  de_donde_viene: Lok. sikin; 'dar/poner'; da-siki-fa no thy-myn 'yo se lo daré a ella';
+- perea: a-ditti-n
+  lexicon: aithin
+  concepto: saber, conocer
+  glosa_lexicon: saber, conocer
+  de_donde_viene: Oliver 1989, Apéndice A, Tabla A-2, columna arawak/lokono, fila 59 'kn
+- perea: a-cuttu-n
+  lexicon: khoton
+  concepto: comer
+  glosa_lexicon: comer
+  de_donde_viene: Oliver 1989, Apéndice A, Tabla A-2, columna arawak/lokono, fila 55 'ea
+- perea: emelie-n
+  lexicon: emelia
+  concepto: nuevo
+  glosa_lexicon: nuevo
+  de_donde_viene: Perea Alonso 1942, Filología Comparada Arawak, tomo I — lokono de 1802
+- perea: a-hú-du-n
+  lexicon: huda
+  concepto: morir
+  glosa_lexicon: morir (y 2 acepción/es más)
+  de_donde_viene: Perea Alonso 1942, Filología Comparada Arawak, tomo I — lokono de 1802
+- perea: a-iyucaia-n
+  lexicon: iyucana
+  concepto: vender
+  glosa_lexicon: vender
+  de_donde_viene: Perea Alonso 1942, Filología Comparada Arawak, tomo I — lokono de 1802
+- perea: a-tullu-du-n
+  lexicon: tullu-du
+  concepto: abrir
+  glosa_lexicon: abrir
+  de_donde_viene: Perea Alonso 1942, Filología Comparada Arawak, tomo I — lokono de 1802
+- perea: a-balti-n
+  lexicon: balti
+  concepto: sentarse
+  glosa_lexicon: sentarse
+  de_donde_viene: Perea Alonso 1942, Filología Comparada Arawak, tomo I — lokono de 1802
+- perea: barba-coa
+  lexicon: barrahakoa
+  concepto: barbacoa
+  glosa_lexicon: barbacoa, lugar de almacenamiento de provisiones
+  de_donde_viene: Lok. barrahakoa; lit. 'lugar donde se guarda comida'; origen del venez
+- perea: ipi-lli-be-n
+  lexicon: firo
+  concepto: grande
+  glosa_lexicon: grande, de gran tamaño
+  de_donde_viene: 'Lok. firo; ''grande''; firo-ka no ''es grande''; firo-bero ''cosa grande = '
+- perea: were-be-n / tere-n
+  lexicon: orebe
+  concepto: caliente
+  glosa_lexicon: caliente
+  de_donde_viene: Oliver 1989, Apéndice A, Tabla A-2, columna arawak/lokono, fila 93 'ho
+
+# ══ divergencias con la columna lokono de otras fuentes — punto de medida, no error ══
+divergencias:
+- perea: cule-n «ser rojo»
+  lexicon: roodi «rojo, colorado» (Goeje 1928)
+  lectura: raíces distintas para el mismo concepto
+- perea: caii-me-n «ser negro»
+  lexicon: siwi «negro, oscuro» (Goeje 1928)
+  lectura: raíces distintas para el mismo concepto
+- perea: hehe-n «ser pálido»
+  lexicon: hehen «amarillo» (Pet 1987)
+  lectura: 'misma raíz, glosa desplazada: pálido / amarillo'
+- perea: calli «yuca»
+  lexicon: yuka «yuca, mandioca» (Goeje 1928)
+  lectura: raíces distintas; el lokono moderno da khali/kali para el casabe y la yuca
+- perea: a-cunnu-n «ir»
+  lexicon: osyn «ir, caminar» (Pet 1987) · cun-te «ir» (Perea, Fraseario)
+  lectura: cun-te y cunnu son la misma raíz; osyn es otra
+- perea: ipi-lli-be-n «ser grande»
+  lexicon: firo «grande» (Pet 1987)
+  lectura: raíces distintas para el mismo concepto
+
+# ══ lo que este capítulo cubre del hueco que el Fraseario dejaba ══
+campo_material_y_ecologico:
+  aviso: >-
+    La ficha de la fuente decía que el Fraseario «deja intacto el hueco del
+    léxico ecológico y material». El vocabulario de Schumann lo cubre en
+    parte — no en fauna ni flora, pero sí en las ACCIONES sobre el medio:
+  voces:
+    - 'a-budi-di-n pescar · a-sia-n pescar con nasa · a-yali-di-n envenenar con tóxico vegetal (pesca con barbasco)'
+    - 'a-iyucu-n / a-iyuca-n cazar · a-maroa-da-n cazar con flechas de madera'
+    - 'a-cohùn-ti-n / a-bbunnù-n plantar · a-iyaha-dda-n arrancar yuca · ereke-n desherbar · calli yuca'
+    - 'a-ccabba-tù-n salar · a-bucu-n hervir · a-iyaha-dù-n asar · barba-coa cañizo para secar o ahumar · ide-n estar muy cocido'
+    - 'a-ccu-da-n hilar · a-ddura-n / a-ccarku-dù-n tejer, trenzar · a-rrusu-ttu-n edificar · a-ruru-tu-n hacer barroso'
+    - 'colores y cualidades: cule-n rojo · subu-le-n verde · caii-me-n negro · hehe-n pálido · seme-n dulce · sipe-n amargo · bele-n blando · were-be-n caliente · hebbe-n viejo · emelie-n nuevo · ibe-n lleno · ipi-lli-be-n grande · móa-di-n corto · wai-kille-n ancho · ùsa-n bueno · c-a-ima-n malo'
+  por_que_importa: >-
+    Son conceptos de la lista de Swadesh y del léxico básico que el caquetío
+    atestiguado sí cubre en parte (colores, comida, pesca). Es justo el
+    material con que una retroabstracción se puede CONTRASTAR en vez de
+    inventarse. Con el límite de siempre: esto es lokono de las Guayanas de
+    1755, no caquetío.

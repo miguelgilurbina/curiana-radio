@@ -55,6 +55,13 @@ nivel al estabilizarse dice qué pasó.
   Santa Ana es fundación franciscana, veredicto de Miguel). La asignación
   norte/sur queda EN VERIFICACIÓN: los homónimos modernos (Amuay al NO,
   bahía de Guaranao al sur) parecen invertidos respecto a Oliver.
+  **Medido el 2026-09-12** con coordenadas: la inversión está *dentro* del
+  pasaje de Oliver — su frase cardinal contradice a las aldeas de Delmonte
+  que él mismo cita (Cayerúa y Moruy al norte, Santa Ana al sur), y los
+  homónimos modernos concuerdan con las aldeas. **Decidido el 2026-09-12**
+  (#122, la lectura de Miguel): GUARANAO ↔ Moruy–Santa Ana–laguna (centro-sur),
+  AMUAY ↔ Cayerúa–costa oeste (norte); el Moruy de Delmonte es reasentamiento
+  colonial. `reconstruido`, deuda: Delmonte 1883 / González Batista 1984.
 - **El conglomerado del CAPUBANA como centro sagrado COMPARTIDO** — no es
   capital de ningún clan: es donde los dos convergen. Sitios con función:
   **Moruy** (el merejuy, la chicha ritual), **Chamuriana** (el agua que

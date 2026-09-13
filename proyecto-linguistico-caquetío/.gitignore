@@ -28,3 +28,7 @@ out/
 # Supabase CLI local state
 supabase/.temp/
 .branches/
+
+# D8 (#37) abierta: las imágenes y el PDF de Neira y Ribero 1762 (200 MB) viven en OneDrive, no en git
+fuentes_caquetios/neira_ribero_1762/
+fuentes_caquetios/Neira_Ribero_1762_Arte_y_Vocabulario_Lengua_Achagua_RB_II-2910.pdf
