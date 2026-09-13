@@ -180,6 +180,10 @@ FAMILIAS = {
     # D11 #39 (2026-08-31): la columna añú abre — el pariente costero más
     # cercano entra al comparador (Wilbert 1958-59 vía Oliver A-2).
     "paraujano": "paraujano (añú)",
+    # D11 fase 2 (#121), 2026-09-13: el achagua de Neira y Ribero 1762, transcrito
+    # por visión. Ortografía del copista del XVIII (V = u, J = i, r/rr): la tasa
+    # mide también al transcriptor, como avisa el módulo arriba.
+    "achagua": "achagua",
 }
 
 # Control externo: castellano corriente. No es una muestra representativa del

@@ -830,7 +830,7 @@ entradas:
     - flora
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: busuga
     locacion: null
     lectura: 'Fitónimo con técnica: madera de armazón para el bahareque (la tecnología compartida de bajareke)
       y corteza tintórea amarilla. Sin apoyo externo: C, al corpus (flora/oficios) como hipotético. Toca
@@ -855,7 +855,7 @@ entradas:
     - flora
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: kachinare
     locacion: null
     lectura: 'Cuarto término del campo «fruto de cardón» en esta sesión: el fruto que no cuajó. Una lengua
       que distingue el fruto por especie (dato/kaduchi/guanariji) y por estado (cachinare) es una lengua
@@ -879,7 +879,7 @@ entradas:
     - flora
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: gatiao
     locacion: null
     lectura: 'Fitónimo con uso, sin forma en el canon ni en Alvarado, y con la final -ao que en el caquetío
       atestiguado marca palabras de filiación propia (diao, waitiao, datihao, waranao) y NO el participio
@@ -904,7 +904,7 @@ entradas:
     - flora
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: wamaro
     locacion: null
     lectura: 'Fitónimo con propiedad (tóxico para el ganado), sin forma en el canon ni en Alvarado; pasa
       los filtros; final -aro (caujaro, cuaguaro, camuro). C, al corpus (flora). Sexta desaparición del
@@ -928,7 +928,7 @@ entradas:
     - flora
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: wanariji
     locacion: null
     lectura: 'El habla paraguanera distinguía los frutos por especie de cardón: breva (lefaria) y guanariji
       (susucure). Que el lexicón atestiguado ya tenga DOS nombres de fruto de cardón (dato, kaduchi) hace
@@ -953,7 +953,7 @@ entradas:
     - flora
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: warero
     locacion: null
     lectura: 'Como bayure: fitónimo local con función precisa (el amarre del bajareque), pasa los filtros
       y cumple dos criterios; sin cognado ni atestación. C, al corpus (casa). Deuda: identificar la planta.'
@@ -976,7 +976,7 @@ entradas:
     - flora
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: marite
     locacion: null
     lectura: 'Fitónimo local del agua estancada, única fuente: C, al corpus (flora). Deuda: la especie.'
     limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
@@ -997,7 +997,7 @@ entradas:
     - flora
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: nawata
     locacion: null
     lectura: 'Nombre de un estado de la auyama, sin paralelo: C, al corpus (conuco). Las lenguas de cultivadores
       nombran los estados del fruto (cf. jojoto para el maíz tierno, sarutaco para el punto medio): esta
@@ -1020,7 +1020,7 @@ entradas:
     - flora
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: kihuawa
     locacion: null
     lectura: 'Nombre local de una variedad de frijol, única fuente: C, al corpus (conuco). Con tapirama
       y urubana forma la serie de los frijoles paraguaneros del XX; cruzar con #105 (caraota).'
@@ -1042,7 +1042,7 @@ entradas:
     - flora
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: susukure
     locacion: null
     lectura: 'Como lefaria pero con menos apoyo: sin atestación previa de ningún tipo. Medina Colina es
       la única fuente. C, al corpus como hipotético. Si el libro trae entrada propia en la S, dictarla con
@@ -1066,7 +1066,7 @@ entradas:
     - flora
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: teko
     locacion: null
     lectura: 'Fitónimo local de fruto comestible, única fuente: C, al corpus (flora). Deuda: la especie.'
     limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
@@ -1090,7 +1090,7 @@ entradas:
     - flora
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: tura
     locacion: null
     lectura: 'Acepción local sin castellano detrás y con dos homónimos en el área, ninguno con el mismo
       sentido: C, al corpus (conuco), con los tres tura declarados para que nadie los funda. Lo que la subiría:
@@ -1115,7 +1115,7 @@ entradas:
     - flora
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: urubana
     locacion: null
     lectura: 'Fitónimo local con etimología dada por el propio autor (de Aruba): C. El valor no es el frijol,
       es el SUFIJO: un -ana/-na vivo en el XX con sentido ''de, procedente de'' sobre un topónimo, que es
@@ -1140,7 +1140,7 @@ entradas:
     - fauna
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: chenga
     locacion: null
     lectura: 'Encaja en la serie caquetía de palomas nombradas por especie (wakoa, tauta, tigi, tijua) y
       pasa los filtros; pero la final -nga es ajena al caquetío medido y propia de los africanismos, y no
@@ -1166,7 +1166,7 @@ entradas:
     - fauna
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: chebebe
     locacion: null
     lectura: 'Nombre local del saltamontes: pasa los filtros, campo local y distribución restringida, sin
       cognado ni atestación. C, al corpus (fauna). Final -ebe como carebe (p. 64): dos voces de esta letra
@@ -1190,7 +1190,7 @@ entradas:
     - fauna
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: kurubo
     locacion: null
     lectura: 'Nombre de caracol con función (pulir la loza, hacer cal) sin forma en el canon ni en Alvarado;
       pasa los filtros; campo local y distribución restringida; sin cognado ni atestación. C, al corpus
@@ -1216,7 +1216,7 @@ entradas:
     - fauna
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: wakukero
     locacion: null
     lectura: 'Tercer meliponino nombrado (ruba negra, bayure, guacuquero amarilla): la etnoapicultura del
       monte seco con vocabulario propio, que es lo que el protocolo esperaba encontrar. La forma es probablemente
@@ -1242,7 +1242,7 @@ entradas:
     - fauna
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: walamo
     locacion: null
     lectura: 'Nombre local del lagarto amarillo en Tacuato y Santa Ana frente al general bisure: pasa los
       filtros, campo local y la distribución más restringida de todo el dictado. Sin cognado ni atestación:
@@ -1268,7 +1268,7 @@ entradas:
     - fauna
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: iwira
     locacion: null
     lectura: 'Nombre local de una segunda paloma, junto a la guacoa atestiguada: pasa los filtros y cumple
       dos criterios; sin cognado ni atestación. C, al corpus (fauna). Deuda: identificar la especie.'
@@ -1290,7 +1290,7 @@ entradas:
     - fauna
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: matejea
     locacion: null
     lectura: 'Nombre del avispero, sin paralelo: C, al corpus (fauna). Quinto nombre del racimo abejas/avispas
       del dictado.'
@@ -1312,7 +1312,7 @@ entradas:
     - fauna
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: mebi
     locacion: null
     lectura: 'Segundo nombre del panal, sin paralelo: C, al corpus (miel). Que haya TRES nombres para el
       panal (maba, mebi, bayure) sugiere tres cosas distintas que el autor ya no distingue — quizá tres
@@ -1336,7 +1336,7 @@ entradas:
     - fauna
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: memerea
     locacion: null
     lectura: 'Otro nombre del panal, con el rasgo del tronco seco que bayure ya traía: C. El racimo completo
       de la miel paraguanera queda así: maba, mebi, bayure, mavita, memerea, matejea (avispas), zamuro (abeja
@@ -1360,7 +1360,7 @@ entradas:
     - fauna
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: tobeka
     locacion: null
     lectura: 'Segundo nombre local de la perdiz (con chenga): C, al corpus (fauna). Dos nombres, ¿dos aves
       (Colinus y Crypturellus)? Deuda.'
@@ -1383,7 +1383,7 @@ entradas:
     - cultura_material
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: buchuko
     locacion: null
     lectura: 'Nombre local frente al nacional (mapire), con el sufijo -uco que el caquetío atestiguado usa:
       C, al corpus (casa/fibra). Lo que la subiría: la raíz buch- en otra palabra de tejido o recipiente.'
@@ -1408,7 +1408,7 @@ entradas:
     - cultura_material
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: kadare
     locacion: null
     lectura: 'Sobrevive a los descartes por falta de etimología, no por mérito: el campo (suciedad) no discrimina
       y solo la única fuente la hace «restringida». Queda C-baja / dudosa. Lo único que la sostiene es la
@@ -1431,7 +1431,7 @@ entradas:
     - cultura_material
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: debudeke
     locacion: null
     lectura: 'Plausible, no más: sobrevive a los descartes (no es castellano, ni panhispánico, ni wayuu
       conocido) y cumple dos criterios, distribución restringida y respaldo toponímico — el segundo solo
@@ -1462,7 +1462,7 @@ entradas:
     - cultura_material
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: disey
     locacion: null
     lectura: 'Nombre local de la piedra de fogón frente al nacional topia: pasa los filtros, campo local
       (la cocina de leña de tres piedras es la del mundo simulado) y distribución restringida; sin cognado
@@ -1487,7 +1487,7 @@ entradas:
     - cultura_material
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: warupepe
     locacion: null
     lectura: 'Nombre local de un plato, sin paralelo en ningún repertorio, que pasa los filtros y cumple
       dos criterios. El plato es mestizo (auyama + leche), como datera y debudeque: si la raíz guaru- es
@@ -1514,7 +1514,7 @@ entradas:
     - cultura_material
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: machire
     locacion: null
     lectura: 'Contra la marca del autor («ingenio del pueblo»), la forma se deja analizar: ma- privativo
       + chir- (la raíz de chirita ''fina'') = ''no fina'', que es exactamente lo que glosa. C: hipótesis
@@ -1541,7 +1541,7 @@ entradas:
     - cultura_material
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: sarutako
     locacion: null
     lectura: 'Voz del occidente sin paralelo castellano, con un reparto semántico que el autor mide (general
       en Paraguaná, solo cambures en Lara): C. Lo que la subiría: Alvarado o Tamayo con origen. El área
@@ -1566,7 +1566,7 @@ entradas:
     - flora
     - lexico_regional
     agentes_relacionados: []
-    palabra_lexicon: null
+    palabra_lexicon: tapirama
     locacion: null
     lectura: 'Añadida por Miguel de su propia memoria y verificada en tres fuentes, ninguna de ellas Medina:
       Zavala Reyes 2015 #138 («guaracaro (E): tapirama silvestre»), Esteves 1989 t. 5 s.v. GUARACARO («una

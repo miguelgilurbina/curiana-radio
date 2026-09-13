@@ -8,7 +8,7 @@
 meta:
   fecha: '2026-09-12'
   decidido_por: Miguel
-  estado: CERRADA — cinco decisiones tomadas
+  estado: CERRADA — siete decisiones tomadas (la última el 2026-09-13)
   publicado: >-
     #39 cerrada con cuatro comentarios; #37 cerrada; #119 cerrada con la línea
     firmada; issue nuevo de fase 2 (#121); issue nuevo de los clanes (#122).
@@ -80,4 +80,25 @@ publicado_ademas_2026-09-12:
   - '#124: decisión era 2 retroabstraído (abierta, espera a Miguel)'
   - '#45: comentario tara = saltamontes en Medina'
   - '#71: el muestreo F10 de 20 citas (1-plan/F10_muestreo_2026-09-12.md)'
+
+borojo_123:
+  issue: 'https://github.com/miguelgilurbina/curiana-radio/issues/123'
+  estado: CERRADA (2026-09-13) — opción 3, se queda caquetío-atestiguado con el conflicto en notas
+  decision_literal: '«si buscas borojó online como salina igual sale por ejemplo borobó y efectivamente sale lo de la salina»'
+  evidencia_nueva: 'fundación de Borojó el 7-4-1715 con el cacique caquetío BOROBO (historiografía local, sin fuente primaria citada); el borojó frutal de Esteves es el del Chocó, emberá'
+  deuda: 'acta de 1715 y «boro = sal» sin fuente primaria; AM no dice de dónde saca «salina»'
+
+retroabstraido_124:
+  issue: 'https://github.com/miguelgilurbina/curiana-radio/issues/124'
+  estado: CERRADA (2026-09-13) — opción A, las 46 voces de Medina entran como caquetío-retroabstraido
+  decision_literal: '«Seguiré tu recomendación con respecto al 124»'
+  aplicado_por: 6-fusion/scripts/fusionar_medina_retroabstraido.py
+  alcance: 'nivel A sin entrada previa (4), nivel B (10), nivel C (32, enlazadas a sus hechos del corpus por palabra_lexicon); las ven sólo los perfiles suelto'
+
+achagua_121:
+  issue: 'https://github.com/miguelgilurbina/curiana-radio/issues/121'
+  estado: EN CURSO — fusionado el vocabulario de Neira y Ribero 1762 como fuente achagua (2026-09-13)
+  decision_literal: '«Fusionemos lo que conseguimos achagua»'
+  aplicado_por: 6-fusion/scripts/generar_lexicon_achagua.py → curiana_sim/lexicon_achagua.py (generado, importado con setdefault)
+  fuera: 'Fabo 1911 no entra: segunda mano con error medido (agua); queda como control'
 

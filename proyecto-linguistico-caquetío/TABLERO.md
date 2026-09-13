@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-12 21:30**.
+<!--GENERADO--> Generado el **2026-09-13 01:35**.
 
 ## ¿Vamos bien?
 
@@ -23,7 +23,7 @@ editar_a_mano: no
 | Hechos del corpus **con referencia** | **198 / 198** | — | 🟢 |
 | Tests del motor | **269 en verde** | 0 rojos | 🟢 |
 | Gate para reanudar simulaciones | **7 de 9** condiciones | faltan 2 | 🔴 |
-| Decisiones esperando a Miguel | **8 abiertas** | 9 resueltas | 🟡 |
+| Decisiones esperando a Miguel | **9 abiertas** | 9 resueltas | 🟡 |
 
 **Ninguna condición del gate está en rojo.**
 Y 2 condición(es) que **nadie puede medir por script**: citas del corpus (F10) · exportador de runs.
@@ -36,38 +36,39 @@ Detalle de cada número: [lexicón](#1-el-lexicón) · [fuentes](#2-las-fuentes)
 
 Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 
-**1905 entradas activas** en `VOCABULARIO_BASE`.
+**5518 entradas activas** en `VOCABULARIO_BASE`.
 
 ### Por lengua (categoría normalizada)
 
 | Lengua (`normalize_source_language()`) | n | % del lexicón |
 |---|---|---|
-| wayunaiki | 769 | 40.4% |
-| lokono | 638 | 33.5% |
-| caquetío | 360 | 18.9% |
-| taíno | 52 | 2.7% |
-| paraujano | 47 | 2.5% |
-| kalinago | 23 | 1.2% |
-| jirajaroide-contacto | 7 | 0.4% |
-| caribe-continental | 4 | 0.2% |
-| proto-arahuaco | 3 | 0.2% |
-| español-colonial | 2 | 0.1% |
+| proto-arahuaco | 3571 | 64.7% |
+| wayunaiki | 769 | 13.9% |
+| lokono | 638 | 11.6% |
+| caquetío | 405 | 7.3% |
+| taíno | 52 | 0.9% |
+| paraujano | 47 | 0.9% |
+| kalinago | 23 | 0.4% |
+| jirajaroide-contacto | 7 | 0.1% |
+| caribe-continental | 4 | 0.1% |
+| español-colonial | 2 | 0.0% |
 
-<details><summary>Los 15 valores de <code>fuente</code> en el dato crudo (F8 quiere sanearlos)</summary>
+<details><summary>Los 16 valores de <code>fuente</code> en el dato crudo (F8 quiere sanearlos)</summary>
 
 | `fuente` crudo | n |
 |---|---|
+| achagua | 3568 |
 | wayunaiki | 769 |
 | lokono | 638 |
 | caquetío-atestiguado | 228 |
 | caquetío-reconstruido | 91 |
+| caquetío-retroabstraido | 48 |
 | paraujano | 47 |
 | taíno | 43 |
 | caquetío-hipotético | 38 |
 | kalinago | 23 |
 | taíno-reconstruido | 9 |
 | jirajaroide | 7 |
-| caquetío-retroabstraido | 3 |
 | proto-arahuaco | 3 |
 | español-colonial | 2 |
 | caribe-cháima | 2 |
@@ -82,8 +83,8 @@ Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 | `caquetío-atestiguado` | 228 | dato histórico citable a fuente concreta |
 | `caquetío-reconstruido` | 91 | vocabulario de trabajo del proyecto |
 | `caquetío-hipotético` | 38 | baja de tier por D10 — la lengua no se discute, la confianza sí |
-| `caquetío` a secas / topónimo | 3 | sin capa declarada en el campo `fuente` |
-| **total familia caquetía** | **360** |  |
+| `caquetío` a secas / topónimo | 48 | sin capa declarada en el campo `fuente` |
+| **total familia caquetía** | **405** |  |
 
 Fuera del habla activa: **441** candidatas `hipotético-no-verificado` en `lexicon_candidatos.py` (aisladas el 2026-06-28) y **1** entrada(s) en `FUERA_DEL_HABLA` (`piache`).
 
@@ -93,29 +94,30 @@ Entradas de familia caquetía **sin nada en `notas`**: **0** (eran 82 el 2026-07
 
 ### Quién sostiene el «atestiguado»
 
-Cuántas de las 360 entradas de familia caquetía **con `notas`** citan a cada obra. Los patrones de búsqueda salen del `autor` y los `aliases` de cada nota de `4-fuentes/`, así que una obra nueva aparece sola aquí.
+Cuántas de las 405 entradas de familia caquetía **con `notas`** citan a cada obra. Los patrones de búsqueda salen del `autor` y los `aliases` de cada nota de `4-fuentes/`, así que una obra nueva aparece sola aquí.
 
 | Obra | Entradas que la citan | % de las citadas |
 |---|---|---|
-| [[zavala-reyes-2015]] | 219 | 61% |
-| [[zavala-reyes-2018]] | 219 | 61% |
-| [[alvarado-1921]] | 18 | 5% |
-| [[medina-colina-sxx]] | 16 | 4% |
-| [[oliver-1989-apendice-a]] | 13 | 4% |
-| [[oliver-1989-cap2]] | 13 | 4% |
-| [[oliver-1989-cap3-vecinos]] | 13 | 4% |
-| [[oliver-1989-cap3]] | 13 | 4% |
-| [[oliver-1989-cap4]] | 13 | 4% |
-| [[van-buurt-2014]] | 13 | 4% |
+| [[zavala-reyes-2015]] | 219 | 54% |
+| [[zavala-reyes-2018]] | 219 | 54% |
+| [[medina-colina-sxx]] | 61 | 15% |
+| [[alvarado-1921]] | 18 | 4% |
+| [[oliver-1989-apendice-a]] | 13 | 3% |
+| [[oliver-1989-cap2]] | 13 | 3% |
+| [[oliver-1989-cap3-vecinos]] | 13 | 3% |
+| [[oliver-1989-cap3]] | 13 | 3% |
+| [[oliver-1989-cap4]] | 13 | 3% |
+| [[van-buurt-2014]] | 13 | 3% |
 | [[arcaya-1920]] | 11 | 3% |
 | [[arcaya-obra-inedita-1995]] | 11 | 3% |
 | [[castellanos-elegias]] | 4 | 1% |
 | [[gatschet-1885]] | 4 | 1% |
 | [[brinton-1871]] | 4 | 1% |
-| [[jahn-1927]] | 2 | 1% |
-| [[oviedo-y-valdes-1851]] | 2 | 1% |
+| [[jahn-1927]] | 2 | 0% |
+| [[oviedo-y-valdes-1851]] | 2 | 0% |
+| [[las-casas-1875]] | 2 | 0% |
+| [[gonzalez-batista-nombre-de-coro]] | 1 | 0% |
 | [[ballesteros-1550]] | 1 | 0% |
-| [[las-casas-1875]] | 1 | 0% |
 
 Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas con `notas` que no citan a ninguna obra del vault: **109**.
 
@@ -182,11 +184,11 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[federmann-1916]] | no-disponible | alta | no | 0 | 0 | 0 |
 | [[fernandes-2020]] | no-disponible | baja | archivo-vacio | 0 | 0 | 0 |
 | [[gilij-1780-1783]] | sin-minar | baja | no | 0 | 0 | 0 |
-| [[gonzalez-batista-nombre-de-coro]] | en-curso | alta | no | 0 | 0 | 0 |
+| [[gonzalez-batista-nombre-de-coro]] | en-curso | alta | no | 0 | 1 | 0 |
 | [[gumilla-1791]] | no-disponible | baja | no | 0 | 0 | 0 |
-| [[las-casas-1875]] | minado | baja | si | 0 | 1 | 0 |
+| [[las-casas-1875]] | minado | baja | si | 0 | 2 | 0 |
 | [[martinez-cruzado-2003]] | minado | alta | si | 0 | 0 | 0 |
-| [[medina-colina-sxx]] | dictado-terminado | alta | no | 0 | 16 | 0 |
+| [[medina-colina-sxx]] | dictado-terminado | alta | no | 0 | 61 | 0 |
 | [[moreno-mayar-2018]] | sin-minar | baja | si | 0 | 0 | 0 |
 | [[moron-2012-petroglifos]] | minado | alta | si | 0 | 0 | 0 |
 | [[moron-guillermo-historia-venezuela]] | no-disponible | media | no | 0 | 0 | 0 |
@@ -239,7 +241,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | # |  | Condición | Estado medido |
 |---|---|---|---|
 | 1 | 🟢 | Lexicón: 0 entradas de familia caquetía sin cita **o sin degradar** (F1) | 0 sin cita (eran 82 el 2026-07-21) |
-| 2 | 🟢 | Pares c/k resueltos (F2) | todas tomadas — [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) · medido: 8 colisiones, 2 dentro del caquetío |
+| 2 | 🟢 | Pares c/k resueltos (F2) | todas tomadas — [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) · medido: 12 colisiones, 2 dentro del caquetío |
 | 3 | 🟢 | Las 3 fuentes ALTA minadas (F3, F4, F5) | F3 [[alvarado-1921]] minado · F4 [[gatschet-1885]] minado · F5 [[oliver-1989-cap2]] minado |
 | 4 | 🟢 | `compilar_corpus.py` en verde (V2) | **198 hechos, 0 errores, 0 avisos** |
 | 5 | ⚪ | Citas del corpus verificadas por muestreo (F10) | **no automedible**: que la cita *resuelva* (que la página exista) es trabajo humano. Medible sí: 198/198 hechos **tienen** `referencia` |
@@ -272,13 +274,14 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | D13 | El hueco léxico de "tío materno": la palabra que le falta a la tesis central | 🔴 abierta | [#82](https://github.com/miguelgilurbina/curiana-radio/issues/82) |
 | D14 | Qué segunda polity se pone en escena | 🔴 abierta | [#83](https://github.com/miguelgilurbina/curiana-radio/issues/83) |
 | D15 | Qué nodo se simula primero: Coro, Paraguaná, o un par desde el principio | ✅ resuelta | [#90](https://github.com/miguelgilurbina/curiana-radio/issues/90) |
+| — | Decisión de modelo para la era 2: el habla que no se puede atestiguar (la capa retroabstraída) | 🔴 abierta | [#124](https://github.com/miguelgilurbina/curiana-radio/issues/124) |
 | — | Decisión — Borojó: Esteves lo da como chibcha y árbol frutal; ¿sale de la capa atestiguada? | 🔴 abierta | [#123](https://github.com/miguelgilurbina/curiana-radio/issues/123) |
 | — | Decisión — Los dos clanes de Paraguaná: ¿manda la frase de Oliver, mandan las aldeas, o la lectura de Miguel? | ✅ resuelta | [#122](https://github.com/miguelgilurbina/curiana-radio/issues/122) |
 | — | Servir los PDF del vault desde `/kaketiana/fuentes`, tras un aporte voluntario | 🔴 abierta | [#120](https://github.com/miguelgilurbina/curiana-radio/issues/120) |
 | — | El lexicón responde "¿de qué lengua es esta palabra?" y lo usamos como si respondiera "¿la usaba un caquetío?" | ✅ resuelta | [#119](https://github.com/miguelgilurbina/curiana-radio/issues/119) |
 | — | `tara`: ¿venado o mariposa? — puede tumbar un argumento del corpus | 🔴 abierta | [#45](https://github.com/miguelgilurbina/curiana-radio/issues/45) |
 
-**8 abiertas** de 17. Medido contra el tablero, no contra una nota.
+**9 abiertas** de 18. Medido contra el tablero, no contra una nota.
 
 ---
 
@@ -286,7 +289,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1110 en 421 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 1110 en 425 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 269 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
