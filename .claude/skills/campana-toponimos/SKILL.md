@@ -12,6 +12,8 @@ con qué voces. Las reglas de CLAUDE.md mandan; en especial la 1 (cifras
 medidas), la 3 (precontacto ≠ colonial), la 5 (minar propone, el humano
 fusiona) y la 6 (un cero hay que verificarlo).
 
+> Ver también: `leer-fuente` (OCR y verificación en imagen), `fusionar-propuesta` (lexicón, corpus y publicación en GitHub) y `cerrar-sesion`.
+
 ## 0. La mesa de trabajo
 
 `proyecto-linguistico-caquetío/6-fusion/TOPONIMOS_POR_FUENTE.md` — generada por
