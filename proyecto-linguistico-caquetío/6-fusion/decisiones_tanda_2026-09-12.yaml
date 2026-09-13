@@ -8,7 +8,7 @@
 meta:
   fecha: '2026-09-12'
   decidido_por: Miguel
-  estado: CERRADA — cuatro decisiones tomadas, una abierta con la lectura de Miguel registrada
+  estado: CERRADA — cinco decisiones tomadas
   publicado: >-
     #39 cerrada con cuatro comentarios; #37 cerrada; #119 cerrada con la línea
     firmada; issue nuevo de fase 2 (#121); issue nuevo de los clanes (#122).
@@ -60,10 +60,24 @@ tainismos_de_medina:
 
 clanes_de_paraguana:
   issue: 'https://github.com/miguelgilurbina/curiana-radio/issues/122'
-  estado: ABIERTA — con la lectura de Miguel registrada como salida 4
+  estado: CERRADA (2026-09-12) — salida 4, la lectura de Miguel; etiqueta reconstruido con deuda a Delmonte 1883 / González Batista 1984
+  decision_literal: '«1. sí» (a «¿es la 4 la decisión para sembrar los nodos?»)'
   lectura_de_miguel: >-
     «Amuay sí está más al norte que Guaranao: Guaranao es una laguna y Amuay
     un pueblo pesquero en la modernidad. Pero entendemos que Moruy podría ser
     el centro de los Guaranaos o Moruyes, y los Amuayes en el norte, con
     Cayerúa.»
   lo_que_zanja: 'Delmonte 1883 o González Batista 1984 (ninguno en el repo)'
+
+f8_93:
+  issue: 'https://github.com/miguelgilurbina/curiana-radio/issues/93'
+  estado: CERRADA (2026-09-12)
+  decision_literal: '«resolvamos además esos 23 valores que hay que sanear»'
+  resultado: '25 valores → 15, FUENTES_CANONICAS declarado y vigilado por test; scripts sanear_f8_taino.py y sanear_f8_resto.py'
+
+publicado_ademas_2026-09-12:
+  - '#123: decisión Borojó (abierta, espera a Miguel)'
+  - '#124: decisión era 2 retroabstraído (abierta, espera a Miguel)'
+  - '#45: comentario tara = saltamontes en Medina'
+  - '#71: el muestreo F10 de 20 citas (1-plan/F10_muestreo_2026-09-12.md)'
+

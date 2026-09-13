@@ -24,7 +24,11 @@ revisión encima (el de D9 lleva tres, con dos autocorrecciones).
 | `comentario-39-d11-rebalanceo.md` | comentario en [#39](https://github.com/miguelgilurbina/curiana-radio/issues/39) (D11): la decisión de rebalancear y sus fases | 2026-09-12 |
 | `comentario-d11-fase-1b-verbos-perea.md` | comentario en [#39](https://github.com/miguelgilurbina/curiana-radio/issues/39): fase 1b, el verbo de Perea | 2026-09-12 |
 | `decision-d11-el-nucleo-reconstruido-del-wayuu.md` | comentario en [#39](https://github.com/miguelgilurbina/curiana-radio/issues/39): fase 3, re-etiquetar sin tocar formas; **#39 cerrada** con el ratio 1,2 a 1 | 2026-09-12 |
-| `decision-clanes-norte-sur.md` | issue **#122** (`decision`): la inversión está dentro del pasaje de Oliver; la lectura de Miguel es la salida 4 | 2026-09-12 |
+| `decision-clanes-norte-sur.md` | issue **#122** (`decision`), **cerrada** el mismo día con la salida 4 (la lectura de Miguel) | 2026-09-12 |
+| `decision-borojo-filiacion.md` | issue **#123** (`decision`): Esteves dice que Borojó es chibcha; ¿sale de la capa atestiguada? | 2026-09-12 |
+| `decision-era2-retroabstraido.md` | issue **#124** (`decision`): la capa retroabstraída como decisión de modelo de la era 2 | 2026-09-12 |
+| `comentario-45-tara-medina.md` | comentario en [#45](https://github.com/miguelgilurbina/curiana-radio/issues/45): segunda fuente, viva, para tara = saltamontes | 2026-09-12 |
+| `fallo-miguel-nivel-C-medina.md` | **no se publicó: se aplicó** al corpus el 2026-09-12 (32 hechos, `fusionar_nivel_c_medina.py`). Queda como registro del fallo en cuatro tandas | 2026-09-12 |
 
 Nada de esto está fusionado al canon: son argumentos publicados esperando
 decisión humana.

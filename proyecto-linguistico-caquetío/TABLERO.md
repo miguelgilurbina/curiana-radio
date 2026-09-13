@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-12 20:47**.
+<!--GENERADO--> Generado el **2026-09-12 21:30**.
 
 ## ¿Vamos bien?
 
@@ -23,7 +23,7 @@ editar_a_mano: no
 | Hechos del corpus **con referencia** | **198 / 198** | — | 🟢 |
 | Tests del motor | **269 en verde** | 0 rojos | 🟢 |
 | Gate para reanudar simulaciones | **7 de 9** condiciones | faltan 2 | 🔴 |
-| Decisiones esperando a Miguel | **8 abiertas** | 8 resueltas | 🟡 |
+| Decisiones esperando a Miguel | **8 abiertas** | 9 resueltas | 🟡 |
 
 **Ninguna condición del gate está en rojo.**
 Y 2 condición(es) que **nadie puede medir por script**: citas del corpus (F10) · exportador de runs.
@@ -133,13 +133,14 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | no-disponible | 13 |
 | parcial | 6 |
 | segunda-mano | 5 |
-| sin-minar | 5 |
 | en-curso | 4 |
+| sin-minar | 3 |
 | puntual | 2 |
+| minada-parcial | 2 |
 | dictado-terminado | 1 |
 | completo-con-reserva | 1 |
 
-**Prioridad ALTA sin minar (17):** [[arcaya-obra-inedita-1995]] (`no-disponible`), [[ballesteros-1550]] (`segunda-mano`), [[brito-figueroa-poblacion-economia]] (`en-curso`), [[castellanos-elegias]] (`en-curso`), [[esteves-1989]] (`parcial`), [[fabo-1911]] (`sin-minar`), [[federmann-1916]] (`no-disponible`), [[gonzalez-batista-nombre-de-coro]] (`en-curso`), [[medina-colina-sxx]] (`dictado-terminado`), [[neira-ribero-1762]] (`sin-minar`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap3-vecinos]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`no-disponible`), [[perez-de-tolosa-1546]] (`no-disponible`), [[urbina-jimenez-2007-2011]] (`parcial`), [[zavala-reyes-2015]] (`completo-con-reserva`).
+**Prioridad ALTA sin minar (17):** [[arcaya-obra-inedita-1995]] (`no-disponible`), [[ballesteros-1550]] (`segunda-mano`), [[brito-figueroa-poblacion-economia]] (`en-curso`), [[castellanos-elegias]] (`en-curso`), [[esteves-1989]] (`parcial`), [[fabo-1911]] (`minada-parcial`), [[federmann-1916]] (`no-disponible`), [[gonzalez-batista-nombre-de-coro]] (`en-curso`), [[medina-colina-sxx]] (`dictado-terminado`), [[neira-ribero-1762]] (`minada-parcial`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap3-vecinos]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`no-disponible`), [[perez-de-tolosa-1546]] (`no-disponible`), [[urbina-jimenez-2007-2011]] (`parcial`), [[zavala-reyes-2015]] (`completo-con-reserva`).
 
 <details><summary>Las 62 notas, una por fila</summary>
 
@@ -177,7 +178,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[brito-figueroa-poblacion-economia]] | en-curso | alta | no | 0 | 0 | 0 |
 | [[castellanos-elegias]] | en-curso | alta | si | 0 | 4 | 0 |
 | [[esteves-1989]] | parcial | alta | ocr | 0 | 0 | 0 |
-| [[fabo-1911]] | sin-minar | alta | si | 0 | 0 | 0 |
+| [[fabo-1911]] | minada-parcial | alta | si | 0 | 0 | 0 |
 | [[federmann-1916]] | no-disponible | alta | no | 0 | 0 | 0 |
 | [[fernandes-2020]] | no-disponible | baja | archivo-vacio | 0 | 0 | 0 |
 | [[gilij-1780-1783]] | sin-minar | baja | no | 0 | 0 | 0 |
@@ -189,7 +190,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[moreno-mayar-2018]] | sin-minar | baja | si | 0 | 0 | 0 |
 | [[moron-2012-petroglifos]] | minado | alta | si | 0 | 0 | 0 |
 | [[moron-guillermo-historia-venezuela]] | no-disponible | media | no | 0 | 0 | 0 |
-| [[neira-ribero-1762]] | sin-minar | alta | no | 0 | 0 | 0 |
+| [[neira-ribero-1762]] | minada-parcial | alta | no | 0 | 0 | 0 |
 | [[nueva-segovia-1579]] | no-disponible | media | no | 0 | 0 | 0 |
 | [[oliver-1989-apendice-a]] | parcial | alta | no | 0 | 13 | 0 |
 | [[oliver-1989-cap3-vecinos]] | parcial | alta | ocr-parcial | 0 | 13 | 0 |
@@ -271,12 +272,13 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | D13 | El hueco léxico de "tío materno": la palabra que le falta a la tesis central | 🔴 abierta | [#82](https://github.com/miguelgilurbina/curiana-radio/issues/82) |
 | D14 | Qué segunda polity se pone en escena | 🔴 abierta | [#83](https://github.com/miguelgilurbina/curiana-radio/issues/83) |
 | D15 | Qué nodo se simula primero: Coro, Paraguaná, o un par desde el principio | ✅ resuelta | [#90](https://github.com/miguelgilurbina/curiana-radio/issues/90) |
-| — | Decisión — Los dos clanes de Paraguaná: ¿manda la frase de Oliver, mandan las aldeas, o la lectura de Miguel? | 🔴 abierta | [#122](https://github.com/miguelgilurbina/curiana-radio/issues/122) |
+| — | Decisión — Borojó: Esteves lo da como chibcha y árbol frutal; ¿sale de la capa atestiguada? | 🔴 abierta | [#123](https://github.com/miguelgilurbina/curiana-radio/issues/123) |
+| — | Decisión — Los dos clanes de Paraguaná: ¿manda la frase de Oliver, mandan las aldeas, o la lectura de Miguel? | ✅ resuelta | [#122](https://github.com/miguelgilurbina/curiana-radio/issues/122) |
 | — | Servir los PDF del vault desde `/kaketiana/fuentes`, tras un aporte voluntario | 🔴 abierta | [#120](https://github.com/miguelgilurbina/curiana-radio/issues/120) |
 | — | El lexicón responde "¿de qué lengua es esta palabra?" y lo usamos como si respondiera "¿la usaba un caquetío?" | ✅ resuelta | [#119](https://github.com/miguelgilurbina/curiana-radio/issues/119) |
 | — | `tara`: ¿venado o mariposa? — puede tumbar un argumento del corpus | 🔴 abierta | [#45](https://github.com/miguelgilurbina/curiana-radio/issues/45) |
 
-**8 abiertas** de 16. Medido contra el tablero, no contra una nota.
+**8 abiertas** de 17. Medido contra el tablero, no contra una nota.
 
 ---
 
@@ -284,7 +286,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1110 en 418 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 1110 en 421 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 269 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
