@@ -696,83 +696,89 @@ def interactive_mode(client: anthropic.Anthropic):
     print(f"  Situación: {state.evento_del_turno or 'La Curiana despierta.'}")
     print(f"  Run ID: {run_id[:8]}...\n")
 
-    while True:
-        try:
-            user_input = input("  [CURIANA]> ").strip()
-        except (EOFError, KeyboardInterrupt):
-            break
+    # #42: mismo cierre garantizado que auto_mode. total_turns contaba
+    # state.turno (sólo vale 1 o 2) y total_days no restaba el día en curso.
+    turnos_hechos = 0
+    try:
+        while True:
+            try:
+                user_input = input("  [CURIANA]> ").strip()
+            except (EOFError, KeyboardInterrupt):
+                break
 
-        if not user_input:
-            run_turn(client, state, memory, lexico, observer, db=db, run_id=run_id,
-                     difusion=difusion, idiolectos=idiolectos, campo=campo,
-                     competencia=competencia, db_fallos=db_fallos)
-        elif user_input.lower() == "salir":
-            break
-        elif user_input.lower() == "estado":
-            print(f"\n{state.to_context_string()}\n")
-        elif user_input.lower() == "lexico":
-            print(f"\n{lexico.reporte_linguistico()}\n")
-        elif user_input.lower() == "ranking":
-            print("\n  Ranking lingüístico:")
-            for agente, score in observer.ranking_linguistico():
-                bar = "█" * int(score) + "░" * (10 - int(score))
-                print(f"    {agente:15} {bar} {score:.1f}/10")
-            print()
-        elif user_input.lower().startswith("habla "):
-            agent_name = user_input[6:].strip()
-            if agent_name not in ALL_AGENTS:
-                print(f"  Agente no encontrado. Disponibles: {', '.join(list(AGENTS_T1.keys())[:8])}...")
+            if not user_input:
+                turnos_hechos += 1
+                run_turn(client, state, memory, lexico, observer, db=db, run_id=run_id,
+                         difusion=difusion, idiolectos=idiolectos, campo=campo,
+                         competencia=competencia, db_fallos=db_fallos)
+            elif user_input.lower() == "salir":
+                break
+            elif user_input.lower() == "estado":
+                print(f"\n{state.to_context_string()}\n")
+            elif user_input.lower() == "lexico":
+                print(f"\n{lexico.reporte_linguistico()}\n")
+            elif user_input.lower() == "ranking":
+                print("\n  Ranking lingüístico:")
+                for agente, score in observer.ranking_linguistico():
+                    bar = "█" * int(score) + "░" * (10 - int(score))
+                    print(f"    {agente:15} {bar} {score:.1f}/10")
+                print()
+            elif user_input.lower().startswith("habla "):
+                agent_name = user_input[6:].strip()
+                if agent_name not in ALL_AGENTS:
+                    print(f"  Agente no encontrado. Disponibles: {', '.join(list(AGENTS_T1.keys())[:8])}...")
+                else:
+                    try:
+                        msg = input(f"  ¿Qué le dices a {agent_name}? > ").strip()
+                        response = call_agent(
+                            client, agent_name, state, lexico, observer, msg,
+                            memory.get(agent_name), difusion=difusion,
+                            idiolectos=idiolectos,
+                        )
+                        print(f"\n  [{agent_name}]: {response}\n")
+                        observer.analizar(
+                            agent_name,
+                            ALL_AGENTS[agent_name].get("etnia", "caquetío"),
+                            ALL_AGENTS[agent_name].get("tier", 2),
+                            response, state.dia, state.turno, state.momento, state.estacion
+                        )
+                        memory.add(agent_name, f"D{state.dia}: conversación directa")
+                    except (EOFError, KeyboardInterrupt):
+                        break
+            elif user_input.lower().startswith("evento "):
+                evento_id = user_input[7:].strip()
+                todos = EVENTOS_COTIDIANOS + EVENTOS_ESTACIONALES
+                ev = next((e for e in todos if e["id"] == evento_id), None)
+                if ev:
+                    state.evento_del_turno = ev["descripcion"]
+                    state.eventos_activos = [evento_id]
+                    print(f"  Evento '{ev['nombre']}' activado.")
+                else:
+                    print(f"  IDs disponibles: {[e['id'] for e in todos]}")
+            elif user_input.lower() == "reporte dia":
+                print(observer.reporte_dia(state.dia - 1))
+            elif user_input.lower() == "exportar":
+                observer.exportar_csv()
+                observer.exportar_neologismos_csv()
             else:
-                try:
-                    msg = input(f"  ¿Qué le dices a {agent_name}? > ").strip()
-                    response = call_agent(
-                        client, agent_name, state, lexico, observer, msg,
-                        memory.get(agent_name), difusion=difusion,
-                        idiolectos=idiolectos,
-                    )
-                    print(f"\n  [{agent_name}]: {response}\n")
-                    observer.analizar(
-                        agent_name,
-                        ALL_AGENTS[agent_name].get("etnia", "caquetío"),
-                        ALL_AGENTS[agent_name].get("tier", 2),
-                        response, state.dia, state.turno, state.momento, state.estacion
-                    )
-                    memory.add(agent_name, f"D{state.dia}: conversación directa")
-                except (EOFError, KeyboardInterrupt):
-                    break
-        elif user_input.lower().startswith("evento "):
-            evento_id = user_input[7:].strip()
-            todos = EVENTOS_COTIDIANOS + EVENTOS_ESTACIONALES
-            ev = next((e for e in todos if e["id"] == evento_id), None)
-            if ev:
-                state.evento_del_turno = ev["descripcion"]
-                state.eventos_activos = [evento_id]
-                print(f"  Evento '{ev['nombre']}' activado.")
-            else:
-                print(f"  IDs disponibles: {[e['id'] for e in todos]}")
-        elif user_input.lower() == "reporte dia":
-            print(observer.reporte_dia(state.dia - 1))
-        elif user_input.lower() == "exportar":
-            observer.exportar_csv()
-            observer.exportar_neologismos_csv()
-        else:
-            run_turn(
-                client, state, memory, lexico, observer,
-                user_input=user_input, db=db, run_id=run_id,
-                difusion=difusion, idiolectos=idiolectos, campo=campo,
-                competencia=competencia, db_fallos=db_fallos,
-            )
+                turnos_hechos += 1
+                run_turn(
+                    client, state, memory, lexico, observer,
+                    user_input=user_input, db=db, run_id=run_id,
+                    difusion=difusion, idiolectos=idiolectos, campo=campo,
+                    competencia=competencia, db_fallos=db_fallos,
+                )
+    finally:
+        # Guardar todo
+        state.save()
+        memory.save()
+        lexico.save()
+        observer.save()
+        observer.exportar_csv()
+        observer.exportar_neologismos_csv()
 
-    # Guardar todo
-    state.save()
-    memory.save()
-    lexico.save()
-    observer.save()
-    observer.exportar_csv()
-    observer.exportar_neologismos_csv()
-
-    # Cerrar run
-    db.end_run(run_id, total_turns=state.turno, total_days=state.dia)
+        # Cerrar run
+        db.end_run(run_id, total_turns=turnos_hechos, total_days=state.dia - 1)
     if db_fallos:
         print(f"  ⚠ {sum(db_fallos.values())} escritura(s) a DB fallaron: "
               + ", ".join(f"{t}×{n}" for t, n in db_fallos.most_common()))
@@ -876,84 +882,93 @@ def auto_mode(
         print("  ⚗ ABLACIÓN: sin contagio, sin competencias en prompt, sin muestreo ponderado")
     print(f"{'='*60}\n")
 
-    for t in range(turnos):
-        # ¿Toca evento de nombramiento? (cada `cadencia` turnos, si quedan referentes)
-        naming_referente = None
-        if referentes_pendientes and t > 0 and t % cadencia_nombramiento == 0:
-            naming_referente = referentes_pendientes.pop(0)
+    # #42: el run se cierra SIEMPRE, también si se interrumpe (Ctrl+C, un
+    # error de API, un teardown). Antes end_run() iba después del bucle sin
+    # finally, y un run cortado quedaba con total_turns=0 y ended_at NULL.
+    turnos_hechos = 0
+    try:
+        for t in range(turnos):
+            # ¿Toca evento de nombramiento? (cada `cadencia` turnos, si quedan referentes)
+            naming_referente = None
+            if referentes_pendientes and t > 0 and t % cadencia_nombramiento == 0:
+                naming_referente = referentes_pendientes.pop(0)
 
-        interactions = run_turn(
-            client, state, memory, lexico, observer,
-            verbose=verbose, db=db, run_id=run_id,
-            difusion=difusion, idiolectos=idiolectos, campo=campo,
-            competencia=competencia, naming_referente=naming_referente,
-            ablacion=ablacion, capas=capas, db_fallos=db_fallos,
-        )
-        participantes.update(i["agent"] for i in interactions)
+            interactions = run_turn(
+                client, state, memory, lexico, observer,
+                verbose=verbose, db=db, run_id=run_id,
+                difusion=difusion, idiolectos=idiolectos, campo=campo,
+                competencia=competencia, naming_referente=naming_referente,
+                ablacion=ablacion, capas=capas, db_fallos=db_fallos,
+            )
+            participantes.update(i["agent"] for i in interactions)
+            turnos_hechos += 1
 
-        # Reporte al final de cada día
-        if state.turno == 1 and state.dia > 1:  # acaba de cambiar de día
-            dia_terminado = state.dia - 1
-            # Distancia medida SOLO sobre quienes hablaron (población real).
-            # Tres lecturas: acumulada (histórica, sesgada a converger por
-            # acumulación del vocabulario base), ventana (habla reciente real)
-            # y emergente (ventana sin vocabulario base: solo neologismos).
-            dist = distancia_idiolectal(idiolectos, solo=participantes)
-            dist_vent = distancia_idiolectal(idiolectos, solo=participantes, ventana=True)
-            dist_emer = distancia_idiolectal(idiolectos, solo=participantes,
-                                             ventana=True, excluir=_FORMAS_BASE,
-                                             min_formas=3)
-            serie_distancia.append((dia_terminado, dist, dist_vent, dist_emer))
-            # Evaluar fijación de competencias léxicas del día
-            fijadas = competencia.evaluar_fijacion(dia_terminado)
-            if db and run_id:
-                try:
-                    db.save_koine_metric(run_id, dia_terminado, dist or 0.0,
-                                         len(participantes),
-                                         distance_ventana=dist_vent,
-                                         distance_emergente=dist_emer)
+            # Reporte al final de cada día
+            if state.turno == 1 and state.dia > 1:  # acaba de cambiar de día
+                dia_terminado = state.dia - 1
+                # Distancia medida SOLO sobre quienes hablaron (población real).
+                # Tres lecturas: acumulada (histórica, sesgada a converger por
+                # acumulación del vocabulario base), ventana (habla reciente real)
+                # y emergente (ventana sin vocabulario base: solo neologismos).
+                dist = distancia_idiolectal(idiolectos, solo=participantes)
+                dist_vent = distancia_idiolectal(idiolectos, solo=participantes, ventana=True)
+                dist_emer = distancia_idiolectal(idiolectos, solo=participantes,
+                                                 ventana=True, excluir=_FORMAS_BASE,
+                                                 min_formas=3)
+                serie_distancia.append((dia_terminado, dist, dist_vent, dist_emer))
+                # Evaluar fijación de competencias léxicas del día
+                fijadas = competencia.evaluar_fijacion(dia_terminado)
+                if db and run_id:
+                    try:
+                        db.save_koine_metric(run_id, dia_terminado, dist or 0.0,
+                                             len(participantes),
+                                             distance_ventana=dist_vent,
+                                             distance_emergente=dist_emer)
+                        for cid, forma in fijadas:
+                            d = competencia.diccionario_koine().get(cid, {})
+                            db.save_koine_lexicon(run_id, cid, d.get("desc", ""), forma,
+                                                  dia_terminado, d.get("soporte"), d.get("n_variantes"))
+                    except Exception:
+                        db_fallos["koine_metrics"] += 1
+                if verbose:
+                    print(observer.reporte_dia(dia_terminado))
+                    fmt = lambda v: "s/d" if v is None else v
+                    print(f"  ◇ Koiné — distancia idiolectal ({len(participantes)} agentes): "
+                          f"acumulada={fmt(dist)} · ventana={fmt(dist_vent)} · "
+                          f"emergente={fmt(dist_emer)}  (↓ = converge)")
                     for cid, forma in fijadas:
-                        d = competencia.diccionario_koine().get(cid, {})
-                        db.save_koine_lexicon(run_id, cid, d.get("desc", ""), forma,
-                                              dia_terminado, d.get("soporte"), d.get("n_variantes"))
-                except Exception:
-                    db_fallos["koine_metrics"] += 1
-            if verbose:
-                print(observer.reporte_dia(dia_terminado))
-                fmt = lambda v: "s/d" if v is None else v
-                print(f"  ◇ Koiné — distancia idiolectal ({len(participantes)} agentes): "
-                      f"acumulada={fmt(dist)} · ventana={fmt(dist_vent)} · "
-                      f"emergente={fmt(dist_emer)}  (↓ = converge)")
-                for cid, forma in fijadas:
-                    print(f"  ◆ Koiné fija: '{cid}' → {forma}")
+                        print(f"  ◆ Koiné fija: '{cid}' → {forma}")
 
-        # Detección de cambio de estación
-        if state.estacion != estacion_anterior:
-            if verbose:
-                print(observer.reporte_estacion(estacion_anterior))
-            estacion_anterior = state.estacion
-            dia_inicio_estacion = state.dia
+            # Detección de cambio de estación
+            if state.estacion != estacion_anterior:
+                if verbose:
+                    print(observer.reporte_estacion(estacion_anterior))
+                estacion_anterior = state.estacion
+                dia_inicio_estacion = state.dia
 
-            # Cada vez que completa un año (2 estaciones), reporte anual.
-            # El año se cierra al VOLVER a la seca (días 121, 241, 361…), no
-            # con `dia % 120 == 0`: el cambio de estación nunca cae en un
-            # múltiplo exacto de 120, así que esa condición no se cumplía jamás
-            # y --reporte no producía nada.
-            anio_en_curso = (state.dia - 1) // (2 * DIAS_POR_ESTACION) + 1
-            if reporte_anual and anio_en_curso > anio_simulado:
-                print(observer.reporte_anual_llm(anio_simulado))
-                anio_simulado = anio_en_curso
+                # Cada vez que completa un año (2 estaciones), reporte anual.
+                # El año se cierra al VOLVER a la seca (días 121, 241, 361…), no
+                # con `dia % 120 == 0`: el cambio de estación nunca cae en un
+                # múltiplo exacto de 120, así que esa condición no se cumplía jamás
+                # y --reporte no producía nada.
+                anio_en_curso = (state.dia - 1) // (2 * DIAS_POR_ESTACION) + 1
+                if reporte_anual and anio_en_curso > anio_simulado:
+                    print(observer.reporte_anual_llm(anio_simulado))
+                    anio_simulado = anio_en_curso
+    finally:
+        # Guardar localmente
+        state.save()
+        memory.save()
+        lexico.save()
+        observer.save()
+        observer.exportar_csv()
+        observer.exportar_neologismos_csv()
 
-    # Guardar localmente
-    state.save()
-    memory.save()
-    lexico.save()
-    observer.save()
-    observer.exportar_csv()
-    observer.exportar_neologismos_csv()
-
-    # Cerrar run en DB
-    db.end_run(run_id, total_turns=turnos, total_days=state.dia - 1)
+        # Cerrar run en DB, con lo que de verdad se corrió
+        db.end_run(run_id, total_turns=turnos_hechos, total_days=state.dia - 1)
+        if turnos_hechos < turnos:
+            print(f"  ⚠ run interrumpido: {turnos_hechos} de {turnos} turnos "
+                  f"({state.dia - 1} días). Cerrado igual en la base.")
 
     # Reporte final
     print(f"\n{'═'*60}")

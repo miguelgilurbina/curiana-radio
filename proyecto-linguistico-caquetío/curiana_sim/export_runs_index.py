@@ -207,8 +207,12 @@ def resumir_run(db: CurianaDB, entrada: dict, runs: list[dict] | None = None,
     )
     n_resp = len(resp)
     agentes = len({r["agent_name"] for r in resp})
-    avg_score = round(sum(r["score"] for r in resp) / n_resp, 2) if n_resp else None
-    pct_caq = round(sum(r["pct_caquetio"] for r in resp) / n_resp, 3) if n_resp else None
+    # Una respuesta con score/pct NULL no debe romper el promedio: se promedia
+    # sobre las que lo tienen.
+    _sc = [r["score"] for r in resp if r.get("score") is not None]
+    _pc = [r["pct_caquetio"] for r in resp if r.get("pct_caquetio") is not None]
+    avg_score = round(sum(_sc) / len(_sc), 2) if _sc else None
+    pct_caq = round(sum(_pc) / len(_pc), 3) if _pc else None
 
     total_turnos, total_dias = medir_turnos(db, run_id)
     for aviso in avisos_de_medicion(run, total_turnos, total_dias, n_resp):

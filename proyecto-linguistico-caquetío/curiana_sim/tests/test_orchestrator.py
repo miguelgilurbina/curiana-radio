@@ -225,3 +225,52 @@ def test_el_cierre_de_anio_coincide_con_un_cambio_de_estacion():
                 cierres.append(s.dia)
 
     assert cierres[:3] == [121, 241, 361], f"cierres de año en {cierres[:3]}"
+
+
+# ══════════════════════════════════════════════════════════════════════
+# #42 — un run interrumpido se cierra igual
+# ══════════════════════════════════════════════════════════════════════
+
+class _DBQueGraba:
+    """Sustituto de CurianaDB que sólo recuerda cómo se cerró el run."""
+    def __init__(self):
+        self.cierres = []
+    def create_run(self, *a, **k):
+        return "run-de-prueba"
+    def end_run(self, run_id, total_turns, total_days):
+        self.cierres.append((run_id, total_turns, total_days))
+    def __getattr__(self, nombre):          # save_turn, save_agent_response, …
+        return lambda *a, **k: "id"
+
+
+def test_un_run_interrumpido_se_cierra_igual(sim, monkeypatch):
+    """El run 20091e1f se cortó en el turno 57 y quedó con total_turns=0 y
+    ended_at NULL porque end_run() iba después del bucle, sin finally. Ahora
+    se cierra siempre, con los turnos que de verdad se corrieron."""
+    db = _DBQueGraba()
+    monkeypatch.setattr(orch, "get_db", lambda: db)
+    monkeypatch.setattr(orch, "get_client", lambda *a, **k: _FakeClient())
+    monkeypatch.setattr(orch, "huella_de_base", lambda: {})
+    monkeypatch.setattr(orch, "resumen_huella", lambda h: "")
+    for cls, metodos in ((ComunidadState, ("save",)), (orch.AgentMemory, ("save",)),
+                         (LexicoComunitario, ("save",)),
+                         (ObserverAgent, ("save", "exportar_csv", "exportar_neologismos_csv"))):
+        for m in metodos:
+            monkeypatch.setattr(cls, m, lambda self, *a, **k: None)
+
+    real = orch.run_turn
+    llamadas = {"n": 0}
+    def run_turn_que_se_corta(*a, **k):
+        llamadas["n"] += 1
+        if llamadas["n"] == 4:
+            raise KeyboardInterrupt
+        return real(*a, **k)
+    monkeypatch.setattr(orch, "run_turn", run_turn_que_se_corta)
+
+    with pytest.raises(KeyboardInterrupt):
+        orch.auto_mode(sim["client"], turnos=10, verbose=False)
+
+    assert len(db.cierres) == 1, "el run interrumpido no se cerró"
+    _, total_turns, total_days = db.cierres[0]
+    assert total_turns == 3
+    assert total_days >= 1
