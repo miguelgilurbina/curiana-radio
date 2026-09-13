@@ -1,38 +1,23 @@
-# ══════════════════════════════════════════════════════════════════════
-# COMPARANDAS — el vocabulario de los vecinos, guardado tal cual
-# ══════════════════════════════════════════════════════════════════════
-# 🔴 ESTO NO ES CAQUETÍO. Ni una sola de estas voces entra al lexicón ni al
-#    habla de los agentes. Son las lenguas de la zona cultural que el caquetío
-#    compartía, guardadas para poder COMPARAR — que es cosa distinta de
-#    copiar. La trampa que CLAUDE.md ya mide: el 80% del lexicón son
-#    comparandas y hay consumidores que no filtran por `fuente`. Este archivo
-#    vive en 6-fusion/ y no lo importa nadie.
-#
-# Encargo de Miguel, 2026-09-10: «guardemos todas estas palabras que estamos
-# aprendiendo de estos lenguajes de la zona cultural que compartían los
-# caquetíos, más adelante nos pueden ayudar».
-
 meta:
   fecha: '2026-09-10'
   obra: jahn-1927
-  que_es: el apéndice de vocabularios comparados de Jahn 1927, que la nota de la fuente no
-    registraba. Localizado buscando `cachube` 'ombligo'.
-  advertencia: 🔴 comparandas, NO caquetío. No se importa desde el motor y ninguna voz se traspasa
-    sin método (regla 5).
-  estado_del_texto: 'parseado del OCR con `-layout`, cortando por hueco de dos espacios y
-    no por posición de columna —la cabecera va centrada y partía las palabras—. VERIFICADAS
-    EN IMAGEN: las dos páginas del achagua (pdf 457-458) y la de los numerales (pdf 448).
-    El resto NO: verificar antes de citar.'
+  que_es: el apéndice de vocabularios comparados de Jahn 1927, que la nota de la fuente no registraba. Localizado
+    buscando `cachube` 'ombligo'.
+  advertencia: 🔴 comparandas, NO caquetío. No se importa desde el motor y ninguna voz se traspasa sin método (regla
+    5).
+  estado_del_texto: 'parseado del OCR con `-layout`, cortando por hueco de dos espacios y no por posición de columna
+    —la cabecera va centrada y partía las palabras—. VERIFICADAS EN IMAGEN: las dos páginas del achagua (pdf 457-458)
+    y la de los numerales (pdf 448). El resto NO: verificar antes de citar.'
 guajiro_paraujano:
   paginas_pdf: 435-453
   paginas_impresas: aprox. 355-373
   filas: 390
   columnas: ESPAÑOL | GUAJIRO | PARAUJANO
-  por_que_importan: son las dos comparandas más cercanas al caquetío, y el paraujano es una
-    de las columnas de la tabla A-2 de Oliver que la decisión D11 puso a rebalancear.
-  aviso_de_forma: '⚠️ las partes del cuerpo llevan el posesivo `ta-`/`te-`/`to-`/`wa-` pegado:
-    la tabla da ''MI diente'', no ''diente''. El radical hay que despejarlo, y despejarlo
-    mal produce falsos — a `wanésia` ''uno'' le quité un `wa-` que no era posesivo.'
+  por_que_importan: son las dos comparandas más cercanas al caquetío, y el paraujano es una de las columnas de la
+    tabla A-2 de Oliver que la decisión D11 puso a rebalancear.
+  aviso_de_forma: '⚠️ las partes del cuerpo llevan el posesivo `ta-`/`te-`/`to-`/`wa-` pegado: la tabla da ''MI
+    diente'', no ''diente''. El radical hay que despejarlo, y despejarlo mal produce falsos — a `wanésia` ''uno''
+    le quité un `wa-` que no era posesivo.'
   voces:
   - es: Cabeza (mi)
     guajiro: tekt
@@ -1599,8 +1584,8 @@ achagua:
   paginas_impresas: 377-378
   filas: 34
   columnas: ESPAÑOL | ACHAGUA | otros nueve dialectos aruacos
-  procedencia: 'Jahn declara tomarlas del PADRE FABO, achagua del Casanare (Colombia). ⚠️
-    transmite, no atestigua: control de transmisión respecto de Fabo.'
+  procedencia: 'Jahn declara tomarlas del PADRE FABO, achagua del Casanare (Colombia). ⚠️ transmite, no atestigua:
+    control de transmisión respecto de Fabo.'
   verificado_en_imagen: true
   voces:
   - es: lengua
@@ -1671,17 +1656,30 @@ achagua:
     achagua: numike
   - es: beber
     achagua: irago
+  cotejo_2026-09-12:
+    contra_fabo_1911: 13 de las 34 tienen forma en las tablas de Fabo; coinciden 9 (6-fusion/achagua_fabo_1911.yaml,
+      cotejo_34_de_jahn)
+    contra_neira_1762: coinciden 21, difieren 8, no localizadas 5 (6-fusion/achagua_neira_ribero_1762.yaml, calibracion_jahn;
+      transcripción por visión)
+    lo_que_cambia:
+    - 'agua = mena es un ERROR heredado de Fabo: el manuscrito da agua = uni y mar = manoa. Río = uneta, no unibe.'
+    - kapauje «flecha» es en el manuscrito «flecha con hierro» (post-contacto); la flecha a secas es querriasui.
+    - 'pez: Jahn kupai concuerda con el manuscrito (cubai) contra Fabo (dupay) — Jahn no copió sólo las tablas de
+      Fabo.'
+    - 'verdadero: sol erri, luna querri, piedra iba/jba, casa banisi, canoa ida, cazabe berri/jerri, sepultura nirri,
+      tabaco sema/chema, estrella ivisai/ybiyai.'
+    consecuencia: con el manuscrito en el repo, esta tabla deja de ser la comparanda achagua y pasa a ser control
+      de transmisión (regla §8 del protocolo de minado)
 jirajara_ayoman:
   paginas_pdf: 468-471
   filas: 96
   columnas: ESPAÑOL | JIRAJARA | AYOMÁN
-  que_son: los vecinos NO arahuacos de la sierra de Falcón y Lara. Otra familia — jirajaroide
-    — y por eso el contraste vale.
-  jahn_marca_los_prestamos: '⭐ escribe «(esp.)» donde la voz es castellana: carato `kasagúé
-    (esp.)`, casamiento `macét (esp.)`. Lo no marcado es indígena para él.'
-  aviso_rule_3: '⚠️ buena parte de la lista son objetos y animales COLONIALES —gallina, gallo,
-    gato, machete, hacha, escardilla—: esas filas fechan el contacto del s. XIX-XX, no el
-    precontacto.'
+  que_son: los vecinos NO arahuacos de la sierra de Falcón y Lara. Otra familia — jirajaroide — y por eso el contraste
+    vale.
+  jahn_marca_los_prestamos: '⭐ escribe «(esp.)» donde la voz es castellana: carato `kasagúé (esp.)`, casamiento
+    `macét (esp.)`. Lo no marcado es indígena para él.'
+  aviso_rule_3: '⚠️ buena parte de la lista son objetos y animales COLONIALES —gallina, gallo, gato, machete, hacha,
+    escardilla—: esas filas fechan el contacto del s. XIX-XX, no el precontacto.'
   verificado_en_imagen: pdf 470 (p. impresa 390). El OCR desplazaba una fila y se corrigió
   voces:
   - es: Cabeza (mi)
