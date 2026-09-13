@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-13**.
 
-**2342 ítems propuestos** en 50 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
+**2355 ítems propuestos** en 52 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -39,7 +39,9 @@ editar_a_mano: no
 | `decisiones_tanda_2026-09-01.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-08.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-12.yaml` | ? | 4 |  |
+| `decisiones_tanda_2026-09-13.yaml` | ? | 0 |  |
 | `esteves_parte2_falcon.yaml` | esteves-1989 | 16 |  |
+| `estructura_social_era2.yaml` | varias | 13 |  |
 | `frase_saludo_mitare.yaml` | ? | 2 |  |
 | `jahn_vocabularios_comparados.yaml` | jahn-1927 | 4 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
@@ -102,6 +104,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | Archivo | Qué es |
 |---|---|
 | `decision-d11-fase3-nucleo-lokono-achagua.md` | D11 fase 3: el núcleo re-derivado desde lokono + achagua, y un perfil de run para medirlo |
+| `diseno-elenco-era2-estructura.md` | Era 2: la estructura social de Paraguaná antes del elenco (subgrupos, playas, Kapubana, me |
 
 ---
 
