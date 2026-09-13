@@ -70,7 +70,7 @@ editar_a_mano: no
 Vistas generadas en `6-fusion/` (no cuentan: juntan lo que ya está arriba):
 
 - `achagua_fabo_1911.yaml` — generado por `6-fusion/scripts/minar_fabo_1911_achagua.py`
-- `achagua_neira_ribero_1762.yaml` — generado por `lectura en imagen por el escriba (agente Opus 5), 2026-09-12`
+- `achagua_neira_ribero_1762.yaml` — generado por `lectura en imagen por el escriba (agente Opus 5). Primera pasada 2026-09-12 (40 pliegos); segunda pasada 2026-09-12, que cierra el vocabulario entero (los 31 pliegos que faltaban), mina la lista de verbos del arte y vuelve sobre las 14 dudas`
 - `lokono_perea_1942.yaml` — generado por `curiana_sim/minar_perea.py`
 - `lokono_verbos_perea_1942.yaml` — generado por `6-fusion/scripts/minar_perea_verbos.py`
 - `tainismos_en_medina.yaml` — generado por `6-fusion/scripts/tainismos_medina_a_caquetio.py`

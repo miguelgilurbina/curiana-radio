@@ -9,7 +9,7 @@ local: "fuentes_caquetios/Neira_Ribero_1762_Arte_y_Vocabulario_Lengua_Achagua_RB
 paginas: 102
 capa_texto: no
 estado_minado: minada-parcial
-cobertura: "medida, no escrita a mano: `6-fusion/achagua_neira_ribero_1762.yaml` → `meta.cobertura` (pliegos leídos, letras vistas, entradas, dudas, resultado de la calibración) y `meta.censo_de_terminaciones` (la `-are`/`-re`). Las cifras las emite `construir.py`; si se vuelve a minar, se regeneran"
+cobertura: "medida, no escrita a mano: `6-fusion/achagua_neira_ribero_1762.yaml` → `meta.cobertura` (pliegos leídos, huecos, letras, entradas del vocabulario y del arte, dudas y cuántas se resolvieron, resultado de la calibración) y `meta.censo_de_terminaciones` (la `-are`/`-re`). Las cifras las emite `6-fusion/scripts/ensamblar_achagua_neira_ribero.py`; si se vuelve a minar, se regeneran con ese script (`--check` mide sin escribir)"
 prioridad: alta
 tareas: [D11-fase-2]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
@@ -62,7 +62,7 @@ píxel/punto 4,167).
 | 6 | portada («Arte y Vocabulario de la lengua Achagua. Doctrina Christiana, Confessonario… Trasumptado en el Pueblo de San Juan Francisco Regis, año de 1762») y la nota de la copia de 1788 |
 | 7-27 | **el ARTE**: prosa gramatical con paradigmas; en el 11 se ven tablas (¿pronombres/declinación?), del 17 al 27 «Reglas» y «Tratados» numerados |
 | 28 (dcha.) | empieza el **VOCABULARIO castellano → achagua**, «Castellano A Achagua» |
-| 28-98 | el vocabulario entero, alfabético por el castellano, dos columnas, ~28 líneas por página. Cabeceras de letra vistas: B 40 · C 44 · D 52 · E 57 · F 63 · G 65 · H 66 · J 71 · L 73 · M 77 · N 78 · O 79 · Q 86 · R 87 · S 90 · T 93 · V 96 |
+| 28-98 | el vocabulario entero, alfabético por el castellano, dos columnas, ~28 líneas por página. Cabeceras de letra vistas: B 40 · C 44 · D 52 · E 57 · F 63 · G 65 · H 66 · J 71 · L 71 dcha. (al pie) · M 77 · N 78 · O 79 · Q 86 · R 87 · S 90 · T 93 · V 96 |
 | 98 | última página escrita, con colofón |
 | 99-102 | blancas y guarda |
 
@@ -199,6 +199,106 @@ Va anotado en `meta.ortografia_del_copista`.
   capítulo de «equívocos de esta lengua» del pliego 27) está sin minar.
 - Nada se llevó al lexicón ni al corpus, y no se abrió ningún issue: esto es
   comparanda achagua y la decisión de qué hacer con ella es de D11 (#39).
+
+---
+
+**Segunda lectura en imagen, 2026-09-12** (escriba, agente Opus 5). Misma
+técnica, mismos recortes, misma clave de lectura heredada — la `r` con glifo de
+`z` —, y ahora con aumento a 2-3× sobre la línea cuando no se decidía. Todo
+sigue en `6-fusion/achagua_neira_ribero_1762.yaml`; las cifras siguen medidas en
+`meta.cobertura`, y las emite ahora
+`6-fusion/scripts/ensamblar_achagua_neira_ribero.py`.
+
+### Lo que cierra
+
+**El vocabulario está leído de punta a punta.** Se leyeron los 31 pliegos que
+faltaban (33-39, 42-43, 50-51, 54-55, 68-71, 75-77, 80, 84-87, 90-91, 93,
+96-98) y ya no queda hueco entre el 28 y el 98 — lo comprueba el propio script,
+que mide los huecos en vez de creerse la lista. Entran enteras I/J, Q, V/U, X y
+Z, y se cierran los huecos de A, C, D, H, M, P, R, S y T.
+
+**No hay letra K**: de la J se pasa a la L, y las dos cabeceras están en el
+mismo pliego 71. De paso, la tabla de cabeceras de la ficha estaba corrida: la
+L no empieza en el 73 sino al pie del 71 dcha.
+
+**La lista alfabética de verbos del arte (23 dcha.-26 izq.) está minada**, y
+con ella los dos capítulos que la siguen: el del verbo sustantivo (26) y el de
+los «equívocos de esta lengua» (27). Viven en `arte.verbos`.
+
+**De las 14 dudas, diez quedan resueltas y dos a medias.** Las que no: la voz
+de las hormigas que comen los achaguas (pliego 79) y el final de `Jbai-` bajo
+«Haz» (66).
+
+### Lo que corrige a la primera pasada
+
+- **El lema «Diente» sí existe** (pliego 55 dcha.), y trae el paradigma
+  posesivo entero: `Erí` / `Nue` mío / `Je` tuyo / `re` / `que` / `Ne`. La
+  primera pasada lo dio por ausente «verificado leyendo 52, 53, 56 y 57» — pero
+  los pliegos 54 y 55 no se habían leído. Es la regla 6 en su forma exacta: un
+  cero que medía la lectura, no la fuente. La regla vale también al revés, y
+  aquí costó una afirmación falsa.
+- **De las cinco voces de Jahn que quedaron `no-esta`, cuatro aparecen**:
+  `arena` = *Caina* (37), `nariz` = *Dacusí* (77, y el `nutako` de Jahn es su
+  forma poseída `nu-dacu`), `esposa` = *Nuinu* (76), `leña` = *Sichaba* (70,
+  degradada a `difiere` por la consonante inicial). Solo `león` sigue sin
+  aparecer, y ahora ese cero sí está medido: la L está leída entera.
+- **El casabe es `Berrí`, con B.** El pliego 97 dcha. lo escribe con la misma B
+  redonda de `Abaiba` dentro del propio renglón.
+- **La asimetría `Nuriu` / `Jirru` no era descuido del copista**: el pliego 80
+  izq. repite el paradigma entero (Nuriu, Jirru, Irru, Ruriu, Guariu, Jarru,
+  Nariu), con glifo simple en 1sg/3f/1pl/3pl y doble en 2sg/3m/2pl.
+- **La `-are`/`-re` de Fabo sigue siendo minoritaria** medida ahora sobre el
+  vocabulario entero, y la dominante sigue siendo `-si`. La proporción, en
+  `meta.censo_de_terminaciones`.
+
+### Lo que salió nuevo
+
+- **El sistema de numerales, entero y medido.** `cage` es 'mano', y el numeral
+  se construye encima: `abacage` cinco = «una mano», `Abaibacage` seis,
+  `Juchamatabacage` siete, `Juchamage` diez, `Juchamacage Abaí Ribana` quince
+  («dos manos y un pie»), `Abacaí tacay` veinte, treinta = «un tacay y dos
+  manos encima», `Juchamatacay` cuarenta, `Mataritaí tacaí` sesenta,
+  `Juchamacage chana abacagetacaí` mil. Es **base cinco por la mano hasta 20 y
+  vigesimal por encima**, con `tacay` = 20. La primera pasada había leído
+  `abacase`; la voz es `aba-cage`, con 'mano' dentro.
+- **El clasificador de clase no es cosa del numeral: es del sintagma de
+  medida.** El mismo juego que toma `aba-` 'uno' lo toman `manu-` 'ancho'
+  (35 dcha.) y `aurre-` 'angosto' (36 izq.): -ricu casa, -girra ropa, -ba río,
+  -bai hacha, -su palo, -numa puerta.
+- **El autor distingue animado de inanimado en el plural**, y lo dice: «el `na`
+  es nota de 3.as personas de plural, y las cosas inanimadas no le tienen, como
+  consta el Arte» (87 izq.).
+- **'Nación' se dice con la raíz de 'habla'**: `Guachuanibérri` 'de mi nación',
+  sobre `chuani`; y el plural de «Hombre Racional» es `Guachuanibenay`, «los
+  que hablan». Hay además lema para **intérprete** (`Eberrí chuanisí`, 70).
+- **Un solo verbo cubre «ser», «estar» y «tener»**: `Vyuna / Vyugi / Vyumí /
+  Vyubí / Vyuy / Vyuna` (26 izq.).
+- **El español y el duende comparten nombre**, y lo dice el jesuita: «Blanco
+  Español — Guabaymí, Guabaymigeraí. Así llaman los Duendes» (42 izq.).
+- **El autor marca los préstamos**: bajo «Morena cosa» anota que `Samoruna` es
+  «hisp[anice] term[inus] hurtado» (76 dcha.).
+- Léxico que la pregunta 4 pedía y no tenía: **la sal** con lema propio
+  (`Ybidūma`, 90) y **la salina** (`Ybidūma sucu`), más `bai` 'sal' de
+  «Sin sal — Mabayisa»; la **yuca** mansa y brava con sus dos yucales
+  (`Quenirro` / `Alirrí`, 71); el **sebucán** (`Erricaí`, 93); la **quiripa**,
+  que el autor dice que hacen los Otomacos (34, 54, 90); once **árboles** con
+  nombre propio bajo un solo lema (37 dcha.); seis **culebras** (51 dcha.);
+  cuatro insectos picadores (76 dcha.); el **temblador** (93 dcha.).
+- **Topónimos**: el río Meta es `Meda` (75 dcha.), y hay `Casanare Numana`
+  'boca de Casanare' (42) y `Guaviare ge sana` 'los del Guaviare' (26 dcha.).
+- **Parentesco por línea**: el achagua no tiene una sola voz de 'pariente',
+  sino formas distintas según por dónde se es pariente — por hermanas
+  (`Nugisa`), por la mujer (`Nerrimasí`) y una tercera cuya abreviatura
+  castellana no se deja leer, anotada en `dudas` (80 dcha.). Y la hermana de un
+  varón (`Richerro`) no se dice como la hermana de una mujer (`Ruerraí`).
+
+### Qué sigue sin hacerse
+
+- El **arte** propiamente dicho (pliegos 7-22: declinaciones, las seis
+  conjugaciones, los tratados) sigue sin minar. De él solo hay pronombres,
+  numerales, los posesivos adjetivos y el sufijo `-mi` de «cosa ya pasada».
+- Nada se llevó al lexicón ni al corpus, y no se abrió ningún issue. Sigue
+  siendo comparanda achagua, y la decisión es de D11 (#39).
 
 ## Enlaces
 
