@@ -688,7 +688,7 @@ if __name__ == "__main__":
          "Ta-barsure inquieto-ni. Naa-ka waya orilla antes del amanecer. "
          "El Golfete tiene olor diferente. Llamo a este lugar [kuru-bana: kuru+-bana = el cerro arbolado sobre el golfete]."),
         ("Tawaka", "caquetío", 1,
-         "Pescado-ka wanee canoa esta mañana. Biro escaso-ni en wa-salinar. "
+         "Pescado-ka pana canoa esta mañana. Biro escaso-ni en wa-salinar. "
          "Hay que ir-da a las islas."),
         ("Bagre-ko", "guaycarí", 2,
          "El viento bueno para pescar. Traigo-da más pescado que ayer."),

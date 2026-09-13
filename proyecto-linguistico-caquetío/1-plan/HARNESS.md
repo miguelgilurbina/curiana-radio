@@ -74,11 +74,16 @@ mal la primera vez**. No es documentación: es lo que evita repetir el error.
 | `sesion-corpus` | pendiente | las 5 sesiones del programa cultural tienen estructura idéntica (pregunta → ensayo → YAML → hoja de fuentes) |
 | `analizar-run` | pendiente | ahora que `analizar_runs.py` existe, el procedimiento de leerlo es codificable |
 
-> **Hooks (2026-09-13)**: propuestos, **no instalados**, en
-> `.claude/skills/HOOKS_PROPUESTOS.md`. Bloquean sólo donde no hay estado
-> intermedio legítimo (editar a mano un fichero generado, `git add -A`) y
-> avisan en lo demás; el documento discute de frente la regla de abajo
-> («nada de hooks que bloqueen»). Instalar es decisión de Miguel.
+> **Hooks (2026-09-13)**: **instalados** por decisión de Miguel en
+> `.claude/settings.json` + `.claude/hooks/curiana_hooks.py`; diseño, razones y
+> descartes en `.claude/skills/HOOKS_PROPUESTOS.md`. Bloquean sólo donde no hay
+> estado intermedio legítimo (editar a mano un fichero generado, `git add -A`)
+> y avisan en lo demás (tablero sin `--gh`, guardianes tras cada commit, cierre
+> tras un script de fusión). Matiz a la regla de abajo («nada de hooks que
+> bloqueen»), discutido en ese documento. Falso positivo conocido: el modo
+> `bash` es un filtro de texto y bloquea un comando que *contenga* una
+> escritura a un generado aunque sea dentro de un string — las pruebas con ese
+> texto van en un fichero.
 
 ### 3. CLAUDE.md — solo lo que cambia el comportamiento
 

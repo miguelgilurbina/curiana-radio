@@ -1,8 +1,9 @@
 # Hooks propuestos — proyecto lingüístico caquetío
 
-> **PROPUESTA. Nada de esto está instalado.** No se ha tocado ningún
-> `settings.json`. Instalarlo es decisión de Miguel (con la skill
-> `update-config` o a mano en `.claude/settings.json`).
+> **INSTALADOS el 2026-09-13** (Miguel: «instalemos los hooks»), tal cual se
+> describen abajo: `.claude/settings.json` + `.claude/hooks/curiana_hooks.py`.
+> Pipe-test de los cinco modos en verde, y el hook de Bash probado en vivo. Este
+> documento queda como el diseño: por qué cada hook, y qué se descartó.
 
 Miguel, 2026-09-12: *«podríamos tener distintas skills para distintos procesos
 […] o no sé si serían hooks, para seguir mejorando el harness»*. Las skills
