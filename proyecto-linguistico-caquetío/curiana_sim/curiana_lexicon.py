@@ -6954,17 +6954,23 @@ REGLAS_LOCATIVAS: dict[str, dict] = {
         ),
     },
     "-bana": {
-        "nombre": "orilla / lugar limítrofe",
-        "desc": "Borde de, orilla de, donde termina X y empieza otro espacio.",
-        "uso": "RAÍZ + -bana  →  orilla, límite, punto de transición",
+        "nombre": "cerro / sitio alto",
+        "desc": "El cerro, la loma o el sitio alto asociado a X.",
+        "uso": "RAÍZ + -bana  →  cerro de, sitio alto de",
         "ejemplos": [
-            "Mara+kai + bana = Maracaibana → Maracaibo (orilla del clan/lago Marakai)",
-            "manglar + bana = orilla del manglar",
+            "kapu + bana = kapubana, el duende del cerro (atestiguado, Zavala #61)",
+            "sima + bana = la cumbre del cerro",
+            "judi + bana = Judibana, cerro del viento (topónimo, testimonio de Miguel)",
         ],
-        "evidencia": "Maracaibo < *Maracai+bana (Oliver 1989, Alvarado 1921)",
+        "evidencia": "D9 (#38), aprobada 2026-08-30: Zavala Reyes 2015 #26 «Bana (E): "
+                     "Sitio, cerro alto» + capu/capubana #60-61 + Guadadubana (González "
+                     "Batista) + el Cerro de Capú (Velasco 2015) + Judibana. 'Orilla' "
+                     "tuvo cero apoyos: la costa atestiguada es kari. Homónimo de bana "
+                     "'hígado' (reconstruido). Hasta el 2026-09-13 el motor seguía "
+                     "enseñando 'orilla de'",
         "instruccion_agente": (
-            "Para orillas y límites: 'Golfete-bana' = la orilla del Golfete. "
-            "'Manglar-bana' = el borde del manglar."
+            "Para un cerro o un sitio alto: 'sima-bana' = la cumbre del cerro; "
+            "'kuru-bana' = el cerro arbolado. Para la orilla del mar usa kari."
         ),
     },
 }
@@ -7331,14 +7337,14 @@ ERES hablante nativo de caquetío. Piensas en caquetío. El español es lengua e
 CONSTRUYE tus frases con lo que tienes. Una frase incompleta en caquetío > oración completa en español.
 
 ASPECTO: raíz + -ka (ya hice) / -ni (estoy haciendo) / -da (haré/quiero).
-LUGAR: raíz + -ana (lugar de) / -bana (orilla de) / -gua (región de).
+LUGAR: raíz + -ana (lugar de) / -bana (cerro, sitio alto de) / -gua (región de).
 PERSONAS: -ko (hombre de) / -sha (mujer de) / -kana (plural/colectivo).
 POSESIÓN: ta- (mi) / wa- (nuestro) / ma- (sin/no) / ka- (el-la del).
 CONECTORES: ka (y/también) / mara (pero) / saa (si/cuando) / naka (después) / kashi (ahora) / wara (muy).
 
 VACÍO LÉXICO → CREA con morfemas entre corchetes:
 [forma: raíz+sufijo = significado]
-Ejemplo: [kuru-bana: kuru+-bana = orilla arbolada, ribera con árboles]
+Ejemplo: [kuru-bana: kuru+-bana = cerro arbolado, loma con árboles]
 
 Si gloseas al español, hazlo entre paréntesis DESPUÉS de la frase caquetía."""
 
@@ -7354,7 +7360,7 @@ def prompt_reglas_completo() -> str:
               "chaa (hacer/construir) · wana (ver) · suna (dormir) · masa (comer) · awa (beber) · "
               "kira (escuchar) · panaa (saber) · naba (pensar) · kono (sembrar) · raka (querer) · rua (cargar)")
     naturaleza = ("duna (agua) · amana (fuego) · kali (sol) · kasha (luna) · kaya (lluvia) · "
-                  "kuru (árbol) · arima (pez) · habo (mar) · bara (río) · dali (tierra) · suka (noche) · "
+                  "kuru (árbol) · arima (pez) · habo (mar) · bara (palo, árbol) · dali (tierra) · suka (noche) · "
                   "sima (cerro) · kapua (amanecer)")
     personas = "ama (madre) · baba (padre) · buri (hijo/a) · nomi (hombre) · wari (mujer) · wanü (anciano) · pütchi (mensaje/voz)"
     sustantivos = ("barsure (alma) · buco (represa) · biro (sal) · piache (chamán) · corie (choza) · "
@@ -7376,11 +7382,11 @@ CUANDO HABLAS:
   4. Puedes glosar al español entre paréntesis al final, nunca antes.
 
 EJEMPLO DE RESPUESTA IDEAL (Tier I):
-  "Taya wana-ka arima wara bara-bana. Suka kaa-ni ka kali naa-da kapua.
-   Ta-barsure maa-ni: Manaure naa-da kashi — ta-nii wana-ka [sima-bana: sima+-bana = orilla del cerro].
+  "Taya wana-ka arima wara kari. Suka kaa-ni ka kali naa-da kapua.
+   Ta-barsure maa-ni: Manaure naa-da kashi — ta-nii wana-ka [sima-bana: sima+-bana = la cumbre del cerro].
    Saa pia naa-da buco-ana, naka taya naa-da ka pia."
-  (Vi muchos peces en la orilla del río. La noche está, el sol vendrá al amanecer.
-   Mi alma dice: Manaure llega pronto — mis ojos vieron la orilla del cerro.
+  (Vi muchos peces en la costa. La noche está, el sol vendrá al amanecer.
+   Mi alma dice: Manaure llega pronto — mis ojos vieron la cumbre del cerro.
    Si vas al lugar de la represa, después yo voy contigo.)
 
 VOCABULARIO DISPONIBLE [{len(VOCABULARIO_BASE)} palabras]:
@@ -7405,8 +7411,8 @@ MORFOLOGÍA:
     ma- = sin/no:  ma-barsure (sin alma) · ma-anüiki (sin habla, extranjero)
     ka- = el/la del: ka-biro (el salinero) · ka-maure (la del algodón)
   LOCATIVOS (crear topónimos):
-    -ana = lugar de X: bara+ana = donde está el río · arima+ana = lugar de peces
-    -bana = orilla de X: habo+bana = orilla del mar · kuru+bana = ribera arbolada
+    -ana = lugar de X: bara+ana = donde están los árboles · arima+ana = lugar de peces
+    -bana = cerro, sitio alto de X: sima+bana = la cumbre · kapu+bana = kapubana, el duende del cerro
     -gua = región de X: maure+gua = tierra del algodón
   AGENTIVOS: -ko (hombre de X) · -sha (mujer de X) · -kana (plural/todos)
 
@@ -8168,9 +8174,9 @@ if __name__ == "__main__":
     print()
 
     texto_test = (
-        "Taya wana-ka arima wara bara-bana. "
+        "Taya wana-ka arima wara kari. "
         "Ta-barsure maa-ni: Manaure naa-da kashi. "
-        "[sima-bana: sima+-bana = orilla del cerro]. "
+        "[sima-bana: sima+-bana = la cumbre del cerro]. "
         "Saa pia naa-da buco-ana, naka taya naa-da ka pia."
     )
     resultado = score_linguistico(texto_test, lc)

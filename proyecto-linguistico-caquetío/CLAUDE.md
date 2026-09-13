@@ -168,9 +168,10 @@ enlaces; lo que se rompe son los enlaces markdown relativos.
 
 ```
 Orden: pronombre + verbo-aspecto + complemento
-Pronombres: taya (yo), pia (tú), nüma (él/ella), tayamaa (nosotros)
+Pronombres: taya (yo), pia (tú), nüma (él/ella), waya (nosotros), naya (ellos)
+            — reconstruidos desde el wayuu: deuda de D11 fase 3
 Aspectos:   -ka (completivo), -ni (continuativo), -da (prospectivo)
-Posesivos:  ta- (mi), pi- (tu), nü- (su)
+Posesivos:  ta- (mi), wa- (nuestro), ma- (sin/no), ka- (el/la del)
 Locativos:  -bana (cerro, sitio alto — D9 resuelta 2026-08-31, seis apoyos;
             homónimo de bana 'hígado' reconstruido), -ana (forma atestiguada,
             glosa 'lugar de' RETIRADA el 2026-09-07 — #109; el motor la

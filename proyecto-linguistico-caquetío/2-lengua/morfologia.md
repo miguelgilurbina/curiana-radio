@@ -17,7 +17,7 @@ medido: 2026-08-04
 
 ```
 pronombre + verbo-aspecto + complemento
-Pronombres: taya (yo) · pia (tú) · nüma (él/ella) · tayamaa (nosotros)
+Pronombres: taya (yo) · pia (tú) · nüma (él/ella) · waya (nosotros) · naya (ellos)
 Neologismo: [forma: componentes = significado]
 ```
 
