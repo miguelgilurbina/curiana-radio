@@ -1,0 +1,443 @@
+meta:
+  obra: fabo-1911
+  generado_por: 6-fusion/scripts/minar_fabo_1911_achagua.py
+  minado: '2026-09-12'
+  que_es: 'Lo achagua de Fabo 1911: dos tablas comparativas (pp. 108 y 111-112), el pasaje sobre la terminación
+    -are (p. 109), la afirmación de que mena = agua (p. 111), noticias bibliográficas (p. 113-114) y un texto achagua
+    copiado de un manuscrito de pláticas (p. 115). Fabo mismo: «del idioma achagua apenas poseo unas cuantas docenas
+    de palabras» (p. 108) y «No conozco gramática alguna achagua» (p. 112).'
+  paginas: impresas 108-115 = pdf 110-117; transcritas de la imagen, no del OCR (desplaza columnas)
+  etiqueta_propuesta: comparanda achagua de SEGUNDA mano (Fabo no da su fuente para las tablas); vale como control
+    de transmisión hacia Jahn, no como atestación
+  cobertura_medida:
+    tabla_108_filas: 23
+    tabla_111_filas: 24
+    voces_jahn: 34
+    voces_jahn_con_forma_en_fabo: 13
+    fabo_coincide_con_jahn: 9
+hallazgo_principal:
+  titulo: El «mena = agua» de Jahn es un error de Fabo, y el manuscrito lo desmiente
+  cadena: 'Neira y Ribero 1762 (pliego 32): «Agua — Vni»; «Mar — Manoa» (74) → Fabo 1911 p. 111: «menoa ó mena quiere
+    decir agua» y tabla «Agua — Menoa-mena» → Jahn 1927 p. 377: «agua = mena». Fabo tomó el MAR (manoa) por el agua,
+    y Jahn lo copió. Verificado en imagen del manuscrito el 2026-09-12 («Aguador — Vni iserri», «Aguacero — Vnia»).'
+  y_ademas: 'Fabo da DOS formas distintas para «agua» en sus dos tablas: Chitey (p. 108, frente al guaraní chity
+    — sospechoso de ser guaraní o error) y Menoa-mena (p. 111). Ninguna es la del manuscrito. Los hidrónimos en
+    -mena (Casimena, Surimena, Tauramena…) que Fabo explica como «agua» piden otra explicación.'
+  consecuencia: toda comparación caquetío ↔ achagua hecha con las 34 de Jahn hereda este escalón; con el manuscrito
+    delante, Jahn deja de ser la comparanda y pasa a ser control de transmisión
+pasaje_are:
+  pagina: 109
+  texto: «Una de las terminaciones más empleadas en el achagua es are, como propia y exclusiva, por cuanto ni en
+    el sáliva ni en el guahivo se ha descubierto; el guahivo termina muchas en arre y en ane, pero una ó dos únicamente
+    en are; por lo cual creemos que los vocablos, ya sean de significación geográfica ya de usos domésticos, que
+    subsisten en nuestros días, son reminiscencias de aquella habla. Con muchos de ellos se designan hoy ríos, lo
+    cual hace sospechar que tal desinencia dice relación á río, agua ó cosas análogas, aunque bien puede sugerir
+    nombres de tribus que habitaron las comarcas por donde cruzan esos ríos [...]. Dícese que are es raíz caribe
+    y que significa «la gran sombra de invasión que venía subiendo las aguas del Magdalena... El creador Are vino
+    del otro lado del río de muy lejanas tierras...» Restrepo Tirado, Invasiones caribes. [...] Casanare, Casiquiare,
+    Guaviare, Tebiare, Sarrare, Manare, Guanare, Maremare, Atanare, Onocutare, Carare, Purare y otros muchos son
+    nombres de ríos [...]; otros nombres nos quedan incorporados al castellano, como regionalismos, y son Budare,
+    plancha de hierro para tostar masas, especialmente cazabe, arepa, cachapa, etc.; Cumare, palmera de fibra textil;
+    y también se llaman así los chinchorros ó las hamacas que con tal fibra se manufacturan; Curare, una planta
+    de la que se extrae el famoso veneno con que untan sus flechas y lanzas los indios. Caribabare es un cerro...»
+  lectura: 'Fabo afirma -are «propia y exclusiva» del achagua, la asocia a hidrónimos de los Llanos (Casanare, Guaviare,
+    Manare, Guanare…) y a regionalismos (budare, cumare, curare), y recoge —sin hacerla suya— la etimología caribe
+    de Restrepo Tirado. Medido sobre el manuscrito por el escriba (achagua_neira_ribero_1762.yaml, censo_de_terminaciones):
+    40 de 2.410 formas acaban en -re. La exclusividad no se sostiene en el LÉXICO; lo que Fabo vio es un patrón
+    TOPONÍMICO de los Llanos. Para censo_terminacion_re.yaml: el -are de los ríos llaneros es un comparandum, y
+    budare está en el habla paraguanera (Medina) y en el dictado con veredicto B.'
+  toca:
+  - 6-fusion/censo_terminacion_re.yaml
+  - morfema-002
+  - la hipótesis de Miguel sobre -re / catire
+pasaje_mena:
+  pagina: 111
+  texto: '«téngase en cuenta que menoa ó mena quiere decir agua, en achagua, y por eso que hubiese algunos pueblos
+    que acabaran en mena á orillas de los ríos y que hoy día haya muchos ríos ó quebraditas que tengan tal terminación:
+    Casimena, Surimena, Tauramena, Iximena, Bujumena, Guachajumena, Guaijuena, Patimena, Tacarimena, Iguamena, Guariamena,
+    Ypamena, Chitamena, Usamena, Charamena, Masimena.»'
+tabla_108_castellano_achagua_guarani:
+- es: Agua
+  achagua: Chitey
+  guarani: Chity
+- es: Canoa
+  achagua: Ida
+  guarani: Iga
+- es: Cabeza
+  achagua: Nurita
+  guarani: Acaujita
+- es: Colorado
+  achagua: Quirage
+  guarani: Pira
+- es: Negro
+  achagua: Cachajura
+  guarani: Ju
+- es: Comer
+  achagua: Gigato
+  guarani: Guicaruabo
+- es: Cantar
+  achagua: Norracapa
+  guarani: Guiracapacai
+- es: Duende
+  achagua: Guabaimi
+  guarani: Meboguabi
+- es: Estrella
+  achagua: Ivisai
+  guarani: Yasi tatá
+- es: Él
+  achagua: Rae
+  guarani: Hae
+- es: Flor
+  achagua: Ibinachi
+  guarani: Iboti
+- es: Fruta
+  achagua: Itasi
+  guarani: Ibá
+- es: Leña
+  achagua: Ichaba
+  guarani: Ipea ipirú
+- es: Morir
+  achagua: Mánare
+  guarani: Amano
+- es: Nosotros
+  achagua: Guaya, guaruyá
+  guarani: Oropetei guazú
+- es: Plátano
+  achagua: Parata
+  guarani: Pacoba
+- es: Pescar
+  achagua: Poracá
+  guarani: Poracá
+- es: Paja
+  achagua: Misi
+  guarani: Capiji
+- es: Palmera
+  achagua: Cusi
+  guarani: yuyi Cirí
+- es: Piedra
+  achagua: Iba
+  guarani: Itá
+- es: Salina
+  achagua: Iquití
+  guarani: Yuquití
+- es: Sepultura
+  achagua: Nirri
+  guarani: Tibi
+- es: Sarta
+  achagua: Quiripa
+  guarani: Rizi
+tabla_111_castellano_achagua_guahivo:
+- es: Agua
+  achagua: Menoa-mena
+  guahivo: Merra
+- es: Allí
+  achagua: Sare
+  guahivo: Arremeliego
+- es: Blanco
+  achagua: Paray
+  guahivo: Niojay
+- es: Casa
+  achagua: Bonisi
+  guahivo: Bo
+- es: Cafuche
+  achagua: Aguicha
+  guahivo: Jabuitcha
+- es: Candela
+  achagua: Isay
+  guahivo: Isoto
+- es: Cazabe
+  achagua: Berri
+  guahivo: Perri
+- es: Dulce
+  achagua: Maná
+  guahivo: Baná
+- es: Dios
+  achagua: Guayguerri
+  guahivo: Guey
+- es: Duende
+  achagua: Guabaimi
+  guahivo: Duguatini
+- es: Estómago
+  achagua: Navarrick
+  guahivo: Matabicopene
+- es: Él
+  achagua: Rae
+  guahivo: Arra poni
+- es: Hombre
+  achagua: Guanacataperri
+  guahivo: Pebi
+- es: Lanza
+  achagua: Chavina
+  guahivo: Yavinato
+- es: Nariz
+  achagua: Mutaco
+  guahivo: Pemutaito
+- es: Nosotros
+  achagua: Guaya
+  guahivo: Guajaichi
+- es: Ojo
+  achagua: Nutoy
+  guahivo: Peitajuto
+- es: Perro
+  achagua: Iduri
+  guahivo: Abirri
+- es: Plátano
+  achagua: Parata
+  guahivo: Baratun
+- es: Pez
+  achagua: Dupay
+  guahivo: Dugüey
+- es: Piedra
+  achagua: Iba
+  guahivo: Iboto
+- es: Tabaco
+  achagua: Sema
+  guahivo: Chema
+- es: Vosotros
+  achagua: Ja
+  guahivo: Pajanui
+- es: Yo
+  achagua: Nuja
+  guahivo: Jani
+cotejo_34_de_jahn:
+- es: lengua
+  jahn_1927: nuiname
+  fabo_1911: null
+  neira_1762: nuinene («Entorpecerse la lengua — Cadacaniu nuinene»)
+  veredicto_neira_vs_jahn: coincide
+- es: diente
+  jahn_1927: nier
+  fabo_1911: null
+  neira_1762: eri («toba de los dientes — Eridare»; «Encia — Eri enita»; «Dolor de muelas — Nuecaicha»)
+  veredicto_neira_vs_jahn: coincide
+- es: nariz
+  jahn_1927: nutako
+  fabo_1911: Mutaco
+  neira_1762: no localizada
+  veredicto_neira_vs_jahn: no-esta
+  fabo_vs_jahn: difiere
+- es: ojo
+  jahn_1927: nutói
+  fabo_1911: Nutoy
+  neira_1762: '[T]uisi; `nu-tui-ba` = mis ojos; `Juchama-tuisi` = dos ojos'
+  veredicto_neira_vs_jahn: coincide
+  fabo_vs_jahn: difiere
+- es: oreja
+  jahn_1927: núbila
+  fabo_1911: null
+  neira_1762: Bibasi («Oreja»); Jbiri / Nuibi («Oido, oreja»)
+  veredicto_neira_vs_jahn: difiere
+- es: cabeza
+  jahn_1927: núrita
+  fabo_1911: Nurita
+  neira_1762: Bitasi (absoluto); `nu-bita` poseido («Encalvecer — Aretau nubita»)
+  veredicto_neira_vs_jahn: difiere
+  fabo_vs_jahn: coincide
+- es: barba
+  jahn_1927: nuchiánoma
+  fabo_1911: null
+  neira_1762: Jinumasi; `nu-rrinuma` («Barbar — Rigiayu nurrinuma»)
+  veredicto_neira_vs_jahn: difiere
+- es: mano
+  jahn_1927: nukaje
+  fabo_1911: null
+  neira_1762: Cageri (absoluto); `ri-cage` = su mano
+  veredicto_neira_vs_jahn: coincide
+- es: pie
+  jahn_1927: nuipa
+  fabo_1911: null
+  neira_1762: Jbari («Pie»); `nu-caba` («Pata mia»)
+  veredicto_neira_vs_jahn: coincide
+- es: agua
+  jahn_1927: mena
+  fabo_1911: Chitey, Menoa-mena
+  neira_1762: Vni («Agua — Vni. La corriente del rio = Vninanaba»)
+  veredicto_neira_vs_jahn: difiere
+  fabo_vs_jahn: coincide
+- es: río
+  jahn_1927: unibe
+  fabo_1911: null
+  neira_1762: null
+  veredicto_neira_vs_jahn: null
+- es: fuego
+  jahn_1927: ishay
+  fabo_1911: null
+  neira_1762: Sichai («Fuego», «Candela», «Lumbre»)
+  veredicto_neira_vs_jahn: coincide
+- es: leña
+  jahn_1927: ichaba
+  fabo_1911: Ichaba
+  neira_1762: no localizada como lema
+  veredicto_neira_vs_jahn: no-esta
+  fabo_vs_jahn: coincide
+- es: sol
+  jahn_1927: erre
+  fabo_1911: null
+  neira_1762: Erri («Sol. = Erri. Alto està el sol = Acayu erri»)
+  veredicto_neira_vs_jahn: coincide
+- es: luna
+  jahn_1927: kerre
+  fabo_1911: null
+  neira_1762: Querri («Luna = Querri. Nueva = Querriquaricuy»)
+  veredicto_neira_vs_jahn: coincide
+- es: estrella
+  jahn_1927: ivisái
+  fabo_1911: Ivisai
+  neira_1762: Ybiyai («Estrella — Ybiyai. Cuni llaman al Lucero»)
+  veredicto_neira_vs_jahn: coincide
+  fabo_vs_jahn: coincide
+- es: piedra
+  jahn_1927: iba
+  fabo_1911: Iba, Iba
+  neira_1762: Jba («Piedra = Jba, quejeda»; «Peña — Jba»)
+  veredicto_neira_vs_jahn: coincide
+  fabo_vs_jahn: coincide
+- es: flecha
+  jahn_1927: kapauje
+  fabo_1911: null
+  neira_1762: Querriasui («Flecha»); Caubasui, caubase («Flecha con hierro»)
+  veredicto_neira_vs_jahn: coincide
+- es: casa
+  jahn_1927: banísi
+  fabo_1911: Bonisi
+  neira_1762: Cuita, banisi («Casa = Cuita, banisi. Casa-Palacio = Bania»)
+  veredicto_neira_vs_jahn: coincide
+  fabo_vs_jahn: difiere
+- es: arena
+  jahn_1927: gaina
+  fabo_1911: null
+  neira_1762: no localizada
+  veredicto_neira_vs_jahn: no-esta
+- es: mujer
+  jahn_1927: inagetua
+  fabo_1911: null
+  neira_1762: Jnetua, Jnegetua («Hembra»), pl. Jnaveni
+  veredicto_neira_vs_jahn: coincide
+- es: esposa
+  jahn_1927: nuino
+  fabo_1911: null
+  neira_1762: no hay lema; «tener muger = Cau[...]caiuna» frente a «tener marido = Canirricayuna»
+  veredicto_neira_vs_jahn: no-esta
+- es: tabaco
+  jahn_1927: sema
+  fabo_1911: Sema
+  neira_1762: chema («Fuerte tabaco — Jjuiyi chema»)
+  veredicto_neira_vs_jahn: coincide
+  fabo_vs_jahn: coincide
+- es: tigre
+  jahn_1927: echave
+  fabo_1911: null
+  neira_1762: chabi («Vn tigre = Abanai chabí», pliego 28; «Linage de tigre = Chabiberraenay», pliego 72)
+  veredicto_neira_vs_jahn: difiere
+- es: león
+  jahn_1927: mirrianare
+  fabo_1911: null
+  neira_1762: null
+  veredicto_neira_vs_jahn: null
+- es: danta
+  jahn_1927: ema
+  fabo_1911: null
+  neira_1762: Ema («Danta animal — Ema»; «Caballo — Ema»)
+  veredicto_neira_vs_jahn: coincide
+- es: pez
+  jahn_1927: kupai
+  fabo_1911: Dupay
+  neira_1762: Cubai («Pescado — Cubai»; «Pez ó pescado = Cubai»)
+  veredicto_neira_vs_jahn: coincide
+  fabo_vs_jahn: difiere
+- es: canoa
+  jahn_1927: ida
+  fabo_1911: Ida
+  neira_1762: ida («Barca — Junasi ida»; «Embarcacion — Junan, ida»; «Patron de la Nao = Jda minari»)
+  veredicto_neira_vs_jahn: coincide
+  fabo_vs_jahn: coincide
+- es: cazabe
+  jahn_1927: berri
+  fabo_1911: Berri
+  neira_1762: Jerri («Casabe — Jerri»); Berri («A trueque de casabe — Berri ibem», pliego 28; «Orilla del casabe
+    = Berriribiu», pliego 79)
+  veredicto_neira_vs_jahn: coincide
+  fabo_vs_jahn: coincide
+- es: hermano
+  jahn_1927: nimérre
+  fabo_1911: null
+  neira_1762: Numerrerri («Hermano menor mio»); Nuberri («Hermano mio»)
+  veredicto_neira_vs_jahn: coincide
+- es: sepultura
+  jahn_1927: nirri
+  fabo_1911: Nirri
+  neira_1762: nirri («Enterrar — Nuayu nirri irrico», 'lo pongo dentro de la sepultura')
+  veredicto_neira_vs_jahn: coincide
+  fabo_vs_jahn: coincide
+- es: barbasco
+  jahn_1927: kuna
+  fabo_1911: null
+  neira_1762: Cuna («Barbasco de raiz — Cuna. De Ojas = Cunai»)
+  veredicto_neira_vs_jahn: coincide
+- es: oír
+  jahn_1927: numike
+  fabo_1911: null
+  neira_1762: null
+  veredicto_neira_vs_jahn: null
+- es: beber
+  jahn_1927: irago
+  fabo_1911: null
+  neira_1762: Nuirrau («Beber»); Cairracacayi («Bebedor»); Jarracani («Bebida»)
+  veredicto_neira_vs_jahn: difiere
+noticias_bibliograficas:
+- pagina: 113
+  que: 'Cita Neira y Rivero 1762 (Arte y vocabulario); el Conde de la Viñaza; y un manuscrito autógrafo de Ezequiel
+    Uricoechea: «Diccionario de la lengua de los achaguas extractado de los escritos de los PP. Juan Rivero y Alonso
+    de Neira en el pueblo de Surmeno [Surimena], año 1762»'
+- pagina: 114
+  que: 'Arístides Rojas, Estudios indígenas: «La oración dominical en lenguas venezolanas», con un Padre Nuestro
+    en achagua tomado de Vergara y Vergara (Historia de la Literatura en Nueva Granada, cap. VI), que también menciona
+    un diccionario achagua autógrafo de un dominico. Lázaro María Girón, «Los antiguos achaguas», en El Papel.'
+- pagina: 114-115
+  que: 'Un manuscrito de 425 pp. «Lengua achagua, L. M. J.» (Miscelánea variarum compositionum in exerticiis idiomatis
+    achaguae): pláticas sobre el Decálogo, los Sacramentos, el Credo, y catorce poesías. Fabo lo atribuye con «mucha
+    probabilidad» al P. Rivero o al P. Neira. Empieza «Dios ibanacare yuchamacaje».'
+texto_achagua_115:
+  titulo: Masicatare yarro
+  pagina: 115
+  versos:
+  - Jainataca Masicatare
+  - Guata miniu guacha
+  - Mata guaibaca girruri
+  - Ribema giarena saicaba
+  - Masicatare guamauca,
+  - ¡Neba! caigibe macacha
+  - Cayayi, catabacayi
+  - Carrunatacayi taba
+  - Cayagibe cariani
+  - Lirrico cainabe yaca
+  - Rimedanicaimi Dios
+  - Cagicunabeni Igiagina.
+  - Carruna sichay neni
+  - Carruna mananicai yava
+  - Tanasimi beni ichaba
+  - Caichacai ichaba taba
+  - Lirrico cagicunabeni
+  - Naichaca mayabacaja
+  - Cata queniu debe
+  - Sichai becha machuacaja
+  - Cabaracana lirrico
+  - Ichaba nanacuchajaba
+  - Cata saicabe erri say
+  - Mecucanimiu naucha.
+  - Bitamasi ichaba neni
+  - Eno nenami ibicaubata
+  - Carrunemica ribitama
+  - Coacao ¡neba! nagiaca
+  - Mananicay riani
+  - Coacao yabaja amarra
+  - Machuacayujani neni
+  - Ayyujade machuacaja.
+  nota: poesía asonantada copiada del manuscrito L. M. J.; es TEXTO achagua corrido, no lista de voces — material
+    para morfología (nótese carruna-, lirrico, ichaba «leña», Dios, erri «sol»)
+advertencias:
+- 'Fabo declara no tener gramática achagua ni más que «unas cuantas docenas de palabras»: sus tablas son de fuente
+  no declarada y con al menos un error grave (agua).'
+- Las tablas se transcribieron de la imagen; la ortografía es la de Fabo (y/i, ck en Navarrick), no la del manuscrito.
+- 'El cotejo con el manuscrito usa la transcripción por visión del escriba: verificar la forma exacta en imagen
+  antes de citarla.'

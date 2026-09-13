@@ -289,3 +289,27 @@ recuento_de_are:
     —Guatacare, Cururupare, Macuare, Botucare, Tequeguacare, Urumare— son
     donde buscar la séptima y la octava glosa. Si alguna aparece, morfema-002
     sube de recurrencia con material y no con conteo.
+
+comparandum_fabo_1911_y_neira_1762:
+  fecha: '2026-09-12'
+  fabo_1911_p109: >-
+    «Una de las terminaciones más empleadas en el achagua es are, como propia
+    y exclusiva, por cuanto ni en el sáliva ni en el guahivo se ha
+    descubierto» — y la asocia a hidrónimos de los Llanos (Casanare,
+    Casiquiare, Guaviare, Tebiare, Sarrare, Manare, Guanare, Maremare,
+    Atanare, Onocutare, Carare, Purare) y a regionalismos (budare, cumare,
+    curare, Caribabare). Recoge además, sin hacerla suya, la etimología
+    caribe de Restrepo Tirado («el creador Are»).
+  medido_en_el_manuscrito: >-
+    Neira y Ribero 1762, censo del escriba sobre 2.410 formas transcritas:
+    40 acaban en -re (26 en -are). Dominan -si, -ba, -ri, -yi, -cayi. La
+    exclusividad de Fabo no está en el léxico achagua; es un patrón
+    TOPONÍMICO llanero, que puede ser achagua, caribe o de sustrato.
+  lo_que_aporta_al_censo: >-
+    Un comparandum externo para la -re de los topónimos caquetíos: la misma
+    terminación es hidronímica en los Llanos, a 500 km, en área achagua. No
+    prueba parentesco (regla del método: mirar QUÉ se comparte — un formante
+    toponímico viaja); sí dice que la hipótesis de Miguel tiene un vecino
+    arahuaco donde medirla. Y budare (dictado, nivel B) es de la serie.
+  fuentes: [fabo-1911, neira-ribero-1762, 6-fusion/achagua_fabo_1911.yaml, 6-fusion/achagua_neira_ribero_1762.yaml]
+

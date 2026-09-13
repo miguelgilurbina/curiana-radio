@@ -69,6 +69,7 @@ editar_a_mano: no
 
 Vistas generadas en `6-fusion/` (no cuentan: juntan lo que ya está arriba):
 
+- `achagua_fabo_1911.yaml` — generado por `6-fusion/scripts/minar_fabo_1911_achagua.py`
 - `achagua_neira_ribero_1762.yaml` — generado por `lectura en imagen por el escriba (agente Opus 5), 2026-09-12`
 - `lokono_perea_1942.yaml` — generado por `curiana_sim/minar_perea.py`
 - `lokono_verbos_perea_1942.yaml` — generado por `6-fusion/scripts/minar_perea_verbos.py`
