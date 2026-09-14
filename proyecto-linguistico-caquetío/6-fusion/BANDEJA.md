@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-14**.
 
-**2359 ítems propuestos** en 52 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
+**2359 ítems propuestos** en 53 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -40,6 +40,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-09-08.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-12.yaml` | ? | 4 |  |
 | `decisiones_tanda_2026-09-13.yaml` | ? | 0 |  |
+| `decisiones_tanda_2026-09-14.yaml` | ? | 0 |  |
 | `esteves_parte2_falcon.yaml` | esteves-1989 | 16 |  |
 | `estructura_social_era2.yaml` | varias | 17 |  |
 | `frase_saludo_mitare.yaml` | ? | 2 |  |

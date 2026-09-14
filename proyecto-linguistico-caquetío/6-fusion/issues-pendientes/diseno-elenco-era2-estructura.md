@@ -16,6 +16,42 @@ lo que hay que leer para decidir. Parte de la geografía que cerró #122:
 **GUARANAO** en el centro-sur (Moruy, Chamuriana/Santa Ana, la laguna) y
 **AMUAY** en el norte y la costa oeste (Cayerúa, Amuay).
 
+## 0 · Decidido el 2026-09-14: dos subgrupos por nodo
+
+> «Si unos estaban en el golfete, tal vez los otros estaban en Amuay hacia Los
+> Taques. Yo creo que al final hay cosas que no podemos saber con la
+> información básica que tenemos. Pero hay que pensar que se separaban las
+> zonas de pesca, y el asiento religioso de Capubana congrega y centraliza todo
+> lo espiritual, por lo menos lo que es del Manaure, no necesariamente como
+> institución sino a nivel energético. Para esta era podríamos elegir dos
+> subgrupos por nodo. Lo dejamos establecido como nuestra decisión creativa
+> para efectos de la simulación.» (Miguel)
+
+Es una **decisión creativa** (`canon-simulacion`), no un dato: la única fuente
+con subgrupos con nombre es un cronista de 2012 sin cita, y no los reparte.
+
+| Nodo | Subgrupos | Zona de pesca, exclusiva |
+|---|---|---|
+| GUARANAO | **los Tacuatos** (Tacuato) · **los Cayudes** (El Cayude) | ZG2, la orilla del Golfete |
+| AMUAY | **los Guasicures de Caseto** · **los Corubos** (costa oeste, hacia Los Taques) | ZA1, de Amuay a Los Taques |
+
+- **El Capubana** es el centro compartido que concentra lo espiritual, por lo
+  menos lo del Manaure, a nivel energético. No es un aparato con puestos: los
+  oficios de §3 quedan como repertorio de papeles para el casting. Moruy,
+  Chamuriana, Siraba y Maitiruma son el conglomerado del cerro, no subgrupos
+  en escena.
+- **Queda de fondo, sin agentes:** la costa norte, la costa oriental, la
+  laguna de Guaranao, Cayerúa y Hurihurebo.
+- **Lo que se acepta perder:**
+  - Curubitos (Esteves p. 34) ponía a los Corubos en la costa oriental.
+  - La frontera deja de ser norte contra sur y pasa a ser oeste contra
+    sureste, alrededor del cerro.
+- **Elenco:** un linaje de D1 por subgrupo. Así se conservan los «2 linajes por
+  nodo» de DISENO_ERA2 §3; qué linaje va en cuál se decide en el casting.
+
+Lo que sigue en el documento es la propuesta sobre la que se decidió. Donde la
+contradiga, manda esta sección.
+
 ---
 
 ## Lo corto

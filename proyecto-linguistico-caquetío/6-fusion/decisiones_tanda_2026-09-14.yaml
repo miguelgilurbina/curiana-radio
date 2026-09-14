@@ -1,0 +1,63 @@
+# ─────────────────────────────────────────────────────────────────────────
+# DECISIONES DE MIGUEL — tanda del 2026-09-14
+#
+# Mismo patrón que las tandas anteriores: cita literal, lectura operativa y
+# dónde se aplicó. Rama feat/era2-arranque.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-14'
+  decidido_por: Miguel
+  estado: APLICADA en la propuesta de estructura; el casting va después
+
+subgrupos_era2:
+  estado: DECIDIDA (2026-09-14) — decisión creativa
+  etiqueta: canon-simulacion
+  decision_literal: >-
+    «Si unos estaban en el golfete, tal vez los otros estaban en Amuay hacia
+    Los Taques. Yo creo que al final hay cosas que no podemos saber con la
+    información básica que tenemos. Pero hay que pensar que se separaban las
+    zonas de pesca, y el asiento religioso de Capubana congrega y centraliza
+    todo lo espiritual, por lo menos lo que es del Manaure, no necesariamente
+    como institución sino a nivel energético. Para esta era podríamos elegir
+    dos subgrupos por nodo. Lo dejamos establecido como nuestra decisión
+    creativa para efectos de la simulación.»
+  por_que_es_decision_y_no_dato: >-
+    La única fuente con subgrupos con nombre es un cronista local de 2012 sin
+    cita (Osman Petit, Centro de Historia de Paraguaná), y dice que poblaban
+    «las costas y el golfete de Coro» sin repartirlos. Miguel lee las dos
+    mitades de la frase como dos lugares: el golfete para unos, y las costas
+    hacia Amuay y Los Taques para los otros.
+  lectura_operativa:
+    GUARANAO:
+      subgrupos: [los Tacuatos (Tacuato), los Cayudes (El Cayude)]
+      zona_de_pesca: ZG2, la orilla del Golfete de Coro
+    AMUAY:
+      subgrupos: [los Guasicures de Caseto, los Corubos]
+      zona_de_pesca: ZA1, la costa oeste de Amuay a Los Taques
+    zonas_de_pesca: >-
+      Separadas y exclusivas por nodo. El resto de la costa (la norte, la
+      oriental y la laguna de Guaranao) queda de fondo, sin agentes en escena.
+    capubana: >-
+      Centro compartido que congrega y centraliza lo espiritual, por lo menos
+      lo del Manaure, «no necesariamente como institución sino a nivel
+      energético». Los oficios rituales se quedan como papeles de personas de
+      los subgrupos que suben al cerro, no como un aparato con puestos fijos.
+      Moruy, Chamuriana, Siraba y Maitiruma forman el conglomerado del cerro y
+      no son subgrupos en escena.
+  lo_que_se_acepta_perder:
+    - 'Curubitos (Esteves p. 34) pondría a los Corubos en la costa oriental; la decisión los lleva a la costa oeste'
+    - 'Caseto cae al sur de la frontera interior que proponía la estructura (lat. 11.90): la frontera entre nodos pasa a ser oeste contra sureste, alrededor del cerro'
+    - 'la laguna de Guaranao, que da nombre a un clan, queda entre los dos territorios y de fondo'
+    - 'Cayerúa, Hurihurebo y la costa norte salen de escena (siguen en el mundo, sin agentes)'
+  consecuencia_para_el_elenco: >-
+    Cuatro subgrupos en escena. El «2 linajes por nodo» de DISENO_ERA2 §3 se
+    conserva como un linaje de D1 por subgrupo; qué linaje va en cuál se decide
+    en el casting.
+  sigue_abierto:
+    - 'dónde vive Manaure (P1); la decisión refuerza que lo suyo espiritual está en el cerro'
+    - 'el sitio concreto de los Corubos en la costa oeste'
+    - 'la feria de la sal (P14), que choca con DISENO_ERA2 §4.3 («nada de mercados inventados»)'
+  donde: >-
+    6-fusion/estructura_social_era2.yaml (decision_creativa_2026-09-14;
+    institucion_kapubana.caracter; P2, P3, P14 y P15), el borrador del issue
+    §0 y 5-experimento/DISENO_ERA2.md §2-§3

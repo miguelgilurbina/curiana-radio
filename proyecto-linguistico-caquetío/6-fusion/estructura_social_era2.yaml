@@ -168,6 +168,27 @@ meta:
     - Oviedo y Baños (1723) generaliza para toda la provincia de Venezuela; por la regla 4 no es dato costero
 
 # ══════════════════════════════════════════════════════════════════
+# 0. DECISIÓN CREATIVA DEL 2026-09-14 — dos subgrupos por nodo
+# ══════════════════════════════════════════════════════════════════
+decision_creativa_2026-09-14:
+  estado: DECIDIDA por Miguel
+  etiqueta: canon-simulacion
+  registro: 6-fusion/decisiones_tanda_2026-09-14.yaml
+  literal: '«Para esta era podríamos elegir dos subgrupos por nodo. Lo dejamos establecido como nuestra decisión creativa para efectos de la simulación.»'
+  manda_sobre: 'niveles (propuesta_de_reparto y GUARANAO_subgrupos_con_nombre), zonas_pesqueras e institucion_kapubana.caracter. Lo que más abajo lo contradiga queda como alternativa descartada, no se borra'
+  nodos:
+    GUARANAO:
+      - {subgrupo: los Tacuatos, sitio: Tacuato, lat: 11.708, lon: -69.841, zona_de_pesca: ZG2, apoyo: 'Petit 2012 («la constituían los Tacuato»); Esteves p. 62'}
+      - {subgrupo: los Cayudes, sitio: El Cayude, lat: 11.701, lon: -69.957, zona_de_pesca: ZG2, apoyo: 'Petit 2012; kayude, voz caquetía atestiguada'}
+    AMUAY:
+      - {subgrupo: los Guasicures de Caseto, sitio: Caseto, lat: 11.762, lon: -70.017, zona_de_pesca: ZA1, apoyo: 'Petit 2012; Esteves p. 30'}
+      - {subgrupo: los Corubos, sitio: 'la costa oeste hacia Los Taques (el sitio concreto se fija en el casting)', zona_de_pesca: ZA1, apoyo: 'Petit 2012; Miguel: «los otros estaban en Amuay hacia Los Taques»', aviso: 'Curubitos (Esteves p. 34) está en la costa oriental; queda descartado por decisión'}
+  zonas_de_pesca: 'separadas y exclusivas: GUARANAO pesca el Golfete (ZG2) y AMUAY la costa oeste (ZA1). ZG1, ZA2, ZA3 y ZX quedan de fondo, sin agentes'
+  capubana: 'centro compartido que congrega y centraliza lo espiritual, por lo menos lo del Manaure, «no necesariamente como institución sino a nivel energético». Moruy, Chamuriana, Siraba y Maitiruma forman el conglomerado del cerro y no son subgrupos en escena'
+  frontera: 'pasa a ser oeste (AMUAY) contra sureste (GUARANAO) alrededor del cerro; la línea interior de lat. 11.90 queda descartada'
+  elenco: 'un linaje de D1 por subgrupo, con lo que el «2 linajes por nodo» de DISENO_ERA2 §3 se conserva; el reparto de linajes se decide en el casting'
+
+# ══════════════════════════════════════════════════════════════════
 # 1. LOS NIVELES — de la polity a la casa
 # ══════════════════════════════════════════════════════════════════
 niveles:
@@ -991,6 +1012,13 @@ sal_y_mercado:
 institucion_kapubana:
 
   caracter:
+    decision_2026-09-14: >-
+      Miguel: el asiento religioso del Capubana «congrega y centraliza todo lo
+      espiritual, por lo menos lo que es del Manaure, no necesariamente como
+      institución sino a nivel energético». Manda sobre la lectura de abajo:
+      el cerro es el centro, y los oficios son papeles de personas de los
+      subgrupos que suben a él, no un aparato con puestos fijos. La lista de
+      oficios se conserva como repertorio de papeles para el casting.
     lectura_propuesta: >-
       Una JURISDICCIÓN RITUAL EN RED anclada en un cerro, no un sacerdocio con
       templo. Las fuentes niegan el templo y el culto comunal, y a la vez dan un
@@ -1486,9 +1514,11 @@ preguntas_para_miguel:
     recomendacion: b, por DISENO_ERA2 §2 («no es capital de ningún clan») y porque hace del cerro un escenario de contacto
   - id: P2
     pregunta: ¿Cuántos subgrupos por clan, y cuántos en escena?
+    resuelta: '2026-09-14: dos subgrupos por nodo (decision_creativa_2026-09-14)'
     propuesta: tres por clan (aldea madre, aldea del cerro o interior, aldea de costa), dos en escena y uno de fondo
   - id: P3
     pregunta: ¿De quién es la costa oriental media (Miraca, Baraived, Adícora, Adaure)?
+    resuelta: '2026-09-14: queda de fondo, sin agentes; las zonas de pesca en escena son ZG2 y ZA1'
     opciones: ['asignarla a un clan', 'dejarla como frontera disputada: el caladero del pargo de Adícora (ZX) como conflicto que se arbitra en el cerro']
     dato_que_pesa: 'Miraca tenía cacique propio en 1538 (Bonyata), lo que podría hacer de ella un tercer grupo que #122 no contempla'
   - id: P4
@@ -1523,10 +1553,12 @@ preguntas_para_miguel:
     pregunta: ¿Pipiacoa (Santa Ana «of Pipiacoa», 1538-1546) y Chamuriana son dos nombres del mismo sitio?
     donde_se_resuelve: campaña de topónimos (Pipiacoa no está en el canon)
   - id: P14
+    choca_con: 'DISENO_ERA2 §4.3: «nada de mercados inventados»; el comercio real se monta en las ceremonias'
     pregunta: ¿La sal se modela como excedente de toda la península, con un trueque hacia afuera (la feria de la sal) separado de la redistribución ritual?
     propuesta: 'sí: dentro, don y redistribución por Manaure; fuera, trueque por sartas de cuentas después de la cosecha de sal de la seca'
     por_que_importa: da sitio a los forasteros (serranos, isleños) sin inventarles un pueblo en Paraguaná
   - id: P15
+    resuelta: '2026-09-14: los cuatro subgrupos con nombre, dos por nodo (Tacuatos y Cayudes en GUARANAO; Guasicures de Caseto y Corubos en AMUAY). Sigue abierto si los apellidos de Moruy nombran casas'
     pregunta: ¿Se reajusta GUARANAO a un centro (los Moruyes, en Moruy y Chamuriana) y los cuatro subgrupos con nombre de la tradición (Tacuatos, Cayudes, Guasicures de Caseto, Corubos)? ¿Los Corubos van en el Golfete, como dice la crónica, o en la costa oriental, como sugiere Curubitos?
     y_los_apellidos: ¿Los apellidos indígenas de Moruy (Mabo, Cuauro, Caguao, Guarecuco, Cotopo, Tumarure) nombran casas dentro del centro, y los Adaures entran como subgrupo de frontera? ¿Conviven con Corie y Buio de D1 o los sustituyen?
     deuda: perseguir la lista de Petit 2012 hasta Hernández Baño 1984 o Arcaya

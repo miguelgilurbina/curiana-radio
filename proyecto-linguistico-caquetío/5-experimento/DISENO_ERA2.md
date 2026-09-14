@@ -68,7 +68,11 @@ nivel al estabilizarse dice qué pasó.
   baja del cerro), **Cayerúa** al norte; el manantial de **Maitiruma** al
   pie este. Cuatro capas independientes apuntan al mismo cerro: asiento
   religioso (Salas) + morada de Capo (D9) + fermento ritual (merejuy) +
-  anomalía de agua y bosque xerófito (mapa).
+  anomalía de agua y bosque xerófito (mapa). **Precisado el 2026-09-14**
+  (Miguel): el Capubana «congrega y centraliza todo lo espiritual, por lo
+  menos lo que es del Manaure, no necesariamente como institución sino a
+  nivel energético». Los oficios rituales son papeles de personas de los
+  subgrupos que suben al cerro, no un aparato con puestos fijos.
 - Registro completo de lecturas y probabilidades:
   `6-fusion/toponimia_paraguana_miguel.yaml` y
   `6-fusion/paraguana_dos_clanes.yaml`.
@@ -84,8 +88,14 @@ La plantilla ya existe — es el **grupo residencial creíble** de
 
 - ~8-10 personas por linaje completo (2-3 adultas de núcleo, 1-2 hermanos,
   esposos entrantes, niños tier-3);
-- **2 linajes por nodo** (4 de los 6 linajes de D1, reasignados a clanes;
-  los otros 2 quedan de reserva de expansión);
+- **2 subgrupos por nodo, un linaje por subgrupo** — decisión creativa del
+  2026-09-14 (`6-fusion/decisiones_tanda_2026-09-14.yaml`), sobre la estructura
+  de `6-fusion/estructura_social_era2.yaml`. GUARANAO: **los Tacuatos** y
+  **los Cayudes**, que pescan el Golfete. AMUAY: **los Guasicures de Caseto** y
+  **los Corubos**, que pescan la costa oeste hacia Los Taques. Las zonas de
+  pesca son exclusivas por nodo. Los nombres vienen de la tradición local
+  (Petit 2012, sin cita) y el reparto es decisión, no dato. Siguen siendo 4 de
+  los 6 linajes de D1; los otros 2 quedan de reserva de expansión;
 - **esposos exogámicos cruzados** entre nodos (2-3 por lado) — por
   matrilocalidad, el esposo vive en el nodo de ella: son los **portadores
   permanentes** de formas;
