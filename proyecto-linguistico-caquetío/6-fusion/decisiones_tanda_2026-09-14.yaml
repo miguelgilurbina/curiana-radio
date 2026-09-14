@@ -231,10 +231,18 @@ motor_era2:
       P8_ita_sha: 'APROBADO: sin linaje, acogida por los Cayudes'
       P9_saruro_sha_y_tawi: 'APROBADO: linaje propio sin nombre, traído de Cayerúa (AMUAY de fondo)'
       P10_roster: 'APROBADO: proporcional, 14 GUARANAO y 10 AMUAY'
-    abiertas:
-      P2_buco: 'Miguel pidió más explicación; ver la respuesta del escriba (lexicón: buko «presa de agua, represa, canal de riego»; jagey «estancar, crear charco artificial», Zavala #174; Oliver p. 252: el riego a mano desde charcas artificiales, jagüey, es la agricultura de la costa)'
-      P3_watapana_y_kadushi: 'Miguel pidió más explicación; depende de P14 (la feria de la sal) y de que la costa norte (ZA2) quede de fondo'
-      P7_dos_sobrinos: 'Miguel pidió más explicación; el escriba recomienda dejarlo abierto como trama de las tres puertas'
+    segunda_vuelta_literal: '«Vale, perfecto, hagamos eso, creemos el PR, mergeamos y luego hacemos la generación de agentes para la era 2.»'
+    decididas_en_la_segunda_vuelta:
+      P2_buco: >-
+        Korie-ko se reancla a los jagüeyes de Tacuato (la charca artificial que
+        Oliver p. 252 describe para esta costa; jagey «estancar, crear charco
+        artificial», Zavala #174) y entra como el 13 de los Tacuatos; Buko-ko y
+        Buko, cuya identidad entera es el río de Coro, se retiran (de fondo).
+        El elenco pasa a 63.
+      P3_watapana_y_kadushi: 'de fondo en el primer run; entran como visitantes cuando se decida la feria de la sal (P14 de la estructura)'
+      P7_dos_sobrinos: 'abierto como trama: la sangre elige a los dos y deciden los diaos de clan y el boratio (las tres puertas, parentesco-038)'
+      P5_lectura: 'se mantiene la lectura aplicada (una esposa de cada nodo) salvo que Miguel diga lo contrario'
+    siguiente: 'PR de feat/era2-arranque a main, merge, y la generación de curiana_agents para la era 2 desde elenco_era2.yaml'
     linea_de_experimento_futura: >-
       Miguel: explorar en la simulación qué pasa en una sociedad polígama y
       exogámica cuando hay muchos hombres solteros. Apoyo: parentesco-030 (el

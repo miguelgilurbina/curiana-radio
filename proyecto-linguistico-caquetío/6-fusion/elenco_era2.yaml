@@ -15,8 +15,11 @@ meta:
     linajes APROBADO; P4 Paugis-sha boratia APROBADA (analogía machi); P5 las
     esposas del apopo vienen de nodos distintos, una de cada nodo; P6 cuarta
     esposa corubo (Kumarawa-sha, casa del Manaure 14); P8, P9 y P10 (roster
-    proporcional) APROBADOS. Abiertas: P2 (el buco), P3 (Watapana y Kadushi),
-    P7 (Kabo-ni y Waimo-ko).
+    proporcional) APROBADOS. Y en la segunda vuelta («Vale, perfecto, hagamos
+    eso»): P2 Korie-ko reanclado a los jagüeyes de Tacuato (13 en esa casa),
+    Buko-ko y Buko retirados; P3 Watapana y Kadushi de fondo hasta la feria de
+    la sal; P7 los dos sobrinos quedan abiertos como trama de las tres puertas.
+    Las diez preguntas están decididas.
   obra: varias
   quien: escriba (Claude), a pedido de Miguel
   pregunta: >-
@@ -49,22 +52,22 @@ meta:
 
   # Regla 1: ninguna cifra a mano. Todo lo de abajo lo imprime el script.
   medido:
-    como: 'python 6-fusion/scripts/verificar_elenco_era2.py (sección CONTEOS), 2026-09-14, tras la cuarta esposa (P6)'
-    total_agentes: 62
-    por_nodo: {GUARANAO: 38, AMUAY: 24}
+    como: 'python 6-fusion/scripts/verificar_elenco_era2.py (sección CONTEOS), 2026-09-14, tras la cuarta esposa (P6) y Korie-ko reanclado (P2)'
+    total_agentes: 63
+    por_nodo: {GUARANAO: 39, AMUAY: 24}
     por_casa:
-      los Tacuatos: 12
+      los Tacuatos: 13
       los Cayudes: 12
       casa del Manaure: 14
       los Guasicures de Caseto: 12
       los Corubos: 12
-    por_tier: {'1': 16, '2': 36, '3': 10}
-    por_linaje: {Buio: 15, Corie: 14, Warana: 13, Paugis: 12, Kaira: 5, 'sin linaje de D1': 3}
-    por_origen: {'era1 (reutilizado)': 42, 'fondo (promovido de genealogia.yaml)': 4, nuevo: 16}
+    por_tier: {'1': 17, '2': 36, '3': 10}
+    por_linaje: {Buio: 15, Corie: 15, Warana: 13, Paugis: 12, Kaira: 5, 'sin linaje de D1': 3}
+    por_origen: {'era1 (reutilizado)': 43, 'fondo (promovido de genealogia.yaml)': 4, nuevo: 16}
     en_roster: 24
     roster_por_nodo: {GUARANAO: 14, AMUAY: 10}
     portadores_entre_nodos_en_el_roster: 6
-    era1_fuera_del_elenco: 18
+    era1_fuera_del_elenco: 17
     nombres_nuevos_acunados: 16
 
   nombres_verificados:
@@ -134,7 +137,8 @@ casas:
     nodo: GUARANAO
     sitio: {nombre: Tacuato, lat: 11.708, lon: -69.841, fuente_coord: osm-kaketiana}
     zona_de_pesca: ZG2 (la orilla del Golfete de Coro, de Matacán a Tacuato y el Bajo de Supí)
-    agentes: 12
+    agentes: 13
+    nota_2026-09-14: 'Miguel, P2: Korie-ko entra reanclado como guardián de los jagüeyes; es el 13.'
     linaje_d1: Corie
     totem: corie (armadillo)
     dominio: agricultura, prudencia, lo común
@@ -644,6 +648,47 @@ agentes:
       decisiones: [D1, subgrupos_era2, tamano_del_elenco]
 
   # ────────────── CASA 2 · los Cayudes (GUARANAO · El Cayude · ZG2 · Buio)
+  - nombre: Korie-ko
+    nodo: GUARANAO
+    casa: los Tacuatos
+    linaje: Corie
+    tier: 1
+    genero: M
+    edad: 57
+    rol_en_la_casa: hermano mayor de la matriarca; el mayor de la casa
+    oficio: 'guardián de los jagüeyes de Tacuato: las charcas artificiales que guardan la lluvia para los conucos; decide cuándo se abre el agua y cuándo se raciona'
+    papel_kapubana: null
+    en_roster: false
+    ubicacion_default: Tacuato
+    zona_de_pesca: ZG2
+    parentesco: {madre: 'de fondo (ancestral)', hermanos: [Pira-sha, Uro-ko], 'tío materno de': [Naure-sha, Piri-sha], amigo: 'Ita-ko (amistad de infancia, no de sangre; hoy apopo en Caseto, del otro nodo)'}
+    origen: 'era1:Korie-ko (reanclado)'
+    reanclaje: >-
+      Miguel, 2026-09-14, P2: se reancla al jagüey. Su identidad de la era 1
+      era el buco, la presa del río de Coro, que en Paraguaná no existe (Arcaya
+      p. 22). Lo que sí existe es la charca artificial: Oliver (p. 252) describe
+      para esta costa el riego «a mano» desde charcas de agua de lluvia, el
+      jagüey, y el lexicón tiene `jagey` «estancar, crear charco artificial»
+      (Zavala #174) y `buko` «presa de agua, represa, canal de riego». Es el
+      agente más documentado de su linaje (12 hechos del corpus lo nombran); se
+      queda con el oficio del agua, que en Paraguaná vale más que en Coro.
+      Buko-ko y Buko, cuya identidad entera es el río, se retiran.
+    etiqueta: 'reconstruido (el jagüey como técnica de la costa, Oliver p. 252); canon-simulacion (el oficio de guardarlo)'
+    system_prompt: |-
+      Eres Korie-ko, el mayor de la casa de los Tacuatos, en Tacuato, nodo GUARANAO. ~57 años. Caquetío.
+      Guardas los jagüeyes: las charcas donde esta tierra sin ríos guarda la lluvia para los conucos.
+      Has visto sequías, años sin cosecha y charcas vacías. Lo nuevo te asusta porque ya viste cómo falla.
+      Trabajas más que nadie y refunfuñas todo el tiempo. Eso está bien.
+      Decides cuándo se abre el agua y cuándo se raciona, y nadie discute eso contigo.
+      Usas korie (armadillo) como elogio: el armadillo sobrevive todo cerrándose.
+      Si el jagüey aguanta, Tacuato come. Simple.
+      Respondes en caquetío-arahuaco; la glosa castellana va entre paréntesis al final.
+    descripcion: 'Guardián de los jagüeyes de Tacuato, las charcas de las que depende que los conucos den en una tierra sin ríos. Ha visto charcas vacías y gente racionando el casabe, y por eso desconfía por reflejo de toda idea nueva. Refunfuña mientras trabaja más que cualquiera. Lo que protege de verdad es la certeza simple que aprendió a golpes: si el jagüey aguanta, su casa come.'
+    dossier:
+      hechos: [ecologia-006, ecologia-008, ecologia-028, ecologia-029, ecologia-030, transmision-009, transmision-011, parentesco-035, parentesco-037]
+      obras: [oliver-1989-cap3, arcaya-1920, zavala-reyes-2015, camacho-2011]
+      decisiones: [D1, '#126', '#127']
+
   - nombre: Bagre-ko
     nodo: GUARANAO
     casa: los Cayudes
@@ -2331,12 +2376,12 @@ fuera_del_elenco:
     razon: >-
       El buco es la presa del río de Coro (Ballesteros 1550 vía Oliver pp.
       262-263) y Paraguaná no tiene «ningún río, ni siquiera un arroyo» (Arcaya
-      p. 22; Oliver pdf 80). Los tres agentes cuyo oficio o nombre es el buco se
-      retiran. Lo que queda en su sitio es la charca artificial —el jagüey que
-      Oliver describe para esta costa— y el agua del cerro, en manos de Wari-ko
-      y de Kali-nu. Ver P2: la alternativa es reanclarlos.
+      p. 22; Oliver pdf 80). Decidido el 2026-09-14 (P2): Korie-ko se REANCLA a
+      los jagüeyes de Tacuato (la charca artificial que Oliver describe para
+      esta costa) y entra como el 13 de los Tacuatos; Buko-ko, Buko y Buko-ni,
+      cuya identidad entera es el río, se retiran. El agua del cerro sigue en
+      manos de Wari-ko y de Kali-nu.
     agentes:
-      - {nombre: Korie-ko, tier_era1: 1, destino: retirado, nota: 'toda su identidad es «si el buko funciona, la Curiana come»; su linaje Corie sigue en escena, en Tacuato, con otra gente'}
       - {nombre: Buko-ko, tier_era1: 2, destino: 'de fondo', nota: 'queda como esposo de fondo de Peri-sha en la maloca de los Tacuatos'}
       - {nombre: Buko, tier_era1: 3, destino: 'de fondo', nota: 'hijo de Peri-sha y hermano de Kawa, Piri y Kori, que sí entran'}
       - {nombre: Buko-ni, tier_era1: 2, destino: retirado, nota: 'su oficio (pesca y carpintería de canoa) lo cubren Dare-nu y Piri; el nombre sigue anclado a un referente que aquí no existe'}
@@ -2351,7 +2396,9 @@ fuera_del_elenco:
     razon: >-
       La decisión del 2026-09-14 deja de fondo la costa norte (ZA2), la costa
       oriental y la laguna de Guaranao. Los oficios que viven de la travesía
-      insular no tienen dónde ocurrir.
+      insular no tienen dónde ocurrir. Decidido el mismo día (P3): de fondo en
+      el primer run; entran como visitantes cuando se decida la feria de la sal
+      (P14 de la estructura), que es donde los isleños llegan.
     agentes:
       - {nombre: Watapana, tier_era1: 1, destino: 'de fondo', nota: 'mercader de Aruba y Bonaire; la travesía sale de la costa norte. Vuelve si entra ZA2 o la ruta insular. Meterlo como apopo le cambiaría el oficio entero'}
       - {nombre: Kadushi, tier_era1: 1, destino: 'de fondo (en Aruba)', nota: 'caquetío de Aruba; van Buurt documenta contacto de Alto Vista con Santa Ana, que tampoco está en escena'}
@@ -2362,9 +2409,9 @@ fuera_del_elenco:
       - {nombre: Jiru-ko, tier_era1: 3, destino: 'de fondo', razon: 'jirajara de paso; sin los serranos en escena no tiene por qué estar de paso'}
 
   medido:
-    total: 18
-    por_tier_era1: {'1': 5, '2': 11, '3': 2}
-    como: 'python 6-fusion/scripts/verificar_elenco_era2.py (sección FUERA)'
+    total: 17
+    por_tier_era1: {'1': 4, '2': 11, '3': 2}
+    como: 'python 6-fusion/scripts/verificar_elenco_era2.py (sección FUERA), tras P2 (Korie-ko vuelve al elenco)'
 
 # ══════════════════════════════════════════════════════════════════
 # 4. PREGUNTAS PARA MIGUEL

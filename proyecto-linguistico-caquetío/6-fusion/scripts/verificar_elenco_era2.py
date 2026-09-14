@@ -34,7 +34,7 @@ CORPUS = os.path.join(RAIZ, "3-mundo", "corpus")
 GENEALOGIA = os.path.join(CORPUS, "genealogia.yaml")
 
 CASAS_ESPERADAS = {
-    "los Tacuatos": 12,
+    "los Tacuatos": 13,       # 12 + Korie-ko reanclado (Miguel, 2026-09-14, P2)
     "los Cayudes": 12,
     "casa del Manaure": 14,   # 13 + la cuarta esposa (Miguel, 2026-09-14, P6)
     "los Guasicures de Caseto": 12,
