@@ -61,6 +61,27 @@ elenco_era2:
     oficios, entre ellos los que preparan al Manaure. Investigación en curso por
     un escriba: 6-fusion/estructura_social_era2.yaml y su borrador en
     issues-pendientes/.
+  segunda_vuelta:
+    fecha: '2026-09-13'
+    decision_literal: >-
+      «Si te fijas, Oliver dice que Paraguaná tenía igual otra disposición
+      ecológica, ya que había matorrales y arbustos que hacían que el microclima
+      en el suelo fuese distinto, y eso se perdió con el sobrepastoreo. Y además
+      tenemos que tener las salinas, por lo que está otra disposición de mercado
+      ahí. Habíamos mencionado no sé en dónde algunos nombres de subgrupos de
+      parte de los Moruyes.»
+    lectura_operativa: >-
+      Tres añadidos a la estructura antes del casting. (1) El medio del s. XV no
+      es el de hoy en el suelo: la cobertura vegetal que retenía la humedad se
+      perdió con las cabras y con el abandono de los conucos tras 1527 (Oliver
+      cap. 3 §3.4), y eso sube el peso del conuco en las aldeas del interior.
+      (2) Las salinas de los dos clanes y la sal como excedente que sale de la
+      península por trueque, un circuito distinto de la redistribución ritual de
+      la convergencia. (3) Nombres para atomizar Moruy: los apellidos indígenas
+      que dan Esteves y Medina Colina y las rancherías del padrón de 1881.
+    donde: >-
+      6-fusion/estructura_social_era2.yaml (secciones medio_precontacto y
+      sal_y_mercado; niveles G2) y el borrador del issue, §7
 
 exportador_42:
   estado: VERIFICADO CONTRA LA BASE (2026-09-13, con Docker levantado por Miguel)

@@ -44,6 +44,20 @@ meta:
     pdftotext) porque ese PDF no guarda un desfase constante con la impresa: la
     p. 251 cae en la pdf 69 y la 275 en la pdf 82. Esteves 1989: la página sale
     del número de pie del OCR y coincide con el canon de topónimos donde lo hay.
+  paginas_de_oliver_medidas_2026-09-13: >-
+    Medido en la segunda vuelta. El PDF comprimido del cap. 3 es la edición en
+    DOC de 2006 («only in PDF version, 2006», pdf 62) y lleva su PROPIA
+    paginación en la cabecera (cabecera = pdf + 182 en sus 113 páginas). La
+    tesis impresa de 1989 pagina distinto: con OCR del escaneo de UCL (impresa =
+    pdf − 27) se comprobó que la sal de la Guajira está en la p. 188 (DOC 189),
+    la alianza jirajara de cuentas, sal y azabache en la 245 (DOC 238), la sal
+    con los xaguas en la 247 (DOC 240), el paisaje de la costa de Falcón en las
+    252-254 (DOC 245-246), el reasentamiento en Todariquiba en la 259 (DOC 251)
+    y el comercio costero con las cuentas en la 285-286 (DOC 271-272). La
+    «p. 251» con que el canon cita Todariquiba es la del DOC. Las otras
+    «verificadas a ojo» (262-263, 265-266, 275, 276) no se recomprobaron en
+    esta vuelta. En las secciones nuevas se cita la impresa comprobada y, entre
+    paréntesis, la del DOC. Auditoría completa: encargo aparte.
   medido:
     elenco_actual:
       total: 60
@@ -142,6 +156,8 @@ meta:
     - No hay tótems ni nombres de linaje caquetíos; hay la comparanda achagua (parentesco-022) y la conjetura de Esteves p. 13 sobre Adaure
     - No hay residencia precontacto de Manaure; Todariquiba es el reasentamiento de 1527
     - 'No están en el repo: Delmonte 1883, González Batista 1984 (el que cita Oliver; gonzalez-batista-nombre-de-coro es otra obra), Salas directo, el artículo de Antolínez 1944 (solo vía Morón), Acasio 2013, Martí 1774, Ponce y Vaccari 1977'
+    - 'Ningún mercado ni feria de sal costera antes de la Colonia: el Resguardo de Salinas de Tacuato y el puerto de la sal en Yaima son coloniales (Esteves pp. 62, 67); en los seis OCR de Esteves feria, mercado, trueque, rescate e intercambio solo dan el trueque de cuicas y timotes en Jurijurebo, sin cita'
+    - 'Ningún nombre de subgrupo de los Moruyes en fuente alguna: lo que hay son apellidos indígenas vivos (Esteves p. 53, Medina Colina p. 328) y rancherías del padrón de 1881 (ver niveles G2)'
 
   avisos_regla_3:
     - La geografía de los clanes es de Delmonte 1883, sobre papeles perdidos, vía González Batista y Oliver. Santa Ana y Moruy como PUEBLOS son coloniales (Esteves p. 35, fundación de 1538; Arcaya p. 327, San Nicolás de Moruy fundado a fines del XVI «con otros Caquetíos que antes ocupaban otros sitios de Paraguaná»)
@@ -371,6 +387,44 @@ niveles:
             - {nombre: Guacurebo, lat: 11.843, lon: -69.954, dato: 'en 1881 «toda Guacurebo pertenecía a Moruy»', procedencia: {obra: esteves-1989, pagina: '38'}, etiqueta: atestiguado, capa: s. XIX}
             - {nombre: Abudure, lat: 11.803, lon: -70.015, dato: 'aldea al SO de Moruy; «sitio de donde se extrae barro»', procedencia: {obra: esteves-1989, pagina: '11'}, etiqueta: reconstruido, valor: 'barro para las múcuras de la chicha (hipotético)'}
             - {nombre: Varacara (Baracara), lat: 11.798, lon: -69.974, dato: 'entre Santa Ana y Moruy; leyenda de caciques en disputa de fueros', procedencia: {obra: esteves-1989, pagina: '19'}, etiqueta: retro-abstraido}
+            # Segunda vuelta (2026-09-13): las demás rancherías que Esteves da como del
+            # municipio Moruy. Capa s. XIX-XX: son del padrón de 1881, no aldeas del s. XV.
+            # Sirven para atomizar G2 en casas con sitio y nombre, no como dato de asentamiento.
+            - {nombre: Yauquiba (Yabuquiba), dato: 'población del municipio Moruy; 1881: 26 casas, 199 vecinos, la mayor después de la cabecera', procedencia: {obra: esteves-1989, pagina: '67'}, etiqueta: atestiguado, capa: s. XIX, canon: toponimo-105}
+            - {nombre: Guacujúa, dato: 'aldea del municipio Moruy; 1881: 14 casas, 97 vecinos', procedencia: {obra: esteves-1989, pagina: '38'}, etiqueta: atestiguado, capa: s. XIX, canon: 'toponimo-128, descartado como etimología, no como aldea'}
+            - {nombre: Barunú (Parunu en el mapa vivo), dato: 'aldea al norte de Moruy; 1881: 5 casas, 29 habitantes', procedencia: {obra: esteves-1989, pagina: '23'}, etiqueta: atestiguado, capa: s. XIX, canon: toponimo-103}
+            - {nombre: Jarayadito (Uarayadito en el mapa vivo), dato: 'aldea del municipio Moruy, junto a Moruy y Cayerúa', procedencia: {obra: esteves-1989, pagina: '46'}, etiqueta: atestiguado, capa: s. XIX, canon: toponimo-102}
+            - {nombre: Tumarusa, dato: 'aldea del municipio Moruy; 1881: 6 casas, 39 vecinos; «se nos ha informado que Tumarure era el apellido de un cacique»', procedencia: {obra: esteves-1989, pagina: '64'}, etiqueta: atestiguado, capa: 's. XIX; lo del cacique es noticia de informante del s. XX'}
+            - {nombre: Tacaduto, dato: 'aldea del municipio Moruy; 1881: 4 casas, 17 vecinos', procedencia: {obra: esteves-1989, pagina: '61'}, etiqueta: atestiguado, capa: s. XIX}
+            - {nombre: Saguatumo, dato: 'lugar del municipio Moruy; 1881: 2 casas, 8 vecinos; «el nombre es antiquísimo»', procedencia: {obra: esteves-1989, pagina: '58'}, etiqueta: atestiguado, capa: s. XIX}
+            - {nombre: Supideo, dato: 'lugar del municipio Moruy; «no tenemos más noticias»', procedencia: {obra: esteves-1989, pagina: '61'}, etiqueta: atestiguado, capa: s. XX}
+            - {nombre: Tequeguacare, dato: aldea del municipio Moruy, procedencia: {obra: esteves-1989, pagina: '62'}, etiqueta: atestiguado, capa: s. XX, canon: 'toponimo-129, descartado como etimología'}
+          escala_y_oficios_del_municipio:
+            - {dato: 'en 1881 todo el municipio contaba 213 casas y 1.349 vecinos y «ya había perdido la populosidad que ostentaba en los tiempos coloniales»', procedencia: {obra: esteves-1989, pagina: '53'}, etiqueta: atestiguado, capa: s. XIX}
+            - {dato: 'una de las comunidades de Paraguaná «con más apego a las costumbres de sus antepasados»; conserva la cerámica, las silletas y bernegales y el jabón de la tierra', procedencia: {obra: esteves-1989, pagina: '53'}, etiqueta: retro-abstraido, valor: 'la alfarería de G2 tiene una continuidad de oficio registrada en el s. XX'}
+          nombres_de_casa_candidatos:
+            pedido: '«Habíamos mencionado no sé en dónde algunos nombres de subgrupos de parte de los Moruyes» (Miguel, 2026-09-13). Lo que el repo tiene son estos nombres; ninguna fuente los llama subgrupos'
+            lo_que_hay:
+              - {dato: 'en Moruy «los apellidos no han sufrido deformaciones acomodaticias»: Caguao, Cuauro, Mabo, Guarecuco, Cotopo', procedencia: {obra: esteves-1989, pagina: '53'}, etiqueta: atestiguado, capa: 's. XX, apellidos vivos'}
+              - {dato: 'apellidos paraguaneros «que devienen de nuestros naturales»: Caguado, Cauro, Gotopo, Guanipa, Guarecuco, Guariato, Mabo, Manaure y Timaure', procedencia: {obra: medina-colina-sxx, pagina: '328'}, etiqueta: atestiguado, capa: s. XX, nota: 'los cinco de Esteves reaparecen (Caguao ~ Caguado, Cuauro ~ Cauro, Cotopo ~ Gotopo, Guarecuco, Mabo); no está verificado que Medina escriba sin haber leído a Esteves'}
+              - {dato: 'la «etnia Mabo» de Guacurebo, con representantes', procedencia: {obra: velasco-2015-resistencia}, etiqueta: atestiguado, capa: s. XXI, nota: 'Guacurebo era de Moruy en 1881: el apellido y la ranchería satélite coinciden'}
+              - {dato: '«Tumarure era el apellido de un cacique» (entrada Tumarusa)', procedencia: {obra: esteves-1989, pagina: '64'}, etiqueta: retro-abstraido}
+              - {dato: 'la familia en -aure, «apellidos de la gran familia caquetía»: Adaure, Timaure, Yaraure, Chunaure, Manaure; y los «indios adaures», «tribu belicosa» según Hill Peña, con pleitos por sus tierras contra los españoles', procedencia: {obra: esteves-1989, pagina: '13'}, etiqueta: atestiguado, capa: 'colonial (los pleitos) y s. XX (los apellidos)', nota: 'Adaure (11.872, -69.988; 87 casas en 1881) cae al norte de Moruy, dentro de la franja de frontera propuesta'}
+            regla_3: >-
+              Son apellidos vivos. El canon ya tiene un caso de nombre indígena que
+              pasa a apellido (el título manaure en Don Luis Martínez Manaure), pero
+              ninguno de estos está documentado como nombre de linaje o de
+              parcialidad del s. XV. Son semilla onomástica, nunca dato.
+            propuesta:
+              etiqueta: hipotetico
+              que: >-
+                Atomizar G2 en casas con nombre propio sacado de esos apellidos y
+                anclado a una ranchería del padrón: Mabo en Guacurebo, Tumarure en
+                Tumarusa, y Cuauro, Caguao, Guarecuco y Cotopo repartidos entre la
+                cabecera, Yauquiba y Guacujúa. Los Adaures, como subgrupo propio en
+                la frontera norte de Moruy: la tradición los nombra como «tribu».
+                Si conviven con los linajes de D1 (Corie, Buio) o los sustituyen
+                en Moruy lo decide Miguel (P15).
         - id: G3
           nombre: Guaranao de costa (laguna de Guaranao y orilla del Golfete)
           coordenadas: {lat: 11.682, lon: -70.196, fuente: osm-kaketiana, nota: 'Laguna de Guaranao'}
@@ -660,6 +714,221 @@ zonas_pesqueras:
     Cojedes (Llanos), en simbiosis con caquetíos del río. No se importan como
     pescadores especializados de Paraguaná.
   procedencia_aviso: {obra: oliver-1989-cap3, pagina: 'pdf 100, citando Federmann [1557]'}
+
+# ══════════════════════════════════════════════════════════════════
+# 2b. EL MEDIO PRECONTACTO — el suelo del s. XV no es el de hoy
+# ══════════════════════════════════════════════════════════════════
+medio_precontacto:
+  pedido: '«Oliver dice que Paraguaná tenía igual otra disposición ecológica, ya que había matorrales y arbustos que hacían que el microclima en el suelo fuese distinto, y eso se perdió con el sobrepastoreo» (Miguel, 2026-09-13)'
+  lo_que_dice_oliver:
+    - afirmacion: >-
+        La costa de Falcón es una provincia semiárida y xerófila donde la
+        agricultura es difícil de sostener, «although not impossible»: pide
+        cultivos de ciclo corto que coincidan con las lluvias breves, o riego
+        por acequias, o riego a mano con el agua de lluvia recogida en charcas
+        artificiales (jagüey).
+      etiqueta: reconstruido
+      procedencia: {obra: oliver-1989-cap3, pagina: '252 (DOC 245), §3.4.1'}
+    - afirmacion: >-
+        Ese casi-equilibrio de agricultura manejada, que «had to prevail in pre-
+        and proto-historic times», sufrió presiones que aceleraron la erosión y
+        arruinaron la capacidad del suelo de retener humedad.
+      etiqueta: reconstruido
+      procedencia: {obra: oliver-1989-cap3, pagina: '252 (DOC 245)'}
+    - afirmacion: >-
+        La vegetación y el clima de comienzos del s. XVI eran casi idénticos a
+        los de hoy. La gran diferencia es el sobrepastoreo que trajo la
+        explosión del ganado y sobre todo de las cabras, que caquetíos y wayuu
+        adoptaron con facilidad: con las cabras, suelos precarios quedaron de
+        golpe expuestos a una insolación extrema, la evapotranspiración subió a
+        niveles casi intolerables y la agricultura se volvió riesgosa.
+      etiqueta: reconstruido
+      procedencia: {obra: oliver-1989-cap3, pagina: '253 (DOC 245)'}
+      matiz_a_la_lectura_de_miguel: >-
+        Oliver no dice que el monte fuera otro: dice que la vegetación era casi
+        la misma y que se perdió la COBERTURA del suelo («loss of vegetative
+        cover», p. 254). La lectura de Miguel —matorral y arbusto que daban otro
+        microclima a ras de suelo— es ese mismo mecanismo: las mismas especies,
+        con el suelo cubierto y sombreado en vez de pelado.
+    - afirmacion: >-
+        Los estudios de desertificación de la costa centro-occidental de Falcón
+        (COPLANARH) señalan el mal manejo de los rebaños de cabras como la causa
+        principal de la erosión, de la pérdida de tierra agrícola y de las zonas
+        de «desierto»; el clima por sí solo no explica el estado de la
+        agricultura de Falcón.
+      etiqueta: reconstruido
+      procedencia: {obra: oliver-1989-cap3, pagina: '253, nota al pie (DOC 245, n. 88)'}
+    - afirmacion: >-
+        La dependencia de las cabras viene de los primeros veinte años de la
+        Conquista, sobre todo con los Welser (1527-1546): los varones caquetíos
+        fueron capturados para las expediciones de El Dorado y los demás se
+        volvieron casi nómadas para no ser apresados («estar alzados»). Los
+        conucos quedaron sin atender, el sobrepastoreo los dejó sin cobertura y
+        la erosión se volvió irreversible.
+      etiqueta: reconstruido
+      procedencia: {obra: oliver-1989-cap3, pagina: '253-254 (DOC 245-246), citando Oliver Ms. 1987c'}
+    - afirmacion: >-
+        Paraguaná va con la costa oeste de Falcón: a diferencia del valle de
+        Barquisimeto, no tiene ríos que den agua casi constante para regar.
+      etiqueta: atestiguado
+      procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 246, comienzo de §3.4.2 (impresa sin comprobar)'}
+  el_testigo:
+    - afirmacion: >-
+        «Es tierra de fructíferos cardones [...] Hay hobos, cimirucos y mamones;
+        abundantísima de toda caza: hay perdices, conejos y venados, y grande
+        pesquería de pescados. De ganados hay hoy los campos llenos [...] De
+        cabras muchedumbre copiosa [...] Y la cercana sierra les da grano si les
+        falta por ser largo verano.»
+      etiqueta: atestiguado
+      capa: 'colonial: Castellanos vio Coro en la década de 1540 y lo publicó en 1589; las cabras ya están'
+      procedencia: {obra: castellanos-elegias, pagina: 'líneas 48221-48246 del txt (Oliver cita la ed. de 1962, pp. 174-175, estrofas 86-87)'}
+      nota: 'es la tierra de Coro, frente a Paraguaná. En el OCR de 1857 «bobos» es hobos (jobos) y «cenados» es venados'
+  consecuencias_para_la_era_2:
+    - que: >-
+        El conuco del interior es una economía de verdad, no un complemento
+        marginal del mar. Chamuriana, Moruy y Cayerúa cultivan en un
+        casi-equilibrio manejado: ciclo corto en las lluvias, agua del cerro,
+        jagüeyes y un suelo que el monte bajo mantiene sombreado. Da peso a la
+        frase de Oliver sobre las parcelas agrícolas «igual de definidas» que
+        las playas y a la función agrícola de G1, G2 y A1.
+      etiqueta: canon-simulacion
+      apoyo: ['oliver-1989-cap3, pp. 252-253', 'Oliver DOC 262: los asentamientos se concentran alrededor del volcán, que da el agua y los mejores suelos']
+    - que: >-
+        El monte es recurso y tiene dueño. El matorral que cubre el suelo da
+        frutos (cardón, jobo, semeruco, mamón), leña y caza menor, y le guarda
+        la humedad al conuco: talarlo o quemarlo de más es quitarle agua a la
+        aldea. Es materia de lindero para el de la buena vara (of-13), y el dueño
+        del cerro que no deja cortar los árboles (Capo) es la misma norma dicha
+        en clave sagrada.
+      etiqueta: hipotetico
+      apoyo: ['castellanos-elegias, líneas 48221-48232 del txt', 'institucion_kapubana.lugares: el dueño Capo que impide cortar los árboles (Antolínez 1946, vía Tamayo)']
+    - que: >-
+        Ni cabras, ni ganado, ni caballos en el s. XV. El motor no tiene
+        ninguno: en curiana_agents, curiana_state, curiana_lexicon y el
+        orquestador, las raíces cabra, chivo, ganado, goat, caprin, vaca, oveja,
+        caball, burro, mula, cerdo y gallina solo aparecen en glosas de
+        comparanda lokono y wayuu (aüjawaa «matar (ganado)», «amansar (caballo,
+        mula)»), que no llegan al prompt porque el muestreador filtra por
+        fuente. El único «chivo» es de «archivo».
+      etiqueta: atestiguado
+      como: 'grep en curiana_sim, 2026-09-13'
+    - que: 'Dos hechos del corpus de ecología leen el paisaje de hoy como si fuera el del s. XV: ver propuestas_a_otras_esferas.ecologia'
+      etiqueta: canon-simulacion
+
+# ══════════════════════════════════════════════════════════════════
+# 2c. LAS SALINAS Y EL MERCADO
+# ══════════════════════════════════════════════════════════════════
+sal_y_mercado:
+  pedido: '«Tenemos que tener las salinas, por lo que está otra disposición de mercado ahí» (Miguel, 2026-09-13)'
+  lo_que_dicen_las_fuentes:
+    - afirmacion: >-
+        La costa caquetía participaba en comercio de larga distancia. El oro,
+        que era signo de rango, lo conseguía de los jirajaras de Nirgua-Buria o
+        de los coanaos del valle de Upar; la sal la tenía en abundancia y la
+        comerciaba tierra adentro.
+      etiqueta: atestiguado
+      capa: s. XVI
+      procedencia: {obra: oliver-1989-cap3, pagina: '285 (DOC 271)'}
+    - afirmacion: >-
+        Lo más extendido con valor fijo eran las cuentas de collar, de piedra
+        (cuarzo, serpentinita) y de concha, estas diminutas: tres tipos,
+        boroyda, mamas y querequetero o quitero. Valían por el largo de la sarta
+        y por el tamaño de la cuenta (cuanto más chica, más valor), «almost like
+        a monetary system», y los españoles las adoptaron enseguida para comprar
+        comida a los caquetíos y cambiarlas por oro.
+      etiqueta: atestiguado
+      capa: '1538 (Naveros y Vázquez de Acuña, vía Gabaldón 1962) y arqueología de Oliver'
+      procedencia: {obra: oliver-1989-cap3, pagina: '285-286 (DOC 271-272)'}
+      valor: 'la unidad de cuenta del trueque ya existe: la sarta. ucibo «cuenta de piedra, chaquira» es voz caquetía atestiguada (Zavala #267)'
+    - afirmacion: >-
+        Jirajaras y xaguas también valoraban las cuentas de concha marina, y un
+        sistema parecido existía entre achaguas, caribes y otros grupos de los
+        Llanos. Los caquetíos eran buenos comerciantes, con asentamientos de
+        frontera, como los de la Guajira, que surtían a Falcón de bienes
+        exóticos.
+      etiqueta: atestiguado
+      procedencia: {obra: oliver-1989-cap3, pagina: '286 (DOC 272), citando Morey 1975'}
+    - afirmacion: >-
+        Los caquetíos de la Guajira eran probablemente puestos de avanzada que
+        cambiaban productos del mar, «such as salt», por oro y otros bienes del
+        valle de Upar y de la Sierra Nevada.
+      etiqueta: reconstruido
+      procedencia: {obra: oliver-1989-cap3, pagina: '188 (DOC 189)'}
+    - afirmacion: >-
+        La sal cruza las enemistades: los caquetíos de Barquisimeto la
+        comerciaban en paz con aldeas xaguas de las que eran enemigos.
+      etiqueta: atestiguado
+      regla_4: 'es otra polity: vale como forma (el trueque no se para por la guerra), no como dato de la costa'
+      procedencia: {obra: oliver-1989-cap3, pagina: '247 (DOC 240), citando Federmann [1557]'}
+    - afirmacion: >-
+        En el lago de Maracaibo, la salina de los onotos abastecía «toda la
+        laguna y muy gran parte de la tierra y sierras por vía de contratación»,
+        y los pescadores que no sembraban vendían pescado por maíz en sus
+        mercados.
+      etiqueta: atestiguado
+      regla_4: 'polity occidental: es el modelo más cercano de un mercado de sal y pescado'
+      procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '227-228'}
+      apoyo_en_repo: geografia_politica-011
+    - afirmacion: '«la cercana sierra les da grano si les falta por ser largo verano» (la tierra de Coro)'
+      etiqueta: atestiguado
+      capa: colonial, década de 1540
+      procedencia: {obra: castellanos-elegias, pagina: 'líneas 48245-48246 del txt'}
+      valor: 'en años de seca larga el maíz entra desde la sierra: el otro lado del trueque de la sal'
+  las_salinas_de_paraguana:
+    aviso_regla_3: 'la lista es de Esteves (s. XX) y Arcaya (1920). Que una salina produzca hoy no prueba que se raspara en el s. XV; lo constante es la costa y la seca que evapora (ecologia, salinas)'
+    GUARANAO:
+      - {nombre: salina de Guaranao, sitio: 'municipio Punta Cardón, laguna de Guaranao', dato: 'las más importantes de Paraguaná (Arcaya); a su sal «le atribuían excelentes propiedades curativas en enfermedades de la piel y en carnosidades oculares»; hoy destruida por aguas cloacales', procedencia: {obra: esteves-1989, pagina: '40-41 (pie de página del OCR, sin comprobar)'}, apoyo: 'arcaya-1920 p. 22', etiqueta: atestiguado, capa: 's. XIX-XX', zona: ZG1}
+    AMUAY:
+      - {nombre: Las Cumaraguas, sitio: al este de El Vínculo, dato: '«extensas salinas»; hoy un poblado alrededor del complejo salinero', procedencia: {obra: esteves-1989, pagina: '33'}, etiqueta: atestiguado, capa: s. XX, zona: ZA3}
+      - {nombre: Bajarigua, sitio: al norte de El Vínculo, dato: '«extensa salina» en una depresión a doce metros bajo el nivel del mar', procedencia: {obra: esteves-1989, pagina: '19'}, etiqueta: atestiguado, capa: s. XX, zona: 'ZA3, interior de A2'}
+      - {nombre: Yaima, sitio: al norte de Adícora, dato: 'bahía de aguas profundas que en la Colonia fue puerto de la sal de Las Cumaraguas', procedencia: {obra: esteves-1989, pagina: '67'}, etiqueta: atestiguado, capa: colonial, zona: ZA3, valor: 'la salina del norte tiene su puerto de salida'}
+      - {nombre: Sanajaquí, sitio: municipio Los Taques, dato: salinas, procedencia: {obra: esteves-1989, pagina: '58'}, etiqueta: atestiguado, capa: s. XX, zona: ZA1}
+    sin_asignar_o_en_disputa:
+      - {nombre: Tura, sitio: al sur de Baraived, lat: 11.826, lon: -69.826, dato: '«extensas salinas»', procedencia: {obra: esteves-1989, pagina: '66'}, etiqueta: atestiguado, capa: s. XX, zona: 'costa oriental sin asignar, junto a ZX'}
+      - {nombre: Cariguariana, sitio: cerca de Adícora, dato: 'salineta de la que se sacaba sal «de excelente calidad para el consumo humano», sin la coloración rojiza de otras salinas; el nombre sería «la playa de los tabacones»', procedencia: {obra: esteves-1989, pagina: '28'}, etiqueta: atestiguado, capa: s. XX, zona: ZX}
+    en_la_orilla_del_golfete:
+      - {nombre: Tacuato, lat: 11.708, lon: -69.841, dato: 'en la Colonia funcionó allí un Resguardo de Salinas «para vigilar el comercio de sal que se practicaba en la localidad»; la etimología popular del nombre sale del precio de la sal, y Esteves la rechaza', procedencia: {obra: esteves-1989, pagina: '62'}, etiqueta: atestiguado, capa: colonial, zona: ZG2, valor: 'en la Colonia el control del comercio de sal estaba en la orilla que mira a Coro'}
+    lectura: >-
+      Los dos clanes tienen sal: GUARANAO la de la laguna, AMUAY las del norte y
+      la del oeste, y la costa oriental sin asignar tiene las suyas (Tura,
+      Cariguariana). Así que la sal NO es lo que un clan le da al otro: es lo que
+      la península entera tiene de sobra y saca afuera. Eso corrige el reparto
+      de aportes del ciclo del merejuy, que ponía la sal en la cuenta de cada
+      clan como si fuera su diferencia.
+    etiqueta_de_la_lectura: canon-simulacion
+  dos_circuitos:
+    etiqueta: canon-simulacion
+    aviso: 'la separación entre don ritual y trueque es propuesta del proyecto; ninguna fuente costera la describe'
+    redistribucion:
+      que: >-
+        Dentro de la polity no hay mercado. Los clanes entregan al Manaure en la
+        convergencia y él reparte (of-01): pescado, maíz, chicha, sal y cuentas
+        circulan como don y obligación, y las deudas se recuerdan, no se saldan
+        en el acto.
+      apoyo: 'nivel 0 (el paramount que redistribuye); el evento gran_cosecha_sal ya pone a Manaure decidiendo «cuánto se guarda y cuánto se cambia»'
+    trueque_hacia_afuera:
+      que: >-
+        La sal, el pescado seco y salado y las cuentas de concha salen de la
+        península; entran maíz en los años de seca larga, algodón, oro, piedra
+        para cuentas y madera para canoas. La unidad de cuenta es la sarta.
+      apoyo: 'Oliver pp. 285-286; Castellanos, líneas 48245-48246; ecologia-032 (la madera de canoa es importada)'
+      puntos_de_trueque:
+        - {lugar: 'la orilla del Golfete (Tacuato, ZG2)', con_quien: 'la tierra firme de Coro y la sierra', clan: GUARANAO, etiqueta: hipotetico, apoyo: 'el Resguardo colonial de Tacuato (Esteves p. 62)'}
+        - {lugar: 'Yaima y la costa norte (ZA3, ZA2)', con_quien: 'Aruba y las islas; la sal de Las Cumaraguas sale por Yaima', clan: AMUAY, etiqueta: hipotetico, apoyo: 'Yaima, puerto colonial de la sal (Esteves p. 67); el contacto Alto Vista-Santa Ana (van Buurt, nodo-010)'}
+        - {lugar: 'la costa oeste (Amuay, ZA1)', con_quien: 'la Guajira, donde había puestos caquetíos que cambiaban sal por oro', clan: AMUAY, etiqueta: hipotetico, apoyo: 'Oliver p. 188'}
+        - {lugar: 'Hurihurebo (A2)', con_quien: 'serranos que bajan por sal y pescado', clan: AMUAY, etiqueta: hipotetico, apoyo: 'Esteves pp. 71-78, sin cita'}
+      cuando: >-
+        Después de la gran cosecha de sal, que el motor pone en la seca
+        (curiana_state, gran_cosecha_sal), y alrededor de la convergencia de fin
+        de seca: la feria de la sal sería la cara profana de la chicha del
+        Kapubana. Los forasteros llegan cuando hay sal que cambiar.
+      oficios_nuevos:
+        - {id: of-14, nombre: 'salineros de cada clan (dueños del raspado)', funciones: [abrir y cerrar el raspado, repartir las charcas entre casas, guardar la sal de la polity], etiqueta: hipotetico, agentes_que_encajan: [Biro-ko], hueco: 'uno por clan'}
+        - {id: of-15, nombre: 'la que lleva la cuenta de las sartas (memoria del trueque)', funciones: [recordar quién dio y quién debe, fijar cuántas sartas vale un cesto de sal], etiqueta: hipotetico, agentes_que_encajan: [Nubiri-sha], apoyo: 'el evento trueque_visitantes_plaza ya la pone «anotando en su memoria cada deuda»'}
+      consecuencia_para_el_elenco: >-
+        Da un lugar legítimo a agentes que encajaban mal: los serranos
+        (Nabaraka, Raka-bi, Chorota, Jiru-ko) como forasteros de la feria, sin
+        inventarles un pueblo en Paraguaná. Responde en parte a P11.
 
 # ══════════════════════════════════════════════════════════════════
 # 3. EL KAPUBANA COMO INSTITUCIÓN
@@ -966,6 +1235,7 @@ ciclo_ritual_merejuy:
       GUARANAO_aporta: [el merejuy y la chicha (Moruy), el agua del cerro (Chamuriana), el maíz de las mejores tierras, el recinto y el boratio mayor, la sal de Guaranao]
       AMUAY_aporta: [pescado seco y salado, tortugas y botuto de la costa norte, caracol y sal de Las Cumaraguas, lo que llega de Aruba, las ancianas de los huesos (Paugis)]
       los_dos: [un diao que ratifica, jóvenes para el séquito, mensajeros, cantores con su versión del pasado, algodón y hamacas]
+      nota_sal: 'la sal no distingue a los clanes: los dos la tienen (sal_y_mercado.las_salinas_de_paraguana). Lo que cada clan lleva al cerro es SU sal como parte del don; la sal como excedente sale por el trueque hacia afuera'
     apoyo_de_la_complementariedad:
       - {dato: 'asentamientos concentrados alrededor del volcán por el agua y el suelo', etiqueta: atestiguado, procedencia: {obra: oliver-1989-cap3, pagina: 'pdf 80'}}
       - {dato: 'tierra pobre, mar rico', etiqueta: atestiguado, apoyo_en_repo: ecologia-036}
@@ -1097,6 +1367,57 @@ huecos_de_elenco:
     - {puesto: 'pintor(a) ritual titular', por_que: of-10, etiqueta_del_puesto: reconstruido}
 
 # ══════════════════════════════════════════════════════════════════
+# 5b. PROPUESTAS A OTRAS ESFERAS (regla 7) — nada de esto se ha tocado
+# ══════════════════════════════════════════════════════════════════
+propuestas_a_otras_esferas:
+  ecologia:
+    - tipo: hecho nuevo
+      contenido: >-
+        El sobrepastoreo como corte colonial del paisaje de la costa de Falcón:
+        clima y vegetación casi iguales a los del s. XVI, pero el suelo perdió
+        su cobertura, y con ella la humedad, por las cabras y el abandono de los
+        conucos tras 1527. La agricultura del s. XV era un casi-equilibrio
+        manejado (ciclo corto, acequias, jagüeyes).
+      fuente: reconstruido
+      procedencia: {obra: oliver-1989-cap3, pagina: '252-254'}
+      dominios: [ecologia, agricultura, suelos]
+      locacion: conuco
+      cero_verificado: 'el corpus no lo tenía: sobrepastoreo, pastoreo, cabra, chivo, caprino, overgraz y goat dan 0 en 3-mundo/corpus/ecologia.yaml; el único pastoreo del corpus es wayuu (transmision.yaml)'
+    - tipo: nota a ecologia-033
+      que: >-
+        La fauna «escasa por el clima desértico» es la del Parque Nacional
+        Médanos de hoy. Castellanos, testigo de la década de 1540, llama a la
+        tierra de Coro «abundantísima de toda caza». Se propone la nota de la
+        regla 3: la caza como complemento sigue en pie, pero la escasez moderna
+        es en parte colonial.
+      procedencia: {obra: castellanos-elegias, pagina: 'línea 48228 del txt'}
+    - tipo: nota a ecologia-036 (tierra pobre, mar rico)
+      que: 'matizar a «tierra difícil pero manejada, empobrecida después»; el clima por sí solo no explica la pobreza agrícola de hoy (Oliver p. 253)'
+      procedencia: {obra: oliver-1989-cap3, pagina: '253'}
+  geografia_politica_y_motor:
+    - tipo: corrección de regla 4
+      donde: ['curiana_sim/curiana_polities.py (costera.economia)', '4-fuentes/oliver-1989-cap3.md (§Economía)', '3-mundo/horizonte-de-contacto.md (fila Comercio)']
+      que: >-
+        Los tres atribuyen a la polity costera una red de alianzas por comercio
+        de cuentas de concha, sal y azabache, y la nota de la fuente dice además
+        que esas aldeas «desarrollaron una confederación». Oliver lo dice de las
+        aldeas JIRAJARAS (p. 245; DOC 238), y dice lo contrario sobre la
+        confederación: ninguna la formó, pero sí alianzas por comercio. Lo que
+        Oliver dice de la costa está en las pp. 285-286: sal abundante que se
+        comercia tierra adentro y cuentas con valor fijo. Se propone corregir el
+        rasgo con esa cita.
+      procedencia: {obra: oliver-1989-cap3, pagina: '245 y 285-286'}
+      nota: 'curiana_polities --check sigue en verde, porque el rasgo tiene fuente; lo que falla es que la fuente habla de otra polity'
+  lexicon:
+    - tipo: voces candidatas
+      formas: [boroyda, mamas, querequetero, quitero]
+      glosa: los tres tipos de cuentas de collar con valor de cambio
+      procedencia: {obra: oliver-1989-cap3, pagina: '285, citando a Naveros y Vázquez de Acuña [1538] en Gabaldón 1962'}
+      etiqueta_propuesta: caquetío-hipotético
+      por_que_no_mas: 'Oliver no dice en qué lengua están, y Naveros escribe en castellano en 1538. boroyda y quitero dan 0 en el repo y en lexicon_zavala. El lexicón ya tiene ucibo «cuenta de piedra, chaquira» (caquetío-atestiguado, Zavala #267)'
+      aviso: 'no emparentar quitero con la quiripa achagua (las cuentas de concha de Neira y Ribero) sin regla fonética: el parecido es de superficie'
+
+# ══════════════════════════════════════════════════════════════════
 # 6. PREGUNTAS PARA MIGUEL — lo que la evidencia no resuelve
 # ══════════════════════════════════════════════════════════════════
 preguntas_para_miguel:
@@ -1146,3 +1467,16 @@ preguntas_para_miguel:
   - id: P13
     pregunta: ¿Pipiacoa (Santa Ana «of Pipiacoa», 1538-1546) y Chamuriana son dos nombres del mismo sitio?
     donde_se_resuelve: campaña de topónimos (Pipiacoa no está en el canon)
+  - id: P14
+    pregunta: ¿La sal se modela como excedente de toda la península, con un trueque hacia afuera (la feria de la sal) separado de la redistribución ritual?
+    propuesta: 'sí: dentro, don y redistribución por Manaure; fuera, trueque por sartas de cuentas después de la cosecha de sal de la seca'
+    por_que_importa: da sitio a los forasteros (serranos, isleños) sin inventarles un pueblo en Paraguaná
+  - id: P15
+    pregunta: ¿Los nombres de casa de Moruy salen de los apellidos indígenas (Mabo, Cuauro, Caguao, Guarecuco, Cotopo, Tumarure) y los Adaures entran como subgrupo propio? ¿Conviven con Corie y Buio de D1 o los sustituyen en Moruy?
+    abierta: ¿Es esto lo que Miguel recordaba como «subgrupos de los Moruyes», o hay otra fuente con nombres de parcialidades?
+  - id: P16
+    pregunta: ¿Se sube el peso del conuco en las aldeas del interior y se añade el monte como recurso con dueño (frutos, leña, caza y sombra del suelo)?
+    propuesta: sí, y proponer al corpus de ecología el hecho del sobrepastoreo con los matices a ecologia-033 y ecologia-036
+  - id: P17
+    pregunta: ¿Se corrige el rasgo economía de la polity costera (curiana_polities.py, la nota de Oliver y horizonte-de-contacto), que da a la costa la red jirajara de cuentas, sal y azabache?
+    propuesta: sí, con la cita de las pp. 285-286; es un error de regla 4 y de lectura

@@ -191,7 +191,111 @@ norte, hacia Aruba. Biro-ko de salinero, aunque hacen falta dos.
 - **Oviedo y Valdés t. II no se puede leer en el repo:** el PDF está dañado y
   es el vol. 1. Todo Oviedo llega vía Arcaya, Oliver y Alvarado.
 
-## 7. Preguntas para Miguel
+## 7. Segunda vuelta: el suelo, la sal y los nombres de Moruy
+
+> «Si te fijas, Oliver dice que Paraguaná tenía igual otra disposición
+> ecológica, ya que había matorrales y arbustos que hacían que el microclima en
+> el suelo fuese distinto, y eso se perdió con el sobrepastoreo. Y además
+> tenemos que tener las salinas, por lo que está otra disposición de mercado
+> ahí. Habíamos mencionado no sé en dónde algunos nombres de subgrupos de parte
+> de los Moruyes.» (Miguel, 2026-09-13)
+
+### El suelo del s. XV (Oliver §3.4.1, pp. 252-254 de la impresa)
+
+- En la costa de Falcón la agricultura era difícil «although not impossible»:
+  ciclo corto en las lluvias, acequias o jagüeyes. Oliver lo llama un
+  casi-equilibrio de agricultura manejada que tuvo que regir antes del
+  contacto.
+- El clima y la vegetación eran casi los de hoy. Lo que cambió fue el suelo:
+  el ganado, y sobre todo las cabras, lo dejaron sin cobertura y expuesto al
+  sol, y la evapotranspiración se disparó. Para Oliver el clima por sí solo no
+  explica la pobreza agrícola actual.
+- El detonante fue la Conquista. Con los Welser (1527-1546) se llevaron a los
+  varones y los demás se «alzaron»; los conucos quedaron sin atender y la
+  erosión se volvió irreversible.
+- **Matiz a la lectura de Miguel.** Oliver no dice que el monte fuera otro,
+  sino que el suelo perdió la cobertura. Es el mismo mecanismo que describe
+  Miguel.
+- **El testigo.** Castellanos, que vio Coro en la década de 1540, habla de una
+  tierra «abundantísima de toda caza» y con «grande pesquería», y con cabras
+  ya.
+
+**Propuesta:**
+- El conuco del interior (Chamuriana, Moruy, Cayerúa) pasa a ser una economía
+  de verdad.
+- El monte es un recurso con dueño (frutos, leña, caza y sombra del suelo) y
+  entra en los linderos que arbitra el de la buena vara.
+- Nada de cabras, ganado ni caballos. Comprobado: el motor no tiene ninguno.
+- Se proponen dos matices al corpus de ecología (033 y 036), sin tocarlo.
+
+### Las salinas y el mercado
+
+| Dónde | Salina | Dato | Fuente |
+|---|---|---|---|
+| GUARANAO | Guaranao, en la laguna | «las más importantes»; sal medicinal | Arcaya p. 22; Esteves pp. 40-41 |
+| AMUAY | Las Cumaraguas | extensas; en la Colonia salían por el puerto de Yaima | Esteves pp. 33, 67 |
+| AMUAY | Bajarigua | extensa, 12 m bajo el nivel del mar | Esteves p. 19 |
+| AMUAY | Sanajaquí (Los Taques) | salinas | Esteves p. 58 |
+| sin asignar | Tura (Baraived) y Cariguariana (Adícora) | extensas; sal blanca de consumo | Esteves pp. 66, 28 |
+| orilla del Golfete | Tacuato | Resguardo de Salinas colonial «para vigilar el comercio de sal» | Esteves p. 62 |
+
+Lo que Oliver dice de la costa:
+- **Sal y cuentas** (pp. 285-286). La sal era abundante y se comerciaba
+  tierra adentro. El valor fijo lo tenían las cuentas de collar (*boroyda*,
+  *mamas*, *querequetero* o *quitero*), medidas por el largo de la sarta:
+  «almost like a monetary system».
+- **La Guajira** (p. 188). Los caquetíos de allí cambiaban sal por oro.
+
+**Propuesta** (`canon-simulacion`). Los dos clanes tienen sal, así que la sal
+no es lo que un clan le da al otro: es el excedente de toda la península. Eso
+da dos circuitos:
+- **Dentro:** don y redistribución por Manaure en la convergencia.
+- **Fuera:** trueque por sartas de cuentas, después de la cosecha de sal de la
+  seca, en tres sitios: la orilla del Golfete (GUARANAO, hacia Coro y la
+  sierra), Yaima y la costa norte (AMUAY, hacia Aruba) y la costa oeste
+  (AMUAY, hacia la Guajira).
+
+Dos oficios nuevos, hipotéticos:
+- los salineros de cada clan (Biro-ko);
+- la que lleva la cuenta de las sartas (Nubiri-sha, a quien el motor ya pone
+  «anotando en su memoria cada deuda»).
+
+Y los serranos que encajaban mal encuentran sitio como forasteros de la feria.
+
+### Los nombres de Moruy
+
+Ninguna fuente da nombres de *subgrupos* de los Moruyes. Lo que hay:
+- Esteves p. 53: en Moruy «los apellidos no han sufrido deformaciones»
+  (Caguao, Cuauro, Mabo, Guarecuco, Cotopo).
+- Medina Colina p. 328 repite los cinco y añade Guanipa, Guariato y Timaure.
+- Velasco 2015: la «etnia Mabo» de Guacurebo, que en 1881 pertenecía a Moruy.
+- Esteves p. 64: «Tumarure era el apellido de un cacique» (Tumarusa).
+- Esteves p. 13: los «indios adaures», una «tribu belicosa», y la familia en
+  *-aure* (Adaure, Timaure, Yaraure, Chunaure, Manaure). Adaure cae al norte de
+  Moruy, en la frontera.
+- El padrón de 1881: el municipio de Moruy tiene 213 casas. Sus rancherías son
+  Yauquiba (26), Guacurebo (34), Guacujúa (14), Tumarusa, Abudure, Barunú,
+  Tacaduto, Saguatumo y Tequeguacare.
+
+**Propuesta** (`hipotetico`). G2 se atomiza en casas con el nombre de esos
+apellidos, cada una en su ranchería: Mabo en Guacurebo, Tumarure en Tumarusa,
+etc. Los Adaures entran como subgrupo de frontera. Son apellidos del s. XX:
+semilla, no dato.
+
+### Dos cosas encontradas por el camino
+
+- **Error de regla 4.** `curiana_polities.py`, la nota de Oliver y
+  `horizonte-de-contacto.md` dan a la costa «la red de alianzas de cuentas de
+  concha, sal y azabache», y la nota añade una «confederación». Oliver lo dice
+  de los **jirajaras** (p. 245) y dice que *no* formaron confederación. La
+  propuesta es corregirlo con las pp. 285-286.
+- **Paginación de Oliver.** El PDF comprimido del cap. 3 es la edición en DOC
+  de 2006, con su propia paginación; las páginas nuevas se comprobaron con OCR
+  del escaneo impreso. La «p. 251» con que el canon cita Todariquiba es la del
+  DOC; en la impresa es la 259. Queda un encargo aparte para auditar todas las
+  citas.
+
+## 8. Preguntas para Miguel
 
 1. **¿Dónde vive Manaure en el s. XV?** a) en GUARANAO, al pie del cerro;
    b) en el recinto del cerro, sin clan; c) fuera, en Todariquiba.
@@ -219,6 +323,17 @@ norte, hacia Aruba. Biro-ko de salinero, aunque hacen falta dos.
     o es reconfiguración colonial?
 13. **¿Pipiacoa** (Santa Ana «of Pipiacoa», 1538-1546) **es otro nombre de
     Chamuriana?** Es tarea para la campaña de topónimos.
+14. **¿La sal como excedente de toda la península,** con un trueque hacia
+    afuera (la feria de la sal) separado de la redistribución ritual?
+15. **¿Los nombres de casa de Moruy salen de los apellidos indígenas** (Mabo,
+    Cuauro, Caguao, Guarecuco, Cotopo, Tumarure), con los Adaures como subgrupo
+    propio? ¿Conviven con Corie y Buio de D1 o los sustituyen? ¿Y es esto lo que
+    Miguel recordaba, o hay otra fuente con nombres de parcialidades?
+16. **¿Más peso al conuco del interior** y el monte como recurso con dueño?
+    ¿Se proponen al corpus de ecología el sobrepastoreo y los dos matices?
+17. **¿Se corrige la economía de la polity costera** en `curiana_polities.py`,
+    la nota de Oliver y `horizonte-de-contacto.md` (la red jirajara atribuida
+    a la costa)?
 
 ---
 
