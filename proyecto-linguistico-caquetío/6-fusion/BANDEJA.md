@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-14**.
 
-**2359 ítems propuestos** en 53 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
+**2420 ítems propuestos** en 54 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -41,6 +41,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-09-12.yaml` | ? | 4 |  |
 | `decisiones_tanda_2026-09-13.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-14.yaml` | ? | 0 |  |
+| `elenco_era2.yaml` | varias | 61 |  |
 | `esteves_parte2_falcon.yaml` | esteves-1989 | 16 |  |
 | `estructura_social_era2.yaml` | varias | 17 |  |
 | `frase_saludo_mitare.yaml` | ? | 2 |  |
@@ -104,6 +105,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 
 | Archivo | Qué es |
 |---|---|
+| `casting-era2.md` | Casting de la era 2: 61 agentes en cinco casas, con dossier por agente |
 | `decision-d11-fase3-nucleo-lokono-achagua.md` | D11 fase 3: el núcleo re-derivado desde lokono + achagua, y un perfil de run para medirlo |
 
 ---
