@@ -43,6 +43,7 @@ GENERADOS = {
     "curiana_sim/lexicon_zavala.py": "corre curiana_sim/minar_zavala_glosario.py",
     "curiana_sim/lexicon_a2.py": "corrige 6-fusion/tabla_a2_transcripcion.yaml y corre curiana_sim/minar_a2_swadesh.py",
     "curiana_sim/lexicon_perea.py": "corre curiana_sim/minar_perea.py",
+    "curiana_sim/curiana_agents_era2.py": "corrige 6-fusion/elenco_era2.yaml y corre 6-fusion/scripts/generar_agentes_era2.py",
 }
 
 

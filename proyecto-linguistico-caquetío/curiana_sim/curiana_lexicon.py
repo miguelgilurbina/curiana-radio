@@ -8283,29 +8283,25 @@ def vocabulario_para_agente(tier: int, lexico: "LexicoComunitario", contexto: st
 
     if tier == 1:
         base = prompt_reglas_completo()
-    elif tier == 2:
-        base = prompt_reglas_breve()
     else:
-        base = (
-            "[Lengua nativa — caquetío]: "
-            "Usa -ka (hecho), -ni (haciendo), -da (haré). "
-            "ta-(mi) wa-(nuestro). "
-            "Verbo: wana(ver) suna(dormir) masa(comer) naa(ir). "
-            "Conector: ka(y) mara(pero) kashi(ahora). "
-            "[nueva-palabra: raíz+sufijo = sig]"
-        )
+        # Tier 2 y tier 3. El tier 3 veía una línea con 4 verbos y 3 conectores
+        # y ninguna muestra (medido el 2026-09-14: 221 caracteres): con eso no
+        # podía hablar. Desde la era 2 («que todos los agentes hablen») ve las
+        # reglas breves y una muestra chica; sigue sabiendo menos que un adulto.
+        base = prompt_reglas_breve()
 
     partes = [base]
-    if tier <= 2:
-        # Presupuesto por tier = el que la era 1 mandaba de hecho (50 y 42
-        # voces, medido en la auditoría 2026-09-14), para que arreglar el
-        # reparto no alargue el prompt: su longitud predice el score.
-        muestra = muestra_caquetio_dinamica(
-            n_por_categoria=20 if tier == 1 else 12, contexto=contexto,
-            pesos=pesos, capas=capas, n_total=50 if tier == 1 else 42,
-        )
-        if muestra:
-            partes.append(muestra)
+    # Presupuesto por tier = el que la era 1 mandaba de hecho a los tier 1 y 2
+    # (50 y 42 voces, medido en la auditoría 2026-09-14), para que arreglar el
+    # reparto no alargue el prompt: su longitud predice el score. El tier 3
+    # recibe 20.
+    n_total = {1: 50, 2: 42}.get(tier, 20)
+    muestra = muestra_caquetio_dinamica(
+        n_por_categoria=20 if tier == 1 else 12, contexto=contexto,
+        pesos=pesos, capas=capas, n_total=n_total,
+    )
+    if muestra:
+        partes.append(muestra)
     if lexico_activo:
         partes.append(lexico_activo)
     if pendientes and tier <= 2:

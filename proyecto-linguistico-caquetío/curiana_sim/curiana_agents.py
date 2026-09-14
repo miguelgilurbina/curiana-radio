@@ -566,7 +566,28 @@ ALL_AGENTS.update(AGENTS_T1)
 ALL_AGENTS.update(AGENTS_T2)
 ALL_AGENTS.update(AGENTS_T3)
 
-TOTAL = len(ALL_AGENTS)  # 60
+# ── Elenco activo ──────────────────────────────────────────────────
+# La era 1 es este fichero. La era 2 es curiana_agents_era2.py, GENERADO desde
+# 6-fusion/elenco_era2.yaml (#127, 2026-09-14). Se elige ANTES de importar,
+# con CURIANA_ELENCO=era2 (el orquestador la fija desde --elenco): todos los
+# módulos hacen `from curiana_agents import ALL_AGENTS` y así ven el mismo
+# elenco. MUNDO es el nombre que encabeza el contexto del turno; ROSTER_NUCLEO,
+# los que el casting hace rotar de continuo; SITIOS, las casas con su nodo.
+import os as _os
+ELENCO = (_os.environ.get("CURIANA_ELENCO") or "era1").strip().lower()
+MUNDO = "CURIANA"
+ROSTER_NUCLEO: list = []
+SITIOS: dict = {}
+if ELENCO == "era2":
+    import curiana_agents_era2 as _era2
+    ALL_AGENTS = dict(_era2.ALL_AGENTS)
+    MUNDO = _era2.MUNDO
+    ROSTER_NUCLEO = list(_era2.ROSTER_NUCLEO)
+    SITIOS = dict(_era2.SITIOS)
+elif ELENCO != "era1":
+    raise ValueError(f"CURIANA_ELENCO={ELENCO!r}: sólo era1 o era2")
+
+TOTAL = len(ALL_AGENTS)  # 60 en la era 1
 
 def get_agent(name: str) -> dict:
     return ALL_AGENTS.get(name, {})

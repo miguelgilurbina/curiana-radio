@@ -28,8 +28,19 @@ try:
 except ImportError:
     pass
 
+# El elenco se elige ANTES de importar curiana_agents, porque todos los
+# módulos importan su ALL_AGENTS al cargarse. --elenco era2 fija la variable;
+# argparse lo vuelve a declarar más abajo sólo para la ayuda.
+if "--elenco" in sys.argv:
+    _i = sys.argv.index("--elenco")
+    if _i + 1 < len(sys.argv):
+        os.environ["CURIANA_ELENCO"] = sys.argv[_i + 1]
+
 from curiana_database import get_anthropic_client, get_db
-from curiana_agents import ALL_AGENTS, AGENTS_T1, AGENTS_T2, AGENTS_T3
+from curiana_agents import (
+    ALL_AGENTS, AGENTS_T1, AGENTS_T2, AGENTS_T3,
+    ELENCO, MUNDO, ROSTER_NUCLEO,
+)
 from huella_de_base import huella as huella_de_base, resumen as resumen_huella
 from curiana_state import (
     ComunidadState,
@@ -155,11 +166,44 @@ def roster_de_habla(nombre: str = "koine") -> list[str]:
     norma) y luego el del elenco."""
     if nombre == "koine":
         return [a for a in PARTICIPANTES_KOINE if a in ALL_AGENTS]
+    if nombre == "nucleo":
+        # Los que el casting de la era 2 hace rotar de continuo (en_roster);
+        # sin elenco de la era 2 cae al roster koiné.
+        r = [a for a in ROSTER_NUCLEO if a in ALL_AGENTS and not es_foraneo(ALL_AGENTS[a])]
+        return r or roster_de_habla("koine")
     if nombre != "todos":
-        raise ValueError(f"roster desconocido: {nombre!r} (koine | todos)")
+        raise ValueError(f"roster desconocido: {nombre!r} (koine | nucleo | todos)")
     primero = [a for a in PARTICIPANTES_KOINE if a in ALL_AGENTS and not es_foraneo(ALL_AGENTS[a])]
     resto = [a for a, d in ALL_AGENTS.items() if a not in primero and not es_foraneo(d)]
     return primero + resto
+
+
+# Las zonas de pesca de la era 2 dichas para un hablante, no en clave
+# (6-fusion/estructura_social_era2.yaml, decision_creativa_2026-09-14).
+ZONAS_DE_PESCA = {
+    "ZG2": "la orilla del Golfete",
+    "ZA1": "la costa oeste, de Punta Cardón a Los Taques",
+}
+
+
+def prompt_gente(agent: dict) -> str:
+    """El nodo, la casa y el sitio del agente, para el prompt. Sólo el elenco
+    de la era 2 los trae; en la era 1 devuelve vacío. Es la pieza que la
+    auditoría 2026-09-14 §7 echaba en falta: ninguna parte del prompt sabía en
+    qué nodo estaba el agente."""
+    if not agent.get("nodo"):
+        return ""
+    partes = [f"tu nodo es {agent['nodo']}", f"tu casa, la de {agent.get('casa')}",
+              f"tu sitio, {agent.get('sitio')}"]
+    linaje = str(agent.get("linaje") or "").split(" (")[0].strip()
+    if linaje:
+        partes.append(f"tu linaje, {linaje}")
+    zona = ZONAS_DE_PESCA.get(agent.get("zona_de_pesca") or "")
+    if zona:
+        partes.append(f"tu gente pesca en {zona}")
+    return ("[Tu gente]: " + "; ".join(partes) + ". Hay otro nodo al otro lado del "
+            "cerro, que habla a su manera; sólo os juntáis en el Capubana y por los "
+            "que se casaron cruzando.")
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -248,14 +292,19 @@ def call_agent(
     tier = agent.get("tier", 2)
     etnia = agent.get("etnia", "caquetío")
 
-    # System prompt base del agente
+    # System prompt base del agente. Los tier 3 de la era 1 no traen
+    # system_prompt (se arma aquí); los de la era 2 lo traen generado, con su
+    # nodo, su casa y su sitio.
     if tier == 3:
-        base_prompt = (
+        base_prompt = agent.get("system_prompt") or (
             f"Eres {agent_name} de la Curiana, comunidad caquetía del Golfete de Coro. "
             f"{agent.get('descripcion', '')} Responde brevemente en personaje."
         )
     else:
         base_prompt = agent.get("system_prompt", f"Eres {agent_name} de la Curiana.")
+
+    # El estímulo del turno nombra el sitio del agente (era 2) o la Curiana.
+    user_message = user_message.replace("{lugar}", agent.get("sitio") or "la Curiana")
 
     # Contexto dinámico del mundo
     world_context = state.to_context_string()
@@ -306,6 +355,9 @@ def call_agent(
     if rasgos:
         system_parts.append(rasgos)
     system_parts += ["---", world_context, f"[Tu ubicación]: {ubicacion}"]
+    gente = prompt_gente(agent)
+    if gente:
+        system_parts.append(gente)
     if bloque_lexico:
         system_parts.append(bloque_lexico)
     if sugerencia_contagio:
@@ -414,12 +466,13 @@ def director_select_event(state: ComunidadState) -> Optional[dict]:
 # TURNO PRINCIPAL
 # ══════════════════════════════════════════════════════════════════════
 
+# {lugar} lo rellena call_agent con el sitio del agente (era 2) o «la Curiana».
 MOMENTOS_ESTIMULO = {
-    "amanecer": "Amanece en la Curiana. ¿Qué estás haciendo al comenzar el día?",
-    "mañana":   "La mañana avanza. ¿En qué estás trabajando?",
+    "amanecer": "Amanece en {lugar}. ¿Qué estás haciendo al comenzar el día?",
+    "mañana":   "La mañana avanza en {lugar}. ¿En qué estás trabajando?",
     "mediodia": "Es mediodía. El calor obliga al descanso. ¿Dónde estás y qué piensas?",
-    "tarde":    "La tarde en la Curiana. ¿Qué haces o con quién hablas?",
-    "anochecer":"El sol cae sobre el Golfete. ¿Cómo terminas tu día?",
+    "tarde":    "La tarde en {lugar}. ¿Qué haces o con quién hablas?",
+    "anochecer":"El sol cae sobre {lugar}. ¿Cómo terminas tu día?",
     "noche":    "La noche cae. ¿Qué pensamientos tienes?",
 }
 
@@ -938,6 +991,7 @@ def auto_mode(
         state.turnos_por_dia = int(turnos_por_dia)
         if not continuar:
             state.momento = momento_de_turno(state.turno, state.turnos_por_dia)
+    state.mundo = MUNDO   # el elenco decide el mundo que encabeza el contexto
     roster = roster_de_habla(roster_nombre)
     difusion = DifusionLexica()
     # (dia, acumulada, ventana, emergente) — la acumulada se conserva por
@@ -977,6 +1031,7 @@ def auto_mode(
     run_id = db.create_run(
         model=MODEL,
         config={"max_turns": turnos, "mode": "auto",
+                "elenco": ELENCO, "mundo": MUNDO,
                 "agentes_por_turno": agentes_por_turno,
                 "roster": roster_nombre, "roster_n": len(roster),
                 "turnos_por_dia": state.turnos_por_dia,
@@ -998,6 +1053,7 @@ def auto_mode(
     print(f"  CURIANA — Modo Automático: {turnos} turnos")
     print(f"  ({turnos // tpd} días simulados de {tpd} turnos · "
           f"{turnos // (tpd * 2 * DIAS_POR_ESTACION)} año(s) aprox.)")
+    print(f"  elenco: {ELENCO} ({len(ALL_AGENTS)} agentes) · mundo {MUNDO}")
     print(f"  habla: {agentes_por_turno} por turno sobre el roster `{roster_nombre}` ({len(roster)})")
     if continuar:
         print(f"  continúa desde el día {state.dia} (run anterior: {(state.run_anterior or '?')[:8]})")
@@ -1219,9 +1275,16 @@ if __name__ == "__main__":
         help="Cuántos agentes hablan por turno (la era 1: 6).",
     )
     parser.add_argument(
-        "--roster", choices=["koine", "todos"], default="koine",
-        help="Sobre qué elenco rota la ventana: `koine` (los 23 fijos de la era 1) "
+        "--roster", choices=["koine", "nucleo", "todos"], default="koine",
+        help="Sobre qué elenco rota la ventana: `koine` (los 23 fijos de la era 1), "
+             "`nucleo` (los 24 en_roster del casting de la era 2) "
              "o `todos` (todos los agentes no foráneos, tier 3 incluidos).",
+    )
+    parser.add_argument(
+        "--elenco", choices=["era1", "era2"], default=None,
+        help="Qué elenco carga el motor: `era1` (curiana_agents.py, 60) o `era2` "
+             "(curiana_agents_era2.py, generado desde 6-fusion/elenco_era2.yaml). "
+             "Se aplica antes de importar (fija CURIANA_ELENCO).",
     )
     parser.add_argument(
         "--turnos-por-dia", type=int, default=None,
