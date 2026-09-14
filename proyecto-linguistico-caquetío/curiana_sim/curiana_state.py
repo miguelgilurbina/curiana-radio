@@ -36,6 +36,23 @@ MOMENTOS_DIA = ["amanecer", "mañana", "mediodia", "tarde", "anochecer", "noche"
 # estaciones). Coincide con el mapeo declarado en auto_mode() del orquestador.
 DIAS_POR_ESTACION = 60
 
+# Turnos por día. La era 1 corrió con 2 (amanecer y tarde); la era 2 pide días
+# más largos —Miguel, 2026-09-14: «es preferible que un día tenga muchos más
+# turnos, así podríamos tener una simulación por día»— y con 6 se recorren los
+# seis momentos de MOMENTOS_DIA. El valor vive en el estado, así que un run
+# continuado hereda el ritmo del anterior.
+TURNOS_POR_DIA_ERA1 = 2
+
+
+def momento_de_turno(turno: int, turnos_por_dia: int) -> str:
+    """El momento del día que toca al turno `turno` (1-based) cuando el día
+    tiene `turnos_por_dia` turnos: los momentos se reparten a espacios
+    iguales sobre MOMENTOS_DIA. Con 2 turnos da amanecer y tarde (la era 1);
+    con 6, los seis momentos."""
+    n = max(1, int(turnos_por_dia))
+    i = ((turno - 1) * len(MOMENTOS_DIA)) // n
+    return MOMENTOS_DIA[min(max(i, 0), len(MOMENTOS_DIA) - 1)]
+
 
 def ESTACION_DE_DIA(dia: int) -> str:
     """Estación que corresponde a un día simulado (día 1 = seca)."""
@@ -100,15 +117,22 @@ class ComunidadState:
     # Notas del orquestador
     notas_orquestador: str = ""
 
+    # Ritmo del día (ver TURNOS_POR_DIA_ERA1) y el run del que viene este
+    # estado cuando se encadenan días (--continuar): un run continuado declara
+    # en su config de qué run hereda el mundo, la memoria y la koiné.
+    turnos_por_dia: int = TURNOS_POR_DIA_ERA1
+    run_anterior: Optional[str] = None
+
     def avanzar_turno(self):
-        """Avanza un turno (media jornada) y, al cambiar de día, el calendario."""
-        if self.turno == 1:
-            self.turno = 2
-            self.momento = "tarde"
+        """Avanza un turno y, al cerrar el día, el calendario.
+
+        El día tiene `turnos_por_dia` turnos; el momento de cada uno sale de
+        momento_de_turno(). Con 2 turnos es la media jornada de la era 1."""
+        if self.turno < self.turnos_por_dia:
+            self.turno += 1
         else:
             self.turno = 1
             self.dia += 1
-            self.momento = "amanecer"
             # Registrar evento del día anterior
             if self.evento_del_turno:
                 self.historial_eventos.append({
@@ -117,6 +141,7 @@ class ComunidadState:
                 })
                 self.evento_del_turno = None
             self._actualizar_estacion()
+        self.momento = momento_de_turno(self.turno, self.turnos_por_dia)
 
     def _actualizar_estacion(self):
         """Alterna seca/lluvias cada DIAS_POR_ESTACION.

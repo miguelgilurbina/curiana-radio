@@ -13,9 +13,9 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-13**.
+<!--GENERADO--> Generado el **2026-09-14**.
 
-**2137 ítems propuestos** en 48 propuestas, más **0 issue(s)/comentario(s) redactados sin publicar**.
+**2422 ítems propuestos** en 54 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -33,12 +33,17 @@ editar_a_mano: no
 | `colores_caquetios.yaml` | ? | 4 |  |
 | `comparandas_jahn_1927.yaml` | jahn-1927 | 0 |  |
 | `computo_d11_2026-08-31.yaml` | ? | 4 |  |
+| `cruce_achagua_caquetio_2026-09-13.yaml` | neira-ribero-1762 | 188 |  |
 | `decisiones_colisiones_d5_2026-08-31.yaml` | ? | 3 |  |
 | `decisiones_tanda_2026-08-30.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-01.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-08.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-12.yaml` | ? | 4 |  |
+| `decisiones_tanda_2026-09-13.yaml` | ? | 0 |  |
+| `decisiones_tanda_2026-09-14.yaml` | ? | 0 |  |
+| `elenco_era2.yaml` | varias | 63 |  |
 | `esteves_parte2_falcon.yaml` | esteves-1989 | 16 |  |
+| `estructura_social_era2.yaml` | varias | 17 |  |
 | `frase_saludo_mitare.yaml` | ? | 2 |  |
 | `jahn_vocabularios_comparados.yaml` | jahn-1927 | 4 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
@@ -55,6 +60,7 @@ editar_a_mano: no
 | `pendientes_en_alvarado_y_arcaya.yaml` | ? | 0 |  |
 | `petroglifos_y_manaure.yaml` | moron-2012-petroglifos | 4 |  |
 | `polities_no_costeras_federmann.yaml` | ? | 16 |  |
+| `propuesta_nucleo_d11_fase3.yaml` | perea-alonso-1942 · neira-ribero-1762 · oliver-1989-cap2 · oliver-1989-apendice-a · zavala-reyes-2015 | 17 |  |
 | `tabla15_c14_oliver.yaml` | oliver-1989-cap4 | 23 |  |
 | `tabla_a1_a7_swadesh.yaml` | oliver-1989-apendice-a | 4 |  |
 | `tabla_a2_transcripcion.yaml` | oliver-1989-apendice-a | 101 |  |
@@ -99,6 +105,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 
 | Archivo | Qué es |
 |---|---|
+| `decision-d11-fase3-nucleo-lokono-achagua.md` | D11 fase 3: el núcleo re-derivado desde lokono + achagua, y un perfil de run para medirlo |
 
 ---
 

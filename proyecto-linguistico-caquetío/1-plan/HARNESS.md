@@ -67,8 +67,23 @@ mal la primera vez**. No es documentación: es lo que evita repetir el error.
 | Skill | Estado | Por qué |
 |---|---|---|
 | `minar-fuente` | ✅ escrita | 8 minerías con la misma forma; el paso "verifica la ortografía antes de contar" existe porque el mismo error apareció **3 veces en una noche** |
+| `campana-toponimos` | ✅ escrita | la campaña de topónimos de Esteves y Medina, con su cierre al canon |
+| `leer-fuente` | ✅ escrita 2026-09-13 | la técnica de extracción (pdftotext / OCR / pymupdf / manuscritos por visión, claves ortográficas por autor, descargas y D8); `minar-fuente` sigue siendo qué preguntarle |
+| `fusionar-propuesta` | ✅ escrita 2026-09-13 | el paso de `6-fusion/` al canon: la trampa de `FUERA_DEL_HABLA`, las claves, las capas, el tablero siempre con `--gh`, publicar y mover a `publicados/` |
+| `cerrar-sesion` | ✅ escrita 2026-09-13 | el traspaso: medir, rescatar el scratchpad, borradores, handoff sin cifras a mano, PR |
 | `sesion-corpus` | pendiente | las 5 sesiones del programa cultural tienen estructura idéntica (pregunta → ensayo → YAML → hoja de fuentes) |
 | `analizar-run` | pendiente | ahora que `analizar_runs.py` existe, el procedimiento de leerlo es codificable |
+
+> **Hooks (2026-09-13)**: **instalados** por decisión de Miguel en
+> `.claude/settings.json` + `.claude/hooks/curiana_hooks.py`; diseño, razones y
+> descartes en `.claude/skills/HOOKS_PROPUESTOS.md`. Bloquean sólo donde no hay
+> estado intermedio legítimo (editar a mano un fichero generado, `git add -A`)
+> y avisan en lo demás (tablero sin `--gh`, guardianes tras cada commit, cierre
+> tras un script de fusión). Matiz a la regla de abajo («nada de hooks que
+> bloqueen»), discutido en ese documento. Falso positivo conocido: el modo
+> `bash` es un filtro de texto y bloquea un comando que *contenga* una
+> escritura a un generado aunque sea dentro de un string — las pruebas con ese
+> texto van en un fichero.
 
 ### 3. CLAUDE.md — solo lo que cambia el comportamiento
 

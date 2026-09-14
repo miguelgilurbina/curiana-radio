@@ -478,7 +478,8 @@ obras:
   local:
   - 'fuentes_caquetios/Neira_Ribero_1762_Arte_y_Vocabulario_Lengua_Achagua_RB_II-2910.pdf (102 pliegos
     a 2787×1949 px, sin capa de texto) + fuentes_caquetios/neira_ribero_1762/001-102.jpg — ⚠️ SOLO EN
-    ONEDRIVE, no en git (.gitignore, D8 #37 abierta: son 200 MB)'
+    ONEDRIVE, no en git (.gitignore, por D8 #37 — cerrada el 2026-09-12 con la opción intermedia: son
+    200 MB)'
   paginas: 102
   aliases:
   - Neira y Ribero 1762

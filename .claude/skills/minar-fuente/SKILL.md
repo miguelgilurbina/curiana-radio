@@ -8,6 +8,8 @@ description: Minar una fuente documental del proyecto lingüístico caquetío (P
 Protocolo destilado de diez minerías reales. Cada paso está porque **saltárselo
 costó un error concreto** que aquí se nombra.
 
+> Ver también: `leer-fuente` (cómo sacar el texto: pdftotext, OCR, imagen, manuscritos, descargas), `fusionar-propuesta` (de `6-fusion/` al canon) y `cerrar-sesion`.
+
 ## 0. Antes de abrir nada: ¿qué pregunta le haces?
 
 Una minería sin pregunta produce un resumen, y un resumen no sirve para nada.

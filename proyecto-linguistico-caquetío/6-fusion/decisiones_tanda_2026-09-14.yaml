@@ -1,0 +1,281 @@
+# ─────────────────────────────────────────────────────────────────────────
+# DECISIONES DE MIGUEL — tanda del 2026-09-14
+#
+# Mismo patrón que las tandas anteriores: cita literal, lectura operativa y
+# dónde se aplicó. Rama feat/era2-arranque.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-14'
+  decidido_por: Miguel
+  estado: APLICADA en la propuesta de estructura; el casting va después
+
+subgrupos_era2:
+  estado: DECIDIDA (2026-09-14) — decisión creativa
+  etiqueta: canon-simulacion
+  decision_literal: >-
+    «Si unos estaban en el golfete, tal vez los otros estaban en Amuay hacia
+    Los Taques. Yo creo que al final hay cosas que no podemos saber con la
+    información básica que tenemos. Pero hay que pensar que se separaban las
+    zonas de pesca, y el asiento religioso de Capubana congrega y centraliza
+    todo lo espiritual, por lo menos lo que es del Manaure, no necesariamente
+    como institución sino a nivel energético. Para esta era podríamos elegir
+    dos subgrupos por nodo. Lo dejamos establecido como nuestra decisión
+    creativa para efectos de la simulación.»
+  por_que_es_decision_y_no_dato: >-
+    La única fuente con subgrupos con nombre es un cronista local de 2012 sin
+    cita (Osman Petit, Centro de Historia de Paraguaná), y dice que poblaban
+    «las costas y el golfete de Coro» sin repartirlos. Miguel lee las dos
+    mitades de la frase como dos lugares: el golfete para unos, y las costas
+    hacia Amuay y Los Taques para los otros.
+  lectura_operativa:
+    GUARANAO:
+      subgrupos: [los Tacuatos (Tacuato), los Cayudes (El Cayude)]
+      zona_de_pesca: ZG2, la orilla del Golfete de Coro
+    AMUAY:
+      subgrupos: [los Guasicures de Caseto, los Corubos]
+      zona_de_pesca: ZA1, la costa oeste de Amuay a Los Taques
+    zonas_de_pesca: >-
+      Separadas y exclusivas por nodo. El resto de la costa (la norte, la
+      oriental y la laguna de Guaranao) queda de fondo, sin agentes en escena.
+    capubana: >-
+      Centro compartido que congrega y centraliza lo espiritual, por lo menos
+      lo del Manaure, «no necesariamente como institución sino a nivel
+      energético». Los oficios rituales se quedan como papeles de personas de
+      los subgrupos que suben al cerro, no como un aparato con puestos fijos.
+      Moruy, Chamuriana, Siraba y Maitiruma forman el conglomerado del cerro y
+      no son subgrupos en escena.
+  lo_que_se_acepta_perder:
+    - 'Curubitos (Esteves p. 34) pondría a los Corubos en la costa oriental; la decisión los lleva a la costa oeste'
+    - 'Caseto cae al sur de la frontera interior que proponía la estructura (lat. 11.90): la frontera entre nodos pasa a ser oeste contra sureste, alrededor del cerro'
+    - 'la laguna de Guaranao, que da nombre a un clan, queda entre los dos territorios y de fondo'
+    - 'Cayerúa, Hurihurebo y la costa norte salen de escena (siguen en el mundo, sin agentes)'
+  consecuencia_para_el_elenco: >-
+    Cuatro subgrupos en escena. El «2 linajes por nodo» de DISENO_ERA2 §3 se
+    conserva como un linaje de D1 por subgrupo; qué linaje va en cuál se decide
+    en el casting.
+  sigue_abierto:
+    - 'dónde vive Manaure (P1); la decisión refuerza que lo suyo espiritual está en el cerro'
+    - 'el sitio concreto de los Corubos en la costa oeste'
+    - 'la feria de la sal (P14), que choca con DISENO_ERA2 §4.3 («nada de mercados inventados»)'
+  donde: >-
+    6-fusion/estructura_social_era2.yaml (decision_creativa_2026-09-14;
+    institucion_kapubana.caracter; P2, P3, P14 y P15), el borrador del issue
+    §0 y 5-experimento/DISENO_ERA2.md §2-§3
+
+manaure_y_corubos:
+  estado: DECIDIDA (2026-09-14) — decisión creativa
+  etiqueta: canon-simulacion
+  decision_literal: >-
+    «El Manaure tiene que venir de uno de los clanes, puede ser de los moruy
+    (guaranaos). Mira, los Corubos puede que hayan estado en lo que es ahora
+    Carirubana.»
+  lectura_operativa:
+    manaure: >-
+      El Manaure no es del cerro ni de nadie: sale de un clan. Para la era 2,
+      de GUARANAO, de los Moruyes de Moruy (linaje Kaira de D1). Su casa queda
+      en Moruy, al pie del Capubana, que concentra lo espiritual suyo. Que viva
+      allí y no en el nodo de una esposa es inferencia: la élite avunculocal
+      (Keegan 1989) deja al heredero junto al tío materno. Resuelve P1 con la
+      opción a y descarta la b (el cerro sin clan). Moruy entra en escena como
+      la casa del Manaure, no como un tercer subgrupo.
+    corubos: >-
+      Los Corubos se sitúan en Carirubana (11.694, -70.218; hoy Punto Fijo),
+      en la costa oeste de AMUAY, en lugar del Curubitos de la costa oriental.
+      Apoyos: Carirubana era «playa de pescadores» hasta 1926 (Medina Colina);
+      Esteves glosa corubo como «caparazón de moluscos» (p. 34); y la «-ru-» de
+      Cari-ru-bana es justo el residuo que el canon no explica (toponimo-148).
+      Leer ahí un eco de corubo es hipótesis, no etimología.
+  consecuencias:
+    - 'la zona de pesca de AMUAY (ZA1) se amplía al sur hasta Carirubana y Punta Cardón'
+    - 'la laguna de Guaranao, a unos 3 km de Carirubana, queda pegada a los Corubos; sigue de fondo, con la tensión del nombre del otro clan declarada'
+  resuelve: [P1, 'el sitio de los Corubos (sigue_abierto de subgrupos_era2)']
+  hallazgo_de_paso: >-
+    La glosa de Carirubana («orilla del peñón, la orilla del cerro. Cari:
+    orilla. Bana: sitio alto») SÍ está impresa en Esteves p. 28, y toponimo-148
+    la da como etimología popular sin fuente impresa. Puede subir a
+    glosa_fuente: se edita lexicon_toponimos.py y se regenera toponimos.yaml.
+
+tamano_del_elenco:
+  estado: DECIDIDA (2026-09-14) — decisión creativa, para este primer run de la era 2
+  etiqueta: canon-simulacion
+  decision_literal: >-
+    «Yo creo que deben ser grupos familiares más grandes, ya que si había
+    poligamia...» · «Vale, para esta primera está bien. Total lo que queremos
+    es lograr ver si se forma la koiné.»
+  lectura_operativa: >-
+    Familias grandes en tres capas. La familia es la maloca entera, con 20-40
+    personas con nombre por casa en la genealogía, casi todas de fondo. Hay
+    unos 61 agentes: GUARANAO 37 (Tacuatos 12, Cayudes 12, casa del Manaure 13)
+    y AMUAY 24 (Guasicures de Caseto 12, Corubos 12). El roster que rota es de
+    unos 24, 6 por turno, como el de la era 1. La poligamia es de jefes: el
+    Manaure (atestiguado en el contacto) y, por decisión, los apopos y el diao
+    de clan. Quedan dos canales de contacto: los esposos que se mudan entre la
+    gente común y las esposas que se mudan a las casas de élite.
+  matiz_de_fuente: >-
+    Oliver solo da a Manaure como polígamo sin ambigüedad y cree «probable» que
+    lo fueran los caciques locales; de la gente común no hay dato. Las familias
+    grandes se sostienen sobre todo por la maloca de 40-50 personas.
+  por_que_encaja_con_la_pregunta: >-
+    La pregunta es si se forma la koiné. Con el roster del tamaño del de la era 1,
+    cada agente habla con la misma frecuencia y el costo por turno no cambia: la
+    diferencia la pone la estructura de dos nodos, no la cantidad de voces.
+  donde: >-
+    6-fusion/estructura_social_era2.yaml (decision_creativa_2026-09-14.elenco),
+    5-experimento/DISENO_ERA2.md §3 y comentario en #126
+
+motor_era2:
+  estado: APLICADA (2026-09-14) — cambios del motor en la frontera de era, con tests
+  decision_literal: >-
+    «Sí, probemos ahora 10-12 agentes por turno. Hay que arreglar el muestreo.
+    Las 38 voces hipotéticas, ¿cuáles son? Los foráneos no deberían entrar de
+    momento. Sí o sí todos los afijos atestiguados se enseñan. [...] En vez de
+    turnos cortos de un día, es preferible que un día tenga muchos más turnos:
+    así podríamos tener una simulación por día, más larga en interacciones. Y
+    que cada uno de los turnos que equivalen a un día puedan irse sumando uno
+    tras de otro: que los agentes puedan aprender y acordarse de lo que hicieron
+    en el turno pasado.»
+  lectura_operativa:
+    quien_habla: >-
+      run_turn recibe `agentes_por_turno` y `roster`. El roster `todos` son los
+      52 agentes de etnia caquetía (incluidos los 12 tier 3, el caquetío de
+      Aruba y el mestizo guaycarí-caquetío); fuera los 8 foráneos (caribe,
+      gayón, guaycarí, jirajara). Los tier 3 ya no se saltan. En un turno con
+      evento hablan primero los que el evento nombra y la ventana se completa
+      con la rotación, filtrando a quien el roster deja fuera. Por defecto
+      sigue la era 1 (6 sobre `koine`).
+    muestreo: >-
+      repartir_cuotas(): reparto proporcional al tamaño de cada cubo (resto
+      mayor), una voz mínima por cubo, tope en el tamaño y el doble de peso a
+      los cubos relevantes al contexto; presupuesto fijo por tier (50 voces T1,
+      42 T2, los que la era 1 mandaba de hecho) para no alargar el prompt.
+      CATEGORIAS_BASE pasa a las claves que existen (v_raiz, pron, part…).
+      Medido: `sust` pasa de 3 a 15 voces por prompt T1, y las 352 voces del
+      perfil base salen todas en 154 prompts (antes el modelo estimaba 33 que
+      no salían nunca).
+    afijos: >-
+      REGLAS_TOPONIMICAS con -bacoa (morfemas.yaml morfema-001, 5 apoyos) y
+      AFIJOS_ATESTIGUADOS = REGLAS_ZAVALA + -bacoa, rendidos en las dos
+      plantillas (bloque DERIVACIÓN ATESTIGUADA en T1, una línea en T2). -ubana
+      y -uru se enseñan como lo que son: desinencias atestiguadas sin valor
+      anotado, que el agente puede usar proponiendo su valor entre corchetes.
+    plantilla_contra_el_canon: >-
+      buco→buko, corie «choza»→korie (armadillo), piache→boratio, canoa→kanoa,
+      hamaca→hamaka, conuco→konuko en T1 y en la identidad del orquestador;
+      fuera la promesa «y más en tu memoria». -ana «lugar de» se conserva: es
+      convención canon-simulación declarada (CLAUDE.md, REGLAS_LOCATIVAS).
+    dia_largo: >-
+      ComunidadState.turnos_por_dia (2 por defecto = era 1; 6 recorre los seis
+      MOMENTOS_DIA con momento_de_turno()). Vive en el estado, así que un run
+      continuado hereda el ritmo. --anio = 120 × turnos_por_dia.
+    dias_encadenados: >-
+      --continuar carga estado, memoria, lexicón y observer (ya se guardaban) y
+      la koiné nueva (idiolectos y campo, curiana_koine.json). La config del run
+      declara continuado_desde (el run anterior, que el estado guarda en
+      run_anterior) y dia_inicial. Al cerrar cada día, cada agente recibe una
+      nota de memoria «D{n}: hablé al …; acuñé …» (extractiva, sin LLM); la
+      memoria pasa de 3 a 5 notas. NO se hereda todavía: la difusión social y
+      las competencias léxicas abiertas.
+    semilla: '--semilla fija random y se sella en la huella (campo que el protocolo pedía)'
+    plantilla_fuera_de_la_koine: >-
+      _FORMAS_EXCLUIDAS = vocabulario base + tokens de las tres plantillas;
+      la métrica emergente y el diccionario koiné la usan. Cierra el punto 2 de
+      la bitácora de db946685.
+  las_38_hipoteticas:
+    pregunta_de_miguel: '¿cuáles son?'
+    grupos:
+      acunaciones_para_la_simulacion_sin_cita_F8: [atara, buraka, habobrisa, haborü, hikoteya, kaiwa, kanawa, kanawari, kanua, kasiripa, kayawara, kürara, madunaka, mankaba, marawa, marisi, mawari, muusa, paratü, puruna, sakana, shukua, sipara, taneka, tokoko, tsipana, tüma, ukura, yorua, yuri]
+      forma_sin_cita_ni_derivacion_F8: [alaain, japü, karükera, manatü, mülia]
+      otras: {coro: 'cardón; topónimo, D10 grupo 3', kama: 'tapir; degradada, sin rastro en las cuatro minerías', tata: 'padre; D10 baja de tier, van Buurt §11'}
+    recomendacion_del_escriba: >-
+      Para la pregunta de la koiné, esconderlas en la era 2: 35 de las 38 son
+      formas que el proyecto acuñó para la simulación, y mostrarlas adelanta lo
+      que el experimento quiere ver acuñar a los agentes. Sería un perfil
+      nuevo (atestiguado + reconstruido) y no tocar `base`, que es la era 1.
+    estado: DECIDIDA (2026-09-14) — «Confirmo, escondemos las 38 hipotéticas»
+    aplicado: 'perfil `era2` en 5-experimento/perfiles_de_run.yaml (capas atestiguado + reconstruido, andamiaje completo, capas_de_score fijas); test en test_era2_motor.py'
+  un_run_es_un_dia:
+    estado: DECIDIDA (2026-09-14) — «La duración de cada run será por día»
+    lectura_operativa: >-
+      Un run = un día de turnos_por_dia turnos (6), encadenado al siguiente con
+      --continuar. La pregunta del escriba sobre si el evento del director dura
+      un turno o un día queda resuelta por esta regla: el evento es la situación
+      del día, y el motor ya lo limpia al cambiar de día. No se toca.
+  casting:
+    estado: PROPUESTO y publicado como #127 (2026-09-14); siete de sus diez preguntas decididas el mismo día
+    donde: '6-fusion/elenco_era2.yaml y 6-fusion/issues-pendientes/publicados/casting-era2.md (propuesta de un escriba, regla 5)'
+    decision_literal: >-
+      «Apruebo el reparto. [...] Yo creo que acá tenemos que ser pragmáticos y usar
+      ejemplos de otras culturas, por ejemplo en los Mapuche hay machis hombres y
+      mujeres. Yo creo que en este caso las esposas vienen de nodos distintos para
+      evitar incesto. Punto 6: cuarta esposa, pero igual sería interesante luego
+      explorar, a través de la simulación, qué pasa en una sociedad polígama y
+      exogámica cuando hay muchos hombres solteros. [...] 8 está bien. 9 me
+      parece. Punto 10 está bien que sea proporcional. Y sí, publicarlo en el
+      tablero como issue de decisión.»
+    decididas:
+      P1_linajes: 'APROBADO: Corie en Tacuato, Buio en El Cayude, Kaira en Moruy, Warana en Caseto, Paugis en Carirubana; Chiriware de reserva'
+      P4_boratia: >-
+        APROBADA: Paugis-sha es boratia de pueblo de AMUAY. Analogía declarada por
+        Miguel: la machi mapuche, oficio que ejercen mujeres y hombres. Es analogía
+        externa sin obra en el repo (deuda sin-procedencia); apoyo interno,
+        parentesco-007. Etiqueta canon-simulacion.
+      P5_esposas: >-
+        «las esposas vienen de nodos distintos para evitar incesto». Lectura
+        aplicada: las dos esposas de cada apopo vienen de nodos distintos entre
+        sí, una del otro subgrupo del mismo nodo y otra del otro nodo, que es como
+        el escriba las había casado (exogamia de linaje en las dos). Si Miguel
+        quiso decir que las dos vienen del OTRO nodo, cambian cuatro fichas
+        (Kori-sha, Wama-sha, Arika-sha, Saruro-sha) y choca con P9, que deja a
+        Saruro-sha venida de Cayerúa (AMUAY) en una casa AMUAY.
+      P6_cuarta_esposa: 'APROBADA: Kumarawa-sha, corubo (Paugis), hija de Sha-korie y hermana del apopo Kiwa-ko; la casa del Manaure pasa a 14 y el elenco a 62'
+      P8_ita_sha: 'APROBADO: sin linaje, acogida por los Cayudes'
+      P9_saruro_sha_y_tawi: 'APROBADO: linaje propio sin nombre, traído de Cayerúa (AMUAY de fondo)'
+      P10_roster: 'APROBADO: proporcional, 14 GUARANAO y 10 AMUAY'
+    segunda_vuelta_literal: '«Vale, perfecto, hagamos eso, creemos el PR, mergeamos y luego hacemos la generación de agentes para la era 2.»'
+    decididas_en_la_segunda_vuelta:
+      P2_buco: >-
+        Korie-ko se reancla a los jagüeyes de Tacuato (la charca artificial que
+        Oliver p. 252 describe para esta costa; jagey «estancar, crear charco
+        artificial», Zavala #174) y entra como el 13 de los Tacuatos; Buko-ko y
+        Buko, cuya identidad entera es el río de Coro, se retiran (de fondo).
+        El elenco pasa a 63.
+      P3_watapana_y_kadushi: 'de fondo en el primer run; entran como visitantes cuando se decida la feria de la sal (P14 de la estructura)'
+      P7_dos_sobrinos: 'abierto como trama: la sangre elige a los dos y deciden los diaos de clan y el boratio (las tres puertas, parentesco-038)'
+      P5_lectura: 'se mantiene la lectura aplicada (una esposa de cada nodo) salvo que Miguel diga lo contrario'
+    siguiente: 'PR de feat/era2-arranque a main, merge, y la generación de curiana_agents para la era 2 desde elenco_era2.yaml'
+    linea_de_experimento_futura: >-
+      Miguel: explorar en la simulación qué pasa en una sociedad polígama y
+      exogámica cuando hay muchos hombres solteros. Apoyo: parentesco-030 (el
+      excedente estructural de solteros) y los siete agentes guerreros o de
+      perímetro que la estructura daba por sobrantes. Va después del primer run
+      de la era 2.
+  saber_por_funcion_y_posicion:
+    estado: PREGUNTA de Miguel (2026-09-14), respondida con medición; diseño pendiente
+    pregunta_literal: '¿Todos los agentes tienen la misma info? ¿Los jóvenes saben lo mismo que los adultos? ¿La base de conocimiento está parcializada por función y posición social?'
+    medido_2026-09-14: >-
+      El mundo (estado, evento, sal, tensión) es idéntico para todos: 365
+      caracteres. La lengua se reparte por TIER, no por función ni por edad:
+      un tier 1 ve 6.867 caracteres de lengua con unas 125 voces (75 fijas de la
+      plantilla y 50 muestreadas); un tier 2, 3.320 con 42 muestreadas; un tier 3,
+      221 caracteres con 4 verbos y 3 conectores y ninguna muestra. La ficha es
+      lo único parcializado por posición (Manaure 833 caracteres, Moruy-sha 180,
+      Sha 277). Un pescador y un boratio del mismo tier ven la misma lengua. Lo
+      que sí difiere por agente: la ficha, el idiolecto acumulado, la memoria
+      (5 notas), las sugerencias de contagio (red social) y el feedback. El
+      saber restringido del corpus (12 hechos con restringido: true en
+      transmision.yaml, como el piazgo o el merejuy) no se modela. Medido con
+      vocabulario_para_agente por tier, perfil era2.
+    propuesta: >-
+      (1) Que el tier 3 vea las reglas breves y una muestra chica (unas 20
+      voces), o no podrá hablar: hoy ve 7 palabras. (2) Un campo `saber` por
+      agente, derivado del dossier del casting, que el cargador de mundo (P2
+      #11 de la auditoría) inyecte por casa, oficio y edad: lo que un joven
+      sabe es lo que su casa le ha enseñado, y lo restringido sólo lo ve quien
+      lo tiene. Es diseño, no decisión tomada.
+  tests: 'curiana_sim/tests/test_era2_motor.py (23); suite 302 en verde; 9 guardianes'
+  prueba_en_vivo:
+    dia_1: 'run fec49195 (6 turnos, 12 por turno, roster todos, semilla 20260914): 72 respuestas de 48 agentes; -iro en 19, -bacoa en 13, -aima en 12; atestiguadas distintas 41 → 52 a igual tamaño'
+    dia_2: 'run 81907ae1, --continuar desde fec49195: 43 agentes con las notas de los dos días; 13 acuñaciones del día 1 reutilizadas 140 veces; emergente 0,8124 → 0,7199'
+    detalle: 5-experimento/BITACORA_RUNS.md
+    pendiente_del_calendario: 'el evento del director dura hasta el cambio de día (3-4 turnos de 6); decidir si dura un turno'
+    pendiente_de_la_plantilla: 'la frase modelo «ta-barsure naba-ni» se copia en el 29% de las respuestas; rotarla o retirarla'

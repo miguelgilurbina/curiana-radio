@@ -47,6 +47,152 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 > "convergía" mientras ventana y emergente divergían — las cifras de
 > convergencia históricas deben releerse con esa reserva. Ver DISENO_KOINE.md §7.
 
+## Era auditada
+
+> Desde aquí, los runs corren con la **base sellada** (`huella_de_base`, #68).
+> Cada fila guarda el commit del motor, si estaba sucio y los hashes del
+> lexicón, el corpus y el elenco. Protocolo: [[04_protocolo_run_1_era_auditada]].
+
+| Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |
+|---|---|---|---|---|---|---|
+| 09-14 | `81907ae1` | 6 / 1 (día 2) | 47 | 7.5 | 100% | **Día 2, encadenado con `--continuar`** desde `fec49195`: memoria, lexicón y koiné heredados; emergente 0,8124 → 0,7199 entre días |
+| 09-14 | `fec49195` | 6 / 1 | 48 | 7.6 | 100% | **Día 1 de la era 2 en el motor**: 6 turnos por día, 12 por turno, roster `todos` (52), semilla 20260914, motor `db7d053` limpio |
+
+### 2026-09-14 · Run `81907ae1` — el día 2, encadenado
+
+**Comando:** `python curiana_orchestrator_v2.py --auto 6 --agentes-por-turno 12
+--roster todos --semilla 20260915 --perfil base --silencioso --continuar`
+(9 min 16 s). La config del run dice `continuado_desde: fec49195` y
+`dia_inicial: 2`; heredó del disco el estado (día 2, turno 1), la memoria, el
+lexicón, el observer y la koiné (idiolectos y campo). Cerró como día 2, con 6
+turnos.
+
+**Lo que prueba el encadenado:**
+- **Los agentes se acuerdan.** 43 agentes llevan la nota del día 1 y la del
+  día 2 en su memoria; en Manaure la nota «D1: hablé al amanecer, mañana,
+  anochecer; acuñé barsure-duna, kali-biro…» sobrevivió a sus tres turnos del
+  día 2.
+- **Lo acuñado el día 1 vuelve el día 2:** 13 formas adoptadas el día 1 se
+  usaron 140 veces el día 2. *kali-biro-duna-iro* (el nombre de las cuentas
+  brillantes, con el diminutivo atestiguado) sube de 14,3 a 49,1 de peso en
+  el diccionario emergente y lo acuñan o repiten Shaboro, Nubiri-sha, Manaure
+  y Bagre-ko.
+- **Todos hablaron en dos días:** los 4 mudos del día 1 hablaron dos veces
+  cada uno el día 2; 52 idiolectos con habla real. 72 respuestas de 47
+  agentes, score medio 7,50; 9 neologismos adoptados y 4 propuestos.
+- **La distancia idiolectal baja entre días:** acumulada 0,3617 → 0,3203,
+  ventana 0,5386 → 0,4012, **emergente 0,8124 → 0,7199** (−11%). Es la
+  primera vez que la emergente se mueve así en dos días, y la primera vez que
+  se mide sobre formas que la plantilla no enseña. Dos días no son evidencia
+  de koiné: son la vara de que la tubería encadenada mide.
+
+**Lo que el instrumento no hace todavía:**
+- Cada run ve un solo día y su veredicto dice «datos insuficientes»; la
+  serie de dos días de arriba se armó con `koine_metrics` de los dos runs.
+  `analizar_runs.py` tendría que seguir la cadena `continuado_desde`.
+- No se heredan la difusión social ni las competencias abiertas: la
+  competencia de «cuentas brillantes» del día 1 (`kali-biro-duna-iro` 19,4
+  contra dos rivales) arrancó de cero el día 2.
+- El evento del director sigue durando hasta el cambio de día: la gran
+  cosecha de sal ocupó los turnos 3, 4 y 5.
+| 09-14 | `db946685` | 30 / 15 | 27 | 6.9 | 100% (saturada, #69) | **H2, calibración de la tubería.** Perfil `base`, motor `cacafc4` limpio. Emergente −3,3%: no converge |
+
+### 2026-09-14 · Run `fec49195` — el día largo con todo el elenco
+
+**Comando:** `python curiana_orchestrator_v2.py --auto 6 --turnos-por-dia 6
+--agentes-por-turno 12 --roster todos --semilla 20260914 --perfil base
+--silencioso` (9 min 56 s, de `started_at` a `ended_at`).
+
+**Qué cambió respecto a `db946685`** (todo en el commit `db7d053`, con
+tests): 6 turnos por día, ventana de 12 sobre los 52 caquetíos (tier 3
+incluidos, foráneos fuera), muestreo proporcional por cubo, los siete afijos
+atestiguados en las plantillas, la plantilla T1 con las formas del canon,
+semilla sellada, memoria del día y las formas de plantilla fuera de la
+métrica emergente.
+
+**Qué midió** (Supabase local):
+- **72 respuestas de 48 agentes**; los 12 tier 3 hablaron (13 respuestas).
+  Los 4 que no hablaron (Piri-sha, Wari-ko, Kunaro-bana, Bagre-ko) perdieron
+  su ranura en el turno con evento, que pone primero a los que el evento
+  nombra: entran en la rotación del día siguiente.
+- Score medio **7,55** (6,90 en `db946685`), con respuestas de 980
+  caracteres.
+- **Los afijos nuevos se usan el mismo día:** `-iro` en 19 respuestas,
+  `-bacoa` en 13, `-aima` en 12, `-ubana`/`-uru` en 15. Numerales: *pana* 25,
+  *gudamuen* 23.
+- **19 neologismos adoptados y 7 propuestos** en un día (36 y 29 en los 15
+  días de `db946685`).
+- **Diccionario, a igual tamaño** (las primeras 72 respuestas de `db946685`
+  contra estas 72): lemas base distintos 117 → 125; atestiguadas distintas
+  41 → 52; usos de atestiguadas 16% → 18% de los usos base. Mejora, pero
+  chica: el top-20 sigue concentrando el 62%, y ese top-20 es el bloque fijo
+  de la plantilla (pronombres, conectores, los 17 verbos). La palanca que
+  queda es ese bloque, no la muestra.
+- **La copia de la frase modelo subió:** «ta-barsure naba-ni» en 21 de 72
+  (29%; era 17,5%). Ya no contamina la métrica, pero sigue en el prompt:
+  rotar o retirar la frase modelo queda pendiente.
+- **El diccionario emergente ya es emergente:** lo encabezan *siwato-bana*,
+  *kali-barsure*, *barsure-duna* y *kali-biro-duna-iro* (con el diminutivo
+  recién enseñado), no *taya* ni *wana-ka*.
+- **Lo que dejó en disco para encadenar:** estado en el día 2, turno 1, con
+  `run_anterior`; memoria con la nota del día para los 48 que hablaron
+  («D1: hablé al amanecer, mañana, anochecer; acuñé barsure-duna, kali-biro,
+  kali-biro-duna» en Manaure); koiné con 60 idiolectos y 310 formas de campo.
+
+**Hallazgo del calendario:** el evento del director se limpia solo al
+cambiar de día, así que la iniciación de Dare-nu y Daru (turno 3) quedó como
+«situación del turno» en los turnos 4, 5 y 6. Con 2 turnos por día era una
+tarde; con 6 es toda la jornada. Decidir si un evento dura un turno o un día.
+
+### 2026-09-14 · Run `db946685` — H2, la tubería de la era auditada
+
+**Comando:** `python curiana_orchestrator_v2.py --auto 30 --perfil base --silencioso`
+(21 minutos).
+
+**Base** (de `simulation_runs.config`):
+- motor `cacafc4`, rama `feat/era2-arranque`, `motor_sucio: false`;
+- lexicón de 5513 claves y corpus de 198 hechos;
+- 60 agentes;
+- prompt de 15657 caracteres.
+
+**Qué verificó:**
+- **La fila se cierra.** Tiene `ended_at`, 30 turnos y 15 días: el arreglo del
+  exportador (#42) funciona en un run vivo.
+- **La huella está incompleta.** Tiene 5 de los 6 campos del protocolo; **falta
+  la semilla**. `huella_de_base()` la acepta, pero el orquestador no la pasa ni
+  fija `random.seed`, y sin semilla las réplicas de H3 no se pueden repetir.
+- **Los numerales nuevos entran.** Respuestas con *pana*: 59 (cuenta también
+  compuestos como *biro-pana*); con *gudamuen*: 42; con *sabuenen*: 18; con
+  *katarí*: 5. Con *wanee*, *piama* o *jarai*: ninguna.
+
+**Qué midió.** Hay 154 respuestas de 27 agentes y 65 neologismos (36 adoptados
+y 29 propuestos).
+
+La distancia idiolectal por métrica:
+
+| Métrica | Día 1 | Día 15 |
+|---|---|---|
+| Acumulada | 0,6112 | 0,3482 |
+| Ventana | 0,4885 | 0,3443 |
+| **Emergente** | **0,5068** | **0,4903** (no converge) |
+
+- **El «diccionario koiné» mide sobre todo la plantilla.** Lo encabezan formas
+  del núcleo base (*nüma*, *mara*, *kashi*, *pia*, *yama*) y de las dos frases
+  modelo del prompt: *taya*, *wana-ka*, *wara*, *ta-barsure*, *naba-ni* y
+  *kaa-ni*, que vienen de `_IDENTIDAD_LINGUISTICA` y del ejemplo Tier I. *taya*
+  sale en las 154 respuestas y *wana-ka* en 121.
+- **La copia es un piso constante, no convergencia.** La frase entera no se
+  copia nunca, pero «ta-barsure naba-ni» sale en 27 respuestas (17,5%), sin
+  tendencia por día. En el run de ablación de julio (`bdc54134`) salía en 60 de
+  294 (20%). Por eso bajan la acumulada y la ventana y apenas se mueve la
+  emergente, que excluye el vocabulario base.
+
+**Qué queda para la era 2:**
+1. Poner la semilla en el orquestador y en la huella antes de H3.
+2. Que el diccionario koiné filtre las formas de las frases modelo, o que las
+   frases modelo roten, para que la lista no mida la plantilla.
+3. El veredicto se sigue leyendo con la emergente (DISENO_KOINE §7).
+
 ## Registro
 
 | Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |

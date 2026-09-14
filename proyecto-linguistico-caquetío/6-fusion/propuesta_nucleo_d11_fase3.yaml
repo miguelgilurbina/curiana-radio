@@ -1,0 +1,728 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — D11 fase 3: el núcleo gramatical re-derivado desde lokono + achagua
+#
+# La retroabstracción que pidió Miguel el 2026-09-13. El núcleo que hablan los
+# agentes (pronombres, posesivos, numerales, aspecto) se reconstruyó desde el
+# WAYUU antes de D11; el 2026-09-10 se re-etiquetó sin tocar formas
+# (issues-pendientes/publicados/decision-d11-el-nucleo-reconstruido-del-wayuu.md).
+# Esto propone, casilla por casilla, qué pondría en su lugar el eje que D11
+# eligió: lokono–achagua.
+#
+# Regla 5: PROPUESTA. No toca el lexicón, el corpus ni el motor.
+# Regla 3: todo lo de aquí es FORMA DE LENGUA. Que el lokono diga 20 = «un
+#          hombre» es un dato de numeral, no una práctica de conteo caquetía.
+# Coste medido: 6-fusion/scripts/medir_coste_nucleo_d11.py (2026-09-13).
+# Borrador de decisión: issues-pendientes/decision-d11-fase3-nucleo-lokono-achagua.md
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-09-13'
+  estado: sin-fusionar — propuesta para decisión (D11 fase 3)
+  obra: perea-alonso-1942 · neira-ribero-1762 · oliver-1989-cap2 · oliver-1989-apendice-a · zavala-reyes-2015
+  alimenta: '#39 (D11, cerrada) — decisión nueva sobre el perfil de run'
+  medido_con: 6-fusion/scripts/medir_coste_nucleo_d11.py
+
+# ══════════════════════════════════════════════════════════════════════
+# CRITERIO — cómo se asigna la etiqueta (una sola por candidata)
+# ══════════════════════════════════════════════════════════════════════
+criterio:
+  jerarquia:
+    - >-
+      caquetío-atestiguado: la forma la da una fuente caquetía para ESA casilla
+      (pana 'uno', gudamuen 'dos'...). Gana a todo lo demás.
+    - >-
+      caquetío-reconstruido: (a) lokono Y achagua concuerdan en el prefijo
+      —consonante y vocal— y la forma libre está documentada tal cual en una de
+      las dos; o (b) una hermana da la forma y una FUENTE segmenta ese mismo
+      morfema en voces caquetías atestiguadas.
+    - >-
+      caquetío-hipotético: todo lo demás — la consonante no concuerda, la forma
+      no está documentada en ninguna lengua, o es una composición nuestra. En
+      duda, aquí (regla 2).
+  ordenacion_dentro_de_una_casilla: >-
+    `preferida` ordena candidatas de la MISMA etiqueta; no es una segunda
+    etiqueta. Se prefiere la que toma cada pieza de donde más lenguas la
+    comparten, y a igualdad, la que no choca con una clave existente ni con el
+    castellano.
+  formas_cortas: >-
+    🔴 Nada se afirma como cognado por parecido entre formas de dos letras sin
+    concordancia sistemática (lo que produjo el ~80% de fallo de las 441
+    hipotéticas). Cada casilla donde eso pasa lo dice en `cautela`.
+  estratos_lokono: >-
+    Schumann 1755 y Schultz 1802 vía Perea 1942 (el más antiguo), Brinton 1871,
+    Pet 1987 (el del lexicón), Oliver 1989 Tabla A-2. Se citan por separado:
+    la columna lokono del lexicón mezcla estratos (ver cule-n-y-cognado-002 en
+    lokono_gramatica_perea_1942.yaml).
+  achagua: >-
+    Neira y Ribero 1762 (copia de 1788). TRANSCRIPCIÓN POR VISIÓN del escriba
+    (2026-09-12), no OCR ni cotejo humano: toda forma achagua de aquí se cita
+    como tal, con pliego y lado.
+  similitud: >-
+    La métrica del cómputo D11 (computo_d11_2026-08-31.yaml): 1 − Levenshtein /
+    longitud máxima sobre esqueleto fonémico; «gana» con ≥0.50 y margen ≥0.10.
+    Las cifras las imprime medir_coste_nucleo_d11.py.
+
+# ══════════════════════════════════════════════════════════════════════
+# LAS CASILLAS
+# ══════════════════════════════════════════════════════════════════════
+casillas:
+
+  # ─────────────────────────── PRONOMBRES LIBRES ───────────────────────────
+  - id: pron-1sg
+    casilla: pronombre libre, 1.ª singular
+    canon_actual:
+      forma: taya
+      fuente_lexicon: caquetío-reconstruido
+      origen: 'wayuu taya'' (Oliver A-2 n1: guajiro taya'', paraujano te-/ta-)'
+    lokono:
+      - {forma: 'de', glosa: 'yo, a mí, me (forma libre)', obra: perea-alonso-1942, pagina: 550, estrato: 'Schumann 1755 / Schultz 1802'}
+      - {forma: 'da-', glosa: 'índice personal 1sg (posesivo y conjugativo)', obra: perea-alonso-1942, pagina: '587, 609-652', estrato: 'Schumann 1755'}
+      - {forma: '*day / dei / dai', glosa: I, obra: oliver-1989-apendice-a, pagina: 561, estrato: 'Oliver 1989'}
+      - {forma: 'de', glosa: '1SG pronombre libre (lexicón)', obra: 'Pet 1987 vía curiana_lexicon', estrato: 'Pet 1987'}
+    achagua:
+      - {forma: Nuya, variante: Nuarra, tipo: absoluto, pliego: 8, lado: izq}
+      - {forma: 'Nu-', tipo: inicial (posesivo), pliego: 8, lado: der}
+      - {forma: 'Nuya, nurra', tipo: 'vocabulario s.v. «Yo»', pliego: 71, lado: izq}
+    otras_hermanas: 'maipure nu-ya, island-carib nu-guia (Oliver A-2 n1, p. 561)'
+    traza_caquetia:
+      - forma: 'd- en dare ''diente'''
+        obra: oliver-1989-cap2
+        pagina: 147
+        lectura: >-
+          Oliver: CQ dare : LK d-ari 'mi diente' : WY t-ali : PJ t-a()i — el
+          prefijo de 1sg contrastando (cognados_oliver.py lo llama «el par más
+          productivo del capítulo»). dare es caquetío-atestiguado (Zavala #103).
+      - forma: '/da-/ en datihao / daitiao'
+        obra: oliver-1989-cap2
+        pagina: 147
+        lectura: '«/da-/ in da(i)tia-o is first person singular marker»'
+        duda_de_la_fuente: >-
+          Oliver duda de que datihao sea caquetío y no taíno compartido (n. 42,
+          p. 146), y la correspondencia C1 la da para «PERHAPS Caquetío» (p. 136).
+      - forma: 'de en «cudan de cuté»'
+        obra: zavala-reyes-2015
+        pagina: 73
+        lectura: >-
+          NO se usa. Puede ser la preposición castellana de una fórmula de
+          cortesía colonial; frase_saludo_mitare.yaml lo deja sin resolver.
+    concordancia_lokono_achagua:
+      prefijo: 'NO — lokono d- / achagua n-. El achagua conserva el */nV-/ protoarahuaco que Oliver hace pasar a /dA-/ en lokono, taíno y «quizá» caquetío (C1, p. 136).'
+      base_de_la_forma_libre: 'la base -ya es achagua (Nu-ya), maipure (nu-ya), island-carib (nu-guia) y wayuu (ta-ya); el lokono es el único con -i (da-i)'
+    candidatas:
+      - forma: daya
+        etiqueta: caquetío-hipotético
+        preferida: true
+        por_que: >-
+          Prefijo d- donde está la traza caquetía (C1) + la base -ya que
+          comparten todas las hermanas menos el lokono. No está documentada en
+          ninguna lengua: es una composición, y por eso es hipotética aunque sus
+          dos piezas estén bien apoyadas.
+        clave_en_el_lexicon: libre
+      - forma: dai
+        etiqueta: caquetío-hipotético
+        preferida: false
+        por_que: 'la forma lokona tal cual (A-2); pierde la base -ya'
+        clave_en_el_lexicon: libre
+    descartadas:
+      - forma: de
+        motivo: >-
+          Es la forma lokona de Pet y de Perea, pero colisiona con la preposición
+          castellana: está en ES_STOPWORDS y score_linguistico() la contaría
+          como ESPAÑOL en todos los brazos. Además `de` ya es clave lokono.
+
+  - id: pron-2sg
+    casilla: pronombre libre, 2.ª singular
+    canon_actual:
+      forma: pia
+      fuente_lexicon: caquetío-reconstruido
+      origen: 'wayuu pia'' (A-2 n2; paraujano pia)'
+    lokono:
+      - {forma: 'bu- / bù-', glosa: 'índice 2sg; alternan «por incuria del tipógrafo»', obra: perea-alonso-1942, pagina: '587, 613', estrato: 'Schumann 1755'}
+      - {forma: 'bu / bù', glosa: 'pospuesto de estativos', obra: perea-alonso-1942, pagina: 635, estrato: 'Schumann 1755'}
+      - {forma: bii, glosa: thou, obra: oliver-1989-apendice-a, pagina: 561, estrato: 'Oliver 1989'}
+      - {forma: bi, glosa: '2SG pronombre libre; by- prefijo (lexicón)', obra: 'Pet 1987 vía curiana_lexicon', estrato: 'Pet 1987'}
+    achagua:
+      - {forma: Jia, variante: 'Jiya / Jirra', tipo: absoluto, pliego: 8, lado: der}
+      - {forma: 'Ji-', tipo: inicial, pliego: 8, lado: der}
+      - {forma: 'Gia, Giya, Girra', tipo: 'vocabulario s.v. «tu»', pliego: 96, lado: izq}
+    otras_hermanas: 'maipure p-ia, island-carib hu-guia (A-2 n2)'
+    traza_caquetia:
+      - forma: ninguna del morfema
+        lectura: >-
+          kudanga 'usted' y kuté 'a usted' son atestiguadas (Zavala p. 73 vía
+          Arcaya) pero no dan un pronombre de 2sg segmentable: su reparto
+          palabra a palabra es alineación posicional de la traducción
+          (frase_saludo_mitare.yaml §2). No sirven de traza.
+      - forma: 'indirecta: el caquetío escribe b- donde el wayuu tiene p-'
+        obra: oliver-1989-cap2
+        pagina: 119
+        lectura: >-
+          C3, LK /b/ : WY /p/, con el caquetío del lado lokono: barisi : bálisi :
+          palíi; -bana y no -pana; buia- en buiamati frente a WY piama. Medido en
+          las claves caquetío-atestiguado: inicial b = 26, p = 11.
+        contraejemplos: 'para ''mar'' frente a LK bara (Oliver no lo explica); pana/apana ''uno'' con p frente a IC abana, LK abba'
+    concordancia_lokono_achagua:
+      prefijo: 'NO — lokono b- / achagua j-'
+      vocal: 'SÍ en i: achagua Ji-a, lokono bi (Pet) / bii (A-2); el Schumann de 1755 da bu-'
+    candidatas:
+      - forma: bia
+        etiqueta: caquetío-hipotético
+        preferida: true
+        por_que: >-
+          b- por C3 (traza indirecta, no del morfema) + la base -ia de achagua,
+          maipure y wayuu. No documentada en ninguna lengua.
+        clave_en_el_lexicon: '⚠️ COLISIÓN — `bia` ya es clave LOKONO (''in''). Hoy un agente que dijera bia puntuaría como fuga a otra lengua arahuaca. Exige renombrar la comparanda antes (precedente: ja-achagua, biama-kalinago)'
+      - forma: bui
+        etiqueta: caquetío-hipotético
+        preferida: false
+        por_que: 'la forma de Schultz 1802 vía Perea (decision-d11-el-nucleo-reconstruido-del-wayuu.md); clave libre; sin la base -ia'
+        clave_en_el_lexicon: libre
+    cautela: 'el apoyo de b- es una correspondencia de sonido con dos contraejemplos, no una traza del pronombre'
+
+  - id: pron-3sg
+    casilla: pronombre libre, 3.ª singular (masculino / no masculino)
+    canon_actual:
+      forma: nüma
+      fuente_lexicon: caquetío-reconstruido
+      origen: wayuu (declarado en la entrada)
+      nota: 'no distingue género: «él/ella»'
+    lokono:
+      - {forma: 'lù- / li- / lu- / l-a-', glosa: '3 varonil', obra: perea-alonso-1942, pagina: '587, 635', estrato: 'Schumann 1755'}
+      - {forma: 'tù- / tu- / t-a-', glosa: '3 no varonil (mujeres, animales, cosas)', obra: perea-alonso-1942, pagina: '554, 587, 635', estrato: 'Schumann 1755'}
+      - {forma: 'i (vr.) / n (nv.)', glosa: 'pospuestos de estativos', obra: perea-alonso-1942, pagina: 635, estrato: 'Schumann 1755'}
+      - {forma: 'li / to', glosa: 'artículos [+masc +hum] / [NM/NH]; ly- / thy- prefijos (lexicón)', obra: 'Pet 1987 vía curiana_lexicon', estrato: 'Pet 1987'}
+    achagua:
+      - {forma: Ria, variante: 'riãne / riãde', tipo: 'absoluto «Aquel»', pliego: 8, lado: der}
+      - {forma: Ruya, variante: 'Ruãsa / Ruãde', tipo: 'absoluto «Aquella»', pliego: 8, lado: der}
+      - {forma: 'Ri- / Ru-', tipo: iniciales, pliego: 8, lado: der}
+      - {forma: 'Ria, riane, riade', tipo: 'vocabulario s.v. «Aquel»', pliego: 37, lado: izq}
+    traza_caquetia:
+      - forma: ninguna
+    concordancia_lokono_achagua:
+      genero: 'SÍ — las dos distinguen masculino de lo demás. El `nüma` sin género del canon no tiene apoyo en ninguna.'
+      masculino: >-
+        CASI — vocal i en las dos; consonante líquida l (lokono) / r (achagua),
+        que es justo el par que Oliver declara indecidible en todo el corpus
+        (C8, cap. 2 p. 105: «The discrimination of l, r, rr and lr is rarely
+        consistent»). Por el criterio estricto no cuenta como identidad.
+      no_masculino: 'NO en la consonante (lokono t / achagua r); SÍ en la vocal u'
+      grafia_caquetia_medida: >-
+        En las claves caquetío-atestiguado: r = 127, l = 6 (lokono 132/166;
+        achagua 2682/50). Es grafía colonial, no fonema (C8); pero para la forma
+        ESCRITA del canon empuja a r.
+    candidatas:
+      - forma: ria
+        casilla_fina: 3sg masculino
+        etiqueta: caquetío-hipotético
+        preferida: true
+        por_que: 'la más apoyada de las hipotéticas: sólo le falta a la concordancia el par l~r que la fuente declara indecidible; forma achagua documentada; r por la grafía caquetía medida'
+        clave_en_el_lexicon: '⚠️ COLISIÓN — `ria` es clave ACHAGUA (''El''). Renombrar la comparanda antes del run'
+      - forma: ruya
+        casilla_fina: 3sg no masculino
+        etiqueta: caquetío-hipotético
+        preferida: true
+        por_que: 'forma achagua documentada, coherente con ria; vocal u compartida con el lokono'
+        clave_en_el_lexicon: '⚠️ COLISIÓN — `ruya` es clave ACHAGUA (''Aquella'')'
+      - forma: tuya
+        casilla_fina: 3sg no masculino
+        etiqueta: caquetío-hipotético
+        preferida: false
+        por_que: 'consonante lokona t- + base -uya'
+        clave_en_el_lexicon: 'libre, pero es homógrafo del posesivo castellano «tuya» (no está en ES_STOPWORDS: no penaliza, pero un lector y un agente lo leen como español)'
+    cautela: >-
+      El reparto de género no coincide del todo: el no varonil lokono incluye
+      animales y cosas; el arte achagua da «Aquella» sin decir si abarca
+      inanimados (sí dice que las cosas inanimadas no llevan `na` de plural,
+      pliego 87 izq.). Partir `nüma` en dos obliga al agente a elegir: es un
+      cambio de gramática, no sólo de forma.
+
+  - id: pron-1pl
+    casilla: pronombre libre, 1.ª plural
+    canon_actual:
+      forma: waya
+      fuente_lexicon: caquetío-reconstruido
+      origen: 'wayuu waya'' (A-2 n3)'
+    lokono:
+      - {forma: 'wa-', glosa: 'índice 1pl — wa-si-kua «nuestra casa»', obra: perea-alonso-1942, pagina: 587, estrato: 'Schumann 1755'}
+      - {forma: wai, glosa: 'nosotros (231 apariciones en el texto)', obra: perea-alonso-1942, estrato: 'Schultz 1802', nota: 'cifra de decision-d11-el-nucleo-reconstruido-del-wayuu.md'}
+      - {forma: 'oai / oei', glosa: we, obra: oliver-1989-apendice-a, pagina: 561, estrato: 'Oliver 1989'}
+      - {forma: we, glosa: '1PL pronombre libre (lexicón)', obra: 'Pet 1987 vía curiana_lexicon', estrato: 'Pet 1987'}
+    achagua:
+      - {forma: Guaya, variante: Guarra, tipo: absoluto, pliego: 8, lado: der}
+      - {forma: 'Gua-', tipo: inicial, pliego: 8, lado: der}
+      - {forma: 'Guaya, Guarra', tipo: 'vocabulario s.v. «Nosotros»', pliego: 77, lado: der}
+    otras_hermanas: 'maipure wa-ya, island-carib ua-gia (A-2 n3); insular wa- (van Buurt §6, en morfologia.md)'
+    traza_caquetia:
+      - forma: ninguna del pronombre
+    concordancia_lokono_achagua:
+      prefijo: 'SÍ — lokono wa- / achagua gua- = /wa-/ con la regla gu→w aprobada en D5'
+      forma_libre: 'achagua Guaya = /waya/, similitud 1.00 con el canon; lokono wai 0.75'
+    candidatas:
+      - forma: waya
+        etiqueta: caquetío-reconstruido
+        preferida: true
+        por_que: >-
+          SE CONSERVA LA FORMA; CAMBIA LA JUSTIFICACIÓN. Deja de ser «cognado
+          wayuu» y pasa a ser concordancia lokono ∧ achagua en el prefijo, con
+          la forma achagua documentada letra por letra.
+        clave_en_el_lexicon: 'es la entrada actual'
+
+  - id: pron-2pl
+    casilla: pronombre libre, 2.ª plural
+    canon_actual:
+      forma: ninguna
+      nota: 'el canon no tiene 2pl (medido: ni entrada ni regla)'
+    lokono:
+      - {forma: 'hù- / hu- / h-a-', glosa: 'índice 2pl', obra: perea-alonso-1942, pagina: '587, 635', estrato: 'Schumann 1755'}
+      - {forma: 'hu / hù', glosa: 'pospuesto', obra: perea-alonso-1942, pagina: 635, estrato: 'Schumann 1755'}
+    achagua:
+      - {forma: Ja, variante: Jarrà, tipo: absoluto, pliego: 8, lado: der}
+      - {forma: 'J-', tipo: inicial, pliego: 8, lado: der}
+      - {forma: 'Ja, Jara', tipo: 'vocabulario s.v. «Vosotros»', pliego: 98, lado: izq}
+    traza_caquetia:
+      - forma: ninguna
+    concordancia_lokono_achagua:
+      prefijo: 'en la consonante SÍ bajo la fonemización del proyecto (la j del copista de 1762 = h: fon() del cómputo D11); en la vocal NO (lokono u / achagua a o nada)'
+    candidatas:
+      - forma: ja
+        etiqueta: caquetío-hipotético
+        preferida: true
+        por_que: 'forma achagua; el lema fonémico sería `ha`, homógrafo del castellano «ha»'
+        clave_en_el_lexicon: 'libre (la comparanda está como ja-achagua)'
+    cautela: 'casilla NUEVA: añadirla no re-deriva nada, amplía el paradigma. Opcional para el perfil.'
+
+  - id: pron-3pl
+    casilla: pronombre libre, 3.ª plural
+    canon_actual:
+      forma: naya
+      fuente_lexicon: caquetío-reconstruido
+      origen: wayuu (declarado en la entrada)
+    lokono:
+      - {forma: 'na- / n-a-', glosa: 'índice 3pl — na-si-kua', obra: perea-alonso-1942, pagina: '587, 635', estrato: 'Schumann 1755'}
+      - {forma: ye, glosa: 'pospuesto de estativos', obra: perea-alonso-1942, pagina: 635, estrato: 'Schumann 1755'}
+    achagua:
+      - {forma: Naya, variante: 'Nãsa / Nani / nãde', tipo: 'absoluto «Aquellos»', pliego: 8, lado: der}
+      - {forma: 'Na-', tipo: inicial, pliego: 8, lado: der}
+      - {forma: 'na', tipo: '«nota de 3.as personas de plural; las cosas inanimadas no le tienen»', pliego: 87, lado: izq}
+    traza_caquetia:
+      - forma: ninguna
+    concordancia_lokono_achagua:
+      prefijo: 'SÍ — na- / Na-'
+      forma_libre: 'achagua Naya = canon naya, similitud 1.00'
+    candidatas:
+      - forma: naya
+        etiqueta: caquetío-reconstruido
+        preferida: true
+        por_que: 'SE CONSERVA LA FORMA; CAMBIA LA JUSTIFICACIÓN (lokono na- ∧ achagua Na-, forma achagua exacta)'
+        clave_en_el_lexicon: 'es la entrada actual'
+    cautela: 'el achagua restringe na a lo animado; el canon glosa «ellos, ellas» sin decir nada de inanimados. No contradice, pero conviene anotarlo en la glosa.'
+
+  # ─────────────────────────────── POSESIVOS ───────────────────────────────
+  - id: pos-persona
+    casilla: prefijos posesivos de persona
+    canon_actual:
+      reglas: 'REGLAS_POSESIVAS tiene ta- (1sg) y wa- (1pl), las dos «cognado directo» wayuu'
+      desfase_medido: >-
+        CLAUDE.md declara además pi- (tu) y nü- (su), pero NO existen como
+        regla: 0 apariciones en el código (medido). El análisis del corpus sí
+        contó usos con ta-/pi-/nü- (3.840, ANALISIS_BASE_2026-08-06 §3).
+    lokono: {paradigma: 'da- bu- lù- tù- wa- hù- na-', obra: perea-alonso-1942, pagina: 587, estrato: 'Schumann 1755'}
+    achagua: {paradigma: 'Nu- Ji- Ri- Ru- Gua- J- Na-', pliego: 8, lado: der, ejemplo: 'Nusaricana «mi padre» … Nasaricana «su padre de ellos»'}
+    filas:
+      - {persona: 1sg, canon: 'ta-', lokono: 'da-', achagua: 'Nu-', concuerdan: 'no', traza: 'd- (C1: dare, datihao — ver pron-1sg)', candidata: 'da-', etiqueta: caquetío-reconstruido, por_que: 'criterio (b): la hermana da la forma y Oliver segmenta el mismo morfema en voces caquetías atestiguadas (p. 147). La duda de Oliver sobre datihao no toca a dare.'}
+      - {persona: 2sg, canon: 'pi- (sólo en CLAUDE.md)', lokono: 'bu- (1755) / by- (Pet)', achagua: 'Ji-', concuerdan: 'no', traza: 'indirecta (C3)', candidata: 'bi-', etiqueta: caquetío-hipotético, por_que: 'b- lokono + vocal i compartida con el achagua'}
+      - {persona: 3sg.m, canon: 'nü- (sólo en CLAUDE.md)', lokono: 'lù- / li-', achagua: 'Ri-', concuerdan: 'casi (l~r, C8)', traza: ninguna, candidata: 'ri-', etiqueta: caquetío-hipotético, por_que: 'ver pron-3sg'}
+      - {persona: 3sg.nm, canon: '—', lokono: 'tù-', achagua: 'Ru-', concuerdan: 'no (vocal sí)', traza: ninguna, candidata: 'ru-', etiqueta: caquetío-hipotético, por_que: 'ver pron-3sg'}
+      - {persona: 1pl, canon: 'wa-', lokono: 'wa-', achagua: 'Gua- (/wa-/)', concuerdan: 'SÍ', traza: 'ninguna caquetía; insular wa- (van Buurt §6)', candidata: 'wa-', etiqueta: caquetío-reconstruido, por_que: 'SE CONSERVA; cambia la justificación'}
+      - {persona: 2pl, canon: '—', lokono: 'hù-', achagua: 'J-', concuerdan: 'consonante sí (j=h), vocal no', traza: ninguna, candidata: 'hu-', etiqueta: caquetío-hipotético, por_que: 'casilla nueva, opcional'}
+      - {persona: 3pl, canon: '— (no hay regla)', lokono: 'na-', achagua: 'Na-', concuerdan: 'SÍ', traza: ninguna, candidata: 'na-', etiqueta: caquetío-reconstruido, por_que: 'concordancia exacta; casilla que el canon no tenía como regla'}
+    fuera_de_persona:
+      ma-: >-
+        privativo/negativo, regla del canon («cognado directo» wayuu). Lokono m-/ma-
+        con par mínimo frente al atributivo k- (Perea p. 555; negación pp.
+        652-668); achagua ma- privativo, explicado por el propio autor («Pues el
+        `ma-` es negativo q.do se antepone», vocabulario s.v. «No tener nombre,
+        ser gentil» = Magidenã, pliego 78 izq.). Concuerdan:
+        SE CONSERVA, cambia la justificación.
+      ka-: >-
+        atributivo/asociativo, regla del canon. Lokono k-/c- atributivo (p. 555) y
+        el ka- insular de van Buurt §8. En el achagua NO se buscó (no es un cero:
+        es no buscado, regla 6). Se conserva tal cual hasta verificarlo.
+    cautela: 'da- y na- son formas de dos letras: su apoyo no es el parecido sino el paradigma entero alineado casilla por casilla en las dos hermanas.'
+
+  # ─────────────────────────────── NUMERALES ───────────────────────────────
+  - id: num-1
+    casilla: 'uno'
+    canon_actual: {forma: wanee, fuente_lexicon: caquetío-reconstruido, origen: 'wayuu wane (A-2 n11); paraujano manei'}
+    lokono:
+      - {forma: abba, obra: perea-alonso-1942, pagina: '565, 568', estrato: 'Schumann 1755', nota: 'polisémico: nadie, primero, cierto, una vez (p. 568)'}
+      - {forma: 'aba-', obra: oliver-1989-apendice-a, pagina: 561, estrato: 'Oliver 1989'}
+      - {forma: aba, obra: 'Pet 1987 vía curiana_lexicon', estrato: 'Pet 1987'}
+    achagua:
+      - {forma: 'aba- + clasificador', ejemplos: 'Abásu puya, Abacoa Querrí, Abai gua[ne]cataberri', pliego: 28, lado: izq}
+      - {forma: Abacaisa, tipo: 'vocabulario s.v. «Vno»', pliego: 97, lado: der}
+    otras_hermanas: 'island-carib abana (A-2 n11)'
+    traza_caquetia:
+      - {forma: pana, glosa: uno, fuente_lexicon: caquetío-atestiguado, obra: zavala-reyes-2015, pagina: sin-pagina, deuda: 'la entrada cita «Pedro Manuel Arcaya; Zavala Reyes 2015» sin página'}
+      - {forma: apana, glosa: 'una luna (medición de tiempo)', fuente_lexicon: caquetío-atestiguado, obra: zavala-reyes-2015, entrada: '#10 (GC)'}
+    concordancia_lokono_achagua: 'SÍ — *aba'
+    similitudes: 'pana~abba 0.50 · pana~abana (IC) 0.60 · apana~abana (IC) 0.80'
+    candidatas:
+      - forma: pana
+        etiqueta: caquetío-atestiguado
+        preferida: true
+        por_que: 'caquetío atestiguado para la casilla; ya está en el lexicón; compatible con la *aba de las dos hermanas vía la abana insular'
+        clave_en_el_lexicon: 'es la entrada actual'
+    cautela: 'la p de pana/apana frente a la b de LK/ACH/IC es un segundo contraejemplo a C3, junto a para ''mar'''
+
+  - id: num-2
+    casilla: 'dos'
+    canon_actual: {forma: piama, fuente_lexicon: caquetío-reconstruido, origen: 'wayuu piama (A-2 n12); paraujano pimu/pimi'}
+    lokono:
+      - {forma: 'bi-ama', obra: perea-alonso-1942, pagina: 565, estrato: 'Schumann 1755'}
+      - {forma: 'biama / bian', obra: oliver-1989-apendice-a, pagina: 561, estrato: 'Oliver 1989'}
+      - {forma: 'bian (Pet 1987) · biama (Brinton 1871)', obra: 'vía curiana_lexicon', estrato: '1871 / 1987'}
+    achagua:
+      - {forma: Juchamata, tipo: 'vocabulario s.v. «Dos», general', pliego: 56, lado: der}
+      - {forma: 'Juchamana (hombres), Juchamay (palos, casas), Juchamacoca (años o lunas), Juchamasucu (lugares)…', tipo: 'paradigma de clasificadores', pliego: '56 der – 57 izq'}
+    otras_hermanas: 'island-carib biama, maipure pina (A-2 n12)'
+    traza_caquetia:
+      - {forma: gudamuen, glosa: 'número dos', fuente_lexicon: caquetío-atestiguado, obra: zavala-reyes-2015, entrada: '#148 (PMA)'}
+      - {forma: 'buia-', glosa: 'en buiamati ''dos lunas''', fuente_lexicon: caquetío-atestiguado, obra: zavala-reyes-2015, entrada: '#47 (GC)', nota: 'la forma en b- (0.62 con LK biama, cómputo D11)'}
+      - {forma: aco, glosa: 'dos, par', obra: esteves-1989, pagina: '24, 38', nota: 'toponímica (Buchuhaco, Guachaco), recurrencia 2; lexicon_toponimos.py ya anota el choque con gudamuen'}
+    concordancia_lokono_achagua: 'PARCIAL — comparten el final -ama (bi-ama / jucha-ma-ta); el arranque no'
+    similitudes: 'gudamuen~biama 0.25 · gudamuen~juchamata 0.38 · gudamuen~piama 0.25 · buiamati~biama 0.62'
+    candidatas:
+      - forma: gudamuen
+        etiqueta: caquetío-atestiguado
+        preferida: true
+        por_que: 'el numeral suelto atestiguado, con glosa directa; ya en el lexicón'
+        clave_en_el_lexicon: 'es la entrada actual'
+      - forma: 'buia-'
+        etiqueta: caquetío-atestiguado
+        preferida: false
+        por_que: 'atestiguada SÓLO dentro de un compuesto: sirve como forma ligada (ver num-10), no como numeral suelto'
+    cautela: >-
+      Tres formas caquetías para 'dos' que no se reducen a una (gudamuen, buia-,
+      aco): se conservan las tres lecturas (política D7). gudamuen~juchamata
+      0.38 queda por debajo del umbral: no se afirma nada, y se anota sólo
+      porque son formas largas con un -ama- a la vista.
+
+  - id: num-3
+    casilla: 'tres'
+    canon_actual: {forma: apünüin, fuente_lexicon: caquetío-reconstruido, origen: wayuu}
+    lokono:
+      - {forma: 'c-a-bbu-hin', obra: perea-alonso-1942, pagina: 565, estrato: 'Schumann 1755'}
+      - {forma: kabyn, obra: 'Pet 1987 vía curiana_lexicon', estrato: 'Pet 1987'}
+    achagua:
+      - {forma: Mataritaí, tipo: 'vocabulario s.v. «tres»', pliego: 96, lado: izq, ejemplo: 'tres veces = Mataríchana'}
+    traza_caquetia:
+      - {forma: sabuenen, glosa: 'número tres', fuente_lexicon: caquetío-atestiguado, obra: zavala-reyes-2015, entrada: '#222 (PMA)'}
+    concordancia_lokono_achagua: 'NO'
+    similitudes: 'sabuenen~cabbuhin 0.50 · ~kabyn 0.38 · ~mataritaí 0.11 · ~apünüin 0.38'
+    candidatas:
+      - forma: sabuenen
+        etiqueta: caquetío-atestiguado
+        preferida: true
+        por_que: 'caquetío atestiguado para la casilla; ya en el lexicón'
+        clave_en_el_lexicon: 'es la entrada actual'
+    cautela: >-
+      sabuenen~cabbuhin da 0.50 con margen 0.12 sobre el wayuu: por el criterio
+      del cómputo D11 sería un «lokono» en el umbral exacto. Una sola
+      comparación, en el límite y contra el Schumann de 1755 (con el Pet de 1987
+      baja a 0.38): se registra, no se afirma cognación.
+
+  - id: num-4
+    casilla: 'cuatro'
+    canon_actual: {forma: pienchi, fuente_lexicon: caquetío-reconstruido, origen: wayuu}
+    lokono:
+      - {forma: 'bi-bi-ti', obra: perea-alonso-1942, pagina: 565, estrato: 'Schumann 1755'}
+      - {forma: 'bithi (Pet 1987) · bibiti (Brinton 1871)', obra: 'vía curiana_lexicon'}
+    achagua:
+      - forma: no hallado
+        nota: >-
+          No hay lema «Cuatro/Quatro» en la transcripción, y los compuestos de 8
+          y 9 (pliego 78 izq.) no lo aíslan. Regla 6: el cero mide la
+          transcripción, no el manuscrito.
+    traza_caquetia:
+      - {forma: katarí, glosa: 'número cuatro', fuente_lexicon: caquetío-atestiguado, obra: zavala-reyes-2015, entrada: '#70 (PMA)', forma_fuente: catarí}
+    concordancia_lokono_achagua: 'no evaluable (falta el achagua)'
+    similitudes: 'katarí~bibiti 0.17 · ~bithi 0.33 · ~pienchi 0.17'
+    candidatas:
+      - forma: katarí
+        etiqueta: caquetío-atestiguado
+        preferida: true
+        por_que: 'caquetío atestiguado para la casilla; ya en el lexicón'
+        clave_en_el_lexicon: 'es la entrada actual'
+
+  - id: num-5
+    casilla: 'cinco'
+    canon_actual:
+      forma: jarai
+      fuente_lexicon: caquetío-reconstruido
+      origen: wayuu
+      nota_rancia: >-
+        La entrada dice «el lokono del lexicón no cubre 'cinco'». Es falso hoy:
+        el lexicón tiene `abbatekkabe` 'cinco (una mano)' lokono (Brinton 1871).
+    lokono:
+      - {forma: 'abba-te-cabbe', glosa: '«una mano» (cabbu = mano)', obra: perea-alonso-1942, pagina: 565, estrato: 'Schumann 1755'}
+      - {forma: 'ccabbu / akkabu', glosa: mano, obra: 'perea-alonso-1942 (Fraseario) · Brinton 1871 vía curiana_lexicon'}
+    achagua:
+      - {forma: Abacase, glosa: '«una mano»', pliego: 48, lado: izq}
+      - {forma: 'Cageri (absoluto) / ri-cage', glosa: mano, pliego: 74, lado: izq}
+    traza_caquetia:
+      - forma: ninguna
+        nota: 'no hay numeral 5 caquetío; tampoco una voz caquetía atestiguada para ''mano'' (medido: la única parte del cuerpo atestiguada de esa serie es dare ''diente'')'
+    concordancia_lokono_achagua: >-
+      SÍ EN LA ESTRUCTURA: 5 = 'uno' + 'mano' en las dos, dentro de un sistema
+      de base cinco por la mano. En la raíz de 'mano' (LK -cabbu / ACH -cage) NO
+      se afirma nada: comparten ka- y difieren en la consonante siguiente.
+    candidatas:
+      - forma: 'pana-kabu'
+        etiqueta: caquetío-hipotético
+        preferida: true
+        por_que: 'la estructura en que concuerdan las dos hermanas, con el ''uno'' caquetío atestiguado y la raíz de ''mano'' lokona. Composición nuestra: hipotética'
+        clave_en_el_lexicon: 'libre'
+    cautela: 'kabu queda a un fonema de `kabo` ''cabeza'', que el prompt de tier I enseña: riesgo de confusión en boca de los agentes'
+
+  - id: num-10
+    casilla: 'diez'
+    canon_actual:
+      forma: polo
+      fuente_lexicon: wayunaiki
+      nota: 'ni siquiera es caquetía: el canon no tiene un 10 caquetío, y polo no aparece en ningún prompt (medido: 0)'
+    lokono:
+      - {forma: 'bi-ama-te-ccabbu', glosa: '«dos manos»', obra: perea-alonso-1942, pagina: 565, estrato: 'Schumann 1755'}
+    achagua:
+      - {forma: Juchamage, glosa: '«dos [manos]»', pliego: 55, lado: der}
+    traza_caquetia:
+      - forma: 'buia- (forma ligada de ''dos'' en buiamati)'
+    concordancia_lokono_achagua: 'SÍ EN LA ESTRUCTURA: 10 = ''dos'' + ''mano'''
+    candidatas:
+      - forma: 'buia-kabu'
+        etiqueta: caquetío-hipotético
+        preferida: true
+        por_que: 'la forma ligada que el caquetío atestigua dentro de un compuesto + la raíz lokona de mano, en la estructura de las dos hermanas'
+        clave_en_el_lexicon: libre
+
+  - id: num-20
+    casilla: 'veinte'
+    canon_actual: {forma: ninguna}
+    lokono:
+      - {forma: 'abba luccu', glosa: '«un hombre»', obra: perea-alonso-1942, pagina: '565, 568', estrato: 'Schumann 1755'}
+    achagua:
+      - {forma: 'Abacaí tacay', glosa: '«un tacay» — tacay vale 20 y es opaco', pliego: 96, lado: der}
+    traza_caquetia:
+      - {forma: ateri, glosa: 'hombre, varón', fuente_lexicon: caquetío-atestiguado, nota: 'la voz existe; la composición no'}
+    concordancia_lokono_achagua: 'PARCIAL — ''uno'' + una unidad de veinte en las dos; la unidad no concuerda (hombre / tacay)'
+    candidatas:
+      - forma: 'pana ateri'
+        etiqueta: caquetío-hipotético
+        preferida: true
+        por_que: 'calco de la estructura lokona con voces caquetías atestiguadas; el achagua no la sostiene'
+        clave_en_el_lexicon: libre
+    cautela: 'regla 3: «un hombre» = 20 es forma de numeral; no autoriza a decir nada de cómo contaban los caquetíos'
+
+  # ─────────────────────────── ASPECTO / TIEMPO ────────────────────────────
+  - id: asp-completivo
+    casilla: 'completivo (canon -ka)'
+    canon_actual: {forma: '-ka', regla: REGLAS_ASPECTO, origen: 'wayuu: tríada A en contexto de pasado (morfologia.md §2)'}
+    lokono:
+      - {forma: '-ca', valor: 'presente del verbo sustantivo «ser, estar», sin distinción de tiempo', obra: perea-alonso-1942, pagina: '584, 608, 628', estrato: 'Schumann 1755', nota: HOMÓGRAFO con otro valor}
+      - {forma: '-bi', valor: 'pretérito inmediato — d-a-iyaha-ddibi «he andado»', obra: perea-alonso-1942, pagina: '605, 609-612', estrato: 'Schumann 1755'}
+      - {forma: '-buna / -bu · -cuba', valor: 'pretérito absoluto · remoto', obra: perea-alonso-1942, pagina: 605, estrato: 'Schumann 1755'}
+      - {forma: hibin, valor: '«ya» (completivo)', obra: 'Pet 1987 vía curiana_lexicon', estrato: 'Pet 1987'}
+    sospecha_de_la_fuente: >-
+      Perea (p. 606; pp. 683-684): Schultz traduce los pretéritos por un
+      presente, «lo cual nos hace suponer que todo el mecanismo temporal de los
+      pretéritos sea tan sólo uno de los tantos perfeccionamientos a priori de
+      los misioneros». El aparato de tiempo lokono es, según su gramático,
+      probablemente construcción misionera.
+    achagua:
+      - {forma: '-mi', valor: 'pretérito, en un solo ejemplo sobre un adverbio: «Entonces = Riyari. Fut. Riyaresu. Pret. Riyaremi»', pliego: 59, lado: der}
+      - {forma: '-yisa, -misa, -nisa', valor: '«nota de participio de presente y de pretérito»', pliego: 26, lado: izq}
+      - {forma: '-ca', valor: 'infinitivo de los verbos en -iu', pliego: 26, lado: izq, nota: HOMÓGRAFO con otro valor}
+    traza_caquetia: [{forma: ninguna}]
+    concordancia_lokono_achagua: 'NO (lokono -bi / achagua -mi: ni la forma ni la función están aseguradas)'
+    candidatas:
+      - forma: '-bi'
+        etiqueta: caquetío-hipotético
+        preferida: true
+        por_que: 'el pretérito inmediato lokono es lo más cercano a «ya hice»; pero sale del aparato que Perea cree misionero'
+        clave_en_el_lexicon: '`bi` es clave lokono (''tú''); como sufijo con guion el detector de aspecto no la confunde'
+    cautela: >-
+      🔴 Formas de dos letras sin concordancia sistemática. Y el -ka del canon
+      tiene DOS homógrafos con otro valor (lokono -ca 'ser/estar', achagua -ca
+      infinitivo): no se afirma cognación con ninguno.
+
+  - id: asp-continuativo
+    casilla: 'continuativo (canon -ni)'
+    canon_actual: {forma: '-ni', regla: REGLAS_ASPECTO, origen: 'wayuu -iraa (morfologia.md §2)'}
+    lokono:
+      - {forma: 'a-ni-n', valor: 'auxiliar «ser, estar, hacer»', obra: perea-alonso-1942, pagina: 602, estrato: 'Schumann 1755', nota: HOMÓGRAFO con otro valor}
+      - {forma: '-coa-', valor: '«ser, estar habitualmente» (Perea corrige a Schumann)', obra: perea-alonso-1942, pagina: 675, estrato: 'Schumann 1755 / Schultz 1802'}
+      - {forma: '-bo', valor: 'continuativo / progresivo — li wadili dalhida-bo «el hombre está corriendo»', obra: 'Pet 1987 vía curiana_lexicon', estrato: 'Pet 1987'}
+    achagua:
+      - {forma: '-ní', valor: 'desinencia de 3.ª persona en predicados de estado (Casarrumauní «está alegre»; el verbo sustantivo marca persona por sufijo: Vyuna, Vyugi, Vyumí, Vyubí, Vyuy)', pliego: 26, lado: izq, nota: 'HOMÓGRAFO: persona, no aspecto'}
+    traza_caquetia: [{forma: ninguna}]
+    concordancia_lokono_achagua: 'NO'
+    candidatas:
+      - forma: '-bo'
+        etiqueta: caquetío-hipotético
+        preferida: true
+        por_que: 'el único continuativo declarado en una hermana del eje, pero del estrato de 1987'
+        clave_en_el_lexicon: '`bo` es clave lokono'
+    descartadas:
+      - forma: '-coa'
+        motivo: 'choca con el -coa de las formaciones de lugar (morfema-001 -bacoa) y con la variante -coa de -aima: contaminaría la toponimia que acuñan los agentes'
+    cautela: '🔴 formas de dos letras; y el -ni del canon tiene dos homógrafos con otro valor (auxiliar lokono, persona achagua)'
+
+  - id: asp-prospectivo
+    casilla: 'prospectivo (canon -da)'
+    canon_actual: {forma: '-da', regla: REGLAS_ASPECTO, origen: 'wayuu -ee desiderativo + tríada C (morfologia.md §2)'}
+    lokono:
+      - {forma: '-dda / -da', valor: 'la partícula que marca el presente y que ni Perea ni Goeje explican', obra: perea-alonso-1942, pagina: 604, estrato: 'Schumann 1755', nota: HOMÓGRAFO con otro valor}
+      - {forma: '-pa', valor: 'futuro — d-a-iyaha-ddi-pa «andaré»', obra: perea-alonso-1942, pagina: '605, 609-612', estrato: 'Schumann 1755'}
+      - {forma: '-fa / -ha', valor: 'futuro — l-osy-fa «él irá»', obra: 'Pet 1987 vía curiana_lexicon', estrato: 'Pet 1987', nota: 'el mismo futuro dos siglos después: p > f/h'}
+    achagua:
+      - {forma: 'su / sa / saba', valor: '«El futuro se conoce por esta particula»', pliego: 24, lado: izq}
+      - {forma: '-su / -saba', valor: 'formación del futuro sobre la 1.ª persona del pretérito', pliego: 24, lado: der}
+      - {forma: 'ba', valor: 'partícula de futuro — «Nutemba cubay = tiraré pescado», «Caibiuba = Dolerá»', pliego: 24, lado: der}
+    traza_caquetia: [{forma: ninguna}]
+    concordancia_lokono_achagua: >-
+      DE FUNCIÓN, y de forma en un morfema de dos letras: futuro lokono -pa ~
+      partícula de futuro achagua -ba. Es la única casilla de aspecto donde las
+      dos hermanas coinciden en algo.
+    candidatas:
+      - forma: '-pa'
+        etiqueta: caquetío-hipotético
+        preferida: true
+        por_que: 'la forma lokona, en la casilla donde lokono y achagua coinciden en función; p y no b porque en lokono contrastan (banna ≠ pana, Perea)'
+        clave_en_el_lexicon: libre
+    cautela: >-
+      🔴 Dos letras, b/p, y el achagua tiene además -su/-saba. Se registra la
+      coincidencia; NO se afirma cognación. Por eso sigue siendo hipotética
+      pese a ser la mejor apoyada del bloque.
+
+# ══════════════════════════════════════════════════════════════════════
+# LO QUE LAS DOS HERMANAS DICEN DE ESTRUCTURA — anotado, NO propuesto
+# ══════════════════════════════════════════════════════════════════════
+estructura_no_propuesta:
+  - hallazgo: >-
+      Las dos marcan la persona con PREFIJO en los verbos activos y con OTRA
+      serie, pospuesta o sufijada, en los de estado: lokono halli-kebbe de «me
+      alegro» (4.ª conjugación, pospuestos de/bu/i/n/u/hu/ye; Perea pp. 634-635);
+      achagua Vyuna / Vyugi / Vyumí / Vyubí / Vyuy (verbo sustantivo, pliego 26
+      izq.) y Chainamaubí «estamos enfermos».
+    por_que_importa: >-
+      El orden del canon —«pronombre libre + verbo-aspecto + complemento»— no es
+      el patrón no marcado de ninguna de las dos. Cambiarlo es sintaxis, no
+      forma: queda fuera de la fase 3 y se anota para que no se pierda.
+  - hallazgo: 'las dos cuentan en base cinco por la mano hasta 20 (Perea p. 565; achagua, hallazgos de la segunda pasada)'
+    por_que_importa: 'el canon da 1-5 sueltos más un 10 wayuu; no tiene composición. Las candidatas num-5/10/20 la introducen'
+
+# ══════════════════════════════════════════════════════════════════════
+# EL COSTE, MEDIDO (medir_coste_nucleo_d11.py, 2026-09-13)
+# ══════════════════════════════════════════════════════════════════════
+coste_medido:
+  universo: 'VOCABULARIO_BASE 5.518 claves · TODAS_LAS_REGLAS 20 · 6 constructores de prompt · koiné (FORMAS_SEED, _NUCLEO_FALLBACK, _ASPECTO_SUFIJO) · score_linguistico · tests · demos · 3 docs'
+  cabecera: [forma, constructores_de_prompt_de_6, apariciones_en_prompts, reglas, usos_en_instruccion_agente, koine, literal_en_score, tests, demos_y_semillas, docs]
+  filas:
+    - [taya,     3,  6, 2, 3,  1, 0, 21, 21, 6]
+    - [pia,      1,  3, 0, 0,  1, 0,  0,  2, 3]
+    - [nüma,     2,  2, 0, 0,  1, 0,  2,  3, 2]
+    - [waya,     1,  1, 0, 0,  0, 0,  2,  1, 0]
+    - [naya,     1,  1, 0, 0,  0, 0,  0,  4, 0]
+    - [tayamaa,  0,  0, 0, 0,  0, 0,  0,  0, 2]
+    - [wanee,    1,  1, 0, 0,  0, 0,  0,  1, 0]
+    - [piama,    1,  1, 0, 0,  0, 0,  0,  0, 1]
+    - [apünüin,  1,  1, 0, 0,  0, 0,  0,  0, 0]
+    - [pienchi,  1,  1, 0, 0,  0, 0,  0,  0, 0]
+    - [jarai,    1,  1, 0, 0,  0, 0,  0,  0, 0]
+    - [polo,     0,  0, 0, 0,  0, 0,  0,  0, 0]
+    - ['ta-',    5, 10, 1, 0,  0, 1,  7,  5, 5]
+    - ['wa-',    4,  6, 2, 1,  0, 1,  1,  9, 7]
+    - ['pi-',    0,  0, 0, 0,  0, 0,  1,  0, 1]
+    - ['nü-',    0,  0, 0, 0,  0, 0,  0,  0, 1]
+    - ['-ka',    5, 10, 1, 3,  9, 1, 19, 16, 5]
+    - ['-ni',    6, 11, 1, 3, 15, 1, 23, 17, 7]
+    - ['-da',    4, 11, 1, 3, 11, 1,  5, 13, 7]
+  lectura:
+    - >-
+      NUMERALES — casi gratis: una aparición cada uno, en un solo prompt (tier
+      I), cero en reglas, koiné, score y tests. Y las candidatas 1-4 YA son
+      entradas caquetío-atestiguado del lexicón: no hay que crear ni una clave.
+      `polo` no aparece en nada.
+    - >-
+      PRONOMBRES — caro en `taya` y barato en el resto: `taya` está en 3 de los
+      6 constructores (incluida la _IDENTIDAD_LINGUISTICA que reciben TODOS los
+      agentes: «empieza con "Taya..." o "Nüma..."»), en las instruccion_agente
+      de -ni y -da, en el núcleo de reserva de la koiné y en 21 líneas de tests.
+      `waya` y `naya` no cambian de forma.
+    - >-
+      POSESIVOS — `ta-` está en 5 de 6 prompts y en la tupla de prefijos que
+      es_arahuaco() reconoce («ta», «wa», «ma», «ka»): cambiarlo toca el
+      instrumento. `wa-` no cambia de forma. `pi-` y `nü-` sólo existen en
+      CLAUDE.md (y en el análisis del corpus), no en el motor.
+    - >-
+      ASPECTO — lo más caro con diferencia: 32 de las formas-firma de los 20
+      agentes de FORMAS_SEED llevan -ka/-ni/-da; -ni sale en los 6
+      constructores; `_aspectos_morfologicos` cablea {"ka","ni","da"} y vale 2
+      de los 10 puntos del score; 47 apariciones en tests y 46 en demos.
+    - >-
+      El conteo de «literal en score» de -ka incluye el prefijo ka- de la tupla
+      de es_arahuaco; los de -ni/-da, sólo el mapa de aspecto.
+  corpus:
+    medido: false
+    motivo: 'Supabase local apagado el 2026-09-13 (Docker no responde); no se re-mide'
+    ultima_medicion:
+      fuente: 5-experimento/analisis/ANALISIS_BASE_2026-08-06.md §3 y §5
+      word_uses: 54936
+      con_sufijo_de_aspecto: {usos: 18752, formas: 220}
+      con_prefijo_posesivo: {usos: 3840, formas: 155, nota: 'contados como ta-/pi-/nü-'}
+      lectura: >-
+        un tercio de los usos lleva aspecto y uno de cada catorce lleva
+        posesivo (18.752 y 3.840 de 54.936); `taya` es la forma más usada del
+        corpus y `nüma` está entre las ocho primeras. Lo que se re-deriva es
+        el andamiaje, no el vocabulario.
+
+# ══════════════════════════════════════════════════════════════════════
+# COLISIONES Y TRAMPAS DEL INSTRUMENTO — lo que hay que resolver ANTES de un run
+# ══════════════════════════════════════════════════════════════════════
+instrumento:
+  colisiones_de_clave:
+    - {candidata: bia,  choca_con: 'lokono ''in'''}
+    - {candidata: ria,  choca_con: 'achagua ''El'''}
+    - {candidata: ruya, choca_con: 'achagua ''Aquella'''}
+    - {candidata: '-bo', choca_con: 'lokono ''continuativo'' (clave bo)'}
+    - {candidata: de,   choca_con: 'lokono ''yo'' Y ES_STOPWORDS — descartada'}
+  candidatas_con_clave_libre: [daya, dai, bui, tuya, ja, 'pana-kabu', 'buia-kabu', '-pa']
+  por_que_importan_las_colisiones: >-
+      score_linguistico() reconoce por palabras_activas() sin filtrar por
+      fuente y clasifica por la `fuente` de la clave. Mientras `ria` sea clave
+      achagua, un agente del brazo nuevo que la diga es penalizado como fuga a
+      otra lengua arahuaca. Hay que renombrar la comparanda (precedente:
+      ja-achagua, biama-kalinago) antes de sembrar.
+  el_nucleo_no_llega_por_la_capa: >-
+    🔴 El eje A de los perfiles (`capas_lexicas`) filtra el muestreador, pero el
+    núcleo NO llega por el muestreador: está CABLEADO en prompt_reglas_completo,
+    prompt_reglas_breve, el bloque de tier III de vocabulario_para_agente,
+    _IDENTIDAD_LINGUISTICA (orquestador), prompt_refuerzo, prompt_rescate
+    y en _NUCLEO_FALLBACK/FORMAS_SEED de la koiné. Consecuencia de paso: el
+    brazo `atestiguado` ya corrido o por correr TAMBIÉN recibe taya, pia, nüma,
+    wanee… cableados, así que es menos «duro» de lo que su descripción dice.
+  score_invariante: >-
+    capas_de_score es fijo y debe seguirlo siendo. Pero la tupla de prefijos de
+    es_arahuaco() y el mapa de _aspectos_morfologicos son listas cableadas: si
+    un brazo usa da-/bi-/ri-/na- y el score sólo reconoce ta-/wa-/ma-/ka-, ese
+    brazo pierde densidad por construcción. La salida limpia es la UNIÓN de los
+    dos núcleos en los dos brazos — que mueve (poco) el score de `base` frente
+    a la era 1 si algún agente de base produce da-X o na-X. Hay que declararlo.
+
+# ══════════════════════════════════════════════════════════════════════
+# DE PASO — desfases medidos que no dependen de la decisión
+# ══════════════════════════════════════════════════════════════════════
+de_paso:
+  - 'CLAUDE.md (bloque Morfología) y 2-lengua/morfologia.md dan `tayamaa` (nosotros), que no existe en el lexicón ni en el motor: la entrada es `waya`'
+  - 'CLAUDE.md declara pi- (tu) y nü- (su); REGLAS_POSESIVAS no los tiene'
+  - 'la nota de `jarai` dice que el lokono del lexicón no cubre ''cinco''; el lexicón tiene abbatekkabe (Brinton 1871)'
+  - 'la entrada `pana` ''uno'' (atestiguado) cita a Arcaya y Zavala sin página'

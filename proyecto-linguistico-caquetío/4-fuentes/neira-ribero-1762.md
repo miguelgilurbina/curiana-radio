@@ -5,7 +5,7 @@ autor: "Neira, Alonso de (S.J.) y Ribero, Juan (S.J.)"
 anio: 1762
 genero: gramatica
 publicacion: "Manuscrito. Terminado el 14 de septiembre de 1762; la copia de la Real Biblioteca es del 23 de abril de 1788 (RBPR II/2910): [4] h. + 42 p. + 70 f. + [3] h., 152×104 mm"
-local: "fuentes_caquetios/Neira_Ribero_1762_Arte_y_Vocabulario_Lengua_Achagua_RB_II-2910.pdf (102 pliegos a 2787×1949 px, sin capa de texto) + fuentes_caquetios/neira_ribero_1762/001-102.jpg — ⚠️ SOLO EN ONEDRIVE, no en git (.gitignore, D8 #37 abierta: son 200 MB)"
+local: "fuentes_caquetios/Neira_Ribero_1762_Arte_y_Vocabulario_Lengua_Achagua_RB_II-2910.pdf (102 pliegos a 2787×1949 px, sin capa de texto) + fuentes_caquetios/neira_ribero_1762/001-102.jpg — ⚠️ SOLO EN ONEDRIVE, no en git (.gitignore, por D8 #37 — cerrada el 2026-09-12 con la opción intermedia: son 200 MB)"
 paginas: 102
 capa_texto: no
 estado_minado: minada-parcial
@@ -299,6 +299,105 @@ de las hormigas que comen los achaguas (pliego 79) y el final de `Jbai-` bajo
   numerales, los posesivos adjetivos y el sufijo `-mi` de «cosa ya pasada».
 - Nada se llevó al lexicón ni al corpus, y no se abrió ningún issue. Sigue
   siendo comparanda achagua, y la decisión es de D11 (#39).
+
+## Cruce achagua ↔ caquetío (2026-09-13)
+
+**Escriba (agente Opus 5), por #121.** Script reproducible:
+`6-fusion/scripts/cruzar_achagua_caquetio.py`. Datos, veredicto por concepto y
+todas las cifras: `6-fusion/cruce_achagua_caquetio_2026-09-13.yaml` —
+propuesta, no canon (regla 5). Como en el resto de esta nota, ninguna cifra se
+repite aquí: el reparto vive en `meta.resumen_atestiguado`, el azar en
+`…por_lengua.*.azar` y la prueba de predicción en `meta.prueba_de_prediccion`.
+
+### Qué se preguntó
+
+¿Qué voces caquetías tienen cognado plausible en achagua, y el caquetío
+**atestiguado** se parece más al achagua, al lokono o al wayuu? Con las tres
+reglas del método de `cruzar_achagua_jahn.py` puestas en código:
+
+- **Por concepto, nunca por forma suelta.** Solo cuenta la glosa exacta (una
+  sola palabra en los dos lados, con la ortografía de 1762 normalizada). Lo que
+  sigue a «v.g.» es ejemplo; «Cachama, un pescado» es una clase, no el concepto.
+- **La capa antes que el parecido.** Una forma reconstruida o hipotética
+  parecida a la lengua de la que sus `notas` dicen que salió es `circular`.
+  La filiación se mide solo sobre la capa atestiguada.
+- **Contra la propia regla, dos controles.** Un modelo nulo por permutación
+  —el achagua ofrece más lemas por concepto que el lokono o el wayuu, y sin
+  control eso lo favorecería— y una prueba de predicción de las
+  correspondencias sobre conceptos que no se usaron para verlas.
+
+Pronombres y numerales, fuera: los lleva otro escriba.
+
+### Qué salió
+
+- **Lo que manda es el hueco.** La capa atestiguada es sobre todo fitonimia y
+  zoonimia de Paraguaná y Coro (Zavala), y un vocabulario de los Llanos rara vez
+  la nombra con la misma glosa. Los conceptos con glosa exacta en las tres
+  comparandas a la vez son un puñado. Cualquier reparto sobre esa base es frágil,
+  y el YAML lo da con su esperado por azar al lado.
+- **Las tres lenguas dan algo más de parecido que el azar, y ninguna se
+  despega.** El achagua reúne más pares en bruto porque tiene más conceptos
+  comparables, no porque se parezca más: por tasa y por similitud media sobre el
+  azar, el lokono da la señal más limpia y el wayuu no queda lejos. Con estos
+  recuentos no se puede decir que el caquetío atestiguado esté más cerca del
+  achagua.
+- **Candidatos con el achagua** (capa atestiguada): `kiba` 'piedra' ~ `Jba`
+  (83 dcha.), el único que se parece a la vez al achagua y al lokono (`siba`),
+  con la advertencia de que tres fonemas dan un parecido barato; `aka` 'bejuco'
+  ~ `Acua` («Sarmiento, bejuco», 90 dcha.), también de tres fonemas; `bakoa`
+  'bosque' ~ `Abaca` (43 izq.); `tarika` 'laguna' ~ `Carisa` (71 dcha.), débil;
+  y `arata` 'mono' ~ `Rrabata` «Mona» (76 izq.), que **no es hallazgo a
+  ciegas**: salió al añadir el sinónimo mona → mono después de auditar los
+  ceros, y el YAML lo declara en `parametros.sinonimos_añadidos_tras_auditar_ceros`.
+- **Con el lokono** se reencuentran pares ya conocidos (las propias `notas`
+  caquetías los citan): `kati` 'luna' ~ `kathi` (A-2) y `para` 'mar' ~ `bara`
+  (Schultz vía Perea). `iero` 'mujer' se parece a la vez al lokono `hiaro`
+  (Pet) y al wayuu `jierü`.
+- **Con el wayuu**: `saruro` 'boa' ~ `sarulu`. Toca la etiqueta de `saruro`,
+  cuya nota dice que si resultara voz del área bajaría a retroabstraído: un
+  parecido con el guajiro no lo prueba, pero es la pregunta que hay que hacerle.
+  `dara` 'alcaraván' ~ `kaarai` es débil, y la glosa wayuu trae «(dara)» entre
+  paréntesis, probablemente el regionalismo.
+- **Circulares, y no cuentan**: `mütsia`, `anasa`, `yama` y `wana` se parecen al
+  wayuu del que se sacaron; `kali`, `sipara` y `kaiwa`, al lokono; `bari`, al
+  achagua, porque su nota la deriva del proto-arahuaco. La lista con sus
+  similitudes, en `meta.circulares`.
+- **Sesgo inverso, encontrado de paso.** Varias entradas **lokono** del lexicón
+  sin fuente se escribieron «como cognado de» la voz caquetía (`katsi`
+  «cognado de cati caquetío», y también `hadalli`, `baraha`, `hamaha`, `koïa`,
+  `piaye`). Compararlas mide la mano que las escribió, no la lengua: se
+  excluyeron del cruce y quedan en `meta.comparanda_excluida_por_sesgo_inverso`.
+  El lexicón no se tocó.
+- **La prueba de predicción no sostiene ninguna correspondencia.** Con tan pocos
+  pares, ninguna regla junta dos apoyos en un mismo pliegue. Dejando fuera los
+  conceptos que la sugirieron, todas las correspondencias vistas fallan, no
+  superan al azar o no tienen casos: `caq #k ~ ach ∅` (de `kiba ~ iba`),
+  `caq k ~ lok s` (de `kiba ~ siba`), `caq p ~ lok b` (de `para ~ bara`),
+  `caq r ~ way l` (de `saruro ~ sarulu`). Es la hipótesis `k-` cayéndose otra
+  vez, ahora contra el azar.
+- **La trampa de Jahn, controlada**: con glosa exacta, agua = `Vni` y mar =
+  `Manoa`, y ninguna entrada de Neira tiene `mena` (`meta.control_trampa_jahn`).
+- La sensibilidad a `gu_es_w` no cambia el cuadro (`meta.sensibilidad_gu_es_w_true`).
+
+### Qué NO
+
+- **No se decide filiación.** Lo que el cruce permite decir es: «las tres
+  comparandas dan algo por encima del azar, ninguna domina, y la base comparable
+  es mínima». Nada de esto apoya todavía re-derivar el núcleo desde el achagua.
+- **Ningún par es cognado verificado.** Son candidatos con glosa exacta y forma
+  parecida, sin correspondencias regulares que los sostengan. Las formas achagua
+  son transcripción por visión: verificar el pliego en imagen antes de citar.
+- **Glosa exacta no es significado idéntico.** Quedan fuera del alcance del
+  filtro la aposición sin artículo («Pajaro, Dios te de») y alguna homonimia; se
+  auditaron a mano los emparejamientos de lema con varios segmentos, y ninguno
+  de los parecidos contados sale de ahí.
+- No se tocó `curiana_lexicon.py`, ningún `lexicon_*.py` ni `3-mundo/corpus/`,
+  y no se abrió issue. Pronombres, numerales y el arte más allá de
+  `arte.verbos` quedan fuera. El paraujano va como columna informativa, no en el
+  reparto (ahí salta `kasi` 'sol' ~ `kai`).
+- **Queda para quien fusione**: limpiar las entradas lokono con sesgo inverso;
+  preguntarle a `saruro` si es voz del área; y verificar en imagen `Jba`,
+  `Acua`, `Abaca`, `Carisa` y `Rrabata` antes de citar ninguno.
 
 ## Enlaces
 

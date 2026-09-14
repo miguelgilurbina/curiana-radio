@@ -38,6 +38,16 @@ perfiles:
     andamiaje: completo
     pregunta: '¿Qué hace la comunidad con el lexicón tal como está hoy?'
 
+  era2:
+    descripcion: >-
+      La era 2 (Miguel, 2026-09-14: «escondemos las 38 hipotéticas»). Como
+      `base` pero sin la capa hipotética: 35 de sus 38 voces son formas que el
+      proyecto acuñó para la simulación (F8), y mostrarlas adelanta justo lo que
+      la era 2 quiere ver acuñar a los agentes. `base` no se toca: es la era 1.
+    capas_lexicas: [caquetío-atestiguado, caquetío-reconstruido]
+    andamiaje: completo
+    pregunta: '¿Se forma una koiné entre dos nodos cuando la comunidad sólo ve lo que puede sostener?'
+
   atestiguado:
     descripcion: >-
       El brazo duro: sólo lo que una fuente colonial o toponímica sostiene.

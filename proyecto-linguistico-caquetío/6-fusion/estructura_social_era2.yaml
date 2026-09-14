@@ -1,0 +1,1611 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — La estructura social atomizada de la era 2 (Paraguaná)
+#
+# Encargo de Miguel, 2026-09-13, sobre el elenco de «2 linajes por nodo» de
+# DISENO_ERA2 §3:
+#   «el elenco hay que pensarlo mejor para atomizarlo más para definir los
+#   subgrupos también. Y hay que identificar que ambos grupos tenían sus zonas
+#   pesqueras. Y que el merejuy es algo que debería unir a los dos nodos para
+#   los procesos ritualísticos. Recordemos que Kapubana es un asiento
+#   religioso por lo que debe haber varios puestos religiosos, los que
+#   preparan al Manaure por ejemplo. Una "institución" por así decirlo.»
+#
+# Regla 5: esto PROPONE. No toca curiana_agents.py, el motor, el lexicón ni
+# 3-mundo/corpus/. Nada de aquí es canon hasta que Miguel lo fusione.
+# Resumen legible: 6-fusion/issues-pendientes/publicados/diseno-elenco-era2-estructura.md
+# Publicado como issue #126 (decision, motor) el 2026-09-14.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-09-13'
+  estado: sin-fusionar
+  obra: varias
+  quien: escriba (Claude), a pedido de Miguel
+  pregunta: >-
+    ¿Cuál es la estructura social —polity, clan, subgrupo, linaje, casa— sobre
+    la que se arma el elenco de los dos nodos de Paraguaná (GUARANAO y AMUAY,
+    #122)? ¿Dónde pescaba cada clan? ¿Qué oficios religiosos sirven al
+    Kapubana, incluida la preparación del Manaure? ¿Qué ciclo ritual del
+    merejuy obliga a los dos clanes a converger?
+  ancla: >-
+    #122 cerrada el 2026-09-12 (paraguana_dos_clanes.yaml §verificacion):
+    GUARANAO = Moruy, Santa Ana (Chamuriana) y la laguna, centro-sur; AMUAY =
+    Cayerúa y la costa oeste, norte. El Moruy de Delmonte se lee como
+    reasentamiento colonial. Etiqueta reconstruido, con la deuda de la frase
+    cardinal de Oliver.
+  vocabulario_de_etiquetas:
+    atestiguado: una fuente lo dice, con página. Si la fuente es del s. XVI o posterior se marca `capa` y, si se proyecta, `regla_3`
+    reconstruido: inferencia de un autor o comparanda arahuaca citada
+    canon-simulacion: posición que el proyecto toma para simular, sobre piezas citadas
+    hipotetico: plausible sin respaldo, o propuesta nueva de esta sesión
+    retro-abstraido: tradición viva del s. XX (la capa de creencia.yaml); a efectos de proyección vale como hipotético
+  convencion_de_paginas: >-
+    Oliver 1989 cap. 3: las pp. 251, 262-263, 265-266, 275 y 276 están
+    verificadas a ojo en sesiones anteriores. El resto se cita por la página del
+    PDF comprimido (`fuentes_caquetios/Chapter 3 Ethnohistory.DOC-comprimido.pdf`,
+    pdftotext) porque ese PDF no guarda un desfase constante con la impresa: la
+    p. 251 cae en la pdf 69 y la 275 en la pdf 82. Esteves 1989: la página sale
+    del número de pie del OCR y coincide con el canon de topónimos donde lo hay.
+  paginas_de_oliver_medidas_2026-09-13: >-
+    Medido en la segunda vuelta. El PDF comprimido del cap. 3 es la edición en
+    DOC de 2006 («only in PDF version, 2006», pdf 62) y lleva su PROPIA
+    paginación en la cabecera (cabecera = pdf + 182 en sus 113 páginas). La
+    tesis impresa de 1989 pagina distinto: con OCR del escaneo de UCL (impresa =
+    pdf − 27) se comprobó que la sal de la Guajira está en la p. 188 (DOC 189),
+    la alianza jirajara de cuentas, sal y azabache en la 245 (DOC 238), la sal
+    con los xaguas en la 247 (DOC 240), el paisaje de la costa de Falcón en las
+    252-254 (DOC 245-246), el reasentamiento en Todariquiba en la 259 (DOC 251)
+    y el comercio costero con las cuentas en la 285-286 (DOC 271-272). La
+    «p. 251» con que el canon cita Todariquiba es la del DOC. Las otras
+    «verificadas a ojo» (262-263, 265-266, 275, 276) no se recomprobaron en
+    esta vuelta. En las secciones nuevas se cita la impresa comprobada y, entre
+    paréntesis, la del DOC. Auditoría completa: encargo aparte.
+  medido:
+    elenco_actual:
+      total: 60
+      tier_1: 15
+      tier_2: 33
+      tier_3: 12
+      como: 'python: curiana_agents.ALL_AGENTS, 2026-09-13'
+    dias_por_estacion:
+      valor: 60
+      como: 'curiana_state.DIAS_POR_ESTACION; el día 1 es seca'
+  fuentes_usadas:
+    obras: [oliver-1989-cap3, oliver-1989-cap2, oliver-1989-cap4, zavala-reyes-2015, arcaya-1920,
+            esteves-1989, velasco-2015-resistencia, castellanos-elegias, oviedo-y-banos,
+            antolinez-1946-hacia-el-indio, moron-2012-petroglifos, alvarado-1921, jahn-1927,
+            keegan-1989, amodio-perez-2006, perrin-1992-1995, paz-reverol-2017-2018,
+            guerra-curvelo-palabrero, angleria-1892, van-buurt-2014, antczak-2015-las-aves,
+            neira-ribero-1762, medina-colina-sxx, osm-kaketiana, perez-de-tolosa-1546,
+            ballesteros-1550, federmann-1916, nueva-segovia-1579]
+    repo: [3-mundo/corpus/parentesco.yaml, 3-mundo/corpus/genealogia.yaml, 3-mundo/corpus/creencia.yaml,
+           3-mundo/corpus/transmision.yaml, 3-mundo/corpus/ecologia.yaml, 3-mundo/asentamientos.yaml,
+           3-mundo/polities-caquetias.md, 3-mundo/ensayos/05_geografia_politica_y_sucesion.md,
+           3-mundo/CULTURA_CAQUETIA.md, 2-lengua/toponimos.yaml, 6-fusion/paraguana_dos_clanes.yaml,
+           6-fusion/toponimia_paraguana_miguel.yaml, 6-fusion/toponimos_mapa_kaketiana.yaml,
+           6-fusion/antolinez_1946_capo_y_ortografia.yaml, 6-fusion/petroglifos_y_manaure.yaml,
+           6-fusion/velasco_primarios_agi.yaml, 6-fusion/medina_colina_dictado.yaml,
+           6-fusion/achagua_neira_ribero_1762.yaml, curiana_sim/curiana_agents.py,
+           curiana_sim/curiana_state.py, curiana_sim/curiana_lexicon.py, curiana_sim/lexicon_zavala.py]
+    texto_crudo_releido: >-
+      Oliver cap. 3 entero (pdftotext), Arcaya 1920 entero (pdftotext), Velasco
+      2015, Oviedo y Baños, los seis OCR de Esteves y Castellanos 1857 (txt),
+      buscando por raíces cortas. Se leyeron las fuentes, no solo sus notas en
+      el vault.
+
+  # Regla 6: cada cero con su consulta. Un cero mide la consulta, no la fuente.
+  ceros_verificados:
+    - que: preparación, iniciación, reclusión o ayuno del Manaure o del heredero al cargo de diao
+      raices: [ayun, fast, encierr, seclu, iniciac, inicia, initiat, reclu]
+      resultado: >-
+        CERO en fuente costera. Arcaya 1920 da 4 de `ayun` y ninguno es del
+        diao: la formación del piache (p. 101, Nueva Segovia, que es
+        Barquisimeto), el ayuno de la casa del enfermo (pp. 97-100) y el ayuno
+        colectivo antes de la guerra (p. 118). En Oliver cap. 3 `fasting` da 0 y
+        los 2 de `initiat` no son rito («reinitiated our travel» y una nota
+        sobre los juicios de residencia). Esteves y Velasco dan 0 de `ayun`. En
+        la elegía de Coro de Castellanos `ayun` da 2, los dos en sentido
+        figurado. Los 4 `inicia` de Arcaya son el verbo o «inicial».
+    - que: nombre de un oficio religioso caquetío distinto de boratio o diao
+      raices: [piach, boratio, mohan, mohán, sacerdot, behique, bohit, boiti, boíti]
+      resultado: >-
+        `behique`, `bohit` y `boíti` dan 0 en todo el repo y en todas las fuentes
+        crudas. La elegía de Coro de Castellanos (líneas 48483-55152 del txt) da
+        0 en piach, boratio, mohan, sacerdot, chich, macato, areit, borrach y
+        santuario. Los aciertos del texto completo (piach 2, mohan 3, chicha 4,
+        macato 1, areito 1) caen todos fuera de esa elegía. Oviedo y Baños
+        habla de «piaches y mohanes» para toda la provincia de Venezuela, no
+        para la costa. La única voz caquetía es `boratio`, y `diao` para el jefe.
+    - que: merejuy
+      raices: [merej]
+      resultado: >-
+        UNA sola aparición en todo el material: Esteves 1989 p. 53, dentro de la
+        etimología de Moruy y sin cita. 0 en Arcaya, Velasco, Oviedo y Baños,
+        Oliver cap. 3 y Castellanos; 0 en el dictado de Medina Colina; no está en
+        el lexicón (lo dice toponimo-108).
+    - que: chicha o bebida de maíz en la costa
+      raices: [chich, macato, maçato, mazato, masato, buriche, cazá, kasá]
+      resultado: >-
+        Los 8 `chich` de Arcaya son el topónimo Chichiriviche o finales en
+        -chiche. Los `maçato` de Oliver cap. 3 son jirajaras (la casa de hombres,
+        pdf 59), de Barquisimeto (el jefe de paz, pdf 93-94) y del funeral de
+        los caciques menores costeros (pdf 88, vía Oviedo [6]:34-47). En el
+        lexicón hay tres voces atestiguadas: `buriche` 'licor fermentado,
+        chicha de maíz' (Zavala #50), `masato` (Alvarado p. 217, que cita a
+        Oviedo II.297 y 300) y `kasá` 'puche de maíz' (Zavala #74).
+    - que: localización de las playas de pesca de cada clan
+      raices: [beach, fishing, pesca, pesc, pesquer, playa]
+      resultado: >-
+        Oliver p. 275 lo dice sin rodeos: cómo se repartían las zonas de captura
+        «can not be inferred from the available data». En la elegía de Coro de
+        Castellanos `pesc` da 9, pero la feria «a trueco de la sal y del
+        pescado» y los labradores que van a «rescatar con estos pescadores» son
+        de Maracaibo (líneas 49205-49330), y «diestros en la pesca y en la caza»
+        es de la Guajira. Los 3 `pesquer` de Arcaya son de perlas. Todo lo que se
+        localiza abajo es reconstrucción sobre topónimos del s. XX.
+    - que: Oviedo y Valdés t. II (pp. 297-300, 329), la fuente de casi todo el ritual costero
+      resultado: >-
+        NO se puede leer en el repo: pdftotext falla con
+        Oviedo_Valdes_1851_Historia_General_Indias_vol1.pdf (xref dañado), y
+        además es el vol. 1. Todo Oviedo llega vía Arcaya 1920, Oliver cap. 3 y
+        Alvarado 1921.
+
+  lo_que_no_se_encontro:
+    - Ningún dato de cómo se preparaba, iniciaba o legitimaba al Manaure (ver ceros). La institución que se propone abajo es reconstrucción e hipótesis sobre piezas vecinas
+    - 'Ningún cronista describe estructuras rituales caquetías: Oliver p. 275 («quite secretive»), Arcaya pp. 103 y 110 (sin templos ni culto comunal), Antolínez 1946 («no tienen sacerdocio»)'
+    - Del merejuy no consta quién lo hacía, cuándo, ni que uniera clanes; solo existe la frase de Esteves p. 53
+    - No hay reparto de playas por clan, ni número de aldeas por clan, ni nombre precontacto de ningún jefe de clan
+    - No hay tótems ni nombres de linaje caquetíos; hay la comparanda achagua (parentesco-022) y la conjetura de Esteves p. 13 sobre Adaure
+    - No hay residencia precontacto de Manaure; Todariquiba es el reasentamiento de 1527
+    - 'No están en el repo: Delmonte 1883, González Batista 1984 (el que cita Oliver; gonzalez-batista-nombre-de-coro es otra obra), Salas directo, el artículo de Antolínez 1944 (solo vía Morón), Acasio 2013, Martí 1774, Ponce y Vaccari 1977'
+    - 'Ningún mercado ni feria de sal costera antes de la Colonia: el Resguardo de Salinas de Tacuato y el puerto de la sal en Yaima son coloniales (Esteves pp. 62, 67); en los seis OCR de Esteves feria, mercado, trueque, rescate e intercambio solo dan el trueque de cuicas y timotes en Jurijurebo, sin cita'
+    - 'Ninguna fuente CITABLE da subgrupos de Paraguaná con nombre. Los que hay (Tacuatos, Corubos, Cayudes y Guasicures de Caseto, de la tribu de los Guaranaos) son de un cronista local de 2012 sin cita; ver niveles, GUARANAO_subgrupos_con_nombre'
+
+  avisos_regla_3:
+    - La geografía de los clanes es de Delmonte 1883, sobre papeles perdidos, vía González Batista y Oliver. Santa Ana y Moruy como PUEBLOS son coloniales (Esteves p. 35, fundación de 1538; Arcaya p. 327, San Nicolás de Moruy fundado a fines del XVI «con otros Caquetíos que antes ocupaban otros sitios de Paraguaná»)
+    - 'Los caciques de Paraguaná con nombre son de 1538 (carta de Bastidas): Don Alonso de Hurihurebo, Bonyata de Myraca y Esteban, principal de Cayarua. Sirven como plantilla de escala, no como norma del s. XV'
+    - '«Hijo y sucesor» en el funeral del díao (Oviedo) es léxico colonial: ver parentesco-002 (¿carnal o clasificatorio?)'
+    - Hermandades y Alcaldes gobernaban Santa Ana y Moruy en el s. XVIII (Oliver pdf 74). Son instituciones castellanas y NO se proyectan
+    - Los topónimos pesqueros (atalayas, ensenadas, «hoy aldea de pescadores») son de Esteves 1989, del s. XX. El nombre puede ser viejo; la función que describe es la de hoy
+    - Oviedo y Baños (1723) generaliza para toda la provincia de Venezuela; por la regla 4 no es dato costero
+
+# ══════════════════════════════════════════════════════════════════
+# 0. DECISIÓN CREATIVA DEL 2026-09-14 — dos subgrupos por nodo
+# ══════════════════════════════════════════════════════════════════
+decision_creativa_2026-09-14:
+  estado: DECIDIDA por Miguel
+  etiqueta: canon-simulacion
+  registro: 6-fusion/decisiones_tanda_2026-09-14.yaml
+  literal: '«Para esta era podríamos elegir dos subgrupos por nodo. Lo dejamos establecido como nuestra decisión creativa para efectos de la simulación.»'
+  manda_sobre: 'niveles (propuesta_de_reparto y GUARANAO_subgrupos_con_nombre), zonas_pesqueras e institucion_kapubana.caracter. Lo que más abajo lo contradiga queda como alternativa descartada, no se borra'
+  nodos:
+    GUARANAO:
+      - {subgrupo: los Tacuatos, sitio: Tacuato, lat: 11.708, lon: -69.841, zona_de_pesca: ZG2, apoyo: 'Petit 2012 («la constituían los Tacuato»); Esteves p. 62'}
+      - {subgrupo: los Cayudes, sitio: El Cayude, lat: 11.701, lon: -69.957, zona_de_pesca: ZG2, apoyo: 'Petit 2012; kayude, voz caquetía atestiguada'}
+    AMUAY:
+      - {subgrupo: los Guasicures de Caseto, sitio: Caseto, lat: 11.762, lon: -70.017, zona_de_pesca: ZA1, apoyo: 'Petit 2012; Esteves p. 30'}
+      - {subgrupo: los Corubos, sitio: 'Carirubana (hoy Punto Fijo)', lat: 11.694, lon: -70.218, fuente_coord: osm-kaketiana, zona_de_pesca: ZA1, apoyo: 'Petit 2012; Miguel, 2026-09-14: «los Corubos puede que hayan estado en lo que es ahora Carirubana»; Carirubana era «playa de pescadores» hasta 1926 (Medina Colina, aclaratorias)', hipotesis_del_nombre: 'la -ru- de Cari-ru-bana es el residuo que toponimo-148 no explica; leer ahí un eco de corubo («caparazón de moluscos», Esteves p. 34) es hipótesis, no etimología', aviso: 'Curubitos (Esteves p. 34), en la costa oriental, queda descartado por decisión'}
+  zonas_de_pesca: 'separadas y exclusivas: GUARANAO pesca el Golfete (ZG2) y AMUAY la costa oeste, que se amplía al sur hasta Carirubana y Punta Cardón (ZA1 más la orilla de ZG1). La laguna de Guaranao, a unos 3 km de Carirubana, ZA2, ZA3 y ZX quedan de fondo, sin agentes; la cercanía de la laguna, que da nombre al otro clan, queda como tensión declarada'
+  capubana: 'centro compartido que congrega y centraliza lo espiritual, por lo menos lo del Manaure, «no necesariamente como institución sino a nivel energético». Moruy, Chamuriana, Siraba y Maitiruma forman el conglomerado del cerro y no son subgrupos en escena'
+  manaure: >-
+    Decidido el 2026-09-14 (Miguel: «el Manaure tiene que venir de uno de los
+    clanes, puede ser de los moruy»). El Manaure sale de GUARANAO, de los
+    Moruyes de Moruy (linaje Kaira de D1). Su casa queda en Moruy, al pie del
+    Capubana que concentra lo espiritual suyo; que viva ahí y no en el nodo de
+    una esposa es inferencia de la élite avunculocal (keegan-1989: el
+    sobrino-heredero vive con el tío materno). Moruy entra en escena como la
+    casa del Manaure, no como un tercer subgrupo.
+  frontera: 'pasa a ser oeste (AMUAY) contra sureste (GUARANAO) alrededor del cerro; la línea interior de lat. 11.90 queda descartada'
+  elenco:
+    decidido: '2026-09-14. Miguel: «deben ser grupos familiares más grandes ya que si había poligamia» y «Vale, para esta primera está bien. Total lo que queremos es lograr ver si se forma la koiné»'
+    etiqueta: canon-simulacion
+    tres_capas:
+      familia: 'la maloca entera (40-50 personas por casa, Oliver vía Vespucci): 20-40 personas con nombre por casa en genealogia.yaml, casi todas con fondo: true'
+      agentes: 'unos 61. GUARANAO 37 (Tacuatos 12, Cayudes 12, casa del Manaure 13); AMUAY 24 (Guasicures de Caseto 12, Corubos 12), o 27 si el diao de clan suma una esposa'
+      roster_que_rota: 'unos 24 (jefes, esposas principales, herederos y oficios), 6 por turno, como el roster de 23 de la era 1; el resto habla cuando un evento lo llama'
+    casa_de_subgrupo:
+      - 'apopo con 2 esposas traídas de otro subgrupo'
+      - 'matriarca'
+      - '2 hermanas con hijos'
+      - 'hermano adulto'
+      - 'esposo entrante del otro nodo'
+      - '2 jóvenes'
+      - 'anciano con oficio'
+      - 'niño'
+    casa_del_manaure:
+      - 'Manaure'
+      - '3-4 esposas (Nubiri-sha de AMUAY, una tacuata, una cayude)'
+      - 'Itana-sha'
+      - '2 sobrinos candidatos'
+      - '2 hijos que no heredan'
+      - 'boratio mayor'
+      - 'maestra del merejuy'
+    poligamia:
+      que: 'de jefes: el Manaure y, por decisión, los apopos y el diao de clan; de la gente común no hay dato'
+      apoyo: 'Oliver cap. 3, el pasaje de la poligamia de Manaure (pp. 260-261 según parentesco-015): solo Manaure sin ambigüedad; «it is probable that local caciques were polygamous as well»; las esposas de Manaure se mudaron a su pueblo'
+      regla_3: 'dato del contacto (c. 1527), proyectado al s. XV por decisión'
+      consecuencia: 'excedente de jóvenes solteros (parentesco-030): el papel para los agentes guerreros que no encajaban'
+    dos_canales_de_contacto: 'entre la gente común, los esposos que se mudan al nodo de la mujer (matrilocalidad); en las casas de élite, las esposas que se mudan a la casa del jefe'
+    por_que_un_roster_de_24: 'la pregunta de la era es si se forma la koiné. Con un roster del tamaño del de la era 1, cada agente habla con la misma frecuencia (cada 2 días simulados) y el costo por turno no cambia, así que la diferencia la pone la estructura de dos nodos y no la cantidad de voces'
+    queda_para_el_casting: 'qué linaje de D1 va en cada subgrupo (Kaira ya está en GUARANAO con el Manaure) y el dossier de fuentes por agente'
+
+# ══════════════════════════════════════════════════════════════════
+# 1. LOS NIVELES — de la polity a la casa
+# ══════════════════════════════════════════════════════════════════
+niveles:
+
+  - nivel: 0
+    nombre: polity costera
+    titulo: manaure (título laudatorio) y diao principal
+    hechos:
+      - afirmacion: >-
+          Paramount único que es a la vez gran chamán y controla o predice los
+          fenómenos naturales. Lo llevan siempre en hamaca con un séquito
+          («possibly as his naborias») y lo distinguen oro y collares de concha.
+        etiqueta: atestiguado
+        capa: contacto (s. XVI)
+        procedencia: {obra: oliver-1989-cap3, pagina: '251; pdf 84 (impresa sin verificar)'}
+      - afirmacion: >-
+          Ampíes (c. 1520), en primario: el gran cacique «se haze adorar...
+          dando a entender a los indios q el da los temporales».
+        etiqueta: atestiguado
+        capa: contacto
+        procedencia: {obra: velasco-2015-resistencia, pagina: 'Ampíes, folio 14'}
+      - afirmacion: >-
+          Su poder «still had to operate through a council of second-order
+          chiefs»; el territorio se subdividía en unidades menores, quizá
+          controladas por jefes de segundo orden.
+        etiqueta: reconstruido
+        procedencia: {obra: oliver-1989-cap3, pagina: 'pdf 107, resumen del capítulo (impresa sin verificar)'}
+      - afirmacion: >-
+          «Multitud de cacicazgos independientes» sometidos al «gran señor de
+          Paraguaná», depositario de la autoridad religiosa y capaz de hacer
+          abundar las sementeras.
+        etiqueta: atestiguado
+        capa: historiografía del s. XX, tres eslabones (Salas, vía Antolínez 1944, vía Morón)
+        procedencia: {obra: moron-2012-petroglifos}
+        aviso: Antolínez 1946 se contradice («no tienen sacerdocio»); ver institucion_kapubana.caracter
+      - afirmacion: >-
+          Diao es título genérico de señor principal; Oviedo lo aplica al jefe
+          que tiene caciques sujetos. Oliver lo lee como «second-order and
+          paramount chiefs».
+        etiqueta: atestiguado
+        procedencia: {obra: oliver-1989-cap3, pagina: 'pdf 88, citando Oviedo [6]:41'}
+    unidades:
+      comun_a_los_dos_nodos: >-
+        Manaure (Tier I actual). Dónde reside en el s. XV NO está dicho:
+        Todariquiba es el reasentamiento de 1527 (Oliver p. 251), y Miguel
+        advirtió el 2026-09-01 que «que ahí se fundara Coro no implica que
+        Manaure residiera ahí». Ver preguntas_para_miguel.
+    etiqueta_del_nivel: atestiguado (con capa de contacto)
+
+  - nivel: 1
+    nombre: clan (sub-grupo supra-aldea)
+    titulo_propuesto: diao de segundo orden
+    hechos:
+      - afirmacion: >-
+          Paraguaná estaba dividida en dos territorios de dos sub-grupos
+          caquetíos, Amuayes y Guaranaos. Cada uno tenía sus propias cabezas de
+          playa con zonas de pesca, y cabe suponer parcelas agrícolas igual de
+          definidas.
+        etiqueta: atestiguado
+        capa: s. XVI, con cadena larga (Delmonte 1883 → González Batista 1984 → Oliver)
+        procedencia: {obra: oliver-1989-cap3, pagina: '275'}
+      - afirmacion: >-
+          Los derechos territoriales mutuamente excluyentes implican lazos de
+          parentesco o alianza dentro de cada grupo y UN jefe superior por clan,
+          los dos integrados en la polity de Manaure.
+        etiqueta: reconstruido
+        procedencia: {obra: oliver-1989-cap3, pagina: '276'}
+      - afirmacion: >-
+          1538: «otro Cacique de la Provincia de Paraguana que le dize Don
+          Alonso y su pueblo se dize Hurihurebo». Es el único jefe con alcance de
+          «provincia» nombrado en Paraguaná, y su pueblo cae en el territorio
+          AMUAY de #122.
+        etiqueta: atestiguado
+        capa: colonial (1538)
+        regla_3: plantilla de escala; no dice cómo era el jefe de clan del s. XV
+        procedencia: {obra: velasco-2015-resistencia, pagina: 'carta de Bastidas, AGI Legajo 218 f. 2 (transcrita en 6-fusion/velasco_primarios_agi.yaml)'}
+      - afirmacion: >-
+          La tradición popular nombra dos tribus en la península: «Amuayes... junto
+          con los Moruyes».
+        etiqueta: hipotetico
+        deuda: sin-procedencia
+        apoyo_en_repo: toponimia_paraguana_miguel.yaml §cola_de_etimologia_coloquial (amuay), divulgación web
+        nota: bajo la lectura de #122 los Moruyes son los Guaranaos; bajo Delmonte literal serían los Amuayes reasentados
+    unidades:
+      GUARANAO:
+        territorio: 'centro-sur: el Cerro Santa Ana y sus faldas sur y oeste, Moruy, Chamuriana, hasta la laguna de Guaranao y la costa del Golfete'
+        ancla_decision: '#122'
+        etiqueta: reconstruido
+        nombre: >-
+          guaranao ~ waranao. `waranao` 'salado, ácido' es voz caquetía
+          atestiguada del lexicón (toponimia_paraguana_miguel.yaml, lista del
+          2026-09-10), y Arcaya p. 22 dice que las salinas más importantes de
+          Paraguaná son «las de Guaranao». Lectura HIPOTÉTICA: el clan de las
+          salinas del suroeste. Aviso onomástico: no confundir con el pez
+          waranaro de Waranaro-sha.
+        jefe: 'diao de segundo orden — HUECO, sin agente'
+      AMUAY:
+        territorio: 'norte y costa oeste: Cayerúa y el interior norte, la costa norte hasta el Cabo San Román y la costa oeste de Los Taques hasta la bahía de Amuay'
+        ancla_decision: '#122'
+        etiqueta: reconstruido
+        nombre: >-
+          amuay (toponimo-090). Esteves p. 14 lo lee 'cavidad subterránea, cueva
+          grande' por las cuevas cercanas (inferencia fonética sin documento);
+          la tradición popular dice 'región de los vientos y las aguas
+          encontradas' (etimología popular). Ninguna despeja con morfemas del
+          canon.
+        jefe: 'diao de segundo orden — HUECO, sin agente; plantilla colonial: Don Alonso de Hurihurebo (1538)'
+      frontera:
+        propuesta: >-
+          Una línea interior hacia lat. 11.90, entre Moruy (11.822) y Cayerúa
+          (11.986), con Adaure, Cocodite y Pueblo Nuevo encima. Por la costa
+          oeste, la frontera caería entre la bahía de Amuay (11.775) y la
+          laguna de Guaranao (11.682), en Punta Judibana (11.745). La costa
+          oriental media (Adícora, Baraived, Miraca) queda SIN ASIGNAR.
+        etiqueta: canon-simulacion
+        deuda: sin-procedencia
+        apoyo: coordenadas de osm-kaketiana; #122
+
+  - nivel: 2
+    nombre: subgrupo (aldea con su tierra y su playa)
+    titulo_propuesto: apopo (jefe de parcialidad pequeña)
+    hechos:
+      - afirmacion: '«Apopo: nombre de jefe de parcialidad pequeña.»'
+        etiqueta: atestiguado
+        procedencia: {obra: zavala-reyes-2015, pagina: '65, #12'}
+      - afirmacion: >-
+          La aldea tenía un «chief» principal menor, «who probably was the head
+          of a lineage group».
+        etiqueta: reconstruido
+        procedencia: {obra: oliver-1989-cap3, pagina: 'pdf 107 (impresa sin verificar)'}
+      - afirmacion: >-
+          Aldeas «medianas»: 150-200 habitantes en una estimación y 200-500 en
+          el resumen. No estaban nucleadas; se dispersaban por el llano costero.
+        etiqueta: reconstruido
+        procedencia: {obra: oliver-1989-cap3, pagina: 'pdf 80 y pdf 97 (impresas sin verificar)'}
+      - afirmacion: >-
+          Paraguaná es la excepción al patrón costero, porque no tiene ríos:
+          «the settlements are concentrated around the Santa Ana (extinct)
+          volcano, which provides the water necessary for agriculture, and where
+          the soils are most suited for farming». Y «Moruy and Santa Ana» están
+          entre las aldeas más grandes del s. XVI localizadas arqueológicamente.
+        etiqueta: atestiguado
+        capa: arqueología y crónica del s. XVI según Oliver
+        procedencia: {obra: oliver-1989-cap3, pagina: 'pdf 80 (impresa sin verificar)'}
+      - afirmacion: >-
+          En 1556 existían en Paraguaná Santa Ana, Moruy, Miraca y Cayeruba.
+        etiqueta: atestiguado
+        capa: colonial
+        procedencia: {obra: esteves-1989, pagina: '52, citando a Arcaya'}
+      - afirmacion: >-
+          Tradición oral: «El Cacique de la Buena Vara», elegido por los
+          comarcanos para medir las tierras de labranza y ante quien acudían a
+          dirimir querellas posesorias.
+        etiqueta: retro-abstraido
+        procedencia: {obra: esteves-1989, pagina: '24-25 (Buenevara)'}
+        valor: una figura de árbitro de linderos entre aldeas; ver oficio of-13
+      - afirmacion: >-
+          Etimología popular de Baracara, entre Santa Ana y Moruy: una
+          «expresión insolente» de un cacique que le disputaba al vecino
+          «ciertos fueros jurisdiccionales».
+        etiqueta: retro-abstraido
+        procedencia: {obra: esteves-1989, pagina: '19'}
+        valor: la tradición recuerda fronteras disputadas entre caciques vecinos justo en la frontera interior de GUARANAO
+    propuesta_de_reparto:
+      etiqueta: canon-simulacion
+      criterio: >-
+        Tres subgrupos por clan, cada uno con una FUNCIÓN económica y ritual
+        distinta —aldea madre, aldea del cerro y aldea de costa—, para que el
+        elenco se atomice por oficio y no solo por linaje. Es la forma mínima en
+        que cada clan tiene a la vez tierra, agua o monte, y playa.
+      GUARANAO:
+        - id: G1
+          nombre: Chamuriana (el sitio de Santa Ana)
+          coordenadas: {lat: 11.782, lon: -69.947, fuente: osm-kaketiana, nota: 'poblado moderno de Santa Ana'}
+          funcion: el agua que baja del cerro y los conucos de la falda sur; sede propuesta del diao guaranao
+          evidencia:
+            - dato: Sitio FAL-154 «Santa Ana (El Cerro)», con tres dataciones precontacto (cal. A.D. 1160-1451) y cerámica Late Urumaco «still lavishly decorated»
+              etiqueta: atestiguado
+              procedencia: {obra: oliver-1989-cap4, pagina: 'Apéndice E FAL-154; Tabla 15'}
+              apoyo_en_repo: asentamientos.yaml nodo-024
+            - dato: «Antigua aldea indígena en cuyas cercanías los españoles fundaron en 1538 el pueblo de Santa Ana de Paraguaná»
+              etiqueta: atestiguado
+              procedencia: {obra: esteves-1989, pagina: '35'}
+            - dato: «elegida por los nativos debido a la abundancia de agua dulce que bajaba del cerro»
+              etiqueta: hipotetico
+              deuda: sin-procedencia
+              apoyo_en_repo: toponimia_paraguana_miguel.yaml (Chamuriana)
+            - dato: '«the village of Santa Ana (of Pipiacoa)» en los juicios de residencia de 1538-1546: ¿un segundo nombre nativo del sitio?'
+              etiqueta: atestiguado
+              capa: colonial
+              procedencia: {obra: oliver-1989-cap3, pagina: 'pdf 79, citando Ponce y Vaccari 1977:241'}
+            - dato: Hay «apenas una fuente intermitente en el cerro de Santa Ana»
+              etiqueta: atestiguado
+              procedencia: {obra: arcaya-1920, pagina: '22'}
+        - id: G2
+          nombre: Moruy
+          coordenadas: {lat: 11.822, lon: -69.983, fuente: osm-kaketiana}
+          funcion: el merejuy y la chicha ritual; alfarería; aldea «belicosa»
+          evidencia:
+            - dato: Sitio FAL-149, Dabajuroide sin fechar
+              etiqueta: atestiguado
+              procedencia: {obra: oliver-1989-cap4, pagina: 'Apéndice E FAL-149'}
+            - dato: «alteración de merejuy, cierta levadura o preparación agria... [para] la chicha embriagadora, que consumían en ceremonias religiosas»
+              etiqueta: hipotetico
+              procedencia: {obra: esteves-1989, pagina: '53'}
+              nota: es una etimología del autor, sin cita; el dato etnográfico dentro de ella no tiene segunda fuente
+            - dato: «los indios de Moruy eran los más belicosos de Paraguaná», con testimonios de peleas contra los españoles
+              etiqueta: atestiguado
+              capa: colonial
+              procedencia: {obra: esteves-1989, pagina: '53'}
+            - dato: San Nicolás de Moruy se fundó a fines del XVI «con otros Caquetíos que antes ocupaban otros sitios de Paraguaná»
+              etiqueta: atestiguado
+              capa: colonial
+              procedencia: {obra: arcaya-1920, pagina: '327'}
+              consecuencia: apoya la lectura de #122; el pueblo de Moruy es reducción, y el sitio precontacto queda por fechar
+          satelites:
+            - {nombre: Guacurebo, lat: 11.843, lon: -69.954, dato: 'en 1881 «toda Guacurebo pertenecía a Moruy»', procedencia: {obra: esteves-1989, pagina: '38'}, etiqueta: atestiguado, capa: s. XIX}
+            - {nombre: Abudure, lat: 11.803, lon: -70.015, dato: 'aldea al SO de Moruy; «sitio de donde se extrae barro»', procedencia: {obra: esteves-1989, pagina: '11'}, etiqueta: reconstruido, valor: 'barro para las múcuras de la chicha (hipotético)'}
+            - {nombre: Varacara (Baracara), lat: 11.798, lon: -69.974, dato: 'entre Santa Ana y Moruy; leyenda de caciques en disputa de fueros', procedencia: {obra: esteves-1989, pagina: '19'}, etiqueta: retro-abstraido}
+            # Segunda vuelta (2026-09-13): las demás rancherías que Esteves da como del
+            # municipio Moruy. Capa s. XIX-XX: son del padrón de 1881, no aldeas del s. XV.
+            # Sirven para atomizar G2 en casas con sitio y nombre, no como dato de asentamiento.
+            - {nombre: Yauquiba (Yabuquiba), dato: 'población del municipio Moruy; 1881: 26 casas, 199 vecinos, la mayor después de la cabecera', procedencia: {obra: esteves-1989, pagina: '67'}, etiqueta: atestiguado, capa: s. XIX, canon: toponimo-105}
+            - {nombre: Guacujúa, dato: 'aldea del municipio Moruy; 1881: 14 casas, 97 vecinos', procedencia: {obra: esteves-1989, pagina: '38'}, etiqueta: atestiguado, capa: s. XIX, canon: 'toponimo-128, descartado como etimología, no como aldea'}
+            - {nombre: Barunú (Parunu en el mapa vivo), dato: 'aldea al norte de Moruy; 1881: 5 casas, 29 habitantes', procedencia: {obra: esteves-1989, pagina: '23'}, etiqueta: atestiguado, capa: s. XIX, canon: toponimo-103}
+            - {nombre: Jarayadito (Uarayadito en el mapa vivo), dato: 'aldea del municipio Moruy, junto a Moruy y Cayerúa', procedencia: {obra: esteves-1989, pagina: '46'}, etiqueta: atestiguado, capa: s. XIX, canon: toponimo-102}
+            - {nombre: Tumarusa, dato: 'aldea del municipio Moruy; 1881: 6 casas, 39 vecinos; «se nos ha informado que Tumarure era el apellido de un cacique»', procedencia: {obra: esteves-1989, pagina: '64'}, etiqueta: atestiguado, capa: 's. XIX; lo del cacique es noticia de informante del s. XX'}
+            - {nombre: Tacaduto, dato: 'aldea del municipio Moruy; 1881: 4 casas, 17 vecinos', procedencia: {obra: esteves-1989, pagina: '61'}, etiqueta: atestiguado, capa: s. XIX}
+            - {nombre: Saguatumo, dato: 'lugar del municipio Moruy; 1881: 2 casas, 8 vecinos; «el nombre es antiquísimo»', procedencia: {obra: esteves-1989, pagina: '58'}, etiqueta: atestiguado, capa: s. XIX}
+            - {nombre: Supideo, dato: 'lugar del municipio Moruy; «no tenemos más noticias»', procedencia: {obra: esteves-1989, pagina: '61'}, etiqueta: atestiguado, capa: s. XX}
+            - {nombre: Tequeguacare, dato: aldea del municipio Moruy, procedencia: {obra: esteves-1989, pagina: '62'}, etiqueta: atestiguado, capa: s. XX, canon: 'toponimo-129, descartado como etimología'}
+          escala_y_oficios_del_municipio:
+            - {dato: 'en 1881 todo el municipio contaba 213 casas y 1.349 vecinos y «ya había perdido la populosidad que ostentaba en los tiempos coloniales»', procedencia: {obra: esteves-1989, pagina: '53'}, etiqueta: atestiguado, capa: s. XIX}
+            - {dato: 'una de las comunidades de Paraguaná «con más apego a las costumbres de sus antepasados»; conserva la cerámica, las silletas y bernegales y el jabón de la tierra', procedencia: {obra: esteves-1989, pagina: '53'}, etiqueta: retro-abstraido, valor: 'la alfarería de G2 tiene una continuidad de oficio registrada en el s. XX'}
+          nombres_de_casa_candidatos:
+            pedido: '«Habíamos mencionado no sé en dónde algunos nombres de subgrupos de parte de los Moruyes» (Miguel, 2026-09-13). Los subgrupos con nombre están en GUARANAO_subgrupos_con_nombre; aquí van los apellidos, que sirven para nombrar casas dentro del centro'
+            lo_que_hay:
+              - {dato: 'en Moruy «los apellidos no han sufrido deformaciones acomodaticias»: Caguao, Cuauro, Mabo, Guarecuco, Cotopo', procedencia: {obra: esteves-1989, pagina: '53'}, etiqueta: atestiguado, capa: 's. XX, apellidos vivos'}
+              - {dato: 'apellidos paraguaneros «que devienen de nuestros naturales»: Caguado, Cauro, Gotopo, Guanipa, Guarecuco, Guariato, Mabo, Manaure y Timaure', procedencia: {obra: medina-colina-sxx, pagina: '328'}, etiqueta: atestiguado, capa: s. XX, nota: 'los cinco de Esteves reaparecen (Caguao ~ Caguado, Cuauro ~ Cauro, Cotopo ~ Gotopo, Guarecuco, Mabo); no está verificado que Medina escriba sin haber leído a Esteves'}
+              - {dato: 'la «etnia Mabo» de Guacurebo, con representantes', procedencia: {obra: velasco-2015-resistencia}, etiqueta: atestiguado, capa: s. XXI, nota: 'Guacurebo era de Moruy en 1881: el apellido y la ranchería satélite coinciden'}
+              - {dato: '«Tumarure era el apellido de un cacique» (entrada Tumarusa)', procedencia: {obra: esteves-1989, pagina: '64'}, etiqueta: retro-abstraido}
+              - {dato: 'la familia en -aure, «apellidos de la gran familia caquetía»: Adaure, Timaure, Yaraure, Chunaure, Manaure; y los «indios adaures», «tribu belicosa» según Hill Peña, con pleitos por sus tierras contra los españoles', procedencia: {obra: esteves-1989, pagina: '13'}, etiqueta: atestiguado, capa: 'colonial (los pleitos) y s. XX (los apellidos)', nota: 'Adaure (11.872, -69.988; 87 casas en 1881) cae al norte de Moruy, dentro de la franja de frontera propuesta'}
+            regla_3: >-
+              Son apellidos vivos. El canon ya tiene un caso de nombre indígena que
+              pasa a apellido (el título manaure en Don Luis Martínez Manaure), pero
+              ninguno de estos está documentado como nombre de linaje o de
+              parcialidad del s. XV. Son semilla onomástica, nunca dato.
+            propuesta:
+              etiqueta: hipotetico
+              que: >-
+                Atomizar G2 en casas con nombre propio sacado de esos apellidos y
+                anclado a una ranchería del padrón: Mabo en Guacurebo, Tumarure en
+                Tumarusa, y Cuauro, Caguao, Guarecuco y Cotopo repartidos entre la
+                cabecera, Yauquiba y Guacujúa. Los Adaures, como subgrupo propio en
+                la frontera norte de Moruy: la tradición los nombra como «tribu».
+                Si conviven con los linajes de D1 (Corie, Buio) o los sustituyen
+                en Moruy lo decide Miguel (P15).
+        - id: G3
+          nombre: Guaranao de costa (laguna de Guaranao y orilla del Golfete)
+          coordenadas: {lat: 11.682, lon: -70.196, fuente: osm-kaketiana, nota: 'Laguna de Guaranao'}
+          funcion: pesca de laguna y Golfete; las salinas de Guaranao
+          evidencia:
+            - dato: las salinas más importantes de Paraguaná son las de Guaranao
+              etiqueta: atestiguado
+              capa: s. XX
+              procedencia: {obra: arcaya-1920, pagina: '22'}
+            - dato: ninguna aldea precontacto atestiguada en esta costa; la aldea es posición del proyecto
+              etiqueta: canon-simulacion
+              deuda: sin-procedencia
+      GUARANAO_subgrupos_con_nombre:
+        recuperado: '2026-09-14, del barrido web del 2026-09-10, a pedido de Miguel («revisa en nuestro historial, ya que lo habíamos conversado»)'
+        dato:
+          cita: '«Pernotaban indígenas caquetíos de la tribu de los guaranaos que la constituían los Tacuato, los cuales poblaban las costas y el golfete de Coro conjuntamente con los corubos, los cayudes y los guasicures de Caseto.»'
+          quien: 'Osman Petit, cronista de Miraca, «Tacuato», blog Centro de Historia de Paraguaná, 18-08-2012 (http://centrodehistoriadeparaguana.blogspot.com/2012/08/tacuato.html)'
+          etiqueta: retro-abstraido
+          deuda: sin-procedencia
+          nota: 'no cita fuente; el resto de la entrada sigue a Esteves p. 62 (Martí 1773 y el Resguardo de Salinas) y remite al cronista local Osteicoechea. Hay que perseguir la lista hasta Hernández Baño 1984 o Arcaya'
+          apoyo_en_repo: '6-fusion/barrido_toponimos_web_2026-09-10.yaml (Tacuato; la_lista_de_clanes_confirmada)'
+        lectura: >-
+          Es la tradición que Miguel recordaba. Nombra a los Guaranaos como
+          tribu mayor y le da subgrupos con nombre, y los cuatro nombres son
+          topónimos vivos de Paraguaná, dos con voz caquetía atestiguada. Con
+          la lectura de #122 (los Moruyes son los Guaranaos), son los subgrupos
+          de los Moruyes.
+        cero_verificado: 'guasicure y corubo como grupo no aparecen en ninguna fuente cruda del repo (raíces guas[ie]cur, guaz[ie]cur, coru[bv]o en fuentes_caquetios/*.txt: solo el Curubitos de Esteves y los fundos Cayude)'
+        subgrupos:
+          - nombre: los Tacuatos
+            sitio: {lugar: Tacuato, lat: 11.708, lon: -69.841, fuente_coord: osm-kaketiana}
+            datos:
+              - {dato: 'pueblo «muy antiguo», con iglesia en 1773; 1881: 37 casas, 237 vecinos; Resguardo de Salinas colonial para vigilar el comercio de sal', procedencia: {obra: esteves-1989, pagina: '62'}, etiqueta: atestiguado, capa: 'colonial y s. XIX'}
+              - {dato: 'la Playa Prudencio, «excelente» para la pesca', etiqueta: retro-abstraido, deuda: sin-procedencia, fuente_web: 'Petit 2012'}
+            en_la_estructura: 'el subgrupo que «constituye» la tribu: aldea de la orilla del Golfete, con el trueque de la sal hacia Coro (ZG2). Ocupa el lugar de G3'
+          - nombre: los Cayudes
+            sitio: {lugar: El Cayude, lat: 11.701, lon: -69.957, fuente_coord: osm-kaketiana}
+            datos:
+              - {dato: 'fundo pecuario al oeste de Tacuato', procedencia: {obra: esteves-1989, pagina: '30-31 (OCR dañado, sin verificar)'}, etiqueta: atestiguado, capa: s. XX}
+              - {dato: 'kayude «guanábano silvestre» es voz caquetía atestiguada: el grupo lleva nombre de árbol', etiqueta: atestiguado, apoyo_en_repo: 'curiana_lexicon.py (kayude); barrido_toponimos_web_2026-09-10.yaml'}
+            en_la_estructura: 'la otra aldea de la orilla del Golfete, al oeste de los Tacuatos (ZG2)'
+          - nombre: los Guasicures de Caseto
+            sitio: {lugar: Caseto, lat: 11.762, lon: -70.017, fuente_coord: osm-kaketiana}
+            datos:
+              - {dato: 'aldea del municipio Santa Ana; 1881: 45 casas, 303 vecinos; caseto es una malva (Malvastrum spicatum)', procedencia: {obra: esteves-1989, pagina: '30'}, etiqueta: atestiguado, capa: s. XIX, canon: toponimo-088}
+              - {dato: 'kaseto «planta herbácea» es voz caquetía atestiguada; guasicure no tiene glosa en el repo', etiqueta: atestiguado, apoyo_en_repo: 'curiana_lexicon.py (kaseto)'}
+            en_la_estructura: 'aldea del interior entre Moruy y la laguna de Guaranao: el subgrupo natural de la laguna y sus salinas (ZG1)'
+          - nombre: los Corubos
+            sitio: {lugar: 'Curubitos, en La Boca del Caño, cerca de Santa Rita (municipio Adícora)', lat: null, lon: null, nota: 'el Corubo del mapa vivo (11.155, -70.376) es un caserío de Falcón occidental y no sirve'}
+            datos:
+              - {dato: '«Cuzubitos. Podría ser Curubitos, diminutivo de Corubo, caparazón de moluscos. El nombre aparece en los antiguos mapas en el punto costeño donde está localizada La Boca del Caño, lugar de pesquería cercano a Santa Rita»', procedencia: {obra: esteves-1989, pagina: '34 (pie del OCR)'}, etiqueta: atestiguado, capa: 'mapas antiguos y s. XX'}
+            en_la_estructura: >-
+              Si Curubitos es su huella, los Corubos pescaban en la costa
+              oriental, junto a ZA3 y a la zona en disputa ZX: serían la
+              presencia guaranaa en la costa que #122 dejó sin asignar. Choca
+              con la crónica, que los pone en «las costas y el golfete». Queda
+              abierto (P15).
+        propuesta_de_reajuste:
+          etiqueta: canon-simulacion
+          que: >-
+            GUARANAO deja los tres subgrupos definidos por función y pasa a un
+            centro y cuatro subgrupos con nombre de la tradición. El centro son
+            Moruy y Chamuriana, los Moruyes, con el merejuy y el agua del cerro.
+            En la costa: los Tacuatos y los Cayudes en el Golfete (ZG2), los
+            Guasicures de Caseto en la laguna y sus salinas (ZG1) y los Corubos
+            en la costa oriental (ZX). AMUAY sigue sin subgrupos con nombre.
+          consecuencia: 'rompe la simetría de tres por tres; la asimetría refleja lo que la tradición recuerda, no un dato del s. XV'
+      AMUAY:
+        - id: A1
+          nombre: Cayerúa (Cayerda, Cayeruba, Cayarua)
+          coordenadas: {lat: 11.986, lon: -69.959, fuente: osm-kaketiana}
+          funcion: aldea madre del clan; cementerio antiguo; conucos del interior norte; sede propuesta del diao amuay
+          evidencia:
+            - dato: 'Delmonte: primer asiento de los Amuayes'
+              etiqueta: atestiguado
+              capa: s. XVI, cadena larga
+              procedencia: {obra: oliver-1989-cap3, pagina: '276'}
+            - dato: Sitio FAL-143, Dabajuroide; «el primer sitio de Paraguaná con evidencia precolombina» (cementerio y cerámica)
+              etiqueta: atestiguado
+              procedencia: {obra: oliver-1989-cap4, pagina: 'Apéndice E FAL-143'}
+              apoyo: 'esteves-1989 p. 30; asentamientos.yaml nodo-025'
+            - dato: '1538: «Esteban (?) principal de Cayarua»'
+              etiqueta: atestiguado
+              capa: colonial
+              procedencia: {obra: velasco-2015-resistencia, pagina: 'carta de Bastidas, AGI Legajo 218 f. 2'}
+            - dato: 'Bustillos 1760: todo el Moruy «con todo su Continenti de savanetas» por la posesión de San Juan de Cayarba'
+              etiqueta: atestiguado
+              capa: colonial (1760)
+              procedencia: {obra: oliver-1989-cap3, pagina: '276, n. 113'}
+              consecuencia: en 1760 las tierras de Moruy y de Cayerúa se defendían juntas; es otra razón por la que el reparto de #122 es frontera y no muro
+          satelites:
+            - {nombre: Buenevara, lat: 11.978, lon: -69.988, dato: 'el «Cacique de la Buena Vara», medidor de tierras', procedencia: {obra: esteves-1989, pagina: '24-25'}, etiqueta: retro-abstraido}
+            - {nombre: Pueblo Nuevo, lat: 11.948, lon: -69.921, etiqueta: canon-simulacion, deuda: sin-procedencia}
+        - id: A2
+          nombre: Hurihurebo (Hurehurebo, Jurijurebo)
+          coordenadas: {lat: 12.049, lon: -69.94, fuente: osm-kaketiana, nota: 'Jurujurebo; cerca de El Vínculo'}
+          funcion: aldea de la costa norte; pescado seco y trueque; la de mayor rango documentado del clan
+          evidencia:
+            - dato: '1538: pueblo de Don Alonso, «Cacique de la Provincia de Paraguana»'
+              etiqueta: atestiguado
+              capa: colonial
+              procedencia: {obra: velasco-2015-resistencia, pagina: 'carta de Bastidas'}
+            - dato: «Señor de la ciudad Hurehurebo», y el pueblo aparece en la lista de las once ciudades
+              etiqueta: atestiguado
+              capa: colonial (1589)
+              procedencia: {obra: castellanos-elegias, pagina: 'línea 48166 del txt; lista en 48246 ss.'}
+            - dato: «todavía hay vestigios de su cementerio»
+              etiqueta: atestiguado
+              procedencia: {obra: esteves-1989, pagina: '47'}
+            - dato: una «industria indígena» de pulpa de pescado salado y tostado al sol, envasada en totumos, que atraía caravanas de cuicas y timotes con tejidos; conchales en el sitio
+              etiqueta: hipotetico
+              procedencia: {obra: esteves-1989, pagina: '71-78 (página exacta sin verificar)'}
+              nota: reconstrucción del autor sin cita; los conchales son observables, el comercio con los andinos no tiene fuente
+            - dato: 'la leyenda de Judibana, hija de Manaure casada con el señor de Jurijurebo'
+              etiqueta: retro-abstraido
+              capa: colonial (1525-1526)
+              apoyo_en_repo: toponimos.yaml toponimo-075, velasco_primarios_agi.yaml
+              valor: 'como forma, no como hecho: una alianza matrimonial entre la casa del paramount y el señor de un clan'
+        - id: A3
+          nombre: Amuay de costa (bahía de Amuay y costa oeste de Los Taques)
+          coordenadas: {lat: 11.775, lon: -70.241, fuente: osm-kaketiana, nota: 'poblado de Amuay'}
+          funcion: pesca de la costa oeste (Golfo de Venezuela); cuevas; puerta hacia la Guajira
+          evidencia:
+            - dato: «en las cercanías de Amuay hay unas cuevas naturales que debieron ser habituales residencias de los nativos»
+              etiqueta: hipotetico
+              procedencia: {obra: esteves-1989, pagina: '14'}
+            - dato: ninguna aldea precontacto atestiguada; la aldea es posición del proyecto
+              etiqueta: canon-simulacion
+              deuda: sin-procedencia
+      sin_asignar_costa_oriental:
+        - {nombre: Miraca, lat: 11.877, lon: -69.865, dato: '1538: Bonyata «Cacique de Myraca»; Castellanos: «ciudad de grandísimo momento»', procedencia: {obra: velasco-2015-resistencia, pagina: 'carta de Bastidas'}, etiqueta: atestiguado, capa: colonial, apoyo_en_repo: 'asentamientos.yaml nodo-031'}
+        - {nombre: Adaure, lat: 11.872, lon: -69.988, dato: '1881: 87 casas; «tribu belicosa» (Hill Peña); quizá «la Dara fuera el ave totémica de la tribu»', procedencia: {obra: esteves-1989, pagina: '13'}, etiqueta: hipotetico}
+        - {nombre: Baraived, lat: 11.887, lon: -69.853, procedencia: {obra: esteves-1989, pagina: '21'}, etiqueta: atestiguado, capa: s. XIX}
+        - {nombre: Adícora, lat: 11.94, lon: -69.809, etiqueta: reconstruido, procedencia: {obra: zavala-reyes-2015}, nota: 'asentamientos.yaml nodo-012: solo el nombre está atestiguado'}
+      recinto_del_cerro:
+        nota: no pertenece a ningún subgrupo; es del Kapubana (ver institucion_kapubana.lugares)
+        etiqueta: canon-simulacion
+
+  - nivel: 3
+    nombre: linaje matrilineal
+    titulo: sin título caquetío atestiguado para la cabeza de linaje; en lo político la cabeza es el apopo, y en lo doméstico la matriarca y el tío materno
+    hechos:
+      - afirmacion: pertenencia, nombre y herencia por línea materna
+        etiqueta: reconstruido
+        procedencia: {obra: jahn-1927, pagina: '172 (wayuu)'}
+        apoyo_en_repo: parentesco-005, parentesco-023 (el cúmulo wayuu, taíno, lokono y achagua)
+      - afirmacion: exogamia de parcialidad; la mujer ha de ser de una parcialidad distinta a la del marido
+        etiqueta: reconstruido
+        procedencia: {obra: jahn-1927, pagina: '172 (wayuu)'}
+      - afirmacion: linajes con nombre de animal, cada uno con casa comunal propia dentro de la aldea
+        etiqueta: reconstruido
+        deuda: sin-procedencia
+        apoyo_en_repo: parentesco-022 (comparanda achagua, etnografía secundaria)
+      - afirmacion: '«es posible que las diferencias del tatuage correspondiesen más bien a distinciones de clanes»'
+        etiqueta: atestiguado
+        nota: es intuición del autor, no dato de cronista
+        procedencia: {obra: arcaya-1920, pagina: '127'}
+      - afirmacion: élite avunculocal; el tío materno introduce a los varones y el sobrino-heredero vive junto a él
+        etiqueta: reconstruido
+        procedencia: {obra: keegan-1989}
+      - afirmacion: los 6 linajes de D1 (Buio, Chiriware, Corie, Paugis, Kaira, Warana)
+        etiqueta: canon-simulacion
+        decision: D1 (2026-09-01); tótem y nombre de Kaira y Warana siguen abiertos
+        apoyo_en_repo: 3-mundo/corpus/genealogia.yaml
+    regla_de_residencia_propuesta:
+      etiqueta: canon-simulacion
+      regla: >-
+        Por matrilocalidad el linaje queda DENTRO de un clan: sus mujeres no se
+        mueven y sus hombres casados salen. Por eso el contacto permanente entre
+        nodos son los esposos (DISENO_ERA2 §4.1). Un linaje solo aparece en los
+        dos clanes por fisión (una rama que funda casa en el otro territorio), y
+        eso se declara caso por caso.
+      apoyo_en_repo: parentesco-016, parentesco-025
+    propuesta_de_reparto:
+      etiqueta: canon-simulacion
+      aviso: es una propuesta para vetar; los seis nombres son de D1, y las casas costeras llevan linajes nuevos sin nombre
+      GUARANAO:
+        G1-Chamuriana: [Kaira, Corie]
+        G2-Moruy: [Corie, Buio]
+        G3-costa: [Kaira (rama), 'linaje nuevo G3 (nombre y tótem abiertos)']
+      AMUAY:
+        A1-Cayerúa: [Warana, Paugis]
+        A2-Hurihurebo: [Chiriware, Warana (rama)]
+        A3-costa-oeste: [Paugis (rama), 'linaje nuevo A3 (nombre y tótem abiertos)']
+      razones:
+        - Kaira (el linaje materno de Manaure) en GUARANAO porque el recinto del cerro y los asentamientos que dependen de su agua son centro-sur (Oliver pdf 80). Condicionado a la pregunta de dónde vive Manaure
+        - Warana (el linaje de Nubiri-sha) en AMUAY, de modo que el matrimonio del paramount sea ya una alianza ENTRE clanes, con la misma forma que la leyenda de Judibana y el señor de Hurehurebo
+        - Buio (los boratios) en Moruy, junto al merejuy y al recinto de Siraba y Misaray
+        - Chiriware (vigilancia) en la costa norte, que es la que da al mar abierto
+        - Corie (agricultura, maíz) en Chamuriana y Moruy, las tierras que Oliver da como las mejores para cultivar
+        - Paugis (medicina, partería, memoria femenina) en AMUAY; así las matriarcas que ratifican al heredero Kaira son del OTRO clan (ver preparacion_del_manaure)
+
+  - nivel: 4
+    nombre: casa (grupo residencial)
+    hechos:
+      - afirmacion: >-
+          La única vivienda costera descrita es una maloca grande de 40 a 50
+          personas (Vespucci, Curazao); si vale para tierra firme, una aldea
+          mediana tendría hasta cuatro.
+        etiqueta: reconstruido
+        procedencia: {obra: oliver-1989-cap3, pagina: '275'}
+      - afirmacion: vivienda de familia extensa de 40-50 (maloca); varias de ellas hacen un «poblado» a ojos del cronista
+        etiqueta: reconstruido
+        procedencia: {obra: oliver-1989-cap3, pagina: 'pdf 107 (impresa sin verificar)'}
+      - afirmacion: el caney de dos aguas, a veces sobre pilotes, como vivienda corriente kaketía de tierras bajas
+        etiqueta: atestiguado
+        capa: etnografía de 1946
+        procedencia: {obra: antolinez-1946-hacia-el-indio}
+        aviso: en el lexicón `caney` es taíno
+      - afirmacion: grupo residencial creíble = matriarca + hermanas con hijos + hermanos adultos + esposos venidos de otros linajes
+        etiqueta: canon-simulacion
+        decision: D1
+        apoyo_en_repo: genealogia.yaml
+      - afirmacion: 'las casas de 5-8 familias son de Yaracuy y Barquisimeto, NO de la costa'
+        etiqueta: atestiguado
+        procedencia: {obra: oliver-1989-cap3, pagina: 'pdf 97'}
+        regla_4: no importar
+    propuesta:
+      etiqueta: canon-simulacion
+      regla: >-
+        Una casa (maloca de linaje) por linaje y aldea. En escena, un núcleo de
+        agentes representa a sus 40-50 moradores. Los agentes de una casa
+        comparten fogón, deudas y la palabra de la matriarca.
+
+# ══════════════════════════════════════════════════════════════════
+# 2. LAS ZONAS PESQUERAS
+# ══════════════════════════════════════════════════════════════════
+zonas_pesqueras:
+  principio:
+    - afirmacion: cada sub-grupo tenía sus propias cabezas de playa, «entitling them to specific fishing grounds»
+      etiqueta: atestiguado
+      capa: s. XVI, cadena larga
+      procedencia: {obra: oliver-1989-cap3, pagina: '275'}
+    - afirmacion: cómo se repartían, administraban o controlaban esas zonas dentro de cada sub-grupo «can not be inferred from the available data»
+      etiqueta: atestiguado
+      procedencia: {obra: oliver-1989-cap3, pagina: '275'}
+    - afirmacion: 'la costa caquetía tenía «medium-sized villages, with lots of game and excellent fishing, and hammock cloth»'
+      etiqueta: atestiguado
+      capa: 1546
+      procedencia: {obra: oliver-1989-cap3, pagina: 'pdf 79, citando Pérez de Tolosa [1546]'}
+    - afirmacion: el mar es la despensa verdadera frente a una tierra pobre (pargo, corvina, mero, róbalo, lisa, cunaro, tortugas, botuto, ostra perlífera)
+      etiqueta: atestiguado
+      procedencia: {obra: antczak-2015-las-aves}
+      apoyo_en_repo: ecologia-015, ecologia-016, ecologia-017, ecologia-036, ecologia-044
+    - afirmacion: 'una isoglosa de oficio dentro de la península: siguato es «el pescado que... empieza a descomponerse» entre los pescadores del occidente y «estar desganado» en el oriente'
+      etiqueta: atestiguado
+      capa: s. XX
+      procedencia: {obra: medina-colina-sxx, pagina: '262'}
+      valor: la costa oeste es tierra de pescadores también en el habla; apoya una A3 pesquera
+  metodo: >-
+    Sobre el reparto territorial de #122 se colocan los topónimos costeros con
+    función pesquera o salinera que dan Esteves (s. XX) y el mapa vivo. La zona
+    entera es `canon-simulacion`; cada lugar lleva la etiqueta de su dato.
+  GUARANAO:
+    - id: ZG1
+      nombre: laguna de Guaranao y costa de Carirubana a Punta Cardón
+      subgrupo: G3
+      etiqueta: canon-simulacion
+      deuda: sin-procedencia
+      recursos: [pesca de laguna y orilla, sal (salinas de Guaranao), vigía de cardúmenes]
+      lugares:
+        - {nombre: Laguna de Guaranao, lat: 11.682, lon: -70.196, fuente_coord: osm-kaketiana}
+        - {nombre: Carirubana, lat: 11.694, lon: -70.218, fuente_coord: osm-kaketiana, dato: 'Carirubana, lo que hoy es Punto Fijo, era «playa de pescadores» de menos de 200 personas hasta 1926', procedencia: {obra: medina-colina-sxx, pagina: 'aclaratorias al lector (preliminares, sin página dictada)'}, etiqueta: atestiguado, capa: s. XX, apoyo_en_repo: 'medina_colina_dictado.yaml §aclaratorias_al_lector.la_poblacion_y_los_pueblos'}
+        - {nombre: Carirubana (el nombre), dato: '«orilla del cerro» (etimología popular, toponimo-148)', etiqueta: hipotetico, deuda: sin-procedencia}
+        - {nombre: Punta Cardón, lat: 11.618, lon: -70.212, fuente_coord: osm-kaketiana}
+        - {nombre: Sarabón, lat: null, lon: null, dato: 'punto costeño al norte de Punta Cardón «que sirvió de atalaya a los pescadores para avistar los cardúmenes»', procedencia: {obra: esteves-1989, pagina: '58'}, etiqueta: atestiguado, capa: s. XX, nota: 'hoy un conjunto residencial; sin punto en el barrido OSM'}
+        - {nombre: Suriquiba, lat: null, lon: null, dato: 'punto costeño de Punta Cardón que sirvió de atalaya para atisbar los cardúmenes; «la Piedra del Sur»', procedencia: {obra: esteves-1989, pagina: '61'}, etiqueta: atestiguado, capa: s. XX}
+        - {nombre: salinas de Guaranao, dato: 'las más importantes de Paraguaná', procedencia: {obra: arcaya-1920, pagina: '22'}, etiqueta: atestiguado}
+    - id: ZG2
+      nombre: la orilla del Golfete de Coro, de Matacán a Tacuato y el Bajo de Supí
+      subgrupo: G3 (y G1 y G2 por temporada)
+      etiqueta: canon-simulacion
+      deuda: sin-procedencia
+      recursos: [aguas someras y manglar del Golfete, pesca nocturna de cunaro con teas, lisa, róbalo, bagre]
+      lugares:
+        - {nombre: Matacán, lat: 11.64, lon: -70.069, fuente_coord: osm-kaketiana, dato: 'punta del Golfete; «hoy es una aldea de pescadores»', procedencia: {obra: esteves-1989, pagina: '51 (sin verificar)'}, etiqueta: atestiguado, capa: s. XX}
+        - {nombre: El Cayude, lat: 11.701, lon: -69.957, fuente_coord: osm-kaketiana}
+        - {nombre: Punta Cuara, lat: 11.649, lon: -69.925, fuente_coord: osm-kaketiana}
+        - {nombre: Tacuato, lat: 11.708, lon: -69.841, fuente_coord: osm-kaketiana}
+        - {nombre: El Bajo de Supí, lat: 11.675, lon: -69.799, fuente_coord: osm-kaketiana}
+        - {nombre: Escarpaduras de Cunacho (municipio Santa Ana), dato: 'de cunaro, pez del Golfete del que extraían manteca para untar los jachos, teas para encandilar en la pesca nocturna', procedencia: {obra: esteves-1989, pagina: '33'}, etiqueta: hipotetico, nota: 'etimología del autor; la técnica de las teas no tiene fecha'}
+  AMUAY:
+    - id: ZA1
+      nombre: costa oeste, de la bahía de Amuay a Punta Macolla
+      subgrupo: A3
+      etiqueta: canon-simulacion
+      deuda: sin-procedencia
+      recursos: [pesca del Golfo de Venezuela, cuevas costeras]
+      lugares:
+        - {nombre: Amuay (bahía), lat: 11.775, lon: -70.241, fuente_coord: osm-kaketiana}
+        - {nombre: Punta Adaro, lat: 11.738, lon: -70.234, fuente_coord: osm-kaketiana, dato: 'de dara, alcaraván (caq. atestiguado)', procedencia: {obra: esteves-1989}, etiqueta: reconstruido}
+        - {nombre: Punta Judibana, lat: 11.745, lon: -70.212, fuente_coord: osm-kaketiana, nota: 'frontera propuesta con ZG1'}
+        - {nombre: Los Taques, lat: 11.825, lon: -70.252, fuente_coord: osm-kaketiana}
+        - {nombre: Punta Salinas, lat: 11.855, lon: -70.301, fuente_coord: osm-kaketiana}
+        - {nombre: Punta de Jacuque, lat: 11.98, lon: -70.257, fuente_coord: osm-kaketiana}
+        - {nombre: Punta Macolla, lat: 12.083, lon: -70.217, fuente_coord: osm-kaketiana}
+    - id: ZA2
+      nombre: costa norte, del Morro de Chaure al Cabo San Román y Tumatey
+      subgrupo: A2
+      etiqueta: canon-simulacion
+      deuda: sin-procedencia
+      recursos: [tortugas marinas, pescado seco y salado, la travesía a Aruba]
+      lugares:
+        - {nombre: Morro de Chaure, lat: 12.173, lon: -70.067, fuente_coord: osm-kaketiana}
+        - {nombre: Cabo San Román, lat: 12.194, lon: -70.015, fuente_coord: osm-kaketiana}
+        - {nombre: Playa de Tumatey, lat: 12.172, lon: -69.94, fuente_coord: osm-kaketiana, dato: '«ensenada pesquera en la costa oriental, cerca del Cabo de San Román»; «desde tiempos inmemoriales, pescadores arubianos avecindaron en el lugar, atraídos por los quelónidos»', procedencia: {obra: esteves-1989, pagina: '64-65'}, etiqueta: atestiguado, capa: s. XX}
+        - {nombre: Piedras Negras, lat: 12.141, lon: -69.939, fuente_coord: osm-kaketiana}
+        - {nombre: Hurihurebo / El Vínculo, lat: 12.049, lon: -69.94, dato: 'la pulpa de pescado y los conchales', procedencia: {obra: esteves-1989, pagina: '71-78 (sin verificar)'}, etiqueta: hipotetico}
+      nota_islas: >-
+        Aruba está a ~25 km al norte (ecologia-021, atestiguado). Van Buurt
+        documenta contacto de Alto Vista (Aruba) con SANTA ANA hasta el s. XIX
+        (asentamientos.yaml nodo-010), así que la ruta insular no es monopolio
+        amuay: la canoa sale del norte pero el trato llega al centro.
+    - id: ZA3
+      nombre: costa nororiental, de Las Cumaraguas a El Supí y Babahuro
+      subgrupo: A1 y A2
+      etiqueta: canon-simulacion
+      deuda: sin-procedencia
+      recursos: [sal de Las Cumaraguas, caracol kumarawa, manglar de Babahuro, petroglifos de El Supí]
+      lugares:
+        - {nombre: Las Cumaraguas, lat: 12.103, lon: -69.894, fuente_coord: osm-kaketiana, dato: 'salina viva; kumarawa «caracol de las costas de Paraguaná» es voz caquetía atestiguada', etiqueta: atestiguado, apoyo_en_repo: 'ecologia (salina de Las Cumaraguas, degradada a periodística); toponimia_paraguana_miguel.yaml lista 2026-09-10'}
+        - {nombre: Playa Yaima, lat: 12.084, lon: -69.87, fuente_coord: osm-kaketiana}
+        - {nombre: Playa Tiraya, lat: 12.049, lon: -69.853, fuente_coord: osm-kaketiana}
+        - {nombre: El Supí, lat: 12.01, lon: -69.834, fuente_coord: osm-kaketiana, dato: '«hay un placer de piedras escritas»; supi en Zavala es «sitio a orilla del mar; arena»', procedencia: {obra: esteves-1989, pagina: '61'}, etiqueta: atestiguado}
+        - {nombre: Babahuro, lat: null, lon: null, dato: '«Ensenada pesquera en la costa de Adícora, cercana a las playas del balneario El Supí»; el nombre viene de las raíces de los «tupidos manglares» del caño, según los pescadores nativos', procedencia: {obra: esteves-1989, pagina: '18'}, etiqueta: atestiguado, capa: s. XX}
+  zona_en_disputa:
+    - id: ZX
+      nombre: la costa de Adícora y Buchuaco, con la pesquería de pargo de altura
+      etiqueta: canon-simulacion
+      deuda: sin-procedencia
+      por_que: >-
+        Queda entre ZA3 y ZG2, frente a la costa oriental sin asignar (Miraca,
+        Baraived). Es el candidato natural a caladero disputado y a pleito de
+        linderos que se arregla en la convergencia (ver oficio of-13).
+      lugares:
+        - {nombre: Adícora, lat: 11.94, lon: -69.809, fuente_coord: osm-kaketiana}
+        - {nombre: Buchuaco, lat: 11.985, lon: -69.821, fuente_coord: osm-kaketiana}
+        - {nombre: Cerro Matividiro, lat: 11.857, lon: -69.901, fuente_coord: osm-kaketiana, dato: 'por su cercanía a la costa «sirve de orientación a los pescadores de pargo que se internan hasta las quince millas de la orilla del mar de Adícora»', procedencia: {obra: esteves-1989, pagina: '51 (sin verificar)'}, etiqueta: atestiguado, capa: s. XX}
+        - {nombre: Tura (salinas), lat: 11.826, lon: -69.826, fuente_coord: osm-kaketiana, dato: '«Extensas salinas al Sur de la población de Baraived»', procedencia: {obra: esteves-1989, pagina: '66'}, etiqueta: atestiguado, capa: s. XX}
+  aviso_regla_4: >-
+    Los Guaycarí «only fish and are the lords of the water» en Federmann son del
+    Cojedes (Llanos), en simbiosis con caquetíos del río. No se importan como
+    pescadores especializados de Paraguaná.
+  procedencia_aviso: {obra: oliver-1989-cap3, pagina: 'pdf 100, citando Federmann [1557]'}
+
+# ══════════════════════════════════════════════════════════════════
+# 2b. EL MEDIO PRECONTACTO — el suelo del s. XV no es el de hoy
+# ══════════════════════════════════════════════════════════════════
+medio_precontacto:
+  pedido: '«Oliver dice que Paraguaná tenía igual otra disposición ecológica, ya que había matorrales y arbustos que hacían que el microclima en el suelo fuese distinto, y eso se perdió con el sobrepastoreo» (Miguel, 2026-09-13)'
+  lo_que_dice_oliver:
+    - afirmacion: >-
+        La costa de Falcón es una provincia semiárida y xerófila donde la
+        agricultura es difícil de sostener, «although not impossible»: pide
+        cultivos de ciclo corto que coincidan con las lluvias breves, o riego
+        por acequias, o riego a mano con el agua de lluvia recogida en charcas
+        artificiales (jagüey).
+      etiqueta: reconstruido
+      procedencia: {obra: oliver-1989-cap3, pagina: '252 (DOC 245), §3.4.1'}
+    - afirmacion: >-
+        Ese casi-equilibrio de agricultura manejada, que «had to prevail in pre-
+        and proto-historic times», sufrió presiones que aceleraron la erosión y
+        arruinaron la capacidad del suelo de retener humedad.
+      etiqueta: reconstruido
+      procedencia: {obra: oliver-1989-cap3, pagina: '252 (DOC 245)'}
+    - afirmacion: >-
+        La vegetación y el clima de comienzos del s. XVI eran casi idénticos a
+        los de hoy. La gran diferencia es el sobrepastoreo que trajo la
+        explosión del ganado y sobre todo de las cabras, que caquetíos y wayuu
+        adoptaron con facilidad: con las cabras, suelos precarios quedaron de
+        golpe expuestos a una insolación extrema, la evapotranspiración subió a
+        niveles casi intolerables y la agricultura se volvió riesgosa.
+      etiqueta: reconstruido
+      procedencia: {obra: oliver-1989-cap3, pagina: '253 (DOC 245)'}
+      matiz_a_la_lectura_de_miguel: >-
+        Oliver no dice que el monte fuera otro: dice que la vegetación era casi
+        la misma y que se perdió la COBERTURA del suelo («loss of vegetative
+        cover», p. 254). La lectura de Miguel —matorral y arbusto que daban otro
+        microclima a ras de suelo— es ese mismo mecanismo: las mismas especies,
+        con el suelo cubierto y sombreado en vez de pelado.
+    - afirmacion: >-
+        Los estudios de desertificación de la costa centro-occidental de Falcón
+        (COPLANARH) señalan el mal manejo de los rebaños de cabras como la causa
+        principal de la erosión, de la pérdida de tierra agrícola y de las zonas
+        de «desierto»; el clima por sí solo no explica el estado de la
+        agricultura de Falcón.
+      etiqueta: reconstruido
+      procedencia: {obra: oliver-1989-cap3, pagina: '253, nota al pie (DOC 245, n. 88)'}
+    - afirmacion: >-
+        La dependencia de las cabras viene de los primeros veinte años de la
+        Conquista, sobre todo con los Welser (1527-1546): los varones caquetíos
+        fueron capturados para las expediciones de El Dorado y los demás se
+        volvieron casi nómadas para no ser apresados («estar alzados»). Los
+        conucos quedaron sin atender, el sobrepastoreo los dejó sin cobertura y
+        la erosión se volvió irreversible.
+      etiqueta: reconstruido
+      procedencia: {obra: oliver-1989-cap3, pagina: '253-254 (DOC 245-246), citando Oliver Ms. 1987c'}
+    - afirmacion: >-
+        Paraguaná va con la costa oeste de Falcón: a diferencia del valle de
+        Barquisimeto, no tiene ríos que den agua casi constante para regar.
+      etiqueta: atestiguado
+      procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 246, comienzo de §3.4.2 (impresa sin comprobar)'}
+  el_testigo:
+    - afirmacion: >-
+        «Es tierra de fructíferos cardones [...] Hay hobos, cimirucos y mamones;
+        abundantísima de toda caza: hay perdices, conejos y venados, y grande
+        pesquería de pescados. De ganados hay hoy los campos llenos [...] De
+        cabras muchedumbre copiosa [...] Y la cercana sierra les da grano si les
+        falta por ser largo verano.»
+      etiqueta: atestiguado
+      capa: 'colonial: Castellanos vio Coro en la década de 1540 y lo publicó en 1589; las cabras ya están'
+      procedencia: {obra: castellanos-elegias, pagina: 'líneas 48221-48246 del txt (Oliver cita la ed. de 1962, pp. 174-175, estrofas 86-87)'}
+      nota: 'es la tierra de Coro, frente a Paraguaná. En el OCR de 1857 «bobos» es hobos (jobos) y «cenados» es venados'
+  consecuencias_para_la_era_2:
+    - que: >-
+        El conuco del interior es una economía de verdad, no un complemento
+        marginal del mar. Chamuriana, Moruy y Cayerúa cultivan en un
+        casi-equilibrio manejado: ciclo corto en las lluvias, agua del cerro,
+        jagüeyes y un suelo que el monte bajo mantiene sombreado. Da peso a la
+        frase de Oliver sobre las parcelas agrícolas «igual de definidas» que
+        las playas y a la función agrícola de G1, G2 y A1.
+      etiqueta: canon-simulacion
+      apoyo: ['oliver-1989-cap3, pp. 252-253', 'Oliver DOC 262: los asentamientos se concentran alrededor del volcán, que da el agua y los mejores suelos']
+    - que: >-
+        El monte es recurso y tiene dueño. El matorral que cubre el suelo da
+        frutos (cardón, jobo, semeruco, mamón), leña y caza menor, y le guarda
+        la humedad al conuco: talarlo o quemarlo de más es quitarle agua a la
+        aldea. Es materia de lindero para el de la buena vara (of-13), y el dueño
+        del cerro que no deja cortar los árboles (Capo) es la misma norma dicha
+        en clave sagrada.
+      etiqueta: hipotetico
+      apoyo: ['castellanos-elegias, líneas 48221-48232 del txt', 'institucion_kapubana.lugares: el dueño Capo que impide cortar los árboles (Antolínez 1946, vía Tamayo)']
+    - que: >-
+        Ni cabras, ni ganado, ni caballos en el s. XV. El motor no tiene
+        ninguno: en curiana_agents, curiana_state, curiana_lexicon y el
+        orquestador, las raíces cabra, chivo, ganado, goat, caprin, vaca, oveja,
+        caball, burro, mula, cerdo y gallina solo aparecen en glosas de
+        comparanda lokono y wayuu (aüjawaa «matar (ganado)», «amansar (caballo,
+        mula)»), que no llegan al prompt porque el muestreador filtra por
+        fuente. El único «chivo» es de «archivo».
+      etiqueta: atestiguado
+      como: 'grep en curiana_sim, 2026-09-13'
+    - que: 'Dos hechos del corpus de ecología leen el paisaje de hoy como si fuera el del s. XV: ver propuestas_a_otras_esferas.ecologia'
+      etiqueta: canon-simulacion
+
+# ══════════════════════════════════════════════════════════════════
+# 2c. LAS SALINAS Y EL MERCADO
+# ══════════════════════════════════════════════════════════════════
+sal_y_mercado:
+  pedido: '«Tenemos que tener las salinas, por lo que está otra disposición de mercado ahí» (Miguel, 2026-09-13)'
+  lo_que_dicen_las_fuentes:
+    - afirmacion: >-
+        La costa caquetía participaba en comercio de larga distancia. El oro,
+        que era signo de rango, lo conseguía de los jirajaras de Nirgua-Buria o
+        de los coanaos del valle de Upar; la sal la tenía en abundancia y la
+        comerciaba tierra adentro.
+      etiqueta: atestiguado
+      capa: s. XVI
+      procedencia: {obra: oliver-1989-cap3, pagina: '285 (DOC 271)'}
+    - afirmacion: >-
+        Lo más extendido con valor fijo eran las cuentas de collar, de piedra
+        (cuarzo, serpentinita) y de concha, estas diminutas: tres tipos,
+        boroyda, mamas y querequetero o quitero. Valían por el largo de la sarta
+        y por el tamaño de la cuenta (cuanto más chica, más valor), «almost like
+        a monetary system», y los españoles las adoptaron enseguida para comprar
+        comida a los caquetíos y cambiarlas por oro.
+      etiqueta: atestiguado
+      capa: '1538 (Naveros y Vázquez de Acuña, vía Gabaldón 1962) y arqueología de Oliver'
+      procedencia: {obra: oliver-1989-cap3, pagina: '285-286 (DOC 271-272)'}
+      valor: 'la unidad de cuenta del trueque ya existe: la sarta. ucibo «cuenta de piedra, chaquira» es voz caquetía atestiguada (Zavala #267)'
+    - afirmacion: >-
+        Jirajaras y xaguas también valoraban las cuentas de concha marina, y un
+        sistema parecido existía entre achaguas, caribes y otros grupos de los
+        Llanos. Los caquetíos eran buenos comerciantes, con asentamientos de
+        frontera, como los de la Guajira, que surtían a Falcón de bienes
+        exóticos.
+      etiqueta: atestiguado
+      procedencia: {obra: oliver-1989-cap3, pagina: '286 (DOC 272), citando Morey 1975'}
+    - afirmacion: >-
+        Los caquetíos de la Guajira eran probablemente puestos de avanzada que
+        cambiaban productos del mar, «such as salt», por oro y otros bienes del
+        valle de Upar y de la Sierra Nevada.
+      etiqueta: reconstruido
+      procedencia: {obra: oliver-1989-cap3, pagina: '188 (DOC 189)'}
+    - afirmacion: >-
+        La sal cruza las enemistades: los caquetíos de Barquisimeto la
+        comerciaban en paz con aldeas xaguas de las que eran enemigos.
+      etiqueta: atestiguado
+      regla_4: 'es otra polity: vale como forma (el trueque no se para por la guerra), no como dato de la costa'
+      procedencia: {obra: oliver-1989-cap3, pagina: '247 (DOC 240), citando Federmann [1557]'}
+    - afirmacion: >-
+        En el lago de Maracaibo, la salina de los onotos abastecía «toda la
+        laguna y muy gran parte de la tierra y sierras por vía de contratación»,
+        y los pescadores que no sembraban vendían pescado por maíz en sus
+        mercados.
+      etiqueta: atestiguado
+      regla_4: 'polity occidental: es el modelo más cercano de un mercado de sal y pescado'
+      procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '227-228'}
+      apoyo_en_repo: geografia_politica-011
+    - afirmacion: '«la cercana sierra les da grano si les falta por ser largo verano» (la tierra de Coro)'
+      etiqueta: atestiguado
+      capa: colonial, década de 1540
+      procedencia: {obra: castellanos-elegias, pagina: 'líneas 48245-48246 del txt'}
+      valor: 'en años de seca larga el maíz entra desde la sierra: el otro lado del trueque de la sal'
+  las_salinas_de_paraguana:
+    aviso_regla_3: 'la lista es de Esteves (s. XX) y Arcaya (1920). Que una salina produzca hoy no prueba que se raspara en el s. XV; lo constante es la costa y la seca que evapora (ecologia, salinas)'
+    GUARANAO:
+      - {nombre: salina de Guaranao, sitio: 'municipio Punta Cardón, laguna de Guaranao', dato: 'las más importantes de Paraguaná (Arcaya); a su sal «le atribuían excelentes propiedades curativas en enfermedades de la piel y en carnosidades oculares»; hoy destruida por aguas cloacales', procedencia: {obra: esteves-1989, pagina: '40-41 (pie de página del OCR, sin comprobar)'}, apoyo: 'arcaya-1920 p. 22', etiqueta: atestiguado, capa: 's. XIX-XX', zona: ZG1}
+    AMUAY:
+      - {nombre: Las Cumaraguas, sitio: al este de El Vínculo, dato: '«extensas salinas»; hoy un poblado alrededor del complejo salinero', procedencia: {obra: esteves-1989, pagina: '33'}, etiqueta: atestiguado, capa: s. XX, zona: ZA3}
+      - {nombre: Bajarigua, sitio: al norte de El Vínculo, dato: '«extensa salina» en una depresión a doce metros bajo el nivel del mar', procedencia: {obra: esteves-1989, pagina: '19'}, etiqueta: atestiguado, capa: s. XX, zona: 'ZA3, interior de A2'}
+      - {nombre: Yaima, sitio: al norte de Adícora, dato: 'bahía de aguas profundas que en la Colonia fue puerto de la sal de Las Cumaraguas', procedencia: {obra: esteves-1989, pagina: '67'}, etiqueta: atestiguado, capa: colonial, zona: ZA3, valor: 'la salina del norte tiene su puerto de salida'}
+      - {nombre: Sanajaquí, sitio: municipio Los Taques, dato: salinas, procedencia: {obra: esteves-1989, pagina: '58'}, etiqueta: atestiguado, capa: s. XX, zona: ZA1}
+    sin_asignar_o_en_disputa:
+      - {nombre: Tura, sitio: al sur de Baraived, lat: 11.826, lon: -69.826, dato: '«extensas salinas»', procedencia: {obra: esteves-1989, pagina: '66'}, etiqueta: atestiguado, capa: s. XX, zona: 'costa oriental sin asignar, junto a ZX'}
+      - {nombre: Cariguariana, sitio: cerca de Adícora, dato: 'salineta de la que se sacaba sal «de excelente calidad para el consumo humano», sin la coloración rojiza de otras salinas; el nombre sería «la playa de los tabacones»', procedencia: {obra: esteves-1989, pagina: '28'}, etiqueta: atestiguado, capa: s. XX, zona: ZX}
+    en_la_orilla_del_golfete:
+      - {nombre: Tacuato, lat: 11.708, lon: -69.841, dato: 'en la Colonia funcionó allí un Resguardo de Salinas «para vigilar el comercio de sal que se practicaba en la localidad»; la etimología popular del nombre sale del precio de la sal, y Esteves la rechaza', procedencia: {obra: esteves-1989, pagina: '62'}, etiqueta: atestiguado, capa: colonial, zona: ZG2, valor: 'en la Colonia el control del comercio de sal estaba en la orilla que mira a Coro'}
+    lectura: >-
+      Los dos clanes tienen sal: GUARANAO la de la laguna, AMUAY las del norte y
+      la del oeste, y la costa oriental sin asignar tiene las suyas (Tura,
+      Cariguariana). Así que la sal NO es lo que un clan le da al otro: es lo que
+      la península entera tiene de sobra y saca afuera. Eso corrige el reparto
+      de aportes del ciclo del merejuy, que ponía la sal en la cuenta de cada
+      clan como si fuera su diferencia.
+    etiqueta_de_la_lectura: canon-simulacion
+  dos_circuitos:
+    etiqueta: canon-simulacion
+    aviso: 'la separación entre don ritual y trueque es propuesta del proyecto; ninguna fuente costera la describe'
+    redistribucion:
+      que: >-
+        Dentro de la polity no hay mercado. Los clanes entregan al Manaure en la
+        convergencia y él reparte (of-01): pescado, maíz, chicha, sal y cuentas
+        circulan como don y obligación, y las deudas se recuerdan, no se saldan
+        en el acto.
+      apoyo: 'nivel 0 (el paramount que redistribuye); el evento gran_cosecha_sal ya pone a Manaure decidiendo «cuánto se guarda y cuánto se cambia»'
+    trueque_hacia_afuera:
+      que: >-
+        La sal, el pescado seco y salado y las cuentas de concha salen de la
+        península; entran maíz en los años de seca larga, algodón, oro, piedra
+        para cuentas y madera para canoas. La unidad de cuenta es la sarta.
+      apoyo: 'Oliver pp. 285-286; Castellanos, líneas 48245-48246; ecologia-032 (la madera de canoa es importada)'
+      puntos_de_trueque:
+        - {lugar: 'la orilla del Golfete (Tacuato, ZG2)', con_quien: 'la tierra firme de Coro y la sierra', clan: GUARANAO, etiqueta: hipotetico, apoyo: 'el Resguardo colonial de Tacuato (Esteves p. 62)'}
+        - {lugar: 'Yaima y la costa norte (ZA3, ZA2)', con_quien: 'Aruba y las islas; la sal de Las Cumaraguas sale por Yaima', clan: AMUAY, etiqueta: hipotetico, apoyo: 'Yaima, puerto colonial de la sal (Esteves p. 67); el contacto Alto Vista-Santa Ana (van Buurt, nodo-010)'}
+        - {lugar: 'la costa oeste (Amuay, ZA1)', con_quien: 'la Guajira, donde había puestos caquetíos que cambiaban sal por oro', clan: AMUAY, etiqueta: hipotetico, apoyo: 'Oliver p. 188'}
+        - {lugar: 'Hurihurebo (A2)', con_quien: 'serranos que bajan por sal y pescado', clan: AMUAY, etiqueta: hipotetico, apoyo: 'Esteves pp. 71-78, sin cita'}
+      cuando: >-
+        Después de la gran cosecha de sal, que el motor pone en la seca
+        (curiana_state, gran_cosecha_sal), y alrededor de la convergencia de fin
+        de seca: la feria de la sal sería la cara profana de la chicha del
+        Kapubana. Los forasteros llegan cuando hay sal que cambiar.
+      oficios_nuevos:
+        - {id: of-14, nombre: 'salineros de cada clan (dueños del raspado)', funciones: [abrir y cerrar el raspado, repartir las charcas entre casas, guardar la sal de la polity], etiqueta: hipotetico, agentes_que_encajan: [Biro-ko], hueco: 'uno por clan'}
+        - {id: of-15, nombre: 'la que lleva la cuenta de las sartas (memoria del trueque)', funciones: [recordar quién dio y quién debe, fijar cuántas sartas vale un cesto de sal], etiqueta: hipotetico, agentes_que_encajan: [Nubiri-sha], apoyo: 'el evento trueque_visitantes_plaza ya la pone «anotando en su memoria cada deuda»'}
+      consecuencia_para_el_elenco: >-
+        Da un lugar legítimo a agentes que encajaban mal: los serranos
+        (Nabaraka, Raka-bi, Chorota, Jiru-ko) como forasteros de la feria, sin
+        inventarles un pueblo en Paraguaná. Responde en parte a P11.
+
+# ══════════════════════════════════════════════════════════════════
+# 3. EL KAPUBANA COMO INSTITUCIÓN
+# ══════════════════════════════════════════════════════════════════
+institucion_kapubana:
+
+  caracter:
+    decision_2026-09-14: >-
+      Miguel: el asiento religioso del Capubana «congrega y centraliza todo lo
+      espiritual, por lo menos lo que es del Manaure, no necesariamente como
+      institución sino a nivel energético». Manda sobre la lectura de abajo:
+      el cerro es el centro, y los oficios son papeles de personas de los
+      subgrupos que suben a él, no un aparato con puestos fijos. La lista de
+      oficios se conserva como repertorio de papeles para el casting.
+    lectura_propuesta: >-
+      Una JURISDICCIÓN RITUAL EN RED anclada en un cerro, no un sacerdocio con
+      templo. Las fuentes niegan el templo y el culto comunal, y a la vez dan un
+      boratio por pueblo principal, un paramount que es gran chamán, un dueño
+      del cerro con nombre y ritos que convocan a toda la tierra. Lo que hace
+      «institución» es que los oficios sobreviven a las personas y se reclutan
+      de linajes de LOS DOS clanes.
+    etiqueta: canon-simulacion
+    a_favor:
+      - afirmacion: '«en cada pueblo principal hay un boratio», al que todos acuden'
+        etiqueta: atestiguado
+        procedencia: {obra: arcaya-1920, pagina: '97-100, citando Oviedo t. II p. 298'}
+      - afirmacion: el boratio costero vive DENTRO de la aldea (en Barquisimeto, en cambio, vive en una casa aparte)
+        etiqueta: reconstruido
+        procedencia: {obra: oliver-1989-cap3, pagina: 'pdf 93 (impresa sin verificar)'}
+      - afirmacion: el diao es boratio; gobernar y mediar con lo sobrenatural son la misma dignidad
+        etiqueta: atestiguado
+        procedencia: {obra: arcaya-1920, pagina: '48, 116, 118'}
+      - afirmacion: '`boratio` = «piache, cacique, jefe, sacerdote, médico»'
+        etiqueta: atestiguado
+        procedencia: {obra: zavala-reyes-2015, pagina: '66, #43'}
+      - afirmacion: 'el gran señor de Paraguaná, «depositario de la autoridad religiosa»'
+        etiqueta: atestiguado
+        capa: tres eslabones (Salas, vía Antolínez 1944, vía Morón)
+        procedencia: {obra: moron-2012-petroglifos}
+    en_contra_y_matices:
+      - afirmacion: 'los kaketío de tierras bajas «generalmente, no tienen sacerdocio, sino médicos-hechiceros no asociados sino enemistados entre sí y en conflicto de potencias»'
+        etiqueta: atestiguado
+        capa: etnografía de 1946
+        procedencia: {obra: antolinez-1946-hacia-el-indio}
+        consecuencia: los boratios de la red compiten entre sí; la institución tiene rivalidad interna, y eso es modelable
+      - afirmacion: no había culto comunal de ídolos ni templos; los seres sobrenaturales los invocaban especialistas
+        etiqueta: atestiguado
+        procedencia: {obra: arcaya-1920, pagina: '103, 110'}
+      - afirmacion: los cronistas no mencionan estructura especializada alguna; «the Caquetío managed to be quite secretive about their most ritual/sacred spaces»
+        etiqueta: reconstruido
+        procedencia: {obra: oliver-1989-cap3, pagina: '275'}
+        consecuencia: un recinto de monte fuera de la vista del cronista costero es compatible con ese silencio
+      - afirmacion: 'para toda la provincia: adoratorios «en profundas quebradas o montes encumbrados», y caneyes donde «se juntaban los mohanes» a invocar al demonio con fotutos y ofrendas de hilo de algodón'
+        etiqueta: atestiguado
+        capa: 1723, generalización provincial
+        regla_4: no es dato costero; se registra como marco, no como rito del Kapubana
+        procedencia: {obra: oviedo-y-banos, pagina: '21-22 (libro I, cap. I)'}
+
+  lugares:
+    - nombre: Cerro Santa Ana (el Capubana, Cerro de Capú)
+      coordenadas: {lat: 11.818, lon: -69.952, fuente: osm-kaketiana}
+      datos:
+        - {dato: 'kapubana «duende del cerro»; kapo «duende, ente sobrenatural»; kapu «demonio»', etiqueta: atestiguado, procedencia: {obra: zavala-reyes-2015, pagina: '#59, #60, #61'}}
+        - {dato: '«el Cerro de Capú, al cual le cambiaron el nombre»', etiqueta: atestiguado, capa: s. XXI, procedencia: {obra: velasco-2015-resistencia, pagina: '49, 51'}}
+        - {dato: 'en el cerro de Santa Ana un dueño llamado Capo, con una serpiente emplumada con una estrella en la cabeza, impide que se corten los árboles', etiqueta: retro-abstraido, procedencia: {obra: antolinez-1946-hacia-el-indio, pagina: 'vía Francisco Tamayo'}}
+        - {dato: 'los hechiceros podían tratar con Capu; «allí dentro llaman al demonio, que en su lengua llaman capú (y ésto es en la lengua caquetía)»', etiqueta: atestiguado, capa: '1578-1579, polity de Barquisimeto: dato de lengua, no de la costa', procedencia: {obra: nueva-segovia-1579}}
+        - {dato: 'la fuente intermitente del cerro, única agua corriente de la península', etiqueta: atestiguado, procedencia: {obra: arcaya-1920, pagina: '22'}}
+        - {dato: 'hoy uno de los pocos bosques xerófitos que quedan (Monumento Natural)', etiqueta: hipotetico, deuda: sin-procedencia, apoyo_en_repo: 'toponimia_paraguana_miguel.yaml §capubana-centro-sagrado (Miguel sobre el mapa)'}
+    - nombre: Cerro Capuana (Capuhana)
+      coordenadas: {lat: 11.844, lon: -69.896, fuente: osm-kaketiana}
+      datos:
+        - {dato: '«pequeño cerro, cerca de Misaray. Quiere decir: el cerro del duende»', etiqueta: atestiguado, procedencia: {obra: esteves-1989, pagina: '26'}}
+      tension: ¿dos Capubana, o el nombre bajó del cerro grande al pequeño? (toponimo-113)
+    - nombre: Siraba (el monolito, «Piedra del Sacrificio»)
+      coordenadas: {lat: 11.8, lon: -69.941, fuente: osm-kaketiana}
+      datos:
+        - {dato: 'monolito con petroglifos encabezados por una rana; los lugareños lo llaman «Piedra del Sacrificio»', etiqueta: retro-abstraido, procedencia: {obra: velasco-2015-resistencia, pagina: '51, vía Acasio 2013'}, nota: 'la lectura taína (Atabey) es interpretación; el glifo es el dato'}
+    - nombre: Machuruca y Misaray
+      coordenadas: {lat: 11.806, lon: -69.907, fuente: osm-kaketiana}
+      datos:
+        - {dato: 'sitio FAL-152 (Urumaco y Dabajuroide); cementerio indígena y petroglifo fotografiado', etiqueta: atestiguado, procedencia: {obra: oliver-1989-cap4, pagina: 'Apéndice E FAL-152'}, apoyo: 'esteves-1989 p. 49; nodo-026'}
+    - nombre: Maitiruma (el manantial al pie este)
+      coordenadas: {lat: 11.823, lon: -69.89, fuente: osm-kaketiana}
+      datos:
+        - {dato: '«manantial azul» (lectura de Esteves por el caribe insular, sin documento)', etiqueta: hipotetico, procedencia: {obra: esteves-1989, pagina: '49'}}
+    - nombre: Chamuriana (el agua al sur)
+      ver: niveles G1
+    - nombre: Moruy (el merejuy, al oeste)
+      ver: niveles G2
+    - nombre: El Supí (estación costera de piedras escritas)
+      coordenadas: {lat: 12.01, lon: -69.834, fuente: osm-kaketiana}
+      datos:
+        - {dato: '«un placer de piedras escritas»', etiqueta: atestiguado, procedencia: {obra: esteves-1989, pagina: '61'}}
+      propuesta: 'la estación ritual del lado AMUAY: donde el clan del norte guarda sus propias piedras (hipotético)'
+
+  oficios:
+    - id: of-01
+      nombre: el Manaure (diao-boratio mayor)
+      voz: [manaure, diao, boratio]
+      funciones:
+        - gobernar y redistribuir
+        - «dar los temporales», la lluvia y la tormenta
+        - presidir la convergencia del cerro
+        - repartir el primer trago
+      evidencia: 'nivel 0; creencia-001b, creencia-013; Oliver p. 251 y pdf 84; Ampíes f. 14'
+      etiqueta: atestiguado
+      reclutamiento:
+        linaje: Kaira (D1)
+        clan: GUARANAO (propuesto, condicionado a la pregunta de residencia)
+        via: 'las tres puertas (parentesco-038, regla del modelo por D1, hipotético como historia): elegibilidad matrilineal, ratificación de los diaos de clan, legitimación como boratio en el Kapubana'
+      agente_actual: Manaure
+    - id: of-02
+      nombre: boratio mayor del Kapubana (el que habla con Capo)
+      voz: boratio
+      funciones:
+        - 'oráculo de la polity: se encierra solo en un buhío uno, dos o tres días con «ahumadas» de tabaco y responde si lloverá, si el año será seco o abundante, si ir a la guerra'
+        - conduce la reclusión y el ayuno del heredero (puerta 3)
+        - pide permiso al dueño del cerro y abre y cierra la convergencia
+        - valida el sueño o la visión del heredero
+      evidencia:
+        - {dato: 'el oráculo del boratio, con el encierro de 1-3 días, el tabaco y el pago en joyas de oro', etiqueta: atestiguado, procedencia: {obra: arcaya-1920, pagina: '97-100, citando Oviedo t. II p. 298'}}
+        - {dato: 'que haya UNO asentado en el cerro por encima de los de pueblo', etiqueta: canon-simulacion, deuda: sin-procedencia}
+      etiqueta: canon-simulacion
+      reclutamiento:
+        linaje: Buio
+        clan: GUARANAO (Moruy)
+        via: 'llamado por sueño, no por sangre (transmision-017, transmision-030: comparanda wayuu); nunca de Kaira, para que siga siendo el «único contrapeso» (CULTURA_CAQUETIA §6)'
+      agente_actual: Shaboro
+    - id: of-03
+      nombre: boratio de pueblo (uno por aldea principal de cada clan)
+      voz: boratio
+      funciones:
+        - curar, por pasos - ayuno de la casa con kasá, juntar el alma, soplar, chupar y extraer el objeto
+        - adivinar para su aldea
+        - rivalizar con el boratio del otro clan
+      evidencia:
+        - {dato: '«en cada pueblo principal hay un boratio»; la cura paso a paso', etiqueta: atestiguado, procedencia: {obra: arcaya-1920, pagina: '97-100, citando Oviedo t. II p. 298'}}
+        - {dato: 'enemistados entre sí, «en conflicto de potencias»', etiqueta: atestiguado, capa: 1946, procedencia: {obra: antolinez-1946-hacia-el-indio}}
+      etiqueta: atestiguado (el oficio); canon-simulacion (uno por clan en escena)
+      reclutamiento:
+        GUARANAO: {linaje: Buio, aldea: Moruy, candidata: Buio-sha cuando termine su formación}
+        AMUAY: {linaje: 'Paugis o Warana (abierto)', aldea: Cayerúa, candidata: HUECO}
+    - id: of-04
+      nombre: ayunantes (aprendices del boratio)
+      funciones: [ayunar, leer sueños, reconocer plantas, preparar el urari, dejarse el pelo largo]
+      evidencia:
+        - {dato: 'el médico-hechicero adquiría su carácter «mediante prolongado ayuno» y llevaba «los cabellos muy largos como una mujer»', etiqueta: atestiguado, capa: 'Relación de Nueva Segovia = Barquisimeto; regla 4 marcada', procedencia: {obra: arcaya-1920, pagina: '101'}}
+        - {dato: 'ayuno en el manglar; el llamado marca a la persona', etiqueta: canon-simulacion, apoyo_en_repo: 'transmision-001'}
+        - {dato: 'achagua: «Abstinencia, ayuno» = Dacãiba; «Abstenerse, ayunar» = Nuidagua', etiqueta: reconstruido, procedencia: {obra: neira-ribero-1762, pagina: 'pliego 29 der'}, nota: 'hay palabra para el ayuno en la lengua de los primos declarados (parentesco-021)'}
+      etiqueta: reconstruido
+      reclutamiento: {linaje: 'cualquiera, por sueño', clan: los dos}
+      agentes_actuales: [Buio-sha, Sha (llamado incipiente)]
+    - id: of-05
+      nombre: preparadores del heredero (la casa del ayuno)
+      funciones: ver preparacion_del_manaure
+      etiqueta: hipotetico
+      reclutamiento: 'de LOS DOS clanes, por diseño (ver preparacion_del_manaure.oficiantes)'
+    - id: of-06
+      nombre: guardianes del agua del cerro
+      funciones:
+        - cuidar la fuente intermitente y los manantiales de Chamuriana y Maitiruma
+        - dar el agua para la chicha y para el rito de las primeras lluvias
+        - llevar la cuenta de cuándo baja el agua
+      evidencia:
+        - {dato: 'la fuente del cerro y la concentración de los asentamientos alrededor del volcán por el agua', etiqueta: atestiguado, procedencia: {obra: oliver-1989-cap3, pagina: 'pdf 80'}, apoyo: 'arcaya-1920 p. 22'}
+        - {dato: 'el oficio de guardarla', etiqueta: hipotetico, deuda: sin-procedencia}
+      etiqueta: hipotetico
+      reclutamiento: {linaje: 'Corie o Kaira', clan: GUARANAO, aldea: Chamuriana}
+      agente_que_encaja: 'Wari-ko (el mejor lector de tierra y agua) — requiere reanclar'
+    - id: of-07
+      nombre: maestras del merejuy (fermentadoras de Moruy)
+      voz:
+        - "buriche 'licor fermentado, chicha de maíz' (Zavala #50)"
+        - "masato 'bebida de harinas fermentada' (Alvarado p. 217)"
+        - "macato 'vino de maíz' (Oviedo vía Arcaya p. 117)"
+        - "kasá 'puche de maíz' (Zavala #74)"
+      funciones: [guardar y reproducir el merejuy (la levadura agria), fermentar la chicha de la convergencia, medir las múcuras de cada clan]
+      evidencia:
+        - {dato: 'merejuy como levadura para acelerar la fermentación del maíz cocido de la chicha «que consumían en ceremonias religiosas»', etiqueta: hipotetico, procedencia: {obra: esteves-1989, pagina: '53'}}
+        - {dato: 'que lo hacen mujeres mascando el maíz, y que es de Moruy', etiqueta: canon-simulacion, deuda: sin-procedencia, apoyo_en_repo: 'curiana_state.py evento preparar_chicha; DISENO_ERA2 §2 (tradición vía Miguel)'}
+        - {dato: 'achagua: Masato = Amu; «Emborracharse» = Nucamau, el mismo verbo que «embarbascar» (pescar con barbasco)', etiqueta: reconstruido, procedencia: {obra: neira-ribero-1762, pagina: 'pliegos 74 der, 58 izq, 40 der'}, nota: 'la borrachera dicha con la pesca: una asociación léxica entre chicha y pesca en la lengua de los primos; Esteves (p. 22, El Barbasco) registra el barbasco en la pesca de Paraguaná'}
+      etiqueta: hipotetico
+      reclutamiento: {linaje: Corie, clan: GUARANAO, aldea: Moruy, restringido: 'propuesto como saber de linaje (transmision: restringido true)'}
+      agentes_que_encajan: [Moruy-sha (por nombre; hoy cultiva la orilla salobre), Naure-sha (la semilla de maíz), Tina-sha (cocina y reparto), Sha-korie (hoy ya en el evento preparar_chicha)]
+    - id: of-08
+      nombre: cantores de hazañas (la genealogía cantada)
+      funciones: [cantar de noche lo que hizo el muerto, recitar las hazañas de los ancestros en la fiesta, nombrar a los que no deben olvidarse]
+      evidencia:
+        - {dato: 'lloran al cacique de noche «en tono alto y cantando, y diciendo en aquel cantar lo que hizo mientras vivió», con las comarcas vecinas', etiqueta: atestiguado, procedencia: {obra: arcaya-1920, pagina: '116, citando Oviedo t. II p. 299-300'}}
+        - {dato: 'el areíto antillano, genealogía del cacique cantada ante la comunidad', etiqueta: reconstruido, procedencia: {obra: angleria-1892, pagina: 'vol. 4 p. 236'}}
+      etiqueta: atestiguado
+      reclutamiento: {linaje: abierto, clan: 'uno por clan (propuesta), para que la convergencia tenga dos versiones del pasado'}
+      agente_actual: Bana-mana (sin heredero; transmision-006)
+    - id: of-09
+      nombre: los de los huesos (desecar al díao, renovar su hamaca, moler los huesos)
+      funciones: [sostener el fuego sin llama bajo la hamaca del díao muerto, dejarlo en hamaca nueva «como si estuviesse un hombre echado durmiendo», renovarla por años, moler los huesos para el macato]
+      evidencia:
+        - {dato: 'el rito de dos tiempos del díao', etiqueta: atestiguado, procedencia: {obra: arcaya-1920, pagina: '117-118, citando Oviedo t. II p. 300'}}
+        - {dato: 'lo renueva «el hijo y sucesor»', etiqueta: atestiguado, capa: colonial, regla_3: 'léxico castellano; bajo el modelo matrilineal sería el sobrino-heredero'}
+        - {dato: 'quien manipula huesos queda bajo tabúes severos; suelen ser mujeres o ancianos', etiqueta: reconstruido, procedencia: {obra: paz-reverol-2017-2018}}
+      etiqueta: atestiguado (el rito); reconstruido (quién lo hace)
+      reclutamiento: {linaje: 'Paugis (ancianas)', clan: AMUAY}
+      agentes_que_encajan: [Paugis-sha, Sha-korie]
+    - id: of-10
+      nombre: pintores rituales (bija, jagua, bariquire)
+      funciones: [pintar a los que suben al cerro, pintar la figura del boratio en joyas y madera]
+      evidencia:
+        - {dato: 'al beber los huesos del díao vienen «pintados de bija y jagua (busera)» y con sus joyas de oro', etiqueta: atestiguado, procedencia: {obra: arcaya-1920, pagina: '117-118, citando Oviedo t. II p. 300'}}
+        - {dato: 'pintan la figura del boratio «en sus joyas y en madera»', etiqueta: atestiguado, procedencia: {obra: arcaya-1920, pagina: '97-100'}}
+        - {dato: 'bariquire, «árbol tanante que da una tinta como óxido de hierro» con la que «se pintaban los aborígenes en ciertas ceremonias religiosas»', etiqueta: hipotetico, procedencia: {obra: esteves-1989, pagina: '22 (Bariquí)'}, nota: '«según hemos leído», sin cita'}
+      etiqueta: reconstruido
+      reclutamiento: {linaje: abierto, clan: los dos}
+      agentes_que_encajan: [Pira-sha, Saruro-sha (la memoria visual)]
+    - id: of-11
+      nombre: el séquito de la hamaca (portadores de Manaure)
+      funciones: [cargar a Manaure en hamaca, escoltarlo en la subida al cerro]
+      evidencia:
+        - {dato: '«always carried in hammocks by a retinue of Indians —possibly as his naborias»', etiqueta: atestiguado, capa: contacto, procedencia: {obra: oliver-1989-cap3, pagina: 'pdf 84, citando Oliver Ms. 1987a'}}
+      etiqueta: atestiguado (el séquito); canon-simulacion (que lo pongan los dos clanes por turnos)
+      reclutamiento: {linaje: 'jóvenes varones de todos los linajes', clan: 'los dos, por turnos: otro canal de contacto'}
+      agentes_que_encajan: [Taku-ko, Suri-bana, Daru]
+    - id: of-12
+      nombre: mensajeros del llamamiento
+      funciones: [anunciar por toda la tierra la convergencia o que «quieren beber los huesos del díao»]
+      evidencia:
+        - {dato: 'se hace «un llamamiento general por toda la tierra y las comarcas»', etiqueta: atestiguado, procedencia: {obra: arcaya-1920, pagina: '117-118, citando Oviedo t. II p. 300'}}
+      etiqueta: reconstruido
+      reclutamiento: {clan: 'los dos (uno por clan)'}
+      agente_que_encaja: Pari-nu
+    - id: of-13
+      nombre: el de la buena vara (árbitro de linderos de playa y conuco)
+      funciones: [medir tierras de labranza, dirimir querellas de posesión, fijar qué playa es de quién cuando dos clanes chocan]
+      evidencia:
+        - {dato: 'el «Cacique de la Buena Vara», escogido «por los comarcanos para la medición de terrenos de labranza»', etiqueta: retro-abstraido, procedencia: {obra: esteves-1989, pagina: '24-25'}}
+        - {dato: 'la pregunta abierta del palabrero: ¿mediador separado de Manaure?', etiqueta: reconstruido, procedencia: {obra: guerra-curvelo-palabrero}, apoyo_en_repo: 'transmision-031, transmision-034'}
+      etiqueta: hipotetico
+      reclutamiento: {clan: 'propuesto del clan que NO es parte del pleito, o de los tíos maternos mayores (talaula wayuu)'}
+      agente_actual: HUECO
+
+  preparacion_del_manaure:
+    lo_que_hay: >-
+      Nada directo (ver meta.ceros_verificados). Hay tres piezas vecinas: el
+      ayuno colectivo antes de «sacrificar o hacer alguna cosa de mucha
+      importancia», con el jefe de familia y los suyos «muy flacos y
+      descoloridos» (Arcaya p. 118, que cita a Oviedo t. II p. 329); la formación
+      del boratio por ayuno prolongado (Arcaya p. 101, de Barquisimeto); y el
+      boratio que se encierra en un buhío con tabaco para saber (Arcaya pp.
+      97-100). A eso se suma la regla del modelo de las tres puertas
+      (parentesco-038, D1).
+    etiqueta: hipotetico
+    fases_propuestas:
+      - fase: 1. elegibilidad
+        que: 'los sobrinos uterinos de Manaure (pluralidad de candidatos, parentesco-039); la madre del candidato y las ancianas lo presentan'
+        oficiantes: [matriarca de Kaira (Itana-sha, fondo), tío materno]
+        etiqueta: hipotetico
+      - fase: 2. ratificación
+        que: los dos diaos de clan (GUARANAO y AMUAY) aceptan o vetan al candidato
+        oficiantes: [diao guaranao, diao amuay]
+        etiqueta: hipotetico
+        apoyo: 'el consejo de jefes de segundo orden (Oliver pdf 107, reconstruido)'
+      - fase: 3. reclusión en el cerro
+        que: >-
+          ayuno en un buhío del recinto del Kapubana (kasá una vez al día, como
+          en el ayuno de la cura), tabaco, sueño; el boratio mayor valida la
+          visión; las ancianas del OTRO clan cuidan su comida y su cuerpo
+        oficiantes: [boratio mayor (of-02, Buio, GUARANAO), ancianas Paugis (of-09, AMUAY)]
+        etiqueta: hipotetico
+        comparanda: 'reclusión con transmisión densa en la pubertad wayuu (Jahn 1927 pp. 208-211); cambio de nombre al asumir el oficio (Amodio y Pérez 2006 pp. 41-42)'
+      - fase: 4. presentación
+        que: sale en la convergencia del merejuy, pintado de bija y jagua; bebe la primera chicha; ¿recibe nombre nuevo?
+        oficiantes: [pintores (of-10), cantores (of-08), maestras del merejuy (of-07)]
+        etiqueta: hipotetico
+    por_que_une_a_los_nodos: >-
+      Ningún clan puede hacer Manaure solo: el boratio que valida es guaranao,
+      las ancianas que cuidan el ayuno son amuay y los dos diaos ratifican. La
+      sucesión se vuelve el rito que obliga a converger, además del merejuy.
+    etiqueta_del_reparto: canon-simulacion
+
+# ══════════════════════════════════════════════════════════════════
+# 4. EL CICLO RITUAL DEL MEREJUY — lo que une a los dos nodos
+# ══════════════════════════════════════════════════════════════════
+ciclo_ritual_merejuy:
+  evidencia:
+    - afirmacion: merejuy, fermento de la chicha ritual, hecho en Moruy
+      etiqueta: hipotetico
+      procedencia: {obra: esteves-1989, pagina: '53'}
+      nota: 'DISENO_ERA2 §2 lo daba como tradición vía Miguel con deuda: sin-procedencia; la fuente de esa tradición es esta página (toponimia_paraguana_miguel.yaml, 2026-09-07)'
+    - afirmacion: 'el funeral del cacique común convoca a las comarcas vecinas; al díao se le «beben los huesos» con macato durante dos o tres días, tras un llamamiento general, pintados y enjoyados'
+      etiqueta: atestiguado
+      procedencia: {obra: arcaya-1920, pagina: '116-118, citando Oviedo t. II pp. 299-300'}
+    - afirmacion: 'en el funeral del cacique menor echan al fuego una figurilla de madera con la semblanza del muerto, y los huesos molidos se beben con maçato'
+      etiqueta: atestiguado
+      procedencia: {obra: oliver-1989-cap3, pagina: 'pdf 88, citando Oviedo [6]:34-47'}
+      nota: la figurilla no está en creencia.yaml
+    - afirmacion: calendario ritual de dos polos, la fiesta de fin de seca y el ritual de las primeras lluvias
+      etiqueta: reconstruido
+      procedencia: {obra: jahn-1927, pagina: '384 (paralelo de rito estacional)'}
+      apoyo_en_repo: creencia-014; curiana_state.py (fiesta_cosecha_chicha, ritual_siembra_primeras_lluvias)
+    - afirmacion: '`waitiao` «amigo ritual, aliado de alianza»: el pacto de guaitiao, con intercambio de nombres entre aliados'
+      etiqueta: atestiguado
+      procedencia: {obra: oliver-1989-cap2, pagina: '147, sobre Oviedo'}
+      valor: la voz caquetía para el vínculo ritual entre personas de nodos distintos
+    - afirmacion: el paramount «hace abundar las sementeras» y da los temporales
+      etiqueta: atestiguado
+      capa: contacto
+      procedencia: {obra: velasco-2015-resistencia, pagina: 'Ampíes f. 14'}
+
+  por_que_obliga_a_converger:
+    etiqueta: canon-simulacion
+    complementariedad:
+      GUARANAO_aporta: [el merejuy y la chicha (Moruy), el agua del cerro (Chamuriana), el maíz de las mejores tierras, el recinto y el boratio mayor, la sal de Guaranao]
+      AMUAY_aporta: [pescado seco y salado, tortugas y botuto de la costa norte, caracol y sal de Las Cumaraguas, lo que llega de Aruba, las ancianas de los huesos (Paugis)]
+      los_dos: [un diao que ratifica, jóvenes para el séquito, mensajeros, cantores con su versión del pasado, algodón y hamacas]
+      nota_sal: 'la sal no distingue a los clanes: los dos la tienen (sal_y_mercado.las_salinas_de_paraguana). Lo que cada clan lleva al cerro es SU sal como parte del don; la sal como excedente sale por el trueque hacia afuera'
+    apoyo_de_la_complementariedad:
+      - {dato: 'asentamientos concentrados alrededor del volcán por el agua y el suelo', etiqueta: atestiguado, procedencia: {obra: oliver-1989-cap3, pagina: 'pdf 80'}}
+      - {dato: 'tierra pobre, mar rico', etiqueta: atestiguado, apoyo_en_repo: ecologia-036}
+      - {dato: 'el reparto de recursos por clan', etiqueta: canon-simulacion, deuda: sin-procedencia}
+
+  calendario:
+    base: 'curiana_state: 60 días por estación, el día 1 es seca; un año simulado son 120 días'
+    etiqueta: canon-simulacion
+    ciclos:
+      - id: CM
+        nombre: la chicha del Kapubana (convergencia mayor, fin de la seca)
+        frecuencia: una por año simulado
+        fases:
+          - {dias_de_la_seca: '40-42', fase: anuncio, que: 'el boratio mayor se encierra en el buhío del cerro y responde si vendrán las lluvias; salen los mensajeros a los dos clanes', oficios: [of-02, of-12]}
+          - {dias_de_la_seca: '42-50', fase: aportes y fermento, que: 'Moruy recibe maíz y agua y fermenta con merejuy; AMUAY junta pescado seco, tortuga y sal; se arreglan en cada clan los pleitos de playa que se llevarán al cerro', oficios: [of-07, of-06]}
+          - {dias_de_la_seca: '48-54', fase: ayuno, que: 'ayunan las casas de los oficiantes y, si hay, el heredero en reclusión', oficios: [of-02, of-05, of-09]}
+          - {dias_de_la_seca: '55-58', fase: subida y convergencia, que: 'las delegaciones de los dos clanes suben pintadas; el diao de cada clan entrega lo suyo a Manaure, que redistribuye; se canta; se bebe dos o tres días; se hacen pactos de waitiao, se negocian matrimonios y se arbitran linderos', oficios: [of-01, of-08, of-10, of-11, of-13]}
+          - {dias_de_la_seca: '59-60', fase: regreso, que: 'cada delegación baja a su territorio con lo recibido y con las formas nuevas', oficios: []}
+        canal_de_contacto: 'contacto periódico de alta intensidad de DISENO_ERA2 §4.2: los agentes de los dos nodos comparten escena 3-4 días por año, con pactos (waitiao) y matrimonios que crean contacto continuo'
+        engancha_con: [fiesta_cosecha_chicha, preparar_chicha, gran_cosecha_sal]
+      - id: CL
+        nombre: las primeras lluvias (ciclo menor, cada clan en lo suyo)
+        frecuencia: una por año, al inicio de las lluvias
+        fases:
+          - {dias_de_las_lluvias: '1-5', fase: pedir el agua buena, que: 'cada clan hace su rito con su boratio de pueblo; el boratio mayor manda agua del cerro a los dos', oficios: [of-03, of-06]}
+        canal_de_contacto: 'bajo: solo el agua y un emisario cruzan'
+        engancha_con: [ritual_siembra_primeras_lluvias]
+      - id: CF
+        nombre: el llanto de un jefe (funeral de diao de clan o de apopo)
+        frecuencia: por evento
+        fases:
+          - {fase: llanto de noche, que: 'se convoca a las comarcas vecinas, incluido el otro clan; se canta lo que hizo', oficios: [of-08, of-12]}
+          - {fase: fuego y huesos, que: 'el fuego con la figurilla; los huesos molidos se beben en maçato', oficios: [of-09]}
+        engancha_con: [duelo_ritual_difunto]
+      - id: CX
+        nombre: beber los huesos del díao (extraordinario)
+        frecuencia: 'una vez por generación, años después de la muerte de un Manaure, cuando «el cuerpo se descoyunta»'
+        que: 'llamamiento general; toda la tierra sube; dos o tres días de macato con los huesos; es el máximo de convergencia posible'
+        etiqueta: atestiguado (el rito); canon-simulacion (dónde y cuándo)
+        uso_en_campana: 'un clímax de episodio, no un evento del calendario'
+      - id: CC
+        nombre: continuo — esposos y amigos rituales
+        que: 'los esposos exogámicos cruzados viven en el nodo de su mujer; los waitiao se visitan'
+        etiqueta: canon-simulacion
+        apoyo: DISENO_ERA2 §4.1
+
+# ══════════════════════════════════════════════════════════════════
+# 5. HUECOS DE ELENCO — lo que la estructura pide y el elenco de 60 no tiene
+# ══════════════════════════════════════════════════════════════════
+huecos_de_elenco:
+  nota: >-
+    El elenco actual es UNA comunidad del Golfete de Coro (casa_cacique, buco,
+    guaycaríes, serranos, un caribe). Aquí se dice qué agente de los 60 cabe en
+    qué puesto de la estructura de Paraguaná y qué puestos quedan vacíos. No se
+    reescribe a nadie.
+
+  encajan:
+    - {puesto: of-01 Manaure, agentes: [Manaure], nodo: 'GUARANAO (Kaira), a decidir'}
+    - {puesto: esposa principal y redistribución, agentes: [Nubiri-sha], nodo: 'AMUAY (Warana), propuesto', aviso: 'si ella es amuay y rige la matrilocalidad, ¿dónde vive la casa del Señor? (pregunta)'}
+    - {puesto: of-02 boratio mayor, agentes: [Shaboro], nodo: 'GUARANAO (Buio), recinto del cerro'}
+    - {puesto: of-04 ayunantes, agentes: [Buio-sha, Sha], nodo: GUARANAO}
+    - {puesto: of-09 los de los huesos y matriarcas ratificadoras, agentes: [Paugis-sha, Sha-korie], nodo: 'AMUAY (Paugis)'}
+    - {puesto: of-08 cantor, agentes: [Bana-mana], nodo: 'abierto'}
+    - {puesto: of-07 merejuy y chicha, agentes: [Moruy-sha, Naure-sha, Tina-sha], nodo: 'GUARANAO (Moruy)'}
+    - {puesto: of-10 pintura ritual y múcuras, agentes: [Pira-sha, Saruro-sha, Tawi, Kawa], nodo: 'GUARANAO (Moruy, alfarería)'}
+    - {puesto: 'hamacas del díao y regalos de alianza', agentes: [Kahu-sha], nodo: abierto}
+    - {puesto: of-12 mensajero, agentes: [Pari-nu], nodo: abierto}
+    - {puesto: of-11 séquito de la hamaca, agentes: [Taku-ko, Suri-bana, Daru], nodo: 'los dos, por turnos'}
+    - {puesto: 'pescadores de playa asignada', agentes: [Bagre-ko, Waranaro-sha, Kunaro-bana, Uro-ko, Nubi, Piri], nodo: 'repartir entre ZG1-2 y ZA1-3'}
+    - {puesto: 'vigía de cardúmenes (atalaya)', agentes: [Dara-bana], nodo: 'GUARANAO ZG1 (Sarabón, Suriquiba) o AMUAY ZA2'}
+    - {puesto: canoeros y la travesía a Aruba, agentes: [Dara-ko, Dare-nu, Buko-ni], nodo: 'AMUAY ZA2'}
+    - {puesto: 'isleños (Aruba a ~25 km; pescadores arubianos en Tumatey)', agentes: [Kadushi, Watapana], nodo: 'AMUAY costa norte; con trato en Santa Ana (van Buurt)'}
+    - {puesto: salinero, agentes: [Biro-ko], nodo: 'GUARANAO (salinas de Guaranao) o AMUAY (Las Cumaraguas); hacen falta dos'}
+    - {puesto: 'agricultores del maíz y del agua del cerro', agentes: [Ita-ko, Wama-ko, Wari-ko, Piri-sha], nodo: 'GUARANAO (Chamuriana, Moruy)'}
+    - {puesto: cuidadora y canciones, agentes: [Wama-sha], nodo: abierto}
+    - {puesto: cordelera de redes, agentes: [Kori-sha], nodo: 'AMUAY (costa)'}
+    - {puesto: herbolaria aprendiz, agentes: [Suba-ko], nodo: 'AMUAY (Paugis)'}
+    - {puesto: 'vidente anciana', agentes: [Ita-sha], nodo: abierto}
+    - {puesto: 'guerreros o vigilancia de costa', agentes: [Chiriware, Chiri-ko, Tawaka], nodo: 'AMUAY A2 (Chiriware)'}
+    - {puesto: 'niños y ancianos de casa', agentes: [Kori, Buko, Piru, Moro-ko], nodo: 'repartir por casa'}
+
+  encajan_mal:
+    - agentes: [Korie-ko, Buko-ko, Buko]
+      problema: >-
+        El buco es la presa del río de Coro (Ballesteros 1550, vía Oliver pp.
+        262-263). Paraguaná no tiene «ningún río, ni siquiera un arroyo» (Arcaya
+        p. 22; Oliver pdf 80). En la península su oficio tendría que reanclarse
+        al agua del cerro o a charcas y jagüeyes (hipotético; en el mapa vivo hay
+        unos «Estanquecitos de Los Taques»).
+      procedencia: {obra: arcaya-1920, pagina: '22'}
+    - agentes: [Tariwa, Kawa-ni, Piru-sha, Tari-ko, Wata-ni]
+      problema: >-
+        Los Guaycarí documentados son pescadores del Cojedes (Federmann) y de
+        Margarita; en Paraguaná no hay ninguno (regla 4). Si se quedan en la
+        era 2, entran como forasteros con otra lengua, no como pescadores de un
+        clan.
+      procedencia: {obra: oliver-1989-cap3, pagina: 'pdf 100'}
+    - agentes: [Nabaraka, Raka-bi, Chorota, Jiru-ko]
+      problema: >-
+        Son serranos y bajarían a la feria. Lo único que los pone en Paraguaná
+        es la frase de Esteves sobre cuicas y timotes que iban a Jurijurebo por
+        sal y pescado (pp. 71-78, sin cita).
+    - agentes: [Marokoto-ni]
+      problema: el nodo caribe es la era 3 (decisiones_tanda_2026-09-01 §rumbo_era2)
+    - agentes: [Chiriware, Taku-ko, Tawaka, Chiri-ko, Suri-bana, Pari-nu, Daru]
+      problema: >-
+        Hay siete agentes con ubicación perímetro o guerreros para una polity
+        de la que Oliver dice que carecía de «an effective military organization»
+        y cuya norma ante el conflicto era «alzarse». Se propone pasar a varios
+        al séquito, al mensaje y a la vigía de costa.
+      procedencia: {obra: oliver-1989-cap3, pagina: 'pdf 107'}
+
+  huecos:
+    - {puesto: 'diao de clan GUARANAO', por_que: 'nivel 1; ratifica al heredero y entrega en la convergencia', etiqueta_del_puesto: reconstruido}
+    - {puesto: 'diao de clan AMUAY', por_que: 'ídem; plantilla colonial Don Alonso de Hurihurebo', etiqueta_del_puesto: reconstruido}
+    - {puesto: 'apopos de aldea (seis, uno por subgrupo)', por_que: 'Oliver pdf 107; Zavala #12', etiqueta_del_puesto: reconstruido}
+    - {puesto: 'boratio de pueblo AMUAY', por_que: 'of-03; sin él la rivalidad entre boratios no existe', etiqueta_del_puesto: atestiguado}
+    - {puesto: 'segundo candidato a la sucesión y su madre (Itana-sha)', por_que: 'parentesco-039 aprobada por D1, sin ejecutar; Waimo-ko es de fondo', etiqueta_del_puesto: hipotetico}
+    - {puesto: 'tío materno del heredero', por_que: 'fase 1 de la preparación; parentesco-006, parentesco-026', etiqueta_del_puesto: reconstruido}
+    - {puesto: 'maestra del merejuy (titular)', por_que: 'of-07; hoy nadie en el elenco tiene ese oficio como propio', etiqueta_del_puesto: hipotetico}
+    - {puesto: 'guardián(a) del agua del cerro', por_que: of-06, etiqueta_del_puesto: hipotetico}
+    - {puesto: 'el de la buena vara (árbitro de playas)', por_que: 'of-13; los derechos de pesca excluyentes sin árbitro son conflicto sin salida', etiqueta_del_puesto: hipotetico}
+    - {puesto: 'matriarcas vivas de Buio, Chiriware, Corie, Kaira y Warana', por_que: 'genealogia.yaml capacidad_de_expansion: casi ningún linaje tiene matriarca viva', etiqueta_del_puesto: canon-simulacion}
+    - {puesto: 'esposos exogámicos cruzados (de GUARANAO en AMUAY y al revés)', por_que: 'DISENO_ERA2 §4.1: los portadores permanentes; hoy ninguno está marcado', etiqueta_del_puesto: canon-simulacion}
+    - {puesto: 'pescadores y vigía de AMUAY con playa propia', por_que: 'ZA1-3 no tienen a nadie; los pescadores actuales son de «orilla» genérica', etiqueta_del_puesto: canon-simulacion}
+    - {puesto: 'segundo salinero', por_que: 'dos salinas por clan (Guaranao, Las Cumaraguas)', etiqueta_del_puesto: canon-simulacion}
+    - {puesto: 'cantor de AMUAY y heredero de Bana-mana', por_que: 'of-08; transmision-006 y transmision-016 (el jayeechi adulto que falta)', etiqueta_del_puesto: reconstruido}
+    - {puesto: 'muchacha en encierro puberal', por_que: 'transmision-020: el canon no tiene rito de paso femenino', etiqueta_del_puesto: reconstruido}
+    - {puesto: 'pintor(a) ritual titular', por_que: of-10, etiqueta_del_puesto: reconstruido}
+
+# ══════════════════════════════════════════════════════════════════
+# 5b. PROPUESTAS A OTRAS ESFERAS (regla 7) — nada de esto se ha tocado
+# ══════════════════════════════════════════════════════════════════
+propuestas_a_otras_esferas:
+  ecologia:
+    - tipo: hecho nuevo
+      contenido: >-
+        El sobrepastoreo como corte colonial del paisaje de la costa de Falcón:
+        clima y vegetación casi iguales a los del s. XVI, pero el suelo perdió
+        su cobertura, y con ella la humedad, por las cabras y el abandono de los
+        conucos tras 1527. La agricultura del s. XV era un casi-equilibrio
+        manejado (ciclo corto, acequias, jagüeyes).
+      fuente: reconstruido
+      procedencia: {obra: oliver-1989-cap3, pagina: '252-254'}
+      dominios: [ecologia, agricultura, suelos]
+      locacion: conuco
+      cero_verificado: 'el corpus no lo tenía: sobrepastoreo, pastoreo, cabra, chivo, caprino, overgraz y goat dan 0 en 3-mundo/corpus/ecologia.yaml; el único pastoreo del corpus es wayuu (transmision.yaml)'
+    - tipo: nota a ecologia-033
+      que: >-
+        La fauna «escasa por el clima desértico» es la del Parque Nacional
+        Médanos de hoy. Castellanos, testigo de la década de 1540, llama a la
+        tierra de Coro «abundantísima de toda caza». Se propone la nota de la
+        regla 3: la caza como complemento sigue en pie, pero la escasez moderna
+        es en parte colonial.
+      procedencia: {obra: castellanos-elegias, pagina: 'línea 48228 del txt'}
+    - tipo: nota a ecologia-036 (tierra pobre, mar rico)
+      que: 'matizar a «tierra difícil pero manejada, empobrecida después»; el clima por sí solo no explica la pobreza agrícola de hoy (Oliver p. 253)'
+      procedencia: {obra: oliver-1989-cap3, pagina: '253'}
+  geografia_politica_y_motor:
+    - tipo: corrección de regla 4
+      donde: ['curiana_sim/curiana_polities.py (costera.economia)', '4-fuentes/oliver-1989-cap3.md (§Economía)', '3-mundo/horizonte-de-contacto.md (fila Comercio)']
+      que: >-
+        Los tres atribuyen a la polity costera una red de alianzas por comercio
+        de cuentas de concha, sal y azabache, y la nota de la fuente dice además
+        que esas aldeas «desarrollaron una confederación». Oliver lo dice de las
+        aldeas JIRAJARAS (p. 245; DOC 238), y dice lo contrario sobre la
+        confederación: ninguna la formó, pero sí alianzas por comercio. Lo que
+        Oliver dice de la costa está en las pp. 285-286: sal abundante que se
+        comercia tierra adentro y cuentas con valor fijo. Se propone corregir el
+        rasgo con esa cita.
+      procedencia: {obra: oliver-1989-cap3, pagina: '245 y 285-286'}
+      nota: 'curiana_polities --check sigue en verde, porque el rasgo tiene fuente; lo que falla es que la fuente habla de otra polity'
+  lexicon:
+    - tipo: voces candidatas
+      formas: [boroyda, mamas, querequetero, quitero]
+      glosa: los tres tipos de cuentas de collar con valor de cambio
+      procedencia: {obra: oliver-1989-cap3, pagina: '285, citando a Naveros y Vázquez de Acuña [1538] en Gabaldón 1962'}
+      etiqueta_propuesta: caquetío-hipotético
+      por_que_no_mas: 'Oliver no dice en qué lengua están, y Naveros escribe en castellano en 1538. boroyda y quitero dan 0 en el repo y en lexicon_zavala. El lexicón ya tiene ucibo «cuenta de piedra, chaquira» (caquetío-atestiguado, Zavala #267)'
+      aviso: 'no emparentar quitero con la quiripa achagua (las cuentas de concha de Neira y Ribero) sin regla fonética: el parecido es de superficie'
+
+# ══════════════════════════════════════════════════════════════════
+# 6. PREGUNTAS PARA MIGUEL — lo que la evidencia no resuelve
+# ══════════════════════════════════════════════════════════════════
+preguntas_para_miguel:
+  - id: P1
+    pregunta: ¿Dónde vive Manaure en el s. XV?
+    resuelta: '2026-09-14: sale de un clan, GUARANAO, de los Moruyes de Moruy; su casa en Moruy, al pie del Capubana (opción a). Se descarta la b, el cerro sin clan'
+    por_que_importa: decide en qué clan va el linaje Kaira y si la casa del Señor es de un nodo o del cerro
+    opciones:
+      - 'a) en GUARANAO, al pie del cerro (Salas: la cabecera está en Paraguaná; Oliver: los asentamientos se concentran alrededor del volcán)'
+      - 'b) en el recinto del cerro, como espacio de nadie, con su casa servida por los dos clanes'
+      - 'c) fuera de Paraguaná (Todariquiba), y el Kapubana es solo el asiento religioso al que sube'
+    recomendacion: b, por DISENO_ERA2 §2 («no es capital de ningún clan») y porque hace del cerro un escenario de contacto
+  - id: P2
+    pregunta: ¿Cuántos subgrupos por clan, y cuántos en escena?
+    resuelta: '2026-09-14: dos subgrupos por nodo (decision_creativa_2026-09-14)'
+    propuesta: tres por clan (aldea madre, aldea del cerro o interior, aldea de costa), dos en escena y uno de fondo
+  - id: P3
+    pregunta: ¿De quién es la costa oriental media (Miraca, Baraived, Adícora, Adaure)?
+    resuelta: '2026-09-14: queda de fondo, sin agentes; las zonas de pesca en escena son ZG2 y ZA1'
+    opciones: ['asignarla a un clan', 'dejarla como frontera disputada: el caladero del pargo de Adícora (ZX) como conflicto que se arbitra en el cerro']
+    dato_que_pesa: 'Miraca tenía cacique propio en 1538 (Bonyata), lo que podría hacer de ella un tercer grupo que #122 no contempla'
+  - id: P4
+    pregunta: Tótems y nombres de Kaira, Warana y de los dos linajes costeros nuevos
+    materiales:
+      - 'linajes con nombre de animal (comparanda achagua, parentesco-022)'
+      - '«quizás la Dara [alcaraván] fuera el ave totémica de la tribu» de Adaure (Esteves p. 13, conjetura)'
+      - 'los apellidos que Esteves (p. 53) da como indígenas sin deformar en Moruy: Caguao, Cuauro, Mabo, Guarecuco, Cotopo; y la «etnia Mabo» de Guacurebo (Velasco). Son del s. XX: servirían de semilla, nunca de dato'
+  - id: P5
+    pregunta: ¿Los «Moruyes» de la tradición son los Guaranaos (la lectura de #122) o los Amuayes reasentados (Delmonte literal)?
+    por_que_importa: 'si son una tercera cosa, la tradición «Amuayes y Moruyes» no nombra los dos clanes de #122'
+  - id: P6
+    pregunta: ¿El linaje queda dentro de un clan (matrilocalidad estricta) o hay linajes con ramas en los dos?
+    propuesta: dentro, con ramas por fisión declaradas (niveles.3.regla_de_residencia_propuesta)
+  - id: P7
+    pregunta: 'El merejuy: ¿lo hacen mujeres, de un solo linaje, y es saber restringido?'
+    propuesta: 'sí, del linaje Corie de Moruy, marcado restringido: true como el piazgo'
+  - id: P8
+    pregunta: ¿Se acepta la preparación del heredero con oficiantes de los dos clanes (reclusión en el cerro, ancianas amuay, boratio guaranao)? ¿Hay cambio de nombre?
+    etiqueta_de_lo_que_se_decide: hipotetico (como historia); canon-simulacion si se aprueba
+  - id: P9
+    pregunta: ¿Rivalidad entre boratios (Antolínez 1946 «enemistados entre sí») entre el del cerro y los de pueblo, o entre los de los dos clanes?
+  - id: P10
+    pregunta: ¿Una convergencia mayor por año simulado (cada 120 días) y el resto por evento?
+    nota: la frecuencia fina es de implementación (DISENO_ERA2 §9), con el modelo de costos delante
+  - id: P11
+    pregunta: 'Guaycaríes, serranos y el buco: ¿quedan fuera del elenco de Paraguaná, entran como visitantes, o se reanclan sus oficios?'
+  - id: P12
+    pregunta: 'Don Alonso, «Cacique de la Provincia de Paraguaná» en 1538, tenía su pueblo en Hurihurebo, en el NORTE: ¿indica que la jefatura peninsular del contacto era amuay?'
+    lectura_prudente: puede ser reconfiguración colonial de 1527-1538 (el reasentamiento de Manaure, las capturas de Federmann); no contradice que el recinto religioso esté en el cerro
+  - id: P13
+    pregunta: ¿Pipiacoa (Santa Ana «of Pipiacoa», 1538-1546) y Chamuriana son dos nombres del mismo sitio?
+    donde_se_resuelve: campaña de topónimos (Pipiacoa no está en el canon)
+  - id: P14
+    choca_con: 'DISENO_ERA2 §4.3: «nada de mercados inventados»; el comercio real se monta en las ceremonias'
+    pregunta: ¿La sal se modela como excedente de toda la península, con un trueque hacia afuera (la feria de la sal) separado de la redistribución ritual?
+    propuesta: 'sí: dentro, don y redistribución por Manaure; fuera, trueque por sartas de cuentas después de la cosecha de sal de la seca'
+    por_que_importa: da sitio a los forasteros (serranos, isleños) sin inventarles un pueblo en Paraguaná
+  - id: P15
+    resuelta: '2026-09-14: los cuatro subgrupos con nombre, dos por nodo (Tacuatos y Cayudes en GUARANAO; Guasicures de Caseto y Corubos en AMUAY). Sigue abierto si los apellidos de Moruy nombran casas'
+    pregunta: ¿Se reajusta GUARANAO a un centro (los Moruyes, en Moruy y Chamuriana) y los cuatro subgrupos con nombre de la tradición (Tacuatos, Cayudes, Guasicures de Caseto, Corubos)? ¿Los Corubos van en el Golfete, como dice la crónica, o en la costa oriental, como sugiere Curubitos?
+    y_los_apellidos: ¿Los apellidos indígenas de Moruy (Mabo, Cuauro, Caguao, Guarecuco, Cotopo, Tumarure) nombran casas dentro del centro, y los Adaures entran como subgrupo de frontera? ¿Conviven con Corie y Buio de D1 o los sustituyen?
+    deuda: perseguir la lista de Petit 2012 hasta Hernández Baño 1984 o Arcaya
+  - id: P16
+    pregunta: ¿Se sube el peso del conuco en las aldeas del interior y se añade el monte como recurso con dueño (frutos, leña, caza y sombra del suelo)?
+    propuesta: sí, y proponer al corpus de ecología el hecho del sobrepastoreo con los matices a ecologia-033 y ecologia-036
+  - id: P17
+    pregunta: ¿Se corrige el rasgo economía de la polity costera (curiana_polities.py, la nota de Oliver y horizonte-de-contacto), que da a la costa la red jirajara de cuentas, sal y azabache?
+    propuesta: sí, con la cita de las pp. 285-286; es un error de regla 4 y de lectura

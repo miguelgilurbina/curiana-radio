@@ -1,0 +1,106 @@
+# ─────────────────────────────────────────────────────────────────────────
+# DECISIONES DE MIGUEL — tanda del 2026-09-13
+#
+# Mismo patrón que las tandas anteriores: cita literal, lectura operativa y
+# qué script lo aplicó. Rama feat/era2-arranque.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-13'
+  decidido_por: Miguel
+  estado: EN CURSO — numerales y hooks aplicados; el elenco vuelve a diseño
+
+numerales:
+  estado: APLICADA (2026-09-13)
+  decision_literal: >-
+    «Cambiemos los numerales» · «Aparte sería interesante poder presentarle los
+    conceptos de numerales en la forma de concepción en el achagua y lokono, que
+    los usen, pero si gustan inventar su propio sistema análogo con el caquetío
+    podrían hacerlo.»
+  lectura_operativa: >-
+    Los agentes aprenden los numerales ATESTIGUADOS pana 'uno', gudamuen 'dos',
+    sabuenen 'tres', katarí 'cuatro' (Zavala Reyes 2015 #148, #222, #70, vía
+    Pedro Manuel Arcaya), que ya estaban en el lexicón mientras el canon
+    enseñaba los wayuu. wanee/piama/apünüin/pienchi/jarai pasan a
+    FUERA_DEL_HABLA con su procedencia. 'Cinco' y 'mano' no están atestiguados:
+    el prompt presenta el sistema de contar con el cuerpo de lokono y achagua
+    (5 = una mano, 10 = dos manos, 20 = una persona entera; clasificadores del
+    achagua) y deja que los agentes lo usen o inventen el suyo entre corchetes.
+  evidencia: 6-fusion/propuesta_nucleo_d11_fase3.yaml (casillas de numerales)
+  consecuencia_declarada: >-
+    Rompe la comparabilidad léxica con los runs de la era 1 en los numerales, que
+    medían casi nada (cada forma aparecía una vez en un solo prompt). Se aplica
+    antes del run corto de la era 1 con base sellada, que será la vara nueva.
+
+hooks:
+  estado: INSTALADOS (2026-09-13)
+  decision_literal: '«instalemos los hooks»'
+  donde: .claude/settings.json (proyecto) + .claude/hooks/curiana_hooks.py
+  diseno: .claude/skills/HOOKS_PROPUESTOS.md
+  verificacion: >-
+    Pipe-test de los cinco modos con JSON de Claude Code (rutas de Windows con
+    í). El hook de Bash quedó probado en vivo por accidente: bloqueó un heredoc
+    de prueba que contenía el texto de una escritura a TABLERO.md. Es un falso
+    positivo esperable (el modo bash es un filtro de texto): las pruebas con
+    ese texto van en un fichero.
+
+elenco_era2:
+  estado: VUELVE A DISEÑO
+  decision_literal: >-
+    «El elenco hay que pensarlo mejor para atomizarlo más para definir los
+    subgrupos también. Y hay que identificar que ambos grupos tenían sus zonas
+    pesqueras. Y que el merejuy es algo que debería unir a los dos nodos para
+    los procesos ritualísticos. Recordemos que Kapubana es un asiento religioso,
+    por lo que debe haber varios puestos religiosos, los que preparan al Manaure
+    por ejemplo. Una "institución", por así decirlo.»
+  lectura_operativa: >-
+    Se descarta el reparto de «2 linajes por nodo» como estructura suficiente.
+    Antes del casting: (1) niveles atomizados polity → clan → subgrupos/aldeas →
+    linajes → casas; (2) zona pesquera propia de cada clan; (3) el merejuy como
+    ciclo ritual que obliga a los dos nodos a converger — y que es el canal de
+    contacto del experimento; (4) el Kapubana como institución religiosa con
+    oficios, entre ellos los que preparan al Manaure. Investigación en curso por
+    un escriba: 6-fusion/estructura_social_era2.yaml y su borrador en
+    issues-pendientes/.
+  segunda_vuelta:
+    fecha: '2026-09-13'
+    decision_literal: >-
+      «Si te fijas, Oliver dice que Paraguaná tenía igual otra disposición
+      ecológica, ya que había matorrales y arbustos que hacían que el microclima
+      en el suelo fuese distinto, y eso se perdió con el sobrepastoreo. Y además
+      tenemos que tener las salinas, por lo que está otra disposición de mercado
+      ahí. Habíamos mencionado no sé en dónde algunos nombres de subgrupos de
+      parte de los Moruyes.»
+    lectura_operativa: >-
+      Tres añadidos a la estructura antes del casting. (1) El medio del s. XV no
+      es el de hoy en el suelo: la cobertura vegetal que retenía la humedad se
+      perdió con las cabras y con el abandono de los conucos tras 1527 (Oliver
+      cap. 3 §3.4), y eso sube el peso del conuco en las aldeas del interior.
+      (2) Las salinas de los dos clanes y la sal como excedente que sale de la
+      península por trueque, un circuito distinto de la redistribución ritual de
+      la convergencia. (3) Nombres para atomizar Moruy: los apellidos indígenas
+      que dan Esteves y Medina Colina y las rancherías del padrón de 1881.
+    donde: >-
+      6-fusion/estructura_social_era2.yaml (secciones medio_precontacto y
+      sal_y_mercado; niveles G2) y el borrador del issue, §7
+    recuperado_del_historial_2026-09-14:
+      decision_literal: '«Igual revisa en nuestro historial ya que lo habíamos conversado.»'
+      que_se_encontro: >-
+        Los subgrupos estaban en el barrido web del 2026-09-10: la tribu de los
+        Guaranaos «la constituían los Tacuato», con los corubos, los cayudes y
+        los guasicures de Caseto (Osman Petit, Centro de Historia de Paraguaná,
+        2012, sin cita). Se había archivado en
+        barrido_toponimos_web_2026-09-10.yaml y la estructura no lo recogía; la
+        primera respuesta de la segunda vuelta afirmó que ninguna fuente nombraba
+        subgrupos, y estaba mal.
+      donde: estructura_social_era2.yaml (niveles, GUARANAO_subgrupos_con_nombre; P15)
+
+exportador_42:
+  estado: VERIFICADO CONTRA LA BASE (2026-09-13, con Docker levantado por Miguel)
+  que_se_hizo: >-
+    Sin reescribir content/simulador/runs/index.json (el re-export del sitio va
+    después del primer run limpio, PLAN_MAESTRO §6.4): se llamó a las funciones
+    del exportador contra la Supabase local. 20091e1f: la fila dice 0/0 y
+    ended_at NULL; medido, 57 turnos y 29 días — exactamente lo predicho — y los
+    tres avisos salen. Condición 9 del gate: el exportador mide bien.
+  pendiente: 'export_resumen_seed.py y export_personajes_seed.py leen total_turns/total_days de la fila (mismo problema, fuera de alcance)'
+

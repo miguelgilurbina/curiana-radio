@@ -28,6 +28,8 @@ revisión encima (el de D9 lleva tres, con dos autocorrecciones).
 | `decision-borojo-filiacion.md` | issue **#123** (`decision`), **cerrada el 2026-09-13** con la opción 3: se queda atestiguada, conflicto en notas | 2026-09-12 |
 | `decision-era2-retroabstraido.md` | issue **#124** (`decision`), **cerrada el 2026-09-13** con la opción A: 46 voces de Medina como retroabstraídas | 2026-09-12 |
 | `comentario-45-tara-medina.md` | comentario en [#45](https://github.com/miguelgilurbina/curiana-radio/issues/45): segunda fuente, viva, para tara = saltamontes | 2026-09-12 |
+| `diseno-elenco-era2-estructura.md` | issue **#126** (`decision`, `motor`), **abierta**: el §0 trae lo decidido el 2026-09-14 (dos subgrupos por nodo, el Manaure de los Moruyes, los Corubos en Carirubana) y quedan abiertas P4-P14, P16 y P17 | 2026-09-14 |
+| `casting-era2.md` | issue **#127** (`decision`, `motor`), **abierta**: el casting de la era 2; siete de sus diez preguntas decididas el mismo día (comentario en la issue), quedan P2, P3 y P7 | 2026-09-14 |
 | `fallo-miguel-nivel-C-medina.md` | **no se publicó: se aplicó** al corpus el 2026-09-12 (32 hechos, `fusionar_nivel_c_medina.py`). Queda como registro del fallo en cuatro tandas | 2026-09-12 |
 
 Nada de esto está fusionado al canon: son argumentos publicados esperando

@@ -116,6 +116,17 @@ python curiana_orchestrator_v2.py --auto 30 --perfil base --perfiles --reporte
 #   --reporte   reporte anual LLM al completar cada año simulado
 #   --ablacion  atajo al perfil `control`. La evidencia de koineización es la
 #               DIFERENCIA normal vs. ablación
+#
+# Era 2 (2026-09-14): el día largo y los días encadenados
+#   --turnos-por-dia 6      un día = los seis momentos (la era 1 corría con 2)
+#   --agentes-por-turno 12  la ventana que habla por turno (la era 1: 6)
+#   --roster todos          todos los no foráneos, tier 3 incluidos (era 1: `koine`, 23 fijos)
+#   --semilla N             fija el azar del motor y se sella en la huella
+#   --continuar             arranca del estado, memoria, lexicón y koiné del run anterior
+#                           (curiana_*.json en curiana_sim/); la config dice de qué run viene
+#   --perfil era2           base sin la capa hipotética (decisión 2026-09-14); un run = un día
+python curiana_orchestrator_v2.py --auto 6 --turnos-por-dia 6 --agentes-por-turno 12 --roster todos --perfil era2 --semilla 1
+python curiana_orchestrator_v2.py --auto 6 --agentes-por-turno 12 --roster todos --perfil era2 --semilla 2 --continuar
 ```
 
 ⚠️ Los perfiles cambian lo que el agente **ve**, nunca con qué se le **puntúa**:
@@ -168,9 +179,10 @@ enlaces; lo que se rompe son los enlaces markdown relativos.
 
 ```
 Orden: pronombre + verbo-aspecto + complemento
-Pronombres: taya (yo), pia (tú), nüma (él/ella), tayamaa (nosotros)
+Pronombres: taya (yo), pia (tú), nüma (él/ella), waya (nosotros), naya (ellos)
+            — reconstruidos desde el wayuu: deuda de D11 fase 3
 Aspectos:   -ka (completivo), -ni (continuativo), -da (prospectivo)
-Posesivos:  ta- (mi), pi- (tu), nü- (su)
+Posesivos:  ta- (mi), wa- (nuestro), ma- (sin/no), ka- (el/la del)
 Locativos:  -bana (cerro, sitio alto — D9 resuelta 2026-08-31, seis apoyos;
             homónimo de bana 'hígado' reconstruido), -ana (forma atestiguada,
             glosa 'lugar de' RETIRADA el 2026-09-07 — #109; el motor la
