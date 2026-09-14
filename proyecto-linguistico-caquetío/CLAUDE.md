@@ -116,6 +116,16 @@ python curiana_orchestrator_v2.py --auto 30 --perfil base --perfiles --reporte
 #   --reporte   reporte anual LLM al completar cada año simulado
 #   --ablacion  atajo al perfil `control`. La evidencia de koineización es la
 #               DIFERENCIA normal vs. ablación
+#
+# Era 2 (2026-09-14): el día largo y los días encadenados
+#   --turnos-por-dia 6      un día = los seis momentos (la era 1 corría con 2)
+#   --agentes-por-turno 12  la ventana que habla por turno (la era 1: 6)
+#   --roster todos          todos los no foráneos, tier 3 incluidos (era 1: `koine`, 23 fijos)
+#   --semilla N             fija el azar del motor y se sella en la huella
+#   --continuar             arranca del estado, memoria, lexicón y koiné del run anterior
+#                           (curiana_*.json en curiana_sim/); la config dice de qué run viene
+python curiana_orchestrator_v2.py --auto 6 --turnos-por-dia 6 --agentes-por-turno 12 --roster todos --semilla 1
+python curiana_orchestrator_v2.py --auto 6 --agentes-por-turno 12 --roster todos --semilla 2 --continuar
 ```
 
 ⚠️ Los perfiles cambian lo que el agente **ve**, nunca con qué se le **puntúa**:

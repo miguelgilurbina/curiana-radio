@@ -35,6 +35,7 @@ from curiana_state import (
     ComunidadState,
     DIAS_POR_ESTACION,
     estado_inicial_test,
+    momento_de_turno,
     EVENTOS_COTIDIANOS,
     EVENTOS_ESTACIONALES,
     MOMENTOS_DIA,
@@ -46,6 +47,9 @@ from curiana_lexicon import (
     prompt_lexico_activo,
     score_linguistico,
     prompt_rescate_linguistico,
+    prompt_reglas_completo,
+    prompt_reglas_breve,
+    formas_en_texto,
     VOCABULARIO_BASE,
 )
 from curiana_observer import ObserverAgent
@@ -64,6 +68,8 @@ from curiana_koine import (
     prompt_idiolecto,
     distancia_idiolectal,
     veredicto_convergencia,
+    guardar_koine,
+    cargar_koine,
 )
 
 
@@ -114,9 +120,46 @@ de otros pueblos, no la tuya, aunque sean primas del caquetío y tú sepas recon
 Si alguna vez "se te escapa" una palabra wayunaiki, lokono o taína porque la conoces de
 oídas, eso es una fuga lingüística — exactamente igual de grave que decir una palabra en
 español. Antes de usar una palabra de otra lengua arahuaca, pregúntate: ¿existe en
-caquetío? Casi siempre SÍ (kati, para, kanoa, hamaca... todas tienen forma caquetía).
+caquetío? Casi siempre SÍ (kati, para, kanoa, hamaka... todas tienen forma caquetía).
 Solo si de verdad no existe, créala con morfemas caquetíos — nunca tomes prestada la
 forma de la lengua vecina."""
+
+# Lo que las plantillas ENSEÑAN no puede contar como koiné: el run db946685
+# (bitácora, 2026-09-14) tenía «ta-barsure naba-ni» en el 17,5 % de las
+# respuestas como piso constante de copia, y esas formas flexionadas no están
+# en VOCABULARIO_BASE, así que la métrica emergente y el diccionario koiné las
+# contaban como convergencia. Se excluyen junto con el vocabulario base.
+_FORMAS_EXCLUIDAS = (
+    _FORMAS_BASE
+    | formas_en_texto(_IDENTIDAD_LINGUISTICA)
+    | formas_en_texto(prompt_reglas_completo())
+    | formas_en_texto(prompt_reglas_breve())
+)
+
+# Elenco que habla. Miguel, 2026-09-14: «me gustaría que todos los agentes
+# hablen, porque si no ¿para qué tenerlos ahí?» y «los foráneos no deberían
+# entrar de momento». El roster `todos` son todos los agentes de etnia caquetía
+# (incluidos los tier 3 y los mestizos o insulares), sin los foráneos; `koine`
+# es el roster fijo de 23 con el que corrió la era 1.
+ETNIAS_FORANEAS = frozenset({"caribe", "gayón", "guaycarí", "jirajara"})
+
+
+def es_foraneo(agente: dict) -> bool:
+    etnia = (agente.get("etnia") or "caquetío").lower()
+    return etnia in ETNIAS_FORANEAS
+
+
+def roster_de_habla(nombre: str = "koine") -> list[str]:
+    """Quiénes rotan hablando. `koine`: los 23 de la era 1. `todos`: todos los
+    agentes no foráneos, en el orden del roster koiné primero (formadores de
+    norma) y luego el del elenco."""
+    if nombre == "koine":
+        return [a for a in PARTICIPANTES_KOINE if a in ALL_AGENTS]
+    if nombre != "todos":
+        raise ValueError(f"roster desconocido: {nombre!r} (koine | todos)")
+    primero = [a for a in PARTICIPANTES_KOINE if a in ALL_AGENTS and not es_foraneo(ALL_AGENTS[a])]
+    resto = [a for a, d in ALL_AGENTS.items() if a not in primero and not es_foraneo(d)]
+    return primero + resto
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -132,16 +175,22 @@ def get_client(run_id: Optional[str] = None) -> anthropic.Anthropic:
 
 
 # ══════════════════════════════════════════════════════════════════════
-# MEMORIA DE AGENTES (rolling, últimas 3 interacciones)
+# MEMORIA DE AGENTES (rolling: las últimas MAX_NOTAS notas)
 # ══════════════════════════════════════════════════════════════════════
+# Eran 3 notas de turno. Con los días encadenados (--continuar) el cierre de
+# cada día añade una nota por agente con lo que hizo —los momentos en que
+# habló y lo que acuñó—, y hacen falta ranuras para que esa nota sobreviva a
+# los turnos del día siguiente.
 
 class AgentMemory:
+    MAX_NOTAS = 5
+
     def __init__(self):
         self._memory: dict[str, list[str]] = {}
 
     def add(self, agent_name: str, note: str):
         self._memory.setdefault(agent_name, []).append(note)
-        self._memory[agent_name] = self._memory[agent_name][-3:]
+        self._memory[agent_name] = self._memory[agent_name][-self.MAX_NOTAS:]
 
     def get(self, agent_name: str) -> Optional[str]:
         notes = self._memory.get(agent_name, [])
@@ -393,10 +442,32 @@ def run_turn(
     ablacion: bool = False,
     capas: Optional[frozenset] = None,
     db_fallos: Optional[Counter] = None,
+    agentes_por_turno: int = 6,
+    roster: Optional[list[str]] = None,
 ) -> list[dict]:
+    """Un turno. `agentes_por_turno` es la ventana que habla; `roster`, sobre
+    quiénes rota (None = el roster koiné de la era 1, ver roster_de_habla).
+    En un turno con evento hablan primero los agentes que el evento nombra y
+    la ventana se completa con la rotación, para que cada turno tenga el
+    mismo número de voces."""
     interactions = []
     if db_fallos is None:
         db_fallos = Counter()  # descartable si el caller no lo pidió
+    roster_explicito = roster is not None
+    roster = list(roster) if roster_explicito else [a for a in PARTICIPANTES_KOINE if a in ALL_AGENTS]
+    roster_set = set(roster)
+
+    def _ventana() -> list[str]:
+        # Ventana rotatoria sobre el roster, avanzando `agentes_por_turno` por
+        # turno. Contador GLOBAL de turnos (no state.turno, que cicla dentro
+        # del día): con state.turno la ventana se clavaba y de 23 participantes
+        # solo hablaban 12.
+        if not roster:
+            return list(state.agentes_en_escena)
+        n_turno = (state.dia - 1) * state.turnos_por_dia + (state.turno - 1)
+        k = (n_turno * agentes_por_turno) % len(roster)
+        return [roster[(k + i) % len(roster)]
+                for i in range(min(agentes_por_turno, len(roster)))]
 
     # Evento de nombramiento: aparece un referente sin palabra caquetía y se
     # presenta a TODOS los agentes activos este turno → acuñan formas rivales
@@ -432,27 +503,22 @@ def run_turn(
         # "gran cosecha de sal" se narraba y la sal seguía escasa al turno
         # siguiente, y el contexto inyectado a los agentes era invariable.
         state.aplicar_efecto(evento.get("efecto"))
-        agentes_activos = [
+        involucrados = [
             a for a in evento.get("agentes_involucrados", state.agentes_en_escena)
             if a in ALL_AGENTS and a not in ("toda_la_comunidad", "guerreros")
-        ] or state.agentes_en_escena[:5]
+        ]
+        if roster_explicito:
+            # Con roster declarado, un evento no mete a quien el roster deja
+            # fuera (los foráneos, de momento).
+            involucrados = [a for a in involucrados if a in roster_set]
+        agentes_activos = involucrados or [a for a in state.agentes_en_escena if a in roster_set][:5]
+        for a in _ventana():
+            if len(agentes_activos) >= agentes_por_turno:
+                break
+            if a not in agentes_activos:
+                agentes_activos.append(a)
     else:
-        # Koiné: ventana rotatoria de 6 sobre el roster FIJO de participantes,
-        # avanzando 6 por turno → todos hablan en ~2 días (población constante).
-        #
-        # OJO: hay que usar un contador GLOBAL de turnos, no state.turno, que
-        # solo vale 1 o 2 (avanzar_turno alterna). Con state.turno la ventana
-        # se quedaba clavada en k=6 y k=12: de 23 participantes solo hablaban
-        # 12, y los ocho caquetíos "formadores de norma" (Manaure, Shaboro,
-        # Nubiri-sha, Buio-sha, Tawaka, Dare-nu…) no entraban NUNCA salvo que
-        # un evento los invocara. Sesgaba toda métrica del experimento.
-        roster = [a for a in PARTICIPANTES_KOINE if a in ALL_AGENTS]
-        if roster:
-            n_turno = (state.dia - 1) * 2 + (state.turno - 1)   # 0,1,2,3…
-            k = (n_turno * 6) % len(roster)
-            agentes_activos = [roster[(k + i) % len(roster)] for i in range(6)]
-        else:
-            agentes_activos = state.agentes_en_escena
+        agentes_activos = _ventana()
 
     if verbose:
         print(f"\n{'='*60}")
@@ -479,14 +545,13 @@ def run_turn(
     else:
         stimulus = MOMENTOS_ESTIMULO.get(state.momento, "¿Qué haces ahora?")
 
-    # 3. Activar agentes
-    for agent_name in agentes_activos[:6]:
+    # 3. Activar agentes. Los tier 3 hablan también (antes se saltaban aquí
+    # aunque un evento los llamara): call_agent ya les arma su prompt corto.
+    for agent_name in agentes_activos[:agentes_por_turno]:
         if agent_name not in ALL_AGENTS:
             continue
         agent = ALL_AGENTS[agent_name]
         tier = agent.get("tier", 2)
-        if tier == 3:
-            continue
 
         mem = memory.get(agent_name)
         response = call_agent(
@@ -495,12 +560,15 @@ def run_turn(
             campo=campo, ablacion=ablacion, capas=capas,
         )
 
-        interactions.append({
+        interaccion = {
             "agent": agent_name,
             "tier": tier,
             "etnia": agent.get("etnia", "caquetío"),
             "response": response,
-        })
+            "momento": state.momento,
+            "neologismos": [],
+        }
+        interactions.append(interaccion)
 
         # Análisis lingüístico por el Observer
         registro = observer.analizar(
@@ -513,6 +581,9 @@ def run_turn(
             momento=state.momento,
             estacion=state.estacion,
         )
+
+        interaccion["neologismos"] = [
+            n.forma for n in getattr(registro, "neologismos_extraidos", [])]
 
         # Detectar adopciones de palabras propuestas por otros
         neos_oficializados = observer.procesar_adopciones(
@@ -797,6 +868,11 @@ def auto_mode(
     perfiles: bool = False,
     ablacion: bool = False,
     perfil: Optional["Perfil"] = None,
+    agentes_por_turno: int = 6,
+    roster_nombre: str = "koine",
+    turnos_por_dia: Optional[int] = None,
+    semilla: Optional[int] = None,
+    continuar: bool = False,
 ):
     """
     Corre N turnos automáticamente.
@@ -807,27 +883,63 @@ def auto_mode(
     ponderado). Comparar un run normal contra su ablación separa la
     convergencia emergente de la inducida por el andamiaje.
 
-    Mapeo temporal:
+    agentes_por_turno / roster_nombre → cuántos hablan por turno y sobre qué
+    elenco rota la ventana (ver roster_de_habla). La era 1: 6 sobre `koine`.
+
+    turnos_por_dia → cuántos turnos tiene un día (la era 1: 2). Con 6 se
+    recorren los seis momentos del día.
+
+    semilla → fija el azar del motor (eventos, muestras, nombramientos) y se
+    sella en la huella del run. El modelo sigue siendo no determinista.
+
+    continuar=True → encadena días: arranca del estado, la memoria, el lexicón,
+    el observer y la koiné (idiolectos y campo) que dejó el run anterior en
+    disco, y declara en su config de qué run viene. Lo que NO se hereda todavía:
+    la difusión social y las competencias léxicas abiertas.
+
+    Mapeo temporal (con turnos_por_dia = 2):
         1 turno = media jornada
         2 turnos = 1 día
         60 días = 1 estación (seca o lluvias)
         120 días = 1 año (2 estaciones)
         → 240 turnos = 1 año simulado completo
     """
-    state = estado_inicial_test()
-    memory = AgentMemory()
-    lexico = LexicoComunitario()
-    observer = ObserverAgent(client, lexico)
-    difusion = DifusionLexica()
+    if semilla is not None:
+        random.seed(semilla)
 
-    # Koiné: idiolecto por agente (pre-cargado con su emocionar → divergencia
-    # inicial) + campo léxico comunitario + serie temporal de distancia
-    # idiolectal (la métrica de convergencia: debe CONTRAERSE).
-    idiolectos = {
-        nm: IdiolectoAgente(nm, emocionar_de(nm, a.get("etnia")))
-        for nm, a in ALL_AGENTS.items()
-    }
-    campo = CampoLexico()
+    if continuar:
+        state = ComunidadState.load()
+        memory = AgentMemory.load()
+        lexico = LexicoComunitario.load()
+        try:
+            observer = ObserverAgent.load(client, lexico)
+        except Exception:                                    # noqa: BLE001
+            observer = ObserverAgent(client, lexico)
+        idiolectos, campo = cargar_koine()
+        # Un agente nuevo en el elenco arranca con su semilla de idiolecto.
+        for nm, a in ALL_AGENTS.items():
+            idiolectos.setdefault(nm, IdiolectoAgente(nm, emocionar_de(nm, a.get("etnia"))))
+        # El estado guardado apunta al turno siguiente al último corrido, así
+        # que un día completo anterior deja al nuevo run en el amanecer.
+    else:
+        state = estado_inicial_test()
+        memory = AgentMemory()
+        lexico = LexicoComunitario()
+        observer = ObserverAgent(client, lexico)
+        # Koiné: idiolecto por agente (pre-cargado con su emocionar → divergencia
+        # inicial) + campo léxico comunitario + serie temporal de distancia
+        # idiolectal (la métrica de convergencia: debe CONTRAERSE).
+        idiolectos = {
+            nm: IdiolectoAgente(nm, emocionar_de(nm, a.get("etnia")))
+            for nm, a in ALL_AGENTS.items()
+        }
+        campo = CampoLexico()
+    if turnos_por_dia is not None:
+        state.turnos_por_dia = int(turnos_por_dia)
+        if not continuar:
+            state.momento = momento_de_turno(state.turno, state.turnos_por_dia)
+    roster = roster_de_habla(roster_nombre)
+    difusion = DifusionLexica()
     # (dia, acumulada, ventana, emergente) — la acumulada se conserva por
     # compatibilidad histórica; la señal científica es ventana/emergente
     # (la acumulada converge por mera acumulación del vocabulario base).
@@ -844,7 +956,7 @@ def auto_mode(
 
     # Inicializar DB (CurianaDB real o CurianaDBMock si no está configurada)
     db = get_db()
-    _h = huella_de_base()
+    _h = huella_de_base(semilla=semilla)
     print(f"  base: {resumen_huella(_h)}")
     if _h.get("motor_sucio"):
         print("  ⚠ árbol sucio: este run NO será citable (ver huella_de_base.py)")
@@ -865,18 +977,30 @@ def auto_mode(
     run_id = db.create_run(
         model=MODEL,
         config={"max_turns": turnos, "mode": "auto",
+                "agentes_por_turno": agentes_por_turno,
+                "roster": roster_nombre, "roster_n": len(roster),
+                "turnos_por_dia": state.turnos_por_dia,
+                "dia_inicial": state.dia,
+                "continuado_desde": state.run_anterior if continuar else None,
                 **perfil.como_config(), **_h},
     )
     # Re-crear cliente con run_id para que LangSmith use el proyecto correcto
     client = get_client(run_id)
 
     estacion_anterior = state.estacion
-    anio_simulado = 1
-    dia_inicio_estacion = 1
+    anio_simulado = (state.dia - 1) // (2 * DIAS_POR_ESTACION) + 1
+    dia_inicio_estacion = state.dia
+    tpd = state.turnos_por_dia
+    # Lo que cada agente hizo hoy: al cerrar el día pasa a su memoria.
+    hizo_hoy: dict[str, dict[str, list[str]]] = {}
 
     print(f"\n{'='*60}")
     print(f"  CURIANA — Modo Automático: {turnos} turnos")
-    print(f"  ({turnos // 2} días simulados · {turnos // 240} año(s) aprox.)")
+    print(f"  ({turnos // tpd} días simulados de {tpd} turnos · "
+          f"{turnos // (tpd * 2 * DIAS_POR_ESTACION)} año(s) aprox.)")
+    print(f"  habla: {agentes_por_turno} por turno sobre el roster `{roster_nombre}` ({len(roster)})")
+    if continuar:
+        print(f"  continúa desde el día {state.dia} (run anterior: {(state.run_anterior or '?')[:8]})")
     print(f"  Run ID: {run_id[:8]}...")
     if ablacion:
         print("  ⚗ ABLACIÓN: sin contagio, sin competencias en prompt, sin muestreo ponderado")
@@ -899,13 +1023,26 @@ def auto_mode(
                 difusion=difusion, idiolectos=idiolectos, campo=campo,
                 competencia=competencia, naming_referente=naming_referente,
                 ablacion=ablacion, capas=capas, db_fallos=db_fallos,
+                agentes_por_turno=agentes_por_turno, roster=roster,
             )
             participantes.update(i["agent"] for i in interactions)
+            for i in interactions:
+                h = hizo_hoy.setdefault(i["agent"], {"momentos": [], "neos": []})
+                h["momentos"].append(i.get("momento") or "")
+                h["neos"] += i.get("neologismos") or []
             turnos_hechos += 1
 
             # Reporte al final de cada día
             if state.turno == 1 and state.dia > 1:  # acaba de cambiar de día
                 dia_terminado = state.dia - 1
+                # Memoria del día: lo que cada agente hizo, para que mañana
+                # (en este run o en uno continuado) se acuerde.
+                for nm, h in hizo_hoy.items():
+                    nota = f"D{dia_terminado}: hablé al {', '.join(m for m in h['momentos'] if m)}"
+                    if h["neos"]:
+                        nota += f"; acuñé {', '.join(dict.fromkeys(h['neos']))}"
+                    memory.add(nm, nota)
+                hizo_hoy = {}
                 # Distancia medida SOLO sobre quienes hablaron (población real).
                 # Tres lecturas: acumulada (histórica, sesgada a converger por
                 # acumulación del vocabulario base), ventana (habla reciente real)
@@ -913,7 +1050,7 @@ def auto_mode(
                 dist = distancia_idiolectal(idiolectos, solo=participantes)
                 dist_vent = distancia_idiolectal(idiolectos, solo=participantes, ventana=True)
                 dist_emer = distancia_idiolectal(idiolectos, solo=participantes,
-                                                 ventana=True, excluir=_FORMAS_BASE,
+                                                 ventana=True, excluir=_FORMAS_EXCLUIDAS,
                                                  min_formas=3)
                 serie_distancia.append((dia_terminado, dist, dist_vent, dist_emer))
                 # Evaluar fijación de competencias léxicas del día
@@ -956,13 +1093,15 @@ def auto_mode(
                     print(observer.reporte_anual_llm(anio_simulado))
                     anio_simulado = anio_en_curso
     finally:
-        # Guardar localmente
+        # Guardar localmente: es lo que un run continuado (--continuar) hereda.
+        state.run_anterior = run_id
         state.save()
         memory.save()
         lexico.save()
         observer.save()
         observer.exportar_csv()
         observer.exportar_neologismos_csv()
+        guardar_koine(idiolectos, campo)
 
         # Cerrar run en DB, con lo que de verdad se corrió
         db.end_run(run_id, total_turns=turnos_hechos, total_days=state.dia - 1)
@@ -1009,7 +1148,7 @@ def auto_mode(
         else:
             print("  Veredicto: datos insuficientes (ningún par de días comparable)")
     print("\n  Diccionario koiné emergente (formas más extendidas):")
-    for forma, peso in campo.top(15):
+    for forma, peso in campo.top(15, excluir=_FORMAS_EXCLUIDAS):
         print(f"    {forma:18} {peso:.1f}")
 
     # ── Fijación por competencia: el diccionario koiné de conceptos nuevos ──
@@ -1076,6 +1215,29 @@ if __name__ == "__main__":
         help="Lista los perfiles disponibles y sale."
     )
     parser.add_argument(
+        "--agentes-por-turno", type=int, default=6,
+        help="Cuántos agentes hablan por turno (la era 1: 6).",
+    )
+    parser.add_argument(
+        "--roster", choices=["koine", "todos"], default="koine",
+        help="Sobre qué elenco rota la ventana: `koine` (los 23 fijos de la era 1) "
+             "o `todos` (todos los agentes no foráneos, tier 3 incluidos).",
+    )
+    parser.add_argument(
+        "--turnos-por-dia", type=int, default=None,
+        help="Turnos por día simulado (la era 1: 2; con 6 se recorren los seis "
+             "momentos del día). Un run continuado hereda el del anterior.",
+    )
+    parser.add_argument(
+        "--semilla", type=int, default=None,
+        help="Semilla del azar del motor; se sella en la huella del run.",
+    )
+    parser.add_argument(
+        "--continuar", action="store_true",
+        help="Encadena días: arranca del estado, la memoria, el lexicón y la koiné "
+             "que dejó en disco el run anterior.",
+    )
+    parser.add_argument(
         "--ablacion", action="store_true",
         help="Run de CONTROL: apaga las inyecciones de prompt que empujan la "
              "convergencia (sugerencias de contagio, competencias abiertas, "
@@ -1099,10 +1261,14 @@ if __name__ == "__main__":
 
     client = get_client()
 
+    extra = dict(agentes_por_turno=args.agentes_por_turno, roster_nombre=args.roster,
+                 turnos_por_dia=args.turnos_por_dia, semilla=args.semilla,
+                 continuar=args.continuar)
     if args.anio:
-        auto_mode(client, 240, reporte_anual=True, verbose=not args.silencioso,
+        tpd = args.turnos_por_dia or 2
+        auto_mode(client, 120 * tpd, reporte_anual=True, verbose=not args.silencioso,
                    perfiles=args.perfiles, ablacion=args.ablacion,
-                   perfil=perfil)
+                   perfil=perfil, **extra)
     elif args.auto > 0:
         auto_mode(
             client, args.auto,
@@ -1111,6 +1277,7 @@ if __name__ == "__main__":
             perfiles=args.perfiles,
             ablacion=args.ablacion,
             perfil=perfil,
+            **extra,
         )
     else:
         interactive_mode(client)

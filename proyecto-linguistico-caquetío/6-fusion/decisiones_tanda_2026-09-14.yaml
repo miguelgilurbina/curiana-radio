@@ -122,3 +122,74 @@ tamano_del_elenco:
   donde: >-
     6-fusion/estructura_social_era2.yaml (decision_creativa_2026-09-14.elenco),
     5-experimento/DISENO_ERA2.md §3 y comentario en #126
+
+motor_era2:
+  estado: APLICADA (2026-09-14) — cambios del motor en la frontera de era, con tests
+  decision_literal: >-
+    «Sí, probemos ahora 10-12 agentes por turno. Hay que arreglar el muestreo.
+    Las 38 voces hipotéticas, ¿cuáles son? Los foráneos no deberían entrar de
+    momento. Sí o sí todos los afijos atestiguados se enseñan. [...] En vez de
+    turnos cortos de un día, es preferible que un día tenga muchos más turnos:
+    así podríamos tener una simulación por día, más larga en interacciones. Y
+    que cada uno de los turnos que equivalen a un día puedan irse sumando uno
+    tras de otro: que los agentes puedan aprender y acordarse de lo que hicieron
+    en el turno pasado.»
+  lectura_operativa:
+    quien_habla: >-
+      run_turn recibe `agentes_por_turno` y `roster`. El roster `todos` son los
+      52 agentes de etnia caquetía (incluidos los 12 tier 3, el caquetío de
+      Aruba y el mestizo guaycarí-caquetío); fuera los 8 foráneos (caribe,
+      gayón, guaycarí, jirajara). Los tier 3 ya no se saltan. En un turno con
+      evento hablan primero los que el evento nombra y la ventana se completa
+      con la rotación, filtrando a quien el roster deja fuera. Por defecto
+      sigue la era 1 (6 sobre `koine`).
+    muestreo: >-
+      repartir_cuotas(): reparto proporcional al tamaño de cada cubo (resto
+      mayor), una voz mínima por cubo, tope en el tamaño y el doble de peso a
+      los cubos relevantes al contexto; presupuesto fijo por tier (50 voces T1,
+      42 T2, los que la era 1 mandaba de hecho) para no alargar el prompt.
+      CATEGORIAS_BASE pasa a las claves que existen (v_raiz, pron, part…).
+      Medido: `sust` pasa de 3 a 15 voces por prompt T1, y las 352 voces del
+      perfil base salen todas en 154 prompts (antes el modelo estimaba 33 que
+      no salían nunca).
+    afijos: >-
+      REGLAS_TOPONIMICAS con -bacoa (morfemas.yaml morfema-001, 5 apoyos) y
+      AFIJOS_ATESTIGUADOS = REGLAS_ZAVALA + -bacoa, rendidos en las dos
+      plantillas (bloque DERIVACIÓN ATESTIGUADA en T1, una línea en T2). -ubana
+      y -uru se enseñan como lo que son: desinencias atestiguadas sin valor
+      anotado, que el agente puede usar proponiendo su valor entre corchetes.
+    plantilla_contra_el_canon: >-
+      buco→buko, corie «choza»→korie (armadillo), piache→boratio, canoa→kanoa,
+      hamaca→hamaka, conuco→konuko en T1 y en la identidad del orquestador;
+      fuera la promesa «y más en tu memoria». -ana «lugar de» se conserva: es
+      convención canon-simulación declarada (CLAUDE.md, REGLAS_LOCATIVAS).
+    dia_largo: >-
+      ComunidadState.turnos_por_dia (2 por defecto = era 1; 6 recorre los seis
+      MOMENTOS_DIA con momento_de_turno()). Vive en el estado, así que un run
+      continuado hereda el ritmo. --anio = 120 × turnos_por_dia.
+    dias_encadenados: >-
+      --continuar carga estado, memoria, lexicón y observer (ya se guardaban) y
+      la koiné nueva (idiolectos y campo, curiana_koine.json). La config del run
+      declara continuado_desde (el run anterior, que el estado guarda en
+      run_anterior) y dia_inicial. Al cerrar cada día, cada agente recibe una
+      nota de memoria «D{n}: hablé al …; acuñé …» (extractiva, sin LLM); la
+      memoria pasa de 3 a 5 notas. NO se hereda todavía: la difusión social y
+      las competencias léxicas abiertas.
+    semilla: '--semilla fija random y se sella en la huella (campo que el protocolo pedía)'
+    plantilla_fuera_de_la_koine: >-
+      _FORMAS_EXCLUIDAS = vocabulario base + tokens de las tres plantillas;
+      la métrica emergente y el diccionario koiné la usan. Cierra el punto 2 de
+      la bitácora de db946685.
+  las_38_hipoteticas:
+    pregunta_de_miguel: '¿cuáles son?'
+    grupos:
+      acunaciones_para_la_simulacion_sin_cita_F8: [atara, buraka, habobrisa, haborü, hikoteya, kaiwa, kanawa, kanawari, kanua, kasiripa, kayawara, kürara, madunaka, mankaba, marawa, marisi, mawari, muusa, paratü, puruna, sakana, shukua, sipara, taneka, tokoko, tsipana, tüma, ukura, yorua, yuri]
+      forma_sin_cita_ni_derivacion_F8: [alaain, japü, karükera, manatü, mülia]
+      otras: {coro: 'cardón; topónimo, D10 grupo 3', kama: 'tapir; degradada, sin rastro en las cuatro minerías', tata: 'padre; D10 baja de tier, van Buurt §11'}
+    recomendacion_del_escriba: >-
+      Para la pregunta de la koiné, esconderlas en la era 2: 35 de las 38 son
+      formas que el proyecto acuñó para la simulación, y mostrarlas adelanta lo
+      que el experimento quiere ver acuñar a los agentes. Sería un perfil
+      nuevo (atestiguado + reconstruido) y no tocar `base`, que es la era 1.
+    estado: PENDIENTE de Miguel
+  tests: 'curiana_sim/tests/test_era2_motor.py (23); suite 302 en verde; 9 guardianes'

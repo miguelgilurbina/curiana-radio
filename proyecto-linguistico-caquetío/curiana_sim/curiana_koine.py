@@ -254,8 +254,74 @@ class CampoLexico:
     def peso(self, forma: str) -> float:
         return self.pesos.get(forma, 0.0)
 
-    def top(self, n: int = 20) -> list[tuple[str, float]]:
-        return sorted(self.pesos.items(), key=lambda x: x[1], reverse=True)[:n]
+    def top(self, n: int = 20, excluir: Optional[set] = None) -> list[tuple[str, float]]:
+        """Las formas de más peso. `excluir` deja fuera el vocabulario heredado
+        (base y plantillas) cuando lo que se quiere ver es lo emergente."""
+        items = self.pesos.items()
+        if excluir:
+            items = [(f, p) for f, p in items if f not in excluir]
+        return sorted(items, key=lambda x: x[1], reverse=True)[:n]
+
+
+# ══════════════════════════════════════════════════════════════════════
+# III-b. PERSISTENCIA — para encadenar días (--continuar)
+# ══════════════════════════════════════════════════════════════════════
+# Miguel, 2026-09-14: «que cada uno de los turnos que equivalen a un día puedan
+# irse sumando uno tras de otro, es decir, que los agentes puedan aprender y
+# acordarse de lo que hicieron en el turno pasado». El estado, la memoria, el
+# lexicón y el observer ya se guardaban en JSON al cerrar un run; lo que no se
+# guardaba era la koiné: el idiolecto de cada agente (su manera de hablar
+# acumulada) y el campo léxico comunitario. Sin eso, un día encadenado
+# arrancaba con la lengua en blanco.
+
+KOINE_PATH = "curiana_koine.json"
+
+
+def _idiolecto_a_dict(idio: "IdiolectoAgente") -> dict:
+    return {
+        "agente": idio.agente,
+        "emocionar": idio.emocionar,
+        "frecuencias": dict(idio.frecuencias),
+        "acunaciones": sorted(idio.acunaciones),
+        "adopciones": sorted(idio.adopciones),
+        "recientes": [list(t) for t in idio.recientes],
+    }
+
+
+def _idiolecto_de_dict(d: dict) -> "IdiolectoAgente":
+    # peso_semilla=0: las frecuencias guardadas ya traen las semillas del
+    # primer día; volver a sembrarlas las contaría dos veces.
+    idio = IdiolectoAgente(d["agente"], d.get("emocionar") or {}, peso_semilla=0)
+    idio.frecuencias = Counter(d.get("frecuencias") or {})
+    idio.acunaciones = set(d.get("acunaciones") or [])
+    idio.adopciones = set(d.get("adopciones") or [])
+    for turno in d.get("recientes") or []:
+        idio.recientes.append(list(turno))
+    return idio
+
+
+def guardar_koine(idiolectos: dict, campo: "CampoLexico", path: str = KOINE_PATH) -> None:
+    import json
+    datos = {
+        "idiolectos": {nm: _idiolecto_a_dict(i) for nm, i in idiolectos.items()},
+        "campo": {"pesos": dict(campo.pesos), "decaimiento": campo.decaimiento},
+    }
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(datos, f, ensure_ascii=False, indent=1)
+
+
+def cargar_koine(path: str = KOINE_PATH) -> tuple[dict, "CampoLexico"]:
+    """Devuelve (idiolectos, campo) tal como quedaron al cerrar el run anterior.
+    Lanza FileNotFoundError si no hay nada guardado: continuar sin koiné previa
+    no es continuar, y conviene que falle a la vista."""
+    import json
+    with open(path, encoding="utf-8") as f:
+        datos = json.load(f)
+    idiolectos = {nm: _idiolecto_de_dict(d) for nm, d in datos.get("idiolectos", {}).items()}
+    c = datos.get("campo") or {}
+    campo = CampoLexico(decaimiento=float(c.get("decaimiento", 0.97)))
+    campo.pesos = {f: float(p) for f, p in (c.get("pesos") or {}).items()}
+    return idiolectos, campo
 
 
 # ══════════════════════════════════════════════════════════════════════

@@ -7136,6 +7136,29 @@ REGLAS_ZAVALA: dict[str, dict] = {
     },
 }
 
+# ── Formantes toponímicos atestiguados fuera de Zavala ──────────────
+# `-bacoa` es el morfema mejor sostenido de 2-lengua/morfemas.yaml
+# (morfema-001): cinco topónimos glosados por Esteves y el apoyo independiente
+# de Alvarado vía van Buurt. `bakoa` ya es voz caquetía atestiguada del lexicón;
+# lo que REGLAS_ZAVALA no recogía era su uso sufijal productivo. Miguel,
+# 2026-09-14: «sí o sí todos los afijos atestiguados se enseñan».
+REGLAS_TOPONIMICAS: dict[str, dict] = {
+    "-bacoa": {
+        "nombre": "bosque, arboleda, paraje cubierto de",
+        "desc": "Sitio cubierto o poblado de X; formante de topónimos.",
+        "uso": "RAÍZ + -bacoa  →  el bosque / la arboleda de X",
+        "ejemplos": ["ada + -bacoa = adabacoa (toda arboleda)",
+                     "yacare + -bacoa = yacarebacoa (pueblo del bosque)"],
+        "atestiguado": "2-lengua/morfemas.yaml morfema-001: adabacoa, guadabacoa, "
+                       "quibacoas, yacarebacoa (Esteves 1989); Alvarado 1921 -baca "
+                       "'matorral, espesura' vía van Buurt 2014 §10",
+        "instruccion_agente": (
+            "Para nombrar un sitio por lo que lo cubre, añade -bacoa: "
+            "'kuru-bacoa' es la arboleda, el paraje de árboles."
+        ),
+    },
+}
+
 # ── Tabla maestra de reglas (para inyectar en prompts) ──────────────
 TODAS_LAS_REGLAS = {
     **REGLAS_ASPECTO,
@@ -7144,7 +7167,48 @@ TODAS_LAS_REGLAS = {
     **REGLAS_POSESIVAS,
     **REGLAS_NUMERO,
     **REGLAS_ZAVALA,
+    **REGLAS_TOPONIMICAS,
 }
+
+# Los afijos que las fuentes ATESTIGUAN y que el motor tiene que enseñar
+# enteros (Miguel, 2026-09-14). Dos de ellos (-ubana, -uru) están atestiguados
+# como desinencias sin valor precisado: se enseñan como lo que son.
+AFIJOS_ATESTIGUADOS: dict[str, dict] = {**REGLAS_ZAVALA, **REGLAS_TOPONIMICAS}
+
+
+def _linea_afijo(afijo: str, regla: dict) -> str:
+    # El patrón de uso siempre; el ejemplo sólo si es una derivación de verdad
+    # (con «=»), no una nota de fuente como «variante -coa en topónimos».
+    uso = regla.get("uso", "")
+    ej = [e for e in (regla.get("ejemplos") or []) if "=" in e]
+    ejemplo = f" · {ej[0]}" if ej else ""
+    return f"{afijo} = {regla['nombre']}: {uso}{ejemplo}"
+
+
+def prompt_afijos_atestiguados() -> str:
+    """Bloque de derivación con TODOS los afijos atestiguados, para el Tier I."""
+    con_valor = [(a, r) for a, r in AFIJOS_ATESTIGUADOS.items()
+                 if "no precisado" not in r.get("nombre", "")]
+    sin_valor = [a for a, r in AFIJOS_ATESTIGUADOS.items()
+                 if "no precisado" in r.get("nombre", "")]
+    lineas = ["  DERIVACIÓN ATESTIGUADA (sufijos que las fuentes recogen en boca caquetía):"]
+    for afijo, regla in con_valor:
+        lineas.append(f"    {_linea_afijo(afijo, regla)}")
+    if sin_valor:
+        lineas.append(
+            f"    {' y '.join(sin_valor)} = desinencias atestiguadas cuyo valor nadie "
+            f"anotó: puedes usarlas si propones su valor entre corchetes."
+        )
+    return "\n".join(lineas)
+
+
+def prompt_afijos_atestiguados_breve() -> str:
+    """Una línea con los mismos afijos, para el Tier II."""
+    partes = []
+    for afijo, regla in AFIJOS_ATESTIGUADOS.items():
+        nombre = regla["nombre"]
+        partes.append(f"{afijo} ({'valor abierto' if 'no precisado' in nombre else nombre.split(',')[0]})")
+    return "DERIVACIÓN: raíz + " + " / ".join(partes) + "."
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -7327,12 +7391,13 @@ def prompt_reglas_breve() -> str:
     Versión compacta para Tier II (~150 palabras).
     Framing como hablante nativo — español solo como glosa.
     """
-    return """[LENGUA CAQUETÍA — Identidad y reglas]:
+    return f"""[LENGUA CAQUETÍA — Identidad y reglas]:
 ERES hablante nativo de caquetío. Piensas en caquetío. El español es lengua extranjera.
 CONSTRUYE tus frases con lo que tienes. Una frase incompleta en caquetío > oración completa en español.
 
 ASPECTO: raíz + -ka (ya hice) / -ni (estoy haciendo) / -da (haré/quiero).
 LUGAR: raíz + -ana (lugar de) / -bana (cerro, sitio alto de) / -gua (región de).
+{prompt_afijos_atestiguados_breve()}
 PERSONAS: -ko (hombre de) / -sha (mujer de) / -kana (plural/colectivo).
 POSESIÓN: ta- (mi) / wa- (nuestro) / ma- (sin/no) / ka- (el-la del).
 CONECTORES: ka (y/también) / mara (pero) / saa (si/cuando) / naka (después) / kashi (ahora) / wara (muy).
@@ -7358,9 +7423,13 @@ def prompt_reglas_completo() -> str:
                   "kuru (árbol) · arima (pez) · habo (mar) · bara (palo, árbol) · dali (tierra) · suka (noche) · "
                   "sima (cerro) · kapua (amanecer)")
     personas = "ama (madre) · baba (padre) · buri (hijo/a) · nomi (hombre) · wari (mujer) · wanü (anciano) · pütchi (mensaje/voz)"
-    sustantivos = ("barsure (alma) · buco (represa) · biro (sal) · piache (chamán) · corie (choza) · "
-                   "canoa (canoa) · hamaca (hamaca) · conuco (huerto) · arua (alimento) · "
-                   "maure (algodón) · urari (curare) · anüiki (habla/lengua)")
+    # Formas del canon (auditoría 2026-09-14): la plantilla enseñaba buco, corie
+    # «choza», canoa, hamaca, conuco y piache, que el lexicón no tiene con esa
+    # grafía o glosa (korie es el armadillo; piache está retirada). El scorer
+    # no contaba ninguna de esas seis.
+    sustantivos = ("barsure (alma) · buko (represa) · biro (sal) · boratio (piache, jefe) · "
+                   "korie (armadillo) · kanoa (canoa) · hamaka (hamaca) · konuko (huerto) · "
+                   "arua (alimento) · maure (algodón) · urari (curare) · anüiki (habla/lengua)")
     conectores = ("ka (y/también) · mara (pero) · saa (si/cuando) · naka (después) · puna (antes) · "
                   "kashi (ahora) · wara (muy/mucho) · yama (aquí) · sulu (adentro)")
     cuerpo = "kabo (cabeza) · nii (ojo) · bari (vientre) · tüshi (frío)"
@@ -7379,7 +7448,7 @@ CUANDO HABLAS:
 EJEMPLO DE RESPUESTA IDEAL (Tier I):
   "Taya wana-ka arima wara kari. Suka kaa-ni ka kali naa-da kapua.
    Ta-barsure maa-ni: Manaure naa-da kashi — ta-nii wana-ka [sima-bana: sima+-bana = la cumbre del cerro].
-   Saa pia naa-da buco-ana, naka taya naa-da ka pia."
+   Saa pia naa-da buko-ana, naka taya naa-da ka pia."
   (Vi muchos peces en la costa. La noche está, el sol vendrá al amanecer.
    Mi alma dice: Manaure llega pronto — mis ojos vieron la cumbre del cerro.
    Si vas al lugar de la represa, después yo voy contigo.)
@@ -7399,7 +7468,6 @@ VOCABULARIO DISPONIBLE [{len(VOCABULARIO_BASE)} palabras]:
     palos, ríos, lunas). Puedes contar así en caquetío —[pana-X: pana + tu palabra para mano =
     cinco], [pana ateri: una persona entera = veinte]— o inventar tu propio sistema. La primera
     vez, escríbelo entre corchetes.
-  [...y más en tu memoria — topónimos, etnónimos, títulos]
 
 MORFOLOGÍA:
   ASPECTO (al final del verbo):
@@ -7407,14 +7475,15 @@ MORFOLOGÍA:
     -ni = continuativo: naa-ni (voy ahora) · suna-ni (estoy durmiendo) · naba-ni (estoy pensando)
     -da = prospectivo: naa-da (iré) · maa-da (hablaré) · raka-da (quiero/querré)
   POSESIVOS (prefijos):
-    ta- = mi:      ta-barsure (mi alma) · ta-nii (mi ojo) · ta-corie (mi choza)
-    wa- = nuestro: wa-buco (nuestra represa) · wa-anüiki (nuestra lengua)
+    ta- = mi:      ta-barsure (mi alma) · ta-nii (mi ojo) · ta-hamaka (mi hamaca)
+    wa- = nuestro: wa-buko (nuestra represa) · wa-anüiki (nuestra lengua)
     ma- = sin/no:  ma-barsure (sin alma) · ma-anüiki (sin habla, extranjero)
     ka- = el/la del: ka-biro (el salinero) · ka-maure (la del algodón)
   LOCATIVOS (crear topónimos):
     -ana = lugar de X: bara+ana = donde están los árboles · arima+ana = lugar de peces
     -bana = cerro, sitio alto de X: sima+bana = la cumbre · kapu+bana = kapubana, el duende del cerro
     -gua = región de X: maure+gua = tierra del algodón
+{prompt_afijos_atestiguados()}
   AGENTIVOS: -ko (hombre de X) · -sha (mujer de X) · -kana (plural/todos)
 
 NUEVAS PALABRAS: [forma: componentes = significado propuesto]
@@ -7967,8 +8036,10 @@ PALABRAS_CLAVE_CATEGORIA: dict[str, list[str]] = {
 }
 
 # Siempre presentes: cualquier turno necesita armar frases y aspecto verbal,
-# sin importar el tema.
-CATEGORIAS_BASE = {"verbos", "gramatica"}
+# sin importar el tema. Son las claves `cat` gramaticales que el lexicón usa
+# de verdad (la auditoría 2026-09-14 midió que «verbos» no existía como cubo:
+# los verbos van en `v_raiz`).
+CATEGORIAS_BASE = {"v_raiz", "pron", "part", "gramatica", "interr", "num", "numerales"}
 
 
 def categorias_relevantes(contexto: str, max_extra: int = 4) -> set[str]:
@@ -8052,16 +8123,83 @@ def capa_epistemica(fuente: str) -> Optional[str]:
     return "caquetío-atestiguado"
 
 
+def repartir_cuotas(tamanos: dict[str, int], n_total: int,
+                    relevantes: "Optional[set]" = None,
+                    peso_relevante: float = 2.0) -> dict[str, int]:
+    """Cuántas voces de cada cubo entran en una muestra de `n_total`.
+
+    Reparto proporcional al tamaño del cubo (resto mayor), con cada cubo
+    relevante al contexto pesando `peso_relevante` veces más, un mínimo de una
+    voz por cubo no vacío mientras alcance, y nunca más voces que las que el
+    cubo tiene. Lo que un cubo no puede llenar se reparte entre los demás.
+
+    Reemplaza el reparto viejo, que daba la muestra entera a cada cubo
+    «relevante» y un goteo fijo al resto: como el muestreo agrupa por
+    `categoria || cat` y 216 de las 352 voces caquetías del perfil base caen
+    en el cubo `sust`, ese cubo recibía 3 voces por prompt mientras 26 voces de
+    cubos chicos salían en todos (auditoría 2026-09-14).
+    """
+    cubos = {c: n for c, n in tamanos.items() if n > 0}
+    if not cubos or n_total <= 0:
+        return {}
+    relevantes = relevantes or set()
+    cuotas = {c: 0 for c in cubos}
+    restante = n_total
+    # 1. Una voz por cubo, mientras alcance (los cubos chicos no desaparecen).
+    for c in cubos:
+        if restante <= 0:
+            break
+        cuotas[c] = 1
+        restante -= 1
+    # 2. El resto, proporcional al tamaño ponderado, sin pasar del tamaño.
+    while restante > 0:
+        abiertos = {c: n for c, n in cubos.items() if cuotas[c] < n}
+        if not abiertos:
+            break
+        pesos = {c: n * (peso_relevante if c in relevantes else 1.0)
+                 for c, n in abiertos.items()}
+        total_peso = sum(pesos.values())
+        exactas = {c: restante * p / total_peso for c, p in pesos.items()}
+        asignadas = 0
+        for c in abiertos:
+            extra = min(int(exactas[c]), abiertos[c] - cuotas[c])
+            cuotas[c] += extra
+            asignadas += extra
+        if asignadas == 0:
+            # Sólo quedan fracciones: por resto mayor, de uno en uno.
+            for c in sorted(abiertos, key=lambda k: exactas[k] % 1, reverse=True):
+                if restante - asignadas <= 0 or cuotas[c] >= abiertos[c]:
+                    continue
+                cuotas[c] += 1
+                asignadas += 1
+        if asignadas == 0:
+            break
+        restante -= asignadas
+    return cuotas
+
+
+def formas_en_texto(texto: str) -> frozenset:
+    """Los tokens de una plantilla, en minúscula, para excluirlos de la
+    métrica emergente y del diccionario koiné: lo que el prompt enseña no
+    puede contar como convergencia (bitácora del run db946685)."""
+    import re as _re
+    return frozenset(
+        t.lower() for t in _re.findall(r"[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+(?:-[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+)*", texto or "")
+        if len(t) >= 2
+    )
+
+
 def muestra_caquetio_dinamica(n_por_categoria: int = 18, contexto: str = "",
                               pesos: "Optional[dict]" = None,
-                              capas: "Optional[frozenset]" = None) -> str:
+                              capas: "Optional[frozenset]" = None,
+                              n_total: "Optional[int]" = None) -> str:
     """
     Muestra rotativa de vocabulario caquetío (atestiguado + reconstruido),
-    agrupada por categoría semántica. Si se pasa `contexto` (evento del
-    mundo + ubicación + mensaje del turno), las categorías relevantes a ese
-    contexto reciben la muestra completa; el resto recibe solo un goteo
-    (chunking barato: prioriza lo que el agente probablemente necesite
-    decir este turno, en vez de mandar todo el lexicón parejo siempre).
+    agrupada por categoría. `n_total` es el presupuesto de voces del prompt y
+    se reparte entre los cubos con repartir_cuotas(): proporcional al tamaño,
+    con las categorías relevantes al `contexto` (evento del mundo + ubicación
+    + mensaje del turno) pesando el doble. Si no se pasa, se deriva de
+    `n_por_categoria` para conservar el presupuesto de la era 1.
 
     `pesos` (opcional, del CampoLexico): frecuencia comunitaria por forma. Si
     se pasa, la muestra dentro de cada categoría se pondera por esa frecuencia
@@ -8100,13 +8238,22 @@ def muestra_caquetio_dinamica(n_por_categoria: int = 18, contexto: str = "",
         return ""
 
     relevantes = CATEGORIAS_BASE | categorias_relevantes(contexto)
-    goteo = max(2, n_por_categoria // 6)
+    if n_total is None:
+        # Compatibilidad con el presupuesto viejo: ~n_por_categoria en los
+        # cubos relevantes y un goteo en el resto sumaban unas 2,5 veces
+        # n_por_categoria (medido: 50 voces con 20, 42 con 12).
+        n_total = int(n_por_categoria * 2.5)
+    cuotas = repartir_cuotas(
+        {cat: len(ops) for cat, ops in por_categoria.items()},
+        n_total, relevantes=relevantes,
+    )
 
     lineas = []
     for cat in sorted(por_categoria):
-        opciones = por_categoria[cat]
-        n = n_por_categoria if (not contexto or cat in relevantes) else goteo
-        muestra = _muestra_ponderada(opciones, n, pesos)
+        n = cuotas.get(cat, 0)
+        if n <= 0:
+            continue
+        muestra = _muestra_ponderada(por_categoria[cat], n, pesos)
         texto = " · ".join(f"{p} ({s})" for p, s in muestra)
         lineas.append(f"  {cat.upper()}: {texto}")
 
@@ -8150,9 +8297,12 @@ def vocabulario_para_agente(tier: int, lexico: "LexicoComunitario", contexto: st
 
     partes = [base]
     if tier <= 2:
+        # Presupuesto por tier = el que la era 1 mandaba de hecho (50 y 42
+        # voces, medido en la auditoría 2026-09-14), para que arreglar el
+        # reparto no alargue el prompt: su longitud predice el score.
         muestra = muestra_caquetio_dinamica(
             n_por_categoria=20 if tier == 1 else 12, contexto=contexto,
-            pesos=pesos, capas=capas
+            pesos=pesos, capas=capas, n_total=50 if tier == 1 else 42,
         )
         if muestra:
             partes.append(muestra)

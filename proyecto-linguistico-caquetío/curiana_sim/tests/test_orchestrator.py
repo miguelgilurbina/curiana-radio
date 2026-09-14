@@ -250,8 +250,9 @@ def test_un_run_interrumpido_se_cierra_igual(sim, monkeypatch):
     db = _DBQueGraba()
     monkeypatch.setattr(orch, "get_db", lambda: db)
     monkeypatch.setattr(orch, "get_client", lambda *a, **k: _FakeClient())
-    monkeypatch.setattr(orch, "huella_de_base", lambda: {})
+    monkeypatch.setattr(orch, "huella_de_base", lambda semilla=None: {})
     monkeypatch.setattr(orch, "resumen_huella", lambda h: "")
+    monkeypatch.setattr(orch, "guardar_koine", lambda *a, **k: None)
     for cls, metodos in ((ComunidadState, ("save",)), (orch.AgentMemory, ("save",)),
                          (LexicoComunitario, ("save",)),
                          (ObserverAgent, ("save", "exportar_csv", "exportar_neologismos_csv"))):
