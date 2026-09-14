@@ -47,6 +47,65 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 > "convergía" mientras ventana y emergente divergían — las cifras de
 > convergencia históricas deben releerse con esa reserva. Ver DISENO_KOINE.md §7.
 
+## Era auditada
+
+> Desde aquí, los runs corren con la **base sellada** (`huella_de_base`, #68).
+> Cada fila guarda el commit del motor, si estaba sucio y los hashes del
+> lexicón, el corpus y el elenco. Protocolo: [[04_protocolo_run_1_era_auditada]].
+
+| Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |
+|---|---|---|---|---|---|---|
+| 09-14 | `db946685` | 30 / 15 | 27 | 6.9 | 100% (saturada, #69) | **H2, calibración de la tubería.** Perfil `base`, motor `cacafc4` limpio. Emergente −3,3%: no converge |
+
+### 2026-09-14 · Run `db946685` — H2, la tubería de la era auditada
+
+**Comando:** `python curiana_orchestrator_v2.py --auto 30 --perfil base --silencioso`
+(21 minutos).
+
+**Base** (de `simulation_runs.config`):
+- motor `cacafc4`, rama `feat/era2-arranque`, `motor_sucio: false`;
+- lexicón de 5513 claves y corpus de 198 hechos;
+- 60 agentes;
+- prompt de 15657 caracteres.
+
+**Qué verificó:**
+- **La fila se cierra.** Tiene `ended_at`, 30 turnos y 15 días: el arreglo del
+  exportador (#42) funciona en un run vivo.
+- **La huella está incompleta.** Tiene 5 de los 6 campos del protocolo; **falta
+  la semilla**. `huella_de_base()` la acepta, pero el orquestador no la pasa ni
+  fija `random.seed`, y sin semilla las réplicas de H3 no se pueden repetir.
+- **Los numerales nuevos entran.** Respuestas con *pana*: 59 (cuenta también
+  compuestos como *biro-pana*); con *gudamuen*: 42; con *sabuenen*: 18; con
+  *katarí*: 5. Con *wanee*, *piama* o *jarai*: ninguna.
+
+**Qué midió.** Hay 154 respuestas de 27 agentes y 65 neologismos (36 adoptados
+y 29 propuestos).
+
+La distancia idiolectal por métrica:
+
+| Métrica | Día 1 | Día 15 |
+|---|---|---|
+| Acumulada | 0,6112 | 0,3482 |
+| Ventana | 0,4885 | 0,3443 |
+| **Emergente** | **0,5068** | **0,4903** (no converge) |
+
+- **El «diccionario koiné» mide sobre todo la plantilla.** Lo encabezan formas
+  del núcleo base (*nüma*, *mara*, *kashi*, *pia*, *yama*) y de las dos frases
+  modelo del prompt: *taya*, *wana-ka*, *wara*, *ta-barsure*, *naba-ni* y
+  *kaa-ni*, que vienen de `_IDENTIDAD_LINGUISTICA` y del ejemplo Tier I. *taya*
+  sale en las 154 respuestas y *wana-ka* en 121.
+- **La copia es un piso constante, no convergencia.** La frase entera no se
+  copia nunca, pero «ta-barsure naba-ni» sale en 27 respuestas (17,5%), sin
+  tendencia por día. En el run de ablación de julio (`bdc54134`) salía en 60 de
+  294 (20%). Por eso bajan la acumulada y la ventana y apenas se mueve la
+  emergente, que excluye el vocabulario base.
+
+**Qué queda para la era 2:**
+1. Poner la semilla en el orquestador y en la huella antes de H3.
+2. Que el diccionario koiné filtre las formas de las frases modelo, o que las
+   frases modelo roten, para que la lista no mida la plantilla.
+3. El veredicto se sigue leyendo con la emergente (DISENO_KOINE §7).
+
 ## Registro
 
 | Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |
