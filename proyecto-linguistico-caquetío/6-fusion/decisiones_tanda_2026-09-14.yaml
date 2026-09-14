@@ -193,3 +193,9 @@ motor_era2:
       nuevo (atestiguado + reconstruido) y no tocar `base`, que es la era 1.
     estado: PENDIENTE de Miguel
   tests: 'curiana_sim/tests/test_era2_motor.py (23); suite 302 en verde; 9 guardianes'
+  prueba_en_vivo:
+    dia_1: 'run fec49195 (6 turnos, 12 por turno, roster todos, semilla 20260914): 72 respuestas de 48 agentes; -iro en 19, -bacoa en 13, -aima en 12; atestiguadas distintas 41 → 52 a igual tamaño'
+    dia_2: 'run 81907ae1, --continuar desde fec49195: 43 agentes con las notas de los dos días; 13 acuñaciones del día 1 reutilizadas 140 veces; emergente 0,8124 → 0,7199'
+    detalle: 5-experimento/BITACORA_RUNS.md
+    pendiente_del_calendario: 'el evento del director dura hasta el cambio de día (3-4 turnos de 6); decidir si dura un turno'
+    pendiente_de_la_plantilla: 'la frase modelo «ta-barsure naba-ni» se copia en el 29% de las respuestas; rotarla o retirarla'
