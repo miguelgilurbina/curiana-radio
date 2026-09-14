@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-14**.
 
-**2359 ítems propuestos** en 53 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
+**2359 ítems propuestos** en 53 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -105,7 +105,6 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | Archivo | Qué es |
 |---|---|
 | `decision-d11-fase3-nucleo-lokono-achagua.md` | D11 fase 3: el núcleo re-derivado desde lokono + achagua, y un perfil de run para medirlo |
-| `diseno-elenco-era2-estructura.md` | Era 2: la estructura social de Paraguaná antes del elenco (subgrupos, playas, Kapubana, me |
 
 ---
 

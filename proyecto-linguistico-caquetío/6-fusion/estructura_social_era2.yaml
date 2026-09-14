@@ -12,7 +12,8 @@
 #
 # Regla 5: esto PROPONE. No toca curiana_agents.py, el motor, el lexicón ni
 # 3-mundo/corpus/. Nada de aquí es canon hasta que Miguel lo fusione.
-# Resumen legible: 6-fusion/issues-pendientes/diseno-elenco-era2-estructura.md
+# Resumen legible: 6-fusion/issues-pendientes/publicados/diseno-elenco-era2-estructura.md
+# Publicado como issue #126 (decision, motor) el 2026-09-14.
 # ─────────────────────────────────────────────────────────────────────────
 meta:
   recogido: '2026-09-13'
