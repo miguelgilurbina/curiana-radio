@@ -94,3 +94,31 @@ manaure_y_corubos:
     orilla. Bana: sitio alto») SÍ está impresa en Esteves p. 28, y toponimo-148
     la da como etimología popular sin fuente impresa. Puede subir a
     glosa_fuente: se edita lexicon_toponimos.py y se regenera toponimos.yaml.
+
+tamano_del_elenco:
+  estado: DECIDIDA (2026-09-14) — decisión creativa, para este primer run de la era 2
+  etiqueta: canon-simulacion
+  decision_literal: >-
+    «Yo creo que deben ser grupos familiares más grandes, ya que si había
+    poligamia...» · «Vale, para esta primera está bien. Total lo que queremos
+    es lograr ver si se forma la koiné.»
+  lectura_operativa: >-
+    Familias grandes en tres capas. La familia es la maloca entera, con 20-40
+    personas con nombre por casa en la genealogía, casi todas de fondo. Hay
+    unos 61 agentes: GUARANAO 37 (Tacuatos 12, Cayudes 12, casa del Manaure 13)
+    y AMUAY 24 (Guasicures de Caseto 12, Corubos 12). El roster que rota es de
+    unos 24, 6 por turno, como el de la era 1. La poligamia es de jefes: el
+    Manaure (atestiguado en el contacto) y, por decisión, los apopos y el diao
+    de clan. Quedan dos canales de contacto: los esposos que se mudan entre la
+    gente común y las esposas que se mudan a las casas de élite.
+  matiz_de_fuente: >-
+    Oliver solo da a Manaure como polígamo sin ambigüedad y cree «probable» que
+    lo fueran los caciques locales; de la gente común no hay dato. Las familias
+    grandes se sostienen sobre todo por la maloca de 40-50 personas.
+  por_que_encaja_con_la_pregunta: >-
+    La pregunta es si se forma la koiné. Con el roster del tamaño del de la era 1,
+    cada agente habla con la misma frecuencia y el costo por turno no cambia: la
+    diferencia la pone la estructura de dos nodos, no la cantidad de voces.
+  donde: >-
+    6-fusion/estructura_social_era2.yaml (decision_creativa_2026-09-14.elenco),
+    5-experimento/DISENO_ERA2.md §3 y comentario en #126

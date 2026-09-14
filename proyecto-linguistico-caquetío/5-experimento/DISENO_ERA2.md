@@ -86,8 +86,12 @@ La plantilla ya existe — es el **grupo residencial creíble** de
 `genealogia.yaml` (D1): **matriarca + hermanas con hijos + hermanos adultos
 + esposos de otros linajes**. Derivación:
 
-- ~8-10 personas por linaje completo (2-3 adultas de núcleo, 1-2 hermanos,
-  esposos entrantes, niños tier-3);
+- **familias grandes, en tres capas** (decisión creativa del 2026-09-14): la
+  familia es la maloca entera, 20-40 personas con nombre por casa y casi todas
+  de fondo; los agentes son 12 por casa de subgrupo y 13 en la casa del
+  Manaure; el roster que rota es de unos 24, como el de la era 1. La poligamia
+  es de jefes: el Manaure (atestiguado en el contacto) y, por decisión, los
+  apopos y el diao de clan;
 - **2 subgrupos por nodo, un linaje por subgrupo** — decisión creativa del
   2026-09-14 (`6-fusion/decisiones_tanda_2026-09-14.yaml`), sobre la estructura
   de `6-fusion/estructura_social_era2.yaml`. GUARANAO: **los Tacuatos** y
@@ -101,8 +105,11 @@ La plantilla ya existe — es el **grupo residencial creíble** de
 - **esposos exogámicos cruzados** entre nodos (2-3 por lado) — por
   matrilocalidad, el esposo vive en el nodo de ella: son los **portadores
   permanentes** de formas;
-- total estimado: **35-40 agentes** (~la mitad del elenco viejo, para el
-  doble de días al mismo costo).
+- total: **unos 61 agentes**, GUARANAO 37 y AMUAY 24 (decisión del
+  2026-09-14; antes se estimaban 35-40). Con un roster que rota de unos 24,
+  cada agente habla tan seguido como en la era 1 y el costo por turno no
+  cambia: la diferencia la pone la estructura de dos nodos, que es lo que
+  necesita la pregunta de la koiné.
 
 **Bibliografía base por participante** (directiva: *"sí o sí"*): cada
 agente del elenco nuevo lleva su dossier — qué hechos del corpus, qué

@@ -195,7 +195,38 @@ decision_creativa_2026-09-14:
     sobrino-heredero vive con el tío materno). Moruy entra en escena como la
     casa del Manaure, no como un tercer subgrupo.
   frontera: 'pasa a ser oeste (AMUAY) contra sureste (GUARANAO) alrededor del cerro; la línea interior de lat. 11.90 queda descartada'
-  elenco: 'un linaje de D1 por subgrupo, con lo que el «2 linajes por nodo» de DISENO_ERA2 §3 se conserva; el reparto de linajes se decide en el casting'
+  elenco:
+    decidido: '2026-09-14. Miguel: «deben ser grupos familiares más grandes ya que si había poligamia» y «Vale, para esta primera está bien. Total lo que queremos es lograr ver si se forma la koiné»'
+    etiqueta: canon-simulacion
+    tres_capas:
+      familia: 'la maloca entera (40-50 personas por casa, Oliver vía Vespucci): 20-40 personas con nombre por casa en genealogia.yaml, casi todas con fondo: true'
+      agentes: 'unos 61. GUARANAO 37 (Tacuatos 12, Cayudes 12, casa del Manaure 13); AMUAY 24 (Guasicures de Caseto 12, Corubos 12), o 27 si el diao de clan suma una esposa'
+      roster_que_rota: 'unos 24 (jefes, esposas principales, herederos y oficios), 6 por turno, como el roster de 23 de la era 1; el resto habla cuando un evento lo llama'
+    casa_de_subgrupo:
+      - 'apopo con 2 esposas traídas de otro subgrupo'
+      - 'matriarca'
+      - '2 hermanas con hijos'
+      - 'hermano adulto'
+      - 'esposo entrante del otro nodo'
+      - '2 jóvenes'
+      - 'anciano con oficio'
+      - 'niño'
+    casa_del_manaure:
+      - 'Manaure'
+      - '3-4 esposas (Nubiri-sha de AMUAY, una tacuata, una cayude)'
+      - 'Itana-sha'
+      - '2 sobrinos candidatos'
+      - '2 hijos que no heredan'
+      - 'boratio mayor'
+      - 'maestra del merejuy'
+    poligamia:
+      que: 'de jefes: el Manaure y, por decisión, los apopos y el diao de clan; de la gente común no hay dato'
+      apoyo: 'Oliver cap. 3, el pasaje de la poligamia de Manaure (pp. 260-261 según parentesco-015): solo Manaure sin ambigüedad; «it is probable that local caciques were polygamous as well»; las esposas de Manaure se mudaron a su pueblo'
+      regla_3: 'dato del contacto (c. 1527), proyectado al s. XV por decisión'
+      consecuencia: 'excedente de jóvenes solteros (parentesco-030): el papel para los agentes guerreros que no encajaban'
+    dos_canales_de_contacto: 'entre la gente común, los esposos que se mudan al nodo de la mujer (matrilocalidad); en las casas de élite, las esposas que se mudan a la casa del jefe'
+    por_que_un_roster_de_24: 'la pregunta de la era es si se forma la koiné. Con un roster del tamaño del de la era 1, cada agente habla con la misma frecuencia (cada 2 días simulados) y el costo por turno no cambia, así que la diferencia la pone la estructura de dos nodos y no la cantidad de voces'
+    queda_para_el_casting: 'qué linaje de D1 va en cada subgrupo (Kaira ya está en GUARANAO con el Manaure) y el dossier de fuentes por agente'
 
 # ══════════════════════════════════════════════════════════════════
 # 1. LOS NIVELES — de la polity a la casa
