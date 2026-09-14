@@ -36,7 +36,7 @@ GENEALOGIA = os.path.join(CORPUS, "genealogia.yaml")
 CASAS_ESPERADAS = {
     "los Tacuatos": 12,
     "los Cayudes": 12,
-    "casa del Manaure": 13,
+    "casa del Manaure": 14,   # 13 + la cuarta esposa (Miguel, 2026-09-14, P6)
     "los Guasicures de Caseto": 12,
     "los Corubos": 12,
 }

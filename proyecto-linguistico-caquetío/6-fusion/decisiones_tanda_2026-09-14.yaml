@@ -201,8 +201,69 @@ motor_era2:
       un turno o un día queda resuelta por esta regla: el evento es la situación
       del día, y el motor ya lo limpia al cambiar de día. No se toca.
   casting:
-    estado: EN CURSO (2026-09-14) — «Sigamos con el casting»
-    donde: '6-fusion/elenco_era2.yaml y 6-fusion/issues-pendientes/casting-era2.md (propuesta de un escriba, regla 5)'
+    estado: PROPUESTO y publicado como #127 (2026-09-14); siete de sus diez preguntas decididas el mismo día
+    donde: '6-fusion/elenco_era2.yaml y 6-fusion/issues-pendientes/publicados/casting-era2.md (propuesta de un escriba, regla 5)'
+    decision_literal: >-
+      «Apruebo el reparto. [...] Yo creo que acá tenemos que ser pragmáticos y usar
+      ejemplos de otras culturas, por ejemplo en los Mapuche hay machis hombres y
+      mujeres. Yo creo que en este caso las esposas vienen de nodos distintos para
+      evitar incesto. Punto 6: cuarta esposa, pero igual sería interesante luego
+      explorar, a través de la simulación, qué pasa en una sociedad polígama y
+      exogámica cuando hay muchos hombres solteros. [...] 8 está bien. 9 me
+      parece. Punto 10 está bien que sea proporcional. Y sí, publicarlo en el
+      tablero como issue de decisión.»
+    decididas:
+      P1_linajes: 'APROBADO: Corie en Tacuato, Buio en El Cayude, Kaira en Moruy, Warana en Caseto, Paugis en Carirubana; Chiriware de reserva'
+      P4_boratia: >-
+        APROBADA: Paugis-sha es boratia de pueblo de AMUAY. Analogía declarada por
+        Miguel: la machi mapuche, oficio que ejercen mujeres y hombres. Es analogía
+        externa sin obra en el repo (deuda sin-procedencia); apoyo interno,
+        parentesco-007. Etiqueta canon-simulacion.
+      P5_esposas: >-
+        «las esposas vienen de nodos distintos para evitar incesto». Lectura
+        aplicada: las dos esposas de cada apopo vienen de nodos distintos entre
+        sí, una del otro subgrupo del mismo nodo y otra del otro nodo, que es como
+        el escriba las había casado (exogamia de linaje en las dos). Si Miguel
+        quiso decir que las dos vienen del OTRO nodo, cambian cuatro fichas
+        (Kori-sha, Wama-sha, Arika-sha, Saruro-sha) y choca con P9, que deja a
+        Saruro-sha venida de Cayerúa (AMUAY) en una casa AMUAY.
+      P6_cuarta_esposa: 'APROBADA: Kumarawa-sha, corubo (Paugis), hija de Sha-korie y hermana del apopo Kiwa-ko; la casa del Manaure pasa a 14 y el elenco a 62'
+      P8_ita_sha: 'APROBADO: sin linaje, acogida por los Cayudes'
+      P9_saruro_sha_y_tawi: 'APROBADO: linaje propio sin nombre, traído de Cayerúa (AMUAY de fondo)'
+      P10_roster: 'APROBADO: proporcional, 14 GUARANAO y 10 AMUAY'
+    abiertas:
+      P2_buco: 'Miguel pidió más explicación; ver la respuesta del escriba (lexicón: buko «presa de agua, represa, canal de riego»; jagey «estancar, crear charco artificial», Zavala #174; Oliver p. 252: el riego a mano desde charcas artificiales, jagüey, es la agricultura de la costa)'
+      P3_watapana_y_kadushi: 'Miguel pidió más explicación; depende de P14 (la feria de la sal) y de que la costa norte (ZA2) quede de fondo'
+      P7_dos_sobrinos: 'Miguel pidió más explicación; el escriba recomienda dejarlo abierto como trama de las tres puertas'
+    linea_de_experimento_futura: >-
+      Miguel: explorar en la simulación qué pasa en una sociedad polígama y
+      exogámica cuando hay muchos hombres solteros. Apoyo: parentesco-030 (el
+      excedente estructural de solteros) y los siete agentes guerreros o de
+      perímetro que la estructura daba por sobrantes. Va después del primer run
+      de la era 2.
+  saber_por_funcion_y_posicion:
+    estado: PREGUNTA de Miguel (2026-09-14), respondida con medición; diseño pendiente
+    pregunta_literal: '¿Todos los agentes tienen la misma info? ¿Los jóvenes saben lo mismo que los adultos? ¿La base de conocimiento está parcializada por función y posición social?'
+    medido_2026-09-14: >-
+      El mundo (estado, evento, sal, tensión) es idéntico para todos: 365
+      caracteres. La lengua se reparte por TIER, no por función ni por edad:
+      un tier 1 ve 6.867 caracteres de lengua con unas 125 voces (75 fijas de la
+      plantilla y 50 muestreadas); un tier 2, 3.320 con 42 muestreadas; un tier 3,
+      221 caracteres con 4 verbos y 3 conectores y ninguna muestra. La ficha es
+      lo único parcializado por posición (Manaure 833 caracteres, Moruy-sha 180,
+      Sha 277). Un pescador y un boratio del mismo tier ven la misma lengua. Lo
+      que sí difiere por agente: la ficha, el idiolecto acumulado, la memoria
+      (5 notas), las sugerencias de contagio (red social) y el feedback. El
+      saber restringido del corpus (12 hechos con restringido: true en
+      transmision.yaml, como el piazgo o el merejuy) no se modela. Medido con
+      vocabulario_para_agente por tier, perfil era2.
+    propuesta: >-
+      (1) Que el tier 3 vea las reglas breves y una muestra chica (unas 20
+      voces), o no podrá hablar: hoy ve 7 palabras. (2) Un campo `saber` por
+      agente, derivado del dossier del casting, que el cargador de mundo (P2
+      #11 de la auditoría) inyecte por casa, oficio y edad: lo que un joven
+      sabe es lo que su casa le ha enseñado, y lo restringido sólo lo ve quien
+      lo tiene. Es diseño, no decisión tomada.
   tests: 'curiana_sim/tests/test_era2_motor.py (23); suite 302 en verde; 9 guardianes'
   prueba_en_vivo:
     dia_1: 'run fec49195 (6 turnos, 12 por turno, roster todos, semilla 20260914): 72 respuestas de 48 agentes; -iro en 19, -bacoa en 13, -aima en 12; atestiguadas distintas 41 → 52 a igual tamaño'

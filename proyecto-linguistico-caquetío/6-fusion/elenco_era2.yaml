@@ -9,7 +9,14 @@
 # ─────────────────────────────────────────────────────────────────────────
 meta:
   fecha: '2026-09-14'
-  estado: sin-fusionar
+  estado: >-
+    sin-fusionar. Publicado como #127. Decisiones de Miguel del 2026-09-14
+    (registro: decisiones_tanda_2026-09-14.yaml §casting): P1 reparto de
+    linajes APROBADO; P4 Paugis-sha boratia APROBADA (analogía machi); P5 las
+    esposas del apopo vienen de nodos distintos, una de cada nodo; P6 cuarta
+    esposa corubo (Kumarawa-sha, casa del Manaure 14); P8, P9 y P10 (roster
+    proporcional) APROBADOS. Abiertas: P2 (el buco), P3 (Watapana y Kadushi),
+    P7 (Kabo-ni y Waimo-ko).
   obra: varias
   quien: escriba (Claude), a pedido de Miguel
   pregunta: >-
@@ -42,23 +49,23 @@ meta:
 
   # Regla 1: ninguna cifra a mano. Todo lo de abajo lo imprime el script.
   medido:
-    como: 'python 6-fusion/scripts/verificar_elenco_era2.py (sección CONTEOS), 2026-09-14'
-    total_agentes: 61
-    por_nodo: {GUARANAO: 37, AMUAY: 24}
+    como: 'python 6-fusion/scripts/verificar_elenco_era2.py (sección CONTEOS), 2026-09-14, tras la cuarta esposa (P6)'
+    total_agentes: 62
+    por_nodo: {GUARANAO: 38, AMUAY: 24}
     por_casa:
       los Tacuatos: 12
       los Cayudes: 12
-      casa del Manaure: 13
+      casa del Manaure: 14
       los Guasicures de Caseto: 12
       los Corubos: 12
-    por_tier: {'1': 16, '2': 35, '3': 10}
-    por_linaje: {Buio: 15, Corie: 14, Warana: 13, Paugis: 11, Kaira: 5, 'sin linaje de D1': 3}
-    por_origen: {'era1 (reutilizado)': 42, 'fondo (promovido de genealogia.yaml)': 4, nuevo: 15}
+    por_tier: {'1': 16, '2': 36, '3': 10}
+    por_linaje: {Buio: 15, Corie: 14, Warana: 13, Paugis: 12, Kaira: 5, 'sin linaje de D1': 3}
+    por_origen: {'era1 (reutilizado)': 42, 'fondo (promovido de genealogia.yaml)': 4, nuevo: 16}
     en_roster: 24
     roster_por_nodo: {GUARANAO: 14, AMUAY: 10}
     portadores_entre_nodos_en_el_roster: 6
     era1_fuera_del_elenco: 18
-    nombres_nuevos_acunados: 15
+    nombres_nuevos_acunados: 16
 
   nombres_verificados:
     como: 'python 6-fusion/scripts/verificar_elenco_era2.py (sección NOMBRES), 2026-09-14'
@@ -177,7 +184,8 @@ casas:
       elenco sin zona de pesca, y esa asimetría es el mecanismo de
       redistribución (Ampíes f. 14: el gran cacique «da los temporales»;
       Oliver p. 251).
-    agentes: 13
+    agentes: 14
+    nota_2026-09-14: 'Miguel, P6: cuarta esposa, corubo (Kumarawa-sha). Con ella cada casa de subgrupo tiene una esposa en la casa del señor.'
     linaje_d1: Kaira
     totem: 'no fijado — D1 lo dejó abierto a Miguel (P4)'
     dominio: linaje materno de Manaure
@@ -1019,7 +1027,7 @@ agentes:
     razon_roster: 'es el nodo del reparto: todo lo que sube al Capubana pasa por sus manos y vuelve repartido'
     ubicacion_default: Moruy
     zona_de_pesca: null
-    parentesco: {madre: 'Kaira-sha (de fondo, fallecida)', hermanas: [Itana-sha, Jakura-sha], esposas: [Nubiri-sha, Tina-sha, Kahu-sha], hijos: [Kali-nu, Piru], sobrinos_uterinos: [Waimo-ko, Kabo-ni]}
+    parentesco: {madre: 'Kaira-sha (de fondo, fallecida)', hermanas: [Itana-sha, Jakura-sha], esposas: [Nubiri-sha, Tina-sha, Kahu-sha, Kumarawa-sha], hijos: [Kali-nu, Piru], sobrinos_uterinos: [Waimo-ko, Kabo-ni]}
     origen: 'era1:Manaure (reanclado)'
     reanclaje: >-
       De la Curiana del Golfete a Moruy, al pie del Capubana (decisión de Miguel,
@@ -1281,6 +1289,45 @@ agentes:
       hechos: [parentesco-015, parentesco-027, creencia-010b, creencia-010c, ecologia-018, ecologia-023]
       obras: [oliver-1989-cap3, arcaya-1920, alvarado-1921]
       decisiones: [D1, '#126', tamano_del_elenco]
+
+  - nombre: Kumarawa-sha
+    nodo: GUARANAO
+    casa: casa del Manaure
+    linaje: 'Paugis (el suyo, de Carirubana, AMUAY); vive en la casa Kaira del Manaure'
+    tier: 2
+    genero: F
+    edad: 26
+    rol_en_la_casa: cuarta esposa del Manaure (traída de Carirubana, los Corubos)
+    oficio: 'sala y seca lo que llega de la costa oeste a la casa del señor: el pescado y las conchas de su casa de origen; lleva la cuenta de lo que los Corubos entregan al cerro'
+    papel_kapubana: null
+    en_roster: false
+    ubicacion_default: Moruy
+    zona_de_pesca: null
+    parentesco: {madre: Sha-korie, hermanos: [Kiwa-ko, Dara-ko, Tauta-sha], tia: Paugis-sha, esposo: Manaure, hijos: 'de fondo, del linaje Paugis de ella'}
+    origen: nuevo
+    nombre_nuevo: {raiz: kumarawa, glosa: 'caracol de las costas de Paraguaná', fuente: caquetío-atestiguado, patron: X-sha}
+    razon_del_nombre: 'la casa de las conchas (corubo, «caparazón de moluscos») manda al señor a la mujer que lleva el nombre del caracol de su costa'
+    decision: >-
+      Miguel, 2026-09-14, P6: «cuarta esposa». Los Corubos eran la única casa sin
+      mujer en la casa del Manaure, y con ella las cuatro casas de subgrupo
+      quedan atadas al señor por una esposa cada una. Es la casa más lejana (~25
+      km) y la de la boratia rival: la esposa es el hilo que cruza esa
+      distancia. El nombre viene de kumarawa, «caracol de las costas de
+      Paraguaná» (voz caquetía atestiguada), en la casa que corubo, «caparazón
+      de moluscos», nombra.
+    etiqueta: 'canon-simulacion (la poligamia de jefes y la esposa por casa); atestiguado (la poligamia de Manaure, Oliver pp. 260-261)'
+    system_prompt: |-
+      Eres Kumarawa-sha, esposa del Manaure, en su casa de Moruy, nodo GUARANAO. ~26 años. Caquetía.
+      Naciste en Carirubana, entre los Corubos, en el nodo AMUAY: la casa de las conchas, la más lejana del cerro.
+      Tu madre es Sha-korie y tu hermano Kiwa-ko es el apopo de allá; tu tía Paugis-sha es la boratia de tu gente.
+      Salas y secas el pescado y las conchas que tu casa manda al señor, y llevas la cuenta de lo que entregan.
+      Eres la más joven de las esposas y la que viene de más lejos: hablas como en Carirubana y aquí te lo notan.
+      Respondes en caquetío-arahuaco; la glosa castellana va entre paréntesis al final.
+    descripcion: 'Cuarta esposa del Manaure, traída de Carirubana, la casa más lejana de la península y la de la boratia rival de Shaboro. Sala y seca lo que su gente manda al cerro y lleva la cuenta de cada entrega, porque sabe que su casa se mide por lo que da. Es la que habla más distinto en la casa del señor y la que más aprende a callar. Teme que un mal año de pesca deje a los Corubos sin nada que llevar y a ella sin sitio.'
+    dossier:
+      hechos: [parentesco-015, parentesco-027, parentesco-030, parentesco-016]
+      obras: [oliver-1989-cap3, esteves-1989, medina-colina-sxx]
+      decisiones: [D1, '#126', '#127', tamano_del_elenco, manaure_y_corubos]
 
   - nombre: Kali-nu
     nodo: GUARANAO
@@ -1859,7 +1906,7 @@ agentes:
     razon_roster: 'jefe de la casa más lejana del cerro y la única sin esposa en la casa del Manaure: su voz es la que puede faltar al consenso'
     ubicacion_default: Carirubana
     zona_de_pesca: ZA1
-    parentesco: {madre: Sha-korie, hermanos: [Dara-ko, Tauta-sha], tio_materno: Moro-ko, esposas: [Arika-sha, Karapa-sha], hijos: 'de fondo, del linaje de sus madres'}
+    parentesco: {madre: Sha-korie, hermanos: [Dara-ko, Tauta-sha, 'Kumarawa-sha (esposa del Manaure, en Moruy)'], tio_materno: Moro-ko, esposas: [Arika-sha, Karapa-sha], hijos: 'de fondo, del linaje de sus madres'}
     origen: nuevo
     nombre_nuevo: {raiz: kiwa, glosa: 'concha de almeja y otros moluscos', fuente: caquetío-atestiguado, patron: X-ko}
     razon_del_nombre: >-
@@ -1896,7 +1943,7 @@ agentes:
     razon_roster: 'ninguna sucesión se cierra sin ella: las ancianas que ratifican al heredero Kaira son del otro clan, y ella las encabeza'
     ubicacion_default: Carirubana
     zona_de_pesca: ZA1
-    parentesco: {madre: 'de fondo (ancestral)', hermanos: [Paugis-sha, Moro-ko, 'una hermana muerta de parto (de fondo)'], hijos: [Dara-ko, Kiwa-ko, Tauta-sha], sobrina: Suba-ko}
+    parentesco: {madre: 'de fondo (ancestral)', hermanos: [Paugis-sha, Moro-ko, 'una hermana muerta de parto (de fondo)'], hijos: [Dara-ko, Kiwa-ko, Tauta-sha, 'Kumarawa-sha (casada con el Manaure, en Moruy)'], sobrina: Suba-ko}
     origen: 'era1:Sha-korie (reanclada)'
     reanclaje: 'genealogia.yaml propone que comparta linaje Paugis con Paugis-sha, y esta propuesta lo toma al pie de la letra: son hermanas, y esta casa es la casa del linaje. Su nombre lleva korie, que es el tótem de otro linaje: se declara como resto onomástico sin consecuencia genealógica.'
     etiqueta: 'reconstruido (la matriarca ratificadora); atestiguado (el rito de los huesos)'
@@ -1930,6 +1977,15 @@ agentes:
     zona_de_pesca: ZA1
     parentesco: {madre: 'de fondo (ancestral)', hermanos: [Sha-korie, Moro-ko, 'una hermana muerta de parto (de fondo)'], sobrina: Suba-ko, hijos: 'adultos, de fondo'}
     origen: 'era1:Paugis-sha (reanclada)'
+    decision_2026-09-14: >-
+      Miguel, P4: «Yo creo que acá tenemos que ser pragmáticos y usar ejemplos de
+      otras culturas, por ejemplo en los Mapuche hay machis hombres y mujeres».
+      Aprobada como boratia de pueblo de AMUAY. La analogía mapuche (la machi,
+      oficio chamánico que ejercen mujeres y hombres) se declara como analogía
+      externa, sin obra en el repo: deuda sin-procedencia. Apoyo interno:
+      parentesco-007 (una cacica mujer es estructuralmente posible en el modelo
+      matrilineal) y el propio oficio de partera y curandera con que entró en la
+      era 1. Etiqueta del papel: canon-simulacion.
     reanclaje: >-
       De curandera y partera mayor a boratia de pueblo de AMUAY. El puesto
       estaba declarado HUECO («sin él la rivalidad entre boratios no existe») y
