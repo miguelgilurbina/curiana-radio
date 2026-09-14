@@ -243,6 +243,8 @@ motor_era2:
       P7_dos_sobrinos: 'abierto como trama: la sangre elige a los dos y deciden los diaos de clan y el boratio (las tres puertas, parentesco-038)'
       P5_lectura: 'se mantiene la lectura aplicada (una esposa de cada nodo) salvo que Miguel diga lo contrario'
     siguiente: 'PR de feat/era2-arranque a main, merge, y la generación de curiana_agents para la era 2 desde elenco_era2.yaml'
+    generacion: 'HECHA (rama feat/era2-elenco, 19b0e16): curiana_agents_era2.py generado, conmutador --elenco era2, el nodo en el prompt; run de prueba aafc5c32 con los 63 hablando'
+
     linea_de_experimento_futura: >-
       Miguel: explorar en la simulación qué pasa en una sociedad polígama y
       exogámica cuando hay muchos hombres solteros. Apoyo: parentesco-030 (el
@@ -279,3 +281,32 @@ motor_era2:
     detalle: 5-experimento/BITACORA_RUNS.md
     pendiente_del_calendario: 'el evento del director dura hasta el cambio de día (3-4 turnos de 6); decidir si dura un turno'
     pendiente_de_la_plantilla: 'la frase modelo «ta-barsure naba-ni» se copia en el 29% de las respuestas; rotarla o retirarla'
+
+antroponimos_era2:
+  estado: EN CURSO (2026-09-14) — campaña lanzada
+  pregunta_de_miguel: '¿No deberíamos rehacer los nombres en base a lo que conocemos y tenemos de caquetío?'
+  medido_2026-09-14: >-
+    De los 63 nombres del casting, 25 tienen raíz caquetía atestiguada y 5
+    reconstruida; 30 raíces no están en el lexicón (Nubiri, Itana, Waimo,
+    Shaboro, Tawaka, Tina, Kahu, Wama, Taku, Uro, Suba, Guare, Piri, Kawa, Daru,
+    Tawi, Moro, Nubi, Piru, Sha…). Los sufijos -ko «hombre de» y -sha «mujer de»
+    (REGLAS_AGENTIVAS) no tienen campo de evidencia: convención de la era 1
+    nunca declarada; 42 de los 63 nombres los llevan. Lo atestiguado: títulos
+    (manaure, diao, apopo, boratio), caciques con nombre (Uriacoa, Caguallo,
+    Bonyata de Miraca; Categue en la elegía de Coro de Castellanos), nombres de
+    leyenda (Judibana, Jayana, Moruy, Borobó, Tumarure) y los apellidos vivos
+    de raíz indígena con la familia en -aure (Esteves p. 13, p. 53; Medina
+    p. 328). Ninguna fuente marca género en el nombre.
+  decision_literal: '«Sí a los dos puntos» (¿lanzo la campaña? · retirar los sufijos inventados y construir con raíces y formantes atestiguados)'
+  lectura_operativa: >-
+    (1) Campaña de antropónimos, con el método de la de topónimos: minar todas
+    las fuentes para nombres de persona, 6-fusion/antroponimos_caquetios.yaml
+    con procedencia y etiqueta por nombre y formante. (2) Un sistema de nombres
+    declarado desde esa evidencia: raíces atestiguadas o reconstruidas más los
+    formantes reales (-aure, -ure, -coa, -ata, -allo); títulos para los cargos;
+    sin -ko ni -sha, que se retiran de los nombres. (3) Renombrar en
+    elenco_era2.yaml con mapa viejo → nuevo y alias de la era 1 para que el
+    corpus y la genealogía sigan resolviendo; regenerar el módulo. Manaure se
+    queda: es título. Si Miguel prefería mantener -ko/-sha como convención
+    declarada, se revierte con el mapa.
+  pendiente_de_miguel: 'los mismos -ko/-sha se ENSEÑAN como morfología en el prompt (AGENTIVOS); retirarlos de la gramática es otra decisión'
