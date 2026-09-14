@@ -92,8 +92,10 @@ La plantilla ya existe — es el **grupo residencial creíble** de
   2026-09-14 (`6-fusion/decisiones_tanda_2026-09-14.yaml`), sobre la estructura
   de `6-fusion/estructura_social_era2.yaml`. GUARANAO: **los Tacuatos** y
   **los Cayudes**, que pescan el Golfete. AMUAY: **los Guasicures de Caseto** y
-  **los Corubos**, que pescan la costa oeste hacia Los Taques. Las zonas de
-  pesca son exclusivas por nodo. Los nombres vienen de la tradición local
+  **los Corubos** (en Carirubana), que pescan la costa oeste de Punta Cardón a
+  Los Taques. Las zonas de pesca son exclusivas por nodo. **El Manaure sale de
+  GUARANAO**, de los Moruyes de Moruy (linaje Kaira), y su casa está en Moruy,
+  al pie del Capubana. Los nombres vienen de la tradición local
   (Petit 2012, sin cita) y el reparto es decisión, no dato. Siguen siendo 4 de
   los 6 linajes de D1; los otros 2 quedan de reserva de expansión;
 - **esposos exogámicos cruzados** entre nodos (2-3 por lado) — por

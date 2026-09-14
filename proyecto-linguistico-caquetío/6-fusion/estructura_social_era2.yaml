@@ -182,9 +182,17 @@ decision_creativa_2026-09-14:
       - {subgrupo: los Cayudes, sitio: El Cayude, lat: 11.701, lon: -69.957, zona_de_pesca: ZG2, apoyo: 'Petit 2012; kayude, voz caquetía atestiguada'}
     AMUAY:
       - {subgrupo: los Guasicures de Caseto, sitio: Caseto, lat: 11.762, lon: -70.017, zona_de_pesca: ZA1, apoyo: 'Petit 2012; Esteves p. 30'}
-      - {subgrupo: los Corubos, sitio: 'la costa oeste hacia Los Taques (el sitio concreto se fija en el casting)', zona_de_pesca: ZA1, apoyo: 'Petit 2012; Miguel: «los otros estaban en Amuay hacia Los Taques»', aviso: 'Curubitos (Esteves p. 34) está en la costa oriental; queda descartado por decisión'}
-  zonas_de_pesca: 'separadas y exclusivas: GUARANAO pesca el Golfete (ZG2) y AMUAY la costa oeste (ZA1). ZG1, ZA2, ZA3 y ZX quedan de fondo, sin agentes'
+      - {subgrupo: los Corubos, sitio: 'Carirubana (hoy Punto Fijo)', lat: 11.694, lon: -70.218, fuente_coord: osm-kaketiana, zona_de_pesca: ZA1, apoyo: 'Petit 2012; Miguel, 2026-09-14: «los Corubos puede que hayan estado en lo que es ahora Carirubana»; Carirubana era «playa de pescadores» hasta 1926 (Medina Colina, aclaratorias)', hipotesis_del_nombre: 'la -ru- de Cari-ru-bana es el residuo que toponimo-148 no explica; leer ahí un eco de corubo («caparazón de moluscos», Esteves p. 34) es hipótesis, no etimología', aviso: 'Curubitos (Esteves p. 34), en la costa oriental, queda descartado por decisión'}
+  zonas_de_pesca: 'separadas y exclusivas: GUARANAO pesca el Golfete (ZG2) y AMUAY la costa oeste, que se amplía al sur hasta Carirubana y Punta Cardón (ZA1 más la orilla de ZG1). La laguna de Guaranao, a unos 3 km de Carirubana, ZA2, ZA3 y ZX quedan de fondo, sin agentes; la cercanía de la laguna, que da nombre al otro clan, queda como tensión declarada'
   capubana: 'centro compartido que congrega y centraliza lo espiritual, por lo menos lo del Manaure, «no necesariamente como institución sino a nivel energético». Moruy, Chamuriana, Siraba y Maitiruma forman el conglomerado del cerro y no son subgrupos en escena'
+  manaure: >-
+    Decidido el 2026-09-14 (Miguel: «el Manaure tiene que venir de uno de los
+    clanes, puede ser de los moruy»). El Manaure sale de GUARANAO, de los
+    Moruyes de Moruy (linaje Kaira de D1). Su casa queda en Moruy, al pie del
+    Capubana que concentra lo espiritual suyo; que viva ahí y no en el nodo de
+    una esposa es inferencia de la élite avunculocal (keegan-1989: el
+    sobrino-heredero vive con el tío materno). Moruy entra en escena como la
+    casa del Manaure, no como un tercer subgrupo.
   frontera: 'pasa a ser oeste (AMUAY) contra sureste (GUARANAO) alrededor del cerro; la línea interior de lat. 11.90 queda descartada'
   elenco: 'un linaje de D1 por subgrupo, con lo que el «2 linajes por nodo» de DISENO_ERA2 §3 se conserva; el reparto de linajes se decide en el casting'
 
@@ -1506,6 +1514,7 @@ propuestas_a_otras_esferas:
 preguntas_para_miguel:
   - id: P1
     pregunta: ¿Dónde vive Manaure en el s. XV?
+    resuelta: '2026-09-14: sale de un clan, GUARANAO, de los Moruyes de Moruy; su casa en Moruy, al pie del Capubana (opción a). Se descarta la b, el cerro sin clan'
     por_que_importa: decide en qué clan va el linaje Kaira y si la casa del Señor es de un nodo o del cerro
     opciones:
       - 'a) en GUARANAO, al pie del cerro (Salas: la cabecera está en Paraguaná; Oliver: los asentamientos se concentran alrededor del volcán)'

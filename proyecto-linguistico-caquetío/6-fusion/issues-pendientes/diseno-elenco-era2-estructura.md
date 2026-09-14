@@ -33,8 +33,16 @@ con subgrupos con nombre es un cronista de 2012 sin cita, y no los reparte.
 | Nodo | Subgrupos | Zona de pesca, exclusiva |
 |---|---|---|
 | GUARANAO | **los Tacuatos** (Tacuato) · **los Cayudes** (El Cayude) | ZG2, la orilla del Golfete |
-| AMUAY | **los Guasicures de Caseto** · **los Corubos** (costa oeste, hacia Los Taques) | ZA1, de Amuay a Los Taques |
+| AMUAY | **los Guasicures de Caseto** · **los Corubos** (Carirubana) | ZA1, la costa oeste de Punta Cardón a Los Taques |
 
+- **El Manaure** sale de un clan: de GUARANAO, de los Moruyes de Moruy (linaje
+  Kaira). Su casa está en Moruy, al pie del Capubana; que viva ahí es
+  inferencia de la élite avunculocal. Moruy entra en escena como su casa, no
+  como un tercer subgrupo.
+- **Los Corubos, en Carirubana** (hoy Punto Fijo), que era «playa de
+  pescadores» (Medina). La «-ru-» sin explicar de Cari-ru-bana podría ser un
+  eco de *corubo*: hipótesis, no etimología. La laguna de Guaranao queda a unos
+  3 km.
 - **El Capubana** es el centro compartido que concentra lo espiritual, por lo
   menos lo del Manaure, a nivel energético. No es un aparato con puestos: los
   oficios de §3 quedan como repertorio de papeles para el casting. Moruy,

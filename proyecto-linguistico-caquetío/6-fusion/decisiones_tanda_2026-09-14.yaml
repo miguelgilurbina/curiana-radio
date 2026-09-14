@@ -61,3 +61,36 @@ subgrupos_era2:
     6-fusion/estructura_social_era2.yaml (decision_creativa_2026-09-14;
     institucion_kapubana.caracter; P2, P3, P14 y P15), el borrador del issue
     §0 y 5-experimento/DISENO_ERA2.md §2-§3
+
+manaure_y_corubos:
+  estado: DECIDIDA (2026-09-14) — decisión creativa
+  etiqueta: canon-simulacion
+  decision_literal: >-
+    «El Manaure tiene que venir de uno de los clanes, puede ser de los moruy
+    (guaranaos). Mira, los Corubos puede que hayan estado en lo que es ahora
+    Carirubana.»
+  lectura_operativa:
+    manaure: >-
+      El Manaure no es del cerro ni de nadie: sale de un clan. Para la era 2,
+      de GUARANAO, de los Moruyes de Moruy (linaje Kaira de D1). Su casa queda
+      en Moruy, al pie del Capubana, que concentra lo espiritual suyo. Que viva
+      allí y no en el nodo de una esposa es inferencia: la élite avunculocal
+      (Keegan 1989) deja al heredero junto al tío materno. Resuelve P1 con la
+      opción a y descarta la b (el cerro sin clan). Moruy entra en escena como
+      la casa del Manaure, no como un tercer subgrupo.
+    corubos: >-
+      Los Corubos se sitúan en Carirubana (11.694, -70.218; hoy Punto Fijo),
+      en la costa oeste de AMUAY, en lugar del Curubitos de la costa oriental.
+      Apoyos: Carirubana era «playa de pescadores» hasta 1926 (Medina Colina);
+      Esteves glosa corubo como «caparazón de moluscos» (p. 34); y la «-ru-» de
+      Cari-ru-bana es justo el residuo que el canon no explica (toponimo-148).
+      Leer ahí un eco de corubo es hipótesis, no etimología.
+  consecuencias:
+    - 'la zona de pesca de AMUAY (ZA1) se amplía al sur hasta Carirubana y Punta Cardón'
+    - 'la laguna de Guaranao, a unos 3 km de Carirubana, queda pegada a los Corubos; sigue de fondo, con la tensión del nombre del otro clan declarada'
+  resuelve: [P1, 'el sitio de los Corubos (sigue_abierto de subgrupos_era2)']
+  hallazgo_de_paso: >-
+    La glosa de Carirubana («orilla del peñón, la orilla del cerro. Cari:
+    orilla. Bana: sitio alto») SÍ está impresa en Esteves p. 28, y toponimo-148
+    la da como etimología popular sin fuente impresa. Puede subir a
+    glosa_fuente: se edita lexicon_toponimos.py y se regenera toponimos.yaml.
