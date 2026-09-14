@@ -124,8 +124,9 @@ python curiana_orchestrator_v2.py --auto 30 --perfil base --perfiles --reporte
 #   --semilla N             fija el azar del motor y se sella en la huella
 #   --continuar             arranca del estado, memoria, lexicón y koiné del run anterior
 #                           (curiana_*.json en curiana_sim/); la config dice de qué run viene
-python curiana_orchestrator_v2.py --auto 6 --turnos-por-dia 6 --agentes-por-turno 12 --roster todos --semilla 1
-python curiana_orchestrator_v2.py --auto 6 --agentes-por-turno 12 --roster todos --semilla 2 --continuar
+#   --perfil era2           base sin la capa hipotética (decisión 2026-09-14); un run = un día
+python curiana_orchestrator_v2.py --auto 6 --turnos-por-dia 6 --agentes-por-turno 12 --roster todos --perfil era2 --semilla 1
+python curiana_orchestrator_v2.py --auto 6 --agentes-por-turno 12 --roster todos --perfil era2 --semilla 2 --continuar
 ```
 
 ⚠️ Los perfiles cambian lo que el agente **ve**, nunca con qué se le **puntúa**:

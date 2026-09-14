@@ -191,7 +191,18 @@ motor_era2:
       formas que el proyecto acuñó para la simulación, y mostrarlas adelanta lo
       que el experimento quiere ver acuñar a los agentes. Sería un perfil
       nuevo (atestiguado + reconstruido) y no tocar `base`, que es la era 1.
-    estado: PENDIENTE de Miguel
+    estado: DECIDIDA (2026-09-14) — «Confirmo, escondemos las 38 hipotéticas»
+    aplicado: 'perfil `era2` en 5-experimento/perfiles_de_run.yaml (capas atestiguado + reconstruido, andamiaje completo, capas_de_score fijas); test en test_era2_motor.py'
+  un_run_es_un_dia:
+    estado: DECIDIDA (2026-09-14) — «La duración de cada run será por día»
+    lectura_operativa: >-
+      Un run = un día de turnos_por_dia turnos (6), encadenado al siguiente con
+      --continuar. La pregunta del escriba sobre si el evento del director dura
+      un turno o un día queda resuelta por esta regla: el evento es la situación
+      del día, y el motor ya lo limpia al cambiar de día. No se toca.
+  casting:
+    estado: EN CURSO (2026-09-14) — «Sigamos con el casting»
+    donde: '6-fusion/elenco_era2.yaml y 6-fusion/issues-pendientes/casting-era2.md (propuesta de un escriba, regla 5)'
   tests: 'curiana_sim/tests/test_era2_motor.py (23); suite 302 en verde; 9 guardianes'
   prueba_en_vivo:
     dia_1: 'run fec49195 (6 turnos, 12 por turno, roster todos, semilla 20260914): 72 respuestas de 48 agentes; -iro en 19, -bacoa en 13, -aima en 12; atestiguadas distintas 41 → 52 a igual tamaño'

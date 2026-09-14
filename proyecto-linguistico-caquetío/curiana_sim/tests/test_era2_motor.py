@@ -259,6 +259,31 @@ def test_el_campo_lexico_puede_excluir_lo_heredado():
     assert [f for f, _ in campo.top(5, excluir={"taya"})] == ["kuru-bacoa"]
 
 
+# ── el perfil de la era 2 ─────────────────────────────────────────────
+
+def test_el_perfil_era2_esconde_las_hipoteticas_y_puntua_igual():
+    """Miguel, 2026-09-14: «escondemos las 38 hipotéticas». Cambia lo que el
+    agente VE, nunca contra qué se le puntúa."""
+    from curiana_perfiles import cargar_perfil
+    era2, base = cargar_perfil("era2"), cargar_perfil("base")
+    assert era2.capas == {"caquetío-atestiguado", "caquetío-reconstruido"}
+    assert "caquetío-hipotético" not in era2.capas
+    assert era2.capas_de_score == base.capas_de_score
+    assert not era2.ablacion
+
+
+def test_la_muestra_del_perfil_era2_no_trae_ninguna_hipotetica():
+    from curiana_lexicon import VOCABULARIO_BASE
+    from curiana_perfiles import cargar_perfil
+    hip = {k for k, e in VOCABULARIO_BASE.items() if e.get("fuente") == "caquetío-hipotético"}
+    capas = cargar_perfil("era2").capas
+    for _ in range(30):
+        m = muestra_caquetio_dinamica(n_por_categoria=20, capas=capas, n_total=50)
+        vistas = {item.split(" (")[0].strip() for linea in m.splitlines()[1:]
+                  for item in linea.partition(":")[2].split(" · ")}
+        assert not (vistas & hip), vistas & hip
+
+
 # ── memoria del día y días encadenados ────────────────────────────────
 
 def test_la_memoria_guarda_cinco_notas():
