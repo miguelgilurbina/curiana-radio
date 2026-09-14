@@ -13,9 +13,9 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-13**.
+<!--GENERADO--> Generado el **2026-09-14**.
 
-**2137 ítems propuestos** en 48 propuestas, más **0 issue(s)/comentario(s) redactados sin publicar**.
+**2182 ítems propuestos** en 49 propuestas, más **0 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -51,6 +51,7 @@ editar_a_mano: no
   in "<unicode string>", line 83, column 81:
      ... os bubures» (Oviedo y Valdés [6]: 33); «basically the same natio ... 
                                          ^ |
+| `paginas_oliver_cap3_doc_vs_impresa.yaml` | oliver-1989-cap3 | 45 |  |
 | `paraguana_dos_clanes.yaml` | oliver-1989-cap3 | 5 |  |
 | `pendientes_en_alvarado_y_arcaya.yaml` | ? | 0 |  |
 | `petroglifos_y_manaure.yaml` | moron-2012-petroglifos | 4 |  |
