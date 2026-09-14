@@ -262,9 +262,35 @@ Dos oficios nuevos, hipotéticos:
 
 Y los serranos que encajaban mal encuentran sitio como forasteros de la feria.
 
-### Los nombres de Moruy
+### Los subgrupos con nombre, y los nombres de Moruy
 
-Ninguna fuente da nombres de *subgrupos* de los Moruyes. Lo que hay:
+**Los subgrupos estaban en el historial.** Salieron en el barrido web del
+2026-09-10 y se recuperaron el 14 a pedido de Miguel. Osman Petit, cronista de
+Miraca, escribe en el blog del Centro de Historia de Paraguaná (2012) que en
+Tacuato «pernotaban indígenas caquetíos de la tribu de los guaranaos que la
+constituían los Tacuato». Según él, poblaban la costa y el Golfete
+«conjuntamente con los corubos, los cayudes y los guasicures de Caseto». No
+cita fuente: es `retro-abstraido`, con la deuda de perseguirlo hasta Hernández
+Baño o Arcaya. Con la lectura de #122, estos son los subgrupos de los Moruyes:
+
+| Subgrupo | Sitio | Lo que lo ancla |
+|---|---|---|
+| Tacuatos | Tacuato (11.708, -69.841) | pueblo «muy antiguo»; Resguardo de Salinas colonial (Esteves p. 62) |
+| Cayudes | El Cayude (11.701, -69.957), al oeste de Tacuato | `kayude` 'guanábano silvestre', voz caquetía atestiguada |
+| Guasicures de Caseto | Caseto (11.762, -70.017), entre Moruy y la laguna | 45 casas en 1881; `kaseto`, una malva, voz atestiguada (Esteves p. 30) |
+| Corubos | ¿Curubitos, en La Boca del Caño, cerca de Santa Rita? | «diminutivo de Corubo, caparazón de moluscos», un punto de pesquería (Esteves p. 34) |
+
+**Propuesta de reajuste** (`canon-simulacion`). GUARANAO deja los tres
+subgrupos inventados por función y queda así:
+- **el centro:** Moruy y Chamuriana, los Moruyes;
+- **en el Golfete:** los Tacuatos y los Cayudes;
+- **en la laguna y sus salinas:** los Guasicures de Caseto;
+- **en la costa oriental:** los Corubos, si Curubitos es su huella. Esto choca
+  con la crónica, que los pone en el Golfete.
+
+AMUAY no tiene subgrupos con nombre.
+
+Para nombrar las casas dentro del centro están los apellidos:
 - Esteves p. 53: en Moruy «los apellidos no han sufrido deformaciones»
   (Caguao, Cuauro, Mabo, Guarecuco, Cotopo).
 - Medina Colina p. 328 repite los cinco y añade Guanipa, Guariato y Timaure.
@@ -325,10 +351,12 @@ semilla, no dato.
     Chamuriana?** Es tarea para la campaña de topónimos.
 14. **¿La sal como excedente de toda la península,** con un trueque hacia
     afuera (la feria de la sal) separado de la redistribución ritual?
-15. **¿Los nombres de casa de Moruy salen de los apellidos indígenas** (Mabo,
-    Cuauro, Caguao, Guarecuco, Cotopo, Tumarure), con los Adaures como subgrupo
-    propio? ¿Conviven con Corie y Buio de D1 o los sustituyen? ¿Y es esto lo que
-    Miguel recordaba, o hay otra fuente con nombres de parcialidades?
+15. **¿Se reajusta GUARANAO a un centro** (los Moruyes, en Moruy y Chamuriana)
+    **y los cuatro subgrupos con nombre** (Tacuatos, Cayudes, Guasicures de
+    Caseto, Corubos)? ¿Los Corubos van en el Golfete, como dice la crónica, o
+    en la costa oriental, como sugiere Curubitos? ¿Y los apellidos de Moruy
+    (Mabo, Cuauro, Caguao, Guarecuco, Cotopo, Tumarure) nombran casas dentro
+    del centro, con los Adaures como subgrupo de frontera?
 16. **¿Más peso al conuco del interior** y el monte como recurso con dueño?
     ¿Se proponen al corpus de ecología el sobrepastoreo y los dos matices?
 17. **¿Se corrige la economía de la polity costera** en `curiana_polities.py`,

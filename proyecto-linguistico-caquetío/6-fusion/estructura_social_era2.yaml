@@ -157,7 +157,7 @@ meta:
     - No hay residencia precontacto de Manaure; Todariquiba es el reasentamiento de 1527
     - 'No están en el repo: Delmonte 1883, González Batista 1984 (el que cita Oliver; gonzalez-batista-nombre-de-coro es otra obra), Salas directo, el artículo de Antolínez 1944 (solo vía Morón), Acasio 2013, Martí 1774, Ponce y Vaccari 1977'
     - 'Ningún mercado ni feria de sal costera antes de la Colonia: el Resguardo de Salinas de Tacuato y el puerto de la sal en Yaima son coloniales (Esteves pp. 62, 67); en los seis OCR de Esteves feria, mercado, trueque, rescate e intercambio solo dan el trueque de cuicas y timotes en Jurijurebo, sin cita'
-    - 'Ningún nombre de subgrupo de los Moruyes en fuente alguna: lo que hay son apellidos indígenas vivos (Esteves p. 53, Medina Colina p. 328) y rancherías del padrón de 1881 (ver niveles G2)'
+    - 'Ninguna fuente CITABLE da subgrupos de Paraguaná con nombre. Los que hay (Tacuatos, Corubos, Cayudes y Guasicures de Caseto, de la tribu de los Guaranaos) son de un cronista local de 2012 sin cita; ver niveles, GUARANAO_subgrupos_con_nombre'
 
   avisos_regla_3:
     - La geografía de los clanes es de Delmonte 1883, sobre papeles perdidos, vía González Batista y Oliver. Santa Ana y Moruy como PUEBLOS son coloniales (Esteves p. 35, fundación de 1538; Arcaya p. 327, San Nicolás de Moruy fundado a fines del XVI «con otros Caquetíos que antes ocupaban otros sitios de Paraguaná»)
@@ -403,7 +403,7 @@ niveles:
             - {dato: 'en 1881 todo el municipio contaba 213 casas y 1.349 vecinos y «ya había perdido la populosidad que ostentaba en los tiempos coloniales»', procedencia: {obra: esteves-1989, pagina: '53'}, etiqueta: atestiguado, capa: s. XIX}
             - {dato: 'una de las comunidades de Paraguaná «con más apego a las costumbres de sus antepasados»; conserva la cerámica, las silletas y bernegales y el jabón de la tierra', procedencia: {obra: esteves-1989, pagina: '53'}, etiqueta: retro-abstraido, valor: 'la alfarería de G2 tiene una continuidad de oficio registrada en el s. XX'}
           nombres_de_casa_candidatos:
-            pedido: '«Habíamos mencionado no sé en dónde algunos nombres de subgrupos de parte de los Moruyes» (Miguel, 2026-09-13). Lo que el repo tiene son estos nombres; ninguna fuente los llama subgrupos'
+            pedido: '«Habíamos mencionado no sé en dónde algunos nombres de subgrupos de parte de los Moruyes» (Miguel, 2026-09-13). Los subgrupos con nombre están en GUARANAO_subgrupos_con_nombre; aquí van los apellidos, que sirven para nombrar casas dentro del centro'
             lo_que_hay:
               - {dato: 'en Moruy «los apellidos no han sufrido deformaciones acomodaticias»: Caguao, Cuauro, Mabo, Guarecuco, Cotopo', procedencia: {obra: esteves-1989, pagina: '53'}, etiqueta: atestiguado, capa: 's. XX, apellidos vivos'}
               - {dato: 'apellidos paraguaneros «que devienen de nuestros naturales»: Caguado, Cauro, Gotopo, Guanipa, Guarecuco, Guariato, Mabo, Manaure y Timaure', procedencia: {obra: medina-colina-sxx, pagina: '328'}, etiqueta: atestiguado, capa: s. XX, nota: 'los cinco de Esteves reaparecen (Caguao ~ Caguado, Cuauro ~ Cauro, Cotopo ~ Gotopo, Guarecuco, Mabo); no está verificado que Medina escriba sin haber leído a Esteves'}
@@ -437,6 +437,61 @@ niveles:
             - dato: ninguna aldea precontacto atestiguada en esta costa; la aldea es posición del proyecto
               etiqueta: canon-simulacion
               deuda: sin-procedencia
+      GUARANAO_subgrupos_con_nombre:
+        recuperado: '2026-09-14, del barrido web del 2026-09-10, a pedido de Miguel («revisa en nuestro historial, ya que lo habíamos conversado»)'
+        dato:
+          cita: '«Pernotaban indígenas caquetíos de la tribu de los guaranaos que la constituían los Tacuato, los cuales poblaban las costas y el golfete de Coro conjuntamente con los corubos, los cayudes y los guasicures de Caseto.»'
+          quien: 'Osman Petit, cronista de Miraca, «Tacuato», blog Centro de Historia de Paraguaná, 18-08-2012 (http://centrodehistoriadeparaguana.blogspot.com/2012/08/tacuato.html)'
+          etiqueta: retro-abstraido
+          deuda: sin-procedencia
+          nota: 'no cita fuente; el resto de la entrada sigue a Esteves p. 62 (Martí 1773 y el Resguardo de Salinas) y remite al cronista local Osteicoechea. Hay que perseguir la lista hasta Hernández Baño 1984 o Arcaya'
+          apoyo_en_repo: '6-fusion/barrido_toponimos_web_2026-09-10.yaml (Tacuato; la_lista_de_clanes_confirmada)'
+        lectura: >-
+          Es la tradición que Miguel recordaba. Nombra a los Guaranaos como
+          tribu mayor y le da subgrupos con nombre, y los cuatro nombres son
+          topónimos vivos de Paraguaná, dos con voz caquetía atestiguada. Con
+          la lectura de #122 (los Moruyes son los Guaranaos), son los subgrupos
+          de los Moruyes.
+        cero_verificado: 'guasicure y corubo como grupo no aparecen en ninguna fuente cruda del repo (raíces guas[ie]cur, guaz[ie]cur, coru[bv]o en fuentes_caquetios/*.txt: solo el Curubitos de Esteves y los fundos Cayude)'
+        subgrupos:
+          - nombre: los Tacuatos
+            sitio: {lugar: Tacuato, lat: 11.708, lon: -69.841, fuente_coord: osm-kaketiana}
+            datos:
+              - {dato: 'pueblo «muy antiguo», con iglesia en 1773; 1881: 37 casas, 237 vecinos; Resguardo de Salinas colonial para vigilar el comercio de sal', procedencia: {obra: esteves-1989, pagina: '62'}, etiqueta: atestiguado, capa: 'colonial y s. XIX'}
+              - {dato: 'la Playa Prudencio, «excelente» para la pesca', etiqueta: retro-abstraido, deuda: sin-procedencia, fuente_web: 'Petit 2012'}
+            en_la_estructura: 'el subgrupo que «constituye» la tribu: aldea de la orilla del Golfete, con el trueque de la sal hacia Coro (ZG2). Ocupa el lugar de G3'
+          - nombre: los Cayudes
+            sitio: {lugar: El Cayude, lat: 11.701, lon: -69.957, fuente_coord: osm-kaketiana}
+            datos:
+              - {dato: 'fundo pecuario al oeste de Tacuato', procedencia: {obra: esteves-1989, pagina: '30-31 (OCR dañado, sin verificar)'}, etiqueta: atestiguado, capa: s. XX}
+              - {dato: 'kayude «guanábano silvestre» es voz caquetía atestiguada: el grupo lleva nombre de árbol', etiqueta: atestiguado, apoyo_en_repo: 'curiana_lexicon.py (kayude); barrido_toponimos_web_2026-09-10.yaml'}
+            en_la_estructura: 'la otra aldea de la orilla del Golfete, al oeste de los Tacuatos (ZG2)'
+          - nombre: los Guasicures de Caseto
+            sitio: {lugar: Caseto, lat: 11.762, lon: -70.017, fuente_coord: osm-kaketiana}
+            datos:
+              - {dato: 'aldea del municipio Santa Ana; 1881: 45 casas, 303 vecinos; caseto es una malva (Malvastrum spicatum)', procedencia: {obra: esteves-1989, pagina: '30'}, etiqueta: atestiguado, capa: s. XIX, canon: toponimo-088}
+              - {dato: 'kaseto «planta herbácea» es voz caquetía atestiguada; guasicure no tiene glosa en el repo', etiqueta: atestiguado, apoyo_en_repo: 'curiana_lexicon.py (kaseto)'}
+            en_la_estructura: 'aldea del interior entre Moruy y la laguna de Guaranao: el subgrupo natural de la laguna y sus salinas (ZG1)'
+          - nombre: los Corubos
+            sitio: {lugar: 'Curubitos, en La Boca del Caño, cerca de Santa Rita (municipio Adícora)', lat: null, lon: null, nota: 'el Corubo del mapa vivo (11.155, -70.376) es un caserío de Falcón occidental y no sirve'}
+            datos:
+              - {dato: '«Cuzubitos. Podría ser Curubitos, diminutivo de Corubo, caparazón de moluscos. El nombre aparece en los antiguos mapas en el punto costeño donde está localizada La Boca del Caño, lugar de pesquería cercano a Santa Rita»', procedencia: {obra: esteves-1989, pagina: '34 (pie del OCR)'}, etiqueta: atestiguado, capa: 'mapas antiguos y s. XX'}
+            en_la_estructura: >-
+              Si Curubitos es su huella, los Corubos pescaban en la costa
+              oriental, junto a ZA3 y a la zona en disputa ZX: serían la
+              presencia guaranaa en la costa que #122 dejó sin asignar. Choca
+              con la crónica, que los pone en «las costas y el golfete». Queda
+              abierto (P15).
+        propuesta_de_reajuste:
+          etiqueta: canon-simulacion
+          que: >-
+            GUARANAO deja los tres subgrupos definidos por función y pasa a un
+            centro y cuatro subgrupos con nombre de la tradición. El centro son
+            Moruy y Chamuriana, los Moruyes, con el merejuy y el agua del cerro.
+            En la costa: los Tacuatos y los Cayudes en el Golfete (ZG2), los
+            Guasicures de Caseto en la laguna y sus salinas (ZG1) y los Corubos
+            en la costa oriental (ZX). AMUAY sigue sin subgrupos con nombre.
+          consecuencia: 'rompe la simetría de tres por tres; la asimetría refleja lo que la tradición recuerda, no un dato del s. XV'
       AMUAY:
         - id: A1
           nombre: Cayerúa (Cayerda, Cayeruba, Cayarua)
@@ -1472,8 +1527,9 @@ preguntas_para_miguel:
     propuesta: 'sí: dentro, don y redistribución por Manaure; fuera, trueque por sartas de cuentas después de la cosecha de sal de la seca'
     por_que_importa: da sitio a los forasteros (serranos, isleños) sin inventarles un pueblo en Paraguaná
   - id: P15
-    pregunta: ¿Los nombres de casa de Moruy salen de los apellidos indígenas (Mabo, Cuauro, Caguao, Guarecuco, Cotopo, Tumarure) y los Adaures entran como subgrupo propio? ¿Conviven con Corie y Buio de D1 o los sustituyen en Moruy?
-    abierta: ¿Es esto lo que Miguel recordaba como «subgrupos de los Moruyes», o hay otra fuente con nombres de parcialidades?
+    pregunta: ¿Se reajusta GUARANAO a un centro (los Moruyes, en Moruy y Chamuriana) y los cuatro subgrupos con nombre de la tradición (Tacuatos, Cayudes, Guasicures de Caseto, Corubos)? ¿Los Corubos van en el Golfete, como dice la crónica, o en la costa oriental, como sugiere Curubitos?
+    y_los_apellidos: ¿Los apellidos indígenas de Moruy (Mabo, Cuauro, Caguao, Guarecuco, Cotopo, Tumarure) nombran casas dentro del centro, y los Adaures entran como subgrupo de frontera? ¿Conviven con Corie y Buio de D1 o los sustituyen?
+    deuda: perseguir la lista de Petit 2012 hasta Hernández Baño 1984 o Arcaya
   - id: P16
     pregunta: ¿Se sube el peso del conuco en las aldeas del interior y se añade el monte como recurso con dueño (frutos, leña, caza y sombra del suelo)?
     propuesta: sí, y proponer al corpus de ecología el hecho del sobrepastoreo con los matices a ecologia-033 y ecologia-036

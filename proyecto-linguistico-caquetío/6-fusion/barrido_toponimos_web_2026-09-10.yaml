@@ -112,6 +112,15 @@ nombres:
       a Arcaya— y, si aparece, va a `3-mundo/etnias.yaml` como registro de
       grupos de la polity costera, no sólo al canon toponímico.
     deuda: sin-procedencia
+    fuente_localizada_2026-09-14: >-
+      Osman Petit, cronista de Miraca, «Tacuato», blog Centro de Historia de
+      Paraguaná, 18-08-2012
+      (http://centrodehistoriadeparaguana.blogspot.com/2012/08/tacuato.html).
+      La frase dice «los guasicures de caseto». No cita fuente: el resto de la
+      entrada sigue a Esteves p. 62 (Martí 1773 y el Resguardo de Salinas) y
+      remite al cronista local Osteicoechea. Sigue la deuda. Esteves p. 34 da
+      Curubitos, «diminutivo de Corubo, caparazón de moluscos», en La Boca del
+      Caño, cerca de Santa Rita. Usado en estructura_social_era2.yaml.
 
   - forma: Borojó
     en_canon: 'no (está en el barrido OSM)'

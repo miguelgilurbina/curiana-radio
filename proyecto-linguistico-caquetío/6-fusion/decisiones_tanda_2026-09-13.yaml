@@ -82,6 +82,17 @@ elenco_era2:
     donde: >-
       6-fusion/estructura_social_era2.yaml (secciones medio_precontacto y
       sal_y_mercado; niveles G2) y el borrador del issue, §7
+    recuperado_del_historial_2026-09-14:
+      decision_literal: '«Igual revisa en nuestro historial ya que lo habíamos conversado.»'
+      que_se_encontro: >-
+        Los subgrupos estaban en el barrido web del 2026-09-10: la tribu de los
+        Guaranaos «la constituían los Tacuato», con los corubos, los cayudes y
+        los guasicures de Caseto (Osman Petit, Centro de Historia de Paraguaná,
+        2012, sin cita). Se había archivado en
+        barrido_toponimos_web_2026-09-10.yaml y la estructura no lo recogía; la
+        primera respuesta de la segunda vuelta afirmó que ninguna fuente nombraba
+        subgrupos, y estaba mal.
+      donde: estructura_social_era2.yaml (niveles, GUARANAO_subgrupos_con_nombre; P15)
 
 exportador_42:
   estado: VERIFICADO CONTRA LA BASE (2026-09-13, con Docker levantado por Miguel)
