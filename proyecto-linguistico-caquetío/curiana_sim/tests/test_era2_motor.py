@@ -239,6 +239,21 @@ def test_la_plantilla_tier_1_usa_las_formas_del_canon():
         assert nueva in p, nueva
 
 
+# ── -ko y -sha fuera de la gramática (Miguel, 2026-09-14) ─────────────
+
+def test_ko_y_sha_no_se_ensenan_ni_cuentan_como_regla():
+    """«Sí o sí hay que sacar eso de -ko y -sha, si es inventado, tanto de la
+    gramática como de los nombres». Se archivan en REGLAS_RETIRADAS."""
+    from curiana_lexicon import REGLAS_RETIRADAS, TODAS_LAS_REGLAS
+    for plantilla in (prompt_reglas_completo(), prompt_reglas_breve()):
+        assert "hombre de" not in plantilla and "mujer de" not in plantilla
+        assert "-ko (" not in plantilla and "-sha (" not in plantilla
+        assert "-kana" in plantilla          # el plural se queda
+    assert "-ko" not in TODAS_LAS_REGLAS and "-sha" not in TODAS_LAS_REGLAS
+    assert set(REGLAS_RETIRADAS) == {"-ko", "-sha"}
+    assert all("retirada" in r for r in REGLAS_RETIRADAS.values())
+
+
 # ── lo que la plantilla enseña no cuenta como koiné ───────────────────
 
 def test_las_formas_de_las_plantillas_quedan_fuera_de_lo_emergente():

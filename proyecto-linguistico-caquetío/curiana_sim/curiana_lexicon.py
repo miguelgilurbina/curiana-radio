@@ -6970,8 +6970,18 @@ REGLAS_LOCATIVAS: dict[str, dict] = {
     },
 }
 
-REGLAS_AGENTIVAS: dict[str, dict] = {
+# ── RETIRADAS (Miguel, 2026-09-14): «Sí o sí hay que sacar eso de -ko y -sha,
+# si es inventado, tanto de la gramática como de los nombres». Ninguna fuente
+# sostiene -ko «hombre de» ni -sha «mujer de»: eran convención de la era 1
+# (el campo `wayunaiki` de cada una es una analogía, no una atestación). Se
+# archivan aquí con la misma disciplina que FUERA_DEL_HABLA: no se enseñan,
+# no cuentan como regla al clasificar neologismos, y los nombres del elenco de
+# la era 2 se rehacen sin ellas (6-fusion/decisiones_tanda_2026-09-14.yaml
+# §antroponimos_era2). Los nombres de la era 1 (Biro-ko, Paugis-sha…) se
+# conservan tal cual en curiana_agents.py: esa era está cerrada.
+REGLAS_RETIRADAS: dict[str, dict] = {
     "-ko": {
+        "retirada": "2026-09-14, decisión de Miguel: sin fuente; era convención de la era 1",
         "nombre": "agente masculino",
         "desc": "Hombre cuya identidad/trabajo está asociado a X.",
         "uso": "RAÍZ + -ko  →  nombre o apodo masculino",
@@ -6987,6 +6997,7 @@ REGLAS_AGENTIVAS: dict[str, dict] = {
         ),
     },
     "-sha": {
+        "retirada": "2026-09-14, decisión de Miguel: sin fuente; era convención de la era 1",
         "nombre": "agente femenino",
         "desc": "Mujer cuya identidad/trabajo está asociado a X.",
         "uso": "RAÍZ + -sha  →  nombre o apodo femenino",
@@ -7163,7 +7174,7 @@ REGLAS_TOPONIMICAS: dict[str, dict] = {
 TODAS_LAS_REGLAS = {
     **REGLAS_ASPECTO,
     **REGLAS_LOCATIVAS,
-    **REGLAS_AGENTIVAS,
+    # REGLAS_AGENTIVAS (-ko, -sha) retiradas el 2026-09-14: ver REGLAS_RETIRADAS
     **REGLAS_POSESIVAS,
     **REGLAS_NUMERO,
     **REGLAS_ZAVALA,
@@ -7398,7 +7409,7 @@ CONSTRUYE tus frases con lo que tienes. Una frase incompleta en caquetío > orac
 ASPECTO: raíz + -ka (ya hice) / -ni (estoy haciendo) / -da (haré/quiero).
 LUGAR: raíz + -ana (lugar de) / -bana (cerro, sitio alto de) / -gua (región de).
 {prompt_afijos_atestiguados_breve()}
-PERSONAS: -ko (hombre de) / -sha (mujer de) / -kana (plural/colectivo).
+PLURAL: -kana (plural/colectivo).
 POSESIÓN: ta- (mi) / wa- (nuestro) / ma- (sin/no) / ka- (el-la del).
 CONECTORES: ka (y/también) / mara (pero) / saa (si/cuando) / naka (después) / kashi (ahora) / wara (muy).
 
@@ -7484,7 +7495,7 @@ MORFOLOGÍA:
     -bana = cerro, sitio alto de X: sima+bana = la cumbre · kapu+bana = kapubana, el duende del cerro
     -gua = región de X: maure+gua = tierra del algodón
 {prompt_afijos_atestiguados()}
-  AGENTIVOS: -ko (hombre de X) · -sha (mujer de X) · -kana (plural/todos)
+  PLURAL: -kana (plural/todos)
 
 NUEVAS PALABRAS: [forma: componentes = significado propuesto]
   La comunidad la adopta si 2 agentes distintos la usan."""

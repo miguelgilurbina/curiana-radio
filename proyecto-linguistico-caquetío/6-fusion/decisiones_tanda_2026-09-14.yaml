@@ -309,4 +309,13 @@ antroponimos_era2:
     corpus y la genealogía sigan resolviendo; regenerar el módulo. Manaure se
     queda: es título. Si Miguel prefería mantener -ko/-sha como convención
     declarada, se revierte con el mapa.
-  pendiente_de_miguel: 'los mismos -ko/-sha se ENSEÑAN como morfología en el prompt (AGENTIVOS); retirarlos de la gramática es otra decisión'
+  gramatica:
+    estado: DECIDIDA (2026-09-14) — «Sí o sí hay que sacar eso de -ko y -sha. Si es inventado, tanto de la gramática como de los nombres»
+    aplicado: >-
+      curiana_lexicon.py: REGLAS_AGENTIVAS pasa a REGLAS_RETIRADAS (archivadas con
+      la decisión, como FUERA_DEL_HABLA), sale de TODAS_LAS_REGLAS (ya no clasifica
+      ni valida neologismos) y de las dos plantillas, que ahora dicen sólo «PLURAL:
+      -kana». -kana se queda: Miguel no lo nombró; su evidencia declarada es un
+      cognado wayuu («cognado directo»), reconstruido, y queda a la vista para
+      otra decisión. Los nombres de la era 1 (Biro-ko, Paugis-sha…) no se tocan:
+      esa era está cerrada. Test: test_ko_y_sha_no_se_ensenan_ni_cuentan_como_regla.
