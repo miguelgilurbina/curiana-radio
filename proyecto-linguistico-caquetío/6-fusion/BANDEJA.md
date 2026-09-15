@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-14**.
 
-**2541 ítems propuestos** en 57 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
+**2541 ítems propuestos** en 57 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -108,7 +108,6 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 
 | Archivo | Qué es |
 |---|---|
-| `antroponimos-era2.md` | Los nombres de la era 2, rehechos con lo que hay de caquetío |
 | `decision-d11-fase3-nucleo-lokono-achagua.md` | D11 fase 3: el núcleo re-derivado desde lokono + achagua, y un perfil de run para medirlo |
 
 ---
