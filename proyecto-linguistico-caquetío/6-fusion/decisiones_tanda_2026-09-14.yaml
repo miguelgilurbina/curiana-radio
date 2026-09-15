@@ -282,6 +282,37 @@ motor_era2:
     pendiente_del_calendario: 'el evento del director dura hasta el cambio de día (3-4 turnos de 6); decidir si dura un turno'
     pendiente_de_la_plantilla: 'la frase modelo «ta-barsure naba-ni» se copia en el 29% de las respuestas; rotarla o retirarla'
 
+mundo_a_los_nodos:
+  estado: EN DISEÑO (2026-09-14) — tres ideas de Miguel, registradas antes de la campaña de sitios
+  sitios: >-
+    «En la laguna de Guaranao hay manglares, yararés y peces. En esa época había
+    venados que no sé cómo llamarlos, ya que no quedan al día de hoy. Hay pesca,
+    hay recolección de corubos y además todo el trabajo de tierra. ¿Cómo podemos
+    adecuar y más bien atestiguar información que tenemos en el mundo acorde a
+    los nodos de la era 2?» → campaña de sitios de la era 2 (canon de sitios con
+    procedencia por dominio, huecos léxicos declarados: manglar, venado; el
+    yararé sin identificar). Medido: el Golfete está cubierto por el corpus
+    (011, 012, 015, 023-027, 036); la costa oeste casi no existe; la laguna de
+    Guaranao no tiene hecho, pero tarika «laguna» es voz atestiguada.
+  clima: >-
+    «Tener una sección de clima y temporada, y así cuando inyectamos el mundo lo
+    inyectamos bajo un esquema climatológico.» → canon de clima (períodos con
+    viento, lluvia, mar, agua dulce; el día dentro del período; lo que cada
+    período abre por sitio). Hallazgo: el motor reparte el año 60/60 (lluvias
+    Jun-Nov) y el corpus atestigua un pulso de lluvia de ~3 meses (oct-dic,
+    ecologia-006) y seca el resto; el calendario del motor se ajusta al corpus
+    si Miguel lo confirma.
+  capubana: >-
+    «El Cerro Santa Ana genera un microclima [...] en momentos de sequía la
+    altura generaba chubascos o hilos de agua, y por eso era hiper mega valioso
+    a nivel espiritual.» → 6-fusion/capubana_agua_y_microclima.yaml: cadena de
+    evidencia con fuente (bosque nublado en la cumbre y cinco pisos bióticos,
+    INPARQUES; diez microcuencas en Montecano; la fuente intermitente de
+    Arcaya; los asentamientos alrededor del volcán, Oliver; el tabú de Capo; el
+    señor que «da los temporales»). Sólo la lluvia orográfica medida queda
+    hipotética. Hallazgo de paso: una de las tres cumbres del cerro se llama
+    Moruy (a verificar).
+
 antroponimos_era2:
   estado: EN CURSO (2026-09-14) — campaña lanzada
   pregunta_de_miguel: '¿No deberíamos rehacer los nombres en base a lo que conocemos y tenemos de caquetío?'

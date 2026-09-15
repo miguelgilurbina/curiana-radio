@@ -1,0 +1,139 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — El Capubana como fuente de agua en la seca: microclima y sacralidad
+#
+# Hipótesis de Miguel, 2026-09-14: «El Cerro Santa Ana, al ser un cerro,
+# genera un microclima; por eso hay un bosque semiárido específico en la
+# reserva de Montecano. Pienso que tal vez esto es lo que lo hacía hiper mega
+# valioso a nivel espiritual: en momentos de sequía la altura del cerro
+# generaba chubascos o permitía pequeños hilos de agua que bajaran por el
+# cerro, y por eso existe este microclima.»
+#
+# Regla 5: PROPONE. No toca el corpus ni el motor. Regla 8: las fuentes web
+# de aquí no tienen ficha en 4-fuentes/: cada una lleva `deuda: sin ficha`.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-09-14'
+  estado: sin-fusionar
+  quien: escriba (Claude), sobre hipótesis de Miguel
+  pregunta: >-
+    ¿Daba el Cerro Santa Ana (el Capubana) agua cuando el resto de Paraguaná
+    no la tenía, y es esa la razón material de su valor espiritual?
+  respuesta_corta: >-
+    La cadena tiene todos los eslabones menos uno. Está atestiguado que el
+    cerro es la única elevación de la península, que tiene un bosque nublado
+    en la cumbre sostenido por la humedad, que al pie hay una reserva con diez
+    microcuencas que se reconoce como «fuente de agua», que la única agua
+    corriente de Paraguaná es «una fuente intermitente en el cerro» (Arcaya),
+    que los asentamientos se concentraban alrededor del volcán por el agua
+    (Oliver), que el dueño del cerro impedía cortar los árboles (Antolínez) y
+    que el gran cacique «da los temporales» (Ampíes). Lo que NO está medido en
+    ninguna fuente del repo es la lluvia orográfica en sí (cuánto más llueve
+    en el cerro que en el llano). Ese eslabón es hipotético hasta que
+    aparezca un dato pluviométrico.
+
+hipotesis:
+  etiqueta: hipotetico (como historia); candidata a canon-simulacion para la era 2
+  enunciado: >-
+    El Capubana captura la humedad del alisio en su cumbre (bosque nublado) y
+    la suelta en fuentes y quebradas intermitentes hacia sus faldas; en la
+    seca larga de Paraguaná es el único sitio que da agua. Por eso los
+    asentamientos lo rodean, por eso el dueño del cerro prohíbe cortar sus
+    árboles, y por eso el señor que «da los temporales» es el señor del cerro:
+    el poder de dar agua en la seca es el poder de dar el año.
+
+cadena_de_evidencia:
+  - eslabon: el cerro es la única elevación, y alta
+    dato: >-
+      830 m, la única elevación de toda la península, 1.900 ha, con tres
+      cumbres: Santa Ana, Buena Vista y Moruy. Monumento Natural desde 1972.
+    etiqueta: atestiguado
+    capa: fuente institucional moderna
+    fuente_web: 'INPARQUES, «Monumento Natural Cerro Santa Ana» (https://www.inparques.gob.ve/monumento-natural-cerro-santa-ana/); Wikipedia es, «Cerro Santa Ana (Paraguaná)»'
+    deuda: sin ficha en 4-fuentes/
+    nota: '⭐ que una de las tres cumbres se llame MORUY conecta el nombre del nodo con el cerro mismo; verificar en Esteves y en el mapa vivo antes de usarlo'
+  - eslabon: la humedad se queda en la cumbre
+    dato: >-
+      Cinco pisos bióticos según la altura: matorral xerófilo y espinar abajo,
+      bosque deciduo, y en lo alto un bosque nublado costero de formas
+      achaparradas, con árboles de 10 a 15 m, «abundantes epífitas, musgos y
+      líquenes favorecidos por la alta humedad».
+    etiqueta: atestiguado
+    capa: fuente institucional moderna
+    fuente_web: 'MINEC, «Monumento Natural Cerro Santa Ana cuenta con cinco pisos bióticos» (http://www.minec.gob.ve/monumento-natural-cerro-santa-ana-cuenta-con-cinco-pisos-bioticos/); INPARQUES 2019'
+    deuda: sin ficha en 4-fuentes/
+    lectura: 'un bosque nublado en una península semiárida sólo existe si el cerro captura humedad que el llano no recibe: es el microclima que Miguel supone'
+  - eslabon: al pie hay agua y bosque
+    dato: >-
+      La Reserva Biológica Montecano (San José de Cocodite, 2.556 ha) tiene
+      diez microcuencas «que mantienen un flujo de agua vital» y se reconoce
+      como «fuente de vida y agua en Paraguaná»; es uno de los últimos
+      relictos del bosque seco tropical que se cree cubrió la península; su
+      nombre viene de la barba de palo, epífita «característica de lugares
+      húmedos».
+    etiqueta: atestiguado
+    capa: fuente institucional y periodística moderna
+    fuente_web: 'Wikipedia es, «Reserva biológica Montecano»; Últimas Noticias, «Flora y fauna están a salvo en Montecano»; INFALCOSTA, «Reserva Biológica Montecano»'
+    deuda: sin ficha en 4-fuentes/
+    nota: 'Cocodite cae al norte del cerro, sobre la frontera propuesta entre los nodos (estructura_social_era2.yaml): el agua del cerro baja hacia los dos'
+  - eslabon: la única agua corriente de la península es del cerro
+    dato: 'Hay «apenas una fuente intermitente en el cerro de Santa Ana»'
+    etiqueta: atestiguado
+    procedencia: {obra: arcaya-1920, pagina: '22'}
+  - eslabon: la gente se asentaba alrededor del volcán por el agua
+    dato: >-
+      «the settlements are concentrated around the Santa Ana (extinct) volcano,
+      which provides the water necessary for agriculture, and where the soils
+      are most suited for farming»
+    etiqueta: reconstruido
+    procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 262 (impresa sin comprobar)'}
+  - eslabon: el bosque del cerro está protegido por su dueño
+    dato: 'en el cerro de Santa Ana un dueño llamado Capo impide que se corten los árboles'
+    etiqueta: retro-abstraido
+    procedencia: {obra: antolinez-1946-hacia-el-indio, pagina: 'vía Francisco Tamayo'}
+    lectura: 'un tabú sobre la tala del cerro es, en términos materiales, la protección de la captura de humedad: sin bosque nublado no hay agua abajo'
+  - eslabon: el señor da el agua del cielo
+    dato: 'el gran cacique «se haze adorar... dando a entender a los indios q el da los temporales»'
+    etiqueta: atestiguado
+    capa: contacto
+    procedencia: {obra: velasco-2015-resistencia, pagina: 'Ampíes, folio 14'}
+    lectura: 'si el cerro es lo único que da agua en la seca, «dar los temporales» es hablar con el dueño del cerro; el Manaure-boratio y el Capubana son la misma jurisdicción'
+  - eslabon: la lluvia orográfica, medida
+    dato: 'cuánto más llueve en el cerro que en el llano, y si hay chubascos en la seca'
+    etiqueta: hipotetico
+    deuda: sin-procedencia
+    que_lo_subiria: 'un dato pluviométrico del Monumento Natural o del INAMEH por piso altitudinal; o la descripción de las quebradas del cerro en Esteves (Cunacho, las «escarpaduras»)'
+
+lo_que_no_se_encontro:
+  - 'ningún hecho del corpus habla del cerro como fuente de agua (grep microclim, orográf, neblina, nublado, hilos de agua, chubasco en 3-mundo/: 0); el agua del cerro sólo está en la estructura de la era 2 y en el canon de topónimos (Chamuriana, Maitiruma)'
+  - 'ninguna fuente del repo da pluviometría del cerro'
+
+consecuencias_para_la_era_2:
+  sitios: >-
+    El Capubana entra en el canon de sitios como el único con agua en la seca:
+    la fuente intermitente, las quebradas que bajan a Chamuriana y a
+    Maitiruma, el bosque de la cumbre que no se corta. Chamuriana, Moruy y
+    Caseto (a ~8 km) viven del agua del cerro; Tacuato, El Cayude y
+    Carirubana, de los jagüeyes y del mar.
+  clima: >-
+    El cerro es la excepción al pulso: cuando la lluvia falla, el cerro sigue
+    dando. En el canon de clima va como «agua del cerro» con su propio ritmo,
+    distinto del de los jagüeyes.
+  creencia: >-
+    Propuesta de hecho nuevo para creencia.yaml: el tabú de Capo sobre la
+    tala como protección del agua (retro-abstraído + lectura). Y un matiz a
+    creencia-013 (el señor que da los temporales): el poder de dar agua en la
+    seca es el del cerro.
+  ritual: >-
+    La convergencia del Capubana cae al fin de la seca (ciclo CM de la
+    estructura): es la subida al único sitio con agua, y el momento en que el
+    señor «da los temporales» que están por venir. Refuerza la decisión de
+    Miguel de que el cerro concentra lo espiritual «a nivel energético».
+  motor: >-
+    Cuando exista el cargador de mundo: el bloque [Tu tierra] de los sitios de
+    falda dice en la seca «el jagüey baja; el agua del cerro sigue»; el de la
+    costa, «el jagüey baja; se bebe lo que se trae».
+
+preguntas_para_miguel:
+  - '¿Se acepta como canon-simulación de la era 2: el Capubana da agua en la seca y por eso es el centro? (la lluvia orográfica queda hipotética hasta tener dato)'
+  - '¿Se abren fichas en 4-fuentes/ para INPARQUES (Cerro Santa Ana) y Montecano, para que estas citas dejen de ser deuda?'
+  - '¿Verificamos que una de las tres cumbres se llama Moruy (Wikipedia) en Esteves o en el mapa vivo? Cambiaría la lectura del topónimo (toponimo-108)'
