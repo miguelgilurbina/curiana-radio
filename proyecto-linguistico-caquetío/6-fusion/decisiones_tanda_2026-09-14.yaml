@@ -393,3 +393,26 @@ antroponimos_era2:
       cognado wayuu («cognado directo»), reconstruido, y queda a la vista para
       otra decisión. Los nombres de la era 1 (Biro-ko, Paugis-sha…) no se tocan:
       esa era está cerrada. Test: test_ko_y_sha_no_se_ensenan_ni_cuentan_como_regla.
+
+matacan_venado:
+  estado: PENDIENTE de Miguel (2026-09-14)
+  lo_que_dijo: >-
+    «Matacán es consistente con por ejemplo guayacán, es decir podríamos
+    fonemizarlo dentro de lo que es el caquetío».
+  medido: >-
+    6-fusion/matacan_venado_2026-09-14.yaml. Fonotáctica: `matakan` válida
+    contra las formas atestiguadas, igual que wayakan. Esteves p. 51 (imagen
+    verificada): «cérvido de poca alzada», rebaños en los bosques de Paraguaná
+    extinguidos por cacería; Punta de Matacán en el Golfete. Pero la analogía
+    con guayacán se rompe en la etimología: guayacán entró (tanda del 12) por
+    ser taína y panhispánica; matacán es «de matar y can» para la lexicografía
+    general (Wikcionario/agregadores; dle.rae.es 403), Alvarado 1921 no la
+    tiene entre las voces indígenas (cero verificado con variantes; sí tiene
+    locho, del quechua), el dictado de Medina no la trae, y ningún vocabulario
+    arahuaco o caribe del repo (Jahn: motilón amúsha/trihunchti p. 347,
+    guajiro Uyára p. 144; achagua nerraí) se le parece. Y el perfil era2 no
+    enseña canon-simulación ni hipotético: un `matakán` así etiquetado no
+    llegaría a nadie.
+  opciones: 'A no entra (hueco declarado, ecologia-037) · B lo acuñan los agentes cuando el mundo nombre al venado · C canon-simulación con etimología castellana declarada · D reconstruir del wayuu (Uyára/irama) por D11'
+  recomendacion: 'A + B; el hecho ecológico del matacán en Paraguaná sí entra (propuesto en el YAML) y el topónimo Punta de Matacán se declara castellano'
+  deuda: 'Alvarado 1929 (Glosario del bajo español, BNV, tomos > 10 MB: descarga a autorizar) · Medina físico s.v. · Diccionario de americanismos'

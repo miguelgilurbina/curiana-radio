@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-14**.
 
-**2551 ítems propuestos** en 58 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
+**2556 ítems propuestos** en 59 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -51,6 +51,7 @@ editar_a_mano: no
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
 | `lokono_gramatica_perea_1942.yaml` | perea-alonso-1942 | 6 |  |
 | `mapa_nombres_era2.yaml` | ? | 63 |  |
+| `matacan_venado_2026-09-14.yaml` | esteves-1989 (y alvarado-1921, jahn-1927, neira-ribero-1762 como comparanda) | 5 |  |
 | `medicion_contaminacion_score_2026-09-09.yaml` | ? | 0 |  |
 | `medina_colina_dictado.yaml` | ? | 111 |  |
 | `migracion_lemas_fase2.yaml` | ? | 79 |  |
