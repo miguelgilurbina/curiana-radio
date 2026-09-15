@@ -9,11 +9,15 @@
 # cerro, y por eso existe este microclima.»
 #
 # Regla 5: PROPONE. No toca el corpus ni el motor. Regla 8: las fuentes web
-# de aquí no tienen ficha en 4-fuentes/: cada una lleva `deuda: sin ficha`.
+# tienen ficha en 4-fuentes/ desde el 2026-09-14 (decisión de Miguel):
+# monumento-cerro-santa-ana y montecano-reserva.
 # ─────────────────────────────────────────────────────────────────────────
 meta:
   recogido: '2026-09-14'
-  estado: sin-fusionar
+  estado: >-
+    sin-fusionar; DECIDIDA por Miguel el 2026-09-14 («Sí a todo»): el Capubana
+    da agua en la seca y por eso es el centro, canon-simulacion de la era 2.
+    Las fichas de fuente están abiertas y las procedencias de abajo resuelven.
   quien: escriba (Claude), sobre hipótesis de Miguel
   pregunta: >-
     ¿Daba el Cerro Santa Ana (el Capubana) agua cuando el resto de Paraguaná
@@ -47,10 +51,15 @@ cadena_de_evidencia:
       830 m, la única elevación de toda la península, 1.900 ha, con tres
       cumbres: Santa Ana, Buena Vista y Moruy. Monumento Natural desde 1972.
     etiqueta: atestiguado
-    capa: fuente institucional moderna
-    fuente_web: 'INPARQUES, «Monumento Natural Cerro Santa Ana» (https://www.inparques.gob.ve/monumento-natural-cerro-santa-ana/); Wikipedia es, «Cerro Santa Ana (Paraguaná)»'
-    deuda: sin ficha en 4-fuentes/
-    nota: '⭐ que una de las tres cumbres se llame MORUY conecta el nombre del nodo con el cerro mismo; verificar en Esteves y en el mapa vivo antes de usarlo'
+    capa: fuente institucional y enciclopédica moderna
+    procedencia: {obra: monumento-cerro-santa-ana, pagina: 'Wikipedia es («Tiene tres picachos: el Santa Ana [...], Buena Vista y Moruy»); INPARQUES por extracto'}
+    nota: >-
+      ⭐ que una de las tres cumbres se llame MORUY conecta el nombre del nodo
+      con el cerro mismo. Verificado el 2026-09-14 hasta donde se pudo: la
+      única fuente de las tres cumbres es Wikipedia (que cita el decreto de
+      1972); el mapa vivo (OSM) registra un solo pico, el Santa Ana, y Esteves
+      no habla de picos. Queda como lectura pendiente para toponimo-108 y
+      deuda de mapa topográfico.
   - eslabon: la humedad se queda en la cumbre
     dato: >-
       Cinco pisos bióticos según la altura: matorral xerófilo y espinar abajo,
@@ -58,10 +67,20 @@ cadena_de_evidencia:
       achaparradas, con árboles de 10 a 15 m, «abundantes epífitas, musgos y
       líquenes favorecidos por la alta humedad».
     etiqueta: atestiguado
-    capa: fuente institucional moderna
-    fuente_web: 'MINEC, «Monumento Natural Cerro Santa Ana cuenta con cinco pisos bióticos» (http://www.minec.gob.ve/monumento-natural-cerro-santa-ana-cuenta-con-cinco-pisos-bioticos/); INPARQUES 2019'
-    deuda: sin ficha en 4-fuentes/
+    capa: fuente institucional y enciclopédica moderna
+    procedencia: {obra: monumento-cerro-santa-ana, pagina: 'Wikipedia es («abundantes epífitas, musgos y líquenes favorecidos por la alta humedad»); MINEC e INPARQUES por extracto (cinco pisos, bosque nublado en la cumbre)'}
     lectura: 'un bosque nublado en una península semiárida sólo existe si el cerro captura humedad que el llano no recibe: es el microclima que Miguel supone'
+  - eslabon: el cerro conserva hoy lo que el llano perdió
+    dato: 'fauna actual del Monumento Natural: guacharaca, pavita hormiguera, venado matacán, zarigüeya, tarántula azul'
+    etiqueta: atestiguado
+    capa: moderno
+    procedencia: {obra: monumento-cerro-santa-ana, pagina: 'Wikipedia es, fauna'}
+    lectura: >-
+      Miguel recordaba venados «que ya no quedan»: el cerro los conserva
+      (venado matacán, Mazama), y Castellanos los atestigua en Coro hacia 1540
+      («conejos y venados», castellanos-elegias, líneas 48228-48230 del txt).
+      El animal está; la palabra caquetía no (ecologia-037 retiró la glosa
+      «venado» de tara): hueco léxico declarado para el canon de sitios.
   - eslabon: al pie hay agua y bosque
     dato: >-
       La Reserva Biológica Montecano (San José de Cocodite, 2.556 ha) tiene
@@ -71,10 +90,19 @@ cadena_de_evidencia:
       nombre viene de la barba de palo, epífita «característica de lugares
       húmedos».
     etiqueta: atestiguado
-    capa: fuente institucional y periodística moderna
-    fuente_web: 'Wikipedia es, «Reserva biológica Montecano»; Últimas Noticias, «Flora y fauna están a salvo en Montecano»; INFALCOSTA, «Reserva Biológica Montecano»'
-    deuda: sin ficha en 4-fuentes/
+    capa: fuente institucional y enciclopédica moderna
+    procedencia: {obra: montecano-reserva, pagina: 'INFALCOSTA (Arends, 2021): «Cuenta con 10 micro cuencas, que son los únicos cursos de agua que mantienen un pequeño caudal intermitente y efímero»; Wikipedia es: Decreto 3825 (2019), «nacientes de importantes cursos de agua»'}
     nota: 'Cocodite cae al norte del cerro, sobre la frontera propuesta entre los nodos (estructura_social_era2.yaml): el agua del cerro baja hacia los dos'
+  - eslabon: la humedad viene del alisio, no de la lluvia
+    dato: >-
+      Montecano recibe «los vientos alisios del este» por su «situación
+      privilegiada como terraza que da hacia el Mar Caribe»; precipitación
+      media anual 319 mm, 27 °C; y aun así sostiene un relicto de bosque con
+      barba de palo, epífita «propia de lugares húmedos».
+    etiqueta: atestiguado
+    capa: moderno
+    procedencia: {obra: montecano-reserva, pagina: 'INFALCOSTA (Arends, 2021); Wikipedia es'}
+    lectura: 'menos lluvia que Coro (ecologia-005) y sin embargo bosque húmedo: la humedad no es la lluvia, es lo que el cerro y su terraza capturan del viento (ecologia-020)'
   - eslabon: la única agua corriente de la península es del cerro
     dato: 'Hay «apenas una fuente intermitente en el cerro de Santa Ana»'
     etiqueta: atestiguado
@@ -133,7 +161,11 @@ consecuencias_para_la_era_2:
     falda dice en la seca «el jagüey baja; el agua del cerro sigue»; el de la
     costa, «el jagüey baja; se bebe lo que se trae».
 
-preguntas_para_miguel:
-  - '¿Se acepta como canon-simulación de la era 2: el Capubana da agua en la seca y por eso es el centro? (la lluvia orográfica queda hipotética hasta tener dato)'
-  - '¿Se abren fichas en 4-fuentes/ para INPARQUES (Cerro Santa Ana) y Montecano, para que estas citas dejen de ser deuda?'
-  - '¿Verificamos que una de las tres cumbres se llama Moruy (Wikipedia) en Esteves o en el mapa vivo? Cambiaría la lectura del topónimo (toponimo-108)'
+decidido_2026-09-14:
+  - 'canon-simulación de la era 2: el Capubana da agua en la seca y por eso es el centro (la lluvia orográfica queda hipotética hasta tener dato)'
+  - 'fichas abiertas: 4-fuentes/monumento-cerro-santa-ana.md y 4-fuentes/montecano-reserva.md; bibliografia.yaml regenerada'
+  - 'la cumbre de Moruy: verificada sólo en Wikipedia (tres picachos); OSM registra un pico y Esteves ninguno. Lectura pendiente para toponimo-108 (se edita lexicon_toponimos.py y se regenera) y deuda de mapa topográfico'
+queda:
+  - 'un dato pluviométrico del cerro por piso (INPARQUES/INAMEH)'
+  - 'la lectura de toponimo-108 (moruy) con la cumbre homónima'
+  - 'los hechos nuevos para ecologia.yaml y creencia.yaml, que la campaña de sitios y clima propone con este material'

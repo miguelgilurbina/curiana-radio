@@ -312,6 +312,24 @@ mundo_a_los_nodos:
     señor que «da los temporales»). Sólo la lluvia orográfica medida queda
     hipotética. Hallazgo de paso: una de las tres cumbres del cerro se llama
     Moruy (a verificar).
+  decision_capubana:
+    estado: DECIDIDA (2026-09-14) — «Sí a todo y confirmo el punto 3»
+    etiqueta: canon-simulacion
+    que: >-
+      (1) El Capubana da agua en la seca y por eso es el centro: canon de
+      simulación de la era 2 (la lluvia orográfica medida sigue hipotética).
+      (2) Se abren fichas en 4-fuentes/ para el Monumento Natural Cerro Santa
+      Ana (INPARQUES/MINEC) y la Reserva Biológica Montecano, y se regenera
+      bibliografia.yaml: las citas dejan de ser deuda. (3) Se verifica la
+      cumbre de Moruy. (4) Lectura del escriba: «sí a todo» confirma también
+      que el calendario del motor se ajuste al corpus (seca larga, pulso corto
+      de lluvias); se aplica cuando exista el canon de clima, que declara las
+      duraciones. Pendiente: qué es el yararé.
+    cumbre_de_moruy_2026-09-14: >-
+      El mapa vivo (OSM, paraguana-1.json) sólo tiene un pico: Cerro Santa Ana,
+      830 m, 11.818 -69.952. Ni «cumbre», ni «pico», ni «cerro de Moruy»
+      aparecen en los seis OCR de Esteves. Las tres cumbres son afirmación de
+      INPARQUES/Wikipedia: ver las fichas.
 
 antroponimos_era2:
   estado: EN CURSO (2026-09-14) — campaña lanzada

@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-14**.
 
-**2549 ítems propuestos** en 58 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
+**2551 ítems propuestos** en 58 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -27,7 +27,7 @@ editar_a_mano: no
 | `bachaco_y_gu_es_w.yaml` | alvarado-1921 | 0 |  |
 | `barrido_toponimos_web_2026-09-10.yaml` | ? | 9 |  |
 | `barrido_web_medina_2026-09-09.yaml` | ? | 13 |  |
-| `capubana_agua_y_microclima.yaml` | ? | 8 |  |
+| `capubana_agua_y_microclima.yaml` | ? | 10 |  |
 | `castellanos_1589_toponimos.yaml` | castellanos-elegias | 0 |  |
 | `censo_ana_esteves_109.yaml` | esteves-1989 | 13 |  |
 | `censo_terminacion_re.yaml` | ? | 3 |  |
