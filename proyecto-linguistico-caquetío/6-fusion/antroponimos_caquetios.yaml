@@ -1,0 +1,1033 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — la campaña de ANTROPÓNIMOS de la esfera caquetía
+#
+# Encargo de Miguel, 2026-09-14: «¿No deberíamos rehacer los nombres en base
+# a lo que conocemos y tenemos de caquetío?» → «Sí a los dos puntos».
+# Registro de la decisión: 6-fusion/decisiones_tanda_2026-09-14.yaml
+# §antroponimos_era2.
+#
+# Esto MINA y PROPONE (regla 5). No toca el lexicón ni 3-mundo/corpus/.
+# Método: el mismo de la campaña de topónimos — una entrada por nombre, con
+# procedencia (clave foránea a 4-fuentes/bibliografia.yaml), etiqueta
+# epistémica, y regla_3 / regla_4 declaradas donde apliquen.
+#
+# Lo que este archivo da de comer: 6-fusion/sistema_de_nombres_era2.yaml
+# (las reglas) y 6-fusion/mapa_nombres_era2.yaml (los 63 del elenco).
+# Medición: python 6-fusion/scripts/medir_antroponimos.py
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-14'
+  estado: sin-fusionar
+  quien: escriba (Claude), a pedido de Miguel
+  obra: varias
+
+  pregunta: >-
+    ¿Qué nombres de PERSONA de la esfera caquetía están documentados en las
+    fuentes del repo — caciques, principales, títulos, mujeres con nombre,
+    apellidos vivos, nombres de leyenda —, con qué forma, de qué época, de
+    qué comarca, y qué formantes recurren en ellos?
+
+  como_se_midio:
+    barrido: >-
+      python, expresiones regulares sobre el texto plano de las fuentes:
+      fuentes_caquetios/*.txt y *.ocr.txt (Castellanos, Esteves 1-6, Gatschet
+      ×2, van Buurt, Brinton, Pané, Fabo, Perea, Oliver cap. 3 §324) más el
+      texto extraído con `pdftotext -layout` de Arcaya 1920, Oviedo y Baños,
+      Oliver 1989 cap. 3 (Ethnohistory) y la tesis. Normalización NFD sin
+      diacríticos antes de buscar, porque tres de los cuatro PDF salen en
+      latin-1 y los acentos rompían el patrón.
+    patrones: >-
+      caciqu|caziqu|casiqu + (llamado|dicho|nombrado|por nombre|se llama|se
+      dize) + Mayúscula · principal(es) + (dicho|llamado|nombrado|se dize) ·
+      (india|muger|mujer|cacica|hija|hermana|vieja|moza|señora|princesa) +
+      (llamada|dicha|nombrada|de nombre) · Don/Doña + Mayúscula · «apellido»
+      · «nombre propio» · «antropónim» · y las raíces cortas de los nombres
+      que el repo ya tenía (uriaco-, cagual-, bonyat-/boniat-, categu-,
+      baracoic-, hurihureb-/hurehureb-/jurijureb-, manaure, naure/anaure,
+      tumarur-, judiban-, jayan-, borob-, y los apellidos vivos).
+    ortografias_coloniales_probadas: >-
+      cazique/casique/caciqu; se dize/se dice; Don/Doña con y sin acento;
+      Bonyata~Boniata; Hurihurebo~Hurehurebo~Jurijurebo; Goyabaco~Gorybacoa~
+      Guaibacoa; Todariquiba~Todarequiba~Tubariquiba; Alexandro~Alexandre.
+    fuente_del_recuento: >-
+      6-fusion/scripts/medir_antroponimos.py lee ESTE archivo y
+      2-lengua/toponimos.yaml, y vuelve a contar la recurrencia de cada
+      formante. Si `formantes[].recurrencia` no coincide con lo que mide, es
+      un bug de este YAML (regla 1).
+
+  ceros_verificados:
+    - raices: 'india|muger|mujer|cacica|hija|hermana|vieja|moza|señora|princesa + llamada/dicha/nombrada/de nombre'
+      resultado: >-
+        CERO nombres de mujer indígena en la esfera caquetía. Los ocho aciertos
+        del patrón en todo el corpus son: «mujer llamada Juana», «india llamada
+        Catalina», «moza dicha Ana» (Castellanos, fuera de Coro), «mujer llamada
+        Itiba» (Pané, taíno), «mujer llamada Francisca» (Arcaya, colonial),
+        «señora … llamada», «mujer llamada Leonor» y «vieja llamada Apacuana»
+        (Oviedo y Baños; Apacuana es de los Quiriquires del valle de Caracas,
+        regla 4). Ninguna caquetía, ninguna con nombre indígena.
+    - raices: 'cacica|casica|cazica'
+      resultado: >-
+        13 aciertos en Castellanos y 1 en Perea, todos fuera de la esfera
+        (Antillas, Nueva Granada, Banda Oriental). Ninguna cacica caquetía con
+        nombre.
+    - raices: 'género en el nombre: -ko, -sha, -ru, -tu, -ma, -na como marca de sexo'
+      resultado: >-
+        CERO. Ninguna de las 62 obras de bibliografia.yaml dice que el caquetío
+        marque género en el antropónimo. Los sufijos -ko «hombre de» y -sha
+        «mujer de» de REGLAS_AGENTIVAS no tenían campo de evidencia: eran
+        convención de la era 1 nunca declarada. RETIRADOS por decisión de Miguel
+        del 2026-09-14 («Sí o sí hay que sacar eso de -ko y -sha. Si es
+        inventado, tanto de la gramática como de los nombres»), de los nombres
+        y de la gramática que el prompt enseña.
+    - raices: 'nombre propio|nombres propios|antropónim en Perea Alonso 1942 Tomo I'
+      resultado: >-
+        3 aciertos, y ninguno sirve: los «nombres propios» de Perea son de los
+        CHANÁ y los CHARRÚA de la Banda Oriental (líneas 869, 1045, 4368). No
+        hay antroponimia lokono en el tomo I. Perea queda FUERA de esta campaña:
+        no aporta ni comparanda de nombres.
+    - raices: 'chief|cacique|proper name|surname|personal name en Gatschet 1885 y van Buurt 2014'
+      resultado: >-
+        CERO antropónimos. Gatschet habla de nombres de PLANTA e ISLA (arabo,
+        Aruba, Curaçao). Van Buurt trae un cacique caquetío de Curazao que viajó
+        a Europa con el padre Schabel y murió en Bruselas, «descendiente del
+        gran Manaure» (Schabel, Notitia 1705, p. 112) — pero SIN NOMBRE.
+    - raices: 'Uriacoa|Caguallo en Arcaya, Castellanos, Oviedo y Baños'
+      resultado: >-
+        Uriacoa aparece UNA sola vez en Arcaya (p. 327) y Caguallo NINGUNA: la
+        cadena Uriacoa → Caguallo → Martínez Manaure sólo está entera en Oliver
+        1989 cap. 3 pp. 255-256, que cita A.G.I. y Arcaya 1978 (otra obra, no la
+        de 1920 que tiene el repo). No hay redundancia: es una sola fuente.
+
+  lo_que_no_se_encontro:
+    - 'ni un solo nombre de mujer caquetía en fuente escrita; las tres que circulan (Judibana, Jayana, Yanara) son tradición oral sin documento'
+    - 'ningún nombre de persona ANTERIOR al contacto: el registro empieza en 1526-1538. Precontacto hay CERO (regla 3)'
+    - 'ninguna fuente explica cómo se ponía el nombre, ni si cambiaba con la iniciación, el oficio o la muerte'
+    - 'ningún nombre de linaje o clan caquetío: los seis de D1 (Corie, Buio, Kaira, Warana, Paugis, Chiriware) son canon-simulación, y la estructura ya lo declara'
+    - 'ninguna glosa de autor para -aure, -ata ni -ika: la serie de apellidos en -aure se declara como serie (Esteves p. 13) sin decir qué significa el elemento'
+    - 'Castellanos NO tiene una «elegía de Coro» con nombres caquetíos: ver verificacion_categue abajo'
+
+  verificacion_categue:
+    encargo: '«principal dicho Categue» en la línea 52079 de Castellanos; verifica que esté dentro de la elegía de Coro y quién es'
+    medido: >-
+      La línea 52079 existe y dice «Con otro principal dicho Categue». Pero NO
+      está en una elegía de Coro: está en la PARTE II, ELEGÍA I («A la muerte
+      de micer Ambrosio, primero gobernador por los alemanes»), CANTO II, cuyo
+      argumento es la marcha de Juan de Leiva y Pedro de Limpias «del Cabo de
+      la Vela y Soturiua». Y el pasaje concreto narra la entrada de FEDERMANN
+      («el dicho Fedrimán») tierra adentro, «en demanda de los llanos»: los
+      cristianos se presentan como «carísimos hermanos del cacique Manaure, rey
+      de Coro» (línea 52133), pasan ocho días entre esos indios, y luego «dieron
+      muy lejos ya desta frontera, en un pueblo de chipas EN LOS LLANOS».
+    quien_es_categue: >-
+      Un «principal» que un guía —al que el verso llama «el indio caquetío»
+      (línea 52100)— nombra junto a otros tres al ver acercarse gente:
+      Catimayagua, Categue, Gecoagua y Badurajara (líneas 52078-52082; la
+      segunda sale del OCR como «Geeoagúa»). No son de Paraguaná ni del Golfete:
+      son del camino de Federmann hacia los llanos.
+    consecuencia: >-
+      🔴 REGLA 4. Categue y los otros tres quedan marcados como del INTERIOR /
+      los llanos, no de la polity costera. NO se reutilizan como nombres del
+      elenco de la era 2 sin marca, que es exactamente el error que Oliver
+      denuncia. El encargo los daba por «de la elegía de Coro»: no lo son.
+    valor_que_si_tienen: >-
+      ⭐ La misma página da «el cacique Manaure, rey de Coro» en verso de
+      Castellanos — atestación literaria del título aplicado al señor de Coro,
+      independiente de Oviedo y Baños y de Arcaya.
+
+# ══════════════════════════════════════════════════════════════════
+# 1. LOS ANTROPÓNIMOS
+# ══════════════════════════════════════════════════════════════════
+antroponimos:
+
+  # ────────────── TÍTULOS (el lexicón ya los tiene) ──────────────
+  - forma: manaure
+    variantes: [Manaure, managuanare, managuarire, Manare, Anaure, Naure]
+    tipo: título
+    genero: 'no consta'
+    epoca: 'contacto (1526-1538) y s. XX como apellido vivo'
+    polity: 'costera — Coro, Todariquiba, Paraguaná'
+    procedencia: {obra: zavala-reyes-2015, pagina: 'nota al pie (2), citando a Carlos González, PLINCODE p. 23'}
+    etiqueta: atestiguado
+    segmentacion: 'ma- + -naure (no aplicada)'
+    formantes: ['-aure']
+    apoyos:
+      - {obra: oviedo-y-banos, pagina: '27 (Bibl. Ayacucho)', que: '«el Cacique Manaure, poderoso en riquezas y vasallos, era señor de toda aquella provincia, habitada de la nación caiquetía»'}
+      - {obra: castellanos-elegias, pagina: 'Parte II, Elegía I, Canto II (línea 52133 del texto plano)', que: '«Del cacique Manaure, rey de Coro»'}
+      - {obra: arcaya-1920, pagina: '112-115', que: 'Manaure jefe-hechicero; «Manaure era, pues, un diao»'}
+      - {obra: oliver-1989-cap3, pagina: '256 n. 107', que: '«Manaure was baptized with the name of Don Martín by Juan de Ampíes the Elder»'}
+      - {obra: antolinez-1944-manaure, pagina: 'vía moron-2012-petroglifos', que: '«Manaure no es nombre propio de varón, sino el nombre de una jerarquía política»'}
+    nota: >-
+      Es TÍTULO, no nombre propio: el canon ya lo dice y por eso el agente
+      Manaure se conserva tal cual en la era 2. La variante NAURE / ANAURE de
+      Arcaya (abajo) es la pieza nueva de esta campaña.
+
+  - forma: diao
+    variantes: [díao, tiao, yatii]
+    tipo: título
+    genero: 'no consta'
+    epoca: contacto
+    polity: 'costera, y Apure según el P. Carvajal (regla 4 para esa extensión)'
+    procedencia: {obra: zavala-reyes-2015, pagina: '67 (glosario, entrada 106)'}
+    etiqueta: atestiguado
+    apoyos:
+      - {obra: oliver-1989-cap3, pagina: '251', que: '«the main diao or great cacique, Manaure»'}
+      - {obra: arcaya-1920, pagina: '47 y 114-115', que: '«los Caquetíos de Coro llamaban díaos a sus caciques principales»; el diao es más que el boratio'}
+    nota: 'cargo, no nombre. La era 2 lo usa como cargo (regla c del sistema de nombres).'
+
+  - forma: apopo
+    tipo: título
+    genero: 'no consta'
+    epoca: contacto
+    polity: costera
+    procedencia: {obra: zavala-reyes-2015, pagina: '65'}
+    etiqueta: atestiguado
+    nota: 'jefe de parcialidad pequeña; cargo, no nombre.'
+
+  - forma: boratio
+    variantes: [boratia, piache]
+    tipo: título
+    genero: 'no consta — la forma boratia es del canon del proyecto, no de la fuente'
+    epoca: contacto
+    polity: costera
+    procedencia: {obra: zavala-reyes-2015, pagina: '66'}
+    etiqueta: atestiguado
+    apoyos:
+      - {obra: arcaya-1920, pagina: '115', que: '«el simple médico hechicero a quien llamaban boratio»'}
+      - {obra: jahn-1927, pagina: '213 n. 29', que: '«adivino o sacerdote», vía Oviedo y Valdés'}
+    nota: 'cargo, no nombre.'
+
+  # ────────────── CACIQUES Y PRINCIPALES CON NOMBRE ──────────────
+  - forma: Naure
+    variantes: [Anaure]
+    tipo: cacique con nombre
+    genero: 'no consta'
+    epoca: 'contacto (carta de Ampíes al Rey, c. 1521-1526)'
+    polity: 'costera — «diez leguas la tierra adentro en la provincia de Coro»'
+    procedencia: {obra: arcaya-1920, pagina: '160'}
+    cita: >-
+      «…esto principalmente me enviaba a decir un gran cacique que está diez
+      leguas la tierra adentro en la provincia de Coro, y el dicho Cacique se
+      llama Naure o Anaure…» (carta de Juan de Ampíes, publicada en los
+      Documentos de la Historia de Oviedo y Baños, ed. Fernández Duro, t. II,
+      p. 209; transcrita por Arcaya 1920 p. 160)
+    etiqueta: atestiguado
+    segmentacion: '(a)- + naure'
+    formantes: ['-aure']
+    por_que_importa: >-
+      ⭐⭐ HALLAZGO DE ESTA CAMPAÑA. Es la forma DESNUDA del elemento que la
+      serie de apellidos de Esteves lleva detrás (Ad-aure, Tim-aure, Yar-aure,
+      Chun-aure, Man-aure), en primario del contacto y aplicada a una persona.
+      Y `naure` ya está en el lexicón como voz caquetía atestiguada. El nombre
+      no es opaco: es material léxico, como dice el principio de transparencia
+      de velasco_primarios_agi.yaml §principio_general.
+    reserva: >-
+      Arcaya no dice que Naure sea Manaure, y el propio texto los trata como
+      dos noticias (aquí «un gran cacique … diez leguas la tierra adentro»;
+      el Manaure del pacto está en Todariquiba, «dos leguas» de Coro según
+      Bastidas 1538). Que Naure ~ Manaure sean el mismo nombre con y sin `ma-`
+      es LECTURA, no dato: entra como `hipotetico` y no se aplica.
+    regla_3: 'atestación de contacto; no se proyecta como norma precontacto'
+
+  - forma: uriakoa
+    variantes: [Uriacoa, Don Sancho Uriacoa, Don Sancho de Uriacoa]
+    tipo: cacique con nombre
+    genero: 'no consta (el portador documentado es varón)'
+    epoca: 'colonial — fines del s. XVI'
+    polity: 'costera occidental — «los Caquetíos del Occidente», entre Coro y Maracaibo; después también Paraguaná'
+    procedencia: {obra: zavala-reyes-2015, pagina: 'glosario — «Uriacoa: apellido de un cacique del s. XVI»'}
+    etiqueta: atestiguado
+    segmentacion: 'uria + -koa'
+    formantes: ['-koa']
+    glosa_de_la_segmentacion: >-
+      `uria` «plantío, siembra» está en el lexicón como caquetío-atestiguado y
+      `-koa` es la familia de `bakoa` «bosque, lugar, paraje, sitio fértil» /
+      `-bacoa` (morfemas.yaml morfema-001). Uriacoa = «el del sitio sembrado».
+      Etiqueta de la segmentación: reconstruido (la fuente no la da).
+    apoyos:
+      - {obra: arcaya-1920, pagina: '327', que: '«De estos Caquetíos del Occidente se le había dado el título de Cacique general a un indio llamado don Sancho de Uriacoa, que creemos era deudo de Manaure … sus descendientes usaron como apellido el nombre del célebre caudillo caquetío»'}
+      - {obra: oliver-1989-cap3, pagina: '255-256', que: '«the Crown recognized Don Sancho Uriacoa as the Caquetío paramount chief»'}
+    regla_3: 'colonial (s. XVI-XVII). Es el nombre de un cacicazgo bajo la Corona, no de un señor precontacto'
+
+  - forma: Caguallo
+    variantes: [Don Luis Caguallo]
+    tipo: cacique con nombre
+    genero: 'no consta (el portador documentado es varón)'
+    epoca: 'colonial — hasta 1636'
+    polity: 'costera — paramount caquetío reconocido por la Corona'
+    procedencia: {obra: oliver-1989-cap3, pagina: '255-256'}
+    cita: >-
+      «He [Don Sancho Uriacoa] was succeeded by his son Don Luis Caguallo, who
+      in 1636 "abdicated" in favor of his brother Don Luis Martínez Manaure.»
+    etiqueta: atestiguado
+    segmentacion: 'cagua- + -llo (no resuelta)'
+    formantes: ['-allo']
+    reserva_ortografica: >-
+      🔴 El dígrafo <ll> es castellano. El filtro fonotáctico del proyecto sólo
+      admite `ll` en el inventario «atestiguado» por residuo castellano
+      (`caquetillo`, `casquito`: curiana_fonotactica.py, advertencia 2). Así que
+      -allo NO se toma como formante productivo: puede ser la pluma del
+      escribano. La raíz `cagua-` sí casa con el apellido vivo Caguao/Caguado.
+    regla_3: colonial
+
+  - forma: Bonyata
+    variantes: [Boniata]
+    tipo: cacique con nombre
+    genero: 'no consta'
+    epoca: 'contacto/colonial temprano — 1538'
+    polity: 'costera — Paraguaná, cacique de Myraca (Miraca)'
+    procedencia: {obra: velasco-2015-resistencia, pagina: 'Folio 2, Legajo 218, Audiencia de Santo Domingo, AGI; carta de Rodrigo de Bastidas, 8-X-1538'}
+    cita: '«…y a Bonyata Cacique d Myraca el qual en su jornada murió…»'
+    etiqueta: atestiguado
+    segmentacion: 'bony- + -ata'
+    formantes: ['-ata']
+    apoyos:
+      - {obra: arcaya-1920, pagina: '220', que: '«Boniata, de Miraca, quien a pocas jornadas murió» — la misma noticia por Herrera (Década VI, lib. III, cap. XV), con la OTRA grafía'}
+    por_que_importa: >-
+      ⭐ Dos grafías independientes del mismo nombre (Bonyata en el traslado del
+      AGI, Boniata en Herrera vía Arcaya) y un sitio que sigue vivo: Miraca.
+      Es el antropónimo mejor anclado de PARAGUANÁ.
+    regla_3: 'contacto. Su pueblo, Miraca, sí está en el mundo precontacto del proyecto; el hombre no'
+
+  - forma: Baracoica
+    variantes: [Don Juan Baracoica]
+    tipo: cacique con nombre
+    genero: 'no consta'
+    epoca: 'contacto — c. 1521-1531'
+    polity: 'costera insular — «está en las islas»; Zavala lo da de Curazao'
+    procedencia: {obra: zavala-reyes-2015, pagina: 'glosario #31 — «Baracoica (HP): Cacique de Curazao»'}
+    etiqueta: atestiguado
+    segmentacion: 'bara- + -coica (no resuelta; cf. -koa)'
+    formantes: ['-ika']
+    apoyos:
+      - {obra: arcaya-1920, pagina: '160', que: 'carta de Ampíes: «acordaron de me enviar un cacique que se dice D. Juan Baracoica, que está en las islas y es su pariente y deudo»'}
+      - {obra: arcaya-1920, pagina: '199', que: '«otro llamado Don Juan Baracoica, hijo del mismo Manaure»'}
+    por_que_importa: >-
+      ⭐ El glosario de Zavala y el primario de Ampíes coinciden en persona,
+      nombre y función: emisario de Manaure hacia las islas. `bara` «palo,
+      árbol» es voz atestiguada del lexicón, así que la primera mitad no es
+      opaca.
+    regla_3: contacto
+
+  - forma: Barbo
+    tipo: cacique con nombre
+    genero: 'no consta'
+    epoca: 'contacto/colonial temprano — 1538'
+    polity: 'costera — «de Goyabaco (Guaibacoa?)», Distrito Colina, Falcón'
+    procedencia: {obra: arcaya-1920, pagina: '220'}
+    cita: '«…y Barbo de Goyabaco (Guaibacoa?)» — de la lista de caciques que Federmann se llevó, por Herrera'
+    etiqueta: atestiguado
+    reserva: >-
+      El mismo pasaje en el traslado del AGI que transmite Velasco dice «llevo
+      otro Cacique en cadenas q se dize verbo y su pueblo Gorybacoa», con el
+      nombre marcado como lectura dudosa. `Barbo` (Herrera) y `verbo` (el
+      traslado) son la misma palabra mal leída dos veces: la forma no es firme.
+    regla_3: contacto
+
+  - forma: Tumarure
+    variantes: [Tumarusa]
+    tipo: apellido vivo
+    genero: 'no consta'
+    epoca: 'tradición oral y s. XIX-XX (aldea del municipio Moruy; censo de 1881: 6 casas, 39 vecinos)'
+    polity: 'costera — Paraguaná, municipio Moruy'
+    procedencia: {obra: esteves-1989, pagina: '64'}
+    cita: >-
+      «Se nos ha informado que Tumarure era el apellido de un cacique. La grafía
+      es dudosa: el historiador P. M. Arcaya, quien manejó documentos de primera
+      mano, siempre escribió Tumarure, pero el pueblo ya se ha acostumbrado con
+      Tumarusa.»
+    etiqueta: 'retro-abstraido (apellido de cacique según informante; el sitio es lo documentado)'
+    segmentacion: 'tuma- + -rure (no resuelta)'
+    formantes: ['-ure']
+    apoyos:
+      - {obra: zavala-reyes-2015, pagina: 'glosario — «tumarure: Apellido de un cacique»'}
+    nota: >-
+      Grep verificado: Arcaya 1920 NO trae Tumarure en ninguna de sus 520 KB de
+      texto. La atribución de Esteves («Arcaya siempre escribió Tumarure») no se
+      puede comprobar con la obra que el repo tiene.
+
+  - forma: Cumare
+    tipo: cacique con nombre
+    genero: 'no consta'
+    epoca: 'tradición recogida en el s. XX'
+    polity: 'costera oriental — Cumarebo, Falcón'
+    procedencia: {obra: zavala-reyes-2015, pagina: 'glosario — «cumarebo: Camino del cacique Cumare»'}
+    etiqueta: 'retro-abstraido (el nombre se deduce de la glosa del topónimo)'
+    apoyos:
+      - {obra: esteves-1989, pagina: '(índice, entrada Cumarebo)', que: '«Cumarebo significa: el camino del cacique Cumare»'}
+    nota: 'topónimo que devuelve antropónimo, el patrón inverso de Manaure. Ver patrones.'
+
+  - forma: Mauroa
+    tipo: cacique con nombre
+    genero: 'no consta'
+    epoca: 'tradición recogida en el s. XX'
+    polity: 'costera occidental — Distrito Mauroa, Falcón'
+    procedencia: {obra: esteves-1989, pagina: '122'}
+    cita: '«(Mauroa: apellido de un cacique)»'
+    etiqueta: retro-abstraido
+    formantes: ['-oa']
+
+  - forma: Borobo
+    variantes: [Borobó, Borojó]
+    tipo: leyenda
+    genero: 'no consta'
+    epoca: 'tradición oral (barrido web 2026-09-10)'
+    polity: 'costera occidental — Borojó, Distrito Buchivacoa'
+    procedencia: null
+    deuda: sin-procedencia
+    etiqueta: hipotetico
+    cita: '«del cacique BOROBO que existió en el lugar» — una de tres etimologías en circulación para Borojó'
+    nota: >-
+      El lexicón tiene `borojo` como caquetío-ATESTIGUADO, «salina, lago salado
+      de Coro», y la calle lo segmenta boro + jo «lugar de sal». Que además haya
+      un cacique homónimo es etimología popular sin fuente impresa. Registrado
+      en 6-fusion/barrido_toponimos_web_2026-09-10.yaml.
+
+  # ────────────── LOS CUATRO DEL INTERIOR (REGLA 4) ──────────────
+  - forma: Categue
+    tipo: 'nombre del interior / los llanos'
+    genero: 'no consta'
+    epoca: 'contacto — entrada de Federmann, c. 1530-1531'
+    polity: 'NO costera: camino de Coro a los llanos'
+    procedencia: {obra: castellanos-elegias, pagina: 'Parte II, Elegía I, Canto II (línea 52079 del texto plano del repo)'}
+    cita: '«Pero conozco ser Catimayagua / Con otro principal dicho Categue, / Y son los otros dos que veis de cara / Gecoagua y Badurajara.»'
+    etiqueta: atestiguado
+    regla_4: >-
+      🔴 SÍ. No es de la polity costera: los nombra un guía caquetío en la
+      marcha de Federmann «en demanda de los llanos», y el mismo canto termina
+      «en un pueblo de chipas en los llanos». Ver meta.verificacion_categue.
+    regla_3: contacto
+    uso: 'NO reutilizable en el elenco de la era 2 sin marca explícita'
+
+  - forma: Catimayagua
+    tipo: 'nombre del interior / los llanos'
+    genero: 'no consta'
+    epoca: contacto
+    polity: 'NO costera'
+    procedencia: {obra: castellanos-elegias, pagina: 'Parte II, Elegía I, Canto II (línea 52078)'}
+    etiqueta: atestiguado
+    regla_4: 'SÍ — mismo pasaje que Categue'
+
+  - forma: Gecoagua
+    variantes: ['Geeoagúa (así sale del OCR)']
+    tipo: 'nombre del interior / los llanos'
+    genero: 'no consta'
+    epoca: contacto
+    polity: 'NO costera'
+    procedencia: {obra: castellanos-elegias, pagina: 'Parte II, Elegía I, Canto II (línea 52082)'}
+    etiqueta: 'atestiguado (forma dudosa por OCR)'
+    regla_4: 'SÍ — mismo pasaje que Categue'
+    formantes: ['-agua']
+
+  - forma: Badurajara
+    tipo: 'nombre del interior / los llanos'
+    genero: 'no consta'
+    epoca: contacto
+    polity: 'NO costera'
+    procedencia: {obra: castellanos-elegias, pagina: 'Parte II, Elegía I, Canto II (línea 52082)'}
+    etiqueta: atestiguado
+    regla_4: 'SÍ — mismo pasaje que Categue'
+
+  - forma: Xaraguamari
+    tipo: 'nombre de Barquisimeto/Yaracuy'
+    genero: 'no consta'
+    epoca: contacto
+    polity: yaracuy
+    procedencia: {obra: zavala-reyes-2015, pagina: 'glosario — «Cacique de Yaracuy»'}
+    etiqueta: atestiguado
+    regla_4: 'SÍ — Yaracuy, no la polity costera'
+
+  - forma: Yarosabana
+    tipo: 'nombre de Barquisimeto/Yaracuy'
+    genero: 'no consta'
+    epoca: contacto
+    polity: yaracuy
+    procedencia: {obra: zavala-reyes-2015, pagina: 'glosario — «Cacique de los Guaragua del Yaracuy. Pueblo»'}
+    etiqueta: atestiguado
+    segmentacion: 'yarosa + -bana'
+    formantes: ['-bana']
+    regla_4: 'SÍ — Yaracuy'
+    por_que_importa: >-
+      Es el ÚNICO antropónimo del registro que lleva `-bana`, el morfema que D9
+      resolvió como «cerro, sitio alto» con seis apoyos. Sostiene —con marca de
+      regla 4— que `-bana` puede ir en nombre de persona, que es lo que hacen
+      Kunaro-bana y Dara-bana en el elenco. Y es la pieza que
+      velasco_primarios_agi.yaml §principio_general cita para la transparencia.
+
+  - forma: Xirahara
+    tipo: 'nombre de los Llanos'
+    genero: 'no consta'
+    epoca: contacto
+    polity: 'llanos (y etnónimo jirajara)'
+    procedencia: {obra: zavala-reyes-2015, pagina: 'glosario — «Población indígena vecina de los caquetíos. Nombre de cacique de los llano[s]»'}
+    etiqueta: atestiguado
+    regla_4: 'SÍ'
+
+  - forma: quiceraguru
+    variantes: [quiceroaboa, quiceromata, quiciroata]
+    tipo: 'nombre de Barquisimeto'
+    genero: 'no consta'
+    epoca: contacto
+    polity: barquisimeto
+    procedencia: {obra: zavala-reyes-2015, pagina: 'glosario — «Nombre propio indígena en Barquisimeto» (los cuatro)'}
+    etiqueta: atestiguado
+    segmentacion: 'quicer- / quicir- + -aguru | -aboa | -omata | -oata'
+    formantes: ['-ata', '-oa']
+    regla_4: >-
+      SÍ. Ya están en 2-lengua/toponimos.yaml como toponimo-030 … -033, clase
+      `antropónimo`, nivel `descartado`, polity `barquisimeto`. Aquí sólo se
+      reúnen: son la serie que da `-ata` su segunda y tercera recurrencia.
+
+  - forma: quiquiba
+    tipo: 'nombre propio sin comarca'
+    genero: 'no consta'
+    epoca: contacto
+    polity: 'no consta'
+    procedencia: {obra: zavala-reyes-2015, pagina: 'glosario — «nombre propio indígena»'}
+    etiqueta: atestiguado
+    segmentacion: 'qui~quiba «piedras»'
+    nota: 'el caso que velasco_primarios_agi.yaml usa para enunciar la transparencia: un nombre propio atestigua sus morfemas.'
+
+  - forma: tamani
+    tipo: 'nombre propio sin comarca'
+    genero: 'no consta'
+    epoca: contacto
+    polity: 'no consta'
+    procedencia: {obra: zavala-reyes-2015, pagina: 'glosario — «Nombre propio indígena»'}
+    etiqueta: atestiguado
+
+  - forma: huay
+    tipo: 'nombre propio sin comarca'
+    genero: 'no consta'
+    epoca: contacto
+    polity: 'no consta'
+    procedencia: {obra: zavala-reyes-2015, pagina: 'glosario — «Nombre propio»'}
+    etiqueta: atestiguado
+    nota: 'cf. `way` «árbol parecido a la ceiba» en el lexicón: otra transparencia.'
+
+  # ────────────── APELLIDOS VIVOS DE RAÍZ INDÍGENA ──────────────
+  - forma: Adaure
+    tipo: apellido vivo
+    genero: 'no consta'
+    epoca: 's. XVIII-XX (Martí 1773 lo nombra como sitio; censo de 1881: 87 casas, 522 vecinos)'
+    polity: 'costera — Paraguaná, al oeste de Buenavista'
+    procedencia: {obra: esteves-1989, pagina: '13'}
+    cita: >-
+      «serias investigaciones nos permiten afirmar que Adaure es un apellido
+      indígena … (Los siguientes son algunos de los apellidos de la gran
+      familia caquetía: Adaure, Timaure, Yaraure, Chunaure, Manaure)»
+    etiqueta: atestiguado
+    segmentacion: 'ad- + -aure'
+    formantes: ['-aure']
+    apoyos:
+      - {obra: medina-colina-sxx, pagina: '328', que: 'Adaure y Chunaure como topónimos junto a los apellidos vivos (mc-mundo-029)'}
+    nota: 'es también toponimo-080 del canon. Un nombre que es las dos cosas: ver patrones.'
+
+  - forma: Timaure
+    tipo: apellido vivo
+    genero: 'no consta'
+    epoca: 's. XX'
+    polity: 'costera — Paraguaná y Falcón'
+    procedencia: {obra: esteves-1989, pagina: '13'}
+    etiqueta: atestiguado
+    segmentacion: 'tim- + -aure'
+    formantes: ['-aure']
+    apoyos:
+      - {obra: zavala-reyes-2015, pagina: 'glosario — «timaure: Apellido»'}
+      - {obra: medina-colina-sxx, pagina: '328', que: '«Timaure» entre los apellidos paraguaneros de raíz indígena'}
+
+  - forma: Yaraure
+    tipo: apellido vivo
+    genero: 'no consta'
+    epoca: 's. XX'
+    polity: 'costera — Paraguaná'
+    procedencia: {obra: esteves-1989, pagina: '13'}
+    etiqueta: atestiguado
+    segmentacion: 'yar- + -aure'
+    formantes: ['-aure']
+
+  - forma: Chunaure
+    tipo: apellido vivo
+    genero: 'no consta'
+    epoca: 's. XX (lugar cercano a Pueblo Nuevo, hacia el Norte)'
+    polity: 'costera — Paraguaná'
+    procedencia: {obra: esteves-1989, pagina: '13 y 22'}
+    cita: >-
+      «Hemos averiguado que Chunaure es un apellido indígena; sabemos, además,
+      que en lengua caquetía "ñaure" es planta bejucosa, y "naure", es jojoto,
+      mazorca de maíz tierno.»
+    etiqueta: atestiguado
+    segmentacion: 'chu- + -naure'
+    formantes: ['-aure']
+    apoyos:
+      - {obra: zavala-reyes-2015, pagina: 'glosario — «chunare: Apellido. Mazorca tierna» (toponimo-025 del canon, nivel C)'}
+      - {obra: medina-colina-sxx, pagina: '328'}
+    conflicto_de_glosa: >-
+      ⚠️ El lexicón tiene `naure` = «planta bejucosa» (Zavala #186 (E)) y
+      Esteves da eso para `ñaure` y «jojoto, mazorca de maíz tierno» para
+      `naure`. Las dos glosas están cruzadas entre las dos fuentes. No se
+      resuelve aquí; se declara. Para el sistema de nombres da igual: la raíz
+      `naure` es atestiguada con las dos lecturas.
+
+  - forma: Caguao
+    variantes: [Caguado]
+    tipo: apellido vivo
+    genero: 'no consta'
+    epoca: 's. XX'
+    polity: 'costera — Paraguaná (Moruy y comarca)'
+    procedencia: {obra: esteves-1989, pagina: '53'}
+    cita: >-
+      «los apellidos no han sufrido deformaciones acomodaticias, aplicadas en
+      otros lugares; mencionamos como ejemplos: Caguao, Cuauro, Mabo,
+      Guarecuco, Cap[acho], Cotopo, etc.» (entrada MORUY; el OCR daña la quinta
+      forma, que queda como lectura dudosa)
+    etiqueta: atestiguado
+    apoyos:
+      - {obra: medina-colina-sxx, pagina: '328', que: '«Caguado» en el dictado de Medina (mc-mundo-029)'}
+    nota: 'cf. la raíz `cagua-` de Caguallo, el paramount de 1636.'
+
+  - forma: Cuauro
+    variantes: [Cauro]
+    tipo: apellido vivo
+    genero: 'no consta'
+    epoca: 's. XX'
+    polity: 'costera — Paraguaná'
+    procedencia: {obra: esteves-1989, pagina: '53'}
+    etiqueta: atestiguado
+    apoyos: [{obra: medina-colina-sxx, pagina: '328', que: '«Cauro»'}]
+
+  - forma: Mabo
+    tipo: apellido vivo
+    genero: 'no consta'
+    epoca: 's. XX-XXI'
+    polity: 'costera — Paraguaná; hoy «etnia MABO en Guacurebo»'
+    procedencia: {obra: esteves-1989, pagina: '53'}
+    etiqueta: atestiguado
+    apoyos:
+      - {obra: medina-colina-sxx, pagina: '328'}
+      - {obra: null, que: 'testimonio de Miguel, 2026-08-25: «etnia MABO en Guacurebo (Ester y Lisbeth, representantes)» — 6-fusion/velasco_primarios_agi.yaml', deuda: sin-procedencia}
+
+  - forma: Guarecuco
+    tipo: apellido vivo
+    genero: 'no consta'
+    epoca: 's. XX'
+    polity: 'costera — Paraguaná'
+    procedencia: {obra: esteves-1989, pagina: '53'}
+    etiqueta: atestiguado
+    apoyos: [{obra: medina-colina-sxx, pagina: '328'}]
+
+  - forma: Cotopo
+    variantes: [Gotopo]
+    tipo: apellido vivo
+    genero: 'no consta'
+    epoca: 's. XX'
+    polity: 'costera — Paraguaná'
+    procedencia: {obra: esteves-1989, pagina: '53'}
+    etiqueta: atestiguado
+    apoyos: [{obra: medina-colina-sxx, pagina: '328', que: '«Gotopo»'}]
+    reserva: >-
+      ⚠️ El formante -goto/-gotopo lo lee Arcaya como CARIBE «gente» (Ciparicoto,
+      Aynagoto; etnias.yaml etnia-003). Un apellido con formante caribe en
+      Paraguaná: se registra, no se usa como raíz caquetía.
+
+  - forma: Guanipa
+    tipo: apellido vivo
+    genero: 'no consta'
+    epoca: 's. XX'
+    polity: 'costera — Paraguaná (Barunú: «Nancy Guanipa, hamacas»)'
+    procedencia: {obra: medina-colina-sxx, pagina: '328'}
+    etiqueta: atestiguado
+    reserva: 'Guanipa es también topónimo del oriente (Mesa de Guanipa): puede no ser caquetío.'
+
+  - forma: Guariato
+    tipo: apellido vivo
+    genero: 'no consta'
+    epoca: 's. XX'
+    polity: 'costera — Paraguaná'
+    procedencia: {obra: medina-colina-sxx, pagina: '328'}
+    etiqueta: atestiguado
+
+  - forma: Capacho
+    tipo: apellido vivo
+    genero: 'no consta'
+    epoca: 's. XX'
+    polity: 'costera — Paraguaná (cerca de El Vínculo, municipio Pueblo Nuevo)'
+    procedencia: {obra: esteves-1989, pagina: '(entrada CAPACHERUA)'}
+    cita: '«Capacho es también un apellido indígena.»'
+    etiqueta: atestiguado
+    reserva: 'capacho es además nombre castellano de planta (Canna edulis) y de instrumento; la voz puede ser romance.'
+
+  - forma: Dubisí
+    tipo: 'apellido vivo (no caquetío)'
+    genero: 'no consta'
+    epoca: 's. XX'
+    polity: 'ayamán (Dto. Federación, Falcón)'
+    procedencia: {obra: esteves-1989, pagina: '(entrada DUBISI)'}
+    cita: '«(Es un apellido de las tribus ayamanes)»'
+    etiqueta: atestiguado
+    regla_4: 'SÍ — ayamán, no caquetío. Comparanda.'
+
+  # ────────────── NOMBRES DE LEYENDA ──────────────
+  - forma: Judibana
+    tipo: leyenda
+    genero: 'F según la leyenda'
+    epoca: 'tradición oral; la leyenda la sitúa en 1500 y 1526 (colonial)'
+    polity: 'costera — Paraguaná'
+    procedencia: {obra: esteves-1989, pagina: '47'}
+    cita: >-
+      «Judibana era una hermosa mujer, que era esposa del Gran Cacique de
+      Jurijurebo. Es pura leyenda, nada consta [en documentos].»
+    etiqueta: retro-abstraido
+    segmentacion: 'judi ~ juri «viento» + -bana «cerro, sitio alto»'
+    formantes: ['-bana']
+    apoyos:
+      - {obra: velasco-2015-resistencia, que: '«la querida JUDIBANA y su esposo, el Cacique de Jurijurebo» — pero el nombre no aparece en las citas primarias que Velasco transcribe'}
+      - {obra: null, que: 'tradición viva: Miguel, criado en Judibana, creció con «Judibana era la hija del Cacique Manaure»', deuda: sin-procedencia}
+    regla_3: >-
+      🔴 La leyenda es COLONIAL (Ojeda 1500, el Asalto de los Taques de 1526,
+      Ampíes). Vale como lectura sobre el NOMBRE, no como hecho del mundo
+      simulado. Ya declarado en 6-fusion/barrido_toponimos_web_2026-09-10.yaml.
+    nota: 'toponimo-075 del canon, nivel A, con cuatro lecturas. Nombre de persona Y topónimo.'
+
+  - forma: Jayana
+    tipo: leyenda
+    genero: 'F según la leyenda'
+    epoca: 'tradición oral'
+    polity: 'costera — Paraguaná, municipio Los Taques'
+    procedencia: null
+    deuda: sin-procedencia
+    etiqueta: hipotetico
+    cita: '«El nombre Jayana es el de una princesa indígena que sus fundadores asignaron al poblado» (barrido web 2026-09-10)'
+    reserva: >-
+      ⚠️ Judibana y Jayana están a ocho kilómetros y las DOS se explican
+      localmente como «princesa indígena». El barrido ya lo anotó como PATRÓN de
+      la tradición nombradora —resolver un topónimo opaco con una princesa—, no
+      como etimología. Esteves (toponimo-110) da referente e historia y ninguna
+      glosa.
+
+  - forma: Yanara
+    tipo: leyenda
+    genero: 'F según la leyenda'
+    epoca: 'tradición oral (versión web)'
+    polity: 'costera — Paraguaná'
+    procedencia: null
+    deuda: sin-procedencia
+    etiqueta: hipotetico
+    cita: '«Judibana, hija del cacique MANAURE y de Yanara»'
+    nota: 'el único nombre femenino con madre y padre en alguna versión. Sin fuente impresa.'
+
+  - forma: Moruy
+    tipo: leyenda
+    genero: 'no consta'
+    epoca: 'tradición oral'
+    polity: 'costera — Paraguaná, al pie del Capubana'
+    procedencia: {obra: esteves-1989, pagina: '53'}
+    etiqueta: hipotetico
+    nota: >-
+      «Moruy era un CACIQUE» es la primera de las cuatro versiones que recoge
+      Miguel (6-fusion/toponimia_paraguana_miguel.yaml); Esteves imprime las
+      otras dos («¡Moro… uy!», que descarta, y merejuy, que prefiere) y NO
+      imprime la del cacique. Registrado en toponimo-108 con las cuatro
+      lecturas. Es además el sitio de la casa del Manaure en la era 2: no se
+      usa como nombre de persona.
+
+  # ────────────── NOMBRES CRISTIANOS DE CAQUETÍOS ──────────────
+  - forma: 'Don Martín Manaure'
+    variantes: ['Don Martín', 'Don Luis Martínez Manaure', 'Don Domingo Martínez Manaure']
+    tipo: 'nombre cristiano de cacique caquetío'
+    genero: M
+    epoca: 'colonial — 1527 en adelante'
+    polity: costera
+    procedencia: {obra: oliver-1989-cap3, pagina: '256 n. 107 y 255-256'}
+    etiqueta: atestiguado
+    regla_3: >-
+      🔴 Nombre de bautismo. No entra en el mundo precontacto ni como raíz ni
+      como modelo. Se registra porque es el eslabón que une Manaure-título con
+      Manaure-apellido vivo.
+    apoyos:
+      - {obra: moron-2012-petroglifos, que: 'Piedras de Martín Manaure, La Vela — la tradición conserva el nombre cristiano en el paisaje'}
+
+  - forma: 'Doña Sancha'
+    tipo: 'nombre cristiano de mujer caquetía'
+    genero: F
+    epoca: colonial
+    polity: costera
+    procedencia: {obra: oliver-1989-cap3, pagina: '268'}
+    cita: '«Manaure, whom Ampíes baptized as Don Martín, was polygamous. He was married to Doña Sancha…»'
+    etiqueta: atestiguado
+    regla_3: '🔴 nombre de bautismo. Es la ÚNICA mujer de la esfera caquetía con nombre en fuente escrita, y su nombre es castellano.'
+
+  - forma: 'Don Alexandre'
+    variantes: ['Don Alexandro']
+    tipo: 'nombre cristiano de cacique caquetío'
+    genero: M
+    epoca: 'colonial — 1538'
+    polity: 'costera — Todariquiba, dos leguas de Coro'
+    procedencia: {obra: velasco-2015-resistencia, pagina: 'Folio 2, Legajo 218, AGI (Bastidas, 8-X-1538)'}
+    etiqueta: atestiguado
+    apoyos:
+      - {obra: oliver-1989-cap3, pagina: '255-256', que: 'hijo de Manaure, heredó el cacicazgo'}
+      - {obra: arcaya-1920, pagina: '220', que: '«Don Alexandre, de Todarequiba», por Herrera'}
+    regla_3: '🔴 nombre de bautismo'
+
+  - forma: 'Don Alonso'
+    tipo: 'nombre cristiano de cacique caquetío'
+    genero: M
+    epoca: 'colonial — 1538'
+    polity: 'costera — Paraguaná, pueblo de Hurihurebo'
+    procedencia: {obra: velasco-2015-resistencia, pagina: 'Folio 2, Legajo 218, AGI'}
+    etiqueta: atestiguado
+    regla_3: '🔴 nombre de bautismo'
+
+  - forma: Baltasar
+    tipo: 'nombre cristiano de cacique caquetío'
+    genero: M
+    epoca: 'colonial — c. 1520-1525'
+    polity: 'costera — Hurihurebo'
+    procedencia: {obra: oliver-1989-cap3, pagina: '266'}
+    cita: '«Manaure had sent his envoys, like cacique Baltasar of Hurihurebo, to meet those of Ampíes.»'
+    etiqueta: atestiguado
+    regla_3: '🔴 nombre de bautismo. Segundo cacique documentado de Hurihurebo, junto a Don Alonso.'
+
+  - forma: 'Don Jorge'
+    variantes: ['Esteban', 'Don Marcos', 'Don Juan', 'Don Juan Basilio']
+    tipo: 'nombre cristiano de cacique caquetío'
+    genero: M
+    epoca: 'colonial — 1531-1742'
+    polity: 'costera — Coro, Cayarua, el Tocuyo'
+    procedencia: {obra: velasco-2015-resistencia, pagina: 'Folio 2, Legajo 218, AGI («Don Jorge principal deste pueblo»; «Esteban (?) principal de Cayarua»)'}
+    etiqueta: atestiguado
+    apoyos:
+      - {obra: arcaya-1920, pagina: '199', que: '«un Cacique bautizado ya con el nombre de Don Marcos, tío a lo que parece de Manaure»'}
+      - {obra: oliver-1989-cap3, pagina: '256', que: 'Don Juan, hijo de Manaure, que «se casó» con la viuda de su padre; y el «bastardo» Don Juan Basilio de 1742'}
+    regla_3: '🔴 nombres de bautismo'
+
+# ══════════════════════════════════════════════════════════════════
+# 2. LOS FORMANTES
+# ══════════════════════════════════════════════════════════════════
+# `recurrencia` = cuántas formas DISTINTAS de la lista de arriba lo llevan.
+# Lo recuenta 6-fusion/scripts/medir_antroponimos.py.
+formantes:
+
+  - formante: '-aure'
+    recurrencia: 7
+    ejemplos: [Adaure, Timaure, Yaraure, Chunaure, Manaure, Anaure, Naure]
+    glosa_de_fuente: 'ninguna — Esteves lo declara SERIE («los apellidos de la gran familia caquetía») sin decir qué significa'
+    etiqueta: atestiguado
+    que_dice_el_canon_de_toponimos: >-
+      `2-lengua/morfemas.yaml` NO lo tiene: los once morfemas del canon son
+      toponímicos (-bacoa, -are, ada-, bari-, yacare, wa-, -shi/-chi, -ari/-ri,
+      -kuri/-curi, -bari, -ana). `-aure` es de nombre de PERSONA y entra aquí
+      por primera vez. En `toponimos.yaml` hay `adaure` (toponimo-080) y
+      `chunare` (toponimo-025, nivel C, «el único antropónimo del corpus con
+      glosa descriptiva», sin procedencia).
+    lectura_abierta: >-
+      Que -aure sea el `naure` «jojoto / planta bejucosa» del lexicón (X + naure)
+      es lectura del proyecto, no de Esteves: `hipotetico`, NO aplicada. La nota
+      de 4-fuentes/esteves-1989.md ya avisa: «No lo apliques a Manaure todavía».
+    productivo_en_la_era_2: true
+
+  - formante: '-ure'
+    recurrencia: 8
+    ejemplos: [Adaure, Timaure, Yaraure, Chunaure, Manaure, Anaure, Naure, Tumarure]
+    glosa_de_fuente: ninguna
+    etiqueta: atestiguado
+    nota: >-
+      Superconjunto de -aure. Se declara aparte porque Tumarure no tiene la `a`
+      y porque el lexicón trae `ure` como voz suelta, v_raiz «raíz»
+      (caquetío-atestiguado), y `maure` «fibra de algodón, hilo para tejer»,
+      que es una palabra común con esta misma cola.
+    que_dice_el_canon_de_toponimos: >-
+      la familia -are/-ure es densa en la toponimia (morfema-002 `-are`, 5
+      apoyos; abudure, dabudare, araure, capadare, botucare, camare). El canon
+      declara `-are` locativo; para -ure de persona no dice nada.
+    productivo_en_la_era_2: true
+
+  - formante: '-koa'
+    recurrencia: 1
+    ejemplos: [uriakoa]
+    glosa_de_fuente: 'ninguna directa; por la vía de `bakoa` «bosque, lugar, paraje, sitio fértil» (caquetío-atestiguado)'
+    etiqueta: 'reconstruido (la glosa «sitio de»); atestiguado (la forma)'
+    recurrencia_medida_aparte: >-
+      ⚠️ En NOMBRE DE PERSONA la recurrencia es 1: sólo Uriacoa. Lo que tiene
+      cuatro-cinco apoyos es el `-bacoa` TOPONÍMICO (morfema-001), y el pueblo
+      del cacique «Barbo/verbo» se llama Gorybacoa ~ Goyabaco ~ Guaibacoa: es
+      lugar, no persona. Se declara productivo por la fuerza del morfema
+      toponímico y la transparencia de Uriacoa, no por su recurrencia
+      antroponímica, que es de una sola forma.
+    que_dice_el_canon_de_toponimos: >-
+      ⭐ Es el morfema mejor sostenido del canon: `morfema-001` `-bacoa`, con
+      cuatro-cinco apoyos (adabacoa, guadabacoa, yacarebacoa, quibacoas,
+      sazaribacoa) y ahora un primario de 1538 (Gorybacoa, velasco_primarios).
+      Y `REGLAS_TOPONIMICAS` del motor ya lo enseña (motor_era2.afijos).
+    por_que_vale_para_personas: >-
+      Uriacoa = `uria` «plantío, siembra» + -koa. Es el único antropónimo de la
+      esfera costera que se segmenta entero con voces del lexicón. Sirve de
+      plantilla: raíz de cosa/lugar + -koa = «el/la del sitio de X».
+    productivo_en_la_era_2: true
+
+  - formante: '-ata'
+    recurrencia: 4
+    ejemplos: [Bonyata, Boniata, quiciroata, quiceromata]
+    glosa_de_fuente: ninguna
+    etiqueta: atestiguado
+    aviso_de_recuento: >-
+      ⚠️ Cuatro FORMAS, tres NOMBRES: Bonyata y Boniata son las dos grafías del
+      mismo cacique de Miraca. El script cuenta formas, no personas.
+    que_dice_el_canon_de_toponimos: >-
+      no está en morfemas.yaml. En el lexicón hay tres voces atestiguadas con
+      esta cola (`ikoroata` «caraota», `kiboata` y `kidiboata` «engañar»,
+      `yapamata` «siembra, plantío»), así que la forma es caquetía aunque el
+      valor no esté anotado.
+    reserva_regla_4: >-
+      Dos de las tres recurrencias son de BARQUISIMETO (quiciroata,
+      quiceromata). La única costera es Bonyata, de Miraca — pero es la mejor:
+      primario de 1538 y dos grafías independientes.
+    productivo_en_la_era_2: true
+
+  - formante: '-bana'
+    recurrencia: 2
+    ejemplos: [Yarosabana, Judibana]
+    glosa_de_fuente: '«cerro, sitio alto» (Esteves, seis apoyos; D9 resuelta 2026-08-31)'
+    etiqueta: 'atestiguado (el morfema); reconstruido (que vaya en nombre de persona)'
+    que_dice_el_canon_de_toponimos: >-
+      D9 lo resolvió con seis apoyos: Capuhana, Carirubana, Coabana, Cujíbano,
+      Chichibana, Judibana. Es morfema TOPONÍMICO. El motor lo enseña en
+      REGLAS_LOCATIVAS.
+    reserva: >-
+      🔴 Las dos recurrencias tienen problema: Yarosabana es del YARACUY (regla
+      4) y Judibana es leyenda sin documento. El formante es firme como
+      toponímico y débil como antroponímico.
+    productivo_en_la_era_2: false
+    por_que_no: >-
+      Se CONSERVA en los dos nombres de la era 1 que ya lo llevan (Kunaro-bana,
+      Dara-bana) y no se acuña ninguno nuevo: meter el morfema del cerro en más
+      nombres de persona sería importar la toponimia a la antroponimia por la
+      puerta de atrás.
+
+  - formante: '-ika'
+    recurrencia: 1
+    ejemplos: [Baracoica]
+    glosa_de_fuente: ninguna
+    etiqueta: atestiguado
+    que_dice_el_canon_de_toponimos: 'nada. Puede ser -koa con metátesis o con la `i` del escribano.'
+    productivo_en_la_era_2: false
+    por_que_no: 'un solo caso y sin segunda grafía: no se generaliza (regla 2, en duda degradar).'
+
+  - formante: '-allo'
+    recurrencia: 1
+    ejemplos: [Caguallo]
+    glosa_de_fuente: ninguna
+    etiqueta: 'atestiguado (la forma escrita); hipotetico (que sea caquetío y no del escribano)'
+    que_dice_el_canon_de_toponimos: 'nada; ningún topónimo del canon lleva <ll>.'
+    productivo_en_la_era_2: false
+    por_que_no: >-
+      🔴 <ll> es dígrafo castellano. curiana_fonotactica.py avisa que el
+      conjunto «atestiguado» tiene residuo castellano y que `caquetillo` mete
+      `ll` en el inventario y ensancha el filtro. Acuñar nombres en -allo sería
+      acuñar castellano con acento colonial.
+
+  - formante: '-oa'
+    recurrencia: 3
+    ejemplos: [Mauroa, quiceroaboa, uriakoa]
+    glosa_de_fuente: ninguna
+    etiqueta: reconstruido
+    que_dice_el_canon_de_toponimos: 'cf. `acaboa`, `duraboa`, `bakoa`, `wakoa` en el lexicón; probable variante de -koa/-boa.'
+    productivo_en_la_era_2: false
+    por_que_no: 'se subsume en -koa, que está mejor sostenido.'
+
+# ══════════════════════════════════════════════════════════════════
+# 3. LOS PATRONES — qué se puede decir con honestidad
+# ══════════════════════════════════════════════════════════════════
+patrones:
+
+  - id: patron-transparencia
+    afirmacion: >-
+      Los antropónimos caquetíos son TRANSPARENTES: están hechos de material
+      léxico con significado, no de formas opacas reservadas a los nombres.
+    evidencia:
+      - 'uriakoa = uria «plantío» + -koa'
+      - 'quiquiba, glosado «nombre propio indígena», se descompone qui~quiba «piedras»'
+      - 'Baracoica lleva `bara` «palo, árbol»'
+      - 'Naure ES una voz del lexicón'
+      - 'Chunaure trae su glosa dentro: «naure es jojoto»'
+      - 'Yarosabana lleva -bana «cerro»'
+    etiqueta: reconstruido
+    procedencia: {obra: zavala-reyes-2015, pagina: 'glosario, entradas de antropónimo'}
+    nota: 'ya enunciado como regla en 6-fusion/velasco_primarios_agi.yaml §principio_general. Esta campaña lo confirma sobre 40 formas.'
+
+  - id: patron-titulo-como-nombre
+    afirmacion: >-
+      El título funciona como nombre: los cronistas escriben «el Manaure» y
+      «Manaure» indistintamente, y el título acaba siendo apellido de familia
+      viva.
+    evidencia:
+      - 'Antolínez 1944: «los cronistas nos hablan de EL Manaure … no es nombre propio de varón sino el nombre de una jerarquía política»'
+      - 'Oviedo y Baños: «venía (cargado en hombros de caciques) el Manaure»'
+      - 'Esteves p. 13 pone Manaure en la lista de APELLIDOS de la gran familia caquetía'
+      - 'dos informantes de Esteves se apellidan Manaure (Don Jesús Manaure Pulgar, de Misaray; Don Miguel Manaure, de El Vínculo)'
+    etiqueta: atestiguado
+    procedencia: {obra: antolinez-1944-manaure, pagina: 'vía moron-2012-petroglifos'}
+    consecuencia_para_la_era_2: 'Manaure se conserva como nombre del señor. Los otros tres títulos (diao, apopo, boratio) se usan como CARGO, no como nombre.'
+
+  - id: patron-nombre-y-topónimo
+    afirmacion: >-
+      Nombre de persona y nombre de lugar circulan en los dos sentidos: el
+      cacique da nombre al sitio y el sitio da nombre a la familia.
+    evidencia:
+      - 'Cumarebo = «el camino del cacique Cumare» (persona → lugar)'
+      - 'Mauroa y Tumarure, «apellido de un cacique», son hoy Distrito y aldea (persona → lugar)'
+      - 'Adaure y Chunaure son a la vez apellido y sitio'
+      - 'Uriacoa: los descendientes «usaron como apellido el nombre del célebre caudillo» (Arcaya p. 327)'
+      - 'Judibana y Jayana: la tradición resuelve el topónimo opaco con una princesa (lugar → persona, inventada)'
+    etiqueta: atestiguado
+    procedencia: {obra: esteves-1989, pagina: '64, 122'}
+    consecuencia_para_la_era_2: >-
+      🔴 Por eso la unicidad del elenco EXCLUYE los topónimos del canon: si un
+      nombre de agente coincide con una `forma` de toponimos.yaml, el lector no
+      puede saber si el texto habla de la persona o del sitio. La excepción son
+      los antropónimos ya declarados como tales (clase `antropónimo` en
+      toponimos.yaml).
+
+  - id: patron-sin-genero
+    afirmacion: >-
+      Ninguna fuente marca el género en el nombre caquetío, y no hay un solo
+      nombre de mujer caquetía documentado.
+    evidencia:
+      - 'cero verificado (meta.ceros_verificados, dos patrones distintos)'
+      - 'la única mujer de la esfera con nombre en fuente escrita es Doña Sancha, y su nombre es castellano'
+      - 'los tres nombres femeninos que circulan (Judibana, Jayana, Yanara) son tradición oral sin documento'
+    etiqueta: 'atestiguado (el cero); reconstruido (la conclusión)'
+    consecuencia_para_la_era_2: >-
+      Los sufijos -ko «hombre de» y -sha «mujer de» se retiran de los nombres Y
+      de la gramática que el prompt enseña (decisión de Miguel, 2026-09-14). El
+      género vive en el campo `genero` de la ficha.
+
+  - id: patron-apellido-en-aure
+    afirmacion: >-
+      Hay una serie morfológica real de nombres de familia en -aure, viva en
+      Paraguaná y reconocida como caquetía por dos autores independientes.
+    evidencia:
+      - 'Esteves p. 13: «algunos de los apellidos de la gran familia caquetía: Adaure, Timaure, Yaraure, Chunaure, Manaure»'
+      - 'Medina Colina p. 328 (mc-mundo-029), un paraguanero hablando de lo suyo, repite Manaure y Timaure y añade Adaure y Chunaure como topónimos'
+      - 'Zavala registra `timaure` «Apellido» y `tumarure` «Apellido de un cacique» sueltos'
+      - 'y el contacto da la forma desnuda: Naure ~ Anaure (Ampíes vía Arcaya p. 160)'
+    etiqueta: atestiguado
+    procedencia: {obra: esteves-1989, pagina: '13'}
+    consecuencia_para_la_era_2: '-aure y -ure son los dos formantes productivos de nombre de persona.'
+
+  - id: patron-cero-precontacto
+    afirmacion: >-
+      No hay ni un solo antropónimo caquetío anterior al contacto. Todo el
+      registro empieza con Ampíes (1521-1527) y Bastidas (1538).
+    evidencia:
+      - 'la fuente más antigua con nombre de persona es la carta de Ampíes al Rey (Arcaya p. 160)'
+      - 'los diez nombres indígenas del s. XVI son de la generación que negoció o resistió la conquista'
+      - 'lo demás es apellido del s. XX o tradición oral'
+    etiqueta: 'atestiguado (el cero)'
+    consecuencia_para_la_era_2: >-
+      🔴 REGLA 3. Los nombres reales atestiguados (Uriacoa, Caguallo, Bonyata,
+      Baracoica, Naure, Barbo) son de personas del CONTACTO. Ponérselos a un
+      agente del s. XV es proyectar un dato colonial sobre el mundo
+      precontacto. Por eso el sistema de nombres los declara REUTILIZABLES pero
+      RESERVADOS, y construye los 63 con raíces del lexicón, que sí son voces
+      de la lengua y no personas fechadas.

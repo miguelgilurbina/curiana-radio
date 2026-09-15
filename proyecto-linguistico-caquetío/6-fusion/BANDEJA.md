@@ -15,17 +15,19 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-14**.
 
-**2422 ítems propuestos** en 54 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
+**2551 ítems propuestos** en 58 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
 | Archivo | Obra | Ítems | Aviso |
 |---|---|---|---|
 | `antolinez_1946_capo_y_ortografia.yaml` | antolinez-1946-hacia-el-indio | 3 |  |
+| `antroponimos_caquetios.yaml` | varias | 48 |  |
 | `auditoria_a2_perea.yaml` | ? | 18 |  |
 | `bachaco_y_gu_es_w.yaml` | alvarado-1921 | 0 |  |
 | `barrido_toponimos_web_2026-09-10.yaml` | ? | 9 |  |
 | `barrido_web_medina_2026-09-09.yaml` | ? | 13 |  |
+| `capubana_agua_y_microclima.yaml` | ? | 10 |  |
 | `castellanos_1589_toponimos.yaml` | castellanos-elegias | 0 |  |
 | `censo_ana_esteves_109.yaml` | esteves-1989 | 13 |  |
 | `censo_terminacion_re.yaml` | ? | 3 |  |
@@ -48,6 +50,7 @@ editar_a_mano: no
 | `jahn_vocabularios_comparados.yaml` | jahn-1927 | 4 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
 | `lokono_gramatica_perea_1942.yaml` | perea-alonso-1942 | 6 |  |
+| `mapa_nombres_era2.yaml` | ? | 63 |  |
 | `medicion_contaminacion_score_2026-09-09.yaml` | ? | 0 |  |
 | `medina_colina_dictado.yaml` | ? | 111 |  |
 | `migracion_lemas_fase2.yaml` | ? | 79 |  |
@@ -61,6 +64,7 @@ editar_a_mano: no
 | `petroglifos_y_manaure.yaml` | moron-2012-petroglifos | 4 |  |
 | `polities_no_costeras_federmann.yaml` | ? | 16 |  |
 | `propuesta_nucleo_d11_fase3.yaml` | perea-alonso-1942 · neira-ribero-1762 · oliver-1989-cap2 · oliver-1989-apendice-a · zavala-reyes-2015 | 17 |  |
+| `sistema_de_nombres_era2.yaml` | ? | 8 |  |
 | `tabla15_c14_oliver.yaml` | oliver-1989-cap4 | 23 |  |
 | `tabla_a1_a7_swadesh.yaml` | oliver-1989-apendice-a | 4 |  |
 | `tabla_a2_transcripcion.yaml` | oliver-1989-apendice-a | 101 |  |

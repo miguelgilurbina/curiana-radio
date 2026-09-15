@@ -122,6 +122,9 @@ class ComunidadState:
     # en su config de qué run hereda el mundo, la memoria y la koiné.
     turnos_por_dia: int = TURNOS_POR_DIA_ERA1
     run_anterior: Optional[str] = None
+    # El nombre del mundo que encabeza el contexto: CURIANA en la era 1,
+    # PARAGUANÁ en la era 2 (lo fija el elenco activo, ver curiana_agents.MUNDO).
+    mundo: str = "CURIANA"
 
     def avanzar_turno(self):
         """Avanza un turno y, al cerrar el día, el calendario.
@@ -179,7 +182,7 @@ class ComunidadState:
         """Genera el string de contexto que se inyecta en cada llamada de agente."""
         est = ESTACIONES[self.estacion]
         lines = [
-            f"[CURIANA — {est['nombre']}]",
+            f"[{self.mundo} — {est['nombre']}]",
             f"Día {self.dia}, Turno {self.turno} ({self.momento}). {self.clima}.",
             f"Alimentos: {self.nivel_alimentos}. Sal (biro): {self.nivel_sal}. Tensión comunitaria: {self.nivel_tension}.",
         ]

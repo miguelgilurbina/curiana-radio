@@ -239,6 +239,39 @@ def test_la_plantilla_tier_1_usa_las_formas_del_canon():
         assert nueva in p, nueva
 
 
+# ── -ko y -sha fuera de la gramática (Miguel, 2026-09-14) ─────────────
+
+def test_ko_y_sha_no_se_ensenan_ni_cuentan_como_regla():
+    """«Sí o sí hay que sacar eso de -ko y -sha, si es inventado, tanto de la
+    gramática como de los nombres». Se archivan en REGLAS_RETIRADAS."""
+    from curiana_lexicon import REGLAS_RETIRADAS, TODAS_LAS_REGLAS
+    for plantilla in (prompt_reglas_completo(), prompt_reglas_breve()):
+        assert "hombre de" not in plantilla and "mujer de" not in plantilla
+        assert "-ko (" not in plantilla and "-sha (" not in plantilla
+        assert "-kana" in plantilla          # el plural se queda
+    assert "-ko" not in TODAS_LAS_REGLAS and "-sha" not in TODAS_LAS_REGLAS
+    assert set(REGLAS_RETIRADAS) == {"-ko", "-sha"}
+    assert all("retirada" in r for r in REGLAS_RETIRADAS.values())
+
+
+# ── los nombres de los agentes no son vocabulario ─────────────────────
+
+def test_los_nombres_de_los_agentes_no_cuentan_como_palabras(monkeypatch):
+    """Campaña de antropónimos: 49 de 63 nombres de la era 2 son homógrafos de
+    una clave del lexicón. Nombrar a Karebe no es usar la palabra karebe."""
+    import curiana_lexicon as L
+    from curiana_lexicon import score_linguistico
+    lex = LexicoComunitario()
+    # era 1: el nombre con sufijo tampoco suma su raíz
+    r = score_linguistico("Biro-ko maa-ka: biro wara.", lex)
+    assert "biro-ko" not in r["palabras_arahuacas"] and "biro" in r["palabras_caquetias"]
+    # era 2: un nombre que es clave del lexicón se descarta si es nombre del elenco
+    monkeypatch.setattr(L, "_NOMBRES_AGENTES", frozenset({"karebe"}))
+    r2 = score_linguistico("Karebe maa-ka: biro wara.", lex)
+    assert "karebe" not in r2["palabras_caquetias"] and "biro" in r2["palabras_caquetias"]
+    assert "karebe" in L.VOCABULARIO_BASE   # la homografía es real
+
+
 # ── lo que la plantilla enseña no cuenta como koiné ───────────────────
 
 def test_las_formas_de_las_plantillas_quedan_fuera_de_lo_emergente():

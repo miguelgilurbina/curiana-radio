@@ -118,9 +118,10 @@ def huella(semilla=None) -> dict:
 
     # ── elenco ─────────────────────────────────────────────────────────
     try:
-        from curiana_agents import ALL_AGENTS
+        from curiana_agents import ALL_AGENTS, ELENCO
         datos["agentes_hash"] = _hash_dict(ALL_AGENTS)
         datos["agentes_n"] = len(ALL_AGENTS)
+        datos["elenco"] = ELENCO   # era1 (curiana_agents.py) o era2 (generado)
         # La longitud total de los prompts, porque es la variable que más
         # sesga el score y conviene tenerla a la vista sin recalcularla.
         datos["prompt_chars"] = sum(

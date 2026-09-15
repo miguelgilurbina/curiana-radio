@@ -6970,8 +6970,18 @@ REGLAS_LOCATIVAS: dict[str, dict] = {
     },
 }
 
-REGLAS_AGENTIVAS: dict[str, dict] = {
+# ── RETIRADAS (Miguel, 2026-09-14): «Sí o sí hay que sacar eso de -ko y -sha,
+# si es inventado, tanto de la gramática como de los nombres». Ninguna fuente
+# sostiene -ko «hombre de» ni -sha «mujer de»: eran convención de la era 1
+# (el campo `wayunaiki` de cada una es una analogía, no una atestación). Se
+# archivan aquí con la misma disciplina que FUERA_DEL_HABLA: no se enseñan,
+# no cuentan como regla al clasificar neologismos, y los nombres del elenco de
+# la era 2 se rehacen sin ellas (6-fusion/decisiones_tanda_2026-09-14.yaml
+# §antroponimos_era2). Los nombres de la era 1 (Biro-ko, Paugis-sha…) se
+# conservan tal cual en curiana_agents.py: esa era está cerrada.
+REGLAS_RETIRADAS: dict[str, dict] = {
     "-ko": {
+        "retirada": "2026-09-14, decisión de Miguel: sin fuente; era convención de la era 1",
         "nombre": "agente masculino",
         "desc": "Hombre cuya identidad/trabajo está asociado a X.",
         "uso": "RAÍZ + -ko  →  nombre o apodo masculino",
@@ -6987,6 +6997,7 @@ REGLAS_AGENTIVAS: dict[str, dict] = {
         ),
     },
     "-sha": {
+        "retirada": "2026-09-14, decisión de Miguel: sin fuente; era convención de la era 1",
         "nombre": "agente femenino",
         "desc": "Mujer cuya identidad/trabajo está asociado a X.",
         "uso": "RAÍZ + -sha  →  nombre o apodo femenino",
@@ -7163,7 +7174,7 @@ REGLAS_TOPONIMICAS: dict[str, dict] = {
 TODAS_LAS_REGLAS = {
     **REGLAS_ASPECTO,
     **REGLAS_LOCATIVAS,
-    **REGLAS_AGENTIVAS,
+    # REGLAS_AGENTIVAS (-ko, -sha) retiradas el 2026-09-14: ver REGLAS_RETIRADAS
     **REGLAS_POSESIVAS,
     **REGLAS_NUMERO,
     **REGLAS_ZAVALA,
@@ -7398,7 +7409,7 @@ CONSTRUYE tus frases con lo que tienes. Una frase incompleta en caquetío > orac
 ASPECTO: raíz + -ka (ya hice) / -ni (estoy haciendo) / -da (haré/quiero).
 LUGAR: raíz + -ana (lugar de) / -bana (cerro, sitio alto de) / -gua (región de).
 {prompt_afijos_atestiguados_breve()}
-PERSONAS: -ko (hombre de) / -sha (mujer de) / -kana (plural/colectivo).
+PLURAL: -kana (plural/colectivo).
 POSESIÓN: ta- (mi) / wa- (nuestro) / ma- (sin/no) / ka- (el-la del).
 CONECTORES: ka (y/también) / mara (pero) / saa (si/cuando) / naka (después) / kashi (ahora) / wara (muy).
 
@@ -7484,7 +7495,7 @@ MORFOLOGÍA:
     -bana = cerro, sitio alto de X: sima+bana = la cumbre · kapu+bana = kapubana, el duende del cerro
     -gua = región de X: maure+gua = tierra del algodón
 {prompt_afijos_atestiguados()}
-  AGENTIVOS: -ko (hombre de X) · -sha (mujer de X) · -kana (plural/todos)
+  PLURAL: -kana (plural/todos)
 
 NUEVAS PALABRAS: [forma: componentes = significado propuesto]
   La comunidad la adopta si 2 agentes distintos la usan."""
@@ -7779,6 +7790,25 @@ def _familia_de_token(tok: str) -> str:
     return "caquetío"  # neologismo comunitario: no es préstamo, es lengua propia
 
 
+_NOMBRES_AGENTES: Optional[frozenset] = None
+
+
+def _nombres_de_agentes() -> frozenset:
+    """Los nombres del elenco activo y de la era 1, en minúscula, tal como los
+    produce _tokenizar. Se cargan una vez; curiana_agents no importa de aquí,
+    así que no hay ciclo."""
+    global _NOMBRES_AGENTES
+    if _NOMBRES_AGENTES is None:
+        try:
+            import curiana_agents as _ag
+            nombres = (set(_ag.ALL_AGENTS) | set(_ag.AGENTS_T1)
+                       | set(_ag.AGENTS_T2) | set(_ag.AGENTS_T3))
+        except Exception:                                    # noqa: BLE001
+            nombres = set()
+        _NOMBRES_AGENTES = frozenset(n.lower() for n in nombres)
+    return _NOMBRES_AGENTES
+
+
 def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
     """
     Calcula métricas lingüísticas de una respuesta de agente, midiendo
@@ -7797,6 +7827,14 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
     """
     limpio = _normalizar(texto)
     tokens = _tokenizar(limpio)
+    # Los nombres de los agentes no son vocabulario. Desde la campaña de
+    # antropónimos (2026-09-14) 49 de los 63 nombres de la era 2 son homógrafos
+    # de una clave del lexicón (Karebe / karebe «cucharón») y el tokenizador
+    # pone todo en minúsculas: nombrar a alguien contaba como usar la palabra.
+    # Se descartan los nombres del elenco activo y los de la era 1 (que los
+    # eventos todavía citan). Consecuencia declarada: «Biro-ko» ya no suma
+    # «biro» como uso, tampoco en la era 1.
+    tokens = [t for t in tokens if t not in _nombres_de_agentes()]
     n_tok = len(tokens) or 1
 
     activos = set(lexico.palabras_activas())          # base + adoptados
@@ -8283,29 +8321,25 @@ def vocabulario_para_agente(tier: int, lexico: "LexicoComunitario", contexto: st
 
     if tier == 1:
         base = prompt_reglas_completo()
-    elif tier == 2:
-        base = prompt_reglas_breve()
     else:
-        base = (
-            "[Lengua nativa — caquetío]: "
-            "Usa -ka (hecho), -ni (haciendo), -da (haré). "
-            "ta-(mi) wa-(nuestro). "
-            "Verbo: wana(ver) suna(dormir) masa(comer) naa(ir). "
-            "Conector: ka(y) mara(pero) kashi(ahora). "
-            "[nueva-palabra: raíz+sufijo = sig]"
-        )
+        # Tier 2 y tier 3. El tier 3 veía una línea con 4 verbos y 3 conectores
+        # y ninguna muestra (medido el 2026-09-14: 221 caracteres): con eso no
+        # podía hablar. Desde la era 2 («que todos los agentes hablen») ve las
+        # reglas breves y una muestra chica; sigue sabiendo menos que un adulto.
+        base = prompt_reglas_breve()
 
     partes = [base]
-    if tier <= 2:
-        # Presupuesto por tier = el que la era 1 mandaba de hecho (50 y 42
-        # voces, medido en la auditoría 2026-09-14), para que arreglar el
-        # reparto no alargue el prompt: su longitud predice el score.
-        muestra = muestra_caquetio_dinamica(
-            n_por_categoria=20 if tier == 1 else 12, contexto=contexto,
-            pesos=pesos, capas=capas, n_total=50 if tier == 1 else 42,
-        )
-        if muestra:
-            partes.append(muestra)
+    # Presupuesto por tier = el que la era 1 mandaba de hecho a los tier 1 y 2
+    # (50 y 42 voces, medido en la auditoría 2026-09-14), para que arreglar el
+    # reparto no alargue el prompt: su longitud predice el score. El tier 3
+    # recibe 20.
+    n_total = {1: 50, 2: 42}.get(tier, 20)
+    muestra = muestra_caquetio_dinamica(
+        n_por_categoria=20 if tier == 1 else 12, contexto=contexto,
+        pesos=pesos, capas=capas, n_total=n_total,
+    )
+    if muestra:
+        partes.append(muestra)
     if lexico_activo:
         partes.append(lexico_activo)
     if pendientes and tier <= 2:
