@@ -395,7 +395,20 @@ antroponimos_era2:
       esa era está cerrada. Test: test_ko_y_sha_no_se_ensenan_ni_cuentan_como_regla.
 
 matacan_venado:
-  estado: PENDIENTE de Miguel (2026-09-14)
+  estado: DECIDIDA (2026-09-14) — entra como caquetío-retroabstraido; el perfil era2 enseña esa capa
+  decision_literal: >-
+    «Si tenemos una fuente que lo califica como venado y no hay ningún otro
+    ente que lo define así, sino que es un venezolanismo y es algo que era
+    originalmente de la región, entonces […] sí o sí lo tenemos que utilizar.
+    […] Si quieres lo ponemos ahí como simulación o como lo que quieras, pero
+    […] matacán siendo el único mamífero de ese tamaño, venado, que además
+    funciona como caza, yo sí o sí lo mantendría.»
+  aplicado: >-
+    curiana_lexicon.py (matakán, retroabstraído, con la duda castellana en
+    notas); perfiles_de_run.yaml (era2 ve la capa retroabstraída: las 48 de
+    Medina también); ecologia.yaml (ecologia-077 y nota en ecologia-037);
+    test en test_era2_motor.py. Detalle en matacan_venado_2026-09-14.yaml
+    → decidido_2026-09-14.
   lo_que_dijo: >-
     «Matacán es consistente con por ejemplo guayacán, es decir podríamos
     fonemizarlo dentro de lo que es el caquetío».

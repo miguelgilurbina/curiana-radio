@@ -634,6 +634,11 @@ entradas:
       venado. El caso concreto se retira; LA REGLA DE MÉTODO sigue siendo válida y se
       conserva sin ejemplo hasta que aparezca uno verificado. La palabra caquetía del
       venado queda como hueco léxico declarado, no se rellena a mano.
+      ACTUALIZADO 2026-09-14: el hueco se cierra por decisión de Miguel con 'matakán'
+      (caquetío-retroabstraido: Esteves 1989 p. 51, «cérvido de poca alzada» de los
+      bosques de Paraguaná; ver ecologia-077). No se rellenó a mano: entró una voz viva
+      documentada, con su sustrato en duda declarado. Sigue sin haber palabra caquetía
+      ATESTIGUADA del venado.
     fuente: reconstruido
     referencia: "Regla de método reformulada tras auditoría de 2026-08-24 (issue #45); pendiente de caso verificado"
     dominios: [ecologia, fauna, metodo]
@@ -1718,3 +1723,36 @@ huecos_lexicos:
     agentes_relacionados: [Bagre-ko, Dara-ko, Uro-ko]
     palabra_lexicon: null
     locacion: orilla
+
+  - id: ecologia-077
+    voz: matacán
+    contenido: >
+      En los bosques de Paraguaná hubo rebaños de venado matacán, «cérvido de poca
+      alzada» (Mazama): la única caza mayor de la península. Se extinguieron en el
+      llano «por la cacería incontrolada» (Esteves); el Cerro Santa Ana lo conserva hoy.
+      Castellanos atestigua venados en la tierra de Coro hacia 1540 («conejos y
+      venados»). El matacán no es el venado caramerudo (Odocoileus) de otras tierras:
+      es el cérvido propio de la península, y la voz que lo nombra es regional y viva.
+    fuente: atestiguado
+    referencia: >-
+      Esteves 1989, Toponimia de Paraguaná, parte 2, p. 51, s.v. MATACAN (imagen
+      verificada el 2026-09-14): «Matacán: cérvido de poca alzada. En tiempos pasados
+      había rebaños de este tipo de venado en los bosques de Paraguaná. Se han
+      extinguido por la cacería incontrolada»; Castellanos, Elegías, líneas 48228-48230
+      del txt («conejos y venados»); Monumento Natural Cerro Santa Ana (fauna actual:
+      venado matacán). Decisión de Miguel del 2026-09-14
+      (6-fusion/matacan_venado_2026-09-14.yaml)
+    procedencia:
+      obra: esteves-1989
+      pagina: 51
+    dominios: [ecologia, fauna, caza, lexico_regional]
+    agentes_relacionados: []
+    palabra_lexicon: matakán
+    locacion: matorral
+    lectura: >-
+      Capa s. XX sobre el medio (regla 3): Esteves habla de «tiempos pasados» sin
+      fecha, y Castellanos pone el animal en Coro en el s. XVI; que el rebaño estuviera
+      en la Paraguaná del s. XV es lectura, no dato. El nombre es castellano para la
+      lexicografía general («de matar y can»); entra al lexicón como retroabstraído
+      por decisión, con la duda declarada en la entrada. Cierra el hueco de
+      ecologia-037.

@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-14**.
 
-**2556 ítems propuestos** en 59 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
+**2566 ítems propuestos** en 61 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -32,6 +32,7 @@ editar_a_mano: no
 | `censo_ana_esteves_109.yaml` | esteves-1989 | 13 |  |
 | `censo_terminacion_re.yaml` | ? | 3 |  |
 | `ceret_on_hipotesis_miguel.yaml` | ? | 3 |  |
+| `clima_era2.yaml` | varias | 3 |  |
 | `colores_caquetios.yaml` | ? | 4 |  |
 | `comparandas_jahn_1927.yaml` | jahn-1927 | 0 |  |
 | `computo_d11_2026-08-31.yaml` | ? | 4 |  |
@@ -66,6 +67,7 @@ editar_a_mano: no
 | `polities_no_costeras_federmann.yaml` | ? | 16 |  |
 | `propuesta_nucleo_d11_fase3.yaml` | perea-alonso-1942 · neira-ribero-1762 · oliver-1989-cap2 · oliver-1989-apendice-a · zavala-reyes-2015 | 17 |  |
 | `sistema_de_nombres_era2.yaml` | ? | 8 |  |
+| `sitios_era2.yaml` | varias | 7 |  |
 | `tabla15_c14_oliver.yaml` | oliver-1989-cap4 | 23 |  |
 | `tabla_a1_a7_swadesh.yaml` | oliver-1989-apendice-a | 4 |  |
 | `tabla_a2_transcripcion.yaml` | oliver-1989-apendice-a | 101 |  |
@@ -111,6 +113,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | Archivo | Qué es |
 |---|---|
 | `decision-d11-fase3-nucleo-lokono-achagua.md` | D11 fase 3: el núcleo re-derivado desde lokono + achagua, y un perfil de run para medirlo |
+| `mundo-era2-sitios-y-clima.md` | El mundo de la era 2, atado a los nodos: sitios y clima |
 
 ---
 

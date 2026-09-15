@@ -299,7 +299,10 @@ def test_el_perfil_era2_esconde_las_hipoteticas_y_puntua_igual():
     agente VE, nunca contra qué se le puntúa."""
     from curiana_perfiles import cargar_perfil
     era2, base = cargar_perfil("era2"), cargar_perfil("base")
-    assert era2.capas == {"caquetío-atestiguado", "caquetío-reconstruido"}
+    # Desde el 2026-09-14 (matacán) la era 2 ve también la capa retroabstraída:
+    # voces vivas documentadas, no acuñaciones.
+    assert era2.capas == {"caquetío-atestiguado", "caquetío-reconstruido",
+                          "caquetío-retroabstraido"}
     assert "caquetío-hipotético" not in era2.capas
     assert era2.capas_de_score == base.capas_de_score
     assert not era2.ablacion
@@ -315,6 +318,27 @@ def test_la_muestra_del_perfil_era2_no_trae_ninguna_hipotetica():
         vistas = {item.split(" (")[0].strip() for linea in m.splitlines()[1:]
                   for item in linea.partition(":")[2].split(" · ")}
         assert not (vistas & hip), vistas & hip
+
+
+def test_el_venado_entra_retroabstraido_y_la_era_2_lo_ve():
+    """Miguel, 2026-09-14: «sí o sí lo tenemos que utilizar». El matacán de
+    Esteves (p. 51) entra como voz viva con el sustrato en duda —la capa que
+    #124 definió— y el perfil era2 pasa a enseñar esa capa. No es
+    reconstruido (no tiene cognado) ni hipotético (la forma no es inventada);
+    y las hipotéticas siguen escondidas."""
+    from curiana_lexicon import VOCABULARIO_BASE, capa_epistemica
+    from curiana_database import normalize_source_language
+    from curiana_perfiles import cargar_perfil
+    e = VOCABULARIO_BASE["matakán"]
+    assert e["fuente"] == "caquetío-retroabstraido"
+    assert e.get("forma_fuente") == "matacán" and e.get("categoria") == "fauna"
+    capas = cargar_perfil("era2").capas
+    pool = {k for k, d in VOCABULARIO_BASE.items()
+            if normalize_source_language(d.get("fuente", "")) == "caquetío"
+            and capa_epistemica(d.get("fuente", "")) in capas}
+    assert "matakán" in pool
+    hip = {k for k, d in VOCABULARIO_BASE.items() if d.get("fuente") == "caquetío-hipotético"}
+    assert not (pool & hip)
 
 
 # ── memoria del día y días encadenados ────────────────────────────────

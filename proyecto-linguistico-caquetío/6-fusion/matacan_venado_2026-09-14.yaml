@@ -10,7 +10,11 @@
 # ─────────────────────────────────────────────────────────────────────────
 meta:
   recogido: '2026-09-14'
-  estado: sin-fusionar; PENDIENTE de decisión de Miguel (opciones al final)
+  estado: >-
+    DECIDIDA por Miguel el 2026-09-14 («sí o sí lo tenemos que utilizar»):
+    entra como caquetío-retroabstraido y el perfil era2 enseña esa capa.
+    Fusionada el mismo día en curiana_lexicon.py (matakán) y ecologia.yaml
+    (ecologia-077, y nota en ecologia-037). Ver decidido_2026-09-14 al final.
   quien: escriba (Claude), sobre propuesta de Miguel
   obra: esteves-1989 (y alvarado-1921, jahn-1927, neira-ribero-1762 como comparanda)
   pregunta: >-
@@ -195,3 +199,42 @@ queda:
   - 'medina-colina-sxx s.v. matacán en el físico'
   - 'Diccionario de americanismos s.v. matacán (403 el 2026-09-14)'
   - 'si se fusiona algo que cite al DLE/Wikcionario: ficha en 4-fuentes/ (regla 8)'
+
+decidido_2026-09-14:
+  literal: >-
+    «Si tenemos una fuente que lo califica como venado y no hay ningún otro
+    ente que lo define así, sino que es un venezolanismo y es algo que era
+    originalmente de la región, entonces yo eso lo calificaría como algo que
+    sí o sí lo tenemos que utilizar. […] El venado que podemos conseguir en
+    otros lados no necesariamente es el mismo que el matacán, que es el que
+    está reconocido como parte de Paraguaná. […] Si quieres lo ponemos ahí
+    como simulación o como lo que quieras, pero […] matacán siendo el único
+    mamífero de ese tamaño, venado, que además funciona como caza, yo sí o sí
+    lo mantendría.»
+  lo_que_pesa_en_el_argumento: >-
+    Dos cosas que la medición no había puesto en la balanza: (1) el referente
+    es distinto — el matacán (Mazama) no es el venado caramerudo (Odocoileus)
+    de otras tierras, así que la voz nombra un animal propio de la península;
+    (2) es la única caza mayor de Paraguaná y ninguna fuente le da otro nombre.
+    Miguel deja la etiqueta al escriba.
+  etiqueta_elegida: caquetío-retroabstraido
+  por_que_esa: >-
+    Es la capa que #124 definió para exactamente este caso: «la palabra existe
+    y está documentada en boca viva; lo incierto no es la forma sino el
+    SUSTRATO». No reconstruido (exige cognado en lengua hermana: wayakán lo
+    tenía, matacán no); no hipotético (la forma no es inventada); no
+    canon-simulación (no es una convención del motor, es una voz viva). Las
+    notas de la entrada declaran la duda castellana entera.
+  para_que_llegue_a_los_agentes: >-
+    El perfil era2 pasa a enseñar la capa retroabstraída (antes sólo los
+    perfiles suelto). Consecuencia: las otras 48 voces de esa capa (46 de
+    Medina, chiriware y tukeke de Zavala) también se ven en la era 2 — voces
+    vivas, no acuñaciones, coherente con «usar lo
+    más posible el diccionario». El score no cambia (la capa ya estaba en
+    capas_de_score). Si Miguel prefiere sólo el venado, la alternativa es una
+    lista de excepciones en el perfil, que no se hizo.
+  aplicado:
+    - 'curiana_lexicon.py: entrada matakán (bloque «RETROABSTRAÍDA DE ESTEVES»)'
+    - '5-experimento/perfiles_de_run.yaml: era2.capas_lexicas += caquetío-retroabstraido'
+    - '3-mundo/corpus/ecologia.yaml: ecologia-077 (el matacán en Paraguaná) y nota en ecologia-037 (el hueco se cierra)'
+    - 'tests/test_era2_motor.py: el venado está, es retroabstraído y la era 2 lo ve'

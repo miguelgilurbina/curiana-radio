@@ -125,7 +125,8 @@ python curiana_orchestrator_v2.py --auto 30 --perfil base --perfiles --reporte
 #   --semilla N             fija el azar del motor y se sella en la huella
 #   --continuar             arranca del estado, memoria, lexicón y koiné del run anterior
 #                           (curiana_*.json en curiana_sim/); la config dice de qué run viene
-#   --perfil era2           base sin la capa hipotética (decisión 2026-09-14); un run = un día
+#   --perfil era2           base sin la capa hipotética y CON la retroabstraída (voces vivas:
+#                           matakán y las de Medina; decisiones 2026-09-14); un run = un día
 #   --elenco era2           el elenco de Paraguaná (63, generado desde 6-fusion/elenco_era2.yaml);
 #                           el prompt nombra nodo, casa y sitio; el mundo pasa a PARAGUANÁ
 python curiana_orchestrator_v2.py --elenco era2 --auto 6 --turnos-por-dia 6 --agentes-por-turno 12 --roster todos --perfil era2 --semilla 1
