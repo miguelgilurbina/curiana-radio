@@ -1,0 +1,901 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — El canon de CLIMA Y TEMPORADA de la era 2 (Paraguaná)
+#
+# Encargo de Miguel, 2026-09-14:
+#   «Tener una sección de clima y temporada, y así cuando inyectamos el mundo
+#    lo inyectamos bajo un esquema climatológico.»
+# y, dentro del «sí a todo» del Capubana:
+#   el calendario del motor se ajusta al corpus (seca larga, pulso corto de
+#   lluvias); las duraciones las declara este archivo.
+#
+# Regla 5: esto PROPONE. No toca el motor (curiana_state.ESTACIONES sigue
+# como está), ni el lexicón, ni 3-mundo/corpus/. Nada de aquí es canon hasta
+# que Miguel lo fusione.
+# Compañero: 6-fusion/sitios_era2.yaml (el mismo mundo, por lugar).
+# Mide: 6-fusion/scripts/verificar_sitios_era2.py
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-09-14'
+  estado: sin-fusionar
+  obra: varias
+  quien: escriba (Claude), a pedido de Miguel
+  pregunta: >-
+    ¿En qué períodos se parte el año del Golfete y de Paraguaná según las
+    fuentes, cuánto dura cada uno en días simulados, qué hace el viento, la
+    lluvia, el mar y el agua dulce en cada uno, qué cambia dentro del día, y
+    qué abre y cierra cada período en cada sitio de la era 2?
+  respuesta_corta: >-
+    El año atestiguado NO es 60/60. La lluvia es un pulso corto —Camacho lo
+    mide en octubre-diciembre (ecologia-006) y Sievers lo vio en persona en
+    Paraguaná a finales de octubre de 1892 (Arcaya p. 24)— y el resto del año
+    es seca, con el alisio del ENE soplando los doce meses y más fuerte en la
+    seca (ecologia-005, ecologia-020). Sobre eso se propone un año de tres
+    períodos: Tiempo de Viento (5 meses), la seca larga (4 meses) y Tiempo de
+    Siembra (3 meses), que en el año de 120 días simulados del motor dan
+    50/40/30. La partición en dos (seca/lluvias) es lo atestiguado; partir la
+    seca en dos es decisión de simulación, y se declara como tal.
+  como_se_midio:
+    - 'corpus: 3-mundo/corpus/*.yaml leído entero con yaml.safe_load; 198 hechos, 0 declaran estación y 48 declaran locación (script en el scratchpad, 2026-09-14)'
+    - 'motor: curiana_state.ESTACIONES, DIAS_POR_ESTACION, ESTACION_DE_DIA, MOMENTOS_DIA, ACTIVIDADES_POR_MOMENTO y EVENTOS_ESTACIONALES, leídos del módulo'
+    - 'lexicón: curiana_lexicon.VOCABULARIO_BASE + capa_epistemica() para cada voz citada'
+    - 'texto crudo releído, no sus notas: Arcaya 1920 entero (pdftotext, página del libro = página del pdf − 8), Oliver cap. 3 entero (pdftotext, DOC n = pdf + 182), los seis OCR de Esteves 1989 y Castellanos 1857 (txt, por número de línea)'
+  convencion_de_paginas: >-
+    Oliver 1989 cap. 3 se cita por la cabecera de la edición en DOC de 2006
+    («DOC n»), verificada en esta vuelta: el primer marcador del texto extraído
+    es 183 en la página 1 del pdf y 295 en la 113, luego DOC = pdf + 182. Arcaya
+    1920 por la página impresa (= pdf − 8, comprobado en el «22» al pie).
+    Esteves 1989 por el número de pie del OCR. Castellanos 1857 por número de
+    línea del txt.
+  vocabulario_de_etiquetas:
+    atestiguado: una fuente lo dice, con página. Si es del s. XVI o posterior se marca `capa`
+    reconstruido: inferencia de un autor o comparanda arahuaca citada
+    canon-simulacion: posición que el proyecto toma para simular, sobre piezas citadas
+    hipotetico: plausible sin respaldo, o propuesta nueva de esta sesión
+    retro-abstraido: tradición viva del s. XIX-XX; a efectos de proyección vale como hipotético
+    testimonio-miguel: lo que Miguel recuerda del lugar; retro-abstraído, con `que_lo_subiria`
+  regla_3: >-
+    Camacho 2011, INFALCOSTA, INPARQUES y Sievers describen el MEDIO FÍSICO,
+    que ecologia-002 declara constante desde ~4000 BP: valen para el clima y
+    no para lo que hacía la gente. Todo lo que aquí dice qué se hacía en cada
+    período es del s. XVI o posterior, o es decisión de simulación.
+  medido:
+    # Regla 1: lo mide 6-fusion/scripts/verificar_sitios_era2.py --conteos.
+    dias_simulados: 120
+    lineas_clima: 68
+
+  # Regla 6: cada cero con su consulta.
+  ceros_verificados:
+    - que: el nombre caquetío de una estación o de un mes
+      raices: [estacion, temporada, mes, luna, invierno, verano]
+      resultado: >-
+        CERO. El lexicón tiene la unidad de tiempo —`apana` «una luna (~30
+        días)» y `buiamati` «dos lunas (~60 días)», las dos
+        caquetío-atestiguadas— pero NINGÚN nombre de período del año. «Tiempo
+        de Viento» y «Tiempo de Siembra» son rótulos castellanos de
+        curiana_state, no voces caquetías. Hueco léxico declarado abajo.
+    - que: la palabra «invierno» como estación de lluvias en las fuentes de Paraguaná
+      raices: [invierno, verano, estacion lluviosa, seca]
+      resultado: >-
+        En los seis OCR de Esteves `invierno` da CERO y `verano` UNA sola vez
+        (p. 16, la petición de Amuay de 1556: «en cuanto vio venir el verano se
+        largó»). En Castellanos `invierno` da 3 dentro de la Elegía I y 0 en la
+        Introducción; `verano` 1 en la Introducción (línea 48246, «largo
+        verano») y 2 en la elegía. En Oliver `dry season` da 1 y es de los
+        Llanos (DOC 283); `rainy season` da 5. Arcaya no usa el par: dice
+        «estación lluviosa» (p. 14) y «sequías» (p. 23).
+    - que: lluvia orográfica medida en el cerro
+      raices: [orograf, microclim, neblina, nublado, chubasco, pluviometr]
+      resultado: >-
+        CERO en todas las fuentes del repo. Los 2 `orográf` de Arcaya (pp. 10 y
+        49) son geología, y los 5 `orographic` de Oliver (DOC 225-227) también.
+        Esteves no dice nada del cerro sobre nubes, neblina, bosque de altura
+        ni quebradas. Queda como el único eslabón hipotético de
+        capubana_agua_y_microclima.yaml.
+    - que: alisio como entidad nombrada
+      raices: [alisio, trade wind]
+      resultado: >-
+        CERO en Esteves y en Oliver. El alisio está medido en Camacho 2011
+        (ecologia-005, ecologia-020) y nombrado en INFALCOSTA para Montecano,
+        pero el lexicón sólo tiene `joutai` y `juri` genéricos: es el
+        hueco-lex-003 que el corpus ya declaró.
+    - que: la marea y el cardumen como lexemas
+      raices: [marea, cardumen]
+      resultado: >-
+        El fenómeno está atestiguado (ecologia-026 marea semidiurna de ~50 cm;
+        Esteves pp. 58 y 61, las dos atalayas de Punta Cardón «para avistar los
+        cardúmenes»), y las dos palabras siguen sin forma caquetía:
+        hueco-lex-007 y hueco-lex-002.
+
+  lo_que_no_se_encontro:
+    - 'Ninguna fuente da un calendario caquetío: ni meses, ni fiestas fechadas, ni nombres de período. Los tres períodos de abajo son lectura del clima medido, no un calendario recuperado'
+    - 'Ningún dato pluviométrico de Paraguaná por piso altitudinal; los 319 mm de Montecano y los 380-417 de Coro son los dos únicos números'
+    - 'Ninguna fuente dice cuándo se sembraba, cuándo se cosechaba ni cuándo se raspaba la sal en Paraguaná. Lo que hay es Oliver (ciclo corto que coincida con las lluvias breves, DOC 245) y la física de la evaporación (ecologia-010)'
+    - 'Ninguna fuente describe pesca nocturna con fecha: los jachos de Esteves p. 33 no llevan época ni siglo'
+    - '«Las Piedras del Almanaque» del cerro Siraba (Esteves p. 60) son el único objeto del repo que suena a calendario, y no hay lectura publicada de ellas'
+
+# ══════════════════════════════════════════════════════════════════
+# 1. LOS PERÍODOS DEL AÑO
+# ══════════════════════════════════════════════════════════════════
+partición:
+  etiqueta: canon-simulacion
+  lo_atestiguado: >-
+    Dos partes, no tres: seca larga y pulso corto de lluvias (ecologia-006,
+    Camacho 2011 pp. 8-9; Arcaya p. 24 con Sievers). El viento sopla los doce
+    meses y arrecia en la seca (ecologia-005, ecologia-020, Camacho pp. 9 y 15).
+  lo_que_decide_el_proyecto: >-
+    Partir la seca en dos —el Tiempo de Viento, cuando el alisio fabrica la sal
+    y aclara el agua, y la seca larga, cuando el agua se acaba y sólo el cerro
+    da— porque es la diferencia que las fuentes describen sin nombrar: el
+    «largo verano» que obliga a traer grano de la sierra (Castellanos, línea
+    48246), la sed que hace machacar jajato contra la piedra (Esteves pp. 45-46)
+    y la convergencia de fin de seca que el motor ya tiene como evento.
+  alternativa_minima: >-
+    Si Miguel prefiere no tocar la estructura de dos estaciones del motor: seca
+    90 días y lluvias 30 (los mismos meses, sin partir la seca). Es un cambio de
+    una línea en curiana_state y conserva ESTACION_DE_DIA con dos valores.
+  por_que_no_hay_nombre_caquetio: >-
+    Ninguna fuente da el nombre de un período del año en caquetío. `madunaka`
+    «sequía» existe pero es caquetío-hipotético y el perfil `era2` esconde las
+    38 hipotéticas por decisión del 2026-09-14: mostrarla sería adelantarle al
+    agente la palabra que el experimento quiere verle acuñar. Así que cada
+    período va con sus RAÍCES disponibles y sin nombre propio. Que el nombre lo
+    acuñen ellos es el resultado, no el andamio.
+
+periodos:
+
+  - id: P1
+    nombre_canon: Tiempo de Viento
+    nombre_caquetio: null
+    hueco_de_nombre: true
+    meses: 'enero-mayo'
+    meses_n: 5
+    dias_simulados: 50
+    etiqueta: canon-simulacion
+    proporcion: '5/12 del año × 120 días simulados = 50'
+    raices_disponibles:
+      - {clave: juri, capa: caquetío-atestiguado, sig: 'viento, ventarrón'}
+      - {clave: kasi, capa: caquetío-atestiguado, sig: sol}
+      - {clave: biro, capa: caquetío-atestiguado, sig: sal}
+      - {clave: apana, capa: caquetío-atestiguado, sig: 'una luna (~30 días)'}
+    viento:
+      - dato: >-
+          El alisio del ENE sopla los doce meses y es más fuerte en la seca: es
+          el hecho ecológico maestro del mundo caquetío — construye y mueve las
+          dunas, seca las salinas y fabrica el biro, abre la temporada de pesca
+          y de agua clara, y hace navegable y peligroso el Golfete.
+        etiqueta: atestiguado
+        capa: moderno
+        procedencia: {obra: camacho-2011, pagina: '9 y 15'}
+        apoyo_en_repo: [ecologia-005, ecologia-020]
+        estacion: 'seca'
+        voz_caquetia: {clave: juri, capa: caquetío-atestiguado}
+      - dato: >-
+          «El cual le viene bien, pues Coro viento / Quiere decir en lengua
+          generosa, / Y ansí es aquella tierra muy ventosa.»
+        etiqueta: atestiguado
+        capa: 'colonial: Castellanos publica en 1589 lo que vio hacia 1540'
+        procedencia: {obra: castellanos-elegias, pagina: 'líneas 48209-48219 del txt (Parte II, Introducción)'}
+        estacion: 'todo el año'
+        voz_caquetia: {clave: juri, capa: caquetío-atestiguado}
+        nota: >-
+          Arcaya p. 170 rechaza la etimología («el viento reinante en Coro es,
+          al contrario, el que sopla del Noreste») y con eso confirma el dato
+          meteorológico aunque niegue el étimo.
+      - dato: >-
+          El viento tiene nombre en el mapa: Judibana y Jurijurebo son «el paso
+          de los vientos» — «Judi, jurí: viento. Bana: sitio alto» — y en
+          Jurijurebo «hay allí una abertura orográfica».
+        etiqueta: atestiguado
+        capa: s. XX
+        procedencia: {obra: esteves-1989, pagina: '47'}
+        estacion: 'todo el año'
+        voz_caquetia: {clave: juri, capa: caquetío-atestiguado}
+    lluvia:
+      - dato: >-
+          En este tramo del año no llueve: la lluvia se concentra en un pulso
+          corto y el resto del año domina la seca. La evaporación potencial
+          supera con mucho a la lluvia casi todo el año.
+        etiqueta: atestiguado
+        capa: moderno
+        procedencia: {obra: camacho-2011, pagina: '8-9'}
+        apoyo_en_repo: [ecologia-005, ecologia-006]
+        estacion: 'seca'
+        voz_caquetia: {clave: kaya, capa: caquetío-reconstruido}
+    mar:
+      - dato: >-
+          El agua se pone clara y calma y se abre la temporada de buceo: «El
+          buceo de perlas se hace en la seca, con el agua clara y calma».
+        etiqueta: reconstruido
+        procedencia: {obra: antczak-2015-las-aves, pagina: 'vía ecologia-017'}
+        apoyo_en_repo: [ecologia-017]
+        estacion: 'seca'
+        voz_caquetia: {clave: tüma, capa: caquetío-hipotético}
+        aviso: >-
+          `tüma` es de las 38 hipotéticas que el perfil era2 esconde: el
+          buceador tiene el oficio y no la palabra.
+      - dato: >-
+          El Golfete es somero y sólo navegable en embarcaciones pequeñas y por
+          prácticos: «En todo este litoral el mar es poco profundo, especialmente
+          en el Golfete, sólo navegable en pequeñas embarcaciones y por prácticos.»
+        etiqueta: atestiguado
+        capa: s. XX
+        procedencia: {obra: arcaya-1920, pagina: '20'}
+        apoyo_en_repo: [ecologia-026, ecologia-027]
+        estacion: 'todo el año'
+        voz_caquetia: {clave: kanoa, capa: caquetío-reconstruido}
+      - dato: >-
+          La travesía a las islas es de este tramo: los caquetíos «construían
+          embarcaciones, suficientes por lo menos para viajar de las costas de
+          Coro a Curazao, isla con la cual estaban en comunicación».
+        etiqueta: reconstruido
+        procedencia: {obra: arcaya-1920, pagina: '120'}
+        apoyo_en_repo: [ecologia-021]
+        estacion: 'seca'
+        voz_caquetia: {clave: kanoa, capa: caquetío-reconstruido}
+    agua_dulce:
+      - dato: >-
+          Los estanques todavía tienen el agua del pulso pasado: «labrando
+          estanques, verdaderas lagunetas artificiales, inteligentemente formadas
+          para recoger aguas pluviales, aprovechando los declives del terreno
+          para abrir en sitio conveniente el "cajón," cuya tierra removida se
+          utiliza en las "barrancas," diques de primitiva construcción».
+        etiqueta: atestiguado
+        capa: 's. XIX-XX (Arcaya describe la técnica viva de su tiempo)'
+        procedencia: {obra: arcaya-1920, pagina: '25'}
+        apoyo_en_repo: [ecologia-008]
+        estacion: 'seca'
+        voz_caquetia: {clave: jagey, capa: caquetío-atestiguado}
+      - dato: 'Hay «apenas una fuente intermitente en el cerro de Santa Ana».'
+        etiqueta: atestiguado
+        capa: 's. XX (Arcaya 1920 sobre Sievers 1892)'
+        procedencia: {obra: arcaya-1920, pagina: '22'}
+        estacion: 'todo el año'
+        voz_caquetia: {clave: duna, capa: caquetío-reconstruido}
+        lectura: 'la fuente del cerro corre a su propio ritmo, no al del jagüey: es la excepción que hace del Capubana el centro (capubana_agua_y_microclima.yaml)'
+    cielo:
+      - dato: >-
+          «La aridez del terreno queda compensada, para darle al paisaje singular
+          atractivo, con la pureza y limpidez del cielo completamente azul.» Y la
+          temperatura: «Calidísima es su temperatura, pero la refrescan constantes
+          y fuertes brisas.»
+        etiqueta: atestiguado
+        capa: s. XX
+        procedencia: {obra: arcaya-1920, pagina: '24-25'}
+        apoyo_en_repo: [ecologia-005]
+        estacion: 'seca'
+        voz_caquetia: {clave: kasi, capa: caquetío-atestiguado}
+      - dato: >-
+          La temperatura no marca el año: media ~28 °C con variación anual
+          mínima (1-2 °C). La estacionalidad se distingue por el viento y el
+          agua del cielo, no por el frío.
+        etiqueta: atestiguado
+        capa: moderno
+        procedencia: {obra: camacho-2011, pagina: '8-9'}
+        apoyo_en_repo: [ecologia-005, ecologia-006]
+        estacion: 'todo el año'
+        voz_caquetia: {clave: tüshi, capa: caquetío-reconstruido}
+        nota: '`tüshi` «frío» existe en el lexicón y en este mundo casi no tiene referente: es una palabra para la noche y para el agua, no para el año'
+    el_dia:
+      amanecer:
+        - dato: 'El viento amanece flojo; la corriente del Golfete es la más suave del día. Es la ventana de la canoa y del calado del chinchorro.'
+          etiqueta: reconstruido
+          procedencia: {obra: camacho-2011, pagina: '(vía ecologia-026: el viento «arrecia en el curso del día»)'}
+          apoyo_en_repo: [ecologia-026]
+          estacion: 'seca — amanecer'
+          voz_caquetia: {clave: kapua, capa: caquetío-reconstruido}
+      mañana:
+        - dato: 'El alisio va montando. La sal de la noche está seca y es la hora del raspado; el conuco se trabaja antes del sol alto.'
+          etiqueta: canon-simulacion
+          deuda: sin-procedencia
+          apoyo_en_repo: [ecologia-010, ecologia-020]
+          estacion: 'seca — mañana'
+          voz_caquetia: {clave: biro, capa: caquetío-atestiguado}
+      mediodia:
+        - dato: >-
+            El sol es el enemigo: «Calidísima es su temperatura». En el llano sin
+            cobertura la insolación es extrema (Oliver lo dice del suelo
+            sobrepastoreado, y al revés: el matorral que cubría el suelo lo
+            sombreaba). Hora de sombra, de comer y de hablar.
+          etiqueta: reconstruido
+          procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 245 (pdf 63)'}
+          estacion: 'seca — mediodia'
+          voz_caquetia: {clave: kasi, capa: caquetío-atestiguado}
+      tarde:
+        - dato: >-
+            «las corrientes las gobiernan la marea y, sobre todo, la acción
+            tangencial del viento del este, que arrecia en el curso del día y
+            empuja las corrientes hasta cerca de 1 m/s por la tarde». Es la hora
+            en que el Golfete se pone difícil y la canoa vuelve.
+          etiqueta: atestiguado
+          capa: moderno
+          procedencia: {obra: camacho-2011, pagina: '(vía ecologia-026)'}
+          apoyo_en_repo: [ecologia-026]
+          estacion: 'seca — tarde'
+          voz_caquetia: {clave: juri, capa: caquetío-atestiguado}
+      anochecer:
+        - dato: >-
+            Se untan los jachos: «Cuna, Cunaro, "promicrops guasa", pez lábrido
+            que abunda en el golfete de Coro y del cual extraían manteca para
+            untar los "jachos", teas de madera, comúnmente de curarí, para
+            encandilar en labores de pesca nocturna.»
+          etiqueta: atestiguado
+          capa: 's. XX; Esteves no fecha la técnica'
+          procedencia: {obra: esteves-1989, pagina: '33 (entrada Cunacho)'}
+          estacion: 'seca — anochecer'
+          voz_caquetia: {clave: jachos, capa: caquetío-atestiguado}
+      noche:
+        - dato: >-
+            La pesca nocturna a la luz de los jachos, sobre el agua calma y
+            clara de la seca. Es la única técnica de pesca con hora del día en
+            todo el material del repo.
+          etiqueta: atestiguado
+          capa: 's. XX; sin fecha de origen'
+          procedencia: {obra: esteves-1989, pagina: '33'}
+          estacion: 'seca — noche'
+          voz_caquetia: {clave: kunaro, capa: caquetío-atestiguado}
+
+  - id: P2
+    nombre_canon: la seca larga
+    nombre_caquetio: null
+    hueco_de_nombre: true
+    meses: 'junio-septiembre'
+    meses_n: 4
+    dias_simulados: 40
+    etiqueta: canon-simulacion
+    proporcion: '4/12 del año × 120 días simulados = 40'
+    que_es: >-
+      El «largo verano» de Castellanos: el tramo en que el agua del año pasado
+      se acabó y la del año que viene no ha llegado. Es el período que las
+      fuentes describen sin nombrarlo y el que da sentido al Capubana.
+    raices_disponibles:
+      - {clave: usera, capa: caquetío-atestiguado, sig: 'seco, arenoso'}
+      - {clave: kasi, capa: caquetío-atestiguado, sig: sol}
+      - {clave: duna, capa: caquetío-reconstruido, sig: 'agua (corriente, bebible)'}
+    viento:
+      - dato: >-
+          El alisio sigue («viento del ENE los doce meses») pero pierde la fuerza
+          de la seca fuerte; el aire se vuelve caliente y seco sobre un suelo sin
+          agua.
+        etiqueta: reconstruido
+        procedencia: {obra: camacho-2011, pagina: '8-9 y 15'}
+        apoyo_en_repo: [ecologia-005, ecologia-020]
+        estacion: 'seca larga'
+        voz_caquetia: {clave: juri, capa: caquetío-atestiguado}
+    lluvia:
+      - dato: >-
+          «Los frutos menores se cultivan de secano en todas las serranías, y aun
+          en la tierra llana en el litoral oriental y en la Península de
+          Paraguaná, siendo muy frecuente perderse las cosechas por falta de
+          lluvias.»
+        etiqueta: atestiguado
+        capa: 's. XIX-XX'
+        procedencia: {obra: arcaya-1920, pagina: '24'}
+        estacion: 'seca larga'
+        voz_caquetia: {clave: kaya, capa: caquetío-reconstruido}
+      - dato: >-
+          El hambre de fin de seca tiene testimonio: en Amuay, 1556, pidieron al
+          obispo «Danos otro cura, que no sea cobarde como el que tenemos, que en
+          cuanto vio venir el verano se largó».
+        etiqueta: atestiguado
+        capa: colonial (1556)
+        procedencia: {obra: esteves-1989, pagina: '16 (entrada Amuay)'}
+        estacion: 'seca larga'
+        hueco_lexico: true
+        concepto: 'la estación de la sed: no hay voz caquetía para el período'
+    mar:
+      - dato: >-
+          El mar no se cierra: es la despensa verdadera frente a una tierra
+          pobre, y lo es en cualquier estación — «mucho pescado de mar y de río»
+          escribe Pérez de Tolosa desde Coro en 1546.
+        etiqueta: atestiguado
+        capa: contacto (1546)
+        procedencia: {obra: arcaya-1920, pagina: '264 (Pérez de Tolosa 1546)'}
+        apoyo_en_repo: [ecologia-036]
+        estacion: 'todo el año'
+        voz_caquetia: {clave: arima, capa: caquetío-reconstruido}
+    agua_dulce:
+      - dato: >-
+          El agua del jagüey se acaba o se vuelve mala: se excavan pozos «(cacimbas
+          o jagüeyes los denominan, según su profundidad), para sacar, a veces como
+          sucede en Paraguaná, a los cuarenta o cincuenta metros, el agua de
+          filtraciones que se deposita en las capas subterráneas, y que generalmente
+          es desabrida o salobre».
+        etiqueta: atestiguado
+        capa: 's. XIX-XX; el pozo profundo entibado es colonial o posterior (Medina Colina, mc-mundo-028)'
+        procedencia: {obra: arcaya-1920, pagina: '25'}
+        estacion: 'seca larga'
+        voz_caquetia: {clave: jagey, capa: caquetío-atestiguado}
+      - dato: >-
+          Se bebe de la planta: «En un tiempo de prolongada sequía, los nativos
+          para mitigar la sed machacaban jajatos contra piedras y luego chupaban
+          los manojos o macoyas... el jajato es una hierba suculenta y por lo
+          tanto al chuparla calma la sed.»
+        etiqueta: retro-abstraido
+        capa: 's. XX (etimología popular de Jadacaquiva recogida por Esteves)'
+        procedencia: {obra: esteves-1989, pagina: '45-46'}
+        estacion: 'seca larga'
+        voz_caquetia: {clave: jajato, capa: caquetío-atestiguado}
+      - dato: >-
+          El agua turbia del estanque se clarifica con cardón de lefaria: se agita
+          el agua con un trozo limpio de espinas y el material en suspensión se
+          precipita.
+        etiqueta: retro-abstraido
+        capa: 's. XX (Paraguaná rural, antes del acueducto de los años 50)'
+        procedencia: {obra: medina-colina-sxx, pagina: 'página no dictada (mc-mundo-003)'}
+        estacion: 'seca larga'
+        voz_caquetia: {clave: lefaria, capa: caquetío-retroabstraido}
+      - dato: >-
+          El Capubana es la excepción: cuando el jagüey baja, la fuente
+          intermitente del cerro sigue, y las microcuencas de su pie son «los
+          únicos cursos de agua que mantienen un pequeño caudal intermitente y
+          efímero».
+        etiqueta: canon-simulacion
+        capa: 'la fuente es de Arcaya (s. XX) y las microcuencas de INFALCOSTA (2021); la proyección al s. XV es decisión del 2026-09-14'
+        procedencia: {obra: montecano-reserva, pagina: 'INFALCOSTA (Arends, 2021)'}
+        estacion: 'seca larga'
+        voz_caquetia: {clave: kapubana, capa: caquetío-atestiguado}
+        apoyo: 'arcaya-1920 p. 22; 6-fusion/capubana_agua_y_microclima.yaml'
+    cielo:
+      - dato: >-
+          «pero aun allí se hacen sentir a veces las sequías, y en suma, más de la
+          mitad, por no decir de las dos terceras partes del Estado es de una gran
+          aridez».
+        etiqueta: atestiguado
+        capa: s. XX
+        procedencia: {obra: arcaya-1920, pagina: '23'}
+        estacion: 'seca larga'
+        voz_caquetia: {clave: usera, capa: caquetío-atestiguado}
+      - dato: >-
+          Y la salida: «la cercana sierra les da grano si les falta por ser largo
+          verano». En el año de seca larga el maíz entra desde la sierra.
+        etiqueta: atestiguado
+        capa: 'colonial: Castellanos vio Coro hacia 1540 y publicó en 1589'
+        procedencia: {obra: castellanos-elegias, pagina: 'línea 48246 del txt (Parte II, Introducción)'}
+        estacion: 'seca larga'
+        voz_caquetia: {clave: marisi, capa: caquetío-hipotético}
+        aviso: '`marisi` es de las 38 hipotéticas que el perfil era2 esconde; el maíz que el agente ve nombrado es `kasá` (puche) y `buriche` (chicha), no el grano'
+    el_dia:
+      amanecer:
+        - dato: 'La hora del agua: se va al jagüey o a la fuente del cerro antes de que el sol pegue, porque el acarreo es el trabajo que fija el día.'
+          etiqueta: canon-simulacion
+          deuda: sin-procedencia
+          apoyo_en_repo: [ecologia-008]
+          estacion: 'seca larga — amanecer'
+          voz_caquetia: {clave: duna, capa: caquetío-reconstruido}
+      mediodia:
+        - dato: >-
+            El calor llega al máximo sobre suelo descubierto; Oliver mide el
+            mecanismo al revés, en la pérdida: sin cobertura, «extreme insulation»
+            y evapotranspiración casi intolerable.
+          etiqueta: reconstruido
+          procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 245 (pdf 63)'}
+          estacion: 'seca larga — mediodia'
+          voz_caquetia: {clave: kasi, capa: caquetío-atestiguado}
+      anochecer:
+        - dato: >-
+            La hora de preguntar por el año: «y le preguntan si lloverá o si el
+            año será seco o abundante, o si deben ir a la guerra contra sus
+            enemigos».
+          etiqueta: atestiguado
+          capa: contacto (s. XVI, Oviedo y Valdés sobre los indios de Venezuela)
+          procedencia: {obra: arcaya-1920, pagina: '98'}
+          estacion: 'seca larga — anochecer'
+          voz_caquetia: {clave: kati, capa: caquetío-atestiguado}
+          regla_4: 'Oviedo generaliza para la provincia de Venezuela; vale como forma del oficio del boratio, no como rito costero fechado'
+
+  - id: P3
+    nombre_canon: Tiempo de Siembra
+    nombre_caquetio: null
+    hueco_de_nombre: true
+    meses: 'octubre-diciembre'
+    meses_n: 3
+    dias_simulados: 30
+    etiqueta: atestiguado
+    capa: 'moderno (Camacho 2011) y s. XIX (Sievers 1892 en Paraguaná, vía Arcaya)'
+    proporcion: '3/12 del año × 120 días simulados = 30'
+    raices_disponibles:
+      - {clave: kaya, capa: caquetío-reconstruido, sig: 'lluvia, agua del cielo'}
+      - {clave: tabri, capa: caquetío-atestiguado, sig: 'siembra, plantación en proceso'}
+      - {clave: jusual, capa: caquetío-atestiguado, sig: 'sembrar, siembra, sembradío. Conuco'}
+      - {clave: kono, capa: caquetío-reconstruido, sig: 'sembrar, plantar, cultivar'}
+    viento:
+      - dato: 'El alisio no para —sopla los doce meses— pero afloja, y con él afloja la evaporación que fabrica la sal.'
+        etiqueta: atestiguado
+        capa: moderno
+        procedencia: {obra: camacho-2011, pagina: '9 y 15'}
+        apoyo_en_repo: [ecologia-020, ecologia-010]
+        estacion: 'lluvias'
+        voz_caquetia: {clave: joutai, capa: caquetío-reconstruido}
+    lluvia:
+      - dato: >-
+          «La lluvia no se reparte: se concentra en un pulso corto (aprox.
+          octubre-diciembre) y el resto del año domina la seca.»
+        etiqueta: atestiguado
+        capa: moderno
+        procedencia: {obra: camacho-2011, pagina: '8-9'}
+        apoyo_en_repo: [ecologia-006]
+        estacion: 'lluvias'
+        voz_caquetia: {clave: kaya, capa: caquetío-reconstruido}
+      - dato: >-
+          ⭐ El pulso, visto en el sitio y fechado: «Sievers, que estuvo allí en
+          los últimos días de octubre y primeros de noviembre de 1892, época
+          lluviosa, habla de las feraces campiñas de Pueblo Nuevo, con sus
+          fértiles dehesas, potreros y maizales... Meses después habría podido
+          contemplar las "feraces campiñas" vueltas tristes secadales.»
+        etiqueta: atestiguado
+        capa: 's. XIX (observación de 1892), citada por Arcaya en 1920'
+        procedencia: {obra: arcaya-1920, pagina: '24'}
+        estacion: 'lluvias'
+        voz_caquetia: {clave: kaya, capa: caquetío-reconstruido}
+        lectura: >-
+          Es el único testimonio del repo que fecha el pulso DENTRO de Paraguaná
+          y no en la estación de Coro: coincide con ecologia-006 y es lo que
+          sostiene los tres meses de P3.
+      - dato: >-
+          «mas es tal la bondad del suelo, especialmente en Paraguaná, que pocos
+          aguaceros transforman en jardines a los campos más áridos.»
+        etiqueta: atestiguado
+        capa: s. XX
+        procedencia: {obra: arcaya-1920, pagina: '24'}
+        estacion: 'lluvias'
+        voz_caquetia: {clave: kaya, capa: caquetío-reconstruido}
+      - dato: >-
+          La lluvia también rompe: la acequia del buco de Coro «todos los años en
+          tiempos de aguas... se enarena, y la presa se quiebra en dos y tres
+          vezes», y hacían falta cuatro o cinco mil indios para repararla.
+        etiqueta: atestiguado
+        capa: 'colonial (Ballesteros 1550, sobre obra que describe como indígena y anterior)'
+        procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 263 (pdf 81), citando Ballesteros 1550'}
+        apoyo_en_repo: [ecologia-028]
+        estacion: 'lluvias'
+        voz_caquetia: {clave: buko, capa: caquetío-atestiguado}
+        regla_3: 'es el río Coro, no Paraguaná (que no tiene ríos): vale como la forma del trabajo colectivo de la lluvia, no como obra de la península'
+    mar:
+      - dato: >-
+          El agua se enturbia y el Golfete se vuelve menos legible: el viento y la
+          marea mueven ~10⁴ ton/año de sedimento y forman barras que aparecen y se
+          mueven. Con la lluvia bajan además los cauces efímeros del continente.
+        etiqueta: reconstruido
+        procedencia: {obra: camacho-2011, pagina: '16-17'}
+        apoyo_en_repo: [ecologia-027, ecologia-007]
+        estacion: 'lluvias'
+        voz_caquetia: {clave: rao, capa: caquetío-atestiguado}
+    agua_dulce:
+      - dato: >-
+          Los cauces efímeros corren: «Al bajar a la llanura sus cauces se secan,
+          aunque en épocas de lluvias se tornan torrentosos»; y el Yenemo «no corre
+          sino cuando llueve, salvo en sus cabeceras».
+        etiqueta: atestiguado
+        capa: s. XX
+        procedencia: {obra: arcaya-1920, pagina: '14 y 16'}
+        apoyo_en_repo: [ecologia-007, hueco-lex-006]
+        estacion: 'lluvias'
+        hueco_lexico: true
+        concepto: 'la quebrada efímera — el cauce que sólo lleva agua tras la lluvia (hueco-lex-006)'
+      - dato: >-
+          Es cuando se llenan los estanques. En Paraguaná NO hay ríos que llenar:
+          «Ningún río, ni siquiera un arroyo, riega a Paraguaná.» El agua del año
+          es la que se capture ahora.
+        etiqueta: atestiguado
+        capa: 's. XX (Arcaya sobre Sievers)'
+        procedencia: {obra: arcaya-1920, pagina: '22'}
+        apoyo_en_repo: [ecologia-008]
+        estacion: 'lluvias'
+        voz_caquetia: {clave: buko, capa: caquetío-atestiguado}
+    cielo:
+      - dato: >-
+          La ventana agrícola es corta y hay que acertarle: «A succesful harvest
+          in this area requires crops with short growing seasons to coincide with
+          the brief rainy seasons, or otherwise it needs human intervention in the
+          form of irrigation by artificial ditches, or "hand" irrigation by
+          extracting rainwater collected from artificial ponds (jagüey).»
+        etiqueta: reconstruido
+        procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 245 (pdf 63), §3.4.1'}
+        estacion: 'lluvias'
+        voz_caquetia: {clave: tabri, capa: caquetío-atestiguado}
+      - dato: >-
+          Y el riesgo del período: talar y quemar el conuco en un semiárido con
+          alisio constante es operación vigilada, porque el mismo viento que
+          fabrica la sal puede llevarse el fuego.
+        etiqueta: hipotetico
+        deuda: sin-procedencia
+        apoyo_en_repo: [ecologia-030]
+        estacion: 'lluvias'
+        voz_caquetia: {clave: amana, capa: caquetío-reconstruido}
+    el_dia:
+      amanecer:
+        - dato: 'Se lee el cielo antes de clavar la estaca: la señal de que el pulso empezó decide la siembra del año entero.'
+          etiqueta: canon-simulacion
+          deuda: sin-procedencia
+          apoyo_en_repo: [ecologia-006]
+          estacion: 'lluvias — amanecer'
+          voz_caquetia: {clave: kono, capa: caquetío-reconstruido}
+      mañana:
+        - dato: 'El conuco se abre con la coa: «palo de madera aguzado para abrir el surco». Es la herramienta agrícola indígena y no tiene nombre caquetío en el lexicón.'
+          etiqueta: retro-abstraido
+          capa: 's. XX (Esteves recoge la glosa en Coabana; Medina la describe viva, mc-mundo-014)'
+          procedencia: {obra: esteves-1989, pagina: '31 (entrada Coabana)'}
+          estacion: 'lluvias — mañana'
+          voz_caquetia: {clave: koa, capa: caquetío-reconstruido}
+      tarde:
+        - dato: 'El salinar no produce: «En lluvias el salinar no produce.» El que raspaba sal en P1 está ahora en el conuco.'
+          etiqueta: reconstruido
+          procedencia: {obra: camacho-2011, pagina: '(vía ecologia-010)'}
+          apoyo_en_repo: [ecologia-010]
+          estacion: 'lluvias — tarde'
+          voz_caquetia: {clave: borojo, capa: caquetío-atestiguado}
+      noche:
+        - dato: 'Con el cielo cubierto se pierde la luna, que es la única unidad de tiempo caquetía atestiguada (`apana`, una luna; `buiamati`, dos lunas).'
+          etiqueta: canon-simulacion
+          deuda: sin-procedencia
+          estacion: 'lluvias — noche'
+          voz_caquetia: {clave: apana, capa: caquetío-atestiguado}
+
+# ══════════════════════════════════════════════════════════════════
+# 2. QUÉ ABRE Y QUÉ CIERRA CADA PERÍODO, POR SITIO
+# ══════════════════════════════════════════════════════════════════
+abre_y_cierra:
+  criterio: >-
+    Sólo entra aquí lo que una fuente adscribe a un lugar o a una técnica con
+    ritmo propio. La asignación del recurso al sitio de la era 2 es
+    canon-simulación (los sitios son decisión del 2026-09-14); el dato del
+    recurso lleva su propia etiqueta.
+
+  Tacuato:
+    - dato: 'ABRE en P1 — el raspado de la sal: el ciclo del biro está sincronizado con la seca, y en la Colonia el control del comercio de sal de la orilla que mira a Coro estaba justamente aquí («un Resguardo de Salinas para vigilar el comercio de sal que se practicaba en la localidad»).'
+      etiqueta: canon-simulacion
+      capa: 'la salina es s. XX y el Resguardo es colonial; el ciclo es física de la evaporación'
+      procedencia: {obra: esteves-1989, pagina: '62'}
+      apoyo_en_repo: [ecologia-009, ecologia-010]
+      estacion: 'seca'
+      voz_caquetia: {clave: biro, capa: caquetío-atestiguado}
+    - dato: 'ABRE en P1, de noche — la pesca del cunaro con jachos untados de su propia manteca, en el Golfete.'
+      etiqueta: atestiguado
+      capa: 's. XX, sin fecha de origen'
+      procedencia: {obra: esteves-1989, pagina: '33'}
+      estacion: 'seca — noche'
+      voz_caquetia: {clave: jachos, capa: caquetío-atestiguado}
+    - dato: 'ABRE en P3 — el conuco, con el agua del jagüey que Oliver describe para esta costa y que el casting ya ancló aquí (Korie-ko reanclado a los jagüeyes de Tacuato, decisión del 2026-09-14).'
+      etiqueta: canon-simulacion
+      procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 245 (pdf 63)'}
+      estacion: 'lluvias'
+      voz_caquetia: {clave: jagey, capa: caquetío-atestiguado}
+
+  El Cayude:
+    - dato: 'ABRE en P1 — la orilla del Golfete (ZG2), la misma zona de los Tacuatos, con el agua clara de la seca.'
+      etiqueta: canon-simulacion
+      deuda: sin-procedencia
+      apoyo_en_repo: [ecologia-015, ecologia-026]
+      estacion: 'seca'
+      voz_caquetia: {clave: kari, capa: caquetío-atestiguado}
+    - dato: 'CIERRA en P2 — el fundo se llama por un árbol frutal («Cayude: árbol frutal»; en Falcón, «árbol anonáceo, turagua»), y el fruto no es de la seca larga.'
+      etiqueta: atestiguado
+      capa: s. XX
+      procedencia: {obra: esteves-1989, pagina: '30 y 100'}
+      estacion: 'seca larga'
+      voz_caquetia: {clave: kayude, capa: caquetío-atestiguado}
+
+  Moruy:
+    - dato: 'ABRE en P1, al final — la chicha del merejuy y la fiesta de fin de seca: «cierta levadura o preparación agria que usaban para acelerar la fermentación del maíz cocido con que elaboraban la chicha embriagadora, que consumían en ceremonias religiosas».'
+      etiqueta: hipotetico
+      capa: 's. XX; es una etimología de Esteves sin cita, y el dato etnográfico dentro de ella no tiene segunda fuente'
+      procedencia: {obra: esteves-1989, pagina: '53-54'}
+      estacion: 'seca'
+      voz_caquetia: {clave: buriche, capa: caquetío-atestiguado}
+    - dato: 'ABRE en P3 — el barro: las vetas de barro de loza de Abudure se ven «en los cangilones labrados por la lluvia». La lluvia es la que descubre la materia del alfarero.'
+      etiqueta: atestiguado
+      capa: s. XX
+      procedencia: {obra: esteves-1989, pagina: '11 (entrada Abudure)'}
+      estacion: 'lluvias'
+      voz_caquetia: {clave: dabuda, capa: caquetío-atestiguado}
+
+  Caseto:
+    - dato: 'ABRE en P3 — el conuco del interior, entre Moruy y la laguna: es el sitio sin playa propia, y su año lo manda la lluvia.'
+      etiqueta: canon-simulacion
+      deuda: sin-procedencia
+      apoyo: 'estructura_social_era2.yaml (Caseto como aldea del interior); Oliver DOC 245'
+      estacion: 'lluvias'
+      voz_caquetia: {clave: wa, capa: caquetío-atestiguado}
+    - dato: 'ABRE en P1 — la sal de Sanajaquí, «salinas en el territorio del municipio Los Taques», el extremo norte de la zona ZA1 que la decisión del 2026-09-14 le dio a AMUAY.'
+      etiqueta: atestiguado
+      capa: s. XX
+      procedencia: {obra: esteves-1989, pagina: '58'}
+      estacion: 'seca'
+      voz_caquetia: {clave: takes, capa: caquetío-atestiguado}
+
+  Carirubana:
+    - dato: 'ABRE en P1 — la atalaya de cardúmenes: Sarabón es un «punto costeño al Norte de Punta Cardón que sirvió de atalaya a los pescadores para avistar (columbrar) los cardúmenes», y Suriquiba otro «punto costeño de Punta Cardón que sirvió de atalaya a los pescadores para atisbar los cardúmenes de peces».'
+      etiqueta: atestiguado
+      capa: s. XX
+      procedencia: {obra: esteves-1989, pagina: '58 y 61'}
+      apoyo_en_repo: [hueco-lex-002]
+      estacion: 'seca'
+      hueco_lexico: true
+      concepto: 'el cardumen — el objeto del oficio, sin palabra caquetía (hueco-lex-002)'
+    - dato: 'ABRE en P1 — la sal de la laguna de Guaranao, a ~3 km: «las más importantes son las de Guaranao».'
+      etiqueta: atestiguado
+      capa: 's. XX'
+      procedencia: {obra: arcaya-1920, pagina: '22'}
+      estacion: 'seca'
+      voz_caquetia: {clave: borojo, capa: caquetío-atestiguado}
+
+  Capubana:
+    - dato: 'NO CIERRA NUNCA — la fuente intermitente del cerro es la única agua corriente de la península, y es lo que hace del cerro el centro: cuando el jagüey baja, el cerro sigue.'
+      etiqueta: canon-simulacion
+      capa: 'la fuente es de Arcaya (s. XX); la proyección al s. XV es la decisión de Miguel del 2026-09-14'
+      procedencia: {obra: arcaya-1920, pagina: '22'}
+      estacion: 'todo el año'
+      voz_caquetia: {clave: kapubana, capa: caquetío-atestiguado}
+    - dato: 'ABRE al final de P2 — la convergencia: la subida al único sitio con agua justo antes de que lleguen las lluvias, cuando el señor «da los temporales» que están por venir.'
+      etiqueta: canon-simulacion
+      procedencia: {obra: velasco-2015-resistencia, pagina: 'Ampíes, folio 14'}
+      apoyo: '6-fusion/capubana_agua_y_microclima.yaml §consecuencias_para_la_era_2.ritual'
+      estacion: 'seca larga'
+      voz_caquetia: {clave: kapubana, capa: caquetío-atestiguado}
+
+  laguna de Guaranao:
+    - dato: 'ABRE en P1 — la sal: la salina de Guaranao es la más importante de Paraguaná (Arcaya) y su sal tenía fama curativa: «A la sal de Guaranao le atribuían excelentes propiedades curativas en enfermedades de la piel y en carnosidades oculares.»'
+      etiqueta: atestiguado
+      capa: 's. XIX-XX'
+      procedencia: {obra: esteves-1989, pagina: '41'}
+      apoyo: 'arcaya-1920 p. 22'
+      estacion: 'seca'
+      voz_caquetia: {clave: biro, capa: caquetío-atestiguado}
+    - dato: 'ABRE todo el año — el pez que le da nombre: «Guaranaro es un pez más pequeño que la lisa.»'
+      etiqueta: atestiguado
+      capa: s. XX
+      procedencia: {obra: esteves-1989, pagina: '41'}
+      estacion: 'todo el año'
+      voz_caquetia: {clave: waranaro, capa: caquetío-atestiguado}
+
+# ══════════════════════════════════════════════════════════════════
+# 3. LOS RITOS DEL CALENDARIO
+# ══════════════════════════════════════════════════════════════════
+ritos_del_calendario:
+  aviso: >-
+    Ninguna fuente describe un rito caquetío de calendario. Lo que hay es (a) el
+    paramount que controla o predice los fenómenos, (b) el boratio que consulta
+    por el año, y (c) los eventos que el motor ya tiene escritos. El ciclo de
+    abajo los coloca en el año de tres períodos; el ciclo en sí es
+    canon-simulación (estructura_social_era2.yaml, ciclos CM y CL).
+  entradas:
+    - dato: >-
+        El señor da el año: «les había hecho creer que él era el autor y hacedor
+        de muchas cosas que la tierra y elementos naturalmente producen... como
+        son las lluvias, granizos, truenos y relámpagos y heladas y secas; y como
+        del caer estas cosas a sus tiempos dependen los buenos temporales y
+        fructificación de la tierra y el tener sustento las gentes».
+      etiqueta: atestiguado
+      capa: contacto (s. XVI, P. Aguado sobre Manaure)
+      procedencia: {obra: arcaya-1920, pagina: '115'}
+      estacion: 'todo el año'
+      voz_caquetia: {clave: manaure, capa: caquetío-atestiguado}
+      lectura: >-
+        Oliver da la misma frase en DOC 266 y la remata con «--a good season--»:
+        el poder del paramount se mide en períodos, no en actos. Eso convierte el
+        calendario en una cuestión política y no sólo agrícola.
+    - dato: 'Ampíes, en primario: el gran cacique «se haze adorar... dando a entender a los indios q el da los temporales».'
+      etiqueta: atestiguado
+      capa: contacto (c. 1520)
+      procedencia: {obra: velasco-2015-resistencia, pagina: 'Ampíes, folio 14'}
+      estacion: 'seca larga'
+      voz_caquetia: {clave: manaure, capa: caquetío-atestiguado}
+    - dato: >-
+        La consulta por el año: «y le preguntan si lloverá o si el año será seco o
+        abundante, o si deben ir a la guerra contra sus enemigos». Y antes de cada
+        faena: «para ver si caminarán o yrán a pescar o sembrarán, y para ver si
+        matarán caza... cada uno es boratio».
+      etiqueta: atestiguado
+      capa: contacto (s. XVI, Oviedo y Valdés)
+      procedencia: {obra: arcaya-1920, pagina: '98-99'}
+      estacion: 'todo el año'
+      regla_4: 'Oviedo generaliza para la provincia de Venezuela; vale como forma del oficio, no como rito costero'
+      voz_caquetia: {clave: yuri, capa: caquetío-hipotético}
+      aviso: '`yuri` «tabaco, hoja sagrada del piache» es de las 38 hipotéticas que el perfil era2 esconde'
+    - dato: >-
+        FIESTA DE FIN DE SECA (cierre de P2): el motor ya la tiene escrita como
+        `fiesta_cosecha_chicha`, «Antes de que lleguen las lluvias la comunidad se
+        reúne en la plaza», y la declara de la seca. Con el año de tres períodos
+        cae al final de P2 y coincide con la convergencia del Capubana: la cara
+        sagrada y la profana del mismo momento.
+      etiqueta: canon-simulacion
+      deuda: sin-procedencia
+      apoyo: 'curiana_state.EVENTOS_ESTACIONALES (fiesta_cosecha_chicha, estacion: seca); estructura_social_era2.yaml, ciclo CM'
+      estacion: 'seca larga'
+      voz_caquetia: {clave: buriche, capa: caquetío-atestiguado}
+    - dato: >-
+        RITUAL DE LAS PRIMERAS LLUVIAS (apertura de P3): también escrito ya en el
+        motor (`ritual_siembra_primeras_lluvias`, estacion lluvias). Con el año de
+        tres períodos deja de caer en el día 61 de 120 y cae en el 91.
+      etiqueta: canon-simulacion
+      deuda: sin-procedencia
+      apoyo: 'curiana_state.EVENTOS_ESTACIONALES; ecologia-006'
+      estacion: 'lluvias'
+      voz_caquetia: {clave: kaya, capa: caquetío-reconstruido}
+    - dato: >-
+        GRAN COSECHA DE SAL (dentro de P1): el motor la declara de la seca y la
+        física la confirma — «es el Tiempo de Viento (alisio ENE fuerte + sol
+        intenso + poca lluvia) el que seca las charcas y permite la gran cosecha
+        de sal. En lluvias el salinar no produce.»
+      etiqueta: reconstruido
+      procedencia: {obra: camacho-2011, pagina: '(vía ecologia-010)'}
+      apoyo_en_repo: [ecologia-009, ecologia-010]
+      estacion: 'seca'
+      voz_caquetia: {clave: biro, capa: caquetío-atestiguado}
+    - dato: >-
+        ⭐ Y el objeto que nadie ha leído: en el cerro de Siraba, «unido al cerro
+        de Santa Ana por el lado Noreste», «están localizadas unos petroglifos que
+        llaman: "Las Piedras del Almanaque"». Es lo único del repo que la
+        tradición local asocia a un calendario, y está en el conglomerado del
+        Capubana.
+      etiqueta: retro-abstraido
+      capa: 's. XX (el nombre es de la tradición local; Esteves no lo interpreta)'
+      procedencia: {obra: esteves-1989, pagina: '60'}
+      estacion: 'todo el año'
+      voz_caquetia: {clave: kiba, capa: caquetío-atestiguado}
+      que_lo_subiria: 'una lectura publicada de esos petroglifos (Morón 2012 los tiene inventariados para Falcón: comprobar si incluye Siraba)'
+
+# ══════════════════════════════════════════════════════════════════
+# 4. LO QUE CAMBIA EN EL MOTOR
+# ══════════════════════════════════════════════════════════════════
+lo_que_cambia_en_el_motor:
+  lo_que_hay_hoy:
+    medido: 'curiana_state, leído el 2026-09-14'
+    ESTACIONES: >-
+      dos entradas. «seca» = Tiempo de Viento, meses_equiv «Dic-May»; «lluvias»
+      = Tiempo de Siembra, meses_equiv «Jun-Nov». Seis meses cada una.
+    DIAS_POR_ESTACION: 60
+    ESTACION_DE_DIA: 'alterna cada 60 días; el día 1 es seca. El año son 120 días simulados'
+    campos_muertos: >-
+      `descripcion` y `actividades_primarias` de cada estación NO los lee nadie:
+      `to_context_string()` sólo emite `nombre` y `clima_base`. El bloque de
+      mundo que llega al agente son 152 caracteres medidos y no menciona ni la
+      actividad ni el sitio.
+  el_choque:
+    - dato: >-
+        El motor da seis meses de lluvias (Jun-Nov) y el corpus mide un pulso de
+        tres (oct-dic). Los meses del motor no coinciden ni en duración ni en
+        posición: en el motor llueve en junio y julio, que en el dato son los
+        meses más secos del año.
+      etiqueta: atestiguado
+      capa: 'moderno (la medición) frente a canon de simulación (el motor)'
+      procedencia: {obra: camacho-2011, pagina: '8-9'}
+      apoyo_en_repo: [ecologia-006]
+      estacion: 'todo el año'
+    - dato: >-
+        El testimonio en el sitio lo confirma: Sievers estuvo en Paraguaná «en los
+        últimos días de octubre y primeros de noviembre de 1892, época lluviosa».
+        En el calendario del motor esos días son seca.
+      etiqueta: atestiguado
+      capa: 's. XIX, citado en 1920'
+      procedencia: {obra: arcaya-1920, pagina: '24'}
+      estacion: 'lluvias'
+  lo_que_se_propone:
+    tres_periodos: 'P1 50 días, P2 40, P3 30. Suma 120: el año del motor no cambia de tamaño, cambia de reparto'
+    donde_se_toca: >-
+      curiana_state.ESTACIONES (tres entradas en vez de dos),
+      DIAS_POR_ESTACION (pasa a un mapa id → días) y ESTACION_DE_DIA (de
+      alternancia módulo 2 a acumulado sobre los tres tramos). Nada más del motor
+      lee la estación por nombre salvo EVENTOS_ESTACIONALES, que declara
+      `estacion: seca | lluvias`: los tres eventos de seca se reparten entre P1
+      (gran_cosecha_sal, expedicion_perlas) y P2 (fiesta_cosecha_chicha) y los
+      tres de lluvias se quedan en P3.
+    alternativa_minima: 'dejar dos estaciones y cambiar sólo DIAS_POR_ESTACION por {seca: 90, lluvias: 30} y los meses_equiv a «Ene-Sep» / «Oct-Dic»'
+    campos_muertos: >-
+      `descripcion` y `actividades_primarias` dejan de estar muertos si el
+      cargador de mundo los usa: son exactamente el material del bloque [Tu
+      tierra] por período. Ver el diseño en
+      6-fusion/issues-pendientes/mundo-era2-sitios-y-clima.md.
+    el_dia_ya_existe: >-
+      MOMENTOS_DIA y ACTIVIDADES_POR_MOMENTO ya están y tampoco los lee el
+      prompt: `to_context_string()` emite el momento («Turno 1 (amanecer)») pero
+      no lo que ese momento significa. El bloque `el_dia` de cada período de
+      arriba es lo que faltaba para que el momento diga algo distinto en la seca
+      y en las lluvias.
+    lo_que_NO_se_propone: >-
+      Nada de esto cambia `capas_de_score` ni el perfil `era2`. Un cambio de
+      calendario mueve QUÉ ve el agente del mundo, nunca con qué se le puntúa.
+
+preguntas_de_clima:
+  - 'P-C1: ¿tres períodos (50/40/30) o dos (90/30)? Los dos respetan el corpus; el de tres es el que hace visible la seca larga, que es donde el Capubana cobra sentido.'
+  - 'P-C2: los períodos se quedan sin nombre caquetío a propósito (para que los agentes lo acuñen). ¿Confirmas, o prefieres que el prompt les dé un rótulo?'
