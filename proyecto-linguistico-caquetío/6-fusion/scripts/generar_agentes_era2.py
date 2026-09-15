@@ -7,7 +7,13 @@ Lee 6-fusion/elenco_era2.yaml (la propuesta de casting que Miguel decidió el
 GENERADO con la misma forma que curiana_agents.py (tier, genero, edad, etnia,
 ubicacion_default, actividades, system_prompt, descripcion) más lo que la era 2
 añade: nodo, casa, sitio, zona_de_pesca, linaje, rol_en_la_casa, oficio,
-papel_kapubana, en_roster y el dossier de fuentes.
+papel_kapubana, en_roster, alias_era1 y el dossier de fuentes.
+
+Desde la campaña de antropónimos del 2026-09-14 cada agente lleva además su
+`alias_era1` —el nombre que tuvo en el casting, antes de que los nombres se
+rehicieran con raíces y formantes atestiguados— y el módulo expone
+ALIAS_ERA1 = {nombre_era1: nombre_nuevo} para que el corpus, la genealogía y
+las bitácoras de los runs de prueba sigan resolviendo.
 
 No se edita el módulo: se corrige el YAML y se regenera. El hook del proyecto
 bloquea editarlo a mano. `test_elenco_era2.py` comprueba que el módulo del repo
@@ -87,6 +93,7 @@ def _agente(a: dict) -> dict:
         "papel_kapubana": a.get("papel_kapubana"),
         "en_roster": bool(a.get("en_roster")),
         "origen": a.get("origen"),
+        "alias_era1": a.get("alias_era1"),
         "dossier": a.get("dossier") or {},
     }
     return d
@@ -126,7 +133,10 @@ def emitir(elenco: dict) -> str:
     w("se corrige el YAML y se regenera. test_elenco_era2.py vigila que este\n")
     w("módulo sea lo que el script emite.\n\n")
     w("Misma forma que curiana_agents.py, más nodo, casa, sitio, zona_de_pesca,\n")
-    w("linaje, rol_en_la_casa, oficio, papel_kapubana, en_roster y dossier.\n")
+    w("linaje, rol_en_la_casa, oficio, papel_kapubana, en_roster, alias_era1 y\n")
+    w("dossier. Los nombres se rehicieron el 2026-09-14 con raíces y formantes\n")
+    w("atestiguados (campaña de antropónimos); ALIAS_ERA1 traduce del nombre\n")
+    w("viejo al nuevo.\n")
     w("Se activa con CURIANA_ELENCO=era2 (o --elenco era2 en el orquestador):\n")
     w("curiana_agents.py lo importa y expone su ALL_AGENTS.\n")
     w('"""\n\n')
@@ -156,8 +166,16 @@ def emitir(elenco: dict) -> str:
     w("# El roster que rota de continuo según el casting (P10: proporcional, 14 y 10);\n")
     w("# el motor con --roster todos hace rotar a todo el elenco.\n")
     w(f"ROSTER_NUCLEO = {_literal(roster, 0)}\n\n")
+    alias = {a["alias_era1"]: a["nombre"] for a in agentes if a.get("alias_era1")}
+    w("# Del nombre de la era 1 (o del que acuñó el casting) al nombre de la era 2.\n")
+    w("# Los tres conservados —Manaure, Kunaro-bana y Dara-bana— se apuntan a sí\n")
+    w("# mismos, así que el diccionario cubre a los 63 y resolver es incondicional.\n")
+    w(f"ALIAS_ERA1 = {_literal(alias, 0)}\n\n")
     w("\ndef get_agent(nombre):\n")
-    w("    return ALL_AGENTS.get(nombre)\n")
+    w("    return ALL_AGENTS.get(nombre)\n\n")
+    w("\ndef resolver_alias(nombre):\n")
+    w('    """El nombre de la era 2 de un agente nombrado como en la era 1."""\n')
+    w("    return ALIAS_ERA1.get(nombre, nombre)\n")
     return out.getvalue()
 
 

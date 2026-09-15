@@ -9,6 +9,10 @@ de agentes para la era 2»).
   - El prompt de un agente de la era 2 nombra su nodo y su sitio; el estímulo
     del turno nombra su sitio.
   - El tier 3 ya ve una muestra de vocabulario.
+  - Campaña de antropónimos (Miguel, 2026-09-14: «Sí o sí hay que sacar eso
+    de -ko y -sha. Si es inventado, tanto de la gramática como de los
+    nombres»): ningún nombre lleva -ko ni -sha, y ALIAS_ERA1 resuelve del
+    nombre viejo al nuevo para los 63.
 """
 import importlib.util
 import io
@@ -59,6 +63,64 @@ def test_el_elenco_era2_tiene_sus_63_con_nodo_casa_y_sitio():
     assert len(era2.ROSTER_NUCLEO) == era2.MEDIDO["en_roster"] == 24
 
 
+def test_ningun_nombre_de_la_era2_lleva_ko_ni_sha():
+    """Los sufijos -ko «hombre de» y -sha «mujer de» eran convención de la era 1
+    sin campo de evidencia. Miguel los retiró el 2026-09-14 de los nombres y de
+    la gramática; aquí se vigila la mitad de los nombres.
+
+    `conservados` son los tres que el sistema de nombres declara intactos
+    (6-fusion/sistema_de_nombres_era2.yaml regla g): ninguno lleva -ko ni -sha,
+    así que la lista existe para que el test siga siendo verdad si algún día se
+    declara una excepción, no para tapar una.
+    """
+    sistema = yaml.safe_load(io.open(
+        os.path.join(RAIZ, "6-fusion", "sistema_de_nombres_era2.yaml"), encoding="utf-8"))
+    reglas = {r["id"]: r for r in sistema["reglas"]}
+    conservados = {c["nombre"] for c in reglas["g"]["conservados"]}
+    assert conservados == {"Manaure", "Kunaro-bana", "Dara-bana"}
+
+    con_sufijo = [n for n in era2.ALL_AGENTS
+                  if n.endswith(("-ko", "-sha")) and n not in conservados]
+    assert con_sufijo == []
+    # y tampoco los otros formantes inventados del casting
+    assert [n for n in era2.ALL_AGENTS
+            if n.endswith(("-ni", "-nu", "-mana")) and n not in conservados] == []
+
+
+def test_alias_era1_resuelve_para_los_63():
+    """El puente con la era 1: el corpus, la genealogía y las bitácoras de los
+    runs de prueba nombran a la gente como se llamaba antes."""
+    assert len(era2.ALIAS_ERA1) == len(era2.ALL_AGENTS) == 63
+    # todo alias apunta a un agente que existe
+    for viejo, nuevo in era2.ALIAS_ERA1.items():
+        assert nuevo in era2.ALL_AGENTS, viejo
+        assert era2.ALL_AGENTS[nuevo]["alias_era1"] == viejo
+    # los tres conservados se apuntan a sí mismos
+    for n in ("Manaure", "Kunaro-bana", "Dara-bana"):
+        assert era2.resolver_alias(n) == n
+    # y los renombrados resuelven
+    assert era2.resolver_alias("Shaboro") == "Sawaka"
+    assert era2.resolver_alias("Biro-ko") == "Birokoa"
+    assert era2.resolver_alias("Paugis-sha") == "Paugis"
+    # un nombre que no es de nadie se devuelve tal cual
+    assert era2.resolver_alias("Tariwa") == "Tariwa"
+
+
+def test_las_raices_de_los_nombres_son_caquetio_del_lexicon():
+    """Regla a del sistema de nombres: raíz atestiguada (preferida) o
+    reconstruida, nunca hipotética ni comparanda."""
+    from curiana_lexicon import VOCABULARIO_BASE
+    mapa = yaml.safe_load(io.open(
+        os.path.join(RAIZ, "6-fusion", "mapa_nombres_era2.yaml"), encoding="utf-8"))
+    assert len(mapa["nombres"]) == 63
+    for fila in mapa["nombres"]:
+        entrada = VOCABULARIO_BASE.get(fila["raiz"])
+        assert entrada is not None, fila["raiz"]
+        assert entrada["fuente"] in ("caquetío-atestiguado", "caquetío-reconstruido"), fila
+        esperado = fila.get("nombre") if fila["nombre_nuevo"] == "se conserva" else fila["nombre_nuevo"]
+        assert esperado in era2.ALL_AGENTS, esperado
+
+
 def test_los_tier_3_de_la_era2_traen_prompt_con_su_nodo():
     t3 = [a for a in era2.ALL_AGENTS.values() if a["tier"] == 3]
     assert t3
@@ -95,9 +157,12 @@ def test_el_prompt_de_un_agente_de_la_era2_nombra_su_nodo_y_su_sitio(monkeypatch
     lexico = LexicoComunitario()
     state = estado_inicial_test()
     state.mundo = era2.MUNDO
-    orch.call_agent(object(), "Kunaro-bana", state, lexico, ObserverAgent(object(), lexico),
+    # Birokoa es el de la sal en Tacuato; en la era 1 se llamaba Biro-ko y el
+    # nombre se rehizo el 2026-09-14 (biro «sal» + -koa, el formante de Uriacoa).
+    orch.call_agent(object(), "Birokoa", state, lexico, ObserverAgent(object(), lexico),
                     orch.MOMENTOS_ESTIMULO["amanecer"])
     s = capturado["system"]
+    assert "Eres Birokoa" in s and "Biro-ko" not in s
     assert "[Tu gente]: tu nodo es GUARANAO" in s and "Tacuato" in s
     assert "la orilla del Golfete" in s
     assert "[PARAGUANÁ — " in s and "[CURIANA" not in s

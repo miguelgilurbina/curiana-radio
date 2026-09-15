@@ -7790,6 +7790,25 @@ def _familia_de_token(tok: str) -> str:
     return "caquetío"  # neologismo comunitario: no es préstamo, es lengua propia
 
 
+_NOMBRES_AGENTES: Optional[frozenset] = None
+
+
+def _nombres_de_agentes() -> frozenset:
+    """Los nombres del elenco activo y de la era 1, en minúscula, tal como los
+    produce _tokenizar. Se cargan una vez; curiana_agents no importa de aquí,
+    así que no hay ciclo."""
+    global _NOMBRES_AGENTES
+    if _NOMBRES_AGENTES is None:
+        try:
+            import curiana_agents as _ag
+            nombres = (set(_ag.ALL_AGENTS) | set(_ag.AGENTS_T1)
+                       | set(_ag.AGENTS_T2) | set(_ag.AGENTS_T3))
+        except Exception:                                    # noqa: BLE001
+            nombres = set()
+        _NOMBRES_AGENTES = frozenset(n.lower() for n in nombres)
+    return _NOMBRES_AGENTES
+
+
 def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
     """
     Calcula métricas lingüísticas de una respuesta de agente, midiendo
@@ -7808,6 +7827,14 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
     """
     limpio = _normalizar(texto)
     tokens = _tokenizar(limpio)
+    # Los nombres de los agentes no son vocabulario. Desde la campaña de
+    # antropónimos (2026-09-14) 49 de los 63 nombres de la era 2 son homógrafos
+    # de una clave del lexicón (Karebe / karebe «cucharón») y el tokenizador
+    # pone todo en minúsculas: nombrar a alguien contaba como usar la palabra.
+    # Se descartan los nombres del elenco activo y los de la era 1 (que los
+    # eventos todavía citan). Consecuencia declarada: «Biro-ko» ya no suma
+    # «biro» como uso, tampoco en la era 1.
+    tokens = [t for t in tokens if t not in _nombres_de_agentes()]
     n_tok = len(tokens) or 1
 
     activos = set(lexico.palabras_activas())          # base + adoptados

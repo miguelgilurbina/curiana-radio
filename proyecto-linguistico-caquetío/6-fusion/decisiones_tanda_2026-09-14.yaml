@@ -309,6 +309,31 @@ antroponimos_era2:
     corpus y la genealogía sigan resolviendo; regenerar el módulo. Manaure se
     queda: es título. Si Miguel prefería mantener -ko/-sha como convención
     declarada, se revierte con el mapa.
+  campana_hecha_2026-09-14:
+    minado: '6-fusion/antroponimos_caquetios.yaml (48 entradas, 79 formas; mide 6-fusion/scripts/medir_antroponimos.py)'
+    hallazgos: >-
+      Naure ~ Anaure, «un gran cacique que está diez leguas la tierra adentro en
+      la provincia de Coro» (carta de Ampíes, Arcaya 1920 p. 160): la forma
+      desnuda del elemento de la serie -aure, y voz del lexicón. Don Juan
+      Baracoica, hijo de Manaure (Arcaya pp. 160 y 199). Boniata/Bonyata de
+      Miraca en dos grafías independientes (Arcaya p. 220; AGI leg. 218). Barbo
+      de Goyabaco (Arcaya p. 220). Formantes productivos en nombre de persona:
+      -aure (7), -ure (8), -ata (4), -koa (1, Uriacoa). Ceros: ningún nombre de
+      mujer caquetía, ninguna marca de género, ningún antropónimo precontacto.
+    correccion: >-
+      Categue (Castellanos, línea 52079) NO es de la elegía de Coro: es la Parte
+      II, Elegía I, Canto II, la entrada de Federmann «en demanda de los llanos»
+      (verificado por el escriba principal en el texto). Categue, Catimayagua,
+      Gecoagua y Badurajara quedan con regla 4 y no se usan.
+    sistema: '6-fusion/sistema_de_nombres_era2.yaml: raíz atestiguada o reconstruida, formante entre -aure/-ure/-koa/-ata, fonotáctica atestiguada, títulos como cargos salvo Manaure, sin -ko/-sha/-ni/-nu/-mana, antropónimos reales reservados por regla 3 (excepción: Naure), unicidad ampliada, tres conservados'
+    mapa: '6-fusion/mapa_nombres_era2.yaml: 60 renombrados, 3 conservados (Manaure, Kunaro-bana, Dara-bana); 63/63 con raíz del lexicón (58 atestiguada, 5 reconstruida); alias_era1 en cada ficha y ALIAS_ERA1 en el módulo generado'
+    ejemplos: 'Shaboro → Sawaka (inframundo) · Nubiri-sha → Karebe (cucharón de repartir) · Tawaka → Kasebo (poniente) · Biro-ko → Birokoa (biro + -koa, el molde de Uriacoa) · Paugis-sha → Paugis · Kumarawa-sha → Kumarawa · Itana-sha → Simaure'
+    problema_del_instrumento: >-
+      49 de los 63 nombres son homógrafos de una clave de VOCABULARIO_BASE y el
+      tokenizador del scorer pone todo en minúsculas: «Karebe» contaría como la
+      palabra karebe. Arreglado por el escriba principal: score_linguistico
+      descarta los nombres del elenco (activo y de la era 1) antes de contar.
+    preguntas_abiertas: '6-fusion/issues-pendientes/antroponimos-era2.md §6 (8 preguntas)'
   gramatica:
     estado: DECIDIDA (2026-09-14) — «Sí o sí hay que sacar eso de -ko y -sha. Si es inventado, tanto de la gramática como de los nombres»
     aplicado: >-

@@ -1,0 +1,314 @@
+# ─────────────────────────────────────────────────────────────────────────
+# EL SISTEMA DE NOMBRES DE LA ERA 2 — declarado, con su evidencia
+#
+# Decisión de Miguel, 2026-09-14: «Sí a los dos puntos» (campaña de
+# antropónimos · retirar -ko y -sha de los NOMBRES y construirlos con raíces
+# y formantes atestiguados) y, el mismo día: «Sí o sí hay que sacar eso de
+# -ko y -sha. Si es inventado, tanto de la gramática como de los nombres».
+#
+# Este archivo dice CÓMO se hace un nombre de la era 2 y por qué. Los 63
+# nombres concretos están en 6-fusion/mapa_nombres_era2.yaml; la evidencia,
+# en 6-fusion/antroponimos_caquetios.yaml. Lo verifica
+# 6-fusion/scripts/verificar_elenco_era2.py (sección SISTEMA DE NOMBRES).
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-14'
+  estado: sin-fusionar
+  quien: escriba (Claude), a pedido de Miguel
+  de_donde_sale: 6-fusion/antroponimos_caquetios.yaml
+  se_aplica_en: 6-fusion/mapa_nombres_era2.yaml
+  lo_verifica: 6-fusion/scripts/verificar_elenco_era2.py
+  alcance: >-
+    El elenco de la era 2 (Paraguaná, 63 agentes). NO se aplica al elenco de
+    la era 1, que queda tal cual en curiana_agents.py, ni a las personas de
+    fondo de 3-mundo/corpus/genealogia.yaml. El puente entre los dos mundos es
+    `alias_era1`, que cada agente lleva en su ficha y que el módulo generado
+    expone como ALIAS_ERA1.
+  por_que_ahora: >-
+    De los 63 nombres del casting, 30 tenían raíz en el lexicón (25
+    atestiguada, 5 reconstruida) y 33 no; y 42 llevaban -ko o -sha, sufijos
+    sin campo de evidencia. Un elenco así no puede sostener la pregunta del
+    experimento: si la mitad de los nombres son invención del proyecto, el
+    prompt enseña al agente formas que ninguna fuente respalda, y esas formas
+    vuelven en la salida como si fueran caquetío.
+
+# ══════════════════════════════════════════════════════════════════
+# LAS REGLAS
+# ══════════════════════════════════════════════════════════════════
+reglas:
+
+  - id: a
+    regla: >-
+      La RAÍZ de todo nombre es una voz de `VOCABULARIO_BASE` con fuente
+      `caquetío-atestiguado` (preferida) o `caquetío-reconstruido`. Nunca
+      hipotética, nunca retro-abstraída, y nunca comparanda (wayunaiki,
+      lokono, taíno, achagua, paraujano, kalinago).
+    campos_semanticos_permitidos: [animal, planta, lugar, cosa, oficio, cualidad, alimento, cuerpo, tiempo]
+    evidencia: >-
+      El patrón de transparencia: los antropónimos caquetíos documentados
+      están hechos de material léxico con significado. Uriacoa = `uria`
+      «plantío» + -koa; Baracoica lleva `bara` «palo, árbol»; `quiquiba`,
+      glosado «nombre propio indígena», se descompone qui~quiba «piedras»; y
+      Naure ES una voz del lexicón.
+    procedencia: {obra: zavala-reyes-2015, pagina: 'glosario, entradas de antropónimo'}
+    etiqueta: reconstruido
+    apoyo_interno: '6-fusion/velasco_primarios_agi.yaml §principio_general («UN NOMBRE PROPIO ATESTIGUA SUS MORFEMAS»)'
+    por_que_no_hipotetico: >-
+      Las 38 voces hipotéticas están escondidas en la era 2 por decisión del
+      mismo día («Confirmo, escondemos las 38 hipotéticas»): 35 de ellas son
+      acuñaciones del proyecto, y mostrarlas adelanta lo que el experimento
+      quiere ver acuñar a los agentes. Un nombre de agente con raíz hipotética
+      la metería en el prompt por la puerta de atrás, perfil `era2` o no.
+    por_que_no_comparanda: >-
+      El 80 % del lexicón no es caquetío (CLAUDE.md, trampa medida). Una raíz
+      wayuu o lokono en el nombre de un agente se propagaría como propia — que
+      es exactamente el bug de `palabras_caquetias` arreglado el 2026-09-09.
+
+  - id: b
+    regla: >-
+      El FORMANTE es opcional, y sólo puede ser uno de los que el registro
+      atestigua en nombre de persona: `-aure`, `-ure`, `-koa`, `-ata`. La
+      forma resultante tiene que pasar el filtro de
+      `curiana_fonotactica.Fonotactica` construido con el caquetío
+      atestiguado: sin letras fuera del inventario, sin cluster no atestiguado
+      y sin coda final no atestiguada.
+    formantes_productivos:
+      - formante: '-aure'
+        recurrencia: 7
+        glosa: 'ninguna en la fuente; marca de nombre de familia'
+        etiqueta: atestiguado
+        procedencia: {obra: esteves-1989, pagina: '13'}
+        cuando_se_usa: 'gente de casa y de linaje: matriarcas, herederos, quien lleva un nombre de estirpe'
+      - formante: '-ure'
+        recurrencia: 8
+        glosa: ninguna
+        etiqueta: atestiguado
+        procedencia: {obra: esteves-1989, pagina: '13'}
+        cuando_se_usa: 'igual que -aure, cuando la raíz ya termina en vocal a'
+      - formante: '-koa'
+        recurrencia: 1
+        glosa: '«el/la del sitio de X», por la vía de `bakoa` «bosque, lugar, paraje, sitio fértil» y del -bacoa toponímico'
+        etiqueta: 'atestiguado (la forma); reconstruido (la glosa)'
+        procedencia: {obra: zavala-reyes-2015, pagina: 'glosario — «Uriacoa: apellido de un cacique del s. XVI»'}
+        apoyo: '2-lengua/morfemas.yaml morfema-001 (-bacoa), cuatro apoyos + el primario Gorybacoa de 1538'
+        cuando_se_usa: 'sólo sobre raíz de COSA o LUGAR, como en Uriacoa; nunca sobre raíz verbal'
+      - formante: '-ata'
+        recurrencia: 4
+        glosa: ninguna
+        etiqueta: atestiguado
+        procedencia: {obra: velasco-2015-resistencia, pagina: 'Folio 2, Legajo 218, AGI (Bonyata, cacique de Myraca)'}
+        aviso: 'dos de las cuatro recurrencias son de Barquisimeto (regla 4); la costera es Bonyata'
+        cuando_se_usa: 'libre; es el formante más neutro'
+    formantes_excluidos:
+      - {formante: '-bana', por_que: 'morfema TOPONÍMICO (D9, «cerro, sitio alto», seis apoyos). Sus dos recurrencias en nombre de persona son Yarosabana (Yaracuy, regla 4) y Judibana (leyenda sin documento). Se conserva sólo donde ya estaba; no se acuña ninguno nuevo'}
+      - {formante: '-ika', por_que: 'un solo caso (Baracoica) y sin segunda grafía; regla 2, en duda degradar'}
+      - {formante: '-allo', por_que: '🔴 <ll> es dígrafo castellano. curiana_fonotactica.py avisa que `caquetillo` y `casquito` meten sus dígrafos en el inventario «atestiguado» y lo ensanchan. Acuñar en -allo sería acuñar castellano'}
+      - {formante: '-oa', por_que: 'se subsume en -koa, mejor sostenido'}
+      - {formante: '-ko', por_que: 'inventado. Ver regla e'}
+      - {formante: '-sha', por_que: 'inventado. Ver regla e'}
+      - {formante: '-ni / -nu / -mana / -bi', por_que: 'inventados también, y sin siquiera el pretexto del género: -ni y -nu chocan además con los aspectos verbales -ni (continuativo) y con -nu sin valor. Se retiran del elenco'}
+    elision_en_la_juntura: >-
+      Si la raíz acaba en la misma vocal con que empieza el formante, las dos
+      se funden en una: `rua` + `-ata` → Ruata, no *Ruaata. Motivo medido: el
+      caquetío atestiguado del lexicón no tiene vocal doble (las formas con
+      `aa` —chaa, kaa, maa, naa, paa, saa, taa, waa— son todas
+      caquetío-RECONSTRUIDO, calcadas del wayunaiki). Etiqueta:
+      canon-simulacion; es una regla de forma del proyecto, no un dato.
+    como_se_comprueba: >-
+      `verificar_elenco_era2.py` construye `Fonotactica(atestiguado)` y valida
+      cada nombre, y comprueba además que el nombre sea exactamente raíz +
+      formante (con la elisión de arriba). Medido el 2026-09-14: los 63 pasan.
+
+  - id: c
+    regla: >-
+      Los TÍTULOS son cargos, no nombres. `diao`, `apopo` y `boratio` nombran
+      la función y nunca a la persona. La única excepción es `manaure`, que en
+      el registro funciona como nombre del señor principal y se conserva como
+      tal.
+    evidencia:
+      - 'Zavala Reyes 2015 p. 65-67: apopo «jefe de parcialidad pequeña», boratio «piache, cacique, jefe, sacerdote, médico», diao «señor principal, jefe mayor»'
+      - 'Arcaya 1920 p. 114-115: «Manaure era, pues, un diao … más que el simple médico hechicero a quien llamaban boratio»'
+      - 'Antolínez 1944: «los cronistas nos hablan de EL Manaure … no es nombre propio de varón, sino el nombre de una jerarquía política»'
+      - 'y sin embargo Castellanos escribe «el cacique Manaure, rey de Coro» y Esteves lo pone en la lista de apellidos vivos: el título SE USA como nombre'
+    procedencia: {obra: zavala-reyes-2015, pagina: '65-67'}
+    etiqueta: atestiguado
+    consecuencia: >-
+      El agente Manaure conserva su nombre. Ningún otro agente se llama diao,
+      apopo ni boratio; esos tres viven en `rol_en_la_casa`, `oficio` y
+      `papel_kapubana`.
+
+  - id: d
+    regla: >-
+      Los nombres REALES atestiguados quedan declarados y RESERVADOS: son
+      reutilizables, pero no se usan en el primer elenco de la era 2, porque
+      todos pertenecen a personas del contacto o de la colonia (regla 3).
+    reservados:
+      - {nombre: Uriacoa, etiqueta: atestiguado, epoca: 'colonial, fines del s. XVI', por_que_no_se_usa: 'es el paramount reconocido por la Corona; ponerle ese nombre a un agente del s. XV proyecta el cacicazgo colonial sobre el precontacto'}
+      - {nombre: Caguallo, etiqueta: atestiguado, epoca: 'colonial, hasta 1636', por_que_no_se_usa: 'colonial, y su <ll> es del escribano'}
+      - {nombre: Bonyata, etiqueta: atestiguado, epoca: 'contacto, 1538', por_que_no_se_usa: 'cacique de Miraca muerto en la jornada de Federmann; Miraca está en el mundo, el hombre no'}
+      - {nombre: Baracoica, etiqueta: atestiguado, epoca: 'contacto', por_que_no_se_usa: 'emisario de Manaure a las islas; además es `forma` del canon de topónimos'}
+      - {nombre: Barbo, etiqueta: 'atestiguado (forma dudosa)', epoca: 'contacto, 1538', por_que_no_se_usa: 'el traslado del AGI lee «verbo» donde Herrera lee «Barbo»: la forma no es firme'}
+      - {nombre: Categue, etiqueta: atestiguado, epoca: contacto, regla_4: 'SÍ', por_que_no_se_usa: '🔴 VERIFICADO: no es de la elegía de Coro. Está en Castellanos Parte II, Elegía I, Canto II, en la marcha de Federmann «en demanda de los llanos». Es nombre del interior, no de la polity costera. Lo mismo Catimayagua, Gecoagua y Badurajara'}
+    apellidos_vivos_reutilizables_como_raiz:
+      etiqueta: atestiguado
+      procedencia: {obra: esteves-1989, pagina: '13 y 53'}
+      apoyo: {obra: medina-colina-sxx, pagina: '328'}
+      lista: [Caguao, Caguado, Cuauro, Cauro, Mabo, Guarecuco, Cotopo, Gotopo, Guanipa, Guariato, Timaure, Yaraure, Chunaure, Adaure, Capacho]
+      por_que_no_se_usan_todavia: >-
+        Son apellidos VIVOS de familias de Paraguaná. Ponerle el apellido de
+        una familia real a un personaje de ficción que come, se pelea y muere
+        en una simulación es una decisión que le toca a Miguel, no al escriba —
+        y varios (Adaure, Timaure, Tumarure) son además `forma` del canon de
+        topónimos, lo que la regla f prohíbe. Quedan declarados y disponibles.
+      reserva_cotopo: 'el formante -goto/-gotopo lo lee Arcaya como CARIBE «gente» (etnias.yaml, etnia-003): no es raíz caquetía segura'
+    nombres_de_leyenda:
+      etiqueta: retro-abstraido
+      lista: [Judibana, Jayana, Moruy, Borobó, Tumarure, Yanara]
+      por_que_no_se_usan: >-
+        Cuatro de los seis son a la vez TOPÓNIMO del canon (Judibana
+        toponimo-075, Jayana toponimo-110, Moruy toponimo-108, Tumarure), y la
+        regla f los excluye. Y la leyenda de Judibana es colonial (Ojeda 1500,
+        el Asalto de los Taques de 1526): regla 3.
+    excepcion_aplicada:
+      nombre: Naure
+      por_que_si: >-
+        ⭐ Es el único caso en que el nombre atestiguado y la voz del lexicón
+        son la MISMA palabra: `naure` está en VOCABULARIO_BASE como
+        caquetío-atestiguado («planta bejucosa», Zavala #186; «jojoto, mazorca
+        de maíz tierno» según Esteves), y Ampíes nombra un «gran cacique …
+        Naure o Anaure» en la provincia de Coro. Usarlo no importa a una
+        persona del contacto: usa una voz de la lengua que además consta como
+        nombre. La agente que lo lleva guarda la semilla de maíz.
+      procedencia: {obra: arcaya-1920, pagina: '160'}
+      etiqueta: atestiguado
+      regla_3: 'declarada: la atestación es de contacto; lo que se reutiliza es la VOZ, no el hombre'
+
+  - id: e
+    regla: >-
+      Sin `-ko` y sin `-sha`. El género no se marca en el nombre: vive en el
+      campo `genero` de la ficha.
+    evidencia: >-
+      Cero verificado sobre las 62 obras del repo: ninguna fuente dice que el
+      caquetío marque género en el antropónimo, y no hay un solo nombre de
+      mujer caquetía documentado (la única mujer de la esfera con nombre
+      escrito es Doña Sancha, y su nombre es castellano). REGLAS_AGENTIVAS no
+      tenía campo de evidencia: era convención de la era 1 nunca declarada.
+    procedencia: null
+    deuda: 'sin-procedencia — es un cero, y el cero está verificado en antroponimos_caquetios.yaml §ceros_verificados'
+    etiqueta: 'atestiguado (el cero)'
+    decision_de_miguel:
+      fecha: '2026-09-14'
+      literal: '«Sí o sí hay que sacar eso de -ko y -sha. Si es inventado, tanto de la gramática como de los nombres.»'
+      alcance: >-
+        Los nombres (este archivo y el mapa) Y la gramática que el prompt
+        enseña. Lo segundo lo aplicó el escriba principal en
+        curiana_sim/curiana_lexicon.py: REGLAS_AGENTIVAS pasa a
+        REGLAS_RETIRADAS, sale de TODAS_LAS_REGLAS y de las plantillas, que
+        ahora dicen sólo «PLURAL: -kana». Registro:
+        6-fusion/decisiones_tanda_2026-09-14.yaml §antroponimos_era2.gramatica.
+    tambien_se_retiran: ['-ni', '-nu', '-mana', '-bi', '-korie como cola de nombre']
+    que_se_pierde: >-
+      El lector humano ya no puede deducir el sexo del agente leyendo el
+      nombre. Es exactamente lo que ninguna fuente le permitía deducir. La
+      ficha, el prompt y la descripción lo dicen.
+
+  - id: f
+    regla: >-
+      UNICIDAD ampliada. Ningún nombre del elenco puede coincidir con: (1)
+      otro nombre del elenco; (2) un agente de la era 1 que se queda fuera
+      (`fuera_del_elenco`); (3) un agente de `curiana_agents.ALL_AGENTS` que
+      no sea su propio alias; (4) una persona de fondo de
+      `3-mundo/corpus/genealogia.yaml`; (5) la `forma` de un topónimo de
+      `2-lengua/toponimos.yaml`, ni como nombre entero ni como raíz, salvo los
+      que ese archivo declara `clase: antropónimo`. Y dos nombres del elenco
+      no pueden distinguirse por una sola letra.
+    como_se_compara: >-
+      Todo con `curiana_fonotactica.fonemizar`, para que la ortografía
+      colonial y la lingüística se comparen en el mismo plano (caruca ~ karuka,
+      quibacoa ~ kibakoa). La distancia entre nombres es Levenshtein sobre la
+      forma fonemizada, y tiene que ser ≥ 2.
+    por_que_los_toponimos: >-
+      Porque nombre de persona y nombre de lugar circulan en los dos sentidos
+      en esta onomástica (Cumarebo «el camino del cacique Cumare»; Mauroa y
+      Tumarure «apellido de un cacique»; Adaure y Chunaure son apellido Y
+      sitio). Si un agente se llama como un sitio del canon, el lector del
+      output no puede saber de cuál de los dos habla el texto — y el motor
+      tampoco: `EXCLUIR_DEL_HABLA` y la métrica de koiné leen formas, no
+      referentes.
+    por_que_una_sola_letra: >-
+      Con 63 agentes en cinco casas, dos nombres a una letra se confunden en
+      el prompt, en la memoria de cinco notas y en el contagio léxico. Ya pasó
+      en el casting: Ure-ko se descartó por confundirse con Uro-ko.
+    descartados_en_esta_campana:
+      - 'Bariki (para la matriarca alfarera): la raíz `bariki` coincide con un topónimo del canon → Dabuda'
+      - 'Tarika (para el guardián de los jagüeyes): a una letra de Arika y de Turicha → Patapati'
+      - 'Maure y Chaure: a una letra de Naure, que se conserva por atestiguado → Hiko y Hayo'
+      - 'Warataro (para la alfarera): a una letra de Waranaro → Dabuda'
+      - 'Amana (para la matriarca del fogón): a una letra de Amaka → Wairon'
+      - 'Kanaure (para el boratio mayor): a una letra de Manaure → Sawaka'
+      - 'Darubana (para el corredor): a una letra de Dara-bana → Chuchubi'
+      - 'Kurari (para el aprendiz de canoas): a una letra de Urari → Dakawa'
+      - 'Karama y Karapa a la vez: se queda Karama y la de la brea pasa a Mene'
+
+  - id: g
+    regla: 'QUÉ SE CONSERVA TAL CUAL.'
+    conservados:
+      - nombre: Manaure
+        por_que: 'es TÍTULO atestiguado, no nombre inventado (regla c). Miguel: «Manaure se queda»'
+        etiqueta: atestiguado
+      - nombre: Kunaro-bana
+        por_que: >-
+          raíz `kunaro` «pez del golfete de Coro, Promicops Guasa»,
+          caquetío-atestiguado; no lleva -ko ni -sha; y `-bana` tiene una
+          atestación antroponímica (Yarosabana) además de sus seis apoyos
+          toponímicos de D9. Es el apopo de los Tacuatos y su nombre ES su
+          pesca.
+        etiqueta: 'atestiguado (la raíz); reconstruido (el formante en nombre de persona)'
+        regla_4: 'la atestación de -bana en antropónimo es del Yaracuy: declarada, no importada en silencio'
+      - nombre: Dara-bana
+        por_que: 'raíz `dara` «alcaraván», caquetío-atestiguado; no lleva -ko ni -sha; mismo caso que Kunaro-bana. Es el vigía: el ave que ve primero'
+        etiqueta: 'atestiguado (la raíz); reconstruido (el formante)'
+        regla_4: 'igual que arriba'
+    que_NO_se_conserva_aunque_no_lleve_ko_ni_sha:
+      - 'Kabo-ni, Ebo-ni, Kali-nu, Dare-nu, Pari-nu, Bana-mana, Suri-bana, Tawaka, Daru, Kawa, Piri, Kori, Sha, Piru, Shaboro, Tawi, Nubi'
+      - por_que: >-
+          O su raíz no está en el lexicón (Suri, Tawaka, Daru, Kawa, Piri,
+          Kori, Sha, Piru, Shaboro, Tawi, Nubi), o su cola es un formante
+          inventado sin ninguna atestación (-ni, -nu, -mana) — que es el mismo
+          defecto que Miguel manda corregir en -ko y -sha, sólo que sin el
+          pretexto del género. Los que tenían buena raíz la conservan y pierden
+          la cola: Kabo-ni → Humohumo (cambia también la raíz por frecuencia,
+          ver abajo), Ebo-ni → Ebokoa, Dare-nu → Dakawa, Kali-nu → Wamipa.
+    nota_sobre_las_raices_buenas_que_se_van: >-
+      Cinco agentes tenían raíz atestiguada o reconstruida Y una cola
+      inventada. Tres conservan la raíz y cambian de cola (Ebo → Ebokoa;
+      Jakura-sha → Jakura; Kumarawa-sha → Kumarawa). Dos cambian de raíz
+      además, por la regla h: `kabo` «cabeza» y `kali` «sol» son voces de uso
+      demasiado corriente para ser nombre.
+
+  - id: h
+    regla: >-
+      Se EVITA como nombre una voz que el hablante usa a cada paso (sol, luna,
+      agua, noche, cabeza, pez, comer, ver). No es prohibición: es que un
+      nombre homógrafo de una voz frecuente ensucia `word_uses`, el contagio
+      léxico y la métrica de emergencia, donde el motor cuenta formas y no
+      referentes.
+    etiqueta: 'canon-simulacion (es cautela de instrumento, no dato)'
+    lo_que_no_evita: >-
+      🔴 No resuelve el problema, sólo lo reduce: por la regla a, y porque los
+      antropónimos caquetíos son transparentes, CASI TODO nombre de la era 2 es
+      homógrafo de una clave de VOCABULARIO_BASE. Cuántos exactamente lo mide
+      `verificar_elenco_era2.py` (conteo `nombres_homografos_del_lexicon`). Es
+      la pregunta 1 para Miguel.
+    aplicada_en: ['Kali-nu → Wamipa (no `kasi`/`kali` «sol»)', 'Kabo-ni → Humohumo (no `kabo` «cabeza»)', 'Suka-sha → Wache (no `suka` «noche»)', 'Dare-nu → Dakawa (no `dare` «diente, hijo»)']
+
+# ══════════════════════════════════════════════════════════════════
+# LO QUE EL SISTEMA NO DECIDE
+# ══════════════════════════════════════════════════════════════════
+lo_que_no_decide:
+  - 'si -aure es X + `naure` «mazorca tierna»: lectura `hipotetico`, no aplicada (4-fuentes/esteves-1989.md ya avisa «No lo apliques a Manaure todavía»)'
+  - 'si Naure ~ Anaure es Manaure sin el `ma-`: lectura, no dato'
+  - 'si los apellidos vivos de familias reales de Paraguaná pueden usarse como nombre de personaje: decisión de Miguel'
+  - 'los nombres y tótems de los linajes Kaira y Warana, que D1 dejó abiertos'
+  - 'qué hace el motor con un nombre homógrafo de una voz del lexicón (regla h)'
+  - 'si los nombres de la era 1 en curiana_agents.py se rehacen también: no se tocan, y el puente es ALIAS_ERA1'
