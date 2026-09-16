@@ -72,10 +72,70 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 
 | Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |
 |---|---|---|---|---|---|---|
+| 09-16 | `06482296` | 2 / — (día 3, **interrumpido**) | 12 resp. | — | — | Día 3 lanzado a las 19:36 con todo lo del cierre del día 1 ya en `main` (préstamos a la base, eventos de la era 2, Director con mundo, `--reflexion`) y **detenido en el turno 1 a petición de Miguel** («no lances aún el día 3; cerremos el día 2 y listo»). No cuenta: 2 turnos, 12 respuestas, sin cerrar. El estado en disco quedó al final del día 2 (día 3, turno 1, `run_anterior` 89fc1744): el próximo día 3 arranca de ahí con `--continuar` |
 | 09-16 | `89fc1744` | 6 / 1 (día 2) | **63** | 7.6 | 100% | **Día 2 con mundo, encadenado con `--continuar`** desde `c6837386` (semilla 2, motor `cb389991`): los seis turnos en el Tiempo de Viento. La koiné de ayer sobrevivió a la noche: `kali-iro-pabu` 14 usos hoy y una variante larga, `kuri-bana-iro-pabu`, le disputa el concepto (20 usos, «en disputa»); `kua-siwato` 15, `nii-bana` 9, `biro-kali` 6. `sima` «cerro» se extiende (`sima-pabu` «cerro ardiente», adoptada). ⭐ **Primera palabra del tiempo**: `tüshi-juri` «viento frío del este» (Hayo, adoptada) — el período empieza a nombrarse solo (decisión p2). El viento/`juri` aparece en 57 de 72 respuestas (`juri` 29 usos), el cerro en 45, el sitio en 15. Distancias entre días: ventana 0,604 → 0,467, emergente 0,900 → 0,820 (el veredicto del motor dice «datos insuficientes» porque no sigue la cadena `continuado_desde`: deuda conocida). Préstamos de esfera reales: 0 (dos falsos: `cacique`, `taita`, castellano leído como taíno). ⚠️ Deudas que delata el Director: los eventos de `curiana_state.py` son de la era 1 (nombran 29 veces a agentes viejos y a «los Guaycarí», foráneos que la era 2 dejó fuera) y el Director no recibe el mundo (dice «la Curiana», inventa un ceibo: ecologia-032) |
 | 09-16 | `c6837386` | 6 / 1 | **63** | 7.5 | 100% | **Primer día de la era 2 CON MUNDO** (motor `c69e042` limpio, tras el merge de #130; `--perfil era2 --semilla 1`): el año de tres períodos (los seis turnos en el Tiempo de Viento, los seis momentos), `[Tu tierra]` por sitio y `[Voces de fuera]` en tier 1. Medido: el sitio se nombra en 22 de 72 respuestas, el cerro en 37, el viento/`juri` en 12, los jachos en 7, el jagüey en 4; 26 acuñaciones (19 adoptadas), tres con `sima` «cerro» (wana-sima, amana-sima, sima-naa) y una competencia de once agentes por nombrar «las cuentas duras que brillan como el sol» que trae la canoa de las islas, fijada en `kali-iro-pabu`; ninguna acuñación del período ni del venado. **Préstamos de esfera: 0** en tier 1 (re-puntuado sobre las 72 respuestas), fugas 7. Emergente D1 0,90. ⚠️ No comparable con los del 14 (instrumento cambiado el 16) y **deuda de instrumento**: `word_uses` sólo guarda `palabras_caquetias`, un préstamo usado no llegaría a la base — se mide re-puntuando `response_text` hasta que se guarde aparte |
 | 09-14 | `aafc5c32` | 6 / 1 | **63** | 7.7 | 100% | **Primer día con el elenco de la era 2** (`--elenco era2`, perfil `era2`, mundo PARAGUANÁ, motor `19b0e16` limpio): hablaron los 63, tier 3 incluidos; prueba de tubería, no evidencia |
 | 09-14 | `81907ae1` | 6 / 1 (día 2) | 47 | 7.5 | 100% | **Día 2, encadenado con `--continuar`** desde `fec49195`: memoria, lexicón y koiné heredados; emergente 0,8124 → 0,7199 entre días |
+
+### 2026-09-16 · Lo que piensa el Director de los días 1 y 2
+
+Miguel pidió saber «qué es lo que el director piensa del día 1». El Director
+del motor sólo escribía cierres por turno; desde #138 existe
+`reflexion_del_dia()` (`curiana_director.py`, flag `--reflexion`, una llamada
+al cerrar cada día). Las dos reflexiones de abajo se generaron **después** de
+los runs, con el mismo código y los mismos insumos que tendría en el flujo
+(los seis cierres del día y el reporte medido del observer, entero), y quedan
+en `curiana_director.json` (gitignored) y aquí. En una primera pasada, con el
+reporte recortado a 3.500 caracteres por el escriba, el Director dijo del día
+2 que «ninguna palabra nueva prendió»: la adopción de `tüshi-juri` había
+quedado fuera del recorte. Se regeneró con el reporte entero; es lo que sigue.
+
+**Día 1 (`c6837386`):**
+
+> El nieto de Simaure ardía ayer, arde más hoy, y eso cambió todo: la sal
+> quedó en segundo plano. Vimos a Manaure levantar esa piedra pequeña que
+> brilla —**kali-iro-pabu**— hacia el cielo oscuro, y nadie necesitó que
+> nadie explicara qué estaba pasando; el gesto viajó por toda la ranchería
+> más rápido que cualquier palabra. Lo que prendió no fue una palabra nueva,
+> sino una forma de nombrar lo que ya todos veían: Tauta, Talata, Ucibo,
+> cada uno dijo lo que vio en esa piedra brillante, y aunque usaron distintos
+> sonidos, la comunidad entera entendió que estaban hablando de lo mismo.
+> Kadushi llegó con noticias de afuera —enfermedad en Aruba, barcos
+> españoles al norte— y eso bajó la tensión un poco, porque la gente
+> necesitaba saber que el mundo sigue existiendo fuera de la fiebre. Mañana
+> tenemos que ver si Simaure busca al piache, si el pozo sigue bajando, y qué
+> hace la comunidad cuando la medicina del alma —**barsure-duni**— es lo que
+> más falta.
+
+**Día 2 (`89fc1744`):**
+
+> El alisio no aflojó y los peces tampoco vinieron. Lo que cambió fue el
+> miedo —pasó de sospecha a ruido en la oscuridad, y eso dividió las
+> explicaciones: los Guaycarí culpan el calor, los Caquetíos el rezo
+> faltante. La palabra que prendió fue **tüshi-juri**, viento frío del este,
+> acuñada por Hayo cuando el polvo salino le quemaba los ojos —otros la
+> repitieron porque nombra lo que todos sienten. Queda abierto si mañana al
+> amanecer Chiriware tendrá que repartir hombres entre la defensa del
+> perímetro y la pesca, porque nadie duerme bien cuando el viento trae ruido
+> de remos. Y queda sin resolver si el hambre va a romper antes que la sal se
+> venda.
+
+Lo que las dos delatan, y ya está corregido en `main` para el día 3: «los
+Guaycarí» y «Chiriware» vienen de los eventos de la era 1 (#138 los tradujo;
+Chiriware es linaje en la era 2, no persona), y «barcos españoles al norte»
+es un anacronismo del cierre del turno 6 del día 1 —el Director de entonces
+no tenía mundo ni restricciones—, que el Director con mundo ya no debería
+repetir. Deuda de instrumento menor: la cabecera que el modelo pone a la
+reflexión copia «Día N+1, Turno 1» del estado al cerrar; el prompt debería
+fijar el día reflexionado.
+
+**Deudas del día 2, para su cierre** (no despachadas todavía): el veredicto
+de la koiné no sigue la cadena `continuado_desde` («datos insuficientes» con
+dos días encadenados y las distancias bajando); el scorer lee `cacique` y
+`taita` como préstamo taíno y «dia» como fuga (castellano corriente que
+coincide con claves de comparanda); tres casi-autoglosas en `[Voces de fuera]`
+(cazabi = cazabe, bohio = bohío, guanin = guanín).
 
 ### 2026-09-14 · Run `aafc5c32` — el elenco de la era 2 habla por primera vez
 
