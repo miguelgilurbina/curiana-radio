@@ -721,6 +721,26 @@ def run_turn(
                 )
                 registro.response_id = response_id
 
+                # Préstamos de la esfera de contacto: tabla aparte y con su
+                # lengua real, para leer la difusión tier 1 → tier 2/3 desde
+                # la base en vez de re-puntuar response_text a mano (deuda
+                # del run c6837386, 2026-09-16). No entran en words_used.
+                prestamos = list(getattr(registro, "prestamos_de_esfera", []))
+                if prestamos:
+                    try:
+                        db.save_loanword_uses(
+                            response_id=response_id,
+                            run_id=run_id,
+                            turn_id=turn_id,
+                            agent_name=agent_name,
+                            tier=tier,
+                            day=state.dia,
+                            turn_num=state.turno,
+                            words=prestamos,
+                        )
+                    except Exception:
+                        db_fallos["loanword_uses"] += 1
+
                 # Persistir neologismos propuestos
                 for neo in neos:
                     try:

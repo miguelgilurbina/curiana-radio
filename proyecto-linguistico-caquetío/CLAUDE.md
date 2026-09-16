@@ -69,7 +69,7 @@ cura y se publica en Curiana Radio (`/kaketiana`).
 | **`palabras_caquetias` no era lo que decía su nombre** | Devolvía TODAS las voces arahuacas, y de ahí comen el contagio léxico, la competencia de formas, el idiolecto, el campo léxico de la koiné y `words_used`: una voz wayuu o lokono se habría propagado como propia. Arreglado el 2026-09-09 (`palabras_arahuacas` guarda la lista completa). Antes de tocar un campo, mirar quién lo consume — el nombre miente |
 | **El 80% del lexicón no es caquetío** | 1.201 de 1.500 claves son comparanda (wayuu, lokono, taíno...). No llega al hablante porque el muestreador del prompt SÍ filtra por `fuente`, pero `palabras_activas()` no filtra: cualquier consumidor que la use está viendo las cinco lenguas. Medido en `6-fusion/medicion_contaminacion_score_2026-09-09.yaml` |
 | **Nombre o palabra lo decide la MAYÚSCULA** | 52 voces del canon son homógrafas de un nombre del elenco (`buko`, `hayo`, `mene`, `karebe`, `jachos`…). El filtro de nombres del 2026-09-14 comparaba en minúsculas y las borraba del conteo: palabras que el motor enseñaba y no contaba. Desde el 2026-09-16, `Karebe` es la persona y `karebe` el cucharón. Residuo elegido: una voz del canon que abra frase no cuenta — inflar `palabras_caquetias` es peor, porque de ahí comen el contagio y el idiolecto |
-| **El préstamo de esfera no es una fuga** | `ESFERA_DE_CONTACTO` (taíno, kalinago, paraujano, caribe-continental, jirajaroide) se mide aparte en `prestamos_de_esfera` y NO penaliza (decisión 2026-09-15). Hablar wayuu o lokono sí penaliza: son el andamio de la reconstrucción, y verlos haría circular la medición. Sólo el tier 1 recibe el bloque `[Voces de fuera]` |
+| **El préstamo de esfera no es una fuga** | `ESFERA_DE_CONTACTO` (taíno, kalinago, paraujano, caribe-continental, jirajaroide) se mide aparte en `prestamos_de_esfera` y NO penaliza (decisión 2026-09-15). Hablar wayuu o lokono sí penaliza: son el andamio de la reconstrucción, y verlos haría circular la medición. Sólo el tier 1 recibe el bloque `[Voces de fuera]`. Se persiste en `loanword_uses` (con tier y día), NO en `word_uses`, que es sólo caquetío y ningún lector suyo filtra por lengua (run c6837386, 2026-09-16); se lee con `analizar_runs.py --prestamos` |
 | **La longitud del prompt predice el score** | r = −0.48. Cualquier análisis por agente tiene que controlarla, o estarás midiendo cuánto escribiste tú. Ver `ANALISIS_BASE_2026-08-06.md` |
 
 ---
@@ -226,7 +226,8 @@ LANGSMITH_API_KEY=...                 # opcional
 ## Esquema de datos
 
 ```
-simulation_runs → turns → agent_responses → word_uses
+simulation_runs → turns → agent_responses → word_uses       (sólo caquetío: la huella de palabras_caquetias)
+                                          → loanword_uses   (la esfera de contacto, aparte; con tier y día)
                                           → neologisms
                        → agent_profiles → agent_quotes
                        → koine_metrics · koine_lexicon

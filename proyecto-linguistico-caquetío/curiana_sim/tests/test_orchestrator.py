@@ -275,3 +275,86 @@ def test_un_run_interrumpido_se_cierra_igual(sim, monkeypatch):
     _, total_turns, total_days = db.cierres[0]
     assert total_turns == 3
     assert total_days >= 1
+
+
+# ══════════════════════════════════════════════════════════════════════
+# c6837386 — los préstamos de esfera llegan a la base, aparte
+# ══════════════════════════════════════════════════════════════════════
+
+class _DBQueGuardaPrestamos:
+    """Sustituto de CurianaDB que recuerda qué se le pidió guardar."""
+    def __init__(self):
+        self.respuestas = []
+        self.prestamos = []
+    def save_turn(self, *a, **k):
+        return "turno-de-prueba"
+    def save_agent_response(self, *a, **k):
+        self.respuestas.append(k)
+        return "respuesta-de-prueba"
+    def save_loanword_uses(self, *a, **k):
+        self.prestamos.append(k)
+        return len(k.get("words", []))
+    def __getattr__(self, nombre):          # save_neologism, update_neologism_status, …
+        return lambda *a, **k: "id"
+
+
+def test_los_prestamos_de_esfera_se_guardan_aparte_y_no_en_words_used(sim, monkeypatch):
+    """Run c6837386 (2026-09-16): un préstamo usado por un tier 1 no llegaba a
+    la base —`words_used` es `palabras_caquetias`, sólo caquetío— y la difusión
+    al tier 2/3 sólo se podía medir re-puntuando `response_text`. Ahora va a
+    `loanword_uses` por respuesta, con tier y día, y `words_used` no cambia."""
+    from collections import Counter
+    monkeypatch.setattr(orch, "call_agent", lambda *a, **k: RESPUESTA + " Naya caiman wara.")
+    monkeypatch.setattr(orch, "director_select_event", lambda state: None)
+    db = _DBQueGuardaPrestamos()
+    fallos = Counter()
+    dia = sim["state"].dia
+    orch.run_turn(sim["client"], sim["state"], sim["memory"], sim["lexico"],
+                  sim["observer"], verbose=False, db=db, run_id="run-de-prueba",
+                  db_fallos=fallos)
+    assert not fallos, dict(fallos)
+    assert db.respuestas, "ninguna respuesta se persistió"
+    assert len(db.prestamos) == len(db.respuestas), "cada respuesta con préstamo escribe una vez"
+    for r, p in zip(db.respuestas, db.prestamos):
+        assert "caiman" not in r["words_used"], "el préstamo no contamina words_used"
+        assert p["words"] == ["caiman"]
+        assert p["response_id"] == "respuesta-de-prueba"
+        assert p["turn_id"] == "turno-de-prueba"
+        assert p["run_id"] == "run-de-prueba"
+        assert p["agent_name"] == r["agent_name"] and p["tier"] == r["tier"]
+        assert p["day"] == dia and isinstance(p["turn_num"], int)
+
+
+class _ClienteQueGraba:
+    """Sustituto del cliente supabase: recuerda tabla y filas de cada insert."""
+    def __init__(self):
+        self.inserts = []
+    def table(self, nombre):
+        cliente = self
+        class _Tabla:
+            def insert(self, rows):
+                cliente.inserts.append((nombre, rows))
+                return self
+            def execute(self):
+                return None
+        return _Tabla()
+
+
+def test_save_loanword_uses_escribe_la_lengua_real_en_su_tabla():
+    """La fila lleva la lengua REAL de la voz (`caiman` es taíno), y va a
+    `loanword_uses`, nunca a `word_uses`."""
+    from curiana_database import CurianaDB
+    db = CurianaDB.__new__(CurianaDB)
+    db.client = _ClienteQueGraba()
+    n = db.save_loanword_uses(response_id="r", run_id="run", turn_id="t",
+                              agent_name="Manaure", tier=1, day=3, turn_num=2,
+                              words=["caiman"])
+    assert n == 1
+    (tabla, filas), = db.client.inserts
+    assert tabla == "loanword_uses"
+    assert filas[0]["word"] == "caiman" and filas[0]["source_language"] == "taíno"
+    assert (filas[0]["tier"], filas[0]["day"], filas[0]["turn_num"]) == (1, 3, 2)
+    assert db.save_loanword_uses(response_id="r", run_id="run", turn_id="t",
+                                 agent_name="Manaure", tier=1, day=3, turn_num=2,
+                                 words=[]) == 0
+    assert len(db.client.inserts) == 1, "sin préstamos no se escribe nada"

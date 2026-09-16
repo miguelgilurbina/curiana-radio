@@ -173,6 +173,23 @@ def test_palabras_caquetias_no_incluye_otra_lengua_arahuaca():
     assert intruso in r["palabras_otro_arahuaco"]
 
 
+def test_debe_es_castellano_y_no_fuga_a_otra_lengua_arahuaca():
+    """Run c6837386 (2026-09-16): «debe» salía en `palabras_otro_arahuaco`
+    porque colisiona con la clave achagua `debe` 'medicina' de la comparanda,
+    que se normaliza a proto-arahuaco. Medido antes del arreglo: «taya debe
+    buko» → score 4,9 con fuga ×1. Es castellano: cuenta como español
+    funcional, y la comparanda no se toca."""
+    from curiana_lexicon import ES_STOPWORDS, VOCABULARIO_BASE, score_linguistico
+
+    assert "debe" in ES_STOPWORDS
+    assert "debe" in VOCABULARIO_BASE, "la entrada achagua sigue en la comparanda"
+    r = score_linguistico("taya debe buko", _lexico())
+    assert r["palabras_otro_arahuaco"] == [] and r["otro_arahuaco"] == 0
+    assert "debe" not in r["palabras_arahuacas"]
+    assert r["espanol_funcional"] == 1
+    assert r["palabras_caquetias"] == ["taya", "buko"]
+
+
 def test_deteccion_de_vocabulario_respeta_el_limite_de_morfema():
     """Casaba por subcadena en cualquier posición: `li` disparaba dentro de
     `kali-taro` y `bi` dentro de `biro`, 409 veces cada una."""
