@@ -72,6 +72,7 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 
 | Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |
 |---|---|---|---|---|---|---|
+| 09-16 | `0193873d` | 6 / 1 (día 3) | **63** | 7.6 | 100% | **Día 3 con mundo, encadenado desde `89fc1744`** (semilla 3, motor `1be0d52` limpio: eventos de la era 2, Director con mundo, `loanword_uses`, `--reflexion`). Sin encadenar el 4: Miguel cierra aquí. **La koiné se consolida**: `kali-iro-pabu` 20 usos, `tüshi-juri` 19, `sima-maa` 19, `nii-bana` 18, `kuri-bana-iro-pabu` 17, `sima-pabu` 14; sólo 4 acuñaciones nuevas (26 y 10 los días anteriores) — el léxico se asienta. ⭐ **Por nodo** (hablantes distintos en tres días; GUARANAO tiene 39 posibles y AMUAY 24): `kali-iro-pabu` 18 GUA / 11 AMU (compartida), `tüshi-juri` 16 / 7, `kuri-bana-iro-pabu` 21 / 6 (inclinada a GUARANAO), y la variante nueva del día 3 `kuri-sima-pabu` 1 / 3 (Kasebo y Saruro de Caseto, Kiwakoa de Carirubana: inclinada a AMUAY). Distancias por la cadena: ventana 0,604 → 0,467 → 0,375; emergente 0,900 → 0,820 → 0,725 — tres días bajando; el motor sigue diciendo «datos insuficientes» (agente en curso). Préstamos: la tabla nueva guarda 2 filas (`bohío` Chirwa T3, `cacique` Uria T2), las mismas dos que da la re-puntuación — funciona, y las dos son castellano corriente: **tres días y ningún préstamo real** en el tier 1. El mundo: viento en 51 de 72, cerro en 49, sitio en 25, jachos en 4; manglar y caimán en Guaranao: 0 (la corrección funciona). Residuos de la era 1 que quedan: el Director dijo «Caquetíos y Guaycarí» en el cierre 6 y en la reflexión, y un agente «Biro-ko» — la reflexión del día 2 que el escriba le inyectó traía «los Guaycarí» (agente en curso); y la cabecera de la reflexión copia «Día 4, Turno 1» |
 | 09-16 | `06482296` | 2 / — (día 3, **interrumpido**) | 12 resp. | — | — | Día 3 lanzado a las 19:36 con todo lo del cierre del día 1 ya en `main` (préstamos a la base, eventos de la era 2, Director con mundo, `--reflexion`) y **detenido en el turno 1 a petición de Miguel** («no lances aún el día 3; cerremos el día 2 y listo»). No cuenta: 2 turnos, 12 respuestas, sin cerrar. El estado en disco quedó al final del día 2 (día 3, turno 1, `run_anterior` 89fc1744): el próximo día 3 arranca de ahí con `--continuar` |
 | 09-16 | `89fc1744` | 6 / 1 (día 2) | **63** | 7.6 | 100% | **Día 2 con mundo, encadenado con `--continuar`** desde `c6837386` (semilla 2, motor `cb389991`): los seis turnos en el Tiempo de Viento. La koiné de ayer sobrevivió a la noche: `kali-iro-pabu` 14 usos hoy y una variante larga, `kuri-bana-iro-pabu`, le disputa el concepto (20 usos, «en disputa»); `kua-siwato` 15, `nii-bana` 9, `biro-kali` 6. `sima` «cerro» se extiende (`sima-pabu` «cerro ardiente», adoptada). ⭐ **Primera palabra del tiempo**: `tüshi-juri` «viento frío del este» (Hayo, adoptada) — el período empieza a nombrarse solo (decisión p2). El viento/`juri` aparece en 57 de 72 respuestas (`juri` 29 usos), el cerro en 45, el sitio en 15. Distancias entre días: ventana 0,604 → 0,467, emergente 0,900 → 0,820 (el veredicto del motor dice «datos insuficientes» porque no sigue la cadena `continuado_desde`: deuda conocida). Préstamos de esfera reales: 0 (dos falsos: `cacique`, `taita`, castellano leído como taíno). ⚠️ Deudas que delata el Director: los eventos de `curiana_state.py` son de la era 1 (nombran 29 veces a agentes viejos y a «los Guaycarí», foráneos que la era 2 dejó fuera) y el Director no recibe el mundo (dice «la Curiana», inventa un ceibo: ecologia-032) |
 | 09-16 | `c6837386` | 6 / 1 | **63** | 7.5 | 100% | **Primer día de la era 2 CON MUNDO** (motor `c69e042` limpio, tras el merge de #130; `--perfil era2 --semilla 1`): el año de tres períodos (los seis turnos en el Tiempo de Viento, los seis momentos), `[Tu tierra]` por sitio y `[Voces de fuera]` en tier 1. Medido: el sitio se nombra en 22 de 72 respuestas, el cerro en 37, el viento/`juri` en 12, los jachos en 7, el jagüey en 4; 26 acuñaciones (19 adoptadas), tres con `sima` «cerro» (wana-sima, amana-sima, sima-naa) y una competencia de once agentes por nombrar «las cuentas duras que brillan como el sol» que trae la canoa de las islas, fijada en `kali-iro-pabu`; ninguna acuñación del período ni del venado. **Préstamos de esfera: 0** en tier 1 (re-puntuado sobre las 72 respuestas), fugas 7. Emergente D1 0,90. ⚠️ No comparable con los del 14 (instrumento cambiado el 16) y **deuda de instrumento**: `word_uses` sólo guarda `palabras_caquetias`, un préstamo usado no llegaría a la base — se mide re-puntuando `response_text` hasta que se guarde aparte |
@@ -120,6 +121,24 @@ quedado fuera del recorte. Se regeneró con el reporte entero; es lo que sigue.
 > perímetro y la pesca, porque nadie duerme bien cuando el viento trae ruido
 > de remos. Y queda sin resolver si el hambre va a romper antes que la sal se
 > venda.
+
+**Día 3 (`0193873d`)** — ésta la escribió el motor al cerrar el día, con
+`--reflexion`, no el escriba:
+
+> El alisio no cedió pero la red mojada tocó agua esta vez, y eso cambió el
+> peso del silencio: ya no es miedo puro sino trabajo compartido, aunque los
+> vientres sigan vacíos. La palabra que prendió hoy fue **tüshi-juri** de
+> nuevo —Manaure la levantó anoche como aviso, no como culpa, y eso abrió
+> grieta en la división: Caquetíos y Guaycarí pescaron juntos bajo los jachos
+> porque el hambre que nombra el viento no distingue de qué lado duermes. Lo
+> que quedó sin resolver es si la pesca de esta noche trae pescado o sólo
+> trae manos mojadas y más hambre mañana, y si Manaure puede sostener el rezo
+> compartido cuando la tensión vuelva a subir. La sal sigue blanca sin usar
+> mientras el mercader no regresa.
+
+(«Caquetíos y Guaycarí» le llegó por la reflexión del día 2, que el escriba
+había puesto en `notas_orquestador` para imitar el flujo: el residuo se
+propaga por ahí. Deuda del cierre del día 3, ya con agente.)
 
 Lo que las dos delatan, y ya está corregido en `main` para el día 3: «los
 Guaycarí» y «Chiriware» vienen de los eventos de la era 1 (#138 los tradujo;
