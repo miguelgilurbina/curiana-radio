@@ -390,6 +390,51 @@ class CurianaDB:
 
         return response_id
 
+    def save_loanword_uses(
+        self,
+        response_id: str,
+        run_id: str,
+        turn_id: str,
+        agent_name: str,
+        tier: int,
+        day: int,
+        turn_num: int,
+        words: list[str],
+    ) -> int:
+        """Guarda las voces de la ESFERA DE CONTACTO que usó una respuesta
+        (`score_linguistico()["prestamos_de_esfera"]`) en `loanword_uses`, con
+        su lengua real. Retorna cuántas filas escribió.
+
+        Tabla aparte, y no `word_uses`, a propósito (2026-09-16, run c6837386):
+        `word_uses` es la huella de `palabras_caquetias`, que desde el
+        2026-09-09 significa SÓLO caquetío, y ninguno de sus lectores
+        (`analizar_runs.py`, la vista `top_words_by_agent`) filtra por lengua.
+        Y `words_used` alimenta `language_composition()` → `pct_*`: meter ahí
+        el préstamo movería `pct_caquetio` a mitad de serie. La decisión de
+        Miguel (2026-09-15, §p3b) es literal: «se debe medir aparte». A
+        diferencia de `word_uses`, aquí `tier`, `day` y `turn_num` van
+        puestos: la pregunta que responde la tabla es si la voz baja del
+        tier 1 —el único que ve [Voces de fuera]— al 2 y al 3, y cuándo.
+        """
+        if not words:
+            return 0
+        rows = [
+            {
+                "response_id": response_id,
+                "run_id": run_id,
+                "turn_id": turn_id,
+                "word": w,
+                "source_language": word_source_language(w),
+                "agent_name": agent_name,
+                "tier": tier,
+                "day": day,
+                "turn_num": turn_num,
+            }
+            for w in words
+        ]
+        self.client.table("loanword_uses").insert(rows).execute()
+        return len(rows)
+
     # ── Neologisms ────────────────────────────────────────────────────
 
     def save_neologism(
@@ -643,6 +688,7 @@ class CurianaDBMock:
         import uuid; return str(uuid.uuid4())
     def save_agent_response(self, *a, **kw) -> str:
         import uuid; return str(uuid.uuid4())
+    def save_loanword_uses(self, *a, **kw) -> int: return 0
     def save_neologism(self, *a, **kw) -> str:
         import uuid; return str(uuid.uuid4())
     def update_neologism_status(self, *a, **kw): pass

@@ -14,6 +14,8 @@ que el proyecto se hace sobre sus propios datos:
     --agentes   ¿Cómo se comportaron? Prestigio, adopción, diferencias por
                 tier y etnia.
     --narrativa ¿Qué historias salieron? Citas, arcos, eventos.
+    --prestamos ¿Qué voces de la esfera de contacto se usaron, y bajaron del
+                tier 1 al 2 y al 3? Lee `loanword_uses` (migración 20260916).
 
 POR QUÉ ESTE MÓDULO EXISTE
 --------------------------
@@ -397,6 +399,69 @@ def analizar_narrativa() -> None:
         print(f"      {r['arco']}")
 
 
+# ══════════════════════════════════════════════════════════════════════
+# PRÉSTAMOS — la esfera de contacto y su difusión por tier
+# ══════════════════════════════════════════════════════════════════════
+
+def analizar_prestamos() -> None:
+    """Lectura mínima de `loanword_uses`: qué voces de la esfera de contacto
+    (taíno, kalinago, paraujano, caribe continental, jirajaroide) se usaron,
+    por qué tier, y si bajaron del tier 1 —el único que ve el bloque [Voces de
+    fuera]— al 2 y al 3. Hasta el 2026-09-16 esto se medía re-puntuando
+    `response_text` a mano (bitácora del run c6837386)."""
+    titulo("PRÉSTAMOS — la esfera de contacto, medida aparte")
+
+    try:
+        q("SELECT 1 FROM loanword_uses LIMIT 1")
+    except RuntimeError:
+        print("\n    (sin tabla loanword_uses: aplicar la migración "
+              "supabase/migrations/20260916000000_loanword_uses.sql)")
+        return
+
+    sub("usos por lengua y tier (todos los runs)")
+    por_tier = q("""
+        SELECT source_language AS lengua, tier, count(*) AS usos,
+               count(DISTINCT word) AS formas,
+               count(DISTINCT agent_name) AS agentes,
+               count(DISTINCT run_id) AS runs
+        FROM loanword_uses GROUP BY source_language, tier
+        ORDER BY source_language, tier
+    """)
+    if not len(por_tier):
+        print("    (ningún préstamo registrado todavía)")
+        return
+    print(por_tier.to_string(index=False))
+
+    sub("difusión: primer día por tier de cada voz (¿bajó del tier 1?)")
+    dif = q("""
+        SELECT run_id, word, source_language AS lengua,
+               min(day) FILTER (WHERE tier = 1) AS d_t1,
+               min(day) FILTER (WHERE tier = 2) AS d_t2,
+               min(day) FILTER (WHERE tier = 3) AS d_t3,
+               count(DISTINCT agent_name) FILTER (WHERE tier = 1) AS ag_t1,
+               count(DISTINCT agent_name) FILTER (WHERE tier > 1) AS ag_t23,
+               count(*) AS usos
+        FROM loanword_uses GROUP BY run_id, word, source_language
+        ORDER BY usos DESC LIMIT 30
+    """)
+    dif.insert(0, "run", dif["run_id"].astype(str).str[:8])
+    print(dif.drop(columns="run_id").to_string(index=False))
+    print(f"\n    voces que llegaron al tier 2/3: {int((dif['ag_t23'] > 0).sum())} "
+          f"de {len(dif)} (las 30 más usadas)")
+
+    sub("por día y tier (¿la difusión crece con los días?)")
+    dia = q("""
+        SELECT run_id, day,
+               count(*) FILTER (WHERE tier = 1) AS t1,
+               count(*) FILTER (WHERE tier = 2) AS t2,
+               count(*) FILTER (WHERE tier = 3) AS t3,
+               count(DISTINCT word) AS formas
+        FROM loanword_uses GROUP BY run_id, day ORDER BY run_id, day
+    """)
+    dia.insert(0, "run", dia["run_id"].astype(str).str[:8])
+    print(dia.drop(columns="run_id").to_string(index=False))
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="Análisis de los runs de Curiana")
     ap.add_argument("--koine", action="store_true")
@@ -404,11 +469,13 @@ def main(argv=None) -> int:
     ap.add_argument("--neologismos", action="store_true")
     ap.add_argument("--agentes", action="store_true")
     ap.add_argument("--narrativa", action="store_true")
+    ap.add_argument("--prestamos", action="store_true")
     ap.add_argument("--todo", action="store_true")
     a = ap.parse_args(argv)
 
     if a.todo or not any(vars(a).values()):
         a.koine = a.lengua = a.neologismos = a.agentes = a.narrativa = True
+        a.prestamos = True
 
     if a.koine:
         analizar_koine()
@@ -420,6 +487,8 @@ def main(argv=None) -> int:
         analizar_agentes()
     if a.narrativa:
         analizar_narrativa()
+    if a.prestamos:
+        analizar_prestamos()
     return 0
 
 

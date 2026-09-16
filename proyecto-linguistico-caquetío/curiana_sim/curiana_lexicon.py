@@ -7727,6 +7727,13 @@ ES_STOPWORDS = {
     "vamos", "van", "tengo", "tiene", "tienen", "hay", "hacer", "hago", "hace", "muy", "mas",
     "yo", "tu", "ella", "nosotros", "ellos", "mi", "mis", "su", "sus", "me", "te", "se", "nos",
     "no", "ya", "aqui", "alli", "ahora", "despues", "antes", "hoy", "ayer", "manana",
+    # «debe» (run c6837386, 2026-09-16): el verbo castellano colisiona con la
+    # clave achagua `debe` 'medicina' de la comparanda, que se normaliza a
+    # proto-arahuaco, y salía como fuga a otra lengua arahuaca —medido antes
+    # del arreglo: «taya debe buko» → score 4,9, palabras_otro_arahuaco=['debe'].
+    # Del paradigma sólo esta forma está en VOCABULARIO_BASE (deben, debo,
+    # debes, debemos: ninguna), así que sólo ésta entra. La comparanda no se toca.
+    "debe",
 }
 
 # Sufijos aspectuales anclados a raíces verbales conocidas (de VOCABULARIO_BASE).

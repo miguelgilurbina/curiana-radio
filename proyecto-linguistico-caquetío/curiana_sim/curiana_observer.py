@@ -48,6 +48,12 @@ class RegistroInteraccion:
     palabras_caquetias: list = field(default_factory=list)
     neologismos_propuestos: list = field(default_factory=list)
     aspectos_usados: list = field(default_factory=list)
+    # Voces de la ESFERA DE CONTACTO (taíno, kalinago, paraujano, caribe
+    # continental, jirajaroide) usadas en la respuesta. Se miden aparte y NO
+    # entran en `palabras_caquetias` (decisión 2026-09-15, §p3b): de aquí sale
+    # `loanword_uses`, el registro con el que se lee la difusión tier 1 → 2/3.
+    # Antes se medían y se perdían (run c6837386, 2026-09-16).
+    prestamos_de_esfera: list = field(default_factory=list)
     score: float = 0.0
     observacion: str = ""
     # Neologismos extraídos (objetos completos)
@@ -74,6 +80,7 @@ class RegistroInteraccion:
             "palabras_caquetias": "|".join(self.palabras_caquetias),
             "neologismos": "|".join(self.neologismos_propuestos),
             "aspectos": "|".join(self.aspectos_usados),
+            "prestamos_esfera": "|".join(self.prestamos_de_esfera),
             "texto_100": self.texto[:100],
         }
 
@@ -154,6 +161,7 @@ class ObserverAgent:
             palabras_caquetias=metricas["palabras_caquetias"],
             neologismos_propuestos=metricas["neologismos_propuestos"],
             aspectos_usados=metricas["aspectos_usados"],
+            prestamos_de_esfera=list(metricas.get("prestamos_de_esfera", [])),
             score=metricas["score"],
             observacion=metricas["observacion"],
             neologismos_extraidos=neos,
