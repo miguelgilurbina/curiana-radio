@@ -17,6 +17,7 @@ curiana_fonotactica (fonemizar) sólo para leer datos.
 import argparse
 import collections
 import io
+import itertools
 import os
 import re
 import sys
@@ -28,6 +29,8 @@ SIM = os.path.join(RAIZ, "curiana_sim")
 sys.path.insert(0, SIM)
 
 ELENCO = os.path.join(RAIZ, "6-fusion", "elenco_era2.yaml")
+SISTEMA = os.path.join(RAIZ, "6-fusion", "sistema_de_nombres_era2.yaml")
+MAPA = os.path.join(RAIZ, "6-fusion", "mapa_nombres_era2.yaml")
 BIBLIO = os.path.join(RAIZ, "4-fuentes", "bibliografia.yaml")
 TOPONIMOS = os.path.join(RAIZ, "2-lengua", "toponimos.yaml")
 CORPUS = os.path.join(RAIZ, "3-mundo", "corpus")
@@ -72,6 +75,18 @@ def cargar(path):
         return yaml.safe_load(fh)
 
 
+def levenshtein(a, b):
+    """Distancia de edición. La regla f pide ≥ 2 entre dos nombres del elenco."""
+    previa = list(range(len(b) + 1))
+    for i, ca in enumerate(a, 1):
+        actual = [i]
+        for j, cb in enumerate(b, 1):
+            actual.append(min(previa[j] + 1, actual[j - 1] + 1,
+                              previa[j - 1] + (ca != cb)))
+        previa = actual
+    return previa[-1]
+
+
 def ids_del_corpus():
     """Todos los ids de hecho de 3-mundo/corpus/*.yaml."""
     ids = set()
@@ -99,12 +114,17 @@ def main(argv=None):
 
     from curiana_agents import ALL_AGENTS
     from curiana_lexicon import VOCABULARIO_BASE
-    from curiana_fonotactica import fonemizar
+    from curiana_fonotactica import fonemizar, Fonotactica
 
     elenco = cargar(ELENCO)
     agentes = elenco["agentes"]
     casas = elenco["casas"]
     fuera = elenco["fuera_del_elenco"]
+
+    sistema = cargar(SISTEMA)
+    reglas = {r["id"]: r for r in sistema["reglas"]}
+    formantes_productivos = {f["formante"] for f in reglas["b"]["formantes_productivos"]}
+    conservados = {c["nombre"]: c for c in reglas["g"]["conservados"]}
 
     biblio = cargar(BIBLIO)["obras"]
     if isinstance(biblio, dict):
@@ -116,51 +136,141 @@ def main(argv=None):
     fondo_genealogia = set(cargar(GENEALOGIA).get("personas_de_fondo") or {})
 
     nombres = [a["nombre"] for a in agentes]
+    alias = {a["nombre"]: a.get("alias_era1") for a in agentes}
 
     # ── NOMBRES ──────────────────────────────────────────────────────────
+    # Campaña de antropónimos del 2026-09-14 (Miguel: «Sí a los dos puntos» y
+    # «Sí o sí hay que sacar eso de -ko y -sha»). Las reglas están declaradas
+    # en 6-fusion/sistema_de_nombres_era2.yaml y se comprueban TODAS aquí,
+    # sobre los 63, no sólo sobre los nombres que el casting acuñó.
     dup = [n for n, c in collections.Counter(nombres).items() if c > 1]
     if dup:
         falla(f"nombres repetidos en el elenco: {dup}")
 
-    nuevos = [a for a in agentes if a.get("origen") == "nuevo"]
-    for a in nuevos:
+    atestiguado = [k for k, e in VOCABULARIO_BASE.items()
+                   if e.get("fuente") == "caquetío-atestiguado"]
+    fonotactica = Fonotactica(atestiguado)
+
+    for a in agentes:
         n = a["nombre"]
-        fon = fonemizar(n)
-        raiz = n.split("-")[0]
-        fraiz = fonemizar(raiz)
-        if n in ALL_AGENTS:
-            falla(f"{n}: choca con un agente de la era 1")
-        if n in fondo_genealogia:
-            falla(f"{n}: choca con una persona de fondo de genealogia.yaml")
-        if fon in toponimos:
-            falla(f"{n}: el nombre coincide con un topónimo del canon")
-        if fraiz in toponimos:
-            falla(f"{n}: la raíz «{raiz}» coincide con un topónimo del canon")
         meta = a.get("nombre_nuevo") or {}
-        declarada = meta.get("raiz")
-        if declarada != raiz.lower():
-            falla(f"{n}: nombre_nuevo.raiz dice «{declarada}» y la raíz del nombre es «{raiz.lower()}»")
-        entrada = VOCABULARIO_BASE.get(declarada)
-        if entrada is None:
-            falla(f"{n}: la raíz «{declarada}» no está en VOCABULARIO_BASE")
+        raiz = meta.get("raiz")
+        formante = meta.get("formante")
+
+        # (e) sin -ko ni -sha
+        if n.endswith("-ko") or n.endswith("-sha"):
+            falla(f"{n}: lleva -ko o -sha, retirados por decisión del 2026-09-14")
+
+        # (a) la raíz es una voz del lexicón, atestiguada o reconstruida
+        entrada = VOCABULARIO_BASE.get(raiz)
+        if not raiz:
+            falla(f"{n}: sin nombre_nuevo.raiz")
+        elif entrada is None:
+            falla(f"{n}: la raíz «{raiz}» no está en VOCABULARIO_BASE")
         elif entrada.get("fuente") not in FUENTES_DE_RAIZ:
-            falla(f"{n}: la raíz «{declarada}» es {entrada.get('fuente')}, no caquetío atestiguado ni reconstruido")
+            falla(f"{n}: la raíz «{raiz}» es {entrada.get('fuente')}, "
+                  f"no caquetío atestiguado ni reconstruido")
         elif entrada.get("fuente") != meta.get("fuente"):
-            falla(f"{n}: nombre_nuevo.fuente dice «{meta.get('fuente')}» y el lexicón dice «{entrada.get('fuente')}»")
+            falla(f"{n}: nombre_nuevo.fuente dice «{meta.get('fuente')}» "
+                  f"y el lexicón dice «{entrada.get('fuente')}»")
+
+        # el nombre ES la raíz más el formante, comparados fonemizados.
+        # En la juntura, vocal + la misma vocal se funde en una (rua + -ata →
+        # Ruata): el caquetío atestiguado no tiene vocal doble. Regla b del
+        # sistema de nombres, §elision_en_la_juntura.
+        if raiz:
+            fr, ff = fonemizar(raiz), fonemizar((formante or "").lstrip("-"))
+            posibles = {fr + ff}
+            if fr and ff and fr[-1] == ff[0]:
+                posibles.add(fr + ff[1:])
+            if fonemizar(n) not in posibles:
+                falla(f"{n}: no es raíz + formante ({raiz} + {formante or 'ø'} "
+                      f"daría {sorted(posibles)} y se fonemiza «{fonemizar(n)}»)")
+
+        # (b) el formante está declarado en el sistema de nombres
+        if formante and formante not in formantes_productivos and n not in conservados:
+            falla(f"{n}: el formante «{formante}» no es productivo en "
+                  f"sistema_de_nombres_era2.yaml y el nombre no está entre los conservados")
+        if formante and n in conservados and formante != conservados[n].get("formante", formante):
+            avisa(f"{n}: conservado con formante «{formante}»")
+
+        # (b) fonotáctica del caquetío atestiguado
+        ok, motivos = fonotactica.valida(n)
+        if not ok:
+            falla(f"{n}: fonotáctica — {'; '.join(motivos)}")
+
+        # (f) unicidad ampliada
+        if fonemizar(n) in toponimos:
+            falla(f"{n}: el nombre coincide con un topónimo del canon")
+        if raiz and fonemizar(raiz) in toponimos:
+            falla(f"{n}: la raíz «{raiz}» coincide con un topónimo del canon")
+        if n in ALL_AGENTS and alias[n] != n:
+            falla(f"{n}: choca con un agente de la era 1 que no es su alias")
+        if n in fondo_genealogia and alias[n] != n:
+            falla(f"{n}: choca con una persona de fondo de genealogia.yaml")
+
+        if not a.get("razon_del_nombre"):
+            falla(f"{n}: sin razon_del_nombre")
+
+    # (f) dos nombres no se distinguen por una sola letra
+    for x, y in itertools.combinations(sorted(set(nombres)), 2):
+        if levenshtein(fonemizar(x), fonemizar(y)) < 2:
+            falla(f"«{x}» y «{y}» se distinguen por una sola letra")
+
+    # (g) los conservados declarados están y no cambiaron
+    for n in conservados:
+        if n not in nombres:
+            falla(f"sistema_de_nombres_era2.yaml declara «{n}» conservado y no está en el elenco")
+        elif alias[n] != n:
+            falla(f"{n}: declarado conservado y su alias_era1 dice «{alias[n]}»")
+
+    # ── ALIAS ────────────────────────────────────────────────────────────
+    acunados_por_el_casting = {
+        a.get("alias_era1") for a in agentes if a.get("origen") == "nuevo"}
+    for a in agentes:
+        n, al = a["nombre"], a.get("alias_era1")
+        if not al:
+            falla(f"{n}: sin alias_era1")
+            continue
+        if al not in ALL_AGENTS and al not in fondo_genealogia and al not in acunados_por_el_casting:
+            falla(f"{n}: alias_era1 «{al}» no es agente de la era 1, ni persona "
+                  f"de fondo, ni nombre acuñado por el casting")
+    dup_alias = [x for x, c in collections.Counter(
+        a.get("alias_era1") for a in agentes).items() if c > 1]
+    if dup_alias:
+        falla(f"alias_era1 repetidos: {dup_alias}")
+
+    nuevos = [a for a in agentes if a.get("origen") == "nuevo"]
 
     reutilizados = [a for a in agentes if str(a.get("origen", "")).startswith("era1:")]
     for a in reutilizados:
         citado = str(a["origen"]).split(":", 1)[1].split(" ")[0]
-        if citado != a["nombre"]:
-            falla(f"{a['nombre']}: origen cita «{citado}»")
-        if a["nombre"] not in ALL_AGENTS:
-            falla(f"{a['nombre']}: dice ser de la era 1 y no está en curiana_agents.ALL_AGENTS")
+        if citado != a.get("alias_era1"):
+            falla(f"{a['nombre']}: origen cita «{citado}» y alias_era1 dice «{a.get('alias_era1')}»")
+        if citado not in ALL_AGENTS:
+            falla(f"{a['nombre']}: dice venir de la era 1 y «{citado}» no está en curiana_agents.ALL_AGENTS")
 
     de_fondo = [a for a in agentes if str(a.get("origen", "")).startswith("fondo:")]
     for a in de_fondo:
         citado = str(a["origen"]).split(":", 1)[1].split(" ")[0]
         if citado not in fondo_genealogia:
             falla(f"{a['nombre']}: no es persona de fondo de genealogia.yaml")
+        if citado != a.get("alias_era1"):
+            falla(f"{a['nombre']}: origen cita «{citado}» y alias_era1 dice «{a.get('alias_era1')}»")
+
+    # ── EL MAPA ──────────────────────────────────────────────────────────
+    mapa = {f["nombre_era1"]: f for f in cargar(MAPA)["nombres"]}
+    if set(mapa) != {a.get("alias_era1") for a in agentes}:
+        falla("mapa_nombres_era2.yaml y los alias_era1 del elenco no cubren el mismo conjunto")
+    for a in agentes:
+        fila = mapa.get(a.get("alias_era1"))
+        if not fila:
+            continue
+        esperado = fila.get("nombre") if fila["nombre_nuevo"] == "se conserva" else fila["nombre_nuevo"]
+        if esperado != a["nombre"]:
+            falla(f"{a['nombre']}: el mapa dice «{esperado}» para el alias «{a.get('alias_era1')}»")
+        if fila.get("raiz") != (a.get("nombre_nuevo") or {}).get("raiz"):
+            falla(f"{a['nombre']}: el mapa declara raíz «{fila.get('raiz')}» y la ficha «{(a.get('nombre_nuevo') or {}).get('raiz')}»")
 
     # ── FICHAS ───────────────────────────────────────────────────────────
     for a in agentes:
@@ -239,7 +349,9 @@ def main(argv=None):
             falla(f"fuera_del_elenco: «{n}» no es un agente de la era 1")
         if n in nombres:
             falla(f"«{n}» está a la vez dentro y fuera del elenco")
-    cubiertos = {a["nombre"] for a in reutilizados} | set(fuera_nombres)
+    # Los 60 de la era 1 tienen destino declarado: o entraron al elenco (y se
+    # los reconoce por su alias_era1, no por su nombre nuevo) o están fuera.
+    cubiertos = {a.get("alias_era1") for a in reutilizados} | set(fuera_nombres)
     sin_destino = sorted(set(ALL_AGENTS) - cubiertos)
     if sin_destino:
         falla(f"agentes de la era 1 sin destino declarado: {sin_destino}")
@@ -278,6 +390,17 @@ def main(argv=None):
             or a["nombre"] == "Nubiri-sha"),
         "era1_fuera_del_elenco": len(fuera_nombres),
         "nombres_nuevos_acunados": len(nuevos),
+        "nombres_conservados": sum(1 for a in agentes if a["nombre"] == a.get("alias_era1")),
+        "nombres_renombrados": sum(1 for a in agentes if a["nombre"] != a.get("alias_era1")),
+        "raices_por_capa": dict(collections.Counter(
+            (a.get("nombre_nuevo") or {}).get("fuente") for a in agentes)),
+        "formantes_usados": dict(collections.Counter(
+            (a.get("nombre_nuevo") or {}).get("formante") or "(raíz sola)"
+            for a in agentes)),
+        "nombres_con_ko_o_sha": sum(
+            1 for a in agentes if a["nombre"].endswith(("-ko", "-sha"))),
+        "nombres_homografos_del_lexicon": sum(
+            1 for a in agentes if a["nombre"].lower() in VOCABULARIO_BASE),
     }
     for a in roster:
         if not a.get("razon_roster"):
@@ -297,10 +420,13 @@ def main(argv=None):
     if args.conteos:
         return 0 if not fallos else 1
 
-    print("\n── NOMBRES NUEVOS ──")
-    for a in nuevos:
+    print("\n── NOMBRES (viejo → nuevo, raíz y formante) ──")
+    for a in agentes:
         m = a["nombre_nuevo"]
-        print(f"  {a['nombre']:14} < {m['raiz']} «{m['glosa']}» [{m['fuente']}]")
+        flecha = "=" if a["nombre"] == a.get("alias_era1") else "→"
+        capa = "A" if m["fuente"] == "caquetío-atestiguado" else "R"
+        print(f"  {a.get('alias_era1'):14} {flecha} {a['nombre']:14} "
+              f"< {m['raiz']}{m['formante'] or ''} [{capa}] «{m['glosa']}»")
 
     print("\n── ROSTER ──")
     for a in sorted(roster, key=lambda x: (x["nodo"], x["casa"], x["nombre"])):

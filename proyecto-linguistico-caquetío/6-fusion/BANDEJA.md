@@ -13,23 +13,26 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-14**.
+<!--GENERADO--> Generado el **2026-09-16**.
 
-**2422 ítems propuestos** en 54 propuestas, más **1 issue(s)/comentario(s) redactados sin publicar**.
+**2566 ítems propuestos** en 62 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
 | Archivo | Obra | Ítems | Aviso |
 |---|---|---|---|
 | `antolinez_1946_capo_y_ortografia.yaml` | antolinez-1946-hacia-el-indio | 3 |  |
+| `antroponimos_caquetios.yaml` | varias | 48 |  |
 | `auditoria_a2_perea.yaml` | ? | 18 |  |
 | `bachaco_y_gu_es_w.yaml` | alvarado-1921 | 0 |  |
 | `barrido_toponimos_web_2026-09-10.yaml` | ? | 9 |  |
 | `barrido_web_medina_2026-09-09.yaml` | ? | 13 |  |
+| `capubana_agua_y_microclima.yaml` | ? | 10 |  |
 | `castellanos_1589_toponimos.yaml` | castellanos-elegias | 0 |  |
 | `censo_ana_esteves_109.yaml` | esteves-1989 | 13 |  |
 | `censo_terminacion_re.yaml` | ? | 3 |  |
 | `ceret_on_hipotesis_miguel.yaml` | ? | 3 |  |
+| `clima_era2.yaml` | varias | 3 |  |
 | `colores_caquetios.yaml` | ? | 4 |  |
 | `comparandas_jahn_1927.yaml` | jahn-1927 | 0 |  |
 | `computo_d11_2026-08-31.yaml` | ? | 4 |  |
@@ -41,6 +44,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-09-12.yaml` | ? | 4 |  |
 | `decisiones_tanda_2026-09-13.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-14.yaml` | ? | 0 |  |
+| `decisiones_tanda_2026-09-15.yaml` | ? | 0 |  |
 | `elenco_era2.yaml` | varias | 63 |  |
 | `esteves_parte2_falcon.yaml` | esteves-1989 | 16 |  |
 | `estructura_social_era2.yaml` | varias | 17 |  |
@@ -48,6 +52,8 @@ editar_a_mano: no
 | `jahn_vocabularios_comparados.yaml` | jahn-1927 | 4 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
 | `lokono_gramatica_perea_1942.yaml` | perea-alonso-1942 | 6 |  |
+| `mapa_nombres_era2.yaml` | ? | 63 |  |
+| `matacan_venado_2026-09-14.yaml` | esteves-1989 (y alvarado-1921, jahn-1927, neira-ribero-1762 como comparanda) | 5 |  |
 | `medicion_contaminacion_score_2026-09-09.yaml` | ? | 0 |  |
 | `medina_colina_dictado.yaml` | ? | 111 |  |
 | `migracion_lemas_fase2.yaml` | ? | 79 |  |
@@ -61,6 +67,8 @@ editar_a_mano: no
 | `petroglifos_y_manaure.yaml` | moron-2012-petroglifos | 4 |  |
 | `polities_no_costeras_federmann.yaml` | ? | 16 |  |
 | `propuesta_nucleo_d11_fase3.yaml` | perea-alonso-1942 · neira-ribero-1762 · oliver-1989-cap2 · oliver-1989-apendice-a · zavala-reyes-2015 | 17 |  |
+| `sistema_de_nombres_era2.yaml` | ? | 8 |  |
+| `sitios_era2.yaml` | varias | 7 |  |
 | `tabla15_c14_oliver.yaml` | oliver-1989-cap4 | 23 |  |
 | `tabla_a1_a7_swadesh.yaml` | oliver-1989-apendice-a | 4 |  |
 | `tabla_a2_transcripcion.yaml` | oliver-1989-apendice-a | 101 |  |
@@ -106,6 +114,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | Archivo | Qué es |
 |---|---|
 | `decision-d11-fase3-nucleo-lokono-achagua.md` | D11 fase 3: el núcleo re-derivado desde lokono + achagua, y un perfil de run para medirlo |
+| `mundo-era2-sitios-y-clima.md` | El mundo de la era 2, atado a los nodos: sitios y clima |
 
 ---
 

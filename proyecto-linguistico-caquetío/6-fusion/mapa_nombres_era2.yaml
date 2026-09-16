@@ -1,0 +1,810 @@
+# ────────────────────────────────────────────────────────────────────────
+# EL MAPA — los 63 nombres del elenco de la era 2, viejo → nuevo
+#
+# Reglas:     6-fusion/sistema_de_nombres_era2.yaml
+# Evidencia:  6-fusion/antroponimos_caquetios.yaml
+# Aplicado:   6-fusion/elenco_era2.yaml (campo `nombre` + `alias_era1`)
+# Verificado: 6-fusion/scripts/verificar_elenco_era2.py (sección NOMBRES)
+#
+# `nombre_era1` es el nombre que el agente tenía en el casting (#127): para
+# 43 es el de su agente de la era 1, para 4 el de una persona de fondo de
+# genealogia.yaml y para 16 el que el casting acuñó. Los tres que no cambian
+# llevan `nombre_nuevo: se conserva` y repiten su nombre en `nombre`.
+#
+# Ninguna cifra de este archivo está escrita a mano: los conteos los imprime
+# verificar_elenco_era2.py. La verdad la tiene el elenco; si el mapa y el
+# elenco no coinciden, el verificador falla.
+# ────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-14'
+  estado: sin-fusionar
+  quien: escriba (Claude), a pedido de Miguel
+  decision: >-
+    Miguel, 2026-09-14: «¿No deberíamos rehacer los nombres en base a lo que
+    conocemos y tenemos de caquetío?» → «Sí a los dos puntos»; y «Sí o sí hay
+    que sacar eso de -ko y -sha. Si es inventado, tanto de la gramática como
+    de los nombres».
+  como_se_midio: 'python 6-fusion/scripts/verificar_elenco_era2.py'
+
+nombres:
+- nombre_era1: Kunaro-bana
+  nombre_nuevo: se conserva
+  casa: los Tacuatos
+  raiz: kunaro
+  glosa: pez del golfete de Coro. Promicops Guasa
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Pez del golfete de Coro. Promicops Guasa [Zavala Reyes 2015
+    #96 (E)]'
+  formante: -bana
+  fuente_del_formante: 'CONSERVADO, no productivo: Yarosabana, cacique del Yaracuy
+    (Zavala Reyes 2015) con regla 4 declarada, mas D9 -bana «cerro, sitio alto»
+    con seis apoyos'
+  razon: 'Se conserva: el apopo de los Tacuatos se llama como el pez que persigue
+    en la seca, y la raíz ya era atestiguada.'
+  nombre: Kunaro-bana
+- nombre_era1: Pira-sha
+  nombre_nuevo: Dabuda
+  casa: los Tacuatos
+  raiz: dabuda
+  glosa: barro loza
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Barro loza [Zavala Reyes 2015 #99 (HB+E)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Maestra alfarera y matriarca: dabuda es el barro de loza con que se hace
+    lo que ella guarda y enseña.'
+- nombre_era1: Biro-ko
+  nombre_nuevo: Birokoa
+  casa: los Tacuatos
+  raiz: biro
+  glosa: sal
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: Zavala Reyes 2015 (Angulo Molina); recurso estratégico Coro
+  formante: -koa
+  fuente_del_formante: 'Uriacoa, apellido de un cacique del s. XVI (Zavala Reyes
+    2015, glosario), segmentado uria + -koa; apoyo: morfemas.yaml morfema-001 -bacoa
+    con cuatro apoyos y el primario Gorybacoa de 1538'
+  razon: 'El del biro. Mismo molde que Uriacoa (uria «plantío» + -koa): «el del
+    sitio de la sal», que es lo que raspa en las charcas de la orilla.'
+- nombre_era1: Naure-sha
+  nombre_nuevo: Naure
+  casa: los Tacuatos
+  raiz: naure
+  glosa: planta bejucosa
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Planta bejucosa [Zavala Reyes 2015 #186 (E)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Guarda las variedades de semilla de maíz: naure es «jojoto, mazorca de
+    maíz tierno» en Esteves. Y es el único nombre de cacique atestiguado que además
+    es voz del lexicón (Ampíes: «se llama Naure o Anaure»).'
+- nombre_era1: Piri-sha
+  nombre_nuevo: Uria
+  casa: los Tacuatos
+  raiz: uria
+  glosa: plantío, siembra
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Plantío, siembra [Zavala Reyes 2015 #273 (AM)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'La más joven, recién casada, trabaja el conuco más horas de las que hace
+    falta: uria es «plantío, siembra», la raíz desnuda de Uriacoa.'
+- nombre_era1: Guare-ko
+  nombre_nuevo: Duraboa
+  casa: los Tacuatos
+  raiz: duraboa
+  glosa: conuco sembrado, parcela en producción
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Zavala Reyes 2015, glosario #115 (AM): «Conuco, sembrado»'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Vino de Caseto sabiendo el conuco de interior: duraboa es «conuco sembrado,
+    parcela en producción». Su nombre dice de dónde viene sin nombrar el sitio.'
+- nombre_era1: Kori-sha
+  nombre_nuevo: Akaure
+  casa: los Tacuatos
+  raiz: aka
+  glosa: bejuco
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Bejuco [Zavala Reyes 2015 #3 (E)]'
+  formante: -ure
+  fuente_del_formante: Esteves 1989 p. 13 y p. 64 (Tumarure); recurrencia medida
+    8
+  razon: 'Cordelera: tuerce la fibra y hace las redes. aka «bejuco» con el formante
+    de familia, porque su linaje sigue siendo el de El Cayude y sus hijos también.'
+- nombre_era1: Suba-ko
+  nombre_nuevo: Urari
+  casa: los Tacuatos
+  raiz: urari
+  glosa: veneno/medicina vegetal (curare)
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: Zavala Reyes 2015 (AM); artículo de comercio
+  formante: null
+  fuente_del_formante: null
+  razon: 'Herbolaria que conoce «la planta que cura de la que mata»: urari es exactamente
+    eso, «veneno/medicina vegetal».'
+- nombre_era1: Uro-ko
+  nombre_nuevo: Dichiba
+  casa: los Tacuatos
+  raiz: dichiba
+  glosa: límite, línea
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Límite, línea [Zavala Reyes 2015 #108 (AM)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'El de la buena vara, que mide linderos de conuco y dice de quién es la
+    playa: dichiba es «límite, línea».'
+- nombre_era1: Kawa
+  nombre_nuevo: Chirwa
+  casa: los Tacuatos
+  raiz: chirwa
+  glosa: tinaja pequeña
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Tinaja pequeña [Zavala Reyes 2015 #83 (HB)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Aprendiza de alfarería que toca a escondidas las vasijas ajenas: chirwa
+    es «tinaja pequeña», lo primero que se aprende a hacer.'
+- nombre_era1: Piri
+  nombre_nuevo: Ucibo
+  casa: los Tacuatos
+  raiz: ucibo
+  glosa: cuenta de piedra, chaquira
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Zavala Reyes 2015, glosario #267 (AM): «Cuenta de piedras»'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Se zambulle donde nadie y quiere ser buceador de perla: ucibo es «cuenta
+    de piedra, chaquira», lo que sube del fondo.'
+- nombre_era1: Kori
+  nombre_nuevo: Chakamba
+  casa: los Tacuatos
+  raiz: chakamba
+  glosa: ¿cómo? (pregunta de estado)
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Zavala Reyes 2015, p.73, citando a Arcaya (1995): «fórmula de
+    saludo: chacamba cudanga (¿Cómo está usted?)», recogida a una anciana de Mitare.
+    Es la única frase caquetía conservada'
+  formante: null
+  fuente_del_formante: null
+  razon: 'La niña que hace preguntas que dejan callados a los adultos: chakamba
+    es el interrogativo «¿cómo?», la única palabra-pregunta atestiguada del lexicón.'
+- nombre_era1: Korie-ko
+  nombre_nuevo: Patapati
+  casa: los Tacuatos
+  raiz: patapati
+  glosa: anegadizo
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Anegadizo [Zavala Reyes 2015 #198 (AM)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Guardián de los jagüeyes: patapati es «anegadizo», la tierra que retiene
+    el agua, que es lo que él cuida y raciona. Se descartó Tarika por chocar a una
+    letra con Arika.'
+- nombre_era1: Bagre-ko
+  nombre_nuevo: Jachos
+  casa: los Cayudes
+  raiz: jachos
+  glosa: teas de madera, para encandilar en las labores de pesca nocturna
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Teas de madera, para encandilar en las labores de pesca nocturna
+    [Zavala Reyes 2015 #169 (E)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Apopo de la pesca nocturna con teas: jachos es «teas de madera, para encandilar
+    en las labores de pesca nocturna». La glosa de la fuente describe su oficio
+    entero.'
+- nombre_era1: Tuqa-sha
+  nombre_nuevo: Wairon
+  casa: los Cayudes
+  raiz: wairon
+  glosa: hoguera
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Hoguera [Zavala Reyes 2015 #132 (HB)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Matriarca que lleva la casa y el fogón de los Cayudes: wairon es «hoguera».'
+- nombre_era1: Dara-bana
+  nombre_nuevo: se conserva
+  casa: los Cayudes
+  raiz: dara
+  glosa: alcaraván
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Alcaraván [Zavala Reyes 2015 #102 (HB+E)]'
+  formante: -bana
+  fuente_del_formante: 'CONSERVADO, no productivo: Yarosabana, cacique del Yaracuy
+    (Zavala Reyes 2015) con regla 4 declarada, mas D9 -bana «cerro, sitio alto»
+    con seis apoyos'
+  razon: 'Se conserva: el vigía que ve primero lleva el nombre del alcaraván, y
+    la raíz ya era atestiguada.'
+  nombre: Dara-bana
+- nombre_era1: Suka-sha
+  nombre_nuevo: Wache
+  casa: los Cayudes
+  raiz: wache
+  glosa: murciélago, zorro blanco
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Murciélago, zorro blanco [Zavala Reyes 2015 #125 (E+AM)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Ahúma y seca el pescado y lee el tiempo de noche: wache es «murciélago,
+    zorro blanco», el animal de su hora. Se evitó suka «noche» por la regla h.'
+- nombre_era1: Kati-sha
+  nombre_nuevo: Katiata
+  casa: los Cayudes
+  raiz: kati
+  glosa: luna
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Decisión colisiones D5 (2026-08-31) — FUSIONADA con cati: la
+    grafía c es colonial y el lema fonémico es la palabra. Atestiguada: Zavala Reyes
+    2015, glosario #71 (CGB): «Luna [catire: persona de tez blanca]». Cognados:
+    pr'
+  formante: -ata
+  fuente_del_formante: Bonyata, cacique de Myraca (Folio 2, Legajo 218, AGI; carta
+    de Bastidas 8-X-1538, via Velasco 2015); recurrencia medida 4
+  razon: 'Recoge el fruto del kayude y prepara las teas con manteca de cunaro: kati
+    «luna» con el formante de Bonyata, porque sale cuando hay luz de luna.'
+- nombre_era1: Wari-ko
+  nombre_nuevo: Dunakoa
+  casa: los Cayudes
+  raiz: duna
+  glosa: agua (corriente, bebible)
+  fuente_de_la_raiz: caquetío-reconstruido
+  cita_de_la_raiz: núcleo fundacional, forma justificada por cognado en garifuna/lokono
+  formante: -koa
+  fuente_del_formante: 'Uriacoa, apellido de un cacique del s. XVI (Zavala Reyes
+    2015, glosario), segmentado uria + -koa; apoyo: morfemas.yaml morfema-001 -bacoa
+    con cuatro apoyos y el primario Gorybacoa de 1538'
+  razon: 'Dice dónde correrá la humedad antes de que llueva y dónde cavar la charca:
+    duna «agua» + -koa, «el del sitio del agua».'
+- nombre_era1: Wama-sha
+  nombre_nuevo: Wanepe
+  casa: los Cayudes
+  raiz: wanepe
+  glosa: cesto para cargar niños
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: Así llaman en Barcelona y Guayana una especie de cabestrillo
+    o charpa en que las madres indígenas llevan sus niños de pecho cuando viajan
+    [Alvarado 1921 p.152 s.v. GUANEPE]
+  formante: null
+  fuente_del_formante: null
+  razon: 'Cuida a los niños de la casa entera y les canta los nombres de los animales
+    y de los muertos: wanepe es «cesto para cargar niños».'
+- nombre_era1: Waranaro-sha
+  nombre_nuevo: Waranaro
+  casa: los Cayudes
+  raiz: waranaro
+  glosa: pez lisa
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Pez lisa [Zavala Reyes 2015 #139 (HB+E)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Pescadora de red cuya red recoge más que ninguna: waranaro es «pez lisa».
+    Conserva su raíz y pierde el sufijo.'
+- nombre_era1: Taku-ko
+  nombre_nuevo: Ruata
+  casa: los Cayudes
+  raiz: rua
+  glosa: cargar, transportar, llevar
+  fuente_de_la_raiz: caquetío-reconstruido
+  cita_de_la_raiz: núcleo fundacional, forma justificada por cognado en proto-arawakan
+  formante: -ata
+  fuente_del_formante: Bonyata, cacique de Myraca (Folio 2, Legajo 218, AGI; carta
+    de Bastidas 8-X-1538, via Velasco 2015); recurrencia medida 4
+  razon: 'Carga la hamaca del Manaure cuando sube al cerro: rua «cargar, transportar,
+    llevar» con el formante de Bonyata.'
+- nombre_era1: Daru
+  nombre_nuevo: Chuchubi
+  casa: los Cayudes
+  raiz: chuchubi
+  glosa: sinsonte tropical (Mimus gilvus)
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Zavala Reyes 2015, glosario #85 «Chuchube» (HB): «Paraulata»;
+    Gatschet 1885 (material Pinart, Aruba 1882), sección aves, «shushubi» = Orpheus
+    americanus; van Buurt 2014 §6 «chuchubi» (islas A/B/C) = Mimus gilvus. Triple '
+  formante: null
+  fuente_del_formante: null
+  razon: 'Corre los avisos entre El Cayude, Tacuato y Moruy: chuchubi es el «sinsonte
+    tropical», el pájaro que repite lo que oye. Se descartó Darubana por chocar
+    a una letra con Dara-bana.'
+- nombre_era1: Ita-sha
+  nombre_nuevo: Cege
+  casa: los Cayudes
+  raiz: cege
+  glosa: lechuza
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Lechuza [Zavala Reyes 2015 #78 (HB)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'La vidente de ochenta años que dice frases que se cumplen dos días después:
+    cege es «lechuza», el ave que ve de noche.'
+- nombre_era1: Sha
+  nombre_nuevo: Jaiata
+  casa: los Cayudes
+  raiz: jai
+  glosa: oír, escuchar
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Zavala Reyes 2015, glosario #175 (AM): «Oír, escuchar»'
+  formante: -ata
+  fuente_del_formante: Bonyata, cacique de Myraca (Folio 2, Legajo 218, AGI; carta
+    de Bastidas 8-X-1538, via Velasco 2015); recurrencia medida 4
+  razon: 'La niña que escucha desde el umbral todo lo que se dice en la casa del
+    boratio: jai es «oír, escuchar».'
+- nombre_era1: Manaure
+  nombre_nuevo: se conserva
+  casa: casa del Manaure
+  raiz: manaure
+  glosa: título laudatorio del señor principal (var. managuanare, managuarire)
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'González, Carlos (estudio histórico del PLINCODE, p.23), citado
+    en Zavala Reyes 2015 nota al pie (2): ''el cacique caquetío no se llamaba Manaure,
+    pues este era un término laudatorio pero no el único, también recibía los '
+  formante: null
+  fuente_del_formante: null
+  razon: 'Se conserva: es título atestiguado, no nombre inventado. Decisión de Miguel.'
+  nombre: Manaure
+- nombre_era1: Nubiri-sha
+  nombre_nuevo: Karebe
+  casa: casa del Manaure
+  raiz: karebe
+  glosa: cuchara, cucharón de media tapara con mango de madera
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'DOS atestaciones independientes a los dos lados del Golfete
+    y con 128 años entre ellas: Gatschet 1885 la recoge en ARUBA como «karebe spoon»
+    (lista de voces arahuacas de la isla), y Medina Colina 2013 p. 64 la da viva
+    en'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Esposa principal que gestiona la redistribución, quién recibe más y quién
+    menos: karebe es el «cucharón de media tapara con mango de madera», el instrumento
+    de repartir.'
+- nombre_era1: Itana-sha
+  nombre_nuevo: Simaure
+  casa: casa del Manaure
+  raiz: sima
+  glosa: cerro, montaña, elevación
+  fuente_de_la_raiz: caquetío-reconstruido
+  cita_de_la_raiz: núcleo fundacional, forma justificada por cognado en lokono/topónimo
+    (Barquisimeto)
+  formante: -ure
+  fuente_del_formante: Esteves 1989 p. 13 y p. 64 (Tumarure); recurrencia medida
+    8
+  razon: 'Matriarca del linaje del señor, en la casa al pie del Capubana: sima «cerro,
+    montaña» con el formante de los apellidos de familia. Es nombre de estirpe,
+    y ella es quien la guarda.'
+- nombre_era1: Jakura-sha
+  nombre_nuevo: Jakura
+  casa: casa del Manaure
+  raiz: jakura
+  glosa: guardar, conservar, custodiar
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Zavala Reyes 2015, glosario #171 (AM): «Guardar»'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Guarda las joyas de oro y de concha, las hamacas de alianza, lo que se
+    entrega y lo que se retiene: jakura es «guardar, conservar, custodiar». Conserva
+    su raíz y pierde el sufijo.'
+- nombre_era1: Waimo-ko
+  nombre_nuevo: Apoaure
+  casa: casa del Manaure
+  raiz: apo
+  glosa: grande
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Grande [Zavala Reyes 2015 #11 (AM)]'
+  formante: -aure
+  fuente_del_formante: Esteves 1989 p. 13, la serie de apellidos de la gran familia
+    caquetía (Adaure, Timaure, Yaraure, Chunaure, Manaure); recurrencia medida 7
+  razon: 'Sobrino candidato que acompaña al Manaure y aprende de él lo que se hereda
+    estando cerca: apo «grande» con el formante de familia, el mismo elemento que
+    hay dentro de apopo.'
+- nombre_era1: Kabo-ni
+  nombre_nuevo: Humohumo
+  casa: casa del Manaure
+  raiz: humohumo
+  glosa: el ave que vuela
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'El ave que vuela [Zavala Reyes 2015 #160 (AM)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Lleva los recados del Manaure a los apopos de las cuatro casas: humohumo
+    es «el ave que vuela». Se evitó kabo «cabeza» por la regla h.'
+- nombre_era1: Tina-sha
+  nombre_nuevo: Harifuche
+  casa: casa del Manaure
+  raiz: harifuche
+  glosa: maíz tostado y miel
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Maíz tostado y miel [Zavala Reyes 2015 #153 (HB)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Ralla la yuca, exprime el sebucán, tuesta el casabe y sirve lo que baja
+    del cerro: harifuche es «maíz tostado y miel».'
+- nombre_era1: Kahu-sha
+  nombre_nuevo: Hiko
+  casa: casa del Manaure
+  raiz: hiko
+  glosa: 'hico: cada cuerda de la hamaca; por extensión, toda cuerda o soga'
+  fuente_de_la_raiz: caquetío-reconstruido
+  cita_de_la_raiz: 'Decisión de Miguel 2026-09-12 (tainismos de Medina): «todas
+    entran como voces nuevas». Medina Colina, Del Habla Paraguanera, página no dictada
+    (⚠️ pendiente): «es palabra ingresada al diccionario de la lengua española co'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Teje las hamacas de maure, la del señor y las de alianza: hiko es «cada
+    cuerda de la hamaca; por extensión, toda cuerda o soga». Se descartó Maure por
+    chocar a una letra con Naure.'
+- nombre_era1: Kumarawa-sha
+  nombre_nuevo: Kumarawa
+  casa: casa del Manaure
+  raiz: kumarawa
+  glosa: caracol de las costas de Paraguaná
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: Especie de caracol de las costas de Paraguaná [Alvarado 1921
+    p.102 s.v. CUMARAGUA]
+  formante: null
+  fuente_del_formante: null
+  razon: 'La cuarta esposa, corubo, que sala y seca lo que llega de la costa oeste:
+    kumarawa es el «caracol de las costas de Paraguaná», que es lo suyo y lo de
+    su casa de origen. Conserva su raíz y pierde el sufijo.'
+- nombre_era1: Kali-nu
+  nombre_nuevo: Wamipa
+  casa: casa del Manaure
+  raiz: wamipa
+  glosa: hueco, profundidad
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Hueco, profundidad [Zavala Reyes 2015 #135 (AM)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Guardián del agua del cerro, la fuente intermitente: wamipa es «hueco,
+    profundidad», donde el agua se junta. Se evitó kali «sol» por la regla h.'
+- nombre_era1: Piru
+  nombre_nuevo: Dato
+  casa: casa del Manaure
+  raiz: dato
+  glosa: fruto del cardón
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Fruto del cardón [Zavala Reyes 2015 #105 (HB)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Niño de siete años que ronda el budare de su madre: dato es «fruto del
+    cardón», lo que se come de camino.'
+- nombre_era1: Shaboro
+  nombre_nuevo: Sawaka
+  casa: casa del Manaure
+  raiz: sawaka
+  glosa: inframundo, reino de los muertos
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'van Buurt 2014 §6 «words likely to be of Caquetío origin» (el
+    autor advierte que la lista «has a subjective element»), isla C: «the underworld,
+    the realm of the dead, the beyond»; en papiamento antiguo la expresión baha '
+  formante: null
+  fuente_del_formante: null
+  razon: 'Boratio mayor, oráculo que se encierra solo en el buhío del cerro: sawaka
+    es «inframundo, reino de los muertos», con lo que él trata. Se descartó Kanaure
+    por chocar a una letra con Manaure.'
+- nombre_era1: Buio-sha
+  nombre_nuevo: Hayo
+  casa: casa del Manaure
+  raiz: hayo
+  glosa: hayo, coca (Erythroxylum coca), hoja masticada ritual
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Zavala Reyes 2015 #156 (HB): ''hierba quita sed''; cf. #154
+    hay (E) = coca. Forma taína hayo documentada en Oviedo. RE-ETIQUETADO 2026-07-20:
+    estaba como taíno pese a figurar en el glosario caquetío'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Ayunante que lee sueños, reconoce plantas y prepara el urari: hayo es
+    «hayo, coca, hoja masticada ritual». Se descartó Chaure por chocar a una letra
+    con Naure.'
+- nombre_era1: Moruy-sha
+  nombre_nuevo: Buriche
+  casa: casa del Manaure
+  raiz: buriche
+  glosa: licor fermentado, chicha de maíz
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Zavala Reyes 2015, glosario #50 (AM): «Licor fermentado»'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Maestra del merejuy, que fermenta la chicha de la convergencia: buriche
+    es «licor fermentado, chicha de maíz». Su nombre viejo era el del sitio, que
+    la regla f prohíbe.'
+- nombre_era1: Ita-ko
+  nombre_nuevo: Tebekoa
+  casa: los Guasicures de Caseto
+  raiz: tebe
+  glosa: lugar de cultivo, campo agrícola
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Zavala Reyes 2015, glosario #245 (AM): «Lugar de cultivo»'
+  formante: -koa
+  fuente_del_formante: 'Uriacoa, apellido de un cacique del s. XVI (Zavala Reyes
+    2015, glosario), segmentado uria + -koa; apoyo: morfemas.yaml morfema-001 -bacoa
+    con cuatro apoyos y el primario Gorybacoa de 1538'
+  razon: 'Apopo de los Guasicures y agricultor mayor del conuco de interior: tebe
+    «lugar de cultivo, campo agrícola» + -koa, «el del sitio del conuco».'
+- nombre_era1: Wasima-sha
+  nombre_nuevo: Wasima
+  casa: los Guasicures de Caseto
+  raiz: wasima
+  glosa: viejo, anciano
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Viejo, anciano [Zavala Reyes 2015 #145 (AM)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Matriarca que autoriza los matrimonios de la casa y guarda las cuentas
+    del don: wasima es «viejo, anciano». Conserva su raíz y pierde el sufijo.'
+- nombre_era1: Tabri-sha
+  nombre_nuevo: Tabri
+  casa: los Guasicures de Caseto
+  raiz: tabri
+  glosa: siembra, plantación en proceso
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Zavala Reyes 2015, glosario #234 (AM): «Conuco, siembra»'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Siembra y cosecha el conuco de Caseto y cuenta los días de lluvia: tabri
+    es «siembra, plantación en proceso». Conserva su raíz y pierde el sufijo.'
+- nombre_era1: Tijua-sha
+  nombre_nuevo: Tijua
+  casa: los Guasicures de Caseto
+  raiz: tijua
+  glosa: paloma de canto onomatopéyico
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Paloma de canto onomatopéyico [Zavala Reyes 2015 #248 (E)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Hila y teje el algodón y recoge del matorral lo que el conuco no da: tijua
+    es la «paloma de canto onomatopéyico». Conserva su raíz y pierde el sufijo.'
+- nombre_era1: Wama-ko
+  nombre_nuevo: Karama
+  casa: los Guasicures de Caseto
+  raiz: karama
+  glosa: ramazón
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Ramazón [Zavala Reyes 2015 #64 (E)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Abre conuco nuevo en el matorral a fuerza de roza y fuego: karama es «ramazón»,
+    lo que él tumba.'
+- nombre_era1: Tawaka
+  nombre_nuevo: Kasebo
+  casa: los Guasicures de Caseto
+  raiz: kasebo
+  glosa: poniente, oeste
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Zavala Reyes 2015, glosario #75 (GC): «Poniente»'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Esposo entrante que se mudó de El Cayude a la costa del oeste y todavía
+    la compara con el Golfete en voz alta: kasebo es «poniente, oeste». Su nombre
+    dice el viaje que hizo.'
+- nombre_era1: Saruro-sha
+  nombre_nuevo: Saruro
+  casa: los Guasicures de Caseto
+  raiz: saruro
+  glosa: boa, serpiente no venenosa
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'REPARTO 2026-09-10: a ATESTIGUADO, pero CON LA RESERVA QUE SU
+    NOTA YA TRAÍA: marcador 1-0, no 3-0 — `saruro` NO está en la Tabla A-9 de Oliver,
+    así que el único apoyo es Zavala #224 (E). Una sola fuente citada es el list'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Alfarera principal de AMUAY, cuyas vasijas son registro de lo que no debe
+    olvidarse: saruro es «boa, serpiente no venenosa». Conserva su raíz y pierde
+    el sufijo.'
+- nombre_era1: Dipopo-sha
+  nombre_nuevo: Dipopo
+  casa: los Guasicures de Caseto
+  raiz: dipopo
+  glosa: fibra de cocuiza, cabuya
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Fibra de cocuiza, cabuya [Zavala Reyes 2015 #109 (AM)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Tuerce la cabuya de cocuiza y hace las cuerdas que esta casa no sabía
+    hacer: dipopo es «fibra de cocuiza, cabuya». Conserva su raíz y pierde el sufijo.'
+- nombre_era1: Suri-bana
+  nombre_nuevo: Waitiao
+  casa: los Guasicures de Caseto
+  raiz: waitiao
+  glosa: amigo ritual, aliado de alianza
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Oliver 1989, cap. 2, p.147, sobre Oviedo y Valdés: mismo lexema
+    que datihao sobre la raíz de parentesco /-atti-/, con distinto prefijo de persona;
+    el pacto de guaitiao (intercambio de nombres entre aliados) lo describe O'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Recién iniciado que carga la hamaca del Manaure cuando toca a AMUAY: waitiao
+    es «amigo ritual, aliado de alianza», que es el papel que le toca entre los
+    dos nodos. Su raíz vieja no estaba en el lexicón.'
+- nombre_era1: Pari-nu
+  nombre_nuevo: Bajari
+  casa: los Guasicures de Caseto
+  raiz: bajarí
+  glosa: recorrer, caminar
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Zavala Reyes 2015, glosario #25 (AM): «Recorrer, caminar»'
+  formante: null
+  fuente_del_formante: null
+  razon: 'El más rápido de AMUAY, que lleva el llamamiento de casa en casa cuando
+    el cerro convoca: bajarí es «recorrer, caminar».'
+- nombre_era1: Bana-mana
+  nombre_nuevo: Turicha
+  casa: los Guasicures de Caseto
+  raiz: turicha
+  glosa: ave cantadora. Flauta
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Ave cantadora. Flauta [Zavala Reyes 2015 #260 (AM)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Cantor de hazañas que canta de noche lo que hizo el muerto y recita a
+    los ancestros: turicha es «ave cantadora. Flauta».'
+- nombre_era1: Tawi
+  nombre_nuevo: Siwa
+  casa: los Guasicures de Caseto
+  raiz: siwa
+  glosa: blando
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Decisión colisiones D5 (2026-08-31) — HOMÓNIMOS DECLARADOS:
+    siwa-1 blando, caquetío-ATESTIGUADO (Zavala Reyes 2015 #227 «Sigua» (E); su
+    homógrafo con el español era de la grafía y se disolvió con ella) y siwa-2 sal
+    de co'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Niña de diez años que modela vasijas casi perfectas: siwa es «blando»,
+    el barro antes de secarse.'
+- nombre_era1: Kiwa-ko
+  nombre_nuevo: Kiwakoa
+  casa: los Corubos
+  raiz: kiwa
+  glosa: concha de almeja y otros moluscos. Sitio del estado Lara
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Concha de almeja y otros moluscos. Sitio del estado Lara [Zavala
+    Reyes 2015 #214 (E+AM)]'
+  formante: -koa
+  fuente_del_formante: 'Uriacoa, apellido de un cacique del s. XVI (Zavala Reyes
+    2015, glosario), segmentado uria + -koa; apoyo: morfemas.yaml morfema-001 -bacoa
+    con cuatro apoyos y el primario Gorybacoa de 1538'
+  razon: 'Apopo de los Corubos, que junta la concha y el caracol de la costa abierta:
+    kiwa «concha de almeja y otros moluscos» + -koa. La casa de las conchas, con
+    el molde de Uriacoa.'
+- nombre_era1: Sha-korie
+  nombre_nuevo: Amaka
+  casa: los Corubos
+  raiz: amaka
+  glosa: sitio de moler maíz, área de procesamiento
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Zavala Reyes 2015, glosario #9 (AM): «Sitio de moler maíz»'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Matriarca de sesenta y nueve años, una de las que muelen los huesos del
+    díao: amaka es «sitio de moler maíz, área de procesamiento».'
+- nombre_era1: Paugis-sha
+  nombre_nuevo: Paugis
+  casa: los Corubos
+  raiz: paugis
+  glosa: paují, pavón de monte (variante de pauji)
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Zavala Reyes 2015 #197 (E+A): ''Paují''. CORREGIDO 2026-07-20:
+    figuraba como ''vasija, totuma'' (lokono/garifuna), lo que contradecía a la
+    vez la fuente y la ficha del propio agente Paugis-sha (''tu nombre viene de
+    paugis (pa'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Boratia de pueblo de AMUAY: paugis es «paují, pavón de monte», el tótem
+    de su linaje, que su ficha ya usaba («el ave que ve desde lejos»). Conserva
+    su raíz y pierde el sufijo.'
+- nombre_era1: Dara-ko
+  nombre_nuevo: Isiro
+  casa: los Corubos
+  raiz: isiro
+  glosa: árbol corpulento sapindáceo
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Árbol corpulento sapindáceo [Zavala Reyes 2015 #167 (A)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Maestro constructor de canoas que conoce las corrientes de la costa del
+    oeste: isiro es «árbol corpulento sapindáceo», de donde sale la canoa.'
+- nombre_era1: Tauta-sha
+  nombre_nuevo: Tauta
+  casa: los Corubos
+  raiz: tauta
+  glosa: pequeña paloma de hábitos ictiófagos
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Pequeña paloma de hábitos ictiófagos [Zavala Reyes 2015 #244
+    (E)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Sala y seca el pescado de mar grueso y junta el botuto y la concha en
+    la marea baja: tauta es la «pequeña paloma de hábitos ictiófagos». Conserva
+    su raíz y pierde el sufijo.'
+- nombre_era1: Ebo-ni
+  nombre_nuevo: Ebokoa
+  casa: los Corubos
+  raiz: ebo
+  glosa: camino, paso, senda
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Camino, paso, senda [Zavala Reyes 2015 #117 (E)]'
+  formante: -koa
+  fuente_del_formante: 'Uriacoa, apellido de un cacique del s. XVI (Zavala Reyes
+    2015, glosario), segmentado uria + -koa; apoyo: morfemas.yaml morfema-001 -bacoa
+    con cuatro apoyos y el primario Gorybacoa de 1538'
+  razon: 'Conoce el camino por tierra de Carirubana a Tacuato: ebo «camino, paso,
+    senda» + -koa. Conserva su raíz y cambia la cola inventada por el formante de
+    Uriacoa.'
+- nombre_era1: Arika-sha
+  nombre_nuevo: Arika
+  casa: los Corubos
+  raiz: arika
+  glosa: árbol de jícara o totumo
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Árbol de jícara o totumo [Zavala Reyes 2015 #14 (AM)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Hace y reparte las totumas y los envases de la casa y lleva la cuenta
+    de lo que se guarda: arika es el «árbol de jícara o totumo». Conserva su raíz
+    y pierde el sufijo.'
+- nombre_era1: Karapa-sha
+  nombre_nuevo: Mene
+  casa: los Corubos
+  raiz: mene
+  glosa: brea, betún natural; rezumadero de asfalto
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'RESUELTO 2026-08-24 (#52). Glosa anterior: ''sustancia que brota
+    de la tierra (petroleo, resina)'' — ''petroleo'' es anacronico: lo que el hablante
+    del s. XV nombraba es el MATERIAL que se ve y se usa (calafateo, impermeabil'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Saca la resina y la brea con que se calafatean las canoas: mene es «brea,
+    betún natural; rezumadero de asfalto». Su raíz vieja, karapa, chocaba a una
+    letra con Karama.'
+- nombre_era1: Dare-nu
+  nombre_nuevo: Dakawa
+  casa: los Corubos
+  raiz: dakawa
+  glosa: árbol de corteza gris, madera compacta
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Árbol de corteza gris, madera compacta [Zavala Reyes 2015 #101
+    (A)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Aprende a construir canoas con su tío materno y pregunta todo lo que los
+    adultos dan por sabido: dakawa es «árbol de corteza gris, madera compacta».
+    Se evitó dare «diente, hijo» por la regla h y kurari por chocar con Urari.'
+- nombre_era1: Talata-sha
+  nombre_nuevo: Talata
+  casa: los Corubos
+  raiz: talata
+  glosa: alegría, contento, gozo (< talataa Wayunaiki)
+  fuente_de_la_raiz: caquetío-reconstruido
+  cita_de_la_raiz: 'F8 (2026-09-12): forma derivada de la hermana que cita la glosa,
+    etiquetada `wayunaiki-cogn`; entra en la deuda de D11 fase 3 (núcleo reconstruido
+    desde el wayuu)'
+  formante: null
+  fuente_del_formante: null
+  razon: 'La joven en encierro, que aprende de las ancianas lo que se enseña una
+    sola vez en la vida: talata es «alegría, contento, gozo». Conserva su raíz y
+    pierde el sufijo; la ironía del nombre es suya.'
+- nombre_era1: Moro-ko
+  nombre_nuevo: Waru
+  casa: los Corubos
+  raiz: waru
+  glosa: volturido, cataneja. Ave mayor que el zamuro
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Volturido, cataneja. Ave mayor que el zamuro [Zavala Reyes 2015
+    #143 (E)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'El de los huesos, que sostiene el fuego sin llama bajo la hamaca del díao
+    muerto: waru es el «volturido, cataneja, ave mayor que el zamuro».'
+- nombre_era1: Nubi
+  nombre_nuevo: Tigi
+  casa: los Corubos
+  raiz: tigi
+  glosa: pequeña paloma que se alimenta de peces
+  fuente_de_la_raiz: caquetío-atestiguado
+  cita_de_la_raiz: 'Pequeña paloma que se alimenta de peces [Zavala Reyes 2015 #247
+    (E)]'
+  formante: null
+  fuente_del_formante: null
+  razon: 'Niño de ocho años que imita a los pescadores en la orilla con un palo
+    por arpón: tigi es la «pequeña paloma que se alimenta de peces».'

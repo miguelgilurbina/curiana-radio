@@ -44,7 +44,12 @@ perfiles:
       `base` pero sin la capa hipotética: 35 de sus 38 voces son formas que el
       proyecto acuñó para la simulación (F8), y mostrarlas adelanta justo lo que
       la era 2 quiere ver acuñar a los agentes. `base` no se toca: es la era 1.
-    capas_lexicas: [caquetío-atestiguado, caquetío-reconstruido]
+      Y CON la capa retroabstraída (Miguel, 2026-09-14, a propósito de matacán:
+      «sí o sí lo tenemos que utilizar»): son voces vivas documentadas, no
+      acuñaciones, y la era 2 quiere que la gente use «lo más posible el
+      diccionario». El venado (matakán) está en esa capa. El score no cambia:
+      la capa ya estaba en capas_de_score.
+    capas_lexicas: [caquetío-atestiguado, caquetío-reconstruido, caquetío-retroabstraido]
     andamiaje: completo
     pregunta: '¿Se forma una koiné entre dos nodos cuando la comunidad sólo ve lo que puede sostener?'
 

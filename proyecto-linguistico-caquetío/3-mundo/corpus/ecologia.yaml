@@ -634,6 +634,11 @@ entradas:
       venado. El caso concreto se retira; LA REGLA DE MÉTODO sigue siendo válida y se
       conserva sin ejemplo hasta que aparezca uno verificado. La palabra caquetía del
       venado queda como hueco léxico declarado, no se rellena a mano.
+      ACTUALIZADO 2026-09-14: el hueco se cierra por decisión de Miguel con 'matakán'
+      (caquetío-retroabstraido: Esteves 1989 p. 51, «cérvido de poca alzada» de los
+      bosques de Paraguaná; ver ecologia-077). No se rellenó a mano: entró una voz viva
+      documentada, con su sustrato en duda declarado. Sigue sin haber palabra caquetía
+      ATESTIGUADA del venado.
     fuente: reconstruido
     referencia: "Regla de método reformulada tras auditoría de 2026-08-24 (issue #45); pendiente de caso verificado"
     dominios: [ecologia, fauna, metodo]
@@ -1718,3 +1723,202 @@ huecos_lexicos:
     agentes_relacionados: [Bagre-ko, Dara-ko, Uro-ko]
     palabra_lexicon: null
     locacion: orilla
+
+  - id: ecologia-077
+    voz: matacán
+    contenido: >
+      En los bosques de Paraguaná hubo rebaños de venado matacán, «cérvido de poca
+      alzada» (Mazama): la única caza mayor de la península. Se extinguieron en el
+      llano «por la cacería incontrolada» (Esteves); el Cerro Santa Ana lo conserva hoy.
+      Castellanos atestigua venados en la tierra de Coro hacia 1540 («conejos y
+      venados»). El matacán no es el venado caramerudo (Odocoileus) de otras tierras:
+      es el cérvido propio de la península, y la voz que lo nombra es regional y viva.
+    fuente: atestiguado
+    referencia: >-
+      Esteves 1989, Toponimia de Paraguaná, parte 2, p. 51, s.v. MATACAN (imagen
+      verificada el 2026-09-14): «Matacán: cérvido de poca alzada. En tiempos pasados
+      había rebaños de este tipo de venado en los bosques de Paraguaná. Se han
+      extinguido por la cacería incontrolada»; Castellanos, Elegías, líneas 48228-48230
+      del txt («conejos y venados»); Monumento Natural Cerro Santa Ana (fauna actual:
+      venado matacán). Decisión de Miguel del 2026-09-14
+      (6-fusion/matacan_venado_2026-09-14.yaml)
+    procedencia:
+      obra: esteves-1989
+      pagina: 51
+    dominios: [ecologia, fauna, caza, lexico_regional]
+    agentes_relacionados: []
+    palabra_lexicon: matakán
+    locacion: matorral
+    lectura: >-
+      Capa s. XX sobre el medio (regla 3): Esteves habla de «tiempos pasados» sin
+      fecha, y Castellanos pone el animal en Coro en el s. XVI; que el rebaño estuviera
+      en la Paraguaná del s. XV es lectura, no dato. El nombre es castellano para la
+      lexicografía general («de matar y can»); entra al lexicón como retroabstraído
+      por decisión, con la duda declarada en la entrada. Cierra el hueco de
+      ecologia-037.
+
+  # ── Fusionados el 2026-09-16 desde 6-fusion/sitios_era2.yaml (campaña de
+  # sitios y clima de la era 2), por decisión de Miguel (tanda del 15, p4:
+  # «antes del primer run»). Cada uno con la página que la campaña verificó
+  # contra el OCR el 2026-09-14/16. ──────────────────────────────────────
+
+  - id: ecologia-078
+    contenido: >
+      La pesca nocturna con luz: del cunaro («Cuna, Cunaro, "promicrops guasa", pez
+      lábrido que abunda en el golfete de Coro») se extraía manteca «para untar los
+      "jachos", teas de madera, comúnmente de curarí, para encandilar en labores de
+      pesca nocturna». El pez da la luz con que se pesca el pez. Es la única técnica
+      de pesca con hora del día en todo el material del repo, y `jachos` es voz
+      caquetía atestiguada.
+    fuente: atestiguado
+    referencia: "Esteves 1989, Toponimia de Paraguaná, parte 2, p. 33, entrada Cunacho; Esteves no fecha la técnica ni cita fuente"
+    procedencia:
+      obra: esteves-1989
+      pagina: 33
+    dominios: [ecologia, pesca, tecnica]
+    agentes_relacionados: []
+    palabra_lexicon: jachos
+    locacion: orilla
+    lectura: >-
+      Capa s. XX sin fecha de origen (regla 3): que se pescara así en el s. XV es
+      lectura. En la era 2 abre en el Tiempo de Viento, de noche, sobre el agua
+      calma de la seca (clima_era2.yaml, Tacuato).
+
+  - id: ecologia-079
+    contenido: >
+      La pesca de agua quieta con veneno vegetal: «Barbasco es nombre común a varias
+      plantas cuyas propiedades estupefacientes se aprovechan en la pesca.» El
+      topónimo Barbasco está junto a Cocodite, al norte del cerro. Es la única
+      técnica de pesca de agua quieta que aparece en el repo, y no tiene palabra
+      caquetía: hueco léxico declarado.
+    fuente: atestiguado
+    referencia: "Esteves 1989, parte 2, p. 22, entrada Barbasco"
+    procedencia:
+      obra: esteves-1989
+      pagina: 22
+    dominios: [ecologia, pesca, flora, hueco_lexico]
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: buco
+    lectura: >-
+      El barbasco es panamericano y la técnica también; lo que Esteves atestigua es
+      el topónimo y la glosa en Paraguaná. La palabra caquetía del barbasco y del
+      embarbascar no está: el agente tiene la cosa y no el nombre.
+
+  - id: ecologia-080
+    contenido: >
+      Las atalayas de cardúmenes de la costa oeste: Sarabón es un «punto costeño al
+      Norte de Punta Cardón que sirvió de atalaya a los pescadores para avistar
+      (columbrar) los cardúmenes», y Suriquiba, «punto costeño de Punta Cardón que
+      sirvió de atalaya a los pescadores para atisbar los cardúmenes de peces». Dos
+      puntos con nombre, la misma función, a menos de 10 km de Carirubana: el oficio
+      de leer el mar con lugar propio.
+    fuente: atestiguado
+    referencia: "Esteves 1989, parte 3, pp. 58 (Sarabón) y 61 (Suriquiba); Esteves lo pone en pasado, sin fecha de origen"
+    procedencia:
+      obra: esteves-1989
+      pagina: 58
+    dominios: [ecologia, pesca, geografia, hueco_lexico]
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: orilla
+    lectura: >-
+      Es el dato de oficio mejor localizado de toda la costa oeste, que el corpus no
+      cubría (ni un hecho del Golfo de Venezuela antes de éste). El cardumen y el
+      vigía de cardúmenes siguen sin palabra caquetía (hueco-lex-002).
+
+  - id: ecologia-081
+    contenido: >
+      La cal de concha para el maíz: «los aborígenes para obtener cal con qué pelar
+      el maíz, incineraban conchas de almejas; y en este lugar hemos visto señales,
+      antiquísimas y abundantes, de los guairones donde los indios quemaban conchas
+      marinas» (Caradacagua). Cierra un circuito: la concha hace la cal, la cal pela
+      el maíz, y la misma concha bruñe la olla (Medina, mc-mundo-015 y mc-mundo-018).
+    fuente: atestiguado
+    referencia: "Esteves 1989, parte 2, p. 28, entrada Caradacagua; Medina Colina 2013 (mc-mundo-015 cal, mc-mundo-018 bruñido) como segunda fuente de la técnica"
+    procedencia:
+      obra: esteves-1989
+      pagina: 28
+    dominios: [ecologia, recoleccion, agricultura, tecnica]
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: orilla
+    lectura: >-
+      «Antiquísimas» es juicio de Esteves, no fecha: la técnica es de contacto o
+      anterior por su lógica (nixtamalización con cal de concha, sin cal de piedra
+      en la península), pero la proyección al s. XV es lectura, no dato.
+
+  - id: ecologia-082
+    contenido: >
+      El cují grande señala el agua: en la región árida no hay «sino cardones, tunas,
+      arbustos espinosos, y como únicos árboles los cujíes, éstos mismos raquíticos y
+      marchitos, salvo a las orillas de los estanques, o donde sus raíces encuentran
+      alguna humedad subterránea, tornándose entonces corpulentos y hermosos». Donde
+      el árbol está corpulento hay humedad bajo tierra: una regla de lectura del
+      paisaje.
+    fuente: atestiguado
+    referencia: "Arcaya 1920, Historia del Estado Falcón, p. 23"
+    procedencia:
+      obra: arcaya-1920
+      pagina: 23
+    dominios: [ecologia, flora, hidrologia]
+    agentes_relacionados: []
+    palabra_lexicon: ubeda
+    locacion: matorral
+    lectura: >-
+      Describe el medio físico (constante desde ~4000 BP, ecologia-002): la regla
+      vale para un caquetío del s. XV que busca dónde cavar el jagüey. Segunda
+      fuente para ecologia-018 (el cardonal).
+
+  - id: ecologia-083
+    contenido: >
+      El pulso de lluvia, visto y fechado en Paraguaná: «Sievers, que estuvo allí en
+      los últimos días de octubre y primeros de noviembre de 1892, época lluviosa,
+      habla de las feraces campiñas de Pueblo Nuevo, con sus fértiles dehesas,
+      potreros y maizales... Meses después habría podido contemplar las "feraces
+      campiñas" vueltas tristes secadales.» Y antes: «siendo muy frecuente perderse
+      las cosechas por falta de lluvias, mas es tal la bondad del suelo, especialmente
+      en Paraguaná, que pocos aguaceros transforman en jardines a los campos más
+      áridos».
+    fuente: atestiguado
+    referencia: "Arcaya 1920, p. 24, sobre Sievers (Zweite Reise in Venezuela in den Jahren 1892-93)"
+    procedencia:
+      obra: arcaya-1920
+      pagina: 24
+    dominios: [ecologia, clima, agricultura]
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: >-
+      Segunda fuente, independiente y del s. XIX, para el pulso corto de octubre-
+      diciembre que Camacho mide (ecologia-006). Es lo que sostiene el año de la era
+      2 (tres períodos, decisión p1 del 2026-09-15) frente al 60/60 que el motor
+      tenía, con las lluvias en «Jun-Nov».
+
+  - id: ecologia-084
+    contenido: >
+      La laguna de Guaranao, hoy: manglar de cuatro especies —«mangle rojo
+      (Rhizophora mangle), el mangle negro (Avicennia germinans), el mangle llorón
+      (Laguncularia racemosa) y botoncillo (Conocarpus erectus)»—, alrededor cujíes,
+      guayacán, tunas y cardones; fauna con «la baba o el caimán de anteojos (Caiman
+      crocodilus)» y «cocodrilos de la costa (Crocodylus acutus)», lisa, corocoro,
+      lenguado, tortugas y aves. «En la década de 1970 era una salina utilizada
+      antiguamente por los indios caquetíos»; manantiales de agua dulce la volvieron
+      salobre, y hacia 1980 la contaminó el crecimiento de Punto Fijo.
+    fuente: atestiguado
+    referencia: "Wikipedia es, «Parque metropolitano Laguna de Guaranao», consultada el 2026-09-16 (ficha 4-fuentes/laguna-guaranao-parque.md); la salina precontacto la sostiene Arcaya 1920 p. 22 («las más importantes son las de Guaranao»)"
+    procedencia:
+      obra: laguna-guaranao-parque
+      pagina: "flora, fauna e historia"
+    dominios: [ecologia, manglar, fauna, salinas]
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: manglar
+    lectura: >-
+      Capa moderno sobre el medio: el manglar y el caimán se proyectan como
+      constantes del medio (ecologia-002); «utilizada por los caquetíos» es
+      afirmación moderna sobre el pasado y no se proyecta sola (regla 3) — la salina
+      la sostiene Arcaya. Da fuente a tres testimonios de Miguel del 2026-09-14
+      (manglares, yacarés, peces): el «yararé» era un lapsus por yacaré. La palabra
+      caquetía del caimán sigue siendo hueco; `caiman` es taína y llega al tier 1
+      por la esfera de contacto.

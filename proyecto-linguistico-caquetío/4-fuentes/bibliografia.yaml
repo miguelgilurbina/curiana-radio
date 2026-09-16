@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 62
+  obras: 65
   en_repo: 42
-  solo_citadas: 20
+  solo_citadas: 23
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
@@ -371,6 +371,20 @@ obras:
   aliases:
   - Keegan 1989
   en_repo: false
+- id: laguna-guaranao-parque
+  obra: Parque metropolitano Laguna de Guaranao — entrada enciclopédica
+  autor: Wikipedia en español (colaborativa)
+  anio: '2026'
+  publicacion: Wikipedia es, «Parque metropolitano Laguna de Guaranao», consultada el 2026-09-16; cita
+    cuatro referencias (blogs, archivos web y un documento legal venezolano)
+  genero: datos
+  paginas: — (página web)
+  acceso: Libre en línea. https://es.wikipedia.org/wiki/Parque_metropolitano_Laguna_de_Guaranao
+  aliases:
+  - Laguna de Guaranao
+  - Parque metropolitano Laguna de Guaranao
+  - laguna-guaranao-parque
+  en_repo: false
 - id: las-casas-1875
   obra: Historia de las Indias, tomo I
   autor: Las Casas, Bartolomé de
@@ -426,6 +440,42 @@ obras:
   - Del Habla Paraguanera
   - habla paraguanera
   en_repo: true
+- id: montecano-reserva
+  obra: Reserva Biológica Montecano — descripción de INFALCOSTA y entrada enciclopédica
+  autor: Tulio Arends (INFALCOSTA); Wikipedia en español (colaborativa)
+  anio: 2019-2021
+  publicacion: INFALCOSTA, «Reserva Biológica Montecano», 13-07-2021 (https://infalcosta.org/2021/07/13/reserva-biologica-montecano/);
+    Wikipedia es, «Reserva biológica Montecano», consultada el 2026-09-14, que cita el Decreto N.º 3825
+    (2019), FUNDACITE Falcón (2010) e INPARQUES (2022)
+  genero: datos
+  paginas: — (páginas web)
+  acceso: 'Libre en línea. INFALCOSTA: https://infalcosta.org/2021/07/13/reserva-biologica-montecano/
+    · Wikipedia: https://es.wikipedia.org/wiki/Reserva_biol%C3%B3gica_Montecano'
+  aliases:
+  - Montecano
+  - Reserva Biológica Montecano
+  - montecano-reserva
+  en_repo: false
+- id: monumento-cerro-santa-ana
+  obra: Monumento Natural Cerro Santa Ana — descripción institucional y enciclopédica (INPARQUES, MINEC,
+    Wikipedia es)
+  autor: INPARQUES; MINEC; Wikipedia en español (colaborativa)
+  anio: 1972-2022
+  publicacion: Decreto N.º 1005 del 14-06-1972 (Gaceta Oficial N.º 29.832, 16-06-1972); INPARQUES, «Monumento
+    Natural Cerro Santa Ana» e «El Monumento Natural Cerro Santa Ana cumple 47 años» (2019); MINEC, «Monumento
+    Natural Cerro Santa Ana cuenta con cinco pisos bióticos»; Wikipedia es, «Cerro Santa Ana (Paraguaná)»,
+    consultada el 2026-09-14
+  genero: datos
+  paginas: — (páginas web; las de INPARQUES y MINEC devolvían 404 el 2026-09-14 y se citan por el extracto
+    del buscador)
+  acceso: 'Libre en línea. Wikipedia: https://es.wikipedia.org/wiki/Cerro_Santa_Ana_(Paraguan%C3%A1) ·
+    INPARQUES: https://www.inparques.gob.ve/monumento-natural-cerro-santa-ana/ · MINEC: http://www.minec.gob.ve/monumento-natural-cerro-santa-ana-cuenta-con-cinco-pisos-bioticos/'
+  aliases:
+  - Cerro Santa Ana
+  - Monumento Natural Cerro Santa Ana
+  - el Capubana (fuente moderna)
+  - monumento-cerro-santa-ana
+  en_repo: false
 - id: moreno-mayar-2018
   obra: Early human dispersals within the Americas
   autor: Moreno-Mayar, J. V. et al. (53 autores)

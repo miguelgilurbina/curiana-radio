@@ -62,11 +62,14 @@ cura y se publica en Curiana Radio (`/kaketiana`).
 | **Tablas a dos columnas** | Se desalinean sin `-layout`. Extraer las dos veces y comparar |
 | **`lexicon` en PostgREST** | `max_rows`=1000 y hay ~1400 palabras: toda query sin `.range()` se trunca **en silencio**. Ver `loadLexicon()` |
 | **`lexicon_zavala.py`, `lexicon_a2.py` y `lexicon_achagua.py` son generados Y se importan** | Regenerarlos **cambia `score_linguistico()`** (zavala: habla; a2: columnas de comparación paraujano/lokono, D11; achagua: la comparanda de Neira y Ribero 1762, generada desde el YAML de la transcripción — se corrige el YAML, no el módulo). ⚠️ Los otros `lexicon_*.py` NO los importa el motor, pero **sí el tooling** (`generar_tablero`, `auditar_82`, `migrar_toponimos` — medido 2026-08-15): no se pueden mover de `curiana_sim/` sin romperlo |
+| **`curiana_agents_era2.py` es generado Y es el elenco activo si `CURIANA_ELENCO=era2`** | Se genera desde `6-fusion/elenco_era2.yaml` con `6-fusion/scripts/generar_agentes_era2.py` (#127). `curiana_agents.py` lo importa al cargarse si la variable está puesta, y todos los módulos hacen `from curiana_agents import ALL_AGENTS`: el elenco se decide ANTES de importar (`--elenco era2` lo fija). Los guardianes corren con la era 1 por defecto: `compilar_corpus` valida `agentes_relacionados` contra el elenco activo, y el corpus todavía nombra a 17 agentes que la era 2 deja fuera |
 | **`2-lengua/toponimos.yaml` no se edita a mano** | Es generado desde `lexicon_toponimos.py` por `migrar_toponimos.py`. Dos commits (2026-08-30/31) lo editaron directo y la siguiente regeneración deshizo 25 entradas. Se edita el módulo y se regenera; `test_el_canon_de_toponimos_es_lo_que_emite_el_migrador` lo vigila |
 | **La consola de Windows es cp1252** | Todo script que imprima `─`, `✓` o acentos necesita `_forzar_utf8()` bajo `__main__` |
 | **`pct_caquetio` está saturada** | 91% de las respuestas en 1.0. **No la uses para comparar agentes** — usa `score`. Issue #69 |
 | **`palabras_caquetias` no era lo que decía su nombre** | Devolvía TODAS las voces arahuacas, y de ahí comen el contagio léxico, la competencia de formas, el idiolecto, el campo léxico de la koiné y `words_used`: una voz wayuu o lokono se habría propagado como propia. Arreglado el 2026-09-09 (`palabras_arahuacas` guarda la lista completa). Antes de tocar un campo, mirar quién lo consume — el nombre miente |
 | **El 80% del lexicón no es caquetío** | 1.201 de 1.500 claves son comparanda (wayuu, lokono, taíno...). No llega al hablante porque el muestreador del prompt SÍ filtra por `fuente`, pero `palabras_activas()` no filtra: cualquier consumidor que la use está viendo las cinco lenguas. Medido en `6-fusion/medicion_contaminacion_score_2026-09-09.yaml` |
+| **Nombre o palabra lo decide la MAYÚSCULA** | 52 voces del canon son homógrafas de un nombre del elenco (`buko`, `hayo`, `mene`, `karebe`, `jachos`…). El filtro de nombres del 2026-09-14 comparaba en minúsculas y las borraba del conteo: palabras que el motor enseñaba y no contaba. Desde el 2026-09-16, `Karebe` es la persona y `karebe` el cucharón. Residuo elegido: una voz del canon que abra frase no cuenta — inflar `palabras_caquetias` es peor, porque de ahí comen el contagio y el idiolecto |
+| **El préstamo de esfera no es una fuga** | `ESFERA_DE_CONTACTO` (taíno, kalinago, paraujano, caribe-continental, jirajaroide) se mide aparte en `prestamos_de_esfera` y NO penaliza (decisión 2026-09-15). Hablar wayuu o lokono sí penaliza: son el andamio de la reconstrucción, y verlos haría circular la medición. Sólo el tier 1 recibe el bloque `[Voces de fuera]` |
 | **La longitud del prompt predice el score** | r = −0.48. Cualquier análisis por agente tiene que controlarla, o estarás midiendo cuánto escribiste tú. Ver `ANALISIS_BASE_2026-08-06.md` |
 
 ---
@@ -124,9 +127,17 @@ python curiana_orchestrator_v2.py --auto 30 --perfil base --perfiles --reporte
 #   --semilla N             fija el azar del motor y se sella en la huella
 #   --continuar             arranca del estado, memoria, lexicón y koiné del run anterior
 #                           (curiana_*.json en curiana_sim/); la config dice de qué run viene
-#   --perfil era2           base sin la capa hipotética (decisión 2026-09-14); un run = un día
-python curiana_orchestrator_v2.py --auto 6 --turnos-por-dia 6 --agentes-por-turno 12 --roster todos --perfil era2 --semilla 1
-python curiana_orchestrator_v2.py --auto 6 --agentes-por-turno 12 --roster todos --perfil era2 --semilla 2 --continuar
+#   --perfil era2           base sin la capa hipotética y CON la retroabstraída (voces vivas:
+#                           matakán y las de Medina; decisiones 2026-09-14); un run = un día
+#   --elenco era2           el elenco de Paraguaná (63, generado desde 6-fusion/elenco_era2.yaml);
+#                           el prompt nombra nodo, casa y sitio; el mundo pasa a PARAGUANÁ, y con él
+#                           el calendario (viento 50 / seca larga 40 / siembra 30, decisión 2026-09-15)
+#                           y el bloque [Tu tierra] (curiana_mundo.py: el canon de sitios y clima de
+#                           6-fusion/, ≤ 320 caracteres, rotando por agente y día; test de las 126)
+python curiana_mundo.py                                   # las 126 combinaciones de [Tu tierra], con su largo
+python curiana_orchestrator_v2.py --elenco era2 --auto 6 --turnos-por-dia 6 --agentes-por-turno 12 --roster todos --perfil era2 --semilla 1
+python curiana_orchestrator_v2.py --elenco era2 --auto 6 --agentes-por-turno 12 --roster todos --perfil era2 --semilla 2 --continuar
+python 6-fusion/scripts/generar_agentes_era2.py --check   # ¿el módulo generado está al día?
 ```
 
 ⚠️ Los perfiles cambian lo que el agente **ve**, nunca con qué se le **puntúa**:

@@ -1,0 +1,240 @@
+# ─────────────────────────────────────────────────────────────────────────
+# MEDICIÓN — ¿Puede «matacán» fonemizarse como voz caquetía del venado,
+# como se hizo con guayacán → wayakán?
+#
+# Miguel, 2026-09-14: «Matacán es consistente con por ejemplo guayacán, es
+# decir podríamos fonemizarlo dentro de lo que es el caquetío».
+#
+# Regla 5: PROPONE. No toca curiana_lexicon.py ni 3-mundo/corpus/. Regla 6:
+# cada cero de abajo está verificado con variantes. Regla 2: en duda, degradar.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-09-14'
+  estado: >-
+    DECIDIDA por Miguel el 2026-09-14 («sí o sí lo tenemos que utilizar»):
+    entra como caquetío-retroabstraido y el perfil era2 enseña esa capa.
+    Fusionada el mismo día en curiana_lexicon.py (matakán) y ecologia.yaml
+    (ecologia-077, y nota en ecologia-037). Ver decidido_2026-09-14 al final.
+  quien: escriba (Claude), sobre propuesta de Miguel
+  obra: esteves-1989 (y alvarado-1921, jahn-1927, neira-ribero-1762 como comparanda)
+  pregunta: >-
+    ¿Es «matacán» una voz de origen indígena que se pueda proyectar al
+    caquetío como se proyectaron los tainismos de Medina (wayakán, hiko,
+    jaiba…), o es castellana con forma de voz indígena?
+  respuesta_corta: >-
+    Fonológicamente cabe (la fonotáctica atestiguada la valida igual que
+    wayakan); etimológicamente no es el mismo caso. Guayacán entró como
+    caquetío-reconstruido porque es taína —lengua hermana— y panhispánica;
+    matacán es, para la lexicografía general, un compuesto castellano («de
+    matar y can», la liebre que agota a los perros), Alvarado 1921 no la
+    tiene entre las voces indígenas (y sí tiene el otro venado pequeño, el
+    locho quechua), y ninguna lengua arahuaca o caribe del repo llama así al
+    venado. Proyectarla sería vestir un hispanismo de caquetío: lo que la
+    regla 2 prohíbe. La recomendación es dejar el hueco declarado
+    (ecologia-037) y que lo acuñen los agentes.
+
+lo_que_dijo_bien_miguel:
+  fonotactica:
+    medido: 'Fonotactica(formas=caquetío-atestiguado).valida("matakan") → (True, []); lo mismo para wayakan, guayakan, tarika, kumarawa'
+    lectura: 'la forma fonemizada `matakan` no viola ningún patrón atestiguado: en eso la analogía con wayakán es exacta'
+    fecha: '2026-09-14'
+  el_animal_es_real_y_de_paraguana:
+    dato: >-
+      «Matacán: cérvido de poca alzada. En tiempos pasados había rebaños de
+      este tipo de venado en los bosques de Paraguaná. Se han extinguido por la
+      cacería incontrolada.»
+    etiqueta: atestiguado
+    capa: s. XX (Esteves habla de «tiempos pasados» sin fecha)
+    procedencia: {obra: esteves-1989, pagina: '51 (parte 2, verificada en imagen el 2026-09-14: pdf 26 de Esteves_1989_Toponimos_Paraguana_2.pdf)'}
+    corrobora: >-
+      Castellanos atestigua venados en Coro hacia 1540 («conejos y venados»,
+      castellanos-elegias, líneas 48228-48230 del txt); el Monumento Natural
+      Cerro Santa Ana conserva hoy el venado matacán (monumento-cerro-santa-ana,
+      Wikipedia es, fauna). El venado que Miguel recordaba «que ya no quedan»
+      es éste, y Esteves dice por qué no quedan.
+
+donde_se_rompe_la_analogia:
+  el_precedente:
+    decision: 'tainismos_de_medina, 6-fusion/decisiones_tanda_2026-09-12.yaml (APLICADA)'
+    literal: >-
+      «Si están como taíno en otra fuente y son panhispánicas entonces deben
+      clasificar como caquetío. Además el mismo diccionario de habla
+      paraguanera los clasifica. Ya hemos visto que el caquetío y el taíno
+      compartían muchas cosas.»
+    condiciones: ['taíno (arahuaco) en otra fuente', 'panhispánica', 'la trae Medina Colina']
+    etiqueta_que_dio: 'caquetío-reconstruido, «forma justificada por cognado en taíno, como kanoa/hamaca/konuko; NO atestiguada porque la vía pudo ser el español»'
+  matacan_contra_las_tres_condiciones:
+    - condicion: arahuaca en otra fuente
+      resultado: 'NO'
+      evidencia: >-
+        Etimología de la lexicografía general: «Compuesto de matar y can»
+        (Wikcionario es, s.v. matacán; los agregadores del DLE repiten «De
+        matar y can»). Acepción cinegética: «liebre que ya ha sido corrida por
+        los perros», la que aprende a agotarlos — de ahí, por extensión, el
+        venado pequeño que se les escapa. dle.rae.es y el Diccionario de
+        americanismos devolvieron 403 el 2026-09-14: se cita por Wikcionario y
+        agregadores, y queda como deuda de ficha.
+      deuda: 'sin-ficha (fuentes web; abrir 4-fuentes/ si se fusiona algo de esto)'
+    - condicion: panhispánica
+      resultado: 'NO'
+      evidencia: 'con el sentido de venado es regional (Col., Ven.); en España la voz existe con otros sentidos (veneno, liebre, ladronera, cascajo)'
+    - condicion: la trae Medina Colina
+      resultado: 'NO en lo dictado'
+      evidencia: >-
+        0 de «matac» en 6-fusion/medina_colina_dictado.yaml. El dictado es
+        parcial por diseño (la M y la N están dictadas en parte: macana s.v.,
+        naguas p. 193, nigua p. 195), así que es un cero del dictado, no del
+        libro: comprobar en el físico s.v. matacán.
+      deuda: 'medina-colina-sxx s.v. matacán (físico)'
+
+el_cero_de_alvarado_verificado:
+  obra: alvarado-1921
+  extraccion: 'pdftotext -enc UTF-8 (703.917 bytes; regla: no pypdf)'
+  consultas:
+    - {patron: 'matac (insensible)', hits: 2, que_son: '«MATACA. Árbol de Cumaná» y su cita (Cod. 191): el árbol cuya fruta come el guácharo — no el venado'}
+    - {patron: 'matacan / matac[aá]n', hits: 0}
+    - {patron: 'mata- (corte de línea)', hits: 0}
+    - {patron: 'venado pequeño', hits: 1, que_es: '«LOCHO. Especie de venado pequeño de los Llanos.— […] Del quichua lluchu venado» (líneas 11694-11701 del txt)'}
+    - {patron: 'venadito / cervato / corzo', hits: 0}
+  lectura: >-
+    Alvarado, que registra el venado pequeño de los Llanos con su etimología
+    indígena (locho, del quechua), NO registra matacán en el glosario de
+    voces indígenas. Es un cero medido con variantes: para Alvarado la voz no
+    era indígena. Donde debería estar, si es castellana, es en su «Glosario
+    del bajo español en Venezuela» (1929), que no está en el repo.
+  deuda: >-
+    Glosario del bajo español en Venezuela, tomos II y III (BNV, PDF público,
+    cada uno > 10 MB — no se descargó: la descarga la autoriza Miguel). Si
+    trae matacán s.v. con «de matar y can», el hispanismo queda atestiguado
+    por Alvarado y esta propuesta se cierra.
+
+comparanda_del_venado_en_el_repo:
+  - lengua: motilón (caribe)
+    formas: 'trihunchti «Venado (Cervus rufus)»; amúsha «Venado sin cuernos»; «Yo mato un venado — aug choca amusa»'
+    procedencia: {obra: jahn-1927, pagina: '347 (vocabulario motilón, base Torres) y 354 (frases)'}
+    etiqueta: comparanda (caribe, no arahuaca)
+  - lengua: guajiro (arahuaco)
+    formas: 'Uyára «(venado)», tótem del clan Epinayú en la tabla de Simons'
+    procedencia: {obra: jahn-1927, pagina: '144 (tabla de castas guajiras según Simons)'}
+    etiqueta: comparanda (transcripción de Simons, s. XIX)
+  - lengua: achagua (arahuaco)
+    formas: 'nerraí «Venado»'
+    procedencia: {obra: neira-ribero-1762, pagina: 'lexicon_achagua.py:3442 (transcripción por visión, verificar en imagen)'}
+    etiqueta: comparanda
+  - lengua: jirajara / ayomán (no arahuacas)
+    formas: 'agüi «venado»'
+    procedencia: {obra: jahn-1927, pagina: 'ver 6-fusion/jahn_vocabularios_comparados.yaml, línea 493'}
+    etiqueta: comparanda
+
+comparanda_lectura: >-
+  Ninguna lengua del repo, arahuaca o caribe, llama al venado con nada
+  parecido a matacán. No hay cognado que justifique la etiqueta
+  «reconstruido» (que es la que exige un cognado en lengua hermana). Y el
+  lexicón caquetío no tiene el venado desde que #45 retiró la glosa de tara
+  (ecologia-037: «hueco léxico declarado, no se rellena a mano»).
+
+la_restriccion_del_motor:
+  dato: >-
+    El perfil era2 enseña sólo las capas caquetío-atestiguado y
+    caquetío-reconstruido (5-experimento/perfiles_de_run.yaml, decisión
+    2026-09-14 de esconder las hipotéticas). Una entrada canon-simulación o
+    hipotética no llega al hablante.
+  consecuencia: >-
+    La única vía por la que un `matakán` llegaría a los agentes de la era 2
+    es etiquetarlo reconstruido — que es justamente la etiqueta que no puede
+    llevar con honestidad. Entrar como canon-simulación sería un asiento que
+    nadie ve.
+
+opciones:
+  A_no_entra:
+    que: 'matacán queda como nombre CASTELLANO del animal; el hueco caquetío del venado sigue declarado (ecologia-037)'
+    etiqueta: 'ninguna nueva; el hecho ecológico sí entra (abajo)'
+    coste: 'los agentes dicen «venado» en castellano cuando el mundo lo nombre'
+  B_lo_acunan_los_agentes:
+    que: >-
+      cuando el cargador de mundo ponga el venado en [Tu tierra] (Guaranao y
+      las faldas del Capubana: «en el monte hay venados»), los agentes lo
+      nombran ellos; la acuñación se registra como tal y compite en la koiné
+    etiqueta: 'acuñación de la simulación (como hikoteya), nunca caquetío-*'
+    coste: 'ninguno para el canon; es para lo que existe el experimento'
+    recomendada: true
+  C_canon_simulacion_con_etimologia_declarada:
+    que: '`matakán` «venado matacán (Mazama)», fuente canon-simulacion, notas: «hispanismo fonemizado; DRAE: de matar y can; sin cognado arahuaco»'
+    etiqueta: canon-simulacion
+    coste: 'no llega a los agentes con el perfil era2 (arriba); y es la primera voz castellana disfrazada del lexicón — precedente malo para la regla 2'
+    recomendada: false
+  D_reconstruir_del_wayuu:
+    que: 'partir de Uyára (Simons en Jahn p. 144) / irama (wayuunaiki moderno, sin fuente en el repo) y proponer una forma caquetía por el método de D11'
+    etiqueta: caquetío-reconstruido (deuda a una fuente wayuu en el repo)
+    coste: 'un solo testigo arahuaco, transcripción de Simons; D11 fase 3 cerró el núcleo wayuu «sin tocar formas» y añadirle una mueve el ratio medido; no ahora'
+    recomendada: false
+
+hecho_propuesto_para_ecologia:
+  contenido: >-
+    En los bosques de Paraguaná hubo rebaños de venado matacán (Mazama,
+    «cérvido de poca alzada»), extinguidos por la cacería; el Cerro Santa Ana
+    lo conserva hoy. Castellanos atestigua venados en Coro hacia 1540. El
+    nombre «matacán» es castellano (de matar y can): la palabra caquetía del
+    venado sigue siendo hueco declarado (ecologia-037).
+  fuente: atestiguado
+  capa: 's. XVI (Castellanos) + s. XX (Esteves) + moderno (Monumento Natural)'
+  procedencia: [{obra: esteves-1989, pagina: '51'}, {obra: castellanos-elegias, pagina: 'líneas 48228-48230 del txt'}, {obra: monumento-cerro-santa-ana, pagina: 'Wikipedia es, fauna'}]
+  dominios: [ecologia, fauna, hueco-lexico]
+  nodos: [GUARANAO, faldas del Capubana]
+  para: 'la campaña de sitios y clima (canon de sitios de la era 2) lo absorbe; si no, entra solo'
+
+toponimo:
+  forma: Punta de Matacán
+  dato: '«punto costeño en el Golfete de Coro, al Este de Punta Cardón. Hoy es una aldea de pescadores»'
+  procedencia: {obra: esteves-1989, pagina: '51'}
+  lectura: >-
+    Nombre castellano (del animal); no es candidato al canon de topónimos
+    caquetíos (no está entre los 109 y no debe estar). La zona de pesca ZG2
+    de la era 2 lo usa sólo como referencia moderna de la orilla; el prompt
+    dice «la orilla del Golfete» y no lo nombra.
+
+queda:
+  - 'decisión de Miguel entre A/B/C/D (recomendación: A + B, que son compatibles)'
+  - 'Glosario del bajo español (Alvarado 1929) s.v. matacán — cerraría la etimología con fuente venezolana; requiere descargar los tomos (BNV)'
+  - 'medina-colina-sxx s.v. matacán en el físico'
+  - 'Diccionario de americanismos s.v. matacán (403 el 2026-09-14)'
+  - 'si se fusiona algo que cite al DLE/Wikcionario: ficha en 4-fuentes/ (regla 8)'
+
+decidido_2026-09-14:
+  literal: >-
+    «Si tenemos una fuente que lo califica como venado y no hay ningún otro
+    ente que lo define así, sino que es un venezolanismo y es algo que era
+    originalmente de la región, entonces yo eso lo calificaría como algo que
+    sí o sí lo tenemos que utilizar. […] El venado que podemos conseguir en
+    otros lados no necesariamente es el mismo que el matacán, que es el que
+    está reconocido como parte de Paraguaná. […] Si quieres lo ponemos ahí
+    como simulación o como lo que quieras, pero […] matacán siendo el único
+    mamífero de ese tamaño, venado, que además funciona como caza, yo sí o sí
+    lo mantendría.»
+  lo_que_pesa_en_el_argumento: >-
+    Dos cosas que la medición no había puesto en la balanza: (1) el referente
+    es distinto — el matacán (Mazama) no es el venado caramerudo (Odocoileus)
+    de otras tierras, así que la voz nombra un animal propio de la península;
+    (2) es la única caza mayor de Paraguaná y ninguna fuente le da otro nombre.
+    Miguel deja la etiqueta al escriba.
+  etiqueta_elegida: caquetío-retroabstraido
+  por_que_esa: >-
+    Es la capa que #124 definió para exactamente este caso: «la palabra existe
+    y está documentada en boca viva; lo incierto no es la forma sino el
+    SUSTRATO». No reconstruido (exige cognado en lengua hermana: wayakán lo
+    tenía, matacán no); no hipotético (la forma no es inventada); no
+    canon-simulación (no es una convención del motor, es una voz viva). Las
+    notas de la entrada declaran la duda castellana entera.
+  para_que_llegue_a_los_agentes: >-
+    El perfil era2 pasa a enseñar la capa retroabstraída (antes sólo los
+    perfiles suelto). Consecuencia: las otras 48 voces de esa capa (46 de
+    Medina, chiriware y tukeke de Zavala) también se ven en la era 2 — voces
+    vivas, no acuñaciones, coherente con «usar lo
+    más posible el diccionario». El score no cambia (la capa ya estaba en
+    capas_de_score). Si Miguel prefiere sólo el venado, la alternativa es una
+    lista de excepciones en el perfil, que no se hizo.
+  aplicado:
+    - 'curiana_lexicon.py: entrada matakán (bloque «RETROABSTRAÍDA DE ESTEVES»)'
+    - '5-experimento/perfiles_de_run.yaml: era2.capas_lexicas += caquetío-retroabstraido'
+    - '3-mundo/corpus/ecologia.yaml: ecologia-077 (el matacán en Paraguaná) y nota en ecologia-037 (el hueco se cierra)'
+    - 'tests/test_era2_motor.py: el venado está, es retroabstraído y la era 2 lo ve'

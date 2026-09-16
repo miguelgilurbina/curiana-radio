@@ -34,7 +34,68 @@ MOMENTOS_DIA = ["amanecer", "mañana", "mediodia", "tarde", "anochecer", "noche"
 
 # Calendario comprimido: 60 días simulados = 1 estación; 120 = 1 año (2
 # estaciones). Coincide con el mapeo declarado en auto_mode() del orquestador.
+# Es el calendario de la ERA 1 (mundo CURIANA) y no se toca.
 DIAS_POR_ESTACION = 60
+DIAS_POR_ANIO = 120
+
+# ── El año de la era 2 (mundo PARAGUANÁ) ─────────────────────────────
+# Decisión de Miguel, 2026-09-15 (6-fusion/decisiones_tanda_2026-09-15.yaml,
+# p1: «A. Definitivamente»): tres períodos, 50/40/30. Lo atestiguado son dos
+# partes —una seca larga y un pulso corto de lluvias en octubre-diciembre
+# (ecologia-006; Sievers lo vio en Paraguaná en 1892, Arcaya p. 24)—; partir
+# la seca en dos es canon-simulación. El motor decía lluvias «Jun–Nov», que son
+# los meses más secos: eso se corrige aquí. Detalle: 6-fusion/clima_era2.yaml.
+# Los períodos NO llevan nombre caquetío a propósito (p2): que lo acuñen.
+# `equivale` traduce el período a la estación de la era 1 para que los eventos
+# escritos con `estacion: seca/lluvias` sigan cayendo donde toca.
+PERIODOS_ERA2 = {
+    "viento": {
+        "nombre": "Tiempo de Viento",
+        "meses_equiv": "Ene–May",
+        "dias": 50,
+        "equivale": "seca",
+        "descripcion": "El alisio arrecia: fabrica la sal, aclara el agua. Buceo, travesía a las islas, pesca nocturna con jachos.",
+        "actividades_primarias": ["pesca", "salinar", "expedicion_islas", "intercambio"],
+        "clima_base": "despejado, alisio firme del este",
+    },
+    "seca_larga": {
+        "nombre": "la seca larga",
+        "meses_equiv": "Jun–Sep",
+        "dias": 40,
+        "equivale": "seca",
+        "descripcion": "El «largo verano»: el jagüey baja, se chupa jajato contra la sed, sólo el cerro da agua. Al final, la subida al Capubana.",
+        "actividades_primarias": ["acarreo_de_agua", "pesca", "intercambio", "consulta_piache"],
+        "clima_base": "cielo limpio, calor seco, el viento afloja",
+    },
+    "siembra": {
+        "nombre": "Tiempo de Siembra",
+        "meses_equiv": "Oct–Dic",
+        "dias": 30,
+        "equivale": "lluvias",
+        "descripcion": "El pulso: chubascos cortos, cauces efímeros, conuco de ciclo corto; el salinar para.",
+        "actividades_primarias": ["cultivar", "sembrar", "ritual_siembra", "construir"],
+        "clima_base": "nubes cargadas, chubascos cortos, viento suave",
+    },
+}
+
+# El calendario de cada mundo: [(id de estación, días)]. Los dos suman 120.
+CALENDARIOS = {
+    "CURIANA":   [("seca", DIAS_POR_ESTACION), ("lluvias", DIAS_POR_ESTACION)],
+    "PARAGUANÁ": [(k, v["dias"]) for k, v in PERIODOS_ERA2.items()],
+}
+
+# Todas las estaciones que el estado puede nombrar, con su ficha.
+ESTACIONES_TODAS = {**ESTACIONES, **PERIODOS_ERA2}
+
+
+def calendario_de(mundo: str) -> list:
+    return CALENDARIOS.get(mundo or "CURIANA", CALENDARIOS["CURIANA"])
+
+
+def estacion_equivalente(estacion: str) -> str:
+    """El período de la era 2 dicho en la estación de la era 1 (viento → seca);
+    una estación de la era 1 se devuelve tal cual."""
+    return ESTACIONES_TODAS.get(estacion, {}).get("equivale", estacion)
 
 # Turnos por día. La era 1 corrió con 2 (amanecer y tarde); la era 2 pide días
 # más largos —Miguel, 2026-09-14: «es preferible que un día tenga muchos más
@@ -54,9 +115,18 @@ def momento_de_turno(turno: int, turnos_por_dia: int) -> str:
     return MOMENTOS_DIA[min(max(i, 0), len(MOMENTOS_DIA) - 1)]
 
 
-def ESTACION_DE_DIA(dia: int) -> str:
-    """Estación que corresponde a un día simulado (día 1 = seca)."""
-    return "seca" if ((dia - 1) // DIAS_POR_ESTACION) % 2 == 0 else "lluvias"
+def ESTACION_DE_DIA(dia: int, mundo: str = "CURIANA") -> str:
+    """Estación que corresponde a un día simulado en el calendario de `mundo`.
+
+    CURIANA (era 1): día 1 = seca, alternando cada 60. PARAGUANÁ (era 2):
+    viento 1-50, seca larga 51-90, siembra 91-120, y vuelta a empezar."""
+    d = (dia - 1) % DIAS_POR_ANIO
+    acumulado = 0
+    for estacion, dias in calendario_de(mundo):
+        acumulado += dias
+        if d < acumulado:
+            return estacion
+    return calendario_de(mundo)[-1][0]
 
 LOCACIONES = [
     "orilla", "manglar", "plaza", "casa_cacique", "choza_piache",
@@ -122,6 +192,9 @@ class ComunidadState:
     # en su config de qué run hereda el mundo, la memoria y la koiné.
     turnos_por_dia: int = TURNOS_POR_DIA_ERA1
     run_anterior: Optional[str] = None
+    # El nombre del mundo que encabeza el contexto: CURIANA en la era 1,
+    # PARAGUANÁ en la era 2 (lo fija el elenco activo, ver curiana_agents.MUNDO).
+    mundo: str = "CURIANA"
 
     def avanzar_turno(self):
         """Avanza un turno y, al cerrar el día, el calendario.
@@ -143,18 +216,29 @@ class ComunidadState:
             self._actualizar_estacion()
         self.momento = momento_de_turno(self.turno, self.turnos_por_dia)
 
+    def fijar_mundo(self, mundo: str):
+        """Pone el mundo y, si la estación actual no es de su calendario (un
+        estado nuevo trae `seca` y la era 2 empieza en `viento`), la recalcula
+        del día. Un estado continuado (--continuar) ya trae la suya."""
+        self.mundo = mundo
+        validas = {e for e, _ in calendario_de(mundo)}
+        if self.estacion not in validas:
+            self.estacion = ESTACION_DE_DIA(self.dia, mundo)
+            self.clima = ESTACIONES_TODAS[self.estacion]["clima_base"]
+
     def _actualizar_estacion(self):
-        """Alterna seca/lluvias cada DIAS_POR_ESTACION.
+        """Pasa a la estación que toca según el calendario del mundo (era 1:
+        seca/lluvias cada DIAS_POR_ESTACION; era 2: viento/seca larga/siembra).
 
         Antes NADIE asignaba `estacion`: los runs transcurrían enteros en
         "seca". Eso dejaba inalcanzables 9 de los 25 eventos (incluidos los
         seis escritos con más detalle etnográfico), y como el reporte anual
         cuelga del cambio de estación, la bandera --reporte no hacía nada.
         """
-        nueva = ESTACION_DE_DIA(self.dia)
+        nueva = ESTACION_DE_DIA(self.dia, self.mundo)
         if nueva != self.estacion:
             self.estacion = nueva
-            self.clima = ESTACIONES[nueva]["clima_base"]
+            self.clima = ESTACIONES_TODAS[nueva]["clima_base"]
 
     def aplicar_efecto(self, efecto: dict):
         """Aplica el efecto de un evento sobre el estado del mundo.
@@ -177,9 +261,9 @@ class ComunidadState:
 
     def to_context_string(self) -> str:
         """Genera el string de contexto que se inyecta en cada llamada de agente."""
-        est = ESTACIONES[self.estacion]
+        est = ESTACIONES_TODAS.get(self.estacion) or ESTACIONES["seca"]
         lines = [
-            f"[CURIANA — {est['nombre']}]",
+            f"[{self.mundo} — {est['nombre']}]",
             f"Día {self.dia}, Turno {self.turno} ({self.momento}). {self.clima}.",
             f"Alimentos: {self.nivel_alimentos}. Sal (biro): {self.nivel_sal}. Tensión comunitaria: {self.nivel_tension}.",
         ]
@@ -380,6 +464,7 @@ EVENTOS_ESTACIONALES = [
         "id": "gran_cosecha_sal",
         "nombre": "Gran cosecha de sal de la seca",
         "estacion": "seca",
+        "periodo": "viento",          # era 2: el alisio fabrica la sal (clima_era2.yaml)
         "descripcion": "El viento noreste sopla firme y las charcas del salinar se han secado por completo: es la gran cosecha del año. Toda mano disponible baja a raspar el biro hasta que los cestos rebosan, porque esta sal alimentará el trueque de muchas lunas. Biro-ko cuenta los montones con orgullo feroz mientras Manaure decide cuánto se guarda y cuánto se cambia.",
         "efecto": {"nivel_sal": "abundante", "nivel_tension": "bajo"},
         "agentes_involucrados": ["Biro-ko", "Manaure", "Watapana", "Moruy-sha", "Wama-ko"],
@@ -388,6 +473,7 @@ EVENTOS_ESTACIONALES = [
         "id": "expedicion_perlas",
         "nombre": "Temporada de buceo de perlas",
         "estacion": "seca",
+        "periodo": "viento",          # era 2: agua clara y calma (ecologia-017)
         "descripcion": "Con el agua clara y calma de la seca, los buceadores se internan en el Golfete a arrancar las ostras de los bajíos, conteniendo el aliento hasta que los pulmones arden. Las perlas que salen de ellas no se comen, pero compran alianzas y esposas; un puñado vale más que una canoa de pescado. El riesgo es real: el mar se cobra a veces un buceador.",
         "efecto": {"nivel_tension": "medio"},
         "agentes_involucrados": ["Dara-ko", "Bagre-ko", "Tari-ko", "Piri", "Watapana"],
@@ -396,6 +482,7 @@ EVENTOS_ESTACIONALES = [
         "id": "fiesta_cosecha_chicha",
         "nombre": "Fiesta del fin de la seca",
         "estacion": "seca",
+        "periodo": "seca_larga",      # era 2: «antes de que lleguen las lluvias»
         "descripcion": "Antes de que lleguen las lluvias la comunidad se reúne en la plaza: corre la chicha agria en las múcuras, suenan los tambores y las maracas, y los viejos cuentan las hazañas de los ancestros. Es noche de risas, alianzas y, a veces, de viejas rencillas que el licor desentierra; Manaure preside repartiendo el primer trago como símbolo de su mano.",
         "efecto": {"nivel_tension": "bajo", "nivel_alimentos": "abundante"},
         "agentes_involucrados": ["Manaure", "Nubiri-sha", "Bana-mana", "toda_la_comunidad"],

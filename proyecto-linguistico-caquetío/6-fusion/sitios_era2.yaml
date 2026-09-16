@@ -1,0 +1,1448 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — El canon de SITIOS de la era 2 (Paraguaná), por dominio
+#
+# Encargo de Miguel, 2026-09-14:
+#   «En la laguna de Guaranao hay manglares, yararés y peces. En esa época
+#    había venados que no sé cómo llamarlos, ya que no quedan al día de hoy.
+#    Hay pesca, hay recolección de corubos y además todo el trabajo de tierra.
+#    ¿Cómo podemos adecuar y más bien atestiguar información que tenemos en el
+#    mundo acorde a los nodos de la era 2?»
+#
+# Regla 5: esto PROPONE. No toca el motor, ni el lexicón, ni 3-mundo/corpus/,
+# ni 2-lengua/toponimos.yaml. Nada de aquí es canon hasta que Miguel lo fusione.
+# Compañero: 6-fusion/clima_era2.yaml (el mismo mundo, por período del año).
+# Mide: 6-fusion/scripts/verificar_sitios_era2.py
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-09-14'
+  estado: sin-fusionar
+  obra: varias
+  quien: escriba (Claude), a pedido de Miguel
+  pregunta: >-
+    Para cada uno de los seis sitios de curiana_agents_era2.SITIOS, más la
+    laguna de Guaranao que Miguel nombró: ¿qué dice una fuente con página sobre
+    su agua dulce, su mar y su pesca, su recolección, su tierra, su monte y su
+    caza, su sal y sus materiales? ¿En qué estación? ¿Con qué palabra caquetía,
+    o con ninguna?
+  respuesta_corta: >-
+    El mundo se puede atestiguar por sitio, pero no en partes iguales. El
+    Golfete (Tacuato, El Cayude) y el conglomerado del cerro (Moruy, Capubana)
+    tienen dato de recurso con página; la costa oeste (Caseto, Carirubana) casi
+    no lo tiene y se sostiene sobre topónimos del s. XX y sobre la decisión de
+    zonas de pesca del 2026-09-14. El hallazgo del barrido: el venado de Miguel
+    TIENE nombre en la fuente —el MATACÁN, «cérvido de poca alzada [del que] en
+    tiempos pasados había rebaños... en los bosques de Paraguaná. Se han
+    extinguido por la cacería incontrolada» (Esteves p. 51)— y da además el
+    nombre de una punta del Golfete que hoy es aldea de pescadores; el mismo día,
+    en otra sesión, Miguel decidió fonemizarlo, y `matakán` entró al lexicón y al
+    corpus (ecologia-077), así que este canon ya lo usa. Lo que NO aparece es el
+    yararé: cero en todo el material.
+  como_se_midio:
+    - 'sitios: curiana_agents_era2.SITIOS, leído del módulo generado (6 sitios con nodo, casa, lat, lon y zona)'
+    - 'corpus: 3-mundo/corpus/*.yaml con yaml.safe_load — 198 hechos, 48 con locación, 0 con estación (script en el scratchpad, 2026-09-14)'
+    - 'lexicón: curiana_lexicon.VOCABULARIO_BASE filtrado por capa_epistemica(); 195 voces caquetías con glosa de mundo (agua, pesca, flora, fauna, oficio, clima)'
+    - 'texto crudo releído, no sus notas: los seis OCR de Esteves 1989 barridos enteros; Arcaya 1920 entero (pdftotext -layout); Oliver cap. 3 entero (pdftotext); Castellanos 1857 (txt) por número de línea; 6-fusion/medina_colina_dictado.yaml entero'
+    - 'coordenadas: fuentes_caquetios/osm_kaketiana/paraguana-1.json'
+  convencion_de_paginas: >-
+    Esteves 1989 por el número de pie del OCR (seis ficheros .ocr.txt). Arcaya
+    1920 por la página impresa, que es la del pdf menos 8 (comprobado en el «22»
+    al pie). Oliver 1989 cap. 3 por la cabecera de la edición en DOC de 2006
+    («DOC n», = pdf + 182, verificado en esta vuelta). Castellanos 1857 por
+    número de línea del txt, con el aviso de abajo.
+  aviso_castellanos: >-
+    ⚠️ CORRECCIÓN AL CANON. El pasaje descriptivo de Coro y Paraguaná —cardones,
+    hobos, «perdices, conejos y venados», «grande pesquería de pescados», el
+    «largo verano»— está en las líneas 48205-48280, que caen en la INTRODUCCIÓN
+    a la Parte II (47059-48482) y NO dentro de la Elegía I (48483-55151), que es
+    el rango con el que el proyecto venía citando «la elegía de Coro». Además,
+    dentro de la elegía la geografía se desplaza: los pasajes más ecológicos
+    (cardones, jaqueyes, el arco y la flecha como único sustento, las perlas) son
+    de Maracaibo y de la Guajira, no de la costa caquetía. Dos grafías rompen los
+    greps del repo: «zavana» (nunca sabana) y «jaquey» (nunca jagüey); y el OCR
+    escribe «cenados» por venados y «caquelio» por caquetío.
+  vocabulario_de_etiquetas:
+    atestiguado: una fuente lo dice, con página. Si es del s. XVI o posterior se marca `capa`
+    reconstruido: inferencia de un autor o comparanda arahuaca citada
+    canon-simulacion: posición que el proyecto toma para simular, sobre piezas citadas
+    hipotetico: plausible sin respaldo, o propuesta nueva de esta sesión
+    retro-abstraido: tradición viva del s. XIX-XX; a efectos de proyección vale como hipotético
+    testimonio-miguel: lo que Miguel recuerda del lugar; retro-abstraído, con `que_lo_subiria`
+  regla_3: >-
+    Casi todo lo de abajo es del s. XVI (crónica), del s. XIX (Sievers, el censo
+    de 1881) o del s. XX (Esteves, Medina, INPARQUES, Camacho, Antczak). El
+    medio físico es constante desde ~4000 BP (ecologia-002) y se puede proyectar;
+    lo que la gente hacía, no. Cada línea declara su `capa` y, cuando el uso se
+    proyecta, la etiqueta baja a canon-simulacion o a hipotetico.
+  regla_4: >-
+    La unidad es la esfera (la Kaketiana), no la comarca. Se marca cuando el dato
+    viene de otra polity: los pescadores de palafitos del Lago, los onotos, los
+    guaycaríes de los Llanos y los «cocinas» de la Guajira NO se importan como
+    modelo de Paraguaná aunque Oliver y Castellanos los pongan al lado.
+  medido:
+    # Regla 1: lo mide 6-fusion/scripts/verificar_sitios_era2.py --conteos.
+    # Las claves globales cubren los DOS archivos de la campaña (sitios + clima),
+    # que el script lee juntos.
+    sitios: 7
+    lineas_sitios: 107
+    lineas_clima: 68
+    lineas_total: 175
+    huecos_lexicos: 14
+    # 2026-09-16: la ficha de la laguna (p8) subió tres testimonios a
+    # atestiguado-moderno y el corpus recibió los hechos de la campaña (p4).
+    testimonios_miguel: 3
+    lineas_con_deuda: 17
+    voces_caquetias_citadas: 74
+    hechos_del_corpus_citados: 47
+    obras_citadas: 11
+
+  # Regla 6: cada cero con su consulta. Un cero mide la consulta, no la fuente.
+  ceros_verificados:
+    - que: el yararé de Miguel
+      raices: [yarar, jarar, yaray, jaray, yarare, jarare]
+      resultado: >-
+        CERO en todo el material. Barrido sobre fuentes_caquetios/*.txt y
+        *.ocr.txt, 3-mundo/, 2-lengua/, 6-fusion/, curiana_sim/*.py (incluidos
+        curiana_lexicon.py y los lexicon_*.py) y 6-fusion/medina_colina_dictado.yaml.
+        Los únicos aciertos son otras palabras: `jarayadito` (topónimo de Moruy,
+        glosado «espinar, retamal, ñaragatal» < jaraya «espina, retama»,
+        toponimo-102), la sierra `Jarara` de la Guajira, `Mayarare` en Castellanos
+        (línea 30063, fuera de Coro) y un `Yarar` suelto en una columna de
+        vocabulario OCR de Fabo 1911 (línea 5835), que es de lenguas del oriente
+        colombiano y no una glosa. Los cuatro mineros independientes (Esteves,
+        Arcaya, Oliver, Castellanos) lo confirmaron por separado. Queda como
+        testimonio de Miguel a identificar.
+    - que: manglar en Paraguaná
+      raices: [mangl, manglar, mangle]
+      resultado: >-
+        CERO en Arcaya, CERO en Oliver cap. 3 (`mangrove` no aparece en todo el
+        capítulo), CERO en Castellanos. En los seis OCR de Esteves hay DOS
+        apariciones y ninguna es la laguna de Guaranao: los «tupidos manglares»
+        del caño de Babahuro (p. 18), en la costa de Adícora, y las entradas
+        Mangle/Manglar del Falcón llano (p. 121). El corpus sí cubre el manglar,
+        pero del BORDE OESTE del Golfete y del NE de Paraguaná (ecologia-011). El
+        manglar de la laguna de Guaranao es testimonio de Miguel, sin fuente.
+    - que: la palabra caquetía para venado
+      raices: [venado, venad, cervid, deer, matacan, matacán]
+      resultado: >-
+        El animal está atestiguado cuatro veces (Castellanos línea 48230;
+        Pérez de Tolosa 1546 vía Arcaya p. 264; Arcaya p. 42, el tabú de caza;
+        Esteves p. 51, el matacán). La palabra ATESTIGUADA sigue sin aparecer:
+        ecologia-037 retiró la glosa «venado» de `tara` en 2026-08-24 con tres
+        fuentes independientes en contra. ⚠️ ACTUALIZADO: el hueco se cerró el
+        mismo 2026-09-14, en otra sesión y por decisión de Miguel, con `matakán`
+        [caquetío-retroabstraido] — ecologia-077 y
+        6-fusion/matacan_venado_2026-09-14.yaml. Este canon usa esa voz y ya no
+        declara el hueco del venado.
+    - que: perlas, botuto, tortuga y ostra en el gazeteer de Esteves
+      raices: [perl, botuto, guarura, ostra, tortug]
+      resultado: >-
+        CERO los cinco en los seis OCR. La idea de la tortuga existe con otra
+        palabra: «quelónidos» en Tumatey (p. 66) y «Cuelónido» en Morrocoy
+        (p. 124). Las perlas de Paraguaná sí están, pero en Arcaya (pp. 197, 233,
+        321, 322) y en Antczak, no en el gazeteer.
+    - que: jagüey en Paraguaná, en Esteves
+      raices: [jagüey, jaguey, cacimba]
+      resultado: >-
+        Sólo la glosa «(Cacimba: jagüey)» de un manantial de Pueblo Cumarebo
+        (p. 92), fuera de la península; el topónimo `Jagüe` (p. 45) es una cueva.
+        El jagüey paraguanero está en Arcaya p. 25 y en Medina (mc-mundo-028), no
+        en el gazeteer.
+    - que: peces con nombre en el gazeteer
+      raices: [curvina, carite, mero, jurel, sardina, róbalo, pargo, lisa]
+      resultado: >-
+        De ocho, seis dan CERO. Los peces que Esteves nombra son cinco:
+        cunaro (p. 33), pargo (p. 51), guaranaro (p. 41, «un pez más pequeño que
+        la lisa»), paguara (p. 55, «pez muy espinoso») y cuna (p. 44, Iticuna).
+        Los otros están en el corpus vía Antczak (ecologia-015, ecologia-036).
+    - que: reparto de las zonas de pesca entre los dos clanes
+      raices: [fishing grounds, beach heads, pesquer, playa]
+      resultado: >-
+        Lo dice y se desdice en la misma frase: «Each sub-group had its own beach
+        heads, entitling them to specific fishing grounds... However, more
+        specific details (i.e. how were these catchment zones distributed,
+        managed, or controlled within each sub-group) can not be inferred from the
+        available data» (Oliver DOC 264). El reparto ZG2 / ZA1 es decisión de
+        Miguel del 2026-09-14, no dato.
+
+  lo_que_no_se_encontro:
+    - 'Ninguna fuente describe la subsistencia caquetía del s. XIV-XV directamente. Todo lo costero es crónica del XVI, inferencia retroproyectada de Oliver, o arqueología suya de sitios dabajuroides. El único dato fechado DENTRO de la era 2 es el pico de contactos con el Cabo de la Vela hacia A.D. 1400 (Oliver DOC 200)'
+    - 'Esteves no dice NADA del Cerro Santa Ana sobre quebradas, agua que baje, bosque de altura, nubes o neblina. Lo único que le adscribe es la palmera barubaru de sus faldas (p. 23). El bosque nublado no sale de esta fuente'
+    - 'La costa oeste (Caseto, Carirubana) no tiene ni un hecho del corpus. ecologia.yaml cubre el Golfete (011, 012, 015-017, 020, 023-027, 036) y el istmo, no el Golfo de Venezuela'
+    - 'Ninguna fuente fecha la pesca nocturna con jachos: Esteves da la técnica sin siglo'
+    - 'Dos páginas del OCR de Esteves están invertidas e ilegibles y se pierden entradas útiles: OCR 2 p. 42 (Guaricure, Guaruguaja, Guasare, Guatacare, Guayacanal) y OCR 5 p. 101 (Ceiba, Cerey, Cibita, Cocorote, COCUIZA y COCUY — justo las dos de fibra y bebida). Y la entrada CAYUDE (OCR 2, p. 30) está medio destruida, siendo un sitio de la era 2. Deuda: releerlas del PDF'
+    - 'Oliver reparte los clanes AL REVÉS que #122: «the Amuayes which controlled the southern part and the Guaranaos who controlled the northern part» (DOC 264). La deuda de la frase cardinal sigue abierta y la decisión del 2026-09-14 la ignora por decisión, no por descuido'
+
+# ══════════════════════════════════════════════════════════════════
+# LOS SITIOS
+# ══════════════════════════════════════════════════════════════════
+sitios:
+
+  # ───────────────────────────────────────────────────────────────
+  - sitio: Tacuato
+    nodo: GUARANAO
+    casa: los Tacuatos
+    lat: 11.708
+    lon: -69.841
+    zona_de_pesca: ZG2
+    fuente_coord: osm-kaketiana
+    en_una_frase: 'la aldea de la orilla del Golfete que mira a Coro: pescado, sal y el jagüey'
+    dominios:
+      agua:
+        - dato: >-
+            No hay río: «Ningún río, ni siquiera un arroyo, riega a Paraguaná.»
+            Toda el agua de este sitio es de lluvia guardada o de pozo.
+          etiqueta: atestiguado
+          capa: 's. XX (Arcaya 1920 sobre Sievers 1892)'
+          procedencia: {obra: arcaya-1920, pagina: '22'}
+          apoyo_en_repo: [ecologia-007, ecologia-008]
+          estacion: 'todo el año'
+          voz_caquetia: {clave: duna, capa: caquetío-reconstruido}
+        - dato: >-
+            La técnica es la charca artificial: la agricultura de esta costa pide
+            «"hand" irrigation by extracting rainwater collected from artificial
+            ponds (jagüey)». Es el ancla del casting: Korie-ko se reancló a los
+            jagüeyes de Tacuato el 2026-09-14.
+          etiqueta: reconstruido
+          capa: 'inferencia de Oliver sobre el s. XVI, que él proyecta a «pre- and proto-historic times»'
+          procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 245 (pdf 63), §3.4.1'}
+          apoyo_en_repo: [ecologia-008]
+          estacion: 'lluvias'
+          voz_caquetia: {clave: jagey, capa: caquetío-atestiguado}
+        - dato: >-
+            El estanque se labra, no se encuentra: «labrando estanques, verdaderas
+            lagunetas artificiales... aprovechando los declives del terreno para
+            abrir en sitio conveniente el "cajón," cuya tierra removida se utiliza
+            en las "barrancas," diques de primitiva construcción».
+          etiqueta: atestiguado
+          capa: 's. XIX-XX'
+          procedencia: {obra: arcaya-1920, pagina: '25'}
+          estacion: 'lluvias'
+          voz_caquetia: {clave: buko, capa: caquetío-atestiguado}
+        - dato: >-
+            Y al lado hay agua que no se bebe: «Caño del Muaco denominan una
+            albufera cercana a la población de Tacuato, municipio Santa Ana.»
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '54'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: tarika, capa: caquetío-atestiguado}
+      mar_y_pesca:
+        - dato: >-
+            La zona es la orilla somera del Golfete: «En todo este litoral el mar
+            es poco profundo, especialmente en el Golfete, sólo navegable en
+            pequeñas embarcaciones y por prácticos.»
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: arcaya-1920, pagina: '20'}
+          apoyo_en_repo: [ecologia-026, ecologia-027]
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kanua, capa: caquetío-hipotético}
+        - dato: >-
+            ⭐ La técnica con hora: «Cuna, Cunaro, "promicrops guasa", pez lábrido
+            que abunda en el golfete de Coro y del cual extraían manteca para untar
+            los "jachos", teas de madera, comúnmente de curarí, para encandilar en
+            labores de pesca nocturna.» El pez da la luz con que se pesca el pez.
+          etiqueta: atestiguado
+          capa: 's. XX; Esteves no fecha la técnica ni cita fuente'
+          procedencia: {obra: esteves-1989, pagina: '33 (entrada Cunacho)'}
+          estacion: 'todo el año — anochecer y noche'
+          voz_caquetia: {clave: jachos, capa: caquetío-atestiguado}
+        - dato: >-
+            Lo que hay en el agua: pargo, corvina, mero, róbalo, lisa, sardina,
+            cazón y bagre marino en las aguas someras y los manglares del Golfete;
+            el cunaro, en las más profundas.
+          etiqueta: atestiguado
+          capa: 'moderno (ictiofauna), proyectado por ecologia-002'
+          procedencia: {obra: antczak-2015-las-aves, pagina: 'vía ecologia-015'}
+          apoyo_en_repo: [ecologia-015, ecologia-036, hueco-lex-004]
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kunaro, capa: caquetío-atestiguado}
+        - dato: >-
+            Que esta orilla es de pescadores lo dice el topónimo vecino: «Punta de
+            Matacán es un punto costeño en el Golfete de Coro, al Este de Punta
+            Cardón. Hoy es una aldea de pescadores.»
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '51'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kari, capa: caquetío-atestiguado}
+        - dato: >-
+            Y el juicio del cronista sobre esta costa: los caquetíos «tenían
+            pueblos medianos y mucha caza, pesca y ropa de hamacas».
+          etiqueta: atestiguado
+          capa: contacto (1546, Pérez de Tolosa)
+          procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 261 (pdf 79), n. 110'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: arima, capa: caquetío-reconstruido}
+      recoleccion:
+        - dato: >-
+            La concha es dinero: «Entre todos ellos no ay oro, ni plata ni moneda
+            salbo unas conchezuelas de pescados que tratan entre si a valor de un
+            real cada una.» Es la unidad de cuenta del trueque de la orilla.
+          etiqueta: atestiguado
+          capa: contacto (1546, Pérez de Tolosa)
+          procedencia: {obra: arcaya-1920, pagina: '264'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: ucibo, capa: caquetío-atestiguado}
+        - dato: >-
+            Y la almeja tiene nombre caquetío en el mapa: «Quigua: concha de almeja
+            y otros moluscos» (entrada Maquigua).
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '50'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kiwa, capa: caquetío-atestiguado}
+        - dato: >-
+            El conchero es un rasgo del paisaje de esta costa: en Pueblo Viejo
+            (FAL-77) Oliver fotografía «discrete chipi-chipe (Donax spp.) middens»
+            sobre las superficies erosionadas.
+          etiqueta: atestiguado
+          capa: 'arqueología moderna; el sitio es del Golfete continental, al NE de Mitare, no de Tacuato'
+          procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 265 (pdf 83), pie de foto añadido en la edición PDF de 2006'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kiwa, capa: caquetío-atestiguado}
+      tierra:
+        - dato: >-
+            El conuco con ciclo corto: «A succesful harvest in this area requires
+            crops with short growing seasons to coincide with the brief rainy
+            seasons.»
+          etiqueta: reconstruido
+          procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 245 (pdf 63)'}
+          apoyo_en_repo: [ecologia-029]
+          estacion: 'lluvias'
+          voz_caquetia: {clave: duraboa, capa: caquetío-atestiguado}
+        - dato: >-
+            Y el árbol de fruto que da nombre a un hato vecino: «El Taque, hato
+            pecuario al Norte de Tacuato»; «Taque: árbol que produce una nuez
+            comestible».
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '61'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: take, capa: caquetío-atestiguado}
+        - dato: >-
+            El istmo empieza aquí: Cararapa es un «sitio en el Istmo de Médanos, a
+            diez kilómetros al Este de la población de Tacuato». El médano es el
+            accidente que define el territorio y sigue sin palabra caquetía.
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '27'}
+          apoyo_en_repo: [ecologia-003, hueco-lex-001]
+          estacion: 'todo el año'
+          hueco_lexico: true
+          concepto: 'la duna / el médano — sin palabra caquetía; ojo al falso amigo `duna` = AGUA (hueco-lex-001)'
+      monte_y_caza:
+        - dato: >-
+            ⭐ El venado de Miguel, nombrado: «Matacán: cérvido de poca alzada. En
+            tiempos pasados había rebaños de este tipo de venado en los bosques de
+            Paraguaná. Se han extinguido por la cacería incontrolada.» Y Matacán
+            es una punta del Golfete al este de Punta Cardón.
+          etiqueta: atestiguado
+          capa: 's. XX (Esteves; el rebaño lo pone «en tiempos pasados», sin fecha)'
+          procedencia: {obra: esteves-1989, pagina: '51'}
+          apoyo_en_repo: [ecologia-019, ecologia-037, ecologia-077]
+          estacion: 'todo el año'
+          voz_caquetia: {clave: matakán, capa: caquetío-retroabstraido}
+          nota: >-
+            ⚠️ El hueco se cerró el mismo 2026-09-14, por otra sesión y por
+            decisión de Miguel («sí o sí lo tenemos que utilizar»): `matakán`
+            entró al lexicón como caquetío-retroabstraido y al corpus como
+            ecologia-077, con el sustrato en duda declarado. Sigue sin haber
+            palabra caquetía ATESTIGUADA del venado. Este canon usa la voz nueva
+            y ya no declara el hueco.
+        - dato: >-
+            Y una isoglosa que separa este sitio del resto: al lagarto amarillo lo
+            llaman «gualamo» «en las poblaciones de Tacuato y Santa Ana»; «en el
+            resto de las poblaciones paraguaneras conserva el nombre de bisure».
+          etiqueta: retro-abstraido
+          capa: s. XX
+          procedencia: {obra: medina-colina-sxx, pagina: '130 (mc-mundo-020)'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: walamo, capa: caquetío-retroabstraido}
+          lectura: >-
+            Es el único par léxico del repo que cae exactamente sobre el eje
+            Tacuato-Santa Ana, los dos sitios de GUARANAO. Para la koiné de la
+            era 2 es un dato de partida: el nodo ya tenía una palabra propia.
+      sal:
+        - dato: >-
+            El control del comercio de sal de esta orilla estaba aquí: «en esta
+            población funcionó desde los tiempos coloniales un Resguardo de Salinas
+            para vigilar el comercio de sal que se practicaba en la localidad».
+          etiqueta: atestiguado
+          capa: colonial
+          procedencia: {obra: esteves-1989, pagina: '62'}
+          estacion: 'seca'
+          voz_caquetia: {clave: biro, capa: caquetío-atestiguado}
+          regla_3: 'el Resguardo es institución colonial; lo que se proyecta es el lugar del trato, no el puesto'
+        - dato: >-
+            Y hay tanta que nadie la explota: «ay puertos de grandes montañas de
+            sal sin que nadie se aproveche della, porque en la tierra no ay oro ni
+            moneda con que se contrate».
+          etiqueta: atestiguado
+          capa: contacto (1546, Pérez de Tolosa desde Coro)
+          procedencia: {obra: arcaya-1920, pagina: '264'}
+          apoyo_en_repo: [ecologia-009, ecologia-010]
+          estacion: 'seca'
+          voz_caquetia: {clave: borojo, capa: caquetío-atestiguado}
+      materiales:
+        - dato: >-
+            La canoa no sale de este monte: cedro, caoba y ceiba no son árboles del
+            cardonal espinoso; la madera de las canoas grandes tuvo que venir de
+            fuera.
+          etiqueta: reconstruido
+          procedencia: {obra: camacho-2011, pagina: '16 (vía ecologia-032)'}
+          apoyo_en_repo: [ecologia-031, ecologia-032, hueco-lex-008]
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kuru, capa: caquetío-reconstruido}
+        - dato: >-
+            Las cuentas de collar valían «almost like a monetary system»: tres
+            tipos —boroyda, mamas y querequetero o quitero—, de piedra y de concha,
+            valoradas por el largo de la sarta y por lo pequeña que fuera la cuenta.
+          etiqueta: atestiguado
+          capa: '1538 (Naveros y Vázquez de Acuña) y arqueología de Oliver'
+          procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 271 (pdf 89)'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: ucibo, capa: caquetío-atestiguado}
+
+  # ───────────────────────────────────────────────────────────────
+  - sitio: El Cayude
+    nodo: GUARANAO
+    casa: los Cayudes
+    lat: 11.701
+    lon: -69.957
+    zona_de_pesca: ZG2
+    fuente_coord: osm-kaketiana
+    en_una_frase: 'la otra aldea del Golfete, al oeste de los Tacuatos, con nombre de árbol frutal'
+    dominios:
+      agua:
+        - dato: >-
+            La entrada de la fuente está rota en el OCR y es lo único que hay:
+            «Fundo pecuario [...] al Oeste de Tacuato, en el terri[t]orio [de Santa
+            A]na; es también el nombre de una que[brada ... de] Coro.» La quebrada
+            existe en el texto; su curso, no se lee.
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '30 (OCR dañado)'}
+          estacion: 'lluvias'
+          deuda_de_lectura: 'releer la entrada CAYUDE del PDF, OCR 2 p. 30: es un sitio de la era 2 y su entrada está medio destruida'
+          hueco_lexico: true
+          concepto: 'la quebrada efímera — sin forma caquetía propia (hueco-lex-006)'
+        - dato: >-
+            El homónimo de Falcón sí está entero y le da el perfil al nombre:
+            «Ciénaga y manantial en el municipio Pueblo Cumarebo... (Cayude: árbol
+            anonáceo, turagua).»
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '100'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kayude, capa: caquetío-atestiguado}
+          regla_4: 'es Cumarebo, otra comarca de la esfera: vale para la glosa del árbol, no para decir que aquí hay manantial'
+      mar_y_pesca:
+        - dato: >-
+            La ensenada de este tramo: «Lugar costeño en jurisdicción del municipio
+            Santa Ana. La ensenada de Cuara está en la ribera norteña del Golfete
+            de Coro.»
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '31'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kari, capa: caquetío-atestiguado}
+        - dato: >-
+            El pez de esta orilla con nombre caquetío: «Guaranaro es un pez más
+            pequeño que la lisa.»
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '41'}
+          apoyo_en_repo: [hueco-lex-004]
+          estacion: 'todo el año'
+          voz_caquetia: {clave: waranaro, capa: caquetío-atestiguado}
+        - dato: >-
+            Las corrientes mandan la jornada: las gobiernan la marea y sobre todo
+            el viento del este, «que arrecia en el curso del día y empuja las
+            corrientes hasta cerca de 1 m/s por la tarde».
+          etiqueta: atestiguado
+          capa: moderno
+          procedencia: {obra: camacho-2011, pagina: '(vía ecologia-026)'}
+          apoyo_en_repo: [ecologia-026, hueco-lex-007]
+          estacion: 'todo el año — tarde'
+          hueco_lexico: true
+          concepto: 'la marea — figura en los prompts y no es lexema (hueco-lex-007)'
+      recoleccion:
+        - dato: >-
+            El manglar del borde oeste del Golfete es la despensa de recolección:
+            guardería de peces juveniles, banco de moluscos (ostras, cangrejos),
+            refugio de aves y fuente de madera dura y plantas medicinales, «en
+            cualquier estación».
+          etiqueta: reconstruido
+          procedencia: {obra: camacho-2011, pagina: '(vía ecologia-011 y ecologia-012)'}
+          apoyo_en_repo: [ecologia-011, ecologia-012]
+          estacion: 'todo el año'
+          voz_caquetia: {clave: mankaba, capa: caquetío-hipotético}
+          aviso: '`mankaba` es de las 38 hipotéticas que el perfil era2 esconde: los agentes tienen manglar y no tienen la palabra'
+        - dato: 'El cangrejo pequeño sí tiene voz atestiguada: «Imujo es una aféresis de huaymujo, pequeño cangrejo.»'
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '43'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: huaymujo, capa: caquetío-atestiguado}
+      tierra:
+        - dato: >-
+            El nombre es de árbol frutal: «Cayude: árbol frutal», el guanábano
+            silvestre o turagua. El subgrupo lleva nombre de lo que se come.
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '30'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kayude, capa: caquetío-atestiguado}
+        - dato: >-
+            Y el conuco se cerca: «Urupagua es un arbusto espinoso, hojas y fruto
+            de sabor amargo»; el lexicón lo glosa como el «arbusto espinoso usado
+            para cercar conucos».
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '66'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: urupagua, capa: caquetío-atestiguado}
+      monte_y_caza:
+        - dato: >-
+            El árbol grande de esta ribera: «Punto costeño de las riberas norteñas
+            del Golfete de Coro... La barisigua es un árbol corpulento y abundante
+            en la flora de Paraguaná. Es una eritrina.»
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '23'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: barisiwa, capa: caquetío-retroabstraido}
+        - dato: >-
+            Y ya no está: la barisigua «fue abundante en nuestro medio, hoy muy
+            escaso», hasta ocho metros, de madera muy liviana. Es la cuarta
+            desaparición que el dictado documenta, con el báquiro, el camuro y la
+            chenga.
+          etiqueta: retro-abstraido
+          capa: s. XX
+          procedencia: {obra: medina-colina-sxx, pagina: '43 (mc-mundo-006)'}
+          apoyo_en_repo: [ecologia-039]
+          estacion: 'todo el año'
+          voz_caquetia: {clave: barisiwa, capa: caquetío-retroabstraido}
+      sal:
+        - dato: >-
+            Sin salina propia. La sal de este subgrupo es la de la orilla que
+            controla Tacuato y la de la laguna, que la decisión del 2026-09-14 dejó
+            de fondo. Es un hueco de dato, no un hallazgo: Esteves no registra
+            salina entre El Cayude y Punta Cuara.
+          etiqueta: canon-simulacion
+          deuda: sin-procedencia
+          apoyo: 'estructura_social_era2.yaml §sal_y_mercado.lectura (la sal no es lo que un clan le da al otro)'
+          estacion: 'seca'
+          voz_caquetia: {clave: biro, capa: caquetío-atestiguado}
+      materiales:
+        - dato: >-
+            La corteza del mangle rojo (10-40 % de taninos) sirve para teñir y
+            endurecer cuerdas, redes y sedales: el manglar y la pesca están unidos
+            por el tanino.
+          etiqueta: atestiguado
+          capa: moderno
+          procedencia: {obra: camacho-2011, pagina: '(vía ecologia-023)'}
+          apoyo_en_repo: [ecologia-023, ecologia-024]
+          estacion: 'todo el año'
+          voz_caquetia: {clave: dipopo, capa: caquetío-atestiguado}
+          nota: '`atara` «red de pesca» es hipotética y el perfil era2 la esconde; la fibra (`dipopo`, `maure`) sí está atestiguada'
+
+  # ───────────────────────────────────────────────────────────────
+  - sitio: Moruy
+    nodo: GUARANAO
+    casa: casa del Manaure
+    lat: 11.822
+    lon: -69.983
+    zona_de_pesca: null
+    fuente_coord: osm-kaketiana
+    en_una_frase: 'la casa del Manaure al pie del Capubana: agua del cerro, conuco, chicha y alfarería; el único sitio sin playa'
+    dominios:
+      agua:
+        - dato: >-
+            El agua dulce del entorno del cerro tiene un solo nombre en el
+            gazeteer: «[m]ai significa: [manan]tial, ojo de agua: [I]ruma: azul
+            celeste, o sea que Maitiruma [es] manantial azul.» Es una aldea del
+            municipio Santa Ana, con 52 casas y 342 vecinos en 1881.
+          etiqueta: atestiguado
+          capa: 's. XIX-XX (la glosa es del autor; el censo es de 1881)'
+          procedencia: {obra: esteves-1989, pagina: '49'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: duna, capa: caquetío-reconstruido}
+          lectura: 'y el morfema encaja: «la desinencia "ima", que significa humedad en caquetío» (Esteves p. 93), presente en Maitiruma y Yaguarima'
+        - dato: 'Y la quebrada del taque: «Tacaduto: expresa la quebrada del taque. Uto: cauce.» Es una aldea del municipio Moruy.'
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '61'}
+          apoyo_en_repo: [hueco-lex-006]
+          estacion: 'lluvias'
+          voz_caquetia: {clave: take, capa: caquetío-atestiguado}
+        - dato: >-
+            Y la razón de que la casa esté aquí: «There the settlements are
+            concentrated around the Santa Ana (extinct) volcano, which provides the
+            water necessary for agriculture, and where the soils are most suited for
+            farming.»
+          etiqueta: reconstruido
+          capa: 'inferencia de Oliver sobre sus propios sitios arqueológicos del s. XVI'
+          procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 262 (pdf 80)'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kapubana, capa: caquetío-atestiguado}
+      mar_y_pesca:
+        - dato: >-
+            CERO por construcción: Moruy es el único sitio de la era 2 sin zona de
+            pesca en curiana_agents_era2.SITIOS. Su pescado le llega de ZG2 (los
+            Tacuatos y los Cayudes) y su sal, de la orilla. Es lo que convierte a
+            la casa del Manaure en la que recibe y reparte.
+          etiqueta: canon-simulacion
+          deuda: sin-procedencia
+          apoyo: 'curiana_agents_era2.SITIOS (zona_de_pesca: None); estructura_social_era2.yaml §dos_circuitos.redistribucion'
+          estacion: 'todo el año'
+          voz_caquetia: {clave: arima, capa: caquetío-reconstruido}
+      recoleccion:
+        - dato: >-
+            El fruto del cardón se baja con vara: la DATERA es «vara hecha con el
+            maguey (bohordo floral) de la planta de cocuy, con una corona de púas en
+            un extremo para ensartar y bajar los frutos del cardón (datos)».
+          etiqueta: retro-abstraido
+          capa: s. XX
+          procedencia: {obra: medina-colina-sxx, pagina: '89 (mc-mundo-016)'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: dato, capa: caquetío-atestiguado}
+        - dato: >-
+            Y de eso se vive cuando no hay otra cosa, dice la copla: «Si no fueran
+            por los datos / y las vainas de cují, / se hubieran muerto de hambre /
+            las muchachas de Antuní.»
+          etiqueta: retro-abstraido
+          capa: 's. XX (copla popular recogida por Esteves)'
+          procedencia: {obra: esteves-1989, pagina: '17'}
+          estacion: 'seca larga'
+          voz_caquetia: {clave: kaduchi, capa: caquetío-atestiguado}
+        - dato: >-
+            La miel tiene cuatro nombres y un árbol: «Guanibara, voz compuesta con
+            la significación de "árbol de la colmena"... Guani: abeja; bara: árbol»;
+            y el dictado da mebi, maba y bayure para el panal, más memerea para los
+            panales de troncos secos.
+          etiqueta: atestiguado
+          capa: 's. XX (la etimología de Esteves; los nombres, del dictado)'
+          procedencia: {obra: esteves-1989, pagina: '25 (entrada Buenevara)'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: memerea, capa: caquetío-retroabstraido}
+      tierra:
+        - dato: >-
+            La tierra de Moruy se defendía: «hay testimonios escritos que dan a
+            conocer las peleas libradas por ellos contra los españoles que trataban
+            de usurparles sus tierras labrantías».
+          etiqueta: atestiguado
+          capa: colonial
+          procedencia: {obra: esteves-1989, pagina: '54'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: wa, capa: caquetío-atestiguado}
+        - dato: >-
+            Y era grande: en 1760 el protector de los indios de Paraguaná alegaba
+            «all of Moruy and with all its territory of small savannas» (savanetas)
+            por la posesión de San Juan de Cayarba.
+          etiqueta: atestiguado
+          capa: colonial (1760)
+          procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 264 (pdf 82)'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: wa, capa: caquetío-atestiguado}
+        - dato: >-
+            El maíz de aquí va a la chicha: «"merejuy", cierta levadura o
+            preparación agria que usaban para acelerar la fermentación del maíz
+            cocido con que elaboraban la chicha embriagadora, que consumían en
+            ceremonias religiosas».
+          etiqueta: hipotetico
+          capa: 's. XX: es una etimología de Esteves sin cita, y el dato etnográfico dentro de ella no tiene segunda fuente'
+          procedencia: {obra: esteves-1989, pagina: '53-54'}
+          estacion: 'seca larga'
+          voz_caquetia: {clave: buriche, capa: caquetío-atestiguado}
+        - dato: >-
+            Y la herramienta con que se abre: «Coa es un tosco instrumento de
+            labranza, un palo aguzado para abrir el surco. Bana: cerro» (entrada
+            Coabana). El objeto es precontacto por definición y el nombre del objeto
+            en caquetío no existe.
+          etiqueta: atestiguado
+          capa: 's. XX (glosa de Esteves; Medina describe la técnica viva, mc-mundo-014)'
+          procedencia: {obra: esteves-1989, pagina: '31'}
+          estacion: 'lluvias'
+          voz_caquetia: {clave: koa, capa: caquetío-reconstruido}
+      monte_y_caza:
+        - dato: >-
+            El monte de Moruy es espinar: «Jarayadito significa espinar, retamal,
+            ñaragatal. El sufijo "dito" es distintivo de los nombres colectivos
+            abundanciales.»
+          etiqueta: atestiguado
+          capa: 's. XIX-XX (Sarayadite en el censo de 1881; toponimo-102)'
+          procedencia: {obra: esteves-1989, pagina: '46'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: yabo, capa: caquetío-atestiguado}
+        - dato: >-
+            Lo que ese monte daba: «Es tierra de fructíferos cardones... Hay hobos,
+            cimirucos y mamones; abundantísima de toda caza: hay perdices, conejos y
+            venados, y grande pesquería de pescados.»
+          etiqueta: atestiguado
+          capa: 'colonial: Castellanos vio Coro hacia 1540, publicó en 1589; el pasaje está en la INTRODUCCIÓN a la Parte II, no en la Elegía I'
+          procedencia: {obra: castellanos-elegias, pagina: 'líneas 48221-48232 del txt'}
+          apoyo_en_repo: [ecologia-019]
+          estacion: 'todo el año'
+          voz_caquetia: {clave: tobeka, capa: caquetío-retroabstraido}
+          nota: 'la perdiz sí tiene nombre vivo (tobeka ~ chenga, «paloma perdiz... hoy casi desaparecida»); el venado no'
+        - dato: >-
+            ⭐ Y la caza tenía regla: los indios de Coro «abominaban tanto la
+            traición que aun a los conejos y venados no querían en caza tirar,
+            estando echados o detenidos, porque decían era matarlos a traición, sino
+            cuando huían».
+          etiqueta: atestiguado
+          capa: contacto (s. XVI, P. Simón referido a los de Coro, vía Arcaya)
+          procedencia: {obra: arcaya-1920, pagina: '42'}
+          apoyo_en_repo: [ecologia-077]
+          estacion: 'todo el año'
+          voz_caquetia: {clave: matakán, capa: caquetío-retroabstraido}
+          lectura: 'es la única norma de caza caquetía del repo, y es moral, no técnica: define la traición. Material para creencia.yaml'
+      sal:
+        - dato: >-
+            Sin salina. Moruy es interior y la sal le llega: la península entera
+            tiene sal de sobra y la saca afuera, así que la sal no es lo que un clan
+            le da al otro.
+          etiqueta: canon-simulacion
+          deuda: sin-procedencia
+          apoyo: 'estructura_social_era2.yaml §sal_y_mercado.lectura; arcaya-1920 p. 22 (las salinas están en la costa)'
+          estacion: 'seca'
+          voz_caquetia: {clave: biro, capa: caquetío-atestiguado}
+      materiales:
+        - dato: >-
+            ⭐ El barro está al lado y la lluvia lo descubre: «Dabuda era el nombre
+            dado por los nativos al barro de loza, cierta greda utilizada por la
+            cerámica local. Visitando el lugar, pueden verse gruesas vetas de barro
+            de loza en los cangilones labrados por la lluvia» (entrada Abudure,
+            aldea al SO de Moruy).
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '11'}
+          apoyo_en_repo: [ecologia-025]
+          estacion: 'lluvias'
+          voz_caquetia: {clave: dabuda, capa: caquetío-atestiguado}
+        - dato: >-
+            Y hay una segunda palabra para la otra arcilla: «Guarataro es un barro
+            de loza, gomoso, con que fabrican budares y ollas. Hay abundancia de
+            este material en el lugar.»
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '41'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: warataro, capa: caquetío-atestiguado}
+        - dato: >-
+            El oficio sigue vivo: Moruy es de las comunidades «con más apego a las
+            costumbres de sus antepasados»; «La gente ha conservado su artesanía
+            autóctona: la cerámica, la fabricación de "silletas" y bernegales, la
+            elaboración del excelente "jabón de la tierra".»
+          etiqueta: retro-abstraido
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '52-53'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: budare, capa: caquetío-retroabstraido}
+        - dato: >-
+            La palma del cerro da la estera: «El nombre viene de Barubaru (palo
+            delgado), palmera con cuyas hojas fabrican esteras los nativos. Esta
+            palmera abunda en las faldas del Cerro de Santa Ana» (entrada Barunú,
+            aldea al norte de Moruy).
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '23'}
+          estacion: 'todo el año'
+          hueco_lexico: true
+          concepto: 'la palma y su hoja — `marawa` «palma» es hipotética y el perfil era2 la esconde; barubaru no está en el lexicón'
+        - dato: >-
+            Y el algodón se tuerce aquí: un informante de Yauquiba «nos habló de la
+            elaboración del "jabón de la tierra", la resina de caricarito, de los
+            guarises de torcer algodón».
+          etiqueta: retro-abstraido
+          capa: 's. XX (testimonio de informante recogido por Esteves)'
+          procedencia: {obra: esteves-1989, pagina: '70'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: maure, capa: caquetío-atestiguado}
+
+  # ───────────────────────────────────────────────────────────────
+  - sitio: Caseto
+    nodo: AMUAY
+    casa: los Guasicures de Caseto
+    lat: 11.762
+    lon: -70.017
+    zona_de_pesca: ZA1
+    fuente_coord: osm-kaketiana
+    en_una_frase: 'la aldea del interior de AMUAY, a la sombra oeste del cerro, con la playa más lejos que el conuco'
+    tension_declarada: >-
+      El sitio está a unos 22 km de la costa oeste y su zona de pesca es ZA1,
+      que empieza en la bahía de Amuay. La decisión del 2026-09-14 le dio a este
+      subgrupo una playa que no tiene a la vista. Es coherente con la propuesta
+      («aldea del interior»), pero en el bloque [Tu tierra] hay que decirlo: los
+      Guasicures caminan o reman a su playa, no viven en ella.
+    dominios:
+      agua:
+        - dato: >-
+            Sin fuente propia en el gazeteer. Lo que hay es la regla general de la
+            península: pozos «(cacimbas o jagüeyes los denominan, según su
+            profundidad)... el agua de filtraciones que se deposita en las capas
+            subterráneas, y que generalmente es desabrida o salobre».
+          etiqueta: atestiguado
+          capa: 's. XIX-XX'
+          procedencia: {obra: arcaya-1920, pagina: '25'}
+          estacion: 'seca larga'
+          voz_caquetia: {clave: jagey, capa: caquetío-atestiguado}
+        - dato: >-
+            El agua del cerro baja también hacia este lado: las diez microcuencas
+            de Montecano, «los únicos cursos de agua que mantienen un pequeño
+            caudal intermitente y efímero», nacen al pie norte del Capubana, en
+            Cocodite, sobre la frontera propuesta entre los nodos.
+          etiqueta: atestiguado
+          capa: moderno (INFALCOSTA, Arends 2021)
+          procedencia: {obra: montecano-reserva, pagina: 'INFALCOSTA (Arends, 2021)'}
+          estacion: 'seca larga'
+          voz_caquetia: {clave: duna, capa: caquetío-reconstruido}
+          regla_3: 'describe el medio físico de hoy; que alguien bebiera de ahí en el s. XV es la decisión del Capubana, no el dato'
+      mar_y_pesca:
+        - dato: >-
+            La costa oeste no tiene NI UN hecho en el corpus: ecologia.yaml cubre
+            el Golfete y el istmo, no el Golfo de Venezuela. Todo lo que este sitio
+            pesque se sostiene en la decisión de zonas del 2026-09-14 y en la
+            ictiofauna general.
+          etiqueta: canon-simulacion
+          deuda: sin-procedencia
+          apoyo: '6-fusion/decisiones_tanda_2026-09-14.yaml §subgrupos_era2 (ZA1); medición del corpus, 2026-09-14'
+          estacion: 'todo el año'
+          voz_caquetia: {clave: parawa, capa: caquetío-atestiguado}
+        - dato: >-
+            ⭐ Y hay una técnica de pesca que sí cae cerca: «Barbasco es nombre
+            común a varias plantas cuyas propiedades estupefacientes se aprovechan
+            en la pesca.» El topónimo Barbasco está junto a Cocodite, al norte del
+            cerro.
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '22'}
+          estacion: 'todo el año'
+          hueco_lexico: true
+          concepto: 'el barbasco y el embarbascar — la única técnica de pesca de agua quieta que aparece, y sin palabra caquetía'
+      recoleccion:
+        - dato: >-
+            El nombre del sitio es una planta: «Caseto es una planta herbácea de
+            las malvas espigadas, es el "malvastrum spicatum" de los botánicos.»
+          etiqueta: atestiguado
+          capa: 's. XIX-XX (45 casas y 303 vecinos en el censo de 1881; toponimo-088)'
+          procedencia: {obra: esteves-1989, pagina: '30'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kaseto, capa: caquetío-atestiguado}
+        - dato: >-
+            Y el fruto del monte seco: «Pitajaya es otro nombre indígena de nuestro
+            susucure, cardo seudo-parásito que da una fruta de piel y pulpa roja»;
+            los frutos de los cardones se llamaban guanariji.
+          etiqueta: retro-abstraido
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '56'}
+          apoyo_en_repo: [ecologia-050, ecologia-055]
+          estacion: 'lluvias'
+          voz_caquetia: {clave: susukure, capa: caquetío-retroabstraido}
+      tierra:
+        - dato: >-
+            El conuco del interior es economía de verdad y no complemento: la
+            agricultura de esta costa es difícil «although not impossible», y pide
+            ciclo corto, acequia o riego a mano desde la charca.
+          etiqueta: reconstruido
+          procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 245 (pdf 63), §3.4.1'}
+          apoyo_en_repo: [ecologia-029]
+          estacion: 'lluvias'
+          voz_caquetia: {clave: jusual, capa: caquetío-atestiguado}
+        - dato: >-
+            Y se pierde a menudo: «siendo muy frecuente perderse las cosechas por
+            falta de lluvias», aunque «pocos aguaceros transforman en jardines a los
+            campos más áridos».
+          etiqueta: atestiguado
+          capa: 's. XIX-XX'
+          procedencia: {obra: arcaya-1920, pagina: '24'}
+          estacion: 'lluvias'
+          voz_caquetia: {clave: tabri, capa: caquetío-atestiguado}
+        - dato: >-
+            Los frijoles del conuco paraguanero tienen tres nombres vivos: tapirama
+            («frijol de grano grande, de sabor ligeramente amargo»), quihuagua
+            («variedad de frijol común en épocas pasadas y muy nutritiva») y
+            urubana («frijol de color morado... por llegar a Paraguaná desde la isla
+            de Aruba»).
+          etiqueta: retro-abstraido
+          capa: s. XX
+          procedencia: {obra: medina-colina-sxx, pagina: '271, 237 y 291'}
+          apoyo_en_repo: [ecologia-054, ecologia-058, ecologia-076]
+          estacion: 'lluvias'
+          voz_caquetia: {clave: tapirama, capa: caquetío-retroabstraido}
+          nota: 'urubana lleva el eje insular dentro del nombre: el frijol viene de Aruba, la misma ruta de ecologia-021'
+      monte_y_caza:
+        - dato: >-
+            El monte de este llano: «fuera de allí no hay, se entiende en la región
+            árida, sino cardones, tunas, arbustos espinosos, y como únicos árboles
+            los cujíes, éstos mismos raquíticos y marchitos, salvo a las orillas de
+            los estanques, o donde sus raíces encuentran alguna humedad subterránea,
+            tornándose entonces corpulentos y hermosos».
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: arcaya-1920, pagina: '23'}
+          apoyo_en_repo: [ecologia-018]
+          estacion: 'todo el año'
+          voz_caquetia: {clave: ubeda, capa: caquetío-atestiguado}
+          lectura: 'el cují grande señala el agua: donde el árbol está corpulento hay humedad bajo tierra. Es una regla de lectura del paisaje que el bloque [Tu tierra] puede dar al agente'
+        - dato: >-
+            Y el suelo bajo ese monte era otro: Oliver no dice que la vegetación
+            fuera distinta —dice que era «nearly identical to the present»— sino que
+            se perdió la COBERTURA, y con ella la capacidad del suelo de retener
+            humedad.
+          etiqueta: reconstruido
+          procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 245 (pdf 63)'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kuru, capa: caquetío-reconstruido}
+          regla_3: 'el suelo pelado de hoy es colonial (las cabras de los Welser); el del s. XV está sombreado'
+      sal:
+        - dato: >-
+            La sal del nodo está al norte de su zona: «Salinas en el territorio del
+            municipio Los Taques» (Sanajaquí), y las cuevas de Quipayú «cerca de
+            Punta Salinas, municipio Los Taques».
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '57-58'}
+          estacion: 'seca'
+          voz_caquetia: {clave: takes, capa: caquetío-atestiguado}
+          lectura: '`takes` «salina» es voz atestiguada y es el nombre del lugar: Los Taques son las salinas'
+      materiales:
+        - dato: >-
+            Las cuevas del nodo: «La voz da la idea de cavidad subterránea, haitón,
+            cueva grande. Y justamente en las cercanías de Amuay hay unas cuevas
+            naturales que debieron ser habituales residencias de los nativos
+            aborígenes.»
+          etiqueta: atestiguado
+          capa: 's. XX; la inferencia de que fueran residencia es del propio Esteves'
+          procedencia: {obra: esteves-1989, pagina: '16'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kiba, capa: caquetío-atestiguado}
+        - dato: >-
+            La paja del techo tiene nombre: «Caruca es una hierba áspera que se
+            usaba para la preparación de la torta de barro con que cubrían los techos
+            de las casas humildes.»
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '28'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: karuka, capa: caquetío-atestiguado}
+        - dato: >-
+            Y la fibra de la hamaca: el chinchorro se tejía «de hilos de cocuy, que
+            es más fuerte y fino que el hilo de cocuiza»; también de algodón, «pero
+            resultan más calurosos».
+          etiqueta: retro-abstraido
+          capa: s. XX
+          procedencia: {obra: medina-colina-sxx, pagina: '71 (mc-mundo-012)'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kokuy, capa: caquetío-atestiguado}
+
+  # ───────────────────────────────────────────────────────────────
+  - sitio: Carirubana
+    nodo: AMUAY
+    casa: los Corubos
+    lat: 11.694
+    lon: -70.218
+    zona_de_pesca: ZA1
+    fuente_coord: osm-kaketiana
+    en_una_frase: 'la playa de pescadores del extremo sur de la costa oeste, con la atalaya de cardúmenes y la sal de la laguna a tres kilómetros'
+    dominios:
+      agua:
+        - dato: >-
+            Sin agua dulce propia registrada. La laguna vecina es salada y las
+            salinas son su producto: el agua de este sitio es de estanque, como en
+            toda la península.
+          etiqueta: canon-simulacion
+          deuda: sin-procedencia
+          apoyo: 'arcaya-1920 pp. 22 y 25; ecologia-008'
+          estacion: 'seca larga'
+          voz_caquetia: {clave: jagey, capa: caquetío-atestiguado}
+      mar_y_pesca:
+        - dato: >-
+            ⭐ La atalaya de cardúmenes, dos veces y en este mismo tramo de costa:
+            Sarabón es un «punto costeño al Norte de Punta Cardón que sirvió de
+            atalaya a los pescadores para avistar (columbrar) los cardúmenes», y
+            Suriquiba, «punto costeño de Punta Cardón que sirvió de atalaya a los
+            pescadores para atisbar los cardúmenes de peces».
+          etiqueta: atestiguado
+          capa: 's. XX (Esteves lo pone en pasado, sin fecha de origen)'
+          procedencia: {obra: esteves-1989, pagina: '58 y 61'}
+          apoyo_en_repo: [hueco-lex-002]
+          estacion: 'seca'
+          hueco_lexico: true
+          concepto: 'el cardumen y el vigía de cardúmenes — el objeto y el oficio existen, la palabra caquetía no (hueco-lex-002)'
+          lectura: >-
+            Es el dato de oficio mejor localizado de toda la costa oeste: dos
+            puntos con nombre, la misma función, y a menos de 10 km del sitio de
+            los Corubos. Si un oficio de la era 2 tiene lugar propio, es éste.
+        - dato: >-
+            Y lo que era este lugar antes de la refinería: Carirubana, «lo que hoy
+            es Punto Fijo», era «playa de pescadores» de menos de 200 personas hasta
+            1926.
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: medina-colina-sxx, pagina: 'aclaratorias al lector (preliminares, sin página dictada)'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kari, capa: caquetío-atestiguado}
+          regla_3: 'que en 1926 fuera playa de pescadores no prueba que lo fuera en el s. XV; lo constante es la playa'
+      recoleccion:
+        - dato: >-
+            ⭐ El corubo que da nombre al subgrupo: «Podría ser Curubitos,
+            diminutivo de Corubo, caparazón de moluscos»; y en el vocabulario de
+            Falcón, «Corubo: caracol, habitáculo calcáreo de ciertos moluscos».
+          etiqueta: atestiguado
+          capa: 's. XX y mapas antiguos'
+          procedencia: {obra: esteves-1989, pagina: '35 y 104'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kurubo, capa: caquetío-retroabstraido}
+          nota: >-
+            El Curubitos de Esteves está en la costa ORIENTAL (La Boca del Caño,
+            cerca de Santa Rita); la decisión del 2026-09-14 trajo a los Corubos a
+            Carirubana. El nombre viaja con el grupo; el topónimo se queda donde
+            está.
+        - dato: >-
+            Y la concha se trabaja dos veces: «el CURUBO, caracol marino, cuya
+            concha usaron los alfareros para PULIR los envases que fabricaban, y
+            también para hacer CAL mediante su cocción a altas temperaturas».
+          etiqueta: retro-abstraido
+          capa: s. XX
+          procedencia: {obra: medina-colina-sxx, pagina: '86 (mc-mundo-015)'}
+          apoyo_en_repo: [ecologia-061, ecologia-025]
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kurubo, capa: caquetío-retroabstraido}
+        - dato: >-
+            ⭐ Y el horno de la cal está en el suelo, con antigüedad declarada: «los
+            aborígenes para obtener cal con qué pelar el maíz, incineraban conchas
+            de almejas; y en este lugar hemos visto señales, antiquísimas y
+            abundantes, de los guairones donde los indios quemaban conchas marinas
+            para la obtención de cal» (entrada Caradacagua).
+          etiqueta: atestiguado
+          capa: 's. XX (Esteves declara las señales «antiquísimas»; no las fecha)'
+          procedencia: {obra: esteves-1989, pagina: '28'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kiwa, capa: caquetío-atestiguado}
+          lectura: >-
+            Cierra un circuito entero: la concha del mar hace la cal, la cal pela
+            el maíz del conuco, y la misma concha bruñe la olla en que se cuece.
+            Es el enlace mar-tierra-oficio mejor documentado del repo.
+      tierra:
+        - dato: >-
+            El conuco de la costa oeste, sin dato propio: lo que hay es el árbol
+            vecino, «Caujarito... diminutivo de Caujaro, árbol de madera liviana
+            (Cordia globosa)», en Punta Cardón.
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '30'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kaujaro, capa: caquetío-atestiguado}
+      monte_y_caza:
+        - dato: >-
+            El monte de la punta es cardón, y se lo dice el nombre viejo: Elegüey
+            era el nombre antiguo de Punta Cardón, hoy sólo del cementerio viejo en
+            la Puntica.
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '38'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kaduchi, capa: caquetío-atestiguado}
+        - dato: >-
+            Y el alcaraván le da nombre a la punta de al lado: «La voz viene de
+            Dara, ave vocinglera de estas sabanas, conocida en otras partes con el
+            nombre de Alcaraván (Charadius)» (entrada Adaro, Punta Adaro).
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '12'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: waka, capa: caquetío-atestiguado}
+          nota: '`dara` «alcaraván» está en el canon de topónimos y da nombre a un agente de la era 1 (Dara-bana); `waka` «ave, cotorra» es el genérico atestiguado'
+      sal:
+        - dato: >-
+            La sal más importante de la península está a tres kilómetros: «Salinas
+            hay varias; las más importantes son las de Guaranao.»
+          etiqueta: atestiguado
+          capa: 's. XX (Arcaya 1920 sobre Sievers)'
+          procedencia: {obra: arcaya-1920, pagina: '22'}
+          estacion: 'seca'
+          voz_caquetia: {clave: borojo, capa: caquetío-atestiguado}
+        - dato: >-
+            Y esa sal tenía fama: «A la sal de Guaranao le atribuían excelentes
+            propiedades curativas en enfermedades de la piel y en carnosidades
+            oculares.»
+          etiqueta: atestiguado
+          capa: 's. XIX-XX'
+          procedencia: {obra: esteves-1989, pagina: '41'}
+          estacion: 'seca'
+          voz_caquetia: {clave: biro, capa: caquetío-atestiguado}
+          tension_declarada: >-
+            La salina que lleva el nombre del OTRO clan cae pegada al sitio de los
+            Corubos. La decisión del 2026-09-14 la dejó de fondo y declaró la
+            tensión; este canon la deja donde está, sin resolverla.
+      materiales:
+        - dato: >-
+            La cal de concha da además la que masca el hayo: el lexicón conserva
+            baperon/raporon «calabaza con cal», y el guairón es «horno rústico hecho
+            en tierra para calcinar (conchas y) piedras y fabricar cal».
+          etiqueta: retro-abstraido
+          capa: s. XX
+          procedencia: {obra: medina-colina-sxx, pagina: '130 (mc-mundo-018)'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: amana, capa: caquetío-reconstruido}
+
+  # ───────────────────────────────────────────────────────────────
+  - sitio: Capubana
+    nodo: GUARANAO
+    casa: null
+    lat: 11.8183
+    lon: -69.9524
+    zona_de_pesca: null
+    fuente_coord: 'osm-kaketiana (paraguana-1.json, peak «Cerro Santa Ana», 830 m). El módulo generado lo tiene con lat/lon en null: propuesta de rellenarlos'
+    en_una_frase: 'el centro compartido: la única elevación, la única agua corriente, el bosque que no se corta y la marca que se ve desde el mar'
+    de_fondo: false
+    dominios:
+      agua:
+        - dato: 'Hay «apenas una fuente intermitente en el cerro de Santa Ana».'
+          etiqueta: atestiguado
+          capa: 's. XX (Arcaya 1920 sobre Sievers 1892)'
+          procedencia: {obra: arcaya-1920, pagina: '22'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: duna, capa: caquetío-reconstruido}
+          lectura: 'es la ÚNICA agua corriente de la península en toda la bibliografía del repo'
+        - dato: >-
+            Al pie hay diez microcuencas, «que son los únicos cursos de agua que
+            mantienen un pequeño caudal intermitente y efímero», en una reserva que
+            se reconoce como fuente de agua de Paraguaná.
+          etiqueta: atestiguado
+          capa: moderno (INFALCOSTA, Arends 2021; Decreto 3825 de 2019)
+          procedencia: {obra: montecano-reserva, pagina: 'INFALCOSTA (Arends, 2021); Wikipedia es (Decreto N.º 3825)'}
+          estacion: 'seca larga'
+          voz_caquetia: {clave: duna, capa: caquetío-reconstruido}
+          regla_3: 'describe el medio físico de hoy; la proyección al s. XV es la decisión de Miguel del 2026-09-14'
+        - dato: >-
+            Y la humedad no es lluvia: en la cumbre hay «abundantes epífitas, musgos
+            y líquenes favorecidos por la alta humedad», con cinco pisos bióticos y
+            un bosque nublado costero de formas achaparradas arriba, en una península
+            que recibe 380-417 mm al año.
+          etiqueta: atestiguado
+          capa: moderno (INPARQUES/MINEC/Wikipedia; las páginas institucionales daban 404 el 2026-09-14 y se citan por extracto)
+          procedencia: {obra: monumento-cerro-santa-ana, pagina: 'Wikipedia es; MINEC e INPARQUES por extracto'}
+          apoyo_en_repo: [ecologia-005, ecologia-020]
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kapubana, capa: caquetío-atestiguado}
+        - dato: >-
+            El agua tiene nombre en el mapa de la falda: Maitiruma, «manantial
+            azul», aldea del municipio Santa Ana; y las albuferas del pie de
+            Tausabana, adonde bajan las tautas «atraídas por los pececillos que se
+            crían en las albuferas aledañas al cerro».
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '49 y 62'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: tarika, capa: caquetío-atestiguado}
+        - dato: >-
+            Lo que Esteves NO dice del cerro: ni una quebrada, ni agua que baje, ni
+            nube, ni neblina, ni el bosque de altura. La única escarpadura que
+            nombra es la de Cunacho, y la nombra por el pez del Golfete. El bosque
+            nublado no sale de esta fuente.
+          etiqueta: atestiguado
+          capa: 's. XX (el cero es de esta fuente, verificado en los seis OCR)'
+          procedencia: {obra: esteves-1989, pagina: '33, 49, 60 y 62 (las cuatro entradas del conjunto del cerro)'}
+          estacion: 'todo el año'
+          hueco_lexico: true
+          concepto: 'la neblina, el chubasco y el bosque de altura — sin dato en el gazeteer y sin palabra caquetía'
+      mar_y_pesca:
+        - dato: >-
+            ⭐ El cerro es la marca desde el mar: la indicación «m. alto» del mapa de
+            Juan de la Cosa «significa, sin duda, que navegando por ahí observó él un
+            "monte alto", lo cual es cierto, porque el monte es el cerro de Santa Ana
+            de Paraguaná».
+          etiqueta: atestiguado
+          capa: contacto (c. 1500, el mapa; la lectura es de Arcaya, 1920)
+          procedencia: {obra: arcaya-1920, pagina: '134'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kidi, capa: caquetío-atestiguado}
+          lectura: >-
+            Un cerro de 830 m en una península llana es un instrumento de
+            navegación: el mismo papel que Esteves le da a Matividiro para los
+            pescadores de pargo («por su cercanía a la costa sirve de orientación a
+            los pescadores... que se internan hasta las quince millas», p. 51). El
+            centro espiritual es también la aguja de marear.
+        - dato: >-
+            Y el cerro está en la escena de la pesca por el pez: las Escarpaduras de
+            Cunacho llevan el nombre del cunaro del Golfete, del que se sacaba la
+            manteca para los jachos.
+          etiqueta: hipotetico
+          capa: 's. XX; es etimología de Esteves, sin cita'
+          procedencia: {obra: esteves-1989, pagina: '33'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kunaro, capa: caquetío-atestiguado}
+      recoleccion:
+        - dato: >-
+            El único recurso que el gazeteer adscribe explícitamente al cerro: «la
+            palmera [barubaru], con cuyas hojas fabrican esteras los nativos...
+            abunda en las faldas del Cerro de Santa Ana».
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '23'}
+          estacion: 'todo el año'
+          hueco_lexico: true
+          concepto: 'barubaru — la palma de la estera, sin entrada en el lexicón'
+      tierra:
+        - dato: >-
+            El cerro es la razón de que haya conucos: da «the water necessary for
+            agriculture», y alrededor de él están los suelos «most suited for
+            farming» de toda Paraguaná.
+          etiqueta: reconstruido
+          capa: 'inferencia de Oliver sobre sus sitios arqueológicos del s. XVI'
+          procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 262 (pdf 80)'}
+          estacion: 'lluvias'
+          voz_caquetia: {clave: wa, capa: caquetío-atestiguado}
+      monte_y_caza:
+        - dato: >-
+            ⭐ El bosque del cerro tiene dueño y no se corta: «en el cerro de
+            Capuhana hay un duende llamado [Capó] quien junto con una serpiente
+            emplumada... impide que sean cortados los árboles de la localidad».
+          etiqueta: retro-abstraido
+          capa: 's. XX (tradición viva recogida por Esteves; Antolínez 1946 da la misma figura vía Tamayo)'
+          procedencia: {obra: esteves-1989, pagina: '26 (entrada Capuhana)'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kapubana, capa: caquetío-atestiguado}
+          lectura: >-
+            En términos materiales, el tabú de la tala es la protección de la
+            captura de humedad: sin bosque arriba no hay agua abajo. Es la norma del
+            agua dicha en clave sagrada.
+        - dato: >-
+            Y el cerro conserva lo que el llano perdió: guacharaca, pavita hormiguera,
+            venado matacán, zarigüeya y tarántula azul son la fauna actual del
+            Monumento Natural.
+          etiqueta: atestiguado
+          capa: moderno
+          procedencia: {obra: monumento-cerro-santa-ana, pagina: 'Wikipedia es, fauna'}
+          apoyo_en_repo: [ecologia-037, ecologia-039, ecologia-077]
+          estacion: 'todo el año'
+          voz_caquetia: {clave: matakán, capa: caquetío-retroabstraido}
+          regla_3: 'es fauna de hoy, no censo del s. XV: prueba que el animal cabe en este medio, no que estuviera aquí entonces. Lo que sí lo atestigua para el s. XVI es Castellanos y Pérez de Tolosa'
+        - dato: >-
+            La boa del monte, con nombre y con carga: «Seruro: nombre de una
+            serpiente no venenosa, la boa constrictora»; y el dictado le añade el
+            aliento que adormece a la presa.
+          etiqueta: retro-abstraido
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '60'}
+          apoyo_en_repo: [ecologia-035]
+          estacion: 'todo el año'
+          voz_caquetia: {clave: buio, capa: caquetío-atestiguado}
+      sal:
+        - dato: >-
+            CERO por geografía: el cerro no tiene sal, y las salinas de la península
+            están todas en la costa. Es la contrapartida del agua: el centro da lo
+            que la costa no tiene, y no da lo que la costa tiene de sobra.
+          etiqueta: canon-simulacion
+          deuda: sin-procedencia
+          apoyo: 'arcaya-1920 pp. 20-22 (todas las salinas nombradas son costeras); esteves-1989 pp. 19, 33, 41, 58, 66'
+          estacion: 'seca'
+          voz_caquetia: {clave: biro, capa: caquetío-atestiguado}
+      materiales:
+        - dato: >-
+            ⭐ La piedra escrita del conjunto: en el cerro de Siraba, «cerro cónico,
+            unido al cerro de Santa Ana por el lado Noreste», de casi 500 m, «están
+            localizadas unos petroglifos que llaman: "Las Piedras del Almanaque"».
+          etiqueta: retro-abstraido
+          capa: 's. XX (el nombre es de la tradición local; Esteves no lo interpreta)'
+          procedencia: {obra: esteves-1989, pagina: '60'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kiba, capa: caquetío-atestiguado}
+          que_lo_subiria: 'una lectura publicada de esos petroglifos; comprobar si el inventario de Morón 2012 para Falcón incluye Siraba'
+        - dato: >-
+            El cerro en cifras: 830 m, la única elevación de la península, 1.900 ha,
+            y «tres picachos: el Santa Ana..., Buena Vista y Moruy».
+          etiqueta: atestiguado
+          capa: moderno
+          procedencia: {obra: monumento-cerro-santa-ana, pagina: 'Wikipedia es, citando el decreto de 1972'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: turumako, capa: caquetío-atestiguado}
+          nota: >-
+            Arcaya, sobre Sievers, le da «no inferior a 700 metros» (p. 21) y la
+            cumbre de Moruy sólo la da Wikipedia: OSM registra un solo pico y
+            Esteves ninguno. Deuda de mapa topográfico abierta desde el 2026-09-14.
+
+  # ───────────────────────────────────────────────────────────────
+  - sitio: laguna de Guaranao
+    nodo: null
+    casa: null
+    lat: 11.682
+    lon: -70.196
+    zona_de_pesca: ZG1
+    fuente_coord: osm-kaketiana
+    de_fondo: true
+    por_que_de_fondo: >-
+      La decisión del 2026-09-14 la dejó fuera de escena, entre los dos
+      territorios: «la laguna de Guaranao, que da nombre a un clan, queda entre
+      los dos territorios y de fondo». No está en curiana_agents_era2.SITIOS.
+      Entra en este canon porque Miguel la nombró y porque es el sitio que más
+      testimonio suyo carga.
+    en_una_frase: 'el espejo de agua salada que da nombre a un clan y no tiene dueño: sal, peces, y los tres testimonios de Miguel'
+    dominios:
+      agua:
+        - dato: >-
+            Es agua salada, no dulce: la laguna es una salina. `tarika` «laguna,
+            espejo de agua interior» es la voz caquetía atestiguada del accidente, y
+            `waranao ~ waranaro` mezcla en el nombre lo salado y el pez.
+          etiqueta: atestiguado
+          capa: 's. XX'
+          procedencia: {obra: esteves-1989, pagina: '41'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: tarika, capa: caquetío-atestiguado}
+      mar_y_pesca:
+        - dato: >-
+            El pez que le da nombre: «Guaranaro es un pez más pequeño que la lisa.»
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '41'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: waranaro, capa: caquetío-atestiguado}
+        - dato: >-
+            «En la laguna de Guaranao hay [...] peces.» Miguel, 2026-09-14. Con
+            fuente desde el 2026-09-16: la laguna tiene lisa, corocoro y lenguado,
+            además del guaranaro que le da nombre.
+          etiqueta: atestiguado
+          capa: 'moderno (ficha abierta el 2026-09-16 por decisión de Miguel, p8); el testimonio era del s. XXI sobre el lugar de hoy'
+          procedencia: {obra: laguna-guaranao-parque, pagina: 'Wikipedia es, fauna'}
+          estacion: 'todo el año'
+          voz_caquetia: {clave: waranaro, capa: caquetío-atestiguado}
+          subio_de: 'testimonio-miguel (2026-09-14) → atestiguado moderno (2026-09-16)'
+      recoleccion:
+        - dato: >-
+            «hay recolección de corubos». Miguel, 2026-09-14. La glosa del corubo sí
+            está atestiguada («caracol, habitáculo calcáreo de ciertos moluscos»,
+            Esteves p. 104), y la técnica de la cal y del bruñido también (Medina,
+            mc-mundo-015); lo que no tiene fuente es que se recogieran AQUÍ.
+          etiqueta: testimonio-miguel
+          capa: 'testimonio del s. XXI'
+          deuda: sin-procedencia
+          estacion: 'todo el año'
+          voz_caquetia: {clave: kurubo, capa: caquetío-retroabstraido}
+          que_lo_subiria: 'un conchero arqueológico en la orilla de la laguna, o un informante de Punta Cardón que lo diga de la laguna y no de la costa'
+      tierra:
+        - dato: >-
+            «todo el trabajo de tierra». Miguel, 2026-09-14. Sin dato propio: la
+            laguna es salobre y su entorno es el llano salino del sur de la península.
+            El conuco del que Miguel habla es el de los sitios de tierra adentro.
+          etiqueta: testimonio-miguel
+          capa: 'testimonio del s. XXI'
+          deuda: sin-procedencia
+          estacion: 'lluvias'
+          voz_caquetia: {clave: wa, capa: caquetío-atestiguado}
+          que_lo_subiria: 'cualquier dato de conuco a menos de 5 km de la laguna; Esteves no registra ninguno'
+      monte_y_caza:
+        - dato: >-
+            «En la laguna de Guaranao hay manglares». Miguel, 2026-09-14. Con fuente
+            desde el 2026-09-16: cuatro mangles con nombre — «mangle rojo (Rhizophora
+            mangle), el mangle negro (Avicennia germinans), el mangle llorón
+            (Laguncularia racemosa) y botoncillo (Conocarpus erectus)» — y alrededor
+            cujíes, guayacán, tunas y cardones. Esteves sólo registraba manglar en
+            Babahuro (p. 18) y el mapa vivo no etiqueta humedal a menos de 6 km: era
+            un cero de cobertura, no de la laguna.
+          etiqueta: atestiguado
+          capa: 'moderno (ficha abierta el 2026-09-16, p8); constante del medio proyectable como en ecologia-002'
+          procedencia: {obra: laguna-guaranao-parque, pagina: 'Wikipedia es, flora'}
+          apoyo_en_repo: [ecologia-011, ecologia-023, ecologia-024, ecologia-084]
+          estacion: 'todo el año'
+          subio_de: 'testimonio-miguel (2026-09-14) → atestiguado moderno (2026-09-16)'
+          hueco_lexico: true
+          concepto: 'el manglar — `mankaba` existe pero es hipotética (y el perfil era2 la esconde); las cuatro especies y la raíz-zanco siguen sin nombre'
+        - dato: >-
+            ⭐ «hay yararés». Miguel, 2026-09-14 — y el 2026-09-15: «me refería a
+            yacaré, me equivoqué yo». El yararé no existía (cero en todo el material,
+            correcto); el animal es el caimán, y la laguna tiene los dos: «la baba o
+            el caimán de anteojos (Caiman crocodilus)» y «cocodrilos de la costa
+            (Crocodylus acutus)».
+          etiqueta: atestiguado
+          capa: 'moderno (ficha abierta el 2026-09-16, p8)'
+          procedencia: {obra: laguna-guaranao-parque, pagina: 'Wikipedia es, fauna'}
+          apoyo_en_repo: [ecologia-084]
+          estacion: 'todo el año'
+          subio_de: 'testimonio-miguel «yararé» (2026-09-14) → atestiguado moderno «caimán» (2026-09-16)'
+          hueco_lexico: true
+          concepto: 'el caimán — sin palabra caquetía: `yacare` es «pueblo» en el canon de topónimos (Zavala #279) y `caiman` es taíno, que al tier 1 le llega por la esfera de contacto (p3b)'
+          candidatos_a_descartar: >-
+            NO se propone ninguna identificación. Se anota, sólo para que Miguel
+            descarte: el lexicón tiene `yawasa` «yaguaza, ave comestible de aguas
+            cenagosas; hoy extinguida en la península» [caquetío-reconstruido], que
+            es el único animal de laguna con nombre en -a-a del repo; y `chiriware`
+            «gavilán». Ninguno de los dos suena a yararé y ninguno se usa hasta que
+            Miguel responda.
+        - dato: >-
+            «En esa época había venados que no sé cómo llamarlos, ya que no quedan al
+            día de hoy». Miguel, 2026-09-14. ⭐ RESUELTO el mismo día: el nombre es
+            MATACÁN, «cérvido de poca alzada [del que] en tiempos pasados había
+            rebaños... en los bosques de Paraguaná. Se han extinguido por la cacería
+            incontrolada» (Esteves p. 51), y el animal sigue en el cerro (venado
+            matacán, Monumento Natural). Miguel decidió fonemizarlo —«sí o sí lo
+            tenemos que utilizar»— y `matakán` entró al lexicón como
+            caquetío-retroabstraido y al corpus como ecologia-077.
+          etiqueta: testimonio-miguel
+          capa: 'testimonio del s. XXI; el nombre vivo es s. XX y el animal está atestiguado desde 1540'
+          procedencia: {obra: esteves-1989, pagina: '51'}
+          apoyo_en_repo: [ecologia-019, ecologia-037, ecologia-077]
+          estacion: 'todo el año'
+          voz_caquetia: {clave: matakán, capa: caquetío-retroabstraido}
+          que_lo_subiria: >-
+            lo que falta ya no es la palabra sino su capa: una glosa «venado» en una
+            fuente caquetía distinta de las tres que tumbaron a `tara` (Zavala,
+            Alvarado, Oliver Tabla A-9) subiría `matakán` de retro-abstraído a
+            atestiguado. Ver 6-fusion/matacan_venado_2026-09-14.yaml.
+      sal:
+        - dato: 'Las salinas de la laguna son las más importantes de Paraguaná: «Salinas hay varias; las más importantes son las de Guaranao.»'
+          etiqueta: atestiguado
+          capa: 's. XX (Arcaya sobre Sievers)'
+          procedencia: {obra: arcaya-1920, pagina: '22'}
+          apoyo_en_repo: [ecologia-009, ecologia-010]
+          estacion: 'seca'
+          voz_caquetia: {clave: borojo, capa: caquetío-atestiguado}
+        - dato: >-
+            Y ya no están: «Decimos que le atribuían porque el mineral ya no existe,
+            la salina fue destruida por aguas cloacales.»
+          etiqueta: atestiguado
+          capa: s. XX
+          procedencia: {obra: esteves-1989, pagina: '41'}
+          estacion: 'seca'
+          voz_caquetia: {clave: biro, capa: caquetío-atestiguado}
+          lectura: >-
+            El sitio que da nombre al clan de la sal ya no produce sal. Para el
+            mundo de la era 2 da igual —el medio del s. XV es el de antes del
+            saneamiento— pero explica por qué la laguna no aparece en ninguna
+            descripción moderna como recurso.
+      materiales:
+        - dato: >-
+            La costra de sal que se raspa y el agua salobre siguen sin palabra: el
+            lexicón tiene `biro` (sal) y `borojo` (salina), no el producto ni el
+            estado intermedio entre mar y agua dulce.
+          etiqueta: reconstruido
+          procedencia: {obra: camacho-2011, pagina: '(vía hueco-lex-005)'}
+          apoyo_en_repo: [hueco-lex-005]
+          estacion: 'seca'
+          hueco_lexico: true
+          concepto: 'la costra de sal y el agua salobre (hueco-lex-005)'
+
+# ══════════════════════════════════════════════════════════════════
+# LO QUE ESTE CANON PROPONE A OTRAS ESFERAS (regla 5: propone, no fusiona)
+# ══════════════════════════════════════════════════════════════════
+propuestas_a_otras_esferas:
+  ecologia:
+    - 'YA FUSIONADO el 2026-09-14 por otra sesión: el matacán (Esteves p. 51) es ecologia-077 y `matakán` [caquetío-retroabstraido] está en el lexicón. Esta campaña lo halló por su lado, en el mismo barrido, y lo deja anotado para que no se cuente dos veces'
+    - 'hecho nuevo: la pesca nocturna con jachos untados de manteca de cunaro (Esteves p. 33). Es la única técnica de pesca con hora del día del repo y el corpus no la tiene'
+    - 'hecho nuevo: el barbasco como técnica de pesca (Esteves p. 22), sin palabra caquetía'
+    - 'hecho nuevo: las atalayas de cardúmenes de Punta Cardón (Esteves pp. 58 y 61) — el oficio de leer el mar con lugar propio; refuerza hueco-lex-002'
+    - 'hecho nuevo: el guairón y la cal de concha para pelar el maíz, con señales «antiquísimas» en Caradacagua (Esteves p. 28; Medina mc-mundo-015 y mc-mundo-018)'
+    - 'hecho nuevo: el cují corpulento como señal de humedad subterránea (Arcaya p. 23) — una regla de lectura del paisaje'
+    - 'hecho nuevo: el pulso de lluvias visto en Paraguaná y fechado (Sievers, finales de octubre de 1892, vía Arcaya p. 24). Da apoyo de segunda fuente a ecologia-006'
+  creencia:
+    - 'hecho nuevo: el tabú de caza — no se tira al conejo ni al venado echado o detenido, «porque decían era matarlos a traición», sólo cuando huyen (Arcaya p. 42, P. Simón sobre los de Coro). Es la única norma de caza caquetía del repo y es moral'
+    - 'hecho nuevo: el dueño del cerro (Capó) y la serpiente emplumada que impiden cortar los árboles (Esteves p. 26), ya propuesto en capubana_agua_y_microclima.yaml'
+    - 'lectura para creencia-013: «Las Piedras del Almanaque» del cerro Siraba (Esteves p. 60), el único objeto del repo que la tradición asocia a un calendario, y está pegado al Capubana'
+  lexicon:
+    - 'nada que fusionar: este canon NO propone ninguna forma nueva. Declara ocho huecos y usa sólo voces que ya existen con su capa'
+  toponimos:
+    - 'lectura pendiente para toponimo-102 (jarayadito): el espinar es el monte de Moruy, no sólo una etimología'
+    - 'lectura pendiente para el conjunto del cerro: Siraba (p. 60, con los petroglifos), Tausabana (p. 62, con las albuferas) y Cunacho (p. 33, con el cunaro y los jachos) son los tres topónimos del Capubana con dato de recurso'

@@ -6716,9 +6716,17 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "yawasa": {"sig": "yaguaza, ave comestible de aguas cenagosas; hoy extinguida en la península", "cat": "sust", "fuente": "caquetío-reconstruido", "forma_fuente": "yaguaza", "categoria": "fauna", "notas": "Decisión de Miguel 2026-09-12 (tainismos de Medina): «todas entran como voces nuevas». Medina Colina, Del Habla Paraguanera, p. 305: «es ave comestible propia de las aguas cenagosas, hoy extinguida en nuestra península». Etimología: DRAE: yaguasa, del taíno; Antillas y Venezuela. Panhispánica; el protocolo la había descartado (veredicto D) y Miguel revoca el descarte para los tainismos. caquetío-RECONSTRUIDO como kanoa/hamaca/konuko: cognado taíno citado, sin atestación caquetía colonial — la vía pudo ser el español. Clave = lema fonémico D5 de «yaguaza»."},
 
     # ══════════════════════════════════════════════════════
+    # RETROABSTRAÍDA DE ESTEVES (2026-09-14) — decisión de Miguel: el venado
+    # de Paraguaná. Forma viva y documentada (Esteves 1989 p. 51); sustrato en
+    # disputa (la lexicografía general la da castellana). Entra por decisión,
+    # no por cognado. Medición: 6-fusion/matacan_venado_2026-09-14.yaml.
+    # ══════════════════════════════════════════════════════
+    "matakán": {"sig": "venado matacán: el cérvido pequeño («de poca alzada», Mazama) de los bosques de Paraguaná, caza mayor de la península; hoy extinguido en el llano", "cat": "sust", "fuente": "caquetío-retroabstraido", "forma_fuente": "matacán", "categoria": "fauna", "notas": "Decisión de Miguel 2026-09-14: «sí o sí lo tenemos que utilizar […] matacán siendo el único mamífero de ese tamaño, venado, que además funciona como caza […] si quieres lo ponemos como simulación o como lo que quieras». Esteves 1989, parte 2, p. 51 (imagen verificada), s.v. MATACAN: «cérvido de poca alzada. En tiempos pasados había rebaños de este tipo de venado en los bosques de Paraguaná. Se han extinguido por la cacería incontrolada»; Punta de Matacán, en el Golfete, es hoy aldea de pescadores. El animal está atestiguado en Coro en 1540 (Castellanos: «conejos y venados») y sobrevive en el Cerro Santa Ana. CAPA RETROABSTRAÍDA (#124): la forma está documentada en boca viva; lo incierto es el sustrato — y aquí la duda pesa más que en las voces de Medina: la lexicografía general da «de matar y can» (la liebre que agota a los perros), Alvarado 1921 no la tiene entre las voces indígenas (cero verificado con variantes; sí tiene locho, del quechua) y ningún vocabulario arahuaco o caribe del repo llama así al venado (motilón amúsha/trihunchti, guajiro Uyára, achagua nerraí). NO es caquetío-reconstruido (el precedente wayakán exigía cognado taíno) ni hipotético (la forma no es inventada). Especie: Mazama, distinta del venado caramerudo (Odocoileus). Cierra el hueco léxico de ecologia-037. La ven los perfiles `suelto` y `era2`. Deuda: Alvarado 1929 (Glosario del bajo español) s.v.; Medina Colina físico s.v. Clave = lema fonémico D5 de «matacán»; fonotáctica atestiguada: válida."},
+
+    # ══════════════════════════════════════════════════════
     # RETROABSTRAÍDAS DE MEDINA (2026-09-13, #124 opción A) — las voces
     # del habla paraguanera de nivel A/B/C: forma documentada, sustrato
-    # incierto. Sólo las ven los perfiles `suelto`.
+    # incierto. Las ven los perfiles `suelto` y, desde el 2026-09-14, `era2`.
     # ══════════════════════════════════════════════════════
     "arifuke": {"sig": "harina de maíz a la que se agregaba raspillo [?] de panela y que se servía como parte de la comida de los arrieros. Es muy nutritiva.", "cat": "sust", "fuente": "caquetío-retroabstraido", "forma_fuente": "arifuque", "nivel_dictado": "A", "notas": "Medina Colina 2013, Del Habla Paraguanera, p. 31, s.v. arifuque: «harina de maíz a la que se agregaba raspillo [?] de panela y que se servía como parte de la comida de los arrieros. Es muy nutritiva.». Nivel A del protocolo del dictado. CAPA RETROABSTRAÍDA (#124, Miguel 2026-09-13, opción A): la forma está documentada en boca viva del s. XX; lo incierto es que el sustrato sea caquetío y no castellano regional, caribe o papiamento. La ven sólo los perfiles `suelto`; `base` no. Regla 4: la fuente es paraguanera, la conclusión es de la esfera. Clave = lema fonémico D5."},
     "chiriwa": {"sig": "recipiente de barro cocido, pequeño, manual, para contener agua u otro líquido. Es palabra popular.", "cat": "sust", "fuente": "caquetío-retroabstraido", "forma_fuente": "chirigua", "nivel_dictado": "A", "notas": "Medina Colina 2013, Del Habla Paraguanera, p. 72, s.v. chirigua: «recipiente de barro cocido, pequeño, manual, para contener agua u otro líquido. Es palabra popular.». Nivel A del protocolo del dictado. CAPA RETROABSTRAÍDA (#124, Miguel 2026-09-13, opción A): la forma está documentada en boca viva del s. XX; lo incierto es que el sustrato sea caquetío y no castellano regional, caribe o papiamento. La ven sólo los perfiles `suelto`; `base` no. Regla 4: la fuente es paraguanera, la conclusión es de la esfera. Clave = lema fonémico D5."},
@@ -6970,8 +6978,18 @@ REGLAS_LOCATIVAS: dict[str, dict] = {
     },
 }
 
-REGLAS_AGENTIVAS: dict[str, dict] = {
+# ── RETIRADAS (Miguel, 2026-09-14): «Sí o sí hay que sacar eso de -ko y -sha,
+# si es inventado, tanto de la gramática como de los nombres». Ninguna fuente
+# sostiene -ko «hombre de» ni -sha «mujer de»: eran convención de la era 1
+# (el campo `wayunaiki` de cada una es una analogía, no una atestación). Se
+# archivan aquí con la misma disciplina que FUERA_DEL_HABLA: no se enseñan,
+# no cuentan como regla al clasificar neologismos, y los nombres del elenco de
+# la era 2 se rehacen sin ellas (6-fusion/decisiones_tanda_2026-09-14.yaml
+# §antroponimos_era2). Los nombres de la era 1 (Biro-ko, Paugis-sha…) se
+# conservan tal cual en curiana_agents.py: esa era está cerrada.
+REGLAS_RETIRADAS: dict[str, dict] = {
     "-ko": {
+        "retirada": "2026-09-14, decisión de Miguel: sin fuente; era convención de la era 1",
         "nombre": "agente masculino",
         "desc": "Hombre cuya identidad/trabajo está asociado a X.",
         "uso": "RAÍZ + -ko  →  nombre o apodo masculino",
@@ -6987,6 +7005,7 @@ REGLAS_AGENTIVAS: dict[str, dict] = {
         ),
     },
     "-sha": {
+        "retirada": "2026-09-14, decisión de Miguel: sin fuente; era convención de la era 1",
         "nombre": "agente femenino",
         "desc": "Mujer cuya identidad/trabajo está asociado a X.",
         "uso": "RAÍZ + -sha  →  nombre o apodo femenino",
@@ -7163,7 +7182,7 @@ REGLAS_TOPONIMICAS: dict[str, dict] = {
 TODAS_LAS_REGLAS = {
     **REGLAS_ASPECTO,
     **REGLAS_LOCATIVAS,
-    **REGLAS_AGENTIVAS,
+    # REGLAS_AGENTIVAS (-ko, -sha) retiradas el 2026-09-14: ver REGLAS_RETIRADAS
     **REGLAS_POSESIVAS,
     **REGLAS_NUMERO,
     **REGLAS_ZAVALA,
@@ -7398,7 +7417,7 @@ CONSTRUYE tus frases con lo que tienes. Una frase incompleta en caquetío > orac
 ASPECTO: raíz + -ka (ya hice) / -ni (estoy haciendo) / -da (haré/quiero).
 LUGAR: raíz + -ana (lugar de) / -bana (cerro, sitio alto de) / -gua (región de).
 {prompt_afijos_atestiguados_breve()}
-PERSONAS: -ko (hombre de) / -sha (mujer de) / -kana (plural/colectivo).
+PLURAL: -kana (plural/colectivo).
 POSESIÓN: ta- (mi) / wa- (nuestro) / ma- (sin/no) / ka- (el-la del).
 CONECTORES: ka (y/también) / mara (pero) / saa (si/cuando) / naka (después) / kashi (ahora) / wara (muy).
 
@@ -7484,7 +7503,7 @@ MORFOLOGÍA:
     -bana = cerro, sitio alto de X: sima+bana = la cumbre · kapu+bana = kapubana, el duende del cerro
     -gua = región de X: maure+gua = tierra del algodón
 {prompt_afijos_atestiguados()}
-  AGENTIVOS: -ko (hombre de X) · -sha (mujer de X) · -kana (plural/todos)
+  PLURAL: -kana (plural/todos)
 
 NUEVAS PALABRAS: [forma: componentes = significado propuesto]
   La comunidad la adopta si 2 agentes distintos la usan."""
@@ -7779,6 +7798,97 @@ def _familia_de_token(tok: str) -> str:
     return "caquetío"  # neologismo comunitario: no es préstamo, es lengua propia
 
 
+_NOMBRES_AGENTES: Optional[frozenset] = None
+
+
+def _nombres_de_agentes() -> frozenset:
+    """Los nombres del elenco activo y de la era 1, en minúscula, tal como los
+    produce _tokenizar. Se cargan una vez; curiana_agents no importa de aquí,
+    así que no hay ciclo."""
+    global _NOMBRES_AGENTES
+    if _NOMBRES_AGENTES is None:
+        try:
+            import curiana_agents as _ag
+            nombres = (set(_ag.ALL_AGENTS) | set(_ag.AGENTS_T1)
+                       | set(_ag.AGENTS_T2) | set(_ag.AGENTS_T3))
+        except Exception:                                    # noqa: BLE001
+            nombres = set()
+        _NOMBRES_AGENTES = frozenset(n.lower() for n in nombres)
+    return _NOMBRES_AGENTES
+
+
+def _nombres_que_chocan_con_el_canon() -> frozenset:
+    """Los nombres del elenco que TAMBIÉN son voces del lexicón.
+
+    Son 52 en la era 2 (`buko`, `hayo`, `mene`, `saruro`, `hiko`, `jachos`,
+    `karebe`, `naure`…) y las 52 se enseñan en el prompt. Con el filtro en
+    minúsculas del 2026-09-14 quedaban fuera del conteo SIEMPRE: eran palabras
+    que el motor enseñaba y no contaba. Se separan para tratarlas por caso.
+    """
+    return frozenset(_nombres_de_agentes() & set(VOCABULARIO_BASE))
+
+
+def _filtrar_nombres(texto: str, tokens: list) -> list:
+    """Quita del conteo las menciones a agentes, sin comerse el vocabulario.
+
+    Un nombre que NO es voz del lexicón (`Biro-ko`, `Dara-bana`) se descarta
+    siempre. Uno que sí lo es (`Karebe` persona / `karebe` cucharón) se
+    descarta **cuando va en mayúscula**, que es como se nombra a alguien, y
+    cuenta como palabra cuando va en minúscula, que es como se usa en el habla
+    corrida. Residuo declarado, y elegido a conciencia: una voz del canon que
+    abra frase —y por tanto vaya en mayúscula— no se cuenta. Se prefiere
+    perder ese uso a que un nombre infle el conteo, porque de `palabras_caquetias`
+    comen el contagio, la competencia de formas y el idiolecto: un nombre
+    contado como palabra se propagaría por la koiné como si fuera léxico.
+    """
+    nombres = _nombres_de_agentes()
+    if not nombres:
+        return tokens
+    chocan = _nombres_que_chocan_con_el_canon()
+    fuera: list = []
+    patron = r"[A-Za-zÁÉÍÓÚÑÜáéíóúñü]+(?:-[A-Za-zÁÉÍÓÚÑÜáéíóúñü]+)*"
+    for m in re.finditer(patron, texto):
+        tok = m.group().lower()
+        if tok not in nombres:
+            continue
+        if tok not in chocan:
+            fuera.append(tok)                     # no colisiona: siempre nombre
+            continue
+        if m.group()[0].isupper():
+            fuera.append(tok)                     # mayúscula: se está nombrando a alguien
+    if not fuera:
+        return tokens
+    quitar: dict = {}
+    for t in fuera:
+        quitar[t] = quitar.get(t, 0) + 1
+    salida = []
+    for t in tokens:
+        if quitar.get(t):
+            quitar[t] -= 1
+            continue
+        salida.append(t)
+    return salida
+
+
+# ── La esfera de contacto (decisión de Miguel, 2026-09-15) ──────────────
+# «El set de cinco es razonable. Yo creo que se debe medir aparte, ya que
+# sobre todo para esta área de influencia.»
+#
+# Las lenguas con contacto ATESTIGUADO con la polity costera: las Antillas
+# (préstamos léxicos documentados en Curazao, geografia_politica-001; Aruba a
+# 25 km, ecologia-021; cerámica dabajuroide hasta las islas, ecologia-013),
+# los caribes que llegan por mar (etnia-008), los del lago y los de la sierra.
+# Una voz de éstas en boca de un agente es un PRÉSTAMO —lo que hace una lengua
+# de encrucijada—, no una fuga: se mide aparte y no penaliza.
+#
+# NO entran wayunaiki, lokono ni achagua: las dos primeras son el andamio con
+# que se reconstruye el caquetío (D11) —verlas haría circular la medición— y
+# la tercera es de los Llanos, que es justo lo que la regla 4 prohíbe importar.
+ESFERA_DE_CONTACTO = frozenset({
+    "taíno", "kalinago", "paraujano", "caribe-continental", "jirajaroide-contacto",
+})
+
+
 def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
     """
     Calcula métricas lingüísticas de una respuesta de agente, midiendo
@@ -7797,6 +7907,18 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
     """
     limpio = _normalizar(texto)
     tokens = _tokenizar(limpio)
+    # Los nombres de los agentes no son vocabulario. Desde la campaña de
+    # antropónimos (2026-09-14) 49 de los 63 nombres de la era 2 son homógrafos
+    # de una clave del lexicón (Karebe / karebe «cucharón») y el tokenizador
+    # pone todo en minúsculas: nombrar a alguien contaba como usar la palabra.
+    # Se descartan los nombres del elenco activo y los de la era 1 (que los
+    # eventos todavía citan). Consecuencia declarada: «Biro-ko» ya no suma
+    # «biro» como uso, tampoco en la era 1.
+    # CORREGIDO 2026-09-16: el filtro trabajaba en minúsculas y se comía 52
+    # voces del canon homógrafas de un nombre (buko, hayo, mene, saruro,
+    # jachos, karebe…), las 52 visibles en el prompt de la era 2 — palabras
+    # que el motor enseñaba y no contaba. Ahora la mayúscula decide.
+    tokens = _filtrar_nombres(limpio, tokens)
     n_tok = len(tokens) or 1
 
     activos = set(lexico.palabras_activas())          # base + adoptados
@@ -7861,7 +7983,13 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
         if h in familias:
             familias[h] = "caquetío"
     caquetio_tokens = [t for t in usadas if familias[t] == "caquetío"]
-    otro_arahuaco_tokens = [t for t in usadas if familias[t] != "caquetío"]
+    ajenos = [t for t in usadas if familias[t] != "caquetío"]
+    # Decisión de Miguel 2026-09-15: las voces de la esfera de contacto se
+    # MIDEN APARTE y no penalizan. Una lengua de encrucijada toma prestado de
+    # sus vecinos; lo que sí es fuga es hablar la lengua con la que la estamos
+    # reconstruyendo (wayunaiki, lokono) o la de otra polity (achagua).
+    prestamo_tokens = [t for t in ajenos if familias[t] in ESFERA_DE_CONTACTO]
+    otro_arahuaco_tokens = [t for t in ajenos if familias[t] not in ESFERA_DE_CONTACTO]
 
     # ── Núcleo: densidad arahuaca total (0..1), vs. español ──
     densidad = (len(usadas) / n_tok) if usadas else 0.0
@@ -7891,6 +8019,8 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
     if caquetio_tokens: obs.append(f"caq[{len(set(caquetio_tokens))}]: {', '.join(sorted(set(caquetio_tokens))[:8])}")
     if otro_arahuaco_tokens:
         obs.append(f"⚠ otra-lengua-arahuaca×{len(otro_arahuaco_tokens)}: {', '.join(sorted(set(otro_arahuaco_tokens))[:5])}")
+    if prestamo_tokens:
+        obs.append(f"préstamo de esfera×{len(prestamo_tokens)}: {', '.join(sorted(set(prestamo_tokens))[:5])}")
     if aspectos: obs.append(f"aspecto: {', '.join(aspectos)}")
     if esp_func: obs.append(f"⚠ español funcional×{len(esp_func)}")
     if neos:     obs.append(f"+{len(neos)} neologismo(s)")
@@ -7914,6 +8044,11 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
         "pct_caquetio_especifico": round(pct_caquetio_especifico, 3),
         "otro_arahuaco": len(otro_arahuaco_tokens),
         "palabras_otro_arahuaco": list(dict.fromkeys(otro_arahuaco_tokens)),
+        # La esfera de contacto, medida aparte y sin penalizar (2026-09-15).
+        # Es el canal por el que se observa la difusión de un préstamo: si una
+        # voz de las islas pasa de un tier 1 a los demás, se ve aquí.
+        "prestamos_de_esfera": list(dict.fromkeys(prestamo_tokens)),
+        "n_prestamos_esfera": len(prestamo_tokens),
         "espanol_funcional": len(esp_func),
         "score": score,
         "observacion": " | ".join(obs),
@@ -8265,6 +8400,95 @@ def muestra_caquetio_dinamica(n_por_categoria: int = 18, contexto: str = "",
     )
 
 
+# ── Quién habla cada lengua de la esfera, dicho como lo diría la gente ──
+_QUIEN_HABLA = {
+    "taíno": "los de las islas grandes",
+    "kalinago": "los caribes que llegan por mar",
+    "paraujano": "los del lago, los de las casas sobre el agua",
+    "caribe-continental": "los vecinos de tierra firme",
+    "jirajaroide-contacto": "los de la sierra",
+}
+
+# Lo que viaja en un trueque son cosas, técnicas y nombres de cosas. No viaja
+# la gramática, ni los pronombres, ni las partes del cuerpo, ni los adjetivos:
+# eso se toma cuando una lengua sustituye a otra, no cuando dos comercian.
+# Fuera también los topónimos y etnónimos (`nirgua`, `ayaman`): son nombres
+# propios de la comparanda, no vocabulario prestable.
+_CAT_NO_PRESTABLE = {"gramatica", "pron", "part", "interr", "num", "numerales",
+                     "etnonimia", "cualidades", "cuerpo", "geografia",
+                     "parentesco", "acciones"}
+
+
+def prompt_voces_de_fuera(contexto: str = "", n: int = 3) -> str:
+    """Las voces de la esfera de contacto que un tier 1 conoce por su trato.
+
+    Decisión de Miguel (2026-09-15): «los de tier 1 no sólo conocían su
+    lenguaje sino el de su esfera de influencia». Sólo tier 1, sólo unas
+    pocas, y SIEMPRE marcadas como ajenas — el agente tiene que saber que no
+    es su lengua, o el préstamo deja de ser un préstamo. Ver ESFERA_DE_CONTACTO.
+    """
+    import random as _rnd
+    from curiana_database import normalize_source_language
+
+    # El lexicón desambigua los homógrafos con el nombre de la lengua pegado
+    # (`kati-kalinago`, `hamaka-kalinago`): esa etiqueta no es parte de la voz.
+    _SUFIJOS_DE_LENGUA = ("taíno", "kalinago", "paraujano", "caribe",
+                          "lokono", "wayunaiki", "jirajaroide")
+
+    def _glosa_util(forma: str, sig: str) -> str:
+        """El primer trozo de la glosa que NO repite la forma, o "".
+
+        13 de las 133 voces de la esfera se glosan a sí mismas («auyama:
+        auyama, calabaza»; «cobo: cobo, caracol marino») porque la voz entró al
+        castellano; dos no dicen nada más («casabe: casabe», «guayaba: guayaba
+        (Psidium guajava)»). Decirle al agente «casabe = casabe» no le enseña
+        nada, así que esas no entran.
+        """
+        for trozo in [t.strip() for t in sig.replace(";", ",").split(",") if t.strip()]:
+            visible = trozo.split(" (")[0].strip().strip(".")
+            if visible.lower() not in (forma.lower(), forma.lower().split("-")[0], ""):
+                return trozo
+        return ""
+
+    candidatas = []
+    for palabra, datos in VOCABULARIO_BASE.items():
+        fam = normalize_source_language(datos.get("fuente", ""))
+        if fam not in ESFERA_DE_CONTACTO:
+            continue
+        cat = datos.get("categoria") or datos.get("cat") or ""
+        if cat in _CAT_NO_PRESTABLE:
+            continue
+        sig = datos.get("sig") or datos.get("es") or ""
+        if not sig:
+            continue
+        ultimo = palabra.rsplit("-", 1)[-1] if "-" in palabra else ""
+        forma = palabra.rsplit("-", 1)[0] if ultimo in _SUFIJOS_DE_LENGUA else palabra
+        # Si al quitar la etiqueta la forma coincide con una voz caquetía
+        # (`hamaka`, `kanoa`, `casabe`), NO entra: enseñar como ajena una
+        # palabra que el agente ya tiene por propia es peor que no enseñar nada.
+        if forma != palabra and forma in VOCABULARIO_BASE:
+            continue
+        glosa = _glosa_util(forma, sig)
+        if not glosa:
+            continue
+        candidatas.append((palabra, forma, glosa, fam))
+    if not candidatas:
+        return ""
+
+    relevantes = categorias_relevantes(contexto) if contexto else set()
+    if relevantes:
+        pesadas = [c for c in candidatas
+                   if (VOCABULARIO_BASE[c[0]].get("categoria") or "") in relevantes]
+        candidatas = pesadas + candidatas if pesadas else candidatas
+
+    elegidas = _rnd.sample(candidatas, min(n, len(candidatas)))
+    partes = []
+    for _palabra, forma, glosa, fam in elegidas:
+        partes.append(f"{forma} = {glosa} ({_QUIEN_HABLA.get(fam, 'los de fuera')})")
+    return ("[Voces de fuera — no son tu lengua; las sabes por tu trato, y usarlas "
+            "te marca como quien va y viene]: " + "; ".join(partes))
+
+
 def vocabulario_para_agente(tier: int, lexico: "LexicoComunitario", contexto: str = "",
                             pesos: "Optional[dict]" = None,
                             capas: "Optional[frozenset]" = None) -> str:
@@ -8283,29 +8507,32 @@ def vocabulario_para_agente(tier: int, lexico: "LexicoComunitario", contexto: st
 
     if tier == 1:
         base = prompt_reglas_completo()
-    elif tier == 2:
-        base = prompt_reglas_breve()
     else:
-        base = (
-            "[Lengua nativa — caquetío]: "
-            "Usa -ka (hecho), -ni (haciendo), -da (haré). "
-            "ta-(mi) wa-(nuestro). "
-            "Verbo: wana(ver) suna(dormir) masa(comer) naa(ir). "
-            "Conector: ka(y) mara(pero) kashi(ahora). "
-            "[nueva-palabra: raíz+sufijo = sig]"
-        )
+        # Tier 2 y tier 3. El tier 3 veía una línea con 4 verbos y 3 conectores
+        # y ninguna muestra (medido el 2026-09-14: 221 caracteres): con eso no
+        # podía hablar. Desde la era 2 («que todos los agentes hablen») ve las
+        # reglas breves y una muestra chica; sigue sabiendo menos que un adulto.
+        base = prompt_reglas_breve()
 
     partes = [base]
-    if tier <= 2:
-        # Presupuesto por tier = el que la era 1 mandaba de hecho (50 y 42
-        # voces, medido en la auditoría 2026-09-14), para que arreglar el
-        # reparto no alargue el prompt: su longitud predice el score.
-        muestra = muestra_caquetio_dinamica(
-            n_por_categoria=20 if tier == 1 else 12, contexto=contexto,
-            pesos=pesos, capas=capas, n_total=50 if tier == 1 else 42,
-        )
-        if muestra:
-            partes.append(muestra)
+    # Presupuesto por tier = el que la era 1 mandaba de hecho a los tier 1 y 2
+    # (50 y 42 voces, medido en la auditoría 2026-09-14), para que arreglar el
+    # reparto no alargue el prompt: su longitud predice el score. El tier 3
+    # recibe 20.
+    n_total = {1: 50, 2: 42}.get(tier, 20)
+    muestra = muestra_caquetio_dinamica(
+        n_por_categoria=20 if tier == 1 else 12, contexto=contexto,
+        pesos=pesos, capas=capas, n_total=n_total,
+    )
+    if muestra:
+        partes.append(muestra)
+    # Sólo el tier 1: es quien navega, comercia y recibe al forastero
+    # (Dara-ko el navegante, Kadushi el de la rama insular, Biro-ko el de la
+    # sal). Decisión de Miguel 2026-09-15.
+    if tier == 1:
+        fuera = prompt_voces_de_fuera(contexto)
+        if fuera:
+            partes.append(fuera)
     if lexico_activo:
         partes.append(lexico_activo)
     if pendientes and tier <= 2:
