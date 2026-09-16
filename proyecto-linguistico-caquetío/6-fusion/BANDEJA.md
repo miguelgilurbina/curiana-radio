@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-16**.
 
-**2578 ítems propuestos** en 63 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
+**2606 ítems propuestos** en 64 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -26,6 +26,7 @@ editar_a_mano: no
 | `auditoria_a2_perea.yaml` | ? | 18 |  |
 | `bachaco_y_gu_es_w.yaml` | alvarado-1921 | 0 |  |
 | `barrido_toponimos_web_2026-09-10.yaml` | ? | 9 |  |
+| `barrido_web_cerro_laguna_2026-09-16.yaml` | barrido web (varias) — Capubana y laguna de Guaranao | 28 |  |
 | `barrido_web_medina_2026-09-09.yaml` | ? | 13 |  |
 | `capubana_agua_y_microclima.yaml` | ? | 10 |  |
 | `castellanos_1589_toponimos.yaml` | castellanos-elegias | 0 |  |
