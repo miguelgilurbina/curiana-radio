@@ -13,10 +13,13 @@ editar_a_mano: no
 > python curiana_sim/generar_cronica.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-11**. **115 cambios** en main, del 2025-11-30 al 2026-09-11.
+<!--GENERADO--> Generado el **2026-09-16**. **118 cambios** en main, del 2025-11-30 al 2026-09-16.
 
-## 2026-09 — 5 cambio(s)
+## 2026-09 — 8 cambio(s)
 
+- **2026-09-16** `806e234` Merge pull request #130 from miguelgilurbina/feat/era2-elenco
+- **2026-09-14** `add5566` Merge pull request #128 from miguelgilurbina/feat/era2-arranque
+- **2026-09-13** `2ef4199` Merge pull request #125 from miguelgilurbina/feat/perea-fase1-d11-y-flecos
 - **2026-09-11** `498a64c` Merge pull request #118 from miguelgilurbina/feat/dictado-medina-colina-y-toponimos
 - **2026-09-03** `e21e86f` Merge pull request #117 from miguelgilurbina/feat/marca-e-intro
 - **2026-09-01** `25fa6a9` docs(tablero): D15 cerrada en el tablero (#90) - 8 decisiones abiertas de 13
