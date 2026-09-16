@@ -26,6 +26,17 @@ Lo que hace evento_para_elenco():
   6. si aún queda un nombre de la era 1 en `descripcion` o `nombre`, None:
      mejor un evento menos que un nombre de otra era en boca del Director.
 
+El catálogo no era la única puerta. El texto LIBRE que se le pasa al Director
+—lo que él mismo dejó anotado al cerrar el día anterior (`notas_orquestador`),
+los cierres del día y la línea de estado— venía sin traducir: en el día 3 (run
+0193873d, con los eventos ya traducidos) el Director escribió «Los Caquetíos y
+Guaycarí se juntan…» porque su propia nota del día 2 decía «los Guaycarí culpan
+el calor, los Caquetíos el rezo faltante». Para eso está texto_para_elenco():
+mismas reescrituras y mismo alias que el catálogo, y las FRASES que aún llevan
+un nombre sin traducción o un marco que la era 2 no tiene se caen —frase a
+frase, no el texto entero, que una reflexión son seis oraciones y no un evento
+de dos—. decir_para_el_mundo() es la puerta que usa el Director.
+
 Decisiones declaradas (2026-09-16):
   - llegada_nabaraka CAE: el evento es el foráneo (jirajara, fuera de escena).
   - trueque_visitantes_plaza SE QUEDA sin el marco étnico: el intercambio es
@@ -79,6 +90,24 @@ REESCRITURAS_ERA2 = {
     # watapana_parte_islas — sólo el nombre del evento lo nombra
     "Watapana parte a las islas": "Una expedición parte a las islas",
 }
+
+# Los marcos de la era 1 que no valen en texto libre: los etnónimos de los
+# pueblos que la era 2 no tiene en la orilla y el nombre del mundo de la era 1
+# usado como lugar. El CARIBE no está en la lista a propósito: llega por mar y
+# no reside (etnia-008), y sus eventos se quedan (decisión 2026-09-16). Los
+# guaycaríes, jirajaras y gayones son los foráneos que la era 2 dejó fuera
+# (decisión 2026-09-14) y en Paraguaná no hay dos pueblos en la misma orilla.
+MARCOS_FUERA_ERA2 = (
+    re.compile(r"[Gg]uaycar[íi](?:es)?\b"),
+    re.compile(r"[Jj]irajaras?\b"),
+    re.compile(r"[Gg]ay(?:ón|ones)\b"),
+    re.compile(r"\bCuriana\b"),
+)
+
+# Fin de frase y fin de línea: el texto libre se filtra frase a frase dentro de
+# cada línea, para no romper un bloque con estructura (la línea de estado) ni
+# tirar seis oraciones por una.
+_FIN_DE_FRASE = re.compile(r"(?<=[.!?…])\s+")
 
 
 # ── Nombres en texto ───────────────────────────────────────────────────
@@ -163,6 +192,61 @@ def catalogo_para_elenco(elenco: str, alias: dict, foraneos,
     return _adaptar(EVENTOS_COTIDIANOS), _adaptar(EVENTOS_ESTACIONALES)
 
 
+# ── El texto libre para el elenco ──────────────────────────────────────
+
+def residuos_de_la_era_1(texto: str, viejos: Iterable[str]) -> list[str]:
+    """Lo que la era 2 no tiene y quedó en `texto`: nombres de la era 1 sin
+    traducción (`viejos`) y marcos étnicos o de lugar de la Curiana."""
+    t = texto or ""
+    return (nombres_de_la_era_1(t, viejos)
+            + [m.group(0) for p in MARCOS_FUERA_ERA2 for m in p.finditer(t)])
+
+
+def texto_para_elenco(texto: str, alias: dict, viejos: Iterable[str]) -> str:
+    """Texto libre (las notas del Director, un cierre, la línea de estado)
+    dicho para el elenco de la era 2.
+
+    Reescribe las frases de REESCRITURAS_ERA2, traduce los nombres por `alias`
+    y quita, frase a frase y línea a línea, las que aún llevan un nombre sin
+    traducción o un marco que la era 2 no tiene. Devuelve "" si no sobrevive
+    nada: el Director prefiere no leer a leer de otro mundo."""
+    t = texto or ""
+    for viejo, nuevo in REESCRITURAS_ERA2.items():
+        t = t.replace(viejo, nuevo)
+    t = sustituir_nombres(t, alias)
+    viejos = set(viejos)
+    lineas = []
+    for linea in t.split("\n"):
+        vivas = [f for f in _FIN_DE_FRASE.split(linea)
+                 if f.strip() and not residuos_de_la_era_1(f, viejos)]
+        if vivas:
+            lineas.append(" ".join(f.strip() for f in vivas))
+    return "\n".join(lineas).strip()
+
+
+@lru_cache(maxsize=None)
+def _alias_y_viejos(elenco: str) -> tuple:
+    """(alias, nombres de la era 1 que la era 2 no puede decir) para `elenco`.
+    Los «viejos» son los que cambiaron de nombre más los que se quedaron fuera
+    (foráneos incluidos: un nombre fuera del elenco no tiene alias)."""
+    alias = alias_del_elenco(elenco)
+    if not alias:
+        return {}, frozenset()
+    era1 = set(elenco_era1())
+    viejos = {k for k, v in alias.items() if k != v} | (era1 - set(alias))
+    return alias, frozenset(viejos)
+
+
+def decir_para_el_mundo(texto: str, mundo: Optional[str]) -> str:
+    """La puerta del Director: el texto libre que se le pasa, dicho para el
+    mundo del estado. CURIANA devuelve el texto tal cual —la era 1 no cambia
+    ni un byte—; PARAGUANÁ pasa por texto_para_elenco()."""
+    if (mundo or "").upper() != "PARAGUANÁ":
+        return texto or ""
+    alias, viejos = _alias_y_viejos("era2")
+    return texto_para_elenco(texto, alias, viejos)
+
+
 # ── Lo que el elenco activo aporta ─────────────────────────────────────
 
 def alias_del_elenco(elenco: str) -> dict:
@@ -233,3 +317,17 @@ if __name__ == "__main__":
             print(f"  ✓ {e['id']:32} {a['agentes_involucrados']}")
         else:
             print(f"  ✗ {e['id']:32} cae: {EVENTOS_SOLO_CON_FORANEOS.get(e['id'], 'nombre sin traducción')}")
+
+    print("\nEl texto libre del Director, dicho para la era 2:")
+    muestra = (
+        "El alisio no aflojó y los peces tampoco vinieron. Lo que cambió fue el miedo, "
+        "y eso dividió las explicaciones: los Guaycarí culpan el calor, los Caquetíos "
+        "el rezo faltante. La palabra que prendió fue tüshi-juri, viento frío del este. "
+        "Biro-ko subió la sal al cerro antes de que cayera la noche."
+    )
+    for etiqueta, mundo in (("CURIANA", "CURIANA"), ("PARAGUANÁ", "PARAGUANÁ")):
+        salida = decir_para_el_mundo(muestra, mundo)
+        print(f"  [{etiqueta}] {len(salida)} caracteres de {len(muestra)}")
+        print(f"      {salida}")
+    _, viejos = _alias_y_viejos("era2")
+    print(f"  residuos que detecta en el original: {residuos_de_la_era_1(muestra, viejos)}")

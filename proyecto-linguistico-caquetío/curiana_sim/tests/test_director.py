@@ -8,6 +8,22 @@
     el Director inventó «la sombra del ceibo»).
   - reflexion_del_dia(): una llamada por día con --reflexion, con cliente mock.
 
+Y lo que el cierre del día 3 (run 0193873d) dejó abierto:
+
+  - la cabecera: la reflexión del día 3 se tituló «Cierre Día 4, Turno 1»
+    porque el prompt le pasaba state.to_context_string(), que al cerrar ya
+    apunta al amanecer siguiente. Ahora la línea de estado es la del día
+    cerrado (estado_del_dia_cerrado) y el encargo fija el día.
+  - el residuo: con los eventos ya traducidos (#138), el Director escribió
+    «Los Caquetíos y Guaycarí se juntan…». Venía de su propia nota del día 2
+    (state.notas_orquestador), que nadie filtraba. Ahora el estado, los
+    cierres, las intervenciones y las notas pasan por
+    curiana_eventos.decir_para_el_mundo(), el sistema de Paraguaná dice qué
+    pueblos NO hay y el Director recibe el elenco en escena.
+
+La era 1 no cambia ni un byte: decir_para_el_mundo("CURIANA") es la identidad,
+y hay un test que lo comprueba con un texto lleno de nombres viejos.
+
 Sin LLM ni Supabase: el cliente es un mock que graba lo que se le pide.
 """
 import json
@@ -17,6 +33,7 @@ import curiana_orchestrator_v2 as orch
 from curiana_director import (
     cargar_reflexiones,
     director_system,
+    estado_del_dia_cerrado,
     guardar_reflexion,
     reflexion_del_dia,
 )
@@ -66,6 +83,18 @@ def test_el_director_de_paraguana_se_llama_asi_y_se_ata_al_mundo():
     s = director_system("PARAGUANÁ")
     assert s.startswith("Eres el Director de la simulación comunitaria de Paraguaná.")
     assert "Curiana" not in s and "[El mundo]" in s
+
+
+def test_el_sistema_de_paraguana_dice_que_pueblos_no_hay_y_de_donde_sale_la_gente():
+    """La regla explícita: la era 2 dejó fuera a los foráneos (2026-09-14) y el
+    Director del día 3 seguía juntando «Caquetíos y Guaycarí» en la orilla."""
+    s = director_system("PARAGUANÁ")
+    assert "[La gente que hay hoy]" in s
+    for pueblo in ("guaycaríes", "jirajaras", "gayones"):
+        assert pueblo in s, pueblo
+    assert "una sola gente" in s
+    # el caribe NO se niega: llega por mar y no reside (etnia-008)
+    assert "caribe" not in s.lower()
 
 
 # ── las restricciones salen del corpus, por id ────────────────────────
@@ -121,6 +150,39 @@ def test_director_narrate_en_la_era_1_no_lleva_mundo():
     assert kw["system"] == orch.DIRECTOR_SYSTEM
 
 
+RESIDUO = ("Los Caquetíos y Guaycarí se juntan en la orilla. "
+           "Biro-ko subió la sal al cerro. Nadie durmió bien.")
+
+
+def test_director_narrate_filtra_el_residuo_y_pasa_la_gente_en_escena():
+    """Lo que el día 3 delató: la nota del día anterior traía «los Guaycarí» y
+    el Director la copió. Ahora la frase con el marco se cae, el nombre viejo
+    se traduce y el Director sabe a quién puede nombrar."""
+    cliente = _ClienteMock()
+    s = _paraguana(dia=3, estacion="viento", momento="tarde", turnos_por_dia=6)
+    s.notas_orquestador = RESIDUO
+    orch.director_narrate(cliente, s, [{"agent": "Kasebo", "response": "Taya wana-ka."},
+                                       {"agent": "Birokoa", "response": RESIDUO}])
+    prompt = cliente.llamadas[0]["messages"][0]["content"]
+    assert "Guaycarí" not in prompt and "Caquetíos" not in prompt and "Biro-ko" not in prompt
+    assert "Birokoa subió la sal al cerro." in prompt      # traducido, no perdido
+    assert "Nadie durmió bien." in prompt                  # la frase limpia se queda
+    assert "[La gente que hay hoy]: Kasebo, Birokoa." in prompt
+
+
+def test_director_narrate_en_la_era_1_deja_el_texto_byte_a_byte():
+    """La era 1 no pasa por el traductor: su Director sí vive con guaycaríes."""
+    cliente = _ClienteMock()
+    s = estado_inicial_test()
+    s.notas_orquestador = RESIDUO
+    orch.director_narrate(cliente, s, [{"agent": "Biro-ko", "response": RESIDUO}])
+    prompt = cliente.llamadas[0]["messages"][0]["content"]
+    assert RESIDUO in prompt and "- Biro-ko: " + RESIDUO[:100] in prompt
+    assert "[La gente que hay hoy]" not in prompt
+    # y el estado semilla conserva sus nombres
+    assert "Shaboro salió de su choza" in prompt
+
+
 def test_los_cierres_del_dia_no_pasan_de_un_dia():
     cliente = _ClienteMock()
     s = _paraguana(dia=1, turnos_por_dia=2)
@@ -156,6 +218,45 @@ def test_reflexion_del_dia_es_una_llamada_con_cierres_reporte_y_mundo():
     reflexion_del_dia(cliente2, s, "", [], dia=7)
     p2 = cliente2.llamadas[0]["messages"][0]["content"]
     assert "Se cierra el día 7." in p2 and "(hoy no hubo cierres narrativos)" in p2
+
+
+def test_la_reflexion_fija_el_dia_cerrado_y_no_nombra_el_amanecer_siguiente():
+    """La deuda del día 3: «# REFLEXIÓN DEL DIRECTOR — Cierre Día 4, Turno 1»
+    sobre el día 3, porque el estado al cerrar ya apunta al día siguiente."""
+    s = _paraguana(dia=4, turno=1, estacion="viento", momento="amanecer", turnos_por_dia=6)
+    linea = estado_del_dia_cerrado(s, 3)
+    assert "Día 3, Turno 6 (noche)" in linea and "Día 4" not in linea
+    assert s.dia == 4 and s.turno == 1 and s.momento == "amanecer"   # no muta el estado
+
+    cliente = _ClienteMock()
+    reflexion_del_dia(cliente, s, "  REPORTE LINGÜÍSTICO — DÍA 3", ["cierre del turno 6"])
+    prompt = cliente.llamadas[0]["messages"][0]["content"]
+    assert "Se cierra el día 3." in prompt and "Día 3, Turno 6 (noche)" in prompt
+    assert "Día 4" not in prompt and "Turno 1" not in prompt
+    assert "sobre el día 3 y sólo sobre él" in prompt and "«Día 3»" in prompt
+
+
+def test_la_reflexion_no_le_pasa_al_director_marcos_ni_nombres_de_la_era_1():
+    cliente = _ClienteMock()
+    s = _paraguana(dia=4, turno=1, estacion="viento", momento="amanecer", turnos_por_dia=6)
+    s.notas_orquestador = RESIDUO
+    reflexion_del_dia(cliente, s, "", [RESIDUO, "El viento no aflojó."],
+                      dia=3, gente_en_escena=["Kasebo", "Birokoa", "Kasebo"])
+    prompt = cliente.llamadas[0]["messages"][0]["content"]
+    assert "Guaycarí" not in prompt and "Caquetíos" not in prompt and "Biro-ko" not in prompt
+    assert "Birokoa subió la sal al cerro." in prompt and "El viento no aflojó." in prompt
+    assert "[La gente que hay hoy]: Kasebo, Birokoa." in prompt       # sin repetidos
+    assert "No nombres a nadie que no esté en esta lista." in prompt
+
+
+def test_la_reflexion_de_la_era_1_conserva_su_texto():
+    cliente = _ClienteMock()
+    s = ComunidadState(dia=3, turno=1, turnos_por_dia=2)
+    s.notas_orquestador = RESIDUO
+    reflexion_del_dia(cliente, s, "", [RESIDUO], dia=2)
+    prompt = cliente.llamadas[0]["messages"][0]["content"]
+    assert prompt.count(RESIDUO) == 2 and "[El mundo]" not in prompt
+    assert "Día 2, Turno 2 (noche)" in prompt
 
 
 def test_las_reflexiones_se_guardan_en_curiana_director_json(tmp_path):

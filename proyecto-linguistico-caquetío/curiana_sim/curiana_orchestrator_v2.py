@@ -90,7 +90,12 @@ from curiana_cadena import (
     serie_koine_de_cadena,
     texto_veredicto,
 )
-from curiana_eventos import alias_del_elenco, catalogo_para_elenco, elenco_era1
+from curiana_eventos import (
+    alias_del_elenco,
+    catalogo_para_elenco,
+    decir_para_el_mundo,
+    elenco_era1,
+)
 from curiana_director import director_system, guardar_reflexion, reflexion_del_dia
 from curiana_mundo import resumen_del_mundo
 from functools import lru_cache
@@ -322,8 +327,13 @@ def call_agent(
     # El estímulo del turno nombra el sitio del agente (era 2) o la Curiana.
     user_message = user_message.replace("{lugar}", agent.get("sitio") or "la Curiana")
 
-    # Contexto dinámico del mundo
-    world_context = state.to_context_string()
+    # Contexto dinámico del mundo, dicho para el elenco activo. En la era 1 es
+    # el mismo string; en la era 2 pasa por curiana_eventos.decir_para_el_mundo()
+    # porque el estado semilla (estado_inicial_test) trae «Shaboro salió de su
+    # choza… Buio-sha lo vio desde lejos» en evento_del_turno, y esos dos
+    # nombres de la era 1 llegaban a los 63 agentes el día 1 de todo run que no
+    # continúa a otro (medido 2026-09-16).
+    world_context = decir_para_el_mundo(state.to_context_string(), state.mundo)
 
     # Ubicación actual
     ubicacion = state.ubicaciones_override.get(
@@ -453,21 +463,32 @@ def director_narrate(
 ) -> str:
     """El cierre narrativo del turno. En la era 2 lleva el mundo —la frase
     del período, la del momento y las restricciones del corpus, ≤ 400
-    caracteres (curiana_mundo.resumen_del_mundo)— y, si hay, lo que el
-    Director dejó anotado al cerrar el día anterior. El cierre queda en
-    state.cierres_del_dia para la reflexión del día (--reflexion)."""
+    caracteres (curiana_mundo.resumen_del_mundo)—, el elenco en escena y, si
+    hay, lo que el Director dejó anotado al cerrar el día anterior. El cierre
+    queda en state.cierres_del_dia para la reflexión del día (--reflexion).
+
+    Todo el texto libre que entra —el estado, las intervenciones y las notas—
+    pasa por decir_para_el_mundo(): en la era 1 es el mismo string byte a byte;
+    en la era 2 se traducen los nombres y se caen las frases con marcos que
+    Paraguaná no tiene. Sin eso, el Director del día 3 (run 0193873d) escribió
+    «Los Caquetíos y Guaycarí se juntan…» copiando su propia nota del día 2."""
+    decir = lambda t: decir_para_el_mundo(t, state.mundo)                 # noqa: E731
     resumen = "\n".join(
-        f"- {i['agent']}: {i['response'][:100]}..."
+        f"- {i['agent']}: {decir(i['response'])[:100]}..."
         for i in interactions
     )
-    partes = [f"Estado: {state.to_context_string()}"]
+    partes = [f"Estado: {decir(state.to_context_string())}"]
     if state.mundo == "PARAGUANÁ":
         mundo = resumen_del_mundo(state)
         if mundo:
             partes.append(mundo)
-    if state.notas_orquestador:
-        partes.append("[Lo que el Director dejó anotado al cerrar el día anterior]: "
-                      + state.notas_orquestador.strip()[:400])
+        gente = list(dict.fromkeys(i["agent"] for i in interactions if i.get("agent")))
+        if gente:
+            partes.append("[La gente que hay hoy]: " + ", ".join(gente)
+                          + ". No nombres a nadie que no esté en esta lista.")
+    notas = decir(state.notas_orquestador or "").strip()[:400]
+    if notas:
+        partes.append("[Lo que el Director dejó anotado al cerrar el día anterior]: " + notas)
     partes.append(f"Interacciones: {resumen}")
     partes.append("Escribe el cierre narrativo del turno (2-3 oraciones).")
     prompt = "\n".join(partes)
@@ -1228,6 +1249,11 @@ def auto_mode(
                     if h["neos"]:
                         nota += f"; acuñé {', '.join(dict.fromkeys(h['neos']))}"
                     memory.add(nm, nota)
+                # Quiénes hablaron hoy: es el elenco que la reflexión le pasa
+                # al Director («la gente que hay hoy es: …»). state.agentes_en_escena
+                # NO sirve: sigue trayendo los nombres de la era 1 del estado
+                # semilla y nadie lo actualiza.
+                gente_de_hoy = sorted(hizo_hoy)
                 hizo_hoy = {}
                 # Distancia medida SOLO sobre quienes hablaron (población real).
                 # Tres lecturas: acumulada (histórica, sesgada a converger por
@@ -1269,6 +1295,7 @@ def auto_mode(
                 if reflexion:
                     texto = reflexion_del_dia(client, state, reporte_del_dia,
                                               state.cierres_del_dia, dia=dia_terminado,
+                                              gente_en_escena=gente_de_hoy,
                                               model=MODEL)
                     state.notas_orquestador = texto
                     guardar_reflexion(dia_terminado, texto, run_id,
