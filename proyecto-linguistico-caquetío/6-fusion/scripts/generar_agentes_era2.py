@@ -62,12 +62,18 @@ def _sitios(elenco: dict) -> dict:
             "zona_de_pesca": (zona.split(" ")[0] if isinstance(zona, str) else None),
         }
     # Sitios que no son casa (el Capubana, donde duerme el boratio mayor):
-    # entran con el nodo del agente y sin coordenadas, que aquí no se inventan.
+    # con coordenadas sólo si el YAML las declara con fuente (`sitios_sin_casa`,
+    # decisión 2026-09-16); si no, entran con el nodo del agente y sin punto,
+    # que aquí no se inventan.
+    declarados = {s.get("nombre"): s for s in (elenco.get("sitios_sin_casa") or [])}
     for a in elenco.get("agentes") or []:
         s = a.get("ubicacion_default")
         if s and s not in sitios:
-            sitios[s] = {"nodo": a.get("nodo"), "casa": None, "lat": None, "lon": None,
-                         "zona_de_pesca": None, "nota": "sitio fuera de las casas"}
+            d = declarados.get(s) or {}
+            sitios[s] = {"nodo": d.get("nodo") or a.get("nodo"), "casa": None,
+                         "lat": d.get("lat"), "lon": d.get("lon"),
+                         "zona_de_pesca": None,
+                         "nota": d.get("nota") or "sitio fuera de las casas"}
     return sitios
 
 

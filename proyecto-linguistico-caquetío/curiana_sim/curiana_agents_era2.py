@@ -117,10 +117,10 @@ SITIOS = {
     'Capubana': {
         'nodo': 'GUARANAO',
         'casa': None,
-        'lat': None,
-        'lon': None,
+        'lat': 11.8183,
+        'lon': -69.9524,
         'zona_de_pesca': None,
-        'nota': 'sitio fuera de las casas',
+        'nota': 'el pico del Cerro Santa Ana en fuentes_caquetios/osm_kaketiana/paraguana-1.json («Cerro Santa Ana», natural=peak, ele 830); verificado el 2026-09-16',
     },
 }
 

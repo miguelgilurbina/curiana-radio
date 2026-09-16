@@ -45,6 +45,8 @@ from huella_de_base import huella as huella_de_base, resumen as resumen_huella
 from curiana_state import (
     ComunidadState,
     DIAS_POR_ESTACION,
+    DIAS_POR_ANIO,
+    estacion_equivalente,
     estado_inicial_test,
     momento_de_turno,
     EVENTOS_COTIDIANOS,
@@ -199,7 +201,11 @@ def prompt_gente(agent: dict) -> str:
     if linaje:
         partes.append(f"tu linaje, {linaje}")
     zona = ZONAS_DE_PESCA.get(agent.get("zona_de_pesca") or "")
-    if zona:
+    if zona and agent.get("sitio") == "Caseto":
+        # Decisión de Miguel 2026-09-16 (tanda del 15, p5): Caseto está a ~22 km
+        # de su playa. Conuco principal, pesca de visita: de sus 12, 2 son de mar.
+        partes.append(f"tu gente siembra en Caseto; los que pescan bajan a {zona}, a un día de ida")
+    elif zona:
         partes.append(f"tu gente pesca en {zona}")
     return ("[Tu gente]: " + "; ".join(partes) + ". Hay otro nodo al otro lado del "
             "cerro, que habla a su manera; sólo os juntáis en el Capubana y por los "
@@ -358,6 +364,15 @@ def call_agent(
     gente = prompt_gente(agent)
     if gente:
         system_parts.append(gente)
+        # [Tu tierra] (2026-09-16): el mundo por sitio, período y momento, en
+        # ≤ 320 caracteres (decisiones p1-p8 de la tanda del 15). Sólo la era 2:
+        # la Curiana de la era 1 no tiene canon de sitios.
+        if agent.get("sitio") and state.mundo == "PARAGUANÁ":
+            from curiana_mundo import bloque_tu_tierra
+            tierra = bloque_tu_tierra(agent.get("sitio"), state.estacion, state.momento,
+                                      agente=agent_name, dia=state.dia, capas=capas)
+            if tierra:
+                system_parts.append(tierra)
     if bloque_lexico:
         system_parts.append(bloque_lexico)
     if sugerencia_contagio:
@@ -455,10 +470,17 @@ def director_select_event(state: ComunidadState) -> Optional[dict]:
     # los tres eventos etiquetados `seca` dentro del pool de lluvias y hacía
     # inalcanzables otros tres genéricos. Un evento sin clave `estacion` vale
     # para todo el año.
-    pool = EVENTOS_COTIDIANOS + [
-        e for e in EVENTOS_ESTACIONALES
-        if e.get("estacion") in (None, state.estacion)
-    ]
+    # Era 2 (2026-09-16): el estado trae un período (viento/seca_larga/siembra)
+    # y los eventos están escritos en estaciones de la era 1; se comparan por
+    # equivalencia (viento → seca). Un evento con `periodo` es más fino y sólo
+    # cae en ese período: la gran cosecha de sal y las perlas en el viento, la
+    # fiesta de fin de seca en la seca larga (clima_era2.yaml).
+    equiv = estacion_equivalente(state.estacion)
+    def _cae(e: dict) -> bool:
+        if e.get("periodo") and equiv != state.estacion:      # el mundo tiene períodos
+            return e["periodo"] == state.estacion
+        return e.get("estacion") in (None, state.estacion, equiv)
+    pool = EVENTOS_COTIDIANOS + [e for e in EVENTOS_ESTACIONALES if _cae(e)]
     return random.choice(pool)
 
 
@@ -991,7 +1013,9 @@ def auto_mode(
         state.turnos_por_dia = int(turnos_por_dia)
         if not continuar:
             state.momento = momento_de_turno(state.turno, state.turnos_por_dia)
-    state.mundo = MUNDO   # el elenco decide el mundo que encabeza el contexto
+    # El elenco decide el mundo que encabeza el contexto y su calendario: la
+    # era 2 arranca en el Tiempo de Viento, no en la «seca» de la era 1.
+    state.fijar_mundo(MUNDO)
     roster = roster_de_habla(roster_nombre)
     difusion = DifusionLexica()
     # (dia, acumulada, ventana, emergente) — la acumulada se conserva por
@@ -1043,7 +1067,7 @@ def auto_mode(
     client = get_client(run_id)
 
     estacion_anterior = state.estacion
-    anio_simulado = (state.dia - 1) // (2 * DIAS_POR_ESTACION) + 1
+    anio_simulado = (state.dia - 1) // DIAS_POR_ANIO + 1
     dia_inicio_estacion = state.dia
     tpd = state.turnos_por_dia
     # Lo que cada agente hizo hoy: al cerrar el día pasa a su memoria.
@@ -1052,7 +1076,7 @@ def auto_mode(
     print(f"\n{'='*60}")
     print(f"  CURIANA — Modo Automático: {turnos} turnos")
     print(f"  ({turnos // tpd} días simulados de {tpd} turnos · "
-          f"{turnos // (tpd * 2 * DIAS_POR_ESTACION)} año(s) aprox.)")
+          f"{turnos // (tpd * DIAS_POR_ANIO)} año(s) aprox.)")
     print(f"  elenco: {ELENCO} ({len(ALL_AGENTS)} agentes) · mundo {MUNDO}")
     print(f"  habla: {agentes_por_turno} por turno sobre el roster `{roster_nombre}` ({len(roster)})")
     if continuar:
@@ -1144,7 +1168,7 @@ def auto_mode(
                 # con `dia % 120 == 0`: el cambio de estación nunca cae en un
                 # múltiplo exacto de 120, así que esa condición no se cumplía jamás
                 # y --reporte no producía nada.
-                anio_en_curso = (state.dia - 1) // (2 * DIAS_POR_ESTACION) + 1
+                anio_en_curso = (state.dia - 1) // DIAS_POR_ANIO + 1
                 if reporte_anual and anio_en_curso > anio_simulado:
                     print(observer.reporte_anual_llm(anio_simulado))
                     anio_simulado = anio_en_curso

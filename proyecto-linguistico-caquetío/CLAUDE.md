@@ -130,7 +130,11 @@ python curiana_orchestrator_v2.py --auto 30 --perfil base --perfiles --reporte
 #   --perfil era2           base sin la capa hipotética y CON la retroabstraída (voces vivas:
 #                           matakán y las de Medina; decisiones 2026-09-14); un run = un día
 #   --elenco era2           el elenco de Paraguaná (63, generado desde 6-fusion/elenco_era2.yaml);
-#                           el prompt nombra nodo, casa y sitio; el mundo pasa a PARAGUANÁ
+#                           el prompt nombra nodo, casa y sitio; el mundo pasa a PARAGUANÁ, y con él
+#                           el calendario (viento 50 / seca larga 40 / siembra 30, decisión 2026-09-15)
+#                           y el bloque [Tu tierra] (curiana_mundo.py: el canon de sitios y clima de
+#                           6-fusion/, ≤ 320 caracteres, rotando por agente y día; test de las 126)
+python curiana_mundo.py                                   # las 126 combinaciones de [Tu tierra], con su largo
 python curiana_orchestrator_v2.py --elenco era2 --auto 6 --turnos-por-dia 6 --agentes-por-turno 12 --roster todos --perfil era2 --semilla 1
 python curiana_orchestrator_v2.py --elenco era2 --auto 6 --agentes-por-turno 12 --roster todos --perfil era2 --semilla 2 --continuar
 python 6-fusion/scripts/generar_agentes_era2.py --check   # ¿el módulo generado está al día?

@@ -298,6 +298,18 @@ casas:
     aporte_al_cerro: 'las ancianas de los huesos, la boratia de pueblo, el pescado y la concha de la costa abierta'
     apopo: Kiwakoa
 
+# Los sitios que no son casa pero sí lugar: el generador los tomaba de la
+# ubicacion_default de los agentes «sin coordenadas, que aquí no se inventan».
+# Aquí no se inventan: se citan. Decisión de Miguel del 2026-09-16 (tanda del
+# 15, p6): el Capubana es un punto, el pico del mapa vivo.
+sitios_sin_casa:
+  - nombre: Capubana
+    nodo: GUARANAO
+    lat: 11.8183
+    lon: -69.9524
+    fuente_coord: osm-kaketiana
+    nota: 'el pico del Cerro Santa Ana en fuentes_caquetios/osm_kaketiana/paraguana-1.json («Cerro Santa Ana», natural=peak, ele 830); verificado el 2026-09-16'
+
 linaje_de_reserva:
   linaje: Chiriware
   totem: chiriguare (gavilán)

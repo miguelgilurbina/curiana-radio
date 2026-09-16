@@ -341,6 +341,101 @@ def test_el_venado_entra_retroabstraido_y_la_era_2_lo_ve():
     assert not (pool & hip)
 
 
+# ── el mundo de la era 2: calendario, sitios y [Tu tierra] (2026-09-16) ──
+
+def test_el_calendario_de_paraguana_tiene_tres_periodos_y_el_de_curiana_dos():
+    """Decisión p1 (2026-09-15, «A. Definitivamente»): viento 50 / seca larga 40 /
+    siembra 30. La era 1 no se toca."""
+    from curiana_state import (ESTACION_DE_DIA, DIAS_POR_ANIO, ComunidadState,
+                               estacion_equivalente)
+    assert [ESTACION_DE_DIA(d, "PARAGUANÁ") for d in (1, 50, 51, 90, 91, 120, 121)] == \
+        ["viento", "viento", "seca_larga", "seca_larga", "siembra", "siembra", "viento"]
+    assert ESTACION_DE_DIA(1) == "seca" and ESTACION_DE_DIA(61) == "lluvias"
+    assert DIAS_POR_ANIO == 120
+    assert estacion_equivalente("viento") == "seca" and estacion_equivalente("siembra") == "lluvias"
+    assert estacion_equivalente("seca") == "seca"
+    s = ComunidadState(dia=1)
+    s.fijar_mundo("PARAGUANÁ")
+    assert s.estacion == "viento" and "alisio" in s.clima
+    s = ComunidadState(dia=50, turno=6, turnos_por_dia=6)
+    s.fijar_mundo("PARAGUANÁ")
+    s.avanzar_turno()
+    assert (s.dia, s.estacion) == (51, "seca_larga")
+    assert "la seca larga" in s.to_context_string()
+    # un estado continuado conserva su período
+    s2 = ComunidadState(dia=95, estacion="siembra")
+    s2.fijar_mundo("PARAGUANÁ")
+    assert s2.estacion == "siembra"
+
+
+def test_los_eventos_caen_en_su_periodo_de_la_era_2(monkeypatch):
+    """gran_cosecha_sal y expedicion_perlas sólo en el viento; la fiesta de fin de
+    seca en la seca larga; los de lluvias en la siembra (clima_era2.yaml §motor)."""
+    from curiana_state import ComunidadState
+    monkeypatch.setattr(orch.random, "random", lambda: 0.0)   # siempre hay evento
+
+    def pool(periodo):
+        st = ComunidadState(dia=1)
+        st.fijar_mundo("PARAGUANÁ")
+        st.estacion = periodo
+        return {orch.director_select_event(st)["id"] for _ in range(400)}
+
+    v, sl, si = pool("viento"), pool("seca_larga"), pool("siembra")
+    assert "gran_cosecha_sal" in v and "gran_cosecha_sal" not in sl | si
+    assert "expedicion_perlas" in v and "expedicion_perlas" not in sl | si
+    assert "fiesta_cosecha_chicha" in sl and "fiesta_cosecha_chicha" not in v | si
+    assert "ritual_siembra_primeras_lluvias" in si and "ritual_siembra_primeras_lluvias" not in v | sl
+    # los genéricos de la seca (sin `periodo`) caen en los dos períodos secos
+    assert "sequia_inicio" in v and "sequia_inicio" in sl
+
+
+def test_el_capubana_tiene_las_coordenadas_del_pico():
+    """Decisión p6: el pico del mapa vivo (OSM: Cerro Santa Ana, 830 m)."""
+    import curiana_agents_era2 as m
+    c = m.SITIOS["Capubana"]
+    assert (c["lat"], c["lon"]) == (11.8183, -69.9524)
+    assert all(v.get("lat") is not None for v in m.SITIOS.values())
+
+
+def test_caseto_siembra_y_pesca_de_visita():
+    """Decisión p5: conuco principal, pesca de visita (la playa a ~22 km)."""
+    a = {"nodo": "AMUAY", "casa": "los Guasicures de Caseto", "sitio": "Caseto",
+         "zona_de_pesca": "ZA1", "linaje": "Chiriware"}
+    g = orch.prompt_gente(a)
+    assert "siembra en Caseto" in g and "a un día de ida" in g and "tu gente pesca en" not in g
+    assert "tu gente pesca en" in orch.prompt_gente(dict(a, sitio="Carirubana"))
+
+
+def test_tu_tierra_cabe_en_320_en_las_126_combinaciones_y_no_ensena_lo_escondido():
+    """Decisión p7: tope duro de 320, truncado por línea entera. Y el bloque no
+    muestra voces hipotéticas (el perfil era2 las esconde), ni el yararé, ni
+    testimonios sin procedencia."""
+    from curiana_mundo import bloque_tu_tierra, combinaciones, PRESUPUESTO, _candidatas, sitios
+    from curiana_perfiles import cargar_perfil
+    from curiana_lexicon import VOCABULARIO_BASE
+    capas = cargar_perfil("era2").capas
+    combos = combinaciones()
+    assert len(combos) == 126 and PRESUPUESTO == 320
+    hip = {k for k, e in VOCABULARIO_BASE.items() if e.get("fuente") == "caquetío-hipotético"}
+    for agente, dia in (("Tebekoa", 1), ("Kasebo", 7), ("Manaure", 33)):
+        for s, p, m in combos:
+            b = bloque_tu_tierra(s, p, m, agente=agente, dia=dia, capas=capas)
+            assert b.startswith("[Tu tierra] ") and len(b) <= PRESUPUESTO, (s, p, m, len(b))
+            # «laguna de Guaranao» abre frase y va con mayúscula: se compara sin caso
+            assert s.lower() in b.lower() and "Miguel" not in b and "yarar" not in b.lower()
+            assert not any(f"Lo decís {h}." in b for h in hip), (s, p, m, b)
+    # Caseto: la tierra manda aunque tenga zona (p5); Tacuato: el mar
+    grupos = _candidatas(sitios()["Caseto"], "siembra", "mañana")
+    tierra = sitios()["Caseto"]["dominios"]["tierra"]
+    assert grupos[2] and all(l in tierra for l in grupos[2])
+    grupos_t = _candidatas(sitios()["Tacuato"], "viento", "noche")
+    mar = sitios()["Tacuato"]["dominios"]["mar_y_pesca"]
+    assert grupos_t[2] and all(l in mar for l in grupos_t[2])
+    # el bloque rota con el día
+    dias = {bloque_tu_tierra("Tacuato", "viento", "tarde", agente="Kasebo", dia=d, capas=capas) for d in range(1, 12)}
+    assert len(dias) > 1
+
+
 # ── la esfera de contacto (2026-09-15) ────────────────────────────────
 
 def test_la_mayuscula_decide_si_es_nombre_o_palabra(monkeypatch):
