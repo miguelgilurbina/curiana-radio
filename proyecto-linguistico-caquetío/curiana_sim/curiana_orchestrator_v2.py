@@ -84,6 +84,10 @@ from curiana_koine import (
     guardar_koine,
     cargar_koine,
 )
+from curiana_eventos import alias_del_elenco, catalogo_para_elenco, elenco_era1
+from curiana_director import director_system, guardar_reflexion, reflexion_del_dia
+from curiana_mundo import resumen_del_mundo
+from functools import lru_cache
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -429,9 +433,11 @@ def call_agent(
 # DIRECTOR / NARRADOR
 # ══════════════════════════════════════════════════════════════════════
 
-DIRECTOR_SYSTEM = """Eres el Director de la simulación comunitaria de la Curiana.
-Estilo: conciso, sensorial, presente. Crónica oral caquetía.
-No uses lenguaje romántico ni exótico. Describe lo que un habitante vería y sentiría."""
+# El Director habla del mundo que el elenco fija: «de la Curiana» en la era 1,
+# «de Paraguaná» en la 2 (curiana_director.director_system; el texto de la era
+# 1 es el de siempre). Hasta el 2026-09-16 era «de la Curiana» también en
+# Paraguaná, y sin mundo: inventó «la sombra del ceibo» (ecologia-032).
+DIRECTOR_SYSTEM = director_system(MUNDO)
 
 
 def director_narrate(
@@ -439,20 +445,53 @@ def director_narrate(
     state: ComunidadState,
     interactions: list[dict],
 ) -> str:
+    """El cierre narrativo del turno. En la era 2 lleva el mundo —la frase
+    del período, la del momento y las restricciones del corpus, ≤ 400
+    caracteres (curiana_mundo.resumen_del_mundo)— y, si hay, lo que el
+    Director dejó anotado al cerrar el día anterior. El cierre queda en
+    state.cierres_del_dia para la reflexión del día (--reflexion)."""
     resumen = "\n".join(
         f"- {i['agent']}: {i['response'][:100]}..."
         for i in interactions
     )
-    prompt = f"""Estado: {state.to_context_string()}
-Interacciones: {resumen}
-Escribe el cierre narrativo del turno (2-3 oraciones)."""
+    partes = [f"Estado: {state.to_context_string()}"]
+    if state.mundo == "PARAGUANÁ":
+        mundo = resumen_del_mundo(state)
+        if mundo:
+            partes.append(mundo)
+    if state.notas_orquestador:
+        partes.append("[Lo que el Director dejó anotado al cerrar el día anterior]: "
+                      + state.notas_orquestador.strip()[:400])
+    partes.append(f"Interacciones: {resumen}")
+    partes.append("Escribe el cierre narrativo del turno (2-3 oraciones).")
+    prompt = "\n".join(partes)
+    # El mundo que se narra es el del estado (en un run coincide con el del
+    # elenco: state.fijar_mundo(MUNDO)); si difieren, manda el estado.
+    system = DIRECTOR_SYSTEM if state.mundo == MUNDO else director_system(state.mundo)
     resp = client.messages.create(
         model=MODEL,
         max_tokens=MAX_TOKENS_DIRECTOR,
-        system=DIRECTOR_SYSTEM,
+        system=system,
         messages=[{"role": "user", "content": prompt}],
     )
-    return resp.content[0].text.strip()
+    texto = resp.content[0].text.strip()
+    state.cierres_del_dia = (list(state.cierres_del_dia) + [texto])[-max(1, state.turnos_por_dia):]
+    return texto
+
+
+@lru_cache(maxsize=None)
+def _eventos_del_elenco() -> tuple[list, list]:
+    """El catálogo de curiana_state dicho para el elenco activo (curiana_eventos):
+    la era 1 intacta; la era 2 con los nombres traducidos por ALIAS_ERA1, sin
+    foráneos y sin los eventos que sólo tienen sentido con ellos. Antes
+    run_turn filtraba `agentes_involucrados` con `a in ALL_AGENTS` y nunca
+    resolvía el alias: en la era 2 casi ningún evento traía a sus
+    protagonistas y el Director narraba «Biro-ko» en Paraguaná."""
+    era1 = elenco_era1()
+    foraneos = frozenset(n for n, a in era1.items() if es_foraneo(a))
+    alias = alias_del_elenco(ELENCO)
+    sin_equivalente = frozenset(set(era1) - set(alias) - foraneos)
+    return catalogo_para_elenco(ELENCO, alias, foraneos, sin_equivalente)
 
 
 def director_select_event(state: ComunidadState) -> Optional[dict]:
@@ -480,7 +519,10 @@ def director_select_event(state: ComunidadState) -> Optional[dict]:
         if e.get("periodo") and equiv != state.estacion:      # el mundo tiene períodos
             return e["periodo"] == state.estacion
         return e.get("estacion") in (None, state.estacion, equiv)
-    pool = EVENTOS_COTIDIANOS + [e for e in EVENTOS_ESTACIONALES if _cae(e)]
+    # Los eventos, dichos para el elenco activo (era 2: sin nombres de la era 1
+    # ni foráneos; ver _eventos_del_elenco y curiana_eventos).
+    cotidianos, estacionales = _eventos_del_elenco()
+    pool = cotidianos + [e for e in estacionales if _cae(e)]
     return random.choice(pool)
 
 
@@ -968,6 +1010,7 @@ def auto_mode(
     turnos_por_dia: Optional[int] = None,
     semilla: Optional[int] = None,
     continuar: bool = False,
+    reflexion: bool = False,
 ):
     """
     Corre N turnos automáticamente.
@@ -991,6 +1034,11 @@ def auto_mode(
     el observer y la koiné (idiolectos y campo) que dejó el run anterior en
     disco, y declara en su config de qué run viene. Lo que NO se hereda todavía:
     la difusión social y las competencias léxicas abiertas.
+
+    reflexion=True → al cerrar cada día, UNA llamada más: el Director, con el
+    mundo, lee los cierres del día y el reporte medido y escribe 4-6 oraciones
+    (curiana_director.reflexion_del_dia). Va al log, a state.notas_orquestador
+    (el día siguiente la ve) y a curiana_director.json. Apagado por defecto.
 
     Mapeo temporal (con turnos_por_dia = 2):
         1 turno = media jornada
@@ -1110,6 +1158,7 @@ def auto_mode(
     # error de API, un teardown). Antes end_run() iba después del bucle sin
     # finally, y un run cortado quedaba con total_turns=0 y ended_at NULL.
     turnos_hechos = 0
+    reflexiones_hechas = 0
     try:
         for t in range(turnos):
             # ¿Toca evento de nombramiento? (cada `cadencia` turnos, si quedan referentes)
@@ -1167,14 +1216,29 @@ def auto_mode(
                                                   dia_terminado, d.get("soporte"), d.get("n_variantes"))
                     except Exception:
                         db_fallos["koine_metrics"] += 1
+                reporte_del_dia = observer.reporte_dia(dia_terminado)
                 if verbose:
-                    print(observer.reporte_dia(dia_terminado))
+                    print(reporte_del_dia)
                     fmt = lambda v: "s/d" if v is None else v
                     print(f"  ◇ Koiné — distancia idiolectal ({len(participantes)} agentes): "
                           f"acumulada={fmt(dist)} · ventana={fmt(dist_vent)} · "
                           f"emergente={fmt(dist_emer)}  (↓ = converge)")
                     for cid, forma in fijadas:
                         print(f"  ◆ Koiné fija: '{cid}' → {forma}")
+                # La reflexión del Director (--reflexion): una llamada por día,
+                # con los cierres del día y el reporte medido. Se imprime
+                # siempre que se pide (es un reporte, también con --silencioso),
+                # queda en el estado para mañana y en curiana_director.json.
+                if reflexion:
+                    texto = reflexion_del_dia(client, state, reporte_del_dia,
+                                              state.cierres_del_dia, dia=dia_terminado,
+                                              model=MODEL)
+                    state.notas_orquestador = texto
+                    guardar_reflexion(dia_terminado, texto, run_id,
+                                      nuevo=(not continuar and reflexiones_hechas == 0))
+                    reflexiones_hechas += 1
+                    print(f"\n# REFLEXIÓN DEL DIRECTOR — Día {dia_terminado}\n{texto}\n")
+                state.cierres_del_dia = []
 
             # Detección de cambio de estación
             if state.estacion != estacion_anterior:
@@ -1345,6 +1409,13 @@ if __name__ == "__main__":
              "que dejó en disco el run anterior.",
     )
     parser.add_argument(
+        "--reflexion", action="store_true",
+        help="Al cerrar cada día, una llamada más: el Director, con el mundo, lee los "
+             "cierres del día y el reporte medido y escribe 4-6 oraciones (qué cambió, "
+             "qué palabra prendió, qué queda abierto). Va al log, al estado y a "
+             "curiana_director.json. Apagado por defecto: cuesta API.",
+    )
+    parser.add_argument(
         "--ablacion", action="store_true",
         help="Run de CONTROL: apaga las inyecciones de prompt que empujan la "
              "convergencia (sugerencias de contagio, competencias abiertas, "
@@ -1370,7 +1441,7 @@ if __name__ == "__main__":
 
     extra = dict(agentes_por_turno=args.agentes_por_turno, roster_nombre=args.roster,
                  turnos_por_dia=args.turnos_por_dia, semilla=args.semilla,
-                 continuar=args.continuar)
+                 continuar=args.continuar, reflexion=args.reflexion)
     if args.anio:
         tpd = args.turnos_por_dia or 2
         auto_mode(client, 120 * tpd, reporte_anual=True, verbose=not args.silencioso,
