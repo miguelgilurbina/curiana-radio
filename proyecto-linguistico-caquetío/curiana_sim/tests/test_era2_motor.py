@@ -424,6 +424,9 @@ def test_tu_tierra_cabe_en_320_en_las_126_combinaciones_y_no_ensena_lo_escondido
             # «laguna de Guaranao» abre frase y va con mayúscula: se compara sin caso
             assert s.lower() in b.lower() and "Miguel" not in b and "yarar" not in b.lower()
             assert not any(f"Lo decís {h}." in b for h in hip), (s, p, m, b)
+            if s == "laguna de Guaranao":
+                # la laguna y su manglar son de 1985 (Aular Leal 2014): no se proyectan
+                assert "mangl" not in b.lower() and "caim" not in b.lower(), b
     # Caseto: la tierra manda aunque tenga zona (p5); Tacuato: el mar
     grupos = _candidatas(sitios()["Caseto"], "siembra", "mañana")
     tierra = sitios()["Caseto"]["dominios"]["tierra"]

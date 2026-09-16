@@ -1915,10 +1915,23 @@ huecos_lexicos:
     palabra_lexicon: null
     locacion: manglar
     lectura: >-
-      Capa moderno sobre el medio: el manglar y el caimán se proyectan como
-      constantes del medio (ecologia-002); «utilizada por los caquetíos» es
-      afirmación moderna sobre el pasado y no se proyecta sola (regla 3) — la salina
-      la sostiene Arcaya. Da fuente a tres testimonios de Miguel del 2026-09-14
-      (manglares, yacarés, peces): el «yararé» era un lapsus por yacaré. La palabra
-      caquetía del caimán sigue siendo hueco; `caiman` es taína y llega al tier 1
-      por la esfera de contacto.
+      DEGRADADO el mismo 2026-09-16 (regla 2), horas después de entrar: la laguna y
+      su manglar NO son constantes del medio. Aular Leal 2014 (El Falconiano, con la
+      ing. forestal Keysa Sánchez de González; ficha propuesta en
+      6-fusion/fichas_propuestas/aular-leal-2014-guaranao.md): «En su desembocadura
+      inicialmente hubo una salina…»; «Fue en 1985 cuando el colector de aguas
+      negras que pasa al margen norte de la quebrada se partió en un sector… hasta
+      hacerlo la laguna que existe hoy»; «Creció un frondoso manglar». Wikipedia lo
+      insinuaba (manantiales que la volvieron salobre; aguas servidas hacia 1980).
+      El ecosistema tiene cuarenta años: para el s. XV, Guaranao es SAL y ENSENADA
+      —la salina en la boca de una quebrada (Arcaya p. 22)—, no manglar. Los
+      caimanes: sólo Wikipedia los pone aquí; el Libro Rojo 2015 da Crocodylus
+      acutus en Falcón oriental (Hueque, Cuare, Morrocoy) sin nombrar Paraguaná, y
+      GBIF/iNaturalist dan 0 registros de ambas especies en el polígono de la
+      península (consultado el 2026-09-16): hipotético. Los testimonios de Miguel
+      (manglares, yacarés, peces) describen el sitio que él vio, y ese sitio es
+      post-1985. La palabra caquetía del caimán sigue siendo hueco.
+    limite: >-
+      Capa moderna POST-1985: no se proyecta al s. XV. El cargador de mundo de la
+      era 2 no muestra el manglar ni el caimán en Guaranao (sitios_era2.yaml,
+      líneas con `proyectable: false`).
