@@ -124,6 +124,16 @@ mundo_era2_sitios_y_clima:
       +274 caracteres en el prompt del tier 1 (de 7.230 a ~7.504, +3,8 %). La
       longitud predice el score con r = −0,48, así que el bloque se mantiene en
       tres voces.
+    medido_en_c6837386_2026-09-16: >-
+      Primer día con mundo: 0 préstamos de esfera en las 29 respuestas del
+      tier 1 (re-puntuadas con score_linguistico); 1 falso positivo en tier 2
+      («ta-bohío», castellano bohío leído como taíno). El tier 1 vio el bloque y
+      no mordió el día 1. Y una DEUDA DE INSTRUMENTO: word_uses sólo guarda
+      palabras_caquetias (arreglo del 2026-09-09), así que un préstamo usado no
+      llegaría a la base y la difusión no se puede leer de word_uses. Hasta que
+      se guarde aparte (una columna o una tabla `prestamos`, sin mezclarlos con
+      el caquetío que consumen el contagio y la koiné), la medida es re-puntuar
+      response_text: script en 5-experimento/BITACORA_RUNS.md (fila c6837386).
 
   p4_fusionar_antes_o_despues:
     estado: DECIDIDA (2026-09-16)
