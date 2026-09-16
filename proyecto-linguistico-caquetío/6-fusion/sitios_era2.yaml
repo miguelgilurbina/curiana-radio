@@ -87,11 +87,13 @@ meta:
     lineas_clima: 68
     lineas_total: 175
     huecos_lexicos: 14
-    testimonios_miguel: 6
-    lineas_con_deuda: 20
+    # 2026-09-16: la ficha de la laguna (p8) subió tres testimonios a
+    # atestiguado-moderno y el corpus recibió los hechos de la campaña (p4).
+    testimonios_miguel: 3
+    lineas_con_deuda: 17
     voces_caquetias_citadas: 74
-    hechos_del_corpus_citados: 46
-    obras_citadas: 10
+    hechos_del_corpus_citados: 47
+    obras_citadas: 11
 
   # Regla 6: cada cero con su consulta. Un cero mide la consulta, no la fuente.
   ceros_verificados:
@@ -1300,19 +1302,15 @@ sitios:
           estacion: 'todo el año'
           voz_caquetia: {clave: waranaro, capa: caquetío-atestiguado}
         - dato: >-
-            «En la laguna de Guaranao hay [...] peces.» Miguel, 2026-09-14. Ninguna
-            fuente del repo describe la pesca de esta laguna; lo que la sostiene es
-            el nombre del pez y la analogía con las albuferas de Tausabana, donde
-            «se crían pececillos».
-          etiqueta: testimonio-miguel
-          capa: 'testimonio del s. XXI sobre el lugar de hoy'
-          deuda: sin-procedencia
+            «En la laguna de Guaranao hay [...] peces.» Miguel, 2026-09-14. Con
+            fuente desde el 2026-09-16: la laguna tiene lisa, corocoro y lenguado,
+            además del guaranaro que le da nombre.
+          etiqueta: atestiguado
+          capa: 'moderno (ficha abierta el 2026-09-16 por decisión de Miguel, p8); el testimonio era del s. XXI sobre el lugar de hoy'
+          procedencia: {obra: laguna-guaranao-parque, pagina: 'Wikipedia es, fauna'}
           estacion: 'todo el año'
           voz_caquetia: {clave: waranaro, capa: caquetío-atestiguado}
-          que_lo_subiria: >-
-            un inventario ictiológico de la laguna (INSOPESCA, o las tesis de la
-            UNEFM sobre el Golfete), o una entrada de Esteves para la laguna que el
-            gazeteer no tiene.
+          subio_de: 'testimonio-miguel (2026-09-14) → atestiguado moderno (2026-09-16)'
       recoleccion:
         - dato: >-
             «hay recolección de corubos». Miguel, 2026-09-14. La glosa del corubo sí
@@ -1338,38 +1336,35 @@ sitios:
           que_lo_subiria: 'cualquier dato de conuco a menos de 5 km de la laguna; Esteves no registra ninguno'
       monte_y_caza:
         - dato: >-
-            «En la laguna de Guaranao hay manglares». Miguel, 2026-09-14. El corpus
-            tiene manglar del borde OESTE del Golfete y del NE de Paraguaná
-            (ecologia-011) y Esteves sólo registra manglar en Babahuro, costa de
-            Adícora (p. 18). Cero en Arcaya, en Oliver y en Castellanos. El manglar
-            de esta laguna no tiene fuente en el repo.
-          etiqueta: testimonio-miguel
-          capa: 'testimonio del s. XXI sobre el lugar de hoy'
-          deuda: sin-procedencia
-          apoyo_en_repo: [ecologia-011, ecologia-023, ecologia-024]
+            «En la laguna de Guaranao hay manglares». Miguel, 2026-09-14. Con fuente
+            desde el 2026-09-16: cuatro mangles con nombre — «mangle rojo (Rhizophora
+            mangle), el mangle negro (Avicennia germinans), el mangle llorón
+            (Laguncularia racemosa) y botoncillo (Conocarpus erectus)» — y alrededor
+            cujíes, guayacán, tunas y cardones. Esteves sólo registraba manglar en
+            Babahuro (p. 18) y el mapa vivo no etiqueta humedal a menos de 6 km: era
+            un cero de cobertura, no de la laguna.
+          etiqueta: atestiguado
+          capa: 'moderno (ficha abierta el 2026-09-16, p8); constante del medio proyectable como en ecologia-002'
+          procedencia: {obra: laguna-guaranao-parque, pagina: 'Wikipedia es, flora'}
+          apoyo_en_repo: [ecologia-011, ecologia-023, ecologia-024, ecologia-084]
           estacion: 'todo el año'
-          que_lo_subiria: >-
-            una imagen de satélite o una ficha ambiental de la laguna de Guaranao que
-            registre Rhizophora o Avicennia; con eso el manglar de la laguna pasa a
-            atestiguado-moderno y la proyección al s. XV queda como en ecologia-002.
+          subio_de: 'testimonio-miguel (2026-09-14) → atestiguado moderno (2026-09-16)'
           hueco_lexico: true
           concepto: 'el manglar — `mankaba` existe pero es hipotética (y el perfil era2 la esconde); las cuatro especies y la raíz-zanco siguen sin nombre'
         - dato: >-
-            ⭐ «hay yararés». Miguel, 2026-09-14. CERO en todo el material: seis OCR
-            de Esteves, Arcaya entero, Oliver cap. 3 entero, Castellanos, el dictado
-            de Medina, el lexicón y los lexicon_*.py. No hay ninguna palabra parecida
-            con glosa de animal ni de planta en la Kaketiana.
-          etiqueta: testimonio-miguel
-          capa: 'testimonio del s. XXI'
-          deuda: sin-procedencia
+            ⭐ «hay yararés». Miguel, 2026-09-14 — y el 2026-09-15: «me refería a
+            yacaré, me equivoqué yo». El yararé no existía (cero en todo el material,
+            correcto); el animal es el caimán, y la laguna tiene los dos: «la baba o
+            el caimán de anteojos (Caiman crocodilus)» y «cocodrilos de la costa
+            (Crocodylus acutus)».
+          etiqueta: atestiguado
+          capa: 'moderno (ficha abierta el 2026-09-16, p8)'
+          procedencia: {obra: laguna-guaranao-parque, pagina: 'Wikipedia es, fauna'}
+          apoyo_en_repo: [ecologia-084]
           estacion: 'todo el año'
-          que_lo_subiria: >-
-            que Miguel diga qué es: si es un ave, un reptil, un cangrejo o una
-            planta, y si lo oyó en Paraguaná o lo leyó. Con la categoría se puede
-            buscar el equivalente en el dictado de Medina (que tiene 66 entradas de
-            fauna y flora) y en el gazeteer. Mientras tanto no entra en el mundo.
+          subio_de: 'testimonio-miguel «yararé» (2026-09-14) → atestiguado moderno «caimán» (2026-09-16)'
           hueco_lexico: true
-          concepto: 'yararé — sin identificar: no se sabe siquiera de qué es el nombre'
+          concepto: 'el caimán — sin palabra caquetía: `yacare` es «pueblo» en el canon de topónimos (Zavala #279) y `caiman` es taíno, que al tier 1 le llega por la esfera de contacto (p3b)'
           candidatos_a_descartar: >-
             NO se propone ninguna identificación. Se anota, sólo para que Miguel
             descarte: el lexicón tiene `yawasa` «yaguaza, ave comestible de aguas

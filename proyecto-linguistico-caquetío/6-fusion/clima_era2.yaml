@@ -116,6 +116,49 @@ meta:
 # ══════════════════════════════════════════════════════════════════
 # 1. LOS PERÍODOS DEL AÑO
 # ══════════════════════════════════════════════════════════════════
+# ══════════════════════════════════════════════════════════════════
+# 0. LAS FRASES DEL CARGADOR (2026-09-16)
+# ══════════════════════════════════════════════════════════════════
+# Lo que curiana_mundo.py dice del período y del momento en [Tu tierra],
+# en prosa corta y sin etiquetas (la etiqueta vive en las líneas de abajo, no
+# en la cabeza del agente). Es REDACCIÓN de canon-simulación sobre las líneas
+# citadas de este archivo: cada frase remite a la sección que la sostiene.
+# Sin nombre caquetío del período, a propósito (decisión p2): las raíces
+# disponibles las da el propio período y el nombre lo acuñan los agentes.
+# Presupuesto: el período ≤ 80 caracteres, el momento ≤ 90 (decisión p7: el
+# bloque entero ≤ 320).
+frases_del_cargador:
+  viento:
+    periodo: 'Tiempo de Viento: el juri sopla firme del este y el agua está clara.'
+    sostiene: 'periodos[P1].viento, .mar'
+    momentos:
+      amanecer: 'Amanece con el viento flojo: es la hora de la canoa y del chinchorro.'
+      mañana: 'El viento monta; la sal de la noche ya está seca y el conuco se trabaja antes del sol alto.'
+      mediodia: 'El sol pega; hora de sombra, de comer y de hablar.'
+      tarde: 'El viento arrecia y el Golfete se pone difícil: la canoa vuelve.'
+      anochecer: 'Cae el sol y se untan los jachos con manteca de cunaro.'
+      noche: 'Noche de pesca a la luz de los jachos, sobre el agua calma.'
+  seca_larga:
+    periodo: 'La seca larga: el jagüey baja, la tierra está sin agua y el aire quema.'
+    sostiene: 'periodos[P2].lluvia, .agua_dulce, .cielo'
+    momentos:
+      amanecer: 'La hora del agua: se va al jagüey, o a la fuente del cerro, antes de que el sol pegue.'
+      mañana: 'Se pesca y se trueca; el conuco espera, seco.'
+      mediodia: 'El calor está en lo más alto sobre la tierra desnuda: nadie trabaja al sol.'
+      tarde: 'La tarde larga: se repara, se enseña, se cuenta lo que hay.'
+      anochecer: 'Al anochecer se pregunta por el año: si lloverá, si será seco o abundante.'
+      noche: 'Noche fresca después del día de fuego; se chupa jajato contra la sed.'
+  siembra:
+    periodo: 'Tiempo de Siembra: los chubascos vienen cortos y los cauces llevan agua.'
+    sostiene: 'periodos[P3].lluvia, .agua_dulce'
+    momentos:
+      amanecer: 'Amanece nublado; se mira el cielo antes de salir al conuco.'
+      mañana: 'Se siembra y se atiende el conuco mientras la tierra está blanda.'
+      mediodia: 'Sin el sol de la seca; se come y se sigue.'
+      tarde: 'La tarde trae el chubasco: los cauces corren y el jagüey se llena.'
+      anochecer: 'Se cierra el día con la tierra mojada y el maíz en el suelo.'
+      noche: 'Noche de lluvia sobre el techo; el salinar está parado.'
+
 partición:
   etiqueta: canon-simulacion
   lo_atestiguado: >-

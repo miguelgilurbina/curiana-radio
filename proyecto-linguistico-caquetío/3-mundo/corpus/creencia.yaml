@@ -447,3 +447,72 @@
   limite: Medina describe el siglo XX, y lo que recogió en Paraguaná es sedimento de la esfera (Kaketiana),
     no dato exclusivamente paraguanero (regla 4 ampliada, 2026-09-11). No se proyecta a precontacto mientras
     no se decida (regla 3). No sube al lexicón activo.
+
+# ── Fusionados el 2026-09-16 desde 6-fusion/sitios_era2.yaml (campaña de sitios
+# y clima de la era 2), por decisión de Miguel (tanda del 15, p4). ─────────────
+
+- id: creencia-020
+  contenido: >
+    La regla moral de la caza: los indios de Coro «abominaban tanto la traición que
+    aun a los conejos y venados no querían en caza tirar, estando echados o detenidos,
+    porque decían era matarlos a traición, sino cuando huían». Es la única norma de
+    caza caquetía del repo, y es moral, no técnica: define la traición.
+  fuente: atestiguado
+  referencia: "Arcaya 1920, p. 42, citando a fray Pedro Simón sobre los de Coro (contacto, s. XVI)"
+  procedencia:
+    obra: arcaya-1920
+    pagina: 42
+  dominios: [creencia, caza, moral]
+  agentes_relacionados: []
+  palabra_lexicon: matakán
+  locacion: matorral
+  lectura: >-
+    Capa contacto sobre «los de Coro» (regla 4: la costa, no los Llanos). Con el
+    matacán en el mundo (ecologia-077), la regla tiene animal: al venado echado no se
+    le tira. Va al bloque [Tu tierra] de los sitios de monte.
+
+- id: creencia-021
+  contenido: >
+    El bosque del cerro tiene dueño y no se corta: «en el cerro de Capuhana hay un
+    duende llamado [Capó] quien junto con una serpiente emplumada... impide que sean
+    cortados los árboles de la localidad». Antolínez (1946, vía Tamayo) da la misma
+    figura: un dueño llamado Capo que impide cortar los árboles del cerro de Santa
+    Ana.
+  fuente: hipotetico
+  referencia: "Esteves 1989, parte 2, p. 26, entrada Capuhana (tradición viva del s. XX); Antolínez 1946 vía Francisco Tamayo (6-fusion/capubana_agua_y_microclima.yaml). Retro-abstraído: forma documentada en boca viva, sustrato incierto — a efectos de proyección vale como hipotético"
+  procedencia:
+    obra: esteves-1989
+    pagina: 26
+  dominios: [creencia, cosmos, tabu]
+  agentes_relacionados: []
+  palabra_lexicon: kapubana
+  locacion: null
+  lectura: >-
+    En términos materiales, el tabú de la tala es la protección de la captura de
+    humedad: sin bosque arriba no hay agua abajo (capubana_agua_y_microclima.yaml,
+    decidido el 2026-09-14). Es la norma del agua dicha en clave sagrada. Dos
+    fuentes del s. XX, ninguna precontacto: entra como hipotético y así se
+    proyecta.
+
+- id: creencia-022
+  contenido: >
+    La piedra escrita del conjunto del cerro: en el cerro de Siraba, «cerro cónico,
+    unido al cerro de Santa Ana por el lado Noreste», de casi 500 m, «están
+    localizadas unos petroglifos que llaman: "Las Piedras del Almanaque"». Es el
+    único objeto del repo que la tradición asocia a un calendario, y está pegado al
+    Capubana.
+  fuente: hipotetico
+  referencia: "Esteves 1989, parte 3, p. 60, entrada Siraba; el nombre es de la tradición local y Esteves no lo interpreta. Retro-abstraído a efectos de proyección"
+  procedencia:
+    obra: esteves-1989
+    pagina: 60
+  dominios: [creencia, calendario, petroglifos]
+  agentes_relacionados: []
+  palabra_lexicon: kiba
+  locacion: null
+  lectura: >-
+    Que unos petroglifos se llamen «del Almanaque» dice algo de la tradición que los
+    nombra, no de lo que marcan: sin lectura publicada no se afirma calendario alguno
+    (los períodos de la era 2 quedan sin nombre caquetío a propósito, p2). Lo que
+    subiría el hecho: una lectura publicada de esos petroglifos, o comprobar si el
+    inventario de Morón 2012 para Falcón incluye Siraba.

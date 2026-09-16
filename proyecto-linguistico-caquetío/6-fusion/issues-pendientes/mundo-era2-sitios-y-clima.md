@@ -20,13 +20,26 @@ Esto es lo que salió. Dos archivos de datos, un medidor y este resumen:
 
 ```
 lineas_total 175 · lineas_sitios 107 · lineas_clima 68 · sitios 7
-huecos_lexicos 14 · testimonios_miguel 6 · lineas_con_deuda 20
-voces_caquetias_citadas 74 · hechos_del_corpus_citados 46 · obras_citadas 10
+huecos_lexicos 14 · testimonios_miguel 3 · lineas_con_deuda 17
+voces_caquetias_citadas 74 · hechos_del_corpus_citados 47 · obras_citadas 11
 dias_simulados 120
 ```
 
-Por etiqueta: **atestiguado 109**, reconstruido 19, canon-simulación 19,
-retro-abstraído 18, testimonio-miguel 6, hipotético 4.
+Por etiqueta: **atestiguado 112**, reconstruido 19, canon-simulación 19,
+retro-abstraído 18, testimonio-miguel 3, hipotético 4.
+
+> **ACTUALIZADO 2026-09-16.** Miguel respondió las ocho preguntas de §6 una a
+> una en la conversación (registro: `6-fusion/decisiones_tanda_2026-09-15.yaml`)
+> y todo se aplicó el mismo día: tres períodos 50/40/30 en `curiana_state`
+> (p1); períodos sin nombre caquetío (p2); el «yararé» era el **yacaré** —
+> caimán— y la laguna de Guaranao tiene ficha (`laguna-guaranao-parque`), con
+> lo que tres testimonios subieron a atestiguado-moderno (p3, p8); los diez
+> hechos entraron al corpus antes del primer run (p4: ecologia-078 a 084,
+> creencia-020 a 022); Caseto siembra y pesca de visita (p5); el Capubana tiene
+> las coordenadas del pico (p6); y el cargador `curiana_mundo.py` arma
+> `[Tu tierra]` con tope de 320 y test sobre las 126 combinaciones (p7). Los
+> conteos de arriba son los de después. Este borrador no se publicó: las
+> decisiones se tomaron aquí.
 
 ---
 

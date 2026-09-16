@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 64
+  obras: 65
   en_repo: 42
-  solo_citadas: 22
+  solo_citadas: 23
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
@@ -370,6 +370,20 @@ obras:
   acceso: NO consultado en texto completo — identificado vía resúmenes de búsqueda
   aliases:
   - Keegan 1989
+  en_repo: false
+- id: laguna-guaranao-parque
+  obra: Parque metropolitano Laguna de Guaranao — entrada enciclopédica
+  autor: Wikipedia en español (colaborativa)
+  anio: '2026'
+  publicacion: Wikipedia es, «Parque metropolitano Laguna de Guaranao», consultada el 2026-09-16; cita
+    cuatro referencias (blogs, archivos web y un documento legal venezolano)
+  genero: datos
+  paginas: — (página web)
+  acceso: Libre en línea. https://es.wikipedia.org/wiki/Parque_metropolitano_Laguna_de_Guaranao
+  aliases:
+  - Laguna de Guaranao
+  - Parque metropolitano Laguna de Guaranao
+  - laguna-guaranao-parque
   en_repo: false
 - id: las-casas-1875
   obra: Historia de las Indias, tomo I

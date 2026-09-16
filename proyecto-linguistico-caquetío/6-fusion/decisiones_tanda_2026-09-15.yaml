@@ -9,7 +9,14 @@
 meta:
   fecha: '2026-09-15'
   decidido_por: Miguel
-  estado: EN CURSO — se registran según llegan; nada aplicado al motor todavía
+  estado: >-
+    APLICADA (2026-09-16). Las ocho respondidas una a una y aplicadas el mismo
+    día: curiana_state (p1: CALENDARIOS, PERIODOS_ERA2, fijar_mundo), el
+    orquestador (eventos por período, [Tu tierra], Caseto en [Tu gente]),
+    curiana_mundo.py (p2, p7), el corpus (p4: ecologia-078 a 084, creencia-020
+    a 022), elenco_era2.yaml + módulo regenerado (p6), la ficha
+    laguna-guaranao-parque y la laguna re-etiquetada en sitios_era2.yaml (p8),
+    y la esfera de contacto en el lexicón (p3b, commit 0e02195).
 
 mundo_era2_sitios_y_clima:
   fuente_de_las_preguntas: '6-fusion/issues-pendientes/mundo-era2-sitios-y-clima.md §6'
@@ -117,6 +124,100 @@ mundo_era2_sitios_y_clima:
       +274 caracteres en el prompt del tier 1 (de 7.230 a ~7.504, +3,8 %). La
       longitud predice el score con r = −0,48, así que el bloque se mantiene en
       tres voces.
+
+  p4_fusionar_antes_o_despues:
+    estado: DECIDIDA (2026-09-16)
+    pregunta: '¿Los diez hechos nuevos de la campaña se fusionan antes o después del primer run?'
+    decision_literal: '«A»'
+    lectura_operativa: >-
+      ANTES. Los siete de ecologia.yaml (jachos, barbasco, atalayas de
+      cardúmenes, guairón y cal de concha, cují como señal de agua, pulso de
+      Sievers; el matacán ya entró como ecologia-077) y los tres de
+      creencia.yaml (tabú de caza, el dueño del cerro que prohíbe talar, las
+      Piedras del Almanaque) entran al corpus antes del primer run con el
+      cargador de mundo, para que [Tu tierra] pueda citarlos.
+    se_aplica_en: >-
+      sesión de fusión (skill fusionar-propuesta) desde
+      sitios_era2.yaml §propuestas_a_otras_esferas: cada hecho con procedencia
+      y página, etiqueta y capa; compilar_corpus --check; se hace junto con el
+      cargador, cuando estén las ocho.
+
+  p5_caseto_y_su_playa:
+    estado: DECIDIDA (2026-09-16)
+    pregunta: '¿Qué hace Caseto con una zona de pesca (ZA1) a ~22 km?'
+    decision_literal: '«A»'
+    lectura_operativa: >-
+      Conuco principal, pesca de visita. El dominio del sitio es la tierra
+      (el conuco, la roza, el barbasco de Cocodite, el barro); los que pescan
+      —Kasebo y Waitiao, 2 de los 12 de la casa— bajan a la costa oeste, a un
+      día de ida. ZA1 sigue siendo suya en el papel; los Corubos son los dueños
+      de la costa oeste, como se dijo de Carirubana el 2026-09-14.
+    medido: 'la casa de los Guasicures de Caseto: 12 agentes, 2 de mar (Kasebo T1, Waitiao T2); las otras casas: Corubos 7 de 12, Cayudes 4 de 12, casa del Manaure 4 de 14 (sin zona)'
+    se_aplica_en: >-
+      prompt_gente() en el orquestador: para Caseto dice «tu gente siembra en
+      Caseto; los que pescan bajan a la costa oeste, a un día de ida» en vez
+      de «tu gente pesca en…»; el cargador de mundo prioriza `tierra` para
+      Caseto aunque tenga zona (como Moruy). Con las ocho.
+
+  p6_coordenadas_del_capubana:
+    estado: DECIDIDA (2026-09-16)
+    pregunta: '¿Se rellenan lat/lon del Capubana en el módulo generado?'
+    decision_literal: '«A»'
+    lectura_operativa: >-
+      Sí: el pico del mapa vivo. Verificado el 2026-09-16 en
+      fuentes_caquetios/osm_kaketiana/paraguana-1.json: «Cerro Santa Ana»,
+      natural=peak, ele 830, lat 11.8182732, lon -69.9523818. El cerro es un
+      punto (el único monte de la península); lo espiritual es lo que pasa en
+      él, no dónde está. Un None donde todos los demás sitios tienen valor era
+      una trampa.
+    se_aplica_en: >-
+      6-fusion/elenco_era2.yaml (sitio Capubana con lat/lon y fuente_coord
+      osm-kaketiana) → regenerar curiana_agents_era2.py con
+      generar_agentes_era2.py y comprobar con --check. Con las ocho.
+
+  p7_presupuesto_de_tu_tierra:
+    estado: DECIDIDA (2026-09-16)
+    pregunta: '¿Presupuesto fijo para el bloque [Tu tierra] del cargador de mundo?'
+    decision_literal: '«320 está bien»'
+    lectura_operativa: >-
+      Tope duro de 320 caracteres, truncado por línea entera (nunca a media
+      frase), con un test que recorre las 126 combinaciones (7 sitios × 3
+      períodos × 6 momentos) y afirma len(bloque) <= 320 en todas.
+    medido_2026-09-16: >-
+      Con el bloque de voces de fuera ya dentro: tier 1 ~9.700 caracteres,
+      tier 2 ~5.500, tier 3 ~4.100, media 6.400 (cota alta: cuenta la ficha
+      entera del agente). 320 cuesta +5,0 % sobre la media, +3,3 % en tier 1 y
+      +7,9 % en tier 3. La campaña había medido +7,7 % sobre una media más
+      magra (4.142). r = −0,48 entre longitud del prompt y score.
+    se_aplica_en: 'curiana_mundo.py: bloque_tu_tierra(sitio, periodo, momento, semilla, presupuesto=320); test_tu_tierra_cabe_en_320_en_las_126_combinaciones. Con las ocho.'
+
+  p8_el_manglar_de_guaranao:
+    estado: DECIDIDA (2026-09-16)
+    pregunta: '¿El manglar (y el caimán) de la laguna de Guaranao: se persigue la fuente o entra como canon-simulación?'
+    decision_literal: '«Sí» (a abrir la ficha)'
+    lo_que_aparecio: >-
+      Wikipedia es, «Parque metropolitano Laguna de Guaranao» (consultada el
+      2026-09-16): cuatro mangles con nombre (Rhizophora mangle, Avicennia
+      germinans, Laguncularia racemosa, Conocarpus erectus); fauna con «la
+      baba o el caimán de anteojos (Caiman crocodilus)» y «cocodrilos de la
+      costa (Crocodylus acutus)»; peces (lisa, corocoro, lenguado); y la
+      historia: «en la década de 1970 era una salina utilizada antiguamente por
+      los indios caquetíos», manantiales de agua dulce que la volvieron
+      salobre, contaminación por aguas servidas hacia 1980. El mapa vivo (OSM)
+      tiene la laguna (water=lake, 11.6825, -70.1959) pero ningún humedal
+      etiquetado a menos de 6 km: cero de cobertura, no de la laguna.
+    lectura_operativa: >-
+      Se abre la ficha 4-fuentes/laguna-guaranao-parque.md (capa moderno, la
+      misma calidad que monumento-cerro-santa-ana: Wikipedia con referencias
+      flojas). Los cuatro testimonios de Miguel sobre la laguna —manglar,
+      yacaré, peces, salina— suben de testimonio-miguel a atestiguado
+      (moderno), y el caimán entra al mundo con fuente. «Utilizada por los
+      caquetíos» es afirmación moderna sobre el pasado (regla 3): no se
+      proyecta sola; la salina precontacto la sostiene Arcaya p. 22.
+    se_aplica_en: >-
+      4-fuentes/laguna-guaranao-parque.md + generar_bibliografia.py; un hecho
+      nuevo en ecologia.yaml (la laguna: manglar, caimanes, salina) y las
+      líneas de la laguna en sitios_era2.yaml re-etiquetadas. Con las ocho.
 
   fallo_del_filtro_de_nombres:
     estado: CORREGIDO (2026-09-16)
