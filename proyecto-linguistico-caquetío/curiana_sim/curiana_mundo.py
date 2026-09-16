@@ -102,6 +102,11 @@ def _estacion_y_momento(linea: dict) -> tuple[set, Optional[str]]:
 def _entra(linea: dict, periodo: str, momento: str) -> bool:
     if linea.get("etiqueta") in _ETIQUETAS_FUERA:
         return False
+    # Una línea atestiguada del sitio de HOY que no vale para el s. XV (la
+    # laguna de Guaranao y su manglar son de 1985: Aular Leal 2014) se declara
+    # `proyectable: false` en el canon y no llega al agente.
+    if linea.get("proyectable") is False:
+        return False
     if linea.get("deuda") == "sin-procedencia" and linea.get("etiqueta") == "testimonio-miguel":
         return False
     per, mom = _estacion_y_momento(linea)

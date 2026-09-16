@@ -1,0 +1,857 @@
+# ─────────────────────────────────────────────────────────────────────────
+# BARRIDO WEB — las cuatro deudas del Capubana y de la laguna de Guaranao
+#
+# Pedido 2026-09-16 (Miguel, vía coordinador). Deudas declaradas en
+# 6-fusion/capubana_agua_y_microclima.yaml, 6-fusion/sitios_era2.yaml
+# (§Capubana y §laguna de Guaranao) y 4-fuentes/laguna-guaranao-parque.md.
+#
+# Regla 5: PROPONE. No toca 4-fuentes/, 3-mundo/corpus/, 2-lengua/ ni el motor.
+# Las fichas que valen la pena están en 6-fusion/fichas_propuestas/ y las
+# lista §fichas_propuestas de abajo (la BANDEJA no escanea esa carpeta:
+# generar_bandeja.py sólo lee 6-fusion/*.yaml e issues-pendientes/*.md).
+#
+# Regla 6 a escala web (como en barrido_web_medina_2026-09-09.yaml): un cero
+# mide la consulta y el índice, no la fuente. Cada cero lleva sus consultas.
+#
+# ⚠️ SIN DESCARGAS. Sólo WebSearch y WebFetch. Lo que existe sólo como PDF
+# está en §descargas_a_autorizar con URL y tamaño cuando se vio. Efecto
+# secundario a declarar: WebFetch guardó tres PDF en la caché de resultados
+# de la herramienta (fuera del repo) al intentar leerlos; NO se abrieron ni
+# se usaron. Rutas en §descargas_a_autorizar.efecto_secundario.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-16'
+  quien: escriba (Claude), agente de rastreo web
+  pedido_por: Miguel (vía coordinador)
+  obra: 'barrido web (varias) — Capubana y laguna de Guaranao'
+  estado: sin-fusionar
+  metodo: >-
+    WebSearch + WebFetch de páginas HTML y de APIs abiertas (GBIF, iNaturalist);
+    lectura de los PDF que YA están en el repo con pdftotext al scratchpad
+    (Morón 2012, Zavala Reyes 2018). Cita textual sólo de lo fetchado directo;
+    lo que viene de un extracto del buscador se marca «por extracto».
+  resumen: >-
+    Deuda 1: SÍ hay lecturas publicadas de los petroglifos del cerro, tres y
+    recientes (Acasio 2023 en Ciencia en Revolución; Caguao y Morón 2024/2025
+    en BACOA/Cruxentiana; el libro «Piedras Parlantes de Siraba»), pero todas
+    son arqueoastronomía de autor y ninguna se ha podido leer sin descargar.
+    Nadie fuera de Esteves usa el nombre «Piedras del Almanaque»: los nombres
+    vivos son «Piedra del Calendario» (sendero de Misaray), «Piedra de
+    Misaray», «Piedra de Siraba» y «estación Capubana». Deuda 2: no existe en
+    línea un dato pluviométrico por piso; lo que sí hay es el MECANISMO
+    atestiguado por un climatólogo (Foghin 2014: «constante captación de agua
+    directamente de las nubes» en las cumbreras) y el gradiente cualitativo
+    de INPARQUES 1978 («la precipitación es mayor que en el piso xerofítico»);
+    la cifra que circula (457,5 mm) no tiene fuente primaria. Deuda 3: el
+    Libro Rojo (Seijas, Barros y Babarro 2015) da el caimán de la costa en
+    Falcón ORIENTAL (Hueque, Cuare, Morrocoy) y en toda la costa «desde la
+    Guajira hasta [...] Paria», pero NO nombra Paraguaná ni Guaranao; GBIF e
+    iNaturalist dan CERO registros de Crocodylus acutus y de Caiman crocodilus
+    en la península; la única base del «cocodrilo de la costa» de Wikipedia
+    es una nota de prensa muerta. Deuda 4: no hay inventario institucional
+    con autoría en línea; hay periodismo con experta nombrada (Aular Leal
+    2014), una sentencia (2010) y un inventario medido de ciencia ciudadana
+    (GBIF/eBird, 787 registros en el polígono de la laguna). Y un hallazgo
+    que cambia la lectura del sitio: el manglar y la laguna nacen en 1985 de
+    la rotura de un colector; el sitio precontacto era una salina en la
+    desembocadura de una quebrada.
+
+# ══════════════════════════════════════════════════════════════════════
+# HALLAZGOS — un ítem por fuente, con su deuda, su cita y su etiqueta
+# ══════════════════════════════════════════════════════════════════════
+hallazgos:
+
+  # ── Deuda 1 · Las Piedras del Almanaque ────────────────────────────
+  - id: h01
+    deuda: 1
+    fuente: 'Acasio, Enrique (2023). «Decodificación de un calendario lunar metónico representado en un petroglifo geométrico de la estación Capubana, en el Cerro de Santa Ana. Edo. Falcón. Venezuela». Ciencia en Revolución, vol. 9, n.º 25 (enero-junio 2023)'
+    url: https://cienciaenrevolucion.com.ve/index.php/cienciaenrevolucion/article/view/101
+    autor: Enrique Acasio (ingeniero; la prensa del Mincyt/VTV lo da como líder del proyecto, con «estudios arqueoastronómicos [...] desde 2012»)
+    anio: 2023
+    cita: >-
+      «El objeto del presente trabajo de investigación es publicar de manera
+      preliminar la decodificación de un posible calendario astronómico lunar
+      presente en un petroglifo de diseño geométrico-matemático en la estación
+      de arte rupestre Capubana, en la falda del cerro de Santa Ana, en la
+      Península de Paraguaná.» (resumen, página OJS fetchada directo)
+    palabras_clave: [arte rupestre, petroglifos, Calzadas, metónico, arqueoastronomía, estado Falcón]
+    verificacion: página OJS fetchada directo; el PDF (article/download/101/122/206) NO se descargó
+    etiqueta_propuesta: >-
+      atestiguado-moderno para la EXISTENCIA de una estación de arte rupestre
+      llamada «Capubana» en la falda del cerro con un petroglifo geométrico;
+      hipotético para la LECTURA (calendario lunar metónico): trabajo
+      «preliminar», autor único, revista del Mincyt sin arbitraje conocido.
+    peso: >-
+      ⭐ Es la lectura publicada que la deuda pedía, y la estación lleva el
+      nombre que el canon le da al cerro (D9). Falta leerla: sólo con el
+      resumen no se sabe si «Capubana» es la misma estación que Esteves llama
+      «Piedras del Almanaque» del cerro de Siraba (p. 60), ni de dónde sale el
+      nombre. En el resumen no aparece «Siraba»; en el cuerpo, según el
+      extracto, cita «Piedras Parlantes de Siraba» y «Piedra de Misaray».
+
+  - id: h02
+    deuda: 1
+    fuente: 'Acasio, Enrique. «Piedras Parlantes de Siraba» (libro de arqueoastronomía; prólogo de la Lic. María Gracia Gómez Ollarves; presentado en el Parque Metropolitano de Punto Fijo el 26-27 de septiembre de 2014 y exhibido en librerías de Coro y Punto Fijo)'
+    url: https://obrasliterariasacasio.wordpress.com/piedras-parlantes-de-siraba/
+    autor: Enrique Acasio
+    anio: '2013-2014 (fotos de 2013; presentación 2014)'
+    cita: >-
+      Del prólogo: «el aporte que se hace con este material da un paso
+      adelante en la continuidad de la preservación del legado que la
+      naturaleza, la historia y la mano del hombre primitivo trazaron sobre
+      las rocas». La página no trae el texto del libro. Otras obras del mismo
+      autor que la web enumera: «Piedra de Misaray: Calendario Perpetuo
+      Luni-solar» y «Cielo Ancestral. Decodificación de la manifestación
+      rupestre de los Santos – El Mestizo».
+    verificacion: página fetchada directo (sólo prólogo y fotos)
+    etiqueta_propuesta: hipotético (obra de divulgación de autor único; texto no accesible)
+    peso: >-
+      Confirma que «Siraba» es el nombre bajo el que se publican las piedras
+      del cerro. Sin texto no se puede citar nada de la lectura.
+
+  - id: h03
+    deuda: 1
+    fuente: 'Caguao, Alfredo y Morón, Camilo. «La Piedra de Siraba: Mitología, Simbología y Arqueoastronomía». BACOA (revista interdisciplinaria de ciencias y artes, Santa Ana de Coro), n.º 20, 19-08-2024, p. 210; reeditado en Cruxentiana n.º 16, 21-01-2025, p. 280'
+    url: https://revistabacoa.blogspot.com/2024/08/bacoa-20.html
+    url_2: https://cruxentiana.blogspot.com/2025/01/cruxentiana-16.html
+    autor: Alfredo Caguao y Camilo Morón (Morón es el autor de moron-2012-petroglifos, ya auditado)
+    anio: '2024 (BACOA) / 2025 (Cruxentiana)'
+    cita: >-
+      Sólo el título, los autores y la página figuran en la web; el número
+      entero está en Google Drive (BACOA 20: id 1gFv1lIj3o2h2Z_AjqYImzdr8gtkX9DfM;
+      Cruxentiana 16: id 1D_7V6uhyTI-wV20_4jy5cObDAVUa6VGM). Ninguna de las dos
+      páginas da ISSN, director ni depósito legal.
+    verificacion: índices de ambos números fetchados directo; texto NO descargado
+    etiqueta_propuesta: pendiente de lectura; por el título, mezcla mito (retro-abstraído), simbología y arqueoastronomía (hipotético)
+    peso: >-
+      ⭐ La segunda lectura publicada, y con Morón detrás: el autor cuya cadena
+      de custodia el proyecto ya conoce. Es la que más vale la pena leer,
+      porque el título promete separar mito de lectura, que es exactamente la
+      división ARTE / CREENCIA decidida el 2026-08-25.
+
+  - id: h04
+    deuda: 1
+    fuente: 'Morón, Camilo (2015). «Panorama geológico, paleontológico, arqueológico, histórico y mitológico del estado Falcón». Boletín Antropológico (ULA), año 33, n.º 89, enero-junio 2015, pp. 104-126'
+    url: https://www.redalyc.org/pdf/712/71241008006.pdf
+    url_2: http://erevistas.saber.ula.ve/index.php/boletin_antropologico/article/view/21065/0
+    autor: Camilo Morón (UNEFM)
+    anio: 2015
+    cita: >-
+      Por extracto del buscador (el PDF no se leyó): el cerro Santa Ana «o
+      Chamuriana según la toponimia indígena conservada en la tradición oral
+      de la península»; el «monolito de Siraba»; el «cementerio y petroglifo
+      de Machuruca-Misaray (FAL-152)».
+    verificacion: por extracto del buscador; la página HTML de Redalyc devolvió plantilla vacía y el OJS de la ULA rechazó la conexión; la referencia bibliográfica (año, número, páginas) la dio el índice del OJS por buscador
+    etiqueta_propuesta: >-
+      atestiguado-moderno para el REGISTRO de sitios (código FAL-152 sugiere
+      inventario del IPC); retro-abstraído para «Chamuriana» como nombre
+      indígena del cerro (tradición oral moderna).
+    peso: >-
+      ⭐⭐ Ya estaba como pista en petroglifos_y_manaure.yaml §9 sin saber que
+      hablaba del cerro. Es del MISMO número 89 que zavala-reyes-2015. Da el
+      código de sitio del petroglifo de Misaray y nombra al cerro Chamuriana,
+      que es el nodo de la era 2. Descarga a autorizar; acceso abierto.
+
+  - id: h05
+    deuda: 1
+    fuente: 'Aular Leal, Luis (2014-09-19). «Cerro Santa Ana, tesoro geológico de Paraguaná». Blog «Periodismo, historia e investigación» (periodista falconiano; cita al guardaparques José Núñez)'
+    url: http://luisaularleal.blogspot.com/2014/09/cerro-santa-ana-tesoro-geologico-de.html
+    autor: Luis Aular Leal
+    anio: 2014
+    cita: >-
+      «La existencia de petroglifos, especialmente por el sendero de Misaray,
+      donde se encuentra la llamada 'Piedra del Calendario' y otras
+      demostraciones gráficas sobre roca son evidencia de la huella caquetía
+      en territorio peninsular.»
+    verificacion: fetchado directo
+    etiqueta_propuesta: atestiguado-moderno para el nombre popular «Piedra del Calendario» y su sitio (sendero de Misaray); la atribución caquetía es afirmación periodística, no datación
+    peso: >-
+      Une el nombre vivo con el sendero. «Piedra del Calendario» ≈ «Piedras
+      del Almanaque» de Esteves es una ecuación PLAUSIBLE (mismo cerro, mismo
+      campo semántico) pero no probada: Esteves las sitúa en el cerro de
+      Siraba, «unido al cerro de Santa Ana por el lado Noreste».
+
+  - id: h06
+    deuda: 1
+    fuente: 'INPARQUES, «Monumento Natural Cerro Santa Ana» (página institucional; devuelve 404 desde el 2026-09-14)'
+    url: https://www.inparques.gob.ve/monumento-natural-cerro-santa-ana/
+    autor: INPARQUES
+    anio: s. f.
+    cita: >-
+      Por extracto del buscador: el petroglifo llamado «Piedra de la Teresa»
+      está sobre una roca de aproximadamente dos metros de altura, a orillas
+      de un manantial, y no tiene representaciones zoomorfas ni antropomorfas
+      como los otros petroglifos del país.
+    verificacion: por extracto del buscador (dos consultas distintas devolvieron el mismo extracto); la página sigue en 404
+    etiqueta_propuesta: atestiguado-moderno por extracto (misma calidad que las frases de INPARQUES ya citadas en monumento-cerro-santa-ana)
+    peso: >-
+      ⭐ Un petroglifo JUNTO A UN MANANTIAL del cerro: es el único dato que
+      liga físicamente piedra escrita y agua en el Capubana. Propuesta de
+      adición a la ficha monumento-cerro-santa-ana (§Qué da).
+
+  - id: h07
+    deuda: 1
+    fuente: 'Centro de Historia de Paraguaná (blog), «Santa Ana de Paraguaná… historia, mitos y leyendas», junio de 2012 (sin autor firmado)'
+    url: http://centrodehistoriadeparaguana.blogspot.com/2012/06/santa-ana-de-paraguanahistoria-mitos-y.html
+    autor: Centro de Historia de Paraguaná (anónimo)
+    anio: 2012
+    cita: >-
+      «Cuentan que Siraba danzaba a los pies del Cerro Santa Ana todos los
+      domingos, Día del Señor, ritual al que los indígenas le atribuían
+      poderes para que las lluvias llegaran al poblado». Y de Chamuriana:
+      «asentamiento indígena ubicado en las faldas del cerro Santa Ana, donde
+      hoy día se encuentran -a flor de suelo- valiosos restos de cerámica
+      precolombina».
+    verificacion: fetchado directo
+    etiqueta_propuesta: 'retro-abstraído (leyenda moderna con marco cristiano: «domingos, Día del Señor», visión de Santa Ana); NO proyectar al precontacto'
+    peso: >-
+      Para CREENCIA, no para ARTE: la tradición viva asocia a «Siraba» con un
+      rito de LLUVIA al pie del cerro. Es la misma asociación cerro-agua de
+      la hipótesis de Miguel, pero en versión de leyenda de pueblo, con
+      fecha del s. XX-XXI. Vale como rastro, no como dato.
+
+  - id: h08
+    deuda: 1
+    fuente: 'Morón 2012, «Petroglifos en Falcón: entre la roca y la memoria» (PDF ya en el repo, leído con pdftotext)'
+    url: https://www.redalyc.org/pdf/712/71226816005.pdf
+    autor: Camilo Morón
+    anio: 2012
+    cita: 'grep -i «siraba|santa ana|capubana|misaray|almanaque|calendario|buenevara|chirache|moruy|caguao» → 0 líneas; «paraguan» → 3 líneas, todas genéricas (la península, Arcaya)'
+    verificacion: medido en el repo (fuentes_caquetios/Moron_2012_Petroglifos_Falcon.pdf → scratchpad)
+    etiqueta_propuesta: cero verificado
+    peso: >-
+      Responde la pregunta de sitios_era2 («comprobar si el inventario de
+      Morón 2012 para Falcón incluye Siraba»): NO. El inventario de 2012 no
+      cubre el cerro; el de 2015 (h04) sí.
+
+  - id: h09
+    deuda: 1
+    fuente: 'Zavala Reyes, Miguel (2016). «Registro y documentación de los petroglifos de la quebrada de Chirache-Buenevara, estado Falcón». Boletín Antropológico, vol. 33, n.º 90, pp. 37-51'
+    url: https://www.redalyc.org/jatsRepo/712/71243364003/html/index.html
+    autor: Miguel Zavala Reyes
+    anio: 2016
+    cita: >-
+      «La mayor altitud se observa en el Cerro Santa Ana (830 metros en su
+      cúspide).» Estaciones que enumera para la península: «Están en la línea
+      costera de la Península de Paraguaná, en El Supí, Adícora...». Registro
+      «de acuerdo con los instrumentos diseñados por el Instituto de
+      Patrimonio Cultural (IPC)». Bibliografía sin Siraba, Caguao ni
+      Hernández Baño.
+    verificacion: fetchado directo (HTML Redalyc)
+    etiqueta_propuesta: cero verificado para Siraba; atestiguado-moderno para el método IPC
+    peso: 'Zavala Reyes, el autor del 74 % de las citas del lexicón, también registra petroglifos en Paraguaná (Buenevara), pero no los del cerro.'
+
+  # ── Deuda 2 · Pluviometría del cerro por piso ──────────────────────
+  - id: h10
+    deuda: 2
+    fuente: 'Foghin-Pillin, Sergio (2014). «Evidencias de dos sistemas de circulación a meso-escala en la península de Paraguaná, Venezuela». Revista Catalana de Geografia, IV època, vol. XIX, n.º 48, marzo 2014. Departamento de Ciencias de la Tierra, UPEL-Instituto Pedagógico de Caracas'
+    url: https://rcg.cat/contingut/evidencias-de-dos-sistemas-de-circulacin-a-meso-escala-en-la-pennsula-de-paraguan-venezuela
+    autor: Sergio Foghin-Pillin (climatólogo, UPEL)
+    anio: 2014
+    cita: >-
+      «En las cumbreras del cerro Santa Ana, debido a la constante captación
+      de agua directamente de las nubes, la vegetación es de selva nublada,
+      en marcado contraste con los elementos xerofíticos característicos de
+      la mayor parte de la superficie peninsular.» · «Los totales anuales de
+      precipitación disminuyen, en líneas generales, de este a oeste y
+      promedian entre 500 y 250 milímetros, aproximadamente.» · «una
+      evaporación cercana a los 2.000 milímetros anuales» · «Los vientos
+      alisios, con direcciones entre el ENE y el ESE, soplan hacia tierra en
+      la franja litoral oriental.» · Estación usada: Aeropuerto Josefa
+      Camejo, 2012-2013.
+    verificacion: fetchado directo (HTML de la revista)
+    etiqueta_propuesta: atestiguado-moderno (climatólogo, revista académica catalana, texto directo)
+    peso: >-
+      ⭐⭐ Es el eslabón que faltaba en su versión de MECANISMO: la cumbre
+      capta agua «directamente de las nubes» (lluvia horizontal, en la
+      terminología del proyecto «neblina»). NO mide cuánto llueve en el cerro
+      frente al llano: la cadena queda con el mecanismo atestiguado y la
+      magnitud hipotética.
+
+  - id: h11
+    deuda: 2
+    fuente: 'Tamayo, Francisco (1971). «El Cerro Santa Ana de Paraguaná, Monumento Natural». Defensa de la Naturaleza 3:35-40'
+    url: https://es.wikipedia.org/wiki/Vertebrados_terrestres_del_Cerro_Santa_Ana_(Paraguan%C3%A1)
+    autor: Francisco Tamayo (botánico; es la misma vía por la que Antolínez llega al dueño Capo, antolinez-1946)
+    anio: 1971
+    cita: >-
+      Vía Wikipedia es («Vertebrados terrestres del cerro Santa Ana»), que lo
+      cita como referencia [5] para los cinco pisos: xerofítico (espinar,
+      ~300 m de banda), tropofítico (bosque caduco montano, ~250 m),
+      hidrofítico mesotérmico (selva nublada, ~150 m; «vegetación exuberante»,
+      suelo pantanoso con detritus y humus, árboles de 10-15 m), matorral
+      antillano (~100 m) y seudoparamero (~50 m).
+    verificacion: segunda mano (Wikipedia cita a Tamayo; el artículo de 1971 no está en línea)
+    etiqueta_propuesta: atestiguado-moderno de segunda mano; fuente primaria a localizar en biblioteca
+    peso: >-
+      Es el origen de los «cinco pisos» que INPARQUES, MINEC y Wikipedia
+      repiten. Con las bandas se puede decir dónde empieza la selva nublada
+      (~550 m según WWF, h14) sin cifra de lluvia.
+
+  - id: h12
+    deuda: 2
+    fuente: 'INPARQUES / Ministerio del Ambiente y de los Recursos Naturales Renovables (1978). «Parques Nacionales y Monumentos Naturales de Venezuela», Caracas, diciembre de 1978 — transcrito por costadevenezuela.com (2009-05-04)'
+    url: https://costadevenezuela.com/2009/05/04/monumento-natural-cerro-santa-ana/
+    autor: INPARQUES/MARNR (1978), vía blog
+    anio: 1978 (transcripción 2009)
+    cita: >-
+      «En la parte Sur del Cerro nace un manantial que corre por una quebrada
+      de frondosa vegetación.» · Del piso tropofítico: «El clima es menos
+      caluroso y la precipitación es mayor que en el piso xerofítico.» · Junto
+      al manantial crecen «contrayerba, cayube, turagua y orumo». · Selva
+      nublada: «una vegetación exuberante, con frondosos árboles de 10 a 15
+      m. de altura», suelo pantanoso.
+    verificacion: fetchado directo (la transcripción declara su fuente de 1978)
+    etiqueta_propuesta: 'atestiguado-moderno (institucional 1978, transcrito por un blog: verificar en el original si aparece)'
+    peso: >-
+      ⭐ Da el GRADIENTE cualitativo («la precipitación es mayor») y localiza
+      un manantial permanente en la cara SUR del cerro, con nombre de sus
+      plantas. Es la «fuente intermitente» de Arcaya, 58 años después y en
+      documento del Estado. Ojo: ya lo citaba barrido_web_medina_2026-09-09
+      para fauna y flora, sin haber visto el pasaje del agua.
+
+  - id: h13
+    deuda: 2
+    fuente: 'La cifra «457,5 mm»: Haiman El Troudi (blog, 2022-09-27) y Wikipedia es «Vertebrados terrestres del cerro Santa Ana» (sin referencia adjunta)'
+    url: https://haimaneltroudi.com/cerro-santa-ana-majestuoso-y-sobresaliente-monumento-natural/
+    autor: Haiman El Troudi (ex ministro; blog sin fuente citada) / Wikipedia
+    anio: 2022
+    cita: >-
+      «Posee una precipitación media anual de 457,5 mm y vientos del este al
+      noreste; así como dos estaciones climáticas bien definidas, la
+      temporada de lluvias (septiembre – enero) y la estación seca (febrero –
+      agosto).» · «En los alrededores del Monumento Natural Cerro Santa Ana el
+      clima es semiárido, con temperaturas de 22º C en las zonas altas y de
+      35º C en las zonas bajas, durante el día.» · «hospeda subcuencas que
+      proveen de agua los acuíferos subterráneos». Wikipedia: «La Serranía de
+      Santa Ana posee una precipitación media anual de 457,5 mm y una
+      temperatura media anual de 27 °C» (sin referencia).
+    verificacion: ambas páginas fetchadas directo; la búsqueda «"457,5 mm" "Santa Ana" Paraguaná» no devolvió fuente primaria
+    etiqueta_propuesta: hipotético como CIFRA (sin estación, sin período, sin autor); la comparación sí es sugerente
+    comparacion: >-
+      Si fuera cierta, el cerro (457,5) recibiría un 35-45 % más que el llano:
+      Punto Fijo 320 mm (climatedata.org vía en.wikipedia «Punto Fijo»),
+      península 340,2 mm (Foghin-Pillin, «Tiempo y Clima en Venezuela», UPEL,
+      p. 32, vía es.wikipedia «Península de Paraguaná»), Montecano 319 mm
+      (montecano-reserva), Coro 380-417 (ecologia-005). Y «vientos del este
+      al noreste» concuerda con Foghin (ENE-ESE).
+    peso: 'Una cifra que todos repiten y nadie firma. No sube nada; orienta dónde buscar (una estación «Santa Ana» del MARNR/INAMEH).'
+
+  - id: h14
+    deuda: 2
+    fuente: 'Alarcón, Clara. «Northern South America: Northwestern Venezuela» (ecorregión Paraguaná xeric scrub), WWF — vía en.wikipedia «Paraguana xeric scrub»'
+    url: https://en.wikipedia.org/wiki/Paraguana_xeric_scrub
+    autor: Clara Alarcón (WWF)
+    anio: s. f. (consultado por Wikipedia en 2017)
+    cita: >-
+      «Annual rainfall on the Paraguaná Peninsula is usually less than 300
+      millimetres» · «thorny plants at elevations of 0–300 metres, deciduous
+      forests at 300–550 metres, cloud forests at 550–700 metres, scrubland
+      with small bush-like trees at 700–800 metres and páramo-like vegetation
+      with dwarf woody plants at 800–830 metres».
+    verificacion: fetchado directo (Wikipedia en, con la referencia identificada)
+    etiqueta_propuesta: atestiguado-moderno (WWF, de segunda mano por Wikipedia)
+    peso: 'Pone cotas de altura a los pisos de Tamayo: la selva nublada empieza a ~550 m. Útil para el bloque [Tu tierra]: «arriba de la mitad del cerro, la nube».'
+
+  - id: h15
+    deuda: 2
+    fuente: 'Fundación Empresas Polar, «Biodiversidad en Venezuela», tomo 2, capítulo «Selvas y bosques de montaña» (Centro de Investigaciones Ecológicas)'
+    url: https://bibliofep.fundacionempresaspolar.org/media/17051/libro_bio_t2_047.pdf
+    autor: FEP / CIE
+    anio: s. f.
+    cita: 'Por extracto del buscador: la selva nublada del cerro Santa Ana se forma a baja altitud por la influencia de masas de aire marino húmedas.'
+    verificacion: por extracto; es PDF → no descargado
+    etiqueta_propuesta: atestiguado-moderno por extracto (obra de referencia; verificar al descargar)
+    peso: 'Segunda voz científica para el mecanismo de h10, en una obra que el proyecto ya usa (Polar: arifuque, glosario del maíz).'
+
+  - id: h16
+    deuda: 2
+    fuente: 'Zavala Reyes et al. 2018 (PDF en el repo) y Koinonia/Agroecología Global 2021 (Rodríguez, Díaz-de-Arends y Wingfield, «Revisión del género Agave en Venezuela»)'
+    url: https://fundacionkoinonia.com.ve/ojs/index.php/agroecologiaglobal/article/view/1657
+    autor: varios
+    anio: '2018 / 2021'
+    cita: 'Zavala 2018: grep «chamuriana|siraba|santa ana|capubana|misaray|calendario|almanaque|petroglif» → 0. Koinonia 1657: el artículo es sobre Agave en bosques xerofíticos de Falcón; no menciona el cerro ni su clima.'
+    verificacion: medido (repo) / fetchado directo
+    etiqueta_propuesta: ceros verificados
+    peso: 'El extracto del buscador atribuía a Koinonia una lista de la selva nublada (Alsophila, Hymenophyllum…): era de otra página no identificada. Cero de cobertura, no de la flora.'
+
+  # ── Deuda 3 · El caimán de la costa y la baba en Paraguaná ─────────
+  - id: h17
+    deuda: 3
+    fuente: 'Seijas, Andrés E.; Barros, Tito; Babarro, Ricardo (2015). «Caimán de la Costa, Crocodylus acutus». En: J. P. Rodríguez, A. García-Rawlins y F. Rojas-Suárez (eds.), Libro Rojo de la Fauna Venezolana, 4.ª ed., Provita y Fundación Empresas Polar, Caracas'
+    url: https://www.especiesamenazadas.org/taxon/chordata/reptilia/crocodilia/crocodylidae/crocodylus/caiman-de-la-costa
+    autor: Seijas, Barros y Babarro
+    anio: 2015
+    categoria: En Peligro
+    cita: >-
+      «Venezuela cuenta con registros recientes e históricos que indican la
+      presencia de C. acutus a lo largo de la costa Caribe desde la Guajira
+      hasta el extremo de la península de Paria, así como en la cuenca del
+      lago de Maracaibo.» · «Se cree que había muchos ejemplares [...] en los
+      más importantes que drenan hacia la costa del Caribe, a saber, Tocuyo,
+      Aroa, Yaracuy, Tuy y Unare, así como en zonas costeras con presencia de
+      manglares como las ciénagas de los Olivitos, el río Limón (Zulia);
+      Hueque, Cuare y Morrocoy (Falcón) y Laguna de Tacarigua (Miranda)
+      (Maness 1982, Medem 1983, Pirela 1991, Arteaga y Herrera 1997, Barros
+      et al. 2005, Seijas 2011).» · «A partir de 1980, la presencia de C.
+      acutus en Venezuela ha sido confirmada en más de treinta localidades...»
+    verificacion: fetchado directo (edición en línea del Libro Rojo)
+    etiqueta_propuesta: >-
+      atestiguado-moderno para Falcón ORIENTAL (Hueque, Cuare, Morrocoy) y
+      para la costa en general; CERO para Paraguaná y Guaranao: la ficha de
+      especie no las nombra. «Desde la Guajira hasta Paria» incluye la
+      península sólo por geometría, no por registro.
+    peso: >-
+      ⭐⭐ Es la fuente científica e institucional que la deuda pedía, y lo que
+      dice es una negativa bien medida: el caimán de la costa está en Falcón,
+      pero ninguna localidad conocida es paraguanera.
+
+  - id: h18
+    deuda: 3
+    fuente: 'Seijas, A. E.; Barreto, R.; Seguía, F.; Pantoja, D.; Pérez, E.; Rodríguez, L.; Adrianza, J.; Mendoza, J. M. (2017). «El caimán de la costa (Crocodylus acutus) en la región Tucurere-Golfo Triste, Venezuela». Boletín de la Academia de Ciencias Físicas, Matemáticas y Naturales, LXXVII (2-3): 203-214'
+    url: https://acfiman.org/boletines_articulos/el-caiman-de-la-costa-crocodylus-acutus-en-la-region-tucurere-golfo-triste-venezuela/
+    autor: Seijas et al.
+    anio: 2017
+    cita: >-
+      «Se define la Región Tucurere-Golfo Triste (RTGT) como aquella que va
+      desde la parte baja del Río Tucurere (San Juan de los Cayos, estado
+      Falcón) hasta la parte baja del Río Yaracuy (estados Yaracuy y
+      Carabobo).» Muestreos en el río Tocuyo (2012 y 2013).
+    verificacion: página HTML fetchada directo; PDF (acfiman.org/wp-content/uploads/2023/02/bacfiman77.2-3.203.pdf) no descargado
+    etiqueta_propuesta: atestiguado-moderno (Falcón oriental); no toca Paraguaná
+    peso: 'Confirma dónde está la población falconiana: al este, de San Juan de los Cayos hacia Yaracuy. A 250 km de Guaranao.'
+
+  - id: h19
+    deuda: 3
+    fuente: 'GBIF (agregador; incluye iNaturalist research-grade y eBird) — consulta de ocurrencias de Crocodylus acutus y Caiman crocodilus'
+    url: https://api.gbif.org/v1/occurrence/search?scientificName=Crocodylus%20acutus&country=VE&stateProvince=Falc%C3%B3n&limit=50
+    autor: GBIF / iNaturalist
+    anio: '2012-2026'
+    cita: >-
+      Crocodylus acutus en Falcón: 9 registros, TODOS entre 10,71-10,96 N y
+      −68,22/−68,33 O (Morrocoy-Tucurere), iNaturalist research-grade,
+      2012-2026. Polígono de Paraguaná (11,5-12,3 N / −70,4 a −69,6 O):
+      Crocodylus acutus → 0; Caiman crocodilus → 0. iNaturalist directo
+      (radio 45 km en torno a 11,75 −70,0): 0 y 0.
+    verificacion: APIs abiertas fetchadas directo (cuatro consultas)
+    etiqueta_propuesta: cero verificado con variantes (dos bases, dos especies, dos geometrías)
+    peso: >-
+      El vacío es de registro, no de imposibilidad: la especie es
+      criptica y la península está poco muestreada. Pero vale como negativa
+      medida: en 2026 nadie ha subido un cocodriliano de Paraguaná a las
+      bases abiertas.
+
+  - id: h20
+    deuda: 3
+    fuente: 'La nota de prensa «Un caimán fue atrapado en plena vía pública de Punto Fijo» (archivo.entornointeligente.com, art. 9013904) — única referencia de Wikipedia para los «cocodrilos de la costa (Crocodylus acutus)» de la laguna'
+    url: https://archivo.entornointeligente.com/articulo/9013904/Un-caiman-fue-atrapado-en-plena-via-publica-de-Punto-Fijo/
+    autor: Entorno Inteligente (agregador de prensa), sin fecha visible (Wikipedia la consultó el 2020-02-29)
+    anio: '≤2020'
+    cita: 'Sin texto: el servidor devuelve 522 (dos intentos); Wayback no es accesible desde la herramienta; la búsqueda del título entre comillas → 0 resultados propios.'
+    verificacion: cero de acceso, no de existencia
+    etiqueta_propuesta: >-
+      hipotético para «Crocodylus acutus en Guaranao»: la especie de un
+      «caimán» de prensa venezolana suele ser baba (Caiman crocodilus) y
+      nadie la determinó. atestiguado-moderno DÉBIL para «hubo un caimán en
+      Punto Fijo» (existió la noticia, Wikipedia la citó).
+    peso: >-
+      🔴 La ficha laguna-guaranao-parque subió «los dos caimanes» a
+      atestiguado-moderno sobre esta base. La base es una nota muerta que
+      nadie del proyecto leyó. Degradar.
+
+  - id: h21
+    deuda: 3
+    fuente: 'Seijas, A. E. (1986). «Situación actual del caimán de la costa, Crocodylus acutus, en Venezuela». Crocodiles. Proceedings of the 7th Working Meeting of the Crocodile Specialist Group (Caracas, 1984), IUCN, Gland, pp. 96-108 — y del mismo autor «Situación actual de las poblaciones de babas y babillas (Caiman crocodilus) en la región norte-costera de Venezuela» (mismas actas) y «Coexistencia de babas y caimanes en la región costera venezolana»'
+    url: https://www.iucncsg.org/365_docs/attachments/protarea/c98eb5a855af925b21d8743ab10c6f3e.pdf
+    url_2: https://www.academia.edu/1846873/
+    autor: Andrés E. Seijas
+    anio: 1986
+    cita: >-
+      Por extracto del buscador: de las localidades del rango histórico
+      visitadas en la costa (1979-1984), la presencia se confirmó sólo en
+      14, con 293 caimanes mayores de un año y 35 adultos. Babas: la
+      población de la cuenca de Maracaibo pertenece a una subespecie «que se
+      extiende hacia el este hasta el río Yaracuy»; donde coexisten, la
+      densidad de babas es baja.
+    verificacion: por extracto; academia.edu → 403; ResearchGate → 403 (como en el intento anterior del repo); el PDF de las actas no se descargó
+    etiqueta_propuesta: pendiente (descarga a autorizar); si el texto nombra Paraguaná, sube la deuda entera
+    peso: >-
+      Es LA fuente que la deuda citaba como 403. Está en abierto en las actas
+      del CSG (PDF). Y la nota sobre babas dice algo útil sin leerla: la
+      subespecie de la cuenca de Maracaibo llega hasta el Yaracuy, o sea que
+      una baba de Paraguaná sería de esa población — plausible, no registrada.
+
+  - id: h22
+    deuda: 3
+    fuente: 'Actas de la 17.ª reunión del Crocodile Specialist Group (IUCN) — pasaje sobre una población «in an arid zone of Falcón State»'
+    url: https://www.iucncsg.org/365_docs/attachments/protarea/17th-fd70721f.pdf
+    autor: IUCN CSG (autor del artículo no identificado sin abrir el PDF)
+    anio: '2004 (17.ª reunión)'
+    cita: 'Por extracto del buscador: existe una población de C. acutus en una zona árida del estado Falcón, atribuida a semejanzas de latitud y clima. Localidad no visible en el extracto.'
+    verificacion: por extracto; PDF de 2,4 MB no descargado (cayó en la caché de la herramienta sin abrirse)
+    etiqueta_propuesta: pendiente; «zona árida de Falcón» puede ser Paraguaná, el Golfete o Zazárida — no se sabe
+    peso: 'La pista más cercana a la península. Sólo con el PDF se sabrá cuál zona árida.'
+
+  # ── Deuda 4 · Inventario de la laguna de Guaranao con autoría ──────
+  - id: h23
+    deuda: 4
+    fuente: 'Aular Leal, Luis (2014). «Guaranao, una quebrada convertida en laguna». El Falconiano, 31-01-2014 (reeditado en su blog el 2014-09); fotos de Oniel Gómez; experta consultada: Keysa Sánchez de González, ingeniera forestal (ULA), 33 años en el Ministerio del Ambiente, profesora de Ingeniería Ambiental en la Universidad de Falcón'
+    url: http://luisaularleal.blogspot.com/2014/09/guaranao-una-quebrada-convertida-en.html
+    autor: Luis Aular Leal (periodista) con Keysa Sánchez de González (ingeniera forestal)
+    anio: 2014
+    cita: >-
+      «En su desembocadura inicialmente hubo una salina a la que se aprovechó
+      desde la época precolombina» · «Fue en 1985 cuando el colector de aguas
+      negras que pasa al margen norte de la quebrada se partió en un sector»
+      · «Creció un frondoso manglar en el que habitan muchas especies
+      animales y vegetales» · «En la década de 1970 fue decretado como Parque
+      Metropolitano Guaranao, con administración del Instituto Nacional de
+      Parques» · «La laguna tiene una profundidad máxima de apenas dos
+      metros» · Sánchez de González: «Si se eliminan las aguas servidas que
+      llegan a la laguna, desaparece todo el ecosistema que se ha
+      desarrollado» · La Ordenanza sobre el Control y Preservación del Medio
+      Ambiente del municipio Carirubana prohíbe verter aguas servidas a la
+      laguna. Sin lista de especies.
+    verificacion: fetchado directo (dos veces, la segunda pidiendo textual)
+    etiqueta_propuesta: >-
+      atestiguado-moderno (periodismo regional con experta nombrada) para
+      1985, la profundidad, el decreto de los 70 y el manglar; «desde la
+      época precolombina» es afirmación moderna sobre el pasado (regla 3),
+      corroborada por Arcaya p. 22 sólo en cuanto a la salina.
+    peso: >-
+      ⭐⭐ El hallazgo del barrido. La laguna y el manglar que Miguel recuerda
+      tienen 40 años: son hijos de un colector roto. Lo que había antes era
+      una QUEBRADA con una SALINA en la boca. Para la era 2 eso invierte el
+      sitio: el Guaranao del s. XV es sal, no manglar.
+
+  - id: h24
+    deuda: 4
+    fuente: 'Sentencia n.º 152 del 07-06-2010, Tribunal Tercero de Primera Instancia en Funciones de Control del Circuito Judicial Penal de Falcón, extensión Punto Fijo, asunto IP11-P-2009-004068 (jueza Elda Lorena Valecillos Montilla) — vLex Venezuela'
+    url: https://vlexvenezuela.com/vid/cima-cuarta-ambiente-ambiental-falc-301092190
+    autor: Tribunal Tercero de Control (Punto Fijo)
+    anio: 2010
+    cita: >-
+      «los manglares son usados como botaderos de basura y desperdicios» ·
+      «existe una evidente contaminación ambiental en el área inspeccionada»
+      · «hay un desprendimiento de las terrazas en los acantilados de la
+      ensenada de Guaranao» · Informes que cita: HIDROFALCON (análisis de
+      agua, 25-03-2009), Ministerio del Ambiente (inspección técnica,
+      26-05-2009), Dirección de Salud Ambiental Región XII (15-09-2009),
+      Guardia Nacional Destacamento 44 (19-09-2008). Dispositivo: prohíbe
+      vertidos y desechos, ordena retirar escombros y «reforestación con
+      especies de mangle».
+    verificacion: fetchado directo (vLex, texto de la sentencia)
+    etiqueta_propuesta: atestiguado-moderno (documento judicial con informes técnicos citados); no es inventario
+    peso: 'Es el «documento legal venezolano» que Wikipedia cita. Da la cadena institucional (HIDROFALCON, MinAmb, Sanidad, GN) pero ninguna lista de fauna o flora.'
+
+  - id: h25
+    deuda: 4
+    fuente: 'GBIF — polígono de la laguna (11,66-11,71 N / −70,23 a −70,16 O): 787 registros; 692 del «EOD – eBird Observation Dataset» (Cornell Lab of Ornithology, 2025, doi 10.15468/aomfnb); 30 de «Crustáceos del Museo de Ciencias Naturales de la Universidad Simón Bolívar» (Caribbean OBIS Node, doi 10.15468/a2cxch); el resto de datasets menores'
+    url: https://api.gbif.org/v1/occurrence/search?decimalLatitude=11.66,11.71&decimalLongitude=-70.23,-70.16&limit=0&facet=scientificName&facetLimit=60
+    autor: GBIF / Cornell Lab of Ornithology / MCN-USB
+    anio: '1988-2024 (el 76 % entre 2020 y 2022)'
+    cita: >-
+      Aves (registros): Fregata magnificens 46, Mimus gilvus 45, Coragyps
+      atratus 34, Columbina passerina 28, Melanerpes rubricapillus 26,
+      Nannopterum brasilianum 22, Sicalis flaveola 22, Pelecanus occidentalis
+      18, Thalasseus maximus 17, Pandion haliaetus 16, Cardinalis phoeniceus
+      15, Leucippus fallax 11, Leucophaeus atricilla 10, Actitis macularius 9,
+      Sula leucogaster 9, Egretta thula 4, Tringa flavipes 3, Ardea alba 2,
+      Butorides striata 2, Egretta tricolor 2, Himantopus mexicanus 2 (52
+      especies de aves en total). Phoenicopterus ruber: 1 registro, mayo de
+      2024, localidad «Paraguaná--Laguna de Guaranao» (11,675508 −70,20955),
+      eBird. Otros: Hyale pygmaea 15 y otros anfípodos (MCN-USB), Melipona
+      favosa 11, Gradiconus spp. Cocodrilianos: 0.
+    verificacion: 'API abierta fetchada directo (tres consultas: especies, datasets/años, flamenco)'
+    etiqueta_propuesta: >-
+      atestiguado-moderno (ciencia ciudadana con curaduría de Cornell y
+      colección de museo); reserva: el polígono incluye la ensenada y el
+      puerto, así que Fregata, Sula, Thalasseus y los anfípodos son de la
+      costa, no de la laguna.
+    peso: >-
+      ⭐ El único inventario con autoría y fecha que existe en línea. No
+      sustituye a un plan de manejo, pero mide: la laguna es de garzas,
+      cormoranes, pelícanos, playeros y un flamenco ocasional; el «70 % de
+      las aves caribeñas migratorias» que repiten Wikipedia y venaparaguana
+      no tiene fuente.
+
+  - id: h26
+    deuda: 4
+    fuente: 'López G., Yaritza C. y Piñero Martín, María Lourdes. «Investigación acción participativa como herramienta epistémica en la integración escuela-comunidad para el rescate y conservación de la Laguna de Guaranao en el Sector Bolívar, Municipio Carirubana, Estado Falcón, Venezuela». Multiciencias (LUZ), Redalyc id 90470308'
+    url: https://www.redalyc.org/articulo.oa?id=90470308
+    url_2: https://produccioncientificaluz.org/index.php/multiciencias/article/view/16675
+    autor: López y Piñero
+    anio: s. f. (no visible)
+    cita: 'Por extracto: estudio cualitativo con docentes y alumnos de la E. B. Héctor M. Peña y consejos comunales del sector Bolívar. La página de Redalyc devolvió plantilla vacía y la de LUZ no respondió en 300 s.'
+    verificacion: por extracto; servidores caídos
+    etiqueta_propuesta: no aplica (educación ambiental; no es inventario)
+    peso: 'Fuente académica con autoría sobre la laguna, pero de pedagogía. Se anota para no volver a buscarla.'
+
+  - id: h27
+    deuda: 4
+    fuente: 'Rojas, Yarubit; Jordán, Milagros; Yegres, Francisco; Araujo, José (2013). «Caracterización microbiológica del suelo, agua y aire en el humedal Quebrada de Guaranao, Paraguaná, estado Falcón». Revista de la Universidad del Zulia, año 4, n.º 9, mayo-agosto 2013 (Dialnet 8809847)'
+    url: https://dialnet.unirioja.es/servlet/articulo?codigo=8809847
+    url_2: https://produccioncientificaluz.org/index.php/rluz/article/view/31081
+    autor: Rojas, Jordán, Yegres y Araujo (microbiología ambiental, UNEFM)
+    anio: 2013
+    cita: 'Por extracto: diplococos Gram negativos dominan en agua y aire; Aspergillus flavus y A. niger como hongos principales; diversidad funcional 0,72 (aire), 0,76 (suelo), 0,90 (agua). Dialnet y LUZ rechazaron la conexión.'
+    verificacion: por extracto; servidores caídos; PDF (dialnet.unirioja.es/descarga/articulo/8809847.pdf) no descargado
+    etiqueta_propuesta: no aplica (microbiología; no es inventario de fauna/flora)
+    peso: 'Fija el nombre técnico «humedal Quebrada de Guaranao» en literatura universitaria: la laguna sigue siendo, para la academia, una quebrada.'
+
+  - id: h28
+    deuda: 4
+    fuente: 'Wikipedia es, «Península de Paraguaná» (referencia [3]: Foghin-Pillin, S., «Tiempo y Clima en Venezuela», UPEL, p. 32)'
+    url: https://es.wikipedia.org/wiki/Pen%C3%ADnsula_de_Paraguan%C3%A1
+    autor: Wikipedia / Foghin-Pillin
+    anio: 2026
+    cita: >-
+      «la península de Paraguaná constituye una de las zonas más secas de
+      Venezuela. Enmarcada dentro del medio bioclimático árido y semiárido,
+      se caracteriza por presentar una precipitación media anual de 340,2
+      mm.»[3] · «siendo el mes de noviembre el más lluvioso con un promedio
+      de 83,5 mm.»[3] · Sobre la laguna: «representa un refugio para
+      aproximadamente el 70% de las aves caribe[ñ]as» (sin referencia).
+    verificacion: fetchado directo
+    etiqueta_propuesta: atestiguado-moderno para 340,2 mm (Foghin-Pillin); el 70 % de aves, sin fuente
+    peso: 'Sirve de base del llano para h13 y desmonta el «70 %» como cifra huérfana.'
+
+# ══════════════════════════════════════════════════════════════════════
+# LAS CUATRO DEUDAS — consultas literales, ceros, qué las subiría
+# ══════════════════════════════════════════════════════════════════════
+deudas:
+
+  deuda_1_piedras_del_almanaque:
+    pregunta: '¿Existe una lectura publicada de los petroglifos del cerro de Siraba («Las Piedras del Almanaque», Esteves 1989 p. 60)?'
+    consultas:
+      - 'petroglifos cerro Santa Ana Paraguaná Falcón "Piedras del Almanaque"'
+      - 'petroglifos Siraba Paraguaná Falcón arte rupestre'
+      - '"Piedra de Siraba" Caguao Morón mitología simbología arqueoastronomía'
+      - '"Piedras Parlantes de Siraba" OR "Piedra de Siraba" Caguao Morón petroglifo Santa Ana Paraguaná'
+      - '"Piedra de la Teresa" OR "Piedra del Calendario" petroglifo Cerro Santa Ana Misaray Paraguaná'
+      - '"Piedra de la Teresa" petroglifo Falcón manantial'
+      - '"Capubana" petroglifo OR petroglifos OR "arte rupestre" OR estación Santa Ana Falcón'
+      - '"Hernández Baño" petroglifos Falcón "Santa Ana" OR Siraba OR Paraguaná OR Misaray calendario'
+      - '"Chamuriana" "Santa Ana" Boletín Antropológico Zavala Reyes arqueología Paraguaná toponimia indígena tradición oral'
+      - 'redalyc 71241008006 Boletín Antropológico Falcón petroglifos Santa Ana'
+      - 'Morón "Panorama geológico, paleontológico, arqueológico, histórico y mitológico del estado Falcón" Boletín Antropológico año número páginas'
+      - '"Enrique Acasio" "Piedras Parlantes de Siraba" libro Coro Punto Fijo arqueoastronomía Paraguaná'
+      - 'grep en el repo: Moron_2012 y ZavalaReyes_2018 (pdftotext) → siraba|santa ana|capubana|misaray|almanaque|calendario'
+    hallazgos: [h01, h02, h03, h04, h05, h06, h07]
+    ceros: [h08, h09]
+    lo_que_no_se_encontro:
+      - 'El nombre «Piedras del Almanaque» fuera del repo: 0 en todas las variantes. Es nombre de Esteves (o de sus informantes de 1989); hoy se dice «Piedra del Calendario», «Piedra de Misaray», «Piedra de Siraba», «estación Capubana».'
+      - 'Que las cuatro denominaciones sean la MISMA piedra o el mismo conjunto: nadie lo dice; sólo la lectura de Acasio y de Caguao-Morón lo aclararía.'
+      - 'Hernández Baño 2000 («Petroglifos. Estado Falcón») en línea: 0.'
+      - 'Un inventario del IPC en línea con el código FAL-152: 0 (el código sólo aparece en el extracto de Morón 2015).'
+      - 'Wikipedia es «Cerro Santa Ana (Paraguaná)»: 0 menciones de petroglifos (fetchado).'
+    que_lo_subiria:
+      - 'Descargar y leer Acasio 2023 (PDF de la revista) y BACOA 20 / Cruxentiana 16 (Drive): dan la lectura, el sitio exacto y, quizá, la equivalencia con las «Piedras del Almanaque».'
+      - 'Descargar Morón 2015 (Redalyc, 2,5 MB, acceso abierto): registro de sitios del cerro con códigos del IPC y el nombre Chamuriana.'
+    recomendacion: >-
+      Fusionar la EXISTENCIA (estación «Capubana», Piedra del Calendario en el
+      sendero de Misaray, Piedra de la Teresa junto a un manantial) como
+      atestiguado-moderno en sitios_era2 §Capubana y como adición a la ficha
+      monumento-cerro-santa-ana. NO fusionar la lectura calendárica: es
+      hipotética hasta leerla, y aun leída seguirá siendo arqueoastronomía de
+      autor (regla 2: en duda, degradar). La leyenda de Siraba va a CREENCIA
+      como retro-abstraído, no a ARTE (decisión 2026-08-25). Pedir a Miguel
+      autorizar las tres descargas.
+
+  deuda_2_pluviometria_por_piso:
+    pregunta: '¿Cuánto más llueve en el cerro que en el llano, y hay neblina o lluvia horizontal en la cumbre?'
+    consultas:
+      - 'Cerro Santa Ana Paraguaná precipitación bosque nublado neblina pisos altitudinales'
+      - '"Cerro Santa Ana" Paraguaná precipitación anual mm cumbre estación meteorológica tesis UNEFM vegetación Tamayo'
+      - '"Cerro Santa Ana" Falcón "bosque nublado" OR "neblina" OR "precipitación horizontal" flora vegetación gradiente altitudinal artículo'
+      - '"457,5 mm" OR "457.5 mm" "Santa Ana" Paraguaná Falcón precipitación'
+      - 'Tamayo 1971 "El Cerro Santa Ana de Paraguaná" "Defensa de la Naturaleza" pisos bióticos'
+      - 'Wingfield "Cerro Santa Ana" Paraguaná flora OR vegetación OR "bosque nublado" OR orquídeas OR briofitas UNEFM Coro'
+      - 'Paraguaná precipitación media anual estación "Santa Ana" "Pueblo Nuevo" "Punto Fijo" mm INAMEH OR MARNR datos climáticos'
+      - '"Cerro Santa Ana" Paraguaná niebla OR "lluvia horizontal" OR "precipitación oculta" OR "captación de neblina" bosque nublado costero humedad alisios estudio'
+      - '"agroecologiaglobal" OR "Agroecología Global" Koinonia "Cerro Santa Ana" flora bosque'
+    hallazgos: [h10, h11, h12, h13, h14, h15]
+    ceros: [h16]
+    lo_que_no_se_encontro:
+      - 'Un dato pluviométrico POR PISO (cumbre frente a falda) en ninguna fuente: 0.'
+      - 'Una estación del INAMEH/MARNR en el cerro o en el pueblo de Santa Ana con serie publicada: 0 (la web del INAMEH no expone series).'
+      - 'Una tesis UNEFM/UCV sobre el bosque nublado del cerro: 0 en el índice web.'
+      - 'La fuente primaria de los 457,5 mm: 0 (h13).'
+      - 'Tamayo 1971 en línea: 0 (sólo la referencia, h11).'
+    que_lo_subiria:
+      - 'Tamayo 1971, Defensa de la Naturaleza 3:35-40 (biblioteca; Sociedad Venezolana de Ciencias Naturales).'
+      - 'El capítulo de la FEP (h15) — descarga a autorizar.'
+      - 'Series del INAMEH para Punto Fijo/Josefa Camejo, Pueblo Nuevo y Santa Ana (petición institucional, no web).'
+      - 'La ficha de estación pluviométrica «Santa Ana» del MARNR si existe: sería el origen probable de 457,5.'
+    recomendacion: >-
+      Partir el eslabón hipotético de capubana_agua_y_microclima.yaml en dos:
+      (a) MECANISMO — la cumbre capta agua «directamente de las nubes» (Foghin
+      2014, h10) y la selva nublada se forma a baja altura por masas de aire
+      marino húmedas (FEP, h15, por extracto): sube a atestiguado-moderno;
+      más el gradiente cualitativo de INPARQUES 1978 («la precipitación es
+      mayor», h12) y el manantial del sur del cerro; (b) MAGNITUD — cuánto
+      más llueve: sigue hipotético; la cifra 457,5 mm se anota como
+      circulante sin fuente. Ficha propuesta: foghin-2014-circulacion-paraguana.
+
+  deuda_3_caiman_de_la_costa_y_baba:
+    pregunta: '¿Hay fuente científica o institucional del caimán de la costa (Crocodylus acutus) y de la baba (Caiman crocodilus) en Paraguaná / laguna de Guaranao?'
+    consultas:
+      - 'Crocodylus acutus Venezuela distribución Falcón Paraguaná situación actual caimán de la costa'
+      - '"Crocodylus acutus" Venezuela Falcón scielo OR redalyc distribución "caimán de la costa" Seijas'
+      - 'Libro Rojo fauna venezolana "Crocodylus acutus" caimán de la costa Provita distribución'
+      - 'Seijas 1986 "Situación actual del caimán de la costa" Crocodylus acutus Venezuela IUCN Crocodile Specialist Group proceedings pdf'
+      - '"Crocodylus acutus" OR "caimán de la costa" Paraguaná OR Guaranao OR "Punto Fijo" OR "Golfete de Coro" Falcón registro'
+      - '"Caiman crocodilus" Falcón Paraguaná OR "región costera" distribución babas Venezuela Seijas coexistencia'
+      - '"Situación actual de las poblaciones de babas y babillas" "Caiman crocodilus" "región norte-costera" Venezuela Seijas 2022 Falcón'
+      - 'Seijas "babas y babillas" "Caiman crocodilus" "norte-costera" Venezuela pdf iucncsg OR academia OR scielo'
+      - 'caimán OR baba "laguna de Guaranao" Punto Fijo noticia capturado bomberos Inparques'
+      - 'caimán atrapado "vía pública" "Punto Fijo" Guaranao noticia baba bomberos 2019 OR 2020 OR 2018'
+      - '"Un caimán fue atrapado en plena vía pública de Punto Fijo"'
+      - 'GBIF API: Crocodylus acutus (country=VE, stateProvince=Falcón); Crocodylus acutus y Caiman crocodilus en 11,5-12,3 N / −70,4 a −69,6 O'
+      - 'iNaturalist API: ambas especies, radio 45 km en torno a 11,75 N −70,0 O'
+    hallazgos: [h17, h18, h21, h22]
+    ceros: [h19, h20]
+    lo_que_no_se_encontro:
+      - 'Ninguna cita textual científica o institucional que ponga a Crocodylus acutus en Paraguaná o en Guaranao: 0 en Libro Rojo, ACFIMAN, GBIF, iNaturalist, Wikipedia es (Crocodylus acutus: sólo Morrocoy, >500 ejemplares, por prensa de 2014).'
+      - 'Ninguna cita para Caiman crocodilus en Paraguaná: 0; el rango de la subespecie occidental «hasta el Yaracuy» (h21, extracto) la hace plausible.'
+      - 'La nota de prensa que sostiene a Wikipedia: inaccesible (h20).'
+      - 'SciELO Venezuela con «Crocodylus acutus» Falcón: nada específico de Paraguaná en los resultados.'
+    que_lo_subiria:
+      - 'Seijas 1986 (actas CSG 7, PDF en iucncsg.org) — si su lista de localidades visitadas incluye Paraguaná, aunque sea con cero, tendríamos la negativa de campo.'
+      - 'Actas CSG 17 (h22): saber cuál es la «zona árida de Falcón».'
+      - 'Un informe de INPARQUES o del MINEC sobre fauna del Parque Metropolitano Laguna de Guaranao (la página del parque en inparques.gob.ve devuelve 404).'
+    recomendacion: >-
+      DEGRADAR en sitios_era2 §laguna de Guaranao y en la ficha
+      laguna-guaranao-parque: «caimán» genérico → atestiguado-moderno débil
+      (prensa citada por Wikipedia, sin especie); «cocodrilo de la costa,
+      Crocodylus acutus» → hipotético (ninguna fuente lo registra en la
+      península; el Libro Rojo lo da en Falcón oriental); «baba, Caiman
+      crocodilus» → hipotético-plausible (rango de la subespecie). Ficha
+      propuesta: seijas-2015-caiman-libro-rojo, que sostiene el animal en
+      Falcón y la negativa en Paraguaná.
+
+  deuda_4_inventario_guaranao:
+    pregunta: '¿Hay un inventario de fauna y flora de la laguna de Guaranao con autoría (Alcaldía, INPARQUES, MINEC, tesis) que reemplace a Wikipedia?'
+    consultas:
+      - 'laguna de Guaranao Punto Fijo fauna flora inventario manglar'
+      - '"Laguna de Guaranao" Alcaldía Carirubana decreto parque metropolitano ordenanza aves migratorias'
+      - '"Guaranao" laguna aves censo OR avifauna OR "conteo" OR flamencos Falcón estudio UNEFM OR "Universidad de Falcón" OR INPARQUES'
+      - '"Educación ambiental para la preservación de la laguna de Guaranao" autor UNEFM OR UPEL OR tesis'
+      - '"Guaranao" "parque metropolitano" decreto OR gaceta OR ABRAE OR "Área de Administración Especial" INPARQUES 1979 OR 1978 OR 1976 Punto Fijo'
+      - 'ebird hotspot "Laguna de Guaranao" OR "Guaranao" Punto Fijo Falcón aves especies'
+      - '"Guaranao" manglar OR laguna tesis OR "trabajo de grado" UNEFM OR "Universidad de Falcón" OR UNEFA calidad OR aves OR mangle Punto Fijo pdf'
+      - '"Caracterización microbiológica del suelo, agua y aire en el humedal Quebrada de Guaranao" autores revista UNEFM'
+      - '"Laguna de Guaranao" "investigación acción participativa" OR "rescate y conservación" artículo revista autor'
+      - 'GBIF API: polígono 11,66-11,71 N / −70,23 a −70,16 O, facetas por especie, dataset y año; Phoenicopterus ruber en el polígono'
+    hallazgos: [h23, h24, h25, h26, h27, h28]
+    lo_que_no_se_encontro:
+      - 'Página de INPARQUES del Parque de Recreación Metropolitano Laguna de Guaranao (inparques.gob.ve/parque-de-recreacion-metropolitano-laguna-de-guaranao/): 404.'
+      - 'Número y año del decreto del parque, o Gaceta: 0 («década de 1970», Aular Leal).'
+      - 'Un inventario del MINEC, de la Alcaldía de Carirubana o de una tesis con lista de especies: 0. La monografía «Educación ambiental para la preservación de la laguna de Guaranao» (monografias.com / Scribd 259118960) no tiene autor visible y monografias.com no resolvió DNS.'
+      - 'Hotspot de eBird con ese nombre por buscador: 0 (pero eBird sí tiene registros georreferenciados en la laguna: h25).'
+      - 'Censo Neotropical de Aves Acuáticas (Venezuela 2019): el extracto dice que Adícora fue el sector falconiano con más riqueza y no nombra a Guaranao.'
+    que_lo_subiria:
+      - 'El plan de manejo o ficha de INPARQUES del parque (petición institucional; la web está caída).'
+      - 'Las listas de eBird del hotspot (si existe) o del área, exportadas con fecha: es lo que GBIF ya resume en h25.'
+      - 'Una tesis de la UNEFM o de la Universidad de Falcón (Keysa Sánchez de González es la persona a preguntar).'
+    recomendacion: >-
+      No hay reemplazo institucional; hay COMPLEMENTO con autoría: Aular Leal
+      2014 (h23, con experta) + sentencia 2010 (h24) + GBIF/eBird (h25). Y lo
+      que sí cambia el canon: la laguna, el manglar, los peces y el eventual
+      caimán son un ecosistema POST-1985 (h23, y Wikipedia lo insinuaba con
+      «en la década de 1970 era una salina»). Regla 3: en sitios_era2 §laguna
+      de Guaranao, marcar manglar/caimán/peces como «capa moderna, post-1985»
+      y NO proyectarlos al s. XV; lo que se proyecta es la SALINA en la boca
+      de la quebrada (Arcaya p. 22; Aular Leal «desde la época precolombina»
+      como afirmación moderna). El nodo GUARANAO de la era 2 es un nodo de
+      sal y ensenada, no de manglar. Es decisión de Miguel: los cuatro
+      testimonios suyos del 2026-09-14 describen el sitio que él vio, y ese
+      sitio no existía antes de 1985.
+
+# ══════════════════════════════════════════════════════════════════════
+descargas_a_autorizar:
+  advertencia: 'Nada de esto se descargó. Miguel decide qué entra a fuentes_caquetios/.'
+  lista:
+    - {que: 'Acasio 2023, artículo completo', url: 'https://cienciaenrevolucion.com.ve/index.php/cienciaenrevolucion/article/download/101/122/206', tamano: 'no visible', deuda: 1, prioridad: alta}
+    - {que: 'BACOA n.º 20 (2024) con Caguao y Morón, «La Piedra de Siraba»', url: 'https://drive.google.com/file/d/1gFv1lIj3o2h2Z_AjqYImzdr8gtkX9DfM/view', tamano: 'no visible (número entero)', deuda: 1, prioridad: alta}
+    - {que: 'Cruxentiana n.º 16 (2025), misma pieza', url: 'https://drive.google.com/file/d/1D_7V6uhyTI-wV20_4jy5cObDAVUa6VGM/view', tamano: 'no visible', deuda: 1, prioridad: media}
+    - {que: 'Morón 2015, «Panorama geológico… del estado Falcón», Boletín Antropológico 89:104-126', url: 'https://www.redalyc.org/pdf/712/71241008006.pdf', tamano: '2,5 MB', deuda: 1, prioridad: alta}
+    - {que: 'FEP, Biodiversidad en Venezuela t. 2, cap. «Selvas y bosques de montaña»', url: 'https://bibliofep.fundacionempresaspolar.org/media/17051/libro_bio_t2_047.pdf', tamano: 'no visible', deuda: 2, prioridad: media}
+    - {que: 'Seijas 1986 y Seijas (babas), actas de la 7.ª reunión del CSG (Caracas 1984)', url: 'https://www.iucncsg.org/365_docs/attachments/protarea/c98eb5a855af925b21d8743ab10c6f3e.pdf', tamano: 'no visible', deuda: 3, prioridad: alta}
+    - {que: 'Actas de la 17.ª reunión del CSG (la «zona árida de Falcón»)', url: 'https://www.iucncsg.org/365_docs/attachments/protarea/17th-fd70721f.pdf', tamano: '2,4 MB', deuda: 3, prioridad: media}
+    - {que: 'Seijas et al. 2017, Bol. ACFIMAN 77(2-3):203-214', url: 'https://acfiman.org/wp-content/uploads/2023/02/bacfiman77.2-3.203.pdf', tamano: 'no visible', deuda: 3, prioridad: baja}
+    - {que: 'Rojas et al. 2013, humedal Quebrada de Guaranao (microbiología)', url: 'https://dialnet.unirioja.es/descarga/articulo/8809847.pdf', tamano: 'no visible', deuda: 4, prioridad: baja}
+    - {que: 'Tamayo 1971, Defensa de la Naturaleza 3:35-40', url: 'no en línea', tamano: '—', deuda: 2, prioridad: media, nota: 'biblioteca (SVCN / UCV)'}
+  efecto_secundario: >-
+    WebFetch, al intentar leer tres URL que resultaron ser PDF, guardó el
+    binario en la caché de resultados de la herramienta, FUERA del repo, y
+    no se abrió ninguno: Morón 2012 (260 KB, ya está en fuentes_caquetios/),
+    actas CSG 17 (2,4 MB) y Morón 2015 (2,5 MB). Ruta:
+    C:/Users/migue/.claude/projects/C--Users-migue-OneDrive-Documents-Desarrollo-Curiana-Radio/e151545b-f417-449f-a359-2217e42971dd/tool-results/
+    (webfetch-1789583684345-imuj3y.pdf, webfetch-1789583706616-9oz7wh.pdf,
+    webfetch-1789585946185-g3kpu5.pdf). Miguel decide si se mueven o se borran.
+
+# ══════════════════════════════════════════════════════════════════════
+fichas_propuestas:
+  carpeta: 6-fusion/fichas_propuestas/
+  formato: 'mismo frontmatter que 4-fuentes/ (modelo: monumento-cerro-santa-ana.md, laguna-guaranao-parque.md), estado_minado: propuesto; al fusionar se mueven a 4-fuentes/ y se regenera bibliografia.yaml'
+  lista:
+    - {slug: acasio-2023-capubana-calendario, hallazgo: h01, deuda: 1, por_que: 'la lectura publicada; la estación se llama Capubana'}
+    - {slug: caguao-moron-2024-piedra-de-siraba, hallazgo: h03, deuda: 1, por_que: 'segunda lectura, con Morón; separa mito de lectura'}
+    - {slug: moron-2015-panorama-falcon, hallazgo: h04, deuda: 1, por_que: 'registro de sitios del cerro (FAL-152) y Chamuriana como nombre oral; acceso abierto; ya era pista en petroglifos_y_manaure.yaml §9'}
+    - {slug: foghin-2014-circulacion-paraguana, hallazgo: h10, deuda: 2, por_que: 'el mecanismo de captación de nubes, por un climatólogo, con texto directo'}
+    - {slug: seijas-2015-caiman-libro-rojo, hallazgo: h17, deuda: 3, por_que: 'la fuente científica e institucional del caimán en Falcón, y su cero para Paraguaná'}
+    - {slug: aular-leal-2014-guaranao, hallazgo: h23, deuda: 4, por_que: 'autoría y experta; fecha el ecosistema (1985) y la salina precontacto'}
+    - {slug: gbif-ebird-laguna-guaranao, hallazgo: h25, deuda: 4, por_que: 'el único inventario medido con autoría; misma naturaleza que osm-kaketiana (datos)'}
+
+# ══════════════════════════════════════════════════════════════════════
+hallazgos_laterales:
+  - id: lat-capubana-nombre-vivo
+    que: >-
+      «Capubana» es el nombre VIVO de una estación de arte rupestre en la
+      falda del cerro (Acasio 2023; prensa del Mincyt/VTV). El canon usa
+      Capubana como nombre del cerro (D9, -bana) por Esteves; ahora hay un
+      uso moderno independiente, anterior al proyecto (2023 < 2026), que lo
+      sitúa en la falda y no en la cumbre.
+    destino: 'campaña de topónimos (skill campana-toponimos: un nombre vivo es dato); lectura pendiente de toponimo del cerro'
+  - id: lat-chamuriana-nombre-oral
+    que: >-
+      Morón 2015 (por extracto) da «Chamuriana» como nombre indígena del
+      cerro «conservado en la tradición oral de la península»; el Centro de
+      Historia de Paraguaná (2012) lo da como asentamiento al pie del cerro
+      con «restos de cerámica precolombina» a flor de suelo. El nodo
+      CHAMURIANA de la era 2 gana un apoyo toponímico moderno (retro-abstraído).
+    destino: sitios_era2 §Chamuriana; campaña de topónimos
+  - id: lat-dos-venados
+    que: >-
+      Wikipedia es «Vertebrados terrestres del cerro Santa Ana» (con 93
+      referencias) da DOS cérvidos en el cerro: Mazama gouazoubira (venado
+      cariaquito) y Odocoileus virginianus (venado caramerudo). La ficha
+      monumento-cerro-santa-ana y matacan_venado_2026-09-14.yaml hablan sólo
+      del «venado matacán (Mazama)».
+    destino: matacan_venado_2026-09-14.yaml; ecología del Capubana
+  - id: lat-maba-en-guaranao
+    que: 'Melipona favosa (la abeja «maba» del dictado de Medina) tiene 11 registros en GBIF dentro del polígono de la laguna de Guaranao.'
+    destino: barrido_web_medina_2026-09-09.yaml (maba ya subió a A; esto es una localidad más)
+  - id: lat-boletin-89
+    que: 'Morón 2015 sale en el MISMO número 89 del Boletín Antropológico que zavala-reyes-2015. El filón del Boletín (petroglifos_y_manaure.yaml §9) tiene ya tres piezas del proyecto en dos números.'
+    destino: petroglifos_y_manaure.yaml §9 (marcar h04 como localizado con referencia completa)
+
+# ══════════════════════════════════════════════════════════════════════
+recomendaciones_de_fusion:
+  - orden: 1
+    que: 'Deuda 4 primero: decidir la capa temporal de la laguna de Guaranao (post-1985) en sitios_era2 y en la ficha laguna-guaranao-parque; fusionar aular-leal-2014-guaranao y gbif-ebird-laguna-guaranao como fuentes.'
+    por_que: 'Es lo único del barrido que cambia el canon en vez de completarlo: el sitio del nodo GUARANAO no es el que se describió.'
+    decide: Miguel
+  - orden: 2
+    que: 'Deuda 3: degradar C. acutus en Guaranao a hipotético; fusionar seijas-2015-caiman-libro-rojo.'
+    por_que: 'Una entrada atestiguado-moderno descansa en una nota de prensa muerta. Regla 2.'
+    decide: Miguel (es re-etiqueta)
+  - orden: 3
+    que: 'Deuda 2: partir el eslabón hipotético en mecanismo (atestiguado-moderno: foghin-2014, INPARQUES 1978) y magnitud (hipotético); fusionar foghin-2014-circulacion-paraguana; anotar 457,5 mm como cifra sin fuente.'
+    por_que: 'La cadena del Capubana pasa de «todo menos uno» a «todo, con la magnitud sin medir». Es honesto y es más fuerte.'
+    decide: escriba puede proponer el texto; Miguel fusiona
+  - orden: 4
+    que: 'Deuda 1: fusionar la existencia de los petroglifos con nombre (estación Capubana, Piedra del Calendario/Misaray, Piedra de la Teresa junto al manantial) como atestiguado-moderno; autorizar las tres descargas (Acasio 2023, BACOA 20, Morón 2015) antes de decir nada de la lectura; la leyenda de Siraba a CREENCIA como retro-abstraído.'
+    por_que: 'Lectura sin leer no se fusiona. Existencia sí.'
+    decide: Miguel (descargas)

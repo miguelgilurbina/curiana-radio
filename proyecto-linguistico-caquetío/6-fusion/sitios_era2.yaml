@@ -1281,7 +1281,10 @@ sitios:
       los dos territorios y de fondo». No está en curiana_agents_era2.SITIOS.
       Entra en este canon porque Miguel la nombró y porque es el sitio que más
       testimonio suyo carga.
-    en_una_frase: 'el espejo de agua salada que da nombre a un clan y no tiene dueño: sal, peces, y los tres testimonios de Miguel'
+    en_una_frase: 'la salina en la boca de una quebrada, y la ensenada que da nombre a un clan y no tiene dueño'
+    # 2026-09-16: la laguna y el manglar de hoy nacieron en 1985 (Aular Leal
+    # 2014); el Guaranao del s. XV es sal y ensenada. Las líneas modernas de la
+    # laguna llevan `proyectable: false` y el cargador no las muestra.
     dominios:
       agua:
         - dato: >-
@@ -1306,11 +1309,12 @@ sitios:
             fuente desde el 2026-09-16: la laguna tiene lisa, corocoro y lenguado,
             además del guaranaro que le da nombre.
           etiqueta: atestiguado
-          capa: 'moderno (ficha abierta el 2026-09-16 por decisión de Miguel, p8); el testimonio era del s. XXI sobre el lugar de hoy'
+          capa: 'moderno POST-1985 (Aular Leal 2014: la laguna nace de un colector roto); NO se proyecta al s. XV'
+          proyectable: false
           procedencia: {obra: laguna-guaranao-parque, pagina: 'Wikipedia es, fauna'}
           estacion: 'todo el año'
           voz_caquetia: {clave: waranaro, capa: caquetío-atestiguado}
-          subio_de: 'testimonio-miguel (2026-09-14) → atestiguado moderno (2026-09-16)'
+          subio_de: 'testimonio-miguel (2026-09-14) → atestiguado moderno (2026-09-16), y el mismo día: post-1985, no proyectable'
       recoleccion:
         - dato: >-
             «hay recolección de corubos». Miguel, 2026-09-14. La glosa del corubo sí
@@ -1344,25 +1348,27 @@ sitios:
             Babahuro (p. 18) y el mapa vivo no etiqueta humedal a menos de 6 km: era
             un cero de cobertura, no de la laguna.
           etiqueta: atestiguado
-          capa: 'moderno (ficha abierta el 2026-09-16, p8); constante del medio proyectable como en ecologia-002'
+          capa: 'moderno POST-1985: «Creció un frondoso manglar» después de que el colector se partiera en 1985 (Aular Leal 2014). NO es constante del medio: no se proyecta al s. XV'
+          proyectable: false
           procedencia: {obra: laguna-guaranao-parque, pagina: 'Wikipedia es, flora'}
           apoyo_en_repo: [ecologia-011, ecologia-023, ecologia-024, ecologia-084]
           estacion: 'todo el año'
-          subio_de: 'testimonio-miguel (2026-09-14) → atestiguado moderno (2026-09-16)'
+          subio_de: 'testimonio-miguel (2026-09-14) → atestiguado moderno (2026-09-16), y el mismo día: post-1985, no proyectable'
           hueco_lexico: true
-          concepto: 'el manglar — `mankaba` existe pero es hipotética (y el perfil era2 la esconde); las cuatro especies y la raíz-zanco siguen sin nombre'
+          concepto: 'el manglar — `mankaba` existe pero es hipotética (y el perfil era2 la esconde); las cuatro especies y la raíz-zanco siguen sin nombre (el hueco vale para el manglar del Golfete, ecologia-011, no para esta laguna)'
         - dato: >-
             ⭐ «hay yararés». Miguel, 2026-09-14 — y el 2026-09-15: «me refería a
             yacaré, me equivoqué yo». El yararé no existía (cero en todo el material,
             correcto); el animal es el caimán, y la laguna tiene los dos: «la baba o
             el caimán de anteojos (Caiman crocodilus)» y «cocodrilos de la costa
             (Crocodylus acutus)».
-          etiqueta: atestiguado
-          capa: 'moderno (ficha abierta el 2026-09-16, p8)'
+          etiqueta: hipotetico
+          capa: 'sólo Wikipedia lo pone aquí; GBIF/iNaturalist: 0 registros de C. acutus y de Caiman crocodilus en el polígono de Paraguaná (2026-09-16); el Libro Rojo 2015 da C. acutus en Falcón oriental sin nombrar la península; y la laguna misma es post-1985'
+          proyectable: false
           procedencia: {obra: laguna-guaranao-parque, pagina: 'Wikipedia es, fauna'}
           apoyo_en_repo: [ecologia-084]
           estacion: 'todo el año'
-          subio_de: 'testimonio-miguel «yararé» (2026-09-14) → atestiguado moderno «caimán» (2026-09-16)'
+          subio_de: 'testimonio-miguel «yararé» (2026-09-14) → atestiguado moderno «caimán» (2026-09-16) → hipotético el mismo día (sin registro)'
           hueco_lexico: true
           concepto: 'el caimán — sin palabra caquetía: `yacare` es «pueblo» en el canon de topónimos (Zavala #279) y `caiman` es taíno, que al tier 1 le llega por la esfera de contacto (p3b)'
           candidatos_a_descartar: >-

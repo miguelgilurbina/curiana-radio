@@ -236,6 +236,18 @@ mundo_era2_sitios_y_clima:
       4-fuentes/laguna-guaranao-parque.md + generar_bibliografia.py; un hecho
       nuevo en ecologia.yaml (la laguna: manglar, caimanes, salina) y las
       líneas de la laguna en sitios_era2.yaml re-etiquetadas. Con las ocho.
+    correccion_2026-09-16: >-
+      Horas después, el rastreo web del cierre del día 1 fechó el ecosistema:
+      Aular Leal 2014 (El Falconiano, con la ing. forestal Keysa Sánchez de
+      González) — la laguna nace en 1985 de un colector de aguas negras roto y
+      el manglar creció después; antes era una quebrada con una salina en la
+      boca. Regla 2 aplicada por el escriba sin esperar: ecologia-084 degradado
+      (lectura + limite), la ficha corregida, las líneas de la laguna con
+      `proyectable: false` (el cargador no las muestra) y el caimán a hipotético
+      (GBIF/iNaturalist: 0 registros en Paraguaná; el Libro Rojo no la nombra).
+      El Guaranao de la era 2 es sal y ensenada. Los testimonios de Miguel
+      siguen siendo ciertos del sitio de hoy. Fusionar la ficha de Aular Leal
+      a 4-fuentes/ lo decide Miguel (6-fusion/fichas_propuestas/).
 
   fallo_del_filtro_de_nombres:
     estado: CORREGIDO (2026-09-16)

@@ -35,8 +35,8 @@ aliases: ["Laguna de Guaranao", "Parque metropolitano Laguna de Guaranao", "lagu
 
 | Dato | Texto | Etiqueta |
 |---|---|---|
-| **Manglar, cuatro especies** | «mangle rojo (*Rhizophora mangle*), el mangle negro (*Avicennia germinans*), el mangle llorón (*Laguncularia racemosa*) y botoncillo (*Conocarpus erectus*)»; alrededor «acacias, cujíes y guayacán», tunas, cardones | atestiguado (moderno) |
-| **Los dos caimanes** | «la baba o el caimán de anteojos (*Caiman crocodilus*)» y «cocodrilos de la costa (*Crocodylus acutus*)» | atestiguado (moderno) |
+| **Manglar, cuatro especies** | «mangle rojo (*Rhizophora mangle*), el mangle negro (*Avicennia germinans*), el mangle llorón (*Laguncularia racemosa*) y botoncillo (*Conocarpus erectus*)»; alrededor «acacias, cujíes y guayacán», tunas, cardones | atestiguado (moderno) — **post-1985, no proyectable** (ver corrección) |
+| **Los dos caimanes** | «la baba o el caimán de anteojos (*Caiman crocodilus*)» y «cocodrilos de la costa (*Crocodylus acutus*)» | **hipotético**: sólo esta página lo dice; GBIF/iNaturalist dan 0 registros de ambas especies en Paraguaná (2026-09-16) y el Libro Rojo 2015 da *C. acutus* en Falcón oriental sin nombrar la península |
 | Peces y demás fauna | lisa, corocoro, lenguado; tortugas, serpientes, aves, tarántulas | atestiguado (moderno) |
 | **La salina** | «En la década de 1970 era una salina utilizada antiguamente por los indios caquetíos» | atestiguado (moderno) como dato del s. XX; **la atribución a los caquetíos es afirmación moderna sobre el pasado** (regla 3) — la salina precontacto la sostiene [[arcaya-1920]], p. 22 |
 | De salina a laguna salobre | «se descubrieron manantiales de agua dulce que la convirtieron en un ambiente salobre» | atestiguado (moderno) |
@@ -45,11 +45,26 @@ aliases: ["Laguna de Guaranao", "Parque metropolitano Laguna de Guaranao", "lagu
 
 ## Lo que vale para el proyecto
 
-- **Los testimonios de Miguel tenían razón y ahora tienen fuente.** Manglar
-  (cuatro especies con nombre), caimán (los dos: baba y cocodrilo de la
-  costa), peces y salina: los cuatro suben de `testimonio-miguel` a
-  `atestiguado (moderno)` en el canon de sitios de la era 2. El «yararé» era
-  un lapsus por *yacaré*: por eso daba cero en todas las fuentes.
+> ⚠️ **Corrección, el mismo 2026-09-16 (regla 2: en duda, degradar).** El
+> rastreo web del cierre del día 1 halló la fecha del ecosistema: Aular Leal
+> 2014 (*El Falconiano*, con la ing. forestal Keysa Sánchez de González, 33
+> años en el Ministerio del Ambiente; ficha propuesta en
+> `6-fusion/fichas_propuestas/aular-leal-2014-guaranao.md`) — «En su
+> desembocadura inicialmente hubo una salina…»; «Fue en 1985 cuando el
+> colector de aguas negras que pasa al margen norte de la quebrada se partió
+> en un sector… hasta hacerlo la laguna que existe hoy»; «Creció un frondoso
+> manglar». Esta misma página lo insinuaba (manantiales que la volvieron
+> salobre; aguas servidas hacia 1980). **La laguna y el manglar tienen
+> cuarenta años**: describen el sitio que Miguel vio, no el del s. XV. Para
+> la era 2, Guaranao es **sal y ensenada** (la salina en la boca de una
+> quebrada, [[arcaya-1920]] p. 22). El caimán baja a hipotético: 0 registros
+> en GBIF/iNaturalist para la península y el Libro Rojo no la nombra.
+
+- **Los testimonios de Miguel tenían razón sobre el sitio de hoy, y ahora
+  tienen fuente y fecha.** Manglar, caimán y peces son `atestiguado (moderno)`
+  como descripción del presente y **no se proyectan**; la salina sí, por
+  Arcaya. El «yararé» era un lapsus por *yacaré*: por eso daba cero en todas
+  las fuentes.
 - **La salina corrobora a Arcaya**, que da las salinas de Guaranao como «las
   más importantes» de Paraguaná (p. 22). Es la segunda fuente, independiente,
   y moderna: vale como constante del medio (ecologia-002), no como dato de
