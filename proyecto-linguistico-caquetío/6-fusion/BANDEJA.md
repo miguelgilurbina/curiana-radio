@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-16**.
 
-**2566 ítems propuestos** en 62 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
+**2578 ítems propuestos** en 63 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -46,6 +46,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-09-14.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-15.yaml` | ? | 0 |  |
 | `elenco_era2.yaml` | varias | 63 |  |
+| `esteves_paginas_releidas_2026-09-16.yaml` | esteves-1989 | 12 |  |
 | `esteves_parte2_falcon.yaml` | esteves-1989 | 16 |  |
 | `estructura_social_era2.yaml` | varias | 17 |  |
 | `frase_saludo_mitare.yaml` | ? | 2 |  |
@@ -113,6 +114,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 
 | Archivo | Qué es |
 |---|---|
+| `comentario-122-frase-cardinal-oliver.md` | Comentario para #122 — la frase cardinal de Oliver, releída en las dos ediciones |
 | `decision-d11-fase3-nucleo-lokono-achagua.md` | D11 fase 3: el núcleo re-derivado desde lokono + achagua, y un perfil de run para medirlo |
 | `mundo-era2-sitios-y-clima.md` | El mundo de la era 2, atado a los nodos: sitios y clima |
 

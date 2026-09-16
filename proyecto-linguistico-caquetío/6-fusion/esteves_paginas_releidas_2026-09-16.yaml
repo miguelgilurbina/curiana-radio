@@ -1,0 +1,474 @@
+# ─────────────────────────────────────────────────────────────────────────
+# RELECTURA EN IMAGEN — tres páginas de Esteves 1989 que el OCR destruyó
+#
+# Deuda declarada por la campaña de sitios y clima del 2026-09-14
+# (6-fusion/sitios_era2.yaml §lo_que_no_se_encontro): dos páginas del OCR
+# salen invertidas e ilegibles (p. 42 y p. 101) y la entrada CAYUDE (p. 30)
+# está medio destruida, siendo El Cayude un sitio de la era 2.
+#
+# Regla 5: PROPONE. No toca curiana_lexicon.py, lexicon_*.py, 3-mundo/corpus/,
+# 2-lengua/toponimos.yaml ni 4-fuentes/. Regla 2: una etiqueta por dato y, en
+# duda, degradar. Regla 6: los ceros de abajo se verificaron con variantes.
+# Protocolo: leer-fuente §3 (pymupdf, recorte a 200-400 dpi, PNG desechable;
+# la lectura va aquí). Las transcripciones son LITERALES, con la ortografía
+# y la puntuación de la imprenta; lo que la imagen no decide va entre
+# [corchetes] y en `dudas`.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-09-16'
+  estado: sin-fusionar
+  obra: esteves-1989
+  quien: escriba (Claude), agente minador, a encargo de la campaña de sitios y clima
+  pregunta: >-
+    ¿Qué dicen, tal como están impresas, las entradas de Esteves 1989 que
+    el OCR del repo no deja leer: p. 42 (Guaricure, Guaruguaja, Guasare,
+    Guatacare, Guayacanal), p. 101 (Ceiba, Cerey, «Cibita», Cocorote,
+    Cocuiza, «Cocuy») y p. 30 (Cayude)? Y a qué esfera va cada cosa.
+  como_se_localizo_cada_pagina: >-
+    Por el OCR se acotó el índice del PDF (la cabecera «=== pdf N · impresa
+    N ===» del OCR NO es la página impresa; «impresa» ahí repite el índice
+    del PDF) y se confirmó en la imagen leyendo el número de pie. Las dos
+    páginas «ilegibles» están escaneadas boca abajo (el OCR lee el logo de
+    CamScanner como «IJoIUULIQUIEJ e)»): se giraron 180° antes de leerlas.
+    Ojo con pymupdf: ni `Matrix.prerotate(180)` ni `page.set_rotation(180)`
+    giraron el pixmap cuando se rendía con `clip`; lo que funcionó fue girar
+    el PNG con PIL (`Image.rotate(180)`). CAYUDE no está invertida: tiene una
+    banda desvaída en mitad de cada línea; se recortó a 300 y 400 dpi con
+    autocontraste y aun así dos tramos no se deciden.
+  desfase_pdf_impresa_medido:
+    - {tomo: Esteves_1989_Toponimos_Paraguana_2.pdf, pdf: 17, impresa: 42, desfase: '+25', prueba: 'pie «42» en la imagen; el pdf 16 cierra con el pie «41» (OCR l. 638)'}
+    - {tomo: Esteves_1989_Toponimos_Paraguana_2.pdf, pdf: 5, impresa: 30, desfase: '+25', prueba: 'pie «30» en la imagen y en el OCR (l. 192)'}
+    - {tomo: Esteves_1989_Toponimos_Paraguana_5.pdf, pdf: 1, impresa: 101, desfase: '+100', prueba: 'pie «101» en la imagen (el OCR lo lee «101» invertido en la l. 5); el pdf 2 cierra con el pie «102» (OCR l. 92)'}
+  nota_para_la_skill: >-
+    campana-toponimos §2 da los desfases de los tomos 1-3 (+6, +25, +55) y
+    esteves_parte2_falcon.yaml el del tomo 4 (+72). El del tomo 5 es +100
+    (medido aquí). El del tomo 6 sigue sin medir. No se editó la skill:
+    lo decide Miguel.
+  correcciones_a_la_deuda_declarada:
+    - 'La p. 101 no tiene entrada COCUY: la cabecera es COCUYAL (colectivo castellano en -al, como Guayacanal), y su glosa habla de fibra, no de bebida. La «de bebida» que la campaña esperaba no está en esta página: vive en Zavala #87 (kokuy «penca… vino agradable») y en el barrido web (cocuy pecayero).'
+    - 'No hay «Cibita»: la cabecera impresa es CIBIRA («Sibira, con "s", es un apellido, posiblemente indígena»).'
+    - 'La p. 101 es de la PARTE II (otros topónimos de Falcón): ninguna de sus seis entradas es de Paraguaná. Regla 4: Mitare y Pueblo Cumarebo caen dentro de la polity costera; Acosta, Federación, Mauroa y Petit, no.'
+  verificado_en_imagen: 'pp. 30, 42 y 101 — 2026-09-16'
+
+# ══════════════════════════════════════════════════════════════════════
+# LAS ENTRADAS, tal como están impresas
+# ══════════════════════════════════════════════════════════════════════
+entradas:
+
+  # ─────────────────────────── p. 42 (tomo 2, pdf 17) ───────────────────
+  - forma: Guaricure
+    cabecera_impresa: GUARICURE
+    pagina_impresa: 42
+    pdf: {tomo: 2, pagina: 17}
+    transcripcion_literal: >-
+      Lugar del municipio Moruy. No tenemos más noticias.
+    legibilidad: 'entera; la única línea de la entrada está algo borrosa pero se lee completa'
+    en_el_repo:
+      canon: 'no está (toponimos_esteves_indice.yaml: por_procesar)'
+      mapa_vivo: '0 en toponimos_mapa_kaketiana.yaml (buscado Guaricure, Guaricur, Guasicure ≠)'
+      menciones: 'toponimia_paraguana_miguel.yaml l. 128 lo lista entre los cur- de Paraguaná «con otros morfemas»'
+    propuestas:
+      toponimos:
+        accion: entrada nueva en lexicon_toponimos.py
+        nivel_propuesto: 'C, o descartado con observación — lo decide el fusionador'
+        por_que: >-
+          Esteves da referente (municipio Moruy) y NINGUNA glosa. La regla de
+          la campaña manda «descartado». Lo que lo sube a C es que cierra la
+          mitad de la ecuación por el otro lado: termina en -cure como
+          Guasicure (el clan de Caseto), Yacure y Casicure/Caçicure, que
+          Oliver segmenta kasik-ure «lugar de habitación, homeland» (DOC 262).
+          -ure es morfema del canon con conflicto declarado (raíz / sitio de).
+        observacion: >-
+          Está en el municipio Moruy: es un lugar del nodo GUARANAO de la era
+          2, a la vista de la casa del Manaure. Un nombre sin glosa que
+          sobrevive en el gazeteer de 1989 y no en OSM 2026.
+        lecturas_propuestas:
+          - tipo: hipotesis
+            lectura: 'guari- ~ guariana «tabaco pescador o tabacón» (Esteves p. 28, Cariguariana) + -cure ~ -ure: ¿sitio de tabacones?'
+            quien: proyecto (escriba)
+            fecha: '2026-09-16'
+            eje: significado
+            validacion: 'BAJA: guari- sólo alinea por forma, sin glosa de fuente para este nombre; es lo que minar-fuente §2 llama parecido sin filtro de significado. Subiría si otra fuente glosa Guaricure.'
+        etiqueta: hipotetico
+      lexicon: 'nada: no hay voz'
+      ecologia: 'nada'
+
+  - forma: Guaruguaja
+    cabecera_impresa: GUARUGUAJA
+    pagina_impresa: 42
+    pdf: {tomo: 2, pagina: 17}
+    transcripcion_literal: >-
+      Fundo pecuario en las cercanías de la población de El Vínculo,
+      municipio Pueblo Nuevo. En Jadacaquiva hay otro lugar con el nombre
+      de Guaraguaro que tiene el mismo significado de Guaraguaja.
+
+      Guaraguaja, o guaraguara, plural por duplicación, significa
+      cunarejal. Guar[a], en caquetío, es el voltúrido que llamamos
+      cunareja, ave mayor que el zamuro, de vuelo majestuoso, con plumones
+      blanquecinos en la punta de las alas y el occipucio de color rojo,
+      desprovisto de plumas.
+    legibilidad: 'entera salvo una letra (ver dudas); es la zona más borrosa de la página'
+    dudas:
+      - que: 'la cabecera dice GUARUGUAJA (con -ru-) y el cuerpo Guaraguaja (con -ra-) las dos veces: vacilación de la imprenta, no del lector; se transcriben las dos como están'
+        resuelta: 'sí (se registran ambas grafías)'
+      - que: '«Guar[a], en caquetío»: la última letra no se decide entre a y u a 200 dpi. La ficha 4-fuentes/esteves-1989.md (pp. 41-43, leídas antes) dio «guara»; guaraguara y cunarejal apoyan la a'
+        resuelta: parcialmente
+    en_el_repo:
+      canon: 'no está (por_procesar)'
+      mapa_vivo: 'El Vínculo sí: OSM 12.069, −69.950 (norte de la península); Guaruguaja y Guaraguaro, 0'
+      lexicon: 'guara «ave» NO está. Ojo: tras D5 (gua→wa) su lema sería wara, y `wara` ya existe como intensificador «muy, mucho» (caquetío-reconstruido, curiana_lexicon.py:135): colisión de homógrafos a declarar'
+      corpus: '0 de cunareja/oripopo en ecologia.yaml; el zamuro sí (ecologia l. 324)'
+    propuestas:
+      toponimos:
+        accion: entrada nueva en lexicon_toponimos.py
+        nivel_propuesto: 'C (sube a B si el fusionador cuenta guara como morfema con recurrencia ≥ 2: Guaruguaja y Guaraguaro, misma glosa)'
+        segmentacion: 'guara + guara (reduplicación = plural, explícita en Esteves: cuarto caso tras Sarosaro y Barabara) + -ja / -ro sin despejar'
+        glosa_fuente: 'cunarejal'
+        observacion: 'fundo pecuario (ganadería: colonial o moderna, regla 3). Dos lugares con el nombre: cerca de El Vínculo (Pueblo Nuevo, norte) y Guaraguaro en Jadacaquiva'
+        etiqueta: hipotetico
+      lexicon:
+        accion: 'propuesta de entrada nueva'
+        lema_propuesto: 'guara (forma_fuente) / wara tras D5 — con la colisión declarada en notas'
+        sig: 'ave voltúrida, la cunareja: mayor que el zamuro, plumones blanquecinos en la punta de las alas, occipucio rojo sin plumas'
+        cat: sust
+        fuente_propuesta: caquetío-hipotetico
+        por_que_esa_etiqueta: >-
+          Esteves lo atribuye «en caquetío», pero es cronista, fuente única y
+          sin documento (regla práctica de la ficha: sus glosas entran como
+          hipotético). Por la misma vía —Zavala con sigla E— otras voces suyas
+          están como atestiguadas; eso es una inconsistencia previa del
+          lexicón, no razón para subir ésta. Sube a reconstruido si aparece
+          cognado (nada en el repo: 0 de «guara/wara» ave en lokono, wayuu,
+          achagua).
+        identificacion_del_ave: 'HIPÓTESIS del escriba, no de Esteves: la descripción (cabeza roja sin plumas, mayor que el zamuro, rémiges claras) cuadra con el oripopo, Cathartes aura; se anota para que ecología lo compruebe, no como dato'
+        procedencia: {obra: esteves-1989, pagina: '42'}
+      ecologia:
+        accion: 'hecho nuevo para ecologia.yaml, fauna'
+        contenido: 'Ave carroñera distinta del zamuro, nombrada en la toponimia de Paraguaná (Guaruguaja, Guaraguaro = cunarejal): mayor que el zamuro, occipucio rojo desnudo, plumones blanquecinos en la punta de las alas, «de vuelo majestuoso».'
+        etiqueta: atestiguado
+        capa: 's. XX (Esteves); el ave como referente, no la voz'
+        procedencia: {obra: esteves-1989, pagina: '42'}
+
+  - forma: Guasare
+    cabecera_impresa: GUASARE
+    pagina_impresa: 42
+    pdf: {tomo: 2, pagina: 17}
+    transcripcion_literal: >-
+      Sitio en el Istmo de Médanos, municipio Baraived. Guasare es un
+      árbol cactáceo. Ánimas de Guasare es el bautizo popular que ha
+      recibido ese sitio y los creyentes han levantado una capilla, a
+      donde llevan "promesas", ofrecidas a esas ánimas milagrosas en
+      momentos de tribulación. Hay la leyenda de que en ese lugar
+      perecieron de hambre todos los miembros de una familia que en
+      tiempos de hambruna se dirigían a Coro desde Paraguaná.
+    legibilidad: entera
+    en_el_repo:
+      canon: 'toponimo-059, nivel descartado (grupo «opacos»), glosa_fuente «Árbol cactáceo», procedencia: null, deuda: sin-procedencia'
+      lexicon: 'lexicon_zavala.py:323 guasare «Árbol cactáceo» (curación manual); la sigla de Zavala para este tipo de voz es E = Esteves, así que ES esta página (control de transmisión, no segunda atestación — esteves_parte2_falcon.yaml §independencia)'
+      corpus: '0 de «Ánimas», «Guasare» y «hambruna» en 3-mundo/corpus/'
+    propuestas:
+      toponimos:
+        accion: 'completar toponimo-059: procedencia {esteves-1989, 42} — CIERRA su deuda sin-procedencia; la glosa «árbol cactáceo» queda verificada literal'
+        referente: 'el Istmo de Médanos, municipio Baraived — la garganta entre Paraguaná y Coro, no la península'
+        lecturas_propuestas:
+          - tipo: tradicion-local
+            lectura: '«Ánimas de Guasare»: bautizo popular del sitio, capilla y promesas'
+            quien: Esteves 1989 (recogiendo la tradición)
+            fecha: '2026-09-16'
+            eje: referente
+            procedencia: {obra: esteves-1989, pagina: '42'}
+        etiqueta: 'la existencia y el referente: atestiguado (s. XX); el nivel del nombre no cambia (descartado: sin segmentación)'
+      lexicon: 'nada nuevo: la voz ya está; sólo gana la página (42) en su cadena Zavala ← Esteves'
+      creencia:
+        accion: 'hecho nuevo para creencia.yaml'
+        contenido: 'En el Istmo de Médanos, camino de Paraguaná a Coro, un sitio llamado Ánimas de Guasare: capilla levantada por los creyentes, «promesas» a ánimas milagrosas en momentos de tribulación, sobre la leyenda de una familia muerta de hambre en el paso.'
+        etiqueta: retro-abstraido
+        capa: 'creencia viva s. XX, culto católico popular a las ánimas; regla 3: NO se proyecta al precontacto. Vale como dato de que el istmo es un paso peligroso en la memoria local'
+        procedencia: {obra: esteves-1989, pagina: '42'}
+      ecologia:
+        accion: 'hecho nuevo para ecologia.yaml (o nota a la seca larga de clima_era2.yaml)'
+        contenido: 'El istmo se cruza a pie de Paraguaná a Coro y la memoria local lo asocia a «tiempos de hambruna»: la leyenda de la familia que murió de hambre en el paso.'
+        etiqueta: retro-abstraido
+        capa: 'leyenda s. XX; motivo, no fecha. Corrobora la seca larga como tiempo de hambre sólo como motivo'
+        procedencia: {obra: esteves-1989, pagina: '42'}
+
+  - forma: Guatacare
+    cabecera_impresa: GUATACARE
+    pagina_impresa: 42
+    pdf: {tomo: 2, pagina: 17}
+    transcripcion_literal: >-
+      Lugar del municipio Jadacaquiva, hay también Guatacarita. Ambos
+      lugares aparecen censados en 1881. De las voces sabemos que
+      Guatacare es un árbol perennifolio, hojas grandes y sapin[d]á-
+      ceo; Guatacarita es una hierba.
+    legibilidad: 'entera salvo una sílaba (ver dudas)'
+    dudas:
+      - que: 'la palabra partida a fin de línea: «sapindá-ceo» o «sapidiá-ceo». A 200 dpi la imagen no decide entre n e i. La palabra que existe es sapindáceo (familia Sapindaceae); el canon la tiene como «sapidiáceo [lectura dudosa de la imagen]»'
+        resuelta: parcialmente
+    en_el_repo:
+      canon: 'toponimo-144 (nivel C, esteves-1989 p. 42, lote 2026-09-07-medina): la glosa_fuente coincide con esta transcripción palabra por palabra salvo la sílaba dudosa'
+    propuestas:
+      toponimos:
+        accion: 'estrechar la duda de toponimo-144: «sapin[d]áceo (la imagen no decide n/i; sapindáceo es la familia)». Nota botánica del escriba, no de Esteves: el guatacare (Bourreria, barrido_web_medina_2026-09-09.yaml) es boragináceo, no sapindáceo; la familia que da Esteves sería suya'
+        etiqueta: 'sin cambio (C)'
+      lexicon: 'nada nuevo'
+      ecologia: 'nada nuevo'
+
+  - forma: Guayacanal
+    cabecera_impresa: GUAYACANAL
+    pagina_impresa: 42
+    pdf: {tomo: 2, pagina: 17}
+    transcripcion_literal: >-
+      Caserío del municipio Jadacaquiva; en el censo de 1881 eran tres
+      casas y 23 vecinos, hoy la aldea está más crecida. La partícula
+      "al" colectiviza y españoliza la voz Guayacán de origen taíno.
+
+      Guayacán es un arból zigofiliáceo de madera recia y hojas
+      perennes; su fruto es una baya de sabor amargo, oleosa, medicinal.
+    legibilidad: 'entera («arból» con la tilde así en la imprenta, o así se ve a 200 dpi)'
+    en_el_repo:
+      canon: 'toponimo-145 (descartado: «nombre castellano hecho sobre una voz antillana»): su texto coincide con esta transcripción'
+    propuestas:
+      toponimos: 'nada: verificado en imagen, sin cambio'
+      lexicon: 'nada'
+      ecologia: 'nada'
+
+  # ─────────────────────────── p. 101 (tomo 5, pdf 1) ──────────────────
+  - forma: Ceiba
+    cabecera_impresa: CEIBA
+    pagina_impresa: 101
+    pdf: {tomo: 5, pagina: 1}
+    transcripcion_literal: >-
+      I - La Ceiba, aldea de Purureche, Distrito Democracia. / II - La
+      Ceiba, caserío de Mene de Mauroa, Distrito Mauroa. / III - La Ceiba,
+      aldea del municipio Unión, Distrito Federación. / IV - La Ceiba,
+      manantial en Pueblo Cumarebo, Distrito Zamora. / V - La Ceibita,
+      aldea del municipio Cabure, Distrito Petit.
+
+      (Ceiba y Ceibo: árbol maderable: hay varias clases).
+    legibilidad: entera
+    en_el_repo:
+      canon: 'no está; el lexicón tiene way «árbol parecido a la ceiba» (Zavala #147), que no se toca'
+    propuestas:
+      toponimos:
+        accion: 'registrar como descartado, grupo «nombre castellano hecho sobre una voz antillana» (el de Guayacanal, toponimo-145): «La Ceiba» con artículo es nombre castellano sobre el taínismo ceiba'
+        regla_4: 'ninguno de los cinco es de Paraguaná; Pueblo Cumarebo (IV, manantial) es costa oriental de la polity'
+        etiqueta: 'descartado (castellano)'
+      lexicon: 'nada'
+      ecologia: 'nada que no esté (way «árbol parecido a la ceiba»)'
+
+  - forma: Cerey
+    cabecera_impresa: CEREY
+    pagina_impresa: 101
+    pdf: {tomo: 5, pagina: 1}
+    transcripcion_literal: >-
+      El Cerey, caserío del municipio San Francisco (Mirimire), Distrito
+      Acosta.
+
+      (Cerey, apócope de Cereipo, árbol leguminoso, madera fuerte y de
+      fácil pulimento. La corteza y su fruto son resinosos; su resina es
+      antirreumático).
+    legibilidad: entera
+    en_el_repo:
+      canon: 'no está'
+      lexicon: '0 de cerey / cereipo en lexicon_*.py y curiana_lexicon.py'
+    propuestas:
+      toponimos:
+        accion: 'a esteves_parte2_falcon.yaml como entrada recuperada; NO a la cola del canon costero'
+        regla_4: 'Distrito Acosta = oriente de Falcón, fuera de la polity costera; Esteves no atribuye lengua'
+        etiqueta: 'sin canon (fuera de esfera)'
+      lexicon: 'nada: sin atribución de lengua'
+      ecologia: 'nada para la costa'
+
+  - forma: Cibira
+    cabecera_impresa: CIBIRA
+    pagina_impresa: 101
+    pdf: {tomo: 5, pagina: 1}
+    transcripcion_literal: >-
+      Aldea del municipio San Félix, Distrito Mauroa. (Sibira, con "s",
+      es un apellido, posiblemente indígena).
+    legibilidad: entera
+    correccion: 'la campaña lo llamó «Cibita»: la cabecera impresa es CIBIRA'
+    en_el_repo:
+      canon: 'no está'
+      antroponimos: '0 de sibira/cibira en 6-fusion/antroponimos_caquetios.yaml'
+    propuestas:
+      toponimos:
+        accion: 'a esteves_parte2_falcon.yaml; no al canon costero'
+        regla_4: 'Mauroa = occidente interior, fuera de la polity costera'
+        etiqueta: 'sin canon'
+      antroponimos:
+        accion: 'a la cola de antroponimos_caquetios.yaml: apellido Sibira, «posiblemente indígena» según Esteves, que duda'
+        etiqueta: hipotetico
+        procedencia: {obra: esteves-1989, pagina: '101'}
+      lexicon: 'nada'
+
+  - forma: Cocorote
+    cabecera_impresa: COCOROTE
+    pagina_impresa: 101
+    pdf: {tomo: 5, pagina: 1}
+    transcripcion_literal: >-
+      I - Caserío y quebrada en el municipio Mitare, Distrito Miranda. /
+      II - Manantial en el municipio Pueblo Cumarebo, Distrito Zamora.
+      (Paloma de plumaje verdoso).
+    legibilidad: entera
+    en_el_repo:
+      canon: 'no está como entrada propia; la entrada de Coro (lexicon_toponimos.py ~l. 1327) lista «Corobore, Coroquidiro, Ocorote, Corocoro, Cocorote» como la serie coro- de Arcaya p. 170, glosada allí «Koori, avispa, en guajiro o Kuru, lagartija»'
+    propuestas:
+      toponimos:
+        accion: 'entrada nueva (nivel C: zoónimo sin componer) Y una lectura glosa-fuente colgada de la entrada de Coro'
+        regla_4: 'Mitare (I) está DENTRO de la polity costera —Oliver DOC 262: Mitare, Zazárida, Capatárida y Borojó son el homeland Casicure—; Pueblo Cumarebo (II), costa oriental'
+        lecturas_propuestas:
+          - tipo: glosa-fuente
+            lectura: 'Cocorote: «paloma de plumaje verdoso» — distinto de la serie coro- «avispa / lagartija» de Arcaya'
+            quien: Esteves 1989
+            fecha: '2026-09-16'
+            eje: significado
+            procedencia: {obra: esteves-1989, pagina: '101'}
+            veredicto: 'sin fallar: dos glosas en pugna para el mismo formante; se declaran las dos (patrón Supí)'
+        etiqueta: hipotetico
+      lexicon: 'sin propuesta de voz: Esteves no atribuye lengua a cocorote (la paloma)'
+      ecologia:
+        accion: 'nota, no hecho: una paloma verdosa nombrada en la toponimia de Mitare y Cumarebo'
+        etiqueta: hipotetico
+        procedencia: {obra: esteves-1989, pagina: '101'}
+
+  - forma: Cocuiza
+    cabecera_impresa: COCUIZA
+    pagina_impresa: 101
+    pdf: {tomo: 5, pagina: 1}
+    transcripcion_literal: >-
+      I - Caserío del municipio Mitare, Distrito Miranda. / II - Aldea del
+      municipio Colina del Distrito Petit. / III - Aldea del municipio
+      Casigua, Distrito Mauroa. / IV - Aldea del municipio Macoruca,
+      Distrito Colina. / V - Río que señala los límites de los Estados
+      Falcón y Zulia en los Distritos Mauroa de Falcón y Miranda del
+      Zulia, respectivamente.
+
+      (Cocuiza: planta de la que extrae fibra).
+    legibilidad: 'entera («de la que extrae fibra», sin «se», así en la imprenta)'
+    en_el_repo:
+      canon: 'no está'
+      lexicon: 'dipopo «fibra de cocuiza, cabuya» (Zavala #109, caquetío-atestiguado); lexicon_alvarado.py:973: cocuiza es el nombre del lado ESPAÑOL (Caulín: «una especie de pita que los indios llaman CARUATA y los españoles COCUIZA»)'
+      elenco: 'Dipopo, cordelera de la era 2, «tuerce fibra de cocuiza» (elenco_era2.yaml l. 596)'
+    propuestas:
+      toponimos:
+        accion: 'entrada nueva, nivel C (fitónimo sin componer, como Caseto), con la cadena de Alvarado en observación: la voz es el nombre hispano de la planta, no atestación caquetía'
+        regla_4: 'Mitare (I) y Casigua (III) son de la polity costera occidental; Colina, Petit y el río del Zulia, no'
+        etiqueta: hipotetico
+      lexicon: 'nada: la voz indígena de la fibra ya está (dipopo); cocuiza es castellano regional'
+      ecologia:
+        accion: 'hecho nuevo para ecologia.yaml (técnica): la cocuiza como planta de fibra, nombrada en cinco lugares del Falcón llano y del occidente'
+        contenido: 'La cocuiza («planta de la que [se] extrae fibra») da nombre a cinco lugares de Falcón, dos de ellos en la polity costera (Mitare, Casigua): la planta de la cordelería estaba en el paisaje nombrado.'
+        etiqueta: atestiguado
+        capa: 's. XX (Esteves); el uso como fibra, de circulación pan-venezolana'
+        procedencia: {obra: esteves-1989, pagina: '101'}
+        para: 'sitios_era2.yaml / el oficio de Dipopo: hoy la fibra de la era 2 no cita página'
+
+  - forma: Cocuyal
+    cabecera_impresa: COCUYAL
+    pagina_impresa: 101
+    pdf: {tomo: 5, pagina: 1}
+    transcripcion_literal: >-
+      Lugar al Norte de la población de Churuguara, Federación.
+
+      (Cocuyal: colectivo de cocuy, agave, planta fibrosa).
+    legibilidad: entera
+    correccion: 'la campaña esperaba una entrada COCUY «de bebida»: no la hay en esta página; es COCUYAL y la glosa es de fibra'
+    en_el_repo:
+      canon: 'no está'
+      lexicon: 'kokuy «penca; planta rizomosa que da un vino agradable» (Zavala #87, siglas HB+CGB+A, caquetío-atestiguado con «ATRIBUCIÓN DÉBIL: indigenismo de circulación pan-venezolana»)'
+      esteves_parte_I: 'CUCUY, p. 33 (Punta de Cocuy, mapa de Fidalgo) — ficha esteves-1989.md'
+    propuestas:
+      toponimos:
+        accion: 'registrar como descartado, grupo colectivo castellano en -al (el mismo criterio que Guayacanal), con página'
+        regla_4: 'Churuguara = sierra (Federación), fuera de la polity costera'
+        etiqueta: 'descartado (castellano sobre indigenismo)'
+      lexicon:
+        accion: 'nota a kokuy: Esteves glosa el cocuy como «agave, planta fibrosa» (fibra), no como bebida; la sigla E no está entre las de #87, así que es descripción independiente del mismo indigenismo. NO sube la atribución (sigue débil)'
+        etiqueta: 'sin cambio'
+      ecologia: 'nada para la costa'
+
+  # ─────────────────────────── p. 30 (tomo 2, pdf 5) ───────────────────
+  - forma: Cayude
+    cabecera_impresa: CAYUDE
+    pagina_impresa: 30
+    pdf: {tomo: 2, pagina: 5}
+    transcripcion_literal: >-
+      Fundo pecuario en la parte su[reste de] la Península, al Oeste de
+      Tacuato, en el territorio del municipio Santa Ana; es también el
+      nombre de una quebrada que desagua en el Golfete de Coro.
+
+      Cayude: árbol frutal, [guanábano silvestre], turagua.
+    legibilidad: 'parcial: una banda desvaída cruza las cuatro líneas; a 400 dpi con autocontraste se recuperó todo menos dos tramos'
+    dudas:
+      - que: '«en la parte su[…] la Península»: se ven «su» y «e la Península»; el ancho del hueco cabe «sureste de» y no cabe bien «sur de». No se decide en la imagen'
+        resuelta: 'no — hace falta otro escaneo o el libro físico'
+      - que: '«árbol frutal, [guanábano silvestre], turagua»: el tramo entre comas está desvaído; la forma de las palabras y la glosa de Zavala #73 (E) «Árbol frutal, guanábano silvestre, turagua» lo sostienen'
+        resuelta: 'sí, por Zavala (que copia esta misma entrada)'
+    en_el_repo:
+      canon: 'no está (por_procesar); el índice lo tiene'
+      lexicon: 'kayude «árbol frutal, guanábano silvestre, turagua» (Zavala #73, sigla E = Esteves): ES esta entrada — control de transmisión, no segunda atestación'
+      mapa_vivo: 'El Cayude, OSM 11.70063 / −69.95677 (poblado), region paraguana'
+      era_2: 'sitio El Cayude (elenco_era2.yaml: casa de los Cayudes, lat 11.701, lon −69.957, zona ZG2); sitios_era2.yaml y clima_era2.yaml lo usan'
+      etnonimo: 'barrido_toponimos_web_2026-09-10.yaml l. 96-114: «los Cayudes» como grupo de los Guaranaos del Golfete (deuda: sin-procedencia)'
+    coherencia_con_el_mapa: >-
+      «al Oeste de Tacuato»: Tacuato está en 11.708 / −69.841 y El Cayude
+      en 11.701 / −69.957 — 12,6 km al oeste, misma latitud. Esteves y OSM
+      dicen lo mismo. «Quebrada que desagua en el Golfete de Coro» encaja
+      con un sitio de la orilla sur del Golfete.
+    propuestas:
+      toponimos:
+        accion: 'entrada nueva en lexicon_toponimos.py'
+        nivel_propuesto: 'C (fitónimo sin componer, como Caseto y Guatacare)'
+        glosa_fuente: 'árbol frutal, guanábano silvestre, turagua'
+        referente: 'fundo pecuario al oeste de Tacuato, municipio Santa Ana, parte su[reste] de la península; y una quebrada homónima que desagua en el Golfete'
+        observacion: 'nombre vivo (OSM 2026 «El Cayude»); fundo pecuario = ganadería, colonial o moderna (regla 3); el etnónimo «los Cayudes» viene de la web sin fuente citable'
+        etiqueta: hipotetico
+      lexicon: 'nada nuevo: kayude ya está; gana la página (30) para su cadena Zavala ← Esteves'
+      ecologia:
+        accion: 'hecho nuevo para ecologia.yaml (agua) y línea para sitios_era2.yaml §El Cayude · agua'
+        contenido: 'En El Cayude, al oeste de Tacuato, hay una quebrada del mismo nombre que desagua en el Golfete de Coro: el único cauce con nombre en un sitio de la era 2, en una península donde «ningún río, ni siquiera un arroyo» corre (Arcaya p. 22). Cauce efímero: sólo lleva agua tras la lluvia.'
+        etiqueta: atestiguado
+        capa: 's. XX (Esteves); que sea efímera es inferencia sobre Arcaya, se declara'
+        procedencia: {obra: esteves-1989, pagina: '30'}
+        estacion: lluvias
+        hueco_lexico: 'la quebrada efímera sigue sin voz (hueco-lex-006)'
+
+# ══════════════════════════════════════════════════════════════════════
+# DE PASO, EN LAS MISMAS PÁGINAS
+# ══════════════════════════════════════════════════════════════════════
+de_paso:
+  - forma: Cayeruba (cola de la entrada, p. 30)
+    transcripcion_literal: >-
+      En un mapa de reciente confección hemos visto escrita una grafía
+      —Cayerúa— la cual consideramos afectada de snobismo.
+
+      ¿Origen de la voz? ¿Si[maruba]? Es posible, hay abundancia de este
+      árbol rutáceo en sus [contornos].
+    ya_en_el_canon: 'sí (lexicon_toponimos.py ~l. 2041 la cita así); se confirma en imagen'
+    por_que_importa: >-
+      Para #122. La aldea que Delmonte da como asiento primero de los
+      Amuayes tiene cadena de formas: Cayaruba (pregón de la residencia de
+      Arias de Villasinda, 1553, Arcaya 1920 p. 275-276: «Cayaruba (Cayerúa,
+      en Paraguaná)»), Cayarba (Bustillos 1760, vía González Batista en
+      Oliver DOC 264 n. 113), Cayerda/«Coyarna» (tesis de Oliver 1989,
+      corregido a Cayerúa en la edición DOC), Cayeruba (Esteves 1989,
+      cabecera) y Cayerúa (mapa moderno; Esteves lo tiene por snobismo).
+      Material para la campaña de topónimos (permutar TODAS las vocales).
+  - forma: Cimiro (p. 30)
+    transcripcion_literal: 'Cerro que hace de lindero en[…] [M]oruy. No parece voz indígena.'
+    legibilidad: 'la mitad de la primera línea está desvaída; no se recupera'
+    propuesta: 'nada: Esteves mismo lo descarta como voz indígena'
+
+# ══════════════════════════════════════════════════════════════════════
+# LO QUE NO SE PUDO LEER, Y LAS DEUDAS QUE QUEDAN
+# ══════════════════════════════════════════════════════════════════════
+deudas:
+  - 'CAYUDE p. 30: «en la parte su[reste de] la Península» no se decide en este escaneo (banda desvaída). Un escaneo nuevo de la p. 30 o el libro físico lo cierran en un minuto.'
+  - 'GUARUGUAJA p. 42: «Guar[a]» vs «Guaru»: una letra, a 200 dpi no se decide; la lectura anterior de la ficha dio guara.'
+  - 'GUATACARE p. 42: «sapin[d]áceo»: la n no se decide; sapindáceo es la única palabra que existe.'
+  - 'CIMIRO p. 30: media línea perdida (no importa: «no parece voz indígena»).'
+  - 'Los tres desfases de los tomos 4-6 no están en campana-toponimos §2 (+72, +100, y el 6 sin medir): editar la skill lo decide Miguel.'
+  - 'La lista de la campaña tenía dos nombres mal («Cibita» por CIBIRA, «COCUY» por COCUYAL): corregir en sitios_era2.yaml §lo_que_no_se_encontro y en issues-pendientes/mundo-era2-sitios-y-clima.md cuando se fusione esto (no se tocaron).'
+  - 'El etnónimo «los Cayudes» (grupo de los Guaranaos) sigue con deuda sin-procedencia: Esteves p. 30 da el lugar y el árbol, no el grupo.'
