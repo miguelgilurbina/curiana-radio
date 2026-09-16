@@ -19,17 +19,25 @@ import curiana_agents_era2 as era2
 import curiana_orchestrator_v2 as orch
 from curiana_eventos import (
     EVENTOS_SOLO_CON_FORANEOS,
+    MARCOS_FUERA_ERA2,
     PSEUDO_AGENTES,
     REESCRITURAS_ERA2,
     alias_del_elenco,
     catalogo_para_elenco,
+    decir_para_el_mundo,
     elenco_era1,
     evento_para_elenco,
     medir,
     nombres_de_la_era_1,
+    residuos_de_la_era_1,
     sustituir_nombres,
 )
-from curiana_state import EVENTOS_COTIDIANOS, EVENTOS_ESTACIONALES, ComunidadState
+from curiana_state import (
+    EVENTOS_COTIDIANOS,
+    EVENTOS_ESTACIONALES,
+    ComunidadState,
+    estado_inicial_test,
+)
 
 ALIAS = era2.ALIAS_ERA1
 ERA1 = elenco_era1()
@@ -152,6 +160,97 @@ def test_cada_reescritura_declarada_se_usa():
     textos = " ".join(e["descripcion"] + " " + e["nombre"] for e in TODOS)
     for viejo in REESCRITURAS_ERA2:
         assert viejo in textos, viejo
+
+
+# ── el texto libre: lo que llega al Director ──────────────────────────
+# El catálogo no era la única puerta. En el día 3 (run 0193873d), con los
+# eventos ya traducidos (#138), el Director escribió «Los Caquetíos y Guaycarí
+# se juntan…» porque su propia nota del día 2 —texto libre, sin traducir— lo
+# decía. Es la reflexión real de aquel día, recortada.
+
+NOTA_DEL_DIA_2 = (
+    "El alisio no aflojó y los peces tampoco vinieron. Lo que cambió fue el miedo, "
+    "y eso dividió las explicaciones: los Guaycarí culpan el calor, los Caquetíos "
+    "el rezo faltante. La palabra que prendió fue tüshi-juri, viento frío del este. "
+    "Biro-ko subió la sal al cerro antes de que cayera la noche."
+)
+
+
+def test_la_era_1_no_toca_el_texto_libre():
+    for mundo in ("CURIANA", None, ""):
+        assert decir_para_el_mundo(NOTA_DEL_DIA_2, mundo) == NOTA_DEL_DIA_2
+
+
+def test_en_paraguana_se_traduce_el_nombre_y_se_cae_la_frase_con_el_marco():
+    dicho = decir_para_el_mundo(NOTA_DEL_DIA_2, "PARAGUANÁ")
+    assert not residuos_de_la_era_1(dicho, VIEJOS), dicho
+    assert "Guaycarí" not in dicho and "Caquetíos" not in dicho
+    assert "Birokoa subió la sal al cerro" in dicho          # el alias traduce, no borra
+    assert "El alisio no aflojó" in dicho                    # lo limpio se queda entero
+    assert "tüshi-juri" in dicho                             # y la palabra del día también
+    # sólo se cae la frase que lleva el marco: 1 de 4
+    assert len(dicho) < len(NOTA_DEL_DIA_2) and dicho.count(".") == 3
+
+
+def test_los_marcos_declarados_son_los_de_la_decision_y_el_caribe_no_esta():
+    """Guaycarí, jirajara y gayón salieron de la era 2 (2026-09-14); el caribe
+    se queda porque llega por mar y no reside (etnia-008)."""
+    fuera = [p.pattern for p in MARCOS_FUERA_ERA2]
+    assert len(fuera) == 4 and not any("arib" in p for p in fuera)
+    for texto, esperado in (
+        ("Los guaycaríes llegaron.", ["guaycaríes"]),
+        ("Un jirajara de la sierra.", ["jirajara"]),
+        ("Los gayones bajaron.", ["gayones"]),
+        ("Vienen de la Curiana.", ["Curiana"]),
+        ("Una canoa caribe por el norte.", []),
+        ("Nadie durmió bien.", []),
+    ):
+        assert residuos_de_la_era_1(texto, VIEJOS) == esperado, texto
+
+
+def test_el_texto_se_filtra_frase_a_frase_y_linea_a_linea():
+    """Una reflexión son seis oraciones: no se tira entera por una. Y la línea
+    de estado tiene estructura: se filtra dentro de cada línea."""
+    texto = "[PARAGUANÁ — Tiempo de Viento]\nDía 3, Turno 6 (noche). Biro-ko raspa.\nLos Guaycarí."
+    dicho = decir_para_el_mundo(texto, "PARAGUANÁ")
+    assert dicho.splitlines() == ["[PARAGUANÁ — Tiempo de Viento]",
+                                  "Día 3, Turno 6 (noche). Birokoa raspa."]
+    assert decir_para_el_mundo("Los Guaycarí pescan.", "PARAGUANÁ") == ""
+
+
+def test_el_estado_semilla_no_lleva_nombres_de_la_era_1_a_paraguana():
+    """estado_inicial_test() abre TODO run que no continúa con «Shaboro salió
+    de su choza… Buio-sha lo vio desde lejos» en evento_del_turno: dos nombres
+    de la era 1 que llegaban a los 63 agentes y al Director el día 1."""
+    s = estado_inicial_test()
+    s.fijar_mundo("PARAGUANÁ")
+    crudo = s.to_context_string()
+    assert sorted(set(nombres_de_la_era_1(crudo, VIEJOS))) == ["Buio-sha", "Shaboro"]
+    dicho = decir_para_el_mundo(crudo, "PARAGUANÁ")
+    assert not residuos_de_la_era_1(dicho, VIEJOS)
+    assert "Día 1, Turno 1 (amanecer)" in dicho and "Tiempo de Viento" in dicho
+    # la era 1 sigue viendo su estado entero
+    assert decir_para_el_mundo(estado_inicial_test().to_context_string(), "CURIANA") \
+        == estado_inicial_test().to_context_string()
+
+
+def test_call_agent_no_le_pasa_al_agente_el_mundo_de_la_era_1(monkeypatch):
+    """El bloque del mundo del prompt del agente también pasa por el traductor:
+    en Paraguaná ningún agente lee «Shaboro salió de su choza»."""
+    from curiana_lexicon import LexicoComunitario
+    from curiana_observer import ObserverAgent
+
+    sistemas = []
+    monkeypatch.setattr(orch, "_invoke",
+                        lambda client, system, msg: sistemas.append(system) or "Taya wana-ka.")
+    lexico = LexicoComunitario()
+    observer = ObserverAgent(object(), lexico)
+    for mundo, debe_estar in (("CURIANA", True), ("PARAGUANÁ", False)):
+        st = estado_inicial_test()
+        st.fijar_mundo(mundo)
+        sistemas.clear()
+        orch.call_agent(object(), "Manaure", st, lexico, observer, "¿Qué haces?")
+        assert ("Shaboro salió de su choza" in sistemas[0]) is debe_estar, mundo
 
 
 # ── el orquestador pasa por el elenco ─────────────────────────────────
