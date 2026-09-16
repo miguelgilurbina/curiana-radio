@@ -12,15 +12,22 @@ Dos mitades, y la segunda es la que importa:
    metida a propósito — y se exige que salga el código de error correcto.
 """
 
+import json
 import os
+import subprocess
+import sys
 
 import pytest
 import yaml
 
 from compilar_corpus import (
     ETIQUETAS_FUENTE,
+    Elenco,
+    agentes_de_hecho,
     cargar,
+    censo_de_elenco,
     compilar,
+    elenco_activo,
     fusionar,
     validar_agentes,
     validar_enganche_motor,
@@ -311,3 +318,109 @@ def test_raiz_inesperada_se_reporta(tmp_path):
     (tmp_path / "raro.yaml").write_text("solo una cadena\n", encoding="utf-8")
     _, _, problemas = cargar(str(tmp_path))
     assert "raiz-inesperada" in _codigos(problemas)
+
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. El elenco activo y los alias de la era 1
+# ══════════════════════════════════════════════════════════════════════
+# El corpus nombra a la gente como en la era 1 y es canon: no se reescribe.
+# La era 2 rehízo los nombres (campaña de antropónimos, 2026-09-14) y el
+# módulo generado expone ALIAS_ERA1; aquí se prueba que la resolución vive en
+# el código, al leer, y no en los YAML.
+
+SIM = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def _elenco_era2():
+    """El elenco de la era 2 como lo vería `elenco_activo()` bajo
+    CURIANA_ELENCO=era2, construido en proceso (como hace test_elenco_era2)."""
+    import curiana_agents_era2 as era2
+    from curiana_agents import AGENTES_ERA1
+    fuera = AGENTES_ERA1 - set(era2.ALIAS_ERA1) - set(era2.ALL_AGENTS)
+    return Elenco(era2.ALL_AGENTS, era2.ALIAS_ERA1, fuera, "era2")
+
+
+def test_el_elenco_activo_por_defecto_es_la_era1_sin_alias():
+    """(a) Con la era 1 todo sigue igual: nombres propios, sin alias, nadie fuera."""
+    e = elenco_activo()
+    assert e.era == "era1" and "Biro-ko" in e.agentes and "Birokoa" not in e.agentes
+    assert e.alias == {} and e.sin_equivalente == set()
+    assert e.resolver("Biro-ko") == "Biro-ko"
+
+
+def test_agentes_de_hecho_resuelve_biro_ko_a_su_nombre_nuevo():
+    """(c) Biro-ko → Birokoa; Manaure se conserva; Chiriware no tiene
+    equivalente y no sale; el duplicado se colapsa."""
+    hecho = _hecho(agentes_relacionados=["Biro-ko", "Manaure", "Chiriware", "Biro-ko"])
+    assert agentes_de_hecho(hecho, _elenco_era2()) == ["Birokoa", "Manaure"]
+    # en la era 1 la misma función es la identidad
+    assert agentes_de_hecho(hecho, elenco_activo()) == ["Biro-ko", "Manaure", "Chiriware"]
+
+
+def test_agentes_de_hecho_no_toca_el_hecho():
+    """huella_de_base hashea los hechos: resolver al leer no puede reescribirlos."""
+    hecho = _hecho(agentes_relacionados=["Biro-ko"])
+    agentes_de_hecho(hecho, _elenco_era2())
+    assert hecho["agentes_relacionados"] == ["Biro-ko"]
+
+
+def test_validar_agentes_acepta_el_nombre_viejo_y_avisa_del_que_queda_fuera():
+    e = _elenco_era2()
+    assert not validar_agentes([_hecho(agentes_relacionados=["Biro-ko", "Birokoa"])],
+                               e, fondo=set())
+    problemas = validar_agentes([_hecho(agentes_relacionados=["Chiriware"])], e, fondo=set())
+    assert _codigos(problemas, "aviso") == {"agente-sin-equivalente"}
+    assert not _codigos(problemas, "error")
+    problemas = validar_agentes([_hecho(agentes_relacionados=["Nadie-ko"])], e, fondo=set())
+    assert "agente-fantasma" in _codigos(problemas, "error")
+
+
+def test_un_set_de_nombres_sigue_valiendo_como_elenco():
+    """Los tests de la sección 2 pasan un set: es un elenco sin alias."""
+    e = Elenco.de({"Manaure"})
+    assert e.agentes == {"Manaure"} and e.resolver("Biro-ko") == "Biro-ko"
+    assert Elenco.de(e) is e
+
+
+def test_la_genealogia_resuelve_por_alias_antes_de_contar_fichas():
+    g = _genealogia(agentes={"Biro-ko": {"linaje": "Kaira", "conyuge": "Nubiri-sha"}})
+    e = Elenco({"Birokoa"}, {"Biro-ko": "Birokoa"}, era="era2")
+    assert not _codigos(validar_genealogia(g, e), "aviso")
+
+
+def test_censo_de_elenco_mide_los_alias_y_los_sin_equivalente():
+    hechos = [_hecho(id="parentesco-001", agentes_relacionados=["Biro-ko", "Chiriware"]),
+              _hecho(id="parentesco-002", agentes_relacionados=["Chiriware", "Manaure"])]
+    c = censo_de_elenco(hechos, _elenco_era2())
+    assert c["era"] == "era2" and c["menciones_por_alias"] == 1
+    assert c["sin_equivalente"] == {"Chiriware": ["parentesco-001", "parentesco-002"]}
+    assert "Tariwa" in c["fuera_del_elenco_no_citados"]
+    # en la era 1 no hay nada que contar
+    c1 = censo_de_elenco(hechos, elenco_activo())
+    assert c1["menciones_por_alias"] == 0 and c1["sin_equivalente"] == {}
+
+
+def test_el_corpus_real_valida_bajo_la_era2_y_avisa_de_los_sin_equivalente():
+    """(b) En subproceso, como test_elenco_era2: el elenco se decide al
+    importar. `--check` pasa, no queda ningún fantasma, y lo que la era 2 deja
+    fuera sale como aviso, nombrado, para que Miguel decida."""
+    r = subprocess.run(
+        [sys.executable, os.path.join(SIM, "compilar_corpus.py"), "--check", "--json"],
+        cwd=SIM, capture_output=True,
+        env={**os.environ, "PYTHONIOENCODING": "utf-8", "CURIANA_ELENCO": "era2"})
+    assert r.returncode == 0, (r.stderr.decode("utf-8", "replace")
+                               + r.stdout.decode("utf-8", "replace"))
+    salida = json.loads(r.stdout.decode("utf-8"))
+    assert salida["errores"] == []
+    codigos = {a["codigo"] for a in salida["avisos"]}
+    assert "agente-sin-equivalente" in codigos and "agente-fantasma" not in codigos
+
+    censo = salida["elenco"]
+    e2 = _elenco_era2()
+    assert censo["era"] == "era2" and censo["agentes"] == len(e2.agentes)
+    assert censo["menciones_por_alias"] > 0
+    sin = censo["sin_equivalente"]
+    assert sin and set(sin) <= e2.sin_equivalente and "Chiriware" in sin
+    # los avisos por hecho cuadran con el censo por nombre
+    assert sum(len(ids) for ids in sin.values()) == sum(
+        1 for a in salida["avisos"] if a["codigo"] == "agente-sin-equivalente")

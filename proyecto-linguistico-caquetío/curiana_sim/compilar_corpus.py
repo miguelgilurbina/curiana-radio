@@ -21,10 +21,17 @@ QUÉ VALIDA
    más. Es la regla que sostiene toda la disciplina del proyecto: si
    `retro-abstraido` se cuela como `reconstruido`, el corpus miente sin que
    nadie lo note.
-3. **`agentes_relacionados`** — cada nombre existe en `curiana_agents.py`. Si
-   no, pero sí está en `genealogia.yaml` como persona de fondo, es **aviso**,
-   no error: son propuestas todavía sin veto de Miguel, y el corpus las cita a
-   propósito. Cualquier otro nombre es error — es un typo o un fantasma.
+3. **`agentes_relacionados`** — cada nombre existe en el elenco activo
+   (`curiana_agents.ALL_AGENTS`: la era 1 por defecto, la era 2 con
+   `CURIANA_ELENCO=era2`). El corpus nombra a la gente como en la era 1 y es
+   canon: **no se reescribe**. Se resuelve al leer, con el `ALIAS_ERA1` que el
+   elenco activo expone (`agentes_de_hecho()` es la única puerta por la que un
+   consumidor debe leer el campo). Un nombre de la era 1 que el elenco activo
+   deja fuera es **aviso** (`agente-sin-equivalente`), no error: darle alias o
+   declararlo persona de fondo es decisión de Miguel, y el informe lo lista con
+   sus hechos. Si no existe pero sí está en `genealogia.yaml` como persona de
+   fondo, también es aviso: son propuestas todavía sin veto, y el corpus las
+   cita a propósito. Cualquier otro nombre es error — es un typo o un fantasma.
 4. **Referencias cruzadas** — todo token `<dominio>-NNN` que aparezca en
    `contenido`, `referencia` o `implicacion_simulacion` tiene que resolver a un
    hecho real del corpus.
@@ -157,6 +164,93 @@ def _error(codigo, donde, mensaje):
 
 def _aviso(codigo, donde, mensaje):
     return Problema("aviso", codigo, donde, mensaje)
+
+
+# ══════════════════════════════════════════════════════════════════════
+# ELENCO
+# ══════════════════════════════════════════════════════════════════════
+
+class Elenco:
+    """El elenco activo visto desde el corpus.
+
+    `agentes` son los nombres que valen hoy; `alias`, la traducción de un
+    nombre de la era 1 al del elenco activo (vacía en la era 1, donde los
+    nombres son los suyos); `sin_equivalente`, los nombres de la era 1 que el
+    elenco activo no tiene ni por alias. El corpus es canon y nombra a la
+    gente como en la era 1: la resolución se hace aquí, al leer, nunca
+    reescribiendo los YAML.
+    """
+
+    def __init__(self, agentes, alias=None, sin_equivalente=(), era="era1"):
+        self.agentes = set(agentes)
+        self.alias = dict(alias or {})
+        self.sin_equivalente = set(sin_equivalente)
+        self.era = era
+
+    @classmethod
+    def de(cls, agentes):
+        """Un `Elenco` tal cual, o uno sin alias a partir de un set de nombres."""
+        return agentes if isinstance(agentes, cls) else cls(agentes)
+
+    def resolver(self, nombre: str) -> str:
+        return self.alias.get(nombre, nombre)
+
+
+def elenco_activo() -> Elenco:
+    """El elenco que `curiana_agents` decidió al importarse (`CURIANA_ELENCO`)."""
+    sys.path.insert(0, _AQUI)
+    import curiana_agents as ag
+    return Elenco(ag.ALL_AGENTS, ag.ALIAS_ERA1, ag.FUERA_DEL_ELENCO, ag.ELENCO)
+
+
+def agentes_de_hecho(hecho: dict, elenco) -> list:
+    """Los `agentes_relacionados` de un hecho con el nombre que tienen en el
+    elenco activo: resueltos por alias, en su orden, sin repetidos y sólo los
+    que el elenco tiene.
+
+    Es la única puerta por la que un consumidor debe leer ese campo: quien
+    busque «los hechos de Birokoa» encuentra los que el corpus escribió como
+    `Biro-ko`. Lo que el elenco no tiene (persona de fondo, sin equivalente,
+    fantasma) no sale de aquí; eso lo reporta `validar_agentes`. No toca el
+    hecho: `huella_de_base` lo hashea tal como se leyó.
+    """
+    elenco = Elenco.de(elenco)
+    relacionados = hecho.get("agentes_relacionados") or []
+    if isinstance(relacionados, str):
+        return []
+    salida = []
+    for nombre in relacionados:
+        resuelto = elenco.resolver(nombre)
+        if resuelto in elenco.agentes and resuelto not in salida:
+            salida.append(resuelto)
+    return salida
+
+
+def censo_de_elenco(hechos: list, elenco) -> dict:
+    """Cómo cae el corpus sobre el elenco activo, medido: cuántas menciones
+    resuelven por alias y qué nombres se quedan sin equivalente, con sus
+    hechos. Es lo que el informe imprime y `--json` emite bajo `elenco`."""
+    elenco = Elenco.de(elenco)
+    por_alias = 0
+    sin_equivalente = defaultdict(list)
+    for hecho in hechos:
+        relacionados = hecho.get("agentes_relacionados") or []
+        if isinstance(relacionados, str):
+            continue
+        for nombre in relacionados:
+            resuelto = elenco.resolver(nombre)
+            if resuelto != nombre and resuelto in elenco.agentes:
+                por_alias += 1
+            elif nombre in elenco.sin_equivalente:
+                sin_equivalente[nombre].append(hecho.get("id"))
+    return {
+        "era": elenco.era,
+        "agentes": len(elenco.agentes),
+        "menciones_por_alias": por_alias,
+        "sin_equivalente": dict(sorted(sin_equivalente.items(),
+                                       key=lambda kv: (-len(kv[1]), kv[0]))),
+        "fuera_del_elenco_no_citados": sorted(elenco.sin_equivalente - set(sin_equivalente)),
+    }
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -295,12 +389,19 @@ def validar_etiquetas(hechos: list) -> list:
     return problemas
 
 
-def validar_agentes(hechos: list, agentes: set, fondo: set) -> list:
-    """Cada `agentes_relacionados` existe en `curiana_agents.py`.
+def validar_agentes(hechos: list, agentes, fondo: set) -> list:
+    """Cada `agentes_relacionados`, resuelto por alias, existe en el elenco activo.
 
-    Si no existe pero sí está en `genealogia.yaml` como persona de fondo, es
-    aviso: son propuestas sin veto todavía, y el corpus las cita a sabiendas.
+    `agentes` es el `Elenco` activo (o un set de nombres: un elenco sin alias).
+    Un nombre que no resuelve tiene tres salidas:
+      - es de la era 1 y el elenco activo lo deja fuera
+        (`elenco.sin_equivalente`): aviso `agente-sin-equivalente` — el corpus
+        es canon y la decisión (alias o persona de fondo) es de Miguel;
+      - está en `genealogia.yaml` como persona de fondo: aviso
+        `agente-de-fondo` — propuestas sin veto todavía, citadas a sabiendas;
+      - lo demás: error `agente-fantasma`.
     """
+    elenco = Elenco.de(agentes)
     problemas = []
     for hecho in hechos:
         relacionados = hecho.get("agentes_relacionados") or []
@@ -309,10 +410,15 @@ def validar_agentes(hechos: list, agentes: set, fondo: set) -> list:
                                     "`agentes_relacionados` es una cadena, "
                                     "se esperaba lista"))
             continue
+        validos = set(agentes_de_hecho(hecho, elenco))
         for nombre in relacionados:
-            if nombre in agentes:
+            if elenco.resolver(nombre) in validos:
                 continue
-            if nombre in fondo:
+            if nombre in elenco.sin_equivalente:
+                problemas.append(_aviso("agente-sin-equivalente", _donde(hecho),
+                                        f"`{nombre}` es de la era 1 y el elenco "
+                                        f"{elenco.era} no lo tiene ni por alias"))
+            elif nombre in fondo:
                 problemas.append(_aviso("agente-de-fondo", _donde(hecho),
                                         f"`{nombre}` no es agente de "
                                         f"curiana_agents.py; es persona de fondo "
@@ -459,8 +565,14 @@ def _parece_nombre(valor) -> bool:
     return not (" " in valor or "—" in valor or "(" in valor)
 
 
-def validar_genealogia(genealogia, agentes: set) -> list:
-    """Esquema propio: linajes citados existen, madres y cónyuges resuelven."""
+def validar_genealogia(genealogia, agentes) -> list:
+    """Esquema propio: linajes citados existen, madres y cónyuges resuelven.
+
+    `agentes` es el `Elenco` activo (o un set de nombres). La genealogía
+    nombra como la era 1, así que se resuelve por alias antes de comparar.
+    """
+    elenco = Elenco.de(agentes)
+    agentes = elenco.agentes
     problemas = []
     if genealogia is None:
         problemas.append(_aviso("genealogia-ausente", ARCHIVO_GENEALOGIA,
@@ -496,7 +608,8 @@ def validar_genealogia(genealogia, agentes: set) -> list:
 
         for campo in ("madre", "conyuge"):
             valor = registro.get(campo)
-            if _parece_nombre(valor) and valor.strip() not in conocidos:
+            if (_parece_nombre(valor) and valor.strip() not in conocidos
+                    and elenco.resolver(valor.strip()) not in conocidos):
                 problemas.append(_aviso("pariente-desconocido", donde,
                                         f"`{campo}: {valor}` no resuelve a "
                                         f"ninguna persona conocida"))
@@ -508,8 +621,10 @@ def validar_genealogia(genealogia, agentes: set) -> list:
                                         f"anterior al refactor del vault"))
 
     # Un agente de la simulación sin ficha genealógica no es un error, pero sí
-    # una laguna que conviene ver medida.
-    sin_ficha = agentes - set(genealogia.get("agentes") or {})
+    # una laguna que conviene ver medida. Las fichas llevan el nombre de la
+    # era 1: se resuelven antes de restar, o bajo la era 2 saldrían todos.
+    con_ficha = {elenco.resolver(n) for n in (genealogia.get("agentes") or {})}
+    sin_ficha = agentes - con_ficha
     if sin_ficha:
         problemas.append(_aviso("agente-sin-ficha", ARCHIVO_GENEALOGIA,
                                 f"{len(sin_ficha)} agentes sin ficha: "
@@ -522,21 +637,25 @@ def validar_genealogia(genealogia, agentes: set) -> list:
 # ══════════════════════════════════════════════════════════════════════
 
 def _universo_del_motor():
-    """Nombres de agentes, locaciones y léxico, leídos del código.
+    """El elenco activo, las locaciones y el léxico, leídos del código.
 
     Se importa aquí y no arriba para que el módulo se pueda cargar (y testear)
     aunque el motor no esté importable; si falla, se devuelve vacío y las
     validaciones que dependen del motor quedan anotadas como no ejecutadas.
     """
     sys.path.insert(0, _AQUI)
-    from curiana_agents import ALL_AGENTS
     from curiana_state import LOCACIONES
     from curiana_lexicon import VOCABULARIO_BASE
-    return set(ALL_AGENTS), set(LOCACIONES), set(VOCABULARIO_BASE)
+    return elenco_activo(), set(LOCACIONES), set(VOCABULARIO_BASE)
 
 
 def compilar(directorio: str = CORPUS_DIR, universo=None):
-    """Carga, valida y devuelve `(hechos, genealogia, problemas)`."""
+    """Carga, valida y devuelve `(hechos, genealogia, problemas)`.
+
+    Los hechos vuelven tal como se leyeron: `agentes_relacionados` conserva
+    los nombres de la era 1 aunque el elenco activo sea la era 2 (la
+    resolución es `agentes_de_hecho`, y `huella_de_base` hashea esto).
+    """
     hechos, genealogia, problemas = cargar(directorio)
 
     if universo is None:
@@ -548,7 +667,8 @@ def compilar(directorio: str = CORPUS_DIR, universo=None):
                                     f"validaciones de agentes, locación y "
                                     f"léxico NO se corrieron"))
             universo = (set(), set(), set())
-    agentes, locaciones, lexico = universo
+    elenco, locaciones, lexico = universo
+    elenco = Elenco.de(elenco)
 
     fondo = set()
     if isinstance(genealogia, dict):
@@ -559,9 +679,9 @@ def compilar(directorio: str = CORPUS_DIR, universo=None):
     problemas += validar_referencias_cruzadas(hechos)
     problemas += validar_rutas(hechos)
     problemas += validar_procedencia(hechos, _obras_de_la_bibliografia())
-    if agentes:
-        problemas += validar_agentes(hechos, agentes, fondo)
-        problemas += validar_genealogia(genealogia, agentes)
+    if elenco.agentes:
+        problemas += validar_agentes(hechos, elenco, fondo)
+        problemas += validar_genealogia(genealogia, elenco)
     if locaciones or lexico:
         problemas += validar_enganche_motor(hechos, locaciones, lexico)
 
@@ -599,7 +719,7 @@ def fusionar(hechos: list, genealogia, problemas: list) -> dict:
 # INFORME
 # ══════════════════════════════════════════════════════════════════════
 
-def informe(hechos, genealogia, problemas) -> None:
+def informe(hechos, genealogia, problemas, censo_elenco=None) -> None:
     errores = [p for p in problemas if p.nivel == "error"]
     avisos = [p for p in problemas if p.nivel == "aviso"]
 
@@ -623,6 +743,24 @@ def informe(hechos, genealogia, problemas) -> None:
         print("\n── Genealogía ──")
         for seccion in ("linajes", "agentes", "personas_de_fondo"):
             print(f"     {seccion:<20} {len(genealogia.get(seccion) or {}):>4}")
+
+    # `censo` (arriba) es el de etiquetas; este es el del elenco activo.
+    ce = censo_elenco
+    if ce:
+        print("\n── Elenco ──")
+        print(f"     {'era':<20} {ce['era']:>4}")
+        print(f"     {'agentes':<20} {ce['agentes']:>4}")
+        sin = ce["sin_equivalente"]
+        if ce["menciones_por_alias"] or sin:
+            print(f"     {'por alias (menciones)':<24} {ce['menciones_por_alias']:>4}")
+            n_hechos = len({i for ids in sin.values() for i in ids})
+            print(f"     sin equivalente en {ce['era']}: {len(sin)} nombres "
+                  f"en {n_hechos} hechos — decisión pendiente (alias o fondo)")
+            for nombre, ids in sin.items():
+                print(f"        {nombre:<14} {len(ids):>3}  {', '.join(ids)}")
+            if ce["fuera_del_elenco_no_citados"]:
+                print(f"     fuera del elenco y sin cita en el corpus: "
+                      f"{', '.join(ce['fuera_del_elenco_no_citados'])}")
 
     def _bloque(titulo, lista):
         print(f"\n── {titulo}: {len(lista)} ──")
@@ -666,6 +804,10 @@ def main(argv=None) -> int:
     hechos, genealogia, problemas = compilar(args.corpus)
     errores = [p for p in problemas if p.nivel == "error"]
     avisos = [p for p in problemas if p.nivel == "aviso"]
+    try:
+        censo = censo_de_elenco(hechos, elenco_activo())
+    except Exception:                                       # noqa: BLE001
+        censo = None                     # ya lo anotó compilar(): motor-no-importable
 
     if args.fusionar:
         documento = fusionar(hechos, genealogia, problemas)
@@ -679,11 +821,12 @@ def main(argv=None) -> int:
         print(json.dumps({
             "hechos": len(hechos),
             "por_etiqueta": dict(Counter(h.get("fuente") for h in hechos)),
+            "elenco": censo,
             "errores": [p.como_dict() for p in errores],
             "avisos": [p.como_dict() for p in avisos],
         }, ensure_ascii=False, indent=2))
     else:
-        informe(hechos, genealogia, problemas)
+        informe(hechos, genealogia, problemas, censo)
 
     if args.check:
         if errores or (args.avisos and avisos):

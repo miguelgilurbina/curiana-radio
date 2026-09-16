@@ -573,21 +573,42 @@ ALL_AGENTS.update(AGENTS_T3)
 # módulos hacen `from curiana_agents import ALL_AGENTS` y así ven el mismo
 # elenco. MUNDO es el nombre que encabeza el contexto del turno; ROSTER_NUCLEO,
 # los que el casting hace rotar de continuo; SITIOS, las casas con su nodo.
+#
+# Los nombres de la era 1 siguen vivos fuera del motor (el corpus, la
+# genealogía, las bitácoras de los runs), así que el elenco activo expone
+# también cómo traducirlos: ALIAS_ERA1 (viejo → nuevo; vacío en la era 1, donde
+# los nombres son los suyos), resolver_alias(), y FUERA_DEL_ELENCO, los de la
+# era 1 que el elenco activo no tiene ni por alias. Nadie reescribe el corpus
+# por esto: compilar_corpus.agentes_de_hecho() resuelve al leer.
 import os as _os
 ELENCO = (_os.environ.get("CURIANA_ELENCO") or "era1").strip().lower()
+AGENTES_ERA1 = frozenset(ALL_AGENTS)   # los de este fichero, sea cual sea el elenco
 MUNDO = "CURIANA"
 ROSTER_NUCLEO: list = []
 SITIOS: dict = {}
+ALIAS_ERA1: dict = {}
+FUERA_DEL_ELENCO: frozenset = frozenset()
 if ELENCO == "era2":
     import curiana_agents_era2 as _era2
     ALL_AGENTS = dict(_era2.ALL_AGENTS)
     MUNDO = _era2.MUNDO
     ROSTER_NUCLEO = list(_era2.ROSTER_NUCLEO)
     SITIOS = dict(_era2.SITIOS)
+    ALIAS_ERA1 = dict(_era2.ALIAS_ERA1)
+    FUERA_DEL_ELENCO = frozenset(AGENTES_ERA1 - set(ALIAS_ERA1) - set(ALL_AGENTS))
 elif ELENCO != "era1":
     raise ValueError(f"CURIANA_ELENCO={ELENCO!r}: sólo era1 o era2")
 
 TOTAL = len(ALL_AGENTS)  # 60 en la era 1
+
+
+def resolver_alias(name: str) -> str:
+    """El nombre que tiene en el elenco activo alguien nombrado como en la era 1.
+
+    Identidad en la era 1, y para quien no tiene alias (un nombre ya nuevo, una
+    persona de fondo o uno de FUERA_DEL_ELENCO): resolver nunca inventa.
+    """
+    return ALIAS_ERA1.get(name, name)
 
 def get_agent(name: str) -> dict:
     return ALL_AGENTS.get(name, {})
