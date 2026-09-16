@@ -53,6 +53,23 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 > Cada fila guarda el commit del motor, si estaba sucio y los hashes del
 > lexicón, el corpus y el elenco. Protocolo: [[04_protocolo_run_1_era_auditada]].
 
+> ⚠️ **Cambio de instrumento (2026-09-16), declarado.** Dos cosas cambiaron en
+> `score_linguistico()` DESPUÉS de los runs de abajo, así que los del 09-14 no
+> son estrictamente comparables con los que vengan:
+> 1. **El filtro de nombres se arregló.** El del 09-14 comparaba en minúsculas
+>    y descartaba del conteo **52 voces del canon** homógrafas de un nombre del
+>    elenco (`buko`, `hayo`, `mene`, `saruro`, `jachos`, `karebe`…), todas
+>    visibles en el prompt: los runs de abajo midieron sin ellas, en el score y
+>    en la koiné. Desde el 09-16 la mayúscula decide: `Karebe` es la persona,
+>    `karebe` el cucharón.
+> 2. **El préstamo de esfera dejó de penalizar** (decisión de Miguel del 09-15):
+>    las voces de `ESFERA_DE_CONTACTO` —taíno, kalinago, paraujano,
+>    caribe-continental, jirajaroide— salen en `prestamos_de_esfera` y no
+>    restan; y el tier 1 recibe un bloque `[Voces de fuera]` de tres voces. La
+>    fuga a wayuu/lokono/achagua sigue restando igual.
+>
+> Ninguna de las dos toca `capas_de_score`.
+
 | Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |
 |---|---|---|---|---|---|---|
 | 09-14 | `aafc5c32` | 6 / 1 | **63** | 7.7 | 100% | **Primer día con el elenco de la era 2** (`--elenco era2`, perfil `era2`, mundo PARAGUANÁ, motor `19b0e16` limpio): hablaron los 63, tier 3 incluidos; prueba de tubería, no evidencia |

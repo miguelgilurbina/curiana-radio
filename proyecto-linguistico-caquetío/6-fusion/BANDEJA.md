@@ -13,9 +13,9 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-14**.
+<!--GENERADO--> Generado el **2026-09-16**.
 
-**2566 ítems propuestos** en 61 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
+**2566 ítems propuestos** en 62 propuestas, más **2 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -44,6 +44,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-09-12.yaml` | ? | 4 |  |
 | `decisiones_tanda_2026-09-13.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-14.yaml` | ? | 0 |  |
+| `decisiones_tanda_2026-09-15.yaml` | ? | 0 |  |
 | `elenco_era2.yaml` | varias | 63 |  |
 | `esteves_parte2_falcon.yaml` | esteves-1989 | 16 |  |
 | `estructura_social_era2.yaml` | varias | 17 |  |

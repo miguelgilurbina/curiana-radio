@@ -341,6 +341,74 @@ def test_el_venado_entra_retroabstraido_y_la_era_2_lo_ve():
     assert not (pool & hip)
 
 
+# ── la esfera de contacto (2026-09-15) ────────────────────────────────
+
+def test_la_mayuscula_decide_si_es_nombre_o_palabra(monkeypatch):
+    """Corrección del 2026-09-16. El filtro en minúsculas se comía 52 voces
+    del canon homógrafas de un nombre. Ahora `Karebe` es la persona y
+    `karebe` el cucharón.
+
+    Los tests corren con el elenco de la era 1, donde «Karebe» no existe: se
+    inyecta el nombre como en test_los_nombres_de_los_agentes_no_cuentan."""
+    import curiana_lexicon as L
+    from curiana_lexicon import LexicoComunitario, score_linguistico
+    monkeypatch.setattr(L, "_NOMBRES_AGENTES", frozenset({"karebe", "biro-ko"}))
+    lex = LexicoComunitario()
+    r = score_linguistico("Karebe maa-ka: el karebe está en el buko.", lex)
+    # la palabra en minúscula cuenta una vez; la mención en mayúscula, ninguna
+    assert "karebe" in r["palabras_caquetias"] and "buko" in r["palabras_caquetias"]
+    solo_nombre = score_linguistico("Karebe maa-ka.", lex)
+    assert "karebe" not in solo_nombre["palabras_caquetias"]
+    # un nombre que NO es voz del lexicón se descarta siempre
+    assert "biro-ko" not in score_linguistico("Biro-ko naa-ka", lex)["palabras_arahuacas"]
+
+
+def test_el_prestamo_de_esfera_se_mide_aparte_y_no_penaliza():
+    """Decisión de Miguel 2026-09-15: «el set de cinco es razonable; se debe
+    medir aparte». Una voz de las islas es préstamo, no fuga; una voz wayuu
+    —la lengua con la que reconstruimos— sigue penalizando."""
+    from curiana_lexicon import (ESFERA_DE_CONTACTO, LexicoComunitario,
+                                 VOCABULARIO_BASE, score_linguistico)
+    from curiana_database import normalize_source_language
+    lex = LexicoComunitario()
+    assert "wayunaiki" not in ESFERA_DE_CONTACTO and "lokono" not in ESFERA_DE_CONTACTO
+    base = score_linguistico("taya buko", lex)
+    con_prestamo = score_linguistico("taya buko caiman", lex)
+    assert con_prestamo["prestamos_de_esfera"] == ["caiman"]
+    assert con_prestamo["otro_arahuaco"] == 0
+    assert con_prestamo["score"] >= base["score"]          # no penaliza
+    wayu = next(k for k, e in VOCABULARIO_BASE.items()
+                if normalize_source_language(e.get("fuente", "")) == "wayunaiki" and "-" not in k)
+    fuga = score_linguistico(f"taya buko {wayu}", lex)
+    assert fuga["otro_arahuaco"] == 1 and fuga["score"] < base["score"]
+
+
+def test_las_voces_de_fuera_son_solo_del_tier_1_y_nunca_caquetias():
+    """«Los de tier 1 no sólo conocían su lenguaje sino el de su esfera de
+    influencia» (Miguel, 2026-09-15). Van marcadas como ajenas, y el tier 2
+    y el 3 no las ven."""
+    from curiana_lexicon import (ESFERA_DE_CONTACTO, LexicoComunitario,
+                                 VOCABULARIO_BASE, prompt_voces_de_fuera,
+                                 vocabulario_para_agente)
+    from curiana_database import normalize_source_language
+    lex = LexicoComunitario()
+    assert "Voces de fuera" in vocabulario_para_agente(1, lex, "canoa islas trueque")
+    for tier in (2, 3):
+        assert "Voces de fuera" not in vocabulario_para_agente(tier, lex, "canoa islas trueque")
+    for _ in range(30):
+        bloque = prompt_voces_de_fuera("trueque canoa islas")
+        assert bloque.startswith("[Voces de fuera")
+        for item in bloque.split("]: ", 1)[1].split("; "):
+            forma = item.split(" = ")[0].strip()
+            entrada = VOCABULARIO_BASE.get(forma) or VOCABULARIO_BASE.get(f"{forma}-kalinago")
+            if entrada is None:
+                continue
+            fam = normalize_source_language(entrada.get("fuente", ""))
+            assert fam in ESFERA_DE_CONTACTO, f"{forma} no es de la esfera: {fam}"
+            # la glosa no repite la forma («cobo = cobo» no enseña nada)
+            assert item.split(" = ")[1].split(" (")[0].strip().lower() != forma.lower()
+
+
 # ── memoria del día y días encadenados ────────────────────────────────
 
 def test_la_memoria_guarda_cinco_notas():

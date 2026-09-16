@@ -7817,6 +7817,78 @@ def _nombres_de_agentes() -> frozenset:
     return _NOMBRES_AGENTES
 
 
+def _nombres_que_chocan_con_el_canon() -> frozenset:
+    """Los nombres del elenco que TAMBIÉN son voces del lexicón.
+
+    Son 52 en la era 2 (`buko`, `hayo`, `mene`, `saruro`, `hiko`, `jachos`,
+    `karebe`, `naure`…) y las 52 se enseñan en el prompt. Con el filtro en
+    minúsculas del 2026-09-14 quedaban fuera del conteo SIEMPRE: eran palabras
+    que el motor enseñaba y no contaba. Se separan para tratarlas por caso.
+    """
+    return frozenset(_nombres_de_agentes() & set(VOCABULARIO_BASE))
+
+
+def _filtrar_nombres(texto: str, tokens: list) -> list:
+    """Quita del conteo las menciones a agentes, sin comerse el vocabulario.
+
+    Un nombre que NO es voz del lexicón (`Biro-ko`, `Dara-bana`) se descarta
+    siempre. Uno que sí lo es (`Karebe` persona / `karebe` cucharón) se
+    descarta **cuando va en mayúscula**, que es como se nombra a alguien, y
+    cuenta como palabra cuando va en minúscula, que es como se usa en el habla
+    corrida. Residuo declarado, y elegido a conciencia: una voz del canon que
+    abra frase —y por tanto vaya en mayúscula— no se cuenta. Se prefiere
+    perder ese uso a que un nombre infle el conteo, porque de `palabras_caquetias`
+    comen el contagio, la competencia de formas y el idiolecto: un nombre
+    contado como palabra se propagaría por la koiné como si fuera léxico.
+    """
+    nombres = _nombres_de_agentes()
+    if not nombres:
+        return tokens
+    chocan = _nombres_que_chocan_con_el_canon()
+    fuera: list = []
+    patron = r"[A-Za-zÁÉÍÓÚÑÜáéíóúñü]+(?:-[A-Za-zÁÉÍÓÚÑÜáéíóúñü]+)*"
+    for m in re.finditer(patron, texto):
+        tok = m.group().lower()
+        if tok not in nombres:
+            continue
+        if tok not in chocan:
+            fuera.append(tok)                     # no colisiona: siempre nombre
+            continue
+        if m.group()[0].isupper():
+            fuera.append(tok)                     # mayúscula: se está nombrando a alguien
+    if not fuera:
+        return tokens
+    quitar: dict = {}
+    for t in fuera:
+        quitar[t] = quitar.get(t, 0) + 1
+    salida = []
+    for t in tokens:
+        if quitar.get(t):
+            quitar[t] -= 1
+            continue
+        salida.append(t)
+    return salida
+
+
+# ── La esfera de contacto (decisión de Miguel, 2026-09-15) ──────────────
+# «El set de cinco es razonable. Yo creo que se debe medir aparte, ya que
+# sobre todo para esta área de influencia.»
+#
+# Las lenguas con contacto ATESTIGUADO con la polity costera: las Antillas
+# (préstamos léxicos documentados en Curazao, geografia_politica-001; Aruba a
+# 25 km, ecologia-021; cerámica dabajuroide hasta las islas, ecologia-013),
+# los caribes que llegan por mar (etnia-008), los del lago y los de la sierra.
+# Una voz de éstas en boca de un agente es un PRÉSTAMO —lo que hace una lengua
+# de encrucijada—, no una fuga: se mide aparte y no penaliza.
+#
+# NO entran wayunaiki, lokono ni achagua: las dos primeras son el andamio con
+# que se reconstruye el caquetío (D11) —verlas haría circular la medición— y
+# la tercera es de los Llanos, que es justo lo que la regla 4 prohíbe importar.
+ESFERA_DE_CONTACTO = frozenset({
+    "taíno", "kalinago", "paraujano", "caribe-continental", "jirajaroide-contacto",
+})
+
+
 def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
     """
     Calcula métricas lingüísticas de una respuesta de agente, midiendo
@@ -7842,7 +7914,11 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
     # Se descartan los nombres del elenco activo y los de la era 1 (que los
     # eventos todavía citan). Consecuencia declarada: «Biro-ko» ya no suma
     # «biro» como uso, tampoco en la era 1.
-    tokens = [t for t in tokens if t not in _nombres_de_agentes()]
+    # CORREGIDO 2026-09-16: el filtro trabajaba en minúsculas y se comía 52
+    # voces del canon homógrafas de un nombre (buko, hayo, mene, saruro,
+    # jachos, karebe…), las 52 visibles en el prompt de la era 2 — palabras
+    # que el motor enseñaba y no contaba. Ahora la mayúscula decide.
+    tokens = _filtrar_nombres(limpio, tokens)
     n_tok = len(tokens) or 1
 
     activos = set(lexico.palabras_activas())          # base + adoptados
@@ -7907,7 +7983,13 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
         if h in familias:
             familias[h] = "caquetío"
     caquetio_tokens = [t for t in usadas if familias[t] == "caquetío"]
-    otro_arahuaco_tokens = [t for t in usadas if familias[t] != "caquetío"]
+    ajenos = [t for t in usadas if familias[t] != "caquetío"]
+    # Decisión de Miguel 2026-09-15: las voces de la esfera de contacto se
+    # MIDEN APARTE y no penalizan. Una lengua de encrucijada toma prestado de
+    # sus vecinos; lo que sí es fuga es hablar la lengua con la que la estamos
+    # reconstruyendo (wayunaiki, lokono) o la de otra polity (achagua).
+    prestamo_tokens = [t for t in ajenos if familias[t] in ESFERA_DE_CONTACTO]
+    otro_arahuaco_tokens = [t for t in ajenos if familias[t] not in ESFERA_DE_CONTACTO]
 
     # ── Núcleo: densidad arahuaca total (0..1), vs. español ──
     densidad = (len(usadas) / n_tok) if usadas else 0.0
@@ -7937,6 +8019,8 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
     if caquetio_tokens: obs.append(f"caq[{len(set(caquetio_tokens))}]: {', '.join(sorted(set(caquetio_tokens))[:8])}")
     if otro_arahuaco_tokens:
         obs.append(f"⚠ otra-lengua-arahuaca×{len(otro_arahuaco_tokens)}: {', '.join(sorted(set(otro_arahuaco_tokens))[:5])}")
+    if prestamo_tokens:
+        obs.append(f"préstamo de esfera×{len(prestamo_tokens)}: {', '.join(sorted(set(prestamo_tokens))[:5])}")
     if aspectos: obs.append(f"aspecto: {', '.join(aspectos)}")
     if esp_func: obs.append(f"⚠ español funcional×{len(esp_func)}")
     if neos:     obs.append(f"+{len(neos)} neologismo(s)")
@@ -7960,6 +8044,11 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
         "pct_caquetio_especifico": round(pct_caquetio_especifico, 3),
         "otro_arahuaco": len(otro_arahuaco_tokens),
         "palabras_otro_arahuaco": list(dict.fromkeys(otro_arahuaco_tokens)),
+        # La esfera de contacto, medida aparte y sin penalizar (2026-09-15).
+        # Es el canal por el que se observa la difusión de un préstamo: si una
+        # voz de las islas pasa de un tier 1 a los demás, se ve aquí.
+        "prestamos_de_esfera": list(dict.fromkeys(prestamo_tokens)),
+        "n_prestamos_esfera": len(prestamo_tokens),
         "espanol_funcional": len(esp_func),
         "score": score,
         "observacion": " | ".join(obs),
@@ -8311,6 +8400,95 @@ def muestra_caquetio_dinamica(n_por_categoria: int = 18, contexto: str = "",
     )
 
 
+# ── Quién habla cada lengua de la esfera, dicho como lo diría la gente ──
+_QUIEN_HABLA = {
+    "taíno": "los de las islas grandes",
+    "kalinago": "los caribes que llegan por mar",
+    "paraujano": "los del lago, los de las casas sobre el agua",
+    "caribe-continental": "los vecinos de tierra firme",
+    "jirajaroide-contacto": "los de la sierra",
+}
+
+# Lo que viaja en un trueque son cosas, técnicas y nombres de cosas. No viaja
+# la gramática, ni los pronombres, ni las partes del cuerpo, ni los adjetivos:
+# eso se toma cuando una lengua sustituye a otra, no cuando dos comercian.
+# Fuera también los topónimos y etnónimos (`nirgua`, `ayaman`): son nombres
+# propios de la comparanda, no vocabulario prestable.
+_CAT_NO_PRESTABLE = {"gramatica", "pron", "part", "interr", "num", "numerales",
+                     "etnonimia", "cualidades", "cuerpo", "geografia",
+                     "parentesco", "acciones"}
+
+
+def prompt_voces_de_fuera(contexto: str = "", n: int = 3) -> str:
+    """Las voces de la esfera de contacto que un tier 1 conoce por su trato.
+
+    Decisión de Miguel (2026-09-15): «los de tier 1 no sólo conocían su
+    lenguaje sino el de su esfera de influencia». Sólo tier 1, sólo unas
+    pocas, y SIEMPRE marcadas como ajenas — el agente tiene que saber que no
+    es su lengua, o el préstamo deja de ser un préstamo. Ver ESFERA_DE_CONTACTO.
+    """
+    import random as _rnd
+    from curiana_database import normalize_source_language
+
+    # El lexicón desambigua los homógrafos con el nombre de la lengua pegado
+    # (`kati-kalinago`, `hamaka-kalinago`): esa etiqueta no es parte de la voz.
+    _SUFIJOS_DE_LENGUA = ("taíno", "kalinago", "paraujano", "caribe",
+                          "lokono", "wayunaiki", "jirajaroide")
+
+    def _glosa_util(forma: str, sig: str) -> str:
+        """El primer trozo de la glosa que NO repite la forma, o "".
+
+        13 de las 133 voces de la esfera se glosan a sí mismas («auyama:
+        auyama, calabaza»; «cobo: cobo, caracol marino») porque la voz entró al
+        castellano; dos no dicen nada más («casabe: casabe», «guayaba: guayaba
+        (Psidium guajava)»). Decirle al agente «casabe = casabe» no le enseña
+        nada, así que esas no entran.
+        """
+        for trozo in [t.strip() for t in sig.replace(";", ",").split(",") if t.strip()]:
+            visible = trozo.split(" (")[0].strip().strip(".")
+            if visible.lower() not in (forma.lower(), forma.lower().split("-")[0], ""):
+                return trozo
+        return ""
+
+    candidatas = []
+    for palabra, datos in VOCABULARIO_BASE.items():
+        fam = normalize_source_language(datos.get("fuente", ""))
+        if fam not in ESFERA_DE_CONTACTO:
+            continue
+        cat = datos.get("categoria") or datos.get("cat") or ""
+        if cat in _CAT_NO_PRESTABLE:
+            continue
+        sig = datos.get("sig") or datos.get("es") or ""
+        if not sig:
+            continue
+        ultimo = palabra.rsplit("-", 1)[-1] if "-" in palabra else ""
+        forma = palabra.rsplit("-", 1)[0] if ultimo in _SUFIJOS_DE_LENGUA else palabra
+        # Si al quitar la etiqueta la forma coincide con una voz caquetía
+        # (`hamaka`, `kanoa`, `casabe`), NO entra: enseñar como ajena una
+        # palabra que el agente ya tiene por propia es peor que no enseñar nada.
+        if forma != palabra and forma in VOCABULARIO_BASE:
+            continue
+        glosa = _glosa_util(forma, sig)
+        if not glosa:
+            continue
+        candidatas.append((palabra, forma, glosa, fam))
+    if not candidatas:
+        return ""
+
+    relevantes = categorias_relevantes(contexto) if contexto else set()
+    if relevantes:
+        pesadas = [c for c in candidatas
+                   if (VOCABULARIO_BASE[c[0]].get("categoria") or "") in relevantes]
+        candidatas = pesadas + candidatas if pesadas else candidatas
+
+    elegidas = _rnd.sample(candidatas, min(n, len(candidatas)))
+    partes = []
+    for _palabra, forma, glosa, fam in elegidas:
+        partes.append(f"{forma} = {glosa} ({_QUIEN_HABLA.get(fam, 'los de fuera')})")
+    return ("[Voces de fuera — no son tu lengua; las sabes por tu trato, y usarlas "
+            "te marca como quien va y viene]: " + "; ".join(partes))
+
+
 def vocabulario_para_agente(tier: int, lexico: "LexicoComunitario", contexto: str = "",
                             pesos: "Optional[dict]" = None,
                             capas: "Optional[frozenset]" = None) -> str:
@@ -8348,6 +8526,13 @@ def vocabulario_para_agente(tier: int, lexico: "LexicoComunitario", contexto: st
     )
     if muestra:
         partes.append(muestra)
+    # Sólo el tier 1: es quien navega, comercia y recibe al forastero
+    # (Dara-ko el navegante, Kadushi el de la rama insular, Biro-ko el de la
+    # sal). Decisión de Miguel 2026-09-15.
+    if tier == 1:
+        fuera = prompt_voces_de_fuera(contexto)
+        if fuera:
+            partes.append(fuera)
     if lexico_activo:
         partes.append(lexico_activo)
     if pendientes and tier <= 2:

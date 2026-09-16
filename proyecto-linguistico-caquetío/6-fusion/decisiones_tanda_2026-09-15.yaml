@@ -1,0 +1,141 @@
+# ─────────────────────────────────────────────────────────────────────────
+# DECISIONES DE MIGUEL — tanda del 2026-09-15
+#
+# Mismo patrón que las tandas anteriores: cita literal, lectura operativa y
+# dónde se aplica. Rama feat/era2-elenco. Las ocho preguntas de la campaña de
+# sitios y clima (6-fusion/issues-pendientes/mundo-era2-sitios-y-clima.md §6),
+# respondidas una a una en la conversación, no en el tablero.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-15'
+  decidido_por: Miguel
+  estado: EN CURSO — se registran según llegan; nada aplicado al motor todavía
+
+mundo_era2_sitios_y_clima:
+  fuente_de_las_preguntas: '6-fusion/issues-pendientes/mundo-era2-sitios-y-clima.md §6'
+  modo: 'una a una, en la conversación («Vamos una a una y las respondo acá»)'
+
+  p1_particion_del_año:
+    estado: DECIDIDA (2026-09-15)
+    pregunta: '¿Tres períodos (50/40/30) o dos (90/30)?'
+    decision_literal: '«A. Definitivamente» · «la A definitivamente»'
+    lectura_operativa: >-
+      Tres períodos sobre el año de 120 días simulados: P1 Tiempo de Viento
+      (ene-may, 50), P2 la seca larga (jun-sep, 40), P3 Tiempo de Siembra
+      (oct-dic, 30). Lo atestiguado son dos partes (pulso corto oct-dic:
+      ecologia-006, Sievers en Arcaya p. 24); partir la seca en dos es
+      canon-simulación y se declara así.
+    se_aplica_en: >-
+      curiana_state.ESTACIONES (de dos a tres), DIAS_POR_ESTACION (de entero a
+      mapa id → días), ESTACION_DE_DIA (de alternancia a acumulado); reparto de
+      EVENTOS_ESTACIONALES por período (clima_era2.yaml §motor). Pendiente: se
+      aplica junto con el cargador de mundo, cuando estén las ocho.
+
+  p2_nombre_de_los_periodos:
+    estado: DECIDIDA (2026-09-15)
+    pregunta: '¿Los períodos llevan nombre caquetío en el prompt?'
+    decision_literal: '«A»'
+    lectura_operativa: >-
+      Sin nombre caquetío. El agente ve el período en castellano y las raíces
+      que existen para hablar de él (juri, kasi, biro, apana…, las de
+      clima_era2.yaml raices_disponibles, filtradas por el perfil era2).
+      `madunaka` sigue escondida con las hipotéticas. El nombre lo acuñan los
+      agentes, y eso se mide: si los dos nodos convergen en un mismo nombre
+      para cada período (sobre todo la seca larga) es prueba directa de koiné.
+    se_aplica_en: >-
+      el cargador de mundo (render de [Tu tierra]: rótulo castellano + raíces,
+      nunca una forma de período); una métrica nueva en el análisis de runs
+      (acuñaciones con glosa de período, por nodo). Pendiente con las ocho.
+
+  p3_el_yarare:
+    estado: IDENTIFICADO (2026-09-15); falta cómo se nombra
+    pregunta: '¿Qué es el yararé de la laguna de Guaranao?'
+    decision_literal: '«Me refería a Yacaré, me equivoqué yo.»'
+    lectura_operativa: >-
+      El yararé no existe: era un lapsus. El animal de la laguna es el YACARÉ,
+      es decir el caimán. Se retira el testimonio «yararé» del canon de sitios
+      (era el único que quedaba sin identificar) y se sustituye por el caimán.
+      El cero de la campaña era correcto: no estaba en ninguna fuente porque la
+      palabra no era esa.
+    lo_que_queda_abierto: >-
+      Con qué palabra se nombra. `yacare` en el canon es TOPÓNIMO con glosa
+      'pueblo' (Zavala #279, apoyada por Yacarebacoa); la segunda glosa de la
+      misma entrada, 'caimán', quedó marcada como sospechosa —*yacaré* 'caimán'
+      es tupí-guaraní panamericano— y no se usa. El lexicón activo tiene
+      `caiman` pero etiquetado taíno, no caquetío. Ver p3b.
+    medido_2026-09-15:
+      - 'caimán/cocodrilo en las fuentes: Oliver cap. 3 CERO (caiman, crocodil, alligator); Arcaya CERO; los seis OCR de Esteves CERO (sólo `lagarto`, 3 veces); Medina dictado CERO. Castellanos: 8 `caimán` + 4 `cocodrilo` + 5 `lagarto`, pendientes de localizar por región (regla 4)'
+      - 'moderno: Crocodylus acutus (caimán de la costa) se da para la costa norte de Venezuela incluida la formación Lara-Falcón y la península de Paraguaná; la laguna de Guaranao es salobre, con manglar. Sin ficha todavía (regla 8)'
+
+  p3b_la_esfera_de_contacto:
+    estado: DECIDIDA (2026-09-15) — APLICADA al motor el 2026-09-16
+    pregunta: >-
+      ¿Con qué palabra se nombra el caimán, si la caquetía no existe y `yacare`
+      ya es 'pueblo' en el canon?
+    decision_literal: >-
+      «Pero entonces usemos la usanza taína, o por último los agentes tier 1
+      tengan acceso a eso por esfera de influencia cultural. Pensando que estos
+      de tier 1 no sólo conocían su lenguaje sino el de su esfera de
+      influencia.» Y después: «Sí, me parece que el set de cinco es razonable.
+      Yo creo que se debe medir aparte, ya que sobre todo para esta área de
+      influencia.»
+    lectura_operativa: >-
+      Se abre un canal nuevo en el prompt: el tier 1 —quien navega, comercia y
+      recibe al forastero— ve unas pocas voces de las lenguas con las que la
+      polity costera tiene contacto atestiguado, SIEMPRE marcadas como ajenas.
+      Es la primera vez que comparanda llega al hablante, y por eso va acotado.
+    el_set_de_cinco: [taíno, kalinago, paraujano, caribe-continental, jirajaroide-contacto]
+    fuera_del_set:
+      - 'wayunaiki (769) y lokono (638): son el ANDAMIO con que se reconstruye el caquetío (D11). Si el agente las ve, la reconstrucción se vuelve circular y el instrumento vuelve a medir a sus autores'
+      - 'achagua (3.568): los Llanos. Es exactamente lo que la regla 4 prohíbe importar'
+    apoyo_en_el_canon:
+      - 'geografia_politica-001: préstamos léxicos caquetíos documentados en Curazao'
+      - 'ecologia-021: Aruba a ~25 km, visible en días claros, navegación probada'
+      - 'ecologia-013: la cerámica dabajuroide llega hasta las Antillas'
+      - 'geografia_politica-002 y 010: puestos comerciales que ESCOGEN socios'
+      - 'etnia-008: el caribe del elenco llega por mar y no reside'
+    medir_aparte: >-
+      `score_linguistico` separa el préstamo de esfera de la fuga. Antes una voz
+      taína bajaba el score de 6,2 a 4,1 y salía marcada «⚠ otra-lengua-arahuaca»:
+      el instrumento trataba el préstamo como error. Ahora devuelve
+      `prestamos_de_esfera` y `n_prestamos_esfera`, no penaliza, y por ahí se
+      observa la difusión: si una voz de las islas pasa de un tier 1 a los
+      demás, se ve. La fuga de verdad (wayuu, lokono, achagua) sigue penalizando
+      igual: medido, 6,2 → 4,9.
+    aplicado:
+      - 'curiana_lexicon.ESFERA_DE_CONTACTO (las cinco familias, con su razón)'
+      - 'curiana_lexicon.prompt_voces_de_fuera(): 3 voces, marcadas como ajenas, categorías prestables (fuera gramática, cuerpo, cualidades, topónimos y etnónimos), sin autoglosas; ~274 caracteres'
+      - 'vocabulario_para_agente(): el bloque sólo entra en tier 1'
+      - 'score_linguistico(): prestamos_de_esfera / n_prestamos_esfera, sin penalización'
+      - 'tests: test_el_prestamo_de_esfera_se_mide_aparte_y_no_penaliza, test_las_voces_de_fuera_son_solo_del_tier_1_y_nunca_caquetias'
+    el_caiman: >-
+      `caiman` (taíno) es la voz que llega por este canal. `yacare` se queda
+      como 'pueblo' (topónimo, Zavala #279 + Yacarebacoa) y no se toca. La
+      palabra caquetía del caimán sigue siendo hueco: si los agentes la acuñan,
+      se verá; si adoptan el préstamo, también.
+    coste_declarado: >-
+      +274 caracteres en el prompt del tier 1 (de 7.230 a ~7.504, +3,8 %). La
+      longitud predice el score con r = −0,48, así que el bloque se mantiene en
+      tres voces.
+
+  fallo_del_filtro_de_nombres:
+    estado: CORREGIDO (2026-09-16)
+    que_pasaba: >-
+      El filtro de nombres que se añadió el 2026-09-14 (para que «Karebe» no
+      contara como la palabra `karebe`) comparaba en minúsculas, así que
+      descartaba 52 voces del canon homógrafas de un nombre del elenco —buko,
+      hayo, mene, saruro, hiko, jachos, karebe, naure…—, las 52 visibles en el
+      prompt de la era 2. Eran palabras que el motor enseñaba y nunca contaba,
+      ni en el score ni en la koiné (de `palabras_caquetias` comen el contagio,
+      la competencia de formas y el idiolecto).
+    arreglo: >-
+      La mayúscula decide. Un nombre que no es voz del lexicón (Biro-ko) se
+      descarta siempre; uno que sí lo es se descarta en mayúscula y cuenta en
+      minúscula. Residuo declarado y elegido: una voz del canon que abra frase
+      no cuenta — se prefiere perder ese uso a que un nombre se propague por la
+      koiné como si fuera léxico. Medido: 52 de 53 vuelven a contar en
+      minúscula, 0 de 53 cuentan en mayúscula.
+    afecta_a: >-
+      Los runs de la era 2 corridos el 2026-09-14 con el filtro viejo (db946685
+      y siguientes): su score y su koiné no vieron esas 52 voces. Queda
+      declarado en 5-experimento/BITACORA_RUNS.md.
