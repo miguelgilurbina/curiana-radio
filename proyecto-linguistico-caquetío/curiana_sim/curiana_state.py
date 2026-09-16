@@ -184,8 +184,15 @@ class ComunidadState:
         "Manaure-Kadushi": {"nivel": "bajo", "causa": "noticias de islas que cuestionan autoridad"},
     })
 
-    # Notas del orquestador
+    # Notas del orquestador. Desde el 2026-09-16, con --reflexion, guarda la
+    # última reflexión del Director al cerrar el día: el día siguiente
+    # (--continuar) la ve en su prompt.
     notas_orquestador: str = ""
+
+    # Los cierres narrativos del Director en el día en curso (uno por turno):
+    # los deja director_narrate() y los lee la reflexión del día, que los
+    # vacía al cerrar. Nunca guarda más de un día.
+    cierres_del_dia: list = field(default_factory=list)
 
     # Ritmo del día (ver TURNOS_POR_DIA_ERA1) y el run del que viene este
     # estado cuando se encadenan días (--continuar): un run continuado declara

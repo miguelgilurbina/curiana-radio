@@ -41,9 +41,28 @@ except ImportError:                                   # pragma: no cover
 _AQUI = os.path.dirname(os.path.abspath(__file__))
 RUTA_SITIOS = os.path.join(_AQUI, "..", "6-fusion", "sitios_era2.yaml")
 RUTA_CLIMA = os.path.join(_AQUI, "..", "6-fusion", "clima_era2.yaml")
+RUTA_CORPUS_ECOLOGIA = os.path.join(_AQUI, "..", "3-mundo", "corpus", "ecologia.yaml")
 
 PRESUPUESTO = 320
+# El bloque del Director es más corto que el del agente: dos frases y una línea.
+PRESUPUESTO_DIRECTOR = 400
 MOMENTOS = ("amanecer", "mañana", "mediodia", "tarde", "anochecer", "noche")
+
+# Lo que el Director no puede inventar en Paraguaná (2026-09-16: en el día 2 de
+# la era 2 narró «la sombra del ceibo»). Escrito a mano y citado entrada por
+# entrada: al construir la línea se comprueba que cada id exista en el corpus
+# —una restricción sin sus entradas no se dice— y test_director vigila que las
+# palabras clave estén en el contenido citado.
+#   ecologia-032  cedro, caoba y ceiba NO son árboles del cardonal; el monte
+#                 espinoso da cují, yabo, dividivi y cardón
+#   ecologia-018  la flora xerófila del matorral: cardón, dividivi, cují…
+#   ecologia-007  cauces efímeros; no hay un gran río perenne
+RESTRICCIONES_DEL_DIRECTOR = (
+    ("El monte es cardonal: cují, yabo, dividivi, cardón",
+     ("ecologia-018", "ecologia-032"), ("cují", "yabo", "dividivi", "cardón")),
+    ("no hay ríos ni ceibas",
+     ("ecologia-007", "ecologia-032"), ("río", "ceiba")),
+)
 
 # El campo `estacion` del canon, traducido a los períodos del estado.
 _ESTACION_A_PERIODOS = {
@@ -267,6 +286,58 @@ def bloque_tu_tierra(sitio: str, periodo: str, momento: str, *, agente: str = ""
 def combinaciones() -> list:
     """Las 126 (7 sitios × 3 períodos × 6 momentos), para el test del tope."""
     return [(s, p, m) for s in sitios() for p in ("viento", "seca_larga", "siembra") for m in MOMENTOS]
+
+
+# ── El mundo para el Director ──────────────────────────────────────────
+
+def hechos_del_corpus(ruta: str = RUTA_CORPUS_ECOLOGIA) -> dict:
+    """{id: entrada} de un YAML del corpus. ecologia.yaml es un dict de listas
+    (entradas, huecos_lexicos); se aplanan todas las secciones que son lista."""
+    try:
+        d = _cargar(ruta)
+    except OSError:
+        return {}
+    secciones = d.values() if isinstance(d, dict) else [d]
+    return {h["id"]: h for s in secciones if isinstance(s, list)
+            for h in s if isinstance(h, dict) and h.get("id")}
+
+
+def restricciones_del_director() -> str:
+    """La línea de restricciones, sólo con las que el corpus sostiene por id."""
+    hechos = hechos_del_corpus()
+    partes = [frase for frase, ids, _ in RESTRICCIONES_DEL_DIRECTOR
+              if all(i in hechos for i in ids)]
+    return f"[{'; '.join(partes)}]" if partes else ""
+
+
+def resumen_del_mundo(state, *, estacion: Optional[str] = None, momento: Optional[str] = None,
+                      presupuesto: int = PRESUPUESTO_DIRECTOR) -> str:
+    """El mundo para el Director (no para un agente): la frase del período y
+    la del momento (clima_era2.yaml, frases_del_cargador) más la línea de
+    restricciones del corpus. ≤ presupuesto, truncado por línea entera.
+    Devuelve "" si el período no es de la era 2 (la Curiana no tiene canon)."""
+    estacion = estacion or getattr(state, "estacion", None)
+    momento = momento or getattr(state, "momento", None)
+    frases = (clima().get("frases_del_cargador") or {}).get(estacion)
+    if not frases:
+        return ""
+    lineas = [str(frases.get("periodo") or "").strip()]
+    mom = (frases.get("momentos") or {}).get(momento)
+    if mom:
+        lineas.append(str(mom).strip())
+    restricciones = restricciones_del_director()
+    if restricciones:
+        lineas.append(restricciones)
+    cabeza = "[El mundo]"
+    salida = cabeza
+    for l in lineas:
+        if not l:
+            continue
+        candidato = f"{salida} {l}"
+        if len(candidato) > presupuesto:
+            continue
+        salida = candidato
+    return salida if salida != cabeza else ""
 
 
 if __name__ == "__main__":
