@@ -220,6 +220,11 @@ turnos.
 - Cada run ve un solo día y su veredicto dice «datos insuficientes»; la
   serie de dos días de arriba se armó con `koine_metrics` de los dos runs.
   `analizar_runs.py` tendría que seguir la cadena `continuado_desde`.
+  → **Cerrado el 2026-09-16** con `curiana_cadena.py`: el motor imprime al
+  cerrar un run continuado la serie y el veredicto de la cadena entera, y
+  `analizar_runs.py --koine` (y `--prestamos`) tienen vista por cadena. El
+  veredicto es el mismo criterio, extraído del orquestador. Sobre esta cadena
+  (`fec49195` → `81907ae1`) dice CONVERGE por la emergente.
 - No se heredan la difusión social ni las competencias abiertas: la
   competencia de «cuentas brillantes» del día 1 (`kali-biro-duna-iro` 19,4
   contra dos rivales) arrancó de cero el día 2.

@@ -556,6 +556,41 @@ class CurianaDB:
         )
         return result.data[0] if result.data else None
 
+    def get_run(self, run_id: str) -> Optional[dict]:
+        """Un run por id. Lo usa `curiana_cadena` para subir por
+        `config->continuado_desde` hasta la raíz de la cadena."""
+        result = (
+            self.client.table("simulation_runs")
+            .select("*")
+            .eq("id", run_id)
+            .limit(1)
+            .execute()
+        )
+        return result.data[0] if result.data else None
+
+    def runs_encadenados(self) -> list[dict]:
+        """id + started_at + config de todos los runs, para descubrir las
+        cadenas (`curiana_cadena.cadenas_en_la_base`). Son decenas de filas, muy
+        por debajo del `max_rows`=1000 de PostgREST que trunca al `lexicon`."""
+        result = (
+            self.client.table("simulation_runs")
+            .select("id, started_at, ended_at, total_turns, config")
+            .order("started_at")
+            .execute()
+        )
+        return result.data or []
+
+    def koine_metrics(self, run_id: str) -> list[dict]:
+        """Las métricas de koiné de un run, por día."""
+        result = (
+            self.client.table("koine_metrics")
+            .select("day, distance, distance_ventana, distance_emergente, n_agents")
+            .eq("run_id", run_id)
+            .order("day")
+            .execute()
+        )
+        return result.data or []
+
     def language_drift(self, run_id: str) -> list[dict]:
         """
         Retorna la vista language_drift_by_turn para un run.
@@ -696,6 +731,10 @@ class CurianaDBMock:
     def save_koine_lexicon(self, *a, **kw): pass
     def save_phrase_etymology(self, *a, **kw): pass
     def latest_run(self): return None
+    # Sin base no hay cadena: el orquestador imprime la serie del run y ya.
+    def get_run(self, *a, **kw): return None
+    def runs_encadenados(self, *a, **kw): return []
+    def koine_metrics(self, *a, **kw): return []
     def language_drift(self, *a): return []
     def adopted_neologisms(self, *a): return []
     def get_agent_responses(self, *a, **kw): return []
