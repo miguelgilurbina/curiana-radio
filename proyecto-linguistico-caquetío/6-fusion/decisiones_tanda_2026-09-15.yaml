@@ -53,6 +53,14 @@ mundo_era2_sitios_y_clima:
       el cargador de mundo (render de [Tu tierra]: rótulo castellano + raíces,
       nunca una forma de período); una métrica nueva en el análisis de runs
       (acuñaciones con glosa de período, por nodo). Pendiente con las ocho.
+    medido_2026-09-16: >-
+      Día 1 (c6837386): ninguna acuñación del período. Día 2 (89fc1744): la
+      primera — `tüshi-juri` «viento frío del este», de Hayo (AMUAY), adoptada
+      el mismo día; y `juri` fue la voz más usada del día (29). El viento se
+      nombra antes que el período: es lo que las fuentes también hacen. La
+      métrica por nodo sigue pendiente (deuda: analizar_runs no sigue la
+      cadena continuado_desde y la koiné dice «datos insuficientes» con dos
+      días encadenados).
 
   p3_el_yarare:
     estado: IDENTIFICADO (2026-09-15); falta cómo se nombra
