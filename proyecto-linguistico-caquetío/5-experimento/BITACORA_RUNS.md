@@ -68,7 +68,24 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 >    restan; y el tier 1 recibe un bloque `[Voces de fuera]` de tres voces. La
 >    fuga a wayuu/lokono/achagua sigue restando igual.
 >
-> Ninguna de las dos toca `capas_de_score`.
+> 3. **El scorer deja de confundir castellano corriente, glotónimo y raíz
+>    partida con préstamo o fuga** (cierre del día 2, aplicado la noche del
+>    16, después del día 3 `0193873d`). Medido sobre las 144 respuestas de
+>    los días 1-2: 9 de los 11 «préstamos/fugas» eran falsos (`cacique`,
+>    `taita`, `dia`, `lokono` como glotónimo, `juri-ima`/`lawari-ima`/`maa-to`
+>    partidos por el tokenizador). Arreglo: `CASTELLANO_CORRIENTE` neutro
+>    (como los homógrafos de Zavala, no stopword), la raíz decide la familia
+>    de un token con afijos (`_familia_de_token`: `juri-ima` es caquetío;
+>    `sucu-bana`, `bucu-ana`, `iri-ka` —raíz lokono con afijo caquetío— dejan
+>    de pasar por caquetío), y los glotónimos se resuelven por contexto.
+>    Efecto: canon puro Δ 0,00; las 144 respuestas 7,350 → 7,347; las 2.371 de
+>    toda la base 6,9728 → 6,9722 (22 cambian, |Δ| máx 0,40). Como
+>    `_familia_de_token` es también `word_uses.source_language`, los runs
+>    posteriores clasifican tres formas de raíz lokono como fuga donde los
+>    del 16 las contaban como caquetío. `[Voces de fuera]`: 54 → 50 voces
+>    posibles y 13 glosas que antes no enseñaban nada ahora sí.
+>
+> Ninguna de las tres toca `capas_de_score`.
 
 | Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |
 |---|---|---|---|---|---|---|

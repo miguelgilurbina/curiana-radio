@@ -190,6 +190,145 @@ def test_debe_es_castellano_y_no_fuga_a_otra_lengua_arahuaca():
     assert r["palabras_caquetias"] == ["taya", "buko"]
 
 
+# ── los falsos positivos del cierre del día 2 de la era 2 (2026-09-16) ──
+# Re-puntuar las 144 respuestas de los runs c6837386 y 89fc1744 sacó cuatro
+# familias de falso positivo. Cada test fija una.
+
+def test_el_castellano_corriente_no_es_prestamo_ni_fuga():
+    """`cacique` ×2 y `taita` ×1 salían como préstamo taíno, y `dia` («día»
+    sin tilde) como fuga al lokono. Las tres son clave de la comparanda Y
+    castellano corriente: el agente escribía en castellano, no tomaba
+    prestado. Medido: «…la esencia que sopla el cacique irá al capubana…»
+    (todo el entorno es castellano) y «Taita Dabuda naa», que el propio
+    agente glosa «Mi abuela dice»."""
+    from curiana_lexicon import CASTELLANO_CORRIENTE, VOCABULARIO_BASE
+
+    lex = _lexico()
+    for voz in ("cacique", "taita", "dia"):
+        assert voz in CASTELLANO_CORRIENTE
+        assert voz in VOCABULARIO_BASE, "la comparanda NO se toca"
+        r = score_linguistico(f"taya buko {voz} wana-ka", lex)
+        assert voz not in r["prestamos_de_esfera"], voz
+        assert voz not in r["palabras_otro_arahuaco"], voz
+        assert voz not in r["palabras_arahuacas"], voz
+
+
+def test_el_castellano_corriente_es_neutro_y_no_castiga_como_una_stopword():
+    """Se decidió NEUTRO, como `HOMOGRAFOS_ZAVALA`, y no stopword como «debe»
+    (#133): «cacique» es palabra de contenido, no el andamiaje gramatical del
+    castellano. No es gratis —sigue contando en n_tok, así que diluye la
+    densidad—, pero no pesa lo que pesa «el/la/de»."""
+    lex = _lexico()
+    neutro = score_linguistico("taya buko cacique wana-ka", lex)
+    stopword = score_linguistico("taya buko porque wana-ka", lex)
+    assert neutro["espanol_funcional"] == 0
+    assert stopword["espanol_funcional"] == 1
+    assert neutro["score"] > stopword["score"]
+    # y diluye: la misma frase sin la voz castellana puntúa más
+    limpia = score_linguistico("taya buko wana-ka", lex)
+    assert limpia["densidad"] > neutro["densidad"]
+
+
+def test_el_castellano_corriente_es_solo_la_forma_pelada():
+    """`ta-bohío` («descanso en mi hamaca en el bohío», run 89fc1744) lleva el
+    posesivo caquetío: ahí la lengua está haciendo algo con la raíz, que es la
+    pinta de un préstamo de verdad. Sigue contando como préstamo de esfera."""
+    lex = _lexico()
+    r = score_linguistico("nüma hamaka-ni ta-bohío kashi", lex)
+    assert r["prestamos_de_esfera"] == ["ta-bohío"]
+    assert r["palabras_otro_arahuaco"] == []
+
+
+def test_la_raiz_decide_la_lengua_del_token_con_guion():
+    """`juri-ima` y `lawari-ima` —raíces caquetías + el sufijo ATESTIGUADO
+    `-ima` de REGLAS_ZAVALA— salían LOKONO por la clave `ima` 'enemigo' de la
+    comparanda, porque `_familia_de_token` quitaba siempre el primer segmento
+    como si fuera prefijo. Y el defecto tenía su reverso: `sucu-bana`,
+    `bucu-ana` e `iri-ka` (raíces LOKONO + afijo caquetío) se contaban como
+    caquetío porque ganaba la clave del afijo. La raíz decide en los dos
+    sentidos."""
+    from curiana_lexicon import _familia_de_token
+
+    for tok in ("juri-ima", "lawari-ima", "maa-to"):
+        assert _familia_de_token(tok) == "caquetío", tok
+    for tok in ("sucu-bana", "bucu-ana", "iri-ka"):
+        assert _familia_de_token(tok) == "lokono", tok
+    # el prefijo caquetío sobre raíz ajena NO vuelve propia la raíz
+    assert _familia_de_token("ka-to") == "lokono"
+    assert _familia_de_token("ta-bohío") == "taíno"
+    # y lo que ya resolvía bien sigue resolviendo bien
+    assert _familia_de_token("ta-barsure") == "caquetío"
+    assert _familia_de_token("wana-ka") == "caquetío"
+
+
+def test_un_afijo_atestiguado_suelto_no_es_otra_lengua():
+    """«…tüshi-ima tüshi ima agua fría de quebrada…» (run 89fc1744, tier 1):
+    el agente descompone su propio compuesto y escribe el sufijo suelto.
+    `-ima` es afijo atestiguado (REGLAS_ZAVALA); que la comparanda tenga una
+    clave `ima` 'enemigo' (lokono) con la misma forma no lo vuelve lokono.
+
+    La corrección vive en la lectura del TEXTO, no en el diccionario: la
+    entrada `ima` sigue siendo lokono y `word_source_language` la devuelve
+    así (ver test_word_source_language_conserva_la_lengua_hermana)."""
+    from curiana_database import word_source_language
+    from curiana_lexicon import TODAS_LAS_REGLAS, _familia_de_token
+
+    assert "-ima" in TODAS_LAS_REGLAS
+    assert _familia_de_token("ima") == "lokono" == word_source_language("ima")
+    r = score_linguistico("taya wana-ka tüshi-ima tüshi ima", _lexico())
+    assert r["palabras_otro_arahuaco"] == []
+    assert "ima" in r["palabras_caquetias"]
+
+
+def test_nombrar_la_lengua_no_es_hablarla():
+    """«Wayunaiki no. Lokono no. Ta lengua, caquetío.» (run c6837386, tier 3)
+    salía como fuga al lokono — cuando el agente decía justamente lo
+    contrario. Es una mención metalingüística de un nombre propio.
+
+    Pero el etnónimo es HOMÓGRAFO del sustantivo 'persona' de su propia
+    lengua, así que no puede ser neutro de oficio: con un vecino arahuaco
+    vuelve a ser la palabra y vuelve a penalizar, que es lo que impide que la
+    medición anticircular se quede ciega."""
+    from curiana_lexicon import GLOTONIMOS_DE_LA_COMPARANDA, VOCABULARIO_BASE
+
+    assert "lokono" in GLOTONIMOS_DE_LA_COMPARANDA
+    assert "lokono" in VOCABULARIO_BASE, "la comparanda NO se toca"
+    lex = _lexico()
+    mencion = score_linguistico("wayunaiki no lokono no ta lengua caquetío", lex)
+    assert mencion["palabras_otro_arahuaco"] == []
+    assert "lokono" not in mencion["palabras_arahuacas"]
+    uso = score_linguistico("taya buko lokono wana-ka", lex)
+    assert uso["palabras_otro_arahuaco"] == ["lokono"]
+
+
+def test_el_arreglo_no_toca_una_frase_de_canon_puro():
+    """La comparabilidad de los runs del 16 depende de esto: el arreglo sólo
+    puede moverse donde hay castellano, glotónimo o un token partido. En canon
+    puro no dispara ninguna de las tres cosas, y toda voz usada sigue siendo
+    caquetía. Medido sobre seis frases de canon: Δ score = 0,00 (y sobre las
+    2.371 respuestas de la base, Δ medio = −0,0005)."""
+    from curiana_lexicon import (CASTELLANO_CORRIENTE,
+                                 GLOTONIMOS_DE_LA_COMPARANDA, _tokenizar)
+
+    lex = _lexico()
+    canon = [
+        "Taya wana-ka ta-barsure. Waya naa-ni para-bana.",
+        "Pia suna-da wa-duna kashi. Nüma masa-ka arima-kana.",
+        "Taya maa-ni: saa kali-bana wara tüshi-ni, naka waya naa-da para.",
+        "Wa-para-ubana juri wana-ka. Taya kaa-ni hayo, naba-ni boratio.",
+        "Nüma panaa-ni chakamba. Kanoa-kana, pia wana-ka?",
+    ]
+    for frase in canon:
+        tokens = set(_tokenizar(frase))
+        assert not (tokens & CASTELLANO_CORRIENTE), frase
+        assert not (tokens & GLOTONIMOS_DE_LA_COMPARANDA), frase
+        r = score_linguistico(frase, lex)
+        assert r["palabras_otro_arahuaco"] == [], frase
+        assert r["prestamos_de_esfera"] == [], frase
+        assert r["palabras_caquetias"] == r["palabras_arahuacas"], frase
+        assert r["score"] >= 7.5, (frase, r["score"])
+
+
 def test_deteccion_de_vocabulario_respeta_el_limite_de_morfema():
     """Casaba por subcadena en cualquier posición: `li` disparaba dentro de
     `kali-taro` y `bi` dentro de `biro`, 409 veces cada una."""

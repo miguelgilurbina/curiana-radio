@@ -507,6 +507,48 @@ def test_las_voces_de_fuera_son_solo_del_tier_1_y_nunca_caquetias():
             assert item.split(" = ")[1].split(" (")[0].strip().lower() != forma.lower()
 
 
+def test_ninguna_voz_de_fuera_se_glosa_a_si_misma():
+    """Casi-autoglosas del cierre del día 2 de la era 2 (2026-09-16): el
+    filtro sólo descartaba la coincidencia EXACTA, así que el bloque enseñaba
+    «cazabi = cazabe», «bohio = bohío» y «guanin = guanín» — donde la glosa
+    se distingue de la forma por la tilde o por la ortografía, y no enseña
+    nada. Ahora se comparan los esqueletos fonémicos
+    (`curiana_fonotactica.fonemizar`) con tolerancia de una edición.
+
+    Se comprueba sobre el CATÁLOGO ENTERO, no sobre una muestra sorteada."""
+    from curiana_lexicon import _es_casi_autoglosa, voces_de_fuera_posibles
+
+    catalogo = voces_de_fuera_posibles()
+    assert len(catalogo) > 40, "el bloque se quedó sin voces que enseñar"
+    malas = [(forma, glosa) for _p, forma, glosa, _f in catalogo
+             if _es_casi_autoglosa(forma, glosa.split(" (")[0].strip().strip("."))]
+    assert not malas, f"glosas que repiten la forma: {malas}"
+
+    # las tres que nombra la deuda ahora enseñan algo
+    por_forma = {forma: glosa for _p, forma, glosa, _f in catalogo}
+    assert por_forma["cazabi"] == "pan de yuca"
+    assert por_forma["bohio"] == "casa redonda de varas y palma"
+    assert por_forma["guanin"] == "aleación de oro y cobre"
+    # y la voz cuya glosa entera era ella misma sale del bloque
+    for fuera in ("caiman", "higuana", "maisi", "iwana"):
+        assert fuera not in por_forma, fuera
+
+
+def test_la_casi_autoglosa_se_mide_por_esqueleto_fonemico():
+    """El criterio no es fonológico —no decide nada de D5— sino de cuánta
+    información añade la glosa: dos esqueletos a una edición o menos."""
+    from curiana_lexicon import _es_casi_autoglosa
+
+    for forma, glosa in (("bohio", "bohío"), ("guanin", "guanín"),
+                         ("cazabi", "cazabe"), ("hutia", "jutía"),
+                         ("iwana", "iguana"), ("cacike", "cacique")):
+        assert _es_casi_autoglosa(forma, glosa), f"{forma} = {glosa}"
+    for forma, glosa in (("bohio", "casa redonda de varas y palma"),
+                         ("cazabi", "pan de yuca"), ("kai", "sol"),
+                         ("cohiba", "tabaco"), ("pira", "pez")):
+        assert not _es_casi_autoglosa(forma, glosa), f"{forma} = {glosa}"
+
+
 # ── memoria del día y días encadenados ────────────────────────────────
 
 def test_la_memoria_guarda_cinco_notas():

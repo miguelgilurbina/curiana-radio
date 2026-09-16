@@ -7736,6 +7736,72 @@ ES_STOPWORDS = {
     "debe",
 }
 
+# ── Castellano corriente que ADEMÁS es clave de la comparanda ──────────
+# (falsos préstamos medidos en los runs c6837386 y 89fc1744, 2026-09-16)
+#
+# El scorer busca cada token en un saco de ~1.500 claves de ocho lenguas. Unas
+# pocas de esas claves son, además, palabras que cualquier hispanohablante usa
+# hoy sin conciencia de préstamo, y entonces el instrumento no puede distinguir
+# «el agente tomó prestada la voz taína» de «el agente escribió en castellano».
+# Medido: `cacique` ×2 en «…la esencia que sopla el cacique irá al capubana…»
+# (todo el entorno es castellano) y `taita` ×1 en «Taita Dabuda naa» —glosado
+# por el propio agente como «Mi abuela dice»—, o sea el honorífico castellano
+# delante de un nombre, no la voz taína.
+#
+# QUÉ ENTRA AQUÍ, y por qué es un criterio y no una lista:
+#   (a) la voz que el castellano ya se tragó CON SU SENTIDO —`cacique`, `taita`,
+#       `bohio`/`bohío`—: forma y significado coinciden en las dos lenguas, así
+#       que el uso es inobservable como préstamo; no hay diferencia a la que
+#       agarrarse.
+#   (b) el homógrafo puro —`dia`, que es «día» sin tilde y en lokono es
+#       'decir'—: la forma coincide y el sentido no, como `de`, `una` o `debe`.
+#
+# QUÉ NO ENTRA, y es el residuo declarado: las voces de COSA que el castellano
+# también se tragó —`casabe`, `hamaka`, `kanoa`, `auyama`, `cobo`— son justo lo
+# que la medición del préstamo de esfera existe para ver circular. Sacarlas
+# vaciaría el instrumento. Si un agente escribe «casabe» porque es castellano,
+# se contará como préstamo taíno: se prefiere ese falso positivo a la ceguera.
+#
+# CÓMO SE TRATA: **neutro**, como `HOMOGRAFOS_ZAVALA` — ni densidad ni
+# penalización. No es gratis: el token sigue contando en `n_tok`, así que
+# diluye la densidad. Pero NO penaliza como `ES_STOPWORDS`, y la diferencia con
+# «debe» (#133) es la que separa una palabra de contenido del andamiaje
+# gramatical: sin «el/la/de/que» no se puede escribir una frase castellana,
+# mientras que una frase caquetía puede mencionar «el cacique». Castigar un
+# sustantivo como se castiga un artículo sería sobrecastigar — que es el
+# razonamiento ya escrito para los homógrafos de contenido de Zavala.
+#
+# ALCANCE: sólo el token PELADO. `ta-bohío` («descanso en mi hamaca en el
+# bohío», run 89fc1744) lleva el posesivo caquetío: ahí la lengua está haciendo
+# algo con la raíz, que es exactamente la pinta de un préstamo de verdad, y
+# sigue contando como préstamo de esfera.
+CASTELLANO_CORRIENTE = frozenset({
+    "cacique", "taita", "bohio", "bohío", "dia",
+})
+
+# ── Nombrar la lengua no es hablarla ───────────────────────────────────
+# `lokono` está en el lexicón como voz de la comparanda ('persona arahuaca,
+# miembro del pueblo Lokono'), así que «Wayunaiki no. Lokono no. Ta lengua,
+# caquetío.» (run c6837386, tier 3) salía como fuga al lokono — cuando el
+# agente estaba diciendo justamente lo contrario. Es una mención metalingüística
+# de un nombre propio, y el proyecto ya declara en `_CAT_NO_PRESTABLE` que los
+# etnónimos de la comparanda «son nombres propios de la comparanda, no
+# vocabulario prestable». El conjunto es cerrado: los nombres de las lenguas que
+# el lexicón compara (las categorías canónicas de `normalize_source_language`).
+#
+# ⚠️ Estas voces son HOMÓGRAFAS, no neutras de oficio: casi todos los etnónimos
+# arahuacos son a la vez el sustantivo 'persona' de su lengua (`wayuu` =
+# 'persona, gente, ser humano'; `lokono`, 'persona arahuaca'). Declararlas
+# neutras siempre cegaría la medición anticircular —hablar wayuu tiene que
+# penalizar—, así que se resuelven por CONTEXTO como los homógrafos de Zavala:
+# con un vecino arahuaco son la palabra, rodeadas de castellano son el nombre.
+# En el caso medido los vecinos son «no» y «no», y sale neutro.
+GLOTONIMOS_DE_LA_COMPARANDA = frozenset({
+    "caquetío", "caquetio", "wayunaiki", "wayuu", "lokono", "garifuna",
+    "taíno", "taino", "kalinago", "achagua", "paraujano", "añú", "anu",
+    "arahuaco", "arawak", "jirajara", "jirajaroide", "ayaman", "gayon",
+})
+
 # Sufijos aspectuales anclados a raíces verbales conocidas (de VOCABULARIO_BASE).
 _RAICES_VERB = {k for k, v in VOCABULARIO_BASE.items() if v.get("cat") in ("v_raiz",)}
 
@@ -7785,6 +7851,14 @@ FUERA_DEL_HABLA: dict[str, dict] = {
 }
 
 
+# Los afijos que el proyecto DECLARA caquetíos (`TODAS_LAS_REGLAS`: los cuatro
+# prefijos posesivos, los tres aspectos y los seis afijos atestiguados de
+# REGLAS_ZAVALA). Son los que dicen dónde acaba la raíz de un token con guion.
+_PREFIJOS_CAQ = frozenset(a for a in TODAS_LAS_REGLAS if a.endswith("-"))
+_SUFIJOS_CAQ = frozenset(a for a in TODAS_LAS_REGLAS if a.startswith("-"))
+_AFIJOS_SUELTOS = frozenset(a.strip("-").lower() for a in TODAS_LAS_REGLAS)
+
+
 def _familia_de_token(tok: str) -> str:
     """
     Familia lingüística canónica de un token ya reconocido como arahuaco.
@@ -7792,13 +7866,48 @@ def _familia_de_token(tok: str) -> str:
     real en VOCABULARIO_BASE. Si no está en el lexicón base (neologismo
     comunitario), se trata como "caquetío" — son palabras nuevas acuñadas
     por la propia comunidad, no préstamos de una lengua viva real.
+
+    ⚠ LA RAÍZ DECIDE, y la raíz es lo que queda al quitar los afijos que el
+    proyecto declara caquetíos (2026-09-16). Antes se quitaba SIEMPRE el primer
+    segmento como si fuera prefijo posesivo y el segundo ganaba la
+    clasificación, así que un token con raíz caquetía y sufijo caquetío salía
+    de otra lengua por pura colisión con una clave de la comparanda:
+    `juri-ima` y `lawari-ima` (raíces caquetías `juri` 'viento' y `lawari`
+    'acacia' + el sufijo ATESTIGUADO `-ima` de REGLAS_ZAVALA) se contaban como
+    LOKONO por la clave `ima` 'enemigo'. Medido en los runs c6837386/89fc1744.
+    El mismo criterio de consistencia vale para la raíz verbal: si un token
+    entró al conteo porque su primer segmento es raíz verbal conocida
+    (`maa-to`, vía `maa` 'decir'), es ese morfema el que decide su lengua.
+
+    Lo que NO cambia: `ka-to` sigue siendo lokono. Ahí el prefijo caquetío va
+    sobre una raíz ajena (`to`, artículo lokono), y eso es justo lo que la
+    métrica quiere ver — morfología propia sobre léxico de la lengua con la que
+    se reconstruye. Igual `ta-bohío`, que sigue siendo préstamo taíno.
+
+    ⚠ Esta función es también la que resuelve `word_uses.source_language`, o
+    sea el DICCIONARIO: una clave del lexicón tiene que seguir devolviendo su
+    propia lengua (`test_word_source_language_conserva_la_lengua_hermana`).
+    Por eso lo que depende del CONTEXTO —el afijo suelto, el glotónimo, el
+    castellano corriente— se resuelve en `score_linguistico()`, no aquí.
     """
     from curiana_database import normalize_source_language
 
     candidatos = [tok]
     if "-" in tok:
-        candidatos.append(tok.split("-", 1)[1])   # quita prefijo posesivo: ta-X -> X
-        candidatos.append(tok.split("-")[0])       # raíz antes del primer guion: X-ka -> X
+        partes = tok.split("-")
+        nucleo = partes
+        if len(nucleo) > 1 and nucleo[0] + "-" in _PREFIJOS_CAQ:
+            nucleo = nucleo[1:]                    # ta-X -> X (prefijo de verdad)
+            candidatos.append("-".join(nucleo))
+        while len(nucleo) > 1 and "-" + nucleo[-1] in _SUFIJOS_CAQ:
+            nucleo = nucleo[:-1]                   # X-ka, juri-ima -> X, juri
+            candidatos.append("-".join(nucleo))
+        if partes[0] in _RAICES_VERB:
+            candidatos.append(partes[0])           # el morfema que lo admitió
+        # Legado: lo que se probaba antes, ahora como último recurso, para que
+        # nada que se resolvía deje de resolverse.
+        candidatos.append(tok.split("-", 1)[1])
+        candidatos.append(partes[0])
     for c in candidatos:
         if c in VOCABULARIO_BASE:
             return normalize_source_language(VOCABULARIO_BASE[c].get("fuente", ""))
@@ -7939,6 +8048,14 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
         # hacía sumar densidad Y penalizar a la vez.
         if tok in ES_STOPWORDS:
             return False
+        # Castellano corriente que también es clave de la comparanda
+        # (`cacique`, `taita`, `dia`, `bohío`): NEUTRO. Al no ser arahuaco no
+        # entra en `usadas`, y al no ser stopword no entra en `esp_func`: ni
+        # densidad ni penalización — sólo diluye, porque sigue contando en
+        # n_tok. Sólo el token PELADO: `ta-bohío` lleva morfología caquetía y
+        # SÍ es préstamo. Ver CASTELLANO_CORRIENTE, medido el 2026-09-16.
+        if tok in CASTELLANO_CORRIENTE:
+            return False
         if tok in activos:
             return True
         for pref in ("ta", "wa", "ma", "ka"):
@@ -7975,6 +8092,16 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
             if any((v not in ES_STOPWORDS) and es_arahuaco(v) for v in ventana):
                 usadas.append(t)       # vecino arahuaco → la palabra caquetía
             # si no, se ignora: ni densidad ni penalización
+        elif t in GLOTONIMOS_DE_LA_COMPARANDA and t in activos:
+            # El nombre de una lengua de la comparación es homógrafo de su
+            # sustantivo 'persona' (`wayuu`, `lokono`). Mismo trato que arriba:
+            # con vecino arahuaco es la palabra —y entonces penaliza, que es lo
+            # que impide que la medición se vuelva circular—; rodeado de
+            # castellano es la mención metalingüística y no cuenta. Medido:
+            # «Wayunaiki no. Lokono no. Ta lengua, caquetío.» (run c6837386).
+            ventana = tokens[max(0, i - 1):i] + tokens[i + 1:i + 2]
+            if any((v not in ES_STOPWORDS) and es_arahuaco(v) for v in ventana):
+                usadas.append(t)
         elif es_arahuaco(t):
             usadas.append(t)
         elif t in ES_STOPWORDS:
@@ -7989,6 +8116,17 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
     for h in HOMOGRAFOS_CAQ:
         if h in familias:
             familias[h] = "caquetío"
+    # Un afijo DECLARADO escrito suelto es caquetío. `-ima`, `-uco` e `-iro`
+    # son afijos atestiguados (REGLAS_ZAVALA) y los agentes los escriben
+    # sueltos al descomponer su propio compuesto: «…tüshi-ima tüshi ima agua
+    # fría de quebrada…» (run 89fc1744, tier 1) salía como fuga al lokono por
+    # la clave `ima` 'enemigo' de la comparanda. El diccionario no se toca
+    # —`ima` sigue siendo una entrada lokono, y `word_source_language` lo
+    # devuelve así—: lo que se corrige es la lectura de un texto caquetío.
+    # Residuo declarado: un afijo suelto cuenta como palabra caquetía.
+    for t in list(familias):
+        if "-" not in t and t in _AFIJOS_SUELTOS:
+            familias[t] = "caquetío"
     caquetio_tokens = [t for t in usadas if familias[t] == "caquetío"]
     ajenos = [t for t in usadas if familias[t] != "caquetío"]
     # Decisión de Miguel 2026-09-15: las voces de la esfera de contacto se
@@ -8426,36 +8564,91 @@ _CAT_NO_PRESTABLE = {"gramatica", "pron", "part", "interr", "num", "numerales",
                      "parentesco", "acciones"}
 
 
-def prompt_voces_de_fuera(contexto: str = "", n: int = 3) -> str:
-    """Las voces de la esfera de contacto que un tier 1 conoce por su trato.
+# El lexicón desambigua los homógrafos con el nombre de la lengua pegado
+# (`kati-kalinago`, `hamaka-kalinago`): esa etiqueta no es parte de la voz.
+_SUFIJOS_DE_LENGUA = ("taíno", "kalinago", "paraujano", "caribe",
+                      "lokono", "wayunaiki", "jirajaroide")
 
-    Decisión de Miguel (2026-09-15): «los de tier 1 no sólo conocían su
-    lenguaje sino el de su esfera de influencia». Sólo tier 1, sólo unas
-    pocas, y SIEMPRE marcadas como ajenas — el agente tiene que saber que no
-    es su lengua, o el préstamo deja de ser un préstamo. Ver ESFERA_DE_CONTACTO.
+
+def _difieren_en_un_caracter(a: str, b: str) -> bool:
+    """True si dos cadenas son iguales o distan una sola edición.
+
+    NO es una afirmación fonológica: no decide nada de D5 ni toca el
+    inventario. Es una medida de cuánta INFORMACIÓN añade una glosa.
     """
-    import random as _rnd
+    if a == b:
+        return True
+    if abs(len(a) - len(b)) > 1:
+        return False
+    if len(a) == len(b):
+        return sum(1 for x, y in zip(a, b) if x != y) <= 1
+    corta, larga = (a, b) if len(a) < len(b) else (b, a)
+    return any(larga[:i] + larga[i + 1:] == corta for i in range(len(larga)))
+
+
+def _es_casi_autoglosa(forma: str, visible: str) -> bool:
+    """¿La glosa es la forma otra vez, escrita de otro modo?
+
+    Compara los dos ESQUELETOS FONÉMICOS con los que el proyecto ya compara
+    ortografías distintas (`curiana_fonotactica.fonemizar`: c/qu→k, z→s, v→b,
+    <h> muda, y→i, x→sh, tildes fuera) y tolera una edición. Con eso caen
+    «bohio = bohío» y «guanin = guanín» (tilde), «cazabi = cazabe» (vocal
+    final) y «hutia = jutía» (h/j).
+
+    Se prueba TAMBIÉN con la regla abierta <gu> → /w/ (`gu_es_w`, que
+    `curiana_fonotactica` deja sin decidir a propósito), porque «iwana =
+    iguana» sólo se ve con ella. Usarla aquí no la decide: este módulo no
+    toca el inventario ni la fonotáctica, sólo mide si una glosa enseña algo.
+
+    Residuo medido y declarado: «bixa = bija» se escapa (bisha / bija, dos
+    ediciones). El <x> colonial y el <j> moderno son la misma consonante, pero
+    afirmarlo sería una regla fonológica, y este filtro no es el sitio.
+    """
+    from curiana_fonotactica import fonemizar
+    for gu_es_w in (False, True):
+        a, b = fonemizar(forma, gu_es_w), fonemizar(visible, gu_es_w)
+        if not a or not b:
+            return True
+        if _difieren_en_un_caracter(a, b):
+            return True
+    return False
+
+
+def _glosa_util(forma: str, sig: str) -> str:
+    """El primer trozo de la glosa que ENSEÑA algo, o "".
+
+    13 de las 133 voces de la esfera se glosan a sí mismas («auyama: auyama,
+    calabaza»; «cobo: cobo, caracol marino») porque la voz entró al castellano;
+    dos no dicen nada más («casabe: casabe», «guayaba: guayaba (Psidium
+    guajava)»). Decirle al agente «casabe = casabe» no le enseña nada.
+
+    ⚠ 2026-09-16: el filtro comparaba sólo la coincidencia EXACTA, así que
+    dejaba pasar las casi-autoglosas —«cazabi = cazabe», «bohio = bohío»,
+    «guanin = guanín»—, donde la glosa se distingue de la forma por la tilde o
+    por la ortografía. Ahora se comparan los esqueletos fonémicos; si ningún
+    trozo enseña nada, la voz no entra al bloque.
+    """
+    for trozo in [t.strip() for t in sig.replace(";", ",").split(",") if t.strip()]:
+        visible = trozo.split(" (")[0].strip().strip(".")
+        if not visible:
+            continue
+        if visible.lower() in (forma.lower(), forma.lower().split("-")[0]):
+            continue
+        if _es_casi_autoglosa(forma, visible):
+            continue
+        if _es_casi_autoglosa(forma.split("-")[0], visible):
+            continue
+        return trozo
+    return ""
+
+
+def voces_de_fuera_posibles() -> list:
+    """Todas las voces que el bloque [Voces de fuera] puede llegar a mostrar.
+
+    `(palabra, forma, glosa, familia)`. Separada de `prompt_voces_de_fuera()`
+    para que se pueda medir el catálogo entero sin sortear.
+    """
     from curiana_database import normalize_source_language
-
-    # El lexicón desambigua los homógrafos con el nombre de la lengua pegado
-    # (`kati-kalinago`, `hamaka-kalinago`): esa etiqueta no es parte de la voz.
-    _SUFIJOS_DE_LENGUA = ("taíno", "kalinago", "paraujano", "caribe",
-                          "lokono", "wayunaiki", "jirajaroide")
-
-    def _glosa_util(forma: str, sig: str) -> str:
-        """El primer trozo de la glosa que NO repite la forma, o "".
-
-        13 de las 133 voces de la esfera se glosan a sí mismas («auyama:
-        auyama, calabaza»; «cobo: cobo, caracol marino») porque la voz entró al
-        castellano; dos no dicen nada más («casabe: casabe», «guayaba: guayaba
-        (Psidium guajava)»). Decirle al agente «casabe = casabe» no le enseña
-        nada, así que esas no entran.
-        """
-        for trozo in [t.strip() for t in sig.replace(";", ",").split(",") if t.strip()]:
-            visible = trozo.split(" (")[0].strip().strip(".")
-            if visible.lower() not in (forma.lower(), forma.lower().split("-")[0], ""):
-                return trozo
-        return ""
 
     candidatas = []
     for palabra, datos in VOCABULARIO_BASE.items():
@@ -8479,6 +8672,20 @@ def prompt_voces_de_fuera(contexto: str = "", n: int = 3) -> str:
         if not glosa:
             continue
         candidatas.append((palabra, forma, glosa, fam))
+    return candidatas
+
+
+def prompt_voces_de_fuera(contexto: str = "", n: int = 3) -> str:
+    """Las voces de la esfera de contacto que un tier 1 conoce por su trato.
+
+    Decisión de Miguel (2026-09-15): «los de tier 1 no sólo conocían su
+    lenguaje sino el de su esfera de influencia». Sólo tier 1, sólo unas
+    pocas, y SIEMPRE marcadas como ajenas — el agente tiene que saber que no
+    es su lengua, o el préstamo deja de ser un préstamo. Ver ESFERA_DE_CONTACTO.
+    """
+    import random as _rnd
+
+    candidatas = voces_de_fuera_posibles()
     if not candidatas:
         return ""
 
