@@ -128,6 +128,10 @@ python curiana_orchestrator_v2.py --auto 30 --perfil base --perfiles --reporte
 #   --semilla N             fija el azar del motor y se sella en la huella
 #   --continuar             arranca del estado, memoria, lexicón y koiné del run anterior
 #                           (curiana_*.json en curiana_sim/); la config dice de qué run viene
+#                           (`continuado_desde`). Al cerrar, el motor imprime ADEMÁS la serie
+#                           y el veredicto de la CADENA entera (curiana_cadena.py): la serie
+#                           del run solo tiene un día y siempre diría «datos insuficientes».
+#                           Un run interrumpido sigue en la cadena pero sus métricas no entran
 #   --perfil era2           base sin la capa hipotética y CON la retroabstraída (voces vivas:
 #                           matakán y las de Medina; decisiones 2026-09-14); un run = un día
 #   --elenco era2           el elenco de Paraguaná (63, generado desde 6-fusion/elenco_era2.yaml);
@@ -148,6 +152,8 @@ python curiana_orchestrator_v2.py --auto 30 --perfil base --perfiles --reporte
 #                           Apagado por defecto: cuesta API
 python curiana_mundo.py                                   # las 126 combinaciones de [Tu tierra], con su largo
 python curiana_eventos.py                                 # el catálogo de eventos medido y dicho para la era 2
+python curiana_cadena.py                                  # las cadenas `--continuar`: serie de koiné y veredicto por cadena
+                                                          # (un run es UN día: su serie sola nunca tiene dos puntos)
 python curiana_orchestrator_v2.py --elenco era2 --auto 6 --turnos-por-dia 6 --agentes-por-turno 12 --roster todos --perfil era2 --semilla 1
 python curiana_orchestrator_v2.py --elenco era2 --auto 6 --agentes-por-turno 12 --roster todos --perfil era2 --semilla 2 --continuar --reflexion
 python 6-fusion/scripts/generar_agentes_era2.py --check   # ¿el módulo generado está al día?
@@ -188,6 +194,7 @@ fuentes_caquetios/ los PDF (se citan, no se editan)
 | `curiana_lexicon` | vocabulario + reglas + prompts + `score_linguistico()` |
 | `curiana_agents` | los 60 personajes |
 | `curiana_koine` | idiolectos, competencia léxica, métricas de convergencia |
+| `curiana_cadena` | la cadena `continuado_desde`: serie de koiné y veredicto sobre TODOS los días encadenados, no sobre el run suelto |
 | `curiana_social` | contagio léxico, prestigio, variación dialectal |
 | `curiana_state` | día, estación, locaciones, eventos (escritos para la era 1) |
 | `curiana_eventos` | los eventos dichos para el elenco activo: alias, sin foráneos, reescrituras declaradas |

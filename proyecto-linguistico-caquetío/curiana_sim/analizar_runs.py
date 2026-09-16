@@ -8,7 +8,9 @@ Lee la base local (Supabase/Postgres en Docker) y responde las tres preguntas
 que el proyecto se hace sobre sus propios datos:
 
     --koine     ¿Hubo koineización? El contraste normal vs. ablación, con
-                estadística y no solo con medias.
+                estadística y no solo con medias; + la vista por CADENA (los
+                días encadenados con `--continuar`: un run de la era 2 es un
+                día y su serie sola nunca tiene dos puntos).
     --lengua    ¿Qué le pasó a la lengua? Composición, deriva, neologismos,
                 distribución del léxico.
     --agentes   ¿Cómo se comportaron? Prestigio, adopción, diferencias por
@@ -45,6 +47,18 @@ from textwrap import dedent
 
 import numpy as np
 import pandas as pd
+
+from curiana_cadena import (
+    LectorSQL,
+    cadenas_en_la_base,
+    corto,
+    es_interrumpido,
+    id_de,
+    lineas_de_serie,
+    resumen_de_cadena,
+    serie_koine_de_cadena,
+    texto_veredicto,
+)
 
 CONTENEDOR = "supabase_db_curiana_sim"
 
@@ -178,6 +192,46 @@ def analizar_koine() -> dict:
         3. **30 días simulados es poco** para hablar de koineización histórica;
            es una prueba del mecanismo, no del fenómeno."""))
     return resultados
+
+
+# ══════════════════════════════════════════════════════════════════════
+# CADENAS — los días encadenados con `--continuar`
+# ══════════════════════════════════════════════════════════════════════
+
+def analizar_cadenas() -> list[list[dict]]:
+    """La serie de koiné y el veredicto de cada CADENA de runs.
+
+    En la era 2 un run es un día: su serie tiene un punto y el veredicto del
+    motor dice siempre «datos insuficientes». La evidencia vive en la cadena
+    `continuado_desde`, que hasta el 2026-09-16 había que juntar a mano (ver
+    5-experimento/BITACORA_RUNS.md). El criterio del veredicto es el MISMO del
+    orquestador: `curiana_cadena.veredicto`."""
+    titulo("CADENAS — los días encadenados con --continuar")
+
+    lector = LectorSQL(CONTENEDOR)
+    cadenas = cadenas_en_la_base(lector)
+    if not cadenas:
+        print("\n    (ninguna cadena: ningún run continúa de otro)")
+        return []
+
+    for cadena in cadenas:
+        hoja = id_de(cadena[-1])
+        avisos: list[str] = []
+        serie = serie_koine_de_cadena(lector, hoja, avisos=avisos, cadena=cadena)
+        sub(f"cadena {resumen_de_cadena(cadena)} · {len(cadena)} runs")
+        for aviso in avisos:
+            print(f"    ⚠ {aviso}")
+        if not serie:
+            print("    (sin días medidos)")
+            continue
+        print(f"    días: {len(serie)}")
+        for linea in lineas_de_serie(serie):
+            print(f"    {linea}")
+        print(f"    {texto_veredicto(serie)}")
+    print("\n    Un run interrumpido (sin ended_at o 0 turnos) sigue EN la cadena")
+    print("    —hay que poder subir a través de él— pero sus métricas no entran:")
+    print("    la unidad de la serie es el día cerrado.")
+    return cadenas
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -461,6 +515,47 @@ def analizar_prestamos() -> None:
     dia.insert(0, "run", dia["run_id"].astype(str).str[:8])
     print(dia.drop(columns="run_id").to_string(index=False))
 
+    _prestamos_por_cadena()
+
+
+def _prestamos_por_cadena() -> None:
+    """Los mismos usos, sumados por CADENA: en la era 2 un run es un día y la
+    difusión de una voz de la esfera se juzga a lo largo de los días, no dentro
+    de uno.
+
+    A diferencia de la serie de koiné, aquí NO se saltan los runs
+    interrumpidos, sólo se marcan: un uso registrado es un hecho observado, no
+    una métrica de día cerrado. (Y hoy los únicos préstamos de la base son de
+    uno interrumpido — saltarlo dejaría la vista vacía sin decir por qué.)"""
+    lector = LectorSQL(CONTENEDOR)
+    cadenas = cadenas_en_la_base(lector)
+    if not cadenas:
+        return
+    sub("por cadena (los días encadenados con --continuar)")
+    for cadena in cadenas:
+        ids = [id_de(r) for r in cadena]
+        filas = lector.prestamos(ids)
+        cortados = {corto(id_de(r)) for r in cadena if es_interrumpido(r)}
+        print(f"\n    {resumen_de_cadena(cadena)}")
+        if not filas:
+            print("      (ningún préstamo registrado en la cadena)")
+            continue
+        df = pd.DataFrame(filas)
+        df["day"] = df["day"].astype(int)
+        df["tier"] = df["tier"].astype(int)
+        df["run"] = df["run_id"].astype(str).str[:8]
+        tabla = (df.groupby(["day", "tier"])
+                   .agg(usos=("word", "size"), formas=("word", "nunique"),
+                        agentes=("agent_name", "nunique"),
+                        runs=("run", lambda s: ", ".join(sorted(set(s)))))
+                   .reset_index())
+        tabla["nota"] = ["⚠ interrumpido" if set(r.split(", ")) & cortados else ""
+                         for r in tabla["runs"]]
+        print("\n".join("      " + l
+                        for l in tabla.to_string(index=False).splitlines()))
+        print(f"      voces distintas en la cadena: {df['word'].nunique()} · "
+              f"tier 2/3: {int((df['tier'] > 1).sum())} de {len(df)} usos")
+
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="Análisis de los runs de Curiana")
@@ -479,6 +574,7 @@ def main(argv=None) -> int:
 
     if a.koine:
         analizar_koine()
+        analizar_cadenas()
     if a.lengua:
         analizar_lengua()
     if a.neologismos:

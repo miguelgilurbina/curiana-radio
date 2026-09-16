@@ -80,9 +80,15 @@ from curiana_koine import (
     prompt_emocionar,
     prompt_idiolecto,
     distancia_idiolectal,
-    veredicto_convergencia,
     guardar_koine,
     cargar_koine,
+)
+from curiana_cadena import (
+    cadena_de_runs,
+    lineas_de_serie,
+    resumen_de_cadena,
+    serie_koine_de_cadena,
+    texto_veredicto,
 )
 from curiana_eventos import alias_del_elenco, catalogo_para_elenco, elenco_era1
 from curiana_director import director_system, guardar_reflexion, reflexion_del_dia
@@ -997,6 +1003,37 @@ def interactive_mode(client: anthropic.Anthropic):
 # MODO AUTOMÁTICO (con reportes periódicos)
 # ══════════════════════════════════════════════════════════════════════
 
+def _imprimir_cadena(db, run_id: Optional[str]) -> None:
+    """La serie y el veredicto de la CADENA entera, al cerrar un run continuado.
+
+    En la era 2 un run es un día: su propia serie tiene un punto y el veredicto
+    dice siempre «datos insuficientes». La evidencia de koiné vive en la cadena
+    `continuado_desde`, que este bloque lee de la base y juzga con el MISMO
+    criterio (`curiana_cadena.veredicto`).
+
+    Sin base (modo JSON) no hay cadena que leer y no se imprime nada; un fallo
+    al leerla se avisa y no tumba el reporte de un run ya terminado."""
+    if not db or not run_id:
+        return
+    try:
+        cadena = cadena_de_runs(db, run_id)
+        if len(cadena) < 2:
+            return                      # run suelto: su propia serie ya se dijo
+        avisos: list[str] = []
+        serie = serie_koine_de_cadena(db, run_id, avisos=avisos, cadena=cadena)
+        print(f"\n  CADENA — {len(cadena)} runs encadenados: {resumen_de_cadena(cadena)}")
+        for aviso in avisos:
+            print(f"    ⚠ {aviso}")
+        if not serie:
+            print("    (sin días medidos en la cadena)")
+            return
+        for linea in lineas_de_serie(serie):
+            print(f"    {linea}")
+        print(f"    {texto_veredicto(serie)}")
+    except Exception as e:
+        print(f"\n  ⚠ no se pudo leer la cadena de runs: {e}")
+
+
 def auto_mode(
     client: anthropic.Anthropic,
     turnos: int,
@@ -1291,10 +1328,8 @@ def auto_mode(
         print("  ⚗ RUN DE ABLACIÓN (control sin inyecciones de convergencia)")
     print(f"{'─'*60}")
     if serie_distancia:
-        fmt = lambda v: "s/d" if v is None else v
-        for etiqueta, idx in (("acumulada", 1), ("ventana  ", 2), ("emergente", 3)):
-            traj = " → ".join(f"D{p[0]}:{fmt(p[idx])}" for p in serie_distancia)
-            print(f"  {etiqueta}: {traj}")
+        for linea in lineas_de_serie(serie_distancia):
+            print(f"  {linea}")
         # Veredicto sobre la métrica MÁS EXIGENTE con datos suficientes:
         # emergente > ventana > acumulada (la acumulada converge casi siempre
         # por acumulación del vocabulario base — no es evidencia por sí sola).
@@ -1302,15 +1337,10 @@ def auto_mode(
         # estanca (típico de la ablación) daría un falso "converge". El
         # veredicto mira también la pendiente del último tercio (ver
         # veredicto_convergencia en curiana_koine.py).
-        for etiqueta, idx in (("emergente", 3), ("ventana", 2), ("acumulada", 1)):
-            puntos = [(p[0], p[idx]) for p in serie_distancia if p[idx] is not None]
-            if len(puntos) >= 2:
-                _codigo, mensaje = veredicto_convergencia(puntos)
-                d_ini, d_fin = puntos[0][1], puntos[-1][1]
-                print(f"  Veredicto [{etiqueta}]: inicio {d_ini} → fin {d_fin}  →  {mensaje}")
-                break
-        else:
-            print("  Veredicto: datos insuficientes (ningún par de días comparable)")
+        # El criterio vive en curiana_cadena.veredicto() para que el run y su
+        # cadena no puedan juzgarse con varas distintas.
+        print(f"  {texto_veredicto(serie_distancia)}")
+    _imprimir_cadena(db, run_id)
     print("\n  Diccionario koiné emergente (formas más extendidas):")
     for forma, peso in campo.top(15, excluir=_FORMAS_EXCLUIDAS):
         print(f"    {forma:18} {peso:.1f}")

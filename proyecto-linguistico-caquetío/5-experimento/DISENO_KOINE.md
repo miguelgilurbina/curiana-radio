@@ -173,6 +173,22 @@ Esto vuelve el resultado defendible en vez de anecdótico. Tabla nueva
     El veredicto de convergencia se emite sobre la más exigente con datos.
     Verificado en un run corto: la acumulada "convergía" mientras ventana y
     emergente divergían — el artefacto era real.
+  - 🔗 **La unidad del veredicto es la CADENA, no el run (2026-09-16):** en la
+    era 2 un run es UN día (`--continuar`), así que su serie tiene un punto y
+    el veredicto decía siempre «datos insuficientes» aunque los días
+    encadenados ya mostraran la caída. `curiana_cadena.py` sube por
+    `simulation_runs.config->continuado_desde` hasta la raíz, une las
+    `koine_metrics` de toda la cadena y emite **el mismo criterio** (la función
+    `veredicto()` es la extracción del bloque del orquestador, no un criterio
+    nuevo: el motor la llama en los dos sitios). Un run interrumpido —sin
+    `ended_at` o con `total_turns` 0— sigue EN la cadena, porque hay que poder
+    subir a través de él, pero sus métricas no entran: la unidad de la serie es
+    el **día cerrado**. Si dos runs de una cadena midieron el mismo día, gana el
+    más cercano a la hoja. Se lee al cerrar cada run continuado, con
+    `python curiana_cadena.py` y con `analizar_runs.py --koine`.
+    Medido sobre `c6837386` → `89fc1744`: emergente 0.8995 → 0.8203 (−8,8%) →
+    CONVERGE; ventana 0.6038 → 0.4665; **la acumulada SUBE** (0.1993 → 0.2295),
+    que es justamente por lo que el veredicto no se emite sobre ella.
   - ⚗ **Run de control (`--ablacion`):** apaga las tres inyecciones de prompt
     que empujan la convergencia (sugerencias de contagio, competencias
     abiertas, muestreo ponderado). La evidencia de koineización emergente es
