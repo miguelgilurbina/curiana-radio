@@ -707,31 +707,83 @@ class IdiolectoAgente:
 # ══════════════════════════════════════════════════════════════════════
 
 class CampoLexico:
-    """Frecuencia comunitaria de formas, con decaimiento por turno (recambio)."""
+    """Frecuencia comunitaria de formas, con decaimiento por turno (recambio).
+
+    Desde el 2026-09-17 (capa 2 de la escena, PR 4) el campo está partido POR
+    ÁMBITO: `{lugar: {forma: peso}}`, y el campo global es la SUMA de los
+    lugares. Es la vía 4 del diseño —el muestreo rich-get-richer del prompt—,
+    que hasta hoy ponderaba con la frecuencia de los 63 aunque el agente
+    estuviera solo en el agua.
+
+    Sin escena hay un único ámbito, el nulo (`None`), y entonces el global ES
+    ese diccionario: `pesos` devuelve el mismo objeto de siempre y el muestreo
+    sortea exactamente lo mismo. La era 1 no se mueve un byte.
+    """
 
     def __init__(self, decaimiento: float = 0.97):
-        self.pesos: dict[str, float] = {}
+        self.por_ambito: dict[Optional[str], dict[str, float]] = {}
         self.decaimiento = decaimiento
 
-    def registrar(self, formas, incremento: float = 1.0):
+    # ── El campo global: la suma de los ámbitos ───────────────────────
+
+    @property
+    def pesos(self) -> dict[str, float]:
+        """El campo de TODA la comunidad. Con un solo ámbito —la era 1— es
+        literalmente su diccionario, sin copiar ni sumar nada."""
+        if len(self.por_ambito) == 1:
+            return next(iter(self.por_ambito.values()))
+        total: dict[str, float] = {}
+        for pesos in self.por_ambito.values():
+            for f, p in pesos.items():
+                total[f] = total.get(f, 0.0) + p
+        return total
+
+    @pesos.setter
+    def pesos(self, valor: dict) -> None:
+        """Poner el global sin decir de qué lugar viene lo deja todo en el
+        ámbito nulo: es lo que hace `cargar_koine` con un JSON anterior a la
+        escena, y es la lectura correcta (aquel run no tenía lugares)."""
+        self.por_ambito = {None: dict(valor or {})}
+
+    def pesos_de(self, ambito: Optional[str] = None) -> dict[str, float]:
+        """El campo que ve quien está en `ambito`. Sin ámbito, el global.
+
+        Ojo: sin ámbito NO es «el ámbito nulo», es TODO — para que la era 1 y
+        la era 2 sin escena vean lo de siempre."""
+        if ambito is None:
+            return self.pesos
+        return self.por_ambito.setdefault(ambito, {})
+
+    def ambitos(self) -> list:
+        return list(self.por_ambito)
+
+    # ── Escritura ─────────────────────────────────────────────────────
+
+    def registrar(self, formas, incremento: float = 1.0,
+                  ambito: Optional[str] = None):
+        """Suma uso en el campo del LUGAR donde se dijo (None = la comunidad
+        entera, que es el único lugar que hay sin escena)."""
+        pesos = self.por_ambito.setdefault(ambito, {})
         for f in formas or []:
-            self.pesos[f] = self.pesos.get(f, 0.0) + incremento
+            pesos[f] = pesos.get(f, 0.0) + incremento
 
     def decaer(self):
         """Aplica decaimiento; descarta lo despreciable (formas que mueren)."""
-        self.pesos = {
-            f: p * self.decaimiento
-            for f, p in self.pesos.items()
-            if p * self.decaimiento > 0.05
+        self.por_ambito = {
+            ambito: {f: p * self.decaimiento
+                     for f, p in pesos.items()
+                     if p * self.decaimiento > 0.05}
+            for ambito, pesos in self.por_ambito.items()
         }
 
-    def peso(self, forma: str) -> float:
-        return self.pesos.get(forma, 0.0)
+    def peso(self, forma: str, ambito: Optional[str] = None) -> float:
+        return self.pesos_de(ambito).get(forma, 0.0)
 
-    def top(self, n: int = 20, excluir: Optional[set] = None) -> list[tuple[str, float]]:
+    def top(self, n: int = 20, excluir: Optional[set] = None,
+            ambito: Optional[str] = None) -> list[tuple[str, float]]:
         """Las formas de más peso. `excluir` deja fuera el vocabulario heredado
         (base y plantillas) cuando lo que se quiere ver es lo emergente."""
-        items = self.pesos.items()
+        items = self.pesos_de(ambito).items()
         if excluir:
             items = [(f, p) for f, p in items if f not in excluir]
         return sorted(items, key=lambda x: x[1], reverse=True)[:n]
@@ -794,11 +846,22 @@ def agentes_sin_precarga(idiolectos: dict, agentes) -> list[str]:
     return faltan
 
 
+# En el JSON, el ámbito nulo (la comunidad entera, que es lo único que hay sin
+# escena) se escribe con esta llave: JSON no tiene claves `null` en un objeto.
+AMBITO_NULO = ""
+
+
 def guardar_koine(idiolectos: dict, campo: "CampoLexico", path: str = KOINE_PATH) -> None:
     import json
     datos = {
         "idiolectos": {nm: _idiolecto_a_dict(i) for nm, i in idiolectos.items()},
-        "campo": {"pesos": dict(campo.pesos), "decaimiento": campo.decaimiento},
+        # `pesos` sigue siendo el GLOBAL: lo leen tests y tooling anteriores a
+        # la escena, y es la suma de `por_ambito` por construcción.
+        # `por_ambito` es lo que una cadena `--continuar` con escena necesita
+        # para no fundir los lugares el día 2.
+        "campo": {"pesos": dict(campo.pesos), "decaimiento": campo.decaimiento,
+                  "por_ambito": {(a if a is not None else AMBITO_NULO): dict(p)
+                                 for a, p in campo.por_ambito.items()}},
     }
     with open(path, "w", encoding="utf-8") as f:
         json.dump(datos, f, ensure_ascii=False, indent=1)
@@ -814,7 +877,15 @@ def cargar_koine(path: str = KOINE_PATH) -> tuple[dict, "CampoLexico"]:
     idiolectos = {nm: _idiolecto_de_dict(d) for nm, d in datos.get("idiolectos", {}).items()}
     c = datos.get("campo") or {}
     campo = CampoLexico(decaimiento=float(c.get("decaimiento", 0.97)))
+    # Un JSON anterior a la escena sólo trae el global: entra entero al ámbito
+    # nulo, que es la lectura correcta —aquel run no tenía lugares.
     campo.pesos = {f: float(p) for f, p in (c.get("pesos") or {}).items()}
+    por_ambito = c.get("por_ambito")
+    if por_ambito:
+        campo.por_ambito = {
+            (a or None): {f: float(p) for f, p in (pesos or {}).items()}
+            for a, pesos in por_ambito.items()
+        }
     return idiolectos, campo
 
 
@@ -981,6 +1052,9 @@ class CompetenciaLexica:
         # concepto_id -> {desc, variantes: Counter(forma->soporte), fijada, fijada_dia}
         self.referentes: dict[str, dict] = {}
         self._forma2concepto: dict[str, str] = {}
+        # forma (minúscula) -> los ÁMBITOS donde alguien la PROPUSO (capa 2 de
+        # la escena). Vacío sin escena, y entonces el bloque no se filtra.
+        self._ambitos_de_forma: dict[str, list] = {}
         self.umbral = umbral_fijacion
         self.soporte_min = soporte_minimo
 
@@ -995,13 +1069,27 @@ class CompetenciaLexica:
         self.referentes.setdefault(concepto_id, {
             "desc": desc, "variantes": Counter(), "fijada": None, "fijada_dia": None})
 
-    def proponer(self, concepto_id: str, forma: str, agente: str):
-        """Un agente acuña `forma` para `concepto_id` en un evento de nombramiento."""
+    def proponer(self, concepto_id: str, forma: str, agente: str,
+                 ambito: Optional[str] = None):
+        """Un agente acuña `forma` para `concepto_id` en un evento de nombramiento.
+
+        `ambito` (capa 2 de la escena): el LUGAR donde estaba al acuñarla. Es
+        lo que `prompt_competencias()` filtra: en un lugar sólo circulan las
+        formas rivales que se propusieron allí. Sin escena es None, no se
+        guarda nada y el bloque sale entero, como siempre."""
         ref = self.referentes.get(concepto_id)
         if ref is None or ref["fijada"] or not forma:
             return
         ref["variantes"][forma] += 1.0 + self._prestigio(agente)
         self._forma2concepto[forma.lower()] = concepto_id
+        if ambito:
+            lugares = self._ambitos_de_forma.setdefault(forma.lower(), [])
+            if ambito not in lugares:
+                lugares.append(ambito)
+
+    def ambitos_de_forma(self, forma: str) -> list:
+        """Dónde se propuso esa forma rival. [] sin escena."""
+        return list(self._ambitos_de_forma.get((forma or "").lower(), ()))
 
     def registrar_uso(self, forma: str, agente: str):
         """Reuso posterior de una forma en competencia → suma soporte (más leve
@@ -1033,12 +1121,30 @@ class CompetenciaLexica:
         return {cid: ref for cid, ref in self.referentes.items()
                 if not ref["fijada"] and ref["variantes"]}
 
-    def prompt_competencias(self, top: int = 4) -> str:
+    def prompt_competencias(self, top: int = 4,
+                            ambito: Optional[str] = None) -> str:
         """Surface las competencias abiertas para que los agentes REUSEN una
-        forma rival en vez de inventar otra — así una se impone."""
+        forma rival en vez de inventar otra — así una se impone.
+
+        `ambito` (V3 de la capa 2): sólo las formas rivales que se propusieron
+        EN ESTE LUGAR. Un referente cuyas variantes nacieron todas en otra
+        parte no sale: aquí no circula ninguna, y el agente no puede «elegir
+        una de las que ya circulan» sin haberlas oído. Con `ambito=None` el
+        bloque es el de siempre, byte a byte.
+
+        La FIJACIÓN no se parte: sigue siendo comunitaria (el soporte de una
+        forma suma venga de donde venga). Lo que el ámbito filtra es lo que se
+        VE, no con qué se mide — la misma regla que gobierna los perfiles."""
         lineas = []
         for ref in self.activas().values():
-            formas = [f for f, _ in ref["variantes"].most_common(top)]
+            if ambito is None:
+                # La rama de siempre, intacta: `most_common(top)` ordena los
+                # empates como `nlargest`, no como `sorted`, y filtrar después
+                # no es lo mismo que pedir los N de golpe.
+                formas = [f for f, _ in ref["variantes"].most_common(top)]
+            else:
+                formas = [f for f, _ in ref["variantes"].most_common()
+                          if ambito in self.ambitos_de_forma(f)][:top]
             if formas:
                 lineas.append(f"{ref['desc']} → {', '.join(formas)}")
         if not lineas:

@@ -116,6 +116,52 @@ def dia_inicial(run: dict) -> Optional[int]:
         return None
 
 
+# ══════════════════════════════════════════════════════════════════════
+# I-b. EL BRAZO — una cadena con escena y otra sin ella no se unen
+# ══════════════════════════════════════════════════════════════════════
+# «Una escena no puede entrar a mitad de cadena: es una serie nueva desde el
+# día 1» (diseño §5.4). El orquestador ya se niega a continuar cambiando de
+# brazo (`comprobar_brazo_de_escena`), pero la base viene de antes que esa
+# comprobación y un run de la era 2 anterior a hoy ni siquiera declara la
+# clave. Aquí se lee lo que la config dice y, si una cadena mezcla, el
+# veredicto AVISA y no mezcla las métricas: la evidencia es la diferencia
+# entre dos cadenas completas con la misma semilla, no una media de las dos.
+
+def brazo_de(run: dict) -> tuple:
+    """`(escena, capubana_cada)` tal como lo selló la config del run.
+
+    Un run anterior a la escena no trae la clave: entonces es `(False, 0)`, y
+    es un hecho, no un supuesto — antes del 2026-09-17 la escena no existía."""
+    cfg = config_de(run)
+    escena = cfg.get("escena")
+    if escena is None:
+        escena = run.get("escena")
+    escena = bool(escena)
+    cada = cfg.get("capubana_cada")
+    if cada is None:
+        cada = run.get("capubana_cada")
+    try:
+        cada = int(cada or 0)
+    except (TypeError, ValueError):                     # pragma: no cover
+        cada = 0
+    return (escena, cada if escena else 0)
+
+
+def texto_de_brazo(brazo: tuple) -> str:
+    escena, cada = brazo
+    if not escena:
+        return "sin escena"
+    return "con escena" + (f", Capubana cada {cada}" if cada else ", sin Capubana")
+
+
+def brazos_de_cadena(cadena: list[dict]) -> dict:
+    """`{brazo: [run_id, …]}` — cuántos brazos distintos hay en una cadena."""
+    por_brazo: dict = {}
+    for run in cadena or []:
+        por_brazo.setdefault(brazo_de(run), []).append(id_de(run))
+    return por_brazo
+
+
 def es_interrumpido(run: dict) -> bool:
     """Un run sin `ended_at` o con `total_turns` 0 no cerró ningún día.
 
@@ -171,6 +217,10 @@ def serie_koine_de_cadena(db: Any, run_id: str,
     """Une las `koine_metrics` de toda la cadena, ordenadas por día.
 
     - Los runs interrumpidos se saltan con aviso (ver `es_interrumpido`).
+    - **Los runs de OTRO BRAZO se saltan con aviso** (ver `brazo_de`): una
+      cadena con escena y otra sin ella no se unen, y una cadena que cambió de
+      brazo a la mitad no se promedia. Manda el brazo de la HOJA, que es el
+      run desde el que se pregunta.
     - Un día que aparece en dos runs de la cadena no se duplica: gana el run
       más avanzado (el más cercano a la hoja), que es el que lo volvió a medir
       sobre el estado heredado.
@@ -183,9 +233,18 @@ def serie_koine_de_cadena(db: Any, run_id: str,
         cadena = cadena_de_runs(db, run_id)
     if not cadena or not callable(leer_metricas):
         return []
+    brazo_hoja = brazo_de(cadena[-1])
     por_dia: dict[int, tuple] = {}
     for run in cadena:                       # raíz→hoja: el último gana
         rid = id_de(run)
+        if brazo_de(run) != brazo_hoja:
+            if avisos is not None:
+                avisos.append(
+                    f"run {corto(rid)} corrió {texto_de_brazo(brazo_de(run))} y "
+                    f"la hoja {texto_de_brazo(brazo_hoja)}: NO se mezclan. La "
+                    f"evidencia es la diferencia entre dos cadenas completas "
+                    f"con la misma semilla, no una cadena mitad y mitad")
+            continue
         if es_interrumpido(run):
             if avisos is not None:
                 avisos.append(
@@ -297,6 +356,20 @@ def resumen_de_cadena(cadena: list[dict]) -> str:
     return " → ".join(partes)
 
 
+def linea_de_brazo(cadena: list[dict]) -> str:
+    """El brazo con que corrió la cadena, y el aviso si mezcla."""
+    por_brazo = brazos_de_cadena(cadena)
+    if not por_brazo:                                   # pragma: no cover
+        return ""
+    if len(por_brazo) == 1:
+        return f"brazo: {texto_de_brazo(next(iter(por_brazo)))}"
+    detalle = " · ".join(
+        f"{texto_de_brazo(b)} ({', '.join(corto(r) for r in runs)})"
+        for b, runs in por_brazo.items())
+    return (f"⚠ ESTA CADENA MEZCLA {len(por_brazo)} BRAZOS: {detalle}. "
+            f"Sólo cuentan los días del brazo de la hoja")
+
+
 # ══════════════════════════════════════════════════════════════════════
 # IV. UN LECTOR QUE NO NECESITA CREDENCIALES
 # ══════════════════════════════════════════════════════════════════════
@@ -395,6 +468,9 @@ def informe(db: Any) -> int:
         avisos: list[str] = []
         serie = serie_koine_de_cadena(db, hoja, avisos=avisos, cadena=cadena)
         print(f"\n  cadena: {resumen_de_cadena(cadena)}  ({len(cadena)} runs)")
+        brazo = linea_de_brazo(cadena)
+        if brazo:
+            print(f"    {brazo}")
         for aviso in avisos:
             print(f"    ⚠ {aviso}")
         if not serie:

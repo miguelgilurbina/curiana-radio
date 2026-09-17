@@ -284,6 +284,69 @@ Esto vuelve el resultado defendible en vez de anecdótico. Tabla nueva
 - **Diccionario koiné extraíble** al cierre del run (forma fijada por glosa +
   afijos ganadores + tendencias fonológicas).
 
+### El ámbito: las cuatro vías dejan de ser globales (2026-09-17) ✅ capa 2
+
+Hasta hoy las cuatro vías por las que una forma circulaba eran **de toda la
+comunidad**, y por eso los dos nodos nombraban a la vez. Con `--escena` el
+ámbito de lo que un agente ve es **el lugar donde está ahora**, y la puerta es
+una sola: `curiana_escena.ambito_de(agente, state)` (diseño §2, decisiones p5,
+p6, p9 de la tanda del 2026-09-17). Ninguna de las cuatro lee el nodo por su
+cuenta; con `ambito=None` —la era 1, o la era 2 sin el flag— las cuatro son
+byte a byte las de siempre.
+
+| vía | dónde | qué filtra el ámbito |
+|---|---|---|
+| **V1** propuestas en evaluación | `prompt_pendientes_evaluacion(lexico, ambito)` | sólo lo propuesto **aquí** (`Neologismo.ambito`) |
+| **V2** adoptadas de la comunidad | `prompt_lexico_activo(lexico, ambito)` | sólo lo adoptado **aquí** (`Neologismo.adoptado_en`) |
+| **V3** competencias abiertas | `CompetenciaLexica.prompt_competencias(ambito=…)` | sólo las formas rivales propuestas **aquí** |
+| **V4** muestreo rich-get-richer | `CampoLexico.pesos_de(ambito)` | el campo del lugar; el global es la **suma** de los lugares |
+
+**La oficialización sabe dónde pasó, y declara por qué vía.** Sigue haciendo
+falta lo mismo —dos adoptantes distintos— pero `Neologismo.via` dice si fueron
+del mismo lugar (`un-ambito`) o de dos (`dos-ambitos`). La segunda es la vía
+que la escena hace posible y la que hay que ver nacer: para adoptar una forma
+en otro lugar alguien tuvo que llevarla, porque el bloque de propuestas que
+ese lugar ve está filtrado por su propio ámbito. Sale medida en el diccionario
+de cierre (`LexicoComunitario.reporte_linguistico`) y en
+`adoptados_en_dos_ambitos()`. **La FIJACIÓN no se parte**: el soporte de una
+forma rival suma venga del ámbito que venga, porque el ámbito cambia lo que el
+agente VE, nunca con qué se le mide (la misma regla que gobierna los perfiles).
+
+**`[Lo que se dijo aquí]`** es el bloque nuevo: las ≤ 3 intervenciones del
+MOMENTO ANTERIOR dichas en este lugar, ≤ 280 caracteres, con el nombre y la
+frase caquetía sin su glosa (`curiana_escena.bloque_lo_que_se_dijo_aqui`). Del
+momento anterior y no del mismo turno: con el mismo turno el orden de habla
+vuelve a ser destino, que es el mecanismo de V1 que produjo los tres cruces de
+Δturnos = 0 del día 1 de la serie B.
+
+Medido en el ensayo sin API de seis turnos (`tests/test_escena_oir.py`, mismo
+doble de cliente, RNG fijado, sin día de Capubana), contra el mismo ensayo sin
+el brazo:
+
+```
+                                   sin escena   con escena   día de Capubana
+V1 formas por prompt                   4,12        1,71           4,10
+V2 formas por prompt                   0,97        0,06           0,97
+V3 formas por prompt                   3,86        0,81           3,86
+prompts con [Lo que se dijo aquí]      0/72       17/72          60/72
+ámbitos con léxico                        0          21              1
+prompt medio (caracteres)             8.111       7.840          7.919
+```
+
+El día de Capubana los 63 están en el cerro: **un solo ámbito, y las tres vías
+del prompt vuelven a los números de la comunidad entera** — que es exactamente
+lo que la convergencia significa, y lo que debería producir el diente de
+sierra de la brecha intra/entre (§5.1 del diseño de la escena). El coste en el
+prompt es **negativo** (−3,3 %): lo que el bloque de oír añade es menos que lo
+que el filtro de V1/V2/V3 quita.
+
+⚠ **17 de 72**: el bloque de oír sale poco, y se sabe por qué. Pide que alguien
+haya hablado **en tu lugar** en el momento anterior, y por turno hablan 12 de
+63 en 8-27 lugares distintos (§3.3). Con la ventana de 12 sin tocar (decisión
+p4 → A) eso es el techo. Si Miguel quiere más, las palancas declaradas son la
+cadencia del Capubana y la capa 3 (el cierre de ayer en ese lugar, opción B de
+la pregunta 5), no cambiar quién habla.
+
 ## 8. Fase posterior: topónimos (no en este PR)
 
 La koiné da: (a) inventario fonológico + reglas de sonido, (b) set de morfemas
@@ -314,6 +377,10 @@ corpus de topónimos reales del territorio.
    `koine_lexicon`).
 7. ✅ Población constante de participantes en el loop (`PARTICIPANTES_KOINE`).
 8. ✅ Compuerta de neologismos (fonotáctica: blocklist + marcadores + bigramas).
+9. ✅ El ÁMBITO: las cuatro vías por lugar y `[Lo que se dijo aquí]` (capa 2 de
+   la escena, `--escena`; ver arriba). Es un BRAZO: sin el flag nada cambia, y
+   una cadena no puede cambiar de brazo a la mitad (`curiana_cadena` tampoco
+   mezcla los días de dos brazos).
 
 ## 10. Referencias
 

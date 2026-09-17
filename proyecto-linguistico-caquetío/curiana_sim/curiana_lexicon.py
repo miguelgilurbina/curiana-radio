@@ -7250,9 +7250,35 @@ class Neologismo:
     rechazado_por: list = field(default_factory=list)
     turno_resolucion: Optional[int] = None
     dia_resolucion: Optional[int] = None   # día en que se adoptó/rechazó (dia = día de PROPUESTA)
+    # ── El ÁMBITO (capa 2 de la escena, PR 4 del 2026-09-17) ──────────
+    # `ambito` es el LUGAR donde estaba el autor cuando la acuñó;
+    # `adoptado_en`, el lugar de cada adoptante, en el mismo orden que
+    # `adoptado_por`. Los tres campos nacen vacíos y así se quedan en la era 1
+    # y en la era 2 sin `--escena`: allí `curiana_escena.ambito_de()` devuelve
+    # None y esto es un `None` más en el JSON. Un `curiana_lexico.json` escrito
+    # antes de hoy no los trae y carga igual (los valores por defecto).
+    ambito: Optional[str] = None
+    adoptado_en: list = field(default_factory=list)
+    # Dónde se oficializó y por qué vía. `via` es la medición que la escena
+    # hace posible: `un-ambito` = los dos adoptantes estaban en el MISMO lugar;
+    # `dos-ambitos` = la forma viajó y se adoptó en DOS lugares distintos, que
+    # es justo lo que queremos ver nacer. None sin escena.
+    oficial_en: list = field(default_factory=list)
+    via: Optional[str] = None
 
     def to_dict(self) -> dict:
         return asdict(self)
+
+
+def ambitos_de_adopcion(neo: "Neologismo") -> list[str]:
+    """Los lugares DISTINTOS donde se adoptó una forma, en orden de adopción.
+
+    [] cuando no hay escena: allí `adoptado_en` es una lista de `None`."""
+    vistos: dict = {}
+    for a in getattr(neo, "adoptado_en", None) or ():
+        if a:
+            vistos[a] = True
+    return list(vistos)
 
 
 class LexicoComunitario:
@@ -7267,6 +7293,28 @@ class LexicoComunitario:
     def __init__(self):
         self._lexico: dict[str, dict] = {}          # palabra → datos
         self._neologismos: list[Neologismo] = []     # historial ordenado
+        # Dónde está cada agente AHORA (capa 2 de la escena). No se persiste:
+        # es el contexto del turno en curso, no historia. Ver `situar()`.
+        self._ambito_actual: dict[str, Optional[str]] = {}
+
+    # ── El ámbito: dónde está quien habla ─────────────────────────────
+
+    def situar(self, agente: str, ambito: Optional[str]) -> None:
+        """Declara en qué LUGAR está `agente` mientras se procesa su respuesta.
+
+        Es la única forma de que el ámbito llegue hasta aquí sin tocar el
+        Observer, que es quien llama a `registrar_neologismo()` y a `adoptar()`
+        (y que no se toca: es el registro de la medición). El orquestador lo
+        llama con `curiana_escena.ambito_de(agente, state)` —la puerta única—
+        justo antes de pasarle la respuesta al Observer.
+
+        Con `ambito=None` —la era 1, o la era 2 sin `--escena`— todo lo que
+        depende de esto se comporta exactamente como antes de la escena: hay
+        UN solo ámbito, el nulo, y la comunidad es una."""
+        self._ambito_actual[agente] = ambito
+
+    def ambito_de_agente(self, agente: str) -> Optional[str]:
+        return self._ambito_actual.get(agente)
 
     # ── Consulta ──────────────────────────────────────────────────────
 
@@ -7296,6 +7344,10 @@ class LexicoComunitario:
     # ── Registro de neologismos ───────────────────────────────────────
 
     def registrar_neologismo(self, neo: Neologismo):
+        # El ámbito del PROPONENTE: el lugar donde estaba al acuñarla. Sin
+        # escena es None y el campo no significa nada, como hasta hoy.
+        if neo.ambito is None:
+            neo.ambito = self._ambito_actual.get(neo.autor)
         self._neologismos.append(neo)
         if neo.estado == "adoptado":
             self._lexico[neo.forma] = {
@@ -7310,16 +7362,37 @@ class LexicoComunitario:
         Un agente adopta una palabra propuesta. Retorna el Neologismo si la
         adopción se OFICIALIZA recién en esta llamada (2do adoptante distinto),
         o None si no hubo transición (para que el caller sepa cuándo sincronizar
-        el estado con Supabase sin tener que diffear él mismo)."""
+        el estado con Supabase sin tener que diffear él mismo).
+
+        LA OFICIALIZACIÓN AHORA SABE DÓNDE PASÓ. Sigue haciendo falta lo mismo
+        —dos adoptantes distintos— pero queda escrito en qué ámbito(s) ocurrió
+        y por qué VÍA (`neo.via`):
+
+          `un-ambito`   los dos adoptantes estaban en el MISMO lugar: la forma
+                        cuajó donde nació y todavía no ha viajado.
+          `dos-ambitos` los dos estaban en lugares DISTINTOS: para adoptarla
+                        allí alguien tuvo que llevarla, porque el bloque de
+                        propuestas que el otro lugar ve está filtrado por su
+                        propio ámbito. Es la vía que la escena hace posible y
+                        la que hay que ver nacer (diseño §2, capa 2).
+
+        Sin escena hay un solo ámbito —el nulo— las dos vías coinciden, `via`
+        queda en None y el conteo es carácter a carácter el de siempre."""
         for neo in self._neologismos:
             if neo.forma == forma and neo.estado == "propuesto":
                 if agente not in neo.adoptado_por:
                     neo.adoptado_por.append(agente)
+                    # Lista paralela a `adoptado_por`: un lugar por adoptante.
+                    neo.adoptado_en.append(self._ambito_actual.get(agente))
                 # Si 2+ agentes distintos la adoptaron → oficialmente adoptada
                 if len(neo.adoptado_por) >= 2:
                     neo.estado = "adoptado"
                     neo.turno_resolucion = turno
                     neo.dia_resolucion = dia
+                    ambitos = ambitos_de_adopcion(neo)
+                    neo.oficial_en = ambitos
+                    neo.via = (None if not ambitos else
+                               "dos-ambitos" if len(ambitos) > 1 else "un-ambito")
                     self._lexico[forma] = {
                         "significado": neo.significado,
                         "autor": neo.autor,
@@ -7342,14 +7415,41 @@ class LexicoComunitario:
 
     # ── Reportes ──────────────────────────────────────────────────────
 
-    def neologismos_pendientes(self) -> list[Neologismo]:
-        return [n for n in self._neologismos if n.estado == "propuesto"]
+    def neologismos_pendientes(self, ambito: Optional[str] = None) -> list[Neologismo]:
+        """Las propuestas sin resolver. Con `ambito`, sólo las propuestas AHÍ.
 
-    def neologismos_adoptados(self) -> list[Neologismo]:
-        return [n for n in self._neologismos if n.estado == "adoptado"]
+        Sin `ambito` —que es como la llama el Observer para detectar
+        adopciones— devuelve todas: una forma se adopta usándola, y usarla en
+        otro lugar es precisamente el cruce que queremos medir. Lo que el
+        ámbito filtra es lo que el agente VE (V1), no lo que puede adoptar."""
+        neos = [n for n in self._neologismos if n.estado == "propuesto"]
+        return neos if ambito is None else [n for n in neos if n.ambito == ambito]
+
+    def neologismos_adoptados(self, ambito: Optional[str] = None) -> list[Neologismo]:
+        """Las adoptadas. Con `ambito`, sólo las que se adoptaron AHÍ (V2)."""
+        neos = [n for n in self._neologismos if n.estado == "adoptado"]
+        return (neos if ambito is None
+                else [n for n in neos if ambito in (n.adoptado_en or ())])
 
     def neologismos_rechazados(self) -> list[Neologismo]:
         return [n for n in self._neologismos if n.estado == "rechazado"]
+
+    def adoptados_en_dos_ambitos(self) -> list[Neologismo]:
+        """Las formas que se oficializaron con adoptantes de DOS lugares.
+
+        La vía que la escena hace posible y la medición que la declara: una
+        forma llegó aquí porque alguien la trajo, no porque el prompt se la
+        leyera a todo el mundo a la vez."""
+        return [n for n in self._neologismos if n.via == "dos-ambitos"]
+
+    def ambitos_vistos(self) -> list[str]:
+        """Los lugares que este léxico ha registrado. [] sin escena."""
+        vistos: dict = {}
+        for n in self._neologismos:
+            for a in [n.ambito] + list(n.adoptado_en or ()):
+                if a:
+                    vistos[a] = True
+        return sorted(vistos)
 
     def reporte_linguistico(self) -> str:
         """Resumen del estado actual del léxico comunitario."""
@@ -7374,6 +7474,20 @@ class LexicoComunitario:
             for neo in pendientes[-5:]:
                 adopc = len(neo.adoptado_por)
                 lines.append(f"    [{neo.forma}] = {neo.significado}  ({adopc}/2 adopciones)")
+        # El diccionario de cierre dice POR DÓNDE se adoptó cada forma. Sin
+        # escena no hay ámbitos y estas líneas no existen: el reporte de la
+        # era 1 es carácter a carácter el de siempre.
+        ambitos = self.ambitos_vistos()
+        if ambitos:
+            dos = self.adoptados_en_dos_ambitos()
+            un_ambito = [n for n in adoptadas if n.via == "un-ambito"]
+            lines.append(f"\n  Por ámbito (la escena, {len(ambitos)} lugar(es) con léxico):")
+            lines.append(f"    adoptadas en UN ámbito:   {len(un_ambito)}")
+            lines.append(f"    adoptadas en DOS ámbitos: {len(dos)}  "
+                         f"← la forma viajó: alguien la llevó")
+            for neo in dos[-8:]:
+                lines.append(f"      [{neo.forma}] = {neo.significado}  "
+                             f"({' + '.join(neo.oficial_en)})")
         return "\n".join(lines)
 
     # ── Persistencia ──────────────────────────────────────────────────
@@ -7509,9 +7623,15 @@ NUEVAS PALABRAS: [forma: componentes = significado propuesto]
   La comunidad la adopta si 2 agentes distintos la usan."""
 
 
-def prompt_lexico_activo(lexico: "LexicoComunitario") -> str:
-    """Inyecta las palabras actualmente adoptadas por la comunidad."""
-    adoptadas = lexico.neologismos_adoptados()
+def prompt_lexico_activo(lexico: "LexicoComunitario",
+                         ambito: "Optional[str]" = None) -> str:
+    """Inyecta las palabras actualmente adoptadas por la comunidad (V2).
+
+    `ambito` (capa 2 de la escena): el LUGAR donde está quien va a leer esto.
+    Con ámbito, «la comunidad» deja de ser los 63 y pasa a ser este lugar: se
+    ven sólo las formas que alguien adoptó AQUÍ. Con `ambito=None` —la era 1,
+    o la era 2 sin `--escena`— el bloque es byte a byte el de siempre."""
+    adoptadas = lexico.neologismos_adoptados(ambito)
     if not adoptadas:
         return ""
     palabras = "; ".join(
@@ -7520,9 +7640,15 @@ def prompt_lexico_activo(lexico: "LexicoComunitario") -> str:
     return f"[Palabras nuevas de la comunidad]: {palabras}"
 
 
-def prompt_pendientes_evaluacion(lexico: "LexicoComunitario") -> str:
-    """Lista palabras propuestas que aún necesitan adopción/rechazo."""
-    pendientes = lexico.neologismos_pendientes()
+def prompt_pendientes_evaluacion(lexico: "LexicoComunitario",
+                                 ambito: "Optional[str]" = None) -> str:
+    """Lista palabras propuestas que aún necesitan adopción/rechazo (V1).
+
+    `ambito`: sólo las propuestas EN ESTE LUGAR. V1 es la vía que explicó los
+    tres cruces de Δturnos = 0 del día 1 de la serie B —el prompt leía en voz
+    alta, con nombre y apellido, lo que el otro nodo acababa de decir— y es la
+    primera que el ámbito cierra. Con `ambito=None`, el bloque de siempre."""
+    pendientes = lexico.neologismos_pendientes(ambito)
     if not pendientes:
         return ""
     items = "; ".join(
@@ -8708,7 +8834,8 @@ def prompt_voces_de_fuera(contexto: str = "", n: int = 3) -> str:
 
 def vocabulario_para_agente(tier: int, lexico: "LexicoComunitario", contexto: str = "",
                             pesos: "Optional[dict]" = None,
-                            capas: "Optional[frozenset]" = None) -> str:
+                            capas: "Optional[frozenset]" = None,
+                            ambito: "Optional[str]" = None) -> str:
     """
     Genera el bloque de léxico + reglas apropiado para cada tier.
     Tier I: completo con identidad nativa. Tier II: breve. Tier III: solo sufijos.
@@ -8718,9 +8845,14 @@ def vocabulario_para_agente(tier: int, lexico: "LexicoComunitario", contexto: st
     mostrar en grande (chunking por palabras clave, ver categorias_relevantes).
     `pesos` (opcional, del CampoLexico): pondera la muestra por frecuencia
     comunitaria (rich-get-richer; ver muestra_caquetio_dinamica).
+    `ambito` (opcional, capa 2 de la escena): el LUGAR donde está el agente,
+    tal y como lo devuelve `curiana_escena.ambito_de()`. Filtra las dos vías
+    comunitarias del bloque —las adoptadas (V2) y las propuestas (V1)—: se ve
+    lo que se dijo aquí, no lo que dijo la comunidad entera. `None` deja el
+    bloque byte a byte como estaba (era 1, y era 2 sin `--escena`).
     """
-    lexico_activo = prompt_lexico_activo(lexico)
-    pendientes = prompt_pendientes_evaluacion(lexico)
+    lexico_activo = prompt_lexico_activo(lexico, ambito)
+    pendientes = prompt_pendientes_evaluacion(lexico, ambito)
 
     if tier == 1:
         base = prompt_reglas_completo()

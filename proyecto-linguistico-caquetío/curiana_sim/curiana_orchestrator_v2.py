@@ -88,6 +88,7 @@ from curiana_koine import (
 from curiana_cadena import (
     cadena_de_runs,
     config_de,
+    linea_de_brazo,
     lineas_de_serie,
     resumen_de_cadena,
     serie_koine_de_cadena,
@@ -108,6 +109,8 @@ from curiana_escena import (
     CAPUBANA_CADA_POR_DEFECTO,
     ambito_de,
     bloque_aqui_estas,
+    bloque_lo_que_se_dijo_aqui,
+    dichos_del_turno,
     escena_de,
     es_dia_de_capubana,
     glosa_de as glosa_de_lugar,
@@ -369,7 +372,14 @@ def call_agent(
     # es lo que run_turn acaba de escribir en `ubicaciones_override`. Sin
     # escena —la era 1 y la era 2 sin el flag— devuelve None y se lee lo de
     # siempre: el override (que nadie escribe) o su ubicacion_default.
-    ubicacion = ambito_de(agent_name, state) or state.ubicaciones_override.get(
+    #
+    # `ambito` es ADEMÁS el filtro de todo lo comunitario que entra al prompt
+    # (capa 2, PR 4): las propuestas en evaluación (V1), las adoptadas (V2),
+    # las competencias abiertas (V3) y el campo léxico que pondera la muestra
+    # (V4). Se saca UNA vez y de UNA puerta; nadie lee el nodo por su cuenta.
+    # Con `None` las cuatro vías son globales y el prompt es el de siempre.
+    ambito = ambito_de(agent_name, state)
+    ubicacion = ambito or state.ubicaciones_override.get(
         agent_name, agent.get("ubicacion_default", "plaza")
     )
 
@@ -383,9 +393,14 @@ def call_agent(
     # un run normal y uno --ablacion es cuánta convergencia es emergente vs.
     # inducida por el andamiaje.
     contexto_turno = f"{world_context} {ubicacion} {user_message}"
-    pesos_campo = campo.pesos if (campo is not None and not ablacion) else None
+    # V4: el muestreo rich-get-richer se pondera con el campo DE ESTE LUGAR.
+    # Sin ámbito, `pesos_de(None)` es el campo global de siempre — el mismo
+    # objeto, no una copia: el sorteo sale idéntico.
+    pesos_campo = (campo.pesos_de(ambito)
+                   if (campo is not None and not ablacion) else None)
     bloque_lexico = vocabulario_para_agente(
-        tier, lexico, contexto=contexto_turno, pesos=pesos_campo, capas=capas
+        tier, lexico, contexto=contexto_turno, pesos=pesos_campo, capas=capas,
+        ambito=ambito,
     )
 
     # Feedback lingüístico si el agente tuvo score bajo
@@ -420,6 +435,13 @@ def call_agent(
     aqui_estas = bloque_aqui_estas(agent_name, state)
     system_parts += ["---", world_context,
                      aqui_estas or f"[Tu ubicación]: {ubicacion}"]
+    # [Lo que se dijo aquí] (capa 2, decisión p5 → A): las ≤ 3 intervenciones
+    # del MOMENTO ANTERIOR que se dijeron en este mismo lugar, ≤ 280 car. Va
+    # pegado a [Aquí estás] porque es la otra mitad de la misma idea: el lugar.
+    # Sin escena, y en el primer turno de un run nuevo, devuelve "".
+    se_dijo_aqui = bloque_lo_que_se_dijo_aqui(agent_name, state)
+    if se_dijo_aqui:
+        system_parts.append(se_dijo_aqui)
     gente = prompt_gente(agent)
     if gente:
         system_parts.append(gente)
@@ -439,7 +461,9 @@ def call_agent(
     # Competencias léxicas abiertas: empuja a reusar una forma rival que ya
     # circula (en vez de inventar otra) → una se impone y se fija en la koiné.
     if competencia is not None and not ablacion:
-        bloque_comp = competencia.prompt_competencias()
+        # V3 con ámbito: sólo las formas rivales que se propusieron AQUÍ. La
+        # fijación sigue siendo comunitaria — el ámbito filtra lo que se VE.
+        bloque_comp = competencia.prompt_competencias(ambito=ambito)
         if bloque_comp:
             system_parts.append(bloque_comp)
     # Idiolecto acumulado (entrenchment): "tu manera de hablar" derivada del
@@ -811,6 +835,16 @@ def run_turn(
         agent = ALL_AGENTS[agent_name]
         tier = agent.get("tier", 2)
 
+        # DÓNDE ESTÁ QUIEN VA A HABLAR. La misma puerta que usa el prompt, y
+        # la única. Se le declara al léxico ANTES de que el Observer registre
+        # nada: `registrar_neologismo()` y `adoptar()` los llama él —y el
+        # Observer no se toca, es el registro de la medición—, así que el
+        # lugar tiene que estar puesto de antemano para que la acuñación
+        # sepa dónde nació y la adopción, en qué ámbito se oficializó.
+        # Sin escena esto pone None y todo se comporta como siempre.
+        ambito_hablante = ambito_de(agent_name, state)
+        lexico.situar(agent_name, ambito_hablante)
+
         mem = memory.get(agent_name)
         response = call_agent(
             client, agent_name, state, lexico, observer, stimulus, mem,
@@ -862,7 +896,8 @@ def run_turn(
         if competencia is not None:
             for neo in getattr(registro, "neologismos_extraidos", []):
                 if naming_concepto:
-                    competencia.proponer(naming_concepto, neo.forma, agent_name)
+                    competencia.proponer(naming_concepto, neo.forma, agent_name,
+                                         ambito=ambito_hablante)
                 else:
                     competencia.registrar_uso(neo.forma, agent_name)
             for forma in getattr(registro, "palabras_caquetias", []):
@@ -878,8 +913,11 @@ def run_turn(
                     agent_name, emocionar_de(agent_name, agent.get("etnia")))
             idiolectos[agent_name].registrar(formas_usadas, neos_turno)
         if campo is not None:
-            campo.registrar(formas_usadas)
-            campo.registrar([n.forma for n in neos_turno])
+            # V4: la frecuencia se acumula EN EL LUGAR donde se dijo. El campo
+            # global sigue siendo la suma de los lugares, así que el
+            # diccionario koiné del cierre y `guardar_koine` no cambian.
+            campo.registrar(formas_usadas, ambito=ambito_hablante)
+            campo.registrar([n.forma for n in neos_turno], ambito=ambito_hablante)
 
         # Persistir en Supabase
         if db and run_id and turn_id:
@@ -990,6 +1028,20 @@ def run_turn(
             for neo in registro.neologismos_extraidos:
                 print(f"     ✦ NUEVO: [{neo.forma}] = {neo.significado}")
             print()
+
+    # 3b. LO QUE SE DIJO AQUÍ, para el momento SIGUIENTE (capa 2, decisión
+    #     p5 → A). Se guarda al CERRAR el turno y se lee al abrir el que
+    #     viene: dentro del mismo turno nadie oye a nadie, que es lo que
+    #     separa este bloque de la V1 —el orden de habla dejaría de ser
+    #     destino sólo si oír cuesta un turno para todos por igual. Cada
+    #     frase pasa por decir_para_el_mundo(), como el resto del texto libre
+    #     que llega al agente, y se guarda la frase caquetía sin su glosa.
+    #     Sin escena la lista queda vacía y el bloque no existe.
+    if escena:
+        state.dichos_del_turno_anterior = dichos_del_turno(
+            escena, interactions,
+            decir=lambda t: decir_para_el_mundo(t, state.mundo),
+        )
 
     # 4. Narración del director
     if interactions and verbose:
@@ -1189,6 +1241,9 @@ def _imprimir_cadena(db, run_id: Optional[str]) -> None:
         avisos: list[str] = []
         serie = serie_koine_de_cadena(db, run_id, avisos=avisos, cadena=cadena)
         print(f"\n  CADENA — {len(cadena)} runs encadenados: {resumen_de_cadena(cadena)}")
+        brazo = linea_de_brazo(cadena)
+        if brazo:
+            print(f"    {brazo}")
         for aviso in avisos:
             print(f"    ⚠ {aviso}")
         if not serie:
@@ -1251,6 +1306,80 @@ def comprobar_brazo_de_escena(db, state, escena: bool, capubana_cada: int):
         "    misma semilla, no una cadena mitad y mitad. Arranca una serie\n"
         "    nueva desde el día 1 (--serie ...) o repite el brazo anterior.\n"
     )
+
+
+def config_resuelta(
+    turnos: int,
+    perfil: "Perfil",
+    agentes_por_turno: int = 6,
+    roster_nombre: str = "koine",
+    turnos_por_dia: Optional[int] = None,
+    semilla: Optional[int] = None,
+    continuar: bool = False,
+    reflexion: bool = False,
+    serie: Optional[str] = None,
+    escena: bool = False,
+    capubana_cada: int = CAPUBANA_CADA_POR_DEFECTO,
+    ablacion: bool = False,
+) -> dict:
+    """Lo que el run diría de sí mismo, ANTES de gastar nada.
+
+    Es la misma resolución que hace `auto_mode`: el perfil manda sobre los
+    flags sueltos, `capubana_cada` sólo significa algo con escena, y
+    `continuado_desde` sale del estado en disco, que es de donde `--continuar`
+    lo saca. No llama a la API, ni a la base, ni a git: lee el YAML de
+    perfiles (que ya está cargado) y `curiana_state.json` si lo hay."""
+    continuado = None
+    if continuar:
+        try:
+            continuado = ComunidadState.load().run_anterior
+        except Exception:                                # noqa: BLE001
+            continuado = None
+    return {
+        "turnos": int(turnos),
+        "elenco": ELENCO,
+        "mundo": MUNDO,
+        "agentes": len(ALL_AGENTS),
+        "perfil": perfil.nombre,
+        "capas": len(perfil.capas),
+        "andamiaje": perfil.andamiaje,
+        "ablacion": bool(perfil.ablacion or ablacion),
+        "serie": serie,
+        "agentes_por_turno": int(agentes_por_turno),
+        "roster": roster_nombre,
+        "roster_n": len(roster_de_habla(roster_nombre)),
+        "turnos_por_dia": turnos_por_dia,
+        "semilla": semilla,
+        "continuar": bool(continuar),
+        "continuado_desde": continuado,
+        "reflexion": bool(reflexion),
+        "escena": bool(escena),
+        "capubana_cada": int(capubana_cada) if escena else None,
+    }
+
+
+def imprimir_dry_run(cfg: dict) -> None:
+    """`--dry-run`: la config resuelta y nada más. Cero llamadas, cero filas."""
+    print(f"\n{'='*60}")
+    print("  --dry-run: la config resuelta. No se llama a nada.")
+    print(f"{'='*60}")
+    orden = ["turnos", "elenco", "mundo", "agentes", "perfil", "capas",
+             "andamiaje", "ablacion", "serie", "agentes_por_turno", "roster",
+             "roster_n", "turnos_por_dia", "semilla", "continuar",
+             "continuado_desde", "reflexion", "escena", "capubana_cada"]
+    for clave in orden:
+        valor = cfg.get(clave)
+        print(f"  {clave:20} {'—' if valor is None else valor}")
+    if cfg["escena"]:
+        cada = cfg["capubana_cada"]
+        print(f"\n  brazo: con escena" +
+              (f", Capubana cada {cada} día(s)" if cada else ", sin Capubana"))
+    else:
+        print("\n  brazo: sin escena (el de control: el prompt es el de siempre)")
+    if cfg["continuar"] and not cfg["continuado_desde"]:
+        print("  ⚠ --continuar sin run anterior en curiana_state.json: "
+              "el run arrancaría del estado que haya, sin `continuado_desde`")
+    print(f"{'='*60}\n")
 
 
 def auto_mode(
@@ -1763,6 +1892,13 @@ if __name__ == "__main__":
              "declarado y sellado, como el perfil. Sólo cuenta con --escena.",
     )
     parser.add_argument(
+        "--dry-run", action="store_true",
+        help="Imprime la CONFIG RESUELTA del run que se correría —perfil, serie, "
+             "escena, capubana_cada, semilla, continuado_desde— y sale sin "
+             "llamar a nada: ni a la API, ni a la base, ni a git. Es para leer "
+             "el brazo antes de gastar un día de API.",
+    )
+    parser.add_argument(
         "--ablacion", action="store_true",
         help="Run de CONTROL: apaga las inyecciones de prompt que empujan la "
              "convergencia (sugerencias de contagio, competencias abiertas, "
@@ -1784,12 +1920,21 @@ if __name__ == "__main__":
     else:
         perfil = cargar_perfil()
 
-    client = get_client()
-
     extra = dict(agentes_por_turno=args.agentes_por_turno, roster_nombre=args.roster,
                  turnos_por_dia=args.turnos_por_dia, semilla=args.semilla,
                  continuar=args.continuar, reflexion=args.reflexion, serie=args.serie,
                  escena=args.escena, capubana_cada=args.capubana_cada)
+
+    # --dry-run va ANTES de get_client(): crear el cliente ya exige la clave y
+    # la gracia de esta bandera es poder leer el brazo sin tocar nada.
+    if args.dry_run:
+        _turnos = (120 * (args.turnos_por_dia or 2)) if args.anio else args.auto
+        imprimir_dry_run(config_resuelta(_turnos, perfil, ablacion=args.ablacion,
+                                         **extra))
+        sys.exit(0)
+
+    client = get_client()
+
     if args.anio:
         tpd = args.turnos_por_dia or 2
         auto_mode(client, 120 * tpd, reporte_anual=True, verbose=not args.silencioso,
