@@ -1,0 +1,308 @@
+# ─────────────────────────────────────────────────────────────────────────
+# DECISIONES DE MIGUEL — tanda del 2026-09-17
+#
+# Mismo patrón que las tandas anteriores: cita literal, lectura operativa y
+# dónde se aplica. El día de la deuda del día 1 limpio de la serie B (run
+# 3973d317): qué referente se nombra cada día, por dónde cruza una forma de un
+# nodo al otro, a quién le sobra el Golfete y —la grande— qué significa
+# «existir» en el mundo que se les describe.
+#
+# Orden de la tanda: lo que ya estaba aplicado (referentes), lo que se decidió
+# y se reformuló la misma noche (frontera → escena por lugar), lo que se aplica
+# en esta rama (la frase de la tarde) y el diseño que abre el programa de la
+# serie C (las diez respuestas de la escena).
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-17'
+  decidido_por: Miguel
+  estado: >-
+    MIXTA. `referentes_por_cadena` APLICADA el mismo día (#149);
+    `golfete_frase_tarde` APLICADA en esta rama (curiana_mundo.py +
+    clima_era2.yaml); `frontera_entre_nodos` y `escena_por_lugar` EN
+    IMPLEMENTACIÓN — son el mismo programa, y su plan son los PRs 1-6 de
+    6-fusion/issues-pendientes/existir-en-el-mundo-escena-por-lugar-2026-09-17.md §8.
+  linea_roja_de_toda_la_tanda: >-
+    El scorer no se toca. `score_linguistico()`, `pct_*` y `capas_de_score`
+    quedan idénticos en las cuatro decisiones: lo que cambia es lo que el
+    agente VE, nunca con qué se le puntúa. Y nada de esto entra a mitad de
+    cadena: cada cambio de lo que se ve abre serie o declara el corte.
+
+referentes_por_cadena:
+  estado: DECIDIDA y APLICADA (2026-09-17)
+  pregunta: >-
+    La competencia léxica volvía a nombrar «las cuentas brillantes» cada día
+    (10 de 12 respuestas en el turno 5 de CADA uno de los tres días de la serie
+    A). ¿La secuencia de referentes sigue de un día al siguiente con
+    `--continuar`, o cada run la empieza de cero?
+  decision_literal: '«A»'
+  lectura_operativa: >-
+    Sigue. El estado guarda los referentes ya introducidos y un run continuado
+    arranca por el siguiente de la lista (día 2: el cometa; día 3: el eclipse…);
+    un run nuevo sí la empieza de cero. Lo que se corrige es un artefacto del
+    instrumento, no del mundo: «la koiné sobrevivió la noche» era en parte el
+    propio motor re-enseñando el mismo referente cada mañana, y con seis turnos
+    por día la secuencia sólo llegaba al primero (turno 5). Los otros nueve
+    referentes no salían nunca.
+  se_aplica_en: >-
+    curiana_state.ComunidadState.referentes_introducidos (nuevo campo, que
+    `--continuar` hereda); curiana_orchestrator_v2.referentes_pendientes_de()
+    como única puerta a curiana_koine.REFERENTES_NOVEDOSOS;
+    tests/test_referentes_cadena.py; la trampa queda escrita en CLAUDE.md.
+  afecta_a: >-
+    Los tres días de la serie A (2026-09-16) y el día 1 de la serie B se
+    corrieron sin esto: sus métricas de nombramiento no son comparables con las
+    de una cadena posterior. Declarado en 5-experimento/BITACORA_RUNS.md.
+
+frontera_entre_nodos:
+  estado: DECIDIDA (2026-09-17) y REFORMULADA la misma noche — EN IMPLEMENTACIÓN
+  pregunta: >-
+    El motor no tiene frontera en el prompt: las cuatro vías por las que
+    circula una forma (propuestas, adoptadas, competencias abiertas, frecuencia
+    comunitaria) son globales, y por eso GUARANAO y AMUAY nombran a la vez.
+    ¿Cuál de los tres diseños?
+    (6-fusion/issues-pendientes/frontera-entre-nodos-2026-09-17.md §3)
+  decision_literal: '«A»'
+  lectura_operativa_de_la_primera: >-
+    Diseño A: las cuatro vías del prompt pasan a tener una copia por nodo —el
+    agente ve lo de SU nodo— y en el turno del Capubana ve las dos. La cadencia
+    del Capubana es un parámetro declarado y sellado en la config, no el
+    calendario literal (el ciclo mayor del canon cae en los días 55-58 de la
+    seca, inalcanzable en una cadena de 8). Va como brazo, no como parche: una
+    cadena con frontera contra una sin ella, misma semilla.
+  reformulacion_la_misma_noche:
+    decision_literal: >-
+      «Sí o sí es importante que podamos establecer una forma de poder hacer que
+      estos nodos interactúen entre sí pero que además puedan tener su
+      desarrollo propio y así luego veremos competiciones de conceptos entre
+      nodos. El mundo más allá de un lugar debería poderse "recorrer" según la
+      potestad del agente.» Y: «si no se mueven, ¿cómo podemos hacer que hagan
+      cosas y "existan" en el mundo que les describimos?»
+    lectura_operativa: >-
+      El ámbito de lo que un agente ve NO es su nodo: es el LUGAR donde está
+      hoy, y dónde está lo deciden su oficio y la hora. De ahí se sigue todo lo
+      demás: (1) los nodos no se programan, salen del mapa —un lugar es del
+      nodo de quien lo trabaja, y los lugares donde coinciden los dos son el
+      contacto, sin declarar ninguna frontera—; (2) existir es dejar rastro, así
+      que lo que un agente hizo, trajo y dio tiene que quedar en el estado y
+      volver al mundo, o «moverse» es una etiqueta más en el prompt; (3)
+      recorrer el mundo es una potestad del agente, no un permiso global.
+      El diseño A no se descarta: queda contenido en éste, con el ámbito una
+      capa más abajo (el lugar, no el nodo).
+    se_aplica_en: >-
+      6-fusion/issues-pendientes/existir-en-el-mundo-escena-por-lugar-2026-09-17.md
+      (diseño y medición, sin tocar el motor) +
+      6-fusion/escena_por_lugar_propuesta_2026-09-17.yaml (la tabla derivada) +
+      6-fusion/scripts/derivar_escena_por_lugar.py y medir_presupuesto_escena.py.
+      Las diez preguntas del diseño §7, respondidas abajo.
+  se_aplica_en: >-
+    nada en el motor todavía: la implementación es la de `escena_por_lugar`,
+    PRs 1-6. Lo único que se hace igual, se haga o no la escena: `VINCULOS` y
+    `PRESTIGIO` por `ALIAS_ERA1` en curiana_social (hoy 1 de 63 con prestigio
+    propio, y el prestigio pondera la fijación de la koiné).
+
+golfete_frase_tarde:
+  estado: DECIDIDA y APLICADA (2026-09-17, esta rama)
+  pregunta: >-
+    La frase de la tarde del Tiempo de Viento decía «el Golfete» y entraba
+    igual en los siete sitios y en el [El mundo] del Director. ¿A1 neutra, A2
+    por zona o A3 dejarla?
+    (6-fusion/issues-pendientes/golfete-en-paraguana-2026-09-17.md §4a)
+  decision_literal: '«a»'
+  lectura_operativa: >-
+    A2, por zona. La frase pasa a «El viento arrecia y {tu agua} se pone
+    difícil: la canoa vuelve.» y el marcador se resuelve con la zona de pesca
+    del SITIO del agente: ZG2 «el Golfete», ZA1 «la costa del oeste», sin zona
+    «el agua». El Director, que no está en ningún sitio, recibe la forma
+    neutra. No es sólo higiene geográfica: la koiné se mide por la distancia
+    entre los dos nodos, y si el prompt les da el mismo referente de agua el
+    instrumento borra la diferencia que quiere medir. Con A2, «el agua que se
+    pone difícil por la tarde» es un referente DISTINTO en cada nodo y las
+    formas que acuñen para él son comparables.
+  lo_que_no_se_hace: >-
+    No se filtra la palabra (§4c): «Golfete» es canon y es la orilla de
+    GUARANAO —Tacuato y El Cayude, ZG2, y 25 de los 63 agentes—, el filtro de
+    decir_para_el_mundo() es destructivo (tira la frase entera) y cinco fichas
+    de AMUAY la dicen A PROPÓSITO: son el canal de contacto entre nodos que el
+    diseño de la koiné puso ahí. Y no se toca el evento semilla (§1.1), que es
+    el texto que mejor hace la geografía del motor: da a cada nodo su agua.
+  medido_2026-09-17: >-
+    En las 126 combinaciones de [Tu tierra], «Golfete» baja de 41 a 36. Los 5
+    que se van son exactamente los sitios que no tienen esa agua, y cada uno
+    perdía la palabra sólo en viento/tarde: Moruy, Capubana, la laguna de
+    Guaranao (neutra), Caseto y Carirubana (la costa del oeste). Tacuato y El
+    Cayude siguen en 18/18. En los 18 bloques de [El mundo], de 1 a 0. Ningún
+    marcador queda sin resolver en las 126 ni en los 18; los topes no se mueven
+    (320 y 339, sobre 320 y 400).
+  se_aplica_en: >-
+    6-fusion/clima_era2.yaml (frases_del_cargador.viento.momentos.tarde, con su
+    nota, y el bloque nuevo `aguas_del_cargador`: la tabla del agua por zona);
+    curiana_sim/curiana_mundo.py (MARCA_TU_AGUA, AGUA_NEUTRA, AGUA_POR_ZONA,
+    aguas_por_zona(), agua_del_sitio(), _con_agua(), resueltos en
+    bloque_tu_tierra() antes de medir el presupuesto y en resumen_del_mundo()
+    con la forma neutra); tests/test_era2_motor.py
+    (test_cada_sitio_oye_su_propia_agua_y_ninguna_llave_queda_sin_resolver) y
+    tests/test_director.py (test_el_director_sabe_que_las_aguas_son_dos, que
+    pasa a exigir CERO «Golfete» en los 18).
+  y_ademas: >-
+    [El mundo] conserva la tercera restricción que entró con #152 («son dos
+    aguas y no una: la orilla del este, con su marea, y la costa oeste de Punta
+    Cardón»), leída del corpus por id (ecologia-026 · ecologia-080) y sin
+    nombrar el Golfete a propósito: va en los 18 bloques, y nombrarlo ahí
+    multiplicaría por nueve la exposición del Director a la palabra que sobra.
+  corte_de_serie: >-
+    El run 3973d317 no es comparable a uno posterior a este cambio: cambia lo
+    que el agente VE a mitad de la serie B. La serie B arranca de nuevo o se
+    declara el corte — lo decide el run, no esta nota.
+  deuda_que_queda: >-
+    Los dos eventos del catálogo escritos para la Curiana que nombran el
+    Golfete a todo el mundo (`expedicion_perlas`,
+    `vigilancia_perimetro_amanecer`): se arreglan en REESCRITURAS_ERA2, que es
+    una tabla de redacción declarada, y son dos entradas más si Miguel quiere.
+
+escena_por_lugar:
+  estado: DECIDIDA (2026-09-17) — EN IMPLEMENTACIÓN (PRs 1-6 del diseño §8)
+  fuente_de_las_preguntas: '6-fusion/issues-pendientes/existir-en-el-mundo-escena-por-lugar-2026-09-17.md §7'
+  modo: 'las diez de una vez, en la conversación'
+  decision_literal: '«1. A. 2. B. 3. A. 4. A. 5. A. 6. A. 7. A. 8. C. 9. A. 10. A.»'
+  lectura_de_conjunto: >-
+    Las diez son las recomendadas del diseño salvo la 2, donde Miguel sube de A
+    a B (el camino Moruy–Caseto entra ya), y la 8, que era mixta de salida. El
+    conjunto define un brazo mínimo y atribuible: el ámbito es el lugar, se oye
+    poco y del momento anterior, quién habla no cambia, el Director no se
+    multiplica y la huella queda para el segundo brazo de la MISMA serie.
+
+  p1_forma_de_la_tabla:
+    estado: DECIDIDA (2026-09-17)
+    pregunta: '¿`oficio × momento` con excepciones de período, o `oficio × período × momento` entera?'
+    decision_literal: '«A»'
+    lectura_operativa: >-
+      Una tabla por momento, con excepciones declaradas donde el canon fecha la
+      hora: 22 clases de oficio × 6 momentos + 5 excepciones. La excepción es
+      justo donde está el canon —el biro de la seca, los jachos de noche, «el
+      conuco espera, seco»—; las 396 celdas de B piden decidir a mano lo que el
+      cargador del clima ya decidió seis veces por período.
+    se_aplica_en: 'PR 1: 6-fusion/escena_por_lugar_propuesta_2026-09-17.yaml fusionado + generar_escena.py (módulo generado con --check, patrón de generar_agentes_era2.py). Test: cobertura 63/63 en los tres períodos, toda plantilla resuelve, ningún lugar sin sitio.'
+
+  p2_lugares_compartidos:
+    estado: DECIDIDA (2026-09-17)
+    pregunta: '¿Qué lugares se comparten entre nodos, si la escena derivada da cero emergentes?'
+    decision_literal: '«B»'
+    lectura_operativa: >-
+      Dos: el Capubana (en el día de Capubana, con la cadencia de p7) y el
+      camino Moruy–Caseto, que el elenco llama «la alianza» y que el mapa dice
+      que es el par más cercano de todos (7,6 km). El resto del año, dos
+      mundos. La laguna de Guaranao y el caladero ZX de Adícora quedan para la
+      siguiente: abren pleito, que es material bueno, pero meten lugares y
+      gente nuevos, y la primera cadena tiene que poder atribuirle el efecto a
+      una cosa.
+    se_aplica_en: 'PR 1 (la tabla: el camino como lugar compartido, declarado canon-simulación) y PR 2 (ambito_de).'
+
+  p3_escenas_y_voces:
+    estado: DECIDIDA (2026-09-17)
+    pregunta: '¿Cuántas escenas por turno y cuántas voces por escena?'
+    decision_literal: '«A»'
+    lectura_operativa: >-
+      Las que salgan, entre 6 y 27, sin tope y sin mínimo de voces. Un pescador
+      solo en el agua a la mañana ES el dato: su ámbito está vacío y por eso no
+      oye nada. Colapsarlo a su aldea sería devolver la comunidad global por la
+      puerta de atrás — que es exactamente lo que la escena viene a quitar.
+    se_aplica_en: 'PR 2: escena_de() no agrupa ni poda; el ensayo sin API imprime las 1.134 escenas.'
+
+  p4_la_ventana_de_12:
+    estado: DECIDIDA (2026-09-17)
+    pregunta: '¿La ventana de 12 agentes por turno se elige por lugar?'
+    decision_literal: '«A»'
+    lectura_operativa: >-
+      No. `_ventana` sigue igual y la escena sólo dice dónde está cada uno.
+      Elegir por lugar garantizaría conversación pero cambiaría QUIÉN habla, y
+      con ello el número de voces por agente y por día, que es la base de
+      `distancia_idiolectal` y de la comparabilidad con la serie B. Lo medido
+      dice que así ya el 71 % de las intervenciones tienen compañía en su lugar.
+    se_aplica_en: 'PR 2: run_turn escribe `ubicaciones_override` y no toca la selección de la ventana.'
+
+  p5_cuanto_se_oye:
+    estado: DECIDIDA (2026-09-17)
+    pregunta: '¿Cuánto del lugar oye el agente?'
+    decision_literal: '«A»'
+    lectura_operativa: >-
+      El momento ANTERIOR, mismo lugar, ≤ 3 intervenciones, tope 280
+      caracteres. No el mismo turno: eso es la V1 de hoy con otro nombre y es
+      literalmente el mecanismo que produjo los tres cruces en el mismo turno
+      del día 1. Y no el cierre de ayer todavía: eso es mejor con la capa 3
+      (huella) ya dentro, no antes.
+    se_aplica_en: 'PR 4: `ambito` en LexicoComunitario, CampoLexico, CompetenciaLexica y vocabulario_para_agente; bloque [Lo que se dijo aquí]. Tests: la era 1 byte a byte con ambito=None, tope 280, el bloque trae el momento anterior.'
+
+  p6_el_director:
+    estado: DECIDIDA (2026-09-17)
+    pregunta: '¿El Director narra por escena?'
+    decision_literal: '«A»'
+    lectura_operativa: >-
+      Uno por turno, como hoy, pero recibiendo las intervenciones AGRUPADAS por
+      lugar: cero llamadas más. El Director no llega al prompt del agente, así
+      que narrar por escena no mueve ninguna métrica de lengua —arregla la
+      coherencia del mundo, que es real pero no es la pregunta— y uno por lugar
+      multiplicaría el gasto por veinte para eso. El Director del Capubana
+      (opción C) se reconsidera cuando el Capubana entre.
+    se_aplica_en: 'PR 2 y PR 7: el agrupado por lugar en lo que se le pasa al Director; ninguna llamada nueva.'
+
+  p7_cadencia_del_capubana:
+    estado: DECIDIDA (2026-09-17)
+    pregunta: '¿Cuál es la cadencia del Capubana, si el ciclo mayor del canon cae en los días 55-58?'
+    decision_literal: '«A»'
+    lectura_operativa: >-
+      Un parámetro declarado y sellado en la config: `--capubana-cada N`, con
+      N = 3 para la primera cadena (dos convergencias en 8 días). Es lo mismo
+      que se hizo con el perfil: el run dice de sí mismo con qué corrió.
+      Comprimir el año simulado tocaría el calendario, que es canon fusionado y
+      del que cuelgan las estaciones, los eventos y [Tu tierra].
+    se_aplica_en: 'PR 5: la bandera, sellada en simulation_runs.config; es_turno_de_capubana(state) leído del canon (estructura_social_era2.yaml CM/CL/CC), no cableado.'
+
+  p8_referentes_del_viajero:
+    estado: DECIDIDA (2026-09-17)
+    pregunta: '¿Los referentes novedosos nacen en un lugar y viajan con quien viaja?'
+    decision_literal: '«C»'
+    lectura_operativa: >-
+      Mixtos. Los referentes de COSA (la bestia varada, la marea roja) aparecen
+      en un lugar y sólo los ven los que estén allí; los del CIELO (el cometa,
+      el eclipse) se presentan a todos, porque el cielo se ve desde los dos
+      nodos. Es más fiel y más barato de justificar: un eclipse SÍ lo ven los
+      dos a la vez, y esa simultaneidad deja de ser un artefacto del
+      instrumento para ser un hecho del mundo. Con esto, las formas multinodo
+      que queden significan algo. Pide declarar la locación de los 10
+      referentes — cosa o cielo, y dónde.
+    se_aplica_en: 'PR 7: locación por referente en curiana_koine.REFERENTES_NOVEDOSOS (campo declarado, no deducido) y el evento de nombramiento por lugar en curiana_orchestrator_v2. Encaja con `referentes_por_cadena`: la secuencia la sigue el estado, la audiencia la decide el lugar.'
+
+  p9_con_que_capas_arranca_la_serie_C:
+    estado: DECIDIDA (2026-09-17)
+    pregunta: '¿La serie C arranca con las capas 1-2 solas, o 1-3?'
+    decision_literal: '«A»'
+    lectura_operativa: >-
+      1-2 (estar + oír) como brazo mínimo, y la huella como SEGUNDO brazo de la
+      misma serie. Con 1-2 la diferencia contra el control es atribuible a una
+      cosa: el ámbito. Si entra también la huella y la brecha se abre, no
+      sabremos si fue el ámbito o el viaje de los referentes. La capa 4
+      (potestad) necesita la 3: sin rastro de lo que se trajo, moverse no deja
+      nada.
+    se_aplica_en: 'PRs 2-6 (brazo `escena`), luego PR 7 (brazo `escena+huella`) y PR 9 (potestad). curiana_cadena no mezcla brazos: una cadena con escena y otra sin ella no se unen, y la config lo dice.'
+
+  p10_el_visor:
+    estado: DECIDIDA (2026-09-17)
+    pregunta: '¿Se hace el visor de repetición de la escena?'
+    decision_literal: '«A»'
+    lectura_operativa: >-
+      Sí, sobre el mapa real, en /kaketiana (export_escena_seed.py +
+      MapaDeEscena.tsx, estático, leyendo `presencias`), con el volcado de
+      texto por turno el MISMO día como andamio. El volcado cuesta diez líneas
+      y hace la escena depurable desde el primer run; el mapa es además un
+      guardián: un Director que narra a gente que no estaba allí se ve de un
+      vistazo. Lo único que el mapa pide antes de lucir es la tabla
+      `presencias` (PR 3): un mapa con 12 de 63 no es un mundo.
+    se_aplica_en: 'PR 8 (el volcado al log, sin romper --silencioso) y PR 10 (el exportador y el componente; el JSON valida contra el esquema y la página construye sin base).'
+
+  lo_que_no_se_toca: >-
+    score_linguistico() · pct_caquetio y los demás pct_* · capas_de_score ·
+    curiana_observer · el catálogo de eventos y decir_para_el_mundo ·
+    curiana_mundo y [Tu tierra] · el elenco generado · el esquema de word_uses,
+    koine_metrics y koine_lexicon · y la era 1, que tiene que seguir byte a
+    byte (allí `nodo` es None, `ambito_de` devuelve None y las cuatro vías
+    quedan globales).

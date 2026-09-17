@@ -131,11 +131,24 @@ frases_del_cargador:
   viento:
     periodo: 'Tiempo de Viento: el juri sopla firme del este y el agua está clara.'
     sostiene: 'periodos[P1].viento, .mar'
+    nota_2026-09-17: >-
+      La frase de la TARDE decía «el Golfete» y entraba igual en los siete
+      sitios: se la oían Carirubana y Caseto, cuya agua es la costa oeste
+      (ZA1), y el Director la devolvió en el cierre del día 1 de la serie B
+      («las canoas volverán al Golfete», run 3973d317). Decisión de Miguel del
+      2026-09-17, opción A2 «por zona»
+      (6-fusion/issues-pendientes/golfete-en-paraguana-2026-09-17.md §4a):
+      el lugar se sustituye por el marcador `{tu agua}`, que curiana_mundo.py
+      resuelve con la zona de pesca del SITIO del agente (ver
+      `aguas_del_cargador` abajo). El Director, que no está en ningún sitio,
+      recibe la forma neutra. La palabra NO se filtra: el Golfete es canon y es
+      la orilla de GUARANAO (§4c). Sigue siendo REDACCIÓN de canon-simulación
+      del escriba, como el resto de este bloque.
     momentos:
       amanecer: 'Amanece con el viento flojo: es la hora de la canoa y del chinchorro.'
       mañana: 'El viento monta; la sal de la noche ya está seca y el conuco se trabaja antes del sol alto.'
       mediodia: 'El sol pega; hora de sombra, de comer y de hablar.'
-      tarde: 'El viento arrecia y el Golfete se pone difícil: la canoa vuelve.'
+      tarde: 'El viento arrecia y {tu agua} se pone difícil: la canoa vuelve.'
       anochecer: 'Cae el sol y se untan los jachos con manteca de cunaro.'
       noche: 'Noche de pesca a la luz de los jachos, sobre el agua calma.'
   seca_larga:
@@ -158,6 +171,31 @@ frases_del_cargador:
       tarde: 'La tarde trae el chubasco: los cauces corren y el jagüey se llena.'
       anochecer: 'Se cierra el día con la tierra mojada y el maíz en el suelo.'
       noche: 'Noche de lluvia sobre el techo; el salinar está parado.'
+
+# ══════════════════════════════════════════════════════════════════
+# 0b. EL AGUA DE CADA ZONA (2026-09-17)
+# ══════════════════════════════════════════════════════════════════
+# Con qué nombre se le dice «{tu agua}» al que está en un sitio de esta zona.
+# Decisión de Miguel del 2026-09-17, opción A2 «por zona». La clave es el
+# `zona_de_pesca` del sitio (sitios_era2.yaml); quien no tiene zona —Moruy, el
+# Capubana: la casa del Manaure no tiene playa— oye `neutra`, que es también lo
+# que oye el Director en [El mundo], porque él no está en ningún sitio.
+#
+# No son los nombres largos de las zonas (estructura_social_era2.yaml §zonas:
+# «la orilla del Golfete de Coro, de Matacán a Tacuato y el Bajo de Supí»): esos
+# son el caladero, y no caben en una frase de ≤ 90 caracteres. Éste es el
+# nombre del AGUA, redacción de canon-simulación como las frases de arriba.
+#
+# ZG1 (la laguna de Guaranao, de fondo) no lleva nombre propio a propósito: la
+# laguna nace en 1985 (Aular Leal 2014, decisión p8 del 2026-09-15) y su orilla
+# precontacto es la ensenada, no el Golfete. Oye la neutra.
+aguas_del_cargador:
+  neutra: el agua
+  por_zona:
+    ZG2: el Golfete
+    ZA1: la costa del oeste
+  sostiene: 'sitios_era2.yaml (zona_de_pesca por sitio); estructura_social_era2.yaml §zonas_de_pesca (ZG2/ZA1); curiana_orchestrator_v2.ZONAS_DE_PESCA'
+  lo_lee: 'curiana_sim/curiana_mundo.py (aguas_por_zona(), agua_del_sitio()), con la misma tabla declarada como respaldo si el YAML no la trae'
 
 partición:
   etiqueta: canon-simulacion

@@ -439,6 +439,60 @@ def test_tu_tierra_cabe_en_320_en_las_126_combinaciones_y_no_ensena_lo_escondido
     assert len(dias) > 1
 
 
+def test_cada_sitio_oye_su_propia_agua_y_ninguna_llave_queda_sin_resolver():
+    """Decisión de Miguel del 2026-09-17, opción A2 «por zona»
+    (golfete-en-paraguana-2026-09-17.md §4a).
+
+    La frase de la tarde del Tiempo de Viento decía «el Golfete» y entraba en
+    los SIETE sitios: en el run 3973d317 los 12 agentes del turno de la tarde
+    —Caseto 8, Moruy 3, Carirubana 1— oyeron que su agua era el Golfete, y
+    ninguno de los que la tienen habló en ese turno. Ahora la frase lleva
+    `{tu agua}` y cada quien oye la orilla de SU zona de pesca.
+
+    Lo que NO se hace es filtrar la palabra (§4c): el Golfete es canon y es la
+    orilla de GUARANAO, así que Tacuato y El Cayude la siguen diciendo."""
+    from curiana_mundo import (AGUA_NEUTRA, MARCA_TU_AGUA, MOMENTOS, PRESUPUESTO,
+                               agua_del_sitio, aguas_por_zona, bloque_tu_tierra,
+                               combinaciones, sitios)
+    from curiana_perfiles import cargar_perfil
+    capas = cargar_perfil("era2").capas
+
+    # la tabla es la del canon (clima_era2.yaml) y la del respaldo, y coincide
+    # con el mapa de zonas que el prompt ya usaba
+    tabla = aguas_por_zona()
+    assert tabla["ZG2"] == "el Golfete" and tabla["ZA1"] == "la costa del oeste"
+    assert tabla[""] == AGUA_NEUTRA == "el agua"
+    assert agua_del_sitio("Tacuato") == "el Golfete"          # ZG2
+    assert agua_del_sitio("Carirubana") == "la costa del oeste"   # ZA1
+    assert agua_del_sitio("Moruy") == AGUA_NEUTRA             # sin playa
+    assert agua_del_sitio("laguna de Guaranao") == AGUA_NEUTRA  # ZG1, sin nombre propio
+    assert agua_del_sitio("no existe") == AGUA_NEUTRA
+
+    zona = {n: s.get("zona_de_pesca") for n, s in sitios().items()}
+    por_sitio = {}
+    for s, p, m in combinaciones():
+        b = bloque_tu_tierra(s, p, m, agente="Turicha", dia=1, capas=capas)
+        assert MARCA_TU_AGUA not in b and "{" not in b and "}" not in b, (s, p, m, b)
+        assert len(b) <= PRESUPUESTO, (s, p, m, len(b))
+        if "Golfete" in b:
+            por_sitio[s] = por_sitio.get(s, 0) + 1
+    # nadie de ZA1 oye «Golfete» en ninguna de sus 18; los de ZG2, en las 18
+    for s, z in zona.items():
+        if z == "ZA1":
+            assert s not in por_sitio, (s, por_sitio.get(s))
+        elif z == "ZG2":
+            assert por_sitio.get(s) == len(MOMENTOS) * 3, (s, por_sitio.get(s))
+    # y en la tarde del viento, que es la frase del pleito, cada quien la suya
+    def _tarde(s):
+        return bloque_tu_tierra(s, "viento", "tarde", agente="Turicha", dia=1, capas=capas)
+    for s in ("Tacuato", "El Cayude"):
+        assert "y el Golfete se pone difícil" in _tarde(s), s
+    for s in ("Caseto", "Carirubana"):
+        assert "y la costa del oeste se pone difícil" in _tarde(s), s
+    for s in ("Moruy", "Capubana", "laguna de Guaranao"):
+        assert "y el agua se pone difícil" in _tarde(s), s
+
+
 # ── la esfera de contacto (2026-09-15) ────────────────────────────────
 
 def test_la_mayuscula_decide_si_es_nombre_o_palabra(monkeypatch):

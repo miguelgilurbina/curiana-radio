@@ -134,11 +134,16 @@ def test_el_director_sabe_que_las_aguas_son_dos(monkeypatch):
             r = resumen_del_mundo(_paraguana(dia=1, estacion=periodo, momento=m))
             assert "son dos aguas y no una" in r and "costa oeste" in r, (periodo, m)
     assert "Golfete" not in restricciones_del_director()
-    # el único [El mundo] que dice «Golfete» sigue siendo el de la tarde del
-    # viento, y eso es la frase del momento (clima_era2.yaml), no la restricción
+    # El único [El mundo] que decía «Golfete» era el de la tarde del viento, y
+    # eso era la frase del momento (clima_era2.yaml), no la restricción. Desde
+    # la decisión A2 del 2026-09-17 esa frase lleva `{tu agua}` y el Director,
+    # que no está en ningún sitio, la oye en la forma NEUTRA: ninguno de los 18
+    # le nombra el Golfete, y la tercera restricción le dice igual que hay dos.
     con_golfete = [(p, m) for p in ("viento", "seca_larga", "siembra") for m in MOMENTOS
                    if "Golfete" in resumen_del_mundo(_paraguana(dia=1, estacion=p, momento=m))]
-    assert con_golfete == [("viento", "tarde")], con_golfete
+    assert con_golfete == [], con_golfete
+    tarde = resumen_del_mundo(_paraguana(dia=1, estacion="viento", momento="tarde"))
+    assert "y el agua se pone difícil" in tarde, tarde
 
     # sin la entrada del corpus, la restricción se cae entera y el resto queda
     hechos = {k: v for k, v in hechos_del_corpus().items() if k != "ecologia-080"}
@@ -154,6 +159,8 @@ def test_el_resumen_del_mundo_cabe_en_400_y_solo_existe_en_la_era_2():
             r = resumen_del_mundo(_paraguana(dia=1, estacion=periodo, momento=m))
             assert r.startswith("[El mundo] ") and len(r) <= PRESUPUESTO_DIRECTOR, (periodo, m, len(r))
             assert "cardonal" in r and "ni ceibas" in r, (periodo, m)
+            # ningún marcador del cargador llega crudo al Director (2026-09-17)
+            assert "{" not in r and "}" not in r, (periodo, m, r)
     assert resumen_del_mundo(estado_inicial_test()) == ""      # la seca de la era 1: sin canon
     # se puede pedir otro período y momento que los del estado (la reflexión mira el día cerrado)
     r = resumen_del_mundo(_paraguana(dia=51, estacion="seca_larga", momento="amanecer"),

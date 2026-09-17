@@ -13,6 +13,12 @@ aquí. Decisiones de Miguel del 2026-09-15/16 (decisiones_tanda_2026-09-15.yaml)
   p7  presupuesto ≤ 320 caracteres, truncado por línea entera, con test
   p4/p8  los hechos y la laguna entran con fuente antes del primer run
 
+Y del 2026-09-17 (golfete-en-paraguana-2026-09-17.md §4a, opción A2):
+
+  {tu agua}  la frase de la tarde del viento nombraba el Golfete para los
+             siete sitios; ahora cada quien oye la orilla de SU zona de pesca
+             y el Director, que no está en ningún sitio, oye «el agua»
+
 Lo que NO hace, a propósito:
   - no muestra voces hipotéticas (el perfil era2 las esconde: se pasa `capas`);
   - no inyecta testimonios sin procedencia ni datos etiquetados hipotéticos;
@@ -47,6 +53,35 @@ PRESUPUESTO = 320
 # El bloque del Director es más corto que el del agente: dos frases y una línea.
 PRESUPUESTO_DIRECTOR = 400
 MOMENTOS = ("amanecer", "mañana", "mediodia", "tarde", "anochecer", "noche")
+
+# ── {tu agua}: cada quien oye su propia orilla (2026-09-17) ────────────
+# La frase de la tarde del Tiempo de Viento decía «el Golfete» y entraba igual
+# en los siete sitios, incluidos los dos de AMUAY, cuya agua es el Golfo de
+# Venezuela (run 3973d317: los 12 agentes del turno de la tarde oyeron que su
+# agua era el Golfete, y ninguno de los que la tienen habló en ese turno).
+# Decisión de Miguel del 2026-09-17, opción A2 «por zona»
+# (6-fusion/issues-pendientes/golfete-en-paraguana-2026-09-17.md §4a): la frase
+# lleva el marcador `{tu agua}` y se resuelve con la zona de pesca del SITIO.
+#
+# La palabra NO se filtra (§4c): el Golfete es canon y es la orilla de GUARANAO.
+# Lo que se arregla es el destinatario, no el vocabulario.
+#
+# La tabla se declara aquí y se lee del YAML (clima_era2.yaml
+# `aguas_del_cargador`), que es donde vive la redacción de las frases; esto es
+# el respaldo si el canon no la trae. No se usan los nombres largos de las
+# zonas (estructura_social_era2.yaml §zonas): son el caladero —«la orilla del
+# Golfete de Coro, de Matacán a Tacuato y el Bajo de Supí»— y no caben en una
+# frase de momento.
+MARCA_TU_AGUA = "{tu agua}"
+# Quien no tiene zona (Moruy, el Capubana: la casa del Manaure no tiene playa)
+# y el Director, que no está en ningún sitio, oyen la forma neutra. ZG1 —la
+# laguna de Guaranao, de fondo— tampoco tiene nombre propio: la laguna nace en
+# 1985 (Aular Leal 2014, decisión p8) y su orilla precontacto es la ensenada.
+AGUA_NEUTRA = "el agua"
+AGUA_POR_ZONA = {
+    "ZG2": "el Golfete",
+    "ZA1": "la costa del oeste",
+}
 
 # Lo que el Director no puede inventar en Paraguaná (2026-09-16: en el día 2 de
 # la era 2 narró «la sombra del ceibo»). Escrito a mano y citado entrada por
@@ -125,6 +160,40 @@ def periodos() -> dict:
     """{id del período del estado: bloque del canon} — P1 → viento, etc."""
     ids = {"P1": "viento", "P2": "seca_larga", "P3": "siembra"}
     return {ids[p["id"]]: p for p in (clima().get("periodos") or []) if p.get("id") in ids}
+
+
+# ── El agua de cada quien ──────────────────────────────────────────────
+
+def aguas_por_zona() -> dict:
+    """{id de zona: el nombre del agua} + la neutra bajo la clave "".
+
+    Del canon (clima_era2.yaml `aguas_del_cargador`) si está; si no, la tabla
+    declarada arriba. El canon manda, pero nunca deja al marcador sin resolver.
+    """
+    d = clima().get("aguas_del_cargador") or {}
+    tabla = dict(AGUA_POR_ZONA)
+    tabla.update({str(k): str(v) for k, v in (d.get("por_zona") or {}).items() if v})
+    tabla[""] = str(d.get("neutra") or AGUA_NEUTRA)
+    return tabla
+
+
+def agua_del_sitio(sitio: str) -> str:
+    """Cómo se llama el agua del que está en `sitio`.
+
+    La zona la da `sitios()[sitio]['zona_de_pesca']` (sitios_era2.yaml la
+    escribe pelada: ZG2, ZA1, ZG1 o null; el elenco la escribe con glosa entre
+    paréntesis, así que se toma el primer token). Sin zona, o con una zona sin
+    nombre declarado, la forma neutra.
+    """
+    tabla = aguas_por_zona()
+    zona = str((sitios().get(sitio) or {}).get("zona_de_pesca") or "").split("(")[0].split()
+    return tabla.get(zona[0], tabla[""]) if zona else tabla[""]
+
+
+def _con_agua(linea: str, agua: str) -> str:
+    """Resuelve `{tu agua}` antes de medir el largo: el presupuesto se cobra
+    sobre lo que el agente lee, no sobre la plantilla."""
+    return linea.replace(MARCA_TU_AGUA, agua) if MARCA_TU_AGUA in linea else linea
 
 
 # ── Filtros ────────────────────────────────────────────────────────────
@@ -259,6 +328,10 @@ def bloque_tu_tierra(sitio: str, periodo: str, momento: str, *, agente: str = ""
     línea del sitio (rotando por agente y día); si cabe, otra. Se trunca por
     línea entera. Devuelve "" si el sitio no está en el canon o el período no
     es de la era 2.
+
+    `{tu agua}` se resuelve con la zona de pesca de ESTE sitio (decisión A2 del
+    2026-09-17): el de Tacuato oye «el Golfete», el de Carirubana «la costa del
+    oeste» y el que no tiene playa, «el agua».
     """
     s = sitios().get(sitio)
     frases = (clima().get("frases_del_cargador") or {}).get(periodo)
@@ -286,6 +359,10 @@ def bloque_tu_tierra(sitio: str, periodo: str, momento: str, *, agente: str = ""
             continue
         linea = grupo[_indice(agente, dia, len(grupo))]
         lineas.append(_frase_de(linea, capas))
+
+    # Cada quien oye su propia orilla, y se resuelve ANTES de medir.
+    agua = agua_del_sitio(sitio)
+    lineas = [_con_agua(l, agua) for l in lineas]
 
     # Tope duro por línea entera: el sitio, el período y el momento se recortan
     # si hace falta (son el mínimo); una línea del sitio que no cabe se salta y
@@ -337,16 +414,23 @@ def resumen_del_mundo(state, *, estacion: Optional[str] = None, momento: Optiona
     """El mundo para el Director (no para un agente): la frase del período y
     la del momento (clima_era2.yaml, frases_del_cargador) más la línea de
     restricciones del corpus. ≤ presupuesto, truncado por línea entera.
-    Devuelve "" si el período no es de la era 2 (la Curiana no tiene canon)."""
+    Devuelve "" si el período no es de la era 2 (la Curiana no tiene canon).
+
+    El Director no está en ningún sitio: `{tu agua}` le llega en la forma
+    NEUTRA («el agua»). Decirle «el Golfete» en los 18 bloques es lo que le hizo
+    cerrar el día 1 de la serie B con «las canoas volverán al Golfete» para
+    toda la gente del día (run 3973d317). Qué agua es de qué nodo se lo dice la
+    tercera restricción, que no nombra ninguna."""
     estacion = estacion or getattr(state, "estacion", None)
     momento = momento or getattr(state, "momento", None)
     frases = (clima().get("frases_del_cargador") or {}).get(estacion)
     if not frases:
         return ""
-    lineas = [str(frases.get("periodo") or "").strip()]
+    neutra = aguas_por_zona()[""]
+    lineas = [_con_agua(str(frases.get("periodo") or "").strip(), neutra)]
     mom = (frases.get("momentos") or {}).get(momento)
     if mom:
-        lineas.append(str(mom).strip())
+        lineas.append(_con_agua(str(mom).strip(), neutra))
     restricciones = restricciones_del_director()
     if restricciones:
         lineas.append(restricciones)
