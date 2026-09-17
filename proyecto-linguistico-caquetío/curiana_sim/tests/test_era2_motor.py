@@ -518,15 +518,22 @@ def test_la_mayuscula_decide_si_es_nombre_o_palabra(monkeypatch):
 def test_el_prestamo_de_esfera_se_mide_aparte_y_no_penaliza():
     """Decisión de Miguel 2026-09-15: «el set de cinco es razonable; se debe
     medir aparte». Una voz de las islas es préstamo, no fuga; una voz wayuu
-    —la lengua con la que reconstruimos— sigue penalizando."""
-    from curiana_lexicon import (ESFERA_DE_CONTACTO, LexicoComunitario,
-                                 VOCABULARIO_BASE, score_linguistico)
+    —la lengua con la que reconstruimos— sigue penalizando.
+
+    ⚠ 2026-09-17: el ejemplo era `caiman`, que es castellano corriente y desde
+    hoy está en `HISPANISMOS_DE_ESFERA` (ver test_lexicon). Se cambia por
+    `watapana`, que el castellano NO usa —dice dividivi—: un préstamo de
+    verdad. Lo que el test fija no cambia."""
+    from curiana_lexicon import (ESFERA_DE_CONTACTO, HISPANISMOS_DE_ESFERA,
+                                 LexicoComunitario, VOCABULARIO_BASE,
+                                 score_linguistico)
     from curiana_database import normalize_source_language
     lex = LexicoComunitario()
     assert "wayunaiki" not in ESFERA_DE_CONTACTO and "lokono" not in ESFERA_DE_CONTACTO
+    assert "watapana" not in HISPANISMOS_DE_ESFERA
     base = score_linguistico("taya buko", lex)
-    con_prestamo = score_linguistico("taya buko caiman", lex)
-    assert con_prestamo["prestamos_de_esfera"] == ["caiman"]
+    con_prestamo = score_linguistico("taya buko watapana", lex)
+    assert con_prestamo["prestamos_de_esfera"] == ["watapana"]
     assert con_prestamo["otro_arahuaco"] == 0
     assert con_prestamo["score"] >= base["score"]          # no penaliza
     wayu = next(k for k, e in VOCABULARIO_BASE.items()

@@ -64,18 +64,22 @@ def test_el_registro_conserva_los_prestamos_de_esfera_y_sobrevive_al_json(tmp_pa
     """Run c6837386 (2026-09-16): el préstamo de esfera se medía y se perdía.
     El registro lo conserva aparte de `palabras_caquetias`, y el modo JSON
     (sin Supabase) lo escribe, lo vuelve a leer, y carga igual un JSON viejo
-    que no traiga el campo."""
+    que no traiga el campo.
+
+    ⚠ 2026-09-17: el ejemplo era `caiman`, castellano corriente y desde hoy
+    `HISPANISMOS_DE_ESFERA`. Se usa `watapana`, que el castellano no dice
+    —dice dividivi—: un préstamo de verdad. El test fija lo mismo."""
     obs, lex = _observer()
-    r = obs.analizar("Manaure", "caquetío", 1, "Taya wana-ka caiman wara.",
+    r = obs.analizar("Manaure", "caquetío", 1, "Taya wana-ka watapana wara.",
                      dia=2, turno=1, momento="amanecer", estacion="seca")
-    assert r.prestamos_de_esfera == ["caiman"]
-    assert "caiman" not in r.palabras_caquetias
-    assert r.to_csv_row()["prestamos_esfera"] == "caiman"
+    assert r.prestamos_de_esfera == ["watapana"]
+    assert "watapana" not in r.palabras_caquetias
+    assert r.to_csv_row()["prestamos_esfera"] == "watapana"
 
     ruta = str(tmp_path / "observer.json")
     obs.save(ruta)
     cargado = ObserverAgent.load(None, lex, ruta)
-    assert cargado._historial[0].prestamos_de_esfera == ["caiman"]
+    assert cargado._historial[0].prestamos_de_esfera == ["watapana"]
 
     viejo = {k: v for k, v in r.to_dict().items()
              if k not in ("prestamos_de_esfera", "neologismos_extraidos")}
