@@ -199,6 +199,13 @@ class ComunidadState:
     # en su config de qué run hereda el mundo, la memoria y la koiné.
     turnos_por_dia: int = TURNOS_POR_DIA_ERA1
     run_anterior: Optional[str] = None
+    # Los referentes novedosos (curiana_koine.REFERENTES_NOVEDOSOS) que la
+    # comunidad ya tuvo delante, por id. La secuencia sigue de un día al
+    # siguiente con --continuar: hasta el 2026-09-17 cada run la empezaba de
+    # cero y un día de seis turnos sólo llegaba al primero, así que los tres
+    # días de la serie A volvieron a nombrar «las cuentas brillantes» en el
+    # turno 5 (10 de 12 respuestas cada día) y los otros nueve no salieron.
+    referentes_introducidos: list = field(default_factory=list)
     # El nombre del mundo que encabeza el contexto: CURIANA en la era 1,
     # PARAGUANÁ en la era 2 (lo fija el elenco activo, ver curiana_agents.MUNDO).
     mundo: str = "CURIANA"

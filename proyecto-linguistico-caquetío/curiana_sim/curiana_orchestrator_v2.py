@@ -584,6 +584,16 @@ MOMENTOS_ESTIMULO = {
 }
 
 
+def referentes_pendientes_de(state: ComunidadState) -> list[dict]:
+    """Los referentes novedosos que a esta comunidad aún no le han puesto
+    delante, en el orden de REFERENTES_NOVEDOSOS. Un run que continúa sigue
+    la secuencia donde el día anterior la dejó (state.referentes_introducidos);
+    uno nuevo la empieza. Antes cada run la reiniciaba y un día de seis turnos
+    sólo llega al primero: la serie A nombró las mismas cuentas tres días."""
+    vistos = set(state.referentes_introducidos)
+    return [dict(r) for r in REFERENTES_NOVEDOSOS if r["id"] not in vistos]
+
+
 def run_turn(
     client: anthropic.Anthropic,
     state: ComunidadState,
@@ -1239,7 +1249,7 @@ def auto_mode(
     # rivales → la comunidad fija una por frecuencia × prestigio.
     competencia = CompetenciaLexica()
     cadencia_nombramiento = 4
-    referentes_pendientes = list(REFERENTES_NOVEDOSOS)
+    referentes_pendientes = referentes_pendientes_de(state)
 
     # Inicializar DB (CurianaDB real o CurianaDBMock si no está configurada)
     db = get_db()
@@ -1312,6 +1322,7 @@ def auto_mode(
             naming_referente = None
             if referentes_pendientes and t > 0 and t % cadencia_nombramiento == 0:
                 naming_referente = referentes_pendientes.pop(0)
+                state.referentes_introducidos.append(naming_referente["id"])
 
             interactions = run_turn(
                 client, state, memory, lexico, observer,

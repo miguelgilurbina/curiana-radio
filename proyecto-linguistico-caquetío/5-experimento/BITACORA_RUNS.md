@@ -132,7 +132,20 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 >    hubo (el motor ahora lo avisa con `agentes_sin_precarga`); la única
 >    salida es re-correr desde el día 1. `score` y `pct_*` no cambian.
 >
-> Ninguna de las cuatro toca `capas_de_score`.
+> 5. **La competencia léxica deja de repetir el mismo referente cada día**
+>    (revisión previa al día 1 limpio de la serie B, 2026-09-17). `auto_mode`
+>    empezaba `REFERENTES_NOVEDOSOS` de cero en cada run y un día de seis
+>    turnos sólo llega al primero: en la serie A el turno 5 de CADA día
+>    volvió a poner «las cuentas brillantes» delante (respuestas sobre cuentas
+>    en el turno 5: 10 de 12 el día 2, 10 de 12 el día 3, y 4 de 12 el día 1),
+>    y `kuri-bana-iro-pabu` se re-acuñó los días 2 y 3. Lo que se leyó como
+>    «la koiné sobrevivió la noche» era en parte el instrumento re-enseñando
+>    el referente. Desde ahora el estado guarda `referentes_introducidos` y
+>    `--continuar` sigue la secuencia (día 2: el cometa; día 3: el eclipse).
+>    En la serie B, que una forma fijada el día 1 aparezca el día 2 sin que
+>    nadie vuelva a mostrar la cosa es señal de verdad.
+>
+> Ninguna de las cinco toca `capas_de_score`.
 
 > ⚠️ **Dos artefactos del instrumento descubiertos al cerrar el día 3
 > (análisis por nodo, `analizar_nodos.py`, 2026-09-16), que afectan a los
