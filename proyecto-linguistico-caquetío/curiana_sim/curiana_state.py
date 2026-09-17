@@ -223,6 +223,24 @@ class ComunidadState:
             self._actualizar_estacion()
         self.momento = momento_de_turno(self.turno, self.turnos_por_dia)
 
+    def cerrar_evento_del_turno(self) -> Optional[str]:
+        """Archiva el evento activo en `historial_eventos` y lo apaga.
+
+        Lo usa el orquestador en la era 2, al empezar cada turno: allí el día
+        tiene seis momentos y el evento es la situación de UNO, no del día
+        entero. La era 1 no lo llama —su evento sigue durando hasta el cambio
+        de día, que es donde avanzar_turno() lo archiva— y por eso este método
+        escribe su propia entrada, con `turno`, en vez de reusar aquella.
+        """
+        evento = self.evento_del_turno
+        if evento:
+            self.historial_eventos.append(
+                {"dia": self.dia, "turno": self.turno, "evento": evento}
+            )
+            self.evento_del_turno = None
+            self.eventos_activos = []
+        return evento
+
     def fijar_mundo(self, mundo: str):
         """Pone el mundo y, si la estación actual no es de su calendario (un
         estado nuevo trae `seca` y la era 2 empieza en `viento`), la recalcula
@@ -298,13 +316,20 @@ class ComunidadState:
 
 
 # ============================================================
-# Estado inicial para el test run
+# Estado inicial por mundo
 # ============================================================
 
 def estado_inicial_test() -> ComunidadState:
     """
     Día 1 de la seca. Shaboro tuvo un sueño.
     El nivel de sal es bajo — necesitan ir al salinar.
+
+    ⚠ Es el estado de la ERA 1 y abre TODO run que no continúa a otro. Para
+    arrancar un run se llama a estado_inicial(MUNDO), no a esta función:
+    llamarla con el elenco de la era 2 mete a Shaboro, a Buio-sha y a las
+    tensiones de la Curiana en Paraguaná (medido 2026-09-17, run b06f57ea:
+    23 de 72 respuestas del día 1 dijeron «Shaboro»). Se conserva byte a byte
+    porque la era 1 no se toca y hay tests que la vigilan.
     """
     return ComunidadState(
         dia=1,
@@ -322,6 +347,137 @@ def estado_inicial_test() -> ComunidadState:
         ),
         agentes_en_escena=["Manaure", "Shaboro", "Buio-sha", "Tawaka", "Dare-nu", "Korie-ko"],
     )
+
+
+# ── El día 1 de la era 2 (mundo PARAGUANÁ) ────────────────────────────
+#
+# El evento semilla de Paraguaná. Cada frase sale del canon de la era 2 y no
+# nombra a nadie: los nombres de las personas los pone `agentes_en_escena`, y
+# los inventados no entran (regla del casting, 2026-09-14).
+#
+#   «Amanece con el viento flojo: es la hora de la canoa y del chinchorro»
+#       → 6-fusion/clima_era2.yaml, frases_del_cargador.viento.momentos.amanecer
+#         (literal; `test_el_evento_semilla_de_paraguana_cita_el_canon` lo vigila)
+#   Tiempo de Viento, el alisio que monta durante la mañana
+#       → clima_era2.yaml, periodos[P1] (camacho-2011 pp. 9 y 15) y
+#         frases_del_cargador.viento.{periodo, momentos.mañana}
+#   Tacuato, «la aldea de la orilla del Golfete»; Carirubana, «la playa de
+#   pescadores del extremo sur de la costa oeste»; Moruy, «la casa del
+#   Manaure al pie del Capubana»; el Capubana, «la marca que se ve desde el mar»
+#       → 6-fusion/sitios_era2.yaml, en_una_frase de cada sitio
+#   las charcas que todavía no dan biro
+#       → clima_era2.yaml, periodos[P1].viento: el alisio «seca las salinas y
+#         fabrica el biro». Que en el día 1 aún no haya costra es
+#         canon-simulación: es lo que sostiene `nivel_sal="bajo"`.
+#
+# ETIQUETA: canon-simulacion (el texto; cada dato que cita lleva la suya en el
+# YAML de origen).
+EVENTO_SEMILLA_PARAGUANA = (
+    "Primer día del Tiempo de Viento. Amanece con el viento flojo: es la hora "
+    "de la canoa y del chinchorro. En Tacuato, a la orilla del Golfete, y en "
+    "Carirubana, la playa de pescadores de la costa del oeste, se botan las "
+    "canoas antes de que el alisio monte; sobre Moruy, el Capubana —la marca "
+    "que se ve desde el mar— ya está claro. Las charcas de la orilla todavía "
+    "no dan biro: el viento acaba de empezar."
+)
+
+# Las tensiones que la era 2 SÍ declara, con la línea que las sostiene. No hay
+# más: `6-fusion/estructura_social_era2.yaml` describe la estructura (nodos,
+# casas, zonas de pesca, el Capubana) y `elenco_era2.yaml` sólo declara estas
+# cuatro como conflicto entre personas. El `nivel` no está en ninguna de las
+# dos fuentes: es canon-simulación, puesto bajo cuando la fuente habla de
+# rivalidad y medio/alto cuando habla de conflicto o de enemistad.
+#
+# ⚠ MEDIDO 2026-09-17: hoy NADIE lee `tensiones_activas` — ni el orquestador,
+# ni el observer, ni curiana_social (lo confirma la auditoría del 2026-09-14,
+# §«estado muerto»). Se escribe para que el estado de la era 2 deje de decir
+# lo de la era 1, no porque llegue a ningún prompt. Inyectarlo es otra tarea.
+TENSIONES_ERA2 = {
+    "Sawaka-Paugis": {
+        "nivel": "alto",
+        "causa": "dos boratios que dicen lo mismo y no igual: quién interpreta la señal",
+        "fuente": "6-fusion/elenco_era2.yaml §agentes[Paugis].razon_roster y .descripcion "
+                  "(antolinez-1946-hacia-el-indio: «enemistados entre sí, en conflicto de potencias»)",
+    },
+    "Manaure-Kiwakoa": {
+        "nivel": "medio",
+        "causa": "los Corubos son la única casa sin esposa en la casa del Manaure",
+        "fuente": "6-fusion/elenco_era2.yaml §como_se_enlazan_las_casas.tension_declarada "
+                  "(«Es material de conflicto, no un descuido»)",
+    },
+    "Kunaro-bana-Jachos": {
+        "nivel": "bajo",
+        "causa": "dos apopos vecinos que pescan la misma orilla del Golfete (ZG2)",
+        "fuente": "6-fusion/elenco_era2.yaml §agentes[Kunaro-bana].reanclaje y system_prompt",
+    },
+    "Bajari-Kasebo": {
+        "nivel": "bajo",
+        "causa": "el que corre y el forastero de su propia casa",
+        "fuente": "6-fusion/elenco_era2.yaml §agentes[Bajari].reanclaje",
+    },
+}
+
+
+def _escena_era2() -> list:
+    """El Manaure y el apopo de cada casa, leídos del módulo GENERADO
+    (curiana_agents_era2.py). No se escriben nombres a mano: si el casting
+    renombra a alguien en 6-fusion/elenco_era2.yaml y se regenera el módulo,
+    la escena del día 1 lo sigue. Orden: el Manaure primero y los apopos por
+    (nodo, casa), que es determinista."""
+    from curiana_agents_era2 import AGENTS_T1, AGENTS_T2, AGENTS_T3
+    fichas = {**AGENTS_T1, **AGENTS_T2, **AGENTS_T3}
+    manaure, apopos = [], {}
+    for nombre, a in fichas.items():
+        rol = str(a.get("rol_en_la_casa") or "")
+        if rol.startswith("Manaure"):
+            manaure.append((a.get("nodo"), a.get("casa"), nombre))
+        elif rol == "apopo":
+            apopos.setdefault((a.get("nodo"), a.get("casa")), nombre)
+    return [n for _, _, n in sorted(manaure)] + [apopos[k] for k in sorted(apopos)]
+
+
+def estado_inicial_paraguana() -> ComunidadState:
+    """Día 1 del Tiempo de Viento en Paraguaná.
+
+    El equivalente de estado_inicial_test() para la era 2, y NO una traducción
+    suya: el evento, la escena y las tensiones se escriben desde el canon de
+    la era 2 (ver EVENTO_SEMILLA_PARAGUANA, _escena_era2 y TENSIONES_ERA2).
+    El clima es el declarado del período (PERIODOS_ERA2['viento']), no el
+    «viento noreste suave» de la Curiana.
+    """
+    return ComunidadState(
+        dia=1,
+        turno=1,
+        estacion="viento",
+        momento="amanecer",
+        clima=PERIODOS_ERA2["viento"]["clima_base"],
+        nivel_alimentos="normal",
+        # La sal es el motivo del período, no su punto de partida: el alisio
+        # acaba de arreciar y las charcas aún no han cuajado (ver el evento).
+        nivel_sal="bajo",
+        nivel_tension="bajo",
+        evento_del_turno=EVENTO_SEMILLA_PARAGUANA,
+        agentes_en_escena=_escena_era2(),
+        tensiones_activas={k: dict(v) for k, v in TENSIONES_ERA2.items()},
+        mundo="PARAGUANÁ",
+    )
+
+
+_ESTADOS_INICIALES = {
+    "CURIANA": estado_inicial_test,
+    "PARAGUANÁ": estado_inicial_paraguana,
+}
+
+
+def estado_inicial(mundo: Optional[str] = None) -> ComunidadState:
+    """El estado con que arranca un run que no continúa a otro, por mundo.
+
+    CURIANA devuelve estado_inicial_test() tal cual (la era 1 no cambia).
+    PARAGUANÁ devuelve el día 1 del Tiempo de Viento, con su evento, su
+    escena y sus tensiones. Un mundo desconocido cae en CURIANA, que es lo
+    que hacía el motor antes de que hubiera dos.
+    """
+    return _ESTADOS_INICIALES.get((mundo or "CURIANA"), estado_inicial_test)()
 
 
 # ============================================================
