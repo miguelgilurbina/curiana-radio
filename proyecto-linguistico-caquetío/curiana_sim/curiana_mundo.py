@@ -57,11 +57,33 @@ MOMENTOS = ("amanecer", "mañana", "mediodia", "tarde", "anochecer", "noche")
 #                 espinoso da cují, yabo, dividivi y cardón
 #   ecologia-018  la flora xerófila del matorral: cardón, dividivi, cují…
 #   ecologia-007  cauces efímeros; no hay un gran río perenne
+#   ecologia-026  el Golfete de Coro: laguna somera, corrientes que arrecian
+#                 por la tarde. Es UNA de las dos aguas, y la medición del
+#                 viento de la tarde es SUYA, no de la otra orilla
+#   ecologia-080  la costa oeste, con las dos atalayas de cardúmenes de Punta
+#                 Cardón, a menos de 10 km de Carirubana
+#
+# La tercera restricción se añade el 2026-09-17: el Director cerró el día 1 de
+# la serie B (run 3973d317) con «las canoas volverán al Golfete» para toda la
+# gente del día, y 2 de 72 respuestas dijeron «Golfete» —una de ellas la de un
+# agente de AMUAY, cuya agua es el Golfo de Venezuela—. El Golfete es canon de
+# Paraguaná y es la orilla de GUARANAO (sitios_era2.yaml: Tacuato y El Cayude
+# son «la orilla del Golfete», zona ZG2), pero NO es la de AMUAY (ZA1, «la
+# costa oeste, de Punta Cardón a Los Taques»). Lo que faltaba no era prohibir
+# la palabra —es canon— sino que el Director supiera que hay OTRA agua.
+#
+# ⚠ La línea no dice «Golfete» a propósito: la restricción entra en los 18
+# bloques y nombrarla ahí multiplicaría por nueve la exposición del Director a
+# la palabra que sobra. Qué agua es de qué nodo lo dice el canon de la era 2 y
+# decirlo aquí es redacción que decide Miguel
+# (6-fusion/issues-pendientes/golfete-en-paraguana-2026-09-17.md).
 RESTRICCIONES_DEL_DIRECTOR = (
     ("El monte es cardonal: cují, yabo, dividivi, cardón",
      ("ecologia-018", "ecologia-032"), ("cují", "yabo", "dividivi", "cardón")),
     ("no hay ríos ni ceibas",
      ("ecologia-007", "ecologia-032"), ("río", "ceiba")),
+    ("son dos aguas y no una: la orilla del este, con su marea, y la costa oeste de Punta Cardón",
+     ("ecologia-026", "ecologia-080"), ("marea", "costa oeste", "punta cardón")),
 )
 
 # El campo `estacion` del canon, traducido a los períodos del estado.

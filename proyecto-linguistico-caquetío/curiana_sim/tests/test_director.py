@@ -101,15 +101,50 @@ def test_el_sistema_de_paraguana_dice_que_pueblos_no_hay_y_de_donde_sale_la_gent
 
 def test_las_restricciones_citan_entradas_que_existen_y_dicen_lo_que_dicen():
     hechos = hechos_del_corpus()
-    assert {"ecologia-007", "ecologia-018", "ecologia-032"} <= set(hechos)
+    assert {"ecologia-007", "ecologia-018", "ecologia-026",
+            "ecologia-032", "ecologia-080"} <= set(hechos)
     for frase, ids, claves in RESTRICCIONES_DEL_DIRECTOR:
         assert all(i in hechos for i in ids), ids
         contenido = " ".join(str(hechos[i].get("contenido", "")) for i in ids).lower()
         for c in claves:
             assert c in contenido, (c, ids)          # la línea no dice más que el corpus
             assert c in frase.lower(), (c, frase)
-    assert restricciones_del_director() == \
-        "[El monte es cardonal: cují, yabo, dividivi, cardón; no hay ríos ni ceibas]"
+    assert restricciones_del_director() == (
+        "[El monte es cardonal: cují, yabo, dividivi, cardón; no hay ríos ni ceibas; "
+        "son dos aguas y no una: la orilla del este, con su marea, y la costa oeste "
+        "de Punta Cardón]")
+
+
+def test_el_director_sabe_que_las_aguas_son_dos(monkeypatch):
+    """2026-09-17, run 3973d317: el Director cerró el día 1 de la serie B con
+    «las canoas volverán al Golfete» para toda la gente del día, y un agente de
+    AMUAY —cuya orilla es la costa oeste (ZA1), no el Golfete— repitió la
+    palabra en el turno de la tarde. El Golfete es canon de GUARANAO (ZG2:
+    Tacuato y El Cayude son «la orilla del Golfete»), así que no se puede
+    borrar: lo que faltaba era que el Director supiera que hay OTRA agua.
+
+    Dos condiciones: la línea sale del corpus por id, como las otras dos (si un
+    id desaparece, la restricción no se dice — no se inventa), y NO nombra el
+    Golfete: la restricción va en los 18 bloques y nombrarlo ahí sería repetirle
+    al Director nueve veces más la palabra que sobra."""
+    import curiana_mundo as M
+
+    for periodo in ("viento", "seca_larga", "siembra"):
+        for m in MOMENTOS:
+            r = resumen_del_mundo(_paraguana(dia=1, estacion=periodo, momento=m))
+            assert "son dos aguas y no una" in r and "costa oeste" in r, (periodo, m)
+    assert "Golfete" not in restricciones_del_director()
+    # el único [El mundo] que dice «Golfete» sigue siendo el de la tarde del
+    # viento, y eso es la frase del momento (clima_era2.yaml), no la restricción
+    con_golfete = [(p, m) for p in ("viento", "seca_larga", "siembra") for m in MOMENTOS
+                   if "Golfete" in resumen_del_mundo(_paraguana(dia=1, estacion=p, momento=m))]
+    assert con_golfete == [("viento", "tarde")], con_golfete
+
+    # sin la entrada del corpus, la restricción se cae entera y el resto queda
+    hechos = {k: v for k, v in hechos_del_corpus().items() if k != "ecologia-080"}
+    monkeypatch.setattr(M, "hechos_del_corpus", lambda *a, **k: hechos)
+    linea = M.restricciones_del_director()
+    assert "costa oeste" not in linea and "cardonal" in linea
 
 
 def test_el_resumen_del_mundo_cabe_en_400_y_solo_existe_en_la_era_2():
