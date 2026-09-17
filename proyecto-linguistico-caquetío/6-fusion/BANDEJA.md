@@ -13,9 +13,9 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-16**.
+<!--GENERADO--> Generado el **2026-09-17**.
 
-**2606 ítems propuestos** en 64 propuestas, más **3 issue(s)/comentario(s) redactados sin publicar**.
+**2606 ítems propuestos** en 64 propuestas, más **4 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -117,6 +117,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 |---|---|
 | `comentario-122-frase-cardinal-oliver.md` | Comentario para #122 — la frase cardinal de Oliver, releída en las dos ediciones |
 | `decision-d11-fase3-nucleo-lokono-achagua.md` | D11 fase 3: el núcleo re-derivado desde lokono + achagua, y un perfil de run para medirlo |
+| `frontera-entre-nodos-2026-09-17.md` | La frontera entre nodos: el motor no tiene ninguna |
 | `mundo-era2-sitios-y-clima.md` | El mundo de la era 2, atado a los nodos: sitios y clima |
 
 ---
