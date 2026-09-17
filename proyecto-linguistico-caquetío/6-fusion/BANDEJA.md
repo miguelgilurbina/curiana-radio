@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-17**.
 
-**2617 ítems propuestos** en 65 propuestas, más **6 issue(s)/comentario(s) redactados sin publicar**.
+**2617 ítems propuestos** en 66 propuestas, más **6 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -46,6 +46,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-09-13.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-14.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-15.yaml` | ? | 0 |  |
+| `decisiones_tanda_2026-09-17.yaml` | ? | 0 |  |
 | `elenco_era2.yaml` | varias | 63 |  |
 | `escena_por_lugar_propuesta_2026-09-17.yaml` | varias | 11 |  |
 | `esteves_paginas_releidas_2026-09-16.yaml` | esteves-1989 | 12 |  |
