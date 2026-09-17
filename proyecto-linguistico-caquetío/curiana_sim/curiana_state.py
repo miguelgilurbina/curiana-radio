@@ -209,6 +209,20 @@ class ComunidadState:
     # El nombre del mundo que encabeza el contexto: CURIANA en la era 1,
     # PARAGUANÁ en la era 2 (lo fija el elenco activo, ver curiana_agents.MUNDO).
     mundo: str = "CURIANA"
+    # ── La escena por lugar (era 2, `--escena`; curiana_escena.py) ──
+    # `escena` es el BRAZO del run: apagado —y lo está por defecto— el prompt
+    # es byte a byte el de hoy y `ubicaciones_override` sigue vacío, como
+    # llevaba desde siempre (cuatro lectores, cero escrituras). Encendido,
+    # `run_turn` escribe ahí dónde está cada uno de los 63 en cada momento.
+    # `capubana_cada` es la cadencia declarada de la convergencia del cerro
+    # (decisión 7 → A del 2026-09-17): 0 = no hay convergencia en esta cadena.
+    # `escena_del_turno` es la escena del turno en curso, que es lo que la base
+    # guarda como `presencias` y lo que el Director recibe agrupado por lugar.
+    # Los tres van en to_dict(), así que `--continuar` los hereda y el estado
+    # dice de sí mismo con qué brazo se corrió.
+    escena: bool = False
+    capubana_cada: int = 0
+    escena_del_turno: dict = field(default_factory=dict)
 
     def avanzar_turno(self):
         """Avanza un turno y, al cerrar el día, el calendario.

@@ -1051,7 +1051,7 @@ GLOSA_DE_ZONA = {
     "ZG2": "la orilla del Golfete",
     "ZA1": "la costa oeste",
 }
-GLOSA_DE_SITIO = {"Capubana": "el Capubana, el cerro"}
+GLOSA_DE_SITIO = {"Capubana": "el cerro Capubana"}
 
 
 def glosa_de_lugar(lugar: str) -> str:

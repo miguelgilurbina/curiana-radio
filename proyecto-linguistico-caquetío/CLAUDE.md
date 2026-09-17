@@ -171,7 +171,28 @@ python curiana_orchestrator_v2.py --auto 30 --perfil base --perfiles --reporte
 #                           amanecer siguiente: el día 3 el modelo copió el «Día 4, Turno 1» del
 #                           estado a su propia cabecera. Recibe además el elenco que habló hoy.
 #                           Apagado por defecto: cuesta API
+#   --escena                LA ESCENA POR LUGAR (2026-09-17, curiana_escena.py): cada turno, cada
+#                           uno de los 63 —no sólo los 12 que hablan— está en UN LUGAR que deciden
+#                           su oficio y la hora (6-fusion/escena_era2.yaml → curiana_escena_era2.py,
+#                           generados). `run_turn` lo escribe en state.ubicaciones_override, que
+#                           llevaba cuatro lectores y cero escrituras; el prompt cambia
+#                           [Tu ubicación] por [Aquí estás] (dónde estás, qué momento y quién está
+#                           contigo, ≤ 200 car.); y el Director recibe las intervenciones AGRUPADAS
+#                           POR LUGAR, con cero llamadas más (decisión 6 → A). Es un BRAZO, no un
+#                           parche: apagado por defecto, y sin el flag el prompt de la era 2 es
+#                           byte a byte el de hoy (y el de la era 1, siempre). Se sella en
+#                           simulation_runs.config con `capubana_cada`, sale en la cabecera del run
+#                           y **una cadena --continuar no puede cambiar de brazo a la mitad**: el
+#                           motor avisa y se niega (la evidencia es la DIFERENCIA entre dos cadenas
+#                           completas con la misma semilla, §5.4 del diseño)
+#   --capubana-cada N       cada cuántos días convergen los dos nodos en el cerro; ese día los 63
+#                           están en el Capubana los seis momentos. Por defecto 3 (decisión 7 → A:
+#                           el ciclo mayor del canon cae en los días 55-58 de la seca y una cadena
+#                           de ocho no llega, así que la cadencia es un parámetro declarado, como
+#                           el perfil). 0 = sin convergencia. Sólo cuenta con --escena
 python curiana_mundo.py                                   # las 126 combinaciones de [Tu tierra], con su largo
+python curiana_escena.py                                  # las 1.134 escenas de [Aquí estás] (63 × 6 × 3), con su largo
+python curiana_escena.py --capubana                       # y el día de la convergencia
 python curiana_eventos.py                                 # el catálogo de eventos medido y dicho para la era 2
 python curiana_cadena.py                                  # las cadenas `--continuar`: serie de koiné y veredicto por cadena
                                                           # (un run es UN día: su serie sola nunca tiene dos puntos)
@@ -181,6 +202,8 @@ python curiana_cadena.py                                  # las cadenas `--conti
 python curiana_orchestrator_v2.py --elenco era2 --auto 6 --turnos-por-dia 6 --agentes-por-turno 12 --roster todos --perfil era2 --semilla 1
 python curiana_orchestrator_v2.py --elenco era2 --auto 6 --agentes-por-turno 12 --roster todos --perfil era2 --semilla 2 --continuar --reflexion
 python 6-fusion/scripts/generar_agentes_era2.py --check   # ¿el módulo generado está al día?
+python 6-fusion/scripts/derivar_escena_por_lugar.py --canon  # reescribe 6-fusion/escena_era2.yaml
+python 6-fusion/scripts/generar_escena_era2.py --check    # ¿curiana_escena_era2.py está al día?
 ```
 
 ⚠️ Los perfiles cambian lo que el agente **ve**, nunca con qué se le **puntúa**:
@@ -220,9 +243,10 @@ fuentes_caquetios/ los PDF (se citan, no se editan)
 | `curiana_koine` | idiolectos, competencia léxica, métricas de convergencia |
 | `curiana_cadena` | la cadena `continuado_desde`: serie de koiné y veredicto sobre TODOS los días encadenados, no sobre el run suelto |
 | `curiana_social` | contagio léxico, prestigio, variación dialectal. Las tablas están escritas con los nombres de la era 1: se leen por `prestigio_de()` y `vinculos_de()`, que resuelven el alias y derivan de la ficha lo que no está escrito (`python curiana_social.py` mide el grafo del elenco activo) |
-| `curiana_state` | día, estación, locaciones, eventos (escritos para la era 1) y el **estado inicial por mundo** (`estado_inicial(MUNDO)`) |
+| `curiana_state` | día, estación, locaciones, eventos (escritos para la era 1) y el **estado inicial por mundo** (`estado_inicial(MUNDO)`). Desde el 2026-09-17 lleva además el brazo de la escena (`escena`, `capubana_cada`, `escena_del_turno`), que `--continuar` hereda |
 | `curiana_eventos` | los eventos dichos para el elenco activo: alias, sin foráneos, reescrituras declaradas. Y el **texto libre** que llega al Director y al agente (`decir_para_el_mundo`) |
 | `curiana_mundo` | el mundo de la era 2: `[Tu tierra]` para el agente y `[El mundo]` para el Director, desde 6-fusion/ y el corpus |
+| `curiana_escena` | **dónde está cada uno** (era 2, `--escena`). Una puerta: `ambito_de(agente, state)` devuelve el lugar —una cadena, no un booleano: mañana será adónde se movió por potestad— y `None` sin escena. Lee `curiana_escena_era2.py` (GENERADO desde `6-fusion/escena_era2.yaml`, que deriva del elenco). Determinista: no toca el RNG del motor |
 | `curiana_director` | el Director por mundo y su reflexión del día (`--reflexion`, `curiana_director.json`) |
 | `curiana_observer` | scoring, análisis, perfiles curados |
 | `curiana_database` | Supabase + LangSmith |

@@ -41,7 +41,7 @@ LUGARES = {
         'nodo': 'COMPARTIDO',
         'lat': 11.8183,
         'lon': -69.9524,
-        'glosa': 'el Capubana, el cerro',
+        'glosa': 'el cerro Capubana',
         'locacion': None,
         'extremos': None,
         'compartido': 'estructura_social_era2.yaml decision_creativa_2026-09-14.capubana',

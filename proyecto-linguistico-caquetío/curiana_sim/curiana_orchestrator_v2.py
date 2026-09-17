@@ -87,6 +87,7 @@ from curiana_koine import (
 )
 from curiana_cadena import (
     cadena_de_runs,
+    config_de,
     lineas_de_serie,
     resumen_de_cadena,
     serie_koine_de_cadena,
@@ -100,6 +101,18 @@ from curiana_eventos import (
 )
 from curiana_director import director_system, guardar_reflexion, reflexion_del_dia
 from curiana_mundo import resumen_del_mundo
+# La escena por lugar (era 2, --escena). Con la escena apagada —que es como
+# viene— `ambito_de` devuelve None, `escena_de` {} y `bloque_aqui_estas` "":
+# importar este módulo no cambia un byte del prompt, ni en la era 1 ni en la 2.
+from curiana_escena import (
+    CAPUBANA_CADA_POR_DEFECTO,
+    ambito_de,
+    bloque_aqui_estas,
+    escena_de,
+    es_dia_de_capubana,
+    glosa_de as glosa_de_lugar,
+    volcado_de_escena,
+)
 from functools import lru_cache
 
 
@@ -351,8 +364,12 @@ def call_agent(
     # venir de antes y porque el catálogo no es la única puerta.
     world_context = decir_para_el_mundo(state.to_context_string(), state.mundo)
 
-    # Ubicación actual
-    ubicacion = state.ubicaciones_override.get(
+    # Ubicación actual. Con la escena encendida (era 2, --escena) la puerta es
+    # `ambito_de`: el LUGAR donde el agente está en este momento del día, que
+    # es lo que run_turn acaba de escribir en `ubicaciones_override`. Sin
+    # escena —la era 1 y la era 2 sin el flag— devuelve None y se lee lo de
+    # siempre: el override (que nadie escribe) o su ubicacion_default.
+    ubicacion = ambito_de(agent_name, state) or state.ubicaciones_override.get(
         agent_name, agent.get("ubicacion_default", "plaza")
     )
 
@@ -396,7 +413,13 @@ def call_agent(
     system_parts.append(prompt_emocionar(agent_name, etnia))
     if rasgos:
         system_parts.append(rasgos)
-    system_parts += ["---", world_context, f"[Tu ubicación]: {ubicacion}"]
+    # [Aquí estás] SUSTITUYE a [Tu ubicación] cuando hay escena: dónde estás,
+    # qué momento del día es y quiénes están contigo, en ≤ 200 caracteres
+    # (curiana_escena.bloque_aqui_estas). Sin escena devuelve "" y la línea es
+    # la de siempre, carácter a carácter.
+    aqui_estas = bloque_aqui_estas(agent_name, state)
+    system_parts += ["---", world_context,
+                     aqui_estas or f"[Tu ubicación]: {ubicacion}"]
     gente = prompt_gente(agent)
     if gente:
         system_parts.append(gente)
@@ -489,10 +512,26 @@ def director_narrate(
     Paraguaná no tiene. Sin eso, el Director del día 3 (run 0193873d) escribió
     «Los Caquetíos y Guaycarí se juntan…» copiando su propia nota del día 2."""
     decir = lambda t: decir_para_el_mundo(t, state.mundo)                 # noqa: E731
-    resumen = "\n".join(
-        f"- {i['agent']}: {decir(i['response'])[:100]}..."
-        for i in interactions
-    )
+    linea = lambda i: f"- {i['agent']}: {decir(i['response'])[:100]}..."  # noqa: E731
+    # Decisión 6 → A (Miguel, 2026-09-17): con escena, el Director sigue siendo
+    # UNO por turno —cero llamadas más— pero recibe las intervenciones
+    # AGRUPADAS POR LUGAR. No mueve ninguna métrica de lengua (su texto no
+    # llega al prompt del agente, diseño §1.6): arregla la coherencia del
+    # mundo, que es lo que le hizo escribir «las canoas volverán al Golfete»
+    # para gente que no estaba en el Golfete. Sin escena, el resumen es el de
+    # siempre, byte a byte.
+    escena = getattr(state, "escena_del_turno", None) or {}
+    if escena:
+        por_lugar: dict = {}
+        for i in interactions:
+            por_lugar.setdefault(escena.get(i["agent"]) or "", []).append(i)
+        bloques = []
+        for lugar in sorted(por_lugar):
+            bloques.append(f"[{glosa_de_lugar(lugar) or 'sin lugar'}]")
+            bloques += [linea(i) for i in por_lugar[lugar]]
+        resumen = "\n".join(bloques)
+    else:
+        resumen = "\n".join(linea(i) for i in interactions)
     partes = [f"Estado: {decir(state.to_context_string())}"]
     if state.mundo == "PARAGUANÁ":
         mundo = resumen_del_mundo(state)
@@ -627,6 +666,19 @@ def run_turn(
     roster = list(roster) if roster_explicito else [a for a in PARTICIPANTES_KOINE if a in ALL_AGENTS]
     roster_set = set(roster)
 
+    # ── 0. LA ESCENA DEL TURNO (era 2, --escena) ──────────────────────
+    # Dónde está cada uno de LOS 63 en este momento del día, no sólo los 12
+    # que hablan: un mapa con 12 de 63 no es un mundo. Se escribe en
+    # `ubicaciones_override`, el campo que llevaba cuatro lectores —el prompt
+    # (:355) y curiana_social.vecinos() (:134, :149)— y cero escrituras. Va
+    # ANTES de elegir la ventana, pero no la toca: la escena dice dónde está
+    # cada uno, no quién habla (decisión 4 → A). Con la escena apagada
+    # devuelve {} y aquí no pasa nada.
+    escena = escena_de(state)
+    state.escena_del_turno = escena
+    if escena:
+        state.ubicaciones_override = dict(escena)
+
     def _ventana() -> list[str]:
         # Ventana rotatoria sobre el roster, avanzando `agentes_por_turno` por
         # turno. Contador GLOBAL de turnos (no state.turno, que cicla dentro
@@ -697,12 +749,35 @@ def run_turn(
             if verbose:
                 print(f"  ⚠ DB turn error: {e}")
 
+    # 1c. Las presencias: los 63 con su lugar, no sólo los 12 que hablan. Es
+    #     lo que hace posible el visor sobre el mapa (PR 10) y la brecha por
+    #     LUGAR. La escribe el agente de la base (PR 3, en paralelo): aquí
+    #     sólo se llama si el método existe, para que las dos ramas puedan
+    #     entrar en cualquier orden.
+    if escena and db and run_id and turn_id:
+        guardar_presencias = getattr(db, "save_presencias", None)
+        if guardar_presencias is not None:
+            try:
+                guardar_presencias(run_id=run_id, turn_id=turn_id, dia=state.dia,
+                                   turno=state.turno, momento=state.momento,
+                                   escena=state.escena_del_turno)
+            except Exception:
+                db_fallos["presencias"] += 1
+
     if verbose:
         print(f"\n{'='*60}")
         print(f"  DÍA {state.dia} | TURNO {state.turno} | {state.momento.upper()}")
         print(f"  {state.estacion.upper()} — {state.clima}")
         if state.evento_del_turno:
             print(f"  📍 {state.evento_del_turno}")
+        # El visor de texto (PR 8): la escena del turno en una línea, para que
+        # se pueda depurar desde el primer run sin esperar al mapa. Va dentro
+        # del bloque verboso, así que --silencioso no lo ve.
+        if escena and es_dia_de_capubana(state):
+            print("  ▲ DÍA DE CAPUBANA: los dos nodos en el cerro, los seis momentos")
+        volcado = volcado_de_escena(state, escena)
+        if volcado:
+            print(f"  {volcado}")
         print(f"{'='*60}\n")
 
     # 2. Estímulo del turno. Todo lo que sale de aquí pasa por
@@ -1126,6 +1201,58 @@ def _imprimir_cadena(db, run_id: Optional[str]) -> None:
         print(f"\n  ⚠ no se pudo leer la cadena de runs: {e}")
 
 
+class BrazoIncompatible(SystemExit):
+    """Una cadena `--continuar` que cambiaría de brazo a la mitad."""
+
+
+def comprobar_brazo_de_escena(db, state, escena: bool, capubana_cada: int):
+    """Un run continuado tiene que correr con el MISMO brazo que el anterior.
+
+    «Una escena no puede entrar a mitad de cadena: es una serie nueva desde el
+    día 1» (diseño §5.4). Si el run anterior corrió con escena y éste no —o al
+    revés—, el motor avisa y se niega: la diferencia entre brazos es la
+    evidencia, y una cadena mitad y mitad no la mide, la ensucia.
+
+    Se mira primero la CONFIG del run anterior, que es donde el brazo queda
+    sellado; si no hay base que leer (modo JSON, mock, o un run que no está),
+    se cae al estado en disco, que también lo recuerda. Si ninguno de los dos
+    dice nada, se avisa y se sigue: no hay con qué comparar.
+    """
+    anterior = None
+    origen = ""
+    run_id = getattr(state, "run_anterior", None)
+    if db is not None and run_id:
+        try:
+            run = db.get_run(run_id)
+        except Exception:                                    # noqa: BLE001
+            run = None
+        if run:
+            cfg = config_de(run)
+            if "escena" in cfg:
+                anterior = (bool(cfg.get("escena")), cfg.get("capubana_cada") or 0)
+                origen = f"la config del run {str(run_id)[:8]}"
+    if anterior is None and getattr(state, "escena", None) is not None:
+        anterior = (bool(state.escena), int(getattr(state, "capubana_cada", 0) or 0))
+        origen = "el estado en disco (curiana_state.json)"
+    if anterior is None:                                     # pragma: no cover
+        print("  ⚠ no se pudo leer el brazo del run anterior: la cadena sigue sin comprobar")
+        return
+    ahora = (bool(escena), int(capubana_cada) if escena else 0)
+    if anterior == ahora:
+        return
+    di = lambda b, n: ("con escena" if b else "sin escena") + (      # noqa: E731
+        f", Capubana cada {n}" if b and n else "")
+    raise BrazoIncompatible(
+        "\n  ✗ --continuar con OTRO brazo: el run anterior corrió "
+        f"{di(*anterior)} y éste pediría {di(*ahora)}.\n"
+        f"    (leído de {origen})\n"
+        "    Una escena no puede entrar ni salir a mitad de cadena: la\n"
+        "    evidencia es la DIFERENCIA entre dos cadenas completas con la\n"
+        "    misma semilla, no una cadena mitad y mitad. Arranca una serie\n"
+        "    nueva desde el día 1 (--serie ...) o repite el brazo anterior.\n"
+    )
+
+
 def auto_mode(
     client: anthropic.Anthropic,
     turnos: int,
@@ -1141,6 +1268,8 @@ def auto_mode(
     continuar: bool = False,
     reflexion: bool = False,
     serie: Optional[str] = None,
+    escena: bool = False,
+    capubana_cada: int = CAPUBANA_CADA_POR_DEFECTO,
 ):
     """
     Corre N turnos automáticamente.
@@ -1169,6 +1298,18 @@ def auto_mode(
     mundo, lee los cierres del día y el reporte medido y escribe 4-6 oraciones
     (curiana_director.reflexion_del_dia). Va al log, a state.notas_orquestador
     (el día siguiente la ve) y a curiana_director.json. Apagado por defecto.
+
+    escena=True → el BRAZO de la escena por lugar (curiana_escena.py, era 2):
+    cada turno, cada uno de los 63 tiene un lugar; el prompt cambia
+    `[Tu ubicación]` por `[Aquí estás]` y el Director recibe las
+    intervenciones agrupadas por lugar. Apagado por defecto: sin el flag, el
+    prompt de la era 2 es byte a byte el de hoy y el de la era 1 también. Se
+    sella en simulation_runs.config junto con `capubana_cada`, y una cadena
+    NO puede cambiar de brazo a la mitad (el motor se niega).
+
+    capubana_cada → cada cuántos días convergen los dos nodos en el cerro
+    (decisión 7 → A del 2026-09-17; 3 en la primera cadena). Sólo cuenta con
+    escena=True.
 
     Mapeo temporal (con turnos_por_dia = 2):
         1 turno = media jornada
@@ -1253,6 +1394,16 @@ def auto_mode(
 
     # Inicializar DB (CurianaDB real o CurianaDBMock si no está configurada)
     db = get_db()
+    # El brazo de la escena NO puede cambiar a mitad de cadena (diseño §5.4:
+    # «una escena no puede entrar a mitad de cadena: es una serie nueva desde
+    # el día 1»). Se comprueba ANTES de crear el run, para no dejar una fila
+    # huérfana en la base.
+    if continuar:
+        comprobar_brazo_de_escena(db, state, escena, capubana_cada)
+    # Lo que el run dice de sí mismo, y lo que el estado hereda al día
+    # siguiente. `capubana_cada` sólo significa algo con escena.
+    state.escena = bool(escena)
+    state.capubana_cada = int(capubana_cada) if escena else 0
     _h = huella_de_base(semilla=semilla)
     print(f"  base: {resumen_huella(_h)}")
     if _h.get("motor_sucio"):
@@ -1285,6 +1436,12 @@ def auto_mode(
                 # instrumento incompleto— y lo que arranca con la pre-carga es
                 # la serie B). Se sella aquí para que los análisis la lean.
                 "serie": serie,
+                # El brazo de la escena, sellado como se sella el perfil: el
+                # run dice de sí mismo con qué corrió. `capubana_cada` es None
+                # sin escena, para que la config no sugiera una cadencia que
+                # no se aplicó.
+                "escena": bool(escena),
+                "capubana_cada": int(capubana_cada) if escena else None,
                 **perfil.como_config(), **_h},
     )
     # Re-crear cliente con run_id para que LangSmith use el proyecto correcto
@@ -1304,6 +1461,14 @@ def auto_mode(
     print(f"  elenco: {ELENCO} ({len(ALL_AGENTS)} agentes) · mundo {MUNDO}"
           + (f" · serie {serie}" if serie else ""))
     print(f"  habla: {agentes_por_turno} por turno sobre el roster `{roster_nombre}` ({len(roster)})")
+    if escena:
+        print(f"  escena: sí (cada uno de los {len(ALL_AGENTS)} en su lugar; "
+              f"Capubana cada {capubana_cada} día(s))"
+              if capubana_cada > 0 else
+              f"  escena: sí (cada uno de los {len(ALL_AGENTS)} en su lugar; "
+              f"sin Capubana en esta cadena)")
+    else:
+        print("  escena: no (brazo de control: el prompt es el de siempre)")
     if continuar:
         print(f"  continúa desde el día {state.dia} (run anterior: {(state.run_anterior or '?')[:8]})")
     print(f"  Run ID: {run_id[:8]}...")
@@ -1579,6 +1744,25 @@ if __name__ == "__main__":
              "la config del run. Separa las pruebas de lo que cuenta.",
     )
     parser.add_argument(
+        "--escena", action="store_true",
+        help="La escena por lugar (era 2): cada turno, cada uno de los 63 está en "
+             "un lugar —su oficio y la hora lo deciden— y el prompt cambia "
+             "[Tu ubicación] por [Aquí estás] (dónde estás, qué momento y quién "
+             "está contigo, ≤ 200 car.). El Director recibe las intervenciones "
+             "agrupadas por lugar, sin llamadas de más. Apagado por defecto: sin "
+             "él, el prompt es byte a byte el de hoy. Se sella en la config y una "
+             "cadena --continuar no puede cambiar de brazo a la mitad.",
+    )
+    parser.add_argument(
+        "--capubana-cada", type=int, default=CAPUBANA_CADA_POR_DEFECTO,
+        help="Cada cuántos días convergen los dos nodos en el cerro: ese día todos "
+             f"están en el Capubana los seis momentos (por defecto "
+             f"{CAPUBANA_CADA_POR_DEFECTO}; 0 = sin convergencia). El calendario "
+             "del canon pone el ciclo mayor en los días 55-58 de la seca, "
+             "inalcanzable en una cadena de ocho: la cadencia es un parámetro "
+             "declarado y sellado, como el perfil. Sólo cuenta con --escena.",
+    )
+    parser.add_argument(
         "--ablacion", action="store_true",
         help="Run de CONTROL: apaga las inyecciones de prompt que empujan la "
              "convergencia (sugerencias de contagio, competencias abiertas, "
@@ -1604,7 +1788,8 @@ if __name__ == "__main__":
 
     extra = dict(agentes_por_turno=args.agentes_por_turno, roster_nombre=args.roster,
                  turnos_por_dia=args.turnos_por_dia, semilla=args.semilla,
-                 continuar=args.continuar, reflexion=args.reflexion, serie=args.serie)
+                 continuar=args.continuar, reflexion=args.reflexion, serie=args.serie,
+                 escena=args.escena, capubana_cada=args.capubana_cada)
     if args.anio:
         tpd = args.turnos_por_dia or 2
         auto_mode(client, 120 * tpd, reporte_anual=True, verbose=not args.silencioso,
