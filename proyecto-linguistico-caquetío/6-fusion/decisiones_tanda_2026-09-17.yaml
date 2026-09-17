@@ -328,21 +328,36 @@ humohumo_se_mantiene:
     así se lee.
   se_aplica_en: 'nada cambia en el motor ni en el lexicón; deuda anotada aquí'
 
-hispanismos_fuera_de_la_esfera:
-  estado: DECIDIDA y APLICADA (2026-09-17, tarde)
+hispanismos_son_esfera:
+  estado: DECIDIDA y APLICADA (2026-09-17, tarde) — corrige un merge del escriba
   pregunta: >-
     Los 7 «préstamos de esfera» del día 1 limpio de la serie B (run 3973d317)
-    eran casabe, yuca, maíz y ture usados como castellano; en toda la base,
-    111 de 161 formas-respuesta con préstamo (69 %) son cinco hispanismos
-    (6-fusion/medicion_hispanismos_loanword_uses_2026-09-17.yaml).
-  decision_literal: '«los hispanismos quedaron fuera de la esfera»'
+    eran casabe, yuca, maíz y ture; en toda la base, 111 de 161
+    formas-respuesta con préstamo (69 %) son cinco voces que el castellano
+    también usa (6-fusion/medicion_hispanismos_loanword_uses_2026-09-17.yaml).
+    Un agente propuso sacarlas de prestamos_de_esfera como «hispanismos» y el
+    escriba lo mergeó (#160) leyendo la pregunta de Miguel («¿los hispanismos
+    quedaron fuera de la esfera?») como un ok. No lo era.
+  decision_literal: >-
+    «esos se llaman hispanismos, pero realmente son parte de la esfera de la
+    influencia. Más allá de que hayan sido tomados por el español, son
+    conceptos, productos, que son parte de la influencia. Por ejemplo, yo
+    originalmente de la península de Paraguaná comí arepa toda la vida. Más
+    allá de la industrial, también comí la arepa pelada, que es de maíz
+    pilado, que se prepara utilizando cal, donde el maíz se pela con cal.
+    Que estemos dejando eso afuera me hace ruido; no fue mi intención darte
+    eso.»
   lectura_operativa: >-
-    Lista declarada HISPANISMOS_DE_ESFERA (13 voces) en curiana_lexicon.py:
-    un tercer cubo que sólo saca la voz de prestamos_de_esfera — ni préstamo
-    ni fuga — sin tocar CASTELLANO_CORRIENTE, que movería la densidad y con
-    ella 147 scores a mitad de serie (verificado: 0 cambios en score, pct_*,
-    densidad y palabras_* sobre 2.515 respuestas; sólo prestamos_de_esfera
-    147 → 50). analizar_runs.py --prestamos filtra al leer los runs viejos;
-    --con-hispanismos los devuelve. Pasarlas a CASTELLANO_CORRIENTE es
-    decisión del corte de serie.
-  se_aplica_en: 'rama fix/hispanismos-no-son-prestamo-de-esfera, mergeada el 2026-09-17'
+    El producto de la esfera ES la esfera. Que el castellano haya tomado
+    casabe, maíz, yuca, batata o papaya no los saca de la esfera de
+    influencia: son los conceptos y los productos que circulaban por ella, y
+    el caquetío no tiene voz propia atestiguada para casabe, ni para maíz y
+    yuca fuera de la capa hipotética (marisi, kasiripa). Que un agente diga
+    «casabe» es la esfera hablando, y se cuenta. Se revierte #160 entero
+    (HISPANISMOS_DE_ESFERA deja de existir; prestamos_de_esfera vuelve a
+    contarlos; analizar_runs.py --prestamos vuelve a leer todo); se conservan
+    la medición y su script, que ahora se leen al revés: el préstamo de
+    esfera es, sobre todo, el nombre de un producto compartido. Ningún run
+    corrió con el instrumento cambiado. La lección para el escriba queda en
+    CLAUDE.md: una pregunta no es un ok.
+  se_aplica_en: 'revert de be4270d (#160) en la rama fix/esfera-incluye-los-hispanismos'
