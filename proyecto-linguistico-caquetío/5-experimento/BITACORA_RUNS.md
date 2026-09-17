@@ -85,7 +85,23 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 >    del 16 las contaban como caquetío. `[Voces de fuera]`: 54 → 50 voces
 >    posibles y 13 glosas que antes no enseñaban nada ahora sí.
 >
-> Ninguna de las tres toca `capas_de_score`.
+> 4. **La pre-carga de idiolectos vuelve a existir en la era 2** (cierre del
+>    día 3, aplicado la noche del 16, DESPUÉS de los tres días de la cadena):
+>    `formas_seed_de()` y `emocionar_de()` resuelven el nombre por
+>    `ALIAS_ERA1`, y los 52 agentes sin semilla escrita la derivan de su ficha
+>    (voces caquetías de su `system_prompt`/oficio), del campo semántico de su
+>    oficio (`categorias_relevantes` aplicada al oficio y a la glosa de cada
+>    voz) y de su emocionar, con sorteo determinista (`blake2b` de la semilla
+>    del run y el nombre). Medido: vectores-semilla distintos en la era 2
+>    **2 de 63 → 63 de 63** (origen: escrita 1, por alias 10, derivada 52); la
+>    era 1 byte a byte igual (21 de 60). Y la forma acuñada queda registrada
+>    en boca de su acuñador (`coined_words`). **Los tres días de la cadena
+>    `c6837386 → 89fc1744 → 0193873d` corrieron con 62 de 63 agentes
+>    arrancando iguales**: `--continuar` no recupera una pre-carga que nunca
+>    hubo (el motor ahora lo avisa con `agentes_sin_precarga`); la única
+>    salida es re-correr desde el día 1. `score` y `pct_*` no cambian.
+>
+> Ninguna de las cuatro toca `capas_de_score`.
 
 > ⚠️ **Dos artefactos del instrumento descubiertos al cerrar el día 3
 > (análisis por nodo, `analizar_nodos.py`, 2026-09-16), que afectan a los
