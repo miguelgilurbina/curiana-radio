@@ -358,3 +358,99 @@ def test_save_loanword_uses_escribe_la_lengua_real_en_su_tabla():
                                  agent_name="Manaure", tier=1, day=3, turn_num=2,
                                  words=[]) == 0
     assert len(db.client.inserts) == 1, "sin préstamos no se escribe nada"
+
+
+# ══════════════════════════════════════════════════════════════════════
+# 2026-09-16 — la forma acuñada queda en boca de quien la acuña
+# ══════════════════════════════════════════════════════════════════════
+# `score_linguistico()` sólo reconoce `lexico.palabras_activas()` (base +
+# adoptados) y una acuñación recién propuesta no está ahí, así que
+# `palabras_caquetias` —y con ella `words_used` y `word_uses`— no la traía. El
+# primer uso que constaba era el del ADOPTANTE, que puede ser del otro nodo:
+# 29 de 40 acuñaciones de la era 2 (72,5%, analizar_nodos.py). Eso invierte las
+# rutas de contagio que se leen de `word_uses`.
+
+CON_ACUNACION = RESPUESTA + " [kuru-bacoa: kuru+-bacoa = la arboleda]."
+
+
+def test_el_acunador_es_el_primer_usuario_registrado_de_su_forma(sim, monkeypatch):
+    from collections import Counter
+
+    monkeypatch.setattr(orch, "call_agent", lambda *a, **k: CON_ACUNACION)
+    monkeypatch.setattr(orch, "director_select_event", lambda state: None)
+    db = _DBQueGuardaPrestamos()
+    fallos = Counter()
+    inter = orch.run_turn(sim["client"], sim["state"], sim["memory"], sim["lexico"],
+                          sim["observer"], verbose=False, db=db, run_id="run-de-prueba",
+                          db_fallos=fallos)
+    assert not fallos, dict(fallos)
+    assert inter and db.respuestas
+    primera = db.respuestas[0]
+    # El scorer NO la ve (no está en `palabras_activas()`), así que el
+    # orquestador la pasa aparte: el merge —y su lengua— los hace la capa de
+    # base, que es la que escribe `word_uses`.
+    assert "kuru-bacoa" not in primera["words_used"]
+    assert primera["coined_words"] == ["kuru-bacoa"], (
+        "la forma acuñada no llega a la base en boca de su acuñador")
+    assert primera["agent_name"] == inter[0]["agent"]
+    # Todos dicen lo mismo (el agente es un mock), así que a partir del
+    # segundo la forma YA está adoptada en el léxico y el scorer sí la ve: es
+    # exactamente la asimetría que arreglamos. Nunca puede contarse dos veces.
+    for r in db.respuestas:
+        veces = r["words_used"].count("kuru-bacoa") + r["coined_words"].count("kuru-bacoa")
+        assert veces == 1, r["agent_name"]
+    adoptantes = [r for r in db.respuestas if "kuru-bacoa" in r["words_used"]]
+    assert adoptantes, "sin adopción no hay contraste que medir"
+
+
+def test_save_agent_response_escribe_la_acunacion_como_caquetio():
+    """La fila de `word_uses` de una acuñación lleva `caquetío` declarado:
+    no está en el lexicón y `word_source_language()` la dejaría en NULL — el
+    agujero que el backfill de 2026-08-06 cerró para las formas flexionadas.
+    Y los `pct_*` no se mueven: `language_composition()` sólo cuenta
+    VOCABULARIO_BASE."""
+    from curiana_database import CurianaDB
+
+    class _ClienteConId(_ClienteQueGraba):
+        """Como `_ClienteQueGraba`, pero `execute()` devuelve el id que
+        `save_agent_response` necesita para colgar de él los `word_uses`."""
+        def table(self, nombre):
+            cliente = self
+
+            class _Resultado:
+                data = [{"id": "resp-1"}]
+
+            class _Tabla:
+                def insert(self, rows):
+                    cliente.inserts.append((nombre, rows))
+                    return self
+
+                def execute(self):
+                    return _Resultado()
+            return _Tabla()
+
+    def _guardar(coined):
+        db = CurianaDB.__new__(CurianaDB)
+        db.client = _ClienteConId()
+        db.save_agent_response(
+            turn_id="t", run_id="run", agent_name="Manaure", ethnicity="caquetío",
+            tier=1, response_text="…", score=7.0, words_used=["biro", "kali"],
+            aspects_used=["completivo"], neologisms_proposed=len(coined),
+            coined_words=coined)
+        return dict(db.client.inserts)
+
+    con = _guardar(["kuru-bacoa"])
+    sin = _guardar([])
+    fila_resp = con["agent_responses"]
+    assert "kuru-bacoa" in fila_resp["words_used"]
+    assert fila_resp["pct_caquetio"] == sin["agent_responses"]["pct_caquetio"]
+
+    por_palabra = {f["word"]: f for f in con["word_uses"]}
+    assert por_palabra["kuru-bacoa"]["source_language"] == "caquetío"
+    assert por_palabra["kuru-bacoa"]["agent_name"] == "Manaure"
+    assert "kuru-bacoa" not in {f["word"] for f in sin["word_uses"]}
+    # Una sola fila por acuñación, aunque llegue repetida o ya en words_used.
+    assert len([f for f in con["word_uses"] if f["word"] == "kuru-bacoa"]) == 1
+    repe = _guardar(["kuru-bacoa", "kuru-bacoa", "biro"])
+    assert repe["agent_responses"]["words_used"].count("kuru-bacoa") == 1
+    assert repe["agent_responses"]["words_used"].count("biro") == 1

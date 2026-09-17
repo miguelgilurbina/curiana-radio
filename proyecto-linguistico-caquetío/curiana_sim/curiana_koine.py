@@ -9,6 +9,8 @@ Implementa el arco "diverso → converge" del diseño (ver DISENO_KOINE.md):
   2. IdiolectoAgente — perfil de frecuencia de formas por agente (entrenchment).
      Memoria larga que NO expira (= el "segundo compartimento" de CANON_TIERRA).
      Se pre-carga con las formas-semilla del emocionar → divergencia el día 1.
+     La semilla se busca por el nombre de la ERA 1 (ALIAS_ERA1) y, si no hay
+     escrita, se DERIVA de la ficha del agente (§ I-b). Ver DISENO_KOINE §4.
   3. CampoLexico — frecuencia comunitaria con decaimiento (rich-get-richer +
      recambio) para muestreo ponderado.
   4. distancia_idiolectal — la métrica que prueba (o refuta) la koineización:
@@ -19,6 +21,7 @@ No hace llamadas LLM: se alimenta de lo que el Observer ya extrae cada turno.
 
 from __future__ import annotations
 
+import hashlib
 import math
 from collections import Counter, deque
 from typing import Optional
@@ -141,15 +144,462 @@ FORMAS_SEED: dict[str, list[str]] = {
     "Raka-bi":    ["biro", "sima", "habo", "naa-ni", "paa-ni"],
 }
 
-# Núcleo caquetío compartido (fallback para agentes sin formas-firma): pronombres
-# y verbos base que cualquiera usa. Se combina con el aspecto del emocionar.
+# Núcleo caquetío compartido (último recurso, para quien no tiene formas-firma
+# NI ficha de la que derivarlas): pronombres y verbos base que cualquiera usa.
+# Se combina con el aspecto del emocionar. Es lo que corrió la era 1 en 40 de
+# sus 60 agentes (medido 2026-09-16) y por eso allí sólo había 21 vectores-
+# semilla distintos de 60.
 _NUCLEO_FALLBACK = ["taya", "pia", "nüma", "naa", "wana", "maa", "ka", "mara"]
 
 
+# ══════════════════════════════════════════════════════════════════════
+# I-b. LA SEMILLA POR ALIAS Y LA SEMILLA DERIVADA
+# ══════════════════════════════════════════════════════════════════════
+# Dos agujeros medidos el 2026-09-16 (analizar_nodos.py, día 3 de la era 2):
+#
+#   1. `FORMAS_SEED`/`EMOCIONAR_SEED` están indexados por los nombres de la
+#      ERA 1, y la campaña de antropónimos (2026-09-14) renombró a 60 de 63
+#      agentes. El orquestador siembra con el nombre NUEVO, así que de los 63
+#      sólo Manaure encontraba su semilla: 62 de 63 arrancaban con el MISMO
+#      vector (`_NUCLEO_FALLBACK` + `-ni`). DISENO_KOINE §4: «sin esta
+#      pre-carga, todos arrancan iguales y convergencia no significa nada».
+#      → se resuelve el nombre por `ALIAS_ERA1` (curiana_agents es el único
+#        que sabe qué elenco está activo). 11 de 63 recuperan así su semilla.
+#
+#   2. Aun con el alias, 52 de 63 no tienen semilla escrita — ni la tenían en
+#      la era 1, donde `FORMAS_SEED` cubre 20 de 60. Para ésos se DERIVA una,
+#      de lo que el agente ya trae en su ficha (el módulo generado de la era 2
+#      lleva `oficio`, `rol_en_la_casa`, `casa`/`nodo`, `linaje`, `dossier`).
+#
+# EL PRINCIPIO DE LA SEMILLA DERIVADA (declarado, no inventado por agente):
+#
+#   (a) Primero, lo que su propia ficha YA dice: las voces caquetías que
+#       aparecen literalmente en su `system_prompt`, su `oficio` y su
+#       `descripcion`. Es el mismo principio con que se escribió `FORMAS_SEED`
+#       («varias provienen de la línea "Vocabulario que usas" de su
+#       system_prompt») y es lo más anclado que tiene el agente.
+#   (b) Luego, el CAMPO SEMÁNTICO DE SU OFICIO. No se inventa una tabla nueva:
+#       se reusa `curiana_lexicon.categorias_relevantes()` —la heurística de
+#       palabras clave que ya prioriza el lexicón del prompt por el contexto
+#       del turno— aplicada DOS veces: sobre el oficio del agente (qué hace) y
+#       sobre la glosa de cada voz del lexicón (qué significa). La semilla sale
+#       de la intersección: pesca → voces de mar y orilla; alfarería → barro y
+#       vasija; boratio → cosmos y ritual. Medido: 62 de 63 agentes de la era 2
+#       disparan al menos una categoría.
+#   (c) Y el aspecto del emocionar sobre dos raíces verbales suyas, que es la
+#       firma morfológica que las semillas escritas también llevan (`naa-ka`,
+#       `wana-ni`…).
+#
+#   El sorteo dentro del campo es DETERMINISTA: blake2b sobre
+#   (semilla del run, nombre del agente, etiqueta), nunca el RNG global —el
+#   motor lo comparte con eventos y muestreo— ni `hash()`, que va salado por
+#   proceso (PYTHONHASHSEED) y no repetiría un run.
+#
+#   La capa hipotética NO entra: 35 de sus 38 voces son formas que el proyecto
+#   acuñó para la simulación, y sembrarlas adelantaría justo lo que la era 2
+#   quiere ver acuñar (perfil `era2`). Las otras tres sí, que es de donde salen
+#   las semillas escritas (medido: 88 reconstruido, 31 atestiguado, 3
+#   retroabstraído; hipotéticas, cero).
+#
+#   LA ERA 1 NO CAMBIA: la derivación sólo actúa sobre una ficha que traiga
+#   `oficio` —campo que sólo existe en el módulo generado de la era 2—, y en la
+#   era 1 `ALIAS_ERA1` está vacío, así que resolver es la identidad.
+
+# Las capas epistémicas de las que puede salir una semilla derivada.
+CAPAS_DE_SEMILLA = frozenset({
+    "caquetío-atestiguado", "caquetío-reconstruido", "caquetío-retroabstraido",
+})
+
+# Los campos de la ficha que dicen QUÉ HACE el agente (el contexto sobre el que
+# se pregunta por sus categorías semánticas). Medido sobre la era 2: con
+# `oficio` solo, 15 agentes no disparan ninguna; con estos cuatro, 1.
+CAMPOS_DEL_OFICIO = ("oficio", "actividades", "rol_en_la_casa", "descripcion")
+
+# Los campos donde se buscan las voces caquetías que el agente YA dice.
+CAMPOS_DE_LA_VOZ = ("system_prompt", "oficio", "descripcion")
+
+# Cuántas formas lleva una semilla derivada: 5 del campo + 2 verbos con su
+# aspecto = 7, el tamaño de las semillas escritas (6-7 formas cada una).
+N_FORMAS_DE_CAMPO = 5
+N_VERBOS_DE_ASPECTO = 2
+
+# La semilla del run (`--semilla N`). Cambia el sorteo de las derivadas sin
+# tocar las escritas: dos runs con la misma semilla arrancan igual.
+SEMILLA_RUN: int = 0
+
+_cache_derivadas: dict = {}
+
+
+def fijar_semilla(semilla: Optional[int]) -> None:
+    """Fija la semilla del sorteo de las semillas derivadas (y limpia la caché).
+
+    La llama el orquestador junto a `random.seed()`. No usa el RNG global a
+    propósito: el motor lo comparte con los eventos, el muestreo del prompt y
+    los nombramientos, y la pre-carga de idiolectos tiene que ser reproducible
+    aunque cambie el orden en que se consume el azar.
+    """
+    global SEMILLA_RUN
+    SEMILLA_RUN = int(semilla) if semilla is not None else 0
+    _cache_derivadas.clear()
+    _cache_emocionar.clear()      # el aspecto de respaldo sale del mismo dado
+
+
+def _dado(*partes) -> int:
+    """Entero estable a partir de texto. blake2b, no `hash()`: el hash de las
+    cadenas va salado por proceso y no repetiría un run."""
+    crudo = "|".join(str(p) for p in (SEMILLA_RUN, *partes)).encode("utf-8")
+    return int.from_bytes(hashlib.blake2b(crudo, digest_size=8).digest(), "big")
+
+
+def _sortear(pool, n: int, *clave) -> list:
+    """`n` elementos distintos de `pool`, elegidos de forma determinista."""
+    opciones = sorted(set(pool))
+    if not opciones or n <= 0:
+        return []
+    elegidas: list = []
+    usados: set = set()
+    for i in range(min(n, len(opciones))):
+        j = _dado(*clave, i) % len(opciones)
+        while j in usados:
+            j = (j + 1) % len(opciones)
+        usados.add(j)
+        elegidas.append(opciones[j])
+    return elegidas
+
+
+# ── El elenco activo: quién es quién y cómo se llamaba en la era 1 ──
+
+def _elenco():
+    """(ALL_AGENTS, era2→era1) del elenco activo, o ({}, {}) si no se puede.
+
+    Import perezoso: `curiana_agents` decide el elenco al cargarse desde
+    CURIANA_ELENCO y este módulo no debe forzar ese momento.
+    """
+    try:
+        import curiana_agents as _ag
+    except Exception:                                        # noqa: BLE001
+        return {}, {}
+    inverso: dict = {}
+    for viejo, nuevo in getattr(_ag, "ALIAS_ERA1", {}).items():
+        inverso.setdefault(nuevo, viejo)
+    return getattr(_ag, "ALL_AGENTS", {}), inverso
+
+
+def nombre_era1(agente: str) -> Optional[str]:
+    """Cómo se llamaba en la era 1 quien hoy se llama `agente`, o None.
+
+    En la era 1 `ALIAS_ERA1` está vacío: devuelve None y todo sigue igual.
+    """
+    _, inverso = _elenco()
+    viejo = inverso.get(agente)
+    return viejo if viejo and viejo != agente else None
+
+
+def _ficha(agente: str) -> dict:
+    agentes, _ = _elenco()
+    return agentes.get(agente) or {}
+
+
+def _texto_de(ficha: dict, campos) -> str:
+    trozos = []
+    for c in campos:
+        v = ficha.get(c)
+        if isinstance(v, (list, tuple)):
+            trozos.extend(str(x) for x in v)
+        elif v:
+            trozos.append(str(v))
+    return " ".join(trozos)
+
+
+# ── El vocabulario del que sale una semilla derivada, por campo semántico ──
+
+_vocabulario_cache: Optional[tuple] = None
+
+
+def _nombres_del_elenco() -> set:
+    """Los nombres del elenco activo y los de la era 1, en minúsculas.
+
+    49 de los 63 nombres de la era 2 son homógrafos de una clave del lexicón
+    (`karebe` cucharón / Karebe la esposa principal). Una voz así puede
+    aprenderse jugando —el scorer la cuenta cuando va en minúscula—, pero
+    SEMBRARLA es otra cosa: el bloque «sueles decir: …» del prompt le diría al
+    agente que suele decir el nombre de un vecino. No entran al pool derivado.
+    """
+    agentes, _ = _elenco()
+    nombres = {n.lower() for n in agentes}
+    try:
+        import curiana_agents as _ag
+        nombres |= {n.lower() for n in getattr(_ag, "AGENTES_ERA1", ())}
+        nombres |= {n.lower() for n in getattr(_ag, "ALIAS_ERA1", {})}
+    except Exception:                                        # noqa: BLE001
+        pass
+    return nombres
+
+
+def _vocabulario_de_semilla() -> tuple:
+    """(voces_por_categoria, raices_verbales, todas) del caquetío sembrable.
+
+    La categoría de una voz se resuelve con la MISMA tabla de palabras clave
+    que prioriza el lexicón del prompt (`PALABRAS_CLAVE_CATEGORIA`), aplicada a
+    su glosa, más su `categoria` declarada cuando la tiene (sólo 28 de 401 la
+    traen — por eso no basta con ella, que es lo que ya decía el comentario de
+    `FORMAS_SEED`).
+    """
+    global _vocabulario_cache
+    if _vocabulario_cache is not None:
+        return _vocabulario_cache
+    try:
+        from curiana_lexicon import (
+            PALABRAS_CLAVE_CATEGORIA, VOCABULARIO_BASE, capa_epistemica,
+            categorias_relevantes,
+        )
+    except Exception:                                        # noqa: BLE001
+        _vocabulario_cache = ({}, [], [])
+        return _vocabulario_cache
+
+    nombres = _nombres_del_elenco()
+    por_categoria: dict[str, list[str]] = {}
+    verbos: list[str] = []
+    todas: list[str] = []
+    for palabra, datos in VOCABULARIO_BASE.items():
+        fuente = str(datos.get("fuente") or "")
+        if capa_epistemica(fuente) not in CAPAS_DE_SEMILLA:
+            continue
+        if palabra.lower() in nombres:
+            continue
+        sig = str(datos.get("sig") or datos.get("es") or "")
+        if not sig:
+            continue
+        todas.append(palabra)
+        if datos.get("cat") == "v_raiz":
+            verbos.append(palabra)
+        cats = set(categorias_relevantes(sig, max_extra=99))
+        declarada = str(datos.get("categoria") or "").strip()
+        if declarada in PALABRAS_CLAVE_CATEGORIA:
+            cats.add(declarada)
+        for c in cats:
+            por_categoria.setdefault(c, []).append(palabra)
+    _vocabulario_cache = (por_categoria, verbos, todas)
+    return _vocabulario_cache
+
+
+_cache_campos: dict = {}
+
+
+def campos_del_oficio(agente: str) -> list[str]:
+    """Las categorías semánticas que dispara el oficio del agente.
+
+    Es `sesgo_lexico` del emocionar (DISENO_KOINE §4: «dominios que alcanza
+    primero»), derivado en vez de escrito a mano.
+    """
+    if agente in _cache_campos:
+        return list(_cache_campos[agente])
+    ficha = _ficha(agente)
+    if not ficha:
+        return []
+    try:
+        from curiana_lexicon import categorias_relevantes
+    except Exception:                                        # noqa: BLE001
+        return []
+    por_categoria, _, _ = _vocabulario_de_semilla()
+    contexto = _texto_de(ficha, CAMPOS_DEL_OFICIO)
+    campos = sorted(c for c in categorias_relevantes(contexto, max_extra=99)
+                    if por_categoria.get(c))
+    _cache_campos[agente] = campos
+    return list(campos)
+
+
+def voces_de_la_ficha(agente: str) -> list[str]:
+    """Las voces caquetías que la propia ficha del agente ya dice.
+
+    Se descartan los nombres del elenco: `Saruro` la alfarera no siembra
+    `saruro` la planta (misma trampa que el filtro de nombres del scorer).
+    """
+    ficha = _ficha(agente)
+    if not ficha:
+        return []
+    try:
+        from curiana_lexicon import formas_en_texto
+    except Exception:                                        # noqa: BLE001
+        return []
+    _, _, todas = _vocabulario_de_semilla()
+    sembrables = set(todas)      # ya sin los homógrafos de nombres del elenco
+    texto = _texto_de(ficha, CAMPOS_DE_LA_VOZ)
+    return sorted(t for t in formas_en_texto(texto) if t in sembrables)
+
+
+def formas_derivadas(agente: str, emo: dict) -> list[str]:
+    """La semilla derivada de la ficha del agente, o [] si no hay de qué.
+
+    Vacía en la era 1 a propósito: sus fichas no traen `oficio`, así que sus
+    semillas quedan byte a byte como estaban.
+    """
+    ficha = _ficha(agente)
+    if not ficha.get("oficio"):
+        return []
+    clave = (agente, emo.get("aspecto", ""))
+    if clave in _cache_derivadas:
+        return list(_cache_derivadas[clave])
+
+    por_categoria, verbos, todas = _vocabulario_de_semilla()
+    formas: list[str] = list(voces_de_la_ficha(agente))[:3]
+
+    campos = campos_del_oficio(agente)
+    faltan = N_FORMAS_DE_CAMPO - len(formas)
+    if faltan > 0:
+        if campos:
+            # Una por campo, dando la vuelta: un agente de cinco campos no se
+            # queda con cinco voces del primero.
+            vuelta = 0
+            while faltan > 0 and vuelta < 8:
+                for c in campos:
+                    if faltan <= 0:
+                        break
+                    pool = [p for p in por_categoria.get(c, []) if p not in formas]
+                    elegida = _sortear(pool, 1, agente, c, vuelta)
+                    if elegida:
+                        formas.append(elegida[0])
+                        faltan -= 1
+                vuelta += 1
+        else:
+            # Residuo declarado: el oficio de 1 de los 63 (Chirwa, «aprendiza
+            # de alfarería con Dabuda») no dispara ninguna categoría. Su
+            # semilla sale del caquetío sembrable entero, y sigue siendo suya.
+            pool = [p for p in todas if p not in formas]
+            formas.extend(_sortear(pool, faltan, agente, "sin-campo"))
+
+    suf = _ASPECTO_SUFIJO.get(emo.get("aspecto", "continuativo"), "-ni")
+    raices = _sortear(verbos, N_VERBOS_DE_ASPECTO, agente, "verbos")
+    formas.extend(f"{r}{suf}" for r in raices)
+
+    salida = list(dict.fromkeys(formas))
+    _cache_derivadas[clave] = salida
+    return list(salida)
+
+
+# ── Disposición, aspecto y registro derivados del papel en la casa ──
+# Cuando no hay `EMOCIONAR_SEED` escrito (ni propio ni por alias). Se lee sobre
+# `rol_en_la_casa` + `oficio`, en este orden: gana la primera clave que case.
+# ⚠ El orden es la regla: gana la PRIMERA clave que case, así que lo específico
+# va antes que lo general («esposa del apopo» antes que «apopo», «hermano mayor
+# de la matriarca» antes que «matriarca»). `python curiana_koine.py` imprime
+# qué disposición sale para cada papel del elenco activo.
+_DISPOSICION_ROL = (
+    ("diao paramount",  "contención vigilante — la carga del que sostiene el cielo de dos nodos"),
+    ("esposa principal", "cálculo afectuoso — la red de deudas y cuidados"),
+    ("esposa del manaure", "discreción de la que sirve en la casa del señor y sabe"),
+    ("esposa del apopo", "vaivén de la que llegó de otra casa y ya manda en ésta"),
+    ("esposo entrante", "comedimiento del que llegó del otro nodo y compara en voz baja"),
+    ("sobrino candidato", "ambición tensa, apenas contenida"),
+    ("hijo del manaure", "dignidad del que sirve sin heredar"),
+    ("hermano mayor de la matriarca", "peso del mayor de la casa, que responde sin mandar"),
+    ("hermana mayor del manaure", "autoridad callada de la que guarda la casa y su memoria"),
+    ("hermana menor del manaure", "lealtad vigilante con lo de su casa"),
+    ("ayunante",        "hambre lúcida del que aprende a ver"),
+    ("boratio",         "gravedad del que pregunta al cerro y espera respuesta"),
+    ("boratia",         "gravedad de la que pregunta y espera respuesta"),
+    ("apopo",           "orgullo terco del que responde por su casa"),
+    ("matriarca",       "autoridad callada de la que guarda la casa y su memoria"),
+    ("anciano",         "paciencia del que ya vio esto antes"),
+    ("anciana",         "paciencia de la que ya vio esto antes"),
+    ("cantor",          "memoria en voz alta — lo que se canta no se pierde"),
+    ("maestra",         "paciencia del hacer — el cuidado de la materia"),
+    ("maestro",         "paciencia del hacer — el cuidado de la materia"),
+    ("hermana con hijos", "franqueza cálida — el trabajo que no se interrumpe"),
+    ("hermana",         "lealtad vigilante con lo de su casa"),
+    ("hermano",         "orgullo del oficio bien hecho"),
+    ("joven",           "apertura ávida — las ganas de pertenecer y aprender"),
+    ("niña",            "curiosidad sin freno, todavía sin vergüenza"),
+    ("niño",            "curiosidad sin freno, todavía sin vergüenza"),
+)
+
+# Quien decide cierra la frase (completivo); quien aprende o anuncia mira
+# adelante (prospectivo); el oficio que no termina se dice continuativo.
+_ASPECTO_ROL = (
+    ("diao paramount", "completivo"),
+    ("esposa del apopo", "continuativo"),
+    ("esposa del manaure", "continuativo"),
+    ("esposo entrante", "continuativo"),
+    ("hermano mayor de la matriarca", "completivo"),
+    ("sobrino candidato", "prospectivo"),
+    ("ayunante", "prospectivo"),
+    ("apopo", "completivo"),
+    ("matriarca", "completivo"),
+    ("anciano", "completivo"), ("anciana", "completivo"),
+    ("joven", "prospectivo"), ("niña", "prospectivo"), ("niño", "prospectivo"),
+    ("boratio", "continuativo"), ("boratia", "continuativo"),
+)
+
+_REGISTRO_ROL = (
+    ("esposa del apopo", {"frase": "media", "metafora": "media"}),
+    ("esposa del manaure", {"frase": "media", "metafora": "baja"}),
+    ("ayunante", {"frase": "media", "metafora": "alta"}),
+    ("boratio", {"frase": "media", "metafora": "alta"}),
+    ("boratia", {"frase": "media", "metafora": "alta"}),
+    ("cantor", {"frase": "media", "metafora": "alta"}),
+    ("vidente", {"frase": "media", "metafora": "alta"}),
+    ("diao paramount", {"frase": "corta", "metafora": "baja"}),
+    ("apopo", {"frase": "corta", "metafora": "baja"}),
+    ("matriarca", {"frase": "corta", "metafora": "baja"}),
+    ("anciano", {"frase": "corta", "metafora": "baja"}),
+    ("anciana", {"frase": "corta", "metafora": "baja"}),
+    ("joven", {"frase": "corta", "metafora": "media"}),
+    ("niña", {"frase": "corta", "metafora": "media"}),
+    ("niño", {"frase": "corta", "metafora": "media"}),
+)
+
+_ASPECTOS = ("completivo", "continuativo", "prospectivo")
+
+
+def _primera_clave(texto: str, tabla):
+    for clave, valor in tabla:
+        if clave in texto:
+            return valor
+    return None
+
+
+_cache_emocionar: dict = {}
+
+
+def emocionar_derivado(agente: str) -> Optional[dict]:
+    """Emocionar derivado del papel y el oficio del agente, o None si su ficha
+    no trae `oficio` (la era 1, donde nada de esto cambia)."""
+    if agente in _cache_emocionar:
+        return _cache_emocionar[agente]
+    ficha = _ficha(agente)
+    if not ficha.get("oficio"):
+        _cache_emocionar[agente] = None
+        return None
+    texto = f"{ficha.get('rol_en_la_casa') or ''} {ficha.get('oficio') or ''}".lower()
+    campos = campos_del_oficio(agente)
+    aspecto = _primera_clave(texto, _ASPECTO_ROL)
+    if aspecto is None:
+        aspecto = _ASPECTOS[_dado(agente, "aspecto") % len(_ASPECTOS)]
+    emo = {
+        "disposicion": (_primera_clave(texto, _DISPOSICION_ROL)
+                        or _DISPOSICION_ETNIA.get(ficha.get("etnia") or "caquetío",
+                                                  "arraigo en la lengua propia")),
+        "sesgo_lexico": campos[:3] or ["geografia", "fauna", "alimentos"],
+        "aspecto": aspecto,
+        "registro": (_primera_clave(texto, _REGISTRO_ROL)
+                     or {"frase": "media", "metafora": "media"}),
+        "derivado": True,
+    }
+    _cache_emocionar[agente] = emo
+    return emo
+
+
 def emocionar_de(agente: str, etnia: Optional[str] = None) -> dict:
-    """Emocionar sembrado de un agente, o uno derivado de su etnia."""
+    """Emocionar sembrado de un agente: el suyo, el de su nombre de la era 1,
+    el derivado de su papel y su oficio, o uno de respaldo por etnia."""
     if agente in EMOCIONAR_SEED:
         return EMOCIONAR_SEED[agente]
+    viejo = nombre_era1(agente)
+    if viejo and viejo in EMOCIONAR_SEED:
+        return EMOCIONAR_SEED[viejo]
+    derivado = emocionar_derivado(agente)
+    if derivado is not None:
+        return derivado
     return {
         "disposicion": _DISPOSICION_ETNIA.get(etnia or "caquetío", "arraigo en la lengua propia"),
         "sesgo_lexico": ["geografia", "fauna", "alimentos"],
@@ -161,11 +611,31 @@ def emocionar_de(agente: str, etnia: Optional[str] = None) -> dict:
 # ── Formas-semilla: vocabulario caquetío característico del agente ──
 # Se usa para pre-cargar el idiolecto (divergencia día 1) y para el prompt.
 
-def formas_semilla(agente: str, emo: dict) -> list[str]:
-    """Formas-firma del agente. Explícitas (FORMAS_SEED) o, en su defecto, el
-    núcleo compartido marcado con el aspecto del emocionar."""
+def formas_seed_de(agente: str) -> Optional[list[str]]:
+    """La semilla ESCRITA del agente: la suya, o la de su nombre de la era 1.
+
+    None si no tiene ninguna. `FORMAS_SEED` está indexado por los nombres de la
+    era 1 y la era 2 renombró a 60 de 63 agentes: sin resolver el alias, 62 de
+    63 arrancaban con el mismo vector.
+    """
     if agente in FORMAS_SEED:
         return list(dict.fromkeys(FORMAS_SEED[agente]))
+    viejo = nombre_era1(agente)
+    if viejo and viejo in FORMAS_SEED:
+        return list(dict.fromkeys(FORMAS_SEED[viejo]))
+    return None
+
+
+def formas_semilla(agente: str, emo: dict) -> list[str]:
+    """Formas-firma del agente, en tres escalones: la escrita (propia o por
+    alias), la derivada de su ficha, y —si no hay ficha de la que derivar— el
+    núcleo compartido marcado con el aspecto del emocionar."""
+    escritas = formas_seed_de(agente)
+    if escritas:
+        return escritas
+    derivadas = formas_derivadas(agente, emo)
+    if derivadas:
+        return derivadas
     suf = _ASPECTO_SUFIJO.get(emo.get("aspecto", "continuativo"), "-ni")
     base = list(_NUCLEO_FALLBACK)
     base += [f"naa{suf}", f"wana{suf}"]   # verbos base con su aspecto
@@ -195,8 +665,12 @@ class IdiolectoAgente:
         self.recientes: deque[list[str]] = deque(maxlen=self.VENTANA_TURNOS)
         # Pre-carga: las formas-semilla entran con peso, para que el día 1 ya
         # haya divergencia entre agentes (precondición de la convergencia).
-        for f in formas_semilla(agente, self.emocionar):
-            self.frecuencias[f] += peso_semilla
+        # Con peso_semilla=0 no se siembra NADA: `Counter[f] += 0` crea la
+        # clave con valor cero, y un idiolecto reconstruido (`--continuar`)
+        # aparecería con formas que nunca dijo — `len(vector())` las cuenta.
+        if peso_semilla:
+            for f in formas_semilla(agente, self.emocionar):
+                self.frecuencias[f] += peso_semilla
 
     def registrar(self, formas, neologismos=None, adoptadas=None):
         turno_formas: list[str] = []
@@ -298,6 +772,26 @@ def _idiolecto_de_dict(d: dict) -> "IdiolectoAgente":
     for turno in d.get("recientes") or []:
         idio.recientes.append(list(turno))
     return idio
+
+
+def agentes_sin_precarga(idiolectos: dict, agentes) -> list[str]:
+    """Los agentes cuyo idiolecto HEREDADO no trae ni una de sus formas-semilla.
+
+    `cargar_koine` reconstruye con `peso_semilla=0` a propósito —las
+    frecuencias guardadas ya traen la semilla del día 1—, así que una cadena
+    que arrancó SIN pre-carga (todo run de la era 2 anterior al 2026-09-16) no
+    la recupera por seguir encadenando: hay que re-correr desde el día 1. Esto
+    lo mide para que el run lo diga en voz alta en vez de callarlo.
+    """
+    faltan = []
+    for nombre, ficha in (agentes or {}).items():
+        idio = idiolectos.get(nombre)
+        if idio is None or not idio.frecuencias:
+            continue
+        semilla = set(formas_semilla(nombre, emocionar_de(nombre, ficha.get("etnia"))))
+        if semilla and not (semilla & set(idio.frecuencias)):
+            faltan.append(nombre)
+    return faltan
 
 
 def guardar_koine(idiolectos: dict, campo: "CampoLexico", path: str = KOINE_PATH) -> None:
@@ -626,4 +1120,40 @@ if __name__ == "__main__":
     print(f"  competencia 'cometa' fijada: {fij}")
     assert any(f == "kali-dusha" for _, f in fij), "debería ganar la forma del prestigioso reusada"
     print(f"  diccionario koiné: {comp.diccionario_koine()}")
+
+    # ── la pre-carga de idiolectos del elenco ACTIVO, medida ──────────
+    # `CURIANA_ELENCO=era2 python curiana_koine.py` mide la era 2.
+    try:
+        import curiana_agents as _A
+    except Exception:                                        # noqa: BLE001
+        _A = None
+    if _A is not None and _A.ALL_AGENTS:
+        print(f"\n  ── pre-carga de idiolectos · elenco {_A.ELENCO} "
+              f"({len(_A.ALL_AGENTS)} agentes) ──")
+        vectores, escritas, alias, derivadas, nucleo = {}, 0, 0, 0, 0
+        for _nm, _a in _A.ALL_AGENTS.items():
+            _emo = emocionar_de(_nm, _a.get("etnia"))
+            _formas = formas_semilla(_nm, _emo)
+            vectores[_nm] = tuple(sorted(_formas))
+            if _nm in FORMAS_SEED:
+                escritas += 1
+            elif formas_seed_de(_nm):
+                alias += 1
+            elif formas_derivadas(_nm, _emo):
+                derivadas += 1
+            else:
+                nucleo += 1
+        _distintos = len(set(vectores.values()))
+        print(f"  semilla escrita propia: {escritas} · por alias: {alias} · "
+              f"derivada de la ficha: {derivadas} · núcleo compartido: {nucleo}")
+        print(f"  vectores-semilla DISTINTOS: {_distintos} de {len(vectores)}")
+        _repes: dict = {}
+        for _nm, _v in vectores.items():
+            _repes.setdefault(_v, []).append(_nm)
+        for _v, _quienes in sorted(_repes.items(), key=lambda kv: -len(kv[1]))[:3]:
+            if len(_quienes) > 1:
+                print(f"    x{len(_quienes)} iguales: {_quienes[:6]}")
+        for _nm in list(_A.ALL_AGENTS)[:4]:
+            print(f"    {_nm:14} {formas_semilla(_nm, emocionar_de(_nm))}")
+
     print("  ✓ smoke test OK")
