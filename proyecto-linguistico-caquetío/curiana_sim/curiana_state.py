@@ -223,6 +223,15 @@ class ComunidadState:
     escena: bool = False
     capubana_cada: int = 0
     escena_del_turno: dict = field(default_factory=dict)
+    # Lo que se dijo en el MOMENTO ANTERIOR, con el lugar donde se dijo:
+    # [{agente, lugar, frase}]. Es de dónde sale el bloque `[Lo que se dijo
+    # aquí]` (capa 2, decisión p5 → A del 2026-09-17): el momento anterior y no
+    # el mismo turno, porque con el mismo turno el orden de habla vuelve a ser
+    # destino —es el mecanismo de V1 que produjo los tres cruces de Δturnos = 0
+    # del día 1 de la serie B. Va en to_dict(), así que `--continuar` lo hereda
+    # y el amanecer del día 2 oye la noche del día 1; un run nuevo empieza
+    # vacío y en su primer turno el bloque no aparece.
+    dichos_del_turno_anterior: list = field(default_factory=list)
 
     def avanzar_turno(self):
         """Avanza un turno y, al cerrar el día, el calendario.

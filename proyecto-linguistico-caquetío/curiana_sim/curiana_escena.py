@@ -33,14 +33,31 @@ No toca el scorer, ni `capas_de_score`, ni la ventana de 12 (decisión 4 → A:
 la escena dice DÓNDE está cada uno, no quién habla), ni el catálogo de eventos,
 ni `[Tu tierra]`. En la era 1 no existe.
 
+CAPA 2 — OÍR (2026-09-17, PR 4)
+-------------------------------
+`bloque_lo_que_se_dijo_aqui()` es el otro bloque que la escena pone en el
+prompt: lo que se dijo EN ESTE LUGAR en el momento ANTERIOR, ≤ 3
+intervenciones y ≤ 280 caracteres (decisión p5 → A). No el mismo turno: eso
+sería la V1 de hoy con otro nombre, que es literalmente el mecanismo que
+produjo los tres cruces de Δturnos = 0 del día 1 de la serie B.
+
+El ámbito del bloque es el de AHORA —`ambito_de(agente, state)`, la misma
+puerta que filtra las cuatro vías— y no el del momento anterior: todo lo que
+el agente ve pasa por un solo ámbito, y así un lugar «recuerda» lo que se dijo
+en él hace un momento aunque quien llega no estuviera. La alternativa (oír
+sólo si estabas allí cuando se dijo) pide una segunda puerta y queda anotada
+para Miguel.
+
 Ensayo sin API (como `curiana_mundo.py`):
 
     python curiana_escena.py            # las 63 × 6 × 3 escenas, con su largo
     python curiana_escena.py --capubana # el día de la convergencia
+    python curiana_escena.py --oir      # los bloques [Lo que se dijo aquí]
 """
 
 from __future__ import annotations
 
+import re
 from functools import lru_cache
 from typing import Optional
 
@@ -73,6 +90,15 @@ MOMENTO_EN_PROSA = {
 }
 
 CABEZA = "[Aquí estás]: "
+
+# ── Capa 2: OÍR ───────────────────────────────────────────────────────
+# Tope duro del bloque entero (decisión p5 → A: ≤ 3 intervenciones, 280
+# caracteres). Medido en el diseño §2: +3,5 % del prompt medio.
+PRESUPUESTO_OIR = 280
+MAX_DICHOS = 3
+# Lo que se recorta de cada intervención antes de guardarla en el estado.
+TOPE_FRASE = 70
+CABEZA_OIR = "[Lo que se dijo aquí, en este mismo sitio, hace un momento]:"
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -244,6 +270,108 @@ def bloque_aqui_estas(agente: str, state, presupuesto: int = PRESUPUESTO) -> str
 
 
 # ══════════════════════════════════════════════════════════════════════
+# 3b. [Lo que se dijo aquí] — la capa 2: OÍR
+# ══════════════════════════════════════════════════════════════════════
+
+# La glosa va entre paréntesis y la acuñación entre corchetes: lo que se
+# guarda es LA FRASE CAQUETÍA, no su traducción (el agente no necesita que le
+# lean en español lo que su vecino acaba de decir; eso le enseñaría el español
+# y alargaría el bloque el doble).
+_GLOSA = re.compile(r"\([^)]*\)")
+_CORCHETE = re.compile(r"\[[^\]]*\]")
+_ESPACIOS = re.compile(r"\s+")
+_FIN_DE_FRASE = re.compile(r"[.!?;\n]+")
+# Una palabra con guion dentro (`naa-ka`, `biro-ana`) o uno de los cinco
+# pronombres: el marcador más barato de que una oración va en caquetío y no en
+# castellano. No es el scorer y no lo toca — no puntúa nada, sólo elige qué
+# oración de la respuesta se repite en voz alta.
+_MARCA_CAQUETIA = re.compile(
+    r"\b(?:taya|pia|nüma|numa|waya|naya)\b|\w+-\w+", re.IGNORECASE)
+
+
+def frase_dicha(texto: str, tope: int = TOPE_FRASE) -> str:
+    """La frase caquetía de una intervención, sin su glosa y recortada.
+
+    Devuelve "" si no queda nada que repetir — y entonces esa voz no entra en
+    el bloque, que es mejor que meter media oración en castellano."""
+    limpio = _CORCHETE.sub(" ", _GLOSA.sub(" ", texto or ""))
+    oraciones = [_ESPACIOS.sub(" ", o).strip() for o in _FIN_DE_FRASE.split(limpio)]
+    oraciones = [o for o in oraciones if len(o) >= 4]
+    if not oraciones:
+        return ""
+    elegida = next((o for o in oraciones if _MARCA_CAQUETIA.search(o)), oraciones[0])
+    if len(elegida) <= tope:
+        return elegida
+    corte = elegida[:tope].rsplit(" ", 1)[0] or elegida[:tope]
+    return corte.rstrip(" ,;:-") + "…"
+
+
+def dichos_del_turno(escena: dict, interacciones, decir=None,
+                     tope: int = TOPE_FRASE) -> list:
+    """Lo que se dijo este turno, con el lugar donde se dijo.
+
+    Es lo que `run_turn` guarda en `state.dichos_del_turno_anterior` al cerrar
+    el turno, para que el turno siguiente lo oiga. `decir` es
+    `curiana_eventos.decir_para_el_mundo` atado al mundo del estado: el bloque
+    es texto libre que llega al agente y pasa por la misma puerta que el resto
+    (se inyecta desde fuera para que este módulo no importe el motor).
+
+    `[]` sin escena: sin lugar no hay «aquí»."""
+    if not escena:
+        return []
+    decir = decir or (lambda t: t)
+    salida = []
+    for i in interacciones or []:
+        agente = i.get("agent") or i.get("agente")
+        lugar = escena.get(agente)
+        if not agente or not lugar:
+            continue
+        frase = frase_dicha(decir(i.get("response") or i.get("texto") or ""), tope)
+        if frase:
+            salida.append({"agente": agente, "lugar": lugar, "frase": frase})
+    return salida
+
+
+def dichos_aqui(agente: str, lugar: Optional[str], dichos,
+                maximo: int = MAX_DICHOS) -> list:
+    """Las ≤ 3 intervenciones del momento anterior que se dijeron en `lugar`.
+
+    Se queda con las ÚLTIMAS: dentro de un turno el orden es el de habla, y lo
+    último que se oyó es lo que se tiene más fresco."""
+    if not lugar:
+        return []
+    mismos = [d for d in (dichos or [])
+              if d.get("lugar") == lugar and d.get("agente") != agente]
+    return mismos[-maximo:]
+
+
+def bloque_lo_que_se_dijo_aqui(agente: str, state,
+                               presupuesto: int = PRESUPUESTO_OIR) -> str:
+    """El bloque de la capa 2. "" cuando no hay nada que oír.
+
+    Nada que oír es un dato y no un fallo: un pescador solo en el agua a la
+    mañana tiene el ámbito vacío y por eso no oye a nadie (decisión p3 → A)."""
+    if not escena_activa(state):
+        return ""
+    lugar = ambito_de(agente, state)
+    dichos = dichos_aqui(agente, lugar,
+                         getattr(state, "dichos_del_turno_anterior", None))
+    if not dichos:
+        return ""
+    lineas = [CABEZA_OIR]
+    largo = len(CABEZA_OIR)
+    for d in dichos:
+        linea = f"\n— {d['agente']}: «{d['frase']}»"
+        if largo + len(linea) > presupuesto:
+            break
+        lineas.append(linea)
+        largo += len(linea)
+    if len(lineas) == 1:                       # ni una cupo: mejor nada
+        return ""
+    return "".join(lineas)
+
+
+# ══════════════════════════════════════════════════════════════════════
 # 4. El volcado al log (PR 8): la escena depurable desde el primer run
 # ══════════════════════════════════════════════════════════════════════
 
@@ -282,7 +410,8 @@ class EstadoDeEnsayo:
     aquí no se importa ComunidadState, que arrastraría el motor entero."""
 
     def __init__(self, dia=1, momento="amanecer", estacion="viento",
-                 escena=True, capubana_cada=0, mundo=MUNDO, turno=1):
+                 escena=True, capubana_cada=0, mundo=MUNDO, turno=1,
+                 dichos_del_turno_anterior=None):
         self.dia = dia
         self.turno = turno
         self.momento = momento
@@ -290,6 +419,7 @@ class EstadoDeEnsayo:
         self.escena = escena
         self.capubana_cada = capubana_cada
         self.mundo = mundo
+        self.dichos_del_turno_anterior = list(dichos_del_turno_anterior or [])
 
 
 def combinaciones() -> list:
@@ -301,6 +431,72 @@ def combinaciones() -> list:
             for p in _tabla.PERIODOS for m in _tabla.MOMENTOS]
 
 
+# Lo que «dice» cada agente en el ensayo de --oir: una frase caquetía corta y
+# determinista, armada con su propio nombre. No sale de ningún run ni de
+# ninguna llamada: es un andamio para medir LARGOS, que es lo que el ensayo
+# tiene que decir (el prompt medio son 7.206 caracteres y r = −0,48).
+def _frase_de_ensayo(agente: str) -> str:
+    raiz = agente.lower().replace("-", "")[:6]
+    return (f"Taya naa-ka {raiz}-ana wara kari "
+            f"(he visto el {raiz} en el agua).")
+
+
+def _dichos_de_ensayo(dia: int, momento: str, periodo: str, cada: int) -> list:
+    """Lo que se dijo en el momento ANTERIOR, en el ensayo: hablan los doce de
+    la ventana —los mismos doce en todos los lugares donde estén."""
+    previo = dict(_escena(dia, momento, periodo, cada))
+    hablaron = sorted(previo)[:12]
+    inter = [{"agent": a, "response": _frase_de_ensayo(a)} for a in hablaron]
+    return dichos_del_turno(previo, inter)
+
+
+def _ensayo_de_oir(cada: int, dia: int) -> None:
+    """`--oir`: reconstruye los bloques e imprime sus largos.
+
+    Si hay un run guardado en `curiana_state.json` con
+    `dichos_del_turno_anterior`, se usan ÉSOS —son los de verdad—; si no, el
+    andamio de arriba. En los dos casos lo que se mide es lo mismo: cuántos
+    bloques salen, con cuántas voces y cuánto ocupan."""
+    import json
+    import os
+    guardados = []
+    ruta = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                        "curiana_state.json")
+    try:
+        with open(ruta, encoding="utf-8") as f:
+            guardados = json.load(f).get("dichos_del_turno_anterior") or []
+    except (OSError, ValueError):                      # pragma: no cover
+        guardados = []
+    de_donde = (f"del run guardado ({os.path.basename(ruta)})" if guardados
+                else "del ensayo (no hay run guardado con dichos)")
+    print(f"\n  [Lo que se dijo aquí] — {de_donde}")
+    largos, con_bloque, voces = [], 0, []
+    for periodo in _tabla.PERIODOS:
+        for i, momento in enumerate(_tabla.MOMENTOS):
+            anterior = _tabla.MOMENTOS[i - 1] if i else _tabla.MOMENTOS[-1]
+            dichos = guardados or _dichos_de_ensayo(dia, anterior, periodo, cada)
+            st = EstadoDeEnsayo(dia=dia, momento=momento, estacion=periodo,
+                                capubana_cada=cada,
+                                dichos_del_turno_anterior=dichos)
+            for agente in _tabla.AGENTES:
+                b = bloque_lo_que_se_dijo_aqui(agente, st)
+                if not b:
+                    continue
+                con_bloque += 1
+                largos.append(len(b))
+                voces.append(b.count("\n— "))
+                print(f"{len(b):4}  {periodo:<11}{momento:<10}{agente:<12} "
+                      + b.replace("\n", " ⏎ "))
+    total = len(_tabla.AGENTES) * len(_tabla.MOMENTOS) * len(_tabla.PERIODOS)
+    print(f"\n  {con_bloque} de {total} escenas traen bloque "
+          f"({100 * con_bloque / total:.0f} %); {total - con_bloque} no oyen nada")
+    if largos:
+        print(f"  largo: media {sum(largos)/len(largos):.0f} · min {min(largos)} · "
+              f"max {max(largos)} · tope {PRESUPUESTO_OIR}")
+        print(f"  voces por bloque: media {sum(voces)/len(voces):.1f} · "
+              f"max {max(voces)} · tope {MAX_DICHOS}")
+
+
 def _main():
     import sys
     sys.stdout.reconfigure(encoding="utf-8")
@@ -308,6 +504,9 @@ def _main():
     dia = 3 if "--capubana" in sys.argv else 1
     if _tabla is None:                                 # pragma: no cover
         print("no hay tabla de escena (curiana_escena_era2.py)")
+        return
+    if "--oir" in sys.argv:
+        _ensayo_de_oir(cada, dia)
         return
     largos = []
     for agente, momento, periodo in combinaciones():

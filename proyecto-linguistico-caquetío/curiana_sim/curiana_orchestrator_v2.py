@@ -108,6 +108,8 @@ from curiana_escena import (
     CAPUBANA_CADA_POR_DEFECTO,
     ambito_de,
     bloque_aqui_estas,
+    bloque_lo_que_se_dijo_aqui,
+    dichos_del_turno,
     escena_de,
     es_dia_de_capubana,
     glosa_de as glosa_de_lugar,
@@ -369,7 +371,14 @@ def call_agent(
     # es lo que run_turn acaba de escribir en `ubicaciones_override`. Sin
     # escena —la era 1 y la era 2 sin el flag— devuelve None y se lee lo de
     # siempre: el override (que nadie escribe) o su ubicacion_default.
-    ubicacion = ambito_de(agent_name, state) or state.ubicaciones_override.get(
+    #
+    # `ambito` es ADEMÁS el filtro de todo lo comunitario que entra al prompt
+    # (capa 2, PR 4): las propuestas en evaluación (V1), las adoptadas (V2),
+    # las competencias abiertas (V3) y el campo léxico que pondera la muestra
+    # (V4). Se saca UNA vez y de UNA puerta; nadie lee el nodo por su cuenta.
+    # Con `None` las cuatro vías son globales y el prompt es el de siempre.
+    ambito = ambito_de(agent_name, state)
+    ubicacion = ambito or state.ubicaciones_override.get(
         agent_name, agent.get("ubicacion_default", "plaza")
     )
 
@@ -383,9 +392,14 @@ def call_agent(
     # un run normal y uno --ablacion es cuánta convergencia es emergente vs.
     # inducida por el andamiaje.
     contexto_turno = f"{world_context} {ubicacion} {user_message}"
-    pesos_campo = campo.pesos if (campo is not None and not ablacion) else None
+    # V4: el muestreo rich-get-richer se pondera con el campo DE ESTE LUGAR.
+    # Sin ámbito, `pesos_de(None)` es el campo global de siempre — el mismo
+    # objeto, no una copia: el sorteo sale idéntico.
+    pesos_campo = (campo.pesos_de(ambito)
+                   if (campo is not None and not ablacion) else None)
     bloque_lexico = vocabulario_para_agente(
-        tier, lexico, contexto=contexto_turno, pesos=pesos_campo, capas=capas
+        tier, lexico, contexto=contexto_turno, pesos=pesos_campo, capas=capas,
+        ambito=ambito,
     )
 
     # Feedback lingüístico si el agente tuvo score bajo
@@ -420,6 +434,13 @@ def call_agent(
     aqui_estas = bloque_aqui_estas(agent_name, state)
     system_parts += ["---", world_context,
                      aqui_estas or f"[Tu ubicación]: {ubicacion}"]
+    # [Lo que se dijo aquí] (capa 2, decisión p5 → A): las ≤ 3 intervenciones
+    # del MOMENTO ANTERIOR que se dijeron en este mismo lugar, ≤ 280 car. Va
+    # pegado a [Aquí estás] porque es la otra mitad de la misma idea: el lugar.
+    # Sin escena, y en el primer turno de un run nuevo, devuelve "".
+    se_dijo_aqui = bloque_lo_que_se_dijo_aqui(agent_name, state)
+    if se_dijo_aqui:
+        system_parts.append(se_dijo_aqui)
     gente = prompt_gente(agent)
     if gente:
         system_parts.append(gente)
@@ -439,7 +460,9 @@ def call_agent(
     # Competencias léxicas abiertas: empuja a reusar una forma rival que ya
     # circula (en vez de inventar otra) → una se impone y se fija en la koiné.
     if competencia is not None and not ablacion:
-        bloque_comp = competencia.prompt_competencias()
+        # V3 con ámbito: sólo las formas rivales que se propusieron AQUÍ. La
+        # fijación sigue siendo comunitaria — el ámbito filtra lo que se VE.
+        bloque_comp = competencia.prompt_competencias(ambito=ambito)
         if bloque_comp:
             system_parts.append(bloque_comp)
     # Idiolecto acumulado (entrenchment): "tu manera de hablar" derivada del
@@ -811,6 +834,16 @@ def run_turn(
         agent = ALL_AGENTS[agent_name]
         tier = agent.get("tier", 2)
 
+        # DÓNDE ESTÁ QUIEN VA A HABLAR. La misma puerta que usa el prompt, y
+        # la única. Se le declara al léxico ANTES de que el Observer registre
+        # nada: `registrar_neologismo()` y `adoptar()` los llama él —y el
+        # Observer no se toca, es el registro de la medición—, así que el
+        # lugar tiene que estar puesto de antemano para que la acuñación
+        # sepa dónde nació y la adopción, en qué ámbito se oficializó.
+        # Sin escena esto pone None y todo se comporta como siempre.
+        ambito_hablante = ambito_de(agent_name, state)
+        lexico.situar(agent_name, ambito_hablante)
+
         mem = memory.get(agent_name)
         response = call_agent(
             client, agent_name, state, lexico, observer, stimulus, mem,
@@ -862,7 +895,8 @@ def run_turn(
         if competencia is not None:
             for neo in getattr(registro, "neologismos_extraidos", []):
                 if naming_concepto:
-                    competencia.proponer(naming_concepto, neo.forma, agent_name)
+                    competencia.proponer(naming_concepto, neo.forma, agent_name,
+                                         ambito=ambito_hablante)
                 else:
                     competencia.registrar_uso(neo.forma, agent_name)
             for forma in getattr(registro, "palabras_caquetias", []):
@@ -878,8 +912,11 @@ def run_turn(
                     agent_name, emocionar_de(agent_name, agent.get("etnia")))
             idiolectos[agent_name].registrar(formas_usadas, neos_turno)
         if campo is not None:
-            campo.registrar(formas_usadas)
-            campo.registrar([n.forma for n in neos_turno])
+            # V4: la frecuencia se acumula EN EL LUGAR donde se dijo. El campo
+            # global sigue siendo la suma de los lugares, así que el
+            # diccionario koiné del cierre y `guardar_koine` no cambian.
+            campo.registrar(formas_usadas, ambito=ambito_hablante)
+            campo.registrar([n.forma for n in neos_turno], ambito=ambito_hablante)
 
         # Persistir en Supabase
         if db and run_id and turn_id:
@@ -990,6 +1027,20 @@ def run_turn(
             for neo in registro.neologismos_extraidos:
                 print(f"     ✦ NUEVO: [{neo.forma}] = {neo.significado}")
             print()
+
+    # 3b. LO QUE SE DIJO AQUÍ, para el momento SIGUIENTE (capa 2, decisión
+    #     p5 → A). Se guarda al CERRAR el turno y se lee al abrir el que
+    #     viene: dentro del mismo turno nadie oye a nadie, que es lo que
+    #     separa este bloque de la V1 —el orden de habla dejaría de ser
+    #     destino sólo si oír cuesta un turno para todos por igual. Cada
+    #     frase pasa por decir_para_el_mundo(), como el resto del texto libre
+    #     que llega al agente, y se guarda la frase caquetía sin su glosa.
+    #     Sin escena la lista queda vacía y el bloque no existe.
+    if escena:
+        state.dichos_del_turno_anterior = dichos_del_turno(
+            escena, interactions,
+            decir=lambda t: decir_para_el_mundo(t, state.mundo),
+        )
 
     # 4. Narración del director
     if interactions and verbose:

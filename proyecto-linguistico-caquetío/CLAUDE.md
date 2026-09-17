@@ -77,6 +77,8 @@ cura y se publica en Curiana Radio (`/kaketiana`).
 | **El prestigio y los vínculos van indexados por los nombres de la ERA 1** | Misma trampa que la fila de arriba, en `curiana_social.py`: `PRESTIGIO` y `VINCULOS` usan los nombres viejos y en la era 2 **1 de 63 claves estaba viva** (Manaure), con sus tres destinos fuera del elenco. El prestigio medido era `1.0×1 · 0.5×16 · 0.4×36 · 0.2×10` —el TIER con otro nombre— y es el que pondera la fijación de la koiné (`CompetenciaLexica._prestigio`). Desde el 2026-09-17 se lee por **dos puertas**: `prestigio_de()` y `vinculos_de()`, que resuelven `ALIAS_ERA1` (5 entradas de cada tabla vuelven así) y, para quien no tiene entrada escrita, **derivan una de su ficha** — el papel (`rol_en_la_casa`/`oficio`) colocado en la banda de su equivalente de la era 1, y los vínculos con la cabeza de su casa, la mayor de su linaje fuera de ella y la casa del sitio del que lo trajeron. Sin `hash()` ni RNG global. Medido: 63 de 63 con prestigio propio (15 valores, los tres tiers solapados), 0 aristas a fantasmas, 110 entre nodos donde había 0, nadie aislado. `VINCULOS`/`PRESTIGIO` **no se leen directo**. La era 1 queda byte a byte (`ALIAS_ERA1` vacío, la derivación exige `rol_en_la_casa`) y `test_social.py` compara la tabla entera. Antes/después: `6-fusion/medicion_prestigio_vinculos_era2_2026-09-17.yaml`; lo mide `python curiana_sim/curiana_social.py`. ⚠️ Esto **no** diseña la frontera entre nodos (issue `frontera-entre-nodos-2026-09-17.md`): sólo restituye los vínculos que el canon ya había escrito |
 | **Una forma recién acuñada no es una `palabra_activa`** | `score_linguistico()` sólo reconoce `lexico.palabras_activas()` (base + **adoptados**), así que la acuñación no entraba en `palabras_caquetias` → ni en `words_used` → ni en `word_uses`: el primer usuario registrado de una forma era el ADOPTANTE, que puede ser del otro nodo (29 de 40 acuñaciones, 72,5%, `analizar_nodos.py` 2026-09-16), y las rutas de contagio salían invertidas. Se pasa aparte (`save_agent_response(..., coined_words=…)`) y se escribe con `source_language='caquetío'` declarado. El scorer no se toca: `score` y `pct_*` no se mueven a mitad de serie |
 | **La competencia léxica repetía el mismo referente cada día** | `auto_mode` empezaba `REFERENTES_NOVEDOSOS` de cero en cada run, y un día de seis turnos sólo llega al primero (turno 5): los tres días de la serie A volvieron a nombrar «las cuentas brillantes» (10 de 12 respuestas en el turno 5 de CADA día) y los otros nueve referentes no salieron nunca. «La koiné sobrevivió la noche» era en parte el instrumento re-enseñando el referente. Desde el 2026-09-17 el estado guarda `referentes_introducidos` y `--continuar` sigue la secuencia (día 2: el cometa, día 3: el eclipse…); `referentes_pendientes_de(state)` es la única puerta. Un run nuevo sí la empieza de cero |
+| **El ámbito es el LUGAR, y la puerta es una** | Con `--escena`, lo que un agente ve de la comunidad ya no es de los 63: es de donde está **ahora**. Las cuatro vías (V1 propuestas, V2 adoptadas, V3 competencias, V4 el campo que pondera la muestra) reciben `ambito` y **sólo** lo sacan de `curiana_escena.ambito_de(agente, state)` — nunca del nodo, que no es lo mismo: Humohumo (GUARANAO) y Bajari (AMUAY) andan los dos el camino Moruy–Caseto y ahí **sí** se oyen (el par más cercano del mapa, 7,6 km, y es ENTRE nodos). Ojo al filtrar: V1 va por dónde se PROPUSO (`Neologismo.ambito`) y V2 por dónde se ADOPTÓ (`Neologismo.adoptado_en`). `[Lo que se dijo aquí]` trae el MOMENTO ANTERIOR, nunca el mismo turno —eso es V1 con otro nombre y es lo que produjo los tres cruces de Δturnos = 0 del día 1 de la serie B— y se guarda al CERRAR el turno en `state.dichos_del_turno_anterior`, que `--continuar` hereda. Sin `--escena`, `ambito=None` y **nada cambia**: hay un solo ámbito, el nulo, y el prompt es byte a byte el de siempre (test de tres turnos comparados carácter a carácter, era 1 y era 2). Medido en el ensayo de 6 turnos: V1 baja de 4,12 a 1,71 formas por prompt, V2 de 0,97 a 0,06 y V3 de 3,86 a 0,81; el día de Capubana vuelven a 4,10 / 0,97 / 3,86 porque los 63 comparten ámbito, y el prompt medio BAJA un 3,3 % |
+| **El Observer no se toca, así que el ámbito entra por `situar()`** | `registrar_neologismo()` y `adoptar()` los llama `curiana_observer`, que es el registro de la medición y no se modifica. El orquestador declara el lugar ANTES con `lexico.situar(agente, ambito_de(...))` y de ahí lo leen las dos. Si alguien llama a `adoptar()` sin haber situado al agente, la adopción se registra con ámbito `None` y la vía `dos-ambitos` deja de poder nacer — silenciosamente |
 | **La longitud del prompt predice el score** | r = −0.48. Cualquier análisis por agente tiene que controlarla, o estarás midiendo cuánto escribiste tú. Ver `ANALISIS_BASE_2026-08-06.md` |
 
 ---
@@ -194,6 +196,19 @@ python curiana_orchestrator_v2.py --auto 30 --perfil base --perfiles --reporte
 #                           y **una cadena --continuar no puede cambiar de brazo a la mitad**: el
 #                           motor avisa y se niega (la evidencia es la DIFERENCIA entre dos cadenas
 #                           completas con la misma semilla, §5.4 del diseño)
+#                           Y DESDE EL 2026-09-17 el lugar es además el ÁMBITO de lo que el agente
+#                           VE (capa 2, decisiones p5/p6/p9): las cuatro vías por las que circula
+#                           una forma dejan de ser de toda la comunidad —V1 las propuestas en
+#                           evaluación, V2 las adoptadas, V3 las competencias abiertas, V4 el campo
+#                           que pondera la muestra— y pasan a ser del LUGAR. La puerta es UNA:
+#                           `ambito_de(agente, state)`; nadie lee el nodo por su cuenta. Se añade
+#                           [Lo que se dijo aquí]: las ≤ 3 intervenciones del MOMENTO ANTERIOR
+#                           dichas en este mismo sitio, ≤ 280 car., con la frase caquetía sin su
+#                           glosa. Y la oficialización de una forma declara su VÍA: `un-ambito`
+#                           (los dos adoptantes en el mismo lugar) o `dos-ambitos` (alguien la
+#                           llevó) — eso último sale medido en el diccionario de cierre. Ojo: el
+#                           bloque de oír sale en 17 de 72 prompts (hablan 12 de 63 repartidos en
+#                           8-27 lugares) y en 60 de 72 el día de Capubana
 #   --capubana-cada N       cada cuántos días convergen los dos nodos en el cerro; ese día los 63
 #                           están en el Capubana los seis momentos. Por defecto 3 (decisión 7 → A:
 #                           el ciclo mayor del canon cae en los días 55-58 de la seca y una cadena
@@ -202,6 +217,8 @@ python curiana_orchestrator_v2.py --auto 30 --perfil base --perfiles --reporte
 python curiana_mundo.py                                   # las 126 combinaciones de [Tu tierra], con su largo
 python curiana_escena.py                                  # las 1.134 escenas de [Aquí estás] (63 × 6 × 3), con su largo
 python curiana_escena.py --capubana                       # y el día de la convergencia
+python curiana_escena.py --oir                            # los bloques [Lo que se dijo aquí] y sus largos (del run
+                                                          # guardado si lo hay; si no, del ensayo)
 python curiana_eventos.py                                 # el catálogo de eventos medido y dicho para la era 2
 python curiana_cadena.py                                  # las cadenas `--continuar`: serie de koiné y veredicto por cadena
                                                           # (un run es UN día: su serie sola nunca tiene dos puntos)
@@ -247,15 +264,15 @@ fuentes_caquetios/ los PDF (se citan, no se editan)
 | Módulo | Qué hace |
 |---|---|
 | `curiana_orchestrator_v2` | el bucle; importa a los otros seis |
-| `curiana_lexicon` | vocabulario + reglas + prompts + `score_linguistico()` |
+| `curiana_lexicon` | vocabulario + reglas + prompts + `score_linguistico()`. Las dos vías comunitarias del prompt (V1 propuestas, V2 adoptadas) reciben `ambito` y `LexicoComunitario` guarda dónde se propuso y dónde se adoptó cada forma (`situar()` es quien se lo dice) |
 | `curiana_agents` | los 60 personajes |
-| `curiana_koine` | idiolectos, competencia léxica, métricas de convergencia |
+| `curiana_koine` | idiolectos, competencia léxica, métricas de convergencia. `CampoLexico` está partido por ámbito (`{lugar: pesos}`, el global es la suma) y `prompt_competencias(ambito=…)` sólo muestra las formas rivales propuestas allí |
 | `curiana_cadena` | la cadena `continuado_desde`: serie de koiné y veredicto sobre TODOS los días encadenados, no sobre el run suelto |
 | `curiana_social` | contagio léxico, prestigio, variación dialectal. Las tablas están escritas con los nombres de la era 1: se leen por `prestigio_de()` y `vinculos_de()`, que resuelven el alias y derivan de la ficha lo que no está escrito (`python curiana_social.py` mide el grafo del elenco activo) |
-| `curiana_state` | día, estación, locaciones, eventos (escritos para la era 1) y el **estado inicial por mundo** (`estado_inicial(MUNDO)`). Desde el 2026-09-17 lleva además el brazo de la escena (`escena`, `capubana_cada`, `escena_del_turno`), que `--continuar` hereda |
+| `curiana_state` | día, estación, locaciones, eventos (escritos para la era 1) y el **estado inicial por mundo** (`estado_inicial(MUNDO)`). Desde el 2026-09-17 lleva además el brazo de la escena (`escena`, `capubana_cada`, `escena_del_turno`, `dichos_del_turno_anterior`), que `--continuar` hereda |
 | `curiana_eventos` | los eventos dichos para el elenco activo: alias, sin foráneos, reescrituras declaradas. Y el **texto libre** que llega al Director y al agente (`decir_para_el_mundo`) |
 | `curiana_mundo` | el mundo de la era 2: `[Tu tierra]` para el agente y `[El mundo]` para el Director, desde 6-fusion/ y el corpus |
-| `curiana_escena` | **dónde está cada uno** (era 2, `--escena`). Una puerta: `ambito_de(agente, state)` devuelve el lugar —una cadena, no un booleano: mañana será adónde se movió por potestad— y `None` sin escena. Lee `curiana_escena_era2.py` (GENERADO desde `6-fusion/escena_era2.yaml`, que deriva del elenco). Determinista: no toca el RNG del motor |
+| `curiana_escena` | **dónde está cada uno** (era 2, `--escena`) y, desde el 2026-09-17, **qué oye allí**. Una puerta: `ambito_de(agente, state)` devuelve el lugar —una cadena, no un booleano: mañana será adónde se movió por potestad— y `None` sin escena. Dos bloques: `bloque_aqui_estas` (≤ 200) y `bloque_lo_que_se_dijo_aqui` (≤ 280, el momento anterior). Lee `curiana_escena_era2.py` (GENERADO desde `6-fusion/escena_era2.yaml`, que deriva del elenco). Determinista: no toca el RNG del motor |
 | `curiana_director` | el Director por mundo y su reflexión del día (`--reflexion`, `curiana_director.json`) |
 | `curiana_observer` | scoring, análisis, perfiles curados |
 | `curiana_database` | Supabase + LangSmith |
