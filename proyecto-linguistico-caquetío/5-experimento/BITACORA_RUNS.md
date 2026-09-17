@@ -87,6 +87,35 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 >
 > Ninguna de las tres toca `capas_de_score`.
 
+> ⚠️ **Dos artefactos del instrumento descubiertos al cerrar el día 3
+> (análisis por nodo, `analizar_nodos.py`, 2026-09-16), que afectan a los
+> tres días de la cadena `c6837386 → 89fc1744 → 0193873d`:**
+> 1. **La pre-carga de idiolectos se perdió con los nombres nuevos.**
+>    `FORMAS_SEED` y `EMOCIONAR_SEED` (`curiana_koine.py`) están indexados por
+>    nombres de la era 1; la campaña de antropónimos renombró a 60 de 63 y el
+>    orquestador siembra con el nombre nuevo sin pasar por `ALIAS_ERA1`.
+>    Medido: **1 de 63** con semilla propia (Manaure), 10 la tendrían vía
+>    alias, 52 no tienen ninguna. `DISENO_KOINE.md` §4 llama a esa pre-carga
+>    precondición: «sin esta pre-carga, todos arrancan iguales y convergencia
+>    no significa nada». **El veredicto CONVERGE de la cadena del 16 no es
+>    evidencia hasta arreglar la siembra y volver a correr los tres días.**
+> 2. **La forma acuñada no queda en `word_uses` en boca de quien la acuña**:
+>    al acuñar no está en el léxico activo y `palabras_caquetias` no la
+>    reconoce; 29 de 40 acuñaciones (72,5 %) sólo aparecen usadas por el
+>    adoptante, que puede ser del otro nodo — y lo fue. Invierte las rutas de
+>    contagio que se lean de `word_uses` (la tabla `neologisms` sí guarda al
+>    acuñador).
+>
+> Y la lectura por nodo, normalizada por hablantes posibles (GUARANAO 39,
+> AMUAY 24): `kali-iro-pabu` la acuñaron cinco agentes de los DOS nodos en el
+> mismo turno (razón 1,01); `tüshi-juri` es compartida (1,41), no inclinada;
+> `kuri-bana-iro-pabu` inclinada a GUARANAO (2,15) y `biro-kali` (2,62, acuñada
+> en AMUAY). Distancia intra-nodo vs entre nodos: brecha del 1-3 % que el día
+> 3 se invierte en la emergente. **No hay evidencia de koiné entre nodos, ni
+> de diglosia: los dos nodos nunca estuvieron separados** — con la reserva de
+> que el instrumento medía sin su media pieza. Detalle en
+> `analisis/ANALISIS_NODOS_ERA2_2026-09-16.md`.
+
 | Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |
 |---|---|---|---|---|---|---|
 | 09-16 | `0193873d` | 6 / 1 (día 3) | **63** | 7.6 | 100% | **Día 3 con mundo, encadenado desde `89fc1744`** (semilla 3, motor `1be0d52` limpio: eventos de la era 2, Director con mundo, `loanword_uses`, `--reflexion`). Sin encadenar el 4: Miguel cierra aquí. **La koiné se consolida**: `kali-iro-pabu` 20 usos, `tüshi-juri` 19, `sima-maa` 19, `nii-bana` 18, `kuri-bana-iro-pabu` 17, `sima-pabu` 14; sólo 4 acuñaciones nuevas (26 y 10 los días anteriores) — el léxico se asienta. ⭐ **Por nodo** (hablantes distintos en tres días; GUARANAO tiene 39 posibles y AMUAY 24): `kali-iro-pabu` 18 GUA / 11 AMU (compartida), `tüshi-juri` 16 / 7, `kuri-bana-iro-pabu` 21 / 6 (inclinada a GUARANAO), y la variante nueva del día 3 `kuri-sima-pabu` 1 / 3 (Kasebo y Saruro de Caseto, Kiwakoa de Carirubana: inclinada a AMUAY). Distancias por la cadena: ventana 0,604 → 0,467 → 0,375; emergente 0,900 → 0,820 → 0,725 — tres días bajando; el motor sigue diciendo «datos insuficientes» (agente en curso). Préstamos: la tabla nueva guarda 2 filas (`bohío` Chirwa T3, `cacique` Uria T2), las mismas dos que da la re-puntuación — funciona, y las dos son castellano corriente: **tres días y ningún préstamo real** en el tier 1. El mundo: viento en 51 de 72, cerro en 49, sitio en 25, jachos en 4; manglar y caimán en Guaranao: 0 (la corrección funciona). Residuos de la era 1 que quedan: el Director dijo «Caquetíos y Guaycarí» en el cierre 6 y en la reflexión, y un agente «Biro-ko» — la reflexión del día 2 que el escriba le inyectó traía «los Guaycarí» (agente en curso); y la cabecera de la reflexión copia «Día 4, Turno 1» |
