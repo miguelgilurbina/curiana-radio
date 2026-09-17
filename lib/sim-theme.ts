@@ -63,6 +63,20 @@ export const RUN_CATEGORIAS: Record<string, { label: string; color: string }> = 
   insignia: { label: "edición", color: "#B04040" },
 };
 
+// ── Nodos de la era 2 (la escena sobre el mapa) ───────────────────────
+// Un lugar es del nodo de quien lo trabaja; los que tocan los dos son el
+// contacto, y por eso `compartido` tiene color propio. Ver el diseño en
+// 6-fusion/issues-pendientes/existir-en-el-mundo-escena-por-lugar-2026-09-17.md
+export const NODOS: Record<string, { label: string; color: string }> = {
+  GUARANAO: { label: "Guaranao", color: "#C47A2B" }, // ocre — el nodo del este
+  AMUAY: { label: "Amuay", color: "#2E7D4F" }, // verde golfete — el del oeste
+  compartido: { label: "Compartido", color: "#5B4FCF" }, // violeta — los dos
+};
+
+export function nodoColor(nodo: string | null | undefined): string {
+  return (nodo && NODOS[nodo]?.color) || "#6D8A9E";
+}
+
 // ── Semánticos (feedback) ─────────────────────────────────────────────
 export const SEMANTIC = {
   success: "#2E7D4F",
