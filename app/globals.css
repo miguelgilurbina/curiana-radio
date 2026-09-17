@@ -525,3 +525,47 @@
     }
   }
 }
+
+/* ── Mapa de la escena (Leaflet) ──────────────────────────────────────
+   SIN @layer a propósito: el CSS de Leaflet viene sin capa, y en la cascada
+   una regla sin capa le gana a cualquiera que esté dentro de una, por
+   específica que sea. Dentro de `@layer components` el filtro de teselas
+   colaba (Leaflet no toca `filter`) pero los controles seguían blancos.
+
+   Las teselas de OpenStreetMap son claras y el visor vive en el registro
+   oscuro del instrumento (Acto I): el filtro va SOLO al panel de teselas. Los
+   puntos de la escena y los caminos son SVG por encima y no lo tocan, para que
+   el color de cada nodo sea el que dice lib/sim-theme. */
+.mapa-escena .leaflet-tile-pane {
+  filter: invert(1) hue-rotate(180deg) brightness(0.88) contrast(0.86) saturate(0.35);
+}
+.mapa-escena .leaflet-container {
+  background: var(--sim-paper-deep);
+}
+.mapa-escena .leaflet-control-attribution {
+  background: color-mix(in srgb, var(--sim-paper) 78%, transparent);
+  color: var(--sim-ink-faint);
+}
+.mapa-escena .leaflet-control-attribution a {
+  color: var(--sim-ink-soft);
+}
+.mapa-escena .leaflet-bar a,
+.mapa-escena .leaflet-bar a:hover {
+  background: var(--sim-paper-deep);
+  color: var(--sim-ink);
+  border-bottom-color: var(--sim-rule);
+}
+.mapa-escena .leaflet-bar {
+  border: 1px solid var(--sim-rule);
+}
+.mapa-escena .leaflet-tooltip {
+  background: var(--sim-paper-deep);
+  color: var(--sim-ink);
+  border-color: var(--sim-rule);
+  box-shadow: none;
+  font-family: var(--sim-mono);
+  font-size: 0.7rem;
+}
+.mapa-escena .leaflet-tooltip-top::before {
+  border-top-color: var(--sim-rule);
+}

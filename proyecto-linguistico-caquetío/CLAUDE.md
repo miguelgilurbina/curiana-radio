@@ -115,6 +115,15 @@ python analizar_nodos.py --run <id8> --lugar   # la ESCENA (tabla `presencias`):
                                   # los dos nodos EN EL MISMO TURNO. Sin la bandera el
                                   # informe es el de siempre; sobre un run anterior a la
                                   # escena avisa y sigue
+python export_escena_seed.py --run <id8> [--cadena]   # el seed del VISOR de escena:
+                                  # content/simulador/escena/<id8>.json — los 29 lugares
+                                  # con su lat/lon (leídas de la tabla derivada, no
+                                  # recalculadas), quién está dónde en cada turno
+                                  # (`presencias`) y qué dijo ahí (`agent_responses`,
+                                  # recortado al tope declarado). `--sin-base` escribe el
+                                  # seed vacío con sólo el mapa, para que la web construya
+                                  # antes del primer run con escena
+
 python compilar_corpus.py --check # valida 3-mundo/corpus/
 python compilar_asentamientos.py  # los nodos de la esfera: existencia y época
 python compilar_etnias.py         # los vecinos: con quién, y de qué polity (regla 4)

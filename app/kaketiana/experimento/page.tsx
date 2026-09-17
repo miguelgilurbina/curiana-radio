@@ -6,6 +6,7 @@ import { getManaureFragment } from "@/lib/manaure";
 import { getResumen } from "@/lib/resumen";
 import { getAllPersonajes } from "@/lib/personajes";
 import { getRunsIndex, getParejaExperimento } from "@/lib/runs";
+import { getEscena } from "@/lib/escena";
 import { getAbstract, getCifrasLab, getEjemploVida } from "@/lib/abstract";
 import { getGlosasPorManaure, getGlosasPorEvento } from "@/lib/glosas";
 import Masthead from "@/components/simulador/Masthead";
@@ -21,6 +22,7 @@ import {
   PipelineFlujo,
 } from "@/components/simulador/laboratorio";
 import VidaDeUnaPalabra from "@/components/simulador/VidaDeUnaPalabra";
+import MapaDeEscena from "@/components/simulador/MapaDeEscena";
 import { EvolucionTimeline, DiccionarioKoine } from "@/components/simulador/evolucion";
 import { ExperimentoControl } from "@/components/simulador/experimento";
 import { Epoca, EventoItem, DataAside, Asterismo } from "@/components/simulador/prose";
@@ -50,6 +52,7 @@ export default function SimuladorPage() {
   const runsIndex = getRunsIndex();
   const runNormal = runsIndex?.runs.find((r) => r.rol === "normal");
   const experimento = runNormal ? getParejaExperimento(runNormal.id8) : null;
+  const escena = getEscena();
 
   const runs = getRunsPublicados();
   const run = getRunActivo();
@@ -150,6 +153,26 @@ export default function SimuladorPage() {
                   ¿La lengua converge sola?
                 </h3>
                 <ExperimentoControl normal={experimento.normal} ablacion={experimento.ablacion} />
+              </section>
+            )}
+
+            {/* La escena: el mundo no es un tablero, es un grafo de lugares.
+                Visor de repetición sobre el mapa real (decisión de Miguel
+                2026-09-17, §5b del issue de la escena). Estático: lee
+                content/simulador/escena/*.json, nunca la base. */}
+            {escena && (
+              <section id="escena" className="mt-14 scroll-mt-24">
+                <Overline>El mundo, turno a turno</Overline>
+                <h3 className="sim-display mt-1 text-3xl font-semibold tracking-tight text-(--sim-ink) md:text-4xl">
+                  Dónde estaba cada uno
+                </h3>
+                <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
+                  Un agente ya no vive en una etiqueta: está en un sitio, a una hora, con quien
+                  esté ahí. Esto no simula nada — lee la escena que el motor guardó, los sesenta y
+                  tres en un lugar cada momento del día, y la pone sobre Paraguaná. Lo que se dijo
+                  en un sitio se lee pinchando el sitio.
+                </p>
+                <MapaDeEscena seed={escena} />
               </section>
             )}
           </div>

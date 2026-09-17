@@ -187,6 +187,38 @@ Si **2 agentes distintos** la usan → entra al léxico comunitario permanente.
 No hay dashboard propio: los resultados curados se exportan a JSON estático y se
 publican en el sitio Curiana Radio (`/kaketiana`, fuera de este repo de simulación).
 Ver `export_runs_index.py`, `export_personajes_seed.py`, `export_resumen_seed.py`,
-`export_lexicon_seed.py` — cada uno lee de Supabase local y escribe a
-`../content/simulador/*.json`. Añadir un run al sitio es correr los exporters que
-apliquen contra Supabase local y hacer commit del JSON resultante.
+`export_lexicon_seed.py`, `export_escena_seed.py` — cada uno lee de Supabase local y
+escribe a `../content/simulador/*.json`. Añadir un run al sitio es correr los exporters
+que apliquen contra Supabase local y hacer commit del JSON resultante.
+
+### Los seeds, uno a uno
+
+| exportador | escribe | lo consume |
+|---|---|---|
+| `export_runs_index.py` | `content/simulador/runs/index.json` | `lib/runs.ts` → la bitácora y el experimento de control |
+| `export_resumen_seed.py` | `content/simulador/resumen.json` + `neologismos.json` | `lib/resumen.ts`, `lib/neologismos.ts` |
+| `export_personajes_seed.py` | `content/simulador/personajes.json` | `lib/personajes.ts` |
+| `export_lexicon_seed.py` | `content/simulador/lexicon.json` | `lib/lexicon.ts` |
+| `export_wiki_seed.py` | `content/wiki/` | `lib/wiki.ts` |
+| **`export_escena_seed.py`** | `content/simulador/escena/<id8>.json` | `lib/escena.ts` → `components/simulador/MapaDeEscena.tsx` en `/kaketiana/experimento#escena` |
+
+**El seed de la escena** (PR 10 de
+`6-fusion/issues-pendientes/existir-en-el-mundo-escena-por-lugar-2026-09-17.md`,
+decisión 10 de Miguel) es el del **visor de repetición**: los 29 lugares con su
+punto —leídos de la resolución que `6-fusion/escena_por_lugar_propuesta_2026-09-17.yaml`
+ya hizo, no recalculados—, quién estaba dónde en cada turno (`presencias`, los 63
+y no sólo los 12 que hablan) y qué se dijo en cada sitio (`agent_responses`,
+recortado a `TOPE_TEXTO`, que va escrito en el propio JSON). El esquema entero está
+documentado en la cabecera del módulo.
+
+```bash
+python export_escena_seed.py --run 0193873d            # un run
+python export_escena_seed.py --run 0193873d --cadena   # él y sus antecesores
+python export_escena_seed.py --sin-base                # sólo el mapa, sin base
+```
+
+Sin filas en `presencias` avisa y escribe un JSON **vacío y válido**: el mapa se
+dibuja igual y la página dice que todavía no ha corrido ningún run con escena. Eso
+es lo que hay commiteado hoy (`content/simulador/escena/sin-escena.json`), porque
+la tabla existe desde el 2026-09-17 y está sin filas. `lib/escena.ts` elige el seed
+más reciente que TENGA escena, y sólo si no hay ninguno cae al vacío.
