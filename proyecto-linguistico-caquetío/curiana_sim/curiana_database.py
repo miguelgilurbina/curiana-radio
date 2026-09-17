@@ -177,6 +177,71 @@ def word_source_language(word: str) -> Optional[str]:
 # CLIENTE ANTHROPIC (con LangSmith si disponible)
 # ══════════════════════════════════════════════════════════════════════
 
+# ══════════════════════════════════════════════════════════════════════
+# LA ESCENA — dónde estaba cada agente
+# ══════════════════════════════════════════════════════════════════════
+
+# PostgREST corta en `max_rows`=1000 y una consulta sin `.range()` se trunca en
+# SILENCIO (la trampa que ya se comió a `lexicon`, ~1400 palabras). `presencias`
+# son 378 filas por día —63 agentes × 6 momentos—, así que una cadena de tres
+# días ya pasa del corte. Todo lector de esta tabla pagina.
+PAGINA_POSTGREST = 1000
+
+
+def nodo_del_elenco_activo(agent_name: str) -> Optional[str]:
+    """El nodo (GUARANAO / AMUAY) que el elenco ACTIVO le da a un agente.
+
+    La importación va DENTRO a propósito: el elenco se decide antes de importar
+    (`CURIANA_ELENCO=era2` hace que `curiana_agents` cargue
+    `curiana_agents_era2`), y a este módulo lo importan scripts que no corren el
+    motor. En la era 1 las fichas no tienen `nodo` y devuelve None — allí no hay
+    escena.
+    """
+    try:
+        from curiana_agents import ALL_AGENTS
+    except Exception:                                        # noqa: BLE001
+        return None
+    return (ALL_AGENTS.get(agent_name) or {}).get("nodo")
+
+
+def filas_de_presencias(
+    run_id: str,
+    turn_id: str,
+    dia: int,
+    turno: int,
+    momento: str,
+    escena: dict,
+) -> list[dict]:
+    """Las filas que una escena escribe en `presencias`, sin tocar la base.
+
+    `escena` es `{agente: lugar}` — lo que `curiana_escena.escena_de(state)`
+    devuelve. Un agente sin lugar no escribe fila: en la era 1 la escena está
+    vacía y esta función devuelve `[]`, que es lo que hace que un run sin escena
+    no escriba nada.
+
+    Vive aquí fuera, y no dentro de `CurianaDB`, para que el mock construya
+    EXACTAMENTE las mismas filas que la base: si se desincronizan, los tests
+    dejan de decir nada de lo que se guarda de verdad.
+    """
+    return [
+        {
+            "run_id": run_id,
+            "turn_id": turn_id,
+            "day": dia,
+            "turn_num": turno,
+            "momento": momento,
+            "agent_name": agente,
+            "lugar": lugar,
+            # El nodo se congela con la fila: el elenco es un módulo GENERADO
+            # que se regenera, y `analizar_nodos` necesita saber de qué lado
+            # estaba la gente el día del run, no hoy.
+            "nodo": nodo_del_elenco_activo(agente),
+        }
+        for agente, lugar in sorted(escena.items())
+        if lugar
+    ]
+
+
 def get_anthropic_client(run_id: Optional[str] = None) -> anthropic.Anthropic:
     """
     Devuelve un cliente Anthropic.
@@ -348,11 +413,20 @@ class CurianaDB:
         neologisms_proposed: int = 0,
         langsmith_trace_url: Optional[str] = None,
         coined_words: Optional[list[str]] = None,
+        lugar: Optional[str] = None,
     ) -> str:
         """
         Guarda la respuesta de un agente con análisis lingüístico completo.
         Calcula automáticamente la composición por lengua.
         Retorna response_id.
+
+        `lugar` — dónde estaba el agente cuando dijo esto (escena, capa 1). Va
+        desnormalizado al lado de la respuesta a propósito (decisión de Miguel
+        2026-09-17, §2 capa 1 «las dos»): `presencias` sabe de los 63, pero toda
+        consulta de lengua sale de `word_uses` × `turns` × `agent_responses` y
+        no tiene por qué unir además con una cuarta tabla. Sin escena —la era 1,
+        o un run con `--sin-escena`— la columna ni se menciona en el insert: la
+        fila queda idéntica a la de antes de esta migración.
 
         `coined_words` — las formas que esta respuesta ACUÑA. Se suman a
         `words_used` y escriben su fila en `word_uses` con
@@ -396,6 +470,8 @@ class CurianaDB:
             "neologisms_proposed": neologisms_proposed,
             "langsmith_trace_url": langsmith_trace_url,
         }
+        if lugar:
+            row["lugar"] = lugar
         result = self.client.table("agent_responses").insert(row).execute()
         response_id: str = result.data[0]["id"]
 
@@ -464,6 +540,44 @@ class CurianaDB:
         ]
         self.client.table("loanword_uses").insert(rows).execute()
         return len(rows)
+
+    # ── Presencias: la escena del turno ───────────────────────────────
+
+    def save_presencias(
+        self,
+        run_id: str,
+        turn_id: str,
+        dia: int,
+        turno: int,
+        momento: str,
+        escena: dict,
+    ) -> int:
+        """Guarda dónde estaba CADA agente este turno. Retorna cuántas filas
+        escribió.
+
+        `escena` es `{agente: lugar}`, lo que devuelve
+        `curiana_escena.escena_de(state)`. Son los 63, no los 12 que hablan
+        (decisión de Miguel 2026-09-17): el visor de repetición (§5b) lee de
+        aquí y «un mapa con 12 de 63 no es un mundo».
+
+        **Una inserción por lote, no 63 llamadas.** Un día son 6 turnos × 63 =
+        378 filas; a llamada por agente serían 378 viajes a PostgREST por día.
+
+        Como `save_loanword_uses`, esta función NO atrapa sus fallos: los
+        propaga para que el llamador los cuente en su `Counter` por tabla
+        (`db_fallos["presencias"] += 1` en `curiana_orchestrator_v2`). Perder
+        escrituras en silencio corrompe el análisis, y la escena es justo la
+        tabla donde un agujero no se nota: 62 presencias en vez de 63 siguen
+        pareciendo un mundo.
+
+        Un run sin escena (la era 1, o `--sin-escena`) pasa `{}` y esto no
+        escribe nada ni viaja a la base.
+        """
+        filas = filas_de_presencias(run_id, turn_id, dia, turno, momento, escena)
+        if not filas:
+            return 0
+        self.client.table("presencias").insert(filas).execute()
+        return len(filas)
 
     # ── Neologisms ────────────────────────────────────────────────────
 
@@ -610,6 +724,45 @@ class CurianaDB:
         )
         return result.data or []
 
+    def _presencias(self, run_ids: list[str]) -> list[dict]:
+        """La escena de uno o varios runs, paginada.
+
+        Pagina porque tiene que hacerlo: 378 filas por día contra el
+        `max_rows`=1000 de PostgREST, que trunca **en silencio** una consulta
+        sin `.range()` — es la trampa que ya se comió a `lexicon`. Una cadena de
+        tres días son 1.134 filas y sin esto se leerían 1.000.
+        """
+        if not run_ids:
+            return []
+        filas: list[dict] = []
+        desde = 0
+        while True:
+            result = (
+                self.client.table("presencias")
+                .select("run_id, turn_id, day, turn_num, momento, "
+                        "agent_name, lugar, nodo")
+                .in_("run_id", list(run_ids))
+                .order("day").order("turn_num").order("agent_name")
+                .range(desde, desde + PAGINA_POSTGREST - 1)
+                .execute()
+            )
+            lote = result.data or []
+            filas.extend(lote)
+            if len(lote) < PAGINA_POSTGREST:
+                return filas
+            desde += PAGINA_POSTGREST
+
+    def presencias_de(self, run_id: str) -> list[dict]:
+        """La escena de un run: quién estuvo dónde, turno a turno."""
+        return self._presencias([run_id])
+
+    def presencias_de_cadena(self, run_ids: list[str]) -> list[dict]:
+        """La escena de una CADENA entera. En la era 2 un run es UN día, así que
+        la unidad que se mira casi siempre es la cadena, no el run: los ids
+        salen de subir por `config.continuado_desde` (`runs_encadenados` →
+        `curiana_cadena.cadena_de_runs`)."""
+        return self._presencias(list(run_ids))
+
     def koine_metrics(self, run_id: str) -> list[dict]:
         """Las métricas de koiné de un run, por día."""
         result = (
@@ -744,7 +897,18 @@ class CurianaDBMock:
     """
     Drop-in replacement cuando Supabase no está configurado.
     Todos los métodos son no-ops que no rompen la simulación.
+
+    Con una excepción declarada: la ESCENA sí se guarda, en memoria. Sin base
+    no habría cómo afirmar en un test que se escriben 63 presencias por turno y
+    378 por día, ni que un run sin escena no escribe nada — y ésa es
+    exactamente la garantía que la capa 1 necesita. Las filas se construyen con
+    `filas_de_presencias`, la MISMA función que usa `CurianaDB`, para que el
+    mock no pueda divergir de lo que se guarda de verdad.
     """
+    def __init__(self):
+        self.presencias: list[dict] = []
+        self.respuestas: list[dict] = []
+
     def seed_lexicon(self, **kw): return 0
     def create_run(self, **kw) -> str:
         import uuid; return str(uuid.uuid4())
@@ -752,8 +916,30 @@ class CurianaDBMock:
     def save_turn(self, *a, **kw) -> str:
         import uuid; return str(uuid.uuid4())
     def save_agent_response(self, *a, **kw) -> str:
-        import uuid; return str(uuid.uuid4())
+        import uuid
+        response_id = str(uuid.uuid4())
+        self.respuestas.append({
+            "response_id": response_id,
+            "run_id": kw.get("run_id"),
+            "turn_id": kw.get("turn_id"),
+            "agent_name": kw.get("agent_name"),
+            "lugar": kw.get("lugar"),
+        })
+        return response_id
     def save_loanword_uses(self, *a, **kw) -> int: return 0
+
+    def save_presencias(self, run_id: str, turn_id: str, dia: int, turno: int,
+                        momento: str, escena: dict) -> int:
+        filas = filas_de_presencias(run_id, turn_id, dia, turno, momento, escena)
+        self.presencias.extend(filas)
+        return len(filas)
+
+    def presencias_de(self, run_id: str) -> list[dict]:
+        return [f for f in self.presencias if f["run_id"] == run_id]
+
+    def presencias_de_cadena(self, run_ids: list[str]) -> list[dict]:
+        ids = set(run_ids)
+        return [f for f in self.presencias if f["run_id"] in ids]
     def save_neologism(self, *a, **kw) -> str:
         import uuid; return str(uuid.uuid4())
     def update_neologism_status(self, *a, **kw): pass

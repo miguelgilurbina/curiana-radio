@@ -435,3 +435,163 @@ def test_un_ciclo_en_continuado_desde_falla_a_la_vista(monkeypatch):
     monkeypatch.setattr(an, "q", falso_q)
     with pytest.raises(SystemExit):
         an.cadena_de_runs("aaa")
+
+
+# ══════════════════════════════════════════════════════════════════════
+# La escena (`--lugar`): ocupación, escenas con voz y cruce por LUGAR
+# ══════════════════════════════════════════════════════════════════════
+#
+# Datos sintéticos otra vez, y por la misma razón: lo que hay que vigilar es la
+# aritmética. Dos aldeas de nodos distintos y un cerro que tocan las dos —el
+# Capubana del canon—, dos días de dos momentos cada uno.
+
+def _p(dia, turno, momento, agente, lugar, nodo):
+    return {"dia": dia, "turno": turno, "momento": momento, "agente": agente,
+            "lugar": lugar, "nodo": nodo, "run": "r1"}
+
+
+PRESENCIAS = [
+    # día 1, amanecer: cada nodo en lo suyo
+    _p(1, 1, "amanecer", "g0", "Moruy", "GRANDE"),
+    _p(1, 1, "amanecer", "g1", "Moruy", "GRANDE"),
+    _p(1, 1, "amanecer", "c0", "Caseto", "CHICO"),
+    # día 1, mediodía: los dos nodos en el cerro, el mismo turno
+    _p(1, 2, "mediodía", "g0", "Capubana", "GRANDE"),
+    _p(1, 2, "mediodía", "g1", "Moruy", "GRANDE"),
+    _p(1, 2, "mediodía", "c0", "Capubana", "CHICO"),
+    # día 2
+    _p(2, 1, "amanecer", "g0", "Moruy", "GRANDE"),
+    _p(2, 1, "amanecer", "g1", "Moruy", "GRANDE"),
+    _p(2, 1, "amanecer", "c0", "Caseto", "CHICO"),
+    _p(2, 2, "mediodía", "c0", "Caseto", "CHICO"),
+]
+
+
+def test_los_momentos_salen_del_turno_en_que_ocurren():
+    assert an.orden_de_momentos(PRESENCIAS) == ["amanecer", "mediodía"]
+
+
+def test_la_ocupacion_es_media_por_dia_y_no_total_de_la_cadena():
+    """Dos días de cadena doblarían los conteos crudos y parecería que el mundo
+    se llenó: Moruy tiene 2 personas al amanecer, no 4."""
+    ocup = {f["lugar"]: f for f in an.ocupacion_por_lugar(PRESENCIAS)}
+    assert ocup["Moruy"]["por_momento"]["amanecer"]["presencias"] == 4
+    assert ocup["Moruy"]["por_momento"]["amanecer"]["media_por_dia"] == 2.0
+    assert ocup["Caseto"]["por_momento"]["amanecer"]["media_por_dia"] == 1.0
+    assert ocup["Capubana"]["nodos"] == ["CHICO", "GRANDE"]
+    assert ocup["Moruy"]["agentes_distintos"] == 2
+
+
+def test_compartido_es_el_lugar_que_tocan_los_dos_nodos_a_la_vez():
+    """La distinción de §3.4: un lugar que los dos nodos pisan en turnos
+    distintos no produce contacto, sólo coincidencia en el plano."""
+    comp = an.lugares_compartidos(PRESENCIAS)
+    assert comp["compartidos"] == ["Capubana"]
+    assert comp["compartidos_simultaneos"] == ["Capubana"]
+    assert comp["turnos_con_dos_nodos"] == 1
+
+    # el mismo cerro, pero cada nodo en un turno: compartido, NO simultáneo
+    en_turnos_distintos = [
+        _p(1, 1, "amanecer", "g0", "Capubana", "GRANDE"),
+        _p(1, 2, "mediodía", "c0", "Capubana", "CHICO"),
+    ]
+    comp2 = an.lugares_compartidos(en_turnos_distintos)
+    assert comp2["compartidos"] == ["Capubana"]
+    assert comp2["compartidos_simultaneos"] == []
+    assert comp2["turnos_con_dos_nodos"] == 0
+
+
+def test_una_escena_con_una_sola_voz_no_es_conversacion():
+    """Una escena es (día, turno, lugar) con alguien dentro. La cifra que
+    importa es por HABLANTE: cuántas intervenciones caen donde ese turno habla
+    alguien más."""
+    hablantes = [
+        {"dia": 1, "turno": 1, "agente": "g0", "lugar": ""},
+        {"dia": 1, "turno": 1, "agente": "g1", "lugar": ""},   # los dos en Moruy
+        {"dia": 1, "turno": 1, "agente": "c0", "lugar": ""},   # solo, en Caseto
+    ]
+    esc = an.escenas_del_turno(PRESENCIAS, hablantes)
+    # d1t1: Moruy, Caseto · d1t2: Capubana, Moruy · d2t1: Moruy, Caseto · d2t2: Caseto
+    assert esc["escenas"] == 7
+    assert esc["escenas_con_voz"] == 2
+    assert esc["escenas_con_dos_o_mas_voces"] == 1
+    assert esc["voces_max_en_una_escena"] == 2
+    assert esc["intervenciones_ubicadas"] == 3
+    assert esc["intervenciones_con_compania"] == 2
+    assert esc["pct_con_compania"] == pytest.approx(66.7, abs=0.1)
+
+
+def test_un_hablante_sin_presencia_se_cuenta_y_no_se_ubica():
+    """El guardián barato: si habló alguien que no estaba en la escena, se ve."""
+    hablantes = [{"dia": 1, "turno": 1, "agente": "fantasma", "lugar": ""}]
+    esc = an.escenas_del_turno(PRESENCIAS, hablantes)
+    assert esc["hablantes_sin_presencia"] == 1
+    assert esc["intervenciones_ubicadas"] == 0
+
+
+def test_el_lugar_declarado_que_discrepa_de_la_presencia_se_cuenta():
+    hablantes = [{"dia": 1, "turno": 1, "agente": "g0", "lugar": "Caseto"},
+                 {"dia": 1, "turno": 1, "agente": "g1", "lugar": "Moruy"}]
+    esc = an.escenas_del_turno(PRESENCIAS, hablantes)
+    assert esc["respuestas_con_lugar_declarado"] == 2
+    assert esc["lugar_declarado_discrepa"] == 1
+
+
+def _cruce(usos, compartidos=("Capubana",)):
+    return an.cruce_por_lugar(list(usos), PRESENCIAS, frozenset(), [], [],
+                              set(compartidos), turnos_por_dia=2)
+
+
+def test_una_forma_que_no_sale_de_su_lugar_muere_en_el():
+    usos = [{"dia": 1, "turno": 1, "agente": "g0", "forma": "x", "usos": 1},
+            {"dia": 2, "turno": 1, "agente": "g1", "forma": "x", "usos": 1}]
+    r = _cruce(usos)[0]
+    assert r["lugares_natales"] == ["Moruy"] and r["n_lugares"] == 1
+    assert r["murio_en_su_lugar"] is True
+    assert r["turnos_hasta_salir"] is None
+    assert r["paso_por_compartido"] is False
+
+
+def test_la_salida_del_lugar_se_fecha_en_turnos():
+    """g0 la dice en Moruy al amanecer del día 1 y en el Capubana al mediodía:
+    (1−1)·2 + (2−1) = 1 turno hasta salir, y el lugar de salida es compartido."""
+    usos = [{"dia": 1, "turno": 1, "agente": "g0", "forma": "x", "usos": 1},
+            {"dia": 1, "turno": 2, "agente": "g0", "forma": "x", "usos": 1}]
+    r = _cruce(usos)[0]
+    assert r["lugares_natales"] == ["Moruy"]
+    assert (r["dia_salida"], r["turno_salida"], r["lugar_salida"]) == (1, 2, "Capubana")
+    assert r["turnos_hasta_salir"] == 1
+    assert r["lugares_compartidos_tocados"] == ["Capubana"]
+
+
+def test_nacer_en_dos_lugares_a_la_vez_no_es_salir_de_ninguno():
+    """El análogo por lugar de `acunacion_multinodo`: si la forma sonó en dos
+    sitios en el mismo turno, no nació en ninguno y «salir» no significa nada."""
+    usos = [{"dia": 1, "turno": 1, "agente": "g0", "forma": "x", "usos": 1},
+            {"dia": 1, "turno": 1, "agente": "c0", "forma": "x", "usos": 1}]
+    r = _cruce(usos)[0]
+    assert r["nacimiento_multilugar"] is True
+    assert sorted(r["lugares_natales"]) == ["Caseto", "Moruy"]
+    assert r["turnos_hasta_salir"] is None
+    assert r["murio_en_su_lugar"] is False
+
+
+def test_un_uso_sin_presencia_no_se_ubica_y_no_se_inventa():
+    usos = [{"dia": 9, "turno": 9, "agente": "g0", "forma": "x", "usos": 1}]
+    r = _cruce(usos)[0]
+    assert r["ubicable"] is False
+    resumen = an.resumen_cruce_por_lugar([r])
+    assert resumen["sin_ubicar"] == 1 and resumen["ubicables"] == 0
+
+
+def test_el_resumen_cuenta_lo_que_la_tabla_dice():
+    usos = [{"dia": 1, "turno": 1, "agente": "g0", "forma": "viaja", "usos": 1},
+            {"dia": 1, "turno": 2, "agente": "g0", "forma": "viaja", "usos": 1},
+            {"dia": 1, "turno": 1, "agente": "c0", "forma": "quieta", "usos": 1},
+            {"dia": 2, "turno": 2, "agente": "c0", "forma": "quieta", "usos": 1}]
+    resumen = an.resumen_cruce_por_lugar(_cruce(usos))
+    assert resumen["formas"] == 2 and resumen["ubicables"] == 2
+    assert resumen["salieron_de_su_lugar"] == 1
+    assert resumen["murieron_en_su_lugar"] == 1
+    assert resumen["pasaron_por_compartido"] == 1
+    assert resumen["turnos_hasta_salir_mediana"] == 1

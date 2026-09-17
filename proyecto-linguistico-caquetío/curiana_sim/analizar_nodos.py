@@ -27,6 +27,14 @@ LO QUE MIDE
                `curiana_koine.distancia_idiolectal`) partida en pares INTRA-nodo
                y pares ENTRE nodos, por día. La lectura que se busca: ¿la de
                entre nodos baja más rápido, igual o más lento que la intra?
+3. `--lugar`   La ESCENA (tabla `presencias`, desde el 2026-09-17): ocupación
+               por lugar y momento, cuántas escenas tuvieron más de un hablante
+               y el cruce de las formas por LUGAR además de por nodo — incluido
+               si pasaron por un lugar que tocan los dos nodos (el Capubana, el
+               camino Moruy–Caseto). Es la lectura que el mapa aguanta y la
+               frontera binaria no: Moruy–Caseto son 7,6 km y son de nodos
+               distintos; Tacuato–El Cayude son 12,7 y son del mismo. Sobre un
+               run anterior a la escena avisa y sigue.
 
 EL MÉTODO, Y SU LÍMITE
 ----------------------
@@ -64,6 +72,7 @@ llamada `na`, `nan` o `null` en un valor nulo.
 Uso:
     python analizar_nodos.py --run 0193873d              # esa cadena, todo
     python analizar_nodos.py --run 0193873d --formas     # sólo las formas
+    python analizar_nodos.py --run 0193873d --lugar      # sólo la escena
     python analizar_nodos.py --todo                      # las cadenas de la era 2
     python analizar_nodos.py --run 0193873d --json       # a stdout, para el informe
 """
@@ -772,11 +781,333 @@ def habla_por_nodo(usos: list[dict], nodo_de: dict[str, str],
 
 
 # ══════════════════════════════════════════════════════════════════════
+# VII-bis. LA ESCENA — dónde estuvo cada quien, y dónde se dijo cada cosa
+# ══════════════════════════════════════════════════════════════════════
+#
+# Todo esto sale de `presencias` (migración 20260917000000), que guarda a los 63
+# agentes en cada uno de los seis momentos del día y no sólo a los 12 que
+# hablan. Antes de ella no había columna de lugar en ninguna tabla: el único
+# modo de saber dónde estaba alguien era su `ubicacion_default`, que no cambia
+# nunca. Un run anterior —o corrido con `--sin-escena`— no tiene filas aquí, y
+# esta sección lo dice y sigue en vez de imprimir una tabla vacía que parezca
+# llena.
+
+def hay_tabla_presencias() -> bool:
+    """¿Está la migración aplicada en ESTA base? Se pregunta antes de leer
+    porque una base sin migrar hace fallar la consulta entera, y el resto del
+    informe (formas, distancia) no depende de la escena."""
+    filas = q("""
+        select count(*) as n from information_schema.tables
+        where table_schema = 'public' and table_name = 'presencias'
+    """)
+    return bool(filas) and int(filas[0]["n"]) > 0
+
+
+def cargar_presencias(run_ids: list[str]) -> list[dict]:
+    """(dia, turno, momento, agente, lugar, nodo, run). El nodo se lee de la
+    FILA y no del elenco de hoy: el módulo del elenco es generado y se
+    regenera, y lo que hay que saber es de qué lado estaba la gente el día del
+    run."""
+    filas = q(f"""
+        select p.day as dia, p.turn_num as turno,
+               coalesce(p.momento, '') as momento,
+               p.agent_name as agente, p.lugar as lugar,
+               coalesce(p.nodo, '') as nodo, p.run_id::text as run
+        from presencias p
+        where p.run_id in ({_lista_sql(run_ids)}) and p.lugar is not null
+        order by 1, 2, 5, 4
+    """)
+    for f in filas:
+        f["dia"] = int(f["dia"])
+        f["turno"] = int(f["turno"])
+    return filas
+
+
+def cargar_hablantes(run_ids: list[str]) -> list[dict]:
+    """Quién habló en cada turno, con el lugar DESNORMALIZADO de
+    `agent_responses.lugar` (vacío si el run no lo escribió). Una fila por
+    respuesta: es la que decide si una escena tuvo una voz o varias."""
+    filas = q(f"""
+        select t.day as dia, t.turn_num as turno, r.agent_name as agente,
+               coalesce(r.lugar, '') as lugar
+        from agent_responses r join turns t on t.id = r.turn_id
+        where r.run_id in ({_lista_sql(run_ids)})
+        order by 1, 2, 3
+    """)
+    for f in filas:
+        f["dia"] = int(f["dia"])
+        f["turno"] = int(f["turno"])
+    return filas
+
+
+def orden_de_momentos(presencias: list[dict]) -> list[str]:
+    """Los momentos del día, en el orden en que ocurren. MEDIDO del turno en el
+    que aparece cada uno, no escrito: si un día corre con otro número de
+    momentos, la tabla sigue saliendo bien."""
+    primero: dict[str, int] = {}
+    for p in presencias:
+        m = p["momento"] or f"turno {p['turno']}"
+        primero[m] = min(primero.get(m, p["turno"]), p["turno"])
+    return sorted(primero, key=lambda m: (primero[m], m))
+
+
+def ocupacion_por_lugar(presencias: list[dict]) -> list[dict]:
+    """Cuánta gente hubo en cada lugar, por momento.
+
+    La cifra que se imprime es la MEDIA POR DÍA (presencias del par
+    lugar×momento / días en que ese momento se corrió), no el total: una cadena
+    de tres días triplicaría los conteos y parecería que el mundo se llenó.
+    """
+    dias_del_momento: dict[str, set] = defaultdict(set)
+    for p in presencias:
+        dias_del_momento[p["momento"]].add(p["dia"])
+
+    por_lugar: dict[str, dict[str, set]] = defaultdict(lambda: defaultdict(set))
+    agentes: dict[str, set] = defaultdict(set)
+    nodos: dict[str, set] = defaultdict(set)
+    for p in presencias:
+        por_lugar[p["lugar"]][p["momento"]].add((p["dia"], p["agente"]))
+        agentes[p["lugar"]].add(p["agente"])
+        if p["nodo"]:
+            nodos[p["lugar"]].add(p["nodo"])
+
+    filas = []
+    for lugar, momentos in por_lugar.items():
+        celdas = {}
+        for m, pares in momentos.items():
+            dias = len(dias_del_momento[m]) or 1
+            celdas[m] = {"presencias": len(pares),
+                         "media_por_dia": round(len(pares) / dias, 2)}
+        filas.append({
+            "lugar": lugar,
+            "presencias": sum(c["presencias"] for c in celdas.values()),
+            "agentes_distintos": len(agentes[lugar]),
+            "nodos": sorted(nodos[lugar]),
+            "por_momento": celdas,
+        })
+    filas.sort(key=lambda f: (-f["presencias"], f["lugar"]))
+    return filas
+
+
+def lugares_compartidos(presencias: list[dict]) -> dict:
+    """Qué lugares tocan los DOS nodos — y si los tocan a la vez.
+
+    La distinción es la de §3.4 del diseño: un lugar «compartido» donde los dos
+    nodos nunca coinciden en el mismo turno no produce contacto, sólo
+    coincidencia en el plano. La escena derivada daba CERO simultáneos sobre el
+    papel; aquí se mide sobre lo que el run guardó de verdad.
+    """
+    nodos_de: dict[str, set] = defaultdict(set)
+    por_turno: dict[tuple, set] = defaultdict(set)
+    for p in presencias:
+        if not p["nodo"]:
+            continue
+        nodos_de[p["lugar"]].add(p["nodo"])
+        por_turno[(p["dia"], p["turno"], p["lugar"])].add(p["nodo"])
+
+    simultaneos = {clave[2] for clave, ns in por_turno.items() if len(ns) > 1}
+    filas = [{"lugar": lugar, "nodos": sorted(ns), "compartido": len(ns) > 1,
+              "simultaneo": lugar in simultaneos}
+             for lugar, ns in sorted(nodos_de.items())]
+    return {
+        "lugares": filas,
+        "n_lugares": len(filas),
+        "compartidos": sorted(f["lugar"] for f in filas if f["compartido"]),
+        "compartidos_simultaneos": sorted(simultaneos),
+        "turnos_con_dos_nodos": sum(1 for ns in por_turno.values() if len(ns) > 1),
+    }
+
+
+def escenas_del_turno(presencias: list[dict], hablantes: list[dict]) -> dict:
+    """Una ESCENA es (día, turno, lugar) con alguien dentro. ¿Cuántas tuvieron
+    más de una voz?
+
+    Es la medición que decide si la capa 2 (oír por lugar) tiene material: una
+    escena de una sola voz es un ámbito vacío — el dato, no el fallo, pero nadie
+    oye a nadie allí. Se cuenta también por HABLANTE, que es la cifra que
+    importa: qué porcentaje de las intervenciones cae en un lugar donde ese
+    mismo turno habla alguien más.
+    """
+    lugar_de = {(p["dia"], p["turno"], p["agente"]): p["lugar"] for p in presencias}
+    presentes: dict[tuple, set] = defaultdict(set)
+    for p in presencias:
+        presentes[(p["dia"], p["turno"], p["lugar"])].add(p["agente"])
+
+    voces: dict[tuple, set] = defaultdict(set)
+    sin_presencia = []
+    declarado_discrepa = 0
+    con_lugar_declarado = 0
+    for h in hablantes:
+        lugar = lugar_de.get((h["dia"], h["turno"], h["agente"]))
+        if h["lugar"]:
+            con_lugar_declarado += 1
+            if lugar is not None and h["lugar"] != lugar:
+                declarado_discrepa += 1
+        if lugar is None:
+            sin_presencia.append(h["agente"])
+            continue
+        voces[(h["dia"], h["turno"], lugar)].add(h["agente"])
+
+    escenas = sorted(presentes)
+    n_voces = {e: len(voces.get(e, ())) for e in escenas}
+    con_compania = sum(len(voces[e]) for e in voces if len(voces[e]) >= 2)
+    intervenciones = sum(len(v) for v in voces.values())
+    return {
+        "escenas": len(escenas),
+        "escenas_con_voz": sum(1 for e in escenas if n_voces[e] >= 1),
+        "escenas_con_dos_o_mas_voces": sum(1 for e in escenas if n_voces[e] >= 2),
+        "voces_max_en_una_escena": max(n_voces.values(), default=0),
+        "intervenciones_ubicadas": intervenciones,
+        "intervenciones_con_compania": con_compania,
+        "pct_con_compania": (round(100 * con_compania / intervenciones, 1)
+                             if intervenciones else None),
+        "hablantes_sin_presencia": len(sin_presencia),
+        "respuestas_con_lugar_declarado": con_lugar_declarado,
+        "respuestas_totales": len(hablantes),
+        "lugar_declarado_discrepa": declarado_discrepa,
+        "presencias_por_turno": (round(len(presencias) /
+                                       len({(p["dia"], p["turno"]) for p in presencias}), 1)
+                                 if presencias else None),
+    }
+
+
+def cruce_por_lugar(usos: list[dict], presencias: list[dict],
+                    excluidas: frozenset, neologismos: list[dict],
+                    koine: list[dict], compartidos: set,
+                    turnos_por_dia: int = 6) -> list[dict]:
+    """El cruce de una forma, pero por LUGAR en vez de por nodo.
+
+    La lectura que el mapa aguanta y la frontera binaria no (§5.2 del diseño):
+    Moruy–Caseto son 7,6 km y son de nodos distintos; Tacuato–El Cayude son 12,7
+    y son del mismo. Por cada forma emergente: dónde se dijo primero, en cuántos
+    lugares se dijo, cuándo salió del suyo, y si pasó por un lugar que tocan los
+    dos nodos —el Capubana, el camino— que es por donde el diseño espera que
+    salga.
+
+    Una forma cuyos usos no se pueden ubicar (el agente no tiene presencia ese
+    turno) queda `ubicable: False` y no entra en los resúmenes: es preferible
+    contar menos que fechar un viaje que no se vio.
+    """
+    lugar_de = {(p["dia"], p["turno"], p["agente"]): p["lugar"] for p in presencias}
+    emergentes = formas_emergentes(usos, neologismos, koine, excluidas)
+
+    por_forma: dict[str, list[dict]] = defaultdict(list)
+    for u in usos:
+        if u["forma"] in emergentes:
+            por_forma[u["forma"]].append(u)
+
+    filas = []
+    for forma in sorted(por_forma):
+        ubicados = []
+        sin_ubicar = 0
+        for u in por_forma[forma]:
+            lugar = lugar_de.get((u["dia"], u["turno"], u["agente"]))
+            if lugar is None:
+                sin_ubicar += 1
+            else:
+                ubicados.append((u["dia"], u["turno"], lugar, u["agente"]))
+        if not ubicados:
+            filas.append({"forma": forma, "ubicable": False, "usos_sin_ubicar": sin_ubicar})
+            continue
+        ubicados.sort()
+        d0, t0, lugar0, _ = ubicados[0]
+        # El lugar de nacimiento es plural si en ese mismo (día, turno) la forma
+        # sonó en dos sitios: entonces no nació en ninguno y «salir» no
+        # significa nada, igual que `acunacion_multinodo` con los nodos.
+        natales = sorted({l for d, t, l, _ in ubicados if (d, t) == (d0, t0)})
+        fuera = [(d, t, l) for d, t, l, _ in ubicados if l not in natales]
+        salida = min(fuera) if fuera else None
+        lugares = sorted({l for _, _, l, _ in ubicados})
+        en_compartido = sorted(set(lugares) & compartidos)
+        filas.append({
+            "forma": forma,
+            "ubicable": True,
+            "usos_ubicados": len(ubicados),
+            "usos_sin_ubicar": sin_ubicar,
+            "lugares": lugares,
+            "n_lugares": len(lugares),
+            "lugares_natales": natales,
+            "nacimiento_multilugar": len(natales) > 1,
+            "dia_nacimiento": d0,
+            "turno_nacimiento": t0,
+            "dia_salida": salida[0] if salida else None,
+            "turno_salida": salida[1] if salida else None,
+            "lugar_salida": salida[2] if salida else None,
+            "turnos_hasta_salir": (None if salida is None else
+                                   (salida[0] - d0) * turnos_por_dia + (salida[1] - t0)),
+            "murio_en_su_lugar": salida is None and len(natales) == 1,
+            "lugares_compartidos_tocados": en_compartido,
+            "paso_por_compartido": bool(en_compartido),
+        })
+    filas.sort(key=lambda f: (-f.get("usos_ubicados", 0), f["forma"]))
+    return filas
+
+
+def resumen_cruce_por_lugar(filas: list[dict]) -> dict:
+    """Las cifras del cruce por lugar, todas contadas de `cruce_por_lugar`."""
+    ubicables = [f for f in filas if f["ubicable"]]
+    salieron = [f for f in ubicables if f["turnos_hasta_salir"] is not None]
+    dts = sorted(f["turnos_hasta_salir"] for f in salieron)
+    return {
+        "formas": len(filas),
+        "ubicables": len(ubicables),
+        "sin_ubicar": len(filas) - len(ubicables),
+        "murieron_en_su_lugar": sum(1 for f in ubicables if f["murio_en_su_lugar"]),
+        "nacieron_en_varios_lugares": sum(1 for f in ubicables
+                                          if f["nacimiento_multilugar"]),
+        "salieron_de_su_lugar": len(salieron),
+        "turnos_hasta_salir_mediana": dts[len(dts) // 2] if dts else None,
+        "turnos_hasta_salir_min": dts[0] if dts else None,
+        "turnos_hasta_salir_max": dts[-1] if dts else None,
+        "mismo_turno": sum(1 for d in dts if d == 0),
+        "pasaron_por_compartido": sum(1 for f in ubicables if f["paso_por_compartido"]),
+        "lugares_distintos_mediana": (
+            sorted(f["n_lugares"] for f in ubicables)[len(ubicables) // 2]
+            if ubicables else None),
+    }
+
+
+def analizar_lugar(run_ids: list[str], usos: list[dict], neologismos: list[dict],
+                   koine: list[dict], excluidas: frozenset,
+                   turnos_por_dia: int = 6) -> dict:
+    """La sección `--lugar` entera. Devuelve `disponible: False` con su motivo
+    —y nada más— cuando la base o el run no tienen escena: un run viejo se avisa
+    y se sigue, no se rompe."""
+    if not hay_tabla_presencias():
+        return {"disponible": False,
+                "motivo": "esta base no tiene la tabla `presencias` (migración "
+                          "20260917000000 sin aplicar)"}
+    presencias = cargar_presencias(run_ids)
+    hablantes = cargar_hablantes(run_ids)
+    if not presencias:
+        return {"disponible": False, "respuestas": len(hablantes),
+                "motivo": "esta cadena corrió SIN escena: 0 filas en `presencias`"}
+    comp = lugares_compartidos(presencias)
+    cruce = cruce_por_lugar(usos, presencias, excluidas, neologismos, koine,
+                            set(comp["compartidos"]), turnos_por_dia)
+    por_run = Counter(p["run"] for p in presencias)
+    return {
+        "disponible": True,
+        "presencias": len(presencias),
+        "por_run": {r[:8]: por_run[r] for r in run_ids if r in por_run},
+        "dias": sorted({p["dia"] for p in presencias}),
+        "momentos": orden_de_momentos(presencias),
+        "agentes_en_escena": len({p["agente"] for p in presencias}),
+        "ocupacion": ocupacion_por_lugar(presencias),
+        "compartidos": comp,
+        "escenas": escenas_del_turno(presencias, hablantes),
+        "cruce": cruce,
+        "resumen_cruce": resumen_cruce_por_lugar(cruce),
+    }
+
+
+# ══════════════════════════════════════════════════════════════════════
 # VIII. INFORME
 # ══════════════════════════════════════════════════════════════════════
 
 def analizar_cadena(cadena: list[dict], umbral: float = UMBRAL_INCLINACION,
-                    min_hablantes: int = MIN_HABLANTES) -> dict:
+                    min_hablantes: int = MIN_HABLANTES,
+                    con_lugar: bool = False) -> dict:
     run_ids = [r["id"] for r in cadena]
     nodo_de, casa_de, posibles = elenco_por_nodo()
     excluidas = formas_excluidas()
@@ -784,6 +1115,10 @@ def analizar_cadena(cadena: list[dict], umbral: float = UMBRAL_INCLINACION,
     neologismos = cargar_neologismos(run_ids)
     koine = cargar_koine_lexicon(run_ids)
     tpd = max(int(r["turnos_por_dia"] or 6) for r in cadena)
+    # La escena se consulta SÓLO si se pidió: son dos consultas más y la
+    # mayoría de las cadenas de la base corrieron antes de que existiera.
+    lugar = (analizar_lugar(run_ids, usos, neologismos, koine, excluidas, tpd)
+             if con_lugar else None)
     return {
         "cadena": [{"run": r["id"][:8], "run_id": r["id"], "dias": int(r["total_days"]),
                     "perfil": r["perfil"], "semilla": r["semilla"],
@@ -802,11 +1137,108 @@ def analizar_cadena(cadena: list[dict], umbral: float = UMBRAL_INCLINACION,
         "distancia": analizar_distancia(usos, nodo_de, excluidas),
         "acunacion_sin_uso_registrado": acunacion_sin_uso_registrado(run_ids),
         "koine_metrics_del_motor": cargar_metricas_koine(run_ids),
+        # Sólo con `--lugar`: sin la bandera la clave no existe y el JSON es el
+        # de siempre.
+        **({"lugar": lugar} if lugar is not None else {}),
     }
 
 
 def _fmt(x, n=3) -> str:
     return "—" if x is None else f"{x:.{n}f}"
+
+
+def imprimir_lugar(res: dict, top: int) -> None:
+    """La sección de la escena. Si no hay escena, dice por qué y vuelve."""
+    lug = res.get("lugar")
+    if lug is None:
+        return
+    sub("La escena — dónde estuvo cada quien (tabla `presencias`)")
+    if not lug["disponible"]:
+        print(f"  ⚠ Sin escena: {lug['motivo']}.")
+        print("    Los runs anteriores al 2026-09-17 corrieron sin capa 1: el "
+              "lugar de un agente era su `ubicacion_default`, que no cambia "
+              "nunca. Lo de arriba (formas, distancia) no depende de esto.")
+        return
+
+    esc = lug["escenas"]
+    print(f"  {lug['presencias']} presencias · {lug['agentes_en_escena']} agentes · "
+          f"días {', '.join(str(d) for d in lug['dias'])} · "
+          f"{esc['presencias_por_turno']} presencias por turno de media")
+    print("  Por run: " + " · ".join(f"{r} {n}" for r, n in lug["por_run"].items()))
+
+    momentos = lug["momentos"]
+    sub(f"Ocupación por lugar y momento (media por día) — las {top} más pobladas")
+    cab = f"  {'lugar':<26}" + "".join(f"{m[:9]:>10}" for m in momentos) + f"{'nodos':>16}"
+    print(cab)
+    print("  " + "─" * (len(cab) - 2))
+    for f in lug["ocupacion"][:top]:
+        celdas = ""
+        for m in momentos:
+            c = f["por_momento"].get(m)
+            celdas += f"{c['media_por_dia']:>10.1f}" if c else f"{'·':>10}"
+        print(f"  {f['lugar']:<26}{celdas}{'+'.join(n[:3] for n in f['nodos']) or '—':>16}")
+
+    comp = lug["compartidos"]
+    sub("Lugares que tocan los dos nodos")
+    print(f"  {comp['n_lugares']} lugares con nodo · compartidos: "
+          f"{', '.join(comp['compartidos']) or 'ninguno'}")
+    print(f"  Compartidos EN EL MISMO TURNO (contacto de verdad): "
+          f"{', '.join(comp['compartidos_simultaneos']) or 'ninguno'} · "
+          f"{comp['turnos_con_dos_nodos']} turno(s) con los dos nodos en un lugar")
+    if not comp["compartidos_simultaneos"]:
+        print("  ⚠ Ningún lugar junta a los dos nodos en el mismo turno. Es el "
+              "resultado que la escena derivada anticipaba (§3.4: cero lugares "
+              "compartidos emergentes): el mundo no produce contacto solo, hay "
+              "que declararlo o hacerlo viajar.")
+
+    sub("Escenas y voces (una escena = día × turno × lugar con alguien dentro)")
+    print(f"  {esc['escenas']} escenas · {esc['escenas_con_voz']} con alguna voz · "
+          f"{esc['escenas_con_dos_o_mas_voces']} con dos o más "
+          f"(máximo {esc['voces_max_en_una_escena']} voces en una)")
+    print(f"  Intervenciones ubicadas: {esc['intervenciones_ubicadas']} de "
+          f"{esc['respuestas_totales']} · con compañía en su lugar: "
+          f"{esc['intervenciones_con_compania']} ({esc['pct_con_compania']}%)")
+    if esc["hablantes_sin_presencia"]:
+        print(f"  ⚠ {esc['hablantes_sin_presencia']} respuesta(s) de agentes sin "
+              f"fila en `presencias` ese turno: habló alguien que no estaba en "
+              f"la escena. Es el guardián barato del §5b, en texto.")
+    print(f"  `agent_responses.lugar` escrito en {esc['respuestas_con_lugar_declarado']} "
+          f"de {esc['respuestas_totales']} respuestas · discrepan de `presencias`: "
+          f"{esc['lugar_declarado_discrepa']}")
+
+    rc = lug["resumen_cruce"]
+    sub(f"Cruce de formas POR LUGAR — las {top} más usadas")
+    cab = (f"  {'forma':<22}{'usos':>6}{'lugares':>8}  {'nació en':<22}"
+           f"{'salió':>7}{'Δturnos':>9}  {'compartido':<20}")
+    print(cab)
+    print("  " + "─" * (len(cab) - 2))
+    for f in lug["cruce"][:top]:
+        if not f["ubicable"]:
+            print(f"  {f['forma']:<22}{'—':>6}{'—':>8}  {'(sin ubicar)':<22}")
+            continue
+        natal = "+".join(f["lugares_natales"])
+        salida = (f"d{f['dia_salida']}t{f['turno_salida']}"
+                  if f["turnos_hasta_salir"] is not None else
+                  ("n/a" if f["nacimiento_multilugar"] else "no"))
+        dt = ("—" if f["turnos_hasta_salir"] is None
+              else str(f["turnos_hasta_salir"]))
+        print(f"  {f['forma']:<22}{f['usos_ubicados']:>6}{f['n_lugares']:>8}  "
+              f"{natal[:22]:<22}{salida:>7}{dt:>9}  "
+              f"{','.join(f['lugares_compartidos_tocados'])[:20]:<20}")
+    print("\n  (Δturnos = turnos desde el primer uso hasta el primero fuera del "
+          "lugar donde nació · n/a = sonó en dos lugares a la vez, así que no "
+          "hay lugar del que salir)")
+    print(f"  De {rc['formas']} formas emergentes, {rc['ubicables']} se pueden "
+          f"ubicar y {rc['sin_ubicar']} no (su hablante no tiene presencia ese turno).")
+    print(f"  {rc['salieron_de_su_lugar']} salieron de su lugar, "
+          f"{rc['murieron_en_su_lugar']} murieron en él, "
+          f"{rc['nacieron_en_varios_lugares']} nacieron en varios a la vez.")
+    if rc["turnos_hasta_salir_mediana"] is not None:
+        print(f"  Turnos hasta salir del lugar: mediana "
+              f"{rc['turnos_hasta_salir_mediana']}, mínimo {rc['turnos_hasta_salir_min']}, "
+              f"máximo {rc['turnos_hasta_salir_max']} · mismo turno: {rc['mismo_turno']}")
+    print(f"  Pasaron por un lugar compartido: {rc['pasaron_por_compartido']} · "
+          f"mediana de lugares distintos por forma: {rc['lugares_distintos_mediana']}")
 
 
 def imprimir(res: dict, top: int, con_formas: bool, con_distancia: bool) -> None:
@@ -976,6 +1408,7 @@ def main() -> int:
             Ejemplos:
               python analizar_nodos.py --run 0193873d
               python analizar_nodos.py --todo --formas
+              python analizar_nodos.py --run 0193873d --lugar
               python analizar_nodos.py --run 0193873d --json > nodos.json
         """))
     p.add_argument("--run", metavar="ID8",
@@ -984,6 +1417,10 @@ def main() -> int:
                    help="todas las cadenas de la era 2")
     p.add_argument("--formas", action="store_true", help="sólo la tabla de formas")
     p.add_argument("--distancia", action="store_true", help="sólo la distancia intra/entre")
+    p.add_argument("--lugar", action="store_true",
+                   help="la escena: ocupación por lugar y momento, escenas con "
+                        "más de un hablante y cruce de formas por lugar "
+                        "compartido (tabla `presencias`)")
     p.add_argument("--top", type=int, default=25, help="formas a imprimir (def. 25)")
     p.add_argument("--umbral", type=float, default=UMBRAL_INCLINACION,
                    help=f"razón de tasas para llamar «inclinada» (def. {UMBRAL_INCLINACION})")
@@ -1000,18 +1437,24 @@ def main() -> int:
         print("No hay cadenas de la era 2 en la base.")
         return 1
 
-    resultados = [analizar_cadena(c, args.umbral, args.min_hablantes) for c in cadenas]
+    resultados = [analizar_cadena(c, args.umbral, args.min_hablantes, args.lugar)
+                  for c in cadenas]
 
     if args.json:
         print(json.dumps(resultados if len(resultados) > 1 else resultados[0],
                          ensure_ascii=False, indent=2))
         return 0
 
-    # Sin banderas de sección: las dos.
-    con_formas = args.formas or not (args.formas or args.distancia)
-    con_dist = args.distancia or not (args.formas or args.distancia)
+    # Sin banderas de sección: formas y distancia, como siempre. `--lugar` es
+    # una sección más y sólo sale si se pide: la escena no existe en los runs
+    # anteriores al 2026-09-17 y el informe de siempre no tiene por qué cambiar.
+    pedidas = (args.formas, args.distancia, args.lugar)
+    con_formas = args.formas or not any(pedidas)
+    con_dist = args.distancia or not any(pedidas)
     for r in resultados:
         imprimir(r, args.top, con_formas, con_dist)
+        if args.lugar:
+            imprimir_lugar(r, args.top)
     return 0
 
 
