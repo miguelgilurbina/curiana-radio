@@ -57,6 +57,7 @@ cura y se publica en Curiana Radio (`/kaketiana`).
 | Trampa | Qué pasa |
 |---|---|
 | **Supabase local, no cloud** | El cloud llegó a 8.17 GB de egress. Puertos **64321/64322**, no los 54321 por defecto (esos son de otro proyecto, fintech). Para consultar: `docker exec supabase_db_curiana_sim psql -U postgres -d postgres` |
+| **`supabase migration up` no aplica la migración nueva** | La base local tiene 4 versiones en `supabase_migrations.schema_migrations` y `supabase/migrations/` tiene 10: la CLI ve las viejas sin registrar, se planta y pide `--include-all`, que las re-aplicaría (y `20260620000000` crea políticas sin `drop if exists`, así que revienta). Lo que funciona, y es como entraron `loanword_uses` y `presencias`: `docker cp` el `.sql` al contenedor, `psql -v ON_ERROR_STOP=1 -f`, y registrar la versión a mano en `schema_migrations`. Verificar después con `information_schema.columns` |
 | **Cada entrypoint carga su `.env`** | Leer `os.environ` no basta: `load_dotenv(...)` al inicio del módulo o falla por credenciales |
 | **`pypdf` ≠ `pdftotext`** | Producen texto distinto del mismo PDF. Arcaya sale **vacío** con pypdf; `pdftotext` da 467 KB. Y pypdf parte `Todariquiba` en `T odariquiba` |
 | **Tablas a dos columnas** | Se desalinean sin `-layout`. Extraer las dos veces y comparar |
@@ -106,6 +107,13 @@ python analizar_nodos.py --run <id8>  # la era 2 por nodo (GUARANAO/AMUAY): form
                                   # normalizadas por hablantes posibles, cruce entre
                                   # nodos y distancia idiolectal intra/entre. Sube la
                                   # cadena por `continuado_desde`; `--todo` las cadenas
+python analizar_nodos.py --run <id8> --lugar   # la ESCENA (tabla `presencias`):
+                                  # ocupación por lugar y momento, cuántas escenas
+                                  # tuvieron más de un hablante, y el cruce de las formas
+                                  # por LUGAR además de por nodo — con qué lugares tocan
+                                  # los dos nodos EN EL MISMO TURNO. Sin la bandera el
+                                  # informe es el de siempre; sobre un run anterior a la
+                                  # escena avisa y sigue
 python compilar_corpus.py --check # valida 3-mundo/corpus/
 python compilar_asentamientos.py  # los nodos de la esfera: existencia y época
 python compilar_etnias.py         # los vecinos: con quién, y de qué polity (regla 4)
@@ -267,10 +275,27 @@ LANGSMITH_API_KEY=...                 # opcional
 simulation_runs → turns → agent_responses → word_uses       (sólo caquetío: palabras_caquetias + lo que esa respuesta ACUÑA)
                                           → loanword_uses   (la esfera de contacto, aparte; con tier y día)
                                           → neologisms
+                        → presencias                        (la ESCENA: dónde estaba CADA uno de los 63 en cada
+                                                             momento del día, no sólo los 12 que hablaron)
                        → agent_profiles → agent_quotes
                        → koine_metrics · koine_lexicon
 lexicon
 ```
+
+`presencias` (migración `20260917000000`, decisión de Miguel del 2026-09-17) es
+la capa 1 de la escena: una fila por agente y turno —**63 × 6 momentos = 378 por
+día**— con `lugar`, `momento` y el `nodo` congelado del elenco que corrió. Es lo
+que hace posible el visor de repetición sobre el mapa, porque «un mapa con 12 de
+63 no es un mundo», y lo que lee `analizar_nodos.py --lugar`. Se escribe con
+`curiana_database.save_presencias(run_id, turn_id, dia, turno, momento, escena)`,
+**una inserción por lote** y no 63 llamadas; sus fallos se cuentan en
+`db_fallos["presencias"]` como los de cualquier otra tabla. Un run sin escena
+—la era 1, o `--sin-escena`— pasa `{}` y no escribe nada. `agent_responses.lugar`
+va desnormalizado al lado de la respuesta para que las consultas de lengua no
+tengan que unir una cuarta tabla; sin escena la columna ni se menciona en el
+insert. ⚠️ `presencias` pasa del `max_rows`=1000 de PostgREST en tres días: sus
+lectores (`presencias_de`, `presencias_de_cadena`) paginan, y cualquier otro
+tiene que hacerlo.
 
 ⚠️ `word_uses.source_language` se resuelve con `_familia_de_token()`, que
 deshace prefijos y sufijos. Si vuelve a hacerse con un lookup pelado, **la mitad
