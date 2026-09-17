@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-17**.
 
-**2606 ítems propuestos** en 64 propuestas, más **5 issue(s)/comentario(s) redactados sin publicar**.
+**2617 ítems propuestos** en 65 propuestas, más **6 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -47,6 +47,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-09-14.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-15.yaml` | ? | 0 |  |
 | `elenco_era2.yaml` | varias | 63 |  |
+| `escena_por_lugar_propuesta_2026-09-17.yaml` | varias | 11 |  |
 | `esteves_paginas_releidas_2026-09-16.yaml` | esteves-1989 | 12 |  |
 | `esteves_parte2_falcon.yaml` | esteves-1989 | 16 |  |
 | `estructura_social_era2.yaml` | varias | 17 |  |
@@ -117,6 +118,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 |---|---|
 | `comentario-122-frase-cardinal-oliver.md` | Comentario para #122 — la frase cardinal de Oliver, releída en las dos ediciones |
 | `decision-d11-fase3-nucleo-lokono-achagua.md` | D11 fase 3: el núcleo re-derivado desde lokono + achagua, y un perfil de run para medirlo |
+| `existir-en-el-mundo-escena-por-lugar-2026-09-17.md` | Existir en el mundo: la escena por lugar |
 | `frontera-entre-nodos-2026-09-17.md` | La frontera entre nodos: el motor no tiene ninguna |
 | `golfete-en-paraguana-2026-09-17.md` | «Golfete» en Paraguaná: por dónde entra, a quién le sobra y qué decidir |
 | `mundo-era2-sitios-y-clima.md` | El mundo de la era 2, atado a los nodos: sitios y clima |
