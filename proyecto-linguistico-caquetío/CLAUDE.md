@@ -195,7 +195,8 @@ python curiana_orchestrator_v2.py --auto 30 --perfil base --perfiles --reporte
 #                           simulation_runs.config con `capubana_cada`, sale en la cabecera del run
 #                           y **una cadena --continuar no puede cambiar de brazo a la mitad**: el
 #                           motor avisa y se niega (la evidencia es la DIFERENCIA entre dos cadenas
-#                           completas con la misma semilla, §5.4 del diseño)
+#                           completas con la misma semilla, §5.4 del diseño) — y `curiana_cadena`
+#                           tampoco mezcla los días de dos brazos si la base trae una cadena vieja
 #                           Y DESDE EL 2026-09-17 el lugar es además el ÁMBITO de lo que el agente
 #                           VE (capa 2, decisiones p5/p6/p9): las cuatro vías por las que circula
 #                           una forma dejan de ser de toda la comunidad —V1 las propuestas en
@@ -209,6 +210,9 @@ python curiana_orchestrator_v2.py --auto 30 --perfil base --perfiles --reporte
 #                           llevó) — eso último sale medido en el diccionario de cierre. Ojo: el
 #                           bloque de oír sale en 17 de 72 prompts (hablan 12 de 63 repartidos en
 #                           8-27 lugares) y en 60 de 72 el día de Capubana
+#   --dry-run               imprime la config RESUELTA (perfil, serie, escena, capubana_cada,
+#                           semilla, continuado_desde) y sale sin llamar a NADA: ni a la API, ni a
+#                           la base, ni a git. Para leer el brazo antes de gastar un día de API
 #   --capubana-cada N       cada cuántos días convergen los dos nodos en el cerro; ese día los 63
 #                           están en el Capubana los seis momentos. Por defecto 3 (decisión 7 → A:
 #                           el ciclo mayor del canon cae en los días 55-58 de la seca y una cadena
@@ -219,6 +223,7 @@ python curiana_escena.py                                  # las 1.134 escenas de
 python curiana_escena.py --capubana                       # y el día de la convergencia
 python curiana_escena.py --oir                            # los bloques [Lo que se dijo aquí] y sus largos (del run
                                                           # guardado si lo hay; si no, del ensayo)
+python curiana_orchestrator_v2.py ... --dry-run           # la config resuelta del run, sin llamar a nada
 python curiana_eventos.py                                 # el catálogo de eventos medido y dicho para la era 2
 python curiana_cadena.py                                  # las cadenas `--continuar`: serie de koiné y veredicto por cadena
                                                           # (un run es UN día: su serie sola nunca tiene dos puntos)
@@ -267,7 +272,7 @@ fuentes_caquetios/ los PDF (se citan, no se editan)
 | `curiana_lexicon` | vocabulario + reglas + prompts + `score_linguistico()`. Las dos vías comunitarias del prompt (V1 propuestas, V2 adoptadas) reciben `ambito` y `LexicoComunitario` guarda dónde se propuso y dónde se adoptó cada forma (`situar()` es quien se lo dice) |
 | `curiana_agents` | los 60 personajes |
 | `curiana_koine` | idiolectos, competencia léxica, métricas de convergencia. `CampoLexico` está partido por ámbito (`{lugar: pesos}`, el global es la suma) y `prompt_competencias(ambito=…)` sólo muestra las formas rivales propuestas allí |
-| `curiana_cadena` | la cadena `continuado_desde`: serie de koiné y veredicto sobre TODOS los días encadenados, no sobre el run suelto |
+| `curiana_cadena` | la cadena `continuado_desde`: serie de koiné y veredicto sobre TODOS los días encadenados, no sobre el run suelto. **No mezcla brazos**: los días de un run que corrió con otra escena (o con otra cadencia) quedan fuera de la serie, con aviso |
 | `curiana_social` | contagio léxico, prestigio, variación dialectal. Las tablas están escritas con los nombres de la era 1: se leen por `prestigio_de()` y `vinculos_de()`, que resuelven el alias y derivan de la ficha lo que no está escrito (`python curiana_social.py` mide el grafo del elenco activo) |
 | `curiana_state` | día, estación, locaciones, eventos (escritos para la era 1) y el **estado inicial por mundo** (`estado_inicial(MUNDO)`). Desde el 2026-09-17 lleva además el brazo de la escena (`escena`, `capubana_cada`, `escena_del_turno`, `dichos_del_turno_anterior`), que `--continuar` hereda |
 | `curiana_eventos` | los eventos dichos para el elenco activo: alias, sin foráneos, reescrituras declaradas. Y el **texto libre** que llega al Director y al agente (`decir_para_el_mundo`) |

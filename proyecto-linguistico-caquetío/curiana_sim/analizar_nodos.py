@@ -259,6 +259,9 @@ def cadena_de_runs(run_id: str) -> list[dict]:
                    coalesce(config->>'perfil', '') as perfil,
                    coalesce(config->>'semilla', '') as semilla,
                    coalesce(config->>'turnos_por_dia', '6') as turnos_por_dia,
+                   coalesce(config->>'serie', '') as serie,
+                   coalesce(config->>'escena', '') as escena,
+                   coalesce(config->>'capubana_cada', '') as capubana_cada,
                    coalesce(config->>'motor_commit', '') as motor_commit
             from simulation_runs where id = '{actual}'
         """)
@@ -1105,6 +1108,28 @@ def analizar_lugar(run_ids: list[str], usos: list[dict], neologismos: list[dict]
 # VIII. INFORME
 # ══════════════════════════════════════════════════════════════════════
 
+def brazo_de_la_cadena(cadena: list[dict]) -> dict:
+    """Con qué brazo corrió la cadena, leído de `simulation_runs.config`.
+
+    La escena es un BRAZO, no un parche: la evidencia es la diferencia entre
+    dos cadenas completas con la misma semilla (diseño §5.4), así que el
+    informe tiene que decir cuál está leyendo. `mezcla` avisa de la cadena que
+    cambió de brazo a la mitad —el motor ya no deja hacerla, pero la base
+    viene de antes que esa comprobación."""
+    brazos = {((r.get("escena") or "").lower() == "true",
+               int(r.get("capubana_cada") or 0)) for r in cadena}
+    escena = any(e for e, _ in brazos)
+    cadencias = sorted({c for e, c in brazos if e and c})
+    return {
+        "escena": escena,
+        "capubana_cada": cadencias[0] if len(cadencias) == 1 else None,
+        "mezcla": len(brazos) > 1,
+        "brazos": sorted(f"{'con' if e else 'sin'} escena"
+                         + (f", Capubana cada {c}" if e and c else "")
+                         for e, c in brazos),
+    }
+
+
 def analizar_cadena(cadena: list[dict], umbral: float = UMBRAL_INCLINACION,
                     min_hablantes: int = MIN_HABLANTES,
                     con_lugar: bool = False) -> dict:
@@ -1123,8 +1148,16 @@ def analizar_cadena(cadena: list[dict], umbral: float = UMBRAL_INCLINACION,
         "cadena": [{"run": r["id"][:8], "run_id": r["id"], "dias": int(r["total_days"]),
                     "perfil": r["perfil"], "semilla": r["semilla"],
                     "turnos_por_dia": int(r["turnos_por_dia"] or 6),
+                    "serie": r.get("serie") or None,
+                    # El BRAZO, leído de la config (no deducido de `presencias`):
+                    # un run anterior a la escena no trae la clave y entonces
+                    # corrió sin escena, que es un hecho — antes del 2026-09-17
+                    # la escena no existía.
+                    "escena": (r.get("escena") or "").lower() == "true",
+                    "capubana_cada": int(r.get("capubana_cada") or 0),
                     "motor_commit": r["motor_commit"][:8], "started_at": r["started_at"]}
                    for r in cadena],
+        "brazo": brazo_de_la_cadena(cadena),
         "elenco": {"total": len(nodo_de), "por_nodo": posibles,
                    "por_casa": dict(Counter(f"{nodo_de[a]}/{casa_de[a]}" for a in nodo_de))},
         "umbrales": {"inclinacion": umbral, "min_hablantes": min_hablantes,
@@ -1244,6 +1277,21 @@ def imprimir_lugar(res: dict, top: int) -> None:
 def imprimir(res: dict, top: int, con_formas: bool, con_distancia: bool) -> None:
     c = res["cadena"]
     titulo(f"NODOS — cadena {' → '.join(r['run'] for r in c)}")
+    # El BRAZO primero: sin saber si la cadena corrió con escena, ninguna cifra
+    # de abajo significa lo mismo (la brecha intra/entre se lee CONTRA el otro
+    # brazo, no contra un umbral).
+    brazo = res.get("brazo") or {}
+    series = sorted({r.get("serie") for r in c if r.get("serie")})
+    etiqueta = ("con escena" + (f", Capubana cada {brazo['capubana_cada']}"
+                                if brazo.get("capubana_cada") else "")
+                if brazo.get("escena") else "sin escena (brazo de control)")
+    print(f"  Brazo: {etiqueta}"
+          + (f" · serie {', '.join(series)}" if series else ""))
+    if brazo.get("mezcla"):
+        print(f"  ⚠ ESTA CADENA MEZCLA BRAZOS ({' | '.join(brazo['brazos'])}): "
+              f"una escena no puede entrar ni salir a mitad de cadena "
+              f"(diseño §5.4). Lo de abajo promedia días que no son "
+              f"comparables entre sí.")
     print(f"  Elenco: {res['elenco']['total']} agentes — " +
           ", ".join(f"{n} {k}" for n, k in res["elenco"]["por_nodo"].items()))
     print(f"  Umbral de inclinación: razón de tasas ≥ {res['umbrales']['inclinacion']}"

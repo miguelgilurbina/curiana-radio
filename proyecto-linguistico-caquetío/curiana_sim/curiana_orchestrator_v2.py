@@ -88,6 +88,7 @@ from curiana_koine import (
 from curiana_cadena import (
     cadena_de_runs,
     config_de,
+    linea_de_brazo,
     lineas_de_serie,
     resumen_de_cadena,
     serie_koine_de_cadena,
@@ -1240,6 +1241,9 @@ def _imprimir_cadena(db, run_id: Optional[str]) -> None:
         avisos: list[str] = []
         serie = serie_koine_de_cadena(db, run_id, avisos=avisos, cadena=cadena)
         print(f"\n  CADENA — {len(cadena)} runs encadenados: {resumen_de_cadena(cadena)}")
+        brazo = linea_de_brazo(cadena)
+        if brazo:
+            print(f"    {brazo}")
         for aviso in avisos:
             print(f"    ⚠ {aviso}")
         if not serie:
@@ -1302,6 +1306,80 @@ def comprobar_brazo_de_escena(db, state, escena: bool, capubana_cada: int):
         "    misma semilla, no una cadena mitad y mitad. Arranca una serie\n"
         "    nueva desde el día 1 (--serie ...) o repite el brazo anterior.\n"
     )
+
+
+def config_resuelta(
+    turnos: int,
+    perfil: "Perfil",
+    agentes_por_turno: int = 6,
+    roster_nombre: str = "koine",
+    turnos_por_dia: Optional[int] = None,
+    semilla: Optional[int] = None,
+    continuar: bool = False,
+    reflexion: bool = False,
+    serie: Optional[str] = None,
+    escena: bool = False,
+    capubana_cada: int = CAPUBANA_CADA_POR_DEFECTO,
+    ablacion: bool = False,
+) -> dict:
+    """Lo que el run diría de sí mismo, ANTES de gastar nada.
+
+    Es la misma resolución que hace `auto_mode`: el perfil manda sobre los
+    flags sueltos, `capubana_cada` sólo significa algo con escena, y
+    `continuado_desde` sale del estado en disco, que es de donde `--continuar`
+    lo saca. No llama a la API, ni a la base, ni a git: lee el YAML de
+    perfiles (que ya está cargado) y `curiana_state.json` si lo hay."""
+    continuado = None
+    if continuar:
+        try:
+            continuado = ComunidadState.load().run_anterior
+        except Exception:                                # noqa: BLE001
+            continuado = None
+    return {
+        "turnos": int(turnos),
+        "elenco": ELENCO,
+        "mundo": MUNDO,
+        "agentes": len(ALL_AGENTS),
+        "perfil": perfil.nombre,
+        "capas": len(perfil.capas),
+        "andamiaje": perfil.andamiaje,
+        "ablacion": bool(perfil.ablacion or ablacion),
+        "serie": serie,
+        "agentes_por_turno": int(agentes_por_turno),
+        "roster": roster_nombre,
+        "roster_n": len(roster_de_habla(roster_nombre)),
+        "turnos_por_dia": turnos_por_dia,
+        "semilla": semilla,
+        "continuar": bool(continuar),
+        "continuado_desde": continuado,
+        "reflexion": bool(reflexion),
+        "escena": bool(escena),
+        "capubana_cada": int(capubana_cada) if escena else None,
+    }
+
+
+def imprimir_dry_run(cfg: dict) -> None:
+    """`--dry-run`: la config resuelta y nada más. Cero llamadas, cero filas."""
+    print(f"\n{'='*60}")
+    print("  --dry-run: la config resuelta. No se llama a nada.")
+    print(f"{'='*60}")
+    orden = ["turnos", "elenco", "mundo", "agentes", "perfil", "capas",
+             "andamiaje", "ablacion", "serie", "agentes_por_turno", "roster",
+             "roster_n", "turnos_por_dia", "semilla", "continuar",
+             "continuado_desde", "reflexion", "escena", "capubana_cada"]
+    for clave in orden:
+        valor = cfg.get(clave)
+        print(f"  {clave:20} {'—' if valor is None else valor}")
+    if cfg["escena"]:
+        cada = cfg["capubana_cada"]
+        print(f"\n  brazo: con escena" +
+              (f", Capubana cada {cada} día(s)" if cada else ", sin Capubana"))
+    else:
+        print("\n  brazo: sin escena (el de control: el prompt es el de siempre)")
+    if cfg["continuar"] and not cfg["continuado_desde"]:
+        print("  ⚠ --continuar sin run anterior en curiana_state.json: "
+              "el run arrancaría del estado que haya, sin `continuado_desde`")
+    print(f"{'='*60}\n")
 
 
 def auto_mode(
@@ -1814,6 +1892,13 @@ if __name__ == "__main__":
              "declarado y sellado, como el perfil. Sólo cuenta con --escena.",
     )
     parser.add_argument(
+        "--dry-run", action="store_true",
+        help="Imprime la CONFIG RESUELTA del run que se correría —perfil, serie, "
+             "escena, capubana_cada, semilla, continuado_desde— y sale sin "
+             "llamar a nada: ni a la API, ni a la base, ni a git. Es para leer "
+             "el brazo antes de gastar un día de API.",
+    )
+    parser.add_argument(
         "--ablacion", action="store_true",
         help="Run de CONTROL: apaga las inyecciones de prompt que empujan la "
              "convergencia (sugerencias de contagio, competencias abiertas, "
@@ -1835,12 +1920,21 @@ if __name__ == "__main__":
     else:
         perfil = cargar_perfil()
 
-    client = get_client()
-
     extra = dict(agentes_por_turno=args.agentes_por_turno, roster_nombre=args.roster,
                  turnos_por_dia=args.turnos_por_dia, semilla=args.semilla,
                  continuar=args.continuar, reflexion=args.reflexion, serie=args.serie,
                  escena=args.escena, capubana_cada=args.capubana_cada)
+
+    # --dry-run va ANTES de get_client(): crear el cliente ya exige la clave y
+    # la gracia de esta bandera es poder leer el brazo sin tocar nada.
+    if args.dry_run:
+        _turnos = (120 * (args.turnos_por_dia or 2)) if args.anio else args.auto
+        imprimir_dry_run(config_resuelta(_turnos, perfil, ablacion=args.ablacion,
+                                         **extra))
+        sys.exit(0)
+
+    client = get_client()
+
     if args.anio:
         tpd = args.turnos_por_dia or 2
         auto_mode(client, 120 * tpd, reporte_anual=True, verbose=not args.silencioso,
