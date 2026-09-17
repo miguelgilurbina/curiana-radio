@@ -22,6 +22,21 @@ agente, así que el nodo de un lugar no se programa: sale del mapa.
     python 6-fusion/scripts/derivar_escena_por_lugar.py
     python 6-fusion/scripts/derivar_escena_por_lugar.py --yaml
     python 6-fusion/scripts/derivar_escena_por_lugar.py --motor   # + el motor de hoy
+    python 6-fusion/scripts/derivar_escena_por_lugar.py --canon   # 6-fusion/escena_era2.yaml
+
+LA PROPUESTA Y EL CANON SON DOS FICHEROS. `--yaml` reescribe la PROPUESTA
+(escena_por_lugar_propuesta_2026-09-17.yaml), que es el registro de lo que se
+midió antes de que Miguel decidiera y no se mueve. `--canon` escribe
+`6-fusion/escena_era2.yaml`, la tabla DECIDIDA, con las decisiones del
+2026-09-17 aplicadas:
+
+    decisión 1 → A   tabla por momento, con las excepciones que el canon fecha
+                     (es la tabla ESCENA de abajo, sin cambios)
+    decisión 2 → B   lugares compartidos: el Capubana y el camino Moruy–Caseto,
+                     que el elenco llama «la alianza» (CAMINOS_COMPARTIDOS)
+
+De `escena_era2.yaml` sale el módulo del motor con
+`6-fusion/scripts/generar_escena_era2.py`.
 """
 
 import argparse
@@ -31,6 +46,7 @@ import os
 import re
 import sys
 import unicodedata
+from typing import Optional
 
 try:
     import yaml
@@ -47,6 +63,7 @@ RUTA_SITIOS = os.path.join(_FUSION, "sitios_era2.yaml")
 RUTA_CLIMA = os.path.join(_FUSION, "clima_era2.yaml")
 RUTA_ESTRUCTURA = os.path.join(_FUSION, "estructura_social_era2.yaml")
 RUTA_SALIDA = os.path.join(_FUSION, "escena_por_lugar_propuesta_2026-09-17.yaml")
+RUTA_CANON = os.path.join(_FUSION, "escena_era2.yaml")
 
 MOMENTOS = ["amanecer", "mañana", "mediodia", "tarde", "anochecer", "noche"]
 PERIODOS = ["viento", "seca_larga", "siembra"]
@@ -383,8 +400,53 @@ JAGUEY_DE = {
 }
 
 
-def resolver(plantilla: str, agente: dict) -> str:
-    """La plantilla, con el sitio, la zona y el agua del agente."""
+# ── DECISIÓN 2 → B (Miguel, 2026-09-17): el camino compartido ─────────
+# «Capubana + el camino Moruy–Caseto, que el elenco llama la alianza.»
+# No se declara quién anda por él: se DERIVA. Un mensajero está en el camino
+# compartido cuando su sitio es uno de los dos extremos y el otro extremo está
+# entre los destinos que SU FICHA nombra (destinos_de). Hoy eso da a Humohumo
+# (de Moruy, «las cuatro casas») y a Bajari (de Caseto, «de casa en casa»):
+# uno de cada nodo, el mismo lugar, el mismo momento. Es el primer contacto
+# EMERGENTE de toda la tabla, y sale del casting, no de una lista.
+CAMINOS_COMPARTIDOS = [
+    {
+        "extremos": ["Moruy", "Caseto"],
+        "lugar": "camino:Moruy-Caseto",
+        "razon": "el elenco lo llama «la alianza»: «Caseto es el sitio de AMUAY "
+                 "más cercano a Moruy —unos ocho kilómetros por tierra, contra "
+                 "veinticinco— y ese camino corto ES la alianza: la esposa "
+                 "principal viene por él y el aporte de AMUAY al cerro baja por él»",
+        "fuente": "6-fusion/elenco_era2.yaml casas[los Guasicures de Caseto]."
+                  "razon_del_linaje",
+        "etiqueta": "canon-simulacion (el camino es canon; que sea lugar de la "
+                    "escena es la decisión 2 → B del 2026-09-17)",
+    },
+]
+
+
+def camino_compartido_de(agente: dict) -> Optional[str]:
+    """El camino compartido que le toca a este agente, o None.
+
+    Derivado: su sitio es un extremo y el otro extremo está entre los destinos
+    que su ficha nombra. Si su ficha no nombra destinos (no es mensajero), no
+    hay camino compartido."""
+    sitio = agente.get("ubicacion_default")
+    destinos = set(agente.get("_destinos") or ())
+    for c in CAMINOS_COMPARTIDOS:
+        a, b = c["extremos"]
+        if sitio == a and b in destinos:
+            return c["lugar"]
+        if sitio == b and a in destinos:
+            return c["lugar"]
+    return None
+
+
+def resolver(plantilla: str, agente: dict, decidido: bool = False) -> str:
+    """La plantilla, con el sitio, la zona y el agua del agente.
+
+    `decidido` aplica las decisiones del 2026-09-17 (hoy, la 2 → B: el camino
+    Moruy–Caseto es UN lugar y no dos). La propuesta se deriva sin ellas para
+    que el fichero del 17 siga diciendo lo que midió."""
     sitio = agente.get("ubicacion_default") or "?"
     zona = agente.get("zona_de_pesca")
     if plantilla == "{zona}":
@@ -394,6 +456,10 @@ def resolver(plantilla: str, agente: dict) -> str:
     if plantilla == "{jaguey}":
         return JAGUEY_DE.get(sitio, f"{sitio}:jaguey")
     if plantilla == "camino":
+        if decidido:
+            compartido = camino_compartido_de(agente)
+            if compartido:
+                return compartido
         return f"camino:{sitio}"
     out = plantilla.replace("{sitio}", sitio)
     if out.endswith(":barrial") and sitio not in BARRIAL_EN:
@@ -406,12 +472,12 @@ def resolver(plantilla: str, agente: dict) -> str:
     return out
 
 
-def lugar_de(agente: dict, momento: str, periodo: str) -> str:
+def lugar_de(agente: dict, momento: str, periodo: str, decidido: bool = False) -> str:
     fila = ESCENA.get(clase_en(agente, periodo))
     if not fila:
         return agente.get("ubicacion_default") or "?"
     plantilla = fila["excepciones"].get(periodo, {}).get(momento) or fila["dia"][momento]
-    return resolver(plantilla, agente)
+    return resolver(plantilla, agente, decidido)
 
 
 # ── el alcance de la mensajería, leído de la ficha ──────────────────────
@@ -478,8 +544,15 @@ def haversine(a, b) -> float:
 def elenco() -> list:
     d = cargar(RUTA_ELENCO)
     ag = list(d.get("agentes") or [])
+    casas_sitio = [c["sitio"]["nombre"] for c in (d.get("casas") or [])]
+    sitios_todos = casas_sitio + [s["nombre"] for s in (d.get("sitios_sin_casa") or [])]
     for a in ag:
         a["_clase"] = clase_de(a)
+        # Los destinos que SU FICHA nombra: sólo los mensajeros tienen. Se
+        # cuelgan del agente porque la decisión 2 → B los necesita para saber
+        # quién anda por el camino compartido (camino_compartido_de).
+        a["_destinos"] = (destinos_de(a, sitios_todos, casas_sitio)
+                          if a["_clase"] == "mensajeria" else [])
     return ag
 
 
@@ -584,9 +657,11 @@ def cruzados(ag: list) -> list:
     linaje_de_casa = {c["casa"]: c.get("linaje_d1") for c in (d.get("casas") or [])}
     nodo_de_casa = {c["casa"]: c.get("nodo") for c in (d.get("casas") or [])}
     nodo_de_linaje = {}
+    sitio_de_linaje = {}
     for c in (d.get("casas") or []):
         if c.get("linaje_d1"):
             nodo_de_linaje.setdefault(c["linaje_d1"], c.get("nodo"))
+            sitio_de_linaje.setdefault(c["linaje_d1"], (c.get("sitio") or {}).get("nombre"))
     out = []
     for a in ag:
         linaje = str(a.get("linaje") or "").split(" (")[0].strip()
@@ -601,6 +676,7 @@ def cruzados(ag: list) -> list:
                 "rol": a.get("rol_en_la_casa"),
                 "en_roster": bool(a.get("en_roster")),
                 "clase": a["_clase"],
+                "sitio_origen": sitio_de_linaje.get(linaje),
             })
     return out
 
@@ -922,7 +998,11 @@ def escribir_yaml(ag: list):
             },
         },
         "compartidos_declarados": COMPARTIDOS_DECLARADOS,
-        "cruzados_por_matrimonio": cruzados(ag),
+        # `sitio_origen` se deriva desde el 2026-09-17 para el canon (la
+        # travesía de la alianza lo necesita); la PROPUESTA del 17 no lo traía
+        # y se queda como estaba: es el registro de lo que se midió.
+        "cruzados_por_matrimonio": [{k: v for k, v in c.items() if k != "sitio_origen"}
+                                    for c in cruzados(ag)],
         "sin_clasificar": sorted(por_clase.get("sin_clasificar", [])),
     }
     with open(RUTA_SALIDA, "w", encoding="utf-8") as f:
@@ -935,6 +1015,320 @@ def escribir_yaml(ag: list):
     print(f"\n✓ escrito {os.path.relpath(RUTA_SALIDA, _RAIZ)}")
 
 
+# ══════════════════════════════════════════════════════════════════════
+# 7. EL CANON — la tabla DECIDIDA (6-fusion/escena_era2.yaml)
+# ══════════════════════════════════════════════════════════════════════
+# Lo de arriba es la propuesta. Esto es lo que Miguel decidió el 2026-09-17 y
+# lo que el motor lee (por el módulo generado curiana_escena_era2.py).
+
+DECISIONES = {
+    1: "A — tabla por momento, con las excepciones que el canon fecha",
+    2: "B — compartidos: el Capubana y el camino Moruy–Caseto («la alianza»)",
+    3: "A — las escenas que salgan, sin tope: un pescador solo en el agua es el dato",
+    4: "A — la ventana de 12 no cambia; la escena sólo dice dónde está cada uno",
+    7: "A — `--capubana-cada N` declarado y sellado en la config (N = 3 en la primera cadena)",
+}
+
+# La glosa con la que un lugar se dice en prosa dentro de [Aquí estás]. Es una
+# tabla por TIPO DE LOCACIÓN —el vocabulario que el corpus ya usa— y no una
+# línea por lugar: 29 lugares salen de estas nueve entradas.
+GLOSA_DE_LOCACION = {
+    "orilla": "la orilla de {sitio}",
+    "conuco": "el conuco de {sitio}",
+    "salinar": "el salinar de {sitio}",
+    "jaguey": "el jagüey de {sitio}",
+    "punta": "la punta de {sitio}",
+    "matorral": "el matorral de {sitio}",
+    "taller": "el taller de {sitio}",
+    "taller_canoas": "el taller de canoas de {sitio}",
+    "barrial": "el barrial de {sitio}",
+    "fuente": "la fuente del cerro",
+}
+# Las zonas de pesca, dichas corto. La forma larga está en
+# estructura_social_era2.yaml §zonas_pesqueras[].nombre y es de mapa, no de
+# prosa; ésta es la que el motor ya usa para el prompt.
+GLOSA_DE_ZONA = {
+    "ZG2": "la orilla del Golfete",
+    "ZA1": "la costa oeste",
+}
+GLOSA_DE_SITIO = {"Capubana": "el Capubana, el cerro"}
+
+
+def glosa_de_lugar(lugar: str) -> str:
+    """Cómo se dice ese lugar en prosa: «la orilla de Tacuato»."""
+    if lugar in GLOSA_DE_ZONA:
+        return GLOSA_DE_ZONA[lugar]
+    if lugar.startswith("camino:"):
+        resto = lugar.split(":", 1)[1]
+        if "-" in resto:
+            a, b = resto.split("-", 1)
+            return f"el camino de {a} a {b}"
+        return f"el camino que sale de {resto}"
+    if ":" in lugar:
+        sitio, _, loc = lugar.partition(":")
+        plantilla = GLOSA_DE_LOCACION.get(loc)
+        return plantilla.format(sitio=sitio) if plantilla else f"{loc} de {sitio}"
+    return GLOSA_DE_SITIO.get(lugar, lugar)
+
+
+def _nodo_de_sitio() -> dict:
+    """{sitio: nodo} del canon de sitios y de las casas del elenco."""
+    out = {}
+    for s in (cargar(RUTA_SITIOS).get("sitios") or []):
+        if s.get("nodo"):
+            out[s["sitio"]] = s["nodo"]
+    for c in (cargar(RUTA_ELENCO).get("casas") or []):
+        out.setdefault((c.get("sitio") or {}).get("nombre"), c.get("nodo"))
+    for s in (cargar(RUTA_ELENCO).get("sitios_sin_casa") or []):
+        out.setdefault(s.get("nombre"), s.get("nodo"))
+    return out
+
+
+def _centroide(puntos: list) -> tuple:
+    lats = [p[1] for p in puntos]
+    lons = [p[2] for p in puntos]
+    return (round(sum(lats) / len(lats), 5), round(sum(lons) / len(lons), 5))
+
+
+def lugares_del_canon(ag: list) -> dict:
+    """Cada lugar de la tabla decidida, con su sitio, su nodo, su coordenada y
+    su glosa. Ningún lugar se queda sin punto: el propio, el de su aldea, el
+    centroide de su zona o el punto medio de su camino."""
+    pts = puntos_del_canon()
+    zonas = zonas_de_pesca_puntos()
+    nodo_sitio = _nodo_de_sitio()
+    compartidos = compartidos_decididos()
+    lugares = sorted({lugar_de(a, m, p, True)
+                      for a in ag for m in MOMENTOS for p in PERIODOS})
+    out = {}
+    for lug in lugares:
+        tipo, dato = punto_de_lugar(lug, pts, zonas)
+        sitio = None
+        extremos = []
+        if lug.startswith("camino:"):
+            tipo = "camino"
+            extremos = lug.split(":", 1)[1].split("-")
+            puntos = [pts[e] for e in extremos if e in pts]
+            lat, lon = (round(sum(p[0] for p in puntos) / len(puntos), 5),
+                        round(sum(p[1] for p in puntos) / len(puntos), 5)) if puntos else (None, None)
+        elif lug in zonas:
+            tipo = "zona"
+            lat, lon = _centroide(zonas[lug])
+        else:
+            sitio = lug.split(":")[0]
+            lat, lon = (dato if isinstance(dato, tuple) else (None, None))
+            tipo = "aldea" if ":" not in lug else "locacion"
+        if lug in compartidos:
+            nodo = "COMPARTIDO"
+        elif extremos:
+            # Un camino que no es compartido es del nodo del sitio del que sale.
+            nodo = nodo_sitio.get(extremos[0], "?")
+        elif lug in zonas:
+            nodo = next((g for g in ("GUARANAO", "AMUAY")
+                         for z in (cargar(RUTA_ESTRUCTURA).get("zonas_pesqueras") or {}).get(g) or []
+                         if z.get("id") == lug), "?")
+        else:
+            nodo = nodo_sitio.get(sitio, "?")
+        out[lug] = {
+            "tipo": tipo, "sitio": sitio, "nodo": nodo,
+            "lat": lat, "lon": lon, "glosa": glosa_de_lugar(lug),
+            "locacion": lug.split(":", 1)[1] if (":" in lug and not lug.startswith("camino:")) else None,
+            "extremos": extremos or None,
+            "compartido": compartidos.get(lug),
+        }
+    return out
+
+
+def compartidos_decididos() -> dict:
+    """Los lugares que la decisión 2 → B declara compartidos: el Capubana (y
+    su fuente) y el camino Moruy–Caseto."""
+    out = dict(COMPARTIDOS_DECLARADOS)
+    for c in CAMINOS_COMPARTIDOS:
+        out[c["lugar"]] = f"{c['razon']} — {c['fuente']}"
+    return out
+
+
+def travesia_de_la_alianza(ag: list) -> dict:
+    """Quién cruza por el camino compartido y cuándo, DERIVADO.
+
+    El canon dice del camino Moruy–Caseto que «la esposa principal viene por
+    él y el aporte de AMUAY al cerro baja por él». Quién es «la esposa
+    principal» no se escribe aquí: es el cruzado por matrimonio cuyo sitio de
+    origen y sitio de residencia son justo los dos extremos del camino
+    declarado (hoy, Karebe; si el casting cambia, cambia con él).
+
+    El CUÁNDO es la única cadencia que la escena inventa, y va declarada: la
+    víspera del día de Capubana —el día anterior a cada convergencia, que es
+    cuando el aporte sube—, en los mismos tres momentos en que el camino se
+    anda (mañana, mediodía, tarde). Etiqueta: canon-simulacion."""
+    cr = cruzados(ag)
+    filas = []
+    for c in CAMINOS_COMPARTIDOS:
+        a, b = c["extremos"]
+        encajan = [x for x in cr if {x.get("vive_en"), x.get("sitio_origen")} == {a, b}]
+        # La fuente dice «la esposa principal», no «los de linaje Warana que
+        # viven en Moruy»: se filtra por lo que el rol declara, que es
+        # cónyuge. Wamipa encaja en la geografía y NO en la frase —es un hijo,
+        # no un cónyuge (diseño §3.5)— y su cruce es potestad (capa 4).
+        quien = sorted(x["nombre"] for x in encajan
+                       if re.search(r"espos[ao]", norm(x.get("rol") or "")))
+        fuera = sorted(x["nombre"] for x in encajan if x["nombre"] not in quien)
+        filas.append({
+            "lugar": c["lugar"], "extremos": c["extremos"], "agentes": quien,
+            "encajan_en_la_geografia_pero_no_en_la_frase": fuera or None,
+            "momentos": ["mañana", "mediodia", "tarde"],
+            "cuando": "vispera_de_capubana",
+            "glosa_del_cuando": "la víspera del día de Capubana (día N donde "
+                                "(N+1) % capubana_cada == 0)",
+            "etiqueta": "canon-simulacion (la cadencia); canon (el camino y su papel)",
+            "fuente": c["fuente"],
+        })
+    return {"filas": filas,
+            "derivacion": "cruzado por matrimonio cuyo {sitio_origen, vive_en} "
+                          "son los dos extremos del camino declarado"}
+
+
+def escribir_canon(ag: list):
+    """6-fusion/escena_era2.yaml — la tabla DECIDIDA, de la que sale el módulo."""
+    por_clase = collections.defaultdict(list)
+    for a in ag:
+        por_clase[a["_clase"]].append(a["nombre"])
+    lugares = lugares_del_canon(ag)
+    doc = {
+        "meta": {
+            "fecha": "2026-09-17",
+            "estado": "DECIDIDO por Miguel el 2026-09-17 (las diez preguntas de "
+                      "§7 del diseño). Es el canon de la escena: de aquí sale "
+                      "curiana_sim/curiana_escena_era2.py.",
+            "quien": "escriba (Claude), con las decisiones de Miguel",
+            "lee": "6-fusion/issues-pendientes/existir-en-el-mundo-escena-por-lugar-2026-09-17.md",
+            "medido_por": "python 6-fusion/scripts/derivar_escena_por_lugar.py --canon",
+            "genera": "python 6-fusion/scripts/generar_escena_era2.py",
+            "derivado_de": ["6-fusion/elenco_era2.yaml", "6-fusion/sitios_era2.yaml",
+                            "6-fusion/clima_era2.yaml",
+                            "6-fusion/estructura_social_era2.yaml",
+                            "2-lengua/toponimos.yaml"],
+            "aviso": "Ninguna fila se escribió agente a agente. La clase de oficio "
+                     "sale de `oficio` y `rol_en_la_casa` por palabras clave "
+                     "declaradas (§reglas_de_clase); el lugar sale de una plantilla "
+                     "resuelta con la ficha; quién anda por el camino compartido "
+                     "sale de los destinos que la ficha del mensajero nombra. "
+                     "Cambiar el elenco cambia esta tabla sin tocarla.",
+            "propuesta_de_la_que_viene": "6-fusion/escena_por_lugar_propuesta_2026-09-17.yaml",
+        },
+        "decisiones_de_miguel": DECISIONES,
+        "momentos": list(MOMENTOS),
+        "periodos": list(PERIODOS),
+        "reglas_de_clase": {
+            "orden": "la primera regla que casa gana; antes corre la de rol",
+            "por_rol": [{"patron": p, "clase": c} for p, c in PRE_ROL],
+            "por_oficio": [{"clase": c, "patron": p, "glosa": g} for c, p, g in CLASES],
+            "por_periodo": [{"patron": p, "periodo": per, "clase": c}
+                            for p, per, c in CLASE_POR_PERIODO],
+        },
+        "plantillas": {
+            "{sitio}": "la aldea del agente (su ubicacion_default)",
+            "{sitio}:X": "una locación suya: orilla, conuco, matorral, salinar, "
+                         "jaguey, punta, taller, taller_canoas, barrial",
+            "{zona}": "el agua de su nodo: ZG2 (GUARANAO) o ZA1 (AMUAY)",
+            "{jaguey}": "el agua dulce que le toca; en Moruy y en el cerro, la fuente",
+            "Capubana": "el cerro, centro declarado compartido",
+            "camino": "el camino que sale de su sitio, o el compartido si su "
+                      "ficha nombra el otro extremo (decisión 2 → B)",
+            "sin_playa": sorted(SIN_PLAYA),
+            "playa_a_un_dia": sorted(PLAYA_LEJOS),
+        },
+        "tabla": {
+            clase: {
+                "glosa": next((g for c, _, g in CLASES if c == clase), ""),
+                "agentes": sorted(por_clase.get(clase, [])),
+                "n": len(por_clase.get(clase, [])),
+                "etiqueta": fila["etiqueta"],
+                "fuente": fila["fuente"],
+                "dia": dict(fila["dia"]),
+                "excepciones_por_periodo": fila["excepciones"] or None,
+            }
+            for clase, fila in ESCENA.items()
+        },
+        "clase_por_agente": {a["nombre"]: a["_clase"] for a in sorted(ag, key=lambda x: x["nombre"])},
+        "compartidos_declarados": compartidos_decididos(),
+        "caminos_compartidos": CAMINOS_COMPARTIDOS,
+        "travesia_de_la_alianza": travesia_de_la_alianza(ag),
+        "capubana": {
+            "lugar": "Capubana",
+            "cadencia": "parámetro del run: --capubana-cada N, sellado en "
+                        "simulation_runs.config (decisión 7 → A; N = 3 en la "
+                        "primera cadena)",
+            "que_pasa_ese_dia": "los 63 están en el Capubana los seis momentos",
+            "etiqueta": "atestiguado (que hay convergencia y que suben y bajan "
+                        "delegaciones); canon-simulacion (la cadencia)",
+            "fuente": ["6-fusion/estructura_social_era2.yaml §ciclo_ritual_merejuy "
+                       "(CM fases 4 y 5)", "creencia-013", "Ampíes f. 14",
+                       "6-fusion/clima_era2.yaml abre_y_cierra.Capubana"],
+        },
+        "lugares": lugares,
+        "escena_por_agente": {
+            a["nombre"]: {
+                "nodo": a.get("nodo"), "sitio": a.get("ubicacion_default"),
+                "clase": a["_clase"],
+                **{p: [lugar_de(a, m, p, True) for m in MOMENTOS] for p in PERIODOS},
+            } for a in sorted(ag, key=lambda x: (x.get("nodo"), x["nombre"]))
+        },
+        "cobertura": {
+            p: {"con_lugar_en_los_seis": sum(
+                    1 for a in ag
+                    if all(lugar_de(a, m, p, True) not in (None, "", "?") for m in MOMENTOS)),
+                "de": len(ag)} for p in PERIODOS
+        },
+        "cruzados_por_matrimonio": cruzados(ag),
+    }
+    with open(RUTA_CANON, "w", encoding="utf-8", newline="\n") as f:
+        f.write("# ─────────────────────────────────────────────────────────────\n"
+                "# GENERADO por 6-fusion/scripts/derivar_escena_por_lugar.py --canon\n"
+                "# No se edita a mano: se edita el script (la tabla ESCENA, las\n"
+                "# reglas de clase, CAMINOS_COMPARTIDOS) y se regenera.\n"
+                "# De aquí sale curiana_sim/curiana_escena_era2.py\n"
+                "# (6-fusion/scripts/generar_escena_era2.py).\n"
+                "# ─────────────────────────────────────────────────────────────\n")
+        yaml.safe_dump(doc, f, allow_unicode=True, sort_keys=False, width=88)
+    print(f"\n✓ escrito {os.path.relpath(RUTA_CANON, _RAIZ)}: "
+          f"{len(doc['escena_por_agente'])} agentes × {len(MOMENTOS)} momentos × "
+          f"{len(PERIODOS)} períodos, {len(lugares)} lugares")
+
+
+def informe_canon(ag: list):
+    """Lo que la tabla DECIDIDA cambia respecto de la propuesta."""
+    print("\n" + "=" * 72)
+    print("  EL CANON — la tabla con las decisiones del 2026-09-17 aplicadas")
+    print("=" * 72)
+    for n, texto in sorted(DECISIONES.items()):
+        print(f"  {n}. {texto}")
+    print("\n  [c1] CONTACTO EMERGENTE — los dos nodos en el mismo lugar y momento")
+    emergentes = collections.Counter()
+    for p in PERIODOS:
+        occ = collections.defaultdict(collections.Counter)
+        for a in ag:
+            for m in MOMENTOS:
+                occ[(lugar_de(a, m, p, True), m)][a.get("nodo")] += 1
+        for (lug, m), c in occ.items():
+            if len({n for n, v in c.items() if v}) > 1:
+                emergentes[(lug, m)] += 1
+    if not emergentes:
+        print("      ninguno")
+    for (lug, m), n in sorted(emergentes.items()):
+        print(f"      {lug:<22} {m:<10} en {n} de {len(PERIODOS)} períodos")
+    print("\n  [c2] LA TRAVESÍA DE LA ALIANZA")
+    for fila in travesia_de_la_alianza(ag)["filas"]:
+        print(f"      {fila['lugar']:<22} {', '.join(fila['agentes']) or '(nadie)'}"
+              f"  ·  {fila['glosa_del_cuando']}")
+    lug = lugares_del_canon(ag)
+    sin_punto = [k for k, v in lug.items() if v["lat"] is None]
+    print(f"\n  [c3] LUGARES — {len(lug)} en total; sin coordenada: {len(sin_punto)}")
+    for k, v in sorted(lug.items()):
+        print(f"      {k:<24} {v['tipo']:<9} {v['nodo']:<11} "
+              f"{v['lat'] if v['lat'] is not None else '·':>9}  {v['glosa']}")
+
+
 def main():
     _forzar_utf8()
     ap = argparse.ArgumentParser(description=__doc__,
@@ -943,8 +1337,15 @@ def main():
                     help="reescribe 6-fusion/escena_por_lugar_propuesta_2026-09-17.yaml")
     ap.add_argument("--motor", action="store_true",
                     help="mide también lo que el motor hace hoy con la ubicación")
+    ap.add_argument("--canon", action="store_true",
+                    help="escribe 6-fusion/escena_era2.yaml: la tabla DECIDIDA "
+                         "(decisiones 1 → A y 2 → B del 2026-09-17)")
     args = ap.parse_args()
     ag = elenco()
+    if args.canon:
+        informe_canon(ag)
+        escribir_canon(ag)
+        return
     informe(ag, con_motor=args.motor)
     if args.yaml:
         escribir_yaml(ag)

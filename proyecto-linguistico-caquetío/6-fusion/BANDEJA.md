@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-17**.
 
-**2617 ítems propuestos** en 66 propuestas, más **6 issue(s)/comentario(s) redactados sin publicar**.
+**2631 ítems propuestos** en 68 propuestas, más **6 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -48,6 +48,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-09-15.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-17.yaml` | ? | 0 |  |
 | `elenco_era2.yaml` | varias | 63 |  |
+| `escena_era2.yaml` | ? | 11 |  |
 | `escena_por_lugar_propuesta_2026-09-17.yaml` | varias | 11 |  |
 | `esteves_paginas_releidas_2026-09-16.yaml` | esteves-1989 | 12 |  |
 | `esteves_parte2_falcon.yaml` | esteves-1989 | 16 |  |
@@ -59,6 +60,7 @@ editar_a_mano: no
 | `mapa_nombres_era2.yaml` | ? | 63 |  |
 | `matacan_venado_2026-09-14.yaml` | esteves-1989 (y alvarado-1921, jahn-1927, neira-ribero-1762 como comparanda) | 5 |  |
 | `medicion_contaminacion_score_2026-09-09.yaml` | ? | 0 |  |
+| `medicion_prestigio_vinculos_era2_2026-09-17.yaml` | ? | 3 |  |
 | `medina_colina_dictado.yaml` | ? | 111 |  |
 | `migracion_lemas_fase2.yaml` | ? | 79 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |

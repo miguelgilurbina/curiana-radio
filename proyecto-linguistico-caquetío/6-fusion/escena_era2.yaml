@@ -1,0 +1,2688 @@
+# ─────────────────────────────────────────────────────────────
+# GENERADO por 6-fusion/scripts/derivar_escena_por_lugar.py --canon
+# No se edita a mano: se edita el script (la tabla ESCENA, las
+# reglas de clase, CAMINOS_COMPARTIDOS) y se regenera.
+# De aquí sale curiana_sim/curiana_escena_era2.py
+# (6-fusion/scripts/generar_escena_era2.py).
+# ─────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-17'
+  estado: 'DECIDIDO por Miguel el 2026-09-17 (las diez preguntas de §7 del diseño). Es el
+    canon de la escena: de aquí sale curiana_sim/curiana_escena_era2.py.'
+  quien: escriba (Claude), con las decisiones de Miguel
+  lee: 6-fusion/issues-pendientes/existir-en-el-mundo-escena-por-lugar-2026-09-17.md
+  medido_por: python 6-fusion/scripts/derivar_escena_por_lugar.py --canon
+  genera: python 6-fusion/scripts/generar_escena_era2.py
+  derivado_de:
+  - 6-fusion/elenco_era2.yaml
+  - 6-fusion/sitios_era2.yaml
+  - 6-fusion/clima_era2.yaml
+  - 6-fusion/estructura_social_era2.yaml
+  - 2-lengua/toponimos.yaml
+  aviso: Ninguna fila se escribió agente a agente. La clase de oficio sale de `oficio` y `rol_en_la_casa`
+    por palabras clave declaradas (§reglas_de_clase); el lugar sale de una plantilla resuelta
+    con la ficha; quién anda por el camino compartido sale de los destinos que la ficha del
+    mensajero nombra. Cambiar el elenco cambia esta tabla sin tocarla.
+  propuesta_de_la_que_viene: 6-fusion/escena_por_lugar_propuesta_2026-09-17.yaml
+decisiones_de_miguel:
+  1: A — tabla por momento, con las excepciones que el canon fecha
+  2: 'B — compartidos: el Capubana y el camino Moruy–Caseto («la alianza»)'
+  3: 'A — las escenas que salgan, sin tope: un pescador solo en el agua es el dato'
+  4: A — la ventana de 12 no cambia; la escena sólo dice dónde está cada uno
+  7: A — `--capubana-cada N` declarado y sellado en la config (N = 3 en la primera cadena)
+momentos:
+- amanecer
+- mañana
+- mediodia
+- tarde
+- anochecer
+- noche
+periodos:
+- viento
+- seca_larga
+- siembra
+reglas_de_clase:
+  orden: la primera regla que casa gana; antes corre la de rol
+  por_rol:
+  - patron: \bnin[oa]\b|\(nin[oa]\)|en encierro|encerrada
+    clase: ninez
+  por_oficio:
+  - clase: mensajeria
+    patron: recado|aviso|llamamiento|corre los avisos
+    glosa: el que lleva la palabra de una casa a otra
+  - clase: mando
+    patron: gobernar|redistribu|presidir|acompana al manaure
+    glosa: el Manaure, la que reparte y el sobrino que aprende estando cerca
+  - clase: oraculo
+    patron: oraculo|lee suenos|urari|buhio del cerro|\bayuna\b
+    glosa: 'el boratio mayor y su ayunante: el cerro y el encierro'
+  - clase: curacion
+    patron: boratia|cura por pasos|parturienta|adivina para
+    glosa: 'la boratia de pueblo: cura, adivina, recibe'
+  - clase: huesos
+    patron: huesos del diao|fuego sin llama|hamaca del diao|muelen los huesos
+    glosa: las que muelen los huesos y el que sostiene el fuego
+  - clase: cantor
+    patron: cantor|recita a los ancestros|canta de noche lo que hizo
+    glosa: el cantor de hazañas (of-08)
+  - clase: arbitraje
+    patron: buena vara|linderos
+    glosa: 'el de la buena vara: linderos de conuco y de playa (of-13)'
+  - clase: merejuy
+    patron: merejuy|chicha|fermento
+    glosa: la maestra del merejuy (of-07)
+  - clase: sal
+    patron: \bel biro\b|cosecha la sal|sal de las charcas
+    glosa: 'el biro: raspar la sal de las charcas'
+  - clase: agua_dulce
+    patron: jaguey|charca|fuente intermitente|lee la tierra y el agua|cuando se abre el agua
+    glosa: 'los que guardan el agua: el jagüey y la fuente del cerro (of-06)'
+  - clase: vigia
+    patron: \bvigia\b|vigiar|cardumen|sube a la punta
+    glosa: el que sube a la punta y ve primero
+  - clase: marisqueo
+    patron: junta la concha|concha y el caracol|junta el botuto|botuto|marea baja
+    glosa: la concha y el caracol de la orilla, a marea baja
+  - clase: casa
+    patron: cocina|budare|fogon|ahuma|seca el pescado|sala y seca|casabe|cuida a los ninos|lleva
+      la casa
+    glosa: 'la casa y el fogón: cocinar, ahumar, criar'
+  - clase: fibra
+    patron: cordelera|cocuiza|cabuya|\bhila\b|teje|totuma|hamacas de maure
+    glosa: 'la fibra: cordel, algodón, hamaca, totuma'
+  - clase: pesca
+    patron: pesca|pescador|nasas|se zambulle|arpon|de red\b
+    glosa: 'la pesca: de orilla, de red, nocturna y de mar grueso'
+  - clase: canoa
+    patron: canoa|calafate|resina|brea|corrientes de la costa
+    glosa: el taller de canoas y la brea
+  - clase: conuco
+    patron: conuco|siembra|semilla|cultivos|roza y fuego|desmontado
+    glosa: 'el conuco: sembrar, cosechar, abrir tierra'
+  - clase: monte
+    patron: matorral|recolectora|herbolaria|recoge el fruto|lo del monte|del monte\b
+    glosa: 'el matorral: la planta que cura y lo que el conuco no da'
+  - clase: alfareria
+    patron: alfarer|vasija|barro|modela
+    glosa: 'el barro: la vasija que es memoria'
+  - clase: vision
+    patron: vidente|frases que se cumplen
+    glosa: la que dice lo que se cumple dos días después
+  - clase: memoria_de_casa
+    patron: matriarca|guarda la memoria|autoriza los matrimonios|cuentas|guarda lo de la casa|guarda
+      los disenos
+    glosa: 'la matriarca: la cuenta del don y lo que se guarda'
+  por_periodo:
+  - patron: conuco en las lluvias
+    periodo: siembra
+    clase: conuco
+plantillas:
+  '{sitio}': la aldea del agente (su ubicacion_default)
+  '{sitio}:X': 'una locación suya: orilla, conuco, matorral, salinar, jaguey, punta, taller,
+    taller_canoas, barrial'
+  '{zona}': 'el agua de su nodo: ZG2 (GUARANAO) o ZA1 (AMUAY)'
+  '{jaguey}': el agua dulce que le toca; en Moruy y en el cerro, la fuente
+  Capubana: el cerro, centro declarado compartido
+  camino: el camino que sale de su sitio, o el compartido si su ficha nombra el otro extremo
+    (decisión 2 → B)
+  sin_playa:
+  - Capubana
+  - Moruy
+  playa_a_un_dia:
+  - Caseto
+tabla:
+  pesca:
+    glosa: 'la pesca: de orilla, de red, nocturna y de mar grueso'
+    agentes:
+    - Duraboa
+    - Ebokoa
+    - Jachos
+    - Kasebo
+    - Kunaro-bana
+    - Ucibo
+    - Waitiao
+    - Waranaro
+    n: 8
+    etiqueta: canon-simulacion
+    fuente:
+    - ecologia-015
+    - ecologia-026
+    - ecologia-036
+    - ecologia-078
+    - clima_era2.yaml frases_del_cargador
+    dia:
+      amanecer: '{zona}'
+      mañana: '{zona}'
+      mediodia: '{sitio}'
+      tarde: '{sitio}:orilla'
+      anochecer: '{sitio}:orilla'
+      noche: '{sitio}'
+    excepciones_por_periodo:
+      viento:
+        noche: '{zona}'
+      siembra:
+        tarde: '{sitio}'
+        anochecer: '{sitio}'
+  marisqueo:
+    glosa: la concha y el caracol de la orilla, a marea baja
+    agentes:
+    - Kiwakoa
+    - Tauta
+    n: 2
+    etiqueta: canon-simulacion
+    fuente:
+    - ecologia-012
+    - ecologia-044
+    - ecologia-061
+    - ecologia-081
+    dia:
+      amanecer: '{sitio}:orilla'
+      mañana: '{sitio}:orilla'
+      mediodia: '{sitio}'
+      tarde: '{sitio}:orilla'
+      anochecer: '{sitio}'
+      noche: '{sitio}'
+    excepciones_por_periodo: null
+  vigia:
+    glosa: el que sube a la punta y ve primero
+    agentes:
+    - Dara-bana
+    - Ruata
+    n: 2
+    etiqueta: atestiguado (la atalaya); canon-simulacion (el día)
+    fuente:
+    - ecologia-080
+    - hueco-lex-002
+    - sitios_era2.yaml Carirubana.mar_y_pesca
+    dia:
+      amanecer: '{sitio}:punta'
+      mañana: '{sitio}:punta'
+      mediodia: '{sitio}'
+      tarde: '{sitio}:punta'
+      anochecer: '{sitio}'
+      noche: '{sitio}'
+    excepciones_por_periodo: null
+  sal:
+    glosa: 'el biro: raspar la sal de las charcas'
+    agentes:
+    - Birokoa
+    n: 1
+    etiqueta: atestiguado (el ciclo); canon-simulacion (el día)
+    fuente:
+    - ecologia-009
+    - ecologia-010
+    - hueco-lex-005
+    - clima_era2.yaml abre_y_cierra.Tacuato
+    dia:
+      amanecer: '{sitio}:salinar'
+      mañana: '{sitio}:salinar'
+      mediodia: '{sitio}'
+      tarde: '{sitio}:salinar'
+      anochecer: '{sitio}'
+      noche: '{sitio}'
+    excepciones_por_periodo:
+      siembra:
+        amanecer: '{sitio}'
+        mañana: '{sitio}:conuco'
+        tarde: '{sitio}:conuco'
+        noche: '{sitio}'
+  conuco:
+    glosa: 'el conuco: sembrar, cosechar, abrir tierra'
+    agentes:
+    - Karama
+    - Naure
+    - Tabri
+    - Tebekoa
+    - Uria
+    n: 5
+    etiqueta: atestiguado (el conuco); canon-simulacion (el día)
+    fuente:
+    - ecologia-029
+    - ecologia-030
+    - ecologia-083
+    - sitios_era2.yaml Caseto.tierra
+    dia:
+      amanecer: '{sitio}:conuco'
+      mañana: '{sitio}:conuco'
+      mediodia: '{sitio}'
+      tarde: '{sitio}:conuco'
+      anochecer: '{sitio}'
+      noche: '{sitio}'
+    excepciones_por_periodo:
+      seca_larga:
+        mañana: '{sitio}'
+        tarde: '{sitio}'
+  agua_dulce:
+    glosa: 'los que guardan el agua: el jagüey y la fuente del cerro (of-06)'
+    agentes:
+    - Dunakoa
+    - Patapati
+    - Wamipa
+    n: 3
+    etiqueta: atestiguado (la fuente del cerro); canon-simulacion (el oficio)
+    fuente:
+    - ecologia-008
+    - ecologia-028
+    - arcaya-1920 p. 22
+    - estructura_social_era2.yaml of-06
+    - clima_era2.yaml abre_y_cierra.Capubana
+    dia:
+      amanecer: '{jaguey}'
+      mañana: '{jaguey}'
+      mediodia: '{sitio}'
+      tarde: '{jaguey}'
+      anochecer: '{sitio}'
+      noche: '{sitio}'
+    excepciones_por_periodo:
+      seca_larga:
+        amanecer: Capubana:fuente
+        mañana: Capubana:fuente
+        tarde: Capubana:fuente
+  monte:
+    glosa: 'el matorral: la planta que cura y lo que el conuco no da'
+    agentes:
+    - Katiata
+    - Urari
+    n: 2
+    etiqueta: canon-simulacion
+    fuente:
+    - ecologia-018
+    - ecologia-019
+    - ecologia-077
+    - ecologia-082
+    - creencia-020
+    dia:
+      amanecer: '{sitio}'
+      mañana: '{sitio}:matorral'
+      mediodia: '{sitio}'
+      tarde: '{sitio}:matorral'
+      anochecer: '{sitio}'
+      noche: '{sitio}'
+    excepciones_por_periodo: null
+  alfareria:
+    glosa: 'el barro: la vasija que es memoria'
+    agentes:
+    - Chirwa
+    - Dabuda
+    - Saruro
+    n: 3
+    etiqueta: atestiguado (la cadena técnica); canon-simulacion (el día)
+    fuente:
+    - ecologia-013
+    - ecologia-014
+    - ecologia-025
+    - transmision-003
+    dia:
+      amanecer: '{sitio}'
+      mañana: '{sitio}:taller'
+      mediodia: '{sitio}'
+      tarde: '{sitio}:taller'
+      anochecer: '{sitio}'
+      noche: '{sitio}'
+    excepciones_por_periodo:
+      siembra:
+        mañana: '{sitio}:barrial'
+  fibra:
+    glosa: 'la fibra: cordel, algodón, hamaca, totuma'
+    agentes:
+    - Akaure
+    - Arika
+    - Dipopo
+    - Hiko
+    - Tijua
+    n: 5
+    etiqueta: canon-simulacion
+    fuente:
+    - ecologia-023
+    - ecologia-024
+    - sitios_era2.yaml *.materiales
+    dia:
+      amanecer: '{sitio}'
+      mañana: '{sitio}'
+      mediodia: '{sitio}'
+      tarde: '{sitio}:taller'
+      anochecer: '{sitio}'
+      noche: '{sitio}'
+    excepciones_por_periodo: null
+  canoa:
+    glosa: el taller de canoas y la brea
+    agentes:
+    - Dakawa
+    - Isiro
+    - Mene
+    n: 3
+    etiqueta: atestiguado (la canoa); canon-simulacion (el día)
+    fuente:
+    - ecologia-031
+    - ecologia-032
+    - hueco-lex-008
+    - transmision-002
+    dia:
+      amanecer: '{sitio}:orilla'
+      mañana: '{sitio}:taller_canoas'
+      mediodia: '{sitio}'
+      tarde: '{sitio}:taller_canoas'
+      anochecer: '{sitio}'
+      noche: '{sitio}'
+    excepciones_por_periodo: null
+  casa:
+    glosa: 'la casa y el fogón: cocinar, ahumar, criar'
+    agentes:
+    - Harifuche
+    - Kumarawa
+    - Wache
+    - Wairon
+    - Wanepe
+    n: 5
+    etiqueta: canon-simulacion
+    fuente:
+    - transmision-007
+    - ecologia-081
+    - estructura_social_era2.yaml niveles
+    dia:
+      amanecer: '{sitio}'
+      mañana: '{sitio}'
+      mediodia: '{sitio}'
+      tarde: '{sitio}'
+      anochecer: '{sitio}'
+      noche: '{sitio}'
+    excepciones_por_periodo: null
+  mando:
+    glosa: el Manaure, la que reparte y el sobrino que aprende estando cerca
+    agentes:
+    - Apoaure
+    - Karebe
+    - Manaure
+    n: 3
+    etiqueta: atestiguado (el diao que redistribuye); canon-simulacion (el día)
+    fuente:
+    - creencia-001b
+    - creencia-013
+    - parentesco-037
+    - estructura_social_era2.yaml of-01
+    dia:
+      amanecer: '{sitio}'
+      mañana: '{sitio}'
+      mediodia: '{sitio}'
+      tarde: '{sitio}'
+      anochecer: '{sitio}'
+      noche: '{sitio}'
+    excepciones_por_periodo: null
+  mensajeria:
+    glosa: el que lleva la palabra de una casa a otra
+    agentes:
+    - Bajari
+    - Chuchubi
+    - Humohumo
+    n: 3
+    etiqueta: reconstruido (of-12); canon-simulacion (el recorrido)
+    fuente:
+    - estructura_social_era2.yaml of-12
+    - creencia-010
+    - elenco_era2.yaml agentes[Humohumo|Chuchubi|Bajari].oficio
+    dia:
+      amanecer: '{sitio}'
+      mañana: camino
+      mediodia: camino
+      tarde: camino
+      anochecer: '{sitio}'
+      noche: '{sitio}'
+    excepciones_por_periodo: null
+  oraculo:
+    glosa: 'el boratio mayor y su ayunante: el cerro y el encierro'
+    agentes:
+    - Hayo
+    - Sawaka
+    n: 2
+    etiqueta: atestiguado (el encierro de 1-3 días); canon-simulacion (que viva en el cerro)
+    fuente:
+    - creencia-002
+    - creencia-004
+    - arcaya-1920 pp. 97-100
+    - estructura_social_era2.yaml of-02, of-04
+    dia:
+      amanecer: Capubana
+      mañana: Capubana
+      mediodia: Capubana
+      tarde: Capubana
+      anochecer: Capubana
+      noche: Capubana
+    excepciones_por_periodo: null
+  curacion:
+    glosa: 'la boratia de pueblo: cura, adivina, recibe'
+    agentes:
+    - Paugis
+    n: 1
+    etiqueta: atestiguado (un boratio por pueblo principal)
+    fuente:
+    - creencia-001
+    - creencia-007
+    - arcaya-1920 pp. 97-100
+    - estructura_social_era2.yaml of-03
+    dia:
+      amanecer: '{sitio}'
+      mañana: '{sitio}'
+      mediodia: '{sitio}'
+      tarde: '{sitio}'
+      anochecer: '{sitio}'
+      noche: '{sitio}'
+    excepciones_por_periodo: null
+  huesos:
+    glosa: las que muelen los huesos y el que sostiene el fuego
+    agentes:
+    - Amaka
+    - Waru
+    n: 2
+    etiqueta: atestiguado (el rito); reconstruido (quién lo hace)
+    fuente:
+    - creencia-010b
+    - creencia-010c
+    - creencia-011
+    - estructura_social_era2.yaml of-09
+    dia:
+      amanecer: '{sitio}'
+      mañana: '{sitio}'
+      mediodia: '{sitio}'
+      tarde: '{sitio}'
+      anochecer: '{sitio}'
+      noche: '{sitio}'
+    excepciones_por_periodo: null
+  cantor:
+    glosa: el cantor de hazañas (of-08)
+    agentes:
+    - Turicha
+    n: 1
+    etiqueta: atestiguado (el canto de noche)
+    fuente:
+    - creencia-010
+    - transmision-006
+    - transmision-018
+    - estructura_social_era2.yaml of-08
+    dia:
+      amanecer: '{sitio}'
+      mañana: '{sitio}'
+      mediodia: '{sitio}'
+      tarde: '{sitio}'
+      anochecer: '{sitio}'
+      noche: '{sitio}'
+    excepciones_por_periodo: null
+  arbitraje:
+    glosa: 'el de la buena vara: linderos de conuco y de playa (of-13)'
+    agentes:
+    - Dichiba
+    n: 1
+    etiqueta: hipotetico (of-13)
+    fuente:
+    - estructura_social_era2.yaml of-13
+    - oliver-1989-cap3 p. 275
+    dia:
+      amanecer: '{sitio}'
+      mañana: '{sitio}:conuco'
+      mediodia: '{sitio}'
+      tarde: '{sitio}:orilla'
+      anochecer: '{sitio}'
+      noche: '{sitio}'
+    excepciones_por_periodo: null
+  merejuy:
+    glosa: la maestra del merejuy (of-07)
+    agentes:
+    - Buriche
+    n: 1
+    etiqueta: hipotetico (of-07)
+    fuente:
+    - estructura_social_era2.yaml of-07
+    - clima_era2.yaml abre_y_cierra.Moruy
+    dia:
+      amanecer: '{sitio}'
+      mañana: '{sitio}'
+      mediodia: '{sitio}'
+      tarde: '{sitio}'
+      anochecer: '{sitio}'
+      noche: '{sitio}'
+    excepciones_por_periodo: null
+  memoria_de_casa:
+    glosa: 'la matriarca: la cuenta del don y lo que se guarda'
+    agentes:
+    - Jakura
+    - Simaure
+    - Wasima
+    n: 3
+    etiqueta: reconstruido (la matriarca)
+    fuente:
+    - parentesco-005
+    - parentesco-022
+    - transmision-008
+    dia:
+      amanecer: '{sitio}'
+      mañana: '{sitio}'
+      mediodia: '{sitio}'
+      tarde: '{sitio}'
+      anochecer: '{sitio}'
+      noche: '{sitio}'
+    excepciones_por_periodo: null
+  vision:
+    glosa: la que dice lo que se cumple dos días después
+    agentes:
+    - Cege
+    n: 1
+    etiqueta: canon-simulacion
+    fuente:
+    - transmision-014
+    - creencia-005
+    dia:
+      amanecer: '{sitio}'
+      mañana: '{sitio}'
+      mediodia: '{sitio}'
+      tarde: '{sitio}'
+      anochecer: '{sitio}'
+      noche: '{sitio}'
+    excepciones_por_periodo: null
+  ninez:
+    glosa: ''
+    agentes:
+    - Chakamba
+    - Dato
+    - Jaiata
+    - Siwa
+    - Talata
+    - Tigi
+    n: 6
+    etiqueta: canon-simulacion
+    fuente:
+    - transmision-025
+    - transmision-027
+    - transmision-029
+    dia:
+      amanecer: '{sitio}'
+      mañana: '{sitio}'
+      mediodia: '{sitio}'
+      tarde: '{sitio}'
+      anochecer: '{sitio}'
+      noche: '{sitio}'
+    excepciones_por_periodo: null
+clase_por_agente:
+  Akaure: fibra
+  Amaka: huesos
+  Apoaure: mando
+  Arika: fibra
+  Bajari: mensajeria
+  Birokoa: sal
+  Buriche: merejuy
+  Cege: vision
+  Chakamba: ninez
+  Chirwa: alfareria
+  Chuchubi: mensajeria
+  Dabuda: alfareria
+  Dakawa: canoa
+  Dara-bana: vigia
+  Dato: ninez
+  Dichiba: arbitraje
+  Dipopo: fibra
+  Dunakoa: agua_dulce
+  Duraboa: pesca
+  Ebokoa: pesca
+  Harifuche: casa
+  Hayo: oraculo
+  Hiko: fibra
+  Humohumo: mensajeria
+  Isiro: canoa
+  Jachos: pesca
+  Jaiata: ninez
+  Jakura: memoria_de_casa
+  Karama: conuco
+  Karebe: mando
+  Kasebo: pesca
+  Katiata: monte
+  Kiwakoa: marisqueo
+  Kumarawa: casa
+  Kunaro-bana: pesca
+  Manaure: mando
+  Mene: canoa
+  Naure: conuco
+  Patapati: agua_dulce
+  Paugis: curacion
+  Ruata: vigia
+  Saruro: alfareria
+  Sawaka: oraculo
+  Simaure: memoria_de_casa
+  Siwa: ninez
+  Tabri: conuco
+  Talata: ninez
+  Tauta: marisqueo
+  Tebekoa: conuco
+  Tigi: ninez
+  Tijua: fibra
+  Turicha: cantor
+  Ucibo: pesca
+  Urari: monte
+  Uria: conuco
+  Wache: casa
+  Wairon: casa
+  Waitiao: pesca
+  Wamipa: agua_dulce
+  Wanepe: casa
+  Waranaro: pesca
+  Waru: huesos
+  Wasima: memoria_de_casa
+compartidos_declarados:
+  Capubana: estructura_social_era2.yaml decision_creativa_2026-09-14.capubana
+  Capubana:fuente: clima_era2.yaml abre_y_cierra.Capubana (NO CIERRA NUNCA)
+  camino:Moruy-Caseto: 'el elenco lo llama «la alianza»: «Caseto es el sitio de AMUAY más
+    cercano a Moruy —unos ocho kilómetros por tierra, contra veinticinco— y ese camino corto
+    ES la alianza: la esposa principal viene por él y el aporte de AMUAY al cerro baja por
+    él» — 6-fusion/elenco_era2.yaml casas[los Guasicures de Caseto].razon_del_linaje'
+caminos_compartidos:
+- extremos: &id001
+  - Moruy
+  - Caseto
+  lugar: camino:Moruy-Caseto
+  razon: 'el elenco lo llama «la alianza»: «Caseto es el sitio de AMUAY más cercano a Moruy
+    —unos ocho kilómetros por tierra, contra veinticinco— y ese camino corto ES la alianza:
+    la esposa principal viene por él y el aporte de AMUAY al cerro baja por él»'
+  fuente: 6-fusion/elenco_era2.yaml casas[los Guasicures de Caseto].razon_del_linaje
+  etiqueta: canon-simulacion (el camino es canon; que sea lugar de la escena es la decisión
+    2 → B del 2026-09-17)
+travesia_de_la_alianza:
+  filas:
+  - lugar: camino:Moruy-Caseto
+    extremos: *id001
+    agentes:
+    - Karebe
+    encajan_en_la_geografia_pero_no_en_la_frase:
+    - Wamipa
+    momentos:
+    - mañana
+    - mediodia
+    - tarde
+    cuando: vispera_de_capubana
+    glosa_del_cuando: la víspera del día de Capubana (día N donde (N+1) % capubana_cada ==
+      0)
+    etiqueta: canon-simulacion (la cadencia); canon (el camino y su papel)
+    fuente: 6-fusion/elenco_era2.yaml casas[los Guasicures de Caseto].razon_del_linaje
+  derivacion: cruzado por matrimonio cuyo {sitio_origen, vive_en} son los dos extremos del
+    camino declarado
+capubana:
+  lugar: Capubana
+  cadencia: 'parámetro del run: --capubana-cada N, sellado en simulation_runs.config (decisión
+    7 → A; N = 3 en la primera cadena)'
+  que_pasa_ese_dia: los 63 están en el Capubana los seis momentos
+  etiqueta: atestiguado (que hay convergencia y que suben y bajan delegaciones); canon-simulacion
+    (la cadencia)
+  fuente:
+  - 6-fusion/estructura_social_era2.yaml §ciclo_ritual_merejuy (CM fases 4 y 5)
+  - creencia-013
+  - Ampíes f. 14
+  - 6-fusion/clima_era2.yaml abre_y_cierra.Capubana
+lugares:
+  Capubana:
+    tipo: aldea
+    sitio: Capubana
+    nodo: COMPARTIDO
+    lat: 11.8183
+    lon: -69.9524
+    glosa: el Capubana, el cerro
+    locacion: null
+    extremos: null
+    compartido: estructura_social_era2.yaml decision_creativa_2026-09-14.capubana
+  Capubana:fuente:
+    tipo: locacion
+    sitio: Capubana
+    nodo: COMPARTIDO
+    lat: 11.818
+    lon: -69.952
+    glosa: la fuente del cerro
+    locacion: fuente
+    extremos: null
+    compartido: clima_era2.yaml abre_y_cierra.Capubana (NO CIERRA NUNCA)
+  Carirubana:
+    tipo: aldea
+    sitio: Carirubana
+    nodo: AMUAY
+    lat: 11.694
+    lon: -70.218
+    glosa: Carirubana
+    locacion: null
+    extremos: null
+    compartido: null
+  Carirubana:orilla:
+    tipo: locacion
+    sitio: Carirubana
+    nodo: AMUAY
+    lat: 11.694
+    lon: -70.218
+    glosa: la orilla de Carirubana
+    locacion: orilla
+    extremos: null
+    compartido: null
+  Carirubana:taller:
+    tipo: locacion
+    sitio: Carirubana
+    nodo: AMUAY
+    lat: 11.694
+    lon: -70.218
+    glosa: el taller de Carirubana
+    locacion: taller
+    extremos: null
+    compartido: null
+  Carirubana:taller_canoas:
+    tipo: locacion
+    sitio: Carirubana
+    nodo: AMUAY
+    lat: 11.694
+    lon: -70.218
+    glosa: el taller de canoas de Carirubana
+    locacion: taller_canoas
+    extremos: null
+    compartido: null
+  Caseto:
+    tipo: aldea
+    sitio: Caseto
+    nodo: AMUAY
+    lat: 11.762
+    lon: -70.017
+    glosa: Caseto
+    locacion: null
+    extremos: null
+    compartido: null
+  Caseto:conuco:
+    tipo: locacion
+    sitio: Caseto
+    nodo: AMUAY
+    lat: 11.762
+    lon: -70.017
+    glosa: el conuco de Caseto
+    locacion: conuco
+    extremos: null
+    compartido: null
+  Caseto:orilla:
+    tipo: locacion
+    sitio: Caseto
+    nodo: AMUAY
+    lat: 11.762
+    lon: -70.017
+    glosa: la orilla de Caseto
+    locacion: orilla
+    extremos: null
+    compartido: null
+  Caseto:taller:
+    tipo: locacion
+    sitio: Caseto
+    nodo: AMUAY
+    lat: 11.762
+    lon: -70.017
+    glosa: el taller de Caseto
+    locacion: taller
+    extremos: null
+    compartido: null
+  El Cayude:
+    tipo: aldea
+    sitio: El Cayude
+    nodo: GUARANAO
+    lat: 11.701
+    lon: -69.957
+    glosa: El Cayude
+    locacion: null
+    extremos: null
+    compartido: null
+  El Cayude:jaguey:
+    tipo: locacion
+    sitio: El Cayude
+    nodo: GUARANAO
+    lat: 11.701
+    lon: -69.957
+    glosa: el jagüey de El Cayude
+    locacion: jaguey
+    extremos: null
+    compartido: null
+  El Cayude:matorral:
+    tipo: locacion
+    sitio: El Cayude
+    nodo: GUARANAO
+    lat: 11.701
+    lon: -69.957
+    glosa: el matorral de El Cayude
+    locacion: matorral
+    extremos: null
+    compartido: null
+  El Cayude:orilla:
+    tipo: locacion
+    sitio: El Cayude
+    nodo: GUARANAO
+    lat: 11.701
+    lon: -69.957
+    glosa: la orilla de El Cayude
+    locacion: orilla
+    extremos: null
+    compartido: null
+  El Cayude:punta:
+    tipo: locacion
+    sitio: El Cayude
+    nodo: GUARANAO
+    lat: 11.649
+    lon: -69.925
+    glosa: la punta de El Cayude
+    locacion: punta
+    extremos: null
+    compartido: null
+  Moruy:
+    tipo: aldea
+    sitio: Moruy
+    nodo: GUARANAO
+    lat: 11.822
+    lon: -69.983
+    glosa: Moruy
+    locacion: null
+    extremos: null
+    compartido: null
+  Moruy:taller:
+    tipo: locacion
+    sitio: Moruy
+    nodo: GUARANAO
+    lat: 11.822
+    lon: -69.983
+    glosa: el taller de Moruy
+    locacion: taller
+    extremos: null
+    compartido: null
+  Tacuato:
+    tipo: aldea
+    sitio: Tacuato
+    nodo: GUARANAO
+    lat: 11.708
+    lon: -69.841
+    glosa: Tacuato
+    locacion: null
+    extremos: null
+    compartido: null
+  Tacuato:conuco:
+    tipo: locacion
+    sitio: Tacuato
+    nodo: GUARANAO
+    lat: 11.708
+    lon: -69.841
+    glosa: el conuco de Tacuato
+    locacion: conuco
+    extremos: null
+    compartido: null
+  Tacuato:jaguey:
+    tipo: locacion
+    sitio: Tacuato
+    nodo: GUARANAO
+    lat: 11.708
+    lon: -69.841
+    glosa: el jagüey de Tacuato
+    locacion: jaguey
+    extremos: null
+    compartido: null
+  Tacuato:matorral:
+    tipo: locacion
+    sitio: Tacuato
+    nodo: GUARANAO
+    lat: 11.708
+    lon: -69.841
+    glosa: el matorral de Tacuato
+    locacion: matorral
+    extremos: null
+    compartido: null
+  Tacuato:orilla:
+    tipo: locacion
+    sitio: Tacuato
+    nodo: GUARANAO
+    lat: 11.708
+    lon: -69.841
+    glosa: la orilla de Tacuato
+    locacion: orilla
+    extremos: null
+    compartido: null
+  Tacuato:salinar:
+    tipo: locacion
+    sitio: Tacuato
+    nodo: GUARANAO
+    lat: 11.708
+    lon: -69.841
+    glosa: el salinar de Tacuato
+    locacion: salinar
+    extremos: null
+    compartido: null
+  Tacuato:taller:
+    tipo: locacion
+    sitio: Tacuato
+    nodo: GUARANAO
+    lat: 11.708
+    lon: -69.841
+    glosa: el taller de Tacuato
+    locacion: taller
+    extremos: null
+    compartido: null
+  ZA1:
+    tipo: zona
+    sitio: null
+    nodo: AMUAY
+    lat: 11.85729
+    lon: -70.24486
+    glosa: la costa oeste
+    locacion: null
+    extremos: null
+    compartido: null
+  ZG2:
+    tipo: zona
+    sitio: null
+    nodo: GUARANAO
+    lat: 11.6746
+    lon: -69.9182
+    glosa: la orilla del Golfete
+    locacion: null
+    extremos: null
+    compartido: null
+  camino:El Cayude:
+    tipo: camino
+    sitio: null
+    nodo: GUARANAO
+    lat: 11.701
+    lon: -69.957
+    glosa: el camino que sale de El Cayude
+    locacion: null
+    extremos:
+    - El Cayude
+    compartido: null
+  camino:Moruy-Caseto:
+    tipo: camino
+    sitio: null
+    nodo: COMPARTIDO
+    lat: 11.792
+    lon: -70.0
+    glosa: el camino de Moruy a Caseto
+    locacion: null
+    extremos:
+    - Moruy
+    - Caseto
+    compartido: 'el elenco lo llama «la alianza»: «Caseto es el sitio de AMUAY más cercano
+      a Moruy —unos ocho kilómetros por tierra, contra veinticinco— y ese camino corto ES
+      la alianza: la esposa principal viene por él y el aporte de AMUAY al cerro baja por
+      él» — 6-fusion/elenco_era2.yaml casas[los Guasicures de Caseto].razon_del_linaje'
+escena_por_agente:
+  Amaka:
+    nodo: AMUAY
+    sitio: Carirubana
+    clase: huesos
+    viento:
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    seca_larga:
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    siembra:
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+  Arika:
+    nodo: AMUAY
+    sitio: Carirubana
+    clase: fibra
+    viento:
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana:taller
+    - Carirubana
+    - Carirubana
+    seca_larga:
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana:taller
+    - Carirubana
+    - Carirubana
+    siembra:
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana:taller
+    - Carirubana
+    - Carirubana
+  Bajari:
+    nodo: AMUAY
+    sitio: Caseto
+    clase: mensajeria
+    viento:
+    - Caseto
+    - camino:Moruy-Caseto
+    - camino:Moruy-Caseto
+    - camino:Moruy-Caseto
+    - Caseto
+    - Caseto
+    seca_larga:
+    - Caseto
+    - camino:Moruy-Caseto
+    - camino:Moruy-Caseto
+    - camino:Moruy-Caseto
+    - Caseto
+    - Caseto
+    siembra:
+    - Caseto
+    - camino:Moruy-Caseto
+    - camino:Moruy-Caseto
+    - camino:Moruy-Caseto
+    - Caseto
+    - Caseto
+  Dakawa:
+    nodo: AMUAY
+    sitio: Carirubana
+    clase: canoa
+    viento:
+    - Carirubana:orilla
+    - Carirubana:taller_canoas
+    - Carirubana
+    - Carirubana:taller_canoas
+    - Carirubana
+    - Carirubana
+    seca_larga:
+    - Carirubana:orilla
+    - Carirubana:taller_canoas
+    - Carirubana
+    - Carirubana:taller_canoas
+    - Carirubana
+    - Carirubana
+    siembra:
+    - Carirubana:orilla
+    - Carirubana:taller_canoas
+    - Carirubana
+    - Carirubana:taller_canoas
+    - Carirubana
+    - Carirubana
+  Dipopo:
+    nodo: AMUAY
+    sitio: Caseto
+    clase: fibra
+    viento:
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto:taller
+    - Caseto
+    - Caseto
+    seca_larga:
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto:taller
+    - Caseto
+    - Caseto
+    siembra:
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto:taller
+    - Caseto
+    - Caseto
+  Ebokoa:
+    nodo: AMUAY
+    sitio: Carirubana
+    clase: pesca
+    viento:
+    - ZA1
+    - ZA1
+    - Carirubana
+    - Carirubana:orilla
+    - Carirubana:orilla
+    - ZA1
+    seca_larga:
+    - ZA1
+    - ZA1
+    - Carirubana
+    - Carirubana:orilla
+    - Carirubana:orilla
+    - Carirubana
+    siembra:
+    - ZA1
+    - ZA1
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+  Isiro:
+    nodo: AMUAY
+    sitio: Carirubana
+    clase: canoa
+    viento:
+    - Carirubana:orilla
+    - Carirubana:taller_canoas
+    - Carirubana
+    - Carirubana:taller_canoas
+    - Carirubana
+    - Carirubana
+    seca_larga:
+    - Carirubana:orilla
+    - Carirubana:taller_canoas
+    - Carirubana
+    - Carirubana:taller_canoas
+    - Carirubana
+    - Carirubana
+    siembra:
+    - Carirubana:orilla
+    - Carirubana:taller_canoas
+    - Carirubana
+    - Carirubana:taller_canoas
+    - Carirubana
+    - Carirubana
+  Karama:
+    nodo: AMUAY
+    sitio: Caseto
+    clase: conuco
+    viento:
+    - Caseto:conuco
+    - Caseto:conuco
+    - Caseto
+    - Caseto:conuco
+    - Caseto
+    - Caseto
+    seca_larga:
+    - Caseto:conuco
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    siembra:
+    - Caseto:conuco
+    - Caseto:conuco
+    - Caseto
+    - Caseto:conuco
+    - Caseto
+    - Caseto
+  Kasebo:
+    nodo: AMUAY
+    sitio: Caseto
+    clase: pesca
+    viento:
+    - ZA1
+    - ZA1
+    - Caseto
+    - Caseto:orilla
+    - Caseto:orilla
+    - ZA1
+    seca_larga:
+    - ZA1
+    - ZA1
+    - Caseto
+    - Caseto:orilla
+    - Caseto:orilla
+    - Caseto
+    siembra:
+    - ZA1
+    - ZA1
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+  Kiwakoa:
+    nodo: AMUAY
+    sitio: Carirubana
+    clase: marisqueo
+    viento:
+    - Carirubana:orilla
+    - Carirubana:orilla
+    - Carirubana
+    - Carirubana:orilla
+    - Carirubana
+    - Carirubana
+    seca_larga:
+    - Carirubana:orilla
+    - Carirubana:orilla
+    - Carirubana
+    - Carirubana:orilla
+    - Carirubana
+    - Carirubana
+    siembra:
+    - Carirubana:orilla
+    - Carirubana:orilla
+    - Carirubana
+    - Carirubana:orilla
+    - Carirubana
+    - Carirubana
+  Mene:
+    nodo: AMUAY
+    sitio: Carirubana
+    clase: canoa
+    viento:
+    - Carirubana:orilla
+    - Carirubana:taller_canoas
+    - Carirubana
+    - Carirubana:taller_canoas
+    - Carirubana
+    - Carirubana
+    seca_larga:
+    - Carirubana:orilla
+    - Carirubana:taller_canoas
+    - Carirubana
+    - Carirubana:taller_canoas
+    - Carirubana
+    - Carirubana
+    siembra:
+    - Carirubana:orilla
+    - Carirubana:taller_canoas
+    - Carirubana
+    - Carirubana:taller_canoas
+    - Carirubana
+    - Carirubana
+  Paugis:
+    nodo: AMUAY
+    sitio: Carirubana
+    clase: curacion
+    viento:
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    seca_larga:
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    siembra:
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+  Saruro:
+    nodo: AMUAY
+    sitio: Caseto
+    clase: alfareria
+    viento:
+    - Caseto
+    - Caseto:taller
+    - Caseto
+    - Caseto:taller
+    - Caseto
+    - Caseto
+    seca_larga:
+    - Caseto
+    - Caseto:taller
+    - Caseto
+    - Caseto:taller
+    - Caseto
+    - Caseto
+    siembra:
+    - Caseto
+    - Caseto:taller
+    - Caseto
+    - Caseto:taller
+    - Caseto
+    - Caseto
+  Siwa:
+    nodo: AMUAY
+    sitio: Caseto
+    clase: ninez
+    viento:
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    seca_larga:
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    siembra:
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+  Tabri:
+    nodo: AMUAY
+    sitio: Caseto
+    clase: conuco
+    viento:
+    - Caseto:conuco
+    - Caseto:conuco
+    - Caseto
+    - Caseto:conuco
+    - Caseto
+    - Caseto
+    seca_larga:
+    - Caseto:conuco
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    siembra:
+    - Caseto:conuco
+    - Caseto:conuco
+    - Caseto
+    - Caseto:conuco
+    - Caseto
+    - Caseto
+  Talata:
+    nodo: AMUAY
+    sitio: Carirubana
+    clase: ninez
+    viento:
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    seca_larga:
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    siembra:
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+  Tauta:
+    nodo: AMUAY
+    sitio: Carirubana
+    clase: marisqueo
+    viento:
+    - Carirubana:orilla
+    - Carirubana:orilla
+    - Carirubana
+    - Carirubana:orilla
+    - Carirubana
+    - Carirubana
+    seca_larga:
+    - Carirubana:orilla
+    - Carirubana:orilla
+    - Carirubana
+    - Carirubana:orilla
+    - Carirubana
+    - Carirubana
+    siembra:
+    - Carirubana:orilla
+    - Carirubana:orilla
+    - Carirubana
+    - Carirubana:orilla
+    - Carirubana
+    - Carirubana
+  Tebekoa:
+    nodo: AMUAY
+    sitio: Caseto
+    clase: conuco
+    viento:
+    - Caseto:conuco
+    - Caseto:conuco
+    - Caseto
+    - Caseto:conuco
+    - Caseto
+    - Caseto
+    seca_larga:
+    - Caseto:conuco
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    siembra:
+    - Caseto:conuco
+    - Caseto:conuco
+    - Caseto
+    - Caseto:conuco
+    - Caseto
+    - Caseto
+  Tigi:
+    nodo: AMUAY
+    sitio: Carirubana
+    clase: ninez
+    viento:
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    seca_larga:
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    siembra:
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+  Tijua:
+    nodo: AMUAY
+    sitio: Caseto
+    clase: fibra
+    viento:
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto:taller
+    - Caseto
+    - Caseto
+    seca_larga:
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto:taller
+    - Caseto
+    - Caseto
+    siembra:
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto:taller
+    - Caseto
+    - Caseto
+  Turicha:
+    nodo: AMUAY
+    sitio: Caseto
+    clase: cantor
+    viento:
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    seca_larga:
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    siembra:
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+  Waitiao:
+    nodo: AMUAY
+    sitio: Caseto
+    clase: pesca
+    viento:
+    - ZA1
+    - ZA1
+    - Caseto
+    - Caseto:orilla
+    - Caseto:orilla
+    - ZA1
+    seca_larga:
+    - ZA1
+    - ZA1
+    - Caseto
+    - Caseto:orilla
+    - Caseto:orilla
+    - Caseto
+    siembra:
+    - ZA1
+    - ZA1
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+  Waru:
+    nodo: AMUAY
+    sitio: Carirubana
+    clase: huesos
+    viento:
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    seca_larga:
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    siembra:
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+    - Carirubana
+  Wasima:
+    nodo: AMUAY
+    sitio: Caseto
+    clase: memoria_de_casa
+    viento:
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    seca_larga:
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    siembra:
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+    - Caseto
+  Akaure:
+    nodo: GUARANAO
+    sitio: Tacuato
+    clase: fibra
+    viento:
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    - Tacuato:taller
+    - Tacuato
+    - Tacuato
+    seca_larga:
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    - Tacuato:taller
+    - Tacuato
+    - Tacuato
+    siembra:
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    - Tacuato:taller
+    - Tacuato
+    - Tacuato
+  Apoaure:
+    nodo: GUARANAO
+    sitio: Moruy
+    clase: mando
+    viento:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    seca_larga:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    siembra:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+  Birokoa:
+    nodo: GUARANAO
+    sitio: Tacuato
+    clase: sal
+    viento:
+    - Tacuato:salinar
+    - Tacuato:salinar
+    - Tacuato
+    - Tacuato:salinar
+    - Tacuato
+    - Tacuato
+    seca_larga:
+    - Tacuato:salinar
+    - Tacuato:salinar
+    - Tacuato
+    - Tacuato:salinar
+    - Tacuato
+    - Tacuato
+    siembra:
+    - Tacuato
+    - Tacuato:conuco
+    - Tacuato
+    - Tacuato:conuco
+    - Tacuato
+    - Tacuato
+  Buriche:
+    nodo: GUARANAO
+    sitio: Moruy
+    clase: merejuy
+    viento:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    seca_larga:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    siembra:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+  Cege:
+    nodo: GUARANAO
+    sitio: El Cayude
+    clase: vision
+    viento:
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    seca_larga:
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    siembra:
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+  Chakamba:
+    nodo: GUARANAO
+    sitio: Tacuato
+    clase: ninez
+    viento:
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    seca_larga:
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    siembra:
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    - Tacuato
+  Chirwa:
+    nodo: GUARANAO
+    sitio: Tacuato
+    clase: alfareria
+    viento:
+    - Tacuato
+    - Tacuato:taller
+    - Tacuato
+    - Tacuato:taller
+    - Tacuato
+    - Tacuato
+    seca_larga:
+    - Tacuato
+    - Tacuato:taller
+    - Tacuato
+    - Tacuato:taller
+    - Tacuato
+    - Tacuato
+    siembra:
+    - Tacuato
+    - Tacuato:taller
+    - Tacuato
+    - Tacuato:taller
+    - Tacuato
+    - Tacuato
+  Chuchubi:
+    nodo: GUARANAO
+    sitio: El Cayude
+    clase: mensajeria
+    viento:
+    - El Cayude
+    - camino:El Cayude
+    - camino:El Cayude
+    - camino:El Cayude
+    - El Cayude
+    - El Cayude
+    seca_larga:
+    - El Cayude
+    - camino:El Cayude
+    - camino:El Cayude
+    - camino:El Cayude
+    - El Cayude
+    - El Cayude
+    siembra:
+    - El Cayude
+    - camino:El Cayude
+    - camino:El Cayude
+    - camino:El Cayude
+    - El Cayude
+    - El Cayude
+  Dabuda:
+    nodo: GUARANAO
+    sitio: Tacuato
+    clase: alfareria
+    viento:
+    - Tacuato
+    - Tacuato:taller
+    - Tacuato
+    - Tacuato:taller
+    - Tacuato
+    - Tacuato
+    seca_larga:
+    - Tacuato
+    - Tacuato:taller
+    - Tacuato
+    - Tacuato:taller
+    - Tacuato
+    - Tacuato
+    siembra:
+    - Tacuato
+    - Tacuato:taller
+    - Tacuato
+    - Tacuato:taller
+    - Tacuato
+    - Tacuato
+  Dara-bana:
+    nodo: GUARANAO
+    sitio: El Cayude
+    clase: vigia
+    viento:
+    - El Cayude:punta
+    - El Cayude:punta
+    - El Cayude
+    - El Cayude:punta
+    - El Cayude
+    - El Cayude
+    seca_larga:
+    - El Cayude:punta
+    - El Cayude:punta
+    - El Cayude
+    - El Cayude:punta
+    - El Cayude
+    - El Cayude
+    siembra:
+    - El Cayude:punta
+    - El Cayude:punta
+    - El Cayude
+    - El Cayude:punta
+    - El Cayude
+    - El Cayude
+  Dato:
+    nodo: GUARANAO
+    sitio: Moruy
+    clase: ninez
+    viento:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    seca_larga:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    siembra:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+  Dichiba:
+    nodo: GUARANAO
+    sitio: Tacuato
+    clase: arbitraje
+    viento:
+    - Tacuato
+    - Tacuato:conuco
+    - Tacuato
+    - Tacuato:orilla
+    - Tacuato
+    - Tacuato
+    seca_larga:
+    - Tacuato
+    - Tacuato:conuco
+    - Tacuato
+    - Tacuato:orilla
+    - Tacuato
+    - Tacuato
+    siembra:
+    - Tacuato
+    - Tacuato:conuco
+    - Tacuato
+    - Tacuato:orilla
+    - Tacuato
+    - Tacuato
+  Dunakoa:
+    nodo: GUARANAO
+    sitio: El Cayude
+    clase: agua_dulce
+    viento:
+    - El Cayude:jaguey
+    - El Cayude:jaguey
+    - El Cayude
+    - El Cayude:jaguey
+    - El Cayude
+    - El Cayude
+    seca_larga:
+    - Capubana:fuente
+    - Capubana:fuente
+    - El Cayude
+    - Capubana:fuente
+    - El Cayude
+    - El Cayude
+    siembra:
+    - El Cayude:jaguey
+    - El Cayude:jaguey
+    - El Cayude
+    - El Cayude:jaguey
+    - El Cayude
+    - El Cayude
+  Duraboa:
+    nodo: GUARANAO
+    sitio: Tacuato
+    clase: pesca
+    viento:
+    - ZG2
+    - ZG2
+    - Tacuato
+    - Tacuato:orilla
+    - Tacuato:orilla
+    - ZG2
+    seca_larga:
+    - ZG2
+    - ZG2
+    - Tacuato
+    - Tacuato:orilla
+    - Tacuato:orilla
+    - Tacuato
+    siembra:
+    - ZG2
+    - ZG2
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    - Tacuato
+  Harifuche:
+    nodo: GUARANAO
+    sitio: Moruy
+    clase: casa
+    viento:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    seca_larga:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    siembra:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+  Hayo:
+    nodo: GUARANAO
+    sitio: Moruy
+    clase: oraculo
+    viento:
+    - Capubana
+    - Capubana
+    - Capubana
+    - Capubana
+    - Capubana
+    - Capubana
+    seca_larga:
+    - Capubana
+    - Capubana
+    - Capubana
+    - Capubana
+    - Capubana
+    - Capubana
+    siembra:
+    - Capubana
+    - Capubana
+    - Capubana
+    - Capubana
+    - Capubana
+    - Capubana
+  Hiko:
+    nodo: GUARANAO
+    sitio: Moruy
+    clase: fibra
+    viento:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy:taller
+    - Moruy
+    - Moruy
+    seca_larga:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy:taller
+    - Moruy
+    - Moruy
+    siembra:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy:taller
+    - Moruy
+    - Moruy
+  Humohumo:
+    nodo: GUARANAO
+    sitio: Moruy
+    clase: mensajeria
+    viento:
+    - Moruy
+    - camino:Moruy-Caseto
+    - camino:Moruy-Caseto
+    - camino:Moruy-Caseto
+    - Moruy
+    - Moruy
+    seca_larga:
+    - Moruy
+    - camino:Moruy-Caseto
+    - camino:Moruy-Caseto
+    - camino:Moruy-Caseto
+    - Moruy
+    - Moruy
+    siembra:
+    - Moruy
+    - camino:Moruy-Caseto
+    - camino:Moruy-Caseto
+    - camino:Moruy-Caseto
+    - Moruy
+    - Moruy
+  Jachos:
+    nodo: GUARANAO
+    sitio: El Cayude
+    clase: pesca
+    viento:
+    - ZG2
+    - ZG2
+    - El Cayude
+    - El Cayude:orilla
+    - El Cayude:orilla
+    - ZG2
+    seca_larga:
+    - ZG2
+    - ZG2
+    - El Cayude
+    - El Cayude:orilla
+    - El Cayude:orilla
+    - El Cayude
+    siembra:
+    - ZG2
+    - ZG2
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+  Jaiata:
+    nodo: GUARANAO
+    sitio: El Cayude
+    clase: ninez
+    viento:
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    seca_larga:
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    siembra:
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+  Jakura:
+    nodo: GUARANAO
+    sitio: Moruy
+    clase: memoria_de_casa
+    viento:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    seca_larga:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    siembra:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+  Karebe:
+    nodo: GUARANAO
+    sitio: Moruy
+    clase: mando
+    viento:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    seca_larga:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    siembra:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+  Katiata:
+    nodo: GUARANAO
+    sitio: El Cayude
+    clase: monte
+    viento:
+    - El Cayude
+    - El Cayude:matorral
+    - El Cayude
+    - El Cayude:matorral
+    - El Cayude
+    - El Cayude
+    seca_larga:
+    - El Cayude
+    - El Cayude:matorral
+    - El Cayude
+    - El Cayude:matorral
+    - El Cayude
+    - El Cayude
+    siembra:
+    - El Cayude
+    - El Cayude:matorral
+    - El Cayude
+    - El Cayude:matorral
+    - El Cayude
+    - El Cayude
+  Kumarawa:
+    nodo: GUARANAO
+    sitio: Moruy
+    clase: casa
+    viento:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    seca_larga:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    siembra:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+  Kunaro-bana:
+    nodo: GUARANAO
+    sitio: Tacuato
+    clase: pesca
+    viento:
+    - ZG2
+    - ZG2
+    - Tacuato
+    - Tacuato:orilla
+    - Tacuato:orilla
+    - ZG2
+    seca_larga:
+    - ZG2
+    - ZG2
+    - Tacuato
+    - Tacuato:orilla
+    - Tacuato:orilla
+    - Tacuato
+    siembra:
+    - Tacuato:conuco
+    - Tacuato:conuco
+    - Tacuato
+    - Tacuato:conuco
+    - Tacuato
+    - Tacuato
+  Manaure:
+    nodo: GUARANAO
+    sitio: Moruy
+    clase: mando
+    viento:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    seca_larga:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    siembra:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+  Naure:
+    nodo: GUARANAO
+    sitio: Tacuato
+    clase: conuco
+    viento:
+    - Tacuato:conuco
+    - Tacuato:conuco
+    - Tacuato
+    - Tacuato:conuco
+    - Tacuato
+    - Tacuato
+    seca_larga:
+    - Tacuato:conuco
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    siembra:
+    - Tacuato:conuco
+    - Tacuato:conuco
+    - Tacuato
+    - Tacuato:conuco
+    - Tacuato
+    - Tacuato
+  Patapati:
+    nodo: GUARANAO
+    sitio: Tacuato
+    clase: agua_dulce
+    viento:
+    - Tacuato:jaguey
+    - Tacuato:jaguey
+    - Tacuato
+    - Tacuato:jaguey
+    - Tacuato
+    - Tacuato
+    seca_larga:
+    - Capubana:fuente
+    - Capubana:fuente
+    - Tacuato
+    - Capubana:fuente
+    - Tacuato
+    - Tacuato
+    siembra:
+    - Tacuato:jaguey
+    - Tacuato:jaguey
+    - Tacuato
+    - Tacuato:jaguey
+    - Tacuato
+    - Tacuato
+  Ruata:
+    nodo: GUARANAO
+    sitio: El Cayude
+    clase: vigia
+    viento:
+    - El Cayude:punta
+    - El Cayude:punta
+    - El Cayude
+    - El Cayude:punta
+    - El Cayude
+    - El Cayude
+    seca_larga:
+    - El Cayude:punta
+    - El Cayude:punta
+    - El Cayude
+    - El Cayude:punta
+    - El Cayude
+    - El Cayude
+    siembra:
+    - El Cayude:punta
+    - El Cayude:punta
+    - El Cayude
+    - El Cayude:punta
+    - El Cayude
+    - El Cayude
+  Sawaka:
+    nodo: GUARANAO
+    sitio: Capubana
+    clase: oraculo
+    viento:
+    - Capubana
+    - Capubana
+    - Capubana
+    - Capubana
+    - Capubana
+    - Capubana
+    seca_larga:
+    - Capubana
+    - Capubana
+    - Capubana
+    - Capubana
+    - Capubana
+    - Capubana
+    siembra:
+    - Capubana
+    - Capubana
+    - Capubana
+    - Capubana
+    - Capubana
+    - Capubana
+  Simaure:
+    nodo: GUARANAO
+    sitio: Moruy
+    clase: memoria_de_casa
+    viento:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    seca_larga:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    siembra:
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+    - Moruy
+  Ucibo:
+    nodo: GUARANAO
+    sitio: Tacuato
+    clase: pesca
+    viento:
+    - ZG2
+    - ZG2
+    - Tacuato
+    - Tacuato:orilla
+    - Tacuato:orilla
+    - ZG2
+    seca_larga:
+    - ZG2
+    - ZG2
+    - Tacuato
+    - Tacuato:orilla
+    - Tacuato:orilla
+    - Tacuato
+    siembra:
+    - ZG2
+    - ZG2
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    - Tacuato
+  Urari:
+    nodo: GUARANAO
+    sitio: Tacuato
+    clase: monte
+    viento:
+    - Tacuato
+    - Tacuato:matorral
+    - Tacuato
+    - Tacuato:matorral
+    - Tacuato
+    - Tacuato
+    seca_larga:
+    - Tacuato
+    - Tacuato:matorral
+    - Tacuato
+    - Tacuato:matorral
+    - Tacuato
+    - Tacuato
+    siembra:
+    - Tacuato
+    - Tacuato:matorral
+    - Tacuato
+    - Tacuato:matorral
+    - Tacuato
+    - Tacuato
+  Uria:
+    nodo: GUARANAO
+    sitio: Tacuato
+    clase: conuco
+    viento:
+    - Tacuato:conuco
+    - Tacuato:conuco
+    - Tacuato
+    - Tacuato:conuco
+    - Tacuato
+    - Tacuato
+    seca_larga:
+    - Tacuato:conuco
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    - Tacuato
+    siembra:
+    - Tacuato:conuco
+    - Tacuato:conuco
+    - Tacuato
+    - Tacuato:conuco
+    - Tacuato
+    - Tacuato
+  Wache:
+    nodo: GUARANAO
+    sitio: El Cayude
+    clase: casa
+    viento:
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    seca_larga:
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    siembra:
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+  Wairon:
+    nodo: GUARANAO
+    sitio: El Cayude
+    clase: casa
+    viento:
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    seca_larga:
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    siembra:
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+  Wamipa:
+    nodo: GUARANAO
+    sitio: Moruy
+    clase: agua_dulce
+    viento:
+    - Capubana:fuente
+    - Capubana:fuente
+    - Moruy
+    - Capubana:fuente
+    - Moruy
+    - Moruy
+    seca_larga:
+    - Capubana:fuente
+    - Capubana:fuente
+    - Moruy
+    - Capubana:fuente
+    - Moruy
+    - Moruy
+    siembra:
+    - Capubana:fuente
+    - Capubana:fuente
+    - Moruy
+    - Capubana:fuente
+    - Moruy
+    - Moruy
+  Wanepe:
+    nodo: GUARANAO
+    sitio: El Cayude
+    clase: casa
+    viento:
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    seca_larga:
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    siembra:
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+  Waranaro:
+    nodo: GUARANAO
+    sitio: El Cayude
+    clase: pesca
+    viento:
+    - ZG2
+    - ZG2
+    - El Cayude
+    - El Cayude:orilla
+    - El Cayude:orilla
+    - ZG2
+    seca_larga:
+    - ZG2
+    - ZG2
+    - El Cayude
+    - El Cayude:orilla
+    - El Cayude:orilla
+    - El Cayude
+    siembra:
+    - ZG2
+    - ZG2
+    - El Cayude
+    - El Cayude
+    - El Cayude
+    - El Cayude
+cobertura:
+  viento:
+    con_lugar_en_los_seis: 63
+    de: 63
+  seca_larga:
+    con_lugar_en_los_seis: 63
+    de: 63
+  siembra:
+    con_lugar_en_los_seis: 63
+    de: 63
+cruzados_por_matrimonio:
+- nombre: Duraboa
+  vive_en: Tacuato
+  nodo: GUARANAO
+  linaje: Warana
+  origen: AMUAY
+  rol: esposo entrante del otro nodo
+  en_roster: false
+  clase: pesca
+  sitio_origen: Caseto
+- nombre: Urari
+  vive_en: Tacuato
+  nodo: GUARANAO
+  linaje: Paugis
+  origen: AMUAY
+  rol: esposa del apopo (del otro nodo)
+  en_roster: true
+  clase: monte
+  sitio_origen: Carirubana
+- nombre: Dunakoa
+  vive_en: El Cayude
+  nodo: GUARANAO
+  linaje: Warana
+  origen: AMUAY
+  rol: esposo entrante del otro nodo
+  en_roster: true
+  clase: agua_dulce
+  sitio_origen: Caseto
+- nombre: Waranaro
+  vive_en: El Cayude
+  nodo: GUARANAO
+  linaje: Paugis
+  origen: AMUAY
+  rol: esposa del apopo (del otro nodo)
+  en_roster: true
+  clase: pesca
+  sitio_origen: Carirubana
+- nombre: Karebe
+  vive_en: Moruy
+  nodo: GUARANAO
+  linaje: Warana
+  origen: AMUAY
+  rol: esposa principal (traída del otro nodo)
+  en_roster: true
+  clase: mando
+  sitio_origen: Caseto
+- nombre: Kumarawa
+  vive_en: Moruy
+  nodo: GUARANAO
+  linaje: Paugis
+  origen: AMUAY
+  rol: cuarta esposa del Manaure (traída de Carirubana, los Corubos)
+  en_roster: false
+  clase: casa
+  sitio_origen: Carirubana
+- nombre: Wamipa
+  vive_en: Moruy
+  nodo: GUARANAO
+  linaje: Warana
+  origen: AMUAY
+  rol: hijo del Manaure que no hereda
+  en_roster: false
+  clase: agua_dulce
+  sitio_origen: Caseto
+- nombre: Kasebo
+  vive_en: Caseto
+  nodo: AMUAY
+  linaje: Buio
+  origen: GUARANAO
+  rol: esposo entrante del otro nodo
+  en_roster: true
+  clase: pesca
+  sitio_origen: El Cayude
+- nombre: Dipopo
+  vive_en: Caseto
+  nodo: AMUAY
+  linaje: Buio
+  origen: GUARANAO
+  rol: esposa del apopo (del otro nodo)
+  en_roster: false
+  clase: fibra
+  sitio_origen: El Cayude
+- nombre: Ebokoa
+  vive_en: Carirubana
+  nodo: AMUAY
+  linaje: Corie
+  origen: GUARANAO
+  rol: esposo entrante del otro nodo
+  en_roster: true
+  clase: pesca
+  sitio_origen: Tacuato
+- nombre: Mene
+  vive_en: Carirubana
+  nodo: AMUAY
+  linaje: Buio
+  origen: GUARANAO
+  rol: esposa del apopo (del otro nodo)
+  en_roster: false
+  clase: canoa
+  sitio_origen: El Cayude
