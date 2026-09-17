@@ -35,7 +35,11 @@ from curiana_eventos import (
 from curiana_state import (
     EVENTOS_COTIDIANOS,
     EVENTOS_ESTACIONALES,
+    PERIODOS_ERA2,
+    TENSIONES_ERA2,
     ComunidadState,
+    estado_inicial,
+    estado_inicial_paraguana,
     estado_inicial_test,
 )
 
@@ -251,6 +255,199 @@ def test_call_agent_no_le_pasa_al_agente_el_mundo_de_la_era_1(monkeypatch):
         sistemas.clear()
         orch.call_agent(object(), "Manaure", st, lexico, observer, "¿Qué haces?")
         assert ("Shaboro salió de su choza" in sistemas[0]) is debe_estar, mundo
+
+
+# ── la otra puerta: el MENSAJE del agente (2026-09-17) ────────────────
+# El bloque del mundo iba traducido desde #143, pero el user_message no: el
+# estímulo de un turno con evento es «[Situación]: {evento}» y se mandaba
+# crudo. Medido en el run b06f57ea (serie B, era 2): 23 de 72 respuestas del
+# día 1 dicen «Shaboro» y 16 «Buio-sha» —12 de 12 en el turno 2— mientras el
+# Director decía «Sawaka».
+
+def _espiar_prompts(monkeypatch) -> list:
+    """Cada (system, mensaje) que sale hacia el cliente."""
+    prompts = []
+    monkeypatch.setattr(
+        orch, "_invoke",
+        lambda client, system, msg: prompts.append((system, msg)) or "Taya wana-ka.")
+    return prompts
+
+
+def test_el_mensaje_del_agente_tambien_pasa_por_el_traductor(monkeypatch):
+    from curiana_lexicon import LexicoComunitario
+    from curiana_observer import ObserverAgent
+
+    prompts = _espiar_prompts(monkeypatch)
+    lexico = LexicoComunitario()
+    observer = ObserverAgent(object(), lexico)
+    situacion = f"[Situación]: {estado_inicial_test().evento_del_turno}. ¿Cómo reaccionas?"
+    for mundo, debe_estar in (("CURIANA", True), ("PARAGUANÁ", False)):
+        st = estado_inicial_test()
+        st.fijar_mundo(mundo)
+        prompts.clear()
+        orch.call_agent(object(), "Manaure", st, lexico, observer, situacion)
+        mensaje = prompts[0][1]
+        assert ("Shaboro" in mensaje) is debe_estar, (mundo, mensaje)
+        assert ("Buio-sha" in mensaje) is debe_estar, (mundo, mensaje)
+    # el alias traduce, no borra: la situación sigue llegando, dicha de la era 2
+    assert "Sawaka salió de su choza" in prompts[0][1]
+
+
+def test_un_mensaje_que_no_sobrevive_entero_cae_en_el_momento_del_dia(monkeypatch):
+    """Un estímulo que es todo marco de la era 1 se queda en nada: el agente
+    recibe el momento del día antes que un mensaje vacío (la API lo rechaza)."""
+    from curiana_lexicon import LexicoComunitario
+    from curiana_observer import ObserverAgent
+
+    prompts = _espiar_prompts(monkeypatch)
+    lexico = LexicoComunitario()
+    observer = ObserverAgent(object(), lexico)
+    st = estado_inicial_test()
+    st.fijar_mundo("PARAGUANÁ")
+    orch.call_agent(object(), "Manaure", st, lexico, observer, "Los Guaycarí pescan.")
+    assert prompts[0][1] == orch.MOMENTOS_ESTIMULO[st.momento].replace("{lugar}", "la Curiana")
+
+
+_TURNO_ERA2 = """
+import json
+import curiana_orchestrator_v2 as orch
+from curiana_lexicon import LexicoComunitario
+from curiana_observer import ObserverAgent
+from curiana_state import estado_inicial, estado_inicial_test
+
+prompts = []
+orch._invoke = lambda client, system, msg: prompts.append([system, msg]) or "Taya wana-ka."
+orch.director_narrate = lambda *a, **k: "(narración)"
+orch.director_select_event = lambda state: None
+lexico = LexicoComunitario()
+
+
+class _DB:                      # como _DBQueGraba en test_era2_motor.py
+    turnos = []
+    def save_turn(self, **k):
+        _DB.turnos.append(k)
+        return "turn-1"
+    def __getattr__(self, n):
+        return lambda *a, **k: "id"
+
+
+def turno(state):
+    prompts.clear()
+    orch.run_turn(object(), state, orch.AgentMemory(), lexico,
+                  ObserverAgent(object(), lexico), verbose=False,
+                  db=_DB(), run_id="run-1", agentes_por_turno=4,
+                  roster=orch.roster_de_habla("todos"))
+    return list(prompts)
+
+
+# (a) el estado de la ERA 1 con el mundo de la 2: lo que corrió hasta el
+#     2026-09-17 y lo que puede traer un estado continuado de antes.
+viejo = estado_inicial_test()
+viejo.fijar_mundo(orch.MUNDO)
+# (b) el estado que escribe ahora estado_inicial(MUNDO).
+nuevo = estado_inicial(orch.MUNDO)
+print(json.dumps({
+    "mundo": orch.MUNDO,
+    "elenco": orch.ELENCO,
+    "desde_la_era_1": turno(viejo),
+    "desde_paraguana": turno(nuevo),
+    "turnos": _DB.turnos,
+}))
+"""
+
+
+def test_un_turno_con_el_elenco_era2_no_manda_ningun_nombre_de_la_era_1():
+    """La garantía de punta a punta, con la era 2 REAL (subproceso con
+    CURIANA_ELENCO=era2): ni el system prompt ni el mensaje de ningún agente
+    llevan «Shaboro» o «Buio-sha», ni arrancando del estado nuevo ni
+    arrancando del de la era 1. Y `turns.event_description` tampoco.
+
+    Con el elenco de la era 1 este turno no se puede medir: la persona de
+    Manaure nombra a Shaboro en su propio system_prompt, que es suyo y no es
+    texto del mundo."""
+    env = dict(os.environ, CURIANA_ELENCO="era2", PYTHONIOENCODING="utf-8")
+    r = subprocess.run([sys.executable, "-c", _TURNO_ERA2], cwd=SIM, env=env,
+                       capture_output=True, text=True, encoding="utf-8", timeout=300)
+    assert r.returncode == 0, r.stderr[-2000:]
+    import json
+    salida = json.loads(r.stdout.strip().splitlines()[-1])
+    assert salida["mundo"] == "PARAGUANÁ" and salida["elenco"] == "era2"
+    for arranque in ("desde_la_era_1", "desde_paraguana"):
+        prompts = salida[arranque]
+        assert prompts, arranque
+        texto = " ".join(t for p in prompts for t in p)
+        for marca in ("Shaboro", "Buio-sha", "Biro-ko", "Guaycar", "la Curiana"):
+            assert marca not in texto, (arranque, marca)
+    # el evento semilla de Paraguaná sí llega, entero y dicho de su mundo
+    mensajes = " ".join(p[1] for p in salida["desde_paraguana"])
+    assert "Tiempo de Viento" in mensajes and "el Capubana" in mensajes
+    # y lo que se graba en `turns` es lo mismo, sin nombres viejos
+    grabados = [t["event_description"] for t in salida["turnos"]]
+    assert grabados and all(g is None or "Shaboro" not in g for g in grabados), grabados
+
+
+# ── el estado inicial por mundo (2026-09-17) ──────────────────────────
+
+def test_la_era_1_arranca_byte_a_byte_como_siempre():
+    assert estado_inicial("CURIANA").to_dict() == estado_inicial_test().to_dict()
+    assert estado_inicial().to_dict() == estado_inicial_test().to_dict()
+    assert estado_inicial("un mundo que no existe").to_dict() == estado_inicial_test().to_dict()
+
+
+def test_paraguana_arranca_sin_nada_de_la_era_1():
+    """Ni en el evento, ni en la escena, ni en las tensiones, ni en el clima."""
+    s = estado_inicial_paraguana()
+    assert s is not estado_inicial_paraguana()          # no comparte estado mutable
+    assert (s.mundo, s.dia, s.turno, s.estacion, s.momento) == \
+        ("PARAGUANÁ", 1, 1, "viento", "amanecer")
+    assert s.clima == PERIODOS_ERA2["viento"]["clima_base"]
+    todo = " ".join([s.evento_del_turno or "", *s.agentes_en_escena,
+                     *s.tensiones_activas, *(t["causa"] for t in s.tensiones_activas.values())])
+    assert not residuos_de_la_era_1(todo, VIEJOS), todo
+    for nombre in s.agentes_en_escena:
+        assert nombre in era2.ALL_AGENTS, nombre
+    # el estado entero, tal como lo lee el agente, ya está dicho para la era 2
+    crudo = s.to_context_string()
+    assert decir_para_el_mundo(crudo, "PARAGUANÁ") == crudo
+
+
+def test_la_escena_del_dia_1_es_el_manaure_y_un_apopo_por_casa():
+    """Sale del módulo GENERADO, no de una lista a mano: las cinco casas del
+    casting tienen voz el primer amanecer y los dos nodos están en escena."""
+    s = estado_inicial_paraguana()
+    fichas = era2.ALL_AGENTS
+    casas = {fichas[n]["casa"] for n in s.agentes_en_escena}
+    assert casas == {a["casa"] for a in fichas.values() if a.get("casa")}
+    assert {fichas[n]["nodo"] for n in s.agentes_en_escena} == {"GUARANAO", "AMUAY"}
+    roles = [fichas[n]["rol_en_la_casa"] for n in s.agentes_en_escena]
+    assert roles[0].startswith("Manaure") and set(roles[1:]) == {"apopo"}
+
+
+def test_las_tensiones_de_la_era_2_son_las_que_el_canon_declara():
+    """Sólo pares de gente que existe, y cada una con la línea de 6-fusion/
+    que la sostiene. El `nivel` es canon-simulación y va declarado."""
+    s = estado_inicial_paraguana()
+    assert s.tensiones_activas == TENSIONES_ERA2 and TENSIONES_ERA2
+    for par, t in TENSIONES_ERA2.items():
+        assert t["fuente"].startswith("6-fusion/"), par
+        assert t["nivel"] in ("bajo", "medio", "alto"), par
+    # el par se escribe con los nombres de la era 2, que están en el elenco
+    for nombres in (("Sawaka", "Paugis"), ("Manaure", "Kiwakoa"),
+                    ("Kunaro-bana", "Jachos"), ("Bajari", "Kasebo")):
+        assert "-".join(nombres) in TENSIONES_ERA2
+        for n in nombres:
+            assert n in era2.ALL_AGENTS, n
+
+
+def test_el_evento_semilla_de_paraguana_cita_el_canon():
+    """Ninguna frase a mano: la del amanecer es LITERAL de clima_era2.yaml y
+    los sitios son los del canon (sitios_era2.yaml), no inventados."""
+    from curiana_mundo import clima, sitios
+    evento = estado_inicial_paraguana().evento_del_turno
+    assert clima()["frases_del_cargador"]["viento"]["momentos"]["amanecer"] in evento
+    for sitio in ("Tacuato", "Carirubana", "Moruy", "Capubana"):
+        assert sitio in sitios() and sitio in evento, sitio
+    assert "Curiana" not in evento and "salinar" not in evento
 
 
 # ── el orquestador pasa por el elenco ─────────────────────────────────

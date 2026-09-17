@@ -628,10 +628,70 @@ def test_la_serie_queda_sellada_en_la_config_del_run(sim, monkeypatch, tmp_path)
 class _DBQueGraba:
     def __init__(self):
         self.config = None
+        self.turnos = []
     def create_run(self, *a, **k):
         self.config = k.get("config")
         return "run-de-prueba"
+    def save_turn(self, **k):
+        self.turnos.append(k)
+        return f"turn-{len(self.turnos)}"
     def end_run(self, run_id, total_turns, total_days):
         pass
     def __getattr__(self, nombre):
         return lambda *a, **k: "id"
+
+
+# ── el evento del turno: cuánto dura y qué se graba (2026-09-17) ──────
+# Medido sobre `turns` en la base local: el evento semilla de la era 1 fue la
+# situación de los turnos 1-3 del run b06f57ea y «Poco pescado. Los Guaycarí…»
+# la de los turnos 4-6 del 89fc1744. Y la fila se escribía ANTES de que el
+# Director eligiera, así que decía el evento del turno ANTERIOR.
+
+def test_en_paraguana_el_evento_dura_un_turno_y_en_la_curiana_el_dia(sim):
+    """Decisión declarada: el día de la era 2 tiene seis momentos y el evento
+    es la situación de UNO. La era 1 no se mueve."""
+    from curiana_state import estado_inicial
+
+    sim["state"] = estado_inicial("PARAGUANÁ")
+    sim["state"].turnos_por_dia = 6
+    semilla = sim["state"].evento_del_turno
+    assert semilla
+    _correr(sim, turnos=1, agentes_por_turno=2, roster=["Manaure"])
+    assert sim["state"].evento_del_turno is None
+    assert sim["state"].historial_eventos == [{"dia": 1, "turno": 1, "evento": semilla}]
+    assert sim["state"].eventos_activos == []
+
+    # la era 1: el evento sigue siendo la situación hasta el cambio de día
+    sim["state"] = estado_inicial_test()
+    viejo = sim["state"].evento_del_turno
+    _correr(sim, turnos=1, agentes_por_turno=2, roster=["Manaure"])
+    assert sim["state"].evento_del_turno == viejo
+    assert sim["state"].historial_eventos == []
+
+
+def test_turns_graba_el_evento_de_ESTE_turno_y_dicho_para_el_mundo(sim, monkeypatch):
+    """La fila de `turns` dice lo que los agentes recibieron ese turno, ya
+    traducido: en la era 2 el Director no puede dejar «Biro-ko» ni «los
+    Guaycarí» en la base aunque el evento venga escrito en la era 1."""
+    from curiana_state import estado_inicial
+
+    evento = {"id": "prueba", "efecto": {}, "agentes_involucrados": [],
+              "descripcion": "Biro-ko raspa la sal. Los Guaycarí miran desde la orilla."}
+    monkeypatch.setattr(orch, "director_select_event", lambda state: evento)
+
+    def _turno(state):
+        db = _DBQueGraba()
+        orch.run_turn(sim["client"], state, sim["memory"], sim["lexico"],
+                      sim["observer"], verbose=False, db=db, run_id="run-1",
+                      agentes_por_turno=2, roster=["Manaure"])
+        return db
+
+    db = _turno(estado_inicial("PARAGUANÁ"))
+    grabado = db.turnos[0]["event_description"]
+    # no es el semilla (el de ANTES de que el Director eligiera) sino el de hoy
+    assert "Tiempo de Viento" not in grabado
+    assert grabado == "Birokoa raspa la sal."          # el marco étnico se cae
+    assert (db.turnos[0]["day"], db.turnos[0]["turn_num"]) == (1, 1)
+
+    # la era 1 lo guarda tal cual: ni un byte
+    assert _turno(estado_inicial_test()).turnos[0]["event_description"] == evento["descripcion"]

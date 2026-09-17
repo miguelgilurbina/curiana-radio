@@ -47,7 +47,7 @@ from curiana_state import (
     DIAS_POR_ESTACION,
     DIAS_POR_ANIO,
     estacion_equivalente,
-    estado_inicial_test,
+    estado_inicial,
     momento_de_turno,
     EVENTOS_COTIDIANOS,
     EVENTOS_ESTACIONALES,
@@ -326,15 +326,29 @@ def call_agent(
     else:
         base_prompt = agent.get("system_prompt", f"Eres {agent_name} de la Curiana.")
 
+    # ⚠ El MENSAJE pasa por el traductor, no sólo el system prompt. El estímulo
+    # de un turno con evento es «[Situación]: {state.evento_del_turno}…», y
+    # hasta el 2026-09-17 se mandaba crudo: el bloque del mundo iba traducido
+    # desde #143, pero el user_message no, así que el evento semilla de la era
+    # 1 llegó a los agentes por esta puerta. Medido en el run b06f57ea: 23 de
+    # 72 respuestas del día 1 dijeron «Shaboro» y 16 «Buio-sha» (12 de 12 en
+    # el turno 2), mientras el Director —cuya puerta sí traducía— decía
+    # «Sawaka». Si no sobrevive ninguna frase, el agente recibe el momento del
+    # día antes que un mensaje vacío (la API lo rechaza).
+    dicho = decir_para_el_mundo(user_message, state.mundo).strip()
+    user_message = dicho or MOMENTOS_ESTIMULO.get(state.momento, "¿Qué haces ahora?")
+
     # El estímulo del turno nombra el sitio del agente (era 2) o la Curiana.
+    # Va DESPUÉS del traductor: el marcador no es texto del mundo.
     user_message = user_message.replace("{lugar}", agent.get("sitio") or "la Curiana")
 
     # Contexto dinámico del mundo, dicho para el elenco activo. En la era 1 es
     # el mismo string; en la era 2 pasa por curiana_eventos.decir_para_el_mundo()
-    # porque el estado semilla (estado_inicial_test) trae «Shaboro salió de su
-    # choza… Buio-sha lo vio desde lejos» en evento_del_turno, y esos dos
-    # nombres de la era 1 llegaban a los 63 agentes el día 1 de todo run que no
-    # continúa a otro (medido 2026-09-16).
+    # porque el estado semilla de la era 1 (estado_inicial_test) trae «Shaboro
+    # salió de su choza… Buio-sha lo vio desde lejos» en evento_del_turno. Desde
+    # el 2026-09-17 un run de la era 2 arranca de estado_inicial('PARAGUANÁ') y
+    # ya no lo trae; el traductor se queda porque un estado continuado puede
+    # venir de antes y porque el catálogo no es la única puerta.
     world_context = decir_para_el_mundo(state.to_context_string(), state.mundo)
 
     # Ubicación actual
@@ -623,23 +637,6 @@ def run_turn(
         naming_concepto = naming_referente["id"]
         competencia.activar(naming_concepto, naming_referente["desc"])
 
-    # 0. Registrar turno en DB
-    turn_id: Optional[str] = None
-    if db and run_id:
-        try:
-            turn_id = db.save_turn(
-                run_id=run_id,
-                day=state.dia,
-                turn_num=state.turno,
-                moment=state.momento,
-                season=state.estacion,
-                event_description=state.evento_del_turno or None,
-            )
-        except Exception as e:
-            db_fallos["turns"] += 1
-            if verbose:
-                print(f"  ⚠ DB turn error: {e}")
-
     # 1. Director: ¿hay evento?
     evento = director_select_event(state)
     if evento:
@@ -666,6 +663,30 @@ def run_turn(
     else:
         agentes_activos = _ventana()
 
+    # 1b. Registrar el turno en la DB — DESPUÉS de que el Director decida.
+    #     Antes iba primero, así que `turns.event_description` guardaba el
+    #     evento del turno ANTERIOR: cuando el Director elegía uno nuevo, la
+    #     fila decía una cosa y los agentes recibían otra (b06f57ea: la fila
+    #     del turno 3 dice el evento semilla y el turno 3 corrió con «Los
+    #     pescadores regresan…»). Y se guarda ya DICHO para el mundo activo:
+    #     la era 1 escribe el mismo string; la era 2, sin nombres de la era 1.
+    turn_id: Optional[str] = None
+    if db and run_id:
+        try:
+            turn_id = db.save_turn(
+                run_id=run_id,
+                day=state.dia,
+                turn_num=state.turno,
+                moment=state.momento,
+                season=state.estacion,
+                event_description=decir_para_el_mundo(
+                    state.evento_del_turno or "", state.mundo).strip() or None,
+            )
+        except Exception as e:
+            db_fallos["turns"] += 1
+            if verbose:
+                print(f"  ⚠ DB turn error: {e}")
+
     if verbose:
         print(f"\n{'='*60}")
         print(f"  DÍA {state.dia} | TURNO {state.turno} | {state.momento.upper()}")
@@ -674,10 +695,16 @@ def run_turn(
             print(f"  📍 {state.evento_del_turno}")
         print(f"{'='*60}\n")
 
-    # 2. Estímulo del turno
+    # 2. Estímulo del turno. Todo lo que sale de aquí pasa por
+    #    decir_para_el_mundo() dentro de call_agent: el evento va crudo y se
+    #    traduce en la puerta. El nombramiento nombra el mundo del estado
+    #    —«ALGO NUEVO EN PARAGUANÁ»—; escrito «EN LA CURIANA», el traductor de
+    #    la era 2 se habría comido la frase entera (Curiana es un marco de
+    #    MARCOS_FUERA_ERA2) y con ella el referente que hay que nombrar.
     if naming_concepto:
+        donde = "LA CURIANA" if state.mundo == "CURIANA" else state.mundo
         stimulus = (
-            f"[ALGO NUEVO EN LA CURIANA]: {naming_referente['desc']}. "
+            f"[ALGO NUEVO EN {donde}]: {naming_referente['desc']}. "
             f"Esto no tiene nombre en caquetío todavía. Nómbralo TÚ con morfemas "
             f"caquetíos y dilo: [forma: componentes = significado]. Reacciona a la "
             f"cosa nueva y nómbrala."
@@ -892,6 +919,18 @@ def run_turn(
     # 6. Avanzar estado
     if campo is not None:
         campo.decaer()  # recambio léxico: formas no usadas pierden peso
+    # En PARAGUANÁ el evento dura UN turno y no más: el día tiene seis momentos
+    # y el evento es la situación de UNO de ellos, así que al cerrar el turno
+    # se archiva y se apaga. Si el Director no elige otro en el turno
+    # siguiente, el estímulo vuelve a ser el momento del día; repetirlo es
+    # decisión suya, que puede volver a elegirlo. En CURIANA no se toca: dos
+    # turnos por día y el evento dura el día, como siempre (avanzar_turno).
+    # Medido el 2026-09-17 sobre `turns`: sin esto el evento semilla fue la
+    # situación de los turnos 1-3 del run b06f57ea, «Los pescadores regresan…»
+    # la de los turnos 4-5, y «Poco pescado. Los Guaycarí…» la de los turnos
+    # 4-6 del run 89fc1744.
+    if state.mundo == "PARAGUANÁ":
+        state.cerrar_evento_del_turno()
     state.avanzar_turno()
 
     return interactions
@@ -911,8 +950,11 @@ def interactive_mode(client: anthropic.Anthropic):
         state = ComunidadState.load()
         print("  → Estado cargado.")
     except Exception:
-        state = estado_inicial_test()
+        # El estado inicial es el del MUNDO que fija el elenco, no el de la
+        # era 1 (ver auto_mode y curiana_state.estado_inicial).
+        state = estado_inicial(MUNDO)
         print("  → Nuevo test run.")
+    state.fijar_mundo(MUNDO)
 
     memory = AgentMemory.load()
     lexico = LexicoComunitario.load()
@@ -1160,7 +1202,11 @@ def auto_mode(
         # El estado guardado apunta al turno siguiente al último corrido, así
         # que un día completo anterior deja al nuevo run en el amanecer.
     else:
-        state = estado_inicial_test()
+        # El estado del día 1 es el del MUNDO que fija el elenco. Hasta el
+        # 2026-09-17 todo run que no continuaba arrancaba del de la era 1:
+        # «Shaboro salió de su choza… Buio-sha lo vio desde lejos», la escena
+        # y las tensiones de la Curiana, y `estacion="seca"`, en Paraguaná.
+        state = estado_inicial(MUNDO)
         memory = AgentMemory()
         lexico = LexicoComunitario()
         observer = ObserverAgent(client, lexico)
@@ -1294,8 +1340,9 @@ def auto_mode(
                     memory.add(nm, nota)
                 # Quiénes hablaron hoy: es el elenco que la reflexión le pasa
                 # al Director («la gente que hay hoy es: …»). state.agentes_en_escena
-                # NO sirve: sigue trayendo los nombres de la era 1 del estado
-                # semilla y nadie lo actualiza.
+                # NO sirve: desde el 2026-09-17 trae los nombres de la era 2 en
+                # la era 2, pero es la escena del día 1 y NADIE la actualiza
+                # turno a turno; quien habló de verdad es esto.
                 gente_de_hoy = sorted(hizo_hoy)
                 hizo_hoy = {}
                 # Distancia medida SOLO sobre quienes hablaron (población real).
