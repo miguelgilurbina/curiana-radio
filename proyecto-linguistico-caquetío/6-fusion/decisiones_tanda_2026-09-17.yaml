@@ -306,3 +306,43 @@ escena_por_lugar:
     koine_metrics y koine_lexicon · y la era 1, que tiene que seguir byte a
     byte (allí `nodo` es None, `ambito_de` devuelve None y las cuatro vías
     quedan globales).
+
+humohumo_se_mantiene:
+  estado: DECIDIDA (2026-09-17, tarde)
+  pregunta: >-
+    Miguel: «¿Humohumo es un nombre que dimos con castellano?». Medido: no —
+    es Zavala Reyes 2015 #160, «el ave que vuela», atribuido por Zavala a
+    Angulo Molina (sigla AM), y entró en la campaña de antropónimos como raíz
+    caquetío-atestiguada (Kabo-ni → Humohumo, mapa_nombres_era2.yaml); encaja
+    en la reduplicación onomatopéyica de fauna medida en 2-lengua/morfologia.md
+    (warawara, chuchubi, chuchube, querequere, chogogo, tuqueque). Pero la
+    grafía es de oído castellano y Angulo Molina no tiene ficha en 4-fuentes/:
+    el escriba propuso degradar la entrada del lexicón a reconstruido y abrir
+    la deuda de la fuente.
+  decision_literal: '«Mantengamos humohumo»'
+  lectura_operativa: >-
+    El nombre del agente y la entrada `humohumo` del lexicón se quedan como
+    están (caquetío-atestiguado vía Zavala #160 AM). Queda abierta, sin
+    urgencia, la deuda documental: localizar la obra de Angulo Molina y
+    verificar la entrada; hasta entonces la atribución es de segunda mano y
+    así se lee.
+  se_aplica_en: 'nada cambia en el motor ni en el lexicón; deuda anotada aquí'
+
+hispanismos_fuera_de_la_esfera:
+  estado: DECIDIDA y APLICADA (2026-09-17, tarde)
+  pregunta: >-
+    Los 7 «préstamos de esfera» del día 1 limpio de la serie B (run 3973d317)
+    eran casabe, yuca, maíz y ture usados como castellano; en toda la base,
+    111 de 161 formas-respuesta con préstamo (69 %) son cinco hispanismos
+    (6-fusion/medicion_hispanismos_loanword_uses_2026-09-17.yaml).
+  decision_literal: '«los hispanismos quedaron fuera de la esfera»'
+  lectura_operativa: >-
+    Lista declarada HISPANISMOS_DE_ESFERA (13 voces) en curiana_lexicon.py:
+    un tercer cubo que sólo saca la voz de prestamos_de_esfera — ni préstamo
+    ni fuga — sin tocar CASTELLANO_CORRIENTE, que movería la densidad y con
+    ella 147 scores a mitad de serie (verificado: 0 cambios en score, pct_*,
+    densidad y palabras_* sobre 2.515 respuestas; sólo prestamos_de_esfera
+    147 → 50). analizar_runs.py --prestamos filtra al leer los runs viejos;
+    --con-hispanismos los devuelve. Pasarlas a CASTELLANO_CORRIENTE es
+    decisión del corte de serie.
+  se_aplica_en: 'rama fix/hispanismos-no-son-prestamo-de-esfera, mergeada el 2026-09-17'
