@@ -53,6 +53,37 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 > Cada fila guarda el commit del motor, si estaba sucio y los hashes del
 > lexicón, el corpus y el elenco. Protocolo: [[04_protocolo_run_1_era_auditada]].
 
+### Era 2 · serie B — el instrumento completo (desde el 2026-09-17)
+
+> Miguel, 2026-09-16: «recorramos nuevamente con este cambio; dejemos esos 3
+> runs como pruebas; volvamos a empezar desde 0». Los tres días del 16
+> (`c6837386`, `89fc1744`, `0193873d`) quedan como **serie A: pruebas del
+> motor de la era 2, sin pre-carga de idiolectos** (62 de 63 agentes
+> arrancaban iguales). La serie B corre con `--serie era2-b` sellado en la
+> config, la pre-carga de #145, el Director con mundo (#138, #143), los
+> préstamos en la base (#133), el scorer corregido (#142) y la cadena de
+> días (#141). No se compara con la serie A más que como «antes/después del
+> instrumento».
+
+| Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |
+|---|---|---|---|---|---|---|
+| 09-17 | `b06f57ea` | 6 / 1 | **63** | 7.5 | 100% | **Día 1 de la serie B, desde cero** (motor `7ab8c2b` limpio, semilla 11, `--reflexion`). Pre-carga: **63 de 63 vectores-semilla distintos** (la serie A: 2). Por eso la acumulada arranca en 0,803 donde la serie A arrancaba en 0,199: ahora hay de dónde converger. Ventana 0,660, emergente 0,944. 18 acuñaciones (9 adoptadas, 11 formas); la competencia por «las cuentas brillantes» —que es un concepto que el motor pone a nombrar, no una necesidad espontánea— se fija en `kari-uro-bana` el día 1 (en la serie A fue `kali-iro-pabu`, mismo turno 5). La forma acuñada ya queda en boca del acuñador (0 de 18 perdidas; en la serie A, 29 de 40). Préstamos: 0, y ya sin falsos. El mundo: cerro en 31 de 72, viento 19, sitio 18, y **el venado nombrado por primera vez (2 respuestas)**. Reflexión del Director escrita por el motor, sin residuos de la era 1. ⚠️ **Deuda del día, y no es menor**: el evento semilla de `estado_inicial_test()` («Shaboro salió de su choza… Buio-sha lo vio») abre todo run nuevo, dura tres turnos, se guarda crudo en `turns.event_description` y **llegó a los agentes**: 23 de 72 respuestas dicen «Shaboro» y 16 «Buio-sha» — el traductor de #143 cubre la puerta del Director (que dijo «Sawaka») pero no la vía por la que el evento entra al prompt del agente. Este día 1 de la serie B queda contaminado por la era 1 en un tercio de sus respuestas; agente con Opus en curso (estado inicial propio de Paraguaná + cerrar esa vía), y toca decidir si el día 1 de la serie B se repite limpio antes de encadenar el 2 |
+
+**Lo que piensa el Director del día 1 de la serie B** (escrito por el motor):
+
+> El juri no paró en toda la jornada y la pesca llegó abundante: eso cambió
+> el peso del hambre en la plaza. Sawaka se fue al amanecer con algo que no
+> dijo, y aunque Hayo esperó, nadie volvió a mencionarlo cuando los cestos
+> llegaron llenos. La palabra que prendió fue **mira-ni** en boca de Karebe
+> mientras contaba los trueques —mirar y contar son lo mismo aquí, y él
+> necesitaba ese verbo para nombrar lo que hace con las manos abiertas de
+> Birokoa y Tauta. El biro sigue bajo pero nadie reclama: con carne seca y
+> cerámica que entra de fuera, la lengua descansa. Mañana sabremos si Sawaka
+> regresa o si lo que vio en la oscuridad del turno 1 aún habla en algún
+> rincón sin luz.
+
+### Era 2 · serie A — pruebas del motor (2026-09-14 → 16)
+
 > ⚠️ **Cambio de instrumento (2026-09-16), declarado.** Dos cosas cambiaron en
 > `score_linguistico()` DESPUÉS de los runs de abajo, así que los del 09-14 no
 > son estrictamente comparables con los que vengan:
