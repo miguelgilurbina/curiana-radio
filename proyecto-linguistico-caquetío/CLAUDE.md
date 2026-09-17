@@ -164,6 +164,9 @@ python curiana_mundo.py                                   # las 126 combinacione
 python curiana_eventos.py                                 # el catálogo de eventos medido y dicho para la era 2
 python curiana_cadena.py                                  # las cadenas `--continuar`: serie de koiné y veredicto por cadena
                                                           # (un run es UN día: su serie sola nunca tiene dos puntos)
+#   --serie era2-b          etiqueta del SET de runs dentro de la era, sellada en la config: los tres
+#                           días del 2026-09-16 son la serie A (pruebas, sin pre-carga de idiolectos);
+#                           lo que cuenta arranca en la B (decisión de Miguel, 2026-09-16)
 python curiana_orchestrator_v2.py --elenco era2 --auto 6 --turnos-por-dia 6 --agentes-por-turno 12 --roster todos --perfil era2 --semilla 1
 python curiana_orchestrator_v2.py --elenco era2 --auto 6 --agentes-por-turno 12 --roster todos --perfil era2 --semilla 2 --continuar --reflexion
 python 6-fusion/scripts/generar_agentes_era2.py --check   # ¿el módulo generado está al día?

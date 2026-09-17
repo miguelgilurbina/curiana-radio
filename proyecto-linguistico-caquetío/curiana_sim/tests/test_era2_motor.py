@@ -605,6 +605,26 @@ def test_auto_mode_cierra_el_dia_con_una_nota_por_agente_y_guarda_la_koine(sim, 
     assert (tmp_path / "curiana_state.json").exists()
 
 
+def test_la_serie_queda_sellada_en_la_config_del_run(sim, monkeypatch, tmp_path):
+    """Miguel, 2026-09-16: los tres días del 16 quedan como pruebas (serie A) y
+    lo que arranca con la pre-carga es la serie B. La etiqueta viaja en la
+    config del run, donde los análisis la leen; sin --serie es None."""
+    monkeypatch.chdir(tmp_path)
+    db = _DBQueGraba()
+    monkeypatch.setattr(orch, "get_db", lambda: db)
+    monkeypatch.setattr(orch, "get_client", lambda run_id=None: sim["client"])
+    monkeypatch.setattr(orch, "huella_de_base", lambda semilla=None: {"motor_sucio": False, "semilla": semilla})
+    from curiana_perfiles import cargar_perfil
+    orch.auto_mode(sim["client"], 1, verbose=False, perfil=cargar_perfil("base"),
+                   agentes_por_turno=2, roster_nombre="todos", turnos_por_dia=1, semilla=7,
+                   serie="era2-b")
+    assert db.config["serie"] == "era2-b"
+    assert db.config["semilla"] == 7
+    orch.auto_mode(sim["client"], 1, verbose=False, perfil=cargar_perfil("base"),
+                   agentes_por_turno=2, roster_nombre="todos", turnos_por_dia=1)
+    assert db.config["serie"] is None
+
+
 class _DBQueGraba:
     def __init__(self):
         self.config = None

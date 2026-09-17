@@ -1088,6 +1088,7 @@ def auto_mode(
     semilla: Optional[int] = None,
     continuar: bool = False,
     reflexion: bool = False,
+    serie: Optional[str] = None,
 ):
     """
     Corre N turnos automáticamente.
@@ -1223,6 +1224,11 @@ def auto_mode(
                 "turnos_por_dia": state.turnos_por_dia,
                 "dia_inicial": state.dia,
                 "continuado_desde": state.run_anterior if continuar else None,
+                # La serie separa SETS de runs dentro de una era (Miguel,
+                # 2026-09-16: los tres días del 16 quedan como pruebas —serie A,
+                # instrumento incompleto— y lo que arranca con la pre-carga es
+                # la serie B). Se sella aquí para que los análisis la lean.
+                "serie": serie,
                 **perfil.como_config(), **_h},
     )
     # Re-crear cliente con run_id para que LangSmith use el proyecto correcto
@@ -1239,7 +1245,8 @@ def auto_mode(
     print(f"  CURIANA — Modo Automático: {turnos} turnos")
     print(f"  ({turnos // tpd} días simulados de {tpd} turnos · "
           f"{turnos // (tpd * DIAS_POR_ANIO)} año(s) aprox.)")
-    print(f"  elenco: {ELENCO} ({len(ALL_AGENTS)} agentes) · mundo {MUNDO}")
+    print(f"  elenco: {ELENCO} ({len(ALL_AGENTS)} agentes) · mundo {MUNDO}"
+          + (f" · serie {serie}" if serie else ""))
     print(f"  habla: {agentes_por_turno} por turno sobre el roster `{roster_nombre}` ({len(roster)})")
     if continuar:
         print(f"  continúa desde el día {state.dia} (run anterior: {(state.run_anterior or '?')[:8]})")
@@ -1509,6 +1516,11 @@ if __name__ == "__main__":
              "curiana_director.json. Apagado por defecto: cuesta API.",
     )
     parser.add_argument(
+        "--serie", default=None,
+        help="Etiqueta del set de runs dentro de la era (p. ej. era2-b); se sella en "
+             "la config del run. Separa las pruebas de lo que cuenta.",
+    )
+    parser.add_argument(
         "--ablacion", action="store_true",
         help="Run de CONTROL: apaga las inyecciones de prompt que empujan la "
              "convergencia (sugerencias de contagio, competencias abiertas, "
@@ -1534,7 +1546,7 @@ if __name__ == "__main__":
 
     extra = dict(agentes_por_turno=args.agentes_por_turno, roster_nombre=args.roster,
                  turnos_por_dia=args.turnos_por_dia, semilla=args.semilla,
-                 continuar=args.continuar, reflexion=args.reflexion)
+                 continuar=args.continuar, reflexion=args.reflexion, serie=args.serie)
     if args.anio:
         tpd = args.turnos_por_dia or 2
         auto_mode(client, 120 * tpd, reporte_anual=True, verbose=not args.silencioso,
