@@ -1,0 +1,230 @@
+# ─────────────────────────────────────────────────────────────────────────
+# El prestigio y los vínculos de la era 2: una clave viva de 63
+#
+# `curiana_social.PRESTIGIO` y `curiana_social.VINCULOS` están escritos con
+# los nombres de la ERA 1. La campaña de antropónimos (2026-09-14) renombró a
+# 60 de 63 agentes, así que en la era 2 sólo UNA clave resolvía a un agente
+# vivo —Manaure— y los tres destinos de sus vínculos no existían en el elenco:
+# el agente de más prestigio propagaba su habla a tres fantasmas.
+#
+# Es el mismo agujero que DISENO_KOINE §4 cerró para `FORMAS_SEED`, y pesa en
+# la misma métrica: el prestigio pondera la fijación de la koiné
+# (`curiana_koine.CompetenciaLexica._prestigio`).
+#
+# Se hace «aparte, hágase o no la escena» — existir-en-el-mundo §8, última
+# fila. NO es el diseño de la frontera entre nodos: eso sigue abierto para
+# Miguel (6-fusion/issues-pendientes/frontera-entre-nodos-2026-09-17.md).
+# Aquí sólo se restituyen los vínculos que el canon YA escribió.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  medido: '2026-09-17'
+  que_se_toco: curiana_sim/curiana_social.py y curiana_sim/tests/test_social.py
+  como: >-
+    `python curiana_sim/curiana_social.py` (era 1) y
+    `CURIANA_ELENCO=era2 python curiana_sim/curiana_social.py` (era 2)
+    imprimen el bloque «el grafo de …»; con `--json`, la medición entera.
+    Sale toda de `curiana_social.medicion()`, que recorre el elenco activo.
+  el_antes: >-
+    La fórmula anterior al arreglo vive en
+    `curiana_sim/tests/test_social.py::_prestigio_como_antes` y
+    `::_vecinos_como_antes` — es la que compara la tabla ENTERA de la era 1
+    antes/después. Las cifras de `antes:` se recalcularon con ella sobre el
+    elenco de la era 2, en el mismo proceso: ninguna está escrita a mano.
+  scorer: >-
+    No se tocó. `score_linguistico`, `pct_*` y `capas_de_score` quedan como
+    estaban; esto mueve el CONTAGIO (quién oye a quién, con cuánto peso) y el
+    peso del proponente en la fijación, no la puntuación de una respuesta.
+
+# ══════════════════════════════════════════════════════════════════════
+a_la_deuda_medida:
+  elenco: era2
+  mundo: PARAGUANÁ
+  agentes: 63
+
+  prestigio:
+    claves_escritas: 9
+    claves_que_resuelven_a_un_agente_vivo: 1      # Manaure
+    distribucion: {1.0: 1, 0.5: 16, 0.4: 36, 0.2: 10}
+    valores_por_tier: {1: [0.5, 1.0], 2: [0.4], 3: [0.2]}
+    lectura: >-
+      Tres valores para 62 agentes, y son exactamente los tres defaults de
+      `_PRESTIGIO_TIER`. El prestigio de la era 2 era el TIER con otro nombre
+      — y el tier es un artefacto de coste de la era 1, no una afirmación
+      sociolingüística.
+
+  vinculos:
+    claves_escritas: 9
+    claves_que_resuelven_a_un_agente_vivo: 1      # Manaure
+    destinos_escritos: 18
+    destinos_que_existen_en_el_elenco: 1          # Manaure, como destino de Shaboro
+    destinos_muertos: [Bagre-ko, Bana-mana, Biro-ko, Buio-sha, Buko-ko, Chiriware,
+                       Dare-nu, Ita-ko, Marokoto-ni, Nubiri-sha, Pari-nu,
+                       Saruro-sha, Shaboro, Suba-ko, Tari-ko, Tawaka, Watapana]
+
+  aristas_de_vecinos:
+    intra_nodo: 708
+    entre_nodos: 0
+    a_agentes_inexistentes: 3
+    total: 711
+    agentes_sin_ninguna_arista: [Sawaka]          # el boratio mayor, solo en el Capubana
+    lectura: >-
+      Lo que quedaba en pie era la co-ubicación (`PESO_COUBICACION = 0.3`) vía
+      `ubicacion_default`. En la era 2 `ubicacion_default == sitio` y cada
+      sitio está en un nodo: 0 aristas entre nodos. Y el único que duerme en
+      un sitio sin nadie más —Sawaka, en el cerro— no tenía a quién oír.
+
+# ══════════════════════════════════════════════════════════════════════
+b_las_dos_puertas:
+  principio: >-
+    Una puerta por dato, como `formas_seed_de()`/`emocionar_de()`. Las tablas
+    escritas NO se reescriben (el canon nombra a la gente como en la era 1):
+    se leen resolviendo `ALIAS_ERA1` y, para quien no tiene entrada escrita,
+    derivando una de su ficha. La era 1 queda byte a byte porque allí
+    `ALIAS_ERA1` está vacío y la derivación exige `rol_en_la_casa`, campo que
+    sólo trae el módulo generado de la era 2.
+
+  prestigio_de:
+    fichero: curiana_sim/curiana_social.py
+    orden: explícito > el de su nombre de la era 1 > etnia foránea > derivado de la ficha > tier
+    derivacion: >-
+      `_PRESTIGIO_PAPEL`: una tabla ordenada de (campo, clave, valor) que se
+      lee sobre `rol_en_la_casa` (por dentro) y `oficio` (por el principio: el
+      oficio EMPIEZA por el título cuando lo hay, y buscar por dentro haría
+      boratia a la niña que «escucha desde el umbral… en la casa del
+      boratio»). Gana la PRIMERA fila que casa, así que lo específico va antes
+      que lo general. No es una escala nueva: cada papel de la era 2 se coloca
+      en la banda de su equivalente de la era 1 —el díao en la del cacique
+      (1.0), el boratio mayor en la del piache anciano (1.0), la esposa
+      principal en la de la esposa del cacique (0.9), la boratia en la de
+      Paugis-sha (0.85), el ayunante en la del piache aprendiz (0.7), el
+      cantor en la de Bana-mana (0.7), el sobrino candidato en la de Watapana
+      (0.6), el titular de un oficio en la de Kadushi (0.55)— y los huecos
+      entre anclas interpolan.
+    unico_modificador:
+      papel_kapubana: '+0.05, acotado a 1.0'
+      razon: >-
+        Un oficio en la convergencia del cerro se dice delante de los DOS
+        nodos: quien lo tiene habla para más gente que su casa.
+
+  vinculos_de:
+    fichero: curiana_sim/curiana_social.py
+    que_hace: >-
+      Devuelve los vínculos fuertes que salen del agente con los nombres del
+      elenco ACTIVO: los suyos escritos, los de su nombre de la era 1 con los
+      DESTINOS traducidos por `resolver_alias` (y sin los que el elenco no
+      tiene — resolver nunca inventa), y los que su ficha declara. `vecinos()`
+      es su único consumidor y ya no lee `VINCULOS` directo.
+    lo_derivado_de_la_ficha:
+      - {peso: 0.6, que: 'las cabezas de tu casa (el apopo y la matriarca; el Manaure en la suya)',
+         ancla: 'la banda de trabajo y autoridad dentro de la casa en la tabla escrita (Manaure→Chiriware, Chiriware→Tawaka)'}
+      - {peso: 0.5, que: 'la mayor de tu linaje que vive en OTRA casa',
+         ancla: 'la banda del parentesco que cruza de casa (Nubiri-sha→Saruro-sha, Paugis-sha→Saruro-sha)',
+         razon: 'el eje matrilineal: es lo que le da a Wamipa su tío materno en Caseto'}
+      - {peso: 0.4, que: 'las cabezas de la casa del sitio del que te trajeron',
+         ancla: 'el suelo de la tabla escrita, el trato que se mantiene a distancia (Kadushi→Marokoto-ni)',
+         razon: 'los «casados cruzando» que el elenco declara'}
+    determinismo: >-
+      Sin `hash()` (salado por proceso con PYTHONHASHSEED) y sin el RNG global
+      (el motor lo comparte con eventos y muestreo). Todo sale de la ficha y
+      de un orden declarado; el único desempate —la mayor del linaje— es por
+      (edad descendente, nombre). Tampoco hizo falta blake2b: no hay sorteo.
+    de_donde_sale_el_sitio_de_origen: >-
+      Del tramo de `linaje` anterior al ';' —el que dice «el suyo, de X»—,
+      comparado con frontera de palabra contra las claves de `SITIOS`. Después
+      del ';' va la casa donde vive, y «los Tacuatos» contiene «Tacuato».
+
+# ══════════════════════════════════════════════════════════════════════
+c_despues:
+  era2:
+    agentes: 63
+    prestigio:
+      claves_escritas_vivas: 1                    # Manaure
+      recuperadas_por_alias: 5                    # Sawaka, Karebe, Paugis, Hayo, Turicha
+      con_derivacion_de_su_propia_ficha: 63
+      que_caen_al_default_por_tier: 0
+      distribucion: {1.0: 2, 0.9: 1, 0.85: 2, 0.8: 2, 0.75: 3, 0.7: 8, 0.65: 1,
+                     0.6: 3, 0.55: 2, 0.5: 4, 0.45: 11, 0.4: 11, 0.35: 4,
+                     0.3: 4, 0.2: 5}
+      valores_distintos: 15
+      valores_por_tier:
+        1: [0.3, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.85, 0.9, 1.0]
+        2: [0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.7, 0.75, 0.8]
+        3: [0.2, 0.3, 0.35, 0.7]
+      lectura: >-
+        Ya no es el tier con otro nombre: los tres tiers se solapan. Un tier 2
+        puede pesar más que un tier 1 (Dabuda, la matriarca alfarera de
+        Tacuato, 0.8) y un tier 3 más que muchos tier 2 (Cege, la vidente
+        acogida, 0.7) — que es exactamente lo que la era 1 ya decía al darle
+        0.7 a Bana-mana, tier 2, por encima del 0.5 de su tier.
+
+    vinculos:
+      claves_escritas_vivas: 1                    # Manaure
+      recuperadas_por_alias: 5                    # Sawaka, Karebe, Paugis, Isiro, Patapati
+      destinos_sin_equivalente_en_el_elenco: 5    # Buko-ko, Chiriware, Marokoto-ni, Tari-ko, Watapana
+      con_derivacion_de_su_propia_ficha: 62       # el único sin ella es Manaure, que es su propia cabeza
+
+    aristas_de_vecinos:
+      intra_nodo: 770
+      entre_nodos: 110
+      a_agentes_inexistentes: 0
+      total: 880
+      agentes_sin_ninguna_arista: []
+      lectura: >-
+        Las 110 aristas entre nodos NO son un diseño de frontera: son los
+        vínculos que el canon ya había escrito y que el renombramiento había
+        dejado colgando — los casados cruzando con su casa de origen, el eje
+        matrilineal que va de casa en casa, y los destinos de las tablas
+        escritas que sí tienen equivalente (Sawaka→Turicha, en Caseto).
+        Diseñar la frontera sigue siendo decisión de Miguel.
+
+    los_que_cruzan:
+      con_sitio_de_origen_declarado: 18
+      de_otro_nodo: 10
+      de_otro_nodo_en_el_roster: 6                # coincide con MEDIDO.portadores_entre_nodos_en_el_roster
+      nombres_de_otro_nodo: [Dipopo, Dunakoa, Duraboa, Ebokoa, Karebe, Kasebo,
+                             Kumarawa, Mene, Urari, Waranaro]
+      en_el_roster: [Dunakoa, Ebokoa, Karebe, Kasebo, Urari, Waranaro]
+      wamipa: >-
+        No fue traído de ninguna parte: nació y se crió en la casa del
+        Manaure. Su vínculo con AMUAY sale del linaje de su madre Karebe
+        (Warana, de Caseto) y apunta a Turicha, «tío materno mayor de la
+        casa» de los Guasicures. El canon lo escribió; el motor no lo veía.
+
+  era1:
+    agentes: 60
+    identica: true
+    prestigio_distribucion: {1.0: 2, 0.9: 1, 0.85: 1, 0.7: 2, 0.65: 1, 0.6: 1,
+                             0.55: 1, 0.5: 6, 0.4: 24, 0.3: 1, 0.25: 4,
+                             0.2: 13, 0.15: 3}
+    aristas_de_vecinos: {intra_nodo: 510, entre_nodos: 0, a_agentes_inexistentes: 0}
+    con_derivacion: 0
+    como_se_vigila: >-
+      `tests/test_social.py::test_la_era_1_no_cambia_byte_a_byte` compara, para
+      los 60, `prestigio_de()` y `vecinos()` contra la fórmula vieja, y exige
+      que la derivación devuelva None/{} en todos.
+      `::test_la_era_1_no_cambia_tampoco_con_el_estado_moviendo_gente` repite
+      la comparación con un estado que mueve a los 60 de ubicación, que es la
+      otra mitad de `vecinos()`.
+
+# ══════════════════════════════════════════════════════════════════════
+d_lo_que_queda_abierto:
+  - que: 'La frontera entre nodos sigue sin diseñarse'
+    donde: 6-fusion/issues-pendientes/frontera-entre-nodos-2026-09-17.md
+    nota: >-
+      Este arreglo NO la implementa. Las cuatro vías por las que hoy cruza una
+      forma (V1-V4) siguen siendo globales y sin partición por nodo, y el
+      prompt sigue rodeando al grafo social por los otros cuatro lados.
+  - que: '`nombre_era1()` está escrito dos veces'
+    donde: 'curiana_koine.py y curiana_social.py, las dos sobre curiana_agents.ALIAS_ERA1'
+    nota: >-
+      Las dos derivan de la MISMA puerta, así que no hay dos verdades; pero el
+      sitio natural del inverso de `resolver_alias()` es `curiana_agents.py`.
+      Consolidarlo es una tarea de ese módulo, no de éste.
+  - que: 'La ficha generada de la era 2 no expone `parentesco`'
+    donde: 6-fusion/elenco_era2.yaml lo tiene; curiana_sim/curiana_agents_era2.py no
+    nota: >-
+      Por eso los vínculos derivados son estructurales (casa, linaje, sitio de
+      origen) y no las díadas concretas que el YAML sí escribe (el tío materno
+      de tal, la cuñada de tal otra). Si `generar_agentes_era2.py` llegara a
+      emitir `parentesco`, `vinculos_derivados()` podría leer la díada exacta.
+      Es decisión de quien lleve el generador.
