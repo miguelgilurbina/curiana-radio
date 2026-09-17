@@ -68,8 +68,33 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 | Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |
 |---|---|---|---|---|---|---|
 | 09-17 | `b06f57ea` | 6 / 1 | **63** | 7.5 | 100% | **Día 1 de la serie B, desde cero** (motor `7ab8c2b` limpio, semilla 11, `--reflexion`). Pre-carga: **63 de 63 vectores-semilla distintos** (la serie A: 2). Por eso la acumulada arranca en 0,803 donde la serie A arrancaba en 0,199: ahora hay de dónde converger. Ventana 0,660, emergente 0,944. 18 acuñaciones (9 adoptadas, 11 formas); la competencia por «las cuentas brillantes» —que es un concepto que el motor pone a nombrar, no una necesidad espontánea— se fija en `kari-uro-bana` el día 1 (en la serie A fue `kali-iro-pabu`, mismo turno 5). La forma acuñada ya queda en boca del acuñador (0 de 18 perdidas; en la serie A, 29 de 40). Préstamos: 0, y ya sin falsos. El mundo: cerro en 31 de 72, viento 19, sitio 18, y **el venado nombrado por primera vez (2 respuestas)**. Reflexión del Director escrita por el motor, sin residuos de la era 1. ⚠️ **Deuda del día, y no es menor**: el evento semilla de `estado_inicial_test()` («Shaboro salió de su choza… Buio-sha lo vio») abre todo run nuevo, dura tres turnos, se guarda crudo en `turns.event_description` y **llegó a los agentes**: 23 de 72 respuestas dicen «Shaboro» y 16 «Buio-sha» — el traductor de #143 cubre la puerta del Director (que dijo «Sawaka») pero no la vía por la que el evento entra al prompt del agente. Este día 1 de la serie B queda contaminado por la era 1 en un tercio de sus respuestas; agente con Opus en curso (estado inicial propio de Paraguaná + cerrar esa vía), y toca decidir si el día 1 de la serie B se repite limpio antes de encadenar el 2 |
+| 09-17 | `3973d317` | 6 / 1 | **63** | 7.6 | 100% | **Día 1 de la serie B, limpio — el que cuenta** (motor `340f4fd`, semilla 21, `--reflexion --serie era2-b`; el `b06f57ea` queda como prueba contaminada). Revisión previa sin API: ensayo en seco de los 78 prompts (0 residuos de la era 1, 63 de 63 semillas, `[Tu tierra]` ≤ 320 en 72/72, `[Voces de fuera]` sólo tier 1, Director de Paraguaná con `[El mundo]` 6/6) y el hallazgo de la competencia repetida (punto 5 del cambio de instrumento, #149). Medido en la base: 72 respuestas, 59 agentes (24 de tier 1, 42 de tier 2, 6 de tier 3), **0 «Shaboro», 0 «Buio-sha», 0 «Guaycarí», 0 «Curiana»**; score 7,64. Koiné: acumulada 0,7955, ventana 0,678, emergente 0,906 (59 agentes). 18 acuñaciones (12 adoptadas, 0 perdidas en boca del acuñador); la competencia por las cuentas se fija en `kashi-kasuta-iro` de 4 variantes (turno 5: 9 de 12 hablan de cuentas; turno 6: 4). Diccionario emergente: `biro-ana` «salina» (22,2) por encima de la forma de la competencia (17,1), `duna-rua-bana` «manantial alto» (14,6): **la sal es el tema del día** (44 de 72 respuestas dicen salina/biro-ana; 53 nombran la sal) — el mundo de Guaranao (sal y ensenada, Arcaya p. 22) sí llega. Cerro en 34 de 72, viento en 33, venado en 0. Por nodo (`analizar_nodos.py`): brecha intra/entre 0,015 (ventana) y 0,006 (emergente); de 54 formas clasificables 31 cruzaron de nodo (mediana 1 turno), 13 nacieron en los dos a la vez, 10 no cruzaron — **el motor no tiene frontera entre nodos**: pregunta de diseño abierta (agente proponiendo). Préstamos: 7 registrados y los 7 son hispanismos de origen indígena usados como castellano (`casabe` ×2, `yuca` ×3, `maíz`, `ture`; agente midiendo toda la base). El Director cerró con «las canoas volverán al Golfete» (2 respuestas también): canon de Tacuato (P1), no la costa oeste de los nodos (agente proponiendo). Estado en disco: día 2, `referentes_introducidos = [cuentas_vidrio]` → el día 2 recibirá el cometa |
 
-**Lo que piensa el Director del día 1 de la serie B** (escrito por el motor):
+**Lo que piensa el Director del día 1 limpio de la serie B** (`3973d317`, escrito por el motor):
+
+> El viento del este sostuvo todo: la sal brilló en los biros, el casabe se
+> coció parejo, y la gente trabajó sin pelear. La tensión que ardía a media
+> mañana —cuando Isiro hablaba de lo que falta y Saruro clavaba el coa en
+> tierra seca— se disolvió cuando cayeron los jachos y Harifuche levantó el
+> ritmo del budare. Lo que cambió fue el hambre: dejó de ser lo único que se
+> decía en voz baja para convertirse en trabajo, en manos que rallan,
+> exprimen, tuestan. La palabra que prendió fue **kashi-kasuta-iro**, la
+> cuenta brillante —salió de muchas bocas hoy, de Manaure y Buriche y otros,
+> cada uno viendo algo distinto en esa cosa que brilla y pesa—, y eso sucede
+> cuando la gente toca lo mismo y busca el nombre juntos. Mañana el juri
+> seguirá fuerte desde el este, las canoas volverán al Golfete, y habrá que
+> ver si la sal y el casabe sostienen la calma o si la escasez vuelve a
+> abrir la boca.
+
+Lectura del escriba: sin residuos de la era 1; la tensión que cuenta
+(Isiro/Saruro, el hambre → el trabajo) es la de los agentes de hoy; «la
+palabra que prendió» es la del evento de nombramiento (el motor la puso a
+nombrar), y lo dice bien: «la gente toca lo mismo y busca el nombre juntos».
+«Las canoas volverán al Golfete» es canon de Paraguaná (Tacuato, P1 del
+clima), pero no la costa de estos dos nodos, que miran al oeste — deuda
+abierta abajo.
+
+**Lo que pensó el Director del día 1 contaminado** (`b06f57ea`, no cuenta):
 
 > El juri no paró en toda la jornada y la pesca llegó abundante: eso cambió
 > el peso del hambre en la plaza. Sawaka se fue al amanecer con algo que no
