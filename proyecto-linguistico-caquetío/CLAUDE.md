@@ -98,6 +98,10 @@ python generar_bandeja.py         # reescribe 6-fusion/BANDEJA.md — la cola de
 python generar_cronica.py         # reescribe 1-plan/CRONICA.md — cada cambio de main, con fecha
 
 python analizar_runs.py --todo    # análisis de los runs en la base
+python analizar_nodos.py --run <id8>  # la era 2 por nodo (GUARANAO/AMUAY): formas
+                                  # normalizadas por hablantes posibles, cruce entre
+                                  # nodos y distancia idiolectal intra/entre. Sube la
+                                  # cadena por `continuado_desde`; `--todo` las cadenas
 python compilar_corpus.py --check # valida 3-mundo/corpus/
 python compilar_asentamientos.py  # los nodos de la esfera: existencia y época
 python compilar_etnias.py         # los vecinos: con quién, y de qué polity (regla 4)
