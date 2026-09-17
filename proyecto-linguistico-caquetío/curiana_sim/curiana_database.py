@@ -161,6 +161,11 @@ def word_source_language(word: str) -> Optional[str]:
     (`words_used` = `palabras_caquetias`), que es la precondición de
     `_familia_de_token`: para un neologismo comunitario devuelve "caquetío",
     que es lo correcto — es lengua propia, no préstamo.
+
+    ⚠ Las formas ACUÑADAS en la propia respuesta (`coined_words`) NO pasan por
+    aquí: todavía no están en el lexicón —el scorer no las ve, que es el
+    agujero del 2026-09-16— y volverían NULL. `save_agent_response` les declara
+    «caquetío» directamente.
     """
     from curiana_lexicon import _familia_de_token
     if not word:
@@ -342,13 +347,36 @@ class CurianaDB:
         aspects_used: list[str],
         neologisms_proposed: int = 0,
         langsmith_trace_url: Optional[str] = None,
+        coined_words: Optional[list[str]] = None,
     ) -> str:
         """
         Guarda la respuesta de un agente con análisis lingüístico completo.
         Calcula automáticamente la composición por lengua.
         Retorna response_id.
+
+        `coined_words` — las formas que esta respuesta ACUÑA. Se suman a
+        `words_used` y escriben su fila en `word_uses` con
+        `source_language='caquetío'`. Van aparte porque no vienen del scorer:
+        `score_linguistico()` sólo reconoce `lexico.palabras_activas()` (base +
+        adoptados) y una acuñación recién propuesta no está ahí, así que el
+        acuñador no quedaba registrado como usuario de su propia forma y el
+        primer uso que constaba era el del ADOPTANTE — 29 de 40 acuñaciones de
+        la era 2 (medido el 2026-09-16). `neologisms.proposed_by` sí lo sabía;
+        `word_uses`, que es de donde se leen las rutas de contagio, no.
+
+        Su lengua se declara «caquetío» en vez de resolverla: una acuñación
+        pasó la compuerta fonotáctica, no está en el lexicón y
+        `word_source_language()` la dejaría en NULL — que es justo el agujero
+        que el backfill de 2026-08-06 cerró para las formas flexionadas.
+        Los `pct_*` NO se mueven: `language_composition()` sólo cuenta lo que
+        está en VOCABULARIO_BASE, y una acuñación por definición no lo está.
         """
+        # Sin repetir: una respuesta que acuña dos veces la misma forma —o que
+        # acuña una que el scorer ya contó— escribe UNA fila, no dos.
+        acunadas = [w for w in dict.fromkeys(coined_words or [])
+                    if w and w not in words_used]
         comp = language_composition(words_used)
+        words_used = list(words_used) + acunadas
 
         row = {
             "turn_id": turn_id,
@@ -373,13 +401,15 @@ class CurianaDB:
 
         # Insertar word_uses granulares
         if words_used:
+            acunadas_set = set(acunadas)
             wu_rows = [
                 {
                     "response_id": response_id,
                     "run_id": run_id,
                     "turn_id": turn_id,
                     "word": w,
-                    "source_language": word_source_language(w),
+                    "source_language": ("caquetío" if w in acunadas_set
+                                        else word_source_language(w)),
                     "agent_name": agent_name,
                     "day": None,   # se rellena con join en la vista
                     "turn_num": None,

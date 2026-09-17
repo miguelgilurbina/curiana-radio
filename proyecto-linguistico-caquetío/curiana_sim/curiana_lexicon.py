@@ -8014,8 +8014,11 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
     caquetío DOMINE — no basta con "no hablar español"; hablar wayunaiki
     en vez de caquetío también es una fuga, solo que más sutil.
 
-    Retorna: palabras_caquetias (SOLO caquetío: es lo que consumen el contagio,
-             la competencia de formas, el idiolecto y `words_used`),
+    Retorna: palabras_caquetias (SOLO caquetío, y sólo lo que YA es palabra
+             activa: es lo que consumen el contagio, la competencia de formas,
+             el idiolecto y `words_used`. Una forma recién ACUÑADA no está en
+             `palabras_activas()` y por tanto no sale aquí — el orquestador la
+             persiste aparte, ver `save_agent_response(coined_words=…)`),
              palabras_arahuacas (todas las arahuacas, caquetío incluido),
              neologismos_propuestos, aspectos_usados, densidad,
              pct_caquetio_especifico, otro_arahuaco, palabras_otro_arahuaco,

@@ -96,6 +96,76 @@ Dos efectos (los dos importan):
 Cynefin se suma como `sesgo_lexico` enraizado en lugar (topónimos y
 palabras-de-tierra del trozo del Golfete de cada agente).
 
+### ⚠️ La pre-carga se había perdido con los nombres nuevos (2026-09-16)
+
+`FORMAS_SEED` y `EMOCIONAR_SEED` están indexados por los nombres de la **era
+1**, y la campaña de antropónimos (2026-09-14) renombró a 60 de 63 agentes. El
+orquestador sembraba con el nombre NUEVO y sin pasar por `ALIAS_ERA1`, así que
+en la era 2 sólo Manaure —el único que conserva su nombre— encontraba su
+semilla. Medido con `python curiana_koine.py`:
+
+| | era 1 (60) | era 2 (63) antes | era 2 después |
+|---|---|---|---|
+| semilla escrita propia | 20 | 1 | 1 |
+| escrita, por alias | — | 0 | 10 |
+| derivada de la ficha | — | 0 | 52 |
+| núcleo compartido (todos igual) | 40 | 62 | 0 |
+| **vectores-semilla distintos** | **21 de 60** | **2 de 63** | **63 de 63** |
+
+O sea: los tres días corridos de la era 2 arrancaron con 62 de 63 agentes
+diciendo exactamente lo mismo. Por eso su convergencia no se puede leer como
+koineización — la precondición no estaba.
+
+**Qué se arregló.** `formas_seed_de()` y `emocionar_de()` resuelven el nombre
+por `ALIAS_ERA1` (lo expone `curiana_agents`, que es el único que sabe qué
+elenco está activo), y quien no tiene semilla escrita recibe una **derivada de
+su propia ficha**, en tres piezas:
+
+1. **Lo que su ficha ya dice** — las voces caquetías que aparecen literalmente
+   en su `system_prompt`, su `oficio` y su `descripcion`. Es el mismo principio
+   con que se escribieron las semillas de la era 1 (la línea «Vocabulario que
+   usas» de su prompt).
+2. **El campo semántico de su oficio** — sin tabla nueva: se reusa
+   `curiana_lexicon.categorias_relevantes()`, la heurística de palabras clave
+   que ya prioriza el lexicón del prompt, aplicada **dos veces**: al oficio del
+   agente (qué hace) y a la glosa de cada voz del lexicón (qué significa). La
+   semilla sale de la intersección — pesca → voces de mar y orilla, alfarería →
+   barro y vasija, boratio → cosmos y ritual. El `categoria` declarado del
+   lexicón no basta: sólo 28 de 401 voces caquetías lo traen.
+3. **El aspecto de su emocionar** sobre dos raíces verbales suyas, que es la
+   firma morfológica que las semillas escritas también llevan (`naa-ka`,
+   `wana-ni`…).
+
+El sorteo dentro del campo es **determinista**: `blake2b(semilla del run,
+nombre, etiqueta)`. Ni el RNG global —el motor lo comparte con eventos,
+muestreo y nombramientos— ni `hash()`, que va salado por proceso
+(`PYTHONHASHSEED`) y no repetiría un run. `--semilla N` mueve las derivadas y
+no toca las escritas.
+
+**Residuos declarados.**
+- La capa **hipotética** no entra en una semilla derivada: 35 de sus 38 voces
+  son formas que el proyecto acuñó para la simulación, y el perfil `era2` las
+  esconde a propósito. Sembrarlas adelantaría justo lo que se quiere ver
+  acuñar. Las otras tres capas sí, que es de donde salen las escritas (medido:
+  88 reconstruido, 31 atestiguado, 3 retroabstraído, 0 hipotético).
+- Los **homógrafos de nombres del elenco** tampoco (49 de los 63 nombres lo
+  son): el bloque «sueles decir: …» del prompt sale de aquí, y sembrar `karebe`
+  le diría al agente que suele decir el nombre de su vecina. Se puede seguir
+  aprendiendo en juego —el scorer la cuenta en minúscula—, pero no se siembra.
+- El oficio de **1 de los 63** (Chirwa, «aprendiza de alfarería con Dabuda») no
+  dispara ninguna categoría: su semilla sale del caquetío sembrable entero.
+- **La era 1 no cambia, byte a byte.** `ALIAS_ERA1` está vacío allí y la
+  derivación exige `oficio`, campo que sólo trae el módulo generado de la era
+  2. Sus 40 agentes sin semilla siguen en el núcleo compartido (deuda abierta:
+  ahí la precondición sigue a medias).
+
+**⚠️ `--continuar` no recupera una pre-carga que nunca hubo.** `cargar_koine`
+reconstruye los idiolectos con `peso_semilla=0` a propósito (las frecuencias
+guardadas ya traen la semilla del día 1), así que una cadena que arrancó sin
+pre-carga no la gana por seguir encadenando. El motor lo mide al continuar
+(`agentes_sin_precarga()`) y avisa; la única salida es **re-correr la cadena
+desde el día 1**.
+
 ## 5. Memoria e idiolecto (estado nuevo por run)
 
 ### `IdiolectoAgente` (por agente)
@@ -104,6 +174,21 @@ palabras-de-tierra del trozo del Golfete de cada agente).
   Se **pre-carga** con el `sesgo_lexico` del emocionar.
 - `acunaciones: set[str]` — formas que él inventó.
 - `adopciones: set[str]` — formas que tomó de otros.
+
+> ⚠️ **La forma acuñada no quedaba en `word_uses` en boca de quien la acuña
+> (2026-09-16).** El idiolecto sí la registraba (`registrar(formas, neos)`),
+> pero `words_used` es `palabras_caquetias`, y `score_linguistico()` sólo
+> reconoce `lexico.palabras_activas()` (base + **adoptados**): una acuñación
+> recién propuesta no está ahí. Resultado: el primer uso que constaba en
+> `word_uses` era el del **ADOPTANTE**, que puede ser del otro nodo — 29 de 40
+> acuñaciones de la era 2 (72,5 %, medido por `analizar_nodos.py`). Eso
+> **invierte las rutas de contagio** que se leen de esa tabla. Desde ahora el
+> orquestador pasa las formas acuñadas aparte (`save_agent_response(...,
+> coined_words=…)`) y la capa de base les escribe su fila con
+> `source_language='caquetío'` declarado —no está en el lexicón y
+> `word_source_language()` la dejaría en NULL—. El scorer **no se toca**, así
+> que ni `score` ni `pct_caquetio` se mueven a mitad de serie
+> (`language_composition()` sólo cuenta `VOCABULARIO_BASE`).
 
 ### Inyección "tu manera de hablar"
 Reemplaza los 3 snippets de texto por un bloque compacto derivado del perfil:

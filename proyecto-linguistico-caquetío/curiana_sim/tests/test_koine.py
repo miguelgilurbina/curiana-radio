@@ -1,6 +1,11 @@
 """Tests del motor de koiné: idiolectos, métricas de convergencia,
 competencia léxica y campo léxico (curiana_koine.py)."""
 
+import json
+import os
+import subprocess
+import sys
+
 from curiana_koine import (
     IdiolectoAgente,
     CampoLexico,
@@ -226,3 +231,179 @@ def test_ningun_referente_novedoso_menciona_piache():
 
     con_piache = [r["id"] for r in REFERENTES_NOVEDOSOS if "piache" in r["desc"]]
     assert not con_piache, f"referentes que aún dicen 'piache': {con_piache}"
+
+
+# ══════════════════════════════════════════════════════════════════════
+# LA PRE-CARGA DE IDIOLECTOS (2026-09-16)
+# ══════════════════════════════════════════════════════════════════════
+# Medido por analizar_nodos.py al cerrar el día 3 de la era 2: `FORMAS_SEED` y
+# `EMOCIONAR_SEED` están indexados por los nombres de la ERA 1 y la campaña de
+# antropónimos renombró a 60 de 63 agentes, así que sólo Manaure encontraba su
+# semilla y 62 de 63 arrancaban con el MISMO vector. DISENO_KOINE §4: «sin esta
+# pre-carga, todos arrancan iguales y convergencia no significa nada».
+#
+# La era 2 se comprueba en un subproceso, como en test_eventos_era2.py: el
+# elenco se decide al importar curiana_agents, desde CURIANA_ELENCO.
+
+SIM = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def _medir_era2(semilla=None, codigo_extra=""):
+    """Mide las semillas de idiolecto del elenco de la era 2, en su elenco."""
+    codigo = (
+        "import json\n"
+        "import curiana_agents as A\n"
+        "from curiana_koine import (emocionar_de, fijar_semilla, formas_seed_de,\n"
+        "                           formas_semilla, nombre_era1)\n"
+        f"fijar_semilla({semilla!r})\n"
+        "sem = {}\n"
+        "escritas = []\n"
+        "for n, a in A.ALL_AGENTS.items():\n"
+        "    sem[n] = formas_semilla(n, emocionar_de(n, a.get('etnia')))\n"
+        "    if formas_seed_de(n):\n"
+        "        escritas.append(n)\n"
+        "salida = {'total': len(A.ALL_AGENTS), 'semillas': sem,\n"
+        "          'escritas': sorted(escritas), 'mundo': A.MUNDO,\n"
+        "          'viejo_de': {n: nombre_era1(n) for n in A.ALL_AGENTS}}\n"
+        + codigo_extra +
+        "print(json.dumps(salida, ensure_ascii=False))\n"
+    )
+    env = dict(os.environ, CURIANA_ELENCO="era2", PYTHONIOENCODING="utf-8")
+    r = subprocess.run([sys.executable, "-c", codigo], cwd=SIM, env=env,
+                       capture_output=True, text=True, encoding="utf-8", timeout=180)
+    assert r.returncode == 0, r.stderr[-2000:]
+    return json.loads(r.stdout.strip().splitlines()[-1])
+
+
+def test_la_era_2_arranca_con_63_semillas_distintas_por_pares():
+    """La precondición de que «convergencia» signifique algo: dos agentes
+    distintos no pueden arrancar con el mismo vector. Medido ANTES del
+    arreglo: 2 vectores distintos de 63 (62 compartían `_NUCLEO_FALLBACK`)."""
+    d = _medir_era2()
+    assert d["mundo"] == "PARAGUANÁ" and d["total"] == 63
+    vectores = {n: tuple(sorted(v)) for n, v in d["semillas"].items()}
+    repetidos = {}
+    for n, v in vectores.items():
+        repetidos.setdefault(v, []).append(n)
+    choques = {v: ns for v, ns in repetidos.items() if len(ns) > 1}
+    assert not choques, f"agentes que arrancan iguales: {list(choques.values())}"
+    assert len(set(vectores.values())) == 63
+    # Y ninguno arranca vacío ni con una sola forma.
+    assert all(len(v) >= 5 for v in d["semillas"].values())
+
+
+def test_la_semilla_de_manaure_es_la_de_siempre_y_diez_mas_llegan_por_alias():
+    """Manaure conserva su nombre, así que su semilla no puede moverse. Los
+    otros diez que tenían una escrita en la era 1 la recuperan por
+    `ALIAS_ERA1` (Nubiri-sha → Karebe, Shaboro → Sawaka, Korie-ko →
+    Patapati…): son 11 de 63."""
+    from curiana_koine import FORMAS_SEED
+
+    d = _medir_era2()
+    assert d["semillas"]["Manaure"] == list(dict.fromkeys(FORMAS_SEED["Manaure"]))
+    assert len(d["escritas"]) == 11, d["escritas"]
+    for nuevo in d["escritas"]:
+        viejo = d["viejo_de"][nuevo] or nuevo
+        assert d["semillas"][nuevo] == list(dict.fromkeys(FORMAS_SEED[viejo])), nuevo
+
+
+def test_la_semilla_derivada_es_determinista_entre_procesos():
+    """El sorteo va con blake2b sobre (semilla del run, nombre), no con
+    `hash()` —salado por proceso con PYTHONHASHSEED— ni con el RNG global,
+    que el motor comparte con eventos y muestreo. Dos procesos con la misma
+    semilla tienen que dar la misma pre-carga; con otra semilla, no."""
+    a = _medir_era2(semilla=1)
+    b = _medir_era2(semilla=1)
+    c = _medir_era2(semilla=2)
+    assert a["semillas"] == b["semillas"]
+    distintas = [n for n in a["semillas"] if a["semillas"][n] != c["semillas"][n]]
+    # Las 11 escritas no dependen de la semilla; las 52 derivadas sí.
+    assert len(distintas) >= 40, f"la semilla del run casi no mueve nada: {len(distintas)}"
+    assert not (set(distintas) & set(a["escritas"])), "una semilla ESCRITA se movió"
+
+
+def test_la_semilla_derivada_no_siembra_nombres_del_elenco():
+    """49 de los 63 nombres de la era 2 son homógrafos de una clave del
+    lexicón (`karebe` cucharón / Karebe la esposa principal). El bloque
+    «sueles decir: …» del prompt sale de aquí: sembrar uno le diría al agente
+    que suele decir el nombre de un vecino."""
+    d = _medir_era2()
+    escritas = set(d["escritas"])
+    nombres = {n.lower() for n in d["semillas"]} | {
+        (v or "").lower() for v in d["viejo_de"].values() if v}
+    for agente, formas in d["semillas"].items():
+        if agente in escritas:
+            continue          # las escritas son canon de la era 1, no se tocan
+        malas = [f for f in formas if f.split("-")[0].lower() in nombres]
+        assert not malas, f"{agente} arranca diciendo nombres: {malas}"
+
+
+def test_la_semilla_derivada_no_toca_la_capa_hipotetica():
+    """35 de las 38 voces hipotéticas son formas que el proyecto acuñó para la
+    simulación, y el perfil `era2` las esconde a propósito. Sembrarlas
+    adelantaría justo lo que la era 2 quiere ver acuñar."""
+    d = _medir_era2()
+    from curiana_lexicon import VOCABULARIO_BASE, capa_epistemica
+
+    escritas = set(d["escritas"])
+    for agente, formas in d["semillas"].items():
+        if agente in escritas:
+            continue
+        for f in formas:
+            datos = VOCABULARIO_BASE.get(f) or VOCABULARIO_BASE.get(f.split("-")[0])
+            if datos is None:
+                continue
+            assert capa_epistemica(datos.get("fuente", "")) != "caquetío-hipotético", \
+                f"{agente} arranca con la hipotética {f}"
+
+
+def test_la_era_1_no_cambia_byte_a_byte():
+    """El arreglo del alias y la derivación no tocan la era 1: `ALIAS_ERA1`
+    está vacío allí (resolver es la identidad) y la derivación pide `oficio`,
+    campo que sólo trae el módulo generado de la era 2. Las 20 semillas
+    escritas salen tal cual, y los 40 agentes sin ella siguen en el núcleo
+    compartido — que es por lo que la era 1 sólo tiene 21 vectores de 60."""
+    import curiana_agents as A
+    from curiana_koine import (
+        _ASPECTO_SUFIJO, _NUCLEO_FALLBACK, FORMAS_SEED, formas_semilla,
+        nombre_era1,
+    )
+
+    assert A.ELENCO == "era1" and A.ALIAS_ERA1 == {}
+    for agente, formas in FORMAS_SEED.items():
+        assert nombre_era1(agente) is None
+        assert formas_semilla(agente, emocionar_de(agente)) == \
+            list(dict.fromkeys(formas)), agente
+
+    sin_semilla = [n for n in A.ALL_AGENTS if n not in FORMAS_SEED]
+    assert len(sin_semilla) == 40
+    for agente in sin_semilla:
+        emo = emocionar_de(agente, A.ALL_AGENTS[agente].get("etnia"))
+        suf = _ASPECTO_SUFIJO.get(emo.get("aspecto", "continuativo"), "-ni")
+        assert formas_semilla(agente, emo) == \
+            _NUCLEO_FALLBACK + [f"naa{suf}", f"wana{suf}"], agente
+
+    vectores = {tuple(sorted(formas_semilla(n, emocionar_de(n, a.get("etnia")))))
+                for n, a in A.ALL_AGENTS.items()}
+    assert len(vectores) == 21
+
+
+def test_continuar_no_recupera_una_pre_carga_que_nunca_hubo():
+    """`cargar_koine` reconstruye con `peso_semilla=0` a propósito (las
+    frecuencias guardadas ya traen la semilla), así que una cadena que arrancó
+    sin pre-carga no la gana por seguir encadenando. El motor lo mide y lo
+    dice; la salida es re-correr desde el día 1."""
+    from curiana_koine import agentes_sin_precarga
+
+    agentes = {"Manaure": {"etnia": "caquetío"}, "Shaboro": {"etnia": "caquetío"}}
+    # Como quedaba una cadena vieja: el núcleo compartido y lo que habló.
+    viejos = {}
+    for nm in agentes:
+        idio = IdiolectoAgente(nm, {}, peso_semilla=0)
+        idio.frecuencias.update(["taya", "pia", "nüma", "arima"])
+        viejos[nm] = idio
+    assert sorted(agentes_sin_precarga(viejos, agentes)) == ["Manaure", "Shaboro"]
+
+    nuevos = {nm: IdiolectoAgente(nm, emocionar_de(nm, a.get("etnia")))
+              for nm, a in agentes.items()}
+    assert agentes_sin_precarga(nuevos, agentes) == []

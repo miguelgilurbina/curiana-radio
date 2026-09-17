@@ -76,7 +76,9 @@ from curiana_koine import (
     CampoLexico,
     CompetenciaLexica,
     REFERENTES_NOVEDOSOS,
+    agentes_sin_precarga,
     emocionar_de,
+    fijar_semilla,
     prompt_emocionar,
     prompt_idiolecto,
     distancia_idiolectal,
@@ -776,6 +778,22 @@ def run_turn(
                 neos = getattr(registro, "neologismos_extraidos", [])
                 neo_count = len(neos)
 
+                # La forma que se ACUÑA es una palabra usada por quien la
+                # acuña. `score_linguistico` no la ve —sólo reconoce
+                # `lexico.palabras_activas()` (base + adoptados) y una
+                # acuñación recién propuesta no está ahí—, así que
+                # `palabras_caquetias` no la traía y `word_uses` registraba
+                # como PRIMER usuario al adoptante, que puede ser del otro
+                # nodo: 29 de 40 acuñaciones de la era 2 (72,5%, medido por
+                # analizar_nodos.py el 2026-09-16). Eso invierte las rutas de
+                # contagio que se leen de `word_uses`. Va aparte de
+                # `words_used` —no se toca el scorer ni, por tanto, la serie—
+                # y con `source_language='caquetío'` declarado: una acuñación
+                # pasó la compuerta fonotáctica, no está en el lexicón y
+                # `word_source_language()` la dejaría en NULL.
+                acunadas = [n.forma for n in neos
+                            if n.forma and n.forma not in words_used]
+
                 response_id = db.save_agent_response(
                     turn_id=turn_id,
                     run_id=run_id,
@@ -787,6 +805,7 @@ def run_turn(
                     words_used=words_used,
                     aspects_used=aspects_used,
                     neologisms_proposed=neo_count,
+                    coined_words=acunadas,
                 )
                 registro.response_id = response_id
 
@@ -1107,6 +1126,11 @@ def auto_mode(
     """
     if semilla is not None:
         random.seed(semilla)
+    # La pre-carga de idiolectos sortea sus formas con su propio dado
+    # (blake2b sobre semilla+nombre), no con el RNG global: el motor lo
+    # comparte con eventos, muestreo y nombramientos, y la semilla tiene que
+    # ser reproducible aunque cambie el orden en que se consume el azar.
+    fijar_semilla(semilla)
 
     if continuar:
         state = ComunidadState.load()
@@ -1120,6 +1144,18 @@ def auto_mode(
         # Un agente nuevo en el elenco arranca con su semilla de idiolecto.
         for nm, a in ALL_AGENTS.items():
             idiolectos.setdefault(nm, IdiolectoAgente(nm, emocionar_de(nm, a.get("etnia"))))
+        # ⚠ La semilla NO se recupera continuando. `cargar_koine` reconstruye
+        # los idiolectos con peso_semilla=0 a propósito (las frecuencias
+        # guardadas ya traen la semilla del día 1), así que una cadena que
+        # arrancó SIN pre-carga no la va a tener nunca por seguir encadenando:
+        # hay que re-correr desde el día 1. Se mide y se avisa.
+        sin_precarga = agentes_sin_precarga(idiolectos, ALL_AGENTS)
+        if sin_precarga:
+            print(f"  ⚠ cadena sin pre-carga de idiolectos: {len(sin_precarga)} de "
+                  f"{len(ALL_AGENTS)} agentes heredan un idiolecto sin ninguna "
+                  f"de sus formas-semilla (viene de un run anterior al "
+                  f"2026-09-16). Continuar NO la recupera: hay que re-correr "
+                  f"la cadena desde el día 1.")
         # El estado guardado apunta al turno siguiente al último corrido, así
         # que un día completo anterior deja al nuevo run en el amanecer.
     else:
