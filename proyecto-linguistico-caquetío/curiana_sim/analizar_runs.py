@@ -18,9 +18,6 @@ que el proyecto se hace sobre sus propios datos:
     --narrativa ¿Qué historias salieron? Citas, arcos, eventos.
     --prestamos ¿Qué voces de la esfera de contacto se usaron, y bajaron del
                 tier 1 al 2 y al 3? Lee `loanword_uses` (migración 20260916).
-                El hispanismo de origen indígena («yuca», «casabe», «maíz») y
-                el castellano corriente se filtran AL LEER, sin tocar la base;
-                `--con-hispanismos` los devuelve a la vista.
 
 POR QUÉ ESTE MÓDULO EXISTE
 --------------------------
@@ -64,33 +61,6 @@ from curiana_cadena import (
 )
 
 CONTENEDOR = "supabase_db_curiana_sim"
-
-# ── Lo que `loanword_uses` guardó y no era un préstamo ─────────────────
-# La base NO se reescribe: una fila es un hecho observado y la lectura es la
-# que decide qué significa. Hasta el 2026-09-17 el scorer contaba como
-# préstamo de esfera el hispanismo de origen indígena («yuca», «casabe»,
-# «maíz») y el castellano corriente («cacique», «bohío»), así que las filas
-# viejas los traen: 8 de las 11 de la base (medido, 2026-09-17). Se filtran al
-# LEER, con la misma lista declarada que usa el motor, y `--con-hispanismos`
-# los devuelve a la vista para poder mirarlos.
-CON_HISPANISMOS = False
-
-
-def _voces_que_no_son_prestamo() -> list:
-    from curiana_lexicon import CASTELLANO_CORRIENTE, HISPANISMOS_DE_ESFERA
-    return sorted(v.lower() for v in HISPANISMOS_DE_ESFERA | CASTELLANO_CORRIENTE)
-
-
-def _en_comillas(voces) -> str:
-    return ", ".join("'" + v.replace("'", "''") + "'" for v in voces)
-
-
-def filtro_hispanismos() -> str:
-    """El `WHERE` que deja fuera lo que no es préstamo, o "" si el filtro está
-    desactivado (`--con-hispanismos`)."""
-    if CON_HISPANISMOS:
-        return ""
-    return f" WHERE lower(word) NOT IN ({_en_comillas(_voces_que_no_son_prestamo())})"
 
 # Los dos brazos del experimento de koiné del 2026-07-06. Van fijos porque el
 # contraste solo tiene sentido entre estos dos: mismo día, misma configuración,
@@ -487,35 +457,12 @@ def analizar_narrativa() -> None:
 # PRÉSTAMOS — la esfera de contacto y su difusión por tier
 # ══════════════════════════════════════════════════════════════════════
 
-def _aviso_hispanismos() -> None:
-    """Dice cuántas filas quedan fuera y por qué. Un filtro callado sería peor
-    que el falso positivo que arregla."""
-    lista = _en_comillas(_voces_que_no_son_prestamo())
-    fuera = q(f"SELECT word, count(*) AS filas FROM loanword_uses "
-              f"WHERE lower(word) IN ({lista}) GROUP BY word ORDER BY filas DESC")
-    total = q("SELECT count(*) AS filas FROM loanword_uses")["filas"].iloc[0]
-    n = int(fuera["filas"].sum()) if len(fuera) else 0
-    if not n:
-        return
-    detalle = ", ".join(f"{r['word']}×{r['filas']}" for _, r in fuera.iterrows())
-    if CON_HISPANISMOS:
-        print(f"\n    ⚠ --con-hispanismos: se INCLUYEN {n} de {total} filas que "
-              f"no son préstamo ({detalle})")
-    else:
-        print(f"\n    ({n} de {total} filas fuera: hispanismo de origen indígena "
-              f"o castellano corriente — {detalle}. Con --con-hispanismos se ven)")
-
-
 def analizar_prestamos() -> None:
     """Lectura mínima de `loanword_uses`: qué voces de la esfera de contacto
     (taíno, kalinago, paraujano, caribe continental, jirajaroide) se usaron,
     por qué tier, y si bajaron del tier 1 —el único que ve el bloque [Voces de
     fuera]— al 2 y al 3. Hasta el 2026-09-16 esto se medía re-puntuando
-    `response_text` a mano (bitácora del run c6837386).
-
-    El hispanismo de origen indígena y el castellano corriente se filtran AL
-    LEER (ver `filtro_hispanismos`): la base guarda el hecho, la lectura dice
-    qué significa. `--con-hispanismos` los devuelve a la vista."""
+    `response_text` a mano (bitácora del run c6837386)."""
     titulo("PRÉSTAMOS — la esfera de contacto, medida aparte")
 
     try:
@@ -525,16 +472,13 @@ def analizar_prestamos() -> None:
               "supabase/migrations/20260916000000_loanword_uses.sql)")
         return
 
-    _aviso_hispanismos()
-
     sub("usos por lengua y tier (todos los runs)")
-    por_tier = q(f"""
+    por_tier = q("""
         SELECT source_language AS lengua, tier, count(*) AS usos,
                count(DISTINCT word) AS formas,
                count(DISTINCT agent_name) AS agentes,
                count(DISTINCT run_id) AS runs
-        FROM loanword_uses{filtro_hispanismos()}
-        GROUP BY source_language, tier
+        FROM loanword_uses GROUP BY source_language, tier
         ORDER BY source_language, tier
     """)
     if not len(por_tier):
@@ -543,7 +487,7 @@ def analizar_prestamos() -> None:
     print(por_tier.to_string(index=False))
 
     sub("difusión: primer día por tier de cada voz (¿bajó del tier 1?)")
-    dif = q(f"""
+    dif = q("""
         SELECT run_id, word, source_language AS lengua,
                min(day) FILTER (WHERE tier = 1) AS d_t1,
                min(day) FILTER (WHERE tier = 2) AS d_t2,
@@ -551,8 +495,7 @@ def analizar_prestamos() -> None:
                count(DISTINCT agent_name) FILTER (WHERE tier = 1) AS ag_t1,
                count(DISTINCT agent_name) FILTER (WHERE tier > 1) AS ag_t23,
                count(*) AS usos
-        FROM loanword_uses{filtro_hispanismos()}
-        GROUP BY run_id, word, source_language
+        FROM loanword_uses GROUP BY run_id, word, source_language
         ORDER BY usos DESC LIMIT 30
     """)
     dif.insert(0, "run", dif["run_id"].astype(str).str[:8])
@@ -561,14 +504,13 @@ def analizar_prestamos() -> None:
           f"de {len(dif)} (las 30 más usadas)")
 
     sub("por día y tier (¿la difusión crece con los días?)")
-    dia = q(f"""
+    dia = q("""
         SELECT run_id, day,
                count(*) FILTER (WHERE tier = 1) AS t1,
                count(*) FILTER (WHERE tier = 2) AS t2,
                count(*) FILTER (WHERE tier = 3) AS t3,
                count(DISTINCT word) AS formas
-        FROM loanword_uses{filtro_hispanismos()}
-        GROUP BY run_id, day ORDER BY run_id, day
+        FROM loanword_uses GROUP BY run_id, day ORDER BY run_id, day
     """)
     dia.insert(0, "run", dia["run_id"].astype(str).str[:8])
     print(dia.drop(columns="run_id").to_string(index=False))
@@ -592,8 +534,7 @@ def _prestamos_por_cadena() -> None:
     sub("por cadena (los días encadenados con --continuar)")
     for cadena in cadenas:
         ids = [id_de(r) for r in cadena]
-        filas = lector.prestamos(
-            ids, excluir=None if CON_HISPANISMOS else _voces_que_no_son_prestamo())
+        filas = lector.prestamos(ids)
         cortados = {corto(id_de(r)) for r in cadena if es_interrumpido(r)}
         print(f"\n    {resumen_de_cadena(cadena)}")
         if not filas:
@@ -624,18 +565,10 @@ def main(argv=None) -> int:
     ap.add_argument("--agentes", action="store_true")
     ap.add_argument("--narrativa", action="store_true")
     ap.add_argument("--prestamos", action="store_true")
-    ap.add_argument("--con-hispanismos", action="store_true",
-                    help="no filtrar el hispanismo de origen indígena "
-                         "(yuca, casabe, maíz…) ni el castellano corriente")
     ap.add_argument("--todo", action="store_true")
     a = ap.parse_args(argv)
 
-    global CON_HISPANISMOS
-    CON_HISPANISMOS = a.con_hispanismos
-
-    ANALISIS = ("koine", "lengua", "neologismos", "agentes", "narrativa",
-                "prestamos", "todo")
-    if a.todo or not any(getattr(a, n) for n in ANALISIS):
+    if a.todo or not any(vars(a).values()):
         a.koine = a.lengua = a.neologismos = a.agentes = a.narrativa = True
         a.prestamos = True
 
