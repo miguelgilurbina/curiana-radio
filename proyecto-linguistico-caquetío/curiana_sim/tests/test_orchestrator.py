@@ -302,13 +302,9 @@ def test_los_prestamos_de_esfera_se_guardan_aparte_y_no_en_words_used(sim, monke
     """Run c6837386 (2026-09-16): un préstamo usado por un tier 1 no llegaba a
     la base —`words_used` es `palabras_caquetias`, sólo caquetío— y la difusión
     al tier 2/3 sólo se podía medir re-puntuando `response_text`. Ahora va a
-    `loanword_uses` por respuesta, con tier y día, y `words_used` no cambia.
-
-    ⚠ 2026-09-17: el ejemplo era `caiman`, castellano corriente y desde hoy
-    `HISPANISMOS_DE_ESFERA`. Se usa `watapana`, que el castellano no dice
-    —dice dividivi—: un préstamo de verdad. El test fija lo mismo."""
+    `loanword_uses` por respuesta, con tier y día, y `words_used` no cambia."""
     from collections import Counter
-    monkeypatch.setattr(orch, "call_agent", lambda *a, **k: RESPUESTA + " Naya watapana wara.")
+    monkeypatch.setattr(orch, "call_agent", lambda *a, **k: RESPUESTA + " Naya caiman wara.")
     monkeypatch.setattr(orch, "director_select_event", lambda state: None)
     db = _DBQueGuardaPrestamos()
     fallos = Counter()
@@ -320,8 +316,8 @@ def test_los_prestamos_de_esfera_se_guardan_aparte_y_no_en_words_used(sim, monke
     assert db.respuestas, "ninguna respuesta se persistió"
     assert len(db.prestamos) == len(db.respuestas), "cada respuesta con préstamo escribe una vez"
     for r, p in zip(db.respuestas, db.prestamos):
-        assert "watapana" not in r["words_used"], "el préstamo no contamina words_used"
-        assert p["words"] == ["watapana"]
+        assert "caiman" not in r["words_used"], "el préstamo no contamina words_used"
+        assert p["words"] == ["caiman"]
         assert p["response_id"] == "respuesta-de-prueba"
         assert p["turn_id"] == "turno-de-prueba"
         assert p["run_id"] == "run-de-prueba"
@@ -345,19 +341,18 @@ class _ClienteQueGraba:
 
 
 def test_save_loanword_uses_escribe_la_lengua_real_en_su_tabla():
-    """La fila lleva la lengua REAL de la voz (`watapana` es caribe
-    continental), y va a `loanword_uses`, nunca a `word_uses`."""
+    """La fila lleva la lengua REAL de la voz (`caiman` es taíno), y va a
+    `loanword_uses`, nunca a `word_uses`."""
     from curiana_database import CurianaDB
     db = CurianaDB.__new__(CurianaDB)
     db.client = _ClienteQueGraba()
     n = db.save_loanword_uses(response_id="r", run_id="run", turn_id="t",
                               agent_name="Manaure", tier=1, day=3, turn_num=2,
-                              words=["watapana"])
+                              words=["caiman"])
     assert n == 1
     (tabla, filas), = db.client.inserts
     assert tabla == "loanword_uses"
-    assert (filas[0]["word"] == "watapana"
-            and filas[0]["source_language"] == "caribe-continental")
+    assert filas[0]["word"] == "caiman" and filas[0]["source_language"] == "taíno"
     assert (filas[0]["tier"], filas[0]["day"], filas[0]["turn_num"]) == (1, 3, 2)
     assert db.save_loanword_uses(response_id="r", run_id="run", turn_id="t",
                                  agent_name="Manaure", tier=1, day=3, turn_num=2,

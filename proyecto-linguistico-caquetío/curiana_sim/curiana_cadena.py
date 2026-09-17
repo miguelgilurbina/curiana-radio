@@ -430,29 +430,16 @@ class LectorSQL:
             "SELECT day, distance, distance_ventana, distance_emergente, "
             f"n_agents FROM koine_metrics WHERE run_id = '{run_id}' ORDER BY day")
 
-    def prestamos(self, run_ids: list[str],
-                  excluir: Optional[list[str]] = None) -> list[dict]:
-        """Usos de la esfera de contacto (`loanword_uses`) de varios runs.
-
-        `excluir` son las voces que la LECTURA no cuenta como préstamo —el
-        hispanismo de origen indígena y el castellano corriente, que el scorer
-        registró como tales hasta el 2026-09-17—. La base no se reescribe;
-        quien lee decide. La lista la declara `curiana_lexicon` y la pasa
-        `analizar_runs`: este módulo no importa el lexicón (lo corren los
-        guardianes sin motor)."""
+    def prestamos(self, run_ids: list[str]) -> list[dict]:
+        """Usos de la esfera de contacto (`loanword_uses`) de varios runs."""
         ids = [r for r in run_ids if self._UUID.match(str(r))]
         if not ids:
             return []
         lista = ", ".join(f"'{r}'" for r in ids)
-        fuera = ""
-        if excluir:
-            voces = ", ".join("'" + v.replace("'", "''").lower() + "'"
-                              for v in excluir)
-            fuera = f" AND lower(word) NOT IN ({voces})"
         return self._consulta(
             "SELECT run_id::text AS run_id, day, tier, word, "
             "source_language AS lengua, agent_name "
-            f"FROM loanword_uses WHERE run_id IN ({lista}){fuera} "
+            f"FROM loanword_uses WHERE run_id IN ({lista}) "
             "ORDER BY day, tier, word")
 
 

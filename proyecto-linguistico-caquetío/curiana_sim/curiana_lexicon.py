@@ -8131,64 +8131,6 @@ ESFERA_DE_CONTACTO = frozenset({
 })
 
 
-# ── El hispanismo de origen indígena no es un préstamo de esfera ───────
-# El día 1 de la serie B (run 3973d317, 2026-09-17) `loanword_uses` registró
-# 7 usos y los 7 eran CASTELLANO: «Las manos ocupadas limpiando yuca»
-# (Harifuche), «Maíz, yuca ta-kana» (Hiko), «Casabe kaa-ni wara amana-ni»
-# (Kunaro-bana). El agente no está tomando prestada una voz de las islas: está
-# escribiendo la palabra que el castellano ya tomó prestada hace cinco siglos
-# y usa como propia. Medir eso como difusión de la esfera es medir el idioma
-# en que el modelo escribe sus acotaciones.
-#
-# MEDIDO sobre las 2.515 respuestas de la base, re-puntuadas con este scorer
-# (`6-fusion/medicion_hispanismos_loanword_uses_2026-09-17.yaml`): 147 llevan
-# préstamo de esfera y 111 de ellas (75,5%) son una de estas cinco voces —
-# casabe 58, yuca 33, maíz 18, batata 1, papaya 1. Lo que queda son préstamos
-# de verdad: `watapana` (29, que el castellano NO usa: dice dividivi), los
-# tokens con morfología caquetía encima (`ta-casabe`, `ka-watapana`,
-# `ta-ture`, `ta-yuca`, `ta-bohío`) y `ture`.
-#
-# CÓMO SE DISTINGUE UNO DE OTRO — el criterio es la ORTOGRAFÍA de la clave, y
-# el lexicón ya lo tiene escrito: `maisi` dice en sus notas «→ español maíz» y
-# `cazabi` «→ español cazabe». La clave es ahí la forma indígena y el
-# castellano es OTRA palabra: escribir `maisi` sí es hablar taíno. La clave
-# `maíz`, en cambio, ES la palabra castellana. Por eso `maisi`, `cazabi`,
-# `cacike`, `iwana`, `hutia` y `tabako` siguen siendo préstamo, y `maíz`,
-# `casabe`, `caiman` e `iguana` no. Los taínismos de la etnografía —`areito`,
-# `batey`, `cemi`, `dujo`, `guanin`, `maboya`, `naboria`, `nitaino`— tampoco
-# entran: son jerga de americanista, no castellano de hablante.
-#
-# POR QUÉ NO SE AMPLÍA `CASTELLANO_CORRIENTE`, que es su sitio natural: porque
-# MUEVE EL SCORE. Una voz de `CASTELLANO_CORRIENTE` deja de ser arahuaca
-# (`es_arahuaco` devuelve False), sale de `usadas` y baja la `densidad`, que
-# pesa 6 de los 10 puntos. Sobre las 2.515 respuestas eso movería 147 scores a
-# mitad de la serie B, y el scorer no se toca a mitad de serie. Esta lista
-# hace lo MÍNIMO que arregla el dato sin tocar el instrumento: el token sigue
-# contando exactamente igual en `densidad`, en `palabras_arahuacas` y en
-# `otro_arahuaco`, y sólo deja de llamarse préstamo de esfera. Residuo
-# declarado y elegido: un hispanismo sigue sumando densidad arahuaca, que no
-# es lo que uno querría — la lectura limpia es CASTELLANO_CORRIENTE, y pasarlo
-# ahí es decisión de Miguel PARA EL CORTE DE SERIE, no para hoy.
-#
-# ALCANCE: sólo el token PELADO, misma regla que `CASTELLANO_CORRIENTE`.
-# `ta-casabe` («Paa-ka ta-casabe, paa-ka ta-chicha», 4 respuestas) lleva el
-# posesivo caquetío encima de la raíz: ahí la lengua está haciendo algo con
-# ella, que es exactamente la pinta de un préstamo de verdad, y sigue siéndolo.
-#
-# NO ENTRAN, y se dejan anotadas en el YAML para que Miguel decida: `cobo`
-# (antillano, no venezolano), `guabina`, `caney` y `manigua` (regionales, y
-# aquí glosadas en su sentido etnográfico), `tuna` (la clave taína glosa
-# 'agua, río' — es homógrafo del castellano, no el mismo referente), `ture`
-# (voz de Cumaná y Margarita según Alvarado 1921 p.301, marginal en el
-# castellano de Paraguaná) y `pauji` (el castellano `paují` es el ave; esta
-# clave es un ÁRBOL). En duda, degradar: se quedan fuera y siguen contando
-# como préstamo.
-HISPANISMOS_DE_ESFERA = frozenset({
-    "aji", "auyama", "batata", "caiman", "casabe", "cayo", "guayaba",
-    "huracan", "maíz", "manati", "papaya", "piragua", "yuca",
-})
-
-
 def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
     """
     Calcula métricas lingüísticas de una respuesta de agente, midiendo
@@ -8320,19 +8262,7 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
     # MIDEN APARTE y no penalizan. Una lengua de encrucijada toma prestado de
     # sus vecinos; lo que sí es fuga es hablar la lengua con la que la estamos
     # reconstruyendo (wayunaiki, lokono) o la de otra polity (achagua).
-    # …y dentro de la esfera, el HISPANISMO no es préstamo: es el castellano
-    # escribiendo con la palabra que tomó prestada hace cinco siglos («las
-    # manos ocupadas limpiando yuca», run 3973d317). Tercer cubo, ni préstamo
-    # ni fuga. Se exige que la familia sea de la esfera para que el reparto de
-    # `otro_arahuaco` —lo único de aquí que pesa en el score— no se mueva.
-    # Ver HISPANISMOS_DE_ESFERA: sólo el token pelado, `ta-casabe` sigue
-    # siendo préstamo.
-    def _es_hispanismo(t: str) -> bool:
-        return t in HISPANISMOS_DE_ESFERA and familias[t] in ESFERA_DE_CONTACTO
-
-    hispanismo_tokens = [t for t in ajenos if _es_hispanismo(t)]
-    prestamo_tokens = [t for t in ajenos
-                       if familias[t] in ESFERA_DE_CONTACTO and not _es_hispanismo(t)]
+    prestamo_tokens = [t for t in ajenos if familias[t] in ESFERA_DE_CONTACTO]
     otro_arahuaco_tokens = [t for t in ajenos if familias[t] not in ESFERA_DE_CONTACTO]
 
     # ── Núcleo: densidad arahuaca total (0..1), vs. español ──
@@ -8365,9 +8295,6 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
         obs.append(f"⚠ otra-lengua-arahuaca×{len(otro_arahuaco_tokens)}: {', '.join(sorted(set(otro_arahuaco_tokens))[:5])}")
     if prestamo_tokens:
         obs.append(f"préstamo de esfera×{len(prestamo_tokens)}: {', '.join(sorted(set(prestamo_tokens))[:5])}")
-    if hispanismo_tokens:
-        # Visible aunque no cuente: nada valioso muere en silencio.
-        obs.append(f"hispanismo×{len(hispanismo_tokens)}: {', '.join(sorted(set(hispanismo_tokens))[:5])}")
     if aspectos: obs.append(f"aspecto: {', '.join(aspectos)}")
     if esp_func: obs.append(f"⚠ español funcional×{len(esp_func)}")
     if neos:     obs.append(f"+{len(neos)} neologismo(s)")
@@ -8396,10 +8323,6 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
         # voz de las islas pasa de un tier 1 a los demás, se ve aquí.
         "prestamos_de_esfera": list(dict.fromkeys(prestamo_tokens)),
         "n_prestamos_esfera": len(prestamo_tokens),
-        # El hispanismo de origen indígena («yuca», «casabe», «maíz»): clave de
-        # la esfera y palabra corriente del castellano a la vez. NO es préstamo
-        # y NO es fuga; se devuelve para que se vea, no para que cuente.
-        "hispanismos_de_esfera": list(dict.fromkeys(hispanismo_tokens)),
         "espanol_funcional": len(esp_func),
         "score": score,
         "observacion": " | ".join(obs),
