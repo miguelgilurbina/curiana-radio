@@ -851,7 +851,63 @@ def agentes_sin_precarga(idiolectos: dict, agentes) -> list[str]:
 AMBITO_NULO = ""
 
 
-def guardar_koine(idiolectos: dict, campo: "CampoLexico", path: str = KOINE_PATH) -> None:
+def _competencia_a_dict(comp: "CompetenciaLexica") -> dict:
+    """La competencia ENTERA: referentes abiertos y fijados, variantes con su
+    soporte, y el ámbito de cada proponente.
+
+    Sin esto, `auto_mode` creaba una `CompetenciaLexica()` nueva cada run —y un
+    run de la era 2 es UN día— mientras `referentes_introducidos` (que sí se
+    hereda) impedía volver a presentar el referente: ninguna competencia podía
+    durar más de un día y por competencia no podía fijarse jamás una entrada de
+    koiné en una cadena de runs de un día. Medido el 2026-09-18 sobre el día 1
+    de la serie C: 16 variantes de «las cuentas» en 7 ámbitos, el líder con el
+    12,2 % contra un umbral del 55 %, y la disputa muerta al amanecer."""
+    return {
+        "umbral": comp.umbral,
+        "soporte_minimo": comp.soporte_min,
+        "referentes": {
+            cid: {
+                "desc": ref.get("desc", ""),
+                "variantes": {f: float(s) for f, s in ref["variantes"].items()},
+                "fijada": ref.get("fijada"),
+                "fijada_dia": ref.get("fijada_dia"),
+            }
+            for cid, ref in comp.referentes.items()
+        },
+        # Se guardan explícitos y no se reconstruyen de `variantes`: la clave de
+        # los dos índices va en MINÚSCULA y la variante conserva su grafía.
+        "forma2concepto": dict(comp._forma2concepto),
+        "ambitos_de_forma": {f: list(a) for f, a in comp._ambitos_de_forma.items()},
+    }
+
+
+def _competencia_de_dict(d: Optional[dict]) -> "CompetenciaLexica":
+    """La competencia guardada, o una vacía si el JSON no la trae.
+
+    Un `curiana_koine.json` escrito antes del 2026-09-18 no tiene la llave y
+    carga como hasta hoy: la cadena sigue, sin competencias heredadas."""
+    d = d or {}
+    comp = CompetenciaLexica(
+        umbral_fijacion=float(d.get("umbral", 0.55)),
+        soporte_minimo=float(d.get("soporte_minimo", 3.0)),
+    )
+    for cid, ref in (d.get("referentes") or {}).items():
+        comp.referentes[cid] = {
+            "desc": ref.get("desc", ""),
+            "variantes": Counter({f: float(s)
+                                  for f, s in (ref.get("variantes") or {}).items()}),
+            "fijada": ref.get("fijada"),
+            "fijada_dia": ref.get("fijada_dia"),
+        }
+    comp._forma2concepto = {f: c for f, c in (d.get("forma2concepto") or {}).items()}
+    comp._ambitos_de_forma = {f: list(a or ())
+                              for f, a in (d.get("ambitos_de_forma") or {}).items()}
+    return comp
+
+
+def guardar_koine(idiolectos: dict, campo: "CampoLexico",
+                  competencia: "Optional[CompetenciaLexica]" = None,
+                  path: str = KOINE_PATH) -> None:
     import json
     datos = {
         "idiolectos": {nm: _idiolecto_a_dict(i) for nm, i in idiolectos.items()},
@@ -863,14 +919,20 @@ def guardar_koine(idiolectos: dict, campo: "CampoLexico", path: str = KOINE_PATH
                   "por_ambito": {(a if a is not None else AMBITO_NULO): dict(p)
                                  for a, p in campo.por_ambito.items()}},
     }
+    # La competencia léxica: lo que hace que una disputa dure más de un día.
+    if competencia is not None:
+        datos["competencia"] = _competencia_a_dict(competencia)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(datos, f, ensure_ascii=False, indent=1)
 
 
-def cargar_koine(path: str = KOINE_PATH) -> tuple[dict, "CampoLexico"]:
-    """Devuelve (idiolectos, campo) tal como quedaron al cerrar el run anterior.
-    Lanza FileNotFoundError si no hay nada guardado: continuar sin koiné previa
-    no es continuar, y conviene que falle a la vista."""
+def cargar_koine(path: str = KOINE_PATH) -> tuple[dict, "CampoLexico",
+                                                  "CompetenciaLexica"]:
+    """Devuelve (idiolectos, campo, competencia) tal como quedaron al cerrar el
+    run anterior. Lanza FileNotFoundError si no hay nada guardado: continuar sin
+    koiné previa no es continuar, y conviene que falle a la vista.
+
+    Un JSON anterior al 2026-09-18 no trae competencia y devuelve una vacía."""
     import json
     with open(path, encoding="utf-8") as f:
         datos = json.load(f)
@@ -886,7 +948,7 @@ def cargar_koine(path: str = KOINE_PATH) -> tuple[dict, "CampoLexico"]:
             (a or None): {f: float(p) for f, p in (pesos or {}).items()}
             for a, pesos in por_ambito.items()
         }
-    return idiolectos, campo
+    return idiolectos, campo, _competencia_de_dict(datos.get("competencia"))
 
 
 # ══════════════════════════════════════════════════════════════════════

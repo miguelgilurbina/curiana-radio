@@ -1,0 +1,71 @@
+# ─────────────────────────────────────────────────────────────────────────
+# GENERADO por 6-fusion/scripts/medir_formas_de_plantilla.py --yaml
+# No se edita a mano: se vuelve a correr.
+#
+# La pregunta: ¿puede `LexicoComunitario.registrar_neologismo()` rechazar una
+# forma que el prompt YA ENSEÑA —el vocabulario base y los ejemplos de las tres
+# plantillas— sin mover el instrumento?
+#
+# La respuesta está en `veredicto`. El scorer no se toca: si `score` cambia en
+# una sola respuesta, el filtro NO se aplica a mitad de serie y queda aquí como
+# propuesta para un corte de serie de Miguel.
+#
+# Por qué se mueve (cuando se mueve): `kali-bana` se OFICIALIZA durante el día
+# (dos adoptantes), y una forma adoptada entra en `lexico.palabras_activas()`,
+# que es justo lo que `score_linguistico()` reconoce. Rechazarla en la
+# registración le quita esa palabra a `palabras_caquetias` en las respuestas
+# POSTERIORES que la dicen — y ahí se mueve el score. `neologisms_proposed` no
+# se mueve nunca: sale de `extraer_neologismos_del_texto()`, que es anterior al
+# registro.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  run: b7bc51dc
+  respuestas: 72
+  script: 6-fusion/scripts/medir_formas_de_plantilla.py
+  base: supabase local (docker exec supabase_db_curiana_sim psql)
+  como_se_corre: 'CURIANA_ELENCO=era2 python 6-fusion/scripts/medir_formas_de_plantilla.py'
+  formas_de_plantilla: 5898
+  nota_lista: >-
+    Construida desde las plantillas, nunca a mano: VOCABULARIO_BASE +
+    formas_en_texto() de _IDENTIDAD_LINGUISTICA, prompt_reglas_completo()
+    y prompt_reglas_breve(). Es el mismo conjunto que
+    `curiana_orchestrator_v2._FORMAS_EXCLUIDAS`.
+
+control:
+  # El replay tiene que reproducir lo que la base guardó, o no mide nada.
+  respuestas_identicas: 72
+  desvios: 0
+  ejemplos: []
+
+rechazadas_por_el_filtro:
+  - {"forma": "kali-bana", "autor": "Simaure"}
+  - {"forma": "warawara", "autor": "Wanepe"}
+
+efecto_en_el_instrumento:
+  score_cambia_en: 4
+  score_detalle:
+    - {"agente": "Buriche", "dia": 1, "turno": 4, "hoy": 8.7, "con_filtro": 8.5, "dice": ["kali-bana"]}
+    - {"agente": "Chuchubi", "dia": 1, "turno": 5, "hoy": 8.0, "con_filtro": 7.6, "dice": ["kali-bana"]}
+    - {"agente": "Karebe", "dia": 1, "turno": 6, "hoy": 5.4, "con_filtro": 5.3, "dice": ["kali-bana"]}
+    - {"agente": "Apoaure", "dia": 1, "turno": 6, "hoy": 5.5, "con_filtro": 5.4, "dice": ["kali-bana"]}
+  neologisms_proposed_cambia_en: 0
+  neologisms_proposed_detalle: []
+  palabras_caquetias_cambia_en: 7
+  palabras_caquetias_detalle:
+    - {"agente": "Hiko", "dia": 1, "turno": 3, "hoy": 29, "con_filtro": 28, "dice": ["kali-bana"]}
+    - {"agente": "Kumarawa", "dia": 1, "turno": 4, "hoy": 17, "con_filtro": 16, "dice": ["kali-bana"]}
+    - {"agente": "Buriche", "dia": 1, "turno": 4, "hoy": 22, "con_filtro": 21, "dice": ["kali-bana"]}
+    - {"agente": "Chuchubi", "dia": 1, "turno": 5, "hoy": 12, "con_filtro": 11, "dice": ["kali-bana"]}
+    - {"agente": "Karebe", "dia": 1, "turno": 6, "hoy": 41, "con_filtro": 40, "dice": ["kali-bana"]}
+    - {"agente": "Apoaure", "dia": 1, "turno": 6, "hoy": 39, "con_filtro": 38, "dice": ["kali-bana"]}
+    - {"agente": "Sawaka", "dia": 1, "turno": 6, "hoy": 41, "con_filtro": 40, "dice": ["kali-bana"]}
+
+efecto_en_el_registro:
+  neologismos_hoy: 39
+  neologismos_con_filtro: 37
+  adoptados_hoy: 6
+  adoptados_con_filtro: 5
+  dos_ambitos_hoy: ["kali-bana"]
+  dos_ambitos_con_filtro: []
+
+veredicto: "NO-APLICAR: el filtro mueve el instrumento"

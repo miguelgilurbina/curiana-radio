@@ -340,6 +340,25 @@ sierra de la brecha intra/entre (§5.1 del diseño de la escena). El coste en el
 prompt es **negativo** (−3,3 %): lo que el bloque de oír añade es menos que lo
 que el filtro de V1/V2/V3 quita.
 
+⚠ **Y eso no pasaba solo: hubo que arreglarlo** (2026-09-18, día 1 de la serie
+C). En el ensayo de arriba los seis turnos corrían EN el cerro, así que todo lo
+propuesto estaba en `"Capubana"` y las vías «volvían» sin hacer nada. En una
+cadena de verdad el día 3 llega con dos días de léxico repartido por 28 lugares
+y `"Capubana"` es **un lugar más**, con el léxico de sus dos ocupantes del día 1
+(Sawaka y Hayo, 71 formas): V2 vacía y las tres rivales de «las cuentas» a 0.
+Desde entonces hay **dos puertas**: `ambito_de` (dónde ESTÁ: el registro,
+`[Aquí estás]`, `presencias`, el campo — ese día `"Capubana"`) y
+`ambito_visible_de` (qué VE: las cuatro vías y el bloque de oír — ese día
+`None`, la unión de todos los ámbitos). Ver la trampa homónima en `CLAUDE.md`.
+
+⚠ **La FIJACIÓN tampoco duraba.** `CompetenciaLexica` no se persistía y
+`auto_mode` creaba una nueva en cada run, mientras `referentes_introducidos`
+impedía volver a presentar el referente: en la era 2, donde **un run es un
+día**, ninguna competencia podía durar más de un día ni llegar nunca al 55 %.
+Desde el 2026-09-18 viaja en `curiana_koine.json` junto a los idiolectos y el
+campo, y `--continuar` la recupera entera (referentes abiertos y fijados,
+variantes con su soporte, el ámbito de cada proponente).
+
 ⚠ **17 de 72**: el bloque de oír sale poco, y se sabe por qué. Pide que alguien
 haya hablado **en tu lugar** en el momento anterior, y por turno hablan 12 de
 63 en 8-27 lugares distintos (§3.3). Con la ventana de 12 sin tocar (decisión

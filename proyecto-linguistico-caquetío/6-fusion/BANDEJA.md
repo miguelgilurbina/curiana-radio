@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-18**.
 
-**2637 ítems propuestos** en 70 propuestas, más **6 issue(s)/comentario(s) redactados sin publicar**.
+**2639 ítems propuestos** en 71 propuestas, más **7 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -61,6 +61,7 @@ editar_a_mano: no
 | `mapa_nombres_era2.yaml` | ? | 63 |  |
 | `matacan_venado_2026-09-14.yaml` | esteves-1989 (y alvarado-1921, jahn-1927, neira-ribero-1762 como comparanda) | 5 |  |
 | `medicion_contaminacion_score_2026-09-09.yaml` | ? | 0 |  |
+| `medicion_formas_de_plantilla_2026-09-18.yaml` | ? | 2 |  |
 | `medicion_hispanismos_loanword_uses_2026-09-17.yaml` | ? | 0 |  |
 | `medicion_prestigio_vinculos_era2_2026-09-17.yaml` | ? | 3 |  |
 | `medina_colina_dictado.yaml` | ? | 111 |  |
@@ -124,6 +125,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `comentario-122-frase-cardinal-oliver.md` | Comentario para #122 — la frase cardinal de Oliver, releída en las dos ediciones |
 | `decision-d11-fase3-nucleo-lokono-achagua.md` | D11 fase 3: el núcleo re-derivado desde lokono + achagua, y un perfil de run para medirlo |
 | `existir-en-el-mundo-escena-por-lugar-2026-09-17.md` | Existir en el mundo: la escena por lugar |
+| `formas-de-plantilla-en-la-registracion-2026-09-18.md` | Falsos neologismos que son la plantilla: medido, y NO aplicado |
 | `frontera-entre-nodos-2026-09-17.md` | La frontera entre nodos: el motor no tiene ninguna |
 | `golfete-en-paraguana-2026-09-17.md` | «Golfete» en Paraguaná: por dónde entra, a quién le sobra y qué decidir |
 | `mundo-era2-sitios-y-clima.md` | El mundo de la era 2, atado a los nodos: sitios y clima |

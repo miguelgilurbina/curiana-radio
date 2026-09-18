@@ -8990,11 +8990,13 @@ def vocabulario_para_agente(tier: int, lexico: "LexicoComunitario", contexto: st
     mostrar en grande (chunking por palabras clave, ver categorias_relevantes).
     `pesos` (opcional, del CampoLexico): pondera la muestra por frecuencia
     comunitaria (rich-get-richer; ver muestra_caquetio_dinamica).
-    `ambito` (opcional, capa 2 de la escena): el LUGAR donde está el agente,
-    tal y como lo devuelve `curiana_escena.ambito_de()`. Filtra las dos vías
-    comunitarias del bloque —las adoptadas (V2) y las propuestas (V1)—: se ve
-    lo que se dijo aquí, no lo que dijo la comunidad entera. `None` deja el
-    bloque byte a byte como estaba (era 1, y era 2 sin `--escena`).
+    `ambito` (opcional, capa 2 de la escena): el LUGAR que FILTRA lo que el
+    agente ve, tal y como lo devuelve `curiana_escena.ambito_visible_de()` —no
+    `ambito_de()`: el día de Capubana se está en el cerro pero se ve todo, y
+    esa puerta es la que lo sabe. Filtra las dos vías comunitarias del bloque
+    —las adoptadas (V2) y las propuestas (V1)—: se ve lo que se dijo aquí, no
+    lo que dijo la comunidad entera. `None` deja el bloque byte a byte como
+    estaba (era 1, era 2 sin `--escena`, y el día de la convergencia).
     """
     lexico_activo = prompt_lexico_activo(lexico, ambito)
     pendientes = prompt_pendientes_evaluacion(lexico, ambito)
