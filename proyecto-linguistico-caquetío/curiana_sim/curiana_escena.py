@@ -12,11 +12,41 @@ LA PUERTA ES UNA
 `ambito_de(agente, state)` devuelve **el lugar donde ese agente está en este
 momento del día**, o `None`. `None` significa «no hay escena»: la era 1, o un
 run de la era 2 sin `--escena`. Todo lo que la capa 2 (OÍR, PR 4) filtre por
-ámbito pasará por aquí y sólo por aquí.
+ámbito pasa por aquí —o por `ambito_visible_de`, que es esta misma con el día
+de Capubana abierto (sección siguiente)— y por ningún otro sitio.
 
 Devuelve una CADENA y no un booleano a propósito: mañana, con la capa 4
 (POTESTAD), esta misma puerta devolverá adónde se movió el agente por decisión
 suya, y quien la llame no tendrá que cambiar.
+
+ESTAR NO ES VER: `ambito_visible_de` (2026-09-18)
+-------------------------------------------------
+El día 1 de la serie C midió que el Capubana **juntaba cuerpos, pero no
+ámbitos**: con `--capubana-cada 3`, el día 3 `ambito_de` devolvía `"Capubana"`
+para los 63 y eso es UN LUGAR MÁS, cuyo léxico era el de sus dos ocupantes del
+día 1 (Sawaka y Hayo, 71 formas): V2 vacía y las tres rivales de «las cuentas»
+a 0. El diseño dice lo contrario (§4 y la decisión p7): ese día **todos ven
+todo**.
+
+Por eso hay dos puertas y no una, y dicen dos cosas distintas:
+
+  `ambito_de(agente, state)`          dónde ESTÁ  → el registro (`situar`, y de
+                                      ahí `Neologismo.ambito` / `adoptado_en`),
+                                      `[Aquí estás]`, `presencias`, el campo.
+                                      El día de Capubana devuelve `"Capubana"`,
+                                      que es donde la gente está de verdad.
+  `ambito_visible_de(agente, state)`  qué VE      → las cuatro vías (V1 las
+                                      propuestas, V2 las adoptadas, V3 las
+                                      competencias, V4 el campo que pondera la
+                                      muestra) y `[Lo que se dijo aquí]`.
+                                      El día de Capubana devuelve `None`, que
+                                      es lo que las cuatro vías **ya** entienden
+                                      como «sin filtro»: la unión de todos los
+                                      ámbitos, sin un parámetro nuevo en
+                                      `LexicoComunitario`, `CampoLexico` ni
+                                      `CompetenciaLexica`.
+
+Los dos coinciden todos los demás días, y los dos devuelven `None` sin escena.
 
 DE DÓNDE SALE LA ESCENA
 -----------------------
@@ -41,12 +71,12 @@ intervenciones y ≤ 280 caracteres (decisión p5 → A). No el mismo turno: eso
 sería la V1 de hoy con otro nombre, que es literalmente el mecanismo que
 produjo los tres cruces de Δturnos = 0 del día 1 de la serie B.
 
-El ámbito del bloque es el de AHORA —`ambito_de(agente, state)`, la misma
-puerta que filtra las cuatro vías— y no el del momento anterior: todo lo que
-el agente ve pasa por un solo ámbito, y así un lugar «recuerda» lo que se dijo
-en él hace un momento aunque quien llega no estuviera. La alternativa (oír
-sólo si estabas allí cuando se dijo) pide una segunda puerta y queda anotada
-para Miguel.
+El ámbito del bloque es el de AHORA —`ambito_visible_de(agente, state)`, la
+misma puerta que filtra las cuatro vías— y no el del momento anterior: todo lo
+que el agente ve pasa por un solo ámbito, y así un lugar «recuerda» lo que se
+dijo en él hace un momento aunque quien llega no estuviera. La alternativa (oír
+sólo si estabas allí cuando se dijo) pide una puerta más y queda anotada para
+Miguel.
 
 Ensayo sin API (como `curiana_mundo.py`):
 
@@ -204,6 +234,31 @@ def ambito_de(agente: str, state) -> Optional[str]:
                         capubana_cada(state))).get(agente)
 
 
+def sin_frontera(state) -> bool:
+    """¿Hoy el ámbito no filtra nada?
+
+    El día de Capubana los 63 están en el cerro los seis momentos y el diseño
+    (§4, decisión p7) dice que ese día **todos ven todo**. Sin escena es
+    siempre False: allí no hay fronteras que quitar porque no hay ninguna."""
+    return escena_activa(state) and es_dia_de_capubana(state)
+
+
+def ambito_visible_de(agente: str, state) -> Optional[str]:
+    """LA PUERTA DE LO QUE SE VE (frente a `ambito_de`, que es la de dónde se
+    ESTÁ). La llaman las cuatro vías y el bloque de oír, y nadie más.
+
+    Devuelve lo mismo que `ambito_de` salvo el día de Capubana, donde devuelve
+    `None` — «sin filtro», la unión de todos los ámbitos, que es exactamente lo
+    que V1/V2/V3/V4 hacen ya con `ambito=None`. Así el día de la convergencia
+    el prompt vuelve a los números de la comunidad entera (DISENO_KOINE §6) sin
+    que `LexicoComunitario`, `CampoLexico` ni `CompetenciaLexica` necesiten un
+    parámetro nuevo, y lo que se propone o se adopta ese día se sigue
+    registrando en `"Capubana"`, que es donde pasó."""
+    if sin_frontera(state):
+        return None
+    return ambito_de(agente, state)
+
+
 def presentes_en(lugar: str, escena: dict, sin: Optional[str] = None) -> list:
     """Quiénes están en ese lugar, en orden determinista."""
     return sorted(a for a, l in (escena or {}).items() if l == lugar and a != sin)
@@ -349,15 +404,21 @@ def dichos_del_turno(escena: dict, interacciones, decir=None,
 
 
 def dichos_aqui(agente: str, lugar: Optional[str], dichos,
-                maximo: int = MAX_DICHOS) -> list:
+                maximo: int = MAX_DICHOS, todos: bool = False) -> list:
     """Las ≤ 3 intervenciones del momento anterior que se dijeron en `lugar`.
 
     Se queda con las ÚLTIMAS: dentro de un turno el orden es el de habla, y lo
-    último que se oyó es lo que se tiene más fresco."""
-    if not lugar:
+    último que se oyó es lo que se tiene más fresco.
+
+    `todos=True` (el día de Capubana) no filtra por lugar: ese día se oye lo
+    que dijo **cualquiera** en el momento anterior, estuviera donde estuviera —
+    el primer turno del día de la convergencia oye lo que se dijo la noche
+    anterior repartido por los sitios, que es justo la gente que acaba de
+    subir al cerro."""
+    if not todos and not lugar:
         return []
     mismos = [d for d in (dichos or [])
-              if d.get("lugar") == lugar and d.get("agente") != agente]
+              if (todos or d.get("lugar") == lugar) and d.get("agente") != agente]
     return mismos[-maximo:]
 
 
@@ -369,9 +430,12 @@ def bloque_lo_que_se_dijo_aqui(agente: str, state,
     mañana tiene el ámbito vacío y por eso no oye a nadie (decisión p3 → A)."""
     if not escena_activa(state):
         return ""
-    lugar = ambito_de(agente, state)
+    # La puerta de lo que se VE: el día de Capubana devuelve None y entonces
+    # no hay filtro de lugar — se oye a cualquiera del momento anterior.
+    lugar = ambito_visible_de(agente, state)
     dichos = dichos_aqui(agente, lugar,
-                         getattr(state, "dichos_del_turno_anterior", None))
+                         getattr(state, "dichos_del_turno_anterior", None),
+                         todos=(lugar is None))
     if not dichos:
         return ""
     lineas = [CABEZA_OIR]

@@ -92,6 +92,7 @@ def _capturar(monkeypatch, state, *, roster, agentes_por_turno, turnos,
     if not con_modulo:
         monkeypatch.setattr(orch, "escena_de", lambda s: {})
         monkeypatch.setattr(orch, "ambito_de", lambda a, s: None)
+        monkeypatch.setattr(orch, "ambito_visible_de", lambda a, s: None)
         monkeypatch.setattr(orch, "bloque_aqui_estas", lambda a, s, **k: "")
         monkeypatch.setattr(orch, "bloque_lo_que_se_dijo_aqui", lambda a, s, **k: "")
         monkeypatch.setattr(orch, "dichos_del_turno", lambda *a, **k: [])
@@ -300,6 +301,113 @@ def test_b_en_el_dia_de_capubana_se_oye_todo(monkeypatch):
     autores = {por_forma[f].autor for f in formas}
     assert len(autores) >= 2
     assert all(por_forma[f].ambito == "Capubana" for f in formas)
+
+
+# ── El Capubana junta ÁMBITOS, no sólo cuerpos (2026-09-18) ──────────
+# El día 1 de la serie C midió el fallo: con `--capubana-cada 3`, el día 3
+# `ambito_de` devolvía "Capubana" para los 63 y eso era UN LUGAR MÁS, cuyo
+# léxico era el de sus dos ocupantes del día 1 (71 formas): V2 vacía y las tres
+# rivales de «las cuentas» a 0. El diseño (§4, decisión p7) dice que ese día
+# TODOS ven TODO.
+
+def test_b_el_dia_de_capubana_sirve_la_union_de_los_ambitos(monkeypatch):
+    """Día 2 (víspera, repartidos) + día 3 (el cerro) + día 4 (repartidos).
+
+    El día 3, V1/V2/V3 tienen que traer exactamente lo mismo que el mismo run
+    SIN escena —la comunidad entera— y no lo del lugar «Capubana»; y el día 4
+    vuelve el filtro por lugar."""
+    _st, (con, lexico, _comp, _campo, escenas) = _correr_con_escena(
+        monkeypatch, turnos=18, cada=3, dia=2)
+    assert len(con) == 216
+    # el control: los mismos turnos sin el brazo (la ventana y las respuestas
+    # del doble son las mismas, así que el léxico evoluciona igual)
+    sin, *_ = _capturar(monkeypatch, _estado_era2(escena=False, cada=0, dia=2),
+                        roster=list(era2.ALL_AGENTS), agentes_por_turno=12,
+                        turnos=12, era=era2.ALL_AGENTS, sembrar=True, nombrar=True)
+
+    dia3 = range(72, 144)                       # turnos 7-12 = el día 3
+    assert all(set(escenas[i][2].values()) == {"Capubana"} for i in range(6, 12))
+    assert all(escenas[i][0] == 3 for i in range(6, 12))
+
+    # (1) el conteo —y el contenido— iguala al del run sin escena
+    for i in dia3:
+        assert _formas_de_v1(con[i]["system"]) == _formas_de_v1(sin[i]["system"]), i
+        assert _formas_de_v2(con[i]["system"]) == _formas_de_v2(sin[i]["system"]), i
+        assert _formas_de_v3(con[i]["system"]) == _formas_de_v3(sin[i]["system"]), i
+
+    # (2) y hubo unión de verdad: el cerro sirve formas propuestas en OTROS
+    #     lugares el día anterior, que es lo que antes no pasaba.
+    #     Ojo: un agente que vuelve a hablar vuelve a acuñar su forma, así que
+    #     una misma forma puede tener varias entradas y varios ámbitos.
+    ambitos_de = {}
+    ambitos_antes = {}
+    for n in lexico._neologismos:
+        ambitos_de.setdefault(n.forma, set()).add(n.ambito)
+        if n.dia < 3:
+            ambitos_antes.setdefault(n.forma, set()).add(n.ambito)
+    # En el PRIMER momento del día 3 todavía no se ha acuñado nada en el cerro:
+    # lo que V1 sirve ahí viene entero de la víspera, y no del cerro.
+    de_fuera = 0
+    for i in range(72, 84):
+        for forma in _formas_de_v1(con[i]["system"]):
+            if "Capubana" not in ambitos_antes.get(forma, set()):
+                de_fuera += 1
+    assert de_fuera > 0, "el día de Capubana no trajo nada de fuera del cerro"
+
+    # (3) y lo que se propone ESE día se registra en "Capubana", para que
+    #     `adoptados_en_dos_ambitos` y el mapa lo vean
+    del_dia3 = [n for n in lexico._neologismos if n.dia == 3]
+    assert del_dia3 and all(n.ambito == "Capubana" for n in del_dia3)
+
+    # (4) el día 4 vuelve el filtro por lugar
+    dia4 = range(144, 216)
+    assert all(escenas[i][0] == 4 for i in range(12, 18))
+    assert any(set(escenas[i][2].values()) != {"Capubana"} for i in range(12, 18))
+    v1_dia4 = 0
+    for i in dia4:
+        aqui = escenas[i // 12][2][con[i]["agente"]]
+        for forma in _formas_de_v1(con[i]["system"]):
+            v1_dia4 += 1
+            assert aqui in ambitos_de[forma], (con[i]["agente"], forma, aqui)
+    assert v1_dia4 > 0, "el día 4 no midió nada"
+
+
+def test_b_el_dia_de_capubana_se_oye_a_cualquiera_del_momento_anterior(monkeypatch):
+    """El primer momento del día del cerro oye lo que se dijo la noche antes
+    repartido por los sitios: es la gente que acaba de subir."""
+    _st, (con, *_r) = _correr_con_escena(monkeypatch, turnos=7, cada=3, dia=2)
+    ultimo_del_dia2 = dict(esc._escena(2, "noche", "viento", 3))
+    de_fuera = 0
+    for p in con[72:]:                                    # el turno 1 del día 3
+        for linea in p["system"].splitlines():
+            if not linea.startswith("— "):
+                continue
+            quien = linea[2:].split(":", 1)[0]
+            if ultimo_del_dia2.get(quien) not in (None, "Capubana"):
+                de_fuera += 1
+    assert de_fuera > 0, "el cerro no oyó a nadie de fuera del cerro"
+
+
+def test_b_las_dos_puertas_dicen_cosas_distintas_solo_en_el_capubana():
+    """`ambito_de` = dónde ESTÁ · `ambito_visible_de` = qué VE."""
+    normal = esc.EstadoDeEnsayo(dia=2, momento="mañana", estacion="viento",
+                                capubana_cada=3)
+    cerro = esc.EstadoDeEnsayo(dia=3, momento="mañana", estacion="viento",
+                               capubana_cada=3)
+    sin = esc.EstadoDeEnsayo(dia=3, momento="mañana", estacion="viento",
+                             escena=False, capubana_cada=3)
+    for agente in ("Manaure", "Bajari", "Sawaka"):
+        assert esc.ambito_visible_de(agente, normal) == esc.ambito_de(agente, normal)
+        assert esc.ambito_de(agente, cerro) == "Capubana"
+        assert esc.ambito_visible_de(agente, cerro) is None
+        assert esc.ambito_visible_de(agente, sin) is None
+    assert esc.sin_frontera(cerro) and not esc.sin_frontera(normal)
+    assert not esc.sin_frontera(sin)
+    # sin cadencia declarada no hay día de Capubana y no hay nada que abrir
+    nunca = esc.EstadoDeEnsayo(dia=3, momento="mañana", estacion="viento",
+                               capubana_cada=0)
+    assert not esc.sin_frontera(nunca)
+    assert esc.ambito_visible_de("Manaure", nunca) == esc.ambito_de("Manaure", nunca)
 
 
 def test_b_sin_escena_la_misma_corrida_ve_formas_de_todas_partes(monkeypatch):
@@ -565,7 +673,7 @@ def test_e_el_campo_por_ambito_sobrevive_a_continuar(tmp_path, monkeypatch):
     campo.registrar(["kari"], ambito="Moruy")
     campo.registrar(["wara"], ambito="Caseto")
     koine.guardar_koine({}, campo)
-    _idio, vuelto = koine.cargar_koine()
+    _idio, vuelto, _comp = koine.cargar_koine()
     assert vuelto.pesos_de("Moruy") == {"kari": 1.0}
     assert vuelto.pesos_de("Caseto") == {"wara": 1.0}
     assert vuelto.pesos == campo.pesos
@@ -573,7 +681,7 @@ def test_e_el_campo_por_ambito_sobrevive_a_continuar(tmp_path, monkeypatch):
     datos = json.loads((tmp_path / koine.KOINE_PATH).read_text(encoding="utf-8"))
     datos["campo"].pop("por_ambito")
     (tmp_path / koine.KOINE_PATH).write_text(json.dumps(datos), encoding="utf-8")
-    _i2, viejo = koine.cargar_koine()
+    _i2, viejo, _c2 = koine.cargar_koine()
     assert viejo.por_ambito == {None: {"kari": 1.0, "wara": 1.0}}
 
 

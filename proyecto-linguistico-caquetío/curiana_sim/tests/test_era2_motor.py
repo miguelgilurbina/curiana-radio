@@ -626,7 +626,7 @@ def test_la_koine_sobrevive_al_disco(tmp_path):
     ruta = str(tmp_path / "koine.json")
     guardar_koine({"Manaure": idio}, campo, path=ruta)
 
-    idiolectos, campo2 = cargar_koine(path=ruta)
+    idiolectos, campo2, _comp = cargar_koine(path=ruta)
     i2 = idiolectos["Manaure"]
     assert i2.frecuencias == idio.frecuencias
     assert i2.acunaciones == {"kuru-bacoa"} and i2.adopciones == {"biro-pana"}

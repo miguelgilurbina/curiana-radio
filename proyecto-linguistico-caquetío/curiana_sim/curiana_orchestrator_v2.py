@@ -108,6 +108,7 @@ from curiana_mundo import resumen_del_mundo
 from curiana_escena import (
     CAPUBANA_CADA_POR_DEFECTO,
     ambito_de,
+    ambito_visible_de,
     bloque_aqui_estas,
     bloque_lo_que_se_dijo_aqui,
     dichos_del_turno,
@@ -373,12 +374,22 @@ def call_agent(
     # escena —la era 1 y la era 2 sin el flag— devuelve None y se lee lo de
     # siempre: el override (que nadie escribe) o su ubicacion_default.
     #
-    # `ambito` es ADEMÁS el filtro de todo lo comunitario que entra al prompt
-    # (capa 2, PR 4): las propuestas en evaluación (V1), las adoptadas (V2),
-    # las competencias abiertas (V3) y el campo léxico que pondera la muestra
-    # (V4). Se saca UNA vez y de UNA puerta; nadie lee el nodo por su cuenta.
+    # ESTAR no es VER, y son dos puertas (curiana_escena, 2026-09-18):
+    #   `ambito`       DÓNDE ESTÁ  → [Aquí estás] y la ubicación de siempre; es
+    #                  también el que `run_turn` le declara al léxico con
+    #                  `situar()`, así que es el que queda escrito en la
+    #                  acuñación y en la adopción.
+    #   `ambito_visto` QUÉ VE      → el filtro de todo lo comunitario que entra
+    #                  al prompt (capa 2, PR 4): las propuestas en evaluación
+    #                  (V1), las adoptadas (V2), las competencias abiertas (V3)
+    #                  y el campo léxico que pondera la muestra (V4).
+    # Coinciden todos los días menos el de Capubana, donde `ambito` es
+    # "Capubana" —allí está la gente— y `ambito_visto` es None: ese día no hay
+    # frontera y las cuatro vías vuelven a ser de la comunidad entera, que es
+    # lo que la convergencia significa (diseño §4, decisión p7).
     # Con `None` las cuatro vías son globales y el prompt es el de siempre.
     ambito = ambito_de(agent_name, state)
+    ambito_visto = ambito_visible_de(agent_name, state)
     ubicacion = ambito or state.ubicaciones_override.get(
         agent_name, agent.get("ubicacion_default", "plaza")
     )
@@ -396,11 +407,11 @@ def call_agent(
     # V4: el muestreo rich-get-richer se pondera con el campo DE ESTE LUGAR.
     # Sin ámbito, `pesos_de(None)` es el campo global de siempre — el mismo
     # objeto, no una copia: el sorteo sale idéntico.
-    pesos_campo = (campo.pesos_de(ambito)
+    pesos_campo = (campo.pesos_de(ambito_visto)
                    if (campo is not None and not ablacion) else None)
     bloque_lexico = vocabulario_para_agente(
         tier, lexico, contexto=contexto_turno, pesos=pesos_campo, capas=capas,
-        ambito=ambito,
+        ambito=ambito_visto,
     )
 
     # Feedback lingüístico si el agente tuvo score bajo
@@ -463,7 +474,7 @@ def call_agent(
     if competencia is not None and not ablacion:
         # V3 con ámbito: sólo las formas rivales que se propusieron AQUÍ. La
         # fijación sigue siendo comunitaria — el ámbito filtra lo que se VE.
-        bloque_comp = competencia.prompt_competencias(ambito=ambito)
+        bloque_comp = competencia.prompt_competencias(ambito=ambito_visto)
         if bloque_comp:
             system_parts.append(bloque_comp)
     # Idiolecto acumulado (entrenchment): "tu manera de hablar" derivada del
@@ -1472,7 +1483,10 @@ def auto_mode(
             observer = ObserverAgent.load(client, lexico)
         except Exception:                                    # noqa: BLE001
             observer = ObserverAgent(client, lexico)
-        idiolectos, campo = cargar_koine()
+        # La competencia léxica viaja con la koiné desde el 2026-09-18: sin
+        # ella, una disputa abierta moría al amanecer (y con un run = un día,
+        # ninguna podía fijarse jamás). Un JSON anterior devuelve una vacía.
+        idiolectos, campo, competencia = cargar_koine()
         # Un agente nuevo en el elenco arranca con su semilla de idiolecto.
         for nm, a in ALL_AGENTS.items():
             idiolectos.setdefault(nm, IdiolectoAgente(nm, emocionar_de(nm, a.get("etnia"))))
@@ -1507,6 +1521,8 @@ def auto_mode(
             for nm, a in ALL_AGENTS.items()
         }
         campo = CampoLexico()
+        # Un run que no continúa empieza la competencia de cero, como siempre.
+        competencia = CompetenciaLexica()
     if turnos_por_dia is not None:
         state.turnos_por_dia = int(turnos_por_dia)
         if not continuar:
@@ -1526,7 +1542,15 @@ def auto_mode(
     # Koiné: competencia léxica (fijación por significado). Cada ~4 turnos se
     # introduce un referente novedoso sin nombre → varios agentes acuñan formas
     # rivales → la comunidad fija una por frecuencia × prestigio.
-    competencia = CompetenciaLexica()
+    # La `competencia` se creó arriba: HEREDADA con --continuar (2026-09-18),
+    # vacía sin él. Que sobreviva es lo que permite que una disputa siga abierta
+    # al día siguiente y pueda llegar al umbral; cada día se sigue evaluando la
+    # fijación al cerrarlo, como hasta hoy.
+    abiertas = competencia.activas()
+    if abiertas:
+        detalle = ", ".join(f"{cid} ({len(r['variantes'])} variantes)"
+                            for cid, r in abiertas.items())
+        print(f"  ◇ competencias heredadas, aún en disputa: {detalle}")
     cadencia_nombramiento = 4
     referentes_pendientes = referentes_pendientes_de(state)
 
@@ -1733,7 +1757,7 @@ def auto_mode(
         observer.save()
         observer.exportar_csv()
         observer.exportar_neologismos_csv()
-        guardar_koine(idiolectos, campo)
+        guardar_koine(idiolectos, campo, competencia)
 
         # Cerrar run en DB, con lo que de verdad se corrió
         db.end_run(run_id, total_turns=turnos_hechos, total_days=state.dia - 1)

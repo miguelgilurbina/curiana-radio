@@ -1,11 +1,20 @@
 """La competencia léxica sigue su secuencia de referentes de un día al
 siguiente (--continuar). Hasta el 2026-09-17 cada run empezaba
 REFERENTES_NOVEDOSOS de cero y un día de seis turnos sólo llegaba al
-primero: los tres días de la serie A nombraron «las cuentas brillantes»."""
+primero: los tres días de la serie A nombraron «las cuentas brillantes».
+
+Y desde el 2026-09-18, la DISPUTA misma viaja: `auto_mode` recuperaba la
+secuencia de referentes pero creaba una `CompetenciaLexica()` nueva, así que
+ninguna competencia podía durar más de un día (día 1 de la serie C)."""
+import itertools
 import json
 
+import pytest
+
+import curiana_orchestrator_v2 as orch
 from curiana_koine import REFERENTES_NOVEDOSOS
 from curiana_orchestrator_v2 import referentes_pendientes_de
+from curiana_perfiles import cargar_perfil
 from curiana_state import ComunidadState, estado_inicial
 
 
@@ -61,3 +70,100 @@ def test_un_estado_guardado_antes_del_campo_carga_y_empieza_de_cero(tmp_path):
     viejo = ComunidadState.load(str(path))
     assert viejo.referentes_introducidos == []
     assert referentes_pendientes_de(viejo)[0]["id"] == "cuentas_vidrio"
+
+
+# ══════════════════════════════════════════════════════════════════════
+# La disputa sobrevive la noche — de punta a punta, por `auto_mode`
+# ══════════════════════════════════════════════════════════════════════
+
+class _DBMuda:
+    def create_run(self, *a, **k):
+        return "run-de-prueba"
+
+    def save_turn(self, **k):
+        return "turn-de-prueba"
+
+    def end_run(self, *a, **k):
+        pass
+
+    def get_run(self, run_id):
+        # El brazo del run anterior: sin escena, que es como corren estos días.
+        return {"config": {"escena": False, "capubana_cada": 0}}
+
+    def runs_de_cadena(self, *a, **k):
+        return []
+
+    def __getattr__(self, nombre):
+        return lambda *a, **k: "id"
+
+
+class _Cliente:
+    pass
+
+
+def _alterna(formas):
+    """Un `call_agent` que acuña por turnos una de las formas rivales: en el
+    turno de nombramiento salen las dos y la competencia nace con dos
+    variantes, como en un día de verdad."""
+    ciclo = itertools.cycle(formas)
+    return lambda *a, **k: f"Taya wana-ka arima. [{next(ciclo)}: kali + uco = algo]."
+
+
+# Cuatro rivales, como en el día 1 de la serie C: con el soporte repartido
+# ninguna llega al umbral del 55 % y el día cierra en disputa.
+RIVALES = ("kali-uco-aima", "ucibo-kali-duruco", "kali-boro", "kali-rua")
+
+
+def _correr_un_dia(monkeypatch, tmp_path, formas, turnos, continuar):
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setattr(orch, "call_agent", _alterna(formas))
+    monkeypatch.setattr(orch, "director_narrate", lambda *a, **k: "(narración)")
+    monkeypatch.setattr(orch, "director_select_event", lambda s: None)
+    monkeypatch.setattr(orch, "get_db", lambda: _DBMuda())
+    monkeypatch.setattr(orch, "get_client", lambda run_id=None: _Cliente())
+    monkeypatch.setattr(orch, "huella_de_base",
+                        lambda semilla=None: {"motor_sucio": False, "semilla": semilla})
+    orch.auto_mode(_Cliente(), turnos, verbose=False, perfil=cargar_perfil("base"),
+                   agentes_por_turno=len(RIVALES), roster_nombre="todos",
+                   turnos_por_dia=turnos, semilla=11, continuar=continuar)
+    with open(tmp_path / "curiana_koine.json", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def test_la_disputa_de_un_dia_se_resuelve_al_dia_siguiente(monkeypatch, tmp_path):
+    """El día 1 abre la competencia con cuatro rivales y no la resuelve; el día
+    2 (--continuar) la HEREDA y la fija.
+
+    Antes del 2026-09-18 el día 2 arrancaba con la competencia en blanco y, como
+    `referentes_introducidos` impide volver a presentar el referente, la disputa
+    moría sin resolverse: por competencia no podía fijarse jamás una entrada de
+    koiné en una cadena de runs de un día."""
+    # cinco turnos: el nombramiento cae en el 5º (cadencia 4) y ahí nacen las
+    # cuatro rivales; el día cierra con la competencia abierta.
+    dia1 = _correr_un_dia(monkeypatch, tmp_path, RIVALES, turnos=5, continuar=False)
+    ref1 = dia1["competencia"]["referentes"].get("cuentas_vidrio")
+    assert ref1, dia1["competencia"]["referentes"]
+    assert set(ref1["variantes"]) == set(RIVALES), ref1["variantes"]
+    assert ref1["fijada"] is None, "el día 1 no debería resolver la disputa"
+    soporte1 = sum(ref1["variantes"].values())
+
+    # El día 2 continúa y todos dicen la misma rival. Cuatro turnos: no hay
+    # nombramiento nuevo (cadencia 4), sólo gente reusando una forma.
+    dia2 = _correr_un_dia(monkeypatch, tmp_path, RIVALES[:1], turnos=4, continuar=True)
+    ref2 = dia2["competencia"]["referentes"].get("cuentas_vidrio")
+    assert ref2, "la disputa del día 1 desapareció al continuar"
+    assert set(ref2["variantes"]) == set(RIVALES)          # las cuatro siguen ahí
+    assert sum(ref2["variantes"].values()) > soporte1      # y el soporte creció
+    assert ref2["fijada"] == RIVALES[0]
+    assert ref2["fijada_dia"] == 2
+    # y el ámbito de cada proponente viaja con ella (vacío sin --escena)
+    assert "ambitos_de_forma" in dia2["competencia"]
+
+
+def test_un_run_que_no_continua_empieza_la_competencia_de_cero(monkeypatch, tmp_path):
+    _correr_un_dia(monkeypatch, tmp_path, RIVALES, turnos=5, continuar=False)
+    otro = _correr_un_dia(monkeypatch, tmp_path, RIVALES, turnos=5, continuar=False)
+    ref = otro["competencia"]["referentes"]["cuentas_vidrio"]
+    # el segundo run vuelve a presentar el referente y la disputa nace de nuevo
+    assert ref["fijada"] is None
+    assert set(otro["competencia"]["referentes"]) == {"cuentas_vidrio"}

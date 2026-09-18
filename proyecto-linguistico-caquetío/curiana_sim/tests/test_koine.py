@@ -10,8 +10,10 @@ from curiana_koine import (
     IdiolectoAgente,
     CampoLexico,
     CompetenciaLexica,
+    cargar_koine,
     distancia_idiolectal,
     emocionar_de,
+    guardar_koine,
     veredicto_convergencia,
 )
 
@@ -179,6 +181,73 @@ def test_competencia_ignora_uso_tras_fijacion():
     soporte_antes = comp.referentes["c"]["variantes"]["forma-b"]
     comp.registrar_uso("forma-b", "Shaboro")   # ya fijada: no debe sumar
     assert comp.referentes["c"]["variantes"]["forma-b"] == soporte_antes
+
+
+# ── La competencia sobrevive la noche (--continuar, 2026-09-18) ───────
+# Hasta hoy `auto_mode` creaba una `CompetenciaLexica()` nueva en cada run —y un
+# run de la era 2 es UN día— mientras `referentes_introducidos` impedía volver a
+# presentar el referente: ninguna disputa podía durar más de un día, y por
+# competencia no podía fijarse jamás una entrada de koiné en una cadena de runs
+# de un día (día 1 de la serie C, run b7bc51dc).
+
+def test_una_competencia_abierta_sobrevive_a_guardar_y_cargar(tmp_path):
+    """Con sus soportes, su ámbito y el índice forma→concepto: al día siguiente
+    hay que poder SEGUIR sumando soporte a las mismas rivales."""
+    comp = CompetenciaLexica(soporte_minimo=99.0)      # que no fije: sigue abierta
+    comp.activar("cuentas_vidrio", "unas cuentas brillantes y duras")
+    comp.proponer("cuentas_vidrio", "kali-uco-aima", "Chirwa", ambito="Tacuato")
+    comp.proponer("cuentas_vidrio", "ucibo-kali-duruco", "Arika", ambito="Carirubana")
+    comp.registrar_uso("kali-uco-aima", "Patapati")
+    soportes = dict(comp.referentes["cuentas_vidrio"]["variantes"])
+
+    ruta = str(tmp_path / "koine.json")
+    guardar_koine({}, CampoLexico(), comp, path=ruta)
+    _idio, _campo, vuelta = cargar_koine(path=ruta)
+
+    assert set(vuelta.activas()) == {"cuentas_vidrio"}
+    assert dict(vuelta.referentes["cuentas_vidrio"]["variantes"]) == soportes
+    assert vuelta.referentes["cuentas_vidrio"]["desc"].startswith("unas cuentas")
+    assert vuelta.umbral == comp.umbral and vuelta.soporte_min == comp.soporte_min
+    # el ámbito de cada proponente, que es lo que V3 filtra
+    assert vuelta.ambitos_de_forma("kali-uco-aima") == ["Tacuato"]
+    assert vuelta.ambitos_de_forma("ucibo-kali-duruco") == ["Carirubana"]
+    assert "kali-uco-aima" in vuelta.prompt_competencias(ambito="Tacuato")
+    assert "kali-uco-aima" not in vuelta.prompt_competencias(ambito="Carirubana")
+    # y el día siguiente puede seguir sumando soporte a la misma rival
+    vuelta.registrar_uso("kali-uco-aima", "Birokoa")
+    assert (vuelta.referentes["cuentas_vidrio"]["variantes"]["kali-uco-aima"]
+            > soportes["kali-uco-aima"])
+
+
+def test_una_competencia_ya_fijada_sigue_fijada_al_cargar(tmp_path):
+    comp = CompetenciaLexica(soporte_minimo=2.0)
+    comp.activar("cometa", "estrella con cola")
+    comp.proponer("cometa", "kali-dusha", "Manaure")
+    comp.proponer("cometa", "suka-wana", "Tariwa")
+    for _ in range(4):
+        comp.registrar_uso("kali-dusha", "Shaboro")
+    assert comp.evaluar_fijacion(dia=2)
+    ruta = str(tmp_path / "koine.json")
+    guardar_koine({}, CampoLexico(), comp, path=ruta)
+    _i, _c, vuelta = cargar_koine(path=ruta)
+    assert vuelta.diccionario_koine()["cometa"]["forma"] == "kali-dusha"
+    assert vuelta.diccionario_koine()["cometa"]["dia"] == 2
+    assert vuelta.activas() == {}
+    assert vuelta.evaluar_fijacion(dia=3) == []        # no se re-fija
+
+
+def test_un_curiana_koine_json_sin_competencia_carga_vacia(tmp_path):
+    """Compatibilidad hacia atrás: los JSON de la serie B no traen la llave."""
+    ruta = tmp_path / "koine.json"
+    campo = CampoLexico()
+    campo.registrar(["kari"], ambito="Moruy")
+    guardar_koine({}, campo, path=str(ruta))           # sin competencia
+    assert "competencia" not in json.loads(ruta.read_text(encoding="utf-8"))
+    _i, vuelto, comp = cargar_koine(path=str(ruta))
+    assert vuelto.pesos_de("Moruy") == {"kari": 1.0}
+    assert comp.referentes == {} and comp.activas() == {}
+    assert comp.prompt_competencias() == ""
+    assert comp.umbral == 0.55 and comp.soporte_min == 3.0
 
 
 # ── Campo léxico (rich-get-richer + decaimiento) ──────────────────────

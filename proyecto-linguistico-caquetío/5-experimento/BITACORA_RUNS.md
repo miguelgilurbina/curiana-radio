@@ -236,7 +236,60 @@ abierta abajo.
 >    antes, como ya quedó con `golfete_frase_tarde`. Los runs de la serie A y
 >    B no son comparables con los de la C en la difusión de préstamos.
 >
-> Ninguna de las seis toca `capas_de_score`.
+> 7. **La disputa sobrevive la noche, y el Capubana junta ÁMBITOS y no sólo
+>    cuerpos** (los dos defectos que midió el día 1 de la serie C, run
+>    `b7bc51dc`; ver `analisis/serie_c_dia1_b7bc51dc.md`). **La serie C se
+>    repite desde el día 1 con esto**: el `b7bc51dc` queda como la medición que
+>    los encontró, no como el día 1 de la serie.
+>
+>    - **`CompetenciaLexica` se persiste** (`curiana_koine.guardar_koine` /
+>      `cargar_koine`, dentro de `curiana_koine.json`: referentes abiertos y
+>      fijados, variantes con su soporte, el ámbito de cada proponente y el
+>      umbral del run). Hasta ahora `auto_mode` creaba una nueva en cada run
+>      —y un run de la era 2 es UN día— mientras `referentes_introducidos` (que
+>      sí se heredaba) impedía volver a presentar el referente: **ninguna
+>      competencia podía durar más de un día**, y por competencia no podía
+>      fijarse jamás una entrada de koiné en una cadena de runs de un día. La
+>      disputa de «las cuentas» del `b7bc51dc` lo enseña: 16 variantes en 7
+>      ámbitos, `kali-uco-aima` 3,65 sólo en Tacuato, `ucibo-kali-duruco` 3,45 y
+>      `kali-boro` 2,80 sólo en Carirubana, y el líder con el 12,2 % contra un
+>      umbral del 55 % — muerta al amanecer. Con `--continuar` la competencia se
+>      recupera y la fijación se sigue evaluando al cerrar cada día; sin
+>      `--continuar` empieza vacía, como siempre. Un `curiana_koine.json` de la
+>      serie B no trae la llave y carga con la competencia vacía.
+>    - **El día de Capubana deja de ser un lugar más.** Con `--capubana-cada 3`,
+>      el día 3 `ambito_de` devolvía `"Capubana"` para los 63 y eso es UN LUGAR,
+>      cuyo léxico era el de sus dos ocupantes del día 1 (Sawaka y Hayo, 71
+>      formas): V2 vacía y las tres rivales de las cuentas a 0 — exactamente lo
+>      contrario de lo que dicen el diseño §4 y la decisión p7. Ahora hay dos
+>      puertas y dicen cosas distintas: `ambito_de` = **dónde ESTÁ** (el
+>      registro, `[Aquí estás]`, `presencias`, el campo — ese día, `"Capubana"`,
+>      para que `adoptados_en_dos_ambitos` y el mapa lo vean) y
+>      `ambito_visible_de` = **qué VE** (las cuatro vías y `[Lo que se dijo
+>      aquí]` — ese día, `None`, que es lo que las cuatro ya entienden como «sin
+>      filtro»: la unión de todos los ámbitos, sin un parámetro nuevo en
+>      `LexicoComunitario`, `CampoLexico` ni `CompetenciaLexica`). Ensayo sin
+>      API de 18 turnos (días 2-3-4, `tests/test_escena_oir.py`): el día 3
+>      V1/V2/V3 traen **exactamente lo mismo** que el mismo run sin escena, y el
+>      día 4 vuelve el filtro por lugar.
+>
+>    **Lo que NO se aplicó, y por qué**: el día 1 registró dos «acuñaciones»
+>    que no lo son —`kali-bana`, que es el ejemplo literal de
+>    `_IDENTIDAD_LINGUISTICA` y va en el system prompt de los 63 todos los
+>    turnos, y `warawara`, que está en `VOCABULARIO_BASE`— y `kali-bana` salió
+>    además como «adoptada en dos ámbitos». Rechazarlas en
+>    `LexicoComunitario.registrar_neologismo` con la lista que el motor ya tiene
+>    (`_FORMAS_EXCLUIDAS`, 5.898 formas) **mueve el instrumento**: re-puntuadas
+>    las 72 respuestas del `b7bc51dc` con y sin el filtro (el replay reproduce
+>    la base en 72 de 72), `neologisms_proposed` no cambia en ninguna pero
+>    `score` cambia en **4** —Buriche d1t4 8,7 → 8,5, Chuchubi d1t5 8,0 → 7,6,
+>    Karebe d1t6 5,4 → 5,3, Apoaure d1t6 5,5 → 5,4— porque `kali-bana` se
+>    oficializa durante el día y una forma adoptada entra en `palabras_activas`,
+>    que es justo lo que el scorer reconoce. El scorer no se toca: queda como
+>    propuesta medida en `6-fusion/medicion_formas_de_plantilla_2026-09-18.yaml`
+>    y `6-fusion/issues-pendientes/formas-de-plantilla-en-la-registracion-2026-09-18.md`.
+>
+> Ninguna de las siete toca `capas_de_score`.
 
 > ⚠️ **Dos artefactos del instrumento descubiertos al cerrar el día 3
 > (análisis por nodo, `analizar_nodos.py`, 2026-09-16), que afectan a los
