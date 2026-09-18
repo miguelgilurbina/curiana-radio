@@ -170,7 +170,34 @@ abierta abajo.
 >    En la serie B, que una forma fijada el día 1 aparezca el día 2 sin que
 >    nadie vuelva a mostrar la cosa es señal de verdad.
 >
-> Ninguna de las cinco toca `capas_de_score`.
+> 6. **Las voces de la esfera dejan de enseñarse con grafía castellana**
+>    («la etiqueta manda», decisión de Miguel del 2026-09-18). El día
+>    anterior se había decidido lo contrario de lo que parecía: el producto
+>    de la esfera ES la esfera, así que casabe, yuca o maíz siguen contando
+>    como préstamo. Lo que cambia es la GRAFÍA con que circulan. Si el
+>    lexicón tiene la forma indígena atestiguada, es la que el tier 1 ve y la
+>    que se registra (`FORMA_DE_LA_ESFERA`: casabe→cazabi, maíz→maisi,
+>    cacique→cacike, bohío→bohio); si no la tiene, la voz **no se enseña**
+>    hasta que Miguel fusione la forma propuesta
+>    (`6-fusion/descastellanizar_esfera_2026-09-18.yaml`). Medido: de las 133
+>    voces de la esfera, 24 llevan marca de grafía castellana (4 con gemela,
+>    6 esperando a Miguel, 14 que se quedan porque la grafía ES la
+>    transcripción de la fuente). **`[Voces de fuera]` pasa de 50 candidatas
+>    a 43**, y de 13 formas con marca castellana a 5, todas declaradas. En la
+>    base, `word` guarda la forma de la esfera y `forma_dicha` lo que el
+>    agente escribió (migración `20260918000000`); los runs viejos NO se
+>    reescriben y `analizar_runs.py --prestamos` normaliza al leer (5 de sus
+>    11 filas). **El scorer no se movió**: `prestamos_de_esfera` sigue
+>    devolviendo la clave castellana y 0 de 8 frases de control cambian en
+>    `score`, `densidad`, `pct_*` ni en ninguna de las diez claves medidas.
+>
+>    **Desde qué run aplica**: cambia lo que el TIER 1 VE, así que no entra a
+>    mitad de cadena. **Aplica desde la serie C, que no ha empezado**; la
+>    serie B (run `3973d317` y lo que continúe de él) queda del lado de
+>    antes, como ya quedó con `golfete_frase_tarde`. Los runs de la serie A y
+>    B no son comparables con los de la C en la difusión de préstamos.
+>
+> Ninguna de las seis toca `capas_de_score`.
 
 > ⚠️ **Dos artefactos del instrumento descubiertos al cerrar el día 3
 > (análisis por nodo, `analizar_nodos.py`, 2026-09-16), que afectan a los

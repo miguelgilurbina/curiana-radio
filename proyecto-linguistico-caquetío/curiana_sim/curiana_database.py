@@ -242,6 +242,51 @@ def filas_de_presencias(
     ]
 
 
+def filas_de_loanword_uses(
+    response_id: str,
+    run_id: str,
+    turn_id: str,
+    agent_name: str,
+    tier: int,
+    day: int,
+    turn_num: int,
+    words: list,
+) -> list[dict]:
+    """Las filas que una respuesta escribe en `loanword_uses`, sin tocar la base.
+
+    `words` es `score_linguistico()["prestamos_de_esfera"]`, que devuelve la
+    clave CASTELLANA porque es la que el scorer reconoce. Aquí se normaliza
+    («la etiqueta manda», Miguel 2026-09-18): `word` lleva la forma de la
+    esfera —la indígena, cuando el lexicón la tiene con clave propia— y
+    `forma_dicha`, lo que el agente escribió. Sin decisión para esa voz, las
+    dos columnas coinciden.
+
+    Vive aquí fuera, como `filas_de_presencias`, para que el mock construya
+    EXACTAMENTE las mismas filas que la base.
+    """
+    from curiana_lexicon import forma_de_la_esfera
+    filas = []
+    for dicha in words or []:
+        voz = forma_de_la_esfera(dicha)
+        filas.append({
+            "response_id": response_id,
+            "run_id": run_id,
+            "turn_id": turn_id,
+            "word": voz,
+            "forma_dicha": dicha,
+            # La lengua es la de la voz de la esfera. Los cuatro pares de
+            # `FORMA_DE_LA_ESFERA` comparten familia (las dos claves son
+            # taínas), así que normalizar no mueve `source_language`; hay un
+            # test que lo vigila.
+            "source_language": word_source_language(voz),
+            "agent_name": agent_name,
+            "tier": tier,
+            "day": day,
+            "turn_num": turn_num,
+        })
+    return filas
+
+
 def get_anthropic_client(run_id: Optional[str] = None) -> anthropic.Anthropic:
     """
     Devuelve un cliente Anthropic.
@@ -521,23 +566,23 @@ class CurianaDB:
         diferencia de `word_uses`, aquí `tier`, `day` y `turn_num` van
         puestos: la pregunta que responde la tabla es si la voz baja del
         tier 1 —el único que ve [Voces de fuera]— al 2 y al 3, y cuándo.
+
+        ⚠ 2026-09-18, «la etiqueta manda»: `word` guarda la FORMA DE LA ESFERA
+        —la indígena, si el lexicón la tiene— y `forma_dicha` lo que el agente
+        escribió de verdad. Se normaliza AQUÍ, al guardar, y no en el scorer:
+        `score_linguistico()` sigue devolviendo la clave castellana, que es la
+        que reconoce. Las dos columnas dicen cosas distintas y las dos hacen
+        falta: `word` para agrupar la voz (`casabe` y `cazabi` son la misma) y
+        `forma_dicha` para no perder que el agente dijo «casabe». Los runs
+        viejos NO se reescriben: allí `forma_dicha` queda NULL y `word` lleva
+        la grafía de entonces; `analizar_runs.py --prestamos` normaliza al
+        leer. Ver `curiana_lexicon.FORMA_DE_LA_ESFERA` y
+        6-fusion/descastellanizar_esfera_2026-09-18.yaml.
         """
-        if not words:
+        rows = filas_de_loanword_uses(response_id, run_id, turn_id, agent_name,
+                                      tier, day, turn_num, words)
+        if not rows:
             return 0
-        rows = [
-            {
-                "response_id": response_id,
-                "run_id": run_id,
-                "turn_id": turn_id,
-                "word": w,
-                "source_language": word_source_language(w),
-                "agent_name": agent_name,
-                "tier": tier,
-                "day": day,
-                "turn_num": turn_num,
-            }
-            for w in words
-        ]
         self.client.table("loanword_uses").insert(rows).execute()
         return len(rows)
 
@@ -898,16 +943,20 @@ class CurianaDBMock:
     Drop-in replacement cuando Supabase no está configurado.
     Todos los métodos son no-ops que no rompen la simulación.
 
-    Con una excepción declarada: la ESCENA sí se guarda, en memoria. Sin base
-    no habría cómo afirmar en un test que se escriben 63 presencias por turno y
-    378 por día, ni que un run sin escena no escribe nada — y ésa es
-    exactamente la garantía que la capa 1 necesita. Las filas se construyen con
-    `filas_de_presencias`, la MISMA función que usa `CurianaDB`, para que el
-    mock no pueda divergir de lo que se guarda de verdad.
+    Con dos excepciones declaradas: la ESCENA y los PRÉSTAMOS DE ESFERA sí se
+    guardan, en memoria. Sin base no habría cómo afirmar en un test que se
+    escriben 63 presencias por turno y 378 por día, ni que un run sin escena no
+    escribe nada, ni que `word` lleva la forma de la esfera y `forma_dicha` lo
+    que el agente escribió (2026-09-18) — y ésas son exactamente las garantías
+    que esas dos capas necesitan. Las filas se construyen con
+    `filas_de_presencias` y `filas_de_loanword_uses`, las MISMAS funciones que
+    usa `CurianaDB`, para que el mock no pueda divergir de lo que se guarda de
+    verdad.
     """
     def __init__(self):
         self.presencias: list[dict] = []
         self.respuestas: list[dict] = []
+        self.loanwords: list[dict] = []
 
     def seed_lexicon(self, **kw): return 0
     def create_run(self, **kw) -> str:
@@ -926,7 +975,16 @@ class CurianaDBMock:
             "lugar": kw.get("lugar"),
         })
         return response_id
-    def save_loanword_uses(self, *a, **kw) -> int: return 0
+    def save_loanword_uses(self, response_id: str = "", run_id: str = "",
+                           turn_id: str = "", agent_name: str = "", tier: int = 0,
+                           day: int = 0, turn_num: int = 0,
+                           words: list | None = None) -> int:
+        # Mismas filas que `CurianaDB`, misma función: si el mock divergiera,
+        # los tests dejarían de decir nada de lo que se guarda de verdad.
+        filas = filas_de_loanword_uses(response_id, run_id, turn_id, agent_name,
+                                       tier, day, turn_num, words or [])
+        self.loanwords.extend(filas)
+        return len(filas)
 
     def save_presencias(self, run_id: str, turn_id: str, dia: int, turno: int,
                         momento: str, escena: dict) -> int:

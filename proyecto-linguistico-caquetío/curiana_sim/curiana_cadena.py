@@ -431,13 +431,20 @@ class LectorSQL:
             f"n_agents FROM koine_metrics WHERE run_id = '{run_id}' ORDER BY day")
 
     def prestamos(self, run_ids: list[str]) -> list[dict]:
-        """Usos de la esfera de contacto (`loanword_uses`) de varios runs."""
+        """Usos de la esfera de contacto (`loanword_uses`) de varios runs.
+
+        `forma_dicha` (migración 20260918) trae lo que el agente escribió;
+        en las filas anteriores es NULL y se rellena con `word`, que allí ES
+        lo que se dijo. Quien lee normaliza `word` a la forma de la esfera:
+        los runs viejos no se reescriben.
+        """
         ids = [r for r in run_ids if self._UUID.match(str(r))]
         if not ids:
             return []
         lista = ", ".join(f"'{r}'" for r in ids)
         return self._consulta(
             "SELECT run_id::text AS run_id, day, tier, word, "
+            "coalesce(forma_dicha, word) AS forma_dicha, "
             "source_language AS lengua, agent_name "
             f"FROM loanword_uses WHERE run_id IN ({lista}) "
             "ORDER BY day, tier, word")

@@ -457,25 +457,72 @@ def analizar_narrativa() -> None:
 # PRÉSTAMOS — la esfera de contacto y su difusión por tier
 # ══════════════════════════════════════════════════════════════════════
 
+def _voz_sql(col: str = "word") -> str:
+    """SQL que normaliza una columna a la FORMA DE LA ESFERA.
+
+    La tabla está declarada UNA vez, en `curiana_lexicon.FORMA_DE_LA_ESFERA`
+    («la etiqueta manda», Miguel 2026-09-18), y el CASE se genera de ella: si
+    mañana entra un par nuevo, esta vista lo hereda sin tocarse.
+
+    Hace falta al LEER porque los runs viejos no se reescriben: sus filas
+    guardan la grafía castellana en `word` y no tienen `forma_dicha`. Una fila
+    de `loanword_uses` es un hecho observado (principio del 2026-09-17).
+    """
+    from curiana_lexicon import FORMA_DE_LA_ESFERA
+    ramas = " ".join(f"WHEN {col} = '{k}' THEN '{v}'"
+                     for k, v in FORMA_DE_LA_ESFERA.items())
+    return f"(CASE {ramas} ELSE {col} END)"
+
+
+def _dicha_sql() -> str:
+    """Lo que el agente escribió. NULL en las filas anteriores al 2026-09-18,
+    donde `word` ES la forma dicha."""
+    return "coalesce(forma_dicha, word)"
+
+
+def _con_dicha(voz: str, dichas) -> str:
+    """«cazabi (casabe)» — la forma de la esfera y, entre paréntesis, la dicha
+    cuando difiere. Sin paréntesis cuando el agente ya la escribió así."""
+    otras = sorted({d for d in (dichas or "").split("|") if d and d != voz})
+    return f"{voz} ({', '.join(otras)})" if otras else voz
+
+
 def analizar_prestamos() -> None:
     """Lectura mínima de `loanword_uses`: qué voces de la esfera de contacto
     (taíno, kalinago, paraujano, caribe continental, jirajaroide) se usaron,
     por qué tier, y si bajaron del tier 1 —el único que ve el bloque [Voces de
     fuera]— al 2 y al 3. Hasta el 2026-09-16 esto se medía re-puntuando
-    `response_text` a mano (bitácora del run c6837386)."""
+    `response_text` a mano (bitácora del run c6837386).
+
+    Desde el 2026-09-18 la voz se agrupa por su FORMA DE LA ESFERA y la forma
+    dicha va entre paréntesis cuando difiere: `casabe` y `cazabi` son la misma
+    voz y su difusión es una sola serie, pero que el agente escribiera «casabe»
+    no se pierde."""
     titulo("PRÉSTAMOS — la esfera de contacto, medida aparte")
 
     try:
-        q("SELECT 1 FROM loanword_uses LIMIT 1")
+        q("SELECT forma_dicha FROM loanword_uses LIMIT 1")
     except RuntimeError:
-        print("\n    (sin tabla loanword_uses: aplicar la migración "
-              "supabase/migrations/20260916000000_loanword_uses.sql)")
+        print("\n    (sin tabla loanword_uses o sin la columna forma_dicha: "
+              "aplicar supabase/migrations/20260916000000_loanword_uses.sql y "
+              "20260918000000_loanword_forma_dicha.sql — ver CLAUDE.md)")
         return
 
+    voz, dicha = _voz_sql(), _dicha_sql()
+
+    normalizadas = q(f"""
+        SELECT count(*) AS filas
+        FROM loanword_uses WHERE {voz} <> {dicha}
+    """)
+    n_norm = int(normalizadas["filas"].iloc[0]) if len(normalizadas) else 0
+    if n_norm:
+        print(f"\n    ({n_norm} filas se leen con la forma de la esfera: la "
+              f"dicha va entre paréntesis. Los runs viejos no se reescriben.)")
+
     sub("usos por lengua y tier (todos los runs)")
-    por_tier = q("""
+    por_tier = q(f"""
         SELECT source_language AS lengua, tier, count(*) AS usos,
-               count(DISTINCT word) AS formas,
+               count(DISTINCT {voz}) AS formas,
                count(DISTINCT agent_name) AS agentes,
                count(DISTINCT run_id) AS runs
         FROM loanword_uses GROUP BY source_language, tier
@@ -487,29 +534,31 @@ def analizar_prestamos() -> None:
     print(por_tier.to_string(index=False))
 
     sub("difusión: primer día por tier de cada voz (¿bajó del tier 1?)")
-    dif = q("""
-        SELECT run_id, word, source_language AS lengua,
+    dif = q(f"""
+        SELECT run_id, {voz} AS voz, string_agg(DISTINCT {dicha}, '|') AS dichas,
+               source_language AS lengua,
                min(day) FILTER (WHERE tier = 1) AS d_t1,
                min(day) FILTER (WHERE tier = 2) AS d_t2,
                min(day) FILTER (WHERE tier = 3) AS d_t3,
                count(DISTINCT agent_name) FILTER (WHERE tier = 1) AS ag_t1,
                count(DISTINCT agent_name) FILTER (WHERE tier > 1) AS ag_t23,
                count(*) AS usos
-        FROM loanword_uses GROUP BY run_id, word, source_language
+        FROM loanword_uses GROUP BY run_id, {voz}, source_language
         ORDER BY usos DESC LIMIT 30
     """)
     dif.insert(0, "run", dif["run_id"].astype(str).str[:8])
-    print(dif.drop(columns="run_id").to_string(index=False))
+    dif["voz"] = [_con_dicha(v, d) for v, d in zip(dif["voz"], dif["dichas"])]
+    print(dif.drop(columns=["run_id", "dichas"]).to_string(index=False))
     print(f"\n    voces que llegaron al tier 2/3: {int((dif['ag_t23'] > 0).sum())} "
           f"de {len(dif)} (las 30 más usadas)")
 
     sub("por día y tier (¿la difusión crece con los días?)")
-    dia = q("""
+    dia = q(f"""
         SELECT run_id, day,
                count(*) FILTER (WHERE tier = 1) AS t1,
                count(*) FILTER (WHERE tier = 2) AS t2,
                count(*) FILTER (WHERE tier = 3) AS t3,
-               count(DISTINCT word) AS formas
+               count(DISTINCT {voz}) AS formas
         FROM loanword_uses GROUP BY run_id, day ORDER BY run_id, day
     """)
     dia.insert(0, "run", dia["run_id"].astype(str).str[:8])
@@ -540,12 +589,16 @@ def _prestamos_por_cadena() -> None:
         if not filas:
             print("      (ningún préstamo registrado en la cadena)")
             continue
+        from curiana_lexicon import forma_de_la_esfera
         df = pd.DataFrame(filas)
         df["day"] = df["day"].astype(int)
         df["tier"] = df["tier"].astype(int)
         df["run"] = df["run_id"].astype(str).str[:8]
+        # La voz se agrupa por su forma de la esfera; los runs viejos guardan
+        # la castellana en `word` y no se reescriben.
+        df["voz"] = [forma_de_la_esfera(w) for w in df["word"]]
         tabla = (df.groupby(["day", "tier"])
-                   .agg(usos=("word", "size"), formas=("word", "nunique"),
+                   .agg(usos=("voz", "size"), formas=("voz", "nunique"),
                         agentes=("agent_name", "nunique"),
                         runs=("run", lambda s: ", ".join(sorted(set(s)))))
                    .reset_index())
@@ -553,8 +606,11 @@ def _prestamos_por_cadena() -> None:
                          for r in tabla["runs"]]
         print("\n".join("      " + l
                         for l in tabla.to_string(index=False).splitlines()))
-        print(f"      voces distintas en la cadena: {df['word'].nunique()} · "
+        voces = sorted({_con_dicha(v, "|".join(sorted(set(g["forma_dicha"]))))
+                        for v, g in df.groupby("voz")})
+        print(f"      voces distintas en la cadena: {df['voz'].nunique()} · "
               f"tier 2/3: {int((df['tier'] > 1).sum())} de {len(df)} usos")
+        print(f"      {' · '.join(voces)}")
 
 
 def main(argv=None) -> int:

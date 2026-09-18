@@ -1,0 +1,463 @@
+# ─────────────────────────────────────────────────────────────────────────
+# DES-CASTELLANIZAR LA ESFERA — «la etiqueta manda» (Miguel, 2026-09-18)
+#
+# El 2026-09-17 se decidió que el producto de la esfera ES la esfera: casabe,
+# yuca, maíz, batata o papaya son voces taínas del lexicón que el castellano
+# también usa, y cuentan como préstamo de esfera porque son los productos que
+# circulaban por la esfera de influencia. Hoy se decide la otra mitad: que
+# cuenten no significa que tengan que CIRCULAR por el motor con la grafía
+# castellana.
+#
+# Regla 5: esto PROPONE. Lo que toca canon —una entrada nueva del lexicón, una
+# forma retroabstraída— queda escrito abajo y NO aplicado. Lo que se aplicó es
+# sólo motor: una tabla que apunta a dos claves que YA existen.
+# Regla 1: ninguna cifra de este fichero está escrita a mano; todas salen de
+# `6-fusion/scripts/medir_descastellanizar_esfera.py`.
+# Regla 8: la cita es una clave foránea a 4-fuentes/bibliografia.yaml; donde no
+# hay obra, se declara `deuda: sin-procedencia` en vez de callarlo.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-18'
+  decidido_por: Miguel
+  cita_literal: '«la etiqueta manda»'
+  estado: >-
+    MIXTA. La parte de MOTOR está APLICADA en esta rama (FORMA_DE_LA_ESFERA,
+    [Voces de fuera], save_loanword_uses + migración 20260918000000,
+    analizar_runs.py --prestamos). La parte de CANON —la entrada `hurakán` y
+    las cinco formas retroabstraídas— está PROPUESTA y NO aplicada: la fusiona
+    Miguel. Ver `para_miguel` al final.
+  linea_roja: >-
+    El scorer no se toca. `score_linguistico()` sigue devolviendo la clave
+    CASTELLANA en `prestamos_de_esfera` —es la que reconoce, y un agente que
+    escriba «casabe» tiene que seguir contando—, y `score`, `pct_*` y
+    `capas_de_score` quedan byte a byte. Se normaliza al GUARDAR y al LEER,
+    nunca al puntuar. Medido en `d_el_scorer_no_se_mueve`.
+  script: 6-fusion/scripts/medir_descastellanizar_esfera.py
+  como_se_corre: 'python 6-fusion/scripts/medir_descastellanizar_esfera.py  (--sin-base salta la medición E)'
+  antecedentes:
+    - '6-fusion/decisiones_tanda_2026-09-17.yaml · hispanismos_son_esfera (el producto de la esfera ES la esfera)'
+    - '6-fusion/medicion_hispanismos_loanword_uses_2026-09-17.yaml (la medición que abrió la pregunta; §E propuso justo esto y lo dejó sin hacer)'
+    - '6-fusion/matacan_venado_2026-09-14.yaml + decisiones_tanda_2026-09-14.yaml (la convención de retroabstracción: matacán → matakán, etiqueta caquetío-retroabstraido)'
+
+# ══════════════════════════════════════════════════════════════════════
+# LA DECISIÓN, EN TRES REGLAS
+# ══════════════════════════════════════════════════════════════════════
+lectura_operativa:
+  regla_1_atestiguada: >-
+    Si el lexicón (o una fuente citable) tiene la forma indígena ATESTIGUADA,
+    ésa es la que el agente VE y la que se REGISTRA, con su etiqueta y su cita.
+    Cuatro pares cumplen las dos condiciones —las dos claves existen ya y
+    comparten familia—: casabe→cazabi, maíz→maisi, cacique→cacike, bohío→bohio.
+  regla_2_retroabstraida: >-
+    Si no hay atestación distinta de la grafía castellana, se PROPONE una forma
+    retroabstraída bajo la convención del proyecto (la de `matakán`: lema
+    fonémico D5, k por c/qu, z→s, sin acentos castellanos) y se etiqueta como
+    tal. Esa forma es CANON y no se aplica hasta que Miguel la fusione:
+    mientras tanto la voz no se enseña.
+  regla_3_se_queda: >-
+    Si la grafía «castellana» es en realidad la transcripción ATESTIGUADA de la
+    fuente —`yuca`, `batata`, `papaya`, `cazabi`, `chighe`—, se queda. La
+    etiqueta manda, no la estética.
+  lo_que_no_cambia: >-
+    La clave castellana sigue siendo la que RECONOCE el scorer. El agente puede
+    escribir «casabe» y cuenta como préstamo de esfera; lo que no pasa es que
+    se le enseñe.
+
+# ══════════════════════════════════════════════════════════════════════
+# EL CRITERIO, Y POR QUÉ NO SALEN 19 DE 113
+# ══════════════════════════════════════════════════════════════════════
+criterio:
+  que_se_marca: >-
+    Una clave lleva «grafía castellana» si contiene tilde castellana (á é í ó
+    ú), ⟨c⟩, ⟨z⟩, ⟨qu⟩, ⟨ll⟩ o ⟨ñ⟩ — exactamente lo que la retroabstracción del
+    proyecto quita. Implementado en `curiana_lexicon.marcas_castellanas()`.
+  dos_exclusiones_declaradas:
+    - >-
+      ⟨ch⟩ NO cuenta como ⟨c⟩: es dígrafo en todas las ortografías del repo
+      (`chighe`, `keichare`, `achi`, `churuguara`), y contarlo marcaría como
+      castellanas las transcripciones de Wilbert vía Oliver.
+    - >-
+      La etiqueta de lengua con que el lexicón desambigua homógrafos
+      (`achi-kalinago`, `kanawa-caribe`) no es parte de la voz y no se mide.
+  es_una_medida_no_un_juicio: >-
+    La marca dice que la clave la lleva, no que la voz sea castellana. Quién se
+    queda y quién no lo decide la tabla de abajo, voz por voz y con su cita.
+  reconciliacion_con_la_cifra_de_partida:
+    lo_que_traia_la_conversacion: '«de las 113 voces de la esfera, 19 llevan grafía castellana»'
+    medido_2026-09-18:
+      voces_de_la_esfera: 133      # no 113; el docstring de `_glosa_util` ya decía 133
+      con_marca_criterio_declarado: 24
+      de_categoria_prestable: 64
+      de_esas_con_marca_criterio_declarado: 15
+      con_criterio_grueso_sobre_las_133: 31
+      con_criterio_grueso_sobre_las_64: 19
+    lectura: >-
+      El 19 se reproduce exactamente, pero sobre otra base y con un criterio
+      más grueso: las 64 voces de la esfera de categoría PRESTABLE (las únicas
+      que [Voces de fuera] puede llegar a mostrar), contando ⟨ch⟩ como ⟨c⟩ y
+      contando la etiqueta de lengua. El 113 no se reproduce con ninguna
+      combinación: el lexicón tiene 133 voces de la esfera. Con el criterio
+      declarado arriba son 24 de 133 y 15 de 64 — y esas 24 son las de la
+      tabla. Se dice, en vez de repetir la cifra de partida.
+
+censo:
+  voces_de_la_esfera: 133
+  con_marca_de_grafia_castellana: 24
+  por_marca: {c: 17, qu: 3, tilde: 3, z: 2, ñ: 2}
+  reparto_de_las_24:
+    atestiguado_con_gemela_en_el_lexicon: 4
+    atestiguada_sin_clave_NO_APLICADA: 1
+    retroabstraida_propuesta_NO_APLICADA: 5
+    se_queda: 14
+
+# ══════════════════════════════════════════════════════════════════════
+# A. LAS CUATRO QUE SE APLICAN — `FORMA_DE_LA_ESFERA`
+# ══════════════════════════════════════════════════════════════════════
+# clave castellana → clave indígena YA EXISTENTE en el lexicón. No se crea
+# ninguna entrada: la fila apunta a dos claves que ya están, y las dos son
+# taínas, así que normalizar no mueve `source_language`.
+aplicado_forma_de_la_esfera:
+
+  - clave_castellana: casabe
+    forma_de_la_esfera: cazabi
+    etiqueta: atestiguado
+    capa_de_la_gemela: taíno
+    fuente: >-
+      La nota de la clave `cazabi` en el lexicón: «Tno. cazabi → español
+      cazabe; alimento base arahuaco». Ahí la clave es la forma indígena y el
+      castellano es OTRA palabra — el mismo criterio que ya usó la medición del
+      2026-09-17 (`criterio_de_admision`).
+    cita: {obra: brinton-1871, pagina: 's.v. (la nota de `casabe` lo declara: «Taíno atestiguado: casabe; cognado Lok. kasabi; Brinton 1871»)'}
+    residuo_declarado: >-
+      `cazabi` conserva ⟨c⟩ y ⟨z⟩: son de la fuente, no del castellano. La
+      retroabstracción daría `kasabi`, que YA es clave lokono («casabe, pan de
+      yuca», Goeje 1928) y el lokono es andamio de la reconstrucción, no
+      esfera: no se puede usar. Se queda `cazabi`.
+    por_que_importa: >-
+      Es la voz más usada de la base (58 de las 147 respuestas con préstamo,
+      medición del 2026-09-17) y la única de las cinco donde el caquetío NO
+      tiene forma propia. El préstamo es el dato; la grafía castellana no.
+
+  - clave_castellana: maíz
+    forma_de_la_esfera: maisi
+    etiqueta: atestiguado
+    capa_de_la_gemela: taíno
+    fuente: 'La nota de `maisi`: «Tno. maisi → español maíz; cognado Lokono mariti».'
+    deuda: sin-procedencia    # la nota de `maisi` no cita obra
+    residuo_declarado: >-
+      `maisi` no era candidata de [Voces de fuera] por sí sola: su glosa
+      («maíz (Zea mays)») es casi-autoglosa de la forma y el filtro del
+      2026-09-16 la tiraba. Entra por la entrada `maíz`, cuya glosa —«planta de
+      maíz, grano principal»— sí enseña algo, y se muestra con ella. Es la
+      única de las cuatro que CAMBIA el catálogo: `cazabi`, `cacike` y `bohio`
+      ya estaban, y lo que se va es la clave castellana que salía además.
+    nota: >-
+      La medición del 2026-09-17 (§E) ya había visto que «maíz» le llega al
+      agente sobre todo por la GLOSA CASTELLANA del propio diccionario
+      (`harifuche` = «maíz tostado y miel», `amaka` = «sitio de moler maíz»,
+      `budare` = «plato para cocer el pan de maíz»): 23 de 40 prompts del tier 1
+      y 10 de 40 del tier 3, que ni ven el bloque. Esto arregla el bloque, no
+      el metalenguaje del lexicón — ver `deudas_que_quedan`.
+
+  - clave_castellana: cacique
+    forma_de_la_esfera: cacike
+    etiqueta: atestiguado
+    capa_de_la_gemela: taíno
+    fuente: >-
+      `cacike` lleva `fuente: taíno` en el lexicón, con glosa «cacique, jefe
+      político-ritual del grupo»; `cacique` es la clave castellana y ya estaba
+      neutralizada en el scorer por `CASTELLANO_CORRIENTE` (2026-09-16).
+    deuda: >-
+      sin-procedencia, y algo peor: la propia nota de `cacike` dice «Tno.
+      cacique → español cacique», o sea que atribuye al taíno la forma con
+      ⟨qu⟩. La ⟨k⟩ de `cacike` es una normalización del lexicón, no una
+      atestación distinta. Se aplica porque la ETIQUETA de la clave dice taíno
+      —es literalmente la regla de Miguel— y se declara la duda.
+
+  - clave_castellana: bohío
+    forma_de_la_esfera: bohio
+    etiqueta: atestiguado
+    capa_de_la_gemela: taíno
+    fuente: >-
+      Dos claves del lexicón para la misma voz taína: `bohío` (sust, «casa
+      comunal, choza redonda con techo cónico», sin notas) y `bohio`
+      (arquitectura, «bohío, casa redonda de varas y palma», nota «Tno. bohío;
+      cognado caquetío probable *kali»). La acentuada es la palabra castellana;
+      la otra es la transcripción.
+    deuda: sin-procedencia
+    residuo_declarado: >-
+      Las dos están además en `CASTELLANO_CORRIENTE`, así que el token pelado
+      nunca fue préstamo para el scorer; lo que cambia es el bloque que se
+      enseña —el catálogo mostraba las DOS claves, «bohio = casa redonda de
+      varas y palma» y «bohío = casa comunal»— y la fila que ya había escrita
+      en la base (run 0193873d, tier 3). Lo mismo con `cacique`/`cacike`.
+
+# ══════════════════════════════════════════════════════════════════════
+# B. LAS SEIS QUE NO SE APLICAN — canon, para Miguel
+# ══════════════════════════════════════════════════════════════════════
+# En el motor sólo están declaradas como «no se enseñan»
+# (`curiana_lexicon.SIN_FORMA_DE_LA_ESFERA`). La forma propuesta es canon y
+# espera fusión. Cada forma se deriva, no se escribe: `fonemizar()` sobre la
+# clave, que es la convención con que entró `matakán` («Clave = lema fonémico
+# D5»). Las seis validan contra la fonotáctica del caquetío del lexicón y
+# ninguna choca con una clave existente (medido).
+propuestas_sin_aplicar:
+
+  - clave_castellana: huracan
+    forma_propuesta: hurakán
+    etiqueta: atestiguada-sin-clave
+    por_que_esa_etiqueta: >-
+      No es una retroabstracción: la forma indígena está ESCRITA en la nota de
+      la propia entrada —«Tno. hurakán → español huracán; ser sobrenatural
+      arahuaco»— y lo que falta es la clave. La tilde de `hurakán` es la de la
+      fuente, no la castellana; el lema D5 sería `urakan` (⟨h⟩ muda).
+    deuda: sin-procedencia
+    que_haria_falta: >-
+      Alta de `hurakán` en VOCABULARIO_BASE con `fuente: taíno`, `forma_fuente:
+      huracan` y la cita que hoy no hay; y la fila `huracan → hurakán` en
+      FORMA_DE_LA_ESFERA. Mientras tanto la voz no se enseña.
+
+  - clave_castellana: cayo
+    forma_propuesta: kayo
+    etiqueta: retroabstraido-propuesto
+    nota_del_lexicon: '«Tno. cayo → español cayo; rasgos costeros del Golfete»'
+    deuda: sin-procedencia
+    categoria: geografia          # no prestable: hoy tampoco se enseñaba
+    fonotactica: 'válida contra el caquetío atestiguado del lexicón'
+
+  - clave_castellana: caney
+    forma_propuesta: kanei
+    etiqueta: retroabstraido-propuesto
+    nota_del_lexicon: '«Tno. caney; vivienda del jefe diferenciada»'
+    deuda: sin-procedencia
+    fonotactica: 'válida'
+    residuo_declarado: >-
+      El lema D5 convierte la ⟨y⟩ final en ⟨i⟩ (`kanei`), no la conserva como
+      en `kayo` (intervocálica). Es lo que hace `fonemizar`; si Miguel prefiere
+      `kaney`, es una excepción a declarar, no un cambio de criterio.
+    ojo: >-
+      La medición del 2026-09-17 dejó `caney` FUERA de la lista de hispanismos
+      «en duda, degradar»: en Venezuela es un cobertizo y aquí está glosada en
+      su sentido etnográfico taíno («bohío rectangular del cacique»). Esa duda
+      es sobre si cuenta como préstamo; ésta es sobre su grafía. No se tocan.
+
+  - clave_castellana: cobo
+    forma_propuesta: kobo
+    etiqueta: retroabstraido-propuesto
+    nota_del_lexicon: '«Tno. cobo; objeto de intercambio arahuaco»'
+    deuda: sin-procedencia
+    fonotactica: 'válida'
+
+  - clave_castellana: cemi
+    forma_propuesta: semi
+    etiqueta: retroabstraido-propuesto
+    nota_del_lexicon: '«Tno. cemí; objeto ritual de poder arahuaco»'
+    deuda: sin-procedencia
+    fonotactica: 'válida'
+    residuo_declarado: >-
+      La clave ya venía sin tilde; lo que la marca es la ⟨c⟩ ante ⟨e⟩, que en
+      castellano vale /s/ (D5: c(e,i)→s). La bibliografía escribe también
+      `zemí`, que daría el mismo lema. `semi` no choca con ninguna clave del
+      lexicón, pero es homógrafa del prefijo castellano «semi-»: si eso molesta,
+      la alternativa es dejarla fuera y que la acuñen los agentes.
+
+  - clave_castellana: bejique
+    forma_propuesta: bejike
+    etiqueta: retroabstraido-propuesto
+    nota_del_lexicon: '«Tno. bejique; cognado de piache (Lokono piaye)»'
+    deuda: sin-procedencia
+    fonotactica: 'válida'
+    residuo_declarado: >-
+      El lema D5 sólo toca el ⟨qu⟩; la ⟨j⟩ se queda porque `fonemizar` no la
+      transforma. La bibliografía taína escribe también `behique`/`bohique`,
+      que darían `beike`/`boike`: si Miguel prefiere partir de esa grafía, es
+      otra forma y otra decisión.
+
+# ══════════════════════════════════════════════════════════════════════
+# C. LAS CATORCE QUE SE QUEDAN — la etiqueta manda, no la estética
+# ══════════════════════════════════════════════════════════════════════
+se_quedan:
+
+  - grupo: 'la transcripción atestiguada ES esa'
+    cita: {obra: brinton-1871}
+    voces:
+      - {clave: yuca,   por_que: '«Tno. yuca; cognado Lokono mariti». Miguel 2026-09-18 la nombra explícitamente: se queda. Y `yuka` es LOKONO (andamio, no esfera): no serviría de gemela'}
+      - {clave: caiman, por_que: '«Taíno atestiguado: caiman; cognado Lok. kaiman; Brinton 1871». Ya viene sin la tilde castellana. `kaiman` es lokono: tampoco sirve'}
+      - {clave: cai,    por_que: '«Taíno atestiguado: cai; cognado Lok. kairi; Brinton 1871». El lema D5 sería `kai`, que YA es clave paraujana («sol»): colisión'}
+      - {clave: cohiba, por_que: '«Taíno atestiguado: cohiba; cognado Lok. iuli; Brinton 1871»'}
+
+  - grupo: 'la forma indígena del par: es el destino, no el origen'
+    voces:
+      - {clave: cazabi, por_que: 'destino de `casabe`; ⟨c⟩/⟨z⟩ de la fuente'}
+      - {clave: cacike, por_que: 'destino de `cacique`; ⟨c⟩ de la fuente (con la deuda declarada arriba)'}
+
+  - grupo: 'transcripción de fuente lingüística, no castellano'
+    cita: {obra: oliver-1989-apendice-a, pagina: 'Tabla A-2 (Wilbert 1958-59, Sinamaica), filas 18, 82, 73 y 86 · verificada contra la imagen por Miguel el 2026-09-01'}
+    voces:
+      - {clave: añu,      por_que: 'el autónimo Añú se escribe con ⟨ñ⟩ en la fuente y en el uso vivo'}
+      - {clave: chighe,   por_que: 'dígrafos ⟨ch⟩/⟨gh⟩ de la transcripción; el criterio ya no la marca'}
+      - {clave: keichare, por_que: 'ídem'}
+      - {clave: utschi,   por_que: 'ídem'}
+      - {clave: eichire,  por_que: 'ídem'}
+
+  - grupo: 'transcripción de fuente lingüística sin ficha'
+    deuda: sin-procedencia      # Breton 1665 no tiene id en 4-fuentes/bibliografia.yaml
+    voces:
+      - {clave: hiñaru,   por_que: 'kalinago, registro femenino de Breton (1665); la ⟨ñ⟩ es del transcriptor misionero, no del castellano de hoy'}
+      - {clave: kalínagu, por_que: 'ortografía garífuna del autónimo: la tilde marca el acento, no es castellana. El lexicón tiene además `kalinagu` sin ella — dos claves para el mismo autónimo, que es otra deuda'}
+
+  - grupo: 'forma GENERADA, no atestiguada: la ortografía es del generador'
+    voces:
+      - {clave: akcicyaa, por_que: '`taíno-reconstruido` desde Lok. akkicyaha por reconstruir_taino(); la ⟨c⟩ viene del lokono. ⚠ ES candidata de [Voces de fuera]: se le enseña al tier 1 una forma reconstruida como si fuera voz de fuera, que es otra deuda (abajo)'}
+      - {clave: acoa,     por_que: 'ídem, desde Lok. akoa. Categoría `cuerpo`: no prestable, no se enseña'}
+      - {clave: daca,     por_que: 'ídem, desde Lok. daka. Categoría `cuerpo`'}
+      - {clave: wacusi,   por_que: 'ídem, desde Lok. wakusi. Categoría `cuerpo`'}
+
+  - grupo: 'topónimos modernos'
+    voces:
+      - {clave: churuguara, por_que: 'municipio de Falcón; nombre moderno en grafía castellana. Categoría `geografia`: no prestable. El criterio declarado ni siquiera la marca (⟨ch⟩)'}
+      - {clave: quibor,     por_que: 'municipio de Lara; ídem, y la marca es el ⟨qu⟩'}
+
+# ══════════════════════════════════════════════════════════════════════
+# D. LO QUE CAMBIA EN EL MOTOR, MEDIDO
+# ══════════════════════════════════════════════════════════════════════
+c_voces_de_fuera:
+  metodo: >-
+    Se carga `HEAD:curiana_sim/curiana_lexicon.py` como módulo aparte y se
+    comparan los dos catálogos. No es una estimación: son los dos códigos
+    corriendo.
+  candidatas_antes: 50
+  candidatas_despues: 43
+  cambian_de_forma: 1
+  detalle_cambian: ['maíz → maisi']
+  claves_que_salen_del_catalogo: 7
+  detalle_salen:
+    colapsan_en_su_gemela_que_ya_estaba: ['bohío → bohio', 'cacique → cacike']
+    castellanas_sin_gemela_esperan_a_Miguel: [bejique, caney, cemi, cobo, huracan]
+  quien_pone_la_glosa: >-
+    Cuando dos claves colapsan manda la ENTRADA INDÍGENA: `bohio` y `cacike` ya
+    estaban en el catálogo con su propia glosa y se quedan con ella («casa
+    redonda de varas y palma», «jefe político-ritual del grupo»); lo que
+    desaparece es la clave castellana, que salía ADEMÁS. `maisi` es la
+    excepción y por eso cambia de forma: su propia glosa es «maíz (Zea mays)»,
+    casi-autoglosa que el filtro del 2026-09-16 descarta, así que entra con la
+    glosa de `maíz` («planta de maíz, grano principal»).
+  formas_con_marca_castellana: {antes: 13, despues: 5}
+  detalle_antes: [akcicyaa, bejique, bohío, cacike, cacique, caney, cazabi, cemi, cobo, cohiba, huracan, maíz, yuca]
+  detalle_despues: [akcicyaa, cacike, cazabi, cohiba, yuca]
+  las_cinco_que_quedan: >-
+    Todas están declaradas `se-queda` en `SE_QUEDA_CON_SU_GRAFIA` y hay un test
+    que lo exige: una voz nueva de la esfera con ⟨c⟩, ⟨z⟩ o tilde rompe el
+    test hasta que alguien la decida.
+  contra_la_medicion_del_17: >-
+    El 2026-09-17 se contaron 9 «palabras castellanas» entre las 50 candidatas
+    (aji, auyama, batata, huracan, manati, maíz, papaya, piragua, yuca). De
+    esas nueve, dos cambian: `huracan` sale del bloque y `maíz` se enseña como
+    `maisi`. Las otras siete se quedan por decisión, no por descuido: `aji` y
+    `manati` ya venían sin tilde y `auyama`, `batata`, `papaya`, `piragua` y
+    `yuca` son la transcripción atestiguada (regla 3). Que el castellano las
+    use no las saca de la esfera — eso se decidió ayer.
+
+d_el_scorer_no_se_mueve:
+  metodo: >-
+    Ocho frases —las de la medición del 2026-09-17 más dos de control—
+    puntuadas con el `score_linguistico` de HEAD y con el de ahora, comparando
+    score, densidad, pct_caquetio_especifico, otro_arahuaco, espanol_funcional,
+    palabras_caquetias, palabras_arahuacas, palabras_otro_arahuaco,
+    aspectos_usados y prestamos_de_esfera.
+  frases_con_alguna_diferencia: 0
+  de: 8
+  ejemplos:
+    - {frase: 'Casabe kaa-ni wara amana-ni', score: 7.2, prestamos_de_esfera: [casabe]}
+    - {frase: 'Maíz, yuca ta-kana', score: 6.1, prestamos_de_esfera: [maíz, yuca]}
+    - {frase: 'Taya naa-ka casabe wana-ni, ta-casabe para-ko', score: 8.4, prestamos_de_esfera: [casabe, ta-casabe]}
+    - {frase: 'Pia naa-ka maisi, cazabi kaa-ni wara', score: 8.5, prestamos_de_esfera: [maisi, cazabi]}
+  lectura: >-
+    `prestamos_de_esfera` sigue devolviendo la clave CASTELLANA, que es la que
+    el scorer reconoce. La normalización vive en `save_loanword_uses` y en
+    `analizar_runs.py --prestamos`, no en el puntuador.
+
+e_la_base:
+  filas_en_loanword_uses: 11
+  se_leen_con_otra_forma: 5       # casabe ×2, cacique, maíz, bohío
+  detalle:
+    - {dicha: yuca,        n: 3, se_lee: yuca}
+    - {dicha: casabe,      n: 2, se_lee: cazabi}
+    - {dicha: ture,        n: 1, se_lee: ture}
+    - {dicha: cacique,     n: 1, se_lee: cacike}
+    - {dicha: 'ka-watapana', n: 1, se_lee: 'ka-watapana'}
+    - {dicha: maíz,        n: 1, se_lee: maisi}
+    - {dicha: bohío,       n: 1, se_lee: bohio}
+    - {dicha: 'ta-watapana', n: 1, se_lee: 'ta-watapana'}
+  principio: >-
+    La base NO se reescribe (mismo principio que el 2026-09-17): una fila de
+    `loanword_uses` es un hecho observado. En esas 11 filas `forma_dicha` queda
+    NULL y `word` conserva la grafía de entonces; quien lee normaliza. Desde
+    hoy el motor escribe las dos columnas.
+
+# ══════════════════════════════════════════════════════════════════════
+# DÓNDE SE APLICA
+# ══════════════════════════════════════════════════════════════════════
+se_aplica_en:
+  motor:
+    - 'curiana_sim/curiana_lexicon.py: FORMA_DE_LA_ESFERA · SIN_FORMA_DE_LA_ESFERA · SE_QUEDA_CON_SU_GRAFIA · marcas_castellanas() · forma_de_la_esfera() · voces_de_fuera_posibles() · prompt_voces_de_fuera()'
+    - 'curiana_sim/curiana_database.py: filas_de_loanword_uses() (nueva, fuera de la clase como filas_de_presencias) · CurianaDB.save_loanword_uses() · CurianaDBMock.save_loanword_uses(), que ahora guarda en memoria'
+    - 'curiana_sim/supabase/migrations/20260918000000_loanword_forma_dicha.sql (aplicada a la base local por docker cp + psql -f + registro en schema_migrations; verificada con information_schema)'
+    - 'curiana_sim/analizar_runs.py: _voz_sql() · _dicha_sql() · _con_dicha() · analizar_prestamos() · _prestamos_por_cadena()'
+    - 'curiana_sim/curiana_cadena.py: LectorSQL.prestamos() devuelve además forma_dicha'
+    - 'curiana_sim/tests/test_forma_de_la_esfera.py (nuevo)'
+  documentacion:
+    - 'CLAUDE.md: fila en las trampas medidas'
+    - '5-experimento/BITACORA_RUNS.md: punto 6 del bloque «Cambio de instrumento» de la Era 2 · serie A'
+    - '6-fusion/decisiones_tanda_2026-09-17.yaml: entrada `descastellanizar_esfera`'
+  canon:
+    - 'NADA. Ni una entrada del lexicón se edita. Lo que tocaría canon está en `propuestas_sin_aplicar` y lo fusiona Miguel.'
+
+# ══════════════════════════════════════════════════════════════════════
+# PARA MIGUEL — lo que queda sin aplicar
+# ══════════════════════════════════════════════════════════════════════
+para_miguel:
+  altas_de_canon_propuestas:
+    - {clave: hurakán, desde: huracan, etiqueta: 'taíno (atestiguada en la nota de la entrada)', deuda: sin-procedencia}
+    - {clave: kayo,    desde: cayo,    etiqueta: retroabstraido-propuesto, deuda: sin-procedencia}
+    - {clave: kanei,   desde: caney,   etiqueta: retroabstraido-propuesto, deuda: sin-procedencia}
+    - {clave: kobo,    desde: cobo,    etiqueta: retroabstraido-propuesto, deuda: sin-procedencia}
+    - {clave: semi,    desde: cemi,    etiqueta: retroabstraido-propuesto, deuda: sin-procedencia}
+    - {clave: bejike,  desde: bejique, etiqueta: retroabstraido-propuesto, deuda: sin-procedencia}
+  que_pasa_si_no_se_fusionan: >-
+    Nada se rompe: esas seis voces dejan de enseñarse en [Voces de fuera] (de
+    50 candidatas a 43) y siguen contando como préstamo si un agente las
+    escribe. El coste es que el tier 1 ve cinco cosas menos de su esfera.
+  preguntas:
+    - >-
+      ¿`cacike` vale como forma atestiguada, sabiendo que su PROPIA nota
+      atribuye al taíno la forma con ⟨qu⟩ («Tno. cacique → español cacique»)?
+      Hoy vale, porque la etiqueta de la clave dice taíno y ésa es la regla.
+      Si no vale, `cacique` pasa a `SIN_FORMA_DE_LA_ESFERA` y no se enseña.
+    - >-
+      ¿`kanei` o `kaney`? El lema D5 da `kanei`; `kaney` conservaría la ⟨y⟩ y
+      sería una excepción declarada.
+    - >-
+      ¿`semi` molesta por ser homógrafa del prefijo castellano «semi-»? Si sí,
+      `cemi` se queda fuera y que la acuñen los agentes (opción B de matacán).
+    - >-
+      ¿Se abre ficha de Breton 1665 en 4-fuentes/bibliografia.yaml? Es la
+      fuente de `hiñaru` y de media comparanda kalinago, y hoy se cita en
+      prosa sin id (regla 8).
+    - >-
+      El metalenguaje del lexicón sigue siendo castellano: la GLOSA de
+      `harifuche`, `amaka` y `budare` le dice «maíz» al agente en 23 de 40
+      prompts del tier 1 y en 10 de 40 del tier 3, que ni ven el bloque
+      (medición del 2026-09-17 §E). Esto no lo arregla. ¿Se glosan esas
+      entradas con la forma de la esfera (`maisi`) en vez del castellano?
+    - >-
+      `akcicyaa` es `taíno-reconstruido` —forma GENERADA desde el lokono por
+      `reconstruir_taino()`— y es candidata de [Voces de fuera]: al tier 1 se
+      le enseña como voz de fuera algo que ninguna fuente atestigua. ¿Salen
+      las reconstruidas del bloque?
+
+deudas_que_quedan:
+  - 'Breton 1665 sin ficha en 4-fuentes/bibliografia.yaml (regla 8).'
+  - '`bohio`/`bohío` y `kalinagu`/`kalínagu` son cuatro claves para dos voces. La tabla resuelve la primera para el motor; el lexicón sigue con las cuatro.'
+  - 'Las reconstrucciones de `reconstruir_taino()` (acoa, daca, wacusi, akcicyaa) llevan etiqueta correcta pero grafía taína de generador; sólo `akcicyaa` llega al hablante.'
+  - '`ture` y `pauji` siguen con las glosas que la medición del 2026-09-17 puso en duda. No se tocan aquí.'

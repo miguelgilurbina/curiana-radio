@@ -13,9 +13,9 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-17**.
+<!--GENERADO--> Generado el **2026-09-18**.
 
-**2631 ítems propuestos** en 68 propuestas, más **6 issue(s)/comentario(s) redactados sin publicar**.
+**2637 ítems propuestos** en 70 propuestas, más **6 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -47,6 +47,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-09-14.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-15.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-17.yaml` | ? | 0 |  |
+| `descastellanizar_esfera_2026-09-18.yaml` | ? | 6 |  |
 | `elenco_era2.yaml` | varias | 63 |  |
 | `escena_era2.yaml` | ? | 11 |  |
 | `escena_por_lugar_propuesta_2026-09-17.yaml` | varias | 11 |  |
@@ -60,6 +61,7 @@ editar_a_mano: no
 | `mapa_nombres_era2.yaml` | ? | 63 |  |
 | `matacan_venado_2026-09-14.yaml` | esteves-1989 (y alvarado-1921, jahn-1927, neira-ribero-1762 como comparanda) | 5 |  |
 | `medicion_contaminacion_score_2026-09-09.yaml` | ? | 0 |  |
+| `medicion_hispanismos_loanword_uses_2026-09-17.yaml` | ? | 0 |  |
 | `medicion_prestigio_vinculos_era2_2026-09-17.yaml` | ? | 3 |  |
 | `medina_colina_dictado.yaml` | ? | 111 |  |
 | `migracion_lemas_fase2.yaml` | ? | 79 |  |

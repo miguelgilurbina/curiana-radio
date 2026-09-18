@@ -8131,6 +8131,122 @@ ESFERA_DE_CONTACTO = frozenset({
 })
 
 
+# ── «La etiqueta manda» — la forma de la esfera (Miguel, 2026-09-18) ───────
+# «Des-castellanizar» las voces de la esfera. `casabe`, `yuca`, `maíz`,
+# `batata` o `papaya` son voces taínas del lexicón que el castellano también
+# usa: cuentan como préstamo de esfera —el producto de la esfera ES la esfera,
+# decisión del 2026-09-17— pero no tienen por qué circular por el motor con la
+# grafía castellana.
+#
+# La regla es la etiqueta, no la estética. Fila a fila, con fuente y cita, en
+# **6-fusion/descastellanizar_esfera_2026-09-18.yaml**; el criterio y el censo
+# los mide `6-fusion/scripts/medir_descastellanizar_esfera.py`. En corto:
+#   (1) si el lexicón tiene la forma indígena ATESTIGUADA con clave propia, es
+#       la que se enseña y la que se registra → esta tabla;
+#   (2) si no la tiene, la voz no se enseña hasta que Miguel fusione la forma
+#       (atestiguada sin clave, como `hurakán`, o retroabstraída propuesta a la
+#       manera de `matakán`) → `SIN_FORMA_DE_LA_ESFERA`;
+#   (3) si la grafía «castellana» ES la transcripción atestiguada de la fuente
+#       —`yuca`, `batata`, `papaya`, `cazabi`, `chighe`—, se queda.
+#
+# ⚠ EL SCORER NO SE TOCA. `score_linguistico()` sigue devolviendo la clave
+# CASTELLANA en `prestamos_de_esfera`: es la que reconoce, y el agente que
+# escribe «casabe» tiene que seguir contando. Se normaliza al GUARDAR
+# (`curiana_database.save_loanword_uses`, que además anota en `forma_dicha` lo
+# que el agente escribió) y al LEER (`analizar_runs.py --prestamos`), nunca al
+# puntuar. `score`, `pct_*` y `capas_de_score` quedan byte a byte.
+#
+# Las dos claves de cada par existen YA en VOCABULARIO_BASE y comparten
+# familia (las cuatro son taínas): normalizar no mueve `source_language`.
+FORMA_DE_LA_ESFERA = {
+    "casabe":  "cazabi",   # «Tno. cazabi → español cazabe» (nota de `cazabi`)
+    "maíz":    "maisi",    # «Tno. maisi → español maíz»    (nota de `maisi`)
+    "cacique": "cacike",   # `cacike` lleva `fuente: taíno`; `cacique` es la castellana
+    "bohío":   "bohio",    # dos claves para la misma voz taína; la acentuada es la castellana
+}
+
+# Claves que la decisión marcó castellanas y para las que el lexicón NO tiene
+# gemela. No se enseñan —una propuesta no es canon— hasta que Miguel fusione
+# `6-fusion/descastellanizar_esfera_2026-09-18.yaml`. Siguen contando como
+# préstamo y se guardan tal como se dijeron.
+SIN_FORMA_DE_LA_ESFERA = frozenset({
+    "huracan",   # atestiguada sin clave: la nota dice «Tno. hurakán → español huracán»
+    "cayo",      # retroabstraída propuesta: kayo
+    "caney",     # retroabstraída propuesta: kanei
+    "cobo",      # retroabstraída propuesta: kobo
+    "cemi",      # retroabstraída propuesta: semi
+    "bejique",   # retroabstraída propuesta: bejike
+})
+
+# Lo que `marcas_castellanas()` marca y la decisión dejó como está, porque la
+# grafía es la transcripción atestiguada de la fuente y no la palabra
+# castellana. Está declarado —y no deducido— a propósito: una voz nueva de la
+# esfera con ⟨c⟩, ⟨z⟩ o tilde rompe el test hasta que alguien la decida.
+SE_QUEDA_CON_SU_GRAFIA = frozenset({
+    "yuca",       # Tno. yuca; Miguel 2026-09-18: es la transcripción, se queda
+    "cazabi",     # la forma indígena del par; su ⟨c⟩/⟨z⟩ son de la fuente
+    "cacike",     # la forma indígena del par
+    "cohiba",     # «Taíno atestiguado: cohiba … Brinton 1871»
+    "cai",        # «Taíno atestiguado: cai … Brinton 1871» (y `kai` ya es paraujano 'sol')
+    "caiman",     # «Taíno atestiguado: caiman … Brinton 1871» (y `kaiman` ya es lokono)
+    "akcicyaa",   # taíno-reconstruido desde Lok. akkicyaha: ortografía del lokono
+    "chighe",     # paraujano, Wilbert 1958-59 vía Oliver 1989 Tabla A-2 (dígrafos)
+    "keichare",   # ídem
+    "utschi",     # ídem
+    "eichire",    # ídem
+    "añu",        # el autónimo Añú, ortografía de la fuente
+    "hiñaru",     # kalinago, registro femenino de Breton 1665
+    "kalínagu",   # ortografía garífuna del autónimo; la tilde no es castellana
+    "achi-kalinago",  # dígrafo ⟨ch⟩ del garífuna/lokono
+    "acoa", "daca", "wacusi",   # taíno-reconstruido desde el lokono (categoría `cuerpo`)
+    "churuguara", "quibor",     # topónimos modernos (categoría `geografia`)
+})
+
+# ⟨c⟩, ⟨z⟩, ⟨qu⟩, ⟨ll⟩, ⟨ñ⟩ y la tilde castellana: lo que la retroabstracción
+# del proyecto quita (convención de `matakán`, 6-fusion/matacan_venado_…yaml).
+# Es una MEDIDA, no un juicio: dice que la clave lleva la marca, no que la voz
+# sea castellana. Quién se queda y quién no lo dice la decisión de arriba.
+_MARCAS_CASTELLANAS = (
+    ("tilde", re.compile(r"[áéíóú]")),
+    ("qu",    re.compile(r"qu")),
+    ("c",     re.compile(r"c(?!h)")),
+    ("z",     re.compile(r"z")),
+    ("ll",    re.compile(r"ll")),
+    ("ñ",     re.compile(r"ñ")),
+)
+
+
+def marcas_castellanas(clave: str) -> list:
+    """Qué marcas de grafía castellana lleva una clave del lexicón.
+
+    La etiqueta de lengua con que el lexicón desambigua homógrafos
+    (`achi-kalinago`, `kanawa-caribe`) no es parte de la voz y no se mide.
+    ⟨ch⟩ tampoco: es dígrafo en todas las ortografías del repo.
+    """
+    voz = clave.lower()
+    ultimo = voz.rsplit("-", 1)[-1] if "-" in voz else ""
+    if ultimo in _SUFIJOS_DE_LENGUA:
+        voz = voz.rsplit("-", 1)[0]
+    return [nombre for nombre, patron in _MARCAS_CASTELLANAS if patron.search(voz)]
+
+
+def forma_de_la_esfera(token: str) -> str:
+    """La forma con que una voz de la esfera se enseña y se registra.
+
+    Devuelve el token tal cual si no hay decisión para él. Respeta la
+    morfología caquetía igual que `score_linguistico()`: `ta-casabe` es la
+    lengua haciendo algo con la raíz ajena, y sale `ta-cazabi`.
+    """
+    if token in FORMA_DE_LA_ESFERA:
+        return FORMA_DE_LA_ESFERA[token]
+    for pref in ("ta", "wa", "ma", "ka"):
+        if token.startswith(pref + "-"):
+            base = token.split("-", 1)[1]
+            if base in FORMA_DE_LA_ESFERA:
+                return f"{pref}-{FORMA_DE_LA_ESFERA[base]}"
+    return token
+
+
 def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
     """
     Calcula métricas lingüísticas de una respuesta de agente, midiendo
@@ -8776,11 +8892,28 @@ def voces_de_fuera_posibles() -> list:
 
     `(palabra, forma, glosa, familia)`. Separada de `prompt_voces_de_fuera()`
     para que se pueda medir el catálogo entero sin sortear.
+
+    Desde el 2026-09-18 («la etiqueta manda») lo que sale en `forma` es la
+    FORMA DE LA ESFERA, no la clave: la voz con gemela indígena se enseña por
+    ella (`casabe` → `cazabi`) y la que fue marcada castellana sin gemela no se
+    enseña (`SIN_FORMA_DE_LA_ESFERA`). La glosa se vuelve a medir contra la
+    forma que se va a mostrar —si no enseña nada sobre ELLA, la voz cae— y dos
+    claves que colapsan en la misma forma (`cacique`/`cacike`) salen una vez.
+
+    Cuando dos claves colapsan, manda la ENTRADA INDÍGENA: se recorren primero
+    las claves que no están en `FORMA_DE_LA_ESFERA`, así que `bohio` se enseña
+    con su propia glosa («casa redonda de varas y palma») y no con la de
+    `bohío`. La castellana sólo aporta la glosa cuando la indígena no tiene
+    ninguna que enseñe algo — que es el caso de `maisi`, cuya glosa entera es
+    «maíz (Zea mays)» y el filtro de autoglosa descarta.
     """
     from curiana_database import normalize_source_language
 
     candidatas = []
-    for palabra, datos in VOCABULARIO_BASE.items():
+    vistas = set()
+    orden = sorted(VOCABULARIO_BASE.items(),
+                   key=lambda kv: kv[0] in FORMA_DE_LA_ESFERA)
+    for palabra, datos in orden:
         fam = normalize_source_language(datos.get("fuente", ""))
         if fam not in ESFERA_DE_CONTACTO:
             continue
@@ -8790,6 +8923,8 @@ def voces_de_fuera_posibles() -> list:
         sig = datos.get("sig") or datos.get("es") or ""
         if not sig:
             continue
+        if palabra in SIN_FORMA_DE_LA_ESFERA:
+            continue
         ultimo = palabra.rsplit("-", 1)[-1] if "-" in palabra else ""
         forma = palabra.rsplit("-", 1)[0] if ultimo in _SUFIJOS_DE_LENGUA else palabra
         # Si al quitar la etiqueta la forma coincide con una voz caquetía
@@ -8797,9 +8932,13 @@ def voces_de_fuera_posibles() -> list:
         # palabra que el agente ya tiene por propia es peor que no enseñar nada.
         if forma != palabra and forma in VOCABULARIO_BASE:
             continue
+        forma = forma_de_la_esfera(forma)
+        if forma in vistas:
+            continue
         glosa = _glosa_util(forma, sig)
         if not glosa:
             continue
+        vistas.add(forma)
         candidatas.append((palabra, forma, glosa, fam))
     return candidatas
 
@@ -8811,6 +8950,12 @@ def prompt_voces_de_fuera(contexto: str = "", n: int = 3) -> str:
     lenguaje sino el de su esfera de influencia». Sólo tier 1, sólo unas
     pocas, y SIEMPRE marcadas como ajenas — el agente tiene que saber que no
     es su lengua, o el préstamo deja de ser un préstamo. Ver ESFERA_DE_CONTACTO.
+
+    Y desde el 2026-09-18 («la etiqueta manda») lo que se le enseña es la FORMA
+    DE LA ESFERA, nunca la grafía castellana: el bloque decía «maíz = planta de
+    maíz» y ahora dice «maisi = …». La clave castellana sigue siendo la que
+    RECONOCE el scorer —el agente puede escribir «casabe» y cuenta—, pero no se
+    le enseña. Ver `FORMA_DE_LA_ESFERA` y `voces_de_fuera_posibles()`.
     """
     import random as _rnd
 
