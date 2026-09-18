@@ -944,6 +944,14 @@ def run_turn(
                 acunadas = [n.forma for n in neos
                             if n.forma and n.forma not in words_used]
 
+                # DÓNDE SE DIJO. La columna existe desde #155 y
+                # `save_agent_response` la acepta, pero nadie se la pasaba: el
+                # día 1 de la serie C (run b7bc51dc) cerró con 0 de 72 filas
+                # con lugar mientras `presencias` tenía las 378. Va el ÁMBITO
+                # del hablante —el mismo `ambito_de` que filtró lo que vio y
+                # que se le declaró al léxico arriba—, nunca el nodo, que no es
+                # lo mismo. Sin escena es None y `save_agent_response` no
+                # menciona siquiera la columna: la fila es la de siempre.
                 response_id = db.save_agent_response(
                     turn_id=turn_id,
                     run_id=run_id,
@@ -956,6 +964,7 @@ def run_turn(
                     aspects_used=aspects_used,
                     neologisms_proposed=neo_count,
                     coined_words=acunadas,
+                    lugar=ambito_hablante,
                 )
                 registro.response_id = response_id
 

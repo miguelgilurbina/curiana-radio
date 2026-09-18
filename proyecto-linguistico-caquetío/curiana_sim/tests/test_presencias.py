@@ -183,6 +183,20 @@ def test_sin_lugar_la_fila_es_la_de_antes_de_la_migracion():
     assert "lugar" not in fila, "un run sin escena no debe mencionar la columna"
 
 
+def test_lugar_none_es_lo_mismo_que_no_pasarlo():
+    """Desde el arreglo de b7bc51dc el orquestador pasa SIEMPRE
+    `lugar=ambito_de(...)`, que sin escena —la era 1, o la era 2 sin el flag—
+    es None. La fila que sale hacia PostgREST tiene que ser la misma que
+    antes, carácter a carácter: si `None` escribiera la columna, la era 1
+    dejaría de ser byte a byte en la base."""
+    db, cliente = _db_falsa()
+    db.save_agent_response(**RESPUESTA)
+    db.save_agent_response(**RESPUESTA, lugar=None)
+    sin_pasarlo, con_none = cliente.inserciones["agent_responses"]
+    assert sin_pasarlo == con_none
+    assert "lugar" not in con_none
+
+
 def test_con_lugar_la_columna_se_escribe():
     db, cliente = _db_falsa()
     db.save_agent_response(**RESPUESTA, lugar="Tacuato:salinar")
