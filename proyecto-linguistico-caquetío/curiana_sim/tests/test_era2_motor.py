@@ -584,8 +584,14 @@ def test_ninguna_voz_de_fuera_se_glosa_a_si_misma():
     assert por_forma["bohio"] == "casa redonda de varas y palma"
     assert por_forma["guanin"] == "aleación de oro y cobre"
     # y la voz cuya glosa entera era ella misma sale del bloque
-    for fuera in ("caiman", "higuana", "maisi", "iwana"):
+    for fuera in ("caiman", "higuana", "iwana"):
         assert fuera not in por_forma, fuera
+    # `maisi` era una de ellas y desde el 2026-09-18 vuelve, por la otra
+    # puerta: es la FORMA DE LA ESFERA de la clave `maíz`, cuya glosa —«planta
+    # de maíz, grano principal»— sí enseña algo sobre `maisi`. La voz entra,
+    # la grafía castellana no. Ver 6-fusion/descastellanizar_esfera_2026-09-18.
+    assert por_forma["maisi"] == "planta de maíz"
+    assert "maíz" not in por_forma
 
 
 def test_la_casi_autoglosa_se_mide_por_esqueleto_fonemico():

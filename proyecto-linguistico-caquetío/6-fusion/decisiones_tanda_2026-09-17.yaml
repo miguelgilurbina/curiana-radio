@@ -361,3 +361,73 @@ hispanismos_son_esfera:
     corrió con el instrumento cambiado. La lección para el escriba queda en
     CLAUDE.md: una pregunta no es un ok.
   se_aplica_en: 'revert de be4270d (#160) en la rama fix/esfera-incluye-los-hispanismos'
+
+descastellanizar_esfera:
+  estado: >-
+    DECIDIDA (2026-09-18) — MOTOR APLICADO, CANON PROPUESTO. Es la segunda
+    mitad de `hispanismos_son_esfera`: ayer se decidió que casabe, yuca y maíz
+    CUENTAN; hoy, con qué grafía circulan. (Entra en esta tanda por continuidad
+    del hilo, aunque la fecha sea del día siguiente.)
+  fecha: '2026-09-18'
+  pregunta: >-
+    De las voces de la esfera que el lexicón guarda con grafía castellana
+    —`casabe`, `maíz`, `cacique`, `bohío`, `huracan`, `cayo`…—, ¿cuáles debe
+    ver y registrar el motor con su forma indígena, y qué se hace con las que
+    no tienen una?
+  decision_literal: '«la etiqueta manda»'
+  lectura_operativa: >-
+    Des-castellanizar las voces de la esfera de contacto, con la etiqueta como
+    único árbitro y en tres reglas. (1) Si el lexicón —o una fuente citable—
+    tiene la forma indígena ATESTIGUADA, ésa es la que el agente VE y la que se
+    REGISTRA, con su etiqueta y su cita: `casabe`→`cazabi`, `maíz`→`maisi`,
+    `cacique`→`cacike`, `bohío`→`bohio`. (2) Si no hay atestación distinta de
+    la grafía castellana, se PROPONE una forma retroabstraída bajo la
+    convención de `matakán` (lema fonémico D5: k por c/qu, z→s, sin acentos
+    castellanos), etiquetada como tal — pero esa forma es CANON y no se aplica
+    hasta que Miguel la fusione: mientras tanto la voz no se enseña. (3) Si la
+    grafía «castellana» es en realidad la transcripción atestiguada de los
+    cronistas —`yuca`, `batata`, `papaya`, `caiman`—, se queda: la etiqueta
+    manda, no la estética. La clave castellana sigue siendo la que RECONOCE el
+    scorer (el agente puede escribir «casabe» y cuenta), pero nunca se le
+    enseña.
+  medido_2026-09-18: >-
+    De las 133 voces de la esfera del lexicón, 24 llevan marca de grafía
+    castellana (tilde, ⟨c⟩, ⟨z⟩, ⟨qu⟩, ⟨ll⟩, ⟨ñ⟩; ⟨ch⟩ no cuenta, es dígrafo):
+    4 con gemela aplicable, 1 atestiguada sin clave (`hurakán`), 5
+    retroabstraídas propuestas (`kayo`, `kanei`, `kobo`, `semi`, `bejike`) y 14
+    que se quedan. `[Voces de fuera]` pasa de 50 candidatas a 43 y de 13 formas
+    con marca castellana a 5, todas declaradas `se-queda`. En `loanword_uses`,
+    5 de las 11 filas ya escritas se leen con otra forma. El scorer no se
+    mueve: 0 de 8 frases de control cambian en score, densidad, pct_*,
+    palabras_* ni `prestamos_de_esfera`, comparando con el módulo de HEAD.
+  lo_que_no_se_toca: >-
+    El scorer. `score_linguistico()` sigue devolviendo la clave castellana en
+    `prestamos_de_esfera`; `score`, `pct_*` y `capas_de_score` quedan byte a
+    byte. Y el canon del lexicón: ni una entrada se edita — lo que lo tocaría
+    está propuesto en 6-fusion y lo fusiona Miguel.
+  corte_de_serie: >-
+    Cambia lo que el TIER 1 VE, así que no entra a mitad de cadena. Aplica
+    desde la SERIE C, que no ha empezado; la serie B (run 3973d317 y lo que
+    continúe de él) queda del lado de antes, como con `golfete_frase_tarde`.
+    Los runs ya corridos no se reescriben: `analizar_runs.py --prestamos`
+    normaliza al leer.
+  se_aplica_en: >-
+    6-fusion/descastellanizar_esfera_2026-09-18.yaml (la tabla entera, con
+    fuente y cita, y la lista «para Miguel») +
+    6-fusion/scripts/medir_descastellanizar_esfera.py (la medición) +
+    curiana_sim/curiana_lexicon.py (FORMA_DE_LA_ESFERA, SIN_FORMA_DE_LA_ESFERA,
+    SE_QUEDA_CON_SU_GRAFIA, marcas_castellanas, forma_de_la_esfera,
+    voces_de_fuera_posibles, prompt_voces_de_fuera) +
+    curiana_sim/curiana_database.py (filas_de_loanword_uses, save_loanword_uses
+    y el mock) + supabase/migrations/20260918000000_loanword_forma_dicha.sql +
+    curiana_sim/analizar_runs.py y curiana_cadena.py (la lectura) +
+    tests/test_forma_de_la_esfera.py + CLAUDE.md + BITACORA_RUNS.md §6.
+  queda_para_Miguel: >-
+    Seis altas de canon (hurakán, kayo, kanei, kobo, semi, bejike), todas con
+    `deuda: sin-procedencia`; si no se fusionan, esas voces simplemente no se
+    enseñan. Y tres preguntas abiertas que el YAML detalla: si `cacike` vale
+    como atestiguada pese a que su propia nota atribuye al taíno la forma con
+    ⟨qu⟩; si se glosan `harifuche`/`amaka`/`budare` con `maisi` en vez de
+    «maíz» (el metalenguaje castellano del lexicón sigue metiéndole la palabra
+    al tier 3, que ni ve el bloque); y si las formas `taíno-reconstruido`
+    salen de [Voces de fuera].
