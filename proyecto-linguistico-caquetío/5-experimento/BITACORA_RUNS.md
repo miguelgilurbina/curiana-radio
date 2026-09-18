@@ -53,6 +53,45 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 > Cada fila guarda el commit del motor, si estaba sucio y los hashes del
 > lexicón, el corpus y el elenco. Protocolo: [[04_protocolo_run_1_era_auditada]].
 
+### Era 2 · serie C — la escena por lugar, en dos brazos (desde el 2026-09-18)
+
+> Miguel, 2026-09-17: «si no se mueven, ¿cómo podemos hacer que hagan cosas y
+> "existan" en el mundo que les describimos?». El diseño está en
+> `6-fusion/issues-pendientes/existir-en-el-mundo-escena-por-lugar-2026-09-17.md`
+> y sus diez decisiones en `6-fusion/decisiones_tanda_2026-09-17.yaml`: el
+> ámbito de lo que un agente ve es el LUGAR donde está (oficio × momento,
+> `6-fusion/escena_era2.yaml`), oye lo que se dijo allí el momento anterior,
+> y el Capubana (cada 3 días) mezcla a los 63. Va como brazo: la misma
+> cadena con `--escena` y sin ella, mismas semillas 21/22/23. Motor de la
+> serie: #157 (ESTAR), #155 (presencias), #159 (OÍR + control), #156
+> (prestigio por alias), #154 (`{tu agua}`), #163 (la etiqueta manda),
+> #158 (el mapa). «Lanza cuando lo tengas listo» (Miguel, 2026-09-18).
+
+| Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |
+|---|---|---|---|---|---|---|
+| 09-18 | `b7bc51dc` | 6 / 1 | **63** | 7.4 | 100% | **Día 1 de la serie C, brazo CON escena** (motor `5770de6`, semilla 21, `--escena --capubana-cada 3 --reflexion`; 11 min, 0 avisos). 72 respuestas, 61 agentes, **0 residuos** de la era 1; score 7,43 (tier 1: 7,11 · tier 2: 7,48 · tier 3: 8,26). **La escena existe en la base**: 378 presencias (63 × 6), 28 lugares; 91 escenas en el día, 40 con alguna voz, 18 con dos o más; 50 de 72 intervenciones (69 %) hablaron con compañía en su lugar. Un solo lugar compartido entre nodos, el camino Moruy–Caseto (Humohumo y Bajari), con los dos nodos a la vez en 3 turnos. **La predicción del diseño se cumple en lo inmediato**: cruces de forma «en el mismo turno» **3 → 0**; Δturnos hasta salir del lugar mediana 1 → **2**; de 231 formas emergentes, 72 salieron de su lugar, **149 murieron en él** y 29 nacieron en varios a la vez (el evento de nombramiento sigue yendo a los 12 del turno: capa 3). Koiné: acumulada 0,7809, ventana 0,6269, **emergente 0,9608** (serie B día 1: 0,906 — lo nuevo converge menos, que es lo que un ámbito por lugar debe hacer). Acuñaciones: **39 propuestas, sólo 6 adoptadas** (serie B: 18/12): la adopción ahora es por ámbito. La competencia por las cuentas **no se fija el día 1** (en disputa: `kali-uco-aima` 3,6 · `ucibo-kali-duruco` 3,5 · `kali-boro` 2,8); y la primera forma **adoptada en DOS ámbitos**: `kali-bana` «la cumbre del sol», nacida en Moruy (GUARANAO) y adoptada también en Carirubana:taller_canoas (AMUAY), Δ4 turnos — ¿viajó o se re-acuñó? (agente midiendo). Préstamos: 2, ya con la forma de la esfera y la dicha aparte (`maisi` ← «maíz», `aji`). El mundo: sal 47 de 72, viento 38, cerro 37, venado 2. GUARANAO habló el 71 % (censo 62 %). Reflexión del Director sin residuos, citada abajo. Mapa exportado (`content/simulador/escena/b7bc51dc.json`): por primera vez con gente. **Deudas del día**: `agent_responses.lugar` quedó vacío (0 de 72: el orquestador no pasa `lugar` a `save_agent_response`; `presencias` lo cubre); el exportador lee la tabla propuesta y no `escena_era2.yaml`, así que el camino Moruy–Caseto sale sin coordenada; y la página del mapa tiene que poder elegir el run |
+
+**Lo que piensa el Director del día 1 de la serie C** (`b7bc51dc`, escrito por el motor):
+
+> El viento del este sopló firme todo el turno y la gente bajó a pescar con
+> los jachos encendidos, pero el hambre está en los gestos antes que en el
+> habla. Vimos cómo la tensión creció sin necesidad de gritos: en los conucos
+> secos, en las manos que trabajan la sal baja, en Manaure cuando convocó
+> desde la piedra del Capubana. Prendieron bien las palabras nuevas sobre lo
+> que brilla —*ucibo-kali-duruco*, *kali-uco-aima*— como si la gente
+> necesitara nombrar lo que ve en el agua clara para no pensar en lo que
+> falta en los vientres. Ninguna palabra brotó natural del hambre o la
+> sequía; todas las nuevas fueron sobre luz y dureza, sobre lo que el alisio
+> permite ver. Mañana el viento sigue y el agua sigue clara, pero la sal
+> escasea de verdad y alguien tendrá que hablar de eso sin rodeos, o la
+> tensión quiebra lo que hoy apenas sostiene.
+
+Lectura del escriba: el Director ve la escena («en los conucos secos, en las
+manos que trabajan la sal baja, en Manaure… desde la piedra del Capubana»)
+porque recibe las intervenciones agrupadas por lugar. «Prendieron bien» las
+dos formas de las cuentas es generoso: ninguna se fijó; están en disputa, y
+por primera vez la disputa tiene geografía.
+
 ### Era 2 · serie B — el instrumento completo (desde el 2026-09-17)
 
 > Miguel, 2026-09-16: «recorramos nuevamente con este cambio; dejemos esos 3
