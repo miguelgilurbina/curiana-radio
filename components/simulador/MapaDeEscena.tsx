@@ -26,6 +26,26 @@ import type { EscenaSeed, EscenaDeLugar, LugarEscena } from "@/lib/escena";
 import { NODOS, nodoColor } from "@/lib/sim-theme";
 import { Card, Overline } from "./ui";
 
+// `lib/escena.ts` importa `fs`: de ahí sólo pueden venir tipos. Cómo se nombra
+// un run en el selector se decide aquí, que es donde se lee.
+
+/** La clave estable de un seed en el selector. */
+function claveDeEscena(seed: EscenaSeed): string {
+  return seed.run.id8 ?? "sin-escena";
+}
+
+/** «b7bc51dc · era2-c · con escena, Capubana cada 3 · día 1» */
+function etiquetaDeEscena(seed: EscenaSeed): string {
+  const { id8, serie, brazo, dias, cadena } = seed.run;
+  if (!id8) return "el mapa, sin ningún run encima";
+  const partes = [cadena.length > 1 ? `${cadena[0]}→${id8}` : id8];
+  if (serie) partes.push(serie);
+  if (brazo) partes.push(brazo);
+  if (dias.length === 1) partes.push(`día ${dias[0]}`);
+  else if (dias.length > 1) partes.push(`días ${dias[0]}–${dias[dias.length - 1]}`);
+  return partes.join(" · ");
+}
+
 // Teselas sin clave, con la atribución que su licencia exige.
 const TESELAS = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
 const ATRIBUCION =
@@ -74,11 +94,37 @@ function posiciones(lugares: LugarEscena[]): Map<string, [number, number]> {
   return pos;
 }
 
-export default function MapaDeEscena({ seed }: { seed: EscenaSeed }) {
+/**
+ * `seeds` es el índice entero de lo exportado (lib/escena.ts los ordena: los
+ * que tienen gente primero, del más reciente al más viejo). Van todos en la
+ * página porque el sitio es estático y no hay a quién pedirle el que falte:
+ * cambiar de run no puede costar una llamada. Un día son ~100 KB de JSON; el
+ * día que la cadena crezca, este índice es lo que permitirá cargar el resto
+ * bajo demanda sin cambiar nada más.
+ */
+export default function MapaDeEscena({ seeds }: { seeds: EscenaSeed[] }) {
+  const [clave, setClave] = useState(() => claveDeEscena(seeds[0]));
+  const seed = useMemo(
+    () => seeds.find((s) => claveDeEscena(s) === clave) ?? seeds[0],
+    [seeds, clave]
+  );
+
   const [i, setI] = useState(0);
   const [lugarSel, setLugarSel] = useState<string | null>(null);
   const [corriendo, setCorriendo] = useState(false);
   const [estado, setEstado] = useState<"cargando" | "listo" | "falla">("cargando");
+
+  // Al cambiar de run se vuelve al primer momento del día: el turno 4 de un
+  // run no es el turno 4 de otro, y dejar el deslizador donde estaba haría
+  // creer que se está comparando lo mismo. Se hace aquí, en el manejador, y
+  // no en un efecto sobre `clave`: es una consecuencia de lo que el lector
+  // acaba de pinchar, no una sincronización con nada de fuera.
+  const elegirRun = useCallback((nueva: string) => {
+    setClave(nueva);
+    setI(0);
+    setLugarSel(null);
+    setCorriendo(false);
+  }, []);
 
   const contenedor = useRef<HTMLDivElement | null>(null);
   const mapa = useRef<LeafletNS.Map | null>(null);
@@ -239,9 +285,42 @@ export default function MapaDeEscena({ seed }: { seed: EscenaSeed }) {
 
   return (
     <div className="mt-6">
+      {/* ── Qué run se está mirando ─────────────────────────────────── */}
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-2 rounded-t-2xl border border-b-0 border-(--sim-rule) bg-(--sim-paper-deep) px-4 py-2.5">
+        <label
+          htmlFor="escena-run"
+          className="sim-mono text-[0.65rem] uppercase tracking-[0.14em] text-(--sim-ink-faint)"
+        >
+          Run
+        </label>
+        {seeds.length > 1 ? (
+          <select
+            id="escena-run"
+            value={clave}
+            onChange={(e) => elegirRun(e.target.value)}
+            className="min-w-[16rem] max-w-full flex-1 rounded-lg border border-(--sim-rule) bg-(--sim-paper) px-3 py-1.5 font-sans text-sm text-(--sim-ink) outline-none focus:border-(--sim-fuego)"
+          >
+            {seeds.map((s) => (
+              <option key={claveDeEscena(s)} value={claveDeEscena(s)}>
+                {etiquetaDeEscena(s)}
+              </option>
+            ))}
+          </select>
+        ) : (
+          <span className="sim-mono text-xs text-(--sim-ink-soft)">
+            {etiquetaDeEscena(seed)}
+          </span>
+        )}
+        <span className="sim-mono text-[0.7rem] text-(--sim-ink-faint)">
+          {seeds.length === 1
+            ? "un seed exportado"
+            : `${seeds.length} seeds exportados`}
+        </span>
+      </div>
+
       {/* ── El deslizador de turnos ─────────────────────────────────── */}
       {hayTurnos ? (
-        <div className="flex flex-wrap items-center gap-3 rounded-t-2xl border border-b-0 border-(--sim-rule) bg-(--sim-paper-deep) px-4 py-3">
+        <div className="flex flex-wrap items-center gap-3 border border-b-0 border-(--sim-rule) bg-(--sim-paper-deep) px-4 py-3">
           <div className="flex items-center gap-1">
             <BotonTurno label="Turno anterior" onClick={() => mover(-1)} disabled={i === 0}>
               ‹
@@ -293,11 +372,7 @@ export default function MapaDeEscena({ seed }: { seed: EscenaSeed }) {
       ) : null}
 
       {/* ── El mapa ──────────────────────────────────────────────────── */}
-      <div
-        className={`relative overflow-hidden border border-(--sim-rule) ${
-          hayTurnos ? "rounded-b-2xl" : "rounded-2xl"
-        }`}
-      >
+      <div className="relative overflow-hidden rounded-b-2xl border border-(--sim-rule)">
         <div
           ref={contenedor}
           className="mapa-escena h-[380px] w-full bg-(--sim-paper-deep) md:h-[500px]"
@@ -403,7 +478,7 @@ export default function MapaDeEscena({ seed }: { seed: EscenaSeed }) {
               <p className="mt-2 max-w-reading font-sans text-sm leading-relaxed text-(--sim-ink-soft)">
                 {hayTurnos
                   ? `${conGente.length} lugares con gente, ${contactos.length} con los dos nodos a la vez. Pincha un punto para ver quién está y qué dijo ahí.`
-                  : "El mapa son los 29 lugares que la tabla de escena resolvió. Se llenará cuando corra el primer run con escena."}
+                  : `El mapa son los ${lugares.length} lugares que la tabla de escena resolvió. Se llenará cuando corra el primer run con escena.`}
               </p>
               {hayTurnos && (
                 <ul className="mt-4 space-y-1.5">

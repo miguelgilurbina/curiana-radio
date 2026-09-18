@@ -52,12 +52,17 @@ class _DB:
         self.config = None
         self.presencias = []
         self.turnos = []
+        self.respuestas = []
         self._config_anterior = config_anterior
         if con_presencias:
             self.save_presencias = self._save_presencias
 
     def _save_presencias(self, **k):
         self.presencias.append(k)
+
+    def save_agent_response(self, **k):
+        self.respuestas.append(k)
+        return f"resp-{len(self.respuestas)}"
 
     def create_run(self, *a, **k):
         self.config = k.get("config")
@@ -256,6 +261,50 @@ def test_c_aqui_estas_en_los_72_prompts_de_un_dia(monkeypatch):
             for n in bloque.split(": ", 2)[-1].rstrip("…").split(", "):
                 assert n in presentes, (n, lugar)
     assert len(por_turno) == 6
+
+
+def test_c_las_72_respuestas_se_guardan_con_su_lugar(monkeypatch):
+    """`agent_responses.lugar` existe desde #155 y `save_agent_response` lo
+    acepta, pero el orquestador no se lo pasaba: el día 1 de la serie C (run
+    b7bc51dc) cerró con **0 de 72** filas con lugar mientras `presencias`
+    tenía las 378. Lo que se guarda es el ÁMBITO del hablante —la misma puerta
+    `ambito_de` que filtra lo que ve y que ya se le declaró al léxico—, no el
+    nodo: Humohumo (GUARANAO) y Bajari (AMUAY) andan el mismo camino."""
+    db = _DB()
+    state = _estado_era2(escena=True, cada=0)
+    monkeypatch.setattr(orch, "ROSTER_NUCLEO", era2.ROSTER_NUCLEO)
+    escenas = []
+    real_escena = orch.escena_de
+    monkeypatch.setattr(orch, "escena_de",
+                        lambda s: escenas.append(real_escena(s)) or escenas[-1])
+    prompts = _capturar(monkeypatch, state, roster=list(era2.ALL_AGENTS),
+                        agentes_por_turno=12, turnos=6, era=era2.ALL_AGENTS, db=db)
+
+    assert len(prompts) == 72 and len(db.respuestas) == 72
+    assert all(r["lugar"] for r in db.respuestas), "0 de 72 es el bug de b7bc51dc"
+    for i, r in enumerate(db.respuestas):
+        # el lugar de la escena de SU turno, y un lugar de la tabla decidida
+        assert r["lugar"] == escenas[i // 12][r["agent_name"]], r["agent_name"]
+        assert r["lugar"] in tabla.LUGARES, r["lugar"]
+
+
+def test_c_sin_escena_la_respuesta_se_guarda_sin_lugar(monkeypatch):
+    """La era 2 sin el flag y la era 1: `lugar=None`. Y `lugar=None` es lo
+    mismo que no pasarlo —`save_agent_response` no menciona la columna—, así
+    que lo que se le envía a PostgREST es byte a byte la fila de antes de la
+    migración (tests/test_presencias.py lo compara)."""
+    db = _DB()
+    _capturar(monkeypatch, _estado_era2(escena=False), roster=list(era2.ALL_AGENTS)[:6],
+              agentes_por_turno=6, turnos=2, era=era2.ALL_AGENTS, db=db)
+    assert len(db.respuestas) == 12
+    assert all(r["lugar"] is None for r in db.respuestas)
+
+    era1 = _DB()
+    _capturar(monkeypatch, estado_inicial_test(),
+              roster=orch.roster_de_habla("koine")[:6],
+              agentes_por_turno=6, turnos=2, db=era1)
+    assert era1.respuestas
+    assert all(r["lugar"] is None for r in era1.respuestas)
 
 
 def test_run_turn_escribe_ubicaciones_override_para_los_63(monkeypatch):

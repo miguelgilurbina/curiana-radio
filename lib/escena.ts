@@ -87,6 +87,10 @@ export interface EscenaSeed {
     /** id8 de la cadena, raíz→hoja. */
     cadena: string[];
     started_at: string | null;
+    /** La etiqueta del SET de runs, sellada en la config (`era2-c`). */
+    serie?: string | null;
+    /** El brazo, dicho por `curiana_cadena`: «con escena, Capubana cada 3». */
+    brazo?: string | null;
     dias: number[];
     n_turnos: number;
     n_agentes: number;
@@ -118,12 +122,20 @@ export function getEscenas(): EscenaSeed[] {
 }
 
 /**
- * El seed a mostrar. Con `id8`, ese run; sin él, el más reciente que TENGA
- * escena — y sólo si no hay ninguno, el seed vacío (el catálogo de lugares sin
- * nadie encima, que es el estado mientras ningún run haya corrido con escena).
+ * EL ÍNDICE que come el visor: los seeds exportados en el orden en que hay que
+ * ofrecerlos — primero los que tienen gente, del más reciente al más viejo, y
+ * al final el seed vacío (el catálogo de lugares sin nadie encima, que es lo
+ * único que hay mientras ningún run haya corrido con escena).
+ *
+ * No hay `index.json` que mantener: el índice ES el directorio, leído en el
+ * build. Así no puede quedarse viejo respecto de los seeds que lista.
  */
-export function getEscena(id8?: string): EscenaSeed | null {
+export function getEscenasParaElVisor(): EscenaSeed[] {
   const seeds = getEscenas();
-  if (id8) return seeds.find((s) => s.run.id8 === id8) ?? null;
-  return seeds.find((s) => !s.vacio) ?? seeds[0] ?? null;
+  return [...seeds.filter((s) => !s.vacio), ...seeds.filter((s) => s.vacio)];
 }
+
+// Cómo se nombra un seed en el selector —`claveDeEscena`, `etiquetaDeEscena`—
+// vive en el componente y no aquí a propósito: este módulo importa `fs`, así
+// que todo lo que un Client Component necesite llamar tiene que estar fuera.
+// De aquí sólo salen tipos (que se borran al compilar) y datos.

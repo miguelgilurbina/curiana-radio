@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "generado": "2026-09-17T17:17:53.555160+00:00",
+  "version": 2,
+  "generado": "2026-09-18T05:54:22.475074+00:00",
   "vacio": true,
   "tope_texto": 220,
   "run": {
@@ -8,6 +8,8 @@
     "run_id": null,
     "cadena": [],
     "started_at": null,
+    "serie": null,
+    "brazo": null,
     "dias": [],
     "n_turnos": 0,
     "n_agentes": 0,
@@ -16,10 +18,10 @@
   "lugares": [
     {
       "id": "Capubana",
-      "nombre": "Capubana",
+      "nombre": "el cerro Capubana",
       "sitio": "Capubana",
       "locacion": null,
-      "nodo": "GUARANAO",
+      "nodo": "compartido",
       "tipo": "propio",
       "lat": 11.8183,
       "lon": -69.9524,
@@ -29,10 +31,10 @@
     },
     {
       "id": "Capubana:fuente",
-      "nombre": "Capubana · fuente",
+      "nombre": "la fuente del cerro",
       "sitio": "Capubana",
       "locacion": "fuente",
-      "nodo": "GUARANAO",
+      "nodo": "compartido",
       "tipo": "propio",
       "lat": 11.818,
       "lon": -69.952,
@@ -55,7 +57,7 @@
     },
     {
       "id": "Carirubana:orilla",
-      "nombre": "Carirubana · orilla",
+      "nombre": "la orilla de Carirubana",
       "sitio": "Carirubana",
       "locacion": "orilla",
       "nodo": "AMUAY",
@@ -68,7 +70,7 @@
     },
     {
       "id": "Carirubana:taller",
-      "nombre": "Carirubana · taller",
+      "nombre": "el taller de Carirubana",
       "sitio": "Carirubana",
       "locacion": "taller",
       "nodo": "AMUAY",
@@ -81,7 +83,7 @@
     },
     {
       "id": "Carirubana:taller_canoas",
-      "nombre": "Carirubana · taller_canoas",
+      "nombre": "el taller de canoas de Carirubana",
       "sitio": "Carirubana",
       "locacion": "taller_canoas",
       "nodo": "AMUAY",
@@ -107,7 +109,7 @@
     },
     {
       "id": "Caseto:conuco",
-      "nombre": "Caseto · conuco",
+      "nombre": "el conuco de Caseto",
       "sitio": "Caseto",
       "locacion": "conuco",
       "nodo": "AMUAY",
@@ -120,7 +122,7 @@
     },
     {
       "id": "Caseto:orilla",
-      "nombre": "Caseto · orilla",
+      "nombre": "la orilla de Caseto",
       "sitio": "Caseto",
       "locacion": "orilla",
       "nodo": "AMUAY",
@@ -133,7 +135,7 @@
     },
     {
       "id": "Caseto:taller",
-      "nombre": "Caseto · taller",
+      "nombre": "el taller de Caseto",
       "sitio": "Caseto",
       "locacion": "taller",
       "nodo": "AMUAY",
@@ -159,7 +161,7 @@
     },
     {
       "id": "El Cayude:jaguey",
-      "nombre": "El Cayude · jaguey",
+      "nombre": "el jagüey de El Cayude",
       "sitio": "El Cayude",
       "locacion": "jaguey",
       "nodo": "GUARANAO",
@@ -172,7 +174,7 @@
     },
     {
       "id": "El Cayude:matorral",
-      "nombre": "El Cayude · matorral",
+      "nombre": "el matorral de El Cayude",
       "sitio": "El Cayude",
       "locacion": "matorral",
       "nodo": "GUARANAO",
@@ -185,7 +187,7 @@
     },
     {
       "id": "El Cayude:orilla",
-      "nombre": "El Cayude · orilla",
+      "nombre": "la orilla de El Cayude",
       "sitio": "El Cayude",
       "locacion": "orilla",
       "nodo": "GUARANAO",
@@ -198,7 +200,7 @@
     },
     {
       "id": "El Cayude:punta",
-      "nombre": "El Cayude · punta",
+      "nombre": "la punta de El Cayude",
       "sitio": "El Cayude",
       "locacion": "punta",
       "nodo": "GUARANAO",
@@ -224,7 +226,7 @@
     },
     {
       "id": "Moruy:taller",
-      "nombre": "Moruy · taller",
+      "nombre": "el taller de Moruy",
       "sitio": "Moruy",
       "locacion": "taller",
       "nodo": "GUARANAO",
@@ -250,7 +252,7 @@
     },
     {
       "id": "Tacuato:conuco",
-      "nombre": "Tacuato · conuco",
+      "nombre": "el conuco de Tacuato",
       "sitio": "Tacuato",
       "locacion": "conuco",
       "nodo": "GUARANAO",
@@ -263,7 +265,7 @@
     },
     {
       "id": "Tacuato:jaguey",
-      "nombre": "Tacuato · jaguey",
+      "nombre": "el jagüey de Tacuato",
       "sitio": "Tacuato",
       "locacion": "jaguey",
       "nodo": "GUARANAO",
@@ -276,7 +278,7 @@
     },
     {
       "id": "Tacuato:matorral",
-      "nombre": "Tacuato · matorral",
+      "nombre": "el matorral de Tacuato",
       "sitio": "Tacuato",
       "locacion": "matorral",
       "nodo": "GUARANAO",
@@ -289,7 +291,7 @@
     },
     {
       "id": "Tacuato:orilla",
-      "nombre": "Tacuato · orilla",
+      "nombre": "la orilla de Tacuato",
       "sitio": "Tacuato",
       "locacion": "orilla",
       "nodo": "GUARANAO",
@@ -302,7 +304,7 @@
     },
     {
       "id": "Tacuato:salinar",
-      "nombre": "Tacuato · salinar",
+      "nombre": "el salinar de Tacuato",
       "sitio": "Tacuato",
       "locacion": "salinar",
       "nodo": "GUARANAO",
@@ -315,7 +317,7 @@
     },
     {
       "id": "Tacuato:taller",
-      "nombre": "Tacuato · taller",
+      "nombre": "el taller de Tacuato",
       "sitio": "Tacuato",
       "locacion": "taller",
       "nodo": "GUARANAO",
@@ -328,7 +330,7 @@
     },
     {
       "id": "ZA1",
-      "nombre": "ZA1 · zona de pesca",
+      "nombre": "la costa oeste",
       "sitio": "ZA1",
       "locacion": null,
       "nodo": "AMUAY",
@@ -370,7 +372,7 @@
     },
     {
       "id": "ZG2",
-      "nombre": "ZG2 · zona de pesca",
+      "nombre": "la orilla del Golfete",
       "sitio": "ZG2",
       "locacion": null,
       "nodo": "GUARANAO",
@@ -403,32 +405,10 @@
       "por_que": null
     },
     {
-      "id": "camino:Caseto",
-      "nombre": "camino de Caseto",
-      "sitio": "camino",
-      "locacion": "Caseto",
-      "nodo": "AMUAY",
-      "tipo": "camino",
-      "lat": 11.762,
-      "lon": -70.017,
-      "puntos": [
-        [
-          11.762,
-          -70.017
-        ],
-        [
-          11.822,
-          -69.983
-        ]
-      ],
-      "compartido": true,
-      "por_que": "decisión de Miguel 2026-09-17 p2 «B»: el camino Moruy–Caseto, «la alianza», compartido entre nodos"
-    },
-    {
       "id": "camino:El Cayude",
-      "nombre": "camino de El Cayude",
-      "sitio": "camino",
-      "locacion": "El Cayude",
+      "nombre": "el camino que sale de El Cayude",
+      "sitio": "El Cayude",
+      "locacion": null,
       "nodo": "GUARANAO",
       "tipo": "camino",
       "lat": 11.701,
@@ -438,14 +418,14 @@
       "por_que": null
     },
     {
-      "id": "camino:Moruy",
-      "nombre": "camino de Moruy",
-      "sitio": "camino",
-      "locacion": "Moruy",
-      "nodo": "GUARANAO",
+      "id": "camino:Moruy-Caseto",
+      "nombre": "el camino de Moruy a Caseto",
+      "sitio": "Moruy",
+      "locacion": null,
+      "nodo": "compartido",
       "tipo": "camino",
-      "lat": 11.822,
-      "lon": -69.983,
+      "lat": 11.792,
+      "lon": -70.0,
       "puntos": [
         [
           11.822,
@@ -457,7 +437,7 @@
         ]
       ],
       "compartido": true,
-      "por_que": "decisión de Miguel 2026-09-17 p2 «B»: el camino Moruy–Caseto, «la alianza», compartido entre nodos"
+      "por_que": "el elenco lo llama «la alianza»: «Caseto es el sitio de AMUAY más cercano a Moruy —unos ocho kilómetros por tierra, contra veinticinco— y ese camino corto ES la alianza: la esposa principal viene por él y el aporte de AMUAY al cerro baja por él» — 6-fusion/elenco_era2.yaml casas[los Guasicures de Caseto].razon_del_linaje"
     }
   ],
   "turnos": [],
