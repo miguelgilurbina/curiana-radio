@@ -6,7 +6,7 @@ import { getManaureFragment } from "@/lib/manaure";
 import { getResumen } from "@/lib/resumen";
 import { getAllPersonajes } from "@/lib/personajes";
 import { getRunsIndex, getParejaExperimento } from "@/lib/runs";
-import { getEscena } from "@/lib/escena";
+import { getEscenasParaElVisor } from "@/lib/escena";
 import { getAbstract, getCifrasLab, getEjemploVida } from "@/lib/abstract";
 import { getGlosasPorManaure, getGlosasPorEvento } from "@/lib/glosas";
 import Masthead from "@/components/simulador/Masthead";
@@ -52,7 +52,7 @@ export default function SimuladorPage() {
   const runsIndex = getRunsIndex();
   const runNormal = runsIndex?.runs.find((r) => r.rol === "normal");
   const experimento = runNormal ? getParejaExperimento(runNormal.id8) : null;
-  const escena = getEscena();
+  const escenas = getEscenasParaElVisor();
 
   const runs = getRunsPublicados();
   const run = getRunActivo();
@@ -160,7 +160,7 @@ export default function SimuladorPage() {
                 Visor de repetición sobre el mapa real (decisión de Miguel
                 2026-09-17, §5b del issue de la escena). Estático: lee
                 content/simulador/escena/*.json, nunca la base. */}
-            {escena && (
+            {escenas.length > 0 && (
               <section id="escena" className="mt-14 scroll-mt-24">
                 <Overline>El mundo, turno a turno</Overline>
                 <h3 className="sim-display mt-1 text-3xl font-semibold tracking-tight text-(--sim-ink) md:text-4xl">
@@ -172,7 +172,7 @@ export default function SimuladorPage() {
                   tres en un lugar cada momento del día, y la pone sobre Paraguaná. Lo que se dijo
                   en un sitio se lee pinchando el sitio.
                 </p>
-                <MapaDeEscena seed={escena} />
+                <MapaDeEscena seeds={escenas} />
               </section>
             )}
           </div>

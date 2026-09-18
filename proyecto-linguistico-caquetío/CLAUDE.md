@@ -80,6 +80,8 @@ cura y se publica en Curiana Radio (`/kaketiana`).
 | **La competencia léxica repetía el mismo referente cada día** | `auto_mode` empezaba `REFERENTES_NOVEDOSOS` de cero en cada run, y un día de seis turnos sólo llega al primero (turno 5): los tres días de la serie A volvieron a nombrar «las cuentas brillantes» (10 de 12 respuestas en el turno 5 de CADA día) y los otros nueve referentes no salieron nunca. «La koiné sobrevivió la noche» era en parte el instrumento re-enseñando el referente. Desde el 2026-09-17 el estado guarda `referentes_introducidos` y `--continuar` sigue la secuencia (día 2: el cometa, día 3: el eclipse…); `referentes_pendientes_de(state)` es la única puerta. Un run nuevo sí la empieza de cero |
 | **El ámbito es el LUGAR, y la puerta es una** | Con `--escena`, lo que un agente ve de la comunidad ya no es de los 63: es de donde está **ahora**. Las cuatro vías (V1 propuestas, V2 adoptadas, V3 competencias, V4 el campo que pondera la muestra) reciben `ambito` y **sólo** lo sacan de `curiana_escena.ambito_de(agente, state)` — nunca del nodo, que no es lo mismo: Humohumo (GUARANAO) y Bajari (AMUAY) andan los dos el camino Moruy–Caseto y ahí **sí** se oyen (el par más cercano del mapa, 7,6 km, y es ENTRE nodos). Ojo al filtrar: V1 va por dónde se PROPUSO (`Neologismo.ambito`) y V2 por dónde se ADOPTÓ (`Neologismo.adoptado_en`). `[Lo que se dijo aquí]` trae el MOMENTO ANTERIOR, nunca el mismo turno —eso es V1 con otro nombre y es lo que produjo los tres cruces de Δturnos = 0 del día 1 de la serie B— y se guarda al CERRAR el turno en `state.dichos_del_turno_anterior`, que `--continuar` hereda. Sin `--escena`, `ambito=None` y **nada cambia**: hay un solo ámbito, el nulo, y el prompt es byte a byte el de siempre (test de tres turnos comparados carácter a carácter, era 1 y era 2). Medido en el ensayo de 6 turnos: V1 baja de 4,12 a 1,71 formas por prompt, V2 de 0,97 a 0,06 y V3 de 3,86 a 0,81; el día de Capubana vuelven a 4,10 / 0,97 / 3,86 porque los 63 comparten ámbito, y el prompt medio BAJA un 3,3 % |
 | **El Observer no se toca, así que el ámbito entra por `situar()`** | `registrar_neologismo()` y `adoptar()` los llama `curiana_observer`, que es el registro de la medición y no se modifica. El orquestador declara el lugar ANTES con `lexico.situar(agente, ambito_de(...))` y de ahí lo leen las dos. Si alguien llama a `adoptar()` sin haber situado al agente, la adopción se registra con ámbito `None` y la vía `dos-ambitos` deja de poder nacer — silenciosamente |
+| **La escena tiene DOS tablas y sólo una corrió** | `6-fusion/escena_por_lugar_propuesta_2026-09-17.yaml` es de dónde salió la decisión; `6-fusion/escena_era2.yaml` → `curiana_escena_era2.py` es lo que el motor usa. No son el mismo mapa: en la propuesta el camino compartido son **dos** entradas (`camino:Moruy` y `camino:Caseto`) y en la decidida es **una** (`camino:Moruy-Caseto`), y el Capubana sale GUARANAO en vez de compartido. `export_escena_seed.py` leía la propuesta, así que el primer run con gente (`b7bc51dc`, 2026-09-18) dibujó «sin coordenada, aparte» justo el único lugar donde los dos nodos se encontraron ese día — las tres escenas de contacto. La puerta es `curiana_escena.lugares()`, la misma que `ambito_de`. Lo que un lugar no es un punto —el área de una zona de pesca, los dos extremos de un camino nombrado— va en `lugares[].puntos` de la tabla decidida, no en quien dibuja |
+| **`agent_responses.lugar` hay que PASARLO** | `save_agent_response` lo acepta desde #155 y `presencias` se escribía sola, así que parecía hecho: el día 1 de la serie C cerró con **0 de 72** filas con lugar y 378 presencias. Va el ámbito del hablante (`ambito_de`, la misma puerta que filtra lo que ve), nunca el nodo. `lugar=None` es byte a byte lo de antes: la columna ni se menciona en el insert |
 | **La longitud del prompt predice el score** | r = −0.48. Cualquier análisis por agente tiene que controlarla, o estarás midiendo cuánto escribiste tú. Ver `ANALISIS_BASE_2026-08-06.md` |
 
 ---
@@ -119,13 +121,15 @@ python analizar_nodos.py --run <id8> --lugar   # la ESCENA (tabla `presencias`):
                                   # informe es el de siempre; sobre un run anterior a la
                                   # escena avisa y sigue
 python export_escena_seed.py --run <id8> [--cadena]   # el seed del VISOR de escena:
-                                  # content/simulador/escena/<id8>.json — los 29 lugares
-                                  # con su lat/lon (leídas de la tabla derivada, no
-                                  # recalculadas), quién está dónde en cada turno
-                                  # (`presencias`) y qué dijo ahí (`agent_responses`,
-                                  # recortado al tope declarado). `--sin-base` escribe el
-                                  # seed vacío con sólo el mapa, para que la web construya
-                                  # antes del primer run con escena
+                                  # content/simulador/escena/<id8>.json — los lugares de la
+                                  # tabla DECIDIDA con su lat/lon, su nodo y sus puntos
+                                  # (leídos por `curiana_escena.lugares()`, no recalculados),
+                                  # quién está dónde en cada turno (`presencias`) y qué dijo
+                                  # ahí (`agent_responses`, recortado al tope declarado).
+                                  # `--sin-base` escribe el seed vacío con sólo el mapa.
+                                  # La web lista TODOS los seeds del directorio y deja
+                                  # elegir el run (lib/escena.ts: el índice es el
+                                  # directorio, leído en el build; no hay index.json)
 
 python compilar_corpus.py --check # valida 3-mundo/corpus/
 python compilar_asentamientos.py  # los nodos de la esfera: existencia y época
