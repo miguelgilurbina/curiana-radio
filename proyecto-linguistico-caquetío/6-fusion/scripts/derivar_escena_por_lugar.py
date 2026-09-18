@@ -1093,7 +1093,14 @@ def _centroide(puntos: list) -> tuple:
 def lugares_del_canon(ag: list) -> dict:
     """Cada lugar de la tabla decidida, con su sitio, su nodo, su coordenada y
     su glosa. Ningún lugar se queda sin punto: el propio, el de su aldea, el
-    centroide de su zona o el punto medio de su camino."""
+    centroide de su zona o el punto medio de su camino.
+
+    Y lo que un punto solo no dice: `puntos`, la LÍNEA de los lugares que no
+    son un punto —el área que toca una zona de pesca, los dos extremos de un
+    camino que el canon nombra—. Va aquí y no en quien dibuja, para que la
+    tabla decidida sea la única puerta también del mapa (el exportador del
+    visor la lee entera; antes leía la PROPUESTA y por eso el camino
+    Moruy–Caseto, que sólo existe aquí, salía «sin coordenada»)."""
     pts = puntos_del_canon()
     zonas = zonas_de_pesca_puntos()
     nodo_sitio = _nodo_de_sitio()
@@ -1105,15 +1112,23 @@ def lugares_del_canon(ag: list) -> dict:
         tipo, dato = punto_de_lugar(lug, pts, zonas)
         sitio = None
         extremos = []
+        linea = None
         if lug.startswith("camino:"):
             tipo = "camino"
             extremos = lug.split(":", 1)[1].split("-")
             puntos = [pts[e] for e in extremos if e in pts]
             lat, lon = (round(sum(p[0] for p in puntos) / len(puntos), 5),
                         round(sum(p[1] for p in puntos) / len(puntos), 5)) if puntos else (None, None)
+            # Un camino con sus DOS extremos nombrados se dibuja de punta a
+            # punta; al que sale de un sitio y no dice adónde no se le inventa
+            # destino (§5b: «lo que falta no lo tiene el canon»).
+            if len(puntos) == len(extremos) > 1:
+                linea = [[p[0], p[1]] for p in puntos]
         elif lug in zonas:
             tipo = "zona"
             lat, lon = _centroide(zonas[lug])
+            # Una zona no es un punto: es el área de sus lugares.
+            linea = [[p[1], p[2]] for p in zonas[lug]]
         else:
             sitio = lug.split(":")[0]
             lat, lon = (dato if isinstance(dato, tuple) else (None, None))
@@ -1134,6 +1149,7 @@ def lugares_del_canon(ag: list) -> dict:
             "lat": lat, "lon": lon, "glosa": glosa_de_lugar(lug),
             "locacion": lug.split(":", 1)[1] if (":" in lug and not lug.startswith("camino:")) else None,
             "extremos": extremos or None,
+            "puntos": linea,
             "compartido": compartidos.get(lug),
         }
     return out

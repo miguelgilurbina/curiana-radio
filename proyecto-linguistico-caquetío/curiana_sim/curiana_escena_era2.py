@@ -44,6 +44,7 @@ LUGARES = {
         'glosa': 'el cerro Capubana',
         'locacion': None,
         'extremos': None,
+        'puntos': None,
         'compartido': 'estructura_social_era2.yaml decision_creativa_2026-09-14.capubana',
     },
     'Capubana:fuente': {
@@ -55,6 +56,7 @@ LUGARES = {
         'glosa': 'la fuente del cerro',
         'locacion': 'fuente',
         'extremos': None,
+        'puntos': None,
         'compartido': 'clima_era2.yaml abre_y_cierra.Capubana (NO CIERRA NUNCA)',
     },
     'Carirubana': {
@@ -66,6 +68,7 @@ LUGARES = {
         'glosa': 'Carirubana',
         'locacion': None,
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'Carirubana:orilla': {
@@ -77,6 +80,7 @@ LUGARES = {
         'glosa': 'la orilla de Carirubana',
         'locacion': 'orilla',
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'Carirubana:taller': {
@@ -88,6 +92,7 @@ LUGARES = {
         'glosa': 'el taller de Carirubana',
         'locacion': 'taller',
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'Carirubana:taller_canoas': {
@@ -99,6 +104,7 @@ LUGARES = {
         'glosa': 'el taller de canoas de Carirubana',
         'locacion': 'taller_canoas',
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'Caseto': {
@@ -110,6 +116,7 @@ LUGARES = {
         'glosa': 'Caseto',
         'locacion': None,
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'Caseto:conuco': {
@@ -121,6 +128,7 @@ LUGARES = {
         'glosa': 'el conuco de Caseto',
         'locacion': 'conuco',
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'Caseto:orilla': {
@@ -132,6 +140,7 @@ LUGARES = {
         'glosa': 'la orilla de Caseto',
         'locacion': 'orilla',
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'Caseto:taller': {
@@ -143,6 +152,7 @@ LUGARES = {
         'glosa': 'el taller de Caseto',
         'locacion': 'taller',
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'El Cayude': {
@@ -154,6 +164,7 @@ LUGARES = {
         'glosa': 'El Cayude',
         'locacion': None,
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'El Cayude:jaguey': {
@@ -165,6 +176,7 @@ LUGARES = {
         'glosa': 'el jagüey de El Cayude',
         'locacion': 'jaguey',
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'El Cayude:matorral': {
@@ -176,6 +188,7 @@ LUGARES = {
         'glosa': 'el matorral de El Cayude',
         'locacion': 'matorral',
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'El Cayude:orilla': {
@@ -187,6 +200,7 @@ LUGARES = {
         'glosa': 'la orilla de El Cayude',
         'locacion': 'orilla',
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'El Cayude:punta': {
@@ -198,6 +212,7 @@ LUGARES = {
         'glosa': 'la punta de El Cayude',
         'locacion': 'punta',
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'Moruy': {
@@ -209,6 +224,7 @@ LUGARES = {
         'glosa': 'Moruy',
         'locacion': None,
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'Moruy:taller': {
@@ -220,6 +236,7 @@ LUGARES = {
         'glosa': 'el taller de Moruy',
         'locacion': 'taller',
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'Tacuato': {
@@ -231,6 +248,7 @@ LUGARES = {
         'glosa': 'Tacuato',
         'locacion': None,
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'Tacuato:conuco': {
@@ -242,6 +260,7 @@ LUGARES = {
         'glosa': 'el conuco de Tacuato',
         'locacion': 'conuco',
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'Tacuato:jaguey': {
@@ -253,6 +272,7 @@ LUGARES = {
         'glosa': 'el jagüey de Tacuato',
         'locacion': 'jaguey',
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'Tacuato:matorral': {
@@ -264,6 +284,7 @@ LUGARES = {
         'glosa': 'el matorral de Tacuato',
         'locacion': 'matorral',
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'Tacuato:orilla': {
@@ -275,6 +296,7 @@ LUGARES = {
         'glosa': 'la orilla de Tacuato',
         'locacion': 'orilla',
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'Tacuato:salinar': {
@@ -286,6 +308,7 @@ LUGARES = {
         'glosa': 'el salinar de Tacuato',
         'locacion': 'salinar',
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'Tacuato:taller': {
@@ -297,6 +320,7 @@ LUGARES = {
         'glosa': 'el taller de Tacuato',
         'locacion': 'taller',
         'extremos': None,
+        'puntos': None,
         'compartido': None,
     },
     'ZA1': {
@@ -308,6 +332,7 @@ LUGARES = {
         'glosa': 'la costa oeste',
         'locacion': None,
         'extremos': None,
+        'puntos': [[11.775, -70.241], [11.738, -70.234], [11.745, -70.212], [11.825, -70.252], [11.855, -70.301], [11.98, -70.257], [12.083, -70.217]],
         'compartido': None,
     },
     'ZG2': {
@@ -319,6 +344,7 @@ LUGARES = {
         'glosa': 'la orilla del Golfete',
         'locacion': None,
         'extremos': None,
+        'puntos': [[11.64, -70.069], [11.701, -69.957], [11.649, -69.925], [11.708, -69.841], [11.675, -69.799]],
         'compartido': None,
     },
     'camino:El Cayude': {
@@ -330,6 +356,7 @@ LUGARES = {
         'glosa': 'el camino que sale de El Cayude',
         'locacion': None,
         'extremos': ['El Cayude'],
+        'puntos': None,
         'compartido': None,
     },
     'camino:Moruy-Caseto': {
@@ -341,6 +368,7 @@ LUGARES = {
         'glosa': 'el camino de Moruy a Caseto',
         'locacion': None,
         'extremos': ['Moruy', 'Caseto'],
+        'puntos': [[11.822, -69.983], [11.762, -70.017]],
         'compartido': 'el elenco lo llama «la alianza»: «Caseto es el sitio de AMUAY más cercano a Moruy —unos ocho kilómetros por tierra, contra veinticinco— y ese camino corto ES la alianza: la esposa principal viene por él y el aporte de AMUAY al cerro baja por él» — 6-fusion/elenco_era2.yaml casas[los Guasicures de Caseto].razon_del_linaje',
     },
 }

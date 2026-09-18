@@ -723,6 +723,7 @@ lugares:
     glosa: el cerro Capubana
     locacion: null
     extremos: null
+    puntos: null
     compartido: estructura_social_era2.yaml decision_creativa_2026-09-14.capubana
   Capubana:fuente:
     tipo: locacion
@@ -733,6 +734,7 @@ lugares:
     glosa: la fuente del cerro
     locacion: fuente
     extremos: null
+    puntos: null
     compartido: clima_era2.yaml abre_y_cierra.Capubana (NO CIERRA NUNCA)
   Carirubana:
     tipo: aldea
@@ -743,6 +745,7 @@ lugares:
     glosa: Carirubana
     locacion: null
     extremos: null
+    puntos: null
     compartido: null
   Carirubana:orilla:
     tipo: locacion
@@ -753,6 +756,7 @@ lugares:
     glosa: la orilla de Carirubana
     locacion: orilla
     extremos: null
+    puntos: null
     compartido: null
   Carirubana:taller:
     tipo: locacion
@@ -763,6 +767,7 @@ lugares:
     glosa: el taller de Carirubana
     locacion: taller
     extremos: null
+    puntos: null
     compartido: null
   Carirubana:taller_canoas:
     tipo: locacion
@@ -773,6 +778,7 @@ lugares:
     glosa: el taller de canoas de Carirubana
     locacion: taller_canoas
     extremos: null
+    puntos: null
     compartido: null
   Caseto:
     tipo: aldea
@@ -783,6 +789,7 @@ lugares:
     glosa: Caseto
     locacion: null
     extremos: null
+    puntos: null
     compartido: null
   Caseto:conuco:
     tipo: locacion
@@ -793,6 +800,7 @@ lugares:
     glosa: el conuco de Caseto
     locacion: conuco
     extremos: null
+    puntos: null
     compartido: null
   Caseto:orilla:
     tipo: locacion
@@ -803,6 +811,7 @@ lugares:
     glosa: la orilla de Caseto
     locacion: orilla
     extremos: null
+    puntos: null
     compartido: null
   Caseto:taller:
     tipo: locacion
@@ -813,6 +822,7 @@ lugares:
     glosa: el taller de Caseto
     locacion: taller
     extremos: null
+    puntos: null
     compartido: null
   El Cayude:
     tipo: aldea
@@ -823,6 +833,7 @@ lugares:
     glosa: El Cayude
     locacion: null
     extremos: null
+    puntos: null
     compartido: null
   El Cayude:jaguey:
     tipo: locacion
@@ -833,6 +844,7 @@ lugares:
     glosa: el jagüey de El Cayude
     locacion: jaguey
     extremos: null
+    puntos: null
     compartido: null
   El Cayude:matorral:
     tipo: locacion
@@ -843,6 +855,7 @@ lugares:
     glosa: el matorral de El Cayude
     locacion: matorral
     extremos: null
+    puntos: null
     compartido: null
   El Cayude:orilla:
     tipo: locacion
@@ -853,6 +866,7 @@ lugares:
     glosa: la orilla de El Cayude
     locacion: orilla
     extremos: null
+    puntos: null
     compartido: null
   El Cayude:punta:
     tipo: locacion
@@ -863,6 +877,7 @@ lugares:
     glosa: la punta de El Cayude
     locacion: punta
     extremos: null
+    puntos: null
     compartido: null
   Moruy:
     tipo: aldea
@@ -873,6 +888,7 @@ lugares:
     glosa: Moruy
     locacion: null
     extremos: null
+    puntos: null
     compartido: null
   Moruy:taller:
     tipo: locacion
@@ -883,6 +899,7 @@ lugares:
     glosa: el taller de Moruy
     locacion: taller
     extremos: null
+    puntos: null
     compartido: null
   Tacuato:
     tipo: aldea
@@ -893,6 +910,7 @@ lugares:
     glosa: Tacuato
     locacion: null
     extremos: null
+    puntos: null
     compartido: null
   Tacuato:conuco:
     tipo: locacion
@@ -903,6 +921,7 @@ lugares:
     glosa: el conuco de Tacuato
     locacion: conuco
     extremos: null
+    puntos: null
     compartido: null
   Tacuato:jaguey:
     tipo: locacion
@@ -913,6 +932,7 @@ lugares:
     glosa: el jagüey de Tacuato
     locacion: jaguey
     extremos: null
+    puntos: null
     compartido: null
   Tacuato:matorral:
     tipo: locacion
@@ -923,6 +943,7 @@ lugares:
     glosa: el matorral de Tacuato
     locacion: matorral
     extremos: null
+    puntos: null
     compartido: null
   Tacuato:orilla:
     tipo: locacion
@@ -933,6 +954,7 @@ lugares:
     glosa: la orilla de Tacuato
     locacion: orilla
     extremos: null
+    puntos: null
     compartido: null
   Tacuato:salinar:
     tipo: locacion
@@ -943,6 +965,7 @@ lugares:
     glosa: el salinar de Tacuato
     locacion: salinar
     extremos: null
+    puntos: null
     compartido: null
   Tacuato:taller:
     tipo: locacion
@@ -953,6 +976,7 @@ lugares:
     glosa: el taller de Tacuato
     locacion: taller
     extremos: null
+    puntos: null
     compartido: null
   ZA1:
     tipo: zona
@@ -963,6 +987,21 @@ lugares:
     glosa: la costa oeste
     locacion: null
     extremos: null
+    puntos:
+    - - 11.775
+      - -70.241
+    - - 11.738
+      - -70.234
+    - - 11.745
+      - -70.212
+    - - 11.825
+      - -70.252
+    - - 11.855
+      - -70.301
+    - - 11.98
+      - -70.257
+    - - 12.083
+      - -70.217
     compartido: null
   ZG2:
     tipo: zona
@@ -973,6 +1012,17 @@ lugares:
     glosa: la orilla del Golfete
     locacion: null
     extremos: null
+    puntos:
+    - - 11.64
+      - -70.069
+    - - 11.701
+      - -69.957
+    - - 11.649
+      - -69.925
+    - - 11.708
+      - -69.841
+    - - 11.675
+      - -69.799
     compartido: null
   camino:El Cayude:
     tipo: camino
@@ -984,6 +1034,7 @@ lugares:
     locacion: null
     extremos:
     - El Cayude
+    puntos: null
     compartido: null
   camino:Moruy-Caseto:
     tipo: camino
@@ -996,6 +1047,11 @@ lugares:
     extremos:
     - Moruy
     - Caseto
+    puntos:
+    - - 11.822
+      - -69.983
+    - - 11.762
+      - -70.017
     compartido: 'el elenco lo llama «la alianza»: «Caseto es el sitio de AMUAY más cercano
       a Moruy —unos ocho kilómetros por tierra, contra veinticinco— y ese camino corto ES
       la alianza: la esposa principal viene por él y el aporte de AMUAY al cerro baja por

@@ -3,13 +3,17 @@
 PR 10 «escena: el mapa» (decisión 10 de Miguel, 2026-09-17). Lo que hay que
 vigilar aquí es que el JSON que come la web diga la verdad:
 
-  - que el catálogo de lugares sea **el que la tabla derivada ya resolvió** —
-    29 lugares, 8 con punto propio, 16 heredando el de su aldea, 2 áreas y 3
-    caminos— y no una resolución nueva inventada aquí;
-  - que el nodo de un lugar salga MEDIDO de quién lo trabaja, y que los
-    compartidos sean los declarados (el Capubana y el camino Moruy–Caseto);
+  - que el catálogo de lugares sea **el de la tabla DECIDIDA** —la que corrió:
+    28 lugares, 8 con punto propio, 16 heredando el de su aldea, 2 áreas y 2
+    caminos— y no una resolución nueva inventada aquí, ni la PROPUESTA de la
+    que la tabla salió (leerla es leer otro mapa: allí el camino de la alianza
+    son dos entradas y en la decidida es una, y por eso el primer run con
+    gente lo dibujó «sin coordenada, aparte»);
+  - que el nodo de un lugar y su marca de compartido sean los que la tabla
+    decidida declara (el Capubana, su fuente y el camino Moruy–Caseto);
   - que sin filas el seed salga **vacío y válido**, con el mapa entero y sin
-    nadie encima: es el estado de hoy, porque ningún run ha corrido con escena;
+    nadie encima: es lo que escribe `--sin-base` y lo que la web enseña
+    mientras no haya un seed con gente;
   - que el texto se recorte al tope DECLARADO y que el JSON lo diga;
   - que el lugar de una respuesta lo mande `presencias` y que una discrepancia
     con `agent_responses.lugar` se AVISE en vez de elegirse en silencio.
@@ -32,8 +36,8 @@ RUN_PADRE = "3973d317-1111-2222-3333-444444444444"
 # Las claves que consume `lib/escena.ts` en la web. Si cambian, la página rompe.
 CLAVES_SEED = {"version", "generado", "vacio", "tope_texto", "run", "lugares",
                "turnos", "avisos"}
-CLAVES_RUN = {"id8", "run_id", "cadena", "started_at", "dias", "n_turnos",
-              "n_agentes", "n_presencias"}
+CLAVES_RUN = {"id8", "run_id", "cadena", "started_at", "serie", "brazo",
+              "dias", "n_turnos", "n_agentes", "n_presencias"}
 CLAVES_LUGAR = {"id", "nombre", "sitio", "locacion", "nodo", "tipo", "lat",
                 "lon", "puntos", "compartido", "por_que"}
 CLAVES_TURNO = {"i", "run", "dia", "turno", "momento", "n_presencias", "escenas"}
@@ -42,21 +46,35 @@ CLAVES_ESCENA = {"lugar", "n", "por_nodo", "contacto", "presentes", "dichos"}
 
 @pytest.fixture(scope="module")
 def catalogo():
-    return ees.catalogo_de_lugares(ees.cargar_propuesta())
+    return ees.catalogo_de_lugares(ees.cargar_tabla())
 
 
 # ══════════════════════════════════════════════════════════════════════
-# El catálogo: se LEE de la tabla derivada, no se recalcula
+# El catálogo: se LEE de la tabla DECIDIDA, no se recalcula
 # ══════════════════════════════════════════════════════════════════════
 
-def test_los_29_lugares_con_la_resolucion_que_la_tabla_ya_hizo(catalogo):
-    """§5b los midió: 8 propios, 16 heredados, 2 zonas, 3 caminos, 0 sin nada."""
-    assert len(catalogo) == 29
+def test_los_28_lugares_con_la_resolucion_que_la_tabla_ya_hizo(catalogo):
+    """8 propios, 16 heredados, 2 zonas, 2 caminos, 0 sin nada: en la tabla
+    decidida ningún lugar se queda sin punto (§5b)."""
+    assert len(catalogo) == 28
     tipos = {}
     for l in catalogo:
         tipos[l["tipo"]] = tipos.get(l["tipo"], 0) + 1
-    assert tipos == {"propio": 8, "heredado": 16, "zona": 2, "camino": 3}
+    assert tipos == {"propio": 8, "heredado": 16, "zona": 2, "camino": 2}
     assert all(l["lat"] is not None and l["lon"] is not None for l in catalogo)
+
+
+def test_el_catalogo_es_el_que_corrio_y_no_la_propuesta(catalogo):
+    """La puerta es `curiana_escena.lugares()`: el catálogo del seed y la
+    tabla con la que el motor repartió a los 63 son la MISMA."""
+    import curiana_escena
+    por_id = {l["id"]: l for l in catalogo}
+    assert set(por_id) == set(curiana_escena.lugares())
+    # el camino de la alianza existe SÓLO en la decidida, y con su coordenada
+    assert por_id["camino:Moruy-Caseto"]["lat"] is not None
+    assert "camino:Moruy" not in por_id and "camino:Caseto" not in por_id
+    # y el nombre es la glosa del canon, no una etiqueta armada aquí
+    assert por_id["Tacuato:orilla"]["nombre"] == "la orilla de Tacuato"
 
 
 def test_cada_lugar_trae_las_claves_que_la_web_espera(catalogo):
@@ -64,21 +82,24 @@ def test_cada_lugar_trae_las_claves_que_la_web_espera(catalogo):
         assert set(l) == CLAVES_LUGAR
 
 
-def test_el_nodo_de_un_lugar_es_el_de_quien_lo_trabaja(catalogo):
-    """No hay frontera declarada: el nodo sale del reparto (§0.2 del diseño)."""
+def test_el_nodo_de_un_lugar_es_el_que_la_tabla_declara(catalogo):
+    """No hay frontera programada: el nodo de un lugar es el de quien lo
+    trabaja y la tabla decidida ya lo midió (§0.2 del diseño). Se dice como lo
+    dice la web: `compartido` en minúscula, que es el tipo `NodoEscena`."""
     por_id = {l["id"]: l for l in catalogo}
     assert por_id["Tacuato:salinar"]["nodo"] == "GUARANAO"
     assert por_id["Carirubana:orilla"]["nodo"] == "AMUAY"
     assert por_id["ZG2"]["nodo"] == "GUARANAO"
     assert por_id["ZA1"]["nodo"] == "AMUAY"
-    assert all(l["nodo"] for l in catalogo)
+    # El cerro no es de nadie. Leyendo la propuesta salía GUARANAO.
+    assert por_id["Capubana"]["nodo"] == "compartido"
+    assert all(l["nodo"] in ("GUARANAO", "AMUAY", "compartido") for l in catalogo)
 
 
 def test_los_compartidos_son_los_declarados_y_nadie_mas(catalogo):
     """El Capubana (con su fuente) y el camino Moruy–Caseto: decisión p2 «B»."""
     compartidos = {l["id"] for l in catalogo if l["compartido"]}
-    assert compartidos == {"Capubana", "Capubana:fuente",
-                           "camino:Moruy", "camino:Caseto"}
+    assert compartidos == {"Capubana", "Capubana:fuente", "camino:Moruy-Caseto"}
     assert all(l["por_que"] for l in catalogo if l["compartido"])
 
 
@@ -86,10 +107,10 @@ def test_el_camino_de_la_alianza_tiene_sus_dos_extremos(catalogo):
     """Moruy–Caseto es el único par que el canon nombra; a los demás caminos no
     se les inventa destino."""
     por_id = {l["id"]: l for l in catalogo}
-    assert por_id["camino:Moruy"]["puntos"] == [[11.822, -69.983], [11.762, -70.017]]
-    assert por_id["camino:Caseto"]["puntos"] == [[11.762, -70.017], [11.822, -69.983]]
+    alianza = por_id["camino:Moruy-Caseto"]
+    assert alianza["puntos"] == [[11.822, -69.983], [11.762, -70.017]]
+    assert alianza["sitio"] == "Moruy" and alianza["compartido"] is True
     assert por_id["camino:El Cayude"]["puntos"] is None
-    assert por_id["camino:Moruy"]["sitio"] == "Moruy"
 
 
 def test_una_zona_lleva_sus_puntos_y_no_solo_uno(catalogo):
@@ -132,8 +153,8 @@ def test_sin_filas_el_seed_es_vacio_valido_y_con_el_mapa_entero():
     assert set(seed["run"]) == CLAVES_RUN
     assert seed["vacio"] is True
     assert seed["turnos"] == []
-    assert len(seed["lugares"]) == 29        # el mapa se dibuja igual
-    assert json.loads(json.dumps(seed, ensure_ascii=False))["version"] == 1
+    assert len(seed["lugares"]) == 28        # el mapa se dibuja igual
+    assert json.loads(json.dumps(seed, ensure_ascii=False))["version"] == 2
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -198,7 +219,7 @@ def test_un_run_sin_escena_no_deja_nada_en_el_mapa(catalogo):
     seed = _seed_del_mock(db, [RUN], catalogo)
     assert seed["vacio"] is True
     assert seed["turnos"] == []
-    assert len(seed["lugares"]) == 29
+    assert len(seed["lugares"]) == 28
 
 
 def test_la_cadena_ordena_por_run_y_no_por_numero_de_dia(catalogo):
@@ -340,7 +361,41 @@ def test_un_lugar_que_la_tabla_no_conoce_se_dibuja_aparte_y_se_avisa(catalogo):
         presencias=[inventado], respuestas=[], turnos=[], lugares=catalogo)
     fuera = [l for l in seed["lugares"] if l["id"] == "Golfete:orilla"]
     assert fuera and fuera[0]["tipo"] == "sin-coordenada" and fuera[0]["lat"] is None
-    assert any("y no en la tabla derivada" in a for a in seed["avisos"])
+    assert any("y no en la tabla decidida" in a for a in seed["avisos"])
+
+
+def test_todo_lugar_de_presencias_tiene_punto_o_sale_en_los_avisos(catalogo):
+    """EL INVARIANTE DEL VISOR, y la razón de leer la tabla decidida: un lugar
+    donde la escena puso gente o se dibuja en su sitio o se dice que no se
+    pudo. Lo que no puede pasar —y pasó con `camino:Moruy-Caseto` el
+    2026-09-18— es que un lugar del canon caiga en el saco de los avisos por
+    estar leyendo otra tabla.
+
+    Se prueba con LOS 28 lugares que la escena reparte, que son exactamente
+    los que `presencias` escribe, más uno inventado."""
+    import curiana_escena
+    de_la_tabla = sorted(curiana_escena.lugares())
+    usados = de_la_tabla + ["Golfete:orilla"]
+    presencias = [
+        {"run_id": RUN, "turn_id": T1, "day": 1, "turn_num": 1,
+         "momento": "amanecer", "agent_name": f"agente{i:02d}",
+         "lugar": lugar, "nodo": "GUARANAO"}
+        for i, lugar in enumerate(usados)
+    ]
+    seed = ees.construir_seed(
+        run_meta={"id8": RUN[:8], "run_id": RUN, "run_ids": [RUN]},
+        presencias=presencias, respuestas=[], turnos=TURNOS_FIXTURE,
+        lugares=catalogo)
+
+    por_id = {l["id"]: l for l in seed["lugares"]}
+    for lugar in usados:
+        assert lugar in por_id, lugar
+        avisado = any(f"«{lugar}»" in a for a in seed["avisos"])
+        assert por_id[lugar]["lat"] is not None or avisado, lugar
+    # y el único avisado es el inventado: los 28 del canon tienen su punto
+    sin_punto = [l["id"] for l in seed["lugares"] if l["lat"] is None]
+    assert sin_punto == ["Golfete:orilla"]
+    assert all(por_id[l]["lat"] is not None for l in de_la_tabla)
 
 
 def test_el_seed_del_fixture_serializa_a_json(seed):

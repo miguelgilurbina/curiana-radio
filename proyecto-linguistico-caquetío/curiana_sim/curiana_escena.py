@@ -224,6 +224,22 @@ def nodo_de(lugar: Optional[str]) -> Optional[str]:
     return (_tabla.LUGARES.get(lugar) or {}).get("nodo")
 
 
+def lugares() -> dict:
+    """EL CATÁLOGO de la tabla decidida: `{lugar: {tipo, sitio, nodo, lat,
+    lon, glosa, locacion, extremos, puntos, compartido}}`.
+
+    La misma puerta que `ambito_de`, para quien necesita el mapa entero y no
+    un agente: hoy el exportador del visor (`export_escena_seed.py`), que
+    antes leía la PROPUESTA —y por eso `camino:Moruy-Caseto`, que sólo existe
+    en la tabla DECIDIDA, salía «sin coordenada»—. Copia superficial de cada
+    fila: el catálogo es de lectura.
+
+    `{}` si no hay tabla (la era 1 no tiene canon de sitios)."""
+    if _tabla is None:                                 # pragma: no cover
+        return {}
+    return {lugar: dict(fila) for lugar, fila in _tabla.LUGARES.items()}
+
+
 # ══════════════════════════════════════════════════════════════════════
 # 3. [Aquí estás] — lo que el agente ve
 # ══════════════════════════════════════════════════════════════════════

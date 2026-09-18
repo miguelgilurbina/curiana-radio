@@ -22,16 +22,22 @@ vistazo.
 
 De dónde sale cada cosa
 -----------------------
-* **Los lugares y sus coordenadas** — de
-  `6-fusion/escena_por_lugar_propuesta_2026-09-17.yaml`, que ya resolvió los 29
-  lugares de los tres períodos contra `sitios_era2.yaml`, `elenco_era2.yaml`,
-  `estructura_social_era2.yaml` y el `mapa_vivo` de `2-lengua/toponimos.yaml`:
-  **8 con punto propio, 16 heredando el de su aldea, 2 áreas y 3 caminos**. Esa
-  resolución no se rehace aquí, se lee (§5b: «lo que falta para afinarlo son
-  puntos de detalle, y ésos no los tiene el canon — no se inventan»).
-* **El nodo de cada lugar** — medido del `§ocupacion` de esa misma tabla: un
-  lugar es del nodo de quien lo trabaja, y si lo tocan los dos es `compartido`.
-  No se programa ninguna frontera.
+* **Los lugares, sus coordenadas y sus nodos** — de la tabla **DECIDIDA**, por
+  la única puerta que tiene: `curiana_escena.lugares()`, que lee el módulo
+  generado `curiana_escena_era2.py` (y ése, `6-fusion/escena_era2.yaml`, que
+  deriva del elenco). Es la tabla que CORRIÓ: los lugares que `presencias`
+  escribe son los que ella nombra. Esa resolución no se rehace aquí, se lee
+  (§5b: «lo que falta para afinarlo son puntos de detalle, y ésos no los tiene
+  el canon — no se inventan»).
+
+  ⚠ Hasta el 2026-09-18 esto leía la **propuesta** de la que la tabla salió
+  (`6-fusion/escena_por_lugar_propuesta_2026-09-17.yaml`), que es otro mapa:
+  allí el camino compartido son dos entradas (`camino:Moruy` y
+  `camino:Caseto`) y en la decidida es una (`camino:Moruy-Caseto`). El primer
+  run con gente —`b7bc51dc`, día 1 de la serie C— dibujó por eso el camino de
+  la alianza «sin coordenada, aparte», y el Capubana salió GUARANAO en vez de
+  compartido. El nodo de un lugar, y qué lugar es compartido, los dice la
+  tabla decidida: no se vuelven a medir aquí.
 * **Quién estaba dónde** — de `presencias` (`presencias_de` /
   `presencias_de_cadena`, que paginan: 378 filas por día contra el
   `max_rows`=1000 de PostgREST).
@@ -40,11 +46,15 @@ De dónde sale cada cosa
   respuesta lo manda `presencias`; `agent_responses.lugar` es el atajo
   desnormalizado y si los dos discrepan se AVISA en vez de elegir en silencio.
 
-Esquema del JSON (versión 1)
+Esquema del JSON (versión 2)
 ----------------------------
+La 2 es la 1 con dos campos más en `run` —`serie` y `brazo`, que es lo que la
+página necesita para dejar elegir el run— y con el catálogo leído de la tabla
+decidida. Las claves de la 1 siguen todas ahí y significan lo mismo.
+
 ```
 {
-  "version": 1,
+  "version": 2,
   "generado": "2026-09-17T…Z",        # ISO-8601 UTC
   "vacio": false,                      # true si no hay ni una presencia
   "tope_texto": 220,                   # caracteres por intervención
@@ -53,6 +63,8 @@ Esquema del JSON (versión 1)
     "run_id": "0193873d-…",
     "cadena": ["a1b2c3d4", "0193873d"],# id8 raíz→hoja; [id8] si no es cadena
     "started_at": "…" | null,
+    "serie": "era2-c" | null,          # la etiqueta del set, de la config
+    "brazo": "con escena, Capubana cada 3" | null,   # curiana_cadena
     "dias": [1, 2],
     "n_turnos": 12,
     "n_agentes": 63,
@@ -60,7 +72,7 @@ Esquema del JSON (versión 1)
   },
   "lugares": [{
     "id": "Tacuato:orilla",            # la clave que usan `presencias.lugar`
-    "nombre": "Tacuato · orilla",      # etiqueta mecánica, no prosa nueva
+    "nombre": "la orilla de Tacuato",  # la glosa del canon, no prosa nueva
     "sitio": "Tacuato",
     "locacion": "orilla" | null,
     "nodo": "GUARANAO" | "AMUAY" | "compartido" | null,
@@ -94,8 +106,9 @@ Esquema del JSON (versión 1)
 
 Un JSON **vacío** es el mismo objeto con `vacio: true`, `turnos: []` y el
 catálogo de `lugares` completo: el mapa se dibuja igual y la página dice que
-todavía no ha corrido ningún run con escena (ningún run lo ha hecho aún — la
-tabla existe desde el 2026-09-17 y está sin filas).
+ahí no hay nadie todavía. Es lo que escribe `--sin-base`, y lo que la web
+enseña mientras no haya ningún seed con gente (el primero fue `b7bc51dc`, el
+día 1 de la serie C, el 2026-09-18).
 
 Uso
 ---
@@ -116,23 +129,21 @@ from collections import defaultdict
 from datetime import datetime, timezone
 from typing import Any, Optional
 
-import yaml
 from dotenv import load_dotenv
 
 # Cada entrypoint carga su .env: leer os.environ no basta (CLAUDE.md, trampas).
 load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
 
+import curiana_escena  # noqa: E402
 from curiana_database import get_db  # noqa: E402
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 PROYECTO = os.path.dirname(AQUI)                 # proyecto-linguistico-caquetío/
 REPO = os.path.dirname(PROYECTO)                 # la raíz del sitio Next
 
-RUTA_PROPUESTA = os.path.join(
-    PROYECTO, "6-fusion", "escena_por_lugar_propuesta_2026-09-17.yaml")
 DIR_SALIDA = os.path.join(REPO, "content", "simulador", "escena")
 
-VERSION = 1
+VERSION = 2
 
 # El recorte de cada intervención, en caracteres. Va DECLARADO aquí y escrito en
 # el JSON (`tope_texto`) para que el visor pueda decir que lo que enseña está
@@ -143,17 +154,9 @@ TOPE_TEXTO = 220
 # y `agent_responses` en dos; sus lectores paginan o truncan en silencio.
 PAGINA = 1000
 
-# Los caminos cuyos DOS extremos nombra el canon. La decisión de Miguel del
-# 2026-09-17 (p2, «B») declara compartido «el camino Moruy–Caseto, que el elenco
-# llama la alianza y que el mapa dice que es el par más cercano de todos
-# (7,6 km)». Es el único par nombrado: los demás caminos se dibujan en su sitio
-# de origen y sin destino, porque inventarles uno sería inventar el mapa.
-CAMINOS_CON_PAR: dict[str, tuple[str, str]] = {
-    "camino:Moruy": ("Moruy", "Caseto"),
-    "camino:Caseto": ("Caseto", "Moruy"),
-}
-POR_QUE_CAMINO = ("decisión de Miguel 2026-09-17 p2 «B»: el camino Moruy–Caseto, "
-                  "«la alianza», compartido entre nodos")
+# El nodo, dicho como lo dice la web. La tabla decidida grita COMPARTIDO; el
+# tipo `NodoEscena` de `lib/escena.ts` es "GUARANAO" | "AMUAY" | "compartido".
+NODO_EN_EL_SEED = {"COMPARTIDO": "compartido"}
 
 
 def _forzar_utf8() -> None:
@@ -166,33 +169,18 @@ def _forzar_utf8() -> None:
 
 
 # ══════════════════════════════════════════════════════════════════════
-# El catálogo de lugares — se LEE de la tabla derivada, no se recalcula
+# El catálogo de lugares — se LEE de la tabla DECIDIDA, no se recalcula
 # ══════════════════════════════════════════════════════════════════════
 
-def cargar_propuesta(ruta: str = RUTA_PROPUESTA) -> dict:
-    """La tabla de escena por lugar, tal cual la dejó
-    `6-fusion/scripts/derivar_escena_por_lugar.py --yaml`."""
-    with open(ruta, encoding="utf-8") as f:
-        return yaml.safe_load(f)
+def cargar_tabla() -> dict:
+    """La tabla DECIDIDA de la escena, por su única puerta.
 
-
-def nodo_por_lugar(propuesta: dict) -> dict[str, str]:
-    """El nodo de cada lugar, MEDIDO de `§ocupacion`: quien lo trabaja.
-
-    Un lugar al que van los dos nodos —en cualquier período y cualquier
-    momento— sale como `compartido`. No hay frontera declarada en ninguna
-    parte: el nodo de un lugar es un resultado del reparto, no un dato escrito
-    (§0.2 del diseño: «los nodos no se programan: salen del mapa»).
+    `curiana_escena.lugares()` lee `curiana_escena_era2.py`, que es generado
+    desde `6-fusion/escena_era2.yaml`, que deriva del elenco. Es la misma
+    tabla que usó el motor para repartir a los 63, así que todo lugar que
+    `presencias` nombra está aquí — y cuando no lo esté, se dirá (§avisos).
     """
-    nodos: dict[str, set[str]] = defaultdict(set)
-    for por_lugar in (propuesta.get("ocupacion") or {}).values():
-        for lugar, momentos in (por_lugar or {}).items():
-            for celda in (momentos or {}).values():
-                nodos[lugar].update((celda.get("por_nodo") or {}).keys())
-    return {
-        lugar: (sorted(vistos)[0] if len(vistos) == 1 else "compartido")
-        for lugar, vistos in nodos.items() if vistos
-    }
+    return curiana_escena.lugares()
 
 
 def partir_id(lugar: str) -> tuple[str, Optional[str]]:
@@ -203,79 +191,71 @@ def partir_id(lugar: str) -> tuple[str, Optional[str]]:
     return sitio, locacion
 
 
-def etiqueta_de(lugar: str, tipo: str) -> str:
-    """Una etiqueta legible, derivada del id. No es prosa nueva: el canon no
-    escribió nombres en castellano para las locaciones y no se los invento."""
+def etiqueta_de(lugar: str) -> str:
+    """El nombre de un lugar que la tabla decidida NO conoce, derivado de su
+    id. No es prosa nueva: para los que conoce, el nombre es su `glosa`."""
     sitio, locacion = partir_id(lugar)
-    if tipo == "camino":
-        return f"camino de {locacion or sitio}"
-    if tipo == "zona":
-        return f"{lugar} · zona de pesca"
     return f"{sitio} · {locacion}" if locacion else sitio
 
 
-def catalogo_de_lugares(propuesta: dict) -> list[dict]:
-    """Los 29 lugares con su punto, su nodo y su marca de compartido.
+def _con_punto_propio(lugar: str, fila: dict, tabla: dict) -> bool:
+    """¿Tiene coordenada suya, o hereda la de su aldea?
 
-    `§puntos.lugares` ya trae la resolución: `propio` (8), `heredado` (16, el
-    punto de su aldea), `zona` (2, que no son un punto sino un área) y `arista`
-    (3, que son un camino). Aquí sólo se le pega el nodo y se normaliza la
-    forma; ninguna coordenada se calcula.
+    En la tabla decidida NINGÚN lugar se queda sin punto (§5b: «un mapa con
+    lugares sin punto no es un mapa»), pero una locación que hereda el de su
+    aldea no es lo mismo que una que el canon sitúa aparte: el visor ancla las
+    que tienen punto propio y abre en corona las que comparten uno, porque
+    dibujadas encima serían un solo punto imposible de pinchar. Las dos que el
+    canon sitúa aparte son `Capubana:fuente` y `El Cayude:punta`.
     """
-    puntos = (propuesta.get("puntos") or {}).get("lugares") or {}
-    nodos = nodo_por_lugar(propuesta)
-    declarados = propuesta.get("compartidos_declarados") or {}
+    if not fila.get("locacion"):
+        return True
+    aldea = tabla.get(fila.get("sitio") or "")
+    if not aldea:
+        return True
+    return (fila.get("lat"), fila.get("lon")) != (aldea.get("lat"), aldea.get("lon"))
 
+
+def catalogo_de_lugares(tabla: dict) -> list[dict]:
+    """Los 28 lugares de la tabla decidida, en la forma que come la web.
+
+    Aquí no se resuelve nada: la coordenada, el nodo, la glosa, los puntos del
+    área o del camino y la razón de que un lugar sea compartido ya están
+    decididos. Lo único que se hace es traducir el vocabulario de la tabla al
+    del seed (`aldea`/`locacion` → `propio`/`heredado`, `COMPARTIDO` →
+    `compartido`).
+    """
     catalogo: list[dict] = []
-    for lugar, punto in sorted(puntos.items()):
-        tipo = punto.get("tipo")
-        dato = punto.get("dato")
-        lat = lon = None
-        lista: Optional[list[list[float]]] = None
+    for lugar, fila in sorted(tabla.items()):
+        tipo = fila.get("tipo")
+        extremos = list(fila.get("extremos") or [])
+        if tipo in ("zona", "camino"):
+            tipo_seed = tipo
+            # `camino:Moruy-Caseto` sale de Moruy: el sitio es el primer
+            # extremo, no la palabra «camino».
+            sitio = extremos[0] if extremos else lugar
+            locacion = None
+        else:
+            tipo_seed = "propio" if _con_punto_propio(lugar, fila, tabla) else "heredado"
+            sitio = fila.get("sitio") or partir_id(lugar)[0]
+            locacion = fila.get("locacion")
 
-        if tipo in ("propio", "heredado") and isinstance(dato, (list, tuple)):
-            lat, lon = float(dato[0]), float(dato[1])
-        elif tipo == "zona":
-            # El área es sus puntos; el marcador va en el centro de ellos.
-            lista = [[float(p[1]), float(p[2])] for p in dato or []]
-            if lista:
-                lat = sum(p[0] for p in lista) / len(lista)
-                lon = sum(p[1] for p in lista) / len(lista)
-        elif tipo == "arista":
-            tipo = "camino"
-            origen = puntos.get(str(dato), {})
-            if isinstance(origen.get("dato"), (list, tuple)):
-                lat, lon = float(origen["dato"][0]), float(origen["dato"][1])
-            par = CAMINOS_CON_PAR.get(lugar)
-            if par:
-                extremos = []
-                for sitio in par:
-                    p = (puntos.get(sitio) or {}).get("dato")
-                    if isinstance(p, (list, tuple)):
-                        extremos.append([float(p[0]), float(p[1])])
-                if len(extremos) == 2:
-                    lista = extremos
-
-        compartido = lugar in declarados or lugar in CAMINOS_CON_PAR
-        por_que = declarados.get(lugar) or (POR_QUE_CAMINO if lugar in CAMINOS_CON_PAR else None)
-        sitio, locacion = partir_id(lugar)
-        if tipo == "camino":
-            # `camino:Moruy` es el camino que sale de Moruy: el sitio es el
-            # origen, no la palabra «camino».
-            sitio, locacion = locacion or sitio, None
+        lat, lon = fila.get("lat"), fila.get("lon")
+        puntos = [[float(p[0]), float(p[1])] for p in (fila.get("puntos") or [])]
+        razon = fila.get("compartido")
 
         catalogo.append({
             "id": lugar,
-            "nombre": etiqueta_de(lugar, tipo or ""),
+            "nombre": fila.get("glosa") or etiqueta_de(lugar),
             "sitio": sitio,
             "locacion": locacion,
-            "nodo": nodos.get(lugar),
-            "tipo": tipo,
-            "lat": round(lat, 5) if lat is not None else None,
-            "lon": round(lon, 5) if lon is not None else None,
-            "puntos": lista,
-            "compartido": compartido,
-            "por_que": por_que,
+            "nodo": NODO_EN_EL_SEED.get(fila.get("nodo"), fila.get("nodo")),
+            "tipo": tipo_seed,
+            "lat": round(float(lat), 5) if lat is not None else None,
+            "lon": round(float(lon), 5) if lon is not None else None,
+            "puntos": puntos or None,
+            "compartido": bool(razon),
+            "por_que": razon or None,
         })
     return catalogo
 
@@ -383,13 +363,13 @@ def construir_seed(
     for lugar in sorted(sin_coordenada):
         sitio, locacion = partir_id(lugar)
         lugares.append({
-            "id": lugar, "nombre": etiqueta_de(lugar, ""), "sitio": sitio,
+            "id": lugar, "nombre": etiqueta_de(lugar), "sitio": sitio,
             "locacion": locacion, "nodo": None, "tipo": "sin-coordenada",
             "lat": None, "lon": None, "puntos": None,
             "compartido": False, "por_que": None,
         })
         avisos.append(
-            f"«{lugar}» está en `presencias` y no en la tabla derivada: sin "
+            f"«{lugar}» está en `presencias` y no en la tabla decidida: sin "
             f"coordenada, se dibuja aparte")
 
     # Lo que se dijo, colocado por `presencias` y contrastado con la columna
@@ -488,6 +468,11 @@ def construir_seed(
             "run_id": run_meta.get("run_id"),
             "cadena": cadena,
             "started_at": run_meta.get("started_at"),
+            # La etiqueta del set y el brazo, para que la página pueda decir
+            # QUÉ run está enseñando sin tener que abrir la base. Los dos
+            # salen de `simulation_runs.config`, no se deducen de las filas.
+            "serie": run_meta.get("serie"),
+            "brazo": run_meta.get("brazo"),
             "dias": dias,
             "n_turnos": len(filas_turno),
             "n_agentes": len(agentes),
@@ -572,6 +557,10 @@ def seed_de_run(db: Any, id8: str, cadena: bool, tope: int = TOPE_TEXTO) -> dict
     presencias = db.presencias_de_cadena(run_ids)
     respuestas, turnos = respuestas_y_turnos(db, run_ids)
 
+    # La serie y el brazo se LEEN de la config sellada, como los lee
+    # `analizar_nodos`: son del run HOJA, y una cadena no puede cambiar de
+    # brazo a la mitad (el motor se niega).
+    config = curiana_cadena.config_de(run)
     return construir_seed(
         run_meta={
             "id8": run_id[:8],
@@ -579,11 +568,13 @@ def seed_de_run(db: Any, id8: str, cadena: bool, tope: int = TOPE_TEXTO) -> dict
             "run_ids": run_ids,
             "cadena": [r[:8] for r in run_ids],
             "started_at": run.get("started_at"),
+            "serie": config.get("serie"),
+            "brazo": curiana_cadena.texto_de_brazo(curiana_cadena.brazo_de(run)),
         },
         presencias=presencias,
         respuestas=respuestas,
         turnos=turnos,
-        lugares=catalogo_de_lugares(cargar_propuesta()),
+        lugares=catalogo_de_lugares(cargar_tabla()),
         tope=tope,
     )
 
@@ -592,9 +583,9 @@ def seed_vacio(tope: int = TOPE_TEXTO) -> dict:
     """El seed del catálogo, sin base. El mapa se dibuja; no hay nadie encima."""
     return construir_seed(
         run_meta={"id8": None, "run_id": None, "run_ids": [], "cadena": [],
-                  "started_at": None},
+                  "started_at": None, "serie": None, "brazo": None},
         presencias=[], respuestas=[], turnos=[],
-        lugares=catalogo_de_lugares(cargar_propuesta()), tope=tope)
+        lugares=catalogo_de_lugares(cargar_tabla()), tope=tope)
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -613,9 +604,12 @@ def informe(seed: dict, salida: str) -> None:
     con_punto = len([l for l in seed["lugares"] if l["lat"] is not None])
     print(f"  ✓ {len(seed['lugares'])} lugares ({con_punto} con punto, "
           f"{len([l for l in seed['lugares'] if l['compartido']])} compartidos)")
+    if run.get("id8"):
+        print(f"  ✓ run {run['id8']} · serie {run.get('serie') or '—'} · "
+              f"{run.get('brazo') or '—'}")
     if seed["vacio"]:
-        print("  ⚠  Ni una fila en `presencias`: el seed va VACÍO (válido). "
-              "Ningún run ha corrido con escena todavía.")
+        print("  ⚠  Ni una fila en `presencias`: el seed va VACÍO (válido): "
+              "el mapa entero y nadie encima.")
     else:
         contactos = sum(1 for t in seed["turnos"] for e in t["escenas"] if e["contacto"])
         dichos = sum(len(e["dichos"]) for t in seed["turnos"] for e in t["escenas"])
