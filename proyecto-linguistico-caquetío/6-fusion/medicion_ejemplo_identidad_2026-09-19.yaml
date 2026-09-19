@@ -1,0 +1,314 @@
+# ─────────────────────────────────────────────────────────────────
+# EL EJEMPLO DE `IDENTIDAD_LINGUISTICA` — MEDICIÓN DEL CORTE
+#
+# GENERADO por 6-fusion/scripts/medir_ejemplo_identidad.py
+# No se edita a mano: se regenera. La decisión está en
+# 6-fusion/decisiones_tanda_2026-09-19.yaml (d19.a).
+# ─────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-19'
+  generado_por: 6-fusion/scripts/medir_ejemplo_identidad.py
+  elenco: era2
+  perfil_de_exposicion: era2
+  decision: >-
+    Miguel, 2026-09-19: «Vale» a la recomendación de §7(a) del issue
+    pares-atestiguado-reconstruido-2026-09-19.md. El ejemplo de
+    IDENTIDAD_LINGUISTICA deja de usar kali-bana y pasa a biro-bana.
+  linea_vieja: >-
+    EJEMPLO: "Taya wana-ka arima wara kari. Ta-barsure naba-ni. [kali-bana: kali+-bana = cerro del sol]."
+  linea_nueva: >-
+    EJEMPLO: "Taya wana-ka arima wara kari. Ta-barsure naba-ni. [biro-bana: biro+-bana = cerro de la sal]."
+pares_abiertos:
+  n: 19   # los 19 de §6: NINGUNO está decidido todavía
+  formas_distintas: 35
+  # Miguel decidió (a) — el ejemplo — y NO los pares. Lo que una
+  # plantilla enseñe de un par abierto se anota y no se toca.
+plantillas:
+  n: 10
+  que_ensenan_forma_de_par_abierto: 6
+  detalle:
+    IDENTIDAD_LINGUISTICA:
+      ensena_formas_de_par_abierto: [kati, para]
+      formas:
+        - forma: kati
+          lado: atestiguada
+          pares: [12]
+          glosa: 'luna'
+        - forma: para
+          lado: atestiguada
+          pares: [13]
+          glosa: 'mar'
+    prompt_refuerzo_score1.0:
+      ensena_formas_de_par_abierto: []
+    prompt_refuerzo_score3.0:
+      ensena_formas_de_par_abierto: []
+    prompt_refuerzo_score5.0:
+      ensena_formas_de_par_abierto: []
+    prompt_refuerzo_score6.5:
+      ensena_formas_de_par_abierto: []
+    prompt_reglas_breve:
+      ensena_formas_de_par_abierto: [kuru]
+      moldes_con_forma_de_par: [kuru-bana]
+      formas:
+        - forma: kuru
+          lado: derivada
+          pares: [9, 10]
+          glosa: 'arbol'
+          dentro_de: [kuru-bana]
+    prompt_reglas_completo:
+      ensena_formas_de_par_abierto: [arima, bara, buri, chaa, habo, kali, kasha, kira, kono, kuru, paa, sima, wanü]
+      moldes_con_forma_de_par: [sima-bana]
+      formas:
+        - forma: arima
+          lado: derivada
+          pares: [5]
+          glosa: 'pez'
+        - forma: bara
+          lado: atestiguada
+          pares: [9]
+          glosa: 'arbol'
+        - forma: buri
+          lado: derivada
+          pares: [7]
+          glosa: 'hijo'
+        - forma: chaa
+          lado: derivada
+          pares: [2]
+          glosa: 'crear'
+        - forma: habo
+          lado: derivada
+          pares: [13, 14]
+          glosa: 'mar'
+        - forma: kali
+          lado: derivada
+          pares: [1]
+          glosa: 'sol'
+        - forma: kasha
+          lado: derivada
+          pares: [11, 12]
+          glosa: 'luna'
+        - forma: kira
+          lado: derivada
+          pares: [4]
+          glosa: 'escuchar'
+        - forma: kono
+          lado: derivada
+          pares: [8]
+          glosa: 'sembrar'
+        - forma: kuru
+          lado: derivada
+          pares: [9, 10]
+          glosa: 'arbol'
+        - forma: paa
+          lado: derivada
+          pares: [3]
+          glosa: 'ofrecer'
+        - forma: sima
+          lado: derivada
+          pares: [6]
+          glosa: 'cerro'
+          dentro_de: [sima-bana]
+        - forma: wanü
+          lado: derivada
+          pares: [15]
+          glosa: 'anciano'
+    prompt_rescate_fuga_esp0:
+      ensena_formas_de_par_abierto: [bara, para]
+      formas:
+        - forma: bara
+          lado: atestiguada
+          pares: [9]
+          glosa: 'arbol'
+        - forma: para
+          lado: atestiguada
+          pares: [13]
+          glosa: 'mar'
+    prompt_rescate_fuga_esp3_con_otro:
+      ensena_formas_de_par_abierto: [bara, para]
+      formas:
+        - forma: bara
+          lado: atestiguada
+          pares: [9]
+          glosa: 'arbol'
+        - forma: para
+          lado: atestiguada
+          pares: [13]
+          glosa: 'mar'
+    prompt_rescate_fuga_esp3_sin_otro:
+      ensena_formas_de_par_abierto: [bara, para]
+      formas:
+        - forma: bara
+          lado: atestiguada
+          pares: [9]
+          glosa: 'arbol'
+        - forma: para
+          lado: atestiguada
+          pares: [13]
+          glosa: 'mar'
+donde_sale_cada_forma:
+  kali-bana:
+    ensena: []
+    solo_como_token: []
+  biro-bana:
+    ensena: [IDENTIDAD_LINGUISTICA]
+    solo_como_token: []
+puerta_formas_de_plantilla:
+  antes: 5945
+  despues: 5945
+  salen: [kali-bana]
+  entran: [biro-bana]
+  kali_bana_antes: true
+  kali_bana_despues: false
+  biro_bana_antes: false
+  biro_bana_despues: true
+  kali_sigue_en_la_puerta: true   # es clave del lexicón: la puerta incluye VOCABULARIO_BASE entero
+  biro_sigue_en_la_puerta: true
+largo_del_prompt:
+  # Ensayo SIN API: un turno con el elenco entero, sin escena, misma
+  # semilla del RNG global en los dos brazos (de ahí sale la muestra
+  # del lexicón). El ensamblado es el de verdad: `orch.run_turn` con
+  # `_invoke` espiado, no una aproximación.
+  semilla: 20260919
+  era2:
+    perfil: era2, 63 agentes de Paraguaná
+    prompts: 63
+    antes:
+      n: 63
+      medio: 7093.0
+      mediana: 6204
+      min: 4652
+      max: 10623
+    despues:
+      n: 63
+      medio: 7095.0
+      mediana: 6206
+      min: 4654
+      max: 10625
+    delta_caracteres_por_prompt: [2]
+    delta_medio: 2.0
+    prompts_que_decian_kali_bana: 63
+    prompts_que_dicen_kali_bana: 0
+    prompts_que_dicen_biro_bana: 63
+  era1:
+    perfil: base, 60 agentes de la Curiana
+    prompts: 60
+    antes:
+      n: 60
+      medio: 6043.8
+      mediana: 5131
+      min: 4014
+      max: 9865
+    despues:
+      n: 60
+      medio: 6045.8
+      mediana: 5133
+      min: 4016
+      max: 9867
+    delta_caracteres_por_prompt: [2]
+    delta_medio: 2.0
+    prompts_que_decian_kali_bana: 60
+    prompts_que_dicen_kali_bana: 0
+    prompts_que_dicen_biro_bana: 60
+  identidad_antes_caracteres: 1250
+  identidad_despues_caracteres: 1252
+  identidad_delta: 2
+  lectura: >-
+    La longitud del prompt predice el score (r = −0,48), así que un
+    cambio de ejemplo hay que medirlo aunque parezca cosmético. Aquí
+    el prompt se mueve 2.0 caracteres de media sobre
+    ~7095 en la era 2 (y
+    2.0 sobre ~6046 en la
+    era 1): es ruido frente a la variación entre agentes (min/max
+    arriba, cuatro mil caracteres de rango), pero queda escrito.
+  era_1: >-
+    `IDENTIDAD_LINGUISTICA` es UNA constante y los dos mundos la leen:
+    el corte toca también la Curiana. No se parte en dos plantillas
+    —sería una decisión de diseño que nadie ha tomado, y `biro` 'sal'
+    es tan del Golfete de Coro como de Paraguaná: la sal ES el recurso
+    de Coro—. Consecuencia declarada: LA ERA 1 DEJA DE SER BYTE A BYTE.
+    Los runs viejos no se reescriben; lo que se pierde es poder
+    re-correr la era 1 y comparar carácter a carácter contra ellos.
+base:
+  kali_bana_respuestas_en_texto: 617
+  kali_bana_runs: 38
+  kali_bana_agentes_distintos: 89
+  kali_bana_por_bloque:
+    'era 1': 515
+    'era 2 · serie A': 37
+    'era 2 · serie B': 14
+    'era 2 · serie C': 51
+  molde_kali_X_bana_respuestas: 233
+  molde_kali_X_bana_por_bloque:
+    'era 1': 191
+    'era 2 · serie A': 12
+    'era 2 · serie B': 3
+    'era 2 · serie C': 27
+  biro_bana_respuestas_en_texto: 198
+  biro_bana_runs: 25
+condicion_5_el_compuesto_nunca_dicho:
+  # §7(a) pedía que el compuesto del ejemplo no se hubiera dicho nunca.
+  # El script del issue lo midió sobre `word_uses`, que sólo tiene lo
+  # que el SCORER reconoce: una forma que nadie adopta no llega ahí
+  # (trampa «una forma recién acuñada no es una palabra_activa»). Sobre
+  # el TEXTO de las respuestas el número es otro. Los dos, aquí.
+  candidatas:
+    - compuesto: biro-bana
+      respuestas_en_texto: 198
+      agentes_distintos: 45
+      word_uses: 0
+      neologisms: 0
+      serie_c_limpia_respuestas: 7
+    - compuesto: kali-bana
+      respuestas_en_texto: 617
+      agentes_distintos: 89
+      word_uses: 235
+      neologisms: 5
+      serie_c_limpia_respuestas: 20
+    - compuesto: kari-bana
+      respuestas_en_texto: 31
+      agentes_distintos: 23
+      word_uses: 0
+      neologisms: 0
+      serie_c_limpia_respuestas: 3
+    - compuesto: maure-bana
+      respuestas_en_texto: 29
+      agentes_distintos: 11
+      word_uses: 0
+      neologisms: 0
+      serie_c_limpia_respuestas: 0
+  lectura: >-
+    Sobre `word_uses` las tres candidatas dan 0 y la condición se daba
+    por cumplida. Sobre el texto, las tres se han dicho y `biro-bana`
+    es la más dicha de las tres. Lo que sigue en pie —y es lo que la
+    condición quería evitar— es que el ejemplo bendiga a una forma que
+    ya COMPITE: `biro-bana` tiene 0 en `word_uses`, 0 en `neologisms` y
+    no es variante de ningún referente abierto. Queda escrito para que
+    la próxima medición no vuelva a decir «nunca» midiendo otra cosa.
+  lo_que_deja_a_miguel: >-
+    Si la condición que quería era la del TEXTO, la candidata que la
+    cumple en la serie C limpia es `maure-bana` (0 respuestas allí, 29
+    en toda la base). No se ha cambiado nada: la decisión dice
+    `biro-bana` y eso es lo aplicado.
+que_pasa_con_kali_bana_al_salir_de_la_puerta:
+  lectura: >-
+    Al salir de la puerta, `kali-bana` vuelve a poder registrarse como
+    acuñación. Lo que la base acota: todos sus usos son de runs que
+    tenían el ejemplo delante, así que no hay contrafactual. Pero el
+    MOLDE `kali-…-bana` —que el corte de #169 nunca tocó— sí se dijo
+    sin que ninguna plantilla lo enseñara, y `kali` sigue siendo clave
+    del lexicón y voz del muestreador: la forma es componible y puede
+    volver. Si debe quedar vetada por haber sido ejemplo histórico, es
+    una decisión de Miguel y NO está implementada.
+ejemplo_nuevo:
+  raiz: 'biro'
+  capa: 'caquetío-atestiguado'
+  cat: 'sust'
+  glosa: 'sal'
+  cita: 'Zavala Reyes 2015 (Angulo Molina); recurso estratégico Coro'
+  sufijo: '-bana'
+  sufijo_en_las_reglas_del_motor: true
+  raiz_en_un_par_abierto: false
+  raiz_homografa_de_un_nombre_del_elenco: false
+  compuesto_es_clave_del_lexicon: false
+  bloques_tu_tierra_totales: 126
+  bloques_tu_tierra_que_hablan_de_sal: 62

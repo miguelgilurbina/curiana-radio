@@ -1,0 +1,146 @@
+# ─────────────────────────────────────────────────────────────────────────
+# DECISIONES DE MIGUEL — tanda del 2026-09-19
+#
+# Mismo patrón que las tandas anteriores: cita literal, lectura operativa y
+# dónde se aplica. Tanda nueva y no apéndice de la del 17 porque la convención
+# del directorio es un fichero por fecha de decisión, y porque ésta cierra un
+# issue distinto: los pares atestiguado / reconstruido.
+#
+# De las dos preguntas de instrumento de §7 del issue
+# `6-fusion/issues-pendientes/pares-atestiguado-reconstruido-2026-09-19.md`,
+# aquí se responde la (a) — el ejemplo de la plantilla de identidad. La (b)
+# —si el muestreador prefiere la atestiguada cuando hay par— y los 19 pares de
+# §6 siguen SIN DECIDIR, y lo que una plantilla les enseñe se deja como está.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-19'
+  decidido_por: Miguel
+  estado: >-
+    UNA decisión, DECIDIDA y APLICADA el mismo día. CORTE DE SERIE declarado
+    (punto 9 del bloque «Cambio de instrumento» de
+    5-experimento/BITACORA_RUNS.md).
+  linea_roja_de_toda_la_tanda: >-
+    El scorer no se toca. `score_linguistico()`, `pct_*` y `capas_de_score`
+    quedan idénticos, y `curiana_observer` tampoco se modifica. El lexicón es
+    canon y no se edita: `biro` y `-bana` ya existían atestiguadas — sólo se
+    usan. Lo que cambia es lo que el agente VE, y por eso abre corte.
+
+ejemplo_de_identidad_linguistica:
+  id: d19.a
+  estado: DECIDIDA y APLICADA (2026-09-19) — CORTE DE SERIE declarado
+  pregunta: >-
+    El ejemplo literal de `IDENTIDAD_LINGUISTICA` —la plantilla que leen los
+    63 en su system prompt CADA TURNO, porque el ensamblado no mira el tier—
+    era `[kali-bana: kali+-bana = cerro del sol]`, y `kali` es la forma
+    RECONSTRUIDA del par 1 de §6 («sol», contra la atestiguada `kasi`, Zavala
+    #76). Medido: para «sol» el muestreador del prompt es NEUTRO (60 contra 63
+    de 1.260 prompts del ensayo) y aun así el uso va 232 a 1 a favor de `kali`
+    en toda la base — todo el desequilibrio es el ejemplo. El corte del
+    2026-09-18 (#169) le quitó a la FORMA el derecho a registrarse, pero no
+    tocó el MOLDE: en la serie C limpia se dijeron `kali-mara-bana` 12 veces,
+    `kali-ubana-gua` 12, `kali-naa-iro` 10 y `kali-raku-biro` 5. ¿El ejemplo
+    deja de usar `kali-bana`, y por qué forma?
+  decision_literal: '«Vale»'
+  contexto_de_la_cita: >-
+    «Vale» a la recomendación de §7(a) del issue, que proponía
+    `[biro-bana: biro+-bana = cerro de la sal]` entre tres candidatas medidas
+    (`biro-bana`, `kari-bana`, `maure-bana`).
+  lectura_operativa: >-
+    El ejemplo pasa a `[biro-bana: biro+-bana = cerro de la sal]`. Pase lo que
+    pase el ejemplo enseña algo; la pregunta era QUÉ. `biro` 'sal' es
+    atestiguada y con cita (Zavala Reyes 2015, Angulo Molina), `-bana` 'cerro,
+    sitio alto' lo cerró D9 con seis apoyos, la raíz es el recurso que el
+    mundo de la era 2 tiene delante —`[Tu tierra]` habla de la sal en 62 de
+    126 bloques—, no es homógrafa de ningún nombre del elenco y NO es forma de
+    ningún par abierto de §6: por eso la decisión (a) se pudo tomar antes que
+    las diecinueve y no prejuzga ninguna.
+  la_puerta_se_mueve_sola: >-
+    Es lo que el corte del 18 dejó montado: `FORMAS_DE_PLANTILLA` se construye
+    LLAMANDO a las plantillas, nunca copiándolas, así que al cambiar el texto
+    sale `kali-bana` de la lista y entra `biro-bana` sin tocar la lista —
+    5.945 formas antes y después. `kali` y `biro` siguen las dos dentro por
+    ser claves del lexicón (la puerta incluye VOCABULARIO_BASE entero): lo que
+    cambia es el COMPUESTO.
+  medido_2026-09-19: >-
+    6-fusion/medicion_ejemplo_identidad_2026-09-19.yaml, escrito por
+    6-fusion/scripts/medir_ejemplo_identidad.py (sin API, sin abrir .env, base
+    local en sólo lectura). El prompt, ensayo sobre el elenco entero con
+    `run_turn` de verdad e `_invoke` espiado, semilla 20260919: era 2, 63
+    prompts, medio 7.093,0 → 7.095,0 caracteres; era 1, 60 prompts, 6.043,8 →
+    6.045,8; exactamente +2 en los 123. La longitud predice el score
+    (r = −0,48) y por eso se mide: +2 sobre ~7.000 es ruido frente a los
+    ~4.000 caracteres de rango entre agentes, pero queda escrito. Los prompts
+    que decían `kali-bana` pasan de 63 a 0; los que dicen `biro-bana`, de 0 a
+    63. De las DIEZ plantillas estáticas, 6 enseñan alguna forma de un par
+    abierto de §6 — y ninguna se toca (ver `lo_que_NO_se_decide`).
+  la_era_1_tambien: >-
+    `IDENTIDAD_LINGUISTICA` es UNA constante y la leen los dos mundos, así que
+    el corte toca también la Curiana. NO se parte en dos plantillas por era:
+    sería una decisión de diseño que nadie ha tomado, y `biro` 'sal' es tan
+    del Golfete de Coro como de Paraguaná — la sal ES el recurso de Coro.
+    Consecuencia declarada: LA ERA 1 DEJA DE SER BYTE A BYTE. Los runs viejos
+    de la Curiana no se reescriben; lo que se pierde es poder re-correr la era
+    1 y compararla carácter a carácter contra ellos.
+  lo_que_no_se_toca: >-
+    El scorer (`score_linguistico()`, `pct_*`, `capas_de_score`) y
+    `curiana_observer`. Y el lexicón: no se editó ninguna entrada — `biro` y
+    `-bana` ya estaban atestiguadas, sólo se usan.
+  corte_de_serie: >-
+    Aplica desde el próximo run. La SERIE C LIMPIA se re-corre otra vez desde
+    el día 1, y `b847944d` → `17c2271e` → `9a98de67` (3 días, 18 turnos)
+    quedan del otro lado: son los tres días en los que la plantilla seguía
+    enseñando `kali-bana`. Los runs ya corridos no se reescriben.
+  se_aplica_en: >-
+    curiana_sim/curiana_lexicon.py (IDENTIDAD_LINGUISTICA — una línea, el
+    EJEMPLO; y los comentarios de `registrar_neologismo` y
+    `_textos_de_plantilla`) + curiana_sim/tests/test_formas_de_plantilla.py
+    (bloque (e), cinco tests nuevos) +
+    6-fusion/scripts/medir_ejemplo_identidad.py +
+    6-fusion/medicion_ejemplo_identidad_2026-09-19.yaml + CLAUDE.md (la fila
+    «Una acuñación puede ser el ejemplo del prompt») +
+    5-experimento/BITACORA_RUNS.md (punto 9 del cambio de instrumento) +
+    6-fusion/issues-pendientes/pares-atestiguado-reconstruido-2026-09-19.md §7(a).
+  queda_abierto_y_es_de_Miguel:
+    - >-
+      `kali-bana` VUELVE A PODER ACUÑARSE. Al salir de la puerta deja de estar
+      vetada y se registra como cualquier otra forma. No es un descuido:
+      vetarla por haber sido ejemplo histórico sería otra decisión y no está
+      tomada; `test_e_la_forma_retirada_vuelve_a_poder_acunarse` fija la
+      conducta de HOY para que el día que se decida, se vea cambiar. Lo que
+      acota la base: `kali-bana` se dijo en 617 respuestas de 89 agentes en 38
+      runs, TODOS con el ejemplo delante, así que no hay contrafactual; pero
+      el molde `kali-…-bana` —que #169 nunca tocó— se dijo 233 veces sin que
+      ninguna plantilla lo enseñara, y `kali` sigue siendo clave del lexicón y
+      voz del muestreador. La forma es componible y puede volver.
+    - >-
+      LAS SEIS PLANTILLAS QUE ENSEÑAN FORMAS DE PARES ABIERTOS no se tocan,
+      porque decidir los pares es de Miguel. Medido: `IDENTIDAD_LINGUISTICA`
+      enseña `kati` (par 12, luna — el lado ATESTIGUADO) y `para` (par 13, mar
+      — atestiguado); `prompt_reglas_completo` enseña trece —`arima` (5),
+      `bara` (9, atestiguado), `buri` (7), `chaa` (2), `habo` (13 y 14),
+      `kali` (1), `kasha` (11 y 12), `kira` (4), `kono` (8), `kuru` (9 y 10),
+      `paa` (3), `sima` (6), `wanü` (15)—, once de ellas del lado DERIVADO;
+      `prompt_reglas_breve` enseña `kuru` (9, 10) y además el molde
+      `kuru-bana`; y los tres tramos del rescate enseñan `bara` y `para`, los
+      dos atestiguados. `prompt_reglas_completo` enseña además el molde
+      `sima-bana`, con la forma derivada del par 6.
+    - >-
+      LA PREGUNTA (b) DEL ISSUE sigue sin responder: si el muestreador debe
+      preferir la atestiguada cuando hay par. La recomendación medida era que
+      no —o no primero—, porque lo que decide la exposición del muestreo no es
+      la capa sino el tamaño del cubo (12 de 25 cubos tienen una sola voz).
+    - >-
+      LA CONDICIÓN 5 DE §7(a), afinada. Pedía que el compuesto del ejemplo «no
+      se hubiera dicho nunca en la base» y se midió sobre `word_uses`, donde
+      las tres candidatas dan 0. Pero `word_uses` sólo tiene lo que el SCORER
+      reconoce, y una forma que nadie adopta no llega ahí (trampa «una forma
+      recién acuñada no es una palabra_activa»). Sobre el TEXTO de las
+      respuestas: `biro-bana` en 198 respuestas de 45 agentes, 7 de ellas en
+      la serie C limpia; `kari-bana` 31 (3 en la serie C); `maure-bana` 29 (0
+      en la serie C). Lo que la condición quería evitar SIGUE EN PIE —
+      `biro-bana` tiene 0 en `word_uses`, 0 en `neologisms` y no es variante
+      de ningún referente abierto: no está compitiendo—, pero «nunca» era otra
+      cosa, y la decisión se tomó con el número de `word_uses` delante. Si la
+      condición que se quería era la del texto, la candidata que la cumple en
+      la serie C limpia es `maure-bana`. No se ha cambiado nada: la decisión
+      dice `biro-bana` y eso es lo aplicado.

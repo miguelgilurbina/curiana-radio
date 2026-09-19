@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-19**.
 
-**2641 ítems propuestos** en 72 propuestas, más **7 issue(s)/comentario(s) redactados sin publicar**.
+**2641 ítems propuestos** en 73 propuestas, más **7 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -47,6 +47,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-09-14.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-15.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-17.yaml` | ? | 0 |  |
+| `decisiones_tanda_2026-09-19.yaml` | ? | 0 |  |
 | `descastellanizar_esfera_2026-09-18.yaml` | ? | 6 |  |
 | `elenco_era2.yaml` | varias | 63 |  |
 | `escena_era2.yaml` | ? | 11 |  |
@@ -97,6 +98,7 @@ Vistas generadas en `6-fusion/` (no cuentan: juntan lo que ya está arriba):
 - `achagua_neira_ribero_1762.yaml` — generado por `lectura en imagen por el escriba (agente Opus 5). Primera pasada 2026-09-12 (40 pliegos); segunda pasada 2026-09-12, que cierra el vocabulario entero (los 31 pliegos que faltaban), mina la lista de verbos del arte y vuelve sobre las 14 dudas`
 - `lokono_perea_1942.yaml` — generado por `curiana_sim/minar_perea.py`
 - `lokono_verbos_perea_1942.yaml` — generado por `6-fusion/scripts/minar_perea_verbos.py`
+- `medicion_ejemplo_identidad_2026-09-19.yaml` — generado por `6-fusion/scripts/medir_ejemplo_identidad.py`
 - `pares_atestiguado_reconstruido_2026-09-19.yaml` — generado por `6-fusion/scripts/medir_pares_atestiguado_reconstruido.py`
 - `tainismos_en_medina.yaml` — generado por `6-fusion/scripts/tainismos_medina_a_caquetio.py`
 - `toponimos_mapa_kaketiana.yaml` — generado por `curiana_sim/barrer_mapa.py`
