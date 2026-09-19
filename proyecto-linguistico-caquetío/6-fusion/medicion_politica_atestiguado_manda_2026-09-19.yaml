@@ -1,0 +1,762 @@
+# ─────────────────────────────────────────────────────────────────
+# LA POLÍTICA «MANDA LA ATESTIGUADA» — MEDICIÓN DEL CORTE
+#
+# GENERADO por 6-fusion/scripts/medir_politica_atestiguado_manda.py
+# No se edita a mano: se regenera. La decisión está en
+# 6-fusion/decisiones_tanda_2026-09-19.yaml (d19.b).
+# ─────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-19'
+  generado_por: 6-fusion/scripts/medir_politica_atestiguado_manda.py
+  ref_del_brazo_antes: 'f864482'
+  elenco: era2
+  decision_literal: >-
+    «Sí o sí tenemos que usar los atestiguados por sobre los
+    reconstruidos, por lo menos la parte caquetía.» (Miguel, 2026-09-19)
+  como_se_mide_el_antes: >-
+    `git show <ref>:./curiana_sim/curiana_lexicon.py` (y curiana_koine)
+    a un directorio temporal que va PRIMERO en el sys.path de un
+    subproceso que corre este mismo código. Los dos brazos salen del
+    mismo motor y la única diferencia es el módulo. Sin API, sin .env,
+    base local en sólo lectura.
+politica:
+  alcance: >-
+    Sólo muerde donde hay rival ATESTIGUADO para el mismo significado.
+    El grueso del lexicón caquetío es reconstrucción legítima porque no
+    hay atestación —los pronombres, los aspectos, la mayoría de las 86
+    reconstruidas— y no lo toca.
+  pares_aplicados:
+    - par: 1
+      glosa: 'sol'
+      manda: kasi
+      manda_capa: 'caquetío-atestiguado'
+      manda_cita: 'Zavala Reyes 2015, glosario #76 (GC): «Sol» · MANDA desde el 2026-09-19 (política «manda la atestiguada»): ocupa el sitio de `kali`, la forma reconstruida que quedó archivada en FU'
+      manda_usos: 9
+      archivada: kali
+      archivada_capa_antes: 'caquetío-reconstruido'
+      archivada_capa_despues: 'caquetío-reconstruido'
+      archivada_usos: 2321
+      archivada_formas: 114
+    - par: 3
+      glosa: 'ofrecer'
+      manda: were
+      manda_capa: 'caquetío-atestiguado'
+      manda_cita: 'Zavala Reyes 2015, glosario #149 (AM): «Dar, entregar»'
+      manda_usos: null
+      archivada: paa
+      archivada_capa_antes: 'caquetío-reconstruido'
+      archivada_capa_despues: 'caquetío-reconstruido'
+      archivada_usos: 1222
+      archivada_formas: 56
+    - par: 4
+      glosa: 'escuchar'
+      manda: jai
+      manda_capa: 'caquetío-atestiguado'
+      manda_cita: 'Zavala Reyes 2015, glosario #175 (AM): «Oír, escuchar»'
+      manda_usos: 5
+      archivada: kira
+      archivada_capa_antes: 'caquetío-reconstruido'
+      archivada_capa_despues: 'caquetío-reconstruido'
+      archivada_usos: 831
+      archivada_formas: 12
+    - par: 12
+      glosa: 'luna'
+      manda: kati
+      manda_capa: 'caquetío-atestiguado'
+      manda_cita: 'Decisión colisiones D5 (2026-08-31) — FUSIONADA con cati: la grafía c es colonial y el lema fonémico es la palabra. Atestiguada: Zavala Reyes 2015, glosario #71 (CGB): «Luna [catir'
+      manda_usos: 33
+      archivada: kasha
+      archivada_capa_antes: 'caquetío-reconstruido'
+      archivada_capa_despues: 'caquetío-reconstruido'
+      archivada_usos: 168
+      archivada_formas: 8
+    - par: 13
+      glosa: 'mar'
+      manda: para
+      manda_capa: 'caquetío-atestiguado'
+      manda_cita: 'Zavala Reyes 2015 #190 (E+HP): ''Aguadulce o salada en grandes cantidades''; cf. #191 paragua (GC) = mar. Reflejo del proto-arahuaco *para, atestiguado en 4 lenguas: CQ para, WY pala'
+      manda_usos: 227
+      archivada: habo
+      archivada_capa_antes: 'caquetío-reconstruido'
+      archivada_capa_despues: 'caquetío-reconstruido'
+      archivada_usos: 125
+      archivada_formas: 5
+    - par: 16
+      glosa: 'viento'
+      manda: juri
+      manda_capa: 'caquetío-atestiguado'
+      manda_cita: 'Zavala Reyes 2015 #178 (E); variantes: jura'
+      manda_usos: 221
+      archivada: joutai
+      archivada_capa_antes: 'caquetío-reconstruido'
+      archivada_capa_despues: 'caquetío-reconstruido'
+      archivada_usos: 19
+      archivada_formas: 2
+    - par: 18
+      glosa: 'espanto'
+      manda: etamo
+      manda_capa: 'caquetío-atestiguado'
+      manda_cita: 'Zavala Reyes 2015 #120 (AM)'
+      manda_usos: 6
+      archivada: mülia
+      archivada_capa_antes: 'caquetío-hipotético'
+      archivada_capa_despues: 'caquetío-hipotético'
+      archivada_usos: 0
+      archivada_formas: 0
+censo:
+  vocabulario_base_antes: 5514
+  vocabulario_base_despues: 5507
+  vocabulario_base_delta: -7
+  fuera_del_habla_antes: 6
+  fuera_del_habla_despues: 13
+  archivadas_en_esta_tanda: [habo, joutai, kali, kasha, kira, mülia, paa]
+  raices_verbales_antes: 1426
+  raices_verbales_despues: 1424
+  raices_verbales_que_salen: [kira, paa]
+  control_verde: true
+  controles:
+    capa_intacta: true
+    manda_atestiguada_con_cita: true
+    archivada_fuera_del_habla: true
+    archivada_en_la_puerta: true
+puerta_formas_de_plantilla:
+  # `FUERA_DEL_HABLA` ENTRA en la puerta con esta tanda: sin eso,
+  # archivar una voz la habría dejado ACUÑABLE al día siguiente.
+  antes: 5945
+  despues: 5952
+  entran: [apünüin, entregar, jarai, oír, piama, pienchi, wanee]
+  salen: []
+  archivadas_dentro:
+    kali: true
+    paa: true
+    kira: true
+    kasha: true
+    habo: true
+    joutai: true
+    mülia: true
+  archivo_viejo_estaba_dentro_antes: [piache]
+  archivo_viejo_dentro_ahora: [apünüin, jarai, piache, piama, pienchi, wanee]
+plantillas:
+  cambian: [prompt_refuerzo_score1.0_gastado, prompt_refuerzo_score3.0_gastado, prompt_refuerzo_score6.5_gastado, prompt_reglas_completo]
+  con_archivada_despues: []
+  detalle:
+    IDENTIDAD_LINGUISTICA:
+      largo_antes: 1252
+      largo_despues: 1252
+      ensena_antes: [kati, para]
+      ensena_despues: [kati, para]
+      aparece_antes: [kati, para]
+      aparece_despues: [kati, para]
+    prompt_refuerzo_score1.0:
+      largo_antes: 193
+      largo_despues: 193
+      ensena_antes: []
+      ensena_despues: []
+      aparece_antes: []
+      aparece_despues: []
+    prompt_refuerzo_score1.0_gastado:
+      largo_antes: 198
+      largo_despues: 196
+      ensena_antes: []
+      ensena_despues: []
+      aparece_antes: [kashi, kira]
+      aparece_despues: [jai, kashi]
+    prompt_refuerzo_score3.0:
+      largo_antes: 175
+      largo_despues: 175
+      ensena_antes: []
+      ensena_despues: []
+      aparece_antes: []
+      aparece_despues: []
+    prompt_refuerzo_score3.0_gastado:
+      largo_antes: 177
+      largo_despues: 176
+      ensena_antes: []
+      ensena_despues: []
+      aparece_antes: [kali, kashi, kira]
+      aparece_despues: [jai, kashi, kasi]
+    prompt_refuerzo_score5.0:
+      largo_antes: 150
+      largo_despues: 150
+      ensena_antes: []
+      ensena_despues: []
+      aparece_antes: []
+      aparece_despues: []
+    prompt_refuerzo_score5.0_gastado:
+      largo_antes: 154
+      largo_despues: 154
+      ensena_antes: []
+      ensena_despues: []
+      aparece_antes: [kashi]
+      aparece_despues: [kashi]
+    prompt_refuerzo_score6.5:
+      largo_antes: 81
+      largo_despues: 81
+      ensena_antes: []
+      ensena_despues: []
+      aparece_antes: []
+      aparece_despues: []
+    prompt_refuerzo_score6.5_gastado:
+      largo_antes: 82
+      largo_despues: 81
+      ensena_antes: []
+      ensena_despues: []
+      aparece_antes: [kira]
+      aparece_despues: [jai]
+    prompt_reglas_breve:
+      largo_antes: 995
+      largo_despues: 995
+      ensena_antes: [kashi]
+      ensena_despues: [kashi]
+      aparece_antes: [kashi]
+      aparece_despues: [kashi]
+    prompt_reglas_completo:
+      largo_antes: 4435
+      largo_despues: 4449
+      ensena_antes: [habo, kali, kasha, kashi, kira, paa, sima]
+      ensena_despues: [jai, kashi, kasi, kati, para, sima, were]
+      aparece_antes: [habo, kali, kasha, kashi, kira, paa, para, sima]
+      aparece_despues: [jai, kashi, kasi, kati, para, sima, were]
+      moldes_despues: [sima-bana]
+    prompt_rescate_fuga_esp0:
+      largo_antes: 970
+      largo_despues: 970
+      ensena_antes: [para]
+      ensena_despues: [para]
+      aparece_antes: [para]
+      aparece_despues: [para]
+    prompt_rescate_fuga_esp3_con_otro:
+      largo_antes: 772
+      largo_despues: 772
+      ensena_antes: [para]
+      ensena_despues: [para]
+      aparece_antes: [para]
+      aparece_despues: [para]
+    prompt_rescate_fuga_esp3_sin_otro:
+      largo_antes: 688
+      largo_despues: 688
+      ensena_antes: [para]
+      ensena_despues: [para]
+      aparece_antes: [para]
+      aparece_despues: [para]
+largo_del_prompt:
+  # La longitud predice el score (r = −0,48): se mide aunque parezca
+  # cosmético. Ensayo SIN API con `run_turn` de verdad e `_invoke`
+  # espiado, misma semilla (20260919) en los dos brazos.
+  lectura: >-
+    Lo que el cambio mueve DE VERDAD es el texto de las plantillas,
+    y ese número está arriba, en `plantillas.detalle.*.largo_*`:
+    son unas pocas decenas de caracteres y sólo en las plantillas
+    que cambian. El `delta_por_prompt` tiene un rango ancho por otra
+    razón, y conviene decirla: quitar siete claves de
+    `VOCABULARIO_BASE` cambia los SORTEOS del muestreador aguas
+    abajo aunque la semilla sea la misma, así que cada prompt
+    recibe otra muestra del lexicón y su largo se mueve con ella.
+    Por eso el número que se compara es el MEDIO sobre los 63 (y
+    los 60 de la era 1), no el de un prompt suelto.
+  era2:
+    prompts: 63
+    medio_antes: 7095.0
+    medio_despues: 7101.2
+    delta_medio: 6.2
+    mediana_antes: 6206
+    mediana_despues: 6236
+    min_antes: 4654
+    max_antes: 10625
+    min_despues: 4672
+    max_despues: 10651
+    delta_por_prompt: [-304, -220, -208, -204, -198, -190, -147, -146, -137, -127, -124, -118, -108, -87, -85, -60, -51, -42, -41, -33, -30, -27, -25, -24, -12, -5, 5, 8, 9, 15, 18, 22, 46, 48, 58, 60, 64, 69, 71, 74, 80, 82, 83, 84, 94, 95, 96, 97, 98, 104, 106, 107, 110, 123, 141, 142, 148, 192, 198, 200, 267]
+    delta_por_prompt_medio: 6.25
+    delta_de_los_estadisticos_de_orden: [-112, -106, -89, -87, -82, -76, -59, -48, -46, -30, -28, -27, -23, -19, -18, -15, -13, -12, 5, 6, 7, 9, 10, 11, 12, 14, 15, 16, 18, 21, 22, 24, 26, 27, 28, 30, 32, 33, 35, 38, 39, 40, 41, 47, 48, 49, 79, 84, 94, 98]
+    prompts_que_decian_cada_archivada:
+      kali: 19
+      paa: 24
+      kira: 24
+      kasha: 20
+      habo: 19
+      joutai: 5
+      mülia: 0
+      kasi: 7
+      were: 4
+      jai: 12
+      kati: 63
+      para: 63
+      juri: 63
+      etamo: 1
+    prompts_que_dicen_cada_archivada:
+      kali: 0
+      paa: 0
+      kira: 0
+      kasha: 0
+      habo: 0
+      joutai: 0
+      mülia: 0
+      kasi: 22
+      were: 18
+      jai: 24
+      kati: 63
+      para: 63
+      juri: 63
+      etamo: 7
+  era1:
+    prompts: 60
+    medio_antes: 6045.8
+    medio_despues: 6045.6
+    delta_medio: -0.2
+    mediana_antes: 5133
+    mediana_despues: 5159
+    min_antes: 4016
+    max_antes: 9867
+    min_despues: 4047
+    max_despues: 9834
+    delta_por_prompt: [-361, -227, -215, -143, -115, -103, -95, -94, -91, -82, -80, -79, -77, -67, -58, -50, -48, -37, -35, -29, -17, -14, -11, -10, 3, 7, 8, 10, 11, 15, 26, 27, 30, 39, 41, 43, 62, 65, 70, 71, 74, 80, 81, 88, 89, 90, 100, 117, 119, 124, 128, 151, 168]
+    delta_por_prompt_medio: -0.25
+    delta_de_los_estadisticos_de_orden: [-79, -63, -48, -46, -42, -37, -34, -33, -23, -22, -20, -18, -16, -13, -12, -11, -10, -9, -7, -6, -5, -4, -3, 1, 5, 7, 8, 10, 11, 12, 13, 14, 15, 17, 19, 20, 23, 24, 26, 28, 29, 31, 32, 43, 48, 56, 61]
+    prompts_que_decian_cada_archivada:
+      kali: 19
+      paa: 23
+      kira: 16
+      kasha: 16
+      habo: 18
+      joutai: 3
+      mülia: 2
+      kasi: 4
+      were: 3
+      jai: 11
+      kati: 60
+      para: 60
+      juri: 6
+      etamo: 10
+    prompts_que_dicen_cada_archivada:
+      kali: 0
+      paa: 1
+      kira: 0
+      kasha: 0
+      habo: 9
+      joutai: 0
+      mülia: 0
+      kasi: 22
+      were: 20
+      jai: 28
+      kati: 60
+      para: 60
+      juri: 6
+      etamo: 5
+coste_de_los_paradigmas:
+  # El reconocimiento no se reimplementa: se le pregunta al SCORER
+  # (`score_linguistico` sobre el token en marco caquetío mínimo).
+  kali:
+    raiz: 'kali'
+    formas_distintas: 114
+    usos: 2321
+    formas_que_dejan_de_contar: 5
+    usos_que_dejan_de_contar: 956
+    formas_que_siguen_contando: 8
+    usos_que_siguen_contando: 10
+    formas_mas_usadas:
+      kali: 867
+      kali-bana: 235
+      ma-kali: 75
+      kali-sha: 53
+      kali-biji: 47
+      kali-taro: 47
+      kali-biro-duna-iro: 42
+      kali-iro-pabu: 42
+      kali-sulu-rua: 42
+      kali-wara-bana: 40
+      kali-rua-bana: 37
+      kali-mara: 36
+    siguen_contando_ejemplos: [maa-kali, maa-kali-bana, maa-kali-rua, masa-bana-kali, masa-bana-tüshi-kali, masa-biji-kali, masa-tüshi-kali, suna-kali]
+  paa:
+    raiz: 'paa'
+    formas_distintas: 56
+    usos: 1222
+    formas_que_dejan_de_contar: 45
+    usos_que_dejan_de_contar: 1179
+    formas_que_siguen_contando: 2
+    usos_que_siguen_contando: 2
+    formas_mas_usadas:
+      paa-da: 449
+      paa-ni: 256
+      paa-ka: 225
+      paa-bana-da: 52
+      paa: 35
+      paa-bana: 30
+      paa-taro: 23
+      paa-biji: 22
+      kali-paa-bana: 18
+      ta-paa: 13
+      ma-paa: 11
+      kalo-paa: 10
+    siguen_contando_ejemplos: [maa-paa, masa-paa-ka]
+  kira:
+    raiz: 'kira'
+    formas_distintas: 12
+    usos: 831
+    formas_que_dejan_de_contar: 12
+    usos_que_dejan_de_contar: 831
+    formas_que_siguen_contando: 0
+    usos_que_siguen_contando: 0
+    formas_mas_usadas:
+      kira-ni: 530
+      kira-da: 168
+      kira-ka: 92
+      kira: 27
+      kira-bana: 4
+      ta-kira: 4
+      kira-kali-bana: 1
+      kira-ko: 1
+      kira-ma: 1
+      kira-mara: 1
+      kira-ni-da: 1
+      ma-kira: 1
+    siguen_contando_ejemplos: []
+  kasha:
+    raiz: 'kasha'
+    formas_distintas: 8
+    usos: 168
+    formas_que_dejan_de_contar: 3
+    usos_que_dejan_de_contar: 155
+    formas_que_siguen_contando: 2
+    usos_que_siguen_contando: 2
+    formas_mas_usadas:
+      kasha: 146
+      kasha-bana: 8
+      ma-kasha: 6
+      ta-kasha: 3
+      kasha-ni: 2
+      dali-kasha: 1
+      maa-kasha-bana: 1
+      naa-da-kasha: 1
+    siguen_contando_ejemplos: [maa-kasha-bana, naa-da-kasha]
+  habo:
+    raiz: 'habo'
+    formas_distintas: 5
+    usos: 125
+    formas_que_dejan_de_contar: 4
+    usos_que_dejan_de_contar: 124
+    formas_que_siguen_contando: 0
+    usos_que_siguen_contando: 0
+    formas_mas_usadas:
+      habo: 120
+      ka-habo: 2
+      habo-bari-rua: 1
+      ma-habo: 1
+      ta-habo: 1
+    siguen_contando_ejemplos: []
+  joutai:
+    raiz: 'joutai'
+    formas_distintas: 2
+    usos: 19
+    formas_que_dejan_de_contar: 2
+    usos_que_dejan_de_contar: 19
+    formas_que_siguen_contando: 0
+    usos_que_siguen_contando: 0
+    formas_mas_usadas:
+      joutai: 17
+      ta-joutai: 2
+    siguen_contando_ejemplos: []
+  mülia:
+    raiz: 'mülia'
+    formas_distintas: 0
+    usos: 0
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_siguen_contando: 0
+    usos_que_siguen_contando: 0
+    formas_mas_usadas:
+    siguen_contando_ejemplos: []
+  kasi:
+    raiz: 'kasi'
+    formas_distintas: 2
+    usos: 10
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_siguen_contando: 1
+    usos_que_siguen_contando: 9
+    formas_mas_usadas:
+      kasi: 9
+      kasi-bana: 1
+    siguen_contando_ejemplos: [kasi]
+  were:
+    raiz: 'were'
+    formas_distintas: 3
+    usos: 17
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_siguen_contando: 3
+    usos_que_siguen_contando: 17
+    formas_mas_usadas:
+      were-da: 8
+      were-ka: 5
+      were-ni: 4
+    siguen_contando_ejemplos: [were-da, were-ka, were-ni]
+  jai:
+    raiz: 'jai'
+    formas_distintas: 12
+    usos: 167
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_siguen_contando: 12
+    usos_que_siguen_contando: 167
+    formas_mas_usadas:
+      jai-ni: 72
+      jai-ka: 41
+      jai-da: 34
+      jai: 5
+      ta-jai: 5
+      jai-bana-gua: 2
+      jai-ni-da: 2
+      ma-jai: 2
+      jai-ana: 1
+      jai-bana: 1
+      jai-ima: 1
+      jai-ko: 1
+    siguen_contando_ejemplos: [jai, jai-ana, jai-bana, jai-bana-gua, jai-da, jai-ima, jai-ka, jai-ko]
+  kati:
+    raiz: 'kati'
+    formas_distintas: 8
+    usos: 42
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_siguen_contando: 2
+    usos_que_siguen_contando: 36
+    formas_mas_usadas:
+      kati: 33
+      ma-kati: 3
+      kati-bacoa: 1
+      kati-bacoa-gua: 1
+      kati-kunan: 1
+      kati-macana-iro: 1
+      kati-sabua: 1
+      kati-sünatü-da: 1
+    siguen_contando_ejemplos: [kati, ma-kati]
+  para:
+    raiz: 'para'
+    formas_distintas: 13
+    usos: 311
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_siguen_contando: 12
+    usos_que_siguen_contando: 291
+    formas_mas_usadas:
+      para: 227
+      ma-para: 21
+      ta-para: 21
+      para-budare-ana: 20
+      wa-para: 9
+      ka-para: 6
+      hueke-para: 1
+      maa-para: 1
+      maa-para-aima: 1
+      maa-para-ima: 1
+      maa-para-ko: 1
+      waidima-para: 1
+    siguen_contando_ejemplos: [hueke-para, ka-para, ma-para, maa-para, maa-para-aima, maa-para-ima, maa-para-ko, para]
+  juri:
+    raiz: 'juri'
+    formas_distintas: 50
+    usos: 544
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_siguen_contando: 47
+    usos_que_siguen_contando: 503
+    formas_mas_usadas:
+      juri: 221
+      juri-ni: 104
+      tüshi-juri: 37
+      juri-bana: 27
+      juri-da: 26
+      juri-wara: 18
+      juri-ka: 15
+      juri-aima: 10
+      juri-ubana: 10
+      juri-kana: 9
+      ta-juri: 6
+      juri-gua: 5
+    siguen_contando_ejemplos: [juri, juri-aima, juri-aima-da, juri-aima-ka, juri-aima-ni, juri-alisio, juri-ana, juri-bacoa]
+  etamo:
+    raiz: 'etamo'
+    formas_distintas: 8
+    usos: 20
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_siguen_contando: 8
+    usos_que_siguen_contando: 20
+    formas_mas_usadas:
+      etamo-ni: 7
+      etamo: 6
+      etamo-ka: 2
+      etamo-ana: 1
+      etamo-barsure: 1
+      etamo-da: 1
+      etamo-kana: 1
+      etamo-ubana: 1
+    siguen_contando_ejemplos: [etamo, etamo-ana, etamo-barsure, etamo-da, etamo-ka, etamo-kana, etamo-ni, etamo-ubana]
+  sima:
+    raiz: 'sima'
+    formas_distintas: 49
+    usos: 510
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_siguen_contando: 9
+    usos_que_siguen_contando: 109
+    formas_mas_usadas:
+      sima: 88
+      sima-rua-bana: 58
+      sima-rua: 35
+      wara-sima: 34
+      mara-sima-da: 27
+      sima-pabu: 24
+      sima-naba: 22
+      duka-sima: 20
+      sima-maa: 19
+      sima-nii: 17
+      sima-bana-rua: 16
+      sima-nii-wana: 15
+    siguen_contando_ejemplos: [ka-sima, kono-sima-gua, ma-sima, naba-sima, naba-sima-ni, patapati-sima, sima, ta-sima]
+  turumako:
+    raiz: 'turumako'
+    formas_distintas: 1
+    usos: 1
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_siguen_contando: 1
+    usos_que_siguen_contando: 1
+    formas_mas_usadas:
+      turumako: 1
+    siguen_contando_ejemplos: [turumako]
+  hueco_funcional_de_paa:
+    were_es_v_raiz: true
+    were_es_atestiguada: 'caquetío-atestiguado'
+    were_tiene_cita: true
+    were_paradigma_cuenta: '{'''': True, ''-ka'': True, ''-ni'': True, ''-da'': True}'
+    paa_paradigma_cuenta_antes: '{'''': True, ''-ka'': True, ''-ni'': True, ''-da'': True}'
+    paa_paradigma_cuenta_despues: '{'''': False, ''-ka'': False, ''-ni'': False, ''-da'': False}'
+    jai_paradigma_cuenta: '{'''': True, ''-ka'': True, ''-ni'': True, ''-da'': True}'
+    jai_es_v_raiz: true
+    veredicto: 'no queda hueco funcional: `were` y `jai` son raíces verbales atestiguadas y toman los mismos tres aspectos, así que el paradigma no se rompe — se muda de raíz. Lo que cuesta es la comparabilidad del corpus ya dicho, que es lo que un corte de serie declara'
+colision_kasi_kashi:
+  esqueleto_kasi: 'kasi'
+  esqueleto_kashi: 'kasi'
+  mismo_esqueleto: true
+  difieren_en_un_caracter: true
+  familia_de_token:
+    kasi: 'caquetío'
+    kashi: 'caquetío'
+    kasi-bana: 'caquetío'
+    kashi-bana: 'caquetío'
+    ta-kasi: 'caquetío'
+    ta-kashi: 'caquetío'
+    kasi-ka: 'caquetío'
+    kashi-ka: 'caquetío'
+  familia_de_token_las_distingue: true
+  el_scorer_cuenta_las_dos: [kashi, kasi]
+  homografas_de_un_nombre_del_elenco:
+    kasi: false
+    kashi: false
+  la_puerta_las_distingue: true
+  plantillas_con_las_dos_antes: []
+  plantillas_con_las_dos_despues: [prompt_refuerzo_score3.0_gastado, prompt_reglas_completo]
+  glosa_kasi: 'sol'
+  glosa_kashi: 'ahora, en este momento (temporal presente)'
+  veredicto: 'el MOTOR no las confunde en ningún sitio medido; quien puede confundirlas es el HABLANTE, y desde esta tanda las tiene las dos en la misma plantilla'
+re_puntuacion_de_la_serie_c_limpia:
+  # Archivar una voz la saca de `palabras_activas()`: es un CORTE DE
+  # SERIE y su número se mide, no se estima. El scorer NO se tocó —
+  # `score_linguistico`, `pct_*` y `capas_de_score` son los mismos.
+  respuestas: 216
+  control_replay_desvios: 0
+  control_ejemplos:
+  score_cambia_en: 62
+  score_delta_max: 0.8
+  score_delta_medio_de_las_que_cambian: -0.2484
+  score_medio_antes: 7.5977
+  score_medio_despues: 7.5264
+  score_baja_en: 62
+  score_sube_en: 0
+  score_ejemplos:
+    - {run: '9a98de67', agente: 'Simaure', dia: 3, turno: 5, antes: 6.6, despues: 5.8, delta: -0.8}
+    - {run: '9a98de67', agente: 'Tauta', dia: 3, turno: 3, antes: 7.1, despues: 6.4, delta: -0.7}
+    - {run: '9a98de67', agente: 'Apoaure', dia: 3, turno: 5, antes: 8.4, despues: 7.7, delta: -0.7}
+    - {run: '9a98de67', agente: 'Saruro', dia: 3, turno: 5, antes: 6.9, despues: 6.2, delta: -0.7}
+    - {run: 'b847944d', agente: 'Urari', dia: 1, turno: 2, antes: 8.5, despues: 8.0, delta: -0.5}
+    - {run: 'b847944d', agente: 'Chuchubi', dia: 1, turno: 5, antes: 7.3, despues: 6.9, delta: -0.4}
+    - {run: '17c2271e', agente: 'Kiwakoa', dia: 2, turno: 6, antes: 8.7, despues: 8.3, delta: -0.4}
+    - {run: '9a98de67', agente: 'Sawaka', dia: 3, turno: 5, antes: 7.2, despues: 6.8, delta: -0.4}
+    - {run: '9a98de67', agente: 'Patapati', dia: 3, turno: 5, antes: 5.7, despues: 5.3, delta: -0.4}
+    - {run: '9a98de67', agente: 'Jachos', dia: 3, turno: 5, antes: 8.2, despues: 7.8, delta: -0.4}
+    - {run: '9a98de67', agente: 'Karebe', dia: 3, turno: 5, antes: 5.1, despues: 4.7, delta: -0.4}
+    - {run: 'b847944d', agente: 'Manaure', dia: 1, turno: 1, antes: 6.2, despues: 5.9, delta: -0.3}
+    - {run: 'b847944d', agente: 'Karebe', dia: 1, turno: 1, antes: 7.9, despues: 7.6, delta: -0.3}
+    - {run: 'b847944d', agente: 'Wache', dia: 1, turno: 3, antes: 8.4, despues: 8.1, delta: -0.3}
+    - {run: 'b847944d', agente: 'Tauta', dia: 1, turno: 5, antes: 8.6, despues: 8.3, delta: -0.3}
+  palabras_caquetias_cambia_en: 94
+  neologisms_proposed_cambia_en: 0
+  voces_que_dejan_de_contarse:
+    kali: 52
+    kira-ni: 19
+    paa-da: 18
+    kasha: 10
+    paa-ka: 8
+    paa-ni: 8
+    kira-da: 8
+    habo: 6
+    ma-kali: 3
+    kira-ka: 3
+    paa-kana: 1
+    ma-paa: 1
+    joutai: 1
+    ma-kasha: 1
+    ta-kira: 1
+    paa: 1
+    kira: 1
+  respuestas_movidas_por_raiz:
+    kali: 39
+    paa: 30
+    kira: 18
+    kasha: 8
+    habo: 4
+  serie:
+    ids: [b847944d-d9b4-42bc-ac34-32bda40e61ba, 17c2271e-fa43-42ec-9f72-ac90933dae65, 9a98de67-1753-42ca-941a-0be63ee7a995]
+    id8: [b847944d, 17c2271e, 9a98de67]
+    cadena_ok: true
+    dias: 3
+    turnos: 18
+residuos_declarados:
+  formas_seed_agentes_tocados: 14
+  formas_seed_formas_que_salen: [habo, kali, kasha, paa-da, paa-ka, paa-ni]
+  formas_seed_n_formas_por_agente_igual: true
+  haborü:
+    sigue_en_el_habla: true
+    capa: 'caquetío-hipotético'
+    nota: '''marejada'' = habo+rü: su raíz queda archivada'
+  sima_par_6:
+    capa: 'caquetío-reconstruido'
+    sigue_en_el_habla: true
+    rival_atestiguada: 'turumako'
+    rival_capa: 'caquetío-atestiguado'
+    plantillas_que_la_ensenan: [prompt_reglas_completo]
+    moldes: [sima-bana]
+    usos: 510
+    formas_distintas: 49
+    usos_que_el_scorer_reconoce_hoy: 109
+    formas_que_el_scorer_reconoce_hoy: 9
+    turumako_usos: 1
+  formas_seed: >-
+    `curiana_koine.FORMAS_SEED` es INSTRUMENTO, no emergencia: una
+    lista escrita a mano que entra en `[Tu manera de hablar]` desde el
+    día 1. Sembrar ahí una forma archivada sería enseñarla por la
+    puerta de atrás, así que las seis que la política retiró se mudan a
+    su rival atestiguada. El NÚMERO de formas por agente no cambia, y
+    con él la divergencia inicial que DISENO_KOINE §4 pide.
+  sima_es_de_miguel: >-
+    El par 6 («cerro») lo ALCANZA la política —`turumako` es
+    atestiguada (Zavala #262) y el caquetío dice además 'cerro' con
+    `-bana` (D9, seis apoyos)— y NO se ha aplicado. Es la pregunta que
+    Miguel dejó abierta y aquí está su coste delante: `sima` está en
+    `prompt_reglas_completo` dos veces (la voz y el molde `sima-bana`,
+    que es el ejemplo de los locativos) y tiene el uso que dice la
+    tabla de arriba, mientras `turumako` casi no se ha dicho. Aplicarla
+    obligaría además a reescribir el ejemplo del locativo, que es lo
+    que enseña `-bana`.

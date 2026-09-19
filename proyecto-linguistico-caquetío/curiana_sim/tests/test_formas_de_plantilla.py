@@ -76,11 +76,18 @@ def _neo(forma, autor="Manaure", dia=1, turno=1):
 
 def test_a_la_lista_se_construye_desde_las_plantillas():
     """No es una copia a mano: cada forma que la puerta declara está en el
-    vocabulario base o en el texto de alguna plantilla."""
+    vocabulario base, en el ARCHIVO, o en el texto de alguna plantilla.
+
+    `FUERA_DEL_HABLA` entró en la puerta el 2026-09-19 con la política «manda
+    la atestiguada»: archivar una voz la saca de `VOCABULARIO_BASE` y sin esto
+    saldría también de la puerta — podría volver al día siguiente como
+    acuñación de la comunidad."""
     de_los_textos = set()
     for texto in lx._textos_de_plantilla():
         de_los_textos |= lx.formas_en_texto(texto)
-    assert FORMAS_DE_PLANTILLA == frozenset(lx.VOCABULARIO_BASE) | de_los_textos
+    assert FORMAS_DE_PLANTILLA == (frozenset(lx.VOCABULARIO_BASE)
+                                   | frozenset(lx.FUERA_DEL_HABLA)
+                                   | de_los_textos)
     # y el ejemplo de la identidad está dentro porque la identidad lo dice
     assert EJEMPLO_DE_LA_IDENTIDAD in lx.formas_en_texto(IDENTIDAD_LINGUISTICA)
 

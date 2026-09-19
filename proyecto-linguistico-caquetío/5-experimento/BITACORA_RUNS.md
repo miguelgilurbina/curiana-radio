@@ -213,7 +213,7 @@ abierta abajo.
 
 ### Era 2 · serie A — pruebas del motor (2026-09-14 → 16)
 
-> ⚠️ **Cambio de instrumento (2026-09-16 → 09-19), declarado.** Nueve cambios,
+> ⚠️ **Cambio de instrumento (2026-09-16 → 09-19), declarado.** Diez cambios,
 > en el orden en que se decidieron. Los dos primeros son de
 > `score_linguistico()` y pasaron DESPUÉS de los runs de abajo, así que los del
 > 09-14 no son estrictamente comparables con los que vengan:
@@ -487,7 +487,111 @@ abierta abajo.
 >    plantilla seguía enseñando `kali-bana`. Los runs ya corridos no se
 >    reescriben.
 >
-> Ninguno de los nueve toca `capas_de_score`.
+> 10. **Manda la atestiguada: siete formas derivadas salen del habla**
+>    («Sí o sí tenemos que usar los atestiguados por sobre los reconstruidos,
+>    por lo menos la parte caquetía», decisión de Miguel del 2026-09-19,
+>    entrada `d19.b` de `6-fusion/decisiones_tanda_2026-09-19.yaml`). El punto
+>    9 le quitó a la plantilla el derecho a enseñar UNA forma; éste responde la
+>    pregunta de fondo que había detrás — por qué el elenco decía `kali` si el
+>    sol es `kazi`— y lo hace con una regla, no par a par.
+>
+>    - **Qué cambia.** Donde el caquetío tiene forma ATESTIGUADA para un
+>      significado, la derivada deja de enseñarse y de competir: se **archiva**
+>      en `FUERA_DEL_HABLA` con su forma, su glosa, su `notas` entera y **su
+>      capa epistémica intacta**. Archivar no es borrar y tampoco es degradar
+>      — la etiqueta dice de dónde viene la palabra, el archivo dice si la
+>      comunidad la habla. Siete pares: manda `kasi` sobre `kali` (sol),
+>      `were` sobre `paa` (ofrecer), `jai` sobre `kira` (escuchar), `kati`
+>      sobre `kasha` (luna), `para` sobre `habo` (mar), `juri` sobre `joutai`
+>      (viento) y `etamo` sobre `mülia` (espanto).
+>    - **Hasta dónde llega.** Sólo donde EXISTE rival atestiguado. Los
+>      pronombres, los aspectos y la mayoría de las reconstruidas no tienen
+>      rival y se quedan enteras: esto **no es una poda del núcleo**, y
+>      `tests/test_politica_atestiguado_manda.py` (e) lo fija.
+>    - **`FUERA_DEL_HABLA` pasó a ser PUERTA.** `FORMAS_DE_PLANTILLA` lo
+>      incluye desde esta tanda. Sin eso, archivar una voz la sacaba de
+>      `VOCABULARIO_BASE`, la sacaba de la puerta y la dejaba volver al día
+>      siguiente como acuñación de la comunidad — `kali`, con 2.321 usos
+>      detrás, habría vuelto la primera. Efecto colateral declarado: `piache`
+>      y los cinco numerales de D11, archivados desde el 08-03 y el 09-13,
+>      **eran acuñables hasta hoy** y ya no lo son.
+>    - **Lo que se movió en el instrumento.** `VOCABULARIO_BASE` 5.514 →
+>      5.507; `FUERA_DEL_HABLA` 6 → 13; salen de `_RAICES_VERB` dos raíces
+>      (`paa`, `kira`); la puerta 5.945 → **5.952** (no sale ninguna forma;
+>      entran los cinco numerales más `entregar` y `oír`, castellano de las
+>      glosas nuevas). De las diez plantillas estáticas cambian cuatro:
+>      `prompt_reglas_completo` (4.435 → 4.449 caracteres, en VERBOS,
+>      NATURALEZA y el ejemplo de respuesta ideal) y los tres tramos del
+>      refuerzo. El prompt medio se mueve **+6,2** caracteres sobre ~7.095 en
+>      la era 2 y **−0,2** sobre ~6.046 en la era 1 (r = −0,48; el rango ancho
+>      del delta por prompt es el muestreador re-sorteando al faltar siete
+>      claves, no el cambio).
+>    - **⚠️ Un sitio que la puerta NO alcanzaba.** `prompt_refuerzo` enseña
+>      por RECORTE (`verbos[:4]`), y la puerta lo construye con
+>      `palabras_usadas=[]`: sólo veía las cuatro primeras de cada lista.
+>      `kira` y `kali` estaban en la QUINTA posición, así que al agente que ya
+>      había dicho las cuatro primeras el refuerzo le enseñaba la forma
+>      derivada — y ninguna medición estática lo veía. Se cambió la lista, no
+>      el recorte.
+>    - **Los dos costes, dichos antes de aplicarlos.** (1) **`paa` era raíz
+>      verbal del núcleo**: 56 formas y 1.222 usos, con todo su paradigma de
+>      aspecto vivo (`paa-da` 449, `paa-ni` 256, `paa-ka` 225); al archivarla,
+>      45 de esas formas —1.179 usos— dejan de contar como arahuacas. Pero
+>      **no deja hueco funcional**: `were` es también `v_raiz` y atestiguada
+>      (Zavala #149), entra en `_RAICES_VERB` y toma los mismos tres aspectos,
+>      así que el paradigma no se rompe — se muda de raíz (verificado forma a
+>      forma con el scorer). Lo que cuesta es la comparabilidad del corpus ya
+>      dicho, que es lo que un corte declara. (2) **`kasi` 'sol' y `kashi`
+>      'ahora' comparten esqueleto fonémico** bajo la `fonemizar` del propio
+>      proyecto. El MOTOR no las confunde en ningún sitio medido
+>      —`_familia_de_token` es lookup exacto, el filtro de nombres compara el
+>      token literal, la puerta de la competencia es pertenencia a un set, y
+>      el scorer las cuenta por separado en la misma frase—; quien puede
+>      confundirlas es el hablante, y desde esta tanda las tiene **las dos en
+>      `prompt_reglas_completo`**, a tres líneas de distancia. La política se
+>      aplicó igual, con la colisión declarada en la plantilla, en las notas y
+>      en un test. Reescribir el ejemplo o cambiar `kashi` es otra decisión y
+>      no está tomada.
+>    - **El scorer no se tocó** (`score_linguistico`, `pct_*`,
+>      `capas_de_score`) ni `curiana_observer` — **y aun así el score se
+>      mueve**, porque archivar una voz la saca de `palabras_activas()`.
+>      Re-puntuadas las **216** respuestas de la serie C limpia con el
+>      pipeline del Observer y los dos lexicones (el de `f864482` sacado con
+>      `git show` y el de hoy), con el control en verde —el brazo «antes»
+>      reproduce el `score` y el `neologisms_proposed` que la base guardó, 0
+>      desvíos—: **el score cambia en 62 de 216, todas a la baja**, |Δ| máx
+>      **0,80**, Δ medio de las que cambian **−0,25**, y el score medio pasa
+>      de **7,5977 a 7,5264**. `palabras_caquetias` cambia en 94 respuestas y
+>      `neologisms_proposed` en 0. Imputación por raíz: `kali` 39 respuestas,
+>      `paa` 30, `kira` 18, `kasha` 8, `habo` 4. En toda la base dejan de
+>      reconocerse **71 formas y 3.264 usos**. Medición entera en
+>      `6-fusion/medicion_politica_atestiguado_manda_2026-09-19.yaml`
+>      (`6-fusion/scripts/medir_politica_atestiguado_manda.py`).
+>    - **Fuera del lexicón, dos sitios.** `curiana_koine.FORMAS_SEED` —que es
+>      instrumento, no emergencia: entra en `[Tu manera de hablar]` desde el
+>      día 1— sembraba seis formas archivadas en 14 agentes y se mudan a su
+>      rival atestiguada; el número de formas por agente no cambia, y con él
+>      la divergencia inicial que `DISENO_KOINE` §4 pide. Y tres hechos de
+>      `3-mundo/corpus/ecologia.yaml` apuntaban con `palabra_lexicon` a
+>      `joutai` (×2) y `habo`: pasan a `juri` y `para`.
+>    - **Lo que se deja abierto, dicho.** `sima` (par 6) **no se aplicó**
+>      aunque la política lo alcanza: es la pregunta que Miguel se reservó, y
+>      su coste está medido —510 usos en 49 formas, de los que el scorer
+>      reconoce 109, contra 1 uso de `turumako`, y está en el instrumento dos
+>      veces: como voz y como el molde `sima-bana` del ejemplo de los
+>      locativos—. Los once pares que **no son pares** (glosa ancha, `cat`
+>      equivocada, deuda declarada, castellano) se **proponen** en
+>      `6-fusion/curacion_glosas_pares_2026-09-19.yaml` y no se tocan: la
+>      política no los cubre, y dos de ellos (`wasima`, `barbache`) moverían
+>      el scorer por sí solos. `haborü` 'marejada' sigue en el habla con su
+>      raíz archivada.
+>
+>    **Desde qué run aplica**: desde el próximo. **La serie C limpia se
+>    re-corre otra vez desde el día 1** —la segunda vez en dos días, después
+>    del punto 9— y `b847944d` → `17c2271e` → `9a98de67` quedan definitivamente
+>    del otro lado. Los runs ya corridos no se reescriben.
+>
+> Ninguno de los diez toca `capas_de_score`.
 
 > ⚠️ **Dos artefactos del instrumento descubiertos al cerrar el día 3
 > (análisis por nodo, `analizar_nodos.py`, 2026-09-16), que afectan a los

@@ -103,7 +103,7 @@ entradas:
     procedencia: {obra: camacho-2011}
     dominios: [ecologia, clima]
     agentes_relacionados: []
-    palabra_lexicon: joutai
+    palabra_lexicon: juri    # joutai→juri: política «manda la atestiguada», 2026-09-19 (Zavala #178)
     locacion: null
 
   - id: ecologia-006
@@ -349,7 +349,7 @@ entradas:
     procedencia: {obra: camacho-2011}
     dominios: [ecologia, clima, navegacion]
     agentes_relacionados: [Bagre-ko, Dara-bana, Watapana, Tari-ko]
-    palabra_lexicon: joutai
+    palabra_lexicon: juri    # joutai→juri: política «manda la atestiguada», 2026-09-19 (Zavala #178)
     locacion: orilla
 
   - id: ecologia-021
@@ -448,7 +448,7 @@ entradas:
     referencia: "Estudios de corrientes y transporte de sedimentos en la boca del Golfete de Coro"
     dominios: [ecologia, pesca, navegacion]
     agentes_relacionados: [Bagre-ko, Dara-ko, Dara-bana]
-    palabra_lexicon: habo
+    palabra_lexicon: para    # habo→para: política «manda la atestiguada», 2026-09-19 (Zavala #190)
     locacion: orilla
     implicacion_simulacion: >
       La corriente crece con el viento de la tarde: hecho que estructura el horario de

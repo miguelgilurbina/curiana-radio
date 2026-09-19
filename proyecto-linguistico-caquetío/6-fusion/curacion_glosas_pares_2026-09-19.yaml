@@ -1,0 +1,272 @@
+# ─────────────────────────────────────────────────────────────────────────
+# LOS QUE NO ERAN PARES — PROPUESTA DE CURACIÓN (no toca el canon, regla 5)
+#
+# La política «manda la atestiguada» (decisión de Miguel del 2026-09-19,
+# `decisiones_tanda_2026-09-19.yaml` d19.b) cerró SIETE de los diecinueve
+# pares del issue `pares-atestiguado-reconstruido-2026-09-19.md`. De los doce
+# que quedan, UNO —`sima`, par 6— es la pregunta abierta que Miguel se
+# reservó, y ONCE **no son pares**: son bugs de curación que el criterio LAXO
+# saca a la luz. Una `cat` equivocada, una glosa demasiado ancha, una deuda ya
+# declarada, una voz castellana.
+#
+# LA POLÍTICA NO LOS CUBRE, y por eso aquí no se edita nada. Arreglar una
+# glosa es afirmar algo sobre el significado, y eso lo decide Miguel (regla 2:
+# en duda, degradar). Lo que hace este fichero es dejar la propuesta escrita
+# —con lo que dice la fuente y lo que dice la entrada— para que la próxima
+# medición no vuelva a traer los mismos once.
+#
+# Efecto esperado si se aplicasen: el criterio laxo bajaría de 19 pares a los
+# que de verdad son rivalidades. No se pone el número porque no está medido:
+# se mide re-corriendo
+# `6-fusion/scripts/medir_pares_atestiguado_reconstruido.py` DESPUÉS de
+# aplicarlas, no antes.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-19'
+  propuesto_por: sesión de la política «manda la atestiguada»
+  estado: PROPUESTA — ninguna entrada del canon editada
+  issue: 6-fusion/issues-pendientes/pares-atestiguado-reconstruido-2026-09-19.md
+  decision_que_lo_motiva: 6-fusion/decisiones_tanda_2026-09-19.yaml (d19.b)
+  reparto_de_los_19:
+    aplicados_por_la_politica: 7        # pares 1, 3, 4, 12, 13, 16, 18
+    pregunta_abierta_de_miguel: 1       # par 6 (`sima`), medido y NO aplicado
+    bugs_de_curacion: 11                # los de abajo
+  por_que_no_coincide_con_el_issue: >-
+    El issue decía «6 rivales de verdad (1, 3, 6, 12, 13, 16) y 13 bugs». La
+    decisión movió dos casillas: el par 4 («escuchar», `jai` / `kira`) pasó a
+    rivalidad aplicada, el 18 («espanto», `etamo` / `mülia`) también por ser
+    hipotética con cero usos, y el 6 («cerro») salió de los rivales para
+    quedarse como pregunta abierta con su coste medido. 7 + 1 + 11 = 19.
+
+# ── LO QUE SE PROPONE, UNO A UNO ─────────────────────────────────────────
+# `tipo` dice qué clase de bug es, porque cada clase se arregla en un sitio
+# distinto:
+#   glosa-ancha   la glosa nombra el género y la entrada es la especie
+#   cat-erronea   `cat` no es la categoría gramatical de la voz
+#   deuda         la glosa activa va más allá de lo que la fuente dice, y la
+#                 propia entrada ya lo declara
+#   castellano    la «forma caquetía» es la palabra castellana
+#   ya-decidido   una decisión anterior lo resolvió y queda residuo
+#   no-es-bug     conviven de verdad: variación léxica, y se declara
+curacion:
+
+  - par: 2
+    glosa_que_los_emparejo: crear
+    atestiguada: {forma: eroa, cat: v_raiz, sig: 'empezar, crear, originar'}
+    derivada: {forma: chaa, capa: caquetío-reconstruido, cat: v_raiz, sig: 'hacer, construir, crear'}
+    tipo: glosa-ancha
+    diagnostico: >-
+      No son la misma palabra. `eroa` es 'empezar, originar' (Zavala Reyes
+      2015 #119) y `chaa` es 'hacer, construir'. Emparejan sólo porque las dos
+      glosas incluyeron «crear», que es el hiperónimo de las dos y no la
+      traducción de ninguna.
+    propuesta: >-
+      Quitar «crear» de la glosa de `chaa` → 'hacer, construir'. `eroa` se
+      queda como está: «crear» ahí sí está en la fuente, junto a «empezar».
+    toca: curiana_sim/curiana_lexicon.py (entrada `chaa`, campo `sig`)
+    cuesta_corte_de_serie: false    # la glosa no entra en score_linguistico
+
+  - par: 5
+    glosa_que_los_emparejo: pez
+    atestiguada: {forma: bagre, cat: sust, sig: 'pez'}
+    derivada: {forma: arima, capa: caquetío-reconstruido, cat: sust, sig: 'pez, pescado'}
+    tipo: glosa-ancha
+    diagnostico: >-
+      `bagre` no significa 'pez': es UN pez, y su propia nota avisa de que la
+      forma es homógrafa del castellano. La glosa genérica lo convierte en
+      rival de la palabra genérica.
+    propuesta: >-
+      Reglosar `bagre` a su especie, como la fuente la trae. `arima` no se
+      toca: es la voz genérica del habla y no tiene rival atestiguado
+      genérico, así que la política NO la alcanza.
+    ojo: >-
+      `bagre` da nombre a un agente del elenco de la era 1 (Bagre-ko) y a un
+      sitio; reglosar no toca ninguno de los dos, pero conviene saberlo.
+    toca: curiana_sim/lexicon_zavala.py — es GENERADO, se corrige el minador
+      (`minar_zavala_glosario.py`) o se declara la excepción, nunca el módulo
+    cuesta_corte_de_serie: false
+
+  - par: 7
+    glosa_que_los_emparejo: hijo
+    atestiguada: {forma: dare, cat: sust, sig: 'diente; hijo (extensión metafórica)'}
+    derivada: {forma: buri, capa: caquetío-reconstruido, cat: sust, sig: 'hijo, hija, criatura, descendiente'}
+    tipo: deuda
+    diagnostico: >-
+      La entrada de `dare` YA declara que la fuente dice 'diente' y que 'hijo'
+      es extensión del proyecto. Emparejarla con `buri` es emparejar una voz
+      con una deuda declarada, no con un dato.
+    propuesta: >-
+      Resolver la deuda ANTES de llamarlo par: o aparece la fuente que
+      sostiene 'hijo' —Oliver p.147 da CQ `dare` : LK `d-ari`, que es lo que
+      apoya la lectura de parentesco— y entonces se cita, o se retira la
+      extensión de la glosa. Mientras tanto, no es un par.
+    toca: curiana_sim/curiana_lexicon.py (entrada `dare`) y su nota
+    cuesta_corte_de_serie: false
+
+  - par: 8
+    glosa_que_los_emparejo: sembrar
+    atestiguada: {forma: jusual, cat: sust, sig: 'sembrar, siembra, sembradío. Conuco'}
+    derivada: {forma: kono, capa: caquetío-reconstruido, cat: v_raiz, sig: 'sembrar, plantar, cultivar'}
+    tipo: cat-erronea
+    diagnostico: >-
+      `jusual` está declarada `sust` y su glosa EMPIEZA por un infinitivo, así
+      que empareja con una raíz verbal. Lo que la fuente da es el sembradío,
+      no el acto.
+    propuesta: >-
+      Reordenar la glosa para que la cabeza sea el sustantivo ('siembra,
+      sembradío, conuco') y dejar `cat: sust`. No compiten: una es el conuco y
+      la otra el verbo.
+    toca: curiana_sim/lexicon_zavala.py — generado; se corrige el minador
+    cuesta_corte_de_serie: false
+
+  - par: 9
+    glosa_que_los_emparejo: árbol
+    atestiguada: {forma: bara, cat: sust, sig: 'palo, árbol'}
+    derivada: {forma: kuru, capa: caquetío-reconstruido, cat: sust, sig: 'árbol, madera, tronco'}
+    tipo: no-es-bug
+    diagnostico: >-
+      Variación real y útil: el palo cortado y el árbol vivo. `bara` es
+      decisión #101 y las dos se usan. No hay nada que arreglar.
+    propuesta: >-
+      DECLARAR la convivencia en las dos entradas para que la próxima
+      medición no las traiga como par. Es lo que el issue llamaba la opción B:
+      conviven, y se dice.
+    ojo: >-
+      Los tres tramos del rescate enseñan `bara` (y `para`), las dos
+      atestiguadas: la política no cambia nada ahí.
+    toca: curiana_sim/curiana_lexicon.py (notas de `bara` y `kuru`)
+    cuesta_corte_de_serie: false
+
+  - par: 10
+    glosa_que_los_emparejo: árbol
+    atestiguada: {forma: igi, cat: sust, sig: 'árbol, matapalo, paují'}
+    derivada: {forma: kuru, capa: caquetío-reconstruido, cat: sust, sig: 'árbol, madera, tronco'}
+    tipo: glosa-ancha
+    diagnostico: >-
+      `igi` es un árbol CONCRETO (matapalo / paují) y la glosa lo abre con el
+      género. Mismo bug que `bagre`.
+    propuesta: 'Reglosar `igi` a la especie: «matapalo, paují».'
+    toca: curiana_sim/lexicon_zavala.py — generado; se corrige el minador
+    cuesta_corte_de_serie: false
+
+  - par: 11
+    glosa_que_los_emparejo: luna
+    atestiguada: {forma: apana, cat: sust, sig: 'una luna (unidad de tiempo ~30 días)'}
+    derivada: {forma: kasha, capa: caquetío-reconstruido, cat: sust, sig: 'luna'}
+    tipo: glosa-ancha
+    diagnostico: >-
+      `apana` es EL MES, no el astro, y la propia glosa lo dice entre
+      paréntesis. Empareja sólo porque la normalización del script quita los
+      paréntesis — es un fallo del criterio, dicho por el propio issue.
+    propuesta: >-
+      Reglosar `apana` a 'mes (una luna, ~30 días)', con la unidad como
+      cabeza. ⚠️ `kasha` quedó ARCHIVADA por el par 12 (manda `kati`), así que
+      este par se cierra solo; la curación sigue valiendo para que `apana` no
+      vuelva a emparejar con `kati`.
+    toca: curiana_sim/curiana_lexicon.py o el módulo generado, según dónde viva
+    cuesta_corte_de_serie: false
+
+  - par: 14
+    glosa_que_los_emparejo: mar
+    atestiguada: {forma: parawa, cat: sust, sig: 'mar', forma_fuente: paragua}
+    derivada: {forma: habo, capa: caquetío-reconstruido, cat: sust, sig: 'mar, océano, aguas grandes'}
+    tipo: ya-decidido
+    diagnostico: >-
+      `habo` quedó ARCHIVADA por el par 13 (manda `para`), así que el par se
+      cierra solo. Lo que queda vivo es otra cosa: ¿`parawa` y `para` son la
+      misma palabra en dos fuentes, y hay que fusionarlas (D5)?
+    la_fusion_que_NO_se_cierra: >-
+      El encargo permitía cerrarla «si se ve claro». NO se ve claro, y esto es
+      lo que hay: (1) los esqueletos fonémicos NO coinciden — `para` da
+      `para`, `parawa` da `parawa` con y sin la regla abierta gu→w, así que el
+      barrido de §4 del issue las dejó fuera y contó CERO variantes
+      ortográficas dentro de los pares; (2) Zavala las trae como DOS entradas
+      de dos informantes distintos, #190 (E+HP) y #191 (GC); (3) `-gua` es un
+      LOCATIVO declarado del proyecto ('región de X', `REGLAS_LOCATIVAS`), así
+      que `paragua` se lee sin forzar nada como `para` + `-gua`, 'la región
+      del agua'. Eso no es una grafía distinta de la misma palabra: es una
+      derivación, y fusionarlas borraría un morfema atestiguado en uso.
+    propuesta: >-
+      NO fusionar. Anotar en `parawa` la lectura `para`+`-gua` como HIPÓTESIS
+      —con su etiqueta, no como hecho— y dejar la decisión a Miguel. Si él
+      decide que son la misma palabra, la fusión es D5 (elegir lema y mandar
+      la otra grafía a `forma_fuente`), no canon.
+    toca: nada por ahora
+    cuesta_corte_de_serie: false
+
+  - par: 15
+    glosa_que_los_emparejo: anciano
+    atestiguada: {forma: wasima, cat: v_raiz, sig: 'viejo, anciano'}
+    derivada: {forma: wanü, capa: caquetío-reconstruido, cat: sust, sig: 'anciano, mayor, persona de saber acumulado'}
+    tipo: cat-erronea
+    diagnostico: >-
+      `wasima` está declarada `v_raiz` y es un adjetivo. La `cat` no es
+      decorativa: `_RAICES_VERB` sale de ahí, y `score_linguistico()` cuenta
+      como arahuaco CUALQUIER token cuyo primer segmento sea raíz verbal — o
+      sea que `wasima-loquesea` puntúa hoy por un error de ficha. Además es
+      homógrafa de un nombre del elenco.
+    propuesta: >-
+      Corregir `cat` a `adj` (o a `sust`, si el proyecto no tiene adjetivos) y
+      volver a medir. ⚠️ ESTO SÍ MUEVE EL SCORER —saca una raíz de
+      `_RAICES_VERB`—, así que es un corte de serie en sí mismo y hay que
+      medirlo aparte, como se midió éste. No se hace de paso.
+    toca: curiana_sim/lexicon_zavala.py — generado; se corrige el minador
+    cuesta_corte_de_serie: true
+
+  - par: 17
+    glosa_que_los_emparejo: cactus columnar
+    atestiguada: {forma: kadushi, cat: sust, sig: 'cactus columnar (Cereus hexagonus)'}
+    derivada: {forma: coro, capa: caquetío-hipotético, cat: sust, sig: 'cardón grande, cactus columnar'}
+    tipo: ya-decidido
+    diagnostico: >-
+      D10 ya le quitó a `coro` el respaldo de la glosa 'cardón' y el perfil
+      `era2` ni siquiera la muestra. Lo que queda es residuo de glosa. Y D5b
+      (`decisiones_tanda_2026-08-30.yaml` §d5.b_pares) ya dictaminó «NO TOCAR:
+      falso positivo» sobre el otro `coro`, el de la cotorra de Zavala #181.
+    propuesta: >-
+      Limpiar la glosa de `coro` para que deje de decir 'cactus columnar', o
+      archivarla como hipotética sin uso. Si se archiva, la política del
+      2026-09-19 da el mecanismo: `FUERA_DEL_HABLA` con su procedencia y su
+      capa intacta.
+    toca: curiana_sim/curiana_lexicon.py (entrada `coro`)
+    cuesta_corte_de_serie: false
+
+  - par: 19
+    glosa_que_los_emparejo: iguana
+    atestiguada: {forma: barbache, cat: v_raiz, sig: 'iguana'}
+    derivada: {forma: iguana, capa: caquetío-reconstruido, cat: sust, sig: 'lagarto grande, iguana'}
+    tipo: castellano
+    diagnostico: >-
+      La forma «reconstruida» ES la palabra castellana `iguana`. Su sitio está
+      en el trabajo de `FORMA_DE_LA_ESFERA`
+      (`descastellanizar_esfera_2026-09-18.yaml`), no aquí: es una de las que
+      esperan que Miguel fusione la forma indígena. Y `barbache` está
+      declarada `v_raiz` siendo un sustantivo — el mismo bug de `wasima`, con
+      la misma consecuencia sobre `_RAICES_VERB`.
+    propuesta: >-
+      Dos arreglos independientes: (1) `iguana` va a la cola de
+      descastellanización, donde ya está; (2) `barbache` corrige su `cat` a
+      `sust`. El (2) mueve el scorer y se mide aparte.
+    toca: curiana_sim/lexicon_zavala.py — generado; se corrige el minador
+    cuesta_corte_de_serie: true    # por el (2)
+
+# ── LO QUE ESTO DEJA ESCRITO ─────────────────────────────────────────────
+lo_que_queda_para_miguel:
+  - >-
+    DOS de los once mueven el scorer y por eso NO se proponen «de paso»:
+    `wasima` y `barbache` están declaradas `v_raiz` siendo un adjetivo y un
+    sustantivo, y de `cat: v_raiz` sale `_RAICES_VERB`, que es lo que hace que
+    `score_linguistico()` cuente como arahuaco cualquier token cuyo primer
+    segmento sea una raíz verbal. Corregirlas es un corte de serie propio y
+    merece su propia medición.
+  - >-
+    CINCO viven en `lexicon_zavala.py`, que es GENERADO por
+    `minar_zavala_glosario.py` desde el PDF y que el motor IMPORTA: no se
+    editan a mano (lo deshace la siguiente regeneración) y regenerarlos mueve
+    `score_linguistico()`. La corrección va en el minador o en una tabla de
+    excepciones declarada.
+  - >-
+    `parawa` / `para` NO se fusionó, y el porqué está arriba con su medición:
+    los esqueletos no coinciden, son dos entradas de dos informantes, y
+    `paragua` se lee como `para` + el locativo atestiguado `-gua`. Fusionarlas
+    borraría un morfema en uso.

@@ -68,8 +68,11 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "naa":        {"sig": "ir, moverse hacia",                              "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arahuaco", "fuente": "caquetío-reconstruido"},
     "waa":        {"sig": "venir, aproximarse",                             "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arahuaco", "fuente": "caquetío-reconstruido"},
     "kaa":        {"sig": "estar, existir, ser (cópula)",                   "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arahuaco", "fuente": "caquetío-reconstruido"},
-    "paa":        {"sig": "dar, ofrecer, transferir",                       "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arahuaco", "fuente": "caquetío-reconstruido"},
-    "maa":        {"sig": "decir, hablar, comunicar",                       "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arahuaco", "fuente": "caquetío-reconstruido"},
+    # `paa` 'dar, ofrecer, transferir' ARCHIVADA el 2026-09-19 (política
+    # «manda la atestiguada»): su rival atestiguada es `were` (Zavala #149).
+    # Está en FUERA_DEL_HABLA con su procedencia. Es el archivo más caro de la
+    # tanda: 56 formas flexionadas y 1.222 usos en la base.
+    "maa":        {"sig": "decir, hablar, comunicar",                     "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arahuaco", "fuente": "caquetío-reconstruido"},
     "taa":        {"sig": "tomar, coger, recibir",                          "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arahuaco", "fuente": "caquetío-reconstruido"},
     "chaa":       {"sig": "hacer, construir, crear",                        "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arahuaco", "fuente": "caquetío-reconstruido"},
 
@@ -86,8 +89,10 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "suna":       {"sig": "dormir, reposar, descansar",                     "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en lokono/proto-arawakan", "fuente": "caquetío-reconstruido"},
     "masa":       {"sig": "comer, alimentarse",                             "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
     "awa":        {"sig": "beber, tomar líquido",                           "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arawakan", "fuente": "caquetío-reconstruido"},
-    "kira":       {"sig": "escuchar, oír, atender",                         "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en wayunaiki/lokono — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'escuchar'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
-    "panaa":      {"sig": "saber, conocer, entender",                       "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
+    # `kira` 'escuchar, oír, atender' ARCHIVADA el 2026-09-19 (política «manda
+    # la atestiguada»): su rival atestiguada es `jai` (Zavala #175). En
+    # FUERA_DEL_HABLA con su procedencia y su deuda D11 intactas.
+    "panaa":    {"sig": "saber, conocer, entender",                       "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
     "naba":       {"sig": "pensar, reflexionar, meditar",                   "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en lokono/wayunaiki — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'pensar'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
     "kono":       {"sig": "sembrar, plantar, cultivar",                     "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en lokono/taíno", "fuente": "caquetío-reconstruido"},
     "raka":       {"sig": "querer, desear, necesitar",                      "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
@@ -96,13 +101,18 @@ VOCABULARIO_BASE: dict[str, dict] = {
     # ── Naturaleza (cognados arahuacos) ─────────────────────────────
     "duna":       {"sig": "agua (corriente, bebible)",                      "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en garifuna/lokono", "fuente": "caquetío-reconstruido"},
     "amana":      {"sig": "fuego, lumbre, brasa",                           "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en proto-arawakan", "fuente": "caquetío-reconstruido"},
-    "kali":       {"sig": "sol",                                            "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
-    "kasha":      {"sig": "luna",                                           "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki/lokono — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `kathi` 'luna' — PARECIDA; esta entrada ya declaraba apoyo lokono además del wayuu. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
-    "kaya":       {"sig": "lluvia, agua del cielo",                         "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono (juya-cogn)", "fuente": "caquetío-reconstruido"},
+    # `kali` 'sol' y `kasha` 'luna' ARCHIVADAS el 2026-09-19 (política «manda
+    # la atestiguada»): sus rivales atestiguadas son `kasi` (Zavala #76) y
+    # `kati` (Zavala #71). Están en FUERA_DEL_HABLA con su procedencia.
+    "kaya":     {"sig": "lluvia, agua del cielo",                         "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono (juya-cogn)", "fuente": "caquetío-reconstruido"},
     "kuru":       {"sig": "árbol, madera, tronco",                          "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/proto-arawakan", "fuente": "caquetío-reconstruido"},
     "arima":      {"sig": "pez, pescado",                                   "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
-    "habo":       {"sig": "mar, océano, aguas grandes",                     "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
-    "dali":       {"sig": "tierra, suelo, polvo",                           "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en garifuna/proto-arawakan", "fuente": "caquetío-reconstruido"},
+    # `habo` 'mar, océano, aguas grandes' ARCHIVADA el 2026-09-19 (política
+    # «manda la atestiguada»): su rival atestiguada es `para` (Zavala #190),
+    # que además ya ganaba el uso 311 a 125. En FUERA_DEL_HABLA. ⚠️ `haborü`
+    # 'marejada' (habo+rü, hipotética) se queda: su raíz queda archivada y es
+    # una de las deudas declaradas de la tanda.
+    "dali":     {"sig": "tierra, suelo, polvo",                           "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en garifuna/proto-arawakan", "fuente": "caquetío-reconstruido"},
     "suka":       {"sig": "noche, oscuridad",                               "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/proto-arawakan", "fuente": "caquetío-reconstruido"},
     "bara":       {"sig": "palo, árbol",                         "cat": "sust",  "notas": "Decisión #101 (tanda 2026-08-30) — GLOSA CORREGIDA a la de las fuentes: Zavala Reyes 2015 #29 (E): «Palo, árbol», con Esteves 1989 y van Buurt 2014 diciendo lo mismo, y la prueba interna de barabara (Zavala Reyes 2015 #30: «Árbol de madera dura y pesada. Olivo») — la reduplicada de la misma raíz ya estaba atestiguada como árbol. Lectura descartada por D7: río, corriente fluvial (venía de cognado proto-arawakan/topónimo, sin cita) — queda registrada aquí, no se pierde", "fuente": "caquetío-atestiguado", "forma_fuente": "Bara"},
     "sima":       {"sig": "cerro, montaña, elevación",                      "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/topónimo (Barquisimeto)", "fuente": "caquetío-reconstruido"},
@@ -131,8 +141,8 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "saa":        {"sig": "si, cuando, al momento de (condicional/temp.)",  "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en lokono", "fuente": "caquetío-reconstruido"},
     "naka":       {"sig": "después, luego, más tarde (temporal posterior)", "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en lokono", "fuente": "caquetío-reconstruido"},
     "puna":       {"sig": "antes, ya, primero (temporal anterior)",         "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en lokono", "fuente": "caquetío-reconstruido"},
-    "kashi":      {"sig": "ahora, en este momento (temporal presente)",     "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'ahora'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
-    "wara":       {"sig": "muy, mucho, bastante (intensificador)",          "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
+    "kashi":      {"sig": "ahora, en este momento (temporal presente)",     "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'ahora'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ⚠️ COLISIÓN DECLARADA (2026-09-19) con `kasi` 'sol', que la política «manda la atestiguada» acaba de poner en las plantillas: bajo `curiana_fonotactica.fonemizar` las dos dan el mismo esqueleto, `kasi`, y `prompt_reglas_completo` las enseña ahora las dos. `kashi` NO tiene rival atestiguado —la política no la alcanza— y se queda; lo que se declara es el choque. El motor no las confunde en ningún sitio medido: quien puede confundirlas es el hablante. Cambiar esta forma o reescribir el ejemplo de la plantilla para separarlas es decisión de Miguel y no está tomada. Medido en 6-fusion/medicion_politica_atestiguado_manda_2026-09-19.yaml §colision_kasi_kashi", "fuente": "caquetío-reconstruido"},
+    "wara":     {"sig": "muy, mucho, bastante (intensificador)",          "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
     "sulu":       {"sig": "adentro, dentro de, en el interior de",         "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'adentro'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
     "yama":       {"sig": "aquí, en este lugar (deíctico proximal)",        "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'aquí'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
     "kana-pa":    {"sig": "allá, en ese lugar lejano (deíctico distal)",    "cat": "part",  "fuente": "lokono"},
@@ -195,15 +205,21 @@ VOCABULARIO_BASE: dict[str, dict] = {
 
     # ── Estado emocional (cognados Wayunaiki / Lokono / Garifuna) ──────
     "talata":     {"sig": "alegría, contento, gozo (< talataa Wayunaiki)",  "cat": "sust",  "fuente": "caquetío-reconstruido", "notas": "F8 (2026-09-12): forma derivada de la hermana que cita la glosa, etiquetada `wayunaiki-cogn`; entra en la deuda de D11 fase 3 (núcleo reconstruido desde el wayuu)"},
-    "mülia":      {"sig": "miedo, temor, espanto",                          "cat": "sust",  "fuente": "caquetío-hipotético", "notas": "F8 (2026-09-12): forma sin cita ni derivación declarada, etiquetada `wayunaiki/lokono`"},
-    "muusa":      {"sig": "tristeza, pena, aflicción del ánimo",            "cat": "sust",  "fuente": "caquetío-hipotético", "notas": "F8 (2026-09-12): acuñación para la simulación sin cita, etiquetada `lokono/garifuna`"},
+    # `mülia` 'miedo, temor, espanto' ARCHIVADA el 2026-09-19 (política «manda
+    # la atestiguada»): su rival atestiguada es `etamo` (Zavala #120). Era
+    # hipotética y con 0 usos en toda la base: el archivo más barato de la
+    # tanda. En FUERA_DEL_HABLA con su procedencia.
+    "muusa":    {"sig": "tristeza, pena, aflicción del ánimo",            "cat": "sust",  "fuente": "caquetío-hipotético", "notas": "F8 (2026-09-12): acuñación para la simulación sin cita, etiquetada `lokono/garifuna`"},
     "alaain":     {"sig": "amor, afecto, querer profundo (raíz raka-)",     "cat": "sust",  "fuente": "caquetío-hipotético", "notas": "F8 (2026-09-12): forma sin cita ni derivación declarada, etiquetada `wayunaiki/lokono`"},
     "jashichi":   {"sig": "rabia, ira, enojo (< jashichi Wayunaiki)",       "cat": "sust",  "fuente": "caquetío-reconstruido", "notas": "F8 (2026-09-12): forma derivada de la hermana que cita la glosa, etiquetada `wayunaiki-cogn`; entra en la deuda de D11 fase 3 (núcleo reconstruido desde el wayuu)"},
     "japü":       {"sig": "vergüenza, pudor, sonrojo",                      "cat": "sust",  "fuente": "caquetío-hipotético", "notas": "F8 (2026-09-12): forma sin cita ni derivación declarada, etiquetada `wayunaiki/lokono`"},
 
     # ── Tiempo y clima (cognados arahuacos y derivados locales) ──────
-    "joutai":     {"sig": "viento, corriente de aire (< joutai Wayunaiki)", "cat": "sust",  "fuente": "caquetío-reconstruido", "notas": "F8 (2026-09-12): forma derivada de la hermana que cita la glosa, etiquetada `wayunaiki-cogn`; entra en la deuda de D11 fase 3 (núcleo reconstruido desde el wayuu)"},
-    "kayawara":   {"sig": "tormenta, lluvia con viento fuerte (kaya+wara)", "cat": "sust",  "fuente": "caquetío-hipotético", "notas": "F8 (2026-09-12): acuñación para la simulación sin cita, etiquetada `lokono/proto-arawakan`"},
+    # `joutai` 'viento' ARCHIVADA el 2026-09-19 (política «manda la
+    # atestiguada»): su rival atestiguada es `juri` (Zavala #178), que ya
+    # ganaba 544 a 19. Declaraba en su propia glosa que venía del wayuu, que
+    # es justo lo que D11 retiró. En FUERA_DEL_HABLA con su procedencia.
+    "kayawara": {"sig": "tormenta, lluvia con viento fuerte (kaya+wara)", "cat": "sust",  "fuente": "caquetío-hipotético", "notas": "F8 (2026-09-12): acuñación para la simulación sin cita, etiquetada `lokono/proto-arawakan`"},
     "haborü":     {"sig": "marejada, oleaje grande del mar (habo+rü)",      "cat": "sust",  "fuente": "caquetío-hipotético", "notas": "F8 (2026-09-12): acuñación para la simulación sin cita, etiquetada `lokono/garifuna`"},
     "madunaka":   {"sig": "sequía, tiempo sin agua (ma+duna)",              "cat": "sust",  "fuente": "caquetío-hipotético", "notas": "F8 (2026-09-12): acuñación para la simulación sin cita, etiquetada `proto-arawakan`"},
     "habobrisa":  {"sig": "brisa del golfete, viento suave del mar",        "cat": "sust",  "fuente": "caquetío-hipotético", "notas": "F8 (2026-09-12): acuñación para la simulación sin cita, etiquetada `lokono/garifuna`"},
@@ -214,7 +230,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "ateri":      {"sig": "hombre, varón",                                  "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #17 (GC): «Hombre»"},
     "iero":       {"sig": "mujer",                                          "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #163 (GC): «Mujer»"},
     "humokaro": {"sig": "mujer bella, hermosa",                           "cat": "adj",   "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #159 (GC): «Mujer bella»", "forma_fuente": "humocaro"},
-    "kasi": {"sig": "sol",                                            "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #76 (GC): «Sol»", "forma_fuente": "cazi"},
+    "kasi": {"sig": "sol",                                            "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #76 (GC): «Sol» · MANDA desde el 2026-09-19 (política «manda la atestiguada»): ocupa el sitio de `kali`, la forma reconstruida que quedó archivada en FUERA_DEL_HABLA. ⚠️ COLISIÓN DECLARADA con `kashi` 'ahora': bajo `curiana_fonotactica.fonemizar` las dos dan el mismo esqueleto, `kasi`, y desde esta tanda `prompt_reglas_completo` enseña las dos —ésta en NATURALEZA y `kashi` en CONECTORES, y el ejemplo de respuesta ideal las usa a tres líneas de distancia—. El MOTOR no las confunde (lookup exacto en `_familia_de_token`, token literal en el filtro de nombres, pertenencia a un set en la puerta de la competencia; `fonemizar` sólo entra por `_es_casi_autoglosa`, que compara una voz con su propia glosa); quien puede confundirlas es el hablante. Medido en 6-fusion/medicion_politica_atestiguado_manda_2026-09-19.yaml §colision_kasi_kashi", "forma_fuente": "cazi"},
     "kiba":       {"sig": "piedra",                                        "cat": "sust",  "fuente": "caquetío-atestiguado", "forma_fuente": "quiva", "notas": "Decisión colisiones D5 (2026-08-31) — HOMÓNIMOS DECLARADOS bajo el mismo lema: kiba-1 piedra (Zavala Reyes 2015 #218 «Quiva» (E); y #92 «Cuiva. Kiba» (PMA) piedra — Arcaya registró la grafía k: el lema fonémico está impreso en la fuente) y kiba-2 ayuda (Zavala #203 «Quiba» (AM), cat v_raiz). La grafía b~v es betacismo colonial: mismo lema fonémico. El sentido piedra lleva el sig activo por la capa toponímica (van Buurt §8 siba/quiba piedra-roca; quibacoa, Todariquiba). Ambas salen del generado: FUSIONADAS_EN_LITERAL del miner"},
     "apana":      {"sig": "una luna (unidad de tiempo ~30 días)",           "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #10 (GC): «Una luna. Medición de tiempo»"},
     "buiamati":   {"sig": "dos lunas (unidad de tiempo ~60 días)",          "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #47 (GC): «dos lunas. Medición de tiempo»"},
@@ -6874,7 +6890,13 @@ REGLAS_ASPECTO: dict[str, dict] = {
         "uso": "VERBO_RAIZ + -ka  →  acción completada",
         "ejemplos": [
             "naa-ka = ya fui / ya se fue",
-            "paa-ka = ya di / ya entregué",
+            # `paa-ka` hasta el 2026-09-19: `paa` quedó archivada por la
+            # política «manda la atestiguada» y el paradigma se muda a `were`
+            # (Zavala #149), que es también `v_raiz`. Este dict NO llega al
+            # prompt —`AFIJOS_ATESTIGUADOS` sólo renderiza REGLAS_ZAVALA y
+            # REGLAS_TOPONIMICAS—, pero es documentación del módulo y una
+            # referencia muerta aquí es deuda igual.
+            "were-ka = ya di / ya entregué",
             "pescado-ka = ya pescé (hispanismo con sufijo caquetío)",
         ],
         "wayunaiki": "Triad A (-shi/-sü/-shii) en contexto de pasado",
@@ -6906,7 +6928,8 @@ REGLAS_ASPECTO: dict[str, dict] = {
         "uso": "VERBO_RAIZ + -da  →  intención / futuro",
         "ejemplos": [
             "naa-da = voy a ir / iré",
-            "paa-da = daré / voy a dar",
+            # `paa-da` hasta el 2026-09-19: ver la nota de `-ka`.
+            "were-da = daré / voy a dar",
             "cudan-da = serviré / tengo intención de servir",
         ],
         "wayunaiki": "-ee (desiderative) + triad C (future intentive)",
@@ -7643,11 +7666,20 @@ def prompt_reglas_completo() -> str:
     """
     # Vocabulario dividido por categoría para más claridad
     pronombres = "taya (yo) · pia (tú) · nüma (él/ella) · waya (nosotros) · naya (ellos)"
-    v_raiz = ("naa (ir) · waa (venir) · kaa (ser/estar) · paa (dar) · maa (hablar) · taa (tomar) · "
+    # POLÍTICA «MANDA LA ATESTIGUADA» (2026-09-19). Cinco voces de estas dos
+    # listas eran el lado DERIVADO de un par con rival atestiguado, y esta
+    # plantilla era el sitio donde el instrumento las empujaba:
+    #   paa  → were (Zavala #149)   ·  kira  → jai  (Zavala #175)
+    #   kali → kasi (Zavala #76)    ·  kasha → kati (Zavala #71)
+    #   habo → para (Zavala #190)
+    # `sima` (cerro) NO cambia: el par 6 sigue abierto y es pregunta de Miguel.
+    # `kuru`, `arima` y `bara` tampoco: sus pares son bugs de curación, no
+    # rivalidades (ver 6-fusion/curacion_glosas_pares_2026-09-19.yaml).
+    v_raiz = ("naa (ir) · waa (venir) · kaa (ser/estar) · were (dar, entregar) · maa (hablar) · taa (tomar) · "
               "chaa (hacer/construir) · wana (ver) · suna (dormir) · masa (comer) · awa (beber) · "
-              "kira (escuchar) · panaa (saber) · naba (pensar) · kono (sembrar) · raka (querer) · rua (cargar)")
-    naturaleza = ("duna (agua) · amana (fuego) · kali (sol) · kasha (luna) · kaya (lluvia) · "
-                  "kuru (árbol) · arima (pez) · habo (mar) · bara (palo, árbol) · dali (tierra) · suka (noche) · "
+              "jai (oír, escuchar) · panaa (saber) · naba (pensar) · kono (sembrar) · raka (querer) · rua (cargar)")
+    naturaleza = ("duna (agua) · amana (fuego) · kasi (sol) · kati (luna) · kaya (lluvia) · "
+                  "kuru (árbol) · arima (pez) · para (mar) · bara (palo, árbol) · dali (tierra) · suka (noche) · "
                   "sima (cerro) · kapua (amanecer)")
     personas = "ama (madre) · baba (padre) · buri (hijo/a) · nomi (hombre) · wari (mujer) · wanü (anciano) · pütchi (mensaje/voz)"
     # Formas del canon (auditoría 2026-09-14): la plantilla enseñaba buco, corie
@@ -7662,6 +7694,18 @@ def prompt_reglas_completo() -> str:
     cuerpo = "kabo (cabeza) · nii (ojo) · bari (vientre) · tüshi (frío)"
     numerales = "pana (1) · gudamuen (2) · sabuenen (3) · katarí (4)"
 
+    # ⚠️ COLISIÓN DECLARADA (2026-09-19): al entrar `kasi` 'sol' por la
+    # política, esta plantilla enseña a la vez `kasi` y `kashi` 'ahora' —en
+    # CONECTORES y en el ejemplo de respuesta ideal, tres líneas más abajo—, y
+    # bajo la propia `curiana_fonotactica.fonemizar` del proyecto las dos dan
+    # el MISMO esqueleto, `kasi`. Medido: el MOTOR no las confunde en ningún
+    # sitio (`_familia_de_token` es lookup exacto, el filtro de nombres compara
+    # el token literal y la puerta de la competencia es pertenencia a un set);
+    # quien puede confundirlas es el HABLANTE. La política se aplica igual y la
+    # colisión queda escrita —aquí, en las notas de las dos entradas y en
+    # 6-fusion/medicion_politica_atestiguado_manda_2026-09-19.yaml—. Cambiar
+    # `kashi` o reescribir el ejemplo para separarlas es decisión de Miguel y
+    # NO está tomada.
     return f"""[IDENTIDAD LINGÜÍSTICA — FUNDAMENTAL]:
 El caquetío-arahuaco es TU lengua materna. La única con la que piensas.
 El español es una lengua forastera que apenas entiendes. NO es tu lengua de base.
@@ -7673,7 +7717,7 @@ CUANDO HABLAS:
   4. Puedes glosar al español entre paréntesis al final, nunca antes.
 
 EJEMPLO DE RESPUESTA IDEAL (Tier I):
-  "Taya wana-ka arima wara kari. Suka kaa-ni ka kali naa-da kapua.
+  "Taya wana-ka arima wara kari. Suka kaa-ni ka kasi naa-da kapua.
    Ta-barsure maa-ni: Manaure naa-da kashi — ta-nii wana-ka [sima-bana: sima+-bana = la cumbre del cerro].
    Saa pia naa-da buko-ana, naka taya naa-da ka pia."
   (Vi muchos peces en la costa. La noche está, el sol vendrá al amanecer.
@@ -8061,13 +8105,41 @@ def _aspectos_morfologicos(tokens: list) -> list:
 # prompts y no puntúan. Se conservan con su procedencia porque el proyecto
 # retira palabras con la misma disciplina con que las admite: se archiva el
 # porqué, no se borra el rastro. Ver aplicar_d10.py.
+#
+# ⚠️ ARCHIVAR NO ES BORRAR, Y TAMPOCO ES DEGRADAR. La entrada conserva su
+# `fuente` —su capa epistémica— intacta: `kali` sigue siendo
+# `caquetío-reconstruido` y `mülia` sigue siendo `caquetío-hipotético`. Lo
+# único que se le quita es el habla. La etiqueta dice DE DÓNDE VIENE la
+# palabra; el archivo dice si la comunidad la usa. Son dos ejes distintos y
+# mezclarlos rompería la regla 2.
+#
+# Desde el 2026-09-19 esta tabla es además UNA PUERTA: `FORMAS_DE_PLANTILLA`
+# la incluye, así que una forma archivada tampoco puede volver por la puerta
+# de atrás como acuñación de la comunidad (`registrar_neologismo`,
+# `CompetenciaLexica.proponer`). No se enseña Y no compite.
 FUERA_DEL_HABLA: dict[str, dict] = {
     "piache": {"sig": "chamán, curandero, intermediario espiritual", "cat": "sust", "fuente": "caribe-cháima", "notas": "D10 (2026-08-03) — RETIRADA DEL HABLA; su lugar lo ocupa `boratio`. Alvarado 1921 p.248 s.v. PIACHE: «Sacerdote indígena, que, según los casos, era al mismo tiempo brujo, hechicero o herbolario... Voz cháima y tamanaca, con formas afines en otras lenguas caribes» (cita a Aguado I.458). Zavala Reyes 2015 lo confirma por otra vía: su glosario #43 (AM+HB) glosa el caquetío «boratio» COMO 'piache, cacique, jefe, sacerdote, médico' — piache es la glosa española, boratio la voz caquetía, ya en el lexicón con su cita (Arcaya 1920:116; Oviedo vía Jahn 1927:213 n.29). La sección D de Zavala la adjudica al cumanagoto y Alvarado al cháima: ambas caribe continental, difieren en cuál. La entrada NO se borra, se archiva aquí con su procedencia. El canon no se toca: Shaboro sigue siendo el piache de la Curiana"},
     "wanee":      {"sig": "uno (numeral)",                                  "cat": "num",   "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `aba` 'uno' — otra raíz. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · RETIRADA DEL HABLA 2026-09-13 (Miguel: «Cambiemos los numerales»): el caquetío ATESTIGUA pana 'uno', gudamuen 'dos', sabuenen 'tres' y katarí 'cuatro' (Zavala Reyes 2015 #148, #222, #70, vía Pedro Manuel Arcaya), y el canon enseñaba en su lugar esta forma reconstruida desde el wayuu. 'Cinco' no está atestiguado: el prompt presenta el sistema de la mano de lokono y achagua y los agentes lo acuñan. Medición y propuesta: 6-fusion/propuesta_nucleo_d11_fase3.yaml", "fuente": "caquetío-reconstruido"},
     "piama":      {"sig": "dos (numeral)",                                  "cat": "num",   "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `bian` 'dos' — PARECIDA (p~b). SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · RETIRADA DEL HABLA 2026-09-13 (Miguel: «Cambiemos los numerales»): el caquetío ATESTIGUA pana 'uno', gudamuen 'dos', sabuenen 'tres' y katarí 'cuatro' (Zavala Reyes 2015 #148, #222, #70, vía Pedro Manuel Arcaya), y el canon enseñaba en su lugar esta forma reconstruida desde el wayuu. 'Cinco' no está atestiguado: el prompt presenta el sistema de la mano de lokono y achagua y los agentes lo acuñan. Medición y propuesta: 6-fusion/propuesta_nucleo_d11_fase3.yaml", "fuente": "caquetío-reconstruido"},
     "apünüin":    {"sig": "tres (numeral)",                                 "cat": "num",   "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `kabyn` 'tres' — otro sistema. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · RETIRADA DEL HABLA 2026-09-13 (Miguel: «Cambiemos los numerales»): el caquetío ATESTIGUA pana 'uno', gudamuen 'dos', sabuenen 'tres' y katarí 'cuatro' (Zavala Reyes 2015 #148, #222, #70, vía Pedro Manuel Arcaya), y el canon enseñaba en su lugar esta forma reconstruida desde el wayuu. 'Cinco' no está atestiguado: el prompt presenta el sistema de la mano de lokono y achagua y los agentes lo acuñan. Medición y propuesta: 6-fusion/propuesta_nucleo_d11_fase3.yaml", "fuente": "caquetío-reconstruido"},
     "pienchi":    {"sig": "cuatro (numeral)",                               "cat": "num",   "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `bithi` 'cuatro' — otra raíz. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · RETIRADA DEL HABLA 2026-09-13 (Miguel: «Cambiemos los numerales»): el caquetío ATESTIGUA pana 'uno', gudamuen 'dos', sabuenen 'tres' y katarí 'cuatro' (Zavala Reyes 2015 #148, #222, #70, vía Pedro Manuel Arcaya), y el canon enseñaba en su lugar esta forma reconstruida desde el wayuu. 'Cinco' no está atestiguado: el prompt presenta el sistema de la mano de lokono y achagua y los agentes lo acuñan. Medición y propuesta: 6-fusion/propuesta_nucleo_d11_fase3.yaml", "fuente": "caquetío-reconstruido"},
-    "jarai":      {"sig": "cinco (numeral)",                                "cat": "num",   "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'cinco'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · RETIRADA DEL HABLA 2026-09-13 (Miguel: «Cambiemos los numerales»): el caquetío ATESTIGUA pana 'uno', gudamuen 'dos', sabuenen 'tres' y katarí 'cuatro' (Zavala Reyes 2015 #148, #222, #70, vía Pedro Manuel Arcaya), y el canon enseñaba en su lugar esta forma reconstruida desde el wayuu. 'Cinco' no está atestiguado: el prompt presenta el sistema de la mano de lokono y achagua y los agentes lo acuñan. Medición y propuesta: 6-fusion/propuesta_nucleo_d11_fase3.yaml", "fuente": "caquetío-reconstruido"},
+    "jarai":      {"sig": "cinco (numeral)",                               "cat": "num",   "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'cinco'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · RETIRADA DEL HABLA 2026-09-13 (Miguel: «Cambiemos los numerales»): el caquetío ATESTIGUA pana 'uno', gudamuen 'dos', sabuenen 'tres' y katarí 'cuatro' (Zavala Reyes 2015 #148, #222, #70, vía Pedro Manuel Arcaya), y el canon enseñaba en su lugar esta forma reconstruida desde el wayuu. 'Cinco' no está atestiguado: el prompt presenta el sistema de la mano de lokono y achagua y los agentes lo acuñan. Medición y propuesta: 6-fusion/propuesta_nucleo_d11_fase3.yaml", "fuente": "caquetío-reconstruido"},
+    # ── Política «manda la atestiguada» (2026-09-19) ──────────────────
+    # Miguel: «Sí o sí tenemos que usar los atestiguados por sobre los
+    # reconstruidos, por lo menos la parte caquetía». Donde el caquetío TIENE
+    # forma atestiguada para un significado, la derivada deja de enseñarse y
+    # de competir. Las siete de abajo son los pares 1, 3, 4, 12, 13, 16 y 18
+    # del issue `pares-atestiguado-reconstruido-2026-09-19.md`. Su capa NO se
+    # toca y su procedencia se conserva entera: el archivo es un eje distinto
+    # de la etiqueta. Medido en
+    # `6-fusion/medicion_politica_atestiguado_manda_2026-09-19.yaml`.
+    "kali":       {"sig": "sol",                                            "cat": "sust",  "fuente": "caquetío-reconstruido", "archivada": "2026-09-19 · política atestiguado-manda · par 1 «sol» · manda `kasi`", "notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna — sin obra citada · ARCHIVADA DEL HABLA 2026-09-19 (política «manda la atestiguada», decisión de Miguel): el caquetío atestigua `kasi` 'sol' (Zavala Reyes 2015, glosario #76 (GC): «Sol», forma_fuente cazi, fusionada por D5a). Es el archivo más grande de la tanda por uso. Su desequilibrio NO era del muestreador —para 'sol' el muestreo es neutro, 60 contra 63 de 1.260— sino de las plantillas: `IDENTIDAD_LINGUISTICA` la enseñaba en su ejemplo hasta el corte del 2026-09-19 (#172) y `prompt_reglas_completo` la enseñaba en NATURALEZA, en el ejemplo de respuesta ideal y en la lista de sustantivos del refuerzo. LA CAPA NO SE TOCA: sigue siendo `caquetío-reconstruido`. El compuesto `kali-bana` y el molde `kali-…-bana` quedan cerrados por esta puerta, que es MÁS que el corte del 09-18 (aquél sólo cerraba la forma exacta)"},
+    "kasha":      {"sig": "luna",                                           "cat": "sust",  "fuente": "caquetío-reconstruido", "archivada": "2026-09-19 · política atestiguado-manda · par 12 «luna» · manda `kati`", "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki/lokono — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `kathi` 'luna' — PARECIDA; esta entrada ya declaraba apoyo lokono además del wayuu. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ARCHIVADA DEL HABLA 2026-09-19 (política «manda la atestiguada»): el caquetío atestigua `kati` 'luna' (Zavala Reyes 2015, glosario #71 (CGB), forma_fuente cati, fusionada por D5), con cognados proto-arahuaco *kati, WY kachi, LK katsi. Y el lokono `kathi` que ESTA nota citaba como apoyo es justamente el cognado de `kati`: la atestiguada era además la mejor reconstrucción bajo D11. El párrafo «SE CONSERVA LA FORMA por continuidad experimental» de la re-etiqueta de D11 queda superado por esta decisión, que sí acepta el corte de serie. LA CAPA NO SE TOCA"},
+    "habo":       {"sig": "mar, océano, aguas grandes",                     "cat": "sust",  "fuente": "caquetío-reconstruido", "archivada": "2026-09-19 · política atestiguado-manda · par 13 «mar» · manda `para`", "notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna · ARCHIVADA DEL HABLA 2026-09-19 (política «manda la atestiguada»): el caquetío atestigua `para` 'mar, agua extensa' (Zavala Reyes 2015 #190 (E+HP); reflejo del proto-arahuaco *para atestiguado en cuatro lenguas). El uso real iba por delante de la decisión: `para` ya ganaba en toda la base y en la serie C limpia. LA CAPA NO SE TOCA. ⚠️ `haborü` 'marejada' (habo+rü, hipotética) sigue en el habla con la raíz archivada: deuda declarada de la tanda"},
+    "paa":        {"sig": "dar, ofrecer, transferir",                       "cat": "v_raiz","fuente": "caquetío-reconstruido", "archivada": "2026-09-19 · política atestiguado-manda · par 3 «ofrecer» · manda `were`", "notas": "núcleo fundacional, forma justificada por cognado en proto-arahuaco · ARCHIVADA DEL HABLA 2026-09-19 (política «manda la atestiguada»): el caquetío atestigua `were` 'dar, entregar, ofrecer' (Zavala Reyes 2015, glosario #149 (AM): «Dar, entregar», forma_fuente güere). ES EL ARCHIVO MÁS CARO DE LA TANDA y se declara como tal: `paa` es raíz verbal del núcleo con todo su paradigma de aspecto vivo en la base (`paa-da`, `paa-ni`, `paa-ka` y medio centenar de formas más). NO HAY HUECO FUNCIONAL: `were` es también `v_raiz` y atestiguada, entra en `_RAICES_VERB` y toma los mismos tres aspectos, así que el paradigma no se rompe — se muda de raíz. Lo que sí cuesta es la comparabilidad: las formas `paa-*` de los runs ya corridos dejan de contar como arahuacas al re-puntuar, y eso es exactamente lo que un corte de serie declara. Coste medido en 6-fusion/medicion_politica_atestiguado_manda_2026-09-19.yaml. LA CAPA NO SE TOCA"},
+    "kira":       {"sig": "escuchar, oír, atender",                         "cat": "v_raiz","fuente": "caquetío-reconstruido", "archivada": "2026-09-19 · política atestiguado-manda · par 4 «escuchar» · manda `jai`", "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki/lokono — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'escuchar'. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ARCHIVADA DEL HABLA 2026-09-19 (política «manda la atestiguada»): el caquetío atestigua `jai` 'oír, escuchar' (Zavala Reyes 2015, glosario #175 (AM)), que es también `v_raiz` y ya llevaba 167 usos sin que ninguna plantilla se lo enseñara. Segundo archivo más caro por paradigma (`kira-ni`, `kira-da`, `kira-ka`). LA CAPA NO SE TOCA"},
+    "joutai":     {"sig": "viento, corriente de aire (< joutai Wayunaiki)", "cat": "sust",  "fuente": "caquetío-reconstruido", "archivada": "2026-09-19 · política atestiguado-manda · par 16 «viento» · manda `juri`", "notas": "F8 (2026-09-12): forma derivada de la hermana que cita la glosa, etiquetada `wayunaiki-cogn`; entra en la deuda de D11 fase 3 (núcleo reconstruido desde el wayuu) · ARCHIVADA DEL HABLA 2026-09-19 (política «manda la atestiguada»): el caquetío atestigua `juri` 'viento, ventarrón' (Zavala Reyes 2015 #178 (E), variantes: jura). Es el archivo que menos cuesta de los que tenían uso: `juri` ya ganaba con holgura, ninguna plantilla enseñaba a ninguna de las dos, y la propia glosa de `joutai` declara que viene del wayuu — que es justo lo que D11 retiró. LA CAPA NO SE TOCA"},
+    "mülia":      {"sig": "miedo, temor, espanto",                          "cat": "sust",  "fuente": "caquetío-hipotético", "archivada": "2026-09-19 · política atestiguado-manda · par 18 «espanto» · manda `etamo`", "notas": "F8 (2026-09-12): forma sin cita ni derivación declarada, etiquetada `wayunaiki/lokono` · ARCHIVADA DEL HABLA 2026-09-19 (política «manda la atestiguada»): el caquetío atestigua `etamo` 'feroz, feo, espanto' (Zavala Reyes 2015 #120 (AM)). El archivo más barato de la tanda: hipotética, sin cita, 0 usos en toda la base y 0 exposición en el muestreo del perfil era2. LA CAPA NO SE TOCA: sigue siendo `caquetío-hipotético`"},
 }
 
 
@@ -8551,10 +8623,18 @@ def prompt_refuerzo(score: float, palabras_usadas: list) -> str:
     if score >= 7.0:
         return ""
 
-    verbos = [p for p in ["wana","suna","masa","awa","kira","panaa","naba","naa","maa","kaa"] if p not in palabras_usadas]
+    # POLÍTICA «MANDA LA ATESTIGUADA» (2026-09-19): `kira` → `jai` y `kali` →
+    # `kasi`. ⚠️ Esta plantilla enseña por RECORTE —`verbos[:4]`—, así que la
+    # puerta, que la construye con `palabras_usadas=[]`, sólo veía las cuatro
+    # primeras de cada lista y NO veía que `kira` y `kali` estaban en la quinta
+    # posición: a un agente que ya hubiera dicho las cuatro primeras, el
+    # refuerzo le enseñaba la forma derivada. Es un sitio que el criterio
+    # estático no alcanza y por eso se cambia la LISTA, no el recorte. (Los
+    # respaldos de abajo también las decían literalmente.)
+    verbos = [p for p in ["wana","suna","masa","awa","jai","panaa","naba","naa","maa","kaa"] if p not in palabras_usadas]
     conect = [p for p in ["ka","mara","saa","naka","kashi","wara","yama","puna"] if p not in palabras_usadas]
-    sust   = [p for p in ["barsure","duna","amana","arima","kali","suka","bara","kuru"] if p not in palabras_usadas]
-    sug_verbos = ", ".join(verbos[:4]) if verbos else "wana, suna, masa, kira"
+    sust   = [p for p in ["barsure","duna","amana","arima","kasi","suka","bara","kuru"] if p not in palabras_usadas]
+    sug_verbos = ", ".join(verbos[:4]) if verbos else "wana, suna, masa, jai"
     sug_conect = ", ".join(conect[:4]) if conect else "ka, mara, kashi, wara"
     sug_sust   = ", ".join(sust[:3]) if sust else "barsure, duna, arima"
 
@@ -8857,12 +8937,22 @@ def _textos_de_plantilla() -> list[str]:
     return textos
 
 
+# ⚠️ `FUERA_DEL_HABLA` ENTRA EN LA PUERTA desde el 2026-09-19 (política «manda
+# la atestiguada»). Archivar una voz la saca de `VOCABULARIO_BASE`, así que
+# sin esto saldría también de la puerta y podría volver como ACUÑACIÓN de la
+# comunidad: `kali` —2.321 usos, la forma que la política acaba de retirar—
+# habría podido registrarse al día siguiente como palabra nueva, competir por
+# un referente y adoptarse. Una forma archivada no es una invención: es una
+# palabra que el canon ya tuvo y decidió no hablar. No se enseña Y no compite.
+# Entra también el resto del archivo (`piache` y los cinco numerales de D11),
+# que hasta hoy sí eran acuñables.
 FORMAS_DE_PLANTILLA: frozenset = frozenset(VOCABULARIO_BASE).union(
+    frozenset(FUERA_DEL_HABLA),
     *(formas_en_texto(t) for t in _textos_de_plantilla()))
 
 
 def es_forma_de_plantilla(forma: Optional[str]) -> bool:
-    """¿Esta forma la enseña el prompt? Entonces no es una acuñación.
+    """¿El prompt la enseña, o el canon ya la archivó? No es una acuñación.
 
     La usan `LexicoComunitario.registrar_neologismo()` (no se registra) y
     `CompetenciaLexica.proponer()` (no compite)."""
