@@ -1160,6 +1160,13 @@ def main(argv=None):
     A("    tabla de arriba, mientras `turumako` casi no se ha dicho. Aplicarla")
     A("    obligaría además a reescribir el ejemplo del locativo, que es lo")
     A("    que enseña `-bana`.")
+    if args.sin_base:
+        # `--sin-base` no mide el corte entero (faltan los paradigmas y la
+        # re-puntuación de las 216), así que NO pisa el YAML: sobreescribirlo
+        # con media medición sería peor que no tenerla.
+        print("⚠ --sin-base: el YAML NO se reescribe (faltarían los")
+        print("  paradigmas y la re-puntuación de la serie C limpia).")
+        return 0
     escribir_yaml(W)
     print(f"✓ escrito {os.path.relpath(SALIDA, RAIZ)}  ({len(W)} líneas)")
     return 0
