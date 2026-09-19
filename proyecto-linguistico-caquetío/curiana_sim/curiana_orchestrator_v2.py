@@ -60,9 +60,8 @@ from curiana_lexicon import (
     prompt_lexico_activo,
     score_linguistico,
     prompt_rescate_linguistico,
-    prompt_reglas_completo,
-    prompt_reglas_breve,
-    formas_en_texto,
+    FORMAS_DE_PLANTILLA,
+    IDENTIDAD_LINGUISTICA,
     VOCABULARIO_BASE,
 )
 from curiana_observer import ObserverAgent
@@ -128,10 +127,6 @@ MODEL = "claude-haiku-4-5-20251001"
 MAX_TOKENS_AGENT = 500      # Espacio para frases en caquetío + glosa + neologismos
 MAX_TOKENS_DIRECTOR = 600
 
-# Vocabulario heredado: se excluye de la métrica de convergencia "emergente"
-# (la koiné se juega en las formas nuevas, no en el léxico base compartido).
-_FORMAS_BASE = frozenset(VOCABULARIO_BASE)
-
 # Koiné: roster FIJO de participantes (población constante desde el día 1). Se
 # rota una ventana sobre este roster cada turno, de modo que todos hablan en los
 # primeros ~2 días — a diferencia de la entrada gradual anterior, que inflaba la
@@ -151,37 +146,26 @@ PARTICIPANTES_KOINE = [
     "Nabaraka", "Raka-bi", "Chorota",
 ]
 
-# Constante de identidad lingüística — inyectada en TODOS los agentes
-# Este es el pivot central: cambia "español con interferencia caquetía"
-# a "caquetío como lengua materna, español como glosa opcional"
-_IDENTIDAD_LINGUISTICA = """[TU LENGUA MATERNA ES EL CAQUETÍO]:
-Piensas y sientes en caquetío-arahuaco. El español es una lengua forastera.
-HABLA EN CAQUETÍO: pronombre + verbo-aspecto + complemento caquetío.
-Si te falta una palabra, créala con los morfemas que tienes. Escríbela [entre corchetes].
-Glosa al español solo entre paréntesis, al final, si es imprescindible.
-EJEMPLO: "Taya wana-ka arima wara kari. Ta-barsure naba-ni. [kali-bana: kali+-bana = cerro del sol]."
-NO empieces con "Estoy..." ni "El sol..." — empieza con "Taya..." o "Nüma..." o directamente con el verbo.
-PRIORIDAD DE LENGUA — ESTO ES UN ERROR GRAVE, NO UNA PREFERENCIA:
-Wayunaiki, lokono, taíno y garífuna son TAN AJENAS para ti como el español. Son lenguas
-de otros pueblos, no la tuya, aunque sean primas del caquetío y tú sepas reconocerlas.
-Si alguna vez "se te escapa" una palabra wayunaiki, lokono o taína porque la conoces de
-oídas, eso es una fuga lingüística — exactamente igual de grave que decir una palabra en
-español. Antes de usar una palabra de otra lengua arahuaca, pregúntate: ¿existe en
-caquetío? Casi siempre SÍ (kati, para, kanoa, hamaka... todas tienen forma caquetía).
-Solo si de verdad no existe, créala con morfemas caquetíos — nunca tomes prestada la
-forma de la lengua vecina."""
+# Constante de identidad lingüística — inyectada en TODOS los agentes.
+# Vive en `curiana_lexicon` desde el corte de serie del 2026-09-18 (es una
+# plantilla de prompt, y la puerta de las formas de plantilla tiene que poder
+# leerla sin importar el bucle). El texto no cambió un byte; este alias es
+# para que nadie tenga que cambiar de sitio para leerla.
+_IDENTIDAD_LINGUISTICA = IDENTIDAD_LINGUISTICA
 
 # Lo que las plantillas ENSEÑAN no puede contar como koiné: el run db946685
 # (bitácora, 2026-09-14) tenía «ta-barsure naba-ni» en el 17,5 % de las
 # respuestas como piso constante de copia, y esas formas flexionadas no están
 # en VOCABULARIO_BASE, así que la métrica emergente y el diccionario koiné las
 # contaban como convergencia. Se excluyen junto con el vocabulario base.
-_FORMAS_EXCLUIDAS = (
-    _FORMAS_BASE
-    | formas_en_texto(_IDENTIDAD_LINGUISTICA)
-    | formas_en_texto(prompt_reglas_completo())
-    | formas_en_texto(prompt_reglas_breve())
-)
+#
+# Desde el 2026-09-18 es LA MISMA lista que la puerta del registro
+# (`curiana_lexicon.FORMAS_DE_PLANTILLA`): eran dos y una de las dos no se
+# respetaba, así que `kali-bana` se descontaba de la métrica emergente y a la
+# vez se registraba, se adoptaba y competía. Una sola puerta, declarada donde
+# están las plantillas. Trae además lo que enseñan el refuerzo y el rescate,
+# que esta lista no miraba (`ma-arua`, `wa-duna`, `wana-ni`, `cati`).
+_FORMAS_EXCLUIDAS = FORMAS_DE_PLANTILLA
 
 # Elenco que habla. Miguel, 2026-09-14: «me gustaría que todos los agentes
 # hablen, porque si no ¿para qué tenerlos ahí?» y «los foráneos no deberían
@@ -1770,6 +1754,14 @@ def auto_mode(
     print(f"  SIMULACIÓN COMPLETADA: {turnos} turnos = {state.dia - 1} días")
     print(f"{'═'*60}")
     print(lexico.reporte_linguistico())
+    # Lo que la puerta paró: acuñaciones que eran el propio prompt. Se DICE,
+    # no se silencia — un rechazo callado es un dato perdido, y la cifra es
+    # la que avisa de que la plantilla se está copiando (corte de serie del
+    # 2026-09-18). Sin rechazos la línea no sale y el cierre es el de siempre.
+    rechazos = lexico.reporte_de_rechazos()
+    if rechazos:
+        print()
+        print(rechazos)
     print()
     print("  Ranking lingüístico final:")
     for agente, score in observer.ranking_linguistico()[:8]:
