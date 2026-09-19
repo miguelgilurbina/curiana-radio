@@ -1,0 +1,142 @@
+# ─────────────────────────────────────────────────────────────────────────
+# GENERADO por 6-fusion/scripts/medir_formas_de_plantilla.py --yaml
+# No se edita a mano: se vuelve a correr.
+#
+# EL CORTE DE SERIE del 2026-09-18 («dale pues con A», Miguel), medido sobre
+# los dos días de la serie C que ya habían corrido. ANTES = el motor sin la
+# puerta; DESPUÉS = el motor con ella, que es el de hoy.
+#
+# La puerta: `curiana_lexicon.FORMAS_DE_PLANTILLA` —el vocabulario base más lo
+# que enseñan las plantillas estáticas del prompt— rechaza en
+# `LexicoComunitario.registrar_neologismo()` y en `CompetenciaLexica.proponer()`.
+#
+# Por qué se mueve `score`: `kali-bana` se OFICIALIZA durante el día (dos
+# adoptantes), y una forma adoptada entra en `lexico.palabras_activas()`, que es
+# justo lo que `score_linguistico()` reconoce. Rechazarla en la registración le
+# quita esa palabra a `palabras_caquetias` en las respuestas POSTERIORES que la
+# dicen — y ahí se mueve el score. `neologisms_proposed` no se mueve nunca: sale
+# de `extraer_neologismos_del_texto()`, que es anterior al registro. El scorer
+# NO se tocó: `score_linguistico()` es el mismo.
+#
+# La medición anterior a la decisión —un run, sin competencia— queda en
+# `6-fusion/medicion_formas_de_plantilla_2026-09-18.yaml`.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  runs: ["76ecf45c", "96b22194"]
+  respuestas: 144
+  respuestas_por_run: {"76ecf45c": 72, "96b22194": 72}
+  script: 6-fusion/scripts/medir_formas_de_plantilla.py
+  base: supabase local (docker exec supabase_db_curiana_sim psql)
+  como_se_corre: 'python 6-fusion/scripts/medir_formas_de_plantilla.py'
+  formas_de_plantilla: 5945
+  formas_de_plantilla_antes: 5898
+  ensanche: 47
+  ensanche_dicho_en_estos_runs: ["ma-arua", "wa-duna", "wana-ni"]
+  nota_lista: >-
+    UNA puerta, construida desde las plantillas y nunca a mano:
+    VOCABULARIO_BASE + formas_en_texto() de IDENTIDAD_LINGUISTICA,
+    prompt_reglas_completo(), prompt_reglas_breve(), prompt_refuerzo()
+    (sus cuatro tramos) y prompt_rescate_linguistico() (sus tres
+    motivos). Las dos últimas no estaban en el viejo
+    `_FORMAS_EXCLUIDAS` (5.898 formas) y sí enseñan formas: ma-arua,
+    wa-duna, wana-ni, cati. El orquestador y analizar_nodos importan
+    ésta.
+
+control:
+  # El replay SIN la puerta tiene que reproducir lo que la base
+  # guardó (score y neologisms_proposed), o no mide nada.
+  respuestas_identicas: 144
+  desvios: 0
+  ejemplos: []
+
+rechazadas_por_la_puerta:
+  - {"forma": "kali-bana", "autor": "Chirwa", "dia": 1, "turno": 5}
+  - {"forma": "naa-ni", "autor": "Apoaure", "dia": 2, "turno": 6}
+
+# Lo que el motor dice al cerrar el run: el rechazo se cuenta y se
+# dice, no se silencia.
+linea_de_cierre: "⚠ 2 acuñaciones rechazadas por estar en el prompt: kali-bana, naa-ni"
+
+efecto_en_el_instrumento:
+  score_cambia_en: 8
+  score_delta_max: 0.3
+  score_detalle:
+    - {"run": "76ecf45c", "agente": "Sawaka", "dia": 1, "turno": 6, "antes": 5.2, "despues": 5.1, "dice": ["kali-bana", "naa-ni"]}
+    - {"run": "96b22194", "agente": "Saruro", "dia": 2, "turno": 1, "antes": 5.2, "despues": 5.1, "dice": ["kali-bana", "naa-ni"]}
+    - {"run": "96b22194", "agente": "Kiwakoa", "dia": 2, "turno": 1, "antes": 7.0, "despues": 6.9, "dice": ["kali-bana", "naa-ni"]}
+    - {"run": "96b22194", "agente": "Uria", "dia": 2, "turno": 1, "antes": 8.8, "despues": 8.6, "dice": ["kali-bana"]}
+    - {"run": "96b22194", "agente": "Urari", "dia": 2, "turno": 2, "antes": 5.1, "despues": 5.0, "dice": ["kali-bana"]}
+    - {"run": "96b22194", "agente": "Arika", "dia": 2, "turno": 4, "antes": 3.4, "despues": 3.3, "dice": ["kali-bana"]}
+    - {"run": "96b22194", "agente": "Ucibo", "dia": 2, "turno": 4, "antes": 6.6, "despues": 6.3, "dice": ["kali-bana"]}
+    - {"run": "96b22194", "agente": "Kasebo", "dia": 2, "turno": 5, "antes": 5.7, "despues": 5.6, "dice": ["kali-bana", "naa-ni"]}
+  neologisms_proposed_cambia_en: 0
+  neologisms_proposed_detalle: []
+  palabras_caquetias_cambia_en: 14
+  palabras_caquetias_detalle:
+    - {"run": "76ecf45c", "agente": "Sawaka", "dia": 1, "turno": 6, "antes": 40, "despues": 39, "dice": ["kali-bana", "naa-ni"]}
+    - {"run": "96b22194", "agente": "Hayo", "dia": 2, "turno": 1, "antes": 37, "despues": 36, "dice": ["kali-bana", "naa-ni"]}
+    - {"run": "96b22194", "agente": "Saruro", "dia": 2, "turno": 1, "antes": 36, "despues": 35, "dice": ["kali-bana", "naa-ni"]}
+    - {"run": "96b22194", "agente": "Kiwakoa", "dia": 2, "turno": 1, "antes": 35, "despues": 34, "dice": ["kali-bana", "naa-ni"]}
+    - {"run": "96b22194", "agente": "Paugis", "dia": 2, "turno": 1, "antes": 37, "despues": 36, "dice": ["kali-bana", "naa-ni"]}
+    - {"run": "96b22194", "agente": "Uria", "dia": 2, "turno": 1, "antes": 20, "despues": 19, "dice": ["kali-bana"]}
+    - {"run": "96b22194", "agente": "Urari", "dia": 2, "turno": 2, "antes": 21, "despues": 20, "dice": ["kali-bana"]}
+    - {"run": "96b22194", "agente": "Kumarawa", "dia": 2, "turno": 3, "antes": 21, "despues": 20, "dice": ["kali-bana", "naa-ni"]}
+    - {"run": "96b22194", "agente": "Arika", "dia": 2, "turno": 4, "antes": 17, "despues": 16, "dice": ["kali-bana"]}
+    - {"run": "96b22194", "agente": "Ucibo", "dia": 2, "turno": 4, "antes": 13, "despues": 12, "dice": ["kali-bana"]}
+
+efecto_en_el_registro:
+  neologismos_antes: 66
+  neologismos_despues: 64
+  adoptados_antes: 11
+  adoptados_despues: 9
+  dos_ambitos_antes: ["siwato-ni", "kali-bana", "naa-ni"]
+  dos_ambitos_despues: ["siwato-ni"]
+
+competencia:
+  # Las disputas abiertas al cerrar el último día, con el soporte de
+  # cada variante (frecuencia × prestigio). Aquí se ve quién lidera
+  # «las cuentas» cuando el ejemplo del prompt no compite.
+  abiertas_antes:
+    cuentas_vidrio: [["kali-bana", 15.85], ["kali-iro-bana", 3.1], ["brilu-uco", 2.9], ["kara-ucibo", 2.4], ["kiba-kali-aima", 2.0]]
+    cometa: [["kali-juri-bana", 4.3], ["pütara-bana", 3.2], ["kali-uco-iri-bana", 3.05], ["kati-bacoa-gua", 1.7], ["kali-wara-bana", 1.7]]
+  abiertas_despues:
+    cuentas_vidrio: [["kali-iro-bana", 3.1], ["brilu-uco", 2.9], ["kara-ucibo", 2.4], ["kiba-kali-aima", 2.0], ["kali-siwa", 1.45]]
+    cometa: [["kali-juri-bana", 4.3], ["pütara-bana", 3.2], ["kali-uco-iri-bana", 3.05], ["kati-bacoa-gua", 1.7], ["kali-wara-bana", 1.7]]
+  fijadas_antes: {}
+  fijadas_despues: {}
+
+diccionario_emergente:
+  # campo.top(15), cada uno con SU descuento: el de antes con la
+  # puerta vieja, el de hoy con la nueva (ver `ensanche`).
+  antes:
+    - ["wana-ni", 50.0]
+    - ["siwato-ni", 30.0]
+    - ["wana-da", 18.0]
+    - ["kira-ni", 17.0]
+    - ["paa-da", 16.0]
+    - ["panaa-ka", 16.0]
+    - ["rua-ni", 15.0]
+    - ["raka-ni", 15.0]
+    - ["chaa-ni", 15.0]
+    - ["panaa-ni", 15.0]
+    - ["kaa-ka", 14.0]
+    - ["ma-kaa", 13.0]
+    - ["ta-bana", 13.0]
+    - ["rua-ka", 12.0]
+    - ["paa-ka", 12.0]
+  despues:
+    - ["siwato-ni", 30.0]
+    - ["wana-da", 18.0]
+    - ["kira-ni", 17.0]
+    - ["paa-da", 16.0]
+    - ["panaa-ka", 16.0]
+    - ["rua-ni", 15.0]
+    - ["raka-ni", 15.0]
+    - ["chaa-ni", 15.0]
+    - ["panaa-ni", 15.0]
+    - ["kaa-ka", 14.0]
+    - ["ma-kaa", 13.0]
+    - ["ta-bana", 13.0]
+    - ["rua-ka", 12.0]
+    - ["paa-ka", 12.0]
+    - ["masa-da", 12.0]

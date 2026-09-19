@@ -47,7 +47,8 @@ pre-cargadas), con la ventana fijada al día en vez de a los últimos
 `VENTANA_TURNOS`; no reproduce la lectura acumulada ni tiene por qué coincidir
 con `koine_metrics.distance_ventana`, y el informe imprime las dos al lado para
 que la diferencia se vea. La lectura **emergente** es la misma quitando de los
-vectores lo que el motor tampoco cuenta (`_FORMAS_EXCLUIDAS`).
+vectores lo que el motor tampoco cuenta (`curiana_lexicon.FORMAS_DE_PLANTILLA`,
+la misma puerta con la que el motor rechaza en la registración).
 
 ⚠️ `word_uses.day` y `word_uses.turn_num` vienen NULL en los runs de la era 2:
 el día se saca por join con `turns`, nunca de esas columnas.
@@ -206,18 +207,20 @@ def formas_excluidas() -> frozenset:
     """Lo que NO puede contar como forma emergente.
 
     Es el mismo conjunto con el que el motor mide su distancia emergente y su
-    diccionario koiné (`curiana_orchestrator_v2._FORMAS_EXCLUIDAS`): el
-    vocabulario base MÁS lo que las plantillas del prompt enseñan. La segunda
-    mitad importa: `ta-barsure` y `naba-ni` salen del ejemplo de la plantilla,
-    no están en `VOCABULARIO_BASE` y aparecen en decenas de respuestas (run
-    db946685, bitácora del 2026-09-14). Contarlas como koiné sería medir la
-    plantilla.
+    diccionario koiné, y —desde el corte de serie del 2026-09-18— el mismo con
+    el que RECHAZA en la registración: la puerta es una sola y vive en
+    `curiana_lexicon.FORMAS_DE_PLANTILLA`. El vocabulario base MÁS lo que las
+    plantillas del prompt enseñan. La segunda mitad importa: `ta-barsure` y
+    `naba-ni` salen del ejemplo de la plantilla, no están en
+    `VOCABULARIO_BASE` y aparecen en decenas de respuestas (run db946685,
+    bitácora del 2026-09-14). Contarlas como koiné sería medir la plantilla.
 
-    Se importa en vez de copiarse para que no se puedan desincronizar; la
-    importación es de sólo lectura y no corre nada del bucle.
+    Se importa del lexicón —no del orquestador, que arrastraba el bucle y su
+    `load_dotenv`— para que no se puedan desincronizar; la importación es de
+    sólo lectura.
     """
-    from curiana_orchestrator_v2 import _FORMAS_EXCLUIDAS
-    return frozenset(_FORMAS_EXCLUIDAS)
+    from curiana_lexicon import FORMAS_DE_PLANTILLA
+    return frozenset(FORMAS_DE_PLANTILLA)
 
 
 # ══════════════════════════════════════════════════════════════════════

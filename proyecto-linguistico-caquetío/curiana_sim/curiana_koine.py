@@ -1110,7 +1110,12 @@ class CompetenciaLexica:
     compiten por un MISMO concepto nuevo, y fija una como entrada koiné cuando
     domina su concepto por encima de un umbral."""
 
-    def __init__(self, umbral_fijacion: float = 0.55, soporte_minimo: float = 3.0):
+    def __init__(self, umbral_fijacion: float = 0.55, soporte_minimo: float = 3.0,
+                 filtrar_plantilla: bool = True):
+        # La puerta de las formas de plantilla (ver `proponer`). Se apaga SÓLO
+        # para medir el corte de serie —reproducir la competencia de antes del
+        # cambio—, nunca en un run: `6-fusion/scripts/medir_formas_de_plantilla.py`.
+        self.filtrar_plantilla = filtrar_plantilla
         # concepto_id -> {desc, variantes: Counter(forma->soporte), fijada, fijada_dia}
         self.referentes: dict[str, dict] = {}
         self._forma2concepto: dict[str, str] = {}
@@ -1138,9 +1143,20 @@ class CompetenciaLexica:
         `ambito` (capa 2 de la escena): el LUGAR donde estaba al acuñarla. Es
         lo que `prompt_competencias()` filtra: en un lugar sólo circulan las
         formas rivales que se propusieron allí. Sin escena es None, no se
-        guarda nada y el bloque sale entero, como siempre."""
+        guarda nada y el bloque sale entero, como siempre.
+
+        LA PUERTA (corte de serie del 2026-09-18): una forma que el prompt ya
+        ENSEÑA no compite. El día 2 de la serie C `kali-bana` —el ejemplo
+        literal de la plantilla de identidad, que los 63 leen cada turno— iba
+        ganando «las cuentas» 15,8 contra 3,1 y 2,9 mientras las rivales de
+        verdad se apagaban. La copia no es una variante rival: es el prompt
+        repitiéndose. Es la misma puerta que el registro
+        (`curiana_lexicon.es_forma_de_plantilla`)."""
+        from curiana_lexicon import es_forma_de_plantilla
         ref = self.referentes.get(concepto_id)
         if ref is None or ref["fijada"] or not forma:
+            return
+        if self.filtrar_plantilla and es_forma_de_plantilla(forma):
             return
         ref["variantes"][forma] += 1.0 + self._prestigio(agente)
         self._forma2concepto[forma.lower()] = concepto_id

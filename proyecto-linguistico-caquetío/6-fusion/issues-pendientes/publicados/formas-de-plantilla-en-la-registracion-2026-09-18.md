@@ -1,5 +1,21 @@
 # Falsos neologismos que son la plantilla: medido, y NO aplicado
 
+> ✅ **CERRADO el 2026-09-18 con la opción A** («Dale pues con A», Miguel).
+> El filtro está aplicado como **corte de serie declarado**: la puerta vive en
+> `curiana_lexicon.FORMAS_DE_PLANTILLA` y rechaza en
+> `LexicoComunitario.registrar_neologismo()` y en
+> `CompetenciaLexica.proponer()`. La serie C **se re-corre entera desde el día
+> 1**; `76ecf45c` y `96b22194` quedan como los dos días con el prompt
+> contaminando la competencia. Lo medido sobre esos dos días —144 respuestas,
+> control 144/144— está en
+> `6-fusion/medicion_formas_de_plantilla_corte_2026-09-18.yaml`, y el corte
+> está declarado en el punto 8 del «Cambio de instrumento» de
+> `BITACORA_RUNS.md`. Lo de abajo es el argumento tal como se le presentó a
+> Miguel, y se conserva por eso.
+>
+> Lo que la decisión NO cierra: la §4, la pregunta de si la adopción debe
+> exigir que el adoptante pudiera VER la propuesta. Sigue abierta.
+
 **Para que Miguel decida.** El arreglo está escrito y medido; **el motor no se
 tocó** porque mover `score` a mitad de serie no se hace. Esto es la medición y
 la propuesta.

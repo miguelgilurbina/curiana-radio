@@ -7290,12 +7290,20 @@ class LexicoComunitario:
     está construyendo.
     """
 
-    def __init__(self):
+    def __init__(self, filtrar_plantilla: bool = True):
         self._lexico: dict[str, dict] = {}          # palabra → datos
         self._neologismos: list[Neologismo] = []     # historial ordenado
         # Dónde está cada agente AHORA (capa 2 de la escena). No se persiste:
         # es el contexto del turno en curso, no historia. Ver `situar()`.
         self._ambito_actual: dict[str, Optional[str]] = {}
+        # LA PUERTA DE LAS FORMAS DE PLANTILLA (corte de serie del 2026-09-18).
+        # Lo que el prompt ENSEÑA no puede registrarse como acuñación. Se apaga
+        # SÓLO para medir el corte —reproducir la base de antes del cambio— y
+        # nunca en un run: ver `6-fusion/scripts/medir_formas_de_plantilla.py`.
+        self.filtrar_plantilla = filtrar_plantilla
+        # Lo rechazado, que se CUENTA y se dice al cerrar el run: un rechazo
+        # callado es un dato perdido. (forma, autor, dia, turno).
+        self.rechazos_de_plantilla: list[tuple] = []
 
     # ── El ámbito: dónde está quien habla ─────────────────────────────
 
@@ -7343,7 +7351,23 @@ class LexicoComunitario:
 
     # ── Registro de neologismos ───────────────────────────────────────
 
-    def registrar_neologismo(self, neo: Neologismo):
+    def registrar_neologismo(self, neo: Neologismo) -> bool:
+        """Registra una acuñación. Devuelve False si la PUERTA la rechaza.
+
+        La puerta (corte de serie del 2026-09-18, decisión de Miguel «dale pues
+        con A»): una forma que el prompt YA ENSEÑA no es una acuñación. Está en
+        `VOCABULARIO_BASE` o es un ejemplo de una plantilla —`kali-bana` es el
+        ejemplo literal de `IDENTIDAD_LINGUISTICA`, que los 63 leen en su
+        system prompt cada turno— y copiarla no es inventar nada. Rechazada
+        aquí, no entra en evaluación, no puede adoptarse, no pasa a
+        `palabras_activas()` y no sale en el diccionario de cierre.
+
+        No se silencia: cada rechazo se cuenta en `rechazos_de_plantilla` y el
+        motor lo dice al cerrar el run (`reporte_de_rechazos()`)."""
+        if self.filtrar_plantilla and es_forma_de_plantilla(neo.forma):
+            self.rechazos_de_plantilla.append(
+                (neo.forma, neo.autor, neo.dia, neo.turno))
+            return False
         # El ámbito del PROPONENTE: el lugar donde estaba al acuñarla. Sin
         # escena es None y el campo no significa nada, como hasta hoy.
         if neo.ambito is None:
@@ -7355,6 +7379,19 @@ class LexicoComunitario:
                 "autor": neo.autor,
                 "dia": neo.dia,
             }
+        return True
+
+    def reporte_de_rechazos(self) -> str:
+        """Lo que la puerta paró, dicho al cerrar el run. "" si no paró nada."""
+        if not self.rechazos_de_plantilla:
+            return ""
+        from collections import Counter as _Counter
+        cuenta = _Counter(f for f, _a, _d, _t in self.rechazos_de_plantilla)
+        detalle = ", ".join(
+            f"{forma} ×{n}" if n > 1 else forma
+            for forma, n in cuenta.most_common())
+        return (f"  ⚠ {len(self.rechazos_de_plantilla)} acuñaciones rechazadas "
+                f"por estar en el prompt: {detalle}")
 
     def adoptar(self, forma: str, agente: str, turno: int,
                 dia: Optional[int] = None) -> Optional["Neologismo"]:
@@ -7501,14 +7538,25 @@ class LexicoComunitario:
             json.dump(data, f, ensure_ascii=False, indent=2)
 
     @classmethod
-    def load(cls, path: str = "curiana_lexico.json") -> "LexicoComunitario":
-        lc = cls()
+    def load(cls, path: str = "curiana_lexico.json",
+             filtrar_plantilla: bool = True) -> "LexicoComunitario":
+        """El léxico del run anterior (`--continuar`).
+
+        La puerta también vale aquí: un JSON escrito ANTES del corte de serie
+        puede traer una forma de plantilla ya registrada, y si entrara por
+        aquí podría adoptarse mañana. Se cuenta como cualquier otro rechazo."""
+        lc = cls(filtrar_plantilla=filtrar_plantilla)
         try:
             with open(path, encoding="utf-8") as f:
                 data = json.load(f)
             lc._lexico = data.get("lexico", {})
             for nd in data.get("neologismos", []):
                 neo = Neologismo(**nd)
+                if lc.filtrar_plantilla and es_forma_de_plantilla(neo.forma):
+                    lc.rechazos_de_plantilla.append(
+                        (neo.forma, neo.autor, neo.dia, neo.turno))
+                    lc._lexico.pop(neo.forma, None)
+                    continue
                 lc._neologismos.append(neo)
         except FileNotFoundError:
             pass
@@ -7518,6 +7566,33 @@ class LexicoComunitario:
 # ══════════════════════════════════════════════════════════════════════
 # IV. GENERADORES DE PROMPTS LINGÜÍSTICOS
 # ══════════════════════════════════════════════════════════════════════
+
+# Constante de identidad lingüística — inyectada en TODOS los agentes.
+# Este es el pivot central: cambia "español con interferencia caquetía"
+# a "caquetío como lengua materna, español como glosa opcional".
+#
+# Vive AQUÍ —y no en el orquestador, donde nació— desde el corte de serie del
+# 2026-09-18: es una plantilla de prompt como las otras dos, y la puerta que
+# decide qué forma es «del prompt» (`FORMAS_DE_PLANTILLA`) tiene que poder
+# leerla sin importar el bucle. El orquestador la sigue exponiendo como
+# `_IDENTIDAD_LINGUISTICA`; el texto no cambió un byte.
+IDENTIDAD_LINGUISTICA = """[TU LENGUA MATERNA ES EL CAQUETÍO]:
+Piensas y sientes en caquetío-arahuaco. El español es una lengua forastera.
+HABLA EN CAQUETÍO: pronombre + verbo-aspecto + complemento caquetío.
+Si te falta una palabra, créala con los morfemas que tienes. Escríbela [entre corchetes].
+Glosa al español solo entre paréntesis, al final, si es imprescindible.
+EJEMPLO: "Taya wana-ka arima wara kari. Ta-barsure naba-ni. [kali-bana: kali+-bana = cerro del sol]."
+NO empieces con "Estoy..." ni "El sol..." — empieza con "Taya..." o "Nüma..." o directamente con el verbo.
+PRIORIDAD DE LENGUA — ESTO ES UN ERROR GRAVE, NO UNA PREFERENCIA:
+Wayunaiki, lokono, taíno y garífuna son TAN AJENAS para ti como el español. Son lenguas
+de otros pueblos, no la tuya, aunque sean primas del caquetío y tú sepas reconocerlas.
+Si alguna vez "se te escapa" una palabra wayunaiki, lokono o taína porque la conoces de
+oídas, eso es una fuga lingüística — exactamente igual de grave que decir una palabra en
+español. Antes de usar una palabra de otra lengua arahuaca, pregúntate: ¿existe en
+caquetío? Casi siempre SÍ (kati, para, kanoa, hamaka... todas tienen forma caquetía).
+Solo si de verdad no existe, créala con morfemas caquetíos — nunca tomes prestada la
+forma de la lengua vecina."""
+
 
 def prompt_reglas_breve() -> str:
     """
@@ -8712,6 +8787,65 @@ def formas_en_texto(texto: str) -> frozenset:
         t.lower() for t in _re.findall(r"[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+(?:-[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+)*", texto or "")
         if len(t) >= 2
     )
+
+
+# ══════════════════════════════════════════════════════════════════════
+# LA PUERTA — lo que la plantilla ENSEÑA no es una acuñación
+# ══════════════════════════════════════════════════════════════════════
+# Una puerta y no dos (corte de serie del 2026-09-18). Antes vivía sólo en
+# `curiana_orchestrator_v2._FORMAS_EXCLUIDAS`, que descontaba estas formas de
+# la métrica emergente y del diccionario koiné pero NO impedía que se
+# registraran como neologismos: `kali-bana` —el ejemplo literal de
+# `IDENTIDAD_LINGUISTICA`— se registró, se adoptó, salió «adoptada en dos
+# ámbitos» sin haber viajado y el día 2 de la serie C iba GANANDO la
+# competencia de «las cuentas» 15,8 contra 3,1 y 2,9. Ahora la lista es una
+# sola, vive aquí —donde están las plantillas y el registro— y la importan el
+# orquestador (`_FORMAS_EXCLUIDAS`) y `analizar_nodos.formas_excluidas()`.
+#
+# QUÉ ENTRA: lo que el motor PONE en el prompt como vocabulario o como
+# ejemplo. El vocabulario base y las cinco plantillas estáticas que enseñan
+# formas: la identidad lingüística, las reglas (completa y breve), el refuerzo
+# —sus cuatro tramos— y el rescate —sus tres motivos—. Las dos últimas no
+# estaban en `_FORMAS_EXCLUIDAS` y sí enseñan formas: `ma-arua`, `wa-duna`,
+# `wana-ni` y `cati` (medido el 2026-09-18).
+#
+# QUÉ NO ENTRA, y por qué: los bloques que le devuelven al agente lo que la
+# COMUNIDAD dijo —`[Palabras nuevas de la comunidad]` (V2), `[Palabras
+# propuestas en evaluación]` (V1), `[La comunidad aún busca nombre…]` (V3),
+# `[Lo que se dijo aquí]`, `[Tu manera de hablar]`— no son plantilla: son el
+# mecanismo que se mide, y excluirlos sería excluir la koiné. Y los que no
+# enseñan ninguna forma: `[Tu tierra]` (293 formas, 0 caquetías fuera de esta
+# puerta), `[Aquí estás]`, `[Tu emocionar]`. `[Voces de fuera]` y la muestra
+# del lexicón enseñan claves de `VOCABULARIO_BASE`, que ya está dentro.
+
+def _textos_de_plantilla() -> list[str]:
+    """Las plantillas estáticas que ENSEÑAN formas, cada variante una vez.
+
+    Se construye llamándolas, nunca copiándolas: si mañana el ejemplo de la
+    identidad cambia de `kali-bana` a otra cosa, la puerta cambia con él."""
+    textos = [IDENTIDAD_LINGUISTICA, prompt_reglas_completo(), prompt_reglas_breve()]
+    # El refuerzo tiene cuatro tramos por score y cada uno enseña lo suyo
+    # (el más bajo, `Taya wana-ni…`; el tercero, `ta-barsure, wa-duna, ma-arua`).
+    textos += [prompt_refuerzo(s, []) for s in (1.0, 3.0, 5.0, 6.5)]
+    # El rescate (segunda pasada) tiene tres motivos; el de la fuga arahuaca
+    # enseña las correspondencias `katsi→cati, bara→para, kannoa→canoa`. Se le
+    # pasan el texto fallido y la palabra fugada VACÍOS: lo que enseña el tramo
+    # es su texto fijo, no lo que el motor le interpole ese turno.
+    textos += [prompt_rescate_linguistico("", 0.0, esp, otro)
+               for esp, otro in ((0, [""]), (3, [""]), (3, []))]
+    return textos
+
+
+FORMAS_DE_PLANTILLA: frozenset = frozenset(VOCABULARIO_BASE).union(
+    *(formas_en_texto(t) for t in _textos_de_plantilla()))
+
+
+def es_forma_de_plantilla(forma: Optional[str]) -> bool:
+    """¿Esta forma la enseña el prompt? Entonces no es una acuñación.
+
+    La usan `LexicoComunitario.registrar_neologismo()` (no se registra) y
+    `CompetenciaLexica.proponer()` (no compite)."""
+    return (forma or "").strip().lower() in FORMAS_DE_PLANTILLA
 
 
 def muestra_caquetio_dinamica(n_por_categoria: int = 18, contexto: str = "",

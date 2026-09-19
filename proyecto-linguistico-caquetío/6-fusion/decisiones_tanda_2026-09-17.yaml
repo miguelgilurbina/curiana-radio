@@ -431,3 +431,96 @@ descastellanizar_esfera:
     «maíz» (el metalenguaje castellano del lexicón sigue metiéndole la palabra
     al tier 3, que ni ve el bloque); y si las formas `taíno-reconstruido`
     salen de [Voces de fuera].
+
+formas_de_plantilla:
+  estado: >-
+    DECIDIDA y APLICADA (2026-09-18) — CORTE DE SERIE declarado. Es la tercera
+    del día y la única que mueve `score`: se aplica porque el corte se declara,
+    no porque el instrumento no se mueva.
+  pregunta: >-
+    El día 1 de la serie C registró como acuñaciones dos formas que el propio
+    prompt enseña: `kali-bana`, el ejemplo LITERAL de la plantilla de identidad
+    que los 63 leen en su system prompt cada turno, y `warawara`, que está en
+    VOCABULARIO_BASE. El motor ya tenía la lista (`_FORMAS_EXCLUIDAS`, 5.898
+    formas) y la usaba para descontarlas de la métrica emergente, pero la
+    REGISTRACIÓN no la respetaba: se registraban, competían, se adoptaban y
+    `kali-bana` salió «adoptada en dos ámbitos» sin haber viajado. El día 2
+    (run 96b22194) iba GANANDO la competencia de «las cuentas» 15,8 contra 3,1
+    y 2,9 —12 usos de 11 agentes, en 10 lugares y en los dos nodos— mientras
+    las rivales de verdad se apagaban. El día 3 es el de Capubana, donde todos
+    ven todo: la habría fijado como la palabra de la koiné. ¿Se aplica el
+    filtro en la registración (A), se avisa sin rechazar (B) o se descuenta
+    sólo en el análisis (C)?
+  decision_literal: '«Dale pues con A»'
+  lectura_operativa: >-
+    Se aplica en la registración, como CORTE DE SERIE. Una forma que está en
+    VOCABULARIO_BASE o que es un ejemplo de una plantilla del prompt no se
+    registra como acuñación: no entra en competencia, no puede adoptarse, no
+    pasa a `palabras_activas()` y no sale en el diccionario de cierre. La lista
+    se CONSTRUYE desde las propias plantillas —nunca a mano— y es UNA sola
+    puerta, `curiana_lexicon.FORMAS_DE_PLANTILLA`, que el orquestador
+    (`_FORMAS_EXCLUIDAS`) y `analizar_nodos.formas_excluidas()` importan: eran
+    dos listas y la del registro no existía. El rechazo NO se silencia: se
+    cuenta y el motor lo dice al cerrar el run («N acuñaciones rechazadas por
+    estar en el prompt: …»).
+  lo_que_la_puerta_mira: >-
+    VOCABULARIO_BASE más lo que enseñan las cinco plantillas estáticas:
+    IDENTIDAD_LINGUISTICA (movida al lexicón, byte a byte), prompt_reglas_
+    completo(), prompt_reglas_breve(), prompt_refuerzo() —sus cuatro tramos— y
+    prompt_rescate_linguistico() —sus tres motivos—. Las dos últimas no estaban
+    en el viejo `_FORMAS_EXCLUIDAS` y sí enseñan formas: la puerta pasa de
+    5.898 a 5.945, y entran `ma-arua`, `wa-duna`, `wana-ni` y `cati`. NO entran
+    los bloques que devuelven lo que la COMUNIDAD dijo (V1, V2, V3, [Lo que se
+    dijo aquí], [Tu manera de hablar]): son el mecanismo que se mide. Ni los
+    que no enseñan forma alguna: [Tu tierra] (293 formas, 0 caquetías fuera de
+    la puerta, medido), [Aquí estás], [Tu emocionar]. [Voces de fuera] y la
+    muestra del lexicón enseñan claves de VOCABULARIO_BASE, ya dentro.
+  medido_2026-09-18: >-
+    Re-puntuadas las 144 respuestas de los dos días de la serie C (76ecf45c y
+    96b22194), encadenadas como las corrió `--continuar`, con la puerta y sin
+    ella. Control: el replay SIN la puerta reproduce la base en 144 de 144, y
+    reproduce la competencia que anotó la bitácora (kali-bana 15,85 ·
+    kali-iro-bana 3,1 · brilu-uco 2,9). Con la puerta: `neologisms_proposed`
+    cambia en 0 respuestas —sale de `extraer_neologismos_del_texto()`, anterior
+    al registro—, `score` cambia en 8 de 144 (|Δ| máx 0,30), `palabras_
+    caquetias` en 14. Rechazadas 2 —`kali-bana` (Chirwa, d1t5) y `naa-ni`
+    (Apoaure, d2t6), que es el ejemplo del bloque de morfología—; neologismos
+    registrados 66 → 64, adoptados 11 → 9, y adoptadas en dos ámbitos
+    ['siwato-ni', 'kali-bana', 'naa-ni'] → ['siwato-ni']: dos de las tres eran
+    copia del prompt, incluida `naa-ni`, que la bitácora del día 2 celebró como
+    «la primera que cruza de verdad entre nodos». Sin `kali-bana`, «las
+    cuentas» las lidera `kali-iro-bana` (3,1) sobre `brilu-uco` (2,9) y
+    `kara-ucibo` (2,4) — y ninguna llega al umbral del 55 %. El diccionario
+    emergente pierde su cabeza: `wana-ni` (50,0), que es la línea del refuerzo.
+  lo_que_no_se_toca: >-
+    El scorer. `score_linguistico()`, `pct_*` y `capas_de_score` son los
+    mismos; `extraer_neologismos_del_texto()` tampoco cambia. `score` se mueve
+    porque una forma adoptada entra en `palabras_activas()` y rechazarla se la
+    quita a `palabras_caquetias` en las respuestas posteriores que la dicen —
+    no porque se haya tocado con qué se puntúa. Y `curiana_observer` no se
+    modifica: la puerta está dentro de `registrar_neologismo`, que es a quien
+    el Observer llama.
+  corte_de_serie: >-
+    Aplica desde el próximo run. La SERIE C se re-corre entera desde el día 1:
+    `76ecf45c` y `96b22194` quedan como los dos días con el prompt contaminando
+    la competencia, no como los días 1 y 2 de la serie. Los runs anteriores no
+    se reescriben.
+  se_aplica_en: >-
+    curiana_sim/curiana_lexicon.py (IDENTIDAD_LINGUISTICA, _textos_de_plantilla,
+    FORMAS_DE_PLANTILLA, es_forma_de_plantilla, LexicoComunitario.__init__/
+    registrar_neologismo/reporte_de_rechazos/load) +
+    curiana_sim/curiana_koine.py (CompetenciaLexica.proponer) +
+    curiana_sim/curiana_orchestrator_v2.py (_FORMAS_EXCLUIDAS es la misma lista;
+    la línea de rechazos en el cierre) + curiana_sim/analizar_nodos.py +
+    6-fusion/scripts/medir_formas_de_plantilla.py (la medición del corte) +
+    6-fusion/medicion_formas_de_plantilla_corte_2026-09-18.yaml +
+    curiana_sim/tests/test_formas_de_plantilla.py + CLAUDE.md +
+    BITACORA_RUNS.md §8.
+  queda_abierto: >-
+    La §4 del issue, que esta decisión NO cierra: `procesar_adopciones` recorre
+    las propuestas SIN ámbito, así que `via = "dos-ambitos"` puede escribirse
+    sin que nadie haya llevado nada (en el b7bc51dc, Dakawa dijo `kali-bana` en
+    Carirubana con V1 vacía, V2 vacía, campo 0,0 y contagio 0,000). ¿Debe la
+    adopción exigir que el adoptante pudiera VER la propuesta, y registrarse
+    como COINCIDENCIA —una tercera vía, que es un dato y no un error— cuando no
+    la veía?
