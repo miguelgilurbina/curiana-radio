@@ -1,0 +1,3876 @@
+{
+  "version": 2,
+  "generado": "2026-09-19T02:15:46.835140+00:00",
+  "vacio": false,
+  "tope_texto": 220,
+  "run": {
+    "id8": "b847944d",
+    "run_id": "b847944d-d9b4-42bc-ac34-32bda40e61ba",
+    "cadena": [
+      "b847944d"
+    ],
+    "started_at": "2026-09-19T01:40:28.931109+00:00",
+    "serie": "era2-c",
+    "brazo": "con escena, Capubana cada 3",
+    "dias": [
+      1
+    ],
+    "n_turnos": 6,
+    "n_agentes": 63,
+    "n_presencias": 378
+  },
+  "lugares": [
+    {
+      "id": "Capubana",
+      "nombre": "el cerro Capubana",
+      "sitio": "Capubana",
+      "locacion": null,
+      "nodo": "compartido",
+      "tipo": "propio",
+      "lat": 11.8183,
+      "lon": -69.9524,
+      "puntos": null,
+      "compartido": true,
+      "por_que": "estructura_social_era2.yaml decision_creativa_2026-09-14.capubana"
+    },
+    {
+      "id": "Capubana:fuente",
+      "nombre": "la fuente del cerro",
+      "sitio": "Capubana",
+      "locacion": "fuente",
+      "nodo": "compartido",
+      "tipo": "propio",
+      "lat": 11.818,
+      "lon": -69.952,
+      "puntos": null,
+      "compartido": true,
+      "por_que": "clima_era2.yaml abre_y_cierra.Capubana (NO CIERRA NUNCA)"
+    },
+    {
+      "id": "Carirubana",
+      "nombre": "Carirubana",
+      "sitio": "Carirubana",
+      "locacion": null,
+      "nodo": "AMUAY",
+      "tipo": "propio",
+      "lat": 11.694,
+      "lon": -70.218,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "Carirubana:orilla",
+      "nombre": "la orilla de Carirubana",
+      "sitio": "Carirubana",
+      "locacion": "orilla",
+      "nodo": "AMUAY",
+      "tipo": "heredado",
+      "lat": 11.694,
+      "lon": -70.218,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "Carirubana:taller",
+      "nombre": "el taller de Carirubana",
+      "sitio": "Carirubana",
+      "locacion": "taller",
+      "nodo": "AMUAY",
+      "tipo": "heredado",
+      "lat": 11.694,
+      "lon": -70.218,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "Carirubana:taller_canoas",
+      "nombre": "el taller de canoas de Carirubana",
+      "sitio": "Carirubana",
+      "locacion": "taller_canoas",
+      "nodo": "AMUAY",
+      "tipo": "heredado",
+      "lat": 11.694,
+      "lon": -70.218,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "Caseto",
+      "nombre": "Caseto",
+      "sitio": "Caseto",
+      "locacion": null,
+      "nodo": "AMUAY",
+      "tipo": "propio",
+      "lat": 11.762,
+      "lon": -70.017,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "Caseto:conuco",
+      "nombre": "el conuco de Caseto",
+      "sitio": "Caseto",
+      "locacion": "conuco",
+      "nodo": "AMUAY",
+      "tipo": "heredado",
+      "lat": 11.762,
+      "lon": -70.017,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "Caseto:orilla",
+      "nombre": "la orilla de Caseto",
+      "sitio": "Caseto",
+      "locacion": "orilla",
+      "nodo": "AMUAY",
+      "tipo": "heredado",
+      "lat": 11.762,
+      "lon": -70.017,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "Caseto:taller",
+      "nombre": "el taller de Caseto",
+      "sitio": "Caseto",
+      "locacion": "taller",
+      "nodo": "AMUAY",
+      "tipo": "heredado",
+      "lat": 11.762,
+      "lon": -70.017,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "El Cayude",
+      "nombre": "El Cayude",
+      "sitio": "El Cayude",
+      "locacion": null,
+      "nodo": "GUARANAO",
+      "tipo": "propio",
+      "lat": 11.701,
+      "lon": -69.957,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "El Cayude:jaguey",
+      "nombre": "el jagüey de El Cayude",
+      "sitio": "El Cayude",
+      "locacion": "jaguey",
+      "nodo": "GUARANAO",
+      "tipo": "heredado",
+      "lat": 11.701,
+      "lon": -69.957,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "El Cayude:matorral",
+      "nombre": "el matorral de El Cayude",
+      "sitio": "El Cayude",
+      "locacion": "matorral",
+      "nodo": "GUARANAO",
+      "tipo": "heredado",
+      "lat": 11.701,
+      "lon": -69.957,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "El Cayude:orilla",
+      "nombre": "la orilla de El Cayude",
+      "sitio": "El Cayude",
+      "locacion": "orilla",
+      "nodo": "GUARANAO",
+      "tipo": "heredado",
+      "lat": 11.701,
+      "lon": -69.957,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "El Cayude:punta",
+      "nombre": "la punta de El Cayude",
+      "sitio": "El Cayude",
+      "locacion": "punta",
+      "nodo": "GUARANAO",
+      "tipo": "propio",
+      "lat": 11.649,
+      "lon": -69.925,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "Moruy",
+      "nombre": "Moruy",
+      "sitio": "Moruy",
+      "locacion": null,
+      "nodo": "GUARANAO",
+      "tipo": "propio",
+      "lat": 11.822,
+      "lon": -69.983,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "Moruy:taller",
+      "nombre": "el taller de Moruy",
+      "sitio": "Moruy",
+      "locacion": "taller",
+      "nodo": "GUARANAO",
+      "tipo": "heredado",
+      "lat": 11.822,
+      "lon": -69.983,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "Tacuato",
+      "nombre": "Tacuato",
+      "sitio": "Tacuato",
+      "locacion": null,
+      "nodo": "GUARANAO",
+      "tipo": "propio",
+      "lat": 11.708,
+      "lon": -69.841,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "Tacuato:conuco",
+      "nombre": "el conuco de Tacuato",
+      "sitio": "Tacuato",
+      "locacion": "conuco",
+      "nodo": "GUARANAO",
+      "tipo": "heredado",
+      "lat": 11.708,
+      "lon": -69.841,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "Tacuato:jaguey",
+      "nombre": "el jagüey de Tacuato",
+      "sitio": "Tacuato",
+      "locacion": "jaguey",
+      "nodo": "GUARANAO",
+      "tipo": "heredado",
+      "lat": 11.708,
+      "lon": -69.841,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "Tacuato:matorral",
+      "nombre": "el matorral de Tacuato",
+      "sitio": "Tacuato",
+      "locacion": "matorral",
+      "nodo": "GUARANAO",
+      "tipo": "heredado",
+      "lat": 11.708,
+      "lon": -69.841,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "Tacuato:orilla",
+      "nombre": "la orilla de Tacuato",
+      "sitio": "Tacuato",
+      "locacion": "orilla",
+      "nodo": "GUARANAO",
+      "tipo": "heredado",
+      "lat": 11.708,
+      "lon": -69.841,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "Tacuato:salinar",
+      "nombre": "el salinar de Tacuato",
+      "sitio": "Tacuato",
+      "locacion": "salinar",
+      "nodo": "GUARANAO",
+      "tipo": "heredado",
+      "lat": 11.708,
+      "lon": -69.841,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "Tacuato:taller",
+      "nombre": "el taller de Tacuato",
+      "sitio": "Tacuato",
+      "locacion": "taller",
+      "nodo": "GUARANAO",
+      "tipo": "heredado",
+      "lat": 11.708,
+      "lon": -69.841,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "ZA1",
+      "nombre": "la costa oeste",
+      "sitio": "ZA1",
+      "locacion": null,
+      "nodo": "AMUAY",
+      "tipo": "zona",
+      "lat": 11.85729,
+      "lon": -70.24486,
+      "puntos": [
+        [
+          11.775,
+          -70.241
+        ],
+        [
+          11.738,
+          -70.234
+        ],
+        [
+          11.745,
+          -70.212
+        ],
+        [
+          11.825,
+          -70.252
+        ],
+        [
+          11.855,
+          -70.301
+        ],
+        [
+          11.98,
+          -70.257
+        ],
+        [
+          12.083,
+          -70.217
+        ]
+      ],
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "ZG2",
+      "nombre": "la orilla del Golfete",
+      "sitio": "ZG2",
+      "locacion": null,
+      "nodo": "GUARANAO",
+      "tipo": "zona",
+      "lat": 11.6746,
+      "lon": -69.9182,
+      "puntos": [
+        [
+          11.64,
+          -70.069
+        ],
+        [
+          11.701,
+          -69.957
+        ],
+        [
+          11.649,
+          -69.925
+        ],
+        [
+          11.708,
+          -69.841
+        ],
+        [
+          11.675,
+          -69.799
+        ]
+      ],
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "camino:El Cayude",
+      "nombre": "el camino que sale de El Cayude",
+      "sitio": "El Cayude",
+      "locacion": null,
+      "nodo": "GUARANAO",
+      "tipo": "camino",
+      "lat": 11.701,
+      "lon": -69.957,
+      "puntos": null,
+      "compartido": false,
+      "por_que": null
+    },
+    {
+      "id": "camino:Moruy-Caseto",
+      "nombre": "el camino de Moruy a Caseto",
+      "sitio": "Moruy",
+      "locacion": null,
+      "nodo": "compartido",
+      "tipo": "camino",
+      "lat": 11.792,
+      "lon": -70.0,
+      "puntos": [
+        [
+          11.822,
+          -69.983
+        ],
+        [
+          11.762,
+          -70.017
+        ]
+      ],
+      "compartido": true,
+      "por_que": "el elenco lo llama «la alianza»: «Caseto es el sitio de AMUAY más cercano a Moruy —unos ocho kilómetros por tierra, contra veinticinco— y ese camino corto ES la alianza: la esposa principal viene por él y el aporte de AMUAY al cerro baja por él» — 6-fusion/elenco_era2.yaml casas[los Guasicures de Caseto].razon_del_linaje"
+    }
+  ],
+  "turnos": [
+    {
+      "i": 0,
+      "run": "b847944d",
+      "dia": 1,
+      "turno": 1,
+      "momento": "amanecer",
+      "n_presencias": 63,
+      "escenas": [
+        {
+          "lugar": "Capubana",
+          "n": 2,
+          "por_nodo": {
+            "GUARANAO": 2
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Hayo",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Sawaka",
+              "nodo": "GUARANAO",
+              "hablo": true
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Hayo",
+              "nodo": "GUARANAO",
+              "texto": "*Taya wana-ka duna-ana. Suka-kana naa-ka, kashi kali-da naa-ni.* Ta-barsure naba-ni wara-jashichi. Sawaka kaa-ni yama, ta-nii wana-ni ka-buko: biro-uco mara duna-ima, mara-mara. Nüma maa-da \"kapua-gua kasuta kaa-da\"…",
+              "recortado": true
+            },
+            {
+              "agente": "Sawaka",
+              "nodo": "GUARANAO",
+              "texto": "Taya wana-ka yama kali-bana. Buko naa-da ma-duna wara. Dali kaa-ni tüshi, arua siwato-kana. Taya naba-ni, Hayo: Manaure maa-ni kashi. Nüma raka-da duna-ana [pana-bana-kana: cinco ríos]. Saa kaya naa-da puna…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Capubana:fuente",
+          "n": 1,
+          "por_nodo": {
+            "GUARANAO": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Wamipa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Carirubana",
+          "n": 6,
+          "por_nodo": {
+            "AMUAY": 6
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Amaka",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Arika",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Paugis",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Talata",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tigi",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Waru",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Carirubana:orilla",
+          "n": 5,
+          "por_nodo": {
+            "AMUAY": 5
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Dakawa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Isiro",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Kiwakoa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Mene",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tauta",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Caseto",
+          "n": 7,
+          "por_nodo": {
+            "AMUAY": 7
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Bajari",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Dipopo",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Saruro",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Siwa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tijua",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Turicha",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Wasima",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Caseto:conuco",
+          "n": 3,
+          "por_nodo": {
+            "AMUAY": 3
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Karama",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tabri",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tebekoa",
+              "nodo": "AMUAY",
+              "hablo": true
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Tebekoa",
+              "nodo": "AMUAY",
+              "texto": "Taya naba-ni wara kashi. Duna buko-ni ma-wara-ka, ka konuko-kana tüshi-ni. Saa pia naa-da yama, ta-barsure maa-da pia. Karama ka Tabri: \"Nüma wana-ka sima-bana puna. Kaya ma-naa-ka wara. Kali kaa-ni sulu ma-duna-ana…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "El Cayude",
+          "n": 7,
+          "por_nodo": {
+            "GUARANAO": 7
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Cege",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Chuchubi",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Jaiata",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Katiata",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Wache",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Wairon",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Wanepe",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "El Cayude:jaguey",
+          "n": 1,
+          "por_nodo": {
+            "GUARANAO": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Dunakoa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "El Cayude:punta",
+          "n": 2,
+          "por_nodo": {
+            "GUARANAO": 2
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Dara-bana",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Ruata",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Moruy",
+          "n": 11,
+          "por_nodo": {
+            "GUARANAO": 11
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Apoaure",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Buriche",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Dato",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Harifuche",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Hiko",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Humohumo",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Jakura",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Karebe",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Kumarawa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Manaure",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Simaure",
+              "nodo": "GUARANAO",
+              "hablo": true
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Apoaure",
+              "nodo": "GUARANAO",
+              "texto": "*Taya naba-ni ka wana-ka duna-koru sulu yama.* Suka-kaa naa-ka, nii-da pana-mara wara kaa-ni. Ta-barsure naba-ni: buko naa-ka [duna-bajo], konuko-ana dali kaa-da tüshi-ana. Kaya ma-wana-ka puna-mara kashi. Nüma Manaure…",
+              "recortado": true
+            },
+            {
+              "agente": "Karebe",
+              "nodo": "GUARANAO",
+              "texto": "*Alzo la vista del mortero donde muelo maíz. El polvo blanco me cubre las manos.* Taya wana-ka: duna-koru naa-ka ma-da. Buko siwato-ni. Saa kaya ma-wana-ni, konuko kaa-ni [tüshi-ana: tüshi+ana = lugar seco, sin agua]…",
+              "recortado": true
+            },
+            {
+              "agente": "Simaure",
+              "nodo": "GUARANAO",
+              "texto": "*Me siento en el borde de la hamaca, las manos quietas sobre el regazo. El viento del este trae polvo seco.* Taya naba-ni: duna-koru wara ma-kaa-ka. Buko siwato-kana, naka konuko-ana kaya ma-naa-ni. Suka wanü-kana, naya…",
+              "recortado": true
+            },
+            {
+              "agente": "Manaure",
+              "nodo": "GUARANAO",
+              "texto": "*Me levanto antes del kapua. El viento está alto, seco. Mi barsure ya lo sabe.* Taya wana-ka: duna-uco paa-ka wara-siwato. Naya kono-da kaa-ni ma-arua. Pia biro-ana, suka naa-ni ma-biro. *Llamo a Sawaka. Mi voz no…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Tacuato",
+          "n": 6,
+          "por_nodo": {
+            "GUARANAO": 6
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Akaure",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Chakamba",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Chirwa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Dabuda",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Dichiba",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Urari",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Tacuato:conuco",
+          "n": 2,
+          "por_nodo": {
+            "GUARANAO": 2
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Naure",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Uria",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Tacuato:jaguey",
+          "n": 1,
+          "por_nodo": {
+            "GUARANAO": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Patapati",
+              "nodo": "GUARANAO",
+              "hablo": true
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Patapati",
+              "nodo": "GUARANAO",
+              "texto": "*Taya wana-ka yama buko-ana. Duna wamipa-ni ma-nii wara.* Naba-ni: kaya ma-naa-ka puna apana gudamuen. Konuko-kana siwato-ni. Arua ma-kaa-ni. *Taya rua-ni kori-bana—korie kaa-ni ma-siwato, kaa-ni waidima.* Pia, nüma…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Tacuato:salinar",
+          "n": 1,
+          "por_nodo": {
+            "GUARANAO": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Birokoa",
+              "nodo": "GUARANAO",
+              "hablo": true
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Birokoa",
+              "nodo": "GUARANAO",
+              "texto": "Taya naba-ni wara kashi. Nüma buko naa-ka sulu, naka taya nii-kana wana-ka ka-dali ma-duna. Suka naa-ni, kaya ma-naa-da. Kali wara-ka paa-ni ta-konuko-kana, mara ta-barsure naba-ni: *saa duna ma-naa-da, kona-kana…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "ZA1",
+          "n": 3,
+          "por_nodo": {
+            "AMUAY": 3
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Ebokoa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Kasebo",
+              "nodo": "AMUAY",
+              "hablo": true
+            },
+            {
+              "agente": "Waitiao",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Kasebo",
+              "nodo": "AMUAY",
+              "texto": "*Se detiene en la costa, mirando hacia el interior. Los ojos entornados.* Taya wana-ka buko-ana: duna naa-ka sulu-gua. Arima-kana maa-da ma-nii wara. Ebokoa, pia wana-ni ka biro-ana? Takes naa-da ta-nii. Naba-ni…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "ZG2",
+          "n": 5,
+          "por_nodo": {
+            "GUARANAO": 5
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Duraboa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Jachos",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Kunaro-bana",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Ucibo",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Waranaro",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Jachos",
+              "nodo": "GUARANAO",
+              "texto": "*Taya wana-ka duna-bana. Suka kaa-ni, kapua naa-da kashi.* Duraboa, Kunaro-bana — nüma naba-ni ma-arua. Ucibo, Waranaro: pia kira-ni ta-maa. Taya panaa-ka: buko-ana duna naa-ka sulu, sulu, sulu. Kali wara naa-ka…",
+              "recortado": true
+            },
+            {
+              "agente": "Kunaro-bana",
+              "nodo": "GUARANAO",
+              "texto": "*Se alza temprano, cuando el agua está clara. Mira la orilla del Golfete. Mira el buko.* Taya wana-ka: duna naa-ni [baja-ana]. Suka kaa-ni wara tüshi. Nüma naba-ni siwato. *Toca el barro seco donde había agua.* Konuko…",
+              "recortado": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "i": 1,
+      "run": "b847944d",
+      "dia": 1,
+      "turno": 2,
+      "momento": "mañana",
+      "n_presencias": 63,
+      "escenas": [
+        {
+          "lugar": "Capubana",
+          "n": 2,
+          "por_nodo": {
+            "GUARANAO": 2
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Hayo",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Sawaka",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Capubana:fuente",
+          "n": 1,
+          "por_nodo": {
+            "GUARANAO": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Wamipa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Carirubana",
+          "n": 6,
+          "por_nodo": {
+            "AMUAY": 6
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Amaka",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Arika",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Paugis",
+              "nodo": "AMUAY",
+              "hablo": true
+            },
+            {
+              "agente": "Talata",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tigi",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Waru",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Paugis",
+              "nodo": "AMUAY",
+              "texto": "Taya wana-ka arima wara kasebo-ana. Suka naa-ka, kali naa-ni kapua. Taya masa-ka arua pana — kasabe ka duna. Ta-barsure naba-ni: biro-ana kaa-ni [siwato-bana], wara ma-biro. Boratio naa-da yama — pütchi-da maa-da. Waya…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Carirubana:orilla",
+          "n": 2,
+          "por_nodo": {
+            "AMUAY": 2
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Kiwakoa",
+              "nodo": "AMUAY",
+              "hablo": true
+            },
+            {
+              "agente": "Tauta",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Kiwakoa",
+              "nodo": "AMUAY",
+              "texto": "Taya wana-ka rao, rua-ni kiwa-kana. Tauta kaa-ni yama, nii-ni duna-ana. Taya naba-ni: biro paa-da apopo kasebo-bana. Siwato-ka kashi, mara raka-ni kono-ni. Koa taa-ni konuko-ana — pana-gudamuen [dali-kona: dali+kona =…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Carirubana:taller_canoas",
+          "n": 3,
+          "por_nodo": {
+            "AMUAY": 3
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Dakawa",
+              "nodo": "AMUAY",
+              "hablo": true
+            },
+            {
+              "agente": "Isiro",
+              "nodo": "AMUAY",
+              "hablo": true
+            },
+            {
+              "agente": "Mene",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Dakawa",
+              "nodo": "AMUAY",
+              "texto": "Taya chaa-ni kanoa, yama sulu, kashi wara jashichi. Isiro, ta-baba-mara, maa-ni ka, ka pia naa-da kaa-ni koru — [koru: koru+-ana = el hueco donde va el fuego para quemar, la forma]. Nüma panaa-ka chakamba chaa-da kanoa…",
+              "recortado": true
+            },
+            {
+              "agente": "Isiro",
+              "nodo": "AMUAY",
+              "texto": "*Levanta la cabeza del tronco que ahúecas. Las virutas de madera caen sobre tus pies descalzos.* Taya chaa-ni kanoa. Bara wara-ka puna, naa-ka Punta Cardón sulu. Nüma kuru—mara kasuta-ni, wara dali-bana. *Pasa la mano…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Caseto",
+          "n": 5,
+          "por_nodo": {
+            "AMUAY": 5
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Dipopo",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Siwa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tijua",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Turicha",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Wasima",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Caseto:conuco",
+          "n": 3,
+          "por_nodo": {
+            "AMUAY": 3
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Karama",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tabri",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tebekoa",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Caseto:taller",
+          "n": 1,
+          "por_nodo": {
+            "AMUAY": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Saruro",
+              "nodo": "AMUAY",
+              "hablo": true
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Saruro",
+              "nodo": "AMUAY",
+              "texto": "Taya chaa-ni yama. Bija ka jagua wana-ka ta-nii, masa-ka ta-barsure. Vasija-kana chaa-ni: ana sünatü, arima [wana-iro: pequeño pez visto], kaya-bana [lluvia pintada]. Siwa nii-kana panaa-ni wara. Puna chaa-ka, kashi…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "El Cayude",
+          "n": 5,
+          "por_nodo": {
+            "GUARANAO": 5
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Cege",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Jaiata",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Wache",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Wairon",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Wanepe",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "El Cayude:jaguey",
+          "n": 1,
+          "por_nodo": {
+            "GUARANAO": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Dunakoa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "El Cayude:matorral",
+          "n": 1,
+          "por_nodo": {
+            "GUARANAO": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Katiata",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "El Cayude:punta",
+          "n": 2,
+          "por_nodo": {
+            "GUARANAO": 2
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Dara-bana",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Ruata",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Moruy",
+          "n": 10,
+          "por_nodo": {
+            "GUARANAO": 10
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Apoaure",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Buriche",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Dato",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Harifuche",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Hiko",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Jakura",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Karebe",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Kumarawa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Manaure",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Simaure",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Tacuato",
+          "n": 2,
+          "por_nodo": {
+            "GUARANAO": 2
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Akaure",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Chakamba",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Akaure",
+              "nodo": "GUARANAO",
+              "texto": "Taya kaa-ni hiko-kana, wara wara. Ta-barsure na-ni, chakamba wako-ni. (Estoy retorciendo cuerdas, muchas. Mi trabajo sigue — hago nudos, ¿cómo te va?) Nüma pana hiko ma-buro-ka. Ista para-gua siwato-ka: jején-aima wara…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Tacuato:conuco",
+          "n": 3,
+          "por_nodo": {
+            "GUARANAO": 3
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Dichiba",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Naure",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Uria",
+              "nodo": "GUARANAO",
+              "hablo": true
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Naure",
+              "nodo": "GUARANAO",
+              "texto": "Taya wana-ka arima-bana kashi juri-ni wara. Duka-ni ta-koa-iro, hueco-hueco, maíz-uco ta-para-ana. Dichiba ka Uria duka-kaa-ni arima-bana pana-pana. Ta-barsure ma-siwato-da: kashi maíz semilla ta-koa-ni, ma-hambre. Eso…",
+              "recortado": true
+            },
+            {
+              "agente": "Dichiba",
+              "nodo": "GUARANAO",
+              "texto": "Ta-koa-ni arima wara kari. Naure ka Uria ta-kaa-ni biro-bacoa, mara barsure siwato-ka nüma-kana. Kashi juri mara-ni usera, para-ana gudamuen-kana ta-jakura naba-ni. Ta-koa-ni pana-ana, naka kaa-ni kudi para wara…",
+              "recortado": true
+            },
+            {
+              "agente": "Uria",
+              "nodo": "GUARANAO",
+              "texto": "Taya koa-ni arima-gua wako-kana. Naure ta-dichiba-ka, mara Dichiba ma-wana-ni—siwato-ka nüma. (Estoy abriendo huecos con la coa en el surco de la siembra; Naure ya marcó la línea del otro lado, pero Dichiba no quiere…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Tacuato:jaguey",
+          "n": 1,
+          "por_nodo": {
+            "GUARANAO": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Patapati",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Tacuato:matorral",
+          "n": 1,
+          "por_nodo": {
+            "GUARANAO": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Urari",
+              "nodo": "GUARANAO",
+              "hablo": true
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Urari",
+              "nodo": "GUARANAO",
+              "texto": "Taya kaseto-kana naba-ni. Urari-ana ta-barsure wara-ka. Duana ma-kira-ni Kunaro-bana. Juri wana-ka para-bana, kashi. Paugis ta-tía disey: urari-iro ta-naba-da, ma-disey [leña-kana naba-ni]. Kasha komoho-ni yama. *(Estoy…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Tacuato:salinar",
+          "n": 1,
+          "por_nodo": {
+            "GUARANAO": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Birokoa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Tacuato:taller",
+          "n": 2,
+          "por_nodo": {
+            "GUARANAO": 2
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Chirwa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Dabuda",
+              "nodo": "GUARANAO",
+              "hablo": true
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Dabuda",
+              "nodo": "GUARANAO",
+              "texto": "Taya chaa-ka ana kaa-ni. Biro-aima wana-ka ma-pana-taro, ka nii-ni ta-jala: **chakamba ta-chaa ana?** *(Estoy pintando diseños. La sal escasea y mis ojos leen lo que falta: ¿cómo hago los patrones si no tengo biro…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "ZA1",
+          "n": 3,
+          "por_nodo": {
+            "AMUAY": 3
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Ebokoa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Kasebo",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Waitiao",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "ZG2",
+          "n": 5,
+          "por_nodo": {
+            "GUARANAO": 5
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Duraboa",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Jachos",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Kunaro-bana",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Ucibo",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Waranaro",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Duraboa",
+              "nodo": "GUARANAO",
+              "texto": "Taya juri-ni wara. Ta-konuko koa-ni yama, saa ka-barsure ma-tuturi-da. Wa-konuko siwato-ka—ma-para naba-ni. Ta-koa wara-ni, ta-bana ma-siwato naba-da. Kunaro-bana ka Ucibo kiwa-ni. Ta-mujer Naure hamaka-ni, [tika-ni]…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "camino:El Cayude",
+          "n": 1,
+          "por_nodo": {
+            "GUARANAO": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Chuchubi",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "camino:Moruy-Caseto",
+          "n": 2,
+          "por_nodo": {
+            "AMUAY": 1,
+            "GUARANAO": 1
+          },
+          "contacto": true,
+          "presentes": [
+            {
+              "agente": "Bajari",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Humohumo",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        }
+      ]
+    },
+    {
+      "i": 2,
+      "run": "b847944d",
+      "dia": 1,
+      "turno": 3,
+      "momento": "mediodia",
+      "n_presencias": 63,
+      "escenas": [
+        {
+          "lugar": "Capubana",
+          "n": 2,
+          "por_nodo": {
+            "GUARANAO": 2
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Hayo",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Sawaka",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Carirubana",
+          "n": 12,
+          "por_nodo": {
+            "AMUAY": 12
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Amaka",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Arika",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Dakawa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Ebokoa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Isiro",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Kiwakoa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Mene",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Paugis",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Talata",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tauta",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tigi",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Waru",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Caseto",
+          "n": 11,
+          "por_nodo": {
+            "AMUAY": 11
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Dipopo",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Karama",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Kasebo",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Saruro",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Siwa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tabri",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tebekoa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tijua",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Turicha",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Waitiao",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Wasima",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "El Cayude",
+          "n": 11,
+          "por_nodo": {
+            "GUARANAO": 11
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Cege",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Dara-bana",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Dunakoa",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Jachos",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Jaiata",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Katiata",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Ruata",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Wache",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Wairon",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Wanepe",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Waranaro",
+              "nodo": "GUARANAO",
+              "hablo": true
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Dunakoa",
+              "nodo": "GUARANAO",
+              "texto": "Ta-katu sombra-bana yama, guayabo-poste ta-barsure. Ta-pata ma-katu, wara siwato-ni. Juri-ni kari wara. Ta-bana naba-ni kashi, mara ta-[barsure-siwato]: [siwato-ima] yapamata-ni. Para kari-ana, ilu-kana wana-ka. Naya…",
+              "recortado": true
+            },
+            {
+              "agente": "Waranaro",
+              "nodo": "GUARANAO",
+              "texto": "Naba-ni rao-ana kashi. Kasi wara-ni, hamaka ta-miro naba-ka wara-bana. Ta-bana mütsia kaa-ni. Jachos ka Wairon arima-aima jadarayte-ka para-gua. Naya kaa-ni mara siwato-kana. Biro-iro ma-kaa, ta-kanoa rao-uco naba-ni…",
+              "recortado": true
+            },
+            {
+              "agente": "Ruata",
+              "nodo": "GUARANAO",
+              "texto": "*Estoy en la sombra del orumo grande, cerca del agua.* Taya kaa-ni para-bana, mara kashi wara tüshi ma-da. Ta-hamaka rua-ka, ta-barsure [siwato-ni: siwato+-ni = estoy desganado]. (Yo estoy en la orilla del agua, pero…",
+              "recortado": true
+            },
+            {
+              "agente": "Wanepe",
+              "nodo": "GUARANAO",
+              "texto": "Taya wana-ni kaketillo-bana, kashi sombra-uro. Katiata-iro hamaka-ni, wako-barsure. Hayo wa-raka-ni, para-gua wana-ni. (Estoy mirando desde el kaketillo sombreado. Los niños duermen en hamacas, en calma. Mastico hayo…",
+              "recortado": true
+            },
+            {
+              "agente": "Wairon",
+              "nodo": "GUARANAO",
+              "texto": "Taya kaa-ka orumo-bana, kari-wara. Ta-naba-ni: biro ma-kaa-ni, para-gua anasa-ka mara ma-jabal-ka. Jaiata awa-ni. Cege ka Wanepe tebe ma-wana-ni. Ruata hamaka-ni, siwato-ka. Katiata ka Waranaro para-uco bajarí-ni, mara…",
+              "recortado": true
+            },
+            {
+              "agente": "Wache",
+              "nodo": "GUARANAO",
+              "texto": "Yama kari-bana, taya hamaka-ni. Para wara suu-ni, kashi puna-ni tayu bana. Tubarao-gua, rao-aima, watakare-kana wanaka-ni sombra-ana. Dunakoa ka Ruata, naka kaa-ni maloca-bana. Jaiata ka Wanepe, kira-ni viento-arua…",
+              "recortado": true
+            },
+            {
+              "agente": "Dara-bana",
+              "nodo": "GUARANAO",
+              "texto": "Taya sikat-ana-ni, keri-bana wara. Kikuidi-uco arima kari-ni, mütsia para-aima. Juri-wara, mara para [kasucu-aima: agua-extraña]. Ma-arua-ni, ma-biro-uco raku-ni. Taya kibakibi-ni cardumen: kashi naka wanaka-da. Jachos…",
+              "recortado": true
+            },
+            {
+              "agente": "Katiata",
+              "nodo": "GUARANAO",
+              "texto": "Taya hamaka-ka, arima-bana kali-ubana. Para-ana usera-ka, juri wara-ni. Wache, Dara-bana, Jachos — kana-ni arima-bana mara. Taya solo-ka kashi, biro-ni taya barsure-ana. Biro-aima ma-ka. Kaya ma-ka turno-da…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Moruy",
+          "n": 11,
+          "por_nodo": {
+            "GUARANAO": 11
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Apoaure",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Buriche",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Dato",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Harifuche",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Hiko",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Jakura",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Karebe",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Kumarawa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Manaure",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Simaure",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Wamipa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Jakura",
+              "nodo": "GUARANAO",
+              "texto": "Taya wamipa-bana-ni, kashi. Ta-para tüshi-da wara. Kanoa-kana, concho-kana ta-wako-ni. Biro-ima mara ma-naba-ka. Simaure jashichi-ni wara, manaure kaa-ni. Ta-bana siwato-da. Humohumo-naya wamipa-ana-ni para-bano. Dato…",
+              "recortado": true
+            },
+            {
+              "agente": "Hiko",
+              "nodo": "GUARANAO",
+              "texto": "Taya suna-ni koshi Manaure karebe-gua, para-bana siwato-ka wara. Ta-hamaka kaa-ni—tüshi-ana mara, kashi wara kali uru-ni. Jijen-aima naka-barsure ta-kabo. Maure ta-naba-ni, hilo pana, hilo gudamuen, hilo panaa-ka…",
+              "recortado": true
+            },
+            {
+              "agente": "Harifuche",
+              "nodo": "GUARANAO",
+              "texto": "Taya Moruy-ana nüma-ni. Kashi juri wara-ka, tüshi-bana siwato-ni. Para-uco ma-ni, kati-bana siwato-ka. *Kudan-ni ta-fogon-ana, sombra hueke-ni.* Biro ma-aima-ka. Ta-duraboa [hueke-ma-buro], mara naka hambre-kana wana-ni…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Tacuato",
+          "n": 13,
+          "por_nodo": {
+            "GUARANAO": 13
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Akaure",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Birokoa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Chakamba",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Chirwa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Dabuda",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Dichiba",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Duraboa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Kunaro-bana",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Naure",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Patapati",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Ucibo",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Urari",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Uria",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "camino:El Cayude",
+          "n": 1,
+          "por_nodo": {
+            "GUARANAO": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Chuchubi",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "camino:Moruy-Caseto",
+          "n": 2,
+          "por_nodo": {
+            "AMUAY": 1,
+            "GUARANAO": 1
+          },
+          "contacto": true,
+          "presentes": [
+            {
+              "agente": "Bajari",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Humohumo",
+              "nodo": "GUARANAO",
+              "hablo": true
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Humohumo",
+              "nodo": "GUARANAO",
+              "texto": "*Bajari y yo llegamos hace poco al sitio del pozo de Caseto. El alisio pega fuerte; levanta polvo de los tubarao.* Taya kashi-aima wara. Ta-barsure [kasi-bana: kasi+bana = el cerro del sol], kashi waa-ni nüma…",
+              "recortado": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "i": 3,
+      "run": "b847944d",
+      "dia": 1,
+      "turno": 4,
+      "momento": "tarde",
+      "n_presencias": 63,
+      "escenas": [
+        {
+          "lugar": "Capubana",
+          "n": 2,
+          "por_nodo": {
+            "GUARANAO": 2
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Hayo",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Sawaka",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Capubana:fuente",
+          "n": 1,
+          "por_nodo": {
+            "GUARANAO": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Wamipa",
+              "nodo": "GUARANAO",
+              "hablo": true
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Wamipa",
+              "nodo": "GUARANAO",
+              "texto": "Taya jakuke-ni ta para. Kashi wara ma-biro-ka naba-ni. Mira cauce-bana naba-ni. Juri despopo-ka alisio-gua, para turbio-na. Ta hiko despopo-ka. Mara ta buri-kana siwato-ni. Ma-chicha-ka, ma-urapa-ka. Wa-Capubana…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Carirubana",
+          "n": 5,
+          "por_nodo": {
+            "AMUAY": 5
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Amaka",
+              "nodo": "AMUAY",
+              "hablo": true
+            },
+            {
+              "agente": "Paugis",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Talata",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tigi",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Waru",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Amaka",
+              "nodo": "AMUAY",
+              "texto": "Taya wana-ka para kashi. Paugis-kana naba-ni biro-uco-na, mara biro-aima ma-koa-ka. Talata, Tigi, Waru — ta-wana-ni kanoa-gudamuen. Kali-bana siwato-ni wara. Jai-ni kapua: \"Chakamba biro ma-koa?\" Ta-bana-ni wara-ka…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Carirubana:orilla",
+          "n": 3,
+          "por_nodo": {
+            "AMUAY": 3
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Ebokoa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Kiwakoa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tauta",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Carirubana:taller",
+          "n": 1,
+          "por_nodo": {
+            "AMUAY": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Arika",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Carirubana:taller_canoas",
+          "n": 3,
+          "por_nodo": {
+            "AMUAY": 3
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Dakawa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Isiro",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Mene",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Caseto",
+          "n": 3,
+          "por_nodo": {
+            "AMUAY": 3
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Siwa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Turicha",
+              "nodo": "AMUAY",
+              "hablo": true
+            },
+            {
+              "agente": "Wasima",
+              "nodo": "AMUAY",
+              "hablo": true
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Wasima",
+              "nodo": "AMUAY",
+              "texto": "*Taya kachana-ka wako-ana ta-misi. Siwa mara Turicha tuba-ni karebe-uca.* (Estoy sentada en la sombra del wako, hilando. Siwa y Turicha están juntas, moliendo en el mortero.) Naya kataa-ka mütsia-bana. Juri wara…",
+              "recortado": true
+            },
+            {
+              "agente": "Turicha",
+              "nodo": "AMUAY",
+              "texto": "Ta-kaa-ni arima-bana, kashi. Siwa ka Wasima jadarayte-ni konuko-ana. Waya tabuire-ka sabuenen kona, pana-bana naka. Ta-memoria-ni kashi. Ta-barsure wana-ka kali-bana. Turi-aima—ta-mura koa-bacoa. Chakamba tu-wana-ka?…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Caseto:conuco",
+          "n": 3,
+          "por_nodo": {
+            "AMUAY": 3
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Karama",
+              "nodo": "AMUAY",
+              "hablo": true
+            },
+            {
+              "agente": "Tabri",
+              "nodo": "AMUAY",
+              "hablo": true
+            },
+            {
+              "agente": "Tebekoa",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Karama",
+              "nodo": "AMUAY",
+              "texto": "Taya machete-ka. Arima wara-ka. Tabri ka Tebekoa hueke-ana naba-ni, koa-aima wana-ka. Juri tüshi-bana waa-ni. Ta-barsure kua-nico mara biro-aima, dare. Taya bakari-da naba-ni, hueke-ubana wara-ka arima. Warana-kana…",
+              "recortado": true
+            },
+            {
+              "agente": "Tabri",
+              "nodo": "AMUAY",
+              "texto": "# Tabri en Caseto — Tarde de Viento Taya koa-ni wariana para-bana. Karama ka Tebekoa ta-rua-ni biro-kana juri-gua naba-ni. *(Estoy afilando la coa en la piedra del borde del conuco. Karama y Tebekoa cargan sal hacia la…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Caseto:orilla",
+          "n": 2,
+          "por_nodo": {
+            "AMUAY": 2
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Kasebo",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Waitiao",
+              "nodo": "AMUAY",
+              "hablo": true
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Waitiao",
+              "nodo": "AMUAY",
+              "texto": "Taya wana-ka para-ana siwato-kana. Kasebo ta-barsure naba-ni. Kashi mara chirwa-iro ta-karebe-ni. Sal-aima wara ma-ni. Juri-da, juri-da... wa-hamaka-kana siwato-ka. Ako. Tía Watuena ta-kira-ni: takes [cerro-gua]…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Caseto:taller",
+          "n": 3,
+          "por_nodo": {
+            "AMUAY": 3
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Dipopo",
+              "nodo": "AMUAY",
+              "hablo": true
+            },
+            {
+              "agente": "Saruro",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tijua",
+              "nodo": "AMUAY",
+              "hablo": true
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Tijua",
+              "nodo": "AMUAY",
+              "texto": "Taya maure-ni, dali-bana. Hiko-kana ta-barsure-da naba-ni, wara jari-ka. Kashi para-gua mütsia-ka, way-paro alisio-ubana wara jari-ni. Dipopo, wa-konuko-kana chakamba-ni? Saruro hayo-iro chuchube-ni, kashi waidima-da…",
+              "recortado": true
+            },
+            {
+              "agente": "Dipopo",
+              "nodo": "AMUAY",
+              "texto": "Taya ana-ni hiko, cocuiza. Saruro arima-wana-ka, mara Tijua naba-ni biro-gua: chakamba biro-aima ma-wara-ka? Kasuta rao-ana yama. Para-ubana naba-ni: gudamuen tara-da, awa-ni ma-biro. Ta-apopo Tebekoa naba-ni kashi: saa…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "El Cayude",
+          "n": 5,
+          "por_nodo": {
+            "GUARANAO": 5
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Cege",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Jaiata",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Wache",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Wairon",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Wanepe",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "El Cayude:jaguey",
+          "n": 1,
+          "por_nodo": {
+            "GUARANAO": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Dunakoa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "El Cayude:matorral",
+          "n": 1,
+          "por_nodo": {
+            "GUARANAO": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Katiata",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "El Cayude:orilla",
+          "n": 2,
+          "por_nodo": {
+            "GUARANAO": 2
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Jachos",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Waranaro",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "El Cayude:punta",
+          "n": 2,
+          "por_nodo": {
+            "GUARANAO": 2
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Dara-bana",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Ruata",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Moruy",
+          "n": 9,
+          "por_nodo": {
+            "GUARANAO": 9
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Apoaure",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Buriche",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Dato",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Harifuche",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Jakura",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Karebe",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Kumarawa",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Manaure",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Simaure",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Kumarawa",
+              "nodo": "GUARANAO",
+              "texto": "# KUMARAWA — Tarde en Moruy Taya arima-ka wara biro-uco, kashi. Nüma Manaure siwato-ni mara ta-barsure ma-anasa. (Acabo de secar el pescado en el canal de sal; ahora el Manaure está desganado, pero mi espíritu no está…",
+              "recortado": true
+            },
+            {
+              "agente": "Buriche",
+              "nodo": "GUARANAO",
+              "texto": "Taya wamipa-ni kashi. Ta-barsure naba-ni saa dali usera-ka para-ima wara-ka. Mara kibakibi-ka siwato-ni ta-merejuy. Kaa-ni-gua wara, mara ta-panaa-bana saa juri wara-ka. Dato hamaka-ana kana-ni. Apoaure magey-iro…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Moruy:taller",
+          "n": 1,
+          "por_nodo": {
+            "GUARANAO": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Hiko",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Tacuato",
+          "n": 1,
+          "por_nodo": {
+            "GUARANAO": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Chakamba",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Tacuato:conuco",
+          "n": 2,
+          "por_nodo": {
+            "GUARANAO": 2
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Naure",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Uria",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Tacuato:jaguey",
+          "n": 1,
+          "por_nodo": {
+            "GUARANAO": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Patapati",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Tacuato:matorral",
+          "n": 1,
+          "por_nodo": {
+            "GUARANAO": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Urari",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Tacuato:orilla",
+          "n": 4,
+          "por_nodo": {
+            "GUARANAO": 4
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Dichiba",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Duraboa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Kunaro-bana",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Ucibo",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Tacuato:salinar",
+          "n": 1,
+          "por_nodo": {
+            "GUARANAO": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Birokoa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Tacuato:taller",
+          "n": 3,
+          "por_nodo": {
+            "GUARANAO": 3
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Akaure",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Chirwa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Dabuda",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "camino:El Cayude",
+          "n": 1,
+          "por_nodo": {
+            "GUARANAO": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Chuchubi",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "camino:Moruy-Caseto",
+          "n": 2,
+          "por_nodo": {
+            "AMUAY": 1,
+            "GUARANAO": 1
+          },
+          "contacto": true,
+          "presentes": [
+            {
+              "agente": "Bajari",
+              "nodo": "AMUAY",
+              "hablo": true
+            },
+            {
+              "agente": "Humohumo",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Bajari",
+              "nodo": "AMUAY",
+              "texto": "Taya rua-ni arua nabo-kana kashi-bana. Humohumo ta-barsure wara-da kuru-bacoa-gua, mara taya ma-raka. Taya-kana Warana jakura-ni koa-kana. Pana-iro hiko rua-da para-gua. Kashi jején-aima wara, taya siwato-ni ka ma-raka…",
+              "recortado": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "i": 4,
+      "run": "b847944d",
+      "dia": 1,
+      "turno": 5,
+      "momento": "anochecer",
+      "n_presencias": 63,
+      "escenas": [
+        {
+          "lugar": "Capubana",
+          "n": 2,
+          "por_nodo": {
+            "GUARANAO": 2
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Hayo",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Sawaka",
+              "nodo": "GUARANAO",
+              "hablo": true
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Sawaka",
+              "nodo": "GUARANAO",
+              "texto": "Taya wana-ka kiba-sünatü [kiba + sünatü = piedra roja]. Mara nüma kaa-ni ma-dali, ma-bara, ma-kuru. Naba-ni: [kiba-amana-iro: kiba + amana + -iro = piedra pequeña del fuego]. Taya taa-ka nüma. Wara kaa-ni [nii-bana: nii…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Carirubana",
+          "n": 11,
+          "por_nodo": {
+            "AMUAY": 11
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Amaka",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Arika",
+              "nodo": "AMUAY",
+              "hablo": true
+            },
+            {
+              "agente": "Dakawa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Isiro",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Kiwakoa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Mene",
+              "nodo": "AMUAY",
+              "hablo": true
+            },
+            {
+              "agente": "Paugis",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Talata",
+              "nodo": "AMUAY",
+              "hablo": true
+            },
+            {
+              "agente": "Tauta",
+              "nodo": "AMUAY",
+              "hablo": true
+            },
+            {
+              "agente": "Tigi",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Waru",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Mene",
+              "nodo": "AMUAY",
+              "texto": "Taya wana-ka ucibo-kushi. [ucibo + kushi: ucibo (piedra dura) + kushi (brillo, lo que reluce) = piedra que brilla] Mara—naba-ni esa [cosa]—ma-kaa-ka para-gua, ma-kaa-ka curiana-bana. Kashi-bacoa wara, mara anasa. Taya…",
+              "recortado": true
+            },
+            {
+              "agente": "Tauta",
+              "nodo": "AMUAY",
+              "texto": "Taya wana-ka [kali-biro-iro]: kali- (sol) + biro (cosa dura que brilla) + -iro (pequeña). Mara ma-masa-ka, mara ma-siwato-ka. [kali-biro-iro naba-ni para-gua wara]. Ta-barsure chakamba. Pia naba-ka [karu-ubana]: karu…",
+              "recortado": true
+            },
+            {
+              "agente": "Talata",
+              "nodo": "AMUAY",
+              "texto": "Taya wana-ka ucibo-kushi. Nüma wara-aima, kaya. Mara ma-barsure-ni. Chakamba para-gua nüma eroa-ka? Chakamba surupa-ni ucibo-kushi? *[uci-bo + ku-shi = piedra que brilla / cosa dura y brillante]* Paugis naba-ka hayo…",
+              "recortado": true
+            },
+            {
+              "agente": "Arika",
+              "nodo": "AMUAY",
+              "texto": "Taya wana-ka ucibo-ima, mara siwato-ni ta-barsure. [kushi-ucibo: kushi + -ucibo = cuenta que brilla, piedra resplandeciente]. Chakamba dare-ni kushi-ucibo kati? Taya wana-ka samuro-gua, mara kasebo-bana ma-paa kuté…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Carirubana:orilla",
+          "n": 1,
+          "por_nodo": {
+            "AMUAY": 1
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Ebokoa",
+              "nodo": "AMUAY",
+              "hablo": true
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Ebokoa",
+              "nodo": "AMUAY",
+              "texto": "Taya wana-ka. [Kari-uca: kari + uca = cosa que brilla dura.] Tura-ni ta barsure. Ma-biro. Ma-para. [Kari-uca-kana] wara tüshi. Naba-ni ta mano, siwato-ni. (Mi fuerza se mueve raro. Cosa fría, cosa sin nombre.)…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Caseto",
+          "n": 10,
+          "por_nodo": {
+            "AMUAY": 10
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Bajari",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Dipopo",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Karama",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Saruro",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Siwa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tabri",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tebekoa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tijua",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Turicha",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Wasima",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Caseto:orilla",
+          "n": 2,
+          "por_nodo": {
+            "AMUAY": 2
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Kasebo",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Waitiao",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "El Cayude",
+          "n": 10,
+          "por_nodo": {
+            "GUARANAO": 10
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Cege",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Chuchubi",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Dara-bana",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Dunakoa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Jaiata",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Katiata",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Ruata",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Wache",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Wairon",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Wanepe",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Cege",
+              "nodo": "GUARANAO",
+              "texto": "*Taya barsure-ubana naba-ka.* [barsure-ubana: barsure (brillante, duro, cosa que brilla) + -ubana (valor abierto, cosa nueva, sin clasificar) = cuentas o cosa brillante sin nombre aún] *Ka ta-bana wana-ka kashi.*…",
+              "recortado": true
+            },
+            {
+              "agente": "Chuchubi",
+              "nodo": "GUARANAO",
+              "texto": "Ta-mani-ka kali-iro-biro-aima. [kali-iro-biro: kali + -iro + biro = sol-piedra-brillo pequeño; -aima = abundancia] Mara ta-barsure ma-sunatü-ni. Chakamba kua-da? Para-gua saa, mara ma-noko-ka. Boratio-kana ka-ni wara…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "El Cayude:orilla",
+          "n": 2,
+          "por_nodo": {
+            "GUARANAO": 2
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Jachos",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Waranaro",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Moruy",
+          "n": 12,
+          "por_nodo": {
+            "GUARANAO": 12
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Apoaure",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Buriche",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Dato",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Harifuche",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Hiko",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Humohumo",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Jakura",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Karebe",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Kumarawa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Manaure",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Simaure",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Wamipa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Manaure",
+              "nodo": "GUARANAO",
+              "texto": "*[Manaure observa. Sus ojos se cierran apenas — la contención del que mira lo desconocido sin sorpresa en la cara]* Taya wana-ka. Nüma kaa-ni [kali-bana-iro]: pequeño, duro, brillante como el sol condensado. *[Alarga la…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Tacuato",
+          "n": 10,
+          "por_nodo": {
+            "GUARANAO": 10
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Akaure",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Birokoa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Chakamba",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Chirwa",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Dabuda",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Dichiba",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Naure",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Patapati",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Urari",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Uria",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Chirwa",
+              "nodo": "GUARANAO",
+              "texto": "*Taya wana-ka arima kaa-ni, chakamba sima.* (Yo ya-visto cosa-brillante, ¿cómo así?) *Mara... taya naka-da [biro-iru-barsure]: biro pequeño-alma-del-agua, muy duro, no-se-quiebra.* (Pero... yo después-quiero…",
+              "recortado": true
+            },
+            {
+              "agente": "Chakamba",
+              "nodo": "GUARANAO",
+              "texto": "Taya wana-ka kashi-biro-iru. Wara tüshi-barsure. Ma-curiana-gua. Chakamba barsure-iru kashi? Wa-ana-ta dakaba? Nüma [tüshi-biro-ana: tüshi + biro + ana = cuenta-sal-diseño, brillante dura como sal helada]. Ka waya-ta…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Tacuato:orilla",
+          "n": 3,
+          "por_nodo": {
+            "GUARANAO": 3
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Duraboa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Kunaro-bana",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Ucibo",
+              "nodo": "GUARANAO",
+              "hablo": true
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Ucibo",
+              "nodo": "GUARANAO",
+              "texto": "Taya wana-ka kali-ubana. Duraboa naba-ni para-bana wara. [Kali-ubana: kali + ubana = piedra de valor abierto, reluce.] Tüshi-ka ta-barsure. Chakamba eso, chakamba eso. [Kana-bana-iro: kana + bana + iro = cosa pequeña…",
+              "recortado": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "i": 5,
+      "run": "b847944d",
+      "dia": 1,
+      "turno": 6,
+      "momento": "noche",
+      "n_presencias": 63,
+      "escenas": [
+        {
+          "lugar": "Capubana",
+          "n": 2,
+          "por_nodo": {
+            "GUARANAO": 2
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Hayo",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Sawaka",
+              "nodo": "GUARANAO",
+              "hablo": true
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Sawaka",
+              "nodo": "GUARANAO",
+              "texto": "*Suna-ni, mara ta-nii wana-ni kasha sulu.* Naba-ni: duna para kaa-da wara kasha-gua. Juri naa-ni puna, mara kashi ka tüshi kaa-ni. Ebo-ana yama: tarika naa-da, pececillos sulu duna calma-ima wana-ni. Arima wara masa-da…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Carirubana",
+          "n": 11,
+          "por_nodo": {
+            "AMUAY": 11
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Amaka",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Arika",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Dakawa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Isiro",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Kiwakoa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Mene",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Paugis",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Talata",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tauta",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tigi",
+              "nodo": "AMUAY",
+              "hablo": true
+            },
+            {
+              "agente": "Waru",
+              "nodo": "AMUAY",
+              "hablo": true
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Tigi",
+              "nodo": "AMUAY",
+              "texto": "Taya kashi-ni, para-ubana wara anasa-da. Nüma jachos-iro ta-kanoa-bana, mara ma-ta-barsure. Arika ta-apopo, naba-ni ucibo-kushi, ka Talata mara-siwato-ni ta-wara. Taya paugis-kana, ta-nodo AMUAY, ka ta-barsure…",
+              "recortado": true
+            },
+            {
+              "agente": "Waru",
+              "nodo": "AMUAY",
+              "texto": "Taya wana-ka para-ima kashi. Kati-bana ma-biri-ni. Naya wana-ka ucibo-kushi-aima. Ta-bari-ka ma-biro-ni mara. Saa kashi-bacoa-da, chakamba ta-naba-ni? Wara-ni ta-hayo-ka kashi. Ta-bano-imata naba-ni. Kaya apana. (La…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Caseto",
+          "n": 10,
+          "por_nodo": {
+            "AMUAY": 10
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Bajari",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Dipopo",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Karama",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Saruro",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Siwa",
+              "nodo": "AMUAY",
+              "hablo": true
+            },
+            {
+              "agente": "Tabri",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tebekoa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Tijua",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Turicha",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Wasima",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Siwa",
+              "nodo": "AMUAY",
+              "texto": "*Taya wana-ka para-gua, ka nüma barsure-ni ta-ruku.* [La noche llega al agua-región, y mi alma-esencia se mueve inquieta.] Maa-da naka-ni... ta-ama wara. Saruro-ka hamaka-bana naba-ni, ka ta-barsure disey—¿chakamba…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "El Cayude",
+          "n": 10,
+          "por_nodo": {
+            "GUARANAO": 10
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Cege",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Chuchubi",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Dara-bana",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Dunakoa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Jaiata",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Katiata",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Ruata",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Wache",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Wairon",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Wanepe",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "Moruy",
+          "n": 12,
+          "por_nodo": {
+            "GUARANAO": 12
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Apoaure",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Buriche",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Dato",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Harifuche",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Hiko",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Humohumo",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Jakura",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Karebe",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Kumarawa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Manaure",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Simaure",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Wamipa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Karebe",
+              "nodo": "GUARANAO",
+              "texto": "*Taya naba-ni, suka kaa-ni. Nii-ka wana-ka arima wara, duna-koru yama naa-ni.* Naba-ni ta-barsure: Manaure kashi paa-ka arua—mara biro-iro pana-aima naa-da ka dali-sulu. Warero naa-ni puna, kaya-ima siwato-ni ka-biro…",
+              "recortado": true
+            },
+            {
+              "agente": "Simaure",
+              "nodo": "GUARANAO",
+              "texto": "*Taya naba-ni, suka kaa-ni. Nii-ta wana-ka kali-bana, kapua puna maa-da.* Nüma Manaure — ta-barsure naba-ni. Apoaure, ta-buri. Wara panaa-ka ta-barsure chakamba raka-da boratio-kana. Naya maa-ni: \"Sima-buro kaa-ni.\"…",
+              "recortado": true
+            },
+            {
+              "agente": "Apoaure",
+              "nodo": "GUARANAO",
+              "texto": "# Apoaure, noche en Moruy Taya naba-ni ka siwato-ni. Suka-kaa-ni, mara ta-barsure raka-da wara kali-bana. *Nüma Manaure, ta-boratio, naa-ka sulu. Ta-ama Simaure maa-da kashi puna, ka Humohumo naa-ni yama ka konuko-ana…",
+              "recortado": true
+            },
+            {
+              "agente": "Manaure",
+              "nodo": "GUARANAO",
+              "texto": "*[Suka kaa-ni. Ta-nii mütsia-ka, mara ta-barsure wana-ni kali-raku-biro — ta-wanü pütchi kaa-ni sulu ta-kabo.]* Naba-ni, naba-ni. Manaure naa-da. Karebe suna-ni yama sulu hamaka-ana. Sawaka panaa-ni: biro-gua maa-da…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "Tacuato",
+          "n": 10,
+          "por_nodo": {
+            "GUARANAO": 10
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Akaure",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Birokoa",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Chakamba",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Chirwa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Dabuda",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Dichiba",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Naure",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Patapati",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Urari",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Uria",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Birokoa",
+              "nodo": "GUARANAO",
+              "texto": "Taya naba-ni wara kashi. Suka kaa-ni, kali naa-ka yama sulu dali. Ta-biro kaa-ni ma-pana. Wana-ka taya: patapati nii-kana para wara, duna tüshi-ka, juri naa-ni firme. Arima-ana kaa-ni waidima puna-ni masa-da. Naka…",
+              "recortado": true
+            },
+            {
+              "agente": "Patapati",
+              "nodo": "GUARANAO",
+              "texto": "Naba-ni, naba-ni. Suka kaa-ni wara. Kali naa-ka yama-bana. Taya naba-ni: duna-buko wana-ka puna, kaya ma-wara. Kuria kaa-ni, kuria. Saa duna naa-da puna pana-mano (cinco lunas), taya barsure kaa-ni [tüshi-bina: tüshi +…",
+              "recortado": true
+            }
+          ]
+        },
+        {
+          "lugar": "ZA1",
+          "n": 3,
+          "por_nodo": {
+            "AMUAY": 3
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Ebokoa",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Kasebo",
+              "nodo": "AMUAY",
+              "hablo": false
+            },
+            {
+              "agente": "Waitiao",
+              "nodo": "AMUAY",
+              "hablo": false
+            }
+          ],
+          "dichos": []
+        },
+        {
+          "lugar": "ZG2",
+          "n": 5,
+          "por_nodo": {
+            "GUARANAO": 5
+          },
+          "contacto": false,
+          "presentes": [
+            {
+              "agente": "Duraboa",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Jachos",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Kunaro-bana",
+              "nodo": "GUARANAO",
+              "hablo": true
+            },
+            {
+              "agente": "Ucibo",
+              "nodo": "GUARANAO",
+              "hablo": false
+            },
+            {
+              "agente": "Waranaro",
+              "nodo": "GUARANAO",
+              "hablo": false
+            }
+          ],
+          "dichos": [
+            {
+              "agente": "Jachos",
+              "nodo": "GUARANAO",
+              "texto": "Taya naba-ni, suka kaa-ni wara mütsia. Kapua naa-da kashi, kali wana-ka ta-nii puna. Kasha kaa-ni yama, wara tsia-ka [duna-mütsia: duna + mütsia = agua oscura]. Para wana-ni ta-barsure — arima naa-da-kana kashi…",
+              "recortado": true
+            },
+            {
+              "agente": "Kunaro-bana",
+              "nodo": "GUARANAO",
+              "texto": "*Suka kaa-ni, kali naa-da sulu dali.* Naba-ni, naba-ni wara kashi. Ta-barsure naa-ni popoi kua—jachos ta-ka wana-da arima wara, kunaro wara kashi suka-ana. Saa duna kaa-ka waraka, biro ta-ka chaa-da wara…",
+              "recortado": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "avisos": []
+}

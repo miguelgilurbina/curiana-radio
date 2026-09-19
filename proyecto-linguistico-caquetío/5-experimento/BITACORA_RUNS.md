@@ -75,6 +75,40 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 > conservan como la medición que la encontró, no como los días 1 y 2 de la
 > serie.
 
+#### La cadena que cuenta — `b847944d → 17c2271e → 9a98de67` (con la puerta de plantilla puesta)
+
+| Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |
+|---|---|---|---|---|---|---|
+| 09-18 | `b847944d` | 6 / 1 | **63** | 7.3 | 100% | **Día 1 de la serie C limpia** (motor `5177c7d`, semilla 21, `--escena --capubana-cada 3 --reflexion`, estado en disco borrado). 72 respuestas, 61 agentes, score 7,33; `lugar` 72/72 en 21 lugares; 378 presencias. **La puerta trabaja y se ve**: «⚠ 1 acuñaciones rechazadas por estar en el prompt: `pana-x`», y ninguna forma de plantilla queda registrada (comprobado contra `kali-bana`, `naa-ni`, `wana-ni`, `warawara`, `ma-arua`, `wa-duna`, `cati`). Koiné: acumulada 0,7971 · ventana 0,6571 · emergente 0,9479. 28 acuñaciones, 8 adoptadas, **0 en dos ámbitos** — la línea de base honesta. La competencia de «las cuentas» abre apretada y sin ejemplos del prompt: `barsure-ubana` 3,0 · `kana-bana-iro` 2,1 · `kali-raku-biro` 2,0. El mundo: sal 57 de 72, cerro 39, cuentas 15 |
+| 09-18 | `17c2271e` | 6 / 1 | **63** | 7.7 | 100% | **Día 2** (`--continuar --semilla 22`). Hereda 15 variantes vivas de las cuentas y abre la del cometa. 72 respuestas, 60 agentes, score 7,66 (el más alto hasta aquí); `lugar` 72/72 en 22 lugares. Koiné: acumulada 0,651 · ventana 0,5087 · emergente 0,9256. **Y la competencia se reparte por nodo, que es la pregunta de la era**: `barsure-ubana` (6,1) sólo en GUARANAO, `kashi-bacoa` (4,2) sólo en AMUAY, `kali-raku-biro` (3,0) GUARANAO — ninguna cruzó todavía, cada nodo va nombrando la misma cosa a su manera. Cometa en disputa: `kali-naa-iro` 3,0 · `kati-sabua` 2,4 · `ilu-saruro-wara` 1,7 |
+| 09-18 | `9a98de67` | 6 / 1 | **63** | 7.8 | 100% | **Día 3 — el día de Capubana, y el resultado de la era 2** (`--continuar --semilla 23`). Los 63 en un solo lugar los seis momentos; 72 respuestas, 59 agentes, score 7,81 (el más alto de toda la era). **Veredicto de la cadena: CONVERGE ✓ (koineización sostenida)** sobre la lectura más exigente, la emergente: 0,9479 → 0,9256 → **0,8629** (acumulada 0,7971 → 0,651 → 0,5524; ventana 0,6571 → 0,5087 → 0,4393). **Y las dos palabras rivales cruzaron el día del cerro, ni un turno antes**: `barsure-ubana` nació en El Cayude (GUARANAO) el día 1 y no salió de su nodo hasta `d3t1` — 8 turnos —, cuando pasa a decirse 7 veces en GUARANAO y **5 en AMUAY**; `kashi-bacoa` nació en Carirubana (AMUAY) y hace lo mismo al revés, 4 en AMUAY y **5 en GUARANAO**. Las dos «pasaron por un lugar compartido: Capubana». Su soporte se dispara (18,6 y 13,0) y la disputa sigue abierta: el cerro las juntó, no las resolvió. **Primera entrada de koiné fijada por competencia en toda la era**: `kali-mara-bana` «el sol que se quiebra en la altura», para el eclipse del día 3, de 2 variantes. 6 formas adoptadas en dos ámbitos (día 1: 0), cinco de ellas con el Capubana de un lado. Sobre la cadena entera: 1.134 presencias, 188 escenas, 91 con voz, **76 % de las intervenciones con compañía**, 216 de 216 ubicadas, 12 turnos con los dos nodos en un mismo lugar (Capubana y el camino), 245 de 406 formas muertas donde nacieron, **0 cruces en el mismo turno** en los tres días, y la mediana de turnos hasta salir del lugar sube de 1 a **4** |
+
+**Lo que piensa el Director del día de Capubana** (`9a98de67`, escrito por el motor):
+
+> Hoy llegó gente desde el agua. Eso cambió lo que se hablaba: pasamos de
+> mirar las costras duras del cerro Capubana a escuchar qué traen esos
+> hombres de Aruba, y la tensión bajó porque hay otra cosa que nombrar además
+> del hambre y el brillo que no entienden. La palabra que prendió fue
+> *kali-mara-bana* —el sol que se quiebra en la altura—, pero la dijeron
+> cinco bocas distintas en poco tiempo, como si todos estuvieran buscando el
+> mismo nombre para algo que el cardonal no tiene. Hayo y Patapati la
+> nombraron primero, y después Jachos, Apoaure y Paugis repitieron la forma,
+> aunque no sé si es que vieron lo mismo o si es que **cuando alguien nombra
+> bien, la lengua sigue la costumbre del que habló antes**. Lo que queda
+> abierto es qué dirán esos visitantes y si su palabra cierra algo sobre el
+> *kashi-biro* o si abre un agujero más en lo que la gente cree que sabe de
+> esta tierra.
+
+Lectura del escriba: el Director formula solo, sin que nadie se lo pida, la
+pregunta de la era —¿convergieron porque vieron lo mismo o porque se copian
+entre sí?—, y el dato de abajo la responde para el caso que importa: las dos
+formas rivales llevaban dos días sin salir de su nodo y cruzaron el día en
+que la gente se juntó. No fue el referente: fue el encuentro.
+
+---
+
+#### Los dos días del otro lado del corte
+
 | Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |
 |---|---|---|---|---|---|---|
 | 09-18 | `b7bc51dc` | 6 / 1 | **63** | 7.4 | 100% | **Día 1 de la serie C, brazo CON escena** (motor `5770de6`, semilla 21, `--escena --capubana-cada 3 --reflexion`; 11 min, 0 avisos). 72 respuestas, 61 agentes, **0 residuos** de la era 1; score 7,43 (tier 1: 7,11 · tier 2: 7,48 · tier 3: 8,26). **La escena existe en la base**: 378 presencias (63 × 6), 28 lugares; 91 escenas en el día, 40 con alguna voz, 18 con dos o más; 50 de 72 intervenciones (69 %) hablaron con compañía en su lugar. Un solo lugar compartido entre nodos, el camino Moruy–Caseto (Humohumo y Bajari), con los dos nodos a la vez en 3 turnos. **La predicción del diseño se cumple en lo inmediato**: cruces de forma «en el mismo turno» **3 → 0**; Δturnos hasta salir del lugar mediana 1 → **2**; de 231 formas emergentes, 72 salieron de su lugar, **149 murieron en él** y 29 nacieron en varios a la vez (el evento de nombramiento sigue yendo a los 12 del turno: capa 3). Koiné: acumulada 0,7809, ventana 0,6269, **emergente 0,9608** (serie B día 1: 0,906 — lo nuevo converge menos, que es lo que un ámbito por lugar debe hacer). Acuñaciones: **39 propuestas, sólo 6 adoptadas** (serie B: 18/12): la adopción ahora es por ámbito. La competencia por las cuentas **no se fija el día 1** (en disputa: `kali-uco-aima` 3,6 · `ucibo-kali-duruco` 3,5 · `kali-boro` 2,8); y la primera forma **adoptada en DOS ámbitos**: `kali-bana` «la cumbre del sol», nacida en Moruy (GUARANAO) y adoptada también en Carirubana:taller_canoas (AMUAY), Δ4 turnos — ¿viajó o se re-acuñó? (agente midiendo). Préstamos: 2, ya con la forma de la esfera y la dicha aparte (`maisi` ← «maíz», `aji`). El mundo: sal 47 de 72, viento 38, cerro 37, venado 2. GUARANAO habló el 71 % (censo 62 %). Reflexión del Director sin residuos, citada abajo. Mapa exportado (`content/simulador/escena/b7bc51dc.json`): por primera vez con gente. **Deudas del día**: `agent_responses.lugar` quedó vacío (0 de 72: el orquestador no pasa `lugar` a `save_agent_response`; `presencias` lo cubre); el exportador lee la tabla propuesta y no `escena_era2.yaml`, así que el camino Moruy–Caseto sale sin coordenada; y la página del mapa tiene que poder elegir el run |
