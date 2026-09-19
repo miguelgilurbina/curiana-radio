@@ -66,11 +66,19 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 > serie: #157 (ESTAR), #155 (presencias), #159 (OÍR + control), #156
 > (prestigio por alias), #154 (`{tu agua}`), #163 (la etiqueta manda),
 > #158 (el mapa). «Lanza cuando lo tengas listo» (Miguel, 2026-09-18).
+>
+> ⚠️ **La cadena de abajo (`76ecf45c → 96b22194`) queda del OTRO lado del corte
+> de serie del punto 8** («dale pues con A», 2026-09-18): en esos dos días el
+> ejemplo del prompt todavía podía registrarse como acuñación, y de hecho
+> `kali-bana` lideraba «las cuentas» 15,8 contra 3,1 el día 2. **La serie C se
+> re-corre entera desde el día 1** con la puerta puesta; estos dos días se
+> conservan como la medición que la encontró, no como los días 1 y 2 de la
+> serie.
 
 | Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |
 |---|---|---|---|---|---|---|
 | 09-18 | `b7bc51dc` | 6 / 1 | **63** | 7.4 | 100% | **Día 1 de la serie C, brazo CON escena** (motor `5770de6`, semilla 21, `--escena --capubana-cada 3 --reflexion`; 11 min, 0 avisos). 72 respuestas, 61 agentes, **0 residuos** de la era 1; score 7,43 (tier 1: 7,11 · tier 2: 7,48 · tier 3: 8,26). **La escena existe en la base**: 378 presencias (63 × 6), 28 lugares; 91 escenas en el día, 40 con alguna voz, 18 con dos o más; 50 de 72 intervenciones (69 %) hablaron con compañía en su lugar. Un solo lugar compartido entre nodos, el camino Moruy–Caseto (Humohumo y Bajari), con los dos nodos a la vez en 3 turnos. **La predicción del diseño se cumple en lo inmediato**: cruces de forma «en el mismo turno» **3 → 0**; Δturnos hasta salir del lugar mediana 1 → **2**; de 231 formas emergentes, 72 salieron de su lugar, **149 murieron en él** y 29 nacieron en varios a la vez (el evento de nombramiento sigue yendo a los 12 del turno: capa 3). Koiné: acumulada 0,7809, ventana 0,6269, **emergente 0,9608** (serie B día 1: 0,906 — lo nuevo converge menos, que es lo que un ámbito por lugar debe hacer). Acuñaciones: **39 propuestas, sólo 6 adoptadas** (serie B: 18/12): la adopción ahora es por ámbito. La competencia por las cuentas **no se fija el día 1** (en disputa: `kali-uco-aima` 3,6 · `ucibo-kali-duruco` 3,5 · `kali-boro` 2,8); y la primera forma **adoptada en DOS ámbitos**: `kali-bana` «la cumbre del sol», nacida en Moruy (GUARANAO) y adoptada también en Carirubana:taller_canoas (AMUAY), Δ4 turnos — ¿viajó o se re-acuñó? (agente midiendo). Préstamos: 2, ya con la forma de la esfera y la dicha aparte (`maisi` ← «maíz», `aji`). El mundo: sal 47 de 72, viento 38, cerro 37, venado 2. GUARANAO habló el 71 % (censo 62 %). Reflexión del Director sin residuos, citada abajo. Mapa exportado (`content/simulador/escena/b7bc51dc.json`): por primera vez con gente. **Deudas del día**: `agent_responses.lugar` quedó vacío (0 de 72: el orquestador no pasa `lugar` a `save_agent_response`; `presencias` lo cubre); el exportador lee la tabla propuesta y no `escena_era2.yaml`, así que el camino Moruy–Caseto sale sin coordenada; y la página del mapa tiene que poder elegir el run |
-| 09-18 | `76ecf45c` | 6 / 1 | **63** | 7.5 | 100% | **Día 1 de la serie C, REPETIDO con el motor arreglado — el que cuenta** (motor `55c0299`, semilla 21, mismos flags; `b7bc51dc` queda como prueba de la escena). Entraron entre uno y otro: la competencia que sobrevive la noche y el Capubana que junta ámbitos (#167), el lugar en cada respuesta y el mapa con la tabla decidida (#166). 72 respuestas, 61 agentes, score 7,49; **`agent_responses.lugar` 72 de 72**, 21 lugares, 0 discrepancias con `presencias`. La escena, igual de poblada: 378 presencias en 28 lugares, 91 escenas, 40 con voz, 18 con dos o más, 69 % de las intervenciones con compañía; el único lugar de contacto vuelve a ser el camino Moruy–Caseto, 3 turnos con los dos nodos. Formas emergentes 218: **150 murieron en su lugar**, 55 salieron (mediana 1 turno), 29 nacieron en varios a la vez, **0 cruces en el mismo turno**; 14 pasaron por un lugar compartido (antes 8). Koiné: acumulada 0,787 · ventana 0,649 · **emergente 0,9485**. Acuñaciones 30, adoptadas 5, y **dos formas adoptadas en dos ámbitos**: `siwato-ni` «estoy desganado» (Tacuato + Tacuato:matorral — dos ámbitos del mismo sitio, o sea el contacto que la escena sí permite) y `kali-bana` otra vez (El Cayude + ZG2). ⚠️ **`kali-bana` ya no sólo se registra: compite.** El ejemplo de la plantilla entró como rival de «las cuentas» (`brilu-uco` 2,9 · `kali-bana` 2,8 · `kali-iro-bana` 2,0), así que el falso neologismo de plantilla ahora contamina la métrica de koiné, no sólo el conteo — la decisión de `6-fusion/issues-pendientes/formas-de-plantilla-en-la-registracion-2026-09-18.md` deja de ser cosmética. La competencia **queda abierta y persistida** en `curiana_koine.json` (por primera vez): el día 2 la hereda. Préstamos: 0. El mundo: sal 42 de 72, cerro 37, viento 33, venado 1. Un único «residuo» y es legítimo: Ebokoa dice «Tacuato-ana… Curiana-ana» nombrando tierras lejanas, y `curiana` es topónimo del canon al otro lado del golfo |
+| 09-18 | `76ecf45c` | 6 / 1 | **63** | 7.5 | 100% | **Día 1 de la serie C, REPETIDO con el motor arreglado — el que cuenta** (motor `55c0299`, semilla 21, mismos flags; `b7bc51dc` queda como prueba de la escena). Entraron entre uno y otro: la competencia que sobrevive la noche y el Capubana que junta ámbitos (#167), el lugar en cada respuesta y el mapa con la tabla decidida (#166). 72 respuestas, 61 agentes, score 7,49; **`agent_responses.lugar` 72 de 72**, 21 lugares, 0 discrepancias con `presencias`. La escena, igual de poblada: 378 presencias en 28 lugares, 91 escenas, 40 con voz, 18 con dos o más, 69 % de las intervenciones con compañía; el único lugar de contacto vuelve a ser el camino Moruy–Caseto, 3 turnos con los dos nodos. Formas emergentes 218: **150 murieron en su lugar**, 55 salieron (mediana 1 turno), 29 nacieron en varios a la vez, **0 cruces en el mismo turno**; 14 pasaron por un lugar compartido (antes 8). Koiné: acumulada 0,787 · ventana 0,649 · **emergente 0,9485**. Acuñaciones 30, adoptadas 5, y **dos formas adoptadas en dos ámbitos**: `siwato-ni` «estoy desganado» (Tacuato + Tacuato:matorral — dos ámbitos del mismo sitio, o sea el contacto que la escena sí permite) y `kali-bana` otra vez (El Cayude + ZG2). ⚠️ **`kali-bana` ya no sólo se registra: compite.** El ejemplo de la plantilla entró como rival de «las cuentas» (`brilu-uco` 2,9 · `kali-bana` 2,8 · `kali-iro-bana` 2,0), así que el falso neologismo de plantilla ahora contamina la métrica de koiné, no sólo el conteo — la decisión de `6-fusion/issues-pendientes/publicados/formas-de-plantilla-en-la-registracion-2026-09-18.md` deja de ser cosmética (y se tomó al día siguiente: punto 8 del cambio de instrumento). La competencia **queda abierta y persistida** en `curiana_koine.json` (por primera vez): el día 2 la hereda. Préstamos: 0. El mundo: sal 42 de 72, cerro 37, viento 33, venado 1. Un único «residuo» y es legítimo: Ebokoa dice «Tacuato-ana… Curiana-ana» nombrando tierras lejanas, y `curiana` es topónimo del canon al otro lado del golfo |
 
 | 09-18 | `96b22194` | 6 / 1 | **63** | 7.4 | 100% | **Día 2 de la serie C** (`--continuar --semilla 22`, mismos flags). **El arreglo de la competencia funciona**: la cabecera dice «competencias heredadas, aún en disputa: cuentas_vidrio (9 variantes)» — por primera vez una disputa cruza la noche. Y el día 2 recibe su referente propio (el cometa), como manda `referentes_introducidos`. 72 respuestas, 60 agentes, score 7,42, `lugar` en 72 de 72 (22 lugares), 378 presencias. Koiné: acumulada 0,787 → **0,648**, ventana 0,649 → **0,517**, emergente 0,9485 → **0,903**; el veredicto de la cadena dice «NO converge» porque exige >5 % de caída y la emergente cayó 4,8 % — con dos días es «todavía no», no un resultado. Tres formas adoptadas en dos ámbitos, y la tercera es la primera que cruza de verdad entre nodos: `naa-ni` «estoy yendo» (Capubana + Caseto). ⚠️ **Y el hallazgo que para la cadena: `kali-bana` va ganando la competencia de «las cuentas» 15,8 contra 3,1 y 2,9** — es el ejemplo literal de la plantilla que los 63 leen en su system prompt cada turno. Medido: día 1, 2 usos de 2 agentes; **día 2, 12 usos de 11 agentes**, en 10 lugares y en los DOS nodos, mientras las rivales de verdad se apagan (`brilu-uco` 0 usos el día 2, `kali-iro-bana` 1, las tres del día 1 a 0). Un aviso más de la cadena: 3 de 63 agentes heredan idiolecto sin formas-semilla (vienen de un run anterior al 09-16). **El día 3 NO se lanzó**: es el de Capubana, donde todos ven todo, y habría fijado `kali-bana` como la palabra de la koiné para las cuentas — el titular de la serie habría sido un artefacto del prompt. La cadena `76ecf45c → 96b22194` queda cerrada en dos días |
 
@@ -171,9 +179,10 @@ abierta abajo.
 
 ### Era 2 · serie A — pruebas del motor (2026-09-14 → 16)
 
-> ⚠️ **Cambio de instrumento (2026-09-16), declarado.** Dos cosas cambiaron en
-> `score_linguistico()` DESPUÉS de los runs de abajo, así que los del 09-14 no
-> son estrictamente comparables con los que vengan:
+> ⚠️ **Cambio de instrumento (2026-09-16 → 09-18), declarado.** Ocho cambios,
+> en el orden en que se decidieron. Los dos primeros son de
+> `score_linguistico()` y pasaron DESPUÉS de los runs de abajo, así que los del
+> 09-14 no son estrictamente comparables con los que vengan:
 > 1. **El filtro de nombres se arregló.** El del 09-14 comparaba en minúsculas
 >    y descartaba del conteo **52 voces del canon** homógrafas de un nombre del
 >    elenco (`buko`, `hayo`, `mene`, `saruro`, `jachos`, `karebe`…), todas
@@ -296,8 +305,8 @@ abierta abajo.
 >      V1/V2/V3 traen **exactamente lo mismo** que el mismo run sin escena, y el
 >      día 4 vuelve el filtro por lugar.
 >
->    **Lo que NO se aplicó, y por qué**: el día 1 registró dos «acuñaciones»
->    que no lo son —`kali-bana`, que es el ejemplo literal de
+>    **Lo que NO se aplicó ese día, y por qué**: el día 1 registró dos
+>    «acuñaciones» que no lo son —`kali-bana`, que es el ejemplo literal de
 >    `_IDENTIDAD_LINGUISTICA` y va en el system prompt de los 63 todos los
 >    turnos, y `warawara`, que está en `VOCABULARIO_BASE`— y `kali-bana` salió
 >    además como «adoptada en dos ámbitos». Rechazarlas en
@@ -308,11 +317,68 @@ abierta abajo.
 >    `score` cambia en **4** —Buriche d1t4 8,7 → 8,5, Chuchubi d1t5 8,0 → 7,6,
 >    Karebe d1t6 5,4 → 5,3, Apoaure d1t6 5,5 → 5,4— porque `kali-bana` se
 >    oficializa durante el día y una forma adoptada entra en `palabras_activas`,
->    que es justo lo que el scorer reconoce. El scorer no se toca: queda como
->    propuesta medida en `6-fusion/medicion_formas_de_plantilla_2026-09-18.yaml`
->    y `6-fusion/issues-pendientes/formas-de-plantilla-en-la-registracion-2026-09-18.md`.
+>    que es justo lo que el scorer reconoce. Quedó medido en
+>    `6-fusion/medicion_formas_de_plantilla_2026-09-18.yaml`, para que decidiera
+>    Miguel — **y lo decidió al día siguiente: es el punto 8**.
 >
-> Ninguna de las siete toca `capas_de_score`.
+> 8. **Lo que la plantilla ENSEÑA deja de poder registrarse como acuñación**
+>    («Dale pues con A», decisión de Miguel del 2026-09-18, opción A del issue
+>    `6-fusion/issues-pendientes/publicados/formas-de-plantilla-en-la-registracion-2026-09-18.md`,
+>    entrada `formas_de_plantilla` de `6-fusion/decisiones_tanda_2026-09-17.yaml`).
+>    Es **el único de
+>    los ocho que mueve `score`**, y por eso se declara como corte: no se aplica
+>    porque no mueva nada, se aplica porque el corte está declarado.
+>
+>    - **Qué cambia.** Una forma que está en `VOCABULARIO_BASE` o que es un
+>      ejemplo de una plantilla del prompt **no se registra** como neologismo:
+>      no entra en competencia (`CompetenciaLexica.proponer`), no puede
+>      adoptarse, no pasa a `palabras_activas()` y no sale en el diccionario de
+>      cierre. El rechazo **se cuenta y se dice** al cerrar el run («N
+>      acuñaciones rechazadas por estar en el prompt: …»), no se silencia.
+>    - **Una puerta y no dos.** La lista se construye desde las propias
+>      plantillas —nunca a mano— y vive en `curiana_lexicon.FORMAS_DE_PLANTILLA`,
+>      que importan el orquestador (`_FORMAS_EXCLUIDAS` es ella misma) y
+>      `analizar_nodos.formas_excluidas()`. Antes eran dos cosas: la del
+>      análisis existía y la del registro no, así que `kali-bana` se descontaba
+>      de la métrica emergente **y a la vez** se registraba, se adoptaba y
+>      competía. Mira además el **refuerzo** y el **rescate**, que también
+>      enseñan formas y quedaban fuera: la puerta pasa de 5.898 a **5.945**
+>      formas y entran `ma-arua`, `wa-duna`, `wana-ni` y `cati`. No mira los
+>      bloques que le devuelven al agente lo que la comunidad dijo (V1, V2, V3,
+>      `[Lo que se dijo aquí]`, `[Tu manera de hablar]`) — ésos son el mecanismo
+>      que se mide — ni los que no enseñan ninguna forma (`[Tu tierra]`: 293
+>      formas, 0 caquetías fuera de la puerta).
+>    - **Medido sobre las 144 respuestas de los dos días** (`76ecf45c` y
+>      `96b22194`, encadenados como los corrió `--continuar`;
+>      `6-fusion/medicion_formas_de_plantilla_corte_2026-09-18.yaml`). Control:
+>      el replay SIN la puerta reproduce la base en **144 de 144** y reproduce
+>      la competencia que anotó esta bitácora (`kali-bana` 15,85 ·
+>      `kali-iro-bana` 3,1 · `brilu-uco` 2,9). Con la puerta:
+>      `neologisms_proposed` cambia en **0**, **`score` en 8 de 144** (|Δ| máx
+>      0,30), `palabras_caquetias` en 14. Rechaza **2**: `kali-bana` (Chirwa,
+>      d1t5) y `naa-ni` (Apoaure, d2t6), que es el ejemplo del bloque de
+>      morfología. Neologismos 66 → 64, adoptados 11 → 9, y **adoptadas en dos
+>      ámbitos `['siwato-ni', 'kali-bana', 'naa-ni']` → `['siwato-ni']`**: dos
+>      de las tres eran copia del prompt, incluida la que el día 2 se celebró
+>      como «la primera que cruza de verdad entre nodos». Sin `kali-bana`, «las
+>      cuentas» las lidera **`kali-iro-bana` (3,1)** sobre `brilu-uco` (2,9) y
+>      `kara-ucibo` (2,4), y ninguna se acerca al umbral del 55 %. Y el
+>      diccionario emergente pierde su cabeza: **`wana-ni` (50,0)**, que es la
+>      línea que el refuerzo escribe.
+>    - **El scorer no se tocó.** `score_linguistico()`, `pct_*` y
+>      `capas_de_score` son los mismos, y `extraer_neologismos_del_texto()`
+>      tampoco cambia (por eso `neologisms_proposed` no se mueve). `score` se
+>      mueve porque una forma adoptada entra en `palabras_activas()` y
+>      rechazarla se la quita a `palabras_caquetias` en las respuestas
+>      posteriores que la dicen. `curiana_observer` tampoco se tocó: la puerta
+>      está dentro de `registrar_neologismo`, que es a quien él llama.
+>
+>    **Desde qué run aplica**: desde el próximo. **La serie C se re-corre entera
+>    desde el día 1**; `76ecf45c` y `96b22194` quedan como los dos días con el
+>    prompt contaminando la competencia, no como los días 1 y 2 de la serie. Los
+>    runs ya corridos no se reescriben.
+>
+> Ninguno de los ocho toca `capas_de_score`.
 
 > ⚠️ **Dos artefactos del instrumento descubiertos al cerrar el día 3
 > (análisis por nodo, `analizar_nodos.py`, 2026-09-16), que afectan a los

@@ -55,7 +55,10 @@ def constante_del_orquestador(nombre: str):
 
 
 def identidad_linguistica() -> str:
-    return constante_del_orquestador("_IDENTIDAD_LINGUISTICA")
+    # Vive en `curiana_lexicon` desde el corte de serie del 2026-09-18 (el
+    # orquestador la re-exporta). Importar el lexicón no arrastra dotenv.
+    from curiana_lexicon import IDENTIDAD_LINGUISTICA
+    return IDENTIDAD_LINGUISTICA
 
 
 # ══════════════════════════════════════════════════════════════════════

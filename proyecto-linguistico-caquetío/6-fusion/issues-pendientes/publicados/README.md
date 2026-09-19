@@ -32,6 +32,7 @@ revisión encima (el de D9 lleva tres, con dos autocorrecciones).
 | `casting-era2.md` | issue **#127** (`decision`, `motor`), **abierta**: el casting de la era 2; siete de sus diez preguntas decididas el mismo día (comentario en la issue), quedan P2, P3 y P7 | 2026-09-14 |
 | `antroponimos-era2.md` | issue **#129** (`decision`, `fidelidad`), **abierta**: la campaña de antropónimos, el sistema de nombres y el mapa viejo → nuevo; ocho preguntas con recomendación | 2026-09-14 |
 | `fallo-miguel-nivel-C-medina.md` | **no se publicó: se aplicó** al corpus el 2026-09-12 (32 hechos, `fusionar_nivel_c_medina.py`). Queda como registro del fallo en cuatro tandas | 2026-09-12 |
+| `formas-de-plantilla-en-la-registracion-2026-09-18.md` | **no se publicó: se aplicó** al motor el 2026-09-18 con la **opción A** («Dale pues con A», Miguel), como corte de serie declarado (punto 8 del «Cambio de instrumento» de `BITACORA_RUNS.md`). Queda abierta su §4: ¿debe la adopción exigir que el adoptante pudiera VER la propuesta? | 2026-09-18 |
 
 Nada de esto está fusionado al canon: son argumentos publicados esperando
 decisión humana.

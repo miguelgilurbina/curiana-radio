@@ -125,18 +125,16 @@ def constante_del_orquestador(nombre: str):
 
 
 def formas_excluidas():
-    """`_FORMAS_EXCLUIDAS` del orquestador, reconstruida pieza a pieza.
+    """La puerta que el propio motor declara como «lo que las plantillas
+    ENSEÑAN»: vocabulario base + identidad lingüística + las plantillas de
+    reglas, refuerzo y rescate. Una forma de aquí NO es koiné: es copia del
+    prompt.
 
-    Es el conjunto que el propio motor declara como «lo que las plantillas
-    ENSEÑAN»: vocabulario base + identidad lingüística + las dos plantillas de
-    reglas. Una forma de aquí NO es koiné: es copia del prompt."""
-    from curiana_lexicon import (VOCABULARIO_BASE, formas_en_texto,
-                                 prompt_reglas_completo, prompt_reglas_breve)
-    ident = constante_del_orquestador("_IDENTIDAD_LINGUISTICA")
-    return (frozenset(VOCABULARIO_BASE)
-            | formas_en_texto(ident)
-            | formas_en_texto(prompt_reglas_completo())
-            | formas_en_texto(prompt_reglas_breve())), ident
+    Desde el corte de serie del 2026-09-18 es UNA sola lista y vive en
+    `curiana_lexicon` (`FORMAS_DE_PLANTILLA`), que además es con la que el
+    motor RECHAZA en la registración: se importa en vez de reconstruirse."""
+    from curiana_lexicon import FORMAS_DE_PLANTILLA, IDENTIDAD_LINGUISTICA
+    return frozenset(FORMAS_DE_PLANTILLA), IDENTIDAD_LINGUISTICA
 
 
 def transparencia(forma: str, componentes: str) -> dict:
@@ -146,9 +144,9 @@ def transparencia(forma: str, componentes: str) -> dict:
     el muestreador puede enseñar, o (b) un afijo que la identidad lingüística
     o las reglas nombran. Si lo es, verla en dos lugares a la vez no prueba
     que haya viajado: prueba que los dos lugares tienen los mismos ladrillos."""
-    from curiana_lexicon import VOCABULARIO_BASE, prompt_reglas_completo
-    ident = constante_del_orquestador("_IDENTIDAD_LINGUISTICA")
-    ensenado = (ident + "\n" + prompt_reglas_completo()).lower()
+    from curiana_lexicon import (IDENTIDAD_LINGUISTICA, VOCABULARIO_BASE,
+                                 prompt_reglas_completo)
+    ensenado = (IDENTIDAD_LINGUISTICA + "\n" + prompt_reglas_completo()).lower()
     piezas = [p.strip().strip("-").lower()
               for p in re.split(r"[+\s]+", componentes or "") if p.strip(" +-")]
     if not piezas:
