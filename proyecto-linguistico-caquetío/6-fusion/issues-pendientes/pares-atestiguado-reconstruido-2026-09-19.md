@@ -8,12 +8,34 @@ Miguel, 2026-09-18, de oído:
 base y del prompt. Al redactarlo **no se tocó nada**: ni `curiana_lexicon.py`,
 ni el motor, ni las plantillas (regla 5).
 
-> **Estado (2026-09-19):** de las decisiones que pide este issue sólo **§7(a)
-> está decidida y aplicada** (Miguel: «Vale» → el ejemplo de
-> `IDENTIDAD_LINGUISTICA` pasa a `biro-bana`; corte de serie declarado, punto
-> 9 de `BITACORA_RUNS.md`). **Los 19 pares de §6 y la pregunta §7(b) siguen
-> abiertos**, y ninguna entrada del lexicón se ha editado: `biro` y `-bana` ya
-> estaban atestiguadas, sólo se usan.
+> **Estado (2026-09-19, segunda actualización del día):**
+>
+> - **§7(a) DECIDIDA Y APLICADA** (Miguel: «Vale» → el ejemplo de
+>   `IDENTIDAD_LINGUISTICA` pasa a `biro-bana`; punto 9 de `BITACORA_RUNS.md`).
+> - **§6 RESUELTO POR POLÍTICA, no par a par.** Miguel: «Sí o sí tenemos que
+>   usar los atestiguados por sobre los reconstruidos, por lo menos la parte
+>   caquetía». Decisión `d19.b` en `6-fusion/decisiones_tanda_2026-09-19.yaml`,
+>   corte de serie en el punto 10 de `BITACORA_RUNS.md`, medición en
+>   `6-fusion/medicion_politica_atestiguado_manda_2026-09-19.yaml`. Reparto de
+>   los 19: **7 aplicados · 1 pregunta abierta · 11 curación**.
+>   - **A, aplicados** (manda la atestiguada, la derivada se archiva en
+>     `FUERA_DEL_HABLA` con su capa y su procedencia intactas): **1** sol
+>     `kasi` > `kali` · **3** ofrecer `were` > `paa` · **4** escuchar `jai` >
+>     `kira` · **12** luna `kati` > `kasha` · **13** mar `para` > `habo` ·
+>     **16** viento `juri` > `joutai` · **18** espanto `etamo` > `mülia`.
+>   - **ABIERTO, y es de Miguel**: **6** cerro (`turumako` / `sima`). La
+>     política lo alcanza; no se aplicó porque es la pregunta de §6.6 («¿`sima`
+>     sobra?») y su coste está medido — ver la nota al pie de esa fila.
+>   - **NO SON PARES, propuestos y no tocados** (la política no los cubre):
+>     **2, 5, 7, 8, 9, 10, 11, 14, 15, 17, 19** →
+>     `6-fusion/curacion_glosas_pares_2026-09-19.yaml`.
+> - **§7(b) SIGUE ABIERTA** (si el muestreador prefiere la atestiguada cuando
+>   hay par). Después de la política la pregunta cambia de sentido: donde había
+>   par con rival atestiguado ya no hay dos formas que sortear.
+>
+> El reparto no coincide con el que este issue proponía («6 rivales, 13 bugs»)
+> porque la decisión movió dos casillas: el par 4 y el 18 pasaron a rivalidad
+> aplicada y el 6 salió de los rivales para quedarse como pregunta abierta.
 
 | archivo | qué tiene |
 |---|---|
@@ -217,27 +239,48 @@ curación, no canon).*
 > equivocada, una glosa demasiado ancha, una deuda ya declarada— que el
 > criterio laxo saca a la luz. Eso también es un resultado.
 
-| # | glosa | atestiguada | derivada | uso base | serie C | recomiendo |
-|---:|---|---|---|---:|---:|---|
-| 1 | **sol** | `kasi` | `kali` (recon) | 10 : 2321 | 4 : 102 | **A** |
-| 2 | crear | `eroa` | `chaa` (recon) | 97 : 1256 | 5 : 30 | B |
-| 3 | **ofrecer** | `were` | `paa` (recon) | 17 : 1222 | 2 : 37 | B |
-| 4 | escuchar | `jai` | `kira` (recon) | 167 : 831 | 12 : 32 | B |
-| 5 | pez | `bagre` | `arima` (recon) | 0 : 643 | 0 : 45 | C |
-| 6 | **cerro** | `turumako` | `sima` (recon) | 1 : 510 | 1 : 13 | C |
-| 7 | hijo | `dare` | `buri` (recon) | 18 : 303 | 5 : 8 | C |
-| 8 | sembrar | `jusual` | `kono` (recon) | 4 : 221 | 0 : 16 | C |
-| 9 | árbol | `bara` | `kuru` (recon) | 38 : 211 | 4 : 6 | B |
-| 10 | árbol | `igi` | `kuru` (recon) | 6 : 211 | 1 : 6 | C |
-| 11 | luna | `apana` | `kasha` (recon) | 16 : 168 | 3 : 11 | C |
-| 12 | **luna** | `kati` | `kasha` (recon) | 42 : 168 | 11 : 11 | **A** |
-| 13 | **mar** | `para` | `habo` (recon) | 311 : 125 | 48 : 6 | **A** |
-| 14 | mar | `parawa` | `habo` (recon) | 0 : 125 | 0 : 6 | C |
-| 15 | anciano | `wasima` | `wanü` (recon) | 10 : 120 | 2 : 5 | C |
-| 16 | **viento** | `juri` | `joutai` (recon) | 544 : 19 | 154 : 1 | **A** |
-| 17 | cactus columnar | `kadushi` | `coro` (hipot.) | 120 : 1 | 0 : 0 | C |
-| 18 | espanto | `etamo` | `mülia` (hipot.) | 20 : 0 | 1 : 0 | A |
-| 19 | iguana | `barbache` | `iguana` (recon) | 2 : 0 | 0 : 0 | C |
+La columna **decidido** es lo que la política del 2026-09-19 (`d19.b`) dejó.
+`A` = aplicado, la derivada archivada en `FUERA_DEL_HABLA`. `curación` = no
+era un par, propuesta en `curacion_glosas_pares_2026-09-19.yaml`. `ABIERTO` =
+de Miguel.
+
+| # | glosa | atestiguada | derivada | uso base | serie C | recomendaba | **decidido** |
+|---:|---|---|---|---:|---:|---|---|
+| 1 | **sol** | `kasi` | `kali` (recon) | 10 : 2321 | 4 : 102 | **A** | ✅ **A** |
+| 2 | crear | `eroa` | `chaa` (recon) | 97 : 1256 | 5 : 30 | B | curación |
+| 3 | **ofrecer** | `were` | `paa` (recon) | 17 : 1222 | 2 : 37 | B | ✅ **A** |
+| 4 | escuchar | `jai` | `kira` (recon) | 167 : 831 | 12 : 32 | B | ✅ **A** |
+| 5 | pez | `bagre` | `arima` (recon) | 0 : 643 | 0 : 45 | C | curación |
+| 6 | **cerro** | `turumako` | `sima` (recon) | 1 : 510 | 1 : 13 | C | ⏳ **ABIERTO** |
+| 7 | hijo | `dare` | `buri` (recon) | 18 : 303 | 5 : 8 | C | curación |
+| 8 | sembrar | `jusual` | `kono` (recon) | 4 : 221 | 0 : 16 | C | curación |
+| 9 | árbol | `bara` | `kuru` (recon) | 38 : 211 | 4 : 6 | B | curación (declarar) |
+| 10 | árbol | `igi` | `kuru` (recon) | 6 : 211 | 1 : 6 | C | curación |
+| 11 | luna | `apana` | `kasha` (recon) | 16 : 168 | 3 : 11 | C | curación (y cae con el 12) |
+| 12 | **luna** | `kati` | `kasha` (recon) | 42 : 168 | 11 : 11 | **A** | ✅ **A** |
+| 13 | **mar** | `para` | `habo` (recon) | 311 : 125 | 48 : 6 | **A** | ✅ **A** |
+| 14 | mar | `parawa` | `habo` (recon) | 0 : 125 | 0 : 6 | C | cae con el 13; la fusión D5 **no** se cerró |
+| 15 | anciano | `wasima` | `wanü` (recon) | 10 : 120 | 2 : 5 | C | curación (mueve el scorer) |
+| 16 | **viento** | `juri` | `joutai` (recon) | 544 : 19 | 154 : 1 | **A** | ✅ **A** |
+| 17 | cactus columnar | `kadushi` | `coro` (hipot.) | 120 : 1 | 0 : 0 | C | curación |
+| 18 | espanto | `etamo` | `mülia` (hipot.) | 20 : 0 | 1 : 0 | A | ✅ **A** |
+| 19 | iguana | `barbache` | `iguana` (recon) | 2 : 0 | 0 : 0 | C | curación (mueve el scorer) |
+
+> **La política no fue par a par.** Donde hay forma atestiguada con cita para
+> el mismo significado, ésa manda y la derivada se archiva; donde el
+> solapamiento es parcial, no hay par sino una glosa mal afinada. Por eso la
+> columna «recomendaba» y la columna «decidido» difieren en cuatro filas
+> (3, 4, 6, 18): la recomendación pesaba caso por caso y la política pesa la
+> regla. El coste de las dos filas caras —`paa` y la colisión `kasi`/`kashi`—
+> se midió **antes** de aplicarlas y está en el punto 10 de
+> `BITACORA_RUNS.md`.
+>
+> **`parawa` / `para` (fila 14) NO se fusionó**, aunque el encargo lo
+> permitía: los esqueletos fonémicos no coinciden (`para` / `parawa`, con y
+> sin gu→w), Zavala las trae como dos entradas de dos informantes (#190 E+HP,
+> #191 GC) y `-gua` es un locativo declarado del proyecto, así que `paragua`
+> se lee como `para` + `-gua`, 'la región del agua'. Eso es una derivación, no
+> otra grafía, y fusionarlas borraría un morfema atestiguado en uso.
 
 ### Lo que hay detrás de cada recomendación
 
@@ -259,10 +302,39 @@ curación, no canon).*
    ya lleva 167 usos sin que nadie se lo enseñe.
 5. **pez · C.** `bagre` no significa 'pez': es un pez concreto, y su propia
    nota avisa de que es homógrafo del español. Corregir la glosa; no es par.
-6. **cerro · C.** `turumako` 'cerro, meseta' (Zavala #262) contra `sima`
-   'cerro, montaña'. Pero **el caquetío ya dice 'cerro' con `-bana`**
-   (atestiguado, D9, seis apoyos), así que el par en realidad es a tres bandas.
-   Pregunta: ¿`sima` sobra?
+6. **cerro · ⏳ ABIERTO, y es la pregunta de Miguel.** `turumako` 'cerro,
+   meseta' (Zavala #262) contra `sima` 'cerro, montaña'. Pero **el caquetío ya
+   dice 'cerro' con `-bana`** (atestiguado, D9, seis apoyos), así que el par en
+   realidad es a tres bandas. Pregunta: ¿`sima` sobra?
+
+   > **La política la ALCANZA y aun así NO se aplicó** (2026-09-19): es la
+   > pregunta que Miguel se reservó, y aquí está el coste delante para poder
+   > responderla con él a la vista. Medido en
+   > `6-fusion/medicion_politica_atestiguado_manda_2026-09-19.yaml`,
+   > §`residuos_declarados.sima_par_6`:
+   >
+   > - `sima` tiene **510 usos en 49 formas**, de los que el scorer reconoce
+   >   **109** — el resto son compuestos que nunca contaron, porque `sima` no
+   >   es raíz verbal y sólo puntúan la voz suelta y sus prefijos posesivos.
+   >   `turumako` tiene **1**.
+   > - Está en el instrumento **dos veces**, las dos en
+   >   `prompt_reglas_completo`: como voz en NATURALEZA (`sima (cerro)`) y,
+   >   sobre todo, **como el molde `sima-bana` del ejemplo de los locativos**,
+   >   que es justo lo que enseña `-bana`. Archivarla obliga a reescribir ese
+   >   ejemplo — y el ejemplo del locativo es la pieza de la que cuelga todo
+   >   el molde `X-bana`, el mismo que el punto 9 de la bitácora acaba de
+   >   tocar por el otro lado.
+   > - El mecanismo está montado y cuesta una línea: `FUERA_DEL_HABLA` con la
+   >   capa y la procedencia intactas, igual que las siete de la tanda.
+   >
+   > **Tres salidas, y ninguna es obvia.** **(A)** archivar `sima` y que el
+   > ejemplo del locativo pase a otra raíz atestiguada — es la más cara de
+   > cuantas se han medido en este issue, 109 usos reconocidos contra 1.
+   > **(B)** declararlas convivencia (`turumako` la meseta, `sima` la
+   > elevación) y afinar las dos glosas para que dejen de emparejar. **(C)**
+   > decidir que 'cerro' se dice con `-bana` y que las dos voces sobran, que
+   > es lo que insinúa la tercera banda. Con `turumako` a 1 uso, la (A) cambia
+   > una forma muy dicha por una que nadie dice: eso no lo decide una regla.
 7. **hijo · C.** La glosa de `dare` ya lleva **deuda declarada**: la fuente
    dice 'diente' y 'hijo' es extensión del proyecto. Resolver la deuda antes
    de llamarlo par.
@@ -427,22 +499,51 @@ a: biro-bana   (o: se queda · otra raíz)   ← RESPONDIDA: «Vale» (biro-bana
 b: no · sí · sólo desempate dentro del par
 ```
 
-Lo que queda por responder: **las 19 de §6 y la (b)**.
+**§6 ya no se responde así.** Miguel contestó con una POLÍTICA —«sí o sí
+tenemos que usar los atestiguados por sobre los reconstruidos»— que resuelve
+de un golpe los siete pares con rival atestiguado y deja fuera los once que no
+eran pares. Ver el bloque de estado del principio.
+
+Lo que queda por responder:
+
+```
+6 (¿sima sobra?):  A archivar · B convivencia declarada · C 'cerro' es -bana
+b (muestreador):   no · sí · sólo desempate dentro del par
+curación (11):     6-fusion/curacion_glosas_pares_2026-09-19.yaml, una línea por par
+```
 
 ---
 
 ## Deudas abiertas que deja la medición
 
-- **13 de los 19 pares son bugs de curación, no decisiones**: `cat` equivocada
+- **11 de los 19 pares son bugs de curación, no decisiones**: `cat` equivocada
   (`wasima`, `barbache`, `jusual`), glosa demasiado ancha (`bagre`, `igi`,
-  `apana`), deuda ya declarada (`dare`). Cerrarlos hace que el criterio laxo
-  baje de 19 a ~6 y que la próxima medición no vuelva a traerlos.
+  `apana`, `chaa`), deuda ya declarada (`dare`), castellano (`iguana`), ya
+  decidido (`coro`) y una convivencia real que sólo hay que declarar (`bara` /
+  `kuru`). Cerrarlos hace que la próxima medición no vuelva a traerlos.
+  *(2026-09-19: propuestos uno a uno en
+  `6-fusion/curacion_glosas_pares_2026-09-19.yaml` y NO aplicados — la
+  política no los cubre. Eran 13 en el reparto original de este issue; la
+  decisión movió el 4 y el 18 a rivalidad aplicada y el 6 a pregunta abierta.
+  Dos de los once —`wasima` y `barbache`— mueven el scorer por sí solos,
+  porque de `cat: v_raiz` sale `_RAICES_VERB`: piden su propia medición.)*
 - **`harifuche` / `arifuke`** es la única fusión de D5 que queda viva: dos
   preparaciones de maíz con el mismo esqueleto, una en Zavala #153 y otra en
   Medina Colina 2013 p. 31. Barata y no la pide nadie todavía.
 - **`kasi` y `kashi` colisionan** bajo la fonemización del proyecto. Sea cual
   sea la respuesta a la decisión 1, la colisión existe y conviene que esté
-  escrita en las dos entradas.
+  escrita en las dos entradas. *(2026-09-19: la decisión 1 fue A, así que
+  ahora `prompt_reglas_completo` enseña las dos —`kasi (sol)` en NATURALEZA y
+  `kashi (ahora)` en CONECTORES, y el ejemplo de respuesta ideal las usa a
+  tres líneas de distancia—. Medido sitio por sitio: **el motor NO las
+  confunde** (`_familia_de_token` es lookup exacto, el filtro de nombres
+  compara el token literal, la puerta de la competencia es pertenencia a un
+  set, y el scorer las cuenta por separado en la misma frase); `fonemizar`
+  sólo entra en el motor por `_es_casi_autoglosa`, que compara una voz con SU
+  PROPIA glosa, así que las dos nunca se encuentran allí. La colisión quedó
+  declarada en un comentario de la plantilla, en las notas de las dos entradas
+  y en `test_e_la_colision_kasi_kashi_esta_declarada_donde_se_lee`. Reescribir
+  el ejemplo o cambiar `kashi` es otra decisión y NO está tomada.)*
 - **El corte del 2026-09-18 cerró la puerta a la FORMA, no al MOLDE.**
   `kali-bana` ya no se registra, pero `kali-mara-bana` sí. Si eso es lo que se
   quería, está bien; si no, es otra decisión. *(2026-09-19: §7(a) le quita a

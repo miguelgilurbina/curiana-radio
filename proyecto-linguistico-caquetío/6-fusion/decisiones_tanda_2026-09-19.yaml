@@ -8,22 +8,26 @@
 #
 # De las dos preguntas de instrumento de §7 del issue
 # `6-fusion/issues-pendientes/pares-atestiguado-reconstruido-2026-09-19.md`,
-# aquí se responde la (a) — el ejemplo de la plantilla de identidad. La (b)
-# —si el muestreador prefiere la atestiguada cuando hay par— y los 19 pares de
-# §6 siguen SIN DECIDIR, y lo que una plantilla les enseñe se deja como está.
+# aquí se responde la (a) — el ejemplo de la plantilla de identidad — y,
+# más abajo (d19.b), la POLÍTICA que resuelve de un golpe los pares de §6
+# donde hay rival atestiguado. La pregunta (b) del issue —si el muestreador
+# prefiere la atestiguada cuando hay par— sigue SIN DECIDIR.
 # ─────────────────────────────────────────────────────────────────────────
 meta:
   fecha: '2026-09-19'
   decidido_por: Miguel
   estado: >-
-    UNA decisión, DECIDIDA y APLICADA el mismo día. CORTE DE SERIE declarado
-    (punto 9 del bloque «Cambio de instrumento» de
+    DOS decisiones, las dos DECIDIDAS y APLICADAS el mismo día, y las dos
+    abren CORTE DE SERIE (puntos 9 y 10 del bloque «Cambio de instrumento» de
     5-experimento/BITACORA_RUNS.md).
   linea_roja_de_toda_la_tanda: >-
     El scorer no se toca. `score_linguistico()`, `pct_*` y `capas_de_score`
-    quedan idénticos, y `curiana_observer` tampoco se modifica. El lexicón es
-    canon y no se edita: `biro` y `-bana` ya existían atestiguadas — sólo se
-    usan. Lo que cambia es lo que el agente VE, y por eso abre corte.
+    quedan idénticos, y `curiana_observer` tampoco se modifica. Lo que cambia
+    es lo que el agente VE y lo que el lexicón OFRECE, y por eso abre corte.
+    En d19.a el lexicón no se editó (`biro` y `-bana` ya existían
+    atestiguadas, sólo se usan); en d19.b sí se toca, pero de una manera
+    declarada: siete entradas pasan a `FUERA_DEL_HABLA` conservando su capa y
+    su procedencia. Archivar no es borrar y tampoco es degradar.
 
 ejemplo_de_identidad_linguistica:
   id: d19.a
@@ -144,3 +148,232 @@ ejemplo_de_identidad_linguistica:
       condición que se quería era la del texto, la candidata que la cumple en
       la serie C limpia es `maure-bana`. No se ha cambiado nada: la decisión
       dice `biro-bana` y eso es lo aplicado.
+
+manda_la_atestiguada:
+  id: d19.b
+  estado: DECIDIDA y APLICADA (2026-09-19) — CORTE DE SERIE declarado
+  pregunta: >-
+    El issue pedía decidir los 19 pares de §6 uno a uno: en cada uno, el
+    lexicón tiene una forma ATESTIGUADA y otra DERIVADA (reconstruida,
+    retroabstraída o hipotética) para el mismo significado, y el elenco dice
+    casi siempre la derivada. ¿Manda la atestiguada (A), conviven declaradas
+    como variación (B), o es caso especial (C)?
+  decision_literal: >-
+    «Sí o sí tenemos que usar los atestiguados por sobre los reconstruidos,
+    por lo menos la parte caquetía.»
+  contexto_de_la_cita: >-
+    Miguel responde a la tabla de §6 del issue, que recomendaba A sólo en
+    cuatro filas. La respuesta no es par a par: es una POLÍTICA. Por eso esta
+    entrada no lleva diecinueve líneas sino una regla, y la aplicación de la
+    regla a los pares que hay hoy.
+  lectura_operativa: >-
+    Donde el caquetío tiene forma ATESTIGUADA para un significado, ésa es la
+    que la comunidad habla y la que el instrumento enseña. La derivada no se
+    borra: se ARCHIVA con su procedencia, como se hizo con `piache` en D10, y
+    deja de enseñarse y de competir.
+
+  # ── EL CRITERIO OPERATIVO ────────────────────────────────────────────
+  # Escrito con precisión porque es lo que va a decidir los casos dudosos de
+  # mañana, no los de hoy.
+  criterio:
+    que_cuenta_como_mismo_significado: >-
+      La GLOSA NORMALIZADA IDÉNTICA, y sólo ésa, dispara la política por sí
+      sola. La normalización es la del script de la medición y está declarada
+      allí: NFC + minúsculas, fuera lo que va entre paréntesis y corchetes,
+      fuera los diacríticos, fuera el artículo inicial y la puntuación de los
+      extremos, espacios colapsados. NO se aplica ningún diccionario de
+      sinónimos: decidir que «cerro» y «loma» son la misma glosa es una
+      afirmación sobre el significado y la decide Miguel (regla 2).
+    el_solapamiento_parcial_NO_es_par: >-
+      Dos glosas que sólo COMPARTEN una palabra —«empezar, crear, originar»
+      contra «hacer, construir, crear»— no son un par: son una glosa mal
+      afinada. La política no las toca. Van a la cola de curación
+      (6-fusion/curacion_glosas_pares_2026-09-19.yaml) y, una vez afinadas,
+      dejan de emparejar. Un solapamiento parcial puede ser rivalidad de
+      verdad, pero entonces hace falta que alguien lo diga: es decisión, no
+      regla.
+    que_cuenta_como_atestiguado: >-
+      La etiqueta `caquetío-atestiguado` MÁS su cita en `notas` (regla 8). La
+      etiqueta sola no basta: «atestiguado» sin obra citada es una afirmación
+      sin clave foránea, y en ese caso la política no se dispara — se declara
+      `deuda: sin-procedencia` y se espera. Los `caquetío` a secas no cuentan:
+      `capa_epistemica()` los manda a atestiguado por defecto y eso es
+      etiquetado antiguo, no atestación.
+    que_se_hace_con_la_derivada: >-
+      SE ARCHIVA, que no es borrar y tampoco es degradar. Sale de
+      `VOCABULARIO_BASE` y entra en `FUERA_DEL_HABLA` conservando (1) su
+      forma, (2) su glosa, (3) su `fuente` —su CAPA EPISTÉMICA, sin tocar: la
+      etiqueta dice de dónde viene la palabra y el archivo dice si la
+      comunidad la habla, son dos ejes— y (4) su `notas` entera, a la que se
+      le añade el porqué del archivo y la cita de la que manda. Lleva además
+      un campo declarado `archivada` con su fecha y su par.
+    que_significa_archivada: >-
+      No se siembra en Supabase, no entra en ningún prompt, no está en
+      `palabras_activas()` y no puntúa — y desde esta tanda TAMPOCO COMPITE:
+      `FORMAS_DE_PLANTILLA` incluye `FUERA_DEL_HABLA`, así que una forma
+      archivada no puede volver por la puerta de atrás como acuñación de la
+      comunidad. Sin eso, archivar `kali` la habría dejado acuñable al día
+      siguiente.
+    alcance: >-
+      LA POLÍTICA SÓLO MUERDE DONDE EXISTE RIVAL ATESTIGUADO. El grueso del
+      lexicón caquetío es reconstrucción legítima porque no hay atestación
+      —los pronombres `taya`/`pia`/`nüma`, los aspectos, la mayoría de las
+      reconstruidas— y se queda exactamente como está. Esto no es una poda del
+      núcleo; `test_politica_atestiguado_manda.py` (e) lo fija.
+
+  # ── LO APLICADO ──────────────────────────────────────────────────────
+  aplicado_a: >-
+    Siete de los diecinueve pares de §6: los que el análisis llama rivales
+    reales. En cada uno manda la atestiguada y se archiva la derivada.
+  pares:
+    - {par: 1,  glosa: sol,      manda: kasi,  cita: 'Zavala Reyes 2015 #76 (GC)',   archivada: kali,   capa: caquetío-reconstruido}
+    - {par: 3,  glosa: ofrecer,  manda: were,  cita: 'Zavala Reyes 2015 #149 (AM)',  archivada: paa,    capa: caquetío-reconstruido}
+    - {par: 4,  glosa: escuchar, manda: jai,   cita: 'Zavala Reyes 2015 #175 (AM)',  archivada: kira,   capa: caquetío-reconstruido}
+    - {par: 12, glosa: luna,     manda: kati,  cita: 'Zavala Reyes 2015 #71 (CGB)',  archivada: kasha,  capa: caquetío-reconstruido}
+    - {par: 13, glosa: mar,      manda: para,  cita: 'Zavala Reyes 2015 #190 (E+HP)', archivada: habo,  capa: caquetío-reconstruido}
+    - {par: 16, glosa: viento,   manda: juri,  cita: 'Zavala Reyes 2015 #178 (E)',   archivada: joutai, capa: caquetío-reconstruido}
+    - {par: 18, glosa: espanto,  manda: etamo, cita: 'Zavala Reyes 2015 #120 (AM)',  archivada: mülia,  capa: caquetío-hipotético}
+
+  los_dos_costes_medidos_antes_de_aplicar:
+    paa: >-
+      Era el par más caro y se dijo antes de hacerlo. `paa` es raíz verbal del
+      núcleo con 56 formas distintas y 1.222 usos en la base, y todo su
+      paradigma de aspecto vivo (`paa-da` 449, `paa-ni` 256, `paa-ka` 225).
+      Al archivarla sale de `_RAICES_VERB`, y con eso 45 de sus 56 formas
+      —1.179 usos— dejan de contar como arahuacas al re-puntuar. PERO NO DEJA
+      HUECO FUNCIONAL, y eso es lo que decidió aplicarla: `were` es también
+      `v_raiz` y atestiguada (Zavala #149), entra en `_RAICES_VERB` y toma los
+      mismos tres aspectos, así que el paradigma no se rompe — se muda de
+      raíz. Verificado forma a forma con el scorer: `were`, `were-ka`,
+      `were-ni` y `were-da` cuentan; `paa`, `paa-ka`, `paa-ni` y `paa-da` ya
+      no. Lo que cuesta es la comparabilidad del corpus ya dicho, que es
+      exactamente lo que un corte de serie declara. Si a Miguel el precio le
+      parece alto, la alternativa sigue sobre la mesa y es la B del issue:
+      `paa` y `were` conviven declaradas como variación, y entonces hay que
+      quitar de la plantilla el empuje accidental a una de las dos.
+    kasi_kashi: >-
+      `kasi` 'sol' y `kashi` 'ahora' dan el MISMO esqueleto fonémico bajo la
+      `curiana_fonotactica.fonemizar` del propio proyecto (las dos: `kasi`).
+      Comprobado sitio por sitio: EL MOTOR NO LAS CONFUNDE. `_familia_de_token`
+      es lookup exacto sobre las claves y devuelve la entrada de cada una; el
+      filtro de nombres compara el token literal y ninguna es homógrafa de un
+      nombre del elenco; la puerta de la competencia es pertenencia a un set,
+      no una comparación fonémica; y `score_linguistico()` cuenta las dos por
+      separado en la misma frase. `fonemizar` sólo entra en el motor por
+      `_es_casi_autoglosa`, que compara una voz con SU PROPIA glosa, así que
+      las dos nunca se encuentran allí. Quien puede confundirlas es el
+      HABLANTE — y desde esta tanda las tiene las dos en la misma plantilla:
+      `prompt_reglas_completo` enseña `kasi (sol)` en NATURALEZA y `kashi
+      (ahora)` en CONECTORES, y el ejemplo de respuesta ideal las usa a tres
+      líneas de distancia. LA POLÍTICA SE APLICA IGUAL, CON LA COLISIÓN
+      DECLARADA: aquí, en un comentario de la propia plantilla y en un test.
+      Cambiar `kashi` o reescribir el ejemplo para separarlas es otra decisión
+      y NO está tomada.
+
+  medido_2026-09-19: >-
+    6-fusion/medicion_politica_atestiguado_manda_2026-09-19.yaml, escrito por
+    6-fusion/scripts/medir_politica_atestiguado_manda.py (sin API, sin abrir
+    .env, base local en sólo lectura). El brazo «antes» no es una cifra a
+    mano: es el `curiana_lexicon.py` del commit f864482 sacado con `git show`
+    a un directorio temporal que gana el `sys.path` de un subproceso que corre
+    el mismo código de medición. Dos controles: los dos brazos tienen que ser
+    módulos DISTINTOS (lo eran), y el replay del brazo «antes» tiene que
+    reproducir el `score` y el `neologisms_proposed` que la base guardó para
+    las 216 respuestas — 0 desvíos.
+  efecto_medido: >-
+    VOCABULARIO_BASE 5.514 → 5.507 (−7). FUERA_DEL_HABLA 6 → 13. Salen de
+    `_RAICES_VERB` dos raíces (`paa`, `kira`). La puerta
+    `FORMAS_DE_PLANTILLA` 5.945 → 5.952: no sale ninguna forma y entran siete
+    —los cinco numerales de D11, que estaban archivados desde el 09-13 y
+    seguían siendo acuñables, más `entregar` y `oír`, que son castellano de
+    las glosas nuevas—; las siete archivadas de hoy siguen dentro porque la
+    puerta pasó a incluir el archivo. De las diez plantillas estáticas,
+    cambian cuatro: `prompt_reglas_completo` (4.435 → 4.449 caracteres) y los
+    tres tramos del refuerzo que recortan por el final. El prompt medio se
+    mueve +6,2 caracteres sobre ~7.095 en la era 2 y −0,2 sobre ~6.046 en la
+    era 1 (r = −0,48: se mide aunque parezca cosmético); el rango ancho del
+    delta por prompt es el muestreador re-sorteando, no el cambio.
+  corte_de_serie: >-
+    Aplica desde el próximo run. Archivar una voz la saca de
+    `palabras_activas()`, así que el `score` SE MUEVE aunque el scorer no se
+    haya tocado. Medido sobre las 216 respuestas de la serie C limpia
+    (`b847944d` → `17c2271e` → `9a98de67`, 3 días, 18 turnos, cadena
+    verificada): el score cambia en 62 de 216, todas a la baja, |Δ| máximo
+    0,80 y Δ medio de las que cambian −0,25; el score medio pasa de 7,5977 a
+    7,5264. `palabras_caquetias` cambia en 94 respuestas y
+    `neologisms_proposed` en 0 —sale de `extraer_neologismos_del_texto()`,
+    que es anterior al registro—. Imputación por raíz: `kali` 39 respuestas,
+    `paa` 30, `kira` 18, `kasha` 8, `habo` 4. Las voces que más dejan de
+    contarse: `kali` 52 veces, `kira-ni` 19, `paa-da` 18, `kasha` 10. En toda
+    la base son 71 formas y 3.264 usos los que dejan de reconocerse. LOS RUNS
+    YA CORRIDOS NO SE REESCRIBEN: la serie C limpia se re-corre otra vez desde
+    el día 1, y queda del otro lado por segunda vez en dos días (d19.a la
+    había cortado ya).
+  lo_que_no_se_toca: >-
+    El scorer (`score_linguistico()`, `pct_*`, `capas_de_score`) y
+    `curiana_observer`. La capa epistémica de ninguna entrada. Las
+    reconstruidas sin rival atestiguado. Y los pares que no son pares: sus
+    glosas se PROPONEN en 6-fusion/curacion_glosas_pares_2026-09-19.yaml y no
+    se editan, porque la política no los cubre.
+  se_aplica_en: >-
+    curiana_sim/curiana_lexicon.py (las siete entradas a `FUERA_DEL_HABLA`;
+    `FORMAS_DE_PLANTILLA` pasa a incluir el archivo; `prompt_reglas_completo`
+    —VERBOS, NATURALEZA y el ejemplo de respuesta ideal—; las listas de
+    `prompt_refuerzo`; los ejemplos de `REGLAS_ASPECTO`) +
+    curiana_sim/curiana_koine.py (`FORMAS_SEED`, 14 agentes) +
+    3-mundo/corpus/ecologia.yaml (tres hechos cuyo `palabra_lexicon` apuntaba
+    a `joutai` o `habo`) + curiana_sim/tests/test_politica_atestiguado_manda.py
+    (nuevo) + curiana_sim/tests/test_formas_de_plantilla.py y
+    curiana_sim/tests/test_lexicon.py (dos tests que fijaban la conducta
+    anterior) + 6-fusion/scripts/medir_politica_atestiguado_manda.py +
+    6-fusion/medicion_politica_atestiguado_manda_2026-09-19.yaml +
+    6-fusion/curacion_glosas_pares_2026-09-19.yaml + 2-lengua/lexicon.md +
+    CLAUDE.md + 5-experimento/BITACORA_RUNS.md (punto 10) +
+    6-fusion/issues-pendientes/pares-atestiguado-reconstruido-2026-09-19.md §6.
+
+  queda_abierto_y_es_de_Miguel:
+    - >-
+      `sima` — EL PAR 6, medido y NO aplicado. La política lo ALCANZA:
+      `turumako` 'cerro, meseta' es atestiguada (Zavala #262) y, además, el
+      caquetío ya dice 'cerro' con `-bana` (atestiguado, D9, seis apoyos). Es
+      un par a tres bandas. No se aplicó porque es la pregunta que Miguel
+      dejó abierta («¿`sima` sobra?») y aquí está su coste delante: `sima`
+      tiene 510 usos en 49 formas, de los que el scorer reconoce 109 —el
+      resto son compuestos que nunca contaron, porque `sima` no es raíz
+      verbal—, mientras `turumako` tiene 1. Y está en el instrumento DOS
+      veces: como voz en NATURALEZA de `prompt_reglas_completo` y, sobre
+      todo, como el molde `sima-bana` del ejemplo de los locativos, que es
+      justo lo que enseña `-bana`. Archivarla obligaría a reescribir ese
+      ejemplo, que es lo que hace que el corte del 09-19 tenga sentido. Si la
+      respuesta es que sobra, el mecanismo está montado y cuesta una línea.
+    - >-
+      LOS ONCE QUE NO SON PARES. El criterio laxo los sacó a la luz y no son
+      rivalidades: `cat` equivocada (`wasima`, `barbache`), glosa demasiado
+      ancha (`bagre`, `igi`, `apana`, `chaa`, `jusual`), deuda ya declarada
+      (`dare`), castellano (`iguana`), ya decidido (`coro`) y una convivencia
+      real que sólo hay que declarar (`bara` / `kuru`). Están propuestos uno a
+      uno en 6-fusion/curacion_glosas_pares_2026-09-19.yaml. DOS de ellos
+      mueven el scorer —`wasima` y `barbache` están declaradas `v_raiz` sin
+      serlo, y de ahí sale `_RAICES_VERB`— así que piden su propia medición y
+      no se hacen de paso. CINCO viven en `lexicon_zavala.py`, que es generado
+      Y lo importa el motor: se corrige el minador, no el módulo.
+    - >-
+      `parawa` / `para` NO SE FUSIONÓ, y el encargo lo permitía. Lo que se
+      midió: los esqueletos fonémicos NO coinciden (`para` da `para`, `parawa`
+      da `parawa`, con y sin la regla abierta gu→w), Zavala las trae como dos
+      entradas de dos informantes distintos (#190 E+HP y #191 GC), y `-gua` es
+      un locativo declarado del proyecto, así que `paragua` se lee sin forzar
+      nada como `para` + `-gua`, 'la región del agua'. Eso no es otra grafía:
+      es una derivación, y fusionarlas borraría un morfema atestiguado en uso.
+    - >-
+      `haborü` 'marejada' (habo+rü, hipotética) SIGUE EN EL HABLA con su raíz
+      archivada. No se tocó porque es una entrada con su propia clave y su
+      propia glosa, no una flexión de `habo`, y decidir que cae con ella es
+      una decisión sobre el significado. Queda escrito.
+    - >-
+      LA PREGUNTA (b) DEL ISSUE sigue sin responder: si el muestreador debe
+      preferir la atestiguada cuando hay par. La recomendación medida era que
+      no —o no primero—, porque lo que decide la exposición del muestreo no es
+      la capa sino el tamaño del cubo (12 de 25 cubos tienen una sola voz).
+      Después de esta política la pregunta cambia de sentido: donde había par
+      con rival atestiguado ya no hay dos formas que sortear.

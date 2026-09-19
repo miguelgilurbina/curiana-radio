@@ -125,6 +125,38 @@ De dónde se transdujo cada una, medido sobre el campo `notas`:
 Ese 88 % es la misma sesgo que denuncia D11: **se reconstruyó desde la hermana
 que Oliver considera la más lejana**, lo que explicaría parte del 80 % de fallo.
 
+## La regla: **manda la atestiguada**
+
+> **Decisión de Miguel, 2026-09-19.** «Sí o sí tenemos que usar los
+> atestiguados por sobre los reconstruidos, por lo menos la parte caquetía.»
+> Es una **política**, no una respuesta par a par:
+> `6-fusion/decisiones_tanda_2026-09-19.yaml` (d19.b).
+
+**Donde el caquetío tiene forma atestiguada para un significado, ésa es la que
+la comunidad habla y la que el instrumento enseña.** La derivada —reconstruida,
+retroabstraída o hipotética— no se borra: se **archiva** con su procedencia, y
+deja de enseñarse y de competir.
+
+El criterio operativo, porque es lo que decide los casos dudosos:
+
+| Pregunta | Respuesta |
+|---|---|
+| **¿Mismo significado?** | La **glosa normalizada idéntica**, y sólo ésa, dispara la política sola. Normalización: NFC + minúsculas · fuera paréntesis y corchetes · fuera diacríticos · fuera el artículo inicial y la puntuación de los extremos · espacios colapsados. **Sin diccionario de sinónimos**: decidir que «cerro» y «loma» son lo mismo es una afirmación sobre el significado, y la decide Miguel (regla 2). |
+| **¿Y el solapamiento parcial?** | **No es par.** Dos glosas que sólo comparten una palabra —«empezar, crear, originar» contra «hacer, construir, crear»— son una **glosa mal afinada**. Van a curación, no a la política. |
+| **¿Qué cuenta como atestiguado?** | La etiqueta `caquetío-atestiguado` **más su cita** en `notas` (regla 8). La etiqueta sola no basta, y `caquetío` a secas tampoco: eso es etiquetado antiguo, no atestación. |
+| **¿Qué se hace con la derivada?** | Se **archiva**: sale de `VOCABULARIO_BASE`, entra en `FUERA_DEL_HABLA` y conserva forma, glosa, **su capa epistémica intacta** y su `notas` entera, más un campo `archivada` con su fecha y su par. **Archivar no es borrar y tampoco es degradar** — la etiqueta dice de dónde viene la palabra, el archivo dice si la comunidad la habla. Dos ejes. |
+| **¿Hasta dónde llega?** | **Sólo donde EXISTE rival atestiguado.** El grueso del lexicón caquetío es reconstrucción legítima porque no hay atestación (los pronombres, los aspectos, la mayoría de las reconstruidas) y se queda como está. Esto no es una poda del núcleo. |
+
+Aplicada el 2026-09-19 a siete pares: manda `kasi` sobre `kali` (sol), `were`
+sobre `paa` (ofrecer), `jai` sobre `kira` (escuchar), `kati` sobre `kasha`
+(luna), `para` sobre `habo` (mar), `juri` sobre `joutai` (viento) y `etamo`
+sobre `mülia` (espanto). Medición del corte —incluidos los dos costes que
+había que decir antes de aplicar, el paradigma de `paa` y la colisión
+`kasi`/`kashi`— en
+`6-fusion/medicion_politica_atestiguado_manda_2026-09-19.yaml`. Lo que queda
+abierto (`sima` y once glosas por afinar) está en
+`6-fusion/curacion_glosas_pares_2026-09-19.yaml`.
+
 ## `FUERA_DEL_HABLA` — el archivo, no la papelera
 
 `FUERA_DEL_HABLA` es un dict del propio `curiana_lexicon.py` para entradas
@@ -132,8 +164,16 @@ que Oliver considera la más lejana**, lo que explicaría parte del 80 % de fall
 procedencia documental, pero no se ofrecen a los agentes ni cuentan para el
 scoring.
 
-**Hoy tiene un solo miembro: `piache`.** Retirada el 2026-08-03 (D10). Su lugar
-lo ocupa `boratio`, que sí es caquetío atestiguado. Las dos fuentes coinciden:
+> ⚠️ **Y desde el 2026-09-19 es además una puerta.** `FORMAS_DE_PLANTILLA`
+> incluye `FUERA_DEL_HABLA`, así que una forma archivada **tampoco compite**:
+> no se registra como acuñación ni entra en la competencia léxica. Sin eso,
+> archivar una voz la sacaba de `VOCABULARIO_BASE`, la sacaba de la puerta y
+> la dejaba volver al día siguiente como «palabra nueva de la comunidad» —
+> `kali`, con 2.321 usos detrás, habría vuelto la primera.
+
+**Empezó con un solo miembro: `piache`.** Retirada el 2026-08-03 (D10). Su
+lugar lo ocupa `boratio`, que sí es caquetío atestiguado. Las dos fuentes
+coinciden:
 
 - [[alvarado-1921]] p.248: *"Voz cháima y tamanaca, con formas afines en otras
   lenguas caribes"*.
@@ -145,6 +185,17 @@ El canon no se tocó: Shaboro sigue siendo el piache de la Curiana
 ([[mapa-creencia]]). El mecanismo es el importante: **archivar con procedencia
 es distinto de borrar**, y deja el camino abierto si aparece evidencia en
 contra.
+
+Después entraron los **cinco numerales reconstruidos del wayuu** (`wanee`,
+`piama`, `apünüin`, `pienchi`, `jarai`), retirados el 2026-09-13 cuando Miguel
+decidió «Cambiemos los numerales» — el caquetío atestigua `pana`, `gudamuen`,
+`sabuenen` y `katarí`. Y el 2026-09-19, las **siete de la política «manda la
+atestiguada»**. Hoy el archivo tiene **13 miembros** (6 → 13 en esa tanda,
+medido en `6-fusion/medicion_politica_atestiguado_manda_2026-09-19.yaml`
+§censo; se cuenta con `len(FUERA_DEL_HABLA)`), todos con su capa original y su
+procedencia entera. Las tres tandas son la misma regla dicha
+tres veces: donde hay dato, el dato manda; donde no lo hay, la reconstrucción
+es legítima y se queda.
 
 ## Los conflictos de glosa abiertos
 

@@ -121,27 +121,40 @@ _ASPECTO_SUFIJO = {"completivo": "-ka", "continuativo": "-ni", "prospectivo": "-
 # de su system_prompt). El `categoria` semántico está vacío en casi todo el
 # caquetío activo, así que el sesgo se siembra con estas listas explícitas, no
 # por muestreo de dominio. Distintas entre agentes → divergencia inicial.
+#
+# ⚠️ POLÍTICA «MANDA LA ATESTIGUADA» (2026-09-19). El seed es INSTRUMENTO, no
+# emergencia: es una lista escrita a mano que el motor le mete al agente en
+# `[Tu manera de hablar]` desde el día 1. Sembrar aquí una forma archivada
+# sería enseñarla por la puerta de atrás, así que las seis que la política
+# retiró se mudan a su rival atestiguada — `kali`→`kasi`, `kasha`→`kati`,
+# `habo`→`para`, `paa-ka/-da/-ni`→`were-ka/-da/-ni` (Zavala #76, #71, #190 y
+# #149). `test_formas_seed_solo_usa_palabras_del_lexicon` ya exigía que toda
+# semilla fuera palabra del lexicón: la política sólo cambia cuál.
+# Lo que NO cambia y conviene decirlo: el NÚMERO de formas por agente y el
+# reparto entre ellos quedan idénticos, así que la divergencia inicial que
+# DISENO_KOINE §4 pide sigue siendo la misma; lo que cambia es la forma con la
+# que cada uno arranca. Los idiolectos de los runs ya corridos no se reescriben.
 FORMAS_SEED: dict[str, list[str]] = {
-    "Manaure":    ["biro", "barsure", "kali", "kasha", "chiriware", "maa-ka", "naa-ka"],
-    "Shaboro":    ["urari", "barsure", "boratio", "saruro", "kasha", "suna-ni", "naba-ni"],
-    "Nubiri-sha": ["ama", "buri", "arua", "biro", "konuko", "paa-da", "raka-da"],
-    "Watapana":   ["biro", "maure", "kanoa", "habo", "arima", "naa-da", "wana-da"],
+    "Manaure":    ["biro", "barsure", "kasi", "kati", "chiriware", "maa-ka", "naa-ka"],
+    "Shaboro":    ["urari", "barsure", "boratio", "saruro", "kati", "suna-ni", "naba-ni"],
+    "Nubiri-sha": ["ama", "buri", "arua", "biro", "konuko", "were-da", "raka-da"],
+    "Watapana":   ["biro", "maure", "kanoa", "para", "arima", "naa-da", "wana-da"],
     "Dara-ko":    ["kuru", "kanoa", "bara", "arima", "kunaro", "bagre", "wana-ni"],
     "Paugis-sha": ["urari", "arua", "buri", "ama", "kabo", "kono-ka", "wana-ka"],
-    "Biro-ko":    ["biro", "habo", "dali", "sima", "naa-ka", "paa-ka"],
-    "Tawaka":     ["chiriware", "kabo", "arima", "habo", "wana-da", "naa-da"],
+    "Biro-ko":    ["biro", "para", "dali", "sima", "naa-ka", "were-ka"],
+    "Tawaka":     ["chiriware", "kabo", "arima", "para", "wana-da", "naa-da"],
     "Saruro-sha": ["maure", "arua", "naure", "kuru", "kono-ni", "chaa-ni"],
-    "Chiriware": ["chiriware", "sima", "habo", "kabo", "wana-ka", "naa-ka"],
-    "Buio-sha":   ["barsure", "boratio", "kasha", "suka", "urari", "naba-ni"],
+    "Chiriware": ["chiriware", "sima", "para", "kabo", "wana-ka", "naa-ka"],
+    "Buio-sha":   ["barsure", "boratio", "kati", "suka", "urari", "naba-ni"],
     "Korie-ko":   ["konuko", "buko", "kuru", "dali", "kaya", "kono-ni"],  # buco→buko: fusión D5b, tanda 2026-08-30
     "Dare-nu":    ["kanoa", "arima", "bara", "kuru", "naa-da", "wana-da"],
-    "Kadushi":    ["habo", "kanoa", "biro", "kali", "maure", "naa-ni"],
-    "Marokoto-ni":["biro", "habo", "kanoa", "arima", "naa-da"],
-    "Tariwa":     ["arima", "habo", "bara", "biro", "kanoa", "wana-ni"],
-    "Kawa-ni":    ["arima", "habo", "bara", "masa-ni", "naa-ni"],
+    "Kadushi":    ["para", "kanoa", "biro", "kasi", "maure", "naa-ni"],
+    "Marokoto-ni":["biro", "para", "kanoa", "arima", "naa-da"],
+    "Tariwa":     ["arima", "para", "bara", "biro", "kanoa", "wana-ni"],
+    "Kawa-ni":    ["arima", "para", "bara", "masa-ni", "naa-ni"],
     "Piru-sha":   ["ama", "buri", "arua", "konuko", "masa-ni"],
-    "Nabaraka":   ["maure", "naure", "sima", "biro", "kuru", "paa-da"],
-    "Raka-bi":    ["biro", "sima", "habo", "naa-ni", "paa-ni"],
+    "Nabaraka":   ["maure", "naure", "sima", "biro", "kuru", "were-da"],
+    "Raka-bi":    ["biro", "sima", "para", "naa-ni", "were-ni"],
 }
 
 # Núcleo caquetío compartido (último recurso, para quien no tiene formas-firma

@@ -330,13 +330,18 @@ def test_el_arreglo_no_toca_una_frase_de_canon_puro():
 
 
 def test_deteccion_de_vocabulario_respeta_el_limite_de_morfema():
-    """Casaba por subcadena en cualquier posición: `li` disparaba dentro de
-    `kali-taro` y `bi` dentro de `biro`, 409 veces cada una."""
+    """Casaba por subcadena en cualquier posición: `si` disparaba dentro de
+    `kasi-taro` y `bi` dentro de `biro`, 409 veces cada una.
+
+    El ejemplo era `kali-taro` hasta el 2026-09-19: `kali` quedó ARCHIVADA por
+    la política «manda la atestiguada» y una forma archivada ya no se detecta
+    (lo fija `test_una_forma_archivada_no_se_detecta_como_vocabulario`). El
+    caso que este test vigila —el límite de morfema— es el mismo con `kasi`."""
     from curiana_lexicon import detectar_uso_vocabulario
 
     lex = _lexico()
-    hallado = set(detectar_uso_vocabulario("kali-taro biro sima-bana", lex))
-    assert "kali" in hallado and "sima" in hallado and "bana" in hallado, (
+    hallado = set(detectar_uso_vocabulario("kasi-taro biro sima-bana", lex))
+    assert "kasi" in hallado and "sima" in hallado and "bana" in hallado, (
         "los morfemas de un compuesto SÍ deben detectarse")
-    assert "li" not in hallado, "'li' casó dentro de 'kali-taro'"
+    assert "si" not in hallado, "'si' casó dentro de 'kasi-taro'"
     assert "bi" not in hallado, "'bi' casó dentro de 'biro'"

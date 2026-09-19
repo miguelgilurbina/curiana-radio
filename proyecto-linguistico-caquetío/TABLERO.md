@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-16 03:18**.
+<!--GENERADO--> Generado el **2026-09-19 19:06**.
 
 ## ¿Vamos bien?
 
@@ -21,7 +21,7 @@ editar_a_mano: no
 |---|---|---|---|
 | Entradas del lexicón **sin cita** | **0** | 82 (2026-07-21) | 🟢 −82 |
 | Hechos del corpus **con referencia** | **209 / 209** | — | 🟢 |
-| Tests del motor | **326 en verde** | 0 rojos | 🟢 |
+| Tests del motor | **752 en verde** | 0 rojos | 🟢 |
 | Gate para reanudar simulaciones | **7 de 9** condiciones | faltan 2 | 🔴 |
 | Decisiones esperando a Miguel | **9 abiertas** | 12 resueltas | 🟡 |
 
@@ -36,16 +36,16 @@ Detalle de cada número: [lexicón](#1-el-lexicón) · [fuentes](#2-las-fuentes)
 
 Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 
-**5514 entradas activas** en `VOCABULARIO_BASE`.
+**5507 entradas activas** en `VOCABULARIO_BASE`.
 
 ### Por lengua (categoría normalizada)
 
 | Lengua (`normalize_source_language()`) | n | % del lexicón |
 |---|---|---|
 | proto-arahuaco | 3571 | 64.8% |
-| wayunaiki | 769 | 13.9% |
+| wayunaiki | 769 | 14.0% |
 | lokono | 638 | 11.6% |
-| caquetío | 401 | 7.3% |
+| caquetío | 394 | 7.2% |
 | taíno | 52 | 0.9% |
 | paraujano | 47 | 0.9% |
 | kalinago | 23 | 0.4% |
@@ -61,11 +61,11 @@ Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 | wayunaiki | 769 |
 | lokono | 638 |
 | caquetío-atestiguado | 228 |
-| caquetío-reconstruido | 86 |
+| caquetío-reconstruido | 80 |
 | caquetío-retroabstraido | 49 |
 | paraujano | 47 |
 | taíno | 43 |
-| caquetío-hipotético | 38 |
+| caquetío-hipotético | 37 |
 | kalinago | 23 |
 | taíno-reconstruido | 9 |
 | jirajaroide | 7 |
@@ -81,12 +81,12 @@ Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 | Capa | n | Qué significa |
 |---|---|---|
 | `caquetío-atestiguado` | 228 | dato histórico citable a fuente concreta |
-| `caquetío-reconstruido` | 86 | vocabulario de trabajo del proyecto |
-| `caquetío-hipotético` | 38 | baja de tier por D10 — la lengua no se discute, la confianza sí |
+| `caquetío-reconstruido` | 80 | vocabulario de trabajo del proyecto |
+| `caquetío-hipotético` | 37 | baja de tier por D10 — la lengua no se discute, la confianza sí |
 | `caquetío` a secas / topónimo | 49 | sin capa declarada en el campo `fuente` |
-| **total familia caquetía** | **401** |  |
+| **total familia caquetía** | **394** |  |
 
-Fuera del habla activa: **441** candidatas `hipotético-no-verificado` en `lexicon_candidatos.py` (aisladas el 2026-06-28) y **6** entrada(s) en `FUERA_DEL_HABLA` (`piache`, `wanee`, `piama`, `apünüin`, `pienchi`, `jarai`).
+Fuera del habla activa: **441** candidatas `hipotético-no-verificado` en `lexicon_candidatos.py` (aisladas el 2026-06-28) y **13** entrada(s) en `FUERA_DEL_HABLA` (`piache`, `wanee`, `piama`, `apünüin`, `pienchi`, `jarai`, `kali`, `kasha`, `habo`, `paa`, `kira`, `joutai`, `mülia`).
 
 ### Censo de citas — la deuda de F1
 
@@ -94,13 +94,13 @@ Entradas de familia caquetía **sin nada en `notas`**: **0** (eran 82 el 2026-07
 
 ### Quién sostiene el «atestiguado»
 
-Cuántas de las 401 entradas de familia caquetía **con `notas`** citan a cada obra. Los patrones de búsqueda salen del `autor` y los `aliases` de cada nota de `4-fuentes/`, así que una obra nueva aparece sola aquí.
+Cuántas de las 394 entradas de familia caquetía **con `notas`** citan a cada obra. Los patrones de búsqueda salen del `autor` y los `aliases` de cada nota de `4-fuentes/`, así que una obra nueva aparece sola aquí.
 
 | Obra | Entradas que la citan | % de las citadas |
 |---|---|---|
-| [[zavala-reyes-2015]] | 219 | 55% |
-| [[zavala-reyes-2018]] | 219 | 55% |
-| [[medina-colina-sxx]] | 62 | 15% |
+| [[zavala-reyes-2015]] | 219 | 56% |
+| [[zavala-reyes-2018]] | 219 | 56% |
+| [[medina-colina-sxx]] | 62 | 16% |
 | [[alvarado-1921]] | 19 | 5% |
 | [[oliver-1989-apendice-a]] | 13 | 3% |
 | [[oliver-1989-cap2]] | 13 | 3% |
@@ -113,14 +113,14 @@ Cuántas de las 401 entradas de familia caquetía **con `notas`** citan a cada o
 | [[castellanos-elegias]] | 5 | 1% |
 | [[gatschet-1885]] | 4 | 1% |
 | [[brinton-1871]] | 4 | 1% |
-| [[jahn-1927]] | 2 | 0% |
-| [[oviedo-y-valdes-1851]] | 2 | 0% |
-| [[las-casas-1875]] | 2 | 0% |
+| [[jahn-1927]] | 2 | 1% |
+| [[oviedo-y-valdes-1851]] | 2 | 1% |
+| [[las-casas-1875]] | 2 | 1% |
 | [[gonzalez-batista-nombre-de-coro]] | 1 | 0% |
 | [[ballesteros-1550]] | 1 | 0% |
 | [[monumento-cerro-santa-ana]] | 1 | 0% |
 
-Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas con `notas` que no citan a ninguna obra del vault: **104**.
+Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas con `notas` que no citan a ninguna obra del vault: **97**.
 
 ---
 
@@ -296,8 +296,8 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1131 en 459 notas indexadas | 🟢 0 rotos |
-| Tests (`curiana_sim/tests/`) | 326 passed, 0 failed | 🟢 |
+| Wikilinks | 1168 en 520 notas indexadas | 🟢 0 rotos |
+| Tests (`curiana_sim/tests/`) | 752 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
 **Avisos de `curiana_polities.py::coherencia_del_canon()`:**
