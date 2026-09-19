@@ -18,6 +18,12 @@ Lo que vigilan estos tests, en orden:
       (patrón de `tests/test_escena_motor.py`). Lo que SÍ se mueve —y es el
       corte de serie declarado— es el prompt de quien copia la plantilla:
       ahí la forma deja de aparecer en las vías comunitarias.
+  (e) EL EJEMPLO DE LA IDENTIDAD SE MUEVE CON LA PUERTA (corte del
+      2026-09-19, Miguel: «Vale»): el ejemplo pasó de `kali-bana` a
+      `biro-bana`, así que ninguna plantilla puede enseñar ya `kali-bana` y
+      `biro-bana` tiene que estar en la lista. La lista se construye
+      llamando a las plantillas: si alguien vuelve a escribirla a mano, esto
+      se cae.
 """
 import json
 import random
@@ -39,14 +45,18 @@ from curiana_observer import ObserverAgent
 from curiana_perfiles import cargar_perfil
 from curiana_state import estado_inicial, estado_inicial_test
 
-# `kali-bana` es el ejemplo LITERAL de la plantilla de identidad y `naa-ni` el
-# del bloque de morfología; `warawara` está en el vocabulario base; `wana-ni`
-# lo enseña el refuerzo y `cati` el rescate. `kuru-bacoa` no la enseña nadie.
-DE_PLANTILLA = ("kali-bana", "naa-ni", "warawara", "wana-ni", "ma-arua", "cati")
+# `biro-bana` es el ejemplo LITERAL de la plantilla de identidad desde el corte
+# del 2026-09-19 (antes lo era `kali-bana`) y `naa-ni` el del bloque de
+# morfología; `warawara` está en el vocabulario base; `wana-ni` lo enseña el
+# refuerzo y `cati` el rescate. `kuru-bacoa` no la enseña nadie.
+EJEMPLO_DE_LA_IDENTIDAD = "biro-bana"
+EJEMPLO_RETIRADO = "kali-bana"          # el de antes del 2026-09-19
+DE_PLANTILLA = (EJEMPLO_DE_LA_IDENTIDAD, "naa-ni", "warawara", "wana-ni",
+                "ma-arua", "cati")
 LEGITIMA = "kuru-bacoa"
 RESPUESTA = f"Taya wana-ka arima wara kari. [{LEGITIMA}: kuru+-bacoa = la arboleda]."
 RESPUESTA_COPIA = ("Taya wana-ka arima wara kari. "
-                   "[kali-bana: kali+-bana = cerro del sol].")
+                   "[biro-bana: biro+-bana = cerro de la sal].")
 _CALL_AGENT = orch.call_agent
 
 
@@ -72,7 +82,7 @@ def test_a_la_lista_se_construye_desde_las_plantillas():
         de_los_textos |= lx.formas_en_texto(texto)
     assert FORMAS_DE_PLANTILLA == frozenset(lx.VOCABULARIO_BASE) | de_los_textos
     # y el ejemplo de la identidad está dentro porque la identidad lo dice
-    assert "kali-bana" in lx.formas_en_texto(IDENTIDAD_LINGUISTICA)
+    assert EJEMPLO_DE_LA_IDENTIDAD in lx.formas_en_texto(IDENTIDAD_LINGUISTICA)
 
 
 def test_a_es_una_puerta_y_no_dos():
@@ -140,11 +150,11 @@ def test_b_lo_rechazado_no_puede_adoptarse_ni_entra_en_palabras_activas():
     propuesta no hay adopción, y sin adopción no entra en `palabras_activas()`
     —que es lo que el scorer reconoce— ni en el diccionario de cierre."""
     lexico = LexicoComunitario()
-    lexico.registrar_neologismo(_neo("kali-bana", autor="Simaure"))
+    lexico.registrar_neologismo(_neo(EJEMPLO_DE_LA_IDENTIDAD, autor="Simaure"))
     assert lexico.neologismos_pendientes() == []
-    assert lexico.adoptar("kali-bana", "Dakawa", turno=2) is None
-    assert lexico.adoptar("kali-bana", "Chuchubi", turno=3) is None
-    assert "kali-bana" not in lexico.palabras_activas()
+    assert lexico.adoptar(EJEMPLO_DE_LA_IDENTIDAD, "Dakawa", turno=2) is None
+    assert lexico.adoptar(EJEMPLO_DE_LA_IDENTIDAD, "Chuchubi", turno=3) is None
+    assert EJEMPLO_DE_LA_IDENTIDAD not in lexico.palabras_activas()
     assert lexico.adoptados_en_dos_ambitos() == []
 
 
@@ -157,7 +167,7 @@ def test_b_el_observer_no_registra_la_copia_pero_sigue_contandola_como_propuesta
     registro = observer.analizar(agente="Simaure", etnia="caquetío", tier=1,
                                  texto=RESPUESTA_COPIA, dia=1, turno=1,
                                  momento="amanecer", estacion="seca")
-    assert [n.forma for n in registro.neologismos_extraidos] == ["kali-bana"]
+    assert [n.forma for n in registro.neologismos_extraidos] == [EJEMPLO_DE_LA_IDENTIDAD]
     assert lexico._neologismos == []
     assert len(lexico.rechazos_de_plantilla) == 1
 
@@ -168,12 +178,14 @@ def test_b_un_lexico_viejo_no_cuela_la_forma_por_la_puerta_de_atras(tmp_path):
     la para aquí — y la cuenta."""
     ruta = tmp_path / "curiana_lexico.json"
     ruta.write_text(json.dumps({
-        "lexico": {"kali-bana": {"significado": "cerro del sol", "autor": "x", "dia": 1}},
-        "neologismos": [_neo("kali-bana").to_dict(), _neo(LEGITIMA).to_dict()],
+        "lexico": {EJEMPLO_DE_LA_IDENTIDAD: {"significado": "cerro de la sal",
+                                             "autor": "x", "dia": 1}},
+        "neologismos": [_neo(EJEMPLO_DE_LA_IDENTIDAD).to_dict(),
+                        _neo(LEGITIMA).to_dict()],
     }, ensure_ascii=False), encoding="utf-8")
     lexico = LexicoComunitario.load(str(ruta))
     assert [n.forma for n in lexico._neologismos] == [LEGITIMA]
-    assert "kali-bana" not in lexico.palabras_activas()
+    assert EJEMPLO_DE_LA_IDENTIDAD not in lexico.palabras_activas()
     assert len(lexico.rechazos_de_plantilla) == 1
     # y el control: apagando la puerta se carga como antes del corte
     viejo = LexicoComunitario.load(str(ruta), filtrar_plantilla=False)
@@ -185,15 +197,15 @@ def test_b_la_copia_no_entra_en_competencia():
     3,1 y 2,9: el ejemplo del prompt compitiendo contra las formas de verdad."""
     comp = koine.CompetenciaLexica()
     comp.activar("cuentas_vidrio", "unas cuentas brillantes")
-    comp.proponer("cuentas_vidrio", "kali-bana", "Chirwa")
+    comp.proponer("cuentas_vidrio", EJEMPLO_DE_LA_IDENTIDAD, "Chirwa")
     comp.proponer("cuentas_vidrio", "brilu-uco", "Hayo")
-    comp.registrar_uso("kali-bana", "Uria")
+    comp.registrar_uso(EJEMPLO_DE_LA_IDENTIDAD, "Uria")
     assert list(comp.referentes["cuentas_vidrio"]["variantes"]) == ["brilu-uco"]
     # control: sin la puerta, compite (es el motor de antes del corte)
     antes = koine.CompetenciaLexica(filtrar_plantilla=False)
     antes.activar("cuentas_vidrio", "unas cuentas brillantes")
-    antes.proponer("cuentas_vidrio", "kali-bana", "Chirwa")
-    assert "kali-bana" in antes.referentes["cuentas_vidrio"]["variantes"]
+    antes.proponer("cuentas_vidrio", EJEMPLO_DE_LA_IDENTIDAD, "Chirwa")
+    assert EJEMPLO_DE_LA_IDENTIDAD in antes.referentes["cuentas_vidrio"]["variantes"]
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -239,13 +251,14 @@ def test_c_el_cierre_dice_cuantas_acunaciones_rechazo(monkeypatch, tmp_path, cap
     es la cifra que avisa de que la plantilla se está copiando."""
     _correr(monkeypatch, tmp_path, RESPUESTA_COPIA)
     salida = capsys.readouterr().out
-    assert "acuñaciones rechazadas por estar en el prompt: kali-bana" in salida
+    assert ("acuñaciones rechazadas por estar en el prompt: "
+            f"{EJEMPLO_DE_LA_IDENTIDAD}") in salida
     # y la disputa del día no tiene al ejemplo del prompt entre sus variantes
     with open(tmp_path / "curiana_koine.json", encoding="utf-8") as f:
         koine_json = json.load(f)
     variantes = [v for ref in koine_json["competencia"]["referentes"].values()
                  for v in ref["variantes"]]
-    assert "kali-bana" not in variantes
+    assert EJEMPLO_DE_LA_IDENTIDAD not in variantes
 
 
 def test_c_sin_copias_el_cierre_no_dice_nada(monkeypatch, tmp_path, capsys):
@@ -338,5 +351,82 @@ def test_d_lo_que_si_se_mueve_es_el_prompt_de_quien_copia(monkeypatch):
     def lineas_de_via(prompts):
         return [l for p in prompts for l in p["system"].splitlines()
                 if l.startswith(vias)]
-    assert any("kali-bana" in l for l in lineas_de_via(sin))
-    assert not any("kali-bana" in l for l in lineas_de_via(con))
+    assert any(EJEMPLO_DE_LA_IDENTIDAD in l for l in lineas_de_via(sin))
+    assert not any(EJEMPLO_DE_LA_IDENTIDAD in l for l in lineas_de_via(con))
+
+
+# ══════════════════════════════════════════════════════════════════════
+# (e) el ejemplo de la identidad se mueve CON la puerta
+# ══════════════════════════════════════════════════════════════════════
+
+def test_e_la_puerta_se_movio_con_el_ejemplo():
+    """Corte del 2026-09-19 (Miguel: «Vale»). El ejemplo pasó de `kali-bana`
+    a `biro-bana` y la lista —que se construye LLAMANDO a las plantillas— se
+    movió sola: la vieja salió y la nueva entró.
+
+    `kali` y `biro` siguen los dos dentro por ser claves del lexicón: la
+    puerta incluye `VOCABULARIO_BASE` entero. Lo que cambia es el COMPUESTO.
+    """
+    assert es_forma_de_plantilla("biro-bana")
+    assert not es_forma_de_plantilla(EJEMPLO_RETIRADO)
+    assert "biro-bana" in FORMAS_DE_PLANTILLA
+    assert EJEMPLO_RETIRADO not in FORMAS_DE_PLANTILLA
+    # y las dos raíces siguen dentro, que es otra cosa
+    assert es_forma_de_plantilla("kali") and es_forma_de_plantilla("biro")
+
+
+def test_e_ninguna_plantilla_ensena_ya_la_forma_retirada():
+    """Ninguno de los diez textos estáticos dice `kali-bana`, ni siquiera de
+    pasada: si alguien la reintroduce en una plantilla, vuelve a la puerta sin
+    que nadie lo decida y esto lo caza.
+
+    Se mira el texto ENTERO de cada plantilla, no sólo la lista de formas:
+    `formas_en_texto()` es el criterio ancho y aun así un `kali-bana` escrito
+    dentro de una glosa castellana pasaría — aquí no.
+    """
+    for texto in lx._textos_de_plantilla():
+        assert EJEMPLO_RETIRADO not in texto
+        assert EJEMPLO_RETIRADO not in lx.formas_en_texto(texto)
+    # el control de que el test mide algo: la forma NUEVA sí está, y en una
+    assert sum(1 for t in lx._textos_de_plantilla()
+               if "biro-bana" in lx.formas_en_texto(t)) == 1
+
+
+def test_e_la_forma_retirada_vuelve_a_poder_acunarse():
+    """Consecuencia declarada del corte: al salir de la puerta, `kali-bana`
+    deja de estar vetada y se registra como cualquier acuñación.
+
+    No es un descuido: vetarla por haber sido ejemplo histórico sería una
+    decisión de Miguel, y no está tomada. El test fija la conducta de HOY para
+    que el día que se decida, se vea cambiar.
+    """
+    lexico = LexicoComunitario()
+    assert lexico.registrar_neologismo(_neo(EJEMPLO_RETIRADO)) is True
+    assert [n.forma for n in lexico._neologismos] == [EJEMPLO_RETIRADO]
+    assert lexico.rechazos_de_plantilla == []
+
+
+def test_e_el_ejemplo_es_morfologicamente_correcto_y_del_mundo():
+    """Las piezas del ejemplo nuevo, contra el canon: `biro` es una entrada
+    ATESTIGUADA del lexicón y `-bana` un sufijo de las reglas del motor (D9,
+    'cerro, sitio alto'). El compuesto no es clave de nadie: es una acuñación
+    de manual, que es justo lo que el ejemplo enseña a hacer.
+    """
+    biro = lx.VOCABULARIO_BASE["biro"]
+    assert biro["fuente"] == "caquetío-atestiguado"
+    assert biro["sig"] == "sal"
+    assert "-bana" in {a.lower() for a in lx.TODAS_LAS_REGLAS}
+    assert "biro-bana" not in lx.VOCABULARIO_BASE
+    # y el ejemplo se lee en la plantilla tal cual, con su molde
+    assert ("[biro-bana: biro+-bana = cerro de la sal]"
+            in IDENTIDAD_LINGUISTICA)
+
+
+def test_e_la_era_1_tambien_cambia():
+    """`IDENTIDAD_LINGUISTICA` es UNA constante y la leen los dos mundos: el
+    corte toca también la Curiana, que deja de ser byte a byte con sus runs
+    viejos. Está declarado en la bitácora (punto 9 del cambio de instrumento)
+    y aquí se fija que no hay una segunda plantilla por era escondida.
+    """
+    assert orch._IDENTIDAD_LINGUISTICA is IDENTIDAD_LINGUISTICA
+    assert lx._textos_de_plantilla()[0] is IDENTIDAD_LINGUISTICA

@@ -7356,9 +7356,10 @@ class LexicoComunitario:
 
         La puerta (corte de serie del 2026-09-18, decisión de Miguel «dale pues
         con A»): una forma que el prompt YA ENSEÑA no es una acuñación. Está en
-        `VOCABULARIO_BASE` o es un ejemplo de una plantilla —`kali-bana` es el
+        `VOCABULARIO_BASE` o es un ejemplo de una plantilla —`biro-bana` es el
         ejemplo literal de `IDENTIDAD_LINGUISTICA`, que los 63 leen en su
-        system prompt cada turno— y copiarla no es inventar nada. Rechazada
+        system prompt cada turno; hasta el corte del 2026-09-19 lo era
+        `kali-bana`— y copiarla no es inventar nada. Rechazada
         aquí, no entra en evaluación, no puede adoptarse, no pasa a
         `palabras_activas()` y no sale en el diccionario de cierre.
 
@@ -7576,12 +7577,30 @@ class LexicoComunitario:
 # decide qué forma es «del prompt» (`FORMAS_DE_PLANTILLA`) tiene que poder
 # leerla sin importar el bucle. El orquestador la sigue exponiendo como
 # `_IDENTIDAD_LINGUISTICA`; el texto no cambió un byte.
+#
+# EL EJEMPLO — corte de serie del 2026-09-19 (Miguel: «Vale» a la recomendación
+# de §7(a) de `pares-atestiguado-reconstruido-2026-09-19.md`). Era
+# `[kali-bana: kali+-bana = cerro del sol]` y `kali` es la forma RECONSTRUIDA
+# de un par abierto: con el muestreador neutro para «sol» (60 contra 63 de
+# 1.260 prompts del ensayo) el uso iba 232 a 1 a favor de `kali`, y todo el
+# desequilibrio era este ejemplo, que los 63 leen cada turno. El corte de #169
+# le quitó a `kali-bana` el derecho a registrarse pero no tocó el MOLDE: en la
+# serie C limpia se dijeron `kali-mara-bana` 12 veces, `kali-ubana-gua` 12,
+# `kali-naa-iro` 10 y `kali-raku-biro` 5. Ahora enseña `biro-bana`, que cumple
+# las cinco condiciones medidas: las dos piezas atestiguadas (`-bana` 'cerro,
+# sitio alto' lo cerró D9 con seis apoyos; `biro` 'sal' es Zavala Reyes 2015),
+# la raíz es el recurso del mundo de la era 2 —`[Tu tierra]` habla de la sal en
+# Guaranao—, no es homógrafa de un nombre del elenco, no es forma de ningún par
+# abierto de §6, y el compuesto NO SE HA DICHO NUNCA en la base: el ejemplo no
+# bendice a nadie que ya esté compitiendo. Al cambiar el texto, la puerta se
+# mueve sola: `kali-bana` sale de `FORMAS_DE_PLANTILLA` y `biro-bana` entra.
+# La ERA 1 también lo lee: deja de ser byte a byte con los runs de la Curiana.
 IDENTIDAD_LINGUISTICA = """[TU LENGUA MATERNA ES EL CAQUETÍO]:
 Piensas y sientes en caquetío-arahuaco. El español es una lengua forastera.
 HABLA EN CAQUETÍO: pronombre + verbo-aspecto + complemento caquetío.
 Si te falta una palabra, créala con los morfemas que tienes. Escríbela [entre corchetes].
 Glosa al español solo entre paréntesis, al final, si es imprescindible.
-EJEMPLO: "Taya wana-ka arima wara kari. Ta-barsure naba-ni. [kali-bana: kali+-bana = cerro del sol]."
+EJEMPLO: "Taya wana-ka arima wara kari. Ta-barsure naba-ni. [biro-bana: biro+-bana = cerro de la sal]."
 NO empieces con "Estoy..." ni "El sol..." — empieza con "Taya..." o "Nüma..." o directamente con el verbo.
 PRIORIDAD DE LENGUA — ESTO ES UN ERROR GRAVE, NO UNA PREFERENCIA:
 Wayunaiki, lokono, taíno y garífuna son TAN AJENAS para ti como el español. Son lenguas
@@ -8821,8 +8840,10 @@ def formas_en_texto(texto: str) -> frozenset:
 def _textos_de_plantilla() -> list[str]:
     """Las plantillas estáticas que ENSEÑAN formas, cada variante una vez.
 
-    Se construye llamándolas, nunca copiándolas: si mañana el ejemplo de la
-    identidad cambia de `kali-bana` a otra cosa, la puerta cambia con él."""
+    Se construye llamándolas, nunca copiándolas: el ejemplo de la identidad
+    cambió de `kali-bana` a `biro-bana` el 2026-09-19 y la puerta se movió
+    sola — `kali-bana` salió de la lista y `biro-bana` entró, sin tocar aquí
+    un solo carácter. `tests/test_formas_de_plantilla.py` lo fija."""
     textos = [IDENTIDAD_LINGUISTICA, prompt_reglas_completo(), prompt_reglas_breve()]
     # El refuerzo tiene cuatro tramos por score y cada uno enseña lo suyo
     # (el más bajo, `Taya wana-ni…`; el tercero, `ta-barsure, wa-duna, ma-arua`).

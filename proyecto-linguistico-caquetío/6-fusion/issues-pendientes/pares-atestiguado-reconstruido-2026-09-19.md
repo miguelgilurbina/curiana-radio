@@ -5,8 +5,15 @@ Miguel, 2026-09-18, de oído:
 > «¿Por qué es `kali` si sol es `kazi`?»
 
 **Para que Miguel decida, par a par.** Esto es una MEDICIÓN del lexicón, de la
-base y del prompt. **No se tocó nada**: ni `curiana_lexicon.py`, ni el motor,
-ni las plantillas (regla 5).
+base y del prompt. Al redactarlo **no se tocó nada**: ni `curiana_lexicon.py`,
+ni el motor, ni las plantillas (regla 5).
+
+> **Estado (2026-09-19):** de las decisiones que pide este issue sólo **§7(a)
+> está decidida y aplicada** (Miguel: «Vale» → el ejemplo de
+> `IDENTIDAD_LINGUISTICA` pasa a `biro-bana`; corte de serie declarado, punto
+> 9 de `BITACORA_RUNS.md`). **Los 19 pares de §6 y la pregunta §7(b) siguen
+> abiertos**, y ninguna entrada del lexicón se ha editado: `biro` y `-bana` ya
+> estaban atestiguadas, sólo se usan.
 
 | archivo | qué tiene |
 |---|---|
@@ -305,6 +312,32 @@ pueden aplicar en el mismo corte; hacerlas por separado cuesta el doble.
 
 ### (a) ¿El ejemplo de `IDENTIDAD_LINGUISTICA` deja de usar `kali-bana`?
 
+> ## ✅ DECIDIDA Y APLICADA — 2026-09-19
+>
+> **Miguel: «Vale»** a la recomendación de abajo. El ejemplo pasa a
+> `[biro-bana: biro+-bana = cerro de la sal]`.
+>
+> - Cambio: `curiana_sim/curiana_lexicon.py::IDENTIDAD_LINGUISTICA`, una línea.
+> - **Corte de serie declarado**: punto 9 del bloque «Cambio de instrumento»
+>   de `5-experimento/BITACORA_RUNS.md`. La serie C limpia se re-corre otra
+>   vez desde el día 1; `b847944d` → `17c2271e` → `9a98de67` quedan del otro
+>   lado.
+> - Decisión: `6-fusion/decisiones_tanda_2026-09-19.yaml` (`d19.a`).
+> - Medición del corte: `6-fusion/medicion_ejemplo_identidad_2026-09-19.yaml`
+>   (`6-fusion/scripts/medir_ejemplo_identidad.py`). La puerta se movió sola —
+>   sale `kali-bana`, entra `biro-bana`, 5.945 formas antes y después — y el
+>   prompt se mueve **+2 caracteres** en los 123 (63 de la era 2, 60 de la
+>   era 1).
+> - **La era 1 deja de ser byte a byte**: `IDENTIDAD_LINGUISTICA` es UNA
+>   constante y los dos mundos la leen. No se parte en dos plantillas.
+> - **Dos cosas que quedan para Miguel**, y están en la decisión: (1)
+>   `kali-bana` vuelve a poder acuñarse al salir de la puerta — vetarla por
+>   haber sido ejemplo histórico sería otra decisión y NO está tomada; (2) la
+>   condición 5 de abajo se midió sobre `word_uses` y sobre el TEXTO da otro
+>   número (ver el aviso en la tabla de candidatas).
+>
+> Las 19 decisiones de §6 y la pregunta (b) **siguen abiertas**.
+
 Hoy dice, y lo leen **los 63 cada turno** (`curiana_orchestrator_v2.py`, el
 ensamblado del system prompt no mira el tier):
 
@@ -326,9 +359,29 @@ abierto, y cuyo compuesto con `-bana` **no se haya dicho nunca** en la base—:
 
 | propuesta | raíz | cita | usos de la raíz |
 |---|---|---|---:|
-| **`[biro-bana: biro+-bana = cerro de la sal]`** | `biro` 'sal' | Zavala Reyes 2015 (Angulo Molina); recurso estratégico de Coro | 694 |
+| **`[biro-bana: biro+-bana = cerro de la sal]`** ← **la elegida** | `biro` 'sal' | Zavala Reyes 2015 (Angulo Molina); recurso estratégico de Coro | 694 |
 | `[kari-bana: kari+-bana = cerro de la orilla]` | `kari` 'orilla del mar' (`forma_fuente: cari`) | Zavala Reyes 2015 #66 (E); Cruz Esteves 1989 vía van Buurt | 78 |
 | `[maure-bana: maure+-bana = cerro del algodón]` | `maure` 'fibra de algodón' | Zavala nota al pie (3); Alvarado 1921 p.216; Carvajal; Castellanos | 217 |
+
+> ⚠️ **La condición 5 («el compuesto no se ha dicho nunca») se midió sobre
+> `word_uses`, y ahí las tres dan 0 — pero `word_uses` sólo tiene lo que el
+> SCORER reconoce**, y una forma que nadie adopta no llega nunca a esa tabla
+> (es la trampa «una forma recién acuñada no es una `palabra_activa`»). Sobre
+> el TEXTO de las respuestas, medido el 2026-09-19 al aplicar la decisión:
+>
+> | compuesto | respuestas | agentes | `word_uses` | `neologisms` | serie C limpia |
+> |---|---:|---:|---:|---:|---:|
+> | `biro-bana` | 198 | 45 | 0 | 0 | **7** |
+> | `kari-bana` | 31 | 23 | 0 | 0 | 3 |
+> | `maure-bana` | 29 | 11 | 0 | 0 | **0** |
+> | *`kali-bana` (la retirada)* | *617* | *89* | *235* | *5* | *20* |
+>
+> Lo que la condición quería evitar sigue en pie: `biro-bana` no está
+> compitiendo por ningún referente (0 en `neologisms`, 0 en `word_uses`, no es
+> variante de ninguna disputa abierta). Pero «nunca» era otra cosa, y la
+> decisión se tomó con el número de `word_uses` delante. Si la condición que
+> se quería era la del texto, la que la cumple en la serie C limpia es
+> `maure-bana`. **No se ha cambiado nada**: lo aplicado es `biro-bana`.
 
 **Recomiendo `biro-bana`.** Las dos piezas son atestiguadas (`-bana` 'cerro,
 sitio alto' lo cerró D9 con seis apoyos), la raíz es la que el mundo de la era
@@ -370,9 +423,11 @@ Una línea por decisión, como en `mundo-era2-sitios-y-clima.md` §6:
 
 ```
 1 A · 2 B · 3 B · … · 19 C
-a: biro-bana   (o: se queda · otra raíz)
+a: biro-bana   (o: se queda · otra raíz)   ← RESPONDIDA: «Vale» (biro-bana), aplicada
 b: no · sí · sólo desempate dentro del par
 ```
+
+Lo que queda por responder: **las 19 de §6 y la (b)**.
 
 ---
 
@@ -390,7 +445,15 @@ b: no · sí · sólo desempate dentro del par
   escrita en las dos entradas.
 - **El corte del 2026-09-18 cerró la puerta a la FORMA, no al MOLDE.**
   `kali-bana` ya no se registra, pero `kali-mara-bana` sí. Si eso es lo que se
-  quería, está bien; si no, es otra decisión.
+  quería, está bien; si no, es otra decisión. *(2026-09-19: §7(a) le quita a
+  la plantilla el derecho a enseñar `kali-bana`, pero el molde `X-bana` sigue
+  siendo del instrumento — ahora con `biro` en vez de `kali`. La deuda no se
+  cierra, cambia de raíz. Medido: `kali-…-bana` lleva 233 respuestas en la
+  base sin que ninguna plantilla lo enseñe.)*
+- **`kali-bana` vuelve a poder acuñarse** al salir de `FORMAS_DE_PLANTILLA`
+  (2026-09-19). Si debe quedar vetada por haber sido ejemplo histórico, es una
+  decisión de Miguel y **no está implementada**; `test_e_la_forma_retirada_
+  vuelve_a_poder_acunarse` fija la conducta de hoy.
 - **El reparto por cubos del muestreador** (12 cubos de una voz sobre 25) hace
   que la exposición de una voz dependa de en qué `categoria` la pusieron. No es
   de este issue, pero contamina cualquier medición de exposición futura.
