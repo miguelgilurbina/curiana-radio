@@ -13,9 +13,9 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-18**.
+<!--GENERADO--> Generado el **2026-09-19**.
 
-**2641 ítems propuestos** en 72 propuestas, más **6 issue(s)/comentario(s) redactados sin publicar**.
+**2641 ítems propuestos** en 72 propuestas, más **7 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -97,6 +97,7 @@ Vistas generadas en `6-fusion/` (no cuentan: juntan lo que ya está arriba):
 - `achagua_neira_ribero_1762.yaml` — generado por `lectura en imagen por el escriba (agente Opus 5). Primera pasada 2026-09-12 (40 pliegos); segunda pasada 2026-09-12, que cierra el vocabulario entero (los 31 pliegos que faltaban), mina la lista de verbos del arte y vuelve sobre las 14 dudas`
 - `lokono_perea_1942.yaml` — generado por `curiana_sim/minar_perea.py`
 - `lokono_verbos_perea_1942.yaml` — generado por `6-fusion/scripts/minar_perea_verbos.py`
+- `pares_atestiguado_reconstruido_2026-09-19.yaml` — generado por `6-fusion/scripts/medir_pares_atestiguado_reconstruido.py`
 - `tainismos_en_medina.yaml` — generado por `6-fusion/scripts/tainismos_medina_a_caquetio.py`
 - `toponimos_mapa_kaketiana.yaml` — generado por `curiana_sim/barrer_mapa.py`
 - `toponimos_por_fuente.yaml` — generado por `curiana_sim/juntar_toponimos.py`
@@ -129,6 +130,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `frontera-entre-nodos-2026-09-17.md` | La frontera entre nodos: el motor no tiene ninguna |
 | `golfete-en-paraguana-2026-09-17.md` | «Golfete» en Paraguaná: por dónde entra, a quién le sobra y qué decidir |
 | `mundo-era2-sitios-y-clima.md` | El mundo de la era 2, atado a los nodos: sitios y clima |
+| `pares-atestiguado-reconstruido-2026-09-19.md` | Dos palabras para la misma cosa: los pares atestiguado / reconstruido |
 
 ---
 

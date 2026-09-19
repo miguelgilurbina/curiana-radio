@@ -1,0 +1,1661 @@
+# ─────────────────────────────────────────────────────────────────
+# PARES ATESTIGUADO / DERIVADO — MEDICIÓN (no toca el canon, regla 5)
+#
+# GENERADO por 6-fusion/scripts/medir_pares_atestiguado_reconstruido.py
+# No se edita a mano: se regenera. Las opciones para Miguel están en
+# 6-fusion/issues-pendientes/pares-atestiguado-reconstruido-2026-09-19.md
+# ─────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-19'
+  generado_por: 6-fusion/scripts/medir_pares_atestiguado_reconstruido.py
+  elenco: era2
+  perfil_de_exposicion: era2
+  motivo: >-
+    Miguel, 2026-09-18, de oído: «¿por qué es kali si sol es kazi?». El
+    lexicón tiene dos palabras vivas para 'sol' y el elenco dice la
+    reconstruida 24 a 1.
+criterio_de_glosa:
+  normalizacion: >-
+    NFC + minúsculas; fuera lo que va entre paréntesis y corchetes;
+    fuera los diacríticos (á→a, ü→u, ñ→n); fuera el artículo inicial y
+    la puntuación de los extremos; espacios colapsados. NO se aplica
+    ningún diccionario de sinónimos: decidir que dos glosas distintas
+    significan lo mismo es una afirmación sobre el significado y la
+    decide Miguel (regla 2).
+  estricto: glosa normalizada COMPLETA idéntica
+  laxo: >-
+    estricto, o las dos glosas comparten un sinónimo de los que ellas
+    mismas separan con coma o punto y coma («cerro, sitio alto» y
+    «cerro»). Incluye el caso «primer sinónimo igual». Es el número
+    que sirve para decidir.
+  contencion: >-
+    EXPLORATORIO Y RUIDOSO, listado aparte: una glosa normalizada
+    entera cae dentro de la otra como secuencia de palabras. Casi todo
+    lo que añade es un modificador compartido —«grande» dentro de «ave
+    rapaz grande»—, no un par de palabras rivales. No se cuenta en el
+    número laxo y no entra en la cola de decisión.
+  familia_de_compuestos: >-
+    La raíz la decide el MOTOR, no un regex de este script:
+    `_candidatos_motor()` reproduce la construcción de candidatos de
+    `curiana_lexicon._familia_de_token()` con sus propias tablas de
+    afijos, y el control lo verifica token a token contra el motor.
+    Un token es de la familia si ES la raíz, si la lleva como elemento
+    separado por guion, o si la raíz es candidato tras deshacer
+    prefijos y sufijos. Residuo declarado: las formas aglutinadas sin
+    guion no entran (`kali-kasibana` es de `kali`, no de `kasi`).
+  variante_ortografica: >-
+    Esqueleto fonémico IDÉNTICO (`curiana_fonotactica.fonemizar`, con
+    y sin la regla abierta gu→w, comparando también `forma_fuente`).
+    Una sola edición NO basta: `kasi`/`kali` difieren en un carácter y
+    son dos palabras.
+censo:
+  entradas_caquetio_con_capa: 401
+  atestiguado: 228
+  reconstruido: 86
+  retroabstraido: 49
+  hipotetico: 38
+  caquetio_a_secas_fuera_del_criterio: 0
+  pares_estricto: 3
+  pares_laxo: 19
+  pares_estricto_con_reconstruido: 3
+  pares_estricto_con_retroabstraido: 0
+  pares_estricto_con_hipotetico: 0
+  pares_laxo_con_reconstruido: 17
+  pares_laxo_con_retroabstraido: 0
+  pares_laxo_con_hipotetico: 2
+  por_contencion_exploratorio: 28
+  solo_otra_grafia: 0
+  mismo_esqueleto_fonemico_por_la_forma: 5
+  quedan_para_decidir: 19
+control:
+  tokens_de_la_base: 2271
+  discrepancias_con_familia_de_token: 0
+  verde: true
+  serie_c_limpia_es_cadena: true
+  serie_c_limpia_runs: b847944d, 17c2271e, 9a98de67
+  serie_c_limpia_dias: 3
+  serie_c_limpia_turnos: 18
+exposicion_global:
+  prompts_del_ensayo_de_muestreo: 1260
+  semilla: 20260919
+  bloques_tu_tierra: 126
+  # A cuánta gente llega cada plantilla, por tier del elenco activo.
+  # `IDENTIDAD_LINGUISTICA` no depende del tier: el orquestador la
+  # mete en el system prompt de TODOS, cada turno.
+  agentes_del_elenco: 63
+  identidad_linguistica_llega_a: 63
+  prompt_reglas_completo_llega_a: 15  # tier 1
+  prompt_reglas_breve_llega_a: 45  # tiers 2 y 3
+  # El muestreo reparte UNA voz por cubo antes que nada: la exposición
+  # la decide el tamaño del cubo, no la capa. `para` está sola en
+  # `geografia` y sale en todos los prompts; `kasi` comparte `sust`
+  # con otras 225 y sale en uno de cada cinco.
+  voces_caquetias_del_perfil_era2: 363
+  cubos_del_muestreador: 25
+  cubo_mas_grande: 226
+  cubos_de_una_sola_voz: 12
+quien_gana:
+  # Cruce de «a quién enseña una plantilla estática» con «quién se
+  # dice más» en toda la base, sobre los pares de decisión. NO es
+  # causal: nadie ha corrido el contrafactual. Es la tabla que hay.
+  "la enseña sólo la derivada → gana la derivada": 12
+  "la enseña las dos → gana la atestiguada": 1
+  "la enseña las dos → gana la derivada": 2
+  "la enseña ninguna → gana la atestiguada": 4
+  detalle:
+    - {glosa: "luna", atestiguada: apana, derivada: kasha, la_enseña: "sólo la derivada", gana: derivada, uso: "16:168"}
+    - {glosa: "sol", atestiguada: kasi, derivada: kali, la_enseña: "sólo la derivada", gana: derivada, uso: "10:2321"}
+    - {glosa: "luna", atestiguada: kati, derivada: kasha, la_enseña: "las dos", gana: derivada, uso: "42:168"}
+    - {glosa: "pez", atestiguada: bagre, derivada: arima, la_enseña: "sólo la derivada", gana: derivada, uso: "0:643"}
+    - {glosa: "arbol", atestiguada: bara, derivada: kuru, la_enseña: "las dos", gana: derivada, uso: "38:211"}
+    - {glosa: "iguana", atestiguada: barbache, derivada: iguana, la_enseña: "ninguna", gana: atestiguada, uso: "2:0"}
+    - {glosa: "hijo", atestiguada: dare, derivada: buri, la_enseña: "sólo la derivada", gana: derivada, uso: "18:303"}
+    - {glosa: "crear", atestiguada: eroa, derivada: chaa, la_enseña: "sólo la derivada", gana: derivada, uso: "97:1256"}
+    - {glosa: "espanto", atestiguada: etamo, derivada: mülia, la_enseña: "ninguna", gana: atestiguada, uso: "20:0"}
+    - {glosa: "arbol", atestiguada: igi, derivada: kuru, la_enseña: "sólo la derivada", gana: derivada, uso: "6:211"}
+    - {glosa: "escuchar", atestiguada: jai, derivada: kira, la_enseña: "sólo la derivada", gana: derivada, uso: "167:831"}
+    - {glosa: "viento", atestiguada: juri, derivada: joutai, la_enseña: "ninguna", gana: atestiguada, uso: "544:19"}
+    - {glosa: "sembrar", atestiguada: jusual, derivada: kono, la_enseña: "sólo la derivada", gana: derivada, uso: "4:221"}
+    - {glosa: "cactus columnar", atestiguada: kadushi, derivada: coro, la_enseña: "ninguna", gana: atestiguada, uso: "120:1"}
+    - {glosa: "mar", atestiguada: para, derivada: habo, la_enseña: "las dos", gana: atestiguada, uso: "311:125"}
+    - {glosa: "mar", atestiguada: parawa, derivada: habo, la_enseña: "sólo la derivada", gana: derivada, uso: "0:125"}
+    - {glosa: "cerro", atestiguada: turumako, derivada: sima, la_enseña: "sólo la derivada", gana: derivada, uso: "1:510"}
+    - {glosa: "anciano", atestiguada: wasima, derivada: wanü, la_enseña: "sólo la derivada", gana: derivada, uso: "10:120"}
+    - {glosa: "ofrecer", atestiguada: were, derivada: paa, la_enseña: "sólo la derivada", gana: derivada, uso: "17:1222"}
+
+# ── Los pares que son una DECISIÓN de canon (ordenados por uso de la derivada) ──
+pares:
+  - glosa: "sol"
+    criterio: estricto
+    capa_derivada: reconstruido
+    solo_otra_grafia: false
+    a_una_edicion: [kasi~kali]
+    atestiguada:
+      forma: kasi
+      fuente: caquetío-atestiguado
+      cat: sust
+      glosa: "sol"
+      forma_fuente: cazi
+      nucleo_fundacional: false
+      homografa_de_agente: false
+      notas: "Zavala Reyes 2015, glosario #76 (GC): «Sol»"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: []
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 60/1260
+        en_el_prompt_entero: 64/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 9, compuestos: 1, total: 10}
+        serie_c_limpia: {suelta: 3, compuestos: 1, total: 4}
+        compuestas_en_la_serie_c_limpia:
+          kasi-bana: 1
+        por_bloque:
+          "era 2 · serie B": {suelta: 1, compuestos: 0, total: 1}
+          "era 2 · serie C": {suelta: 8, compuestos: 1, total: 9}
+        compuestas_mas_usadas:
+          kasi-bana: 1
+    derivada:
+      forma: kali
+      fuente: caquetío-reconstruido
+      cat: sust
+      glosa: "sol"
+      nucleo_fundacional: true
+      homografa_de_agente: false
+      notas: "núcleo fundacional, forma justificada por cognado en lokono/garifuna"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: [IDENTIDAD_LINGUISTICA, prompt_reglas_completo]
+        la_enseñan_dentro_de_un_compuesto:
+          - "IDENTIDAD_LINGUISTICA: kali-bana"
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 63/1260
+        en_el_prompt_entero: 378/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 867, compuestos: 1454, total: 2321}
+        serie_c_limpia: {suelta: 52, compuestos: 50, total: 102}
+        compuestas_en_la_serie_c_limpia:
+          kali-mara-bana: 12
+          kali-ubana-gua: 12
+          kali-naa-iro: 10
+          kali-raku-biro: 5
+          ma-kali: 3
+          kali-ubana: 2
+          ka-kali-mara-bana: 1
+          kali-bana-ima: 1
+        por_bloque:
+          "era 1": {suelta: 672, compuestos: 1249, total: 1921}
+          "era 2 · serie A": {suelta: 65, compuestos: 94, total: 159}
+          "era 2 · serie B": {suelta: 19, compuestos: 2, total: 21}
+          "era 2 · serie C": {suelta: 111, compuestos: 109, total: 220}
+        compuestas_mas_usadas:
+          kali-bana: 235
+          ma-kali: 75
+          kali-sha: 53
+          kali-biji: 47
+          kali-taro: 47
+          kali-biro-duna-iro: 42
+          kali-iro-pabu: 42
+          kali-sulu-rua: 42
+    razon_derivada_sobre_atestiguada: 232.1
+  - glosa: "crear"
+    criterio: laxo:sinonimo-compartido
+    capa_derivada: reconstruido
+    solo_otra_grafia: false
+    atestiguada:
+      forma: eroa
+      fuente: caquetío-atestiguado
+      cat: v_raiz
+      glosa: "empezar, crear, originar"
+      nucleo_fundacional: false
+      homografa_de_agente: false
+      notas: "Zavala Reyes 2015, glosario #119 (AM): «Empezar, crear»"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: []
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 121/1260
+        en_el_prompt_entero: 115/1260
+        cubo_del_muestreador: v_raiz (75 voces)
+      uso:
+        toda_la_base: {suelta: 1, compuestos: 96, total: 97}
+        serie_c_limpia: {suelta: 0, compuestos: 5, total: 5}
+        compuestas_en_la_serie_c_limpia:
+          eroa-ka: 3
+          eroa-da: 1
+          eroa-hayo-ni: 1
+        por_bloque:
+          "era 1": {suelta: 1, compuestos: 74, total: 75}
+          "era 2 · serie A": {suelta: 0, compuestos: 5, total: 5}
+          "era 2 · serie B": {suelta: 0, compuestos: 7, total: 7}
+          "era 2 · serie C": {suelta: 0, compuestos: 10, total: 10}
+        compuestas_mas_usadas:
+          eroa-ni: 38
+          eroa-da: 24
+          eroa-ka: 24
+          eroa-bana: 6
+          eroa-bana-da: 1
+          eroa-hayo-ni: 1
+          ka-eroa: 1
+          ta-eroa: 1
+    derivada:
+      forma: chaa
+      fuente: caquetío-reconstruido
+      cat: v_raiz
+      glosa: "hacer, construir, crear"
+      nucleo_fundacional: true
+      homografa_de_agente: false
+      notas: "núcleo fundacional, forma justificada por cognado en proto-arahuaco"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: [prompt_reglas_completo]
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 115/1260
+        en_el_prompt_entero: 415/1260
+        cubo_del_muestreador: v_raiz (75 voces)
+      uso:
+        toda_la_base: {suelta: 28, compuestos: 1228, total: 1256}
+        serie_c_limpia: {suelta: 0, compuestos: 30, total: 30}
+        compuestas_en_la_serie_c_limpia:
+          chaa-ni: 11
+          chaa-da: 10
+          chaa-ka: 8
+          ta-chaa: 1
+        por_bloque:
+          "era 1": {suelta: 26, compuestos: 1060, total: 1086}
+          "era 2 · serie A": {suelta: 0, compuestos: 44, total: 44}
+          "era 2 · serie B": {suelta: 0, compuestos: 54, total: 54}
+          "era 2 · serie C": {suelta: 2, compuestos: 70, total: 72}
+        compuestas_mas_usadas:
+          chaa-ni: 531
+          chaa-da: 363
+          chaa-ka: 213
+          chaa-bana: 18
+          chaa-bana-ni: 17
+          chaa-da-ma: 12
+          ta-chaa: 9
+          kali-bana-chaa: 8
+    razon_derivada_sobre_atestiguada: 12.95
+  - glosa: "ofrecer"
+    criterio: laxo:primer-sinonimo
+    capa_derivada: reconstruido
+    solo_otra_grafia: false
+    atestiguada:
+      forma: were
+      fuente: caquetío-atestiguado
+      cat: v_raiz
+      glosa: "dar, entregar, ofrecer"
+      forma_fuente: güere
+      nucleo_fundacional: false
+      homografa_de_agente: false
+      notas: "Zavala Reyes 2015, glosario #149 (AM): «Dar, entregar»"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: []
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 106/1260
+        en_el_prompt_entero: 130/1260
+        cubo_del_muestreador: v_raiz (75 voces)
+      uso:
+        toda_la_base: {suelta: 0, compuestos: 17, total: 17}
+        serie_c_limpia: {suelta: 0, compuestos: 2, total: 2}
+        compuestas_en_la_serie_c_limpia:
+          were-da: 2
+        por_bloque:
+          "era 1": {suelta: 0, compuestos: 3, total: 3}
+          "era 2 · serie A": {suelta: 0, compuestos: 2, total: 2}
+          "era 2 · serie B": {suelta: 0, compuestos: 5, total: 5}
+          "era 2 · serie C": {suelta: 0, compuestos: 7, total: 7}
+        compuestas_mas_usadas:
+          were-da: 8
+          were-ka: 5
+          were-ni: 4
+    derivada:
+      forma: paa
+      fuente: caquetío-reconstruido
+      cat: v_raiz
+      glosa: "dar, ofrecer, transferir"
+      nucleo_fundacional: true
+      homografa_de_agente: false
+      notas: "núcleo fundacional, forma justificada por cognado en proto-arahuaco"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: [prompt_reglas_completo]
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 123/1260
+        en_el_prompt_entero: 416/1260
+        cubo_del_muestreador: v_raiz (75 voces)
+      uso:
+        toda_la_base: {suelta: 35, compuestos: 1187, total: 1222}
+        serie_c_limpia: {suelta: 1, compuestos: 36, total: 37}
+        compuestas_en_la_serie_c_limpia:
+          paa-da: 18
+          paa-ka: 8
+          paa-ni: 8
+          ma-paa: 1
+          paa-kana: 1
+        por_bloque:
+          "era 1": {suelta: 30, compuestos: 1007, total: 1037}
+          "era 2 · serie A": {suelta: 2, compuestos: 52, total: 54}
+          "era 2 · serie B": {suelta: 0, compuestos: 47, total: 47}
+          "era 2 · serie C": {suelta: 3, compuestos: 81, total: 84}
+        compuestas_mas_usadas:
+          paa-da: 449
+          paa-ni: 256
+          paa-ka: 225
+          paa-bana-da: 52
+          paa-bana: 30
+          paa-taro: 23
+          paa-biji: 22
+          kali-paa-bana: 18
+    razon_derivada_sobre_atestiguada: 71.88
+  - glosa: "escuchar"
+    criterio: laxo:sinonimo-compartido
+    capa_derivada: reconstruido
+    solo_otra_grafia: false
+    atestiguada:
+      forma: jai
+      fuente: caquetío-atestiguado
+      cat: v_raiz
+      glosa: "oír, escuchar"
+      nucleo_fundacional: false
+      homografa_de_agente: false
+      notas: "Zavala Reyes 2015, glosario #175 (AM): «Oír, escuchar»"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: []
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 123/1260
+        en_el_prompt_entero: 113/1260
+        cubo_del_muestreador: v_raiz (75 voces)
+      uso:
+        toda_la_base: {suelta: 5, compuestos: 162, total: 167}
+        serie_c_limpia: {suelta: 0, compuestos: 12, total: 12}
+        compuestas_en_la_serie_c_limpia:
+          jai-ni: 5
+          jai-ka: 4
+          jai-da: 2
+          jai-ima: 1
+        por_bloque:
+          "era 1": {suelta: 2, compuestos: 110, total: 112}
+          "era 2 · serie A": {suelta: 1, compuestos: 15, total: 16}
+          "era 2 · serie B": {suelta: 1, compuestos: 12, total: 13}
+          "era 2 · serie C": {suelta: 1, compuestos: 25, total: 26}
+        compuestas_mas_usadas:
+          jai-ni: 72
+          jai-ka: 41
+          jai-da: 34
+          ta-jai: 5
+          jai-bana-gua: 2
+          jai-ni-da: 2
+          ma-jai: 2
+          jai-ana: 1
+    derivada:
+      forma: kira
+      fuente: caquetío-reconstruido
+      cat: v_raiz
+      glosa: "escuchar, oír, atender"
+      nucleo_fundacional: true
+      deuda_d11: true
+      homografa_de_agente: false
+      notas: "núcleo fundacional, forma justificada por cognado en wayunaiki/lokono — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'escuchar'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_l…"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: [prompt_reglas_completo]
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 116/1260
+        en_el_prompt_entero: 410/1260
+        cubo_del_muestreador: v_raiz (75 voces)
+      uso:
+        toda_la_base: {suelta: 27, compuestos: 804, total: 831}
+        serie_c_limpia: {suelta: 1, compuestos: 31, total: 32}
+        compuestas_en_la_serie_c_limpia:
+          kira-ni: 19
+          kira-da: 8
+          kira-ka: 3
+          ta-kira: 1
+        por_bloque:
+          "era 1": {suelta: 21, compuestos: 648, total: 669}
+          "era 2 · serie A": {suelta: 5, compuestos: 58, total: 63}
+          "era 2 · serie B": {suelta: 0, compuestos: 35, total: 35}
+          "era 2 · serie C": {suelta: 1, compuestos: 63, total: 64}
+        compuestas_mas_usadas:
+          kira-ni: 530
+          kira-da: 168
+          kira-ka: 92
+          kira-bana: 4
+          ta-kira: 4
+          kira-kali-bana: 1
+          kira-ko: 1
+          kira-ma: 1
+    razon_derivada_sobre_atestiguada: 4.98
+  - glosa: "pez"
+    criterio: laxo:primer-sinonimo
+    capa_derivada: reconstruido
+    solo_otra_grafia: false
+    atestiguada:
+      forma: bagre
+      fuente: caquetío-atestiguado
+      cat: sust
+      glosa: "pez"
+      nucleo_fundacional: false
+      homografa_de_agente: false
+      notas: "Zavala Reyes 2015 #21 (AM); homógrafo con español — resuelto por contexto en score_linguistico"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: []
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 70/1260
+        en_el_prompt_entero: 48/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 0, compuestos: 0, total: 0}
+        serie_c_limpia: {suelta: 0, compuestos: 0, total: 0}
+    derivada:
+      forma: arima
+      fuente: caquetío-reconstruido
+      cat: sust
+      glosa: "pez, pescado"
+      nucleo_fundacional: true
+      homografa_de_agente: false
+      notas: "núcleo fundacional, forma justificada por cognado en lokono/garifuna"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: [prompt_reglas_completo]
+        aparece_solo_como_token: [IDENTIDAD_LINGUISTICA]   # criterio ancho: casi siempre la palabra castellana de una glosa
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 59/1260
+        en_el_prompt_entero: 377/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 593, compuestos: 50, total: 643}
+        serie_c_limpia: {suelta: 43, compuestos: 2, total: 45}
+        compuestas_en_la_serie_c_limpia:
+          ka-arima: 1
+          ma-arima: 1
+        por_bloque:
+          "era 1": {suelta: 473, compuestos: 38, total: 511}
+          "era 2 · serie A": {suelta: 20, compuestos: 3, total: 23}
+          "era 2 · serie B": {suelta: 10, compuestos: 2, total: 12}
+          "era 2 · serie C": {suelta: 90, compuestos: 7, total: 97}
+        compuestas_mas_usadas:
+          ta-arima: 20
+          ma-arima: 17
+          arima-sulu-bana: 8
+          ka-arima: 4
+          arima-bana: 1
+    razon_derivada_sobre_atestiguada: null
+  - glosa: "cerro"
+    criterio: laxo:primer-sinonimo
+    capa_derivada: reconstruido
+    solo_otra_grafia: false
+    atestiguada:
+      forma: turumako
+      fuente: caquetío-atestiguado
+      cat: sust
+      glosa: "cerro, meseta"
+      forma_fuente: turumaco
+      nucleo_fundacional: false
+      homografa_de_agente: false
+      notas: "Zavala Reyes 2015 #262 (AM)"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: []
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 69/1260
+        en_el_prompt_entero: 64/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 1, compuestos: 0, total: 1}
+        serie_c_limpia: {suelta: 1, compuestos: 0, total: 1}
+        por_bloque:
+          "era 2 · serie C": {suelta: 1, compuestos: 0, total: 1}
+    derivada:
+      forma: sima
+      fuente: caquetío-reconstruido
+      cat: sust
+      glosa: "cerro, montaña, elevación"
+      nucleo_fundacional: true
+      homografa_de_agente: false
+      notas: "núcleo fundacional, forma justificada por cognado en lokono/topónimo (Barquisimeto)"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: [prompt_reglas_completo]
+        la_enseñan_dentro_de_un_compuesto:
+          - "prompt_reglas_completo: sima-bana"
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 59/1260
+        en_el_prompt_entero: 375/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 88, compuestos: 422, total: 510}
+        serie_c_limpia: {suelta: 6, compuestos: 7, total: 13}
+        compuestas_en_la_serie_c_limpia:
+          sima-buro: 6
+          ta-sima: 1
+        por_bloque:
+          "era 1": {suelta: 60, compuestos: 326, total: 386}
+          "era 2 · serie A": {suelta: 11, compuestos: 81, total: 92}
+          "era 2 · serie B": {suelta: 4, compuestos: 3, total: 7}
+          "era 2 · serie C": {suelta: 13, compuestos: 12, total: 25}
+        compuestas_mas_usadas:
+          sima-rua-bana: 58
+          sima-rua: 35
+          wara-sima: 34
+          mara-sima-da: 27
+          sima-pabu: 24
+          sima-naba: 22
+          duka-sima: 20
+          sima-maa: 19
+    razon_derivada_sobre_atestiguada: 510.0
+  - glosa: "hijo"
+    criterio: laxo:sinonimo-compartido
+    capa_derivada: reconstruido
+    solo_otra_grafia: false
+    atestiguada:
+      forma: dare
+      fuente: caquetío-atestiguado
+      cat: sust
+      glosa: "diente; hijo (extensión metafórica)"
+      nucleo_fundacional: false
+      homografa_de_agente: false
+      notas: "Zavala Reyes 2015, glosario #103 (HB): «Diente»; Oliver 1989 la confirma en Paraguaná — 🔴 DEUDA DECLARADA 2026-09-10 (regla 8): la glosa dice 'diente; HIJO (extensión metafórica)' pero las dos fuentes citadas dan solo DIENTE. El 'hijo' entró sin procedencia y no se ha localizado quién lo sostiene. Importa porque de él dependería leer `catire` como 'hijo de la luna' y `capadare` como algo distinto de 'diente de'. Mien…"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: []
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 62/1260
+        en_el_prompt_entero: 66/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 11, compuestos: 7, total: 18}
+        serie_c_limpia: {suelta: 4, compuestos: 1, total: 5}
+        compuestas_en_la_serie_c_limpia:
+          ta-dare: 1
+        por_bloque:
+          "era 1": {suelta: 1, compuestos: 3, total: 4}
+          "era 2 · serie B": {suelta: 4, compuestos: 1, total: 5}
+          "era 2 · serie C": {suelta: 6, compuestos: 3, total: 9}
+        compuestas_mas_usadas:
+          ta-dare: 6
+          ma-dare: 1
+    derivada:
+      forma: buri
+      fuente: caquetío-reconstruido
+      cat: sust
+      glosa: "hijo, hija, criatura, descendiente"
+      nucleo_fundacional: true
+      homografa_de_agente: false
+      notas: "núcleo fundacional, forma justificada por cognado en lokono/garifuna"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: [prompt_reglas_completo]
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 55/1260
+        en_el_prompt_entero: 374/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 128, compuestos: 175, total: 303}
+        serie_c_limpia: {suelta: 2, compuestos: 6, total: 8}
+        compuestas_en_la_serie_c_limpia:
+          ta-buri: 6
+        por_bloque:
+          "era 1": {suelta: 97, compuestos: 138, total: 235}
+          "era 2 · serie A": {suelta: 17, compuestos: 15, total: 32}
+          "era 2 · serie B": {suelta: 1, compuestos: 6, total: 7}
+          "era 2 · serie C": {suelta: 13, compuestos: 16, total: 29}
+        compuestas_mas_usadas:
+          ta-buri: 138
+          kali-pama-buri: 14
+          ka-buri: 10
+          ma-buri: 6
+          wa-buri: 2
+          buri-bana: 1
+          jakura-ama-buri: 1
+          jakura-buri: 1
+    razon_derivada_sobre_atestiguada: 16.83
+  - glosa: "sembrar"
+    criterio: laxo:primer-sinonimo
+    capa_derivada: reconstruido
+    solo_otra_grafia: false
+    atestiguada:
+      forma: jusual
+      fuente: caquetío-atestiguado
+      cat: sust
+      glosa: "sembrar, siembra, sembradío. Conuco"
+      nucleo_fundacional: false
+      homografa_de_agente: false
+      notas: "Zavala Reyes 2015 #180 (AM)"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: []
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 65/1260
+        en_el_prompt_entero: 52/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 1, compuestos: 3, total: 4}
+        serie_c_limpia: {suelta: 0, compuestos: 0, total: 0}
+        por_bloque:
+          "era 1": {suelta: 1, compuestos: 0, total: 1}
+          "era 2 · serie A": {suelta: 0, compuestos: 1, total: 1}
+          "era 2 · serie B": {suelta: 0, compuestos: 1, total: 1}
+          "era 2 · serie C": {suelta: 0, compuestos: 1, total: 1}
+        compuestas_mas_usadas:
+          ma-jusual: 2
+          wa-jusual: 1
+    derivada:
+      forma: kono
+      fuente: caquetío-reconstruido
+      cat: v_raiz
+      glosa: "sembrar, plantar, cultivar"
+      nucleo_fundacional: true
+      homografa_de_agente: false
+      notas: "núcleo fundacional, forma justificada por cognado en lokono/taíno"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: [prompt_reglas_completo]
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 123/1260
+        en_el_prompt_entero: 421/1260
+        cubo_del_muestreador: v_raiz (75 voces)
+      uso:
+        toda_la_base: {suelta: 7, compuestos: 214, total: 221}
+        serie_c_limpia: {suelta: 0, compuestos: 16, total: 16}
+        compuestas_en_la_serie_c_limpia:
+          kono-ni: 7
+          kono-da: 6
+          kono-ana: 1
+          kono-ka: 1
+          kono-koro: 1
+        por_bloque:
+          "era 1": {suelta: 4, compuestos: 145, total: 149}
+          "era 2 · serie A": {suelta: 1, compuestos: 11, total: 12}
+          "era 2 · serie B": {suelta: 1, compuestos: 15, total: 16}
+          "era 2 · serie C": {suelta: 1, compuestos: 43, total: 44}
+        compuestas_mas_usadas:
+          kono-ni: 67
+          kono-da: 66
+          kono-ka: 18
+          kono-bana: 13
+          kono-ana: 10
+          kono-kana: 7
+          ma-kono: 4
+          ta-kono: 4
+    razon_derivada_sobre_atestiguada: 55.25
+  - glosa: "arbol"
+    criterio: laxo:sinonimo-compartido
+    capa_derivada: reconstruido
+    solo_otra_grafia: false
+    atestiguada:
+      forma: bara
+      fuente: caquetío-atestiguado
+      cat: sust
+      glosa: "palo, árbol"
+      forma_fuente: Bara
+      nucleo_fundacional: false
+      homografa_de_agente: false
+      notas: "Decisión #101 (tanda 2026-08-30) — GLOSA CORREGIDA a la de las fuentes: Zavala Reyes 2015 #29 (E): «Palo, árbol», con Esteves 1989 y van Buurt 2014 diciendo lo mismo, y la prueba interna de barabara (Zavala Reyes 2015 #30: «Árbol de madera dura y pesada. Olivo») — la reduplicada de la misma raíz ya estaba atestiguada como árbol. Lectura descartada por D7: río, corriente fluvial (venía de cognado proto-arawakan/topóni…"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: [prompt_reglas_completo, prompt_rescate_fuga_esp0, prompt_rescate_fuga_esp3_con_otro, prompt_rescate_fuga_esp3_sin_otro]
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 58/1260
+        en_el_prompt_entero: 373/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 33, compuestos: 5, total: 38}
+        serie_c_limpia: {suelta: 3, compuestos: 1, total: 4}
+        compuestas_en_la_serie_c_limpia:
+          ma-bara: 1
+        por_bloque:
+          "era 1": {suelta: 22, compuestos: 2, total: 24}
+          "era 2 · serie A": {suelta: 2, compuestos: 0, total: 2}
+          "era 2 · serie B": {suelta: 2, compuestos: 1, total: 3}
+          "era 2 · serie C": {suelta: 7, compuestos: 2, total: 9}
+        compuestas_mas_usadas:
+          ka-bara: 2
+          ma-bara: 2
+          wa-bara: 1
+    derivada:
+      forma: kuru
+      fuente: caquetío-reconstruido
+      cat: sust
+      glosa: "árbol, madera, tronco"
+      nucleo_fundacional: true
+      homografa_de_agente: false
+      notas: "núcleo fundacional, forma justificada por cognado en lokono/proto-arawakan"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: [prompt_reglas_completo, prompt_reglas_breve]
+        la_enseñan_dentro_de_un_compuesto:
+          - "prompt_reglas_breve: kuru-bana"
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 75/1260
+        en_el_prompt_entero: 1260/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 96, compuestos: 115, total: 211}
+        serie_c_limpia: {suelta: 4, compuestos: 2, total: 6}
+        compuestas_en_la_serie_c_limpia:
+          ma-kuru: 2
+        por_bloque:
+          "era 1": {suelta: 86, compuestos: 105, total: 191}
+          "era 2 · serie A": {suelta: 2, compuestos: 5, total: 7}
+          "era 2 · serie B": {suelta: 2, compuestos: 2, total: 4}
+          "era 2 · serie C": {suelta: 6, compuestos: 3, total: 9}
+        compuestas_mas_usadas:
+          kuru-arua: 35
+          kuru-bana-ko: 26
+          ma-kuru: 22
+          duma-kuru: 19
+          ta-kuru: 9
+          kuru-bana-sunu: 3
+          ta-kuru-bana-ko: 1
+    razon_derivada_sobre_atestiguada: 5.55
+  - glosa: "arbol"
+    criterio: laxo:primer-sinonimo
+    capa_derivada: reconstruido
+    solo_otra_grafia: false
+    atestiguada:
+      forma: igi
+      fuente: caquetío-atestiguado
+      cat: sust
+      glosa: "árbol, matapalo, paují"
+      forma_fuente: igui
+      nucleo_fundacional: false
+      homografa_de_agente: false
+      notas: "Zavala Reyes 2015 #164 (E)"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: []
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 52/1260
+        en_el_prompt_entero: 70/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 6, compuestos: 0, total: 6}
+        serie_c_limpia: {suelta: 1, compuestos: 0, total: 1}
+        por_bloque:
+          "era 2 · serie B": {suelta: 2, compuestos: 0, total: 2}
+          "era 2 · serie C": {suelta: 4, compuestos: 0, total: 4}
+    derivada:
+      forma: kuru
+      fuente: caquetío-reconstruido
+      cat: sust
+      glosa: "árbol, madera, tronco"
+      nucleo_fundacional: true
+      homografa_de_agente: false
+      notas: "núcleo fundacional, forma justificada por cognado en lokono/proto-arawakan"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: [prompt_reglas_completo, prompt_reglas_breve]
+        la_enseñan_dentro_de_un_compuesto:
+          - "prompt_reglas_breve: kuru-bana"
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 75/1260
+        en_el_prompt_entero: 1260/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 96, compuestos: 115, total: 211}
+        serie_c_limpia: {suelta: 4, compuestos: 2, total: 6}
+        compuestas_en_la_serie_c_limpia:
+          ma-kuru: 2
+        por_bloque:
+          "era 1": {suelta: 86, compuestos: 105, total: 191}
+          "era 2 · serie A": {suelta: 2, compuestos: 5, total: 7}
+          "era 2 · serie B": {suelta: 2, compuestos: 2, total: 4}
+          "era 2 · serie C": {suelta: 6, compuestos: 3, total: 9}
+        compuestas_mas_usadas:
+          kuru-arua: 35
+          kuru-bana-ko: 26
+          ma-kuru: 22
+          duma-kuru: 19
+          ta-kuru: 9
+          kuru-bana-sunu: 3
+          ta-kuru-bana-ko: 1
+    razon_derivada_sobre_atestiguada: 35.17
+  - glosa: "luna"
+    criterio: estricto
+    capa_derivada: reconstruido
+    solo_otra_grafia: false
+    atestiguada:
+      forma: apana
+      fuente: caquetío-atestiguado
+      cat: sust
+      glosa: "una luna (unidad de tiempo ~30 días)"
+      nucleo_fundacional: false
+      homografa_de_agente: false
+      notas: "Zavala Reyes 2015, glosario #10 (GC): «Una luna. Medición de tiempo»"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: []
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 58/1260
+        en_el_prompt_entero: 56/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 16, compuestos: 0, total: 16}
+        serie_c_limpia: {suelta: 3, compuestos: 0, total: 3}
+        por_bloque:
+          "era 1": {suelta: 6, compuestos: 0, total: 6}
+          "era 2 · serie A": {suelta: 2, compuestos: 0, total: 2}
+          "era 2 · serie B": {suelta: 1, compuestos: 0, total: 1}
+          "era 2 · serie C": {suelta: 7, compuestos: 0, total: 7}
+    derivada:
+      forma: kasha
+      fuente: caquetío-reconstruido
+      cat: sust
+      glosa: "luna"
+      nucleo_fundacional: true
+      deuda_d11: true
+      homografa_de_agente: false
+      notas: "núcleo fundacional, forma justificada por cognado en wayunaiki/lokono — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `kathi` 'luna' — PARECIDA; esta entrada ya declaraba apoyo lokono además del wayuu. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilida…"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: [prompt_reglas_completo]
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 59/1260
+        en_el_prompt_entero: 367/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 146, compuestos: 22, total: 168}
+        serie_c_limpia: {suelta: 10, compuestos: 1, total: 11}
+        compuestas_en_la_serie_c_limpia:
+          ma-kasha: 1
+        por_bloque:
+          "era 1": {suelta: 99, compuestos: 13, total: 112}
+          "era 2 · serie A": {suelta: 16, compuestos: 1, total: 17}
+          "era 2 · serie B": {suelta: 7, compuestos: 3, total: 10}
+          "era 2 · serie C": {suelta: 24, compuestos: 5, total: 29}
+        compuestas_mas_usadas:
+          kasha-bana: 8
+          ma-kasha: 6
+          ta-kasha: 3
+          kasha-ni: 2
+          dali-kasha: 1
+          maa-kasha-bana: 1
+          naa-da-kasha: 1
+    razon_derivada_sobre_atestiguada: 10.5
+  - glosa: "luna"
+    criterio: estricto
+    capa_derivada: reconstruido
+    solo_otra_grafia: false
+    atestiguada:
+      forma: kati
+      fuente: caquetío-atestiguado
+      cat: sust
+      glosa: "luna"
+      forma_fuente: cati
+      nucleo_fundacional: false
+      homografa_de_agente: false
+      notas: "Decisión colisiones D5 (2026-08-31) — FUSIONADA con cati: la grafía c es colonial y el lema fonémico es la palabra. Atestiguada: Zavala Reyes 2015, glosario #71 (CGB): «Luna [catire: persona de tez blanca]». Cognados: proto-arahuaco *kati, WY kachi, LK katsi (Payne 1991, Brinton 1871); en el Swadesh de Oliver (Tabla A-2, fila moon) el lokono trae kathi — similitud 1.00, la fila bandera del cómputo de D11. RE-ETIQUETA…"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: [IDENTIDAD_LINGUISTICA]
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 624/1260
+        en_el_prompt_entero: 633/1260
+        cubo_del_muestreador: cosmos (2 voces)
+      uso:
+        toda_la_base: {suelta: 33, compuestos: 9, total: 42}
+        serie_c_limpia: {suelta: 7, compuestos: 4, total: 11}
+        compuestas_en_la_serie_c_limpia:
+          kati-macana-iro: 1
+          kati-sabua: 1
+          kati-sünatü-da: 1
+          ma-kati: 1
+        por_bloque:
+          "era 1": {suelta: 8, compuestos: 0, total: 8}
+          "era 2 · serie A": {suelta: 2, compuestos: 1, total: 3}
+          "era 2 · serie B": {suelta: 1, compuestos: 0, total: 1}
+          "era 2 · serie C": {suelta: 22, compuestos: 8, total: 30}
+        compuestas_mas_usadas:
+          ma-kati: 3
+          kati-bacoa: 1
+          kati-bacoa-gua: 1
+          kati-kunan: 1
+          kati-macana-iro: 1
+          kati-sabua: 1
+          kati-sünatü-da: 1
+    derivada:
+      forma: kasha
+      fuente: caquetío-reconstruido
+      cat: sust
+      glosa: "luna"
+      nucleo_fundacional: true
+      deuda_d11: true
+      homografa_de_agente: false
+      notas: "núcleo fundacional, forma justificada por cognado en wayunaiki/lokono — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `kathi` 'luna' — PARECIDA; esta entrada ya declaraba apoyo lokono además del wayuu. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilida…"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: [prompt_reglas_completo]
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 59/1260
+        en_el_prompt_entero: 367/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 146, compuestos: 22, total: 168}
+        serie_c_limpia: {suelta: 10, compuestos: 1, total: 11}
+        compuestas_en_la_serie_c_limpia:
+          ma-kasha: 1
+        por_bloque:
+          "era 1": {suelta: 99, compuestos: 13, total: 112}
+          "era 2 · serie A": {suelta: 16, compuestos: 1, total: 17}
+          "era 2 · serie B": {suelta: 7, compuestos: 3, total: 10}
+          "era 2 · serie C": {suelta: 24, compuestos: 5, total: 29}
+        compuestas_mas_usadas:
+          kasha-bana: 8
+          ma-kasha: 6
+          ta-kasha: 3
+          kasha-ni: 2
+          dali-kasha: 1
+          maa-kasha-bana: 1
+          naa-da-kasha: 1
+    razon_derivada_sobre_atestiguada: 4.0
+  - glosa: "mar"
+    criterio: laxo:primer-sinonimo
+    capa_derivada: reconstruido
+    solo_otra_grafia: false
+    atestiguada:
+      forma: para
+      fuente: caquetío-atestiguado
+      cat: sust
+      glosa: "mar, agua extensa (dulce o salada en gran cantidad)"
+      nucleo_fundacional: false
+      homografa_de_agente: false
+      notas: "Zavala Reyes 2015 #190 (E+HP): 'Aguadulce o salada en grandes cantidades'; cf. #191 paragua (GC) = mar. Reflejo del proto-arahuaco *para, atestiguado en 4 lenguas: CQ para, WY palaa, LK bara, TN bagua; Payne (1991), Brinton (1871). RE-ETIQUETADO 2026-07-20: figuraba como proto-arahuaco pese a estar atestiguado directamente en caquetío — por eso _familia_de_token necesitaba un caso especial para contarlo como caquetío"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: [IDENTIDAD_LINGUISTICA, prompt_rescate_fuga_esp0, prompt_rescate_fuga_esp3_con_otro, prompt_rescate_fuga_esp3_sin_otro]
+        aparece_solo_como_token: [prompt_reglas_completo]   # criterio ancho: casi siempre la palabra castellana de una glosa
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 1260/1260
+        en_el_prompt_entero: 1260/1260
+        cubo_del_muestreador: geografia (1 voces)
+      uso:
+        toda_la_base: {suelta: 227, compuestos: 84, total: 311}
+        serie_c_limpia: {suelta: 35, compuestos: 13, total: 48}
+        compuestas_en_la_serie_c_limpia:
+          ta-para: 5
+          ma-para: 3
+          wa-para: 2
+          hueke-para: 1
+          ka-para: 1
+          wana-para-ni: 1
+        por_bloque:
+          "era 1": {suelta: 88, compuestos: 31, total: 119}
+          "era 2 · serie A": {suelta: 29, compuestos: 17, total: 46}
+          "era 2 · serie B": {suelta: 21, compuestos: 9, total: 30}
+          "era 2 · serie C": {suelta: 89, compuestos: 27, total: 116}
+        compuestas_mas_usadas:
+          ma-para: 21
+          ta-para: 21
+          para-budare-ana: 20
+          wa-para: 9
+          ka-para: 6
+          hueke-para: 1
+          maa-para: 1
+          maa-para-aima: 1
+    derivada:
+      forma: habo
+      fuente: caquetío-reconstruido
+      cat: sust
+      glosa: "mar, océano, aguas grandes"
+      nucleo_fundacional: true
+      homografa_de_agente: false
+      notas: "núcleo fundacional, forma justificada por cognado en lokono/garifuna"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: [prompt_reglas_completo]
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 74/1260
+        en_el_prompt_entero: 384/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 120, compuestos: 5, total: 125}
+        serie_c_limpia: {suelta: 6, compuestos: 0, total: 6}
+        por_bloque:
+          "era 1": {suelta: 99, compuestos: 5, total: 104}
+          "era 2 · serie A": {suelta: 5, compuestos: 0, total: 5}
+          "era 2 · serie B": {suelta: 3, compuestos: 0, total: 3}
+          "era 2 · serie C": {suelta: 13, compuestos: 0, total: 13}
+        compuestas_mas_usadas:
+          ka-habo: 2
+          habo-bari-rua: 1
+          ma-habo: 1
+          ta-habo: 1
+    razon_derivada_sobre_atestiguada: 0.4
+  - glosa: "mar"
+    criterio: laxo:primer-sinonimo
+    capa_derivada: reconstruido
+    solo_otra_grafia: false
+    atestiguada:
+      forma: parawa
+      fuente: caquetío-atestiguado
+      cat: sust
+      glosa: "mar"
+      forma_fuente: paragua
+      nucleo_fundacional: false
+      homografa_de_agente: false
+      notas: "Zavala Reyes 2015 #191 (GC)"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: []
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 56/1260
+        en_el_prompt_entero: 73/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 0, compuestos: 0, total: 0}
+        serie_c_limpia: {suelta: 0, compuestos: 0, total: 0}
+    derivada:
+      forma: habo
+      fuente: caquetío-reconstruido
+      cat: sust
+      glosa: "mar, océano, aguas grandes"
+      nucleo_fundacional: true
+      homografa_de_agente: false
+      notas: "núcleo fundacional, forma justificada por cognado en lokono/garifuna"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: [prompt_reglas_completo]
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 74/1260
+        en_el_prompt_entero: 384/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 120, compuestos: 5, total: 125}
+        serie_c_limpia: {suelta: 6, compuestos: 0, total: 6}
+        por_bloque:
+          "era 1": {suelta: 99, compuestos: 5, total: 104}
+          "era 2 · serie A": {suelta: 5, compuestos: 0, total: 5}
+          "era 2 · serie B": {suelta: 3, compuestos: 0, total: 3}
+          "era 2 · serie C": {suelta: 13, compuestos: 0, total: 13}
+        compuestas_mas_usadas:
+          ka-habo: 2
+          habo-bari-rua: 1
+          ma-habo: 1
+          ta-habo: 1
+    razon_derivada_sobre_atestiguada: null
+  - glosa: "anciano"
+    criterio: laxo:sinonimo-compartido
+    capa_derivada: reconstruido
+    solo_otra_grafia: false
+    atestiguada:
+      forma: wasima
+      fuente: caquetío-atestiguado
+      cat: v_raiz
+      glosa: "viejo, anciano"
+      forma_fuente: guasima
+      nucleo_fundacional: false
+      homografa_de_agente: true
+      notas: "Zavala Reyes 2015 #145 (AM)"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: []
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 133/1260
+        en_el_prompt_entero: 131/1260
+        cubo_del_muestreador: v_raiz (75 voces)
+      uso:
+        toda_la_base: {suelta: 0, compuestos: 10, total: 10}
+        serie_c_limpia: {suelta: 0, compuestos: 2, total: 2}
+        compuestas_en_la_serie_c_limpia:
+          wasima-iro: 1
+          wasima-kana: 1
+        por_bloque:
+          "era 1": {suelta: 0, compuestos: 1, total: 1}
+          "era 2 · serie A": {suelta: 0, compuestos: 2, total: 2}
+          "era 2 · serie B": {suelta: 0, compuestos: 3, total: 3}
+          "era 2 · serie C": {suelta: 0, compuestos: 4, total: 4}
+        compuestas_mas_usadas:
+          wasima-kana: 3
+          wasima-ni: 2
+          ta-wasima: 1
+          wasima-da: 1
+          wasima-gua: 1
+          wasima-iro: 1
+          wasima-ko: 1
+    derivada:
+      forma: wanü
+      fuente: caquetío-reconstruido
+      cat: sust
+      glosa: "anciano, mayor, persona de saber acumulado"
+      nucleo_fundacional: true
+      deuda_d11: true
+      homografa_de_agente: false
+      notas: "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'anciano'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_ling…"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: [prompt_reglas_completo]
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 58/1260
+        en_el_prompt_entero: 373/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 107, compuestos: 13, total: 120}
+        serie_c_limpia: {suelta: 4, compuestos: 1, total: 5}
+        compuestas_en_la_serie_c_limpia:
+          ta-wanü: 1
+        por_bloque:
+          "era 1": {suelta: 94, compuestos: 12, total: 106}
+          "era 2 · serie A": {suelta: 5, compuestos: 0, total: 5}
+          "era 2 · serie B": {suelta: 1, compuestos: 0, total: 1}
+          "era 2 · serie C": {suelta: 7, compuestos: 1, total: 8}
+        compuestas_mas_usadas:
+          ta-wanü: 11
+          ka-wanü: 2
+    razon_derivada_sobre_atestiguada: 12.0
+  - glosa: "viento"
+    criterio: laxo:primer-sinonimo
+    capa_derivada: reconstruido
+    solo_otra_grafia: false
+    atestiguada:
+      forma: juri
+      fuente: caquetío-atestiguado
+      cat: v_raiz
+      glosa: "viento, ventarrón"
+      nucleo_fundacional: false
+      homografa_de_agente: false
+      notas: "Zavala Reyes 2015 #178 (E); variantes: jura"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: []
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 42/126
+        en_el_muestreo: 98/1260
+        en_el_prompt_entero: 128/1260
+        cubo_del_muestreador: v_raiz (75 voces)
+      uso:
+        toda_la_base: {suelta: 221, compuestos: 323, total: 544}
+        serie_c_limpia: {suelta: 55, compuestos: 99, total: 154}
+        compuestas_en_la_serie_c_limpia:
+          juri-ni: 45
+          juri-bana: 10
+          juri-da: 6
+          juri-wara: 6
+          juri-ka: 5
+          ta-juri: 4
+          juri-kana: 3
+          juri-alisio: 2
+        por_bloque:
+          "era 1": {suelta: 10, compuestos: 12, total: 22}
+          "era 2 · serie A": {suelta: 68, compuestos: 129, total: 197}
+          "era 2 · serie B": {suelta: 17, compuestos: 41, total: 58}
+          "era 2 · serie C": {suelta: 126, compuestos: 141, total: 267}
+        compuestas_mas_usadas:
+          juri-ni: 104
+          tüshi-juri: 37
+          juri-bana: 27
+          juri-da: 26
+          juri-wara: 18
+          juri-ka: 15
+          juri-aima: 10
+          juri-ubana: 10
+    derivada:
+      forma: joutai
+      fuente: caquetío-reconstruido
+      cat: sust
+      glosa: "viento, corriente de aire (< joutai Wayunaiki)"
+      nucleo_fundacional: false
+      homografa_de_agente: false
+      notas: "F8 (2026-09-12): forma derivada de la hermana que cita la glosa, etiquetada `wayunaiki-cogn`; entra en la deuda de D11 fase 3 (núcleo reconstruido desde el wayuu)"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: []
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 53/1260
+        en_el_prompt_entero: 61/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 17, compuestos: 2, total: 19}
+        serie_c_limpia: {suelta: 1, compuestos: 0, total: 1}
+        por_bloque:
+          "era 1": {suelta: 5, compuestos: 0, total: 5}
+          "era 2 · serie A": {suelta: 6, compuestos: 0, total: 6}
+          "era 2 · serie B": {suelta: 4, compuestos: 1, total: 5}
+          "era 2 · serie C": {suelta: 2, compuestos: 1, total: 3}
+        compuestas_mas_usadas:
+          ta-joutai: 2
+    razon_derivada_sobre_atestiguada: 0.03
+  - glosa: "cactus columnar"
+    criterio: laxo:sinonimo-compartido
+    capa_derivada: hipotetico
+    solo_otra_grafia: false
+    atestiguada:
+      forma: kadushi
+      fuente: caquetío-atestiguado
+      cat: sust
+      glosa: "cactus columnar (Cereus hexagonus)"
+      nucleo_fundacional: false
+      homografa_de_agente: true
+      notas: "van Buurt 2014 §6 «words likely to be of Caquetío origin» (el autor advierte que la lista «has a subjective element»), islas A/B/C: «a columnar cactus (Cereus repandus)», var. cadushi (Aruba); Gatschet 1885 (material Pinart, Aruba 1882), sección plantas, «kaduski» = Cereus lanuginosus; respaldo toponímico van Buurt §7 (cadushi) [referente ABIERTO por D7: tres cactus distintos bajo el mismo nombre — Gatschet Pilosocer…"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: []
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 53/1260
+        en_el_prompt_entero: 77/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 118, compuestos: 2, total: 120}
+        serie_c_limpia: {suelta: 0, compuestos: 0, total: 0}
+        por_bloque:
+          "era 1": {suelta: 118, compuestos: 2, total: 120}
+        compuestas_mas_usadas:
+          ka-kadushi: 1
+          ta-kadushi: 1
+    derivada:
+      forma: coro
+      fuente: caquetío-hipotético
+      cat: sust
+      glosa: "cardón grande, cactus columnar"
+      nucleo_fundacional: false
+      homografa_de_agente: false
+      notas: "F8 (2026-09-12): etiqueta vieja `caquetío-hipotético/topónimo` · D10 (2026-08-03), grupo 3 — BAJA DE TIER, no cambia de lengua. La glosa «cardón grande» NO sale de ninguna fuente localizada. Zavala Reyes 2015 sección D lo dice explícitamente: su #181 es Koro = «Cotorra» (ya en el lexicón como entrada aparte, con su cita), no cardón. En Alvarado 1921 la palabra coro aparece 55 veces y siempre como TOPÓNIMO: no hay lem…"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: []
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 18/126
+        en_el_muestreo: 0/1260
+        en_el_prompt_entero: 0/1260
+        cubo_del_muestreador: ~   # fuera del perfil era2: no se le enseña nunca
+      uso:
+        toda_la_base: {suelta: 1, compuestos: 0, total: 1}
+        serie_c_limpia: {suelta: 0, compuestos: 0, total: 0}
+        por_bloque:
+          "era 1": {suelta: 1, compuestos: 0, total: 1}
+    razon_derivada_sobre_atestiguada: 0.01
+  - glosa: "espanto"
+    criterio: laxo:sinonimo-compartido
+    capa_derivada: hipotetico
+    solo_otra_grafia: false
+    atestiguada:
+      forma: etamo
+      fuente: caquetío-atestiguado
+      cat: v_raiz
+      glosa: "feroz, feo, espanto"
+      nucleo_fundacional: false
+      homografa_de_agente: false
+      notas: "Zavala Reyes 2015 #120 (AM)"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: []
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 133/1260
+        en_el_prompt_entero: 126/1260
+        cubo_del_muestreador: v_raiz (75 voces)
+      uso:
+        toda_la_base: {suelta: 6, compuestos: 14, total: 20}
+        serie_c_limpia: {suelta: 0, compuestos: 1, total: 1}
+        compuestas_en_la_serie_c_limpia:
+          etamo-ni: 1
+        por_bloque:
+          "era 1": {suelta: 1, compuestos: 0, total: 1}
+          "era 2 · serie A": {suelta: 3, compuestos: 5, total: 8}
+          "era 2 · serie B": {suelta: 1, compuestos: 4, total: 5}
+          "era 2 · serie C": {suelta: 1, compuestos: 5, total: 6}
+        compuestas_mas_usadas:
+          etamo-ni: 7
+          etamo-ka: 2
+          etamo-ana: 1
+          etamo-barsure: 1
+          etamo-da: 1
+          etamo-kana: 1
+          etamo-ubana: 1
+    derivada:
+      forma: mülia
+      fuente: caquetío-hipotético
+      cat: sust
+      glosa: "miedo, temor, espanto"
+      nucleo_fundacional: false
+      homografa_de_agente: false
+      notas: "F8 (2026-09-12): forma sin cita ni derivación declarada, etiquetada `wayunaiki/lokono`"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: []
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 0/1260
+        en_el_prompt_entero: 0/1260
+        cubo_del_muestreador: ~   # fuera del perfil era2: no se le enseña nunca
+      uso:
+        toda_la_base: {suelta: 0, compuestos: 0, total: 0}
+        serie_c_limpia: {suelta: 0, compuestos: 0, total: 0}
+    razon_derivada_sobre_atestiguada: 0.0
+  - glosa: "iguana"
+    criterio: laxo:sinonimo-compartido
+    capa_derivada: reconstruido
+    solo_otra_grafia: false
+    atestiguada:
+      forma: barbache
+      fuente: caquetío-atestiguado
+      cat: v_raiz
+      glosa: "iguana"
+      nucleo_fundacional: false
+      homografa_de_agente: false
+      notas: "Zavala Reyes 2015 #33 (PMA)"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: []
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 105/1260
+        en_el_prompt_entero: 104/1260
+        cubo_del_muestreador: v_raiz (75 voces)
+      uso:
+        toda_la_base: {suelta: 0, compuestos: 2, total: 2}
+        serie_c_limpia: {suelta: 0, compuestos: 0, total: 0}
+        por_bloque:
+          "era 2 · serie A": {suelta: 0, compuestos: 1, total: 1}
+          "era 2 · serie B": {suelta: 0, compuestos: 1, total: 1}
+        compuestas_mas_usadas:
+          barbache-bacoa: 1
+          barbache-da: 1
+    derivada:
+      forma: iguana
+      fuente: caquetío-reconstruido
+      cat: sust
+      glosa: "lagarto grande, iguana"
+      nucleo_fundacional: false
+      homografa_de_agente: false
+      notas: "Decisión de Miguel 2026-09-12: tainismo panhispánico que Medina Colina recoge en el habla paraguanera (s.v. iguana, página no dictada) → `caquetío-reconstruido`, forma justificada por cognado en taíno, como kanoa/hamaca/konuko; NO atestiguada porque la vía pudo ser el español. Etimología: origen taíno según el cruce del dictado. Etiqueta anterior: `taíno` · F8 (2026-09-12): etiqueta vieja `taíno/caribe`: la voz circu…"
+      exposicion:
+        forma_de_plantilla: true   # toda clave del lexicón lo es: la puerta del corte incluye VOCABULARIO_BASE entero
+        plantillas_que_la_enseñan: []
+        tu_tierra_la_enseña: 0/126
+        tu_tierra_como_token: 0/126
+        en_el_muestreo: 64/1260
+        en_el_prompt_entero: 69/1260
+        cubo_del_muestreador: sust (226 voces)
+      uso:
+        toda_la_base: {suelta: 0, compuestos: 0, total: 0}
+        serie_c_limpia: {suelta: 0, compuestos: 0, total: 0}
+    razon_derivada_sobre_atestiguada: 0.0
+
+# ── Los pares que son SÓLO OTRA GRAFÍA: fusión pendiente de D5, ──
+# ── no decisión de canon. Son los más baratos de arreglar.      ──
+variantes_ortograficas:
+  []   # ninguna: D5a ya fusionó las que había (cazi→kasi, cati→kati)
+
+# ── Pregunta (a) del issue: si el ejemplo de IDENTIDAD_LINGUISTICA ──
+# ── deja de ser `kali-bana`, ¿con qué raíz? Condiciones en el      ──
+# ── docstring de candidatas_para_el_ejemplo(); las 12 primeras.    ──
+candidatas_para_el_ejemplo_de_la_plantilla:
+  - raiz: biro
+    compuesto: biro-bana
+    glosa: "sal"
+    usos_de_la_raiz_en_la_base: 694
+    cita: "Zavala Reyes 2015 (Angulo Molina); recurso estratégico Coro"
+  - raiz: barsure
+    compuesto: barsure-bana
+    glosa: "alma, esencia vital, fuerza interior"
+    usos_de_la_raiz_en_la_base: 313
+    cita: "Angulo Molina; Zavala Reyes 2015"
+  - raiz: maure
+    compuesto: maure-bana
+    glosa: "fibra de algodón, hilo para tejer"
+    usos_de_la_raiz_en_la_base: 217
+    cita: "REPARTO 2026-09-10: a ATESTIGUADO. Cuatro apoyos y uno de ellos local: Zavala nota al pie (3), Alvarado 1921 p.216, Carvajal 168 y Castellanos; y Alvarado la registra VIVA EN CORO en 1921. No es voz s"
+  - raiz: kari
+    compuesto: kari-bana
+    glosa: "orilla del mar, costa"
+    forma_fuente: cari
+    usos_de_la_raiz_en_la_base: 78
+    cita: "Zavala Reyes 2015, glosario #66 (E): «Orilla del mar»; Cruz Esteves 1989 vía van Buurt 2014 §9 (topónimo Cariatávo), cari/kari = costa, orilla"
+  - raiz: ako
+    compuesto: ako-bana
+    glosa: "comida. Par, casal, pareja"
+    forma_fuente: aco
+    usos_de_la_raiz_en_la_base: 24
+    cita: "Zavala Reyes 2015 #4 (E+AM); variantes: aca"
+  - raiz: ateri
+    compuesto: ateri-bana
+    glosa: "hombre, varón"
+    usos_de_la_raiz_en_la_base: 23
+    cita: "Zavala Reyes 2015, glosario #17 (GC): «Hombre»"
+  - raiz: buiamati
+    compuesto: buiamati-bana
+    glosa: "dos lunas (unidad de tiempo ~60 días)"
+    usos_de_la_raiz_en_la_base: 14
+    cita: "Zavala Reyes 2015, glosario #47 (GC): «dos lunas. Medición de tiempo»"
+  - raiz: wariana
+    compuesto: wariana-bana
+    glosa: "arbusto halófilo, frailejón de la playa. Tabaco pescador"
+    forma_fuente: guariana
+    usos_de_la_raiz_en_la_base: 13
+    cita: "Zavala Reyes 2015 #142 (E)"
+  - raiz: takes
+    compuesto: takes-bana
+    glosa: "salina"
+    forma_fuente: taques
+    usos_de_la_raiz_en_la_base: 12
+    cita: "Zavala Reyes 2015 #237 (AM); era homógrafo del español en grafía fuente (taques) — la migración D5 disolvió la colisión"
+  - raiz: kunaro
+    compuesto: kunaro-bana
+    glosa: "pez del golfete de Coro. Promicops Guasa"
+    forma_fuente: cunaro
+    usos_de_la_raiz_en_la_base: 11
+    cita: "Zavala Reyes 2015 #96 (E)"
+  - raiz: wako
+    compuesto: wako-bana
+    glosa: "planta herbácea de la familia de las portulacea"
+    forma_fuente: guaco
+    usos_de_la_raiz_en_la_base: 10
+    cita: "Zavala Reyes 2015 #126 (E)"
+  - raiz: way
+    compuesto: way-bana
+    glosa: "árbol parecido a la ceiba"
+    forma_fuente: guay
+    usos_de_la_raiz_en_la_base: 10
+    cita: "Zavala Reyes 2015 #147 (E+A); era homógrafo del español en grafía fuente (guay) — la migración D5 disolvió la colisión"
+  # candidatas que cumplen las cinco condiciones: 97
+
+# ── La misma búsqueda por la FORMA y no por la glosa: entradas    ──
+# ── atestiguada y derivada con el MISMO esqueleto fonémico.      ──
+# ──                                                              ──
+# ── ⚠ CANDIDATAS, NO VEREDICTOS. El esqueleto sólo dice que las  ──
+# ── dos se escriben igual una vez quitada la grafía colonial; si ──
+# ── son la misma PALABRA lo dicen las glosas, que van al lado.   ──
+# ── Un esqueleto compartido puede ser también una COLISIÓN de    ──
+# ── homógrafos, y ésa es de por sí un dato del instrumento.      ──
+mismo_esqueleto_fonemico:
+  - esqueleto: amaka
+    atestiguada: amaka
+    glosa_atestiguada: "sitio de moler maíz, área de procesamiento"
+    derivada: hamaka
+    capa_derivada: reconstruido
+    glosa_derivada: "hamaca, red colgante para dormir"
+    uso_total: {atestiguada: 0, derivada: 118}
+    plantillas_que_enseñan_la_atestiguada: []
+    plantillas_que_enseñan_la_derivada: [IDENTIDAD_LINGUISTICA, prompt_reglas_completo]
+  - esqueleto: arifuke
+    atestiguada: harifuche
+    glosa_atestiguada: "maíz tostado y miel"
+    derivada: arifuke
+    capa_derivada: retroabstraido
+    glosa_derivada: "harina de maíz a la que se agregaba raspillo [?] de panela y que se servía como parte de la comida de los arrieros. Es muy nutritiva."
+    uso_total: {atestiguada: 0, derivada: 0}
+    plantillas_que_enseñan_la_atestiguada: []
+    plantillas_que_enseñan_la_derivada: []
+  - esqueleto: kasa
+    atestiguada: kasá
+    glosa_atestiguada: "puche de maíz, atole"
+    derivada: kasha
+    capa_derivada: reconstruido
+    glosa_derivada: "luna"
+    uso_total: {atestiguada: 2, derivada: 168}
+    plantillas_que_enseñan_la_atestiguada: []
+    plantillas_que_enseñan_la_derivada: [prompt_reglas_completo]
+  - esqueleto: kasi
+    atestiguada: kasi
+    glosa_atestiguada: "sol"
+    derivada: kashi
+    capa_derivada: reconstruido
+    glosa_derivada: "ahora, en este momento (temporal presente)"
+    uso_total: {atestiguada: 10, derivada: 2537}
+    plantillas_que_enseñan_la_atestiguada: []
+    plantillas_que_enseñan_la_derivada: [prompt_reglas_completo, prompt_reglas_breve]
+  - esqueleto: koro
+    atestiguada: koro
+    glosa_atestiguada: "cotorra"
+    derivada: coro
+    capa_derivada: hipotetico
+    glosa_derivada: "cardón grande, cactus columnar"
+    uso_total: {atestiguada: 4, derivada: 1}
+    plantillas_que_enseñan_la_atestiguada: []
+    plantillas_que_enseñan_la_derivada: []
+
+# ── EXPLORATORIO. Una glosa cae DENTRO de la otra. Ruidoso por    ──
+# ── construcción: casi todo es un modificador compartido, no un   ──
+# ── par rival. No se cuenta en el número laxo ni se decide aquí.  ──
+por_contencion_exploratorio:
+  - glosa_contenida: "agua"
+    atestiguada: barici  # "agua turbia, tierras coloradas rojizas"
+    derivada: duna (reconstruido)  # "agua (corriente, bebible)"
+    uso_total: {atestiguada: 4, derivada: 895}
+  - glosa_contenida: "agua"
+    atestiguada: buko  # "presa de agua, represa, canal de riego"
+    derivada: duna (reconstruido)  # "agua (corriente, bebible)"
+    uso_total: {atestiguada: 75, derivada: 895}
+  - glosa_contenida: "agua"
+    atestiguada: para  # "mar, agua extensa (dulce o salada en gran cantidad)"
+    derivada: duna (reconstruido)  # "agua (corriente, bebible)"
+    uso_total: {atestiguada: 311, derivada: 895}
+  - glosa_contenida: "agua"
+    atestiguada: tarika  # "laguna, espejo de agua interior"
+    derivada: duna (reconstruido)  # "agua (corriente, bebible)"
+    uso_total: {atestiguada: 3, derivada: 895}
+  - glosa_contenida: "mujer"
+    atestiguada: iero  # "mujer"
+    derivada: ama (reconstruido)  # "madre, mujer que nutre y da origen"
+    uso_total: {atestiguada: 5, derivada: 118}
+  - glosa_contenida: "mujer"
+    atestiguada: iero  # "mujer"
+    derivada: wari (reconstruido)  # "mujer adulta (no título)"
+    uso_total: {atestiguada: 5, derivada: 83}
+  - glosa_contenida: "mujer"
+    atestiguada: iero  # "mujer"
+    derivada: nagua (reconstruido)  # "nagua, falda de algodón de mujer"
+    uso_total: {atestiguada: 5, derivada: 28}
+  - glosa_contenida: "grande"
+    atestiguada: apo  # "grande"
+    derivada: chiriware (retroabstraido)  # "gavilán, ave rapaz grande"
+    uso_total: {atestiguada: 11, derivada: 26}
+  - glosa_contenida: "tres"
+    atestiguada: sabuenen  # "tres"
+    derivada: disey (retroabstraido)  # "nuestras abuelas cocinaban sobre un fuego producido con leña seca, rodeado de tres topias o piedras de igual tamaño sobre las que descansaban la sarté"
+    uso_total: {atestiguada: 87, derivada: 19}
+  - glosa_contenida: "grande"
+    atestiguada: apo  # "grande"
+    derivada: tapirama (retroabstraido)  # "frijol de grano grande, de sabor ligeramente amargo, que obliga a cambiar varias veces el agua en que se cuece; altamente nutritiva; las hay de distin"
+    uso_total: {atestiguada: 11, derivada: 3}
+  - glosa_contenida: "grande"
+    atestiguada: apo  # "grande"
+    derivada: coro (hipotetico)  # "cardón grande, cactus columnar"
+    uso_total: {atestiguada: 11, derivada: 1}
+  - glosa_contenida: "mar"
+    atestiguada: parawa  # "mar"
+    derivada: habobrisa (hipotetico)  # "brisa del golfete, viento suave del mar"
+    uso_total: {atestiguada: 0, derivada: 1}
+  - glosa_contenida: "fruto del cardon"
+    atestiguada: dato  # "fruto del cardón"
+    derivada: kachinare (retroabstraido)  # "es creada por el pueblo para designar con ella el fruto del cardón que no terminó de desarrollarse, que quedó pequeño o no maduró bien."
+    uso_total: {atestiguada: 1, derivada: 0}
+  - glosa_contenida: "fruto del cardon"
+    atestiguada: kaduchi  # "fruto del cardón (Cereus spp.)"
+    derivada: kachinare (retroabstraido)  # "es creada por el pueblo para designar con ella el fruto del cardón que no terminó de desarrollarse, que quedó pequeño o no maduró bien."
+    uso_total: {atestiguada: 2, derivada: 0}
+  - glosa_contenida: "grande"
+    atestiguada: apo  # "grande"
+    derivada: haborü (hipotetico)  # "marejada, oleaje grande del mar (habo+rü)"
+    uso_total: {atestiguada: 11, derivada: 0}
+  - glosa_contenida: "grande"
+    atestiguada: apo  # "grande"
+    derivada: iguana (reconstruido)  # "lagarto grande, iguana"
+    uso_total: {atestiguada: 11, derivada: 0}
+  - glosa_contenida: "grande"
+    atestiguada: apo  # "grande"
+    derivada: kaiwa (hipotetico)  # "caimán, lagarto grande de río"
+    uso_total: {atestiguada: 11, derivada: 0}
+  - glosa_contenida: "lagartija"
+    atestiguada: bisure  # "lagartija"
+    derivada: tukeke (retroabstraido)  # "lagartija pequeña, gecko"
+    uso_total: {atestiguada: 1, derivada: 0}
+  - glosa_contenida: "mar"
+    atestiguada: parawa  # "mar"
+    derivada: haborü (hipotetico)  # "marejada, oleaje grande del mar (habo+rü)"
+    uso_total: {atestiguada: 0, derivada: 0}
+  - glosa_contenida: "mar"
+    atestiguada: parawa  # "mar"
+    derivada: jaiba (reconstruido)  # "jaiba: cangrejo de mar; también broma o chanza molesta"
+    uso_total: {atestiguada: 0, derivada: 0}
+  - glosa_contenida: "mar"
+    atestiguada: parawa  # "mar"
+    derivada: kanawari (hipotetico)  # "tiburón, gran pez del mar abierto"
+    uso_total: {atestiguada: 0, derivada: 0}
+  - glosa_contenida: "mar"
+    atestiguada: parawa  # "mar"
+    derivada: tüma (hipotetico)  # "perla, cuenta brillante del mar"
+    uso_total: {atestiguada: 0, derivada: 0}
+  - glosa_contenida: "palmera"
+    atestiguada: piritu  # "palmera"
+    derivada: marawa (hipotetico)  # "palma, palmera de cogollo y fibra"
+    uso_total: {atestiguada: 0, derivada: 0}
+  - glosa_contenida: "paloma"
+    atestiguada: wakoa  # "paloma"
+    derivada: chenga (retroabstraido)  # "voz con que el pueblo identificó a la paloma perdiz. Fue abundante en nuestros montes, hoy casi desaparecida."
+    uso_total: {atestiguada: 0, derivada: 0}
+  - glosa_contenida: "paloma"
+    atestiguada: wakoa  # "paloma"
+    derivada: iwira (retroabstraido)  # "fue paloma silvestre del tamaño de la casera; abundante en épocas pasadas, hoy en vías de extinción; de carne muy apreciada"
+    uso_total: {atestiguada: 0, derivada: 0}
+  - glosa_contenida: "pez"
+    atestiguada: bagre  # "pez"
+    derivada: kanawari (hipotetico)  # "tiburón, gran pez del mar abierto"
+    uso_total: {atestiguada: 0, derivada: 0}
+  - glosa_contenida: "tres"
+    atestiguada: sabuenen  # "tres"
+    derivada: maba (retroabstraido)  # "son tres denominaciones para identificar al panal de las abejas"
+    uso_total: {atestiguada: 87, derivada: 0}
+  - glosa_contenida: "tres"
+    atestiguada: sabuenen  # "tres"
+    derivada: mebi (retroabstraido)  # "son tres denominaciones para identificar al panal de las abejas"
+    uso_total: {atestiguada: 87, derivada: 0}
