@@ -256,6 +256,407 @@ DESCARTAR_DEL_HABLA: dict[str, str] = {
 }
 
 # ══════════════════════════════════════════════════════════════════════
+# NO ES LA MISMA VOZ — homógrafos formales con la comparanda de OTRA lengua
+# ══════════════════════════════════════════════════════════════════════
+# El cruce contra `VOCABULARIO_BASE` pregunta «¿esta voz de Zavala ya está?»
+# y lo pregunta sobre el lexicón ENTERO, que desde el 2026-09-13 lleva las
+# 3.569 entradas de la comparanda achagua (Neira y Ribero 1762) además del
+# wayuu, el lokono y el taíno. Con eso, una coincidencia de GRAFÍA entre dos
+# lenguas hermanas dejó de ser rara y pasó a leerse como «ya está»:
+#
+#     Cana   #57  'demonio'          vs. achagua `cana-achagua` 'maíz'
+#     Carama #64  'ramazón'          vs. achagua `carama` 'cachama, un pescado'
+#     Cuna   #95  'pez del golfete'  vs. achagua `cuna-achagua` 'barbasco de raíz'
+#     Turupía #263 'árbol espinoso'  vs. achagua `turupia-achagua` 'toche'
+#     Ima    #165 AFIJO 'humedad'    vs. lokono  `ima` 'enemigo'
+#     Coa    #6   variante del AFIJO `-aima` vs. caquetío `koa` (forma_fuente «coa»)
+#
+# Medido el 2026-09-20: sin esta tabla, `--generar-modulo` borra del módulo
+# generado cuatro voces atestiguadas (`kana`, `karama`, `kuna`, `turupia`) y
+# DOS de los ocho afijos (`-ima`, `-aima`) — el hallazgo de mayor valor de
+# toda la minería, según la cabecera de este mismo archivo. El módulo
+# commiteado es de antes de la fusión achagua y por eso aún las tiene: la
+# deriva estaba latente, no aplicada.
+#
+# ⚠️ Esto NO es el arreglo de fondo. El arreglo de fondo es que `lex_idx` se
+# construya sólo con la familia caquetía —un comparandum de otra lengua no
+# es «la misma voz» nunca— y eso cambia qué entra en `VOCABULARIO_BASE` (p.
+# ej. `ture`, hoy caribe-continental, volvería a emitirse como caquetía) y
+# por tanto mueve el score. Es decisión de Miguel: propuesta en
+# 6-fusion/clases_de_raiz_zavala_2026-09-20.yaml §homografos_de_la_comparanda.
+NO_ES_LA_MISMA_VOZ: dict[str, str] = {
+    "cana":    "#57 (HB) 'demonio'. El homógrafo es `cana-achagua` 'maíz' (Neira y Ribero 1762): otra lengua, otro referente.",
+    "carama":  "#64 (E) 'ramazón'. El homógrafo es el achagua `carama` 'cachama, un pescado'.",
+    "cuna":    "#95 (E) 'pez del golfete de Coro'. El homógrafo es `cuna-achagua` 'barbasco de raíz'.",
+    "turupia": "#263 (AM+A) 'árbol espinoso. Sitio en Cumarebo'. El homógrafo es `turupia-achagua` 'toche'.",
+    "ima":     "#165 (E+PMA) AFIJO 'humedad, quebrada'. El homógrafo es el lokono `ima` 'enemigo'; un afijo no es una clave del léxico.",
+    "coa":     "#6 (AM+PMA) variante del AFIJO `-aima` 'abundancia'. El homógrafo es `koa` (forma_fuente «coa»), el palo de siembra: misma grafía colonial, distinto morfema.",
+}
+
+
+# ══════════════════════════════════════════════════════════════════════
+# LA CLASE DE LA RAÍZ — declarada por fila, no heredada del tier
+# ══════════════════════════════════════════════════════════════════════
+# ANTES (hasta el 2026-09-20) toda la clasificación de parte de la oración
+# era una línea:
+#
+#     _CAT_POR_TIER = {"T4_abstracto": "v_raiz"}   # heurística de POS
+#
+# El tier T4 es el CAJÓN DE RESTO: lo que el regex `re_concreto` no reconoció
+# como cosa. De ahí salían **49** entradas con `cat: "v_raiz"`, y de
+# `cat: "v_raiz"` sale `_RAICES_VERB` (curiana_lexicon.py), que hace que
+# `score_linguistico()` cuente como arahuaco **cualquier token cuyo primer
+# segmento sea una raíz verbal** y que `_familia_de_token()` le dé lengua
+# propia. Sobre esas 49 raíces la base tiene 123 formas raíz+aspecto y 1.071
+# usos (`juri-*` 227, `waidima-*` 97, `dichiba-*` 63, `popoi-*` 59…).
+#
+# PERO NO es que «40 no sean verbos» (Miguel, 2026-09-20). En arahuaco mucho
+# de lo que el castellano llama adjetivo **es un verbo estativo**: Perea y
+# Alonso 1942 (obra `perea-alonso-1942`) describe la 4ª conjugación lokono
+# —infinitivo en `-en`, pronombre POSPUESTO (`de, bù, i, n, u, hù, ye`)— como
+# «la clase de los ESTATIVOS: colores, tamaños, sabores, estados»
+# (pp. 634-639: `cule-n` 'ser rojo', `ibe-n` 'estar lleno', `hebbe-n` 'ser
+# viejo'), y en pp. 598-599/608 da la regla que los fabrica: «cualquier
+# nombre, adjetivo o partícula se hace verbo anteponiendo a- o c-». Buscar
+# «adjetivos» sueltos es buscar en la categoría equivocada.
+#
+# Así que las 49 se clasifican UNA POR UNA contra la glosa verbatim de la
+# fuente (`glosa_fuente`, que NO se toca) y contra la comparanda que el
+# proyecto ya tiene, en tres clases:
+#
+#   estativo → concepto adjetival que en arahuaco es verbo   → cat v_raiz
+#   accion   → verbo pleno                                   → cat v_raiz
+#   nombre   → sustantivo concreto o abstracto               → cat sust
+#   adverbio → deíctico de lugar (la clase de `yama`)        → cat part
+#
+# Las dos primeras SIGUEN siendo `v_raiz`: lo que cambia no es su categoría
+# sino que ahora está declarada con su razón. La tercera y la cuarta son las
+# que estaban mal.
+#
+# ⚠️ Lo que se corrige es `cat` —que es NUESTRO—. `glosa_fuente` es verbatim
+# de Zavala y no se toca jamás; `sig` tampoco se toca aquí (mueve lo que el
+# agente lee): las glosas que piden curación van propuestas, sin aplicar, en
+# 6-fusion/clases_de_raiz_zavala_2026-09-20.yaml §curacion_de_sig.
+#
+# La clave es la GRAFÍA DE ZAVALA (el primer lema normalizado), como en
+# HOMOGRAFOS_ES y IDENTIFICACION_MODERNA, para que la fila sobreviva a
+# cualquier re-migración de lema fonémico. Cada fila lleva:
+#   cat    — lo que se emite
+#   clase  — estativo | accion | nombre | adverbio
+#   por    — el apoyo comparativo CON CITA (regla 8: id de
+#            4-fuentes/bibliografia.yaml) o `deuda: sin-procedencia`
+CLASE_DE_LA_RAIZ: dict[str, dict] = {
+
+    # ── ESTATIVOS: el castellano dice adjetivo, el arahuaco dice verbo ──
+    "apo": {
+        "cat": "v_raiz", "clase": "estativo",
+        "por": "'Grande' es tamaño, y los tamaños son la 4ª conjugación estativa "
+               "del lokono (perea-alonso-1942, pp. 634-639). El propio lexicón ya "
+               "trae el lokono `ipi-lli-be` 'ser grande' como v_raiz. La achagua "
+               "verbaliza y nominaliza la misma raíz: `numanudau` 'engrandecer', "
+               "`manucaicasi` 'grandeza' (neira-ribero-1762)."},
+    "bachure": {
+        "cat": "v_raiz", "clase": "estativo",
+        "por": "'Maneto, patituerto' es defecto corporal, y el lokono lo dice con "
+               "verbo estativo: `hiccu-li` 'ser cojo' (perea-alonso-1942), ya en el "
+               "lexicón como v_raiz."},
+    "cachipo": {
+        "cat": "v_raiz", "clase": "estativo",
+        "por": "'Enojado, colérico' es estado. La achagua lo conjuga sobre una raíz "
+               "`cabare-` con el atributivo ca-/ka-: `cabareuno` 'enojarse', "
+               "`cabarecayi` 'colérico', `cabareumí` 'es bravo' (neira-ribero-1762). "
+               "Wayuu `aashichijawaa` 'enojarse'."},
+    "etamo": {
+        "cat": "v_raiz", "clase": "estativo",
+        "por": "'Feroz, feo' son cualidades (4ª conj. lokono, perea-alonso-1942 "
+               "p. 634); 'espanto' es su nombre de acción, que el lokono forma con "
+               "-hi/-hù sobre el mismo verbo (p. 612). La achagua hace el mismo par "
+               "sobre una raíz: `carruicay` 'espanto' / `carrunatacayi` 'espantoso' "
+               "(neira-ribero-1762). DUDOSO declarado: glosa mixta cualidad+nombre; "
+               "se mantiene verbal porque dos de las tres acepciones lo son, y "
+               "porque `etamo` es la voz que MANDA en el par 18 de la política "
+               "atestiguado-manda (archivó `mülia`)."},
+    "guaidima": {
+        "cat": "v_raiz", "clase": "estativo",
+        "por": "'Integro' = 'entero'. El lexicón ya trae el wayuu `waneepiaa` "
+               "'ser entero, -ra; ser' — la glosa misma lo declara verbo. Achagua "
+               "`jaubearuba` 'cabal, entero' (neira-ribero-1762)."},
+    "guaranao": {
+        "cat": "v_raiz", "clase": "estativo",
+        "por": "'Salado, ácido' son sabores, y los sabores son 4ª conjugación "
+               "estativa en lokono (perea-alonso-1942 p. 634). El lexicón ya trae el "
+               "wayuu `palawaa` 'ser salado, -da'."},
+    "guasima": {
+        "cat": "v_raiz", "clase": "estativo",
+        "por": "'Viejo, anciano'. El apoyo es literal: `hebbe-n` 'ser viejo' es UNO "
+               "de los tres ejemplos con que Perea define la 4ª conjugación estativa "
+               "(perea-alonso-1942 p. 634), y `hebbe` ya está en el lexicón como "
+               "v_raiz 'ser viejo, anciano'. DUDOSO declarado: 'anciano' también "
+               "puede leerse como nombre de edad (cf. `wanü` 'anciano, mayor', sust); "
+               "manda el apoyo literal, que es de la misma glosa."},
+    "patapati": {
+        "cat": "v_raiz", "clase": "estativo",
+        "por": "'Anegadizo' es propiedad del terreno, y los estados son 4ª "
+               "conjugación lokono (perea-alonso-1942 p. 634). La forma es además "
+               "reduplicada, y la reduplicación caquetía es productiva y medida "
+               "(morfologia.md §4, gatschet-1885). deuda: sin-procedencia para el "
+               "cognado — ninguna hermana da 'anegadizo' con glosa idéntica."},
+    "singuanguso": {
+        "cat": "v_raiz", "clase": "estativo",
+        "por": "'Insolente' es cualidad de carácter; entra por la regla general de "
+               "Perea (perea-alonso-1942 pp. 598-599/608: nombre, adjetivo o "
+               "partícula se hacen verbo). deuda: sin-procedencia — ninguna hermana "
+               "da 'insolente' con glosa idéntica."},
+    "usera": {
+        "cat": "v_raiz", "clase": "estativo",
+        "por": "'Seco, arenoso'. El lexicón ya trae el wayuu `josoo` 'estar seco, "
+               "-ca' con la glosa en forma verbal. Paraujano `jaradu` 'seco' "
+               "(oliver-1989-apendice-a, tabla A-2). Y la achagua lo predica con el "
+               "privativo ma-: `macarray` 'seco', `macarracataní` 'seco, estando "
+               "seco' (neira-ribero-1762), que es el mecanismo de van Buurt §8 "
+               "(van-buurt-2014)."},
+
+    # ── ACCIONES: verbo pleno, la glosa de la fuente es un infinitivo ──
+    "badamaro": {
+        "cat": "v_raiz", "clase": "accion",
+        "por": "'Extraer, sacar', dos infinitivos transitivos. Lokono `lluccu-waria` "
+               "'sacar' (perea-alonso-1942). La achagua los marca con el pronombre "
+               "PREFIJADO nu-, que es la marca del transitivo (perea-alonso-1942 "
+               "p. 635): `numunuayu` 'sacar una espina', `nusiguiayu` 'sacar "
+               "estrujando' (neira-ribero-1762)."},
+    "beceremicore": {
+        "cat": "v_raiz", "clase": "accion",
+        "por": "'Dominar, triunfar, victoria': dos infinitivos y su nombre de "
+               "acción, que el lokono forma con -hù/-hi sobre el verbo "
+               "(perea-alonso-1942 p. 612). Achagua `nunisau` 'vencer, concluir' "
+               "(neira-ribero-1762). DUDOSO declarado por la glosa mixta."},
+    "domaria": {
+        "cat": "v_raiz", "clase": "accion",
+        "por": "'Enredarse, atormentar'. El primero es reflexivo/medio, que en "
+               "lokono es una conjugación entera —la 3ª, en -n-nua "
+               "(perea-alonso-1942 p. 629)—, y sólo un verbo puede tener voz media."},
+    "durigua": {
+        "cat": "v_raiz", "clase": "accion",
+        "por": "'Hacer trabajos cortos': la glosa ES una perífrasis verbal. Lokono "
+               "`k-eme-kebbù` 'trabajar' (perea-alonso-1942 p. 648, keme-kebbu-n "
+               "'estar atareado'), ya en el lexicón como v_raiz."},
+    "guide": {
+        "cat": "v_raiz", "clase": "accion",
+        "por": "'Arreglar, acomodar'. Achagua `nuchuniu` 'acomodar, componer' con "
+               "nu- prefijado, o sea transitivo (neira-ribero-1762; "
+               "perea-alonso-1942 p. 635)."},
+    "jabal": {
+        "cat": "v_raiz", "clase": "accion",
+        "por": "'Adquirir', infinitivo transitivo. deuda: sin-procedencia — ninguna "
+               "hermana del repo da 'adquirir' con glosa idéntica; el apoyo es la "
+               "glosa de la fuente (zavala-reyes-2015 #168)."},
+    "jadarayte": {
+        "cat": "v_raiz", "clase": "accion",
+        "por": "'Recoger', infinitivo. El wayuu del lexicón lo dice en infinitivo "
+               "dos veces —`aja'itaa` 'recoger agua', `asukaa` 'recoger leña'— "
+               "aunque estén etiquetadas `sust` por el aplanamiento de la "
+               "comparanda: se cita la GLOSA, no su cat. deuda: sin-procedencia — "
+               "ese wayuu viene de Captain & Captain 2005, que NO es obra de "
+               "4-fuentes/bibliografia.yaml, así que no es clave foránea (regla 8)."},
+    "quiboata": {
+        "cat": "v_raiz", "clase": "accion",
+        "por": "'Engañar'. Lokono `muli-da` 'engañar' (perea-alonso-1942), ya v_raiz "
+               "en el lexicón; achagua `nucharisuedau` 'embaucar, engañar' y "
+               "`nuchanisuedau` 'burlar, engañar', con nu- prefijado "
+               "(neira-ribero-1762)."},
+    "quidiboata": {
+        "cat": "v_raiz", "clase": "accion",
+        "por": "'Engañar, engañado': verbo y participio de la misma raíz, que es la "
+               "prueba interna de que la base es verbal — el lokono forma el "
+               "participio pasivo con -sia sobre el verbo (perea-alonso-1942 "
+               "p. 612). Comparte raíz con #206 `quiboata`."},
+
+    # ── NOMBRES: sustantivo concreto o abstracto; la cat estaba mal ──
+    "aca": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Bejuco' es una planta. El propio lexicón ya trae `yaro` 'bejuco. "
+               "Planta venenosa' y `naure` 'planta bejucosa' como sust, las dos de "
+               "zavala-reyes-2015; achagua `acua` 'sarmiento, bejuco' "
+               "(neira-ribero-1762)."},
+    "baharuco": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Abuelo, viejo': término de parentesco, y el parentesco arahuaco es "
+               "nombre poseído — achagua `abi` 'abuelo' (neira-ribero-1762), wayuu "
+               "`atuushi` 'abuelo' y `taata` 'papá, abuelo'. DUDOSO declarado: la "
+               "segunda acepción ('viejo') sí es estativa, y el par con `guasima` "
+               "#145 lo enseña; manda la primera, y en duda se degrada (regla 2)."},
+    "baperon": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Calabaza con cal': el recipiente del chimó, un objeto. Achagua "
+               "`cuirro` 'calabaza, uyama' (neira-ribero-1762); wayuu `aliita` "
+               "'totuma', `wüirü` 'auyama'. Gemela de #220 `raporon`."},
+    "barbache": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Iguana', zoónimo. El lexicón ya trae `iwana` y `higuana` (taíno, "
+               "vía brinton-1871) e `iwana-kalinago`, las tres como sust. deuda: "
+               "sin-procedencia para el lado caquetío — `barbache` no tiene cognado "
+               "hermano; el apoyo es la glosa (zavala-reyes-2015 #33)."},
+    "cana": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Demonio', ser sobrenatural. Achagua `tanasimi` 'demonio, diablo' "
+               "(neira-ribero-1762); wayuu `yolujaa` 'diablo, demonio'."},
+    "capo": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Duende, ente sobrenatural'. Achagua `guabaimi` 'duende' "
+               "(neira-ribero-1762). Y el apoyo interno es fuerte: el compuesto "
+               "ATESTIGUADO `capubana` 'duende del cerro' (zavala-reyes-2015 #61) ya "
+               "es `sust` en el lexicón, y D9 lo usó como uno de los seis apoyos de "
+               "`-bana` 'cerro'. La base de un compuesto nominal atestiguado no es "
+               "raíz verbal."},
+    "capu": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Demonio'. Misma familia que #59 `capo` y misma base de `capubana` "
+               "(zavala-reyes-2015 #60/#61; D9, morfologia.md §3). El lazo "
+               "referencial del cerro de Santa Ana, que se llamó Cerro de Capú "
+               "(velasco-2015-resistencia), es de un NOMBRE, no de un verbo."},
+    "carama": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Ramazón', colectivo de ramas. Achagua `rinacay` 'rama' "
+               "(neira-ribero-1762)."},
+    "chuchube": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Paraulata', ornitónimo. Es una de las nueve reduplicaciones léxicas "
+               "que F11 midió, y 5 de ellas son aves (morfologia.md §4, "
+               "gatschet-1885): formación léxica de zoónimo, no morfología viva. Su "
+               "gemela `chuchubi` ya es `sust` en el lexicón."},
+    "comoho": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Higo': el fruto, un nombre. deuda: sin-procedencia para el cognado "
+               "— el apoyo es la glosa de la fuente (zavala-reyes-2015 #88)."},
+    "despopo": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Fuerza', nombre abstracto. En las tres comparandas del lexicón el "
+               "concepto es nombre: wayuu `atsüin` 'fuerza', lokono `ansi` 'fuerza "
+               "vital', y el propio caquetío `barsure` 'alma, esencia vital, fuerza "
+               "interior' (sust, atestiguado: Angulo Molina vía "
+               "zavala-reyes-2015). DUDOSO declarado: el wayuu tiene "
+               "además `matsüinwaa` 'estar sin fuerza', que es el privativo ma- "
+               "sobre la misma raíz y prueba que la raíz SE PREDICA; pero lo que "
+               "Zavala glosa es el nombre, y en duda se degrada (regla 2)."},
+    "dichiva": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Límite, línea'. La achagua distingue las dos cosas: el lindero es "
+               "NOMBRE —`rijubana` 'linde', `ypubana` 'coto, lindero'— y para "
+               "predicarlo usa otro verbo, `nuyedau rijubanã` 'terminar, poner "
+               "lindero' (neira-ribero-1762). 63 usos raíz+aspecto en la base."},
+    "guamipa": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Hueco, profundidad': la segunda acepción es nombre abstracto y la "
+               "primera es nombre de objeto en la achagua, `caricuibai` 'hueco' "
+               "(neira-ribero-1762). DUDOSO declarado: 'hueco' admite lectura "
+               "adjetival; en duda se degrada (regla 2)."},
+    "guaracaro": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Tapirama silvestre', fitónimo. El lexicón ya trae `tapirama` "
+               "'frijol de grano grande' como sust (retroabstraído de "
+               "medina-colina-sxx)."},
+    "guica": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Yabo', fitónimo (el árbol del cardonal). deuda: sin-procedencia "
+               "para el cognado; el apoyo es la glosa (zavala-reyes-2015 #150)."},
+    "hueque": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Sitio de trabajo': la glosa de la fuente es «sitio de X», un nombre "
+               "de lugar. DUDOSO declarado: podría ser la nominalización de un verbo "
+               "'trabajar' (el lokono la forma con -hù, perea-alonso-1942 p. 612), "
+               "pero lo que la fuente da es el nombre y en duda se degrada."},
+    "icoroata": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Caraota', fitónimo. El propio minador ya lo declara en "
+               "DESMARCADAS_F7: «es la voz caquetía; 'caraota' es su glosa». Cero "
+               "usos raíz+aspecto en la base. deuda: sin-procedencia para el "
+               "cognado; el apoyo es la glosa (zavala-reyes-2015 #162)."},
+    "juri": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Viento, ventarrón' — EL CASO CENTRAL, 227 usos raíz+aspecto. En las "
+               "tres hermanas 'viento' es nombre y el soplar es verbo aparte: lokono "
+               "`wadu-lli` 'viento'; wayuu `wawai` 'viento (de tempestad)' frente a "
+               "`waawataa` 'soplar (el viento)'; achagua `nususube` 'viento mío' —un "
+               "nombre POSEÍDO con nu-— frente a `risuayu` 'correr viento' y "
+               "`guanamatau` 'echarse el viento' (neira-ribero-1762). van Buurt lo "
+               "da como RAÍZ nominal `hudi`/`juri` 'viento' en Hudishibana 'llano "
+               "ventoso' (van-buurt-2014 §5). Y el propio repo lo lee como nombre: "
+               "`jurijurebo` 'Paso de los vientos' es la reduplicación de plural "
+               "sobre `juri` (morfologia.md §4)."},
+    "laguari": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Acacia Espinoza, acacia. Lauadrí', fitónimo. deuda: sin-procedencia "
+               "para el cognado; el apoyo es la glosa (zavala-reyes-2015 #182)."},
+    "orumo": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Urumu. Apamate', fitónimo (Tabebuia). deuda: sin-procedencia para "
+               "el cognado; el apoyo es la glosa (zavala-reyes-2015 #187)."},
+    "quibaquibi": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Baquiano, conocedor': las dos acepciones son nombres de AGENTE en "
+               "castellano («un baquiano», «un conocedor»), no adjetivos de estado — "
+               "que es lo que la separa de `guasima` 'viejo'. El agentivo arahuaco se "
+               "forma sobre el verbo (lokono -ha-li-n 'andador', perea-alonso-1942 "
+               "p. 612), pero lo atestiguado aquí es la forma entera. DUDOSO "
+               "declarado: si se leyera 'conocedor' como cualidad sería estativo; en "
+               "duda se degrada (regla 2)."},
+    "quiguagua": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Especie de haba grande y blanca', fitónimo. deuda: sin-procedencia "
+               "para el cognado; el apoyo es la glosa (zavala-reyes-2015 #215)."},
+    "quiricias": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Sangre, sangrado'. 'Sangre' es nombre en las tres hermanas —lokono "
+               "`ttenna` e `ithihi`, wayuu, achagua `yrraí` (neira-ribero-1762)— y el "
+               "lokono tiene ADEMÁS el estativo aparte, `ùttùa` 'ser sangriento, "
+               "estar ensangrentado' (perea-alonso-1942 p. 639): la lengua distingue "
+               "el nombre del estado, y la glosa de Zavala empieza por el nombre."},
+    "raporon": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Calabaza con cal'. Gemela de #27 `baperon`, mismo referente y misma "
+               "clase; achagua `cuirro` 'calabaza, uyama' (neira-ribero-1762)."},
+    "surupa": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Blatta orientalis. Cucaracha', zoónimo. Achagua `baderrea` "
+               "'cucaracha' (neira-ribero-1762)."},
+    "tuba": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Aglomeración, montón'. La achagua tiene las DOS voces por separado "
+               "—`bambasí` 'montón' (nombre) y `nuetaidau` 'amontonar' (verbo con nu- "
+               "prefijado)— y la glosa de Zavala es la del nombre "
+               "(neira-ribero-1762). 35 usos raíz+aspecto."},
+    "ubeda": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Acacia fétida. Mapurite, cují hediondo', fitónimo. deuda: "
+               "sin-procedencia para el cognado; el apoyo es la glosa "
+               "(zavala-reyes-2015 #266)."},
+    "uray": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Envoltura o vaina de las cerbatanas': un objeto manufacturado. "
+               "deuda: sin-procedencia para el cognado; el apoyo es la glosa "
+               "(zavala-reyes-2015 #271)."},
+    "ure": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Raíz'. Nombre en las tres hermanas: lokono `iikirahi`, wayuu "
+               "`ourala`, achagua `baririba` (neira-ribero-1762). Y van Buurt lo "
+               "registra como raíz nominal `-ure`/`-huri` 'raíz' (van-buurt-2014 §5, "
+               "MORFEMAS_VAN_BUURT). ⚠️ homógrafo del formante toponímico `-ure`, en "
+               "disputa con el `-are` 'sitio de' (morfologia.md §5)."},
+
+    # ── ADVERBIO: lo dice la propia fuente ──
+    "popoi": {
+        "cat": "part", "clase": "adverbio",
+        "por": "La glosa de Zavala es «Ahí. **Adverbio de lugar**»: la fuente declara "
+               "la parte de la oración. El lexicón ya tiene esa clase y la llama "
+               "`part` — `yama` 'aquí, en este lugar (deíctico proximal)' y `kana-pa` "
+               "'allá'. Apoyo: lokono `jon` 'allá, allí (adverbio demostrativo "
+               "distal)' y `yu-mùn` 'allí' (perea-alonso-1942); achagua `neenì` "
+               "'allí' (neira-ribero-1762). 59 usos raíz+aspecto en la base — "
+               "«ahí-completivo», que es lo que la heurística permitía decir."},
+}
+
+
+# ══════════════════════════════════════════════════════════════════════
 # D7 — glosa histórica vs. identificación científica moderna
 # ══════════════════════════════════════════════════════════════════════
 # Decisión de Miguel, 2026-08-03: cuando la glosa de la fuente y la
@@ -402,7 +803,12 @@ def clasificar(entradas: list[dict]) -> dict:
         # forma_fuente del alias). Casar por lema fonémico sería absorber en
         # silencio palabras DISTINTAS que colisionan (quiba 'ayuda' no es el
         # kiba del literal): esas van a COLISIONES_D5, más abajo.
-        hit = next(((l, *lex_idx[norm(l)]) for l in e["lemas"] if norm(l) in lex_idx), None)
+        #
+        # …y tampoco casa el homógrafo declarado de OTRA lengua: ver
+        # NO_ES_LA_MISMA_VOZ. Sin esa tabla la regeneración BORRA seis
+        # entradas atestiguadas del módulo generado.
+        hit = next(((l, *lex_idx[norm(l)]) for l in e["lemas"]
+                    if norm(l) in lex_idx and norm(l) not in NO_ES_LA_MISMA_VOZ), None)
         if hit:
             lema, forma_lex, fuente = hit
             reg = {**e, "forma_lexicon": forma_lex, "fuente_actual": fuente}
@@ -532,6 +938,26 @@ def informe(tiers: dict, entradas: list[dict]):
           f"{len(tiers.get('COLISIONES_D5', []))} colisiones sin renombrar:")
     for c in tiers.get("COLISIONES_D5", []):
         print(f"     ⚠ {c['forma']:14} → {c['lema_fonemico']:14} {c['motivo']}")
+    # La clase de la raíz: qué se declaró y qué sigue en la heurística.
+    por_clase: dict[str, list[str]] = {}
+    sin_declarar = []
+    for t in ("T2_nombres_agente", "T3_concreto", "T4_abstracto"):
+        for e in tiers[t]:
+            origen = norm(e["lemas"][0])
+            forma = e.get("lema_final", origen)
+            fila = CLASE_DE_LA_RAIZ.get(origen)
+            if fila:
+                por_clase.setdefault(fila["clase"], []).append(forma)
+            elif _CAT_POR_TIER.get(t) == "v_raiz":
+                sin_declarar.append(forma)
+    print(f"\n  CLASE DE LA RAÍZ — {sum(len(v) for v in por_clase.values())} declaradas:")
+    for clase, formas in sorted(por_clase.items()):
+        print(f"     {clase:9} {len(formas):3}  {', '.join(sorted(formas))[:110]}")
+    print(f"     sin declarar que salen v_raiz por heurística: "
+          f"{sorted(sin_declarar) or 'ninguna'}")
+    print(f"     homógrafos de la comparanda que NO son la misma voz: "
+          f"{sorted(NO_ES_LA_MISMA_VOZ)}")
+
     if tiers["MAL_ETIQUETADO"]:
         print(f"\n  ⚠ presentes pero NO etiquetadas 'caquetío' ({len(tiers['MAL_ETIQUETADO'])}):")
         for e in tiers["MAL_ETIQUETADO"]:
@@ -539,7 +965,24 @@ def informe(tiers: dict, entradas: list[dict]):
                   f"  | Zavala: {e['definicion'][:40]}")
 
 
+# FALLBACK, no clasificación: la heurística de POS del tier, que se conserva
+# para lo que no tenga fila en CLASE_DE_LA_RAIZ. Las 49 entradas que hoy caen
+# en T4 la tienen todas, así que hoy este mapa no decide ninguna; si mañana
+# el parseo saca una entrada nueva a T4, saldrá `v_raiz` sin declarar y
+# `clases_sin_declarar` la delatará en el informe y en el módulo generado.
 _CAT_POR_TIER = {"T4_abstracto": "v_raiz"}   # heurística de POS; el resto, sust
+
+
+def clase_de(origen: str, tier: str) -> tuple[str, str, str]:
+    """(cat, clase, razón) de una entrada, por su grafía de Zavala.
+
+    La fila declarada manda; si no la hay, cae en la heurística del tier y la
+    clase queda vacía — que es justamente lo que hay que poder contar.
+    """
+    fila = CLASE_DE_LA_RAIZ.get(origen)
+    if fila:
+        return fila["cat"], fila["clase"], fila["por"]
+    return _CAT_POR_TIER.get(tier, "sust"), "", ""
 
 
 def _entrada_py(e: dict, tier: str, indent: str = "    ") -> str:
@@ -561,7 +1004,7 @@ def _entrada_py(e: dict, tier: str, indent: str = "    ") -> str:
     variantes = [norm(l) for l in e["lemas"][1:]]
     if variantes:
         nota += f"; variantes: {', '.join(variantes)}"
-    cat = _CAT_POR_TIER.get(tier, "sust")
+    cat, _clase, _por = clase_de(origen, tier)
     pad = " " * max(1, 14 - len(forma))
     # D7: la glosa de la fuente se conserva verbatim y trazable; la
     # identificación moderna se añade aparte, sin desplazarla.
@@ -624,6 +1067,13 @@ def generar_modulo(tiers: dict, ruta: str):
     L.append("Cada entrada lleva en `notas` el número de glosario y las siglas del")
     L.append("compilador para que esa procedencia quede siempre auditable.")
     L.append("")
+    L.append("LA CLASE DE LA RAÍZ (2026-09-20): la parte de la oración ya no sale de una")
+    L.append("heurística de tier. Cada entrada del vocabulario activo que caía en el cajón")
+    L.append("de resto lleva su clase declarada —estativo / acción / nombre / adverbio—")
+    L.append("con su apoyo comparativo y su cita, en CLASES_DE_RAIZ_ZAVALA. Importa porque")
+    L.append("`cat: v_raiz` alimenta `curiana_lexicon._RAICES_VERB` y con ella")
+    L.append("`score_linguistico()`. Ver CLASE_DE_LA_RAIZ en el minador.")
+    L.append("")
     L.append("EXCLUIDOS del habla (ver EXCLUIR_DEL_HABLA en el minador): topónimos")
     L.append("modernos, antropónimos, etnónimos y glosas circulares. Están abajo en")
     L.append("TOPONIMOS_ZAVALA / ANTROPONIMOS_ZAVALA como referencia de canon, y NO se")
@@ -675,6 +1125,67 @@ def generar_modulo(tiers: dict, ruta: str):
         for e in sorted(tiers[tier], key=lambda x: norm(x["lemas"][0])):
             L.append(_entrada_py(e, tier))
     L.append("}")
+    L.append("")
+    L.append("")
+
+    # ── la clase de la raíz ──
+    _todas = [(e, t) for t, _, _ in bloques for e in tiers[t]]
+    _clasificadas = [(e, t) for e, t in _todas if norm(e["lemas"][0]) in CLASE_DE_LA_RAIZ]
+    L.append("# ══════════════════════════════════════════════════════════════════")
+    L.append("# LA CLASE DE LA RAÍZ — por qué cada `cat` es la que es")
+    L.append("# ══════════════════════════════════════════════════════════════════")
+    L.append("# Hasta el 2026-09-20 la parte de la oración salía de UNA heurística de")
+    L.append("# tier (`_CAT_POR_TIER = {\"T4_abstracto\": \"v_raiz\"}`), y el T4 es el")
+    L.append("# cajón de resto del minador: de ahí salieron 49 `cat: v_raiz`, que es")
+    L.append("# de donde `curiana_lexicon._RAICES_VERB` deja que `score_linguistico()`")
+    L.append("# cuente como arahuaco cualquier token cuyo primer segmento sea una de")
+    L.append("# ellas. Ahora cada una lleva su clase declarada con su apoyo y su cita")
+    L.append("# (regla 8), y las que no tienen cognado lo dicen: `deuda: sin-procedencia`.")
+    L.append("#")
+    L.append("# Las clases son tres y media:")
+    L.append("#   estativo → concepto adjetival que en arahuaco es VERBO (4ª conj.")
+    L.append("#              lokono, Perea y Alonso 1942 pp. 634-639) → cat v_raiz")
+    L.append("#   accion   → verbo pleno                              → cat v_raiz")
+    L.append("#   nombre   → sustantivo concreto o abstracto          → cat sust")
+    L.append("#   adverbio → deíctico de lugar (la clase de `yama`)   → cat part")
+    L.append("#")
+    L.append("# La declaración de qué es un estativo EN ESTE PROYECTO está propuesta")
+    L.append("# en 6-fusion/clases_de_raiz_zavala_2026-09-20.yaml, para 2-lengua/")
+    L.append("# morfologia.md. Aquí sólo vive el reparto.")
+    L.append("CLASES_DE_RAIZ_ZAVALA: dict[str, dict] = {")
+    for e, _t in sorted(_clasificadas, key=lambda x: norm(x[0]["lemas"][0])):
+        origen = norm(e["lemas"][0])
+        forma = e.get("lema_final", origen)
+        fila = CLASE_DE_LA_RAIZ[origen]
+        por = " ".join(str(fila["por"]).split()).replace('"', "'")
+        L.append(f'    "{forma}": {{"clase": "{fila["clase"]}", "cat": "{fila["cat"]}", '
+                 f'"num": {e["num"]}, "forma_zavala": "{origen}",')
+        L.append(f'        "por": "{por}"}},')
+    L.append("}")
+    L.append("")
+    L.append("")
+    L.append("# Reparto medido, no contado a mano.")
+    _por_clase: dict[str, int] = {}
+    for e, _t in _clasificadas:
+        c = CLASE_DE_LA_RAIZ[norm(e["lemas"][0])]["clase"]
+        _por_clase[c] = _por_clase.get(c, 0) + 1
+    L.append("REPARTO_DE_CLASES: dict[str, int] = {")
+    for c, n in sorted(_por_clase.items()):
+        L.append(f'    "{c}": {n},')
+    L.append("}")
+    L.append("")
+    L.append("")
+    L.append("# Entradas del vocabulario activo SIN clase declarada: caen en la")
+    L.append("# heurística de tier. Si esta lista deja de estar vacía para una que")
+    L.append("# salga `v_raiz`, es que el cajón de resto volvió a decidir solo.")
+    _sin = sorted({e.get("lema_final", norm(e["lemas"][0]))
+                   for e, t in _todas
+                   if norm(e["lemas"][0]) not in CLASE_DE_LA_RAIZ
+                   and _CAT_POR_TIER.get(t) == "v_raiz"})
+    L.append("SIN_CLASE_DECLARADA: list[str] = [")
+    for f in _sin:
+        L.append(f'    "{f}",')
+    L.append("]")
     L.append("")
     L.append("")
 
@@ -762,6 +1273,8 @@ def generar_modulo(tiers: dict, ruta: str):
     L.append(f'    "afijos": {len(tiers["T1_afijos"])},')
     L.append(f'    "vocabulario_activo": {sum(len(tiers[t]) for t, _, _ in bloques)},')
     L.append(f'    "renombradas_d5": {_renombradas},')
+    L.append(f'    "clases_declaradas": {len(_clasificadas)},')
+    L.append(f'    "clases_sin_declarar": {len(_sin)},')
     L.append(f'    "homografos": {len(homs)},')
     L.append(f'    "homografos_disueltos_d5": {len(disueltos)},')
     L.append(f'    "colisiones_d5": {len(tiers.get("COLISIONES_D5", []))},')
