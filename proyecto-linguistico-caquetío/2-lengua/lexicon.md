@@ -137,6 +137,28 @@ la comunidad habla y la que el instrumento enseña.** La derivada —reconstruid
 retroabstraída o hipotética— no se borra: se **archiva** con su procedencia, y
 deja de enseñarse y de competir.
 
+### Para qué es, entonces, la capa reconstruida
+
+> **Precisión de Miguel, 2026-09-20** (d19.c). «Al final no pasa nada si hay
+> símiles. En todo lenguaje hay símiles. Pero lo importante es que usemos sí o
+> sí lo atestiguado, y **lo reconstruido lo usemos para nuestros blind
+> spots**.»
+
+La reconstrucción existe para **cubrir los huecos donde no hay atestación** —los
+puntos ciegos de la documentación—, no para duplicar lo que ya está
+documentado. De ahí sale el criterio para los casos dudosos:
+
+- **La sinonimia en sí no es el problema.** Toda lengua tiene símiles, y dos
+  voces *atestiguadas* para lo mismo son un dato, no un error: se conservan las
+  dos y se declara la variación.
+- **Lo que la política corrige es la reconstrucción compitiendo con la
+  atestación**, que es una sinonimia que inventamos nosotros y que además el
+  instrumento amplifica (ver la medición: decide la plantilla, no el
+  muestreador).
+- **Una reconstruida sin rival atestiguado se queda sin discusión**: está
+  haciendo exactamente aquello para lo que existe. Por eso la política no toca
+  los pronombres, los aspectos ni el grueso de las 86 reconstruidas.
+
 El criterio operativo, porque es lo que decide los casos dudosos:
 
 | Pregunta | Respuesta |

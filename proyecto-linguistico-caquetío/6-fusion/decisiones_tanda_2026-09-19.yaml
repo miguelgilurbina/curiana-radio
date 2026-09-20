@@ -377,3 +377,39 @@ manda_la_atestiguada:
       la capa sino el tamaño del cubo (12 de 25 cubos tienen una sola voz).
       Después de esta política la pregunta cambia de sentido: donde había par
       con rival atestiguado ya no hay dos formas que sortear.
+
+# ─────────────────────────────────────────────────────────────────────────
+# d19.c — PARA QUÉ ES LA CAPA RECONSTRUIDA (precisión del 2026-09-20)
+# ─────────────────────────────────────────────────────────────────────────
+d19.c_lo_reconstruido_es_para_los_blind_spots:
+  estado: DECIDIDA (2026-09-20) — precisa d19.b, no la cambia
+  pregunta: >-
+    Al cerrar d19.b quedaba `sima` 'cerro' (reconstruida, 510 usos) contra
+    `turumako` (atestiguada, 1 uso) y `-bana` (atestiguado, D9): ¿la política
+    obliga a retirarla, y hay que decidirlo antes de repetir la serie C?
+  decision_literal: >-
+    «Si podemos repetirla y dejamos sima para otro momento. Al final no pasa
+    nada si hay símiles. En todo lenguaje hay símiles. Pero lo importante es
+    que usemos sí o sí lo atestiguado, y lo reconstruido lo usemos para
+    nuestros blind spots.»
+  lectura_operativa: >-
+    Dos cosas, y la segunda es la que manda de aquí en adelante.
+    (1) `sima` NO se retira ahora: la serie C se repite ya, con la política
+    d19.b aplicada y `sima` en el habla. El par 6 del issue queda ABIERTO.
+    (2) La capa reconstruida tiene una FUNCIÓN declarada: cubrir los huecos
+    donde no hay atestación —los blind spots de la documentación—, no
+    duplicar lo que ya está documentado. De ahí se sigue el criterio para los
+    casos dudosos que vengan: la sinonimia en sí NO es el problema (toda
+    lengua tiene símiles, y dos voces atestiguadas para lo mismo son un dato,
+    no un error); lo que la política corrige es la reconstrucción compitiendo
+    con la atestación, que es una sinonimia que inventamos nosotros. Cuando
+    una reconstruida no tenga rival atestiguado, se queda sin discusión: está
+    haciendo exactamente aquello para lo que existe.
+  se_aplica_en: >-
+    2-lengua/lexicon.md (§La regla: manda la atestiguada — el párrafo del
+    para qué); la fila de CLAUDE.md; y el criterio de los pares que queden
+    por decidir (6-fusion/issues-pendientes/pares-atestiguado-reconstruido-
+    2026-09-19.md §6, par 6 `sima` y los once de curación).
+  nota: >-
+    No cambia ni una línea del motor: d19.b ya está aplicada (#173) y la
+    serie C se repite con ella.
