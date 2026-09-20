@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-20**.
 
-**2652 ítems propuestos** en 77 propuestas, más **10 issue(s)/comentario(s) redactados sin publicar**.
+**2676 ítems propuestos** en 78 propuestas, más **11 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -68,6 +68,7 @@ editar_a_mano: no
 | `medicion_formas_de_plantilla_2026-09-18.yaml` | ? | 2 |  |
 | `medicion_formas_de_plantilla_corte_2026-09-18.yaml` | ? | 2 |  |
 | `medicion_hispanismos_loanword_uses_2026-09-17.yaml` | ? | 0 |  |
+| `medicion_morfologia_2026-09-20.yaml` | ? | 24 |  |
 | `medicion_prestigio_vinculos_era2_2026-09-17.yaml` | ? | 3 |  |
 | `medicion_raices_de_ninguna_parte_2026-09-20.yaml` | ? | 0 |  |
 | `medina_colina_dictado.yaml` | ? | 111 |  |
@@ -137,6 +138,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `frontera-entre-nodos-2026-09-17.md` | La frontera entre nodos: el motor no tiene ninguna |
 | `golfete-en-paraguana-2026-09-17.md` | «Golfete» en Paraguaná: por dónde entra, a quién le sobra y qué decidir |
 | `la-clase-estativa-2026-09-20.md` | La clase estativa: declararla, que hoy se hereda por accidente |
+| `morfologia-revision-2026-09-20.md` | La morfología arahuaca, revisada entera |
 | `mundo-era2-sitios-y-clima.md` | El mundo de la era 2, atado a los nodos: sitios y clima |
 | `pares-atestiguado-reconstruido-2026-09-19.md` | Dos palabras para la misma cosa: los pares atestiguado / reconstruido |
 | `predicacion-de-nombres-ka-ma-2026-09-20.md` | `juri-ni` no es caquetío: un nombre se predica con `ka-`, no con aspecto |
