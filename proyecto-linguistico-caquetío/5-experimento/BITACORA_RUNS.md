@@ -75,6 +75,68 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 > conservan como la medición que la encontró, no como los días 1 y 2 de la
 > serie.
 
+#### El experimento completo — los dos brazos, mismas semillas (2026-09-20)
+
+> Esto es lo que la serie C venía a medir: la misma cadena de tres días con
+> `--escena` y sin ella, semillas 21/22/23, motor `e16009d`, la política de la
+> atestiguada aplicada en los dos. El brazo de control son los runs
+> `0345840d → 45618069 → e98227eb` (`escena: false`, 0 presencias).
+
+**Lo que NO se puede decir: que la escena produzca la convergencia.**
+Convergen los dos brazos, y el control converge **un poco más**:
+
+| lectura | brazo | día 1 | día 2 | día 3 | caída |
+|---|---|---|---|---|---|
+| emergente | con escena | 0,9480 | 0,9212 | 0,8742 | −7,8 % |
+| emergente | **control** | 0,9087 | 0,8663 | 0,8340 | **−8,2 %** |
+| acumulada | con escena | 0,7748 | 0,6492 | 0,5576 | −28,0 % |
+| acumulada | **control** | 0,7727 | 0,6353 | 0,5305 | **−31,3 %** |
+
+Los dos dan `CONVERGE ✓`. Y el control **arranca ya más convergido** en la
+lectura emergente (0,9087 contra 0,9480): sin escena, una forma nueva se
+expone a los 63 a la vez desde el primer turno.
+
+**Lo que SÍ es atribuible a la escena: la estructura dialectal.** La medición
+que lo decide es la brecha entre la distancia *dentro* de cada nodo y la
+distancia *entre* nodos (`analizar_nodos.py`, lectura emergente):
+
+| | día 1 | día 3 |
+|---|---|---|
+| brecha con escena | +0,0159 | **+0,0306** (se abre, casi el doble) |
+| brecha en el control | +0,0010 | **−0,0027** (cero, y cruza a negativo) |
+
+En el brazo de control «nodo» es una etiqueta sin realidad lingüística: la
+brecha es 0,001, o sea nada, y sigue siendo nada al tercer día. Con escena la
+brecha empieza quince veces más grande y **crece**: cada nodo converge hacia
+dentro más rápido de lo que se parece al otro. Eso es un dialecto naciendo.
+
+Y el resto de la predicción falsable del diseño, en la misma dirección:
+
+| | con escena | control |
+|---|---|---|
+| formas que cruzan de nodo **en el mismo turno** | **0** | 3 |
+| turnos hasta cruzar (mediana) | **4** | 3 (mínimo 0) |
+| formas nacidas en los dos nodos a la vez | **10** | 20 |
+| formas que no cruzaron nunca | 24 de 110 | 19 de 125 |
+
+**La lectura, dicha con cuidado.** La koiné de la era 2 no la produce la
+escena: la produce el motor, y la produciría igual con los 63 hablando en el
+vacío. Lo que la escena añade —y es lo que la pregunta de Miguel pedía— es que
+la convergencia **tenga geografía**: que una forma nazca en un sitio, tarde
+cuatro turnos en salir, viva dos días dentro de su nodo y cruce el día en que
+la gente se junta en el cerro. Sin escena eso no existe, y lo que se mide como
+«koiné entre nodos» es un artefacto de llamar nodo a media lista de agentes.
+
+⚠️ **Deuda que el control destapó**: la forma que lidera su disputa es
+`lumina-bana-iro`, y **`lumina` no está en el lexicón** — `_familia_de_token`
+devuelve «caquetío» para cualquier raíz desconocida con afijos caquetíos, así
+que una raíz latina/castellana entra en `word_uses.source_language`, en el
+diccionario emergente y en la koiné vestida de lengua propia. No infla el
+`score` (no cuenta como palabra caquetía), pero sí la métrica. En este brazo
+llegó a fijar el cometa (`lumina-bana-uco`).
+
+---
+
 #### La cadena que cuenta — `f2741e89 → fcdfa07a → 0313d830` (con la política «manda la atestiguada»)
 
 | Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |
