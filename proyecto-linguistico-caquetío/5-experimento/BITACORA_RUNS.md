@@ -75,7 +75,36 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 > conservan como la medición que la encontró, no como los días 1 y 2 de la
 > serie.
 
-#### La cadena que cuenta — `b847944d → 17c2271e → 9a98de67` (con la puerta de plantilla puesta)
+#### La cadena que cuenta — `f2741e89 → fcdfa07a → 0313d830` (con la política «manda la atestiguada»)
+
+| Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |
+|---|---|---|---|---|---|---|
+| 09-20 | `f2741e89` | 6 / 1 | **63** | 7.9 | 100% | **Día 1 de la serie C, con las atestiguadas mandando** (motor `e16009d`, semilla 21, `--escena --capubana-cada 3 --reflexion`). Score **7,85, el más alto de toda la era 2** — y no contradice el corte: re-puntuar respuestas VIEJAS bajaba el score porque decían formas que ya no cuentan; aquí los agentes dicen las que sí. **La política se ve en la boca de la gente**: `para` 19 · `kasi` 13 · `juri` 11 · `kati` 5 · `jai` 2 · `were` 2, y **cero usos** de `kali`, `kasha`, `habo`, `joutai`, `kira`, `paa` en los tres días. Koiné: acumulada 0,7748 · ventana 0,6223 · emergente 0,948. Una acuñación rechazada por venir del prompt (`kadare`); 0 formas adoptadas en dos ámbitos. La disputa de las cuentas abre con `kasuta-ico-kana` 5,6 · `kiba-kasi` 2,0 · `wara-biro-nomi` 2,0 — y `kiba-kasi` está construida sobre la atestiguada |
+| 09-20 | `fcdfa07a` | 6 / 1 | **63** | 7.6 | 100% | **Día 2** (`--continuar --semilla 22`). Hereda 9 variantes vivas y abre la del cometa, cuyas rivales también se apoyan en la atestiguada: `kasi-pütchi-bana` 3,2 · `isiro-bana-uco` 2,9 · `kasi-dipara` 1,8. Koiné: 0,6492 · 0,5186 · 0,9212. **La disputa vuelve a repartirse por nodo**, ahora al revés que en la cadena anterior: `kasuta-ico-kana` sólo en AMUAY, `kiba-kasi` y `wara-biro-nomi` sólo en GUARANAO |
+| 09-20 | `0313d830` | 6 / 1 | **63** | 7.8 | 100% | **Día 3 — Capubana. El resultado se REPLICA con el instrumento limpio** (`--continuar --semilla 23`). **Veredicto de la cadena: CONVERGE ✓ (koineización sostenida)** sobre la emergente: 0,948 → 0,9212 → **0,8742** (acumulada 0,7748 → 0,6492 → 0,5576; ventana 0,6223 → 0,5186 → 0,4477). **Y las tres formas en disputa cruzan el día del cerro, como la vez pasada**: `kasuta-ico-kana` era de AMUAY (4 usos el día 1, 0 fuera) y el día 3 se dice 2 en AMUAY y **11 en GUARANAO**; `wara-biro-nomi` era de GUARANAO y pasa a 4 y **4**; `kasi-pütchi-bana` (el cometa) era de GUARANAO (2 el día 2) y pasa a 11 y **2 en AMUAY**. 15 formas adoptadas en el día, 4 en dos ámbitos. **Segunda entrada de koiné fijada por competencia**, y ésta construida sobre la atestiguada: `kasi-nii-bana` «el cerro donde la luz cierra los ojos», para el eclipse, de 4 variantes. Léxico al cierre: 5.507 base + 22 adoptados, 41 en evaluación, 216 respuestas y 64 acuñaciones en la cadena |
+
+**Lo que piensa el Director del día de Capubana** (`0313d830`, escrito por el motor):
+
+> La tensión que bajó con los peces no se fue: se transformó. Mientras Karebe
+> cuenta en silencio quién debe y quién pagará, y los de fuera cargan ocre en
+> sus canoas, la gente ha encontrado una palabra que les falta hace días:
+> *kasi-nii-bana*, el cerro donde la luz cierra los ojos. Seis personas la
+> dijeron hoy de formas distintas, pero todas hablaban de lo mismo —ese lugar
+> donde aparecen las canoas extrañas, donde el horizonte no es seguro—. No es
+> hambre lo que pulsa ahora en el pecho, sino incertidumbre: saben que mañana
+> el juri puede aflojar o apretar más, y si aprieta, necesitan estar seguros
+> de que el agua —y lo que viene en ella— es realmente de su lado. El biro se
+> amontona en cestos como defensa, pero la defensa más urgente es saber qué
+> está del otro lado del este, dónde termina el agua clara que ellos conocen.
+
+Lectura del escriba: la palabra que el Director destaca —`kasi-nii-bana`— está
+hecha con la atestiguada `kasi` y el locativo `-bana` que el ejemplo del prompt
+enseña desde el 09-19 con `biro-bana`. Y el «biro se amontona en cestos» es la
+sal del mundo de Guaranao llegando a la narración por su propio peso.
+
+---
+
+#### La cadena anterior — `b847944d → 17c2271e → 9a98de67` (antes de la política de la atestiguada)
 
 | Fecha | Run (id8) | Turnos/Días | Agentes | Score | Caquetío | Estado / hito |
 |---|---|---|---|---|---|---|
