@@ -18,6 +18,10 @@ que el proyecto se hace sobre sus propios datos:
     --narrativa ¿Qué historias salieron? Citas, arcos, eventos.
     --prestamos ¿Qué voces de la esfera de contacto se usaron, y bajaron del
                 tier 1 al 2 y al 3? Lee `loanword_uses` (migración 20260916).
+    --raices    ¿Cuánto de lo que la base guardó como «caquetío» tiene la RAÍZ
+                fuera del lexicón? Re-clasifica `word_uses` AL LEER con la
+                regla del corte del 2026-09-20 (`lumina-bana-iro`); la base no
+                se reescribe.
 
 POR QUÉ ESTE MÓDULO EXISTE
 --------------------------
@@ -613,6 +617,79 @@ def _prestamos_por_cadena() -> None:
         print(f"      {' · '.join(voces)}")
 
 
+# ══════════════════════════════════════════════════════════════════════
+# RAÍCES — lo que se dijo en caquetío sin serlo
+# ══════════════════════════════════════════════════════════════════════
+
+def analizar_raices() -> None:
+    """Cuántas formas de cada run tienen la RAÍZ fuera del lexicón.
+
+    Los runs ya corridos NO se reescriben: `word_uses.source_language` sigue
+    diciendo «caquetío» para `lumina-bana-iro`, que es lo que la base guardó.
+    Esto lo vuelve a clasificar al LEER, con la regla de hoy
+    (`curiana_lexicon.es_raiz_de_ninguna_parte`), para que los seis runs de la
+    serie C se puedan leer con el dato.
+
+    ⚠ Un falso positivo declarado, y es grande en la era 1: el lexicón se
+    mueve. `chacamba`, `corie`, `canoa` o `hamaca` eran claves del canon en
+    junio y hoy no están, así que salen aquí como raíz de ninguna parte sin
+    serlo el día en que se dijeron. La columna `era` deja separarlo a ojo; la
+    reconstrucción del lexicón histórico, commit a commit, la hace
+    `6-fusion/scripts/medir_raices_de_ninguna_parte.py`, que es la medición
+    buena.
+    """
+    from curiana_lexicon import es_raiz_de_ninguna_parte, nucleo_de_token
+
+    titulo("RAÍCES DE NINGUNA PARTE — morfología caquetía sobre raíz ajena")
+
+    df = q("""
+        SELECT substring(w.run_id::text, 1, 8) AS run,
+               coalesce(s.config->>'elenco', 'era1') AS era,
+               coalesce(s.config->>'serie', '-') AS serie,
+               w.word, count(*) AS usos,
+               count(DISTINCT w.agent_name) AS agentes
+        FROM word_uses w JOIN simulation_runs s ON s.id = w.run_id
+        WHERE w.source_language = 'caquetío'
+        GROUP BY 1, 2, 3, 4
+    """)
+    if df.empty:
+        print("    (no hay word_uses marcados «caquetío»)")
+        return
+    df["word"] = df["word"].astype(str)
+    df["ninguna"] = [es_raiz_de_ninguna_parte(w) for w in df["word"]]
+    df["raiz"] = ["-".join(nucleo_de_token(w)) for w in df["word"]]
+
+    sub("por era y serie")
+    por = (df.groupby(["era", "serie"])
+             .agg(formas=("word", "size"), usos=("usos", "sum"))
+             .reset_index())
+    mal = (df[df["ninguna"]].groupby(["era", "serie"])
+             .agg(formas_raiz=("word", "size"), usos_raiz=("usos", "sum"),
+                  raices=("raiz", "nunique")).reset_index())
+    tabla = por.merge(mal, on=["era", "serie"], how="left").fillna(0)
+    for c in ("formas_raiz", "usos_raiz", "raices"):
+        tabla[c] = tabla[c].astype(int)
+    tabla["pct_usos"] = (100.0 * tabla["usos_raiz"] / tabla["usos"]).round(2)
+    print(tabla.to_string(index=False))
+
+    sub("por run (sólo los que tienen alguna)")
+    por_run = (df[df["ninguna"]].groupby(["run", "era", "serie"])
+                 .agg(formas=("word", "size"), usos=("usos", "sum"),
+                      raices=("raiz", "nunique")).reset_index()
+                 .sort_values("usos", ascending=False))
+    if por_run.empty:
+        print("    (ninguna)")
+    else:
+        print(por_run.to_string(index=False))
+
+    sub("las 25 raíces de ninguna parte más dichas")
+    top = (df[df["ninguna"]].groupby("raiz")
+             .agg(usos=("usos", "sum"), formas=("word", "nunique"),
+                  eras=("era", lambda s: ", ".join(sorted(set(s)))))
+             .reset_index().sort_values("usos", ascending=False).head(25))
+    print(top.to_string(index=False))
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="Análisis de los runs de Curiana")
     ap.add_argument("--koine", action="store_true")
@@ -621,12 +698,13 @@ def main(argv=None) -> int:
     ap.add_argument("--agentes", action="store_true")
     ap.add_argument("--narrativa", action="store_true")
     ap.add_argument("--prestamos", action="store_true")
+    ap.add_argument("--raices", action="store_true")
     ap.add_argument("--todo", action="store_true")
     a = ap.parse_args(argv)
 
     if a.todo or not any(vars(a).values()):
         a.koine = a.lengua = a.neologismos = a.agentes = a.narrativa = True
-        a.prestamos = True
+        a.prestamos = a.raices = True
 
     if a.koine:
         analizar_koine()
@@ -641,6 +719,8 @@ def main(argv=None) -> int:
         analizar_narrativa()
     if a.prestamos:
         analizar_prestamos()
+    if a.raices:
+        analizar_raices()
     return 0
 
 

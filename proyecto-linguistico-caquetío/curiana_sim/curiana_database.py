@@ -173,6 +173,30 @@ def word_source_language(word: str) -> Optional[str]:
     return _familia_de_token(word)
 
 
+def lengua_de_acunacion(word: str) -> str:
+    """La lengua con que se guarda una forma que la respuesta ACUÑA.
+
+    Dos valores y una sola pregunta, la raíz:
+
+      caquetío   la raíz está en el lexicón y los afijos son los declarados —
+                 `biro-ana`, `kasi-nii-bana`. Es lengua propia haciendo lo que
+                 el experimento quiere ver, y cuenta.
+      acuñada    la raíz no está en ninguna tabla del lexicón —
+                 `lumina-bana-iro`, del latín *lumina*. El agente la declaró
+                 en su glosa y por eso la fila se escribe; lo que NO se hace
+                 es llamarla caquetía. El motor ya no la registra ni la deja
+                 competir (`curiana_lexicon.es_raiz_de_ninguna_parte`), así
+                 que esta fila es el único rastro que queda de que se dijo.
+
+    Se separa de `desconocida` —lo que devuelve `word_source_language()` para
+    el mismo caso— a propósito: `acuñada` dice además que alguien la propuso
+    como palabra nueva, que es un hecho distinto de que aparezca suelta.
+    Corte de serie del 2026-09-20.
+    """
+    from curiana_lexicon import es_raiz_de_ninguna_parte
+    return "acuñada" if es_raiz_de_ninguna_parte(word) else "caquetío"
+
+
 # ══════════════════════════════════════════════════════════════════════
 # CLIENTE ANTHROPIC (con LangSmith si disponible)
 # ══════════════════════════════════════════════════════════════════════
@@ -483,10 +507,17 @@ class CurianaDB:
         la era 2 (medido el 2026-09-16). `neologisms.proposed_by` sí lo sabía;
         `word_uses`, que es de donde se leen las rutas de contagio, no.
 
-        Su lengua se declara «caquetío» en vez de resolverla: una acuñación
-        pasó la compuerta fonotáctica, no está en el lexicón y
+        Su lengua se declara en vez de resolverla: una acuñación pasó la
+        compuerta fonotáctica, no está en el lexicón y
         `word_source_language()` la dejaría en NULL — que es justo el agujero
         que el backfill de 2026-08-06 cerró para las formas flexionadas.
+        «caquetío» si su RAÍZ es del lexicón (`biro-ana`, `kasi-nii-bana`:
+        morfemas propios, lengua propia) y **«acuñada»** si no
+        (`lumina-bana-iro`: la declaró un agente y se guarda, pero no se dice
+        caquetía — corte de serie del 2026-09-20,
+        `curiana_lexicon.es_raiz_de_ninguna_parte`). La fila no se pierde: un
+        rechazo callado es un dato perdido, y la columna es la que deja
+        filtrarlo después.
         Los `pct_*` NO se mueven: `language_composition()` sólo cuenta lo que
         está en VOCABULARIO_BASE, y una acuñación por definición no lo está.
         """
@@ -529,7 +560,8 @@ class CurianaDB:
                     "run_id": run_id,
                     "turn_id": turn_id,
                     "word": w,
-                    "source_language": ("caquetío" if w in acunadas_set
+                    "source_language": (lengua_de_acunacion(w)
+                                        if w in acunadas_set
                                         else word_source_language(w)),
                     "agent_name": agent_name,
                     "day": None,   # se rellena con join en la vista

@@ -13,9 +13,9 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-19**.
+<!--GENERADO--> Generado el **2026-09-20**.
 
-**2652 ítems propuestos** en 74 propuestas, más **7 issue(s)/comentario(s) redactados sin publicar**.
+**2652 ítems propuestos** en 75 propuestas, más **8 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -67,6 +67,7 @@ editar_a_mano: no
 | `medicion_formas_de_plantilla_corte_2026-09-18.yaml` | ? | 2 |  |
 | `medicion_hispanismos_loanword_uses_2026-09-17.yaml` | ? | 0 |  |
 | `medicion_prestigio_vinculos_era2_2026-09-17.yaml` | ? | 3 |  |
+| `medicion_raices_de_ninguna_parte_2026-09-20.yaml` | ? | 0 |  |
 | `medina_colina_dictado.yaml` | ? | 111 |  |
 | `migracion_lemas_fase2.yaml` | ? | 79 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
@@ -135,6 +136,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `golfete-en-paraguana-2026-09-17.md` | «Golfete» en Paraguaná: por dónde entra, a quién le sobra y qué decidir |
 | `mundo-era2-sitios-y-clima.md` | El mundo de la era 2, atado a los nodos: sitios y clima |
 | `pares-atestiguado-reconstruido-2026-09-19.md` | Dos palabras para la misma cosa: los pares atestiguado / reconstruido |
+| `raiz-inventada-puede-un-pueblo-inventar-una-raiz-2026-09-20.md` | ¿Puede un pueblo inventar una raíz nueva? — lo conservador YA está aplicado |
 
 ---
 

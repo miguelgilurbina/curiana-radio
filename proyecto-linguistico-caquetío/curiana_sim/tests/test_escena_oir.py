@@ -46,18 +46,49 @@ from curiana_state import estado_inicial, estado_inicial_test
 SIM = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 _CALL_AGENT = orch.call_agent
 
-# La forma que TODOS usan sin haberla acuñado: es la que se adopta y la que
-# hace medible la vía «adoptada en dos ámbitos».
-SEMBRADA = "komo-ana"
-
-
 class _Cliente:
     pass
 
 
+def _raices_del_canon(n: int) -> list[str]:
+    """`n` raíces DEL LEXICÓN, distintas, que no enseñe ninguna plantilla y
+    que pasen la compuerta fonotáctica.
+
+    Antes el doble se inventaba la raíz del nombre del agente
+    (`agente.lower()[:6]`). Desde el corte del 2026-09-20 una raíz que no está
+    en el lexicón no se registra ni compite —`lumina-bana-iro`—, así que el
+    doble tiene que acuñar como acuñaría un agente de verdad: con morfemas
+    propios. Se toman en orden alfabético para que sea determinista.
+    """
+    import curiana_lexicon as _lx
+    salida = []
+    for clave in sorted(_lx.VOCABULARIO_BASE):
+        forma = f"{clave}-ana"
+        if (clave.isalpha() and clave.islower() and 3 <= len(clave) <= 8
+                and _lx.neologismo_valido(forma)
+                and not _lx.es_forma_de_plantilla(forma)
+                and not _lx.es_raiz_de_ninguna_parte(forma)):
+            salida.append(clave)
+            if len(salida) >= n + 1:
+                break
+    return salida
+
+
+# El mapa cubre los DOS elencos: `test_a1` corre con el roster de la era 1.
+_NOMBRES = sorted(set(era2.ALL_AGENTS) | set(orch.ALL_AGENTS)
+                  | set(orch.roster_de_habla("koine")))
+_RAICES = _raices_del_canon(len(_NOMBRES))
+_POR_AGENTE = {a: r for a, r in zip(_NOMBRES, _RAICES)}
+
+# La forma que TODOS usan sin haberla acuñado: es la que se adopta y la que
+# hace medible la vía «adoptada en dos ámbitos». También sale del canon.
+SEMBRADA = f"{_RAICES[-1]}-ana"
+
+
 def _raiz(agente: str) -> str:
-    """Las 63 raíces son distintas entre sí (comprobado abajo)."""
-    return agente.lower().replace("-", "")[:6]
+    """Las 63 raíces son distintas entre sí (comprobado abajo) y todas están
+    en `VOCABULARIO_BASE`."""
+    return _POR_AGENTE[agente]
 
 
 def _respuesta_de(agente: str) -> str:
@@ -69,7 +100,14 @@ def _respuesta_de(agente: str) -> str:
 
 
 def test_las_63_raices_del_doble_son_distintas():
+    import curiana_lexicon as _lx
     assert len({_raiz(a) for a in era2.ALL_AGENTS}) == len(era2.ALL_AGENTS)
+    # Y son raíces DE VERDAD: si el doble acuñara sobre raíz inventada, la
+    # puerta del 2026-09-20 le rechazaría todas las acuñaciones y este archivo
+    # mediría el vacío.
+    for a in era2.ALL_AGENTS:
+        assert not _lx.es_raiz_de_ninguna_parte(f"{_raiz(a)}-ana"), a
+    assert not _lx.es_raiz_de_ninguna_parte(SEMBRADA)
 
 
 # ══════════════════════════════════════════════════════════════════════

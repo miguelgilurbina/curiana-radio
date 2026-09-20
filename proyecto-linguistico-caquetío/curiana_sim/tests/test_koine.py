@@ -172,15 +172,17 @@ def test_competencia_no_fija_sin_rivales():
 
 
 def test_competencia_ignora_uso_tras_fijacion():
+    # Las dos rivales tienen raíz DEL LEXICÓN: desde el corte del 2026-09-20 una
+    # forma con la raíz fuera de él no compite, y `forma-a` era justo eso.
     comp = CompetenciaLexica(soporte_minimo=1.0, umbral_fijacion=0.5)
     comp.activar("c", "algo")
-    comp.proponer("c", "forma-a", "Manaure")
-    comp.proponer("c", "forma-b", "Tariwa")
-    comp.registrar_uso("forma-a", "Shaboro")
+    comp.proponer("c", "kasuta-iro", "Manaure")
+    comp.proponer("c", "barsure-uco", "Tariwa")
+    comp.registrar_uso("kasuta-iro", "Shaboro")
     assert comp.evaluar_fijacion(dia=1)
-    soporte_antes = comp.referentes["c"]["variantes"]["forma-b"]
-    comp.registrar_uso("forma-b", "Shaboro")   # ya fijada: no debe sumar
-    assert comp.referentes["c"]["variantes"]["forma-b"] == soporte_antes
+    soporte_antes = comp.referentes["c"]["variantes"]["barsure-uco"]
+    comp.registrar_uso("barsure-uco", "Shaboro")   # ya fijada: no debe sumar
+    assert comp.referentes["c"]["variantes"]["barsure-uco"] == soporte_antes
 
 
 # ── La competencia sobrevive la noche (--continuar, 2026-09-18) ───────

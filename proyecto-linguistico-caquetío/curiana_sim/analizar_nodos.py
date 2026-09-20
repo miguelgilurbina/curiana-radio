@@ -47,8 +47,21 @@ pre-cargadas), con la ventana fijada al día en vez de a los últimos
 `VENTANA_TURNOS`; no reproduce la lectura acumulada ni tiene por qué coincidir
 con `koine_metrics.distance_ventana`, y el informe imprime las dos al lado para
 que la diferencia se vea. La lectura **emergente** es la misma quitando de los
-vectores lo que el motor tampoco cuenta (`curiana_lexicon.FORMAS_DE_PLANTILLA`,
-la misma puerta con la que el motor rechaza en la registración).
+vectores lo que el motor tampoco cuenta (`curiana_lexicon.PUERTA_DEL_RECUENTO`,
+la misma puerta con la que el motor rechaza en la registración: el vocabulario
+base más lo que las plantillas enseñan, y —desde el corte del 2026-09-20— toda
+forma con la RAÍZ fuera del lexicón).
+
+LA RAÍZ DE NINGUNA PARTE
+------------------------
+Los runs ya corridos NO se reescriben: `lumina-bana-iro` sigue en `word_uses`
+con `source_language='caquetío'`, que es lo que la base guardó. La cabecera del
+informe la vuelve a clasificar AL LEER, dice cuántas formas y cuántos usos de
+la cadena tienen la raíz fuera del lexicón, y compara la lectura emergente con
+y sin ellas — para poder decir si el veredicto de esa cadena aguanta. ⚠️ Esa
+serie se RECONSTRUYE de `word_uses` y no es `koine_metrics.distance_emergente`:
+sólo vale para comparar consigo misma. La cifra del motor, con su veredicto, la
+mide `6-fusion/scripts/medir_raices_de_ninguna_parte.py`.
 
 ⚠️ `word_uses.day` y `word_uses.turn_num` vienen NULL en los runs de la era 2:
 el día se saca por join con `turns`, nunca de esas columnas.
@@ -203,7 +216,15 @@ def divergencia_sembrada() -> dict:
     }
 
 
-def formas_excluidas() -> frozenset:
+def formas_de_plantilla_solas() -> frozenset:
+    """Sólo la mitad enumerable de la puerta: el vocabulario base y lo que las
+    plantillas enseñan. Es la lectura de ANTES del corte del 2026-09-20, y
+    existe para poder comparar con ella (`veredicto_sin_raiz_ajena`)."""
+    from curiana_lexicon import FORMAS_DE_PLANTILLA
+    return frozenset(FORMAS_DE_PLANTILLA)
+
+
+def formas_excluidas():
     """Lo que NO puede contar como forma emergente.
 
     Es el mismo conjunto con el que el motor mide su distancia emergente y su
@@ -215,12 +236,19 @@ def formas_excluidas() -> frozenset:
     `VOCABULARIO_BASE` y aparecen en decenas de respuestas (run db946685,
     bitácora del 2026-09-14). Contarlas como koiné sería medir la plantilla.
 
+    Desde el corte del 2026-09-20 es además LA RAÍZ DE NINGUNA PARTE, y por
+    eso esto ya no es un `frozenset` sino un objeto que responde a `in`
+    (`curiana_lexicon.PUERTA_DEL_RECUENTO`): las formas de plantilla se pueden
+    enumerar y las raíces posibles no. Sigue siendo EL MISMO objeto que usa el
+    motor (`curiana_orchestrator_v2._FORMAS_EXCLUIDAS`): la puerta es una.
+    Quien necesite la lista de antes, `formas_de_plantilla_solas()`.
+
     Se importa del lexicón —no del orquestador, que arrastraba el bucle y su
     `load_dotenv`— para que no se puedan desincronizar; la importación es de
     sólo lectura.
     """
-    from curiana_lexicon import FORMAS_DE_PLANTILLA
-    return frozenset(FORMAS_DE_PLANTILLA)
+    from curiana_lexicon import PUERTA_DEL_RECUENTO
+    return PUERTA_DEL_RECUENTO
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -702,6 +730,86 @@ def analizar_distancia(usos: list[dict], nodo_de: dict[str, str],
     return filas
 
 
+def raices_de_ninguna_parte(usos: list[dict]) -> dict:
+    """Lo que la base guardó como «caquetío» con la RAÍZ fuera del lexicón.
+
+    El corte del 2026-09-20 se lo cierra al motor, pero los runs ya corridos NO
+    se reescriben: `lumina-bana-iro` sigue en `word_uses` con
+    `source_language='caquetío'`. Esto lo vuelve a clasificar AL LEER, para que
+    los seis runs de la serie C se puedan leer con el dato.
+
+    ⚠ Falso positivo declarado: el lexicón se mueve. Una forma cuya raíz era
+    canon el día del run y hoy no lo es sale aquí sin serlo entonces —pasa en
+    la era 1 (`chacamba`, `canoa`)—. Para la era 2 no hay ninguna, y la
+    reconstrucción commit a commit la hace
+    `6-fusion/scripts/medir_raices_de_ninguna_parte.py`.
+    """
+    from curiana_lexicon import es_raiz_de_ninguna_parte, nucleo_de_token
+    formas = {u["forma"] for u in usos}
+    ajenas = {f for f in formas if es_raiz_de_ninguna_parte(f)}
+    usos_ajenos = sum(u["usos"] for u in usos if u["forma"] in ajenas)
+    por_raiz: Counter = Counter()
+    for u in usos:
+        if u["forma"] in ajenas:
+            por_raiz["-".join(nucleo_de_token(u["forma"]))] += u["usos"]
+    return {
+        "formas": len(ajenas),
+        "de_formas_totales": len(formas),
+        "usos": usos_ajenos,
+        "de_usos_totales": sum(u["usos"] for u in usos),
+        "raices": dict(por_raiz.most_common()),
+        "lista": sorted(ajenas),
+        "set": frozenset(ajenas),          # se quita antes de volcar el JSON
+    }
+
+
+def _distancia_global(d: dict) -> Optional[float]:
+    """La distancia media sobre TODOS los pares, de la partición intra/entre.
+
+    `distancias_intra_entre` devuelve las dos mitades y sus tamaños; la media
+    global es la ponderada. Es la lectura que el veredicto juzga (el motor la
+    calcula con `distancia_idiolectal`, sobre sus propios vectores; aquí se
+    reconstruye de `word_uses`, así que **sólo se compara consigo misma** —con
+    y sin las raíces ajenas—, nunca con la cifra del motor.
+    """
+    n_i, n_e = d.get("pares_intra_global") or 0, d.get("pares_entre") or 0
+    if not (n_i + n_e):
+        return None
+    suma = ((d["intra_global"] or 0.0) * n_i) + ((d["entre"] or 0.0) * n_e)
+    return round(suma / (n_i + n_e), 4)
+
+
+def veredicto_sin_raiz_ajena(usos: list[dict], nodo_de: dict[str, str],
+                             solo_plantilla: frozenset,
+                             ajenas: frozenset) -> dict:
+    """El veredicto de convergencia con y sin las raíces de ninguna parte.
+
+    La pregunta que el defecto obliga a hacer: `lumina-bana-uco` fijó el cometa
+    en el brazo de control y pesaba en la métrica emergente. ¿Se sostiene el
+    CONVERGE al descontar las formas de raíz ajena? Se reconstruye la serie
+    emergente día a día de las dos maneras y se pasa por el MISMO criterio que
+    el motor (`curiana_koine.veredicto_convergencia`), para que no se juzguen
+    con varas distintas.
+    """
+    from curiana_koine import veredicto_convergencia
+    salida = {}
+    for nombre, excluir in (("con_raiz_ajena", solo_plantilla),
+                            ("sin_raiz_ajena", solo_plantilla | ajenas)):
+        vect = vectores_por_dia(usos, excluir=excluir)
+        serie = []
+        for dia in sorted(vect):
+            d = distancias_intra_entre(vect[dia], nodo_de, min_formas=3)
+            g = _distancia_global(d)
+            if g is not None:
+                serie.append((dia, g))
+        codigo, mensaje = veredicto_convergencia(serie)
+        salida[nombre] = {"serie": [[d, v] for d, v in serie],
+                          "codigo": codigo, "mensaje": mensaje}
+    salida["se_sostiene"] = (
+        salida["con_raiz_ajena"]["codigo"] == salida["sin_raiz_ajena"]["codigo"])
+    return salida
+
+
 def tendencia(filas: list[dict], lectura: str) -> dict:
     """¿Bajó más rápido la de entre nodos o la intra? Compara el primer día con
     el último en puntos absolutos y en porcentaje del valor inicial."""
@@ -1142,6 +1250,7 @@ def analizar_cadena(cadena: list[dict], umbral: float = UMBRAL_INCLINACION,
     usos = cargar_usos(run_ids)
     neologismos = cargar_neologismos(run_ids)
     koine = cargar_koine_lexicon(run_ids)
+    raices = raices_de_ninguna_parte(usos)
     tpd = max(int(r["turnos_por_dia"] or 6) for r in cadena)
     # La escena se consulta SÓLO si se pidió: son dos consultas más y la
     # mayoría de las cadenas de la base corrieron antes de que existiera.
@@ -1164,13 +1273,19 @@ def analizar_cadena(cadena: list[dict], umbral: float = UMBRAL_INCLINACION,
         "elenco": {"total": len(nodo_de), "por_nodo": posibles,
                    "por_casa": dict(Counter(f"{nodo_de[a]}/{casa_de[a]}" for a in nodo_de))},
         "umbrales": {"inclinacion": umbral, "min_hablantes": min_hablantes,
-                     "formas_excluidas": len(excluidas)},
+                     "formas_excluidas": len(formas_de_plantilla_solas()),
+                     "mas_la_raiz_de_ninguna_parte": True},
         "divergencia_sembrada": divergencia_sembrada(),
         "cobertura": cobertura_del_elenco(usos, nodo_de),
         "habla_por_nodo": habla_por_nodo(usos, nodo_de, posibles),
         "formas": analizar_formas(usos, neologismos, koine, nodo_de, posibles,
                                   excluidas, umbral, min_hablantes, tpd),
         "distancia": analizar_distancia(usos, nodo_de, excluidas),
+        # El corte del 2026-09-20: cuántas formas de la cadena tienen la raíz
+        # fuera del lexicón, y si el veredicto aguanta al descontarlas.
+        "raiz_de_ninguna_parte": {k: v for k, v in raices.items() if k != "set"},
+        "veredicto_raiz": veredicto_sin_raiz_ajena(
+            usos, nodo_de, formas_de_plantilla_solas(), raices["set"]),
         "acunacion_sin_uso_registrado": acunacion_sin_uso_registrado(run_ids),
         "koine_metrics_del_motor": cargar_metricas_koine(run_ids),
         # Sólo con `--lugar`: sin la bandera la clave no existe y el JSON es el
@@ -1181,6 +1296,42 @@ def analizar_cadena(cadena: list[dict], umbral: float = UMBRAL_INCLINACION,
 
 def _fmt(x, n=3) -> str:
     return "—" if x is None else f"{x:.{n}f}"
+
+
+def _imprimir_raices(res: dict) -> None:
+    """Las formas con la raíz fuera del lexicón, y si el veredicto aguanta.
+
+    Los runs no se reescriben: esto es una RELECTURA de `word_uses` con la
+    regla del corte del 2026-09-20."""
+    r = res.get("raiz_de_ninguna_parte")
+    if not r:
+        return
+    pct = (100.0 * r["usos"] / r["de_usos_totales"]) if r["de_usos_totales"] else 0.0
+    print(f"  Raíz de ninguna parte (relectura, la base no se reescribe): "
+          f"{r['formas']} de {r['de_formas_totales']} formas · "
+          f"{r['usos']} de {r['de_usos_totales']} usos ({pct:.2f}%)")
+    if r["raices"]:
+        top = list(r["raices"].items())[:6]
+        print("    raíces: " + " · ".join(f"{k} ×{n}" for k, n in top))
+    v = res.get("veredicto_raiz") or {}
+    if v:
+        con, sin = v["con_raiz_ajena"], v["sin_raiz_ajena"]
+        print("    ¿aguanta la lectura emergente al descontarlas? "
+              "(serie RECONSTRUIDA de `word_uses`: no es `distance_emergente`,")
+        print("     que el motor calcula sobre sus idiolectos — sólo vale para "
+              "comparar con y sin. La cifra del motor,")
+        print("     con el mismo veredicto, la mide "
+              "`6-fusion/scripts/medir_raices_de_ninguna_parte.py`)")
+        for etiqueta, d in (("con raíz ajena", con), ("sin raíz ajena", sin)):
+            serie = d["serie"]
+            caida = ((serie[-1][1] - serie[0][1]) / serie[0][1] * 100.0
+                     if len(serie) >= 2 and serie[0][1] else 0.0)
+            print(f"      {etiqueta:<15} "
+                  f"{' → '.join(f'{x}' for _, x in serie)}  "
+                  f"({caida:+.1f} %, {d['codigo']})")
+        print("      → la lectura NO cambia de signo al descontarlas"
+              if v["se_sostiene"] else
+              "      → ⚠ LA LECTURA CAMBIA DE SIGNO al descontarlas")
 
 
 def imprimir_lugar(res: dict, top: int) -> None:
@@ -1300,7 +1451,9 @@ def imprimir(res: dict, top: int, con_formas: bool, con_distancia: bool) -> None
     print(f"  Umbral de inclinación: razón de tasas ≥ {res['umbrales']['inclinacion']}"
           f" · mínimo {res['umbrales']['min_hablantes']} hablantes para clasificar")
     print(f"  Formas excluidas del recuento emergente: {res['umbrales']['formas_excluidas']}"
-          f" (vocabulario base + lo que enseñan las plantillas)")
+          f" (vocabulario base + lo que enseñan las plantillas)"
+          f" + toda forma con la raíz fuera del lexicón")
+    _imprimir_raices(res)
     ds = res["divergencia_sembrada"]
     print(f"  Divergencia sembrada: {ds['vectores_semilla_distintos']} vector(es)-"
           f"semilla distinto(s) entre {ds['agentes']} agentes · "

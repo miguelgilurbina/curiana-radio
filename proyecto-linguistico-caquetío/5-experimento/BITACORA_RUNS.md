@@ -131,9 +131,23 @@ la gente se junta en el cerro. Sin escena eso no existe, y lo que se mide como
 `lumina-bana-iro`, y **`lumina` no está en el lexicón** — `_familia_de_token`
 devuelve «caquetío» para cualquier raíz desconocida con afijos caquetíos, así
 que una raíz latina/castellana entra en `word_uses.source_language`, en el
-diccionario emergente y en la koiné vestida de lengua propia. No infla el
-`score` (no cuenta como palabra caquetía), pero sí la métrica. En este brazo
+diccionario emergente y en la koiné vestida de lengua propia. En este brazo
 llegó a fijar el cometa (`lumina-bana-uco`).
+
+> ✅ **Arreglado el mismo día: punto 11 del «Cambio de instrumento».** La raíz
+> decide, y una raíz que no está en ninguna tabla del lexicón no es caquetía:
+> no se registra, no compite y no cuenta como forma emergente. **El corte mueve
+> el score** —8 de 216 con escena, 43 de 216 en el control, todas a la baja— y
+> se declara con su número. **Los dos veredictos CONVERGE se sostienen**
+> (control con escena 0,9480→0,8742 ⇒ 0,9481→0,8736; control sin escena
+> 0,9087→0,8340 ⇒ 0,9129→0,8391), y en el brazo de control la koiné fijada
+> deja de ser `lumina-bana-uco` y pasan a fijarse **dos** formas sobre raíz del
+> canon: `kasuta-bana-iro` y `kasi-tapa-uco`. Las caídas de la tabla de arriba
+> pasan de −7,78 % / −8,22 % a **−7,86 % / −8,08 %**: el control sigue cayendo
+> más, sólo que por menos. **Las tablas de arriba son las del run tal como
+> corrió y no se reescriben**; la lectura descontada sale de
+> `analizar_runs.py --raices` y `analizar_nodos.py`. Medición:
+> `6-fusion/medicion_raices_de_ninguna_parte_2026-09-20.yaml`.
 
 ---
 
@@ -304,7 +318,7 @@ abierta abajo.
 
 ### Era 2 · serie A — pruebas del motor (2026-09-14 → 16)
 
-> ⚠️ **Cambio de instrumento (2026-09-16 → 09-19), declarado.** Diez cambios,
+> ⚠️ **Cambio de instrumento (2026-09-16 → 09-20), declarado.** Once cambios,
 > en el orden en que se decidieron. Los dos primeros son de
 > `score_linguistico()` y pasaron DESPUÉS de los runs de abajo, así que los del
 > 09-14 no son estrictamente comparables con los que vengan:
@@ -682,7 +696,170 @@ abierta abajo.
 >    del punto 9— y `b847944d` → `17c2271e` → `9a98de67` quedan definitivamente
 >    del otro lado. Los runs ya corridos no se reescriben.
 >
-> Ninguno de los diez toca `capas_de_score`.
+> 11. **La raíz de ninguna parte: `lumina` no es caquetío** (corte del
+>    2026-09-20, destapado por el brazo de CONTROL de la serie C —runs
+>    `0345840d` → `45618069` → `e98227eb`— y arreglado el mismo día). Es el
+>    tercer corte seguido que empieza igual: una forma que el instrumento
+>    fabricó llegó a la koiné. El 09-18 era el ejemplo del prompt, el 09-19 la
+>    reconstruida compitiendo con la atestiguada, y éste es **el castellano
+>    vestido de lengua propia**.
+>
+>    - **El defecto.** `curiana_lexicon._familia_de_token()` acababa en
+>      `return "caquetío"` para cualquier token que no encontrara en el
+>      lexicón. La razón escrita era buena —«es una acuñación comunitaria,
+>      lengua propia, no préstamo»— y vale para `kasi-nii-bana`, que es la
+>      atestiguada `kasi` con dos afijos declarados. No vale para
+>      `lumina-bana-iro`: `lumina` es latina y no está en ninguna tabla del
+>      lexicón. En el brazo de control fue **la segunda forma más fuerte de la
+>      disputa de las cuentas (36,3)** y su hermana `lumina-bana-uco` **fijó el
+>      cometa** en `koine_lexicon` (soporte 28,75, 4 variantes). Uno de los
+>      agentes lo declaró él mismo en la glosa: «lumina: cosa-que-brilla **(del
+>      español, pero transformada en caquetío)** + bana: del lugar alto + uco:
+>      lo que fluye/viaja».
+>    - **Por qué la compuerta fonotáctica no lo paró.** `neologismo_valido()`
+>      mira la FORMA: blocklist de raíces castellanas, marcadores ortográficos
+>      (rr/ll/qu/ñ/x/tildes) y bigramas ausentes del caquetío. `lumina` pasa las
+>      tres capas —`lu`, `um`, `mi`, `in`, `na` son bigramas caquetíos
+>      corrientes— y sale limpia. Son dos filtros distintos y hacen falta los
+>      dos: aquél mira la forma, éste la PERTENENCIA.
+>    - **La regla, y es de RAÍZ.** Se quitan de los bordes los afijos que
+>      `TODAS_LAS_REGLAS` declara caquetíos y lo que queda es el NÚCLEO
+>      (`nucleo_de_token`). Si ningún segmento del núcleo es voz que el lexicón
+>      conozca —`VOCABULARIO_BASE`, `FUERA_DEL_HABLA`, `_RAICES_VERB`, o la
+>      clave sin su desambiguador de lengua (`casa-lokono` hace conocida a
+>      `casa`)— la raíz no es de ninguna parte (`es_raiz_de_ninguna_parte`).
+>      Se comprueba **antes** que los candidatos de `_familia_de_token`, porque
+>      el último de ellos es un legado (`tok.split("-",1)[1]`) que con raíz
+>      ajena resolvía por el SUFIJO: `pütshi-bana` salía caquetío por la clave
+>      `bana` 'hígado', que ahí no es la raíz sino el locativo.
+>    - **Tres puertas y una regla.** No se registra
+>      (`LexicoComunitario.registrar_neologismo`, y el rechazo se cuenta en
+>      `rechazos_de_raiz`, **aparte** del de plantilla: «estaba en el prompt» y
+>      «la raíz no es de aquí» son dos defectos distintos y el run tiene que
+>      poder decir cuál le pasó); no compite (`CompetenciaLexica.proponer`); y
+>      no cuenta como forma emergente. Esta tercera es nueva y hacía falta: el
+>      orquestador mete en el campo léxico todo lo que el agente acuñó
+>      (`campo.registrar([n.forma for n in neos_turno])`) **sin preguntar si el
+>      léxico lo aceptó**, igual que con las formas de plantilla desde el 09-18,
+>      así que sin ella `lumina-bana-uco` seguiría en el «Diccionario koiné
+>      emergente» del cierre y pesando en la distancia emergente.
+>      `_FORMAS_EXCLUIDAS` y `analizar_nodos.formas_excluidas()` pasan a ser el
+>      MISMO objeto, `curiana_lexicon.PUERTA_DEL_RECUENTO` — que ya no es un
+>      `frozenset` sino un predicado con `__contains__`, porque las formas de
+>      plantilla se enumeran y las raíces posibles no.
+>      `analizar_nodos.formas_de_plantilla_solas()` conserva la mitad
+>      enumerable, que es la que deja comparar con la lectura de antes.
+>    - **En la base, la etiqueta.** `word_uses.source_language` deja de decir
+>      «caquetío»: **`desconocida`** para lo que resuelve el scorer y
+>      **`acuñada`** para lo que la respuesta declaró como palabra nueva
+>      (`curiana_database.lengua_de_acunacion`). La fila **se escribe igual** —
+>      un rechazo callado es un dato perdido, y ahora es el único rastro de que
+>      la forma se dijo—, lo que se deja de hacer es llamarla lengua propia.
+>      Dos valores que no son lenguas en una columna que se llama
+>      `source_language`; quien la lea buscando caquetío ya no los recoge, que
+>      es el punto. Los runs ya corridos **no se reescriben**.
+>    - **El tamaño del agujero, medido sobre TODA la base.** De 11.390 pares
+>      forma-run marcados «caquetío» (93.657 usos), la clase que importa son
+>      **156 pares y 910 usos (0,97 %)**: 112/800 que el run DECLARÓ en
+>      `neologisms` y 44/110 que nadie declaró. Y dos falsos positivos del
+>      clasificador que se dicen y **no se cuentan**: el compuesto de raíces
+>      conocidas que el desafijador viejo no supo partir (563 pares / 4.700
+>      usos) y la voz que **era canon el día del run** y hoy no lo es (553 /
+>      3.210, casi toda de la era 1: `chacamba`, `corie`, `canoa`, `hamaca`
+>      eran claves del lexicón en junio). Lo segundo no se estima: se
+>      reconstruye el `VOCABULARIO_BASE` histórico importando el módulo del
+>      commit de cada run —el de la huella donde la hay, el último anterior al
+>      run donde no—, veinte lexicones, los veinte reconstruidos.
+>      Por era y serie: era 1 84 pares / 730 usos, era 2 serie A 5 / 28, serie
+>      B 5 / 8, **serie C 62 / 144**.
+>    - **Las raíces.** 87 distintas. Las más dichas: `karu` 71, `lumina` 66,
+>      `kalu` 61, `puri` 61, `karu-puri` 46, `kuro-mana` 40, `kabakani` 40,
+>      `duma` 39, `jakuri` 35, `suave` 31, `tensión` 29, `tansura` 29, `pacha`
+>      28. Reconocibles: 4 castellano declarado (`suave`, `tensión`, `tension`,
+>      `la`), 2 por fonotáctica, 2 nombres del elenco y **79 sin identificar** —
+>      que es el hallazgo incómodo: el grueso no es castellano obvio, es ruido
+>      del modelo con forma caquetía. 49 de esas formas llegaron a adoptarse y
+>      **dos fijaron una entrada de koiné**: `mana-koto` (tambor caribe, run
+>      `20091e1f`, era 1) y `lumina-bana-uco` (el cometa del control).
+>    - **⚠️ MUEVE EL SCORE, y el scorer NO se tocó** (`score_linguistico`,
+>      `pct_*`, `capas_de_score` byte a byte). Se mueve por la misma razón que
+>      el punto 10: cerrar la puerta impide que la forma se adopte, y lo no
+>      adoptado sale de `palabras_activas()`. Re-puntuados los **216 + 216** de
+>      los dos brazos de la serie C con el pipeline del Observer y los dos
+>      lexicones (el de `b8c85ca` sacado con `git show` y el de hoy), **con el
+>      control en verde en los dos: 0 desvíos de 216**, el brazo «antes»
+>      reproduce el `score` y el `neologisms_proposed` que la base guardó:
+>
+>      | | con escena | control |
+>      |---|---|---|
+>      | score cambia en | 8 de 216 | **43 de 216** |
+>      | \|Δ\| máx | 0,30 | 0,70 |
+>      | Δ medio de las que cambian | −0,2125 | −0,2512 |
+>      | score medio | 7,7440 → 7,7361 | 7,6477 → **7,5977** |
+>      | `palabras_caquetias` cambia en | 10 | 58 |
+>      | `neologisms_proposed` cambia en | 0 | 0 |
+>
+>      Todas a la baja. El control se mueve cinco veces más, y no es casualidad:
+>      es el brazo donde `lumina` prendió.
+>    - **El veredicto CONVERGE se sostiene en los dos brazos.** La serie
+>      emergente se reconstruye con los mismos idiolectos, la misma ventana y el
+>      mismo `min_formas=3` con que la calcula `auto_mode`, y se juzga con el
+>      mismo `veredicto_convergencia`. **Control en verde: el brazo «antes»
+>      reproduce exactamente la serie que el motor guardó en `koine_metrics`.**
+>
+>      | brazo | emergente antes | caída | emergente con el arreglo | caída |
+>      |---|---|---|---|---|
+>      | con escena | 0,9480 → 0,9212 → 0,8742 | −7,78 % | 0,9481 → 0,9206 → 0,8736 | −7,86 % |
+>      | control | 0,9087 → 0,8663 → 0,8340 | −8,22 % | 0,9129 → 0,8734 → 0,8391 | −8,08 % |
+>
+>      `CONVERGE ✓ (koineización sostenida)` en los cuatro. La lectura del
+>      2026-09-20 —«convergen los dos brazos y el control converge un poco
+>      más»— **aguanta**: el control sigue cayendo más, sólo que por 0,22
+>      puntos en vez de por 0,44.
+>    - **Lo que SÍ cambia, y es el objetivo.** En el brazo de control la
+>      entrada de koiné fijada deja de ser `lumina-bana-uco` y pasan a fijarse
+>      **dos**, las dos sobre raíz del lexicón: `kasuta-bana-iro` (las cuentas)
+>      y `kasi-tapa-uco` (el cometa). Quitar la forma de fuera no apagó la
+>      koiné: dejó ganar a las rivales de verdad. En el brazo con escena la
+>      fijada no cambia (`kasi-nii-bana`, que ya era del canon). La puerta
+>      rechazó 9 registros en el brazo con escena y 22 en el control
+>      (`lumina-bana-uco` ×8, `tapa-uco` ×5, `lumina-bana-iro` ×4).
+>    - **El coste, dicho.** Entre el 11 % y el 34 % de las acuñaciones distintas
+>      de una cadena llevan raíz de ninguna parte —9 de 53 con escena (17,0 %),
+>      11 de 32 en el control (34,4 %), 6 de 52 en la serie C limpia (11,5 %)— y
+>      **131 de 644 (20,3 %) en toda la base**: una de cada cinco. O sea: **la
+>      regla dice que un pueblo no puede inventar una raíz nueva**, y eso es una
+>      decisión de
+>      diseño, no un detalle. Se aplica lo conservador y se deja la pregunta
+>      escrita en
+>      `6-fusion/issues-pendientes/raiz-inventada-puede-un-pueblo-inventar-una-raiz-2026-09-20.md`,
+>      con su subcaso que duele más: la CASI-raíz (`pütshi-bana`, cuando la
+>      clave es `pütchi`) se rechaza por un carácter.
+>    - **La era 1 SÍ se mueve, y va dicho.** Re-puntuadas sus **2.071**
+>      respuestas con el mismo A/B: el score cambia en **329**, \|Δ\| máx
+>      **0,90**, Δ medio de las que cambian **−0,1942**, y el score medio pasa
+>      de **7,0197 a 6,9888**; `palabras_caquetias` cambia en 491 y
+>      `neologisms_proposed` en 0. ⚠️ Aquí el control **sale en rojo (1.510 de
+>      2.071) y no es por el arreglo**: el lexicón de junio tenía ~1.700 claves
+>      y el de hoy 5.507, así que re-puntuar la era 1 con el lexicón de hoy no
+>      reproduce su score haga uno lo que haga — lo que el A/B mide es el
+>      DELTA, que es el de arriba. La puerta rechaza **67** formas distintas de
+>      la era 1 y sólo **2** (`buco-pama`, `buco-silacoa`) tenían la raíz en el
+>      canon el día del run; el resto son raíces que nunca existieron, y entre
+>      ellas hay castellano llano: `alerta-ni`, `alfarera-sha`, `carne-sika`,
+>      `cestos-bana`.
+>
+>    **Desde qué run aplica**: desde el próximo. La serie C **no se re-corre
+>    esta vez**: el corte no cambia lo que el agente VE —ni una plantilla, ni
+>    el muestreador, ni el prompt— sino lo que el motor CUENTA, así que las seis
+>    cadenas ya corridas se pueden leer con el dato descontado
+>    (`analizar_runs.py --raices`, `analizar_nodos.py`) en vez de gastar otro
+>    día de API. Los runs ya corridos no se reescriben. Medición entera en
+>    `6-fusion/medicion_raices_de_ninguna_parte_2026-09-20.yaml`
+>    (`6-fusion/scripts/medir_raices_de_ninguna_parte.py`); tests en
+>    `curiana_sim/tests/test_raiz_de_ninguna_parte.py`.
+>
+> Ninguno de los once toca `capas_de_score`.
 
 > ⚠️ **Dos artefactos del instrumento descubiertos al cerrar el día 3
 > (análisis por nodo, `analizar_nodos.py`, 2026-09-16), que afectan a los
