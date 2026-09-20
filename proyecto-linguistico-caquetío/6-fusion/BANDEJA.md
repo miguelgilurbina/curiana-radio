@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-20**.
 
-**2652 ítems propuestos** en 75 propuestas, más **8 issue(s)/comentario(s) redactados sin publicar**.
+**2652 ítems propuestos** en 77 propuestas, más **10 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -33,6 +33,7 @@ editar_a_mano: no
 | `censo_ana_esteves_109.yaml` | esteves-1989 | 13 |  |
 | `censo_terminacion_re.yaml` | ? | 3 |  |
 | `ceret_on_hipotesis_miguel.yaml` | ? | 3 |  |
+| `clases_de_raiz_zavala_2026-09-20.yaml` | ? | 0 |  |
 | `clima_era2.yaml` | varias | 3 |  |
 | `colores_caquetios.yaml` | ? | 4 |  |
 | `comparandas_jahn_1927.yaml` | jahn-1927 | 0 |  |
@@ -62,6 +63,7 @@ editar_a_mano: no
 | `lokono_gramatica_perea_1942.yaml` | perea-alonso-1942 | 6 |  |
 | `mapa_nombres_era2.yaml` | ? | 63 |  |
 | `matacan_venado_2026-09-14.yaml` | esteves-1989 (y alvarado-1921, jahn-1927, neira-ribero-1762 como comparanda) | 5 |  |
+| `medicion_clases_de_raiz_2026-09-20.yaml` | ? | 0 |  |
 | `medicion_contaminacion_score_2026-09-09.yaml` | ? | 0 |  |
 | `medicion_formas_de_plantilla_2026-09-18.yaml` | ? | 2 |  |
 | `medicion_formas_de_plantilla_corte_2026-09-18.yaml` | ? | 2 |  |
@@ -134,8 +136,10 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `existir-en-el-mundo-escena-por-lugar-2026-09-17.md` | Existir en el mundo: la escena por lugar |
 | `frontera-entre-nodos-2026-09-17.md` | La frontera entre nodos: el motor no tiene ninguna |
 | `golfete-en-paraguana-2026-09-17.md` | «Golfete» en Paraguaná: por dónde entra, a quién le sobra y qué decidir |
+| `la-clase-estativa-2026-09-20.md` | La clase estativa: declararla, que hoy se hereda por accidente |
 | `mundo-era2-sitios-y-clima.md` | El mundo de la era 2, atado a los nodos: sitios y clima |
 | `pares-atestiguado-reconstruido-2026-09-19.md` | Dos palabras para la misma cosa: los pares atestiguado / reconstruido |
+| `predicacion-de-nombres-ka-ma-2026-09-20.md` | `juri-ni` no es caquetío: un nombre se predica con `ka-`, no con aspecto |
 | `raiz-inventada-puede-un-pueblo-inventar-una-raiz-2026-09-20.md` | ¿Puede un pueblo inventar una raíz nueva? — lo conservador YA está aplicado |
 
 ---
