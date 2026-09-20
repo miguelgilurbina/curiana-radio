@@ -1,0 +1,338 @@
+# ─────────────────────────────────────────────────────────────────
+# LA CLASE DE LA RAÍZ — lo que queda PROPUESTO (regla 5: minar propone)
+#
+# Escrito a mano el 2026-09-20. Lo que YA está aplicado no vive aquí:
+#   · el reparto de las 49, fila a fila y con su cita, está en
+#     curiana_sim/minar_zavala_glosario.py::CLASE_DE_LA_RAIZ y sale al
+#     módulo GENERADO como lexicon_zavala.CLASES_DE_RAIZ_ZAVALA;
+#   · los números del corte están en
+#     6-fusion/medicion_clases_de_raiz_2026-09-20.yaml (generado por
+#     6-fusion/scripts/medir_clases_de_raiz.py).
+#
+# Aquí sólo está lo que NO se aplica porque no es del minador:
+#   1. la declaración de la CLASE ESTATIVA, que es canon de morfología;
+#   2. la PREDICACIÓN DE UN NOMBRE por `ka-`/`ma-` y qué hacer con lo ya dicho;
+#   3. la curación de `sig` de ocho entradas;
+#   4. el arreglo de fondo del cruce del minador contra la comparanda.
+# ─────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-20'
+  motivo: >-
+    En `minar_zavala_glosario.py` la parte de la oración de todo el
+    vocabulario activo salía de una línea —`_CAT_POR_TIER =
+    {"T4_abstracto": "v_raiz"}`, con el comentario «heurística de POS; el
+    resto, sust»— y T4 es el cajón de resto del minador. De ahí salían 49
+    entradas con `cat: v_raiz`, y de `cat: v_raiz` sale
+    `curiana_lexicon._RAICES_VERB`, que hace que `score_linguistico()`
+    cuente como arahuaco cualquier token cuyo primer segmento sea una de
+    ellas.
+  correccion_de_miguel: >-
+    «NO es que 40 no sean verbos»: en arahuaco mucho de lo que el
+    castellano llama adjetivo es un VERBO ESTATIVO, y el repo ya lo
+    documenta (morfologia.md §2, sobre Perea y Alonso 1942: el lokono
+    tiene dos juegos de pronombre sujeto, prefijado en transitivos y
+    POSPUESTO en estativos). `apo` 'grande', `usera` 'seco', `waidima`
+    'íntegro', `kachipo` 'enojado', `patapati` 'anegadizo' y `waranao`
+    'salado' como raíz verbal pueden estar BIEN — sólo que hoy están bien
+    por accidente.
+  aplicado_en_esta_tanda: >-
+    Sólo `cat`, y sólo en el módulo GENERADO. `glosa_fuente` (verbatim de
+    Zavala) no se toca jamás; `sig`, la capa y las notas tampoco se
+    tocaron — el control lo comprueba campo a campo. `curiana_lexicon.py`
+    y `score_linguistico()` no se tocaron. `curiana_observer` no se tocó.
+  donde_esta_el_reparto: curiana_sim/lexicon_zavala.py::CLASES_DE_RAIZ_ZAVALA
+  donde_estan_los_numeros: 6-fusion/medicion_clases_de_raiz_2026-09-20.yaml
+
+# ═════════════════════════════════════════════════════════════════
+# 1. LA CLASE ESTATIVA — para 2-lengua/morfologia.md
+# ═════════════════════════════════════════════════════════════════
+# NO la escribe el minador: es canon de morfología y la fusiona Miguel.
+# El issue redactado está en
+# 6-fusion/issues-pendientes/la-clase-estativa-2026-09-20.md
+clase_estativa:
+  estado: propuesta
+  destino: 2-lengua/morfologia.md (sección nueva, entre §2 y §3)
+  aviso: >-
+    ⚠️ NO se escribió en morfologia.md: otro agente está auditando la
+    morfología entera en paralelo (2026-09-20). Esta propuesta pide una
+    sección NUEVA y no toca ninguna de las existentes.
+  definicion_propuesta: >-
+    Un ESTATIVO es una raíz cuyo significado es una propiedad o un estado
+    —tamaño, sabor, color, edad, condición del terreno, estado de ánimo—
+    y que en arahuaco se conjuga como verbo, no se usa como adjetivo.
+    En el canon del proyecto lleva `cat: v_raiz`, entra en `_RAICES_VERB`
+    y admite los tres aspectos (`-ka`, `-ni`, `-da`) como cualquier otro
+    verbo.
+  apoyo:
+    - obra: perea-alonso-1942
+      paginas: '598-599, 608'
+      dice: >-
+        La regla que los fabrica, atribuida a Quandt: «cualquier nombre,
+        adjetivo o partícula se hace verbo anteponiendo a- o c- y
+        añadiendo las terminaciones verbales». Perea lo comenta así:
+        «rojo» no es un adjetivo en lokono, es el verbo cule-n 'ser rojo'.
+        Vaciado en 6-fusion/lokono_gramatica_perea_1942.yaml
+        §la_teoria_de_las_clases_segun_quand.
+    - obra: perea-alonso-1942
+      paginas: '634-639'
+      dice: >-
+        La 4ª conjugación lokono —infinitivo en -en— es «la clase de los
+        ESTATIVOS: colores, tamaños, sabores, estados», con tres ejemplos
+        impresos: cule-n 'ser rojo', ibe-n 'estar lleno', hebbe-n 'ser
+        viejo'. Su pronombre sujeto va POSPUESTO en forma complementaria
+        (de, bù, i, n, u, hù, ye), no prefijado como en los transitivos
+        (p. 635). Es el dato que morfologia.md §2 ya cita.
+    - obra: van-buurt-2014
+      paginas: §8
+      dice: >-
+        El atributivo/existencial `ka-` («hay, existe(n)», Casibari 'hay
+        rocas duras') y su reverso privativo `ma-`. Son el mecanismo con
+        que un NOMBRE se predica, y por eso son la frontera de la clase:
+        lo que necesita `ka-`/`ma-` para predicarse no es un estativo.
+    - obra: neira-ribero-1762
+      dice: >-
+        La achagua hace el mismo par sobre una raíz con el atributivo
+        ca-/ka-: `cabareuno` 'enojarse' / `cabarecayi` 'colérico' /
+        `cabareumí` 'es bravo'; `carruicay` 'espanto' / `carrunatacayi`
+        'espantoso'; `macarray` 'seco' / `macarracataní` 'seco, estando
+        seco', éste con el privativo ma-.
+  morfologia_que_admite:
+    aspecto: '-ka, -ni, -da — los tres, como cualquier v_raiz'
+    lo_que_el_motor_ya_hace: >-
+      `_aspectos_morfologicos()` y `es_arahuaco()` aceptan raíz+aspecto
+      sobre cualquier miembro de `_RAICES_VERB`, así que un estativo
+      conjugado ya cuenta hoy. No hace falta tocar nada.
+    lo_que_NO_se_afirma: >-
+      El pronombre POSPUESTO del lokono NO se propone para el caquetío:
+      el canon no tiene ni un pronombre atestiguado y los cinco
+      reconstruidos son wayuu (D11). Que el lokono ponga el sujeto detrás
+      en los estativos es la razón TIPOLÓGICA para reconocer la clase, no
+      una forma que se importe. Proponer `apo taya` 'yo (soy) grande'
+      sería re-derivar el núcleo desde el lokono, que es D11 fase 3 y
+      está abierta.
+  deuda_que_esto_destapa_de_paso: >-
+    ⚠️ La comparanda WAYUU del literal cita «Captain & Captain 2005» y la
+    LOKONO léxica cita «Pet 1987» y «Goeje 1928»: ninguna de las tres es
+    obra de 4-fuentes/bibliografia.yaml, así que apoyarse en ellas NO es
+    una clave foránea (regla 8) y las filas que sólo tienen ese apoyo
+    declaran `deuda: sin-procedencia` — `jadarayte` es la única de las 49
+    en ese caso. Lo que SÍ tiene cita completa es todo lo que viene de
+    perea-alonso-1942 (los verbos y estativos lokono, con página),
+    neira-ribero-1762 (la achagua, con pliego), oliver-1989-apendice-a
+    (la tabla A-2) y van-buurt-2014. No es un problema de esta tanda: es
+    una deuda del lexicón que conviene tener escrita.
+  las_diez_declaradas_estativas: >-
+    apo, bachure, etamo, kachipo, patapati, sinwanguso, usera, waidima,
+    waranao, wasima. Su apoyo por fila está en
+    lexicon_zavala.CLASES_DE_RAIZ_ZAVALA.
+  tension_que_esto_destapa_y_NO_se_resuelve: >-
+    El lexicón tiene además una categoría `adj` con 11 entradas —`anasa`
+    'bueno', `tüshi` 'frío', `mütsia` 'negro', `kasuta` 'blanco',
+    `sünatü` 'rojo', `tsipana` 'verde', `kanawa` 'amarillo'…— casi todas
+    RECONSTRUIDAS del wayuu. Son exactamente los «colores, tamaños,
+    sabores» que Perea llama estativos, y están en la categoría
+    equivocada por el mismo motivo que las 49: nadie la declaró. No se
+    tocan aquí: viven en el literal de `curiana_lexicon.py`, que es canon
+    y que un minador no toca (regla 5), y moverlas a `v_raiz` las metería
+    en `_RAICES_VERB` y volvería a mover el score. Es una segunda tanda.
+
+# ═════════════════════════════════════════════════════════════════
+# 2. LA PREDICACIÓN DE UN NOMBRE — `ka-` / `ma-`, no raíz+aspecto
+# ═════════════════════════════════════════════════════════════════
+# Issue redactado en
+# 6-fusion/issues-pendientes/predicacion-de-nombres-ka-ma-2026-09-20.md
+predicacion_de_nombres:
+  estado: propuesta — NO aplicada, la decide Miguel
+  la_regla_propuesta: >-
+    Para decir «hay viento» o «es ventoso» un nombre no toma aspecto:
+    toma el atributivo/existencial `ka-` (van Buurt 2014 §8) o el
+    privativo `ma-`. `juri-ni` no es caquetío bien formado; `ka-juri`
+    'hay viento' sí, y `ma-juri` 'sin viento' también.
+  lo_que_el_motor_YA_hace_sin_tocar_nada: >-
+    `es_arahuaco()` acepta los cuatro prefijos `ta-`, `wa-`, `ma-`, `ka-`
+    sobre cualquier forma activa, así que `ka-juri` y `ma-juri` YA
+    cuentan como arahuacas y siguen contando después del corte. Lo que el
+    corte cierra es la puerta mala, no la buena. Verificado token a token
+    con el scorer.
+  medido_en_la_base: >-
+    Ver 6-fusion/medicion_clases_de_raiz_2026-09-20.yaml
+    §juri_y_los_nombres. En una frase: los agentes usan mucho `ka-` y
+    `ma-` en general, y casi nunca sobre estos treinta nombres — sobre
+    ellos agarraron la vía del aspecto.
+  que_hacer_con_lo_ya_dicho:
+    pregunta: >-
+      Los usos de `juri-*` con aspecto que la base ya tiene, ¿se releen,
+      se marcan o se dejan?
+    opcion_a_dejar:
+      que_es: 'no se toca nada; los runs viejos quedan como se dijeron'
+      a_favor: >-
+        Es lo que el proyecto ha hecho en los cuatro cortes anteriores
+        («los runs ya corridos no se reescriben»), y el corte ya está
+        declarado en la bitácora: quien compare runs de antes y de
+        después sabe por qué.
+      en_contra: >-
+        `word_uses.source_language` sigue diciendo «caquetío» de formas
+        que el instrumento de hoy no contaría.
+    opcion_b_releer:
+      que_es: >-
+        una relectura como la de `analizar_runs.py --raices`: la base NO
+        se reescribe, pero se puede preguntar cuántos usos guardados
+        tienen hoy otra lectura.
+      a_favor: 'no destruye nada y hace medible el agujero'
+      en_contra: 'una bandera más que mantener'
+    opcion_c_marcar:
+      que_es: >-
+        reescribir `source_language` de esas filas a un valor que no sea
+        una lengua, como ya se hizo con `desconocida` y `acuñada` el
+        2026-09-20.
+      a_favor: 'quien lea la columna buscando caquetío deja de recogerlas'
+      en_contra: >-
+        reescribe runs cerrados, que es lo único que el proyecto se ha
+        negado a hacer en todos los cortes. Y el caso no es el mismo: una
+        raíz latina NO era caquetía nunca; `juri-ni` es una forma mal
+        construida sobre una raíz que SÍ es caquetía. La fila no miente
+        sobre la lengua, miente sobre la morfología.
+    recomendacion_del_escriba: >-
+      (a) o (b). NO (c): `juri` es caquetío atestiguado y la fila dice la
+      verdad sobre su lengua. Lo que está mal es el molde, y para eso
+      está el corte declarado.
+  residuo_declarado_que_NO_es_de_esta_tanda: >-
+    El scorer tampoco cuenta `biro-bana` 'cerro de la sal' —el ejemplo
+    literal de `IDENTIDAD_LINGUISTICA` desde el 2026-09-19— ni
+    `kasi-bana`: `es_arahuaco()` sólo acepta la forma entera, los cuatro
+    prefijos posesivos, o que el PRIMER segmento sea raíz verbal. Un
+    nombre con sufijo locativo no cuenta, y nunca contó, salvo para las
+    49 que llevaban `v_raiz` por accidente. Así que este corte no le pone
+    a `juri` una penalización nueva: le quita un privilegio que ningún
+    otro nombre del lexicón tenía. Que el scorer deba contar
+    nombre+locativo es OTRA pregunta, abierta, y no la decide el minador.
+
+# ═════════════════════════════════════════════════════════════════
+# 3. CURACIÓN DE `sig` — ocho glosas, PROPUESTAS, sin aplicar
+# ═════════════════════════════════════════════════════════════════
+# `sig` es NUESTRO (se deriva de `glosa_fuente` recortando a 78 car.) y por
+# eso se podría corregir. NO se corrige aquí porque `sig` es lo que el
+# muestreador del prompt le enseña al agente: cambiarlo mueve lo que el
+# agente lee, y eso es una decisión, no una limpieza.
+#
+# ⚠️ NINGUNA de las ocho es NECESARIA para la clasificación: ninguna fila
+# de CLASE_DE_LA_RAIZ obligó a tocar `sig`. Van juntas porque saltaron al
+# leer las 49 glosas una por una.
+curacion_de_sig:
+  estado: propuesta — NO aplicada
+  criterio: >-
+    `glosa_fuente` guarda el verbatim de Zavala y NO se toca jamás. Lo que
+    se propone corregir es `sig`, que es el recorte que el agente lee: se
+    le quitarían la nota editorial, el taxón y la marca de registro, que
+    no son la glosa sino comentario del compilador.
+  filas:
+    - forma: kachipo
+      num: 53
+      sig_hoy: 'en voz vulgar, enojado, colérico'
+      sig_propuesto: 'enojado, colérico'
+      por: >-
+        «En voz vulgar» es una marca de REGISTRO de Alvarado, no parte de
+        la glosa. Hoy el agente lee una voz que empieza por «en voz
+        vulgar», que no significa nada en caquetío.
+    - forma: kapu
+      num: 60
+      sig_hoy: 'demonio. Señala Galeotto Cey la pronunciación "cap"'
+      sig_propuesto: demonio
+      por: 'nota de pronunciación del compilador; vive entera en glosa_fuente'
+    - forma: lawari
+      num: 182
+      sig_hoy: 'acacia Espinoza, acacia. Lauadrí'
+      sig_propuesto: 'acacia espinosa'
+      por: >-
+        «Espinoza» con z es muy probablemente «espinosa» (la glosa
+        botánica) y «Lauadrí» es una VARIANTE de la forma que vive dentro
+        de la glosa en vez de en `variantes`. Las dos cosas hay que
+        verlas en la imagen antes de tocarlas — la fuente es un PDF con
+        capa de texto y el parseo de esta entrada cruza tres compiladores
+        (E+A+PMA).
+      requiere: 'verificación en imagen (skill leer-fuente)'
+    - forma: orumo
+      num: 187
+      sig_hoy: 'urumu. Apamate. No confundir con el Myrciacucuo llata'
+      sig_propuesto: 'apamate (urumu)'
+      por: >-
+        la advertencia taxonómica es del compilador; si se quiere
+        conservar, su sitio es `identificacion_moderna` (D7), no `sig`
+    - forma: surupa
+      num: 231
+      sig_hoy: 'blatta orientalis. Cucaracha'
+      sig_propuesto: cucaracha
+      por: >-
+        el taxón va delante de la glosa; D7 dice que la identificación
+        moderna va en `identificacion_moderna`, no desplazando la glosa
+    - forma: ubeda
+      num: 266
+      sig_hoy: 'acacia fétida. Mapurite, cují hediondo'
+      sig_propuesto: 'cují hediondo (acacia fétida)'
+      por: 'tres nombres vernáculos encadenados; el agente lee los tres como si fueran uno'
+    - forma: waidima
+      num: 131
+      sig_hoy: integro
+      sig_propuesto: íntegro
+      por: >-
+        falta la tilde. Es de `sig` (nuestro), no de `glosa_fuente`, que
+        imprime «Integro» como la fuente. Trivial, pero es lo que el
+        agente lee.
+    - forma: popoi
+      num: 201
+      sig_hoy: 'ahí. Adverbio de lugar'
+      sig_propuesto: 'ahí (deíctico de lugar)'
+      por: >-
+        la parte de la oración ya la dice `cat: part` desde esta tanda;
+        dejarla también dentro de la glosa es decirla dos veces. OJO: es
+        también la fila que PRUEBA la reclasificación, así que si se
+        cambia hay que dejar la frase de la fuente visible —está en
+        `glosa_fuente`, que no se toca—.
+
+# ═════════════════════════════════════════════════════════════════
+# 4. EL CRUCE DEL MINADOR CONTRA LA COMPARANDA — arreglo de fondo
+# ═════════════════════════════════════════════════════════════════
+homografos_de_la_comparanda:
+  estado: >-
+    parcheado para que la regeneración no destruya nada
+    (NO_ES_LA_MISMA_VOZ, seis filas declaradas); el arreglo de fondo
+    queda PROPUESTO
+  el_defecto: >-
+    `clasificar()` pregunta «¿esta voz de Zavala ya está en el lexicón?»
+    contra `VOCABULARIO_BASE` ENTERO, que desde el 2026-09-13 lleva las
+    3.569 entradas de la comparanda achagua además del wayuu, el lokono y
+    el taíno. Con eso, una coincidencia de GRAFÍA entre dos lenguas
+    hermanas dejó de ser rara y pasó a leerse como «ya está».
+  lo_que_se_perdia: >-
+    Medido el 2026-09-20: una regeneración limpia borraba del módulo
+    generado cuatro voces atestiguadas —`kana` 'demonio' (vs. achagua
+    `cana-achagua` 'maíz'), `karama` 'ramazón' (vs. achagua `carama`
+    'cachama'), `kuna` 'pez del golfete' (vs. `cuna-achagua` 'barbasco'),
+    `turupia` 'árbol espinoso' (vs. `turupia-achagua` 'toche')— y DOS de
+    los ocho afijos atestiguados: `-ima` 'humedad, quebrada' (vs. lokono
+    `ima` 'enemigo') y `-aima` 'abundancia', éste por su variante `coa`
+    contra el caquetío `koa` 'palo de siembra'. Los afijos son, según la
+    cabecera del propio minador, «el hallazgo de mayor valor» de toda la
+    minería.
+  la_deriva_estaba_latente: >-
+    El módulo commiteado es anterior a la fusión achagua y por eso aún las
+    tenía: nadie había vuelto a regenerar desde el 2026-09-13. La primera
+    regeneración que alguien hiciera —la de esta misma tanda— se las
+    habría llevado en silencio.
+  el_arreglo_de_fondo_propuesto: >-
+    `lex_idx` debería construirse SÓLO con la familia caquetía: un
+    comparandum de otra lengua no es «la misma voz» nunca, y el tier
+    MAL_ETIQUETADO —pensado para «está pero mal etiquetada»— dejó de
+    significar eso cuando entró un vocabulario entero de otra lengua con
+    las claves en grafía del copista.
+  por_que_NO_se_aplica_aqui: >-
+    Cambia qué entra en `VOCABULARIO_BASE` y por tanto mueve el score.
+    Con el filtro de familia, `ture` #256 'vasija, utensilio' —hoy
+    presente como caribe-continental— volvería a emitirse como voz
+    caquetía, y eso es una afirmación sobre una lengua, no una limpieza.
+    Es decisión de Miguel.
+  control_de_que_el_parche_no_hace_nada_mas: >-
+    Con NO_ES_LA_MISMA_VOZ puesta, la regeneración reproduce el módulo
+    commiteado con las MISMAS 144 claves, los mismos 8 afijos, los mismos
+    45 topónimos y 14 antropónimos, y la única diferencia son los 30
+    `cat`. Verificado entrada a entrada.

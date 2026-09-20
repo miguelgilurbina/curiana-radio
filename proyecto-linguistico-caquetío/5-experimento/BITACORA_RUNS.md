@@ -318,7 +318,7 @@ abierta abajo.
 
 ### Era 2 · serie A — pruebas del motor (2026-09-14 → 16)
 
-> ⚠️ **Cambio de instrumento (2026-09-16 → 09-20), declarado.** Once cambios,
+> ⚠️ **Cambio de instrumento (2026-09-16 → 09-20), declarado.** Doce cambios,
 > en el orden en que se decidieron. Los dos primeros son de
 > `score_linguistico()` y pasaron DESPUÉS de los runs de abajo, así que los del
 > 09-14 no son estrictamente comparables con los que vengan:
@@ -859,7 +859,129 @@ abierta abajo.
 >    (`6-fusion/scripts/medir_raices_de_ninguna_parte.py`); tests en
 >    `curiana_sim/tests/test_raiz_de_ninguna_parte.py`.
 >
-> Ninguno de los once toca `capas_de_score`.
+> 12. **La clase de la raíz: 49 palabras eran «verbo» porque cayeron en el
+>    cajón de resto** (corte del 2026-09-20, el mismo día que el punto 11 y
+>    encontrado al revisarlo). Es el cuarto corte seguido y el de mayor efecto
+>    sobre el `score` hasta hoy.
+>
+>    - **El defecto, y cabe en una línea.** En
+>      `curiana_sim/minar_zavala_glosario.py` la parte de la oración de TODO el
+>      vocabulario activo salía de
+>      `_CAT_POR_TIER = {"T4_abstracto": "v_raiz"}`, con el comentario
+>      «heurística de POS; el resto, sust». Y T4 es el **cajón de resto** del
+>      minador: lo que el regex `re_concreto` no reconoció como cosa. De ahí
+>      salían **49** entradas con `cat: v_raiz`, y de `cat: v_raiz` sale
+>      `curiana_lexicon._RAICES_VERB`, que hace que `score_linguistico()` cuente
+>      como arahuaco **cualquier token cuyo primer segmento sea una de ellas**.
+>      En la base: 123 formas raíz+aspecto y **1.071 usos** (`juri-*` 227,
+>      `waidima-*` 97, `dichiba-*` 63, `popoi-*` 59).
+>    - **⚠️ Pero NO es que «40 no sean verbos»** (corrección de Miguel el mismo
+>      día, y es la que ordena el trabajo). En arahuaco mucho de lo que el
+>      castellano llama adjetivo **es un verbo estativo**, y el repo ya lo
+>      documenta: `morfologia.md` §2 cita que el lokono tiene dos juegos de
+>      pronombre sujeto, prefijado en los transitivos y **pospuesto en los
+>      estativos**. Así que `apo` 'grande', `usera` 'seco, arenoso', `waidima`
+>      'íntegro', `kachipo` 'enojado', `patapati` 'anegadizo' y `waranao`
+>      'salado' como raíz verbal **pueden estar bien — sólo que hoy están bien
+>      por accidente**.
+>    - **El reparto, una por una, contra la glosa verbatim y la comparanda que
+>      el repo ya tiene** (`lexicon_a2`, `lexicon_achagua`, `lexicon_perea`,
+>      wayuu y taíno del literal):
+>
+>      | clase | n | qué es | `cat` |
+>      |---|---:|---|---|
+>      | **estativo** | 10 | concepto adjetival que en arahuaco es verbo | `v_raiz` (se queda) |
+>      | **acción** | 9 | verbo pleno | `v_raiz` (se queda) |
+>      | **nombre** | 29 | sustantivo concreto o abstracto | **`sust`** |
+>      | **adverbio** | 1 | `popoi` 'ahí' — *lo dice la propia fuente* | **`part`** |
+>
+>      Los apoyos más limpios son los que el propio lexicón ya tenía y nadie
+>      había leído: WY `waneepiaa` **'ser entero'** para `waidima`, WY `palawaa`
+>      **'ser salado'** para `waranao`, WY `josoo` **'estar seco'** para
+>      `usera`, LK `hebbe` **'ser viejo'** para `wasima` —que es uno de los tres
+>      ejemplos impresos con que Perea define la 4ª conjugación estativa
+>      (pp. 634-639)—. Y del otro lado, `juri` 'viento' es nombre en las tres
+>      hermanas, con el soplar como verbo aparte (WY `wawai` frente a
+>      `waawataa`; ACH `nususube` 'viento mío', poseído, frente a `risuayu`
+>      'correr viento'), y van Buurt lo da como raíz nominal en *Hudishibana*.
+>      Cada fila lleva su apoyo con cita en
+>      `lexicon_zavala.CLASES_DE_RAIZ_ZAVALA` (generado desde
+>      `CLASE_DE_LA_RAIZ`, en el minador); las que no tienen cognado lo dicen
+>      con `deuda: sin-procedencia`. Dudosos declarados y degradados (regla 2):
+>      `baharuko`, `despopo`, `wamipa`, `kibakibi`, `hueke`.
+>    - **Dónde se aplicó.** En el **minador**, como tabla de excepciones
+>      declarada con su razón por fila, para que la regeneración la conserve. El
+>      módulo generado se regeneró y **el diff es exactamente el esperado**: las
+>      mismas 144 claves, los mismos 8 afijos, 45 topónimos y 14 antropónimos, y
+>      30 entradas que cambian **sólo `cat`**. `glosa_fuente` (verbatim de
+>      Zavala), `sig`, la capa y las notas quedan byte a byte — hay control
+>      campo a campo. `curiana_lexicon.py` no se tocó, `score_linguistico()` no
+>      se tocó, `curiana_observer` no se tocó. `_RAICES_VERB` pasa de 1.424 a
+>      1.394 y `VOCABULARIO_BASE` no se mueve: no se archiva ni se añade nada.
+>    - **⚠️ MUEVE EL SCORE, y mucho más que los tres cortes anteriores.**
+>      Re-puntuados los **216 + 216** de los dos brazos de la serie C con el
+>      pipeline del Observer:
+>
+>      | | con escena | control |
+>      |---|---|---|
+>      | score cambia en | **84 de 216** | **93 de 216** |
+>      | \|Δ\| máx | 1,30 | 1,60 |
+>      | Δ medio de las que cambian | −0,3845 | −0,3172 |
+>      | score medio | 7,7361 → **7,5866** | 7,5977 → **7,4611** |
+>      | `palabras_caquetias` cambia en | 105 | 118 |
+>      | `neologisms_proposed` cambia en | 0 | 0 |
+>
+>      Todas a la baja, las 177. Las voces que más dejan de contarse son
+>      `juri-ni` (17 respuestas con escena, 36 en el control), `juri-ka`,
+>      `juri-bana`, `popoi-ni` y `dichiba-ni`.
+>    - **El control, que aquí hubo que montar distinto.** Los seis runs se
+>      corrieron el 2026-09-20 entre las 01:09 y las 02:04 (−0300) y el fix del
+>      punto 11 se mergeó a las 03:12: la base guardó sus `score` con el motor
+>      **anterior** a ese corte, así que un replay con el motor de hoy no puede
+>      reproducirla. El control se hace contra `b8c85ca`, el último merge antes
+>      del fix, con `curiana_lexicon`, `curiana_koine`, `curiana_observer` y
+>      `lexicon_zavala` del mismo commit: **reproduce la base en 216 de 216 en
+>      los dos brazos**. Y la diferencia `b8c85ca` → `1efcb24` sale exactamente
+>      en **8 y 43** respuestas, que es el corte del punto 11 tal como quedó
+>      declarado. Los dos controles en verde.
+>    - **De paso, una deriva latente que la regeneración habría ejecutado en
+>      silencio.** El cruce del minador contra `VOCABULARIO_BASE` pregunta «¿ya
+>      está?» sobre el lexicón entero, y desde la fusión achagua del 2026-09-13
+>      eso incluye 3.569 entradas de otra lengua con las claves en grafía del
+>      copista. Una regeneración limpia **borraba cuatro voces atestiguadas**
+>      —`kana` 'demonio' (vs. ACH `cana-achagua` 'maíz'), `karama` 'ramazón'
+>      (vs. ACH `carama` 'cachama'), `kuna` 'pez del golfete', `turupia`— y
+>      **dos de los ocho afijos**, `-ima` 'humedad, quebrada' (vs. LK `ima`
+>      'enemigo') y `-aima` 'abundancia' (por su variante `coa` contra `koa`
+>      'palo de siembra'). Los afijos son, según la cabecera del propio
+>      minador, «el hallazgo de mayor valor» de toda la minería. Se declaró la
+>      tabla `NO_ES_LA_MISMA_VOZ` (seis filas, una razón cada una) para que la
+>      regeneración no destruya nada; **el arreglo de fondo —que `lex_idx` se
+>      construya sólo con la familia caquetía— queda propuesto**, porque
+>      cambiaría qué entra en `VOCABULARIO_BASE` (`ture` volvería a emitirse
+>      como caquetía) y eso es una afirmación sobre una lengua.
+>
+>    **Desde qué run aplica**: desde el próximo. **La serie C no se re-corre**,
+>    por lo mismo que el punto 11: el corte no cambia lo que el agente VE —ni
+>    una plantilla, ni el muestreador, ni el prompt— sino lo que el motor
+>    CUENTA. Los runs ya corridos no se reescriben. Medición entera en
+>    `6-fusion/medicion_clases_de_raiz_2026-09-20.yaml`
+>    (`6-fusion/scripts/medir_clases_de_raiz.py`).
+>
+>    **Lo que queda abierto, y no lo decide un minador:** (a) declarar la clase
+>    estativa en `2-lengua/morfologia.md`
+>    (`6-fusion/issues-pendientes/la-clase-estativa-2026-09-20.md`), con la
+>    tensión que destapa —las 11 entradas `adj` del literal, `anasa`, `tüshi`,
+>    `sünatü`…, son exactamente los «colores, tamaños, sabores» de Perea y
+>    están en la categoría equivocada por el mismo motivo—; (b) que la
+>    predicación de un nombre vaya por `ka-`/`ma-` y qué hacer con los 227 usos
+>    de `juri-*` con aspecto
+>    (`6-fusion/issues-pendientes/predicacion-de-nombres-ka-ma-2026-09-20.md`);
+>    (c) ocho glosas `sig` que piden curación, propuestas y sin aplicar, porque
+>    `sig` es lo que el agente lee. Todo en
+>    `6-fusion/clases_de_raiz_zavala_2026-09-20.yaml`.
+>
+> Ninguno de los doce toca `capas_de_score`.
 
 > ⚠️ **Dos artefactos del instrumento descubiertos al cerrar el día 3
 > (análisis por nodo, `analizar_nodos.py`, 2026-09-16), que afectan a los

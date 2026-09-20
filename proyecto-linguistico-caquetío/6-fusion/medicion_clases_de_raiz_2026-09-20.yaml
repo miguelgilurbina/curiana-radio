@@ -1,0 +1,969 @@
+# ─────────────────────────────────────────────────────────────────
+# LA CLASE DE LA RAÍZ — MEDICIÓN DEL CORTE
+#
+# GENERADO por 6-fusion/scripts/medir_clases_de_raiz.py
+# No se edita a mano: se regenera. La clasificación fila a fila está en
+# curiana_sim/minar_zavala_glosario.py::CLASE_DE_LA_RAIZ y sale al
+# módulo generado como CLASES_DE_RAIZ_ZAVALA.
+# ─────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-20'
+  ref_antes: '1efcb24'
+  modulo_antes: 'C:\Users\migue\AppData\Local\Temp\curiana_ref_zavala_00u1lgnd\lexicon_zavala.py'
+  modulo_despues: 'C:\Users\migue\OneDrive\Documents\Desarrollo\Curiana Radio\.claude\worktrees\agent-a80bcf9998c240cad\proyecto-linguistico-caquetío\curiana_sim\lexicon_zavala.py'
+  que_cambia: 'sólo `cat`, y sólo en el módulo GENERADO. curiana_lexicon.py
+    no se toca; score_linguistico() no se toca; glosa_fuente no se toca.'
+
+censo:
+  zavala_entradas_antes: 144
+  zavala_entradas_despues: 144
+  zavala_claves_iguales: true
+  zavala_v_raiz_antes: 49
+  zavala_v_raiz_despues: 19
+  entradas_que_cambian_de_cat: 30
+  transiciones:
+    'aka': 'v_raiz → sust'
+    'baharuko': 'v_raiz → sust'
+    'baperon': 'v_raiz → sust'
+    'barbache': 'v_raiz → sust'
+    'chuchube': 'v_raiz → sust'
+    'despopo': 'v_raiz → sust'
+    'dichiba': 'v_raiz → sust'
+    'gika': 'v_raiz → sust'
+    'hueke': 'v_raiz → sust'
+    'ikoroata': 'v_raiz → sust'
+    'juri': 'v_raiz → sust'
+    'kana': 'v_raiz → sust'
+    'kapo': 'v_raiz → sust'
+    'kapu': 'v_raiz → sust'
+    'karama': 'v_raiz → sust'
+    'kibakibi': 'v_raiz → sust'
+    'kiricias': 'v_raiz → sust'
+    'kiwawa': 'v_raiz → sust'
+    'komoho': 'v_raiz → sust'
+    'lawari': 'v_raiz → sust'
+    'orumo': 'v_raiz → sust'
+    'popoi': 'v_raiz → part'
+    'raporon': 'v_raiz → sust'
+    'surupa': 'v_raiz → sust'
+    'tuba': 'v_raiz → sust'
+    'ubeda': 'v_raiz → sust'
+    'uray': 'v_raiz → sust'
+    'ure': 'v_raiz → sust'
+    'wamipa': 'v_raiz → sust'
+    'warakaro': 'v_raiz → sust'
+  vocabulario_base_antes: 5507
+  vocabulario_base_despues: 5507
+  raices_verbales_antes: 1424
+  raices_verbales_despues: 1394
+  raices_verbales_que_salen: ["aka", "baharuko", "baperon", "barbache", "chuchube", "despopo", "dichiba", "gika", "hueke", "ikoroata", "juri", "kana", "kapo", "kapu", "karama", "kibakibi", "kiricias", "kiwawa", "komoho", "lawari", "orumo", "popoi", "raporon", "surupa", "tuba", "ubeda", "uray", "ure", "wamipa", "warakaro"]
+  raices_verbales_que_entran: []
+  afijos_iguales: true
+  toponimos_iguales: true
+  antroponimos_iguales: true
+  reparto:
+    'accion': 9
+    'adverbio': 1
+    'estativo': 10
+    'nombre': 29
+  sin_clase_declarada: []
+  glosa_fuente_intacta: true
+  sig_intacto: true
+  fuente_intacta: true
+  notas_intactas: true
+  control_verde: true
+
+clases:
+  aka: 'nombre'
+  apo: 'estativo'
+  bachure: 'estativo'
+  badamaro: 'accion'
+  baharuko: 'nombre'
+  baperon: 'nombre'
+  barbache: 'nombre'
+  beceremikore: 'accion'
+  chuchube: 'nombre'
+  despopo: 'nombre'
+  dichiba: 'nombre'
+  domaria: 'accion'
+  duriwa: 'accion'
+  etamo: 'estativo'
+  gide: 'accion'
+  gika: 'nombre'
+  hueke: 'nombre'
+  ikoroata: 'nombre'
+  jabal: 'accion'
+  jadarayte: 'accion'
+  juri: 'nombre'
+  kachipo: 'estativo'
+  kana: 'nombre'
+  kapo: 'nombre'
+  kapu: 'nombre'
+  karama: 'nombre'
+  kibakibi: 'nombre'
+  kiboata: 'accion'
+  kidiboata: 'accion'
+  kiricias: 'nombre'
+  kiwawa: 'nombre'
+  komoho: 'nombre'
+  lawari: 'nombre'
+  orumo: 'nombre'
+  patapati: 'estativo'
+  popoi: 'adverbio'
+  raporon: 'nombre'
+  sinwanguso: 'estativo'
+  surupa: 'nombre'
+  tuba: 'nombre'
+  ubeda: 'nombre'
+  uray: 'nombre'
+  ure: 'nombre'
+  usera: 'estativo'
+  waidima: 'estativo'
+  wamipa: 'nombre'
+  warakaro: 'nombre'
+  waranao: 'estativo'
+  wasima: 'estativo'
+
+paradigma_en_la_base:
+  juri:
+    clase: 'nombre'
+    formas: 48
+    usos: 759
+    formas_aspecto: 3
+    usos_aspecto: 227
+    formas_que_dejan_de_contar: 47
+    usos_que_dejan_de_contar: 407
+    formas_que_cambian_de_lengua: 0
+    top: {"juri": 352, "juri-ni": 157, "juri-bana": 43, "juri-ka": 37, "juri-da": 33, "juri-wara": 21, "juri-kana": 15, "juri-aima": 13}
+  popoi:
+    clase: 'adverbio'
+    formas: 16
+    usos: 510
+    formas_aspecto: 3
+    usos_aspecto: 59
+    formas_que_dejan_de_contar: 15
+    usos_que_dejan_de_contar: 119
+    formas_que_cambian_de_lengua: 0
+    top: {"popoi": 391, "popoi-ni": 40, "popoi-bana": 30, "popoi-ka": 10, "popoi-ana": 10, "popoi-da": 9, "popoi-gua": 4, "popoi-kana": 4}
+  waidima:
+    clase: 'estativo'
+    formas: 9
+    usos: 148
+    formas_aspecto: 3
+    usos_aspecto: 97
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_cambian_de_lengua: 0
+    top: {"waidima": 44, "waidima-ka": 41, "waidima-ni": 37, "waidima-da": 19, "waidima-kana": 3, "waidima-iro": 1, "waidima-ma": 1, "waidima-uco": 1}
+  kana:
+    clase: 'nombre'
+    formas: 34
+    usos: 139
+    formas_aspecto: 3
+    usos_aspecto: 24
+    formas_que_dejan_de_contar: 33
+    usos_que_dejan_de_contar: 74
+    formas_que_cambian_de_lengua: 0
+    top: {"kana": 65, "kana-ni": 12, "kana-da": 11, "kana-bana": 6, "kana-kana": 6, "kana-iro": 3, "kana-ubana": 3, "kana-uco": 2}
+  dichiba:
+    clase: 'nombre'
+    formas: 16
+    usos: 119
+    formas_aspecto: 3
+    usos_aspecto: 63
+    formas_que_dejan_de_contar: 15
+    usos_que_dejan_de_contar: 97
+    formas_que_cambian_de_lengua: 0
+    top: {"dichiba-ni": 36, "dichiba-ka": 23, "dichiba": 22, "dichiba-ana": 7, "dichiba-bana": 6, "dichiba-tüshi": 6, "dichiba-da": 4, "dichiba-ima": 4}
+  kibakibi:
+    clase: 'nombre'
+    formas: 11
+    usos: 72
+    formas_aspecto: 3
+    usos_aspecto: 44
+    formas_que_dejan_de_contar: 10
+    usos_que_dejan_de_contar: 54
+    formas_que_cambian_de_lengua: 0
+    top: {"kibakibi-ka": 19, "kibakibi-ni": 19, "kibakibi": 18, "kibakibi-da": 6, "kibakibi-kana": 3, "kibakibi-ko": 2, "kibakibi-iro": 1, "kibakibi-maa-ni": 1}
+  usera:
+    clase: 'estativo'
+    formas: 13
+    usos: 71
+    formas_aspecto: 3
+    usos_aspecto: 44
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_cambian_de_lengua: 0
+    top: {"usera-ka": 22, "usera-ni": 17, "usera-bana": 9, "usera": 9, "usera-da": 5, "usera-ana": 2, "usera-bacoa": 1, "usera-duma": 1}
+  tuba:
+    clase: 'nombre'
+    formas: 15
+    usos: 60
+    formas_aspecto: 3
+    usos_aspecto: 35
+    formas_que_dejan_de_contar: 14
+    usos_que_dejan_de_contar: 50
+    formas_que_cambian_de_lengua: 0
+    top: {"tuba-ni": 24, "tuba": 10, "tuba-ka": 10, "tuba-bana": 3, "tuba-kana": 3, "tuba-ana": 1, "tuba-bana-ana": 1, "tuba-bana-da": 1}
+  kachipo:
+    clase: 'estativo'
+    formas: 11
+    usos: 51
+    formas_aspecto: 3
+    usos_aspecto: 31
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_cambian_de_lengua: 0
+    top: {"kachipo-ni": 18, "kachipo-ka": 10, "kachipo": 8, "kachipo-bana": 4, "kachipo-ma": 3, "kachipo-da": 3, "kachipo-ko": 1, "kachipo-pabu": 1}
+  duriwa:
+    clase: 'accion'
+    formas: 4
+    usos: 50
+    formas_aspecto: 3
+    usos_aspecto: 49
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_cambian_de_lengua: 0
+    top: {"duriwa-ni": 29, "duriwa-ka": 11, "duriwa-da": 9, "duriwa": 1}
+  etamo:
+    clase: 'estativo'
+    formas: 13
+    usos: 50
+    formas_aspecto: 3
+    usos_aspecto: 25
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_cambian_de_lengua: 0
+    top: {"etamo": 12, "etamo-ka": 11, "etamo-ni": 11, "etamo-da": 3, "etamo-ubana": 3, "etamo-nia": 2, "etamo-pütchi": 2, "etamo-biro": 1}
+  wamipa:
+    clase: 'nombre'
+    formas: 19
+    usos: 49
+    formas_aspecto: 3
+    usos_aspecto: 26
+    formas_que_dejan_de_contar: 18
+    usos_que_dejan_de_contar: 44
+    formas_que_cambian_de_lengua: 0
+    top: {"wamipa-ni": 18, "wamipa-ka": 6, "wamipa": 5, "wamipa-bana": 2, "wamipa-buko": 2, "wamipa-ana-ni": 2, "wamipa-da": 2, "wamipa-bana-uru": 1}
+  domaria:
+    clase: 'accion'
+    formas: 7
+    usos: 47
+    formas_aspecto: 3
+    usos_aspecto: 33
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_cambian_de_lengua: 0
+    top: {"domaria-ni": 23, "domaria-ka": 8, "domaria": 7, "domaria-bacoa": 4, "domaria-bacoa-ni": 2, "domaria-da": 2, "domaria-uco": 1}
+  hueke:
+    clase: 'nombre'
+    formas: 15
+    usos: 44
+    formas_aspecto: 3
+    usos_aspecto: 16
+    formas_que_dejan_de_contar: 14
+    usos_que_dejan_de_contar: 39
+    formas_que_cambian_de_lengua: 0
+    top: {"hueke-ni": 13, "hueke-ana": 8, "hueke-bana": 5, "hueke": 5, "hueke-ubana": 2, "hueke-ka": 2, "hueke-para": 1, "hueke-ma-buro": 1}
+  kiricias:
+    clase: 'nombre'
+    formas: 13
+    usos: 42
+    formas_aspecto: 3
+    usos_aspecto: 15
+    formas_que_dejan_de_contar: 12
+    usos_que_dejan_de_contar: 29
+    formas_que_cambian_de_lengua: 0
+    top: {"kiricias": 13, "kiricias-ni": 8, "kiricias-ka": 5, "kiricias-aima": 3, "kiricias-wara": 2, "kiricias-uco": 2, "kiricias-ana": 2, "kiricias-da": 2}
+  badamaro:
+    clase: 'accion'
+    formas: 5
+    usos: 41
+    formas_aspecto: 3
+    usos_aspecto: 39
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_cambian_de_lengua: 0
+    top: {"badamaro-ni": 14, "badamaro-ka": 14, "badamaro-da": 11, "badamaro": 1, "badamaro-kana": 1}
+  despopo:
+    clase: 'nombre'
+    formas: 9
+    usos: 36
+    formas_aspecto: 3
+    usos_aspecto: 21
+    formas_que_dejan_de_contar: 8
+    usos_que_dejan_de_contar: 29
+    formas_que_cambian_de_lengua: 0
+    top: {"despopo-ni": 13, "despopo": 7, "despopo-ka": 5, "despopo-da": 3, "despopo-wara": 2, "despopo-ubana": 2, "despopo-ma": 2, "despopo-uco": 1}
+  kapu:
+    clase: 'nombre'
+    formas: 17
+    usos: 34
+    formas_aspecto: 1
+    usos_aspecto: 1
+    formas_que_dejan_de_contar: 16
+    usos_que_dejan_de_contar: 32
+    formas_que_cambian_de_lengua: 0
+    top: {"kapu-bana": 11, "kapu-ana": 4, "kapu": 2, "kapu-ubana": 2, "kapu-bacoa": 2, "kapu-kana": 2, "kapu-gua": 1, "kapu-barsure": 1}
+  waranao:
+    clase: 'estativo'
+    formas: 13
+    usos: 31
+    formas_aspecto: 3
+    usos_aspecto: 15
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_cambian_de_lengua: 0
+    top: {"waranao-ni": 9, "waranao": 6, "waranao-da": 4, "waranao-ma": 2, "waranao-ka": 2, "waranao-ana": 1, "waranao-aima": 1, "waranao-barsure": 1}
+  sinwanguso:
+    clase: 'estativo'
+    formas: 9
+    usos: 28
+    formas_aspecto: 3
+    usos_aspecto: 16
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_cambian_de_lengua: 0
+    top: {"sinwanguso-da": 10, "sinwanguso": 5, "sinwanguso-ka": 4, "sinwanguso-ma": 3, "sinwanguso-ni": 2, "sinwanguso-mara": 1, "sinwanguso-ima": 1, "sinwanguso-kana": 1}
+  gide:
+    clase: 'accion'
+    formas: 6
+    usos: 26
+    formas_aspecto: 3
+    usos_aspecto: 23
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_cambian_de_lengua: 0
+    top: {"gide-ni": 16, "gide-ka": 4, "gide-da": 3, "gide-ta-da": 1, "gide-ta": 1, "gide": 1}
+  jadarayte:
+    clase: 'accion'
+    formas: 4
+    usos: 26
+    formas_aspecto: 3
+    usos_aspecto: 24
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_cambian_de_lengua: 0
+    top: {"jadarayte-ni": 13, "jadarayte-da": 8, "jadarayte-ka": 3, "jadarayte": 2}
+  kapo:
+    clase: 'nombre'
+    formas: 11
+    usos: 23
+    formas_aspecto: 2
+    usos_aspecto: 5
+    formas_que_dejan_de_contar: 10
+    usos_que_dejan_de_contar: 19
+    formas_que_cambian_de_lengua: 0
+    top: {"kapo-bana": 5, "kapo": 4, "kapo-ni": 4, "kapo-bacoa": 2, "kapo-ubana": 2, "kapo-ani": 1, "kapo-kana": 1, "kapo-bana-uco": 1}
+  baharuko:
+    clase: 'nombre'
+    formas: 5
+    usos: 22
+    formas_aspecto: 2
+    usos_aspecto: 4
+    formas_que_dejan_de_contar: 4
+    usos_que_dejan_de_contar: 8
+    formas_que_cambian_de_lengua: 0
+    top: {"baharuko": 14, "baharuko-ni": 3, "baharuko-kana": 3, "baharuko-ana": 1, "baharuko-ka": 1}
+  ure:
+    clase: 'nombre'
+    formas: 6
+    usos: 19
+    formas_aspecto: 3
+    usos_aspecto: 16
+    formas_que_dejan_de_contar: 6
+    usos_que_dejan_de_contar: 19
+    formas_que_cambian_de_lengua: 0
+    top: {"ure-da": 8, "ure-ni": 5, "ure-ka": 3, "ure-ana": 1, "ure-ubana": 1, "ure-kana": 1}
+  beceremikore:
+    clase: 'accion'
+    formas: 7
+    usos: 18
+    formas_aspecto: 3
+    usos_aspecto: 13
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_cambian_de_lengua: 0
+    top: {"beceremikore-ka": 6, "beceremikore-da": 5, "beceremikore": 2, "beceremikore-ni": 2, "beceremikore-da-kana": 1, "beceremikore-aima": 1, "beceremikore-bacoa": 1}
+  apo:
+    clase: 'estativo'
+    formas: 7
+    usos: 17
+    formas_aspecto: 3
+    usos_aspecto: 9
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_cambian_de_lengua: 0
+    top: {"apo": 4, "apo-da": 4, "apo-ka": 3, "apo-ni": 2, "apo-bana": 2, "apo-duma": 1, "apo-barsure-ka": 1}
+  kiwawa:
+    clase: 'nombre'
+    formas: 7
+    usos: 17
+    formas_aspecto: 2
+    usos_aspecto: 3
+    formas_que_dejan_de_contar: 6
+    usos_que_dejan_de_contar: 14
+    formas_que_cambian_de_lengua: 0
+    top: {"kiwawa-kana": 6, "kiwawa": 3, "kiwawa-aima": 2, "kiwawa-uco": 2, "kiwawa-ka": 2, "kiwawa-da": 1, "kiwawa-iro": 1}
+  lawari:
+    clase: 'nombre'
+    formas: 9
+    usos: 16
+    formas_aspecto: 3
+    usos_aspecto: 9
+    formas_que_dejan_de_contar: 8
+    usos_que_dejan_de_contar: 15
+    formas_que_cambian_de_lengua: 0
+    top: {"lawari-ni": 4, "lawari-ka": 3, "lawari-bana": 2, "lawari-da": 2, "lawari-bacoa-ana": 1, "lawari-bacoa-ni": 1, "lawari-bacoa": 1, "lawari": 1}
+  warakaro:
+    clase: 'nombre'
+    formas: 9
+    usos: 13
+    formas_aspecto: 2
+    usos_aspecto: 3
+    formas_que_dejan_de_contar: 8
+    usos_que_dejan_de_contar: 10
+    formas_que_cambian_de_lengua: 0
+    top: {"warakaro": 3, "warakaro-ana": 2, "warakaro-ni": 2, "warakaro-iro": 1, "warakaro-bacoa": 1, "warakaro-bana": 1, "warakaro-ka": 1, "warakaro-kana": 1}
+  patapati:
+    clase: 'estativo'
+    formas: 6
+    usos: 12
+    formas_aspecto: 2
+    usos_aspecto: 5
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_cambian_de_lengua: 0
+    top: {"patapati-ka": 4, "patapati": 3, "patapati-gua": 2, "patapati-ni": 1, "patapati-ima-ni": 1, "patapati-sima": 1}
+  wasima:
+    clase: 'estativo'
+    formas: 7
+    usos: 12
+    formas_aspecto: 3
+    usos_aspecto: 4
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_cambian_de_lengua: 0
+    top: {"wasima-kana": 3, "wasima-gua": 2, "wasima-ni": 2, "wasima-iro": 2, "wasima-da": 1, "wasima-ka": 1, "wasima-ko": 1}
+  bachure:
+    clase: 'estativo'
+    formas: 5
+    usos: 10
+    formas_aspecto: 2
+    usos_aspecto: 7
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_cambian_de_lengua: 0
+    top: {"bachure-ni": 6, "bachure-ka": 1, "bachure-ta": 1, "bachure-ma-ka": 1, "bachure-ko": 1}
+  komoho:
+    clase: 'nombre'
+    formas: 4
+    usos: 10
+    formas_aspecto: 2
+    usos_aspecto: 7
+    formas_que_dejan_de_contar: 3
+    usos_que_dejan_de_contar: 8
+    formas_que_cambian_de_lengua: 0
+    top: {"komoho-ni": 6, "komoho": 2, "komoho-da": 1, "komoho-kana": 1}
+  kidiboata:
+    clase: 'accion'
+    formas: 3
+    usos: 9
+    formas_aspecto: 2
+    usos_aspecto: 8
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_cambian_de_lengua: 0
+    top: {"kidiboata-ka": 5, "kidiboata-ni": 3, "kidiboata-ubana": 1}
+  orumo:
+    clase: 'nombre'
+    formas: 5
+    usos: 9
+    formas_aspecto: 2
+    usos_aspecto: 4
+    formas_que_dejan_de_contar: 4
+    usos_que_dejan_de_contar: 7
+    formas_que_cambian_de_lengua: 0
+    top: {"orumo-ni": 3, "orumo": 2, "orumo-bana": 2, "orumo-bana-sulu": 1, "orumo-da": 1}
+  gika:
+    clase: 'nombre'
+    formas: 4
+    usos: 8
+    formas_aspecto: 3
+    usos_aspecto: 7
+    formas_que_dejan_de_contar: 4
+    usos_que_dejan_de_contar: 8
+    formas_que_cambian_de_lengua: 0
+    top: {"gika-ni": 4, "gika-da": 2, "gika-ka": 1, "gika-ubana": 1}
+  jabal:
+    clase: 'accion'
+    formas: 3
+    usos: 8
+    formas_aspecto: 3
+    usos_aspecto: 8
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_cambian_de_lengua: 0
+    top: {"jabal-da": 6, "jabal-ni": 1, "jabal-ka": 1}
+  karama:
+    clase: 'nombre'
+    formas: 4
+    usos: 8
+    formas_aspecto: 2
+    usos_aspecto: 5
+    formas_que_dejan_de_contar: 4
+    usos_que_dejan_de_contar: 8
+    formas_que_cambian_de_lengua: 0
+    top: {"karama-ni": 4, "karama-kana": 2, "karama-ka": 1, "karama-pabu": 1}
+  raporon:
+    clase: 'nombre'
+    formas: 4
+    usos: 8
+    formas_aspecto: 3
+    usos_aspecto: 7
+    formas_que_dejan_de_contar: 3
+    usos_que_dejan_de_contar: 7
+    formas_que_cambian_de_lengua: 0
+    top: {"raporon-ka": 4, "raporon-ni": 2, "raporon-da": 1, "raporon": 1}
+  kiboata:
+    clase: 'accion'
+    formas: 5
+    usos: 7
+    formas_aspecto: 2
+    usos_aspecto: 4
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_cambian_de_lengua: 0
+    top: {"kiboata-ni": 3, "kiboata-ka": 1, "kiboata-ma": 1, "kiboata-ana": 1, "kiboata-maa": 1}
+  surupa:
+    clase: 'nombre'
+    formas: 4
+    usos: 5
+    formas_aspecto: 2
+    usos_aspecto: 3
+    formas_que_dejan_de_contar: 4
+    usos_que_dejan_de_contar: 5
+    formas_que_cambian_de_lengua: 0
+    top: {"surupa-ni": 2, "surupa-ka": 1, "surupa-bana": 1, "surupa-ma-ni": 1}
+  baperon:
+    clase: 'nombre'
+    formas: 3
+    usos: 4
+    formas_aspecto: 2
+    usos_aspecto: 3
+    formas_que_dejan_de_contar: 3
+    usos_que_dejan_de_contar: 4
+    formas_que_cambian_de_lengua: 0
+    top: {"baperon-ni": 2, "baperon-iro": 1, "baperon-ka": 1}
+  barbache:
+    clase: 'nombre'
+    formas: 3
+    usos: 4
+    formas_aspecto: 2
+    usos_aspecto: 3
+    formas_que_dejan_de_contar: 3
+    usos_que_dejan_de_contar: 4
+    formas_que_cambian_de_lengua: 0
+    top: {"barbache-ka": 2, "barbache-da": 1, "barbache-bacoa": 1}
+  chuchube:
+    clase: 'nombre'
+    formas: 3
+    usos: 3
+    formas_aspecto: 3
+    usos_aspecto: 3
+    formas_que_dejan_de_contar: 3
+    usos_que_dejan_de_contar: 3
+    formas_que_cambian_de_lengua: 0
+    top: {"chuchube-ka": 1, "chuchube-da": 1, "chuchube-ni": 1}
+  ubeda:
+    clase: 'nombre'
+    formas: 3
+    usos: 3
+    formas_aspecto: 2
+    usos_aspecto: 2
+    formas_que_dejan_de_contar: 2
+    usos_que_dejan_de_contar: 2
+    formas_que_cambian_de_lengua: 0
+    top: {"ubeda-ni": 1, "ubeda-ka": 1, "ubeda": 1}
+  uray:
+    clase: 'nombre'
+    formas: 2
+    usos: 2
+    formas_aspecto: 1
+    usos_aspecto: 1
+    formas_que_dejan_de_contar: 2
+    usos_que_dejan_de_contar: 2
+    formas_que_cambian_de_lengua: 0
+    top: {"uray-ni": 1, "uray-wara": 1}
+  aka:
+    clase: 'nombre'
+    formas: 1
+    usos: 1
+    formas_aspecto: 1
+    usos_aspecto: 1
+    formas_que_dejan_de_contar: 1
+    usos_que_dejan_de_contar: 1
+    formas_que_cambian_de_lengua: 0
+    top: {"aka-ni": 1}
+  ikoroata:
+    clase: 'nombre'
+    formas: 1
+    usos: 1
+    formas_aspecto: 0
+    usos_aspecto: 0
+    formas_que_dejan_de_contar: 0
+    usos_que_dejan_de_contar: 0
+    formas_que_cambian_de_lengua: 0
+    top: {"ikoroata": 1}
+
+repuntuacion_con_escena:
+  respuestas: 216
+  control_replay_desvios: 8
+  control_ejemplos: [{"run": "f2741e89", "agente": "Waranaro", "dia": 1, "turno": 3, "base": 8.5, "replay": 8.2, "neos_base": 0, "neos_replay": 0}, {"run": "f2741e89", "agente": "Ruata", "dia": 1, "turno": 3, "base": 6.8, "replay": 6.6, "neos_base": 0, "neos_replay": 0}, {"run": "fcdfa07a", "agente": "Wache", "dia": 2, "turno": 2, "base": 8.2, "replay": 8.0, "neos_base": 0, "neos_replay": 0}, {"run": "fcdfa07a", "agente": "Katiata", "dia": 2, "turno": 2, "base": 7.0, "replay": 6.7, "neos_base": 0, "neos_replay": 0}, {"run": "0313d830", "agente": "Humohumo", "dia": 3, "turno": 2, "base": 5.9, "replay": 5.8, "neos_base": 0, "neos_replay": 0}]
+  score_cambia_en: 84
+  score_delta_max: 1.3
+  score_delta_medio_de_las_que_cambian: -0.3845
+  score_medio_antes: 7.7361
+  score_medio_despues: 7.5866
+  score_baja_en: 84
+  score_sube_en: 0
+  score_ejemplos: [{"run": "0313d830", "agente": "Kumarawa", "dia": 3, "turno": 2, "antes": 7.1, "despues": 5.8, "delta": -1.3}, {"run": "0313d830", "agente": "Karama", "dia": 3, "turno": 3, "antes": 8.4, "despues": 7.1, "delta": -1.3}, {"run": "fcdfa07a", "agente": "Wache", "dia": 2, "turno": 2, "antes": 8.0, "despues": 6.8, "delta": -1.2}, {"run": "f2741e89", "agente": "Wamipa", "dia": 1, "turno": 4, "antes": 8.4, "despues": 7.4, "delta": -1.0}, {"run": "fcdfa07a", "agente": "Kumarawa", "dia": 2, "turno": 3, "antes": 8.1, "despues": 7.2, "delta": -0.9}, {"run": "f2741e89", "agente": "Ruata", "dia": 1, "turno": 3, "antes": 6.6, "despues": 5.8, "delta": -0.8}, {"run": "f2741e89", "agente": "Harifuche", "dia": 1, "turno": 3, "antes": 6.3, "despues": 5.5, "delta": -0.8}, {"run": "fcdfa07a", "agente": "Uria", "dia": 2, "turno": 1, "antes": 8.4, "despues": 7.6, "delta": -0.8}, {"run": "0313d830", "agente": "Dato", "dia": 3, "turno": 4, "antes": 7.6, "despues": 6.8, "delta": -0.8}, {"run": "fcdfa07a", "agente": "Arika", "dia": 2, "turno": 4, "antes": 8.8, "despues": 8.1, "delta": -0.7}, {"run": "fcdfa07a", "agente": "Waranaro", "dia": 2, "turno": 6, "antes": 7.5, "despues": 6.8, "delta": -0.7}, {"run": "0313d830", "agente": "Wache", "dia": 3, "turno": 1, "antes": 8.7, "despues": 8.0, "delta": -0.7}, {"run": "0313d830", "agente": "Turicha", "dia": 3, "turno": 3, "antes": 10.0, "despues": 9.3, "delta": -0.7}, {"run": "f2741e89", "agente": "Buriche", "dia": 1, "turno": 4, "antes": 6.8, "despues": 6.2, "delta": -0.6}, {"run": "f2741e89", "agente": "Chirwa", "dia": 1, "turno": 5, "antes": 8.5, "despues": 7.9, "delta": -0.6}]
+  palabras_caquetias_cambia_en: 105
+  neologisms_proposed_cambia_en: 0
+  voces_que_dejan_de_contarse:
+    'juri-ni': 17
+    'juri-ka': 14
+    'juri-bana': 8
+    'dichiba-ni': 7
+    'popoi-ni': 7
+    'ure-da': 4
+    'dichiba-ima': 3
+    'dichiba-bana': 3
+    'tuba-bana': 3
+    'kiwawa-kana': 3
+    'wamipa-ni': 3
+    'kiricias-ka': 3
+    'popoi-kana': 3
+    'popoi-da': 3
+    'popoi-ana': 3
+    'popoi-bana': 3
+    'dichiba-ana': 3
+    'dichiba-kana': 3
+    'kibakibi-ka': 2
+    'gika-ni': 2
+    'kibakibi-da': 2
+    'juri-da': 2
+    'juri-wara': 2
+    'popoi-ka': 2
+    'tuba-ka': 2
+    'kibakibi-ni': 2
+    'hueke-ni': 2
+    'kana-bana': 2
+    'juri-gua': 2
+    'kana-iro': 2
+    'despopo-ni': 2
+    'dichiba-ka': 2
+    'para': 2
+    'kana-ubana': 2
+    'kapu-ana': 1
+    'wamipa-ima': 1
+    'dichiba-chaa-bana': 1
+    'lawari-bacoa-ana': 1
+    'wamipa-bina': 1
+    'warakaro-ni': 1
+    'wamipa-uru-ni': 1
+    'wamipa-uco-ni': 1
+    'wamipa-ana-ni': 1
+    'wamipa-aima': 1
+    'juri-barsure': 1
+    'kapu-ni': 1
+    'baharuko-ni': 1
+    'juri-bacoa-ka': 1
+    'kiwawa-ka': 1
+    'kiricias-aima': 1
+    'kapu-bacoa': 1
+    'kapu-ubana': 1
+    'raporon-da': 1
+    'gika-da': 1
+    'baperon-ka': 1
+    'tuba-iro': 1
+    'kapu-bana-sulu': 1
+    'kiwawa-aima': 1
+    'warakaro-ka': 1
+    'aka-ni': 1
+    'baharuko-ka': 1
+    'tuba-ni': 1
+    'kapo-ni': 1
+    'kana-wara': 1
+    'kapo-bana': 1
+    'kapo-bacoa': 1
+    'despopo-ma': 1
+    'tuba': 1
+    'tuba-aima': 1
+    'kana-ana': 1
+    'wamipa-ana': 1
+    'despopo-wara': 1
+    'kapu-bana': 1
+    'kana-kua': 1
+    'kana-iro-kana': 1
+    'dichiba-uco': 1
+    'tuba-kana': 1
+    'kiricias-uco': 1
+    'kana-uco': 1
+    'juri-kana': 1
+    'juri-wara-ubana': 1
+    'juri-ma-bana-ka': 1
+    'juri-ubana-wara-da': 1
+    'kana-ubana-kana': 1
+    'warakaro-bacoa-ana': 1
+    'tuba-bana-da': 1
+    'kana-da': 1
+    'warakaro-bacoa': 1
+    'baharuko-kana': 1
+    'dichiba-gua': 1
+    'dichiba-ubana': 1
+    'kibakibi-kana': 1
+    'wamipa-ka': 1
+    'kapo-ubana': 1
+    'tuba-bana-ana': 1
+    'kana-bacoa': 1
+  voces_que_empiezan_a_contarse:
+  control_ref_base: 'b8c85ca'
+  control_base_ref_desvios: 0
+  control_base_ref_ejemplos: []
+  control_verde: true
+  corte_anterior_score_cambia_en: 8
+  corte_anterior_declarado_en_el_punto_11: 8
+  corte_anterior_coincide: true
+  serie: {"ids": ["f2741e89-8bc7-4eeb-b249-83bf48d14403", "fcdfa07a-91fa-411f-a8f8-25c63b694f37", "0313d830-d366-4cf8-a65a-cea9be35546c"], "id8": ["f2741e89", "fcdfa07a", "0313d830"], "cadena_ok": true, "serie": "era2-c", "dias": 3, "turnos": 18}
+
+repuntuacion_control:
+  respuestas: 216
+  control_replay_desvios: 43
+  control_ejemplos: [{"run": "0345840d", "agente": "Chakamba", "dia": 1, "turno": 5, "base": 6.1, "replay": 5.9, "neos_base": 1, "neos_replay": 1}, {"run": "0345840d", "agente": "Jaiata", "dia": 1, "turno": 5, "base": 6.5, "replay": 6.0, "neos_base": 1, "neos_replay": 1}, {"run": "0345840d", "agente": "Dato", "dia": 1, "turno": 5, "base": 5.7, "replay": 5.5, "neos_base": 1, "neos_replay": 1}, {"run": "0345840d", "agente": "Isiro", "dia": 1, "turno": 6, "base": 7.6, "replay": 7.5, "neos_base": 0, "neos_replay": 0}, {"run": "0345840d", "agente": "Waru", "dia": 1, "turno": 6, "base": 7.6, "replay": 7.2, "neos_base": 0, "neos_replay": 0}]
+  score_cambia_en: 93
+  score_delta_max: 1.6
+  score_delta_medio_de_las_que_cambian: -0.3172
+  score_medio_antes: 7.5977
+  score_medio_despues: 7.4611
+  score_baja_en: 93
+  score_sube_en: 0
+  score_ejemplos: [{"run": "e98227eb", "agente": "Wairon", "dia": 3, "turno": 6, "antes": 8.6, "despues": 7.0, "delta": -1.6}, {"run": "45618069", "agente": "Wache", "dia": 2, "turno": 2, "antes": 8.3, "despues": 7.4, "delta": -0.9}, {"run": "45618069", "agente": "Dunakoa", "dia": 2, "turno": 2, "antes": 8.2, "despues": 7.3, "delta": -0.9}, {"run": "45618069", "agente": "Uria", "dia": 2, "turno": 1, "antes": 9.0, "despues": 8.2, "delta": -0.8}, {"run": "45618069", "agente": "Tabri", "dia": 2, "turno": 3, "antes": 8.9, "despues": 8.1, "delta": -0.8}, {"run": "e98227eb", "agente": "Amaka", "dia": 3, "turno": 3, "antes": 8.7, "despues": 7.9, "delta": -0.8}, {"run": "e98227eb", "agente": "Duraboa", "dia": 3, "turno": 6, "antes": 8.6, "despues": 7.8, "delta": -0.8}, {"run": "0345840d", "agente": "Ruata", "dia": 1, "turno": 3, "antes": 5.5, "despues": 4.8, "delta": -0.7}, {"run": "0345840d", "agente": "Bajari", "dia": 1, "turno": 3, "antes": 7.7, "despues": 7.0, "delta": -0.7}, {"run": "45618069", "agente": "Ruata", "dia": 2, "turno": 2, "antes": 8.5, "despues": 7.8, "delta": -0.7}, {"run": "0345840d", "agente": "Ebokoa", "dia": 1, "turno": 5, "antes": 9.0, "despues": 8.4, "delta": -0.6}, {"run": "0345840d", "agente": "Siwa", "dia": 1, "turno": 6, "antes": 9.0, "despues": 8.4, "delta": -0.6}, {"run": "45618069", "agente": "Akaure", "dia": 2, "turno": 2, "antes": 9.0, "despues": 8.4, "delta": -0.6}, {"run": "45618069", "agente": "Katiata", "dia": 2, "turno": 2, "antes": 5.8, "despues": 5.2, "delta": -0.6}, {"run": "45618069", "agente": "Ebokoa", "dia": 2, "turno": 4, "antes": 5.6, "despues": 5.0, "delta": -0.6}]
+  palabras_caquetias_cambia_en: 118
+  neologisms_proposed_cambia_en: 0
+  voces_que_dejan_de_contarse:
+    'juri-ni': 36
+    'popoi-ni': 11
+    'juri-bana': 8
+    'juri-ka': 8
+    'popoi-bana': 7
+    'kana-ni': 5
+    'juri-kana': 5
+    'juri-uco': 5
+    'juri-da': 5
+    'dichiba-ka': 4
+    'ure-da': 4
+    'kana-da': 4
+    'popoi-ana': 3
+    'juri-aima': 3
+    'dichiba-ni': 3
+    'juri-gua': 3
+    'kibakibi-ni': 3
+    'kibakibi-ka': 3
+    'popoi-ka': 3
+    'juri-bacoa': 3
+    'kiricias-wara': 2
+    'kana-aima': 2
+    'hueke-ana': 2
+    'tuba-ni': 2
+    'juri-bana-gua': 2
+    'barbache-ka': 2
+    'despopo-ka': 2
+    'popoi-sulu': 2
+    'kiwawa-uco': 2
+    'kiricias-ka': 2
+    'hueke-ni': 2
+    'kapu-ana': 1
+    'kiricias-uco': 1
+    'warakaro-kana': 1
+    'kiricias-da': 1
+    'kiricias-ima': 1
+    'kapo-ma-barsure': 1
+    'popoi-da': 1
+    'juri-wara': 1
+    'hueke-bana': 1
+    'kana-ma': 1
+    'warakaro-ana': 1
+    'kapu-kana': 1
+    'juri-alisio': 1
+    'popoi-gua': 1
+    'warakaro-iro': 1
+    'hueke-ka': 1
+    'hueke-da': 1
+    'baharuko-kana': 1
+    'popoi-bacoa-ana': 1
+    'popoi-bana-ana': 1
+    'dichiba-bana': 1
+    'kana-uco-da': 1
+    'kiricias-ni': 1
+    'lawari-da': 1
+    'kana-ima': 1
+    'kapu-bana': 1
+    'kiwawa-aima': 1
+    'raporon-ni': 1
+    'raporon-ka': 1
+    'kiricias-ana': 1
+    'kiwawa-kana': 1
+    'juri-bana-uco': 1
+    'kibakibi-da': 1
+    'gika-ni': 1
+    'juri-bacoa-da': 1
+    'baharuko-ana': 1
+    'kana-bana': 1
+    'kana-uco': 1
+    'juri-iro': 1
+    'kapo-bana-uco': 1
+    'kapo-bana': 1
+    'juri-bacoa-ni': 1
+    'despopo-uco': 1
+  voces_que_empiezan_a_contarse:
+  control_ref_base: 'b8c85ca'
+  control_base_ref_desvios: 0
+  control_base_ref_ejemplos: []
+  control_verde: true
+  corte_anterior_score_cambia_en: 43
+  corte_anterior_declarado_en_el_punto_11: 43
+  corte_anterior_coincide: true
+  serie: {"ids": ["0345840d-89b1-4a63-809a-4fdcf3b30768", "45618069-d97f-47b0-89f7-b6b6f4bb518f", "e98227eb-6b7b-47bb-b9b4-6e1e633a9761"], "id8": ["0345840d", "45618069", "e98227eb"], "cadena_ok": true, "serie": "era2-c", "dias": 3, "turnos": 18}
+
+juri_y_los_nombres:
+  ka_prefijo_formas: 102
+  ka_prefijo_usos: 564
+  ka_top:
+    'ka-biro': 99
+    'ka-barsure': 60
+    'ka-maure': 35
+    'ka-pütchi': 26
+    'ka-piache': 21
+    'ka-nomi': 18
+    'ka-nii': 15
+    'ka-ana': 14
+    'ka-buco': 13
+    'ka-kali': 12
+    'ka-buri': 12
+    'ka-boratio': 11
+  ma_prefijo_formas: 190
+  ma_prefijo_usos: 2195
+  ma_top:
+    'ma-wara': 161
+    'ma-kaa': 133
+    'ma-barsure': 127
+    'ma-biro': 112
+    'ma-arua': 110
+    'ma-anüiki': 94
+    'ma-panaa': 85
+    'ma-siwato': 76
+    'ma-kali': 75
+    'ma-tüshi': 70
+    'ma-ka': 69
+    'ma-raka': 68
+  nombres_en_juego: ["aka", "baharuko", "baperon", "barbache", "chuchube", "despopo", "dichiba", "gika", "hueke", "ikoroata", "juri", "kana", "kapo", "kapu", "karama", "kibakibi", "kiricias", "kiwawa", "komoho", "lawari", "orumo", "popoi", "raporon", "surupa", "tuba", "ubeda", "uray", "ure", "wamipa", "warakaro"]
+  via_aspecto_formas: 70
+  via_aspecto_usos: 617
+  via_aspecto_detalle:
+    'juri-ni': 157
+    'popoi-ni': 40
+    'juri-ka': 37
+    'dichiba-ni': 36
+    'juri-da': 33
+    'tuba-ni': 24
+    'dichiba-ka': 23
+    'kibakibi-ka': 19
+    'kibakibi-ni': 19
+    'wamipa-ni': 18
+    'hueke-ni': 13
+    'despopo-ni': 13
+    'kana-ni': 12
+    'kana-da': 11
+    'tuba-ka': 10
+    'popoi-ka': 10
+    'popoi-da': 9
+    'kiricias-ni': 8
+    'ure-da': 8
+    'wamipa-ka': 6
+    'komoho-ni': 6
+    'kibakibi-da': 6
+    'ure-ni': 5
+    'kiricias-ka': 5
+    'despopo-ka': 5
+    'raporon-ka': 4
+    'gika-ni': 4
+    'dichiba-da': 4
+    'kapo-ni': 4
+    'karama-ni': 4
+    'lawari-ni': 4
+    'orumo-ni': 3
+    'baharuko-ni': 3
+    'despopo-da': 3
+    'lawari-ka': 3
+    'ure-ka': 3
+    'raporon-ni': 2
+    'baperon-ni': 2
+    'barbache-ka': 2
+    'gika-da': 2
+    'hueke-ka': 2
+    'kiricias-da': 2
+    'kiwawa-ka': 2
+    'lawari-da': 2
+    'surupa-ni': 2
+    'wamipa-da': 2
+    'warakaro-ni': 2
+    'karama-ka': 1
+    'kapu-ni': 1
+    'kapo-da': 1
+    'kana-ka': 1
+    'raporon-da': 1
+    'hueke-da': 1
+    'aka-ni': 1
+    'surupa-ka': 1
+    'baharuko-ka': 1
+    'tuba-da': 1
+    'gika-ka': 1
+    'chuchube-ni': 1
+    'ubeda-ka': 1
+    'ubeda-ni': 1
+    'uray-ni': 1
+    'chuchube-ka': 1
+    'chuchube-da': 1
+    'barbache-da': 1
+    'warakaro-ka': 1
+    'baperon-ka': 1
+    'komoho-da': 1
+    'kiwawa-da': 1
+    'orumo-da': 1
+  via_ka_formas: 4
+  via_ka_usos: 6
+  via_ka_detalle:
+    'ka-juri': 3
+    'ka-dichiba': 1
+    'ka-kana': 1
+    'ka-popoi': 1
+  via_ma_formas: 12
+  via_ma_usos: 57
+  via_ma_detalle:
+    'ma-kana': 17
+    'ma-dichiba': 14
+    'ma-popoi': 10
+    'ma-kibakibi': 4
+    'ma-kiricias': 3
+    'ma-juri': 3
+    'ma-wamipa': 1
+    'ma-hueke': 1
+    'ma-kapo': 1
+    'ma-kiwawa': 1
+    'ma-tuba': 1
+    'ma-baharuko': 1
+  familia_entera_formas: 280
+  familia_entera_usos: 1118
+  _sql_en_lista: ''
+
