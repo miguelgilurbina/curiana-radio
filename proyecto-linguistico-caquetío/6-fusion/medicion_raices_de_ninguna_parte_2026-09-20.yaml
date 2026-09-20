@@ -1,0 +1,2398 @@
+# GENERADO por 6-fusion/scripts/medir_raices_de_ninguna_parte.py
+# No se edita a mano. Ninguna cifra de aquí se escribe dos veces.
+medicion: raices-de-ninguna-parte
+fecha: 2026-09-20
+ref_de_antes: b8c85ca
+regla: "núcleo = el token sin los afijos que TODAS_LAS_REGLAS declara caquetíos, quitados por los bordes; raíz de ninguna parte = ningún segmento del núcleo es voz de VOCABULARIO_BASE, FUERA_DEL_HABLA ni _RAICES_VERB"
+lexicon:
+  vocabulario_base: 5507
+  fuera_del_habla: 13
+  raices_conocidas: 5534
+lexicones_historicos:
+  pedidos: 38
+  reconstruidos: 38
+  tamanos:
+    19b0e16dba574cb359c324327ee9bdde11efdde7: 5519
+    1be0d52fc76478e12e082eb63e761a503bd967ad: 5520
+    340f4fde301a9631cafe2ce6225eb231c3e3c62b: 5520
+    35d51199d9266b650403b0606378130a3aa7bf45: 5520
+    42f67eddd8f5158bfb51311db73552107fe0096b: 5520
+    5177c7dd5c5b3c7b829db1dddc3a28b47d42e82b: 5520
+    55c029969c274514a1a25d2f7705dacbc806bc0f: 5520
+    5770de66be091756cc4873d423828c6c4cc1886c: 5520
+    7ab8c2b2aea4f07a7a857906f59721658a06eb94: 5520
+    9d652d4e095c6dc8007368dd8131417f6acef504: 5520
+    c69e042ebac3c496a223b17bb18708ce96e935e7: 5520
+    cacafc4b0b9ac9544b0ed74b3a26b3b87aac67d5: 5519
+    cb3899918a9471508275a262ca2ded2418451415: 5520
+    db7d053a06191bbab3f7929fe5be0ad70ce604d6: 5519
+    e16009d3179d77348d375a68a718e527369dda32: 5520
+    "fecha:2026-06-21T04:44:53": 1703
+    "fecha:2026-06-21T05:54:51": 1703
+    "fecha:2026-06-21T06:49:18": 1703
+    "fecha:2026-06-21T07:00:31": 1703
+    "fecha:2026-06-21T07:05:50": 1703
+    "fecha:2026-06-21T20:54:25": 1703
+    "fecha:2026-06-21T20:59:54": 1703
+    "fecha:2026-06-21T21:01:58": 1703
+    "fecha:2026-06-21T21:04:54": 1703
+    "fecha:2026-06-21T22:20:04": 1703
+    "fecha:2026-06-22T05:43:21": 1703
+    "fecha:2026-06-22T06:08:56": 1703
+    "fecha:2026-06-29T16:20:59": 1262
+    "fecha:2026-06-29T16:26:39": 1262
+    "fecha:2026-06-29T17:36:07": 1262
+    "fecha:2026-06-29T17:40:20": 1262
+    "fecha:2026-06-29T21:34:18": 1262
+    "fecha:2026-06-29T21:44:30": 1262
+    "fecha:2026-07-04T22:28:02": 1262
+    "fecha:2026-07-04T22:31:22": 1262
+    "fecha:2026-07-06T14:38:03": 1262
+    "fecha:2026-07-06T14:46:00": 1262
+    "fecha:2026-07-06T20:18:10": 1262
+  sin_reconstruir: []
+censo:
+  formas_marcadas_caquetio: 11390
+  usos_marcados_caquetio: 93657
+  por_clase_formas:
+    raiz_conocida: 10118
+    compuesto_no_partido: 563
+    canon_retirado: 553
+    acunada: 112
+    ninguna_parte: 44
+  por_clase_usos:
+    raiz_conocida: 84837
+    compuesto_no_partido: 4700
+    canon_retirado: 3210
+    acunada: 800
+    ninguna_parte: 110
+  por_era_y_serie:
+    era1/-:
+      formas: 5266
+      usos: 61757
+      ninguna_formas: 40
+      ninguna_usos: 105
+      acunada_formas: 44
+      acunada_usos: 625
+      retirado_formas: 553
+      retirado_usos: 3210
+    era2/-:
+      formas: 1324
+      usos: 7591
+      ninguna_formas: 1
+      ninguna_usos: 2
+      acunada_formas: 4
+      acunada_usos: 26
+      retirado_formas: 0
+      retirado_usos: 0
+    era2/era2-b:
+      formas: 643
+      usos: 3283
+      ninguna_formas: 0
+      ninguna_usos: 0
+      acunada_formas: 5
+      acunada_usos: 8
+      retirado_formas: 0
+      retirado_usos: 0
+    era2/era2-c:
+      formas: 4157
+      usos: 21026
+      ninguna_formas: 3
+      ninguna_usos: 3
+      acunada_formas: 59
+      acunada_usos: 141
+      retirado_formas: 0
+      retirado_usos: 0
+raices_de_ninguna_parte:
+  distintas: 87
+  usos: 910
+  por_parecido:
+    sin-identificar: 79
+    castellano: 4
+    nombre-del-elenco: 2
+    castellano-por-fonotáctica: 2
+  detalle:
+    -
+      raiz: karu
+      usos: 71
+      formas:
+        - karu-bana
+        - karu-bana-ni
+        - ta-karu-bana
+        - ta-karu-bana-ni
+        - wa-karu-bana-ni
+      donde:
+        - era1/-
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - karu-bana = karu + -bana → orilla amarga
+        - karu-bana-ni = karu+-bana+-ni → ojo-de-frontera-estoy
+    -
+      raiz: lumina
+      usos: 66
+      formas:
+        - lumina
+        - lumina-bana
+        - lumina-bana-iro
+        - lumina-bana-uco
+        - ma-lumina
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - "lumina = cosa-que-brilla (del español, pero transformada en caquetío) + bana: del lugar alto + uco: lo que fluye/viaja → *la cosa que brilla del cerro y fluye por la noche*"
+        - "lumina-bana = lumina+bana → cosa que brilla, cosa-del-brillo"
+    -
+      raiz: kalu
+      usos: 61
+      formas:
+        - ka-kalu-bana
+        - kalu-bana
+        - kalu-da
+        - ta-kalu-bana
+        - ta-kalu-da
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - kalu-bana = kalu+-bana → orilla donde la mirada cae
+        - kalu-da = kalu + -da → mirada-que-busca
+    -
+      raiz: puri
+      usos: 61
+      formas:
+        - ma-puri-ka
+        - puri-bana
+        - puri-ka
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - puri-bana = puri+-bana → orilla-del-permiso
+        - "puri-ka = puri+-ka → despierta, completo"
+    -
+      raiz: karu-puri
+      usos: 46
+      formas:
+        - karu-puri-ni
+        - ta-karu-puri-ni
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - karu-puri-ni = karu + puri-ni → ojo-que-despierta
+    -
+      raiz: kuro-mana
+      usos: 40
+      formas:
+        - ka-kuro-mana
+        - kuro-mana
+        - ta-kuro-mana
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - kuro-mana = kuro-mana → lengua-sin = sin entendimiento
+    -
+      raiz: kabakani
+      usos: 40
+      formas:
+        - kabakani-ni
+        - ma-kabakani-ni
+        - ta-kabakani-ni
+        - wa-kabakani-ni
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - "kabakani-ni = kabakani+-ni → se sostiene, permanece"
+    -
+      raiz: duma
+      usos: 39
+      formas:
+        - duma
+        - duma-bana
+      donde:
+        - era1/-
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - duma = duma → tierra-seca
+        - duma-bana = duma + -bana → corriente del sueño
+    -
+      raiz: jakuri
+      usos: 35
+      formas:
+        - jakuri-ni
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - jakuri-ni = jacura+-ni → vigilando
+    -
+      raiz: suave
+      usos: 31
+      formas:
+        - suave-bana
+        - suave-bana-ni
+      donde:
+        - era1/-
+      parece: castellano
+      glosa_del_agente:
+        - suave-bana = suave+-bana → viento-orilla
+        - "suave-bana-ni = suave + bana + ni → en la orilla del viento suave, estamos"
+    -
+      raiz: tensión
+      usos: 29
+      formas:
+        - ma-tensión-bana
+        - tensión-bana
+      donde:
+        - era1/-
+      parece: castellano
+      glosa_del_agente:
+        - tensión-bana = tensión-bana → donde tiembla la calma
+    -
+      raiz: tansura
+      usos: 29
+      formas:
+        - tansura-bana
+        - tansura-bana-ni
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - tansura-bana = tan+sura+-bana → lista para ir
+        - tansura-bana-ni = tansura+bana+ni → listos-orilla-estamos
+    -
+      raiz: pacha
+      usos: 28
+      formas:
+        - pacha-bana
+        - ta-pacha-bana
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - pacha-bana = pacha+-bana → orilla del espíritu
+    -
+      raiz: duma-puri
+      usos: 27
+      formas:
+        - duma-puri
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - "duma-puri = duma+-puri → vasija del sueño, batea donde reposa la sal nocturna"
+    -
+      raiz: tension
+      usos: 23
+      formas:
+        - ma-tension-bana
+        - tension-bana
+      donde:
+        - era1/-
+      parece: castellano
+      glosa_del_agente:
+        - tension-bana = tension + bana → donde tiembla la calma
+    -
+      raiz: duka
+      usos: 22
+      formas:
+        - duka-ni
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - duka-ni = duka+-ni → están asistiendo
+    -
+      raiz: kona
+      usos: 20
+      formas:
+        - kona-bana
+        - wa-kona-bana
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - kona-bana = kona + bana → orilla de lo conocido
+    -
+      raiz: uyama
+      usos: 20
+      formas:
+        - ma-uyama-ni
+        - uyama-ni
+      donde:
+        - era2/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - uyama-ni = uyama + -ni → miedo-estar
+    -
+      raiz: suri
+      usos: 17
+      formas:
+        - suri-bana
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - suri-bana = suri+bana → arena-orilla
+    -
+      raiz: kale
+      usos: 14
+      formas:
+        - kale-bana
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - kale-bana = kale+bana → lugar-de-llegada
+    -
+      raiz: gota-gota
+      usos: 12
+      formas:
+        - gota-gota
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - "gota-gota = gota+gota → caída lenta, cae-cae"
+    -
+      raiz: mana-koto
+      usos: 12
+      formas:
+        - mana-koto
+        - mana-koto-bana
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - "mana-koto = mana (fuego) + koto (voz profunda, gruñido) → voz-que-quema-desde-adentro"
+        - mana-koto-bana = mana (voz/fuego) + koto (vibración/gravedad) + -bana (orilla/cualidad resonante) → la voz-que-vibra-grave-desde-adentro; el tambor caribe que resuena hondo
+    -
+      raiz: piri
+      usos: 12
+      formas:
+        - piri-bana
+        - ta-piri-bana
+      donde:
+        - era1/-
+      parece: nombre-del-elenco
+      glosa_del_agente:
+        - piri-bana = piri+-bana → orilla de la verdad
+    -
+      raiz: cucu
+      usos: 11
+      formas:
+        - cucu-da
+        - ma-cucu-da
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - cucu-da = cucu + -da → miedo-quiero-tener
+    -
+      raiz: warikua
+      usos: 11
+      formas:
+        - warikua-bana
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - warikua-bana = warikua+bana → cerro de lo que viene
+    -
+      raiz: kuri-mani
+      usos: 10
+      formas:
+        - kuri-mani
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - kuri-mani = miedo-ardor → asombro.
+    -
+      raiz: katu-puri
+      usos: 7
+      formas:
+        - katu-puri-bana
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - katu-puri-bana = katu + puri + bana → vigilia de la frontera
+    -
+      raiz: patu
+      usos: 7
+      formas:
+        - patu-bana
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - "patu-bana = patu + bana → orilla de lo oscuro, sitio de lo oculto"
+    -
+      raiz: ilu
+      usos: 6
+      formas:
+        - ilu-kana
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - "ilu-kana = ilu+-kana → estrellas, luces colectivas del cielo"
+    -
+      raiz: tapa
+      usos: 6
+      formas:
+        - ka-tapa-uco
+        - tapa-uco
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - tapa-uco = tapa + uco → lo que cubre y pasa
+    -
+      raiz: kuno
+      usos: 6
+      formas:
+        - kuno-bana
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - kuno-bana = kuno + -bana → donde viven los dedos.
+    -
+      raiz: nabarakabia
+      usos: 6
+      formas:
+        - nabarakabia-bana
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - nabarakabia-bana = nabaraka+-bana → orilla de la llegada
+    -
+      raiz: tension-batsura
+      usos: 6
+      formas:
+        - tension-batsura
+      donde:
+        - era1/-
+      parece: castellano
+      glosa_del_agente:
+        - tension-batsura = tension+-batsura → calma-pequeña
+    -
+      raiz: tamecani-dusha
+      usos: 5
+      formas:
+        - tamecani-dusha
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - "tamecani-dusha = tamecani+-dusha → ardor-lejos, fiebre-alto"
+    -
+      raiz: duma-karu
+      usos: 4
+      formas:
+        - duma-karu-bana
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - duma-karu-bana = duma + karu + bana → la orilla donde la sal respira amargo
+    -
+      raiz: karo-biji
+      usos: 4
+      formas:
+        - karo-biji
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - karo-biji = karo+-biji → lo rallado que brilla
+    -
+      raiz: mira
+      usos: 4
+      formas:
+        - mira-ni
+      donde:
+        - era2/era2-b
+      parece: sin-identificar
+      glosa_del_agente:
+        - mira-ni = mira + -ni → estoy mirando
+    -
+      raiz: pesa
+      usos: 4
+      formas:
+        - pesa-bana
+      donde:
+        - era2/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - pesa-bana = pesa+-bana → que carga el espíritu
+    -
+      raiz: kuri
+      usos: 3
+      formas:
+        - kuri-bana
+      donde:
+        - era2/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - "kuri-bana = kuri + bana → cosa redonda del cerro, bolita de piedra"
+    -
+      raiz: pütshi
+      usos: 3
+      formas:
+        - pütshi-bana
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - pütshi-bana = pütshi + -bana → alegría del pecho
+    -
+      raiz: ani-taro
+      usos: 2
+      formas:
+        - ani-taro
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - ani-taro = ani+-taro → advertencia que quema/toca
+    -
+      raiz: brilu
+      usos: 2
+      formas:
+        - brilu-uco
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - brilu-uco = brilu + uco → que-brilla-como-agua
+    -
+      raiz: koru
+      usos: 2
+      formas:
+        - koru
+        - koru-ima
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - "koru = koru+-ana → el hueco donde va el fuego para quemar, la forma"
+        - koru-ima = koru+ima → nudo-quebrada
+    -
+      raiz: pütara
+      usos: 2
+      formas:
+        - pütara-bana
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - pütara-bana = pütara + -bana → el cerro que corre
+    -
+      raiz: sabu
+      usos: 2
+      formas:
+        - sabu-aima
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - sabu-aima = sabuenen + -aima → abundancia de tres
+    -
+      raiz: "**lumina"
+      usos: 1
+      formas:
+        - "**lumina-bana-iro"
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - "**lumina-bana-iro = lumina (brillo, claridad) + -bana (cosa alta, cosa que destaca) + -iro (pequeño) → la cosa pequeña que brilla, que resplandece**"
+    -
+      raiz: "**tapa-uco**"
+      usos: 1
+      formas:
+        - "**tapa-uco**"
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - "**tapa-uco** = tapa (lo que cubre) + uco (lo que fluye/pasa) → la cosa que tapa el sol y se va"
+    -
+      raiz: "*ya vi"
+      usos: 1
+      formas:
+        - "*ya vi"
+      donde:
+        - era2/era2-c
+      parece: castellano-por-fonotáctica
+      glosa_del_agente:
+        - "*ya vi = lumina-bana-uco. / [lumina: lo que brilla + bana: del lugar alto + uco: lo que fluye → la cosa brillante del cerro que fluye/viaja por la noche"
+    -
+      raiz: bira-susü
+      usos: 1
+      formas:
+        - bira-susü-ana
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - bira-susü-ana = bira + susü + ana → lugar donde viene lo que brilla de lejos
+    -
+      raiz: biri
+      usos: 1
+      formas:
+        - biri-uco
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - biri-uco = biri + -uco → veta de sal
+    -
+      raiz: buro
+      usos: 1
+      formas:
+        - buro-uco
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - buro-uco = buro+-uco → cauce del mal
+    -
+      raiz: chikichi
+      usos: 1
+      formas:
+        - chikichi
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - chikichi = chiki + -chi → hace poco
+    -
+      raiz: chiri-nico
+      usos: 1
+      formas:
+        - chiri-nico
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - chiri-nico = chiri + -nico → casi-nada
+    -
+      raiz: daka
+      usos: 1
+      formas:
+        - daka-aima
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - daka-aima = lugar donde abunda el dakawa → ese árbol de corteza gris
+    -
+      raiz: dibana
+      usos: 1
+      formas:
+        - dibana-ka
+      donde:
+        - era2/era2-b
+      parece: sin-identificar
+      glosa_del_agente:
+        - "dibana-ka = dijibana+-ka → cerrado, quieto"
+    -
+      raiz: dombana
+      usos: 1
+      formas:
+        - dombana-kana
+      donde:
+        - era2/era2-b
+      parece: sin-identificar
+      glosa_del_agente:
+        - dombana-kana = domban + -ana → lenguas rotas
+    -
+      raiz: hamaki
+      usos: 1
+      formas:
+        - hamaki-iro
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - hamaki-iro = hamaki+-iro → hamaquilla
+    -
+      raiz: hambre
+      usos: 1
+      formas:
+        - hambre-ima
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - hambre-ima = hambre+-ima → vacío en la barriga
+    -
+      raiz: kara
+      usos: 1
+      formas:
+        - kara-bana
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - kara-bana = kara + -bana → sin la forma antigua
+    -
+      raiz: kashita-naki
+      usos: 1
+      formas:
+        - kashita-naki
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - kashita-naki = kashi+ta+naki → ahora+mi+pensar
+    -
+      raiz: koname
+      usos: 1
+      formas:
+        - koname-bana
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - koname-bana = koname+-bana → lugar donde dudan los sueños
+    -
+      raiz: kubi
+      usos: 1
+      formas:
+        - kubi
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - "kubi = puro; kabi: muchedumbre → muchos juntos en el agua"
+    -
+      raiz: kubi-raskua
+      usos: 1
+      formas:
+        - kubi-raskua-da
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - kubi-raskua-da = kubi (tomar) + raskua (raspar) → quieren raspar
+    -
+      raiz: kudu
+      usos: 1
+      formas:
+        - kudu-ni
+      donde:
+        - era2/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - "kudu-ni = kudu+-ni → estoy curando, remojando"
+    -
+      raiz: kuri-jau
+      usos: 1
+      formas:
+        - kuri-jau-bana
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - "kuri-jau-bana = kuri + -jau + -bana → estrella que corre, que tiene cola, que vuela alto sobre el cerro"
+    -
+      raiz: kutara
+      usos: 1
+      formas:
+        - kutara-bana
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - kutara-bana = kutara+-bana → lugar donde se tuerce
+    -
+      raiz: kuti-sinwango
+      usos: 1
+      formas:
+        - kuti-sinwango-uco
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - kuti-sinwango-uco = kuti + sinwango + uco → el flujo del hambre que pasa y vuelve
+    -
+      raiz: kutu
+      usos: 1
+      formas:
+        - kutu-ima
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - kutu-ima = kutu + -ima → miedo-humedad
+    -
+      raiz: mana-biji
+      usos: 1
+      formas:
+        - mana-biji
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - "mana-biji = mana+biji → fuego-dentro, lo que quema desde adentro"
+    -
+      raiz: morokota
+      usos: 1
+      formas:
+        - morokota-da
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - morokota-da = moro+ko+ta+da → hombre+verdadero+yo+quiero
+    -
+      raiz: noticia
+      usos: 1
+      formas:
+        - noticia-ana
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - noticia-ana = noticia+ana → mensaje del otro lado del cerro
+    -
+      raiz: pabara
+      usos: 1
+      formas:
+        - pabara-da
+      donde:
+        - era2/era2-b
+      parece: sin-identificar
+      glosa_del_agente:
+        - pabara-da = pabara+da → hambre-querrá
+    -
+      raiz: pacha-bawani
+      usos: 1
+      formas:
+        - pacha-bawani
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - pacha-bawani = pacha+bawani → espíritu-ligero
+    -
+      raiz: pala
+      usos: 1
+      formas:
+        - pala-iro
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - pala-iro = pala + -iro → palita de hueso
+    -
+      raiz: pare
+      usos: 1
+      formas:
+        - pare-ubana
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - "pare-ubana = pare+-ubana → agua-fuerte, aguas bravas del mediodía"
+    -
+      raiz: peti
+      usos: 1
+      formas:
+        - peti-iro-kana
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - peti-iro-kana = peti+iro+kana → peces pequeños
+    -
+      raiz: piki-ishasü
+      usos: 1
+      formas:
+        - piki-ishasü
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - piki-ishasü = piki + ishasü → pequeño-rojo-duro
+    -
+      raiz: rai
+      usos: 1
+      formas:
+        - rai-bana
+      donde:
+        - era2/era2-c
+      parece: sin-identificar
+      glosa_del_agente:
+        - rai-bana = rai+bana → loma de rai
+    -
+      raiz: respuesta
+      usos: 1
+      formas:
+        - respuesta
+      donde:
+        - era1/-
+      parece: sin-identificar
+      glosa_del_agente:
+        - "respuesta = kali-pütchi-rua: kali (sol) + pütchi (voz, mensaje, signo) + rua (cargar, arrastrarse) → el-sol-que-habla-y-se-arrastra; el mensajero con cola que lleva palabra del cielo."
+    -
+      raiz: sakisi
+      usos: 1
+      formas:
+        - sakisi-bana
+      donde:
+        - era2/era2-b
+      parece: sin-identificar
+      glosa_del_agente:
+        - sakisi-bana = sakisi + bana → cosa del cerro
+hasta_donde_llegaron:
+  adoptadas:
+    - "**tapa-uco**"
+    - ani-taro
+    - brilu-uco
+    - duka-ni
+    - duma-bana
+    - duma-karu-bana
+    - duma-puri
+    - gota-gota
+    - ilu-kana
+    - jakuri-ni
+    - kabakani-ni
+    - kale-bana
+    - kalu-bana
+    - kalu-da
+    - karo-biji
+    - karu-bana
+    - karu-bana-ni
+    - karu-puri-ni
+    - katu-puri-bana
+    - kona-bana
+    - kuno-bana
+    - kuri-bana
+    - kuri-mani
+    - kuro-mana
+    - kutara-bana
+    - lumina
+    - lumina-bana-iro
+    - lumina-bana-uco
+    - mana-biji
+    - mana-koto
+    - mana-koto-bana
+    - mira-ni
+    - nabarakabia-bana
+    - pacha-bana
+    - pacha-bawani
+    - patu-bana
+    - pesa-bana
+    - piri-bana
+    - puri-bana
+    - puri-ka
+    - pütara-bana
+    - respuesta
+    - suave-bana-ni
+    - supa-bani
+    - suri-bana
+    - tamecani-dusha
+    - tansura-bana-ni
+    - tapa-uco
+    - warikua-bana
+  fijaron_koine:
+    -
+      run: 20091e1f
+      concepto: tambor_caribe
+      forma: mana-koto
+      dia: 17
+      soporte: 7.4
+      n_variantes: 2
+    -
+      run: 45618069
+      concepto: cometa
+      forma: lumina-bana-uco
+      dia: 2
+      soporte: 28.75
+      n_variantes: 4
+  koine_lexicon_total: 29
+coste_de_la_puerta:
+  con_escena:
+    acunaciones_distintas: 53
+    de_ninguna_parte: 9
+    de_ellas_adoptadas: 1
+    lista:
+      - buro-uco
+      - duma
+      - hambre-ima
+      - kubi-raskua-da
+      - kuri-jau-bana
+      - pala-iro
+      - rai-bana
+      - sabu-aima
+      - warikua-bana
+  control:
+    acunaciones_distintas: 32
+    de_ninguna_parte: 11
+    de_ellas_adoptadas: 5
+    lista:
+      - "**lumina-bana-iro"
+      - "**tapa-uco**"
+      - "*ya vi"
+      - biri-uco
+      - koname-bana
+      - kuti-sinwango-uco
+      - lumina
+      - lumina-bana
+      - lumina-bana-iro
+      - lumina-bana-uco
+      - tapa-uco
+  serie_c_limpia:
+    acunaciones_distintas: 52
+    de_ninguna_parte: 6
+    de_ellas_adoptadas: 1
+    lista:
+      - cucu-da
+      - ilu-kana
+      - koru
+      - pütshi-bana
+      - sha-bani
+      - ucibo + kushi
+  toda_la_base:
+    acunaciones_distintas: 644
+    de_ninguna_parte: 131
+serie_c:
+  con_escena:
+    n: 216
+    control_desvios: 0
+    cambian: 8
+    delta_max_abs: 0.3
+    delta_medio_de_las_que_cambian: -0.2125
+    score_medio_antes: 7.744
+    score_medio_hoy: 7.7361
+    caquetias_cambian: 10
+    neos_cambian: 0
+    por_run:
+      f2741e89:
+        antes: 7.8514
+        hoy: 7.8444
+      fcdfa07a:
+        antes: 7.6153
+        hoy: 7.6083
+      0313d830:
+        antes: 7.7653
+        hoy: 7.7556
+    detalle:
+      -
+        run: f2741e89
+        dia: 1
+        turno: 3
+        agente: Waranaro
+        antes: 8.5
+        hoy: 8.2
+        delta: -0.3
+        formas_que_dejan_de_contar:
+          - warikua-bana
+      -
+        run: f2741e89
+        dia: 1
+        turno: 3
+        agente: Ruata
+        antes: 6.8
+        hoy: 6.6
+        delta: -0.2
+        formas_que_dejan_de_contar:
+          - warikua-bana
+      -
+        run: fcdfa07a
+        dia: 2
+        turno: 2
+        agente: Wache
+        antes: 8.2
+        hoy: 8.0
+        delta: -0.2
+        formas_que_dejan_de_contar:
+          - warikua-bana
+      -
+        run: fcdfa07a
+        dia: 2
+        turno: 2
+        agente: Katiata
+        antes: 7.0
+        hoy: 6.7
+        delta: -0.3
+        formas_que_dejan_de_contar:
+          - warikua-bana
+      -
+        run: 0313d830
+        dia: 3
+        turno: 2
+        agente: Humohumo
+        antes: 5.9
+        hoy: 5.8
+        delta: -0.1
+        formas_que_dejan_de_contar:
+          - warikua-bana
+      -
+        run: 0313d830
+        dia: 3
+        turno: 2
+        agente: Harifuche
+        antes: 6.5
+        hoy: 6.4
+        delta: -0.1
+        formas_que_dejan_de_contar:
+          - warikua-bana
+      -
+        run: 0313d830
+        dia: 3
+        turno: 2
+        agente: Kumarawa
+        antes: 7.3
+        hoy: 7.1
+        delta: -0.2
+        formas_que_dejan_de_contar:
+          - warikua-bana
+      -
+        run: 0313d830
+        dia: 3
+        turno: 4
+        agente: Siwa
+        antes: 8.6
+        hoy: 8.3
+        delta: -0.3
+        formas_que_dejan_de_contar:
+          - warikua-bana
+    sondas_antes:
+      lumina-bana-iro: caquetío
+      lumina-bana-uco: caquetío
+      lumina: caquetío
+      kasi-nii-bana: caquetío
+      biro-ana: caquetío
+      kasuta-ico-kana: caquetío
+      juri-ima: caquetío
+      ka-to: lokono
+      ta-bohío: taíno
+      kali: caquetío
+      kali-mara-bana: caquetío
+      piache: caquetío
+      chacamba: caquetío
+    sondas_hoy:
+      lumina-bana-iro: desconocida
+      lumina-bana-uco: desconocida
+      lumina: desconocida
+      kasi-nii-bana: caquetío
+      biro-ana: caquetío
+      kasuta-ico-kana: caquetío
+      juri-ima: caquetío
+      ka-to: lokono
+      ta-bohío: taíno
+      kali: caquetío
+      kali-mara-bana: caquetío
+      piache: caquetío
+      chacamba: desconocida
+    ninguna_parte_hoy:
+      lumina-bana-iro: true
+      lumina-bana-uco: true
+      lumina: true
+      kasi-nii-bana: false
+      biro-ana: false
+      kasuta-ico-kana: false
+      juri-ima: false
+      ka-to: false
+      ta-bohío: false
+      kali: false
+      kali-mara-bana: false
+      piache: false
+      chacamba: true
+    fijadas_antes:
+      -
+        run: 0313d830
+        concepto: eclipse
+        forma: kasi-nii-bana
+    fijadas_hoy:
+      -
+        run: 0313d830
+        concepto: eclipse
+        forma: kasi-nii-bana
+    competencias_antes:
+      cuentas_vidrio:
+        -
+          - kasuta-ico-kana
+          - 18.45
+        -
+          - wara-biro-nomi
+          - 9.95
+        -
+          - kiba-kasi
+          - 2.0
+        -
+          - kati-iro-bana
+          - 1.7
+        -
+          - kasuta-tiru-kana
+          - 1.45
+        -
+          - kati-iro
+          - 1.35
+        -
+          - kati-iro-bacoa
+          - 1.35
+        -
+          - kati-iro-ubana
+          - 1.35
+      cometa:
+        -
+          - kasi-pütchi-bana
+          - 16.6
+        -
+          - kati-wara-ubana
+          - 5.2
+        -
+          - isiro-bana-uco
+          - 2.9
+        -
+          - kasi-dipara
+          - 1.75
+        -
+          - kati-sudaka
+          - 1.7
+        -
+          - kati-arua
+          - 1.7
+        -
+          - maboya-ubana
+          - 1.4
+        -
+          - kati-sudaka-ubana
+          - 1.2
+      eclipse:
+        -
+          - kasi-nii-bana
+          - 20.1
+        -
+          - etamo-pütchi
+          - 4.7
+        -
+          - kana-ubana
+          - 4.7
+        -
+          - kasi-nii-ubana
+          - 3.6
+    competencias_hoy:
+      cuentas_vidrio:
+        -
+          - kasuta-ico-kana
+          - 18.45
+        -
+          - wara-biro-nomi
+          - 9.95
+        -
+          - kiba-kasi
+          - 2.0
+        -
+          - kati-iro-bana
+          - 1.7
+        -
+          - kasuta-tiru-kana
+          - 1.45
+        -
+          - kati-iro
+          - 1.35
+        -
+          - kati-iro-bacoa
+          - 1.35
+        -
+          - kati-iro-ubana
+          - 1.35
+      cometa:
+        -
+          - kasi-pütchi-bana
+          - 16.6
+        -
+          - kati-wara-ubana
+          - 5.2
+        -
+          - isiro-bana-uco
+          - 2.9
+        -
+          - kasi-dipara
+          - 1.75
+        -
+          - kati-sudaka
+          - 1.7
+        -
+          - kati-arua
+          - 1.7
+        -
+          - maboya-ubana
+          - 1.4
+        -
+          - kati-sudaka-ubana
+          - 1.2
+      eclipse:
+        -
+          - kasi-nii-bana
+          - 20.1
+        -
+          - etamo-pütchi
+          - 4.7
+        -
+          - kana-ubana
+          - 4.7
+        -
+          - kasi-nii-ubana
+          - 3.6
+    rechazos_de_raiz:
+      -
+        - duma
+        - Jachos
+        - 1
+        - 1
+      -
+        - warikua-bana
+        - Katiata
+        - 1
+        - 3
+      -
+        - rai-bana
+        - Dipopo
+        - 2
+        - 3
+      -
+        - buro-uco
+        - Ebokoa
+        - 2
+        - 4
+      -
+        - hambre-ima
+        - Dato
+        - 2
+        - 5
+      -
+        - kuri-jau-bana
+        - Siwa
+        - 2
+        - 5
+      -
+        - sabu-aima
+        - Kiwakoa
+        - 2
+        - 6
+      -
+        - sabu-aima
+        - Turicha
+        - 3
+        - 3
+      -
+        - pala-iro
+        - Cege
+        - 3
+        - 4
+      -
+        - kubi-raskua-da
+        - Naure
+        - 3
+        - 6
+    adoptadas_antes:
+      - biro-aima
+      - isiro-bana-uco
+      - kasi-nii-bana
+      - kasi-nii-ubana
+      - kasi-pütchi-bana
+      - kasuta-ico-kana
+      - kati-wara-ubana
+      - maboya-ubana
+      - pana-bana
+      - sima-gua
+      - siwato-iro
+      - tuba-bana
+      - wara-biro-nomi
+      - warikua-bana
+    adoptadas_hoy:
+      - biro-aima
+      - isiro-bana-uco
+      - kasi-nii-bana
+      - kasi-nii-ubana
+      - kasi-pütchi-bana
+      - kasuta-ico-kana
+      - kati-wara-ubana
+      - maboya-ubana
+      - pana-bana
+      - sima-gua
+      - siwato-iro
+      - tuba-bana
+      - wara-biro-nomi
+    emergente_de_la_base:
+      -
+        - 1
+        - 0.948
+      -
+        - 2
+        - 0.9212
+      -
+        - 3
+        - 0.8742
+    emergente_antes:
+      -
+        - 1
+        - 0.948
+      -
+        - 2
+        - 0.9212
+      -
+        - 3
+        - 0.8742
+    emergente_hoy:
+      -
+        - 1
+        - 0.9481
+      -
+        - 2
+        - 0.9206
+      -
+        - 3
+        - 0.8736
+    control_emergente: true
+    veredicto_antes:
+      - converge
+      - CONVERGE ✓ (koineización sostenida)
+    veredicto_hoy:
+      - converge
+      - CONVERGE ✓ (koineización sostenida)
+    veredicto_se_sostiene: true
+    caida_pct_antes: -7.78
+    caida_pct_hoy: -7.86
+  control:
+    n: 216
+    control_desvios: 0
+    cambian: 43
+    delta_max_abs: 0.7
+    delta_medio_de_las_que_cambian: -0.2512
+    score_medio_antes: 7.6477
+    score_medio_hoy: 7.5977
+    caquetias_cambian: 58
+    neos_cambian: 0
+    por_run:
+      0345840d:
+        antes: 7.7153
+        hoy: 7.6792
+      45618069:
+        antes: 7.7139
+        hoy: 7.6569
+      e98227eb:
+        antes: 7.5139
+        hoy: 7.4569
+    detalle:
+      -
+        run: 0345840d
+        dia: 1
+        turno: 5
+        agente: Chakamba
+        antes: 6.1
+        hoy: 5.9
+        delta: -0.2
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: 0345840d
+        dia: 1
+        turno: 5
+        agente: Jaiata
+        antes: 6.5
+        hoy: 6.0
+        delta: -0.5
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: 0345840d
+        dia: 1
+        turno: 5
+        agente: Dato
+        antes: 5.7
+        hoy: 5.5
+        delta: -0.2
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: 0345840d
+        dia: 1
+        turno: 6
+        agente: Isiro
+        antes: 7.6
+        hoy: 7.5
+        delta: -0.1
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: 0345840d
+        dia: 1
+        turno: 6
+        agente: Waru
+        antes: 7.6
+        hoy: 7.2
+        delta: -0.4
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: 0345840d
+        dia: 1
+        turno: 6
+        agente: Tigi
+        antes: 6.6
+        hoy: 6.4
+        delta: -0.2
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: 0345840d
+        dia: 1
+        turno: 6
+        agente: Manaure
+        antes: 6.0
+        hoy: 5.8
+        delta: -0.2
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: 0345840d
+        dia: 1
+        turno: 6
+        agente: Birokoa
+        antes: 5.9
+        hoy: 5.6
+        delta: -0.3
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: 0345840d
+        dia: 1
+        turno: 6
+        agente: Patapati
+        antes: 7.6
+        hoy: 7.3
+        delta: -0.3
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: 0345840d
+        dia: 1
+        turno: 6
+        agente: Karebe
+        antes: 6.9
+        hoy: 6.8
+        delta: -0.1
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: 0345840d
+        dia: 1
+        turno: 6
+        agente: Simaure
+        antes: 5.9
+        hoy: 5.8
+        delta: -0.1
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: 45618069
+        dia: 2
+        turno: 1
+        agente: Tebekoa
+        antes: 5.9
+        hoy: 5.8
+        delta: -0.1
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: 45618069
+        dia: 2
+        turno: 1
+        agente: Saruro
+        antes: 7.4
+        hoy: 7.3
+        delta: -0.1
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: 45618069
+        dia: 2
+        turno: 3
+        agente: Humohumo
+        antes: 7.7
+        hoy: 7.5
+        delta: -0.2
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: 45618069
+        dia: 2
+        turno: 3
+        agente: Kumarawa
+        antes: 6.9
+        hoy: 6.8
+        delta: -0.1
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: 45618069
+        dia: 2
+        turno: 3
+        agente: Buriche
+        antes: 8.3
+        hoy: 8.1
+        delta: -0.2
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: 45618069
+        dia: 2
+        turno: 3
+        agente: Waitiao
+        antes: 5.5
+        hoy: 5.4
+        delta: -0.1
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: 45618069
+        dia: 2
+        turno: 5
+        agente: Waru
+        antes: 5.9
+        hoy: 5.5
+        delta: -0.4
+        formas_que_dejan_de_contar:
+          - lumina-bana-uco
+      -
+        run: 45618069
+        dia: 2
+        turno: 5
+        agente: Manaure
+        antes: 5.6
+        hoy: 5.3
+        delta: -0.3
+        formas_que_dejan_de_contar:
+          - lumina-bana-uco
+      -
+        run: 45618069
+        dia: 2
+        turno: 5
+        agente: Kunaro-bana
+        antes: 6.0
+        hoy: 5.7
+        delta: -0.3
+        formas_que_dejan_de_contar:
+          - lumina-bana-uco
+      -
+        run: 45618069
+        dia: 2
+        turno: 5
+        agente: Patapati
+        antes: 6.0
+        hoy: 5.5
+        delta: -0.5
+        formas_que_dejan_de_contar:
+          - lumina
+          - lumina-bana-uco
+      -
+        run: 45618069
+        dia: 2
+        turno: 5
+        agente: Jachos
+        antes: 6.2
+        hoy: 5.6
+        delta: -0.6
+        formas_que_dejan_de_contar:
+          - lumina
+          - lumina-bana-uco
+      -
+        run: 45618069
+        dia: 2
+        turno: 5
+        agente: Karebe
+        antes: 7.9
+        hoy: 7.2
+        delta: -0.7
+        formas_que_dejan_de_contar:
+          - lumina
+          - lumina-bana-uco
+      -
+        run: 45618069
+        dia: 2
+        turno: 6
+        agente: Sawaka
+        antes: 8.2
+        hoy: 8.1
+        delta: -0.1
+        formas_que_dejan_de_contar:
+          - lumina-bana-uco
+      -
+        run: 45618069
+        dia: 2
+        turno: 6
+        agente: Hayo
+        antes: 7.5
+        hoy: 7.3
+        delta: -0.2
+        formas_que_dejan_de_contar:
+          - lumina-bana-uco
+      -
+        run: 45618069
+        dia: 2
+        turno: 6
+        agente: Kasebo
+        antes: 7.3
+        hoy: 7.2
+        delta: -0.1
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: 45618069
+        dia: 2
+        turno: 6
+        agente: Kiwakoa
+        antes: 7.9
+        hoy: 7.8
+        delta: -0.1
+        formas_que_dejan_de_contar:
+          - lumina-bana-uco
+      -
+        run: e98227eb
+        dia: 3
+        turno: 2
+        agente: Sawaka
+        antes: 7.1
+        hoy: 7.0
+        delta: -0.1
+        formas_que_dejan_de_contar:
+          - lumina-bana-uco
+      -
+        run: e98227eb
+        dia: 3
+        turno: 2
+        agente: Buriche
+        antes: 7.5
+        hoy: 7.3
+        delta: -0.2
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: e98227eb
+        dia: 3
+        turno: 3
+        agente: Manaure
+        antes: 5.0
+        hoy: 4.9
+        delta: -0.1
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: e98227eb
+        dia: 3
+        turno: 4
+        agente: Urari
+        antes: 5.2
+        hoy: 5.1
+        delta: -0.1
+        formas_que_dejan_de_contar:
+          - lumina-bana-uco
+      -
+        run: e98227eb
+        dia: 3
+        turno: 4
+        agente: Ucibo
+        antes: 8.7
+        hoy: 8.0
+        delta: -0.7
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+          - lumina-bana-uco
+      -
+        run: e98227eb
+        dia: 3
+        turno: 4
+        agente: Chuchubi
+        antes: 8.5
+        hoy: 8.2
+        delta: -0.3
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: e98227eb
+        dia: 3
+        turno: 4
+        agente: Cege
+        antes: 5.7
+        hoy: 5.5
+        delta: -0.2
+        formas_que_dejan_de_contar:
+          - lumina-bana-uco
+      -
+        run: e98227eb
+        dia: 3
+        turno: 4
+        agente: Jaiata
+        antes: 8.6
+        hoy: 8.3
+        delta: -0.3
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: e98227eb
+        dia: 3
+        turno: 4
+        agente: Dato
+        antes: 5.7
+        hoy: 5.5
+        delta: -0.2
+        formas_que_dejan_de_contar:
+          - lumina-bana-iro
+      -
+        run: e98227eb
+        dia: 3
+        turno: 4
+        agente: Siwa
+        antes: 8.2
+        hoy: 7.8
+        delta: -0.4
+        formas_que_dejan_de_contar:
+          - lumina-bana-uco
+      -
+        run: e98227eb
+        dia: 3
+        turno: 4
+        agente: Waru
+        antes: 7.4
+        hoy: 7.2
+        delta: -0.2
+        formas_que_dejan_de_contar:
+          - lumina-bana
+      -
+        run: e98227eb
+        dia: 3
+        turno: 5
+        agente: Apoaure
+        antes: 5.9
+        hoy: 5.6
+        delta: -0.3
+        formas_que_dejan_de_contar:
+          - ka-tapa-uco
+          - tapa-uco
+      -
+        run: e98227eb
+        dia: 3
+        turno: 5
+        agente: Sawaka
+        antes: 5.9
+        hoy: 5.7
+        delta: -0.2
+        formas_que_dejan_de_contar:
+          - tapa-uco
+      -
+        run: e98227eb
+        dia: 3
+        turno: 5
+        agente: Hayo
+        antes: 7.7
+        hoy: 7.3
+        delta: -0.4
+        formas_que_dejan_de_contar:
+          - tapa-uco
+      -
+        run: e98227eb
+        dia: 3
+        turno: 5
+        agente: Tebekoa
+        antes: 5.7
+        hoy: 5.4
+        delta: -0.3
+        formas_que_dejan_de_contar:
+          - tapa-uco
+      -
+        run: e98227eb
+        dia: 3
+        turno: 6
+        agente: Naure
+        antes: 6.5
+        hoy: 6.4
+        delta: -0.1
+        formas_que_dejan_de_contar:
+          - lumina-bana-uco
+    sondas_antes:
+      lumina-bana-iro: caquetío
+      lumina-bana-uco: caquetío
+      lumina: caquetío
+      kasi-nii-bana: caquetío
+      biro-ana: caquetío
+      kasuta-ico-kana: caquetío
+      juri-ima: caquetío
+      ka-to: lokono
+      ta-bohío: taíno
+      kali: caquetío
+      kali-mara-bana: caquetío
+      piache: caquetío
+      chacamba: caquetío
+    sondas_hoy:
+      lumina-bana-iro: desconocida
+      lumina-bana-uco: desconocida
+      lumina: desconocida
+      kasi-nii-bana: caquetío
+      biro-ana: caquetío
+      kasuta-ico-kana: caquetío
+      juri-ima: caquetío
+      ka-to: lokono
+      ta-bohío: taíno
+      kali: caquetío
+      kali-mara-bana: caquetío
+      piache: caquetío
+      chacamba: desconocida
+    ninguna_parte_hoy:
+      lumina-bana-iro: true
+      lumina-bana-uco: true
+      lumina: true
+      kasi-nii-bana: false
+      biro-ana: false
+      kasuta-ico-kana: false
+      juri-ima: false
+      ka-to: false
+      ta-bohío: false
+      kali: false
+      kali-mara-bana: false
+      piache: false
+      chacamba: true
+    fijadas_antes:
+      -
+        run: 45618069
+        concepto: cometa
+        forma: lumina-bana-uco
+    fijadas_hoy:
+      -
+        run: 0345840d
+        concepto: cuentas_vidrio
+        forma: kasuta-bana-iro
+      -
+        run: e98227eb
+        concepto: eclipse
+        forma: kasi-tapa-uco
+    competencias_antes:
+      cuentas_vidrio:
+        -
+          - kasuta-bana-iro
+          - 36.7
+        -
+          - lumina-bana-iro
+          - 36.25
+        -
+          - pütchi-kasuta-bana-iro
+          - 3.95
+        -
+          - lumina-bana
+          - 3.55
+        -
+          - "**lumina-bana-iro"
+          - 1.45
+      cometa:
+        -
+          - lumina-bana-uco
+          - 28.75
+        -
+          - lumina
+          - 5.8
+        -
+          - "*ya vi"
+          - 2.0
+        -
+          - siwato-bana-uco
+          - 1.2
+      eclipse:
+        -
+          - tapa-uco
+          - 13.8
+        -
+          - kasi-tapa-uco
+          - 7.75
+        -
+          - kapo-bana-uco
+          - 2.7
+        -
+          - "**tapa-uco**"
+          - 1.9
+        -
+          - kasi-bana-kana
+          - 1.45
+    competencias_hoy:
+      cuentas_vidrio:
+        -
+          - kasuta-bana-iro
+          - 16.75
+        -
+          - pütchi-kasuta-bana-iro
+          - 1.35
+      cometa:
+        -
+          - siwato-bana-uco
+          - 7.45
+      eclipse:
+        -
+          - kasi-tapa-uco
+          - 7.75
+        -
+          - kapo-bana-uco
+          - 2.7
+        -
+          - kasi-bana-kana
+          - 1.45
+    rechazos_de_raiz:
+      -
+        - biri-uco
+        - Kasebo
+        - 1
+        - 1
+      -
+        - lumina-bana
+        - Ebokoa
+        - 1
+        - 5
+      -
+        - "**lumina-bana-iro"
+        - Mene
+        - 1
+        - 5
+      -
+        - lumina-bana-iro
+        - Talata
+        - 1
+        - 5
+      -
+        - lumina-bana-iro
+        - Ucibo
+        - 1
+        - 5
+      -
+        - lumina-bana-iro
+        - Jaiata
+        - 1
+        - 5
+      -
+        - lumina-bana-iro
+        - Dato
+        - 1
+        - 5
+      -
+        - koname-bana
+        - Ebokoa
+        - 2
+        - 4
+      -
+        - lumina-bana-uco
+        - Cege
+        - 2
+        - 5
+      -
+        - lumina-bana-uco
+        - Jaiata
+        - 2
+        - 5
+      -
+        - lumina-bana-uco
+        - Siwa
+        - 2
+        - 5
+      -
+        - lumina-bana-uco
+        - Waru
+        - 2
+        - 5
+      -
+        - lumina-bana-uco
+        - Tigi
+        - 2
+        - 5
+      -
+        - lumina
+        - Manaure
+        - 2
+        - 5
+      -
+        - "*ya vi"
+        - Manaure
+        - 2
+        - 5
+      -
+        - lumina-bana-uco
+        - Kunaro-bana
+        - 2
+        - 5
+      -
+        - lumina-bana-uco
+        - Jachos
+        - 2
+        - 5
+      -
+        - lumina-bana-uco
+        - Karebe
+        - 2
+        - 5
+      -
+        - kuti-sinwango-uco
+        - Dato
+        - 3
+        - 4
+      -
+        - tapa-uco
+        - Jachos
+        - 3
+        - 5
+      -
+        - tapa-uco
+        - Jachos
+        - 3
+        - 5
+      -
+        - "**tapa-uco**"
+        - Karebe
+        - 3
+        - 5
+      -
+        - tapa-uco
+        - Apoaure
+        - 3
+        - 5
+      -
+        - tapa-uco
+        - Sawaka
+        - 3
+        - 5
+      -
+        - tapa-uco
+        - Hayo
+        - 3
+        - 5
+    adoptadas_antes:
+      - "**tapa-uco**"
+      - amana-bana
+      - barsure-ima
+      - biro-uco
+      - biro-uco-aima
+      - chaa-ni ta-kawa-ana
+      - kasi-tapa-uco
+      - kasuta-bana-iro
+      - kaya-bana
+      - lumina
+      - lumina-bana
+      - lumina-bana-iro
+      - lumina-bana-uco
+      - ma-barsure-aia
+      - ma-dichiba
+      - nüma-kana
+      - pütchi-bana
+      - pütchi-kasuta-bana-iro
+      - siwato-bana-ima
+      - siwato-bana-uco
+      - suka-uco
+      - ta-dali-bana
+      - tapa-uco
+      - tüshi-uco
+    adoptadas_hoy:
+      - amana-bana
+      - barsure-ima
+      - biro-uco
+      - biro-uco-aima
+      - chaa-ni ta-kawa-ana
+      - kasi-tapa-uco
+      - kasuta-bana-iro
+      - kaya-bana
+      - ma-barsure-aia
+      - ma-dichiba
+      - nüma-kana
+      - pütchi-bana
+      - pütchi-kasuta-bana-iro
+      - siwato-bana-ima
+      - siwato-bana-uco
+      - suka-uco
+      - ta-dali-bana
+      - tüshi-uco
+    emergente_de_la_base:
+      -
+        - 1
+        - 0.9087
+      -
+        - 2
+        - 0.8663
+      -
+        - 3
+        - 0.834
+    emergente_antes:
+      -
+        - 1
+        - 0.9087
+      -
+        - 2
+        - 0.8663
+      -
+        - 3
+        - 0.834
+    emergente_hoy:
+      -
+        - 1
+        - 0.9129
+      -
+        - 2
+        - 0.8734
+      -
+        - 3
+        - 0.8391
+    control_emergente: true
+    veredicto_antes:
+      - converge
+      - CONVERGE ✓ (koineización sostenida)
+    veredicto_hoy:
+      - converge
+      - CONVERGE ✓ (koineización sostenida)
+    veredicto_se_sostiene: true
+    caida_pct_antes: -8.22
+    caida_pct_hoy: -8.08
+era1:
+  n: 2071
+  control_desvios: 1510
+  cambian: 329
+  delta_max_abs: 0.9
+  delta_medio_de_las_que_cambian: -0.1942
+  score_medio_antes: 7.0197
+  score_medio_hoy: 6.9888
+  caquetias_cambian: 491
+  neos_cambian: 0
+  por_run:
+    038d7b9d:
+      antes: 7.033
+      hoy: 7.0233
+    20091e1f:
+      antes: 7.121
+      hoy: 7.0766
+    2d4e67ad:
+      antes: 6.4778
+      hoy: 6.4778
+    2e729f3f:
+      antes: 6.7574
+      hoy: 6.7439
+    38f2e8d7:
+      antes: 5.5917
+      hoy: 5.5917
+    40073c8b:
+      antes: 5.85
+      hoy: 5.85
+    800fe7c0:
+      antes: 5.725
+      hoy: 5.725
+    81907ae1:
+      antes: 7.2222
+      hoy: 7.2222
+    8a4f9da4:
+      antes: 6.8917
+      hoy: 6.8917
+    946f7fbb:
+      antes: 6.775
+      hoy: 6.775
+    9bb920eb:
+      antes: 7.2383
+      hoy: 7.1386
+    a78731a3:
+      antes: 6.9375
+      hoy: 6.9375
+    ac70737c:
+      antes: 5.0667
+      hoy: 5.0667
+    adbf6a89:
+      antes: 6.0438
+      hoy: 6.0312
+    b0cbb3b8:
+      antes: 6.265
+      hoy: 6.265
+    bdc54134:
+      antes: 7.0728
+      hoy: 7.052
+    bdead490:
+      antes: 5.8667
+      hoy: 5.8667
+    c19426ab:
+      antes: 6.6667
+      hoy: 6.6667
+    c238b9d9:
+      antes: 6.7867
+      hoy: 6.7867
+    d40bc84e:
+      antes: 7.0519
+      hoy: 7.0222
+    d598f048:
+      antes: 6.9071
+      hoy: 6.9071
+    db946685:
+      antes: 6.8169
+      hoy: 6.8169
+    dd1d0c9c:
+      antes: 6.8033
+      hoy: 6.7483
+    ec63a264:
+      antes: 6.1
+      hoy: 6.1
+    f8ef263d:
+      antes: 7.3852
+      hoy: 7.3613
+    fec49195:
+      antes: 7.5542
+      hoy: 7.5194
+  rechazos_de_raiz:
+    formas_distintas: 67
+    eran_canon_entonces: 2
+    lista_eran_canon:
+      - buco-pama
+      - buco-silacoa
+    lista_nunca_fueron:
+      - "**duna-karu-amana**"
+      - alerta-ni
+      - alfarera-sha
+      - ani-taro
+      - baka-bana
+      - barchasure
+      - baro-ana-gua
+      - carne-sika
+      - cestos-bana
+      - duka-ni
+      - duma-bana
+      - duma-karu-bana
+      - duma-puri
+      - duna+kaa
+      - gota-gota
+      - huko-ni
+      - jakuri-ni
+      - jara-bana
+      - kaba-bana
+      - kabakani-ni
+      - kachi-bana
+      - kada-bana
+      - kale-bana
+      - kalu-bana
+      - kalu-da
+      - karo-biji
+      - karu-bana
+      - karu-bana-ni
+      - karu-puri-ni
+      - katu-puri-bana
+      - kona-bana
+      - kuno-bana
+      - kura-ni
+      - kuri-mani
+      - kuro-mana
+      - kutara-bana
+      - kuya-bana
+      - ma-kalapua
+      - madera-bana
+      - mana-biji

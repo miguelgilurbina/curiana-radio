@@ -25,6 +25,13 @@ cada forma distinta y actualiza solo las filas con NULL.
 Para aplicarla de verdad hay que pasar `--aplicar`, y conviene tener el
 `supabase db dump` del día antes.
 
+⚠️ Desde el corte del 2026-09-20, `word_source_language()` devuelve
+**`desconocida`** para una forma cuya RAÍZ no está en el lexicón
+(`lumina-bana-iro`). Si este script se vuelve a correr, esas filas se
+rellenarían con esa etiqueta y no con «caquetío» — que es lo correcto, pero
+**los runs ya corridos no se reescriben** por decisión del corte: lo que
+guardaron es lo que midieron. Antes de aplicarlo, decidirlo.
+
 Uso:
     python backfill_word_uses.py              # simulacro, no toca nada
     python backfill_word_uses.py --aplicar

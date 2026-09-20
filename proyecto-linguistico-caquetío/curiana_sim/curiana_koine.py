@@ -1164,12 +1164,23 @@ class CompetenciaLexica:
         ganando «las cuentas» 15,8 contra 3,1 y 2,9 mientras las rivales de
         verdad se apagaban. La copia no es una variante rival: es el prompt
         repitiéndose. Es la misma puerta que el registro
-        (`curiana_lexicon.es_forma_de_plantilla`)."""
-        from curiana_lexicon import es_forma_de_plantilla
+        (`curiana_lexicon.es_forma_de_plantilla`).
+
+        LA SEGUNDA PUERTA (corte de serie del 2026-09-20): tampoco compite una
+        forma cuya RAÍZ no está en ninguna tabla del lexicón. En el brazo de
+        control de la serie C `lumina-bana-iro` fue la segunda más fuerte de
+        la disputa de las cuentas (36,3) y `lumina-bana-uco` **fijó** el
+        cometa — con `lumina` latina, que nadie sacó del lexicón porque no
+        está. Morfología caquetía sobre raíz ajena no es una variante rival:
+        es otra lengua con nuestros afijos. Misma puerta que el registro
+        (`curiana_lexicon.es_raiz_de_ninguna_parte`)."""
+        from curiana_lexicon import es_forma_de_plantilla, es_raiz_de_ninguna_parte
         ref = self.referentes.get(concepto_id)
         if ref is None or ref["fijada"] or not forma:
             return
         if self.filtrar_plantilla and es_forma_de_plantilla(forma):
+            return
+        if self.filtrar_plantilla and es_raiz_de_ninguna_parte(forma):
             return
         ref["variantes"][forma] += 1.0 + self._prestigio(agente)
         self._forma2concepto[forma.lower()] = concepto_id

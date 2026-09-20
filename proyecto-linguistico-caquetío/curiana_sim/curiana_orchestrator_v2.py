@@ -60,7 +60,7 @@ from curiana_lexicon import (
     prompt_lexico_activo,
     score_linguistico,
     prompt_rescate_linguistico,
-    FORMAS_DE_PLANTILLA,
+    PUERTA_DEL_RECUENTO,
     IDENTIDAD_LINGUISTICA,
     VOCABULARIO_BASE,
 )
@@ -165,7 +165,16 @@ _IDENTIDAD_LINGUISTICA = IDENTIDAD_LINGUISTICA
 # vez se registraba, se adoptaba y competía. Una sola puerta, declarada donde
 # están las plantillas. Trae además lo que enseñan el refuerzo y el rescate,
 # que esta lista no miraba (`ma-arua`, `wa-duna`, `wana-ni`, `cati`).
-_FORMAS_EXCLUIDAS = FORMAS_DE_PLANTILLA
+#
+# Y desde el corte de serie del 2026-09-20 trae también LA RAÍZ DE NINGUNA
+# PARTE. El orquestador mete en el campo léxico todo lo que el agente acuñó
+# —`campo.registrar([n.forma for n in neos_turno])`— sin preguntar si el
+# léxico lo aceptó, así que sin esto `lumina-bana-uco` seguiría saliendo en el
+# diccionario koiné del cierre y pesando en la distancia emergente, que es la
+# lectura del veredicto. No es una lista: es un predicado con `__contains__`
+# (`curiana_lexicon.PUERTA_DEL_RECUENTO`), porque las raíces posibles no se
+# pueden enumerar.
+_FORMAS_EXCLUIDAS = PUERTA_DEL_RECUENTO
 
 # Elenco que habla. Miguel, 2026-09-14: «me gustaría que todos los agentes
 # hablen, porque si no ¿para qué tenerlos ahí?» y «los foráneos no deberían

@@ -7327,6 +7327,11 @@ class LexicoComunitario:
         # Lo rechazado, que se CUENTA y se dice al cerrar el run: un rechazo
         # callado es un dato perdido. (forma, autor, dia, turno).
         self.rechazos_de_plantilla: list[tuple] = []
+        # LA SEGUNDA PUERTA (corte de serie del 2026-09-20): la raíz de
+        # ninguna parte. Se cuenta aparte de la anterior porque son dos
+        # defectos distintos —copiar el prompt / inventar una raíz que no
+        # existe— y mezclarlos escondería cuál está pasando.
+        self.rechazos_de_raiz: list[tuple] = []
 
     # ── El ámbito: dónde está quien habla ─────────────────────────────
 
@@ -7386,10 +7391,23 @@ class LexicoComunitario:
         aquí, no entra en evaluación, no puede adoptarse, no pasa a
         `palabras_activas()` y no sale en el diccionario de cierre.
 
-        No se silencia: cada rechazo se cuenta en `rechazos_de_plantilla` y el
-        motor lo dice al cerrar el run (`reporte_de_rechazos()`)."""
+        LA SEGUNDA PUERTA (corte de serie del 2026-09-20): una forma cuya RAÍZ
+        no está en ninguna tabla del lexicón tampoco es una acuñación de esta
+        lengua. `lumina-bana-iro` tiene morfología caquetía impecable sobre
+        una raíz latina y llegó a liderar una disputa; `kasi-nii-bana` tiene
+        la misma morfología sobre la atestiguada `kasi` y es exactamente lo
+        que el experimento quiere ver. La diferencia es la raíz, y es la única
+        que se mira. Ver `es_raiz_de_ninguna_parte`.
+
+        No se silencia: cada rechazo se cuenta —en `rechazos_de_plantilla` o
+        en `rechazos_de_raiz`, que son dos defectos distintos— y el motor lo
+        dice al cerrar el run (`reporte_de_rechazos()`)."""
         if self.filtrar_plantilla and es_forma_de_plantilla(neo.forma):
             self.rechazos_de_plantilla.append(
+                (neo.forma, neo.autor, neo.dia, neo.turno))
+            return False
+        if self.filtrar_plantilla and es_raiz_de_ninguna_parte(neo.forma):
+            self.rechazos_de_raiz.append(
                 (neo.forma, neo.autor, neo.dia, neo.turno))
             return False
         # El ámbito del PROPONENTE: el lugar donde estaba al acuñarla. Sin
@@ -7406,16 +7424,26 @@ class LexicoComunitario:
         return True
 
     def reporte_de_rechazos(self) -> str:
-        """Lo que la puerta paró, dicho al cerrar el run. "" si no paró nada."""
-        if not self.rechazos_de_plantilla:
-            return ""
+        """Lo que las dos puertas pararon, dicho al cerrar el run.
+
+        "" si no pararon nada. Cada puerta va en su línea: «estaba en el
+        prompt» y «la raíz no es de aquí» son dos cosas distintas y el run
+        tiene que poder decir cuál le pasó."""
         from collections import Counter as _Counter
-        cuenta = _Counter(f for f, _a, _d, _t in self.rechazos_de_plantilla)
-        detalle = ", ".join(
-            f"{forma} ×{n}" if n > 1 else forma
-            for forma, n in cuenta.most_common())
-        return (f"  ⚠ {len(self.rechazos_de_plantilla)} acuñaciones rechazadas "
-                f"por estar en el prompt: {detalle}")
+        lineas = []
+        for rechazos, motivo in ((self.rechazos_de_plantilla,
+                                  "por estar en el prompt"),
+                                 (self.rechazos_de_raiz,
+                                  "por tener la raíz fuera del lexicón")):
+            if not rechazos:
+                continue
+            cuenta = _Counter(f for f, _a, _d, _t in rechazos)
+            detalle = ", ".join(
+                f"{forma} ×{n}" if n > 1 else forma
+                for forma, n in cuenta.most_common())
+            lineas.append(f"  ⚠ {len(rechazos)} acuñaciones rechazadas "
+                          f"{motivo}: {detalle}")
+        return "\n".join(lineas)
 
     def adoptar(self, forma: str, agente: str, turno: int,
                 dia: Optional[int] = None) -> Optional["Neologismo"]:
@@ -8151,13 +8179,110 @@ _SUFIJOS_CAQ = frozenset(a for a in TODAS_LAS_REGLAS if a.startswith("-"))
 _AFIJOS_SUELTOS = frozenset(a.strip("-").lower() for a in TODAS_LAS_REGLAS)
 
 
+# ══════════════════════════════════════════════════════════════════════
+# LA RAÍZ DE NINGUNA PARTE — corte de serie del 2026-09-20
+# ══════════════════════════════════════════════════════════════════════
+# `_familia_de_token()` acababa en `return "caquetío"` para cualquier token
+# que no encontrara en el lexicón. La razón escrita era buena —«es un
+# neologismo comunitario, lengua propia, no préstamo»— y vale para una
+# acuñación hecha con morfemas del canon: `biro-ana` es `biro` 'sal' + el
+# locativo, y `kasi-nii-bana` es la atestiguada `kasi` con dos afijos. No vale
+# para una raíz que NO está en ninguna tabla del lexicón: ahí los afijos
+# caquetíos son un disfraz.
+#
+# Lo midió el brazo de CONTROL de la serie C (runs `0345840d` → `45618069` →
+# `e98227eb`, 2026-09-20): `lumina-bana-iro` fue la segunda forma más fuerte
+# de la disputa de las cuentas (36,3) y `lumina-bana-uco` FIJÓ el cometa en el
+# diccionario koiné — con `lumina` latina, que ningún agente sacó del lexicón
+# porque no está. Uno de ellos lo escribió en su propia glosa: «lumina:
+# cosa-que-brilla (del español, pero transformada en caquetío)».
+#
+# LA REGLA, y es de raíz, no de forma: se quitan de los BORDES los afijos que
+# el proyecto DECLARA caquetíos (`TODAS_LAS_REGLAS`) y lo que queda es el
+# NÚCLEO. Si ningún segmento del núcleo es voz que el lexicón conozca, la raíz
+# no es de ninguna parte. Así `kasi-nii-bana` pasa (`kasi` y `nii` son claves)
+# y `lumina-bana-iro` no (queda `lumina` y no es nada).
+#
+# ⚠ NO es lo mismo que `neologismo_valido()`, y por eso hacen falta las dos:
+# aquél mira la FORMA (blocklist de raíces castellanas, marcadores
+# ortográficos, bigramas ausentes del caquetío) y `lumina` pasa sus tres capas
+# —`lu`, `um`, `mi`, `in`, `na` son bigramas caquetíos corrientes—. Éste mira
+# la PERTENENCIA: una raíz con forma impecable que no está en el lexicón sigue
+# sin ser caquetía.
+_RAICES_CONOCIDAS: Optional[frozenset] = None
+
+
+def _raices_conocidas() -> frozenset:
+    """Todo lo que el lexicón reconoce como RAÍZ, de cualquier lengua.
+
+    Perezosa a propósito: `_SUFIJOS_DE_LENGUA` se define más abajo en el
+    módulo, como `_caq_bigrams()` con `normalize_source_language`.
+
+    Entran: `VOCABULARIO_BASE` (las 5.507 claves, las cinco lenguas — una raíz
+    lokono con afijo caquetío ya la clasificaba bien `_familia_de_token` y
+    tiene que seguir haciéndolo), `FUERA_DEL_HABLA` (archivar no es borrar: la
+    palabra existió y su raíz sigue siendo del canon) y `_RAICES_VERB`. Y la
+    clave sin su desambiguador de lengua, porque el lexicón escribe
+    `casa-lokono` o `kati-kalinago` y esa etiqueta no es parte de la voz.
+
+    Todo va EN MINÚSCULA además de como está escrito: el lexicón tiene alguna
+    clave con mayúscula (`Adajali`, el nombre de la deidad lokono) y el
+    tokenizador entrega siempre minúsculas. Sin esto, `Adajali` habría salido
+    «desconocida» de su propia entrada.
+    """
+    global _RAICES_CONOCIDAS
+    if _RAICES_CONOCIDAS is None:
+        conocidas = set(VOCABULARIO_BASE) | set(FUERA_DEL_HABLA)
+        for clave in list(conocidas):
+            if "-" in clave and clave.rsplit("-", 1)[-1] in _SUFIJOS_DE_LENGUA:
+                conocidas.add(clave.rsplit("-", 1)[0])
+        conocidas |= _RAICES_VERB
+        _RAICES_CONOCIDAS = frozenset(conocidas | {c.lower() for c in conocidas})
+    return _RAICES_CONOCIDAS
+
+
+def nucleo_de_token(tok: str) -> list[str]:
+    """Los segmentos que quedan al quitar por los bordes los afijos declarados.
+
+    `ta-kasi-nii-bana` → `['kasi', 'nii']`; `lumina-bana-iro` → `['lumina']`.
+    Es el mismo desafijado que hace `_familia_de_token()`, sacado aparte para
+    que la puerta y el clasificador no se puedan desincronizar.
+    """
+    partes = (tok or "").strip().lower().split("-")
+    while len(partes) > 1 and partes[0] + "-" in _PREFIJOS_CAQ:
+        partes = partes[1:]
+    while len(partes) > 1 and "-" + partes[-1] in _SUFIJOS_CAQ:
+        partes = partes[:-1]
+    return partes
+
+
+def es_raiz_de_ninguna_parte(forma: Optional[str]) -> bool:
+    """¿La raíz de esta forma no está en ninguna tabla del lexicón?
+
+    La usan `LexicoComunitario.registrar_neologismo()` (no se registra),
+    `CompetenciaLexica.proponer()` (no compite) y `_familia_de_token()` (no se
+    dice caquetía). Es la hermana de `es_forma_de_plantilla()`: aquélla para
+    lo que el prompt ya enseña, ésta para lo que no es de aquí.
+    """
+    tok = (forma or "").strip().lower()
+    if not tok:
+        return False
+    conocidas = _raices_conocidas()
+    if tok in conocidas:
+        return False
+    return not any(seg in conocidas for seg in nucleo_de_token(tok))
+
+
 def _familia_de_token(tok: str) -> str:
     """
     Familia lingüística canónica de un token ya reconocido como arahuaco.
     Deshace prefijos posesivos y raíces verbales para encontrar la entrada
-    real en VOCABULARIO_BASE. Si no está en el lexicón base (neologismo
-    comunitario), se trata como "caquetío" — son palabras nuevas acuñadas
-    por la propia comunidad, no préstamos de una lengua viva real.
+    real en VOCABULARIO_BASE. Si no está en el lexicón base pero su RAÍZ sí,
+    se trata como "caquetío" — son palabras nuevas acuñadas por la propia
+    comunidad con morfemas propios, no préstamos de una lengua viva real. Si
+    ni la raíz está en ninguna tabla del lexicón, devuelve **"desconocida"**:
+    unos afijos caquetíos sobre una raíz que no es de aquí no hacen una
+    palabra caquetía (corte de serie del 2026-09-20; `lumina-bana-iro`).
 
     ⚠ LA RAÍZ DECIDE, y la raíz es lo que queda al quitar los afijos que el
     proyecto declara caquetíos (2026-09-16). Antes se quitaba SIEMPRE el primer
@@ -8184,6 +8309,16 @@ def _familia_de_token(tok: str) -> str:
     """
     from curiana_database import normalize_source_language
 
+    # LA RAÍZ DECIDE, y decide PRIMERO (corte de serie del 2026-09-20). Va
+    # antes que los candidatos porque el último de ellos es un legado —
+    # `tok.split("-", 1)[1]`, «lo que se probaba antes, para que nada que se
+    # resolvía deje de resolverse»— y con una raíz ajena ese legado resuelve
+    # por el SUFIJO: `pütshi-bana` habría salido caquetío por la clave `bana`
+    # 'hígado', que ahí no es la raíz sino el locativo. La puerta del registro
+    # y esta función tienen que decir lo mismo de la misma forma.
+    if es_raiz_de_ninguna_parte(tok):
+        return "desconocida"
+
     candidatos = [tok]
     if "-" in tok:
         partes = tok.split("-")
@@ -8203,7 +8338,10 @@ def _familia_de_token(tok: str) -> str:
     for c in candidatos:
         if c in VOCABULARIO_BASE:
             return normalize_source_language(VOCABULARIO_BASE[c].get("fuente", ""))
-    return "caquetío"  # neologismo comunitario: no es préstamo, es lengua propia
+    # Llegar aquí significa que la raíz SÍ está en el lexicón (lo dice la
+    # comprobación de arriba) y que la forma entera no: es una acuñación de la
+    # comunidad con morfemas propios, o sea lengua propia y no préstamo.
+    return "caquetío"
 
 
 _NOMBRES_AGENTES: Optional[frozenset] = None
@@ -8957,6 +9095,44 @@ def es_forma_de_plantilla(forma: Optional[str]) -> bool:
     La usan `LexicoComunitario.registrar_neologismo()` (no se registra) y
     `CompetenciaLexica.proponer()` (no compite)."""
     return (forma or "").strip().lower() in FORMAS_DE_PLANTILLA
+
+
+class _PuertaDelRecuento:
+    """Lo que NO cuenta como forma emergente: la plantilla Y la raíz ajena.
+
+    `FORMAS_DE_PLANTILLA` es una lista cerrada y se puede enumerar; la raíz de
+    ninguna parte es un PREDICADO y no, así que esto no es un `frozenset` sino
+    un objeto que responde a `in`. Los dos consumidores del motor
+    (`distancia_idiolectal(excluir=…)` y `CampoLexico.top(excluir=…)`) sólo
+    preguntan `forma not in excluir`, que es justo lo que sabe contestar.
+
+    Por qué hace falta además de las dos puertas de registro y competencia: el
+    orquestador mete en el campo léxico las formas que el agente ACUÑÓ
+    (`campo.registrar([n.forma for n in neos_turno])`) sin preguntar si el
+    léxico las aceptó — igual que pasa con las de plantilla desde el corte del
+    09-18. Sin esto, `lumina-bana-uco` seguiría saliendo en el «Diccionario
+    koiné emergente» del cierre y pesando en la distancia emergente, que es
+    la lectura sobre la que se da el veredicto. Corte de serie del 2026-09-20.
+    """
+
+    __slots__ = ()
+
+    def __contains__(self, forma) -> bool:
+        return es_forma_de_plantilla(forma) or es_raiz_de_ninguna_parte(forma)
+
+    def __bool__(self) -> bool:
+        return True
+
+    def __iter__(self):
+        # Sólo la mitad enumerable, y quien la recorra tiene que saberlo.
+        return iter(FORMAS_DE_PLANTILLA)
+
+    def __repr__(self) -> str:
+        return (f"<puerta del recuento: {len(FORMAS_DE_PLANTILLA)} formas de "
+                "plantilla + la raíz de ninguna parte>")
+
+
+PUERTA_DEL_RECUENTO = _PuertaDelRecuento()
 
 
 def muestra_caquetio_dinamica(n_por_categoria: int = 18, contexto: str = "",

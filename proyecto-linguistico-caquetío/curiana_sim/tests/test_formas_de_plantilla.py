@@ -93,12 +93,19 @@ def test_a_la_lista_se_construye_desde_las_plantillas():
 
 
 def test_a_es_una_puerta_y_no_dos():
-    """El orquestador y `analizar_nodos` miran la MISMA lista. Eran dos, y una
-    de las dos no se respetaba: de ahí el corte."""
+    """El orquestador y `analizar_nodos` miran LO MISMO. Eran dos listas, y una
+    de las dos no se respetaba: de ahí el corte del 09-18.
+
+    Desde el corte del 2026-09-20 la puerta del recuento no es una lista sino
+    un objeto con `__contains__` —las formas de plantilla se enumeran, las
+    raíces de ninguna parte no—, y sigue siendo EL MISMO objeto en los dos
+    sitios. `formas_de_plantilla_solas()` conserva la mitad enumerable."""
     import analizar_nodos
 
-    assert orch._FORMAS_EXCLUIDAS is FORMAS_DE_PLANTILLA
-    assert analizar_nodos.formas_excluidas() == frozenset(FORMAS_DE_PLANTILLA)
+    assert orch._FORMAS_EXCLUIDAS is lx.PUERTA_DEL_RECUENTO
+    assert analizar_nodos.formas_excluidas() is lx.PUERTA_DEL_RECUENTO
+    assert (analizar_nodos.formas_de_plantilla_solas()
+            == frozenset(FORMAS_DE_PLANTILLA))
     assert orch._IDENTIDAD_LINGUISTICA == IDENTIDAD_LINGUISTICA
 
 
@@ -205,9 +212,12 @@ def test_b_la_copia_no_entra_en_competencia():
     comp = koine.CompetenciaLexica()
     comp.activar("cuentas_vidrio", "unas cuentas brillantes")
     comp.proponer("cuentas_vidrio", EJEMPLO_DE_LA_IDENTIDAD, "Chirwa")
-    comp.proponer("cuentas_vidrio", "brilu-uco", "Hayo")
+    # La rival de verdad era `brilu-uco`, y desde el corte del 2026-09-20
+    # tampoco compite: `brilu` no está en el lexicón. La que ganó la disputa
+    # con el instrumento limpio se apoya en la atestiguada `kasuta`.
+    comp.proponer("cuentas_vidrio", "kasuta-bana-iro", "Hayo")
     comp.registrar_uso(EJEMPLO_DE_LA_IDENTIDAD, "Uria")
-    assert list(comp.referentes["cuentas_vidrio"]["variantes"]) == ["brilu-uco"]
+    assert list(comp.referentes["cuentas_vidrio"]["variantes"]) == ["kasuta-bana-iro"]
     # control: sin la puerta, compite (es el motor de antes del corte)
     antes = koine.CompetenciaLexica(filtrar_plantilla=False)
     antes.activar("cuentas_vidrio", "unas cuentas brillantes")
