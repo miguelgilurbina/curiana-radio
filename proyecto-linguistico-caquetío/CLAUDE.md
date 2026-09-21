@@ -69,7 +69,7 @@ cura y se publica en Curiana Radio (`/kaketiana`).
 | **`2-lengua/toponimos.yaml` no se edita a mano** | Es generado desde `lexicon_toponimos.py` por `migrar_toponimos.py`. Dos commits (2026-08-30/31) lo editaron directo y la siguiente regeneración deshizo 25 entradas. Se edita el módulo y se regenera; `test_el_canon_de_toponimos_es_lo_que_emite_el_migrador` lo vigila |
 | **La consola de Windows es cp1252** | Todo script que imprima `─`, `✓` o acentos necesita `_forzar_utf8()` bajo `__main__` |
 | **`pct_caquetio` está saturada** | 91% de las respuestas en 1.0. **No la uses para comparar agentes** — usa `score`. Issue #69 |
-| **El componente de ASPECTO también está saturado** | Media **1,9982 sobre un máximo de 2,0**: el 20 % del score no separa a nadie, igual que `pct_caquetio` en otro quinto de la métrica. **No lo uses para comparar agentes.** Y tapar el comodín de longitud del detector —que aceptaba `-ka/-ni/-da` sobre cualquier raíz con guion de tres letras, 20.165 de 62.347 detecciones— **no arregla la saturación**: la mueve a 1,9296, cambia el punto en 211 de 3.379 respuestas y deja 21 sin aspecto. El peso NO se cambia (d21.3 → A, 2026-09-21): se ESCRIBE aquí y **se vuelve a medir después** de aplicar d21.1 y d21.2, por si al exigir verbo de verdad la saturación se cae sola; si sigue, el rediseño va con su propio diseño en `5-experimento/disenos/`. Medido en `6-fusion/medicion_morfologia_2026-09-20.yaml` §aspecto_rama_a_rama |
+| **El componente de ASPECTO también está saturado** | Media **1,9982 sobre un máximo de 2,0**: el 20 % del score no separa a nadie, igual que `pct_caquetio` en otro quinto de la métrica. **No lo uses para comparar agentes.** Y tapar el comodín de longitud del detector —que aceptaba `-ka/-ni/-da` sobre cualquier raíz con guion de tres letras, 20.165 de 62.347 detecciones— **no arregla la saturación**: la mueve a 1,9296, cambia el punto en 211 de 3.379 respuestas y deja 21 sin aspecto. El peso NO se cambia (d21.3 → A, 2026-09-21): se ESCRIBE aquí y **se vuelve a medir después** de aplicar d21.1 y d21.2, por si al exigir verbo de verdad la saturación se cae sola. **Medido tras el corte 13 (#182): NO se cayó sola** — media **1,9982 → 1,9532**, **95,59 %** siguen en el tope (antes 99,82 %), cambian 143 de 3.379 y 9 quedan sin aspecto. Cae menos que el 1,9296 estimado porque d21.1 se decidió C y no A: el aspecto cuenta si el **último segmento** antes del sufijo es verbo, y eso recupera los compuestos con verbo dentro (`ta-hamaka-chaa-ni` cuenta por `chaa`). **El rediseño del peso queda abierto**, con su propio diseño en `5-experimento/disenos/`. Medido en `6-fusion/medicion_morfologia_2026-09-20.yaml` §aspecto_rama_a_rama (antes) y `6-fusion/medicion_tanda_21_2026-09-21.yaml` §d21_3_saturacion (después) |
 | **Un morfema se enseña por una puerta y se cuenta por otra** | La auditoría de morfología (2026-09-20) encontró **cuatro** patologías de la misma familia, y las cuatro se leen de la tabla de `2-lengua/morfologia.md` §3 —capa + cita + si el motor lo enseña + si el scorer lo reconoce—, que emite `6-fusion/scripts/tabla_morfemas.py` desde la medición: (a) el motor lo ENSEÑA y el canon no lo declara (`-ana`, con la glosa que #109 retiró, escrito incluso en su propio campo `evidencia`); (b) el canon lo DECLARA y el scorer no lo ve (los 9 de `morfemas.yaml` + la reduplicación, medida con control y sin llevar al motor); (c) su único apoyo es el andamio wayuu/lokono que D11 mandó retirar (9); (d) lo enseña y **no hay clave foránea** que citar (9 — regla 8: se declara `deuda: sin-procedencia`, no se calla). Antes de tocar un morfema, mirar esa tabla: el prompt, el desafijador, `_aspectos_morfologicos` y `es_arahuaco` son **cuatro** puertas distintas y ninguna implica a las otras |
 | **`palabras_caquetias` no era lo que decía su nombre** | Devolvía TODAS las voces arahuacas, y de ahí comen el contagio léxico, la competencia de formas, el idiolecto, el campo léxico de la koiné y `words_used`: una voz wayuu o lokono se habría propagado como propia. Arreglado el 2026-09-09 (`palabras_arahuacas` guarda la lista completa). Antes de tocar un campo, mirar quién lo consume — el nombre miente |
 | **El 80% del lexicón no es caquetío** | 1.201 de 1.500 claves son comparanda (wayuu, lokono, taíno...). No llega al hablante porque el muestreador del prompt SÍ filtra por `fuente`, pero `palabras_activas()` no filtra: cualquier consumidor que la use está viendo las cinco lenguas. Medido en `6-fusion/medicion_contaminacion_score_2026-09-09.yaml` |
@@ -325,7 +325,8 @@ Verbos:     dos clases — ESTATIVO (propiedad o estado: apo 'grande', usera
             'seco') y DE ACCIÓN. Un estado se predica con aspecto igual que una
             acción; el alineamiento pospuesto del lokono NO se importa, porque
             no hay dato caquetío (d21.4 → B)
-Posesivos:  ta- (mi), wa- (nuestro)
+Posesivos:  ta- (mi), wa- (nuestro), u- (no-poseído: la cosa sin dueño —
+            Perea p. 587; d21.13 → B)
 Atributivo: ka- (hay X, tiene X) / privativo ma- (sin X) — NO son posesivos:
             van Buurt §8 (Casibari 'hay rocas duras') y Perea p. 555. Un NOMBRE
             se predica con ka-, así que «hay viento» es ka-juri, no juri-ni
@@ -341,16 +342,20 @@ Neologismos: [forma: componentes = significado]
 ```
 
 `REGLAS_ZAVALA` añade seis afijos atestiguados: `-iro` (diminutivo), `-aima`,
-`-ima`, `-uco` (variante `-uto`), `-ubana`, `-uru`; y `REGLAS_TOPONIMICAS`,
-`-bacoa` (que migra al lema fonémico `-bakoa`). **Retirados**: `-ko` y `-sha`
+`-ima`, `-uco` (variante `-uto`: se enseña, el scorer no la reconoce —
+residuo declarado), `-ubana`, `-uru`; y `REGLAS_TOPONIMICAS`, `-bakoa` (el lema
+fonémico de D5; era `-bacoa` hasta el corte 13). **Retirados**: `-ko` y `-sha`
 (2026-09-14) y `-naiki` (d21.9 — 0 usos en 95.445). El detalle, su evidencia,
 su capa y qué puerta del motor los ve, en `2-lengua/morfologia.md`; las catorce
 decisiones que lo fijaron, en `6-fusion/decisiones_tanda_2026-09-21.yaml`.
 
-⚠️ Las que tocan `curiana_sim/` van en **un solo corte de serie**, medido antes
-con el patrón A/B de `medir_politica_atestiguado_manda.py`: hasta que ese corte
-esté commiteado, el bloque de arriba dice el **canon**, no lo que el prompt
-enseña hoy.
+Las que tocan `curiana_sim/` entraron en **un solo corte de serie** —el punto
+13 del «Cambio de instrumento» de `5-experimento/BITACORA_RUNS.md`, #182—,
+medido antes con `6-fusion/scripts/medir_tanda_21.py`: desde ahí el bloque de
+arriba es el canon **y** lo que el prompt enseña. ⚠️ Con un matiz de tier que el
+ensayo del 2026-09-21 midió: el estado-verbo, el atributivo y el no-poseído
+llegan a los 63 (están en la plantilla breve y en la completa); `TRATO FORMAL`
+sólo al tier 1, que es el único que recibe `prompt_reglas_completo`.
 
 ---
 
