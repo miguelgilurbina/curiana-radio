@@ -1,0 +1,2723 @@
+# GENERADO por 6-fusion/scripts/medir_taino_inventario.py — no editar a mano
+meta:
+  medido: "2026-09-21"
+  script: 6-fusion/scripts/medir_taino_inventario.py
+  campana: Campaña del Taíno — parcela T3 (inventario y mapa de fuentes)
+  que_es: >-
+      el censo MEDIDO de lo que el proyecto tiene como taíno: de dónde vino cada entrada, si cita algo, si el motor la enseña y si alguien la ha dicho alguna vez. No propone fusión: propone que Miguel decida
+a_censo:
+  lexicon_vocabulario_base:
+    n: 52
+    por_fuente:
+      taíno: 43
+      taíno-reconstruido: 9
+    claves:
+      - abba
+      - acoa
+      - aduri
+      - agari
+      - aji
+      - akcicyaa
+      - areito
+      - batata
+      - batey
+      - bejique
+      - bixa
+      - bohio
+      - bohío
+      - cacike
+      - cacique
+      - cai
+      - caiman
+      - caney
+      - casabe
+      - cayo
+      - cazabi
+      - cemi
+      - cobo
+      - cohiba
+      - daca
+      - dujo
+      - guabina
+      - guanin
+      - guayaba
+      - higuana
+      - huracan
+      - hutia
+      - iwana
+      - kunuku
+      - maboya
+      - maisi
+      - manati
+      - manigua
+      - mayani
+      - maíz
+      - naboria
+      - nitaino
+      - papaya
+      - piragua
+      - tabako
+      - taita
+      - thigisi
+      - tuna
+      - wacusi
+      - wagulo
+      - yamosa
+      - yuca
+  lexicon_fuera_del_habla:
+    n: 0
+    claves: []
+  taino_hipotetico_json:
+    n: 26
+    claves:
+      - abba
+      - acoa
+      - aduri
+      - agari
+      - aji
+      - akcicyaa
+      - aririn
+      - bejique
+      - cai
+      - caiman
+      - casabe
+      - cohiba
+      - daca
+      - higuana
+      - itime
+      - maisi
+      - mayani
+      - siba
+      - taita
+      - thigisi
+      - tuna
+      - uju
+      - wacusi
+      - wagulo
+      - yamosa
+      - yuca
+  tainismos_en_medina_yaml:
+    n: 12
+    voces:
+      - coa
+      - comején
+      - guayacán
+      - hico
+      - hicotea
+      - jaiba
+      - jején
+      - maguey
+      - naguas
+      - nigua
+      - siguato
+      - yaguaza
+    claves_sugeridas:
+      - coa
+      - comejen
+      - guayacan
+      - hico
+      - hicotea
+      - jaiba
+      - jejen
+      - maguey
+      - naguas
+      - nigua
+      - siguato
+      - yaguaza
+    nota: "fusionadas el 2026-09-12 como `caquetío-reconstruido`, no como taíno: NO cuentan en las 52 y están fuera de este censo salvo como precedente"
+b_procedencia:
+  regla: regla 8 — `procedencia.obra` es clave foránea a 4-fuentes/bibliografia.yaml
+  n_con_procedencia_obra: 0
+  n_sin_procedencia_obra: 52
+  n_con_cita_en_prosa_en_notas: 10
+  n_con_notas_vacias: 3
+  claves_con_notas_vacias:
+    - bohío
+    - cacique
+    - maíz
+  ids_de_bibliografia_existentes:
+    - adam-1879
+    - alvarado-1921
+    - amodio-perez-2006
+    - angleria-1892
+    - antczak-2015-las-aves
+    - antczak-2017-cariban
+    - antolinez-1944-manaure
+    - antolinez-1946-hacia-el-indio
+    - arcaya-1920
+    - arcaya-obra-inedita-1995
+    - avendano-castillo-2014-erythrina
+    - ballesteros-1550
+    - brett-martinez-aquella-paraguana
+    - brinton-1871
+    - brito-figueroa-poblacion-economia
+    - camacho-2011
+    - castellanos-elegias
+    - esteves-1989
+    - fabo-1911
+    - federmann-1916
+    - fernandes-2020
+    - gatschet-1885
+    - gilij-1780-1783
+    - gonzalez-batista-nombre-de-coro
+    - guerra-curvelo-palabrero
+    - gumilla-1791
+    - jahn-1927
+    - keegan-1989
+    - laguna-guaranao-parque
+    - las-casas-1875
+    - maria-lionza-culto
+    - martinez-cruzado-2003
+    - medina-colina-sxx
+    - montecano-reserva
+    - monumento-cerro-santa-ana
+    - moreno-mayar-2018
+    - moron-2012-petroglifos
+    - moron-guillermo-historia-venezuela
+    - neira-ribero-1762
+    - nueva-segovia-1579
+    - oliver-1989-apendice-a
+    - oliver-1989-cap2
+    - oliver-1989-cap3
+    - oliver-1989-cap3-vecinos
+    - oliver-1989-cap4
+    - osm-kaketiana
+    - oviedo-y-banos
+    - oviedo-y-valdes-1851
+    - pane-c1498
+    - paz-reverol-2017-2018
+    - perea-alonso-1942
+    - perez-de-tolosa-1546
+    - perrin-1992-1995
+    - polar-el-maiz-glosario
+    - ramos-perez-1978
+    - rivero-1883
+    - rouse-cruxent-1963
+    - schroeder-2018
+    - steward-1949
+    - urbina-jimenez-2007-2011
+    - van-buurt-2014
+    - vansina-ong
+    - velasco-2015-resistencia
+    - zavala-reyes-2015
+    - zavala-reyes-2018
+  detalle:
+    cacique:
+      tiene_procedencia_obra: false
+      notas_vacias: true
+      citas_en_prosa: []
+    maíz:
+      tiene_procedencia_obra: false
+      notas_vacias: true
+      citas_en_prosa: []
+    yuca:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    batata:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    bohío:
+      tiene_procedencia_obra: false
+      notas_vacias: true
+      citas_en_prosa: []
+    kunuku:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa:
+        - obra_en_prosa: Alvarado 1921
+          id_bibliografia: alvarado-1921
+          id_existe: true
+        - obra_en_prosa: Las Casas
+          id_bibliografia: las-casas-1875
+          id_existe: true
+        - obra_en_prosa: van Buurt 2014
+          id_bibliografia: van-buurt-2014
+          id_existe: true
+    maisi:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    aji:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    papaya:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    guayaba:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    tabako:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    cazabi:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    bohio:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    caney:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    batey:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    piragua:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    iwana:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    manati:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    hutia:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    guabina:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    cobo:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    cemi:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    areito:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    bejique:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    huracan:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    maboya:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    guanin:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    cacike:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    naboria:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    nitaino:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    dujo:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    cayo:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    manigua:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    bixa:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    abba:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    acoa:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    aduri:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    agari:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    akcicyaa:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    cai:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa:
+        - obra_en_prosa: Brinton 1871
+          id_bibliografia: brinton-1871
+          id_existe: true
+    caiman:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa:
+        - obra_en_prosa: Brinton 1871
+          id_bibliografia: brinton-1871
+          id_existe: true
+    casabe:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa:
+        - obra_en_prosa: Brinton 1871
+          id_bibliografia: brinton-1871
+          id_existe: true
+    cohiba:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa:
+        - obra_en_prosa: Brinton 1871
+          id_bibliografia: brinton-1871
+          id_existe: true
+    daca:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    higuana:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa:
+        - obra_en_prosa: Brinton 1871
+          id_bibliografia: brinton-1871
+          id_existe: true
+    mayani:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa:
+        - obra_en_prosa: Brinton 1871
+          id_bibliografia: brinton-1871
+          id_existe: true
+    taita:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa:
+        - obra_en_prosa: Brinton 1871
+          id_bibliografia: brinton-1871
+          id_existe: true
+    thigisi:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    tuna:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa:
+        - obra_en_prosa: Brinton 1871
+          id_bibliografia: brinton-1871
+          id_existe: true
+    wacusi:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    wagulo:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa: []
+    yamosa:
+      tiene_procedencia_obra: false
+      notas_vacias: false
+      citas_en_prosa:
+        - obra_en_prosa: Brinton 1871
+          id_bibliografia: brinton-1871
+          id_existe: true
+c_origen_en_git:
+  metodo: git blame --line-porcelain sobre la línea que abre cada entrada
+  por_commit:
+    "81391426 2026-06-20 feat(sim): expand attested lexicon + rename arahuacano→proto-arahuaco": 19
+    "573719a6 2026-06-21 feat(lexicon): expansion v4 — wayunaiki, lokono, kalinago, jirajaroide": 18
+    "774de860 2026-06-20 fix(terminologia): corregir arahuacano -> arahuaco; eliminar duplicado": 11
+    "475457dc 2026-06-13 chore: init repo + fix 3 critical bugs from audit": 3
+    "4b93c9db 2026-08-04 feat(vault+fidelidad): V0/V1 del vault, minería de 5 fuentes y censo d": 1
+  detalle:
+    cacique:
+      commit: 475457dc
+      fecha: "2026-06-13"
+      autor: MrChocolate
+      asunto: "chore: init repo + fix 3 critical bugs from audit"
+    maíz:
+      commit: 475457dc
+      fecha: "2026-06-13"
+      autor: MrChocolate
+      asunto: "chore: init repo + fix 3 critical bugs from audit"
+    yuca:
+      commit: "81391426"
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "feat(sim): expand attested lexicon + rename arahuacano→proto-arahuaco"
+    batata:
+      commit: 774de860
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "fix(terminologia): corregir arahuacano -> arahuaco; eliminar duplicados obsoletos de raiz"
+    bohío:
+      commit: 475457dc
+      fecha: "2026-06-13"
+      autor: MrChocolate
+      asunto: "chore: init repo + fix 3 critical bugs from audit"
+    kunuku:
+      commit: 4b93c9db
+      fecha: "2026-08-04"
+      autor: Miguel Gil
+      asunto: "feat(vault+fidelidad): V0/V1 del vault, minería de 5 fuentes y censo de citas (82→3)"
+    maisi:
+      commit: "81391426"
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "feat(sim): expand attested lexicon + rename arahuacano→proto-arahuaco"
+    aji:
+      commit: "81391426"
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "feat(sim): expand attested lexicon + rename arahuacano→proto-arahuaco"
+    papaya:
+      commit: "81391426"
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "feat(sim): expand attested lexicon + rename arahuacano→proto-arahuaco"
+    guayaba:
+      commit: "81391426"
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "feat(sim): expand attested lexicon + rename arahuacano→proto-arahuaco"
+    tabako:
+      commit: 774de860
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "fix(terminologia): corregir arahuacano -> arahuaco; eliminar duplicados obsoletos de raiz"
+    cazabi:
+      commit: 774de860
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "fix(terminologia): corregir arahuacano -> arahuaco; eliminar duplicados obsoletos de raiz"
+    bohio:
+      commit: "81391426"
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "feat(sim): expand attested lexicon + rename arahuacano→proto-arahuaco"
+    caney:
+      commit: "81391426"
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "feat(sim): expand attested lexicon + rename arahuacano→proto-arahuaco"
+    batey:
+      commit: "81391426"
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "feat(sim): expand attested lexicon + rename arahuacano→proto-arahuaco"
+    piragua:
+      commit: "81391426"
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "feat(sim): expand attested lexicon + rename arahuacano→proto-arahuaco"
+    iwana:
+      commit: "81391426"
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "feat(sim): expand attested lexicon + rename arahuacano→proto-arahuaco"
+    manati:
+      commit: "81391426"
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "feat(sim): expand attested lexicon + rename arahuacano→proto-arahuaco"
+    hutia:
+      commit: 774de860
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "fix(terminologia): corregir arahuacano -> arahuaco; eliminar duplicados obsoletos de raiz"
+    guabina:
+      commit: "81391426"
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "feat(sim): expand attested lexicon + rename arahuacano→proto-arahuaco"
+    cobo:
+      commit: 774de860
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "fix(terminologia): corregir arahuacano -> arahuaco; eliminar duplicados obsoletos de raiz"
+    cemi:
+      commit: 774de860
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "fix(terminologia): corregir arahuacano -> arahuaco; eliminar duplicados obsoletos de raiz"
+    areito:
+      commit: 774de860
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "fix(terminologia): corregir arahuacano -> arahuaco; eliminar duplicados obsoletos de raiz"
+    bejique:
+      commit: "81391426"
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "feat(sim): expand attested lexicon + rename arahuacano→proto-arahuaco"
+    huracan:
+      commit: 774de860
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "fix(terminologia): corregir arahuacano -> arahuaco; eliminar duplicados obsoletos de raiz"
+    maboya:
+      commit: "81391426"
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "feat(sim): expand attested lexicon + rename arahuacano→proto-arahuaco"
+    guanin:
+      commit: 774de860
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "fix(terminologia): corregir arahuacano -> arahuaco; eliminar duplicados obsoletos de raiz"
+    cacike:
+      commit: "81391426"
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "feat(sim): expand attested lexicon + rename arahuacano→proto-arahuaco"
+    naboria:
+      commit: 774de860
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "fix(terminologia): corregir arahuacano -> arahuaco; eliminar duplicados obsoletos de raiz"
+    nitaino:
+      commit: "81391426"
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "feat(sim): expand attested lexicon + rename arahuacano→proto-arahuaco"
+    dujo:
+      commit: 774de860
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "fix(terminologia): corregir arahuacano -> arahuaco; eliminar duplicados obsoletos de raiz"
+    cayo:
+      commit: "81391426"
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "feat(sim): expand attested lexicon + rename arahuacano→proto-arahuaco"
+    manigua:
+      commit: "81391426"
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "feat(sim): expand attested lexicon + rename arahuacano→proto-arahuaco"
+    bixa:
+      commit: "81391426"
+      fecha: "2026-06-20"
+      autor: MrChocolate
+      asunto: "feat(sim): expand attested lexicon + rename arahuacano→proto-arahuaco"
+    abba:
+      commit: 573719a6
+      fecha: "2026-06-21"
+      autor: MrChocolate
+      asunto: "feat(lexicon): expansion v4 — wayunaiki, lokono, kalinago, jirajaroide (+1003 palabras)"
+    acoa:
+      commit: 573719a6
+      fecha: "2026-06-21"
+      autor: MrChocolate
+      asunto: "feat(lexicon): expansion v4 — wayunaiki, lokono, kalinago, jirajaroide (+1003 palabras)"
+    aduri:
+      commit: 573719a6
+      fecha: "2026-06-21"
+      autor: MrChocolate
+      asunto: "feat(lexicon): expansion v4 — wayunaiki, lokono, kalinago, jirajaroide (+1003 palabras)"
+    agari:
+      commit: 573719a6
+      fecha: "2026-06-21"
+      autor: MrChocolate
+      asunto: "feat(lexicon): expansion v4 — wayunaiki, lokono, kalinago, jirajaroide (+1003 palabras)"
+    akcicyaa:
+      commit: 573719a6
+      fecha: "2026-06-21"
+      autor: MrChocolate
+      asunto: "feat(lexicon): expansion v4 — wayunaiki, lokono, kalinago, jirajaroide (+1003 palabras)"
+    cai:
+      commit: 573719a6
+      fecha: "2026-06-21"
+      autor: MrChocolate
+      asunto: "feat(lexicon): expansion v4 — wayunaiki, lokono, kalinago, jirajaroide (+1003 palabras)"
+    caiman:
+      commit: 573719a6
+      fecha: "2026-06-21"
+      autor: MrChocolate
+      asunto: "feat(lexicon): expansion v4 — wayunaiki, lokono, kalinago, jirajaroide (+1003 palabras)"
+    casabe:
+      commit: 573719a6
+      fecha: "2026-06-21"
+      autor: MrChocolate
+      asunto: "feat(lexicon): expansion v4 — wayunaiki, lokono, kalinago, jirajaroide (+1003 palabras)"
+    cohiba:
+      commit: 573719a6
+      fecha: "2026-06-21"
+      autor: MrChocolate
+      asunto: "feat(lexicon): expansion v4 — wayunaiki, lokono, kalinago, jirajaroide (+1003 palabras)"
+    daca:
+      commit: 573719a6
+      fecha: "2026-06-21"
+      autor: MrChocolate
+      asunto: "feat(lexicon): expansion v4 — wayunaiki, lokono, kalinago, jirajaroide (+1003 palabras)"
+    higuana:
+      commit: 573719a6
+      fecha: "2026-06-21"
+      autor: MrChocolate
+      asunto: "feat(lexicon): expansion v4 — wayunaiki, lokono, kalinago, jirajaroide (+1003 palabras)"
+    mayani:
+      commit: 573719a6
+      fecha: "2026-06-21"
+      autor: MrChocolate
+      asunto: "feat(lexicon): expansion v4 — wayunaiki, lokono, kalinago, jirajaroide (+1003 palabras)"
+    taita:
+      commit: 573719a6
+      fecha: "2026-06-21"
+      autor: MrChocolate
+      asunto: "feat(lexicon): expansion v4 — wayunaiki, lokono, kalinago, jirajaroide (+1003 palabras)"
+    thigisi:
+      commit: 573719a6
+      fecha: "2026-06-21"
+      autor: MrChocolate
+      asunto: "feat(lexicon): expansion v4 — wayunaiki, lokono, kalinago, jirajaroide (+1003 palabras)"
+    tuna:
+      commit: 573719a6
+      fecha: "2026-06-21"
+      autor: MrChocolate
+      asunto: "feat(lexicon): expansion v4 — wayunaiki, lokono, kalinago, jirajaroide (+1003 palabras)"
+    wacusi:
+      commit: 573719a6
+      fecha: "2026-06-21"
+      autor: MrChocolate
+      asunto: "feat(lexicon): expansion v4 — wayunaiki, lokono, kalinago, jirajaroide (+1003 palabras)"
+    wagulo:
+      commit: 573719a6
+      fecha: "2026-06-21"
+      autor: MrChocolate
+      asunto: "feat(lexicon): expansion v4 — wayunaiki, lokono, kalinago, jirajaroide (+1003 palabras)"
+    yamosa:
+      commit: 573719a6
+      fecha: "2026-06-21"
+      autor: MrChocolate
+      asunto: "feat(lexicon): expansion v4 — wayunaiki, lokono, kalinago, jirajaroide (+1003 palabras)"
+d_puerta_del_motor:
+  n_candidatas_voces_de_fuera_total: 43
+  n_candidatas_por_lengua:
+    caribe-continental: 4
+    taíno: 25
+    kalinago: 5
+    paraujano: 9
+  detalle:
+    cacique:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: cacike
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    maíz:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: maisi
+      tiene_gemela_indigena: maisi
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    yuca:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: yuca
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: true
+    batata:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: batata
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    bohío:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: bohio
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    kunuku:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: kunuku
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    maisi:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    aji:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: aji
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    papaya:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: papaya
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    guayaba:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    tabako:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: tabako
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    cazabi:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: cazabi
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: true
+    bohio:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: bohio
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    caney:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: true
+      en_se_queda_con_su_grafia: false
+    batey:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: batey
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    piragua:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: piragua
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    iwana:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    manati:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: manati
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    hutia:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: hutia
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    guabina:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: guabina
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    cobo:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: true
+      en_se_queda_con_su_grafia: false
+    cemi:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: true
+      en_se_queda_con_su_grafia: false
+    areito:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: areito
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    bejique:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: true
+      en_se_queda_con_su_grafia: false
+    huracan:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: true
+      en_se_queda_con_su_grafia: false
+    maboya:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: maboya
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    guanin:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: guanin
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    cacike:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: cacike
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: true
+    naboria:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: naboria
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    nitaino:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: nitaino
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    dujo:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: dujo
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    cayo:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: true
+      en_se_queda_con_su_grafia: false
+    manigua:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    bixa:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: bixa
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    abba:
+      fuente: taíno-reconstruido
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    acoa:
+      fuente: taíno-reconstruido
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: true
+    aduri:
+      fuente: taíno-reconstruido
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    agari:
+      fuente: taíno-reconstruido
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    akcicyaa:
+      fuente: taíno-reconstruido
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: akcicyaa
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: true
+    cai:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: true
+    caiman:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: true
+    casabe:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: cazabi
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    cohiba:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: cohiba
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: true
+    daca:
+      fuente: taíno-reconstruido
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: true
+    higuana:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    mayani:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    taita:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    thigisi:
+      fuente: taíno-reconstruido
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    tuna:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    wacusi:
+      fuente: taíno-reconstruido
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: true
+    wagulo:
+      fuente: taíno-reconstruido
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: true
+      forma_que_se_ensena: wagulo
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+    yamosa:
+      fuente: taíno
+      familia_normalizada: taíno
+      en_esfera_de_contacto: true
+      llega_a_voces_de_fuera: false
+      forma_que_se_ensena: null
+      tiene_gemela_indigena: null
+      en_sin_forma_de_la_esfera: false
+      en_se_queda_con_su_grafia: false
+  taino_hipotetico_json:
+    n_entradas: 26
+    referencias_en_el_repo:
+      - "\"proyecto-linguistico-caquet\\303\\255o/curiana_sim/arahuaco_comparative.py\":788:        \"taino_hipotetico\": \"*\" + forma,"
+      - "\"proyecto-linguistico-caquet\\303\\255o/curiana_sim/arahuaco_comparative.py\":926:        print(f\"  Lok. {word:<15} -> Taíno hipotetico {r['taino_hipotetico']:<15} ({glosa})\")"
+      - "\"proyecto-linguistico-caquet\\303\\255o/curiana_sim/patch_integrate_comparative.py\":11:  3. Produce JSON listo para patch: taino_hipotetico.json"
+      - "\"proyecto-linguistico-caquet\\303\\255o/curiana_sim/patch_integrate_comparative.py\":66:def generar_taino_hipotetico():"
+      - "\"proyecto-linguistico-caquet\\303\\255o/curiana_sim/patch_integrate_comparative.py\":85:            forma = r[\"taino_hipotetico\"].lstrip(\"*\")"
+      - "\"proyecto-linguistico-caquet\\303\\255o/curiana_sim/patch_integrate_comparative.py\":229:    taino_data    = generar_taino_hipotetico()"
+      - "\"proyecto-linguistico-caquet\\303\\255o/curiana_sim/patch_integrate_comparative.py\":233:    out_taino = Path(\"taino_hipotetico.json\")"
+    claves_tambien_en_el_lexicon:
+      - abba
+      - acoa
+      - aduri
+      - agari
+      - aji
+      - akcicyaa
+      - bejique
+      - cai
+      - caiman
+      - casabe
+      - cohiba
+      - daca
+      - higuana
+      - maisi
+      - mayani
+      - taita
+      - thigisi
+      - tuna
+      - wacusi
+      - wagulo
+      - yamosa
+      - yuca
+    n_claves_tambien_en_el_lexicon: 22
+e_uso_real:
+  loanword_uses:
+    n_filas_total: 40
+    n_filas_taino: 35
+    lenguas:
+      caribe-continental: 3
+      taíno: 35
+      paraujano: 2
+    por_voz:
+      maisi: 11
+      yuca: 8
+      cazabi: 6
+      casabe: 2
+      u-maíz: 2
+      bohío: 1
+      cacique: 1
+      maíz: 1
+      aji: 1
+      maboya: 1
+      maboya-ubana: 1
+    por_tier:
+      1: 9
+      2: 24
+      3: 2
+    por_dia:
+      1: 22
+      2: 5
+      3: 8
+    forma_guardada_vs_dicha:
+      maisi <- maíz: 11
+      cazabi <- casabe: 6
+      yuca <- yuca: 5
+      yuca <- (vacío): 3
+      casabe <- (vacío): 2
+      u-maíz <- u-maíz: 2
+      bohío <- (vacío): 1
+      cacique <- (vacío): 1
+      maíz <- (vacío): 1
+      aji <- aji: 1
+      maboya <- maboya: 1
+      maboya-ubana <- maboya-ubana: 1
+    runs_distintos: 16
+    aviso: "la tabla nació con la migración 20260916000000: NO es el censo del habla, sólo cubre los runs desde entonces"
+  barrido_response_text:
+    n_respuestas: 3811
+    n_runs: 51
+    caracteres: 3763049
+    metodo: "frontera de palabra sobre el texto en minúsculas; cuenta la FORMA tal cual, sin desafijar: un `maisi-ni` no cuenta como `maisi`"
+    n_del_lexicon_con_cero_usos: 41
+    del_lexicon_con_cero_usos:
+      - abba
+      - acoa
+      - aduri
+      - agari
+      - akcicyaa
+      - areito
+      - batey
+      - bejique
+      - bixa
+      - cacike
+      - cai
+      - caiman
+      - caney
+      - cayo
+      - cazabi
+      - cemi
+      - cobo
+      - cohiba
+      - daca
+      - dujo
+      - guabina
+      - guanin
+      - guayaba
+      - higuana
+      - huracan
+      - hutia
+      - iwana
+      - kunuku
+      - maisi
+      - manati
+      - manigua
+      - mayani
+      - naboria
+      - nitaino
+      - piragua
+      - tabako
+      - thigisi
+      - tuna
+      - wacusi
+      - wagulo
+      - yamosa
+    conteo:
+      abba:
+        ocurrencias: 0
+        respuestas: 0
+      acoa:
+        ocurrencias: 0
+        respuestas: 0
+      aduri:
+        ocurrencias: 0
+        respuestas: 0
+      agari:
+        ocurrencias: 0
+        respuestas: 0
+      aji:
+        ocurrencias: 1
+        respuestas: 1
+      akcicyaa:
+        ocurrencias: 0
+        respuestas: 0
+      areito:
+        ocurrencias: 0
+        respuestas: 0
+      aririn:
+        ocurrencias: 0
+        respuestas: 0
+      batata:
+        ocurrencias: 1
+        respuestas: 1
+      batey:
+        ocurrencias: 0
+        respuestas: 0
+      bejique:
+        ocurrencias: 0
+        respuestas: 0
+      bixa:
+        ocurrencias: 0
+        respuestas: 0
+      bohio:
+        ocurrencias: 4
+        respuestas: 4
+      bohío:
+        ocurrencias: 33
+        respuestas: 27
+      cacike:
+        ocurrencias: 0
+        respuestas: 0
+      cacique:
+        ocurrencias: 35
+        respuestas: 34
+      cai:
+        ocurrencias: 0
+        respuestas: 0
+      caiman:
+        ocurrencias: 0
+        respuestas: 0
+      caney:
+        ocurrencias: 0
+        respuestas: 0
+      casabe:
+        ocurrencias: 179
+        respuestas: 103
+      cayo:
+        ocurrencias: 0
+        respuestas: 0
+      cazabi:
+        ocurrencias: 0
+        respuestas: 0
+      cemi:
+        ocurrencias: 0
+        respuestas: 0
+      cobo:
+        ocurrencias: 0
+        respuestas: 0
+      cohiba:
+        ocurrencias: 0
+        respuestas: 0
+      daca:
+        ocurrencias: 0
+        respuestas: 0
+      dujo:
+        ocurrencias: 0
+        respuestas: 0
+      guabina:
+        ocurrencias: 0
+        respuestas: 0
+      guanin:
+        ocurrencias: 0
+        respuestas: 0
+      guayaba:
+        ocurrencias: 0
+        respuestas: 0
+      higuana:
+        ocurrencias: 0
+        respuestas: 0
+      huracan:
+        ocurrencias: 0
+        respuestas: 0
+      hutia:
+        ocurrencias: 0
+        respuestas: 0
+      itime:
+        ocurrencias: 0
+        respuestas: 0
+      iwana:
+        ocurrencias: 0
+        respuestas: 0
+      kunuku:
+        ocurrencias: 0
+        respuestas: 0
+      maboya:
+        ocurrencias: 1
+        respuestas: 1
+      maisi:
+        ocurrencias: 0
+        respuestas: 0
+      manati:
+        ocurrencias: 0
+        respuestas: 0
+      manigua:
+        ocurrencias: 0
+        respuestas: 0
+      mayani:
+        ocurrencias: 0
+        respuestas: 0
+      maíz:
+        ocurrencias: 103
+        respuestas: 72
+      naboria:
+        ocurrencias: 0
+        respuestas: 0
+      nitaino:
+        ocurrencias: 0
+        respuestas: 0
+      papaya:
+        ocurrencias: 1
+        respuestas: 1
+      piragua:
+        ocurrencias: 0
+        respuestas: 0
+      siba:
+        ocurrencias: 0
+        respuestas: 0
+      tabako:
+        ocurrencias: 0
+        respuestas: 0
+      taita:
+        ocurrencias: 1
+        respuestas: 1
+      thigisi:
+        ocurrencias: 0
+        respuestas: 0
+      tuna:
+        ocurrencias: 0
+        respuestas: 0
+      uju:
+        ocurrencias: 0
+        respuestas: 0
+      wacusi:
+        ocurrencias: 0
+        respuestas: 0
+      wagulo:
+        ocurrencias: 0
+        respuestas: 0
+      yamosa:
+        ocurrencias: 0
+        respuestas: 0
+      yuca:
+        ocurrencias: 107
+        respuestas: 84
+f_clase:
+  por_clase:
+    iii-sin-fuente-ninguna: 42
+    i-fuente-primaria-localizable: 10
+  detalle:
+    cacique:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: voz taína sin discusión, pero la clave castellana convive con `cacike` y ninguna de las dos cita nada
+    maíz:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: voz taína sin discusión, pero la clave castellana convive con `maisi` y ninguna de las dos cita nada
+    yuca:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    batata:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    bohío:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    kunuku:
+      clase: i-fuente-primaria-localizable
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    maisi:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    aji:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    papaya:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: atribuida tanto al taíno como al caribe según la obra; la nota no cita ninguna
+    guayaba:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    tabako:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: la forma taína atestiguada es cohiba (que el lexicón TIENE aparte); «tabaco» es la voz que llegó al castellano, de étimo discutido
+    cazabi:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    bohio:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    caney:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    batey:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    piragua:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: étimo caribe en la lexicografía corriente; la nota sólo dice «Tno. piragua → español piragua»
+    iwana:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    manati:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    hutia:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    guabina:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    cobo:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    cemi:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    areito:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    bejique:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    huracan:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    maboya:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: más citada como caribe insular (mabuya) que como taína
+    guanin:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    cacike:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    naboria:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    nitaino:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    dujo:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    cayo:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    manigua:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    bixa:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    abba:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    acoa:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    aduri:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    agari:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    akcicyaa:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    cai:
+      clase: i-fuente-primaria-localizable
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    caiman:
+      clase: i-fuente-primaria-localizable
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: el étimo corriente es caribe (acayouman), no taíno; la nota lo da por «Taíno atestiguado … Brinton 1871» sin página
+    casabe:
+      clase: i-fuente-primaria-localizable
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    cohiba:
+      clase: i-fuente-primaria-localizable
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    daca:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    higuana:
+      clase: i-fuente-primaria-localizable
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    mayani:
+      clase: i-fuente-primaria-localizable
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    taita:
+      clase: i-fuente-primaria-localizable
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: voz de crianza panamericana (y romance); «cognado Lok. itti» no la hace taína
+    thigisi:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    tuna:
+      clase: i-fuente-primaria-localizable
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    wacusi:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    wagulo:
+      clase: iii-sin-fuente-ninguna
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+    yamosa:
+      clase: i-fuente-primaria-localizable
+      deuda: sin-procedencia
+      sospechosa_de_no_ser_taina: null
+g_verificacion_de_las_citas:
+  brinton_1871:
+    estado: medido
+    que_es_brinton_1871: The Arawack Language of Guiana — comparativa del LOKONO, pero con un «Vocabulary of the Ancient Language of the Great Antilles» dentro, que SÍ es taíno
+    n_entradas_que_lo_citan: 9
+    entradas_que_lo_citan:
+      - cai
+      - caiman
+      - casabe
+      - cohiba
+      - higuana
+      - mayani
+      - taita
+      - tuna
+      - yamosa
+    n_citas_que_no_se_verifican: 2
+    citas_que_no_se_verifican:
+      - higuana
+      - tuna
+    aviso: un cero aquí es del TEXTO PLANO OCR del repo, con los patrones declarados arriba, no de la obra impresa; el PDF de Brinton pesa 0 bytes. La relectura es de T1/T2
+    detalle:
+      abba:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - (?<![A-Za-z])abba(?![A-Za-z])
+        ocurrencias: 4
+        contexto:
+          - >-
+              d ipirnihesaabulu stronT;er, that which is stronger. The numerals are wonderfully simple, and well illustrate how the primitive man began his arithmetic. They are : — 1 abba. 3 biama, plural biamannu. 3 kabbuhtn, plural kubbuhininnu. 4 bibiti, plural bibitinu. 5 abbatekk4be, plural abbatekabbunu. 6 abbatiman, plural abbatimanninu. 7 biamatt
+          - >-
+              abbuliintimanninu. 9 bibiciman, plural bibititumanninu. 10 biamantek&bbe, plural biamantekAbunu. Now if we analyze these words, we discover that abbalekkdbe five, is simply abba one, and akkabu hand ; that the word for six is literally "one [finger] of the other [hand]," for seven "two [fingers] of the other [hand]," and so IN ITS LINGUISTI
+      acoa:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - (?<![A-Za-z])acoa(?![A-Za-z])
+        ocurrencias: 0
+        contexto: []
+      aduri:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - (?<![A-Za-z])aduri(?![A-Za-z])
+        ocurrencias: 0
+        contexto: []
+      agari:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - (?<![A-Za-z])agari(?![A-Za-z])
+        ocurrencias: 0
+        contexto: []
+      aji:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - (?<![A-Za-z])a[gj][il1](?![A-Za-z])
+        ocurrencias: 1
+        contexto:
+          - >-
+               corresponding Arawack expression, which, it must be borne in mind, is to be pronounced by the German alphabet. Vocabulary of the Ancient Language of the Great Antilles. Aji, red pepper. Arawack, achi, red pepper. Aon, dog (Las Casas, Hist. Gen. lib. I, c. 120). Island Ar. dnli, dog. Arcabuco, a wood, a spot covered with trees (Oviedo
+      akcicyaa:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - (?<![A-Za-z])akcicyaa(?![A-Za-z])
+        ocurrencias: 0
+        contexto: []
+      areito:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - are[il1]t[o0]
+        ocurrencias: 1
+        contexto:
+          - >-
+              nd Ar. dnli, dog. Arcabuco, a wood, a spot covered with trees (Oviedo, Hist. Gen. de las Indias, lib. VI, c, 8). Ar. arragkaragTcadin the swaying to and fro of trees. Areito, a song chanted alternately by the priests and the people at their feasts. (Oviedo, Hist. Gen. lib. V, c. 1.) Ar. aririn to name, rehearse. Bagua, the sea. Ar. bara,
+      batata:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - batata
+        ocurrencias: 0
+        contexto: []
+      batey:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - bate[yi]
+        ocurrencias: 1
+        contexto:
+          - >-
+              pectore. Hebraeos et Arabicos eodem modo suas proferre adspirationes vldcs," (id. pp. 285, 286.) 12 THE ARAWACK LANGUAGE OF GUIANA Batay, a ball-ground ; bates, the ball; batey, the game. (Las Casas, Hist. Apol. c. 204). Ar. battatan, to be round, spherical.*' Batea, a trough. (Las Casas, Hist. Apol. c. 241.) Bejique, a priest. Ar. piaye,
+      bejique:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - be[hjl][il1][qg]ue
+          - be[hjl]ique
+        ocurrencias: 2
+        contexto:
+          - >-
+              ground ; bates, the ball; batey, the game. (Las Casas, Hist. Apol. c. 204). Ar. battatan, to be round, spherical.*' Batea, a trough. (Las Casas, Hist. Apol. c. 241.) Bejique, a priest. Ar. piaye, a priest. Bixa, an ointment. (I^as Casas, Hist. Apol. cap. 241.) Cai, cayo, or cayco, an island. Prom this the Sp. eayo, Eng. key, in th
+          - >-
+              ground ; bates, the ball; batey, the game. (Las Casas, Hist. Apol. c. 204). Ar. battatan, to be round, spherical.*' Batea, a trough. (Las Casas, Hist. Apol. c. 241.) Bejique, a priest. Ar. piaye, a priest. Bixa, an ointment. (I^as Casas, Hist. Apol. cap. 241.) Cai, cayo, or cayco, an island. Prom this the Sp. eayo, Eng. key, in th
+      bixa:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - (?<![A-Za-z])b[il1][xj]a(?![A-Za-z])
+        ocurrencias: 1
+        contexto:
+          - >-
+              (Las Casas, Hist. Apol. c. 204). Ar. battatan, to be round, spherical.*' Batea, a trough. (Las Casas, Hist. Apol. c. 241.) Bejique, a priest. Ar. piaye, a priest. Bixa, an ointment. (I^as Casas, Hist. Apol. cap. 241.) Cai, cayo, or cayco, an island. Prom this the Sp. eayo, Eng. key, in the "Florida keys." Ar. kairi, an island.
+      bohio:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - bo[hb][il1][o0]
+          - bu[hb][il1][o0]
+        ocurrencias: 0
+        contexto: []
+      bohío:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - bo[hb][il1][o0]
+          - bu[hb][il1][o0]
+        ocurrencias: 0
+        contexto: []
+      cacike:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - ca[cs]i[qc]ue
+        ocurrencias: 3
+        contexto:
+          - >-
+              les, ornaments. (See Martius, Sprachenkunde, B. ii, p. 332.) Caney or cansi, a house of conical shape. Canoa, a boat. From this Eng. eanoe. Ar. kannoa, a boat. Casique, a chief. This word was afterwards applied by Spanish writers to the native rulers throughout the New World. Ar. hassiquan (from ussequa, house), to have or own a house 
+          - >-
+              1 "Varla eulm esse idiomata in variis Cubae provlnclis perpendenint." (Pet. Martyr, Be Rebus Oceanicis, v, 42). Las Casas says that a sailor told Columbus thathe sawonelndlancacique in along whitetunic who refused to speaii, but stalked silently away. (FIist.de las Indias, Ub. I. cap. 95). Martyr says there were several. Peschel suggests they were tall w
+      cacique:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - ca[cs]i[qc]ue
+        ocurrencias: 3
+        contexto:
+          - >-
+              les, ornaments. (See Martius, Sprachenkunde, B. ii, p. 332.) Caney or cansi, a house of conical shape. Canoa, a boat. From this Eng. eanoe. Ar. kannoa, a boat. Casique, a chief. This word was afterwards applied by Spanish writers to the native rulers throughout the New World. Ar. hassiquan (from ussequa, house), to have or own a house 
+          - >-
+              1 "Varla eulm esse idiomata in variis Cubae provlnclis perpendenint." (Pet. Martyr, Be Rebus Oceanicis, v, 42). Las Casas says that a sailor told Columbus thathe sawonelndlancacique in along whitetunic who refused to speaii, but stalked silently away. (FIist.de las Indias, Ub. I. cap. 95). Martyr says there were several. Peschel suggests they were tall w
+      cai:
+        la_entrada_cita_a_brinton: true
+        patrones_probados:
+          - (?<![A-Za-z])cai(?![A-Za-z])
+        ocurrencias: 1
+        contexto:
+          - >-
+              , spherical.*' Batea, a trough. (Las Casas, Hist. Apol. c. 241.) Bejique, a priest. Ar. piaye, a priest. Bixa, an ointment. (I^as Casas, Hist. Apol. cap. 241.) Cai, cayo, or cayco, an island. Prom this the Sp. eayo, Eng. key, in the "Florida keys." Ar. kairi, an island. Caiman, an alligator, Ar. k/iiman, an alligator, lit. 
+      caiman:
+        la_entrada_cita_a_brinton: true
+        patrones_probados:
+          - (?<![A-Za-z])caiman(?![A-Za-z])
+        ocurrencias: 1
+        contexto:
+          - >-
+              an ointment. (I^as Casas, Hist. Apol. cap. 241.) Cai, cayo, or cayco, an island. Prom this the Sp. eayo, Eng. key, in the "Florida keys." Ar. kairi, an island. Caiman, an alligator, Ar. k/iiman, an alligator, lit. to be strong. Caona or cauni, gold. (Pet. Martyr, Decad. p. 26, Ed. Colon, 1564). Ar. kaijaunan, to be precious, c
+      caney:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - cane[yi]
+        ocurrencias: 1
+        contexto:
+          - >-
+              ivalve shell. From this the Sp. caracal. (Richardo, Dice. Provin. s. v). Probably from Galibi caracoulis, trifles, ornaments. (See Martius, Sprachenkunde, B. ii, p. 332.) Caney or cansi, a house of conical shape. Canoa, a boat. From this Eng. eanoe. Ar. kannoa, a boat. Casique, a chief. This word was afterwards applied by Spanish writers
+      casabe:
+        la_entrada_cita_a_brinton: true
+        patrones_probados:
+          - ca[sz][sz]?[ab][ab]?[ie]
+          - ca[sz][sz]?ava
+        ocurrencias: 2
+        contexto:
+          - >-
+              s, etc.), meal-eaters, from their peaceful habit of gaining an important article of diet from the amylaceous pith of the Mauritia flexuom palm, and the edible root of the cassava plant. They number only about two thousand souls, and may seem to claim no more attention at the hands of the ethnologist than any other obscure Indian tribe. But if i
+          - >-
+              brary of the Am. Phil. Soc.) translates diablo by liurakan, but as the equivalent of the Spanish Uuracan, he gives ratincliet. Hyen, a poisonous liquor expressed from the cassava root. (Las Casas, Hist. Apol. cap. 2). • Itabo, a lagoon, pond. (Richardo). Juanna, a serpent. (Pet. Martyr, p. 63). Xv.joanna, a lizard ; jawanaria, a serpent
+      cayo:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - (?<![A-Za-z])ca[yi]c?o(?![A-Za-z])
+        ocurrencias: 2
+        contexto:
+          - >-
+              erical.*' Batea, a trough. (Las Casas, Hist. Apol. c. 241.) Bejique, a priest. Ar. piaye, a priest. Bixa, an ointment. (I^as Casas, Hist. Apol. cap. 241.) Cai, cayo, or cayco, an island. Prom this the Sp. eayo, Eng. key, in the "Florida keys." Ar. kairi, an island. Caiman, an alligator, Ar. k/iiman, an alligator, lit. to be
+          - >-
+               Batea, a trough. (Las Casas, Hist. Apol. c. 241.) Bejique, a priest. Ar. piaye, a priest. Bixa, an ointment. (I^as Casas, Hist. Apol. cap. 241.) Cai, cayo, or cayco, an island. Prom this the Sp. eayo, Eng. key, in the "Florida keys." Ar. kairi, an island. Caiman, an alligator, Ar. k/iiman, an alligator, lit. to be strong. 
+      cazabi:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - ca[sz][sz]?[ab][ab]?[ie]
+        ocurrencias: 0
+        contexto: []
+      cemi:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - (?<![A-Za-z])cem[il1](?![A-Za-z])
+        ocurrencias: 0
+        contexto: []
+      cobo:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - (?<![A-Za-z])cob[o0](?![A-Za-z])
+        ocurrencias: 0
+        contexto: []
+      cohiba:
+        la_entrada_cita_a_brinton: true
+        patrones_probados:
+          - co[hlb][il1][bh]a
+          - coh[o0]ba
+        ocurrencias: 1
+        contexto:
+          - >-
+               Ar. siba, a stone. Starei, shining, glowing (relucens, Pet. Martyr, Decad. p. 304). Ai% tere'n to be hot, glowing, tereh'A heat. Tabaco, the pipe used in smoking the cohoba. This word has been applied in all European languages to the plant nicotiana tabacum itself. Taita, father (Richardo). Ar. ilta father, dailta or dalli my father. Tagu
+      daca:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - (?<![A-Za-z])daca(?![A-Za-z])
+        ocurrencias: 0
+        contexto: []
+      dujo:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - du[hj][o0]
+          - du[hl][il1]?os
+        ocurrencias: 1
+        contexto:
+          - >-
+               river, uimelian, to be new. Coaibai, the abode of the dead. Cohdba, the native name of tobacco. Conuco, a cultivated field. (Oviedo, Hist. Gen. lib. vii, cap. 2.) Dulios or duohos, low seats (unas baxas sillas. Las Casas, Hist. Gen. lib. I, cap 90. Oviedo, Hist. Gen. lib. V. cap. 1 . Richardo, sub voce, by a careless reading of Oviedo 
+      guabina:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - guab[il1]na
+        ocurrencias: 0
+        contexto: []
+      guanin:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - guanin
+        ocurrencias: 1
+        contexto:
+          - >-
+               "' ' Guacamayo, a species of parrot, maci-ocercus tricolor. .' " * - Guanara, a retired stop. (Pane, p. 444); a species' of dove, eolunjba ^naida (Richardo, S. V.) Guanin, an impure sort of gold. " \ ■ *' Guaoxeri, a term applied to the lowest class of tiie inhabitants (Las Casas, Hist. Apol. cap. 197.) A.v wakaijaru, worthless, d
+      guayaba:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - gua[yi]a[bh]a
+        ocurrencias: 0
+        contexto: []
+      higuana:
+        la_entrada_cita_a_brinton: true
+        patrones_probados:
+          - "[hbl][il1][gq]u?[ai]na"
+          - (?<![A-Za-z])[yj]guana
+        ocurrencias: 0
+        contexto: []
+      huracan:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - "[hb]uracan"
+        ocurrencias: 1
+        contexto:
+          - >-
+               reddish inetaL (Navarrete Viages, i, p. 134, Pet. Martyr, Dec. p. 303). Ar. hobin, red. Iluiho, heigbt. (Pet. Martyr, p. 304). Ar. aijumiin, above, high iip. Huracan, a hurricane. From this Sp. huraean, Fr. ouragan, German Orkan, Eiig. hurricane. Tliis woi'd is given in the Liere Sacri des Qaichis as the nams of their highest divinity
+      hutia:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - "[hb]ut[il1]a"
+        ocurrencias: 0
+        contexto: []
+      iwana:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - (?<![A-Za-z])[il1]wana(?![A-Za-z])
+        ocurrencias: 0
+        contexto: []
+      kunuku:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - conuco
+          - "[ck]unu[ck]"
+        ocurrencias: 1
+        contexto:
+          - >-
+              nning. (Pet. Martyr, Decad. p. 302.) Ar. erne or uime, the mouth of a river, uimelian, to be new. Coaibai, the abode of the dead. Cohdba, the native name of tobacco. Conuco, a cultivated field. (Oviedo, Hist. Gen. lib. vii, cap. 2.) Dulios or duohos, low seats (unas baxas sillas. Las Casas, Hist. Gen. lib. I, cap 90. Oviedo, Hist. Gen. 
+      maboya:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - mab[ou]ya
+        ocurrencias: 0
+        contexto: []
+      maisi:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - ma[il1][sz][ie]
+        ocurrencias: 6
+        contexto:
+          - >-
+              a house. Bajari, title applied to sub-chiefs ruling villages, (Las Casas, Hist. Apol. oaj). 120). Probably "house-ruler," from Ar. baju, house. Barbacoa, a loft for drying maize, (Oviedo, Hist. Gen. lib. VII, cap. 1). From this the English barbacue. Ar. burrabakoa, a place for storing provisions. " See the remarks of Richardo in the Prologo to 
+          - >-
+               serpent. Maoana, a war club. (Navarrete, Viages. i. p. 13.5). Jlagua, a plain. (Las Casas, Breviss. Relat. p. 7). Maguey, a native drum. (Pet. Martyr, p. 380). Maisi, maize. From this Eng. maize, Sp. main, Ar. mariti, maize. Matum, liberal, noble. (Pet. Martyr, p. 293). Matunheri, a title applied to the highest chiefs. (Las Ca
+      manati:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - manat[il1]
+        ocurrencias: 0
+        contexto: []
+      manigua:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - manigua
+        ocurrencias: 0
+        contexto: []
+      mayani:
+        la_entrada_cita_a_brinton: true
+        patrones_probados:
+          - ma[yi]ani
+        ocurrencias: 1
+        contexto:
+          - >-
+              ize, Sp. main, Ar. mariti, maize. Matum, liberal, noble. (Pet. Martyr, p. 293). Matunheri, a title applied to the highest chiefs. (Las Casas, Hist. Apol. cap. 197), Mayani, of no value, ("nihil!," Pet. Martyr, p. 9). Ar. ma, no, not. Naborias, servants. (Las Casas, Hist. Gen. lib. iii, cap. 33). Nacan, middle, center. Ar. annakan,
+      maíz:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - ma[il1][sz][ie]
+        ocurrencias: 6
+        contexto:
+          - >-
+              a house. Bajari, title applied to sub-chiefs ruling villages, (Las Casas, Hist. Apol. oaj). 120). Probably "house-ruler," from Ar. baju, house. Barbacoa, a loft for drying maize, (Oviedo, Hist. Gen. lib. VII, cap. 1). From this the English barbacue. Ar. burrabakoa, a place for storing provisions. " See the remarks of Richardo in the Prologo to 
+          - >-
+               serpent. Maoana, a war club. (Navarrete, Viages. i. p. 13.5). Jlagua, a plain. (Las Casas, Breviss. Relat. p. 7). Maguey, a native drum. (Pet. Martyr, p. 380). Maisi, maize. From this Eng. maize, Sp. main, Ar. mariti, maize. Matum, liberal, noble. (Pet. Martyr, p. 293). Matunheri, a title applied to the highest chiefs. (Las Ca
+      naboria:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - nabor[il1]a
+        ocurrencias: 1
+        contexto:
+          - >-
+               293). Matunheri, a title applied to the highest chiefs. (Las Casas, Hist. Apol. cap. 197), Mayani, of no value, ("nihil!," Pet. Martyr, p. 9). Ar. ma, no, not. Naborias, servants. (Las Casas, Hist. Gen. lib. iii, cap. 33). Nacan, middle, center. Ar. annakan, center. ' Nagua, or enagua, the breecli cloth made of cotton and worn arou
+      nitaino:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - n[il1]ta[il1]n
+        ocurrencias: 1
+        contexto:
+          - >-
+              iii, cap. 33). Nacan, middle, center. Ar. annakan, center. ' Nagua, or enagua, the breecli cloth made of cotton and worn around the middle. Ar, annaka, the middle. Nitainos, the title applied to the petty chiefs, (regillos 6 guiallos. Las Casas, Hist. Apol. cap, 197) ; tayno vir bonus, taynos nobiles, says Pet. Martyr, (Decad. p. 25). The 
+      papaya:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - papa[yi]a
+        ocurrencias: 0
+        contexto: []
+      piragua:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - piragua
+        ocurrencias: 0
+        contexto: []
+      tabako:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - tabac[o0]
+        ocurrencias: 1
+        contexto:
+          - >-
+               diviners, priests. Siba, a stone. Ar. siba, a stone. Starei, shining, glowing (relucens, Pet. Martyr, Decad. p. 304). Ai% tere'n to be hot, glowing, tereh'A heat. Tabaco, the pipe used in smoking the cohoba. This word has been applied in all European languages to the plant nicotiana tabacum itself. Taita, father (Richardo). Ar. ilta fa
+      taita:
+        la_entrada_cita_a_brinton: true
+        patrones_probados:
+          - (?<![A-Za-z])taita(?![A-Za-z])
+        ocurrencias: 1
+        contexto:
+          - >-
+               be hot, glowing, tereh'A heat. Tabaco, the pipe used in smoking the cohoba. This word has been applied in all European languages to the plant nicotiana tabacum itself. Taita, father (Richardo). Ar. ilta father, dailta or dalli my father. TaguSguas, ornaments for the ears hammered from native gold (Las Casas, Hist. Apol. cap, 199). Tuob, gol
+      thigisi:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - (?<![A-Za-z])thigisi(?![A-Za-z])
+        ocurrencias: 0
+        contexto: []
+      tuna:
+        la_entrada_cita_a_brinton: true
+        patrones_probados:
+          - (?<![A-Za-z])tuna(?![A-Za-z])
+        ocurrencias: 0
+        contexto: []
+      wacusi:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - (?<![A-Za-z])wacusi(?![A-Za-z])
+        ocurrencias: 0
+        contexto: []
+      wagulo:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - (?<![A-Za-z])wagulo(?![A-Za-z])
+        ocurrencias: 0
+        contexto: []
+      yamosa:
+        la_entrada_cita_a_brinton: true
+        patrones_probados:
+          - "[yi]amosa"
+        ocurrencias: 2
+        contexto:
+          - >-
+              NGUAGE OF GUIANA The following numerals are given by Las Oasas (Hist. Apol. c.ip. 204). 1 hequeti. Ar. hurketai, tliat is one, from hurkun to be single or alone. 2 yamosa. Ar. Mama, two. 3 cauocum. Ar. kannikun, many, a large number, kannikukade, he has many things. 4 yaraoucobre, evidently formed from yamosa, as Ar. bibiti, four, fr
+          - >-
+               be single or alone. 2 yamosa. Ar. Mama, two. 3 cauocum. Ar. kannikun, many, a large number, kannikukade, he has many things. 4 yaraoucobre, evidently formed from yamosa, as Ar. bibiti, four, from biama, two. The other numerals Las Casas had unfortunately forgotten, but he says they counted by hands and feet, just as the Arawacks do to 
+      yuca:
+        la_entrada_cita_a_brinton: false
+        patrones_probados:
+          - (?<![A-Za-z])[yj]u[ck]a(?![A-Za-z])
+        ocurrencias: 1
+        contexto:
+          - >-
+               Yucayos"' says Las Casas, (flwi. (?««. lib. ii, cap. 44) and after him Herrera. But the correction which was based apparently on some supposed connection of the word with yuca, llie Haitian name of an esculent plant, is superfluous, and Las Casas himself never employs it, nor a single other writer. 30 Las Casas. HUl. Gen. tie las Indias, li
+  alvarado_1921:
+    estado: medido
+    metodo: >-
+        se busca el LEMA castellano de Alvarado (tabla declarada LEMAS_ALVARADO), no nuestra clave, sobre el texto aplanado —sin acentos y sin el guion de fin de línea del OCR—: buscar `cai` sobre el crudo casaba con «Cai- mán»
+    claves_sin_lema_declarado:
+      - abba
+      - acoa
+      - aduri
+      - agari
+      - akcicyaa
+      - daca
+      - thigisi
+      - wacusi
+      - wagulo
+    etiquetas_de_origen_que_usa_la_obra:
+      voz taina: 48
+      voz haitiana: 2
+      voz caribe: 5
+      voz galibi: 4
+      voz cumanagota: 13
+      voz cháima: 11
+      en taino: 1
+    desfase_pdf_a_impresa: -31
+    n_marcas_voz_taina: 48
+    n_claves_nuestras_con_marca: 14
+    claves_nuestras_con_marca:
+      - batey
+      - bohio
+      - bohío
+      - caiman
+      - casabe
+      - cazabi
+      - cohiba
+      - higuana
+      - iwana
+      - maisi
+      - maíz
+      - tabako
+      - tuna
+      - yuca
+    detalle:
+      batey:
+        - pagina_pdf: 55
+          pagina_impresa: 24
+          lemas_probados:
+            - batei
+          fragmento: >-
+              el objeto en el lavado de arcillas auríferas extendió el de la voz en toda la América española. Voz taina, que paso al caribe insular bajo la forma francesa bataya (pronunciada batea). Armas y la Academia suponen una etimología arábiga. Ref. Ov. I. 184. BATÉI. Voz taina, solamente geográfica en Venezuela El Batéi (costa oriental
+      bohio:
+        - pagina_pdf: 60
+          pagina_impresa: 29
+          lemas_probados:
+            - bohio
+            - buhio
+          fragmento: >-
+              jo. D. t. Birubiro, — BlBIRÍ. * BOHÍO. Casa pajiza, choza, cabana. * 'Las casas en que moraban comunmente llaman buhío en estas islas todas (que quiere decir casa o morada) pero propriamente en la ; lengua de Haytí el buhiq o casa se llama eracra". (Ov. I. 63). Voz taina. Hay que admitir con reserva lo que dice f r. Simón acerca
+      bohío:
+        - pagina_pdf: 60
+          pagina_impresa: 29
+          lemas_probados:
+            - bohio
+            - buhio
+          fragmento: >-
+              jo. D. t. Birubiro, — BlBIRÍ. * BOHÍO. Casa pajiza, choza, cabana. * 'Las casas en que moraban comunmente llaman buhío en estas islas todas (que quiere decir casa o morada) pero propriamente en la ; lengua de Haytí el buhiq o casa se llama eracra". (Ov. I. 63). Voz taina. Hay que admitir con reserva lo que dice f r. Simón acerca
+      caiman:
+        - pagina_pdf: 75
+          pagina_impresa: 44
+          lemas_probados:
+            - caiman
+          fragmento: >-
+               pasará de cinco varas, pero son muy ligeros y más feroces que los otros los llaman Tartaguitos, porque tienen manchas negras sobre color pagizo". (Cisn. 43). No es raro que le atrapen los na- turales zabullendo y echándole un lazo debajo del agua. Cai- mán es voz taina y galibi : en cal. se decía akayumán; pero los dialectos ca
+      casabe:
+        - pagina_pdf: 99
+          pagina_impresa: 68
+          lemas_probados:
+            - casabe
+            - cazabe
+          fragmento: >-
+              ca, preparado hoi día lo mismo que — lo hacían los indígenas en el tiempo del descubrimiento de América. "La otra es la yuca-amarga, que solo se emplea en hacer el casabe". (Cod. 13o). Precisa apenas aducir autorida- des para la voz o detalles para el producto. Voz taina. Reff. Cas. V. 3o5; Ov. I. 268; Cast. A''. Reino, 23; Ampi
+      cazabi:
+        - pagina_pdf: 99
+          pagina_impresa: 68
+          lemas_probados:
+            - casabe
+            - cazabe
+          fragmento: >-
+              ca, preparado hoi día lo mismo que — lo hacían los indígenas en el tiempo del descubrimiento de América. "La otra es la yuca-amarga, que solo se emplea en hacer el casabe". (Cod. 13o). Precisa apenas aducir autorida- des para la voz o detalles para el producto. Voz taina. Reff. Cas. V. 3o5; Ov. I. 268; Cast. A''. Reino, 23; Ampi
+      cohiba:
+        - pagina_pdf: 116
+          pagina_impresa: 85
+          lemas_probados:
+            - cohiba
+            - coliiba
+            - cohoba
+          fragmento: >-
+              tas ceremonias, y a los polvos que en ellas fuma- ban los Indios antillanos. En efecto, coliiba (cohoba según Martyr, cogióla según Pane) significa en taino tabaco. El YOPO es usado de un modo parecido en Tierra Firme, y quizá de esta semejanza vino el adoptar la voz taina. Ref. Bachi- ller, 25o. — COLA. "En la costa de la mar, 
+      higuana:
+        - pagina_pdf: 204
+          pagina_impresa: 173
+          lemas_probados:
+            - iguana
+            - yguana
+          fragmento: >-
+              lmente, rema con la — cola, zabulle y bucea con destreza. *Xos huevos y la carne de este reptil tienen agradable gusto". (Cod. 217). "Hay muchas sierpes, que llaman en las islas iguanas y en esta tierra (la del rio Alvarado) cuauhcuezpaltepec". (Góm., Méx. 24).—Voz taina; tam. iuána, cum. iguaria. Grafía antigua: yguana (Carv. 3
+      iwana:
+        - pagina_pdf: 204
+          pagina_impresa: 173
+          lemas_probados:
+            - iguana
+            - yguana
+          fragmento: >-
+              lmente, rema con la — cola, zabulle y bucea con destreza. *Xos huevos y la carne de este reptil tienen agradable gusto". (Cod. 217). "Hay muchas sierpes, que llaman en las islas iguanas y en esta tierra (la del rio Alvarado) cuauhcuezpaltepec". (Góm., Méx. 24).—Voz taina; tam. iuána, cum. iguaria. Grafía antigua: yguana (Carv. 3
+      maisi:
+        - pagina_pdf: 224
+          pagina_impresa: 193
+          lemas_probados:
+            - mahiz
+            - maiz
+          fragmento: >-
+              e hace una espiga co- mo una mazorca de que llevé yo allá, y hay ya mucho en Cas- tilla". (Colón, Carta a los Reyes Católicos, 1498).—"Las mujeres amasaban y molían pan de centli, que es maíz". (Gomara, Méx. 27). Mahiz o mayz, como escribían los cronis- tas, es voz taina, que ha sido imitada en varias lenguas in- dígenas del con
+      maíz:
+        - pagina_pdf: 224
+          pagina_impresa: 193
+          lemas_probados:
+            - mahiz
+            - maiz
+          fragmento: >-
+              e hace una espiga co- mo una mazorca de que llevé yo allá, y hay ya mucho en Cas- tilla". (Colón, Carta a los Reyes Católicos, 1498).—"Las mujeres amasaban y molían pan de centli, que es maíz". (Gomara, Méx. 27). Mahiz o mayz, como escribían los cronis- tas, es voz taina, que ha sido imitada en varias lenguas in- dígenas del con
+      tabako:
+        - pagina_pdf: 116
+          pagina_impresa: 85
+          lemas_probados:
+            - tabaco
+          fragmento: >-
+              tas ceremonias, y a los polvos que en ellas fuma- ban los Indios antillanos. En efecto, coliiba (cohoba según Martyr, cogióla según Pane) significa en taino tabaco. El YOPO es usado de un modo parecido en Tierra Firme, y quizá de esta semejanza vino el adoptar la voz taina. Ref. Bachi- ller, 25o. — COLA. "En la costa de la mar, 
+      tuna:
+        - pagina_pdf: 329
+          pagina_impresa: 298
+          lemas_probados:
+            - tuna
+          fragmento: >-
+              ; tubo ca- licinal cíavi forme. La O. Tuna, alta de unos 4 pies, tiene ar- — tejos ovales y aréolas distantes con espinas fuertes, desigua- les, amarillentas ; tubo calicinal trasovado. ^"Nuchtli es la fruta que en Cuba y Haití llaman tunas". (Góm. Méx., — 78). Voz taina. Decíase antes twnal al árbol, tuna al fruto. "El tunal es
+      yuca:
+        - pagina_pdf: 99
+          pagina_impresa: 68
+          lemas_probados:
+            - yuca
+          fragmento: >-
+              ca, preparado hoi día lo mismo que — lo hacían los indígenas en el tiempo del descubrimiento de América. "La otra es la yuca-amarga, que solo se emplea en hacer el casabe". (Cod. 13o). Precisa apenas aducir autorida- des para la voz o detalles para el producto. Voz taina. Reff. Cas. V. 3o5; Ov. I. 268; Cast. A''. Reino, 23; Ampi
+        - pagina_pdf: 345
+          pagina_impresa: 314
+          lemas_probados:
+            - yuca
+          fragmento: >-
+              aún a los 7 meses. Tarda más en las montañas ; así en el Táchira hay algunas razas, como la San-pedrito, la pico de paloma, la mano de león, la guata que cosechan a los 2 años, mientras que la monta- ñera, más resistente que las otras, cosecha a los 3. Yuca es voz taina citada ya por Vespucio en 1497. El tupi munioca, y las voce
+h_cuarentena_de_lo_contemporaneo:
+  criterios:
+    c1_sin_fuente_anterior_a_1900: la voz no aparece en ninguna fuente del repo anterior a 1900 y la entrada no cita ninguna
+    c2_concepto_que_ningun_cronista_glosa: "cubre un campo que las crónicas no glosan: números, colores, pronombres completos, saludos, partes del cuerpo, verbos conjugados"
+    c3_grafia_del_proyecto_moderno: la grafía usa convenciones del proyecto moderno (k sistemática por c/qu, w, dígrafos propios) en vez de la transcripción castellana del XVI
+    c4_se_explica_mejor_desde_el_andamio: la forma se explica mejor desde el lokono / wayuu / garífuna que desde una transcripción castellana — que es exactamente el método declarado de la recuperación contemporánea
+  aviso: >-
+      marcar NO es condenar: c4 se cumple también cuando la reconstrucción es NUESTRA (reconstruir_taino()), que es el caso de las 9 `taíno-reconstruido` y las 26 del JSON. La procedencia la decide el commit, no el parecido — ver c_origen_en_git
+  lexicon:
+    n_con_3_o_mas_criterios: 8
+    con_3_o_mas_criterios:
+      - abba
+      - acoa
+      - aduri
+      - agari
+      - daca
+      - thigisi
+      - wacusi
+      - wagulo
+    por_n_criterios:
+      1: 34
+      2: 3
+      3: 8
+      0: 7
+    detalle:
+      cacique:
+        categoria: sust
+        criterios:
+          - c1
+        n_criterios: 1
+      maíz:
+        categoria: sust
+        criterios:
+          - c1
+        n_criterios: 1
+      yuca:
+        categoria: flora
+        criterios:
+          - c1
+        n_criterios: 1
+      batata:
+        categoria: flora
+        criterios:
+          - c1
+        n_criterios: 1
+      bohío:
+        categoria: sust
+        criterios:
+          - c1
+        n_criterios: 1
+      kunuku:
+        categoria: sust
+        criterios:
+          - c3
+        n_criterios: 1
+      maisi:
+        categoria: flora
+        criterios:
+          - c1
+        n_criterios: 1
+      aji:
+        categoria: flora
+        criterios:
+          - c1
+        n_criterios: 1
+      papaya:
+        categoria: flora
+        criterios:
+          - c1
+        n_criterios: 1
+      guayaba:
+        categoria: flora
+        criterios:
+          - c1
+        n_criterios: 1
+      tabako:
+        categoria: ritual
+        criterios:
+          - c1
+          - c3
+        n_criterios: 2
+      cazabi:
+        categoria: alimentacion
+        criterios:
+          - c1
+        n_criterios: 1
+      bohio:
+        categoria: arquitectura
+        criterios:
+          - c1
+        n_criterios: 1
+      caney:
+        categoria: arquitectura
+        criterios:
+          - c1
+        n_criterios: 1
+      batey:
+        categoria: arquitectura
+        criterios:
+          - c1
+        n_criterios: 1
+      piragua:
+        categoria: navegacion
+        criterios:
+          - c1
+        n_criterios: 1
+      iwana:
+        categoria: fauna
+        criterios:
+          - c1
+          - c3
+        n_criterios: 2
+      manati:
+        categoria: fauna
+        criterios:
+          - c1
+        n_criterios: 1
+      hutia:
+        categoria: fauna
+        criterios:
+          - c1
+        n_criterios: 1
+      guabina:
+        categoria: fauna
+        criterios:
+          - c1
+        n_criterios: 1
+      cobo:
+        categoria: fauna
+        criterios:
+          - c1
+        n_criterios: 1
+      cemi:
+        categoria: cosmos
+        criterios:
+          - c1
+        n_criterios: 1
+      areito:
+        categoria: ritual
+        criterios:
+          - c1
+        n_criterios: 1
+      bejique:
+        categoria: cosmos
+        criterios:
+          - c1
+        n_criterios: 1
+      huracan:
+        categoria: cosmos
+        criterios:
+          - c1
+        n_criterios: 1
+      maboya:
+        categoria: cosmos
+        criterios:
+          - c1
+        n_criterios: 1
+      guanin:
+        categoria: comercio
+        criterios:
+          - c1
+        n_criterios: 1
+      cacike:
+        categoria: jerarquia
+        criterios:
+          - c1
+        n_criterios: 1
+      naboria:
+        categoria: jerarquia
+        criterios:
+          - c1
+        n_criterios: 1
+      nitaino:
+        categoria: jerarquia
+        criterios:
+          - c1
+        n_criterios: 1
+      dujo:
+        categoria: utiles
+        criterios:
+          - c1
+        n_criterios: 1
+      cayo:
+        categoria: geografia
+        criterios:
+          - c1
+        n_criterios: 1
+      manigua:
+        categoria: geografia
+        criterios:
+          - c1
+        n_criterios: 1
+      bixa:
+        categoria: materiales
+        criterios:
+          - c1
+        n_criterios: 1
+      abba:
+        categoria: gramatica
+        criterios:
+          - c1
+          - c2
+          - c4
+        n_criterios: 3
+      acoa:
+        categoria: cuerpo
+        criterios:
+          - c1
+          - c2
+          - c4
+        n_criterios: 3
+      aduri:
+        categoria: cuerpo
+        criterios:
+          - c1
+          - c2
+          - c4
+        n_criterios: 3
+      agari:
+        categoria: cuerpo
+        criterios:
+          - c1
+          - c2
+          - c4
+        n_criterios: 3
+      akcicyaa:
+        categoria: ritual
+        criterios:
+          - c1
+          - c4
+        n_criterios: 2
+      cai:
+        categoria: geografia
+        criterios: []
+        n_criterios: 0
+      caiman:
+        categoria: fauna
+        criterios: []
+        n_criterios: 0
+      casabe:
+        categoria: alimentos
+        criterios: []
+        n_criterios: 0
+      cohiba:
+        categoria: ritual
+        criterios: []
+        n_criterios: 0
+      daca:
+        categoria: cuerpo
+        criterios:
+          - c1
+          - c2
+          - c4
+        n_criterios: 3
+      higuana:
+        categoria: fauna
+        criterios: []
+        n_criterios: 0
+      mayani:
+        categoria: gramatica
+        criterios:
+          - c2
+        n_criterios: 1
+      taita:
+        categoria: parentesco
+        criterios: []
+        n_criterios: 0
+      thigisi:
+        categoria: cuerpo
+        criterios:
+          - c1
+          - c2
+          - c4
+        n_criterios: 3
+      tuna:
+        categoria: geografia
+        criterios: []
+        n_criterios: 0
+      wacusi:
+        categoria: cuerpo
+        criterios:
+          - c1
+          - c2
+          - c4
+        n_criterios: 3
+      wagulo:
+        categoria: fauna
+        criterios:
+          - c1
+          - c3
+          - c4
+        n_criterios: 3
+      yamosa:
+        categoria: gramatica
+        criterios:
+          - c2
+        n_criterios: 1
+  taino_hipotetico_json:
+    n: 26
+    por_n_criterios:
+      3: 7
+      2: 7
+      1: 12
+    detalle:
+      wacusi:
+        categoria: cuerpo
+        criterios:
+          - c1
+          - c2
+          - c4
+        n_criterios: 3
+      daca:
+        categoria: cuerpo
+        criterios:
+          - c1
+          - c2
+          - c4
+        n_criterios: 3
+      thigisi:
+        categoria: cuerpo
+        criterios:
+          - c1
+          - c2
+          - c4
+        n_criterios: 3
+      aduri:
+        categoria: cuerpo
+        criterios:
+          - c1
+          - c2
+          - c4
+        n_criterios: 3
+      agari:
+        categoria: cuerpo
+        criterios:
+          - c1
+          - c2
+          - c4
+        n_criterios: 3
+      acoa:
+        categoria: cuerpo
+        criterios:
+          - c1
+          - c2
+          - c4
+        n_criterios: 3
+      itime:
+        categoria: fauna
+        criterios:
+          - c1
+          - c4
+        n_criterios: 2
+      caiman:
+        categoria: fauna
+        criterios:
+          - c1
+        n_criterios: 1
+      higuana:
+        categoria: fauna
+        criterios:
+          - c1
+        n_criterios: 1
+      wagulo:
+        categoria: fauna
+        criterios:
+          - c1
+          - c4
+        n_criterios: 2
+      siba:
+        categoria: geografia
+        criterios:
+          - c1
+        n_criterios: 1
+      cai:
+        categoria: geografia
+        criterios:
+          - c1
+        n_criterios: 1
+      tuna:
+        categoria: geografia
+        criterios:
+          - c1
+        n_criterios: 1
+      maisi:
+        categoria: flora
+        criterios:
+          - c1
+        n_criterios: 1
+      aji:
+        categoria: flora
+        criterios:
+          - c1
+        n_criterios: 1
+      yuca:
+        categoria: flora
+        criterios:
+          - c1
+        n_criterios: 1
+      casabe:
+        categoria: alimentos
+        criterios:
+          - c1
+        n_criterios: 1
+      cohiba:
+        categoria: ritual
+        criterios:
+          - c1
+        n_criterios: 1
+      bejique:
+        categoria: ritual
+        criterios:
+          - c1
+        n_criterios: 1
+      aririn:
+        categoria: ritual
+        criterios:
+          - c1
+          - c4
+        n_criterios: 2
+      akcicyaa:
+        categoria: ritual
+        criterios:
+          - c1
+          - c4
+        n_criterios: 2
+      abba:
+        categoria: gramatica
+        criterios:
+          - c1
+          - c2
+          - c4
+        n_criterios: 3
+      yamosa:
+        categoria: gramatica
+        criterios:
+          - c1
+          - c2
+        n_criterios: 2
+      mayani:
+        categoria: gramatica
+        criterios:
+          - c1
+          - c2
+        n_criterios: 2
+      taita:
+        categoria: parentesco
+        criterios:
+          - c1
+        n_criterios: 1
+      uju:
+        categoria: parentesco
+        criterios:
+          - c1
+          - c4
+        n_criterios: 2

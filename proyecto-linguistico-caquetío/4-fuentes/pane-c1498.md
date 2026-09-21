@@ -8,13 +8,14 @@ publicacion: "Escrita c. 1494-1498 en La Española por encargo de Colón. El ori
 local: "fuentes_caquetios/Pane_c1498_Relacion_Antiguedades_Indios_wikisource.txt (29 subpáginas, ~8.300 palabras)"
 paginas: "29 capítulos"
 capa_texto: si
-estado_minado: sin-minar
-prioridad: media
+estado_minado: minado
+cobertura: "las 29 subpáginas, leídas enteras (2026-09-21)"
+prioridad: alta
 tareas: [D11-fase-2]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-12
+verificado: 2026-09-21
 descargado: 2026-09-12
-origen_digital: "es.wikisource.org, dominio público; marcado wiki retirado por script el 2026-09-12"
+origen_digital: "es.wikisource.org; la OBRA es de dominio público pero la RETRADUCCIÓN no consta y Wikisource avisa que puede no serlo (verificado 2026-09-21). Marcado wiki retirado por script el 2026-09-12"
 aliases: ["Pané", "Ramón Pané", "Pané 1498", "Relación de Pané", "Antigüedades de los indios"]
 ---
 
@@ -47,15 +48,108 @@ aparecen con esa grafía** — la retraducción usa otras (por medir: `buhuitihu
 `bohío`→?). Lo primero que hay que hacer es un censo de las formas indígenas
 tal como las escribe ESTA versión.
 
-## Qué preguntarle
+## Minado — campaña del taíno, 2026-09-21 (parcela T2)
 
-1. Censo de todas las formas taínas del texto, con capítulo — es corto,
-   cabe entero.
-2. Las que ya están en el lexicón como `taíno`: ¿cuáles atestigua Pané y
-   cuáles vienen de Oviedo, Las Casas o de nadie?
-3. Mito y rito para la esfera de creencia (`3-mundo/corpus/creencia.yaml`):
-   los cemíes, el cohoba, la cueva de origen — como **comparanda taína**, no
-   como dato caquetío.
+Leído **entero**, las 29 subpáginas. Propuesta en
+`6-fusion/taino_pane_c1498.yaml`; cola de decisión en
+`6-fusion/issues-pendientes/taino-lascasas-pane-brinton-2026-09-21.md`.
+
+### ⚠️ Lo que había que verificar y no se había verificado
+
+**Wikisource NO declara la edición ni el traductor.** Consultada el
+2026-09-21: da autor (Ramón Pané), fecha (1498) y licencia, y nada más. La
+frase de este archivo —«la edición/traducción es la que Wikisource declara en
+cada subpágina»— era falsa: el dato no se perdió al quitar el marcado wiki, no
+existe en origen. **Citamos esta fuente sin saber qué retraducción es.**
+
+Y Wikisource añade: *«La traducción de la obra puede no estar en dominio
+público»*. Consecuencia práctica (regla de copyright del proyecto): de este
+archivo se citan **formas indígenas y glosas cortas**, no párrafos largos. Los
+YAML de la propuesta están escritos así.
+
+### La deformación de la cadena, MEDIDA
+
+El texto trae **diez nombres con grafía inestable** en 8.343 palabras, tres de
+ellos con tres formas distintas:
+
+| forma A | forma B | forma C | quién |
+|---|---|---|---|
+| `Guaguyona` (5) | `Guahayona` (10) | | el héroe que se lleva a las mujeres |
+| `Basamanaco` (1) | `Ayamanaco` (1) | `Bayamanicoel` (1) | el abuelo del cazabi — **los tres en el mismo capítulo XI** |
+| `buhitihu` (10) | `buhuitihu` (2) | `bohutis` (1) | el médico |
+| `Itiba Yauvava` (1) | `Itiba Tauvava` (1) | | la madre de los cuatrillizos |
+| `Vaibrama` (3) | `Buyayba` (1) | | un cemí — el título dice una, el cuerpo la otra |
+| `Yocahu Vagua Maorocoti` (1) | `Yiocavugama` (1) | | el ser inmortal del cielo |
+| `Matinino` (1) | `Matanino` (1) | | la isla de las mujeres |
+| `Macorix` (2) | `Marcorix` (1) | | la provincia y su lengua |
+| `Guarionex` (11) | `Guarionel` (1) | | el cacique |
+| `Maviatúe` (2) | `Mahuviativire` (1) | | el cacique de la última jornada |
+
+En un texto de este tamaño eso no es descuido puntual: **es la firma de la
+cadena castellano → italiano → castellano**. Cada entrada que cite a Pané lleva
+`transmision: via-italiano`.
+
+Y un desajuste que es su mejor ilustración: el proemio dice que la madre del
+ser del cielo tiene **cinco nombres** y enumera **cuatro** (`Atabex`,
+`Iermaoguacar`, `Apito`, `Zuimaco`). No se puede saber si el error es de Pané,
+de Ulloa, de la imprenta o del retraductor.
+
+### Qué dio
+
+- **24 voces con glosa del propio Pané**, entre ellas `conuco` «que quiere
+  decir posesiones, que eran de una herencia», `ciba` 'piedra', `cobo` «el
+  caracol de mar», `guanara` 'lugar apartado', `operito` 'muerto', y la pareja
+  `goeiz` (alma del vivo) / `opia` (alma del muerto) en una sola frase.
+- **`Dios naboria daca`, «que quiere decir: yo soy siervo de Dios»** (cap.
+  XXV). La única oración taína con glosa de toda la parcela, y por tanto el
+  dato gramatical más caro que hay: pronombre de 1.ª pospuesto y predicado
+  nominal sin cópula. **Es de MACORIX**, no de la lengua general.
+- **9 deidades, 8 lugares del mito y 5 ritos** para la esfera de creencia,
+  como comparanda antillana.
+- **`inriri`, y «antiguamente `inrire cahuvayal`»** (cap. VIII): el único dato
+  de profundidad temporal interna a la lengua que da la fuente.
+
+### La evidencia de que el taíno no era una sola lengua
+
+Es el hallazgo mayor, y es de primera mano. Cap. XXV:
+
+> Entonces el señor Almirante me dijo que Macorix, provincia de la Magdalena,
+> tenía lengua distinta de la otra, y que no era usado su idioma en toda la
+> isla
+
+> «Señor, ¿cómo quiere Vuestra Señoría que yo vaya a estar con Guarionex, no
+> sabiendo más lengua que la de Macorix? Déme Vuestra Señoría licencia para que
+> venga conmigo alguno de los del Nuhuirci [...] y sabían las dos lenguas»
+
+Pané **había aprendido macorix** y necesitó intérprete bilingüe para pasar a la
+lengua general, dentro de la misma isla, en 1495. Sesenta años antes que
+[[las-casas-1875]], y **sin depender de él**: el pasaje de los mazoriges del
+cap. LXVII del tomo I es recuerdo personal de Las Casas, no resumen de Pané.
+Dos atestaciones independientes de verdad (skill §8).
+
+### Qué NO dio
+
+- **`areíto` no aparece en ninguna grafía**: la ceremonia se describe (cap.
+  XIV, con el instrumento `mayohavau` y «su ley expuesta en canciones
+  antiguas») pero no se nombra.
+- `bohío` como 'casa' tampoco: lo que hay es `Bouhi`, nombre antiguo de las
+  islas.
+- `behique` no, pero la voz SÍ está, con tres grafías (arriba).
+- `casabe` no, `cazabi` sí (3 veces).
+
+### Qué falta
+
+1. **Saber qué retraducción es.** Sin eso, toda cita a Pané arrastra una
+   incógnita.
+2. **Arrom 1974**, la edición crítica, sigue fuera del repo. Es la que resolvería
+   los diez dobletes. No se descargó nada.
+3. [[brinton-1871]] cita «Pane, pp. 443-444»: es otra edición, así que sus
+   citas no se pueden cotejar con este archivo por página, sólo por contenido.
+   Y las dos formas que atribuye a Pané, `Bugi` y `Aiba`, **no están aquí**
+   (0 ocurrencias).
+4. El paralelo behique ↔ boratio se **señala y se deja abierto**: ninguna
+   fuente del canon lo afirma, y dos pueblos arahuacos vecinos con especialista
+   ritual no prueban nada por sí solos.
 
 ## Enlaces
 

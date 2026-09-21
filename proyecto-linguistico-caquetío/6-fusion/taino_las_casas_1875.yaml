@@ -1,0 +1,846 @@
+# ══════════════════════════════════════════════════════════════════════
+# TAÍNO — Las Casas 1875 [c. 1561], *Historia de las Indias*, tomo I
+# PROPUESTA (regla 5). Comparanda de la ESFERA DE CONTACTO, no caquetío.
+# Campaña del taíno, parcela T2. 2026-09-21.
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  obra: las-casas-1875
+  campana: taino-2026-09-21
+  parcela: T2
+  advertencia: >-
+    ESTO NO ES CAQUETÍO. Es taíno de La Española / Cuba / los lucayos, y entra
+    como COMPARANDA de la esfera de contacto (CLAUDE.md, «El préstamo de esfera
+    no es una fuga»). Ninguna voz de aquí se proyecta al caquetío: alimenta la
+    cita primaria de las 52 entradas taínas que hoy no citan a nadie.
+  colonial_por_definicion: >-
+    Regla 3. Todo el taíno escrito es de 1492 en adelante. Las Casas escribe
+    c. 1527-1561 sobre 1492-1494, citando el diario de Colón que él mismo
+    abrevió. No se proyecta nada al precontacto; se etiqueta y punto.
+
+  # ── lo que resultó FALSO al medirlo ────────────────────────────────
+  correcciones_al_encargo:
+  - afirmacion: «Las Casas comenta "la penúltima luenga"»
+    medido: >-
+      En el tomo I NO aparece. `penultima` = 0 ocurrencias (normalizado sin
+      acentos, sobre el texto entero). Lo que SÍ hay es «la última sílaba luenga
+      y aguda» (2 veces) y «la última aguda» (1 vez). La frase «la penúltima
+      sílaba luenga» existe, pero es de la *Historia General* lib. III cap. 21
+      («llamábanse en su lengua, Cibon-eyes, la penúltima sílaba luenga»), que
+      pertenece a un tomo que NO está en el repo; se conoce porque Brinton 1871
+      la cita en nota (ver `taino_brinton_1871.yaml`).
+  - afirmacion: «Las Casas distingue tres lenguas en La Española (la general, el
+      macorix, el ciguayo)»
+    medido: >-
+      En el tomo I la distinción existe pero es MÁS DÉBIL de lo que se esperaba,
+      y su forma exacta importa: dice que macoriges y ciguayos «tenían diversas
+      lenguas de la universal de toda la isla» y acto seguido declara que **no se
+      acuerda** de si diferían entre sí. La tripartición nítida está en la
+      *Apologética*, que no está en el repo. Ver `metalinguistico.m07`.
+  - afirmacion: «el PDF permite dar página impresa»
+    medido: >-
+      No directamente. El PDF es el ebook de Project Gutenberg #49298: su pie de
+      página es un contador propio que coincide con el índice del pdf en 609 de
+      613 páginas. La paginación de 1875 se recupera SOLO por el índice original
+      que sobrevive en pdf 572-596. Ver `paginacion`.
+
+  # ── §1 desconfiar del extractor ────────────────────────────────────
+  extraccion:
+    herramienta: pdftotext -enc UTF-8 (y otra vez con -layout, para el índice)
+    plano_bytes: 1070309
+    layout_bytes: 1115512
+    paginas_pdf: 613
+    por_que_las_dos: >-
+      El índice original de 1875 es una tabla a dos columnas (sumario a la
+      izquierda, página impresa alineada a la derecha). Sin `-layout` los
+      números se mezclan con la prosa y el mapa capítulo→página no se puede
+      construir. Con `-layout` sale limpio. Es la trampa de CLAUDE.md
+      («tablas a dos columnas»), aquí en su versión de índice.
+
+  paginacion:
+    que_es_el_pdf: ebook de Project Gutenberg #49298 (release 2015) llevado a PDF
+    pie_de_pagina: >-
+      contador del ebook, NO paginación de 1875. Medido: el número del pie
+      coincide con el índice de la página pdf en 609 de 613 páginas (las 4
+      excepciones son portadas o páginas sin pie).
+    ancla_recuperada: >-
+      el ÍNDICE original de 1875 sobrevive en pdf 572-596 con las páginas
+      impresas. Da las dos anclas (impresa y pdf) para los 82 capítulos.
+    desfase: no constante — va de +8 (cap. I) a +69 (cap. LXXXII)
+    script: 6-fusion/scripts/mapa_capitulos_las_casas.py
+    como_se_cita_aqui: >-
+      `capitulo` es EXACTO. `pagina_pdf` es EXACTA. `pagina_impresa` es una
+      INTERPOLACIÓN lineal dentro del capítulo y va marcada `~`; el rango
+      exacto del capítulo va en `pagina_impresa_capitulo`. Quien necesite la
+      página impresa exacta de una voz tiene que ir al facsímil de 1875, que no
+      está en el repo.
+
+  # ── §2 medir la ortografía ANTES de contar ─────────────────────────
+  ortografia_medida:
+    nota: >-
+      conteos sobre el texto normalizado (NFD sin diacríticos, minúsculas). La
+      grafía es la del editor de 1875 (Fuensanta del Valle / Sancho Rayón), que
+      moderniza a medias: acentúa «á», «ó», «é» donde hoy no se acentúa y
+      conserva la ç del original en algunas voces indígenas.
+    ce_cedilla: >-
+      viva en voz indígena: `çabanas` (3) frente a `zabanas` (0) y `sabanas`
+      (0). En el etnónimo alterna: `maçorix` (2) y `macorix` (2).
+    y_frente_a_i: >-
+      `cyguayos` (4) frente a `ciguayo` (1) y `çiguayo` (1). **Un grep por
+      «ciguayo» solo, que es como se escribe hoy, se pierde 4 de 6
+      ocurrencias** — regla 6, un cero mide la consulta.
+    la_misma_voz_con_dos_grafias_en_el_mismo_tomo: >-
+      `nucay` (cap. XLV) y `nozay` (cap. LXVII) son la misma palabra 'oro' de
+      los lucayos, separadas por 22 capítulos. Y `mazoriges` (cuerpo del cap.
+      LXVII) contra `Macorix` (cap. LXII, como topónimo) y `Maçorix`.
+    conteos_de_control:
+      lengua: 70
+      llaman: 60
+      llamaban: 58
+      quiere_decir: 30
+      significa: 12
+      vocablo: 6
+      luenga: 14
+      silaba: 3
+      penultima: 0
+      acento: 0
+      pronunci: 0
+
+  cobertura:
+    leido: >-
+      barrido completo del tomo (613 pp. pdf) por patrón, con lectura de pasaje
+      (§3) en los capítulos XL-LXVII, que son el primer viaje y la descripción
+      de La Española — que es lo que el encargo pedía priorizar.
+    patrones_barridos:
+    - lengua|lenguaje|c[iy]guayo|ma[cç]orix|lucayo  (92 bloques leídos)
+    - llaman|llamaban|llamamos|nombraban|quiere decir|significa|en su lengua|vocablo  (226 bloques)
+    - macana|tabaco|axi|duho|nitayno|cazabi|yuca|iguana|hutia|ajes|maiz|caniba|matinino|cayo|guanin
+    - s[ií]laba|aguda|luenga|faltan ó sobran
+    no_leido_pasaje_a_pasaje: >-
+      capítulos I-XXXIX (prólogo, cosmografía antigua, descubrimientos
+      portugueses en África) y LXVIII-LXXXII (tornaviaje y corte). Se barrieron
+      por patrón y no dieron voz indígena antillana: el cap. XXIV da `Adeget`,
+      que es de la costa africana y NO es taíno.
+
+  otros_volumenes_y_la_apologetica:
+    nota: NO se descargó nada (restricción del encargo). Sólo se anota qué darían.
+    tomos_II_a_V_1875: >-
+      el tomo I cubre el LIBRO I (caps. I-LXXXII) y acaba con el regreso del
+      primer viaje. Todo lo que el proyecto quiere del taíno de rito y religión
+      —cemíes, behiques, areítos, cohoba— está en libros posteriores y en la
+      *Apologética*: medido, en el tomo I `cemi`, `behique`, `areito`, `cohoba`,
+      `Yocahu` y `Atabey` dan CERO.
+    lo_que_cita_brinton_y_no_tenemos: >-
+      Brinton 1871 cita, de obras que no están en el repo, las entradas más
+      densas: *Hist. Apologética* caps. 46, 61, 120, 197, 199, 204, 241 (los
+      títulos `matunheri` / `bajari` / `guaoxeri` / `nitaino`, los numerales,
+      `batey`, `guayzas`, `bixa`, `batea`) y *Hist. General* lib. I cap. 90 y
+      120, lib. III caps. 21, 33, lib. IV cap. 48. Ahí está el grueso.
+    deuda: >-
+      conseguir los tomos II-V de la edición de 1875 y la *Apologética* elevaría
+      de golpe la cita primaria del taíno. Prioridad: la decide Miguel.
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. LO QUE DICE SOBRE LA LENGUA MISMA
+#    (acento, variedades, inteligibilidad — la evidencia de la trampa 3)
+# ══════════════════════════════════════════════════════════════════════
+metalinguistico:
+
+- id: m01
+  tema: acento
+  libro: I
+  capitulo: XL
+  pagina_pdf: 330
+  pagina_impresa: ~291
+  pagina_impresa_capitulo: [291, 298]
+  cita_verbatim: >-
+    la cual se llamaba en lengua desta isla Española, y dellas, porque cuasi
+    toda es una lengua y manera de hablar, Guanahaní, la última sílaba luenga y
+    aguda.
+  que_dice: >-
+    acento final en `Guanahaní`, y de paso la tesis de la lengua única, matizada
+    ya con un «cuasi».
+
+- id: m02
+  tema: acento
+  libro: I
+  capitulo: L
+  pagina_pdf: 406
+  pagina_impresa: ~359
+  pagina_impresa_capitulo: [358, 361]
+  cita_verbatim: >-
+    siendo toda una lengua la de los de Cuba y de la Española, pues no se
+    llamaba sino Haytí, la última sílaba luenga y aguda.
+
+- id: m03
+  tema: acento
+  libro: I
+  capitulo: LVII
+  pagina_pdf: 442
+  pagina_impresa: ~390
+  pagina_impresa_capitulo: [389, 391]
+  cita_verbatim: >-
+    (estas debian ser la pimienta que llamaban axí, la última aguda)
+  que_dice: >-
+    tercera marca de acento del tomo, y la única sobre una voz común (no un
+    topónimo). Los tres casos son OXÍTONOS: el rasgo que Las Casas anota es
+    siempre el mismo, y sólo lo anota cuando la voz es aguda.
+
+- id: m04
+  tema: lengua-unica
+  libro: I
+  capitulo: XLVI
+  pagina_pdf: 380
+  pagina_impresa: ~335
+  pagina_impresa_capitulo: [331, 338]
+  quien_lo_dice: Colón (Las Casas transcribe «palabras formales del Almirante»)
+  cita_verbatim: >-
+    la cual es toda una en todas estas islas de Indias, y todos se entienden, y
+    todas las andan con sus almadías, lo que no hacen en Guinea, donde hay mil
+    maneras de lenguas, que la una no entiende á la otra.
+  atribucion: >-
+    OJO: la afirmación es de Colón en 1492, no de Las Casas. Colón llevaba
+    quince días en las islas y no entendía a nadie — él mismo lo dice en m05.
+
+- id: m05
+  tema: lengua-unica
+  libro: I
+  capitulo: XLVIII
+  pagina_pdf: 396
+  pagina_impresa: ~351
+  pagina_impresa_capitulo: [348, 354]
+  quien_lo_dice: Colón
+  cita_verbatim: >-
+    Y tambien no se la lengua, y la gente destas tierras no me entienden, ni yo,
+    ni otro que yo tenga, á ellos, y estos indios que yo traigo muchas veces les
+    entiendo una cosa por otra al contrario [...] faré enseñar esta lengua á
+    personas de mi casa, porque veo que es toda la lengua una, fasta aquí.
+  que_dice: >-
+    en el mismo párrafo declara que no entiende nada y que la lengua es una. El
+    «fasta aquí» es la cláusula honesta.
+
+- id: m06
+  tema: transcripcion
+  libro: I
+  capitulo: LXII
+  pagina_pdf: 467
+  pagina_impresa: ~411
+  pagina_impresa_capitulo: [409, 412]
+  cita_verbatim: >-
+    provincias, puesto que les faltan ó sobran sílabas ó letras, que no las
+    debiera escribir bien el Almirante como no los entendiese bien.
+  que_dice: >-
+    Las Casas declara que las formas indígenas del diario de Colón están mal
+    transcritas. Es la advertencia epistémica más fuerte del tomo y vale para
+    TODA voz de estos capítulos: la fuente misma dice que su fuente falla.
+
+- id: m07
+  tema: variedades
+  libro: I
+  capitulo: LXVII
+  pagina_pdf: 492
+  pagina_impresa: ~434
+  pagina_impresa_capitulo: [432, 438]
+  cita_verbatim: >-
+    Es aquí de saber, que un gran pedazo desta costa, bien más de 25 ó 30
+    leguas, y 15 buenas y aún 20 de ancho hasta las sierras que hacen, desta
+    parte del Norte, la gran vega inclusive, era poblada de una gente que se
+    llamaban mazoriges, y otras cyguayos, y tenian diversas lenguas de la
+    universal de toda la isla. No me acuerdo si diferian estos en la lengua,
+    como ha tantos años, y no hay hoy uno ni ninguno á quien lo preguntar,
+    puesto que conversé hartas veces con ambas generaciones, y son pasados ya
+    más de cincuenta años.
+  que_dice: >-
+    LA PIEZA CENTRAL. (a) hay al menos DOS lenguas distintas de «la universal»
+    en La Española; (b) el propio Las Casas, que trató con las dos gentes, NO
+    se acuerda de si macoriges y ciguayos hablaban lo mismo entre sí; (c) para
+    1561 no queda nadie a quien preguntar. La tripartición limpia que circula
+    («la general, el macorix, el ciguayo») es más firme que lo que el tomo I
+    sostiene.
+  para_el_proyecto: >-
+    evidencia directa de la trampa 3 de la campaña: **el taíno tampoco era una
+    sola lengua**, y la fuente que más sabía lo dice con una laguna declarada.
+    Cualquier entrada nuestra etiquetada `taíno` sin decir la isla y la
+    variedad está diciendo más de lo que la fuente dice.
+
+- id: m08
+  tema: variedades
+  libro: I
+  capitulo: LXVII
+  pagina_pdf: 492
+  pagina_impresa: ~434
+  pagina_impresa_capitulo: [432, 438]
+  cita_verbatim: >-
+    Aquí no llaman caona al oro como en la primera parte desta isla, ni nozay
+    como en la isleta de Guanahaní ó Sant Salvador, sino tuob.
+  que_dice: >-
+    TRES palabras para 'oro' en tres zonas, dichas en una frase por quien vivió
+    allí: `caona` (La Española occidental), `nozay` (lucayos) y `tuob` (costa
+    ciguaya). Es el dato dialectológico más limpio del tomo, y contradice de
+    hecho —no de opinión— la tesis de la lengua única de m04/m05.
+  ojo: >-
+    el mismo `nozay` aparece 22 capítulos antes como `nucay` (ver v14): la
+    variación no es sólo dialectal, también es del copista.
+
+- id: m09
+  tema: etnonimo
+  libro: I
+  capitulo: LXVII
+  pagina_pdf: 493
+  pagina_impresa: ~435
+  pagina_impresa_capitulo: [432, 438]
+  cita_verbatim: >-
+    se llamaban cyguayos porque traian todos los cabellos muy luengos, como en
+    nuestra Castilla las mujeres
+  que_dice: etimología del etnónimo dada por Las Casas; no da la forma indígena.
+
+- id: m10
+  tema: interpretes
+  libro: I
+  capitulo: XLVIII
+  pagina_pdf: 394
+  pagina_impresa: ~349
+  pagina_impresa_capitulo: [348, 354]
+  cita_verbatim: >-
+    diciéndoles en su lengua, que no hobiesen miedo (porque, diz que, ya sabian
+    algunos vocablos della, por la conversacion de los que consigo de las otras
+    islas traian)
+  que_dice: >-
+    cómo se adquirió el poco taíno que hay en el diario: de oído, por marineros,
+    a través de cautivos lucayos. Dato de procedencia, no de lengua.
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. LAS VOCES, CON GLOSA VERBATIM
+#    `atribucion` = isla/variedad que LA FUENTE declara. Si no la declara,
+#    `no-declarada` (trampa 2 de la campaña) y no cuenta como taína.
+# ══════════════════════════════════════════════════════════════════════
+voces:
+
+- id: v01
+  forma_fuente: cayos
+  glosa_fuente: "porque cayos en esta lengua son islas"
+  libro: I
+  capitulo: XL
+  pagina_pdf: 331
+  pagina_impresa: ~292
+  pagina_impresa_capitulo: [291, 298]
+  atribucion: lucayos (islas pequeñas al norte de Cuba y La Española)
+  campo: geografia
+  en_el_lexicon: cayo (taíno)
+  nota: >-
+    la glosa viene dentro de la etimología de `lucayos`: «quiere decir, cuasi
+    moradores de cayos». Brinton p. 12 da la misma voz como `Cai, cayo, or
+    cayco` y Brinton p. 15 la descompone `lukku kairi` 'hombres de las islas'.
+
+- id: v02
+  forma_fuente: canoas
+  glosa_fuente: "sus barcos y barquillos que llamaban canoas (en latin se llaman monoxilla), hechas de un sólo cabado, madero de buena forma"
+  libro: I
+  capitulo: XLI
+  pagina_pdf: 339
+  pagina_impresa: ~299
+  pagina_impresa_capitulo: [299, 305]
+  atribucion: Guanahaní / lucayos
+  campo: navegacion
+  en_el_lexicon: "no como `canoa` con fuente taíno; el lexicón la tiene por la vía caquetía (kanoa, D5 2026-08-31)"
+  nota: >-
+    Las Casas anota aparte que Colón la llamaba `almadía` (voz árabe) y que los
+    indios decían `canoa` (cap. XLV, pdf 369; cap. XLVI, pdf 379). Es una
+    corrección explícita del cronista al Almirante.
+
+- id: v03
+  forma_fuente: cazabí
+  glosa_fuente: "el pan de aquellas tierras, que es cazabí"
+  libro: I
+  capitulo: XLII
+  pagina_pdf: 346
+  pagina_impresa: ~306
+  pagina_impresa_capitulo: [306, 311]
+  atribucion: "no-declarada en este pasaje (isla Fernandina / lucayos); en cap. XLVI y LXIII, La Española"
+  campo: alimentacion
+  en_el_lexicon: cazabi (taíno) · casabe (taíno)
+  segundas_menciones:
+  - {capitulo: XLVI, pagina_pdf: 377, pagina_impresa: ~333, glosa: "de la yuca, de que hacian el pan que llamaban cazabí"}
+  - {capitulo: LX,   pagina_pdf: 457, pagina_impresa: ~402, glosa: "de su pan, que llaman cazabí"}
+  - {capitulo: LXIII, pagina_pdf: 469, pagina_impresa: ~413, glosa: "del pan de la tierra, que se llamaba cazabí"}
+  para_el_proyecto: >-
+    `casabe` es una de las cinco voces que copan `prestamos_de_esfera` (111 de
+    161 formas-respuesta, medición del 2026-09-17) y `FORMA_DE_LA_ESFERA` ya la
+    manda decir `cazabi`. Aquí está por fin la cita primaria de la grafía
+    `cazabí`, cuatro veces y con la glosa del cronista.
+
+- id: v04
+  forma_fuente: hamacas
+  glosa_fuente: "sus camas y paramentos de casa eran como redes de algodon. Estas llamaban en esta Española, hamacas, que son de hechura de hondas, no tejidas como redes"
+  libro: I
+  capitulo: XLII
+  pagina_pdf: 350
+  pagina_impresa: ~309
+  pagina_impresa_capitulo: [306, 311]
+  atribucion: La Española (declarada)
+  campo: ajuar
+  en_el_lexicon: "no con fuente taíno; entró por la vía caquetía (D5 2026-08-31)"
+
+- id: v05
+  forma_fuente: cupey
+  glosa_fuente: "hay un árbol en estas tierras que se llama, en lengua de indios desta Española, cupey"
+  libro: I
+  capitulo: XLII
+  pagina_pdf: 349
+  pagina_impresa: ~309
+  pagina_impresa_capitulo: [306, 311]
+  atribucion: La Española (declarada, «en lengua de indios desta Española»)
+  campo: flora
+  en_el_lexicon: NO
+  nota: >-
+    voz nueva para el proyecto. Es un epífito estrangulador (Clusia): Las Casas
+    describe el ciclo entero, pepita→pájaro→raíz aérea. Candidata a entrar como
+    comparanda taína con cita, no al habla.
+
+- id: v06
+  forma_fuente: iguana
+  glosa_fuente: "llámanla los indios desta isla Española iguana"
+  libro: I
+  capitulo: XLIII
+  pagina_pdf: 355
+  pagina_impresa: ~314
+  pagina_impresa_capitulo: [312, 317]
+  atribucion: La Española (declarada)
+  campo: fauna
+  en_el_lexicon: iwana (taíno) · higuana (taíno)
+  nota: >-
+    el pasaje es además un dato de tabú alimentario del propio Las Casas: «nunca
+    jamás pudieron conmigo para que la gustase».
+
+- id: v07
+  forma_fuente: bohío
+  glosa_fuente: "por todas estas islas, como sea toda ó cuasi toda una lengua, llamaban bohío á las casas en que moraban"
+  libro: I
+  capitulo: XLIII
+  pagina_pdf: 357
+  pagina_impresa: ~315
+  pagina_impresa_capitulo: [312, 317]
+  atribucion: "«todas estas islas»"
+  campo: vivienda
+  en_el_lexicon: bohio (taíno) · bohío (taíno)
+  segunda_mencion: {capitulo: XLV, pagina_pdf: 372, pagina_impresa: ~328, glosa: "Este bohío quiere decir en su lengua casa"}
+  nota: >-
+    doble valor: sustantivo común 'casa' y, en boca de los intérpretes, nombre
+    de isla. Las Casas resuelve el malentendido: «debian ellos de decir que en
+    Hayti, habia grandes bohíos». Es un caso didáctico de la trampa 2 de esta
+    campaña, resuelto POR EL CRONISTA.
+
+- id: v08
+  forma_fuente: Hayti
+  glosa_fuente: "á esta gran isla Española, nombraban Hayti"
+  libro: I
+  capitulo: XLIII
+  pagina_pdf: 357
+  pagina_impresa: ~315
+  pagina_impresa_capitulo: [312, 317]
+  atribucion: La Española
+  campo: toponimia
+  en_el_lexicon: NO
+  ver: m02 (el acento)
+
+- id: v09
+  forma_fuente: nacan
+  glosa_fuente: "porque nacan quiere decir, en la lengua destas islas, medio ó en medio, y así componian este nombre Cubanacan, de Cuba y nacan, tierra ó provincia que está en medio ó cuasi en medio de toda la isla de Cuba"
+  libro: I
+  capitulo: XLIV
+  pagina_pdf: 366
+  pagina_impresa: ~323
+  pagina_impresa_capitulo: [318, 324]
+  atribucion: "«la lengua destas islas»"
+  campo: nucleo-lexico
+  en_el_lexicon: NO
+  para_el_proyecto: >-
+    ES LA ENTRADA MÁS VALIOSA DEL TOMO PARA LA LENGUA. No es un objeto ni una
+    planta: es un elemento gramaticalizable, con análisis morfológico explícito
+    del cronista (`Cuba` + `nacan`). Brinton p. 13 lo casa con arawack
+    `annakan` 'centro' y p. 14 rehace la misma descomposición. Dos fuentes, un
+    morfema, y el tipo de dato que decide filiación (skill §3).
+
+- id: v10
+  forma_fuente: axí
+  glosa_fuente: "la pimienta montés de aquestas tierras, que llaman axí"
+  libro: I
+  capitulo: XLV
+  pagina_pdf: 372
+  pagina_impresa: ~328
+  pagina_impresa_capitulo: [325, 330]
+  atribucion: no-declarada en este pasaje (Cuba)
+  campo: alimentacion
+  en_el_lexicon: aji (taíno)
+  segundas_menciones:
+  - {capitulo: LVII, pagina_pdf: 442, pagina_impresa: ~390, glosa: "la pimienta que llamaban axí, la última aguda"}
+  - {capitulo: LXII, pagina_pdf: 468, pagina_impresa: ~412, glosa: "la pimienta desta isla que llaman axí"}
+  - {capitulo: LXVII, pagina_pdf: 497, pagina_impresa: ~438, glosa: "mucho axí ó pimienta"}
+  nota: la grafía `axí` con x = /ʃ/; la clave del lexicón es `aji`, castellanizada.
+
+- id: v11
+  forma_fuente: ajes
+  glosa_fuente: "llenas de mames que son como zanahorias, que tienen sabor como de castañas; estos son los que llaman ajes"
+  libro: I
+  capitulo: XLV
+  pagina_pdf: 373
+  pagina_impresa: ~329
+  pagina_impresa_capitulo: [325, 330]
+  atribucion: no-declarada (Cuba)
+  campo: alimentacion
+  en_el_lexicon: NO
+  nota: >-
+    el mismo pasaje da `mames` y `batatas` como cosas distintas de los `ajes`.
+    Pané (cap. XXVI) repite la glosa casi igual: «ajes, que son ciertas raíces
+    semejantes a nabos» — dos fuentes independientes de verdad (§8), porque
+    Pané no pasa por el diario de Colón.
+
+- id: v12
+  forma_fuente: batatas
+  glosa_fuente: "y batatas que son muy sabrosas"
+  libro: I
+  capitulo: XLV
+  pagina_pdf: 373
+  pagina_impresa: ~329
+  pagina_impresa_capitulo: [325, 330]
+  atribucion: no-declarada (Cuba)
+  campo: alimentacion
+  en_el_lexicon: batata (taíno)
+
+- id: v13
+  forma_fuente: caona
+  glosa_fuente: "la desta isla Española donde llaman el oro caona"
+  libro: I
+  capitulo: XLV
+  pagina_pdf: 369
+  pagina_impresa: ~326
+  pagina_impresa_capitulo: [325, 330]
+  atribucion: La Española (declarada)
+  campo: metales
+  en_el_lexicon: NO
+
+- id: v14
+  forma_fuente: nucay
+  glosa_fuente: "oro, á quien ellos llaman nucay; aunque yo creo que los cristianos no entendian, porque como todas estas islas hablasen una lengua, la desta isla Española donde llaman el oro caona, no debian decir los indios nucay"
+  libro: I
+  capitulo: XLV
+  pagina_pdf: 369
+  pagina_impresa: ~326
+  pagina_impresa_capitulo: [325, 330]
+  atribucion: Cuba (donde estaban), forma REBATIDA por el cronista
+  campo: metales
+  en_el_lexicon: NO
+  para_el_proyecto: >-
+    ATESTACIÓN NEGATIVA (skill §6). Las Casas registra la forma y acto seguido
+    la desautoriza razonando desde la tesis de la lengua única. Veintidós
+    capítulos después (m08) él mismo escribe `nozay` como forma buena de los
+    lucayos: o sea, **el rechazo de `nucay` estaba mal, y lo desmiente su propio
+    tomo**. Esto se conserva como está; no se «arregla» ninguna de las dos.
+
+- id: v15
+  forma_fuente: tabacos
+  glosa_fuente: "Estos mosquetes, ó como los llamaremos, llaman ellos tabacos"
+  libro: I
+  capitulo: XLVI
+  pagina_pdf: 377
+  pagina_impresa: ~333
+  pagina_impresa_capitulo: [331, 338]
+  atribucion: Cuba
+  campo: rito-y-cuerpo
+  en_el_lexicon: tabako (taíno)
+  nota: >-
+    la voz nombra el INSTRUMENTO (el canuto), no la planta — igual que en
+    Brinton p. 13 («the pipe used in smoking the cohoba»). El desplazamiento a
+    la planta es europeo y posterior. Si alguna vez se glosa `tabako` en el
+    lexicón, la glosa primaria es 'canuto de sahumar', no 'tabaco'.
+
+- id: v16
+  forma_fuente: guaminiquinajes
+  glosa_fuente: "unos perrillos blanquetes que tienen cuatro piés, tan buenos y mejores de comer que conejos y liebres, los cuales los indios llamaban guaminiquinajes"
+  libro: I
+  capitulo: XLVI
+  pagina_pdf: 377
+  pagina_impresa: ~333
+  pagina_impresa_capitulo: [331, 338]
+  atribucion: Cuba
+  campo: fauna
+  en_el_lexicon: NO
+  nota: >-
+    voz nueva y larga (probablemente la jutía conga o el perro mudo). Con el
+    prefijo `gua-` que Brinton p. 12 declara «a very frequent prefix». Candidata
+    para el cruce morfológico de T4.
+
+- id: v17
+  forma_fuente: maíz
+  glosa_fuente: "del grano que llaman los indios maíz, que ellos llamaban panizo"
+  libro: I
+  capitulo: XLVI
+  pagina_pdf: 378
+  pagina_impresa: ~334
+  pagina_impresa_capitulo: [331, 338]
+  atribucion: Cuba
+  campo: alimentacion
+  en_el_lexicon: maisi (taíno) · maíz (taíno)
+  nota: >-
+    «ellos» = los cristianos: Colón escribía `panizo` (mijo) y los indios decían
+    `maíz`. Las Casas corrige al Almirante otra vez. La grafía `maisi` del
+    lexicón coincide con la de Brinton p. 13 (`Maisi, maize`), no con esta.
+
+- id: v18
+  forma_fuente: caníbales
+  glosa_fuente: "otros que llamaban caníbales, á quien mostraban tener gran miedo [...] porque, en esta isla, ni nunca hobo gente de un ojo, ni caníbales que comiesen los hombres"
+  libro: I
+  capitulo: XLVII
+  pagina_pdf: 391
+  pagina_impresa: ~346
+  pagina_impresa_capitulo: [339, 347]
+  atribucion: dicho por los de Cuba
+  campo: etnonimia
+  en_el_lexicon: NO
+  variantes_en_el_tomo: "`Caniba` (cap. LIII, pdf 417-418, impresa ~369-370) · `Carib` (cap. LXVII, pdf 496, impresa ~437) · `Caribana`/`Caritaba` (cap. LIII)"
+  nota: >-
+    Las Casas NIEGA el referente con toda la fuerza («ni nunca hobo... ni
+    caníbales»). El etnónimo se conserva; la antropofagia que arrastra, no.
+
+- id: v19
+  forma_fuente: Cacique
+  glosa_fuente: "deste supo el Almirante ó entendió, que al Rey llamaban, en la lengua desta isla, Cacique"
+  libro: I
+  capitulo: LV
+  pagina_pdf: 432
+  pagina_impresa: ~381
+  pagina_impresa_capitulo: [378, 382]
+  atribucion: La Española (declarada)
+  campo: organizacion-politica
+  en_el_lexicon: cacique (taíno) · cacike (taíno)
+  segunda_mencion: {capitulo: LVIII, pagina_pdf: 446, pagina_impresa: ~394, glosa: "la verdad es, que Cacique era nombre de Rey"}
+  para_el_proyecto: >-
+    `cacique`→`cacike` ya está en `FORMA_DE_LA_ESFERA`. Aquí queda su cita
+    primaria, con el día y el lugar en que un europeo entendió la palabra.
+
+- id: v20
+  forma_fuente: Nitayno
+  glosa_fuente: "otro nombre que llamaban Nitayno, si queria decir Grande, ó por hidalgo ó Gobernador; y la verdad es, que Cacique era nombre de Rey, y Nitayno era nombre de caballero y señor principal"
+  libro: I
+  capitulo: LVIII
+  pagina_pdf: 446
+  pagina_impresa: ~394
+  pagina_impresa_capitulo: [392, 395]
+  atribucion: La Española
+  campo: organizacion-politica
+  en_el_lexicon: nitaino (taíno)
+  segunda_mencion: {capitulo: LXIII, pagina_pdf: 471, pagina_impresa: ~415, glosa: "sus Caciques y principales, ó nitaynos, y otros señores inferiores"}
+  para_el_proyecto: >-
+    DOS rangos declarados y ordenados por el mismo pasaje. Es el punto del que
+    sale el nombre moderno de la lengua: Brinton p. 13 demuestra que «taíno»
+    es el truncamiento de `nitayno` que hizo Rafinesque, y lo rechaza. Ver
+    `taino_brinton_1871.yaml`.
+
+- id: v21
+  forma_fuente: çabanas
+  glosa_fuente: "las innumerables campiñas llanas y rasas que habia, y que ellos llaman en su lengua çabanas"
+  libro: I
+  capitulo: LVI
+  pagina_pdf: 435
+  pagina_impresa: ~384
+  pagina_impresa_capitulo: [383, 388]
+  atribucion: La Española
+  campo: paisaje
+  en_el_lexicon: NO
+  nota: grafía con ç, que es la que mide la ortografía de esta edición.
+
+- id: v22
+  forma_fuente: hutias
+  glosa_fuente: "entre la hierba se criaban los conejos desta isla, que nombraban hutias"
+  libro: I
+  capitulo: LVI
+  pagina_pdf: 435
+  pagina_impresa: ~384
+  pagina_impresa_capitulo: [383, 388]
+  atribucion: La Española
+  campo: fauna
+  en_el_lexicon: hutia (taíno)
+  nota: >-
+    el pasaje es además ecología de manejo: quemaban la sabana para cazarlas
+    («con quemar las çabanas, mataban todos los que querian»). Material para
+    `3-mundo/corpus/ecologia.yaml` como comparanda antillana, NO como caquetío.
+
+- id: v23
+  forma_fuente: turey
+  glosa_fuente: "llamábanle turey, como á cosa del cielo, porque al cielo llamaban turey"
+  libro: I
+  capitulo: LX
+  pagina_pdf: 456
+  pagina_impresa: ~402
+  pagina_impresa_capitulo: [400, 404]
+  atribucion: La Española (gente de Guacanagarí)
+  campo: cosmos
+  en_el_lexicon: NO
+  para_el_proyecto: >-
+    ES LA ÚNICA VOZ DE COSMOS DEL TOMO, y es de las buenas: 'cielo', con glosa
+    directa y sin metáfora («al cielo llamaban turey»). Lo que llamaban `turey`
+    era el latón de los cascabeles, por el olor. Brinton p. 13 la recoge con
+    cita a Navarrete. Candidata firme a entrar como comparanda taína citada.
+
+- id: v24
+  forma_fuente: guanin
+  glosa_fuente: "una especie de oro bajo que tenia la color que tiraba á color algo morada, y que ellos llamaban guanin, por el olor cognoscian ser fino y de mayor estima"
+  libro: I
+  capitulo: LX
+  pagina_pdf: 456
+  pagina_impresa: ~402
+  pagina_impresa_capitulo: [400, 404]
+  atribucion: La Española
+  campo: metales
+  en_el_lexicon: guanin (taíno)
+  segunda_mencion: {capitulo: LXVII, pagina_pdf: 493, pagina_impresa: ~435, glosa: "cierta especie de oro bajo que llamaban guanin, que es algo morado, el cual cognoscen por el olor y estímanlo en mucho"}
+  nota: >-
+    tres apoyos convergentes: Las Casas ×2, Pané (cap. VI, «guanines... son
+    aquéllos de metal como de florín») y Brinton p. 12. La glosa es ESTABLE en
+    las tres: aleación de oro bajo, morada, reconocida POR EL OLOR.
+
+- id: v25
+  forma_fuente: Matinino
+  glosa_fuente: "dijóle de una isla que se llamaba Matinino, que tenia mucho oro, y que estaba habitada de solas mujeres"
+  libro: I
+  capitulo: LXVII
+  pagina_pdf: 493
+  pagina_impresa: ~435
+  pagina_impresa_capitulo: [432, 438]
+  atribucion: dicho por un ciguayo
+  campo: toponimia
+  en_el_lexicon: NO
+  nota: >-
+    Las Casas descarta el referente («Esto nunca despues se averiguó»). Pané
+    (caps. IV y V) da la misma isla como `Matinino`/`Matanino` y el mismo mito
+    de las solas mujeres — y Pané NO depende del diario de Colón. Dos fuentes
+    independientes para el mito y para la forma.
+
+- id: v26
+  forma_fuente: macana
+  glosa_fuente: "Qué cosa es macana"
+  libro: I
+  capitulo: LXVII
+  pagina_pdf: 490
+  pagina_impresa: ~432
+  pagina_impresa_capitulo: [432, 438]
+  atribucion: no-declarada
+  campo: armas
+  en_el_lexicon: "no con fuente taíno; entró por la vía caquetía (tainismos_en_medina, fusionado 2026-09-12)"
+  atestacion: SOLO-EN-EL-EPIGRAFE
+  alerta: >-
+    🔴 **LA TRAMPA 1 DE ESTA CAMPAÑA, AQUÍ MISMO.** `macana` sale 2 veces en
+    todo el tomo y las DOS son la misma línea del epígrafe del cap. LXVII (una
+    en la cabecera del capítulo, pdf 490, y otra en el índice de 1875, pdf 594).
+    **En el cuerpo del capítulo la palabra no aparece**: el arma se describe sin
+    nombrarla, como «una espada de tabla de palma, que es durísima y muy pesada
+    [...] no aguda, sino chata, de cerca de dos dedos en gordo» (pdf 493,
+    impresa ~435). Quien cuente «macana en Las Casas: 2» y no lea el pasaje
+    está citando un sumario, no una atestación. Brinton p. 13 la cita de
+    Navarrete *Viages* i, p. 135 — que es el diario de Colón, o sea la misma
+    fuente por otra puerta (§8).
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. TOPÓNIMOS Y ANTROPÓNIMOS (sin glosa: nombres, no léxico)
+# ══════════════════════════════════════════════════════════════════════
+onomastica:
+  advertencia: >-
+    ninguno lleva glosa del cronista salvo donde se dice. Van aquí porque son
+    la materia prima del cruce morfológico (prefijo `gua-`, formante `-nacan`,
+    terminación `-ey`) que el agente T4 necesita, no porque sean léxico.
+  toponimos:
+  - {forma: Guanahaní, capitulo: XL, pagina_impresa: ~291, nota: "con acento declarado, m01"}
+  - {forma: Samoet / Samoeto, capitulo: XLIII, pagina_impresa: ~312, nota: "dos formas en el mismo capítulo"}
+  - {forma: Cubanacan, capitulo: XLIV, pagina_impresa: ~323, nota: "descompuesto por el cronista: Cuba + nacan, v09"}
+  - {forma: Bohío, capitulo: XLIII, pagina_impresa: ~315, nota: "malentendido declarado, v07"}
+  - {forma: Hayti, capitulo: XLIII, pagina_impresa: ~315}
+  - {forma: Babeque, capitulo: XLVII, pagina_impresa: ~339, nota: "isla nunca hallada; Las Casas duda de que exista"}
+  - {forma: Caribana / Caritaba, capitulo: LIII, pagina_impresa: ~369}
+  - {forma: Cibao, capitulo: LXII, pagina_impresa: ~410}
+  - {forma: Macorix, capitulo: LXII, pagina_impresa: ~410, nota: "aquí es PROVINCIA; la lengua aparece en cap. LXVII como `mazoriges`"}
+  - {forma: Mayonis, capitulo: LXII, pagina_impresa: ~410}
+  - {forma: Fuma, capitulo: LXII, pagina_impresa: ~410}
+  - {forma: Coroay, capitulo: LXII, pagina_impresa: ~410}
+  - {forma: Mayçí, capitulo: L, pagina_impresa: ~359, nota: "punta oriental de Cuba"}
+  - {forma: Matinino, capitulo: LXVII, pagina_impresa: ~435}
+  - {forma: Carib, capitulo: LXVII, pagina_impresa: ~437}
+  advertencia_sobre_los_cinco_del_cap_LXII: >-
+    Las Casas dice expresamente de esta lista que «les faltan ó sobran sílabas ó
+    letras» (m06). Son las formas MENOS fiables del tomo y hay que decirlo cada
+    vez que se citen.
+  antroponimos:
+  - {forma: Guacanagarí, menciones: 32, capitulo_principal: LVIII-LXIII}
+  - {forma: Guarionex, capitulo: LXII, pagina_impresa: ~410, nota: "aquí lo dan como nombre de isla; Las Casas corrige: es el rey de la Vega Real"}
+  - {forma: Caonabó, capitulo: LXXIV}
+  - {forma: Behechio, capitulo: LXXIV}
+
+# ══════════════════════════════════════════════════════════════════════
+# 4. LAS NEGATIVAS (skill §6 — valen tanto como las positivas)
+# ══════════════════════════════════════════════════════════════════════
+negativas:
+  metodo: >-
+    conteo sobre el texto normalizado sin diacríticos, probando cada forma con
+    todas las grafías del XVI que se me ocurrieron (regla 6: un cero se
+    verifica). Para `ciguayo` la verificación CAMBIÓ el resultado (0→6 con
+    `cyguayo`); para las de abajo, no.
+  religion_y_rito: >-
+    **el tomo I no tiene NADA de religión taína.** `cemi`/`zemi`/`çemi` = 0,
+    `behique`/`buhiti`/`bohiti` = 0, `areito`/`areyto` = 0, `cohoba` = 0,
+    `Yocahu`/`Yucahu` = 0, `Atabey`/`Atabei` = 0, `Guabancex` = 0,
+    `Guahayona` = 0, `Opiyelguobiran` = 0, `bagua` = 0, `duho` = 0,
+    `naboria` = 0, `goeiza` = 0. Confirma las tres sesiones previas que ya lo
+    habían medido (ver la nota de la fuente) y **esta vez con la lista completa
+    de formas**. Todo eso está en Pané, que sí lo tiene: ver
+    `taino_pane_c1498.yaml`.
+  otras_ausencias:
+  - {forma: barbacoa, n: 0}
+  - {forma: batea, n: 0}
+  - {forma: jagua/xagua, n: 0}
+  - {forma: guayaba, n: 0}
+  - {forma: guacamayo, n: 0}
+  - {forma: yucayeque, n: 0}
+  - {forma: naguas, n: 0}
+  - {forma: Anacaona, n: 0}
+  - {forma: Xaragua, n: 0}
+  - {forma: Boriquén/Borinquen, n: 0}
+  falso_positivo_declarado: >-
+    `opia` da 77 y es RUIDO: son `propia`, `copia`, `apropia`. La voz taína
+    `opía` 'alma del muerto' NO está en el tomo I. Está en Pané cap. XIII.
+  consecuencia: >-
+    la nota de la fuente decía «rendimiento nulo, documentado tres veces». Con
+    la pregunta correcta —**taíno**, no caquetío ni corpus cultural— el tomo I
+    rinde 26 voces con glosa y 10 pasajes metalingüísticos. No era la fuente:
+    era la pregunta.
+
+# ══════════════════════════════════════════════════════════════════════
+# 5. QUÉ PROPONE ESTO (regla 5 — propone, no fusiona)
+# ══════════════════════════════════════════════════════════════════════
+propuesta:
+  al_lexicon_como_procedencia:
+    que: >-
+      dar `procedencia.obra: las-casas-1875` (con libro, capítulo, página
+      impresa estimada y página pdf) a las entradas taínas del lexicón que esta
+      fuente atestigua en su CUERPO con glosa. Ninguna cambia de capa ni de
+      glosa: sólo deja de estar sin procedencia (regla 8).
+    ojo: >-
+      `macana` NO entra por aquí (sólo epígrafe) y `canoa`/`hamaca`/`kunuku` ya
+      entraron por la vía caquetía en D5, así que su cita taína es información
+      añadida, no re-etiqueta.
+  voces_nuevas_candidatas:
+  - {forma: nacan, glosa: 'medio, en medio', por_que: "elemento gramaticalizable con análisis del cronista + cognado arawack (Brinton p. 13). El dato que más pesa del tomo."}
+  - {forma: turey, glosa: 'cielo', por_que: "única voz de cosmos con glosa directa; dos fuentes (Las Casas, Brinton/Navarrete)"}
+  - {forma: caona, glosa: 'oro (La Española)', por_que: "par dialectal con nozay/tuob, m08"}
+  - {forma: nozay, glosa: 'oro (lucayos)', por_que: idem}
+  - {forma: tuob, glosa: 'oro (costa ciguaya)', por_que: idem}
+  - {forma: cupey, glosa: 'cierto árbol de La Española', por_que: "atribución declarada explícita"}
+  - {forma: guaminiquinajes, glosa: 'perrillos blancos comestibles', por_que: "voz larga con prefijo gua-, material morfológico"}
+  - {forma: çabana, glosa: 'campiña llana y rasa', por_que: "en su grafía original, no la castellanizada"}
+  al_mundo:
+    ecologia: >-
+      quema de sabana para cazar hutías (cap. LVI, impresa ~384) — comparanda
+      antillana, NO caquetía. No se proyecta a Paraguaná.
+    geografia_politica: >-
+      los dos rangos, cacique / nitayno, con su orden declarado (cap. LVIII,
+      impresa ~394).
+  lo_que_este_yaml_NO_propone: >-
+    ni una sola re-etiqueta de capa, ni un cambio de glosa, ni tocar
+    `curiana_lexicon.py`. Esto es materia para que Miguel decida voz a voz.
