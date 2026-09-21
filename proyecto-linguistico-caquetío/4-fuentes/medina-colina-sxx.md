@@ -214,6 +214,30 @@ escrito al lado. Lo aplicó `6-fusion/scripts/fusionar_nivel_c_medina.py`;
 `chamaco` quedó fuera por el silencio de Alvarado. Seis siguen sin página
 (guarero, igüira, mebi, debudeque, guarupepe, machire): están marcadas.
 
+## Bitácora — campaña `-gua` (2026-09-21)
+
+**Qué se le preguntó.** ¿El habla viva de Paraguaná conserva un `-gua` con
+valor locativo?
+
+**Qué dio: lo contrario, y ya estaba anotado.** El dictado tiene el patrón
+registrado en `6-fusion/medina_colina_dictado.yaml`,
+`patrones_observados` §`-igua`:
+
+> «barisigua (Erythrina), con **tacarigua** y **samanigua** de Alvarado y los
+> topónimos regionales en -igua: **formante fitonímico**/toponímico de
+> filiación no resuelta»
+
+O sea: donde el habla del s. XX conserva la terminación, lo que nombra son
+**plantas**. Converge con las 9 glosas de planta de Esteves y con los lexemas
+de Alvarado. Si `-gua` es algo, el candidato con más apoyos no es 'región'.
+
+⚠️ No lo propongo como glosa: **ninguna fuente lo enuncia**, y el propio
+dictado lo llama «de filiación no resuelta». Queda señalado como campaña aparte.
+
+> Medición entera: `6-fusion/propuesta_gua_procedencia_2026-09-21.yaml`
+> (la escribe `6-fusion/scripts/medir_gua_procedencia.py`). Opciones para
+> Miguel: `6-fusion/issues-pendientes/gua-procedencia-2026-09-21.md`.
+
 ## Enlaces
 
 [[02_protocolo_habla_paraguanera]] · [[esteves-1989]] ·

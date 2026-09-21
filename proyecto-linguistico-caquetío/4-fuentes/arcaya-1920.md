@@ -9,10 +9,10 @@ paginas: 348
 capa_texto: si
 estado_minado: minado
 prioridad: media
-cobertura: "religión/familia (sesión 3) + pp. 97-100, el oficio del boratio (2026-08-04) + cap. I, la geografía física de Falcón, pp. 12-19 (2026-09-10)"
+cobertura: "religión/familia (sesión 3) + pp. 97-100, el oficio del boratio (2026-08-04) + cap. I, la geografía física de Falcón, pp. 12-19 (2026-09-10) + la campaña de `-gua` (2026-09-21)"
 sostiene: {hechos_corpus: 13, entradas_lexicon: 1, ritos_documentados: 3}
 verificado: 2026-09-10
-minado: 2026-09-10
+minado: 2026-09-21
 aliases: ["Arcaya 1920", "Historia del Estado Falcón"]
 ---
 
@@ -151,6 +151,19 @@ profetiza — no que no haya especialistas. Ver [[polities-caquetias]]; el rasgo
   mano.
 - Solo **1 entrada del lexicón lo cita**, pese a ser fuente de siglas (PMA) en
   el glosario de Zavala.
+
+## Bitácora — campaña `-gua` (2026-09-21)
+
+**Qué se le preguntó.** ¿Analiza `gua` como morfema en algún topónimo?
+
+**Qué dio: cero.** `gua` aparece sólo **dentro** de topónimos, sin segmentar —
+Acurigua, Barragua, Churuguara, Quiragua, Cariagua. Arcaya no propone
+morfología para ninguno. De él sale el referente de `sividigua` (toponimo-173),
+que ya estaba en el canon como descartado por no tener glosa en ninguna fuente.
+
+> Medición entera: `6-fusion/propuesta_gua_procedencia_2026-09-21.yaml`
+> (la escribe `6-fusion/scripts/medir_gua_procedencia.py`). Opciones para
+> Miguel: `6-fusion/issues-pendientes/gua-procedencia-2026-09-21.md`.
 
 ## Enlaces
 
