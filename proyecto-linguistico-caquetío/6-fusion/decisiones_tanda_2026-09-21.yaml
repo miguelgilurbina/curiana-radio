@@ -1,0 +1,372 @@
+# ─────────────────────────────────────────────────────────────────────────
+# DECISIONES DE MIGUEL — tanda del 2026-09-21
+#
+# Las CATORCE de la auditoría de morfología
+# (6-fusion/issues-pendientes/morfologia-revision-2026-09-20.md §6),
+# respondidas una a una en la conversación, más dos que salieron de ella.
+#
+# Mismo patrón que las tandas anteriores: cita literal, lectura operativa y
+# dónde se aplica. Cada decisión dice además de qué tipo es —corrección de
+# error, decisión de canon, o corte de serie— porque eso decide quién la
+# puede aplicar y si hay que volver a correr.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-21'
+  decidido_por: Miguel
+  responde_a: '6-fusion/issues-pendientes/morfologia-revision-2026-09-20.md §6 (14 decisiones)'
+  modo: 'una a una, en la conversación'
+  resumen: '1C · 2A · 3A · 4B · 5C · 6B · 7B · 8A · 9A · 10A · 11C+A · 12A · 13B · 14B'
+  estado: >-
+    DECIDIDAS las catorce (2026-09-21). Pendiente de aplicar. Las que mueven
+    lo que el agente VE o lo que el motor CUENTA van en UN SOLO corte de
+    serie, no en cuatro: la serie C se repite una vez, con todo dentro.
+  linea_roja_de_toda_la_tanda: >-
+    El scorer se toca aquí a propósito y con medición —los puntos 1 y 2 son
+    correcciones de un error medido, no un rediseño de la métrica—, pero
+    `capas_de_score` sigue fijo y `curiana_observer` no se modifica. Cambiar
+    el PESO del aspecto (opción B del punto 3) queda fuera de esta tanda: es
+    un rediseño y necesita su propio diseño en 5-experimento/.
+
+# ══════════════════════════════════════════════════════════════════════
+# LAS CATORCE
+# ══════════════════════════════════════════════════════════════════════
+
+d21.1_comodin_de_longitud_del_aspecto:
+  tipo: corrección de error + corte de serie
+  decision_literal: '«Si vamos con C»'
+  eleccion: C
+  medido: >-
+    El detector de aspecto acepta -ka/-ni/-da sobre cualquier raíz con guion
+    de tres letras, sin comprobar que haya verbo debajo: 20.165 de 62.347
+    detecciones entran sin verbo ninguno.
+  lectura_operativa: >-
+    El aspecto sólo cuenta cuando va sobre una raíz que el lexicón declara
+    verbal (estativa o de acción). Se acota al último segmento verbal. Va
+    junto con d21.2, que toca las mismas dos funciones, y DESPUÉS de la tanda
+    de las 49 raíces (ya en main, #178).
+  se_aplica_en: 'curiana_lexicon.py: el detector de aspecto y score_linguistico'
+
+d21.2_raices_verb_mezcla_lenguas:
+  tipo: corrección de error + corte de serie
+  decision_literal: '«Si, A»'
+  eleccion: A
+  medido: >-
+    `_RAICES_VERB` toma todas las claves con cat=v_raiz sin filtrar lengua:
+    1.424 claves, de las que 1.351 NO son caquetías (1.078 proto-arahuaco,
+    273 lokono). `es_arahuaco()` devuelve True para cualquier token cuyo
+    primer segmento esté ahí.
+  lectura_operativa: >-
+    Filtrar a familia caquetía (73 claves) en las DOS puertas: `es_arahuaco`
+    —que es donde se decide la densidad— y el detector de aspecto. Se aplica
+    a la vez que d21.1.
+  se_aplica_en: 'curiana_lexicon.py: _RAICES_VERB y sus dos consumidores'
+
+d21.3_aspecto_saturado:
+  tipo: decisión de canon
+  decision_literal: '«Me parece»'
+  eleccion: A
+  medido: 'media 1,9982 sobre un máximo de 2,0 — el 20 % del score no separa a nadie'
+  lectura_operativa: >-
+    Se ESCRIBE la trampa en CLAUDE.md, junto a la fila de `pct_caquetio`: el
+    componente de aspecto está saturado, no sirve para comparar agentes.
+    NO se cambia el peso. Y con el matiz que Miguel aceptó: **se vuelve a
+    medir después de aplicar d21.1 y d21.2**, porque al exigir verbo de
+    verdad la saturación puede caerse sola; si sigue saturada con el número
+    nuevo, se abre el rediseño (opción B) con su propio diseño.
+  se_aplica_en: 'CLAUDE.md (tabla de trampas) y una medición posterior'
+
+d21.4_clase_estativa:
+  tipo: decisión de canon + corte de serie
+  decision_literal: '«Vale vamos con la B entonces»'
+  eleccion: B
+  lectura_operativa: >-
+    Se declara la clase estativa SIN importar el alineamiento: etiqueta
+    `v_estativo` en las entradas que lo sean y una línea en el prompt
+    diciendo que un estado se predica con aspecto igual que una acción. NO se
+    importa el juego de pronombres pospuestos del lokono (opción C), que no
+    tiene ni un dato caquetío detrás y sería el préstamo que este proyecto
+    lleva un mes deshaciendo. La etiqueta LLEGA AL PROMPT.
+    La mitad del trabajo ya está hecha: las 49 raíces se repartieron el
+    2026-09-20 (#178) y las 10 estativas tienen su apoyo (WY `waneepiaa`
+    'ser entero', `palawaa` 'ser salado', `josoo` 'estar seco'; LK `hebbe`
+    'ser viejo', uno de los tres ejemplos con que Perea define la 4ª
+    conjugación).
+  se_aplica_en: 'curiana_lexicon.py (cat), la plantilla, y 2-lengua/morfologia.md'
+
+d21.5_ka_es_atributivo:
+  tipo: decisión de canon + corte de serie
+  decision_literal: '«Vamos con la C»'
+  eleccion: C
+  medido: >-
+    `ka-` está en REGLAS_POSESIVAS como «posesivo genérico» y el prompt lo
+    enseña como `ka-biro = el salinero`. Es el ATRIBUTIVO arahuaco: van Buurt
+    2014 §8 lo da como localizador 'hay, existe(n)' (*Casibari* = 'hay rocas
+    duras') y Perea p. 555 da el par mínimo con el privativo `m-`. Uso: 564
+    contra 6.843 de `ta-`.
+  lectura_operativa: >-
+    (1) `ka-` pasa a atributivo / existencial con la cita de van Buurt;
+    (2) el ejemplo del prompt pasa a `ka-biro = hay sal, el lugar tiene sal`;
+    (3) `ka-` y `ma-` salen de REGLAS_POSESIVAS a una tabla propia
+    REGLAS_ATRIBUTIVAS. Cambia la AGRUPACIÓN, no las claves, así que el
+    desafijador no se mueve.
+    Consecuencia buscada: el caso del viento queda con su vía escrita —
+    **`ka-juri` 'hay viento'** en vez de `juri-ni`.
+  se_aplica_en: 'curiana_lexicon.py (REGLAS_ATRIBUTIVAS y la plantilla)'
+
+d21.6_ana_sin_glosa:
+  tipo: decisión de canon + corte de serie
+  decision_literal: '«Me parece🫡 la B»'
+  eleccion: B
+  medido: >-
+    El canon retiró la glosa 'lugar de' el 2026-09-07 (#109, censo de Esteves:
+    0 casos) y las dos plantillas siguen enseñando «-ana = lugar de X». La
+    propia regla se declara `canon-simulación` en su campo de evidencia: está
+    escrito que el prompt dice algo que el dato no sostiene. Uso: 290 sobre
+    53 raíces.
+  lectura_operativa: >-
+    `-ana` se enseña SIN GLOSA, como ya se enseñan `-ubana` y `-uru`:
+    «desinencia atestiguada cuyo valor nadie anotó; puedes usarla si propones
+    su valor entre corchetes». Ni se quita del prompt (A, que tiraría un
+    formante atestiguado) ni se deja el error con permiso (C). Y abre la
+    puerta a que los agentes propongan la glosa, que es para lo que existe
+    la simulación.
+  se_aplica_en: 'curiana_lexicon.py (las dos plantillas)'
+
+d21.7_gua_sin_procedencia:
+  tipo: decisión de canon
+  decision_literal: '«Si me parece, B»'
+  eleccion: B con A mientras tanto
+  medido: >-
+    Único apoyo escrito: la frase «Topónimos venezolanos de Falcón y Sucre».
+    Cero clave foránea. Se enseña en las dos plantillas y se usa 102 veces
+    sobre 37 raíces.
+  lectura_operativa: >-
+    Se abre una campaña corta para buscarle fuente en `2-lengua/toponimos.yaml`
+    (109 topónimos en canon) y en el gazeteer de Esteves ya minado; mientras
+    tanto se declara `deuda: sin-procedencia` y se sigue enseñando. Apoyo que
+    ya existe en el canon: `paragua` se lee como `para` 'mar' + `-gua`, y por
+    eso el 2026-09-19 se decidió NO fusionar `parawa`/`para` — fusionarlas
+    habría borrado este morfema.
+  se_aplica_en: 'la deuda ahora; la campaña, sesión aparte'
+
+d21.8_kana_no_es_cognado_directo:
+  tipo: decisión de canon
+  decision_literal: '«Vale perfecto […] Por lo que me parece. A.»'
+  eleccion: A
+  medido: >-
+    La regla afirma «COGNADO DIRECTO con Caquetío». El único `-kana` de
+    familia caquetía en el lexicón es `sakana` 'ofrenda', HIPOTÉTICA; en
+    toponimos.yaml hay cero; en Zavala `kana` es 'demonio', un lema. Y el
+    ejemplo de la regla forma el plural de una palabra wayuu.
+  lectura_operativa: >-
+    La afirmación baja a «reconstruido desde el wayunaiki», deuda D11 como
+    los tres aspectos, y los tres ejemplos que enseñan wayuu se reescriben
+    con voz caquetía (`barsure-kana`). NO se archiva la forma (opción B):
+    quitar el plural dejaría a los agentes sin manera de decir «los
+    ancianos», y el dato lokono (no pluralizar los irracionales, Perea
+    p. 556) es de otra lengua.
+  nota_de_miguel: >-
+    Miguel apuntó que `macana` «también existe, es lo mismo». Medido: NO
+    sostiene el `-kana` colectivo — el achagua de Neira y Ribero 1762 trae
+    `Macanasi`, `Macanayi` y `Mamacanayisa`, o sea que la raíz es `macana-`
+    con SUS propios sufijos, y el `-kana` de ahí es parte de la raíz, no el
+    plural. Comparten sílaba, no morfema (el caso contra el que avisa la
+    skill minar-fuente §8). PERO esas tres formas achaguas son apoyo
+    arahuaco INDEPENDIENTE para `macana` misma, hoy etiquetada
+    caquetío-reconstruido apoyándose en Medina Colina y en el tainismo
+    panhispánico (decisión de Miguel del 2026-09-12): se propone revisar su
+    etiqueta con este apoyo.
+  se_aplica_en: 'curiana_lexicon.py (la regla y sus ejemplos); propuesta aparte para `macana`'
+
+d21.9_naiki_se_retira:
+  tipo: decisión de canon
+  decision_literal: '«Si, A.»'
+  eleccion: A
+  medido: '0 usos en 95.445. Ninguna plantilla lo enseña. Su apoyo es el nombre de la lengua andamio (wayuunaiki) y su único ejemplo también.'
+  lectura_operativa: >-
+    `-naiki` se retira a REGLAS_RETIRADAS, junto a `-ko` y `-sha`, por la
+    misma razón por la que se retiraron aquéllos el 2026-09-14: sin fuente, y
+    era convención. ⚠️ Sacarlo de TODAS_LAS_REGLAS mueve `_SUFIJOS_CAQ`, así
+    que aunque el uso sea cero hay que MEDIR ANTES por si alguna forma hoy se
+    desafija y mañana no.
+  se_aplica_en: 'curiana_lexicon.py (REGLAS_RETIRADAS), con medición previa'
+
+d21.10_kudanga_y_kute:
+  tipo: decisión de canon + corte de serie
+  decision_literal: '«Vamos con tu propuesta»'
+  eleccion: A (con C incluido)
+  medido: >-
+    El prompt enseña cinco pronombres y los cinco son reconstruidos del
+    wayuu. El lexicón tiene DOS pronombres caquetío-atestiguados con cita
+    (Zavala p. 73 vía Arcaya: «chacamba cudanga» ¿cómo está usted?, «cudan de
+    cuté» para servir a usted) y ninguno se enseña.
+  lectura_operativa: >-
+    Los dos entran al prompt COMO REGISTRO FORMAL, junto a los cinco: `pia`
+    para el tú corriente, `kudanga` para dirigirse a un mayor o a un Diao. Es
+    un rasgo social además de gramatical, y la era 2 tiene la jerarquía
+    escrita — con la escena por lugar, el trato formal al Manaure en el
+    Capubana y el tú corriente en el conuco. Y se corrige la frase de
+    `2-lengua/lexicon.md` que dice que «los pronombres no tienen rival
+    atestiguado», que no es exacta. Caso barato de la política d19.b: aquí no
+    hay que archivar nada, `pia` y `kudanga` no compiten, se reparten
+    registros.
+  se_aplica_en: 'curiana_lexicon.py (plantillas) y 2-lengua/lexicon.md'
+
+d21.11_nominalizacion:
+  tipo: decisión de canon + corte de serie
+  decision_literal: >-
+    «Me parece excelente. Y muy interesante como los agentes lo resolvieron,
+    eso es súper importante irlo dejarlo en nuestros sights porque es
+    literalmente la idea del proyecto. Ver el surgimiento del lenguaje un
+    resurgimiento una reimaginacion. Pero si o si me gusta esa visión. C y
+    mientras no salga nada A.»
+  eleccion: C con A mientras tanto
+  medido: >-
+    Cero reglas que deriven nombre de verbo. Los agentes lo resolvieron con
+    el posesivo: 1.107 usos de ta-/ma-/wa-/ka- sobre raíz verbal (`ta-chaa`
+    'mi hacer', `wa-jai` 'nuestro oír') — que el motor contaba como
+    «violación de slot».
+  lectura_operativa: >-
+    (A, ahora) Se saca «posesivo sobre verbo» de la lista de violaciones y se
+    declara en morfologia.md que el posesivo nominaliza: describir el sistema
+    que emergió, no sancionarlo. (C, campaña) Buscar en Zavala, Alvarado y
+    Arcaya nombres de acción que compartan terminación con un verbo, a la
+    manera de `matakán`; si sale algo, entra atestiguado. NO se importa el
+    nominalizador lokono `-hù`/`-hi` (opción B): sería morfología de otra
+    lengua sin dato.
+  por_que_importa: >-
+    Es el punto donde Miguel dijo para qué existe el proyecto. Ver
+    [[lo-que-emerge-es-el-producto]]: un patrón no declarado es artefacto si
+    alguna plantilla lo enseña, y HALLAZGO si no. Propuesto de aquí: que «qué
+    inventaron ellos que el sistema no tiene» pase a ser un informe del
+    cierre de día, no un hallazgo de auditoría cada dos meses.
+  se_aplica_en: 'morfologia.md y la lista de violaciones; la campaña, sesión aparte'
+
+d21.12_apilamiento_libre:
+  tipo: decisión de canon
+  decision_literal: '«Vale, A.»'
+  eleccion: A
+  medido: '57 patrones no declarados, 988 usos, 273 formas, hasta cuatro slots (`ka-biro-uco-aima`).'
+  lectura_operativa: >-
+    Se declara en morfologia.md que los afijos SE APILAN y que el orden NO
+    está fijado, y la lista medida queda como registro de lo que hace la
+    comunidad. El prompt no se toca. NO se fija un orden de plantilla
+    (opción B): devolverles como regla lo que ellos inventaron convertiría un
+    hallazgo en una instrucción y haría circular la medición — el mismo error
+    que enseñar `kali-bana` y luego contarla como acuñación. Y tampoco se
+    declaran las dos «exclusiones» (opción C): `chaa-ni-da` («lo está
+    haciendo y lo va a hacer») no es obviamente agramatical en un sistema sin
+    tiempo, y llamarlo error sería una afirmación sobre una lengua que no
+    tenemos.
+  se_aplica_en: '2-lengua/morfologia.md'
+
+d21.13_posesion_numero_genero:
+  tipo: decisión de canon
+  decision_literal: '«Vale, B»'
+  eleccion: B
+  lectura_operativa: >-
+    Se importa SÓLO el no-poseído, que es puramente gramatical (LK
+    `u-si-kua-hù` 'LA casa', Perea p. 587): tapa un hueco medido — 6.843 usos
+    de `ta-` sobre 258 raíces son, en parte, agentes que dicen «mi cerro»
+    porque no pueden decir «el cerro». El GÉNERO varonil/no varonil (Perea
+    p. 554) y el NÚMERO de los irracionales (p. 556) se DECLARAN como huecos
+    con su cita, en una sección nueva «lo que un sistema arahuaco tiene y
+    éste no», y se esperan: el género es lo que la regla 4 prohíbe importar
+    sin marcarlo, y el proyecto acaba de pasar por eso con `-ko`/`-sha`.
+  se_aplica_en: 'curiana_lexicon.py (el no-poseído) y morfologia.md (los dos huecos)'
+
+d21.14_d5_en_la_morfologia:
+  tipo: corrección bajo decisión ya tomada + corte de serie
+  decision_literal: '«Vale, B..»'
+  eleccion: B ahora, A en el mismo corte que d21.1, d21.2 y d21.5
+  medido: >-
+    D5 (2026-08-31) decidió que la grafía española es grafía y el lema
+    fonémico es la palabra; la morfología se quedó fuera. `-bacoa` se escribe
+    con c cuando el lema del lexicón es `bakoa`, atestiguado, y el prompt
+    enseña `ada + -bacoa = adabacoa` cuando NINGUNA de las tres formas está
+    en VOCABULARIO_BASE. `-uto` se enseña dentro del uso de `-uco` sin estar
+    en TODAS_LAS_REGLAS: se enseña y no se reconoce. Cinco derivados
+    (`Judibana`, `Corogua`, `adabacoa`, `yacarebacoa`, `wayuukana`) los
+    presentan las reglas y el lexicón no los tiene.
+  lectura_operativa: >-
+    (B, ahora) Se arregla la deuda documental: los ejemplos se reescriben con
+    formas del lexicón y `-uto` se declara como variante dentro de su regla.
+    (A, con los otros cortes) Migrar `-bacoa` → `-bakoa`: cambia una clave de
+    TODAS_LAS_REGLAS → cambia `_SUFIJOS_CAQ` → mueve `nucleo_de_token()` y
+    con él el score, y hay 57 usos de `-bacoa` en la base que dejarían de
+    segmentarse igual. Se mide antes.
+  se_aplica_en: 'curiana_lexicon.py'
+
+# ══════════════════════════════════════════════════════════════════════
+# LO QUE SALIÓ DE LA CONVERSACIÓN, FUERA DE LAS CATORCE
+# ══════════════════════════════════════════════════════════════════════
+
+d21.15_coro_es_espina:
+  tipo: decisión de canon (curación con fuente)
+  pregunta: >-
+    La glosa de `coro` en el lexicón es «cardón grande, cactus columnar»,
+    caquetío-hipotético, y su propia nota declara que NO sale de ninguna
+    fuente localizada (el #181 de Zavala es `Koro` = 'Cotorra'). Se propuso
+    quitarla; Miguel recordó una fuente.
+  decision_literal: >-
+    «Me parece que la fuente de coro = espina viene de una fuente que no
+    recuerdo cuál fue que te compartí, de alguien que mencionaba que curiana
+    era realmente Coriana y que venía de espina y que era porque Coro era un
+    bosque tupido de cardones.»
+  la_fuente: >-
+    Encontrada: González Batista, «El nombre de Coro»
+    (4-fuentes/gonzalez-batista-nombre-de-coro.md), trabajada en
+    6-fusion/toponimia_coro_espina.yaml y ya registrada como lectura en
+    2-lengua/toponimos.yaml §Coriana — con el veredicto del propio Miguel del
+    2026-08-25: «PLAUSIBLE, la línea más prometedora del autor, abierta».
+    Literal: `coro` 'espina' → Coriana 'tierra de las espinas, o la tierra
+    del espinar, de vegetación espinosa, e INDIRECTAMENTE tierra de
+    cardones', con `paragua` + `na` como paralelo, y «Coriana, y no Curiana,
+    que nos parece un barbarismo». Reparos anotados: depende de `na` =
+    'tierra', que ninguna fuente impresa da (Zavala #184: 'como, semejante');
+    su ejemplo `corocoro` se refutó con Alvarado 1921 (onomatopeya del canto
+    del ave). La tesis aguanta por `tococoro`/`totocoro` vivos en la
+    arquitectura coriana, por el 'fruto del cardón' de Zavala y por el
+    cardonal de Coro en los linderos. Compite con Arcaya (avispa o lagartija,
+    1920 p. 170) y con Castellanos (viento, 1589).
+  lectura_operativa: >-
+    La curación NO es quitar la glosa sino cambiar la inventada por la que sí
+    tiene fuente: `coro` 'espina' citando a González Batista, con su etiqueta
+    de lectura en disputa; 'cardón' pasa a ser lo que la propia fuente dice
+    que es, una consecuencia indirecta. `kadushi` se queda como la
+    atestiguación insular del cactus (van Buurt 2014, islas A/B/C, var.
+    *cadushi* en Aruba; Gatschet 1885 sobre material de Pinart, Aruba 1882,
+    «kaduski»), con el matiz de que van Buurt advierte que su lista es de
+    «words LIKELY to be of Caquetío origin» y «has a subjective element».
+  se_aplica_en: 'curiana_lexicon.py (entrada `coro`), con la cita a gonzalez-batista-nombre-de-coro'
+
+d21.16_las_glosas_baratas:
+  tipo: curación (no mueve el scorer)
+  contexto: >-
+    Las cinco glosas que el issue de los pares dejó como curación barata, y
+    que quedaron esperando fuera de los dos agentes de morfología.
+  lectura_operativa: >-
+    (1) `chaa` «hacer, construir, crear» → quitar «crear»: emparejaba con
+    `eroa` «empezar, crear, originar» (atestiguada) y no son lo mismo — uno
+    construye, el otro origina. Miguel: «efectivamente pasa lo mismo, son
+    símiles pero que tienen significados distintos también».
+    (2) `apana` «una luna (unidad de tiempo ~30 días)» → la CABEZA pasa a ser
+    la medida: «medida de tiempo: una luna (~30 días)». NO se reglosa a
+    «mes»: la fuente dice «Una luna. Medición de tiempo» (Zavala #10, GC) y
+    su pareja `buiamati` «dos lunas» (#47), o sea un sistema de CONTAR lunas;
+    llamarlo «mes» proyectaría el calendario europeo (regla 3). Miguel:
+    «¿Entonces es más sobre el ciclo lunar pensando en la agricultura? Pero
+    no sé si sea derechamente un mes, no?» — y lo de la agricultura tampoco
+    lo dice la fuente, así que no se escribe.
+    (3) `coro` → ver d21.15.
+    (4) `bara`/`kuru` → declarar la convivencia en las notas de las dos (el
+    palo cortado y el árbol vivo): variación real, no bug.
+    (5) `sima`/`turumako` → declarar la convivencia y afinar las dos glosas
+    para que dejen de emparejar. Por el criterio de la propia política d19.b
+    NO son par —«cerro, montaña, elevación» contra «cerro, meseta» es
+    solapamiento parcial, no glosa idéntica— y Miguel: «me parece bien que
+    convivan sima y turumako […] al final no pasa nada si hay símiles».
+    Y el argumento morfológico que cierra la tercera banda: `-bana` es un
+    SUFIJO locativo, no un sustantivo; compone (`kali-bana`, `biro-bana`)
+    pero no nombra, así que «cerro ya se dice con -bana» no se sostiene.
+  se_aplica_en: 'curiana_lexicon.py (las cinco entradas y sus notas)'
