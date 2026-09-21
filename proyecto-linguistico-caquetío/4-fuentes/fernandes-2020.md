@@ -9,9 +9,9 @@ local: "fuentes_caquetios/Fernandes_et_al_2020_Nature_Genetic_History_Caribbean.
 paginas: "— (archivo vacío)"
 capa_texto: archivo-vacio
 estado_minado: no-disponible
-prioridad: baja
+prioridad: alta   # subida el 2026-09-21: la campaña del taíno la necesita y hay versión abierta en PMC
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-07-29
+verificado: 2026-09-21
 aliases: ["Fernandes et al. 2020"]
 ---
 
@@ -19,8 +19,20 @@ aliases: ["Fernandes et al. 2020"]
 
 ## 🔴 Estado: archivo vacío (0 bytes)
 
-Verificado el 2026-07-29. Es uno de los **6 archivos de 0 bytes** del repositorio
-(ver [[INDICE_FUENTES]]).
+Verificado el 2026-07-29 y **de nuevo el 2026-09-21: sigue en 0 bytes**. Es uno
+de los **6 archivos de 0 bytes** del repositorio (ver [[INDICE_FUENTES]]).
+
+⚠️ **La campaña del taíno la echó en falta.** Para preguntar por afinidad entre
+poblaciones insulares y continentales hacen falta **varias** muestras; hoy el
+repo sólo tiene [[schroeder-2018]], que es **un** individuo de las Bahamas y
+declara cero menciones de caquetío, Aruba o Paraguaná. Esta es la única fuente
+del repo con muestras de varias poblaciones caribeñas precontacto.
+
+**Y hay versión de acceso abierto**: Nature 590 (2021) está depositada en PMC
+por los NIH — `https://pmc.ncbi.nlm.nih.gov/`, buscar *«A genetic history of
+the pre-contact Caribbean»*. No se descargó (la campaña no descarga). Prioridad
+**alta**, no baja: ver `6-fusion/taino_en_la_esfera_2026-09-21.yaml` (`gen-03`,
+`obras_a_conseguir`).
 
 ## Qué debía dar
 

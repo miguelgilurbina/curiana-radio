@@ -11,8 +11,10 @@ acceso: "Libre — la tesis completa (823 pp., incluye este capítulo) está en 
 estado_minado: minado
 prioridad: alta
 tareas: [F5]
+cobertura: "lingüística comparativa, cognados y correspondencias (F5, 2026-08-03) + releído por el taíno: filiación vs. contacto y el vector español-Hispaniola (2026-09-21, campaña del taíno T5)"
 sostiene: {hechos_corpus: 2, entradas_lexicon: 2, propone_cognados: 16, propone_correspondencias: 14, propone_entradas_lexicon: 5, propone_pares_validacion: 10}
-verificado: 2026-08-03
+verificado: 2026-09-21
+minado: 2026-09-21
 aliases: ["Oliver 1989 cap. 2", "Oliver cap. 2", "Linguistics"]
 ---
 
@@ -245,6 +247,41 @@ revisar. **No se corrigen forzando la regla**; eso sería circular.
    como **préstamo del tamanaco**, lengua caribe, p. 145) y `barbacoa`/`maraca`/
    `cacique` («one must be careful about some terms offered by the Spanish as
    "native" Caquetío», p. 151).
+
+## Releído el 2026-09-21 para el taíno (campaña del taíno, T5)
+
+**Qué se preguntó.** ¿Qué dice este capítulo de la relación taíno↔caquetío: es
+parentesco, es contacto, o es el español de por medio? Medido sobre el PDF
+extraído con `pdftotext`: `Taíno` 62 · `Island Carib` 42 · `Antill` 17 ·
+`Hispaniol` 3 · `Arawak` 379 · `Lucay` 0 · `Cuba` 1.
+
+**Qué se halló — y confirma que es parentesco, no esfera.**
+
+- **Salen del mismo nodo, y por puertas distintas.** Oliver hace que el grupo
+  que dio taíno e island carib entrara a las Antillas **desde Trinidad y la
+  costa oriental de Venezuela**, mientras el que dio el caquetío se fue al
+  **oeste** hacia los Llanos, *«following the footsteps of the earliest splinter
+  group that was to evolve into Guajiro-Paraujano»*. Divergencia de ≥ 1,8 y
+  probablemente 2,6 milenios. Son **primos, no vecinos** — y la ruta lo explica.
+- **El punto 5 de arriba es más importante de lo que parecía.** La frase de la
+  p. 151 tiene contexto: *«Other terms, such as **maraca** /maraka/ are probably
+  of Taíno origin and possibly brought in along with **cacique** /kasike/ and
+  many others by the Spanish, all of whom had to go through Hispaniola before
+  reaching Venezuela»*. Y [[oliver-1989-cap3]] lo repite dos veces más (p. 241
+  n. 83 con `caney`, `fotuto`, `huracán`, `hamaca`; p. 283 n. 131 con
+  `naboria`). No es una cautela de paso: es una tesis del autor, dicha tres
+  veces en dos capítulos.
+- **La reserva sobre `datihao` corta en las dos direcciones.** La n. 42 (p. 146)
+  duda de que sea caquetío porque *«Oviedo's long time residence in Hispaniola
+  may be a factor here»*. Pero [[oliver-1989-cap3]] p. 212 y [[arcaya-1920]]
+  p. 158 documentan que **en Santo Domingo había caquetíos deportados desde
+  1513, y que Ampíes conversaba con ellos**. Una voz recogida «en La Española»
+  no es automáticamente taína. El argumento de Oliver es simétrico y él sólo lo
+  usó en un sentido.
+
+**Qué NO da**: ni una afirmación de contacto taíno↔caquetío en el siglo XV.
+Toda la relación que traza es de filiación. Ver
+`6-fusion/taino_en_la_esfera_2026-09-21.yaml` §para_las_otras_parcelas.
 
 ## Enlaces
 

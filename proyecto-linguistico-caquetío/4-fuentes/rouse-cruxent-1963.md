@@ -11,7 +11,7 @@ estado_minado: no-disponible
 prioridad: media
 tareas: [F9]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-07-29
+verificado: 2026-09-21
 aliases: ["Rouse & Cruxent 1963", "Venezuelan Archaeology"]
 ---
 
@@ -19,8 +19,18 @@ aliases: ["Rouse & Cruxent 1963", "Venezuelan Archaeology"]
 
 ## 🔴 Estado: archivo vacío (0 bytes)
 
-Verificado de nuevo el 2026-07-29: **sigue en 0 bytes**, igual que cuando la
-sesión 2 lo descubrió.
+Verificado de nuevo el **2026-09-21**: **sigue en 0 bytes**, igual que el
+2026-07-29 y que cuando la sesión 2 lo descubrió.
+
+⚠️ **Y ahora sostiene un segundo hueco.** La campaña del taíno (T5, 2026-09-21)
+necesitaba saber si el borde **norte** de la tradición dabajuroide y el borde
+**sur** de las series antillanas (ostionoide, chicoide, meillacoide) se tocan en
+algún punto o dejan un vacío. Esta es la obra que lo diría. Sin ella, la
+afirmación «el dabajuroide llega hasta las Antillas Neerlandesas y no más allá»
+es un negativo medido sobre lo que el repo tiene, no sobre el registro
+arqueológico caribeño. Ver `6-fusion/taino_en_la_esfera_2026-09-21.yaml`
+(`arq-01`, `arq-05`), que además anota **Rouse 1992, *The Tainos*** como la
+obra complementaria para el lado antillano.
 
 ## Qué debía dar
 

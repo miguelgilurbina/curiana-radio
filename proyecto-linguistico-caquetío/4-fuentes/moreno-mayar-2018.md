@@ -11,8 +11,8 @@ capa_texto: si
 estado_minado: sin-minar
 prioridad: baja
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-08-04
-aliases: ["Moreno-Mayar 2018", "Schroeder 2018"]
+verificado: 2026-09-21
+aliases: ["Moreno-Mayar 2018"]   # ⚠️ el alias «Schroeder 2018» se retiró el 2026-09-21: apuntaba a otra obra y el error volvió a circular
 ---
 
 # Moreno-Mayar et al. 2018 — *Early human dispersals within the Americas*
@@ -48,12 +48,26 @@ conserva el episodio porque el error tardó meses en detectarse.
 
 ## Qué falta
 
-**Schroeder et al. 2018** (*Origins and genetic legacies of the Caribbean
-Taino*, PNAS 115(10)) sigue **sin estar en el repo**. Es la fuente natural para
-la comparanda taína junto a [[keegan-1989]], y complementa a
-[[fernandes-2020]] (que está en 0 bytes).
+~~**Schroeder et al. 2018** sigue sin estar en el repo~~ — **ya está**
+(`fuentes_caquetios/Schroeder_et_al_2018_PNAS_Caribbean_Taino.pdf`, 2,2 MB) y
+está minado: ver [[schroeder-2018]]. Lo que sigue en 0 bytes es
+[[fernandes-2020]].
 
 Prioridad baja: la genética no toca ninguna afirmación del corpus hoy.
+
+## ⚠️ El episodio del nombre sigue costando confusiones (2026-09-21)
+
+La campaña del taíno (T5) recibió esta obra en su encargo listada como
+*«genética antigua del Caribe: Schroeder_et_al_2018_PNAS_Caribbean_Taino.pdf»*
+— es decir, **el error del nombre del archivo volvió a circular**, dos meses
+después de corregirlo, en un encargo escrito por alguien que leyó la ruta y no
+la nota.
+
+Para que quede dicho en una línea: **esta obra no trata del Caribe.** Trata de
+Beringia y del poblamiento temprano de América. La genética taína es
+[[schroeder-2018]]; la genética caribeña precontacto con varias poblaciones es
+[[fernandes-2020]], que está vacía; y el mtDNA de Aruba es
+[[martinez-cruzado-2003]]. Ninguna de las tres es ésta.
 
 ## Enlaces
 
