@@ -1,0 +1,561 @@
+# ─────────────────────────────────────────────────────────────────────────
+# El mapa de las fuentes del taíno, y la cuarentena de lo contemporáneo
+#
+# Campaña del Taíno, parcela T3 (2026-09-21). Segunda mitad: la única parte de
+# la campaña que sale a la web.
+#
+# Dos cosas:
+#   (1) qué bibliografía usa un estudio serio del taíno, qué daría a ESTE
+#       proyecto, y dónde está legalmente en línea;
+#   (2) LA CUARENTENA: quién está recuperando hoy el taíno, cómo lo hacen, qué
+#       listas de la web mezclan eso con el XVI sin decirlo, y un criterio
+#       operativo para que no se nos cuele.
+#
+# ⚠️ Esto PROPONE (regla 5). Nada de aquí entra al canon sin que Miguel lo
+# fusione. Y nada de aquí es una cita: las páginas web se leyeron para SABER
+# QUÉ PEDIR, no para extraer datos de lengua. El dato de lengua sale de la obra
+# leída, no de la ficha de la obra.
+#
+# ⚠️ Brinton, Oviedo, Las Casas y Pané son parcela de T1/T2 en esta campaña.
+# Aquí sólo figuran como fichas y como huecos (los volúmenes que faltan).
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-21'
+  campana: Campaña del Taíno — parcela T3
+  autor: minador T3 (inventario y mapa de fuentes)
+  metodo: >-
+    búsqueda web sobre catálogos y repositorios (archive.org, HathiTrust,
+    Persée, dLOC, Open Library, Biodiversity Heritage Library) más la
+    bibliografía que la literatura sobre el taíno cita. Cada ficha dice lo que
+    se COMPROBÓ y lo que queda `por_verificar`: una URL que no se abrió no se
+    da por buena.
+  aviso_de_derechos: >-
+    dominio público = se puede copiar literal. Obra moderna = paráfrasis y cita
+    corta (menos de 15 palabras). Está marcado obra a obra en `derechos`.
+  lo_que_resulto_falso_del_encargo:
+  - afirmacion: '«las crónicas que faltan: … Pedro Mártir *Décadas*»'
+    medido: >-
+      Pedro Mártir de Anglería YA ESTÁ en el repo: `angleria-1892` (Fuentes
+      Históricas sobre Colón y América / Décadas del Nuevo Mundo), vols. 1 y 4,
+      460 + 492 páginas, `en_repo: true`, `estado_minado: parcial`. No hay que
+      conseguirlo: hay que MINARLO. Y es la fuente que Brinton cita una y otra
+      vez en su vocabulario antillano («Pet. Martyr, p. 9», «p. 26», «p. 293»,
+      «p. 304»), así que es la verificación de primera mano más barata que
+      tenemos hoy en casa.
+  - afirmacion: «las 78» (52 del lexicón + 26 de `taino_hipotetico.json`)
+    medido: >-
+      son **56 formas distintas**, no 78: 22 de las 26 claves del JSON son
+      también claves del lexicón. El JSON no es un corpus aparte sino, en su
+      mayor parte, el mismo material antes de entrar. Sólo 4 de sus 26 son
+      formas que el lexicón no tiene.
+  - afirmacion: «52 entradas taínas … y 0 de 52 con `procedencia.obra`»
+    medido: >-
+      cierto las dos cifras, pero incompleto: 10 de las 52 SÍ citan una obra en
+      PROSA dentro de `notas` (9 a Brinton 1871, 1 a Alvarado 1921 + Las Casas +
+      van Buurt). Y de esas 9 citas a Brinton, 4 no se sostienen contra el texto
+      del repo. Ver `taino_inventario_2026-09-21.yaml` §g.
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. LA BIBLIOGRAFÍA, ORDENADA POR LO QUE DARÍA A ESTE PROYECTO
+#
+# El orden no es de prestigio: es de cuánto movería NUESTRA aguja, que es
+# poder poner `procedencia.obra` + página a 52 entradas y separar el taíno
+# atestiguado del panhispánico.
+# ══════════════════════════════════════════════════════════════════════
+
+# ── LAS TRES QUE YO PEDIRÍA PRIMERO ───────────────────────────────────
+las_tres_que_pediria_primero:
+- orden: 1
+  id_propuesto: granberry-vescelius-2004
+  obra: Languages of the Pre-Columbian Antilles
+  autor: Granberry, Julian y Vescelius, Gary S.
+  anio: 2004
+  publicacion: University of Alabama Press, Tuscaloosa. 160 pp.
+  que_es: estudio lingüístico + el léxico taíno más completo que existe reunido
+  que_daria: >-
+    ES LA PIEZA QUE FALTA. Trae el diccionario taíno/inglés más completo
+    publicado y, sobre todo, **separa las siete comunidades de habla de las
+    Antillas Mayores al contacto** — taíno clásico, taíno ciboney, macorís alto
+    y bajo, ciguayo, guanahatabey, eyeri/kalinago y karina caribe. Eso es
+    exactamente la trampa 3 de esta campaña («el taíno tampoco era una sola
+    lengua») resuelta por una autoridad citable, y es lo que nos dejaría
+    etiquetar cada una de nuestras 43 voces con QUÉ taíno es. También es la
+    obra estándar para decidir si una voz es taína o caribe insular, que es
+    nuestra clase (iv).
+  derechos: >-
+    EN COPYRIGHT (2004, University of Alabama Press). Paráfrasis y cita corta
+    (< 15 palabras). No hay texto libre legal.
+  en_linea_legal: >-
+    no libre. Ficha en BiblioVault (https://www.bibliovault.org/BV.book.epl?ISBN=9780817351236)
+    y reseñas abiertas en H-Net
+    (https://networks.h-net.org/node/23910/reviews/54432/guitar-granberry-and-vescelius-languages-pre-columbian-antilles)
+    y en IJAL (https://www.journals.uchicago.edu/doi/10.1086/598773).
+  tamano: 160 pp.
+  como_conseguirla: compra (ISBN 9780817351236) o préstamo interbibliotecario
+  por_verificar: si la reseña de IJAL o la de H-Net reproducen parte del léxico
+- orden: 2
+  id_propuesto: angleria-1892
+  obra: Décadas del Nuevo Mundo (Fuentes Históricas sobre Colón y América), vols. 1 y 4
+  autor: Anglería, Pedro Mártir de
+  anio: 1892 [c. 1530]
+  que_es: crónica primaria — la más temprana que glosa voces de las islas
+  que_daria: >-
+    **YA ESTÁ EN EL REPO Y NO ESTÁ MINADA** (`estado_minado: parcial`,
+    `entradas_lexicon: 0`). Brinton apoya en Pedro Mártir cinco de las voces de
+    su vocabulario antillano citando página exacta. Minarlo convertiría citas
+    de segunda mano («Brinton 1871») en atestaciones de primera con página, que
+    es la diferencia entre la clase (ii) y la clase (i) del inventario. Coste
+    cero de adquisición.
+  derechos: dominio público (1892, autor del s. XVI). Copia literal permitida.
+  en_linea_legal: no hace falta — local en `fuentes_caquetios/`
+  tamano: 460 + 492 pp.
+  como_conseguirla: hecho. Falta la sesión de minería.
+  aviso: >-
+    faltan las décadas de los volúmenes 2 y 3. Antes de pedirlos, medir cuánto
+    dan el 1 y el 4 (la nota de `4-fuentes/angleria-1892.md` ya dice que el
+    rendimiento es «muy desigual»: el vol. 4 dio el mejor dato de su sesión y el
+    vol. 1 no dio nada).
+- orden: 3
+  id_propuesto: zayas-1914
+  obra: >-
+    Lexicografía antillana. Diccionario de voces usadas por los aborígenes de
+    las Antillas Mayores y de algunas de las menores
+  autor: Zayas y Alfonso, Alfredo
+  anio: 1914
+  publicacion: Imprenta «El Siglo XX», La Habana. 487 pp.
+  que_es: vocabulario antillano del s. XX — el más extenso de la tradición cubana
+  que_daria: >-
+    Es el Alvarado de las Antillas: un glosario que va voz por voz y dice de
+    dónde la toma. Nos daría cita con página para el grueso de las 34 entradas
+    que hoy no citan nada, y —por el mismo método con el que Alvarado sirvió
+    para el caquetío— nos dejaría separar la voz antillana atestiguada del
+    tainismo panhispánico, que es la trampa 1 de esta campaña. Es el complemento
+    exacto de Granberry: uno da la clasificación moderna, el otro la cadena de
+    testimonios coloniales.
+  derechos: dominio público (1914, autor muerto en 1934)
+  en_linea_legal: >-
+    dLOC (Digital Library of the Caribbean): https://dloc.com/es/AA00089831/00002/citation ·
+    ficha en Open Library: https://openlibrary.org/books/OL6584885M/Lexicografi%CC%81a_antillana
+  tamano: 487 pp.
+  como_conseguirla: dLOC (comprobar si sirve el texto completo o sólo la ficha)
+  por_verificar: >-
+    que el ejemplar de dLOC sea descargable y tenga capa de texto. Si no, es un
+    caso de `leer-fuente` §OCR.
+
+# ── EL RESTO, POR LO QUE DARÍA ────────────────────────────────────────
+resto_por_valor:
+
+# --- crónicas primarias que faltan (los volúmenes, no las obras) ---
+- id_propuesto: las-casas-apologetica
+  obra: Apologética historia sumaria
+  autor: Casas, Bartolomé de las
+  anio: '[c. 1559]'
+  que_es: crónica primaria — la etnografía, no la denuncia
+  que_daria: >-
+    ALTO. Es la fuente de la que cuelga media docena de nuestras entradas por
+    interpósita persona: Brinton cita «Las Casas, Hist. Apol. cap. 197» para
+    `nitaino` y `naboria`, «cap. 204» para `batey` y los numerales
+    (1 hequeti, 2 yamosa, 3 cauocum, 4 yaraoucobre), «cap. 241» para `bixa` y
+    `bejique`. Con la Apologética en casa, esas seis pasan de «Brinton lo dice»
+    a atestación con capítulo. Y el cap. 204 resuelve de un golpe si nuestro
+    `abba` 'uno' —reconstruido del lokono— debe ceder ante `hequeti`, que es el
+    taíno atestiguado para lo mismo.
+  derechos: dominio público
+  en_linea_legal: >-
+    PDF abierto en Boston University:
+    https://sites.bu.edu/american-egypt/files/2020/02/Apologetica-Historia-Sumaria.pdf ·
+    El Libro Total: https://www.ellibrototal.com/ltotal/ficha.jsp?idLibro=4072
+  tamano: 2 tomos (ed. O'Gorman 1967)
+  aviso: el repo sólo tiene la *Historia de las Indias* tomo I, que es otra obra
+  por_verificar: qué edición es el PDF de BU y si trae los capítulos 197/204/241
+- id_propuesto: oviedo-y-valdes-1851-vols-2-4
+  obra: Historia general y natural de las Indias, vols. II-IV
+  autor: Fernández de Oviedo y Valdés, Gonzalo
+  anio: 1851-1855 [1535-1557]
+  que_es: crónica primaria — el naturalista del Caribe
+  que_daria: >-
+    MEDIO-ALTO. El repo tiene el vol. I. Alvarado apoya sus «voz taina» en
+    Oviedo tomo I casi siempre (`Ov. I. 63`, `I. 163`, `I. 164`, `I. 268`,
+    `I. 273`), así que el vol. I puede bastar para bastantes; los otros abren
+    los libros VII (agricultura: `conuco`) y XIII (fauna: `manati`), que son
+    justo nuestras categorías flojas.
+  derechos: dominio público
+  en_linea_legal: >-
+    Biodiversity Heritage Library, v.1 (1851) a v.3 (1855):
+    https://www.biodiversitylibrary.org/item/30643 · Internet Archive, 2ª parte
+    tomos I y II: https://archive.org/details/historia-general-y-natural-de-las-indias-segunta-parte-tomo-i
+    y https://archive.org/details/historia-general-y-natural-de-las-indias-segunda-parte-tomo-ii
+  tamano: ~600 pp. por volumen
+- id_propuesto: colon-diario
+  obra: Diario del primer viaje (en la transcripción de Las Casas)
+  autor: Colón, Cristóbal / Casas, Bartolomé de las
+  anio: '[1492-93]'
+  que_es: crónica primaria — la primera transcripción de voces de las islas
+  que_daria: >-
+    MEDIO. Es donde se documenta `canoa` y donde Colón dice que la misma lengua
+    se hablaba por todas las islas — que es el apoyo de la idea de «taíno» como
+    unidad y, a la vez, lo que Granberry matiza. Poco léxico, mucha doctrina.
+  derechos: dominio público
+  en_linea_legal: por_verificar (múltiples ediciones abiertas)
+- id_propuesto: colon-hernando
+  obra: Historia del Almirante
+  autor: Colón, Hernando
+  anio: '[c. 1539]'
+  que_es: crónica primaria de segunda generación
+  que_daria: >-
+    BAJO-MEDIO. Aporta poco léxico propio; su valor es corroborar a su padre.
+    Regla de independencia (skill §8): si repite el Diario, no es una segunda
+    atestación.
+  derechos: dominio público
+  en_linea_legal: por_verificar
+
+# --- vocabularios antillanos del XIX-XX ---
+- id_propuesto: bachiller-morales-1883
+  obra: >-
+    Cuba primitiva. Origen, lenguas, tradiciones e historia de los indios de las
+    Antillas Mayores y las Lucayas
+  autor: Bachiller y Morales, Antonio
+  anio: 1883
+  que_es: vocabulario + etnohistoria antillana
+  que_daria: >-
+    ALTO por relación coste/beneficio: es **gratis, íntegro y en línea hoy**, y
+    Alvarado 1921 lo cita por página como autoridad («Bachiller, Cuba primit.
+    242» para `ceiba`, «250» para el yopo/cohiba, «244» para la chicha). O sea:
+    ya está actuando como fuente de nuestro lexicón a dos saltos de distancia,
+    sin que lo tengamos. Cerrar ese salto es barato.
+  derechos: dominio público
+  en_linea_legal: >-
+    Internet Archive: https://archive.org/details/cubaprimitivaori00bach ·
+    copia Google/Harvard: https://archive.org/details/cubaprimitivaor00moragoog ·
+    HathiTrust: https://catalog.hathitrust.org/Record/100341428
+  tamano: ~400 pp.
+- id_propuesto: coll-y-toste-1897
+  obra: Vocabulario indo-antillano (en *Prehistoria de Puerto Rico*)
+  autor: Coll y Toste, Cayetano
+  anio: 1897-1907
+  que_es: vocabulario antillano puertorriqueño
+  que_daria: >-
+    MEDIO-ALTO, CON RESERVA. Es probablemente la colección de voces taínas más
+    extensa de su época y circula muchísimo — pero circula sobre todo
+    **reeditada y sin aparato**: la versión que se encuentra en la web
+    (taino-tribe.org/terms1.htm) es la de *Clásicos de Puerto Rico* 1972 y **no
+    cita por entrada de qué cronista sale cada voz**. Si se consigue, que sea la
+    edición original con sus referencias; la reedición sin aparato es
+    exactamente el tipo de lista que la cuarentena de abajo manda marcar.
+  derechos: dominio público (original); la reedición de 1972 no
+  en_linea_legal: >-
+    ficha de *Prehistoria de Puerto Rico*:
+    https://books.google.com/books/about/Prehistoria_de_Puerto_Rico.html?id=hRo7uAAACAAJ ·
+    reedición sin aparato: https://www.taino-tribe.org/terms1.htm (ver cuarentena)
+  por_verificar: si hay edición original de 1897/1907 con texto abierto
+- id_propuesto: tejera-indigenismos
+  obra: Indigenismos
+  autor: Tejera, Emilio (y Emiliano Tejera)
+  anio: 1951 / 1977
+  que_es: repertorio dominicano de voces indígenas con sus testimonios
+  que_daria: >-
+    ALTO si se consigue: es el repertorio que reúne los testimonios coloniales
+    voz a voz, que es justo lo que nos falta. Pero es moderno.
+  derechos: EN COPYRIGHT probable. Paráfrasis y cita corta.
+  en_linea_legal: por_verificar
+- id_propuesto: pichardo-1836
+  obra: Diccionario provincial casi razonado de vozes y frases cubanas
+  autor: Pichardo y Tapia, Esteban
+  anio: 1836 y ss.
+  que_es: diccionario dialectal cubano
+  que_daria: >-
+    MEDIO, Y ES UN AVISO. Brinton apoya `taita` 'padre' en «Richardo», que es
+    Pichardo — es decir, nuestra única atestación de `taita` sale de un
+    diccionario del ESPAÑOL DE CUBA del s. XIX, no de un cronista. Tener a
+    Pichardo permitiría ver qué dice de verdad y decidir si `taita` se degrada.
+    Ése es el caso de uso: no añadir voces, sino poder bajar una.
+  derechos: dominio público
+  en_linea_legal: por_verificar (hay ediciones en archive.org y HathiTrust)
+
+# --- estudios lingüísticos ---
+- id_propuesto: goeje-1939
+  obra: >-
+    Nouvel examen des langues des Antilles, avec notes sur les langues
+    arawak-maipure et caraïbes
+  autor: Goeje, Claudius H. de
+  anio: 1939
+  publicacion: Journal de la Société des Américanistes 31, pp. 1-128
+  que_es: estudio lingüístico comparativo
+  que_daria: >-
+    ALTO Y GRATIS. 128 páginas de examen comparado de las lenguas antillanas con
+    el arawak-maipure y el caribe, por el autor que sigue siendo la referencia
+    previa a Taylor. Es la obra que decide, con método, si `caiman`, `piragua`,
+    `papaya` o `maboya` son taínas o caribes insulares — nuestra clase (iv)
+    entera. Y está **abierta en Persée**.
+  derechos: dominio público / acceso abierto en Persée
+  en_linea_legal: >-
+    Persée: https://www.persee.fr/doc/jsa_0037-9174_1939_num_31_1_1984 ·
+    Biblioteca Digital Curt Nimuendajú:
+    http://www.etnolinguistica.org/biblio:goeje-1939-antilles
+  tamano: 128 pp. (francés)
+  aviso: en francés. El proyecto ya ha minado en francés (Adam 1879, Breton).
+- id_propuesto: taylor-1977
+  obra: Languages of the West Indies
+  autor: Taylor, Douglas MacRae
+  anio: 1977
+  publicacion: Johns Hopkins University Press, Baltimore. xix + 278 pp.
+  que_es: estudio lingüístico
+  que_daria: >-
+    MEDIO-ALTO para NOSOTROS, aunque sea una obra mayor: su núcleo es el caribe
+    insular (kalinago) y los criollos, no el taíno. Nos serviría sobre todo para
+    la otra lengua de la esfera —el kalinago, 23 entradas del lexicón— y para
+    zanjar los casos caribe/taíno.
+  derechos: EN COPYRIGHT (1977). Paráfrasis y cita corta.
+  en_linea_legal: >-
+    ficha: https://openlibrary.org/books/OL4902321M/Languages_of_the_West_Indies ·
+    hay un ítem en Internet Archive con préstamo:
+    https://archive.org/details/rosettaproject_arw_vocab-1 (por_verificar qué es exactamente)
+- id_propuesto: arrom-lexicologia
+  obra: Estudios de lexicología antillana
+  autor: Arrom, José Juan
+  anio: 1980 / 2000
+  publicacion: Editorial de la Universidad de Puerto Rico
+  que_es: estudios de lexicología taína
+  que_daria: >-
+    MEDIO-ALTO. Arrom es quien mejor ha trabajado el vocabulario religioso y
+    cosmológico taíno (`cemí`, `maboya`, `behique`, `areíto`) — que son
+    exactamente las entradas nuestras que NO aparecen ni en Alvarado ni en el
+    vocabulario de Brinton, porque no son voces del español de Venezuela sino
+    arqueología antillana. Es la fuente natural para ellas.
+  derechos: EN COPYRIGHT. Paráfrasis y cita corta.
+  en_linea_legal: >-
+    fichas: https://openlibrary.org/books/OL3073135M/Estudios_de_lexicologi%CC%81a_antillana ·
+    https://books.google.com/books/about/Estudios_de_lexicolog%C3%ADa_antillana.html?id=fr4uAAAAYAAJ
+- id_propuesto: alvarez-nazario
+  obra: El elemento afronegroide en el español de Puerto Rico / El habla campesina del país
+  autor: Álvarez Nazario, Manuel
+  anio: 1961 / 1990
+  que_es: dialectología histórica puertorriqueña
+  que_daria: >-
+    BAJO-MEDIO para el taíno precontacto; alto para el indigenismo
+    **panhispánico**, que es nuestra trampa 1. Sirve para el descarte, no para
+    la atestación.
+  derechos: EN COPYRIGHT
+  en_linea_legal: por_verificar
+- id_propuesto: rybka-sabogal
+  obra: >-
+    trabajos de Konrad Rybka y Andrés Sabogal sobre la reconstrucción del taíno
+  autor: Rybka, Konrad; Sabogal, Andrés
+  anio: 2020s
+  que_es: crítica lingüística de los proyectos de reconstrucción
+  que_daria: >-
+    ALTO para LA CUARENTENA, que es lo que esta ficha mira. Son los lingüistas
+    que ponen por escrito los dos fallos que nos importan: que las
+    reconstrucciones mezclan datos de épocas distintas, y que a veces toman por
+    taínas voces caribes. Es el aval externo del criterio de abajo — y también
+    la razón de que la descripción de los proyectos vivos sea respetuosa: Rybka
+    asesora a uno de ellos.
+  derechos: según publicación
+  en_linea_legal: por_verificar
+  via: resumido en la entrada «Taíno language» de Wikipedia (https://en.wikipedia.org/wiki/Ta%C3%ADno_language)
+
+# ── lo que YA tenemos y no está minado para el taíno ──────────────────
+ya_en_el_repo_sin_minar_para_el_taino:
+- id: angleria-1892
+  estado: 'parcial · entradas_lexicon: 0'
+  nota: ver arriba — es la pieza 2 de las tres
+- id: schroeder-2018
+  estado: en repo
+  nota: >-
+    genética, no lengua (Origins and genetic legacies of the Caribbean Taino).
+    No dará una sola glosa. Sirve para el mundo, no para el lexicón.
+- id: keegan-1989
+  estado: 'en_repo: false'
+  nota: >-
+    parentesco avuncular taíno. Alimenta `3-mundo/corpus/parentesco.yaml`, no el
+    lexicón (regla 7: minar alimenta la esfera que toque).
+- id: adam-1879
+  estado: en repo
+  nota: >-
+    habla de hombres y habla de mujeres en caribe insular. Toca la esfera por el
+    lado kalinago.
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. LA CUARENTENA
+#
+# Miguel, 2026-09-21: «Vi por ahí que hay esfuerzos para recuperarlo, con su
+# propia escritura y todo. Obvio si es así la idea no es usar eso, ya que es
+# algo contemporáneo».
+#
+# Cómo se describen aquí: son esfuerzos culturales legítimos de comunidades
+# vivas que reclaman una identidad que la historiografía dio por extinguida, y
+# el trabajo lingüístico que hacen es serio y está asesorado por arawakistas.
+# Que no sean evidencia del s. XVI **no los desmerece**: es la misma frase que
+# vale para nosotros. Este proyecto tampoco es evidencia del caquetío. La
+# diferencia entre un pueblo que rehace su lengua y un corpus que la documenta
+# no es de calidad: es de para qué sirve cada cosa.
+# ══════════════════════════════════════════════════════════════════════
+cuarentena:
+  por_que_existe: >-
+    porque las dos cosas se publican con la misma palabra encima —«taíno»— y en
+    la web conviven en la misma lista. Una voz del vocabulario de Las Casas y
+    una acuñada en 2023 desde el wayuu se ven igual en una tabla de dos
+    columnas. Si una de ésas entra a nuestro lexicón como «taíno atestiguado»,
+    el préstamo de esfera deja de medir contacto del s. XV y pasa a medir
+    nuestro descuido.
+
+  proyectos_identificados:
+  - nombre: Hiwatahia — Hekexi Taíno
+    quien: >-
+      Kasike Jorge Baracutay Estevez y la educadora Jessie Hurani Marrero, con
+      la organización Higuayagua Taíno of the Caribbean; 11 equipos de lengua,
+      76 personas. Con asesoría de los arawakistas Konrad Rybka y Alexandra
+      Aikhenvald.
+    desde: >-
+      el movimiento de reclamación taína arranca a finales de los 80 y crece
+      hacia el V Centenario de 1992; el diccionario, 2ª edición, es de 2023
+    que_publican: >-
+      *Hiwatahia: Hekexi Taino Language Dictionary* (2023), unas 20.000
+      entradas; una gramática en línea; un traductor para móvil y escritorio;
+      canciones, rezos y reconocimientos de territorio. Unos 197 miembros de la
+      tribu Higuayagua aprendiendo la variedad.
+    escritura_propia: >-
+      usan alfabeto latino. La escritura propia que circula asociada al mundo
+      taíno es otra (ver Sague, abajo).
+    de_donde_rellenan_los_huecos: >-
+      declarado por ellos: la base es **ta-maipureana/ta-arawak** — es decir,
+      las lenguas arahuacas emparentadas, que en la práctica son el lokono, el
+      wayunaiki y el garífuna.
+    urls:
+    - https://en.wikipedia.org/wiki/Ta%C3%ADno_language
+    - https://www.americanindianmagazine.org/waking-the-taino-language
+    - https://tiboko.com/wp-content/uploads/2023/12/Hiwatahiaorigingrammarandsyntax1.pdf
+    - https://books.google.com/books/about/Hiwatahia_Hekexi_Taino_Dictionary.html?id=p2EN0AEACAAJ
+  - nombre: Tainonaíki (y Taíno-Borikenaíki)
+    quien: Javier A. Hernández, lingüista puertorriqueño
+    desde: >-
+      *Primario Basíco del Taíno-Borikenaíki* en 2018, tras ~16 años de
+      trabajo; el alfabeto Tainonaíki en 2019, tras 15 de investigación
+    que_publican: >-
+      un alfabeto propio (híbrido alfabeto-abyad: las vocales son diacríticos
+      con estatuto de letra plena) y una lengua aprendible, escribible y
+      hablable, con el artículo 1 de la Declaración de Derechos Humanos
+      transliterado y grabado
+    escritura_propia: >-
+      SÍ. Modelada sobre el alfabeto pictográfico taíno de Naguaké, petroglifos
+      taínos, el silabario cheroqui y los silábicos aborígenes canadienses
+      unificados.
+    de_donde_rellenan_los_huecos: >-
+      declarado en su propia ficha: «fusión de palabras, prefijos y estructuras
+      gramaticales taínas con palabras y estructuras del **wayuu, el garífuna y
+      el arawak**». Y dicen la frase que nos importa: a diferencia del taíno
+      clásico, limitado a ciertas palabras y frases, el Tainonaíki **sí** se
+      puede hablar.
+    urls:
+    - https://omniglot.com/conscripts/tainonaiki.htm
+  - nombre: Silabario taíno de Sague
+    quien: Miguel A. Sague Jr. «Sobaoko Koromo»
+    desde: fecha no declarada en la ficha consultada
+    que_publican: >-
+      un silabario al modo maya (la consonante lleva marcas vocálicas alrededor)
+    escritura_propia: SÍ, silabario
+    de_donde_rellenan_los_huecos: >-
+      no declarado en la ficha. El ejemplo que da la propia página es
+      «Daka naboria Yaya» = «soy un servidor del Gran Espíritu», y ahí se ve el
+      método: `naboria` es voz de crónica (Las Casas), `Daka` es el pronombre
+      de 1ª persona que el arahuaco de Guayana tiene (`da-`), y `Yaya` es del
+      corpus de Pané. Tres capas distintas en tres palabras, sin marca.
+    urls:
+    - https://www.omniglot.com/conscripts/taino.htm
+  - nombre: listas anónimas y reediciones sin aparato
+    quien: >-
+      sitios de divulgación y de tribus; la más citada reedita a Coll y Toste
+      desde *Clásicos de Puerto Rico* (1972)
+    que_publican: >-
+      glosarios taíno-español largos, con flora, fauna, topónimos y nombres de
+      caciques
+    de_donde_rellenan_los_huecos: >-
+      no lo dicen, que es el problema. Comprobado en taino-tribe.org: los
+      cronistas (Oviedo, Las Casas, Pedro Mártir) se nombran dentro de algunas
+      glosas, pero **no hay fuente por entrada ni fecha por entrada**, y el
+      propio prólogo admite que Coll y Toste discrepa de otros autores. Alguna
+      entrada la incluyen diciendo a la vez que Bachiller y Morales no la
+      acepta.
+    urls:
+    - https://www.taino-tribe.org/terms1.htm
+    - https://mipais.jmarcano.com/historia/pre-colombina/glosario-taino/
+
+  aval_externo: >-
+    la crítica lingüística de estos proyectos está publicada y coincide con lo
+    que este criterio mide: Rybka y Sabogal advierten de la «mezcla de datos de
+    edades distintas» y de que a veces se toman por taínas voces caribes. No es
+    una objeción nuestra: es el estado de la cuestión.
+
+  # ── EL CRITERIO OPERATIVO ───────────────────────────────────────────
+  criterio_operativo:
+    como_se_usa: >-
+      son marcas, no veredictos. Una marca sola no descarta nada; dos mandan
+      mirar el pasaje; tres mandan degradar hasta que alguien lea la fuente
+      (regla 2: en duda, degradar). Y la marca NUNCA sustituye a la
+      procedencia: la que decide de dónde vino una entrada nuestra es el commit,
+      no el parecido.
+    c1_sin_fuente_anterior_a_1900: >-
+      la voz no aparece en ninguna fuente anterior a 1900 y la entrada no cita
+      ninguna. Es la marca más barata y la que más se cumple: 42 de nuestras 52
+      del lexicón y las 26 del JSON.
+    c2_concepto_que_ningun_cronista_glosa: >-
+      cubre un campo que las crónicas del XVI no glosan en taíno: números altos,
+      colores, pronombres completos, saludos, partes del cuerpo, verbos
+      conjugados. Los cronistas glosaron cosas —plantas, bichos, cargos,
+      utensilios—, no paradigmas. El 95 % de lo registrado son sustantivos, y
+      eso es precisamente lo que obliga a la recuperación contemporánea a
+      inventar el resto.
+    c3_grafia_del_proyecto_moderno: >-
+      la grafía usa convenciones modernas (⟨k⟩ sistemática donde el XVI escribe
+      ⟨c⟩/⟨qu⟩, ⟨w⟩, dígrafos propios, diacríticos de un alfabeto nuevo) en vez
+      de la transcripción castellana de época. Ojo: NUESTRA retroabstracción
+      hace lo mismo a propósito (`matakán`, `cacike`, `kunuku`), así que esta
+      marca sola no dice nada sobre una clave nuestra — dice mucho sobre una
+      voz copiada de una lista ajena.
+    c4_se_explica_mejor_desde_el_andamio: >-
+      la forma se explica mejor desde el lokono, el wayuu o el garífuna que
+      desde una transcripción castellana del XVI. Es el método declarado de los
+      dos proyectos vivos, y por eso es la marca que más discrimina.
+    c5_la_lista_no_fecha_ni_cita_por_entrada: >-
+      marca de la FUENTE, no de la voz: si la lista de la que se copia no dice
+      por entrada de qué cronista sale y de qué año, la lista entera entra en
+      cuarentena aunque contenga voces buenas. Es lo que pasa con las
+      reediciones de Coll y Toste.
+
+  # ── EL NÚMERO QUE MÁS IMPORTA ───────────────────────────────────────
+  huele_alguna_de_las_nuestras_a_venir_de_ahi:
+    respuesta_corta: >-
+      NO. Ninguna de las 56 viene de la recuperación contemporánea, y no es una
+      impresión: es procedencia. Las 52 del lexicón entraron en 5 commits, 51 de
+      ellos entre el 2026-06-13 y el 2026-06-21 —el arranque del repo— y las 26
+      del JSON las **generó este proyecto** con
+      `arahuaco_comparative.reconstruir_taino()`, que aplica correspondencias
+      lokono→taíno a una palabra lokono. El generador está en el repo y su
+      salida es reproducible.
+    pero: >-
+      15 marcas de perfil (8 formas del lexicón y 7 del JSON, que en buena parte
+      son las mismas claves) tienen el MISMO PERFIL que lo que produce la recuperación
+      contemporánea, porque se hicieron con el mismo método: 8 de las 52 del
+      lexicón cumplen tres criterios o más (`abba`, `acoa`, `aduri`, `agari`,
+      `daca`, `thigisi`, `wacusi`, `wagulo` — todas `taíno-reconstruido` desde
+      el lokono, todas de categoría `cuerpo` o `gramatica`) y 7 de las 26 del
+      JSON cumplen tres. No nos contaminaron: **lo hicimos nosotros**, y eso es
+      peor de arreglar y mejor de auditar, porque sabemos exactamente dónde
+      está.
+    y_lo_grave: >-
+      2 de esas formas LLEGAN AL PROMPT. `voces_de_fuera_posibles()` devuelve 43
+      candidatas y 2 son `taíno-reconstruido` desde el lokono: `akcicyaa`
+      (< Lok. akkicyaha) y `wagulo` (< Lok. wabulo). El agente de tier 1 las ve
+      en `[Voces de fuera]` etiquetadas como taínas. Como
+      `normalize_source_language('taíno-reconstruido')` devuelve `'taíno'`, la
+      capa que F8 separó en `fuente` se vuelve a juntar en la puerta del motor:
+      el lokono —que es ANDAMIO y no debe verlo nadie, porque haría circular la
+      medición— entra por la puerta de la esfera con etiqueta taína. Medido en
+      `taino_inventario_2026-09-21.yaml` §d.
+    contraprueba_del_metodo: >-
+      el propio Brinton, en la página donde nuestro `abba` 'uno' se apoya, dice
+      que el 1 taíno es **hequeti** (Las Casas, Hist. Apol. cap. 204) y que
+      `abba` es el 1 ARAWACK. La reconstrucción nos dio una forma para un hueco
+      que no existía: la atestación estaba al lado. Es el caso literal de la
+      política «donde hay forma atestiguada, manda la atestiguada»
+      (CLAUDE.md), aplicada al taíno en vez de al caquetío.
