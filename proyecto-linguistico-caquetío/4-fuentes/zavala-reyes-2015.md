@@ -10,7 +10,7 @@ paginas: 20
 capa_texto: si
 acceso: "Libre — Academia.edu: https://www.academia.edu/14657955/Palabras_vivas_de_una_lengua_muerta_Legado_arawak_caquetio · ficha SABER-ULA: http://www.saber.ula.ve/handle/123456789/40730. Verificado en el rastreo de 2026-08-14."
 estado_minado: completo-con-reserva  # 2026-08-31, decision #101: el #29 (bara) no se habia levantado; auditoria entrada-por-entrada pendiente
-cobertura: "288/288 entradas parseadas (100%); 225 en el habla activa (78%), 63 fuera por diseño"
+cobertura: "288/288 entradas parseadas (100%); 225 en el habla activa (78%), 63 fuera por diseño + las 288 glosas VERBATIM clasificadas por tipo semántico en la campaña del nominalizador (2026-09-21)"
 prioridad: alta
 tareas: []
 sostiene: {hechos_corpus: 7, entradas_lexicon: 164, citas_recuperadas_82: 62}
@@ -350,6 +350,68 @@ Curazao: `kadushi`, `kukuisa`, `kunuku`, `watapana`, `warawara`, `koke`) o
 - `curiana_sim/lexicon_zavala.py` — generado, no editar a mano. Exporta además
   `VEREDICTO_HOMOGRAFOS` y `DESCARTADOS_ZAVALA`.
 
+---
+
+## Bitácora — la campaña del nominalizador (2026-09-21)
+
+**Qué se le preguntó.** ¿Hay en el glosario un nombre de acción, de agente, de
+instrumento o de resultado que comparta terminación con un verbo, de manera que
+se pueda retroabstraer un nominalizador? (d21.11, opción C.) Se trabajó con la
+**glosa verbatim** de las 288, no con la curada del lexicón.
+
+**Qué ha dado — y es un negativo bien medido.**
+
+- **30 entradas son verbo** (19 de acción, 11 estativos) y **46 son nombre de
+  acción / agente / instrumento / resultado / lugar-de-acción** (34 sin las
+  dudosas). De 66 parejas «lema + resto = lema», **una sola** es verbo + resto
+  = nombre: `apo` #11 «Grande» + `-po` = `apopo` #12 — y el verbo lleva el
+  mismo final, así que no puede ser lo que los distingue.
+- **23 terminaciones** aparecen a la vez en verbos y en nombres; al quitarlas
+  sólo dos dejan base atestiguada, y las dos se caen (una es `morfema-002`, el
+  `-are` locativo, que va sobre nombre).
+- ⭐ **Lo que el glosario sí enseña: derivación cero.** Cinco entradas glosan
+  con **una sola forma** el verbo y su nombre — #39 «Dominar, triunfar,
+  victoria», #120 «Feroz, feo, espanto», #170 «Regar, regadío», #180 «Sembrar,
+  siembra, sembradío. Conuco», #228 «Salvar. Caserío, sitio» — más #217
+  «Sangre, sangrado». Con la reserva declarada: eso describe lo que la FUENTE
+  registra, no lo que la lengua hacía.
+
+**Un dato sobre la propia fuente, y de los que cambian cómo se la lee.** Los
+**19 verbos de acción del glosario son los 19 de Angulo Molina**; los cinco
+verbos restantes que no son suyos son estativos (Alvarado ×2, Esteves ×2,
+Arcaya ×1). Todo el verbo caquetío del proyecto es **una sola lista**: una
+corroboración dentro de ella no es independiente. Angulo Molina no está en el
+repo — deuda nueva, y grande.
+
+**Qué NO se halló.** Ningún sufijo ni prefijo nominalizador, ningún candidato
+para la capa retroabstraída. Cero para los nominalizadores lokono
+(`-hù`/`-hi`/`-ti`/`-tu`/`-na`) y para el `-si` achagua.
+
+**Y tres cosas de paso.**
+
+1. **El prefijo `ja-`**: 7 de los 13 lemas en J- son verbos (53,8 % contra el
+   10,4 % del glosario, p = 7,4e-05). El #173 da el mismo lema dos veces
+   —«Jadicuar. **Adicora**»— y el propio Zavala habla en su §5 (p. 72) del
+   *«prefijo "A" en los topónimos costeros»*. Los siete son de AM y el
+   glosario es alfabético: hay que descartar el artefacto. Pide campaña propia.
+2. **`cazebo` #75 (GC) «Poniente» = `cazi` #76 (GC) «Sol» + `ebo` #117
+   «camino»** → *el camino del sol*. Primer apoyo **léxico** (no toponímico)
+   de `-ebo`, que la toponimia ya tiene abierto con cuatro nombres. La entrada
+   `kasebo` del lexicón no lleva la segmentación.
+3. **La ⚠️ D de `mene`/`cumaragua` se cierra**, y no era ambigüedad de
+   sintaxis: Arcaya 1920 p. 75 escribe «nombres de la **viruela**» y Zavala
+   (p. 62) leyó «ciruela». La Tabla A-9 de Oliver, independiente, trae
+   «viruela». Explica también la glosa de `Cumaragua` #93.
+
+**Paginación del glosario, verificada sobre el texto de `pdftotext -enc UTF-8`**
+(conserva los folios): #1-37 en la p. 65, #38-77 en la 66, #78-116 en la 67,
+#117-156 en la 68, #157-195 en la 69, #196-235 en la 70, #236-275 en la 71 y
+#276-288 en la 72.
+
+Propuesta: `6-fusion/propuesta_nominalizador_2026-09-21.yaml`. Medición:
+`6-fusion/medicion_nominalizador_2026-09-21.yaml`.
+
 ## Enlaces
 
-[[05_geografia_politica_y_sucesion]] · [[oliver-1989-cap2]]
+[[05_geografia_politica_y_sucesion]] · [[oliver-1989-cap2]] · [[arcaya-1920]] ·
+[[oliver-1989-apendice-a]]

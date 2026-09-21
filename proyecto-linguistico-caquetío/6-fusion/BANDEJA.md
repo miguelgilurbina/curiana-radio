@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-21**.
 
-**2676 ítems propuestos** en 79 propuestas, más **11 issue(s)/comentario(s) redactados sin publicar**.
+**2867 ítems propuestos** en 83 propuestas, más **12 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -70,8 +70,11 @@ editar_a_mano: no
 | `medicion_formas_de_plantilla_corte_2026-09-18.yaml` | ? | 2 |  |
 | `medicion_hispanismos_loanword_uses_2026-09-17.yaml` | ? | 0 |  |
 | `medicion_morfologia_2026-09-20.yaml` | ? | 24 |  |
+| `medicion_nominalizacion_emergente_2026-09-21.yaml` | ? | 92 |  |
+| `medicion_nominalizador_2026-09-21.yaml` | ? | 82 |  |
 | `medicion_prestigio_vinculos_era2_2026-09-17.yaml` | ? | 3 |  |
 | `medicion_raices_de_ninguna_parte_2026-09-20.yaml` | ? | 0 |  |
+| `medicion_tanda_21_2026-09-21.yaml` | ? | 13 |  |
 | `medina_colina_dictado.yaml` | ? | 111 |  |
 | `migracion_lemas_fase2.yaml` | ? | 79 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
@@ -83,6 +86,7 @@ editar_a_mano: no
 | `pendientes_en_alvarado_y_arcaya.yaml` | ? | 0 |  |
 | `petroglifos_y_manaure.yaml` | moron-2012-petroglifos | 4 |  |
 | `polities_no_costeras_federmann.yaml` | ? | 16 |  |
+| `propuesta_nominalizador_2026-09-21.yaml` | ? | 4 |  |
 | `propuesta_nucleo_d11_fase3.yaml` | perea-alonso-1942 · neira-ribero-1762 · oliver-1989-cap2 · oliver-1989-apendice-a · zavala-reyes-2015 | 17 |  |
 | `sistema_de_nombres_era2.yaml` | ? | 8 |  |
 | `sitios_era2.yaml` | varias | 7 |  |
@@ -141,6 +145,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `la-clase-estativa-2026-09-20.md` | La clase estativa: declararla, que hoy se hereda por accidente |
 | `morfologia-revision-2026-09-20.md` | La morfología arahuaca, revisada entera |
 | `mundo-era2-sitios-y-clima.md` | El mundo de la era 2, atado a los nodos: sitios y clima |
+| `nominalizador-retroabstraccion-2026-09-21.md` | El nominalizador que no está: se buscó así, en esto, y no hay |
 | `pares-atestiguado-reconstruido-2026-09-19.md` | Dos palabras para la misma cosa: los pares atestiguado / reconstruido |
 | `predicacion-de-nombres-ka-ma-2026-09-20.md` | `juri-ni` no es caquetío: un nombre se predica con `ka-`, no con aspecto |
 | `raiz-inventada-puede-un-pueblo-inventar-una-raiz-2026-09-20.md` | ¿Puede un pueblo inventar una raíz nueva? — lo conservador YA está aplicado |

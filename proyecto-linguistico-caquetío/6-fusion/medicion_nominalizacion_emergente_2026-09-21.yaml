@@ -1,0 +1,1537 @@
+medicion: nominalizacion-emergente
+fecha: 2026-09-21
+responde_a: 6-fusion/decisiones_tanda_2026-09-21.yaml §d21.11
+aviso: 'lo que la comunidad inventa NO es evidencia de lo atestiguado: son dos secciones y no se mezclan'
+base:
+  corte: simulation_runs.started_at < '2026-09-21'
+  por_que: 'se están escribiendo runs nuevos mientras se mide; sin el corte las cifras no serían reproducibles'
+  usos_en_word_uses: 95445
+  formas_distintas: 2546
+control_de_segmentacion:
+  formas_comprobadas: 2546
+  desvios_contra_nucleo_de_token: 0
+  ejemplos: []
+  verde: true
+total:
+  usos: 960
+  formas: 92
+  raices_verbales_distintas: 45
+  agentes_distintos: 112
+  por_era_y_serie:
+    era1/-: 616
+    era2/era2-c: 237
+    era2/-: 69
+    era2/era2-b: 38
+  por_nodo:
+    (no era2): 582
+    GUARANAO: 276
+    AMUAY: 102
+  hablantes_posibles_por_nodo:
+    GUARANAO: 39
+    AMUAY: 24
+  tasa_por_hablante_posible:
+    GUARANAO: 7.1
+    AMUAY: 4.2
+  por_tier:
+    -: 582
+    1: 201
+    2: 161
+    3: 16
+  por_casa:
+    (no era2): 582
+    casa del Manaure: 143
+    los Tacuatos: 75
+    los Cayudes: 58
+    los Guasicures de Caseto: 53
+    los Corubos: 49
+dos_patrones:
+  posesivo_sobre_verbo:
+    que_es: '`ta-`/`wa-` + raíz verbal: «mi hacer», «nuestro oír». ESTO es nominalización: el posesivo exige un nombre y lo que hay debajo es un verbo'
+    usos: 470
+    formas: 48
+  atributivo_o_privativo_sobre_verbo:
+    que_es: '`ma-`/`ka-` + raíz verbal: «ma-panaa» sin saber, «ma-awa» sin beber. NO es nominalización: es predicación negativa sobre un verbo, y el privativo está declarado para NOMBRES (d21.5). Es una segunda invención, y nadie la ha nombrado todavía'
+    usos: 490
+    formas: 44
+por_prefijo:
+  -
+    prefijo: atributivo ma-
+    usos: 471
+    formas: 34
+    raices: 34
+    agentes: 91
+    por_nodo:
+      (no era2): 244
+      GUARANAO: 170
+      AMUAY: 57
+    por_era_y_serie:
+      era1/-: 262
+      era2/era2-c: 141
+      era2/-: 46
+      era2/era2-b: 22
+    muestra:
+      - ma-apo
+      - ma-awa
+      - ma-bachure
+      - ma-badamaro
+      - ma-beceremikore
+      - ma-chaa
+      - ma-domaria
+      - ma-etamo
+      - ma-jabal
+      - ma-jadarayte
+      - ma-jai
+      - ma-kaa
+  -
+    prefijo: posesivo ta-
+    usos: 453
+    formas: 37
+    raices: 34
+    agentes: 97
+    por_nodo:
+      (no era2): 315
+      GUARANAO: 95
+      AMUAY: 43
+    por_era_y_serie:
+      era1/-: 331
+      era2/era2-c: 87
+      era2/-: 22
+      era2/era2-b: 13
+    muestra:
+      - ta-awa
+      - ta-beceremikore
+      - ta-chaa
+      - ta-chaa-bana-ni
+      - ta-domaria
+      - ta-duma-maa
+      - ta-duma-naba
+      - ta-duriwa
+      - ta-eroa
+      - ta-jai
+      - ta-jakura
+      - ta-kaa
+  -
+    prefijo: atributivo ka-
+    usos: 19
+    formas: 10
+    raices: 10
+    agentes: 15
+    por_nodo:
+      (no era2): 15
+      GUARANAO: 3
+      AMUAY: 1
+    por_era_y_serie:
+      era1/-: 15
+      era2/era2-c: 3
+      era2/era2-b: 1
+    muestra:
+      - ka-bajarí
+      - ka-chaa
+      - ka-eroa
+      - ka-maa
+      - ka-masa
+      - ka-naa
+      - ka-naba
+      - ka-raka
+      - ka-rua
+      - ka-wana
+  -
+    prefijo: posesivo wa-
+    usos: 17
+    formas: 11
+    raices: 11
+    agentes: 11
+    por_nodo:
+      GUARANAO: 8
+      (no era2): 8
+      AMUAY: 1
+    por_era_y_serie:
+      era1/-: 8
+      era2/era2-c: 6
+      era2/era2-b: 2
+      era2/-: 1
+    muestra:
+      - wa-awa
+      - wa-duriwa
+      - wa-jai
+      - wa-kono
+      - wa-maa
+      - wa-masa
+      - wa-naa
+      - wa-naba
+      - wa-panaa
+      - wa-puri-rua
+      - wa-rua
+formas:
+  -
+    forma: ma-kaa
+    raiz: kaa
+    usos: 133
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: estar, existir, ser (cópula)
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 48
+    por_nodo:
+      (no era2): 63
+      GUARANAO: 54
+      AMUAY: 16
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-maa
+    raiz: maa
+    usos: 120
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: decir, hablar, comunicar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 41
+    por_nodo:
+      (no era2): 83
+      GUARANAO: 27
+      AMUAY: 10
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-panaa
+    raiz: panaa
+    usos: 85
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: saber, conocer, entender
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 37
+    por_nodo:
+      (no era2): 52
+      GUARANAO: 26
+      AMUAY: 7
+    glosa_declarada_mas_frecuente: sin saber, ignorante
+  -
+    forma: ta-naba
+    raiz: naba
+    usos: 71
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: pensar, reflexionar, meditar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 32
+    por_nodo:
+      (no era2): 55
+      GUARANAO: 12
+      AMUAY: 4
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-raka
+    raiz: raka
+    usos: 68
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: querer, desear, necesitar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 31
+    por_nodo:
+      (no era2): 33
+      GUARANAO: 22
+      AMUAY: 13
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-panaa
+    raiz: panaa
+    usos: 55
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: saber, conocer, entender
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 30
+    por_nodo:
+      (no era2): 37
+      GUARANAO: 10
+      AMUAY: 8
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-raka
+    raiz: raka
+    usos: 46
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: querer, desear, necesitar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 30
+    por_nodo:
+      (no era2): 31
+      GUARANAO: 11
+      AMUAY: 4
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-rua
+    raiz: rua
+    usos: 32
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: cargar, transportar, llevar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 22
+    por_nodo:
+      (no era2): 26
+      GUARANAO: 3
+      AMUAY: 3
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-wana
+    raiz: wana
+    usos: 29
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: ver, observar, mirar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 21
+    por_nodo:
+      (no era2): 24
+      GUARANAO: 5
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-rua
+    raiz: rua
+    usos: 27
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: cargar, transportar, llevar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 20
+    por_nodo:
+      (no era2): 19
+      GUARANAO: 8
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-naba
+    raiz: naba
+    usos: 21
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: pensar, reflexionar, meditar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 18
+    por_nodo:
+      (no era2): 10
+      GUARANAO: 7
+      AMUAY: 4
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-wana
+    raiz: wana
+    usos: 17
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: ver, observar, mirar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 15
+    por_nodo:
+      (no era2): 12
+      GUARANAO: 4
+      AMUAY: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-waidima
+    raiz: waidima
+    usos: 15
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: integro
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_estativo
+    hablantes: 15
+    por_nodo:
+      AMUAY: 7
+      GUARANAO: 6
+      (no era2): 2
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-maa
+    raiz: maa
+    usos: 14
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: decir, hablar, comunicar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 10
+    por_nodo:
+      (no era2): 9
+      GUARANAO: 4
+      AMUAY: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-suna
+    raiz: suna
+    usos: 14
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: dormir, reposar, descansar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 11
+    por_nodo:
+      (no era2): 8
+      GUARANAO: 5
+      AMUAY: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-masa
+    raiz: masa
+    usos: 14
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: comer, alimentarse
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 11
+    por_nodo:
+      (no era2): 10
+      GUARANAO: 3
+      AMUAY: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-masa
+    raiz: masa
+    usos: 12
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: comer, alimentarse
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 6
+    por_nodo:
+      (no era2): 11
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-naa
+    raiz: naa
+    usos: 10
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: ir, moverse hacia
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 9
+    por_nodo:
+      (no era2): 5
+      GUARANAO: 4
+      AMUAY: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-chaa
+    raiz: chaa
+    usos: 9
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: hacer, construir
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 7
+    por_nodo:
+      (no era2): 6
+      AMUAY: 2
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-kaa
+    raiz: kaa
+    usos: 8
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: estar, existir, ser (cópula)
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 8
+    por_nodo:
+      (no era2): 7
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-awa
+    raiz: awa
+    usos: 7
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: beber, tomar líquido
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 7
+    por_nodo:
+      (no era2): 4
+      GUARANAO: 2
+      AMUAY: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-jai
+    raiz: jai
+    usos: 7
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: oír, escuchar
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 6
+    por_nodo:
+      GUARANAO: 4
+      (no era2): 2
+      AMUAY: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-naa
+    raiz: naa
+    usos: 6
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: ir, moverse hacia
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 6
+    por_nodo:
+      (no era2): 5
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-chaa
+    raiz: chaa
+    usos: 5
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: hacer, construir
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 2
+    por_nodo:
+      (no era2): 4
+      AMUAY: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-kono
+    raiz: kono
+    usos: 5
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: sembrar, plantar, cultivar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 3
+    por_nodo:
+      (no era2): 4
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-waa
+    raiz: waa
+    usos: 5
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: venir, aproximarse
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 4
+    por_nodo:
+      (no era2): 3
+      GUARANAO: 2
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-masa-da
+    raiz: masa
+    usos: 5
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: comer, alimentarse
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 4
+    por_nodo:
+      (no era2): 5
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ka-rua
+    raiz: rua
+    usos: 4
+    prefijos:
+      - ka-
+    glosa_de_la_raiz: cargar, transportar, llevar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 4
+    por_nodo:
+      (no era2): 4
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-jai
+    raiz: jai
+    usos: 4
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: oír, escuchar
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 4
+    por_nodo:
+      (no era2): 2
+      AMUAY: 1
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-kachipo
+    raiz: kachipo
+    usos: 4
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: en voz vulgar, enojado, colérico
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_estativo
+    hablantes: 4
+    por_nodo:
+      GUARANAO: 3
+      (no era2): 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-awa
+    raiz: awa
+    usos: 4
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: beber, tomar líquido
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 4
+    por_nodo:
+      (no era2): 2
+      AMUAY: 2
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-jakura
+    raiz: jakura
+    usos: 4
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: guardar, conservar, custodiar
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 4
+    por_nodo:
+      GUARANAO: 2
+      (no era2): 1
+      AMUAY: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-kono
+    raiz: kono
+    usos: 4
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: sembrar, plantar, cultivar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 4
+    por_nodo:
+      (no era2): 4
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-kudan
+    raiz: kudan
+    usos: 4
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: servir, estar al servicio de
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 4
+    por_nodo:
+      GUARANAO: 4
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-waidima
+    raiz: waidima
+    usos: 4
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: integro
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_estativo
+    hablantes: 4
+    por_nodo:
+      GUARANAO: 2
+      (no era2): 1
+      AMUAY: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ka-maa
+    raiz: maa
+    usos: 3
+    prefijos:
+      - ka-
+    glosa_de_la_raiz: decir, hablar, comunicar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 3
+    por_nodo:
+      (no era2): 2
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ka-wana
+    raiz: wana
+    usos: 3
+    prefijos:
+      - ka-
+    glosa_de_la_raiz: ver, observar, mirar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 3
+    por_nodo:
+      (no era2): 2
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-etamo
+    raiz: etamo
+    usos: 3
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: feroz, feo, espanto
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_estativo
+    hablantes: 3
+    por_nodo:
+      GUARANAO: 3
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-siwa
+    raiz: siwa
+    usos: 3
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: blando
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 2
+    por_nodo:
+      AMUAY: 2
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: wa-naba
+    raiz: naba
+    usos: 3
+    prefijos:
+      - wa-
+    glosa_de_la_raiz: pensar, reflexionar, meditar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 3
+    por_nodo:
+      (no era2): 1
+      GUARANAO: 1
+      AMUAY: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ka-naba
+    raiz: naba
+    usos: 2
+    prefijos:
+      - ka-
+    glosa_de_la_raiz: pensar, reflexionar, meditar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 2
+    por_nodo:
+      (no era2): 2
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ka-raka
+    raiz: raka
+    usos: 2
+    prefijos:
+      - ka-
+    glosa_de_la_raiz: querer, desear, necesitar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 2
+    por_nodo:
+      (no era2): 1
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-apo
+    raiz: apo
+    usos: 2
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: grande
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_estativo
+    hablantes: 2
+    por_nodo:
+      AMUAY: 2
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-badamaro
+    raiz: badamaro
+    usos: 2
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: extraer, sacar
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 2
+    por_nodo:
+      GUARANAO: 2
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-beceremikore
+    raiz: beceremikore
+    usos: 2
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: dominar, triunfar, victoria
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 2
+    por_nodo:
+      GUARANAO: 2
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-sinwanguso
+    raiz: sinwanguso
+    usos: 2
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: insolente
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_estativo
+    hablantes: 2
+    por_nodo:
+      GUARANAO: 2
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-siwa
+    raiz: siwa
+    usos: 2
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: blando
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 2
+    por_nodo:
+      GUARANAO: 2
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-taa
+    raiz: taa
+    usos: 2
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: tomar, coger, recibir
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 2
+    por_nodo:
+      GUARANAO: 2
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-domaria
+    raiz: domaria
+    usos: 2
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: enredarse, atormentar
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 2
+    por_nodo:
+      AMUAY: 1
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-duma-maa
+    raiz: duma-maa
+    usos: 2
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: null
+    capa_de_la_raiz: null
+    cat_de_la_raiz: null
+    hablantes: 2
+    por_nodo:
+      (no era2): 2
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-masa-chaa-da
+    raiz: masa-chaa
+    usos: 2
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: null
+    capa_de_la_raiz: null
+    cat_de_la_raiz: null
+    hablantes: 2
+    por_nodo:
+      (no era2): 2
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-naba-ana-bana
+    raiz: naba
+    usos: 2
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: pensar, reflexionar, meditar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 2
+    por_nodo:
+      (no era2): 2
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-naba-rua
+    raiz: naba-rua
+    usos: 2
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: null
+    capa_de_la_raiz: null
+    cat_de_la_raiz: null
+    hablantes: 2
+    por_nodo:
+      (no era2): 2
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-nomina-wana
+    raiz: nomina-wana
+    usos: 2
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: null
+    capa_de_la_raiz: null
+    cat_de_la_raiz: null
+    hablantes: 2
+    por_nodo:
+      (no era2): 2
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-suna
+    raiz: suna
+    usos: 2
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: dormir, reposar, descansar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 2
+    por_nodo:
+      (no era2): 2
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-taa
+    raiz: taa
+    usos: 2
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: tomar, coger, recibir
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 2
+    por_nodo:
+      (no era2): 2
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-waa
+    raiz: waa
+    usos: 2
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: venir, aproximarse
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 2
+    por_nodo:
+      AMUAY: 1
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: wa-jai
+    raiz: jai
+    usos: 2
+    prefijos:
+      - wa-
+    glosa_de_la_raiz: oír, escuchar
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      GUARANAO: 2
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: wa-kono
+    raiz: kono
+    usos: 2
+    prefijos:
+      - wa-
+    glosa_de_la_raiz: sembrar, plantar, cultivar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 2
+    por_nodo:
+      GUARANAO: 2
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: wa-masa
+    raiz: masa
+    usos: 2
+    prefijos:
+      - wa-
+    glosa_de_la_raiz: comer, alimentarse
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      (no era2): 2
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: wa-panaa
+    raiz: panaa
+    usos: 2
+    prefijos:
+      - wa-
+    glosa_de_la_raiz: saber, conocer, entender
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 2
+    por_nodo:
+      (no era2): 1
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ka-bajarí
+    raiz: bajarí
+    usos: 1
+    prefijos:
+      - ka-
+    glosa_de_la_raiz: recorrer, caminar
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      (no era2): 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ka-chaa
+    raiz: chaa
+    usos: 1
+    prefijos:
+      - ka-
+    glosa_de_la_raiz: hacer, construir
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      (no era2): 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ka-eroa
+    raiz: eroa
+    usos: 1
+    prefijos:
+      - ka-
+    glosa_de_la_raiz: empezar, crear, originar
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      AMUAY: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ka-masa
+    raiz: masa
+    usos: 1
+    prefijos:
+      - ka-
+    glosa_de_la_raiz: comer, alimentarse
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      (no era2): 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ka-naa
+    raiz: naa
+    usos: 1
+    prefijos:
+      - ka-
+    glosa_de_la_raiz: ir, moverse hacia
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      (no era2): 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-bachure
+    raiz: bachure
+    usos: 1
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: maneto, patituerto
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_estativo
+    hablantes: 1
+    por_nodo:
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-domaria
+    raiz: domaria
+    usos: 1
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: enredarse, atormentar
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      (no era2): 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-jabal
+    raiz: jabal
+    usos: 1
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: adquirir
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      AMUAY: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-jadarayte
+    raiz: jadarayte
+    usos: 1
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: recoger
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-kiboata
+    raiz: kiboata
+    usos: 1
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: engañar
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-kidiboata
+    raiz: kidiboata
+    usos: 1
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: engañar, engañado
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-kudan
+    raiz: kudan
+    usos: 1
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: servir, estar al servicio de
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-patapati
+    raiz: patapati
+    usos: 1
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: anegadizo
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_estativo
+    hablantes: 1
+    por_nodo:
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-usera
+    raiz: usera
+    usos: 1
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: seco, arenoso
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_estativo
+    hablantes: 1
+    por_nodo:
+      (no era2): 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ma-waranao
+    raiz: waranao
+    usos: 1
+    prefijos:
+      - ma-
+    glosa_de_la_raiz: salado, ácido
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_estativo
+    hablantes: 1
+    por_nodo:
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-beceremikore
+    raiz: beceremikore
+    usos: 1
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: dominar, triunfar, victoria
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      AMUAY: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-chaa-bana-ni
+    raiz: chaa
+    usos: 1
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: hacer, construir
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-duma-naba
+    raiz: duma-naba
+    usos: 1
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: null
+    capa_de_la_raiz: null
+    cat_de_la_raiz: null
+    hablantes: 1
+    por_nodo:
+      (no era2): 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-duriwa
+    raiz: duriwa
+    usos: 1
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: hacer trabajos cortos
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-eroa
+    raiz: eroa
+    usos: 1
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: empezar, crear, originar
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      (no era2): 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-kachipo
+    raiz: kachipo
+    usos: 1
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: en voz vulgar, enojado, colérico
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_estativo
+    hablantes: 1
+    por_nodo:
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-kidiboata
+    raiz: kidiboata
+    usos: 1
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: engañar, engañado
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-patapati
+    raiz: patapati
+    usos: 1
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: anegadizo
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_estativo
+    hablantes: 1
+    por_nodo:
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-waranao
+    raiz: waranao
+    usos: 1
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: salado, ácido
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_estativo
+    hablantes: 1
+    por_nodo:
+      AMUAY: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: ta-wasima
+    raiz: wasima
+    usos: 1
+    prefijos:
+      - ta-
+    glosa_de_la_raiz: viejo, anciano
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_estativo
+    hablantes: 1
+    por_nodo:
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: wa-awa
+    raiz: awa
+    usos: 1
+    prefijos:
+      - wa-
+    glosa_de_la_raiz: beber, tomar líquido
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: wa-duriwa
+    raiz: duriwa
+    usos: 1
+    prefijos:
+      - wa-
+    glosa_de_la_raiz: hacer trabajos cortos
+    capa_de_la_raiz: caquetío-atestiguado
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      GUARANAO: 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: wa-maa
+    raiz: maa
+    usos: 1
+    prefijos:
+      - wa-
+    glosa_de_la_raiz: decir, hablar, comunicar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      (no era2): 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: wa-naa
+    raiz: naa
+    usos: 1
+    prefijos:
+      - wa-
+    glosa_de_la_raiz: ir, moverse hacia
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      (no era2): 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: wa-puri-rua
+    raiz: puri-rua
+    usos: 1
+    prefijos:
+      - wa-
+    glosa_de_la_raiz: null
+    capa_de_la_raiz: null
+    cat_de_la_raiz: null
+    hablantes: 1
+    por_nodo:
+      (no era2): 1
+    glosa_declarada_mas_frecuente: null
+  -
+    forma: wa-rua
+    raiz: rua
+    usos: 1
+    prefijos:
+      - wa-
+    glosa_de_la_raiz: cargar, transportar, llevar
+    capa_de_la_raiz: caquetío-reconstruido
+    cat_de_la_raiz: v_raiz
+    hablantes: 1
+    por_nodo:
+      (no era2): 1
+    glosa_declarada_mas_frecuente: null
+raices_por_capa:
+  caquetío-atestiguado: 24
+  caquetío-reconstruido: 15
+  ?: 6
+conciliacion_con_morfologia_11:
+  lo_que_dice_morfologia_11: 1.107 usos de ta-/ma-/wa- + 25 de ka- = 1.132
+  lo_que_sale_hoy: 960
+  diferencia: 172
+  explicada_por_178:
+    que_es: '#178 (2026-09-20) repartió las 49 raíces de Zavala que la heurística de tier había hecho `v_raiz` en bloque'
+    raices_que_dejaron_de_ser_verbales: 30
+    usos_que_ya_no_cuentan: 172
+    por_prefijo:
+      ta-: 74
+      ma-: 58
+      wa-: 34
+      ka-: 6
+    formas: 36
+    muestra:
+      - ka-dichiba
+      - ka-juri
+      - ka-kana
+      - ka-popoi
+      - ma-baharuko
+      - ma-dichiba
+      - ma-hueke
+      - ma-juri
+      - ma-kana
+      - ma-kapo
+      - ma-kibakibi
+      - ma-kiricias
+  aparte_lo_archivado_por_d19b:
+    que_es: '`paa` y `kira` salieron a FUERA_DEL_HABLA y sus formas no cuentan en ninguna de las dos mediciones'
+    usos:
+      paa: 36
+      kira: 5
+  lectura: 'las dos cifras son correctas para SU estado del lexicón. La de hoy es la del canon en main, y es la que debe escribirse en §11 — con `ka-juri` fuera, que es justamente lo que d21.5 quería'
+roles_que_mas_la_usan:
+  (no era2): 582
+  Manaure (diao paramount): 59
+  apopo: 32
+  hermano adulto: 31
+  esposo entrante del otro nodo: 30
+  joven: 23
+  esposa del apopo (del otro nodo): 21
+  hermana con hijos: 19
+  boratio mayor: 15
+  esposa del apopo (del otro subgrupo del mismo nodo): 14
+  hermano mayor de la matriarca; el mayor de la casa: 14
+  sobrino candidato (hijo de la hermana mayor): 13
+agentes_que_mas_la_usan_era2:
+  -
+    agente: Manaure
+    usos: 59
+    nodo: GUARANAO
+    rol: Manaure (diao paramount)
+    tier: 1
+  -
+    agente: Sawaka
+    usos: 15
+    nodo: GUARANAO
+    rol: boratio mayor
+    tier: 1
+  -
+    agente: Patapati
+    usos: 14
+    nodo: GUARANAO
+    rol: hermano mayor de la matriarca; el mayor de la casa
+    tier: 1
+  -
+    agente: Dara-bana
+    usos: 13
+    nodo: GUARANAO
+    rol: hermano adulto
+    tier: 2
+  -
+    agente: Apoaure
+    usos: 13
+    nodo: GUARANAO
+    rol: sobrino candidato (hijo de la hermana mayor)
+    tier: 1
+  -
+    agente: Duraboa
+    usos: 12
+    nodo: GUARANAO
+    rol: esposo entrante del otro nodo
+    tier: 2
+  -
+    agente: Tebekoa
+    usos: 11
+    nodo: AMUAY
+    rol: apopo
+    tier: 1
+  -
+    agente: Dunakoa
+    usos: 11
+    nodo: GUARANAO
+    rol: esposo entrante del otro nodo
+    tier: 2
+  -
+    agente: Karebe
+    usos: 10
+    nodo: GUARANAO
+    rol: esposa principal (traída del otro nodo)
+    tier: 1
+  -
+    agente: Jachos
+    usos: 10
+    nodo: GUARANAO
+    rol: apopo
+    tier: 1
+koine:
+  entradas_fijadas_en_la_base: 29
+  de_ellas_nominalizacion_emergente: 0
+  detalle: []

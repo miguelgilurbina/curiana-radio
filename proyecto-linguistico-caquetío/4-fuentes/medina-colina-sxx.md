@@ -10,7 +10,9 @@ local: "⚠️ FÍSICO — ejemplar de Miguel; entra por dictado curado (+ foto/
 capa_texto: no
 estado_minado: dictado-terminado  # 2026-09-08; quedan las páginas de la I a la M y las letras E-F sin declarar
 prioridad: alta
+cobertura: "66 entradas dictadas + la criba de verbos de la campaña del nominalizador, 2026-09-21: 0 de 66 (cero DEL DICTADO, falta el físico)"
 verificado: 2026-09-01
+minado: 2026-09-21
 aliases: ["Medina Colina", "Del Habla Paraguanera", "habla paraguanera"]
 ---
 
@@ -247,3 +249,30 @@ estas entradas viven en `lexicon_zavala.py`, que es generado.
 | sibidigua | `sibidiwa` | arbusto euforbiaceo. Jatrofa Gossy Pifolia | 263 | es planta silvestre de aplicación medicinal; aún se encuentra en nuestros escasos montes. Es palabra popular: entre los años 50 y 80 fue frecuente esc |
 | tara | `tara` | langosta; tambien mariposa, polilla | 272 | [primera acepción, académica: tara, defecto o enfermedad hereditaria — dictado confuso]; para nuestros paraguaneros, todos los saltamontes y animales  |
 | yabo | `yabo` | cercidium Virid. Arbol resinoso | 305 | árbol de madera dura, propio para hacer trompos y elaborar lejía |
+
+---
+
+## Bitácora — la campaña del nominalizador (2026-09-21)
+
+**Qué se le preguntó.** ¿Hay en las voces vivas de Paraguaná algún verbo, o
+algún nombre de acción que comparta terminación con uno, del que retroabstraer
+un nominalizador? (d21.11, opción C.)
+
+**Qué ha dado: cero verbos en las 66 entradas dictadas.** Se pasó la criba de
+infinitivos sobre el campo `glosa_libro` de
+`6-fusion/medina_colina_dictado.yaml`: ninguna glosa del libro encabeza con un
+infinitivo. Las voces vivas que el dictado ha recogido son **nombres** —
+plantas, bichos, comidas, oficios, cosas.
+
+**⚠️ Es un cero DEL DICTADO, no del libro** (regla 6). El dictado es parcial
+por diseño —la propia ficha declara que faltan las páginas de la I a la M y las
+letras E-F— y sólo lleva 66 entradas. Queda como deuda comprobar en el físico
+si «Del Habla Paraguanera» trae voces verbales, que son las que esta campaña
+necesitaba y las que ninguna fuente del repo tiene.
+
+**Por qué importaba preguntárselo a ésta y no sólo a las coloniales.** Es la
+única fuente de **boca viva** del proyecto, y la capa `caquetío-retroabstraido`
+existe por ella. Si un nominalizador hubiera sobrevivido en el habla, habría
+sobrevivido aquí.
+
+Propuesta: `6-fusion/propuesta_nominalizador_2026-09-21.yaml`.
