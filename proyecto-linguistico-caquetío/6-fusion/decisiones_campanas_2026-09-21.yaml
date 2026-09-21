@@ -122,3 +122,87 @@ dc.3_nominalizador:
     mueve canon). Y una deuda grande: Angulo Molina, de quien salen los 19
     verbos de acción del glosario, no está en el repo.
   se_aplica_en: '2-lengua/morfologia.md §10 (fila «Nominalización») y §11; #193'
+
+dc.4_taino_el_episodio_de_la_hija_y_datihao:
+  tipo: corrección de Miguel al escriba + hipótesis declarada (SIN decidir la etiqueta)
+  lo_que_dijo_miguel: >-
+    «Ojo porque aunque no sepamos de contacto precolombino conocemos que durante
+    la conquista Manaure supo de parientes (incluso de su hija) que fue raptada
+    y llevada a la Española. Y él mandó gentes a contactarlos y recuperarlos.
+    Por lo que debe haber habido contacto precolombino. Y diao y diaitao que son
+    símiles son las versiones caquetías de la versión Taína. Un cognado que hace
+    match.»
+  lo_que_las_fuentes_del_repo_dicen:
+    el_episodio: >-
+      ES CIERTO Y ESTÁ EN EL REPO, y la campaña del taíno (T5) sólo recogió la
+      mitad (la saca de 1513; no la embajada ni la hija). Carta del Factor Juan
+      de Ampíes al Rey, desde Santo Domingo, c. 1525-1526, copiada por Arcaya
+      1920 pp. 160-161 (publicada en Oviedo y Baños, ed. Fernández Duro, II p.
+      209): (1) los indios de la costa —«desde Paraguachoa hasta la punta de
+      Coquibacoa… Sauca e Paraguaná»— «muchas veces se pasaban allá [a Curazao,
+      Aruba y Bonaire] a holgar con ellos»; (2) «acordaron de me enviar un
+      cacique que se dice D. Juan Baracoica, que está en las islas y es su
+      pariente y deudo, con otro indio… y esto principalmente me enviaba a decir
+      un gran cacique que está diez leguas la tierra adentro en la provincia de
+      Coro, y el dicho Cacique se llama Naure o Anaure»; (3) Ampíes manda una
+      carabela con cinco cristianos, esos indios «e una india que en mi casa se
+      ha criado… para que les hablase»; (4) «aportó allí una armada de
+      cristianos, e tomó parte de aquellos indios e una india hija del gran
+      cacique de Coro, e los trujeron a esta isla por esclavos»; Ampíes se queja,
+      los jueces castigan y mandan «volver los indios»; «este gran cacique al
+      cual trujeron una hija suya con su marido». Arcaya pp. 166-167, con
+      Castellanos p. 185: la identifica con Doña Juana, mujer del «señor» de
+      Hurehurebo (Jurijurebo, Paraguaná), apadrinada y libertada por Ampíes, que
+      «vinieron con él en un navío a sus vasallos y a su señorío»; y Federmann
+      halla en Paraguaná en 1531 a una india llevada a Santo Domingo y rescatada
+      por Ampíes.
+    lo_que_prueba: >-
+      (a) Contacto costa ↔ islas ABC por cuenta propia, habitual, y con
+      PARENTESCO a través del agua (Baracoica, «pariente y deudo» de Manaure, vive
+      en las islas): la esfera llega a las islas, y esto sí es de antes del
+      contacto. (b) Manaure MANDÓ embajada, con un pariente a la cabeza: Miguel
+      tiene razón. (c) Contacto costa/islas ↔ La Española entre 1513 y 1526, en
+      barcos castellanos y por el canal de Ampíes.
+    lo_que_no_prueba_por_si_solo: >-
+      Que hubiera viaje o noticia de La Española ANTES de 1499. El paso de (c) a
+      «contacto precolombino» es una inferencia. Regla 3 del proyecto:
+      precontacto ≠ colonial, no se proyecta sin decidirlo. Arqueología (el
+      dabajuroide se detiene en las ABC) y genética siguen sin dar nada.
+  datihao:
+    correccion_al_escriba: >-
+      El escriba dijo el 2026-09-21 que `datihao` «es taíno de Boriquén, no
+      caquetío» y que «nuestro `diao` cuelga de ahí». Las dos cosas estaban mal
+      dichas. `diao` es OTRO lexema, con atestación caquetía propia (Zavala 2015
+      p. 67; Oliver 1989 cap. 3 p. 251, «the main diao or great cacique») y otra
+      etimología en Oliver (`/d-ia(o)/`, sobre la raíz lokona `/d-ai-/`); no
+      cuelga del pasaje de San Juan. Y `datihao` tiene en Oviedo DOS
+      atestaciones: la de San Juan (tomo I p. 473, en boca de Agüeybana, hallada
+      hoy) y la de «los indios de la Provincia de Venezuela», que es de donde el canon
+      la tiene y que está en otro tomo —el repo la cita por Jahn 1927 p. 213 n. 29
+      como «apéndice t. IV», y el díao por «t. II p. 299»; ninguno de los dos
+      tomos está en el repo—. Oliver, n. 42 p. 146,
+      tras dudar, concluye que fue probablemente «equally shared by both Taíno
+      and Caquetío»; p. 147: `/da-/` 1ª sg. + `/-(i)tiao/` sobre la raíz de
+      parentesco `/atti/` (lokono `da-tti`).
+    por_que_el_cruce_dio_cero: >-
+      El cruce taíno↔caquetío (#192) midió 0 parejas porque `datihao` estaba sólo
+      del lado caquetío: su gemela taína entró hoy con la transcripción de Oviedo
+      (#189). Es la pareja léxica mejor atestiguada entre las dos lenguas, y
+      nombra una INSTITUCIÓN —el intercambio de nombres, el guatiao—. Está hecha
+      con morfología heredada en las dos (`da-` 1ª sg.), lo que apunta a
+      cognado; y es palabra de alianza entre señores, que es justo lo que
+      viajaría por contacto. Las dos lecturas acercan el taíno; ninguna prueba el
+      viaje.
+  etiqueta_propuesta_pendiente_de_miguel: >-
+    Tres afirmaciones, tres etiquetas: costa ↔ ABC con parentesco =
+    atestiguado (de época colonial temprana, describe un hábito); costa/islas ↔
+    La Española 1513-1526 = atestiguado, COLONIAL; contacto precolombino con las
+    Antillas Mayores = hipotético, con el argumento de Miguel escrito (el
+    parentesco a través del agua, la embajada, la institución y la voz
+    compartidas). Miguel decide si sube.
+  deuda: >-
+    Oviedo y Valdés, tomos II y IV: ahí están el díao (t. II p. 299, el libro de
+    la Provincia de Venezuela) y —según Jahn— el `datihao` caquetío (apéndice del
+    t. IV, que la campaña de Oviedo no pudo localizar). Dominio público; no está en el
+    repo. Y el cruce de #192 se re-corre con #189 y #190 dentro.
+  se_aplica_en: 'nada aplicado; enmienda la lectura de 6-fusion/taino_en_la_esfera_2026-09-21.yaml'
