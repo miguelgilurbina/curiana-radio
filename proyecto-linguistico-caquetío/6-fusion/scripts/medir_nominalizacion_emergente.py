@@ -405,13 +405,16 @@ def main(argv=None) -> int:
             collections.Counter(global_["por_rol"]).most_common(12)),
         # Ojo al leer esto: es conteo CRUDO. Quien más turnos habló más dice,
         # y el Manaure habla en todos los turnos en que sale. No es una tasa.
+        # Ordenado por usos y, a igualdad, por nombre: un empate resuelto por
+        # el orden de iteración de un set hace que el volcado no se reproduzca
+        # byte a byte, y un generado que no se reproduce no se puede auditar.
         "agentes_que_mas_la_usan_era2": [
             {"agente": a, "usos": n, "nodo": nodo_de.get(a),
              "rol": rol_de.get(a), "tier": tier_de.get(a)}
-            for a, n in collections.Counter(
-                {a: sum(u["n"] for u in usos_nom if u["agente"] == a)
-                 for a in {u["agente"] for u in usos_nom}
-                 if a in nodo_de}).most_common(10)],
+            for a, n in sorted(
+                ((a, sum(u["n"] for u in usos_nom if u["agente"] == a))
+                 for a in sorted({u["agente"] for u in usos_nom} & set(nodo_de))),
+                key=lambda x: (-x[1], x[0]))[:10]],
         "koine": {
             "entradas_fijadas_en_la_base": len(koine),
             "de_ellas_nominalizacion_emergente": len(koine_nominal),

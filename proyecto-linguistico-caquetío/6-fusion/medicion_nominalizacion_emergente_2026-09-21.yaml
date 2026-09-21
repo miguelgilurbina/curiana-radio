@@ -1490,20 +1490,26 @@ agentes_que_mas_la_usan_era2:
     rol: hermano mayor de la matriarca; el mayor de la casa
     tier: 1
   -
-    agente: Dara-bana
-    usos: 13
-    nodo: GUARANAO
-    rol: hermano adulto
-    tier: 2
-  -
     agente: Apoaure
     usos: 13
     nodo: GUARANAO
     rol: sobrino candidato (hijo de la hermana mayor)
     tier: 1
   -
+    agente: Dara-bana
+    usos: 13
+    nodo: GUARANAO
+    rol: hermano adulto
+    tier: 2
+  -
     agente: Duraboa
     usos: 12
+    nodo: GUARANAO
+    rol: esposo entrante del otro nodo
+    tier: 2
+  -
+    agente: Dunakoa
+    usos: 11
     nodo: GUARANAO
     rol: esposo entrante del otro nodo
     tier: 2
@@ -1514,22 +1520,16 @@ agentes_que_mas_la_usan_era2:
     rol: apopo
     tier: 1
   -
-    agente: Dunakoa
-    usos: 11
+    agente: Jachos
+    usos: 10
     nodo: GUARANAO
-    rol: esposo entrante del otro nodo
-    tier: 2
+    rol: apopo
+    tier: 1
   -
     agente: Karebe
     usos: 10
     nodo: GUARANAO
     rol: esposa principal (traída del otro nodo)
-    tier: 1
-  -
-    agente: Jachos
-    usos: 10
-    nodo: GUARANAO
-    rol: apopo
     tier: 1
 koine:
   entradas_fijadas_en_la_base: 29
