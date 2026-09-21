@@ -9,14 +9,12 @@ paginas: 109
 capa_texto: parcial
 acceso: "Libre — la tesis completa (823 pp., incluye este capítulo) está en UCL Discovery, depositada por el propio Oliver: PDF https://discovery.ucl.ac.uk/id/eprint/10157455/1/Oliver_10157455_thesis_redacted.pdf · ficha https://discovery.ucl.ac.uk/id/eprint/10157455/. Verificado en el rastreo de 2026-08-14."
 estado_minado: minado
-cobertura: "§2.8 «The Caquetío Language» (pp. 142-151) minado en F5 (2026-08-03) + relectura de pp. 146-151 y p. 97 para el cruce taíno↔caquetío (2026-09-21)"
+cobertura: "§2.8 «The Caquetío Language» (pp. 142-151) minado en F5 (2026-08-03) + relectura de pp. 146-151 y p. 97 para el cruce taíno↔caquetío (2026-09-21) + releído por el taíno: filiación vs. contacto y el vector español-Hispaniola (2026-09-21, campaña del taíno T5)"
 prioridad: alta
 minado: 2026-09-21
 tareas: [F5]
-cobertura: "lingüística comparativa, cognados y correspondencias (F5, 2026-08-03) + releído por el taíno: filiación vs. contacto y el vector español-Hispaniola (2026-09-21, campaña del taíno T5)"
 sostiene: {hechos_corpus: 2, entradas_lexicon: 2, propone_cognados: 16, propone_correspondencias: 14, propone_entradas_lexicon: 5, propone_pares_validacion: 10}
 verificado: 2026-09-21
-minado: 2026-09-21
 aliases: ["Oliver 1989 cap. 2", "Oliver cap. 2", "Linguistics"]
 ---
 
