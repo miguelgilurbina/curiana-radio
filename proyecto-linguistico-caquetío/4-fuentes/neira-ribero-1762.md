@@ -13,7 +13,7 @@ cobertura: "medida, no escrita a mano: `6-fusion/achagua_neira_ribero_1762.yaml`
 prioridad: alta
 tareas: [D11-fase-2]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-12
+verificado: 2026-09-21
 descargado: 2026-09-12
 origen_digital: "Real Biblioteca Digital (Patrimonio Nacional), manifiesto IIIF II-2910; también en la Library of Congress (2021667801). Dominio público"
 aliases: ["Neira y Ribero 1762", "Neyra y Ribero", "Arte achagua", "Arte y vocabulario achagua", "Neira 1762"]
@@ -398,6 +398,126 @@ Pronombres y numerales, fuera: los lleva otro escriba.
 - **Queda para quien fusione**: limpiar las entradas lokono con sesgo inverso;
   preguntarle a `saruro` si es voz del área; y verificar en imagen `Jba`,
   `Acua`, `Abaca`, `Carisa` y `Rrabata` antes de citar ninguno.
+
+## Consulta puntual: `macana` (2026-09-21)
+
+**Agente de campaña (Claude), por el encargo de `d21.8`.** Lectura en imagen de
+cuatro páginas, no minería. Todo el detalle, con las citas literales y el
+veredicto, en `6-fusion/propuesta_macana_etiqueta_2026-09-21.yaml`; las
+opciones para Miguel, en
+`6-fusion/issues-pendientes/macana-etiqueta-2026-09-21.md`. Propuesta, no canon
+(regla 5).
+
+### Qué se le preguntó al Arte
+
+Si `Macanasi`, `Macanayi` y `Mamacanayisa` —vistas de paso al comprobar el
+plural `-kana`— son apoyo arahuaco **independiente** para la entrada `macana`
+del lexicón, hoy `caquetío-reconstruido`. Y, si lo fueran, si esa
+independencia del castellano se podría sostener, siendo `macana` voz del
+castellano de Indias desde hacía 250 años en 1762.
+
+### Qué contestó
+
+**Que no, y por una razón más fuerte de la esperada.** Las tres formas existen
+con la grafía citada —verificadas en imagen a resolución nativa, factor medido
+4,1667 px/pt, con la clave de la `r` con glifo de `z`— pero **ninguna significa
+'macana'**:
+
+| Forma | Pliego | Entrada literal | Glosa literal |
+|---|---|---|---|
+| `Macanasi` | 56 der. | `Dormidera — Macanasi` | Dormidera |
+| `Macanayi` | 74 der. | `Mazorca de mais — Macanayi` | Mazorca de maíz |
+| `Mamacanayisa` | 70 izq. | `Yndecible — Mamacanayisa` | Yndecible |
+
+Y ninguna está suelta: `Macanasi` cierra ocho lemas DORMIR- seguidos (con
+`Dormitorio — Macarrusi` justo encima); `Macanayi` va entre `Mazo — tataubari`
+y `Matalotage — Marruen`; `Mamacanayisa` es la de en medio de
+`Yndisoluble — Mabasaidacanayisa` · `Yndecible — Mamacanayisa` ·
+`Yndivisible — Maisidacanayisa`.
+
+**La morfología la declara la propia obra**, y eso desarma la lectura
+«raíz `macana-`»: el arte trae, en la lista alfabética de partículas y verbos
+(**26 izq.**), una entrada cuyo lema castellano es literalmente
+**«Verbal en "bilis"»**, forma `-nayisa`, con los ejemplos
+`Macabacanayisa = invisible`, `Manoacamanimisa = los bautizados`,
+`Mebedacanisa = los q[u]e no creen`, y la nota del autor «también es nota de
+participio de presente, y de pretérito estas partículas: `-yisa`, `-misa`,
+`-nisa`». Con el privativo `ma-` —que el Arte usa él mismo en
+`Sin sal — Mabayisa` (sobre `bai`) y `Sin Padre — Masaricanayisa` (sobre
+`Saricanasi`)— `Ma-ma-canayisa` es un adjetivo en -ble negado, y la cadena
+«macana» cae a caballo de tres morfemas. El vocabulario da **once paralelos**
+de la misma plantilla (`Yncreible — Mabedacanayisa`,
+`Ynfinito — Masutedacanayisa`, `Ymplacable — Mananedacanayisa`…, y el positivo
+`Maravilloso — Cadedacanayisa`). Ninguno es un arma.
+
+**Y el Arte contesta además la pregunta contraria, que es la que decidía.**
+Tiene lema `Macana`, en el **pliego 73 der.**, bajo la cabecera «Castellano. —
+M. — Achagua.»:
+
+> `Macana. — — — — Guacaba. / La mia = Nucaba[ba]mi.`
+> `Macana de enlatar. — — — Juba.`
+
+Como el vocabulario va **castellano → achagua**, `macana` está del lado
+**castellano**: es la palabra con la que pregunta el misionero, y el achagua
+contesta con `Guacaba`, no cognada. No es un caso suelto — el jesuita usa
+sistemáticamente tainismos panhispánicos como cabecera castellana, con voz
+achagua propia enfrente: `Casabe — Berrí` (46 der.), `Hamaca — Edasi`
+(67 izq.), `Mais — Cana` (73 der.), `Manati — Apia` (74 izq.), `Canoa — ida`.
+Seis de seis. Y **sabe marcar un hispanismo** cuando lo ve (`Morena cosa —
+Samoruna`, «hisp[anice] term[inus] hurtado», 76 der.): aquí no marcó nada
+porque no había nada que marcar.
+
+**Veredicto:** la obra no corrobora `macana`; documenta que una lengua arahuaca
+del norte, pariente cercana del caquetío, tenía su **propia palabra no
+cognada** para el objeto. Es `minar-fuente` §8 en su forma exacta — *una
+corroboración falsa es peor que ninguna*—, y de la misma familia que la trampa
+de Jahn con `datihao` que esta misma nota ya registra.
+
+Dudas de lectura anotadas: en el ejemplo de `Macana`, el copista escribe
+`Nucabami` con un `ba` volado, marca de inserción — `Nucababami` o
+`Nucabamiba` (la transcripción del 09-12 puso lo segundo). No decide nada.
+
+### Qué daría esta obra si se minara (sin minarla: es otra campaña)
+
+Lo primero, un aviso de planificación que esta consulta dejó claro: **el
+vocabulario de esta copia va sólo castellano → achagua, alfabético por el
+castellano** (pliegos 28-98, dos columnas, la parte achagua → castellano no
+está en esta copia). Eso significa que **se le puede preguntar por concepto,
+pero no por forma**: cualquier pregunta del tipo «¿existe la forma X en
+achagua?» obliga a leerlo entero. Las cifras de entradas, pliegos y letras
+están medidas en `meta.cobertura` de
+`6-fusion/achagua_neira_ribero_1762.yaml` y las emite
+`6-fusion/scripts/ensamblar_achagua_neira_ribero.py` (regla 1: no se repiten
+aquí).
+
+Lo que sigue sin minar y pagaría, por orden de rendimiento:
+
+1. **El arte propiamente dicho, pliegos 7-22** — declinaciones, las seis
+   conjugaciones, los tratados. Es lo único grande que queda, y es lo que más
+   falta hace: la morfología derivativa que esta consulta necesitó (`-si`
+   absoluto del no-poseído, `-yi`/`-cayi` adjetival, privativo `ma-`, el
+   «verbal en bilis» `-(da)canayisa`) hubo que reunirla de **una** entrada del
+   arte y de una serie del vocabulario. Minado, convertiría la comparanda
+   achagua del repo de lista de palabras en morfología — que es exactamente lo
+   que D11 (#39) necesita para dejar de apoyarse en el wayuu.
+2. **Censo de los lemas CASTELLANOS que son tainismos o americanismos
+   panhispánicos**, con la voz achagua enfrente. Esta consulta encontró seis a
+   mano y los seis dan voz achagua no cognada. Hecho entero, el repo tendría
+   una respuesta **medida** a la pregunta que vuelve cada vez que se propone un
+   tainismo como caquetío: *¿cómo trata un vocabulario misionero del XVIII las
+   voces antillanas?* Es acotado y de alto valor de control.
+3. **Censo de los préstamos que el autor marca él mismo** (del tipo
+   `Samoruna`, «hisp. term. hurtado»). Da la medida de cuánto castellano
+   reconocía el propio jesuita, y calibra el punto 2.
+4. **Campos semánticos que el vocabulario tiene y el repo no ha sacado**: la
+   serie derivativa `ma-…-(da)canayisa` entera como paradigma; el sistema de
+   clasificadores de clase, que el vocabulario muestra en tres bases distintas
+   (`aba-` 'uno', `manu-` 'ancho', `aurre-` 'angosto') y que el arte debería
+   explicar; y el paradigma posesivo, que asoma en media docena de lemas.
+
+⚠️ `sostiene` no se toca a mano (lo mide `medir_sostiene.py`), y esta consulta
+no llevó nada al lexicón ni al corpus: sigue siendo comparanda achagua y la
+decisión es de D11 (#39) y de Miguel.
 
 ## Enlaces
 

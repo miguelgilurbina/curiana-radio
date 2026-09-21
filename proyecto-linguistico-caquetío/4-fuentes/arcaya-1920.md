@@ -9,7 +9,7 @@ paginas: 348
 capa_texto: si
 estado_minado: minado
 prioridad: media
-cobertura: "religión/familia (sesión 3) + pp. 97-100, el oficio del boratio (2026-08-04) + cap. I, la geografía física de Falcón, pp. 12-19 (2026-09-10) + pp. 148-158, las «islas inútiles» y la deportación a La Española (2026-09-21, campaña del taíno T5)"
+cobertura: "religión/familia (sesión 3) + pp. 97-100, el oficio del boratio (2026-08-04) + cap. I, la geografía física de Falcón, pp. 12-19 (2026-09-10) + pp. 148-158, las «islas inútiles» y la deportación a La Española (2026-09-21, campaña del taíno T5) + p. 75, lo que Arcaya dice del idioma caquetío (2026-09-21) + la campaña de `-gua` (2026-09-21)"
 sostiene: {hechos_corpus: 13, entradas_lexicon: 1, ritos_documentados: 3}
 verificado: 2026-09-21
 minado: 2026-09-21
@@ -152,6 +152,19 @@ profetiza — no que no haya especialistas. Ver [[polities-caquetias]]; el rasgo
 - Solo **1 entrada del lexicón lo cita**, pese a ser fuente de siglas (PMA) en
   el glosario de Zavala.
 
+## Bitácora — campaña `-gua` (2026-09-21)
+
+**Qué se le preguntó.** ¿Analiza `gua` como morfema en algún topónimo?
+
+**Qué dio: cero.** `gua` aparece sólo **dentro** de topónimos, sin segmentar —
+Acurigua, Barragua, Churuguara, Quiragua, Cariagua. Arcaya no propone
+morfología para ninguno. De él sale el referente de `sividigua` (toponimo-173),
+que ya estaba en el canon como descartado por no tener glosa en ninguna fuente.
+
+> Medición entera: `6-fusion/propuesta_gua_procedencia_2026-09-21.yaml`
+> (la escribe `6-fusion/scripts/medir_gua_procedencia.py`). Opciones para
+> Miguel: `6-fusion/issues-pendientes/gua-procedencia-2026-09-21.md`.
+
 ## Enlaces
 
 [[03_creencia_caquetia]] · [[oviedo-y-valdes-1851]] · [[jahn-1927]] · [[zavala-reyes-2015]]
@@ -260,3 +273,47 @@ Martín Baso Zabala** (y un raid de «Baso Zavala» en 1513 desde la costa de
 Falcón, p. 212), y [[martinez-cruzado-2003]] vía Hartog 1961 da **1515 /
 ~2.000**. Puede haber una o varias sacas. Cerrarlo pide [[ramos-perez-1978]]
 (la monografía, no la reseña) y CoDoIn 1864/1868.
+
+---
+
+---
+
+## Bitácora — la campaña del nominalizador (2026-09-21)
+
+**Qué se le preguntó.** ¿Trae Arcaya nombres de acción caquetíos que compartan
+terminación con un verbo? (d21.11, opción C.)
+
+**Qué ha dado: la cita que cierra su lado.** P. impresa **75**, literal:
+
+> «Pensamos, con fundadas razones, que también debe clasificarse en la familia
+> lingüística nuarhuaca al idioma caquetío. **No se conserva de él,
+> desgraciadamente, vocabulario alguno, ni mucho menos hay frases que permitan
+> conocer su estructura gramatical**, pero sí quedan los nombres, muy numerosos
+> por cierto, de los lugares que habitaron […] y nombres propios de personas»
+
+Y lo único que da de léxico, de la Relación de Barquisimeto de 1579: «sabana»,
+«Capu» (el demonio), «bariqué», «guadabacoa o adobacoa», «quiccide», «mene» y
+«cumaragua» — **siete voces, las siete nombres**. Buscarle a Arcaya un
+nominalizador es buscar lo que él mismo declara por escrito que no dejó.
+
+**Y una frase de la misma página que importa para el otro lado del asunto.**
+Las lenguas nuarhuacas, dice, *«conjuga[n] los temas verbales y nominales,
+prefijándoles ciertos índices posesivos»*. Es, en una línea, lo que los agentes
+hicieron por su cuenta con `ta-chaa` «mi hacer» — con el matiz que hay que
+decir: es de la **familia**, no del caquetío, y describe **conjugación**, no
+derivación de nombres. No sostiene un nominalizador; sostiene que prefijar un
+índice a un tema verbal es arahuaco.
+
+**Una glosa que se corrige de camino.** Arcaya escribe «mene y cumaragua
+(nombres de la **viruela**)». Zavala (2015, p. 62) lo cita como «nombre de la
+**ciruela**», y la ficha de [[zavala-reyes-2015]] había marcado la cita con
+⚠️ D por «sintaxis ambigua». No era la sintaxis: era la lectura de la v-. La
+Tabla A-9 de Oliver, independiente, trae «viruela».
+
+**Nota de extracción.** La capa de texto de este PDF **pierde los acentos**
+(«Falc?n», «ling??stica») con `-enc UTF-8` y con `-enc Latin1` por igual: la
+fuente del PDF está mal mapeada. Las citas de arriba se transcriben
+restituyendo los acentos; el texto sin ellos es reproducible con `pdftotext
+-enc UTF-8`. Añádase a la receta de esta obra, junto al «pypdf devuelve vacío».
+
+Propuesta: `6-fusion/propuesta_nominalizador_2026-09-21.yaml`.

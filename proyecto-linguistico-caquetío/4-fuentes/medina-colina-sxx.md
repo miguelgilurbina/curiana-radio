@@ -10,7 +10,9 @@ local: "⚠️ FÍSICO — ejemplar de Miguel; entra por dictado curado (+ foto/
 capa_texto: no
 estado_minado: dictado-terminado  # 2026-09-08; quedan las páginas de la I a la M y las letras E-F sin declarar
 prioridad: alta
+cobertura: "66 entradas dictadas + la criba de verbos de la campaña del nominalizador, 2026-09-21: 0 de 66 (cero DEL DICTADO, falta el físico)"
 verificado: 2026-09-01
+minado: 2026-09-21
 aliases: ["Medina Colina", "Del Habla Paraguanera", "habla paraguanera"]
 ---
 
@@ -214,6 +216,30 @@ escrito al lado. Lo aplicó `6-fusion/scripts/fusionar_nivel_c_medina.py`;
 `chamaco` quedó fuera por el silencio de Alvarado. Seis siguen sin página
 (guarero, igüira, mebi, debudeque, guarupepe, machire): están marcadas.
 
+## Bitácora — campaña `-gua` (2026-09-21)
+
+**Qué se le preguntó.** ¿El habla viva de Paraguaná conserva un `-gua` con
+valor locativo?
+
+**Qué dio: lo contrario, y ya estaba anotado.** El dictado tiene el patrón
+registrado en `6-fusion/medina_colina_dictado.yaml`,
+`patrones_observados` §`-igua`:
+
+> «barisigua (Erythrina), con **tacarigua** y **samanigua** de Alvarado y los
+> topónimos regionales en -igua: **formante fitonímico**/toponímico de
+> filiación no resuelta»
+
+O sea: donde el habla del s. XX conserva la terminación, lo que nombra son
+**plantas**. Converge con las 9 glosas de planta de Esteves y con los lexemas
+de Alvarado. Si `-gua` es algo, el candidato con más apoyos no es 'región'.
+
+⚠️ No lo propongo como glosa: **ninguna fuente lo enuncia**, y el propio
+dictado lo llama «de filiación no resuelta». Queda señalado como campaña aparte.
+
+> Medición entera: `6-fusion/propuesta_gua_procedencia_2026-09-21.yaml`
+> (la escribe `6-fusion/scripts/medir_gua_procedencia.py`). Opciones para
+> Miguel: `6-fusion/issues-pendientes/gua-procedencia-2026-09-21.md`.
+
 ## Enlaces
 
 [[02_protocolo_habla_paraguanera]] · [[esteves-1989]] ·
@@ -247,3 +273,30 @@ estas entradas viven en `lexicon_zavala.py`, que es generado.
 | sibidigua | `sibidiwa` | arbusto euforbiaceo. Jatrofa Gossy Pifolia | 263 | es planta silvestre de aplicación medicinal; aún se encuentra en nuestros escasos montes. Es palabra popular: entre los años 50 y 80 fue frecuente esc |
 | tara | `tara` | langosta; tambien mariposa, polilla | 272 | [primera acepción, académica: tara, defecto o enfermedad hereditaria — dictado confuso]; para nuestros paraguaneros, todos los saltamontes y animales  |
 | yabo | `yabo` | cercidium Virid. Arbol resinoso | 305 | árbol de madera dura, propio para hacer trompos y elaborar lejía |
+
+---
+
+## Bitácora — la campaña del nominalizador (2026-09-21)
+
+**Qué se le preguntó.** ¿Hay en las voces vivas de Paraguaná algún verbo, o
+algún nombre de acción que comparta terminación con uno, del que retroabstraer
+un nominalizador? (d21.11, opción C.)
+
+**Qué ha dado: cero verbos en las 66 entradas dictadas.** Se pasó la criba de
+infinitivos sobre el campo `glosa_libro` de
+`6-fusion/medina_colina_dictado.yaml`: ninguna glosa del libro encabeza con un
+infinitivo. Las voces vivas que el dictado ha recogido son **nombres** —
+plantas, bichos, comidas, oficios, cosas.
+
+**⚠️ Es un cero DEL DICTADO, no del libro** (regla 6). El dictado es parcial
+por diseño —la propia ficha declara que faltan las páginas de la I a la M y las
+letras E-F— y sólo lleva 66 entradas. Queda como deuda comprobar en el físico
+si «Del Habla Paraguanera» trae voces verbales, que son las que esta campaña
+necesitaba y las que ninguna fuente del repo tiene.
+
+**Por qué importaba preguntárselo a ésta y no sólo a las coloniales.** Es la
+única fuente de **boca viva** del proyecto, y la capa `caquetío-retroabstraido`
+existe por ella. Si un nominalizador hubiera sobrevivido en el habla, habría
+sobrevivido aquí.
+
+Propuesta: `6-fusion/propuesta_nominalizador_2026-09-21.yaml`.

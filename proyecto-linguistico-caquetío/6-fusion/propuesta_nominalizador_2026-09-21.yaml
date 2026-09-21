@@ -1,0 +1,560 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — ¿se puede retroabstraer un NOMINALIZADOR del caquetío
+# atestiguado, a la manera de `matakán`?
+#
+# Campaña C de d21.11 (6-fusion/decisiones_tanda_2026-09-21.yaml).
+# Regla 5: esto PROPONE. No toca curiana_lexicon.py, ni 2-lengua/, ni el
+# corpus. Regla 1: ninguna cifra de aquí está escrita a mano — todas salen de
+# los dos volcados que generan los scripts, y cada bloque dice de cuál.
+# Regla 6: cada cero lleva su consulta al lado.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-21'
+  quien: agente de campaña (Claude), sobre el encargo de d21.11 opción C
+  responde_a: '6-fusion/decisiones_tanda_2026-09-21.yaml §d21.11_nominalizacion'
+  pregunta: >-
+    ¿Hay en el material caquetío ATESTIGUADO algún nombre de acción, de
+    agente, de instrumento o de resultado que comparta terminación con un
+    verbo —o que se deje segmentar como raíz verbal + algo— de manera que se
+    pueda retroabstraer un nominalizador?
+  medicion:
+    - '6-fusion/medicion_nominalizador_2026-09-21.yaml (generado por 6-fusion/scripts/medir_nominalizador.py)'
+    - '6-fusion/medicion_nominalizacion_emergente_2026-09-21.yaml (generado por 6-fusion/scripts/medir_nominalizacion_emergente.py)'
+  fuera_de_alcance: >-
+    Importar el nominalizador lokono `-hù`/`-hi` (opción B de d21.11) o
+    cualquier otro de la comparanda. La comparanda sirve para RECONOCER un
+    candidato caquetío cuando aparezca, no para fabricarlo.
+
+respuesta_corta: >-
+  NO. No hay nominalizador que retroabstraer, y el material dice algo mejor
+  que un hueco: donde el glosario da a la vez el verbo y su nombre de acción,
+  los da CON LA MISMA FORMA —«Sembrar, siembra, sembradío» (#180),
+  «Regar, regadío» (#170), «Dominar, triunfar, victoria» (#39), «Sangre,
+  sangrado» (#217)—. Lo atestiguado no enseña un afijo: enseña que el nombre
+  de acción es la raíz desnuda. La opción A de d21.11 —describir el sistema
+  que emergió y no sancionarlo— queda como respuesta DEFINITIVA y no
+  provisional, y el hueco del nominalizador queda declarado, no callado.
+
+# ══════════════════════════════════════════════════════════════════════
+# 0. MÉTODO — y la prueba de que no es ciego
+# ══════════════════════════════════════════════════════════════════════
+metodo:
+  pasos:
+    - '1. Inventario de las 288 entradas del glosario de Zavala Reyes 2015 con
+       su GLOSA VERBATIM, leída del PDF por el parser del propio proyecto
+       (`minar_zavala_glosario.extraer()`), no por la glosa curada del lexicón.'
+    - '2. Clasificación semántica DECLARADA entrada por entrada, con su glosa
+       al lado y una lista aparte de trampas (glosas castellanas que suenan a
+       nombre de acción y en la fuente son otra cosa).'
+    - '3. Prueba del sufijo: ¿algún lema es otro lema + algo? ¿Y alguno de
+       ellos es VERBO atestiguado + algo?'
+    - '4. Control de azar: la frecuencia de cada final de 1, 2 y 3 letras en el
+       subconjunto diana contra su frecuencia en las 288, con p hipergeométrica
+       exacta. Y todo medido DOS veces, con y sin las entradas dudosas.'
+    - '5. Sólo para lo que sobreviva: comparanda arahuaca. Sube o baja la
+       confianza; no crea el candidato.'
+  cambio_sobre_el_metodo_encargado: >-
+    Se añadió un GRUPO DE CONTROL que el encargo no pedía: los nombres de
+    «lugar definido por una COSA» (n = 11), que por hipótesis NO deberían
+    llevar nominalizador. Sirve para saber si el método encuentra algo cuando
+    hay algo. Ver abajo: lo encuentra.
+  la_prueba_de_que_el_metodo_ve: >-
+    En el grupo de control, el final `-ebo` sale con enriquecimiento ×13,09 y
+    p = 0,00079 — la señal más fuerte de toda la medición. Y es un morfema DE
+    VERDAD, ya trabajado en la toponimia del proyecto: `ebo` #117 «Camino,
+    paso, senda» compone en cinco nombres. O sea: el mismo procedimiento que
+    no encuentra nada en los nombres de acción SÍ encuentra el morfema que hay
+    donde lo hay. El cero de la diana es un cero medido, no un cero ciego.
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. EL INVENTARIO
+# ══════════════════════════════════════════════════════════════════════
+inventario:
+  fuente: zavala-reyes-2015
+  entradas: 288
+  reparto:
+    verbo_accion: 19
+    verbo_estativo: 11
+    n_lugar_accion: 15
+    n_accion: 13
+    n_agente: 9
+    n_resultado: 6
+    n_instrumento: 5
+    n_lugar_cosa: 11        # grupo de control
+    otro: 206
+  subconjunto_diana:
+    que_es: 'n_accion + n_agente + n_instrumento + n_resultado + n_lugar_accion'
+    formas: 46
+    sin_las_dudosas: 34
+  el_canon_hoy:
+    raices_verbales_de_familia_caquetia: 43
+    de_ellas_atestiguadas: 28
+    morfemas_declarados_en_el_motor: 19
+    reglas_que_derivan_nombre_de_verbo: 0
+    nota: >-
+      La sonda del auditor de morfología sigue dando CERO reglas que deriven
+      un nombre de un verbo, con las diecinueve reglas del corte de la tanda
+      del 21 ya aplicadas.
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. LA PRUEBA DEL SUFIJO — un solo candidato, y muere
+# ══════════════════════════════════════════════════════════════════════
+prueba_del_sufijo:
+  parejas_base_mas_resto: 66
+  umbral: 'base de 3 letras o más — por debajo, `gua`, `par` y `na` segmentan medio glosario'
+  verbo_mas_resto_igual_nombre_de_la_diana: 1
+  el_unico:
+    base: 'apo #11 (AM) «Grande» — caquetío-atestiguado, `cat: v_estativo` desde d21.4'
+    derivada: 'apopo #12 (AM) «Nombre de jefe de parcialidad pequeña»'
+    resto: '-po'
+    lectura_tentadora: "«el grande» → el que manda: un agentivo sobre un estativo"
+    por_que_no_se_propone:
+      - >-
+        El presunto sufijo `-po` lo lleva TAMBIÉN la base: `apo` acaba en -po.
+        Si `-po` nominalizara, el verbo no podría terminar igual. Es el
+        criterio que descalifica a los 23 finales compartidos de abajo, y éste
+        es el caso extremo: el afijo y la raíz son el mismo trozo.
+      - >-
+        La lectura barata es REDUPLICACIÓN PARCIAL de la sílaba final
+        (apo→apo-po), y la reduplicación caquetía está medida con control
+        (2-lengua/morfologia.md §9, `REDUPLICACION` en lexicon_toponimos.py):
+        9 % en la toponimia, 4,3 % en el léxico, contra 3,1 % wayuu y 0,7 %
+        lokono. Un patrón que ya existe explica el caso sin morfema nuevo.
+      - >-
+        Control de azar: `-po` cierra 2 de los 34 nombres diana sin dudosas
+        (p = 0,038, ×5,65) y 3 de las 288. Con n = 2 y la base llevando el
+        final, eso no es un morfema: es una coincidencia con buena pinta.
+  nombre_mas_resto_igual_verbo: 5
+  y_ese_lado_dice_algo:
+    casos: ['baja #23 «Caño» + -ri = bajarí #25 «Recorrer, caminar»',
+            'quidi #212 «Cerro, altura» + -boata = quidiboata #213 «Engañar, engañado»',
+            'gua #122 + -idima / -ranao / -sima = tres estativos']
+    lectura: >-
+      La única morfología que el glosario deja ver alrededor de los verbos va
+      en la dirección CONTRARIA a la que busca esta campaña: nombre + algo =
+      verbo, no verbo + algo = nombre. Y `quidi` + `boata` se repite en
+      `quiboata` #206 «Engañar», que sugiere que `-boata` es la parte verbal.
+      No se propone nada con esto: es una pista para otra campaña.
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. LA TERMINACIÓN COMPARTIDA — la pregunta con sus palabras
+# ══════════════════════════════════════════════════════════════════════
+terminacion_compartida:
+  criterio: >-
+    Compartir terminación es condición NECESARIA de un parecido y condición
+    SUFICIENTE de nada. Para que `-X` sea nominalizador hace falta que el
+    NOMBRE lo lleve, que el VERBO no, y que al quitarlo quede raíz atestiguada.
+  finales_que_llevan_a_la_vez_verbos_y_nombres_diana: 23
+  de_ellos_con_base_atestiguada_al_quitarlo: 2
+  los_dos:
+    - final: '-po'
+      verbos: ['apo', 'cachipo']
+      nombres: ['apopo', 'despopo']
+      base_que_queda: 'apo (atestiguada) · despo (no atestiguada)'
+      veredicto: 'descalificado — el verbo `apo` lleva el mismo final'
+    - final: '-re'
+      verbos: ['bachure', 'beceremikore', 'guere']
+      nombres: ['beceremicore', 'bobare', 'cabudare', 'dabudare', 'manaure',
+                'taratarare', 'tupure', 'ture']
+      base_que_queda: 'dabuda #99 «Barro loza» (atestiguada); las demás, no'
+      veredicto: >-
+        descalificado como NOMINALIZADOR por dos razones: tres verbos lo
+        llevan, y el único corte que deja base atestiguada es
+        `dabuda` + `-re` = dabudare «Sitio de extracción de barro», cuya base
+        es un NOMBRE. Eso no es un nominalizador: es `morfema-002`, el `-are`
+        locativo «sitio de» que el canon ya tiene glosado en
+        2-lengua/morfemas.yaml, y que el censo de la terminación -re
+        (6-fusion/censo_terminacion_re.yaml, 2026-09-10) ya midió: «`-ure` y
+        `-are` se comportan como MORFOLOGÍA TOPONÍMICA, no como derivación
+        léxica general».
+  los_21_restantes: >-
+    `-al`, `-ao`, `-ba`, `-he`, `-ia`, `-mo`, `-oa`, `-ri`, `-ro`, `-ta`,
+    `-ue`, `-amo`, `-ata`, `-bal`, `-che`, `-ore`, `-que`, `-ria`, `-ual`,
+    `-uba`, `-ure`: cero bases atestiguadas al quitarlos. Quitarlos deja
+    residuos que no son palabra.
+
+# ══════════════════════════════════════════════════════════════════════
+# 4. EL CONTROL DE AZAR — qué sobrevive y qué no
+# ══════════════════════════════════════════════════════════════════════
+control_de_azar:
+  como: 'p hipergeométrica exacta; el subconjunto contra las 288'
+  con_las_dudosas:
+    n: 46
+    los_tres_primeros:
+      - '-ba   5/46 (10,9 %) vs 7/288 (2,4 %) — ×4,47, p = 0,0014'
+      - '-uba  3/46 ( 6,5 %) vs 4/288 (1,4 %) — ×4,70, p = 0,0137'
+      - '-e   15/46 (32,6 %) vs 57/288 (19,8 %) — ×1,65, p = 0,0178'
+  sin_las_dudosas:
+    n: 34
+    los_tres_primeros:
+      - '-e   14/34 — ×2,08, p = 0,0018'
+      - '-opo  2/34 — ×5,65, p = 0,0377'
+      - '-re   7/34 — ×1,85, p = 0,0640'
+  lectura: >-
+    ⭐ `-ba` y `-uba`, que con las dudosas eran lo más fuerte de la diana,
+    DESAPARECEN al quitarlas: sus cinco casos eran `aruba` (una conjetura del
+    compilador: «Puede ser Oirubae»), `guamabatriba`, `siguruba`, `quiba` y
+    `tuba`, y los tres primeros están marcados dudosos. Un resultado que
+    cambia de signo según entren o no tres entradas dudosas no es un
+    resultado. Lo que queda es `-e`, que es «acabar en vocal»: 57 de las 288
+    palabras del glosario lo hacen.
+  y_el_control_positivo:
+    grupo: 'lugar definido por una COSA (n = 11)'
+    resultado: '-ebo  3/11 (27,3 %) vs 6/288 (2,1 %) — ×13,09, p = 0,00079'
+    para_que_sirve: >-
+      Es la validación del método. Donde HAY morfema, esta medición lo saca
+      con una señal un orden de magnitud por encima de cualquier cosa de la
+      diana. El cero de la diana no es del instrumento.
+
+# ══════════════════════════════════════════════════════════════════════
+# 5. LO QUE EL MATERIAL SÍ ENSEÑA — la derivación cero
+# ══════════════════════════════════════════════════════════════════════
+derivacion_cero:
+  que_es: 'una misma forma glosada a la vez como verbo y como nombre'
+  casos: 5
+  sin_dudosas: 4
+  los_cinco:
+    - forma: Beceremicore
+      num: 39
+      compilador: AM
+      glosa_verbatim: 'Dominar, triunfar, victoria'
+      lectura: 'dos infinitivos y su nombre de acción, la misma forma'
+    - forma: Etamo
+      num: 120
+      compilador: AM
+      glosa_verbatim: 'Feroz, feo, espanto'
+      lectura: 'dos propiedades y un abstracto; el canon lo declara v_estativo'
+    - forma: Jacuque
+      num: 170
+      compilador: AM
+      glosa_verbatim: 'Regar, regadío'
+      lectura: 'el infinitivo y su nombre, la misma forma'
+    - forma: Jusual
+      num: 180
+      compilador: AM
+      glosa_verbatim: 'Sembrar, siembra, sembradío. Conuco'
+      lectura: >-
+        ⭐ el caso mayor: infinitivo, nombre de acción y nombre de lugar en UNA
+        sola forma. Si el caquetío tuviera nominalizador, aquí se vería.
+    - forma: Siguruba
+      num: 228
+      compilador: AM
+      dudoso: true
+      glosa_verbatim: 'Salvar. Caserío, sitio'
+      lectura: 'infinitivo y lugar; la segunda mitad puede ser un topónimo'
+  y_uno_mas_del_lado_del_nombre:
+    forma: Quiricias
+    num: 217
+    glosa_verbatim: 'Sangre, sangrado'
+    lectura: >-
+      el nombre y el nombre de acción, la misma forma. No entra en el recuento
+      de arriba porque su glosa no trae infinitivo, pero es el mismo fenómeno.
+  reserva_obligatoria_y_no_menor: >-
+    ⚠️ Una glosa castellana que enumera «sembrar, siembra, sembradío» puede ser
+    el compilador diciendo DE QUÉ VA la palabra, no una afirmación sobre las
+    clases de palabra del caquetío. Esto describe lo que la FUENTE registra, y
+    la fuente no distingue. Es la diferencia entre decir «el caquetío no
+    marcaba la nominalización» (que no se puede decir) y decir «el material
+    atestiguado no registra ninguna marca de nominalización, y donde da las
+    dos cosas las da con la misma forma» (que es lo que se dice).
+
+# ══════════════════════════════════════════════════════════════════════
+# 6. DE QUIÉN VIENE TODO ESTO — el límite que hay que decir
+# ══════════════════════════════════════════════════════════════════════
+la_independencia_de_la_fuente:
+  medido:
+    verbos_por_compilador: {AM: 25, A: 2, E: 2, PMA: 1}
+    verbos_de_accion_por_compilador: {AM: 19}
+    todo_el_glosario_por_compilador: {AM: 135, E: 81, HB: 47, A: 27, PMA: 16,
+                                      GC: 11, CGB: 7, HP: 4, AAM: 1}
+  lectura: >-
+    ⭐⭐ Los DIECINUEVE verbos de acción del glosario caquetío vienen del mismo
+    compilador: Angulo Molina. Los cinco que no son suyos son estativos
+    (bachure y cachipo de Alvarado, guaranao y sigua de Esteves, singuanguso de
+    Arcaya). Eso quiere decir que **todo el verbo caquetío que el proyecto
+    tiene es una sola lista**, y que cualquier patrón morfológico que se
+    encuentre entre ellos es un patrón de ESA lista: una corroboración dentro
+    de ella no es independiente (skill `minar-fuente` §8, el caso de `datihao`
+    en Jahn). Si de esta campaña hubiera salido un candidato, éste habría sido
+    su techo de confianza.
+  consecuencia_practica: >-
+    Antes de volver a preguntar por morfología verbal caquetía hay que ir a
+    Angulo Molina de primera mano. No está en el repo: entra como deuda.
+
+# ══════════════════════════════════════════════════════════════════════
+# 7. LAS OTRAS FUENTES — los ceros, verificados
+# ══════════════════════════════════════════════════════════════════════
+las_negativas:
+  oliver_1989_apendice_a:
+    obra: oliver-1989-apendice-a
+    pagina: '593-594 impresas (Tabla A-9, «Selected Caquetío Vocabulary from the XVIth Century»)'
+    entradas_transcritas: 49
+    verbos: 0
+    verificacion_del_cero: >-
+      la criba marca UNA glosa, «ser viviente» (la de `Caquetio`), que es un
+      sustantivo con el infinitivo dentro: falso positivo. Las 49 glosas son
+      nombres — agua turbia, prado, higo, demonio, puche de maíz, vasija para
+      el agua, gavilán, diente, señor principal…
+    lectura: >-
+      El vocabulario caquetío más antiguo que tiene el proyecto es enteramente
+      NOMINAL. Sin verbos no hay par verbo/nombre que retroabstraer, y esto es
+      lo que hay del siglo XVI.
+  medina_colina:
+    obra: medina-colina-sxx
+    entradas_dictadas: 66
+    verbos: 0
+    lectura: >-
+      Las voces vivas de Paraguaná son nombres. El dictado es parcial por
+      diseño, así que es un cero DEL DICTADO y no del libro: comprobar en el
+      físico si hay sección de verbos.
+    deuda: 'medina-colina-sxx — barrer el físico buscando verbos'
+  alvarado_1921:
+    obra: alvarado-1921
+    lectura: >-
+      Sus entradas con glosa verbal son verbos CASTELLANOS derivados de
+      nombres indígenas: `cachicamear` «cazar armadillos», `cebucanear`,
+      `embijar` «pintar con bija», `enguanepar` «guardar algo en guanepe»,
+      `chigüirear`. Ninguno es un verbo indígena. Es lo que cabía esperar de un
+      glosario de lo que el ESPAÑOL tomó prestado: entre lenguas se prestan
+      nombres.
+    y_una_corroboracion_de_paso: >-
+      `ENGUANEPAR` «guardar algo en guanepe» confirma que `guanepe` (Zavala
+      #137, «Cesto para cargar a los niños») es un nombre de instrumento vivo
+      en el español regional.
+  arcaya_1920:
+    obra: arcaya-1920
+    pagina: 75
+    cita_literal: >-
+      «Pensamos, con fundadas razones, que también debe clasificarse en la
+      familia lingüística nuarhuaca al idioma caquetío. No se conserva de él,
+      desgraciadamente, vocabulario alguno, ni mucho menos hay frases que
+      permitan conocer su estructura gramatical, pero sí quedan los nombres,
+      muy numerosos por cierto, de los lugares que habitaron […] y nombres
+      propios de personas»
+    lo_unico_que_da: >-
+      de la Relación de Barquisimeto de 1579: «sabana», «Capu» (el demonio),
+      «bariqué», «guadabacoa o adobacoa», «quiccide», «mene» y «cumaragua».
+      Siete voces, las siete NOMBRES.
+    lectura: >-
+      ⭐ Arcaya CIERRA su propio lado: declara por escrito que no hay
+      vocabulario ni frases para conocer la estructura gramatical. Buscarle a
+      Arcaya un nominalizador es buscar lo que él mismo dice que no dejó.
+    aviso_de_extraccion: >-
+      la capa de texto de este PDF pierde los acentos (sale «Falc?n»,
+      «ling??stica»). La cita se transcribe restituyéndolos; el texto sin
+      acentos es reproducible con `pdftotext -enc UTF-8`.
+
+# ══════════════════════════════════════════════════════════════════════
+# 8. LA COMPARANDA — para qué sirvió y para qué no
+# ══════════════════════════════════════════════════════════════════════
+comparanda:
+  para_que: >-
+    Reconocer un candidato caquetío si aparecía. No apareció, así que la
+    comparanda no sube ni baja nada. Se deja escrito qué se habría buscado.
+  lokono:
+    obra: perea-alonso-1942
+    paginas: '609-612, y 561'
+    que_tiene: >-
+      nombre de acción `-hù` (`a-iyaha-dda-hù` «andadura»), `-hi` en los
+      estativos (`c-a-nsi-hi` «amor»), participios `-ti`/`-tu`/`-nu`, agentivo
+      `-ha-li-n`, e instrumental y local `-na` sobre `-coa-` (`a-balti-coa-na`
+      «asiento») — con el aviso del propio Perea: «son pocos los vocablos así
+      formados».
+    que_se_busco: 'un caquetío en -hu/-hi/-ti/-tu/-na tras raíz verbal'
+    resultado: >-
+      cero. Ninguno de los 23 finales compartidos es ninguno de éstos, y NO se
+      importa nada (opción B de d21.11, descartada por Miguel).
+  achagua:
+    obra: neira-ribero-1762
+    que_tiene: >-
+      nominaliza en `-si` sobre raíz verbalizada: `manucaicasi` «grandeza»
+      junto a `numanudau` «engrandecer»; y el censo del escriba sobre 2.410
+      formas da `-si`, `-ba`, `-ri`, `-yi`, `-cayi` como finales dominantes
+      (6-fusion/censo_terminacion_re.yaml §comparandum).
+    que_se_busco: 'un caquetío en -si/-ci tras raíz verbal'
+    resultado: >-
+      cero en la diana. Las tres formas caquetías en -si/-ci del glosario son
+      `barici` #34 «Agua turbia», `barisi` #37 «Región de tierras coloradas» y
+      `quiricias` #217 «Sangre, sangrado»; ninguna tiene verbo debajo y las dos
+      primeras son la misma raíz `bari-` «rojizo, turbio», que ya está glosada
+      en 2-lengua/morfemas.yaml. Y `quiricias` es precisamente un caso de
+      derivación cero, no de sufijo.
+    aviso: >-
+      El achagua es de los LLANOS: entra como comparanda marcada, nunca como
+      canon costero (regla 4). Y el arte de Neira y Ribero sigue sin minar en
+      sus declinaciones y conjugaciones (morfologia.md §14): para esta
+      pregunta es la fuente que falta.
+
+# ══════════════════════════════════════════════════════════════════════
+# 9. CANDIDATOS — ninguno para la capa retroabstraída
+# ══════════════════════════════════════════════════════════════════════
+candidatos:
+  para_la_capa_caquetio_retroabstraido: []
+  por_que_ninguno: >-
+    La capa `caquetío-retroabstraido` se definió (#124, y matakán el
+    2026-09-14) para el caso en que «la palabra existe y está documentada en
+    boca viva; lo incierto no es la forma sino el SUSTRATO». Un MORFEMA no
+    cumple eso: no hay ningún nominalizador caquetío documentado en boca viva
+    cuyo sustrato esté en duda. Lo que habría, si algo, sería una
+    reconstrucción interna — otra operación y otra etiqueta. Proponer un
+    `-X` nominalizador con este material sería inventar morfología, que es lo
+    que la opción B descartaba por venir de otra lengua y sería peor por no
+    venir de ninguna.
+  lo_unico_que_se_propone_declarar:
+    - id: nom-01
+      que: >-
+        Que el material caquetío atestiguado NO registra marca de
+        nominalización, y que donde una entrada glosa el verbo y su nombre lo
+        hace con la misma forma.
+      capa: caquetío-atestiguado
+      donde: '2-lengua/morfologia.md §10 (fila «Nominalización») y §11'
+      procedencia:
+        - {obra: zavala-reyes-2015, pagina: '69 (glosario #170 «Regar, regadío» y #180 «Sembrar, siembra, sembradío. Conuco»)'}
+        - {obra: zavala-reyes-2015, pagina: '66 (glosario #39 «Dominar, triunfar, victoria»)'}
+        - {obra: zavala-reyes-2015, pagina: '68 (glosario #120 «Feroz, feo, espanto»)'}
+        - {obra: zavala-reyes-2015, pagina: '70 (glosario #217 «Sangre, sangrado»)'}
+        - {obra: oliver-1989-apendice-a, pagina: '593-594 impresas (Tabla A-9, 49 entradas, 0 verbos)'}
+        - {obra: arcaya-1920, pagina: 75}
+      nota_de_paginacion: >-
+        el glosario de Zavala ocupa las pp. impresas 65-72 y la numeración
+        1-288 no salta: #1-37 en la 65, #38-77 en la 66, #78-116 en la 67,
+        #117-156 en la 68, #157-195 en la 69, #196-235 en la 70, #236-275 en
+        la 71 y #276-288 en la 72. Verificado sobre el texto de
+        `pdftotext -enc UTF-8`, que conserva los folios.
+      por_que_es_atestiguado_y_no_hipotetico: >-
+        Porque es una afirmación sobre LO QUE LAS FUENTES REGISTRAN, con sus
+        citas, no sobre lo que la lengua hacía. La reserva del §5 va con ella.
+      mueve_el_motor: 'no. Es documental'
+
+# ══════════════════════════════════════════════════════════════════════
+# 10. LO QUE SALIÓ DE PASO — medido, y NO es la respuesta
+# ══════════════════════════════════════════════════════════════════════
+subproductos:
+  - id: sub-01
+    titulo: 'el prefijo `ja-`: siete de los trece lemas en J- son verbos'
+    medido: '7 de 13 (53,8 %), p = 7,4e-05 — contra 30 verbos en 288 (10,4 %)'
+    los_siete: ['Jabal #168 «Adquirir»', 'Jacuque #170 «Regar, regadío»',
+                'Jacura #171 «Guardar»', 'Jadarayte #172 «Recoger»',
+                'Jaguey #174 «Establecer, estancar»', 'Jai #175 «Oír, escuchar»',
+                'Jusual #180 «Sembrar, siembra, sembradío»']
+    la_pista_extra: >-
+      Zavala #173 da el MISMO lema en dos formas: «Jadicuar. Adicora» — ja- ~
+      a-. Y el propio Zavala, en su §5 (p. 72 impresa), escribe: «Las voces
+      caquetías emplean entre otros el prefijo "A" en los topónimos costeros,
+      como: Adare (Adaro), Anocio, Amuay». Del lado lokono, los infinitivos de
+      Perea se citan con `a-` (`a-sucusu-n`, `a-iyaha-dda-hù`) y el achagua de
+      Neira los cita con `nu-`: prefijar el verbo es arahuaco.
+    por_que_NO_se_propone_ahora:
+      - 'no es un nominalizador: si acaso sería lo contrario, una marca verbal'
+      - 'los siete son del MISMO compilador (AM), así que puede ser su manera
+         de transcribir y no la lengua'
+      - 'el glosario es alfabético: hay que comprobar que el amontonamiento no
+         sea un artefacto de cómo Angulo Molina ordenó SU lista'
+    para: 'campaña propia — es la pista más limpia que ha dado esta medición'
+  - id: sub-02
+    titulo: '`-ebo` «camino, paso» tiene un quinto apoyo, y el primero LÉXICO'
+    estado_en_el_canon: >-
+      ya abierto en la toponimia: `jurijurebo` (toponimo-002, nivel A),
+      `turijerebo` (toponimo-020, nivel C), `guacurebo` (toponimo-021, con su
+      contraejemplo resuelto por Esteves p. 38) y `cumarebo`. `ebo` #117
+      «Camino, paso, senda» es voz libre caquetío-atestiguada del lexicón.
+    lo_nuevo: >-
+      ⭐ `cazebo` #75 (GC) «Poniente» = `cazi` #76 (GC) «Sol» + `ebo` «camino»
+      → 'el camino del sol'. Es el PRIMER apoyo no toponímico de `-ebo`: una
+      palabra común, de otro compilador (Galeotto Cey, el testigo del s. XVI),
+      con las dos piezas atestiguadas y la traducción cerrando sin residuo —
+      el mismo método con que D9 resolvió `-bana`. La entrada `kasebo` del
+      lexicón no lleva esta segmentación.
+    medido: 'en el grupo de control: 3/11 vs 6/288, ×13,09, p = 0,00079'
+    para: 'la campaña de topónimos / una D9 de `-ebo`; NO es un nominalizador'
+  - id: sub-03
+    titulo: 'los nombres de agente atestiguados son REDUPLICADOS, no sufijados'
+    medido: '3 de los 9 nombres de agente de la diana'
+    los_tres: ['Quibaquibi #205 «Baquiano, conocedor» ← quiba #203 «Ayuda»',
+               'Humohumo #160 «El ave que vuela»',
+               'Apopo #12 «jefe de parcialidad pequeña» ← apo #11 «Grande»']
+    estado_en_el_canon: >-
+      §9 de morfologia.md ya lista `quibaquibi` bajo «especificación /
+      intensidad» y `humohumo` bajo onomatopeya. Lo que esta campaña añade es
+      el RECUENTO: en el subconjunto de nombres de agente la reduplicación es
+      el único proceso que deja base atestiguada. Un valor AGENTIVO no está
+      declarado en §9.
+    aviso: >-
+      `baquiano` es palabra castellana (guía, práctico) de origen discutido:
+      antes de leer `quibaquibi` como agentivo caquetío hay que descartar que
+      la glosa sea la etimología del compilador.
+    para: 'la deuda abierta de la reduplicación (§9), que no estaba entre las catorce'
+  - id: sub-04
+    titulo: '`mene`/`cumaragua`: la ambigüedad que la ficha de Zavala dejó abierta se cierra'
+    lo_que_estaba_abierto: >-
+      `4-fuentes/zavala-reyes-2015.md` marca con ⚠️ D la cita de su p. 62
+      —«"mene" y "cumaragua" nombre de la ciruela»— porque «la sintaxis de
+      Arcaya es ambigua» y el lexicón glosa `mene` como petróleo/rezumadero.
+    lo_medido_ahora: >-
+      Se fue al Arcaya original. Arcaya 1920 p. 75 escribe, literal: «mene y
+      cumaragua (nombres de la VIRUELA)». Y la Tabla A-9 de Oliver, del s. XVI
+      e independiente de Zavala, trae «viruela» y «viruela / pez derretida».
+      O sea: no es que la sintaxis de Arcaya sea ambigua — es que **Zavala
+      leyó «ciruela» donde Arcaya puso «viruela»**, y con eso se explica
+      también la glosa de `Cumaragua` #93 «Ciruela, espuma rosada».
+    para: >-
+      curación de glosa. Aquí NO se toca nada (cambiar una glosa mueve canon,
+      skill §8): se deja la evidencia y se levanta.
+
+# ══════════════════════════════════════════════════════════════════════
+# 11. EL OTRO LADO — y es OTRO lado
+# ══════════════════════════════════════════════════════════════════════
+# Lo que la comunidad inventó NO es evidencia de lo atestiguado. Va aquí sólo
+# lo que toca al canon; la descripción entera está en el issue y la medición
+# en 6-fusion/medicion_nominalizacion_emergente_2026-09-21.yaml.
+lo_emergente_que_toca_al_canon:
+  correccion_de_cifra:
+    donde: '2-lengua/morfologia.md §11 «La nominalización con el posesivo»'
+    lo_que_dice: '1.107 usos de ta-/ma-/wa- sobre raíz verbal, + 25 de ka- = 1.132'
+    lo_que_sale_hoy: '960 usos en 92 formas, sobre los MISMOS 95.445 usos de word_uses'
+    la_diferencia: 172
+    explicada_y_medida: >-
+      Los 172 son exactamente los usos sobre las raíces que **#178 dejó de
+      considerar verbales** el 2026-09-20 (30 de las 49 de Zavala):
+      `ka-juri`, `ka-popoi`, `ka-kana`, `ma-kapo`, `ma-hueke`, `ma-baharuko`,
+      `ma-kibakibi`, `ma-kiricias`… 36 formas. 960 + 172 = 1.132, exacto.
+    lectura: >-
+      Las dos cifras son correctas para SU estado del lexicón: aquella
+      medición corrió antes de que el reparto de clases llegara al módulo. La
+      de hoy es la del canon en main. Y la corrección va en la dirección que
+      el propio d21.5 quería: `ka-juri` sale del recuento porque `juri` es un
+      NOMBRE, y `ka-juri` «hay viento» es el atributivo haciendo su trabajo,
+      no una nominalización.
+    propuesta: 'actualizar la cifra de §11 y decir con qué estado se midió'
+  y_una_cosa_que_el_titular_de_11_junta_y_no_deberia:
+    medido: >-
+      posesivo `ta-`/`wa-` sobre raíz verbal: **470 usos en 48 formas**.
+      Atributivo/privativo `ma-`/`ka-` sobre raíz verbal: **490 usos en 44
+      formas**.
+    por_que_importa: >-
+      Desde d21.5, `ma-` es PRIVATIVO y `ka-` ATRIBUTIVO, no posesivos. El
+      titular de §11 —«La nominalización con el posesivo»— suma los cuatro, y
+      la mitad de sus usos no son nominalización: `ma-panaa` es «sin saber»
+      (el propio §11 lo glosa así para `ma-awa` «sin beber»), que es
+      predicación negativa, no un nombre. Son DOS invenciones distintas y la
+      segunda —extender el privativo de nombres a verbos— no la ha nombrado
+      nadie todavía.
+    propuesta: >-
+      partir §11 en dos: la nominalización posesiva (470 usos, 48 formas) y la
+      predicación privativa sobre verbo (490 usos, 44 formas). Decisión de
+      Miguel: son dos hallazgos, no uno mal contado.
+
+# ══════════════════════════════════════════════════════════════════════
+# 12. DEUDAS QUE ABRE
+# ══════════════════════════════════════════════════════════════════════
+deudas:
+  - 'Angulo Molina de primera mano: es la ÚNICA fuente de verbo caquetío que
+     tiene el proyecto (19 de 19) y no está en el repo. Sin ella, toda la
+     morfología verbal del proyecto descansa en una lista sin segundo testigo.'
+  - 'El arte de Neira y Ribero 1762 (pliegos 7-27) sigue sin minar en sus
+     declinaciones y sus seis conjugaciones. Para la nominalización, la posesión
+     y las clases de verbo es la fuente que falta (morfologia.md §14).'
+  - 'medina-colina-sxx en físico: comprobar si el libro trae verbos que el
+     dictado aún no ha recogido.'
+  - '`cazebo` = `cazi` + `ebo`: la entrada `kasebo` del lexicón no declara la
+     segmentación. Curación pendiente (no se toca aquí).'
