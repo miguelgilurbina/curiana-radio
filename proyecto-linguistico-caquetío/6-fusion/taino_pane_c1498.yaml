@@ -1,0 +1,646 @@
+# ══════════════════════════════════════════════════════════════════════
+# TAÍNO — Pané c. 1498, *Relación acerca de las antigüedades de los indios*
+# PROPUESTA (regla 5). Comparanda de la ESFERA DE CONTACTO, no caquetío.
+# Campaña del taíno, parcela T2. 2026-09-21. Texto LEÍDO ENTERO.
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  obra: pane-c1498
+  campana: taino-2026-09-21
+  parcela: T2
+  advertencia: >-
+    ESTO NO ES CAQUETÍO. Es taíno de La Española, recogido entre 1494 y 1498.
+    Entra como comparanda de la esfera de contacto y como material de MUNDO
+    (creencia) etiquetado como antillano. Nada de aquí se proyecta a la
+    Kaketiana: los paralelos con el boratio se SEÑALAN, no se importan
+    (ver `paralelos_declarados`).
+  colonial_por_definicion: >-
+    Regla 3. Pané escribe DESPUÉS del contacto, viviendo entre españoles, y su
+    último capítulo narra cómo la gente de Guarionex destrozó las imágenes
+    cristianas. Lo que cuenta es precontacto en su contenido y colonial en su
+    situación de habla. Se etiqueta así y no se proyecta.
+
+  # ── §1 el extractor y el archivo ───────────────────────────────────
+  archivo:
+    ruta: fuentes_caquetios/Pane_c1498_Relacion_Antiguedades_Indios_wikisource.txt
+    bytes: 46949
+    palabras: 8343
+    subpaginas: 29
+    estructura_medida: >-
+      1 proemio + capítulos I-XXVI, con DOS capítulos repetidos de número:
+      «CAPITULO XVIII BIS» y «CAPITULO XXV BIS». La duplicación de numeración
+      es rasgo de la cadena italiana (Ulloa 1571) y el hecho de que sobreviva
+      es buena señal: la retraducción no «arregló» el original.
+    leido: ENTERO, las 29 subpáginas.
+
+  # ── lo que resultó FALSO o estaba sin verificar ────────────────────
+  correcciones_a_la_nota_de_la_fuente:
+  - afirmacion: "«la edición/traducción es la que Wikisource declara en cada subpágina»"
+    medido: >-
+      **Wikisource NO la declara.** Consultada la página el 2026-09-21: da autor
+      (Ramón Pané), fecha (1498) y licencia, y nada más. No hay traductor, ni
+      año de la retraducción, ni edición de referencia. El archivo del repo no
+      perdió el dato al quitarle el marcado wiki: el dato no existe en origen.
+      **Queda como deuda: esta fuente se cita hoy sin saber qué edición es.**
+  - afirmacion: "«es.wikisource.org, dominio público»"
+    medido: >-
+      cierto para la OBRA y no necesariamente para el texto que tenemos.
+      Wikisource lo advierte con estas palabras: «La traducción de la obra puede
+      no estar en dominio público». Consecuencia práctica (trampa 7 de la
+      campaña): de este archivo se citan **formas indígenas y glosas cortas**,
+      que es lo que el proyecto necesita, y no párrafos largos.
+  - afirmacion: "«el lexicón tiene 45 entradas `taíno` y 9 `taíno-reconstruido`»"
+    medido: "43 + 9 = 52 (medido el 2026-09-21 sobre `VOCABULARIO_BASE`). Eran 45+9 cuando se escribió la nota."
+  - afirmacion: "«`behique`, `bohío`, `casabe` y `areíto` no aparecen con esa grafía»"
+    medido: >-
+      confirmado y AFINADO. `behique` no aparece, pero la voz SÍ está y con
+      tres grafías distintas: `buhitihu` (10), `buhuitihu` (2), `bohutis` (1).
+      `casabe` no, pero `cazabi` sí (3). `areíto` no aparece en ninguna grafía:
+      la ceremonia se describe sin nombrarla (cap. XIV). `bohío` no aparece
+      como 'casa'; lo que hay es `Bouhi` (1) como nombre antiguo de las islas.
+
+  # ── §2 medir la ortografía ANTES de contar ─────────────────────────
+  transmision:
+    cadena: castellano (perdido) → italiano de Ulloa 1571 → castellano de esta retraducción
+    etiqueta_por_entrada: 'via-italiano'
+    que_significa: >-
+      ninguna forma de este archivo es la que escribió Pané. Cada una pasó por
+      un traductor al italiano, una imprenta veneciana y un retraductor al
+      castellano cuyo nombre no consta. Para cualquier cita hay que decirlo.
+    prueba_interna_medida: >-
+      **la deformación se puede MEDIR dentro del propio texto**, porque el mismo
+      nombre sale escrito de dos y tres maneras sin que nada lo justifique.
+      Ocho dobletes hallados leyendo el texto entero; están abajo en
+      `dobletes_del_propio_texto`. No son variantes dialectales: son ruido de
+      copia, y su cuenta es el mejor indicador de cuánto vale una forma suelta.
+    consecuencia_para_el_proyecto: >-
+      una entrada del lexicón que cite a Pané tiene que llevar la forma TAL
+      COMO LA DA ESTE ARCHIVO más la advertencia `via-italiano`. Y si Las Casas
+      u Oviedo dan la misma voz con otra grafía, **van las dos** (encargo T2):
+      dos grafías de dos cadenas distintas dicen más que una elegida a dedo.
+
+  dobletes_del_propio_texto:
+    metodo: conteo sobre el texto normalizado sin diacríticos
+    nota: la columna `n` es el número de ocurrencias de cada grafía
+    casos:
+    - {forma_a: Guaguyona, n_a: 5, forma_b: Guahayona, n_b: 10, quien: "el héroe que se lleva a las mujeres", capitulos: "II-VI"}
+    - {forma_a: Basamanaco, n_a: 1, forma_b: Ayamanaco, n_b: 1, forma_c: Bayamanicoel, n_c: 1, quien: "el abuelo del cazabi", capitulos: "XI (los tres en el MISMO capítulo)"}
+    - {forma_a: "Itiba Yauvava", n_a: 1, forma_b: "Itiba Tauvava", n_b: 1, quien: "la madre de los cuatrillizos", capitulos: "IX y X"}
+    - {forma_a: Vaibrama, n_a: 3, forma_b: Buyayba, n_b: 1, quien: "un cemí", capitulos: "XX (el título dice una y el cuerpo la otra)"}
+    - {forma_a: "Yocahu Vagua Maorocoti", n_a: 1, forma_b: Yiocavugama, n_b: 1, quien: "el ser inmortal del cielo", capitulos: "proemio y XXV"}
+    - {forma_a: buhitihu, n_a: 10, forma_b: buhuitihu, n_b: 2, forma_c: bohutis, n_c: 1, quien: "el médico/sacerdote", capitulos: "XIV-XX"}
+    - {forma_a: Matinino, n_a: 1, forma_b: Matanino, n_b: 1, quien: "la isla de las mujeres", capitulos: "IV y V"}
+    - {forma_a: Macorix, n_a: 2, forma_b: Marcorix, n_b: 1, quien: "la provincia y su lengua", capitulos: "XXV"}
+    - {forma_a: Guarionex, n_a: 11, forma_b: Guarionel, n_b: 1, quien: "el cacique", capitulos: "XXIV-XXVI"}
+    - {forma_a: "Maviatúe", n_a: 2, forma_b: Mahuviativire, n_b: 1, quien: "el cacique de la última jornada", capitulos: "XXV bis y XXVI"}
+    resumen: >-
+      DIEZ nombres con grafía inestable en 8.343 palabras, tres de ellos con
+      tres formas. En un texto de este tamaño eso no es descuido puntual: es la
+      firma de la cadena de dos lenguas.
+
+  cobertura:
+    leido: las 29 subpáginas, línea a línea
+    que_se_preguntó:
+    - censo de formas indígenas con su capítulo
+    - cuáles de las 52 entradas taínas del lexicón atestigua Pané
+    - mito y rito para la esfera de creencia, como comparanda antillana
+    - qué dice sobre la lengua (evidencia de la trampa 3)
+    - cotejo de grafías con Las Casas donde coinciden
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. LO QUE DICE SOBRE LA LENGUA (la trampa 3, en su forma más fuerte)
+# ══════════════════════════════════════════════════════════════════════
+metalinguistico:
+
+- id: p01
+  tema: dos-lenguas-en-La-Española
+  capitulo: XXV
+  transmision: via-italiano
+  cita_verbatim: >-
+    Entonces el señor Almirante me dijo que Macorix, provincia de la Magdalena,
+    tenía lengua distinta de la otra, y que no era usado su idioma en toda la
+    isla; por lo que yo, me fuese a vivir con otro cacique principal, de nombre
+    Guarionex, señor de muchos vasallos, pues la lengua de éste se entendía por
+    todo el país.
+  que_dice: >-
+    EL DATO MÁS FUERTE DE TODA LA PARCELA. Dos lenguas declaradas en La
+    Española, con territorio, en 1495-96, por un hombre que había aprendido UNA
+    de ellas. Es sesenta años anterior a Las Casas y NO depende de él.
+
+- id: p02
+  tema: dos-lenguas-en-La-Española
+  capitulo: XXV
+  transmision: via-italiano
+  cita_verbatim: >-
+    "Señor, ¿cómo quiere Vuestra Señoría que yo vaya a estar con Guarionex, no
+    sabiendo más lengua que la de Macorix? Déme Vuestra Señoría licencia para
+    que venga conmigo alguno de los del Nuhuirci, que después fueron cristianos,
+    y sabían las dos lenguas".
+  que_dice: >-
+    el propio Pané declara (a) que sabía macorix y no la general, (b) que hizo
+    falta intérprete BILINGÜE entre dos lenguas de la misma isla, y (c) que
+    existía una comunidad —«los del Nuhuirci»— donde había bilingües. Esto no
+    es una opinión de anticuario: es un problema laboral resuelto en su día.
+  para_el_proyecto: >-
+    corrige por la vía de los hechos la tesis de «toda una lengua» que Colón
+    repite en Las Casas (m04/m05 de `taino_las_casas_1875.yaml`) y refuerza
+    m07/m08. **Cruzar las dos fuentes es lo que convierte la trampa 3 en dato
+    medido**: Pané lo vive, Las Casas lo recuerda a medias, y el trío
+    caona/nozay/tuob lo enseña en una frase.
+  ojo_una_corroboracion_falsa_es_peor_que_ninguna: >-
+    independencia comprobada (§8): Pané escribe c. 1498 y nunca leyó a Las
+    Casas; Las Casas SÍ leyó a Pané y lo resume en otros libros de la *Historia*
+    —pero el pasaje de los mazoriges y cyguayos del cap. LXVII del tomo I NO es
+    un resumen de Pané: es recuerdo personal declarado («conversé hartas veces
+    con ambas generaciones»). Las dos atestaciones son independientes.
+
+- id: p03
+  tema: la-lengua-no-se-escribe
+  capitulo: "V (y VI, VIII)"
+  transmision: via-italiano
+  cita_verbatim: >-
+    Como los indios no tienen escrituras, ni letras, no pueden dar buena
+    información de lo que saben acerca de sus antepasados, y por esto no
+    concuerdan en lo que dicen, y menos se puede escribir ordenadamente lo que
+    refieren.
+  que_dice: >-
+    Pané repite tres veces la misma advertencia, y en el cap. VI añade la suya:
+    «creo que pongo primeramente lo que debía ser lo último». La fuente declara
+    su propio desorden. Es exactamente lo que el proyecto llama etiqueta
+    epistémica, escrito en 1498.
+
+- id: p04
+  tema: transmision-oral
+  capitulo: XIV
+  transmision: via-italiano
+  cita_verbatim: >-
+    tienen su ley expuesta en canciones antiguas, por las que se gobiernan,
+    igualmente que los moros por la escritura.
+  que_dice: >-
+    la norma se transmite CANTADA y es vinculante. Material para
+    `3-mundo/corpus/transmision.yaml` como comparanda antillana. Ver
+    `paralelos_declarados`.
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. LÉXICO CON GLOSA — lo que Pané traduce él mismo
+#    Todas llevan `transmision: via-italiano`.
+# ══════════════════════════════════════════════════════════════════════
+voces:
+
+- id: pv01
+  forma_fuente: "Dios naboria daca"
+  glosa_fuente: "que quiere decir: yo soy siervo de Dios"
+  capitulo: XXV
+  atribucion: "Macorix (provincia de la Magdalena) — es lo que Pané sabía hablar"
+  campo: frase
+  en_el_lexicon: "`naboria` (taíno) y `daca` (taíno-reconstruido) están; la frase, no"
+  para_el_proyecto: >-
+    🔴 **LA ÚNICA ORACIÓN TAÍNA CON GLOSA DE TODA MI PARCELA**, y es el dato
+    gramatical más caro que hay aquí: da el orden `Dios naboria daca` para 'yo
+    soy siervo de Dios', o sea **pronombre de 1.ª pospuesto** (`daca` = yo) y
+    predicado nominal sin cópula. Es material de MORFOLOGÍA, no de vocabulario.
+    Que `daca` esté hoy en el lexicón como `taíno-reconstruido` teniendo esta
+    atestación es una etiqueta que hay que revisar — **la decide Miguel**.
+    ⚠️ Es de MACORIX, la lengua distinta, no de la general (p01/p02). Quien la
+    use como «taíno» sin más está borrando justo la distinción que la fuente
+    hace tres párrafos antes.
+
+- id: pv02
+  forma_fuente: "yahu naboriu"
+  glosa_fuente: "sus servidores y favoritos, que son llamados yahu naboriu"
+  capitulo: XXV
+  atribucion: Macorix
+  campo: organizacion-social
+  en_el_lexicon: naboria (taíno)
+  nota: >-
+    segunda atestación de la raíz, en sintagma. Brinton p. 13 da `Naborias,
+    servants` citando a Las Casas *Hist. Gen.* lib. iii cap. 33 — otra fuente,
+    otra obra.
+
+- id: pv03
+  forma_fuente: cemíes
+  glosa_fuente: "al adorar los ídolos que tienen en casa y les llaman cemíes"
+  capitulo: proemio
+  atribucion: La Española
+  campo: creencia
+  ocurrencias: 41
+  en_el_lexicon: cemi (taíno)
+  nota: >-
+    la voz más frecuente del texto. Pané la usa para el ÍDOLO y para el espíritu
+    que lo habita, sin distinguirlos: «el cemí es obra muerta, hecha de piedra o
+    de madera» (cap. XVI) y «hablan con los cemíes» (cap. XV). Brinton p. 13 da
+    `Semi` citando a Oviedo y avisa «Not evil spirits only, but all spirits».
+
+- id: pv04
+  forma_fuente: cohoba
+  glosa_fuente: "la cohoba es cierto polvo que ellos toman algunas veces para purgarse [...] Toman ésta con una caña, medio brazo de larga; ponen un extremo en la nariz, y otro en aquel polvo, y así lo aspiran por la nariz"
+  capitulo: XI
+  atribucion: La Española
+  campo: creencia
+  ocurrencias: 11
+  en_el_lexicon: cohiba (taíno)
+  nota: >-
+    la glosa incluye el INSTRUMENTO. Brinton p. 12 la glosa mal («the native
+    name of tobacco») y reserva `Tabaco` para el canuto: entre los dos queda
+    claro que la voz nombra el POLVO y `tabaco` el tubo — que es lo que también
+    dice Las Casas cap. XLVI. Tres fuentes, una corrección.
+
+- id: pv05
+  forma_fuente: "buhitihu / buhuitihu / bohutis"
+  glosa_fuente: "dicho buhitihu, que quiere decir médico"
+  capitulo: "XIV-XX (la glosa, en XVII)"
+  atribucion: La Española
+  campo: creencia
+  ocurrencias: "10 + 2 + 1"
+  en_el_lexicon: bejique (taíno)
+  nota: >-
+    la clave del lexicón, `bejique`, no es ninguna de las tres grafías de Pané:
+    viene de Brinton p. 12 (`Bejique, a priest`). Si alguna vez se cita a Pané
+    para esta entrada, la forma que hay que poner es `buhitihu`, no `bejique`.
+
+- id: pv06
+  forma_fuente: conucos
+  glosa_fuente: "sus conucos, que quiere decir posesiones, que eran de una herencia"
+  capitulo: IX
+  atribucion: La Española
+  campo: agricultura
+  en_el_lexicon: kunuku (taíno)
+  nota: >-
+    la glosa trae un dato de MUNDO que el proyecto puede usar: el conuco es
+    heredable («que eran de una herencia»). Brinton p. 12 da `Conuco, a
+    cultivated field`, citando a Oviedo *Hist. Gen.* lib. vii cap. 2.
+
+- id: pv07
+  forma_fuente: cazabi
+  glosa_fuente: "algún cazabi, que es el pan que se come en aquel país"
+  capitulo: XI
+  atribucion: La Española
+  campo: alimentacion
+  en_el_lexicon: cazabi (taíno) · casabe (taíno)
+  cotejo_con_las_casas: >-
+    Las Casas escribe `cazabí` con tilde (4 veces, caps. XLII/XLVI/LX/LXIII) y
+    Pané `cazabi` sin ella. Dos cadenas de transmisión distintas dan
+    esencialmente la misma forma: es de lo más sólido que hay aquí.
+
+- id: pv08
+  forma_fuente: guanines
+  glosa_fuente: "Los guanines los llevan en las orejas, que se las agujerean cuando son pequeños; son aquéllos de metal como de florín"
+  capitulo: VI
+  atribucion: La Española
+  campo: metales
+  ocurrencias: 7
+  en_el_lexicon: guanin (taíno)
+  cotejo_con_las_casas: >-
+    Las Casas (caps. LX y LXVII) glosa el MATERIAL («oro bajo... algo morado»)
+    y Pané el OBJETO («los llevan en las orejas»). No se contradicen: se
+    complementan, y juntas dan la entrada completa.
+  nota: >-
+    `Guanín` es además topónimo en Pané (cap. IV, la región adonde va
+    Guahayona) y antropónimo (cap. VI, `Hia Guaili Guanin`). Las tres cosas en
+    el mismo texto.
+
+- id: pv09
+  forma_fuente: cibas
+  glosa_fuente: "en aquel país las cibas son piedras que semejan mucho al mármol, y las llevan pendientes de los brazos, y al cuello"
+  capitulo: VI
+  atribucion: La Española
+  campo: nucleo-lexico
+  ocurrencias: 6
+  en_el_lexicon: NO
+  para_el_proyecto: >-
+    voz de NÚCLEO ('piedra'), no de cultura material. Brinton p. 13 la da como
+    `Siba, a stone. Ar. siba, a stone` — **idéntica en arawack**, y de ahí saca
+    la etimología de `Siboneyes` 'hombres de las rocas' (p. 14). Candidata
+    fuerte: es de las voces que sirven para filiación, no para comercio.
+
+- id: pv10
+  forma_fuente: cobo
+  glosa_fuente: "el cobo es el caracol de mar"
+  capitulo: V
+  atribucion: La Española
+  campo: fauna
+  en_el_lexicon: cobo (taíno)
+  nota: glosa limpia, de una línea, sin ambigüedad. De las mejores del texto.
+
+- id: pv11
+  forma_fuente: guanara
+  glosa_fuente: "Fue puesto luego en una guanara, que quiere decir lugar apartado"
+  capitulo: VI
+  atribucion: La Española
+  campo: espacio
+  en_el_lexicon: NO
+  nota: >-
+    Brinton p. 12: `Guanara, a retired stop. (Pane, p. 444)` — o sea que Brinton
+    la saca de Pané. NO es segunda atestación (§8): es la misma, por otra
+    puerta. Y de paso: la paginación «Pane, p. 444» de Brinton es de una edición
+    que no tenemos.
+
+- id: pv12
+  forma_fuente: operito
+  glosa_fuente: "dicen que es operito, que quiere decir muerto"
+  capitulo: XIII
+  atribucion: La Española
+  campo: nucleo-lexico
+  en_el_lexicon: NO
+  nota: Brinton p. 13 lo cita de Pané y lo casa con Ar. `apparahun` 'muerto'.
+
+- id: pv13
+  forma_fuente: goeiz
+  glosa_fuente: "Mientras vive una persona llaman al alma goeiz, y después de muerta la denominan opia"
+  capitulo: XIII
+  atribucion: La Española
+  campo: creencia
+  en_el_lexicon: NO
+  para_el_proyecto: >-
+    DOS voces en una frase y una oposición conceptual explícita: alma del vivo
+    vs. alma del muerto. Es el pasaje de creencia con más filo del texto.
+
+- id: pv14
+  forma_fuente: opia
+  glosa_fuente: "después de muerta la denominan opia"
+  capitulo: XIII
+  atribucion: La Española
+  campo: creencia
+  en_el_lexicon: NO
+  ojo: >-
+    en Las Casas tomo I `opia` da 77 ocurrencias y **son todas ruido**
+    («propia», «copia»). La voz taína no está allí. Medido, declarado.
+
+- id: pv15
+  forma_fuente: caracaracol
+  glosa_fuente: "caracaracol es una enfermedad como roña, que hace al cuerpo muy áspero"
+  capitulo: VII
+  atribucion: La Española
+  campo: cuerpo
+  ocurrencias: 9
+  en_el_lexicon: NO
+  segunda_glosa: {capitulo: IX, cita: "El primero que extrajeron fue Caracaracol, que quiere decir lleno de roña"}
+  nota: >-
+    dos glosas concordes en el mismo texto, una para la enfermedad y otra para
+    el nombre propio. Brinton p. 14 la usa para su paralelo con el mito arawack.
+
+- id: pv16
+  forma_fuente: "inriri / inrire cahuvayal"
+  glosa_fuente: "Buscaron un pájaro que se llama inriri, y antiguamente inrire cahuvayal, que vive en los árboles, y en nuestro idioma se llama pico"
+  capitulo: VIII
+  atribucion: La Española
+  campo: fauna
+  en_el_lexicon: NO
+  para_el_proyecto: >-
+    ⚠️ **Pané declara aquí un ARCAÍSMO**: `inriri` es la forma corriente e
+    `inrire cahuvayal` la «antigua». Es el único dato de profundidad temporal
+    interna a la lengua que da la fuente, y vale más que la palabra.
+
+- id: pv17
+  forma_fuente: mayohavau
+  glosa_fuente: "tañen cierto instrumento que se llama mayohavau, que es de madera, cóncavo, fuerte y muy delgado, largo de un brazo [...] hace tanto ruido que se oye a distancia de una legua y media"
+  capitulo: XIV
+  atribucion: La Española
+  campo: musica
+  en_el_lexicon: NO
+  nota: Brinton p. 13 da `Maguey, a native drum` citando a Pet. Martyr — forma muy distinta, probablemente otra palabra.
+
+- id: pv18
+  forma_fuente: "gueyo (por otro nombre zacón)"
+  glosa_fuente: "una hierba que se llama gueyo, que tiene las hojas semejantes al basílicon, gruesa y larga, por otro nombre llamada zacón"
+  capitulo: XVII
+  atribucion: La Española
+  campo: flora
+  en_el_lexicon: NO
+  nota: dos nombres para la misma planta, declarados por la fuente. Sinonimia atestiguada, no supuesta.
+
+- id: pv19
+  forma_fuente: digo
+  glosa_fuente: "una hierba llamada digo, con la que se limpian el cuerpo cuando van a bañarse"
+  capitulo: II
+  atribucion: La Española
+  campo: flora
+  en_el_lexicon: NO
+
+- id: pv20
+  forma_fuente: tona
+  glosa_fuente: "fueron transformados en animalillos a modo de ranas, que se llaman tona, por la petición que hacían de la teta"
+  capitulo: IV
+  atribucion: La Española
+  campo: fauna
+  en_el_lexicon: NO
+  ojo: >-
+    ETIMOLOGÍA POPULAR declarada: la fuente deriva `tona` del llanto «too, too».
+    Es un dato sobre el mito, NO sobre la formación de la palabra. Si entra,
+    entra con la glosa 'cierta rana' y la etimología marcada como del relato.
+
+- id: pv21
+  forma_fuente: guabaza
+  glosa_fuente: "comen cierto fruto que se llama guabaza [...] El fruto del que dicen alimentarse los muertos, es del tamaño de un melocotón"
+  capitulo: XIII
+  atribucion: La Española
+  campo: flora
+  en_el_lexicon: NO
+  ojo: >-
+    el pasaje trae dos lagunas de la propia transcripción («que tiene sabor de
+    [...] que de día están [...]»). La glosa se cita entera, huecos incluidos:
+    no se rellenan.
+
+- id: pv22
+  forma_fuente: jobos
+  glosa_fuente: "se convirtieron en árboles llamados jobos, y de otro modo Mirobalanos"
+  capitulo: I
+  atribucion: La Española
+  campo: flora
+  en_el_lexicon: NO
+
+- id: pv23
+  forma_fuente: ajes
+  glosa_fuente: "sacar ajes, que son ciertas raíces semejantes a nabos, y otras, parecidas a rábanos"
+  capitulo: XXVI
+  atribucion: La Española
+  campo: alimentacion
+  en_el_lexicon: NO
+  cotejo_con_las_casas: >-
+    Las Casas cap. XLV: «mames que son como zanahorias, que tienen sabor como
+    de castañas; estos son los que llaman ajes». **Dos fuentes independientes,
+    misma voz, glosas compatibles y las dos por comparación con hortaliza
+    castellana.** De lo más firme de la parcela.
+
+- id: pv24
+  forma_fuente: yuca
+  glosa_fuente: "creen que ayudan a nacer la yuca; su raíz es semejante al rábano, la hoja tiene generalmente seis o siete puntas [...] El tallo de la yuca es de la altura de un hombre"
+  capitulo: XIX
+  atribucion: La Española
+  campo: alimentacion
+  ocurrencias: 5
+  en_el_lexicon: yuca (taíno)
+  nota: >-
+    `yuca` es una de las 14 voces que `SIN_FORMA_DE_LA_ESFERA` deja pasar
+    «porque la grafía ES la transcripción de la fuente» (CLAUDE.md, 2026-09-18).
+    Aquí está la fuente, escribiéndola así, en 1498 vía Ulloa.
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. TEÓNIMOS Y RITO — esto NO es léxico: es MUNDO (creencia)
+#    Va aparte porque alimenta `3-mundo/corpus/creencia.yaml` como
+#    comparanda antillana, no el lexicón.
+# ══════════════════════════════════════════════════════════════════════
+teonimos_y_rito:
+  advertencia: >-
+    **nada de esta sección se proyecta al caquetío.** Es religión taína de La
+    Española, documentada por un fraile que la combatía. Entra, si Miguel lo
+    decide, como hecho de corpus con `etnia: taíno` y `capa: atestiguado
+    (colonial, vía italiano)`, para poder DECIR el paralelo sin importarlo.
+
+  deidades:
+  - forma_fuente: "Yocahu Vagua Maorocoti"
+    glosa_fuente: "Creen que hay en el Cielo un ser inmortal, que nadie puede verlo y que tiene madre, mas no tiene principio; a éste llaman Yocahu Vagua Maorocoti"
+    capitulo: proemio
+    variante_en_el_mismo_texto: "Yiocavugama (cap. XXV)"
+    en_el_lexicon: NO
+  - forma_fuente: "Atabex, Iermaoguacar, Apito y Zuimaco"
+    glosa_fuente: "y a su madre llaman Atabex, Iermaoguacar, Apito y Zuimaco, que son cinco nombres"
+    capitulo: proemio
+    ojo: >-
+      🔴 **dice CINCO nombres y enumera CUATRO.** El error puede estar en Pané,
+      en Ulloa, en la imprenta o en el retraductor — no se puede saber cuál.
+      Se cita tal cual, con el desajuste a la vista: es una muestra concreta de
+      qué le hizo la cadena de transmisión al texto.
+    en_el_lexicon: NO
+  - forma_fuente: "Maquetaurie Guayaba"
+    glosa_fuente: "El primero que estuvo en el Coaibai dicen que fue uno llamado Maquetaurie Guayaba, que era señor del Coaibai, casa y habitación de los muertos"
+    capitulo: XII
+    en_el_lexicon: NO
+  - forma_fuente: Guabancex
+    glosa_fuente: "este cemí es mujer [...] Cuando Guabancex se encoleriza, dicen que hace correr el viento y el agua, echa por tierra todas las cosas y arranca los árboles"
+    capitulo: XXIII
+    campo: meteorologia
+    en_el_lexicon: NO
+    nota: >-
+      la deidad del huracán, con DOS ayudantes nombrados y con función: `Guatauva`
+      «es pregonero y heraldo» y `Coatrisquie` «recoge las aguas en los valles
+      entre las montañas, y después las deja correr para que destruyan el país».
+      Tres nombres y un reparto de oficios: es la estructura más articulada del
+      texto.
+  - forma_fuente: "Boinayol y Maroya"
+    glosa_fuente: "dos cemíes hechos de piedra, del tamaño de medio brazo, con las manos atadas y en actitud de sudar [...] cuando no llovía dicen que entraban allí a visitarlos y de repente venía la lluvia"
+    capitulo: XI
+    en_el_lexicon: NO
+  - forma_fuente: "Vaibrama (título: Buyayba)"
+    capitulo: XX
+    en_el_lexicon: NO
+  - forma_fuente: Corocote
+    capitulo: XXI
+    en_el_lexicon: NO
+  - forma_fuente: Opiyelguoviran
+    glosa_fuente: "dicen que tiene cuatro pies como de perro; es de madera; muchas veces, por la noche salía de casa y se escondía en la selva"
+    capitulo: XXII
+    en_el_lexicon: NO
+  - forma_fuente: Faraguvaol
+    capitulo: XXIV
+    en_el_lexicon: NO
+
+  lugares_y_grutas_del_mito:
+  - {forma: "Cacibayagua y Amayauba", glosa_fuente: "dos grutas denominadas Cacibayagua y Amayauba. De Cacibayagua salió la mayor parte de la gente que pobló la isla", capitulo: I}
+  - {forma: Canta, glosa_fuente: "una montaña de nombre Canta", capitulo: I}
+  - {forma: Caonao, glosa_fuente: "La isla Española tiene una provincia llamada Caonao", capitulo: I}
+  - {forma: Yobovava, glosa_fuente: "una gruta que está en el país de un cacique llamado Maucia Tivuel, a cuya gruta, que llaman Yobovava, la veneran mucho", capitulo: XI}
+  - {forma: Coaibai, glosa_fuente: "un lugar al que van los muertos, que se llama Coaibai, que está en un extremo de la isla, llamado Soraya", capitulo: XII}
+  - {forma: Bouhi, glosa_fuente: "anteriormente, ésta y las otras islas se llamaban Bouhi", capitulo: V}
+  - {forma: Haití, glosa_fuente: "la isla llamada Española, que antes llevaba el nombre de Haití, y así la llaman los habitantes de ella", capitulo: V}
+  - {forma: "Matinino / Matanino", glosa_fuente: "dejó las de Matanino, donde hoy se dice que no hay más que hembras", capitulo: "IV y V"}
+
+  ritos_medidos:
+  - rito: ayuno
+    capitulo: XXV
+    cita_verbatim: >-
+      mandó Cacivaquel hacer el ayuno que observan comúnmente todos ellos, para
+      lo que están recluídos cinco o seis días sin comer cosa alguna, excepto
+      jugos de las hierbas con que se lavan [...] todos hacen aquel ayuno en
+      honor de los cemíes que tienen, para saber si alcanzarán victoria de sus
+      enemigos, por adquirir riquezas o por cualquier otra cosa que desean.
+  - rito: cohoba
+    capitulo: XIX
+    cita_verbatim: >-
+      muchas veces al año le hace la cohoba, cuya cohoba es para tributarle
+      oración, para complacerle, para saber del cemí algunas cosas malas o
+      buenas, y también para pedirle riquezas.
+  - rito: cura-del-buhitihu
+    capitulo: XVI
+    resumen: >-
+      dieta del médico y del enfermo, cara tiznada de hollín, expulsión de los
+      niños de la casa, canto, jugo de `gueyo` para vomitar, palpación de los
+      pies a la cabeza, soplo hacia la puerta, succión, y extracción de una
+      piedra o un hueso que el médico llevaba en la boca. Pané dice haberlo
+      visto: «como yo lo tengo visto en parte con mis ojos» (cap. XIV).
+  - rito: interrogatorio-al-muerto
+    capitulo: XVII
+    resumen: >-
+      jugo de `gueyo` + uñas y cabellos del difunto molidos, dados al cadáver
+      por boca o nariz, para preguntarle si el médico guardó la dieta.
+  - rito: venganza-contra-el-buhitihu
+    capitulo: "XVIII y XVIII bis"
+
+# ══════════════════════════════════════════════════════════════════════
+# 4. PARALELOS DECLARADOS CON EL BORATIO CAQUETÍO
+#    SE SEÑALAN, NO SE PROYECTAN (regla 3 + regla 4).
+# ══════════════════════════════════════════════════════════════════════
+paralelos_declarados:
+  como_se_lee_esta_seccion: >-
+    cada fila dice: qué tiene el taíno según Pané, qué tiene el canon caquetío
+    y **quién afirma que hay paralelo**. Donde la respuesta a lo tercero es
+    «nadie todavía», la fila queda abierta y NO se toca el corpus. Esto no
+    propone ni un hecho nuevo de `3-mundo/corpus/creencia.yaml`.
+  filas:
+  - rasgo: "especialista ritual que cura, adivina y habla con lo invisible"
+    taino: "`buhitihu` (Pané caps. XIV-XX), con dieta, canto y succión"
+    caqueti: "el `boratio`, en `3-mundo/corpus/creencia.yaml`"
+    quien_afirma_el_paralelo: >-
+      NADIE en el canon del proyecto, por ahora. El paralelo es de tipo (dos
+      pueblos arahuacos vecinos con especialista ritual) y no se sostiene en
+      ninguna fuente que lo diga. **Queda abierto**, no se escribe.
+  - rasgo: ayuno de varios días previo a la consulta
+    taino: "cap. XXV: cinco o seis días sin comer, para saber de la victoria"
+    caqueti: "el canon tiene ayuno asociado al boratio — verificar cuál es su hecho y su fuente antes de comparar"
+    quien_afirma_el_paralelo: nadie. Verificación pendiente para otra sesión.
+  - rasgo: polvo aspirado por la nariz con cañuto
+    taino: "`cohoba` (caps. XI, XV, XIX), glosa completa con el instrumento"
+    caqueti: "por verificar si el canon caquetío tiene rapé y con qué fuente"
+    quien_afirma_el_paralelo: nadie
+  - rasgo: instrumento que convoca y canción que guarda la norma
+    taino: "`mayohavau` + «su ley expuesta en canciones antiguas» (cap. XIV)"
+    caqueti: "`3-mundo/corpus/transmision.yaml` (sesión 4/4 cerrada)"
+    quien_afirma_el_paralelo: nadie
+  advertencia_final: >-
+    ⚠️ Que dos pueblos arahuacos compartan un rasgo de rito NO es prueba de
+    nada por sí solo; es lo mismo que la skill dice del léxico (§3): el reparto
+    areal es normal entre vecinos que comercian. Lo que decidiría es un rasgo
+    arbitrario y específico compartido, o una fuente que lo afirme. Aquí no hay
+    ni lo uno ni lo otro, y por eso esta sección **no propone nada al corpus**.
+
+# ══════════════════════════════════════════════════════════════════════
+# 5. QUÉ PROPONE ESTO
+# ══════════════════════════════════════════════════════════════════════
+propuesta:
+  al_lexicon_como_procedencia: >-
+    dar `procedencia.obra: pane-c1498` (con capítulo y `transmision:
+    via-italiano`) a las entradas taínas que Pané atestigua con glosa:
+    `cemi`, `cohiba`, `bejique`, `kunuku`, `cazabi`/`casabe`, `guanin`,
+    `cobo`, `naboria`, `yuca`. Ninguna cambia de capa.
+  la_que_pide_decision: >-
+    `daca`. Hoy es `taíno-reconstruido` y Pané la atestigua dentro de una
+    oración glosada (`Dios naboria daca`). Si Miguel decide que eso es
+    atestación, la entrada sube de capa — **y hay que decir a la vez que es de
+    MACORIX**, no de la lengua general. Es decisión suya, no mía.
+  voces_nuevas_candidatas:
+  - {forma: ciba, glosa: 'piedra', por_que: "voz de núcleo, idéntica en arawack (Brinton p. 13), base de la etimología de Siboneyes"}
+  - {forma: goeiz, glosa: 'alma del vivo', por_que: "oposición explícita con opia en la misma frase"}
+  - {forma: opia, glosa: 'alma del muerto', por_que: idem}
+  - {forma: operito, glosa: 'muerto', por_que: "núcleo, con cognado arawack propuesto por Brinton"}
+  - {forma: caracaracol, glosa: 'roña que vuelve áspero el cuerpo', por_que: "dos glosas concordes dentro del texto"}
+  - {forma: guanara, glosa: 'lugar apartado', por_que: "glosa directa; ojo, Brinton la toma de aquí, no es segunda fuente"}
+  - {forma: inriri, glosa: 'pájaro carpintero', por_que: "trae declarada su forma antigua, inrire cahuvayal"}
+  - {forma: mayohavau, glosa: 'tambor de madera', por_que: "glosa con medidas y alcance"}
+  - {forma: gueyo, glosa: 'cierta hierba (tb. zacón)', por_que: "sinonimia atestiguada"}
+  al_mundo: >-
+    los teónimos, los cuatro ritos y la transmisión cantada, como comparanda
+    ANTILLANA etiquetada. El paralelo con el boratio se señala y se deja
+    abierto: ver `paralelos_declarados`.
+  deuda_que_esto_genera:
+  - "saber QUÉ retraducción castellana es esta. Wikisource no lo dice."
+  - "Arrom 1974 (edición crítica) sigue sin estar en el repo; es la que resolvería los diez dobletes."
+  - "la paginación «Pane, pp. 443-444» que usa Brinton es de una edición que no tenemos, así que sus citas a Pané no se pueden verificar contra este archivo por página, sólo por contenido."

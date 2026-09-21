@@ -1,0 +1,469 @@
+# ══════════════════════════════════════════════════════════════════════
+# TAÍNO ↔ LOKONO — Brinton 1871, *The Arawack Language of Guiana*
+# PROPUESTA (regla 5). Comparanda. Campaña del taíno, parcela T2. 2026-09-21.
+# La tabla de correspondencias de §3 es INSUMO DIRECTO para el agente T4.
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  obra: brinton-1871
+  campana: taino-2026-09-21
+  parcela: T2
+  advertencia: >-
+    ESTO NO ES CAQUETÍO, y tampoco es una fuente PRIMARIA del taíno. Brinton es
+    un comparatista de 1871 que recopila lo que dijeron los cronistas. Ver
+    `independencia_de_las_atestaciones`, que es lo más importante de este
+    archivo.
+
+  # ── lo que resultó FALSO al medirlo ────────────────────────────────
+  correcciones_al_encargo:
+  - afirmacion: "«`fuentes_caquetios/Brinton_1871_texto.txt` (+ el PDF)»"
+    medido: >-
+      **el PDF tiene 0 bytes.** `Brinton_1871_Arawack_Language_Guiana.pdf` =
+      0 bytes, verificado el 2026-09-21; el `.txt` tiene 87.820 bytes y está
+      íntegro. Ya lo decía la nota de la fuente desde 2026-07-29 y sigue igual:
+      no se ha reconseguido. Todo lo de aquí sale del `.txt`.
+  - afirmacion: "«comparándolo con el lokono de Guayana»"
+    medido: >-
+      cierto de contenido y FALSO de término: **`lokono` aparece 0 veces en el
+      texto**. Brinton dice siempre `Arawack`, y da el autónimo como `lukkunu`
+      (2 ocurrencias), glosado 'men'. Quien busque «lokono» en esta fuente
+      encontrará cero y concluirá mal (regla 6). En este archivo se conserva la
+      abreviatura del autor, `Ar.`, y se traduce a `lokono` sólo en la tabla de
+      §3, que es la que va a T4, y ahí se dice.
+  - afirmacion: "«el primer estudio que demuestra que el taíno es arahuaco»"
+    medido: >-
+      lo que hace, y hay que decirlo con precisión, es demostrar que la lengua
+      de las Antillas Mayores es arahuaca. **Brinton RECHAZA el nombre
+      «taíno»** y explica de dónde salió. Ver `sobre_el_nombre_taino`: es un
+      hallazgo de fondo para esta campaña entera.
+
+  # ── §1 el extractor ────────────────────────────────────────────────
+  extraccion:
+    fuente: "`Brinton_1871_texto.txt`, 87.820 bytes — OCR de archive.org, ya en el repo"
+    calidad: >-
+      OCR de 1871 sin corregir. Hay confusiones sistemáticas (`l`/`i`, `n`/`ii`,
+      `e`/`c`, `tt`/`tl`) y bloques de basura al principio (las guardas del
+      ejemplar escaneado). Toda forma arawack de este archivo va marcada
+      `ocr: dudoso` cuando el OCR la deja ambigua — es literalmente ilegible en
+      algunos casos (`akhxtyalia`, `kaijaunan`).
+  paginacion:
+    estado: PARCIALMENTE recuperable
+    como: >-
+      el OCR perdió los números de página sueltos pero conservó los
+      ENCABEZADOS CORRIDOS, que los llevan: «12 THE ARAWACK LANGUAGE OF
+      GUIANA» (par) y «IN ITS LINGUISTIC AND ETHNOLOGICAL RELATIONS. 13»
+      (impar). Recuperadas así: 3, 4, 9 (el OCR la da como «0»), 10, 11, 12,
+      14, 15, 18.
+    no_recuperadas: 13, 16, 17 (sus encabezados perdieron el número en el OCR)
+    como_se_cita_aqui: >-
+      `pagina` es la página impresa del ancla más cercana ANTERIOR. Para las
+      entradas del vocabulario es exacta, porque el vocabulario cae entero
+      entre anclas conocidas (pp. 11-14).
+
+  cobertura:
+    leido: el vocabulario entero (pp. 11-14) y el análisis toponímico (pp. 14-15), pasaje a pasaje
+    no_leido_pasaje_a_pasaje: >-
+      la gramática y el vocabulario del arawack de Guayana (pp. 3-10) y la
+      mitología comparada (pp. 15-18). Barridos por patrón. Son lo que la nota
+      de la fuente ya declaraba minado en 2026-07-29 (84 entradas del lexicón
+      citan a Brinton, casi todas por el lado lokono).
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. 🔴 INDEPENDENCIA DE LAS ATESTACIONES (skill §8)
+#    Lo primero que hay que leer de este archivo.
+# ══════════════════════════════════════════════════════════════════════
+independencia_de_las_atestaciones:
+  regla: >-
+    **la atestación es del cronista, no de Brinton.** Brinton no oyó hablar
+    taíno a nadie: la lengua llevaba tres siglos muerta cuando escribió. Cada
+    entrada de su vocabulario es una cita, y lo que vale como procedencia es
+    la obra citada, con Brinton como intermediario declarado.
+  quien_esta_detras_de_cada_entrada:
+    las_casas_hist_apologetica: "caps. 2, 46, 61, 120, 197, 199, 204, 241 — NO está en el repo"
+    las_casas_hist_general: "lib. i cap. 90 y 120, lib. iii caps. 21 y 33, lib. iv cap. 48, lib. xvii cap. 1 — sólo tenemos el lib. i (tomo I)"
+    pedro_martir_decadas: "pp. 9, 25, 26, 63, 279, 285, 286, 293, 302, 303, 304, 380 — el repo tiene Angleria_1892 vols. 1 y 4"
+    oviedo_hist_general: "lib. v caps. 1 y 2, lib. vi cap. 8, lib. vii caps. 1 y 2 — el repo tiene Oviedo_Valdes_1851 vol. 1"
+    pane: "pp. 443, 444 de una edición que no tenemos"
+    navarrete_viages: "tomo 1, pp. 45, 134, 135, 231 — el DIARIO DE COLÓN. No está en el repo"
+    richardo: "*Diccionario Provincial* cubano, siglo XIX"
+  la_trampa_concreta:
+  - caso: caona / nozay / tuob
+    brinton: "p. 13, «Nucay or nozay, gold [...] The words caona and tuob were in vogue in Haiti (Navarrete, Viages, Tom. 1, pp. 45, 134)»"
+    las_casas: "tomo I cap. LXVII, «Aquí no llaman caona al oro [...] ni nozay [...] sino tuob»"
+    veredicto: >-
+      🔴 **NO SON DOS ATESTACIONES.** Navarrete edita el diario de Colón, y el
+      tomo I de Las Casas es un resumen comentado de ese mismo diario. Brinton
+      y Las Casas están citando **el mismo texto por dos puertas**. Contarlas
+      como corroboración independiente sería exactamente el error de `datihao`
+      con Jahn (skill §8). Apoyo real: UNO.
+  - caso: guanara
+    brinton: "p. 12, «Guanara, a retired stop. (Pane, p. 444)»"
+    veredicto: "misma fuente que `taino_pane_c1498.yaml` pv11. Apoyo real: UNO."
+  - caso: macana
+    brinton: "p. 13, «Macana, a war club. (Navarrete, Viages. i. p. 135)»"
+    veredicto: >-
+      el diario de Colón otra vez — y en el tomo I de Las Casas la palabra
+      **sólo aparece en el epígrafe del cap. LXVII**, no en el cuerpo. Es la
+      trampa 1 de la campaña vista desde el otro lado: dos apariciones que
+      parecen dos fuentes y son la misma página de Navarrete.
+  - caso: taita
+    brinton: "p. 13, «Taita, father (Richardo)»"
+    veredicto: >-
+      🔴 la fuente es un diccionario provincial cubano del siglo XIX, no una
+      crónica. `taita` está hoy en el lexicón como `taíno`; con este apoyo NO
+      es atestación colonial. **Es una entrada a revisar**, y la decide Miguel.
+  lo_que_si_es_de_brinton: >-
+    la comparación con el arawack y las etimologías. Eso es análisis suyo de
+    1871, y va etiquetado como tal: es hipótesis comparativa, no atestación.
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. EL NOMBRE «TAÍNO» — hallazgo de fondo para la campaña
+# ══════════════════════════════════════════════════════════════════════
+sobre_el_nombre_taino:
+  pagina: 13
+  cita_verbatim: >-
+    Nitainos, the title applied to the petty chiefs, (regillos ó guiallos. Las
+    Casas, Hist. Apol. cap. 197) ; tayno vir bonus, taynos nobiles, says Pet.
+    Martyr, (Decad. p. 25). The latter truncated form of the word was adopted
+    by Rafinesque and others, as a general name for the people and language of
+    Hayti. There is not the slightest authority for this, nor for supposing,
+    with Von Martius, that the first syllable is a pronominal prefix.
+  segunda_cita:
+    pagina: 10
+    verbatim: >-
+      Rafinesque christened it the " Taino " language, and discovered it to be
+      closely akin to the " Pelasgic " of Europe.
+  que_dice: >-
+    «taíno» NO es como se llamaba a sí misma esa gente ni su lengua. Es
+    `nitayno`, un TÍTULO de nobleza ('caballero y señor principal' en Las Casas
+    tomo I cap. LVIII, `taynos nobiles` en Pedro Mártir), truncado y ascendido
+    a nombre de pueblo por Rafinesque en 1836. Brinton, en 1871, lo rechaza:
+    «no hay la menor autoridad para esto».
+  para_el_proyecto: >-
+    Miguel abrió esta campaña diciendo que la recuperación contemporánea del
+    taíno —escritura propia incluida— no es dato porque es contemporánea. Esto
+    es la capa de debajo del mismo problema: **la etiqueta `taíno` de nuestras
+    52 entradas es un término académico del siglo XIX, no un autónimo**, y el
+    nombre se inventó dos veces antes de que nadie lo reviviera. No propongo
+    renombrar nada: propongo que la nota de la fuente y el glosario del vault
+    lo DIGAN, para que ni el lexicón ni la web afirmen de paso algo que la
+    fuente que cita niega expresamente.
+  lo_que_los_de_alli_si_decian: >-
+    `lucayos` sale de `lukku` 'hombre' + `kairi` 'isla' = «hombres de las
+    islas» (Brinton p. 15); `Siboneyes` de `siba` 'piedra' + `eyeri` 'hombres'
+    = «hombres de las rocas» (p. 14). Los autónimos que hay son locales, no de
+    una nación antillana. Es coherente con la trampa 3: **no había un solo
+    pueblo ni una sola lengua a los que poner un solo nombre.**
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. LA TABLA — «Vocabulary of the Ancient Language of the Great Antilles»
+#    pp. 11-14. INSUMO DIRECTO PARA T4 (el cruce con el caquetío).
+# ══════════════════════════════════════════════════════════════════════
+vocabulario_antillano:
+  declaracion_del_autor:
+    pagina: 11
+    verbatim: >-
+      In the following vocabulary I have not altered in the least the Spanish
+      orthography of the words, and so that the analogy of many of them might
+      at once be preceived, I have inserted the corresponding Arawack
+      expression, which, it must be borne in mind, is to be pronounced by the
+      German alphabet.
+    lo_que_implica: >-
+      (a) la grafía antillana es la del CRONISTA, no normalizada por Brinton —
+      bien; (b) la grafía arawack sigue convención ALEMANA (de los misioneros
+      moravos de Guayana), así que su `j` es /j/, su `w` es /v/ y su `ch` es
+      /x/. Quien lea la columna lokono con valores ingleses la lee mal.
+  campos:
+    forma: como la escribe Brinton (OCR del original)
+    glosa: glosa de Brinton, VERBATIM
+    cronista: quien la atestigua según Brinton — ES LA PROCEDENCIA REAL
+    lokono: la comparanda arawack que Brinton propone (análisis suyo, 1871)
+    pagina: página impresa
+    en_el_lexicon: clave del lexicón si la hay
+  entradas:
+  - {forma: Aji, glosa: "red pepper", cronista: null, lokono: "achi, red pepper", pagina: 11, en_el_lexicon: aji}
+  - {forma: Aon, glosa: "dog", cronista: "Las Casas, Hist. Gen. lib. I, c. 120", lokono: "Island Ar. ánli, dog", pagina: 11, en_el_lexicon: null}
+  - {forma: Arcabuco, glosa: "a wood, a spot covered with trees", cronista: "Oviedo, Hist. Gen. lib. VI, c. 8", lokono: "arragkaragkadin, the swaying to and fro of trees", pagina: 11, en_el_lexicon: null, ocr: dudoso}
+  - {forma: Areito, glosa: "a song chanted alternately by the priests and the people at their feasts", cronista: "Oviedo, Hist. Gen. lib. V, c. 1", lokono: "aririn, to name, rehearse", pagina: 11, en_el_lexicon: areito}
+  - {forma: Bagua, glosa: "the sea", cronista: null, lokono: "bara, the sea", pagina: 11, en_el_lexicon: null}
+  - {forma: Bajaraque, glosa: "a large house holding several hundred persons", cronista: null, lokono: "baju, a house", pagina: 11, en_el_lexicon: null}
+  - {forma: Bajari, glosa: "title applied to sub-chiefs ruling villages", cronista: "Las Casas, Hist. Apol. cap. 120", lokono: "baju, house — «house-ruler»", pagina: 11, en_el_lexicon: null}
+  - {forma: Barbacoa, glosa: "a loft for drying maize", cronista: "Oviedo, Hist. Gen. lib. VII, cap. 1", lokono: "burrabakoa, a place for storing provisions", pagina: 11, en_el_lexicon: null}
+  - {forma: "Batay / bates / batey", glosa: "a ball-ground; bates, the ball; batey, the game", cronista: "Las Casas, Hist. Apol. c. 204", lokono: "battatan, to be round, spherical", pagina: 12, en_el_lexicon: batey}
+  - {forma: Batea, glosa: "a trough", cronista: "Las Casas, Hist. Apol. c. 241", lokono: null, pagina: 12, en_el_lexicon: null}
+  - {forma: Bejique, glosa: "a priest", cronista: null, lokono: "piaye, a priest", pagina: 12, en_el_lexicon: bejique}
+  - {forma: Bixa, glosa: "an ointment", cronista: "Las Casas, Hist. Apol. cap. 241", lokono: null, pagina: 12, en_el_lexicon: bixa}
+  - {forma: "Cai / cayo / cayco", glosa: "an island", cronista: null, lokono: "kairi, an island", pagina: 12, en_el_lexicon: "cai · cayo"}
+  - {forma: Caiman, glosa: "an alligator", cronista: null, lokono: "khiman, an alligator, lit. to be strong", pagina: 12, en_el_lexicon: caiman}
+  - {forma: "Caona / cauni", glosa: "gold", cronista: "Pet. Martyr, Decad. p. 26, Ed. Colon, 1564", lokono: "kaijaunan, to be precious, costly", pagina: 12, en_el_lexicon: null, ocr: dudoso}
+  - {forma: Caracol, glosa: "a conch, a univalve shell", cronista: "Richardo, Dicc. Provin.", lokono: "Galibi caracoulis, trifles, ornaments", pagina: 12, en_el_lexicon: null, ojo: "Brinton la deriva del GALIBI (caribe), no del arawack"}
+  - {forma: "Caney / cansi", glosa: "a house of conical shape", cronista: null, lokono: null, pagina: 12, en_el_lexicon: caney}
+  - {forma: Canoa, glosa: "a boat", cronista: null, lokono: "kannoa, a boat", pagina: 12, en_el_lexicon: "no como taíno"}
+  - {forma: Casique, glosa: "a chief", cronista: null, lokono: "hassiquan (from ussequa, house), to have or own a house", pagina: 12, en_el_lexicon: "cacique · cacike"}
+  - {forma: "Cimu / simu", glosa: "the front, forehead; a beginning", cronista: "Pet. Martyr, Decad. p. 302", lokono: "eme or uime, the mouth of a river; uimehan, to be new", pagina: 12, en_el_lexicon: null}
+  - {forma: Coaibai, glosa: "the abode of the dead", cronista: null, lokono: null, pagina: 12, en_el_lexicon: null, tambien_en: "Pané cap. XII"}
+  - {forma: Cohóba, glosa: "the native name of tobacco", cronista: null, lokono: null, pagina: 12, en_el_lexicon: cohiba, ojo: "GLOSA FLOJA: en Pané cap. XI es el POLVO que se aspira, no la planta"}
+  - {forma: Conuco, glosa: "a cultivated field", cronista: "Oviedo, Hist. Gen. lib. vii, cap. 2", lokono: null, pagina: 12, en_el_lexicon: kunuku}
+  - {forma: "Dulios / duohos", glosa: "low seats (unas baxas sillas)", cronista: "Las Casas, Hist. Gen. lib. I, cap. 90; Oviedo, Hist. Gen. lib. V. cap. 1", lokono: "dulluhu or durruhu, a seat, a bench", pagina: 12, en_el_lexicon: dujo, nota_de_brinton: "avisa que Richardo, «by a careless reading of Oviedo», dice que significa imágenes — un error de lectura señalado por el propio Brinton"}
+  - {forma: Goeiz, glosa: "the spirit of the living", cronista: "Pane, p. 444", lokono: "akhxtyalia, the spirit of a living animal", pagina: 12, en_el_lexicon: null, ocr: dudoso}
+  - {forma: Gua, glosa: "a very frequent prefix", cronista: "Pet. Martyr, Decad. p. 285", lokono: null, pagina: 12, en_el_lexicon: null, importancia: alta}
+  - {forma: Guaca, glosa: "a vault for storing provisions", cronista: null, lokono: null, pagina: 12, en_el_lexicon: null}
+  - {forma: Guacabina, glosa: "provisions for a journey, supplies", cronista: null, lokono: null, pagina: 12, en_el_lexicon: null, ojo: "NO confundir con `guabina` del lexicón, que es un pez. Glosas distintas: no es par (skill §2)."}
+  - {forma: Guacamayo, glosa: "a species of parrot, macrocercus tricolor", cronista: null, lokono: null, pagina: 12, en_el_lexicon: null}
+  - {forma: Guanara, glosa: "a retired stop; a species of dove, columba ¿?", cronista: "Pane, p. 444; Richardo", lokono: null, pagina: 12, en_el_lexicon: null}
+  - {forma: Guanin, glosa: "an impure sort of gold", cronista: null, lokono: null, pagina: 12, en_el_lexicon: guanin}
+  - {forma: Guaoxeri, glosa: "a term applied to the lowest class of the inhabitants", cronista: "Las Casas, Hist. Apol. cap. 197", lokono: "wakaijaru, worthless, dirty", pagina: 12, en_el_lexicon: null}
+  - {forma: Guatiao, glosa: "friend, companion", cronista: Richardo, lokono: "ahati, companion, playmate", pagina: 12, en_el_lexicon: null}
+  - {forma: Guayzas, glosa: "masks or figures", cronista: "Las Casas, Hist. Apol. cap. 61", lokono: "akkuyaha, living beings", pagina: 12, en_el_lexicon: null}
+  - {forma: Haba, glosa: "a basket", cronista: "Las Casas, Hist. Gen. lib. iii, cap. 21", lokono: "habba, a basket", pagina: 12, en_el_lexicon: null}
+  - {forma: Haiti, glosa: "stony, rocky, rough", cronista: "Pet. Martyr, Decades", lokono: "aessi or aetti, a stone", pagina: 12, en_el_lexicon: null}
+  - {forma: Hamaca, glosa: "a bed, hammock", cronista: null, lokono: "hamaha, a bed, hammock", pagina: 12, en_el_lexicon: "no como taíno"}
+  - {forma: Hico, glosa: "a rope, ropes", cronista: "Oviedo, Hist. Gen. lib. v, cap. 2", lokono: null, pagina: 12, en_el_lexicon: null}
+  - {forma: Hobin, glosa: "gold, brass, any reddish metal", cronista: "Navarrete Viages, i, p. 134; Pet. Martyr, Dec. p. 303", lokono: "hobin, red", pagina: 13, en_el_lexicon: null}
+  - {forma: Huiho, glosa: "height", cronista: "Pet. Martyr, p. 304", lokono: "ajumün, above, high up", pagina: 13, en_el_lexicon: null, ocr: dudoso}
+  - {forma: Huracan, glosa: "a hurricane", cronista: null, lokono: null, pagina: 13, en_el_lexicon: huracan, nota_de_brinton: "discute el parecido con el quiché `hu rakan` 'un pie' y lo deja en «the resemblance may be accidental» — cautela suya, que conviene conservar"}
+  - {forma: Hyen, glosa: "a poisonous liquor expressed from the cassava root", cronista: "Las Casas, Hist. Apol. cap. 2", lokono: null, pagina: 13, en_el_lexicon: null}
+  - {forma: Itabo, glosa: "a lagoon, pond", cronista: Richardo, lokono: null, pagina: 13, en_el_lexicon: null}
+  - {forma: Juanna, glosa: "a serpent", cronista: "Pet. Martyr, p. 63", lokono: "joanna, a lizard; jawanaria, a serpent", pagina: 13, en_el_lexicon: "iwana · higuana", ojo: "Pedro Mártir dice 'serpiente' y Las Casas tomo I cap. XLIII dice `iguana` de las 'sierpes' que resultan ser lagartos. La glosa 'serpiente' es del europeo, no de la lengua."}
+  - {forma: Macana, glosa: "a war club", cronista: "Navarrete, Viages. i. p. 135", lokono: null, pagina: 13, en_el_lexicon: "no como taíno"}
+  - {forma: Magua, glosa: "a plain", cronista: "Las Casas, Breviss. Relat. p. 7", lokono: null, pagina: 13, en_el_lexicon: null}
+  - {forma: Maguey, glosa: "a native drum", cronista: "Pet. Martyr, p. 380", lokono: null, pagina: 13, en_el_lexicon: null}
+  - {forma: Maisi, glosa: "maize", cronista: null, lokono: "marisi, maize", pagina: 13, en_el_lexicon: "maisi · maíz", ocr: dudoso}
+  - {forma: Matum, glosa: "liberal, noble", cronista: "Pet. Martyr, p. 293", lokono: null, pagina: 13, en_el_lexicon: null}
+  - {forma: Matunheri, glosa: "a title applied to the highest chiefs", cronista: "Las Casas, Hist. Apol. cap. 197", lokono: null, pagina: 13, en_el_lexicon: null}
+  - {forma: Mayani, glosa: "of no value («nihil!»)", cronista: "Pet. Martyr, p. 9", lokono: "ma, no, not", pagina: 13, en_el_lexicon: mayani, importancia: alta}
+  - {forma: Naborias, glosa: "servants", cronista: "Las Casas, Hist. Gen. lib. iii, cap. 33", lokono: null, pagina: 13, en_el_lexicon: naboria}
+  - {forma: Nacan, glosa: "middle, center", cronista: null, lokono: "annakan, center", pagina: 13, en_el_lexicon: null, importancia: alta}
+  - {forma: "Nagua / enagua", glosa: "the breech cloth made of cotton and worn around the middle", cronista: null, lokono: "annaka, the middle", pagina: 13, en_el_lexicon: "nagua entró por la vía caquetía (tainismos_en_medina, 2026-09-12)"}
+  - {forma: Nitainos, glosa: "the title applied to the petty chiefs", cronista: "Las Casas, Hist. Apol. cap. 197; Pet. Martyr, Decad. p. 25", lokono: "nuddan, to look well, to stand firm", pagina: 13, en_el_lexicon: nitaino, ver: sobre_el_nombre_taino}
+  - {forma: "Nucay / nozay", glosa: "gold, used especially in Cuba and on the Bahamas", cronista: "Navarrete, Viages, Tom. 1, pp. 45, 134", lokono: null, pagina: 13, en_el_lexicon: null, ver: independencia_de_las_atestaciones}
+  - {forma: Operito, glosa: "dead", cronista: "Pane, pp. 443, 444", lokono: "apparahun, dead", pagina: 13, en_el_lexicon: null}
+  - {forma: Opia, glosa: "the spirit of the dead", cronista: "Pane, pp. 443, 444", lokono: "aparrun, to kill", pagina: 13, en_el_lexicon: null}
+  - {forma: Quisqueia, glosa: "a native name of Haiti", cronista: "Pet. Martyr, Decad. p. 279", lokono: null, pagina: 13, en_el_lexicon: null, nota_de_brinton: "«The orthography is evidently very false»"}
+  - {forma: Sabana, glosa: "a plain covered with grass without trees", cronista: "Oviedo, Hist. Gen. lib. vi. cap. 8", lokono: "sallaban, smooth, level", pagina: 13, en_el_lexicon: null, cotejo: "Las Casas tomo I cap. LVI la escribe `çabanas`"}
+  - {forma: Semi, glosa: "the divinities worshipped by the natives («Lo mismo que nosotros llamamos Diablo») — Not evil spirits only, but all spirits", cronista: "Oviedo, Hist. Gen. lib. V. cap. 1", lokono: "semeti, sorcerers, diviners, priests", pagina: 13, en_el_lexicon: cemi}
+  - {forma: Siba, glosa: "a stone", cronista: null, lokono: "siba, a stone", pagina: 13, en_el_lexicon: null, importancia: alta, cotejo: "Pané cap. VI: `cibas`, «piedras que semejan mucho al mármol»"}
+  - {forma: Starei, glosa: "shining, glowing", cronista: "Pet. Martyr, Decad. p. 304", lokono: "teren, to be hot, glowing", pagina: 13, en_el_lexicon: null, ocr: dudoso}
+  - {forma: Tabaco, glosa: "the pipe used in smoking the cohoba", cronista: null, lokono: null, pagina: 13, en_el_lexicon: tabako, cotejo: "coincide con Las Casas tomo I cap. XLVI: es el canuto, no la planta"}
+  - {forma: Taita, glosa: "father", cronista: Richardo, lokono: "itta, father; dailta or dalli, my father", pagina: 13, en_el_lexicon: taita, alerta: "fuente del siglo XIX, NO colonial — ver independencia_de_las_atestaciones"}
+  - {forma: Taguaguas, glosa: "ornaments for the ears hammered from native gold", cronista: "Las Casas, Hist. Apol. cap. 199", lokono: null, pagina: 13, en_el_lexicon: null}
+  - {forma: Tuob, glosa: "gold, probably akin to hobin", cronista: null, lokono: null, pagina: 13, en_el_lexicon: null}
+  - {forma: Turey, glosa: "heaven. Idols were called «cosas de turey»", cronista: "Navarrete, Viages, Tom. i. p. 231", lokono: "probably akin to starei", pagina: 13, en_el_lexicon: null, cotejo: "Las Casas tomo I cap. LX lo glosa igual y lo cuenta entero: era el latón, «porque al cielo llamaban turey»"}
+
+  numerales:
+    pagina: 14
+    cronista: "Las Casas, Hist. Apol. cap. 204"
+    entradas:
+    - {n: 1, forma: hequeti, lokono: "hurketai, that is one, from hurkun, to be single or alone"}
+    - {n: 2, forma: yamosa, lokono: "biama, two", en_el_lexicon: yamosa}
+    - {n: 3, forma: cauocum, lokono: "kannikun, many, a large number"}
+    - {n: 4, forma: yaraoucobre, lokono: "bibiti, four, from biama, two", nota_de_brinton: "«evidently formed from yamosa»"}
+    nota_de_brinton: >-
+      «The other numerals Las Casas had unfortunately forgotten, but he says
+      they counted by hands and feet, just as the Arawacks do to this day.»
+    para_el_proyecto: >-
+      🔴 NUMERALES: skill §3 dice que numerales y morfemas gramaticales son
+      dato de FILIACIÓN, no de contacto. Estos cuatro, con sus cognados
+      arawack, valen más que veinte nombres de plantas para el cruce de T4.
+      Y ojo: la fuente es la *Apologética* cap. 204, que no está en el repo.
+
+  frases_y_compuestos:
+    pagina: 14
+    entradas:
+    - forma: "tureigua hubin"
+      glosa: "«rex resplendens uti orichalcum» (Pedro Mártir); en arawack, «shining like something red» (Brinton)"
+      cronista: "Pet. Martyr"
+    - forma: "manicato, manicato"
+      glosa: "«lauding herself, meaning that she was strong, and brave, and equal to much»"
+      cronista: Oviedo
+      lokono: "manikade, from man, manin"
+    - forma: buticaco
+      glosa: "you are blue-eyed («anda para zarco de los ojos»)"
+      cronista: "Las Casas, Hist. Apol. cap. 198"
+      lokono: "-caco ~ acou / akusi, eyes"
+    - forma: xeyticaco
+      glosa: "you are black-eyed («anda para negro de los ojos»)"
+      cronista: "Las Casas, Hist. Apol. cap. 198"
+      lokono: "-caco ~ acou / akusi, eyes"
+    - forma: mahite
+      glosa: "you have lost a tooth"
+      cronista: "Las Casas, Hist. Apol. cap. 198"
+      lokono: "marikata, you have no teeth (ma negative, ari tooth)"
+    - forma: ita
+      glosa: "I do not know"
+      cronista: "Las Casas, Hist. Apol. cap. 241"
+      lokono: "daitia"
+      ojo: >-
+        Brinton avisa en nota que la traducción de Las Casas está corrompida:
+        «this is plainly an error of the transcriber for yo sé». Se cita con el
+        aviso.
+    conversacion_de_pedro_martir:
+      cita_verbatim: >-
+        She. Teitoca teitoca. Techeta cynato guamechyna. Guaibbá. — He. Cynato
+        machabuca guamechyna.
+      glosas_del_cronista: "teitoca, be quiet; techeta, much; cynato, angry; guamechyna, the Lord; guaibba, go; machabuca, what is it to me"
+      cronista: "Pet. Martyr"
+      veredicto_de_brinton: >-
+        «But they are either very incorrectly spelled, or are not Arawack.»
+      para_el_proyecto: >-
+        segunda ORACIÓN taína con glosa de toda la parcela (la primera es
+        `Dios naboria daca` en Pané). Brinton no la reconoce como arahuaca.
+        **Verificable en el repo**: Pedro Mártir está aquí como
+        `Angleria_1892` vols. 1 y 4. Es tarea para otra sesión, no para esta.
+      no_identificadas_por_brinton: "duiheyniquen, «dives fluvius»; maguacochios, «vestiti homines» (ambas de Pedro Mártir)"
+
+# ══════════════════════════════════════════════════════════════════════
+# 4. CORRESPONDENCIAS ANTILLANO ↔ LOKONO — la tabla limpia para T4
+# ══════════════════════════════════════════════════════════════════════
+correspondencias_para_T4:
+  como_usar_esto:
+    - "`lokono` es lo que Brinton llama `Ar.` (arawack de Guayana). La palabra `lokono` NO está en su texto."
+    - "la columna lokono sigue ortografía ALEMANA (misioneros moravos): j=/j/, w=/v/, ch=/x/."
+    - "todas estas ecuaciones son ANÁLISIS DE BRINTON, 1871, no atestaciones. Capa: hipótesis comparativa."
+    - "filtrar por SIGNIFICADO antes de celebrar la forma (skill §2). Las de abajo ya pasan ese filtro; las que no lo pasaban están en `descartadas_por_glosa`."
+  clase_A_nucleo_y_gramatica:
+    por_que_aparte: "skill §3 — pronombres, numerales y morfemas gramaticales son dato de FILIACIÓN; lo demás puede ser préstamo areal."
+    pares:
+    - {antillano: nacan, glosa: 'medio, centro', lokono: annakan, glosa_lk: 'centro', pagina: 13, apoyo_extra: "Las Casas tomo I cap. XLIV descompone `Cubanacan` = Cuba + nacan"}
+    - {antillano: siba, glosa: 'piedra', lokono: siba, glosa_lk: 'piedra', pagina: 13, apoyo_extra: "Pané cap. VI `cibas`"}
+    - {antillano: mayani, glosa: 'de ningún valor, nada', lokono: "ma (negativo)", glosa_lk: 'no', pagina: 13}
+    - {antillano: "ma- (en mahite)", glosa: 'privativo', lokono: "ma- (en marikata)", glosa_lk: 'privativo', pagina: 14, importancia: "PREFIJO PRIVATIVO — el caquetío tiene `ma-` declarado en CLAUDE.md §morfología (van Buurt §8, Perea p. 555). Esto es material directo para el cruce."}
+    - {antillano: "-caco (en buticaco, xeyticaco)", glosa: 'ojos', lokono: "acou / akusi", glosa_lk: 'ojos', pagina: 14}
+    - {antillano: "gua- (prefijo muy frecuente)", glosa: "sin glosa; Pedro Mártir lo tomó por artículo y Brinton lo niega", lokono: null, pagina: 12, ojo: "Brinton lo compara con el `an` maya y el `gue` tupí, y de ahí lo DERIVA del tupí. Eso es lo más flojo de su análisis y no se importa."}
+    - {antillano: hequeti, glosa: 'uno', lokono: hurketai, glosa_lk: 'ese es uno', pagina: 14}
+    - {antillano: yamosa, glosa: 'dos', lokono: biama, glosa_lk: 'dos', pagina: 14}
+    - {antillano: cauocum, glosa: 'tres', lokono: kannikun, glosa_lk: 'muchos', pagina: 14, ojo: "la glosa NO coincide ('tres' ≠ 'muchos'): es solapamiento parcial, no par. Va a curación, como manda la política de pares."}
+    - {antillano: yaraoucobre, glosa: 'cuatro', lokono: bibiti, glosa_lk: 'cuatro', pagina: 14, nota: "el paralelo que propone Brinton es de FORMACIÓN (4 derivado de 2), no de forma"}
+  clase_B_lexico_comun:
+    pares:
+    - {antillano: aji, glosa: 'ají', lokono: achi, glosa_lk: 'ají', pagina: 11}
+    - {antillano: bagua, glosa: 'el mar', lokono: bara, glosa_lk: 'el mar', pagina: 11}
+    - {antillano: "cai / cayo", glosa: 'isla', lokono: kairi, glosa_lk: 'isla', pagina: 12}
+    - {antillano: canoa, glosa: 'canoa', lokono: kannoa, glosa_lk: 'canoa', pagina: 12}
+    - {antillano: hamaca, glosa: 'hamaca, cama', lokono: hamaha, glosa_lk: 'hamaca, cama', pagina: 12}
+    - {antillano: haba, glosa: 'cesta', lokono: habba, glosa_lk: 'cesta', pagina: 12}
+    - {antillano: maisi, glosa: 'maíz', lokono: marisi, glosa_lk: 'maíz', pagina: 13}
+    - {antillano: caiman, glosa: 'caimán', lokono: khiman, glosa_lk: 'caimán', pagina: 12}
+    - {antillano: "dulios / duohos", glosa: 'asientos bajos', lokono: "dulluhu / durruhu", glosa_lk: 'asiento, banco', pagina: 12}
+    - {antillano: "bajaraque / bajari", glosa: 'casa grande / señor de aldea', lokono: baju, glosa_lk: 'casa', pagina: 11}
+    - {antillano: barbacoa, glosa: 'desván para secar maíz', lokono: burrabakoa, glosa_lk: 'lugar para guardar provisiones', pagina: 11}
+    - {antillano: semi, glosa: 'las divinidades', lokono: semeti, glosa_lk: 'hechiceros, adivinos, sacerdotes', pagina: 13, ojo: "la glosa se desplaza de 'divinidad' a 'sacerdote': no es par limpio"}
+    - {antillano: operito, glosa: 'muerto', lokono: apparahun, glosa_lk: 'muerto', pagina: 13}
+    - {antillano: sabana, glosa: 'llanura de hierba sin árboles', lokono: sallaban, glosa_lk: 'liso, llano', pagina: 13}
+    - {antillano: bejique, glosa: 'sacerdote', lokono: piaye, glosa_lk: 'sacerdote', pagina: 12, ojo: "b- frente a p-; Brinton no explica la correspondencia"}
+  descartadas_por_glosa:
+    regla: "skill §2 — un parecido de formas sin filtro de significado es casi todo ruido."
+    casos:
+    - {par: "areito ~ aririn", por_que: "'canto ceremonial' contra 'nombrar, recitar': la glosa no coincide, es una etimología, no un par"}
+    - {par: "casique ~ hassiquan", por_que: "'jefe' contra 'tener casa': etimología propuesta, no par"}
+    - {par: "nitaino ~ nuddan", por_que: "'señor principal' contra 'verse bien, mantenerse firme': etimología"}
+    - {par: "guaoxeri ~ wakaijaru", por_que: "'la clase más baja' contra 'inútil, sucio': la glosa antillana es de estatus y la lokono de juicio"}
+    - {par: "haiti ~ aessi/aetti", por_que: "'pedregoso' contra 'piedra': derivación, no identidad"}
+    - {par: "guanara ~ ?", por_que: "Brinton no da comparanda; y encima su fuente es Pané, o sea la nuestra"}
+    - {par: "caracol ~ caracoulis (galibi)", por_que: "CARIBE, no arahuaco. Brinton mismo lo dice."}
+  toponimia_descompuesta:
+    pagina: "14-15"
+    advertencia: "análisis de Brinton, no atestación. Varias son forzadas; se listan para T4 con la etiqueta puesta."
+    casos:
+    - {toponimo: Cubanacan, analisis: "kuba + annakan, 'en el centro'", apoyo_independiente: "SÍ — Las Casas tomo I cap. XLIV hace la misma descomposición sin conocer a Brinton"}
+    - {toponimo: Baracoa, analisis: "bara 'mar' + koan 'estar ahí' = «el mar está ahí»", apoyo_independiente: no}
+    - {toponimo: Barajagua, analisis: "bara otra vez", apoyo_independiente: no}
+    - {toponimo: Guaymaya, analisis: "waya 'arcilla' + mara 'no hay'", apoyo_independiente: no}
+    - {toponimo: Marien, analisis: "maran 'ser pequeño o pobre'", apoyo_independiente: no}
+    - {toponimo: Guaniguanico, analisis: "wuini wuinikoa, 'agua, hay agua ahí'", apoyo_independiente: no}
+    - {toponimo: "Siboneyes / Guantaneyes", analisis: "siba 'piedra' + eyeri 'hombres' = «hombres de las rocas»", apoyo_independiente: "Brinton cita a Las Casas Hist. Gen. lib. iii cap. 21, y de ahí la nota de acento que ver abajo"}
+    - {toponimo: "lukku kairi > lukkairi > lucayos", analisis: "lukku 'hombre' + kairi 'isla' = «hombres de las islas»", apoyo_independiente: "Las Casas tomo I cap. XL da la misma etimología por otra vía: «cuasi moradores de cayos, porque cayos en esta lengua son islas»"}
+    - {toponimo: Guacaiarima, analisis: "caiarima ~ kuiruiiia, «insulae podex» (Pedro Mártir)", apoyo_independiente: no}
+    - {toponimo: "Maya- (Mayaba, Mayanabo, Mayajigua, Cajimaya, Jaimayabon)", analisis: "el negativo arawack ma, man, mara", apoyo_independiente: no, ojo: "Brinton lo propone para descartar la tesis de que el maya de Yucatán llegara a las Antillas. Es argumento, no dato."}
+
+# ══════════════════════════════════════════════════════════════════════
+# 5. LO QUE BRINTON CONSERVA Y NOSOTROS NO TENEMOS
+# ══════════════════════════════════════════════════════════════════════
+citas_de_obras_ausentes_del_repo:
+  la_penultima_luenga:
+    pagina: 14
+    nota_de_brinton: 28
+    cita_verbatim_de_las_casas: >-
+      Esta era la natural y nativa de aquella ysla, y llamábanse en su lengua,
+      Cibon-eyes, la penúltima sílaba luenga; y los desta por grado ó por
+      fuerza se apoderaron de aquella ysla y gente della, y los tenian como
+      sirvientes suyos.
+    fuente_de_la_cita: "Las Casas, *Hist. Gen. de las Indias*, MSS., lib. iii, cap. 21"
+    por_que_importa: >-
+      🔴 **AQUÍ está «la penúltima luenga» que el encargo buscaba en el tomo I
+      y que en el tomo I NO existe.** Es del libro III, que no tenemos, y llega
+      por Brinton. Con esto, las marcas de acento que tenemos suman cuatro:
+      tres del tomo I (todas «la última aguda») y esta, que es paroxítona. O
+      sea: **Las Casas anota el acento cuando le parece notable, y no siempre
+      es final.**
+    y_ademas: >-
+      la cita trae un dato de mundo: los ciboneyes eran los naturales de Cuba y
+      fueron sometidos por los de La Española, que los tenían «como sirvientes
+      suyos». Es estratificación étnica dentro del área, no un pueblo único.
+  macorix_de_arriba_y_de_abajo:
+    pagina: 18
+    cita_verbatim: >-
+      Of the two remaining languages said to have been spoken in the small
+      provinces of Macorix de arriba and Macorix de abajo, in Hayti, we have no
+      certain knowledge. Las Casas gives one word from the former. It is bazca,
+      no, not. I cannot identify it.
+    por_que_importa: >-
+      tercera fuente sobre la trampa 3, y la única que da **una palabra de
+      macorix**: `bazca` 'no'. Súmese a Pané (p01/p02), que aprendió macorix, y
+      a Las Casas tomo I (m07). Nótese que Brinton habla de macorix de arriba y
+      de abajo como DOS provincias, o sea que la cuenta de variedades sube.
+    lo_que_brinton_propone_y_no_se_importa: >-
+      que una de las dos fuera tupí, porque `Bugi` 'feo' y `Aiba` 'malo' de
+      Pané le parecen tupí puras. ⚠️ Esas dos formas **NO están en el texto de
+      Pané que tenemos** (medido: 0 ocurrencias). O son de otra edición, o
+      Brinton las tomó de otro sitio. La hipótesis tupí, además, está
+      descartada por la lingüística posterior. Se anota y no se usa.
+  angleria_esta_en_el_repo: >-
+    Pedro Mártir es la fuente de 12 entradas del vocabulario y de la única
+    conversación taína que hay. `Angleria_1892_Fuentes_Historicas_Colon_America`
+    vols. 1 y 4 ESTÁN en `fuentes_caquetios/`. **Verificar esas 12 contra el
+    original es la tarea de mayor rendimiento que deja esta parcela**, y no
+    necesita descargar nada.
+
+# ══════════════════════════════════════════════════════════════════════
+# 6. QUÉ PROPONE ESTO
+# ══════════════════════════════════════════════════════════════════════
+propuesta:
+  al_lexicon_como_procedencia:
+    que: >-
+      Brinton puede dar `procedencia.obra: brinton-1871` a muchas entradas,
+      **pero es procedencia de segunda mano**. Lo correcto, donde se pueda, es
+      citar al cronista y poner a Brinton como vía. Donde no tengamos la obra
+      del cronista, Brinton es lo que hay y se dice: `via: brinton-1871`.
+  la_que_pide_decision: >-
+    `taita`. Su único apoyo en Brinton es Richardo, diccionario cubano del
+    s. XIX. Hoy está en el lexicón como `taíno`. **En duda, degradar** (regla
+    2) apuntaría a bajarla o a marcarle `deuda: sin-procedencia-colonial`.
+    La decide Miguel.
+  a_la_nota_de_la_fuente_y_al_glosario: >-
+    que el proyecto diga, donde explique qué es el taíno, que **«taíno» es un
+    truncamiento de `nitayno` acuñado por Rafinesque en 1836 y rechazado por
+    Brinton en 1871**. No cambia ninguna etiqueta; evita afirmar de paso lo que
+    nuestra propia fuente niega.
+  voces_nuevas_candidatas:
+    ojo: "todas por vía secundaria; van con la obra del cronista, no con Brinton, salvo aviso"
+    de_nucleo:
+    - {forma: siba, glosa: 'piedra', tambien_en: "Pané cap. VI"}
+    - {forma: nacan, glosa: 'medio, centro', tambien_en: "Las Casas tomo I cap. XLIV"}
+    - {forma: bagua, glosa: 'el mar'}
+    - {forma: hequeti, glosa: 'uno', cronista: "Las Casas Hist. Apol. 204"}
+    - {forma: cauocum, glosa: 'tres', cronista: "Las Casas Hist. Apol. 204"}
+    - {forma: yaraoucobre, glosa: 'cuatro', cronista: "Las Casas Hist. Apol. 204"}
+    - {forma: bazca, glosa: "'no' (MACORIX, no la lengua general)", cronista: "Las Casas, vía Brinton p. 18"}
+    de_titulos_y_rangos:
+    - {forma: matunheri, glosa: 'señor de los más altos', cronista: "Las Casas Hist. Apol. 197"}
+    - {forma: bajari, glosa: 'señor de aldea', cronista: "Las Casas Hist. Apol. 120"}
+    - {forma: guaoxeri, glosa: 'la clase más baja', cronista: "Las Casas Hist. Apol. 197"}
+    nota: >-
+      los tres rangos de arriba más `cacique` y `nitayno` (Las Casas tomo I)
+      dan una escala social COMPLETA y ordenada. Eso es material de
+      `3-mundo/` (geografía política) además de léxico.
+  lo_que_este_yaml_NO_propone: >-
+    ni una re-etiqueta, ni una glosa nueva, ni tocar ningún módulo. Y en
+    particular **no propone importar ninguna correspondencia lokono al
+    caquetío**: el lokono es ANDAMIO de la reconstrucción (CLAUDE.md) y esta
+    tabla es para que T4 la lea, no para que entre al motor.
