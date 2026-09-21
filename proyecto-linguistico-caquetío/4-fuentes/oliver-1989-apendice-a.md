@@ -9,7 +9,9 @@ capa_texto: no
 acceso: "Libre — la tesis completa (823 pp., incluye este apéndice, pp. 559-594 impresas = pdf 586-621) está en UCL Discovery, depositada por el propio Oliver: PDF https://discovery.ucl.ac.uk/id/eprint/10157455/1/Oliver_10157455_thesis_redacted.pdf · ficha https://discovery.ucl.ac.uk/id/eprint/10157455/. Verificado en el rastreo de 2026-08-14."
 estado_minado: parcial
 prioridad: alta
+cobertura: "Tabla A-9 (49 de ~50 entradas transcritas) + la criba de verbos de la campaña del nominalizador, 2026-09-21: 0 de 49"
 verificado: 2026-08-14
+minado: 2026-09-21
 aliases: ["Oliver 1989 Apéndice A", "Appendix A Swadesh"]
 ---
 
@@ -219,7 +221,42 @@ El apéndice **no tiene capa de texto** (es el escaneo UMI). OCR con
    no las lee el OCR.
 4. Comprobar `#2`, al que remite la entrada 17.
 
+---
+
+## Bitácora — la campaña del nominalizador (2026-09-21)
+
+**Qué se le preguntó.** ¿Hay verbos en la Tabla A-9, y con ellos algún par
+verbo / nombre de acción del que retroabstraer un nominalizador? (d21.11,
+opción C.)
+
+**Qué ha dado: cero verbos en 49 entradas.** Se pasó la criba de infinitivos
+sobre las 49 glosas españolas transcritas. Marca **una**, «ser viviente» (la
+de `Caquetio`), que es un sustantivo con el infinitivo dentro: **falso
+positivo declarado**. Las 49 son nombres — agua turbia, prado, higo, demonio,
+puche de maíz, vasija para el agua, gavilán, paraulata, diente, señor
+principal, serranía, perro, lechuza, penca, báquiro, almagre, lagartija,
+represa, danta, armadillo, búho, tinaja, hoguera, cotorra, cuerda, langosta…
+
+**Por qué importa más que los otros ceros.** Éste es **el vocabulario caquetío
+más antiguo que tiene el proyecto** —s. XVI, con normalización fonémica— y es
+enteramente nominal. Sin verbos no hay par del que retroabstraer nada, y esto
+es lo que hay del siglo del contacto. El negativo de la campaña no depende de
+Zavala: se sostiene también aquí, en la fuente más autorizada.
+
+**Un cruce que conviene anotar.** La A-9 trae `guacurebo` «quebrada que crece»
+y `guacaubana` «río escondido», que también están en Zavala — pero conviene
+comprobar si es corroboración independiente o si las dos listas beben de las
+mismas relaciones de Barquisimeto y el Tocuyo (skill `minar-fuente` §8, el caso
+de `datihao`). No se resolvió aquí.
+
+**Y una glosa que la A-9 decide.** Trae «viruela» y «viruela / pez derretida»
+donde Zavala 2015 glosa `Cumaragua` #93 como «ciruela»: coincide con Arcaya
+1920 p. 75 («nombres de la **viruela**»). Cierra la ⚠️ D que la ficha de
+[[zavala-reyes-2015]] tenía abierta.
+
+Propuesta: `6-fusion/propuesta_nominalizador_2026-09-21.yaml`.
+
 ## Enlaces
 
 [[oliver-1989-cap2]] · [[oliver-1989-cap4]] · [[esteves-1989]] ·
-[[metodo-comparativo]] · [[lexicon]] · [[morfologia]]
+[[metodo-comparativo]] · [[lexicon]] · [[morfologia]] · [[arcaya-1920]]

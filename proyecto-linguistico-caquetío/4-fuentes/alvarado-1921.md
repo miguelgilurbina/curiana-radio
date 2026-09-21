@@ -12,7 +12,7 @@ estado_minado: minado
 prioridad: media
 tareas: [F3]
 sostiene: {hechos_corpus: 1, entradas_lexicon: 0, entradas_lexicon_corroboradas: 39, cadena_custodia_zavala_A: "24/26"}
-cobertura: "cadena de custodia Zavala (2026-08-03) + los 61 topónimos pendientes del dictado de Miguel (2026-09-10) + la campaña de `-gua` (2026-09-21)"
+cobertura: "cadena de custodia Zavala (2026-08-03) + los 61 topónimos pendientes del dictado de Miguel (2026-09-10) + barrido de las entradas con glosa verbal, campaña del nominalizador (2026-09-21) + la campaña de `-gua` (2026-09-21)"
 verificado: 2026-09-10
 minado: 2026-09-21
 aliases: ["Alvarado 1921", "Glosario de voces indígenas"]
@@ -273,3 +273,32 @@ páginas de aquí salen de las cabeceras del OCR, no de la caja del número.
 **Lección de método.** Se estaban gastando búsquedas web en nombres cuya
 respuesta estaba a un `grep` de esta obra. Antes de salir a la web, agotar el
 repo — sobre todo cuando hay un **glosario** dentro.
+
+---
+
+## Bitácora — la campaña del nominalizador (2026-09-21)
+
+**Qué se le preguntó.** ¿Trae Alvarado verbos indígenas, o nombres de acción
+que compartan terminación con uno? (d21.11, opción C.)
+
+**Qué ha dado: un negativo estructural, no accidental.** Se barrieron las
+~1.500 entradas del glosario buscando definiciones encabezadas por infinitivo.
+Las que salen —**62**— son **verbos castellanos derivados de nombres
+indígenas**: `CACHICAMEAR` «cazar armadillos», `CEBUCANEAR` «prensar y escurrir
+en el cebucán la yuca», `EMBIJAR` «pintar con bija», `CHIGÜIREAR`, `CHICOREAR`,
+`ENCABUYAR`, `ENCATUMARAR`, `EMPETATAR`. Ninguno es un verbo indígena.
+
+Y la razón es de género, no de descuido: **esta obra registra lo que el español
+TOMÓ prestado, y entre lenguas se prestan nombres.** Conviene tenerlo escrito
+para que nadie vuelva a venir aquí a buscar morfología verbal caquetía.
+
+**Una corroboración de paso.** `ENGUANEPAR` «guardar algo en guanepe» confirma
+que `guanepe` (Zavala #137, «Cesto para cargar a los niños») es un nombre de
+instrumento **vivo en el español regional**, no sólo una entrada de glosario.
+
+**Receta usada.** `pdftotext -enc UTF-8` (703.917 bytes). Control de ortografía
+antes de contar (regla 6): `caquet` 3, `aruac` 6, `Curiana` 1, `Manaur` 1,
+`Paraguan` 1 — esta obra apenas nombra al caquetío por su nombre, y por eso las
+atribuciones se buscan por «Coro» y «Falcón».
+
+Propuesta: `6-fusion/propuesta_nominalizador_2026-09-21.yaml`.

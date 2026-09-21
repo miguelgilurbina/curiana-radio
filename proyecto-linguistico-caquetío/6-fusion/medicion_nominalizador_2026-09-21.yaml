@@ -1,0 +1,3143 @@
+medicion: nominalizador-retroabstraccion
+fecha: 2026-09-21
+responde_a: 6-fusion/decisiones_tanda_2026-09-21.yaml §d21.11 (campaña C)
+fuente_principal: 'zavala-reyes-2015 (glosario de 288 entradas, leído del PDF por minar_zavala_glosario.extraer)'
+glosa_usada: la VERBATIM del glosario, no la curada del lexicón
+inventario:
+  entradas: 288
+  por_tipo:
+    otro: 206
+    verbo_accion: 19
+    n_lugar_accion: 15
+    n_accion: 13
+    verbo_estativo: 11
+    n_lugar_cosa: 11
+    n_agente: 9
+    n_resultado: 6
+    n_instrumento: 5
+canon_hoy:
+  raices_verbales_de_familia_caquetia: 43
+  de_ellas_atestiguadas: 28
+  atestiguadas:
+    - apo
+    - bachure
+    - badamaro
+    - bajarí
+    - beceremikore
+    - domaria
+    - duriwa
+    - eroa
+    - etamo
+    - gide
+    - jabal
+    - jadarayte
+    - jagey
+    - jai
+    - jakuke
+    - jakura
+    - kachipo
+    - kiboata
+    - kidiboata
+    - kudan
+    - patapati
+    - sinwanguso
+    - siwa
+    - usera
+    - waidima
+    - waranao
+    - wasima
+    - were
+  reglas_que_derivan_nombre_de_verbo: []
+  morfemas_declarados: 19
+de_quien_viene:
+  verbos_por_compilador:
+    AM: 25
+    A: 2
+    E: 2
+    PMA: 1
+  verbos_de_accion_por_compilador:
+    AM: 19
+  diana_por_compilador:
+    AM: 35
+    CGB: 5
+    HB: 5
+    E: 4
+    (sin sigla): 1
+  todo_el_glosario_por_compilador:
+    AM: 135
+    E: 81
+    HB: 47
+    A: 27
+    PMA: 16
+    GC: 11
+    CGB: 7
+    HP: 4
+    AAM: 1
+    (sin sigla): 1
+  leyenda:
+    PMA: Pedro Manuel Arcaya
+    HB: Adrián Hernández Baño
+    E: Juan Esteves
+    AM: Angulo Molina
+    A: Lisandro Alvarado
+    GC: Galeotto Cey
+    CGB: Carlos González Batista
+    AAM: Antonio Arellano Moreno
+    HP: Aníbal Hill Peña
+prueba_del_sufijo:
+  umbral_de_base: '3 letras — por debajo, `gua`, `par` y `na` segmentan medio glosario y el resultado sería ruido'
+  parejas_totales: 66
+  parejas:
+    -
+      base: aca
+      base_num: 3
+      base_glosa: Bejuco
+      base_tipos:
+        - otro
+      resto: tute
+      derivada: acatute
+      derivada_num: 2
+      derivada_glosa: Pueblo entre valles
+      derivada_tipos:
+        - otro
+    -
+      base: apo
+      base_num: 11
+      base_glosa: Grande
+      base_tipos:
+        - verbo_estativo
+      resto: po
+      derivada: apopo
+      derivada_num: 12
+      derivada_glosa: Nombre de jefe de parcialidad pequeña
+      derivada_tipos:
+        - n_agente
+    -
+      base: baja
+      base_num: 23
+      base_glosa: Caño
+      base_tipos:
+        - otro
+      resto: reque
+      derivada: bajareque
+      derivada_num: 24
+      derivada_glosa: Tabico hecho de tierra palos y bejuco
+      derivada_tipos:
+        - n_resultado
+    -
+      base: baja
+      base_num: 23
+      base_glosa: Caño
+      base_tipos:
+        - otro
+      resto: ri
+      derivada: bajari
+      derivada_num: 25
+      derivada_glosa: Recorrer, caminar
+      derivada_tipos:
+        - verbo_accion
+    -
+      base: bara
+      base_num: 29
+      base_glosa: Palo, árbol
+      base_tipos:
+        - otro
+      resto: bara
+      derivada: barabara
+      derivada_num: 30
+      derivada_glosa: Árbol de madera dura y pesada. Olivo
+      derivada_tipos:
+        - otro
+    -
+      base: bara
+      base_num: 29
+      base_glosa: Palo, árbol
+      base_tipos:
+        - otro
+      resto: coica
+      derivada: baracoica
+      derivada_num: 31
+      derivada_glosa: Cacique de Curazao
+      derivada_tipos:
+        - otro
+    -
+      base: capu
+      base_num: 60
+      base_glosa: Demonio. Señala Galeotto Cey la pronunciación “cap”
+      base_tipos:
+        - otro
+      resto: bana
+      derivada: capubana
+      derivada_num: 61
+      derivada_glosa: Duende del cerro
+      derivada_tipos:
+        - otro
+    -
+      base: cazi
+      base_num: 76
+      base_glosa: Sol
+      base_tipos:
+        - otro
+      resto: cure
+      derivada: cazicure
+      derivada_num: 77
+      derivada_glosa: Parte del levante
+      derivada_tipos:
+        - otro
+    -
+      base: cuna
+      base_num: 95
+      base_glosa: Pez del golfete de Coro
+      base_tipos:
+        - otro
+      resto: ro
+      derivada: cunaro
+      derivada_num: 96
+      derivada_glosa: Pez del golfete de Coro. Promicops Guasa
+      derivada_tipos:
+        - otro
+    -
+      base: dabuda
+      base_num: 99
+      base_glosa: Barro loza
+      base_tipos:
+        - otro
+      resto: re
+      derivada: dabudare
+      derivada_num: 100
+      derivada_glosa: Sitio de extracción de barro
+      derivada_tipos:
+        - n_lugar_accion
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: ca
+      derivada: guaca
+      derivada_num: 123
+      derivada_glosa: Ave, cotorra
+      derivada_tipos:
+        - otro
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: caubana
+      derivada: guacaubana
+      derivada_num: 124
+      derivada_glosa: Río escondido
+      derivada_tipos:
+        - otro
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: che
+      derivada: guache
+      derivada_num: 125
+      derivada_glosa: Murciélago, zorro blanco
+      derivada_tipos:
+        - otro
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: co
+      derivada: guaco
+      derivada_num: 126
+      derivada_glosa: Planta herbácea de la familia de las portulacea
+      derivada_tipos:
+        - otro
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: coa
+      derivada: guacoa
+      derivada_num: 127
+      derivada_glosa: Paloma
+      derivada_tipos:
+        - otro
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: cuaro
+      derivada: guacuaro
+      derivada_num: 128
+      derivada_glosa: Palo de tinte
+      derivada_tipos:
+        - otro
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: curebo
+      derivada: guacurebo
+      derivada_num: 129
+      derivada_glosa: Quebrada que crece
+      derivada_tipos:
+        - otro
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: dabacoa
+      derivada: guadabacoa
+      derivada_num: 130
+      derivada_glosa: Arboleda
+      derivada_tipos:
+        - otro
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: idima
+      derivada: guaidima
+      derivada_num: 131
+      derivada_glosa: Integro
+      derivada_tipos:
+        - verbo_estativo
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: iron
+      derivada: guairon
+      derivada_num: 132
+      derivada_glosa: Hoguera
+      derivada_tipos:
+        - otro
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: mabatriba
+      derivada: guamabatriba
+      derivada_num: 133
+      derivada_glosa: Muchas tierras de cultivo
+      derivada_tipos:
+        - n_lugar_accion
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: macho
+      derivada: guamacho
+      derivada_num: 134
+      derivada_glosa: Árbol cactáceo
+      derivada_tipos:
+        - otro
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: mipa
+      derivada: guamipa
+      derivada_num: 135
+      derivada_glosa: Hueco, profundidad
+      derivada_tipos:
+        - otro
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: najo
+      derivada: guanajo
+      derivada_num: 136
+      derivada_glosa: Cardón aspecto muy lanoso
+      derivada_tipos:
+        - otro
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: najio
+      derivada: guanajio
+      derivada_num: 136
+      derivada_glosa: Cardón aspecto muy lanoso
+      derivada_tipos:
+        - otro
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: nepe
+      derivada: guanepe
+      derivada_num: 137
+      derivada_glosa: Cesto para cargar a los niños
+      derivada_tipos:
+        - n_instrumento
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: racaro
+      derivada: guaracaro
+      derivada_num: 138
+      derivada_glosa: Tapirama silvestre
+      derivada_tipos:
+        - otro
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: ranaro
+      derivada: guaranaro
+      derivada_num: 139
+      derivada_glosa: Pez lisa
+      derivada_tipos:
+        - otro
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: ranao
+      derivada: guaranao
+      derivada_num: 140
+      derivada_glosa: Salado, ácido
+      derivada_tipos:
+        - verbo_estativo
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: rataro
+      derivada: guarataro
+      derivada_num: 141
+      derivada_glosa: Barro de loza, para la fábrica de budares y ollas
+      derivada_tipos:
+        - otro
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: riana
+      derivada: guariana
+      derivada_num: 142
+      derivada_glosa: Arbusto halófilo, frailejón de la playa. Tabaco pescador
+      derivada_tipos:
+        - otro
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: ru
+      derivada: guaru
+      derivada_num: 143
+      derivada_glosa: Volturido, cataneja. Ave mayor que el zamuro
+      derivada_tipos:
+        - otro
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: sare
+      derivada: guasare
+      derivada_num: 144
+      derivada_glosa: Árbol cactáceo
+      derivada_tipos:
+        - otro
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: sima
+      derivada: guasima
+      derivada_num: 145
+      derivada_glosa: Viejo, anciano
+      derivada_tipos:
+        - verbo_estativo
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: ta
+      derivada: guata
+      derivada_num: 146
+      derivada_glosa: Planta
+      derivada_tipos:
+        - otro
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: y
+      derivada: guay
+      derivada_num: 147
+      derivada_glosa: Árbol parecido a la ceiba
+      derivada_tipos:
+        - otro
+    -
+      base: guaca
+      base_num: 123
+      base_glosa: Ave, cotorra
+      base_tipos:
+        - otro
+      resto: ubana
+      derivada: guacaubana
+      derivada_num: 124
+      derivada_glosa: Río escondido
+      derivada_tipos:
+        - otro
+    -
+      base: guaco
+      base_num: 126
+      base_glosa: Planta herbácea de la familia de las portulacea
+      base_tipos:
+        - otro
+      resto: a
+      derivada: guacoa
+      derivada_num: 127
+      derivada_glosa: Paloma
+      derivada_tipos:
+        - otro
+    -
+      base: hay
+      base_num: 154
+      base_glosa: Coca
+      base_tipos:
+        - otro
+      resto: o
+      derivada: hayo
+      derivada_num: 156
+      derivada_glosa: Hierba quita sed
+      derivada_tipos:
+        - otro
+    -
+      base: huay
+      base_num: 157
+      base_glosa: Nombre propio
+      base_tipos:
+        - otro
+      resto: mujo
+      derivada: huaymujo
+      derivada_num: 158
+      derivada_glosa: Pequeño cangrejo
+      derivada_tipos:
+        - otro
+    -
+      base: juri
+      base_num: 178
+      base_glosa: Viento, ventarrón
+      base_tipos:
+        - otro
+      resto: jurebo
+      derivada: jurijurebo
+      derivada_num: 179
+      derivada_glosa: Paso de los vientos
+      derivada_tipos:
+        - n_lugar_cosa
+    -
+      base: para
+      base_num: 190
+      base_glosa: Aguadulce o salada en grandes cantidades
+      base_tipos:
+        - otro
+      resto: gua
+      derivada: paragua
+      derivada_num: 191
+      derivada_glosa: Mar
+      derivada_tipos:
+        - otro
+    -
+      base: para
+      base_num: 190
+      base_glosa: Aguadulce o salada en grandes cantidades
+      base_tipos:
+        - otro
+      resto: guana
+      derivada: paraguana
+      derivada_num: 192
+      derivada_glosa: Rodeada del mar
+      derivada_tipos:
+        - otro
+    -
+      base: para
+      base_num: 190
+      base_glosa: Aguadulce o salada en grandes cantidades
+      base_tipos:
+        - otro
+      resto: guatan
+      derivada: paraguatan
+      derivada_num: 193
+      derivada_glosa: Árbol maderable
+      derivada_tipos:
+        - otro
+    -
+      base: par
+      base_num: 190
+      base_glosa: Aguadulce o salada en grandes cantidades
+      base_tipos:
+        - otro
+      resto: a
+      derivada: para
+      derivada_num: 190
+      derivada_glosa: Aguadulce o salada en grandes cantidades
+      derivada_tipos:
+        - otro
+    -
+      base: par
+      base_num: 190
+      base_glosa: Aguadulce o salada en grandes cantidades
+      base_tipos:
+        - otro
+      resto: agua
+      derivada: paragua
+      derivada_num: 191
+      derivada_glosa: Mar
+      derivada_tipos:
+        - otro
+    -
+      base: par
+      base_num: 190
+      base_glosa: Aguadulce o salada en grandes cantidades
+      base_tipos:
+        - otro
+      resto: aguana
+      derivada: paraguana
+      derivada_num: 192
+      derivada_glosa: Rodeada del mar
+      derivada_tipos:
+        - otro
+    -
+      base: par
+      base_num: 190
+      base_glosa: Aguadulce o salada en grandes cantidades
+      base_tipos:
+        - otro
+      resto: aguatan
+      derivada: paraguatan
+      derivada_num: 193
+      derivada_glosa: Árbol maderable
+      derivada_tipos:
+        - otro
+    -
+      base: par
+      base_num: 190
+      base_glosa: Aguadulce o salada en grandes cantidades
+      base_tipos:
+        - otro
+      resto: iri
+      derivada: pariri
+      derivada_num: 194
+      derivada_glosa: Pantano, ciénaga
+      derivada_tipos:
+        - otro
+    -
+      base: par
+      base_num: 190
+      base_glosa: Aguadulce o salada en grandes cantidades
+      base_tipos:
+        - otro
+      resto: o
+      derivada: paro
+      derivada_num: 195
+      derivada_glosa: Río
+      derivada_tipos:
+        - otro
+    -
+      base: par
+      base_num: 190
+      base_glosa: Aguadulce o salada en grandes cantidades
+      base_tipos:
+        - otro
+      resto: otaima
+      derivada: parotaima
+      derivada_num: 196
+      derivada_glosa: Indígena del Yaracuy
+      derivada_tipos:
+        - otro
+    -
+      base: paragua
+      base_num: 191
+      base_glosa: Mar
+      base_tipos:
+        - otro
+      resto: na
+      derivada: paraguana
+      derivada_num: 192
+      derivada_glosa: Rodeada del mar
+      derivada_tipos:
+        - otro
+    -
+      base: paragua
+      base_num: 191
+      base_glosa: Mar
+      base_tipos:
+        - otro
+      resto: tan
+      derivada: paraguatan
+      derivada_num: 193
+      derivada_glosa: Árbol maderable
+      derivada_tipos:
+        - otro
+    -
+      base: paro
+      base_num: 195
+      base_glosa: Río
+      base_tipos:
+        - otro
+      resto: taima
+      derivada: parotaima
+      derivada_num: 196
+      derivada_glosa: Indígena del Yaracuy
+      derivada_tipos:
+        - otro
+    -
+      base: quiba
+      base_num: 203
+      base_glosa: Ayuda
+      base_tipos:
+        - n_accion
+      resto: coas
+      derivada: quibacoas
+      derivada_num: 204
+      derivada_glosa: Bosques pedregosos
+      derivada_tipos:
+        - otro
+    -
+      base: quiba
+      base_num: 203
+      base_glosa: Ayuda
+      base_tipos:
+        - n_accion
+      resto: quibi
+      derivada: quibaquibi
+      derivada_num: 205
+      derivada_glosa: Baquiano, conocedor
+      derivada_tipos:
+        - n_agente
+    -
+      base: quidi
+      base_num: 212
+      base_glosa: Cerro, altura
+      base_tipos:
+        - otro
+      resto: boata
+      derivada: quidiboata
+      derivada_num: 213
+      derivada_glosa: Engañar, engañado
+      derivada_tipos:
+        - verbo_accion
+    -
+      base: quigua
+      base_num: 214
+      base_glosa: Concha de almeja y otros moluscos. Sitio del estado Lara
+      base_tipos:
+        - otro
+      resto: gua
+      derivada: quiguagua
+      derivada_num: 215
+      derivada_glosa: Especie de haba grande y blanca
+      derivada_tipos:
+        - otro
+    -
+      base: taque
+      base_num: 236
+      base_glosa: Árbol nucífero
+      base_tipos:
+        - otro
+      resto: s
+      derivada: taques
+      derivada_num: 237
+      derivada_glosa: Salina
+      derivada_tipos:
+        - otro
+    -
+      base: tara
+      base_num: 238
+      base_glosa: Langosta, mariposa
+      base_tipos:
+        - otro
+      resto: i
+      derivada: tarai
+      derivada_num: 239
+      derivada_glosa: Garipial o caripial
+      derivada_tipos:
+        - otro
+    -
+      base: tara
+      base_num: 238
+      base_glosa: Langosta, mariposa
+      base_tipos:
+        - otro
+      resto: tarare
+      derivada: taratarare
+      derivada_num: 240
+      derivada_glosa: Hato, conuco
+      derivada_tipos:
+        - n_lugar_accion
+    -
+      base: tara
+      base_num: 238
+      base_glosa: Langosta, mariposa
+      base_tipos:
+        - otro
+      resto: tore
+      derivada: taratore
+      derivada_num: 241
+      derivada_glosa: Sabana
+      derivada_tipos:
+        - otro
+    -
+      base: toda
+      base_num: 250
+      base_glosa: Desinencia
+      base_tipos:
+        - otro
+      resto: rahuato
+      derivada: todarahuato
+      derivada_num: 251
+      derivada_glosa: Indígena de la Vela
+      derivada_tipos:
+        - otro
+    -
+      base: tuba
+      base_num: 253
+      base_glosa: Aglomeración, montón
+      base_tipos:
+        - n_accion
+      resto: rao
+      derivada: tubarao
+      derivada_num: 254
+      derivada_glosa: Arenales
+      derivada_tipos:
+        - otro
+    -
+      base: yacare
+      base_num: 279
+      base_glosa: Pueblo. Caimán
+      base_tipos:
+        - otro
+      resto: bacoa
+      derivada: yacarebacoa
+      derivada_num: 280
+      derivada_glosa: Pueblo del bosque
+      derivada_tipos:
+        - otro
+    -
+      base: yaro
+      base_num: 285
+      base_glosa: Bejuco. Planta venenosa
+      base_tipos:
+        - otro
+      resto: sabana
+      derivada: yarosabana
+      derivada_num: 286
+      derivada_glosa: Cacique de los Guaragua del Yaracuy. Pueblo
+      derivada_tipos:
+        - otro
+  base_verbal_derivada_nominal:
+    -
+      base: apo
+      base_num: 11
+      base_glosa: Grande
+      base_tipos:
+        - verbo_estativo
+      resto: po
+      derivada: apopo
+      derivada_num: 12
+      derivada_glosa: Nombre de jefe de parcialidad pequeña
+      derivada_tipos:
+        - n_agente
+  base_nominal_derivada_verbal:
+    -
+      base: baja
+      base_num: 23
+      base_glosa: Caño
+      base_tipos:
+        - otro
+      resto: ri
+      derivada: bajari
+      derivada_num: 25
+      derivada_glosa: Recorrer, caminar
+      derivada_tipos:
+        - verbo_accion
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: idima
+      derivada: guaidima
+      derivada_num: 131
+      derivada_glosa: Integro
+      derivada_tipos:
+        - verbo_estativo
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: ranao
+      derivada: guaranao
+      derivada_num: 140
+      derivada_glosa: Salado, ácido
+      derivada_tipos:
+        - verbo_estativo
+    -
+      base: gua
+      base_num: 122
+      base_glosa: Conuco, heredad, terreno cercado con algo
+      base_tipos:
+        - otro
+      resto: sima
+      derivada: guasima
+      derivada_num: 145
+      derivada_glosa: Viejo, anciano
+      derivada_tipos:
+        - verbo_estativo
+    -
+      base: quidi
+      base_num: 212
+      base_glosa: Cerro, altura
+      base_tipos:
+        - otro
+      resto: boata
+      derivada: quidiboata
+      derivada_num: 213
+      derivada_glosa: Engañar, engañado
+      derivada_tipos:
+        - verbo_accion
+terminaciones_compartidas:
+  criterio: 'compartir terminación es condición NECESARIA de un parecido, y condición SUFICIENTE de nada. Un final que llevan los dos lados no puede ser lo que los distingue'
+  verbos: 30
+  nombres_diana: 46
+  finales_compartidos:
+    -
+      final: '-al'
+      verbos_que_lo_llevan:
+        - jabal
+        - jusual
+      nombres_que_lo_llevan:
+        - garabal
+        - jusual
+      bases_al_quitarlo:
+        -
+          nombre: garabal
+          base_al_quitarlo: garab
+          base_atestiguada: false
+        -
+          nombre: jusual
+          base_al_quitarlo: jusu
+          base_atestiguada: false
+      bases_atestiguadas: 0
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-ao'
+      verbos_que_lo_llevan:
+        - guaranao
+      nombres_que_lo_llevan:
+        - diao
+      bases_al_quitarlo:
+        -
+          nombre: diao
+          base_al_quitarlo: di
+          base_atestiguada: false
+      bases_atestiguadas: 0
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-ba'
+      verbos_que_lo_llevan:
+        - siguruba
+      nombres_que_lo_llevan:
+        - aruba
+        - guamabatriba
+        - quiba
+        - siguruba
+        - tuba
+      bases_al_quitarlo:
+        -
+          nombre: aruba
+          base_al_quitarlo: aru
+          base_atestiguada: false
+        -
+          nombre: guamabatriba
+          base_al_quitarlo: guamabatri
+          base_atestiguada: false
+        -
+          nombre: quiba
+          base_al_quitarlo: qui
+          base_atestiguada: false
+        -
+          nombre: siguruba
+          base_al_quitarlo: siguru
+          base_atestiguada: false
+        -
+          nombre: tuba
+          base_al_quitarlo: tu
+          base_atestiguada: false
+      bases_atestiguadas: 0
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-he'
+      verbos_que_lo_llevan:
+        - bureche
+      nombres_que_lo_llevan:
+        - buriche
+        - harifuche
+      bases_al_quitarlo:
+        -
+          nombre: buriche
+          base_al_quitarlo: buric
+          base_atestiguada: false
+        -
+          nombre: harifuche
+          base_al_quitarlo: harifuc
+          base_atestiguada: false
+      bases_atestiguadas: 0
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-ia'
+      verbos_que_lo_llevan:
+        - domaria
+      nombres_que_lo_llevan:
+        - uria
+      bases_al_quitarlo:
+        -
+          nombre: uria
+          base_al_quitarlo: ur
+          base_atestiguada: false
+      bases_atestiguadas: 0
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-mo'
+      verbos_que_lo_llevan:
+        - etamo
+      nombres_que_lo_llevan:
+        - etamo
+        - humohumo
+      bases_al_quitarlo:
+        -
+          nombre: etamo
+          base_al_quitarlo: eta
+          base_atestiguada: false
+        -
+          nombre: humohumo
+          base_al_quitarlo: humohu
+          base_atestiguada: false
+      bases_atestiguadas: 0
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-oa'
+      verbos_que_lo_llevan:
+        - eroa
+      nombres_que_lo_llevan:
+        - duraboa
+        - iboa
+      bases_al_quitarlo:
+        -
+          nombre: duraboa
+          base_al_quitarlo: durab
+          base_atestiguada: false
+        -
+          nombre: iboa
+          base_al_quitarlo: ib
+          base_atestiguada: false
+      bases_atestiguadas: 0
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-po'
+      verbos_que_lo_llevan:
+        - apo
+        - cachipo
+      nombres_que_lo_llevan:
+        - apopo
+        - despopo
+      bases_al_quitarlo:
+        -
+          nombre: apopo
+          base_al_quitarlo: apo
+          base_atestiguada: true
+        -
+          nombre: despopo
+          base_al_quitarlo: despo
+          base_atestiguada: false
+      bases_atestiguadas: 1
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-re'
+      verbos_que_lo_llevan:
+        - bachure
+        - beceremicore
+        - guere
+      nombres_que_lo_llevan:
+        - beceremicore
+        - bobare
+        - cabudare
+        - dabudare
+        - manaure
+        - taratarare
+        - tupure
+        - ture
+      bases_al_quitarlo:
+        -
+          nombre: beceremicore
+          base_al_quitarlo: beceremico
+          base_atestiguada: false
+        -
+          nombre: bobare
+          base_al_quitarlo: boba
+          base_atestiguada: false
+        -
+          nombre: cabudare
+          base_al_quitarlo: cabuda
+          base_atestiguada: false
+        -
+          nombre: dabudare
+          base_al_quitarlo: dabuda
+          base_atestiguada: true
+        -
+          nombre: manaure
+          base_al_quitarlo: manau
+          base_atestiguada: false
+        -
+          nombre: taratarare
+          base_al_quitarlo: taratara
+          base_atestiguada: false
+        -
+          nombre: tupure
+          base_al_quitarlo: tupu
+          base_atestiguada: false
+        -
+          nombre: ture
+          base_al_quitarlo: tu
+          base_atestiguada: false
+      bases_atestiguadas: 1
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-ri'
+      verbos_que_lo_llevan:
+        - bajari
+      nombres_que_lo_llevan:
+        - tabri
+      bases_al_quitarlo:
+        -
+          nombre: tabri
+          base_al_quitarlo: tab
+          base_atestiguada: false
+      bases_atestiguadas: 0
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-ro'
+      verbos_que_lo_llevan:
+        - badamaro
+      nombres_que_lo_llevan:
+        - ditero
+      bases_al_quitarlo:
+        -
+          nombre: ditero
+          base_al_quitarlo: dite
+          base_atestiguada: false
+      bases_atestiguadas: 0
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-ta'
+      verbos_que_lo_llevan:
+        - quiboata
+        - quidiboata
+      nombres_que_lo_llevan:
+        - yapamata
+      bases_al_quitarlo:
+        -
+          nombre: yapamata
+          base_al_quitarlo: yapama
+          base_atestiguada: false
+      bases_atestiguadas: 0
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-ue'
+      verbos_que_lo_llevan:
+        - jacuque
+      nombres_que_lo_llevan:
+        - bajareque
+        - hueque
+        - jacuque
+      bases_al_quitarlo:
+        -
+          nombre: bajareque
+          base_al_quitarlo: bajareq
+          base_atestiguada: false
+        -
+          nombre: hueque
+          base_al_quitarlo: hueq
+          base_atestiguada: false
+        -
+          nombre: jacuque
+          base_al_quitarlo: jacuq
+          base_atestiguada: false
+      bases_atestiguadas: 0
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-amo'
+      verbos_que_lo_llevan:
+        - etamo
+      nombres_que_lo_llevan:
+        - etamo
+      bases_al_quitarlo:
+        -
+          nombre: etamo
+          base_al_quitarlo: et
+          base_atestiguada: false
+      bases_atestiguadas: 0
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-ata'
+      verbos_que_lo_llevan:
+        - quiboata
+        - quidiboata
+      nombres_que_lo_llevan:
+        - yapamata
+      bases_al_quitarlo:
+        -
+          nombre: yapamata
+          base_al_quitarlo: yapam
+          base_atestiguada: false
+      bases_atestiguadas: 0
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-bal'
+      verbos_que_lo_llevan:
+        - jabal
+      nombres_que_lo_llevan:
+        - garabal
+      bases_al_quitarlo:
+        -
+          nombre: garabal
+          base_al_quitarlo: gara
+          base_atestiguada: false
+      bases_atestiguadas: 0
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-che'
+      verbos_que_lo_llevan:
+        - bureche
+      nombres_que_lo_llevan:
+        - buriche
+        - harifuche
+      bases_al_quitarlo:
+        -
+          nombre: buriche
+          base_al_quitarlo: buri
+          base_atestiguada: false
+        -
+          nombre: harifuche
+          base_al_quitarlo: harifu
+          base_atestiguada: false
+      bases_atestiguadas: 0
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-ore'
+      verbos_que_lo_llevan:
+        - beceremicore
+      nombres_que_lo_llevan:
+        - beceremicore
+      bases_al_quitarlo:
+        -
+          nombre: beceremicore
+          base_al_quitarlo: beceremic
+          base_atestiguada: false
+      bases_atestiguadas: 0
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-que'
+      verbos_que_lo_llevan:
+        - jacuque
+      nombres_que_lo_llevan:
+        - bajareque
+        - hueque
+        - jacuque
+      bases_al_quitarlo:
+        -
+          nombre: bajareque
+          base_al_quitarlo: bajare
+          base_atestiguada: false
+        -
+          nombre: hueque
+          base_al_quitarlo: hue
+          base_atestiguada: false
+        -
+          nombre: jacuque
+          base_al_quitarlo: jacu
+          base_atestiguada: false
+      bases_atestiguadas: 0
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-ria'
+      verbos_que_lo_llevan:
+        - domaria
+      nombres_que_lo_llevan:
+        - uria
+      bases_al_quitarlo:
+        -
+          nombre: uria
+          base_al_quitarlo: u
+          base_atestiguada: false
+      bases_atestiguadas: 0
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-ual'
+      verbos_que_lo_llevan:
+        - jusual
+      nombres_que_lo_llevan:
+        - jusual
+      bases_al_quitarlo:
+        -
+          nombre: jusual
+          base_al_quitarlo: jus
+          base_atestiguada: false
+      bases_atestiguadas: 0
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-uba'
+      verbos_que_lo_llevan:
+        - siguruba
+      nombres_que_lo_llevan:
+        - aruba
+        - siguruba
+        - tuba
+      bases_al_quitarlo:
+        -
+          nombre: aruba
+          base_al_quitarlo: ar
+          base_atestiguada: false
+        -
+          nombre: siguruba
+          base_al_quitarlo: sigur
+          base_atestiguada: false
+        -
+          nombre: tuba
+          base_al_quitarlo: t
+          base_atestiguada: false
+      bases_atestiguadas: 0
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+    -
+      final: '-ure'
+      verbos_que_lo_llevan:
+        - bachure
+      nombres_que_lo_llevan:
+        - manaure
+        - tupure
+        - ture
+      bases_al_quitarlo:
+        -
+          nombre: manaure
+          base_al_quitarlo: mana
+          base_atestiguada: false
+        -
+          nombre: tupure
+          base_al_quitarlo: tup
+          base_atestiguada: false
+        -
+          nombre: ture
+          base_al_quitarlo: t
+          base_atestiguada: false
+      bases_atestiguadas: 0
+      descalifica: 'el VERBO también lo lleva: si `-X` nominalizara, el verbo no podría terminar igual'
+derivacion_cero:
+  que_mide: una sola forma glosada como verbo Y como nombre
+  casos: 5
+  sin_dudosas: 4
+  detalle:
+    -
+      lema: Beceremicore
+      num: 39
+      siglas: AM
+      glosa_verbatim: Dominar, triunfar, victoria
+      tipos:
+        - verbo_accion
+        - n_accion
+      dudoso: false
+    -
+      lema: Etamo
+      num: 120
+      siglas: AM
+      glosa_verbatim: Feroz, feo, espanto
+      tipos:
+        - verbo_estativo
+        - n_accion
+      dudoso: false
+    -
+      lema: Jacuque
+      num: 170
+      siglas: AM
+      glosa_verbatim: Regar, regadío
+      tipos:
+        - verbo_accion
+        - n_accion
+      dudoso: false
+    -
+      lema: Jusual
+      num: 180
+      siglas: AM
+      glosa_verbatim: Sembrar, siembra, sembradío. Conuco
+      tipos:
+        - verbo_accion
+        - n_accion
+        - n_lugar_accion
+      dudoso: false
+    -
+      lema: Siguruba
+      num: 228
+      siglas: AM
+      glosa_verbatim: Salvar. Caserío, sitio
+      tipos:
+        - verbo_accion
+        - n_lugar_accion
+      dudoso: true
+  reserva_obligatoria: 'una glosa castellana que enumera «sembrar, siembra, sembradío» puede ser el compilador diciendo DE QUÉ VA la palabra, no una afirmación sobre las clases de palabra del caquetío. El dato es el glosario, no la lengua: esto describe lo que la fuente registra, y la fuente no distingue'
+reduplicacion_en_la_diana:
+  aviso: 'el detector de aquí es el de esta campaña, NO el de F11; sirve para contar dentro de la diana, no para volver a medir la tasa del corpus, que ya está medida con control en 2-lengua/morfologia.md §9'
+  nombres_diana: 46
+  reduplicados: 4
+  agentes: 9
+  agentes_reduplicados: 3
+  detalle:
+    -
+      lema: Apopo
+      num: 12
+      glosa_verbatim: Nombre de jefe de parcialidad pequeña
+      tipos:
+        - n_agente
+      base: apo
+      reduplicacion: parcial (sílaba final)
+      base_atestiguada: true
+      glosa_de_la_base: Grande
+    -
+      lema: Despopo
+      num: 107
+      glosa_verbatim: Fuerza
+      tipos:
+        - n_accion
+      base: despo
+      reduplicacion: parcial (sílaba final)
+      base_atestiguada: false
+      glosa_de_la_base: null
+    -
+      lema: Humohumo
+      num: 160
+      glosa_verbatim: El ave que vuela
+      tipos:
+        - n_agente
+      base: humo
+      reduplicacion: total
+      base_atestiguada: false
+      glosa_de_la_base: null
+    -
+      lema: Quibaquibi
+      num: 205
+      glosa_verbatim: Baquiano, conocedor
+      tipos:
+        - n_agente
+      base: quiba
+      reduplicacion: total con vocal final distinta
+      base_atestiguada: true
+      glosa_de_la_base: Ayuda
+control_de_azar:
+  diana:
+    n: 46
+    finales:
+      -
+        final: '-ba'
+        en_el_subconjunto: 5
+        tamano_subconjunto: 46
+        pct_subconjunto: 10.9
+        en_las_288: 7
+        pct_288: 2.4
+        enriquecimiento: 4.47
+        p_hipergeometrica: 0.001396
+      -
+        final: '-uba'
+        en_el_subconjunto: 3
+        tamano_subconjunto: 46
+        pct_subconjunto: 6.5
+        en_las_288: 4
+        pct_288: 1.4
+        enriquecimiento: 4.7
+        p_hipergeometrica: 0.01367
+      -
+        final: '-e'
+        en_el_subconjunto: 15
+        tamano_subconjunto: 46
+        pct_subconjunto: 32.6
+        en_las_288: 57
+        pct_288: 19.8
+        enriquecimiento: 1.65
+        p_hipergeometrica: 0.01784
+      -
+        final: '-l'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 46
+        pct_subconjunto: 4.3
+        en_las_288: 3
+        pct_288: 1.0
+        enriquecimiento: 4.17
+        p_hipergeometrica: 0.06742
+      -
+        final: '-al'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 46
+        pct_subconjunto: 4.3
+        en_las_288: 3
+        pct_288: 1.0
+        enriquecimiento: 4.17
+        p_hipergeometrica: 0.06742
+      -
+        final: '-opo'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 46
+        pct_subconjunto: 4.3
+        en_las_288: 3
+        pct_288: 1.0
+        enriquecimiento: 4.17
+        p_hipergeometrica: 0.06742
+      -
+        final: '-iba'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 46
+        pct_subconjunto: 4.3
+        en_las_288: 3
+        pct_288: 1.0
+        enriquecimiento: 4.17
+        p_hipergeometrica: 0.06742
+      -
+        final: '-are'
+        en_el_subconjunto: 4
+        tamano_subconjunto: 46
+        pct_subconjunto: 8.7
+        en_las_288: 12
+        pct_288: 4.2
+        enriquecimiento: 2.09
+        p_hipergeometrica: 0.1064
+      -
+        final: '-re'
+        en_el_subconjunto: 8
+        tamano_subconjunto: 46
+        pct_subconjunto: 17.4
+        en_las_288: 32
+        pct_288: 11.1
+        enriquecimiento: 1.57
+        p_hipergeometrica: 0.1136
+      -
+        final: '-mo'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 46
+        pct_subconjunto: 4.3
+        en_las_288: 4
+        pct_288: 1.4
+        enriquecimiento: 3.13
+        p_hipergeometrica: 0.1212
+      -
+        final: '-boa'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 46
+        pct_subconjunto: 4.3
+        en_las_288: 4
+        pct_288: 1.4
+        enriquecimiento: 3.13
+        p_hipergeometrica: 0.1212
+      -
+        final: '-que'
+        en_el_subconjunto: 3
+        tamano_subconjunto: 46
+        pct_subconjunto: 6.5
+        en_las_288: 9
+        pct_288: 3.1
+        enriquecimiento: 2.09
+        p_hipergeometrica: 0.1593
+      -
+        final: '-ue'
+        en_el_subconjunto: 3
+        tamano_subconjunto: 46
+        pct_subconjunto: 6.5
+        en_las_288: 10
+        pct_288: 3.5
+        enriquecimiento: 1.88
+        p_hipergeometrica: 0.2029
+      -
+        final: '-po'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 46
+        pct_subconjunto: 4.3
+        en_las_288: 6
+        pct_288: 2.1
+        enriquecimiento: 2.09
+        p_hipergeometrica: 0.2457
+      -
+        final: '-he'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 46
+        pct_subconjunto: 4.3
+        en_las_288: 6
+        pct_288: 2.1
+        enriquecimiento: 2.09
+        p_hipergeometrica: 0.2457
+      -
+        final: '-che'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 46
+        pct_subconjunto: 4.3
+        en_las_288: 6
+        pct_288: 2.1
+        enriquecimiento: 2.09
+        p_hipergeometrica: 0.2457
+      -
+        final: '-s'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 46
+        pct_subconjunto: 4.3
+        en_las_288: 8
+        pct_288: 2.8
+        enriquecimiento: 1.57
+        p_hipergeometrica: 0.3742
+      -
+        final: '-co'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 46
+        pct_subconjunto: 4.3
+        en_las_288: 8
+        pct_288: 2.8
+        enriquecimiento: 1.57
+        p_hipergeometrica: 0.3742
+      -
+        final: '-ure'
+        en_el_subconjunto: 3
+        tamano_subconjunto: 46
+        pct_subconjunto: 6.5
+        en_las_288: 15
+        pct_288: 5.2
+        enriquecimiento: 1.25
+        p_hipergeometrica: 0.4398
+      -
+        final: '-oa'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 46
+        pct_subconjunto: 4.3
+        en_las_288: 12
+        pct_288: 4.2
+        enriquecimiento: 1.04
+        p_hipergeometrica: 0.5985
+      -
+        final: '-o'
+        en_el_subconjunto: 11
+        tamano_subconjunto: 46
+        pct_subconjunto: 23.9
+        en_las_288: 72
+        pct_288: 25.0
+        enriquecimiento: 0.96
+        p_hipergeometrica: 0.6377
+      -
+        final: '-a'
+        en_el_subconjunto: 13
+        tamano_subconjunto: 46
+        pct_subconjunto: 28.3
+        en_las_288: 99
+        pct_288: 34.4
+        enriquecimiento: 0.82
+        p_hipergeometrica: 0.8698
+      -
+        final: '-i'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 46
+        pct_subconjunto: 4.3
+        en_las_288: 30
+        pct_288: 10.4
+        enriquecimiento: 0.42
+        p_hipergeometrica: 0.9704
+  diana_sin_dudosas:
+    n: 34
+    finales:
+      -
+        final: '-e'
+        en_el_subconjunto: 14
+        tamano_subconjunto: 34
+        pct_subconjunto: 41.2
+        en_las_288: 57
+        pct_288: 19.8
+        enriquecimiento: 2.08
+        p_hipergeometrica: 0.001846
+      -
+        final: '-opo'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 34
+        pct_subconjunto: 5.9
+        en_las_288: 3
+        pct_288: 1.0
+        enriquecimiento: 5.65
+        p_hipergeometrica: 0.03769
+      -
+        final: '-re'
+        en_el_subconjunto: 7
+        tamano_subconjunto: 34
+        pct_subconjunto: 20.6
+        en_las_288: 32
+        pct_288: 11.1
+        enriquecimiento: 1.85
+        p_hipergeometrica: 0.06403
+      -
+        final: '-mo'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 34
+        pct_subconjunto: 5.9
+        en_las_288: 4
+        pct_288: 1.4
+        enriquecimiento: 4.24
+        p_hipergeometrica: 0.06979
+      -
+        final: '-que'
+        en_el_subconjunto: 3
+        tamano_subconjunto: 34
+        pct_subconjunto: 8.8
+        en_las_288: 9
+        pct_288: 3.1
+        enriquecimiento: 2.82
+        p_hipergeometrica: 0.07692
+      -
+        final: '-ue'
+        en_el_subconjunto: 3
+        tamano_subconjunto: 34
+        pct_subconjunto: 8.8
+        en_las_288: 10
+        pct_288: 3.5
+        enriquecimiento: 2.54
+        p_hipergeometrica: 0.1011
+      -
+        final: '-po'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 34
+        pct_subconjunto: 5.9
+        en_las_288: 6
+        pct_288: 2.1
+        enriquecimiento: 2.82
+        p_hipergeometrica: 0.1499
+      -
+        final: '-he'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 34
+        pct_subconjunto: 5.9
+        en_las_288: 6
+        pct_288: 2.1
+        enriquecimiento: 2.82
+        p_hipergeometrica: 0.1499
+      -
+        final: '-che'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 34
+        pct_subconjunto: 5.9
+        en_las_288: 6
+        pct_288: 2.1
+        enriquecimiento: 2.82
+        p_hipergeometrica: 0.1499
+      -
+        final: '-are'
+        en_el_subconjunto: 3
+        tamano_subconjunto: 34
+        pct_subconjunto: 8.8
+        en_las_288: 12
+        pct_288: 4.2
+        enriquecimiento: 2.12
+        p_hipergeometrica: 0.1572
+      -
+        final: '-ba'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 34
+        pct_subconjunto: 5.9
+        en_las_288: 7
+        pct_288: 2.4
+        enriquecimiento: 2.42
+        p_hipergeometrica: 0.1947
+      -
+        final: '-s'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 34
+        pct_subconjunto: 5.9
+        en_las_288: 8
+        pct_288: 2.8
+        enriquecimiento: 2.12
+        p_hipergeometrica: 0.241
+      -
+        final: '-ure'
+        en_el_subconjunto: 3
+        tamano_subconjunto: 34
+        pct_subconjunto: 8.8
+        en_las_288: 15
+        pct_288: 5.2
+        enriquecimiento: 1.69
+        p_hipergeometrica: 0.2545
+      -
+        final: '-o'
+        en_el_subconjunto: 7
+        tamano_subconjunto: 34
+        pct_subconjunto: 20.6
+        en_las_288: 72
+        pct_288: 25.0
+        enriquecimiento: 0.82
+        p_hipergeometrica: 0.7981
+      -
+        final: '-i'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 34
+        pct_subconjunto: 5.9
+        en_las_288: 30
+        pct_288: 10.4
+        enriquecimiento: 0.56
+        p_hipergeometrica: 0.8973
+      -
+        final: '-a'
+        en_el_subconjunto: 8
+        tamano_subconjunto: 34
+        pct_subconjunto: 23.5
+        en_las_288: 99
+        pct_288: 34.4
+        enriquecimiento: 0.68
+        p_hipergeometrica: 0.9498
+  verbos:
+    n: 30
+    finales:
+      -
+        final: '-l'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 30
+        pct_subconjunto: 6.7
+        en_las_288: 3
+        pct_288: 1.0
+        enriquecimiento: 6.4
+        p_hipergeometrica: 0.02952
+      -
+        final: '-al'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 30
+        pct_subconjunto: 6.7
+        en_las_288: 3
+        pct_288: 1.0
+        enriquecimiento: 6.4
+        p_hipergeometrica: 0.02952
+      -
+        final: '-po'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 30
+        pct_subconjunto: 6.7
+        en_las_288: 6
+        pct_288: 2.1
+        enriquecimiento: 3.2
+        p_hipergeometrica: 0.1208
+      -
+        final: '-ima'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 30
+        pct_subconjunto: 6.7
+        en_las_288: 6
+        pct_288: 2.1
+        enriquecimiento: 3.2
+        p_hipergeometrica: 0.1208
+      -
+        final: '-ma'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 30
+        pct_subconjunto: 6.7
+        en_las_288: 8
+        pct_288: 2.8
+        enriquecimiento: 2.4
+        p_hipergeometrica: 0.1979
+      -
+        final: '-ra'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 30
+        pct_subconjunto: 6.7
+        en_las_288: 8
+        pct_288: 2.8
+        enriquecimiento: 2.4
+        p_hipergeometrica: 0.1979
+      -
+        final: '-ata'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 30
+        pct_subconjunto: 6.7
+        en_las_288: 9
+        pct_288: 3.1
+        enriquecimiento: 2.13
+        p_hipergeometrica: 0.2385
+      -
+        final: '-ta'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 30
+        pct_subconjunto: 6.7
+        en_las_288: 10
+        pct_288: 3.5
+        enriquecimiento: 1.92
+        p_hipergeometrica: 0.2796
+      -
+        final: '-gua'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 30
+        pct_subconjunto: 6.7
+        en_las_288: 11
+        pct_288: 3.8
+        enriquecimiento: 1.75
+        p_hipergeometrica: 0.3207
+      -
+        final: '-ua'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 30
+        pct_subconjunto: 6.7
+        en_las_288: 12
+        pct_288: 4.2
+        enriquecimiento: 1.6
+        p_hipergeometrica: 0.3613
+      -
+        final: '-e'
+        en_el_subconjunto: 7
+        tamano_subconjunto: 30
+        pct_subconjunto: 23.3
+        en_las_288: 57
+        pct_288: 19.8
+        enriquecimiento: 1.18
+        p_hipergeometrica: 0.3791
+      -
+        final: '-a'
+        en_el_subconjunto: 11
+        tamano_subconjunto: 30
+        pct_subconjunto: 36.7
+        en_las_288: 99
+        pct_288: 34.4
+        enriquecimiento: 1.07
+        p_hipergeometrica: 0.463
+      -
+        final: '-i'
+        en_el_subconjunto: 3
+        tamano_subconjunto: 30
+        pct_subconjunto: 10.0
+        en_las_288: 30
+        pct_288: 10.4
+        enriquecimiento: 0.96
+        p_hipergeometrica: 0.6303
+      -
+        final: '-re'
+        en_el_subconjunto: 3
+        tamano_subconjunto: 30
+        pct_subconjunto: 10.0
+        en_las_288: 32
+        pct_288: 11.1
+        enriquecimiento: 0.9
+        p_hipergeometrica: 0.6768
+      -
+        final: '-o'
+        en_el_subconjunto: 6
+        tamano_subconjunto: 30
+        pct_subconjunto: 20.0
+        en_las_288: 72
+        pct_288: 25.0
+        enriquecimiento: 0.8
+        p_hipergeometrica: 0.8117
+  verbos_sin_dudosas:
+    n: 29
+    finales:
+      -
+        final: '-l'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 29
+        pct_subconjunto: 6.9
+        en_las_288: 3
+        pct_288: 1.0
+        enriquecimiento: 6.62
+        p_hipergeometrica: 0.02762
+      -
+        final: '-al'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 29
+        pct_subconjunto: 6.9
+        en_las_288: 3
+        pct_288: 1.0
+        enriquecimiento: 6.62
+        p_hipergeometrica: 0.02762
+      -
+        final: '-po'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 29
+        pct_subconjunto: 6.9
+        en_las_288: 6
+        pct_288: 2.1
+        enriquecimiento: 3.31
+        p_hipergeometrica: 0.1139
+      -
+        final: '-ima'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 29
+        pct_subconjunto: 6.9
+        en_las_288: 6
+        pct_288: 2.1
+        enriquecimiento: 3.31
+        p_hipergeometrica: 0.1139
+      -
+        final: '-ma'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 29
+        pct_subconjunto: 6.9
+        en_las_288: 8
+        pct_288: 2.8
+        enriquecimiento: 2.48
+        p_hipergeometrica: 0.1874
+      -
+        final: '-ra'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 29
+        pct_subconjunto: 6.9
+        en_las_288: 8
+        pct_288: 2.8
+        enriquecimiento: 2.48
+        p_hipergeometrica: 0.1874
+      -
+        final: '-ata'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 29
+        pct_subconjunto: 6.9
+        en_las_288: 9
+        pct_288: 3.1
+        enriquecimiento: 2.21
+        p_hipergeometrica: 0.2263
+      -
+        final: '-ta'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 29
+        pct_subconjunto: 6.9
+        en_las_288: 10
+        pct_288: 3.5
+        enriquecimiento: 1.99
+        p_hipergeometrica: 0.2659
+      -
+        final: '-gua'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 29
+        pct_subconjunto: 6.9
+        en_las_288: 11
+        pct_288: 3.8
+        enriquecimiento: 1.81
+        p_hipergeometrica: 0.3056
+      -
+        final: '-e'
+        en_el_subconjunto: 7
+        tamano_subconjunto: 29
+        pct_subconjunto: 24.1
+        en_las_288: 57
+        pct_288: 19.8
+        enriquecimiento: 1.22
+        p_hipergeometrica: 0.3419
+      -
+        final: '-ua'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 29
+        pct_subconjunto: 6.9
+        en_las_288: 12
+        pct_288: 4.2
+        enriquecimiento: 1.66
+        p_hipergeometrica: 0.345
+      -
+        final: '-a'
+        en_el_subconjunto: 10
+        tamano_subconjunto: 29
+        pct_subconjunto: 34.5
+        en_las_288: 99
+        pct_288: 34.4
+        enriquecimiento: 1.0
+        p_hipergeometrica: 0.5698
+      -
+        final: '-i'
+        en_el_subconjunto: 3
+        tamano_subconjunto: 29
+        pct_subconjunto: 10.3
+        en_las_288: 30
+        pct_288: 10.4
+        enriquecimiento: 0.99
+        p_hipergeometrica: 0.6055
+      -
+        final: '-re'
+        en_el_subconjunto: 3
+        tamano_subconjunto: 29
+        pct_subconjunto: 10.3
+        en_las_288: 32
+        pct_288: 11.1
+        enriquecimiento: 0.93
+        p_hipergeometrica: 0.6526
+      -
+        final: '-o'
+        en_el_subconjunto: 6
+        tamano_subconjunto: 29
+        pct_subconjunto: 20.7
+        en_las_288: 72
+        pct_288: 25.0
+        enriquecimiento: 0.83
+        p_hipergeometrica: 0.7819
+  lugar_de_cosa_control:
+    n: 11
+    finales:
+      -
+        final: '-ebo'
+        en_el_subconjunto: 3
+        tamano_subconjunto: 11
+        pct_subconjunto: 27.3
+        en_las_288: 6
+        pct_288: 2.1
+        enriquecimiento: 13.09
+        p_hipergeometrica: 0.0007857
+      -
+        final: '-bo'
+        en_el_subconjunto: 3
+        tamano_subconjunto: 11
+        pct_subconjunto: 27.3
+        en_las_288: 8
+        pct_288: 2.8
+        enriquecimiento: 9.82
+        p_hipergeometrica: 0.002108
+      -
+        final: '-o'
+        en_el_subconjunto: 4
+        tamano_subconjunto: 11
+        pct_subconjunto: 36.4
+        en_las_288: 72
+        pct_288: 25.0
+        enriquecimiento: 1.45
+        p_hipergeometrica: 0.2842
+      -
+        final: '-i'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 11
+        pct_subconjunto: 18.2
+        en_las_288: 30
+        pct_288: 10.4
+        enriquecimiento: 1.75
+        p_hipergeometrica: 0.3207
+      -
+        final: '-a'
+        en_el_subconjunto: 3
+        tamano_subconjunto: 11
+        pct_subconjunto: 27.3
+        en_las_288: 99
+        pct_288: 34.4
+        enriquecimiento: 0.79
+        p_hipergeometrica: 0.7927
+  lugar_de_cosa_control_sin_dudosas:
+    n: 10
+    finales:
+      -
+        final: '-ebo'
+        en_el_subconjunto: 3
+        tamano_subconjunto: 10
+        pct_subconjunto: 30.0
+        en_las_288: 6
+        pct_288: 2.1
+        enriquecimiento: 14.4
+        p_hipergeometrica: 0.000576
+      -
+        final: '-bo'
+        en_el_subconjunto: 3
+        tamano_subconjunto: 10
+        pct_subconjunto: 30.0
+        en_las_288: 8
+        pct_288: 2.8
+        enriquecimiento: 10.8
+        p_hipergeometrica: 0.001554
+      -
+        final: '-i'
+        en_el_subconjunto: 2
+        tamano_subconjunto: 10
+        pct_subconjunto: 20.0
+        en_las_288: 30
+        pct_288: 10.4
+        enriquecimiento: 1.92
+        p_hipergeometrica: 0.2796
+      -
+        final: '-o'
+        en_el_subconjunto: 3
+        tamano_subconjunto: 10
+        pct_subconjunto: 30.0
+        en_las_288: 72
+        pct_288: 25.0
+        enriquecimiento: 1.2
+        p_hipergeometrica: 0.4757
+      -
+        final: '-a'
+        en_el_subconjunto: 3
+        tamano_subconjunto: 10
+        pct_subconjunto: 30.0
+        en_las_288: 99
+        pct_288: 34.4
+        enriquecimiento: 0.87
+        p_hipergeometrica: 0.729
+  N_glosario: 288
+  umbral_declarado: 'se miran los finales con k >= 2 en el subconjunto; el criterio para llamar candidato a algo es p < 0,05 Y enriquecimiento > 2 Y que la base que queda al quitarlo exista en el atestiguado. Los tres, no uno'
+sonda_inicial:
+  verbos_en_el_glosario: 30
+  entradas: 288
+  por_inicial:
+    -
+      inicial: j
+      entradas_con_esa_inicial: 13
+      verbos: 7
+      pct: 53.8
+      p_hipergeometrica: 7.366e-05
+      lemas:
+        - Jabal (#168) «Adquirir»
+        - Jacuque (#170) «Regar, regadío»
+        - Jacura (#171) «Guardar»
+        - Jadarayte (#172) «Recoger»
+        - Jaguey (#174) «Establecer, estancar»
+        - Jai (#175) «Oír, escuchar»
+        - Jusual (#180) «Sembrar, siembra, sembradío. Conuco»
+    -
+      inicial: e
+      entradas_con_esa_inicial: 4
+      verbos: 2
+      pct: 50.0
+      p_hipergeometrica: 0.0552
+      lemas:
+        - Eroa (#119) «Empezar, crear»
+        - Etamo (#120) «Feroz, feo, espanto»
+    -
+      inicial: s
+      entradas_con_esa_inicial: 10
+      verbos: 3
+      pct: 30.0
+      p_hipergeometrica: 0.07413
+      lemas:
+        - Sigua (#227) «Blando»
+        - Siguruba (#228) «Salvar. Caserío, sitio»
+        - Singuanguso (#229) «Insolente»
+    -
+      inicial: g
+      entradas_con_esa_inicial: 32
+      verbos: 5
+      pct: 15.6
+      p_hipergeometrica: 0.2273
+      lemas:
+        - Guaidima (#131) «Integro»
+        - Guaranao (#140) «Salado, ácido»
+        - Guasima (#145) «Viejo, anciano»
+        - Güere (#149) «Dar, entregar»
+        - Güide (#151) «Arreglar, acomodar»
+    -
+      inicial: b
+      entradas_con_esa_inicial: 33
+      verbos: 5
+      pct: 15.2
+      p_hipergeometrica: 0.2483
+      lemas:
+        - Bachure (#19) «Maneto, patituerto»
+        - Badamaro (#20) «Extraer, sacar»
+        - Bajarí (#25) «Recorrer, caminar»
+        - Beceremicore (#39) «Dominar, triunfar, victoria»
+        - Bureche (#49) «Hacer, realizar»
+    -
+      inicial: q
+      entradas_con_esa_inicial: 17
+      verbos: 2
+      pct: 11.8
+      p_hipergeometrica: 0.5477
+      lemas:
+        - Quiboata (#206) «Engañar»
+        - Quidiboata (#213) «Engañar, engañado»
+    -
+      inicial: d
+      entradas_con_esa_inicial: 19
+      verbos: 2
+      pct: 10.5
+      p_hipergeometrica: 0.6117
+      lemas:
+        - Domaria (#114) «Enredarse, atormentar»
+        - Durigua (#116) «Hacer trabajos cortos»
+otras_fuentes:
+  oliver_a9:
+    que_es: '«Selected Caquetío Vocabulary from the XVIth Century», Oliver 1989 Apéndice A, pp. impresas 593-594'
+    entradas_transcritas: 49
+    glosas_que_la_criba_marca: 1
+    de_ellas_falsos_positivos: 1
+    los_falsos:
+      - ser viviente
+    verbos_reales: 0
+    ejemplos_de_glosa:
+      - agua turbia
+      - prado
+      - higo, breva
+      - demonio
+      - ''
+      - ser viviente
+      - puche de maíz
+      - vasija para el agua
+      - gavilán
+      - paraulata
+      - diente
+      - señor principal
+    lectura: 'el vocabulario caquetío más antiguo del repo es enteramente NOMINAL: sin verbo no hay par verbo/nombre que retroabstraer'
+  medina_colina_dictado:
+    que_es: «Del Habla Paraguanera», dictado desde 2026-09-01
+    entradas_dictadas: 66
+    glosas_que_son_infinitivo: 0
+    lectura: 'las voces vivas de Paraguaná son nombres; el dictado es parcial por diseño, así que es un cero DEL DICTADO'
+  alvarado_1921:
+    que_es: «Glosario de voces indígenas de Venezuela»
+    receta: pdftotext -enc UTF-8 (pypdf no vale; trampa declarada)
+    pdf_presente: true
+    lectura: 'sus entradas con glosa verbal son verbos CASTELLANOS derivados de nombres indígenas —cachicamear, cebucanear, embijar, enguanepar, chigüirear—, no verbos indígenas. Un glosario de lo que el español TOMÓ prestado recoge nombres: es lo que se presta entre lenguas'
+    medido_en: la bitácora de 4-fuentes/alvarado-1921.md
+  arcaya_1920:
+    que_es: «Historia del Estado Falcón», tomo I
+    pdf_presente: true
+    pagina_impresa: 75
+    cita_literal: '«Pensamos, con fundadas razones, que también debe clasificarse en la familia lingüística nuarhuaca al idioma caquetío. No se conserva de él, desgraciadamente, vocabulario alguno, ni mucho menos hay frases que permitan conocer su estructura gramatical, pero sí quedan los nombres, muy numerosos por cierto, de los lugares que habitaron […] y nombres propios de personas»'
+    lo_unico_que_da: 'de la Relación de Barquisimeto de 1579: «sabana», «Capu» (el demonio), «bariqué», «guadabacoa o adobacoa», «quiccide», «mene» y «cumaragua» — siete voces, las siete NOMBRES'
+    y_una_frase_que_importa_para_el_otro_lado: 'misma página: las lenguas nuarhuacas «conjuga[n] los temas verbales y nominales, prefijándoles ciertos índices posesivos». Es lo que los agentes hicieron —y es de la FAMILIA, no del caquetío: describe conjugación, no derivación de nombres'
+    aviso_de_extraccion: 'la capa de texto de este PDF pierde los acentos (Falc?n, ling??stica). La cita se transcribe restituyéndolos; el texto sin acentos es reproducible con `pdftotext -enc UTF-8`'
+subproducto_ebo:
+  aviso: '`-ebo` NO responde a d21.11: compone sobre NOMBRES, no sobre verbos. Se mide y se propone aparte'
+  base_libre:
+    lema: Ebo
+    num: 117
+    glosa: Camino, paso, senda
+  compuestos:
+    -
+      lema: Cazebo
+      num: 75
+      siglas:
+        - GC
+      glosa: Poniente
+    -
+      lema: Cumarebo
+      num: 94
+      siglas:
+        - E
+      glosa: Camino del cacique Cumare
+    -
+      lema: Guacurebo
+      num: 129
+      siglas:
+        - HB
+      glosa: Quebrada que crece
+    -
+      lema: Jurijurebo
+      num: 179
+      siglas:
+        - E
+      glosa: Paso de los vientos
+    -
+      lema: Turijerebo
+      num: 261
+      siglas:
+        - AM
+      glosa: Lugar de descanso
+  cuantos: 5
+trampas_declaradas:
+  1: '«PARA DESIGNAR las aguas de un río lleno de arena»: el infinitivo es del compilador explicando su propia entrada, no glosa de la voz'
+  10: '«Una luna. MEDICIÓN de tiempo»: «medición» es la etiqueta del compilador para decir de qué campo es la palabra; no es la glosa'
+  47: 'igual que #10: «dos lunas. Medición de tiempo»'
+  111: '«Distintivo de los nombres colectivos de abundancia»: es un AFIJO, y la glosa es metalingüística'
+  132: '«Hoguera»: cosa, no nombre de acción'
+  159: '«Mujer bella»: la criba la marca porque «mujer» acaba en -er'
+  163: '«Mujer»: lo mismo'
+  201: '«Ahí. ADVERBIO DE LUGAR»: la palabra «lugar» es la etiqueta gramatical del compilador'
+  267: '«CUENTA de piedras»: es la chaquira, el abalorio — no el acto de contar. La trampa más limpia del glosario'
+  264: '«Hierba de propiedades eméticas. USADO PARA CUAJAR quesos»: el infinitivo describe el uso que le da el castellano, no la voz'
+  156: '«Hierba QUITA SED»: el compuesto es castellano'
+  141: '«Barro de loza, PARA LA FÁBRICA de budares y ollas»: es la materia, no el instrumento'
+  83: '«Tinaja pequeña»: un recipiente sin función declarada en la glosa no es nombre de instrumento; si se contaran todos los cacharros, el conjunto se llenaría de ruido'
+  27: '«Calabaza con cal»: igual que #83 (y su gemela #220 `raporon`)'
+  75: '«Poniente»: es un punto cardinal. Se mide aparte, en el bloque -ebo'
+detalle:
+  -
+    num: 4
+    lema: Aco
+    siglas: E,AM
+    glosa_verbatim: Comida. Par, casal, pareja
+    tipos:
+      - n_resultado
+    dudoso: false
+    por: «Comida» es lo que resulta de comer/cocinar
+  -
+    num: 9
+    lema: Amaca
+    siglas: AM
+    glosa_verbatim: Sitio de moler maíz
+    tipos:
+      - n_lugar_accion
+    dudoso: false
+    por: '«Sitio de MOLER maíz»: el lugar lo define la acción'
+  -
+    num: 11
+    lema: Apo
+    siglas: AM
+    glosa_verbatim: Grande
+    tipos:
+      - verbo_estativo
+    dudoso: false
+    por: «Grande»; el canon lo declara v_estativo (d21.4)
+  -
+    num: 12
+    lema: Apopo
+    siglas: AM
+    glosa_verbatim: Nombre de jefe de parcialidad pequeña
+    tipos:
+      - n_agente
+    dudoso: false
+    por: '«Nombre de jefe de parcialidad pequeña»: el que manda'
+  -
+    num: 15
+    lema: Aricula
+    siglas: AM
+    glosa_verbatim: Punto de tierra
+    tipos:
+      - n_lugar_cosa
+    dudoso: false
+    por: «Punto de tierra»
+  -
+    num: 16
+    lema: Aruba
+    siglas: CGB
+    glosa_verbatim: 'Oruba. Oruma. Puede ser Oirubae: aquel o aquella que acompaña'
+    tipos:
+      - n_agente
+    dudoso: true
+    por: '«Puede ser Oirubae: aquel o aquella que ACOMPAÑA» — pero la glosa es una conjetura del compilador («Puede ser») y la forma agentiva que propone, Oirubae, no está atestiguada como tal'
+  -
+    num: 18
+    lema: Bacoa
+    siglas: AM,E
+    glosa_verbatim: Bosque, lugar, paraje, sitio fértil
+    tipos:
+      - n_lugar_cosa
+    dudoso: false
+    por: «Bosque, lugar, paraje, sitio fértil»
+  -
+    num: 19
+    lema: Bachure
+    siglas: A
+    glosa_verbatim: Maneto, patituerto
+    tipos:
+      - verbo_estativo
+    dudoso: false
+    por: «Maneto, patituerto»; el canon lo declara v_estativo
+  -
+    num: 20
+    lema: Badamaro
+    siglas: AM
+    glosa_verbatim: Extraer, sacar
+    tipos:
+      - verbo_accion
+    dudoso: false
+    por: «Extraer, sacar»
+  -
+    num: 24
+    lema: Bajareque
+    siglas: AM
+    glosa_verbatim: Tabico hecho de tierra palos y bejuco
+    tipos:
+      - n_resultado
+    dudoso: false
+    por: «Tabico HECHO DE tierra palos y bejuco»
+  -
+    num: 25
+    lema: Bajarí
+    siglas: AM
+    glosa_verbatim: Recorrer, caminar
+    tipos:
+      - verbo_accion
+    dudoso: false
+    por: «Recorrer, caminar»
+  -
+    num: 26
+    lema: Bana
+    siglas: E
+    glosa_verbatim: Sitio, cerro alto
+    tipos:
+      - n_lugar_cosa
+    dudoso: false
+    por: «Sitio, cerro alto»
+  -
+    num: 37
+    lema: Barisi
+    siglas: AM
+    glosa_verbatim: Región de tierras coloradas cerca del mar
+    tipos:
+      - n_lugar_cosa
+    dudoso: false
+    por: «Región de tierras coloradas cerca del mar»
+  -
+    num: 39
+    lema: Beceremicore
+    siglas: AM
+    glosa_verbatim: Dominar, triunfar, victoria
+    tipos:
+      - verbo_accion
+      - n_accion
+    dudoso: false
+    por: '«Dominar, triunfar, VICTORIA»: la MISMA forma glosa dos infinitivos y su nombre de acción'
+  -
+    num: 42
+    lema: Bobare
+    siglas: CGB
+    glosa_verbatim: Sitio de cultivo
+    tipos:
+      - n_lugar_accion
+    dudoso: false
+    por: «Sitio de CULTIVO»
+  -
+    num: 43
+    lema: Boratio
+    siglas: AM,HB
+    glosa_verbatim: Piache, cacique, jefe, sacerdote, médico
+    tipos:
+      - n_agente
+    dudoso: false
+    por: '«Piache, cacique, jefe, sacerdote, médico»: oficios'
+  -
+    num: 44
+    lema: Borojo
+    siglas: AM
+    glosa_verbatim: Salina de Coro, comercio de la sal
+    tipos:
+      - n_lugar_accion
+    dudoso: true
+    por: '«Salina de Coro, COMERCIO de la sal»: la segunda mitad es acción, pero la cabeza de la glosa es el lugar'
+  -
+    num: 46
+    lema: Buco
+    siglas: AM,CGB
+    glosa_verbatim: Chorro de agua, presa de agua
+    tipos:
+      - n_instrumento
+    dudoso: true
+    por: '«Chorro de agua, PRESA de agua»: artefacto de función declarada'
+  -
+    num: 49
+    lema: Bureche
+    siglas: AM
+    glosa_verbatim: Hacer, realizar
+    tipos:
+      - verbo_accion
+    dudoso: false
+    por: «Hacer, realizar»
+  -
+    num: 50
+    lema: Buriche
+    siglas: AM
+    glosa_verbatim: Licor fermentado
+    tipos:
+      - n_resultado
+    dudoso: false
+    por: «Licor FERMENTADO»
+  -
+    num: 52
+    lema: Cabudare
+    siglas: CGB
+    glosa_verbatim: sitio de cultivo
+    tipos:
+      - n_lugar_accion
+    dudoso: false
+    por: «sitio de CULTIVO»
+  -
+    num: 53
+    lema: Cachipo
+    siglas: A
+    glosa_verbatim: En voz vulgar, enojado, colérico
+    tipos:
+      - verbo_estativo
+    dudoso: false
+    por: «En voz vulgar, enojado, colérico»; v_estativo en el canon
+  -
+    num: 74
+    lema: Caza
+    siglas: HB
+    glosa_verbatim: Puche de maíz
+    tipos:
+      - n_resultado
+    dudoso: false
+    por: '«Puche de maíz»: alimento preparado'
+  -
+    num: 94
+    lema: Cumarebo
+    siglas: E
+    glosa_verbatim: Camino del cacique Cumare
+    tipos:
+      - n_lugar_cosa
+    dudoso: false
+    por: «CAMINO del cacique Cumare»
+  -
+    num: 100
+    lema: Dabudare
+    siglas: HB
+    glosa_verbatim: Sitio de extracción de barro
+    tipos:
+      - n_lugar_accion
+    dudoso: false
+    por: «Sitio de EXTRACCIÓN de barro»
+  -
+    num: 106
+    lema: Diao
+    siglas: HB,AM
+    glosa_verbatim: Señor principal. Jefe mayor
+    tipos:
+      - n_agente
+    dudoso: true
+    por: '«Señor principal. Jefe mayor»: es un título, no un derivado transparente de un verbo'
+  -
+    num: 107
+    lema: Despopo
+    siglas: AM
+    glosa_verbatim: Fuerza
+    tipos:
+      - n_accion
+    dudoso: false
+    por: '«Fuerza»: nombre abstracto'
+  -
+    num: 110
+    lema: Ditero
+    siglas: AM
+    glosa_verbatim: Insecto, hormiga que daña
+    tipos:
+      - n_agente
+    dudoso: true
+    por: '«Insecto, hormiga QUE DAÑA»: la relativa es descripción del compilador, no necesariamente morfología caquetía'
+  -
+    num: 114
+    lema: Domaria
+    siglas: AM
+    glosa_verbatim: Enredarse, atormentar
+    tipos:
+      - verbo_accion
+    dudoso: false
+    por: «Enredarse, atormentar»
+  -
+    num: 115
+    lema: Duraboa
+    siglas: AM
+    glosa_verbatim: Conuco, sembrado
+    tipos:
+      - n_lugar_accion
+    dudoso: true
+    por: '«Conuco, SEMBRADO»: participio sustantivado en la glosa'
+  -
+    num: 116
+    lema: Durigua
+    siglas: AM
+    glosa_verbatim: Hacer trabajos cortos
+    tipos:
+      - verbo_accion
+    dudoso: false
+    por: «Hacer trabajos cortos»
+  -
+    num: 117
+    lema: Ebo
+    siglas: E
+    glosa_verbatim: Camino, paso, senda
+    tipos:
+      - n_lugar_cosa
+    dudoso: false
+    por: «Camino, paso, senda»
+  -
+    num: 119
+    lema: Eroa
+    siglas: AM
+    glosa_verbatim: Empezar, crear
+    tipos:
+      - verbo_accion
+    dudoso: false
+    por: «Empezar, crear»
+  -
+    num: 120
+    lema: Etamo
+    siglas: AM
+    glosa_verbatim: Feroz, feo, espanto
+    tipos:
+      - verbo_estativo
+      - n_accion
+    dudoso: false
+    por: '«Feroz, feo, ESPANTO»: dos propiedades y un abstracto, la misma forma; el canon lo declara v_estativo'
+  -
+    num: 121
+    lema: Garabal
+    siglas: AM
+    glosa_verbatim: Tierra de crianza o tierra de pasto
+    tipos:
+      - n_lugar_accion
+    dudoso: true
+    por: «Tierra de CRIANZA o tierra de pasto»
+  -
+    num: 131
+    lema: Guaidima
+    siglas: AM
+    glosa_verbatim: Integro
+    tipos:
+      - verbo_estativo
+    dudoso: false
+    por: «Integro»; v_estativo en el canon
+  -
+    num: 133
+    lema: Guamabatriba
+    siglas: AM
+    glosa_verbatim: Muchas tierras de cultivo
+    tipos:
+      - n_lugar_accion
+    dudoso: true
+    por: «Muchas tierras de CULTIVO»
+  -
+    num: 137
+    lema: Guanepe
+    siglas: E
+    glosa_verbatim: Cesto para cargar a los niños
+    tipos:
+      - n_instrumento
+    dudoso: false
+    por: «Cesto PARA CARGAR a los niños»
+  -
+    num: 140
+    lema: Guaranao
+    siglas: E
+    glosa_verbatim: Salado, ácido
+    tipos:
+      - verbo_estativo
+    dudoso: false
+    por: «Salado, ácido»; v_estativo en el canon
+  -
+    num: 145
+    lema: Guasima
+    siglas: AM
+    glosa_verbatim: Viejo, anciano
+    tipos:
+      - verbo_estativo
+    dudoso: false
+    por: «Viejo, anciano»; v_estativo en el canon
+  -
+    num: 149
+    lema: Güere
+    siglas: AM
+    glosa_verbatim: Dar, entregar
+    tipos:
+      - verbo_accion
+    dudoso: false
+    por: «Dar, entregar»
+  -
+    num: 151
+    lema: Güide
+    siglas: AM
+    glosa_verbatim: Arreglar, acomodar
+    tipos:
+      - verbo_accion
+    dudoso: false
+    por: «Arreglar, acomodar»
+  -
+    num: 153
+    lema: Harifuche
+    siglas: HB
+    glosa_verbatim: Maíz tostado y miel
+    tipos:
+      - n_resultado
+    dudoso: false
+    por: «Maíz TOSTADO y miel»
+  -
+    num: 155
+    lema: Hueque
+    siglas: AM
+    glosa_verbatim: Sitio de trabajo
+    tipos:
+      - n_lugar_accion
+    dudoso: false
+    por: «Sitio de TRABAJO»
+  -
+    num: 160
+    lema: Humohumo
+    siglas: AM
+    glosa_verbatim: El ave que vuela
+    tipos:
+      - n_agente
+    dudoso: false
+    por: '«EL AVE QUE VUELA»: relativa agentiva'
+  -
+    num: 161
+    lema: Iboa
+    siglas: AM
+    glosa_verbatim: Comunidad indígena. Enemigo, enemistad
+    tipos:
+      - n_accion
+    dudoso: true
+    por: '«Comunidad indígena. Enemigo, ENEMISTAD»: glosa triple y dispersa'
+  -
+    num: 168
+    lema: Jabal
+    siglas: AM
+    glosa_verbatim: Adquirir
+    tipos:
+      - verbo_accion
+    dudoso: false
+    por: «Adquirir»
+  -
+    num: 169
+    lema: Jachos
+    siglas: E
+    glosa_verbatim: Teas de madera, para encandilar en las labores de pesca nocturna
+    tipos:
+      - n_instrumento
+    dudoso: false
+    por: «Teas de madera, PARA ENCANDILAR en las labores de pesca nocturna»
+  -
+    num: 170
+    lema: Jacuque
+    siglas: AM
+    glosa_verbatim: Regar, regadío
+    tipos:
+      - verbo_accion
+      - n_accion
+    dudoso: false
+    por: '«Regar, REGADÍO»: la misma forma, el infinitivo y su nombre'
+  -
+    num: 171
+    lema: Jacura
+    siglas: AM
+    glosa_verbatim: Guardar
+    tipos:
+      - verbo_accion
+    dudoso: false
+    por: «Guardar»
+  -
+    num: 172
+    lema: Jadarayte
+    siglas: AM
+    glosa_verbatim: Recoger
+    tipos:
+      - verbo_accion
+    dudoso: false
+    por: «Recoger»
+  -
+    num: 173
+    lema: Jadicuar
+    siglas: E
+    glosa_verbatim: Sitio donde abunda jajato. Salicornia fructuosa
+    tipos:
+      - n_lugar_cosa
+    dudoso: false
+    por: '«Sitio donde ABUNDA jajato»: lo define una planta'
+  -
+    num: 174
+    lema: Jaguey
+    siglas: AM
+    glosa_verbatim: Establecer, estancar
+    tipos:
+      - verbo_accion
+    dudoso: false
+    por: «Establecer, estancar»
+  -
+    num: 175
+    lema: Jai
+    siglas: AM
+    glosa_verbatim: Oír, escuchar
+    tipos:
+      - verbo_accion
+    dudoso: false
+    por: «Oír, escuchar»
+  -
+    num: 176
+    lema: Jajato
+    siglas: A,AM
+    glosa_verbatim: Chloris Radiata. Yerba forrajera. Lugar de arena
+    tipos:
+      - n_lugar_cosa
+    dudoso: true
+    por: «Lugar de arena»
+  -
+    num: 179
+    lema: Jurijurebo
+    siglas: E
+    glosa_verbatim: Paso de los vientos
+    tipos:
+      - n_lugar_cosa
+    dudoso: false
+    por: «PASO de los vientos»
+  -
+    num: 180
+    lema: Jusual
+    siglas: AM
+    glosa_verbatim: Sembrar, siembra, sembradío. Conuco
+    tipos:
+      - verbo_accion
+      - n_accion
+      - n_lugar_accion
+    dudoso: false
+    por: '«SEMBRAR, SIEMBRA, SEMBRADÍO. Conuco»: infinitivo, nombre de acción y nombre de lugar en UNA sola forma'
+  -
+    num: 183
+    lema: Manaure
+    siglas: CGB
+    glosa_verbatim: Vocero antiguo de la tierra, sabio conocedor de la tierra
+    tipos:
+      - n_agente
+    dudoso: false
+    por: «VOCERO antiguo de la tierra, sabio CONOCEDOR de la tierra»
+  -
+    num: 188
+    lema: Pachacuare
+    siglas: AM
+    glosa_verbatim: Sitio de palmeras
+    tipos:
+      - n_lugar_cosa
+    dudoso: false
+    por: «Sitio de palmeras»
+  -
+    num: 198
+    lema: Patapati
+    siglas: AM
+    glosa_verbatim: Anegadizo
+    tipos:
+      - verbo_estativo
+    dudoso: false
+    por: «Anegadizo»; v_estativo en el canon
+  -
+    num: 203
+    lema: Quiba
+    siglas: AM
+    glosa_verbatim: Ayuda
+    tipos:
+      - n_accion
+    dudoso: false
+    por: '«Ayuda»: nombre de acción'
+  -
+    num: 205
+    lema: Quibaquibi
+    siglas: AM
+    glosa_verbatim: Baquiano, conocedor
+    tipos:
+      - n_agente
+    dudoso: false
+    por: «Baquiano, CONOCEDOR»
+  -
+    num: 206
+    lema: Quiboata
+    siglas: AM
+    glosa_verbatim: Engañar
+    tipos:
+      - verbo_accion
+    dudoso: false
+    por: «Engañar»
+  -
+    num: 213
+    lema: Quidiboata
+    siglas: AM
+    glosa_verbatim: Engañar, engañado
+    tipos:
+      - verbo_accion
+    dudoso: false
+    por: '«Engañar, ENGAÑADO»: infinitivo y participio, misma forma'
+  -
+    num: 217
+    lema: Quiricias
+    siglas: AM
+    glosa_verbatim: Sangre, sangrado
+    tipos:
+      - n_accion
+    dudoso: false
+    por: '«Sangre, SANGRADO»: el nombre y el nombre de acción, misma forma'
+  -
+    num: 227
+    lema: Sigua
+    siglas: E
+    glosa_verbatim: Blando
+    tipos:
+      - verbo_estativo
+    dudoso: false
+    por: «Blando»; `siwa` es raíz verbal en el canon
+  -
+    num: 228
+    lema: Siguruba
+    siglas: AM
+    glosa_verbatim: Salvar. Caserío, sitio
+    tipos:
+      - verbo_accion
+      - n_lugar_accion
+    dudoso: true
+    por: '«SALVAR. Caserío, sitio»: infinitivo y lugar en la misma forma, pero la segunda mitad de la glosa puede ser un topónimo'
+  -
+    num: 229
+    lema: Singuanguso
+    siglas: PMA
+    glosa_verbatim: Insolente
+    tipos:
+      - verbo_estativo
+    dudoso: false
+    por: «Insolente»; v_estativo en el canon
+  -
+    num: 230
+    lema: Supi
+    siglas: AM,PMA
+    glosa_verbatim: Sitio a orilla del mar. Arena. Arboleda supide
+    tipos:
+      - n_lugar_cosa
+    dudoso: false
+    por: «Sitio a orilla del mar. Arena»
+  -
+    num: 234
+    lema: Tabri
+    siglas: AM
+    glosa_verbatim: Conuco, siembra
+    tipos:
+      - n_accion
+    dudoso: false
+    por: «Conuco, SIEMBRA»
+  -
+    num: 240
+    lema: Taratarare
+    siglas: AM
+    glosa_verbatim: Hato, conuco
+    tipos:
+      - n_lugar_accion
+    dudoso: true
+    por: «Hato, conuco»
+  -
+    num: 245
+    lema: Tebe
+    siglas: AM
+    glosa_verbatim: Lugar de cultivo
+    tipos:
+      - n_lugar_accion
+    dudoso: false
+    por: «Lugar de CULTIVO»
+  -
+    num: 253
+    lema: Tuba
+    siglas: E
+    glosa_verbatim: Aglomeración, montón
+    tipos:
+      - n_accion
+    dudoso: false
+    por: «AGLOMERACIÓN, montón»
+  -
+    num: 256
+    lema: Tupure
+    siglas: ''
+    glosa_verbatim: Siembra de cacao
+    tipos:
+      - n_accion
+    dudoso: false
+    por: «SIEMBRA de cacao»
+  -
+    num: 259
+    lema: Ture
+    siglas: AM
+    glosa_verbatim: Vasija, utensilio
+    tipos:
+      - n_instrumento
+    dudoso: false
+    por: «Vasija, UTENSILIO»
+  -
+    num: 260
+    lema: Turicha
+    siglas: AM
+    glosa_verbatim: Ave cantadora. Flauta
+    tipos:
+      - n_agente
+      - n_instrumento
+    dudoso: false
+    por: '«Ave CANTADORA. Flauta»: agentivo y el instrumento que suena'
+  -
+    num: 261
+    lema: Turijerebo
+    siglas: AM
+    glosa_verbatim: Lugar de descanso
+    tipos:
+      - n_lugar_accion
+    dudoso: false
+    por: «Lugar de DESCANSO»
+  -
+    num: 269
+    lema: Urapa
+    siglas: AM
+    glosa_verbatim: Sitio de cría de animales
+    tipos:
+      - n_lugar_accion
+    dudoso: false
+    por: «Sitio de CRÍA de animales»
+  -
+    num: 271
+    lema: Uray
+    siglas: AM
+    glosa_verbatim: Envoltura o vaina de las cerbatanas
+    tipos:
+      - n_resultado
+    dudoso: true
+    por: «ENVOLTURA o vaina de las cerbatanas»
+  -
+    num: 273
+    lema: Uria
+    siglas: AM
+    glosa_verbatim: Plantío, siembra
+    tipos:
+      - n_accion
+    dudoso: false
+    por: «Plantío, SIEMBRA»
+  -
+    num: 275
+    lema: Usera
+    siglas: AM
+    glosa_verbatim: Seco, arenoso
+    tipos:
+      - verbo_estativo
+    dudoso: false
+    por: «Seco, arenoso»; v_estativo en el canon
+  -
+    num: 283
+    lema: Yapamata
+    siglas: AM
+    glosa_verbatim: Siembra, plantío
+    tipos:
+      - n_accion
+    dudoso: false
+    por: «SIEMBRA, plantío»

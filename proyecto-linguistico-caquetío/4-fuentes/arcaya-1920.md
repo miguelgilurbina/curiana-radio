@@ -9,7 +9,7 @@ paginas: 348
 capa_texto: si
 estado_minado: minado
 prioridad: media
-cobertura: "religión/familia (sesión 3) + pp. 97-100, el oficio del boratio (2026-08-04) + cap. I, la geografía física de Falcón, pp. 12-19 (2026-09-10) + la campaña de `-gua` (2026-09-21)"
+cobertura: "religión/familia (sesión 3) + pp. 97-100, el oficio del boratio (2026-08-04) + cap. I, la geografía física de Falcón, pp. 12-19 (2026-09-10) + p. 75, lo que Arcaya dice del idioma caquetío (2026-09-21) + la campaña de `-gua` (2026-09-21)"
 sostiene: {hechos_corpus: 13, entradas_lexicon: 1, ritos_documentados: 3}
 verificado: 2026-09-10
 minado: 2026-09-21
@@ -216,3 +216,45 @@ hallazgo nuevo y no se cuentan como tal.
 OCR). Y hay doce nombres nuevos para el repo en estos pasajes —Guaidima,
 Guararipana, Meachiche, Chuchure, Angoleta, Butare, Utaquire, Quiragua,
 Mapiare, Cariagua, Cocuicita, Oribor— sin procesar.
+
+---
+
+## Bitácora — la campaña del nominalizador (2026-09-21)
+
+**Qué se le preguntó.** ¿Trae Arcaya nombres de acción caquetíos que compartan
+terminación con un verbo? (d21.11, opción C.)
+
+**Qué ha dado: la cita que cierra su lado.** P. impresa **75**, literal:
+
+> «Pensamos, con fundadas razones, que también debe clasificarse en la familia
+> lingüística nuarhuaca al idioma caquetío. **No se conserva de él,
+> desgraciadamente, vocabulario alguno, ni mucho menos hay frases que permitan
+> conocer su estructura gramatical**, pero sí quedan los nombres, muy numerosos
+> por cierto, de los lugares que habitaron […] y nombres propios de personas»
+
+Y lo único que da de léxico, de la Relación de Barquisimeto de 1579: «sabana»,
+«Capu» (el demonio), «bariqué», «guadabacoa o adobacoa», «quiccide», «mene» y
+«cumaragua» — **siete voces, las siete nombres**. Buscarle a Arcaya un
+nominalizador es buscar lo que él mismo declara por escrito que no dejó.
+
+**Y una frase de la misma página que importa para el otro lado del asunto.**
+Las lenguas nuarhuacas, dice, *«conjuga[n] los temas verbales y nominales,
+prefijándoles ciertos índices posesivos»*. Es, en una línea, lo que los agentes
+hicieron por su cuenta con `ta-chaa` «mi hacer» — con el matiz que hay que
+decir: es de la **familia**, no del caquetío, y describe **conjugación**, no
+derivación de nombres. No sostiene un nominalizador; sostiene que prefijar un
+índice a un tema verbal es arahuaco.
+
+**Una glosa que se corrige de camino.** Arcaya escribe «mene y cumaragua
+(nombres de la **viruela**)». Zavala (2015, p. 62) lo cita como «nombre de la
+**ciruela**», y la ficha de [[zavala-reyes-2015]] había marcado la cita con
+⚠️ D por «sintaxis ambigua». No era la sintaxis: era la lectura de la v-. La
+Tabla A-9 de Oliver, independiente, trae «viruela».
+
+**Nota de extracción.** La capa de texto de este PDF **pierde los acentos**
+(«Falc?n», «ling??stica») con `-enc UTF-8` y con `-enc Latin1` por igual: la
+fuente del PDF está mal mapeada. Las citas de arriba se transcriben
+restituyendo los acentos; el texto sin ellos es reproducible con `pdftotext
+-enc UTF-8`. Añádase a la receta de esta obra, junto al «pypdf devuelve vacío».
+
+Propuesta: `6-fusion/propuesta_nominalizador_2026-09-21.yaml`.
