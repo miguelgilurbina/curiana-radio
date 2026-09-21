@@ -1,0 +1,1548 @@
+# ══════════════════════════════════════════════════════════════════════
+# TAÍNO — Fernández de Oviedo y Valdés, *Historia general y natural de las
+# Indias*, vol. I (Primera parte, libros I-XIX), ed. Amador de los Ríos,
+# Madrid, Real Academia de la Historia, 1851.
+#
+# PROPUESTA (regla 5). Comparanda de la ESFERA DE CONTACTO, NO caquetío.
+# Campaña del taíno, parcela T1, 2026-09-21.
+#
+# Las cifras de `meta.cobertura` se MIDEN (regla 1) con
+# `6-fusion/scripts/medir_taino_oviedo.py`; no se escriben a mano.
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  obra: oviedo-y-valdes-1851          # clave foránea → 4-fuentes/bibliografia.yaml (regla 8)
+  parcela: "T1 — Oviedo y Valdés 1851, vol. I"
+  fecha: 2026-09-21
+  generado_por: >-
+    lectura del escriba (agente Opus 5) sobre la capa de texto del PDF local,
+    con verificación por imagen de cada forma allí donde la página todavía
+    tiene imagen (impresas 1-154).
+
+  # ─────────────────────────────────────────────────────────────────
+  # LO PRIMERO: la ficha de esta obra decía que el PDF era ilegible.
+  # Es falso, y hay que decirlo antes que nada.
+  # ─────────────────────────────────────────────────────────────────
+  correccion_a_la_ficha:
+    decia: >-
+      `4-fuentes/oviedo-y-valdes-1851.md` (verificado 2026-07-29) daba el PDF
+      por «🔴 corrupto»: `pypdf` falla con «Stream has ended unexpectedly»,
+      `pdftotext` extrae **0 caracteres**, veredicto «no procesable con las
+      herramientas actuales»; y además «sería el volumen equivocado».
+    es: >-
+      El archivo está TRUNCADO (no tiene `startxref` ni `%%EOF`: 0 de cada uno),
+      y por eso los dos extractores se plantan. Pero MuPDF lo abre en modo
+      reparación reconstruyendo la tabla de referencias, y entonces el volumen
+      entero está ahí — capa de texto incluida. Y es el tomo CORRECTO: portada
+      «HISTORIA GENERAL Y NATURAL DE LAS INDIAS… PRIMERA PARTE. MADRID… 1851»,
+      libros I-XIX, que son justamente los de costumbres, agricultura, árboles,
+      animales, aves, Cuba, Jamáyca y Tierra-Firme.
+    como_se_lee: "python -c \"import pymupdf; d=pymupdf.open(RUTA); d[n].get_text()\""
+    lo_que_sigue_siendo_verdad: >-
+      La IMAGEN escaneada sí se perdió en parte (ver `estado_del_pdf`), y el
+      «apéndice de voces del tomo IV» sigue sin existir. Pero la obra dejó de
+      ser una deuda documental: es una fuente minable, y lo es desde hoy.
+
+  estado_del_pdf:
+    paginas_pdf: 766
+    extractor_que_funciona: "pymupdf (MuPDF) en modo reparación (`is_repaired = True`)"
+    extractores_que_fallan: "pdftotext (0 caracteres) y pypdf (excepción) — los dos por el truncamiento"
+    capa_de_texto: "OCR antiguo (`GlyphLessFont`), 3.000.938 caracteres, 12 páginas del PDF casi vacías"
+    desfase_paginas: "impresa = pdf − 118 (pdf 119 = impresa 1; pdf 736 = impresa 618). Constante, verificado en 405 páginas"
+    indice_del_editor: "impresas 619-648 — es índice de CAPÍTULOS, no un vocabulario de voces americanas. Sirve para localizar, no para citar"
+    # ⚠️ el límite que manda sobre todo lo demás
+    imagen_recuperable_hasta: 154
+    imagen_perdida_desde: 155
+    consecuencia: >-
+      Las impresas 1-154 se pueden RENDERIZAR y por tanto la forma se verifica
+      con los ojos. De la 155 a la 618 la imagen escaneada está rota («format
+      error: object is not a stream») y sólo sobrevive el texto OCR: allí la
+      forma es una LECTURA DEL OCR, no una lectura de la página. Cada entrada
+      lo declara en `verificacion`, y en duda se degrada (regla 2).
+
+  # ─────────────────────────────────────────────────────────────────
+  # La ortografía, medida ANTES de contar (skill minar-fuente §2)
+  # ─────────────────────────────────────────────────────────────────
+  ortografia_de_la_obra:
+    cedilla: "la obra usa ç sistemáticamente (`çemi`, `caçique`, `caçabi`, `haçer`, `deçir`)"
+    ocr_destroza_la_cedilla: >-
+      El OCR transcribe ç como `g` o como `9`: `gemi` por `çemi`, `cagique` por
+      `caçique`, `ca9abi` por `caçabi`, `hager` por `haçer`. Es la sustitución
+      más frecuente y afecta a casi toda página.
+    y_por_i: "`mahiz`, `areyto`, `yvana`, `Jamáyca`, `Mayci`, `bayle`"
+    x_por_/ʃ/: "`xagua`, `axi`, `dexar`, `baxo`"
+    ss_intervocalica: "`passado`, `possession`, `assi`, `paresçe`/`paresçer`"
+    chripstiano: "siempre `chripstiano`, nunca `cristiano` — sonda útil"
+    b_v: "vacila: `buhio`/`huhio` (OCR), `savana`/`sabana`, `bexuco`"
+    tildes: "del editor del XIX, no del original; el propio editor anota cuándo enmienda"
+    # 🔴 lo que más cuesta, y es lo que hace falta
+    las_cursivas_son_las_voces: >-
+      El editor de 1851 pone en CURSIVA las voces indígenas. El OCR es peor
+      justo en la cursiva, así que **el OCR corrompe precisamente la palabra
+      que se busca**. Medido: `buhití` salió `buhüí`; `çemi` salió `gemi`;
+      `bixa` salió `hixa`; `dalihao`/`datihao` es ilegible sin imagen. Por eso
+      ninguna forma de este YAML se da por buena por el OCR solo cuando la
+      página todavía tiene imagen.
+    y_la_cursiva_no_se_puede_detectar_sola: >-
+      La capa de texto es `GlyphLessFont`: no conserva la fuente, así que no
+      hay manera programática de listar las cursivas. Se localiza con el OCR y
+      se lee con los ojos.
+
+  formulas_de_atribucion_medidas:
+    nota: "conteos sobre el volumen entero, con los espacios normalizados"
+    llaman: 517
+    los_indios_llaman: 38
+    llaman_los_indios: 25
+    se_llama: 188
+    nombran: 21
+    en_su_lengua: 10
+    lengua_desta_isla: 5
+    # y los ceros que hubo que verificar (regla 6)
+    ceros_verificados:
+      Jamaica: "0 — porque la obra escribe **Jamáyca**. Verificado en el índice (impresa 619) y en p.82"
+      nitaino: "0 con todas las grafías probadas (`nitayno`, `nitaino`, `nilaino`, `nita*`). Oviedo NO da la voz en este volumen"
+      maboya: "0 (`maboya`, `mabuya`) — no está en el vol. I"
+      behique: "0 con esa grafía: la voz existe pero Oviedo la escribe **buhití** (p.126, verificada en imagen)"
+      borattio: "0 (`borat*`, `boratt?io`) — el dato de `creencia-001` NO está en el vol. I"
+      cemi_con_c: "0 con `cemi`: la obra escribe **çemi**, que el OCR da como `gemi`"
+      cazabe_con_z: "0: la obra escribe **caçabi**"
+
+  advertencia: >-
+    ESTO NO ES CAQUETÍO. Es taíno (y, en la sección `no_taino`, cueva,
+    nicaragüense y de Tierra-Firme). Entra como ESFERA DE CONTACTO, que se
+    mide aparte en `prestamos_de_esfera` y no penaliza — no como andamio de la
+    reconstrucción. Y es COLONIAL por definición (regla 3): Oviedo escribe
+    entre 1514 y 1548, la simulación es del XIV-XV. No se proyecta nada.
+
+  quedan_fuera:
+    recuperacion_contemporanea: >-
+      Excluido y dicho: no se ha mirado ni una página de taíno «revivido»,
+      neologismo moderno, alfabeto nuevo ni diccionario comunitario del s.
+      XX-XXI. Esta parcela sale ENTERA de una edición de 1851 de un texto de
+      1535-1548, dominio público.
+    tainismo_panhispanico: >-
+      Una voz que hoy diga el castellano (`huracán`, `canoa`, `sabana`,
+      `macana`) NO entra por ser tainismo de diccionario: entra sólo si Oviedo
+      la declara de una isla o una lengua, y con la glosa que él da. La glosa
+      se lee VERBATIM antes de aceptar nada.
+    no_declaradas: >-
+      Lo que Oviedo nombra sin decir de dónde es lleva
+      `atribucion: no-declarada` y NO cuenta como taíno.
+
+  cobertura:
+    formas_transcritas: 89
+    formas_distintas: 89
+    por_seccion:
+      costa_de_venezuela: 4
+      la_espanola: 54
+      otras_islas: 25
+      no_taino: 6
+    por_verificacion:
+      ocr-sin-imagen: 47
+      imagen: 28
+      parcial: 14
+    campos_tocados: 18
+    paginas_impresas_citadas: 82
+    paginas_citadas_con_imagen: 24
+    paginas_citadas_solo_ocr: 58
+    rango_de_paginas: 24-530
+    entradas_taínas_del_lexicon: 52
+    de_esas_con_cita_de_oviedo: 30
+    cuales:
+    - aji
+    - areito
+    - batata
+    - batey
+    - bejique
+    - bixa
+    - bohio
+    - bohío
+    - cacike
+    - cacique
+    - caney
+    - casabe
+    - cazabi
+    - cemi
+    - dujo
+    - guanin
+    - guayaba
+    - higuana
+    - huracan
+    - hutia
+    - iwana
+    - kunuku
+    - maisi
+    - manati
+    - maíz
+    - naboria
+    - papaya
+    - piragua
+    - tabako
+    - yuca
+    de_esas_sin_cita_todavía:
+    - abba
+    - acoa
+    - aduri
+    - agari
+    - akcicyaa
+    - cai
+    - caiman
+    - cayo
+    - cobo
+    - cohiba
+    - daca
+    - guabina
+    - maboya
+    - manigua
+    - mayani
+    - nitaino
+    - taita
+    - thigisi
+    - tuna
+    - wacusi
+    - wagulo
+    - yamosa
+    voces_nuevas_no_en_el_lexicon: 64
+   # ← lo escribe 6-fusion/scripts/medir_taino_oviedo.py (regla 1)
+
+  libros_leidos:
+    # qué se leyó de verdad, no qué se hojeó
+    completos_o_casi:
+      - "Libro V (impresas 124-160) — ritos, çerimonias y costumbres. Es el libro con más voces glosadas y, por suerte, cae casi entero en la franja con imagen"
+      - "Libro VI, caps. I-IV y XIX-XX (161-171, 205-207) — casas, batey, canoas, huracanes; y el capítulo de Paraguaná y el de la hierva de Venezuela"
+      - "Libro VII (263-286) — agricultura: mahiz, caçabi, yuca, ajes, batatas, maní, lirenes, la piña"
+    por_sondeo_dirigido:
+      - "Libros I-IV (1-123) — sondeados por fórmula de nombrar: pp. 25, 41, 48-50, 62-68, 82, 90"
+      - "Libro VIII (287-360) — árboles fructíferos: pp. 296-297, 305-306, 313-315, 323, 326"
+      - "Libros IX-XI (361-385) — pp. 376, 380"
+      - "Libros XII-XIV (386-448) — animales, animales de agua, aves: pp. 393-396, 424, 433, 442"
+      - "Libros XVI-XVII (462-577) — San Juan y Cuba: pp. 471-473, 480, 500-501"
+    no_leidos:
+      - "Libro XV (449-461)"
+      - "Libro XVIII (578-585) — Jamáyca"
+      - "Libro XIX (586-618) — Tierra-Firme, Cubagua, Cumaná: leído sólo por sonda; es el libro con más costa de Venezuela y queda ABIERTO (ver issue)"
+      - "el grueso de los libros VIII-XVII fuera de las páginas citadas"
+    por_que: >-
+      El volumen son 618 páginas impresas y la verificación por imagen sólo es
+      posible en 154 de ellas. Se priorizó, como pedía el encargo, costumbres
+      (V) + agricultura (VII) + plantas y animales, y se dice lo que no se
+      leyó en vez de insinuar que se leyó todo.
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. LA COSTA DE VENEZUELA — lo que va arriba del todo
+#    Oviedo NO dice «caquetío» ni una vez en este volumen (`caquet` = 0,
+#    `caiquet` = 0, `Curiana` = 0, `Coquibacoa` = 0). Pero sí nombra la
+#    provincia de Venezuela, Coro y Paraguaná, y da tres voces de allí.
+# ══════════════════════════════════════════════════════════════════════
+costa_de_venezuela:
+
+  - forma_fuente: Paraguana
+    glosa_fuente: >-
+      «En el camino que hay desde la cibdad de Coro, yendo al cabo de Sanct
+      Román, que los indios llaman á aquella provinçia Paraguana, es un cabo
+      que sale á la mar veynte y çinco leguas ó mas»
+    libro: VI
+    capitulo: XIX
+    pagina_impresa: 205
+    atribucion: "«los indios» de la provinçia de Veneçuela, en el camino de Coro al cabo de Sanct Román"
+    variedad_declarada: no-declarada
+    campo: toponimo
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: "no como voz; el topónimo Paraguaná sí está en el canon de topónimos"
+    por_que_importa: >-
+      Es una atestación de 1548 del nombre Paraguaná PUESTO EN BOCA DE LOS
+      INDIOS por un cronista que no estuvo allí pero que toma juramento a dos
+      testigos ante la Audiencia de Santo Domingo el 13 de julio de 1540
+      (Alonso de la Llana y Françisco Nuñez, nombrados en la p. 206) y cita a
+      un tercero (Lázaro Bejarano). Es la fuente más antigua del repo para el
+      nombre, y llega por una vía independiente de Esteves y de Medina.
+    ojo: >-
+      El capítulo trata de un espejismo óptico en el istmo, no de lengua. El
+      topónimo viene de paso — que es justo lo que lo hace fiable.
+
+  - forma_fuente: comoho
+    glosa_fuente: >-
+      Título: «De los cardos de las tunas é su fructa, la qual en la provinçia
+      de Venezuela en la Tierra-Firme se llama comoho». Cuerpo: «Esta fructa y
+      aun el cardo en que nasçe, se llama comoho en la provinçia de Veneçuela»
+    libro: VIII
+    capitulo: XXVIII
+    pagina_impresa: [313, 314]
+    atribucion: "provinçia de Veneçuela, en Tierra-Firme — DECLARADA dos veces, en el título y en el cuerpo"
+    variedad_declarada: no-declarada
+    campo: planta
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+    que_es: "el fruto del cardón de las tunas (Opuntia / Cactaceae) y el propio cardón"
+    por_que_importa: >-
+      Es lo más cerca que este volumen llega de una voz de la Kaketiana: una
+      planta del cardonal —el paisaje que el corpus ya tiene medido
+      (`ecologia-007/018/032`: cardonal, sin ríos ni ceibas)— nombrada en la
+      provincia que es la de los caquetíos. NO se puede llamar caquetía: Oviedo
+      dice «provinçia de Veneçuela», que en 1548 es la gobernación de los
+      Welser entera, no una etnia. Va a la esfera, con la etiqueta más baja
+      que aguante.
+
+  - forma_fuente: hado
+    forma_ocr_cruda: hado
+    glosa_fuente: >-
+      Título del cap. XX: «De la hierva que los indios de Nicaragua llaman
+      yaat, é en la gobernación de Venecuela se dice hado, y en el Perú la
+      llaman coca, é en otras partes la nombran por otros nombres diversos,
+      porque son las lenguas diferentes». Y en el cuerpo: «En la provincia de
+      Veneçuela é otra parte la siembran é cultivan é curan con mucha
+      diligençia é cuydado en sus huertos»
+    libro: VI
+    capitulo: XX
+    pagina_impresa: [206, 207]
+    atribucion: "gobernación de Veneçuela — DECLARADA"
+    variedad_declarada: no-declarada
+    campo: [planta, rito]
+    verificacion: ocr-sin-imagen
+    # 🔴 aquí es donde manda la regla 2
+    duda: >-
+      El OCR da `hado` en las DOS apariciones (p. 206 y el índice, p. 621),
+      pero `hado` es palabra castellana y el contexto pide un nombre indígena.
+      La lectura esperable es **hayo**, que es como se llama la coca en el
+      occidente de Venezuela y Colombia, y que además es homógrafa de una
+      entrada del lexicón (`hayo`, una de las 52 voces que colisionan con un
+      nombre del elenco). `d`/`y` es confusión de OCR corriente. **Sin imagen
+      no se puede decidir** (p. 206 > 154), así que la entrada queda EN DUDA y
+      degradada: no se propone al lexicón hasta verla.
+    como_se_cierra: "una sola página de otra copia del tomo I (Internet Archive) resuelve esto en un minuto"
+    en_el_lexicon: "`hayo` existe como clave; esta cita NO se le cuelga hasta verificar la forma"
+
+  - forma_fuente: yaguaraha
+    glosa_fuente: >-
+      «llevan una fructa de dos maneras de forma de higos; los unos colorados ó
+      roxos… é llaman los indios á esta fructa yaguaraha. Es muy buena al gusto
+      é sano mantenimiento é fresco, y en el cardo en que nasçe, está cubierta
+      esta fructa de espinas á manera de castañas»
+    libro: VIII
+    capitulo: XXXIX
+    pagina_impresa: 326
+    atribucion: "«los indios» de la isla de Cubagua"
+    variedad_declarada: no-declarada
+    campo: planta
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+    ojo: >-
+      Cubagua es costa de Venezuela pero es la ORIENTAL (Cumaná, Margarita):
+      guaiquerí y cumanagoto, no caquetío. Regla 4: la esfera no es la comarca,
+      pero tampoco todo lo venezolano es lo mismo. Se anota como esfera, lejos.
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. LA ESPAÑOLA — voces que Oviedo declara de esta isla
+#    Las de impresa ≤ 154 llevan `verificacion: imagen`: la forma se leyó
+#    con los ojos sobre el escaneo, no sobre el OCR.
+# ══════════════════════════════════════════════════════════════════════
+la_espanola:
+
+  # ── 2.a  Rito, autoridad y memoria (Libro V) ────────────────────────
+  - forma_fuente: areyto
+    plural_en_la_fuente: areytos
+    glosa_fuente: >-
+      «Y en esta isla, á lo que he podido entender, solos sus cantares, que
+      ellos llaman areytos, es su libro ó memorial que de gente en gente queda
+      de los padres á los hijos, y de los presentes á los venideros». Y en el
+      cap. I: «esto era en sus cantares é bayles, que ellos llaman areyto, que
+      es lo mismo que nosotros llamamos baylar cantando»
+    libro: V
+    capitulo: I
+    pagina_impresa: [125, 127, 128]
+    atribucion: "«en esta isla» — la Española. Oviedo lo extiende luego: «en esta y en las otras islas (y aun en mucha parte de la Tierra-Firme)»"
+    variedad_declarada: no-declarada
+    campo: [rito, transmision]
+    verificacion: imagen
+    en_el_lexicon: "sí — `areito`, fuente `taíno`, glosa «areíto, danza ritual narrativa, celebración», SIN procedencia.obra"
+    aporta: "primera cita citable para `areito`; y la glosa de Oviedo es más precisa que la del lexicón: no es sólo danza, es el SOPORTE DE LA MEMORIA («es su libro ó memorial»)"
+
+  - forma_fuente: duho
+    glosa_fuente: >-
+      p.125: «no solamente en una parte de la casa le tienen figurado, mas aun
+      en los bancos, en que se assientan (que ellos llaman duho)». p.165: «al
+      caçique é hombres prinçipales poníanles unos banquillos de palo, muy bien
+      labrados, de lindas maderas, é con muchas labores de relieve é
+      concavadas, entalladas y esculpidas en ellos, á los quales bancos ó
+      escabelo llaman duho»
+    libro: V
+    capitulo: I
+    pagina_impresa: [125, 165]
+    atribucion: "«en esta isla» (contexto del cap. I); la segunda cita es del Libro VI cap. II, del juego del batey"
+    variedad_declarada: no-declarada
+    campo: [objeto, autoridad]
+    verificacion: imagen        # p.125 verificada; p.165 es OCR
+    en_el_lexicon: "sí — `dujo`, glosa «dujo, asiento de madera tallado del cacique», SIN procedencia"
+    aporta: "dos atestaciones en la misma obra, y la segunda confirma la glosa del lexicón (es el banco del caçique y de los principales)"
+
+  - forma_fuente: çemi
+    forma_ocr_cruda: gemi
+    plural_en_la_fuente: çemies
+    glosa_fuente: >-
+      «Al qual ellos llaman çemi, y á este tienen por su Dios, y á este piden
+      el agua, ó el sol, ó el pan, ó la victoria contra todos sus enemigos y
+      todo lo que dessean». Y más abajo: «En esta Isla Española çemi, como he
+      dicho, es el mismo que nosotros llamamos diablo»
+    libro: V
+    capitulo: I
+    pagina_impresa: [126, 138]
+    atribucion: "«En esta Isla Española» — DECLARADA, literal"
+    variedad_declarada: no-declarada
+    campo: [rito, creencia]
+    verificacion: imagen
+    en_el_lexicon: "sí — `cemi`, glosa «cemí, ídolo sagrado, espíritu materializado», SIN procedencia"
+    ojo: >-
+      Oviedo usa `çemi` para DOS cosas y lo dice: el ídolo/dios, y también el
+      adivino que lo lleva («por tal imagen les daban el mismo nombre que á
+      ella, é los deçían çemies, allende de los deçir buhitís»). La glosa del
+      lexicón sólo recoge la primera.
+
+  - forma_fuente: buhití
+    forma_ocr_cruda: buhüí
+    plural_en_la_fuente: buhitís
+    glosa_fuente: >-
+      «E tenian çiertos hombres entre sí que llaman buhití, que servian de
+      auríspiçes ó agoreros adevinos; é aquestos les daban á entender que el
+      çemí es señor del mundo é del çielo y de la tierra y de todo lo demas».
+      Y: «Estos, por la mayor parte, eran grandes hervolarios é tenian
+      conosçidas las propiedades de muchos árboles é plantas é hiervas; é como
+      sanaban á muchos con tal arte, teníanlos en gran veneraçión»
+    libro: V
+    capitulo: I
+    pagina_impresa: 126
+    atribucion: "«En esta Isla Española» (mismo pasaje que çemi)"
+    variedad_declarada: no-declarada
+    campo: [rito, autoridad, transmision]
+    verificacion: imagen
+    en_el_lexicon: "sí — `bejique`, glosa «bejique, chamán taíno, mediador ritual», SIN procedencia"
+    # este es el caso que justifica todo el protocolo de imagen
+    aporta: >-
+      La forma del lexicón (`bejique`) NO es la de Oviedo (`buhití`), y el OCR
+      daba una tercera cosa (`buhüí`) que no es ninguna de las dos. Sin mirar
+      la página, esta entrada se habría citado mal. Además Oviedo añade un
+      rasgo que el lexicón no tiene: el buhití es HERBOLARIO, y su medicina va
+      junta con la adivinación.
+
+  - forma_fuente: tabaco
+    plural_en_la_fuente: tabacos
+    glosa_fuente: >-
+      «Usaban los indios desta isla entre otros sus viçios uno muy malo, que es
+      tomar unas ahumadas, que ellos llaman tabaco, para salir de sentido». Y
+      la corrección expresa: «á aquel tal instrumento con que toman el humo, ó
+      á las cañuelas que es dicho llaman los indios tabaco, é no á la hierva ó
+      sueño que les toma (como pensaban algunos)»
+    libro: V
+    capitulo: II
+    pagina_impresa: [130, 131, 143]
+    atribucion: "«los indios desta isla» — la Española"
+    variedad_declarada: no-declarada
+    campo: [objeto, rito]
+    verificacion: imagen
+    en_el_lexicon: "sí — `tabako`, glosa «tabaco (Nicotiana tabacum), pipa ceremonial»"
+    # 🔴 esto es un dato, no una curiosidad
+    contradice_al_lexicon_a_medias: >-
+      Oviedo dice EXPLÍCITAMENTE que `tabaco` es el CAÑUTO, no la hierba, y que
+      quien creyó lo contrario se equivocó. La glosa del lexicón pone la planta
+      PRIMERO y la pipa después. Regla de la skill §8: no se reescribe la
+      glosa aquí; se levanta el issue con la cita.
+
+  - forma_fuente: hamaca
+    glosa_fuente: >-
+      «bien es que se diga qué camas tienen los indios en esta Isla Española, á
+      la qual cama llaman hamaca; y es de aquesta manera. Una manta texida en
+      partes y en partes abierta, á escaques cruzados hecha red, porque sea mas
+      fresca, y es de algodón hilado (de mano de las indias)»
+    libro: V
+    capitulo: II
+    pagina_impresa: [131, 132]
+    atribucion: "«los indios en esta Isla Española» — DECLARADA, literal"
+    variedad_declarada: no-declarada
+    campo: [objeto, casa]
+    verificacion: imagen
+    en_el_lexicon: "NO — `hamaca` no es clave del lexicón pese a ser de las voces taínas mejor atestiguadas"
+    aporta: "candidata nueva a la esfera, con glosa y descripción técnica completa"
+
+  - forma_fuente: hico
+    plural_en_la_fuente: hicos
+    glosa_fuente: >-
+      «á las quales sogas llaman hicos, porque hico quiere deçir lo mismo que
+      soga, ó cuerda; y el un hico atan á un árbol ó poste y el otro al otro, y
+      queda en el ayre la hamaca»
+    libro: V
+    capitulo: II
+    pagina_impresa: [132, 146]
+    atribucion: "contexto de «los indios en esta Isla Española» (cap. de la hamaca)"
+    variedad_declarada: no-declarada
+    campo: objeto
+    verificacion: imagen
+    en_el_lexicon: no
+    aporta: "glosa EXPLÍCITA y monosémica («quiere deçir lo mismo que soga ó cuerda»), de las más limpias del volumen"
+
+  - forma_fuente: hava
+    plural_en_la_fuente: havas
+    glosa_fuente: >-
+      «llévanlas en estas partes é Indias los hombres de guerra dentro de unas
+      çestas con sus tapadores ligeras, que acá se llaman havas, y en otras
+      partes destas Indias se diçen patacas, segund se dirá adelante, las
+      quales haçen de los bihaos»
+    libro: V
+    capitulo: II
+    pagina_impresa: 132
+    atribucion: "«acá» = la Española (Oviedo escribe desde Santo Domingo)"
+    variedad_declarada: no-declarada
+    campo: objeto
+    verificacion: imagen
+    en_el_lexicon: no
+    ojo: "NO es el haba castellana: es una cesta con tapa. Leer la glosa evita exactamente el error del `macana` achagua"
+
+  - forma_fuente: pataca
+    plural_en_la_fuente: patacas
+    glosa_fuente: "«y en otras partes destas Indias se diçen patacas» (la misma cesta que acá llaman havas)"
+    libro: V
+    capitulo: II
+    pagina_impresa: 132
+    atribucion: "«otras partes destas Indias» — NO la Española. Oviedo no dice cuáles"
+    variedad_declarada: no-declarada
+    campo: objeto
+    verificacion: imagen
+    en_el_lexicon: no
+
+  - forma_fuente: bihao
+    plural_en_la_fuente: bihaos
+    glosa_fuente: >-
+      p.163: «otros cubren de paja delgada é luenga: otros cubren con hojas de
+      bihaos». p.132: «las quales haçen de los bihaos»
+    libro: [V, VI]
+    capitulo: [II, I]
+    pagina_impresa: [132, 163]
+    atribucion: "la Española (techumbre del buhío y cestería)"
+    variedad_declarada: no-declarada
+    campo: planta
+    verificacion: imagen        # p.132 verificada; p.163 es OCR
+    en_el_lexicon: no
+
+  - forma_fuente: bixa
+    forma_ocr_cruda: hixa
+    glosa_fuente: >-
+      «rodeados muchas vueltas de hicos ó cuerdas de algodón, juntas y
+      espessas, en lugar de coraças, y embixados todos ó pintados de çierta
+      color roxa, como almagre, ó mas subida color, que se llama bixa, con
+      muchos penachos»
+    libro: V
+    capitulo: VII
+    pagina_impresa: 146
+    atribucion: "los indios de don Enrique, en la Española (guerra del Baoruco)"
+    variedad_declarada: no-declarada
+    campo: [planta, rito, guerra]
+    verificacion: imagen
+    en_el_lexicon: "sí — `bixa`, glosa «bija, onoto, achiote (Bixa orellana), pigmento», SIN procedencia"
+    aporta: >-
+      Cita para `bixa` Y el verbo derivado en castellano de Indias
+      («embixados»), que muestra la voz ya integrada en 1548. Otro caso donde
+      el OCR (`hixa`) habría metido una forma inexistente en el canon.
+
+  - forma_fuente: savana
+    glosa_fuente: "«que él se tornaría á salir á la savana ó á lo raso»"
+    libro: V
+    capitulo: VII
+    pagina_impresa: 146
+    atribucion: no-declarada
+    variedad_declarada: no-declarada
+    campo: [ecologia, geografia]
+    verificacion: imagen
+    en_el_lexicon: no
+    ojo: >-
+      Va en REDONDA, no en cursiva: en 1548 el editor (o Oviedo) ya la trata
+      como castellano, no como voz india. Por eso `atribucion: no-declarada` y
+      NO cuenta como taína, aunque todo el mundo sepa que lo es. Es justo la
+      trampa del «tainismo panhispánico».
+
+  - forma_fuente: naguas
+    glosa_fuente: >-
+      «pero las donzellas vírgines ninguna cosa trayan destas mantas (que
+      llaman naguas) sino de todo punto toda la persona desnuda»
+    libro: III
+    capitulo: V
+    pagina_impresa: 68
+    atribucion: "las indias de la Española (capítulo de sus costumbres)"
+    variedad_declarada: no-declarada
+    campo: [objeto, parentesco]
+    verificacion: imagen
+    en_el_lexicon: no
+    aporta: >-
+      Dato de MUNDO además de léxico: la nagua marca estado —la llevan las
+      casadas y las que han conocido varón, no las doncellas—. Es una prenda
+      que dice una posición social.
+
+  - forma_fuente: macana
+    plural_en_la_fuente: macanas
+    glosa_fuente: >-
+      p.68: «Pelean con macanas los indios de esta isla, que son unos palos tan
+      anchos como…». p.473: «á macanaços; quiero deçir con aquellas macanas que
+      usan por armas»
+    libro: [III, XVI]
+    capitulo: [V, V]
+    pagina_impresa: [68, 473]
+    atribucion: "«los indios de esta isla» — la Española (p.68); en p.473 son los de San Juan"
+    variedad_declarada: no-declarada
+    campo: [objeto, guerra]
+    verificacion: imagen        # p.68 verificada; p.473 es OCR
+    en_el_lexicon: no
+    ojo: >-
+      Ésta es la voz que hoy mismo se dio por buena en un vocabulario achagua
+      sin leer la glosa. Aquí la glosa está y dice lo que tiene que decir:
+      arma de palo ancho, de los indios de la Española. Va en REDONDA, como
+      `savana`.
+
+  - forma_fuente: huracan
+    glosa_fuente: >-
+      «ovo una tormenta que los indios llaman huracan á los doçe dias del mes
+      de septiembre, que derribó todas las casas é buhios desta cibdad, ó la
+      mayor parte dellas»
+    libro: IV
+    capitulo: I
+    pagina_impresa: [82, 167, 168, 169, 170]
+    atribucion: "«los indios» de la Española (Santo Domingo)"
+    variedad_declarada: no-declarada
+    campo: [ecologia, creencia]
+    verificacion: imagen
+    en_el_lexicon: "sí — `huracan`, glosa «huracán, espíritu del viento destructor, ciclón», SIN procedencia"
+    ojo: >-
+      Oviedo lo da como nombre del TEMPORAL, no de un espíritu. La mitad
+      «espíritu del viento destructor» de la glosa del lexicón NO la sostiene
+      esta fuente. Se anota; no se toca (§8).
+
+  # ── 2.b  Casa, plaza, canoa (Libro VI) — sin imagen ─────────────────
+  - forma_fuente: eracra
+    glosa_fuente: >-
+      «Tornemos á las casas en que moraban, las quales comunmente llaman buhio
+      en estas islas todas (que quiere deçir casa ó morada); pero propriamente
+      en la lengua de Hayti el buhio ó casa se llama eracra»
+    libro: VI
+    capitulo: I
+    pagina_impresa: [163, 165]
+    atribucion: "«en la lengua de Hayti» — la atribución MÁS FUERTE del volumen: nombra la lengua, no sólo la isla"
+    variedad_declarada: "lengua de Hayti"
+    campo: casa
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+    # ⭐ el mejor hallazgo léxico de la parcela
+    por_que_importa: >-
+      Es la única vez en todo el volumen que Oviedo separa «lo que se dice en
+      estas islas todas» de «lo propio de la lengua de Hayti», y da las dos
+      formas: `buhio` es la voz general (la que se quedó en el castellano) y
+      `eracra` es la de la lengua. Es exactamente la distinción que pedía el
+      encargo —el taíno no era una sola lengua— dicha por el cronista. Y el
+      lexicón tiene `bohio`/`bohío` y NO tiene `eracra`: tenemos la voz de
+      koiné colonial y nos falta la propia.
+    ojo: "sin imagen (p.163 > 154). La forma es lectura de OCR y debe verificarse antes de fusionar"
+
+  - forma_fuente: buhio
+    forma_ocr_cruda: huhio
+    glosa_fuente: "«llaman buhio en estas islas todas (que quiere deçir casa ó morada)»"
+    libro: VI
+    capitulo: I
+    pagina_impresa: [163, 164, 165, 167]
+    atribucion: "«en estas islas todas» — pan-insular, explícitamente NO privativo de la Española"
+    variedad_declarada: no-declarada
+    campo: casa
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: "sí — `bohio` y `bohío` (dos claves), SIN procedencia"
+    aporta: "glosa explícita («quiere deçir casa ó morada») y, sobre todo, el alcance: es voz de todas las islas, no de una"
+
+  - forma_fuente: caney
+    glosa_fuente: >-
+      «El buhio ó casa de tal manera fecho, llámasse caney». Y: «pues se debuxó
+      la forma del caney ó casa redonda…»
+    libro: VI
+    capitulo: I
+    pagina_impresa: [164, 165]
+    atribucion: "la Española (cap. de las casas de los indios desta Isla Española)"
+    variedad_declarada: no-declarada
+    campo: casa
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: "sí — `caney`, glosa «caney, bohío rectangular del cacique»"
+    # 🔴 conflicto de glosa, medido
+    contradice_al_lexicon: >-
+      Oviedo dice DOS veces que el caney es la casa REDONDA —la de postes en
+      círculo, varas que se juntan en punta «á manera de pabellón», con mástil
+      central— y que la casa de los PRINCIPALES y CAÇIQUES es la OTRA, «hechas
+      á dos aguas y luengas, como las de los chripstianos». El lexicón dice lo
+      contrario en las dos mitades: «rectangular» y «del cacique». No se
+      reescribe la glosa (§8): va al issue.
+
+  - forma_fuente: batey
+    glosa_fuente: >-
+      p.163: «en cada plaça que avia en el pueblo ó villa estaba lugar diputado
+      para el juego de la pelota (que ellos llaman batey)». p.471: «mandó que
+      su gente lo jugasen al batey (que es el juego de la pelota de los indios)»
+    libro: [VI, XVI]
+    capitulo: [I, IV]
+    pagina_impresa: [163, 165, 471]
+    atribucion: "la Española (p.163) y San Juan (p.471) — las dos declaradas por contexto de capítulo"
+    variedad_declarada: no-declarada
+    campo: [rito, objeto, casa]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: "sí — `batey`, glosa «batey, plaza central del poblado, cancha de…»"
+    ojo: >-
+      Para Oviedo `batey` es EL JUEGO, no la plaza: «el juego de la pelota que
+      ellos llaman batey». La plaza es «la plaça» y el sitio es «lugar
+      diputado». La glosa del lexicón pone el lugar primero. Al issue.
+
+  - forma_fuente: conuco
+    glosa_fuente: >-
+      p.163: «tenian sus labranças é conucos (que assi llaman sus
+      heredamientos) de mahizales é yuca». p.269: «es menester yr deshervando
+      el conuco (que assi se llama conuco la haça ó heredad de la yuca é de la
+      labrança)»
+    libro: [VI, VII]
+    capitulo: [I, II]
+    pagina_impresa: [143, 149, 163, 269, 370]
+    atribucion: "la Española"
+    variedad_declarada: no-declarada
+    campo: [cultivo, ecologia]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: "sí — `kunuku`, sin glosa legible y SIN procedencia"
+    aporta: "dos glosas explícitas y cinco páginas. La forma del lexicón (`kunuku`) es la papiamentu moderna, no la de la fuente (`conuco`)"
+
+  - forma_fuente: bexuco
+    plural_en_la_fuente: bexucos
+    glosa_fuente: >-
+      «atanlas muy bien con bexucos, que son unas venas ó correas redondas que
+      se crian revueltas á los árboles (y también colgando dellos) como la
+      correhuela: los quales bexucos son muy buena atadura, porque son
+      flexibiles é taxables, é no se pudren, é sirven de clavazón é ligaçón en
+      lugar de cuerdas y de clavos»
+    libro: VI
+    capitulo: I
+    pagina_impresa: 164
+    atribucion: "la Española (construcción del buhío)"
+    variedad_declarada: no-declarada
+    campo: [planta, casa, objeto]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+
+  - forma_fuente: canoa
+    plural_en_la_fuente: canoas
+    glosa_fuente: >-
+      «hay una manera de barcas que los indios llaman canoa, con que ellos
+      navegan por los rios grandes y assi mismo por estas mares de acá… Cada
+      canoa es de una sola pieza ó solo un árbol, el qual los indios vaçian con
+      golpes de hachas de piedras enhastadas»
+    libro: VI
+    capitulo: IV
+    pagina_impresa: [170, 171]
+    atribucion: "«En esta Isla Española y en las otras partes todas destas Indias» — DECLARADA"
+    variedad_declarada: no-declarada
+    campo: [navegacion, objeto]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: "NO — `canoa` no es clave del lexicón (sí `piragua`)"
+    aporta: "candidata nueva, con la glosa técnica completa y el modo de fabricación"
+
+  - forma_fuente: piragua
+    plural_en_la_fuente: piraguas
+    glosa_fuente: >-
+      «Que tracta de los navios ó barcas de los indios, que ellos llaman
+      canoas, é en algunas islas é partes las diçen piraguas; las quales son de
+      una pieza é de un solo árbol»
+    libro: VI
+    capitulo: IV
+    pagina_impresa: [170, 344]
+    atribucion: "«en algunas islas é partes» — EXPRESAMENTE no la Española, y Oviedo no dice cuáles"
+    variedad_declarada: no-declarada
+    campo: [navegacion, objeto]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: "sí — `piragua`, glosa «piragua, canoa grande de un palo»"
+    ojo: >-
+      Para Oviedo `canoa` y `piragua` son LA MISMA COSA con dos nombres según
+      la isla, no dos tamaños. La glosa del lexicón («canoa grande») introduce
+      una distinción que esta fuente no hace.
+
+  # ── 2.c  Agricultura (Libro VII) — sin imagen ───────────────────────
+  - forma_fuente: mahiz
+    glosa_fuente: >-
+      Título: «Del pan de los indios llamado mahiz, é de cómo se siembra y se
+      coge». Cuerpo: «se dirá aqui qué cosa es aqueste pan que llaman mahiz, y
+      qué tal es el que llaman caçabi. El mahiz es grano, y el caçabi se haçe
+      de rayçes de una planta que llaman yuca»
+    libro: VII
+    capitulo: I
+    pagina_impresa: [264, 265, 266, 267, 268]
+    atribucion: "«la manera del pan de los indios es de dos géneros en esta isla» — la Española"
+    variedad_declarada: no-declarada
+    campo: [alimento, cultivo]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: "sí — `maisi` y `maíz` (dos claves), glosa «maíz (Zea mays)», SIN procedencia"
+    aporta: >-
+      La forma de Oviedo es **mahiz**, no `maisi`. Y da la oposición que
+      estructura toda la alimentación de la isla: dos panes, uno de grano y uno
+      de raíz. Eso es dato de MUNDO, no sólo de léxico.
+
+  - forma_fuente: caçabi
+    forma_ocr_cruda: ca9abi / cagabi
+    glosa_fuente: >-
+      «Del pan de los indios que se llama caçabi, que es la segunda manera de
+      pan que en esta Isla Española é otras partes hacen los indios… lo qual se
+      hace de una planta que llaman yuca»
+    libro: VII
+    capitulo: II
+    pagina_impresa: [264, 268, 271, 272]
+    atribucion: "«en esta Isla Española é otras partes» — DECLARADA"
+    variedad_declarada: no-declarada
+    campo: [alimento, cultivo]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: "sí — `cazabi` y `casabe` (dos claves). `cazabi` es la forma que `FORMA_DE_LA_ESFERA` enseña en vez de «casabe»"
+    aporta: >-
+      Cita para la voz que el motor YA enseña con forma indígena. La forma de
+      la fuente es `caçabi`, que es prácticamente la clave del lexicón
+      (`cazabi`) con la grafía del XVI.
+
+  - forma_fuente: yuca
+    glosa_fuente: >-
+      «La planta que se llama yuca, son unas varas ñudosas, algo mas altas que
+      un hombre… é el fructo destas es unas maçorcas, á manera de raíçes ó de
+      nabos muy grandes… é qualquiera hombre ó animal que coma estas raíçes,
+      con el çumo… luego muere sin remedio alguno»
+    libro: VII
+    capitulo: II
+    pagina_impresa: [264, 268, 269, 270, 271, 272]
+    atribucion: "la Española «y en las otras todas que están pobladas de chripstianos, y aun en alguna parte de la Tierra-Firme»"
+    variedad_declarada: no-declarada
+    campo: [planta, alimento, cultivo]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: "sí — `yuca`, sin glosa legible, SIN procedencia"
+    ojo: "`yuca` es de las 14 voces que, según la decisión del 2026-09-18, se quedan con grafía castellana porque la grafía ES la transcripción de la fuente. Esto lo confirma: Oviedo escribe `yuca`"
+
+  - forma_fuente: boniata
+    glosa_fuente: "«toda la yuca que hay, por la mayor parte, es de la que mata, y también hay alguna que llaman boniata, y que es [buena]»"
+    libro: VII
+    capitulo: II
+    pagina_impresa: [269, 284]
+    atribucion: "la Española"
+    variedad_declarada: no-declarada
+    campo: [planta, alimento]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+    aporta: "la yuca dulce frente a la amarga: una distinción de cultivo con nombre propio"
+
+  - forma_fuente: aje
+    plural_en_la_fuente: ajes
+    glosa_fuente: >-
+      «Al tiempo que se han de sembrar los ajes, hacen la tierra montones por
+      sus liños… é debaxo en las raíçes que haçe echa el fructo, que son
+      aquestos ajes… tienen sabor de castañas muy buenas»
+    libro: VII
+    capitulo: III
+    pagina_impresa: 273
+    atribucion: "la Española (y «en Castilla del Oro» los hay amarillos y pequeños)"
+    variedad_declarada: no-declarada
+    campo: [planta, alimento, cultivo]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+
+  - forma_fuente: axi
+    glosa_fuente: >-
+      «Del axi, que es una planta de que los indios se sirven é usan en lugar
+      de pimienta, é aun los chripstianos la han por muy buena especia. Axi es
+      una planta muy conosçida é usada en todas las partes destas Indias,
+      islas é Tierra-Firme… é es la pimienta de los indios, y de que mucho
+      caso haçen… porque en todas sus labranças é huertos lo ponen é crian con
+      mucha diligençia»
+    libro: VII
+    capitulo: VII
+    pagina_impresa: [275, 279, 308]
+    atribucion: "«en todas las partes destas Indias, islas é Tierra-Firme» — pan-indiana, NO privativa de la Española"
+    variedad_declarada: no-declarada
+    campo: [planta, alimento, cultivo]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: "sí — `aji`, glosa «ají, chile (Capsicum spp.)», SIN procedencia"
+    ojo: >-
+      La forma de la fuente es `axi` (con x = /ʃ/), no `aji`. Y Oviedo declara
+      expresamente que es de TODAS las Indias: citarla como taína sería forzar
+      la glosa. Sirve como cita de forma y fecha, no de filiación.
+
+  - forma_fuente: batata
+    plural_en_la_fuente: batatas
+    glosa_fuente: >-
+      «Batatas es un grand mantenimiento para los indios en aquesta Isla
+      Española é otras partes, é de los presçiosos manjares que ellos tienen…
+      Una batata curada no es inferor en el gusto á gentiles mazapanes»
+    libro: VII
+    capitulo: IV
+    pagina_impresa: [273, 274, 279]
+    atribucion: "«para los indios en aquesta Isla Española» — DECLARADA"
+    variedad_declarada: no-declarada
+    campo: [planta, alimento, cultivo]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: "sí — `batata`, sin glosa legible, SIN procedencia"
+
+  # ⭐ las cinco especies de batata: cinco voces con una sola cita
+  - forma_fuente: [aniguamar, atibiuneix, guaraca, guacarayca, guananagax]
+    forma_ocr_cruda: "aniguamar · atibiuneix · guaraca · guacarayca · guananagax (y «aniguamar» sale partido como `am'gíMamar` en su segunda aparición)"
+    glosa_fuente: >-
+      «entre las batatas se hallan çinco espeçies ó géneros dellas
+      diferençiadas en la rama ó en la hoja, é tienen aquestos nombres:
+      aniguamar, atibiuneix, guaraca, guacarayca é guananagax, y todas son
+      batatas… y esta que llaman aniguamar tienen por la mejor é mas presçiada»
+    libro: VII
+    capitulo: IV
+    pagina_impresa: 274
+    atribucion: "la Española (mismo capítulo que `batata`)"
+    variedad_declarada: no-declarada
+    campo: [planta, alimento, cultivo]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+    # 🔴 esta entrada es la que MÁS necesita la imagen
+    duda: >-
+      Cinco formas largas, raras y en cursiva, leídas por un OCR que en cursiva
+      falla: es donde más probable es que haya letras mal. `atibiuneix` y
+      `guacarayca` son las más sospechosas. NO fusionar ninguna sin ver la
+      página. Se listan porque el HECHO —que la Española distinguía cinco
+      variedades cultivadas de batata y les daba nombre propio— vale aunque las
+      formas necesiten repaso.
+    por_que_importa: >-
+      Es taxonomía agrícola indígena: cinco cultivares nombrados de una misma
+      raíz, con una de ellas declarada la mejor. Dato de MUNDO (cultivo) tanto
+      como de léxico.
+
+  - forma_fuente: mani
+    glosa_fuente: >-
+      «Una fructa tienen los indios en esta Isla Española, que llaman mani, la
+      qual ellos siembran, é cogen, é les es muy ordinaria planta en sus
+      huertos y heredades, y es tamaña como piñones con cáscara»
+    libro: VII
+    capitulo: V
+    pagina_impresa: 274
+    atribucion: "«los indios en esta Isla Española» — DECLARADA"
+    variedad_declarada: no-declarada
+    campo: [planta, alimento, cultivo]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+    ojo: "Oviedo la da como planta de los indios de la Española y comida de «gente baxa», esclavos y muchachos — dato social, no sólo botánico"
+
+  - forma_fuente: yahutia
+    variante_en_la_fuente: diahutia
+    glosa_fuente: >-
+      «De la planta dicha yahutia… Yahutia, por otros llamada diahutia, es una
+      planta de las mas ordinarias que los indios cultivan con mucha
+      diligençia ó espeçial cuydado. Es de comer della la rayz é también las
+      hojas»
+    libro: VII
+    capitulo: VI
+    pagina_impresa: 274
+    atribucion: "la Española"
+    variedad_declarada: "«por otros llamada» — Oviedo registra dos nombres sin decir de quién es cada uno"
+    campo: [planta, alimento, cultivo]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+
+  - forma_fuente: liren
+    plural_en_la_fuente: lirenes
+    glosa_fuente: >-
+      «De la planta é fructa que los indios llaman lirenes en esta Isla
+      Española. Liren es una fructa que nasçe en una planta que los indios
+      cultivan… é debaxo de tierra echa su fructo, que es blanco é del tamaño
+      que dátiles gruessos… hay mucha por las plaças que la sacan á vender»
+    libro: VII
+    capitulo: XIII
+    pagina_impresa: [279, 280, 284]
+    atribucion: "«los indios… en esta Isla Española» — DECLARADA"
+    variedad_declarada: no-declarada
+    campo: [planta, alimento, cultivo]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+    aporta: "y un dato de mundo de paso: se vendía en las plaças, o sea que había mercado de fruta"
+
+  - forma_fuente: [yayama, boniama, yayagua]
+    glosa_fuente: >-
+      «De las pinas que llaman los chripstianos, porque lo paresçen: la qual
+      fructa nombran los indios yayama, é á çierto género de la misma fructa
+      llaman boniama, é á otra generaçión diçen yayagua, como se dirá en este
+      capítulo, non obstante que en otras partes tiene otros nombres»
+    libro: VII
+    capitulo: XIV
+    pagina_impresa: [280, 283]
+    atribucion: "«los indios» de la Española («Hay en esta Isla Española unos cardos…»)"
+    variedad_declarada: no-declarada
+    campo: [planta, alimento]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+    aporta: >-
+      Otras tres voces para tres variedades de una misma fruta (la piña), con
+      la misma estructura que las cinco batatas. Y Oviedo avisa él mismo de que
+      «en otras partes tiene otros nombres», que es la cautela de la campaña
+      dicha por la fuente.
+
+  # ── 2.d  Árboles, hierbas, animales (Libros VIII-XVII) — sin imagen ──
+  - forma_fuente: xagua
+    glosa_fuente: >-
+      «Del árbol llamado xagua, y de su fructa y de la tinta que se haze della.
+      Xagua es un árbol hermoso y alto… es madera mas pessada que el fresno, y
+      muy común en esta isla é otras y en la Tierra-Firme… de la qual fructa se
+      saca agua muy clara»
+    libro: VIII
+    capitulo: V
+    pagina_impresa: [296, 297]
+    atribucion: "«muy común en esta isla é otras y en la Tierra-Firme» — no privativa"
+    variedad_declarada: no-declarada
+    campo: [planta, objeto]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+
+  - forma_fuente: guayaba
+    variante_en_la_fuente: guayabo
+    glosa_fuente: >-
+      «Llámasse esta mançana ó poma guayaba, porque el árbol se llama guayabo:
+      cada guayaba tiene una coronilla de unas hojitas pequeñas que
+      fáçilmente se le caen»
+    libro: VIII
+    capitulo: XX
+    pagina_impresa: [305, 530]
+    atribucion: no-declarada
+    variedad_declarada: no-declarada
+    campo: planta
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: "sí — `guayaba`, glosa «guayaba (Psidium guajava)», SIN procedencia"
+    ojo: >-
+      Oviedo NO dice aquí de quién es la voz. `atribucion: no-declarada`: la
+      cita sirve para la forma y la fecha, no para afirmar que es taína. En
+      duda, degradar.
+
+  - forma_fuente: papaya
+    plural_en_la_fuente: papayas
+    glosa_fuente: >-
+      «Del árbol que en esta Isla Española llaman papaya, y en la Tierra-Firme
+      los llaman los españoles los higos del mastuerço, y en la provinçia de
+      Nicaragua llaman á tal árbol olocoton». Y: «se truxeron á esta é otras
+      islas é se han fecho muy bien, é aqui los llaman papayas»
+    libro: VIII
+    capitulo: XXXIII
+    pagina_impresa: 323
+    atribucion: "«en esta Isla Española llaman papaya» — DECLARADA"
+    variedad_declarada: no-declarada
+    campo: planta
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: "sí — `papaya`, glosa «papaya, lechosa (Carica papaya)», SIN procedencia"
+    # matiz que cambia el sentido del dato
+    ojo: >-
+      Oviedo cuenta que la planta se TRAJO de Tierra-Firme (Quebore, Veragua)
+      a la Española y que «aqui los llaman papayas». Así que `papaya` es el
+      nombre que se usa EN la Española para una planta introducida — no prueba
+      que la planta fuera de allí, sólo que el nombre corría allí en 1548.
+
+  - forma_fuente: goaconax
+    glosa_fuente: >-
+      «De la planta ó árbol que los indios llaman goaconax y los chripstianos
+      le llaman bálsamo, del qual se hace el bálsamo artifiçial para las
+      heridas é para otras enfermedades»
+    libro: X
+    capitulo: IV
+    pagina_impresa: [376, 377]
+    atribucion: "«los indios» — contexto de la Española (libro de los árboles medeçinales), no dicho isla por isla"
+    variedad_declarada: no-declarada
+    campo: [planta, medicina]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+    aporta: "el par completo: cómo lo llaman los indios y cómo los chripstianos, para la misma cosa"
+
+  - forma_fuente: curi-á
+    glosa_fuente: >-
+      «De la hierva que en esta Isla Española se llama curi-á; y aparto la á,
+      porque assi se ha de acentuar… llámanla curi-á. Assi que, la á se ha de
+      deçir poquito después que se diçe curi, para açentuarla como el indio la
+      nombra»
+    libro: XI
+    capitulo: VI
+    pagina_impresa: 380
+    atribucion: "«en esta Isla Española» — DECLARADA"
+    variedad_declarada: no-declarada
+    campo: planta
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+    # ⭐ el hallazgo raro
+    por_que_importa: >-
+      Es lo más parecido a una NOTA FONÉTICA que da el volumen: Oviedo se para
+      a explicar dónde cae el acento y cómo se separa la vocal final «para
+      açentuarla como el indio la nombra». Un cronista del XVI describiendo
+      prosodia indígena es material de método, no sólo de léxico — y el repo
+      tiene una campaña abierta sobre acento y forma en el lexicón.
+    ojo: "no confundir con `cori` (p.50), que es un animal. Homógrafos en el OCR"
+
+  - forma_fuente: hutia
+    plural_en_la_fuente: hutias
+    glosa_fuente: >-
+      «comiéronse todas las hutias que pudieron aver, é todos los quemis, é
+      otros animales que llaman mohuy y todos los otros que llaman coris, que
+      son como gazapos ó conejos pequeños». Y la lista: «perro, hutia, quemi,
+      mohuy, cori»
+    libro: II
+    capitulo: XIII
+    pagina_impresa: [50, 274, 284, 389]
+    atribucion: "«animales de quatro pies que solamente avia en esta isla» — la Española, DECLARADA"
+    variedad_declarada: no-declarada
+    campo: animal
+    verificacion: imagen
+    en_el_lexicon: "sí — `hutia`, glosa «jutía, roedor grande (Capromys spp.)», SIN procedencia"
+
+  - forma_fuente: [quemi, mohuy, cori]
+    glosa_fuente: >-
+      «é todos los quemis, é otros animales que llaman mohuy y todos los otros
+      que llaman coris, que son como gazapos ó conejos pequeños. Estas
+      quatro…»; y la enumeración de los animales de quatro pies de la isla:
+      «perro, hutia, quemi, mohuy, cori»
+    libro: II
+    capitulo: XIII
+    pagina_impresa: 50
+    atribucion: "la Española — DECLARADA («solamente avia en esta isla»)"
+    variedad_declarada: no-declarada
+    campo: animal
+    verificacion: imagen
+    en_el_lexicon: no
+    aporta: >-
+      Tres voces nuevas y, con `hutia` y el perro, el CENSO COMPLETO de los
+      cuadrúpedos de la isla según Oviedo: cinco, y cuatro con nombre indígena.
+      Eso es dato de ecología tanto como de léxico.
+
+  - forma_fuente: yvana
+    glosa_fuente: >-
+      «se dieron á comer unas sierpes que se llaman yvana, que es de quatro
+      pies, de tal vista que, para quien no la conosçe, es muy espantoso
+      animal»; y «se dirá de la yvana, que es una serpiente también de quatro
+      pies»
+    libro: II
+    capitulo: XIII
+    pagina_impresa: [50, 152, 393, 394, 395, 396]
+    atribucion: "la Española"
+    variedad_declarada: no-declarada
+    campo: animal
+    verificacion: imagen
+    en_el_lexicon: "sí — `iwana` y `higuana` (dos claves), glosa «iguana», SIN procedencia"
+    aporta: "la forma de la fuente es `yvana`, que no es ninguna de las dos claves del lexicón"
+
+  - forma_fuente: caçique
+    forma_ocr_cruda: cagique
+    glosa_fuente: >-
+      «la qual era del señorío del rey Guacanagari (que los indios llaman
+      caçique, assi como los chripstianos decimos rey)»
+    libro: II
+    capitulo: VII
+    pagina_impresa: [25, 90, 128, 164, 165]
+    atribucion: "«los indios» de la Española (contexto: Guacanagari, la Española)"
+    variedad_declarada: no-declarada
+    campo: autoridad
+    verificacion: imagen
+    en_el_lexicon: "sí — `cacike` y `cacique` (dos claves). `cacike` es la forma que `FORMA_DE_LA_ESFERA` enseña"
+    aporta: >-
+      Glosa explícita y de equivalencia política («assi como los chripstianos
+      decimos rey»), con 297 apariciones de la voz en el volumen. Es la voz
+      mejor atestiguada de toda la parcela.
+
+  - forma_fuente: guanin
+    glosa_fuente: "voz del oro bajo / aleación; aparece en los libros de San Juan y del rescate"
+    libro: XVI
+    capitulo: "—"
+    pagina_impresa: [480, 507, 514]
+    atribucion: no-declarada
+    variedad_declarada: no-declarada
+    campo: [objeto, rito]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: "sí — `guanin`, glosa «guanín, aleación de oro y cobre, metal sagrado», SIN procedencia"
+    estado: "LOCALIZADA, NO LEÍDA — tres páginas identificadas, el pasaje no se leyó entero. Queda para la segunda pasada"
+
+  - forma_fuente: manati
+    glosa_fuente: "«el manati se allega hasta que toca en tierra… Y es menester una carreta con un par de bueyes, segund son grandes pescados»"
+    libro: XIII
+    capitulo: IX
+    pagina_impresa: 433
+    atribucion: no-declarada
+    variedad_declarada: no-declarada
+    campo: animal
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: "sí — `manati`, glosa «manatí (Trichechus manatus), vaca marina», SIN procedencia"
+    ojo: "el pasaje leído describe la caza, no atribuye la voz. `no-declarada`: no cuenta como taína sin más lectura"
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. LAS OTRAS ISLAS — Cuba, San Juan, los lucayos
+#    Porque el taíno tampoco era una sola lengua.
+# ══════════════════════════════════════════════════════════════════════
+otras_islas:
+
+  - forma_fuente: dalihao
+    forma_probable: datihao
+    glosa_fuente: >-
+      «y entonçes dixo el caçique: “Adelante, adelante, á mi dalihao (que
+      quiere deçir mi señor, ó el que, como yo, se nombra), dexa ese bellaco”»
+    libro: XVI
+    capitulo: V
+    pagina_impresa: 473
+    atribucion: >-
+      San Juan (Boriquén). Lo dice el caçique **Agueybana**, y Oviedo precisa
+      que el intérprete habló «en el lenguaje de los indios». Isla DECLARADA
+      por el libro entero (Libro XVI = conquista y población de San Juan).
+    variedad_declarada: "la de San Juan"
+    campo: [autoridad, parentesco]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+    # ⭐⭐ el hallazgo de la parcela
+    por_que_importa: >-
+      Esta es la voz que la ficha de la obra llama «la deuda documental más
+      grande del proyecto». `creencia-001` afirma *datihao/diao* = «señor»
+      citando a Jahn p. 213 n.29, que a su vez cita «el apéndice al tomo IV» de
+      Oviedo — apéndice que el rastreo del 2026-08-14 verificó que NO EXISTE.
+      La voz está aquí, en el tomo I que el repo ya tenía, con glosa del propio
+      Oviedo. La cadena Oviedo → Jahn → nosotros se puede cerrar por fin, y se
+      cierra en el volumen equivocado respecto del que Jahn decía.
+    # 🔴 y lo que el hallazgo ROMPE
+    pero: >-
+      No es una segunda atestación independiente (skill §8): Jahn y nosotros
+      bebemos del MISMO Oviedo. Lo que cambia es que ahora se puede leer la
+      fuente. Y al leerla aparece el problema: **Oviedo la atribuye a SAN JUAN,
+      en boca de un caçique de Boriquén — no a los caquetíos.** El corpus la
+      trata como dato caquetío. Eso es precontacto ≠ colonial y, peor, isla ≠
+      Tierra-Firme. Va al issue como corrección epistémica, no se toca aquí
+      (regla 5).
+    glosa_doble: >-
+      Oviedo da DOS sentidos en el mismo paréntesis: «mi señor» Y «el que, como
+      yo, se nombra». El segundo es el hermanamiento por intercambio de nombre
+      (el *guaitiao* de otras fuentes), que es una institución, no un título.
+      El corpus sólo recoge el primero.
+    urgente: "p.473 > 154: NO hay imagen. `dalihao` vs `datihao` es exactamente la confusión l/t del OCR. Verificar en otra copia ANTES de citar la forma"
+
+  - forma_fuente: naboria
+    plural_en_la_fuente: naborias
+    glosa_fuente: >-
+      p.471: «escapóse un muchacho, indio naboría del preso Pero Xuarez».
+      p.472: «le dio quatro naborías ó esclavos que le sirviessen é otras joyas
+      é preseas». p.473, en boca del intérprete: «Yo te serviré é seré tu
+      naboría»
+    libro: XVI
+    capitulo: [IV, V]
+    pagina_impresa: [471, 472, 473]
+    atribucion: "San Juan (Libro XVI). La tercera cita es habla indígena reportada"
+    variedad_declarada: "la de San Juan"
+    campo: [autoridad, parentesco]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: "sí — `naboria`, glosa «naboría, servidor permanente, trabajador dep[endiente]», SIN procedencia"
+    ojo: >-
+      Las tres citas son de uso COLONIAL (el naboría de un español preso, cuatro
+      naborías dadas como regalo junto a joyas). Oviedo glosa «ó esclavos», que
+      es la lectura del encomendero. Que la institución precontacto fuera eso
+      es otra cuestión, y esta fuente no la resuelve. Regla 3.
+
+  - forma_fuente: guahiniquinax
+    glosa_fuente: >-
+      «Este animal se llama guahiniquinax: son como gorros é del tamaño de una
+      liebre, de color pardo, mixto con bermejo. La cola poblada é la cabeça
+      como de hurón, é hay muchos dellos en la costa de la isla Fernandina»
+    libro: XVII
+    capitulo: V
+    pagina_impresa: [500, 501]
+    atribucion: "isla Fernandina = **Cuba** (Oviedo lo dice: «la isla Fernandina, por otro nombre llamada primero Cuba»)"
+    variedad_declarada: "la de Cuba"
+    campo: animal
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+    aporta: "voz de CUBA, no de la Española — de las pocas que el volumen atribuye a otra isla con nombre"
+
+  - forma_fuente: ayre
+    forma_ocr_cruda: atjre
+    glosa_fuente: >-
+      «hay otro animal que llaman ayre, tamaño como un conejo, de color entre
+      pardo y bermejo, y es muy duro de comer»
+    libro: XVII
+    capitulo: V
+    pagina_impresa: 500
+    atribucion: "isla Fernandina = Cuba"
+    variedad_declarada: "la de Cuba"
+    campo: animal
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+    duda: "forma corrupta en el OCR (`atjre`); `ayre` es reconstrucción probable pero no leída. Degradada"
+
+  - forma_fuente: Mayci
+    glosa_fuente: >-
+      «el qual puerto es doçe leguas mas al poniente de la punta que llaman
+      Mayci; é allí falló gente, assi de la propia isla de Cuba, como de las
+      otras que están al norte opuestas»
+    libro: II
+    capitulo: VI
+    pagina_impresa: 25
+    atribucion: "punta de la isla de **Cuba**"
+    variedad_declarada: no-declarada
+    campo: toponimo
+    verificacion: imagen
+    en_el_lexicon: no
+
+  - forma_fuente: [Guanahani, Caycos, Jumeto, Yabaque, Mayaguana, Samana]
+    glosa_fuente: >-
+      «que se llaman islas de los Lucayos generalmente todas ellas, no obstante
+      que cada una tiene su propio nombre y son muchas; assi como Guanahani,
+      Caycos, Jumeto, Yabaque, Mayaguana, Samana…»
+    libro: II
+    capitulo: VI
+    pagina_impresa: [24, 25]
+    atribucion: "islas de los **Lucayos** — DECLARADA"
+    variedad_declarada: "lucayo"
+    campo: toponimo
+    verificacion: imagen
+    en_el_lexicon: no
+    aporta: >-
+      Seis topónimos lucayos de 1548, y la observación de que «Lucayos» es el
+      nombre colectivo y cada isla tiene el suyo. Es el único sitio del volumen
+      donde asoma la variedad lucaya.
+
+  - forma_fuente: [Hayti, Baoruco, Hayna, Xaragua, Higuey, Cibao, Guacanagari, Anacaona, Caonabo, Agueybana, Guarionex, Guaorocaya, Tamayo, Aybaguanex]
+    glosa_fuente: "topónimos y antropónimos de la Española y San Juan, recogidos de paso por la narración histórica"
+    libro: [II, III, IV, V, XVI]
+    capitulo: "varios"
+    pagina_impresa: [25, 48, 58, 60, 82, 89, 90, 128, 140, 143, 163, 467, 469, 470, 472, 473]
+    atribucion: "la Española, salvo Agueybana (San Juan)"
+    variedad_declarada: no-declarada
+    campo: [toponimo, antroponimo]
+    verificacion: parcial
+    en_el_lexicon: no
+    estado: >-
+      LISTA DE LOCALIZACIÓN, no transcripción. Cada uno necesita su pasaje
+      leído antes de contar como dato. `Hayti` es el más importante: es el
+      nombre propio de la isla («esta Isla Española, por otro nombre llamada
+      Hayti», cabecera del Libro VI cap. I) y la lengua que Oviedo llama «la
+      lengua de Hayti» (ver `eracra`).
+
+# ══════════════════════════════════════════════════════════════════════
+# 4. LO QUE NO ES TAÍNO — y Oviedo lo dice
+#    Separado a propósito: es la mitad del valor de esta minería.
+# ══════════════════════════════════════════════════════════════════════
+no_taino:
+
+  - forma_fuente: yraca
+    plural_en_la_fuente: yracas
+    glosa_fuente: >-
+      «Son los indios muy amigos de comer hiervas cogidas, y en Tierra-Firme
+      llámanlas yracas, que es lo mismo que deçir hiervas… **Este nombre yraca
+      es de la lengua de Cueva, en Tierra-Firme, en la gobernaçión de Castilla
+      del Oro**»
+    libro: VII
+    capitulo: XII
+    pagina_impresa: 279
+    atribucion: "lengua de **CUEVA**, Tierra-Firme, Castilla del Oro — DECLARADA con todas las letras"
+    lengua: cueva
+    campo: [planta, alimento]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+    por_que_esta_aqui: >-
+      Es el ejemplo perfecto de la trampa nº2 del encargo: una voz india, en un
+      libro sobre la agricultura de la Española, que NO es taína y que sólo se
+      sabe leyendo la glosa hasta el final. Si se hubiera contado por
+      proximidad, entraba como taína.
+
+  - forma_fuente: [yra, yracha]
+    glosa_fuente: >-
+      «alli donde á las hiervas llaman yracas seyendo muchas, llaman á la muger
+      yra, y á la mançeba yracha»
+    libro: VII
+    capitulo: XII
+    pagina_impresa: 279
+    atribucion: "lengua de Cueva — misma declaración que `yraca`"
+    lengua: cueva
+    campo: parentesco
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+    ojo: >-
+      Tres voces de la misma familia formal (`yra` / `yracha` / `yraca`) con
+      significados que no se parecen: mujer, manceba, hierbas. Oviedo lo saca
+      precisamente para ilustrar que el parecido de formas no prueba nada — la
+      misma lección que la skill §2 midió con el achagua.
+
+  # 🔴 y la frase que debería ir en la cabecera de toda esta campaña
+  - cita_de_metodo: >-
+      «y en estas islas y en la Tierra-Firme hay muchas diferençias de lenguas
+      de una gente á otra, é una cosa tiene muchos nombres, é también diversas
+      cosas tienen un mismo nombre; y querer escudriñar este, seria nunca
+      acabar»
+    libro: VII
+    capitulo: XII
+    pagina_impresa: 279
+    quien_lo_dice: "Oviedo, 1548"
+    para_que_sirve: >-
+      Es la advertencia de la campaña dicha por la fuente cuatro siglos y medio
+      antes, y conviene citarla en la nota: el cronista sabía que estaba
+      mezclando lenguas y lo declaró.
+
+  - forma_fuente: Terarcqui
+    glosa_fuente: "«la isla de las Perlas (que los indios llaman Terarcqui)»"
+    libro: II
+    capitulo: X
+    pagina_impresa: 41
+    atribucion: "indios de Tierra-Firme, mar del Sur (golfo de San Miguel, Panamá)"
+    lengua: "no declarada; zona cueva"
+    campo: toponimo
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+
+  - forma_fuente: yaat
+    glosa_fuente: "«la hierva que los indios de Nicaragua llaman yaat» (la misma que en Venezuela `hado`/`hayo` y en el Perú `coca`)"
+    libro: VI
+    capitulo: XX
+    pagina_impresa: [206, 207]
+    atribucion: "indios de **Nicaragua** — DECLARADA"
+    lengua: "de Nicaragua (no precisa cuál)"
+    campo: [planta, rito]
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+    aporta: >-
+      El capítulo da la MISMA planta con tres nombres y tres regiones en una
+      línea (Nicaragua / Venezuela / Perú) y dice por qué: «porque son las
+      lenguas diferentes». Para la esfera de contacto es un modelo de cómo se
+      anota un préstamo areal.
+
+  - forma_fuente: olocoton
+    glosa_fuente: "«en la gobernaçión de Nicaragua llaman esta fructa olocoton» (la papaya)"
+    libro: VIII
+    capitulo: XXXIII
+    pagina_impresa: 323
+    atribucion: "**Nicaragua** — DECLARADA"
+    lengua: "de Nicaragua"
+    campo: planta
+    verificacion: ocr-sin-imagen
+    en_el_lexicon: no
+
+  - recordatorio: >-
+      `comoho`, `hado`/`hayo`, `Paraguana` y `yaguaraha` están en la sección 1
+      (`costa_de_venezuela`) y TAMPOCO son taínos: son de la provincia de
+      Veneçuela y de Cubagua. Están arriba por su valor para este proyecto, no
+      por su filiación. No se cuentan dos veces.
+
+# ══════════════════════════════════════════════════════════════════════
+# 5. HALLAZGOS DE MUNDO (skill §4) — lo que no va al lexicón
+#    Minar alimenta la esfera que toque, no sólo el léxico (regla 7).
+# ══════════════════════════════════════════════════════════════════════
+hallazgos_de_mundo:
+
+  transmision:
+    - hecho: >-
+        El areyto es el soporte de la memoria histórica y genealógica, y Oviedo
+        lo dice con esas palabras: «es su libro ó memorial que de gente en
+        gente queda de los padres á los hijos»; «por esta forma resçitan las
+        genealogías de sus caçiques y reyes ó señores que han tenido»; «estos
+        cantares les quedan en la memoria, en lugar de libros de su acuerdo».
+      pagina_impresa: [125, 127, 128]
+      esfera: "3-mundo/corpus/transmision.yaml"
+      encaja_con: "la sesión 4/4 del corpus cultural (transmisión del saber) ya cerrada"
+    - hecho: >-
+        La forma del areyto está descrita como técnica: un guía entona, el
+        corro repite literalmente, el guía calla mientras responden, y encadena
+        el verso siguiente «sin intervalo»; dura tres o cuatro horas «y á veçes
+        les tura desde un dia hasta otro»; los guías se remudan y al mudar
+        cambian tono y contrapás pero siguen la misma historia.
+      pagina_impresa: [127, 128]
+      esfera: "3-mundo/corpus/transmision.yaml"
+      por_que_importa: "es un mecanismo de transmisión oral con redundancia y relevo — describible, no genérico"
+    - hecho: >-
+        El buhití es a la vez adivino y herbolario, y su medicina va junta con
+        la adivinación: «eran grandes hervolarios é tenian conosçidas las
+        propiedades de muchos árboles é plantas é hiervas; é como sanaban á
+        muchos con tal arte, teníanlos en gran veneraçión… como entre los
+        chripstianos los saçerdotes».
+      pagina_impresa: 126
+      esfera: "3-mundo/corpus/creencia.yaml + transmision.yaml"
+
+  creencia:
+    - hecho: >-
+        El çemi se pide para el agua, el sol, el pan y la victoria — cuatro
+        peticiones, en ese orden. Y está figurado no sólo en un lugar de la
+        casa sino en los bancos (duho), las joyas, los moscadores y la frente.
+      pagina_impresa: [125, 126]
+      esfera: "3-mundo/corpus/creencia.yaml"
+    - hecho: >-
+        El areyto solemne acaba en borrachera por diseño: «la misma borrachera
+        es la que da conclusión al areyto». Se hace «en bodas ó mortuorios ó
+        por una batalla, ó señalada victoria é fiesta»; otros areytos se hacen
+        a menudo «sin se emborrachar».
+      pagina_impresa: 130
+      esfera: "3-mundo/corpus/creencia.yaml"
+    - hecho: >-
+        El tabaco es rito de principales, no costumbre general: los cañutos de
+        dos cañones son de «los caçiques é hombres prinçipales»; los demás usan
+        cañuelas de carrizo. Y la hierba se cultivaba en huertos para eso,
+        teniéndola «no tan solamente cosa sana, pero muy sancta cosa».
+      pagina_impresa: [130, 131]
+      esfera: "3-mundo/corpus/creencia.yaml"
+    - hecho_negativo: >-
+        **NO está el funeral del díao.** Ni `borattio` ni `datihao` como voz
+        caquetía ni la desecación sobre brasas aparecen en este volumen
+        (`borat*` = 0 verificado). Lo que sí está es `dalihao` en San Juan
+        (§3). El funeral sigue estando en el tomo II, como decía la ficha.
+      esfera: "3-mundo/corpus/creencia.yaml — `creencia-001`, `creencia-010`"
+
+  ecologia:
+    - hecho: >-
+        Censo de cuadrúpedos de la Española según Oviedo: cinco, y cuatro con
+        nombre indígena — «perro, hutia, quemi, mohuy, cori». Y la secuencia de
+        agotamiento: se comieron primero esos y luego «se dieron á comer unas
+        sierpes que se llaman yvana».
+      pagina_impresa: 50
+      esfera: "3-mundo/corpus/ecologia.yaml"
+    - hecho: >-
+        Dos panes y no uno: el de grano (mahiz) y el de raíz (caçabi, de yuca),
+        «muy distintos é apartados el uno del otro», y Oviedo dice que los
+        cristianos llegaron a preferir el segundo.
+      pagina_impresa: [264, 268]
+      esfera: "3-mundo/corpus/ecologia.yaml"
+    - hecho: >-
+        La yuca de la Española mata y la de Tierra-Firme no: «en la
+        Tierra-Firme hay yuca que no es mortal… y en esta isla é las otras
+        comarcanas deste golpho, toda la yuca que hay, por la mayor parte, es
+        de la que mata». Y existe una dulce con nombre propio (`boniata`).
+      pagina_impresa: 269
+      esfera: "3-mundo/corpus/ecologia.yaml"
+      ojo: "es una diferencia ISLA / TIERRA-FIRME en la misma planta, justo el tipo de distinción que la regla 4 pide no aplanar"
+    - hecho: >-
+        Cinco cultivares nombrados de batata y tres de piña: la agricultura de
+        la isla distinguía variedades y las nombraba, y una de las de batata
+        estaba declarada «la mejor é mas presçiada».
+      pagina_impresa: [274, 280]
+      esfera: "3-mundo/corpus/ecologia.yaml"
+    - hecho: >-
+        En la provinçia de Veneçuela el cardón de las tunas y su fruta se
+        llaman `comoho`, y allí se cultiva la hierva de mascar en huertos. Es
+        ecología del CARDONAL, que es el paisaje del corpus caquetío.
+      pagina_impresa: [206, 207, 313, 314]
+      esfera: "3-mundo/corpus/ecologia.yaml"
+      encaja_con: "ecologia-007/018/032 (cardonal, sin ríos ni ceibas)"
+
+  casa_y_asentamiento:
+    - hecho: >-
+        Dos tipos de casa, y el de los principales NO es el redondo: el caney
+        es la casa redonda de postes en círculo con mástil central; la de «los
+        hombres mas prinçipales é caçiques» es «á dos aguas y luenga», con
+        portales que sirven de zaguán. Vivían «en las costas ó riberas de los
+        rios ó çerca de la mar».
+      pagina_impresa: [163, 164, 165]
+      esfera: "3-mundo/corpus/ — y contradice la glosa de `caney` en el lexicón"
+    - hecho: >-
+        Cada pueblo tenía plaça con «lugar diputado» para el batey, y además
+        otro sitio a las salidas del pueblo, con asientos, más grande que los
+        de las plaças. Los caçiques miraban desde banquillos de palo (duho);
+        los demás, desde asientos de piedra.
+      pagina_impresa: [163, 165]
+      esfera: "3-mundo/corpus/ — plaza, autoridad, rito"
+      por_que_importa: "es planta urbana: dos espacios de juego por poblado, y jerarquía materializada en el asiento"
+
+  geografia_politica:
+    - hecho: >-
+        La provinçia de Veneçuela en 1548 está «encomendada en gobernaçión á
+        los Alemanes Velgares» (los Welser), y el camino de Coro al cabo de
+        Sanct Román atraviesa «aquella provinçia [que] los indios llaman
+        Paraguana».
+      pagina_impresa: 205
+      esfera: "3-mundo/geografia_politica.yaml"
+      ojo: "colonial, 1540-1548. No se proyecta al XIV-XV (regla 3); vale como atestación del nombre y del marco"
+
+  metodo:
+    - hecho: >-
+        Oviedo declara él mismo que está mezclando lenguas y que no piensa
+        deslindarlas: «una cosa tiene muchos nombres, é también diversas cosas
+        tienen un mismo nombre; y querer escudriñar este, seria nunca acabar»
+        (p.279). Cualquier uso de este volumen como fuente léxica tiene que
+        citarse con esa advertencia al lado.
+      pagina_impresa: 279
+      esfera: "4-fuentes/ (bitácora) y 2-lengua/metodo-comparativo"
