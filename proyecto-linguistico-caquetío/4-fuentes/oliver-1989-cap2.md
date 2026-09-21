@@ -9,10 +9,12 @@ paginas: 109
 capa_texto: parcial
 acceso: "Libre — la tesis completa (823 pp., incluye este capítulo) está en UCL Discovery, depositada por el propio Oliver: PDF https://discovery.ucl.ac.uk/id/eprint/10157455/1/Oliver_10157455_thesis_redacted.pdf · ficha https://discovery.ucl.ac.uk/id/eprint/10157455/. Verificado en el rastreo de 2026-08-14."
 estado_minado: minado
+cobertura: "§2.8 «The Caquetío Language» (pp. 142-151) minado en F5 (2026-08-03) + relectura de pp. 146-151 y p. 97 para el cruce taíno↔caquetío (2026-09-21)"
 prioridad: alta
 tareas: [F5]
 sostiene: {hechos_corpus: 2, entradas_lexicon: 2, propone_cognados: 16, propone_correspondencias: 14, propone_entradas_lexicon: 5, propone_pares_validacion: 10}
 verificado: 2026-08-03
+minado: 2026-09-21
 aliases: ["Oliver 1989 cap. 2", "Oliver cap. 2", "Linguistics"]
 ---
 
@@ -226,6 +228,70 @@ revisar. **No se corrigen forzando la regla**; eso sería circular.
 `auri` 'perro' (p. 151 — el lexicón no tiene ninguna palabra caquetía para
 'perro'), `barisi` 'ceniza' (p. 142 — tampoco la tenía), `ada` 'árbol' y
 `adabacoa` (p. 144), `daitiao` como variante de `datihao` (p. 147).
+
+## Bitácora — la campaña del taíno, parcela T4 (2026-09-21)
+
+**Qué se le preguntó**: qué comparten de verdad el taíno y el caquetío
+ATESTIGUADO, en léxico, morfología y onomástica; y si lo que comparten es
+herencia arahuaca común, préstamo de esfera o casualidad. Este capítulo es la
+fuente secundaria principal, porque compara las dos lenguas explícitamente.
+
+Propuesta y medición en `6-fusion/cruce_taino_caquetio_2026-09-21.yaml`
+(la genera `6-fusion/scripts/cruce_taino_caquetio.py`, re-ejecutable, con
+`--check`); las opciones para Miguel, en
+`6-fusion/issues-pendientes/taino-caquetio-similitudes-2026-09-21.md`.
+**No se tocó el canon** (regla 5).
+
+### Qué dio este capítulo, con página
+
+| p. | qué | cómo quedó en el cruce |
+|---|---|---|
+| 147 | `/da-/` en `da(i)tia-o` es marca de 1ª sg.; el `/dA-/` está en lokono, taíno y «perhaps Caquetío» (p. 136) | **mismo morfema**, y el paralelo mejor sostenido — pero **ya contado por D11 vía lokono**: repetirlo por la vía taína sería contar dos veces el mismo dato |
+| 147 n. 43 | el privativo `/mV-/` es **común a las lenguas maipures** | confirma que el caquetío tiene lo de la familia; **no** acerca el taíno al caquetío más que a cualquier hermana |
+| 147 | `/wa- [gua-]/` es marca de **3ª plural** en taíno | el `-gua` caquetío del canon es un **sufijo locativo**: misma sílaba, posición y función contrarias. No es apoyo |
+| 148 lista j) | los sufijos toponímicos caquetíos: `-bana`, `-coa/-koa`, `-oa`, `-kiva`, `(e)-bo`, `-wa [gua-]` | **`-oa`, `-kiva` y `-bo` no están en el canon** (ni en `morfemas.yaml` ni en `TODAS_LAS_REGLAS`) y el cruce los mide vivos en la toponimia: 6/78, 4/78 y 5/78. Hueco **propio**, con la cita ya localizada |
+| 148 | taíno `pana-pe(n)` y `Agüey-bana`; y el `-bana` bajo 'rodear, cubrir, extensión' | **mismo formante, glosa distinta**: el paralelo taíno **no corrobora D9** ('cerro, sitio alto'), tira hacia el 'ancho/llano' de van Buurt. Y en las 78 formas indígenas de Pané `-bana` da **0** |
+| 148 n. 44 | los gentilicios `-ío/-yo` (Luca-yo, Cigüa-yo, Kaket-ío), de **Vescelius, comunicación personal 1982** | **no citable**: no hay dato publicado detrás. Lo que sí está argumentado es `kaket-ío` ~ lokono `kakïtho` (p. 148), y no necesita la nota |
+| 149 | taíno `coa` 'palo cavador' junto a la postposición `-coa` | Oliver lo trae como apoyo **semántico** ('lo puntiagudo'), no morfológico: un palo cavador es un **nombre**. No es el mismo morfema |
+| 150 | taíno `bara-wa` 'mar' junto al caquetío `para-` | **el mejor cabo suelto de la campaña de `-gua`** (d21.7, hoy sin cita): misma raíz y mismo elemento detrás que `para-gua` |
+| 151 | *«one must be careful about some terms (e.g. barbacoa) offered by the Spanish as "native" Caquetío»* | explica el «estrato taíno» que Esteves ve en Paraguaná: `batey`, `mamey`, `caney`, `carey` son castellano antillano. En Pané, `-ey` da **0 de 78** |
+| 97 | el estado de la clasificación del taíno: Noble, Taylor, Rouse | resumido con en qué se apoya cada uno en `meta.clasificacion` del YAML |
+
+### Qué NO dio, y hay que decirlo
+
+- **Ni una pareja léxica.** Cruzando las 228 entradas `caquetío-atestiguado`
+  contra las 39 taínas atestiguadas del lexicón: **4 conceptos con glosa exacta
+  compartida y 0 parecidos** sobre el umbral. Un control **no arahuaco**
+  (jirajara/ayomán de [[jahn-1927]], 83 formas comparables) da **12 conceptos
+  comparables y el mismo 0**. El taíno **no gana al control**. El lokono sí (5 parecidos
+  donde el azar da 0,98; p = 0,000), que es lo que este capítulo sostiene.
+- **Ni una correspondencia fonética taíno~caquetío**: sin pares parecidos no hay
+  nada que poner a predecir.
+- El cruce **por forma sin filtro de glosa** da 15 parejas taínas sobre 0,75 y
+  **las 15 son ruido** (`kiba` 'piedra' ~ `cohiba` 'tabaco'; `kasi` 'sol' ~
+  `cazabi` 'casabe').
+
+### La reserva de la n. 42, otra vez
+
+Este capítulo es también el que **duda de que `datihao` sea caquetío** (n. 42,
+p. 146) y concluye que probablemente fuera *«equally shared by both Taíno and
+Caquetío»*. El lexicón lo sigue teniendo como `caquetío-atestiguado` **sin esa
+reserva**, y `2-lengua/cognados.yaml` lo empareja con el taíno citando esta
+misma página. Es el caso que la skill `minar-fuente` §8 manda tratar con
+cuidado, y sigue abierto.
+
+### Deuda nueva que deja esta bitácora
+
+1. **Las 52 entradas taínas del lexicón tienen 0 `procedencia.obra`** (regla 8).
+   Mientras no la tengan, cualquier cifra que salga de ellas mide nuestra lista.
+2. `2-lengua/cognados.yaml` tiene **16 sets que emparejan CQ con TN**, y sólo 4
+   citan a alguien —los cuatro, a este capítulo—. De los otros 12, **4 tienen en
+   la columna caquetía una forma que el lexicón etiqueta como taína o lokona**,
+   2 son etnónimos circulares y 2 son la misma palabra castellana escrita dos
+   veces. Ver el issue §2.4.
+3. `auri` 'perro' **sigue etiquetada `achagua`** en el lexicón, tres años de
+   proyecto después de que este capítulo (p. 151) la declare la voz caquetía y
+   uno de sus tres pilares. Ya estaba en «Qué falta» desde el 2026-08-03.
 
 ## Qué falta
 
