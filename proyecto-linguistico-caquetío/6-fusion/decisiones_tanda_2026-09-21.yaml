@@ -167,15 +167,21 @@ d21.8_kana_no_es_cognado_directo:
     p. 556) es de otra lengua.
   nota_de_miguel: >-
     Miguel apuntó que `macana` «también existe, es lo mismo». Medido: NO
-    sostiene el `-kana` colectivo — el achagua de Neira y Ribero 1762 trae
-    `Macanasi`, `Macanayi` y `Mamacanayisa`, o sea que la raíz es `macana-`
-    con SUS propios sufijos, y el `-kana` de ahí es parte de la raíz, no el
-    plural. Comparten sílaba, no morfema (el caso contra el que avisa la
-    skill minar-fuente §8). PERO esas tres formas achaguas son apoyo
-    arahuaco INDEPENDIENTE para `macana` misma, hoy etiquetada
-    caquetío-reconstruido apoyándose en Medina Colina y en el tainismo
-    panhispánico (decisión de Miguel del 2026-09-12): se propone revisar su
-    etiqueta con este apoyo.
+    sostiene el `-kana` colectivo — comparten sílaba, no morfema (el caso
+    contra el que avisa la skill minar-fuente §8). Eso sigue en pie.
+  correccion_2026-09-21: >-
+    Esta nota afirmaba además que el achagua de Neira y Ribero 1762 traía
+    `Macanasi`, `Macanayi` y `Mamacanayisa` como raíz `macana-` con sus propios
+    sufijos, y que eran apoyo arahuaco INDEPENDIENTE para `macana`. ES FALSO, y
+    el error fue del escriba, no de Miguel: las tres formas están en la fuente,
+    pero glosan «Dormidera», «Mazorca de mais» e «Yndecible»
+    (`6-fusion/achagua_neira_ribero_1762.yaml`); la entrada del Arte para el
+    arma es `Macana → Guacaba`, no cognada, y el Arte declara el formante
+    `-nayisa` («verbal en -bilis»), así que ni siquiera hay raíz `macana-`. Se
+    buscó la cadena en la columna achagua sin leer la castellana. Lo midió la
+    campaña de `macana` (#184,
+    `6-fusion/issues-pendientes/macana-etiqueta-2026-09-21.md`). La DECISIÓN
+    d21.8 → A no cambia: era sobre `-kana`, y el apoyo que se cae no era suyo.
   se_aplica_en: 'curiana_lexicon.py (la regla y sus ejemplos); propuesta aparte para `macana`'
 
 d21.9_naiki_se_retira:

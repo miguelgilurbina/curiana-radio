@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-21**.
 
-**2888 ítems propuestos** en 86 propuestas, más **14 issue(s)/comentario(s) redactados sin publicar**.
+**3140 ítems propuestos** en 93 propuestas, más **20 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -39,6 +39,7 @@ editar_a_mano: no
 | `comparandas_jahn_1927.yaml` | jahn-1927 | 0 |  |
 | `computo_d11_2026-08-31.yaml` | ? | 4 |  |
 | `cruce_achagua_caquetio_2026-09-13.yaml` | neira-ribero-1762 | 188 |  |
+| `cruce_taino_caquetio_2026-09-21.yaml` | ? | 180 |  |
 | `curacion_glosas_pares_2026-09-19.yaml` | ? | 11 |  |
 | `decisiones_colisiones_d5_2026-08-31.yaml` | ? | 3 |  |
 | `decisiones_tanda_2026-08-30.yaml` | ? | 0 |  |
@@ -98,6 +99,12 @@ editar_a_mano: no
 | `tabla_a2_transcripcion.yaml` | oliver-1989-apendice-a | 101 |  |
 | `tabla_a8_jirajarano.yaml` | oliver-1989-apendice-a | 33 |  |
 | `tabla_a9_oliver.yaml` | oliver-1989-cap2 | 49 |  |
+| `taino_brinton_1871.yaml` | brinton-1871 | 0 |  |
+| `taino_en_la_esfera_2026-09-21.yaml` | ? | 9 |  |
+| `taino_fuentes_mapa_2026-09-21.yaml` | ? | 13 |  |
+| `taino_inventario_2026-09-21.yaml` | ? | 0 |  |
+| `taino_las_casas_1875.yaml` | las-casas-1875 | 26 |  |
+| `taino_pane_c1498.yaml` | pane-c1498 | 24 |  |
 | `toponimia_coro_espina.yaml` | gonzalez-batista-nombre-de-coro | 5 |  |
 | `toponimia_paraguana_miguel.yaml` | ? | 5 |  |
 | `toponimos_esteves_indice.yaml` | esteves-1989 | 130 |  |
@@ -109,12 +116,14 @@ Vistas generadas en `6-fusion/` (no cuentan: juntan lo que ya está arriba):
 
 - `achagua_fabo_1911.yaml` — generado por `6-fusion/scripts/minar_fabo_1911_achagua.py`
 - `achagua_neira_ribero_1762.yaml` — generado por `lectura en imagen por el escriba (agente Opus 5). Primera pasada 2026-09-12 (40 pliegos); segunda pasada 2026-09-12, que cierra el vocabulario entero (los 31 pliegos que faltaban), mina la lista de verbos del arte y vuelve sobre las 14 dudas`
+- `control_jirajarano_jahn_1927.yaml` — generado por `6-fusion/scripts/_extraer_control_jirajarano.py`
 - `lokono_perea_1942.yaml` — generado por `curiana_sim/minar_perea.py`
 - `lokono_verbos_perea_1942.yaml` — generado por `6-fusion/scripts/minar_perea_verbos.py`
 - `medicion_ejemplo_identidad_2026-09-19.yaml` — generado por `6-fusion/scripts/medir_ejemplo_identidad.py`
 - `medicion_politica_atestiguado_manda_2026-09-19.yaml` — generado por `6-fusion/scripts/medir_politica_atestiguado_manda.py`
 - `pares_atestiguado_reconstruido_2026-09-19.yaml` — generado por `6-fusion/scripts/medir_pares_atestiguado_reconstruido.py`
 - `tainismos_en_medina.yaml` — generado por `6-fusion/scripts/tainismos_medina_a_caquetio.py`
+- `taino_oviedo_valdes_1851.yaml` — generado por `lectura del escriba (agente Opus 5) sobre la capa de texto del PDF local, con verificación por imagen de cada forma allí donde la página todavía tiene imagen (impresas 1-154).`
 - `toponimos_mapa_kaketiana.yaml` — generado por `curiana_sim/barrer_mapa.py`
 - `toponimos_por_fuente.yaml` — generado por `curiana_sim/juntar_toponimos.py`
 
@@ -154,6 +163,12 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `pares-atestiguado-reconstruido-2026-09-19.md` | Dos palabras para la misma cosa: los pares atestiguado / reconstruido |
 | `predicacion-de-nombres-ka-ma-2026-09-20.md` | `juri-ni` no es caquetío: un nombre se predica con `ka-`, no con aspecto |
 | `raiz-inventada-puede-un-pueblo-inventar-una-raiz-2026-09-20.md` | ¿Puede un pueblo inventar una raíz nueva? — lo conservador YA está aplicado |
+| `semilla-del-dia-mueve-a-la-persona-2026-09-21.md` | La semilla del DÍA mueve rasgos de la PERSONA |
+| `taino-caquetio-similitudes-2026-09-21.md` | El taíno y el caquetío: qué comparten de verdad |
+| `taino-en-la-esfera-2026-09-21.md` | El taíno en la esfera: primos, no vecinos — y el vector que faltaba |
+| `taino-inventario-y-fuentes-2026-09-21.md` | --- |
+| `taino-lascasas-pane-brinton-2026-09-21.md` | --- |
+| `taino-oviedo-2026-09-21.md` | Campaña del taíno — T1: Oviedo y Valdés 1851, vol. I |
 
 ---
 

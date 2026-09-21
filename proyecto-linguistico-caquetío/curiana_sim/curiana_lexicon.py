@@ -7227,11 +7227,16 @@ REGLAS_NUMERO: dict[str, dict] = {
     # FUERA_DEL_HABLA desde D10).
     #
     # Nota de Miguel, medida y descartada como apoyo: `macana` «también
-    # existe, es lo mismo». No sostiene este `-kana` — el achagua de Neira y
-    # Ribero 1762 trae `Macanasi`, `Macanayi` y `Mamacanayisa`, o sea raíz
-    # `macana-` con SUS propios sufijos. Comparten sílaba, no morfema. (Esas
-    # tres formas sí son apoyo arahuaco independiente para `macana` misma, y
-    # revisar su etiqueta va propuesto aparte.)
+    # existe, es lo mismo». No sostiene este `-kana`: comparten sílaba, no
+    # morfema. ⚠ CORREGIDO el 2026-09-21 (campaña de `macana`, #184): aquí se
+    # decía que el achagua de Neira y Ribero 1762 traía `Macanasi`, `Macanayi`
+    # y `Mamacanayisa` como una raíz `macana-` con sus propios sufijos, y que
+    # eran apoyo arahuaco independiente para `macana`. ES FALSO. Las tres
+    # formas están en la fuente, pero glosan «Dormidera», «Mazorca de mais» e
+    # «Yndecible»; la entrada del Arte para el arma es `Macana → Guacaba`, que
+    # no es cognada. Se buscó la cadena en la columna achagua y no se leyó la
+    # castellana: leer el conteo y no la glosa (skill minar-fuente §3). La
+    # conclusión sobre `-kana` sigue en pie; su razón escrita no lo estaba.
     "-kana": {
         "nombre": "plural colectivo",
         "desc": "Grupo de, el pueblo de, todos los X.",
