@@ -12,9 +12,9 @@ estado_minado: minado
 prioridad: media
 tareas: [F3]
 sostiene: {hechos_corpus: 1, entradas_lexicon: 0, entradas_lexicon_corroboradas: 39, cadena_custodia_zavala_A: "24/26"}
-cobertura: "cadena de custodia Zavala (2026-08-03) + los 61 topónimos pendientes del dictado de Miguel (2026-09-10)"
+cobertura: "cadena de custodia Zavala (2026-08-03) + los 61 topónimos pendientes del dictado de Miguel (2026-09-10) + la campaña de `-gua` (2026-09-21)"
 verificado: 2026-09-10
-minado: 2026-09-10
+minado: 2026-09-21
 aliases: ["Alvarado 1921", "Glosario de voces indígenas"]
 ---
 
@@ -214,6 +214,27 @@ en el occidente; cuatro bajaron a D porque Alvarado las da como nacionales o
 como préstamo wayuu. **Regla 6 en carne propia**: un cero en el módulo no es
 un cero en Alvarado. Para cualquier voz nueva, buscar en el texto completo
 (`pdftotext`, página impresa = pdf − 30), no en `lexicon_alvarado.py`.
+
+## Bitácora — campaña `-gua` (2026-09-21)
+
+**Qué se le preguntó.** ¿Enuncia Alvarado un sufijo o desinencia `-gua`?
+
+**Qué dio: nada — y el cero está medido.** Barrido sobre el glosario entero con
+los patrones `sufijo…gua`, `desinencia…gua`, `terminación…gua` y `gua…región`.
+El único «sufijo» que enuncia cerca es otro: «el **sufijo guarai o guarado**
+equivale al griego oide y al latín formis», y es **voz cumanagota**, dicha a
+propósito de *Maraimarái*.
+
+Lo que sí tiene son **lexemas**, y del mismo tipo que los de Esteves:
+«**BARISÍGUA**. Árbol indeterminado de Coro y Zulia» (p. 23), «**ARÍGUA**.
+Especie de abeja silvestre», «**ASYÁGUA**. Médula del maguéi y del istú». Y ya
+sostenía `kumarawa` 'caracol' (p. 102, s.v. CUMARAGUA) y `urupagua` (p. 305).
+
+Plantas y bichos. Cero 'región'.
+
+> Medición entera: `6-fusion/propuesta_gua_procedencia_2026-09-21.yaml`
+> (la escribe `6-fusion/scripts/medir_gua_procedencia.py`). Opciones para
+> Miguel: `6-fusion/issues-pendientes/gua-procedencia-2026-09-21.md`.
 
 ## Enlaces
 

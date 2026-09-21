@@ -10,8 +10,9 @@ paginas: 48
 capa_texto: si
 acceso: "Libre — PDF completo: https://tiboko.com/wp-content/uploads/2023/07/Final-version-GvB-Papiamentu-book.pdf. Verificado en el rastreo de 2026-08-14."
 estado_minado: minado
-cobertura: "§6 88/88 entradas, §11 29/29, §7 180 topónimos, §8-10 15 etimologías, 19 morfemas; propuesta en curiana_sim/lexicon_van_buurt.py, sin tocar el lexicón activo"
+cobertura: "§6 88/88 entradas, §11 29/29, §7 180 topónimos, §8-10 15 etimologías, 19 morfemas; propuesta en curiana_sim/lexicon_van_buurt.py, sin tocar el lexicón activo + la campaña de `-gua` (2026-09-21)"
 prioridad: alta
+minado: 2026-09-21
 tareas: [F1]
 sostiene: {hechos_corpus: 1, entradas_lexicon: 0, citas_recuperadas_82: 8, reclasificadas_abajo_82: 3}
 propone: {s6_A: 29, s6_B: 53, s6_C: 3, s11_C: 29, toponimos: 180, morfemas: 19}
@@ -282,6 +283,44 @@ topónimos y los 19 morfemas.
    pero sin la lista.
 6. ~~**Higiene**: mover el .txt de la raíz a `fuentes_caquetios/` y actualizar
    `TXT_PATH` en el minador.~~ Hecho el 2026-08-04 (#55).
+
+## Bitácora — campaña `-gua` (2026-09-21)
+
+**Qué se le preguntó.** ¿Trata `gua`/`-wa` como morfema? ¿Y qué dice del valor
+de `gu` ante vocal?
+
+**Qué dio.** Lo segundo, y con la serie de ejemplos completa (**p. 27**):
+
+> «Words with the **gua-** prefix and names of trees ending in -o in Spanish may
+> be Caquetío words which underwent Spanish influence. […] The **Spanish
+> language is known to replace /w/ sounds with /gw/ (written \<gu\>)** […] The
+> Papiamentu words **watapana, wayaká and watakeli** thus seem more original
+> than **guatapaná, guayacán, guatacare, guatacaro** etc.»
+
+Con su paralelo fuera del caribe: *winch → guinche · ahuacatl → aguacate ·
+iwana → iguana · Oed el Kebir → Guadalquivir*. Es la **segunda fuente
+independiente** para D5c, y del lado insular.
+
+Y lo imprime en la práctica: en la lista de topónimos de Aruba (**p. 41**) la
+misma voz aparece con las dos grafías, **«Paraguana, Parawana»**.
+
+**Segunda atestación útil** (p. 32): «**kiwa** (A, C, B) - kiwa is the West
+Indian top shell (Cittarium pica). This word is also found in Venezuela as
+**quigua** and in Cuba as **cigua**». Corrobora a Zavala #214 desde otra obra —
+y con eso el `Moriquigua` de Esteves queda despejado como `mora` + `quigua`,
+sin `-gua` sufijal. Un falso segmentable menos.
+
+**Lo que NO dio, y hay que declararlo para que nadie lo repita** (p. 35): van
+Buurt cita a Tejera 1977 para el taíno de La Española — «yarima means 'anus',
+**guaca "underground area, underground region"**». Es lo más cerca de «región»
+de todo el barrido y **no sirve**: es **taíno**, es `guaca` (no `-gua`) y va en
+posición **inicial** (Guacayarima). Importarlo sería el error de la regla 4.
+
+Ningún `-gua` sufijal glosado en ninguna de sus secciones.
+
+> Medición entera: `6-fusion/propuesta_gua_procedencia_2026-09-21.yaml`
+> (la escribe `6-fusion/scripts/medir_gua_procedencia.py`). Opciones para
+> Miguel: `6-fusion/issues-pendientes/gua-procedencia-2026-09-21.md`.
 
 ## Enlaces
 

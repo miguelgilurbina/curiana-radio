@@ -10,6 +10,7 @@ capa_texto: parcial
 acceso: "Libre — la tesis completa (823 pp., incluye este capítulo) está en UCL Discovery, depositada por el propio Oliver: PDF https://discovery.ucl.ac.uk/id/eprint/10157455/1/Oliver_10157455_thesis_redacted.pdf · ficha https://discovery.ucl.ac.uk/id/eprint/10157455/. Verificado en el rastreo de 2026-08-14."
 estado_minado: minado
 prioridad: alta
+minado: 2026-09-21
 tareas: [F5]
 sostiene: {hechos_corpus: 2, entradas_lexicon: 2, propone_cognados: 16, propone_correspondencias: 14, propone_entradas_lexicon: 5, propone_pares_validacion: 10}
 verificado: 2026-08-03
@@ -245,6 +246,46 @@ revisar. **No se corrigen forzando la regla**; eso sería circular.
    como **préstamo del tamanaco**, lengua caribe, p. 145) y `barbacoa`/`maraca`/
    `cacique` («one must be careful about some terms offered by the Spanish as
    "native" Caquetío», p. 151).
+
+## Bitácora — campaña `-gua` (2026-09-21)
+
+**Qué se le preguntó.** ¿Enuncia Oliver un formante toponímico `-gua`/`-wa`, y
+con qué valor? (d21.7: el motor enseña `-gua` = 'región, área amplia' sin clave
+foránea.)
+
+**Qué dio — y es el hallazgo de la campaña.** **Sí lo enuncia, y es la única
+obra del repo que lo hace.** §2.8, apartado «j) Suffixes /-bana/ and /-coa/»,
+**p. 148**:
+
+> «The most common "suffixes" in Caquetío toponyms are those ending in:
+> a) -bana · b) -coa/-koa · c) -oa · d) -kiva · e) (e)-bo · **f) -wa [gua-]**»
+
+⚠️ **Da la forma, no el valor.** De los seis glosa tres —`-bana`
+'surrounding/expanse', `-coa` «superlativo de la preposición 'en' o 'sobre'»
+(coincidiendo con Perea y Perea 1948:87), `-oa` reflexivo— y **nunca vuelve a
+f) -wa**. Ninguna glosa, en todo el capítulo, para ese sexto.
+
+**Y dice el valor fonémico, con estas letras** (p. 142, sobre el mismo topónimo
+que Esteves segmenta como bari+sigua):
+
+> «in the Borojó area there is a river designated today as **bari-si-gua
+> (gua=/wa/)** and in the Bariro area we find bari-si-gu()-ita»
+
+Es el dato que D5c (#36) pedía, escrito por el autor: **`gu` ante vocal es /w/**.
+Con él, el lema del morfema del motor sería `-wa`.
+
+**Y una explicación rival para `parawa`** (p. 150): da el taíno de 'mar' como
+`/bara-wa/` junto al guajiro `/palaa'/`. El `-wa` de `parawa` tiene hermano
+arahuaco dentro de la misma palabra, así que `paragua` no necesita leerse como
+`para` + un locativo.
+
+**Lo que NO dio.** Cero glosa de `-wa`. Cero uso de 'region' referido a un
+sufijo caquetío. La lista de la nota, «8 afijos, con página y valor», no
+recogía `-wa`: queda añadido aquí.
+
+> Medición entera: `6-fusion/propuesta_gua_procedencia_2026-09-21.yaml`
+> (la escribe `6-fusion/scripts/medir_gua_procedencia.py`). Opciones para
+> Miguel: `6-fusion/issues-pendientes/gua-procedencia-2026-09-21.md`.
 
 ## Enlaces
 
