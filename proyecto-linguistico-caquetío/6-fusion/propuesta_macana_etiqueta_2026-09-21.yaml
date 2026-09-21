@@ -1,0 +1,549 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — ¿Cambia la etiqueta epistémica de `macana` con el apoyo
+# achagua de Neira y Ribero 1762?
+#
+# Encargo: d21.8_kana_no_es_cognado_directo → `nota_de_miguel`, que dice que
+# las tres formas achaguas «sí son apoyo arahuaco INDEPENDIENTE para `macana`
+# misma» y propone revisar su etiqueta con ese apoyo.
+#
+# Regla 5: PROPONE. No toca curiana_lexicon.py, 2-lengua/*, ni
+# 3-mundo/corpus/*.yaml. Regla 6: cada cero de abajo está verificado con
+# variantes. Regla 2: en duda, degradar. Regla 8: cada cita lleva su clave
+# foránea de 4-fuentes/bibliografia.yaml.
+# ─────────────────────────────────────────────────────────────────────────
+
+meta:
+  recogido: '2026-09-21'
+  quien: agente de campaña (Claude), por el encargo de d21.8
+  rama: campana/macana-etiqueta
+  obra_principal: neira-ribero-1762
+  obras_consultadas:
+    - neira-ribero-1762      # el Arte y vocabulario achagua (la pregunta)
+    - alvarado-1921          # Glosario de voces indígenas de Venezuela
+    - medina-colina-sxx      # Del Habla Paraguanera (la voz viva)
+    - perea-alonso-1942      # Filología comparada arawak, tomo I
+    - zavala-reyes-2015      # el 95 % del caquetío atestiguado
+    - van-buurt-2014         # voces caquetías en papiamento
+    - gatschet-1885          # Aruba
+    - brinton-1871
+    - pane-c1498             # la fuente taína del repo
+  pregunta: >-
+    ¿Cambia la etiqueta epistémica de `macana` (hoy `caquetío-reconstruido`)
+    con el apoyo achagua de `Macanasi`, `Macanayi` y `Mamacanayisa`? ¿A cuál,
+    y con qué cita?
+  respuesta_corta: >-
+    NO. El apoyo achagua no existe. Las tres formas SÍ están en el manuscrito,
+    pero ninguna significa 'macana': son 'Dormidera', 'Mazorca de maíz' e
+    'Yndecible'. Y lo que el Arte sí tiene es un lema castellano «Macana»
+    cuyo achagua es `Guacaba`, palabra no cognada — es decir, la fuente no
+    corrobora `macana` como voz arahuaca: la documenta funcionando como
+    CASTELLANO en 1762, con el achagua dándole su propia voz enfrente. Es el
+    caso exacto contra el que avisa minar-fuente §8: una corroboración falsa
+    es peor que ninguna. De paso, la campaña encuentra un segundo problema
+    que no estaba en el encargo: la cita de Medina Colina que hoy sostiene la
+    etiqueta NO sostiene la glosa del lexicón (ver `hallazgo_colateral`).
+  veredicto: >-
+    `macana` NO sube a `caquetío-atestiguado`. Se propone A (se queda
+    `caquetío-reconstruido`, y el achagua entra en `notas` como REFUTACIÓN
+    medida, no como apoyo) + la corrección de dos textos ya commiteados que
+    afirman lo contrario. La decisión de fondo (opción C) es de clase, no de
+    palabra, y se deja a Miguel.
+
+# ═════════════════════════════════════════════════════════════════════════
+# 1. VERIFICACIÓN DEL DATO EN LA FUENTE
+# ═════════════════════════════════════════════════════════════════════════
+#
+# Las tres formas se dieron «de paso» en d21.8 y no se dieron por buenas.
+# Se leyeron las cuatro páginas en imagen, a resolución nativa, sobre los JPG
+# de fuentes_caquetios/neira_ribero_1762/ (pymupdf, factor MEDIDO 4,1667 px/pt
+# — 2787 px sobre 668,88 pt), con la clave de lectura heredada de la ficha:
+# el copista escribe la `r` con un glifo que parece `z`.
+
+las_tres_formas:
+  estado: 'las tres EXISTEN en el manuscrito, con la grafía citada. Ninguna significa «macana».'
+  formas:
+
+  - forma_fuente: Macanasi
+    obra: neira-ribero-1762
+    pliego: 56
+    lado: der
+    letra: D
+    entrada_literal: 'Dormidera — Macanasi'
+    glosa_castellana_literal: 'Dormidera'
+    verificado_en_imagen: '2026-09-21'
+    contexto_en_la_pagina: >-
+      No está sola: cae al final de un bloque de OCHO lemas DORMIR- seguidos,
+      leídos en la misma imagen — «Dormir — Numayu», «Dormitar = Numatau.
+      Voime á dormir = Nuayuanuma-», «Dormilon — Cadasoniyi; Cadasonicay»,
+      «Dormirse, tener sueño — Cadasoniuna», «Dormitorio — Macarrusi»,
+      «Dormidera — Macanasi», y luego ya «Dos = Juchamata».
+    lectura: >-
+      El campo semántico es el SUEÑO, no el arma. La línea inmediatamente
+      anterior, «Dormitorio — Macarrusi», comparte con ella la secuencia
+      inicial `Maca-`; que sea un morfema común es plausible pero NO se
+      afirma, porque el capítulo de derivación del arte (pliegos 7-22) está
+      sin minar. Lo que sí está documentado en la propia obra es la
+      terminación: `-si` es el absoluto del nombre no poseído, que cae en
+      cuanto el nombre se posee (`Saricanasi` 'padre' → `Nusaricana` 'mi
+      padre'), y es la terminación dominante del vocabulario según
+      `meta.censo_de_terminaciones` de achagua_neira_ribero_1762.yaml.
+
+  - forma_fuente: Macanayi
+    obra: neira-ribero-1762
+    pliego: 74
+    lado: der
+    letra: M
+    entrada_literal: 'Mazorca de mais — Macanayi'
+    glosa_castellana_literal: 'Mazorca de mais'
+    verificado_en_imagen: '2026-09-21'
+    contexto_en_la_pagina: >-
+      Entre «Mazo — tataubari» y «Matalotage — Marruen». La misma página trae
+      «Matar — Nuinuayu, nuinueda» y «Matador — Cainuacacayi»: si hubiera un
+      campo del arma, estaría ahí, y no está.
+    lectura: >-
+      `-yi`/`-cayi` es la terminación adjetival que la segunda pasada midió
+      como una de las dominantes del vocabulario. 'Mazorca de maíz' no es
+      'garrote'.
+
+  - forma_fuente: Mamacanayisa
+    obra: neira-ribero-1762
+    pliego: 70
+    lado: izq
+    letra: I
+    entrada_literal: 'Yndecible — Mamacanayisa'
+    glosa_castellana_literal: 'Yndecible'
+    verificado_en_imagen: '2026-09-21'
+    contexto_en_la_pagina: >-
+      Tres líneas consecutivas leídas en la misma imagen — «Yndisoluble —
+      Mabasaidacanayisa», «Yndecible — Mamacanayisa», «Yndivisible —
+      Maisidacanayisa».
+    lectura: >-
+      Aquí la morfología NO hay que suponerla: la declara el propio Arte.
+      Ver `morfologia_declarada_por_el_arte`. `Mamacanayisa` es un adjetivo
+      en -ble negado (privativo `ma-` + base + el formante «verbal en bilis»
+      `-(da)canayisa`), y la cadena «macana» cae A CABALLO de tres morfemas.
+      NO contiene ninguna raíz `macana-`.
+
+morfologia_declarada_por_el_arte:
+  # Esto es lo que el encargo pedía: «una lectura de la morfología apoyada en
+  # el propio Arte, no supuesta». Está en el arte, no inferida del vocabulario.
+  entrada_del_arte:
+    obra: neira-ribero-1762
+    pliego: 26
+    lado: izq
+    seccion: 'lista alfabética de partículas y verbos (Cap. 1)'
+    lema_castellano_literal: 'Verbal en «bilis»'
+    forma: '-nayisa'
+    ejemplos_literales: 'Macabacanayisa = invisible. Manoacamanimisa = los bautizados. Mebedacanisa = los q[u]e no creen'
+    nota_del_autor_literal: '«tambien es nota de participio de presente, y de preterito estas particulas: -yisa, -misa, -nisa»'
+    fuente_de_la_transcripcion: '6-fusion/achagua_neira_ribero_1762.yaml → arte.verbos (lectura en imagen, 2026-09-12, segunda pasada)'
+  el_privativo_ma:
+    ya_en_el_canon: '2-lengua/morfologia.md §Atributivo: ka- (hay X) / privativo ma- (sin X) — van Buurt §8 y Perea p. 555'
+    y_en_el_propio_arte:
+      - 'Sin sal — Mabayisa  (sobre `bai` ''sal'')'
+      - 'Sin Padre — Masaricanayisa  (sobre `Saricanasi` ''padre'', pliego 92 izq.)'
+  la_serie_paralela_en_el_vocabulario:
+    # Once formas de la misma plantilla. Ninguna es un arma.
+    - 'Yndisoluble — Mabasaidacanayisa  (70 izq.)'
+    - 'Yndivisible — Maisidacanayisa  (70 izq.)'
+    - 'Yncreible — Mabedacanayisa  (69 der.)'
+    - 'Ynfinito — Masutedacanayisa  (70 izq.)'
+    - 'Ymperfecta cosa, no acabada — Manisacanayisa  (69 der.)'
+    - 'Ymplacable — Mananedacanayisa  (69 der.)'
+    - 'Sin Padre — Masaricanayisa  (92 izq.)'
+    - 'Mababaidacanayisa'
+    - 'Marrumicanacanayisa'
+    - 'invisible — Macabacanayisa  (el ejemplo del propio arte, 26 izq.)'
+    - 'Maravilloso / Admirable cosa / Asombroso — Cadedacanayisa  (el positivo, con ca-)'
+  conclusion: >-
+    La afirmación de d21.8 —«la raíz es `macana-` con SUS propios sufijos»— es
+    inexacta por partida doble: (a) `Mamacanayisa` no tiene raíz `macana-`, es
+    `ma-` + base + `-(da)canayisa`; y (b) que `Macanasi` y `Macanayi`
+    compartan o no una raíz es indecidible mientras el arte esté sin minar, y
+    da igual, porque ninguna de las dos significa 'macana'. Lo que SÍ queda en
+    pie de d21.8 es su conclusión operativa: estas formas no sostienen el
+    `-kana` colectivo. Sólo que la razón buena es más fuerte que la escrita.
+
+# ═════════════════════════════════════════════════════════════════════════
+# 2. LA TRAMPA CENTRAL — ¿ES INDEPENDIENTE EL APOYO ACHAGUA?
+# ═════════════════════════════════════════════════════════════════════════
+
+independencia:
+  la_pregunta: >-
+    En 1762 `macana` llevaba 250 años siendo castellano de Indias. ¿Recogió
+    el jesuita una voz achagua heredada, o un préstamo del castellano ya
+    nativizado, o usó él mismo la voz castellana como lema? Que lleve
+    morfología achagua no decide: los préstamos se integran.
+  la_pregunta_se_disuelve: >-
+    No hay nada que independizar. El manuscrito NO recoge `macana` como voz
+    achagua en ninguna de las tres formas citadas, y la única vez que la
+    cadena aparece del lado achagua es dentro de palabras que significan otra
+    cosa. La pregunta correcta pasa a ser la contraria, y el Arte la contesta.
+
+  la_prueba_decisiva:
+    obra: neira-ribero-1762
+    pliego: 73
+    lado: der
+    letra: M
+    entrada_literal: 'Macana. — — — — Guacaba. / La mia = Nucaba[ba]mi.'
+    entrada_siguiente_literal: 'Macana de enlatar. — — — Juba.'
+    cabecera_en_la_misma_pagina: '«Castellano.   M.   Achagua.»'
+    verificado_en_imagen: '2026-09-21'
+    duda_de_lectura: >-
+      En el ejemplo, el copista escribe `Nucabami` con un `ba` volado sobre la
+      línea, que es una marca de inserción: la lectura es `Nucababami` o
+      `Nucabamiba` (achagua_neira_ribero_1762.yaml transcribió `Nucabamiba`).
+      No decide nada aquí; queda anotada.
+    lectura: >-
+      El vocabulario de esta copia va CASTELLANO → ACHAGUA, alfabético por el
+      castellano. Es decir: `Macana` está del lado del CASTELLANO, como voz de
+      la metalengua del misionero — la palabra con la que él pregunta. Y el
+      achagua contesta con `Guacaba`, que no se parece. Lejos de corroborar
+      `macana` como herencia arahuaca, la fuente documenta que una lengua
+      arahuaca del norte, pariente del caquetío, tenía su propia palabra no
+      cognada para el objeto, y que `macana` funcionaba como castellano.
+
+  el_patron_no_es_un_caso_suelto:
+    # ¿Cómo trata el Arte otros tainismos panhispánicos seguros? Igual: como
+    # cabecera CASTELLANA, con una voz achagua no cognada enfrente.
+    pares:
+    - {lema_castellano: 'Macana',  achagua: 'Guacaba', pliego: '73 der', cognado: no}
+    - {lema_castellano: 'Casabe',  achagua: 'Berrí',   pliego: '46 der', cognado: no}
+    - {lema_castellano: 'Hamaca',  achagua: 'Edasi',   pliego: '67 izq', cognado: no}
+    - {lema_castellano: 'Mais',    achagua: 'Cana',    pliego: '73 der', cognado: no}
+    - {lema_castellano: 'Manati',  achagua: 'Apia',    pliego: '74 izq', cognado: no}
+    - {lema_castellano: 'Canoa',   achagua: 'ida',     pliego: 'dentro de otra entrada', cognado: no}
+    lectura: >-
+      Seis de seis. Los tainismos panhispánicos son el vocabulario del
+      misionero, no el del achagua. `Macana — Guacaba` es exactamente ese
+      patrón, y por tanto no es un accidente sino la norma de la obra.
+
+  el_autor_sabe_marcar_un_prestamo:
+    obra: neira-ribero-1762
+    pliego: 76
+    lado: der
+    entrada_literal: 'Morena cosa — Samoruna, «hisp[anice] term[inus] hurtado»'
+    lectura: >-
+      El jesuita marca explícitamente los hispanismos cuando los ve. No marcó
+      nada en `Guacaba` porque no había nada que marcar, y no recogió `macana`
+      como achagua en ningún lugar del vocabulario leído.
+
+  la_glosa_define_o_da_por_conocido: >-
+    La pregunta del encargo («¿la glosa define el objeto o lo da por
+    conocido?») se contesta sola: el lema `Macana` no lleva definición
+    ninguna, porque el destinatario del libro es un misionero español para
+    quien «macana» era una palabra de su propio idioma. Quien sí la define es
+    Alvarado 1921, y en castellano (ver `comparanda`).
+
+  veredicto_de_independencia: >-
+    Se puede decidir, y la respuesta es negativa: no hay apoyo achagua
+    independiente para `macana`. Lo que hay es evidencia en contra.
+
+# ═════════════════════════════════════════════════════════════════════════
+# 3. EL RESTO DE LA COMPARANDA
+# ═════════════════════════════════════════════════════════════════════════
+#
+# Regla 6: cada cero de abajo se midió con variantes (macan, makan, garrot,
+# clava, maza, arma, palo) sobre el texto entero, y el fichero se comprobó
+# no vacío con un control de palabras esperadas.
+
+comparanda:
+  lokono:
+    fuente_de_datos: 'curiana_sim/lokono_full_lexicon.json'
+    obra: perea-alonso-1942
+    resultado: 'CERO — ni `macana` ni una voz glosada garrote/maza/clava'
+    y_en_el_texto_de_perea: >-
+      `macana` aparece DOS veces en Perea 1942, y las dos en PROSA CASTELLANA,
+      no como entrada arahuaca: describiendo las armas de los charrúas —que
+      no son arahuacos— y en «...lo era también el arma ofensiva general de
+      los indígenas denominado comúnmente: MACANA». Es la metalengua otra vez,
+      en la propia obra de referencia comparativa del repo.
+  wayuunaiki:
+    fuente_de_datos: 'curiana_sim/wayunaiki_full_lexicon.json'
+    resultado: 'CERO para `macana`. Para ''arma'' da `a''apüla` y `katkousü` ''arma de fuego'' (post-contacto). Sin cognado.'
+  taino:
+    fuente_de_datos: 'curiana_sim/taino_hipotetico.json'
+    resultado: 'CERO'
+    y_la_fuente_taina_del_repo:
+      obra: pane-c1498
+      resultado: 'CERO — Pané no la trae'
+    nota: >-
+      Ojo: que el taíno hipotético del repo no la tenga NO quiere decir que no
+      sea taína — quiere decir que el repo nunca metió la voz en esa tabla. La
+      filiación taína la sostiene Alvarado, abajo.
+  zavala:
+    obra: zavala-reyes-2015
+    fuente_de_datos: 'curiana_sim/lexicon_zavala.py'
+    resultado: 'CERO'
+    por_que_importa: >-
+      Zavala es el 95 % del caquetío ATESTIGUADO del proyecto
+      (2-lengua/lexicon.md §quién sostiene el atestiguado). Que no esté ahí es
+      justo el cero que impide subirla a `caquetío-atestiguado`.
+  van_buurt:
+    obra: van-buurt-2014
+    resultado: 'CERO — las voces caquetías vivas en papiamento no la traen'
+  gatschet:
+    obra: gatschet-1885
+    resultado: 'CERO (Aruba)'
+  brinton:
+    obra: brinton-1871
+    resultado: 'CERO'
+  achagua:
+    obra: neira-ribero-1762
+    resultado: 'CERO como voz achagua; presente como LEMA CASTELLANO con el achagua `Guacaba` enfrente (ver arriba)'
+
+  alvarado:
+    obra: alvarado-1921
+    pagina_impresa: 189
+    pagina_pdf: 219
+    desfase: 'pdf − 30 = impresa (calculado una vez sobre la cabecera «DE VENEZUELA 189»)'
+    verificado_en_imagen: '2026-09-21'
+    entrada_literal: >-
+      «* MACÁNA. Clava, maza. "Es un palo fuerte y muy labrado: por la parte
+      inferior tiene forma de espada de dos filos y corta como ella". (Carv.
+      310). Voz taína. Otros quieren que venga del azteca macuáhuitl palo
+      manual. Reff. Cas. IV. 209, V. 331; Ov. I. 334, etc. y en suma, los más
+      de los cronistas.»
+    derivados_venezolanos_en_la_misma_pagina:
+      - 'MACANEAR — extirpar con el machete las plantas inútiles'
+      - 'MACANEO — operación de segar la mala yerba'
+      - 'A RAJA MACANA / DE RAJA MACANA — locuciones'
+      - 'RAJAMACANA (s.v., «Véase Macana, atrás»)'
+    lectura: >-
+      El Glosario de voces indígenas de Venezuela SÍ la tiene, y la declara
+      «Voz taína», con una etimología alternativa NÁHUATL, y con referencias
+      que son todas antillanas y cronísticas: Las Casas, Oviedo, «y en suma,
+      los más de los cronistas». Es decir: documentada en las Antillas y en
+      la prosa de los cronistas, NO en la costa caquetía ni en boca indígena
+      de Falcón. Y sus derivados en Venezuela (`macanear`, `macaneo`, `a raja
+      macana`) son castellano regional, lo que confirma la vía.
+    contraste_con_matacan: >-
+      Éste es exactamente el test que decidió `matacán` el 2026-09-14
+      («Alvarado 1921 no la tiene entre las voces indígenas»). Aquí el test da
+      un resultado, pero no el que ayudaría: la tiene, y la filia al TAÍNO,
+      con documentación antillana. `macana` no es el caso de `matacán` (voz
+      regional sin filiación declarada); es el caso opuesto — filiación
+      declarada, pero antillana, y con vía castellana documentada.
+
+# ═════════════════════════════════════════════════════════════════════════
+# HALLAZGO COLATERAL — no estaba en el encargo, y toca la etiqueta actual
+# ═════════════════════════════════════════════════════════════════════════
+
+hallazgo_colateral:
+  titulo: 'La cita de Medina que hoy sostiene la etiqueta no sostiene la glosa'
+  lo_que_dice_la_entrada_hoy:
+    archivo: 'curiana_sim/curiana_lexicon.py (NO tocado)'
+    glosa: "macana, garrote de madera dura, arma de combate"
+    fuente: 'caquetío-reconstruido'
+    notas_literal: >-
+      «Decisión de Miguel 2026-09-12: tainismo panhispánico que Medina Colina
+      recoge en el habla paraguanera (s.v. macana, página no dictada) →
+      `caquetío-reconstruido`, forma justificada por cognado en taíno, como
+      kanoa/hamaca/konuko; NO atestiguada porque la vía pudo ser el español.»
+  lo_que_medina_dice_de_verdad:
+    obra: medina-colina-sxx
+    fuente_de_datos: '6-fusion/medina_colina_dictado.yaml (voz: macana)'
+    glosa_libro_literal: >-
+      «en Paraguaná se utilizó por nuestros viejos para referirse a algo muy
+      grande o desproporcionado»
+    pagina: 'null — ⚠️ PENDIENTE en el propio dictado'
+    veredicto_del_protocolo: 'D — «Antillanismo (filtro 4); la acepción ''grande, desproporcionado'' es extensión general venezolana. Se anota por cobertura.»'
+  lectura: >-
+    La voz viva paraguanera que Medina recoge NO es el garrote: es la acepción
+    venezolana general que el propio DRAE registra ('cosa grande, golpe'). El
+    apoyo de boca viva existe, pero es para OTRA GLOSA. Aplicando el criterio
+    que el proyecto ya escribió para los pares (d19.b: «mismo significado» =
+    glosa normalizada idéntica, sin diccionario de sinónimos, y el
+    solapamiento parcial NO es par sino glosa mal afinada), 'garrote de madera
+    dura, arma de combate' y 'algo muy grande o desproporcionado' no son la
+    misma glosa ni de lejos. Y el veredicto del propio protocolo del dictado
+    fue D — «se anota por cobertura» —, no propuesta de entrada.
+  y_ademas: >-
+    La cita carece de página («página no dictada»; en el dictado, `pagina:
+    null` con marca PENDIENTE). Regla 8: citar es una clave foránea, y una
+    clave sin folio no se puede comprobar. La deuda ya estaba abierta en la
+    memoria del proyecto (Medina físico s.v., pendiente desde 2026-09-01).
+
+# ═════════════════════════════════════════════════════════════════════════
+# 4. QUÉ EXIGE CADA CAPA
+# ═════════════════════════════════════════════════════════════════════════
+
+que_exige_cada_capa:
+  definiciones:
+    fuente: '5-experimento/perfiles_de_run.yaml §capas_conocidas + 2-lengua/lexicon.md §las capas epistémicas'
+    caquetío-atestiguado: 'una fuente colonial, toponímica o de campo lo sostiene — MÁS SU CITA (d19.b: «la etiqueta sola no basta»)'
+    caquetío-reconstruido: 'derivado por regla desde una lengua hermana (método comparativo)'
+    caquetío-retroabstraido: >-
+      la palabra existe y está documentada en BOCA VIVA; lo incierto no es la
+      forma sino el SUSTRATO — si viene del caquetío. Es la marca del dictado
+      de Medina Colina (protocolo 02, §5)
+    caquetío-hipotético: 'la FORMA se propuso; no está documentada'
+
+  que_haria_falta_para_atestiguado: >-
+    Una fuente que dé `macana` COMO CAQUETÍA: un vocabulario, una crónica de
+    la costa, un topónimo o un dato de campo que la recoja en boca caquetía,
+    con folio citable. Hoy la sostienen CERO fuentes del repo en ese sentido:
+    Zavala 0, van Buurt 0, Gatschet 0, Neira y Ribero 0 (como voz achagua),
+    Perea 0, Pané 0. Alvarado la tiene, pero como voz TAÍNA documentada por
+    los cronistas antillanos. No se puede subir.
+
+  cuenta_la_voz_viva_de_medina_como_atestacion_caquetia:
+    respuesta: >-
+      Como atestación caquetía, NO — y el propio proyecto ya lo tiene escrito:
+      por eso las voces de Medina son `caquetío-retroabstraido` y no
+      `caquetío-atestiguado`. La capa retroabstraída existe precisamente para
+      decir «la palabra está viva y documentada, lo que no sabemos es si el
+      SUSTRATO es caquetío». En el caso de `macana` ni siquiera llega ahí con
+      la glosa actual, porque la voz viva que Medina recoge es otra acepción.
+    como_resolvio_el_proyecto_casos_iguales:
+      matacan_2026-09-14:
+        decision: 'entra como `caquetío-retroabstraido` (Miguel, contra la recomendación medida del minador, que era A: no entra)'
+        criterio_de_miguel_literal: >-
+          «Si tenemos una fuente que lo califica como venado y no hay ningún
+          otro ente que lo define así, sino que es un venezolanismo y es algo
+          que era originalmente de la región, entonces […] sí o sí lo tenemos
+          que utilizar.»
+        por_que_macana_no_es_ese_caso: >-
+          El criterio de Miguel tiene dos patas: (1) «no hay ningún otro ente
+          que lo define así» y (2) «es algo que era originalmente de la
+          región». `macana` falla las dos: SÍ hay otro ente que la define —
+          Alvarado la filia al taíno y remite a Las Casas y Oviedo — y su
+          región de origen documentada son las Antillas, no Paraguaná.
+      las_voces_de_medina_2026-09-14:
+        decision: 'el perfil era2 enseña la capa retroabstraída, «las 48 de Medina también»'
+        nota: 'pero `macana` no es una de esas 48: entró el 09-12 por la vía de los tainismos, a `caquetío-reconstruido`'
+      la_esfera_2026-09-17_y_18:
+        el_producto_de_la_esfera_ES_la_esfera: >-
+          casabe, yuca, maíz, batata son voces taínas del lexicón que el
+          castellano también usa, y NO son hispanismos que filtrar: son los
+          conceptos que circulaban por la esfera, y que un agente los diga es
+          la esfera hablando. Se miden aparte en `prestamos_de_esfera` y NO
+          penalizan.
+        la_etiqueta_manda: >-
+          «des-castellanizar»: la voz de la esfera se enseña con su forma
+          indígena, no con la castellana — `FORMA_DE_LA_ESFERA` mapea la clave
+          castellana a la indígena que YA EXISTE, y `SIN_FORMA_DE_LA_ESFERA`
+          lista las que no tienen gemela y por tanto NO se enseñan.
+        por_que_importa_aqui: >-
+          Ésta es la salida doctrinalmente limpia para `macana`: no es una voz
+          caquetía reconstruida, es una voz de la ESFERA. Su etiqueta ANTES de
+          la tanda del 12 era exactamente `taíno` (lo dice su propia `notas`).
+          Pero ver el coste en la opción C.
+      el_precedente_que_invoca_su_notas:
+        cual: 'kanoa / hamaca / konuko'
+        aviso: >-
+          La `notas` de `macana` se apoya en ese precedente. No se audita aquí
+          —es otro expediente— pero conviene decir que el precedente arrastra
+          la misma pregunta: Neira y Ribero da `Hamaca — Edasi` y `Canoa —
+          ida`, es decir, el achagua tampoco tiene cognado de `hamaca` ni de
+          `canoa`. Quien reabra `macana` por la vía de la clase estará
+          reabriendo las trece voces de `tainismos_de_medina`.
+
+# ═════════════════════════════════════════════════════════════════════════
+# 5. QUÉ CAMBIARÍA DE HECHO  (descrito, NO aplicado)
+# ═════════════════════════════════════════════════════════════════════════
+
+que_cambiaria_de_hecho:
+  estado_actual_medido:
+    fecha_de_la_medicion: '2026-09-21'
+    en_VOCABULARIO_BASE: true
+    en_FUERA_DEL_HABLA: false
+    en_FORMA_DE_LA_ESFERA: false
+    en_SIN_FORMA_DE_LA_ESFERA: false
+    ESFERA_DE_CONTACTO: >-
+      es un frozenset de LENGUAS (taíno, kalinago, paraujano,
+      caribe-continental, jirajaroide-contacto), no de palabras: `macana` no
+      cuenta hoy como préstamo de esfera porque su `fuente` es
+      `caquetío-reconstruido`, no `taíno`
+    categoria: 'armas'
+    unica_voz_de_arma: >-
+      `macana` es la ÚNICA entrada del lexicón con `categoria: "armas"`, y no
+      hay ninguna voz de familia caquetía glosada como arma, garrote, maza o
+      clava. Esto importa para las opciones: al contrario que `paa` (cuyo
+      paradigma se mudó a la raíz atestiguada `were` en d19.b), aquí archivar
+      o retirar SÍ deja hueco funcional.
+
+  uso_en_la_base:
+    consulta: >-
+      SELECT sobre word_uses ⋈ agent_responses ⋈ turns ⋈ simulation_runs con
+      el corte simulation_runs.started_at < '2026-09-21'
+    word_uses: 32
+    de_un_total_de: 95445
+    runs_distintos: 15
+    agentes_distintos: 25
+    por_serie: {'(sin serie)': 15, 'era2-c': 14, 'era2-b': 3}
+    rango_de_fechas: '2026-09-14 a 2026-09-20'
+    source_language: 'caquetío en las 32 — consecuencia directa de la etiqueta'
+    loanword_uses: 0
+    lectura: 'está viva y repartida: no es una voz muerta que se pueda mover sin coste'
+
+  la_forma_D5:
+    hoy: '`macana`, con grafía castellana'
+    si_sube_a_familia_caquetia: >-
+      el lema fonémico D5 sería `makana`, como `matakán` y `wayakán`. Pero
+      subir es justo lo que la evidencia no permite.
+    si_vuelve_a_taino: >-
+      se queda `macana` y cae bajo la doctrina de la des-castellanización
+      (2026-09-18): como NO tiene gemela indígena en el lexicón, entraría en
+      `SIN_FORMA_DE_LA_ESFERA` y por tanto DEJARÍA DE ENSEÑARSE hasta que
+      Miguel fusione una forma propuesta. Ése es el coste de C, y hay que
+      decirlo antes: el lexicón se quedaría sin ninguna voz de arma.
+
+  el_score:
+    el_scorer_no_se_toca: true
+    pero_el_score_se_mueve: >-
+      cambiar la FUENTE mueve el score aunque `score_linguistico()` no se
+      toque, como pasó en d19.b y en el corte de las raíces: con
+      `fuente: taíno`, `macana` sale de `palabras_caquetias` y pasa a
+      `prestamos_de_esfera`, que no penaliza pero tampoco suma, y deja de
+      escribirse en `word_uses`. Los runs viejos NO se reescriben.
+    exige: >-
+      medición A/B previa con el patrón de
+      `6-fusion/scripts/medir_politica_atestiguado_manda.py`, y corte de serie
+      declarado, como el resto de los cambios que tocan curiana_sim/.
+
+# ═════════════════════════════════════════════════════════════════════════
+# LO QUE HABRÍA QUE CORREGIR SI MIGUEL ACEPTA EL VEREDICTO
+# ═════════════════════════════════════════════════════════════════════════
+#
+# Dos textos ya commiteados afirman lo contrario de lo aquí medido. No se
+# tocan en esta campaña (regla 5), se listan.
+
+correcciones_propuestas:
+  - donde: '6-fusion/decisiones_tanda_2026-09-21.yaml → d21.8 → nota_de_miguel'
+    dice: >-
+      «…la raíz es `macana-` con SUS propios sufijos […] PERO esas tres formas
+      achaguas son apoyo arahuaco INDEPENDIENTE para `macana` misma»
+    deberia_decir: >-
+      las tres formas existen pero glosan 'Dormidera', 'Mazorca de maíz' e
+      'Yndecible'; `Mamacanayisa` es `ma-` + base + el «verbal en bilis»
+      `-(da)canayisa` que el propio arte declara (26 izq.); no hay raíz
+      `macana-` ni apoyo arahuaco. El Arte trae el lema CASTELLANO «Macana»
+      con el achagua `Guacaba` (73 der.).
+    nota: 'la conclusión de d21.8 (el -kana no se sostiene) NO cambia; cambia su razón, a mejor'
+  - donde: 'curiana_sim/curiana_lexicon.py → comentario sobre `-kana` (≈ línea 7229)'
+    dice: >-
+      «(Esas tres formas sí son apoyo arahuaco independiente para `macana`
+      misma, y revisar su etiqueta va propuesto aparte.)»
+    deberia_decir: 'lo mismo que arriba — la frase es falsa tal como está'
+  - donde: 'curiana_sim/curiana_lexicon.py → entrada `macana` → notas'
+    que_falta: >-
+      que la cita de Medina que la sostiene es para otra glosa, y que carece
+      de página. Y, si Miguel quiere, la refutación achagua medida aquí.
+
+deuda_que_deja_esta_campana:
+  - 'Medina Colina s.v. macana: la PÁGINA sigue sin dictar (`pagina: null`). Sin folio no hay clave foránea (regla 8).'
+  - >-
+    El arte propiamente dicho de Neira y Ribero (pliegos 7-22: declinaciones,
+    las seis conjugaciones, los tratados) sigue sin minar. La morfología que
+    esta campaña necesitó —`-si` absoluto, `-yi` adjetival, `ma-` privativo,
+    `-(da)canayisa` verbal en bilis— se reunió de migajas del vocabulario y de
+    UNA entrada del arte. Ver la bitácora en 4-fuentes/neira-ribero-1762.md.
+  - >-
+    El precedente kanoa/hamaca/konuko y las trece voces de
+    `tainismos_de_medina` (2026-09-12) heredan la misma pregunta que `macana`.
+    Es una decisión de CLASE y no se toca por una palabra.
+  - >-
+    Queda sin resolver si `Macanasi` 'Dormidera' y `Macanayi` 'Mazorca de
+    maíz' comparten de verdad una raíz `maca-`/`macana-` achagua. Es
+    curiosidad, no bloqueante, y la contestaría el arte.

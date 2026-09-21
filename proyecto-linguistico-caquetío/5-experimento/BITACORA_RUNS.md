@@ -75,6 +75,123 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 > conservan como la medición que la encontró, no como los días 1 y 2 de la
 > serie.
 
+#### La serie C repetida con la tanda del 21 dentro — los dos brazos (2026-09-21)
+
+> «Ok entonces repitamos los runs» (Miguel, 2026-09-21). Motor `114c991` —el
+> corte 13 del «Cambio de instrumento», #182—, `motor_sucio: false` en los seis,
+> misma config sellada que la cadena de abajo y mismas semillas 21/22/23; el
+> `lexicon_hash` pasa de `575de995…` a `687670dc…` con el mismo elenco y corpus,
+> o sea que la huella ve el corte. **Las cadenas de abajo quedan del otro lado
+> del corte 13** y se conservan como lo que midieron.
+>
+> **Antes de gastar, un pre-vuelo** (`6-fusion/scripts/prevuelo_de_prompts.py`):
+> el system prompt ENTERO de los 63 montado con el `run_turn` de verdad y
+> `_invoke` espiado, en control, con escena y día de Capubana — 378 prompts, y
+> comprueba CONTENIDO: lo que la tanda enseña está, las 13 archivadas no se
+> enseñan, cero restos de la era 1. Dato de tier que midió: el estado-verbo, el
+> atributivo y el no-poseído llegan a los 63; `TRATO FORMAL` sólo al tier 1.
+
+| brazo | cadena | emergente | caída | acumulada | caída |
+|---|---|---|---|---|---|
+| con escena | `ce7cd2a9 → 591d12d8 → 59aad1c3` | 0,9353 → 0,9145 → 0,8456 | −9,6 % | 0,7775 → 0,6749 → 0,5375 | −30,9 % |
+| **control** | `4e3eef64 → fafdce5b → 104673f6` | 0,9352 → 0,8802 → 0,8298 | **−11,3 %** | 0,7870 → 0,6622 → 0,5704 | −27,5 % |
+
+Los dos dan `CONVERGE ✓`. **Se replica lo que NO se puede decir**: la escena no
+produce la convergencia; en la lectura emergente el control vuelve a caer más.
+(En la acumulada esta vez cae más el brazo con escena: ahí el orden no se
+replica, y no se lee nada de él.)
+
+**Y se replica lo que SÍ es de la escena: la geografía.** Brecha entre la
+distancia *dentro* de cada nodo y *entre* nodos (`analizar_nodos.py`, emergente):
+
+| | día 1 | día 3 | cadena anterior |
+|---|---|---|---|
+| brecha con escena | +0,0125 | **+0,0342** | +0,0159 → +0,0306 |
+| brecha en el control | +0,0021 | +0,0035 | +0,0010 → −0,0027 |
+
+Con escena la brecha arranca seis veces más grande y casi se triplica; en el
+control «nodo» sigue siendo una etiqueta sin realidad lingüística. Dos cadenas,
+dos instrumentos distintos, mismo resultado.
+
+**Lo que NO se replica, y hay que decirlo**:
+
+| | con escena | control | la vez anterior |
+|---|---|---|---|
+| formas que cruzan de nodo en el mismo turno | 3 | 0 | 0 y 3 — **al revés** |
+| turnos hasta cruzar (mediana) | 3 | 3 | 4 y 3 |
+| formas nacidas en los dos nodos a la vez | 13 | 27 | 10 y 20 — se replica |
+| formas que no cruzaron nunca | 12 de 115 | 19 de 137 | 24 de 110 y 19 de 125 — al revés |
+| entradas de koiné fijadas | 0 (3 en disputa) | 2 (1 en disputa) | 1 y 2 |
+
+«Cruces en el mismo turno» **no mide lo que parecía**. El que se rastreó,
+`duna-ima` (día 1, turno 1), lo dicen el Manaure en Moruy y Tebekoa en
+`Caseto:conuco`: dos lugares, ningún canal entre ellos — es **composición
+paralela** de un compuesto transparente (`duna` 'agua' + `-ima`), no contagio.
+La métrica no distingue las dos cosas; la brecha intra/entre sí. De las
+predicciones del diseño §5.4, la que aguanta dos cadenas es la brecha y la de
+las formas nacidas en los dos nodos a la vez (la mitad con escena).
+
+**La tanda del 21, en la boca de la gente** — cadena vieja contra nueva, 216
+respuestas por brazo, contado sobre `response_text`
+(`6-fusion/medicion_tanda_21_en_la_boca_2026-09-21.yaml`):
+
+| | vieja · escena | NUEVA · escena | vieja · control | NUEVA · control |
+|---|---|---|---|---|
+| `u-` no-poseído (usos / hablantes) | 0 / 0 | **200 / 35** | 0 / 0 | **333 / 55** |
+| `-bakoa` | 0 | 28 / 25 | 0 | 28 / 19 |
+| `-bacoa` | 47 / 28 | **0** | 30 / 17 | **0** |
+| estativo + aspecto (`usera-ka`…) | 60 / 31 | **204 / 58** | 51 / 30 | **190 / 57** |
+| `juri-ni/-ka/-da` | 40 / 18 | 11 / 7 | 65 / 23 | 24 / 17 |
+| `ka-juri` | 1 | 1 | 1 | 0 |
+| `ka-` + nombre caquetío | 37 / 21 | 15 / 12 | 34 / 21 | 22 / 15 |
+| `kudanga` / `kuté` | 26 / 17 | 62 / 24 | 2 / 1 | 53 / 17 |
+
+Tres lecturas. (1) Lo que se enseña se aprende, y rápido — pero **es
+cumplimiento, no emergencia** (criterio de `morfologia.md` §11: si una plantilla
+lo enseña es artefacto), y una cuarta parte del `u-` es el ejemplo literal
+repetido (`u-buko` 78, `u-biro` 57: 25,3 % de los usos; los dos están en
+`FORMAS_DE_PLANTILLA`, la puerta ya los excluye). El otro 75 % es productivo:
+`u-duna`, `u-dali`, `u-para`, `u-konuko`… (2) **d21.5 funcionó a medias**:
+«hay viento» dejó de decirse `juri-ni` (40 → 11 y 65 → 24 usos) pero **nadie pasó a
+`ka-juri`**, y `ka-` + nombre BAJA. Lo que dicen ahora es nombre + verbo de
+verdad (`juri wana-ni`), que también es arahuaco bueno; por qué el atributivo no
+prende queda sin explicar. (3) `-bacoa` desapareció entera.
+
+**Score**: con escena 7,39 · 7,43 · 7,53; control 7,52 · 7,69 · **6,95**. La
+caída del día 3 del control está en el turno 2 (media 6,25, tres respuestas
+bajo 5): raíces castellanas con afijo caquetío (`raspa-ni`, `rebosa-ka`,
+`cestos-kan`). No es el instrumento. Los dos brazos puntúan por debajo de la
+cadena anterior (7,6-7,9), que es lo esperable con el prompt 352 caracteres más
+largo (r = −0,48) y el aspecto más exigente — y **no son comparables con
+aquélla**: son series a los dos lados de un corte.
+
+⚠️ **Dos cosas del instrumento que esta corrida destapó**:
+
+1. **El aviso «cadena sin pre-carga de idiolectos» es un falso positivo.** Sale
+   en los días 2 y 3 de los dos brazos (2 y 3 agentes). `agentes_sin_precarga()`
+   deriva las formas-semilla con la semilla del run DEL DÍA (22, 23), y la
+   cadena se sembró con la del día 1 (21). Comprobado sobre el estado guardado:
+   con 21 → **0 agentes**; con 22 → 2; con 23 → 2. La cadena está bien sembrada
+   (63 vectores-semilla distintos); lo que hay que arreglar es el diagnóstico,
+   que debe leer la semilla del primer run de la cadena. Y `analizar_nodos.py`
+   sin `CURIANA_ELENCO=era2` imprime «NO HAY DIVERGENCIA SEMBRADA»: es el
+   elenco de la era 1 cargado por defecto, no el run.
+2. **Una raíz inventada pasa la puerta de raíces si es homógrafa de una
+   archivada.** `kira-iro-aima` (19,3 en la disputa de las cuentas) y
+   `kira-barsure-uco` (el cometa) se apoyan en un `kira` que Arika acuñó el día
+   1 como **'brillo'** —«kira + -iro + -aima = brillos pequeños abundantes»—.
+   Ningún prompt la enseña (0 de 378). Pero `kira` 'escuchar' está en
+   `FUERA_DEL_HABLA` desde la política d19.b, así que
+   `es_raiz_de_ninguna_parte()` la da por raíz del lexicón: **49 usos**. Es el
+   caso del issue `raiz-inventada-puede-un-pueblo-inventar-una-raiz-2026-09-20.md`
+   con una vuelta más: aquí la raíz inventada no se rechaza, **se cuela por
+   homografía**. No se toca hasta que Miguel decida ese issue.
+
+Rechazos del día 3: con escena, 2 por raíz (`suka kaa-ni`, `bonisa-uco`);
+control, 1 por plantilla (`pana-x`) y 2 por raíz (`tuert-uro`, `armadil-iro`).
+Logs, informes por nodo y una copia del estado de cada brazo en
+`curiana_sim/data/serie-c-r2/` (gitignored).
+
 #### El experimento completo — los dos brazos, mismas semillas (2026-09-20)
 
 > Esto es lo que la serie C venía a medir: la misma cadena de tres días con
