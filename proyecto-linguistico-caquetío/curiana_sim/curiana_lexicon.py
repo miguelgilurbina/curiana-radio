@@ -39,7 +39,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "korie": {"sig": "armadillo",              "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "RESUELTO 2026-08-24 (#46). Glosa anterior: 'choza, habitacion, espacio propio', que su propia nota admitia sin fuente localizada (ausente de Alvarado 1921 y de van Buurt 2014). Tres fuentes dicen armadillo: Zavala Reyes 2015 #90 (HB); el CANON del proyecto (genealogia.yaml da 'corie (armadillo)' como totem del linaje Paugis, y la ficha de Buio-sha lo usa como elogio); y Oliver 1989, Apendice A, Tabla A-9 «Selected Caquetio Vocabulary from the XVIth Century», pp. impresas 593-594, leida sobre la imagen por Miguel el 2026-08-24: 'corie | korie | armadillo | armadillo'. La agente Korie-ko conserva su nombre: lo que cambia es que significa — REPARTO 2026-09-10: a ATESTIGUADO. Su nota ya declaraba el marcador 3-0 al resolver #46: Zavala #90 (HB), el canon del propio proyecto (genealogia.yaml, tótem del linaje Paugis) y Oliver 1989 Apéndice A.", "forma_fuente": "corie"},
     "saruro":     {"sig": "boa, serpiente no venenosa",                 "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "RESUELTO 2026-08-24 (#47). Glosa anterior: 'arbol saruro', cuyo unico rastro era una lista de Notion citada en DISENO_KOINE §8 — y alli se usa para confirmar la terminacion -aro/-uro, NO para sostener la glosa. A favor: Zavala Reyes 2015 #224 (E) 'Serpiente no venenosa. Boa constrictora'. AVISO: MARCADOR 1-0, no 3-0 — comprobado que `saruro` NO aparece en la Tabla A-9 de Oliver, asi que no hay tercera fuente; se decide con menos respaldo que #45 y #46 y conviene saberlo. Apoyo lateral: la A-9 da tres palabras en -ure sobre seres vivos (bisure lagartija, chaure buho, maure tejido), asi que la terminacion es compatible con un animal. La agente Saruro-sha conserva su nombre", "notas": "REPARTO 2026-09-10: a ATESTIGUADO, pero CON LA RESERVA QUE SU NOTA YA TRAÍA: marcador 1-0, no 3-0 — `saruro` NO está en la Tabla A-9 de Oliver, así que el único apoyo es Zavala #224 (E). Una sola fuente citada es el listón normal de la capa atestiguada (la mayoría del lexicón es Zavala-solo), y lo que la distingue de chiriware y tukeke es que NO se ha medido como voz panvenezolana. Si apareciera que lo es, baja a retroabstraído."},
     "tukeke": {"sig": "lagartija pequeña, gecko",                       "cat": "sust",  "fuente": "caquetío-retroabstraido", "notas": "Zavala Reyes 2015, glosario #257 (E+A+PMA): «Lagarto casero»; Alvarado 1921, p.300 s.v. TUQUEQUE (geco: Thecadactylus rapicaudus / Gonatodes albogularis); van Buurt 2014 §6 s.v. waltaca deriva el papiamento totèki de «tuqueque, tuteque, an Amerindian word used for geckos in Venezuela» [atribución débil: voz venezolana corriente, ninguna fuente la localiza en Coro] — REPARTO 2026-09-10: a RETROABSTRAÍDO por la misma razón que su nota ya declaraba — «voz venezolana corriente, ninguna fuente la localiza en Coro». Tres fuentes dan la palabra (Zavala #257 E+A+PMA, Alvarado p.300 con dos especies de geco, van Buurt vía el papiamento totèki): lo que falta no es documentación, es la atribución al caquetío. ⭐ Y es una de las tres que Jahn nombra al describir la costumbre de poner a la gente nombres del reino animal («picure, venado, tuqueque»).", "forma_fuente": "tuqueque"},
-    "coro":       {"sig": "cardón grande, cactus columnar",                 "cat": "sust",  "fuente": "caquetío-hipotético", "notas": "F8 (2026-09-12): etiqueta vieja `caquetío-hipotético/topónimo` · D10 (2026-08-03), grupo 3 — BAJA DE TIER, no cambia de lengua. La glosa «cardón grande» NO sale de ninguna fuente localizada. Zavala Reyes 2015 sección D lo dice explícitamente: su #181 es Koro = «Cotorra» (ya en el lexicón como entrada aparte, con su cita), no cardón. En Alvarado 1921 la palabra coro aparece 55 veces y siempre como TOPÓNIMO: no hay lema CORO con glosa de cardón. van Buurt 2014 solo la menciona como la ciudad. La entrada NO se borra y el canon NO se toca: coro da nombre a la ciudad de Coro y aparece en todo el sitio público. Lo que se retira es el respaldo de la glosa, no la palabra"},
+    "coro":       {"sig": "espina",                                          "cat": "sust",  "fuente": "caquetío-hipotético", "lectura_en_disputa": "tres lecturas compiten y ninguna cierra: 'espina' (González Batista, «El nombre de Coro»), 'avispa o lagartija' (Arcaya 1920 p. 170) y 'viento' (Castellanos 1589). Se enseña la que TIENE FUENTE TRABAJADA en el repo, con la disputa declarada", "notas": "F8 (2026-09-12): etiqueta vieja `caquetío-hipotético/topónimo` · D10 (2026-08-03), grupo 3 — BAJA DE TIER, no cambia de lengua. La glosa «cardón grande, cactus columnar» que esta entrada llevaba hasta el 2026-09-21 NO salía de ninguna fuente localizada, y su propia nota lo declaraba: Zavala Reyes 2015 sección D dice que su #181 es Koro = «Cotorra» (entrada aparte en el lexicón, con su cita), no cardón; en Alvarado 1921 la palabra coro aparece 55 veces y siempre como TOPÓNIMO; van Buurt 2014 solo la menciona como la ciudad · d21.15 (2026-09-21, decisión de Miguel): la curación NO es quitar la glosa sino CAMBIAR LA INVENTADA POR LA QUE SÍ TIENE FUENTE. González Batista, «El nombre de Coro» (4-fuentes/gonzalez-batista-nombre-de-coro.md, trabajada en 6-fusion/toponimia_coro_espina.yaml y ya registrada como lectura en 2-lengua/toponimos.yaml §Coriana, con el veredicto de Miguel del 2026-08-25: «PLAUSIBLE, la línea más prometedora del autor, abierta») da `coro` 'espina' → Coriana 'tierra de las espinas, o la tierra del espinar, de vegetación espinosa, e INDIRECTAMENTE tierra de cardones', con `paragua` + `na` como paralelo. O sea que «cardón» no era la glosa: era la CONSECUENCIA INDIRECTA que la propia fuente declara, y se enseñaba como si fuera el dato. Reparos anotados y no escondidos: la lectura depende de `na` = 'tierra', que ninguna fuente impresa da (Zavala #184: 'como, semejante'), y el ejemplo `corocoro` del autor se refutó con Alvarado 1921 (onomatopeya del canto del ave); la tesis aguanta por `tococoro`/`totocoro` vivos en la arquitectura coriana, por el 'fruto del cardón' de Zavala y por el cardonal de Coro en los linderos. La entrada NO se borra y el canon NO se toca: coro da nombre a la ciudad de Coro y aparece en todo el sitio público. `kadushi` se queda como la atestiguación insular del cactus (van Buurt 2014, islas A/B/C, var. *cadushi* en Aruba; Gatschet 1885 sobre material de Pinart, Aruba 1882, «kaduski»), con el matiz de que van Buurt advierte que su lista es de «words LIKELY to be of Caquetío origin» y «has a subjective element»"},
     "caraota":    {"sig": "frijol negro, legumbre",                         "cat": "sust",  "fuente": "español-colonial", "notas": "D10 (2026-08-03), grupo 1 — REASIGNADA A ESPAÑOL. Alvarado 1921 p.58 s.v. CARAOTA la describe como el nombre corriente panvenezolano de las judías (Phaseolus, Canavalia, Pachyrrhizus), sin declararle origen indígena. Y Zavala Reyes 2015 sección D la cierra: su glosario #162 glosa el caquetío «icoroata» como 'caraota' — caraota es la GLOSA española, icoroata la voz caquetía"},
     "pauji":      {"sig": "árbol espinoso de fruto pequeño (Bumelia buxifolia)",                      "cat": "sust",  "fuente": "caribe-cháima", "glosa_fuente": "Bumelia buxifolia. Sapotáceas. Árbol espinoso, de hojas elípticas... [Alvarado 1921 p.244 s.v. PAUJÍ; cf. p.175 s.v. IGÜÍ: «Bumelia buxifolia, árbol maderable. Paují, Malarmo. Coro»]", "notas": "D10 (2026-08-03), grupo 1 — REASIGNADA A CARIBE CONTINENTAL Y GLOSA CORREGIDA. En Alvarado 1921 p.244 paují es un ÁRBOL derivado del chaima, no el ave. Y Zavala Reyes 2015 sección D lo confirma por otra vía: su glosario #197 glosa el caquetío «paugis» como 'paují' — es decir, paují es la palabra ESPAÑOLA y paugis la caquetía (la que lleva la agente Paugis-sha). El ave sigue teniendo nombre propio en el lexicón; lo que sale del caquetío es la forma española"},
     "manaure":    {"sig": "título laudatorio del señor principal (var. managuanare, managuarire)", "cat": "título", "fuente": "caquetío-atestiguado", "notas": "González, Carlos (estudio histórico del PLINCODE, p.23), citado en Zavala Reyes 2015 nota al pie (2): 'el cacique caquetío no se llamaba Manaure, pues este era un término laudatorio pero no el único, también recibía los dictados de managuanare, managuarire'. curiana_agents.py ya usaba este dato en el system_prompt de Manaure sin cita"},
@@ -74,7 +74,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     # tanda: 56 formas flexionadas y 1.222 usos en la base.
     "maa":        {"sig": "decir, hablar, comunicar",                     "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arahuaco", "fuente": "caquetío-reconstruido"},
     "taa":        {"sig": "tomar, coger, recibir",                          "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arahuaco", "fuente": "caquetío-reconstruido"},
-    "chaa":       {"sig": "hacer, construir, crear",                        "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arahuaco", "fuente": "caquetío-reconstruido"},
+    "chaa":       {"sig": "hacer, construir",                               "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arahuaco · d21.16 (2026-09-21): la glosa decía «hacer, construir, crear» y ese «crear» la emparejaba con `eroa` «empezar, crear, originar», que es ATESTIGUADA — y no son lo mismo: uno construye, el otro origina. Miguel: «efectivamente pasa lo mismo, son símiles pero que tienen significados distintos también». Se quita «crear»; la entrada no se archiva, porque sin el solapamiento no hay par", "fuente": "caquetío-reconstruido"},
 
     # ── Única frase Caquetía atestiguada ──────────────────────────────
     # "Chacamba cudanga" = ¿Cómo está usted? (saludo)
@@ -105,7 +105,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     # la atestiguada»): sus rivales atestiguadas son `kasi` (Zavala #76) y
     # `kati` (Zavala #71). Están en FUERA_DEL_HABLA con su procedencia.
     "kaya":     {"sig": "lluvia, agua del cielo",                         "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono (juya-cogn)", "fuente": "caquetío-reconstruido"},
-    "kuru":       {"sig": "árbol, madera, tronco",                          "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/proto-arawakan", "fuente": "caquetío-reconstruido"},
+    "kuru":       {"sig": "árbol, madera, tronco",                          "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/proto-arawakan · d21.16 (2026-09-21), punto 4 — CONVIVENCIA DECLARADA con `bara` 'palo, árbol' (atestiguada, Zavala #29 E). No es un bug de curación ni un par de la política «manda la atestiguada»: es VARIACIÓN REAL, y las dos se quedan. La distinción que las sostiene es la que la propia pareja de glosas enseña — `bara` es el PALO CORTADO (y su reduplicada atestiguada `barabara` es la madera dura, Zavala #30) y `kuru` el ÁRBOL VIVO con su madera y su tronco. Miguel: «al final no pasa nada si hay símiles, en todo lenguaje hay símiles»", "fuente": "caquetío-reconstruido"},
     "arima":      {"sig": "pez, pescado",                                   "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
     # `habo` 'mar, océano, aguas grandes' ARCHIVADA el 2026-09-19 (política
     # «manda la atestiguada»): su rival atestiguada es `para` (Zavala #190),
@@ -114,8 +114,8 @@ VOCABULARIO_BASE: dict[str, dict] = {
     # una de las deudas declaradas de la tanda.
     "dali":     {"sig": "tierra, suelo, polvo",                           "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en garifuna/proto-arawakan", "fuente": "caquetío-reconstruido"},
     "suka":       {"sig": "noche, oscuridad",                               "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/proto-arawakan", "fuente": "caquetío-reconstruido"},
-    "bara":       {"sig": "palo, árbol",                         "cat": "sust",  "notas": "Decisión #101 (tanda 2026-08-30) — GLOSA CORREGIDA a la de las fuentes: Zavala Reyes 2015 #29 (E): «Palo, árbol», con Esteves 1989 y van Buurt 2014 diciendo lo mismo, y la prueba interna de barabara (Zavala Reyes 2015 #30: «Árbol de madera dura y pesada. Olivo») — la reduplicada de la misma raíz ya estaba atestiguada como árbol. Lectura descartada por D7: río, corriente fluvial (venía de cognado proto-arawakan/topónimo, sin cita) — queda registrada aquí, no se pierde", "fuente": "caquetío-atestiguado", "forma_fuente": "Bara"},
-    "sima":       {"sig": "cerro, montaña, elevación",                      "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/topónimo (Barquisimeto)", "fuente": "caquetío-reconstruido"},
+    "bara":       {"sig": "palo, árbol",                         "cat": "sust",  "notas": "Decisión #101 (tanda 2026-08-30) — GLOSA CORREGIDA a la de las fuentes: Zavala Reyes 2015 #29 (E): «Palo, árbol», con Esteves 1989 y van Buurt 2014 diciendo lo mismo, y la prueba interna de barabara (Zavala Reyes 2015 #30: «Árbol de madera dura y pesada. Olivo») — la reduplicada de la misma raíz ya estaba atestiguada como árbol. Lectura descartada por D7: río, corriente fluvial (venía de cognado proto-arawakan/topónimo, sin cita) — queda registrada aquí, no se pierde · d21.16 (2026-09-21), punto 4 — CONVIVENCIA DECLARADA con `kuru` 'árbol, madera, tronco' (reconstruida). No es un bug de curación ni un par de la política «manda la atestiguada»: es variación real y las dos se quedan. `bara` es el PALO CORTADO —y `barabara`, su reduplicada atestiguada, la madera dura (Zavala #30)—; `kuru`, el árbol vivo", "fuente": "caquetío-atestiguado", "forma_fuente": "Bara"},
+    "sima":       {"sig": "cerro, elevación del terreno",                   "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/topónimo (Barquisimeto) · d21.16 (2026-09-21), punto 5 — CONVIVENCIA DECLARADA con `turumako` 'cerro de cima plana, meseta' (atestiguada, Zavala #262 AM). Las dos se quedan y las dos se dicen: por el criterio de la política d19.b NO son par —«cerro, montaña, elevación» contra «cerro, meseta» es solapamiento parcial, no glosa idéntica— y Miguel: «me parece bien que convivan sima y turumako […] al final no pasa nada si hay símiles, en todo lenguaje hay símiles». Se afinan las dos glosas para que dejen de emparejar: aquí la elevación a secas, allí la cima plana. Y el argumento morfológico que cierra la tercera banda de aquel issue: `-bana` es un SUFIJO locativo, no un sustantivo; compone (`kali-bana`, `biro-bana`) pero no nombra, así que «cerro ya se dice con -bana» no se sostiene. El par 6 («sima») deja de estar abierto por esta vía: no se archiva ninguna", "fuente": "caquetío-reconstruido"},
 
     # ── Personas y parentesco ──────────────────────────────────────────
     "ama":        {"sig": "madre, mujer que nutre y da origen",             "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en proto-arawakan universal", "fuente": "caquetío-reconstruido"},
@@ -232,7 +232,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "humokaro": {"sig": "mujer bella, hermosa",                           "cat": "adj",   "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #159 (GC): «Mujer bella»", "forma_fuente": "humocaro"},
     "kasi": {"sig": "sol",                                            "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #76 (GC): «Sol» · MANDA desde el 2026-09-19 (política «manda la atestiguada»): ocupa el sitio de `kali`, la forma reconstruida que quedó archivada en FUERA_DEL_HABLA. ⚠️ COLISIÓN DECLARADA con `kashi` 'ahora': bajo `curiana_fonotactica.fonemizar` las dos dan el mismo esqueleto, `kasi`, y desde esta tanda `prompt_reglas_completo` enseña las dos —ésta en NATURALEZA y `kashi` en CONECTORES, y el ejemplo de respuesta ideal las usa a tres líneas de distancia—. El MOTOR no las confunde (lookup exacto en `_familia_de_token`, token literal en el filtro de nombres, pertenencia a un set en la puerta de la competencia; `fonemizar` sólo entra por `_es_casi_autoglosa`, que compara una voz con su propia glosa); quien puede confundirlas es el hablante. Medido en 6-fusion/medicion_politica_atestiguado_manda_2026-09-19.yaml §colision_kasi_kashi", "forma_fuente": "cazi"},
     "kiba":       {"sig": "piedra",                                        "cat": "sust",  "fuente": "caquetío-atestiguado", "forma_fuente": "quiva", "notas": "Decisión colisiones D5 (2026-08-31) — HOMÓNIMOS DECLARADOS bajo el mismo lema: kiba-1 piedra (Zavala Reyes 2015 #218 «Quiva» (E); y #92 «Cuiva. Kiba» (PMA) piedra — Arcaya registró la grafía k: el lema fonémico está impreso en la fuente) y kiba-2 ayuda (Zavala #203 «Quiba» (AM), cat v_raiz). La grafía b~v es betacismo colonial: mismo lema fonémico. El sentido piedra lleva el sig activo por la capa toponímica (van Buurt §8 siba/quiba piedra-roca; quibacoa, Todariquiba). Ambas salen del generado: FUSIONADAS_EN_LITERAL del miner"},
-    "apana":      {"sig": "una luna (unidad de tiempo ~30 días)",           "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #10 (GC): «Una luna. Medición de tiempo»"},
+    "apana":      {"sig": "medida de tiempo: una luna (~30 días)",          "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #10 (GC): «Una luna. Medición de tiempo» · d21.16 (2026-09-21): la CABEZA de la glosa pasa a ser la medida, que es lo que la fuente pone delante; antes era «una luna (unidad de tiempo ~30 días)» y emparejaba con `kati` 'luna'. NO se reglosa a «mes»: la fuente dice «Una luna. Medición de tiempo» y su pareja `buiamati` «dos lunas» (#47), o sea un sistema de CONTAR LUNAS; llamarlo mes proyectaría el calendario europeo (regla 3). Miguel: «¿Entonces es más sobre el ciclo lunar pensando en la agricultura? Pero no sé si sea derechamente un mes, no?» — y lo de la agricultura tampoco lo dice la fuente, así que no se escribe"},
     "buiamati":   {"sig": "dos lunas (unidad de tiempo ~60 días)",          "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #47 (GC): «dos lunas. Medición de tiempo»"},
     "kasebo": {"sig": "poniente, oeste",                                "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #75 (GC): «Poniente»", "forma_fuente": "cazebo"},
     "kasikure": {"sig": "levante, este",                                  "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #77 (GC): «Parte del levante»", "forma_fuente": "cazicure"},
@@ -6942,38 +6942,55 @@ REGLAS_ASPECTO: dict[str, dict] = {
 }
 
 REGLAS_LOCATIVAS: dict[str, dict] = {
+    # ⚠️ d21.6 («Me parece🫡 la B», 2026-09-21). #109 retiró la glosa 'lugar de'
+    # el 2026-09-07 —el censo de Esteves dio 0 casos y el 'lugar' paraguanero
+    # es `-bakoa`— y las dos plantillas siguieron enseñando literalmente
+    # «`-ana` = lugar de X» durante dos semanas: el mismo patrón que
+    # `kali-bana`, el canon decidiendo una cosa y el prompt diciendo otra.
+    # Ahora se enseña SIN GLOSA, como `-ubana` y `-uru`, que es el patrón que
+    # el proyecto ya eligió para una desinencia atestiguada sin valor anotado.
+    # Ni se quita del prompt (opción A, que tiraría un formante atestiguado)
+    # ni se deja el error con permiso (C). Y abre la puerta a que los agentes
+    # propongan la glosa, que es para lo que existe la simulación.
     "-ana": {
-        "nombre": "topónimo / lugar habitado",
-        "desc": "Lugar donde abunda X, territorio asociado a X. Produce topónimos.",
-        "uso": "RAÍZ + -ana  →  nombre de lugar",
-        "ejemplos": [
-            "coro + ana = Curiana (lugar/territorio del cardón)",
-            "buco + ana = lugar de la represa",
-            "biro + ana = lugar de la sal, salinar",
-        ],
-        "evidencia": "CANON-SIMULACIÓN, no dato: la glosa 'lugar de' se retiró del "
-                     "canon de reconstrucción el 2026-09-07 (#109, decisión B de "
-                     "Miguel; el censo de Esteves dio 0 casos y el 'lugar' "
-                     "paraguanero es -bacoa). Se conserva aquí como convención de "
-                     "la simulación. Apoyos que tenía: Curiana (Zavala 2015, sin "
-                     "glosa de fuente), Paraguaná (*Para+gua+na, segmentación "
-                     "abierta), Barquisimeto (*Barqui+sima/ima)",
+        "nombre": "desinencia (valor no precisado)",
+        "desc": "Desinencia atestiguada de la lengua; nadie anotó su valor. "
+                "La glosa 'lugar de' se retiró del canon el 2026-09-07 (#109).",
+        "uso": "RAÍZ + -ana",
+        "ejemplos": [],
+        "evidencia": "ATESTIGUADA COMO FORMA, sin glosa de fuente. #109 (decisión B "
+                     "de Miguel, 2026-09-07) retiró la glosa 'lugar de': el censo de "
+                     "Esteves dio 0 casos y el 'lugar' paraguanero es -bakoa. Los "
+                     "apoyos que tenía eran de FORMA, no de valor: Curiana (Zavala "
+                     "2015, sin glosa de fuente), Paraguaná (*Para+gua+na, "
+                     "segmentación abierta), Barquisimeto (*Barqui+sima/ima). "
+                     "d21.6 (2026-09-21): deja de enseñarse con glosa y pasa al "
+                     "patrón de -ubana / -uru",
         "instruccion_agente": (
-            "Si necesitas nombrar un lugar, usa la raíz del elemento característico + -ana: "
-            "Si hay muchos manglares, ese lugar es 'manglar-ana'. "
-            "Si es donde se guarda la sal, es 'biro-ana'."
+            "`-ana` es una desinencia que tu lengua tiene y cuyo valor nadie "
+            "anotó: puedes usarla si propones tú su valor entre corchetes."
         ),
     },
     "-gua": {
         "nombre": "región / área asociativa",
         "desc": "Zona más amplia asociada con X. Menos específico que -ana.",
         "uso": "RAÍZ + -gua  →  región, área amplia",
+        # d21.14 B: `Corogua` era un derivado que el lexicón no tiene. Los tres
+        # ejemplos van ahora con formas que el lexicón SÍ tiene (`maure`,
+        # `para`) o con el topónimo entero, que no se presenta como derivación.
         "ejemplos": [
-            "Coro + gua = Corogua (región de los cardones) → hoy: Coro",
-            "Para + gua + na = Paraguaná",
+            "maure + gua = maure-gua (la tierra del algodón, la región)",
+            "para + gua + na = Paraguaná (segmentación abierta)",
             "Araya (región salina)",
         ],
         "evidencia": "Topónimos venezolanos de Falcón y Sucre",
+        "deuda": "sin-procedencia (d21.7, «Si me parece, B», 2026-09-21): cero clave "
+                 "foránea a 4-fuentes/bibliografia.yaml. Se sigue enseñando mientras "
+                 "se le busca fuente en 2-lengua/toponimos.yaml (109 topónimos en "
+                 "canon) y en el gazeteer de Esteves ya minado — campaña aparte. "
+                 "Apoyo que ya existe en el canon: `paragua` se lee como `para` "
+                 "'mar' + `-gua`, y por eso el 2026-09-19 se decidió NO fusionar "
+                 "`parawa`/`para`: fusionarlas habría borrado este morfema",
         "instruccion_agente": (
             "Para referirte a una región entera, usa -gua: "
             "'maure-gua' = la tierra del algodón (región)."
@@ -6983,10 +7000,13 @@ REGLAS_LOCATIVAS: dict[str, dict] = {
         "nombre": "cerro / sitio alto",
         "desc": "El cerro, la loma o el sitio alto asociado a X.",
         "uso": "RAÍZ + -bana  →  cerro de, sitio alto de",
+        # d21.14 B: `Judibana` era un derivado que el lexicón no tiene (`judi`
+        # no es clave). Se reemplaza por `biro`, que sí lo es y es además el
+        # ejemplo que IDENTIDAD_LINGUISTICA enseña desde el 2026-09-19.
         "ejemplos": [
             "kapu + bana = kapubana, el duende del cerro (atestiguado, Zavala #61)",
             "sima + bana = la cumbre del cerro",
-            "judi + bana = Judibana, cerro del viento (topónimo, testimonio de Miguel)",
+            "biro + bana = biro-bana, el cerro de la sal",
         ],
         "evidencia": "D9 (#38), aprobada 2026-08-30: Zavala Reyes 2015 #26 «Bana (E): "
                      "Sitio, cerro alto» + capu/capubana #60-61 + Guadadubana (González "
@@ -7043,68 +7063,18 @@ REGLAS_RETIRADAS: dict[str, dict] = {
             "la mujer que cuida el buco puede llamarse 'buco-sha'."
         ),
     },
-}
-
-REGLAS_POSESIVAS: dict[str, dict] = {
-    "ta-": {
-        "nombre": "posesivo 1ra singular",
-        "desc": "Mi, mío/mía. Del hablante.",
-        "uso": "ta- + SUSTANTIVO  →  mi X",
-        "ejemplos": [
-            "ta + barsure = ta-barsure (mi alma)",
-            "ta + corie = ta-corie (mi choza)",
-            "ta + anüiki = ta-anüiki (mi habla, mi lengua)",
-        ],
-        "wayunaiki": "ta- (1ra persona singular posesivo, cognado directo)",
-    },
-    "wa-": {
-        "nombre": "posesivo 1ra plural",
-        "desc": "Nuestro/nuestra. De nosotros, del grupo.",
-        "uso": "wa- + SUSTANTIVO  →  nuestro X",
-        "ejemplos": [
-            "wa + barsure = wa-barsure (nuestra alma colectiva)",
-            "wa + buco = wa-buco (nuestra represa)",
-            "wa + anüiki = wa-anüiki (nuestra lengua)",
-        ],
-        "wayunaiki": "wa- (1ra persona plural posesivo, cognado directo)",
-    },
-    "ma-": {
-        "nombre": "negativo / privativo",
-        "desc": "Sin X, no X, carente de X.",
-        "uso": "ma- + SUSTANTIVO  →  sin X / no X",
-        "ejemplos": [
-            "ma + barsure = ma-barsure (sin alma, vacío espiritual)",
-            "ma + biro = ma-biro (sin sal)",
-            "ma + anüiki = ma-anüiki (sin habla, mudo, extranjero incomprensible)",
-        ],
-        "wayunaiki": "ma- (prefijo negativo, cognado directo)",
-    },
-    "ka-": {
-        "nombre": "posesivo genérico / asociativo",
-        "desc": "El/la que tiene X, poseído por, asociado con.",
-        "uso": "ka- + SUSTANTIVO  →  el/la de X",
-        "ejemplos": [
-            "ka + maure = ka-maure (el del algodón, el tejedor)",
-            "ka + biro = ka-biro (el de la sal)",
-            "ka + barsure = ka-barsure (el del alma fuerte, el espiritual)",
-        ],
-        "wayunaiki": "ka- (prefijo posesivo no-pronominal)",
-    },
-}
-
-REGLAS_NUMERO: dict[str, dict] = {
-    "-kana": {
-        "nombre": "plural colectivo",
-        "desc": "Grupo de, el pueblo de, todos los X.",
-        "uso": "SUSTANTIVO + -kana  →  plural / colectivo",
-        "ejemplos": [
-            "wayuu + kana = wayuukana (el pueblo wayuu, todos los wayuu)",
-            "barsure + kana = las almas",
-            "piache + kana = los piaches, el conjunto de chamanes",
-        ],
-        "wayunaiki": "-kana (sufijo plural, COGNADO DIRECTO con Caquetío)",
-    },
+    # ── d21.9 («Si, A.», 2026-09-21) ──────────────────────────────────
+    # `-naiki` se retira por la MISMA razón que `-ko` y `-sha`: sin fuente, y
+    # era convención. Su apoyo era literalmente el NOMBRE DE LA LENGUA ANDAMIO
+    # (`wayuunaiki`) y su único ejemplo también, o sea que el argumento era
+    # circular. Medido antes de retirarlo: 0 usos en 95.445, ninguna plantilla
+    # lo enseñaba, y vivía sólo en el desafijador.
+    # ⚠️ Sacarlo de `TODAS_LAS_REGLAS` SÍ mueve `_SUFIJOS_CAQ`, así que se
+    # midió aunque el uso fuera cero — ninguna forma de la base se desafija
+    # distinto (6-fusion/medicion_tanda_21_2026-09-21.yaml §d21_9_naiki).
     "-naiki": {
+        "retirada": "2026-09-21, decisión de Miguel (d21.9): sin fuente; el apoyo "
+                    "era el nombre de la lengua andamio y su ejemplo también",
         "nombre": "lengua de / habla de",
         "desc": "La lengua, el idioma, la forma de hablar de un pueblo.",
         "uso": "GENTILICIO + -naiki  →  nombre de la lengua",
@@ -7115,6 +7085,171 @@ REGLAS_NUMERO: dict[str, dict] = {
         "wayunaiki": "anüiki = habla → -naiki es sufijo derivado",
     },
 }
+
+REGLAS_POSESIVAS: dict[str, dict] = {
+    "ta-": {
+        "nombre": "posesivo 1ra singular",
+        "desc": "Mi, mío/mía. Del hablante.",
+        "uso": "ta- + SUSTANTIVO  →  mi X",
+        "ejemplos": [
+            "ta + barsure = ta-barsure (mi alma)",
+            "ta + korie = ta-korie (mi armadillo)",
+            "ta + anüiki = ta-anüiki (mi habla, mi lengua)",
+        ],
+        "wayunaiki": "ta- (1ra persona singular posesivo, cognado directo)",
+        "deuda": "sin-procedencia — el único apoyo escrito es el cognado wayunaiki, "
+                 "que es el andamio que D11 retiró como hermana por defecto. "
+                 "Auditoría de morfología 2026-09-20 §1 y §2(d)",
+    },
+    "wa-": {
+        "nombre": "posesivo 1ra plural",
+        "desc": "Nuestro/nuestra. De nosotros, del grupo.",
+        "uso": "wa- + SUSTANTIVO  →  nuestro X",
+        "ejemplos": [
+            "wa + barsure = wa-barsure (nuestra alma colectiva)",
+            "wa + buko = wa-buko (nuestra represa)",
+            "wa + anüiki = wa-anüiki (nuestra lengua)",
+        ],
+        "wayunaiki": "wa- (1ra persona plural posesivo, cognado directo)",
+        "atestiguado": "apoyo insular independiente en 2-lengua/morfologia.md §2: "
+                       "van Buurt 2014 §6 vía de Goeje 1928",
+    },
+    # ── EL NO-POSEÍDO (d21.13, «Vale, B», 2026-09-21) ─────────────────
+    # De los tres huecos que la auditoría midió —no-poseído, número de los
+    # irracionales y género varonil/no varonil— se importa SÓLO éste, que es
+    # el que menos cosmovisión arrastra: es pura gramática. Los otros dos se
+    # declaran como huecos con su cita en 2-lengua/morfologia.md y se esperan
+    # (el género es lo que la regla 4 prohíbe importar sin marcarlo, y el
+    # proyecto acaba de pasar por eso con `-ko`/`-sha`).
+    #
+    # El hueco que tapa está MEDIDO: `ta-` se usa 6.843 veces sobre 258 raíces
+    # distintas, y parte de eso son agentes que dicen «mi cerro» porque no
+    # tienen forma de decir «el cerro». Hasta hoy el sistema tenía cuatro
+    # maneras de decir de quién es algo y ninguna de decir que no es de nadie.
+    "u-": {
+        "nombre": "no-poseído / absoluto",
+        "desc": "La cosa sin dueño: LA casa, EL cerro, no «mi» ni «nuestro».",
+        "uso": "u- + SUSTANTIVO  →  el/la X, sin poseedor",
+        "ejemplos": [
+            "u + korie = u-korie (el armadillo, no el mío)",
+            "u + buko = u-buko (la represa, sin decir de quién)",
+            "u + biro = u-biro (la sal, la que hay)",
+        ],
+        "atestiguado": "Perea y Alonso 1942 p. 587: índices personales sobre el "
+                       "nombre (`da-si-kua` 'mi casa') frente al índice ABSOLUTO "
+                       "`u-`/`ù-` — `u-si-kua-hù` = 'LA casa, sin poseedor'. Es la "
+                       "marca de no-poseído, que es como el arahuaco dice lo que "
+                       "otras familias dicen con la alienabilidad",
+        "capa": "reconstruido desde el lokono (deuda D11 fase 3, como los tres "
+                "aspectos y los cuatro prefijos): ninguna fuente caquetía lo "
+                "atestigua. Se importa porque es gramática pura y tapa un hueco "
+                "medido; el género y el número de los irracionales, que arrastran "
+                "cosmovisión, NO se importan",
+        "instruccion_agente": (
+            "Cuando hablas de una cosa que no es de nadie, no la hagas tuya: "
+            "'u-biro' es la sal que hay, 'ta-biro' es mi sal."
+        ),
+    },
+}
+
+# ── ATRIBUTIVO / PRIVATIVO (d21.5, «Vamos con la C», 2026-09-21) ──────
+# `ka-` y `ma-` vivían en REGLAS_POSESIVAS, y `ka-` se llamaba «posesivo
+# genérico» y se enseñaba como `ka-biro = el salinero` —una persona—. No lo
+# es: es el ATRIBUTIVO arahuaco, el par mínimo del privativo `ma-`, y
+# predicar un nombre es lo que hace. El `desc` viejo («el/la que TIENE X») ya
+# era correcto; lo que estaba mal eran el nombre, la tabla en que vivía y el
+# ejemplo. El resultado medido: `ka-` se usaba 564 veces contra 6.843 de
+# `ta-`, o sea que el mecanismo bueno para predicar un nombre estaba escondido
+# dentro de la tabla de posesivos.
+#
+# ⚠️ CAMBIA LA AGRUPACIÓN, NO LAS CLAVES. `TODAS_LAS_REGLAS` sigue teniendo
+# exactamente los mismos afijos, así que `_PREFIJOS_CAQ`, `_SUFIJOS_CAQ` y
+# `nucleo_de_token()` no se mueven ni un token. Lo que sí cambia es el
+# EJEMPLO DEL PROMPT, y eso es el corte de serie.
+#
+# Consecuencia buscada, que es el caso que destapó la sesión: el viento ya
+# tiene su vía escrita — `ka-juri` 'hay viento' en vez de conjugar `juri-ni`
+# sobre un nombre.
+REGLAS_ATRIBUTIVAS: dict[str, dict] = {
+    "ka-": {
+        "nombre": "atributivo / existencial",
+        "desc": "Hay X, existe(n) X; el lugar tiene X; lo que tiene X.",
+        "uso": "ka- + SUSTANTIVO  →  hay X, el lugar tiene X",
+        "ejemplos": [
+            "ka + biro = ka-biro (hay sal, el lugar tiene sal)",
+            "ka + maure = ka-maure (hay algodón)",
+            "ka + juri = ka-juri (hay viento)",
+        ],
+        "atestiguado": "van Buurt 2014 §8: `ka-` es localizador, 'hay / existe(n)' "
+                       "— *Casibari* = «hay rocas duras». Perea y Alonso 1942 p. 555 "
+                       "da el PAR MÍNIMO con el privativo `m-`: `k-ere-u-ti` 'casado' "
+                       "/ `m-ere-u-ti` 'soltero'; `c-a-nsi-ti` 'amante' = el que TIENE "
+                       "afecto",
+        "wayunaiki": "ka- (prefijo atributivo); el cognado existe, pero el apoyo que "
+                     "se cita es el insular y el lokono, no el andamio",
+        "instruccion_agente": (
+            "Para decir que en un sitio hay algo, ponle ka- al nombre: "
+            "'ka-biro' = hay sal; 'ka-juri' = hay viento. No es «el salinero»: "
+            "es que la cosa está ahí."
+        ),
+    },
+    "ma-": {
+        "nombre": "privativo / negativo",
+        "desc": "Sin X, no X, carente de X. El reverso exacto de ka-.",
+        "uso": "ma- + SUSTANTIVO  →  sin X / no X",
+        "ejemplos": [
+            "ma + barsure = ma-barsure (sin alma, vacío espiritual)",
+            "ma + biro = ma-biro (sin sal)",
+            "ma + anüiki = ma-anüiki (sin habla, mudo, extranjero incomprensible)",
+        ],
+        "atestiguado": "Perea y Alonso 1942 p. 555, el par mínimo con el atributivo: "
+                       "`k-ere-u-ti` 'casado' / `m-ere-u-ti` 'soltero'",
+        "wayunaiki": "ma- (prefijo negativo, cognado directo)",
+    },
+}
+
+REGLAS_NUMERO: dict[str, dict] = {
+    # ⚠️ d21.8 («Vale perfecto […] Por lo que me parece. A.», 2026-09-21). El
+    # campo `wayunaiki` afirmaba «COGNADO DIRECTO con Caquetío», y el canon no
+    # puede exhibir ninguno: la única clave de familia caquetía terminada en
+    # -kana es `sakana` 'ofrenda', HIPOTÉTICA; en 2-lengua/toponimos.yaml hay
+    # cero; y la única `kana` atestiguada de Zavala (#57) es 'demonio', un
+    # lema y no un sufijo. La afirmación baja a «reconstruido desde el
+    # wayunaiki», deuda D11 como los tres aspectos.
+    #
+    # NO se archiva la forma (opción B): quitar el plural dejaría a los
+    # agentes sin manera de decir «los ancianos», y el dato lokono —el plural
+    # es pospuesto `-nu` y los irracionales no distinguen número, Perea p. 556—
+    # es de otra lengua. Lo que sí se hace sin preguntar es reescribir los
+    # ejemplos: enseñaban a pluralizar UNA PALABRA WAYUU (`wayuu + kana =
+    # wayuukana`) con la lengua que `IDENTIDAD_LINGUISTICA` declara «tan ajena
+    # para ti como el español», y una forma ARCHIVADA (`piache`, en
+    # FUERA_DEL_HABLA desde D10).
+    #
+    # Nota de Miguel, medida y descartada como apoyo: `macana` «también
+    # existe, es lo mismo». No sostiene este `-kana` — el achagua de Neira y
+    # Ribero 1762 trae `Macanasi`, `Macanayi` y `Mamacanayisa`, o sea raíz
+    # `macana-` con SUS propios sufijos. Comparten sílaba, no morfema. (Esas
+    # tres formas sí son apoyo arahuaco independiente para `macana` misma, y
+    # revisar su etiqueta va propuesto aparte.)
+    "-kana": {
+        "nombre": "plural colectivo",
+        "desc": "Grupo de, el pueblo de, todos los X.",
+        "uso": "SUSTANTIVO + -kana  →  plural / colectivo",
+        "ejemplos": [
+            "barsure + kana = barsure-kana (las almas)",
+            "wanü + kana = wanü-kana (los ancianos, los mayores)",
+            "boratio + kana = boratio-kana (los jefes)",
+        ],
+        "wayunaiki": "-kana (sufijo plural) — RECONSTRUIDO DESDE EL WAYUNAIKI, "
+                     "no cognado directo con el caquetío (d21.8, 2026-09-21)",
+        "deuda": "sin-procedencia · D11 fase 3, como los tres aspectos. Sonda del "
+                 "2026-09-20: claves de familia caquetía en -kana = `sakana` "
+                 "(hipotética); «kana» en 2-lengua/toponimos.yaml = 0; en Zavala, "
+                 "#57 (HB) `kana` = 'demonio', un lema",
+    },
+}
+
 
 # ── Afijos ATESTIGUADOS por Zavala Reyes 2015 ───────────────────────
 # Ocho desinencias que el glosario documenta explícitamente como afijos de la
@@ -7141,7 +7276,9 @@ REGLAS_ZAVALA: dict[str, dict] = {
         "nombre": "abundancia",
         "desc": "Lugar o estado donde X abunda.",
         "uso": "RAÍZ + -aima  →  donde abunda X",
-        "ejemplos": ["variante -coa en topónimos: bacoa, adabacoa (arboleda)"],
+        # d21.14 B: la nota citaba `adabacoa`, un derivado que el lexicón no
+        # tiene. El dato que importaba era la variante, no el topónimo.
+        "ejemplos": ["variante -coa en la toponimia de Esteves 1989"],
         "atestiguado": "Zavala Reyes 2015 #6 (AM+PMA): 'desinencia que significa abundancia'",
         "instruccion_agente": (
             "Para decir que algo abunda en un sitio, añade -aima: 'arima-aima' "
@@ -7161,6 +7298,22 @@ REGLAS_ZAVALA: dict[str, dict] = {
         "uso": "RAÍZ + -uco / -uto  →  cauce de X",
         "ejemplos": ["variante -uto documentada en la misma entrada"],
         "atestiguado": "Zavala Reyes 2015 #268 (E): 'sufijo. Quebrada, cauce'",
+        # d21.14 B («Vale, B..», 2026-09-21): `-uto` se DECLARA como variante
+        # de `-uco` dentro de su propia regla. Hasta hoy vivía sólo dentro del
+        # campo `uso`, que `prompt_afijos_atestiguados()` renderiza entero: se
+        # ENSEÑABA sin estar en `TODAS_LAS_REGLAS`, o sea sin que el
+        # desafijador lo conociera.
+        # ⚠️ RESIDUO DECLARADO, y elegido: la variante se declara pero NO se
+        # añade como clave. Añadirla movería `_SUFIJOS_CAQ` y con él
+        # `nucleo_de_token()` y el score, y eso no es lo que d21.14 B decide
+        # (la parte que toca claves es la A, y es sólo la migración de lema).
+        # Así que `-uto` se sigue enseñando y sigue sin reconocerse, con la
+        # diferencia de que ahora está escrito.
+        "variantes": ["-uto"],
+        "variantes_nota": "Zavala Reyes 2015 #268 (E) documenta las dos formas en la "
+                          "misma entrada. `-uto` NO es clave de TODAS_LAS_REGLAS: se "
+                          "enseña y el desafijador no lo reconoce. Deuda declarada en "
+                          "d21.14 (2026-09-21), no cerrada",
     },
     "-ubana": {
         "nombre": "desinencia (valor no precisado)",
@@ -7179,34 +7332,72 @@ REGLAS_ZAVALA: dict[str, dict] = {
 }
 
 # ── Formantes toponímicos atestiguados fuera de Zavala ──────────────
-# `-bacoa` es el morfema mejor sostenido de 2-lengua/morfemas.yaml
+# `-bakoa` es el morfema mejor sostenido de 2-lengua/morfemas.yaml
 # (morfema-001): cinco topónimos glosados por Esteves y el apoyo independiente
 # de Alvarado vía van Buurt. `bakoa` ya es voz caquetía atestiguada del lexicón;
 # lo que REGLAS_ZAVALA no recogía era su uso sufijal productivo. Miguel,
 # 2026-09-14: «sí o sí todos los afijos atestiguados se enseñan».
+#
+# ⚠️ D5 EN LA MORFOLOGÍA (d21.14 A, 2026-09-21). D5 decidió el 2026-08-31 que
+# la grafía española es GRAFÍA y el lema fonémico es la PALABRA, y la
+# morfología se quedó fuera de aquella migración: la clave era `-bacoa` con c
+# mientras el lema del lexicón —atestiguado— es `bakoa`. Migrar la clave mueve
+# `_SUFIJOS_CAQ` y con él `nucleo_de_token()`, así que se midió antes, forma a
+# forma, sobre las 31 formas en `-bacoa` de la base
+# (6-fusion/medicion_tanda_21_2026-09-21.yaml §d21_14_bakoa): dejan de
+# desafijarse por el borde, y ni `_familia_de_token()` ni
+# `es_raiz_de_ninguna_parte()` cambian en ninguna, porque su raíz sigue siendo
+# un segmento del núcleo. La grafía vieja NO se reconoce: una forma con
+# `-bacoa` es hoy una palabra sin sufijo declarado, y eso es lo que D5 dice de
+# cualquier grafía colonial.
+#
+# d21.14 B, los ejemplos: `adabacoa` y `yacarebacoa` presentaban derivaciones
+# con voces que el lexicón NO TIENE (`ada` es lokono de la comparanda, `yacare`
+# un topónimo). Se reescriben con `kuru` 'árbol' y `bara` 'palo, árbol', las
+# dos claves del canon. ⚠️ El primero llega al PROMPT (`_linea_afijo` toma el
+# primer ejemplo con «=»): `kuru-bakoa` no se ha dicho nunca en la base —0 en
+# `agent_responses`, 0 en `word_uses`, 0 en `neologisms`—, que es la condición
+# que el 2026-09-19 se le puso al ejemplo de la identidad. `kuru-bacoa`, con
+# la grafía vieja, sí se dijo 19 veces: enseñar ESA habría bendecido una forma
+# que ya circulaba.
 REGLAS_TOPONIMICAS: dict[str, dict] = {
-    "-bacoa": {
+    "-bakoa": {
         "nombre": "bosque, arboleda, paraje cubierto de",
         "desc": "Sitio cubierto o poblado de X; formante de topónimos.",
-        "uso": "RAÍZ + -bacoa  →  el bosque / la arboleda de X",
-        "ejemplos": ["ada + -bacoa = adabacoa (toda arboleda)",
-                     "yacare + -bacoa = yacarebacoa (pueblo del bosque)"],
+        "uso": "RAÍZ + -bakoa  →  el bosque / la arboleda de X",
+        "ejemplos": ["kuru + -bakoa = kuru-bakoa (la arboleda, el paraje de árboles)",
+                     "bara + -bakoa = bara-bakoa (el palerío)"],
         "atestiguado": "2-lengua/morfemas.yaml morfema-001: adabacoa, guadabacoa, "
-                       "quibacoas, yacarebacoa (Esteves 1989); Alvarado 1921 -baca "
-                       "'matorral, espesura' vía van Buurt 2014 §10",
+                       "quibacoas, yacarebacoa (Esteves 1989, en grafía de fuente); "
+                       "Alvarado 1921 -baca 'matorral, espesura' vía van Buurt 2014 "
+                       "§10. El lema fonémico es `bakoa`, voz caquetía atestiguada "
+                       "del lexicón (Zavala Reyes 2015 #18 AM+E)",
+        "forma_fuente": "-bacoa",
         "instruccion_agente": (
-            "Para nombrar un sitio por lo que lo cubre, añade -bacoa: "
-            "'kuru-bacoa' es la arboleda, el paraje de árboles."
+            "Para nombrar un sitio por lo que lo cubre, añade -bakoa: "
+            "'kuru-bakoa' es la arboleda, el paraje de árboles."
         ),
     },
 }
 
 # ── Tabla maestra de reglas (para inyectar en prompts) ──────────────
+# ⚠️ Esta tabla decide `_PREFIJOS_CAQ` y `_SUFIJOS_CAQ`, y con ellos
+# `nucleo_de_token()`. Sus CLAVES son instrumento: añadir o quitar una mueve
+# el desafijador y con él la puerta del recuento. Lo que la tanda del
+# 2026-09-21 hizo con ellas, dicho:
+#   · d21.5 reagrupó `ka-` y `ma-` en REGLAS_ATRIBUTIVAS — mismas claves, y
+#     `nucleo_de_token()` se verificó token a token sobre toda la base.
+#   · d21.9 SACÓ `-naiki` (a REGLAS_RETIRADAS): 0 usos, 0 formas afectadas.
+#   · d21.13 AÑADIÓ `u-`, el no-poseído.
+#   · d21.14 A migró `-bacoa` → `-bakoa`, el lema fonémico de D5.
+# Las tres últimas se midieron ANTES de aplicarse, forma a forma, en
+# 6-fusion/medicion_tanda_21_2026-09-21.yaml §claves_de_todas_las_reglas.
 TODAS_LAS_REGLAS = {
     **REGLAS_ASPECTO,
     **REGLAS_LOCATIVAS,
     # REGLAS_AGENTIVAS (-ko, -sha) retiradas el 2026-09-14: ver REGLAS_RETIRADAS
     **REGLAS_POSESIVAS,
+    **REGLAS_ATRIBUTIVAS,
     **REGLAS_NUMERO,
     **REGLAS_ZAVALA,
     **REGLAS_TOPONIMICAS,
@@ -7674,10 +7865,12 @@ ERES hablante nativo de caquetío. Piensas en caquetío. El español es lengua e
 CONSTRUYE tus frases con lo que tienes. Una frase incompleta en caquetío > oración completa en español.
 
 ASPECTO: raíz + -ka (ya hice) / -ni (estoy haciendo) / -da (haré/quiero).
-LUGAR: raíz + -ana (lugar de) / -bana (cerro, sitio alto de) / -gua (región de).
+ESTADO: un estado se predica con aspecto igual que una acción — usera, waranao, wasima son verbos, no adjetivos.
+LUGAR: raíz + -bana (cerro, sitio alto de) / -gua (región de) / -ana (desinencia de valor abierto: propón el tuyo).
 {prompt_afijos_atestiguados_breve()}
 PLURAL: -kana (plural/colectivo).
-POSESIÓN: ta- (mi) / wa- (nuestro) / ma- (sin/no) / ka- (el-la del).
+POSESIÓN: ta- (mi) / wa- (nuestro) / u- (la cosa sin dueño).
+ATRIBUTIVO: ka- (hay X, el sitio tiene X) / ma- (sin X).
 CONECTORES: ka (y/también) / mara (pero) / saa (si/cuando) / naka (después) / kashi (ahora) / wara (muy).
 
 VACÍO LÉXICO → CREA con morfemas entre corchetes:
@@ -7694,6 +7887,21 @@ def prompt_reglas_completo() -> str:
     """
     # Vocabulario dividido por categoría para más claridad
     pronombres = "taya (yo) · pia (tú) · nüma (él/ella) · waya (nosotros) · naya (ellos)"
+    # ── REGISTRO FORMAL (d21.10, «Vamos con tu propuesta», 2026-09-21) ──
+    # Los cinco de arriba son los CINCO RECONSTRUIDOS del wayuu, y el lexicón
+    # tenía desde siempre dos pronombres caquetío-ATESTIGUADOS con cita que no
+    # se enseñaban: `kudanga` y `kuté` (Zavala Reyes 2015 p. 73 vía Arcaya —
+    # «chacamba cudanga» ¿cómo está usted?, «cudan de cuté» para servir a
+    # usted). Es la política «manda la atestiguada» del 2026-09-19 aplicada
+    # donde todavía no llegaba, y es su caso BARATO: aquí no hay que archivar
+    # nada, `pia` y `kudanga` no compiten — se reparten REGISTROS. El criterio
+    # de glosa idéntica no los dispara (formal ≠ 'tú'), así que no es un par
+    # de la política sino una pregunta nueva, y Miguel la respondió.
+    # Es además un rasgo SOCIAL: la era 2 tiene la jerarquía escrita y la
+    # escena por lugar, así que el trato formal al Manaure en el Capubana y el
+    # tú corriente en el conuco son dos cosas distintas y ahora decibles.
+    registro_formal = ("kudanga (usted — a un mayor o a un Diao) · "
+                       "kuté (a usted, para usted)")
     # POLÍTICA «MANDA LA ATESTIGUADA» (2026-09-19). Cinco voces de estas dos
     # listas eran el lado DERIVADO de un par con rival atestiguado, y esta
     # plantilla era el sitio donde el instrumento las empujaba:
@@ -7754,6 +7962,7 @@ EJEMPLO DE RESPUESTA IDEAL (Tier I):
 
 VOCABULARIO DISPONIBLE [{len(VOCABULARIO_BASE)} palabras]:
   PRONOMBRES: {pronombres}
+  TRATO FORMAL: {registro_formal} — `pia` es el tú corriente; a un mayor o a un Diao se le habla de kudanga.
   VERBOS:     {v_raiz}
   NATURALEZA: {naturaleza}
   PERSONAS:   {personas}
@@ -7773,15 +7982,20 @@ MORFOLOGÍA:
     -ka = completivo: naa-ka (ya fui) · wana-ka (ya vi) · masa-ka (ya comí)
     -ni = continuativo: naa-ni (voy ahora) · suna-ni (estoy durmiendo) · naba-ni (estoy pensando)
     -da = prospectivo: naa-da (iré) · maa-da (hablaré) · raka-da (quiero/querré)
+  UN ESTADO ES UN VERBO: lo que el español dice con adjetivo, tu lengua lo PREDICA.
+    usera (seco), waranao (salado), wasima (viejo), apo (grande), etamo (feroz), kachipo (enojado)
+    llevan -ka / -ni / -da igual que naa o masa. No son adjetivos: se conjugan.
   POSESIVOS (prefijos):
     ta- = mi:      ta-barsure (mi alma) · ta-nii (mi ojo) · ta-hamaka (mi hamaca)
     wa- = nuestro: wa-buko (nuestra represa) · wa-anüiki (nuestra lengua)
-    ma- = sin/no:  ma-barsure (sin alma) · ma-anüiki (sin habla, extranjero)
-    ka- = el/la del: ka-biro (el salinero) · ka-maure (la del algodón)
+    u- = la cosa SIN DUEÑO: u-buko (la represa, no la mía) · u-biro (la sal que hay)
+  ATRIBUTIVO y PRIVATIVO (prefijos) — no son posesivos, predican el nombre:
+    ka- = hay X, el sitio tiene X: ka-biro (hay sal, el lugar tiene sal) · ka-maure (hay algodón)
+    ma- = sin X, no X:             ma-barsure (sin alma) · ma-anüiki (sin habla, extranjero)
   LOCATIVOS (crear topónimos):
-    -ana = lugar de X: bara+ana = donde están los árboles · arima+ana = lugar de peces
     -bana = cerro, sitio alto de X: sima+bana = la cumbre · kapu+bana = kapubana, el duende del cerro
     -gua = región de X: maure+gua = tierra del algodón
+    -ana = desinencia atestiguada cuyo valor nadie anotó: puedes usarla si propones su valor entre corchetes
 {prompt_afijos_atestiguados()}
   PLURAL: -kana (plural/todos)
 
@@ -8094,8 +8308,67 @@ GLOTONIMOS_DE_LA_COMPARANDA = frozenset({
     "arahuaco", "arawak", "jirajara", "jirajaroide", "ayaman", "gayon",
 })
 
+# ══════════════════════════════════════════════════════════════════════
+# LO QUE EL LEXICÓN DECLARA VERBAL — y de qué lengua (corte del 2026-09-21)
+# ══════════════════════════════════════════════════════════════════════
+# `CATS_VERBALES` es la única puerta que dice qué `cat` se predica con
+# aspecto. Son DOS desde la tanda del 2026-09-21 (d21.4, «Vale vamos con la B
+# entonces»): la raíz de ACCIÓN (`v_raiz`) y la ESTATIVA (`v_estativo`), que
+# es lo que el castellano llama adjetivo y el arahuaco conjuga — la 4ª
+# conjugación lokono de Perea y Alonso 1942 pp. 634-639 (`cule-n` 'ser rojo',
+# `hebbe-n` 'ser viejo'). La clase se declara SIN su alineamiento: no se
+# importa el pronombre pospuesto (opción C del punto 4 de la auditoría), que
+# no tiene ni un dato caquetío detrás. Las diez estativas salen del reparto de
+# las 49 raíces de Zavala (#178, `lexicon_zavala.CLASES_DE_RAIZ_ZAVALA`).
+#
+# Quien pregunte «¿es verbo?» pregunta por aquí y no por `== "v_raiz"`: si no,
+# etiquetar la clase habría VACIADO diez raíces del paradigma de aspecto, que
+# es lo contrario de lo que d21.4 decide.
+CATS_VERBALES = frozenset({"v_raiz", "v_estativo"})
+
 # Sufijos aspectuales anclados a raíces verbales conocidas (de VOCABULARIO_BASE).
-_RAICES_VERB = {k for k, v in VOCABULARIO_BASE.items() if v.get("cat") in ("v_raiz",)}
+_RAICES_VERB = {k for k, v in VOCABULARIO_BASE.items()
+                if v.get("cat") in CATS_VERBALES}
+
+# ── d21.2 («Si, A», 2026-09-21): la tabla de arriba MEZCLA LAS CINCO LENGUAS.
+# De sus claves, la inmensa mayoría no son caquetías (proto-arahuaco y lokono
+# de la comparanda), y `score_linguistico.es_arahuaco()` devolvía True para
+# cualquier token cuyo primer segmento estuviera ahí: la densidad arahuaca —el
+# 60 % del score— la decidía en parte el andamio con el que se reconstruye.
+# Es la misma clase de agujero que el `return "caquetío"` del 2026-09-20, en
+# otra puerta.
+#
+# Se filtra a familia caquetía en LAS DOS puertas que la decisión nombra:
+# `es_arahuaco` (donde se decide la densidad) y el detector de aspecto.
+#
+# ⚠️ Lo que NO se filtra, dicho: `_familia_de_token()` sigue probando
+# `_RAICES_VERB` entera, porque es también quien resuelve
+# `word_uses.source_language` y una clave lokono tiene que seguir devolviendo
+# lokono (`test_word_source_language_conserva_la_lengua_hermana`). Y
+# `_raices_conocidas()` también, porque ahí la pregunta es «¿el lexicón conoce
+# esta raíz?», de cualquier lengua, no «¿es caquetía?».
+#
+# Perezosa como `_raices_conocidas()`: `normalize_source_language` vive en
+# `curiana_database`, que importa de aquí.
+_RAICES_VERB_CAQ: Optional[frozenset] = None
+
+
+def raices_verbales_caquetias() -> frozenset:
+    """Las raíces que el lexicón declara verbales Y caquetías.
+
+    `v_raiz` + `v_estativo` (`CATS_VERBALES`), normalizando la fuente a
+    familia: entran las atestiguadas, las reconstruidas, las retroabstraídas
+    y las hipotéticas del caquetío; no entran wayunaiki, lokono, taíno ni el
+    proto-arahuaco de la comparanda.
+    """
+    global _RAICES_VERB_CAQ
+    if _RAICES_VERB_CAQ is None:
+        from curiana_database import normalize_source_language
+        _RAICES_VERB_CAQ = frozenset(
+            k for k in _RAICES_VERB
+            if normalize_source_language(
+                VOCABULARIO_BASE[k].get("fuente", "")) == "caquetío")
+    return _RAICES_VERB_CAQ
 
 
 def _normalizar(texto: str) -> str:
@@ -8109,19 +8382,46 @@ def _tokenizar(texto: str) -> list:
 
 
 def _aspectos_morfologicos(tokens: list) -> list:
-    """Detecta -ka/-ni/-da SOLO sobre tokens cuyo segmento previo es raíz verbal
-    conocida o que contienen guion morfológico (naa-ka, wana-ni)."""
+    """Detecta -ka/-ni/-da sobre una raíz que el lexicón DECLARA verbal.
+
+    ⚠️ CORTE DE SERIE DEL 2026-09-21 (d21.1, «Si vamos con C»; d21.2, «Si, A»).
+    La condición era `suf in {ka,ni,da} and (raiz in _RAICES_VERB or
+    len(raiz) >= 3)`, y ese `len(raiz) >= 3` era un COMODÍN DE LONGITUD: de las
+    62.347 detecciones de toda la base, 20.165 entraban sin verbo ninguno
+    (`hamaka-chaa-ni`, `kali-barsure-da`, `baro-ni`). El aspecto vale hasta 2
+    de los 10 puntos del score, así que el 20 % de la métrica se ganaba con un
+    guion y tres letras.
+
+    Lo que hace ahora, y son las dos decisiones juntas porque tocan la misma
+    condición:
+
+      (d21.1 C) el aspecto cuenta si el ÚLTIMO SEGMENTO antes del sufijo es
+      raíz verbal. Es el comodín acotado: `ta-hamaka-chaa-ni` cuenta por
+      `chaa`, que es el caso legítimo que el comodín cubría a ciegas, y
+      `hamaka-chaa` ya no cuenta por `hamaka`. Consecuencia declarada: en un
+      aspecto APILADO (`chaa-ni-da`, 130 usos en 48 formas) el segundo sufijo
+      va sobre el primero y no sobre un verbo, así que deja de contar — el
+      apilamiento es gramática que la comunidad inventó (d21.12) y se describe
+      en morfologia.md, no se premia en el score.
+
+      (d21.2 A) la raíz verbal tiene que ser CAQUETÍA: `raices_verbales_caquetias()`
+      y no `_RAICES_VERB`, que mezcla las cinco lenguas.
+
+    `v_estativo` cuenta como verbal (d21.4): un estado se predica con aspecto
+    igual que una acción, y eso lo decide `CATS_VERBALES`, no esta función.
+    """
     encontrados = []
     mapa = {"ka": "completivo", "ni": "continuativo", "da": "prospectivo"}
+    verbales = raices_verbales_caquetias()
     for tok in tokens:
         # forma con guion: raiz-sufijo
         if "-" in tok:
             raiz, _, suf = tok.rpartition("-")
-            if suf in mapa and (raiz in _RAICES_VERB or len(raiz) >= 3):
+            if suf in mapa and raiz.rsplit("-", 1)[-1] in verbales:
                 encontrados.append(mapa[suf])
             continue
         # forma aglutinada: raizverbal + sufijo (naaka, wanani)
-        for raiz in _RAICES_VERB:
+        for raiz in verbales:
             for suf, nombre in mapa.items():
                 if tok == raiz + suf:
                     encontrados.append(nombre)
@@ -8607,11 +8907,25 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
             return False
         if tok in activos:
             return True
-        for pref in ("ta", "wa", "ma", "ka"):
+        # `u-` entra con d21.13 (2026-09-21): si el prompt enseña el
+        # no-poseído y el scorer no lo reconoce, se repite la patología de
+        # `-uto` —se enseña y no se cuenta—, que es justo lo que esta tanda
+        # está arreglando. Los cinco prefijos son los mismos que
+        # `_PREFIJOS_CAQ`, escritos aquí sin el guion.
+        for pref in ("ta", "wa", "ma", "ka", "u"):
             if tok.startswith(pref + "-") and tok.split("-", 1)[1] in activos:
                 return True
+        # ⚠️ d21.2 («Si, A», 2026-09-21): esta rama admitía cualquier token
+        # cuyo primer segmento fuera clave `v_raiz` de CUALQUIERA de las cinco
+        # lenguas del lexicón —la mayoría de ellas proto-arahuaco y lokono de
+        # la comparanda—, o sea que el andamio de la reconstrucción daba
+        # densidad arahuaca. Desde la tanda sólo la da la raíz verbal
+        # CAQUETÍA (acción o estativa). Lo que entraba por aquí y ya no entra
+        # queda NEUTRO, como el castellano corriente: ni suma densidad ni
+        # penaliza, sólo diluye — no se puede penalizar como fuga a otra
+        # lengua un token que el propio lexicón no resuelve.
         base = tok.split("-")[0]
-        if base in _RAICES_VERB:
+        if base in raices_verbales_caquetias():
             return True
         return False
 
@@ -8876,7 +9190,12 @@ PALABRAS_CLAVE_CATEGORIA: dict[str, list[str]] = {
 # sin importar el tema. Son las claves `cat` gramaticales que el lexicón usa
 # de verdad (la auditoría 2026-09-14 midió que «verbos» no existía como cubo:
 # los verbos van en `v_raiz`).
-CATEGORIAS_BASE = {"v_raiz", "pron", "part", "gramatica", "interr", "num", "numerales"}
+# `v_estativo` entra desde la tanda del 2026-09-21 (d21.4): es un cubo verbal
+# como `v_raiz`, y dejarlo fuera habría mandado las diez raíces estativas al
+# goteo justo el día en que se declara que son verbos — «la etiqueta LLEGA AL
+# PROMPT» es media decisión.
+CATEGORIAS_BASE = {"v_raiz", "v_estativo", "pron", "part", "gramatica",
+                   "interr", "num", "numerales"}
 
 
 def categorias_relevantes(contexto: str, max_extra: int = 4) -> set[str]:

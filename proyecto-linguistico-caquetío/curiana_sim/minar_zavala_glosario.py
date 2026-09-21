@@ -324,14 +324,23 @@ NO_ES_LA_MISMA_VOZ: dict[str, str] = {
 # fuente (`glosa_fuente`, que NO se toca) y contra la comparanda que el
 # proyecto ya tiene, en tres clases:
 #
-#   estativo → concepto adjetival que en arahuaco es verbo   → cat v_raiz
+#   estativo → concepto adjetival que en arahuaco es verbo   → cat v_estativo
 #   accion   → verbo pleno                                   → cat v_raiz
 #   nombre   → sustantivo concreto o abstracto               → cat sust
 #   adverbio → deíctico de lugar (la clase de `yama`)        → cat part
 #
-# Las dos primeras SIGUEN siendo `v_raiz`: lo que cambia no es su categoría
-# sino que ahora está declarada con su razón. La tercera y la cuarta son las
+# Las dos primeras son VERBALES las dos: lo que cambia no es que se conjuguen
+# sino que ahora está declarado con su razón. La tercera y la cuarta son las
 # que estaban mal.
+#
+# ⚠️ `v_estativo` es de la TANDA DEL 2026-09-21 (d21.4, «Vale vamos con la B
+# entonces»). Hasta entonces las diez estativas se emitían con `cat: v_raiz` y
+# la clase sólo vivía en `CLASES_DE_RAIZ_ZAVALA`, o sea en la documentación.
+# Desde la tanda la clase se DECLARA en la categoría —y llega al prompt— sin
+# importar el alineamiento del lokono (opción C, descartada: no hay ni un dato
+# caquetío detrás). `curiana_lexicon.CATS_VERBALES` las cuenta como verbales
+# igual que a `v_raiz`, así que `_RAICES_VERB`, el detector de aspecto y la
+# derivación de semillas de `curiana_koine` no pierden ni una raíz.
 #
 # ⚠️ Lo que se corrige es `cat` —que es NUESTRO—. `glosa_fuente` es verbatim
 # de Zavala y no se toca jamás; `sig` tampoco se toca aquí (mueve lo que el
@@ -349,25 +358,25 @@ CLASE_DE_LA_RAIZ: dict[str, dict] = {
 
     # ── ESTATIVOS: el castellano dice adjetivo, el arahuaco dice verbo ──
     "apo": {
-        "cat": "v_raiz", "clase": "estativo",
+        "cat": "v_estativo", "clase": "estativo",
         "por": "'Grande' es tamaño, y los tamaños son la 4ª conjugación estativa "
                "del lokono (perea-alonso-1942, pp. 634-639). El propio lexicón ya "
                "trae el lokono `ipi-lli-be` 'ser grande' como v_raiz. La achagua "
                "verbaliza y nominaliza la misma raíz: `numanudau` 'engrandecer', "
                "`manucaicasi` 'grandeza' (neira-ribero-1762)."},
     "bachure": {
-        "cat": "v_raiz", "clase": "estativo",
+        "cat": "v_estativo", "clase": "estativo",
         "por": "'Maneto, patituerto' es defecto corporal, y el lokono lo dice con "
                "verbo estativo: `hiccu-li` 'ser cojo' (perea-alonso-1942), ya en el "
                "lexicón como v_raiz."},
     "cachipo": {
-        "cat": "v_raiz", "clase": "estativo",
+        "cat": "v_estativo", "clase": "estativo",
         "por": "'Enojado, colérico' es estado. La achagua lo conjuga sobre una raíz "
                "`cabare-` con el atributivo ca-/ka-: `cabareuno` 'enojarse', "
                "`cabarecayi` 'colérico', `cabareumí` 'es bravo' (neira-ribero-1762). "
                "Wayuu `aashichijawaa` 'enojarse'."},
     "etamo": {
-        "cat": "v_raiz", "clase": "estativo",
+        "cat": "v_estativo", "clase": "estativo",
         "por": "'Feroz, feo' son cualidades (4ª conj. lokono, perea-alonso-1942 "
                "p. 634); 'espanto' es su nombre de acción, que el lokono forma con "
                "-hi/-hù sobre el mismo verbo (p. 612). La achagua hace el mismo par "
@@ -377,17 +386,17 @@ CLASE_DE_LA_RAIZ: dict[str, dict] = {
                "porque `etamo` es la voz que MANDA en el par 18 de la política "
                "atestiguado-manda (archivó `mülia`)."},
     "guaidima": {
-        "cat": "v_raiz", "clase": "estativo",
+        "cat": "v_estativo", "clase": "estativo",
         "por": "'Integro' = 'entero'. El lexicón ya trae el wayuu `waneepiaa` "
                "'ser entero, -ra; ser' — la glosa misma lo declara verbo. Achagua "
                "`jaubearuba` 'cabal, entero' (neira-ribero-1762)."},
     "guaranao": {
-        "cat": "v_raiz", "clase": "estativo",
+        "cat": "v_estativo", "clase": "estativo",
         "por": "'Salado, ácido' son sabores, y los sabores son 4ª conjugación "
                "estativa en lokono (perea-alonso-1942 p. 634). El lexicón ya trae el "
                "wayuu `palawaa` 'ser salado, -da'."},
     "guasima": {
-        "cat": "v_raiz", "clase": "estativo",
+        "cat": "v_estativo", "clase": "estativo",
         "por": "'Viejo, anciano'. El apoyo es literal: `hebbe-n` 'ser viejo' es UNO "
                "de los tres ejemplos con que Perea define la 4ª conjugación estativa "
                "(perea-alonso-1942 p. 634), y `hebbe` ya está en el lexicón como "
@@ -395,20 +404,20 @@ CLASE_DE_LA_RAIZ: dict[str, dict] = {
                "puede leerse como nombre de edad (cf. `wanü` 'anciano, mayor', sust); "
                "manda el apoyo literal, que es de la misma glosa."},
     "patapati": {
-        "cat": "v_raiz", "clase": "estativo",
+        "cat": "v_estativo", "clase": "estativo",
         "por": "'Anegadizo' es propiedad del terreno, y los estados son 4ª "
                "conjugación lokono (perea-alonso-1942 p. 634). La forma es además "
                "reduplicada, y la reduplicación caquetía es productiva y medida "
                "(morfologia.md §4, gatschet-1885). deuda: sin-procedencia para el "
                "cognado — ninguna hermana da 'anegadizo' con glosa idéntica."},
     "singuanguso": {
-        "cat": "v_raiz", "clase": "estativo",
+        "cat": "v_estativo", "clase": "estativo",
         "por": "'Insolente' es cualidad de carácter; entra por la regla general de "
                "Perea (perea-alonso-1942 pp. 598-599/608: nombre, adjetivo o "
                "partícula se hacen verbo). deuda: sin-procedencia — ninguna hermana "
                "da 'insolente' con glosa idéntica."},
     "usera": {
-        "cat": "v_raiz", "clase": "estativo",
+        "cat": "v_estativo", "clase": "estativo",
         "por": "'Seco, arenoso'. El lexicón ya trae el wayuu `josoo` 'estar seco, "
                "-ca' con la glosa en forma verbal. Paraujano `jaradu` 'seco' "
                "(oliver-1989-apendice-a, tabla A-2). Y la achagua lo predica con el "
@@ -985,12 +994,41 @@ def clase_de(origen: str, tier: str) -> tuple[str, str, str]:
     return _CAT_POR_TIER.get(tier, "sust"), "", ""
 
 
+# ── GLOSAS CURADAS (`sig`), una a una y con su razón ─────────────────
+# `sig` es NUESTRA glosa —la que el agente lee y con la que se buscan pares—,
+# distinta de `glosa_fuente`, que es verbatim de Zavala y NO se toca jamás.
+# Por defecto `sig` se recorta de la definición literal, que es lo bueno; esta
+# tabla es la excepción declarada, para cuando el recorte produce una glosa
+# que empareja con otra entrada y hace que el proyecto se invente una
+# sinonimia que la lengua no tiene.
+#
+# La clave es la GRAFÍA DE ZAVALA, como en CLASE_DE_LA_RAIZ.
+SIG_CURADO: dict[str, dict] = {
+    "turumaco": {
+        "sig": "cerro de cima plana, meseta",
+        "por": "d21.16 (2026-09-21), punto 5: «cerro, meseta» emparejaba con "
+               "`sima` 'cerro, montaña, elevación' y las dos se leían como la "
+               "misma palabra. Por el criterio de la propia política d19.b NO "
+               "son par —solapamiento parcial, no glosa idéntica— y Miguel: «me "
+               "parece bien que convivan sima y turumako […] al final no pasa "
+               "nada si hay símiles». Se afinan las dos para que dejen de "
+               "emparejar: `turumako` es el cerro de cima plana, que es lo que "
+               "'meseta' añade en la propia fuente (zavala-reyes-2015 #262 AM), "
+               "y `sima` la elevación a secas. La glosa de la fuente queda "
+               "intacta en `glosa_fuente`",
+    },
+}
+
+
 def _entrada_py(e: dict, tier: str, indent: str = "    ") -> str:
     origen = norm(e["lemas"][0])
     forma = e.get("lema_final", origen)      # Fase 2 de D5: lema fonémico
     verbatim = e["definicion"].replace('"', "'").replace("\\", "")
     sig = verbatim[:78]
     sig = (sig[0].lower() + sig[1:]) if sig else sig
+    curado = SIG_CURADO.get(origen)
+    if curado:
+        sig = curado["sig"]
     siglas = "+".join(e["siglas"]) or "s/sigla"
     nota = f"Zavala Reyes 2015 #{e['num']} ({siglas})"
     if e.get("homografo_es"):
@@ -1004,6 +1042,9 @@ def _entrada_py(e: dict, tier: str, indent: str = "    ") -> str:
     variantes = [norm(l) for l in e["lemas"][1:]]
     if variantes:
         nota += f"; variantes: {', '.join(variantes)}"
+    if curado:
+        nota += ("; GLOSA CURADA (`sig`, no `glosa_fuente`): "
+                 + " ".join(str(curado["por"]).split()))
     cat, _clase, _por = clase_de(origen, tier)
     pad = " " * max(1, 14 - len(forma))
     # D7: la glosa de la fuente se conserva verbatim y trazable; la
@@ -1071,8 +1112,13 @@ def generar_modulo(tiers: dict, ruta: str):
     L.append("heurística de tier. Cada entrada del vocabulario activo que caía en el cajón")
     L.append("de resto lleva su clase declarada —estativo / acción / nombre / adverbio—")
     L.append("con su apoyo comparativo y su cita, en CLASES_DE_RAIZ_ZAVALA. Importa porque")
-    L.append("`cat: v_raiz` alimenta `curiana_lexicon._RAICES_VERB` y con ella")
+    L.append("`cat` verbal alimenta `curiana_lexicon._RAICES_VERB` y con ella")
     L.append("`score_linguistico()`. Ver CLASE_DE_LA_RAIZ en el minador.")
+    L.append("")
+    L.append("LA CLASE ESTATIVA (2026-09-21, d21.4): las diez raíces estativas se emiten")
+    L.append("con `cat: v_estativo` y no con `v_raiz`. Es una etiqueta, no una morfología")
+    L.append("nueva: `curiana_lexicon.CATS_VERBALES` la cuenta como verbal, así que toman")
+    L.append("los mismos tres aspectos y no sale ni entra ninguna raíz de _RAICES_VERB.")
     L.append("")
     L.append("EXCLUIDOS del habla (ver EXCLUIR_DEL_HABLA en el minador): topónimos")
     L.append("modernos, antropónimos, etnónimos y glosas circulares. Están abajo en")
@@ -1144,10 +1190,15 @@ def generar_modulo(tiers: dict, ruta: str):
     L.append("#")
     L.append("# Las clases son tres y media:")
     L.append("#   estativo → concepto adjetival que en arahuaco es VERBO (4ª conj.")
-    L.append("#              lokono, Perea y Alonso 1942 pp. 634-639) → cat v_raiz")
+    L.append("#              lokono, Perea y Alonso 1942 pp. 634-639) → cat v_estativo")
     L.append("#   accion   → verbo pleno                              → cat v_raiz")
     L.append("#   nombre   → sustantivo concreto o abstracto          → cat sust")
     L.append("#   adverbio → deíctico de lugar (la clase de `yama`)   → cat part")
+    L.append("#")
+    L.append("# `v_estativo` es de la tanda del 2026-09-21 (d21.4): la clase se declara")
+    L.append("# en la CATEGORÍA y llega al prompt, sin importar el alineamiento pospuesto")
+    L.append("# del lokono. `curiana_lexicon.CATS_VERBALES` la cuenta como verbal, igual")
+    L.append("# que `v_raiz`: un estado se predica con aspecto como una acción.")
     L.append("#")
     L.append("# La declaración de qué es un estativo EN ESTE PROYECTO está propuesta")
     L.append("# en 6-fusion/clases_de_raiz_zavala_2026-09-20.yaml, para 2-lengua/")
