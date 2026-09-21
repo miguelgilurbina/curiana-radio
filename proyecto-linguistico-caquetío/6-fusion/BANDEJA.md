@@ -13,9 +13,9 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-20**.
+<!--GENERADO--> Generado el **2026-09-21**.
 
-**2676 ítems propuestos** en 78 propuestas, más **11 issue(s)/comentario(s) redactados sin publicar**.
+**2676 ítems propuestos** en 79 propuestas, más **11 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -50,6 +50,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-09-15.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-17.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-19.yaml` | ? | 0 |  |
+| `decisiones_tanda_2026-09-21.yaml` | ? | 0 |  |
 | `descastellanizar_esfera_2026-09-18.yaml` | ? | 6 |  |
 | `elenco_era2.yaml` | varias | 63 |  |
 | `escena_era2.yaml` | ? | 11 |  |

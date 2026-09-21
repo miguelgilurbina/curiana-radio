@@ -157,7 +157,10 @@ documentado. De ahí sale el criterio para los casos dudosos:
   muestreador).
 - **Una reconstruida sin rival atestiguado se queda sin discusión**: está
   haciendo exactamente aquello para lo que existe. Por eso la política no toca
-  los pronombres, los aspectos ni el grueso de las 86 reconstruidas.
+  los aspectos ni el grueso de las 86 reconstruidas.
+- **Y el caso barato: rival atestiguado que NO compite.** Cuando la forma
+  atestiguada existe pero cubre otro registro, no hay nada que archivar — se
+  reparten el uso. Ver los pronombres, abajo.
 
 El criterio operativo, porque es lo que decide los casos dudosos:
 
@@ -167,7 +170,7 @@ El criterio operativo, porque es lo que decide los casos dudosos:
 | **¿Y el solapamiento parcial?** | **No es par.** Dos glosas que sólo comparten una palabra —«empezar, crear, originar» contra «hacer, construir, crear»— son una **glosa mal afinada**. Van a curación, no a la política. |
 | **¿Qué cuenta como atestiguado?** | La etiqueta `caquetío-atestiguado` **más su cita** en `notas` (regla 8). La etiqueta sola no basta, y `caquetío` a secas tampoco: eso es etiquetado antiguo, no atestación. |
 | **¿Qué se hace con la derivada?** | Se **archiva**: sale de `VOCABULARIO_BASE`, entra en `FUERA_DEL_HABLA` y conserva forma, glosa, **su capa epistémica intacta** y su `notas` entera, más un campo `archivada` con su fecha y su par. **Archivar no es borrar y tampoco es degradar** — la etiqueta dice de dónde viene la palabra, el archivo dice si la comunidad la habla. Dos ejes. |
-| **¿Hasta dónde llega?** | **Sólo donde EXISTE rival atestiguado.** El grueso del lexicón caquetío es reconstrucción legítima porque no hay atestación (los pronombres, los aspectos, la mayoría de las reconstruidas) y se queda como está. Esto no es una poda del núcleo. |
+| **¿Hasta dónde llega?** | **Sólo donde EXISTE rival atestiguado.** El grueso del lexicón caquetío es reconstrucción legítima porque no hay atestación (los aspectos y la mayoría de las reconstruidas) y se queda como está. Esto no es una poda del núcleo. ⚠️ Los **pronombres** ya no son ejemplo de esto: ver abajo. |
 
 Aplicada el 2026-09-19 a siete pares: manda `kasi` sobre `kali` (sol), `were`
 sobre `paa` (ofrecer), `jai` sobre `kira` (escuchar), `kati` sobre `kasha`
@@ -178,6 +181,31 @@ había que decir antes de aplicar, el paradigma de `paa` y la colisión
 `6-fusion/medicion_politica_atestiguado_manda_2026-09-19.yaml`. Lo que queda
 abierto (`sima` y once glosas por afinar) está en
 `6-fusion/curacion_glosas_pares_2026-09-19.yaml`.
+
+### El caso barato: los pronombres
+
+> ⚠️ **Corrección del 2026-09-21** (d21.10). Esta nota decía que la política «no
+> toca los pronombres» porque **no tienen rival atestiguado**, y **eso no es
+> exacto**. El lexicón tiene **dos pronombres caquetío-atestiguados con cita**:
+> `kudanga` 'usted, vos (2ª persona formal)' y `kuté` 'a usted, para usted
+> (dativo formal)' — [[zavala-reyes-2015]] p. 73, citando a [[arcaya-1920]]:
+> *«chacamba cudanga»* '¿cómo está usted?' y *«cudan de cuté»* 'para servir a
+> usted'. Hasta esa fecha el prompt enseñaba **cinco pronombres, los cinco
+> reconstruidos del wayuu**, y ninguno de los dos atestiguados.
+
+**Y aun así no hay nada que archivar: por eso es el caso barato de la
+política.** El criterio de arriba pide **glosa normalizada idéntica**, y 'usted
+(formal)' no es 'tú': **no hay par**, así que la política no se dispara sola y
+hace falta una decisión aparte — que es la que Miguel tomó. `pia` y `kudanga`
+no compiten: **se reparten registros**, `pia` para el tú corriente y `kudanga`
+para dirigirse a un mayor o a un Diao. Es un rasgo social además de gramatical,
+y la era 2 tiene la jerarquía escrita para usarlo — el trato formal al Manaure
+en el Capubana y el tú corriente en el conuco.
+
+Sirve de plantilla para los que vengan: **«hay forma atestiguada» no significa
+siempre «archiva la otra»**. Si las dos cubren el mismo significado, manda la
+atestiguada y la derivada se archiva; si cubren **registros distintos**, entran
+las dos y se declara el reparto. Detalle gramatical en [[morfologia]] §1.
 
 ## `FUERA_DEL_HABLA` — el archivo, no la papelera
 
