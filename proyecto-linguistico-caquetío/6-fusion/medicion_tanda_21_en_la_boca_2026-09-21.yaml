@@ -1,0 +1,284 @@
+# GENERADO por 6-fusion/scripts/medir_tanda_en_la_boca.py --yaml — no se edita a mano.
+poblacion:
+  vieja · escena:
+    runs:
+    - f2741e89
+    - fcdfa07a
+    - 0313d830
+    respuestas: 216
+  NUEVA · escena:
+    runs:
+    - ce7cd2a9
+    - 591d12d8
+    - 59aad1c3
+    respuestas: 216
+  vieja · control:
+    runs:
+    - 0345840d
+    - '45618069'
+    - e98227eb
+    respuestas: 216
+  NUEVA · control:
+    runs:
+    - 4e3eef64
+    - fafdce5b
+    - 104673f6
+    respuestas: 216
+leyenda: usos / respuestas que lo dicen / hablantes distintos — sobre response_text
+estativos:
+- apo
+- bachure
+- etamo
+- kachipo
+- patapati
+- sinwanguso
+- usera
+- waidima
+- waranao
+- wasima
+patrones:
+  u- (no-poseído, d21.13):
+    vieja · escena:
+      usos: 0
+      respuestas: 0
+      hablantes: 0
+    NUEVA · escena:
+      usos: 200
+      respuestas: 69
+      hablantes: 35
+    vieja · control:
+      usos: 0
+      respuestas: 0
+      hablantes: 0
+    NUEVA · control:
+      usos: 333
+      respuestas: 123
+      hablantes: 55
+  -bakoa (d21.14):
+    vieja · escena:
+      usos: 0
+      respuestas: 0
+      hablantes: 0
+    NUEVA · escena:
+      usos: 28
+      respuestas: 28
+      hablantes: 25
+    vieja · control:
+      usos: 0
+      respuestas: 0
+      hablantes: 0
+    NUEVA · control:
+      usos: 28
+      respuestas: 21
+      hablantes: 19
+  -bacoa (la vieja):
+    vieja · escena:
+      usos: 47
+      respuestas: 39
+      hablantes: 28
+    NUEVA · escena:
+      usos: 0
+      respuestas: 0
+      hablantes: 0
+    vieja · control:
+      usos: 30
+      respuestas: 21
+      hablantes: 17
+    NUEVA · control:
+      usos: 0
+      respuestas: 0
+      hablantes: 0
+  estativo + aspecto (d21.4):
+    vieja · escena:
+      usos: 60
+      respuestas: 47
+      hablantes: 31
+    NUEVA · escena:
+      usos: 204
+      respuestas: 135
+      hablantes: 58
+    vieja · control:
+      usos: 51
+      respuestas: 40
+      hablantes: 30
+    NUEVA · control:
+      usos: 190
+      respuestas: 124
+      hablantes: 57
+  ka-juri:
+    vieja · escena:
+      usos: 1
+      respuestas: 1
+      hablantes: 1
+    NUEVA · escena:
+      usos: 1
+      respuestas: 1
+      hablantes: 1
+    vieja · control:
+      usos: 1
+      respuestas: 1
+      hablantes: 1
+    NUEVA · control:
+      usos: 0
+      respuestas: 0
+      hablantes: 0
+  juri-ni/-ka/-da:
+    vieja · escena:
+      usos: 40
+      respuestas: 30
+      hablantes: 18
+    NUEVA · escena:
+      usos: 11
+      respuestas: 9
+      hablantes: 7
+    vieja · control:
+      usos: 65
+      respuestas: 44
+      hablantes: 23
+    NUEVA · control:
+      usos: 24
+      respuestas: 22
+      hablantes: 17
+  kudanga / kuté (d21.10):
+    vieja · escena:
+      usos: 26
+      respuestas: 18
+      hablantes: 17
+    NUEVA · escena:
+      usos: 62
+      respuestas: 48
+      hablantes: 24
+    vieja · control:
+      usos: 2
+      respuestas: 1
+      hablantes: 1
+    NUEVA · control:
+      usos: 53
+      respuestas: 42
+      hablantes: 17
+  -naiki (retirado):
+    vieja · escena:
+      usos: 0
+      respuestas: 0
+      hablantes: 0
+    NUEVA · escena:
+      usos: 0
+      respuestas: 0
+      hablantes: 0
+    vieja · control:
+      usos: 0
+      respuestas: 0
+      hablantes: 0
+    NUEVA · control:
+      usos: 0
+      respuestas: 0
+      hablantes: 0
+  ka- + NOMBRE caquetío (d21.5):
+    vieja · escena:
+      usos: 37
+      respuestas: 28
+      hablantes: 21
+    NUEVA · escena:
+      usos: 15
+      respuestas: 13
+      hablantes: 12
+    vieja · control:
+      usos: 34
+      respuestas: 26
+      hablantes: 21
+    NUEVA · control:
+      usos: 22
+      respuestas: 18
+      hablantes: 15
+  ma- + NOMBRE caquetío:
+    vieja · escena:
+      usos: 144
+      respuestas: 99
+      hablantes: 55
+    NUEVA · escena:
+      usos: 143
+      respuestas: 79
+      hablantes: 47
+    vieja · control:
+      usos: 202
+      respuestas: 118
+      hablantes: 56
+    NUEVA · control:
+      usos: 174
+      respuestas: 102
+      hablantes: 53
+formas_en_la_cadena_nueva:
+  u- (no-poseído, d21.13):
+    formas_distintas: 218
+    usos: 533
+    top:
+      u-buko: 78
+      u-biro: 57
+      u-duna: 15
+      u-dali: 15
+      u-para: 14
+      u-konuko: 14
+      u-barsure: 12
+      u-brilu-kara-biro-iro: 10
+      u-ana: 7
+      u-kasi: 7
+      u-biro-kana: 6
+      u-arua: 6
+      u-pütchi: 6
+      u-arima-kana: 6
+      u-konuko-bana: 5
+  -bakoa (d21.14):
+    formas_distintas: 37
+    usos: 56
+    top:
+      biro-bakoa: 6
+      kuru-bakoa: 5
+      arima-bakoa: 4
+      suka-bakoa: 3
+      juri-bakoa: 3
+      para-bakoa: 3
+      wayakán-bakoa-ka: 2
+      sima-bakoa: 1
+      yuka-bakoa: 1
+      merejuy-bakoa: 1
+      kuri-bakoa-gua: 1
+      para-bakoa-gua: 1
+      biro-iro-bakoa-ka: 1
+      kasuta-bakoa: 1
+      u-kuru-bakoa-sulu: 1
+  estativo + aspecto (d21.4):
+    formas_distintas: 27
+    usos: 394
+    top:
+      usera-ka: 95
+      usera-ni: 47
+      kachipo-ni: 36
+      waranao-ka: 26
+      wasima-ka: 23
+      waranao-ni: 23
+      kachipo-ka: 21
+      waranao-da: 16
+      wasima-ni: 16
+      wasima-da: 13
+      waidima-ka: 10
+      etamo-da: 9
+      waidima-ni: 9
+      etamo-ni: 8
+      etamo-ka: 7
+ejemplos_literales_de_la_plantilla:
+  u- (no-poseído, d21.13):
+    formas:
+      u-buko: 78
+      u-biro: 57
+    usos: 135
+    pct_de_los_usos: 25.3
+  -bakoa (d21.14):
+    formas:
+      kuru-bakoa: 5
+      -bakoa: 1
+    usos: 6
+    pct_de_los_usos: 10.7
+  estativo + aspecto (d21.4):
+    formas: {}
+    usos: 0
+    pct_de_los_usos: 0.0
