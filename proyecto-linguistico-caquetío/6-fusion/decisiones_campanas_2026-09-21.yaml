@@ -1,0 +1,57 @@
+# Decisiones de Miguel sobre las CAMPAÑAS del 2026-09-21
+#
+# Ocho campañas con agentes (#184-#192): `macana`, `-gua`, el nominalizador y las
+# cinco del taíno. Cada una dejó su propuesta en `6-fusion/` con opciones con
+# letra; aquí se registra lo que Miguel decide, UNA A UNA, con su cita literal —
+# como la tanda del 21. Lo que cambia el prompt NO se aplica al decidirse: se
+# junta en un solo corte de serie con una sola medición.
+#
+# Regla de lectura: `decision_literal` es lo que Miguel escribió, entero. Si la
+# cita es una pregunta, no es una decisión (lección del 2026-09-17).
+
+dc.1_macana:
+  tipo: decisión de canon (sin corte)
+  pregunta: >-
+    El apoyo achagua que el escriba propuso para `macana` no existe. ¿Se queda
+    `caquetío-reconstruido` (A), vuelve a `taíno` (C) o baja a retroabstraído con
+    la glosa de Medina (D)?
+  decision_literal: '«Si voy con tu recomendación.»'
+  la_recomendacion_que_acepta: >-
+    «Recomiendo A ahora. La opción C la dejaría dentro de la conversación del
+    taíno, porque es la misma pregunta: qué hacemos con las voces que sabemos
+    taínas en boca de gente del siglo XV. No conviene resolverla palabra a
+    palabra.»
+  eleccion: A — y C queda DENTRO de la decisión de clase sobre los tainismos
+  medido: >-
+    Cero fuentes la dan como caquetía (Zavala, van Buurt, Gatschet, Neira y
+    Ribero, Perea, Pané). Neira y Ribero 1762: `Macana → Guacaba`; las tres
+    formas que se citaban glosan «Dormidera», «Mazorca de mais» e «Yndecible».
+    Alvarado 1921 p. 189: «voz taína». Medina: 'algo muy grande o
+    desproporcionado', página sin dictar.
+  lectura_operativa: >-
+    La etiqueta no se mueve. En `notas` de la entrada consta que el achagua NO la
+    sostiene y cuál es la voz atestiguada para el arma. Los dos textos que
+    afirmaban el apoyo falso (d21.8 y el comentario de la regla `-kana`) quedan
+    corregidos.
+  verificado_que_no_mueve_nada: >-
+    `notas` no llega al prompt: la huella de los 378 prompts del pre-vuelo
+    (control, escena y Capubana) es la misma antes y después, sha256
+    faa1a03902b2cd42. `fuente` y `categoria` intactas.
+  lo_que_el_escriba_dijo_mal_al_preguntar: >-
+    Al presentar la decisión se dijo que `macana` «es la única entrada de la
+    categoría armas; si sale, el lexicón se queda sin voz de arma». Es cierto
+    del CAMPO `categoria` y falso del lexicón: `poporo` es
+    caquetío-ATESTIGUADO — Alvarado 1921 p. 255, «Arma, a manera de porra,
+    usada por los antiguos Caquetíos y los Guagiros», ref. Castellanos,
+    Elegías — y no lleva `categoria`. Verificado en el PDF. La elección A no
+    dependía de eso (A no saca nada), pero sí cambia lo que viene después: ver
+    `abre`.
+  abre: >-
+    `macana` frente a `poporo` repite el patrón de `kali` frente a `kasi`: en
+    la base, `macana` 45 usos de 32 agentes; `poporo`, 2 usos de 2. Por la
+    política d19.b NO es par automático —las glosas no son idénticas ('maza-porra,
+    arma de combate ceremonial' ≠ 'macana, garrote de madera dura, arma de
+    combate'), solapamiento parcial = curación—, pero por d19.c («lo
+    reconstruido lo usemos para nuestros blind spots») el garrote NO es un punto
+    ciego: hay voz atestiguada. Queda para la decisión de clase de los tainismos.
+  se_aplica_en: 'curiana_lexicon.py (`notas` de `macana`); #193'
