@@ -35,10 +35,13 @@ la medición, y la tabla del §3 la emite un script.
 > Las que tocan `curiana_sim/` —el detector de aspecto, `_RAICES_VERB`,
 > `REGLAS_ATRIBUTIVAS`, `-ana` sin glosa, `-kana`, `-naiki`, `kudanga`/`kuté`,
 > el no-poseído, las glosas de los ejemplos— van en **un solo corte de serie**,
-> no en cuatro: la serie C se repite una vez, con todo dentro. Mientras ese
-> corte no esté medido y commiteado, lo que esta nota dice del código va en
-> futuro o en condicional, y se marca **[pendiente del corte]**. Lo que dice de
-> la **lengua** es canon desde el 2026-09-21.
+> no en cuatro: la serie C se repite una vez, con todo dentro. **Ese corte está
+> hecho**: es el punto 13 del «Cambio de instrumento» de
+> `5-experimento/BITACORA_RUNS.md` (#182, 2026-09-21), medido en
+> `6-fusion/medicion_tanda_21_2026-09-21.yaml`. Donde esta nota decía
+> «pendiente del corte» dice ahora **[aplicado en el corte 13]**, y lo que el
+> corte midió distinto de lo que la auditoría estimaba está dicho en su sitio.
+> Lo que dice de la **lengua** es canon desde el 2026-09-21.
 
 ---
 
@@ -61,7 +64,9 @@ cuté»* 'para servir a usted'. Entran al habla por decisión del 2026-09-21
 para el tú corriente, `kudanga` para dirigirse a un mayor o a un Diao. Es un
 rasgo social además de gramatical, y la era 2 tiene la jerarquía escrita — el
 trato formal al Manaure en el Capubana y el tú corriente en el conuco.
-**[pendiente del corte]** que la plantilla los enseñe.
+**[aplicado en el corte 13]**: la línea `TRATO FORMAL` va en
+`prompt_reglas_completo`, o sea que la recibe el tier 1 —quien trata con el
+Manaure y con el forastero—, no el elenco entero.
 
 > **Corrección a [[lexicon]] §«manda la atestiguada»**: la frase «los pronombres
 > no tienen rival atestiguado» **no era exacta**. Para la segunda persona sí lo
@@ -259,8 +264,10 @@ es la palabra**. La morfología se quedó fuera de esa migración, y la tanda de
 
 - **Ahora (opción B): la deuda documental.** Los ejemplos de las reglas se
   reescriben con formas que el lexicón tenga, y `-uto` se declara como variante
-  dentro de la regla de `-uco` **[pendiente del corte]**. Hasta ahí, el prompt
-  enseñaba
+  dentro de la regla de `-uco` **[aplicado en el corte 13]** — se declara y se
+  enseña, pero **no entra en `TODAS_LAS_REGLAS`**: añadir la clave movería
+  `_SUFIJOS_CAQ`, y eso no es lo que decide 14 B. Residuo declarado: se enseña
+  y el scorer no lo reconoce. Hasta el corte, el prompt enseñaba
   `ada + -bacoa = adabacoa` y **ninguna de las tres formas está en
   `VOCABULARIO_BASE`** (`bakoa` sí); y cinco derivados —`Judibana`, `Corogua`,
   `adabacoa`, `yacarebacoa`, `wayuukana`— los presentan las reglas y el lexicón
@@ -275,8 +282,12 @@ es la palabra**. La morfología se quedó fuera de esa migración, y la tanda de
 - **Con el corte de serie (opción A): `-bacoa` → `-bakoa`.** Cambia una clave de
   `TODAS_LAS_REGLAS` → cambia `_SUFIJOS_CAQ` → mueve `nucleo_de_token()` y con
   él el score, y hay **57 usos** de `-bacoa` en la base que dejarían de
-  segmentarse igual. **Se mide antes**, con el patrón A/B de
-  `medir_politica_atestiguado_manda.py`. **[pendiente del corte]**
+  segmentarse igual. **Se midió antes** (`medir_tanda_21.py`), y salió limpia:
+  **32 formas / 65 usos** cambian de borde y **ninguna** cambia
+  `es_raiz_de_ninguna_parte()` ni `_familia_de_token()`, que son los dos únicos
+  consumidores del núcleo. Por eso se aplicó entera. El ejemplo del prompt es
+  `kuru-bakoa`, que no se había dicho nunca en la base.
+  **[aplicado en el corte 13]**
 
 ---
 
@@ -292,7 +303,9 @@ arahuaco **se conjuga como verbo**, no se usa como adjetivo. En el canon lleva
 `-ni`, `-da`) como cualquier otro verbo. Un **verbo de acción** es lo que el
 castellano ya reconoce como verbo. Y **la etiqueta llega al prompt**, que es lo
 que Miguel decidió: una línea diciendo que **un estado se predica con aspecto
-igual que una acción**. **[pendiente del corte]**
+igual que una acción**. **[aplicado en el corte 13]**: `cat: v_estativo` en el
+minador, el bloque «UN ESTADO ES UN VERBO» en la plantilla completa y la línea
+`ESTADO:` en la breve — llega a todo el elenco, no sólo al tier 1.
 
 **La comparanda.** [[perea-alonso-1942]] describe la **4ª conjugación lokono**
 —infinitivo en `-en`— como la clase de los estativos: colores, tamaños,
@@ -398,10 +411,11 @@ Así que:
 | `ka-` | **atributivo / existencial** — 'hay X, tiene X' | [[van-buurt-2014]] §8 (*Casibari*); par mínimo lokono en [[perea-alonso-1942]] p. 555 |
 | `ma-` | **privativo** — 'sin X, no X' | par mínimo con `ka-` ([[perea-alonso-1942]] p. 555); WY `ma-` cognado |
 
-**[pendiente del corte]** el paso a `REGLAS_ATRIBUTIVAS` y el ejemplo nuevo del
-prompt, `ka-biro = 'hay sal, el sitio tiene sal'` junto a `ka-maure`. El cambio
-es de **agrupación, no de claves**: `TODAS_LAS_REGLAS` sigue teniendo las mismas
-entradas, así que el desafijador devuelve exactamente lo mismo.
+**[aplicado en el corte 13]** el paso a `REGLAS_ATRIBUTIVAS` y el ejemplo nuevo
+del prompt, `ka-biro = 'hay sal, el sitio tiene sal'` junto a `ka-maure`. El
+cambio es de **agrupación, no de claves**: `TODAS_LAS_REGLAS` sigue teniendo las
+mismas entradas, y el invariante **se midió**: `nucleo_de_token()` devuelve lo
+mismo, forma a forma, en toda la base — 0 cambios.
 
 ### La consecuencia escrita: «hay viento» es `ka-juri`, no `juri-ni`
 
@@ -525,7 +539,7 @@ fuente, y era convención.
 > ⚠️ Retirarlo es gratis en uso y **no** en desafijado: sacarlo de
 > `TODAS_LAS_REGLAS` mueve `_SUFIJOS_CAQ`, así que aunque el uso sea cero hay
 > que **medir antes** por si alguna forma hoy se desafija y mañana no.
-> **[pendiente del corte]**
+> **[aplicado en el corte 13]** — medido: 0 formas cambian de núcleo.
 
 ### `-gua`: sin procedencia, y una campaña abierta (d21.7)
 
@@ -624,7 +638,7 @@ se reduplica a `shishiri`, lo que queda detrás es `-bana` entero, no `-ana`.
   valor entre corchetes*. Ni se quita del prompt —eso tiraría un formante
   atestiguado— ni se deja el error con permiso. Y **abre** la posibilidad de que
   los agentes propongan la glosa, que es para lo que existe esta simulación. Uso
-  actual: **290 sobre 53 raíces**. **[pendiente del corte]**
+  actual: **290 sobre 53 raíces**. **[aplicado en el corte 13]**
 
   *Paraguana* dejó de ser su apoyo: la fuente imprime **Paraguaná** con tilde,
   la glosa «Rodeada del mar» no despeja con 'lugar de', y existe la segmentación
@@ -705,7 +719,7 @@ regla 8 prohíbe para las fuentes, y vale igual para la gramática.
 
 | Rasgo | Qué dice la comparanda | Qué hace este sistema |
 |---|---|---|
-| **Posesión no-poseída** | [[perea-alonso-1942]] p. 587: índices personales sobre el nombre (`da-si-kua` 'mi casa') **y el índice absoluto `u-`/`ù-`** — `u-si-kua-hù` = *LA casa, sin poseedor*. Y p. 586, posesivos absolutos `da-kía` 'mío', `wa-kía` 'nuestro' | **ENTRA.** Es el único de los tres que se importa, porque es **puramente gramatical** y tapa un hueco medido: sin él, un agente que quiera nombrar una cosa sin dueño no tiene cómo, y `ta-` está a mano — **6.843 usos sobre 258 raíces distintas**. **[pendiente del corte]** |
+| **Posesión no-poseída** | [[perea-alonso-1942]] p. 587: índices personales sobre el nombre (`da-si-kua` 'mi casa') **y el índice absoluto `u-`/`ù-`** — `u-si-kua-hù` = *LA casa, sin poseedor*. Y p. 586, posesivos absolutos `da-kía` 'mío', `wa-kía` 'nuestro' | **ENTRA.** Es el único de los tres que se importa, porque es **puramente gramatical** y tapa un hueco medido: sin él, un agente que quiera nombrar una cosa sin dueño no tiene cómo, y `ta-` está a mano — **6.843 usos sobre 258 raíces distintas**. **[aplicado en el corte 13]**: `REGLAS_POSESIVAS["u-"]`, reconocido y enseñado; añadir la clave mueve `_PREFIJOS_CAQ` y se midió — 0 formas cambian de núcleo |
 | **Género / clases** | [[perea-alonso-1942]] p. 554: no hay género gramatical; hay **varonil** y **no varonil**, con sufijos `-ti/-tti` vr. y `-tu/-ttu` nv., y `-nu` plural común. El no varonil comprende a las mujeres, a los animales de ambos sexos y a todas las cosas. Los achagua de [[neira-ribero-1762]] cambian el numeral según lo que cuentan (personas, palos, ríos, lunas) | **HUECO DECLARADO, y a propósito.** No hay **ni un dato caquetío** de género, y la distinción varonil/no varonil arrastra una cosmovisión entera: importarla es exactamente lo que **la regla 4 prohíbe** — importar un rasgo sin marcarlo. Y el proyecto acaba de pasar por eso al retirar `-ko`/`-sha`, que era un género inventado. Se espera |
 | **Número de los irracionales** | [[perea-alonso-1942]] p. 556: `keyu` 'venado, venados', `siba` 'piedra, piedras', `adda` 'árbol, árboles', `a-wadu-lli` 'viento, vientos' — los irracionales **no distinguen número**; y los pocos animales pluralizados que aparecen son «huella del traductor alemán» | **HUECO DECLARADO.** `-kana` se aplica a todo. Es un dato precioso **y de otra lengua**: se anota y se espera. Bajar `-kana` (§7) no es lo mismo que importar esta restricción |
 | **Alineamiento** | [[perea-alonso-1942]] pp. 635 y 652: dos juegos de pronombre — prefijado `d-a-, b-a-, l-a-…` en transitivos, pospuesto `de, bu, i, n, u, hù, ye` en estativos y negativos | **Un solo juego, sin alineamiento.** Declarado, no importado, con la razón escrita en §5 |
@@ -851,7 +865,7 @@ conviene saber cuál es cuál:
 | `_aspectos_morfologicos()` | hasta **2 de los 10 puntos** del score | `-ka`, `-ni`, `-da` sobre raíz verbal — y, hasta el corte, sobre cualquier raíz de tres letras o más (el comodín, abajo) |
 | `score_linguistico.es_arahuaco()` | densidad arahuaca, el **60 %** del score | prefijo posesivo/atributivo + raíz activa, y raíz verbal |
 
-### Las dos correcciones de la tanda **[pendiente del corte]**
+### Las dos correcciones de la tanda **[aplicadas en el corte 13]**
 
 1. **`_RAICES_VERB` mezcla las cinco lenguas** (d21.2, opción A). Se construye
    como `{k for k, v in VOCABULARIO_BASE if v['cat'] == 'v_raiz'}`, **sin
@@ -903,6 +917,17 @@ conviene saber cuál es cuál:
 > medir después de aplicar las dos correcciones**: al exigir verbo de verdad, la
 > saturación puede caerse sola. Si sigue saturada con el número nuevo, se abre
 > el rediseño.
+>
+> **Medido después del corte 13, y NO se cayó sola.** Sobre las 3.379 respuestas
+> de la base: media **1,9982 → 1,9532**, y **95,59 %** siguen en el tope (antes
+> 99,82 %); cambian 143 respuestas y 9 quedan sin aspecto. Cae **menos** que el
+> 1,9296 que la auditoría estimaba para «tapar el comodín», y por una razón
+> buena: la opción C de d21.1 cuenta el aspecto cuando el **último segmento**
+> antes del sufijo es verbo, y eso recupera los compuestos que sí llevan verbo
+> dentro (`ta-hamaka-chaa-ni` sigue contando por `chaa`). En la serie C la media
+> queda en 1,9271. **El aspecto sigue sin separar a nadie: el rediseño del peso
+> (opción B) queda abierto**, con su propio diseño. Medición:
+> `6-fusion/medicion_tanda_21_2026-09-21.yaml` §`d21_3_saturacion`.
 
 ---
 
