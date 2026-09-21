@@ -1,0 +1,274 @@
+# ══════════════════════════════════════════════════════════════════════
+# CONTROL NO ARAHUACO — jirajara/ayomán (Jahn 1927, pp. 388-391)
+# GENERADO por 6-fusion/scripts/_extraer_control_jirajarano.py.
+# Es una LISTA DE CONTROL, no comparanda: ver meta.advertencia.
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  obra: jahn-1927
+  que_es: 'Vocabulario jirajara de Siquisique comparado con el ayomán, Jahn 1927 pp. impresas 388-391.
+    Lengua JIRAJAROIDE: no arahuaca y sin filiación chibcha sostenida (ver 6-fusion/tabla_a8_jirajarano.yaml).'
+  para_que: 'CONTROL DE AZAR de 6-fusion/scripts/cruce_taino_caquetio.py. Nunca comparanda: no entra al
+    lexicón ni a 2-lengua/cognados.yaml.'
+  generado_por: 6-fusion/scripts/_extraer_control_jirajarano.py
+  receta: pdftotext -enc UTF-8 -layout; filas de 3 columnas que arrancan en el margen
+  advertencia: 'A partir de cierta fila de la p. 389 las columnas DERIVAN en el escaneo: una glosa puede
+    quedar junto a la forma de otra fila. Para una comparanda sería fatal; para un control es conservador,
+    porque una glosa mal pegada a una forma es lo que hace un modelo nulo.'
+  planas_leidas: 4
+  filas: 85
+vocabulario:
+- castellano: Cabeza (mi)
+  jirajara: ak-tégui
+  ayoman: a-togh
+- castellano: Ojo (mi)
+  jirajara: a-uñán
+  ayoman: a-kivóugh
+- castellano: Boca (mi)
+  jirajara: a-gúspo
+  ayoman: a-gip
+- castellano: Nariz (mi)
+  jirajara: a-kingán
+  ayoman: a-kin
+- castellano: Oreja (mi)
+  jirajara: a-teég
+  ayoman: a-hóui
+- castellano: Barba
+  jirajara: ustenagúé
+  ayoman: a-pougísh
+- castellano: Mano (mi)
+  jirajara: a-mánt
+  ayoman: -a-mán
+- castellano: Pierna
+  jirajara: hisganipipán
+  ayoman: a-sahan-ipip
+- castellano: Pie (mi)
+  jirajara: a-ngán
+  ayoman: a-sengán
+- castellano: Vientre (mi)
+  jirajara: a-yú
+  ayoman: a-poh
+- castellano: Espinazo (mi)
+  jirajara: a-yoguició
+  ayoman: a-yogishíbo
+- castellano: Rodilla (mi)
+  jirajara: a-tashán
+  ayoman: a-tostián
+- castellano: Uña (mi)
+  jirajara: a-guigusé
+  ayoman: a-kiyoud
+- castellano: Agua
+  jirajara: ing
+  ayoman: ing
+- castellano: Lluvia
+  jirajara: kat
+  ayoman: géui
+- castellano: Cielo
+  jirajara: ingúiét
+  ayoman: ñi-RÁ
+- castellano: Sol
+  jirajara: yuaú
+  ayoman: in
+- castellano: Viento
+  jirajara: titate
+  ayoman: estéd
+- castellano: Frío
+  jirajara: tatát
+  ayoman: tachát
+- castellano: Fuego
+  jirajara: dueg
+  ayoman: dúg
+- castellano: Leña
+  jirajara: sisp
+  ayoman: sip
+- castellano: Braza
+  jirajara: duchir
+  ayoman: kach
+- castellano: Pueblo
+  jirajara: teréya
+  ayoman: null
+- castellano: Médico
+  jirajara: gasgád
+  ayoman: gasgá
+- castellano: Muerto
+  jirajara: kusine
+  ayoman: kushíni
+- castellano: Baile (tura)
+  jirajara: esterkuye, prarard
+  ayoman: null
+- castellano: Esposa
+  jirajara: esol
+  ayoman: senha
+- castellano: Hijo
+  jirajara: eunú
+  ayoman: null
+- castellano: Sal
+  jirajara: tumané
+  ayoman: tóroról
+- castellano: Relámpago
+  jirajara: sekuni
+  ayoman: null
+- castellano: Trueno
+  jirajara: iruruoní
+  ayoman: daktá
+- castellano: Quebrada
+  jirajara: sat
+  ayoman: kururú
+- castellano: Chinchorro
+  jirajara: dotak
+  ayoman: kúgh
+- castellano: Totuma
+  jirajara: kururú
+  ayoman: piguió
+- castellano: Tapara
+  jirajara: kub
+  ayoman: dipegha
+- castellano: Olla
+  jirajara: pigró
+  ayoman: null
+- castellano: Cuchara
+  jirajara: dipigué
+  ayoman: batá (tinaja)
+- castellano: Tierras, terrenos
+  jirajara: gúedap
+  ayoman: null
+- castellano: Batea
+  jirajara: digueyé
+  ayoman: null
+- castellano: Mazamorra
+  jirajara: sul
+  ayoman: shpepé
+- castellano: Carato
+  jirajara: kasagúé (esp.)
+  ayoman: pishú
+- castellano: Casamiento
+  jirajara: ispepé
+  ayoman: macét (esp.)
+- castellano: Flecha
+  jirajara: pisiú
+  ayoman: asará
+- castellano: Cuchillo
+  jirajara: masép (esp.)
+  ayoman: kamrá
+- castellano: Machete
+  jirajara: asará
+  ayoman: yúsh
+- castellano: Escardilla
+  jirajara: kamard
+  ayoman: senhá
+- castellano: Hacha
+  jirajara: wyit
+  ayoman: paghó
+- castellano: Hombre
+  jirajara: siepúk
+  ayoman: éyl
+- castellano: Mujer
+  jirajara: pagóg
+  ayoman: null
+- castellano: Piedra
+  jirajara: dox
+  ayoman: null
+- castellano: Yuca
+  jirajara: hogón
+  ayoman: shoh
+- castellano: Tabaco
+  jirajara: soÓ
+  ayoman: gagáp
+- castellano: Casa
+  jirajara: gagáp
+  ayoman: boshín
+- castellano: Tigre (Felis onza)
+  jirajara: bosin
+  ayoman: null
+- castellano: León (Felis conco-
+  jirajara: ;
+  ayoman: mohorí
+- castellano: Danta (Tapirussp.)
+  jirajara: aréu
+  ayoman: null
+- castellano: Zorro (Canis Aza-
+  jirajara: moort
+  ayoman: null
+- castellano: Araguato
+  jirajara: perú
+  ayoman: degaró
+- castellano: Pereza
+  jirajara: arok
+  ayoman: hué
+- castellano: Perro
+  jirajara: mús
+  ayoman: shuhuí
+- castellano: Mapurite (Mephi-
+  jirajara: yu
+  ayoman: agúi
+- castellano: Gato
+  jirajara: nñamurí
+  ayoman: huhí-tan-ña
+- castellano: Gato cerval
+  jirajara: baú
+  ayoman: null
+- castellano: Marrano
+  jirajara: mondúj
+  ayoman: null
+- castellano: Cachicamo (Dasy-
+  jirajara: degaró
+  ayoman: null
+- castellano: Morrocoy
+  jirajara: gúé
+  ayoman: null
+- castellano: Pescado
+  jirajara: suí
+  ayoman: null
+- castellano: Chácharo
+  jirajara: tog
+  ayoman: null
+- castellano: Gallo
+  jirajara: agút
+  ayoman: null
+- castellano: Gallina
+  jirajara: araguá
+  ayoman: null
+- castellano: Guaca
+  jirajara: tub
+  ayoman: null
+- castellano: Guacharaca
+  jirajara: tub-taumá
+  ayoman: null
+- castellano: Cienpiés (Scolo-
+  jirajara: siyóp
+  ayoman: koñir
+- castellano: Bueno, bonito
+  jirajara: yusimá
+  ayoman: null
+- castellano: Bien de salud
+  jirajara: nianye
+  ayoman: null
+- castellano: Enfermo
+  jirajara: pok diú
+  ayoman: null
+- castellano: Conuco
+  jirajara: gúe ub!
+  ayoman: null
+- castellano: Mucha lluvia
+  jirajara: angúi tereya
+  ayoman: null
+- castellano: Cerro grande
+  jirajara: angúti fruye
+  ayoman: null
+- castellano: Buenos días!
+  jirajara: aktégui sigúigauni
+  ayoman: null
+- castellano: Voy al pueblo
+  jirajara: gekyeú
+  ayoman: null
+- castellano: Voy a Siquisique
+  jirajara: tanuoy
+  ayoman: null
+- castellano: Tengo hambre
+  jirajara: apasi mamán
+  ayoman: null
+- castellano: Voy a comer
+  jirajara: eunú ayayíi que-
+  ayoman: null
+- castellano: Mi hijo llora de
+  jirajara: aparimí ñianye
+  ayoman: null
