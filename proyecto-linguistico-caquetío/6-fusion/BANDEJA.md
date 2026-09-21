@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-21**.
 
-**2867 ítems propuestos** en 83 propuestas, más **12 issue(s)/comentario(s) redactados sin publicar**.
+**2888 ítems propuestos** en 86 propuestas, más **14 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -75,6 +75,7 @@ editar_a_mano: no
 | `medicion_prestigio_vinculos_era2_2026-09-17.yaml` | ? | 3 |  |
 | `medicion_raices_de_ninguna_parte_2026-09-20.yaml` | ? | 0 |  |
 | `medicion_tanda_21_2026-09-21.yaml` | ? | 13 |  |
+| `medicion_tanda_21_en_la_boca_2026-09-21.yaml` | ? | 10 |  |
 | `medina_colina_dictado.yaml` | ? | 111 |  |
 | `migracion_lemas_fase2.yaml` | ? | 79 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
@@ -86,6 +87,8 @@ editar_a_mano: no
 | `pendientes_en_alvarado_y_arcaya.yaml` | ? | 0 |  |
 | `petroglifos_y_manaure.yaml` | moron-2012-petroglifos | 4 |  |
 | `polities_no_costeras_federmann.yaml` | ? | 16 |  |
+| `propuesta_gua_procedencia_2026-09-21.yaml` | oliver-1989-cap2 · zavala-reyes-2015 · van-buurt-2014 · esteves-1989 · alvarado-1921 · jahn-1927 · arcaya-1920 · medina-colina-sxx | 7 |  |
+| `propuesta_macana_etiqueta_2026-09-21.yaml` | ? | 4 |  |
 | `propuesta_nominalizador_2026-09-21.yaml` | ? | 4 |  |
 | `propuesta_nucleo_d11_fase3.yaml` | perea-alonso-1942 · neira-ribero-1762 · oliver-1989-cap2 · oliver-1989-apendice-a · zavala-reyes-2015 | 17 |  |
 | `sistema_de_nombres_era2.yaml` | ? | 8 |  |
@@ -142,7 +145,9 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `existir-en-el-mundo-escena-por-lugar-2026-09-17.md` | Existir en el mundo: la escena por lugar |
 | `frontera-entre-nodos-2026-09-17.md` | La frontera entre nodos: el motor no tiene ninguna |
 | `golfete-en-paraguana-2026-09-17.md` | «Golfete» en Paraguaná: por dónde entra, a quién le sobra y qué decidir |
+| `gua-procedencia-2026-09-21.md` | `-gua` sí tiene fuente — pero no para lo que enseña |
 | `la-clase-estativa-2026-09-20.md` | La clase estativa: declararla, que hoy se hereda por accidente |
+| `macana-etiqueta-2026-09-21.md` | `macana`: el apoyo achagua no existe — y la cita que la sostiene es de otra glosa |
 | `morfologia-revision-2026-09-20.md` | La morfología arahuaca, revisada entera |
 | `mundo-era2-sitios-y-clima.md` | El mundo de la era 2, atado a los nodos: sitios y clima |
 | `nominalizador-retroabstraccion-2026-09-21.md` | El nominalizador que no está: se buscó así, en esto, y no hay |

@@ -1,0 +1,514 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — ¿TIENE FUENTE `-gua`?  La campaña corta de d21.7
+#
+# GENERADO por 6-fusion/scripts/medir_gua_procedencia.py — no se edita a
+# mano (regla 1: ninguna cifra a mano). La prosa vive en el script.
+#
+# Regla 5: esto PROPONE. No toca curiana_lexicon.py, ni 2-lengua/, ni el
+# corpus. Las opciones para Miguel están en
+# 6-fusion/issues-pendientes/gua-procedencia-2026-09-21.md
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-09-21'
+  estado: sin-decidir
+  obra: oliver-1989-cap2 · zavala-reyes-2015 · van-buurt-2014 · esteves-1989 ·
+        alvarado-1921 · jahn-1927 · arcaya-1920 · medina-colina-sxx
+  encargo: >-
+    d21.7 (« Si me parece, B », 2026-09-21): el motor enseña `-gua` = «región /
+    área asociativa» en las dos plantillas y su único apoyo escrito es la frase
+    «Topónimos venezolanos de Falcón y Sucre», con cero clave foránea.
+  toca: ['curiana_sim/curiana_lexicon.py REGLAS_LOCATIVAS', '2-lengua/morfologia.md §3',
+         '2-lengua/morfemas.yaml', 'd21.7', 'D5 / D5c (#36)']
+  corte_de_la_base: '2026-09-21'   # simulation_runs.started_at < esta fecha
+
+# ══════════════════════════════════════════════════════════════════
+# 0. EL VEREDICTO
+# ══════════════════════════════════════════════════════════════════
+veredicto:
+  en_una_frase: >-
+    La pregunta cambia: `-gua` SÍ tiene fuente, pero no para lo que enseña. La
+    FORMA está atestiguada como formante toponímico caquetío (Oliver 1989 cap. 2
+    p. 148, sexto de sus seis «suffixes in Caquetío toponyms»), y hay un `gua`
+    caquetío atestiguado con glosa (Zavala 2015 #122, p. 68) — que el lexicón ya
+    tiene, bajo el lema fonémico `wa`. Lo que NO tiene fuente es la GLOSA que el
+    motor enseña: «región, área amplia, menos específico que -ana». Ninguna obra
+    del repo la dice, y las dos que dicen algo apuntan al revés — la única glosa
+    atestiguada es 'conuco, heredad, TERRENO CERCADO', que es un lugar acotado, y
+    Oliver, que sí glosa `-bana` y `-coa`, deja `-wa` sin valor.
+  las_tres_preguntas:
+    forma: 'SÍ — Oliver 1989 cap. 2 p. 148 (lista) y p. 142 (bari-si-gua)'
+    valor: 'NO — cero fuentes para «región»; una fuente para «conuco, terreno cercado»'
+    lema: >-
+      El lema debería ser `-wa`, no `-gua`. Lo dice Oliver literalmente («gua=/wa/»,
+      p. 142), lo dice van Buurt (p. 27) y lo dice el propio lexicón, que ya
+      lematiza paragua→parawa, sibidigua→sibidiwa, quigua→kiwa, sigua→siwa,
+      cumaragua→kumarawa. Es el mismo movimiento de d21.14 (-bacoa → -bakoa).
+      ⚠️ NO se aplica aquí: es D5/D5c y decide Miguel.
+
+# ══════════════════════════════════════════════════════════════════
+# 1. LA ORTOGRAFÍA, MEDIDA ANTES DE CONTAR  (skill minar-fuente §2)
+# ══════════════════════════════════════════════════════════════════
+ortografia:
+  porque: >-
+    Un grep que devuelve cero mide la consulta, no la fuente. Las crónicas no
+    usan ortografía moderna. Antes de contar nada se mide cómo escribe CADA obra
+    la secuencia, en sus siete variantes.
+  variantes_buscadas: ["gua", "guá", "güa", "goa", "hua", "ua", "wa"]
+  por_obra:
+    alvarado-1921:
+      caracteres: 689459
+      via: 'pdf'
+      por_variante: {"gua": 1256, "guá": 137, "güa": 3, "goa": 5, "hua": 89, "ua": 1984, "wa": 7}
+    arcaya-1920:
+      caracteres: 472917
+      via: 'pdf'
+      por_variante: {"gua": 437, "guá": 6, "güa": 0, "goa": 7, "hua": 34, "ua": 1131, "wa": 4}
+    esteves-1989:
+      caracteres: 168558
+      via: 'ocr'
+      por_variante: {"gua": 681, "guá": 5, "güa": 0, "goa": 0, "hua": 4, "ua": 944, "wa": 5}
+    jahn-1927:
+      caracteres: 629691
+      via: 'pdf'
+      por_variante: {"gua": 1089, "guá": 22, "güa": 0, "goa": 13, "hua": 50, "ua": 2125, "wa": 80}
+    oliver-1989-cap2:
+      caracteres: 260410
+      via: 'pdf'
+      por_variante: {"gua": 954, "guá": 0, "güa": 1, "goa": 4, "hua": 4, "ua": 1091, "wa": 701}
+    van-buurt-2014:
+      caracteres: 89240
+      via: 'capa de texto'
+      por_variante: {"gua": 159, "guá": 0, "güa": 0, "goa": 0, "hua": 6, "ua": 211, "wa": 306}
+    zavala-reyes-2015:
+      caracteres: 38575
+      via: 'pdf'
+      por_variante: {"gua": 123, "guá": 0, "güa": 0, "goa": 1, "hua": 10, "ua": 174, "wa": 33}
+  lectura: >-
+    Ninguna obra escribe `goa` ni `güa` de forma relevante; la competencia real
+    es `gua` (castellana) frente a `wa` (papiamentu / fonémica). Oliver es el
+    caso diagnóstico: usa las dos, y dice cuál es cuál.
+
+# ══════════════════════════════════════════════════════════════════
+# 2. EL CENSO TOPONÍMICO
+# ══════════════════════════════════════════════════════════════════
+censo_toponimico:
+  corpus:
+    esteves_parte1_paraguana:
+      n: 187
+      terminan_en_gua: 10
+      formas: ["bajarigua", "barisigua", "caradacagua", "dibaragua", "juroguagua", "maquigua", "quiyegua", "sabarigua", "sacuragua", "urupagua"]
+      otras_variantes: {"guá": 0, "güa": 0, "goa": 0, "hua": 0, "ua": 1, "wa": 0}
+    esteves_parte2_falcon:
+      n: 387
+      terminan_en_gua: 15
+      formas: ["ariagua", "baragua", "barisigua", "casigua", "chicagua", "chiguarigua", "curimagua", "guagua", "inirgua", "jadagua", "pagua", "quiragua", "quitaragua", "sacuragua", "tacarigua"]
+      otras_variantes: {"guá": 0, "güa": 0, "goa": 0, "hua": 0, "ua": 6, "wa": 1}
+    canon_toponimos_yaml:
+      n: 180
+      terminan_en_gua: 2
+      formas: ["sabarigua", "sividigua"]
+      otras_variantes: {"guá": 0, "güa": 0, "goa": 0, "hua": 0, "ua": 3, "wa": 0}
+  niveles_del_canon: {"A": 10, "B": 16, "C": 52, "descartado": 102}
+  nota_sobre_el_canon: >-
+    ⚠️ El encargo hablaba de «109 topónimos en canon». Medido: `2-lengua/
+    toponimos.yaml` tiene 180 entradas, de las cuales las no descartadas
+    son 78. El 109 no sale de ahí; el fichero que lleva ese número en el
+    nombre es `censo_ana_esteves_109.yaml`, que es el censo de -ana de #109, no
+    un recuento de topónimos.
+  los_del_canon: >-
+    Los dos que terminan en -gua son `sabarigua` (nivel C) y `sividigua`
+    (descartado), y hay un tercero con el colectivo castellano encima,
+    `sibidigual` (C). `sabarigua` y `sibidigual` son FITÓNIMOS por glosa de
+    Esteves —los dos remiten a `sibidigua`, «arbusto euforbiáceo»— y
+    `sividigua` está descartado por no tener glosa en ninguna fuente. Cero
+    'región'. Y `paraguaná` (C) lleva el `gua` en medio, no al final.
+
+# ══════════════════════════════════════════════════════════════════
+# 3. EL TEST DEL AZAR — una terminación no es un morfema
+# ══════════════════════════════════════════════════════════════════
+test_del_azar:
+  porque: >-
+    `-gua` es una sílaba frecuente. Un final sólo es morfema si el RESTO de la
+    palabra es raíz conocida con sentido. Se mide sobre el universo de topónimos
+    de Esteves (partes 1 y 2), con la fonemización del proyecto y contra las
+    voces de familia caquetía del lexicón.
+  universo: 565
+  raices_caquetias_en_el_lexicon: 551
+  metodo: >-
+    curiana_fonotactica.fonemizar(resto), con y sin la regla abierta D5c
+    `gu → /w/`; se aceptan el esqueleto, el esqueleto sin vocal final y el
+    esqueleto + a/i/e. Mismo criterio para todos los finales.
+  finales_de_3_mas_frecuentes: [{"final": "are", "n": 24}, {"final": "gua", "n": 23}, {"final": "ure", "n": 22}, {"final": "ana", "n": 22}, {"final": "ara", "n": 18}, {"final": "ima", "n": 15}, {"final": "ito", "n": 13}, {"final": "che", "n": 13}]
+  puesto_de_gua: 2
+  por_final:
+    '-gua':
+      termina_en: 23
+      resto_es_raiz: 5
+      resto_es_raiz_con_D5c: 5
+      casos: ["bajarigua←bajarí", "baragua←bara", "barisigua←barici", "casigua←cazi", "guagua←gua"]
+    '-are':
+      termina_en: 24
+      resto_es_raiz: 3
+      resto_es_raiz_con_D5c: 3
+      casos: ["camare←kama", "chibare←kiba", "chidare←kidi"]
+    '-ure':
+      termina_en: 22
+      resto_es_raiz: 2
+      resto_es_raiz_con_D5c: 2
+      casos: ["chaure←ka", "chunaure←cuna"]
+    '-ana':
+      termina_en: 22
+      resto_es_raiz: 5
+      resto_es_raiz_con_D5c: 4
+      casos: ["capuhana←capu", "guayana←guay", "jayana←jai", "paraguana←paragua", "tarana←tara"]
+    '-ara':
+      termina_en: 18
+      resto_es_raiz: 1
+      resto_es_raiz_con_D5c: 0
+      casos: ["guara←gua"]
+    '-ima':
+      termina_en: 15
+      resto_es_raiz: 1
+      resto_es_raiz_con_D5c: 0
+      casos: ["guima←gua"]
+  el_filtro_de_significado:
+    porque: >-
+      skill minar-fuente §2: un parecido de formas sin filtro de significado es
+      casi todo ruido — medido, 5 falsos de 7 en el cruce achagua. Los aciertos
+      de `-gua` se revisan uno por uno contra la glosa de la fuente.
+    casos:
+      - toponimo: bajarigua
+        raiz_que_casa: bajarí
+        pasa: NO
+        porque: '`bajarí` es ''recorrer, caminar'' (Zavala #25, p. 65); Bajarigua es una salina. Sin relación semántica.'
+      - toponimo: baragua
+        raiz_que_casa: bara
+        pasa: PARCIAL
+        porque: '`bara` es ''palo, árbol'' (Zavala #29, p. 65) y Baragua es «árbol de madera de construcción»: el significado SÍ casa. Pero entonces el resto es `-gua` sobre un árbol, no una región — y Esteves lo glosa como el nombre entero del árbol.'
+      - toponimo: barisigua
+        raiz_que_casa: barici
+        pasa: NO
+        porque: '`barici` es ''agua turbia / tierras coloradas'' y la barisigua es un bucare. Y Esteves segmenta bari+SIGUA, no barisi+GUA.'
+      - toponimo: casigua
+        raiz_que_casa: cazi
+        pasa: NO
+        porque: '`kasi` es ''sol'' (Zavala #76, p. 66) y la casigua es una marantácea. Coincidencia de forma.'
+      - toponimo: guagua
+        raiz_que_casa: gua
+        pasa: CIRCULAR
+        porque: 'el resto casa con `gua` mismo (la clave `wa`): es la propia forma bajo examen, no un despeje.'
+    sobreviven: 0
+  lectura: >-
+    `-gua` es el 2.º final de tres letras más frecuente del
+    gazetteer (23 de 565), codo a codo con `-are`,
+    `-ure` y `-ana`: justo el perfil de una sílaba castellanizada productiva. Su
+    tasa de «el resto es raíz» no se separa de la de esos controles, y sobre todo
+    **ninguno de sus 5 aciertos sobrevive al filtro de
+    significado**. Comparar con `-ana`, que da la misma tasa y cuya glosa 'lugar
+    de' se RETIRÓ por eso en #109; y con `-bakoa`, que el canon sí tiene y cuyo
+    despeje lo hizo la GLOSA de Esteves, no la forma.
+
+# ══════════════════════════════════════════════════════════════════
+# 4. LAS GLOSAS DE ESTEVES, UNA POR UNA
+# ══════════════════════════════════════════════════════════════════
+glosas_de_esteves:
+  entradas_en_gua_leidas: 27
+  por_clase: {"animal": 2, "hibrido-castellano": 1, "planta": 9, "segmenta-por-otro-sitio": 5, "sin-glosa-etimologica": 10}
+  glosadas_como_region_de: 0
+  obra: esteves-1989
+  las_que_parten_por_otro_sitio:
+    - forma: barisigua
+      pagina_impresa: 19
+      cita: >-
+        «Bari —sigua: palo blando; bara; árbol. Sigua: blando». El `-gua` final
+        es la cola de `sigua` 'blando' — voz caquetía ATESTIGUADA aparte
+        (Zavala #227, p. 70, «Sigua (E): Blando», lema `siwa`).
+    - forma: caradacagua
+      pagina_impresa: 33
+      cita: >-
+        «es un poda, una reducción de Caramatacaigua… En lengua cumanagota,
+        “caramata” es carbón y “caigua” es un molusco». Filiación declarada:
+        CUMANAGOTO (caribe), no caquetío — y el `-gua` va dentro de `caigua`.
+    - forma: dibaragua
+      pagina_impresa: 38
+      cita: >-
+        «En el topónimo aparece la prótesis silábica “di” y la metátesis de
+        “baragua” por “guaraba”. Guaraba es un árbol maderable, cuaguaro». El
+        `gua` viene de la METÁTESIS de un `gua-` inicial.
+    - forma: maquigua
+      pagina_impresa: 49
+      cita: >-
+        «En antiguas escrituras se lee: Moriquigua. Mora es un árbol caparidáceo
+        […] Quigua: concha de almeja y otros moluscos». El segmento final es
+        `quigua` (Zavala #214, p. 70, lema `kiwa`), no `-gua`.
+    - forma: chiguarigua
+      pagina_impresa: 107
+      cita: >-
+        «Voz compuesta de “chigua”, nasa, cesto, y “arigua”, un insecto melífero».
+        Esteves segmenta, y los DOS trozos llevan `gua` dentro de la raíz.
+  el_caso_que_decide:
+    forma: urupaguaduco
+    pagina_impresa: 66
+    cita: '«Urupaguaduco: significa la quebrada de las urupaguas»'
+    porque: >-
+      Aquí Esteves SÍ pone un locativo, y no es `-gua`: es `-duco` 'quebrada'.
+      `urupagua` entra entero como nombre de planta. Es el contraejemplo limpio:
+      donde el autor quiere decir lugar, usa otro morfema.
+  el_hibrido_castellano:
+    forma: quiyegua
+    pagina_impresa: 57
+    cita: '«Aparentemente es una voz híbrida de español y caquetío: Piedra y Yegua»'
+    porque: 'la trampa 3 del encargo, medida: un -gua que es la YEGUA castellana'
+
+# ══════════════════════════════════════════════════════════════════
+# 5. EL LEXICÓN — qué voces caquetías acaban en -gua
+# ══════════════════════════════════════════════════════════════════
+lexemas_caquetios_en_gua:
+  n: 18
+  por_categoria: {"sust": 16, "v_raiz": 2}
+  entradas:
+    - {clave: barisiwa, forma_fuente: barisigua, cat: sust, capa: caquetío-retroabstraido, sig: 'árbol que fue abundante en nuestro medio, hoy muy escaso, de hasta ocho metros de altura, '}
+    - {clave: chiriwa, forma_fuente: chirigua, cat: sust, capa: caquetío-retroabstraido, sig: 'recipiente de barro cocido, pequeño, manual, para contener agua u otro líquido. Es palabra'}
+    - {clave: chirwa, forma_fuente: chirgua, cat: sust, capa: caquetío-atestiguado, sig: 'tinaja pequeña'}
+    - {clave: dakawa, forma_fuente: dacagua, cat: sust, capa: caquetío-atestiguado, sig: 'árbol de corteza gris, madera compacta'}
+    - {clave: duriwa, forma_fuente: durigua, cat: v_raiz, capa: caquetío-atestiguado, sig: 'hacer trabajos cortos'}
+    - {clave: isikawa, forma_fuente: isicagua, cat: sust, capa: caquetío-retroabstraido, sig: 'árbol de nuestros montes utilizado en la medicina empírica para tratar hernias'}
+    - {clave: kihuawa, forma_fuente: quihuagua, cat: sust, capa: caquetío-retroabstraido, sig: 'una variedad de frijol común en épocas pasadas y muy nutritiva'}
+    - {clave: kiwa, forma_fuente: quigua, cat: sust, capa: caquetío-atestiguado, sig: 'concha de almeja y otros moluscos. Sitio del estado Lara'}
+    - {clave: kiwawa, forma_fuente: quiguagua, cat: sust, capa: caquetío-atestiguado, sig: 'especie de haba grande y blanca'}
+    - {clave: kumarawa, forma_fuente: cumaragua, cat: sust, capa: caquetío-atestiguado, sig: 'caracol de las costas de Paraguaná'}
+    - {clave: nagua, forma_fuente: nagua, cat: sust, capa: caquetío-reconstruido, sig: 'nagua, falda de algodón de mujer'}
+    - {clave: niwa, forma_fuente: nigua, cat: sust, capa: caquetío-reconstruido, sig: 'nigua, pulga que anida bajo la piel y cría en ella (Tunga penetrans); hoy desaparecida'}
+    - {clave: parawa, forma_fuente: paragua, cat: sust, capa: caquetío-atestiguado, sig: 'mar'}
+    - {clave: sibidiwa, forma_fuente: sibidigua, cat: sust, capa: caquetío-atestiguado, sig: 'arbusto euforbiaceo. Jatrofa Gossy Pifolia'}
+    - {clave: siwa, forma_fuente: sigua, cat: v_raiz, capa: caquetío-atestiguado, sig: 'blando'}
+    - {clave: tiwa, forma_fuente: tigua, cat: sust, capa: caquetío-atestiguado, sig: 'árbol rutáceo'}
+    - {clave: urupagua, forma_fuente: urupagua, cat: sust, capa: caquetío-atestiguado, sig: 'arbusto espinoso usado para cercar conucos; y árbol de la serranía coriana de fruto amargo'}
+    - {clave: wa, forma_fuente: gua, cat: sust, capa: caquetío-atestiguado, sig: 'conuco, heredad, terreno cercado cultivado'}
+  el_argumento_distribucional: >-
+    Entre las voces caquetías ATESTIGUADAS cuya forma fuente acaba en -gua hay
+    un VERBO: `durigua` 'hacer trabajos cortos' (Zavala #116, p. 67, AM; lema
+    `duriwa`). Un locativo 'región de X' no deriva un verbo. Y las demás son un
+    muestrario semántico sin patrón: 'mar', 'concha de almeja', 'tinaja pequeña',
+    'haba', árboles y arbustos. Eso es lo que se ve cuando una sílaba frecuente
+    se lee como morfema.
+
+# ══════════════════════════════════════════════════════════════════
+# 6. LOS HALLAZGOS, CON OBRA · PÁGINA IMPRESA · CITA LITERAL
+# ══════════════════════════════════════════════════════════════════
+hallazgos:
+
+  - id: H1
+    que: 'LA FORMA SÍ ESTÁ ATESTIGUADA — y es la única fuente que la declara formante'
+    obra: oliver-1989-cap2
+    pagina_impresa: 148
+    cita: >-
+      «j) Suffixes /-bana/ and /-coa/ — The most common "suffixes" in Caquetío
+      toponyms are those ending in: a) -bana · b) -coa/-koa · c) -oa · d) -kiva ·
+      e) (e)-bo · f) -wa [gua-]»
+    valor: >-
+      ⭐⭐⭐ Es la clave foránea que `-gua` no tenía. Oliver es la única obra del
+      repo que lo lista como sufijo toponímico caquetío. ⚠️ PERO: de los seis
+      glosa tres (-bana 'surrounding/expanse', -coa 'superlativo de en/sobre',
+      -oa reflexivo) y **nunca vuelve a f) -wa**. Da la FORMA, no el VALOR.
+    independencia: 'primera atestación; no cita a Esteves ni a Zavala para esto'
+
+  - id: H2
+    que: 'OLIVER DICE EL VALOR FONÉMICO, con estas letras'
+    obra: oliver-1989-cap2
+    pagina_impresa: 142
+    cita: >-
+      «in the Borojó area there is a river designated today as bari-si-gua
+      (gua=/wa/) and in the Bariro area we find bari-si-gu()-ita (-ita or -ito is
+      a Spanish suffix for diminutives)»
+    valor: >-
+      ⭐⭐⭐ «gua=/wa/», escrito por Oliver en el mismo capítulo. Es el dato que
+      D5c (#36) pedía, y aplicado por el propio autor al MISMO topónimo que
+      Esteves segmenta como bari+sigua. Con él, el lema del morfema es `-wa`.
+
+  - id: H3
+    que: 'HAY UN `gua` CAQUETÍO ATESTIGUADO CON GLOSA — y no es «región»'
+    obra: zavala-reyes-2015
+    pagina_impresa: 68
+    cita: '«122. Gua (HP): Conuco, heredad, terreno cercado con algo.»'
+    ya_en_el_canon: >-
+      El lexicón YA lo tiene: clave `wa`, cat sust, caquetío-atestiguado,
+      forma_fuente `gua`, con esta cita en `notas` (curiana_lexicon.py). O sea que
+      el repo lleva las dos cosas a la vez — un `gua` sustantivo 'terreno cercado'
+      con cita, y un `-gua` sufijo 'región amplia' sin ella — y nadie las había
+      puesto una al lado de la otra.
+    la_glosa_va_al_reves: >-
+      «terreno cercado con algo» es un lugar ACOTADO y cultivado. El motor enseña
+      «zona más amplia asociada con X, MENOS ESPECÍFICO que -ana». Si el formante
+      es el mismo, la glosa del prompt es la contraria a la de la fuente.
+    independencia: >-
+      HP = Aníbal Hill Peña, uno de los nueve compiladores que Zavala declara
+      (p. 64). NO es Arcaya (PMA), así que no es una re-cita del mismo autor
+      del que vienen otras entradas: es atestación propia. Pero es UNA, y de un
+      compilador del s. XX sin obra localizada en el repo.
+
+  - id: H4
+    que: 'LA SEGUNDA FUENTE PARA gu = /w/, y con habla viva'
+    obra: van-buurt-2014
+    pagina_impresa: 27
+    cita: >-
+      «Words with the gua- prefix and names of trees ending in -o in Spanish may
+      be Caquetío words which underwent Spanish influence. […] The Spanish
+      language is known to replace /w/ sounds with /gw/ (written <gu>) […] The
+      Papiamentu words watapana, wayaká and watakeli thus seem more original than
+      guatapaná, guayacán, guatacare, guatacaro etc.»
+    valor: >-
+      Independiente de Oliver y en la otra orilla del corpus (papiamentu). Y en
+      la lista de topónimos de Aruba (p. 41) van Buurt imprime la MISMA voz con
+      las dos grafías: «Paraguana, Parawana».
+
+  - id: H5
+    que: 'EL -gua DE MAQUIGUA ESTÁ ATESTIGUADO APARTE, y es una concha'
+    obra: van-buurt-2014
+    pagina_impresa: 32
+    cita: >-
+      «kiwa (A, C, B) - kiwa is the West Indian top shell (Cittarium pica). This
+      word is also found in Venezuela as quigua and in Cuba as cigua.»
+    valor: >-
+      Corrobora a Zavala #214 'concha de almeja' (lema `kiwa`) desde otra obra, y
+      con eso el `Moriquigua` de Esteves queda despejado sin `-gua`: es
+      `mora` + `quigua`. Un falso segmentable menos.
+
+  - id: H6
+    que: 'LO QUE NO SE HALLÓ — los ceros, medidos'
+    ceros:
+      - obra: alvarado-1921
+        buscado: 'sufijo/desinencia/terminación + gua; gua + región'
+        resultado: >-
+          Cero enunciados sobre un formante. Lo que sí tiene son LEXEMAS:
+          «BARISÍGUA. Árbol indeterminado de Coro y Zulia» (p. 23), «ARÍGUA.
+          Especie de abeja silvestre», «ASYÁGUA. Médula del maguéi». Plantas y
+          bichos, como en Esteves.
+      - obra: jahn-1927
+        buscado: 'desinencias toponímicas arahuacas'
+        resultado: >-
+          Jahn sí enumera desinencias, y no está `gua`: «los nombres indígenas de
+          algunos ríos y quebradas tienen en sus terminaciones la desinencia ari,
+          uri, e iri, que revelan su procedencia de las lenguas aruacas».
+      - obra: arcaya-1920
+        buscado: 'gua como morfema'
+        resultado: 'cero. Aparece sólo dentro de topónimos (Acurigua, Barragua, Churuguara).'
+      - obra: esteves-1989
+        buscado: 'una glosa de -gua como lugar/región, en las 25 formas en -gua'
+        resultado: >-
+          Cero. Y no por falta de vocabulario locativo: cuando Esteves quiere decir
+          lugar usa `bacoa`, `bana`, `ebo`, `uco/duco`, `are` — los cinco con glosa.
+      - obra: medina-colina-sxx
+        buscado: 'el final -igua en el habla viva de Paraguaná'
+        resultado: >-
+          Lo tiene registrado, y como lo contrario de un locativo:
+          `patrones_observados` §-igua — «barisigua (Erythrina), con tacarigua y
+          samanigua de Alvarado y los topónimos regionales en -igua: formante
+          FITONÍMICO/toponímico de filiación no resuelta».
+    lectura: >-
+      Cinco obras, cinco búsquedas declaradas, cero apoyos para «región de». Una
+      negativa así de repartida no es un hueco de minería: es un resultado.
+
+  - id: H7
+    que: 'LA COMPARANDA, que se declara y NO se importa'
+    lokono_y_taino:
+      - obra: van-buurt-2014
+        pagina_impresa: 35
+        cita: >-
+          «yarima means ‘anus’, guaca “underground area, underground region”.
+          Guacayarima then means ‘anus which leads to the underworld’ (Tejera, 1977)»
+        porque_no_vale: >-
+          Es lo más cerca de «región» que hay en todo el barrido, y no sirve: es
+          TAÍNO, es `guaca` (no `-gua`), y va en posición INICIAL. Importarlo sería
+          justo el error de la regla 4. Se declara para que nadie lo vuelva a
+          encontrar y crea que cierra.
+      - obra: oliver-1989-cap2
+        pagina_impresa: 150
+        cita: >-
+          «(e.g. para- for ‘sea’ [Guajiro: /palaa'/, Taíno: /bara-wa/])»
+        porque_importa: >-
+          El taíno de 'mar' es `bara-wa`. O sea que el `-wa` de `parawa` tiene
+          hermano arahuaco en la MISMA palabra, y por esa vía `parawa` es una voz
+          heredada, no `para` + 'conuco'. Es la explicación rival de la lectura
+          que d21.7 da por apoyo.
+
+# ══════════════════════════════════════════════════════════════════
+# 7. EL «APOYO QUE YA EXISTE EN EL CANON» — de qué se sostiene de verdad
+# ══════════════════════════════════════════════════════════════════
+la_circularidad:
+  lo_que_dice_d21_7: >-
+    «Apoyo que ya existe en el canon: `paragua` se lee como `para` 'mar' + `-gua`,
+    y por eso el 2026-09-19 se decidió NO fusionar `parawa`/`para` — fusionarlas
+    habría borrado este morfema.»
+  lo_que_dice_la_decision_de_verdad:
+    donde: 6-fusion/curacion_glosas_pares_2026-09-19.yaml, par 14
+    tres_patas:
+      - '(1) los esqueletos fonémicos NO coinciden: `para` da `para`, `parawa` da `parawa`, con y sin gu→w'
+      - '(2) Zavala las trae como DOS entradas de DOS informantes: #190 (E+HP) y #191 (GC)'
+      - "(3) «`-gua` es un LOCATIVO declarado del proyecto ('región de X', REGLAS_LOCATIVAS), así que `paragua` se lee sin forzar nada como `para` + `-gua`»"
+    veredicto: >-
+      🔴 La pata (3) es CIRCULAR y es la única que d21.7 recoge: el morfema se usa
+      como prueba de sí mismo. Las patas (1) y (2) son independientes y siguen en
+      pie, así que **la decisión del 09-19 de NO fusionar `parawa`/`para` no se
+      cae** — lo que se cae es que ese par sea «apoyo» para `-gua`.
+  y_el_mismo_toponimo_sostiene_dos_glosas_incompatibles:
+    donde:
+      - "curiana_lexicon.py REGLAS_LOCATIVAS['-gua'].ejemplos: «para + gua + na = Paraguaná»"
+      - "2-lengua/toponimos.yaml toponimo-018 y 6-fusion/censo_ana_esteves_109.yaml: «para 'agua' + gua 'CONUCO, heredad, terreno cercado' (Zavala #122) + na 'como'»"
+    veredicto: >-
+      Paraguaná se cita como ejemplo de `-gua` 'región' en el prompt y como ejemplo
+      de `gua` 'terreno cercado' en el canon. Es la patología (a) de la tabla de
+      morfología, otra vez: el motor enseña una cosa y el canon declara otra.
+  y_un_ejemplo_que_no_ejemplifica: >-
+    El tercer ejemplo de la regla es «Araya (región salina)» — un topónimo de
+    Sucre que NO contiene `-gua`. Quedó al reescribir los ejemplos en d21.14, que
+    sólo miró si las raíces estaban en el lexicón.
+  procedencia_de_la_frase: >-
+    «Topónimos venezolanos de Falcón y Sucre» entró en el COMMIT INICIAL del repo
+    (475457d, «chore: init repo + fix 3 critical bugs from audit») y no se ha
+    tocado desde entonces: es anterior a la regla 8 y nunca tuvo clave foránea.
+
+# ══════════════════════════════════════════════════════════════════
+# 8. QUÉ HACE LA GENTE CON ÉL
+# ══════════════════════════════════════════════════════════════════
+uso_en_la_base:
+  consulta: 'SELECT w.word, count(*) FROM word_uses w JOIN simulation_runs r ON r.id = w.run_id WHERE r.started_at < ''2026-09-21'' GROUP BY w.word'
+  segmentacion: 'la del motor: _PREFIJOS_CAQ y _SUFIJOS_CAQ, prefijos primero (nucleo_de_token)'
+  usos_totales_word_uses: 95445
+  formas_totales_word_uses: 2546
+  gua_usos: 102
+  gua_formas: 49
+  gua_raices_distintas: 37
+  gua_raices_en_el_lexicon: 33
+  por_categoria_de_raiz: {"v_raiz": 31, "sust": 29, "raiz-fuera-del-lexicon": 23, "adj": 7, "part": 6, "v_estativo": 6}
+  muestra: ["awa-bana-gua", "awa-gua", "chaa-bana-gua", "dichiba-gua", "etamo-gua", "hueke-gua", "jagey-gua", "jai-bana-gua", "juri-bana-gua", "juri-gua", "kaa-bakua-gua", "kaa-ni-gua"]
+  lectura: >-
+    El grueso del uso cae sobre RAÍZ VERBAL, y una parte grande sobre raíces
+    que no están en el lexicón. «La región de beber» o «la región de oír» no
+    son lo que la glosa promete: el campo `uso` de la regla dice «RAÍZ + -gua»
+    sin declarar slot, así que nada lo impide. Sea cual sea la decisión sobre
+    la glosa, el SLOT hay que declararlo.
+
+# ══════════════════════════════════════════════════════════════════
+# 9. LO QUE ESTA CAMPAÑA NO PUDO MEDIR
+# ══════════════════════════════════════════════════════════════════
+huecos_declarados:
+  - >-
+    Hill Peña (HP), el compilador del que Zavala toma #122, no tiene obra en
+    `fuentes_caquetios/` ni entrada en `bibliografia.yaml`. La cadena es Zavala →
+    HP, y del segundo eslabón no se puede verificar nada.
+  - >-
+    El OCR de Esteves es PISTA, no cita (así lo declara su nota). Las cinco citas
+    de §4 llevan página impresa y hay que verlas en imagen antes de sacarlas del
+    repo. Las de Zavala, van Buurt y Oliver salen de capa de texto propia.
+  - >-
+    Esteves parte 1 se censó sobre el ÍNDICE (187 nombres) más el cuerpo por
+    grep; parte 2 sobre las 387 entradas ya parseadas. Las dos partes no cubren
+    los 413 topónimos que la nota de la fuente atribuye al libro entero.
+  - >-
+    No se midió el corpus insular (Gatschet, van Buurt ABC) como universo del
+    test del azar: allí el formante frecuente es `-shi/-chi`, que `morfemas.yaml`
+    declara sin glosar (morfema-007) y es otra campaña.
+
+# Las opciones para Miguel, con letras y recomendación, están en
+# 6-fusion/issues-pendientes/gua-procedencia-2026-09-21.md

@@ -10,8 +10,9 @@ paginas: 20
 capa_texto: si
 acceso: "Libre — Academia.edu: https://www.academia.edu/14657955/Palabras_vivas_de_una_lengua_muerta_Legado_arawak_caquetio · ficha SABER-ULA: http://www.saber.ula.ve/handle/123456789/40730. Verificado en el rastreo de 2026-08-14."
 estado_minado: completo-con-reserva  # 2026-08-31, decision #101: el #29 (bara) no se habia levantado; auditoria entrada-por-entrada pendiente
-cobertura: "288/288 entradas parseadas (100%); 225 en el habla activa (78%), 63 fuera por diseño + las 288 glosas VERBATIM clasificadas por tipo semántico en la campaña del nominalizador (2026-09-21)"
+cobertura: "288/288 entradas parseadas (100%); 225 en el habla activa (78%), 63 fuera por diseño + las 288 glosas VERBATIM clasificadas por tipo semántico en la campaña del nominalizador (2026-09-21) + la campaña de `-gua` (2026-09-21)"
 prioridad: alta
+minado: 2026-09-21
 tareas: []
 sostiene: {hechos_corpus: 7, entradas_lexicon: 164, citas_recuperadas_82: 62}
 verificado: 2026-08-03
@@ -410,6 +411,49 @@ para la capa retroabstraída. Cero para los nominalizadores lokono
 
 Propuesta: `6-fusion/propuesta_nominalizador_2026-09-21.yaml`. Medición:
 `6-fusion/medicion_nominalizador_2026-09-21.yaml`.
+
+---
+
+## Bitácora — campaña `-gua` (2026-09-21)
+
+**Qué se le preguntó.** ¿Hay un `gua` caquetío atestiguado, y con qué glosa?
+¿De quién lo toma Zavala — es atestación propia o re-cita de Arcaya?
+
+**Qué dio.** Entrada **#122, p. impresa 68**, verbatim:
+
+> «122. **Gua** (HP): Conuco, heredad, terreno cercado con algo.»
+
+**HP = Aníbal Hill Peña**, uno de los nueve compiladores que Zavala declara por
+siglas (p. 64). **No es Arcaya (PMA)**: no es una re-cita, es atestación propia
+dentro del glosario. Pero es **una**, y de un compilador cuya obra no está en
+`fuentes_caquetios/` ni en `bibliografia.yaml`: la cadena es Zavala → HP y del
+segundo eslabón no se verifica nada.
+
+El lexicón **ya lo tenía**: clave `wa`, `cat: sust`, `caquetío-atestiguado`,
+`forma_fuente: gua`, con esta cita en `notas`. Lo que nadie había hecho era
+ponerlo al lado del `-gua` = 'región amplia' que el motor enseña — que dice
+**lo contrario**: un terreno cercado es un lugar acotado.
+
+**Lo que NO dio.** Ninguna entrada glosa un `-gua` como 'región', 'área' o
+'comarca'. Lo más parecido es **#37 «Barisi (AM): Región de tierras coloradas
+cerca del mar»** — y ahí la voz es `barisi`, sin `-gua`.
+
+**El barrido distribucional.** Ocho lemas del glosario tienen forma fuente en
+`-gua`, y no forman clase semántica: `paragua` 'mar' (#191, p. 69, GC),
+`quigua` 'concha de almeja' (#214, p. 70), `quiguagua` 'haba' (#215),
+`chirgua` 'tinaja pequeña' (#83), `dacagua` 'árbol' (#101), `tigua` 'árbol
+rutáceo' (#246), `sibidigua` 'arbusto euforbiáceo' (#226, p. 70) y
+**`durigua` 'hacer trabajos cortos' (#116, p. 67), que es un VERBO**. Un
+locativo 'región de X' no deriva un verbo.
+
+**Y el par que lo enmarca**: **#190 «Para. Par (E) (HP): Aguadulce o salada en
+grandes cantidades»** y **#191 «Paragua (GC): Mar»** están en la misma página
+(69) y vienen de informantes distintos — que es la pata (2), no circular, de la
+decisión del 2026-09-19 de no fusionar `parawa`/`para`.
+
+> Medición entera: `6-fusion/propuesta_gua_procedencia_2026-09-21.yaml`
+> (la escribe `6-fusion/scripts/medir_gua_procedencia.py`). Opciones para
+> Miguel: `6-fusion/issues-pendientes/gua-procedencia-2026-09-21.md`.
 
 ## Enlaces
 

@@ -9,6 +9,7 @@ local: "fuentes_caquetios/Esteves_1989_Toponimos_Paraguana_1..6.pdf"
 capa_texto: ocr  # sin capa propia (medido 2026-08-16); OCR local con ocr_fuente.py desde 2026-09-06 (Esteves_1989_..._N.ocr.txt, pista no cita)
 estado_minado: parcial
 prioridad: alta
+minado: 2026-09-21
 medido: 2026-08-11
 sostiene: []
 ---
@@ -1480,6 +1481,47 @@ Zavala.
   procedencia.
 - Hay un **Apéndice** con un artículo "Sobre el Nombre de Adícora" (remitido
   desde la p. 14). Localizarlo — probablemente en el archivo 6.
+
+## Bitácora — campaña `-gua` (2026-09-21)
+
+**Qué se le preguntó.** De los topónimos del gazetteer que terminan en `-gua`,
+¿a cuántos les da Esteves una glosa de lugar o región?
+
+**Qué dio: cero.** Censo sobre el índice de Paraguaná (187 nombres) y las 387
+entradas parseadas de Falcón: **25 formas en `-gua`** (23 distintas). De las que
+glosa — **9 plantas · 2 animales · 1 híbrido castellano · 5 que él mismo
+segmenta partiendo por otro sitio · 10 sin etimología. Ninguna 'región de'.**
+
+Y no es falta de vocabulario locativo: cuando Esteves quiere decir lugar usa
+`bacoa`, `bana`, `ebo`, `uco`/`duco` y `are`, los cinco con glosa.
+
+**El caso que decide** — *Urupaguaduco*, p. 66: «**significa la quebrada de las
+urupaguas**». Ahí sí hay locativo, y es **`-duco`**; `urupagua` entra entera
+como nombre de planta.
+
+**Los cinco que parten por otro sitio**, con sus palabras:
+
+| forma | p. | lo que dice |
+|---|---|---|
+| Barisigua | 19 | «Bari —sigua: palo blando; bara; árbol. **Sigua: blando**» |
+| Caradacagua | 33 | «reducción de Caramatacaigua… En lengua **cumanagota**, "caramata" es carbón y "**caigua**" es un molusco» |
+| Dibaragua | 38 | «la prótesis silábica "di" y la **metátesis** de "baragua" por "guaraba"… árbol maderable» |
+| Maquigua | 49 | «En antiguas escrituras se lee: Moriquigua. […] **Quigua: concha de almeja**» |
+| Chiguarigua | 107 | «Voz compuesta de "**chigua**", nasa, cesto, y "**arigua**", un insecto melífero» |
+
+**La contaminación castellana, medida** — *Quiyegua*, p. 57: «Aparentemente es
+una voz híbrida de español y caquetío: **Piedra y Yegua**».
+
+**Y la atribución** (trampa 4): *Caradacagua* Esteves lo da al **cumanagoto**,
+o sea caribe. Un topónimo en `-gua` de Falcón no es caquetío por estar en
+Falcón.
+
+⚠️ Estas citas salen del **OCR local, que esta nota declara pista y no cita**.
+Llevan página impresa y hay que verlas en imagen antes de sacarlas del repo.
+
+> Medición entera: `6-fusion/propuesta_gua_procedencia_2026-09-21.yaml`
+> (la escribe `6-fusion/scripts/medir_gua_procedencia.py`). Opciones para
+> Miguel: `6-fusion/issues-pendientes/gua-procedencia-2026-09-21.md`.
 
 ## Enlaces
 
