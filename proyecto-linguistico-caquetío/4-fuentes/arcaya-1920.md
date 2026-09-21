@@ -9,9 +9,9 @@ paginas: 348
 capa_texto: si
 estado_minado: minado
 prioridad: media
-cobertura: "religión/familia (sesión 3) + pp. 97-100, el oficio del boratio (2026-08-04) + cap. I, la geografía física de Falcón, pp. 12-19 (2026-09-10) + p. 75, lo que Arcaya dice del idioma caquetío (2026-09-21) + la campaña de `-gua` (2026-09-21)"
+cobertura: "religión/familia (sesión 3) + pp. 97-100, el oficio del boratio (2026-08-04) + cap. I, la geografía física de Falcón, pp. 12-19 (2026-09-10) + pp. 148-158, las «islas inútiles» y la deportación a La Española (2026-09-21, campaña del taíno T5) + p. 75, lo que Arcaya dice del idioma caquetío (2026-09-21) + la campaña de `-gua` (2026-09-21)"
 sostiene: {hechos_corpus: 13, entradas_lexicon: 1, ritos_documentados: 3}
-verificado: 2026-09-10
+verificado: 2026-09-21
 minado: 2026-09-21
 aliases: ["Arcaya 1920", "Historia del Estado Falcón"]
 ---
@@ -216,6 +216,65 @@ hallazgo nuevo y no se cuentan como tal.
 OCR). Y hay doce nombres nuevos para el repo en estos pasajes —Guaidima,
 Guararipana, Meachiche, Chuchure, Angoleta, Butare, Utaquire, Quiragua,
 Mapiare, Cariagua, Cocuicita, Oribor— sin procesar.
+
+## 2026-09-21 — la deportación a La Española (campaña del taíno, T5)
+
+**Qué se preguntó.** ¿Qué dice Arcaya de las «islas inútiles», de la saca de
+indios de Curazao, Aruba y Bonaire hacia las Antillas Mayores, y de lo que eso
+implica para las fuentes? Extraído con `pdftotext -layout` (529 KB); las páginas
+impresas salen en las cabeceras del propio texto.
+
+**Medido**: `Ampies` 58 · `Española` 26 · `Curazao` 25 · `Antill` 22 ·
+`Aruba` 18 · `Bonaire` 12 · `Gigante` 8 · `islas inútiles` 1 · `taíno` 0 ·
+`lucay` 0 · `Zabala/Zavala` 0. ⚠️ Arcaya escribe **`Ampies`** sin tilde:
+`grep Ampíes` da cero. La trampa de la §2 de la skill, otra vez.
+
+**Los dos pasajes, y el segundo vale más que el primero.**
+
+> **p. 153** — *«Además, en 1513 el Rey concedió a los colonos de Santo Domingo
+> y Puerto Rico (Española y San Juan) que pudiesen llevar a ellas indios de
+> algunas islas "inútiles", entre las cuales fueron incluidas las de Curazao,
+> Aruba y Buinare (Bonaire), motivando ello la gran saca de **dos mil indios**
+> que hizo **Diego de Salazar**, llevándoselos también **sin duda** de
+> Paraguaná, y de los demás lugares de las costas corianas más cercanos a estas
+> islas.»*
+
+⚠️ El «sin duda» es de Arcaya: el documento que cita —una carta de Ampíes al
+Rey— cubre las **islas**. Que la saca alcanzara a Paraguaná y a la costa de Coro
+es inferencia suya, y se registra como tal.
+
+> **p. 158** — ⭐⭐ *«fueron llevados como esclavos a Santo Domingo como dos mil
+> indios de tales islas (y probablemente de la costa firme cercana) por el
+> capitán Diego de Salazar, tocando algunos a Ampies, quien **conversándolos**
+> observó que parecían "gente de más razón y habilidad que otros indios destas
+> partes".»* Y sigue: los Padres Jerónimos prohibieron el tráfico a esas islas y
+> el Ldo. Rodrigo de Figueroa lo ratificó *«sin mucho éxito, porque no dejaban
+> de ser frecuentes los actos de piratería de que eran víctimas así los
+> **Caquetíos insulares** como los de **Coro**»*.
+
+**Por qué el segundo es el hallazgo.** Documenta que **había caquetíos hablando
+en Santo Domingo, y que un español los escuchaba**. Eso completa por el otro
+lado la reserva de [[oliver-1989-cap2]] (n. 42, p. 146) sobre `datihao`: Oliver
+duda de que sea caquetío porque Oviedo vivió mucho en La Española, pero allí
+había hablantes de **las dos** lenguas. Una voz «de La Española» no es
+automáticamente taína. Material de primer orden para las parcelas de léxico.
+
+**Y la confirmación de los Gigantes** (pp. 148-153, citando a Castellanos):
+Curazao es la «isla de los Gigantes» por la estatura de sus habitantes. Las
+«islas de los Gigantes» son las ABC, **caquetías** — no antillanas.
+
+**Qué NO da**: ni una mención del taíno como pueblo, ni de los lucayos, ni de
+contacto precolombino con las Antillas Mayores. Propuesta en
+`6-fusion/taino_en_la_esfera_2026-09-21.yaml`.
+
+**Deuda nueva.** La discrepancia con Oliver no se resuelve aquí: Arcaya da
+**1513 / Diego de Salazar / dos mil**, [[oliver-1989-cap3]] p. 250 da **1515 /
+Martín Baso Zabala** (y un raid de «Baso Zavala» en 1513 desde la costa de
+Falcón, p. 212), y [[martinez-cruzado-2003]] vía Hartog 1961 da **1515 /
+~2.000**. Puede haber una o varias sacas. Cerrarlo pide [[ramos-perez-1978]]
+(la monografía, no la reseña) y CoDoIn 1864/1868.
+
+---
 
 ---
 

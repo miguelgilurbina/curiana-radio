@@ -9,11 +9,11 @@ paginas: 113
 capa_texto: si
 acceso: "Libre — la tesis completa (823 pp., incluye este capítulo) está en UCL Discovery, depositada por el propio Oliver: PDF https://discovery.ucl.ac.uk/id/eprint/10157455/1/Oliver_10157455_thesis_redacted.pdf · ficha https://discovery.ucl.ac.uk/id/eprint/10157455/. Verificado en el rastreo de 2026-08-14."
 estado_minado: minado
-cobertura: "familia (sesión 1), geografía política (sesión 5), economía/cerámica/guerra/religión (2026-08-04, issue #59), la esfera occidental §3.2 (2026-09-07, quinta polity)"
+cobertura: "familia (sesión 1), geografía política (sesión 5), economía/cerámica/guerra/religión (2026-08-04, issue #59), la esfera occidental §3.2 (2026-09-07, quinta polity), el taíno y las Antillas (2026-09-21, campaña del taíno T5)"
 prioridad: media
 sostiene: {hechos_corpus: 15, entradas_lexicon: 2, entradas_reforzadas: 1}
-verificado: 2026-08-04
-minado: 2026-08-04
+verificado: 2026-09-21
+minado: 2026-09-21
 aliases: ["Oliver 1989 cap. 3", "Oliver cap. 3", "Ethnohistory"]
 ---
 
@@ -243,8 +243,57 @@ nombre a los españoles**— es demasiado bueno para no dejarlo anotado.
 > — que es un problema real del diseño del lexicón, no un olvido de esta
 > sesión, y afecta a toda entrada que alguna vez gane una segunda atestación.
 
+### El taíno y las Antillas, barrido el 2026-09-21 (campaña del taíno, T5)
+
+**Qué se preguntó.** ¿Qué dice este capítulo de la relación entre la polity
+caquetía costera (con sus islas) y las Antillas Mayores taínas: contacto,
+comercio, rutas, deportación? Se extrajo el PDF entero con `pdftotext -enc
+UTF-8` (312 KB) y se barrieron las ortografías. Página impresa = pdf + 182,
+recalibrada aquí contra dos anclas ya conocidas (p. 251 = el pacto de 1527 con
+Todariquiba; p. 249 = San Bartolomé de Vespucio).
+
+**Medido**: `Taíno` 12 · `Hispaniol` 16 · `Santo Domingo` 9 · `Ampíes` 46 ·
+`Curaçao` 15 · `Aruba` 12 · `Antill` 6 · `Gigante` 1 · `Boriqu` 0 ·
+`Puerto Rico` 0 · `Lucay` 0 · `Cuba` 0 · `Greater Antilles` 0.
+
+**Qué se halló — precontacto: nada.** Ni una travesía, ni un objeto, ni una
+noticia entre la costa caquetía y las Antillas Mayores antes de 1499. Lo que sí
+hay, con página:
+
+| p. | Hallazgo |
+|---|---|
+| **198** | ⭐ *«the largest contiguous territory under a single Caquetío polity comprised, at the time of Contact, the coastal plains of what is today the State Falcón, Venezuela, **including the Netherland Antilles**»* — las ABC están **dentro** de la polity costera. No hay polity insular que separar (regla 4) |
+| **201** | Caquetíos y bubures de Juruara saqueados por Luis de Leiva, herrados en Maracaibo y enviados a Santo Domingo. Segunda ruta de deportación, desde la esfera **occidental** |
+| **212** | ⭐⭐ Ampíes obtiene la información sobre el oro y las piedras de tierra firme *«from the Caquetío, who were his personal servants in Hispaniola»*, y Oliver razona que **tenía** que venir de ellos porque Ampíes no había pisado Falcón ni las islas y su enviado nunca llegó a la Guajira |
+| **241 (n. 83)** | ⭐⭐ *«Both the terms **caney** and **fotuto**… are Taíno (Arawakan) words, and were probably introduced by the Spanish from the Antilles… That Taíno was used often (e.g. **cacique, huracán, hamaca**) is of no surprise since most Spanish had to stop in Hispaniola before continuing elsewhere»* |
+| **249** | Curazao = *«Ysla de Gigantes»* (Vespucci, 1499), Aruba = *«Ysla de Brasil»*. Las «islas de los Gigantes» son las ABC, caquetías — no antillanas |
+| **250** | El **mecanismo**: tras 1502 la costa de Falcón sufre redadas *«especially designed to supply Hispaniola with Indian labor, since the local Taíno population had dramatically decreased due to disease»*. Y 1515: Ampíes compra en La Española caquetíos raideados por **Martín Baso Zabala** desde Aruba, Curazao *«and probably the Mainland»*, tras declararse las «islas inútiles» |
+| **251** | El primer gesto de Ampíes fue **devolver** los caquetíos a Curazao |
+| **258** | El cacique D. Joan Varacoyea, *«who resides in the islands»*, enviado a Ampíes en Santo Domingo (Ampíes [1525], CoDoIn 1868: 30-31) |
+| **262** | `Caçicure`/`kasikure`, el nombre colectivo de las aldeas de Paraguaná, derivado del lokono `kassikoan` 'habitar' y relacionado con el taíno `kasike` 'cabeza de casa(s)'. Cognado de familia, no contacto — pero es de T4 |
+| **264** | El cacicazgo taíno como **analogía declarada**: *«Villages were **probably** organized into something **like** the Antillean (Taíno) cacicazgos… But the exact nature… can not be precisely defined»* |
+| **266** | *«For this Manaure sent caciques to Curaçao and Aruba, and even Hispaniola»* — los emisarios del diao llegaron a La Española, en negociación colonial y barco español |
+| **283 (n. 131)** | ⭐⭐ *«[naboria] is of Taíno origin and was probably applied by Federmann and not the Caquetío. Federmann probably learned this term (as he did other terms such as **cacique**) in his various stays in Hispaniola»* |
+
+**Lo que esto abre, y es lo más valioso**: los dos vectores del taíno en
+Venezuela. Oliver documenta que **el español trajo el taíno** (241, 283) y, sin
+decirlo, que **había caquetíos hablando en Santo Domingo** (212) — lo segundo
+lo completa [[arcaya-1920]] p. 158, donde Ampíes *conversa* con los deportados.
+Oliver usó el argumento de la residencia en La Española una sola vez y en una
+sola dirección, para dudar de `datihao` ([[oliver-1989-cap2]] n. 42 p. 146);
+con la p. 212 y Arcaya delante, corta en las dos.
+
+**Qué NO da**: nada de contacto precolombino, nada de los lucayos, nada de
+cerámica antillana. Propuesta completa en
+`6-fusion/taino_en_la_esfera_2026-09-21.yaml`; borrador en
+`6-fusion/issues-pendientes/taino-en-la-esfera-2026-09-21.md`.
+
 ## Qué falta
 
+- **Resolver la discrepancia de la saca.** Este capítulo da 1515 y Martín Baso
+  Zabala (y un raid de «Baso Zavala» en 1513, p. 212); [[arcaya-1920]] p. 153
+  da 1513 y **Diego de Salazar**, con cifra (dos mil). No se promedia: hace
+  falta [[ramos-perez-1978]] (la monografía, no la reseña) y CoDoIn 1864/1868.
 - No importar sin más el dato de las malocas del interior a la Curiana costera:
   **el propio Oliver los distingue**.
 - **Los hallazgos de arriba están en la nota, no en el corpus.** Ninguno se ha

@@ -1,0 +1,1056 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — el taíno en la esfera de interacción (campaña del taíno, T5)
+#
+# La pregunta de Miguel (2026-09-21): «buscar tal cual lo hicimos con el resto
+# de lenguas fuentes y ANEXARLAS A NUESTRA ESFERA». Esta parcela es el lado
+# del MUNDO: ¿qué evidencia hay —de qué clase y de qué época— de relación
+# entre la polity caquetía costera (Paraguaná, Coro, el Golfete, y las islas
+# de Aruba, Curazao y Bonaire) y las Antillas Mayores taínas? ¿Y con eso en la
+# mano, cómo debería estar el taíno en `3-mundo/etnias.yaml`?
+#
+# Regla 5: esto PROPONE. La fusión a `3-mundo/etnias.yaml` y al corpus la
+# decide Miguel. Regla 1: ninguna cifra de este archivo está escrita a mano —
+# las imprime `python 6-fusion/scripts/medir_taino_en_la_esfera.py`.
+# Regla 3, que en esta parcela es la que más muerde: precontacto ≠ colonial, y
+# aquí casi TODO lo documentado es colonial.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-09-21'
+  estado: propuesta
+  parcela: T5 — el taíno en la esfera de interacción (el MUNDO, no la lengua)
+  medido_por: 6-fusion/scripts/medir_taino_en_la_esfera.py
+  pregunta: >-
+    ¿Hay evidencia de relación precolombina entre la polity caquetía costera
+    (con sus islas) y las Antillas Mayores taínas? ¿De qué clase, de qué
+    época, y qué entrada de vecino se sigue de ella?
+  obras_abiertas:
+    - {obra: oliver-1989-cap3, como: "pdftotext del PDF con capa de texto; página impresa = pdf + 182"}
+    - {obra: oliver-1989-cap2, como: "pdftotext del PDF con capa de texto"}
+    - {obra: arcaya-1920, como: "pdftotext -layout; las páginas impresas salen en el propio texto"}
+    - {obra: angleria-1892, como: "pdftotext del vol. 1 — barrido de la costa, no de léxico"}
+    - {obra: martinez-cruzado-2003, como: "nota de 4-fuentes/ (ya minada)"}
+    - {obra: schroeder-2018, como: "nota de 4-fuentes/ (ya minada)"}
+    - {obra: esteves-1989, como: "nota de 4-fuentes/ (ya minada)"}
+    - {obra: van-buurt-2014, como: "nota de 4-fuentes/ (ya minada)"}
+    - {obra: moron-2012-petroglifos, como: "nota de 4-fuentes/ (ya minada)"}
+
+# ══════════════════════════════════════════════════════════════════
+# 0. LA RESPUESTA EN UNA FRASE
+# ══════════════════════════════════════════════════════════════════
+veredicto: >-
+  No hay ni una sola pieza de evidencia —arqueológica, genética o
+  etnohistórica— de contacto precolombino entre la polity caquetía costera y
+  las Antillas Mayores taínas; lo que sí hay, abundante y fechado, es el
+  movimiento COLONIAL en sentido único (caquetíos deportados a La Española y
+  Puerto Rico desde 1513), y eso no anexa al taíno a la esfera: lo convierte
+  en el vecino que el caquetío conoció por haber sido llevado a su isla
+  encadenado, y en un sospechoso de primer orden para cualquier voz «taína»
+  que una crónica de Venezuela ponga en boca de un indio.
+
+veredicto_largo: >-
+  El taíno y el caquetío son PRIMOS, no VECINOS. Salieron del mismo nodo
+  arahuaco hace dos milenios largos y por puertas distintas —el taíno por
+  Trinidad y el arco antillano, el caquetío por los Llanos hacia el oeste— y
+  no consta que se volvieran a encontrar. Todo el eje de intercambio a larga
+  distancia de la polity costera que las fuentes documentan apunta al OESTE
+  (la Guajira, el Ranchería, la Sierra Nevada de Santa Marta) y al ESTE
+  cercano (Las Aves, Los Roques). Hacia el NORTE, la serie dabajuroide —que
+  es el marcador arqueológico del caquetío— se detiene en Aruba, Curazao y
+  Bonaire, que no son un puente hacia las Antillas Mayores sino el extremo
+  septentrional de la propia polity. La esfera no se fuerza para que quepa.
+
+# ══════════════════════════════════════════════════════════════════
+# 1. EL CERO, VERIFICADO (regla 6)
+# ══════════════════════════════════════════════════════════════════
+# El encargo decía que un `grep` de «taín/taino» en etnias.yaml no devuelve
+# nada. Es cierto, y el cero aguanta un barrido de ortografía: se probaron 26
+# sondas, incluidas las que un cronista usaría (antillano, arahuaco insular,
+# isleño, lucayo, boriquén, Española, Santo Domingo) y las de cultura material
+# (ostionoide, chicoide, meillacoide, guanín).
+el_cero:
+  etnias_yaml:
+    taino_como_vecino: no
+    unico_acierto_del_barrido: >-
+      «Antillas», una vez, dentro del `aviso_familia` de `etnia-008` (el caribe
+      del elenco): «Un contacto caribe en la polity costera solo cabe POR MAR,
+      desde el Caribe Costero Venezolano… o desde las Antillas». Es una
+      posibilidad declarada, no un vecino documentado.
+    contexto: >-
+      El registro tiene 8 etnias y **sólo una toca la polity costera**
+      (`etnia-008`), y esa es `canon-simulacion` con `deuda: sin-procedencia`.
+      Es decir: el hueco del taíno no es una omisión suya, es el estado general
+      del registro — ningún pueblo DOCUMENTADO toca el Golfete.
+  asentamientos_yaml:
+    taino: cero absoluto en las 26 sondas
+  corpus:
+    taino: >-
+      NO está a cero, y ahí está el punto. El taíno vive ya en el repo, pero en
+      tres papeles que no son el de vecino: (a) COMPARANDA de parentesco
+      (`parentesco-026/029/038` y ss.: avunculocalidad, sucesión matrilineal,
+      poliginia cacical, vía Keegan 1989 y literatura tainista); (b) RAMA del
+      árbol arahuaco («el arco norteño»: wayuu, taíno, lokono, achagua); y
+      (c) ESTRATO del lexicón (`ecologia_lexicon_map.md` marca `cazabi`,
+      `batata`, `cobo`, `cayo` como «hermanas» taínas).
+    por_que_importa: >-
+      Las tres son profundidad temporal o método comparativo, no esfera. Es la
+      trampa 3 del encargo: un parentesco de hace dos mil años no es una
+      relación entre vecinos del siglo XV. Que el taíno esté en el corpus no
+      llena el hueco de `etnias.yaml`; lo hace más visible.
+
+# ══════════════════════════════════════════════════════════════════
+# 2. ⭐ LO QUE HAY QUE LEER PRIMERO — para T1, T2 y T4
+# ══════════════════════════════════════════════════════════════════
+# Esto va arriba porque cambia cómo se mina el taíno para LÉXICO, que es lo
+# que están haciendo las otras parcelas ahora mismo. Son tres vectores, y el
+# proyecto sólo tenía escrito uno.
+para_las_otras_parcelas:
+
+  - id: vector-1
+    titulo: "El español llevó el taíno a Venezuela — dicho por Oliver, cuatro veces"
+    afirmacion: >-
+      Una voz taína que aparece en una crónica de Venezuela tiene DOS orígenes
+      posibles, y el más barato con diferencia es el castellano. Oliver lo dice
+      sin rodeos y con ejemplos nombrados.
+    citas:
+      - obra: oliver-1989-cap3
+        pagina: "241 (n. 83)"
+        cita: >-
+          «Both the terms caney (chief's house) and fotuto or fututo
+          (trumpet-like instrument) are Taíno (Arawakan) words, and were
+          probably introduced by the Spanish from the Antilles… That Taíno was
+          used often (e.g. cacique, huracán, hamaca, etc.) is of no surprise
+          since most Spanish had to stop in Hispaniola before continuing
+          elsewhere.»
+      - obra: oliver-1989-cap3
+        pagina: "283 (n. 131)"
+        cita: >-
+          «[naboria] is of Taíno origin and was probably applied by Federmann
+          and not the Caquetío. Federmann probably learned this term (as he did
+          other terms such as cacique) in his various stays in Hispaniola.
+          There is a remote, however unlikely, possibility that both Caquetío
+          and Taíno languages used the same term for this institution.»
+      - obra: oliver-1989-cap2
+        pagina: "151 (sección de Aruba, Gatschet/van Koolwijk; la página la fija 4-fuentes/oliver-1989-cap2.md)"
+        cita: >-
+          «Other terms, such as maraca /maraka/ are probably of Taíno origin
+          and possibly brought in along with cacique /kasike/ and many others
+          by the Spanish, all of whom had to go through Hispaniola before
+          reaching Venezuela. To that end, one must be careful about some terms
+          (e.g. barbacoa) offered by the Spanish as "native"…»
+    etiqueta: atestiguado   # es lo que la fuente dice, no una inferencia nuestra
+    regla_operativa: >-
+      Para llamar «esfera» a una voz taína hace falta atestación indígena
+      INDEPENDIENTE del castellano en el área: van Buurt o Gatschet en las
+      islas, Zavala o Medina en Paraguaná. Sin eso, la hipótesis por defecto es
+      el hispanismo del siglo XVI, y la etiqueta debe degradar (regla 2).
+    lo_que_el_lexicon_ya_sabe_y_no_aplica:
+      - >-
+        `hamaka` lleva escrito en sus propias `notas`: «hamaca es préstamo
+        taíno del propio español» — y por eso se quedó `caquetío-reconstruido`
+        en vez de fusionarse. El razonamiento correcto, ya aplicado una vez.
+      - >-
+        `kunuku` lleva escrito: «kunuku es la forma papiamenta del conuco
+        taíno, NO un caquetío insular» (D10, 2026-08-03; Alvarado 1921 p. 89,
+        Las Casas V.307, van Buurt 2014 §5). Y aun así se le ENSEÑA al tier 1
+        como voz de la esfera. La nota dice una cosa y la puerta hace otra.
+
+  - id: vector-2
+    titulo: "⭐⭐ Y al revés: había caquetíos hablando en Santo Domingo desde 1513"
+    afirmacion: >-
+      Este es el vector que el proyecto NO tenía escrito, y corta en la
+      dirección contraria: un cronista que escribe en La Española entre 1513 y
+      1540 pudo oír caquetío de boca de deportados. Una voz recogida «en La
+      Española» no es automáticamente taína.
+    citas:
+      - obra: arcaya-1920
+        pagina: "158"
+        cita: >-
+          «fueron llevados como esclavos a Santo Domingo como dos mil indios de
+          tales islas (y probablemente de la costa firme cercana) por el
+          capitán Diego de Salazar, tocando algunos a Ampies, quien
+          CONVERSÁNDOLOS observó que parecían "gente de más razón y habilidad
+          que otros indios destas partes".»
+      - obra: oliver-1989-cap3
+        pagina: "212"
+        cita: >-
+          Ampíes obtuvo su información sobre las piedras de gran valor y el oro
+          del interior «from the Caquetío, who were his personal servants in
+          Hispaniola», y Oliver razona que TENÍA que venir de ellos porque
+          Ampíes no había estado aún en Falcón ni en las islas y su enviado
+          Gonzalo de Sevilla nunca llegó a la Guajira.
+    etiqueta: atestiguado
+    por_que_es_oro: >-
+      Oliver ya usó este argumento UNA vez y en UNA sola dirección: duda de que
+      `datihao` sea caquetío porque «Oviedo's long time residence in Hispaniola
+      may be a factor here», y concluye que probablemente fuera «equally shared
+      by both Taíno and Caquetío» (cap. 2, n. 42, p. 146). Con Arcaya p. 158
+      delante, el mismo argumento se puede correr al revés: en Santo Domingo
+      había hablantes de las dos lenguas, y la residencia de un cronista allí
+      no decide de cuál copió. El lexicón tiene `datihao` como
+      `caquetío-atestiguado` sin la reserva de Oliver — eso ya estaba anotado
+      en `4-fuentes/oliver-1989-cap2.md` y sigue abierto.
+
+  - id: vector-3
+    titulo: "El mejor candidato local a etimología taína es un topónimo de Paraguaná"
+    afirmacion: >-
+      `Caçicure` / `Casicure` / `Cazicure`, el nombre colectivo de las aldeas
+      de Paraguaná, que Oliver relaciona con el lokono `kassikoan` 'tener casa,
+      habitar' y con el taíno `kasike` 'cabeza de casa(s)'.
+    cita:
+      obra: oliver-1989-cap3
+      pagina: "262"
+      texto: >-
+        «The etymology of kasikure, in all probability, is related to the
+        Lokono (Arawak proper) term kassikoan and, in turn, to the Taíno term
+        kasike (cacique). The Taíno term kasike best glosses as 'head of
+        hous(es)'… The Lokono verb /kasikoan/ [infinitive] translates as 'to
+        inhabit', 'to have house'…»
+    aviso: >-
+      ⚠️ No es contacto: Oliver lo deriva del LOKONO y pasa por el taíno como
+      cognado, que es exactamente el parentesco de familia (trampa 3). Pero es
+      un topónimo VIVO de Paraguaná cuya etimología toca el taíno, y eso es
+      trabajo de T4, no de esta parcela. Se deja anotado con página.
+
+# ══════════════════════════════════════════════════════════════════
+# 3. INVENTARIO DE EVIDENCIA, POR CLASE Y POR ÉPOCA
+# ══════════════════════════════════════════════════════════════════
+inventario:
+
+  # ─────────────────────────────────────────────────────────────
+  arqueologica:
+
+    - id: arq-01
+      afirmacion: >-
+        La serie dabajuroide, marcador arqueológico del caquetío, se distribuye
+        por la costa occidental de Falcón y HASTA las Antillas Neerlandesas
+        (Aruba, Curazao, Bonaire) — ~1.300 km de litoral, c. 800–1600 d.C. — y
+        no más allá.
+      epoca: precontacto
+      etiqueta: atestiguado
+      direccion: norte (y para ahí)
+      procedencia: {obra: antczak-2015-las-aves}
+      ver_tambien: [ecologia-013, ecologia-014]
+      aviso: >-
+        La distribución está atestiguada; el LÍMITE es un negativo medido sobre
+        lo que el repo tiene, no sobre el registro arqueológico caribeño
+        entero. Ninguna fuente del repo menciona cerámica ostionoide, chicoide
+        ni meillacoide en Falcón o las ABC, ni dabajuroide en las Antillas
+        Mayores — pero la obra que zanjaría eso está en 0 bytes (ver arq-05).
+
+    - id: arq-02
+      afirmacion: >-
+        El eje de intercambio a larga distancia de la polity costera apunta al
+        OESTE. Las vajillas de servicio del complejo Los Médanos A/B son
+        «precisely those of the latest ceramic complex found in the Ranchería
+        valley» (Guajira), con fechas congruentes con lo que las crónicas ya
+        decían del comercio caquetío en la Alta Guajira.
+      epoca: precontacto (pico del contacto Guajira ↔ Los Médanos en 1400 d.C.)
+      etiqueta: atestiguado
+      direccion: oeste
+      procedencia: {obra: oliver-1989-cap4}
+      apoyos_independientes:
+        - >-
+          Motivos avemorfos de la cerámica arubeña que parecen venir de La
+          Guajira colombiana, no de culturas dabajuroides
+          (`martinez-cruzado-2003`).
+        - >-
+          Las «piedras verdes» de la capitulación de Ojeda (1500) y las tuumás
+          de cornalina y jaspe, que Oliver liga a la Sierra Nevada de Santa
+          Marta y a las serpentinitas de su arqueología (`oliver-1989-cap3`,
+          §3.2, pp. 207–212).
+      por_que_importa: >-
+        Es el hallazgo que decide la parcela. Cuando la polity costera comercia
+        lejos, comercia hacia la Guajira y el Magdalena, no hacia el norte.
+
+    - id: arq-03
+      afirmacion: >-
+        El alcance marítimo documentado de la esfera llega al este hasta Las
+        Aves y Los Roques, en disputa con grupos caribes entre 1200 d.C. y el
+        contacto; esas islas funcionan como estaciones de pesca y de botuto
+        (Lobatus/Strombus gigas), tortuga y perla.
+      epoca: precontacto
+      etiqueta: atestiguado
+      direccion: este cercano
+      procedencia: {obra: antczak-2017-cariban, pagina: "157"}
+      ver_tambien: [ecologia-016, ecologia-017, 3-mundo/horizonte-de-contacto.md]
+      aviso: >-
+        De Los Roques al arco de las Antillas Menores nadie ha trazado una
+        ruta: `horizonte-de-contacto` ya lo dejó escrito («entre el Caribe
+        occidental y el suroriental hay un vacío que la literatura llena con
+        "redes de interacción marítima" sin trazar una ruta concreta»).
+
+    - id: arq-04
+      afirmacion: >-
+        Hay hachas de jadeíta en las Antillas MENORES cuyo origen se traza
+        geoquímicamente al valle del Motagua (Guatemala). Es conexión de
+        OBJETO, no de personas.
+      epoca: saladoide, ~250–500 d.C. — unos mil años ANTES de la ventana simulada
+      etiqueta: hipotetico   # como evidencia de la esfera del s. XV. En duda, degradar.
+      direccion: arco antillano (no toca Falcón)
+      procedencia: null
+      deuda: sin-procedencia   # prospección de `3-mundo/horizonte-de-contacto.md`; Harlow et al. no está en el repo
+      lectura: >-
+        Precedente metodológico exacto para esta parcela: «una persona no hizo
+        ese viaje; un objeto sí, pasando por muchas manos». Aquí ni siquiera
+        tenemos el objeto llegando a Falcón.
+
+    - id: arq-05
+      afirmacion: "🔴 NEGATIVO MEDIDO — la monografía que zanjaría arq-01 no existe en el repo."
+      epoca: n/a
+      etiqueta: atestiguado   # el cero está medido hoy
+      detalle: >-
+        `Rouse_Cruxent_1963_Venezuelan_Archaeology.pdf` sigue en **0 bytes**
+        (verificado 2026-09-21; ya lo estaba en 2026-07-29). Es la obra de
+        referencia que define la tradición dabajuroide y su relación con las
+        series antillanas. Sin ella, `ecologia-013` —una afirmación
+        `atestiguado`— se apoya en `antczak-2015-las-aves` (arqueología
+        INSULAR de Las Aves, no del Golfete) y en una página web (Atlas del
+        Arte Precolombino Venezolano).
+      procedencia: {obra: rouse-cruxent-1963}
+
+  # ─────────────────────────────────────────────────────────────
+  genetica:
+
+    - id: gen-01
+      afirmacion: >-
+        Qué dice Schroeder 2018 EXACTAMENTE, y con qué poblaciones de
+        referencia: el genoma de UNA mujer lucaya (taína) de Preacher's Cave
+        (Bahamas), muerta ~500 años antes del contacto europeo, secuenciado a
+        12,4×, resulta más próximo a los PALIKUR y a otros hablantes arahuacos
+        de las cuencas del Amazonas y el Orinoco, por cuatro métodos
+        independientes (D-statistics, PCA, árbol NJ por FST, ADMIXTURE). En el
+        análisis por haplotipos (ChromoPainter) los hablantes arahuacos copan
+        los primeros puestos y ahí entran los WAYUU, que no salían por SNP; los
+        autores lo atribuyen a flujo génico ístmico-colombiano que los wayuu
+        tienen y el taíno antiguo no.
+      epoca: >-
+        precontacto, pero a escala de MILENIOS: mide de dónde salió una
+        población, no con quién trataba en el siglo XV
+      etiqueta: atestiguado (el resultado) / NO-ES-EVIDENCIA-DE-CONTACTO (para la esfera)
+      procedencia: {obra: schroeder-2018}
+      lo_que_NO_dice: >-
+        Cero menciones de caquetío, dabajuroide, Aruba o Paraguaná en el texto
+        completo; una de Venezuela y una de Curaçao. Medido en
+        `4-fuentes/schroeder-2018.md`. No se le hace decir más: es UN individuo,
+        y los propios autores lo enmarcan así.
+      trampa: >-
+        Trampa 3 del encargo, en su forma más tentadora. «Los taínos vienen del
+        norte de Sudamérica» y «el caquetío es arahuaco del norte de
+        Sudamérica» NO componen «los taínos y los caquetíos se trataban». Son
+        dos ramas del mismo tronco, medidas a dos milenios de distancia.
+
+    - id: gen-02
+      afirmacion: >-
+        Los linajes maternos amerindios de Aruba no son los del taíno antiguo:
+        9 de 13 mtDNA amerindios arubeños son del haplogrupo D
+        (Martínez-Cruzado 2003, n=16 voluntarios), mientras la lucaya de
+        Schroeder es del haplogrupo B2, que el propio paper señala como raro en
+        las poblaciones caribeñas de hoy.
+      epoca: >-
+        ⚠️ las muestras arubeñas son de población MODERNA — la firma del
+        mestizaje colonial, no del poblamiento del s. XV
+      etiqueta: hipotetico
+      procedencia: {obra: martinez-cruzado-2003}
+      lectura: >-
+        Si el contraste se sostuviera, apoyaría lo que esta parcela concluye
+        por otras vías: el estrato taíno de la zona se parece más a préstamo
+        que a población asentada. Pero n=1 antiguo contra n=13 modernos no da
+        para afirmarlo, y `4-fuentes/schroeder-2018.md` ya lo declara como
+        pregunta bien planteada, no como conclusión. Aquí queda igual.
+
+    - id: gen-03
+      afirmacion: "🔴 DOS NEGATIVOS MEDIDOS en la clase genética."
+      epoca: n/a
+      etiqueta: atestiguado   # los ceros están medidos hoy
+      detalle:
+        - >-
+          `Fernandes_et_al_2020_Nature_Genetic_History_Caribbean.pdf` — la
+          genómica del Caribe PRECONTACTO con muestras de varias islas, que es
+          la fuente natural para preguntar por afinidad entre insulares y
+          continentales — está en **0 bytes** (verificado 2026-09-21).
+        - >-
+          `moreno-mayar-2018` NO es genética del Caribe. El encargo lo listaba
+          como tal; es *Early human dispersals within the Americas* (Science
+          362), sobre Beringia y el Pleistoceno tardío. El repo ya documentó
+          el episodio: el archivo se llamó «Schroeder…Caribbean_Taino» durante
+          meses sin serlo. 0 hechos del corpus, 0 entradas del lexicón.
+      procedencia: {obra: fernandes-2020}
+
+  # ─────────────────────────────────────────────────────────────
+  etnohistorica_precontacto:
+
+    - id: eth-00
+      afirmacion: >-
+        🔴 NINGÚN cronista del repo describe tráfico precolombino entre la
+        costa caquetía o las islas ABC y las Antillas Mayores. El único relato
+        de primera mano de la red de intercambio de esa costa antes de que los
+        españoles la reorganizaran es el de Anglería sobre el viaje de Niño y
+        Guerra (1499–1500), y esa red es CONTINENTAL y de eje este–oeste.
+      epoca: contacto-temprano (1499–1500), describiendo el estado previo
+      etiqueta: atestiguado
+      cita: >-
+        «Preguntados los curianenses de dónde conseguían aquel oro, indicaban
+        que lo traen de cierta región llamada Cauchieto, que distaba hacia el
+        Occidente, por costa derecha, seis soles… También éstos llevaban perlas
+        al cuello, pero se les proporcionaban de Curiana á cambio de oro.»
+      procedencia: {obra: angleria-1892}
+      medicion: >-
+        Barrido del vol. 1 (421 KB de texto): «Curiana/Curian» 12, «Cauchie» 5,
+        «Paria» 23, «perlas» 38 — y «lucay» 0, «Hispaniol» 0, «Gigante» 0,
+        «caquet» 0, «caiquet» 0. Las provincias que enumera (Paria, Curiana,
+        Cuchibacoa, Cahuyeto, Laturnia, Caubana, Urabain, Zaraboroa, Veragua)
+        son todas de tierra firme.
+      aviso: >-
+        ⚠️ Qué «Curiana» nombra en Anglería está en disputa y NO se resuelve
+        aquí (ver #33 y `gonzalez-batista-nombre-de-coro`). Lo que la cita
+        sostiene es la FORMA de la red —oro del oeste por perlas de la
+        costa—, no la identificación del lugar.
+
+    - id: eth-01
+      afirmacion: >-
+        Oliver usa el cacicazgo taíno como ANALOGÍA declarada para reconstruir
+        la organización caquetía, y lo marca como tal: «Villages were PROBABLY
+        organized into something LIKE the Antillean (Taíno) cacicazgos; that
+        is, into a set of related villages within determined spatial
+        boundaries… But the exact nature of the structure governing the
+        territorial sub-divisions of the Coastal Caquetío polity can not be
+        precisely defined.»
+      epoca: n/a — es método comparativo, no relación
+      etiqueta: reconstruido
+      procedencia: {obra: oliver-1989-cap3, pagina: "264"}
+      ver_tambien: ["oliver-1989-cap3 pp. 275-276 (los dos clanes de Paraguaná, mismo modelo)"]
+      aviso: >-
+        Es exactamente el mismo estatuto que Keegan 1989 tiene en el corpus de
+        parentesco: comparanda arahuaca hermana, no vecindad. Se registra para
+        que nadie lo lea como contacto.
+
+    - id: eth-02
+      afirmacion: >-
+        La ÚNICA afirmación positiva de semejanza material taíno↔caquetío que
+        hay en el repo: Gilberto Antolínez, «Los Zemi o ídolos de piedra del
+        Estado Falcón, son exactamente iguales a los de los Taínos de Cuba; las
+        denominaciones geográficas de esta isla, y la de los distritos
+        políticos de la nación Kaketía… coinciden sorprendentemente.»
+      epoca: n/a — afirmación de 1944 sobre material sin fecha
+      etiqueta: hipotetico   # en duda, degradar. Y aquí la duda es grande.
+      procedencia: {obra: antolinez-1944-manaure, via: moron-2012-petroglifos}
+      por_que_no_sube: >-
+        Ni un objeto listado, ni un museo, ni un número de catálogo, ni un
+        topónimo de los que «coinciden sorprendentemente». Es un artículo de
+        prensa (El Universal, sábado 9 de septiembre de 1944) de un
+        difusionista de los años cuarenta — el mismo autor que deriva `capo`
+        de un étimo tupí y sostiene, vía Bertoni, que el taíno contiene 50 % de
+        voces guaraníes, cosas que el repo ya dejó fuera. En la misma página
+        afilia a los kaketíos a los lokono «pobladores… de las islas mayores y
+        menores del Caribe, de donde fueron expulsados poco a poco por los
+        Karibe», que es el relato clásico de la invasión caribe con reemplazo,
+        el que la arqueología reciente cuestiona.
+      que_lo_haria_dato: >-
+        Un catálogo. Los ídolos de piedra de Falcón existen y están
+        publicados; comparar dos corpus de cemíes es trabajo de una tarde para
+        quien tenga las dos láminas. Mientras no se haga, `hipotetico`.
+
+    - id: eth-03
+      afirmacion: >-
+        El «estrato taíno / caribe insular» de la toponimia de Paraguaná
+        (Amuay, Elegüey = Punta Cardón, Maragüey, Jamaica, Maitiruma) es
+        inferencia fonética de Esteves, no documento — y ya está degradado por
+        el propio repo.
+      epoca: >-
+        n/a — las fuentes de Esteves son de 1773, 1835-1842 y 1881, MÁS LEJOS
+        del precontacto que la carta de Bastidas de 1538
+      etiqueta: hipotetico
+      procedencia: {obra: esteves-1989, pagina: "14, 35, 46, 49"}
+      por_que_esta_degradado:
+        - >-
+          Las cuatro voces que Esteves aduce para el «caribe insular» de Amuay
+          —batey, mamey, caney, carey— son voces TAÍNAS del español general,
+          precisamente las que Oliver dice que el español trajo de las Antillas
+          (ver vector-1).
+        - >-
+          La etiqueta está mal puesta: el «caribe insular» de Breton es una
+          lengua ARAHUACA (iñeri) con léxico caribe en el habla de los hombres,
+          hermana del taíno y del caquetío. Una coincidencia con él es, casi
+          siempre, parentesco de familia.
+        - >-
+          B.6 lo cerró por el otro lado: Oliver §3.2.4 no da ningún grupo de
+          lengua caribe en Paraguaná ni en Falcón. Medido sobre OCR: Paraguan-
+          0, Amuay 0, Elegüey 0, Maragüey 0, Jamaica 0, Maitiruma 0.
+
+    - id: eth-04
+      afirmacion: >-
+        El tráfico insular que SÍ está documentado es ABC ↔ costa, en los dos
+        sentidos, y es de corta distancia. El «Puerto de los Indios Curaçao» al
+        este de Puerto Cumarebo es el punto de partida documentado hacia la
+        isla; los indios de Alto Vista (Aruba) mantenían contacto regular con
+        Santa Ana de Paraguaná hasta el s. XIX; y en sentido inverso, el
+        topónimo paraguanero MACAMA parece venir del papiamento de las Antillas
+        holandesas.
+      epoca: precontacto para la ruta (arqueología) · colonial y moderno para los testimonios
+      etiqueta: atestiguado
+      procedencia: {obra: van-buurt-2014}
+      ver_tambien: [geografia_politica-001, esteves-1989]
+      lectura: >-
+        Las islas ABC no son un PUENTE hacia el norte: son el extremo
+        septentrional de la propia polity costera. Oliver es literal — «the
+        largest contiguous territory under a single Caquetío polity comprised,
+        at the time of Contact, the coastal plains of what is today the State
+        Falcón, Venezuela, INCLUDING THE NETHERLAND ANTILLES»
+        (`oliver-1989-cap3` p. 198). Cruzar de Cumarebo a Curazao es moverse
+        dentro de la polity, no salir de ella.
+
+  # ─────────────────────────────────────────────────────────────
+  etnohistorica_colonial:
+    # 🔴 TODO lo de esta sección es COLONIAL. Regla 3: nada de aquí describe
+    #    el siglo XV, y nada de aquí es una ruta precolombina.
+
+    - id: col-01
+      afirmacion: >-
+        1513 — el Rey concede a los colonos de Santo Domingo y Puerto Rico que
+        puedan llevarse indios de ciertas «islas inútiles», entre ellas
+        Curazao, Aruba y Buinare (Bonaire). De ahí «la gran saca de dos mil
+        indios que hizo Diego de Salazar, llevándoselos también sin duda de
+        Paraguaná, y de los demás lugares de las costas corianas más cercanos a
+        estas islas».
+      epoca: colonial
+      etiqueta: atestiguado
+      procedencia: {obra: arcaya-1920, pagina: "153"}
+      aviso: >-
+        ⚠️ «sin duda» es de Arcaya: el documento cubre las ISLAS. Que la saca
+        alcanzara también a Paraguaná y la costa de Coro es INFERENCIA suya, y
+        se registra como tal. Arcaya se apoya en una carta de Ampíes al Rey.
+      destino: La Española (Santo Domingo) y San Juan (Puerto Rico)
+
+    - id: col-02
+      afirmacion: >-
+        1515 — «the Crown had, in practice, declared open season to all the
+        Islands designated as "useless" (islas inútiles)… In 1515, Ampíes
+        bought in Hispaniola a number of Caquetío Indians that had been raided
+        by Martín Baso Zabala out of Aruba, Curaçao, and probably the
+        Mainland», y en vez de encomendarlos los integró en su casa de La
+        Española como indios de servicio.
+      epoca: colonial
+      etiqueta: atestiguado
+      procedencia: {obra: oliver-1989-cap3, pagina: "250"}
+      discrepancia_con_col_01: >-
+        🔴 **No se promedia, se declara.** Arcaya da 1513 y Diego de Salazar;
+        Oliver da 1515 y Martín Baso Zabala (y en la p. 212 menciona además un
+        raid de «Baso Zavala» en 1513 desde la costa de Falcón);
+        Martínez-Cruzado, vía Hartog 1961, da 1515 y ~2.000 indios a La
+        Española. Puede haber una o varias sacas. Cerrarlo exige Ramos Pérez
+        1978 (`ramos-perez-1978`, en la bibliografía pero no en el repo) y
+        CoDoIn 1864/1868.
+
+    - id: col-03
+      afirmacion: >-
+        El MECANISMO, dicho por Oliver: después de 1502 la costa de Falcón fue
+        sometida a redadas españolas «especially designed to supply Hispaniola
+        with Indian labor, since the local Taíno population had dramatically
+        decreased due to disease and other effects of the Conquest, endangering
+        the viability of the early Antillean colonists».
+      epoca: colonial
+      etiqueta: atestiguado
+      procedencia: {obra: oliver-1989-cap3, pagina: "250"}
+      lectura: >-
+        Los caquetíos fueron llevados a La Española **a sustituir a los taínos
+        que se estaban muriendo**. Es la relación caquetío↔taíno mejor
+        documentada que existe, y es esto: la sustitución de unos esclavizados
+        por otros. No es una esfera de interacción; es su opuesto.
+
+    - id: col-04
+      afirmacion: >-
+        1526 — el primer gesto de Ampíes fue DEVOLVER a los caquetíos a
+        Curazao. Entre 150 y 200 vuelven a Aruba y Curazao a explotar palo
+        brasil, kwihi y dividivi, y eran «mainly Caquetíos, but some Arawaks
+        from other Caribbean islands were included in the group».
+      epoca: colonial
+      etiqueta: atestiguado
+      procedencia: {obra: martinez-cruzado-2003}
+      apoyo: {obra: oliver-1989-cap3, pagina: "251"}
+      por_que_importa_para_el_experimento: >-
+        ⭐ Es un evento de KOINEIZACIÓN documentado a 30 km de Paraguaná:
+        hablantes de variedades arahuacas emparentadas pero distintas,
+        reunidos en una isla pequeña tras once años de desplazamiento, sin
+        norma común. `4-fuentes/martinez-cruzado-2003.md` ya lo señala. Es
+        colonial, así que NO es evidencia del proceso que simulamos — es un
+        análogo histórico fechado con el que contrastar lo que produce el
+        motor.
+
+    - id: col-05
+      afirmacion: >-
+        Los emisarios del propio Manaure llegaron a La Española: «For this
+        Manaure sent caciques to Curaçao and Aruba, and even Hispaniola.» Y un
+        cacique «que reside en las islas», D. Joan Varacoyea, fue enviado a
+        Ampíes en Santo Domingo (Ampíes [1525], CoDoIn 1868: 30-31).
+      epoca: colonial (c. 1520–1526)
+      etiqueta: atestiguado
+      procedencia: {obra: oliver-1989-cap3, pagina: "266, 258"}
+      aviso: >-
+        Es diplomacia con el factor de la Corona, en barco español y dentro de
+        una negociación colonial. NO es una ruta de canoa precolombina.
+
+    - id: col-06
+      afirmacion: >-
+        Segunda ruta de deportación, desde la esfera OCCIDENTAL: dos pueblos,
+        uno de caquetíos y otro de bobures de la provincia de Juruara, saqueados
+        por Luis de Leiva, herrados en Maracaibo «y los enviaron a Santo
+        Domingo».
+      epoca: colonial (c. 1530s)
+      etiqueta: atestiguado
+      procedencia: {obra: oliver-1989-cap3, pagina: "201"}
+      aviso: "Regla 4: es la polity OCCIDENTAL, no la costera. Se registra aparte."
+
+    - id: col-07
+      afirmacion: >-
+        «Las islas de los Gigantes» son las ABC, no las Antillas. Curazao
+        recibió ese nombre en el viaje de Ojeda y Vespucci (1499) por la
+        estatura de sus habitantes, y Aruba fue «Ysla de Brasil».
+      epoca: contacto-temprano (1499)
+      etiqueta: atestiguado
+      procedencia: {obra: oliver-1989-cap3, pagina: "249"}
+      apoyo: {obra: arcaya-1920, pagina: "148-153 (citando a Castellanos)"}
+      por_que_se_registra: >-
+        Para que nadie lea «los indios de las islas de los Gigantes» como
+        antillanos. Eran caquetíos, y la frase nombra el origen de los
+        deportados, no su destino.
+
+  # ─────────────────────────────────────────────────────────────
+  linguistica:
+    # Sólo lo que OTROS afirman. El cruce lo hace T4.
+    - id: lin-01
+      afirmacion: >-
+        Oliver hace salir al lokono, al island carib (CAIC), al taíno y al
+        caquetío del MISMO nodo del árbol arahuaco, y da al caquetío las
+        afinidades más fuertes con el lokono. Sus tres pilares: el prefijo
+        /dA-/ de 1.ª sg (sólo lokono y taíno lo tienen), la innovación léxica
+        `auri` 'perro', y `kaketío` = lokono `kakïtho`.
+      epoca: >-
+        profundidad temporal de ≥ 1,8 y probablemente 2,6 milenios — NO es
+        esfera
+      etiqueta: atestiguado (la afirmación de Oliver) / reconstruido (la posición del caquetío, que él llama «tentative»)
+      procedencia: {obra: oliver-1989-cap2, pagina: "150, 155"}
+      trampa_3: >-
+        Y la ruta separa a los primos: Oliver hace que el grupo que dio taíno e
+        island carib entrara a las Antillas desde Trinidad y la costa oriental
+        de Venezuela, mientras el que dio el caquetío se fue al OESTE hacia los
+        Llanos, «following the footsteps of the earliest splinter group that
+        was to evolve into Guajiro-Paraujano». Salieron por puertas distintas.
+        Del caquetío, además, «no hay medición»: no existe lista de 100
+        palabras.
+
+    - id: lin-02
+      afirmacion: >-
+        `daitiao` / `datihao` — la palabra que más cerca está de ser un puente
+        léxico taíno↔caquetío, y la que Oliver menos se atreve a asignar.
+        Cognado del taíno `waitiao`/`daitiao` (el intercambio ritual de nombres
+        entre el gobernador de San Juan y el cacique Agueybana que cuenta Las
+        Casas), del que el español tomó `guaitiao` 'amigo, aliado'.
+      epoca: >-
+        la atestación es COLONIAL (Oviedo, c. 1535-40; Las Casas [1552]); lo
+        que reconstruye, no
+      etiqueta: hipotetico   # por la reserva del propio Oliver
+      procedencia: {obra: oliver-1989-cap2, pagina: "146-147 (n. 42)"}
+      la_reserva: >-
+        «I have no absolute certainty that it belongs to a Caquetío
+        language… Oviedo's long time residence in Hispaniola may be a factor
+        here… probably equally shared by both Taíno and Caquetío». El lexicón
+        tiene `datihao` como `caquetío-atestiguado` SIN esa reserva.
+      para_t4: >-
+        Y con el vector-2 delante (había caquetíos en Santo Domingo desde
+        1513), la reserva de Oliver deja de ser unidireccional. Esto es de T4,
+        se deja anotado con página.
+
+# ══════════════════════════════════════════════════════════════════
+# 4. LA PROPUESTA — entradas para 3-mundo/etnias.yaml
+# ══════════════════════════════════════════════════════════════════
+# Regla 4: ¿qué polity toca? La COSTERA, y sin ambigüedad, porque Oliver mete
+# las islas ABC DENTRO de ella (p. 198). No hay una «polity insular» que
+# separar. Y `polity_caquetia: costera` exige, por el 9.º guardián, o una
+# `procedencia.obra` que documente el contacto o `etiqueta: canon-simulacion`.
+# Aquí HAY procedencia — pero documenta contacto COLONIAL, que es justo lo que
+# el validador hoy no distingue. Ver §6.
+propuesta_etnias:
+
+  - id: etnia-009   # siguiente libre; el registro va por 008
+    nombre: taíno
+    variantes: [taino, arahuaco insular, antillano, lucayo]
+    etiqueta: hipotetico
+    etiqueta_razon: >-
+      En duda, degradar (regla 2). No hay un solo hecho de contacto
+      precolombino documentado; lo que hay documentado es colonial y de sentido
+      único. `atestiguado` diría que la relación existió en la ventana que
+      simulamos, y no consta. `canon-simulacion` diría que la inventamos para
+      el elenco, y tampoco: el taíno SÍ está en el motor (es una de las cinco
+      lenguas de `ESFERA_DE_CONTACTO`), pero entró por la puerta del léxico,
+      no por la del mundo. `hipotetico` es lo que aguanta.
+    familia_linguistica: arahuaca
+    aviso_familia: >-
+      Arahuaca, y del mismo nodo del que sale el caquetío (Oliver 1989 cap. 2
+      pp. 150, 155: lokono, island carib, taíno y caquetío salen juntos, con el
+      caquetío más cerca del lokono). ⚠️ Eso es PROFUNDIDAD TEMPORAL —≥ 1,8 y
+      probablemente 2,6 milenios—, NO vecindad. Y las rutas los separan: el
+      taíno entró a las Antillas desde Trinidad y la costa oriental; el
+      caquetío se fue al oeste hacia los Llanos. Primos, no vecinos.
+    donde: >-
+      Antillas Mayores — La Española, Cuba, Boriquén (Puerto Rico), Jamaica— y
+      las Lucayas (Bahamas). Ningún asentamiento taíno en la costa de Falcón,
+      en Paraguaná ni en las islas ABC está documentado por fuente alguna del
+      repo.
+    polity_caquetia: costera
+    polity_nota: >-
+      La simulada, y con ella sus islas: Oliver mete a Aruba, Curazao y Bonaire
+      DENTRO de la polity costera («including the Netherland Antilles», cap. 3
+      p. 198). No hay una polity insular aparte que pudiera tocar al taíno por
+      su cuenta.
+    tipo_de_contacto: ninguno
+    contacto_nota: >-
+      🔴 **Ninguno documentado en precontacto**, que es la ventana que se
+      simula. Lo documentado es de otra época y de otra naturaleza: desde 1513
+      los españoles deportaron caquetíos de las islas ABC —y, según Arcaya,
+      de Paraguaná y la costa de Coro— a La Española y Puerto Rico, a sustituir
+      la mano de obra taína que se moría. Ver `epoca_propuesta` abajo y los
+      hechos de corpus propuestos en §5.
+    intensidad: ninguna
+    intensidad_nota: >-
+      Cero en precontacto. En época colonial la intensidad es alta y
+      traumática, pero es una relación de deportación, no de vecindad, y
+      ninguna de las dos poblaciones la eligió.
+    cita: >-
+      «the Coast of the Province of Venezuela, especially Falcón, was subjected
+      to Spanish raids, especially designed to supply Hispaniola with Indian
+      labor, since the local Taíno population had dramatically decreased due to
+      disease and other effects of the Conquest» (Oliver 1989, cap. 3, p. 250).
+    procedencia: {obra: oliver-1989-cap3, pagina: "250"}
+    apoyo_independiente:
+      obra: arcaya-1920
+      pagina: "153, 158"
+      que_anade: >-
+        El año (1513), el nombre del capitán (Diego de Salazar), la cifra (dos
+        mil indios), el segundo destino (Puerto Rico además de Santo Domingo) y
+        la escena que más vale: Ampíes CONVERSANDO con los deportados en Santo
+        Domingo.
+    ver_tambien:
+      - 6-fusion/taino_en_la_esfera_2026-09-21.yaml
+      - 3-mundo/esfera-de-interaccion.md
+      - 3-mundo/horizonte-de-contacto.md
+
+    # ── Campo PROPUESTO, que el esquema no tiene todavía ──────────
+    epoca_propuesta:
+      precontacto: ninguno
+      contacto-temprano: ninguno
+      colonial: deportacion
+    nota_de_esquema: >-
+      🔴 `epoca` NO existe en el esquema de `etnias.yaml` y el 9.º guardián no
+      lo valida. Esta ficha lo necesita: sin él, una entrada con
+      `procedencia: {obra: oliver-1989-cap3}` y `polity_caquetia: costera` pasa
+      el validador **diciendo que hay un vecino documentado de la Curiana**,
+      cuando lo documentado es de 1513 y de signo contrario. Es el mismo
+      problema que `asentamientos.yaml` ya resolvió partiendo `etiqueta` /
+      `atestacion` / `precontacto`. Añadir `epoca` (vocabulario cerrado:
+      `precontacto` · `contacto-temprano` · `colonial` · `varias`) y exigirlo
+      cuando `polity_caquetia: costera` toca `compilar_etnias.py`, que es
+      `curiana_sim/` — decisión de Miguel, no de esta campaña.
+
+# ── ¿Y una segunda entrada? ────────────────────────────────────────
+propuesta_etnias_descartada:
+  cual: "«caquetíos deportados a La Española» como entidad propia"
+  por_que_no: >-
+    No es un pueblo: es la misma gente en otro sitio. Un registro de VECINOS
+    no es el lugar. La deportación es un hecho de geografía política y va al
+    corpus (§5).
+
+no_hay_propuesta_para_asentamientos: >-
+  Santo Domingo no es un nodo de la Kaketiana y las Antillas Mayores no son
+  parte de la esfera. `asentamientos.yaml` no se toca por esta parcela.
+
+# ══════════════════════════════════════════════════════════════════
+# 5. HECHOS PROPUESTOS PARA EL CORPUS (geografía política)
+# ══════════════════════════════════════════════════════════════════
+# El registro va por `geografia_politica-013`; estos serían 014 y 015.
+propuesta_corpus:
+
+  - id: geografia_politica-014
+    contenido: >
+      Desde 1513 la Corona declaró «islas inútiles» a Curazao, Aruba y Bonaire y
+      autorizó a los colonos de Santo Domingo y San Juan a llevarse indios de
+      ellas. De ahí salió la saca de unos dos mil caquetíos insulares —y, según
+      Arcaya, también de Paraguaná y de los lugares de la costa de Coro más
+      cercanos a las islas— hacia La Española y Puerto Rico, a sustituir la mano
+      de obra taína diezmada por la enfermedad. Algunos de esos deportados
+      pasaron a la casa de Juan de Ampíes en Santo Domingo como indios de
+      servicio; de ellos obtuvo Ampíes la información sobre el oro y las piedras
+      de la tierra firme que nunca había pisado, y con ellos empezó la
+      negociación que acabaría en el pacto con Manaure y la fundación de Coro.
+      Entre 1526 y 1527 unos 150-200 fueron devueltos a Aruba y Curazao, y en el
+      grupo iban también arahuacos de otras islas del Caribe.
+    fuente: atestiguado
+    referencia: "Arcaya 1920 pp. 153 y 158; Oliver 1989 cap. 3 pp. 212, 250-251; Martínez-Cruzado et al. 2003 (vía Hartog 1961)"
+    procedencia: {obra: arcaya-1920, pagina: "153, 158"}
+    dominios: [politica, geografia, colonial]
+    agentes_relacionados: []
+    epoca: colonial
+    implicacion_simulacion: >
+      🔴 NINGUNA para el mundo del siglo XV: es posterior a la ventana y no
+      describe una ruta indígena. Su valor es de MÉTODO y es doble. (1) Explica
+      por qué un cronista que escribe en Santo Domingo entre 1513 y 1540 pudo
+      oír caquetío, y por tanto por qué una voz «de La Española» no es
+      automáticamente taína — lo que toca directamente la reserva de Oliver
+      sobre `datihao`. (2) El retorno de 1526 es un evento de contacto dialectal
+      documentado a 30 km de Paraguaná —arahucos de procedencias distintas
+      reunidos en una isla pequeña sin norma común—, útil como análogo histórico
+      del DISENO_KOINE, nunca como evidencia de él.
+    aviso: >-
+      Hay discrepancia entre las fuentes sobre la fecha (1513 / 1515) y el
+      nombre del capitán (Diego de Salazar / Martín Baso Zabala). No se
+      promedia; se declara. Cerrarlo pide Ramos Pérez 1978 y CoDoIn 1864/1868.
+
+  - id: geografia_politica-015
+    contenido: >
+      El horizonte marítimo de la polity costera caquetía tiene tres tramos
+      documentados y un cuarto que no existe. Hacia el norte, la travesía a
+      Aruba, Curazao y Bonaire, que no es salir de la polity sino recorrerla:
+      las islas están dentro del mayor territorio contiguo bajo un solo mando
+      caquetío. Hacia el este, las estaciones de pesca y concha de Las Aves y
+      Los Roques, en disputa con grupos caribes desde el 1200 d.C. Hacia el
+      oeste, el eje largo y el más rico: la Alta Guajira, el valle del Ranchería
+      y, de oídas, la Sierra Nevada de Santa Marta, de donde vienen el oro y las
+      piedras verdes que la gente principal lleva al cuello. Hacia las Antillas
+      Mayores, nada: ninguna fuente documenta una travesía, un objeto ni una
+      noticia.
+    fuente: atestiguado
+    referencia: "Oliver 1989 cap. 3 pp. 198, 200, 207-212 y cap. 4 (Los Médanos A/B ≈ Ranchería); Antczak & Antczak 2017 p. 157; Antczak & Antczak 2015"
+    procedencia: {obra: oliver-1989-cap3, pagina: "198, 200, 207-212"}
+    dominios: [politica, geografia, comercio, islas]
+    agentes_relacionados: [Kadushi, Watapana]
+    epoca: precontacto
+    implicacion_simulacion: >
+      Da el mapa mental del tier 1 que navega, y lo da con bordes: lo que
+      conoce por haber ido (las islas ABC, Los Roques) y lo que conoce de oídas
+      (la Guajira, la Sierra Nevada). El cuarto tramo, el del norte, es el que
+      NO debe aparecer: un agente del siglo XV no tiene noticia de La Española.
+
+# ══════════════════════════════════════════════════════════════════
+# 6. CONSECUENCIA PARA EL EXPERIMENTO — opciones, sin decidir
+# ══════════════════════════════════════════════════════════════════
+# Lo medido hoy (`medir_taino_en_la_esfera.py`), no escrito a mano:
+#   VOCABULARIO_BASE .................. 5.507
+#   familia taína ..................... 52  (43 `taíno` + 9 `taíno-reconstruido`)
+#   voces de la esfera en base ........ 133 (taíno 52 · paraujano 47 · kalinago 23
+#                                            · jirajaroide-contacto 7 · caribe-continental 4)
+#   catálogo de [Voces de fuera] ...... 43, de las que 25 son TAÍNAS (58,1 %)
+#   loanword_uses .................... 40 filas en 17 runs; 35 usos taínos de 11 formas
+consecuencia_para_el_experimento:
+  el_hecho: >-
+    El taíno es, con diferencia, la lengua más presente de la esfera en el
+    prompt: 25 de las 43 voces que el bloque `[Voces de fuera]` puede mostrarle
+    a un tier 1, y 35 de los 40 préstamos registrados en toda la base. Y entre
+    esas 25 están `cacike` y `naboria` — las dos voces que Oliver nombra
+    EXPRESAMENTE como traídas por el español desde La Española— y `kunuku`,
+    cuya propia entrada del lexicón dice «es la forma papiamenta del conuco
+    taíno, NO un caquetío insular».
+  lo_que_ya_juega_a_favor: >-
+    La decisión «la etiqueta manda» (2026-09-18) ya sacó del bloque, por un
+    motivo completamente distinto —no tener gemela indígena—, cuatro de las
+    voces que Oliver marca: `caney`, `huracan`, `cemi` y `bejique` están en
+    `SIN_FORMA_DE_LA_ESFERA` y no se enseñan. La convergencia es casualidad,
+    pero reduce el tamaño del problema antes de empezar.
+  lo_que_NO_cambia: >-
+    Nada de lo hallado toca la decisión del 2026-09-17 («el producto de la
+    esfera ES la esfera»). Esa decisión no se apoyaba en que el taíno fuera
+    vecino, sino en que el caquetío no tiene voz propia para casabe y en que un
+    agente que dice `cazabi` está siendo la esfera, no fugándose de ella. Los
+    cinco casos que la sostienen —`cazabi`, `maisi`, `yuca`, `batata`,
+    `papaya`— son PRODUCTOS, y son exactamente los que la skill §3 declara
+    préstamo areal normal. Esta parcela no los toca.
+
+  opciones:
+    - letra: A
+      que_es: No tocar nada.
+      a_favor: >-
+        El taíno entró a `ESFERA_DE_CONTACTO` por una decisión de Miguel
+        (2026-09-15) que no dependía de la vecindad, y el hallazgo de esta
+        parcela es sobre el MUNDO. Además la evidencia es un negativo, y un
+        negativo no obliga a mover el motor.
+      en_contra: >-
+        El bloque le enseña a un agente de Paraguaná del siglo XV la palabra
+        para 'jefe' y la palabra para 'servidor del cacique' cuya única vía
+        documentada es la boca de un español del XVI. No es un préstamo de
+        esfera: es un anacronismo con etiqueta de préstamo.
+      coste_de_medicion: ninguno
+
+    - letra: B
+      que_es: >-
+        Partir la etiqueta taína por VECTOR, dentro de la esfera y sin tocar el
+        scorer. (b1) Voces con atestación indígena independiente del castellano
+        en el área —van Buurt o Gatschet en las islas, Zavala o Medina en
+        Paraguaná— siguen enseñándose. (b2) Voces cuya única vía documentada es
+        el español de Hispaniola salen de `[Voces de fuera]`, igual que
+        salieron las de `SIN_FORMA_DE_LA_ESFERA`.
+      a_favor: >-
+        Es la regla que Oliver formula y la que el lexicón YA aplicó una vez,
+        bien, con `hamaka` («se queda reconstruida: hamaca es préstamo taíno
+        del propio español»). Y no mueve el score: el que diga `cacike` sigue
+        contando, igual que hoy.
+      en_contra: >-
+        Hay que auditar 25 voces una por una, y la vía de cada una es una
+        afirmación que necesita su etiqueta y su cita. Es una campaña, no una
+        tarde.
+      coste_de_medicion: >-
+        El patrón A/B de `medir_politica_atestiguado_manda.py`, y el censo
+        antes/después con `medir_taino_en_la_esfera.py`.
+
+    - letra: C
+      que_es: >-
+        Restringir el taíno a las voces de PRODUCTO (comida, planta, animal,
+        objeto) y dejar fuera las de INSTITUCIÓN y RITUAL: `cacike`, `nitaino`,
+        `naboria`, `batey`, `areito`, `dujo`, `maboya`, `akcicyaa`.
+      a_favor: >-
+        Es el eje de la skill `minar-fuente` §3: que se comparta una planta o
+        una mercancía es préstamo areal normal y no descarta nada; que se
+        comparta el vocabulario de la organización social es otra cosa. Y de la
+        institución taína no hay ni un hilo de evidencia de contacto.
+      en_contra: >-
+        El criterio producto/institución lo pongo yo, no una fuente; el eje de
+        la skill es sobre FILIACIÓN (pronombres, numerales, morfemas), no sobre
+        instituciones. Y `maboya` ya se dijo en un run.
+      coste_de_medicion: como B, sobre un subconjunto menor
+
+    - letra: D
+      que_es: >-
+        Dejar el motor quieto y arreglar sólo el MUNDO: entrar `etnia-009` y
+        los dos hechos de `geografia_politica`, para que la próxima sesión no
+        vuelva a preguntar y para que el hueco deje de ser invisible. La
+        decisión sobre el prompt se toma después, con la auditoría de B hecha.
+      a_favor: >-
+        Separa lo que está medido (el mundo) de lo que hay que auditar (las 25
+        voces). No mueve `score` a mitad de serie. Y es literalmente lo que
+        Miguel pidió: «anexarlas a nuestra esfera» — la anexión, cuando la
+        evidencia dice que no hubo trato, es escribir que no lo hubo.
+      en_contra: >-
+        Deja el anacronismo de `cacike`/`naboria` corriendo un tiempo más.
+      coste_de_medicion: ninguno
+
+  recomendacion: >-
+    **D ahora, B como campaña siguiente, y A/C descartadas.** D porque el
+    mundo es lo que esta parcela midió y lo que puede entrar sin mover el
+    instrumento. B porque el vector-1 es una afirmación de Oliver con tres
+    citas y merece una auditoría voz por voz, no una decisión al bulto. C se
+    descarta porque el criterio es mío y porque cuatro de las voces que más
+    molestarían (`caney`, `cemi`, `bejique`, `huracan`) ya están fuera por otra
+    puerta. A se descarta porque `cacike` y `naboria` están en el prompt hoy y
+    ahora sabemos qué son.
+
+# ══════════════════════════════════════════════════════════════════
+# 7. LO QUE NO SE ENCONTRÓ (las negativas valen — skill §6)
+# ══════════════════════════════════════════════════════════════════
+no_encontrado:
+  - "Ningún objeto antillano en Falcón, Paraguaná o las islas ABC. Ni cerámica ostionoide, chicoide o meillacoide, ni guanín, ni cemí atribuido con catálogo."
+  - "Ningún objeto dabajuroide en las Antillas Mayores."
+  - "Ningún cronista que describa una travesía, un comercio o una noticia entre la costa caquetía y las Antillas Mayores antes de 1499."
+  - "Ninguna cifra de distancia de travesía con fuente en el repo. Paraguaná↔Aruba está en el corpus (~25 km, ecologia-021); de las ABC a La Española no hay ninguna, y no se pone a mano."
+  - "Nada sobre los lucayos llevados a las perlas de Cubagua: cero menciones de «lucay» en TODO el repo (etnias, asentamientos, corpus) y cero en Anglería vol. 1 y en Arcaya. Es una deportación real y documentada en otra literatura, pero el repo no la tiene y además Cubagua es de la costa oriental, fuera de la polity costera."
+  - "Ninguna lista Swadesh del caquetío contra el taíno: el Apéndice A de la tesis de Oliver (las listas de 100 palabras para lenguas arahuacas, pp. 559-594 impresas) sigue con el OCR ilegible (#62). Es la pieza que mediría de verdad la distancia caquetío↔taíno, y no la tenemos."
+  - "Ningún dato sobre la RECUPERACIÓN contemporánea del taíno, su escritura ni la identidad taína actual. Decisión de Miguel: no es dato del siglo XV, y no se buscó."
+  - "tesseract NO está instalado en esta máquina (verificado: no está en PATH ni en C:/Program Files/Tesseract-OCR). El OCR que la memoria del proyecto da por disponible desde 2026-08-14 no se pudo usar, así que la tesis escaneada de Oliver (79 MB, 801 pp.) sólo se leyó por los capítulos 2 y 3, que tienen capa de texto propia."
+
+# ══════════════════════════════════════════════════════════════════
+# 8. OBRAS QUE HARÍAN FALTA — anotadas, NO descargadas
+# ══════════════════════════════════════════════════════════════════
+obras_a_conseguir:
+
+  - obra: "Rouse, Irving y Cruxent, J. M. (1963), Venezuelan Archaeology"
+    por_que: >-
+      Define la tradición dabajuroide y la sitúa frente a las series
+      antillanas. Es lo que cerraría arq-01 por el lado positivo. YA ESTÁ EN LA
+      BIBLIOGRAFÍA (`rouse-cruxent-1963`) y el archivo está en 0 bytes.
+    url: "Yale University Press, 1963 — sin edición abierta localizada; ejemplares en archive.org bajo préstamo controlado (https://archive.org/search?query=Venezuelan+Archaeology+Rouse+Cruxent)"
+    derechos: "En copyright (Yale UP). Préstamo controlado, no descarga libre."
+    tamano: "no medido — no se abrió"
+    prioridad: alta
+
+  - obra: "Rouse, Irving (1992), The Tainos: Rise and Decline of the People Who Greeted Columbus"
+    por_que: >-
+      La síntesis estándar del taíno y de las series cerámicas antillanas
+      (saladoide → ostionoide → chicoide). Es lo que permitiría decir si el
+      límite septentrional del dabajuroide y el límite meridional del
+      ostionoide se tocan en algún punto o dejan un vacío.
+    url: "Yale University Press, 1992 — https://yalebooks.yale.edu/ ; préstamo controlado en archive.org"
+    derechos: "En copyright. No descargar."
+    tamano: "no medido"
+    prioridad: alta
+
+  - obra: "Keegan, W. F. y Hofman, C. L. (2017), The Caribbean before Columbus"
+    por_que: >-
+      La síntesis moderna que sustituye a Rouse 1992 y que trata expresamente
+      las conexiones continente↔islas y el «vacío del medio» que
+      `horizonte-de-contacto` señala. También cerraría Keegan 1989, que el
+      corpus cita sin haberlo leído entero.
+    url: "Oxford University Press, 2017 — https://global.oup.com/academic/product/the-caribbean-before-columbus-9780190605247"
+    derechos: "En copyright. No descargar."
+    tamano: "no medido"
+    prioridad: alta
+
+  - obra: "Boomert, Arie (2000), Trinidad, Tobago and the Lower Orinoco Interaction Sphere"
+    por_que: >-
+      El eslabón entre el Orinoco y el arco antillano — la puerta por la que
+      Oliver hace entrar al taíno a las Antillas. Es lo que documentaría que la
+      ruta del taíno y la del caquetío NO se cruzan.
+      Ya lo pedía `horizonte-de-contacto` §«Qué conseguir» (#5) y sigue ausente.
+    url: "Cairi Publications, Alkmaar, 2000 — copias en repositorios institucionales; ficha en https://www.worldcat.org/"
+    derechos: "En copyright. No descargar."
+    tamano: "no medido"
+    prioridad: media
+
+  - obra: "Fernandes, D. M. et al. (2020/2021), A genetic history of the pre-contact Caribbean, Nature 590"
+    por_que: >-
+      Ya está en la bibliografía (`fernandes-2020`) y el archivo está en 0
+      bytes. Es la única genómica con muestras de VARIAS poblaciones caribeñas
+      precontacto; es lo que permitiría preguntar por afinidad insular ↔
+      continental con más de un individuo.
+    url: "Nature 590 (2021) — versión de acceso público en PubMed Central: https://pmc.ncbi.nlm.nih.gov/ (buscar «A genetic history of the pre-contact Caribbean»)"
+    derechos: "Acceso abierto en PMC (depósito de los NIH). Descargable."
+    tamano: "no medido — no se descargó"
+    prioridad: alta
+
+  - obra: "Antczak, A. y Antczak, M. M. (2006), Los ídolos de las Islas Prometidas"
+    por_que: >-
+      Arqueología de Los Roques y Las Aves de primera mano — el borde oriental
+      del mar caquetío, y la fuente de segunda mano de la que el corpus toma la
+      disputa por esas islas. `horizonte-de-contacto` ya lo pedía.
+    url: "Editorial Equinoccio, Universidad Simón Bolívar, 2006 — ficha en https://www.worldcat.org/"
+    derechos: "En copyright. No descargar."
+    tamano: "no medido"
+    prioridad: media
+
+  - obra: "Ramos Pérez, Demetrio (1978), sobre Juan de Ampíes y el poblamiento de Coro"
+    por_que: >-
+      La fuente de archivo de la que Oliver saca las probanzas de 1526 y las
+      cartas de Ampíes. Es lo que resolvería la discrepancia 1513/1515 y
+      Salazar/Baso Zabala de col-02, y lo que daría el texto completo de lo que
+      Ampíes dijo de los caquetíos con los que conversaba en Santo Domingo.
+      Ya está en la bibliografía (`ramos-perez-1978`) sólo como reseña.
+    url: "reseña en Persée ya en el repo (fuentes_caquetios/Ramos_Perez_1978_resenia_Persee.pdf); la monografía, no"
+    derechos: "no verificado"
+    tamano: "no medido"
+    prioridad: alta
+
+  - obra: "CoDoIn — Colección de Documentos Inéditos de Indias, tomos de 1864 y 1868"
+    por_que: >-
+      Las cartas de Ampíes al Rey (1525, 1526) que Oliver cita por página
+      (CoDoIn 1864: 431-436; 1868: 27-32, 30-31). Son documento primario y
+      están fuera de copyright por antigüedad.
+    url: "digitalizados en Internet Archive y en la Biblioteca Virtual Miguel de Cervantes — https://archive.org/search?query=Coleccion+de+documentos+ineditos+de+Indias"
+    derechos: "Dominio público (s. XIX)."
+    tamano: "no medido"
+    prioridad: media
+
+  - obra: "Hartog, J. (1961 / 1968), historias de Aruba y de Curazao"
+    por_que: >-
+      La cronología de las deportaciones y los retornos que
+      `martinez-cruzado-2003` y `van-buurt-2014` usan de segunda mano, y el
+      «Puerto de los Indios Curaçao» al este de Cumarebo. Ya lo pedía la nota
+      de Martínez-Cruzado.
+    url: "De Wit, Oranjestad/Aruba — ficha en https://www.worldcat.org/"
+    derechos: "En copyright. No descargar."
+    tamano: "no medido"
+    prioridad: media
