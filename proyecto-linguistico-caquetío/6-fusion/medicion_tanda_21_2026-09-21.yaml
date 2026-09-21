@@ -1,0 +1,1182 @@
+# GENERADO por 6-fusion/scripts/medir_tanda_21.py
+# No se edita a mano. Ninguna cifra de aquí se escribe dos veces.
+medicion: tanda-21-un-corte-una-medicion
+fecha: 2026-09-21
+ref_de_antes: b5733f1
+decide: 6-fusion/decisiones_tanda_2026-09-21.yaml
+responde_a: 6-fusion/issues-pendientes/morfologia-revision-2026-09-20.md §6
+que_se_aplico:
+  - d21.1 C — el aspecto sólo cuenta sobre el ÚLTIMO segmento verbal
+  - d21.2 A — _RAICES_VERB filtrada a familia caquetía en las dos puertas
+  - d21.4 B — cat v_estativo en las 10 estativas + una línea en el prompt
+  - d21.5 C — ka-/ma- a REGLAS_ATRIBUTIVAS; ka-biro = hay sal
+  - d21.6 B — -ana se enseña sin glosa
+  - d21.8 A — -kana baja a reconstruido; ejemplos con voz caquetía
+  - d21.9 A — -naiki a REGLAS_RETIRADAS
+  - d21.10 A — kudanga y kuté al prompt como registro formal
+  - d21.11 A — el posesivo sobre verbo sale de las violaciones de slot
+  - d21.13 B — se importa el no-poseído u-
+  - d21.14 B+A — deuda documental y -bacoa → -bakoa
+  - "d21.15 — coro 'espina' con González Batista"
+  - d21.16 — las cinco glosas
+instrumento:
+  formas_distintas_en_la_base: 2670
+  usos_sumados: 96292
+  vocabulario_base:
+    antes: 5507
+    hoy: 5507
+  fuera_del_habla:
+    antes: 13
+    hoy: 13
+  formas_de_plantilla:
+    antes: 5952
+    hoy: 5981
+  puerta_entran:
+    - acción
+    - adjetivo
+    - adjetivos
+    - atributivo
+    - conjugan
+    - corriente
+    - cosa
+    - desinencia
+    - dueño
+    - enojado
+    - estado
+    - feroz
+    - formal
+    - grande
+    - hay
+    - kuru-bakoa
+    - le
+    - llevan
+    - mayor
+    - mía
+    - nombre
+    - predica
+    - predican
+    - privativo
+    - propón
+    - salado
+    - seco
+    - tiene
+    - trato
+    - tuyo
+    - u-biro
+    - u-buko
+    - usarla
+    - usted
+    - viejo
+  puerta_salen:
+    - adabacoa
+    - bacoa
+    - el-la
+    - están
+    - salinero
+    - toda
+  cats_verbales:
+    antes:
+      - v_raiz
+    hoy:
+      - v_estativo
+      - v_raiz
+  raices_verb:
+    antes: 1394
+    hoy: 1394
+  raices_verb_caquetias_hoy: 43
+  raices_verb_que_el_detector_deja_de_mirar: 1351
+  reglas_retiradas:
+    antes:
+      - -ko
+      - -sha
+    hoy:
+      - -ko
+      - -naiki
+      - -sha
+  tiene_reglas_atributivas:
+    antes: false
+    hoy: true
+  claves_de_todas_las_reglas:
+    antes:
+      - -aima
+      - -ana
+      - -bacoa
+      - -bana
+      - -da
+      - -gua
+      - -ima
+      - -iro
+      - -ka
+      - -kana
+      - -naiki
+      - -ni
+      - -ubana
+      - -uco
+      - -uru
+      - ka-
+      - ma-
+      - ta-
+      - wa-
+    hoy:
+      - -aima
+      - -ana
+      - -bakoa
+      - -bana
+      - -da
+      - -gua
+      - -ima
+      - -iro
+      - -ka
+      - -kana
+      - -ni
+      - -ubana
+      - -uco
+      - -uru
+      - ka-
+      - ma-
+      - ta-
+      - u-
+      - wa-
+    entran:
+      - -bakoa
+      - u-
+    salen:
+      - -bacoa
+      - -naiki
+desafijador:
+  control_segmentador_local:
+    desvios_antes: 0
+    desvios_hoy: 0
+    verde: true
+    nota: "el segmentador de este script tiene que reproducir `nucleo_de_token()` del motor forma a forma, en los dos brazos. Si no, los contrafactuales de abajo no miden nada"
+  d21_5_reagrupacion_no_mueve_el_nucleo:
+    claves_iguales: true
+    diff:
+      formas: 0
+      usos: 0
+      detalle: []
+    nota: "d21.5 saca `ka-` y `ma-` de REGLAS_POSESIVAS a REGLAS_ATRIBUTIVAS: cambia la AGRUPACIÓN, no las claves. Tiene que salir 0 formas y 0 usos"
+  d21_9_naiki:
+    diff:
+      formas: 0
+      usos: 0
+      detalle: []
+    formas_de_la_base_con_naiki: []
+    nota: "sacar `-naiki` de TODAS_LAS_REGLAS mueve `_SUFIJOS_CAQ`, así que se mide aunque el uso sea cero: d21.9 lo pide explícitamente"
+  d21_13_no_poseido:
+    diff:
+      formas: 0
+      usos: 0
+      detalle: []
+    formas_de_la_base_con_u_inicial: []
+    nota: "añadir `u-` mueve `_PREFIJOS_CAQ`"
+  d21_14_bakoa:
+    diff:
+      formas: 32
+      usos: 65
+      detalle:
+        -
+          forma: kashi-bacoa
+          usos: 14
+          antes: kashi
+          hoy: kashi+bacoa
+        -
+          forma: juri-bacoa
+          usos: 7
+          antes: juri
+          hoy: juri+bacoa
+        -
+          forma: domaria-bacoa
+          usos: 5
+          antes: domaria
+          hoy: domaria+bacoa
+        -
+          forma: kapo-bacoa
+          usos: 3
+          antes: kapo
+          hoy: kapo+bacoa
+        -
+          forma: juri-bacoa-ni
+          usos: 2
+          antes: juri
+          hoy: juri+bacoa
+        -
+          forma: kati-bacoa
+          usos: 2
+          antes: kati
+          hoy: kati+bacoa
+        -
+          forma: domaria-bacoa-ni
+          usos: 2
+          antes: domaria
+          hoy: domaria+bacoa
+        -
+          forma: juri-bacoa-ka
+          usos: 2
+          antes: juri
+          hoy: juri+bacoa
+        -
+          forma: kapu-bacoa
+          usos: 2
+          antes: kapu
+          hoy: kapu+bacoa
+        -
+          forma: kati-iro-bacoa
+          usos: 2
+          antes: kati
+          hoy: kati+iro+bacoa
+        -
+          forma: wara-kali-bacoa
+          usos: 2
+          antes: wara+kali
+          hoy: wara+kali+bacoa
+        -
+          forma: kati-bacoa-gua
+          usos: 2
+          antes: kati
+          hoy: kati+bacoa
+        -
+          forma: usera-bacoa
+          usos: 1
+          antes: usera
+          hoy: usera+bacoa
+        -
+          forma: juri-bacoa-da
+          usos: 1
+          antes: juri
+          hoy: juri+bacoa
+        -
+          forma: juri-bacoa-bana
+          usos: 1
+          antes: juri
+          hoy: juri+bacoa
+        -
+          forma: waranao-bacoa
+          usos: 1
+          antes: waranao
+          hoy: waranao+bacoa
+        -
+          forma: warakaro-bacoa
+          usos: 1
+          antes: warakaro
+          hoy: warakaro+bacoa
+        -
+          forma: lawari-bacoa-ana
+          usos: 1
+          antes: lawari
+          hoy: lawari+bacoa
+        -
+          forma: popoi-bacoa-ana
+          usos: 1
+          antes: popoi
+          hoy: popoi+bacoa
+        -
+          forma: dichiba-bacoa
+          usos: 1
+          antes: dichiba
+          hoy: dichiba+bacoa
+        -
+          forma: barbache-bacoa
+          usos: 1
+          antes: barbache
+          hoy: barbache+bacoa
+        -
+          forma: juri-bacoa-ana
+          usos: 1
+          antes: juri
+          hoy: juri+bacoa
+        -
+          forma: kiricias-bacoa
+          usos: 1
+          antes: kiricias
+          hoy: kiricias+bacoa
+        -
+          forma: beceremikore-bacoa
+          usos: 1
+          antes: beceremikore
+          hoy: beceremikore+bacoa
+        -
+          forma: lawari-bacoa-ni
+          usos: 1
+          antes: lawari
+          hoy: lawari+bacoa
+        -
+          forma: hueke-bacoa
+          usos: 1
+          antes: hueke
+          hoy: hueke+bacoa
+        -
+          forma: kana-bacoa
+          usos: 1
+          antes: kana
+          hoy: kana+bacoa
+        -
+          forma: warakaro-bacoa-ana
+          usos: 1
+          antes: warakaro
+          hoy: warakaro+bacoa
+        -
+          forma: lawari-bacoa
+          usos: 1
+          antes: lawari
+          hoy: lawari+bacoa
+        -
+          forma: kibakibi-bacoa-iro
+          usos: 1
+          antes: kibakibi
+          hoy: kibakibi+bacoa
+        -
+          forma: juri-bacoa-ima
+          usos: 1
+          antes: juri
+          hoy: juri+bacoa
+        -
+          forma: kintera-bacoa
+          usos: 1
+          antes: kintera
+          hoy: kintera+bacoa
+    formas_que_dejan_de_segmentarse_igual: 32
+    de_ellas_cambian_es_raiz_de_ninguna_parte: 0
+    lista_ninguna_parte: []
+    de_ellas_cambian_de_familia_en_el_corte_entero: 0
+    lista_familia: []
+    limpia: true
+    nota: "«limpia» = las formas dejan de desafijarse por el borde pero NINGUNA cambia lo que el núcleo decide: ni `es_raiz_de_ninguna_parte()` —su raíz sigue siendo un segmento del núcleo— ni `_familia_de_token()`, que resuelve por el primer segmento igual. Si `limpia` es false, d21.14 A no debería haberse aplicado en este corte"
+el_prompt:
+  plantillas:
+    IDENTIDAD_LINGUISTICA:
+      antes: 1252
+      hoy: 1252
+      delta: 0
+      texto_cambia: false
+    prompt_afijos_atestiguados:
+      antes: 616
+      hoy: 639
+      delta: 23
+      texto_cambia: true
+    prompt_afijos_atestiguados_breve:
+      antes: 167
+      hoy: 167
+      delta: 0
+      texto_cambia: true
+    "prompt_refuerzo[1.0]":
+      antes: 193
+      hoy: 193
+      delta: 0
+      texto_cambia: false
+    "prompt_refuerzo[3.0]":
+      antes: 175
+      hoy: 175
+      delta: 0
+      texto_cambia: false
+    "prompt_refuerzo[5.0]":
+      antes: 150
+      hoy: 150
+      delta: 0
+      texto_cambia: false
+    "prompt_refuerzo[6.5]":
+      antes: 81
+      hoy: 81
+      delta: 0
+      texto_cambia: false
+    prompt_reglas_breve:
+      antes: 995
+      hoy: 1192
+      delta: 197
+      texto_cambia: true
+    prompt_reglas_completo:
+      antes: 4449
+      hoy: 5122
+      delta: 673
+      texto_cambia: true
+    "prompt_rescate[0]":
+      antes: 970
+      hoy: 970
+      delta: 0
+      texto_cambia: false
+    "prompt_rescate[1]":
+      antes: 772
+      hoy: 772
+      delta: 0
+      texto_cambia: false
+    "prompt_rescate[2]":
+      antes: 688
+      hoy: 688
+      delta: 0
+      texto_cambia: false
+  plantillas_que_cambian:
+    - prompt_afijos_atestiguados
+    - prompt_afijos_atestiguados_breve
+    - prompt_reglas_breve
+    - prompt_reglas_completo
+  plantillas_iguales:
+    - IDENTIDAD_LINGUISTICA
+    - "prompt_refuerzo[1.0]"
+    - "prompt_refuerzo[3.0]"
+    - "prompt_refuerzo[5.0]"
+    - "prompt_refuerzo[6.5]"
+    - "prompt_rescate[0]"
+    - "prompt_rescate[1]"
+    - "prompt_rescate[2]"
+  el_prompt_cambia: true
+  caracteres_estaticos:
+    antes: 10508
+    hoy: 11401
+  ensayo_de_los_63:
+    semilla: 20260921
+    antes:
+      prompts: 63
+      medio: 7109.8
+      mediana: 6191
+      min: 4677
+      max: 10809
+    hoy:
+      prompts: 63
+      medio: 7462.2
+      mediana: 6513
+      min: 4874
+      max: 11420
+    delta_medio: 352.4
+    nota: "`run_turn` de verdad con `_invoke` espiado, Director mudo, misma semilla del RNG global (de ahí sale la muestra del lexicón) y sin escena. No llama a la API. La longitud predice el score, r = −0,48"
+serie_c:
+  con_escena:
+    n: 216
+    cambian: 12
+    a_la_baja: 12
+    al_alza: 0
+    delta_max_abs: 1.0
+    delta_medio_de_las_que_cambian: -1.0
+    score_medio_antes: 7.5866
+    score_medio_hoy: 7.531
+    caquetias_cambian: 0
+    neos_cambian: 0
+    aspecto_medio_antes: 2.0
+    aspecto_medio_hoy: 1.9444
+    aspecto_tope: 2.0
+    respuestas_con_aspecto_al_tope_antes: 216
+    respuestas_con_aspecto_al_tope_hoy: 204
+    respuestas_sin_aspecto_antes: 0
+    respuestas_sin_aspecto_hoy: 0
+    por_run:
+      f2741e89:
+        antes: 7.7375
+        hoy: 7.7236
+      fcdfa07a:
+        antes: 7.4681
+        hoy: 7.3708
+      0313d830:
+        antes: 7.5542
+        hoy: 7.4986
+    detalle:
+      -
+        run: f2741e89
+        dia: 1
+        turno: 5
+        agente: Tauta
+        antes: 7.0
+        hoy: 6.0
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: fcdfa07a
+        dia: 2
+        turno: 1
+        agente: Naure
+        antes: 6.8
+        hoy: 5.8
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: fcdfa07a
+        dia: 2
+        turno: 1
+        agente: Uria
+        antes: 7.6
+        hoy: 6.6
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: fcdfa07a
+        dia: 2
+        turno: 2
+        agente: Wache
+        antes: 6.8
+        hoy: 5.8
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: fcdfa07a
+        dia: 2
+        turno: 3
+        agente: Karama
+        antes: 7.1
+        hoy: 6.1
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: fcdfa07a
+        dia: 2
+        turno: 4
+        agente: Tauta
+        antes: 5.0
+        hoy: 4.0
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: fcdfa07a
+        dia: 2
+        turno: 5
+        agente: Cege
+        antes: 8.5
+        hoy: 7.5
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: fcdfa07a
+        dia: 2
+        turno: 5
+        agente: Siwa
+        antes: 6.8
+        hoy: 5.8
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: 0313d830
+        dia: 3
+        turno: 1
+        agente: Urari
+        antes: 6.9
+        hoy: 5.9
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: 0313d830
+        dia: 3
+        turno: 3
+        agente: Waitiao
+        antes: 5.5
+        hoy: 4.5
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: 0313d830
+        dia: 3
+        turno: 4
+        agente: Chakamba
+        antes: 8.6
+        hoy: 7.6
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: 0313d830
+        dia: 3
+        turno: 6
+        agente: Uria
+        antes: 8.4
+        hoy: 7.4
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+    control_del_replay:
+      n: 216
+      desvios: 0
+      verde: true
+      detalle: []
+      commit_del_run: b8c85ca
+    control_verde: true
+    control_desvios: 0
+    ya_movido_por_los_cortes_del_09_20:
+      cambian: 85
+      score_medio_el_dia_del_run: 7.744
+      score_medio_antes_de_esta_tanda: 7.5866
+      aspecto_medio_el_dia_del_run: 2.0
+    fijadas_antes:
+      -
+        run: 0313d830
+        concepto: eclipse
+        forma: kasi-nii-bana
+    fijadas_hoy:
+      -
+        run: 0313d830
+        concepto: eclipse
+        forma: kasi-nii-bana
+    competencias_antes:
+      cuentas_vidrio:
+        -
+          - kasuta-ico-kana
+          - 18.45
+        -
+          - wara-biro-nomi
+          - 9.95
+        -
+          - kiba-kasi
+          - 2.0
+        -
+          - kati-iro-bana
+          - 1.7
+        -
+          - kasuta-tiru-kana
+          - 1.45
+        -
+          - kati-iro
+          - 1.35
+        -
+          - kati-iro-bacoa
+          - 1.35
+        -
+          - kati-iro-ubana
+          - 1.35
+      cometa:
+        -
+          - kasi-pütchi-bana
+          - 16.6
+        -
+          - kati-wara-ubana
+          - 5.2
+        -
+          - isiro-bana-uco
+          - 2.9
+        -
+          - kasi-dipara
+          - 1.75
+        -
+          - kati-sudaka
+          - 1.7
+        -
+          - kati-arua
+          - 1.7
+        -
+          - maboya-ubana
+          - 1.4
+        -
+          - kati-sudaka-ubana
+          - 1.2
+      eclipse:
+        -
+          - kasi-nii-bana
+          - 20.1
+        -
+          - etamo-pütchi
+          - 4.7
+        -
+          - kasi-nii-ubana
+          - 3.6
+        -
+          - kana-ubana
+          - 2.0
+    competencias_hoy:
+      cuentas_vidrio:
+        -
+          - kasuta-ico-kana
+          - 18.45
+        -
+          - wara-biro-nomi
+          - 9.95
+        -
+          - kiba-kasi
+          - 2.0
+        -
+          - kati-iro-bana
+          - 1.7
+        -
+          - kasuta-tiru-kana
+          - 1.45
+        -
+          - kati-iro
+          - 1.35
+        -
+          - kati-iro-bacoa
+          - 1.35
+        -
+          - kati-iro-ubana
+          - 1.35
+      cometa:
+        -
+          - kasi-pütchi-bana
+          - 16.6
+        -
+          - kati-wara-ubana
+          - 5.2
+        -
+          - isiro-bana-uco
+          - 2.9
+        -
+          - kasi-dipara
+          - 1.75
+        -
+          - kati-sudaka
+          - 1.7
+        -
+          - kati-arua
+          - 1.7
+        -
+          - maboya-ubana
+          - 1.4
+        -
+          - kati-sudaka-ubana
+          - 1.2
+      eclipse:
+        -
+          - kasi-nii-bana
+          - 20.1
+        -
+          - etamo-pütchi
+          - 4.7
+        -
+          - kasi-nii-ubana
+          - 3.6
+        -
+          - kana-ubana
+          - 2.0
+    adoptadas_antes:
+      - biro-aima
+      - isiro-bana-uco
+      - kasi-nii-bana
+      - kasi-nii-ubana
+      - kasi-pütchi-bana
+      - kasuta-ico-kana
+      - kati-wara-ubana
+      - maboya-ubana
+      - pana-bana
+      - sima-gua
+      - siwato-iro
+      - tuba-bana
+      - wara-biro-nomi
+    adoptadas_hoy:
+      - biro-aima
+      - isiro-bana-uco
+      - kasi-nii-bana
+      - kasi-nii-ubana
+      - kasi-pütchi-bana
+      - kasuta-ico-kana
+      - kati-wara-ubana
+      - maboya-ubana
+      - pana-bana
+      - sima-gua
+      - siwato-iro
+      - tuba-bana
+      - wara-biro-nomi
+  control:
+    n: 216
+    cambian: 18
+    a_la_baja: 18
+    al_alza: 0
+    delta_max_abs: 2.0
+    delta_medio_de_las_que_cambian: -1.0556
+    score_medio_antes: 7.4611
+    score_medio_hoy: 7.3731
+    caquetias_cambian: 0
+    neos_cambian: 0
+    aspecto_medio_antes: 1.9954
+    aspecto_medio_hoy: 1.9074
+    aspecto_tope: 2.0
+    respuestas_con_aspecto_al_tope_antes: 215
+    respuestas_con_aspecto_al_tope_hoy: 197
+    respuestas_sin_aspecto_antes: 0
+    respuestas_sin_aspecto_hoy: 1
+    por_run:
+      0345840d:
+        antes: 7.5861
+        hoy: 7.5028
+      45618069:
+        antes: 7.5028
+        hoy: 7.4333
+      e98227eb:
+        antes: 7.2944
+        hoy: 7.1833
+    detalle:
+      -
+        run: 0345840d
+        dia: 1
+        turno: 2
+        agente: Uria
+        antes: 6.9
+        hoy: 5.9
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: 0345840d
+        dia: 1
+        turno: 3
+        agente: Wairon
+        antes: 6.9
+        hoy: 5.9
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: 0345840d
+        dia: 1
+        turno: 4
+        agente: Wamipa
+        antes: 9.0
+        hoy: 8.0
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: 0345840d
+        dia: 1
+        turno: 4
+        agente: Wasima
+        antes: 8.6
+        hoy: 7.6
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: 0345840d
+        dia: 1
+        turno: 4
+        agente: Karama
+        antes: 4.1
+        hoy: 3.1
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: 0345840d
+        dia: 1
+        turno: 5
+        agente: Jaiata
+        antes: 6.0
+        hoy: 5.0
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: 45618069
+        dia: 2
+        turno: 2
+        agente: Dichiba
+        antes: 4.4
+        hoy: 3.4
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: 45618069
+        dia: 2
+        turno: 2
+        agente: Wanepe
+        antes: 9.0
+        hoy: 8.0
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: 45618069
+        dia: 2
+        turno: 3
+        agente: Humohumo
+        antes: 7.4
+        hoy: 6.4
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: 45618069
+        dia: 2
+        turno: 5
+        agente: Siwa
+        antes: 9.2
+        hoy: 8.2
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: 45618069
+        dia: 2
+        turno: 5
+        agente: Waru
+        antes: 5.5
+        hoy: 4.5
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: e98227eb
+        dia: 3
+        turno: 1
+        agente: Wairon
+        antes: 6.8
+        hoy: 5.8
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: e98227eb
+        dia: 3
+        turno: 1
+        agente: Dara-bana
+        antes: 7.7
+        hoy: 6.7
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: e98227eb
+        dia: 3
+        turno: 3
+        agente: Karama
+        antes: 8.4
+        hoy: 7.4
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: e98227eb
+        dia: 3
+        turno: 4
+        agente: Jaiata
+        antes: 8.3
+        hoy: 7.3
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: e98227eb
+        dia: 3
+        turno: 4
+        agente: Siwa
+        antes: 7.5
+        hoy: 6.5
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: e98227eb
+        dia: 3
+        turno: 5
+        agente: Siwa
+        antes: 6.0
+        hoy: 4.0
+        delta: -2.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 0.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+      -
+        run: e98227eb
+        dia: 3
+        turno: 6
+        agente: Uria
+        antes: 8.4
+        hoy: 7.4
+        delta: -1.0
+        aspecto_antes: 2.0
+        aspecto_hoy: 1.0
+        formas_que_dejan_de_contar: []
+        formas_que_empiezan_a_contar: []
+    control_del_replay:
+      n: 216
+      desvios: 0
+      verde: true
+      detalle: []
+      commit_del_run: b8c85ca
+    control_verde: true
+    control_desvios: 0
+    ya_movido_por_los_cortes_del_09_20:
+      cambian: 119
+      score_medio_el_dia_del_run: 7.6477
+      score_medio_antes_de_esta_tanda: 7.4611
+      aspecto_medio_el_dia_del_run: 1.9954
+    fijadas_antes:
+      -
+        run: 0345840d
+        concepto: cuentas_vidrio
+        forma: kasuta-bana-iro
+      -
+        run: e98227eb
+        concepto: eclipse
+        forma: kasi-tapa-uco
+    fijadas_hoy:
+      -
+        run: 0345840d
+        concepto: cuentas_vidrio
+        forma: kasuta-bana-iro
+      -
+        run: e98227eb
+        concepto: eclipse
+        forma: kasi-tapa-uco
+    competencias_antes:
+      cuentas_vidrio:
+        -
+          - kasuta-bana-iro
+          - 16.75
+        -
+          - pütchi-kasuta-bana-iro
+          - 1.35
+      cometa:
+        -
+          - siwato-bana-uco
+          - 7.45
+      eclipse:
+        -
+          - kasi-tapa-uco
+          - 7.75
+        -
+          - kapo-bana-uco
+          - 1.6
+        -
+          - kasi-bana-kana
+          - 1.45
+    competencias_hoy:
+      cuentas_vidrio:
+        -
+          - kasuta-bana-iro
+          - 16.75
+        -
+          - pütchi-kasuta-bana-iro
+          - 1.35
+      cometa:
+        -
+          - siwato-bana-uco
+          - 7.45
+      eclipse:
+        -
+          - kasi-tapa-uco
+          - 7.75
+        -
+          - kapo-bana-uco
+          - 1.6
+        -
+          - kasi-bana-kana
+          - 1.45
+    adoptadas_antes:
+      - amana-bana
+      - barsure-ima
+      - biro-uco
+      - biro-uco-aima
+      - chaa-ni ta-kawa-ana
+      - kasi-tapa-uco
+      - kasuta-bana-iro
+      - kaya-bana
+      - ma-barsure-aia
+      - ma-dichiba
+      - nüma-kana
+      - pütchi-bana
+      - pütchi-kasuta-bana-iro
+      - siwato-bana-ima
+      - siwato-bana-uco
+      - suka-uco
+      - ta-dali-bana
+      - tüshi-uco
+    adoptadas_hoy:
+      - amana-bana
+      - barsure-ima
+      - biro-uco
+      - biro-uco-aima
+      - chaa-ni ta-kawa-ana
+      - kasi-tapa-uco
+      - kasuta-bana-iro
+      - kaya-bana
+      - ma-barsure-aia
+      - ma-dichiba
+      - nüma-kana
+      - pütchi-bana
+      - pütchi-kasuta-bana-iro
+      - siwato-bana-ima
+      - siwato-bana-uco
+      - suka-uco
+      - ta-dali-bana
+      - tüshi-uco
+d21_3_saturacion:
+  poblacion: todas las respuestas de la base
+  respuestas: 3379
+  tope: 2.0
+  media_antes: 1.9982
+  media_hoy: 1.9532
+  al_tope_antes: 3373
+  al_tope_hoy: 3230
+  pct_al_tope_antes: 99.82
+  pct_al_tope_hoy: 95.59
+  sin_aspecto_antes: 0
+  sin_aspecto_hoy: 9
+  cambian: 143
+  por_era_y_serie:
+    era1/-:
+      respuestas: 2071
+      media_antes: 1.9976
+      media_hoy: 1.9686
+    era2/-:
+      respuestas: 300
+      media_antes: 2.0
+      media_hoy: 1.96
+    era2/era2-b:
+      respuestas: 144
+      media_antes: 2.0
+      media_hoy: 1.875
+    era2/era2-c:
+      respuestas: 864
+      media_antes: 1.9988
+      media_hoy: 1.9271
+  nota: "d21.3 se decidió A —escribir la trampa, no cambiar el peso— con el matiz de VOLVER A MEDIR después de d21.1 y d21.2: «al exigir verbo de verdad la saturación puede caerse sola». Aquí está el número nuevo. Si sigue pegado al tope, el rediseño del peso (opción B) queda abierto con su propio diseño en 5-experimento/"

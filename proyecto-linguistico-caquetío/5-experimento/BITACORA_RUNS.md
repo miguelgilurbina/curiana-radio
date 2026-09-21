@@ -318,7 +318,7 @@ abierta abajo.
 
 ### Era 2 · serie A — pruebas del motor (2026-09-14 → 16)
 
-> ⚠️ **Cambio de instrumento (2026-09-16 → 09-20), declarado.** Doce cambios,
+> ⚠️ **Cambio de instrumento (2026-09-16 → 09-21), declarado.** Trece cambios,
 > en el orden en que se decidieron. Los dos primeros son de
 > `score_linguistico()` y pasaron DESPUÉS de los runs de abajo, así que los del
 > 09-14 no son estrictamente comparables con los que vengan:
@@ -981,7 +981,142 @@ abierta abajo.
 >    `sig` es lo que el agente lee. Todo en
 >    `6-fusion/clases_de_raiz_zavala_2026-09-20.yaml`.
 >
-> Ninguno de los doce toca `capas_de_score`.
+> 13. **La tanda del 21: catorce decisiones en UN corte y UNA medición**
+>    (2026-09-21, `6-fusion/decisiones_tanda_2026-09-21.yaml`, que responde una
+>    a una las catorce de
+>    `6-fusion/issues-pendientes/morfologia-revision-2026-09-20.md` §6). Los
+>    cuatro cortes anteriores fueron de uno en uno y cada uno costó una serie.
+>    Éste no: Miguel decidió las catorce en la conversación y lo que mueve el
+>    instrumento se aplicó JUNTO — «la serie C se repite una vez, con todo
+>    dentro».
+>
+>    - **Lo que cambia, decisión por decisión.**
+>
+>      | | decide | qué se hizo |
+>      |---|---|---|
+>      | **d21.1** | C | el **comodín de longitud** del detector de aspecto está muerto. La condición era `suf in {ka,ni,da} and (raiz in _RAICES_VERB or len(raiz) >= 3)`, y por ese `>= 3` entraban **20.165 de 62.347** detecciones sin verbo ninguno. Ahora cuenta si el **último segmento** antes del sufijo es raíz verbal: `ta-hamaka-chaa-ni` sigue contando por `chaa` —el caso bueno que el comodín cubría a ciegas, y que la opción A habría tirado— y `hamaka-ni` no |
+>      | **d21.2** | A | `_RAICES_VERB` mezcla las cinco lenguas: de sus **1.394** claves sólo **43** son caquetías. Las dos puertas que deciden densidad y aspecto —`es_arahuaco()` y el detector— pasan a mirar `raices_verbales_caquetias()`. La tabla entera NO se filtra: es también quien resuelve `word_uses.source_language`, y una clave lokono tiene que seguir devolviendo lokono |
+>      | **d21.4** | B | la **clase estativa** se declara en la `cat`: las diez raíces que #178 identificó pasan de `v_raiz` a **`v_estativo`** en el módulo generado, y el prompt dice que un estado se predica con aspecto igual que una acción. Sin pronombre pospuesto (opción C: cero dato caquetío detrás). Etiquetar **no es podar** — `CATS_VERBALES` las cuenta como verbales, así que `_RAICES_VERB` no pierde ni gana una raíz y las diez siguen tomando los tres aspectos |
+>      | **d21.5** | C | `ka-` deja de ser «posesivo genérico»: es el **atributivo/existencial** de van Buurt §8 (*Casibari* = «hay rocas duras»), con el par mínimo de Perea p. 555. `ka-` y `ma-` salen a **`REGLAS_ATRIBUTIVAS`** y el prompt pasa de `ka-biro = el salinero` a **`ka-biro = hay sal, el lugar tiene sal`**. El caso del viento queda con su vía escrita: `ka-juri` |
+>      | **d21.6** | B | `-ana` se enseña **sin glosa**, con la fórmula de `-ubana`/`-uru`. #109 retiró «lugar de» el 09-07 y las dos plantillas seguían enseñándolo: el patrón exacto de `kali-bana` |
+>      | **d21.8** | A | `-kana` baja de «COGNADO DIRECTO con Caquetío» a **reconstruido desde el wayunaiki**, con su `deuda: sin-procedencia`, y sus tres ejemplos dejan de pluralizar una palabra **wayuu** y una forma **archivada** |
+>      | **d21.9** | A | `-naiki` a `REGLAS_RETIRADAS`, con `-ko` y `-sha` |
+>      | **d21.10** | A | `kudanga` y `kuté` —los dos pronombres caquetío-**atestiguados** que el lexicón tenía y nadie enseñaba (Zavala p. 73 vía Arcaya)— entran al prompt como **registro formal** |
+>      | **d21.11** | A | el **posesivo sobre raíz verbal** sale de las violaciones de slot: son 960 usos en 92 formas y es la **nominalización que la comunidad inventó**, no un error. Pasa a su propio bloque en el medidor |
+>      | **d21.13** | B | se importa **sólo el no-poseído** `u-` (LK `u-si-kua-hù` 'LA casa', Perea p. 587), que es gramática pura. Género y número de los irracionales se declaran como huecos y se esperan |
+>      | **d21.14** | B + A | la deuda documental (los cinco derivados fantasma, `-uto` declarado como variante) **y** la migración `-bacoa` → **`-bakoa`**, el lema fonémico que D5 decidió el 08-31 |
+>      | **d21.15** | — | `coro` cambia la glosa inventada «cardón grande, cactus columnar» por la que sí tiene fuente: **'espina'**, citando a González Batista, con su lectura en disputa (Arcaya 'avispa o lagartija', Castellanos 'viento'). «Cardón» pasa a ser lo que la propia fuente dice que es: una consecuencia indirecta |
+>      | **d21.16** | — | `chaa` pierde «crear»; `apana` encabeza con **«medida de tiempo: una luna (~30 días)»** y NO con «mes», que proyectaría el calendario europeo; `bara`/`kuru` y `sima`/`turumako` declaran su **convivencia** y dejan de emparejar |
+>
+>    - **Las claves del desafijador, y las tres se midieron ANTES.**
+>      `TODAS_LAS_REGLAS` entra `u-` y `-bakoa`, sale `-naiki` y `-bacoa`.
+>      Sobre las **2.670** formas distintas de la base (`word_uses` +
+>      `neologisms`), con el segmentador del script reproduciendo
+>      `nucleo_de_token()` **forma a forma en los dos brazos, 0 desvíos**:
+>
+>      | | formas que se segmentan distinto | usos |
+>      |---|---:|---:|
+>      | d21.5 (reagrupar `ka-`/`ma-`) | **0** | 0 |
+>      | d21.9 (sacar `-naiki`) | 0 | 0 |
+>      | d21.13 (añadir `u-`) | 0 | 0 |
+>      | d21.14 A (`-bacoa` → `-bakoa`) | 32 | 65 |
+>
+>      d21.5 sale en **0 por construcción y se comprueba igual**: cambia la
+>      agrupación, no las claves. Y **d21.14 A es LIMPIA**, que es lo que
+>      decidía si entraba en este corte: las 32 formas dejan de desafijarse por
+>      el borde, pero **ninguna** cambia `es_raiz_de_ninguna_parte()` —su raíz
+>      sigue siendo un segmento del núcleo— ni `_familia_de_token()`. El otro
+>      argumento para aplicarla: el ejemplo del prompt pasa a **`kuru-bakoa`**,
+>      que no se ha dicho nunca en la base (0 en `agent_responses`, 0 en
+>      `word_uses`, 0 en `neologisms`), mientras `kuru-bacoa` —con la grafía
+>      vieja— se dijo 19 veces. Enseñar esa habría bendecido una forma que ya
+>      circulaba, que es el error del `kali-bana`.
+>    - **El prompt CAMBIA, y hay que decir cuánto.** Cuatro de las diez
+>      plantillas estáticas: `prompt_reglas_completo` **4.449 → 5.122**,
+>      `prompt_reglas_breve` **995 → 1.192**, `prompt_afijos_atestiguados`
+>      616 → 639 y la breve de los afijos igual de larga pero distinta
+>      (`-bacoa` → `-bakoa`). En el ensayo sin API sobre los **63** del elenco
+>      —`run_turn` de verdad con `_invoke` espiado, misma semilla del RNG
+>      global— el system prompt medio pasa de **7.109,8 a 7.462,2 caracteres
+>      (+352,4)**. La longitud predice el score (r = −0,48): se dice aunque no
+>      se sepa qué hará. La puerta `FORMAS_DE_PLANTILLA` se mueve sola, como
+>      desde el 09-18: **5.952 → 5.981**, entran `kuru-bakoa`, `u-biro` y
+>      `u-buko` (más las palabras castellanas de las líneas nuevas) y salen
+>      `adabacoa` y `salinero`.
+>    - **⚠️ MUEVE EL SCORE, y el scorer se tocó A PROPÓSITO** — d21.1 y d21.2
+>      son correcciones de un error medido, no un rediseño de la métrica.
+>      Re-puntuados los **216 + 216** de los dos brazos de la serie C con el
+>      pipeline del Observer y los dos lexicones (el de `b5733f1` sacado con
+>      `git show` y el del árbol de trabajo):
+>
+>      | | con escena | control |
+>      |---|---|---|
+>      | score cambia en | **12 de 216** | **18 de 216** |
+>      | \|Δ\| máx | 1,00 | 2,00 |
+>      | Δ medio de las que cambian | −1,0000 | −1,0556 |
+>      | score medio | 7,5866 → **7,5310** | 7,4611 → **7,3731** |
+>      | `palabras_caquetias` cambia en | **0** | **0** |
+>      | `neologisms_proposed` cambia en | 0 | 0 |
+>      | puntos de aspecto, media | 2,0000 → 1,9444 | 1,9954 → 1,9074 |
+>
+>      Todas a la baja, las 30, y **todas por el aspecto**: que
+>      `palabras_caquetias` no se mueva en ninguna de las 432 dice que d21.2 no
+>      encontró en la serie C ni un token que entrara por una raíz verbal
+>      ajena. El agujero que d21.2 cierra es real —1.351 de 1.394 claves— pero
+>      en este corpus no estaba cobrando.
+>    - **El control, con tres brazos y no dos.** Entre el día de los runs y hoy
+>      entraron los puntos 11 y 12, que ya movieron el score, así que pedirle al
+>      módulo de hoy que reproduzca la base sería pedirle que deshaga dos cortes
+>      declarados. El control se hace contra **`b8c85ca`**, el commit con el que
+>      corrieron: **reproduce `score` y `neologisms_proposed` en 216 de 216 en
+>      los dos brazos**. Lo que los cortes del 09-20 ya habían movido queda
+>      dicho de paso: 85 y 119 respuestas, 7,7440 → 7,5866 y 7,6477 → 7,4611.
+>      La koiné fijada **no cambia** en ninguno de los dos brazos
+>      (`kasi-nii-bana` con escena; `kasuta-bana-iro` y `kasi-tapa-uco` en el
+>      control).
+>    - **d21.3: LA SATURACIÓN NO SE CAE SOLA, y ésa era la pregunta.** Miguel
+>      eligió A —escribir la trampa, no tocar el peso— con el matiz de volver a
+>      medir después de d21.1 y d21.2, «porque al exigir verbo de verdad la
+>      saturación puede caerse sola». Re-medida sobre las **3.379** respuestas
+>      de toda la base, en los dos brazos y con el mismo recuento que hace el
+>      score (`min(aspectos_distintos, 2)`):
+>
+>      | | antes | después |
+>      |---|---|---|
+>      | media de puntos de aspecto (tope 2,0) | **1,9982** | **1,9532** |
+>      | respuestas en el tope | 3.373 (99,82 %) | 3.230 (**95,59 %**) |
+>      | respuestas sin aspecto | 0 | 9 |
+>
+>      El «antes» reproduce exactamente el 1,9982 que midió la auditoría del
+>      09-20, que es el control de esta lectura. **Sigue saturado**: el 95,6 %
+>      de las respuestas toca el tope y el 20 % del score sigue sin separar a
+>      nadie. Tapar el comodín lo movió menos de lo que la auditoría estimaba
+>      para la opción A (1,9296), y es lo esperado: la C recupera los
+>      compuestos con verbo dentro —**3.162 detecciones** por esa rama
+>      (`hamaka-chaa-ni`, `ma-naba-ni`)—. Así que **el rediseño del peso
+>      (opción B) queda abierto con su propio diseño en `5-experimento/`**, y
+>      la trampa se escribe en `CLAUDE.md` mientras tanto. Por era: era 1
+>      1,9976 → 1,9686; serie B 2,0000 → 1,8750; serie C 1,9988 → 1,9271.
+>    - **Lo que NO se aplicó, dicho.** `-uto` se **declara** como variante de
+>      `-uco` con su cita pero NO entra en `TODAS_LAS_REGLAS`: añadir la clave
+>      movería `_SUFIJOS_CAQ` y eso no es lo que d21.14 B decide. Residuo
+>      declarado: se sigue enseñando y sigue sin reconocerse. Y `_RAICES_VERB`
+>      entera se queda sin filtrar en `_familia_de_token()` y en
+>      `_raices_conocidas()`, que son otras dos puertas: allí la pregunta es
+>      «¿de qué lengua es?» y «¿el lexicón conoce esta raíz?», no «¿es
+>      caquetía?».
+>
+>    **Desde qué run aplica**: desde el próximo. **La serie C se re-corre desde
+>    el día 1** —cambia lo que el agente VE, y bastante: +352 caracteres de
+>    prompt medio— y `f2741e89 → fcdfa07a → 0313d830` y `0345840d → 45618069 →
+>    e98227eb` quedan del otro lado del corte. Los runs ya corridos no se
+>    reescriben. Medición entera en
+>    `6-fusion/medicion_tanda_21_2026-09-21.yaml`
+>    (`6-fusion/scripts/medir_tanda_21.py`); tests en
+>    `curiana_sim/tests/test_tanda_21.py`, uno por decisión.
+>
+> Ninguno de los trece toca `capas_de_score`, y `curiana_observer` sigue sin
+> modificarse.
 
 > ⚠️ **Dos artefactos del instrumento descubiertos al cerrar el día 3
 > (análisis por nodo, `analizar_nodos.py`, 2026-09-16), que afectan a los

@@ -272,10 +272,17 @@ class Segmentador:
 # De qué tabla sale cada morfema y qué CLASE gramatical declara el proyecto.
 # Las clases son las de los propios nombres de las tablas de `curiana_lexicon`;
 # no se inventa ninguna aquí.
+#
+# `REGLAS_ATRIBUTIVAS` entra con d21.5 (2026-09-21): `ka-` y `ma-` salieron de
+# `REGLAS_POSESIVAS` a su propia tabla, porque eso es lo que son. Si esta
+# lista no la recogiera, los dos morfemas más el `ka-` del punto 5 saldrían
+# «sin-clase» en todos los patrones de apilamiento y el inventario perdería
+# dos filas sin que nadie lo notara.
 TABLAS = [
     ("REGLAS_ASPECTO",     "aspecto",    "curiana_sim/curiana_lexicon.py"),
     ("REGLAS_LOCATIVAS",   "locativo",   "curiana_sim/curiana_lexicon.py"),
     ("REGLAS_POSESIVAS",   "posesivo",   "curiana_sim/curiana_lexicon.py"),
+    ("REGLAS_ATRIBUTIVAS", "atributivo", "curiana_sim/curiana_lexicon.py"),
     ("REGLAS_NUMERO",      "número",     "curiana_sim/curiana_lexicon.py"),
     ("REGLAS_ZAVALA",      "derivativo", "curiana_sim/curiana_lexicon.py"),
     ("REGLAS_TOPONIMICAS", "toponímico", "curiana_sim/curiana_lexicon.py"),
@@ -446,39 +453,47 @@ MAPA_ASPECTO = {"ka": "completivo", "ni": "continuativo", "da": "prospectivo"}
 def aspectos_instrumentado(L, tokens: list) -> tuple[list, list]:
     """`_aspectos_morfologicos()` con la rama apuntada.
 
-    Copia literal de la función del motor (líneas 8111-8128 de
-    `curiana_lexicon.py`) con un registro añadido. El CONTROL de abajo compara
-    la lista de aspectos con la que devuelve el motor de verdad.
+    Copia literal de la función del motor con un registro añadido. El CONTROL
+    de abajo compara la lista de aspectos con la que devuelve el motor de
+    verdad: si esta copia se queda vieja, sale en ROJO y el script se planta.
+
+    ⚠️ ACTUALIZADA CON LA TANDA DEL 2026-09-21 (d21.1 C + d21.2 A): el
+    comodín de longitud murió y la raíz verbal tiene que ser CAQUETÍA. La
+    condición es ahora «el último segmento antes del sufijo es raíz verbal
+    caquetía», y `v_estativo` cuenta como verbal (d21.4). Las ramas que este
+    medidor apunta cambian con ella: `comodin_de_longitud` ya no puede
+    aparecer —si aparece, es que el motor no aplicó el corte— y entra
+    `raiz_verbal_interna`, que es el caso bueno que el comodín cubría a
+    ciegas (`ta-hamaka-chaa-ni` cuenta por `chaa`).
     """
     encontrados = []
     ramas = []
+    verbales = L.raices_verbales_caquetias()
     for tok in tokens:
         if "-" in tok:
             raiz, _, suf = tok.rpartition("-")
-            if suf in MAPA_ASPECTO and (raiz in L._RAICES_VERB or len(raiz) >= 3):
+            ultimo = raiz.rsplit("-", 1)[-1]
+            if suf in MAPA_ASPECTO and ultimo in verbales:
                 encontrados.append(MAPA_ASPECTO[suf])
-                if raiz in L._RAICES_VERB:
-                    v = L.VOCABULARIO_BASE.get(raiz, {})
-                    from curiana_database import normalize_source_language as _n
-                    lengua = _n(v.get("fuente", "")) if v else "sin-entrada"
-                    rama = f"raiz_verbal:{lengua}"
-                    # El caquetío se parte por CAPA, porque las dos mitades no
-                    # son el mismo dato: las reconstruidas del núcleo se
-                    # escribieron a mano como verbos; las atestiguadas llevan
-                    # su `cat: v_raiz` puesto por la heurística de una línea de
-                    # `minar_zavala_glosario.py`, que es lo que otra sesión
-                    # está clasificando ahora mismo (49 raíces, estativo /
-                    # acción / nombre). Aquí NO se toca ninguna `cat`: se
-                    # cuenta cuánto del score depende de esa clasificación.
-                    if lengua == "caquetío":
-                        rama += (":atestiguada-cat-pendiente"
-                                 if v.get("fuente") == "caquetío-atestiguado"
-                                 else ":reconstruida-del-nucleo")
-                else:
-                    rama = "comodin_de_longitud"
+                v = L.VOCABULARIO_BASE.get(ultimo, {})
+                from curiana_database import normalize_source_language as _n
+                lengua = _n(v.get("fuente", "")) if v else "sin-entrada"
+                rama = f"raiz_verbal:{lengua}"
+                # El caquetío se parte por CAPA y por CLASE: las reconstruidas
+                # del núcleo se escribieron a mano como verbos; las
+                # atestiguadas llevan la `cat` que #178 repartió una a una
+                # (estativo / acción / nombre), y desde d21.4 la estativa lo
+                # dice en la propia categoría.
+                if lengua == "caquetío":
+                    rama += (":atestiguada" if v.get("fuente") == "caquetío-atestiguado"
+                             else ":reconstruida-del-nucleo")
+                    if v.get("cat") == "v_estativo":
+                        rama += ":estativa"
+                if ultimo != raiz:
+                    rama = "raiz_verbal_interna|" + rama
                 ramas.append((tok, raiz, suf, rama))
             continue
-        for raiz in L._RAICES_VERB:
+        for raiz in verbales:
             for suf, nombre in MAPA_ASPECTO.items():
                 if tok == raiz + suf:
                     encontrados.append(nombre)
@@ -692,10 +707,16 @@ def sondar_canon(L) -> dict:
             and "nombre" in (r.get("desc", "") or "").lower()),
         "reglas_de_reduplicacion": sorted(
             a for a in L.TODAS_LAS_REGLAS if "redup" in a.lower()),
+        # La sonda mira `nombre` ADEMÁS de `desc` desde d21.13 (2026-09-21):
+        # el no-poseído entró con `nombre: "no-poseído / absoluto"` y un `desc`
+        # que lo dice en cristiano («la cosa sin dueño»), así que mirando sólo
+        # el `desc` la sonda habría seguido cantando el hueco que se acababa
+        # de tapar. Un cero hay que verificarlo (regla 6), y un uno también.
         "reglas_de_posesion_no_poseida": sorted(
             a for a, r in L.TODAS_LAS_REGLAS.items()
-            if "alienab" in (r.get("desc", "") or "").lower()
-            or "no poseíd" in (r.get("desc", "") or "").lower()),
+            if any(t in _sin_tildes(
+                (r.get("nombre", "") or "") + (r.get("desc", "") or ""))
+                for t in ("alienab", "no-poseid", "no poseid", "sin dueno"))),
         "aspecto_con_apoyo_atestiguado": aspecto_atestiguado,
         # ¿De verdad «los pronombres no tienen rival atestiguado»? Es lo que
         # dice la política «manda la atestiguada» (2-lengua/lexicon.md), y se
@@ -768,6 +789,12 @@ def main(argv=None):
     ap.add_argument("--sin-base", action="store_true",
                     help="sin Supabase: sólo el inventario y el contraste")
     ap.add_argument("--json", action="store_true", help="vuelca el doc en JSON")
+    # La medición del 09-20 es el registro de aquella auditoría y no se
+    # reescribe: volver a correr el medidor con el motor de hoy daría otros
+    # números bajo un nombre con fecha de ayer. `--salida` es para re-medir
+    # después de un corte sin pisar lo que ya está escrito.
+    ap.add_argument("--salida", metavar="RUTA", default=SALIDA,
+                    help="dónde escribir el YAML (por defecto, el del 09-20)")
     args = ap.parse_args(argv)
 
     sys.path.insert(0, SIM)
@@ -919,7 +946,7 @@ def main(argv=None):
 
     if args.sin_base:
         _informe(doc)
-        _escribir(doc)
+        _escribir(doc, args.salida)
         return 0
 
     # ── 2. QUÉ HACE LA GENTE ─────────────────────────────────────────
@@ -966,7 +993,13 @@ def main(argv=None):
         lambda: {"usos": 0, "formas": set(), "ejemplos": set()})
     violaciones: dict = collections.defaultdict(
         lambda: {"usos": 0, "formas": set(), "ejemplos": set()})
+    # d21.11: lo que se saca de las violaciones no se tira, se cuenta aparte.
+    nominalizacion: dict = collections.defaultdict(
+        lambda: {"usos": 0, "formas": set(), "ejemplos": set()})
     violaciones_familia = collections.Counter()
+    # Qué `cat` es verbal lo decide el motor, no este script: son dos desde
+    # d21.4 (`v_raiz` de acción y `v_estativo`).
+    VERBALES = frozenset(getattr(L, "CATS_VERBALES", {"v_raiz"}))
     total_usos = 0
     total_con_afijo = 0
     por_era_serie_total = collections.Counter()
@@ -995,9 +1028,38 @@ def main(argv=None):
             # lexicón: de una raíz que no está no se puede decir su categoría.
             slot = slot_de.get(a, "sin-declarar")
             if cat != "raiz-fuera-del-lexicon" and slot in ("v_raiz", "sust"):
-                if slot == "v_raiz" and cat != "v_raiz":
+                # ⚠️ EL POSESIVO SOBRE VERBO NO ES UNA VIOLACIÓN (d21.11 A,
+                # 2026-09-21). Eran 1.107 usos —`ta-chaa` 'mi hacer',
+                # `wa-jai` 'nuestro oír', `ma-awa` 'sin beber'— y el sistema
+                # NO TIENE NOMINALIZADOR: los agentes lo construyeron con el
+                # posesivo, que es una solución razonable y no la arahuaca.
+                # Llamarlo error era sancionar el hallazgo. Miguel: «muy
+                # interesante como los agentes lo resolvieron […] es
+                # literalmente la idea del proyecto». Se cuenta aparte, como
+                # nominalización emergente, y el que la declara es
+                # 2-lengua/morfologia.md.
+                # Lo que SIGUE siendo violación: el aspecto sobre raíz no
+                # verbal (la regla pide verbo y no lo hay) y el número sobre
+                # raíz verbal, que la propia regla de `-kana` prohíbe.
+                nominaliza = (slot == "sust"
+                              and clase_de.get(a) in ("posesivo", "atributivo")
+                              and cat in VERBALES)
+                if nominaliza:
+                    k = None
+                    nominalizacion[
+                        f"{clase_de.get(a, '?')} {a} sobre raíz «{cat}» "
+                        f"(nominalización emergente, d21.11)"]["usos"] += n
+                    nominalizacion[
+                        f"{clase_de.get(a, '?')} {a} sobre raíz «{cat}» "
+                        f"(nominalización emergente, d21.11)"]["formas"].add(forma)
+                    ej = nominalizacion[
+                        f"{clase_de.get(a, '?')} {a} sobre raíz «{cat}» "
+                        f"(nominalización emergente, d21.11)"]["ejemplos"]
+                    if len(ej) < 8:
+                        ej.add(f"{forma} ({raiz})")
+                elif slot == "v_raiz" and cat not in VERBALES:
                     k = f"{clase_de.get(a, '?')} {a} sobre raíz «{cat}» (la regla pide VERBO_RAIZ)"
-                elif slot == "sust" and cat == "v_raiz":
+                elif slot == "sust" and cat in VERBALES:
                     k = f"{clase_de.get(a, '?')} {a} sobre raíz verbal (la regla pide SUSTANTIVO)"
                 else:
                     k = None
@@ -1007,10 +1069,7 @@ def main(argv=None):
                     v["formas"].add(forma)
                     if len(v["ejemplos"]) < 8:
                         v["ejemplos"].add(f"{forma} ({raiz})")
-                    familia = ("posesivo/atributivo sobre raíz verbal"
-                               if slot == "sust" and clase_de.get(a) == "posesivo"
-                               else "número sobre raíz verbal"
-                               if slot == "sust"
+                    familia = ("número sobre raíz verbal" if slot == "sust"
                                else "aspecto sobre raíz no verbal")
                     violaciones_familia[familia] += n
         # COMBINACIÓN NO DECLARADA: dos o más afijos. Ninguna regla del
@@ -1078,7 +1137,10 @@ def main(argv=None):
     }
     doc["violaciones_de_slot"] = {
         "nota": ("el slot sale del campo `uso` de cada regla, no se decide "
-                 "aquí. Sólo se juzga cuando la raíz está en el lexicón"),
+                 "aquí. Sólo se juzga cuando la raíz está en el lexicón. "
+                 "DESDE d21.11 (2026-09-21) el posesivo/atributivo sobre raíz "
+                 "verbal NO cuenta aquí: es la nominalización que la comunidad "
+                 "inventó, y va en su propio bloque"),
         "casos": len(violaciones),
         "usos": sum(v["usos"] for v in violaciones.values()),
         "por_familia": dict(violaciones_familia.most_common()),
@@ -1086,6 +1148,23 @@ def main(argv=None):
             {"caso": k, "usos": v["usos"], "formas": len(v["formas"]),
              "ejemplos": sorted(v["ejemplos"])}
             for k, v in sorted(violaciones.items(), key=lambda x: -x[1]["usos"])],
+    }
+    doc["nominalizacion_emergente"] = {
+        "nota": ("el sistema no tiene nominalizador —cero reglas que deriven "
+                 "nombre de verbo— y los agentes lo resolvieron con el "
+                 "posesivo: `ta-chaa` 'mi hacer', `wa-jai` 'nuestro oír'. Era "
+                 "«violación de slot» hasta el 2026-09-21; d21.11 la saca de "
+                 "ahí porque describir el sistema que emergió no es "
+                 "sancionarlo. NO se importa el `-hù`/`-hi` lokono (opción B): "
+                 "sería morfología de otra lengua sin dato caquetío"),
+        "casos": len(nominalizacion),
+        "usos": sum(v["usos"] for v in nominalizacion.values()),
+        "formas": len({f for v in nominalizacion.values() for f in v["formas"]}),
+        "detalle": [
+            {"caso": k, "usos": v["usos"], "formas": len(v["formas"]),
+             "ejemplos": sorted(v["ejemplos"])}
+            for k, v in sorted(nominalizacion.items(),
+                               key=lambda x: -x[1]["usos"])],
     }
 
     # ── 3. EL ASPECTO, RAMA A RAMA ───────────────────────────────────
@@ -1138,9 +1217,12 @@ def main(argv=None):
         "peso_en_el_score": {
             "nota": ("el score suma min(aspectos_distintos, 2) puntos de 10. "
                      "«Sin comodín» = sólo los aspectos que entran por una "
-                     "raíz de _RAICES_VERB. No se propone nada aquí: se dice "
-                     "cuánto del punto de morfología descansa en la rama que "
-                     "no mira si hay verbo"),
+                     "raíz verbal. DESDE EL CORTE DEL 2026-09-21 (d21.1 C) el "
+                     "comodín de longitud NO EXISTE, así que las dos medias "
+                     "tienen que salir iguales y las dos cuentas de cambio en "
+                     "cero: si no, es que el motor no aplicó el corte. Lo que "
+                     "sí queda abierto es la SATURACIÓN (d21.3), que se lee en "
+                     "`media_por_respuesta_hoy` contra el tope de 2,0"),
             "puntos_de_aspecto_hoy": round(puntos_con, 1),
             "puntos_si_el_comodin_no_contara": round(puntos_sin, 1),
             "media_por_respuesta_hoy": round(puntos_con / (len(resp) or 1), 4),
@@ -1160,10 +1242,18 @@ def main(argv=None):
         "_RAICES_VERB_por_lengua": dict(collections.Counter(
             N(L.VOCABULARIO_BASE.get(k, {}).get("fuente", ""))
             for k in L._RAICES_VERB).most_common()),
+        # d21.2: la tabla que el detector usa DE VERDAD desde el 2026-09-21.
+        # La de arriba sigue viéndose entera porque es la que resuelve
+        # `word_uses.source_language`, y la diferencia entre las dos es el
+        # tamaño del agujero que se cerró.
+        "raices_verbales_caquetias": len(L.raices_verbales_caquetias()),
+        "raices_verbales_caquetias_por_clase": dict(collections.Counter(
+            L.VOCABULARIO_BASE.get(k, {}).get("cat", "?")
+            for k in L.raices_verbales_caquetias()).most_common()),
     }
 
     _informe(doc)
-    _escribir(doc)
+    _escribir(doc, args.salida)
     if args.json:
         print(json.dumps(doc, ensure_ascii=False, indent=2, default=str))
     return 0
@@ -1315,12 +1405,13 @@ def _serializable(o):
     return o
 
 
-def _escribir(doc):
-    with io.open(SALIDA, "w", encoding="utf-8", newline="\n") as fh:
+def _escribir(doc, salida=None):
+    salida = salida or SALIDA
+    with io.open(salida, "w", encoding="utf-8", newline="\n") as fh:
         fh.write("# GENERADO por 6-fusion/scripts/auditar_morfologia.py\n")
         fh.write("# No se edita a mano. Ninguna cifra de aquí se escribe dos veces.\n")
         fh.write("\n".join(volcar(_serializable(doc))) + "\n")
-    print(f"\n→ {os.path.relpath(SALIDA, RAIZ)}")
+    print(f"\n→ {salida}")
 
 
 if __name__ == "__main__":

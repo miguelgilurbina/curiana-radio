@@ -363,8 +363,8 @@ def _vocabulario_de_semilla() -> tuple:
         return _vocabulario_cache
     try:
         from curiana_lexicon import (
-            PALABRAS_CLAVE_CATEGORIA, VOCABULARIO_BASE, capa_epistemica,
-            categorias_relevantes,
+            CATS_VERBALES, PALABRAS_CLAVE_CATEGORIA, VOCABULARIO_BASE,
+            capa_epistemica, categorias_relevantes,
         )
     except Exception:                                        # noqa: BLE001
         _vocabulario_cache = ({}, [], [])
@@ -384,7 +384,12 @@ def _vocabulario_de_semilla() -> tuple:
         if not sig:
             continue
         todas.append(palabra)
-        if datos.get("cat") == "v_raiz":
+        # `CATS_VERBALES` y no `== "v_raiz"`: desde la tanda del 2026-09-21
+        # (d21.4) diez raíces llevan `cat: v_estativo`, y preguntar por la
+        # cadena vieja las habría sacado de los verbos de la semilla — o sea
+        # que declarar la clase habría cambiado la pre-carga de idiolectos sin
+        # que nadie lo decidiera. Con la puerta única, `verbos` no se mueve.
+        if datos.get("cat") in CATS_VERBALES:
             verbos.append(palabra)
         cats = set(categorias_relevantes(sig, max_extra=99))
         declarada = str(datos.get("categoria") or "").strip()

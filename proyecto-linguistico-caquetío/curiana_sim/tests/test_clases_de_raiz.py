@@ -12,8 +12,16 @@ arahuaco cualquier token cuyo primer segmento sea una de ellas: `juri-ni`,
 En arahuaco mucho de lo que el castellano llama adjetivo es un **verbo
 estativo** — Perea y Alonso 1942 pp. 634-639: la 4ª conjugación lokono es «la
 clase de los estativos: colores, tamaños, sabores, estados» (`cule-n` 'ser
-rojo', `hebbe-n` 'ser viejo'). Diez de las 49 son de esa clase y **se quedan**
-en `v_raiz`; lo que cambia es que ahora está declarado.
+rojo', `hebbe-n` 'ser viejo'). Diez de las 49 son de esa clase y **siguen
+conjugándose**; lo que cambia es que ahora está declarado.
+
+⚠️ ACTUALIZADO POR LA TANDA DEL 2026-09-21 (d21.4, «Vale vamos con la B
+entonces»): las diez estativas dejan de emitirse con `cat: v_raiz` y pasan a
+`cat: v_estativo`. NO es una poda: `curiana_lexicon.CATS_VERBALES` las cuenta
+como verbales igual, así que toman los mismos tres aspectos y `_RAICES_VERB`
+no pierde ni gana una raíz. Lo que se gana es que la clase está DECLARADA y
+llega al prompt. Sin alineamiento pospuesto (opción C, descartada: cero dato
+caquetío).
 
 Lo que vigilan, en orden:
 
@@ -50,7 +58,7 @@ from lexicon_zavala import (
 
 CLASES_VERBALES = {"estativo", "accion"}
 CLASES_NOMINALES = {"nombre", "adverbio"}
-CAT_DE_CLASE = {"estativo": "v_raiz", "accion": "v_raiz",
+CAT_DE_CLASE = {"estativo": "v_estativo", "accion": "v_raiz",
                 "nombre": "sust", "adverbio": "part"}
 
 
@@ -70,7 +78,7 @@ def test_ninguna_entrada_sale_v_raiz_sin_declararlo():
 
 def test_toda_v_raiz_del_glosario_tiene_clase_verbal_declarada():
     for forma, e in GLOSARIO_ZAVALA.items():
-        if e.get("cat") != "v_raiz":
+        if e.get("cat") not in lx.CATS_VERBALES:
             continue
         fila = CLASES_DE_RAIZ_ZAVALA.get(forma)
         assert fila, f"`{forma}` es v_raiz y no tiene clase declarada"

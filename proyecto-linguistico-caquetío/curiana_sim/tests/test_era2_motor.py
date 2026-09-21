@@ -193,7 +193,10 @@ def test_la_muestra_respeta_el_presupuesto_y_saca_a_los_sustantivos_del_goteo():
     assert sum(c.values()) == 50
     # Antes: 3 de 216. Ahora el cubo grande pesa lo que mide.
     assert c["sust"] >= 10, c
-    assert c["v_raiz"] >= 5, c
+    # Los cubos VERBALES son dos desde la tanda del 2026-09-21 (d21.4): la
+    # raíz de acción y la estativa. Se miden juntos, que es lo que el
+    # presupuesto quiere garantizar — que el agente vea con qué conjugar.
+    assert c["v_raiz"] + c["v_estativo"] >= 5, c
 
 
 def test_toda_voz_visible_puede_salir_en_la_muestra():
@@ -217,10 +220,13 @@ def test_toda_voz_visible_puede_salir_en_la_muestra():
 
 def test_todos_los_afijos_atestiguados_se_ensenan_en_las_dos_plantillas():
     completo, breve = prompt_reglas_completo(), prompt_reglas_breve()
-    for afijo in list(REGLAS_ZAVALA) + ["-bacoa"]:
+    # `-bakoa` con k desde d21.14 A (2026-09-21): D5 decidió el 2026-08-31
+    # que la grafía española es grafía y el lema fonémico es la palabra, y la
+    # morfología se había quedado fuera de aquella migración.
+    for afijo in list(REGLAS_ZAVALA) + ["-bakoa"]:
         assert afijo in completo, afijo
         assert afijo in breve, afijo
-    assert set(AFIJOS_ATESTIGUADOS) == set(REGLAS_ZAVALA) | {"-bacoa"}
+    assert set(AFIJOS_ATESTIGUADOS) == set(REGLAS_ZAVALA) | {"-bakoa"}
 
 
 def test_las_desinencias_sin_valor_se_ensenan_como_tales():
@@ -250,7 +256,9 @@ def test_ko_y_sha_no_se_ensenan_ni_cuentan_como_regla():
         assert "-ko (" not in plantilla and "-sha (" not in plantilla
         assert "-kana" in plantilla          # el plural se queda
     assert "-ko" not in TODAS_LAS_REGLAS and "-sha" not in TODAS_LAS_REGLAS
-    assert set(REGLAS_RETIRADAS) == {"-ko", "-sha"}
+    # `-naiki` se les une el 2026-09-21 (d21.9), por la misma razón: sin
+    # fuente, y era convención. Su test propio está en test_tanda_21.py.
+    assert set(REGLAS_RETIRADAS) == {"-ko", "-sha", "-naiki"}
     assert all("retirada" in r for r in REGLAS_RETIRADAS.values())
 
 

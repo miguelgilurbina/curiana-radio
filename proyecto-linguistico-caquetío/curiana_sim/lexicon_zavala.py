@@ -48,8 +48,13 @@ LA CLASE DE LA RAÍZ (2026-09-20): la parte de la oración ya no sale de una
 heurística de tier. Cada entrada del vocabulario activo que caía en el cajón
 de resto lleva su clase declarada —estativo / acción / nombre / adverbio—
 con su apoyo comparativo y su cita, en CLASES_DE_RAIZ_ZAVALA. Importa porque
-`cat: v_raiz` alimenta `curiana_lexicon._RAICES_VERB` y con ella
+`cat` verbal alimenta `curiana_lexicon._RAICES_VERB` y con ella
 `score_linguistico()`. Ver CLASE_DE_LA_RAIZ en el minador.
+
+LA CLASE ESTATIVA (2026-09-21, d21.4): las diez raíces estativas se emiten
+con `cat: v_estativo` y no con `v_raiz`. Es una etiqueta, no una morfología
+nueva: `curiana_lexicon.CATS_VERBALES` la cuenta como verbal, así que toman
+los mismos tres aspectos y no sale ni entra ninguna raíz de _RAICES_VERB.
 
 EXCLUIDOS del habla (ver EXCLUIR_DEL_HABLA en el minador): topónimos
 modernos, antropónimos, etnónimos y glosas circulares. Están abajo en
@@ -176,7 +181,7 @@ GLOSARIO_ZAVALA: dict[str, dict] = {
     "tupure":        {"sig": "siembra de cacao", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Siembra de cacao [Zavala Reyes 2015 #256 (s/sigla)]", "notas": "Zavala Reyes 2015 #256 (s/sigla)"},
     "tukinemo":      {"sig": "llano, plano", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Llano, plano [Zavala Reyes 2015 #258 (AM)]", "forma_fuente": "tuquinemo", "notas": "Zavala Reyes 2015 #258 (AM)"},
     "turicha":       {"sig": "ave cantadora. Flauta", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Ave cantadora. Flauta [Zavala Reyes 2015 #260 (AM)]", "notas": "Zavala Reyes 2015 #260 (AM)"},
-    "turumako":      {"sig": "cerro, meseta", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Cerro, meseta [Zavala Reyes 2015 #262 (AM)]", "forma_fuente": "turumaco", "notas": "Zavala Reyes 2015 #262 (AM)"},
+    "turumako":      {"sig": "cerro de cima plana, meseta", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Cerro, meseta [Zavala Reyes 2015 #262 (AM)]", "forma_fuente": "turumaco", "notas": "Zavala Reyes 2015 #262 (AM); GLOSA CURADA (`sig`, no `glosa_fuente`): d21.16 (2026-09-21), punto 5: «cerro, meseta» emparejaba con `sima` 'cerro, montaña, elevación' y las dos se leían como la misma palabra. Por el criterio de la propia política d19.b NO son par —solapamiento parcial, no glosa idéntica— y Miguel: «me parece bien que convivan sima y turumako […] al final no pasa nada si hay símiles». Se afinan las dos para que dejen de emparejar: `turumako` es el cerro de cima plana, que es lo que 'meseta' añade en la propia fuente (zavala-reyes-2015 #262 AM), y `sima` la elevación a secas. La glosa de la fuente queda intacta en `glosa_fuente`"},
     "turupia":       {"sig": "árbol espinoso. Sitio en Cumarebo", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Árbol espinoso. Sitio en Cumarebo [Zavala Reyes 2015 #263 (AM+A)]", "notas": "Zavala Reyes 2015 #263 (AM+A)"},
     "tuturutos":     {"sig": "hierba de propiedades eméticas. Usado para cuajar quesos", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Hierba de propiedades eméticas. Usado para cuajar quesos [Zavala Reyes 2015 #264 (E)]", "notas": "Zavala Reyes 2015 #264 (E)"},
     "uria":          {"sig": "plantío, siembra", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Plantío, siembra [Zavala Reyes 2015 #273 (AM)]", "notas": "Zavala Reyes 2015 #273 (AM)"},
@@ -189,14 +194,14 @@ GLOSARIO_ZAVALA: dict[str, dict] = {
     # ── T4 — verbos, cualidades y abstractos ──
     # El lexicón activo es pobre en verbos y cualidades; este tier lo compensa.
     "aka":           {"sig": "bejuco", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Bejuco [Zavala Reyes 2015 #3 (E)]", "forma_fuente": "aca", "notas": "Zavala Reyes 2015 #3 (E); era homógrafo del español en grafía fuente (aca) — la migración D5 disolvió la colisión"},
-    "apo":           {"sig": "grande", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Grande [Zavala Reyes 2015 #11 (AM)]", "notas": "Zavala Reyes 2015 #11 (AM)"},
-    "bachure":       {"sig": "maneto, patituerto", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Maneto, patituerto [Zavala Reyes 2015 #19 (A)]", "notas": "Zavala Reyes 2015 #19 (A)"},
+    "apo":           {"sig": "grande", "cat": "v_estativo", "fuente": "caquetío-atestiguado", "glosa_fuente": "Grande [Zavala Reyes 2015 #11 (AM)]", "notas": "Zavala Reyes 2015 #11 (AM)"},
+    "bachure":       {"sig": "maneto, patituerto", "cat": "v_estativo", "fuente": "caquetío-atestiguado", "glosa_fuente": "Maneto, patituerto [Zavala Reyes 2015 #19 (A)]", "notas": "Zavala Reyes 2015 #19 (A)"},
     "badamaro":      {"sig": "extraer, sacar", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Extraer, sacar [Zavala Reyes 2015 #20 (AM)]", "notas": "Zavala Reyes 2015 #20 (AM)"},
     "baharuko":      {"sig": "abuelo, viejo", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Abuelo, viejo [Zavala Reyes 2015 #22 (AM)]", "forma_fuente": "baharuco", "notas": "Zavala Reyes 2015 #22 (AM)"},
     "baperon":       {"sig": "calabaza con cal", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Calabaza con cal [Zavala Reyes 2015 #27 (HB)]", "notas": "Zavala Reyes 2015 #27 (HB)"},
     "barbache":      {"sig": "iguana", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Iguana [Zavala Reyes 2015 #33 (PMA)]", "notas": "Zavala Reyes 2015 #33 (PMA)"},
     "beceremikore":  {"sig": "dominar, triunfar, victoria", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Dominar, triunfar, victoria [Zavala Reyes 2015 #39 (AM)]", "forma_fuente": "beceremicore", "notas": "Zavala Reyes 2015 #39 (AM)"},
-    "kachipo":       {"sig": "en voz vulgar, enojado, colérico", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "En voz vulgar, enojado, colérico [Zavala Reyes 2015 #53 (A)]", "forma_fuente": "cachipo", "notas": "Zavala Reyes 2015 #53 (A)"},
+    "kachipo":       {"sig": "en voz vulgar, enojado, colérico", "cat": "v_estativo", "fuente": "caquetío-atestiguado", "glosa_fuente": "En voz vulgar, enojado, colérico [Zavala Reyes 2015 #53 (A)]", "forma_fuente": "cachipo", "notas": "Zavala Reyes 2015 #53 (A)"},
     "kana":          {"sig": "demonio", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Demonio [Zavala Reyes 2015 #57 (HB)]", "forma_fuente": "cana", "notas": "Zavala Reyes 2015 #57 (HB); era homógrafo del español en grafía fuente (cana) — la migración D5 disolvió la colisión"},
     "kapo":          {"sig": "duende, ente sobrenatural", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Duende, ente sobrenatural [Zavala Reyes 2015 #59 (E)]", "forma_fuente": "capo", "notas": "Zavala Reyes 2015 #59 (E); era homógrafo del español en grafía fuente (capo) — la migración D5 disolvió la colisión"},
     "kapu":          {"sig": "demonio. Señala Galeotto Cey la pronunciación “cap”", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Demonio. Señala Galeotto Cey la pronunciación “cap” [Zavala Reyes 2015 #60 (HB)]", "forma_fuente": "capu", "notas": "Zavala Reyes 2015 #60 (HB)"},
@@ -207,12 +212,12 @@ GLOSARIO_ZAVALA: dict[str, dict] = {
     "dichiba":       {"sig": "límite, línea", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Límite, línea [Zavala Reyes 2015 #108 (AM)]", "forma_fuente": "dichiva", "notas": "Zavala Reyes 2015 #108 (AM)"},
     "domaria":       {"sig": "enredarse, atormentar", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Enredarse, atormentar [Zavala Reyes 2015 #114 (AM)]", "notas": "Zavala Reyes 2015 #114 (AM)"},
     "duriwa":        {"sig": "hacer trabajos cortos", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Hacer trabajos cortos [Zavala Reyes 2015 #116 (AM)]", "forma_fuente": "durigua", "notas": "Zavala Reyes 2015 #116 (AM)"},
-    "etamo":         {"sig": "feroz, feo, espanto", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Feroz, feo, espanto [Zavala Reyes 2015 #120 (AM)]", "notas": "Zavala Reyes 2015 #120 (AM)"},
-    "waidima":       {"sig": "integro", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Integro [Zavala Reyes 2015 #131 (AM)]", "forma_fuente": "guaidima", "notas": "Zavala Reyes 2015 #131 (AM)"},
+    "etamo":         {"sig": "feroz, feo, espanto", "cat": "v_estativo", "fuente": "caquetío-atestiguado", "glosa_fuente": "Feroz, feo, espanto [Zavala Reyes 2015 #120 (AM)]", "notas": "Zavala Reyes 2015 #120 (AM)"},
+    "waidima":       {"sig": "integro", "cat": "v_estativo", "fuente": "caquetío-atestiguado", "glosa_fuente": "Integro [Zavala Reyes 2015 #131 (AM)]", "forma_fuente": "guaidima", "notas": "Zavala Reyes 2015 #131 (AM)"},
     "wamipa":        {"sig": "hueco, profundidad", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Hueco, profundidad [Zavala Reyes 2015 #135 (AM)]", "forma_fuente": "guamipa", "notas": "Zavala Reyes 2015 #135 (AM)"},
     "warakaro":      {"sig": "tapirama silvestre", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Tapirama silvestre [Zavala Reyes 2015 #138 (E)]", "forma_fuente": "guaracaro", "notas": "Zavala Reyes 2015 #138 (E)"},
-    "waranao":       {"sig": "salado, ácido", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Salado, ácido [Zavala Reyes 2015 #140 (E)]", "forma_fuente": "guaranao", "notas": "Zavala Reyes 2015 #140 (E)"},
-    "wasima":        {"sig": "viejo, anciano", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Viejo, anciano [Zavala Reyes 2015 #145 (AM)]", "forma_fuente": "guasima", "notas": "Zavala Reyes 2015 #145 (AM)"},
+    "waranao":       {"sig": "salado, ácido", "cat": "v_estativo", "fuente": "caquetío-atestiguado", "glosa_fuente": "Salado, ácido [Zavala Reyes 2015 #140 (E)]", "forma_fuente": "guaranao", "notas": "Zavala Reyes 2015 #140 (E)"},
+    "wasima":        {"sig": "viejo, anciano", "cat": "v_estativo", "fuente": "caquetío-atestiguado", "glosa_fuente": "Viejo, anciano [Zavala Reyes 2015 #145 (AM)]", "forma_fuente": "guasima", "notas": "Zavala Reyes 2015 #145 (AM)"},
     "gika":          {"sig": "yabo", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Yabo [Zavala Reyes 2015 #150 (E)]", "forma_fuente": "guica", "notas": "Zavala Reyes 2015 #150 (E)"},
     "gide":          {"sig": "arreglar, acomodar", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Arreglar, acomodar [Zavala Reyes 2015 #151 (AM)]", "forma_fuente": "guide", "notas": "Zavala Reyes 2015 #151 (AM)"},
     "hueke":         {"sig": "sitio de trabajo", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Sitio de trabajo [Zavala Reyes 2015 #155 (AM)]", "forma_fuente": "hueque", "notas": "Zavala Reyes 2015 #155 (AM)"},
@@ -222,7 +227,7 @@ GLOSARIO_ZAVALA: dict[str, dict] = {
     "juri":          {"sig": "viento, ventarrón", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Viento, ventarrón [Zavala Reyes 2015 #178 (E)]", "notas": "Zavala Reyes 2015 #178 (E); variantes: jura"},
     "lawari":        {"sig": "acacia Espinoza, acacia. Lauadrí", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Acacia Espinoza, acacia. Lauadrí [Zavala Reyes 2015 #182 (E+A+PMA)]", "forma_fuente": "laguari", "notas": "Zavala Reyes 2015 #182 (E+A+PMA)"},
     "orumo":         {"sig": "urumu. Apamate. No confundir con el Myrciacucuo llata", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Urumu. Apamate. No confundir con el Myrciacucuo llata [Zavala Reyes 2015 #187 (A+PMA)]", "notas": "Zavala Reyes 2015 #187 (A+PMA)"},
-    "patapati":      {"sig": "anegadizo", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Anegadizo [Zavala Reyes 2015 #198 (AM)]", "notas": "Zavala Reyes 2015 #198 (AM)"},
+    "patapati":      {"sig": "anegadizo", "cat": "v_estativo", "fuente": "caquetío-atestiguado", "glosa_fuente": "Anegadizo [Zavala Reyes 2015 #198 (AM)]", "notas": "Zavala Reyes 2015 #198 (AM)"},
     "popoi":         {"sig": "ahí. Adverbio de lugar", "cat": "part", "fuente": "caquetío-atestiguado", "glosa_fuente": "Ahí. Adverbio de lugar [Zavala Reyes 2015 #201 (AM)]", "notas": "Zavala Reyes 2015 #201 (AM)"},
     "kibakibi":      {"sig": "baquiano, conocedor", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Baquiano, conocedor [Zavala Reyes 2015 #205 (AM)]", "forma_fuente": "quibaquibi", "notas": "Zavala Reyes 2015 #205 (AM)"},
     "kiboata":       {"sig": "engañar", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Engañar [Zavala Reyes 2015 #206 (AM)]", "forma_fuente": "quiboata", "notas": "Zavala Reyes 2015 #206 (AM)"},
@@ -230,13 +235,13 @@ GLOSARIO_ZAVALA: dict[str, dict] = {
     "kiwawa":        {"sig": "especie de haba grande y blanca", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Especie de haba grande y blanca [Zavala Reyes 2015 #215 (A)]", "forma_fuente": "quiguagua", "notas": "Zavala Reyes 2015 #215 (A)"},
     "kiricias":      {"sig": "sangre, sangrado", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Sangre, sangrado [Zavala Reyes 2015 #217 (AM)]", "forma_fuente": "quiricias", "notas": "Zavala Reyes 2015 #217 (AM)"},
     "raporon":       {"sig": "calabaza con cal", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Calabaza con cal [Zavala Reyes 2015 #220 (HB)]", "notas": "Zavala Reyes 2015 #220 (HB)"},
-    "sinwanguso":    {"sig": "insolente", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Insolente [Zavala Reyes 2015 #229 (PMA)]", "forma_fuente": "singuanguso", "notas": "Zavala Reyes 2015 #229 (PMA)"},
+    "sinwanguso":    {"sig": "insolente", "cat": "v_estativo", "fuente": "caquetío-atestiguado", "glosa_fuente": "Insolente [Zavala Reyes 2015 #229 (PMA)]", "forma_fuente": "singuanguso", "notas": "Zavala Reyes 2015 #229 (PMA)"},
     "surupa":        {"sig": "blatta orientalis. Cucaracha", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Blatta orientalis. Cucaracha [Zavala Reyes 2015 #231 (A)]", "notas": "Zavala Reyes 2015 #231 (A)"},
     "tuba":          {"sig": "aglomeración, montón", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Aglomeración, montón [Zavala Reyes 2015 #253 (E)]", "notas": "Zavala Reyes 2015 #253 (E); homógrafo con español — resuelto por contexto en score_linguistico"},
     "ubeda":         {"sig": "acacia fétida. Mapurite, cují hediondo", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Acacia fétida. Mapurite, cují hediondo [Zavala Reyes 2015 #266 (A)]", "notas": "Zavala Reyes 2015 #266 (A)"},
     "uray":          {"sig": "envoltura o vaina de las cerbatanas", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Envoltura o vaina de las cerbatanas [Zavala Reyes 2015 #271 (AM)]", "notas": "Zavala Reyes 2015 #271 (AM)"},
     "ure":           {"sig": "raíz", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Raíz [Zavala Reyes 2015 #272 (E)]", "notas": "Zavala Reyes 2015 #272 (E)"},
-    "usera":         {"sig": "seco, arenoso", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Seco, arenoso [Zavala Reyes 2015 #275 (AM)]", "notas": "Zavala Reyes 2015 #275 (AM)"},
+    "usera":         {"sig": "seco, arenoso", "cat": "v_estativo", "fuente": "caquetío-atestiguado", "glosa_fuente": "Seco, arenoso [Zavala Reyes 2015 #275 (AM)]", "notas": "Zavala Reyes 2015 #275 (AM)"},
 }
 
 
@@ -253,10 +258,15 @@ GLOSARIO_ZAVALA: dict[str, dict] = {
 #
 # Las clases son tres y media:
 #   estativo → concepto adjetival que en arahuaco es VERBO (4ª conj.
-#              lokono, Perea y Alonso 1942 pp. 634-639) → cat v_raiz
+#              lokono, Perea y Alonso 1942 pp. 634-639) → cat v_estativo
 #   accion   → verbo pleno                              → cat v_raiz
 #   nombre   → sustantivo concreto o abstracto          → cat sust
 #   adverbio → deíctico de lugar (la clase de `yama`)   → cat part
+#
+# `v_estativo` es de la tanda del 2026-09-21 (d21.4): la clase se declara
+# en la CATEGORÍA y llega al prompt, sin importar el alineamiento pospuesto
+# del lokono. `curiana_lexicon.CATS_VERBALES` la cuenta como verbal, igual
+# que `v_raiz`: un estado se predica con aspecto como una acción.
 #
 # La declaración de qué es un estativo EN ESTE PROYECTO está propuesta
 # en 6-fusion/clases_de_raiz_zavala_2026-09-20.yaml, para 2-lengua/
@@ -264,9 +274,9 @@ GLOSARIO_ZAVALA: dict[str, dict] = {
 CLASES_DE_RAIZ_ZAVALA: dict[str, dict] = {
     "aka": {"clase": "nombre", "cat": "sust", "num": 3, "forma_zavala": "aca",
         "por": "'Bejuco' es una planta. El propio lexicón ya trae `yaro` 'bejuco. Planta venenosa' y `naure` 'planta bejucosa' como sust, las dos de zavala-reyes-2015; achagua `acua` 'sarmiento, bejuco' (neira-ribero-1762)."},
-    "apo": {"clase": "estativo", "cat": "v_raiz", "num": 11, "forma_zavala": "apo",
+    "apo": {"clase": "estativo", "cat": "v_estativo", "num": 11, "forma_zavala": "apo",
         "por": "'Grande' es tamaño, y los tamaños son la 4ª conjugación estativa del lokono (perea-alonso-1942, pp. 634-639). El propio lexicón ya trae el lokono `ipi-lli-be` 'ser grande' como v_raiz. La achagua verbaliza y nominaliza la misma raíz: `numanudau` 'engrandecer', `manucaicasi` 'grandeza' (neira-ribero-1762)."},
-    "bachure": {"clase": "estativo", "cat": "v_raiz", "num": 19, "forma_zavala": "bachure",
+    "bachure": {"clase": "estativo", "cat": "v_estativo", "num": 19, "forma_zavala": "bachure",
         "por": "'Maneto, patituerto' es defecto corporal, y el lokono lo dice con verbo estativo: `hiccu-li` 'ser cojo' (perea-alonso-1942), ya en el lexicón como v_raiz."},
     "badamaro": {"clase": "accion", "cat": "v_raiz", "num": 20, "forma_zavala": "badamaro",
         "por": "'Extraer, sacar', dos infinitivos transitivos. Lokono `lluccu-waria` 'sacar' (perea-alonso-1942). La achagua los marca con el pronombre PREFIJADO nu-, que es la marca del transitivo (perea-alonso-1942 p. 635): `numunuayu` 'sacar una espina', `nusiguiayu` 'sacar estrujando' (neira-ribero-1762)."},
@@ -278,7 +288,7 @@ CLASES_DE_RAIZ_ZAVALA: dict[str, dict] = {
         "por": "'Iguana', zoónimo. El lexicón ya trae `iwana` y `higuana` (taíno, vía brinton-1871) e `iwana-kalinago`, las tres como sust. deuda: sin-procedencia para el lado caquetío — `barbache` no tiene cognado hermano; el apoyo es la glosa (zavala-reyes-2015 #33)."},
     "beceremikore": {"clase": "accion", "cat": "v_raiz", "num": 39, "forma_zavala": "beceremicore",
         "por": "'Dominar, triunfar, victoria': dos infinitivos y su nombre de acción, que el lokono forma con -hù/-hi sobre el verbo (perea-alonso-1942 p. 612). Achagua `nunisau` 'vencer, concluir' (neira-ribero-1762). DUDOSO declarado por la glosa mixta."},
-    "kachipo": {"clase": "estativo", "cat": "v_raiz", "num": 53, "forma_zavala": "cachipo",
+    "kachipo": {"clase": "estativo", "cat": "v_estativo", "num": 53, "forma_zavala": "cachipo",
         "por": "'Enojado, colérico' es estado. La achagua lo conjuga sobre una raíz `cabare-` con el atributivo ca-/ka-: `cabareuno` 'enojarse', `cabarecayi` 'colérico', `cabareumí` 'es bravo' (neira-ribero-1762). Wayuu `aashichijawaa` 'enojarse'."},
     "kana": {"clase": "nombre", "cat": "sust", "num": 57, "forma_zavala": "cana",
         "por": "'Demonio', ser sobrenatural. Achagua `tanasimi` 'demonio, diablo' (neira-ribero-1762); wayuu `yolujaa` 'diablo, demonio'."},
@@ -300,17 +310,17 @@ CLASES_DE_RAIZ_ZAVALA: dict[str, dict] = {
         "por": "'Enredarse, atormentar'. El primero es reflexivo/medio, que en lokono es una conjugación entera —la 3ª, en -n-nua (perea-alonso-1942 p. 629)—, y sólo un verbo puede tener voz media."},
     "duriwa": {"clase": "accion", "cat": "v_raiz", "num": 116, "forma_zavala": "durigua",
         "por": "'Hacer trabajos cortos': la glosa ES una perífrasis verbal. Lokono `k-eme-kebbù` 'trabajar' (perea-alonso-1942 p. 648, keme-kebbu-n 'estar atareado'), ya en el lexicón como v_raiz."},
-    "etamo": {"clase": "estativo", "cat": "v_raiz", "num": 120, "forma_zavala": "etamo",
+    "etamo": {"clase": "estativo", "cat": "v_estativo", "num": 120, "forma_zavala": "etamo",
         "por": "'Feroz, feo' son cualidades (4ª conj. lokono, perea-alonso-1942 p. 634); 'espanto' es su nombre de acción, que el lokono forma con -hi/-hù sobre el mismo verbo (p. 612). La achagua hace el mismo par sobre una raíz: `carruicay` 'espanto' / `carrunatacayi` 'espantoso' (neira-ribero-1762). DUDOSO declarado: glosa mixta cualidad+nombre; se mantiene verbal porque dos de las tres acepciones lo son, y porque `etamo` es la voz que MANDA en el par 18 de la política atestiguado-manda (archivó `mülia`)."},
-    "waidima": {"clase": "estativo", "cat": "v_raiz", "num": 131, "forma_zavala": "guaidima",
+    "waidima": {"clase": "estativo", "cat": "v_estativo", "num": 131, "forma_zavala": "guaidima",
         "por": "'Integro' = 'entero'. El lexicón ya trae el wayuu `waneepiaa` 'ser entero, -ra; ser' — la glosa misma lo declara verbo. Achagua `jaubearuba` 'cabal, entero' (neira-ribero-1762)."},
     "wamipa": {"clase": "nombre", "cat": "sust", "num": 135, "forma_zavala": "guamipa",
         "por": "'Hueco, profundidad': la segunda acepción es nombre abstracto y la primera es nombre de objeto en la achagua, `caricuibai` 'hueco' (neira-ribero-1762). DUDOSO declarado: 'hueco' admite lectura adjetival; en duda se degrada (regla 2)."},
     "warakaro": {"clase": "nombre", "cat": "sust", "num": 138, "forma_zavala": "guaracaro",
         "por": "'Tapirama silvestre', fitónimo. El lexicón ya trae `tapirama` 'frijol de grano grande' como sust (retroabstraído de medina-colina-sxx)."},
-    "waranao": {"clase": "estativo", "cat": "v_raiz", "num": 140, "forma_zavala": "guaranao",
+    "waranao": {"clase": "estativo", "cat": "v_estativo", "num": 140, "forma_zavala": "guaranao",
         "por": "'Salado, ácido' son sabores, y los sabores son 4ª conjugación estativa en lokono (perea-alonso-1942 p. 634). El lexicón ya trae el wayuu `palawaa` 'ser salado, -da'."},
-    "wasima": {"clase": "estativo", "cat": "v_raiz", "num": 145, "forma_zavala": "guasima",
+    "wasima": {"clase": "estativo", "cat": "v_estativo", "num": 145, "forma_zavala": "guasima",
         "por": "'Viejo, anciano'. El apoyo es literal: `hebbe-n` 'ser viejo' es UNO de los tres ejemplos con que Perea define la 4ª conjugación estativa (perea-alonso-1942 p. 634), y `hebbe` ya está en el lexicón como v_raiz 'ser viejo, anciano'. DUDOSO declarado: 'anciano' también puede leerse como nombre de edad (cf. `wanü` 'anciano, mayor', sust); manda el apoyo literal, que es de la misma glosa."},
     "gika": {"clase": "nombre", "cat": "sust", "num": 150, "forma_zavala": "guica",
         "por": "'Yabo', fitónimo (el árbol del cardonal). deuda: sin-procedencia para el cognado; el apoyo es la glosa (zavala-reyes-2015 #150)."},
@@ -330,7 +340,7 @@ CLASES_DE_RAIZ_ZAVALA: dict[str, dict] = {
         "por": "'Acacia Espinoza, acacia. Lauadrí', fitónimo. deuda: sin-procedencia para el cognado; el apoyo es la glosa (zavala-reyes-2015 #182)."},
     "orumo": {"clase": "nombre", "cat": "sust", "num": 187, "forma_zavala": "orumo",
         "por": "'Urumu. Apamate', fitónimo (Tabebuia). deuda: sin-procedencia para el cognado; el apoyo es la glosa (zavala-reyes-2015 #187)."},
-    "patapati": {"clase": "estativo", "cat": "v_raiz", "num": 198, "forma_zavala": "patapati",
+    "patapati": {"clase": "estativo", "cat": "v_estativo", "num": 198, "forma_zavala": "patapati",
         "por": "'Anegadizo' es propiedad del terreno, y los estados son 4ª conjugación lokono (perea-alonso-1942 p. 634). La forma es además reduplicada, y la reduplicación caquetía es productiva y medida (morfologia.md §4, gatschet-1885). deuda: sin-procedencia para el cognado — ninguna hermana da 'anegadizo' con glosa idéntica."},
     "popoi": {"clase": "adverbio", "cat": "part", "num": 201, "forma_zavala": "popoi",
         "por": "La glosa de Zavala es «Ahí. **Adverbio de lugar**»: la fuente declara la parte de la oración. El lexicón ya tiene esa clase y la llama `part` — `yama` 'aquí, en este lugar (deíctico proximal)' y `kana-pa` 'allá'. Apoyo: lokono `jon` 'allá, allí (adverbio demostrativo distal)' y `yu-mùn` 'allí' (perea-alonso-1942); achagua `neenì` 'allí' (neira-ribero-1762). 59 usos raíz+aspecto en la base — «ahí-completivo», que es lo que la heurística permitía decir."},
@@ -346,7 +356,7 @@ CLASES_DE_RAIZ_ZAVALA: dict[str, dict] = {
         "por": "'Sangre, sangrado'. 'Sangre' es nombre en las tres hermanas —lokono `ttenna` e `ithihi`, wayuu, achagua `yrraí` (neira-ribero-1762)— y el lokono tiene ADEMÁS el estativo aparte, `ùttùa` 'ser sangriento, estar ensangrentado' (perea-alonso-1942 p. 639): la lengua distingue el nombre del estado, y la glosa de Zavala empieza por el nombre."},
     "raporon": {"clase": "nombre", "cat": "sust", "num": 220, "forma_zavala": "raporon",
         "por": "'Calabaza con cal'. Gemela de #27 `baperon`, mismo referente y misma clase; achagua `cuirro` 'calabaza, uyama' (neira-ribero-1762)."},
-    "sinwanguso": {"clase": "estativo", "cat": "v_raiz", "num": 229, "forma_zavala": "singuanguso",
+    "sinwanguso": {"clase": "estativo", "cat": "v_estativo", "num": 229, "forma_zavala": "singuanguso",
         "por": "'Insolente' es cualidad de carácter; entra por la regla general de Perea (perea-alonso-1942 pp. 598-599/608: nombre, adjetivo o partícula se hacen verbo). deuda: sin-procedencia — ninguna hermana da 'insolente' con glosa idéntica."},
     "surupa": {"clase": "nombre", "cat": "sust", "num": 231, "forma_zavala": "surupa",
         "por": "'Blatta orientalis. Cucaracha', zoónimo. Achagua `baderrea` 'cucaracha' (neira-ribero-1762)."},
@@ -358,7 +368,7 @@ CLASES_DE_RAIZ_ZAVALA: dict[str, dict] = {
         "por": "'Envoltura o vaina de las cerbatanas': un objeto manufacturado. deuda: sin-procedencia para el cognado; el apoyo es la glosa (zavala-reyes-2015 #271)."},
     "ure": {"clase": "nombre", "cat": "sust", "num": 272, "forma_zavala": "ure",
         "por": "'Raíz'. Nombre en las tres hermanas: lokono `iikirahi`, wayuu `ourala`, achagua `baririba` (neira-ribero-1762). Y van Buurt lo registra como raíz nominal `-ure`/`-huri` 'raíz' (van-buurt-2014 §5, MORFEMAS_VAN_BUURT). ⚠️ homógrafo del formante toponímico `-ure`, en disputa con el `-are` 'sitio de' (morfologia.md §5)."},
-    "usera": {"clase": "estativo", "cat": "v_raiz", "num": 275, "forma_zavala": "usera",
+    "usera": {"clase": "estativo", "cat": "v_estativo", "num": 275, "forma_zavala": "usera",
         "por": "'Seco, arenoso'. El lexicón ya trae el wayuu `josoo` 'estar seco, -ca' con la glosa en forma verbal. Paraujano `jaradu` 'seco' (oliver-1989-apendice-a, tabla A-2). Y la achagua lo predica con el privativo ma-: `macarray` 'seco', `macarracataní` 'seco, estando seco' (neira-ribero-1762), que es el mecanismo de van Buurt §8 (van-buurt-2014)."},
 }
 
