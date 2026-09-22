@@ -9,12 +9,12 @@ local: "fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1.pdf"
 paginas: "766 en el PDF · 618 impresas de cuerpo + índice (619-648). Desfase: impresa = pdf − 118"
 capa_texto: si
 estado_minado: minada-parcial
-cobertura: "medida, no escrita a mano: `6-fusion/taino_oviedo_valdes_1851.yaml` → `meta.cobertura` y `meta.libros_leidos`. Las cifras las emite `python 6-fusion/scripts/medir_taino_oviedo.py --check`"
+cobertura: "medida, no escrita a mano (+ el guanín y la calidad de intermediación, 2026-09-22, campaña del taíno 2 T7): `6-fusion/taino_oviedo_valdes_1851.yaml` → `meta.cobertura` y `meta.libros_leidos`. Las cifras las emite `python 6-fusion/scripts/medir_taino_oviedo.py --check`"
 acceso: "El PDF local está TRUNCADO pero es legible con MuPDF en modo reparación (ver más abajo). La imagen escaneada sólo sobrevive hasta la impresa 154. Para lo que falta, la ed. Amador de los Ríos es libre en Internet Archive: tomo II https://archive.org/details/historiageneral01fernguat · tomo IV https://archive.org/details/historiageneral04fernguat"
 prioridad: alta
 tareas: [F9]
-verificado: 2026-09-21
-minado: 2026-09-21
+verificado: 2026-09-22
+minado: 2026-09-22
 aliases: ["Oviedo y Valdés", "Oviedo 1851", "Historia general y natural", "Oviedo vol. I"]
 ---
 
@@ -139,11 +139,76 @@ obra como fuente léxica debe citarse con esa advertencia al lado.
   localizar, no para citar. Coherente con el rastreo del 2026-08-14 sobre el
   tomo IV.
 
+## 2026-09-22 — releído por el GUANÍN y por quién tradujo (campaña del taíno 2, T7)
+
+**Qué se preguntó.** No por el léxico taíno en general, sino por dos cosas:
+qué es el guanín, dicho por el cronista, y **con qué calidad de intermediación
+llega cada dato de lengua**. Extraído con el método de MuPDF que esta nota ya
+dejaba escrito. Datos y citas en `6-fusion/taino2_etnohistoria_contacto.yaml`
+(t7.g7, t7.g8, t7.d1).
+
+**Medido** sobre las 766 páginas, con el mismo script que las otras cinco
+obras de la parcela (`6-fusion/scripts/medir_taino2_etnohistoria.py`, que lleva
+este volumen por la vía de MuPDF): `guanin` **3** (impresas 480 y 507) ·
+`cobre doradas` **1** (507) · `dalihao` **1** (473) — y `datihao` **0** ·
+`datiao` **0** · `guatiao` **0** · `tiao` **0**. El único portador de la forma
+en todo el volumen es ese `dalihao`.
+
+### 🔴 Oviedo DEFINE el guanín, y no es oro
+
+**Lib. XVII cap. IX, impresa 507** (pdf 625), viaje de Grijalva por Yucatán:
+
+> «trayan unos **guanines** que se ponen en las orejas é unas patenas redondas
+> de **guanin**… pero **porque el letor entienda qué cosas son guanines, para
+> adelante digo que son pieças de cobre doradas; é si algund oro tienen, es muy
+> poco ó ninguno**.»
+
+Es la definición técnica del objeto por el cronista que además fue veedor de
+fundiciones, y ordena el resto: el «oro bajo» de Colón, el «oro aunque no
+puro… como el alemán de que se acuñan los florines» de [[angleria-1892]] y el
+«color algo morada» de [[las-casas-1875]] son **el mismo objeto**.
+
+⚠️ **Y es la prueba del vector 1 de Oliver en el acto.** El pasaje es de
+**Yucatán**: Oviedo aplica sin pestañear una palabra antillana a unos objetos
+mayas, con un intérprete español de por medio («Julián la lengua»). Que un
+cronista llame `guanín` a algo **no atestigua que allí se llamara así** — lo
+que rebaja el peso de las dos apariciones de `guanines` en Chiribichi
+(Anglería vol. 4, pp. 335-336 y 364).
+
+**Lib. XVI, impresa 480** (pdf 598), Boriquén 1511: «un caçique… llevaba en los
+pechos **un guanin ó pieça de oro de las que suelen los indios principales
+colgarse al cuello**». El uso taíno del objeto —insignia de principal— fijado
+por el mismo cronista que lo define.
+
+### `dalihao` (p. 473): lo que sí se puede citar sin reserva
+
+No es la forma —eso queda bloqueado hasta ver la imagen—, sino **quién
+tradujo**, y es lo mejor de toda la serie:
+
+> «é cómo llegó luego Agueybana, **dixo la lengua, en el lenguaje de los
+> indios**: "Señor, ¿por qué me mandas matar? Yo te serviré é seré tu naboría";
+> y entonces dixo el cacique: "Adelante, adelante, **á mi dalihao (que quiere
+> decir mi señor, ó el que, como yo, se nombra)**, dexa ese bellaco."»
+
+El hablante es Johan González, a quien Oviedo llama dos veces «la lengua» y una
+«**grande lengua**»: un español que sabía boriquén lo bastante para meterse
+desnudo y pintado en un areíto y entender lo que se cantaba. Y la glosa
+—«**el que, como yo, se nombra**»— es la del **intercambio de nombres**, es
+decir la institución, no un título.
+
+Consecuencia para `decisiones_campanas_2026-09-21.yaml` §dc.4 (PR #193): las
+dos atestaciones de `datihao` **no valen lo mismo**. Ésta se puede leer y pesar;
+la de «los indios de la Provincia de Venezuela» está en un tomo que el repo no
+tiene y llega por [[jahn-1927]] p. 213 n. 29. Antes de llamarlo «cognado que
+hace match», leer la segunda.
+
 ## Qué falta
 
 1. **Conseguir una copia con la imagen completa** (Internet Archive, ed. Amador
    de los Ríos). Desbloquea las 47 formas que hoy son sólo OCR — entre ellas
    `eracra`, `datihao` y las cinco batatas. Es lo más rentable de toda la lista.
+   🔴 **Y es ahora más urgente**: con t7.d1 medido, `dalihao` es el único
+   portador de la forma en todo el volumen y la imagen no llega a la p. 473.
 2. **Leer el Libro XIX** (impresas 586-618): Tierra-Firme, Cubagua, Cumaná,
    Maracapana. Es el que más costa de Venezuela tiene y quedó sin leer.
 3. **Leer los libros XV y XVIII** y el grueso de VIII-XVII fuera de las páginas

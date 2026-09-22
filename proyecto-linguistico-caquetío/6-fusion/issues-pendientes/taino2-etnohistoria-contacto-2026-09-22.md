@@ -14,20 +14,22 @@ python 6-fusion/scripts/medir_taino2_etnohistoria.py --obra angleria-v1
 ```
 
 Los hallazgos con su cita literal, su clase, su época y su fuerza están en
-`6-fusion/taino2_etnohistoria_contacto.yaml` (24 hallazgos + 3 de la Kaketiana).
+`6-fusion/taino2_etnohistoria_contacto.yaml` (27 hallazgos + 3 de la Kaketiana).
+Tu corrección del 21 (dc.4, PR #193) y lo que esta parcela le añade van en §3.
 
 ---
 
 ## 0. Lo que de este encargo resultó falso al medirlo
 
-1. 🔴 **`6-fusion/decisiones_campanas_2026-09-21.yaml` no existe.** El encargo
-   lo daba como el punto de partida de esta parcela — «§dc.4, la corrección de
-   Miguel sobre el episodio de la hija de Manaure: LÉELA ENTERA». No está en el
-   árbol de trabajo, no está en `main`, y `git log --all --diff-filter=A` sobre
-   ese patrón devuelve cero. Lo único que el repo tiene sobre «la hija de
-   Manaure» es la tradición del topónimo **Judibana**, que es otro asunto. **La
-   parcela arrancó sin su punto de partida.** Si esa corrección existe, hay que
-   traerla al repo antes de que una tercera campaña vuelva a buscarla.
+1. 🔴 **`decisiones_campanas_2026-09-21.yaml` §dc.4 no está en `main`: vive en
+   el PR #193, sin mergear** — y **el error de decirlo fue mío**. Escribí «no
+   existe en ninguna rama» apoyándome en `git log --all --diff-filter=A`, que
+   devolvía cero. El cero era de mi consulta: el worktree se cortó de `main` y
+   `--all` sólo ve lo que esta copia tiene. Con un `git fetch origin` delante,
+   el mismo comando devuelve `f01e4e6`. Es **la regla 6 aplicada a git** —*un
+   cero hay que verificarlo*— y es la misma familia que la trampa nº 5 de esta
+   lista. La parcela arrancó sin su punto de partida y lo recuperó a mitad de
+   camino; lo que dc.4 dice, y lo que esta parcela le añade, está en §3.
 
 2. **`keegan-1989` no está en el repo.** El encargo lo listaba como «ya en el
    repo». Su nota declara `local: null` y «NO consultado en texto completo»
@@ -108,6 +110,7 @@ dicen, ordenado:
 | curianenses (Cumaná), 1500 | de Cauchieto, «hacia el Occidente, por costa derecha, seis soles» | Anglería vol. 1 p. 310 |
 | mercaderes de Chiribichi, c. 1520 | es la mercancía de la feria: «oro ó alhajas de oro, **que ellos llaman guanines**» | Anglería vol. 4 pp. 335-336 |
 | gente de Veragua, 1502 | **«se cogía en la tierra firme muy cerca de ellos»**; águilas y espejos de guanín | Hernando Colón p. 165 |
+| **Oviedo, definiéndolo** | **«son pieças de cobre doradas; é si algund oro tienen, es muy poco ó ninguno»** | **Oviedo vol. I, p. 507** |
 
 Leído junto: **el guanín de las islas se decía de fuera y nunca de un sitio
 comprobable; el guanín de Tierra Firme se decía del oeste; y donde se hacía de
@@ -183,7 +186,110 @@ que se quedó trece meses a aprender.**
 
 ---
 
-## 3. 🔴 El hallazgo lateral, que es el que más mueve el repo
+## 3. Tu argumento (dc.4) con esto en la mano
+
+Lo que dijiste el 21:
+
+> «aunque no sepamos de contacto precolombino conocemos que durante la
+> conquista Manaure supo de parientes (incluso de su hija) que fue raptada y
+> llevada a la Española. Y él mandó gentes a contactarlos y recuperarlos. Por
+> lo que **debe haber habido contacto precolombino**. Y diao y diaitao que son
+> símiles son las versiones caquetías de la versión Taína. Un cognado que hace
+> match.»
+
+### Lo que T7 le añade, y una corrección de alcance
+
+**El tramo costa ↔ ABC te lo confirma por el otro lado, pero no es lo que
+parece.** No es contacto entre dos mundos: es movimiento **dentro de la misma
+polity**. Oliver es literal —el territorio caquetío costero al contacto
+comprendía las llanuras de Falcón «**including the Netherland Antilles**»— y
+esta parcela lo ve desde el mar: en agosto de 1499, el primer paso europeo por
+esa agua recorre **Coro → Curazao → cabo de San Román → golfo de Coquibacoa**
+como un solo tramo de costa (Navarrete t. III, pp. 7-9). Que Baracoica viva en
+las islas y sea «pariente y deudo» de Manaure **prueba que la esfera cruza el
+agua**. No prueba nada sobre los taínos.
+
+Así que tu argumento se apoya en dos tramos de naturaleza distinta: el primero
+es sólido y es de la esfera; el segundo (islas ↔ La Española) lo hacen barcos
+castellanos entre 1513 y 1526. **El salto a precolombino cuelga entero del
+segundo**, y ese salto es lo que yo tenía que ir a buscar en las fuentes.
+
+### A favor, encontré una cosa — y es buena
+
+El 12 de diciembre de 1492, antes de que ningún europeo hubiera bajado al sur,
+los lucayos que Colón llevaba a bordo sostuvieron que detrás de La Española
+había una tierra **que no estaba cercada de agua**, le dieron nombre y dijeron
+que su gente les hacía daño. Es noticia indígena, es necesariamente anterior a
+los europeos, y va en tu dirección. Lo que no hace es localizar la tierra.
+
+### En contra, encontré dos
+
+En Paria, 1498, con gente de las islas a bordo, **no se entendieron**, y lo
+escribió Colón. Y en los tres libros de Anglería que narran Paria, Curiana y
+Pinzón la palabra «intérprete» no sale ni una vez, mientras sale once en los
+libros de las islas.
+
+### Pero eso **no contradice** lo de `datihao` — y ahí está lo interesante
+
+Que una institución y su nombre sean compartidos por taíno y caquetío, **y** que
+en Paria nadie se entendiera, no son dos hechos en pelea: **son la firma de una
+cadena**. Un nombre de alianza entre señores viaja de tramo en tramo sin que los
+extremos se hablen. Y Anglería lo dice de las ferias de Curiana con todas las
+letras: se comercia «**pero de cerca**», y el oro aleado «**se les llevan de
+otras partes á cambio**» (vol. 1, pp. 308-309). El modelo que el material
+aguanta es el de **eslabones cortos**, no el del viaje largo — que es, dicho sea
+de paso, una hipótesis más fuerte y más comprobable que «hubo contacto».
+
+### Y sobre `datihao`, un aviso de calidad
+
+Fui a leer la atestación de San Juan en el Oviedo que ya teníamos
+(vol. I, lib. XVI cap. V, p. impresa 473). Dice:
+
+> «é cómo llegó luego Agueybana, **dixo la lengua, en el lenguaje de los
+> indios**: "Señor, ¿por qué me mandas matar? Yo te serviré é seré tu naboría";
+> y entonces dixo el cacique: "Adelante, adelante, **á mi dalihao (que quiere
+> decir mi señor, ó el que, como yo, se nombra)**, dexa ese bellaco."»
+
+**La calidad de esta atestación es la mejor de toda la serie, y lo es por el eje
+de esta parcela: quién tradujo.** Quien habla es Johan González, a quien Oviedo
+llama dos veces «la lengua» y una «**grande lengua**» — un español que sabía
+boriquén lo bastante para meterse desnudo y pintado en un areíto y entender lo
+que cantaban. Y la glosa de Oviedo, «**el que, como yo, se nombra**», es la del
+intercambio de nombres: la institución, no un título.
+
+⚠️ **Dos reservas, y las dos importan.** (a) La capa de texto lee `dalihao`, no
+`datihao`, que es la confusión l/t del OCR que la campaña de Oviedo ya había
+marcado como urgente — y **la imagen escaneada de ese PDF no llega a la
+p. 473**. Medido hoy sobre las 766 páginas del vol. I: `datihao` 0 ·
+`guatiao` 0 · `tiao` 0, y `dalihao` 1. La forma no se cita hasta verla en otra
+copia. (b)
+dc.4 pone las dos atestaciones en pie de igualdad; no lo están: **ésta se puede
+leer y pesar, y la de «los indios de la Provincia de Venezuela» el proyecto no
+la ha visto** — está en un tomo que no tenemos y llega por Jahn 1927 p. 213
+n. 29. Antes de llamarlo «cognado que hace match», leer la segunda.
+
+### Y una cosa que ordena todo el apartado del guanín
+
+Oviedo lo **define**, en el volumen que ya teníamos:
+
+> «**porque el letor entienda qué cosas son guanines, para adelante digo que son
+> pieças de cobre doradas; é si algund oro tienen, es muy poco ó ninguno**»
+> — vol. I, lib. XVII cap. IX, p. impresa 507
+
+Cobre dorado. Eso hace que el «oro bajo» de Colón, el «oro aunque no puro… como
+el alemán de que se acuñan los florines» de Anglería y el «color algo morada» de
+Las Casas sean el mismo objeto, y confirma que hablamos de la aleación del
+istmo.
+
+⚠️ **Y de paso demuestra el vector 1 de Oliver en el acto**: ese pasaje es de
+**Yucatán**, y Oviedo aplica sin pestañear una palabra antillana a unos objetos
+mayas, con un intérprete español de por medio. Que un cronista llame `guanín` a
+algo **no atestigua que allí se llamara así** — lo cual rebaja, y no poco, las
+dos apariciones de Chiribichi que yo mismo había puesto arriba.
+
+---
+
+## 4. 🔴 El hallazgo lateral, que es el que más mueve el repo
 
 **Hay dos Curianas, y Navarrete las separa con un documento.**
 
@@ -217,7 +323,7 @@ para que lo decidas.
 
 ---
 
-## 4. Lo poco que estas obras dan de la Kaketiana, y es dato
+## 5. Lo poco que estas obras dan de la Kaketiana, y es dato
 
 - **El primer paso europeo, agosto de 1499**: Hojeda, Juan de la Cosa y
   Vespucio pasan de la ensenada de Coro a **Curazao, «que llamaron de los
@@ -239,10 +345,12 @@ para que lo decidas.
 
 ---
 
-## 5. Qué le hace todo esto a la hipótesis — con letras
+## 6. Qué le hace todo esto a la hipótesis — con letras
 
-El estado actual de la afirmación «hubo contacto precolombino entre la esfera
-caquetía y el mundo taíno» es `hipotético`. Con lo de esta parcela en la mano:
+dc.4 dejaba tres afirmaciones con tres etiquetas, y sólo la tercera abierta:
+costa ↔ ABC con parentesco = `atestiguado`; costa/islas ↔ La Española 1513-1526
+= `atestiguado`, colonial; **contacto precolombino con las Antillas Mayores =
+`hipotético`, pendiente de ti**. Es esa tercera la que esta parcela fue a medir.
 
 **A. Sube a `reconstruido`.**
 *A favor*: hay noticia indígena, anterior a cualquier intermediación europea,
@@ -257,24 +365,38 @@ lengua disponible salió negativa. **Subir de capa con esto sería subir por
 plausibilidad, no por evidencia.**
 
 **B. Se queda en `hipotético`, pero con el expediente escrito.**
-Entran al repo la bitácora de las cinco obras, las 24 citas clasificadas y las
+Entran al repo la bitácora de las seis obras, las 27 citas clasificadas y las
 negativas medidas, para que nadie vuelva a gastar una noche en esto. La
 hipótesis conserva su capa y gana algo que no tenía: **un cuerpo de evidencia
 negativa bien medida**, que es lo que permite decir dónde habría que buscar
 después.
 *A favor*: es lo que la regla 2 manda —en duda, degradar— y lo que el estado
-del material aguanta. *En contra*: no le da a Miguel lo que pedía.
+del material aguanta. *En contra*: no te da lo que pediste.
 
 **C. Se parte en dos afirmaciones, y cada una toma su capa.**
 - **C1 — «el guanín circulaba entre Tierra Firme y las Antillas Mayores antes
   de 1492»**: a esto los textos le dan bastante. El objeto está en las dos
-  orillas, tiene un nombre común, y los isleños decían que venía de fuera.
-  Podría ir a `reconstruido` con el apoyo de estas citas.
+  orillas, lo define un cronista como cobre dorado, tiene un nombre común, y
+  los isleños decían que venía de fuera. Podría ir a `reconstruido` con el
+  apoyo de estas citas.
 - **C2 — «la esfera caquetía participaba en ese circuito»**: a esto los textos
   no le dan nada. Se queda `hipotético`, y con una razón escrita.
 *A favor*: es lo que de verdad mide el material, y separa lo que hoy está
-fundido en una sola frase. *En contra*: parte una afirmación que Miguel formuló
+fundido en una sola frase. *En contra*: parte una afirmación que formulaste
 entera, y C1 no es de este proyecto (es del Caribe, no de la Kaketiana).
+
+**E — la que salió al leer dc.4, y no estaba antes.**
+**Se cambia la afirmación por una más fuerte: «el contacto, si lo hubo, fue por
+CADENA de tramos cortos, no por travesía».** Esto no es una etiqueta más floja:
+es una hipótesis **con predicciones**. Predice lo que encontramos —institución y
+nombre compartidos (`datihao`) **y** ninguna inteligibilidad en Paria— porque un
+nombre de alianza viaja de eslabón en eslabón sin que los extremos se hablen. Y
+predice lo que Anglería dice de las ferias de Curiana: se comercia «**pero de
+cerca**» y el oro aleado «**se les llevan de otras partes á cambio**». Y es
+falsable: si aparece un objeto antillano en las ABC o un dabajuroide en las
+Mayores, la cadena tiene un tramo que no debería.
+*A favor*: convierte una creencia en un programa. *En contra*: reformula lo que
+dijiste, y eso lo decides tú, no yo.
 
 **D. Baja.**
 No. Nada de lo medido contradice el contacto: lo que hay es ausencia de
@@ -283,18 +405,24 @@ es evidencia de ausencia. Se descarta.
 
 ### Mi recomendación
 
-**C.** Porque es la única que no miente en ninguno de los dos sentidos: dice que
-sí hay un circuito del guanín documentado por los propios indios entre el
-continente y las islas grandes, y dice que la Kaketiana no aparece en él. Y
-porque deja el trabajo siguiente **nombrado**: si C2 ha de subir alguna vez, lo
-que lo subiría es un objeto, no una crónica — el oro de Curazao de 1502
+**C + E.** C porque es la única que no miente en ninguno de los dos sentidos:
+dice que sí hay un circuito del guanín documentado por los propios indios entre
+el continente y las islas grandes, y dice que la Kaketiana no aparece en él. Y E
+porque es lo que tu propio argumento pide cuando se le quita el salto: tú
+observaste que Manaure tenía parientes al otro lado del agua y mandó gente a
+buscarlos — **eso es exactamente un eslabón**, y el modelo de eslabones explica
+los dos hechos que parecían reñidos (`datihao` compartida, Paria mudo) sin
+forzar ninguno.
+
+Y deja el trabajo siguiente **nombrado**: si C2 ha de subir alguna vez, lo que
+lo subiría es un objeto, no una crónica — el oro de Curazao de 1502
 (`t7.kak2`) es exactamente ese objeto, y está a tres folios de distancia.
 
-Si prefieres una sola afirmación, entonces **B**.
+Si prefieres una sola afirmación y ninguna reformulación, entonces **B**.
 
 ---
 
-## 6. Lo que haría falta, en orden de coste
+## 7. Lo que haría falta, en orden de coste
 
 | Qué | Por qué | Coste |
 |---|---|---|
@@ -306,7 +434,7 @@ Si prefieres una sola afirmación, entonces **B**.
 
 ---
 
-## 7. Lo que vi de paso
+## 8. Lo que vi de paso
 
 1. **La bitácora de `angleria-1892` da el vol. 1 por «no dio nada relevante»**
    en su sesión de 2026-07-29, y luego T5 sacó de él la cita más citada de la

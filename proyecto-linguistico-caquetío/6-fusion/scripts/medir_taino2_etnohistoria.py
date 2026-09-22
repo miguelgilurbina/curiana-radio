@@ -104,6 +104,18 @@ OBRAS = {
         "desfase": None,
         "tramos": {},
     },
+    # ⚠️ El PDF está TRUNCADO: `pypdf` y `pdftotext` se plantan y sólo MuPDF lo
+    # abre en modo reparación. El método lo dejó escrito la campaña anterior en
+    # `4-fuentes/oviedo-y-valdes-1851.md`. Si pymupdf no está instalado, esta
+    # obra se salta y se dice — no se finge un cero.
+    "oviedo-v1": {
+        "archivo": "Oviedo_Valdes_1851_Historia_General_Indias_vol1.pdf",
+        "obra": "oviedo-y-valdes-1851 vol. I",
+        "desfase": -118,
+        "extractor": "mupdf",
+        "tramos": {"libros I-XV (islas, natural)": (1, 560),
+                   "libros XVI-XIX (San Juan, Cuba, Tierra Firme)": (561, 766)},
+    },
 }
 
 # ── Las dianas, por pregunta de la parcela ───────────────────────────────
@@ -115,6 +127,7 @@ PREGUNTAS = {
     "1-guanin": [
         "guanin", "guani", "oro baxo", "oro bajo", "oro muy bajo", "turey",
         "espejo de oro", "aguila de guanin", "alhajas de oro", "oro no puro",
+        "cobre doradas", "datihao", "datiao", "dalihao", "guatiao", "tiao",
     ],
     "2-lo-que-los-isleños-decian-del-sur": [
         "babeque", "caribana", "caritaba", "bohio", "matinin", "carib",
@@ -171,6 +184,29 @@ def cargar(clave, cache):
     origen = os.path.join(FUENTES, ficha["archivo"])
     if not os.path.exists(origen):
         return None, f"no está en el repo: {ficha['archivo']}"
+    if ficha.get("extractor") == "mupdf":
+        destino = os.path.join(cache, clave + ".txt")
+        # ⚠️ una caché de 0 bytes es una extracción que se murió a medias, y
+        # envenena todas las corridas siguientes con ceros perfectos. Se trata
+        # como si no existiera.
+        if os.path.exists(destino) and os.path.getsize(destino) == 0:
+            os.remove(destino)
+        if not os.path.exists(destino):
+            try:
+                import pymupdf  # noqa: PLC0415
+            except ImportError:
+                try:
+                    import fitz as pymupdf  # noqa: PLC0415
+                except ImportError:
+                    return None, ("pymupdf no está instalado y este PDF está "
+                                  "truncado: pdftotext no sirve (ver "
+                                  "4-fuentes/oviedo-y-valdes-1851.md)")
+            doc = pymupdf.open(origen)
+            with open(destino, "w", encoding="utf-8") as fh:
+                fh.write("\f".join(doc[i].get_text()
+                                   for i in range(doc.page_count)))
+        with open(destino, "rb") as fh:
+            return fh.read().decode("utf-8"), None
     if origen.lower().endswith(".txt"):
         with open(origen, "rb") as fh:
             crudo = fh.read()

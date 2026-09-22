@@ -36,14 +36,16 @@ meta:
   rama: campana/taino2-etnohistoria
   mide: 6-fusion/scripts/medir_taino2_etnohistoria.py
   metodo: >-
-    Cinco obras leídas por pasaje, no por conteo (skill §3). La ortografía se
+    Seis obras leídas por pasaje, no por conteo (skill §3) — cinco medidas por
+    el script y una sexta, Oviedo y Valdés vol. I, que ya estaba en el repo y se
+    abrió con el método de MuPDF que dejó escrito la campaña anterior. La ortografía se
     midió ANTES de contar (skill §2) y se declaran los positivos de control:
     en cada obra se cuenta también `isla`, `oro`, `indio`, `cacique` y
     `rescat`, para que un cero se pueda leer como cero de la fuente y no de la
     consulta (regla 6).
   aviso_de_derechos: >-
-    las cinco obras son de dominio público (ediciones de 1829, 1858, 1875 y
-    1892 de textos de los siglos XV-XVI). Se citan literalmente. Las obras
+    las seis obras son de dominio público (ediciones de 1829, 1851, 1858, 1875
+    y 1892 de textos de los siglos XV-XVI). Se citan literalmente. Las obras
     modernas que aparecen aquí (Oliver 1989) se parafrasean o se citan en corto.
 
 # ══════════════════════════════════════════════════════════════════════
@@ -56,21 +58,21 @@ lo_que_resulto_falso_del_encargo:
     Miguel sobre el episodio de la hija de Manaure: LÉELA ENTERA, es el punto
     de partida de tu parcela»
   medido: >-
-    🔴 **Ese archivo NO EXISTE.** Ni en el árbol de trabajo, ni en `main`, ni
-    en ninguna rama: `git log --all --diff-filter=A -- "*decisiones_campanas*"`
-    devuelve cero, y un `grep -r "dc.4\|decisiones_campanas"` sobre todo el
-    repo también. Lo único que hay sobre la hija de Manaure es la tradición de
-    **Judibana** (`4-fuentes/velasco-2015-resistencia.md` §3,
-    `6-fusion/castellanos_1589_toponimos.yaml`,
-    `6-fusion/toponimia_paraguana_miguel.yaml`), que es otro asunto: el
-    topónimo, no el episodio de Ampíes.
+    **No está en `main`**: vive en el **PR #193**, sin mergear (commit
+    `f01e4e6`). Lo dijo el coordinador a media parcela, y tenía razón.
+  el_error_fue_mio_y_es_del_tipo_que_esta_campana_persigue: >-
+    🔴 Yo escribí antes «no existe en ninguna rama», y lo apoyé en
+    `git log --all --diff-filter=A -- "*decisiones_campanas*"`, que devolvía
+    cero. **El cero era de mi consulta, no del repo**: el worktree se cortó de
+    `main` y `--all` sólo ve las referencias que esta copia tiene. Con un
+    `git fetch origin` delante, el mismo comando devuelve `f01e4e6`. Es la
+    regla 6 aplicada a git —*un cero hay que verificarlo*— y la misma familia
+    que la trampa del doble espacio de abajo: **la herramienta contesta lo que
+    le preguntas, no lo que hay.**
   consecuencia: >-
-    la parcela arrancó **sin su punto de partida declarado**. Lo que se dice
-    aquí del episodio de Ampíes sale sólo de lo que la PRIMERA campaña dejó
-    escrito en `6-fusion/issues-pendientes/taino-en-la-esfera-2026-09-21.md`.
-    Si la corrección de Miguel existe en otro sitio —en un issue de GitHub, en
-    una conversación—, hay que traerla al repo antes de que una tercera
-    campaña vuelva a buscarla.
+    la parcela arrancó **sin su punto de partida** y lo recuperó a mitad de
+    camino. Lo que dc.4 dice, y lo que esta parcela le añade, está en
+    §respuesta_a_dc4.
 
 - afirmacion: '«Ya en el repo: … keegan-1989»'
   medido: >-
@@ -124,6 +126,88 @@ veredicto: >-
   lengua —Paria, agosto de 1498— Colón escribió de su mano que **no se
   entendían**. Eso no prueba que no hubiera contacto precolombino: prueba que
   la noticia que los europeos recogieron no lo documenta.
+
+# ══════════════════════════════════════════════════════════════════════
+# 1 bis. RESPUESTA A dc.4 — el argumento de Miguel, y qué le añade T7
+#
+# dc.4 (PR #193, sin mergear) recoge la corrección de Miguel del 2026-09-21:
+#   «aunque no sepamos de contacto precolombino conocemos que durante la
+#   conquista Manaure supo de parientes (incluso de su hija) que fue raptada y
+#   llevada a la Española. Y él mandó gentes a contactarlos y recuperarlos. Por
+#   lo que debe haber habido contacto precolombino. Y diao y diaitao que son
+#   símiles son las versiones caquetías de la versión Taína. Un cognado que
+#   hace match.»
+# ══════════════════════════════════════════════════════════════════════
+respuesta_a_dc4:
+
+- punto: el episodio de Ampíes
+  lo_que_dc4_ya_verifico: >-
+    la carta del factor Juan de Ampíes al Rey (c. 1525-26, Arcaya 1920
+    pp. 160-161 y 166-167): los de la costa «muchas veces se pasaban allá» a
+    Curazao, Aruba y Bonaire; Manaure mandó embajada con D. Juan Baracoica,
+    «su pariente y deudo, que está en las islas»; una armada se llevó a su hija
+    y a su marido a La Española y Ampíes los devolvió.
+  que_le_anade_T7: >-
+    **una corrección de alcance, y está a favor de la mitad del argumento.** El
+    tramo costa ↔ ABC no es contacto entre dos mundos: es movimiento **dentro
+    de la misma polity**. Oliver es literal —«the largest contiguous territory
+    under a single Caquetío polity comprised, at the time of Contact, the
+    coastal plains of what is today the State Falcón, Venezuela, **including
+    the Netherland Antilles**»— y esta parcela lo ve desde el otro lado, en el
+    primer paso europeo por esa agua: Hojeda, La Cosa y Vespucio recorren en
+    agosto de 1499 Coro → Curazao → cabo de San Román → golfo de Coquibacoa
+    como un solo tramo de costa (t7.kak1). Que Baracoica viva en las islas y
+    sea «pariente y deudo» de Manaure **prueba que la esfera cruza el agua**;
+    no prueba nada sobre los taínos.
+  por_tanto: >-
+    el argumento de Miguel se apoya en dos tramos de distinta naturaleza: el
+    primero (costa ↔ ABC, con parentesco) es sólido y es de la esfera; el
+    segundo (islas ↔ La Española) es de barcos castellanos y de 1513-1526. El
+    salto a precolombino se apoya entero en el segundo.
+
+- punto: el salto a antes de 1499 — que es lo que esta parcela tenía que buscar
+  lo_que_encontre_a_favor: >-
+    **una sola cosa, y es buena**: el 12 de diciembre de 1492, antes de que
+    ningún europeo hubiera bajado al sur, los indios lucayos que Colón llevaba
+    a bordo sostuvieron que detrás de La Española había una tierra **que no
+    estaba cercada de agua**, le dieron nombre —«Caritaba ó Caribana»— y
+    dijeron que su gente les hacía daño (t7.s1). Es noticia indígena, es
+    anterior a los europeos, y es exactamente la dirección que el argumento de
+    Miguel necesita. **Lo que no hace es localizar la tierra**, y el propio Las
+    Casas descuenta cuánto de eso se entendía (t7.s2).
+  lo_que_encontre_en_contra: >-
+    en Paria, agosto de 1498, en el punto más occidental de Tierra Firme al que
+    Colón llegó y con gente de las islas a bordo, **no se entendieron**, y lo
+    escribió él (t7.l1). Y en los tres libros de Anglería que narran Paria,
+    Curiana y Pinzón no aparece la palabra «intérprete» ni una vez, mientras sí
+    aparece once veces en los libros de las islas (t7.l2).
+  lo_que_no_es_una_contradiccion: >-
+    ⚠️ y aquí está el punto analítico de esta parcela. Que `datihao` sea
+    compartida por taíno y caquetío **no se rompe** porque en Paria no se
+    entendieran: las dos cosas juntas son la firma de una **cadena**, no de una
+    vecindad. Una institución y su nombre viajan de tramo en tramo sin que los
+    extremos se hablen — y Anglería lo dice de las ferias de Curiana con todas
+    las letras: se comercia «**pero de cerca**», y el oro aleado «**se les
+    llevan de otras partes á cambio**» (t7.l6). El modelo que el material
+    aguanta es el de eslabones cortos, no el del viaje largo.
+
+- punto: datihao y diao
+  lo_que_dc4_ya_verifico: >-
+    `diao` es otro lexema, con atestación caquetía propia; `datihao` tiene dos
+    atestaciones en Oviedo —San Juan (t. I p. 473) y «los indios de la
+    Provincia de Venezuela» (otro tomo, vía Jahn 1927 p. 213 n. 29)— y Oliver
+    (n. 42, p. 146) concluye que fue «equally shared by both Taíno and
+    Caquetío».
+  que_le_anade_T7: >-
+    **las dos atestaciones no valen lo mismo, y se separan justo por el eje de
+    esta parcela: quién tradujo.** Ver t7.d1. La de San Juan llega por un
+    intérprete con nombre, oficio y competencia declarada por el cronista; la
+    de Venezuela el proyecto **no la ha visto** (está en un tomo que no
+    tenemos, y se cita por Jahn). Antes de llamarlo «cognado que hace match»
+    conviene que las dos estén leídas.
+  y_una_cosa_mas: >-
+    Oviedo **define** el guanín en el volumen que sí tenemos, y lo define como
+    metal, no como oro (t7.g7). Eso ordena todo el §1 de esta propuesta.
 
 # ══════════════════════════════════════════════════════════════════════
 # 2. LAS CINCO PREGUNTAS, CON PÁGINA CADA UNA
@@ -283,6 +367,63 @@ hallazgos:
   aviso: >-
     ⚠️ y aquí **sí había intérpretes**: es el contraste que hace medible el
     silencio de Paria y Curiana.
+
+- id: t7.g7
+  pregunta: 1-guanin
+  titulo: >-
+    🔴 Oviedo DEFINE el guanín, y lo define como cobre dorado — en un volumen
+    que ya estaba en el repo
+  cita: >-
+    «trayan unos **guanines** que se ponen en las orejas é unas patenas
+    redondas de **guanin**, é dixeron que no tenian otro oro alguno sino
+    aquello… pero **porque el letor entienda qué cosas son guanines, para
+    adelante digo que son pieças de cobre doradas; é si algund oro tienen, es
+    muy poco ó ninguno**.»
+  obra: oviedo-y-valdes-1851
+  pagina: 'lib. XVII, cap. IX — impresa 507 (pdf 625; desfase declarado: impresa = pdf − 118)'
+  clase: inferencia-del-cronista (la definición) sobre un hecho observado
+  epoca: contacto-temprano
+  fecha_del_hecho: 1518, viaje de Grijalva por la costa de Yucatán
+  fuerza: alta para la definición
+  por_que: >-
+    es la definición técnica del objeto por el cronista que era además
+    veedor de fundiciones: **cobre dorado**, poco o nada de oro. Ordena todo lo
+    demás — el «oro bajo» de Colón, el «oro aunque no puro… como el alemán de
+    que se acuñan los florines» de Anglería y el «color algo morada» de Las
+    Casas son el mismo objeto.
+  aviso: >-
+    ⚠️ **y es también la prueba del vector 1 de Oliver, en el acto.** El pasaje
+    es de **Yucatán**, y Oviedo aplica ahí, sin pestañear, una palabra
+    antillana a unos objetos mayas — con un intérprete español de por medio
+    («Julián la lengua»). Que un cronista llame `guanín` a algo **no atestigua
+    que allí se llamara así**. Eso rebaja, y no poco, el peso de las dos
+    apariciones de Chiribichi (t7.g5): un cronista que hace esto en Yucatán
+    puede estar haciéndolo en Cumaná.
+  medido: >-
+    `guanin` sale **3** veces en el vol. I de Oviedo —impresas 480 y 507— y
+    `cobre doradas` **1**, en la 507. Extraído con MuPDF en modo reparación (el
+    PDF está truncado; el método lo dejó escrito la primera campaña en
+    `4-fuentes/oviedo-y-valdes-1851.md`) y medido por el mismo script que el
+    resto, que lo lleva como sexta obra.
+
+- id: t7.g8
+  pregunta: 1-guanin
+  titulo: El guanín colgado del pecho de un cacique de Boriquén, 1511
+  cita: >-
+    «un caçique que vido salir de la batalla huyendo, é llevaba en los pechos
+    **un guanin ó pieça de oro de las que suelen los indios principales
+    colgarse al cuello**»
+  obra: oviedo-y-valdes-1851
+  pagina: 'lib. XVI — impresa 480 (pdf 598)'
+  clase: hecho observado
+  epoca: contacto-temprano
+  fuerza: media
+  por_que: >-
+    fija el uso taíno del objeto —insignia de principal, al cuello o al pecho—
+    en el mismo volumen y por el mismo cronista que lo define. Es el mismo uso
+    que Hernando Colón describe en Cariai y en Veragua y que Anglería describe
+    en Chiribichi: **el objeto y su función son los mismos en las tres
+    orillas.** Lo que no consta es por dónde viajó.
 
 # ── PREGUNTA 2: LO QUE LOS ISLEÑOS DECÍAN DEL SUR ────────────────────
 - id: t7.s1
@@ -532,6 +673,47 @@ hallazgos:
     (b) El alcance del mercado local se declara **corto**. Un sistema de ferias
     de corto radio encadenadas es justamente cómo un objeto viaja lejos sin que
     nadie haga el viaje: es el modelo de cadena, y es lo más que esta fuente da.
+
+- id: t7.d1
+  pregunta: 3-y-4-la-costa-y-la-lengua
+  titulo: >-
+    🔴 `datihao` en San Juan llega por un intérprete con nombre, oficio y
+    competencia declarada — y la gemela de Venezuela no la ha visto nadie
+  cita: >-
+    «é cómo llegó luego Agueybana, **dixo la lengua, en el lenguaje de los
+    indios**: "Señor, ¿por qué me mandas matar? Yo te serviré é seré tu
+    naboría"; y entonces dixo el cacique: "Adelante, adelante, **á mi dalihao
+    (que quiere decir mi señor, ó el que, como yo, se nombra)**, dexa ese
+    bellaco."»
+  obra: oviedo-y-valdes-1851
+  pagina: 'lib. XVI, cap. V — impresa 473 (pdf 591)'
+  clase: noticia-indigena-recogida, por intérprete nombrado
+  epoca: contacto-temprano
+  fecha_del_hecho: 1511, Boriquén (isla de San Juan)
+  fuerza: alta para el pasaje, con una reserva de grafía
+  por_que: >-
+    **la calidad probatoria de esta atestación es la mejor de toda la serie, y
+    lo es justo por el eje de esta parcela.** Quien habla es Johan González, a
+    quien Oviedo llama dos veces «la lengua» y una «**grande lengua**»: un
+    español que sabía boriquén lo bastante para infiltrarse desnudo y pintado
+    en un areíto y entender lo que se cantaba. Y la glosa que Oviedo da —«**el
+    que, como yo, se nombra**»— es la del intercambio de nombres, es decir la
+    institución (el *guatiao*), no un simple título.
+  aviso_de_grafia: >-
+    ⚠️ la capa de texto lee **`dalihao`**, no `datihao`: es la confusión l/t
+    del OCR que la campaña de Oviedo ya había marcado como urgente
+    (`6-fusion/taino_oviedo_valdes_1851.yaml`), y **la imagen escaneada de este
+    PDF no llega a la p. 473**. Medido hoy sobre el volumen entero: `datihao`
+    **0** · `datiao` **0** · `guatiao` **0** · `tiao` **0** · `dalihao` **1**,
+    en la impresa 473 — el único portador de la forma en las 766 páginas.
+    **La forma no se cita hasta verla en otra copia.**
+    Lo que sí se puede citar sin reserva es el pasaje, la glosa y quién tradujo.
+  que_le_hace_a_dc4: >-
+    dc.4 pone las dos atestaciones de Oviedo en pie de igualdad («San Juan» y
+    «los indios de la Provincia de Venezuela»). No lo están: **ésta se puede
+    leer y pesar; la otra está en un tomo que el repo no tiene y llega por Jahn
+    1927 p. 213 n. 29.** Antes de llamarlo «cognado que hace match», leer la
+    segunda.
 
 # ── PREGUNTA 4: LOS KALINAGO COMO INTERMEDIARIOS ─────────────────────
 - id: t7.k1
@@ -841,9 +1023,14 @@ no_se_encontro:
   es el volumen que narra Paria y Curiana. Llega a Anglería sólo en el vol. 4,
   y aplicada a Chiribichi.
 - >-
+  Ninguna forma de `datihao`/`guatiao` en el vol. I de Oviedo fuera del
+  `dalihao` de la impresa 473: `datihao` 0 · `datiao` 0 · `guatiao` 0 ·
+  `tiao` 0 en las 766 páginas. Y la imagen escaneada de ese PDF **no llega a
+  la p. 473**, así que la forma no se puede verificar en el repo.
+- >-
   Nada sobre la hija de Manaure ni sobre Baracoica. El episodio de Ampíes es de
-  1525-26 y ninguna de estas cinco obras llega ahí (está en `arcaya-1920`, ya
-  minado por la primera campaña).
+  1525-26 y ninguna de estas obras llega ahí: está en `arcaya-1920`, verificado
+  por dc.4 (PR #193). Lo que T7 le añade está en §respuesta_a_dc4, no aquí.
 - >-
   Ninguna lista de palabras de Paria, Curiana o Coquibacoa recogida en
   1498-1502. Si la hubiera, la pregunta de la inteligibilidad se contestaría
@@ -923,5 +1110,17 @@ propone:
     que se lea el hallazgo lateral (t7.x1) antes de volver a citar la red de
     Curiana como red de la Kaketiana
   por_que: 'toca material ya fusionado en 4-fuentes/angleria-1892.md'
-- que: 'el veredicto sobre la hipótesis de Miguel, con letras'
+- que: 'el veredicto sobre la hipótesis de Miguel, con letras (A · B · C · D · E)'
   donde: 6-fusion/issues-pendientes/taino2-etnohistoria-contacto-2026-09-22.md
+  recomendacion: >-
+    C + E. C parte la afirmación en dos (el circuito del guanín, que los textos
+    aguantan; la participación de la Kaketiana, que no) y E la reformula como
+    **cadena de tramos cortos**, que es la única forma en que `datihao`
+    compartida y Paria mudo dejan de estar reñidos. La decisión es de Miguel.
+- que: >-
+    que Oviedo y Valdés tomos II y IV suban de prioridad — son la deuda que
+    dc.4 ya declaró (el `díao` del t. II p. 299 y el `datihao` del apéndice del
+    t. IV) y, con t7.d1 medido, son además la única forma de saber si la pareja
+    léxica aguanta. Dominio público, archive.org (ids que la nota de Oviedo ya
+    recoge).
+  por_que: 'la campaña T7 no los bajó: no era su parcela, y la sesión tenía dueño'
