@@ -103,3 +103,76 @@ db.2_datihao_y_diao:
     ninguno: el sorteo de la muestra caquetía tiene una voz menos. `[Voces de
     fuera]` pasa de 43 a 44 candidatas, y la que entra lo hace con la glosa del
     editor, 'padrino de cautivo'.
+
+db.3_los_defectos_del_instrumento:
+  tipo: corte de serie (los tres cambian el prompt)
+  decision_literal: '«Te doy el si a todos los defectos»'
+  lo_que_se_le_preguntó: >-
+    «¿Entran los tres? 1. la semilla de la persona pasa a ser la de la cadena;
+    2. las 9 “taíno-reconstruido”, que son lokono, salen de la esfera; 3. las
+    glosas mal leídas (`mayani`, `daca`, `siba`, `caney`, `batey`, `tabaco`).»
+  eleccion: los tres
+  lectura_operativa: >-
+    (1) Opción A del issue `semilla-del-dia-mueve-a-la-persona-2026-09-21.md`:
+    `guardar_koine` escribe con qué semilla se sembró la cadena, `cargar_koine`
+    la recupera y el dado de la ficha se fija con ésa; `random.seed()` sigue con
+    la del día. Arregla el `[Tu emocionar]` que cambiaba a 7 de 63 y el aviso
+    falso. (2) Las 9 `taíno-reconstruido` pasan a `FUERA_DEL_HABLA` con su capa
+    intacta (archivar no es degradar, política d19.b); dejan de ser candidatas
+    de `[Voces de fuera]`. (3) Las glosas, cada una con su fuente primaria:
+    `mayani` 'de ningún valor' (Brinton p. 11, «of no value», con Mártir),
+    `daca` 'yo' (Pané cap. XXV y la Apologética, «Dios naboria daca»), `siba`
+    taíno además de lokono, y `caney`, `batey` y `tabaco` según Oviedo t. I —
+    las cinco de la campaña T1 medidas en `6-fusion/taino_oviedo_valdes_1851.yaml`.
+  se_aplica_en: la tanda de la base
+
+db.4_los_referentes:
+  tipo: corte de serie (cambia qué se nombra y cuándo)
+  decision_literal: >-
+    «en cuanto a tus propuestas, me parecen genial, la idea es probar la koiné,
+    cuando ya estemos seguros de la convergencia podemos pasar a la era 3 donde
+    podemos ser más creativos y jugar con estos agujeros y será la run larga y
+    más de "imaginación del caquetío". […] yo creo que las cosas que debemos
+    empezar por nombrar son las de los animales que no sabemos como se llamaban
+    originalmente, por ejemplo La Tarantula azul, que si o si tuvo que ser una
+    especie muy importante ya que es endémica de la Península. Y la gente la
+    conoce como Tarantula azul.»
+  las_propuestas_que_acepta: >-
+    Dos clases de referente, NOVEDAD (lo que no habían visto) y HUECO (lo que
+    nombraban y nosotros perdimos); uno cada 2 días; fuera las dos que violan la
+    regla 3 (`cuentas_vidrio`, `fiebre_manchas`).
+  lectura_operativa: >-
+    La base sirve para PROBAR LA KOINÉ; la era 3 será la corrida larga de
+    «imaginación del caquetío», donde se juega con los agujeros con más
+    libertad (y donde se abriría la puerta de la raíz inventada, db.1). Por eso
+    la base se queda en 30 días (15 referentes a uno cada dos días) y se alarga
+    sólo si la convergencia no es clara. El catálogo EMPIEZA por los animales sin
+    nombre caquetío conocido: la tarántula azul primero. Un animal con voz
+    caquetía atestiguada (`korie` armadillo, `arata` mono, `chawanko` zorro,
+    `barbache` iguana…) NO es hueco: la voz ya está.
+  la_tarantula_azul: >-
+    Está en el canon de sitios (6-fusion/sitios_era2.yaml, Capubana, monte_y_caza:
+    «guacharaca, pavita hormiguera, venado matacán, zarigüeya y tarántula azul
+    son la fauna actual del Monumento Natural»), etiqueta atestiguado, capa
+    MODERNO. No está en ecologia.yaml ni en el lexicón. Regla 3, que el propio
+    canon escribe al lado: es fauna de hoy, prueba que el animal cabe en el medio,
+    no que estuviera; «endémica de la península» y «tuvo que ser importante» son
+    lectura de Miguel sin fuente todavía — el referente describe al animal y no
+    afirma su importancia. Hace falta un hecho de ecología con fuente (endemismo,
+    distribución) antes de escribir el referente.
+  se_aplica_en: 'la tanda de la base; el catálogo propuesto va a 6-fusion/ para que Miguel lo apruebe'
+
+db.5_waitiao:
+  tipo: nota, sin corte (`notas` no llega al prompt)
+  decision_literal: >-
+    «En cuanto a guaitiao, si no está confirmado que no está en Oviedo y no sabemos
+    si es taína mantengamosla no más pero con ese foot note.»
+  eleccion: se queda caquetío-atestiguado, con la nota
+  medido_antes: >-
+    `guaitiao`/`guatiao`/`waitiao`/`guaytiao`: 0 en la capa de texto de los cuatro
+    tomos de Oviedo — con la reserva de que las voces indígenas van en cursiva y
+    el OCR falla ahí, así que no es ausencia probada —; 0 en la Apologética;
+    sólo Brinton 1871 y Goeje 1939, sin cronista.
+  estado: APLICADA en la rama tanda/base-2026-09-22 (2026-09-22)
+  aplicado_por: [6-fusion/scripts/anotar_waitiao.py]
+  verificado_que_no_mueve_nada: 'huella de los 378 prompts igual antes y después (adb3da5d)'
