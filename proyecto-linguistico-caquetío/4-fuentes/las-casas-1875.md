@@ -8,10 +8,12 @@ local: "fuentes_caquetios/Las_Casas_1875_Historia_Indias_vol1.pdf"
 paginas: 613
 capa_texto: si
 estado_minado: minado
-cobertura: "caps. XL-LXVII pasaje a pasaje (primer viaje y La Española); el tomo entero por patrón"
+cobertura: "caps. XL-LXVIII pasaje a pasaje (primer viaje y La Española), por léxico taíno (2026-09-21, T2) y por la etnohistoria del contacto (2026-09-22, T7); el tomo entero por patrón"
+desfase_pagina: "NO es constante: el PDF es el ebook de Gutenberg y su pie es un contador propio. Se ancla por CAPÍTULO con 6-fusion/scripts/mapa_capitulos_las_casas.py"
 prioridad: media
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-21
+verificado: 2026-09-22
+minado: 2026-09-22
 aliases: ["Las Casas 1875", "Historia de las Indias"]
 ---
 
@@ -108,8 +110,87 @@ vez con la lista completa. `opia` da 77 y **es todo ruido** (propia, copia).
 También a 0: `barbacoa`, `batea`, `jagua`, `guayaba`, `guacamayo`, `naguas`,
 `Anacaona`, `Xaragua`, `Boriquén`.
 
+## Sesión 6 — campaña del taíno 2, 2026-09-22 (parcela T7)
+
+**Qué se preguntó.** Ya no por el léxico sino por la **noticia**: ¿qué decían
+los isleños de lo que había al sur? ¿De dónde decían que venía el guanín? ¿Se
+entendían con alguien? Datos y citas en
+`6-fusion/taino2_etnohistoria_contacto.yaml`; lo mide
+`6-fusion/scripts/medir_taino2_etnohistoria.py`.
+
+⚠️ **Las citas van ancladas por capítulo**, no por número de página: el PDF es
+el ebook de Gutenberg y su pie es un contador propio (lo midió T2). La página
+impresa que se da es interpolación declarada dentro del capítulo.
+
+### ⭐ Lo mejor que dio: los lucayos nombraron una tierra no rodeada de agua
+
+**Cap. LIII** (pdf 417, impresa ~369), 12 de diciembre de 1492:
+
+> «**Parece que los indios dichos daban á entender que el Babeque era tierra
+> firme, porque decian que no estaba cercada de agua, y que estaba detras desta
+> isla Española, la cual llamaban Caritaba ó Caribana, que era como cosa
+> infinita**; y á mi parecer, que, cierto lo decian por tierra firme, y que
+> **debian tener noticia de la tierra firme**… le parece que tienen razon en
+> nombrar tanto á Babeque, y por otro nombre á Caribana, porque **debian de ser
+> trabajados de la gente della**»
+
+Es noticia indígena de diciembre de 1492 — anterior, por fuerza, a cualquier
+intermediación europea. ⚠️ Lo que **no** sostiene: no identifica el lugar
+(`Caribana` es la punta oriental de Urabá en la cartografía posterior, y usar
+eso aquí sería proyectar un nombre colonial hacia atrás); describe razzias
+recibidas, no comercio; y el propio Las Casas escribe «cuanto el Almirante
+creia que entendia».
+
+### Y el control que lo descuenta, en el mismo tomo
+
+**Cap. XLVII** (pdf 391, impresa ~346):
+
+> «**De donde parece, que ninguna ó cuasi ninguna cosa les entendian**, porque,
+> en esta isla, ni nunca hobo gente de un ojo, ni caníbales que comiesen los
+> hombres»
+
+Es el aviso que el propio transmisor pone sobre toda la serie, y lo pone con un
+caso falsable que resultó falso.
+
+### El guanín
+
+- **Cap. LX** (pdf 456, impresa ~402) — la definición por el criterio de ellos:
+  «llamábanle **turey**, como á cosa del cielo… y así hacian á **una especie de
+  oro bajo que tenia la color que tiraba á color algo morada, y que ellos
+  llamaban guanin**, por el olor cognoscian ser fino y de mayor estima».
+- **Cap. LXVII** (pdf 493, impresa ~435) — el guanín venía de otro sitio, y Las
+  Casas corrige el otro sitio: «lo que aquí dice que entendia **haber isla que
+  llamaba Guanin**, donde habia mucho oro, y **no era sino que habia en alguna
+  parte guanin mucho**».
+- **Cap. LXVII** (pdf 496, impresa ~437) — el rey de Samaná «afirmando que allí
+  habia mucho [oro], y **en otras islas, como Carib y Matinino**».
+
+### La ruta, descrita como cadena
+
+**Cap. LXVIII** (pdf 498, impresa ~439):
+
+> «van **renclera de islas**, desde la de Sant Juan… **hasta la de la Trinidad,
+> que se apega con la tierra firme de Paria**, bien, camino de 300 leguas, y
+> que **cada noche, yendo en un barco, pueden dormir en una dellas**»
+
+y, unas líneas antes, la única dirección que los indios señalaron con el dedo:
+«**señaláronle los indios** que la isla, ó de Sant Juan, ó de Matinino, ó de
+Carib… **quedaba á la parte del Sueste**».
+
+⚠️ La «renclera» es observación de **Las Casas**, sobre un barco español y con
+lo que él sabe del siglo XVI. Que la ruta exista no dice que se recorriera.
+
+### Qué NO dio (medido)
+
+`curiana` **0** · `coquibacoa` **0** · `margarita` **0** · `cumaná` **0**.
+Control en el mismo texto: `isla` 930, `oro` 482, `tierra firme` 98. El tomo I
+acaba con el regreso del primer viaje: **quien busque la Kaketiana aquí no la
+va a encontrar, y eso no es un hallazgo sobre la Kaketiana.**
+
 ## Qué falta
 
+- 🔴 **Media docena de citas del repo dicen «Las Casas» sin decir a qué
+  volumen**, y el que tenemos acaba en 1493. Conviene que digan tomo.
 - **Los tomos II-V y la *Apologética* no están en el repositorio.** Ahí está el
   grueso: [[brinton-1871]] cita de ellos los caps. 2, 46, 61, 120, 197, 198,
   199, 204 y 241 de la *Apologética* (los numerales, los tres rangos sociales,
