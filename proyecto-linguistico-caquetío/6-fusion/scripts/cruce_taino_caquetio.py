@@ -1,12 +1,45 @@
 # -*- coding: utf-8 -*-
 """
-Cruce TAÍNO <-> CAQUETÍO ATESTIGUADO — campaña del taíno, T4 (2026-09-21).
+Cruce TAÍNO <-> CAQUETÍO ATESTIGUADO — campaña del taíno.
+T4 (2026-09-21) y **T11, la prueba lingüística del contacto** (2026-09-22).
 
 LA PREGUNTA
 -----------
 ¿Qué comparten de verdad el taíno y el caquetío ATESTIGUADO —en léxico, en
 morfología y en onomástica—, y qué de eso es herencia arahuaca común, qué es
 préstamo por contacto en la esfera, y qué es casualidad?
+
+LO QUE AÑADE T11 (2026-09-22)
+-----------------------------
+El encargo de Miguel: «tiene que haber una forma de probar si hubo algún tipo
+de contacto… diao y daitiao son las versiones caquetías de la versión taína».
+Dicho como test:
+
+    Un cognado HEREDADO y un préstamo por CONTACTO se distinguen.
+    El cognado sigue las correspondencias REGULARES de sonido entre las dos
+    lenguas —las que se repiten en otras parejas—. El préstamo las VIOLA, o
+    llega sin ninguna diferencia porque cruzó hace poco, o cae en un campo
+    donde las palabras viajan (alianza, rango, comercio, prestigio).
+    Un préstamo prueba CONTACTO; un cognado prueba PARENTESCO.
+
+Cuatro cosas nuevas, en este orden y con el orden como parte del método:
+
+1. **Las transcripciones entran como fuente.** El cruce del 21 leía sólo las
+   43 voces taínas del lexicón, que no citan a nadie (regla 8). Desde hoy lee
+   además `6-fusion/taino_{oviedo_valdes_1851,las_casas_1875,pane_c1498,
+   brinton_1871}.yaml`, que sí traen obra y página. Eso cambia el
+   DENOMINADOR: el cero del 21 medía la lista, no la lengua.
+2. **Las predicciones se escriben ANTES de mirar las parejas** — por
+   transitividad, componiendo las correspondencias caquetío↔lokono que el
+   proyecto ya tiene (Oliver cap. 2, C1-C13) con las taíno↔lokono que da
+   Brinton 1871. `CORRESPONDENCIAS_PREDICHAS` está más abajo, en el código,
+   antes que cualquier función que mire un par.
+3. **El test se aplica**, y su resultado es una LETRA: A cognado heredado,
+   B préstamo o forma que cruzó sin cambio, C indecidible con lo que hay.
+4. **El control es obligatorio.** El mismo test sobre parejas que ya sabemos
+   heredadas (caquetío↔lokono con cita) y sobre parejas que ya sabemos
+   prestadas (taíno↔castellano). Si el test no separa lo que ya sabemos, no
+   sirve para lo que no sabemos, y el YAML lo dice con número.
 
 POR QUÉ SÓLO CONTRA EL CAQUETÍO ATESTIGUADO
 -------------------------------------------
@@ -43,7 +76,11 @@ EL MÉTODO, con las tres lecciones de la skill `minar-fuente` en código
 
 SALIDA (PROPUESTA, regla 5)
 ---------------------------
-    6-fusion/cruce_taino_caquetio_2026-09-21.yaml
+    6-fusion/cruce_taino_caquetio_2026-09-22.yaml
+
+`6-fusion/cruce_taino_caquetio_2026-09-21.yaml` queda como está: es la medición
+del día anterior y el script la LEE para emitir el antes/después medido
+(`meta.antes_y_despues`). No se reescribe.
 
 No toca `curiana_lexicon.py`, ni `lexicon_*.py`, ni `2-lengua/*`, ni
 `3-mundo/corpus/`. Ningún cognado entra a `cognados.yaml` por este script.
@@ -70,7 +107,8 @@ sys.path.insert(0, os.path.join(R, "curiana_sim"))
 import curiana_lexicon as CL  # noqa: E402
 from curiana_fonotactica import fonemizar, forma_comparable  # noqa: E402
 
-SALIDA = os.path.join(R, "6-fusion", "cruce_taino_caquetio_2026-09-21.yaml")
+SALIDA = os.path.join(R, "6-fusion", "cruce_taino_caquetio_2026-09-22.yaml")
+ANTERIOR = os.path.join(R, "6-fusion", "cruce_taino_caquetio_2026-09-21.yaml")
 YAML_CONTROL = os.path.join(R, "6-fusion", "control_jirajarano_jahn_1927.yaml")
 YAML_TOPONIMOS = os.path.join(R, "2-lengua", "toponimos.yaml")
 YAML_COGNADOS = os.path.join(R, "2-lengua", "cognados.yaml")
@@ -79,7 +117,25 @@ JSON_TAINO_HIP = os.path.join(R, "curiana_sim", "taino_hipotetico.json")
 TXT_BRINTON = os.path.join(R, "fuentes_caquetios", "Brinton_1871_texto.txt")
 TXT_PANE = os.path.join(R, "fuentes_caquetios",
                         "Pane_c1498_Relacion_Antiguedades_Indios_wikisource.txt")
-FECHA = "2026-09-21"
+FECHA = "2026-09-22"
+
+# ── las transcripciones de T1/T2 (PR #189-#192), que es lo que entra hoy ───
+# Cada sección se declara con la obra (clave foránea a 4-fuentes/bibliografia.yaml,
+# regla 8) y con si es taíno o NO lo es: `no_taino` de Oviedo y su
+# `costa_de_venezuela` son Tierra-Firme, y meterlas en el saco taíno sería
+# exactamente la trampa que la regla 4 denuncia.
+YAML_TAINO = [
+    {"archivo": "taino_oviedo_valdes_1851.yaml", "obra": "oviedo-y-valdes-1851",
+     "secciones": {"la_espanola": "taíno", "otras_islas": "taíno",
+                   "no_taino": "fuera-no-es-taino",
+                   "costa_de_venezuela": "fuera-tierra-firme"}},
+    {"archivo": "taino_las_casas_1875.yaml", "obra": "las-casas-1875",
+     "secciones": {"voces": "taíno"}},
+    {"archivo": "taino_pane_c1498.yaml", "obra": "pane-c1498",
+     "secciones": {"voces": "taíno"}},
+    {"archivo": "taino_brinton_1871.yaml", "obra": "brinton-1871",
+     "secciones": {"vocabulario_antillano.entradas": "taíno"}},
+]
 
 # ── parámetros declarados ANTES de mirar resultados ──────────────────────
 UMBRAL_PARECIDO = 0.62      # el de cruzar_jahn_guajiro.py y del cruce achagua
@@ -90,6 +146,8 @@ MIN_FONEMAS = 3             # dos letras no son evidencia (el 80 % de las 441)
 REPLICAS = 300
 SEMILLA = 1492
 GU_ES_W = False             # defecto de curiana_fonotactica; True = sensibilidad
+GU_TEST = True              # T11: el test de correspondencias corre con ⟨gu⟩ = /w/
+                            # (Oliver p. 147), que es lo que deja ver ⟨bagua⟩ = /bawa/
 ATESTIGUADO = "caquetío-atestiguado"
 
 LENGUAS = ("taíno", "lokono", "wayunaiki", "achagua")   # las que deciden
@@ -189,6 +247,401 @@ BLOQUEO_PANE = {
     "jerónimo", "jeronimo", "mateo", "mirobalanos", "orden", "pané", "pane", "pues",
     "señoría", "senoria", "subpáginas", "subpaginas", "trae", "vete", "vuestra",
     "wikisource", "borgoña", "borgona", "haití", "haiti",
+}
+
+
+# ═════════════════════════════════════════════════════════════════════════
+# T11 · LAS PREDICCIONES, ESCRITAS ANTES DE MIRAR NINGUNA PAREJA
+# ═════════════════════════════════════════════════════════════════════════
+# No hay ni una correspondencia caquetío↔taíno publicada: nadie la ha
+# establecido, y este proyecto no puede establecerla con 4 parejas. Lo que SÍ
+# se puede hacer es COMPONER las dos patas que sí existen y ver qué predicen:
+#
+#   pata A  caquetío ↔ lokono   — Oliver 1989 cap. 2, C1-C13, con página
+#   pata B  taíno    ↔ lokono   — Brinton 1871 pp. 11-14, con página
+#                                 (recogidas en 6-fusion/taino_brinton_1871.yaml
+#                                  §correspondencias_para_T4, que es de T2)
+#
+# Componerlas da una PREDICCIÓN, no un hecho: si el caquetío y el taíno
+# descienden los dos de un fondo como el del lokono, una voz heredada tiene
+# que exhibir en cada consonante lo que las dos patas mandan. Una voz que no
+# lo exhiba no es heredada por esa vía.
+#
+# ⚠️ Tres límites, declarados por Oliver y respetados aquí:
+#   C8  /r/ ~ /l/ es INDECIDIBLE en todo el corpus: una diferencia r/l no
+#       cuenta ni a favor ni en contra.
+#   C9  Oliver EXCLUYE las vocales por falta de transcripción fiable: el test
+#       puntúa esqueletos CONSONÁNTICOS.
+#   ⟨gu⟩ se lee /w/ — Oliver p. 147: «/wa- [gua-]/ is a third person plural
+#       marker». Por eso el test corre sobre la fonemización con gu_es_w=True,
+#       que es la que hace ⟨bagua⟩ = /bawa/ y deja ver la correspondencia.
+CORRESPONDENCIAS_PREDICHAS = [
+    {
+        "id": "P1",
+        "regla": "caquetío /r/  ~  taíno ∅ o /w/  (donde el lokono tiene /r/)",
+        "pata_cq_lk": ("el caquetío CONSERVA la /r/ intervocálica del lokono: `dare` : LK `d-ari` "
+                       "'diente'; `barisi` : LK `bálisi` 'ceniza'; `para` : LK `bara` 'mar' "
+                       "(oliver-1989-cap2 pp. 147, 150; cognado-001, cognado-010)"),
+        "pata_tn_lk": ("el taíno la PIERDE o la vuelve /w/: `maisi` : LK `marisi` 'maíz'; "
+                       "`cai/cayo` : LK `kairi` 'isla'; `bagua` : LK `bara` 'mar' "
+                       "(brinton-1871 pp. 11-13, vía taino_brinton_1871.yaml §clase_B)"),
+        "predice": ("una voz heredada tiene /r/ en caquetío y NADA o /w/ en taíno. El par "
+                    "canónico es caq `para` ~ taí `bagua` /bawa/ ~ LK `bara`, y Oliver lo escribe "
+                    "él mismo (p. 150: taíno `bara-wa` junto al caquetío `para-`)"),
+        "la_falsaria": ("una pareja caquetío~taíno con /r/ en los DOS lados y sin otra diferencia. "
+                        "Sería la firma de que la palabra cruzó tarde, no de que se heredó"),
+        "apoyos": 3, "diagnostica": True,
+        "es_diagnostica_porque": ("lo esperado NO es la identidad: el taíno normalmente pierde la "
+                                  "/r/. Es la única consonante diagnóstica que el material da, y "
+                                  "la única correspondencia que llega al listón de tres apoyos"),
+    },
+    {
+        "id": "P2",
+        "regla": "caquetío /b/  ~  taíno /b/   (los dos del lado lokono, frente a wayuu /p/)",
+        "pata_cq_lk": ("C3, «two very regular and systematic sound changes»: LK /b/ : WY /p/, y el "
+                       "caquetío cae del lado lokono — `barisi` : `bálisi` : WY `palíi`; y el sufijo "
+                       "es `-bana` y no `-pana` (oliver-1989-cap2 pp. 147-148)"),
+        "pata_tn_lk": "taíno `bagua`/`bara-wa` : LK `bara`; `siba` : LK `siba` (brinton-1871 pp. 11, 13)",
+        "predice": "una voz heredada tiene /b/ en los dos lados; un /p/ caquetío frente a /b/ taíno es la excepción declarada",
+        "la_falsaria": ("la excepción YA existe y Oliver no la explica: caq `para` 'mar' frente a LK "
+                        "`bara` y TN `bara-wa`. Por eso /p/ ~ /b/ se admite como regular y se dice"),
+        "apoyos": 2, "diagnostica": False,
+        "es_diagnostica_porque": "no lo es: lo esperado ES la identidad, y una identidad esperada no informa",
+    },
+    {
+        "id": "P2b",
+        "regla": "caquetío /p/  ~  taíno /b/   (la excepción declarada de `para`)",
+        "pata_cq_lk": "caq `para` 'mar' : LK `bara` — oliver-1989-cap2 p. 150, y él mismo la deja sin explicar",
+        "pata_tn_lk": "TN `bagua` / `bara-wa` : LK `bara` — brinton-1871 p. 11; oliver-1989-cap2 p. 150",
+        "predice": "un /p/ caquetío puede corresponder a un /b/ taíno. Es UNA pareja, así que se admite y se marca",
+        "la_falsaria": "que no vuelva a salir en ninguna otra pareja: entonces es un caso suelto y no una regla",
+        "apoyos": 1, "diagnostica": False,
+        "es_diagnostica_porque": ("no lo es: UN apoyo. Se admite para no llamar violación a lo que "
+                                  "Oliver escribe, y no se usa para declarar nada por sí sola"),
+    },
+    {
+        "id": "P3",
+        "regla": "caquetío /d-/  ~  taíno /d-/   (1ª persona singular, y /d/ en general)",
+        "pata_cq_lk": ("C1: PA */nV-/ → /dA-/ en lokono, taíno y «perhaps Caquetío» → /tA-/ en "
+                       "guajiro-paraujano. Evidencia caquetía: `diao`, `datihao`, `dare`, `dato` "
+                       "(oliver-1989-cap2 pp. 136, 146-147). Falsificó la regla `^d → t` del "
+                       "proyecto (metodo-comparativo, issue #43)"),
+        "pata_tn_lk": "taíno `daca` 'yo' (pane-c1498 cap. XXV) y `da-` en `da(i)tia-o` (oliver-1989-cap2 p. 147)",
+        "predice": ("una voz heredada tiene /d/ en los dos lados — y por eso mismo **este rasgo NO "
+                    "distingue herencia de préstamo entre caquetío y taíno**: separa a los dos "
+                    "JUNTOS del wayuu y el paraujano, que tienen /t-/. Es dato de FILIACIÓN y ya "
+                    "está contado en D11 por la vía lokono"),
+        "la_falsaria": "una forma caquetía con /t-/ donde el taíno tiene /d-/: sería vía guajiro-paraujana",
+        "apoyos": 2, "diagnostica": False,
+        "es_diagnostica_porque": "no lo es, y ES EL PUNTO: identidad esperada, identidad observada, cero información",
+    },
+    {
+        "id": "P4",
+        "regla": "caquetío /t/  ~  taíno /t/   (donde el lokono tiene /th/)",
+        "pata_cq_lk": "C4b, CQ /t/ : LK /th/ — `kaketío` : LK `kakïtho` (oliver-1989-cap2 p. 148)",
+        "pata_tn_lk": "Taylor 1977:38 vía Oliver: LK /th/ : CAIC /t/, y el taíno va con el insular",
+        "predice": "identidad en /t/ entre caquetío y taíno. NO diagnóstica: la identidad no prueba nada",
+        "la_falsaria": ("nada la puede falsar con el instrumento de hoy: `fonemizar()` colapsa ⟨th⟩ "
+                        "en /t/, así que el contraste lokono se pierde antes de llegar al test. "
+                        "Declarado como límite del instrumento, no como resultado"),
+        "apoyos": 1, "diagnostica": False,
+        "es_diagnostica_porque": "no lo es: el instrumento colapsa el contraste antes de llegar al test",
+    },
+    {
+        "id": "P5",
+        "regla": "caquetío /k/, /s/, /m/, /n/, /y/, /j/  ~  las mismas en taíno",
+        "pata_cq_lk": "no hay ninguna correspondencia declarada que las mueva (Oliver no las lista)",
+        "pata_tn_lk": "Brinton las da idénticas (`siba`~`siba`, `nacan`~`annakan`, `ma-`~`ma-`)",
+        "predice": "identidad. NO diagnósticas: una pareja que sólo comparta estas consonantes no decide nada",
+        "la_falsaria": "—",
+        "apoyos": None, "diagnostica": False,
+    },
+    {
+        "id": "P6",
+        "regla": "LA FIRMA DEL PRÉSTAMO: cero diferencia donde una regular tenía que haber",
+        "pata_cq_lk": ("Oliver mide lokono–guajiro en 2,6 milenios de separación y lokono–achagua en "
+                       "3,8 (p. 97 y ss.). A esa distancia una voz heredada ha tenido tiempo de "
+                       "mostrar al menos una de las correspondencias de arriba"),
+        "pata_tn_lk": ("y el propio Oliver avisa (p. 151): «one must be careful about some terms "
+                       "(e.g. barbacoa) offered by the Spanish as 'native' Caquetío»"),
+        "predice": ("si las dos formas tienen el MISMO esqueleto consonántico y ese esqueleto "
+                    "contiene al menos una consonante diagnóstica (P1, P2, P2b), la pareja es "
+                    "préstamo o transmisión reciente, no herencia"),
+        "la_falsaria": ("una pareja idéntica SIN consonante diagnóstica no dice nada: la palabra no "
+                        "tiene dónde diferir. Ése es el caso que el test tiene que devolver como C, "
+                        "y es exactamente el de `-tiao`"),
+        "apoyos": None, "diagnostica": False,
+    },
+    {
+        "id": "P7",
+        "regla": "caquetío /k/  ~  taíno /s/   — CANDIDATA, por debajo del listón",
+        "⚠️_esta_se_escribio_despues": (
+            "y hay que decirlo. Las seis de arriba se escribieron antes de mirar ninguna pareja; "
+            "ésta la EXIGIÓ EL CONTROL: al correr el test sobre los cognados caquetío↔lokono que "
+            "Oliver da con cita, `koke` ~ `kuse` 'bachaco' salía «viola las correspondencias», o "
+            "sea préstamo, y es un cognado que el propio Oliver sostiene (p. 145). El hueco era de "
+            "la tabla, no del par. Se añade y se declara cuándo se añadió."),
+        "pata_cq_lk": "caq `koke` : LK `kuse` 'bachaco' — oliver-1989-cap2 p. 145, cognado-007",
+        "pata_tn_lk": "taíno `siba` : LK `siba` 'piedra' — brinton-1871 p. 13",
+        "predice": "que el caquetío `kiba` (forma_fuente `quiva`) 'piedra' y el taíno `siba` serían cognados",
+        "la_falsaria": ("que no aparezca un tercer apoyo. Son DOS, y uno de ellos es justo la pareja "
+                        "que querríamos juzgar: usarla para decidirla sería circular. Por eso el "
+                        "test la trata como CANDIDATA y devuelve C, no A"),
+        "apoyos": 2, "diagnostica": False,
+        "es_diagnostica_porque": ("no lo es. Y además no llega al listón de tres del propio "
+                                  "proyecto («una correspondencia que sale una o dos veces no es "
+                                  "nada»), así que baja el veredicto a C en vez de darlo por bueno"),
+    },
+]
+
+# ── Las tablas EJECUTABLES ────────────────────────────────────────────────
+# Cada consonante lleva tres cosas y las tres importan:
+#   `admite`      qué consonantes taínas (o lokonas) puede tener enfrente
+#   `candidatas`  las que la cadena SUGIERE pero que no llegan al listón del
+#                 propio proyecto —tres apoyos— («una correspondencia que sale
+#                 una o dos veces no es nada»). Usarlas NO da un cognado: baja
+#                 el veredicto a C y lo dice.
+#   `diagnostica` True sólo si lo ESPERADO NO es la identidad. Es lo que
+#                 permite leer un «cero diferencia» como préstamo: si lo
+#                 esperado era cambiar y no cambió, la palabra cruzó tarde.
+#
+# ⚠️ LA TABLA ES DE UN PAR DE LENGUAS, NO UNIVERSAL. La /r/ es diagnóstica
+# entre caquetío y taíno (el taíno la pierde) y NO lo es entre caquetío y
+# lokono (los dos la conservan). Aplicar la tabla equivocada fue exactamente lo
+# que el control destapó al escribirlo —dos parejas heredadas salían
+# «préstamo»— y por eso el control es obligatorio y va en el YAML.
+PREDICHO_CQ_TN = {
+    # /r/: 3 apoyos en la pata taína (maisi:marisi, cai:kairi, bagua:bara) y el
+    # caquetío conservándola en dare, barisi, para. Llega al listón.
+    "r": {"admite": {"", "w", "r"}, "candidatas": set(), "diagnostica": True, "apoyos": 3},
+    "b": {"admite": {"b"}, "candidatas": set(), "diagnostica": False, "apoyos": 2},
+    "p": {"admite": {"b", "p"}, "candidatas": set(), "diagnostica": False, "apoyos": 1},
+    "d": {"admite": {"d"}, "candidatas": set(), "diagnostica": False, "apoyos": 2},
+    "t": {"admite": {"t"}, "candidatas": set(), "diagnostica": False, "apoyos": 1},
+    # /k/ ~ /s/: sale de componer `koke`:`kuse` (Oliver p. 145) con `siba`:`siba`
+    # (Brinton p. 13). DOS apoyos, y uno de ellos es la pareja que querríamos
+    # juzgar: por debajo del listón, y circular si se usara para decidirla.
+    "k": {"admite": {"k"}, "candidatas": {"s"}, "diagnostica": False, "apoyos": 2},
+}
+# Pata A sola, caquetío ↔ lokono, para el brazo de control del test.
+# Aquí NINGUNA consonante es diagnóstica: entre dos hermanas conservadoras lo
+# esperado es la identidad, así que un «cero diferencia» no informa.
+PREDICHO_CQ_LK = {
+    "b": {"admite": {"b"}, "candidatas": set(), "diagnostica": False, "apoyos": 2},
+    "p": {"admite": {"b", "p"}, "candidatas": set(), "diagnostica": False, "apoyos": 1},
+    "d": {"admite": {"d"}, "candidatas": set(), "diagnostica": False, "apoyos": 4},
+    "t": {"admite": {"t"}, "candidatas": set(), "diagnostica": False, "apoyos": 1},
+    "r": {"admite": {"r", "l"}, "candidatas": set(), "diagnostica": False, "apoyos": 3},
+    "l": {"admite": {"l", "r"}, "candidatas": set(), "diagnostica": False, "apoyos": 3},
+    "k": {"admite": {"k"}, "candidatas": {"s"}, "diagnostica": False, "apoyos": 2},
+    "s": {"admite": {"s"}, "candidatas": set(), "diagnostica": False, "apoyos": 1},
+}
+TABLAS = {
+    "caquetío↔taíno": {"mapa": PREDICHO_CQ_TN,
+                       "de_donde": "composición de las dos patas — ver `las_predicciones`"},
+    "caquetío↔lokono": {"mapa": PREDICHO_CQ_LK,
+                        "de_donde": "pata A sola: oliver-1989-cap2 C1-C13, con página"},
+}
+LISTON_DE_APOYOS = 3   # el del propio proyecto, `juicio_regla()` más abajo
+
+# C8: /r/ ~ /l/ no cuenta ni a favor ni en contra. `fonemizar` ya lleva ⟨ll⟩ a y.
+PARES_NEUTROS = frozenset({("r", "l"), ("l", "r")})
+CONSONANTES = set("bcdfghjklmnpqrstvwxyz")
+
+# Prefijos de PERSONA, que son morfología y no sonido. Si dos formas empiezan
+# por prefijos de persona DISTINTOS, la diferencia inicial no es una
+# correspondencia violada: es el contraste 1ª sg. / 3ª pl. que Oliver nombra
+# (p. 147, «/wa- [gua-]/ is a third person plural marker, and /da-/ … first
+# person singular»). El test lo dice en vez de contarlo como violación.
+PREFIJOS_DE_PERSONA = {"d": "1ª sg. /dA-/", "w": "3ª pl. /wa- [gua-]/",
+                       "t": "1ª sg. guajiro-paraujana /tA-/", "n": "1ª sg. proto-arahuaca /nV-/"}
+
+# Préstamos que YA SABEMOS que lo son: el control positivo del test.
+# El taíno se los dio al castellano, y el castellano los repartió por América.
+# Si el test no los llama préstamo, el test no sirve.
+PRESTAMOS_CONOCIDOS = [
+    ("maisi", "maíz", "brinton-1871 p. 13: «Maisi, maize. From this Eng. maize, Sp. maiz»"),
+    ("huracan", "huracán", "brinton-1871 p. 13: «Huracan, a hurricane. From this Sp. huraean, Fr. ouragan»"),
+    ("canoa", "canoa", "brinton-1871 p. 12 s.v. Canoa; oviedo-y-valdes-1851 p. 170 «los indios llaman canoa»"),
+    ("hamaca", "hamaca", "brinton-1871 p. 12; oviedo-y-valdes-1851 p. 131"),
+    ("cacike", "cacique", "oviedo-y-valdes-1851 p. 25 «que los indios llaman caçique»; oliver-1989-cap2 p. 151 lo avisa"),
+    ("barbacoa", "barbacoa", "brinton-1871 p. 11; oliver-1989-cap2 p. 151 lo avisa por su nombre"),
+    ("cazabi", "cazabe", "oviedo-y-valdes-1851 p. 264 «el pan de los indios que se llama caçabi»"),
+    ("batata", "batata", "oviedo-y-valdes-1851 p. 273"),
+    ("yuca", "yuca", "oviedo-y-valdes-1851 p. 264"),
+    ("sabana", "sabana", "brinton-1871 p. 13; oviedo-y-valdes-1851 p. 146 «á la savana ó á lo raso»"),
+    ("tabako", "tabaco", "oviedo-y-valdes-1851 p. 130; brinton-1871 p. 13"),
+    ("caiman", "caimán", "brinton-1871 p. 12"),
+    ("guayaba", "guayaba", "oviedo-y-valdes-1851 p. 305"),
+    ("papaya", "papaya", "oviedo-y-valdes-1851 p. 323"),
+    ("manati", "manatí", "oviedo-y-valdes-1851 p. 433"),
+    ("hutia", "jutía", "oviedo-y-valdes-1851 p. 50"),
+    ("iwana", "iguana", "oviedo-y-valdes-1851 p. 50 «sierpes que se llaman yvana»; las-casas-1875 cap. ~314"),
+    ("macana", "macana", "brinton-1871 p. 13; las-casas-1875 «Qué cosa es macana»"),
+]
+
+# Glosas de Brinton: son INGLESAS y el filtro de significado del script es
+# castellano. Tabla DECLARADA y emitida entera en el YAML, para que se audite
+# a ojo. Sólo se traduce donde el concepto castellano es inequívoco; lo demás
+# se queda sin traducir A PROPÓSITO y se cuenta (una glosa inventada fabrica
+# una pareja falsa, que es peor que un hueco).
+GLOSA_EN_ES = {
+    "red pepper": "ají",
+    "dog": "perro",
+    "the sea": "mar",
+    "a priest": "sacerdote",
+    "an island": "isla",
+    "an alligator": "caimán",
+    "gold": "oro",
+    "a conch, a univalve shell": "caracol",
+    "a boat": "canoa",
+    "a chief": "cacique",
+    "a cultivated field": "conuco",
+    "low seats (unas baxas sillas)": "asiento",
+    "a basket": "cesta",
+    "a bed, hammock": "hamaca",
+    "a rope, ropes": "soga",
+    "height": "altura",
+    "a hurricane": "huracán",
+    "a lagoon, pond": "laguna",
+    "a serpent": "serpiente",
+    "a war club": "macana",
+    "a plain": "llanura",
+    "a plain covered with grass without trees": "llanura",
+    "a native drum": "tambor",
+    "maize": "maíz",
+    "liberal, noble": "noble",
+    "servants": "criado",
+    "middle, center": "centro",
+    "dead": "muerto",
+    "a stone": "piedra",
+    "father": "padre",
+    "heaven. Idols were called «cosas de turey»": "cielo",
+    "the native name of tobacco": "tabaco",
+    "stony, rocky, rough": "pedregoso",
+    "friend, companion": "amigo",
+    "the front, forehead; a beginning": "frente",
+    "shining, glowing": "brillante",
+    "masks or figures": "máscara",
+    "a trough": "batea",
+    "an ointment": "ungüento",
+    "a species of parrot, macrocercus tricolor": "guacamayo",
+    "gold, brass, any reddish metal": "oro",
+    "gold, used especially in Cuba and on the Bahamas": "oro",
+    "gold, probably akin to hobin": "oro",
+    "a wood, a spot covered with trees": "bosque",
+    # el campo de RANGO, que es donde cae `diao` y por eso se traduce entero:
+    # sin esto la pregunta «¿hay un diao taíno?» se contestaría sobre una lista
+    # a la que le faltan justo los títulos.
+    "a title applied to the highest chiefs": "señor",
+    "the title applied to the petty chiefs": "noble",
+    "title applied to sub-chiefs ruling villages": "cacique",
+    "a term applied to the lowest class of the inhabitants": "plebeyo",
+    "an impure sort of gold": "oro",
+    "the spirit of the dead": "alma",
+    "the spirit of the living": "alma",
+    "the divinities worshipped by the natives («Lo mismo que nosotros llamamos Diablo») — Not evil": "ídolo",
+    "a song chanted alternately by the priests and the people at their feasts": "canto",
+    "a large house holding several hundred persons": "casa",
+    "a house of conical shape": "casa",
+    "a loft for drying maize": "desván",
+    "the breech cloth made of cotton and worn around the middle": "manta",
+    "the pipe used in smoking the cohoba": "pipa",
+    "a poisonous liquor expressed from the cassava root": "veneno",
+    "a vault for storing provisions": "depósito",
+    "ornaments for the ears hammered from native gold": "zarcillo",
+}
+
+# Cómo se saca la glosa de una cita de crónica. Son las fórmulas que Oviedo,
+# Las Casas y Pané usan, y el script emite el inventario entero de lo que
+# extrae para que se pueda revisar a ojo (regla 6).
+PATRONES_GLOSA_CRONICA = [
+    ("que quiere deçir/decir X", r"que\s+quiere\s+de[cçzs]ir[,\s]+(?:en\s+[^,]{3,30},\s*)?([^,;.:»)]{3,40})"),
+    ("es/son X", r"^\s*[«\"]?\w+\s+(?:es|son)\s+(?:el|la|los|las|un|una|unos|unas)?\s*([^,;.:»)]{3,40})"),
+    ("que es/son X", r"\bque\s+(?:es|son)\s+(?:el|la|los|las|un|una|unos|unas)?\s*([^,;.:»)]{3,40})"),
+    ("llaman/nombran … X", r"(?:llaman|nombran|llamaban|llámanla|llámasse)\s+(?:en\s+[^,]{3,30}\s+)?"
+                           r"(?:á|a)\s+(?:el|la|los|las|esta|este|aquella)\s+([^,;.:»)]{3,40})"),
+]
+
+# Donde el extractor no llega y la voz PESA, la glosa se declara a mano con su
+# cita. Tabla corta, emitida entera. (obra, forma) -> glosa castellana.
+GLOSA_DECLARADA = {
+    ("oviedo-y-valdes-1851", "dalihao"): "señor",
+    ("oviedo-y-valdes-1851", "buhití"): "agorero",
+    ("oviedo-y-valdes-1851", "hico"): "soga",
+    ("oviedo-y-valdes-1851", "buhio"): "casa",
+    ("oviedo-y-valdes-1851", "caney"): "casa",
+    ("oviedo-y-valdes-1851", "canoa"): "canoa",
+    ("oviedo-y-valdes-1851", "hamaca"): "cama",
+    ("oviedo-y-valdes-1851", "mahiz"): "maíz",
+    ("oviedo-y-valdes-1851", "caçabi"): "pan",
+    ("oviedo-y-valdes-1851", "yuca"): "yuca",
+    ("oviedo-y-valdes-1851", "axi"): "ají",
+    ("oviedo-y-valdes-1851", "batata"): "batata",
+    ("oviedo-y-valdes-1851", "guayaba"): "guayaba",
+    ("oviedo-y-valdes-1851", "papaya"): "papaya",
+    ("oviedo-y-valdes-1851", "manati"): "manatí",
+    ("oviedo-y-valdes-1851", "hutia"): "jutía",
+    ("oviedo-y-valdes-1851", "yvana"): "iguana",
+    ("oviedo-y-valdes-1851", "caçique"): "cacique",
+    ("oviedo-y-valdes-1851", "huracan"): "huracán",
+    ("oviedo-y-valdes-1851", "tabaco"): "tabaco",
+    ("oviedo-y-valdes-1851", "bixa"): "tinte",
+    ("oviedo-y-valdes-1851", "naguas"): "manta",
+    ("oviedo-y-valdes-1851", "macana"): "macana",
+    ("oviedo-y-valdes-1851", "savana"): "llanura",
+    ("oviedo-y-valdes-1851", "bexuco"): "bejuco",
+    ("oviedo-y-valdes-1851", "mani"): "maní",
+    ("oviedo-y-valdes-1851", "naboria"): "criado",
+    ("oviedo-y-valdes-1851", "duho"): "asiento",
+    ("oviedo-y-valdes-1851", "çemi"): "ídolo",
+    ("oviedo-y-valdes-1851", "areyto"): "canto",
+    ("oviedo-y-valdes-1851", "guanin"): "oro",
+    ("oviedo-y-valdes-1851", "conuco"): "conuco",
+    ("las-casas-1875", "cayos"): "isla",
+    ("las-casas-1875", "canoas"): "canoa",
+    ("las-casas-1875", "cazabí"): "pan",
+    ("las-casas-1875", "hamacas"): "cama",
+    ("las-casas-1875", "iguana"): "iguana",
+    ("las-casas-1875", "bohío"): "casa",
+    ("las-casas-1875", "nacan"): "centro",
+    ("las-casas-1875", "axí"): "ají",
+    ("las-casas-1875", "batatas"): "batata",
+    ("las-casas-1875", "caona"): "oro",
+    ("las-casas-1875", "nucay"): "oro",
+    ("las-casas-1875", "tabacos"): "tabaco",
+    ("las-casas-1875", "maíz"): "maíz",
+    ("las-casas-1875", "Cacique"): "cacique",
+    ("las-casas-1875", "çabanas"): "llanura",
+    ("las-casas-1875", "hutias"): "jutía",
+    ("las-casas-1875", "turey"): "cielo",
+    ("las-casas-1875", "guanin"): "oro",
+    ("las-casas-1875", "macana"): "macana",
+    ("pane-c1498", "cemíes"): "ídolo",
+    ("pane-c1498", "cohoba"): "polvo",
+    ("pane-c1498", "buhitihu / buhuitihu / bohutis"): "médico",
+    ("pane-c1498", "conucos"): "conuco",
+    ("pane-c1498", "cazabi"): "pan",
+    ("pane-c1498", "guanines"): "oro",
+    ("pane-c1498", "cibas"): "piedra",
+    ("pane-c1498", "cobo"): "caracol",
+    ("pane-c1498", "operito"): "muerto",
+    ("pane-c1498", "opia"): "alma",
+    ("pane-c1498", "goeiz"): "alma",
+    ("pane-c1498", "yuca"): "yuca",
+    ("pane-c1498", "jobos"): "árbol",
+    ("pane-c1498", "tona"): "rana",
+    ("pane-c1498", "naboria"): "criado",
+}
+
+# El campo de RANGO Y ALIANZA, que es donde cae `diao` y donde viajan las
+# palabras. Se declara aquí para que el cruce del campo sea auditable y no
+# una selección a ojo hecha después de ver el resultado.
+CAMPO_DE_RANGO = {
+    "glosas": frozenset({"cacique", "senor", "jefe", "principal", "noble", "amigo", "aliado",
+                         "criado", "sacerdote", "padre", "rey", "titulo", "pariente"}),
+    "cats": frozenset({"título", "titulo"}),
+    "categorias": frozenset({"jerarquia", "autoridad", "parentesco", "organizacion-politica"}),
 }
 
 
@@ -363,6 +816,121 @@ def cargar_comparanda(lengua, gu):
     return entradas
 
 
+# ═════════════════════════════════════════════════════════════════════════
+# T11 · Las transcripciones de T1/T2 como fuente taína (con obra y página)
+# ═════════════════════════════════════════════════════════════════════════
+def _seccion(Y, ruta):
+    o = Y
+    for k in ruta.split("."):
+        o = (o or {}).get(k)
+    return o or []
+
+
+def glosa_de_cronica(texto, obra, forma):
+    """La glosa castellana de una voz, sacada de la cita con reglas declaradas."""
+    decl = GLOSA_DECLARADA.get((obra, str(forma)))
+    if decl:
+        return decl, "declarada"
+    t = re.sub(r"\s+", " ", str(texto or ""))
+    for nombre, patron in PATRONES_GLOSA_CRONICA:
+        m = re.search(patron, t, re.I)
+        if m:
+            g = m.group(1).strip(" «»\"'")
+            g = re.sub(r"\s+(?:que|de|en|á|a|con|por|para)\s+.*$", "", g).strip()
+            if 2 < len(g) < 40 and not re.search(r"\d", g):
+                return g, nombre
+    return None, "sin-glosa-extraible"
+
+
+def cargar_taino_transcripciones(gu):
+    """Las voces taínas de `6-fusion/taino_*.yaml`, con su clave foránea.
+
+    Es lo que el cruce del 21 no leía. Cada entrada trae `obra` y `pagina`, que
+    es justo lo que a las 43 del lexicón les falta (regla 8): «Brinton 1871»
+    escrito en `notas` no es una clave foránea.
+    """
+    entradas, bitacora, fuera = [], [], collections.Counter()
+    for spec in YAML_TAINO:
+        Y = yaml.safe_load(io.open(os.path.join(R, "6-fusion", spec["archivo"]), encoding="utf-8"))
+        for ruta, clase in spec["secciones"].items():
+            for e in _seccion(Y, ruta):
+                if not isinstance(e, dict):
+                    continue
+                forma = e.get("forma_probable") or e.get("forma_fuente") or e.get("forma")
+                if isinstance(forma, list):
+                    forma = forma[0] if forma else None
+                if not forma:
+                    fuera["sin forma"] += 1
+                    continue
+                if clase != "taíno":
+                    fuera[clase] += 1
+                    bitacora.append({"forma": str(forma), "obra": spec["obra"], "seccion": ruta,
+                                     "glosa": None, "como": f"EXCLUIDA · {clase}"})
+                    continue
+                cruda = e.get("glosa_fuente") if "glosa_fuente" in e else e.get("glosa")
+                if spec["obra"] == "brinton-1871":
+                    g = GLOSA_EN_ES.get(str(cruda).strip())
+                    como = "GLOSA_EN_ES" if g else "sin-traducir (declarado)"
+                else:
+                    g, como = glosa_de_cronica(cruda, spec["obra"], forma)
+                bitacora.append({"forma": str(forma), "obra": spec["obra"], "seccion": ruta,
+                                 "glosa": g, "como": como,
+                                 "cita": str(cruda)[:90].replace("\n", " ")})
+                if not g:
+                    fuera["sin glosa extraíble"] += 1
+                    continue
+                # la primera forma si la fuente da varias grafías separadas por /
+                base = re.split(r"\s*/\s*", str(forma))[0].strip().lower()
+                cands = []
+                for fm in dict.fromkeys([base] + [x.strip().lower()
+                                                  for x in re.split(r"\s*/\s*", str(forma))]):
+                    fb = fon(fm, "colonial", gu)
+                    if len(fb) < MIN_FONEMAS:
+                        continue
+                    for r_ in radicales(fb, "taíno"):
+                        cands.append((r_, fm, r_ != fb))
+                if not cands:
+                    fuera["forma de menos de tres fonemas"] += 1
+                    continue
+                pag = e.get("pagina_impresa") or e.get("pagina") or e.get("capitulo")
+                if isinstance(pag, list):
+                    pag = ", ".join(str(x) for x in pag)
+                estrato = f"{spec['obra']}" + (f" p. {pag}" if pag else "")
+                cronista = e.get("cronista")
+                if cronista:
+                    estrato += f" (quien atestigua: {cronista})"
+                entradas.append({
+                    "lengua": "taíno", "forma": base, "glosa": g, "clave": f"{base}@{spec['obra']}",
+                    "cands": cands, "conceptos": conceptos(g), "fon_base": cands[0][0],
+                    "ficha": {"forma": base, "glosa": g, "estrato": estrato,
+                              "obra": spec["obra"], "pagina": pag,
+                              "de_la_transcripcion": spec["archivo"]},
+                    "dominio": "sin-declarar", "nota_mira_al_caquetio": False,
+                    "de_transcripcion": True})
+    return entradas, bitacora, dict(sorted(fuera.items()))
+
+
+def fundir_taino(del_lexicon, de_transcripcion):
+    """Una lista taína sin duplicar la misma voz, pero sin perder ninguna cita.
+
+    Dos entradas son la misma voz si comparten lema fonémico Y concepto exacto.
+    Se conserva la que TIENE obra y página (regla 8) y la otra se apunta en
+    `tambien_en`: el dato no se pierde, el denominador no se infla.
+    """
+    por_llave, fusiones = {}, []
+    for e in list(de_transcripcion) + list(del_lexicon):
+        cab = tuple(sorted({c for c, ex, _ in e["conceptos"] if ex}))
+        llave = (e["fon_base"], cab)
+        if llave in por_llave:
+            v = por_llave[llave]
+            v["ficha"].setdefault("tambien_en", []).append(e["ficha"]["estrato"])
+            fusiones.append(f"{e['forma']} «{e['glosa']}» → {v['clave']}")
+            continue
+        por_llave[llave] = e
+    salida = sorted(por_llave.values(), key=lambda e: str(e["clave"]))
+    return salida, fusiones
+
+
 def medir_jirajaroide_frontera():
     """Por qué el control que el encargo sugería no sirve — medido, no dicho."""
     import json
@@ -533,6 +1101,21 @@ def medir(gu, con_nulo=True):
     t0 = time.time()
     lengs = {L: cargar_comparanda(L, gu) for L in LENGUAS + INFORMATIVAS}
     lengs[CONTROL], meta_control = cargar_control(gu)
+    # T11: las transcripciones de T1/T2 entran aquí, y sólo aquí. Es el cambio
+    # que mueve el denominador del cruce del 21.
+    del_lexicon = lengs["taíno"]
+    de_transcr, bitacora_tr, fuera_tr = cargar_taino_transcripciones(gu)
+    lengs["taíno"], fusiones_tr = fundir_taino(del_lexicon, de_transcr)
+    transcripciones = {
+        "entradas_del_lexicon": len(del_lexicon),
+        "entradas_de_las_transcripciones": len(de_transcr),
+        "tras_fundir_la_misma_voz": len(lengs["taíno"]),
+        "con_obra_y_pagina": sum(1 for e in lengs["taíno"] if e["ficha"].get("obra")),
+        "sin_clave_foranea": sum(1 for e in lengs["taíno"] if not e["ficha"].get("obra")),
+        "descartadas_por": fuera_tr,
+        "fusiones": fusiones_tr,
+        "bitacora_de_glosas": bitacora_tr,
+    }
     idx = {L: indexar(es) for L, es in lengs.items()}
     caq = cargar_caquetio(gu)
 
@@ -583,7 +1166,8 @@ def medir(gu, con_nulo=True):
                     sims.append(max(0.0, mejor(r["c"]["cands"], muestra)[0]) if muestra else 0.0)
                 r["nulo"][L] = sims
     return {"res": res, "lengs": lengs, "idx": idx, "pool": pool,
-            "meta_control": meta_control, "segundos": round(time.time() - t0, 1)}
+            "meta_control": meta_control, "transcripciones": transcripciones,
+            "segundos": round(time.time() - t0, 1)}
 
 
 # ═════════════════════════════════════════════════════════════════════════
@@ -1092,6 +1676,838 @@ def paso_por_forma(M, gu):
 
 
 # ═════════════════════════════════════════════════════════════════════════
+# T11 · EL TEST: ¿cognado heredado (A), préstamo (B) o indecidible (C)?
+# ═════════════════════════════════════════════════════════════════════════
+def esqueleto(f):
+    """Las consonantes de una forma ya fonemizada. C9: las vocales quedan fuera."""
+    return "".join(ch for ch in str(f or "") if ch in CONSONANTES)
+
+
+def diferencias_consonanticas(a, b):
+    """[(consonante caquetía, consonante taína o ∅)] alineando los esqueletos."""
+    m = alinear(a, b)
+    out = []
+    for i, x in enumerate(a):
+        y = m.get(i, "∅")
+        out.append((x, "" if y == "∅" else y))
+    # lo que el taíno TIENE de más también es diferencia
+    usados = {m.get(i) for i in range(len(a))}
+    sobra = len(b) - len([u for u in usados if u and u != "∅"])
+    return out, max(0, sobra)
+
+
+def juzgar_por_correspondencias(fa, fb, tabla="caquetío↔taíno"):
+    """El corazón del test. Devuelve el diagnóstico consonante a consonante."""
+    mapa = TABLAS[tabla]["mapa"]
+    ca, cb = esqueleto(fa), esqueleto(fb)
+    pares, sobra = diferencias_consonanticas(ca, cb)
+    identicas, regulares, neutras, violaciones, persona, candidatas = [], [], [], [], [], []
+    for i, (x, y) in enumerate(pares):
+        et = f"{x} ~ {y or '∅'}"
+        d = mapa.get(x)
+        if x == y:
+            identicas.append(et)
+        elif (x, y) in PARES_NEUTROS:
+            neutras.append(et + " (C8: /r/~/l/ indecidible)")
+        elif d and y in d["admite"]:
+            regulares.append(f"{et} ({d['apoyos']} apoyos)")
+        elif d and y in d["candidatas"]:
+            candidatas.append(f"{et} — sólo {d['apoyos']} apoyos, por debajo del listón de "
+                              f"{LISTON_DE_APOYOS} del propio proyecto")
+        elif not d and x == y:
+            identicas.append(et)
+        elif i == 0 and x in PREFIJOS_DE_PERSONA and y in PREFIJOS_DE_PERSONA:
+            persona.append(f"{et} — no es sonido, es MORFOLOGÍA: {PREFIJOS_DE_PERSONA[x]} frente a "
+                           f"{PREFIJOS_DE_PERSONA[y]} (oliver-1989-cap2 p. 147)")
+        else:
+            violaciones.append(et)
+    diagn = {c for c, d in mapa.items() if d["diagnostica"]}
+    return {"tabla": tabla, "esqueleto_caquetio": ca, "esqueleto_taino": cb,
+            "identicas": identicas, "regulares_predichas": regulares,
+            "candidatas_bajo_el_liston": candidatas,
+            "neutras": neutras, "violaciones": violaciones,
+            "contraste_de_persona": persona,
+            "consonantes_taínas_sin_pareja": sobra,
+            "consonantes_diagnosticas_presentes": sorted({x for x, _ in pares} & diagn)}
+
+
+def test_cognado_o_prestamo(fa, fb, dominio=None, p_nulo=None, campo_de_rango=False,
+                            tabla="caquetío↔taíno"):
+    """A cognado heredado · B préstamo o cruce reciente · C indecidible.
+
+    El orden importa y está declarado: primero lo que descalifica la pareja
+    (forma corta, azar), después la FORMA —que es lo único que distingue
+    herencia de préstamo—, y sólo al final el dominio, que pondera pero nunca
+    decide solo. «Lo que decide no es SI se comparte, sino QUÉ» vale para la
+    clase de la pareja; para el mecanismo, manda el sonido.
+    """
+    j = juzgar_por_correspondencias(fa, fb, tabla)
+    ca, cb = j["esqueleto_caquetio"], j["esqueleto_taino"]
+    razones = []
+    if len(ca) < 2 or len(cb) < 2:
+        return "C", "esqueleto de menos de dos consonantes: no hay dónde medir", j
+    if p_nulo is not None and p_nulo > 0.10:
+        return "C", (f"el modelo nulo alcanza este parecido en el {p_nulo:.0%} de las réplicas: "
+                     "antes de preguntarse cómo llegó la palabra hay que descartar que no haya "
+                     "llegado"), j
+    if j["contraste_de_persona"] and not j["violaciones"]:
+        razones.append("la diferencia inicial es de PERSONA y no de sonido (" +
+                       "; ".join(j["contraste_de_persona"]) + ")")
+    if j["violaciones"]:
+        return "B", ("VIOLA las correspondencias predichas en " + ", ".join(j["violaciones"])
+                     + ". Una voz heredada no puede traer sonidos que la cadena caquetío↔lokono↔"
+                       "taíno no produce; o cruzó por otra vía, o no es la misma palabra"), j
+    if j["contraste_de_persona"]:
+        resto_a = ca[1:]
+        resto_b = cb[1:]
+        if resto_a == resto_b:
+            return "C", ("; ".join(razones) + ". Quitado el prefijo, las dos raíces son IDÉNTICAS "
+                         f"(/{resto_a}/) y no traen ninguna consonante diagnóstica: la palabra no "
+                         "tiene dónde diferir, así que ni la herencia ni el préstamo dejan huella"), j
+        return "C", "; ".join(razones) + ". Lo que queda tras el prefijo no basta para decidir", j
+    if ca == cb:
+        if j["consonantes_diagnosticas_presentes"]:
+            return "B", ("CERO diferencia consonántica, y el esqueleto contiene "
+                         + ", ".join(f"/{c}/" for c in j["consonantes_diagnosticas_presentes"])
+                         + ", donde lo ESPERADO no era la identidad (P1). Si tenía que cambiar y no "
+                           "cambió, la palabra cruzó tarde: es la firma del préstamo, no de la "
+                           "herencia"), j
+        return "C", ("CERO diferencia, pero el esqueleto NO tiene ninguna consonante diagnóstica: "
+                     "para todas las que hay (" + ", ".join(f"/{c}/" for c in sorted(set(ca)))
+                     + ") lo predicho ES la identidad. La palabra no tiene dónde diferir, así que "
+                       "ni la herencia ni el préstamo dejan huella. Ni A ni B: hace falta otro dato"), j
+    if j["regulares_predichas"]:
+        razones.append("cumple " + ", ".join(j["regulares_predichas"]))
+        if campo_de_rango or dominio == "viajero":
+            return "A", ("; ".join(razones) + ". ⚠️ pero el campo es de los que viajan (rango, "
+                         "alianza, comercio): la forma dice herencia y el campo no la confirma — "
+                         "un préstamo TEMPRANO también habría sufrido los cambios posteriores"), j
+        return "A", "; ".join(razones) + ": es lo que la transitividad predice para una voz heredada", j
+    if j["candidatas_bajo_el_liston"]:
+        return "C", ("la diferencia la cubriría " + "; ".join(j["candidatas_bajo_el_liston"])
+                     + ". Con menos de tres apoyos eso no es una regla, y usarla para decidir esta "
+                       "misma pareja sería circular: queda abierta, y lo que la cerraría es un "
+                       "tercer apoyo independiente"), j
+    if j["neutras"]:
+        return "C", ("la única diferencia es " + ", ".join(j["neutras"])
+                     + ", y Oliver declara ese contraste indecidible en todo el corpus (C8)"), j
+    return "C", ("hay diferencia pero ninguna correspondencia predicha la cubre ni la prohíbe "
+                 f"({j['consonantes_taínas_sin_pareja']} consonante(s) taína(s) sin pareja): "
+                 "la pareja queda abierta"), j
+
+
+def bloque_las_predicciones():
+    return {
+        "por_que_van_aquí_y_no_al_final": (
+            "están escritas ANTES de mirar ninguna pareja, y el orden es parte del método: una "
+            "correspondencia inventada después de ver el resultado explica todo y no predice nada. "
+            "Viven en el código, en `CORRESPONDENCIAS_PREDICHAS`, por encima de cualquier función "
+            "que toque un par."),
+        "de_donde_salen": (
+            "NADIE ha publicado correspondencias caquetío↔taíno, y este proyecto no puede "
+            "establecerlas con cuatro parejas. Lo que se hace es COMPONER las dos patas que sí "
+            "existen: caquetío↔lokono (oliver-1989-cap2, C1-C13, con página) y taíno↔lokono "
+            "(brinton-1871 pp. 11-14, recogidas por T2 en taino_brinton_1871.yaml "
+            "§correspondencias_para_T4). Componer da una PREDICCIÓN, no un hecho."),
+        "los_tres_limites_declarados": [
+            "C8 — /r/ ~ /l/ es indecidible en todo el corpus (Oliver): una diferencia r/l no cuenta.",
+            "C9 — Oliver EXCLUYE las vocales por falta de transcripción fiable: el test puntúa "
+            "esqueletos consonánticos, no formas enteras.",
+            "⟨gu⟩ = /w/ (Oliver p. 147, «/wa- [gua-]/»): el test corre sobre la fonemización con "
+            "gu_es_w=True, que es la que hace ⟨bagua⟩ = /bawa/ y deja ver la correspondencia P1. "
+            "El resto del cruce sigue corriendo con el defecto, gu_es_w=False.",
+        ],
+        "tabla": CORRESPONDENCIAS_PREDICHAS,
+        "tablas_ejecutables": {
+            nombre: {"de_donde": T["de_donde"],
+                     "mapa": {c: {"admite": sorted(d["admite"] or [""]),
+                                  "candidatas": sorted(d["candidatas"]),
+                                  "apoyos": d["apoyos"], "diagnostica": d["diagnostica"]}
+                              for c, d in sorted(T["mapa"].items())}}
+            for nombre, T in TABLAS.items()},
+        "liston_de_apoyos": LISTON_DE_APOYOS,
+        "que_significa_diagnostica": (
+            "que lo PREDICHO para esa consonante no es la identidad. Sólo entonces un «cero "
+            "diferencia» se puede leer como préstamo: si tenía que cambiar y no cambió, cruzó "
+            "tarde. Una pareja sin ninguna consonante diagnóstica no se puede decidir por la "
+            "forma, por mucho que se parezca: no tiene dónde diferir. Ése es el caso de `-tiao`, "
+            "y por eso el test devuelve C y no A. **Entre caquetío y taíno sólo /r/ es "
+            "diagnóstica; entre caquetío y lokono, ninguna.**"),
+        "que_significa_candidata": (
+            "que la cadena la sugiere pero tiene menos de tres apoyos, que es el listón del propio "
+            "proyecto («una correspondencia que sale una o dos veces no es nada»). Usarla no da un "
+            "cognado: baja el veredicto a C y el YAML dice qué lo cerraría."),
+    }
+
+
+def medir_tasa_de_erre(M):
+    """P1 puesta a prueba sobre el corpus entero, no sobre un par.
+
+    Si el taíno pierde la /r/ que el caquetío conserva, tiene que verse en la
+    proporción de /r/ sobre todas las consonantes de cada lista.
+    """
+    out = {}
+    listas = {L: [e["fon_base"] for e in M["lengs"][L] if e.get("fon_base")] for L in TODAS}
+    listas["caquetío-atestiguado"] = [r["c"]["cands"][0][0] for r in M["res"]
+                                      if r["c"]["capa"] == ATESTIGUADO and r["c"]["cands"]]
+    for L, formas in listas.items():
+        cons = collections.Counter()
+        for f in formas:
+            for ch in esqueleto(f):
+                cons[ch] += 1
+        tot = sum(cons.values())
+        out[L] = {"formas": len(formas), "consonantes": tot,
+                  "r": cons.get("r", 0),
+                  "tasa_de_r": round(cons.get("r", 0) / tot, 4) if tot else None,
+                  "l": cons.get("l", 0),
+                  "tasa_de_r_mas_l": round((cons.get("r", 0) + cons.get("l", 0)) / tot, 4) if tot else None,
+                  "w": cons.get("w", 0),
+                  "tasa_de_w": round(cons.get("w", 0) / tot, 4) if tot else None}
+    return {
+        "que_mide": ("P1 dice que el taíno pierde o glidea la /r/ que el caquetío conserva. Si es "
+                     "verdad, tiene que verse SIN mirar ninguna pareja: en la proporción de /r/ "
+                     "sobre el total de consonantes de cada lista."),
+        "como_leerlo": ("es una prueba de la predicción, no una prueba de parentesco. Y arrastra el "
+                        "sesgo de las listas: la caquetía es fitonimia de Zavala y la taína es "
+                        "vocabulario de crónica. Una diferencia pequeña no dice nada; una diferencia "
+                        "de varias veces, con el control jirajarano en medio, sí."),
+        "por_lista": out,
+    }
+
+
+def bloque_control_del_test(M, gu):
+    """Obligatorio: el test sobre lo que YA sabemos, heredado y prestado.
+
+    Si no clasifica bien lo conocido, no sirve para lo desconocido. Se emiten
+    los aciertos, los fallos y el veredicto — y el veredicto es del TEST, no
+    de las parejas.
+    """
+    Y = yaml.safe_load(io.open(YAML_COGNADOS, encoding="utf-8"))
+
+    # ── (a) HEREDADAS: caquetío ↔ lokono con cita ──────────────────────
+    heredadas = []
+    for c in Y["cognados"]:
+        f = c.get("formas") or {}
+        proc = c.get("procedencia") or {}
+        if "CQ" not in f or "LK" not in f or not proc.get("obra") or c.get("fuente") != "atestiguado":
+            continue
+        cq = re.split(r"\s*/\s*", str(f["CQ"]))[0].strip().lstrip("*")
+        lk = re.split(r"\s*/\s*", str(f["LK"]))[0].strip().lstrip("*")
+        a, b = fon(cq, "colonial", gu), fon(lk.replace("-", ""), "colonial", gu)
+        letra, porque, j = test_cognado_o_prestamo(a, b, tabla="caquetío↔lokono")
+        heredadas.append({"set": c["id"], "glosa": c["glosa"], "cq": cq, "lk": lk,
+                          "cita": f"{proc['obra']} p. {proc.get('pagina')}",
+                          "comparado": f"{a} ~ {b}", "esqueletos": f"{j['esqueleto_caquetio']} ~ {j['esqueleto_taino']}",
+                          "letra": letra, "por_que": porque,
+                          "acierta": letra != "B"})
+
+    # ── (b) PRESTADAS: taíno → castellano, que nadie discute ───────────
+    prestadas = []
+    for tn, es, cita in PRESTAMOS_CONOCIDOS:
+        a, b = fon(es, "colonial", gu), fon(tn, "colonial", gu)
+        letra, porque, j = test_cognado_o_prestamo(a, b)
+        prestadas.append({"taino": tn, "castellano": es, "cita": cita,
+                          "comparado": f"{a} ~ {b}",
+                          "esqueletos": f"{j['esqueleto_caquetio']} ~ {j['esqueleto_taino']}",
+                          "letra": letra, "por_que": porque,
+                          "acierta": letra != "A"})
+
+    # ── (c) NO PARIENTE: caquetío ↔ jirajarano, el control de siempre ──
+    nopariente = []
+    for r in M["res"]:
+        if r["c"]["capa"] != ATESTIGUADO or not r["por"][CONTROL]["ranking"]:
+            continue
+        s, e, cb, ca = r["por"][CONTROL]["ranking"][0]
+        a2, b2 = fon(ca[1], "colonial", gu), fon(cb[1], "colonial", gu)
+        letra, porque, _j = test_cognado_o_prestamo(a2, b2)
+        nopariente.append({"caquetio": r["c"]["clave"], "jirajarano": cb[1],
+                           "glosa": r["c"]["sig"], "similitud": round(s, 3),
+                           "letra": letra, "por_que": porque[:140], "acierta": letra != "A"})
+    nopariente.sort(key=lambda d: (-d["similitud"], d["caquetio"]))
+
+    def _cuenta(filas):
+        c = collections.Counter(x["letra"] for x in filas)
+        return {"n": len(filas), "reparto": dict(sorted(c.items())),
+                "aciertos": sum(1 for x in filas if x["acierta"]),
+                "fallos": sum(1 for x in filas if not x["acierta"])}
+
+    ch, cp, cn = _cuenta(heredadas), _cuenta(prestadas), _cuenta(nopariente)
+    sirve = ch["fallos"] == 0 and cp["fallos"] == 0 and cn["fallos"] == 0
+    decididas_h = sum(1 for x in heredadas if x["letra"] == "A")
+    decididas_p = sum(1 for x in prestadas if x["letra"] == "B")
+    return {
+        "por_que_es_obligatorio": (
+            "«si el test no separa lo que ya sabemos, no sirve para lo que no sabemos». Tres "
+            "brazos: parejas que sabemos HEREDADAS (caquetío↔lokono con cita de Oliver), parejas "
+            "que sabemos PRESTADAS (taíno→castellano, que el propio Brinton documenta) y un brazo "
+            "de lengua NO pariente (jirajara/ayomán de Jahn 1927)."),
+        "el_criterio_de_acierto": (
+            "el test es SANO si nunca llama préstamo a una heredada ni herencia a una prestada. Es "
+            "INCOMPLETO en la medida en que devuelve C, y eso no es un fallo: es la parte del "
+            "material que no tiene consonante diagnóstica. Las dos cifras se dan por separado."),
+        "a_heredadas_caquetio_lokono": {"resumen": ch, "decididas_como_A": decididas_h,
+                                        "filas": heredadas},
+        "b_prestadas_taino_castellano": {"resumen": cp, "decididas_como_B": decididas_p,
+                                         "filas": prestadas},
+        "c_no_pariente_caquetio_jirajarano": {"resumen": cn, "filas": nopariente[:20]},
+        "veredicto_del_test": (
+            ("SANO: ninguna heredada sale préstamo, ninguna prestada sale herencia y ninguna pareja "
+             "con la lengua no pariente sale herencia. "
+             if sirve else
+             "🔴 NO SANO: el test clasifica mal algo que ya sabíamos; lo que diga sobre lo "
+             "desconocido no vale. Ver los `fallos` de cada brazo. ")
+            + f"Poder resolutivo: decide {decididas_h} de {ch['n']} heredadas y {decididas_p} de "
+              f"{cp['n']} prestadas; el resto queda en C por falta de consonante diagnóstica."),
+    }
+
+
+# ═════════════════════════════════════════════════════════════════════════
+# T11 · El caso de prueba: `datihao`, y la pregunta de `diao`
+# ═════════════════════════════════════════════════════════════════════════
+def _atestaciones_de_tiao(gu):
+    """Todo lo que el repo tiene de la familia -tiao, con quién lo dice."""
+    filas = []
+    for k in ("datihao", "waitiao", "diao", "boratio", "dato", "dare"):
+        v = CL.VOCABULARIO_BASE.get(k)
+        if not v:
+            continue
+        filas.append({"lado": "caquetío (lexicón)", "forma": k,
+                      "forma_fuente": v.get("forma_fuente"), "glosa": v.get("sig"),
+                      "capa": v.get("fuente"),
+                      "fonemizada": fon(v.get("forma_fuente") or k, "colonial", gu),
+                      "quien_lo_dice": (v.get("notas") or "")[:180]})
+    Y = yaml.safe_load(io.open(YAML_COGNADOS, encoding="utf-8"))
+    for c in Y["cognados"]:
+        if c["id"] not in ("cognado-008", "cognado-009", "cognado-012"):
+            continue
+        proc = c.get("procedencia") or {}
+        filas.append({"lado": "cognados.yaml", "forma": str((c.get("formas") or {}).get("CQ")),
+                      "glosa": c["glosa"], "capa": c.get("fuente"),
+                      "formas_del_set": c.get("formas"),
+                      "quien_lo_dice": f"{proc.get('obra')} p. {proc.get('pagina')} · «{proc.get('ancla')}»",
+                      "duda_del_autor": (c.get("duda_del_autor") or "")[:300]})
+    O = yaml.safe_load(io.open(os.path.join(R, "6-fusion", "taino_oviedo_valdes_1851.yaml"),
+                               encoding="utf-8"))
+    for e in O.get("otras_islas", []):
+        if "lihao" in str(e.get("forma_fuente", "")) or "tihao" in str(e.get("forma_fuente", "")):
+            filas.append({"lado": "taíno (transcripción de T1)", "forma": e.get("forma_fuente"),
+                          "forma_probable": e.get("forma_probable"),
+                          "glosa": str(e.get("glosa_fuente"))[:140],
+                          "fonemizada": fon(str(e.get("forma_fuente")), "colonial", gu),
+                          "pagina_impresa": e.get("pagina_impresa"),
+                          "atribucion": str(e.get("atribucion"))[:160],
+                          "verificacion": e.get("verificacion"),
+                          "quien_lo_dice": "oviedo-y-valdes-1851 lib. XVI cap. V"})
+    B = yaml.safe_load(io.open(os.path.join(R, "6-fusion", "taino_brinton_1871.yaml"),
+                               encoding="utf-8"))
+    for e in B["vocabulario_antillano"]["entradas"]:
+        if "tiao" in str(e.get("forma", "")).lower():
+            filas.append({"lado": "taíno (transcripción de T2)", "forma": e.get("forma"),
+                          "glosa": e.get("glosa"), "lokono_de_brinton": e.get("lokono"),
+                          "fonemizada": fon(str(e.get("forma")), "colonial", gu),
+                          "pagina_impresa": e.get("pagina"),
+                          "quien_lo_dice": f"brinton-1871 p. {e.get('pagina')}, cronista: {e.get('cronista')}"})
+    return filas
+
+
+def bloque_datihao(gu):
+    """El caso de prueba, con el test aplicado y el test PENDIENTE escrito."""
+    cq_da = fon("datihao", "colonial", gu)          # la del lexicón
+    cq_wa = fon("guaitiao", "colonial", gu)         # forma_fuente de `waitiao`
+    tn_gua = fon("guatiao", "colonial", gu)         # Brinton p. 12
+    ov = fon("dalihao", "colonial", gu)             # lo que el OCR de Oviedo da
+
+    pruebas = []
+    for et, a, b in (
+        ("caq `datihao` (da-) ~ taí `guatiao` (gua-)", cq_da, tn_gua),
+        ("caq `guaitiao` (= la forma_fuente de `waitiao`) ~ taí `guatiao`", cq_wa, tn_gua),
+    ):
+        letra, porque, j = test_cognado_o_prestamo(a, b, campo_de_rango=True)
+        pruebas.append({"pareja": et, "comparado": f"{a} ~ {b}",
+                        "esqueletos": f"{j['esqueleto_caquetio']} ~ {j['esqueleto_taino']}",
+                        "diagnostico": j, "letra": letra, "por_que": porque})
+    pruebas.append({
+        "pareja": "caq `datihao` ~ lo que el OCR de Oviedo imprime en San Juan (`dalihao`)",
+        "comparado": f"{cq_da} ~ {ov}",
+        "esqueletos": f"{esqueleto(cq_da)} ~ {esqueleto(ov)}",
+        "letra": "NO SE APLICA EL TEST",
+        "por_que": ("la diferencia es /t/ ~ /l/ y **no es un dato de lengua**: es la confusión l/t "
+                    "del OCR, en cursiva, en una página sin imagen (impresa 473 > 154, el límite que "
+                    "declara la propia transcripción). Meterla en el test daría «viola las "
+                    "correspondencias» y estaría midiendo al escáner. Se deja fuera y se dice."),
+    })
+    return {
+        "la_pregunta_de_miguel": (
+            "«datihao está atestiguada a las DOS orillas por Oviedo». Si las dos formas son "
+            "idénticas letra a letra, eso es lo que escribiría un cronista que oye la misma palabra "
+            "en dos sitios — o lo que escribiría uno que la conoce de Haití y la proyecta sobre "
+            "Venezuela. Si difieren, la diferencia decide: regular → cognado; irregular → préstamo."),
+        "lo_primero_y_es_lo_que_rompe_el_caso": {
+            "que_se_esperaba": "dos atestaciones de Oviedo, una de San Juan y otra de la Provincia de Venezuela",
+            "lo_que_el_repo_tiene": (
+                "UNA. El barrido del tomo I entero (3.001.703 caracteres, pymupdf en modo "
+                "reparación) da **una sola** ocurrencia de la familia -tiao: `dalihao`, impresa "
+                "473, en boca del cacique Agueybana de San Juan. `tiao`, `guatiao`, `guaitiao`, "
+                "`diao` y `borat*` dan CERO en el volumen."),
+            "y_la_otra_orilla": (
+                "no está en el repo. La atestación «de la Provincia de Venezuela» se conoce sólo "
+                "por oliver-1989-cap2 n. 42 p. 146, que la parafrasea; Jahn 1927 p. 213 n. 29 la "
+                "hacía venir de «el apéndice al tomo IV» de Oviedo, apéndice que el rastreo del "
+                "2026-08-14 verificó que NO EXISTE. Y `fuentes_caquetios/"
+                "Oviedo_Banhos_Conquista_Poblacion_Venezuela.pdf`, que por el nombre parecía "
+                "candidato, es de OTRO autor —José de Oviedo y Baños, 1723— y da cero en las "
+                "seis grafías (barrido de 1.195.750 caracteres, 2026-09-22)."),
+            "consecuencia": (
+                "la comparación letra a letra que el encargo pide **no se puede hacer hoy**: no hay "
+                "dos cadenas que comparar, hay una. Y esa una es lectura de OCR sin imagen "
+                "(impresa 473 > 154), con la confusión l/t del propio OCR en el sitio exacto donde "
+                "está la duda: `dalihao` frente a `datihao`."),
+            "y_hay_un_tercer_problema_de_fondo": (
+                "los DOS lados caquetíos de la familia -tiao —`datihao` y `waitiao`— citan lo mismo: "
+                "oliver-1989-cap2 p. 147 sobre Oviedo y Valdés. No son dos atestaciones, son una "
+                "obra leída por un autor. La skill §8 es exactamente esto: Jahn parecía corroborar "
+                "y bebe del mismo Oviedo."),
+        },
+        "lo_que_el_repo_tiene_de_la_familia": _atestaciones_de_tiao(gu),
+        "el_test_aplicado_a_lo_que_hay": pruebas,
+        "la_respuesta_de_la_transitividad": (
+            "P3 predice que un cognado caquetío de taíno `da-` + `-(i)tiao` se dice **`da-tiao`**: "
+            "el caquetío conserva /d-/ igual que el lokono y el taíno (Oliver pp. 136, 146-147). Y "
+            "eso es exactamente lo que se ve. **Pero el rasgo no decide nada**: /d-/ separa al trío "
+            "caquetío-taíno-lokono del par guajiro-paraujano (/t-/), no al caquetío del taíno. Un "
+            "préstamo taíno al caquetío habría entrado con su /d-/ intacto. En la raíz `-tiao` no "
+            "hay ninguna consonante diagnóstica: /t/ está predicha idéntica en los dos lados (P4) y "
+            "no hay /r/, /b/ ni /p/. La palabra **no tiene dónde diferir**."),
+        "las_dos_lecturas_con_su_peso": [
+            {"letra": "A — cognado heredado",
+             "a_favor": ("Oliver lo escribe: «This Taíno term is cognate to Caquetio daitiao» "
+                         "(p. 147), y le da etimología en proto-arahuaco: /da-/ 1ª sg. + /-(i)tiao/ "
+                         "sobre la raíz de parentesco /atti/, con el lokono `da-tti`/`da-iti` y "
+                         "Brinton dando el lokono `ahati` 'companion, playmate' (p. 12). La raíz de "
+                         "parentesco es vocabulario de FILIACIÓN, del que casi nunca viaja."),
+             "en_contra": ("la forma no exhibe ni una diferencia, y no puede exhibirla: sin "
+                           "consonante diagnóstica el argumento formal está vacío. Y la raíz "
+                           "/-atti-/ aparece en caquetío en `boratio`, `dato` y `datihao` — o sea "
+                           "que su presencia en la lengua no depende de esta voz."),
+             "peso": "media — la etimología es buena y la evidencia formal es nula"},
+            {"letra": "B — préstamo por contacto",
+             "a_favor": ("el campo. `guatiao` no es una palabra de parentesco cualquiera: es el "
+                         "nombre de una INSTITUCIÓN de alianza entre señores —el trueque de "
+                         "nombres entre Ponce de León y Agüeybaná, Las Casas [1552] 1929 II:291— y "
+                         "las instituciones de alianza viajan con los aliados. Oviedo la oye en "
+                         "boca de un cacique de Boriquén hablando con españoles, en 1510 y pico. Y "
+                         "Oliver DUDA él mismo: «I have no absolute certainty that it belongs to a "
+                         "Caquetío language… He could very well have used Taíno», y concluye "
+                         "«equally shared by both Taíno and Caquetío» (n. 42, p. 146)."),
+             "en_contra": ("«compartida por las dos» no es lo mismo que «prestada»: puede ser "
+                           "herencia común que las dos conservaron. Y la etimología de Oliver la "
+                           "hace descender del proto-arahuaco, no cruzar el mar."),
+             "peso": "media-alta — el campo empuja y el autor de la afirmación duda de su propio dato"},
+            {"letra": "C — indecidible con lo que hay",
+             "a_favor": ("es lo que el test devuelve, y lo devuelve por una razón concreta y no por "
+                         "prudencia: la palabra no tiene consonante diagnóstica. Además falta la "
+                         "mitad del dato (la otra orilla) y la mitad que hay es OCR sin imagen."),
+             "en_contra": "—",
+             "peso": "ALTA — es el veredicto del instrumento"},
+        ],
+        "el_test_que_queda_escrito_para_cuando_llegue_el_dato": {
+            "como_usarlo": ("cuando otro agente traiga la forma del tomo II/IV (o una segunda copia "
+                            "de la impresa 473 con imagen), se mete en `GLOSA_DECLARADA` / en la "
+                            "transcripción y se re-corre el script. Esta tabla dice de antemano qué "
+                            "significa cada resultado, para que no se decida después de verlo."),
+            "filas": [
+                {"si_la_forma_de_venezuela_es": "idéntica letra a letra a la de San Juan (`datihao` = `datihao`)",
+                 "entonces": "B se refuerza mucho",
+                 "por_que": ("un cronista con veinte años en La Española escribiendo la MISMA cadena "
+                             "en dos orillas es, como poco, indistinguible de un cronista que "
+                             "proyecta. Y es justo el escenario que Oliver teme en la n. 42")},
+                {"si_la_forma_de_venezuela_es": "`datihao` frente a un taíno `guatiao` — o sea, difiere sólo en el prefijo de persona",
+                 "entonces": "sigue siendo C",
+                 "por_que": ("es lo que ya tenemos: /da-/ 1ª sg. contra /wa-/ 3ª pl. es MORFOLOGÍA "
+                             "compartida, no correspondencia de sonido. Prueba que las dos lenguas "
+                             "tienen el mismo juego de prefijos, que es dato de filiación y ya está "
+                             "contado en D11")},
+                {"si_la_forma_de_venezuela_es": "con /r/ donde el taíno no la tiene (p. ej. *`daritiao`, *`darihao`)",
+                 "entonces": "A, y fuerte",
+                 "por_que": "sería P1 cumpliéndose en la voz misma: la correspondencia diagnóstica por fin presente"},
+                {"si_la_forma_de_venezuela_es": "con /t-/ inicial (*`tatihao`)",
+                 "entonces": "A por vía guajiro-paraujana, y falsaría P3",
+                 "por_que": "el /tA-/ es la innovación guajiro-paraujana; sería dato contra la tesis lokonoide de Oliver"},
+                {"si_la_forma_de_venezuela_es": "otra palabra distinta para lo mismo",
+                 "entonces": "B se refuerza",
+                 "por_que": "si el caquetío tiene voz propia para el aliado ritual, la -tiao es la importada"},
+                {"si_aparece": "una atestación caquetía de la familia -tiao que NO venga de Oviedo",
+                 "entonces": "cambia el fondo entero del caso",
+                 "por_que": ("las dos entradas caquetías del lexicón (`datihao`, `waitiao`) citan la "
+                             "misma página de Oliver sobre el mismo Oviedo. Una fuente "
+                             "independiente rompería la circularidad, que es el problema real. "
+                             "⚠️ Y **hay una, y estaba en casa**: el `tiao` de los caquetíos de "
+                             "Apure que Arcaya 1920 p. 48 atribuye al Padre Carvajal. Ver "
+                             "`meta.la_otra_orilla_estaba_en_casa` — pero es de Apure y no de la "
+                             "costa, así que la regla 4 manda antes que la alegría")},
+            ],
+        },
+        "⚠️_leer_despues_de_esto": ("`meta.la_otra_orilla_estaba_en_casa`, que se midió después de "
+                                    "escribir este bloque y localiza la página que falta en el tomo "
+                                    "**II** de Oviedo (pp. 297-300), no en el IV."),
+    }
+
+
+def bloque_diao(M, gu):
+    """«diao y daitiao son símiles» — medido, sin forzar el match ni negarlo."""
+    # (1) ¿hay en taíno un diao / tiao / -tiao con valor de RANGO?
+    corpus_tn = []
+    for e in M["lengs"]["taíno"]:
+        corpus_tn.append((e["forma"], e["glosa"], e["ficha"]["estrato"]))
+    brinton, cita_b = headwords_brinton()
+    sonda = {}
+    for nombre, patron in (("diao", r"^dia[ho]?$"), ("tiao (en cualquier posición)", r"tia[ho]"),
+                           ("-tiao final", r"tia[ho]?$"), ("dia- inicial", r"^dia"),
+                           ("d- inicial", r"^d")):
+        sonda[nombre] = {
+            "en_las_voces_taínas_del_cruce": sorted({f for f, _g, _s in corpus_tn
+                                                     if re.search(patron, f, re.I)}),
+            "en_los_lemas_de_brinton": sorted({f for f in brinton if re.search(patron, f, re.I)}),
+        }
+    # (2) el campo de rango, lado a lado
+    def _es_rango(glosa, cat=None, categoria=None):
+        cabs = {c for c, _ex, _s in conceptos(glosa)}
+        if cabs & {_norm_es(x) for x in CAMPO_DE_RANGO["glosas"]}:
+            return True
+        return (cat in CAMPO_DE_RANGO["cats"]) or (categoria in CAMPO_DE_RANGO["categorias"])
+
+    rango_tn = [{"forma": f, "glosa": g, "fuente": s} for f, g, s in sorted(set(corpus_tn))
+                if _es_rango(g)]
+    rango_cq = []
+    for r in M["res"]:
+        c = r["c"]
+        if c["capa"] != ATESTIGUADO:
+            continue
+        if _es_rango(c["sig"], c["cat"], c["categoria"]):
+            rango_cq.append({"forma": c["clave"], "glosa": c["sig"],
+                             "fonemizada": c["cands"][0][0] if c["cands"] else "",
+                             "cita": (c["notas"] or "sin nota")[:120]})
+    # (3) el cruce ENTERO del campo, con el test
+    cruce = []
+    for a in rango_cq:
+        fa = fon(a["forma"], "colonial", gu)
+        for b in rango_tn:
+            fb = fon(b["forma"], "colonial", gu)
+            s = difflib.SequenceMatcher(None, fa, fb, autojunk=False).ratio()
+            if s < UMBRAL_PARECIDO:
+                continue
+            letra, porque, j = test_cognado_o_prestamo(fa, fb, campo_de_rango=True)
+            cruce.append({"caquetio": a["forma"], "glosa_caquetia": a["glosa"],
+                          "taino": b["forma"], "glosa_taina": b["glosa"],
+                          "fuente_taina": b["fuente"], "similitud": round(s, 3),
+                          "esqueletos": f"{j['esqueleto_caquetio']} ~ {j['esqueleto_taino']}",
+                          "letra": letra, "por_que": porque})
+    cruce.sort(key=lambda d: -d["similitud"])
+    hay_diao = bool(sonda["diao"]["en_las_voces_taínas_del_cruce"]
+                    or sonda["diao"]["en_los_lemas_de_brinton"])
+    return {
+        "lo_que_dice_miguel": ("«diao y daitiao que son símiles son las versiones caquetías de la "
+                               "versión Taína. Un cognado que hace match.»"),
+        "lo_que_dice_oliver": (
+            "que son DOS LEXEMAS y no uno: `diao` = /d-ia(o)/ sobre la raíz lokona /d-ai-/ de "
+            "'palabra, lengua' (cognado-008, Oliver p. 146, con el lokono `dai-yana-ho`); "
+            "`datihao`/`daitiao` = /da-/ + /-(i)tiao/ sobre la raíz de parentesco /atti/ "
+            "(cognado-009, p. 147). La frase «diao is, in many ways, closely related to datihao» "
+            "(n. 42) **no es una identificación**: son parientes por compartir el prefijo /d-/ y el "
+            "sufijo /-(h)o/, no la raíz. Ya está escrito así en 4-fuentes/oliver-1989-cap2.md."),
+        "que_comparten_con_precision": [
+            "el prefijo /d-/ de 1ª persona singular — el mismo que `dare` y `dato`, y el pilar de "
+            "que el caquetío salga del fondo lokono (C1). Lo comparten con el lokono y con el "
+            "taíno, así que NO es un lazo particular entre las dos palabras.",
+            "el sufijo /-(h)o/ nominalizador solemne, que Oliver llama «characteristic of both "
+            "Taíno and Lokono» (p. 147) y que también lleva `boratio`.",
+        ],
+        "que_NO_comparten": [
+            "la RAÍZ. /-ai-/ 'palabra, lengua' contra /-atti-/ 'pariente'. Dos etimologías "
+            "distintas, escritas por el mismo autor en dos páginas seguidas.",
+            "la GLOSA. `diao` es 'señor principal, jefe mayor' (Zavala p. 67, atestiguado por vía "
+            "caquetía propia); `datihao` es 'padrino de cautivo, el que presta su nombre' (Oliver "
+            "sobre Oviedo). Rango contra alianza. Bajo la política del 2026-09-19 —glosa "
+            "normalizada idéntica o no hay par— no son el mismo concepto ni de lejos.",
+        ],
+        "y_la_pregunta_taina_medida": {
+            "pregunta": "¿hay en taíno un `diao`, `tiao` o `-tiao` con valor de RANGO?",
+            "sonda": sonda,
+            "cita_de_los_lemas_de_brinton": cita_b,
+            "respuesta": (
+                ("SÍ, y hay que mirarlo una a una — ver `sonda`." if hay_diao else
+                 "**NO.** En taíno no hay ninguna voz `diao` ni `dia-`. ")
+                + " Lo que sí hay es `guatiao` 'friend, companion' (brinton-1871 p. 12, cronista "
+                  "Richardo; lokono `ahati`), que es la gemela de `datihao` y NO significa rango "
+                  "sino alianza. Los títulos de rango taínos son otros y ninguno se parece a "
+                  "`diao`: `casique` 'a chief', `nitainos` 'the title applied to the petty chiefs', "
+                  "`matunheri` 'a title applied to the highest chiefs' (Las Casas, Hist. Apol. cap. "
+                  "197), `guaoxeri` 'the lowest class', `bajari` 'title applied to sub-chiefs "
+                  "ruling villages' — todos en brinton-1871 pp. 11-13."),
+            "la_consecuencia": (
+                "la frase de Miguel se parte en dos y las dos mitades miden distinto. **`datihao` "
+                "SÍ tiene gemela taína** (`guatiao`), con la misma raíz y distinto prefijo de "
+                "persona — y ésa es la que el test no puede decidir. **`diao` NO tiene gemela "
+                "taína ninguna**: no hay dónde hacer match. Su pareja, la que Oliver le da, es "
+                "LOKONA (`dai-yana-ho`), y ésa sí es dato de filiación, que es la columna de D11 y "
+                "no la del contacto."),
+        },
+        "el_campo_de_rango_lado_a_lado": {
+            "que_es": ("el cruce completo del campo donde cae `diao`, en vez de esperar a que la "
+                       "glosa case palabra por palabra. Es lo que contesta «¿hay algo taíno que se "
+                       "le parezca?» sin escoger el candidato después de verlo: el campo se declara "
+                       "arriba, en `CAMPO_DE_RANGO`."),
+            "caquetio_atestiguado": rango_cq,
+            "taino": rango_tn,
+            "parejas_sobre_el_umbral_con_el_test_aplicado": cruce,
+            "si_sale_vacio": ("no hay ni una pareja de rango caquetío~taíno que pase el umbral de "
+                              "parecido. Con los dos inventarios delante, eso es un cero auditable "
+                              "y no un cero de consulta (regla 6)."),
+        },
+    }
+
+
+def bloque_la_otra_orilla():
+    """Lo que el repo YA tenía sobre la otra orilla, y nadie había conectado.
+
+    El barrido de Arcaya 1920 (469.953 caracteres, pymupdf, 2026-09-22) lo
+    cambia todo, y lo cambia dos veces: da la página exacta de Oviedo que
+    falta —tomo II, no tomo IV— y da una atestación de la familia que **no
+    pasa por Oviedo ni por Oliver**.
+    """
+    return {
+        "como_se_midio": ("barrido del PDF de Arcaya que el repo ya tiene "
+                          "(`fuentes_caquetios/Arcaya_1920_Historia_Estado_Falcon.pdf`, 348 pp., "
+                          "469.953 caracteres extraídos con pymupdf) el 2026-09-22. Conteos: "
+                          "`tiao` 1, `diao`/`díao` 8, `datihao` 0, `daitiao` 0, `guaitiao` 0, "
+                          "`boratio` 15."),
+        "hallazgo_1_la_pagina_que_falta": {
+            "que_es": ("la atestación «de la Provincia de Venezuela» que el encargo daba por "
+                       "perdida en «el apéndice al tomo IV» **está en el tomo II, y Arcaya da la "
+                       "página en nota al pie**."),
+            "arcaya_p_impresa_48_nota_33": "Oviedo y Valdez, Historia general y natural de las Indias, tomo 2, pág. 299",
+            "arcaya_p_impresa_115_nota_22": "Oviedo y Valdez, obra citada, tomo II, pág. 297",
+            "arcaya_p_impresa_116_nota_23": "obra y tomo citados, pág. 300 (el funeral del díao)",
+            "y_la_glosa_de_oviedo_que_arcaya_copia": (
+                "p. impresa 115: Manaure era un diao, «señor principal que tiene muchos indios y le "
+                "son subjetos otros caciques» — la glosa es del propio Oviedo, tomo II p. 297"),
+            "consecuencia": (
+                "quien vaya a por la otra orilla ya no busca un apéndice inexistente: busca "
+                "**Oviedo y Valdés tomo II, pp. 297-300**. Y lo que hay allí es `diao`, no "
+                "`datihao`. La deuda documental cambia de forma y de tomo."),
+        },
+        "hallazgo_2_diao_tiene_una_segunda_fuente_INDEPENDIENTE": {
+            "la_frase": ("Arcaya p. impresa 48: los caquetíos de Coro llamaban «díaos» a sus "
+                         "caciques principales, «nombre idéntico al de **tiaos**» con que se "
+                         "designaba, según el Padre Carvajal, a los **Caquetíos de Apure**"),
+            "nota_34_de_arcaya": "«Relación del descubrimiento del Río Apure. Pág. 317» (Jacinto de Carvajal, 1648)",
+            "por_que_importa": (
+                "es una atestación de la familia que **no pasa por Oviedo ni por Oliver**. Todo lo "
+                "demás que el repo tiene de `-tiao` viene de la misma página de Oliver sobre el "
+                "mismo Oviedo; esto no. Rompe la circularidad que este mismo cruce denunciaba hace "
+                "tres bloques."),
+            "y_tambien": ("Arcaya lo enlaza además con el tariana `yatii`/`yaivi` 'médico "
+                          "hechicero' vía Koch-Grünberg 1911 — tercera vía, y arahuaca del "
+                          "noroeste amazónico"),
+            "⚠️_lo_que_NO_prueba": (
+                "que `tiao` sea caquetío COSTERO. Es de Apure, y la regla 4 es explícita: «los "
+                "caquetíos no eran una sola sociedad», «importar un rasgo de Barquisimeto o los "
+                "Llanos sin marcarlo es el error que Oliver denuncia». Se anota como dato de la "
+                "esfera caquetía ancha, no de la polity que la simulación modela."),
+        },
+        "hallazgo_3_y_es_el_que_pesa": {
+            "el_hecho": "`díao` en Coro y `tiao` en Apure, y Arcaya los llama «nombre idéntico»",
+            "por_que_pesa": (
+                "es un contraste /d-/ ~ /t-/ **dentro del caquetío**, entre dos polities. Y /d-/ "
+                "frente a /t-/ es EXACTAMENTE la C1 de Oliver: el prefijo de 1ª sg. que sólo "
+                "lokono y taíno conservan como /dA-/, mientras el guajiro-paraujano innova /tA-/. "
+                "Es el pilar del que cuelga la tesis lokonoide del caquetío, y con ella D11."),
+            "las_dos_lecturas": [
+                {"lectura": "el contraste es REAL y es dialectal",
+                 "entonces": ("«el caquetío conserva /d-/» es una afirmación sobre el caquetío "
+                              "COSTERO, no sobre el caquetío. El caquetío de Apure caería del lado "
+                              "de la innovación /tA-/, y la posición de Oliver se vuelve más "
+                              "local —y más interesante— de lo que está escrita. Sería regla 4 "
+                              "mordiendo en la fonología, que es donde nadie la había mirado")},
+                {"lectura": "el contraste es de COPISTA",
+                 "entonces": ("Carvajal oyó o escribió sin la /d-/ inicial, o Arcaya normalizó. Una "
+                              "sola ocurrencia en un texto de 1648 que el repo no tiene no sostiene "
+                              "un dialecto")},
+            ],
+            "que_lo_decidiria": (
+                "la p. 317 de la *Relación del descubrimiento del Río Apure* de Jacinto de Carvajal, "
+                "que NO está en el repo. Es la misma clase de dato que falta para `datihao`: una "
+                "página. Y ésta además es de dominio público y del s. XVII."),
+            "lo_que_NO_se_hace_aqui": (
+                "tocar D11 ni la ficha de Oliver. Esto PROPONE (regla 5): deja el hallazgo medido y "
+                "la página localizada para que Miguel decida si abre una pregunta o no."),
+        },
+        "hallazgo_4_datihao_no_esta_en_arcaya": {
+            "medido": "`datihao` = 0, `daitiao` = 0, `guaitiao` = 0 en las 348 páginas",
+            "que_significa": (
+                "Arcaya lee a Oviedo con lupa —le cita tomo, página y nota— y **no recoge la voz**. "
+                "El único que la lee ahí es Oliver. Eso no la desmiente, pero sí confirma lo que el "
+                "test ya decía por otra vía: el lado caquetío de `datihao` es **una lectura de un "
+                "autor**, y hoy no hay manera de contrastarla."),
+        },
+        "y_el_corpus_ya_lo_sabia": (
+            "`3-mundo/corpus/creencia.yaml` §creencia-001b lleva escrito desde hace tiempo «el díao "
+            "(diao; **tiao entre los caquetíos de Apure**)» con la referencia «Oviedo y Valdés t. II "
+            "p.299; Arcaya 1920:48,116,118». El dato estaba; lo que no estaba era la lectura: que "
+            "ese `tiao` toca la C1 de Oliver, y que esa referencia es la página que la campaña "
+            "andaba buscando en el tomo equivocado."),
+    }
+
+
+def bloque_el_eje_prosodico():
+    """El acento como TERCER eje del test — todavía no ejecutable, y ya decisivo.
+
+    Viene de la parcela de la *Apologética* (PR #194, rama
+    `campana/taino2-apologetica`, `6-fusion/taino2_las_casas_apologetica.yaml`).
+    **No está en main**, así que este script NO lo lee: si lo leyera, `--check`
+    fallaría en cuanto alguien corriera el script sin esa rama. Se declara con
+    su fuente y se deja el gancho escrito.
+    """
+    return {
+        "estado": ("PENDIENTE de que entre el PR #194. Declarado aquí con su cita, no leído: el "
+                   "script sólo lee lo que está en main, para que `--check` no dependa de qué "
+                   "ramas tenga cada uno."),
+        "que_es": (
+            "Las Casas marca el ACENTO de 97 formas taínas en la *Apologética* («la penúltima "
+            "sílaba luenga», «la última luenga y aguda»…). Es un rasgo más, y del mejor tipo: el "
+            "acento de una forma HEREDADA debería seguir un patrón regular entre las dos lenguas; "
+            "el de un PRÉSTAMO no tiene por qué."),
+        "lo_que_ya_dice_sobre_diao_sin_necesidad_de_ejecutarlo": {
+            "el_hecho": (
+                "los TRES títulos de rango taínos que Las Casas acentúa son OXÍTONOS y acaban los "
+                "tres en `-í` tónica: `Guaoxerí` «la última sílaba luenga», `Baharí` «la misma "
+                "última luenga», `Matunherí` «el acento en la postrera sílaba»"),
+            "la_lectura": (
+                "no son tres palabras sueltas: son una SERIE. El taíno nombra los grados de señorío "
+                "con un molde —raíz + `-í` tónica— y `diao` no tiene ese molde ni de forma ni de "
+                "acento (la tradición venezolana lo escribe `díao`, con el acento al principio). "
+                "Es una segunda razón, independiente de la forma, para que `diao` no tenga gemela "
+                "taína: **no encaja en la serie con la que el taíno hace títulos**."),
+            "⚠️_el_limite": (
+                "el acento del caquetío no está medido en ninguna parte. La tilde de `díao` es "
+                "editorial —Arcaya 1920—, no una marca de cronista como las de Las Casas. Así que "
+                "esto es un eje ASIMÉTRICO: sirve para describir el taíno y todavía no para "
+                "comparar. Lo que lo cerraría es una fuente que marque acento en caquetío."),
+        },
+        "y_un_cero_que_pesa_en_el_caso_datihao": (
+            "**`guatiao` = 0 en toda la *Apologética***, y la institución del cambio de nombre SÍ "
+            "está descrita allí. O sea: Las Casas cuenta el rito y no usa la palabra. Súmese a que "
+            "el `Guatiao` de Brinton (p. 12) no viene de un cronista sino de **Richardo, "
+            "*Diccionario provincial*** — obra cubana del siglo XIX. El lado taíno de `guatiao` es "
+            "más flojo de lo que parecía, igual que el caquetío. **Las dos orillas del caso son "
+            "finas.**"),
+        "y_daca_gana_un_apoyo": (
+            "`daca` 'yo' queda confirmado también en la *Apologética*, además de Pané cap. XXV. "
+            "P3 (el /dA-/ de 1ª sg.) gana una atestación independiente — y sigue sin distinguir "
+            "herencia de préstamo entre caquetío y taíno, que es lo que P3 ya declara."),
+        "cuando_entre_el_PR_194": [
+            "leer `6-fusion/taino2_las_casas_apologetica.yaml` §lexico como una fuente más en "
+            "`YAML_TAINO` (trae `forma_fuente`, `glosa_fuente`, `pagina_impresa` y `verificado`);",
+            "añadir `marca_prosodica` al diagnóstico, como cuarto campo junto a regulares, "
+            "candidatas y violaciones;",
+            "y antes que nada, buscar una fuente que marque acento en caquetío. Sin eso el eje "
+            "describe una lengua y no compara dos.",
+        ],
+    }
+
+
+def bloque_morfemas_filiacion_no_contacto(M):
+    """Los morfemas compartidos van en la columna de FILIACIÓN, no en la de contacto.
+
+    Un morfema gramatical compartido no prueba que dos pueblos se hablaran:
+    prueba que vienen del mismo sitio. La tabla de `morfologia` dice cuál
+    comparten; ésta dice en qué columna cuenta cada uno, y lo mide sobre las
+    transcripciones que entraron hoy.
+    """
+    B = yaml.safe_load(io.open(os.path.join(R, "6-fusion", "taino_brinton_1871.yaml"),
+                               encoding="utf-8"))
+    frases = {str(e.get("forma")): e for e in
+              (B["vocabulario_antillano"].get("frases_y_compuestos") or {}).get("entradas", [])}
+    formas_tn = sorted({e["forma"] for e in M["lengs"]["taíno"]})
+    return {
+        "la_regla": (
+            "un morfema gramatical compartido es dato de FILIACIÓN (de dónde viene la lengua), no "
+            "de CONTACTO (con quién habló el pueblo). Los morfemas casi nunca se prestan; el "
+            "léxico de cultígenos, bichos, mercancías y ritos sí. Mezclar las dos columnas es "
+            "contar dos veces: el /dA-/ que comparten taíno y caquetío lo comparte el lokono, y por "
+            "esa vía ya está contado en D11."),
+        "filas": [
+            {"morfema": "ma- privativo",
+             "taino": ("`mahite` 'you have lost a tooth', brinton-1871 p. 14, cronista Las Casas "
+                       "Hist. Apol. cap. 198, contra el lokono «marikata, you have no teeth "
+                       "(ma negative, ari tooth)»"),
+             "esta_en_las_transcripciones": "mahite" in frases,
+             "caquetio": "declarado en CLAUDE.md §morfología: van Buurt 2014 §8 y Perea 1942 p. 555",
+             "columna": "FILIACIÓN, y ni siquiera taíno-caquetía",
+             "por_que": ("Oliver p. 147 n. 43 declara el privativo /mV-/ común a las lenguas "
+                         "MAIPURES. Confirma que el caquetío tiene lo que la familia tiene; no "
+                         "acerca el taíno al caquetío más que a cualquier hermana")},
+            {"morfema": "da- / d- de 1ª persona singular",
+             "taino": "`daca` 'yo' (pane-c1498 cap. XXV, «Dios naboria daca»); `da-` en `da(i)tia-o`",
+             "esta_en_las_transcripciones": True,
+             "caquetio": "`diao`, `datihao`, `dare`, `dato` — oliver-1989-cap2 pp. 136, 146-147",
+             "columna": "FILIACIÓN, y es el pilar de D11",
+             "por_que": ("separa al trío caquetío-taíno-lokono del par guajiro-paraujano (/tA-/). "
+                         "Contarlo otra vez por la vía taína sería contar dos veces el mismo dato. "
+                         "Y para el test del contacto es INÚTIL: un préstamo taíno habría entrado "
+                         "con su /d-/ intacto")},
+            {"morfema": "-(h)o nominalizador solemne",
+             "taino": "oliver-1989-cap2 p. 147: «characteristic of both Taíno and Lokono»",
+             "esta_en_las_transcripciones": bool([f for f in formas_tn if f.endswith("o")]),
+             "caquetio": "`diao`, `datihao`, `boratio`, `kaket-ío` — el mismo Oliver, pp. 146-148",
+             "columna": "FILIACIÓN",
+             "por_que": ("lo comparte con el lokono, otra vez. Y es lo ÚNICO que `diao` y `datihao` "
+                         "comparten de verdad junto con el /d-/: no la raíz")},
+            {"morfema": "gua- / wa- de 3ª plural",
+             "taino": "brinton-1871 p. 12 s.v. Gua «a very frequent prefix»; oliver p. 147",
+             "esta_en_las_transcripciones": bool([f for f in formas_tn if f.startswith("gua")]),
+             "caquetio": "`guaitiao` (forma_fuente de `waitiao`), y los topónimos en gua-",
+             "columna": "FILIACIÓN",
+             "por_que": ("ojo: el `-gua` LOCATIVO del canon caquetío es otra cosa —sufijo, no "
+                         "prefijo— y contarlos juntos sería la trampa de `-kana`. Ver la tabla de "
+                         "`morfologia`")},
+            {"morfema": "-caco 'ojos'",
+             "taino": ("`buticaco` 'you are blue-eyed', `xeyticaco` 'you are black-eyed' — "
+                       "brinton-1871 p. 14, Las Casas Hist. Apol. cap. 198, contra el lokono "
+                       "`acou`/`akusi`"),
+             "esta_en_las_transcripciones": "buticaco" in frases,
+             "caquetio": "NADA. El canon caquetío no declara ningún formante de 'ojo'",
+             "columna": "ninguna — es hueco caquetío, no pareja",
+             "por_que": ("lo trajo T2 ayer junto con `mahite`. Sirve para saber que el taíno tiene "
+                         "morfología de posesión inalienable del cuerpo; del caquetío no hay con "
+                         "qué compararlo")},
+        ],
+        "lo_que_esto_significa_para_la_pregunta_de_miguel": (
+            "TODO lo que el taíno y el caquetío comparten en morfología cae en la columna de "
+            "filiación, y el lokono lo comparte igual. **Ninguno de estos morfemas prueba contacto.** "
+            "Lo que probaría contacto es léxico: una voz que viajó. Y para eso hace falta el test "
+            "de correspondencias, no el inventario de afijos."),
+    }
+
+
+def bloque_antes_y_despues():
+    """El antes/después MEDIDO, leyendo el YAML de ayer. Ninguna cifra a mano."""
+    if not os.path.exists(ANTERIOR):
+        return {"aviso": f"no está {os.path.relpath(ANTERIOR, R)}: no hay antes que comparar"}
+    A = yaml.safe_load(io.open(ANTERIOR, encoding="utf-8"))
+    ant = ((A.get("meta") or {}).get("resumen_atestiguado") or {}).get("por_lengua") or {}
+    return {"que_es": ("las cifras del cruce del 2026-09-21 leídas de su propio YAML, no copiadas. "
+                       "Lo que cambia entre los dos días es SÓLO la lista taína: entran las "
+                       "transcripciones de T1/T2 con obra y página."),
+            "fuente": os.path.relpath(ANTERIOR, R),
+            "por_lengua_el_2026_09_21": {
+                L: {k: d.get(k) for k in ("entradas_de_la_lengua", "conceptos_comparables",
+                                          "parecidos_ge_umbral",
+                                          "cognado_probable_ge_umbral_cognado", "similitud_media")}
+                for L, d in ant.items()}}
+
+
+# ═════════════════════════════════════════════════════════════════════════
 # Morfología
 # ═════════════════════════════════════════════════════════════════════════
 def _sondar(formas, sondas):
@@ -1581,13 +2997,14 @@ def registro(r):
     return reg
 
 
-def construir(M, M2):
+def construir(M, M2, MT):
     resumen = resumir(M)
     resumen_sens = resumir(M2)
     res = M["res"]
     ates = [r for r in res if r["c"]["capa"] == ATESTIGUADO]
 
     clases = collections.Counter()
+    letras = collections.Counter()
     parejas = []
     for r in ates:
         p_nulo = p_nulo_de(r, "taíno")
@@ -1596,6 +3013,11 @@ def construir(M, M2):
             continue
         clases[clase] += 1
         s, e, cb, ca = r["por"]["taíno"]["ranking"][0]
+        # T11: el test, sobre la MISMA pareja, con ⟨gu⟩ = /w/
+        fa = fon(ca[1], "colonial", GU_TEST)
+        fb = fon(cb[1], "colonial", GU_TEST)
+        letra, porque_t, j = test_cognado_o_prestamo(fa, fb, r["c"]["dominio"], p_nulo)
+        letras[letra] += 1
         parejas.append({
             "caquetio": r["c"]["clave"], "glosa_caquetia": r["c"]["sig"],
             "taino": e["forma"], "glosa_taina": e["glosa"],
@@ -1605,6 +3027,9 @@ def construir(M, M2):
             "similitud": round(s, 3), "clase": clase, "por_que": porque,
             "dominio": r["c"]["dominio"],
             "p_por_azar": round(p_nulo, 3) if p_nulo is not None else None,
+            "test_T11": {"letra": letra, "esqueletos": f"{j['esqueleto_caquetio']} ~ {j['esqueleto_taino']}",
+                         "por_que": porque_t,
+                         "diagnosticas_presentes": j["consonantes_diagnosticas_presentes"]},
             "tambien_se_parece_en": [L for L in ("lokono", "wayunaiki", "achagua", "kalinago",
                                                  "paraujano", "jirajarano")
                                      if r["por"][L]["exactas"] and r["por"][L]["sim"] >= UMBRAL_PARECIDO],
@@ -1633,7 +3058,8 @@ def construir(M, M2):
     comparables = [r for r in res if any(r["por"][L]["exactas"] for L in TODAS)]
 
     meta = {
-        "campana": "la campaña del taíno — parcela T4: el cruce con el caquetío",
+        "campana": ("la campaña del taíno — T4 (2026-09-21, el cruce) y **T11** (2026-09-22, la "
+                    "prueba lingüística del contacto)"),
         "medido": FECHA,
         "script": "6-fusion/scripts/cruce_taino_caquetio.py",
         "estado": ("PROPUESTA (regla 5). No toca el lexicón, ni lexicon_*.py, ni 2-lengua/, ni "
@@ -1642,6 +3068,20 @@ def construir(M, M2):
         "pregunta": ("¿Qué comparten de verdad el taíno y el caquetío ATESTIGUADO —léxico, "
                      "morfología, onomástica—, y qué de eso es herencia arahuaca común, qué "
                      "préstamo por contacto en la esfera, y qué casualidad?"),
+        "la_pregunta_de_T11": (
+            "un cognado heredado y un préstamo por contacto SE DISTINGUEN: el cognado sigue las "
+            "correspondencias regulares de sonido y el préstamo las viola, o llega sin ninguna "
+            "diferencia porque cruzó tarde, o cae en un campo donde las palabras viajan. Un "
+            "préstamo prueba CONTACTO; un cognado prueba PARENTESCO. Aquí se construye ese test, "
+            "se controla contra lo que ya sabemos y se aplica a `datihao` y a `diao`."),
+        "lo_que_cambia_respecto_del_2026_09_21": [
+            "las transcripciones de T1/T2 entran como fuente taína, con obra y página — el cruce "
+            "del 21 leía sólo las 43 voces del lexicón, que no citan a nadie (`insumos.transcripciones`)",
+            "hay un TEST con letra (A/B/C) y sus predicciones escritas antes (`las_predicciones`)",
+            "hay un CONTROL del test sobre parejas conocidas (`control_del_test`)",
+            "`datihao` y `diao` tienen bloque propio y test escrito para el dato que falta",
+        ],
+        "antes_y_despues": bloque_antes_y_despues(),
         "el_limite_duro": {
             "que_es": ("las 52 entradas taínas del lexicón tienen 0 `procedencia.obra`. Las 43 "
                        "atestiguadas dicen «Brinton 1871» en `notas` y eso NO es una clave foránea "
@@ -1663,6 +3103,13 @@ def construir(M, M2):
             "cuenta como dato taíno en cruces»."),
         "insumos": {
             "caquetio_por_capa": dict(sorted(n_caq.items())),
+            "transcripciones": dict(
+                M["transcripciones"],
+                que_es=("lo que entró el 2026-09-21 por los PR #189-#192 y el cruce de ese día no "
+                        "leía. `bitacora_de_glosas` es el inventario ENTERO de lo que el extractor "
+                        "sacó de cada cita y de lo que no pudo sacar: se audita a ojo (regla 6), "
+                        "porque una glosa mal sacada fabrica una pareja falsa."),
+                de_donde=[s["archivo"] for s in YAML_TAINO]),
             "taino_atestiguado_usado": len(taino_ates),
             "taino_reconstruido_excluido": sum(
                 1 for v in CL.VOCABULARIO_BASE.values() if v.get("fuente") == "taíno-reconstruido"),
@@ -1727,6 +3174,18 @@ def construir(M, M2):
             "fonemizar() normaliza lo que puede y no lo resuelve.",
         ],
         "resumen_atestiguado": resumen,
+        # ── T11 ─────────────────────────────────────────────────────────
+        "las_predicciones": bloque_las_predicciones(),
+        "P1_puesta_a_prueba_sobre_el_corpus": medir_tasa_de_erre(MT),
+        "control_del_test": bloque_control_del_test(MT, GU_TEST),
+        "reparto_por_letra_del_test": dict(sorted(letras.items())) or {
+            "sin_parejas": "no hay ninguna pareja que clasificar: ver `auditoria_del_cero`"},
+        "el_caso_datihao": bloque_datihao(GU_TEST),
+        "la_pregunta_diao": bloque_diao(MT, GU_TEST),
+        "morfemas_compartidos_son_filiacion_no_contacto": bloque_morfemas_filiacion_no_contacto(MT),
+        "la_otra_orilla_estaba_en_casa": bloque_la_otra_orilla(),
+        "el_eje_prosodico_que_viene": bloque_el_eje_prosodico(),
+        # ────────────────────────────────────────────────────────────────
         "reparto_por_clase": dict(sorted(clases.items())) or {
             "sin_parejas": ("ninguna voz caquetía atestiguada alcanza el umbral con una voz taína "
                             "de la misma glosa: no hay nada que clasificar. Ver "
@@ -1769,12 +3228,15 @@ def construir(M, M2):
 
 CABECERA = (
     "# ══════════════════════════════════════════════════════════════════════\n"
-    "# CRUCE TAÍNO <-> CAQUETÍO ATESTIGUADO — campaña del taíno, parcela T4\n"
+    "# CRUCE TAÍNO <-> CAQUETÍO ATESTIGUADO + LA PRUEBA LINGÜÍSTICA DEL\n"
+    "# CONTACTO — campaña del taíno, parcelas T4 (09-21) y T11 (09-22).\n"
     "# PROPUESTA (regla 5). Generado por 6-fusion/scripts/cruce_taino_caquetio.py:\n"
     "# no se edita a mano; se corrige el script o sus insumos y se regenera.\n"
     "# Toda cifra de `meta` la emite el script (regla 1).\n"
-    "# Re-ejecutable: cuando entren las transcripciones de Oviedo, Las Casas,\n"
-    "# Pané y Brinton con su `procedencia.obra`, se vuelve a correr.\n"
+    "# Re-ejecutable: cuando llegue la forma de Oviedo tomo II/IV o una segunda\n"
+    "# copia de la impresa 473 con imagen, se vuelve a correr y el test de\n"
+    "# `meta.el_caso_datihao` se resuelve solo.\n"
+    "# El YAML del 2026-09-21 NO se toca: es el «antes», y este script lo lee.\n"
     "# ══════════════════════════════════════════════════════════════════════\n"
 )
 
@@ -1828,6 +3290,37 @@ def consola(salida):
             print(f"    {rg['regla']:<18} apoyos {rg['apoyos']} · {rg['aciertos']}/{rg['aplicables']}"
                   f" (tasa {rg['tasa_de_acierto']}, azar {rg['tasa_por_azar']}) · {rg['juicio'][:60]}")
 
+    tr = m["insumos"]["transcripciones"]
+    print("\n═══ T11 · LAS TRANSCRIPCIONES QUE ENTRAN HOY ═══")
+    print(f"  lexicón {tr['entradas_del_lexicon']} + transcripciones "
+          f"{tr['entradas_de_las_transcripciones']} → {tr['tras_fundir_la_misma_voz']} voces taínas"
+          f" ({tr['con_obra_y_pagina']} con obra y página, {tr['sin_clave_foranea']} sin)")
+    print(f"  descartadas: {tr['descartadas_por']}")
+
+    print("\n═══ T11 · P1 SOBRE EL CORPUS (la tasa de /r/) ═══")
+    for L, d in m["P1_puesta_a_prueba_sobre_el_corpus"]["por_lista"].items():
+        print(f"  {L:<22} formas {d['formas']:>5} · /r/ {d['r']:>4}/{d['consonantes']:<5} "
+              f"= {d['tasa_de_r']} · /w/ {d['tasa_de_w']}")
+
+    c = m["control_del_test"]
+    print("\n═══ T11 · CONTROL DEL TEST ═══")
+    for k in ("a_heredadas_caquetio_lokono", "b_prestadas_taino_castellano",
+              "c_no_pariente_caquetio_jirajarano"):
+        r_ = c[k]["resumen"]
+        print(f"  {k:<36} n={r_['n']:>3} {r_['reparto']} · aciertos {r_['aciertos']} · fallos {r_['fallos']}")
+    print(f"  → {c['veredicto_del_test'][:150]}")
+
+    print("\n═══ T11 · EL CASO datihao ═══")
+    for p in m["el_caso_datihao"]["el_test_aplicado_a_lo_que_hay"]:
+        print(f"  [{p['letra']}] {p['pareja']}  ({p['esqueletos']})")
+    print("\n═══ T11 · LA PREGUNTA diao ═══")
+    d = m["la_pregunta_diao"]["y_la_pregunta_taina_medida"]
+    print(f"  {d['respuesta'][:220]}")
+    cr = m["la_pregunta_diao"]["el_campo_de_rango_lado_a_lado"]
+    print(f"  campo de rango: caq {len(cr['caquetio_atestiguado'])} · taí {len(cr['taino'])} · "
+          f"parejas sobre el umbral {len(cr['parejas_sobre_el_umbral_con_el_test_aplicado'])}")
+    print(f"\n  reparto por letra del test: {m['reparto_por_letra_del_test']}")
+
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[1])
@@ -1841,8 +3334,10 @@ def main(argv=None):
     print("midiendo la sensibilidad (gu_es_w=True) ...")
     M2 = medir(not GU_ES_W)
     print(f"  {M2['segundos']} s")
+    # el test corre sobre la fonemización con ⟨gu⟩ = /w/
+    MT = M2 if GU_TEST == (not GU_ES_W) else M
 
-    salida = construir(M, M2)
+    salida = construir(M, M2, MT)
     nuevo = texto_yaml(salida)
 
     if args.check:
