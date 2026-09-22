@@ -9,13 +9,8 @@ local: "fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1.pdf"
 paginas: "766 en el PDF · 618 impresas de cuerpo + índice (619-648). Desfase: impresa = pdf − 118"
 capa_texto: si
 estado_minado: minada-parcial
-<<<<<<< HEAD
 cobertura: "medida, no escrita a mano (+ el guanín y la calidad de intermediación, 2026-09-22, campaña del taíno 2 T7): `6-fusion/taino_oviedo_valdes_1851.yaml` → `meta.cobertura` y `meta.libros_leidos`. Las cifras las emite `python 6-fusion/scripts/medir_taino_oviedo.py --check`"
-acceso: "El PDF local está TRUNCADO pero es legible con MuPDF en modo reparación (ver más abajo). La imagen escaneada sólo sobrevive hasta la impresa 154. Para lo que falta, la ed. Amador de los Ríos es libre en Internet Archive: tomo II https://archive.org/details/historiageneral01fernguat · tomo IV https://archive.org/details/historiageneral04fernguat"
-=======
-cobertura: "medida, no escrita a mano: `6-fusion/taino_oviedo_valdes_1851.yaml` → `meta.cobertura` y `meta.libros_leidos`. Las cifras las emite `python 6-fusion/scripts/medir_taino_oviedo.py --check`"
 acceso: "El PDF local está TRUNCADO pero es legible con MuPDF en modo reparación (ver más abajo). La imagen escaneada sólo sobrevive hasta la impresa 154. Los tomos II, III y IV están en el repo desde el 2026-09-22: ver [[oviedo-y-valdes-1852-1855]]. Para la imagen íntegra de ESTE tomo, la misma digitalización lo tiene completo: https://archive.org/details/historiageneral00fernguat (55.449.811 B) — sin descargar todavía"
->>>>>>> campana/taino2-vocabularios
 prioridad: alta
 tareas: [F9]
 verificado: 2026-09-22
