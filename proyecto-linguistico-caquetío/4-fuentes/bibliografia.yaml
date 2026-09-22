@@ -1,7 +1,7 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 75
-  en_repo: 43
+  obras: 76
+  en_repo: 44
   solo_citadas: 32
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
@@ -472,6 +472,20 @@ obras:
   aliases:
   - Las Casas 1875
   - Historia de las Indias
+  en_repo: true
+- id: las-casas-apologetica
+  obra: Apologética historia sumaria (Historiadores de Indias, tomo I)
+  autor: Casas, Bartolomé de las
+  anio: 1909 [c. 1527-1559]
+  genero: cronica
+  local:
+  - fuentes_caquetios/LasCasas_Apologetica_NBAE13_Serrano_1909.pdf
+  paginas: 725
+  aliases:
+  - Las Casas Apologética
+  - Apologética historia sumaria
+  - NBAE 13
+  - Historiadores de Indias tomo I
   en_repo: true
 - id: maria-lionza-culto
   obra: Bibliografía del culto de María Lionza — Ferrándiz 1999 · Fernández Quintana 2016 · Pollak-Eltz
