@@ -995,7 +995,12 @@ vocabulario:
       🔴 TOCA `6-fusion/propuesta_macana_etiqueta_2026-09-21.yaml`. Y hay más:
       la frase taína del §VII trae `mayani-makana` 'no me mates' con la propia
       duda de Goeje «(III sabre ?)». O sea, la misma raíz en la única frase
-      taína con verbo que él recoge.
+      taína con verbo que él recoge. **Y el 2026-09-22 llegó la atribución
+      explícita del cronista**: Las Casas, *Apologética* (NBAE 13) p. 177, dice
+      que `macana` es «vocablo desta isla y no de la Tierra Firme» — medido por
+      el agente de la Apologética de esta campaña, no por esta parcela. Con eso,
+      su presencia en tierra firme es préstamo, no herencia. Ver
+      §cadenas_cotejadas de la lista maestra.
   - forma_fuente: manaya
     glosa_fuente: couteau en pierre
     pagina_impresa: 11
@@ -1690,9 +1695,14 @@ vocabulario:
     en_el_lexicon: yamosa
     correspondencia_lokono: "G biama"
     nota: >-
-      ⚠️ el lexicón escribe `yamosa` y Goeje `yamoka`; Brinton (vía Las Casas
-      cap. 204) escribe `yamosa`. **La discrepancia es de lectura del mismo
-      pasaje**, no de fuente. Va a curación de glosa/forma, no se toca aquí.
+      🔴 **RESUELTO EL 2026-09-22, Y CONTRA BRINTON.** El lexicón escribe
+      `yamosa` porque Brinton p. 14 lo escribe así diciendo que copia a Las
+      Casas *Apol.* cap. 204. El agente de la Apologética de esta campaña leyó
+      el pasaje (NBAE 13, p. 177) y la forma es **`yamocá`** — que es la de
+      Goeje, no la de Brinton. Lo mismo en el 3 y en el 4. Ver
+      §cadenas_cotejadas de `taino_lista_maestra_2026-09-22.yaml`: la cadena
+      está rota en Brinton en 3 de los 4 numerales, y Goeje coincide con el
+      primario en los tres.
   - forma_fuente: kanokum
     glosa_fuente: trois
     pagina_impresa: 17
