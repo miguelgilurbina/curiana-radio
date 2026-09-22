@@ -275,11 +275,34 @@ p.298) y una costumbre — y ésa **la separa**: el endocanibalismo de los hueso
 tiene por rasgo de **Tierra Firme**, y lo compara con Artemisia y Juan de Mena
 en vez de con La Española (pp.297-298).
 
+## 🟢 Y un capítulo que apareció por accidente: los aruacas
+
+**Tomo II, libro XXIV cap. XVII, impresas 266-267** — «De la notiçia que se tiene
+de los indios llamados *aruacas* en la Tierra-Firme, y dónde viven». Un pueblo
+arahuaco entre el Marañón y Trinidad, con cadena de custodia declarada: dos
+vecinos de Margarita que vinieron a Santo Domingo, y un **morisco que vivió doce
+años con ellos**, «tomó muy bien la lengua» y volvió en 1544 como general de su
+flota.
+
+> «contractan por los ríos arriba muchas leguas y con muchas y diversas nasçiones
+> que ellos tienen por amigos, y **en la mar assimesmo contractan en mas de
+> tresçientas leguas de costa, con armadas de çinqüenta é sessenta navíos, canoas
+> é piraguas**, con quinientos é ochoçientos indios de pelea»
+
+Es un **mecanismo atestiguado** de comercio marítimo arahuaco a gran escala, con
+llegada a Margarita y Cubagua. ⚠️ Pero es del **s. XVI** y del **golfo de Paria**:
+reglas 3 y 4. No se proyecta ni se traslada al Golfete. Tres voces con glosa:
+`abas` (p.267), `pretos ó moavis` (p.266) y el topónimo `Aruacay`, del que el
+propio Oviedo duda.
+
 ## Qué falta
 
 1. **El libro XIX del tomo I** (Tierra-Firme, impresas 586-618), que T1 dejó sin
    leer y señaló como «el libro con más costa de Venezuela». Si en algún sitio de
-   Oviedo están las islas de enfrente de Coro, es ahí.
+   Oviedo está la gente de las islas ABC —o el episodio de Ampíes—, es ahí.
+2. **El libro XXIV del tomo II entero** (impresas 213-270): Cubagua, las perlas,
+   Paria, el Huyapari. El capítulo de los aruacas salió por accidente; el resto
+   del libro no se ha tocado.
 2. **El tomo I con imagen íntegra**: `historiageneral00fernguat` en Internet
    Archive, 55 MB. Desbloquea las 47 formas que hoy sólo tiene T1 en OCR.
 3. **El resto del glosario del tomo IV**: sólo se vaciaron las doce entradas

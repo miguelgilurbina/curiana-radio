@@ -1214,6 +1214,99 @@ las_islas_de_enfrente_de_coro:
     CONTACTO.
 
 # ══════════════════════════════════════════════════════════════════════
+# 5ter. EL CAPÍTULO DE LOS ARUACAS — apareció buscando otra cosa
+#       t. II, libro XXIV cap. XVII, impresas 266-267.
+#       No es Venezuela ni es taíno, y es lo mejor que esta parcela ha
+#       encontrado para la pregunta de Miguel («¿hubo contacto?»).
+# ══════════════════════════════════════════════════════════════════════
+el_capitulo_de_los_aruacas:
+  como_aparecio: >-
+    Comprobando que `dare` del tomo II fuera el futuro castellano y no la voz
+    caquetía que Oliver lista. Lo era — y la frase en que aparecía era «daré la
+    resoluçión que de estos **aruacas** se tiene».
+  titulo_verbatim: >-
+    «CAPITULO XVII. De la notiçia que se tiene de los indios llamados *aruacas*
+    en la Tierra-Firme, y dónde viven.»
+  donde: "t. II, libro XXIV cap. XVII, impresas 266-267"
+  donde_viven: >-
+    «En la costa de la mar del Norte, entre el río Marañón y la isla de la
+    Trinidad é golpho de Paria» — es decir, las Guayanas y el bajo Orinoco, **no**
+    la costa de Coro.
+  la_cadena_de_custodia_declarada:
+    - >-
+      «Dos hombres honrados, veçinos de la isla Margarita, vinieron á esta cibdad
+      de Sancto Domingo de la Isla Española, llamados **Rodrigo Navarrete é Alonso
+      de Rojas**, personas que meresçen crédito, é dixeron assi…»
+    - >-
+      y un **morisco esclavo de los Silvas** que se fue con los aruacas hacia 1532
+      tras la muerte de sus amos, **estuvo doce años con ellos y «tomó muy bien la
+      lengua»**, y volvió en 1544 a Margarita y Cubagua **como general de una flota
+      de más de cincuenta navíos**. Los señores principales le dieron sus hijas
+      por mujeres, «siete ú ocho dellas en diversas partes», y lo llevaban por
+      capitán general en la guerra.
+
+  🟢_lo_que_importa_para_la_pregunta_de_miguel:
+    verbatim: >-
+      «Son gente los aruacas amigables … y **contractan por los ríos arriba muchas
+      leguas y con muchas y diversas nasçiones que ellos tienen por amigos, y en
+      la mar assimesmo contractan en mas de tresçientas leguas de costa, con
+      armadas de çinqüenta é sessenta navíos, canoas é piraguas**, con quinientos
+      é ochoçientos indios de pelea, arqueros, muy bien proveydos de bastimentos
+      é armas.»
+    donde: "impresas 266-267"
+    por_que_importa: >-
+      Es un pueblo **arahuaco** de Tierra Firme con una red de intercambio
+      documentada de **trescientas leguas de costa** y flotas de cincuenta a
+      sesenta embarcaciones, que llega a **Margarita y Cubagua** — islas. No
+      prueba contacto con las Antillas Mayores y **no es la costa de Coro**, pero
+      es la demostración, en un cronista del XVI, de que **una sociedad arahuaca
+      de esta costa tenía la capacidad marítima y la práctica de comerciar a esa
+      escala**. Para «de que es plausible es plausible», esto es un mecanismo
+      atestiguado, no una analogía.
+    y_el_limite: >-
+      ⚠️ **Es del s. XVI y del golfo de Paria** (regla 3 y regla 4). Ni se
+      proyecta al XIV-XV ni se traslada al Golfete sin decidirlo. Y ojo a la
+      trampa del nombre: `aruaca` aquí es un etnónimo que Oviedo oye a españoles
+      de Margarita, no una etiqueta de filiación lingüística.
+
+  voces_con_glosa:
+  - forma_fuente: abas
+    glosa_fuente: >-
+      «los aruacas tienen poco oro, é no haçen tanto caso dello como de unas
+      piedras que llaman ellos *abas*, que son á manera de jaspes labradas, y de
+      que haçen sartales y estiman mucho»
+    pagina_impresa: 267
+    atribucion: "«ellos» = los aruacas, dicho por el morisco que vivió doce años con ellos"
+    campo: utensilio
+    verificacion: ocr-limpio
+    en_el_lexicon: "no"
+  - forma_fuente: "pretos ó moavis"
+    glosa_fuente: >-
+      los cautivos caribes esquilados a quienes «sírvense dellos en sus labores
+      como de esclavos, é los truecan, é venden é contractan como tales esclavos,
+      **é llámanlos pretos ó moavis**»
+    pagina_impresa: 266
+    atribucion: "los aruacas"
+    campo: parentesco-y-poder
+    verificacion: ocr-limpio
+    ojo: >-
+      ⚠️ `pretos` es «negros» en portugués y hay moriscos y portugueses en la
+      cadena de informantes: puede ser glosa del intérprete y no voz aruaca.
+      `moavis` no tiene esa sospecha. En duda, degradar.
+  - forma_fuente: Aruacay
+    glosa_fuente: "«aquel pueblo dicho *Aruacay*, de quien tracté en el capítulo III deste libro XXIV»"
+    pagina_impresa: 266
+    campo: toponimo
+    verificacion: ocr-limpio
+    ojo: "Oviedo mismo duda de que los aruacas vengan de ese pueblo: «después el tiempo me ha puesto en otra opinión»"
+
+  lo_que_queda_abierto: >-
+    El libro XXIV entero (impresas 213-270: Cubagua, las perlas, Paria, el
+    Huyapari) **no se ha leído**. Este capítulo salió por accidente. Si el repo
+    quiere la costa oriental y la relación isla ↔ Tierra Firme, ahí está sin
+    tocar, y con informantes declarados.
+
+# ══════════════════════════════════════════════════════════════════════
 # 6. OVIEDO COMPARA (tarea 6 del encargo)
 #    Qué paralelos ve ÉL entre Venezuela y las islas.
 # ══════════════════════════════════════════════════════════════════════

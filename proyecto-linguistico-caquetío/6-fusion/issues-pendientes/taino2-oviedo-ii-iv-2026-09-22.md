@@ -237,6 +237,38 @@ gobernador», p.269). El período de Ampíes (1521-1528) **queda fuera del arran
 de su relato**. Oviedo no lo cuenta porque su libro empieza después. Quien lo
 busque, al **libro XIX del tomo I** y a Las Casas.
 
+### 🟢 Y lo mejor que ha dado esta parcela para la pregunta de Miguel
+
+Apareció por accidente, comprobando que el `dare` del tomo II fuera el futuro
+castellano y no la voz caquetía de Oliver. Lo era — y la frase decía «daré la
+resoluçión que de estos **aruacas** se tiene».
+
+**Tomo II, libro XXIV cap. XVII, impresas 266-267**: «De la notiçia que se tiene
+de los indios llamados *aruacas* en la Tierra-Firme, y dónde viven.» Un pueblo
+arahuaco entre el Marañón y Trinidad, con cadena de custodia declarada (dos
+vecinos de Margarita, y un morisco que vivió **doce años** con ellos y «tomó muy
+bien la lengua», y volvió en 1544 como general de su flota). Y esto:
+
+> «contractan por los ríos arriba muchas leguas y con muchas y diversas
+> nasçiones que ellos tienen por amigos, y **en la mar assimesmo contractan en
+> mas de tresçientas leguas de costa, con armadas de çinqüenta é sessenta
+> navíos, canoas é piraguas**, con quinientos é ochoçientos indios de pelea»
+
+Para «de que es plausible es plausible», esto es un **mecanismo atestiguado**, no
+una analogía: una sociedad arahuaca de esta costa con capacidad marítima y
+práctica de comerciar a escala de cientos de leguas, llegando a Margarita y
+Cubagua. ⚠️ Pero es del **s. XVI** y del **golfo de Paria** (reglas 3 y 4): ni se
+proyecta al XIV-XV ni se traslada al Golfete sin decidirlo, y `aruaca` aquí es un
+etnónimo oído a españoles, no una etiqueta de filiación.
+
+Tres voces con glosa: `abas` (las piedras labradas que estiman más que el oro,
+p.267), `pretos ó moavis` (sus cautivos caribes, p.266 — ⚠️ `pretos` huele a
+glosa del intérprete) y el topónimo `Aruacay`, del que **el propio Oviedo duda**
+(«después el tiempo me ha puesto en otra opinión»).
+
+**El libro XXIV entero (impresas 213-270: Cubagua, las perlas, Paria, el
+Huyapari) sigue sin leer.** Este capítulo salió por accidente.
+
 ### El resto de los ceros
 
 «islas de los Gigantes» (el nombre) = **0** — los 42 «gigantes» de la obra son
