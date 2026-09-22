@@ -1,0 +1,1283 @@
+# ══════════════════════════════════════════════════════════════════════
+# OVIEDO Y VALDÉS, tomos II, III y IV — el LIBRO DE VENEZUELA
+# ed. José Amador de los Ríos, Real Academia de la Historia, Madrid
+# 1852 · 1853 · 1855.  Segunda campaña del taíno, parcela T6, 2026-09-22.
+#
+# PROPUESTA (regla 5). Nada de aquí entra al canon sin que Miguel lo fusione.
+#
+# Lo que esta parcela venía a buscar eran cuatro voces que el canon cita y
+# nadie había visto en la fuente: `datihao`, `diao`, `borattio` y el funeral
+# del díao. Están las cuatro. Pero la más importante —`datihao`— no está
+# donde el canon cree, y eso cambia lo que se puede decir con ella.
+#
+# ⚠️ ESTO NO ES PRECONTACTO (regla 3). Oviedo escribe entre 1535 y 1548 sobre
+# una gobernación que empieza en 1528. Todo lo de aquí es COLONIAL TEMPRANO y
+# no se proyecta al s. XIV-XV sin decidirlo.
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  parcela: "T6 — Oviedo y Valdés, tomos II-IV (el libro de la Provincia de Venezuela)"
+  fecha: 2026-09-22
+  campana: Segunda campaña del taíno
+  obras:
+    # claves foráneas → 4-fuentes/bibliografia.yaml (regla 8)
+    - oviedo-y-valdes-1852-1855     # la nota nueva, tomos II-IV
+    - oviedo-y-valdes-1851          # el tomo I, minado por T1 el 2026-09-21
+  generado_por: >-
+    lectura del escriba sobre la capa de texto de los tres PDF descargados hoy
+    de Internet Archive, con verificación POR IMAGEN de cada forma que se
+    propone. La imagen está entera en los tres tomos: aquí no hay el problema
+    del tomo I (escaneo roto desde la impresa 155).
+
+  # ─────────────────────────────────────────────────────────────────
+  # LO PRIMERO: qué del encargo resultó falso al medirlo
+  # ─────────────────────────────────────────────────────────────────
+  lo_que_resulto_falso:
+
+  - afirmacion: >-
+      «el "apéndice de voces" del editor no existe» — `4-fuentes/oviedo-y-valdes-1851.md`
+      §«Qué NO ha dado», 2026-09-21, apoyándose en «el rastreo del 2026-08-14
+      sobre el tomo IV».
+    medido: >-
+      EXISTE. Se llama **«VOCES AMERICANAS EMPLEADAS POR OVIEDO»**, ocupa las
+      impresas **593-607 del tomo IV** (pdf 608-622) y lo cierra una
+      **BIBLIOGRAFIA** de los 23 vocabularios que el editor usó (impresa 608).
+      Es exactamente lo que Jahn 1927 p.213 n.29 llama «el Apéndice al tomo IV»,
+      y trae **doce entradas marcadas "(Lengua de Venezuela)"**, entre ellas las
+      seis que Jahn cita. La conclusión de ayer era correcta SOBRE EL TOMO I
+      (allí el apéndice es un índice de capítulos) y se extendió al tomo IV sin
+      tenerlo delante.
+
+  - afirmacion: >-
+      «Oviedo no nombra a los caquetíos» — medido en el tomo I con las sondas
+      `caquet` = 0, `caiquet` = 0.
+    medido: >-
+      Los nombra **12 veces en el tomo II**, y las sondas seguían dando 0 porque
+      **la obra escribe `çaquitios`**, no «caquetíos». Verificado en imagen
+      (t. II p.297, en cursiva). El editor lo moderniza a `zaquitios` en el
+      glosario del tomo IV. Es la trampa de `minar-fuente` §2 en su forma más
+      cara: la sonda medía nuestra ortografía, no la suya. Añádase `çaquiti`,
+      `zaquiti` y `saquiti` a las sondas de esta obra para siempre.
+
+  - afirmacion: >-
+      «`datihao` está atestiguada a las DOS orillas por Oviedo» (encargo de esta
+      campaña, y `creencia-001` + la ficha del lexicón).
+    medido: >-
+      **No por Oviedo.** `datihao` / `dalihao` aparece **una sola vez en los
+      cuatro tomos**: t. I p.473, en boca de Agüeybana, en San Juan. En los
+      tomos II, III y IV el cuerpo del texto la da **cero** veces (probado con
+      `d[ai][tl]i?hao`, `\w{2,5}hao`, `dati`, `dali`, `datl` y con el guion de
+      fin de línea deshecho). La atestación «venezolana» es **una entrada del
+      GLOSARIO DEL EDITOR** (t. IV p.598), no un pasaje de Oviedo. Ver §4.
+
+  - afirmacion: «`borattio`» (creencia-001, «Boratio, también borattio»).
+    medido: >-
+      Oviedo escribe **`boratio`, con una sola t**, 18 veces en dos páginas
+      (t. II pp.298-299), verificado en imagen. La doble t es de la cadena
+      Jahn/Arcaya, no de la fuente.
+
+  - afirmacion: >-
+      «el funeral del díao … t. II pp.299-300» y «el funeral del cacique común …
+      t. II p.299-300» (`creencia-010`).
+    medido: >-
+      Son **dos páginas distintas**. El funeral del cacique común —el de beber
+      los huesos en el maçato— está en la **impresa 297**, y es el que Oviedo
+      atribuye **explícitamente a los çaquitios**. El del díao empieza al pie de
+      la **299** y ocupa la **300**. `creencia-010` cita la página del segundo
+      para el primero.
+
+  - afirmacion: >-
+      «el desfase pdf ↔ impresa se calcula UNA vez por tomo» (el encargo lo da
+      por constante, y la ficha del tomo I dice «Constante, verificado en 405
+      páginas»).
+    medido: >-
+      Constante en el t. II (13) y en el t. IV (15). **En el t. III NO lo es**:
+      13 hasta la pdf ≈150 y 15 desde ahí (láminas intercaladas). Y en el propio
+      tomo I la impresa 473 está en la pdf 590, o sea desfase **117**, no 118 —
+      la cita de T1 es correcta, la fórmula de su ficha no lo es en ese tramo.
+
+  - afirmacion: >-
+      implícita en el encargo: que en los tomos II-IV habría algo sobre las
+      islas de los Gigantes y el contacto con las Antillas.
+    medido: >-
+      **Cero.** `curazao`/`curaçao`, `aruba`, `oruba`, `bonaire`/`buynare` = 0
+      en los tres tomos. «Gigantes» sale 33 veces en el t. II y son **los
+      patagones del estrecho de Magallanes**, no las islas de enfrente de Coro.
+      Ver §6: el cero está verificado (regla 6).
+
+  # ─────────────────────────────────────────────────────────────────
+  # LAS DESCARGAS (autorizadas por Miguel el 2026-09-22)
+  # ─────────────────────────────────────────────────────────────────
+  descargas:
+    repositorio: Internet Archive
+    coleccion: >-
+      digitalización de la Biblioteca Ludwig von Mises, Universidad Francisco
+      Marroquín (Guatemala); colección Shook. Los cuatro volúmenes de la edición
+      de la Real Academia de la Historia están ahí completos.
+    derechos: >-
+      dominio público. Los cuatro registros llevan
+      `possible-copyright-status: NOT IN COPYRIGHT`. Texto de 1535-1548, edición
+      de 1851-1855, editor muerto en 1878. **Se cita literal.**
+    fecha: 2026-09-22
+    items:
+    - tomo: II
+      identificador: historiageneral01fernguat
+      url: https://archive.org/download/historiageneral01fernguat/historiageneral01fernguat.pdf
+      portada_leida: >-
+        «HISTORIA GENERAL Y NATURAL DE LAS INDIAS, ISLAS Y TIERRA-FIRME DEL MAR
+        OCÉANO … PUBLÍCALA LA REAL ACADEMIA DE LA HISTORIA … POR D. JOSÉ AMADOR
+        DE LOS RIOS … **TOMO PRIMERO DE LA SEGUNDA PARTE, SEGUNDO DE LA OBRA.**
+        MADRID … 1852.»
+      contenido: "libros XX-XXVIII (los diez primeros de la segunda parte)"
+      local: fuentes_caquetios/Oviedo_Valdes_1852_Historia_General_Indias_vol2.pdf
+      bytes: 45433954
+      sha256: a9fb3477b3e5250ea8147343b9b10e90c66c7f9018291187b6892615a14fbbd7
+      commiteado: true      # < 95 MB
+    - tomo: III
+      identificador: historiageneral02fernguat
+      url: https://archive.org/download/historiageneral02fernguat/historiageneral02fernguat.pdf
+      portada_leida: >-
+        «… **TOMO SEGUNDO DE LA SEGUNDA PARTE, TERCERO DE LA OBRA.** MADRID …
+        1853.» Y la Advertencia: «compréndense en el presente los **nueve
+        últimos libros de la segunda parte**».
+      contenido: "libros XXIX-XXXVIII"
+      aviso_de_catalogo: >-
+        ⚠️ archive.org etiqueta este ítem `volume: 2`, igual que el tomo II. Es
+        un error del catálogo: la portada dice tomo tercero de la obra. Se
+        comprobó leyendo la portada, como pedía el encargo.
+      local: fuentes_caquetios/Oviedo_Valdes_1853_Historia_General_Indias_vol3.pdf
+      bytes: 54727062
+      sha256: 3e795e42f22785ab1007147023113c0881f22fc9dad545302ec407e3fffcfa77
+      commiteado: true
+    - tomo: IV
+      identificador: historiageneral04fernguat
+      url: https://archive.org/download/historiageneral04fernguat/historiageneral04fernguat.pdf
+      portada_leida: "«… **TERCERA PARTE — TOMO IV.** MADRID … 1855.»"
+      contenido: >-
+        libros XXXIX-L (la tercera parte, inédita hasta 1855) + el glosario
+        «Voces americanas empleadas por Oviedo» (impresas 593-607) + su
+        bibliografía (608) + índice + erratas
+      local: fuentes_caquetios/Oviedo_Valdes_1855_Historia_General_Indias_vol4.pdf
+      bytes: 53090352
+      sha256: 0d5dcc0270726c2b376e658ac53e856246c30375a8dd0eb958986171719f4a40
+      commiteado: true
+    tomo_I_ya_estaba: >-
+      `historiageneral00fernguat` es el mismo tomo I que el repo ya tiene
+      (truncado). Quien quiera la imagen completa de las impresas 155-618 del
+      tomo I —lo que la ficha de T1 pide como «lo más rentable de toda la
+      lista»— la tiene ahí, 55.449.811 bytes. **No se ha descargado en esta
+      parcela: no es mi parcela.**
+
+  # ─────────────────────────────────────────────────────────────────
+  # ESTADO DE CADA PDF (tarea 2 del encargo)
+  # ─────────────────────────────────────────────────────────────────
+  estado_de_los_pdf:
+    comun: >-
+      Los tres son sanos: **pymupdf los abre sin reparar** (`is_repaired =
+      False`), `pdftotext` funciona y la imagen está completa. Nada del calvario
+      del tomo I. La capa de texto es OCR de archive.org y comete las mismas
+      sustituciones que el tomo I —la ç sale `g`, `f`, `r` o `z`— así que
+      **ninguna forma de este YAML se da por buena sin imagen**.
+    tomo_II:
+      paginas_pdf: 544
+      caracteres_capa_texto: 2176259
+      paginas_casi_vacias: 26
+      desfase: "impresa = pdf − 13 (constante: 301 de 314 encabezados legibles)"
+      extractores: "pymupdf ✓ · pdftotext ✓ · pypdf ✓"
+    tomo_III:
+      paginas_pdf: 680
+      caracteres_capa_texto: 2802690
+      paginas_casi_vacias: 18
+      desfase: >-
+        ⚠️ NO constante: **13** hasta la pdf ≈150, **15** desde ahí
+        (68,4 % de 212 encabezados en 15; 25,0 % en 13, todos en el primer
+        tramo). No afecta a ninguna cita: el tomo III no dio nada.
+      extractores: "pymupdf ✓ · pdftotext ✓"
+    tomo_IV:
+      paginas_pdf: 656
+      caracteres_capa_texto: 2607655
+      paginas_casi_vacias: 27
+      desfase: "impresa = pdf − 15 (constante: 341 de 357 encabezados legibles)"
+      extractores: "pymupdf ✓ · pdftotext ✓"
+
+    # 🔴 la trampa nueva, medida hoy
+    el_guion_de_fin_de_linea:
+      que_pasa: >-
+        La caja es de dos columnas estrechas y **parte las palabras a fin de
+        línea**. La capa OCR conserva el guion, así que un `grep` sobre el texto
+        crudo no encuentra la mitad de las apariciones.
+      medido_en_el_tomo_II:
+        "çaquitio": "9 sin deshacer el guion → **12** deshaciéndolo"
+        "boratio": "16 → **18**"
+        "Veneçuela": "31 → **39**"
+        "çemyruco": "**0 → 1**: sin deshacer el guion la voz no existe"
+      y_lo_que_ni_asi_aparece: >-
+        `busera` y `datos` siguen dando **0** con el guion deshecho, porque el
+        OCR las destroza (`Intsera`, `dalos`). Las dos están en la página y se
+        leyeron **con los ojos**. Moraleja: en esta edición el conteo es una
+        cota inferior, siempre.
+
+  # ─────────────────────────────────────────────────────────────────
+  # DÓNDE ESTÁ EL LIBRO DE VENEZUELA (tarea 2)
+  # ─────────────────────────────────────────────────────────────────
+  el_libro_de_venezuela:
+    tomo: II
+    libro: XXV
+    tambien_llamado: "«libro sexto de la segunda parte»"
+    titulo_verbatim: >-
+      «Comiença el libro sesto de la segunda parte, ques vigéssimo quinto de la
+      Natural y general historia de las Indias: el qual tracta de la
+      gobernaçión de la provinçia del golpho de Veneçuela y otras provinçias,
+      questán por sus Magestades encomendadas á la grand compañía de los
+      alemanes Velzares en la Tierra-Firme.»
+    paginas_impresas: "269-332"
+    paginas_pdf: "282-345"
+    capitulos_que_importan:
+    - numero: IX
+      impresas: "297-302"
+      titulo_verbatim: >-
+        «De algunas particularidades é ritos é çerimonias de la gente natural
+        desta gobernaçión del golpho de Veneçuela, é otras cosas notables é
+        convenientes al discurso de la historia.»
+      por_que: >-
+        Es EL capítulo. Aquí están el funeral de los çaquitios, el boratio, el
+        díao, el maçato, la caça y la busera. Cuatro de los cinco datos que el
+        corpus tiene de «Oviedo t. II» salen de estas seis páginas.
+    - numero: XXII
+      impresas: "328-332"
+      titulo_verbatim: >-
+        «De algunas particularidades, de que el historiador fué informado desta
+        provinçia de Venezuela por el mesmo señor obispo don Rodrigo de
+        Bastidas, como testigo de vista y de tanta auctoridad.»
+      por_que: >-
+        El ayuno ritual (p.329), los grados de nobleza por tatuaje (p.330) y el
+        párrafo de flora y fauna con `tara`, `datos`, `comoho` y `çemyrucos`
+        (p.331). Y **declara su testigo**: el obispo Bastidas, más el tesorero
+        Acuña, el contador Naveros, Pedro de Salvatierra y el capitán Pedro de
+        Limpias, todos «á voce viva».
+    en_los_otros_tomos:
+      tomo_III: >-
+        **NADA.** `Veneçuela` = 1 (una mención de paso), `Coro` = 5 (cuatro son
+        «cantar en coro» y «corona»), `çaquiti` = 0, `diao` = 0, `borat` = 0,
+        `Curiana` = 0, `Paraguaná` = 0, `Maracaybo` = 0. El tomo III es Perú,
+        Nicaragua y Nueva Granada. **Fuente descartada para esta pregunta.**
+      tomo_IV: >-
+        En el cuerpo, sólo un naufragio que acaba en Coro (libro L, impresas
+        531-535: Christóbal de Sanabria, el obispo Bastidas) — **cero lengua**.
+        Todo el valor del tomo IV está en el **glosario del editor**, §4.
+
+  cobertura_real:
+    leido_entero:
+    - "t. II, Libro XXV cap. IX (impresas 297-302) y cap. XXII (328-332)"
+    - "t. II, apertura del Libro XXV (impresas 269-271)"
+    - "t. IV, glosario «Voces americanas empleadas por Oviedo» (impresas 593-607) y su bibliografía (608)"
+    leido_por_formula_de_nombrar:
+    - >-
+      t. II, Libro XXV entero (impresas 269-332): barrido de las diez fórmulas
+      de nombrar («que llaman», «se llama», «los indios llaman», «en su lengua»,
+      «quiere deçir»…), 88 pasajes extraídos y leídos uno a uno
+    no_leido:
+    - "t. II, libros XX-XXIV y XXVI-XXVIII (impresas 3-268 y 333-530) — sólo sondados"
+    - "t. III entero — sólo sondado, y los ceros están medidos"
+    - "t. IV, libros XXXIX-L (impresas 1-592) — sólo sondados"
+    por_que: >-
+      Son 1.880 páginas impresas entre los tres tomos. El encargo era el libro
+      de Venezuela y las cuatro voces; se leyó eso y se dice lo que no se leyó
+      en vez de insinuar que se leyó todo.
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. EL ETNÓNIMO — lo que más cambia
+# ══════════════════════════════════════════════════════════════════════
+el_etnonimo:
+  forma_fuente: çaquitios
+  variantes_en_el_ocr: "gaquitios · gaquilios · faquitios · raqiiitios (todas son la ç mal leída)"
+  forma_del_editor: "zaquitios (en el glosario del t. IV, modernizado)"
+  apariciones_tomo_II: 12
+  paginas_impresas: [296, 297, 300, 303, 304, 305, 306, 314, 315, 326]
+  verificacion: imagen
+  glosa_fuente: >-
+    «En la provinçia de Veneçuela los indios naturales della, en espeçial los de
+    la generaçion que llaman *çaquitios*…» (t. II p.297, cursiva del editor)
+  que_es_para_oviedo: >-
+    Una **generaçión** (= gente, nación) de la provincia de Venezuela, amiga de
+    los cristianos, con pueblos propios (Apodori, Coativa), tierra «clara de
+    savánas, y fértil, y de mucha montería», que **rescata y vende** con los
+    pueblos palafíticos de la laguna.
+  por_que_importa: >-
+    Es la primera vez que este repo ve a Oviedo nombrar a los caquetíos. Y es lo
+    que valida hacia atrás toda la cadena: cuando Jahn y Arcaya dicen «Oviedo
+    dice de los caquetíos», tienen razón, aunque la palabra impresa sea otra.
+  ojo_regla_4: >-
+    Los çaquitios de Oviedo están **al sur y al oeste de Coro**, hacia la laguna
+    de Maracaibo y el Apure: Apodori y Coativa están a jornadas de la sierra, y
+    la nasçión se atraviesa camino del río Apuri. **No son la polity costera que
+    simulamos.** Es el error que Oliver denuncia, y aquí está servido: esto es
+    dato caquetío, pero es dato de OTRA comarca de la esfera.
+  en_el_canon: >-
+    `3-mundo/etnias.yaml` y `curiana_polities.py` no registran esta grafía.
+    Propuesta: añadir `çaquitio` como forma de fuente del etnónimo, con esta
+    cita, y dejar constancia de que la sonda `caquet` no la encuentra.
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. LAS VOCES DEL LIBRO DE VENEZUELA — cuerpo del texto
+#    Esquema de `6-fusion/taino_oviedo_valdes_1851.yaml`.
+#    ⚠️ Ninguna de éstas es taína. Son de la Provincia de Venezuela, y varias
+#    son caquetías declaradas. Entran por la esfera del proyecto, no por la
+#    del taíno.
+# ══════════════════════════════════════════════════════════════════════
+voces_del_libro_de_venezuela:
+
+- forma_fuente: maçato
+  glosa_fuente: >-
+    «y muy quemados y secos los muelen entre dos piedras, y haçen çierto brevaje
+    quellos llaman *maçato*, que es muy espesso como maçamorra ó puches, que en
+    algunas partes de España llaman poleadas ó cabinas; y este maçato es algo
+    açedo, y tiénenlo por muy exçelente brevaje, y echan en ello los huessos del
+    difunto molidos, y revuélvenlo mucho y bébenlo todos.»
+  tomo: II
+  libro: XXV
+  capitulo: IX
+  pagina_impresa: 297
+  atribucion: "«los indios naturales» de la provinçia de Veneçuela, «en espeçial los de la generaçion que llaman çaquitios»"
+  campo: comida-ritual
+  verificacion: imagen
+  en_el_lexicon: "sí — `macato`, con glosa 'bebida'"
+  resuelve: >-
+    El aviso de `4-fuentes/jahn-1927.md` («el lexicón dice *bebida*, el apéndice
+    dice *mazamorra*: comida vs. bebida») **se cierra sin cambiar nada**. Oviedo
+    dice las dos cosas a la vez: es un **brevaje** que es **espesso como
+    maçamorra**. La glosa del lexicón se sostiene en el cuerpo del texto; la del
+    apéndice es el resumen del editor. Se añade la evidencia a `notas`, no se
+    toca la glosa (skill §8).
+
+- forma_fuente: caça
+  glosa_fuente: >-
+    «lo primero que haçe el boratio es mandar ayunar á todos los que hay en
+    casa, que no coman sino maçamorra rala de mahiz que ellos llaman *caça*, y
+    no mas de una vez cada dia»
+  tomo: II
+  libro: XXV
+  capitulo: IX
+  pagina_impresa: 299
+  atribucion: "«ellos» = los indios de la provinçia de Veneçuela, en el rito de cura del boratio"
+  lemma_del_editor: "Caçá — «(Lengua de los zaquitios en la gobernaçión de Venezuela.)» (t. IV p.595)"
+  campo: comida
+  verificacion: imagen
+  en_el_lexicon: "no comprobado por esta parcela"
+  ojo: >-
+    El editor la atribuye **a los zaquitios por su nombre**; el cuerpo del texto
+    sólo dice «ellos». La atribución étnica fina es del editor, no de Oviedo.
+
+- forma_fuente: boratio
+  formas: "boratio (sg.) · boratios (pl.). NUNCA `borattio`."
+  glosa_fuente: >-
+    «al qual diçen y afirman los boratios que le ven y hablan muchas veçes … Estos
+    *boratios* son como saçerdotes suyos, y en cada pueblo prinçipal hay un
+    boratio, al qual ocurren todos á le preguntar las cosas que están por venir,
+    y le preguntan si lloverá ó si el año será seco ó abundante, ó si deben yr á
+    la guerra contra sus enemigos ó dexarlo de haçer»
+  y_ademas: >-
+    «Los boratios, demás de lo que se dixo de suso, sirven en los pueblos de
+    **médicos**» (p.299) — y el rito de cura entero, con el ayuno, el soplo
+    («Allá yrás mal»), el chupar y la espina escondida en la boca.
+  tomo: II
+  libro: XXV
+  capitulo: IX
+  paginas_impresas: [298, 299]
+  apariciones: 18
+  atribucion: "los indios de la provinçia / gobernaçión de Veneçuela, sin nombrar generaçión"
+  lemma_del_editor: >-
+    Boratio — «adivino, encantador ó saludador, ofiçio que ejerçitaban entre los
+    indios conoçidos con el nombre de zaquitios sus saçerdotes y maestros.
+    (Lengua de Venezuela.)» (t. IV p.595)
+  campo: creencia
+  verificacion: imagen
+  en_el_lexicon: "sí — `boratio`, `caquetío-atestiguado`"
+  para_creencia_001: >-
+    (a) la forma es `boratio`, una t; (b) el cuerpo del texto **no dice
+    çaquetío**: dice «los indios de Veneçuela» — quien lo estrecha a los
+    zaquitios es el EDITOR en 1855; (c) hay dos atestaciones y no una: el pasaje
+    y la entrada del glosario, y **no son independientes** (el editor glosa el
+    pasaje), así que no suben la entrada a «dos fuentes» (skill §8).
+  y_un_dato_que_el_corpus_no_tiene: >-
+    «Tornando á los indios de Veneçuela, para ver si caminarán ó yrán á pescar ó
+    sembrarán, y para saber si matarán caça ó si su muger los quiere bien,
+    **cada uno es boratio**» (p.298) — el boratio es un OFICIO con titular en
+    cada pueblo principal, pero la adivinación por tabaco la hace cualquiera.
+
+- forma_fuente: diao
+  glosa_fuente: >-
+    «Volviendo á mi historia, en algunas partes desta gobernaçion de Veneçuela el
+    señor prinçipal, que tiene muchos indios y le son subjetos otros caçiques,
+    **llámanle *diao***; y quando muere, tienen con él otra manera de obsequias
+    de la que se dixo de suso»
+  tomo: II
+  libro: XXV
+  capitulo: IX
+  paginas_impresas: [299, 300]
+  apariciones: 6
+  atribucion: >-
+    «**en algunas partes** desta gobernaçión de Veneçuela» — Oviedo NO dice
+    çaquitios, NO dice Coro y NO dice caquetío. Es la atribución más ancha
+    posible dentro de la provincia.
+  lemma_del_editor: >-
+    Diao — «señor ó cacique soberano de la comarca de los zaquitios en la
+    gobernacion de Venezuela.» (t. IV p.598)
+  campo: poder
+  verificacion: imagen
+  en_el_lexicon: "sí — `diao`"
+  corrige_a_creencia_001b:
+    dice_el_corpus: >-
+      «El "díao" … es el cacique principal **que es a la vez boratio**: no un
+      simple médico-hechicero, sino aquel cuyos poderes mágicos le dan el
+      carácter de jefe.»
+    dice_la_fuente: >-
+      **Nada de eso.** Oviedo define el díao por su posición política y por
+      nada más: señor principal con caciques sujetos. En las dos páginas del
+      díao no vuelve a aparecer la palabra `boratio`. La ecuación
+      díao = boratio es de **Arcaya 1920**, no de Oviedo, y el corpus la cita
+      como si fuera de los dos.
+    propuesta: >-
+      Separar la referencia: el hecho político (señor sobre caciques) cita
+      Oviedo t. II p.299; el hecho religioso (poderes mágicos, «más respetado y
+      temido como hechicero que obedecido como jefe») cita **sólo Arcaya**, y la
+      etiqueta baja de `atestiguado` a `atestiguado` con la fuente correcta o a
+      `reconstruido` si Arcaya lo infiere. En duda, degradar (regla 2).
+    y_la_pagina: "creencia-001b cita «t. II p.299» y acierta: la definición empieza al pie de la 299."
+
+- forma_fuente: busera
+  glosa_fuente: >-
+    «y van todos donde está el cuerpo embixados y pintados de bixa y de *xagua*,
+    que allí llaman *busera*»
+  tomo: II
+  libro: XXV
+  capitulo: IX
+  pagina_impresa: 300
+  atribucion: "«allí» = donde se bebe los huessos del diao, en la gobernaçión de Veneçuela"
+  lemma_del_editor: >-
+    Busera — «almagre, almazarrón ó bija, con que se pintaban los indios de
+    guerra rostro y pechos, á fin de intimidar á sus enemigos. (Lengua de
+    Venezuela.)» (t. IV p.595)
+  campo: creencia
+  verificacion: imagen
+  en_el_lexicon: "no comprobado por esta parcela"
+  ojo_el_editor_se_equivoca: >-
+    En el cuerpo del texto `busera` es el nombre venezolano de la **xagua**
+    (jagua, el tinte NEGRO-azul), y la `bixa` (el rojo) va al lado como otra
+    cosa. El glosario lo da como «almagre, almazarrón ó **bija**», es decir lo
+    identifica con el rojo. **Son cosas distintas y la fuente es clara.**
+    `creencia-010c` dice «pintados de bija y jagua (busera)» y **acierta**.
+  verbatim_para_creencia_010c: "ahí está, con página: t. II p.300."
+
+- forma_fuente: mene
+  glosa_fuente: >-
+    «Hay en aquella provinçia algunos ojos ó manantiales de betún, á manera de
+    broa ó pez derretida, que **los indios llaman *mene***»
+  tomo: II
+  libro: XXV
+  capitulo: IX
+  pagina_impresa: 301
+  tambien: "«la sierra que llaman del *Mene*» (pp.281, 282) y «la sierra del Mene está entre los pemees y los aruacanas» (p.296)"
+  atribucion: "«los indios» de la provinçia, en la comarca de Maracaybo"
+  campo: ecologia
+  verificacion: ocr-mas-cotejo   # la forma sale limpia en el OCR de la 281 y la 296
+  en_el_lexicon: "sí — `mene`; y CLAUDE.md lo lista entre las 52 voces homógrafas de un nombre del elenco"
+  por_que_importa: >-
+    Atestación de 1548 de `mene` 'petróleo, betún' con glosa y con topónimo
+    derivado el mismo año. Es la voz venezolana viva más antigua que el repo
+    tiene documentada en su propia fuente.
+
+- forma_fuente: hayo
+  glosa_fuente: >-
+    «y la boca llena de *hayo*, ques çierta hierba para no aver sed» (p.286) ·
+    «el qual *hayo* es la hierba para quitar la sed ó no averla» (p.294)
+  tomo: II
+  libro: XXV
+  capitulo: "V-VI"
+  paginas_impresas: [286, 294]
+  atribucion: "las armas y el avío «de indio» en la gobernaçión de Veneçuela"
+  lemma_del_editor: >-
+    Hayo — «yerba, de que usaban los indios para templar la sed … **Era voz
+    común á diferentes comarcas, empleándose igualmente en Venezuela y en la
+    Nueva Granada.**» (t. IV p.600)
+  campo: ecologia
+  verificacion: ocr-limpio-dos-veces
+  en_el_lexicon: "sí — `hayo`"
+  resuelve: >-
+    T1 encontró `hado`/`hayo` en el tomo I p.206 y **lo degradó por duda de
+    OCR**. Aquí sale limpio dos veces con glosa. **La duda se puede levantar.**
+  ojo_regla_4: >-
+    El propio editor avisa de que no es privativa de Venezuela, y el cuerpo lo
+    confirma: `hayo` reaparece en el libro XXVI (Santa Marta / Nueva Granada,
+    pp.390 y 408) con el mismo uso. Es voz AREAL. Compartirla no la descalifica
+    (skill §3), pero tampoco la hace caquetía.
+
+- forma_fuente: "haperon / raporon / baporon"
+  glosa_fuente: >-
+    «y su *haperon*: este es un calabazo en que traen los indios çierta manera
+    de cal para quitar la hambre, chupándola» (p.286) · «el *baporon* es el
+    calabaço de la cal para quitar la hambre, como en otra parte tengo dicho»
+    (p.294)
+  tomo: II
+  libro: XXV
+  paginas_impresas: [286, 294]
+  atribucion: "el avío de los indios de la gobernaçión de Veneçuela"
+  nota_del_editor_al_pie: >-
+    En la p.294 el propio Amador de los Ríos anota: «baporon: poco antes y en
+    otras partes se encuentra escrito raporon». **El editor declara la
+    vacilación del manuscrito**, que es lo más honesto que hace en toda la obra.
+  lemma_del_editor: "Baperon y Baperoni (t. IV p.594)"
+  campo: utensilio
+  verificacion: ocr-con-nota-del-editor
+  en_el_lexicon: "no"
+  ojo: >-
+    **Cuatro grafías para una palabra** (haperon, raporon, baporon, baperon) y
+    el editor lo sabe. Si entra, entra con las cuatro y con la nota, o no entra.
+    En duda, degradar.
+
+- forma_fuente: icoraotas
+  glosa_fuente: >-
+    «do tienen gentiles labranças de mahiz é *icoraotas*, que es una çierta
+    legumbre como habas, é otras rayçes que siembran, que son como çanahorias»
+  tomo: II
+  libro: XXV
+  capitulo: "V"
+  pagina_impresa: 281
+  atribucion: "la generaçión llamada *corbaços*, de la sierra del Mene"
+  lemma_del_editor: "Ycouoata — «legumbre muy semejante á las habas. (Lengua de Venezuela.)» (t. IV p.607)"
+  campo: agricultura
+  verificacion: imagen
+  en_el_lexicon: "no"
+  correccion_de_cadena: >-
+    🔴 La forma impresa es **`icoraotas`**, verificada en imagen. El glosario
+    del editor la lematiza **`Ycouoata`** y Jahn 1927 n.29 la cita
+    **`icoroata`**. Son tres formas distintas de la misma palabra y **sólo una
+    está en el texto de Oviedo**. Cualquier ficha que entre debe llevar
+    `icoraotas` como forma de fuente y las otras dos como lecturas de segunda
+    mano.
+  ojo_regla_4: "**No es de los çaquitios**: es de los corbaços de la sierra del Mene."
+
+- forma_fuente: "amana (impreso dudoso: la página admite leerse `aniana`)"
+  glosa_fuente: "«y otra fructa *amana* de turmas de tierra»"
+  tomo: II
+  libro: XXV
+  capitulo: "V"
+  pagina_impresa: 281
+  atribucion: "la generaçión llamada *corbaços*, de la sierra del Mene"
+  lemma_del_editor: "Amana — «patata, turma de tierra. (Lengua de Venezuela.)» (t. IV p.593)"
+  campo: agricultura
+  verificacion: imagen-dudosa
+  en_el_lexicon: "no"
+  por_que_dudosa: >-
+    La tipografía de 1852 no separa bien `m` de `ni` en cursiva pequeña: la
+    página se puede leer `amana` o `aniana`. El glosario del editor —que tuvo el
+    manuscrito delante— lematiza **Amana**, y eso inclina la balanza, pero
+    **no es la página**. Regla 2: entra degradada o no entra.
+
+- forma_fuente: tara
+  glosa_fuente: >-
+    «Hay mucha **langosta**, que los indios llaman *tara*, y esta no es continua:
+    pero algunos años hay tanta, que cubre el ayre á no se poder ver el çielo …
+    si dá en un mahical, lo tala todo y lo abrasa … también los indios en su
+    venganza las toman y embanastan y **se las comen asadas**»
+  tomo: II
+  libro: XXV
+  capitulo: XXII
+  pagina_impresa: 331
+  atribucion: "«los indios» de la provinçia de Venezuela, en el capítulo informado por el obispo Bastidas"
+  lemma_del_editor: "Tara — «langosta. (Lengua de Venezuela.)» (t. IV p.605)"
+  campo: ecologia
+  verificacion: ocr-limpio
+  en_el_lexicon: "sí — con glosa **'venado, ciervo'**"
+  🔴_conflicto: >-
+    **CUARTA fuente y la primera de primera mano.** `4-fuentes/jahn-1927.md` ya
+    decía «Ninguna fuente sostiene ya "venado"», con Jahn, Zavala #238 y
+    Alvarado p.283 contra. Ahora está el pasaje de Oviedo con página, y no sólo
+    glosa 'langosta': **la describe** (plaga, nube, se come asada). No hay
+    lectura posible en que sea un venado.
+  propuesta: >-
+    La glosa de `tara` pasa a 'langosta'. Mueve canon ecológico, así que es
+    decisión de Miguel (D10, grupo 2) — pero ya no hay nada al otro lado de la
+    balanza. Ver el issue.
+
+- forma_fuente: datos
+  glosa_fuente: >-
+    «y cardones de los altos y derechos, á los quales en aquella tierra los
+    llaman *datos*»
+  tomo: II
+  libro: XXV
+  capitulo: XXII
+  pagina_impresa: 331
+  atribucion: "«en aquella tierra» = la provinçia de Venezuela (cap. informado por el obispo Bastidas)"
+  campo: ecologia
+  verificacion: imagen
+  invisible_al_ocr: "sí — el OCR lo da `dalos`. Sin la imagen esta voz no existe."
+  en_el_lexicon: "no"
+  por_que_importa: >-
+    🟢 **`dato` sigue vivo en Falcón y Paraguaná** para el fruto del cardón. Es
+    un nombre vivo con atestación de 1548 y glosa del cronista, que es
+    exactamente la clase de dato que la campaña de topónimos persigue («un
+    nombre vivo es dato»). Y encaja con el corpus de ecología, que tiene el
+    cardonal como restricción del mundo (ecologia-007/018/032).
+  ojo_homonimia: >-
+    ⚠️ Oliver 1989 cap. 2 lista `dato` entre las voces caquetías con /d-/
+    inicial (junto a `diao`, `dare`, `datihao`), donde `dato` es un TÍTULO. El
+    `datos` de Oviedo es un CACTUS. O son homógrafos, o alguien leyó mal.
+    **No se resuelve aquí**: se deja el conflicto escrito.
+
+- forma_fuente: comoho
+  glosa_fuente: "«Hay otra fructa que se diçe *comoho*, que en efeto son tunas»"
+  tomo: II
+  libro: XXV
+  capitulo: XXII
+  pagina_impresa: 331
+  atribucion: "la provinçia de Venezuela"
+  lemma_del_editor: "Comoho — «higo tuna. (Lengua de Venezuela.)» (t. IV p.597)"
+  campo: ecologia
+  verificacion: imagen
+  en_el_lexicon: "no — T1 lo halló en el t. I pp.313-314 y lo propuso"
+  segunda_atestacion: >-
+    ✅ **Ésta sí es independiente**: T1 lo encontró en el tomo I (libro VIII, el
+    cardón de las tunas «en la provinçia de Venezuela»); aquí está otra vez en
+    el tomo II, en otro libro y con otro informante (el obispo Bastidas). Dos
+    pasajes distintos de la misma obra, escritos con doce años de diferencia.
+    La entrada sube de «una mención» a «dos» (skill §8).
+
+- forma_fuente: çemyrucos
+  glosa_fuente: >-
+    «Hay otros árboles que se diçen *çemyrucos*, que la fructa es muy semejante
+    en la vista á las çereças»
+  tomo: II
+  libro: XXV
+  capitulo: XXII
+  pagina_impresa: 331
+  atribucion: "la provinçia de Venezuela"
+  campo: ecologia
+  verificacion: imagen
+  invisible_al_ocr: "sí — parte en `çe-myrucos` a fin de línea; sin deshacer el guion, 0 apariciones"
+  en_el_lexicon: "no"
+  por_que_importa: >-
+    🟢 **`semeruco`** — la cereza criolla (*Malpighia emarginata*), viva hoy en
+    todo Falcón y en Paraguaná, con su jugo y su árbol de patio. Atestación de
+    1548, con glosa del cronista y con la comparación que explica el nombre
+    castellano moderno («muy semejante en la vista á las çereças»). Es la mejor
+    voz nueva de esta parcela después del etnónimo.
+
+- forma_fuente: manari
+  glosa_fuente: >-
+    «y un poco mas alto que el atahud estaba un canastico ancho que llaman
+    *manari*, lleno de oro»
+  tomo: II
+  libro: XXV
+  capitulo: "III"
+  pagina_impresa: 277
+  atribucion: >-
+    **no-declarada** en cuanto a lengua: es el ajuar de un sepulcro en el valle
+    de Thamara, camino de los pacabuyes. Muy lejos de la costa.
+  campo: utensilio
+  verificacion: ocr-limpio
+  en_el_lexicon: "no"
+  ojo: "`manari` es voz arahuaca conocida (cesto/cedazo). Se anota, no se atribuye."
+
+- forma_fuente: Curiana
+  glosa_fuente: >-
+    «Desde la Punta Seca se corren al oçidente treynta leguas hasta *Curiana*,
+    ques un rio assi llamado, que está algo mas de diez grados y medio desta
+    parte de la equinoçial. Desde Curiana sale una punta ó promontorio en la mar
+    diez leguas que se llama el cabo de Sanct Román»
+  tomo: II
+  libro: XXI
+  capitulo: VI
+  pagina_impresa: 131
+  atribucion: "no-declarada — Oviedo la da como nombre corriente en la carta de marear, sin decir de quién es la voz"
+  campo: toponimo
+  verificacion: ocr-limpio
+  en_el_lexicon: "el topónimo está en el canon"
+  por_que_importa: >-
+    Para Oviedo **Curiana es un río**, no una provincia ni un pueblo, y está
+    inmediatamente al este del cabo de San Román: es decir, **en el Golfete**.
+    Es una localización primaria y temprana de la Curiana que da nombre al
+    proyecto, y es de otra mano que Esteves y Medina.
+  y_el_cero: >-
+    `Curiana` sale **2 veces en 544 páginas** del tomo II, las dos en este mismo
+    pasaje geográfico, y **0 en los tomos III y IV**. `Coriana` = 0.
+    `Coquibacoa` = 0 en los tres tomos.
+
+- forma_fuente: Paraguana
+  glosa_fuente: >-
+    «Desde Coro al primero pueblo de *Paraguana* hay treçe leguas, el qual se
+    llama **Miraca**»
+  tomo: II
+  libro: XXV
+  capitulo: VIII
+  pagina_impresa: 296
+  atribucion: "no-declarada"
+  campo: toponimo
+  verificacion: ocr-limpio
+  en_el_lexicon: "Paraguaná sí; **Miraca** hay que comprobarlo contra el canon de topónimos"
+  por_que_importa: >-
+    Segunda mención de Paraguaná en Oviedo (T1 halló la del t. I p.205, «que los
+    indios llaman á aquella provinçia Paraguana»), y trae algo que aquélla no:
+    **el nombre de su primer pueblo**, a trece leguas de Coro. `Miraca` es
+    topónimo vivo de Paraguaná. Va a la campaña de topónimos, no al lexicón.
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. LOS ETNÓNIMOS Y TOPÓNIMOS DEL LIBRO XXV
+#    No son léxico caquetío. Son el MAPA de la gobernación en 1535-1546, que
+#    es geografía política y va a `3-mundo/`, no al lexicón (regla 7).
+#    Todos salen del OCR; las grafías con ç están reconstruidas por el patrón
+#    medido y llevan por eso `verificacion: ocr`.
+# ══════════════════════════════════════════════════════════════════════
+el_mapa_del_libro_XXV:
+  verificacion: ocr
+  advertencia: >-
+    ⚠️ Es el mapa **colonial** de 1528-1546, levantado por las entradas de
+    Alfínger, Federmann, Jorge Espira y Felipe de Hutten. Regla 3: no es el
+    mapa precontacto y no se proyecta.
+  generaciones_de_indios:
+    - bubures            # entre la sierra de los Bubures y Maracaybo; p.271
+    - buredes            # coronados como frailes; p.271
+    - coanaos            # hasta el cabo de la Vela; p.271
+    - giriguanas         # p.272
+    - aruacanas          # «tiran sus flechas con hierba muy mala»; pp.272, 285, 296
+    - aruayas            # variante de aruacanas, p.283
+    - çamyruas           # p.272
+    - pauxotos           # p.273
+    - haracañas          # enemigos de los pauxotos; p.273
+    - gondaguas          # pp.274, 276, 279
+    - pemenos            # pp.285, 294
+    - pemees             # p.296; ¿los mismos?
+    - onotos             # palafitos de la laguna; pp.270, 300
+    - guiriguiris        # palafitos; pp.300, 309(t.I ed.), 294
+    - guerigueris        # variante de guiriguiris, pp.293, 294
+    - çaquitios          # ver §1
+    - corbaços           # sierra del Mene; p.281
+    - pacabuyes          # el valle; pp.270, 296
+    - coybas             # p.302
+    - coyones            # p.302
+    - maropides          # pp.303, 304
+    - guaypies           # «belicosa é muy armada de dardos é flechas é macanas»; pp.305, 306, 318
+    - chogues            # pp.308, 310, 312
+    - tapeys             # p.287
+  lugares:
+    - Coro · Maracaybo (villa y pueblo) · el Passaje · Pueblo Viejo · Caraho
+    - "Paraguana, cuyo primer pueblo es **Miraca** (p.296)"
+    - "sierra del Mene · sierra de los Bubures · sierra Nevada · valle de los Pacabuyes"
+    - "ríos: Comiti · Xiriri · Yuma · Apuri · Darari · Cacavari · Ahia · Voayare · Papomene · Macouyte · Oppia"
+    - "pueblos: Apodori · Coativa · Thamara · Compachay · Cuyandio (ó Cuandi) · Condiloa · Ixarán · Potonic · Cilano · Zoinico · Pauxoto · Cariga · Uriri · Araburuco · Mahaboro · Carerchota · Ayanoboto · Huahuovano · Guaruruma · Huracara · Aracay · Horoco · Caçicare · Carao · Caçarida · Cabiairi"
+    - "el paso *Paracuandi* (p.297) · la **isla de Tara** en la boca de la laguna (p.296)"
+  caciques_nombrados:
+    - "Guaygueri — «un caçique llamado Guaygueri» que sirve de guía (p.304)"
+    - "Catiriguey — «el rey llamado Catiriguey, que es muy poderoso» (p.303)"
+  ojo: >-
+    ⚠️ **Nada de esto se lleva al canon sin cruzarlo con `3-mundo/etnias.yaml`
+    y `compilar_etnias.py`.** Es una lista de lectura, no una propuesta de
+    fichas: la mitad son nombres que los alemanes oyeron a través de
+    intérpretes y de los que Oviedo nunca dice de qué lengua son.
+
+# ══════════════════════════════════════════════════════════════════════
+# 4. EL GLOSARIO DEL TOMO IV — y el caso `datihao`
+#    Es la pieza que el repo llevaba un año citando de oídas.
+# ══════════════════════════════════════════════════════════════════════
+el_glosario_del_tomo_IV:
+  que_es:
+    titulo: "VOCES AMERICANAS EMPLEADAS POR OVIEDO"
+    donde: "tomo IV, impresas 593-607 (pdf 608-622)"
+    quien: >-
+      **El editor, no Oviedo.** Lo firma la Real Academia de la Historia bajo la
+      dirección de José Amador de los Ríos, 1855 — trescientos años después del
+      texto. Lleva su propia nota al pie disculpándose: «El presente glosario no
+      ha podido ser tan completo como en la parte relativa á ciencias naturales
+      fuera de desear, por causas independientes de la voluntad de la Academia».
+    lo_cierra: >-
+      una **BIBLIOGRAFIA** (impresa 608) con los 23 vocabularios que el editor
+      manejó. La leí entera: Molina (mexicano), Santo Thomás y seis más de
+      quechua, Barzena, Ruiz (guaraní), **Yangües (cumanagoto, 1683)**, Valdivia
+      y Febres (Chile), Marbán (moxo), Noveda (tagalo), **Pichardo (voces
+      cubanas, 1845)**, y sermonarios varios.
+    🔴_lo_que_NO_hay_en_esa_bibliografia: >-
+      **Ni un solo vocabulario de Venezuela, de Coro, ni de ninguna lengua de la
+      costa caribe venezolana.** El editor no tenía de dónde sacar una voz
+      venezolana que no estuviera en el texto de Oviedo. Esto es decisivo para
+      el caso `datihao`.
+  estatuto_epistemico: >-
+    Una entrada del glosario **no es una atestación independiente**: es la
+    lectura que un erudito del XIX hace del texto que él mismo está editando.
+    Vale como localizador y como testimonio de cómo se leía el manuscrito en
+    1855. No vale como segunda fuente (skill §8).
+
+  las_doce_entradas_de_venezuela:
+  - lemma: Amana
+    entrada_verbatim: "«patata, turma de tierra. (Lengua de Venezuela.)»"
+    impresa: 593
+    respaldo_en_el_cuerpo: "t. II p.281 (`amana`/`aniana`, de los corbaços)"
+  - lemma: "Baperon y Baperoni"
+    entrada_verbatim: >-
+      «calabazo, en que los indios de guerra llevaban la cal, con que aliviaban
+      la sed y el hambre en medio de las mayores fatigas. (Lengua de
+      Venezuela.)»
+    impresa: 594
+    respaldo_en_el_cuerpo: "t. II pp.286, 294 (`haperon`, `raporon`, `baporon`)"
+  - lemma: Boratio
+    entrada_verbatim: >-
+      «adivino, encantador ó saludador, oficio que ejercitaban entre los indios
+      conocidos con el nombre de zaquitios sus sacerdotes y maestros. (Lengua de
+      Venezuela.)»
+    impresa: 595
+    respaldo_en_el_cuerpo: "t. II pp.298-299 — 18 apariciones"
+    añade_el_editor: "la atribución a los zaquitios, que el cuerpo no hace"
+  - lemma: Busera
+    entrada_verbatim: >-
+      «almagre, almazarrón ó bija, con que se pintaban los indios de guerra
+      rostro y pechos, á fin de intimidar á sus enemigos. (Lengua de
+      Venezuela.)»
+    impresa: 595
+    respaldo_en_el_cuerpo: "t. II p.300"
+    se_equivoca_el_editor: "sí: en el cuerpo `busera` es la **xagua**, no la bixa"
+  - lemma: Caçá
+    entrada_verbatim: >-
+      «puches hechas exclusivamente del maíz. (Lengua de los zaquitios en la
+      gobernación de Venezuela.)»
+    impresa: 595
+    respaldo_en_el_cuerpo: "t. II p.299 (`caça`)"
+  - lemma: Comoho
+    entrada_verbatim: "«higo tuna. (Lengua de Venezuela.)»"
+    impresa: 597
+    respaldo_en_el_cuerpo: "t. II p.331 y t. I pp.313-314"
+  - lemma: Datihao
+    entrada_verbatim: "«señor: el que presta su nombre al esclavo. (Lengua de Venezuela.)»"
+    impresa: 598
+    respaldo_en_el_cuerpo: "🔴 **NINGUNO** — ver el caso, abajo"
+    verificacion: imagen
+  - lemma: Diao
+    entrada_verbatim: >-
+      «señor ó cacique soberano de la comarca de los zaquitios en la gobernacion
+      de Venezuela.»
+    impresa: 598
+    respaldo_en_el_cuerpo: "t. II pp.299-300"
+    añade_el_editor: "«de la comarca de los zaquitios», que el cuerpo no dice («en algunas partes desta gobernaçión»)"
+    verificacion: imagen
+  - lemma: Hayo
+    entrada_verbatim: >-
+      «yerba, de que usaban los indios para templar la sed en las mayores
+      fatigas de la guerra y en lo más ardoroso del estío. Era voz común á
+      diferentes comarcas, empleándose igualmente en Venezuela y en la Nueva
+      Granada.»
+    impresa: 600
+    respaldo_en_el_cuerpo: "t. II pp.286, 294 (Venezuela) y 390, 408 (Nueva Granada)"
+  - lemma: Maçato
+    entrada_verbatim: >-
+      «mazamorra, puches que hacian los indios zaquitios de varias materias
+      farináceas. (Lengua de Venezuela.)»
+    impresa: 601
+    respaldo_en_el_cuerpo: "t. II pp.297, 300"
+    verificacion: imagen
+  - lemma: Tara
+    entrada_verbatim: "«langosta. (Lengua de Venezuela.)»"
+    impresa: 605
+    respaldo_en_el_cuerpo: "t. II p.331"
+  - lemma: Ycouoata
+    entrada_verbatim: "«legumbre muy semejante á las habas. (Lengua de Venezuela.)»"
+    impresa: 607
+    respaldo_en_el_cuerpo: "t. II p.281, donde se imprime `icoraotas`"
+
+  jahn_leyo_seis_de_las_doce:
+    las_seis: [boratío, cazá, "datihao/diao", mazato, tara, icoroata]
+    medido: >-
+      `4-fuentes/jahn-1927.md` dice que la n.29 «lista **seis** voces caquetías
+      del Apéndice al tomo IV». Con el apéndice delante: **son doce las marcadas
+      Venezuela**, y Jahn leyó seis. Faltan `Amana`, `Baperon`, `Busera`,
+      `Comoho`, `Hayo` y `Ycouoata` — salvo que `Ycouoata` es la que él llama
+      `icoroata`, con lo que faltan cinco.
+    y_sus_grafias: >-
+      Jahn moderniza: escribe `cazá` (el editor `Caçá`, el cuerpo `caça`),
+      `mazato` (`Maçato` / `maçato`) y `boratío` con tilde (`Boratio` /
+      `boratio`). Ninguna de sus formas es la de la página. **Citar a Jahn no es
+      citar a Oviedo.**
+
+  # ─────────────────────────────────────────────────────────────────
+  el_caso_datihao:
+    la_pregunta: >-
+      ¿Atestigua Oviedo `datihao` en la costa de Venezuela, como el proyecto
+      viene diciendo desde el arranque?
+    lo_medido:
+      en_el_cuerpo_de_los_tomos_II_III_IV: 0
+      sondas_usadas: >-
+        `d[ai][tl]i?hao`, `\w{2,6}hao`, `dati`, `dali`, `datl`,
+        `d[a4][tl1i]{1,3}[hn][a4]o`, «presta su nombre», «como yo … se nombra» —
+        con el guion de fin de línea deshecho y sin deshacer, sobre los tres
+        tomos. Los únicos `-hao` de los tres tomos son `bihao(s)` (la hoja),
+        `Macanahao` (un pueblo del t. III) y `Sachao` (un señor del Perú).
+      en_el_tomo_I: >-
+        **1 vez**, pdf 590 = impresa 473, libro XVI cap. V: «á mi *dalihao* (que
+        quiere deçir mi señor, ó el que, como yo, se nombra)», dicha por el
+        caçique **Agüeybana**, en **San Juan**, a un hombre que acababa de
+        ofrecerle «yo te serviré e seré tu **naboría**».
+      en_el_glosario_del_tomo_IV: >-
+        1 entrada, impresa 598: «Datihao: señor: el que presta su nombre al
+        esclavo. **(Lengua de Venezuela.)**» — verificada en imagen.
+    lo_que_encaja: >-
+      La glosa del editor —«el que presta su nombre **al esclavo**»— es la
+      paráfrasis exacta del pasaje de San Juan: allí el hombre se ofrece como
+      naboría (siervo) y Agüeybana le contesta llamándole «mi dalihao … el que,
+      como yo, se nombra». **Señor + esclavo + compartir el nombre: los tres
+      elementos de la glosa están en el pasaje del tomo I y en ningún otro sitio
+      de la obra.**
+    la_hipotesis_mas_económica: >-
+      El editor glosó el pasaje de San Juan y le puso la etiqueta equivocada,
+      arrastrado por `Diao` —que va dos entradas más abajo, empieza por `D-`,
+      glosa 'señor' y **sí** es de Venezuela. Su propia bibliografía lo
+      respalda: **no tenía ningún vocabulario venezolano** del que sacar la
+      voz. La alternativa —que Oviedo la oyera también en Coro y el editor lo
+      supiera por un pasaje perdido— exige suponer una fuente que no se declara
+      en ninguna parte.
+    la_cadena_completa:
+      - "Oviedo t. I p.473 — `dalihao`, San Juan, boca de Agüeybana. ATESTIGUADO."
+      - "Amador de los Ríos, t. IV p.598 (1855) — `Datihao`, «(Lengua de Venezuela)». ETIQUETA DEL EDITOR."
+      - "Jahn 1927 p.213 n.29 — cita el apéndice del t. IV como voz caquetía. SEGUNDA MANO DE LA ETIQUETA."
+      - "Oliver 1989 cap. 2 n.42 p.146 — duda, y concluye «equally shared by both Taíno and Caquetío». LECTURA."
+      - "`creencia-001` y la ficha del lexicón — `caquetío-atestiguado`, sin reserva. AQUÍ SE PERDIÓ LA DUDA."
+    y_oliver_tenia_razon_por_otro_motivo: >-
+      Oliver dudaba porque «Oviedo hablaba de los indios de la Provincia de
+      Venezuela en general y su larga residencia en La Española pudo hacerle
+      usar taíno». **La duda era buena y el motivo era otro**: Oviedo no habló de
+      los indios de Venezuela en absoluto — habló de San Juan. El «en general»
+      es del editor.
+    propuesta:
+      a: >-
+        **Degradar `datihao` de `caquetío-atestiguado`.** La única atestación en
+        la fuente es taína (San Juan). La etiqueta que cabe es
+        `taíno-atestiguado`, con nota de que el editor de 1855 la dio por
+        venezolana y de que Oliver la ve compartida.
+      b: >-
+        Dejarla `caquetío-atestiguado` pero **con la reserva escrita** en
+        `notas` y en `creencia-001`, diciendo que el apoyo venezolano es
+        editorial y no del cronista.
+      c: >-
+        `caquetío-hipotético`, que es lo que la regla 2 pide para un dato cuyo
+        único apoyo es una etiqueta de tercera mano.
+      recomendacion_del_minador: >-
+        **(a)**, y que `diao` cargue con el peso de la palabra caquetía para
+        'señor'. `diao` sí está en el cuerpo del texto, en Venezuela, con glosa
+        y con atribución, y el proyecto ya lo tiene. **No perdemos el concepto:
+        perdemos una segunda palabra que nunca estuvo.**
+    lo_que_NO_cambia: >-
+      ⚠️ Esto **no toca** la etimología de Oliver (`/da-/` 1sg + `/-(i)tiao/`
+      sobre lokona `/atti/`), ni su separación de `diao` y `datihao` en dos
+      lexemas, ni el prefijo `/d-/` como rasgo del caquetío. Sólo toca **de qué
+      orilla es el testimonio de esa palabra concreta**.
+
+  otras_entradas_del_glosario_que_este_repo_debería_mirar:
+  - lemma: Macana
+    entrada_verbatim: >-
+      «especie de maza de armas usada por los indios, y formada generalmente de
+      una porra guarnecida de pedernales. **(Lengua de Haiti y Cuba.)**»
+    impresa: 601
+    verificacion: imagen
+    por_que: >-
+      El repo tiene abierta la etiqueta de `macana` (rama `campana/macana-etiqueta`,
+      PR #184, y el issue `taino-caquetio-similitudes-2026-09-21.md`). Aquí hay
+      una atribución explícita: **Haití y Cuba**, o sea taína, no venezolana. En
+      el cuerpo del libro XXV las macanas las llevan los **guaypies** (p.305),
+      que están tierra adentro, y Oviedo no dice que la palabra sea suya.
+  - lemma: Piache
+    entrada_verbatim: >-
+      «sacerdote supremo: el primero en la gerarquía religiosa entre los indios
+      del Paraguay y de Huyapari.»
+    impresa: 603
+    por_que: >-
+      ✅ **Confirma la auditoría del 2026-08-03**: `piache` no es venezolano
+      costero para este editor tampoco. Ni una mención de Venezuela, y `piache`
+      = 0 en el libro XXV (las 13 apariciones del tomo II están en los libros
+      XXIV y XXVII). Lo que los çaquitios tienen es el **boratio**.
+  - lemma: Guaxiro
+    entrada_verbatim: "«capitán, jefe, caudillo ó señor entre los indios caribes de Tierra-Firme.»"
+    impresa: 599
+    por_que: >-
+      El editor de 1855 da `guaxiro` como título de mando y lo llama **caribe**.
+      Es materia del mapa-familia, no de esta parcela, pero nadie lo había visto.
+  - lemma: Areyto
+    entrada_verbatim: >-
+      «danza y cantar de los indios, en que se celebraban las victorias y
+      proezas de sus antepasados, **ya en los funerales**, ya en las
+      declaraciones de guerra y otros momentos solemnes. (Lenguas de Cuba y de
+      Haiti.)»
+    impresa: 594
+    por_que: >-
+      El canto fúnebre que recita las hazañas del muerto —el oficio de Bana-mana
+      en el canon, `creencia-010`— tiene nombre en el glosario, y el nombre es
+      **antillano**. El çaquitio de la p.297 hace exactamente eso («llóranle de
+      noche en tono alto y cantando, y diçiendo en aquel cantar lo que hizo
+      mientras vivió») y Oviedo **no le da nombre**. Paralelo de conducta sin
+      paralelo de palabra: ver §6.
+
+# ══════════════════════════════════════════════════════════════════════
+# 5. LA PREGUNTA DEL CONTACTO (tarea 5 del encargo)
+#    «¿Dice Oviedo algo de relación, viaje, comercio, noticia o parentesco
+#     entre la gente de la costa de Venezuela / Coro / las islas de los
+#     Gigantes y las Antillas?»
+# ══════════════════════════════════════════════════════════════════════
+la_pregunta_del_contacto:
+  respuesta_en_una_frase: >-
+    **No.** En 1.880 páginas de los tomos II, III y IV no hay una sola línea que
+    ponga en relación a los indios de la costa de Venezuela con los de las
+    Antillas. Lo que sí hay —y es mucho— es la red de intercambio **dentro de
+    Tierra Firme**, con los çaquitios dentro.
+
+  los_ceros_verificados:   # regla 6
+    "curazao / curaçao / curacao": "0 en t. II, t. III y t. IV"
+    "aruba / oruba": "0 en t. II y t. III; 1 en t. IV y es un apellido, no la isla"
+    "bonaire / buynare / boynare": "0 en los tres"
+    "islas de los Gigantes": >-
+      0. «Gigantes» sale 33 veces en el t. II, 2 en el t. III y 1 en el t. IV, y
+      **todas** son los patagones del estrecho de Magallanes (libro XX) o los
+      «guyrandos» del Plata. Las islas de enfrente de Coro no se nombran.
+    "Hayti / Haiti": "0 en t. II y t. III. En t. IV sólo en el glosario del editor."
+    "indios de Venezuela en La Española": >-
+      0. Lo que cruza el mar en este libro son **españoles**: Alfínger llega a
+      Santo Domingo y de ahí pasa a su gobernación (p.269); los procuradores de
+      Coro van a la Corte (p.297); Federmann escribe desde Jamaica (pp.309, 322);
+      el obispo Bastidas pasa de Venezuela al obispado de San Juan (pp.324, 328)
+      y vuelve a Santo Domingo. Ni un indígena.
+    "taínos en Tierra Firme": "0"
+
+  lo_que_SI_hay_y_vale:
+  - que: "comercio de los çaquitios con los pueblos palafíticos de la laguna"
+    verbatim: >-
+      «están muchas poblaçiones de pueblos pequeños y medianos de indios, que
+      llaman onotos y guiriguiris, los quales viven dentro del agua sobre
+      barbacoas é buhíos de madera altos, que debaxo dellos andan y passan
+      canoas. **Viven de pesquerias, é van é vienen á la ribera desta laguna y
+      rescatan é venden aquel pescado que matan, por mahiz é por otras cosas,
+      con otras generaçiones de indios çaquitios é bubures.**»
+    donde: "t. II, libro XXV cap. IX, impresa 300"
+    verificacion: imagen
+    por_que_importa: >-
+      Es **la esfera hablando**, atestiguada: pescado de los palafitos a cambio
+      de maíz de los çaquitios, con canoas, ida y vuelta, y entre gentes de
+      lenguas distintas. Es el tipo de red que el proyecto modela, documentada
+      por un cronista que nombra a los caquetíos por su nombre. Va a
+      `3-mundo/` — economía y esfera de interacción—, no al lexicón.
+  - que: "la red de la sal y el maíz, y un hombre comprado y vendido dentro de ella"
+    verbatim_resumido: >-
+      Francisco Martín, náufrago, es curado por unos indios; llegan «unas canoas
+      de la laguna, **cargadas de sal, á rescatar**»; después «vinieron allí
+      otros indios de la tierra adentro en canoas por un rio abaxo **á vender
+      mahiz á trueco de sal**»; lo ven, «**le compraron é dieron por él un
+      águila de oro**, que podía ser quince ó veynte pessos», y quien lo compró
+      lo llevó dos jornadas en canoa a Maracaybo.
+    donde: "t. II, libro XXV cap. VII, impresas 293-294"
+    por_que_importa: >-
+      Tres nasçiones distintas, dos productos (sal, maíz), moneda de oro
+      labrado, transporte en canoa y **personas dentro del tráfico**, todo en
+      1531 y todo entre gente de Tierra Firme. Es el mejor retrato de la red
+      regional que hay en la obra.
+  - que: "la sospecha de un tracto de larga distancia"
+    verbatim: >-
+      «tomó por demanda preguntar por la laguna donde aquella sal se haçia tan
+      diferente de la que **los indios de la costa de la mar** comen, y
+      sospechaba que donde aquella sal se haçia, **debia aver mucho tracto con
+      la gente del mediodia ó parte del sur**»
+    donde: "t. II, libro XXVI (Sancta Marta), impresa 382"
+    ojo: "Es Santa Marta, no Venezuela, y es una **sospecha del gobernador**, no un dato."
+
+  que_queda_abierto: >-
+    Las islas de enfrente de Coro las describe Oviedo en el **libro XIX del tomo
+    I** (Tierra-Firme), que T1 dejó **sin leer** y señaló como «el libro con más
+    costa de Venezuela». Si en algún sitio de Oviedo hay algo sobre las islas de
+    los Gigantes y su gente, es ahí. **No es mi parcela y no lo he tocado.**
+
+# ══════════════════════════════════════════════════════════════════════
+# 6. OVIEDO COMPARA (tarea 6 del encargo)
+#    Qué paralelos ve ÉL entre Venezuela y las islas.
+# ══════════════════════════════════════════════════════════════════════
+oviedo_compara:
+  cuantos: 3
+  advertencia: >-
+    Son **tres en todo el libro de Venezuela**, y ninguno es un paralelo de
+    lengua. Oviedo compara cuerpos, plantas y costumbres; nunca dice «la misma
+    palabra». Las sondas «como en esta isla» y «la misma palabra» dan **0** en
+    los tres tomos.
+
+  los_tres:
+
+  - comparacion: el cuerpo
+    verbatim: >-
+      «Estos indios é indias son de la color y estatura **de los destas islas**,
+      y de la manera que en otras partes lo memoran estas historias; é nunca se
+      cortan el cabello ni las uñas de las manos ni de los pies.»
+    donde: "t. II, libro XXV cap. XXII, impresa 329"
+    que_dice: >-
+      Los indios de Venezuela son físicamente como los antillanos. Es una
+      comparación de **tipo físico**, dicha por un hombre que llevaba treinta
+      años en Santo Domingo.
+    que_NO_dice: "nada de lengua, nada de origen, nada de parentesco"
+
+  - comparacion: el tabaco
+    verbatim: >-
+      «es rescate muy estimado entre los indios. **Y en esta nuestra Isla
+      Española hay mucha** en los heredamientos; y los negros, de que nos
+      servimos, la preçian mucho para este efeto»
+    donde: "t. II, libro XXV cap. IX, impresa 298"
+    que_dice: >-
+      Misma planta, mismo uso a las dos orillas — y la palabra `tabaco` la usa
+      sin marcarla, porque para 1548 ya es castellana.
+
+  - comparacion: el funeral
+    verbatim: >-
+      «de manera que **paresçe que todos quieren ser su sepoltura**, para que no
+      piensse Artemisia que hizo mucho en tragarse las maritales çeniças, como
+      diçe Johan de Mena, porque **en esta Tierra-Firme, de que tractamos,
+      muchos las tragan**, segund se ha dicho de suso, y como en otros lugares y
+      provinçias de la Tierra-Firme se acostumbra»
+    donde: "t. II, libro XXV cap. IX, impresas 297-298"
+    que_dice: >-
+      Oviedo ve el endocanibalismo de los huesos como **rasgo de Tierra Firme**,
+      no de las islas, y lo compara con un clásico europeo (Artemisia, vía Juan
+      de Mena) en vez de con La Española. **Es una comparación que separa, no
+      que une** — y es la que más pesa para la pregunta del contacto.
+    para_el_canon: >-
+      `creencia-010` dice «El caquetío es, atestiguadamente, endocanibalismo de
+      los huesos, no entierro», y la fuente lo sostiene **y añade** que Oviedo lo
+      tiene por costumbre extendida en Tierra Firme, no por rasgo propio.
+
+# ══════════════════════════════════════════════════════════════════════
+# 7. VEREDICTO POR ENTRADA DEL CORPUS
+# ══════════════════════════════════════════════════════════════════════
+veredicto_por_entrada:
+
+- id: creencia-001
+  decia: >-
+    «"Boratio" (también borattio) es la palabra caquetía atestiguada para el
+    médico-hechicero» · referencia: «Oviedo y Valdés, Historia general, apéndice
+    t. IV (en Jahn 1927:213 n.29); Arcaya 1920:116»
+  medido:
+    - "la forma es `boratio`, una t (18 apariciones, imagen)"
+    - "**el apéndice del t. IV existe** y la referencia se puede fijar: impresa 595"
+    - >-
+      pero el dato de primera mano está en el **cuerpo del t. II, pp.298-299**, y
+      allí Oviedo dice «los indios de Veneçuela», no «los çaquetíos». La
+      atribución étnica es del editor (t. IV p.595)
+    - "`piache` no compite: el editor lo da de Paraguay y Huyapari, y no sale ni una vez en el libro XXV"
+  propuesta: >-
+    Cambiar la referencia a **Oviedo y Valdés t. II pp.298-299 (cuerpo) + t. IV
+    p.595 (glosario del editor)**, quitar la variante `borattio` o marcarla como
+    grafía de Jahn, y decir en el propio hecho que la atribución caquetía es
+    editorial. La etiqueta `atestiguado` **se sostiene** para la voz y para el
+    oficio: lo que no se sostiene es la finura étnica.
+  y_lo_que_se_gana: >-
+    la descripción completa del rito de cura (p.299), que el corpus no tiene:
+    el ayuno impuesto a toda la casa, el «Allá yrás mal», el chupar, la espina
+    escondida, los cinco o seis días, y la retirada del boratio cuando el
+    enfermo no mejora («porque el diablo me lo ha dicho assi»).
+
+- id: creencia-001b
+  decia: "el díao es el cacique principal **que es a la vez boratio**; referencia «Oviedo t. II p.299; Arcaya…»"
+  medido: >-
+    La página es correcta. **La ecuación díao = boratio no está en Oviedo.** Él
+    define el díao sólo por su posición: «el señor prinçipal, que tiene muchos
+    indios y le son subjetos otros caçiques». Y la atribución es «**en algunas
+    partes** desta gobernaçión de Veneçuela», más ancha que «los caquetíos de
+    Coro».
+  propuesta: >-
+    Partir el hecho: lo político cita Oviedo t. II p.299; lo religioso cita
+    Arcaya y baja de capa. Ver §2 `diao`.
+
+- id: creencia-010
+  decia: "el funeral del cacique común; referencia «Oviedo t. II p.299-300»"
+  medido: >-
+    ✅ El hecho es **exacto**, frase por frase, y la fuente lo atribuye
+    **explícitamente a los çaquitios**, que es más de lo que el corpus reclama.
+    🔴 Pero la página es la **297**, no la 299-300.
+  propuesta: "corregir la página a t. II p.297 y añadir la atribución a los çaquitios."
+
+- id: creencia-010b
+  decia: "el funeral del díao, primer tiempo; referencia «Oviedo t. II p.300»"
+  medido: >-
+    ✅ Correcto y verificado: la hamaca sobre brasas, «no le queda sino el cuero
+    y los huessos», la hamaca nueva «como si estuviesse un hombre echado
+    durmiendo», la casa que nadie vuelve a habitar, el hijo y subçessor que le
+    renueva la hamaca. Empieza al pie de la **299** y ocupa la 300.
+  propuesta: "ampliar la referencia a pp.299-300."
+  y_lo_que_falta_en_el_corpus: >-
+    el cierre del rito, que el corpus no recoge: «É haçen á su semejança una
+    figura de madera de relieve y pequeña, y el dia que muere el diao, pónenla
+    debaxo de la hamaca … hasta que le queman, como es dicho, y **queman allí
+    también esta imágen suya de palo**» (p.300). Una efigie del muerto que arde
+    con él.
+
+- id: creencia-010c
+  decia: "segundo tiempo: el llamamiento general y beber los huesos; «Oviedo t. II p.300»"
+  medido: >-
+    ✅ Correcto y verbatim, incluida `busera`. Un matiz: el corpus dice
+    «pintados de bija y jagua (busera)» y la fuente dice «pintados de bixa y de
+    **xagua**, que allí llaman **busera**» — o sea `busera` es el nombre de la
+    xagua, no de las dos. El corpus lo tenía bien; el **glosario del editor** lo
+    tiene mal.
+  propuesta: "sin cambio. Añadir la cita verbatim y la página."
+
+- id: creencia-004b
+  decia: "ayuno ritual antes de la guerra; «Oviedo t. II p.329»"
+  medido: >-
+    ✅ **Correcto**, página incluida, y con una precisión que el corpus ya
+    recoge bien («el jefe de la familia y todos los suyos, menos los niños»).
+    Y trae su testigo declarado: el capítulo entero es lo que el **obispo don
+    Rodrigo de Bastidas** le contó a Oviedo «á voce viva», corroborado por el
+    tesorero Acuña, el contador Naveros, Pedro de Salvatierra y el capitán Pedro
+    de Limpias.
+  propuesta: >-
+    sin cambio en el contenido. **Añadir el testigo**: es una cadena de custodia
+    declarada, que es más de lo que tienen casi todos los hechos del corpus.
+  ojo: >-
+    ⚠️ El ayuno de la p.329 se hace «antes de … coger el fruto» y «de mucha
+    importançia» en general — el capítulo no lo ata a la guerra tan
+    estrechamente como el corpus. Y el ayuno del **boratio** (p.299) es otro:
+    ése lo impone el curandero a la casa del enfermo. **Son dos ayunos
+    distintos** y conviene no fundirlos.
+
+- id: "ficha `datihao` del lexicón"
+  decia: "`caquetío-atestiguado`"
+  medido: "ver §4 — la atestación es taína; el apoyo venezolano es editorial"
+  propuesta: "opción (a): `taíno-atestiguado` con nota. Decide Miguel."
+
+- id: "ficha `tara` del lexicón"
+  decia: "'venado, ciervo'"
+  medido: "Oviedo t. II p.331: **langosta**, descrita como plaga y como comida"
+  propuesta: "glosa a 'langosta'. Cuarta fuente, primera de primera mano."
+
+- id: "ficha `macato` del lexicón"
+  decia: "'bebida'"
+  medido: "t. II p.297: «çierto brevaje … muy espesso como maçamorra ó puches … algo açedo»"
+  propuesta: "sin cambio. El aviso de `jahn-1927.md` se cierra: la fuente dice las dos cosas."
+
+# ══════════════════════════════════════════════════════════════════════
+# 8. LO QUE ESTA PARCELA **NO** APORTA A LA PREGUNTA DEL TAÍNO
+# ══════════════════════════════════════════════════════════════════════
+para_la_campaña_del_taino:
+  en_una_frase: >-
+    Los tomos II-IV de Oviedo **restan** en vez de sumar: quitan una de las dos
+    orillas de `datihao`, que era el apoyo léxico más citado del contacto
+    taíno-caquetío, y no ponen nada en su lugar.
+  lo_que_queda_del_apoyo_lexico:
+    - >-
+      `diao` sigue siendo caquetío (venezolano) atestiguado, y su parecido con
+      el taíno es asunto de Oliver, no de Oviedo.
+    - >-
+      `boratio`, `caça`, `maçato`, `busera`, `tara`, `icoraotas`, `amana`,
+      `comoho`, `çemyrucos`, `datos`, `mene`, `hayo`, `baperon`: **ninguna** de
+      las doce/trece voces venezolanas de Oviedo tiene gemela taína en su propia
+      obra. Él no dice de ninguna que también se diga en las islas.
+    - >-
+      Y al revés: de las 89 formas que T1 sacó del tomo I, **ninguna** reaparece
+      atribuida a Venezuela en los tomos II-IV.
+  lo_que_esto_significa: >-
+    La evidencia de contacto precolombino **no va a salir de Oviedo**. Oviedo es
+    un buen testigo de dos vocabularios que no se tocan. Quien quiera contacto
+    tiene que ir a la arqueología (Antczak, Rouse-Cruxent, Schroeder,
+    Fernandes), a la genética o al libro XIX del tomo I. Decirlo ahorra noches
+    (skill §6).
+  y_una_cosa_que_sí_suma: >-
+    El paralelo de **conducta** sin paralelo de palabra: el funeral de los
+    çaquitios (canto nocturno que recita las hazañas del muerto, cremación,
+    huesos molidos, bebida ritual) y el `areyto` antillano «ya en los funerales»
+    hacen lo mismo con nombres distintos. Eso es materia de esfera cultural, no
+    de préstamo léxico, y es más honesto que forzar una etimología.
