@@ -1,0 +1,1126 @@
+# ─────────────────────────────────────────────────────────────────────────
+# La etnohistoria del contacto: ¿qué sabían unos de otros en 1492-1500?
+#
+# SEGUNDA campaña del taíno, parcela T7 (2026-09-22).
+#
+# LA IDEA que encargó Miguel: si en el momento del contacto los taínos sabían
+# de la costa sur, o los de la costa sabían de las islas grandes, esa noticia
+# es ANTERIOR a los europeos, y es evidencia de contacto precolombino —
+# directo o por cadena. Los primeros europeos lo preguntaron y a veces lo
+# anotaron.
+#
+# ⚠️ Esto PROPONE (regla 5). Nada de aquí entra al canon sin que Miguel lo
+# fusione. No se ha tocado `curiana_lexicon.py`, `3-mundo/corpus/` ni
+# `3-mundo/etnias.yaml`.
+#
+# ⚠️ NINGUNA CIFRA ESTÁ ESCRITA A MANO (regla 1). Las imprime
+#     python 6-fusion/scripts/medir_taino2_etnohistoria.py
+#
+# CÓMO SE CLASIFICA CADA HALLAZGO — las tres etiquetas son independientes:
+#   clase   noticia-indigena-recogida  el cronista dice que lo DIJERON ellos
+#           inferencia-del-cronista    el cronista lo deduce o lo supone
+#           hecho-colonial             lo que hicieron los españoles
+#   epoca   precontacto · contacto-temprano (1492-1500) · colonial
+#   fuerza  alta · media · baja — y por qué
+#
+# 🔴 LA TRAMPA DE ESTA PARCELA, medida y declarada: casi todo el material de
+#    1498-1500 se transmite por DOS cronistas que parafrasean EL MISMO papel
+#    de Colón. Donde Anglería y Hernando Colón coinciden, es UNA atestación,
+#    no dos (skill `minar-fuente` §8). Donde difieren —y difieren justo en las
+#    frases de dirección— está señalado.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-22'
+  campana: Segunda campaña del taíno — parcela T7 (etnohistoria del contacto)
+  autor: minador T7
+  rama: campana/taino2-etnohistoria
+  mide: 6-fusion/scripts/medir_taino2_etnohistoria.py
+  metodo: >-
+    Seis obras leídas por pasaje, no por conteo (skill §3) — cinco medidas por
+    el script y una sexta, Oviedo y Valdés vol. I, que ya estaba en el repo y se
+    abrió con el método de MuPDF que dejó escrito la campaña anterior. La ortografía se
+    midió ANTES de contar (skill §2) y se declaran los positivos de control:
+    en cada obra se cuenta también `isla`, `oro`, `indio`, `cacique` y
+    `rescat`, para que un cero se pueda leer como cero de la fuente y no de la
+    consulta (regla 6).
+  aviso_de_derechos: >-
+    las seis obras son de dominio público (ediciones de 1829, 1851, 1858, 1875
+    y 1892 de textos de los siglos XV-XVI). Se citan literalmente. Las obras
+    modernas que aparecen aquí (Oliver 1989) se parafrasean o se citan en corto.
+
+# ══════════════════════════════════════════════════════════════════════
+# 0. LO QUE DE ESTE ENCARGO RESULTÓ FALSO AL MEDIRLO
+# ══════════════════════════════════════════════════════════════════════
+lo_que_resulto_falso_del_encargo:
+
+- afirmacion: >-
+    «6-fusion/decisiones_campanas_2026-09-21.yaml §dc.4 — la corrección de
+    Miguel sobre el episodio de la hija de Manaure: LÉELA ENTERA, es el punto
+    de partida de tu parcela»
+  medido: >-
+    **No está en `main`**: vive en el **PR #193**, sin mergear (commit
+    `f01e4e6`). Lo dijo el coordinador a media parcela, y tenía razón.
+  el_error_fue_mio_y_es_del_tipo_que_esta_campana_persigue: >-
+    🔴 Yo escribí antes «no existe en ninguna rama», y lo apoyé en
+    `git log --all --diff-filter=A -- "*decisiones_campanas*"`, que devolvía
+    cero. **El cero era de mi consulta, no del repo**: el worktree se cortó de
+    `main` y `--all` sólo ve las referencias que esta copia tiene. Con un
+    `git fetch origin` delante, el mismo comando devuelve `f01e4e6`. Es la
+    regla 6 aplicada a git —*un cero hay que verificarlo*— y la misma familia
+    que la trampa del doble espacio de abajo: **la herramienta contesta lo que
+    le preguntas, no lo que hay.**
+  consecuencia: >-
+    la parcela arrancó **sin su punto de partida** y lo recuperó a mitad de
+    camino. Lo que dc.4 dice, y lo que esta parcela le añade, está en
+    §respuesta_a_dc4.
+
+- afirmacion: '«Ya en el repo: … keegan-1989»'
+  medido: >-
+    **no está en el repo.** `4-fuentes/keegan-1989.md` declara
+    `local: null`, `acceso: "NO consultado en texto completo — identificado vía
+    resúmenes de búsqueda"` y `estado_minado: segunda-mano` desde el
+    2026-07-29. Sostiene dos hechos del corpus sin haber sido leído.
+
+- afirmacion: >-
+    «Mártir es explícito con Curiana (los perleros de 1499). Busca "se
+    entendían", "intérprete", "lengua", "como en la Española"»
+  medido: >-
+    Mártir es explícito, sí, pero **al revés de como sugiere el encargo**: en
+    todo el vol. 1 (460 pp.) la palabra `intérprete` sale 11 veces y **las 11
+    caen antes del libro VII** — es decir, en los libros de La Española y
+    Cuba. En los libros VII-IX, que son los que narran Paria, Curiana y el
+    viaje de Pinzón, **cero**. Anglería nombra al intérprete cuando lo hay
+    (Diego Colón en Cuba, «cuyo idioma era casi semejante al de éstos»,
+    p. 182) y dice «por señas» cuando no. El cero es de la fuente, no de la
+    consulta: `lengua` sale 17 veces y `entend` 26 en el mismo texto.
+
+- afirmacion: >-
+    «la Isla de los Gigantes» como pista que buscar en Anglería vol. 4
+  medido: >-
+    ⚠️ **falso amigo, y de los caros.** `gigante` sale 9 veces en el vol. 4 y
+    las 9 son el **rey gigante Datha de Duhare**, de la expedición de Ayllón a
+    Chicora (las Carolinas). Ni una es Curazao. La Isla de los Gigantes de la
+    Kaketiana está en Navarrete t. III, no en Anglería.
+
+- afirmacion: implícita en el método — «grep la frase y cuenta»
+  medido: >-
+    🔴 **Un espacio literal en una consulta vale CERO sobre el OCR de
+    archive.org.** Los ficheros `_djvu.txt` separan las palabras con DOS
+    espacios. `no se entendian` devolvía 0 en el texto de la *Relación del
+    tercer viaje*, **que es donde está la frase entera y en la propia mano de
+    Colón**; `tierra firme` devolvía 0 en Hernando Colón, donde sale 37 veces.
+    Es la trampa de la skill §2 con otra cara: el cero medía la consulta. El
+    medidor convierte ahora cada espacio de una diana en `\s+`, una vez y
+    para todas (función `patron()`).
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. EL VEREDICTO, EN UNA FRASE
+# ══════════════════════════════════════════════════════════════════════
+veredicto: >-
+  Los primeros europeos SÍ preguntaron, y lo que trajeron es asimétrico: los
+  isleños tenían noticia de una tierra firme al sur que no habían visto y cuya
+  gente les hacía daño, y los de la costa tenían el oro bajo que los taínos
+  llamaban `guanín` y decían que les venía del OESTE por tierra — de modo que
+  el eje del que hablan las dos orillas es continente-continente, no
+  isla-continente; y en el único punto de Tierra Firme donde se midió la
+  lengua —Paria, agosto de 1498— Colón escribió de su mano que **no se
+  entendían**. Eso no prueba que no hubiera contacto precolombino: prueba que
+  la noticia que los europeos recogieron no lo documenta.
+
+# ══════════════════════════════════════════════════════════════════════
+# 1 bis. RESPUESTA A dc.4 — el argumento de Miguel, y qué le añade T7
+#
+# dc.4 (PR #193, sin mergear) recoge la corrección de Miguel del 2026-09-21:
+#   «aunque no sepamos de contacto precolombino conocemos que durante la
+#   conquista Manaure supo de parientes (incluso de su hija) que fue raptada y
+#   llevada a la Española. Y él mandó gentes a contactarlos y recuperarlos. Por
+#   lo que debe haber habido contacto precolombino. Y diao y diaitao que son
+#   símiles son las versiones caquetías de la versión Taína. Un cognado que
+#   hace match.»
+# ══════════════════════════════════════════════════════════════════════
+respuesta_a_dc4:
+
+- punto: el episodio de Ampíes
+  lo_que_dc4_ya_verifico: >-
+    la carta del factor Juan de Ampíes al Rey (c. 1525-26, Arcaya 1920
+    pp. 160-161 y 166-167): los de la costa «muchas veces se pasaban allá» a
+    Curazao, Aruba y Bonaire; Manaure mandó embajada con D. Juan Baracoica,
+    «su pariente y deudo, que está en las islas»; una armada se llevó a su hija
+    y a su marido a La Española y Ampíes los devolvió.
+  que_le_anade_T7: >-
+    **una corrección de alcance, y está a favor de la mitad del argumento.** El
+    tramo costa ↔ ABC no es contacto entre dos mundos: es movimiento **dentro
+    de la misma polity**. Oliver es literal —«the largest contiguous territory
+    under a single Caquetío polity comprised, at the time of Contact, the
+    coastal plains of what is today the State Falcón, Venezuela, **including
+    the Netherland Antilles**»— y esta parcela lo ve desde el otro lado, en el
+    primer paso europeo por esa agua: Hojeda, La Cosa y Vespucio recorren en
+    agosto de 1499 Coro → Curazao → cabo de San Román → golfo de Coquibacoa
+    como un solo tramo de costa (t7.kak1). Que Baracoica viva en las islas y
+    sea «pariente y deudo» de Manaure **prueba que la esfera cruza el agua**;
+    no prueba nada sobre los taínos.
+  por_tanto: >-
+    el argumento de Miguel se apoya en dos tramos de distinta naturaleza: el
+    primero (costa ↔ ABC, con parentesco) es sólido y es de la esfera; el
+    segundo (islas ↔ La Española) es de barcos castellanos y de 1513-1526. El
+    salto a precolombino se apoya entero en el segundo.
+
+- punto: el salto a antes de 1499 — que es lo que esta parcela tenía que buscar
+  lo_que_encontre_a_favor: >-
+    **una sola cosa, y es buena**: el 12 de diciembre de 1492, antes de que
+    ningún europeo hubiera bajado al sur, los indios lucayos que Colón llevaba
+    a bordo sostuvieron que detrás de La Española había una tierra **que no
+    estaba cercada de agua**, le dieron nombre —«Caritaba ó Caribana»— y
+    dijeron que su gente les hacía daño (t7.s1). Es noticia indígena, es
+    anterior a los europeos, y es exactamente la dirección que el argumento de
+    Miguel necesita. **Lo que no hace es localizar la tierra**, y el propio Las
+    Casas descuenta cuánto de eso se entendía (t7.s2).
+  lo_que_encontre_en_contra: >-
+    en Paria, agosto de 1498, en el punto más occidental de Tierra Firme al que
+    Colón llegó y con gente de las islas a bordo, **no se entendieron**, y lo
+    escribió él (t7.l1). Y en los tres libros de Anglería que narran Paria,
+    Curiana y Pinzón no aparece la palabra «intérprete» ni una vez, mientras sí
+    aparece once veces en los libros de las islas (t7.l2).
+  lo_que_no_es_una_contradiccion: >-
+    ⚠️ y aquí está el punto analítico de esta parcela. Que `datihao` sea
+    compartida por taíno y caquetío **no se rompe** porque en Paria no se
+    entendieran: las dos cosas juntas son la firma de una **cadena**, no de una
+    vecindad. Una institución y su nombre viajan de tramo en tramo sin que los
+    extremos se hablen — y Anglería lo dice de las ferias de Curiana con todas
+    las letras: se comercia «**pero de cerca**», y el oro aleado «**se les
+    llevan de otras partes á cambio**» (t7.l6). El modelo que el material
+    aguanta es el de eslabones cortos, no el del viaje largo.
+
+- punto: datihao y diao
+  lo_que_dc4_ya_verifico: >-
+    `diao` es otro lexema, con atestación caquetía propia; `datihao` tiene dos
+    atestaciones en Oviedo —San Juan (t. I p. 473) y «los indios de la
+    Provincia de Venezuela» (otro tomo, vía Jahn 1927 p. 213 n. 29)— y Oliver
+    (n. 42, p. 146) concluye que fue «equally shared by both Taíno and
+    Caquetío».
+  que_le_anade_T7: >-
+    **las dos atestaciones no valen lo mismo, y se separan justo por el eje de
+    esta parcela: quién tradujo.** Ver t7.d1. La de San Juan llega por un
+    intérprete con nombre, oficio y competencia declarada por el cronista; la
+    de Venezuela el proyecto **no la ha visto** (está en un tomo que no
+    tenemos, y se cita por Jahn). Antes de llamarlo «cognado que hace match»
+    conviene que las dos estén leídas.
+  y_una_cosa_mas: >-
+    Oviedo **define** el guanín en el volumen que sí tenemos, y lo define como
+    metal, no como oro (t7.g7). Eso ordena todo el §1 de esta propuesta.
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. LAS CINCO PREGUNTAS, CON PÁGINA CADA UNA
+# ══════════════════════════════════════════════════════════════════════
+
+hallazgos:
+
+# ── PREGUNTA 1: EL GUANÍN ────────────────────────────────────────────
+- id: t7.g1
+  pregunta: 1-guanin
+  titulo: Qué es el guanín, dicho por quien lo tenía delante
+  cita: >-
+    «Toda cosa de laton estimaban en más que otra ninguna… llamábanle turey,
+    como á cosa del cielo, porque al cielo llamaban turey; olíanlo luego como
+    si en olerlo sintieran que venia del cielo… y así hacian á **una especie
+    de oro bajo que tenia la color que tiraba á color algo morada, y que ellos
+    llamaban guanin**, por el olor cognoscian ser fino y de mayor estima.»
+  obra: las-casas-1875
+  pagina: "lib. I, cap. LX — pdf 456; impresa ~402 (ancla por capítulo: 6-fusion/scripts/mapa_capitulos_las_casas.py)"
+  clase: noticia-indigena-recogida
+  epoca: contacto-temprano
+  fecha_del_hecho: diciembre de 1492, La Navidad (La Española)
+  fuerza: alta
+  por_que: >-
+    define la palabra y el objeto por el criterio de los propios taínos (el
+    olor, el color morado) y explica por qué el latón español entró tan bien:
+    ocupaba el sitio del guanín. Es la base de todo lo demás.
+
+- id: t7.g2
+  pregunta: 1-guanin
+  titulo: Los taínos decían que el guanín venía de fuera — y Las Casas les corrige
+  cita: >-
+    «dijóle de una isla que se llamaba Matinino, que tenia mucho oro… **como
+    lo que aquí dice que entendia haber isla que llamaba Guanin, donde habia
+    mucho oro, y no era sino que habia en alguna parte guanin mucho**, y esto
+    era cierta especie de oro bajo que llamaban guanin, que es algo morado, el
+    cual cognoscen por el olor y estímanlo en mucho.»
+  obra: las-casas-1875
+  pagina: "lib. I, cap. LXVII — pdf 493; impresa ~435 (ancla por capítulo)"
+  clase: noticia-indigena-recogida + inferencia-del-cronista
+  epoca: contacto-temprano
+  fecha_del_hecho: 13 de enero de 1493, golfo de las Flechas (Samaná)
+  fuerza: media
+  por_que: >-
+    el dato indígena es que el guanín venía de OTRO SITIO; el nombre de ese
+    sitio no se sostiene, y **el propio Las Casas lo dice**: no había isla
+    llamada Guanín, hubo un malentendido. Sirve para «de fuera», no para
+    «de dónde».
+  aviso: >-
+    ⚠️ aquí Las Casas parafrasea el Diario de Colón, que él mismo transcribió.
+    El Diario y esta página son **el mismo testigo** (skill §8).
+
+- id: t7.g3
+  pregunta: 1-guanin
+  titulo: >-
+    🔴 Colón, de su mano, en Paria: el oro bajo venía de una TIERRA ALTA al
+    poniente, no de una isla
+  cita: >-
+    «muchos traían **piezas de oro bajo** colgado al pescuezo… Procuré mucho
+    de saber donde cogían aquel oro, y **todos me aseñalaban una tierra
+    frontera dellos al Poniente, que era muy alta, mas no lejos**; mas todos
+    me decian que no fuese allá porque allí comían los hombres, **y entendí
+    entonces que decian** que eran hombres caríbales, é que serian como los
+    otros, **y después he pensado que podría ser que lo decian porque allí
+    habría animalias**.»
+  obra: navarrete-1859-viages-colon
+  pagina: '401 (Relación del tercer viaje, de Colón a los Reyes)'
+  clase: noticia-indigena-recogida
+  epoca: contacto-temprano
+  fecha_del_hecho: agosto de 1498, golfo de Paria
+  fuerza: alta
+  por_que: >-
+    es **el primario**, no una paráfrasis: la letra de Colón. Y trae su propia
+    reserva epistémica («entendí entonces que decían… y después he pensado»),
+    que es lo que hace citable el resto.
+  consecuencia: >-
+    el guanín que tenía la gente de Paria no venía, según ellos, de ninguna
+    isla: venía de una tierra alta al OESTE y cerca. Eso apunta al interior
+    continental, en la misma dirección que el Cauchieto de Anglería y que los
+    talleres del istmo.
+
+- id: t7.g4
+  pregunta: 1-guanin
+  titulo: >-
+    ⚠️ Y la paráfrasis de su hijo dice «islas» donde el padre dijo «tierra» —
+    medido
+  cita: >-
+    «los indios traían al cuello más espejos que los antecedentes, y **muchos
+    guaninis, que es oro muy bajo, el cual decían que nacía en otras islas
+    occidentales pobladas de gente que come hombres**…»
+  obra: colon-hernando-1892
+  pagina: '57'
+  clase: noticia-indigena-recogida (transmitida)
+  epoca: contacto-temprano
+  fuerza: baja
+  por_que: >-
+    contradice al primario en la única palabra que importa para esta parcela.
+    Colón escribió «una tierra frontera dellos al Poniente, que era muy alta»;
+    Anglería, que parafrasea el mismo papel, escribe «ciertos montes de
+    enfrente» (vol. 1, p. 272) — los dos dicen TIERRA. Hernando dice ISLAS.
+    Su texto pasó por el italiano de Ulloa (1571).
+  regla: >-
+    donde el primario está disponible, la paráfrasis no suma atestación: la
+    resta. Si alguien vuelve a leer que «los de Paria decían que el guanín
+    venía de las islas», que sepa que eso sale de aquí y no de Colón.
+
+- id: t7.g5
+  pregunta: 1-guanin
+  titulo: 🔴 `guanín` es palabra de TIERRA FIRME en Anglería — pero en Cumaná, no en Coro
+  cita: >-
+    «lo guardan hasta la venida de los mercaderes, que acuden en su busca como
+    se acude á las ferias ó mercados. Llevan grano de maíz, esclavos, oro ó
+    alhajas de oro, **que ellos llaman guanines**, para adquirir este polvo…»
+    · y «otros se cuelgan al pecho planchas de oro **que llaman guanines**»
+  obra: angleria-1892
+  pagina: 'vol. 4, pp. 335-336 y 364'
+  clase: noticia-indigena-recogida
+  epoca: colonial
+  fecha_del_hecho: c. 1520-1525, Chiribichi / Cumaná (costa ORIENTAL de Venezuela)
+  fuerza: media
+  por_que: >-
+    Anglería atribuye la voz a ellos dos veces («que ELLOS llaman»,
+    «que llaman»), y la pone dentro de una feria donde el guanín es mercancía
+    corriente. Que la misma palabra taína nombre el mismo objeto en Tierra
+    Firme es exactamente la clase de dato que buscaba esta campaña.
+  aviso: >-
+    ⚠️ **pero no cierra nada**, por tres razones que se declaran: (a) Anglería
+    nunca estuvo allí — lo oyó de los frailes franciscanos de Chiribichi, que
+    pasaron por La Española; es el vector 1 de Oliver (la voz taína llevada
+    por el español) con otra cara; (b) es COLONIAL, no precontacto; (c)
+    Chiribichi está a unos 800 km al este de Coro: es la esfera oriental, no
+    la Kaketiana.
+
+- id: t7.g6
+  pregunta: 1-guanin
+  titulo: Dónde SÍ se hacía el guanín — la orfebrería del istmo
+  cita: >-
+    «los indios en la ribera desnudos como nacieron, y solo tenían un espejo
+    de oro al cuello y algunos traían **una Águila de Guanin**… dijeron haber
+    gran abundancia de aquel oro y que **se cogía en la tierra firme muy cerca
+    de ellos**… fueron presos dos de los más principales para que el Almirante
+    se informase de ellos, **por medio de sendos intérpretes**»
+  obra: colon-hernando-1892
+  pagina: '165 (cuarto viaje, canal de Zerabora, Panamá); cf. pp. 158-160 (Cariai)'
+  clase: noticia-indigena-recogida
+  epoca: contacto-temprano
+  fecha_del_hecho: octubre de 1502
+  fuerza: alta
+  por_que: >-
+    en Veragua el guanín es local, abundante y trabajado en formas (águilas,
+    espejos, agujillas), y allí los indios dicen que el oro se coge cerca. Es
+    la tradición ístmico-colombiana de la *tumbaga*: el sitio donde el objeto
+    se HACE, no donde se recibe.
+  consecuencia: >-
+    con g3 y g6 juntos, el guanín de las Antillas y el de Paria apuntan al
+    mismo foco lejano, al oeste-suroeste. Ninguno de los dos apunta al otro.
+  aviso: >-
+    ⚠️ y aquí **sí había intérpretes**: es el contraste que hace medible el
+    silencio de Paria y Curiana.
+
+- id: t7.g7
+  pregunta: 1-guanin
+  titulo: >-
+    🔴 Oviedo DEFINE el guanín, y lo define como cobre dorado — en un volumen
+    que ya estaba en el repo
+  cita: >-
+    «trayan unos **guanines** que se ponen en las orejas é unas patenas
+    redondas de **guanin**, é dixeron que no tenian otro oro alguno sino
+    aquello… pero **porque el letor entienda qué cosas son guanines, para
+    adelante digo que son pieças de cobre doradas; é si algund oro tienen, es
+    muy poco ó ninguno**.»
+  obra: oviedo-y-valdes-1851
+  pagina: 'lib. XVII, cap. IX — impresa 507 (pdf 625; desfase declarado: impresa = pdf − 118)'
+  clase: inferencia-del-cronista (la definición) sobre un hecho observado
+  epoca: contacto-temprano
+  fecha_del_hecho: 1518, viaje de Grijalva por la costa de Yucatán
+  fuerza: alta para la definición
+  por_que: >-
+    es la definición técnica del objeto por el cronista que era además
+    veedor de fundiciones: **cobre dorado**, poco o nada de oro. Ordena todo lo
+    demás — el «oro bajo» de Colón, el «oro aunque no puro… como el alemán de
+    que se acuñan los florines» de Anglería y el «color algo morada» de Las
+    Casas son el mismo objeto.
+  aviso: >-
+    ⚠️ **y es también la prueba del vector 1 de Oliver, en el acto.** El pasaje
+    es de **Yucatán**, y Oviedo aplica ahí, sin pestañear, una palabra
+    antillana a unos objetos mayas — con un intérprete español de por medio
+    («Julián la lengua»). Que un cronista llame `guanín` a algo **no atestigua
+    que allí se llamara así**. Eso rebaja, y no poco, el peso de las dos
+    apariciones de Chiribichi (t7.g5): un cronista que hace esto en Yucatán
+    puede estar haciéndolo en Cumaná.
+  medido: >-
+    `guanin` sale **3** veces en el vol. I de Oviedo —impresas 480 y 507— y
+    `cobre doradas` **1**, en la 507. Extraído con MuPDF en modo reparación (el
+    PDF está truncado; el método lo dejó escrito la primera campaña en
+    `4-fuentes/oviedo-y-valdes-1851.md`) y medido por el mismo script que el
+    resto, que lo lleva como sexta obra.
+
+- id: t7.g8
+  pregunta: 1-guanin
+  titulo: El guanín colgado del pecho de un cacique de Boriquén, 1511
+  cita: >-
+    «un caçique que vido salir de la batalla huyendo, é llevaba en los pechos
+    **un guanin ó pieça de oro de las que suelen los indios principales
+    colgarse al cuello**»
+  obra: oviedo-y-valdes-1851
+  pagina: 'lib. XVI — impresa 480 (pdf 598)'
+  clase: hecho observado
+  epoca: contacto-temprano
+  fuerza: media
+  por_que: >-
+    fija el uso taíno del objeto —insignia de principal, al cuello o al pecho—
+    en el mismo volumen y por el mismo cronista que lo define. Es el mismo uso
+    que Hernando Colón describe en Cariai y en Veragua y que Anglería describe
+    en Chiribichi: **el objeto y su función son los mismos en las tres
+    orillas.** Lo que no consta es por dónde viajó.
+
+# ── PREGUNTA 2: LO QUE LOS ISLEÑOS DECÍAN DEL SUR ────────────────────
+- id: t7.s1
+  pregunta: 2-lo-que-los-isleños-decian-del-sur
+  titulo: 🔴 Los lucayos nombraron una tierra que NO estaba rodeada de agua
+  cita: >-
+    «le decian los indios, que consigo traia, que por allí se habia de ir para
+    la isla de Babeque… Decian más, **cuanto el Almirante creia que entendia**,
+    que la isla de Bohío, que era esta Española, era mayor que la isla Juana…
+    **Parece que los indios dichos daban á entender que el Babeque era tierra
+    firme, porque decian que no estaba cercada de agua, y que estaba detras
+    desta isla Española, la cual llamaban Caritaba ó Caribana, que era como
+    cosa infinita**; y á mi parecer, que, cierto lo decian por tierra firme, y
+    que **debian tener noticia de la tierra firme**… Dice aquí el Almirante,
+    que le parece que tienen razon en nombrar tanto á Babeque, y por otro
+    nombre á Caribana, porque **debian de ser trabajados de la gente della**»
+  obra: las-casas-1875
+  pagina: "lib. I, cap. LIII — pdf 417; impresa ~369 (ancla por capítulo)"
+  clase: noticia-indigena-recogida + inferencia-del-cronista
+  epoca: contacto-temprano
+  fecha_del_hecho: 11-12 de diciembre de 1492, Puerto de la Concepción (La Española)
+  fuerza: alta para «tenían noticia», baja para «de dónde»
+  por_que: >-
+    **es el mejor apoyo que esta parcela encontró para la hipótesis de
+    Miguel.** Indios lucayos, nacidos en las Bahamas, sostuvieron ante Colón
+    que detrás de La Española había una tierra grande que no estaba rodeada de
+    agua, le dieron nombre, y dijeron que su gente les hacía daño. Que sea
+    noticia indígena lo dice el texto; que sea anterior a los europeos es
+    inevitable: era el 12 de diciembre de 1492.
+  aviso: >-
+    ⚠️ lo que NO sostiene: (a) la identificación del lugar — `Caribana` es la
+    punta oriental del golfo de Urabá (Darién) en la cartografía posterior
+    (`navarrete-1829-viages-menores`, p. 21), y usar ESA identificación aquí
+    sería proyectar hacia atrás un nombre que los españoles fijaron después;
+    (b) que sea contacto DIRECTO: «ser trabajados de la gente della» describe
+    razzias recibidas, que es contacto por el extremo violento de la cadena,
+    no comercio; (c) el propio Las Casas escribe «cuanto el Almirante creia
+    que entendia».
+  ver_tambien: t7.l1
+
+- id: t7.s2
+  pregunta: 2-lo-que-los-isleños-decian-del-sur
+  titulo: Y Las Casas mide de una vez cuánto de esas noticias valía
+  cita: >-
+    «á la cual señalaban los indios llamarse Bohío… y que habia, diz que, en
+    ella gente que tenia en la frente un ojo, y otros que llamaban caníbales, á
+    quien mostraban tener gran miedo… **De donde parece, que ninguna ó cuasi
+    ninguna cosa les entendian**, porque, en esta isla, ni nunca hobo gente de
+    un ojo, ni caníbales que comiesen los hombres…»
+  obra: las-casas-1875
+  pagina: "lib. I, cap. XLVII — pdf 391; impresa ~346 (ancla por capítulo)"
+  clase: inferencia-del-cronista
+  epoca: contacto-temprano
+  fuerza: alta como CONTROL
+  por_que: >-
+    es el aviso que el propio transmisor pone sobre todo lo demás, y lo pone
+    con un caso comprobable: lo que Colón entendió de aquella seña era
+    falsable y resultó falso. Cualquier noticia indígena de esta serie se lee
+    con este descuento delante.
+
+- id: t7.s3
+  pregunta: 2-lo-que-los-isleños-decian-del-sur
+  titulo: El oro de los isleños también estaba siempre en otra isla
+  cita: >-
+    «Dijo al Almirante que mañana traeria una carátula de oro, **afirmando que
+    allí habia mucho, y en otras islas, como Carib y Matinino**»
+  obra: las-casas-1875
+  pagina: "lib. I, cap. LXVII — pdf 496; impresa ~437 (ancla por capítulo)"
+  clase: noticia-indigena-recogida
+  epoca: contacto-temprano
+  fecha_del_hecho: 14 de enero de 1493, Samaná
+  fuerza: media
+  por_que: >-
+    tres veces seguidas (g2, s3) el oro de los taínos está en otro sitio
+    nombrado y nunca visitado. El patrón es real y es información; la
+    geografía que sale de él, no.
+
+- id: t7.s4
+  pregunta: 2-lo-que-los-isleños-decian-del-sur
+  titulo: La dirección que sí señalaron con el dedo fue el SURESTE
+  cita: >-
+    «señaláronle los indios que la isla, ó de Sant Juan, ó de Matinino, ó de
+    Carib, á la cual, diz que, mucho, **todas las gentes destas tierras
+    temian, porque comian los hombres, quedaba á la parte del Sueste**»
+  obra: las-casas-1875
+  pagina: "lib. I, cap. LXVIII — pdf 498; impresa ~439 (ancla por capítulo)"
+  clase: noticia-indigena-recogida
+  epoca: contacto-temprano
+  fecha_del_hecho: 16 de enero de 1493, saliendo de Samaná
+  fuerza: media
+  por_que: >-
+    es una dirección señalada desde cubierta, no un topónimo mal oído. Y apunta
+    al arco de las Antillas Menores — la cadena—, no al sur abierto.
+
+# ── PREGUNTA 3: LO QUE LA COSTA DECÍA DEL NORTE, Y LA LENGUA ─────────
+- id: t7.l1
+  pregunta: 3-y-4-la-costa-y-la-lengua
+  titulo: 🔴🔴 Colón, de su mano, en Paria — «no se entendían»
+  cita: >-
+    «los llevaron á una casa muy grande hecha á dos aguas… y hicieron traer
+    pan, y de muchas maneras frutas é vino… **Recibieron ambas las partes gran
+    pena porque no se entendían, ellos para preguntar á los otros de nuestra
+    patria, y los nuestros por saber de la suya.**»
+  obra: navarrete-1859-viages-colon
+  pagina: '400 (Relación del tercer viaje)'
+  clase: hecho-colonial (la observación) sobre una realidad lingüística
+  epoca: contacto-temprano
+  fecha_del_hecho: agosto de 1498, costa sur de Paria
+  fuerza: alta, con una reserva grande
+  por_que: >-
+    **es el único sitio de toda la serie donde la inteligibilidad se somete a
+    prueba y se anota el resultado.** Colón venía de dos años en La Española y
+    llevaba gente de las islas a bordo; en el punto más occidental de Tierra
+    Firme al que llegó, la conversación no se pudo tener. Anglería lo
+    parafrasea («Les molestaba mucho el no poder entender á los nuestros ni
+    ser ellos entendidos», vol. 1, p. 273) — es el mismo testigo, no un
+    segundo.
+  aviso: >-
+    ⚠️ **lo que el texto NO dice**, y no se le puede hacer decir: no dice que
+    hubiera intérpretes taínos en las barcas y que fracasaran. Dice que «los
+    nuestros» y «ellos» no se entendieron. Como evidencia de que el taíno no
+    servía en Paria es fuerte por contexto, no por letra.
+  ver_tambien: t7.l2
+
+- id: t7.l2
+  pregunta: 3-y-4-la-costa-y-la-lengua
+  titulo: >-
+    El negativo medido: Anglería nombra al intérprete 11 veces y ninguna en los
+    libros de Paria y Curiana
+  medido: >-
+    `intérprete` en `angleria-1892` vol. 1: 11 aciertos, en las pp. impresas
+    39, 111, 126, 141, 143, 144, 182, 188, 198, 200 y 208 — **todas en los
+    libros de La Española y Cuba**. En los libros VII-IX, que narran el tercer
+    viaje (Paria), el de Niño y Guerra (Curiana) y el de Pinzón: **cero**.
+    Control: en el mismo volumen `lengua` sale 17 veces, `entend` 26 y
+    `por señas` 8, dos de ellas dentro de los libros de Paria (pp. 268-269) y
+    una en Curiana (p. 306).
+  obra: angleria-1892
+  pagina: 'vol. 1, barrido completo (460 pp.)'
+  clase: inferencia-del-cronista (por ausencia, con control)
+  epoca: contacto-temprano
+  fuerza: media-alta
+  por_que: >-
+    Anglería NOMBRA al intérprete cuando lo hay y dice cómo de bien entendía —
+    «sirviendo de intérprete Diego, **cuyo idioma era casi semejante al de
+    éstos**» (p. 182, en Cuba), «por medio del intérprete Diego Colón, **que
+    entendía aquel idioma**» (p. 198). Que no lo nombre ni una vez en los tres
+    libros de Tierra Firme, mientras ahí sí escribe «por señas», es un silencio
+    con forma.
+  contraprueba_interna: >-
+    y sabe decir también el fracaso dentro de las islas: en La Navidad, el
+    hermano de Guacanagarí «habló en su lengua… pero, **como no había
+    intérpretes, no entendieron lo que decía**» (p. 144). No es que el género
+    no registre estas cosas: es que en Paria y Curiana no hubo qué registrar.
+
+- id: t7.l3
+  pregunta: 3-y-4-la-costa-y-la-lengua
+  titulo: Cómo se supo el nombre de Paria — por señas
+  cita: >-
+    «acuden presurosos á los nuestros sin miedo alguno con anhelo de verles,
+    de los cuales **coligieron por señas** que aquella tierra se llamaba
+    Paria, que era muy grande, y cuanto más al Occidente tanto más poblada
+    estaba.»
+  obra: angleria-1892
+  pagina: 'vol. 1, p. 268'
+  clase: hecho-colonial
+  epoca: contacto-temprano
+  fuerza: media
+  por_que: >-
+    el topónimo mejor establecido de todo el tercer viaje se obtuvo por gestos.
+    Es la medida práctica de cuánto pesan las demás «noticias» de ese mes.
+  aviso: >-
+    ⚠️ Hernando Colón dice en cambio «de éstos **se supo** que aquella tierra
+    se llamaba Paria» (p. 58), sin decir cómo. Misma escena, dos grados de
+    precisión.
+
+- id: t7.l4
+  pregunta: 3-y-4-la-costa-y-la-lengua
+  titulo: En Curiana, en 1499, también por señas — y el negativo que lo acompaña
+  cita: >-
+    «Pero Niño, viendo que había innumerable muchedumbre de ellos, y que él
+    sólo tenía consigo treinta y tres hombres, no se atrevió á entregarse á
+    ellos, sino que **con gestos y señas les dio á entender** que se le
+    acercaran con sus canoas.»
+  obra: angleria-1892
+  pagina: 'vol. 1, p. 304'
+  clase: hecho-colonial
+  epoca: contacto-temprano
+  fecha_del_hecho: 1499-1500, viaje de Pero Alonso Niño y Cristóbal Guerra
+  fuerza: media
+  medido: >-
+    y en el relato completo de los viajes menores —Hojeda 1499, Niño y Guerra
+    1499-1500, Hojeda 1502— que ocupa el tramo de `navarrete-1829-viages-menores`
+    donde caen 18 de los 28 aciertos de `curiana`, 14 de los 23 de `guanin` y
+    6 de los 16 de `coquibacoa`: **`intérprete` cero**, sobre 19 aciertos en el
+    volumen entero, y `lengua` **una** sola vez, que es el español Juan de
+    Buenaventura, a quien Bastidas dejó en Santa Marta y «había permanecido
+    **trece meses** tratando con los indios y aprendiendo su lengua» (p. 34).
+  por_que: >-
+    el único hombre que en toda la costa entiende a los indios en 1502 es un
+    español que se quedó trece meses a aprender. Nadie llevó un intérprete de
+    las islas que sirviera.
+
+- id: t7.l5
+  pregunta: 3-y-4-la-costa-y-la-lengua
+  titulo: >-
+    🔴 Y a los de Curiana el oro les venía del OESTE, no del norte: la red que
+    describen es costera y continental
+  cita: >-
+    «Preguntados los curianenses de dónde conseguían aquel oro, indicaban que
+    lo traen de cierta región llamada **Cauchieto**, que distaba **hacia el
+    Occidente**, por costa derecha, **seis soles**, esto es, camino de seis
+    días» · «También éstos llevaban perlas al cuello, pero se les
+    proporcionaban de **Curiana á cambio de oro**»
+  obra: angleria-1892
+  pagina: 'vol. 1, pp. 310-311'
+  clase: noticia-indigena-recogida
+  epoca: contacto-temprano
+  fuerza: alta
+  ya_en_el_repo: >-
+    sí — lo trajo la primera campaña (T5, `4-fuentes/angleria-1892.md`
+    §2026-09-21). Se repite aquí porque **cambia de significado** con el
+    hallazgo lateral de abajo.
+
+- id: t7.l6
+  pregunta: 3-y-4-la-costa-y-la-lengua
+  titulo: >-
+    Las ferias de Curiana eran de CERCA — dicho por Anglería en la misma
+    página en que dice que el oro venía de fuera
+  cita: >-
+    «Tienen orzas, cántaros, ollas y demás utensilios de varias clases de
+    alfarería, **compradas de otra parte**. Pues celebran sus ferias entre sí,
+    á las cuales cada vecino, por lograr algo de otras partes, lleva de los
+    productos de su región, **pero de cerca**…» · «Unían á las perlas avecillas
+    y otros muchos animales primorosamente formados de oro, **aunque no puro**,
+    pero **se les llevan de otras partes á cambio**, pues aquel oro es como el
+    alemán de que se acuñan los florines.»
+  obra: angleria-1892
+  pagina: 'vol. 1, pp. 308-309'
+  clase: noticia-indigena-recogida (la feria) + inferencia-del-cronista («de cerca»)
+  epoca: contacto-temprano
+  fuerza: media
+  por_que: >-
+    dos cosas en dos frases. (a) El objeto de oro aleado —guanín sin usar la
+    palabra: «aunque no puro… como el alemán de que se acuñan los florines»—
+    está en Curiana y **viene de fuera**, lo que confirma l5 desde otro ángulo.
+    (b) El alcance del mercado local se declara **corto**. Un sistema de ferias
+    de corto radio encadenadas es justamente cómo un objeto viaja lejos sin que
+    nadie haga el viaje: es el modelo de cadena, y es lo más que esta fuente da.
+
+- id: t7.d1
+  pregunta: 3-y-4-la-costa-y-la-lengua
+  titulo: >-
+    🔴 `datihao` en San Juan llega por un intérprete con nombre, oficio y
+    competencia declarada — y la gemela de Venezuela no la ha visto nadie
+  cita: >-
+    «é cómo llegó luego Agueybana, **dixo la lengua, en el lenguaje de los
+    indios**: "Señor, ¿por qué me mandas matar? Yo te serviré é seré tu
+    naboría"; y entonces dixo el cacique: "Adelante, adelante, **á mi dalihao
+    (que quiere decir mi señor, ó el que, como yo, se nombra)**, dexa ese
+    bellaco."»
+  obra: oviedo-y-valdes-1851
+  pagina: 'lib. XVI, cap. V — impresa 473 (pdf 591)'
+  clase: noticia-indigena-recogida, por intérprete nombrado
+  epoca: contacto-temprano
+  fecha_del_hecho: 1511, Boriquén (isla de San Juan)
+  fuerza: alta para el pasaje, con una reserva de grafía
+  por_que: >-
+    **la calidad probatoria de esta atestación es la mejor de toda la serie, y
+    lo es justo por el eje de esta parcela.** Quien habla es Johan González, a
+    quien Oviedo llama dos veces «la lengua» y una «**grande lengua**»: un
+    español que sabía boriquén lo bastante para infiltrarse desnudo y pintado
+    en un areíto y entender lo que se cantaba. Y la glosa que Oviedo da —«**el
+    que, como yo, se nombra**»— es la del intercambio de nombres, es decir la
+    institución (el *guatiao*), no un simple título.
+  aviso_de_grafia: >-
+    ⚠️ la capa de texto lee **`dalihao`**, no `datihao`: es la confusión l/t
+    del OCR que la campaña de Oviedo ya había marcado como urgente
+    (`6-fusion/taino_oviedo_valdes_1851.yaml`), y **la imagen escaneada de este
+    PDF no llega a la p. 473**. Medido hoy sobre el volumen entero: `datihao`
+    **0** · `datiao` **0** · `guatiao` **0** · `tiao` **0** · `dalihao` **1**,
+    en la impresa 473 — el único portador de la forma en las 766 páginas.
+    **La forma no se cita hasta verla en otra copia.**
+    Lo que sí se puede citar sin reserva es el pasaje, la glosa y quién tradujo.
+  que_le_hace_a_dc4: >-
+    dc.4 pone las dos atestaciones de Oviedo en pie de igualdad («San Juan» y
+    «los indios de la Provincia de Venezuela»). No lo están: **ésta se puede
+    leer y pesar; la otra está en un tomo que el repo no tiene y llega por Jahn
+    1927 p. 213 n. 29.** Antes de llamarlo «cognado que hace match», leer la
+    segunda.
+
+# ── PREGUNTA 4: LOS KALINAGO COMO INTERMEDIARIOS ─────────────────────
+- id: t7.k1
+  pregunta: 4-kalinago
+  titulo: Una cabeza de caribe clavada en una puerta de Curiana
+  cita: >-
+    «**En la Curiana encontraron la cabeza de un caníbal clavada en la puerta
+    de cierto principal**, cual bandera ó yelmo tomado al enemigo y conservado
+    cual preclaro timbre.»
+  obra: angleria-1892
+  pagina: 'vol. 1, p. 315'
+  clase: hecho-colonial (lo vieron) sobre una relación anterior
+  epoca: contacto-temprano, describiendo un estado previo
+  fuerza: alta para «los caribes llegaban allí», nula para «los caribes llegaban a Coro»
+  por_que: >-
+    el trofeo estaba ahí antes de que llegara la nave: documenta que los de
+    Curiana y los caribes se encontraban, y que no era la primera vez. Lo que
+    NO documenta es dónde queda Curiana — ver el hallazgo lateral.
+
+- id: t7.k2
+  pregunta: 4-kalinago
+  titulo: Quiénes eran y hasta dónde llegaban, según los dominicos de Chiribichi
+  cita: >-
+    «Afirman que los habitantes de estas regiones son caribes ó caníbales,
+    comedores de carne humana… Se sabe que **salen á caza de hombres en flotas
+    de barquillas de un solo madero, recorriendo innumerables islas**, como
+    otros salen por los bosques y las selvas á matar ciervos y jabalíes.
+    **Carib, en todas las lenguas de aquellos países, es lo mismo que más
+    fuerte que los demás**; caribes lo mismo, y ninguno de los insulares
+    pronuncia este nombre sin miedo. Se llaman también caribes **de la región
+    caribana, situada en la parte oriental de Urabá**, desde donde se extendía
+    esta clase de hombres feroces por dilatadas regiones.»
+  obra: angleria-1892
+  pagina: 'vol. 4, p. 331'
+  clase: noticia-indigena-recogida (la glosa de `carib`) + inferencia-del-cronista
+  epoca: colonial
+  fuerza: media
+  por_que: >-
+    tres datos en un párrafo: (a) `carib` glosado como 'más fuerte que los
+    demás' **en todas las lenguas de aquellos países** — una voz areal, no de
+    una etnia; (b) el radio de acción es de islas, en flotas; (c) sitúa
+    `Caribana` en el oriente de Urabá, que es donde la ponen los derroteros
+    (`navarrete-1829-viages-menores` p. 21, «punta Caribana… golfo de Urabá»).
+  consecuencia_para_s1: >-
+    ⚠️ y aquí hay que frenar. Que los lucayos nombraran `Caritaba ó Caribana`
+    en 1492 y que los frailes sitúen `Caribana` en Urabá en 1520 **parece** una
+    corroboración y probablemente no lo es: entre las dos hay treinta años de
+    españoles fijando el nombre. Anotarlo como convergencia sugestiva, no como
+    dos atestaciones (skill §8).
+
+- id: t7.k3
+  pregunta: 4-kalinago
+  titulo: Cuánta mar cubría una flota caribe
+  cita: >-
+    «se encontraron á los caníbales con **una armada de canoas que habían
+    navegado en ordenada formación, muchas millas desde sus confines á caza de
+    hombres**. Las canoas son sus lanchas unilígneas (en griego monoxilon), que
+    á veces son **capaces de 80 remos**.»
+  obra: angleria-1892
+  pagina: 'vol. 4, p. 133'
+  clase: hecho-colonial (encuentro) + noticia sobre capacidad
+  epoca: colonial
+  fuerza: media
+  por_que: >-
+    fija la capacidad marinera del actor más móvil del Caribe en el siglo XVI:
+    formación, muchas millas, ochenta remos. Es lo que hace plausible una
+    cadena; no es evidencia de un tramo concreto.
+
+- id: t7.k4
+  pregunta: 4-kalinago
+  titulo: >-
+    ⚠️ La negativa: ninguna de las cinco obras pone caribes en las ABC ni en la
+    costa de Coro
+  medido: >-
+    `carib` + `caníbal` juntos: 54 aciertos en `angleria-1892` vol. 1, 15 en el
+    vol. 4, 22 en `las-casas-1875` vol. 1, 10 en `colon-hernando-1892`, 26 en
+    `navarrete-1829-viages-menores`. Leídos los pasajes de los tres primeros y
+    los del tramo de la Kaketiana del cuarto: ni uno los sitúa en Curazao,
+    Aruba, Bonaire, Paraguaná ni el Golfete. En Navarrete, el único encuentro
+    hostil en las ABC es el de Vespucio en la isla de los Gigantes, y no los
+    llama caribes.
+  clase: negativa-medida
+  epoca: contacto-temprano y colonial
+  fuerza: media
+  por_que: >-
+    el corpus del repo ya tenía a los caribes en Las Aves y Los Roques desde
+    1200 d.C. (Antczak 2017, vía T5). Estas cinco obras no los llevan más al
+    oeste. La negativa baja la prioridad de buscar el eslabón por ahí.
+
+# ── PREGUNTA 5: LA RUTA ──────────────────────────────────────────────
+- id: t7.r1
+  pregunta: 5-la-ruta
+  titulo: La cadena, descrita como cadena
+  cita: >-
+    «porque van **renclera de islas**, desde la de Sant Juan, que está obra de
+    25 ó 30 leguas desta Española, **hasta la de la Trinidad, que se apega con
+    la tierra firme de Paria**, bien, camino de 300 leguas, y que **cada noche,
+    yendo en un barco, pueden dormir en una dellas**»
+  obra: las-casas-1875
+  pagina: "lib. I, cap. LXVIII — pdf 498; impresa ~439 (ancla por capítulo)"
+  clase: inferencia-del-cronista
+  epoca: colonial (Las Casas escribe c. 1527-1561 sobre un hecho de 1493)
+  fuerza: alta para la geografía, nula para el uso indígena
+  por_que: >-
+    es la formulación explícita de la única ruta que estas fuentes conocen
+    entre las Antillas Mayores y Tierra Firme: **por el arco de las Menores, a
+    saltos**. Nadie describe una travesía directa.
+  aviso: >-
+    ⚠️ Las Casas habla de un barco español y de lo que él sabe en el siglo XVI.
+    Que la ruta EXISTA no dice que se recorriera, ni en qué sentido, ni cuándo.
+
+- id: t7.r2
+  pregunta: 5-la-ruta
+  titulo: Cómo eran las canoas de Paria, según quien las vio
+  cita: >-
+    «**Las canoas de ellos son muy grandes** y de mejor hechura que no son
+    estas otras, y mas livianas, y en el medio de cada una tienen **un
+    apartamiento como cámara** en que vi que andaban los principales con sus
+    mugeres.»
+  obra: navarrete-1859-viages-colon
+  pagina: '401 (Relación del tercer viaje)'
+  clase: hecho observado
+  epoca: contacto-temprano
+  fuerza: alta
+  por_que: >-
+    Colón compara explícitamente con las antillanas y dice que las de Paria son
+    mejores. Capacidad marinera continental documentada de primera mano, en
+    1498, por alguien que llevaba seis años mirando canoas caribeñas.
+
+- id: t7.r3
+  pregunta: 5-la-ruta
+  titulo: Un tronco vaciado hizo doscientas millas de mar abierto — en 1520
+  cita: >-
+    «Cortó una viga del árbol jaruma, y la vació sacándole el corazón; puso en
+    ella granos de maíz y calabazas llenas de agua… echó al mar la viga y se
+    subió en ella. Admitió á otro hombre y una mujer parientes suyos que sabían
+    nadar, y remando empujaron la viga hacia su patria… **á unas doscientas
+    millas dieron con una nave** que volvía de Chicora»
+  obra: angleria-1892
+  pagina: 'vol. 4, pp. 74-75'
+  clase: hecho-colonial
+  epoca: colonial
+  fuerza: media
+  por_que: >-
+    un lucayo deportado, con dos parientes y un tronco improvisado, iba por las
+    doscientas millas cuando lo interceptaron. No prueba ninguna ruta
+    precolombina; sí acota por abajo lo que es físicamente posible, que era una
+    de las dudas.
+
+- id: t7.r4
+  pregunta: 5-la-ruta
+  titulo: ⚠️ La negativa que cierra la pregunta 5
+  medido: >-
+    ninguna de las cinco obras describe una travesía —de nadie, en ningún
+    sentido, en ninguna época— entre Tierra Firme occidental o las ABC y las
+    Antillas Mayores por mar abierto. `curiana` sale 0 veces en
+    `las-casas-1875` vol. 1 y 0 en `colon-hernando-1892`; `coquibacoa` 0 en los
+    dos; `margarita` 0 en Las Casas. Los europeos que hicieron ese tramo
+    (Hojeda 1499 y 1502) lo hicieron **costeando**, y el propio pleito lo dice:
+    «descubrieron en la costa de Tierra firme hacia el poniente **desde los
+    Frailes é los Gigantes fasta la parte que agora se llama Coquibacoa**»
+    (`navarrete-1829-viages-menores`, p. 543, pregunta 5.ª del pleito).
+  clase: negativa-medida
+  fuerza: alta dentro de estas cinco obras
+  por_que: >-
+    el primer europeo que pasó por la Kaketiana lo hizo pegado a la costa, y
+    nadie —cronista, testigo o piloto— menciona que nadie más hiciera otra cosa.
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. EL HALLAZGO LATERAL — y es el que más mueve el repo
+# ══════════════════════════════════════════════════════════════════════
+hallazgo_lateral:
+  id: t7.x1
+  toca: 'issue #33 — ¿qué nombra «Curiana» en Anglería?'
+  titulo: >-
+    🔴 Navarrete resuelve las dos Curianas con un documento, y la de Anglería
+    NO es la de Coro
+  cita_1: >-
+    «Ambos llaman **tierra de Curiana**, que es el rescate de las perlas, **á
+    la costa que está enfrente de la Margarita, y comprende la costa de Cumaná
+    y golfo de Cariaco**. Comprueba esta situación de Curiana el artículo 1.º
+    de la capitulación que hizo Hojeda con los Reyes católicos, donde se le
+    previene "que no toque en la tierra del rescate de las perlas de esta parte
+    de Paria, desde el paraje de los Frailes, antes de la Margarita, fasta el
+    Farallón, **tierra que se llama Curiana**". Pedro Mártir dice que desde la
+    punta de Paria á Curiana hay ciento y veinte leguas, pero no llegan ni á
+    ciento. **Nuestros historiadores trastornaron este viage, porque ignoraron
+    la verdadera situación de Curiana.**»
+  cita_1_obra: navarrete-1829-viages-menores
+  cita_1_pagina: '13, nota 4'
+  cita_2: >-
+    «El P. Fr. Pedro Simón en su conquista de tierra firme dice, folio 667, que
+    **la ciudad de Coro está fundada en una provincia de indios llamada
+    Curiana**… que la fundó el año 1517 el capitán Juan de Ampíes, cerca del
+    pueblo que los indios llamaron Curiana… **Esta Curiana es distinta de la
+    que hemos hablado en la nota 4 de la pág. 13.**»
+  cita_2_obra: navarrete-1829-viages-menores
+  cita_2_pagina: '32, nota 3'
+  clase: inferencia-del-cronista, apoyada en documento primario
+  epoca: contacto-temprano
+  fuerza: alta
+  por_que: >-
+    no es la opinión de un erudito del XIX: se apoya en la **capitulación real
+    de Hojeda**, que delimita «Curiana» entre los Frailes y el Farallón, es
+    decir frente a Margarita. Navarrete además explica el error y cómo se
+    propagó.
+  consecuencia_para_el_repo: >-
+    ⚠️ **la cita de Anglería sobre Curiana ↔ Cauchieto —que la primera campaña
+    usó como "la forma de la red" del taíno en la esfera
+    (`4-fuentes/angleria-1892.md` §2026-09-21 y
+    `6-fusion/taino_en_la_esfera_2026-09-21.yaml`)— describe una red de la
+    costa ORIENTAL de Venezuela, a unos 400-800 km de Coro.** La conclusión de
+    T5 («la red es continental y de eje este-oeste») **se sostiene**; lo que
+    deja de sostenerse es que sea una red de la Kaketiana. Y hay una segunda
+    Curiana, la de Coro, atestiguada por Pedro Simón y por Ampíes 1517, que es
+    la que le importa a este proyecto.
+  lo_que_NO_resuelve: >-
+    no dice qué significa la palabra ni si las dos Curianas se llaman igual por
+    parentesco lingüístico o por coincidencia. Eso sigue abierto, y es de T4.
+  propuesta: >-
+    que Miguel decida si #33 se cierra con esto. Esta campaña **no lo cierra**:
+    lo deja medido.
+
+# ══════════════════════════════════════════════════════════════════════
+# 4. LO QUE LAS CINCO OBRAS APORTAN A LA KAKETIANA (que es poco, y es dato)
+# ══════════════════════════════════════════════════════════════════════
+la_kaketiana_en_estas_obras:
+
+- id: t7.kak1
+  titulo: El primer paso europeo por la Kaketiana, agosto de 1499
+  resumen: >-
+    Hojeda, Juan de la Cosa y Vespucio, tras 20 días en la ensenada de Coro,
+    pasan a **la isla de Curazao, que llamaron de los Gigantes**; de allí «á
+    una que juzgaron ser isla, distante diez leguas de la de Curazao, y en ella
+    vieron el Cabo que forma una península y llamaron **de S. Román**»
+    (Paraguaná); doblan el cabo y entran en «un gran golfo… Llamó Hojeda á este
+    Golfo de Venecia… **Los indios le llamaban Golfo de Coquibacoa**», con la
+    gran población de casas sobre estacas; y siguen hasta el cabo de la Vela.
+  obra: navarrete-1829-viages-menores
+  pagina: '7-9'
+  clase: hecho-colonial
+  epoca: contacto-temprano
+  valor: >-
+    es la fecha y la forma del primer contacto documentado con la esfera que el
+    proyecto simula, y trae **el nombre indígena del golfo dicho como
+    indígena** («los indios le llamaban»).
+
+- id: t7.kak2
+  titulo: Había oro colgado de narices y orejas en Curazao en 1502 — y está en disputa
+  cita: >-
+    «Siguieron juntos poco después á **la isla de los Gigantes (Curazao)**, se
+    internaron como media legua hasta llegar á la población de los indios, en
+    quienes notaron que **traían ciertos pedazos de oro colgados de las narices
+    y orejas**; pero nada les tomaron, ni aún brasil que parece vieron en
+    abundancia… Pasaron luego á **Coquibacoa**… **Parecióles el país pobre y
+    miserable.**»
+  obra: navarrete-1829-viages-menores
+  pagina: '34, §26'
+  clase: hecho-colonial (lo vieron)
+  epoca: contacto-temprano
+  fuerza: baja — y la baja la propia fuente
+  aviso: >-
+    ⚠️ nota 3 de la misma página: «**Así lo aseguran algunos testigos: otros
+    presentados por Vergara y Ocampo dicen que NO VIERON ORO**, y sí muy poco
+    brasil en la isla de los Gigantes». Es testimonio de un pleito, con dos
+    partes interesadas. **En duda, degradar** (regla 2).
+  por_que_importa: >-
+    si el oro de Curazao se sostuviera, sería metal en las islas de la polity
+    costera en 1502, y el metal no se hace allí: tendría que venir de fuera, y
+    sería la pregunta del guanín aplicada a la Kaketiana. Hoy no se sostiene:
+    es un testigo contra otro.
+  como_cerrarlo: >-
+    los autos del pleito Hojeda-Vergara-Ocampo están citados por folio en
+    Navarrete (fols. 16-17, 19, 21) y publicados en su *Colección diplomática*,
+    tomo II. Leer esos folios decidiría el punto en una tarde.
+
+- id: t7.kak3
+  titulo: ⚠️ La Kaketiana no aparece en los cronistas de las islas
+  medido: >-
+    `curiana` 0 y `coquibacoa` 0 en `las-casas-1875` vol. 1 (1.049.000
+    caracteres) y en `colon-hernando-1892` vol. 2. `margarita` 0 en Las Casas.
+    Control: `isla` 930 y `oro` 482 en el mismo Las Casas.
+  clase: negativa-medida
+  por_que: >-
+    esperable —Las Casas vol. 1 acaba con el regreso del primer viaje, y Colón
+    nunca fue a Coro— pero hay que decirlo: **quien busque la Kaketiana en los
+    cronistas del taíno no la va a encontrar, y eso no es un hallazgo sobre la
+    Kaketiana.**
+
+# ══════════════════════════════════════════════════════════════════════
+# 5. LO QUE NO SE ENCONTRÓ (las negativas valen — skill §6)
+# ══════════════════════════════════════════════════════════════════════
+no_se_encontro:
+- >-
+  Ni una noticia indígena, recogida por ninguno de estos cronistas, de tráfico
+  entre las Antillas Mayores y la costa de Coro, Paraguaná o las ABC.
+- >-
+  Ni una mención de que los intérpretes taínos de Colón entendieran a nadie en
+  Tierra Firme; y en el único sitio donde se midió, no se entendieron.
+- >-
+  Ni una travesía directa de mar abierto descrita por nadie, ni de ida ni de
+  vuelta.
+- >-
+  Ni un caribe situado en las ABC o en el Golfete por estas obras.
+- >-
+  La voz `guanín` **no aparece ni una vez en Anglería vol. 1** (460 pp.), que
+  es el volumen que narra Paria y Curiana. Llega a Anglería sólo en el vol. 4,
+  y aplicada a Chiribichi.
+- >-
+  Ninguna forma de `datihao`/`guatiao` en el vol. I de Oviedo fuera del
+  `dalihao` de la impresa 473: `datihao` 0 · `datiao` 0 · `guatiao` 0 ·
+  `tiao` 0 en las 766 páginas. Y la imagen escaneada de ese PDF **no llega a
+  la p. 473**, así que la forma no se puede verificar en el repo.
+- >-
+  Nada sobre la hija de Manaure ni sobre Baracoica. El episodio de Ampíes es de
+  1525-26 y ninguna de estas obras llega ahí: está en `arcaya-1920`, verificado
+  por dc.4 (PR #193). Lo que T7 le añade está en §respuesta_a_dc4, no aquí.
+- >-
+  Ninguna lista de palabras de Paria, Curiana o Coquibacoa recogida en
+  1498-1502. Si la hubiera, la pregunta de la inteligibilidad se contestaría
+  sola. Los europeos preguntaron por el oro y por las perlas.
+
+# ══════════════════════════════════════════════════════════════════════
+# 6. LAS DESCARGAS (autorizadas por Miguel para esta campaña)
+# ══════════════════════════════════════════════════════════════════════
+descargas:
+- id: colon-hernando-1892
+  obra: Historia del Almirante don Cristóbal Colón, vol. 2
+  autor: Colón, Hernando
+  edicion: 'Madrid, Impr. de T. Minuesa, 1892 (Libros Raros ó Curiosos, t. VI)'
+  url: https://archive.org/details/historiadelalmir02col
+  fichero_remoto: historiadelalmir02col_djvu.txt
+  local: fuentes_caquetios/Colon_Hernando_1892_Historia_del_Almirante_vol2.txt
+  fecha: '2026-09-22'
+  bytes: 448515
+  sha256: 252028b564a6fd3c241db1b1cc4daf7a3ab2e8e514bcd17cd2964750dfbbd5eb
+  derechos: dominio público (ed. 1892; autor † 1539). Copia literal permitida
+- id: navarrete-1829-viages-menores
+  obra: >-
+    Colección de los viages y descubrimientos que hicieron por mar los
+    españoles desde fines del siglo XV, tomo III: Viages menores, y los de
+    Vespucio; poblaciones en el Darién; suplemento al tomo II
+  autor: Fernández de Navarrete, Martín
+  edicion: 'Madrid, Imprenta Real, 1829'
+  url: https://archive.org/details/bub_gb_HFzXrEyoeCAC
+  fichero_remoto: bub_gb_HFzXrEyoeCAC_djvu.txt
+  local: fuentes_caquetios/Navarrete_1829_Coleccion_Viages_t3_Viages_Menores_Vespucio.txt
+  fecha: '2026-09-22'
+  bytes: 1766446
+  sha256: 2574a0dca4fd41083a68596a3b180492f671febb20dd9202940c9c7be69ec251
+  derechos: 'dominio público (Public Domain Mark 1.0 declarado por archive.org)'
+- id: navarrete-1859-viages-colon
+  obra: >-
+    Colección de los viajes y descubrimientos…, tomo I (2.ª ed.): Viajes de
+    Colón; Almirantazgo de Castilla — incluye el Diario del primer viaje, la
+    carta de Chanca y la **Relación del tercer viaje**
+  autor: Fernández de Navarrete, Martín
+  edicion: 'Madrid, Imprenta Nacional, 1858 (archive.org data el ejemplar en 1859)'
+  url: https://archive.org/details/coleccion-de-los-viajes-y-descubrimiento-i
+  fichero_remoto: 'Coleccion_de_los_viajes_y_descubrimiento I_djvu.txt'
+  local: fuentes_caquetios/Navarrete_1859_Coleccion_Viages_t1_Viages_de_Colon.txt
+  fecha: '2026-09-22'
+  bytes: 1597527
+  sha256: c84739d9cdef9001a7498b557ef64275fb0e9c15440c93bac6986b6c1ac130a3
+  derechos: 'dominio público (Public Domain Mark 1.0 declarado por archive.org)'
+no_descargado_y_por_que:
+- obra: PDF de los tres anteriores (10,5 + 21,7 + 30,2 MB)
+  motivo: >-
+    el `_djvu.txt` lleva el folio impreso dentro del flujo, así que la cita se
+    puede verificar sin la imagen, y el repo sincroniza a OneDrive. Si hiciera
+    falta cotejar una página dudosa, la URL está arriba.
+- obra: 'Historia del Almirante, vol. 1 (archive.org, historiadelalmir01col)'
+  motivo: >-
+    trae el primer y segundo viaje y el capítulo donde Hernando reproduce a
+    Pané. T7 no lo necesitaba; **T2 sí lo querría** — 382 KB de texto.
+- obra: 'Navarrete, Colección diplomática (tomo II) — los autos del pleito de Hojeda'
+  motivo: >-
+    es lo que cerraría `t7.kak2` (¿había oro en Curazao en 1502?). No se buscó
+    por tiempo. Dominio público.
+
+# ══════════════════════════════════════════════════════════════════════
+# 7. QUÉ PROPONE ESTA PARCELA (regla 5: lo decide Miguel)
+# ══════════════════════════════════════════════════════════════════════
+propone:
+- que: 'nada al lexicón, nada al corpus, nada a etnias.yaml'
+  por_que: >-
+    lo que esta parcela mide son atestaciones sobre QUIÉN SABÍA QUÉ, y ninguna
+    entra en una esfera del repo sin una decisión previa que no es mía: si la
+    noticia lucaya de la tierra firme del sur (t7.s1) entra como hecho de
+    `geografia_politica` o no, depende de si el registro admite hechos que no
+    son de la Kaketiana. T5 ya dejó abierto ese mismo problema de esquema
+    (`epoca` en `etnias.yaml`).
+- que: >-
+    que se lea el hallazgo lateral (t7.x1) antes de volver a citar la red de
+    Curiana como red de la Kaketiana
+  por_que: 'toca material ya fusionado en 4-fuentes/angleria-1892.md'
+- que: 'el veredicto sobre la hipótesis de Miguel, con letras (A · B · C · D · E)'
+  donde: 6-fusion/issues-pendientes/taino2-etnohistoria-contacto-2026-09-22.md
+  recomendacion: >-
+    C + E. C parte la afirmación en dos (el circuito del guanín, que los textos
+    aguantan; la participación de la Kaketiana, que no) y E la reformula como
+    **cadena de tramos cortos**, que es la única forma en que `datihao`
+    compartida y Paria mudo dejan de estar reñidos. La decisión es de Miguel.
+- que: >-
+    que Oviedo y Valdés tomos II y IV suban de prioridad — son la deuda que
+    dc.4 ya declaró (el `díao` del t. II p. 299 y el `datihao` del apéndice del
+    t. IV) y, con t7.d1 medido, son además la única forma de saber si la pareja
+    léxica aguanta. Dominio público, archive.org (ids que la nota de Oviedo ya
+    recoge).
+  por_que: 'la campaña T7 no los bajó: no era su parcela, y la sesión tenía dueño'
