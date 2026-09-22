@@ -1,7 +1,7 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 65
-  en_repo: 42
+  obras: 68
+  en_repo: 45
   solo_citadas: 23
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
@@ -232,6 +232,25 @@ obras:
   - Elegías de varones ilustres de Indias
   - Juan de Castellanos
   - castellanos-elegias
+  en_repo: true
+- id: colon-hernando-1892
+  obra: Historia del Almirante don Cristóbal Colón, vol. 2
+  autor: Colón, Hernando
+  anio: 1892 [c. 1539]
+  publicacion: Colección de Libros Raros ó Curiosos que tratan de América, tomo VI. Madrid, Impr. de T.
+    Minuesa, 1892. Reimpresión de la traducción castellana (de la Historie italiana de Ulloa, Venecia
+    1571). El original castellano de Hernando Colón se perdió
+  edicion_del_ejemplar: Madrid 1892 (Libros Raros ó Curiosos, t. VI) — ejemplar digitalizado por Internet
+    Archive, id historiadelalmir02col
+  genero: cronica
+  local:
+  - fuentes_caquetios/Colon_Hernando_1892_Historia_del_Almirante_vol2.txt
+  paginas: vol. 2 (la obra completa son 2 vols.)
+  aliases:
+  - Hernando Colón
+  - Fernando Colón
+  - Historia del Almirante
+  - Colón 1892
   en_repo: true
 - id: esteves-1989
   obra: esteves-1989
@@ -517,6 +536,48 @@ obras:
   - Morón Historia de Venezuela
   - Los orígenes históricos de Venezuela
   en_repo: false
+- id: navarrete-1829-viages-menores
+  obra: 'Colección de los viages y descubrimientos que hicieron por mar los españoles desde fines del
+    siglo XV, tomo III: Viages menores, y los de Vespucio; poblaciones en el Darién; suplemento al tomo
+    II'
+  autor: Fernández de Navarrete, Martín
+  anio: 1829
+  publicacion: 'Madrid, Imprenta Real, 1829. Edición documental: Navarrete reconstruye cada viaje menor
+    a partir de los autos de los pleitos colombinos, las capitulaciones reales y las relaciones impresas,
+    y publica los documentos íntegros en la Sección Tercera y el Apéndice'
+  edicion_del_ejemplar: ejemplar de la Biblioteca Nazionale di Napoli digitalizado por Google; la portada
+    sale '1839' en el OCR, la fecha bibliográfica es 1829
+  genero: cronica
+  local:
+  - fuentes_caquetios/Navarrete_1829_Coleccion_Viages_t3_Viages_Menores_Vespucio.txt
+  paginas: ~470 + apéndices
+  aliases:
+  - Navarrete 1829
+  - Navarrete t. III
+  - Viages menores
+  - Colección de los viages y descubrimientos t. III
+  en_repo: true
+- id: navarrete-1859-viages-colon
+  obra: 'Colección de los viajes y descubrimientos que hicieron por mar los españoles desde fines del
+    siglo XV, tomo I (2.ª ed.): Viajes de Colón; Almirantazgo de Castilla'
+  autor: Fernández de Navarrete, Martín
+  anio: 1858 [documentos de 1492-1504]
+  publicacion: 'Madrid, Imprenta Nacional, 1858 (segunda edición). Edición documental: contiene el Diario
+    del primer viaje en la transcripción de Las Casas, la carta del doctor Chanca, la **Relación del tercer
+    viaje** de Colón a los Reyes y la relación del cuarto'
+  edicion_del_ejemplar: ejemplar digitalizado por Google; archive.org data la publicación en 1859, la
+    portada dice 1858
+  genero: cronica
+  local:
+  - fuentes_caquetios/Navarrete_1859_Coleccion_Viages_t1_Viages_de_Colon.txt
+  paginas: ~550
+  aliases:
+  - Navarrete 1858
+  - Navarrete t. I
+  - Viajes de Colón
+  - Relación del tercer viaje
+  - Diario del primer viaje
+  en_repo: true
 - id: neira-ribero-1762
   obra: Arte y vocabulario de la lengua achagua
   autor: Neira, Alonso de (S.J.) y Ribero, Juan (S.J.)
