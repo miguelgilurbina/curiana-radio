@@ -94,3 +94,12 @@ db.2_datihao_y_diao:
       lectura de corpus de paso.
     la_glosa: 'la de Oviedo (namesake, «el que como yo se nombra») frente a la del editor (padrino de cautivo)'
   se_aplica_en: '6-fusion/scripts/reetiquetar_datihao_diao.py, en la tanda de la base (no se mergea sin medir)'
+  estado: APLICADA en la rama tanda/base-2026-09-22 (2026-09-22), SIN MEDIR — se mide con toda la tanda
+  aplicado_por: [6-fusion/scripts/reetiquetar_datihao_diao.py]
+  medido_al_aplicar: >-
+    5.507 entradas activas antes y después; cambian sólo datihao.fuente,
+    datihao.notas, diao.notas y boratio.notas. La huella de los 378 prompts del
+    pre-vuelo cambia (faa1a039… → adb3da5d…) aunque `datihao` no sale en
+    ninguno: el sorteo de la muestra caquetía tiene una voz menos. `[Voces de
+    fuera]` pasa de 43 a 44 candidatas, y la que entra lo hace con la glosa del
+    editor, 'padrino de cautivo'.

@@ -117,7 +117,12 @@ def test_el_catalogo_no_pierde_voces_por_accidente():
     """Sólo se caen las que la decisión dejó sin gemela: las otras dos claves
     que salen (`bohio`, `cacike`) colapsan con su par y su VOZ sigue estando."""
     formas = {f for _p, f, _g, _fam in L.voces_de_fuera_posibles()}
-    assert len(formas) == 43
+    # 43 → 44 el 2026-09-22 (db.2): `datihao` pasó de caquetío-atestiguado a
+    # `taíno` —en Oviedo sólo aparece en San Juan— y con eso entra en la esfera.
+    # Es la consecuencia declarada de la decisión, no una voz perdida o ganada
+    # por accidente.
+    assert len(formas) == 44
+    assert "datihao" in formas
     for clave in L.SIN_FORMA_DE_LA_ESFERA:
         assert clave not in formas
 
