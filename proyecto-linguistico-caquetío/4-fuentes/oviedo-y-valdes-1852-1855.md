@@ -156,6 +156,10 @@ discusión en
   Román (t. II, libro XXI, p.131). Dos apariciones en 544 páginas, las dos en el
   mismo pasaje.
 - **`Miraca`**, el primer pueblo de Paraguaná a trece leguas de Coro (p.296).
+- **Las islas ABC con sus nombres**, y el indígena de Curaçao dicho como tal:
+  `Boynare`, `Aruba`, «llaman los indios *Corazao*» (pp.131-132, imagen). Y
+  **`Quiquibacoa`** = Coquibacoa (pp.132, 296). Ver más abajo: los dos ceros que
+  lo tapaban eran míos.
 - **La red de intercambio, atestiguada**: los palafitos de la laguna «van é
   vienen á la ribera desta laguna y rescatan é venden aquel pescado que matan,
   por mahiz é por otras cosas, con otras generaçiones de indios *çaquitios* é
@@ -217,12 +221,50 @@ del caquetío. Toca **de qué orilla es el testimonio de esa palabra**.
 | `Curiana` | 2 en el t. II (un solo pasaje), **0** en el t. III y el t. IV |
 | `Coquibacoa` | **0** en los tres |
 | `Manaure`, `Ampíes` | **0** en los tres |
-| `Curazao`, `Aruba`, `Bonaire` (todas las grafías) | **0** en los tres |
-| «islas de los Gigantes» | **0**. Los 36 «gigantes» de la obra son los **patagones** del estrecho de Magallanes |
+| `Manaure`, `Ampíes`, `Baracoica`, la hija llevada a La Española | **0** en los tres. Los «aciertos» de `Ampíes` son todos `anies` = «antes», mal leídos por el OCR. El libro XXV arranca la historia de la provincia **en 1528**, con los Welser: el período de Ampíes queda fuera de su relato |
+| «islas de los Gigantes» (el nombre) | **0**. Los 42 «gigantes» de la obra son los **patagones** del estrecho de Magallanes y los guyrandos del Plata |
+| ~~`Curazao`, `Aruba`, `Bonaire`~~ | 🔴 **ESTE CERO ERA MÍO Y ERA FALSO** — ver abajo |
 | `Hayti` / `Haiti` | **0** en el t. II y el t. III; en el t. IV, sólo dentro del glosario del editor |
 | indios de Venezuela en La Española, o taínos en Tierra Firme | **0**. Lo que cruza el mar en este libro son **españoles** |
 | «como en esta isla», «la misma palabra» | **0** — Oviedo nunca empareja una voz venezolana con una antillana |
 | **Tomo III entero** | Perú, Nicaragua y Nueva Granada. `Veneçuela` = 1 de paso, `Maracaybo` = 0, `diao` = 0, `borat` = 0. **Descartado para esta pregunta** |
+
+## 🔴 El cero de las islas ABC era mío, y era falso
+
+En la primera pasada di por **0** `curazao`/`curaçao`, `aruba`/`oruba` y
+`bonaire`/`buynare`/`boynare` en los tres tomos. **Tercera vez en la misma
+sesión que un cero medía mi ortografía y no la de la obra.** Las islas están, y
+con sus nombres, en el **tomo II, libro XXI cap. VI, impresas 131-132**:
+
+> «más al Poniente de la isla de las Aves está la isla *Boynare*; más al Poniente
+> de la isla Boynare está otra que se llama *Corazante*; más al Poniente de
+> Corazante está la isla llamada ***Aruba***.»
+
+El OCR las da `Boijnare`/`Boynarc` y `Aniba`, y por eso ninguna sonda las veía.
+`Aruba` está **impresa exactamente como hoy**. Y la frase que más vale:
+
+> «no guardar los nombres primeros es poner confusión en todo. Á la que la carta
+> llama *Corazante* **llaman los indios *Corazao***, y el almirante que la
+> descubrió la dexó con su nombre: á la quel almirante llamó *Poregari* llaman
+> agora *Yaruma* ó de *Orchilla*.» — t. II, impresa **132**, imagen
+
+🟢 Atestación explícita del nombre **indígena** de Curaçao con la fórmula que el
+proyecto exige («llaman los indios»), y una **defensa del topónimo indígena
+frente al cartográfico** firmada por el cronista. ⚠️ Pero Oviedo **no dice de qué
+gente son esos indios**: `atribucion: no-declarada` en cuanto a lengua. Y
+`Poregari` es el nombre que puso **Colón**, no un indígena — la frase distingue
+tres capas y hay que leerla entera.
+
+Con la misma pasada cayó otro cero falso: **`Coquibacoa` se imprime
+`Quiquibacoa`** (pp.132 y 296), con dos localizaciones independientes y una
+distancia medida desde el cabo de San Román.
+
+⚠️ **Lo que estas dos páginas NO dan es gente.** El capítulo es una derrota de
+costa leída sobre la carta de marear: nombra islas, leguas y cabos, y no dice
+una palabra de quién vive en ellas. **Cambia el cero sobre los nombres, no el
+cero sobre el contacto.**
+
+---
 
 Y el cero que más pesa: **en 1.880 páginas no hay una sola línea que ponga en
 relación a los indios de la costa de Venezuela con los de las Antillas.** La

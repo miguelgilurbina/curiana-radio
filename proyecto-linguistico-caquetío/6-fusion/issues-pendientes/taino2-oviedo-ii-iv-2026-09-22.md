@@ -51,6 +51,12 @@ pdf ≈150 y 15 desde ahí. Y en el propio tomo I la impresa 473 cae en la pdf 5
 —desfase **117**—, no 118 como dice su ficha; la cita de T1 es correcta, la
 fórmula no lo es en ese tramo.
 
+### e) Y una mía, de la primera pasada de esta misma minería
+
+Di las islas ABC por ausentes con las sondas `curazao`, `aruba` y `bonaire`.
+**Están** (§5): el OCR las da `Aniba` y `Boijnare`. Escribí el aviso de (b) en
+este mismo archivo y acto seguido caí en él. Queda dicho.
+
 ---
 
 ## 1. La trampa nueva: el guion de fin de línea
@@ -181,15 +187,63 @@ simulamos**. Es dato caquetío de otra comarca de la esfera.
 
 ---
 
-## 5. La pregunta del contacto — un cero grande y bien medido
+## 5. La pregunta del contacto — un cero grande, y un cero mío que era falso
 
-**No hay contacto Venezuela ↔ Antillas en 1.880 páginas.** Ceros verificados:
+### 🔴 Primero el error propio: las islas ABC sí están
 
-`Curazao`/`Aruba`/`Bonaire` (todas las grafías) = **0** en los tres tomos ·
-«islas de los Gigantes» = **0** (los 36 «gigantes» son los **patagones** del
-estrecho de Magallanes) · `Hayti`/`Haiti` = **0** fuera del glosario · indios de
-Venezuela en La Española = **0** · taínos en Tierra Firme = **0** · «como en esta
-isla» y «la misma palabra» = **0**.
+En la primera pasada di por **0** `curazao`/`curaçao`, `aruba`/`oruba` y
+`bonaire`/`buynare`/`boynare`. **Tercera vez en la misma sesión que un cero medía
+mi ortografía y no la de la obra** — y la había escrito yo dos secciones más
+arriba. Están en el **t. II, libro XXI cap. VI, impresas 131-132** (imagen):
+
+> «más al Poniente de la isla de las Aves está la isla *Boynare*; más al Poniente
+> de la isla Boynare está otra que se llama *Corazante*; más al Poniente de
+> Corazante está la isla llamada ***Aruba***.»
+>
+> «no guardar los nombres primeros es poner confusión en todo. Á la que la carta
+> llama *Corazante* **llaman los indios *Corazao***, y el almirante que la
+> descubrió la dexó con su nombre: á la quel almirante llamó *Poregari* llaman
+> agora *Yaruma* ó de *Orchilla*.»
+
+El OCR las da `Boijnare`/`Boynarc` y `Aniba`. `Aruba` está **impresa como hoy**.
+🟢 Atestación del nombre **indígena** de Curaçao con la fórmula que el proyecto
+exige, y una defensa del topónimo indígena frente al cartográfico firmada por el
+cronista. ⚠️ Pero **no dice de qué gente son esos indios** (`no-declarada`), y
+`Poregari` es el nombre que puso **Colón**.
+
+Y con la misma pasada cayó otro cero falso: **`Coquibacoa` se imprime
+`Quiquibacoa`** (pp.132, 296).
+
+⚠️ **Estas dos páginas no dan gente**: es una derrota de costa leída sobre la
+carta de marear. Cambia el cero sobre los **nombres**, no el cero sobre el
+**contacto**.
+
+### El episodio de la hija de Manaure — no está
+
+Se buscó expresamente (encargo del coordinador): la embajada de Manaure a Juan
+de Ampíes c. 1525 con su «pariente y deudo» **Baracoica**, que vivía en las islas
+ABC, y la hija llevada a La Española (Arcaya 1920 pp.160-161, 166-167). Sería la
+**segunda fuente** del único contacto costa ↔ islas ↔ Antillas con parentesco que
+el proyecto tiene.
+
+🔴 **`Manaure` = 0. `Ampíes`/`Ampués`/`Anpies` = 0. `Baracoica`/`Varacoica` = 0.
+La hija = 0.** En los tres tomos. Los seis «aciertos» de Ampíes en el t. II y los
+cinco del t. IV son todos `anies` = «antes», comprobados uno a uno.
+
+**Y hay una razón, no es azar**: el libro XXV arranca la historia de la provincia
+**en 1528**, con la llegada de Alfínger y los Welser («de la venida de los
+alemanes á la Tierra-Firme y gobernaçión del golpho de Venezuela, y del primer
+gobernador», p.269). El período de Ampíes (1521-1528) **queda fuera del arranque
+de su relato**. Oviedo no lo cuenta porque su libro empieza después. Quien lo
+busque, al **libro XIX del tomo I** y a Las Casas.
+
+### El resto de los ceros
+
+«islas de los Gigantes» (el nombre) = **0** — los 42 «gigantes» de la obra son
+los **patagones** del estrecho de Magallanes y los guyrandos del Plata ·
+`Hayti`/`Haiti` = **0** fuera del glosario · indios de Venezuela en La Española =
+**0** · taínos en Tierra Firme = **0** · «como en esta isla» y «la misma palabra»
+= **0**.
 
 Lo que cruza el mar en este libro son **españoles**: Alfínger llega a Santo
 Domingo y pasa a su gobernación; los procuradores de Coro van a la Corte;
@@ -266,7 +320,12 @@ apéndice, que era el encargo, y se dice lo que no se leyó.
    glosadas **y atribuidas por lengua**. Para el taíno las hay a puñados y nadie
    las ha vaciado.
 4. **El libro XIX del tomo I** y **el tomo I con imagen íntegra**
-   (`historiageneral00fernguat`, 55 MB en Internet Archive).
+   (`historiageneral00fernguat`, 55 MB en Internet Archive). Es donde puede estar
+   la gente de las islas ABC y, si está en Oviedo, el episodio de Ampíes.
+5. **Los topónimos insulares a la campaña de topónimos**: `Corazao` (nombre
+   indígena declarado), `Boynare`, `Aruba`, `Yaruma`/`Orchilla`, `Isla Roca`,
+   `Páxaros ó de Aves`, `Quiquibacoa`, `Miraca`, `isla de Tara`, `Curiana` (río).
+   No al lexicón: a `2-lengua/toponimos.yaml` por su puerta (`campana-toponimos`).
 5. **Cruzar el mapa del libro XXV** (25 generaçiones, 26 pueblos, 11 ríos, 2
    caciques nombrados) contra `3-mundo/etnias.yaml`. ⚠️ Es el mapa **colonial** de
    1528-1546: regla 3, no se proyecta.

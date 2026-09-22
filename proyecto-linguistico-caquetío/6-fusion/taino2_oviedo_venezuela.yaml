@@ -99,10 +99,20 @@ meta:
       implícita en el encargo: que en los tomos II-IV habría algo sobre las
       islas de los Gigantes y el contacto con las Antillas.
     medido: >-
-      **Cero.** `curazao`/`curaçao`, `aruba`, `oruba`, `bonaire`/`buynare` = 0
-      en los tres tomos. «Gigantes» sale 33 veces en el t. II y son **los
-      patagones del estrecho de Magallanes**, no las islas de enfrente de Coro.
-      Ver §6: el cero está verificado (regla 6).
+      El **nombre** «islas de los Gigantes» no está: los 39 «gigantes» del t. II
+      son los **patagones del estrecho de Magallanes** y los guyrandos del
+      Plata. Pero **las islas sí están**, y con sus nombres indígenas: t. II,
+      libro XXI cap. VI, impresas **131-132**. Ver §5bis.
+    y_esto_lo_falle_yo_primero: >-
+      🔴 En la primera pasada di este apartado por **cero**, con las sondas
+      `curazao|curaçao|curacao`, `aruba|oruba` y `bonaire|buynare|boynare` a 0 en
+      los tres tomos. **Era mi propio error de §2, por tercera vez en la misma
+      sesión**: el OCR da `Aruba` como `Aniba`, `Boynare` como `Boijnare` /
+      `Boynarc` y `Coquibacoa` como `Quiquibacoa` (que además es la grafía
+      impresa). Lo encontré al ampliar la clase de la ç a `[cgfz]` por otro
+      motivo. **Una sonda negativa no vale si no se ha mirado antes cómo
+      escribe la obra ESE nombre concreto** — y yo lo había escrito en este
+      mismo archivo dos secciones más arriba.
 
   # ─────────────────────────────────────────────────────────────────
   # LAS DESCARGAS (autorizadas por Miguel el 2026-09-22)
@@ -1021,17 +1031,24 @@ la_pregunta_del_contacto:
     **No.** En 1.880 páginas de los tomos II, III y IV no hay una sola línea que
     ponga en relación a los indios de la costa de Venezuela con los de las
     Antillas. Lo que sí hay —y es mucho— es la red de intercambio **dentro de
-    Tierra Firme**, con los çaquitios dentro.
+    Tierra Firme**, con los çaquitios dentro; y, corregido después de la primera
+    pasada, **los nombres indígenas de las islas ABC** (§5bis) — nombres, no
+    gente.
 
   los_ceros_verificados:   # regla 6
-    "curazao / curaçao / curacao": "0 en t. II, t. III y t. IV"
-    "aruba / oruba": "0 en t. II y t. III; 1 en t. IV y es un apellido, no la isla"
-    "bonaire / buynare / boynare": "0 en los tres"
-    "islas de los Gigantes": >-
-      0. «Gigantes» sale 33 veces en el t. II, 2 en el t. III y 1 en el t. IV, y
+    "islas de los Gigantes (el NOMBRE)": >-
+      0. «Gigantes» sale 39 veces en el t. II, 2 en el t. III y 1 en el t. IV, y
       **todas** son los patagones del estrecho de Magallanes (libro XX) o los
-      «guyrandos» del Plata. Las islas de enfrente de Coro no se nombran.
+      «guyrandos» del Plata, a quienes Oviedo compara con ellos. Las islas de
+      enfrente de Coro **se nombran una a una, pero nunca así** — ver §5bis.
     "Hayti / Haiti": "0 en t. II y t. III. En t. IV sólo en el glosario del editor."
+    "Manaure": "**0** en los tres tomos"
+    "Ampíes / Ampués / Anpies": >-
+      **0** en los tres tomos. Los seis aciertos aparentes del t. II y los cinco
+      del t. IV son todos `anies` = «antes», mal leído por el OCR. Comprobados
+      uno a uno.
+    "Baracoica / Varacoica / Baracoya": "**0** en los tres tomos"
+    "la hija de Manaure, o cualquier hija de cacique llevada a La Española": "**0**"
     "indios de Venezuela en La Española": >-
       0. Lo que cruza el mar en este libro son **españoles**: Alfínger llega a
       Santo Domingo y de ahí pasa a su gobernación (p.269); los procuradores de
@@ -1039,6 +1056,28 @@ la_pregunta_del_contacto:
       el obispo Bastidas pasa de Venezuela al obispado de San Juan (pp.324, 328)
       y vuelve a Santo Domingo. Ni un indígena.
     "taínos en Tierra Firme": "0"
+
+  el_episodio_de_la_hija_de_manaure:
+    lo_que_se_buscaba: >-
+      Si Oviedo cuenta la embajada de Manaure a Juan de Ampíes (c. 1525) con su
+      «pariente y deudo» **Baracoica**, que vivía en las islas ABC, y el rapto de
+      su hija a La Española — el episodio de Arcaya 1920 pp.160-161 y 166-167.
+      Sería la **segunda fuente** del único contacto costa ↔ islas ↔ Antillas
+      con parentesco que el proyecto tiene documentado.
+    resultado: >-
+      🔴 **NO ESTÁ.** Ni el episodio, ni Manaure, ni Ampíes, ni Baracoica, ni la
+      hija, ni una armada que se lleve indios de Coro a Santo Domingo. En los
+      tres tomos.
+    y_por_que_no_sorprende: >-
+      El libro XXV arranca la historia de la provincia **en 1528**, con la
+      llegada de Alfínger y los Welser: «comiença … de la venida de los alemanes
+      á la Tierra-Firme y gobernaçión del golpho de Venezuela, y del primer
+      gobernador» (p.269). El período de Ampíes (1521-1528), que es justamente
+      el del episodio, **queda fuera del arranque del relato**. Oviedo no lo
+      cuenta porque su libro empieza después.
+    donde_habria_que_buscarlo: >-
+      En el **libro XIX del tomo I** (Tierra-Firme, impresas 586-618), que T1
+      dejó sin leer, y en Las Casas. **No es mi parcela.**
 
   lo_que_SI_hay_y_vale:
   - que: "comercio de los çaquitios con los pueblos palafíticos de la laguna"
@@ -1081,10 +1120,98 @@ la_pregunta_del_contacto:
     ojo: "Es Santa Marta, no Venezuela, y es una **sospecha del gobernador**, no un dato."
 
   que_queda_abierto: >-
-    Las islas de enfrente de Coro las describe Oviedo en el **libro XIX del tomo
-    I** (Tierra-Firme), que T1 dejó **sin leer** y señaló como «el libro con más
-    costa de Venezuela». Si en algún sitio de Oviedo hay algo sobre las islas de
-    los Gigantes y su gente, es ahí. **No es mi parcela y no lo he tocado.**
+    De la **gente** de las islas ABC sigue sin haber nada aquí (§5bis). Quien la
+    busque, al **libro XIX del tomo I** (Tierra-Firme, impresas 586-618), que T1
+    dejó sin leer y señaló como «el libro con más costa de Venezuela». **No es
+    mi parcela y no lo he tocado.**
+
+# ══════════════════════════════════════════════════════════════════════
+# 5bis. LAS ISLAS ABC SÍ ESTÁN — y mis sondas no las veían
+#       t. II, libro XXI cap. VI («de la geographía é assiento de la
+#       Tierra-Firme»), impresas 131-132. Todo verificado en imagen.
+# ══════════════════════════════════════════════════════════════════════
+las_islas_de_enfrente_de_coro:
+  como_aparecio: >-
+    Ampliando la clase de la ç a `[cgfz]` por un motivo distinto, saltó
+    `cura[cgf]ao`. La sonda que había dado cero era mía y estaba mal hecha: el
+    OCR lee `Aruba` como `Aniba`, `Boynare` como `Boijnare`/`Boynarc` y
+    `Corazante` como `Corazanle`. **Tercera vez en la misma sesión que el cero
+    medía mi ortografía y no la suya.**
+
+  el_rosario_de_islas:
+    verbatim: >-
+      «Más al Poniente de Cubagua diez leguas la *Tortuga*; ocho ó nueve leguas
+      está otra isla llamada *Yaruma*, á la qual también la llaman isla de la
+      *Orchilla*, porque hay allí mucha: más al Poniente de la Orchilla está otra
+      que se llama *Isla Roca*; al Poniente de la Isla Roca está la isla de
+      *Páxaros* ó de *Aves*, porque en ella señaladamente crian innumerables
+      aves; más al Poniente de la isla de las Aves está la isla *Boynare*; más al
+      Poniente de la isla Boynare está otra que se llama *Corazante*; más al
+      Poniente de Corazante está **la isla llamada *Aruba***.»
+    donde: "t. II, libro XXI cap. VI, impresas 131-132"
+    verificacion: imagen
+    lo_que_da:
+      - "**`Boynare`** = Bonaire, en cursiva, con esa grafía"
+      - "**`Aruba`** = Aruba, **impresa exactamente como hoy**"
+      - "`Corazante` = Curaçao en la carta de marear — pero ver abajo"
+      - "`Yaruma` / `Orchilla` = la Orchila · `Isla Roca` = Los Roques · `Páxaros ó de Aves` = las Aves"
+
+  🟢_el_pasaje_que_mas_vale:
+    verbatim: >-
+      «Estos nombres mudan algunos cosmógraphos modernos en algunas cartas ó las
+      que ellos quieren destas islas como les plaçe, ó como tienen relaçion del
+      que se los dá á entender; porque estos maestros que pintan las cartas de
+      navegar, intitúlanlas como los que lo navegan se lo diçen, y cada dia mudan
+      y quitan nombres á sabor de temerarios: lo qual es muy grand desatino, y
+      **no guardar los nombres primeros es poner confusión en todo. Á la que la
+      carta llama *Corazante* llaman los indios *Corazao***, y el almirante que
+      la descubrió la dexó con su nombre: á la quel almirante llamó *Poregari*
+      llaman agora *Yaruma* ó de *Orchilla*.»
+    donde: "t. II, libro XXI cap. VI, impresa 132"
+    verificacion: imagen
+    por_que_importa: >-
+      🟢 **Es una atestación explícita, de 1548 o antes, del nombre INDÍGENA de
+      Curaçao** — con la fórmula que el proyecto exige («llaman los indios»), y
+      además con una **defensa del topónimo indígena frente al cartográfico**
+      puesta por escrito por el cronista: «no guardar los nombres primeros es
+      poner confusión en todo». Es exactamente la tesis de la campaña de
+      topónimos, firmada por Oviedo.
+    forma_fuente: Corazao
+    glosa_fuente: "el nombre que los indios dan a la isla que la carta llama Corazante"
+    atribucion: "«los indios» — sin decir de qué gente ni de qué lengua"
+    campo: toponimo
+    en_el_lexicon: "por comprobar contra el canon de topónimos"
+    ojo: >-
+      ⚠️ Oviedo **no dice de qué gente son esos indios**, ni si son los de la
+      isla o los de la costa. `atribucion: no-declarada` en cuanto a lengua
+      (trampa del cronista). Y `Poregari` es el nombre que puso **Colón**, no un
+      indígena: la frase distingue tres capas —el nombre de los indios, el del
+      almirante y el de la carta— y hay que leerla entera para no confundirlas.
+
+  y_coquibacoa_tambien_estaba:
+    forma_fuente: Quiquibacoa
+    verbatim: >-
+      «En estas quarenta leguas de camino están el puerto de *Quiquibacoa* y la
+      Caleta y un ancón que le llaman el Lago» (p.132) · «desde el cabo ó
+      promontorio de Sanct Román á la punta de *Quiquibacoa* hay veynte é çinco
+      leguas» (p.296)
+    donde: "t. II, libro XXI cap. VI (impresa 132) y libro XXV cap. VIII (impresa 296)"
+    apariciones: 3
+    verificacion: ocr-limpio-dos-pasajes
+    por_que_importa: >-
+      La sonda `coquibacoa` daba **0** y de ahí salía otro cero falso: **la obra
+      escribe `Quiquibacoa`**. Es el mismo topónimo de
+      `6-fusion/lengua_toponimia_quibacoa.yaml` y el de la polity occidental de
+      `curiana_polities.py`, aquí con dos localizaciones independientes y una
+      distancia medida desde el cabo de San Román.
+
+  lo_que_NO_dan_estas_dos_paginas: >-
+    **Gente.** El capítulo es una derrota de costa leída sobre la carta de
+    marear: nombra las islas, las millas y los cabos, y **no dice una palabra de
+    quién vive en ellas**, ni de si van y vienen a la costa, ni de parentesco. El
+    dato es toponímico, no etnográfico. La respuesta a la pregunta del contacto
+    **no cambia**: cambia el cero sobre los NOMBRES, no el cero sobre el
+    CONTACTO.
 
 # ══════════════════════════════════════════════════════════════════════
 # 6. OVIEDO COMPARA (tarea 6 del encargo)
