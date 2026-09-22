@@ -10,7 +10,7 @@ paginas: "766 en el PDF · 618 impresas de cuerpo + índice (619-648). Desfase: 
 capa_texto: si
 estado_minado: minada-parcial
 cobertura: "medida, no escrita a mano: `6-fusion/taino_oviedo_valdes_1851.yaml` → `meta.cobertura` y `meta.libros_leidos`. Las cifras las emite `python 6-fusion/scripts/medir_taino_oviedo.py --check`"
-acceso: "El PDF local está TRUNCADO pero es legible con MuPDF en modo reparación (ver más abajo). La imagen escaneada sólo sobrevive hasta la impresa 154. Para lo que falta, la ed. Amador de los Ríos es libre en Internet Archive: tomo II https://archive.org/details/historiageneral01fernguat · tomo IV https://archive.org/details/historiageneral04fernguat"
+acceso: "El PDF local está TRUNCADO pero es legible con MuPDF en modo reparación (ver más abajo). La imagen escaneada sólo sobrevive hasta la impresa 154. Los tomos II, III y IV están en el repo desde el 2026-09-22: ver [[oviedo-y-valdes-1852-1855]]. Para la imagen íntegra de ESTE tomo, la misma digitalización lo tiene completo: https://archive.org/details/historiageneral00fernguat (55.449.811 B) — sin descargar todavía"
 prioridad: alta
 tareas: [F9]
 verificado: 2026-09-21
@@ -133,11 +133,28 @@ obra como fuente léxica debe citarse con esa advertencia al lado.
 | `caquetío` / `caiquetío` / `Curiana` / `Coquibacoa` | **0** — no nombra a los caquetíos |
 
 - **El funeral del díao no está** en el vol. I: sigue en el tomo II (pp.299-300
-  y 329), como decía la ficha vieja. **Esa parte de la deuda sigue abierta.**
-- **El «apéndice de voces» del editor no existe aquí** tampoco: lo que cierra
-  el volumen (impresas 619-648) es un **índice de capítulos**, útil para
-  localizar, no para citar. Coherente con el rastreo del 2026-08-14 sobre el
-  tomo IV.
+  y 329), como decía la ficha vieja. **Deuda cerrada el 2026-09-22**: los tomos
+  II-IV están en el repo y el funeral está leído y verificado en imagen. Ver
+  [[oviedo-y-valdes-1852-1855]].
+- **El «apéndice de voces» del editor no existe aquí**: lo que cierra el
+  volumen (impresas 619-648) es un **índice de capítulos**, útil para
+  localizar, no para citar. 🔴 **Pero la frase seguía «…tampoco», dando por
+  inexistente el del tomo IV, y eso era falso** (medido el 2026-09-22): el
+  apéndice del tomo IV **existe**, se llama «VOCES AMERICANAS EMPLEADAS POR
+  OVIEDO», ocupa las impresas 593-607 y trae doce entradas marcadas «(Lengua de
+  Venezuela)», entre ellas `Datihao` y `Diao`. Es el que cita Jahn 1927 p.213
+  n.29. El «rastreo del 2026-08-14 sobre el tomo IV» que se invocaba aquí no lo
+  encontró porque el tomo IV no estaba en el repo.
+
+### 🔴 Y otras dos correcciones medidas el 2026-09-22
+
+- **«Oviedo no nombra a los caquetíos»** (la fila de `caquetío`/`caiquetío` = 0
+  de la tabla de arriba) vale para **este volumen**, no para la obra: en el tomo
+  II los nombra 12 veces, y la sonda daba cero porque **la obra escribe
+  `çaquitios`**. Añádanse `çaquiti`, `zaquiti` y `saquiti` a las sondas.
+- **El desfase no es «impresa = pdf − 118» en todo el volumen**: la impresa 473
+  —la de `dalihao`— está en la pdf **590**, o sea desfase **117**. La cita de la
+  minería de T1 es correcta; la fórmula del frontmatter falla en ese tramo.
 
 ## Qué falta
 

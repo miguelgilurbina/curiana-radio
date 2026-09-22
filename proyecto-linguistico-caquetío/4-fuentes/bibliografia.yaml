@@ -1,7 +1,7 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 66
-  en_repo: 43
+  obras: 67
+  en_repo: 44
   solo_citadas: 23
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
@@ -692,14 +692,48 @@ obras:
   - fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1.pdf
   paginas: '766 en el PDF · 618 impresas de cuerpo + índice (619-648). Desfase: impresa = pdf − 118'
   acceso: 'El PDF local está TRUNCADO pero es legible con MuPDF en modo reparación (ver más abajo). La
-    imagen escaneada sólo sobrevive hasta la impresa 154. Para lo que falta, la ed. Amador de los Ríos
-    es libre en Internet Archive: tomo II https://archive.org/details/historiageneral01fernguat · tomo
-    IV https://archive.org/details/historiageneral04fernguat'
+    imagen escaneada sólo sobrevive hasta la impresa 154. Los tomos II, III y IV están en el repo desde
+    el 2026-09-22: ver [[oviedo-y-valdes-1852-1855]]. Para la imagen íntegra de ESTE tomo, la misma digitalización
+    lo tiene completo: https://archive.org/details/historiageneral00fernguat (55.449.811 B) — sin descargar
+    todavía'
   aliases:
   - Oviedo y Valdés
   - Oviedo 1851
   - Historia general y natural
   - Oviedo vol. I
+  en_repo: true
+- id: oviedo-y-valdes-1852-1855
+  obra: Historia general y natural de las Indias, tomos II, III y IV
+  autor: Fernández de Oviedo y Valdés, Gonzalo
+  anio: 1852-1855 [s. XVI]
+  publicacion: Madrid, Imprenta de la Real Academia de la Historia. Tomo II (segunda parte, libros XX-XXVIII)
+    1852 · tomo III (segunda parte, libros XXIX-XXXVIII) 1853 · tomo IV (tercera parte, libros XXXIX-L,
+    + glosario e índices) 1855. Ed. José Amador de los Ríos, cotejada con el códice original
+  edicion_del_ejemplar: digitalización de la Biblioteca Ludwig von Mises, Universidad Francisco Marroquín
+    (colección Shook), en Internet Archive
+  genero: cronica
+  local:
+  - fuentes_caquetios/Oviedo_Valdes_1852_Historia_General_Indias_vol2.pdf
+  - fuentes_caquetios/Oviedo_Valdes_1853_Historia_General_Indias_vol3.pdf
+  - fuentes_caquetios/Oviedo_Valdes_1855_Historia_General_Indias_vol4.pdf
+  paginas: 't. II: 544 pdf / 530 impresas, desfase 13 · t. III: 680 pdf / 646 impresas, desfase 13 hasta
+    la pdf ~150 y 15 desde ahí · t. IV: 656 pdf / 622 impresas, desfase 15'
+  acceso: 'Dominio público, descargados el 2026-09-22 de Internet Archive (los tres registros llevan `possible-copyright-status:
+    NOT IN COPYRIGHT`). t. II https://archive.org/details/historiageneral01fernguat (45.433.954 B, sha256
+    a9fb3477b3e5250ea8147343b9b10e90c66c7f9018291187b6892615a14fbbd7) · t. III https://archive.org/details/historiageneral02fernguat
+    (54.727.062 B, sha256 3e795e42f22785ab1007147023113c0881f22fc9dad545302ec407e3fffcfa77) · t. IV https://archive.org/details/historiageneral04fernguat
+    (53.090.352 B, sha256 0d5dcc0270726c2b376e658ac53e856246c30375a8dd0eb958986171719f4a40). Los tres
+    pesan menos de 95 MB y están commiteados. El tomo I de la misma digitalización, con la imagen íntegra,
+    es `historiageneral00fernguat` (55.449.811 B) y sigue sin descargar'
+  aliases:
+  - Oviedo t. II
+  - Oviedo t. III
+  - Oviedo t. IV
+  - Oviedo 1852
+  - Oviedo 1855
+  - Historia general y natural tomos II-IV
+  - Apéndice del tomo IV
+  - Voces americanas empleadas por Oviedo
   en_repo: true
 - id: pane-c1498
   obra: Relación acerca de las antigüedades de los indios
