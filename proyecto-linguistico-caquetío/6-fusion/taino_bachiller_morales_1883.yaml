@@ -1,0 +1,665 @@
+# ══════════════════════════════════════════════════════════════════════
+# BACHILLER Y MORALES 1883 — *Cuba primitiva*
+# Origen, lenguas, tradiciones e historia de los indios de las Antillas
+# Mayores y las Lucayas. 2ª ed. corregida y aumentada. Habana. 399 pp.
+#
+# PROPUESTA (regla 5). Segunda campaña del taíno, parcela T10. 2026-09-22.
+# DOMINIO PÚBLICO: se transcribe literal.
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  obra_id_propuesto: bachiller-morales-1883
+  autor: Bachiller y Morales, Antonio
+  anio: 1883
+  campana: taino2-2026-09-22
+  parcela: T10
+  advertencia: >-
+    ESTO NO ES CAQUETÍO y NO es fuente primaria del taíno. Bachiller es un
+    erudito cubano de 1883 que reúne a los cronistas, a los viajeros y a los
+    aficionados de su siglo, y **discute** lo que reúne. Su valor para esta
+    parcela no es que añada voces: es que dice de quién sale cada una y
+    **corrige a quien se equivoca**, incluido Rafinesque, que es la raíz
+    envenenada de la tradición.
+
+  descarga:
+    url: https://archive.org/download/cubaprimitivaori00bach/cubaprimitivaori00bach.pdf
+    pagina_del_item: https://archive.org/details/cubaprimitivaori00bach
+    ejemplar: University of North Carolina at Chapel Hill (F1769 .B12j)
+    fecha: '2026-09-22'
+    estado_de_derechos: dominio público (1883). Copia literal permitida.
+    tamano_bytes: 36840068
+    sha256: 460d4f85345c9858a81a367cdd38c63c03f8ad864459ca398c17abfd6841dcda
+    local: fuentes_caquetios/Bachiller_Morales_1883_Cuba_Primitiva.pdf
+  extraccion:
+    herramienta: pdftotext -enc UTF-8
+    salida: fuentes_caquetios/Bachiller_Morales_1883_Cuba_Primitiva.txt
+    bytes: 927988
+    calidad: >-
+      OCR de archive.org sin corregir sobre una impresión habanera de 1883.
+      Falla en `c`/`e` (`easique` por `casique`, `cerní` por `cemí`), en
+      `R`/`B` (`Bafinesque` por `Rafinesque`, `Eojas` por `Rojas`), y
+      **desordena las secciones a dos columnas**: la 3ª y los apéndices salen
+      con las dos columnas entrelazadas línea a línea. Cualquier cosa leída
+      ahí se verifica antes de citarse.
+  paginacion:
+    desfase: impresa = pdf − 4
+    como_se_midio: >-
+      contando las marcas «— N —» página a página: 227 observaciones dan
+      desfase 4; el resto es ruido del OCR. No es cifra a mano (regla 1).
+
+  # ── 🔴 EL CERO QUE SE VERIFICÓ (regla 6) ──────────────────────────
+  el_cero_que_se_verifico:
+    que_paso: >-
+      el primer barrido segmentó el vocabulario por un patrón de guion
+      (`Palabra.— texto`) y encontró **5 de 51** claves del lexicón. Parecía un
+      hallazgo negativo fuerte.
+    que_era: >-
+      un cero de la CONSULTA. El OCR mueve el guion de sitio y muchas entradas
+      salen `Palabra. texto` o `— Palabra. texto`. Buscando la palabra suelta
+      sobre el texto aplanado, aparecen **37 de 47** objetivos.
+    la_leccion: >-
+      es la regla 6 en vivo, y por tercera vez en este repo. Se deja escrito
+      aquí con su número para que la próxima segmentación por patrón se mire
+      dos veces.
+
+  estructura_de_la_obra:
+    parte_1: 'pp. 1-156, catorce capítulos de estudios preliminares'
+    seccion_2_1: 'pp. 165-184, la Relación de Pané, RETRADUCIDA y confrontada por él'
+    seccion_2_2: >-
+      pp. 185-354, «Lista enciclopédica alfabética de los nombres históricos,
+      de las tradiciones é idioma de los indios tainos ó pacíficos» — es EL
+      vocabulario
+    seccion_2_3: >-
+      pp. 355-387, «Palabras usuales en Cuba de origen indio» — ⚠️ es el CUBANO
+      MODERNO, no la lengua del XVI. Lo que sólo está aquí no es taíno
+      atestiguado: es habla cubana del s. XIX con voz de origen indígena
+    seccion_2_4: >-
+      pp. 388-395, apéndices. **(A)** la lista de Rafinesque con las islas
+      marcadas y los errores rectificados; **(B)** analogías tupí; **(C)**
+      etimologías de voces que pasan por indígenas y vienen de otras partes;
+      **(D)** el discurso de 1839
+  cobertura:
+    leido: >-
+      la sección 2.2 barrida objetivo por objetivo (47 consultas), el apéndice
+      (A) entero, el apéndice (C) en lo que toca a nuestras voces, y los
+      pasajes de las 25 entradas que se transcriben aquí.
+    no_leido: >-
+      la sección 2.1 (su retraducción de Pané — que es material de T1 y que
+      merece cotejo con `taino_pane_c1498.yaml`), la sección 2.3 entera, los
+      catorce capítulos de la primera parte, el apéndice (B).
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. LO QUE SE MIDIÓ EN EL VOCABULARIO
+# ══════════════════════════════════════════════════════════════════════
+medido:
+  objetivos_buscados: 47
+  con_al_menos_una_ocurrencia: 37
+  cero_ocurrencias: 10
+  las_diez_con_cero:
+    lista: [abba, hequeti, mayani, yamosa, acoa, aduri, agari, akcicyaa, thigisi, wacusi, wagulo]
+    lectura: >-
+      🔴 **las SIETE reconstruidas desde el lokono dan cero, y eso es la
+      contraprueba del método** (igual que en Goeje). `acoa`, `aduri`, `agari`,
+      `akcicyaa`, `thigisi`, `wacusi` y `wagulo` las generó este proyecto con
+      `reconstruir_taino()`: un vocabulario antillano real no las tiene porque
+      nunca fueron antillanas. Y `abba`/`hequeti` en cero significa que el 1
+      taíno no entró en la lista de Bachiller por ninguna de las dos formas:
+      para eso siguen valiendo Brinton, Goeje y Las Casas cap. 204.
+  autoridades_mas_citadas_en_el_vocabulario:
+    metodo: >-
+      conteo de menciones dentro de los 908 segmentos que el primer
+      segmentador aisló. Es una MUESTRA (el segmentador falla, ver arriba), no
+      un censo: sirve para ver el ranking, no para dar un porcentaje.
+    ranking: >-
+      García 70 · Las Casas 67 · Colón 58 · Oviedo 56 · Herrera 32 ·
+      Pichardo 26 · Rafinesque 24 · Pané 23 · Brasseur de Bourbourg 19 ·
+      Noda 17 · Pérez 14 · Román (Pané) 12 · Charlevoix 12 · Humboldt 12 ·
+      Pedro Mártir 10 · Larousse 6 · Gómara 6
+    lo_que_dice: >-
+      🔴 las cuatro primeras autoridades de Bachiller son **un erudito
+      dominicano del XIX (José Gabriel García) y tres cronistas**. Que García
+      encabece es el aviso: buena parte de lo que parece antillano del XVI en
+      esta obra llega por una mano del XIX. Y Rafinesque aparece 24 veces —
+      más que Pedro Mártir.
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. 🔴 EL APÉNDICE (A): LA LISTA DE RAFINESQUE, CON ISLA Y CON ERRATAS
+#
+# Es lo más valioso de la obra para esta parcela, por dos razones:
+#   (a) marca la ISLA de cada voz — C = Cuba, J = Jamaica, L = Lucayas — que
+#       es lo que el encargo esperaba sólo de Granberry y Vescelius 2004;
+#   (b) Bachiller **corrige a Rafinesque entrada por entrada**, y Rafinesque
+#       es exactamente el autor del que Goeje 1939 avisa que mezcla caribe.
+# ══════════════════════════════════════════════════════════════════════
+apendice_a_rafinesque:
+  titulo_verbatim: >-
+    «Lista de las palabras indígenas de Cuba [C], Jamaica [J.] y las Lucayas
+    [L.] recogidas por Rafinesque de los cronistas y viajeros»
+  pagina_impresa: 388
+  por_que_importa: >-
+    Goeje 1939 p. 5 dice que Adam usó el vocabulario de Rafinesque-Martius sin
+    darse cuenta de que es poco seguro y de que **contiene palabras tomadas de
+    un diccionario caribe**. Aquí está esa lista, publicada en 1883 con las
+    islas puestas y con las erratas marcadas por un cubano que conocía el país.
+    Las dos cosas juntas son la cadena de custodia de media tradición antillana.
+  entradas_que_tocan_el_lexicon:
+  - forma_fuente: 'caya / cayo / caic'
+    glosa_fuente: Isla
+    variedad_o_isla: 'caya = L (Lucayas); cayo, caic = J (Jamaica)'
+    en_el_lexicon: cai · cayo
+    nota: >-
+      🔴 **`cayo` NO es general**: Rafinesque la marca de Jamaica y las
+      Lucayas, y Las Casas la atribuye a la lengua **yucaya** («en lengua
+      yucaya significaba isla», Bachiller p. 245, citando a Las Casas vía
+      Bello, *Repertorio Americano* III p. 199). Dos manos, misma variedad.
+      Es la asignación de variedad mejor apoyada de toda esta parcela.
+  - forma_fuente: Bohío
+    glosa_fuente: Casa
+    variedad_o_isla: C (Cuba)
+    en_el_lexicon: bohio · bohío
+    nota: >-
+      Bachiller añade en el vocabulario (p. 217) que `bohío` era el nombre que
+      los cubanos daban a Haití, y que en Cuba es sinónimo de casa, «que cuando
+      era circular se decía caney». La oposición `bohío`/`caney` es de FORMA,
+      no de tamaño.
+  - forma_fuente: 'Hutía / Quinaxes'
+    glosa_fuente: Conejo
+    variedad_o_isla: 'Quinaxes = C; Hutía = L'
+    en_el_lexicon: hutia
+    nota: >-
+      🔴 la única atribución de isla que tenemos para `hutia`, y es **de las
+      Lucayas**, no de La Española. En el cuerpo (p. 196) Bachiller da la
+      serie entera que Rafinesque recogió —`aguti, aguchi, huti, utia, hutía,
+      quemí, chemí, quinajes, guabiniquinax, cori, mohuy`— y dice que son
+      nombres de **varios dialectos antillanos para sus pequeños
+      cuadrúpedos**, no sinónimos de una lengua. Y que el `guabiniquinax` de
+      Oviedo es la hutía carabalí. Resuelve el lío `guabiniquinax`/`hutia` que
+      Goeje deja abierto.
+  - forma_fuente: Tuna
+    glosa_fuente: Opuntia
+    variedad_o_isla: C (Cuba)
+    en_el_lexicon: tuna
+    nota: >-
+      🔴 confirma a Goeje (que la pone entre los cactus sin analizar) y
+      **desactiva un homónimo peligroso**: en el cuerpo (p. 191) `tuna` sale
+      también como el nombre de una variedad de *age* según Pedro Mártir
+      («tuna rojo dentro y fuera»), y en p. 254 como nombre de isla. Tres
+      cosas distintas con la misma grafía.
+  - forma_fuente: 'Behique / Bohique'
+    glosa_fuente: Sacerdote
+    variedad_o_isla: C y L (Cuba y Lucayas)
+    en_el_lexicon: bejique
+    nota: >-
+      Bachiller aporta la cita primaria que faltaba: **Las Casas, *Historia
+      Apologética* p. 436, escribe `bohique`**, y en otros sitios `behique`,
+      «especialmente en Cuba» (Bachiller p. 217). Y en p. 227 reúne el racimo
+      entero de variantes: `buhai, buhuti, bohito, bohique, behique, boition,
+      boití, buhitio, bohitio`. ⚠️ Compárese con Goeje, que da `behiko` como
+      CARIBE INSULAR usado en Haití y `buhuitihu` como taíno: Bachiller lo
+      da como voz de Cuba y las Lucayas. **Los dos intermediarios discrepan
+      sobre la lengua de esta voz.** Lo decide Miguel, leyendo Las Casas.
+  - forma_fuente: Maysi
+    glosa_fuente: 'Trigo, grano'
+    variedad_o_isla: C (Cuba)
+    en_el_lexicon: maisi · maíz
+  - forma_fuente: zabi
+    glosa_fuente: Pan
+    variedad_o_isla: C (Cuba)
+    en_el_lexicon: 'casabe · cazabi (la segunda mitad de `ka-sabi`)'
+    nota: >-
+      🔴 casa con la segmentación de Goeje (`ka-sabi`): aquí la raíz aparece
+      sola, sin el atributivo. Dos fuentes independientes apoyando el mismo
+      corte morfológico.
+  - forma_fuente: Caxicus
+    glosa_fuente: Rey
+    variedad_o_isla: C (Cuba)
+    en_el_lexicon: cacique · cacike
+  - forma_fuente: 'Caimán (Rafinesque escribe `Cayaman`)'
+    glosa_fuente: Cocodrilo
+    variedad_o_isla: C (Cuba)
+    en_el_lexicon: caiman
+    nota: >-
+      🔴 **Bachiller corrige la forma dentro del corchete**: Rafinesque escribe
+      `Cayaman`. Con `hatmane` de Goeje son TRES formas distintas para
+      'caimán' en las tres fuentes, y ninguna es la castellana `caimán`. La
+      entrada `caiman` del lexicón, hoy `taíno` sin cita, no tiene una sola
+      forma de fuente que la sostenga tal cual.
+  - forma_fuente: 'Nucay / Nocay'
+    glosa_fuente: Oro
+    variedad_o_isla: "C y L — y Bachiller declara la fuente: **Colón**"
+    en_el_lexicon: null
+    nota: >-
+      es el `nukai, noçay` que Goeje marca de las Bahamas. **Dos
+      intermediarios independientes, misma forma, misma variedad, y aquí con
+      el cronista puesto.** Cuenta como dos.
+  - forma_fuente: 'Attabex'
+    glosa_fuente: 'Supremo, uno'
+    variedad_o_isla: C (Cuba)
+    en_el_lexicon: null
+    nota: "es la Atabey de Pané, que Goeje da como `atabai` 'madre de los dioses'."
+  - forma_fuente: 'Cocuyo / Locuyos / Zievas'
+    glosa_fuente: Cocuyo
+    variedad_o_isla: 'Locuyos = C; Zievas = L'
+    en_el_lexicon: null
+  - forma_fuente: 'Guayacan / Guacían'
+    glosa_fuente: Guayacán
+    variedad_o_isla: C (Cuba)
+    en_el_lexicon: 'no en las 52; sí en `6-fusion/tainismos_en_medina.yaml`'
+  - forma_fuente: Nacan
+    glosa_fuente: 'Tierra, comarca / Dentro'
+    variedad_o_isla: C (Cuba)
+    en_el_lexicon: null
+    nota: "es el `nakan` 'au milieu' de Goeje p. 17, con lokono `anaka`."
+  las_erratas_que_bachiller_marca:
+    por_que_van_aqui: >-
+      cada una es un caso documentado de cómo una voz entra a una lista sin
+      ser lo que la lista dice. Es la cuarentena de esta campaña, con cien
+      años de antigüedad.
+    casos:
+    - 'Perdiz «Lizas» (C): Bachiller anota que es equivocación de Ocampo — ni
+      hay perdices en Cuba ni la lisa es ave, sino pez.'
+    - 'Papagayo «Maxa» (C): en Cuba `maxa`/`majá` es la mayor de sus culebras,
+      no un ave.'
+    - 'Gusano «casi» (J): Rafinesque trae además «piojo» por indígena de
+      Jamaica, «pero es un error».'
+    - 'Perro «Aleo» (C): «No es exacto».'
+    - 'Río «Agua» (C): «la palabra es española y no muy segura su aplicación».'
+    - '«Ñames, Yames»: Rafinesque «pone Yames porque escribe en inglés» — una
+      forma que sólo existe por la ortografía del compilador.'
+  el_bloque_eyeri:
+    que_es: >-
+      inmediatamente después, Bachiller publica «Fragmentos de la lengua ó
+      dialecto **Eyeri** de Borinquen (E.)», que presenta como el **dialecto de
+      las mujeres caribes** según la diferencia que observa Rochefort.
+    por_que_es_decisivo: >-
+      🔴 **AQUÍ ESTÁ LA LÍNEA QUE SEPARA EL TAÍNO DEL CARIBE INSULAR, TRAZADA
+      EN 1883 Y SOBRE LA MISMA LISTA.** Voces que la tradición mete en
+      cualquier glosario «taíno» aparecen bajo `E.`, no bajo `C./J./L.`
+    voces_eyeri_que_tocan_el_lexicon:
+    - forma: Mabuya
+      glosa_en_la_lista: Diablo
+      en_el_lexicon: maboya
+      lectura: >-
+        🔴 **SEGUNDA MANO INDEPENDIENTE que saca `maboya` del taíno**, y de un
+        autor que no leyó a Goeje porque murió antes. Bachiller lo repite en el
+        cuerpo (p. 321): «Mabuya. Espíritu malo. El diablo: también mapoya».
+        ⚠️ Pero su ANÁLISIS choca con el de Goeje: Bachiller dice (p. 228) que
+        `Ma` es afijo de **grandeza** («gran mal») y Goeje que es el privativo
+        **`ma-` 'sin'** ('sin-alma'). La forma y la lengua coinciden; la
+        etimología, no. Ninguna de las dos es atestación.
+    - forma: Uragan
+      glosa_en_la_lista: Tempestad
+      en_el_lexicon: huracan
+      lectura: >-
+        🔴 CONFLICTO DE LENGUA, y es de los grandes. Rafinesque la da como
+        **eyeri**, y Bachiller lo repite en el cuerpo (p. 275). Goeje la da
+        como **taína** (`T hurakan`). Y Bachiller añade que Benzoni
+        (*Mondo Novo* p. 18) escribe `furacano` y dice que así la llamaban
+        **los españoles**. Tres lecturas y tres lenguas para la misma voz.
+        Como la atribución al eyeri sale de Rafinesque —de quien Goeje avisa—,
+        la balanza está del lado taíno, pero **no está cerrado**.
+    - forma: Piraguas
+      glosa_en_la_lista: Bote
+      en_el_lexicon: piragua
+      lectura: >-
+        🔴 **TERCERA fuente que saca `piragua` del taíno.** Goeje la pone en
+        el caribe insular y sospecha del español *vela*; Rafinesque la da como
+        eyeri; y Bachiller (p. 245) la distingue funcionalmente de la canoa
+        («la canoa era para pescar en las costas, la piragua para más lejanos
+        viajes»). Tres manos, ninguna la llama taína. La entrada `piragua` del
+        lexicón, hoy `taíno`, es la que peor aguanta de las 52.
+    - forma: Ditaino
+      glosa_en_la_lista: Noble
+      en_el_lexicon: 'nitaino (con otra inicial)'
+      lectura: >-
+        la voz que da nombre a la lengua aparece también en la lista eyeri,
+        con `d-` en vez de `n-`. Refuerza lo de Brinton y Goeje: `nitayno` no
+        es un etnónimo, es un título, y circulaba por más de una lengua.
+    - forma: Boyez
+      glosa_en_la_lista: Sacerdote
+      en_el_lexicon: 'bejique (la misma cosa, en la otra lengua)'
+      lectura: >-
+        y aquí están las dos a la vez: `Behique/Bohique` marcado C y L, y
+        `Boyez` marcado E. Es el par que Goeje también ve (`behiko` ~ C
+        `boyahiku, boye`). **La voz existe en las dos lenguas**; cuál es la
+        original es otra pregunta.
+    - forma: 'Chemin / Chemiquem'
+      glosa_en_la_lista: 'Ángel / ángeles'
+      en_el_lexicon: cemi
+      lectura: >-
+        el `cemí` también sale en la lista eyeri, con la glosa cristianizada
+        de un misionero. Goeje da `Cf seme` en el caribe insular. Voz
+        compartida por las dos lenguas de la esfera.
+    - forma: Opoyem
+      glosa_en_la_lista: Espíritu
+      en_el_lexicon: null
+      lectura: "es el `opoyem, upoyem` de Goeje, y el par caribe del taíno `hupia`."
+    otras_voces_eyeri_de_interes:
+      Baba: padre
+      Bibi: madre
+      Batana: mar
+      Kachi/Cochi: sol
+      Kati: luna
+      Akani: enemigo
+      Nanichi: corazón
+      Eyeri: hombre
+    aviso: >-
+      ⚠️ estas ocho **no se cruzan con el caquetío por esta vía**: vienen de
+      Rafinesque vía Rochefort, con dos capas de intermediario y la advertencia
+      de Goeje encima. Se anotan para que quien vea `Kati` 'luna' junto al
+      `kati` caquetío sepa DE DÓNDE sale antes de celebrarlo.
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. EL APÉNDICE (C): LAS QUE PASAN POR INDÍGENAS Y NO LO SON
+# ══════════════════════════════════════════════════════════════════════
+apendice_c:
+  titulo_verbatim: >-
+    «Etimología de varias palabras usuales en Cuba no españolas, traídas de las
+    otras regiones americanas y de las islas Fortunadas»
+  pagina_impresa: 390-395
+  entradas_que_tocan_el_lexicon:
+  - forma_fuente: Taita
+    glosa_fuente: 'padre (en el campo cubano)'
+    pagina_impresa: 394
+    fuente_que_declara_el_autor: >-
+      «Pichardo la cree indígena de Cuba. Rojas, de otras partes de América»
+    que_dice_bachiller: >-
+      que **puede derivarse del vascuence**: `aita` 'padre', `aita aita'
+      'abuelo'; y que **en lengua goajira `tata` es padre**.
+    en_el_lexicon: taita
+    lectura: >-
+      🔴 **LA DEGRADACIÓN DE `taita`, Y LA FIRMA EL PROPIO BACHILLER.** No está
+      en su lista de voces taínas: está en el apéndice de las que **pasan por
+      indígenas y vienen de otras partes**. Y el vocabulario (p. 387) manda
+      expresamente a ese apéndice. Recordatorio de la cadena: la única
+      atestación de `taita` en nuestro lexicón venía de Brinton p. 13 citando
+      a «Richardo» = **Pichardo**, y es justo a Pichardo a quien Bachiller
+      está corrigiendo aquí. Goeje no la recoge (0 ocurrencias).
+      **La propuesta es degradar; lo decide Miguel.**
+  otras_que_conviene_saber: >-
+    el mismo apéndice saca de lo antillano `achote`, `aguacate`, `nopal`,
+    `tomate`, `tamal`, `petaca`, `zapote`, `sonsonete`, `tacuache` (mexicanas);
+    `totuma`, `patilla`, `múcara` (cumanagoto); y `tahona`, `taganana`,
+    `zoca`, `socato` (canarias). Ninguna está en las 52, pero varias circulan
+    por la web como taínas.
+
+# ══════════════════════════════════════════════════════════════════════
+# 4. LAS ENTRADAS DEL VOCABULARIO QUE MÁS MUEVEN
+# ══════════════════════════════════════════════════════════════════════
+entradas_decisivas:
+- forma_fuente: 'Daca, Dacha'
+  glosa_fuente: >-
+    «Esta palabra es considerada como la expresión ó significación de la acción
+    que indica el ser ó la existencia: si no es el verbo ser, lo suplía. El
+    Padre Pane escribe dacha; Las Casas daca.»
+  pagina_impresa: 270
+  fuente_que_declara_el_autor: 'Pané y Las Casas, nombrados los dos'
+  variedad_o_isla: no-declarada
+  campo: gramatica
+  en_el_lexicon: 'daca — hoy `taíno-reconstruido`, glosado «mano»'
+  lectura: >-
+    🔴 **LA TERCERA MANO INDEPENDIENTE SOBRE `daca`, Y LA QUE CIERRA EL CASO
+    DE LA GLOSA.** Pané da `Dios naboria daca` 'yo soy siervo de Dios'
+    (`taino_pane_c1498.yaml` pv01); Goeje da `Juan Desquivel daca` 'soy Juan de
+    Esquivel' (p. 17); y aquí Bachiller, en 1883 y sin conocer a Goeje, dice
+    que la palabra expresa **el ser o la existencia** y que **Las Casas la
+    escribe `daca` y Pané `dacha`**. Tres testimonios, dos cronistas nombrados,
+    ninguna relación con 'mano'. La etiqueta `taíno-reconstruido` y la glosa
+    «mano» del lexicón no tienen defensa. **Lo decide Miguel** (skill §8: no se
+    reescribe una glosa en una minería).
+- forma_fuente: 'Cohiba, Cojiba, Cojóba, Cojioba, Cohob'
+  glosa_fuente: >-
+    «Tabaco, según los cronistas de Indias: **esta era la planta**; y el tabaco
+    no solo el instrumento con que se hacian las ahumadas, sino las hojas
+    torcidas que hoy llevan ese nombre en Cuba»
+  pagina_impresa: 256
+  fuente_que_declara_el_autor: '«los cronistas de Indias», sin nombrar uno'
+  variedad_o_isla: no-declarada
+  campo: [flora, creencia]
+  en_el_lexicon: cohiba · tabako
+  lectura: >-
+    🔴 **TERCERA FUENTE QUE DICE LO MISMO Y CONTRA EL LEXICÓN.** Brinton p. 12
+    avisa de que la glosa 'tabaco' de `cohóba` es floja porque en Pané cap. XI
+    es el POLVO; Goeje p. 8 glosa `ka-hoba` 'polvo o humo de tabaco' y `tabako`
+    'instrumento para aspirarlo'; y Bachiller lo dice con todas las letras:
+    **`cohiba` es la planta y `tabaco` el instrumento**. El lexicón tiene la
+    pareja al revés. Es una corrección de glosa con tres apoyos independientes.
+    Lo decide Miguel.
+- forma_fuente: 'Guabinas'
+  glosa_fuente: >-
+    «Diahacas, guabinas, dahaos, cajes [cajos], mojarras. Al hablar de la gran
+    variedad de peces en las Antillas el R. Padre Las Casas enumera todos esos
+    que llevan nombres indios»
+  pagina_impresa: 267
+  fuente_que_declara_el_autor: Las Casas
+  variedad_o_isla: Antillas (no más preciso)
+  campo: fauna
+  en_el_lexicon: guabina
+  lectura: >-
+    🔴 **APARECE LA CITA PRIMARIA DE `guabina`**, que Goeje no tiene (0
+    ocurrencias) y que el inventario de ayer daba por sin apoyo: Las Casas
+    enumera los peces de nombre indio y `guabina` está entre ellos. Sube de
+    «sin cita» a «atestiguada por Las Casas vía Bachiller». ⚠️ Bachiller no da
+    el libro ni el capítulo: **eso queda por localizar** en el tomo que el repo
+    tiene.
+- forma_fuente: 'Cayo'
+  glosa_fuente: >-
+    «En lengua yucaya significaba isla: así lo dice Las Casas citado por Bello
+    en el *Repertorio Americano* pág. 199 tomo 3º: “Lucayos así llaman las
+    gentes de estas pequeñas islas, que quiere decir casi moradores de cayos;
+    porque cayos en esta lengua son islas.”»
+  pagina_impresa: 245
+  fuente_que_declara_el_autor: 'Las Casas, vía Andrés Bello'
+  variedad_o_isla: '🔴 **yucaya (lucaya)** — declarado'
+  campo: geografia
+  en_el_lexicon: cai · cayo
+  lectura: >-
+    es el MISMO pasaje que `taino_las_casas_1875.yaml` v01 transcribe del tomo
+    I cap. XL. **No es una segunda atestación** (skill §8): es la misma, por
+    otra mano. Lo que Bachiller sí añade es la palabra **`yucaya`**, que
+    convierte una voz «taína» en una voz de una variedad concreta.
+- forma_fuente: 'Naboría, Anaboria, Boria'
+  glosa_fuente: >-
+    «Anaboria significa del trabajo, hombre trabajador; Boria es el trabajo y
+    naboría el trabajar sin la calificación a. Durante la duración de los
+    repartimientos se “llaman allá en Indias naborías á los indios que tienen
+    los españoles en sus casas, que están registrados por indios de los
+    casiques.”»
+  pagina_impresa: 202
+  fuente_que_declara_el_autor: '**Documentos Inéditos del Archivo de Indias**'
+  variedad_o_isla: no-declarada
+  campo: organizacion-social
+  en_el_lexicon: naboria
+  lectura: >-
+    🔴 fuente de tipo distinto a todas las demás de esta campaña: **documento
+    administrativo, no crónica**. Es una atestación independiente de Pané y de
+    Las Casas, y de las más fiables que hay, porque la palabra está usada, no
+    glosada. El análisis morfológico (`ana-` / `na-` + `boria`) es de
+    Bachiller y no es atestación.
+- forma_fuente: 'naitano ó nitaino'
+  glosa_fuente: >-
+    «En estas cédulas se vé que naitano y nitaino eran palabras que expresaban
+    **grados civiles** y que como he dicho en su lugar, **taino solo significa
+    noble en el concepto de bueno**»
+  pagina_impresa: 283
+  fuente_que_declara_el_autor: 'cédulas de repartimiento que copia Las Casas'
+  variedad_o_isla: La Española
+  campo: jerarquia
+  en_el_lexicon: nitaino
+  lectura: >-
+    🔴 **TERCERA fuente independiente sobre el origen del nombre «taíno»**, y
+    la única que lo documenta en un acto administrativo con nombre propio («un
+    naitano ó nitaino Juan de Barona»). Brinton lo deduce, Goeje lo repite,
+    Bachiller lo enseña usado. Y aporta la variante `naitano`.
+- forma_fuente: 'siba'
+  glosa_fuente: >-
+    «La palabra siba en el lenguage de Haití significa piedra […] Cibao es un
+    territorio de la isla que se deriva de aquella palabra y expresa lo mismo
+    que roca. **Los araguas llaman a la piedra siba y sibao a un lugar roquero
+    en Demerara**»
+  pagina_impresa: 210
+  fuente_que_declara_el_autor: 'Irving, *Columbus* libro VI cap. 5; y Brett, *The Indian Tribes*'
+  variedad_o_isla: Haití
+  campo: materiales
+  en_el_lexicon: 'no como taíno — el lexicón la tiene por el lado lokono'
+  lectura: >-
+    🔴 CIERRA EL PUNTO ABIERTO DEL INVENTARIO DE AYER, con Goeje (`T siba`) y
+    con Pané (Bachiller p. 278: Guabonito dio a Guahagiona «las sibas y
+    guaninos»). **`siba` es taína Y lokona, y la fuente lo dice de las dos a
+    la vez.** No es un préstamo que haya que decidir: es patrimonio arahuaco
+    compartido, documentado en 1883 en las dos orillas.
+- forma_fuente: 'Konoko, conuco'
+  glosa_fuente: >-
+    «De la lengua taina sólo vemos estos rastros españolizando la pronunciación:
+    **Konoko, conuco, que allí significa selva**; seeba, siba piedra; eweida,
+    igüeida, igüera, güira»
+  pagina_impresa: 210
+  fuente_que_declara_el_autor: >-
+    el catálogo de los misioneros en la lengua de los araguas (arawak de
+    Guayana), que Bachiller dice que no pasa de 82 palabras
+  variedad_o_isla: 'arawak de Guayana — NO taíno'
+  campo: agricultura
+  en_el_lexicon: kunuku
+  lectura: >-
+    ⚠️ **AVISO DE GLOSA**: en el arawak de Guayana `konoko` es **selva**, y en
+    taíno `conuco` es el campo cultivado (Oviedo lib. VII cap. 2 vía Brinton;
+    `komiko` en Goeje). Nuestro `kunuku` glosa 'conuco, campo cultivado'. La
+    misma raíz con dos valores opuestos —lo desmontado y lo no desmontado— en
+    las dos orillas. Es exactamente el tipo de cosa que un cruce por forma sin
+    filtro de glosa junta mal (skill §2).
+- forma_fuente: 'Areito, areyto'
+  glosa_fuente: >-
+    «Cantares acompañados de bailes en que recordaban sus tradicciones y
+    celebraban sus fiestas y ritos los indios de las Antillas: y **se llamaban
+    bátocos en algunas otras partes**»
+  pagina_impresa: 210
+  fuente_que_declara_el_autor: 'Herrera (para el areíto cristiano de Cuba)'
+  variedad_o_isla: 'Antillas; `bátoco` en «algunas otras partes»'
+  campo: [rito, transmision]
+  en_el_lexicon: areito
+  lectura: >-
+    no añade atestación primaria —la de Oviedo, libro V cap. I, ya la tenemos—
+    pero sí un **sinónimo de otra variedad**: `bátoco`. Y documenta el areíto
+    cristiano, que es el género ya colonial: precontacto ≠ colonial (regla 3).
+- forma_fuente: 'Gumilla trae otras palabras cubanas allí usadas'
+  glosa_fuente: >-
+    «bija ó bixa, embijado, macana, cabuya, jobo, caimán, yuca, papagayo,
+    achote»
+  pagina_impresa: 239
+  fuente_que_declara_el_autor: 'Gumilla, *El Orinoco ilustrado*'
+  variedad_o_isla: 'usadas EN EL ORINOCO, de origen antillano'
+  campo: esfera
+  en_el_lexicon: 'bixa · caiman · yuca — y `macana`, que tiene propuesta abierta'
+  lectura: >-
+    🔴 **LA ESFERA, DOCUMENTADA EN LA DIRECCIÓN QUE NOS IMPORTA.** Bachiller
+    dice que Gumilla registra nueve voces antillanas **en uso en el Orinoco**.
+    Eso no es el taíno prestando al caquetío en el s. XV: es el s. XVIII y con
+    el castellano de por medio. Pero es el mecanismo documentado, y toca
+    `6-fusion/propuesta_macana_etiqueta_2026-09-21.yaml`: `macana` viaja por
+    esa vía, no necesariamente por contacto precolombino.
+- forma_fuente: 'Cobo'
+  glosa_fuente: 'Caracol de mar'
+  pagina_impresa: 256
+  fuente_que_declara_el_autor: no-declarada
+  variedad_o_isla: no-declarada
+  campo: fauna
+  en_el_lexicon: cobo
+  lectura: >-
+    sube de «cero en Goeje» a «entrada de vocabulario sin cita». Bachiller
+    añade (p. 223) que el `fotuto` cubano viene del `botuto` del Orinoco y que
+    se hacía **del cobo**: otra pieza de esfera, y otra vez con una voz del
+    continente al lado.
+- forma_fuente: 'Maniguas'
+  glosa_fuente: 'Lo mismo que terreno breñoso ó breñas'
+  pagina_impresa: 382
+  fuente_que_declara_el_autor: no-declarada
+  variedad_o_isla: Cuba
+  campo: geografia
+  en_el_lexicon: manigua
+  lectura: >-
+    ⚠️ **está en la SECCIÓN 3ª, la del cubano moderno, no en el vocabulario
+    taíno.** Lo que sólo aparece ahí no es taíno atestiguado del XVI: es habla
+    cubana del XIX con raíz indígena. `manigua` no sube de clase.
+
+# ══════════════════════════════════════════════════════════════════════
+# 5. NEGATIVAS MEDIDAS
+# ══════════════════════════════════════════════════════════════════════
+negativas:
+- busqueda: caquetío / caiquetío / Curiana / Paraguaná
+  resultado: 0
+  lectura: esta obra no habla del caquetío. Se mina por el taíno y por la esfera.
+- busqueda: 'mayani'
+  resultado: 0
+  lectura: >-
+    la negación taína no entra en la lista de Bachiller. Su apoyo sigue siendo
+    Brinton ('of no value') y Goeje ('rien'), y hay que decidir entre los dos.
+- busqueda: 'yamosa / yamoka'
+  resultado: 0
+  lectura: >-
+    los numerales taínos no están en Bachiller. Siguen colgando de Las Casas
+    *Apologética* cap. 204, que el repo NO tiene.
+- busqueda: 'abba / hequeti / heketi'
+  resultado: 0
+  lectura: ídem — y el 1 taíno es el caso más caro que queda abierto.
+- busqueda: 'acoa, aduri, agari, akcicyaa, thigisi, wacusi, wagulo'
+  resultado: 0 (las siete)
+  lectura: >-
+    las siete reconstruidas por este proyecto desde el lokono. Dos
+    vocabularios antillanos independientes (Goeje y Bachiller) y ninguno las
+    tiene. **No son taínas.**
+
+# ══════════════════════════════════════════════════════════════════════
+# 6. PROPUESTA (regla 5)
+# ══════════════════════════════════════════════════════════════════════
+propuesta:
+  para_miguel:
+  - id: b1
+    asunto: '`taita` — degradar'
+    evidencia: >-
+      Bachiller la pone en su apéndice de voces que pasan por indígenas y vienen
+      de fuera (p. 394), corrige a Pichardo —que es la única autoridad detrás
+      de nuestra entrada, vía Brinton— y propone el vascuence `aita`. Goeje: 0
+      ocurrencias.
+    opciones: >-
+      (A) sacarla de `taíno` y archivarla en `FUERA_DEL_HABLA` con la nota;
+      (B) reetiquetarla `sin-clasificar` con `deuda: sin-procedencia`;
+      (C) dejarla y anotar.
+    recomendacion_del_minador: 'A o B. Regla 2: en duda, degradar.'
+  - id: b2
+    asunto: '`cohiba` / `tabako` — la pareja está al revés'
+    evidencia: 'Brinton, Goeje y Bachiller, independientes, dicen que `cohiba` es la planta y `tabako` el instrumento.'
+    opciones: '(A) corregir las dos glosas con las tres citas; (B) anotar y esperar; (C) nada.'
+    recomendacion_del_minador: A.
+  - id: b3
+    asunto: '`guabina` — sube de «sin cita» a «Las Casas, libro por localizar»'
+    evidencia: 'Bachiller p. 267: Las Casas enumera `guabinas` entre los peces de nombre indio.'
+    opciones: '(A) anotar la cita indirecta y abrir la tarea de localizar el pasaje; (B) esperar a tenerlo.'
+  - id: b4
+    asunto: 'variedad por voz — lo que SÍ se puede poner ya'
+    evidencia: >-
+      del apéndice (A) y del cuerpo salen asignaciones de isla o variedad para
+      `cayo` (yucaya/lucaya, apoyada dos veces), `hutia` (Lucayas), `tuna`
+      (Cuba), `bejique` (Cuba y Lucayas), `bohio` (Cuba), `maisi` (Cuba),
+      `cacique` (Cuba), `caiman` (Cuba), `nucay` (Cuba y Lucayas).
+    opciones: >-
+      (A) añadir un campo `variedad` a esas entradas del lexicón con su cita;
+      (B) dejarlo en la lista maestra y no tocar el lexicón hasta tener
+      Granberry.
+    recomendacion_del_minador: >-
+      B. La asignación por una lista del XIX que copia a Rafinesque no es
+      Granberry; vale para saber qué pedirle, no para etiquetar el canon.
+  - id: b5
+    asunto: '`maboya`, `piragua` y `huracan` — el bloque eyeri'
+    evidencia: >-
+      las tres aparecen en la lista EYERI de Rafinesque, no en la taína. Para
+      `maboya` y `piragua` coincide con Goeje, que es independiente; para
+      `huracan` **no** coincide (Goeje la da taína), y la atribución al eyeri
+      sale precisamente de Rafinesque.
+    opciones: >-
+      (A) mover `maboya` y `piragua` a `kalinago` y dejar `huracan` en taíno
+      con nota; (B) marcar las tres `esfera-indecidible`; (C) no tocar nada.
+    recomendacion_del_minador: >-
+      A, y con el matiz dicho: dos fuentes independientes contra `maboya` y
+      `piragua`, y una sola —y sospechosa— contra `huracan`.
+  lo_que_este_archivo_NO_propone: >-
+    ni un cognado nuevo, ni una entrada nueva, ni una re-etiqueta aplicada.
+    Todo lo de arriba es propuesta.

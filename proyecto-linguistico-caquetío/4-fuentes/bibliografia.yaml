@@ -1,7 +1,7 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 76
-  en_repo: 44
+  obras: 80
+  en_repo: 48
   solo_citadas: 32
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
@@ -152,6 +152,20 @@ obras:
   - Erythrina en Venezuela
   - avendano-castillo-2014-erythrina
   en_repo: true
+- id: bachiller-morales-1883
+  obra: Cuba primitiva. Origen, lenguas, tradiciones e historia de los indios de las Antillas Mayores
+    y las Lucayas
+  autor: Bachiller y Morales, Antonio
+  anio: 1883
+  genero: etnohistoria-vocabulario
+  local:
+  - fuentes_caquetios/Bachiller_Morales_1883_Cuba_Primitiva.pdf
+  - fuentes_caquetios/Bachiller_Morales_1883_Cuba_Primitiva.txt
+  paginas: 399
+  aliases:
+  - Bachiller y Morales 1883
+  - Cuba primitiva
+  en_repo: true
 - id: ballesteros-1550
   obra: Carta al Monarca Español sobre la ciudad de Coro
   autor: Ballesteros, Miguel Gerónimo de (Obispo de Coro)
@@ -250,6 +264,18 @@ obras:
   - Elegías de varones ilustres de Indias
   - Juan de Castellanos
   - castellanos-elegias
+  en_repo: true
+- id: coll-y-toste-1897
+  obra: Prehistoria de Puerto Rico (con el Vocabulario indo-antillano)
+  autor: Coll y Toste, Cayetano
+  anio: 1897
+  genero: etnohistoria-vocabulario
+  local:
+  - fuentes_caquetios/CollYToste_1897_Prehistoria_Puerto_Rico.pdf
+  - fuentes_caquetios/CollYToste_1897_Prehistoria_Puerto_Rico.ocr.txt
+  aliases:
+  - Coll y Toste 1897
+  - Vocabulario indo-antillano
   en_repo: true
 - id: dijkhoff-1997
   obra: 'Tanki Flip / Henriquez: an Early Urumaco Site in Aruba'
@@ -356,6 +382,20 @@ obras:
   aliases:
   - Gilij
   - Saggio di Storia Americana
+  en_repo: true
+- id: goeje-1939
+  obra: Nouvel examen des langues des Antilles, avec notes sur les langues arawak-maipure et caraïbes
+    et vocabulaires shebayo et guayana (Guyane)
+  autor: Goeje, Claudius H. de
+  anio: 1939
+  genero: linguistica-comparativa
+  local:
+  - fuentes_caquetios/Goeje_1939_Nouvel_examen_langues_Antilles.pdf
+  - fuentes_caquetios/Goeje_1939_Nouvel_examen_langues_Antilles.txt
+  paginas: 1-120
+  aliases:
+  - Goeje 1939
+  - de Goeje 1939
   en_repo: true
 - id: gonzalez-batista-nombre-de-coro
   obra: El nombre de Coro
@@ -945,6 +985,19 @@ obras:
   - Perrin 1992
   - Perrin 1995
   en_repo: false
+- id: pichardo-1862
+  obra: Diccionario provincial casi-razonado de vozes cubanas
+  autor: Pichardo y Tapia, Esteban
+  anio: 1862
+  genero: diccionario-dialectal
+  local:
+  - fuentes_caquetios/Pichardo_1862_Diccionario_Provincial_Vozes_Cubanas.pdf
+  - fuentes_caquetios/Pichardo_1862_Diccionario_Provincial_Vozes_Cubanas.txt
+  paginas: 3ª ed.
+  aliases:
+  - Pichardo 1862
+  - Richardo
+  en_repo: true
 - id: polar-el-maiz-glosario
   obra: El maíz — Glosario alimentario del maíz y bibliografía
   autor: Fundación Empresas Polar (ed.)
