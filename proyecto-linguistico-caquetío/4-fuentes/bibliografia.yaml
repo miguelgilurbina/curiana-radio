@@ -1,7 +1,7 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 66
-  en_repo: 43
+  obras: 67
+  en_repo: 44
   solo_citadas: 23
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
