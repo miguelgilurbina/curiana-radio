@@ -580,6 +580,51 @@ evidencia:
       de concha entre Venezuela y las Antillas Mayores documentado?») sale
       **negativa** con lo que se pudo abrir.
 
+  # ─────────────────── ETNOHISTÓRICA (complemento) ───────────────────
+  - id: eth-01
+    clase: etnohistórica   # ⚠️ NO es material: entra como complemento, no como prueba
+    titulo: "Y la carta de Ampíes dice que cruzar a las islas era un HÁBITO, no un episodio"
+    obra: arcaya-1920
+    pagina: "pp. 159-160 (la carta, publicada en Oviedo y Baños, ed. Fernández Duro, t. II, p. 209)"
+    cita_corta: >-
+      los indios de la costa «muchas veces se pasaban allá a holgar con ellos»
+    cita_segunda: >-
+      «un cacique que se dice D. Juan Baracoica, que está en las islas y es su
+      pariente y deudo»
+    epoca: >-
+      🔴 COLONIAL — la carta es de Santo Domingo, finales de 1525 o principios
+      de 1526. Describe un hábito que presenta como anterior, pero no lo fecha.
+    etiqueta: atestiguado (el documento) / hipotetico (su proyección al s. XV)
+    que_prueba: >-
+      Que a la altura de 1525 había hasta «doscientas personas de todas
+      edades» en Curazao, Aruba y Bonaire; que la gente de la costa de enfrente
+      —«desde Paraguachoa hasta la punta de Coquibacoa», nombrando Sauca y
+      Paraguaná— cruzaba a las islas muchas veces; y que el cacique que le
+      llevó la embajada a Ampíes, don Juan Baracoica, vivía en las islas y era
+      «pariente y deudo» de Manaure. Es decir: costa y ABC eran **una sola
+      comunidad con parentesco**, no dos orillas que se visitaban.
+    por_que_entra_aqui: >-
+      Porque es el complemento exacto de `gen-01` y cambia cómo se lee. Si las
+      ABC eran el sitio al que la gente de la costa se pasaba constantemente, y
+      la gente enterrada allí lleva dos tercios de ancestría de las Antillas
+      Menores, entonces **las islas son donde el continente y la descendencia
+      antillana convivían**. El puente no era un viaje raro; era una casa
+      compartida.
+    que_NO_prueba:
+      - >-
+        NO salta a las Antillas Mayores. En la misma carta, el único vínculo
+        con La Española es el de la armada española que se llevó a la hija de
+        Manaure y la devolución que hizo Ampíes: contacto **colonial** y en
+        barco europeo.
+      - >-
+        NO fecha nada. Es de 1525-26 y describe la costumbre como ya
+        establecida, que es lo más que un documento de contacto puede hacer.
+        Regla 3: proyectarlo al siglo XV es una decisión, no una lectura.
+      - >-
+        NO es evidencia MATERIAL, que es lo que esta parcela buscaba. Entra
+        como contexto que hace más probable lo que la genética midió, no como
+        una de las seis predicciones.
+
   # ───────────────────────── ARTE RUPESTRE ─────────────────────────
   - id: rup-01
     clase: arte rupestre

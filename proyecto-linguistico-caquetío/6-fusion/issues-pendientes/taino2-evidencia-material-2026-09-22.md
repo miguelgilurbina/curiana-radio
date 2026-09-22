@@ -120,6 +120,38 @@ el antillano, a algo posterior:
 
 ---
 
+## 2 bis. El complemento etnohistórico: cruzar a las islas era un hábito
+
+Esto no es evidencia material y no cuenta como una de las seis predicciones,
+pero cambia cómo se lee el hallazgo. La carta de Ampíes al Rey, desde Santo
+Domingo, finales de 1525 o principios de 1526 (Arcaya 1920, pp. 159-160,
+publicada en Oviedo y Baños, ed. Fernández Duro, t. II, p. 209), dice tres
+cosas verificadas hoy en el propio texto:
+
+- en Curazao, Aruba y Bonaire había «hasta doscientas personas de todas
+  edades»;
+- los indios de la costa de enfrente —«desde Paraguachoa hasta la punta de
+  Coquibacoa», nombrando **Sauca y Paraguaná**— «**muchas veces se pasaban
+  allá a holgar con ellos**»;
+- el cacique que le llevó la embajada, **don Juan Baracoica**, «está en las
+  islas **y es su pariente y deudo**» — de Manaure.
+
+Costa y ABC no eran dos orillas que se visitaban: eran **una sola comunidad
+con parentesco**. Y si las islas eran el sitio al que la gente de la costa se
+pasaba constantemente, y la gente enterrada allí lleva dos tercios de
+ancestría de las Antillas Menores, entonces **las ABC son donde el continente
+y la descendencia antillana convivían**. El puente no era un viaje raro; era
+una casa compartida.
+
+⚠️ **Dos cosas que esto no hace.** No salta a las Antillas Mayores: en la misma
+carta, el único vínculo con La Española es la armada española que se llevó a la
+hija de Manaure y la devolución que hizo Ampíes — contacto **colonial**, en
+barco europeo. Y no fecha nada: es de 1525-26 y presenta la costumbre como ya
+establecida, que es lo más que un documento de contacto puede hacer.
+Proyectarlo al siglo XV es una decisión (regla 3), no una lectura.
+
+---
+
 ## 3. La tabla de predicciones
 
 | # | Predicción del encargo | ¿Vista? | Dónde | Fuerza |
