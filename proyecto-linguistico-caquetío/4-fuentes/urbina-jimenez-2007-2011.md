@@ -9,7 +9,8 @@ capa_texto: si
 acceso: "El survey de 2011 es libre — Academia.edu: https://www.academia.edu/35413060/. El Carrizal (2007) no se verificó acceso en el rastreo. Ver el rastreo documental del 2026-08-14."
 estado_minado: parcial
 prioridad: alta
-verificado: 2026-08-14
+verificado: 2026-09-22
+minado: 2026-09-22
 aliases: ["Urbina Jiménez 2007", "Urbina Jiménez 2011", "El Carrizal", "Coastal Falcón Survey"]
 ---
 
@@ -94,6 +95,31 @@ systematic methodology… instead, it has been an opportunistic sampling"*.
 - Recoge que **Osgood** hizo en los años 50 la primera excavación estratigráfica
   del estado, **en la península de Paraguaná**, y que **Cruxent** prospectó la
   región a finales de los 40.
+
+⚠️ **Y una advertencia de la propia portada** que hay que respetar al citarla:
+*"this dissertation is an unrevised examination copy for consultation only and
+it should not be quoted or cited without the permission of the Director of the
+Institute"*. Se usa como medida, no como autoridad.
+
+### ⭐ El cero antillano, medido aquí (campaña del taíno T8, 2026-09-22)
+
+Se le hizo una pregunta nueva: **¿aparece alguna vez cultura material
+antillana en el registro agroalfarero de Falcón costero?** Barrido de 24
+sondas de raíz corta y sin acentos (ostionoide, chicoide, meillacoide,
+elenoide, palmetto, guanín, tumbaga, jadeíta, cemí, zemi, guaíza, duho,
+trigonolito, Antillas Mayores, Greater Antilles, Hispaniola, taíno, lucayo…)
+sobre los 127.993 caracteres del `pdftotext`:
+
+> **cero**, en las 24.
+
+Y el control del mismo barrido sale positivo —dabajuro 29, caquet 8, ceramic
+34, sherd 3—, así que el cero es de la fuente y no del extractor (regla 6).
+Las subtradiciones que la base de 192 yacimientos nombra son **Tortolitana** y
+**Dabajurana**, y nada más.
+
+⚠️ Sigue siendo un negativo sobre una compilación de prospecciones
+oportunistas, no sobre un catálogo de materiales. Lo mide
+`python 6-fusion/scripts/medir_taino2_evidencia_material.py`.
 
 ---
 

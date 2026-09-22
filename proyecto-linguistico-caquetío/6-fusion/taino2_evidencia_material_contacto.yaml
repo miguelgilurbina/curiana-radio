@@ -1,0 +1,973 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — la evidencia MATERIAL del contacto: arqueología y genética
+#
+# Segunda campaña del taíno, parcela T8 (2026-09-22). Encargo de Miguel:
+# «Ve avanzando con la búsqueda, descarga y minado de fuentes para corroborar
+# pre contacto con Taíno y minar más info», sobre la intuición de la noche
+# anterior: «tiene que haber una forma de probar si hubo algún tipo de
+# contacto. O sea de que es plausible es plausible.»
+#
+# La parcela pregunta por OBJETOS y GENES, no por crónicas: ¿hay evidencia
+# material de relación entre la costa caquetía / las islas ABC y las Antillas
+# ANTES de 1492? ¿Directa, o por la cadena de las Antillas Menores?
+#
+# Regla 5: esto PROPONE. Regla 1: las cifras del lado del REPO las imprime
+# `python 6-fusion/scripts/medir_taino2_evidencia_material.py`; las del lado
+# de las fuentes son citas y llevan obra y página. Regla 3, que aquí vuelve a
+# ser la que más muerde: cada pieza lleva su ÉPOCA, y la época es la que
+# decide si vale.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-09-22'
+  estado: propuesta
+  parcela: T8 — la evidencia material del contacto (arqueología y genética)
+  medido_por: 6-fusion/scripts/medir_taino2_evidencia_material.py
+  continua_a: 6-fusion/taino_en_la_esfera_2026-09-21.yaml   # campaña 1, T5
+  pregunta: >-
+    ¿Hay evidencia material —objetos, materias primas, cerámica, genes— de
+    relación entre la polity caquetía costera (con Aruba, Curazao y Bonaire)
+    y las Antillas antes de 1492? Y si la hay, ¿directa o por la cadena de
+    las Antillas Menores?
+
+# ══════════════════════════════════════════════════════════════════
+# 0. LO QUE DEL ENCARGO RESULTÓ FALSO AL MEDIRLO
+# ══════════════════════════════════════════════════════════════════
+correcciones_al_encargo:
+
+  - id: corr-01
+    afirmacion_del_encargo: >-
+      «la sección de evidencia arqueológica y genética [de la campaña 1] es tu
+      punto de partida (concluyó "nada precolombino")».
+    lo_medido: >-
+      El punto de partida CAE en su pieza central. Fernandes et al. 2020 —la
+      obra que la campaña 1 no pudo abrir porque el archivo estaba en 0
+      bytes— contiene ADN antiguo de DOS aldeas caquetías de Curazao, y sus
+      autores describen «major gene flow from the Antilles that affected
+      Curaçao in the centuries after the arrival of Dabajuroid pottery».
+      El cero de la campaña 1 era un cero de la BIBLIOTECA, no del registro.
+      Ver `gen-01`.
+    consecuencia: >-
+      No invalida el veredicto anterior sobre el TAÍNO en sentido estricto
+      (Antillas Mayores) — lo refuerza, porque ahora es un negativo medido y
+      no un silencio. Sí invalida la frase «la esfera no se fuerza para que
+      quepa» aplicada a las Antillas en general: por el sur del arco, la
+      esfera YA entraba, con gente.
+
+  - id: corr-02
+    afirmacion_del_encargo: >-
+      «Descarga Fernandes et al. 2020 (es acceso abierto; comprueba la
+      licencia)» y «Nägele et al. 2020, Science (versión en PubMed Central si
+      la hay)».
+    lo_medido:
+      - >-
+        Fernandes 2020: el texto SÍ es accesible (Europe PMC lo sirve como
+        `fullTextXML`, y el suplemento entero está publicado abierto por el
+        Reich Lab), pero **el PDF no se puede descargar de PMC con
+        herramientas automáticas** —devuelve una página «Preparing to
+        download»— y su licencia **no es CC**: es la de Nature («view, print,
+        copy, and download text and data-mine … for the purposes of academic
+        research»). O sea: minable, no redistribuible.
+      - >-
+        Nägele et al. 2020, Science 369(6502): **NO tiene versión de acceso
+        abierto**. Europe PMC lo marca `isOpenAccess=N`, sin PMCID y con
+        «Subscription required». No se descargó. Anotado en
+        `4-fuentes/nagele-2020.md` con su DOI y qué daría.
+    consecuencia: >-
+      El archivo `Fernandes_et_al_2020_Nature_Genetic_History_Caribbean.pdf`
+      **sigue en 0 bytes y se deja así a propósito**. Lo que entra al repo es
+      el preprint de bioRxiv, que sí lleva licencia CC (BY-NC-ND 4.0), y NO
+      es el mismo texto: le falta justamente el material suplementario donde
+      está el hallazgo. Ver `descargas`.
+
+  - id: corr-03
+    afirmacion_del_encargo: >-
+      «Rouse y Cruxent 1963 (descárgalo si está en archive.org en préstamo
+      legal o en acceso abierto; si no, anota)».
+    lo_medido: >-
+      Está en archive.org en DOS ejemplares (`venezuelanarchae0000rous` y
+      `venezuelanarchae0000irvi`), los dos con `access-restricted-item: true`
+      y en las colecciones `inlibrary` / `printdisabled`: **préstamo digital
+      controlado**, que exige cuenta y préstamo y no es descarga. Sin
+      `licenseurl` ni `rights`. Tampoco respondió el servicio de «search
+      inside», así que no se pudo ni sondear por dentro.
+    consecuencia: >-
+      NO se descargó (habría sido saltarse un control de acceso). Sigue
+      siendo el hueco declarado desde 2026-07-29. Anotado.
+
+  - id: corr-04
+    afirmacion_del_encargo: >-
+      «José Oliver … publicó "Gold symbolism among Caribbean chiefdoms"
+      (en *Precolumbian Gold*, ed. McEwan, 2000) sosteniendo que el guanín
+      llegaba a las Antillas desde el norte de Suramérica».
+    lo_medido: >-
+      El capítulo existe y la referencia es correcta (pp. 196-219), pero es un
+      capítulo de libro de British Museum Press **sin versión abierta**: no se
+      obtuvo y NO se le atribuye ninguna tesis en este documento. Lo que sí
+      se pudo leer de primera mano es la arqueometalurgia que lo cita y lo
+      pone a prueba —Martinón-Torres et al. 2012— y su respuesta es más
+      precisa y menos favorable de lo que el encargo suponía: ver `met-01`.
+
+  - id: corr-05
+    afirmacion_del_encargo: >-
+      «Rodríguez Ramos y otros han rastreado la procedencia de la jadeíta …
+      ¿Alguna procedencia venezolana o de la Guajira?»
+    lo_medido: >-
+      La pregunta tiene respuesta y la respuesta es **no, y por el lado
+      contrario**: la síntesis lapidaria de Queffelec 2024 concluye que la
+      producción de cuentas y colgantes del arco antillano **no tiene que ver**
+      con la del bajo Orinoco saladoide y sí con el área **ístmo-colombiana**.
+      Es decir, la piedra verde antillana mira al OESTE por un camino que no
+      pasa por Falcón. Ver `pie-01`.
+
+# ══════════════════════════════════════════════════════════════════
+# 1. EL VEREDICTO
+# ══════════════════════════════════════════════════════════════════
+veredicto: >-
+  Sí hay evidencia material de contacto precolombino entre la esfera caquetía
+  y las Antillas, y es genética y de primer orden: los individuos enterrados
+  en dos aldeas CAQUETÍAS de Curazao, fechadas 1160-1500 y 1443-1522 d.C.,
+  llevan ~dos tercios de ancestría de las ANTILLAS MENORES, y los autores lo
+  leen como «flujo génico mayor desde las Antillas» posterior a la llegada de
+  la cerámica dabajuroide. Pero esa misma fuente cierra la puerta que Miguel
+  quería abrir: la ancestría es de las Antillas MENORES y **no** de las
+  Mayores, y de la vía taína —Antillas Mayores, guanín, piedra verde,
+  cerámica, concha— no aparece ni una pieza. El contacto existió; era por la
+  cadena del sur, no con el taíno.
+
+veredicto_largo: >-
+  La campaña 1 dijo «primos, no vecinos» y midió un cero. Con las dos fuentes
+  que le faltaban abiertas, el cero se parte en dos. (a) Hacia las Antillas
+  MAYORES sigue a cero, y ahora es un cero medido: la prospección de 192
+  yacimientos de Falcón costero (Urbina 2011) y la arqueología de los Médanos
+  de Coro (Zavala Reyes et al. 2018) no mencionan ni una vez ostionoide,
+  chicoide, meillacoide, guanín, jadeíta, cemí ni Antillas Mayores; el
+  guanín de Cuba se atribuye a orfebres TAIRONA y ZENÚ de Colombia por vía
+  iconográfica, y la ruta que se propone dentro de Cuba es oriental; la pieza
+  «taína» mejor candidata de Aruba resulta parecerse a un tipo que Rouse
+  clasifica como falsificación; y el guaíza más meridional con contexto
+  arqueológico se queda en Santa Lucía. (b) Hacia las Antillas MENORES, en
+  cambio, hay gente: dos tercios del genoma de los caquetíos de Curazao. La
+  esfera caquetía no estaba sellada por el norte-este; lo que no tocaba era
+  el mundo taíno. Y una asimetría que conviene decir entera: de los tres ejes
+  largos del caquetío —Guajira/Ranchería al oeste, Los Roques/Las Aves al
+  este, el arco antillano más allá— el tercero sólo se ve en los HUESOS, no
+  en los objetos. Nadie ha encontrado todavía el correlato arqueológico, y
+  los propios autores lo dejan escrito como tarea pendiente.
+
+# ══════════════════════════════════════════════════════════════════
+# 2. LA EVIDENCIA, PIEZA A PIEZA
+# ══════════════════════════════════════════════════════════════════
+evidencia:
+
+  # ───────────────────────── GENÉTICA ─────────────────────────
+  - id: gen-01
+    clase: genética
+    titulo: "⭐⭐ Los caquetíos de Curazao llevan ~2/3 de ancestría de las Antillas Menores"
+    obra: fernandes-2020
+    pagina: >-
+      Nature 590:106 (texto principal) y Supplementary Information, SI2
+      «Curaçao» (pp. 30-32 del suplemento) y SI9 (Tablas S14-S15)
+    cita_corta: >-
+      «major gene flow from the Antilles that affected Curaçao»
+    cita_segunda: >-
+      «The individuals analysed for this study come from two Caquetio
+      settlements»
+    epoca: >-
+      precontacto tardío para los INDIVIDUOS (contexto de De Savaan
+      1160-1500 d.C.; Santa Cruz 1443-1522 d.C. — o sea, la ventana simulada
+      y su borde colonial); indeterminada para el EVENTO de mezcla
+    etiqueta: atestiguado
+    que_prueba: >-
+      Que la población enterrada en dos aldeas caquetías de Curazao —
+      identificadas como caquetías por la abundancia de cerámica dabajuroide,
+      y una de ellas señalada por los españoles como el pueblo de un cacique
+      caquetío— no es genéticamente continental pura. El modelo qpAdm que
+      los autores reportan es 74,5 ± 3,7 % de ancestría emparentada con
+      `*LesserAntilles_Ceramic` y 25,5 ± 3,7 % con `*Venezuela_Ceramic`
+      (p = 0,362, con competencia de modelos). Sin competencia de modelos, el
+      ajuste de dos vías con los clados mayores es 68,0 ± 5,1 % `*Caribbean_Ceramic`
+      y 32,0 ± 5,1 % `*Venezuela_Ceramic` (p = 0,298).
+      El componente continental lo asocian a la llegada de la cerámica
+      dabajuroide hacia 500 d.C.; el antillano, a un flujo posterior.
+    que_NO_prueba:
+      - >-
+        NO prueba contacto con el TAÍNO. El texto principal es explícito en
+        sentido contrario: la ancestría se comparte con las Antillas Menores
+        «but not the Greater Antilles». Las dos poblaciones de referencia del
+        subclado son Anse à la Gourde (Guadalupe) y Lavoutte (Santa Lucía).
+      - >-
+        NO prueba contacto en el siglo XV. **No hay fecha para la mezcla**:
+        los propios autores escriben que no pudieron obtener estimaciones
+        viables de fecha de mezcla para los individuos de Curazao (SI14,
+        donde sí las dan para Haití: 16,5 ± 3,3 generaciones). «En los siglos
+        posteriores a la llegada de la cerámica dabajuroide» es su lectura,
+        no una medición. El evento puede caer en cualquier punto entre
+        c. 500 y c. 1300 d.C.
+      - >-
+        NO prueba tráfico de objetos. Los autores lo dicen: identificar el
+        correlato arqueológico de estos eventos es «an important topic for
+        future research». Hoy hay huesos y no hay cacharros.
+      - >-
+        NO es un contacto entre iguales medido con muchas muestras. El
+        subclado `*Curacao_Ceramic` lo componen DOS yacimientos (de Savaan y
+        Santa Cruz) y el propio artículo advierte que forman clado entre sí
+        sólo «marginally» (p = 0,011).
+    aviso_de_cifra: >-
+      ⚠️ El número EXACTO de individuos de Curazao no se pudo leer: está en
+      Supplementary Data 1, un .xlsx que PMC no sirve a una descarga
+      automática. El preprint de bioRxiv (junio 2020), anterior a que se
+      añadiera Santa Cruz, listaba 2 individuos de de Savaan. No se escribe
+      un total a mano (regla 1): queda como hueco declarado.
+    aviso_de_matiz: >-
+      ⚠️ Y el «no las Mayores» tiene un matiz que el propio suplemento pone y
+      que en duda hay que degradar: en el modelo de grafo (qpGraph), la mejor
+      fuente de mezcla para `*Curacao_Ceramic` es «a population between the
+      Ceramic-associated populations from Greater and Lesser Antilles».
+      El texto principal afirma «Menores y no Mayores»; el grafo dice «entre
+      las dos». Se registran las dos lecturas.
+
+  - id: gen-02
+    clase: genética
+    titulo: "El flujo hacia el otro lado no existe: ninguna migración continental posterior entró en las Antillas"
+    obra: fernandes-2020
+    pagina: "Nature 590:103 (resumen) y 590:106-107"
+    cita_corta: >-
+      «cultural changes during the Ceramic Age were not driven by migration of
+      genetically-differentiated groups from the mainland»
+    epoca: toda la Edad Cerámica antillana (~2.500-500 a.p.)
+    etiqueta: atestiguado
+    que_prueba: >-
+      Que el caquetío continental —o cualquier otro grupo continental
+      genéticamente distinto— NO se metió en las Antillas después de la
+      migración cerámica inicial. Los autores probaron expresamente la
+      hipótesis de una migración caribe desde el occidente de Venezuela hacia
+      1.150 años atrás (Ross et al., morfología craneofacial) y no hallaron
+      ancestría nueva, con una potencia declarada de detección de tan poco
+      como ~2-8 % usando `Venezuela_Ceramic`, `LesserAntilles_Ceramic` o los
+      arara actuales como sustitutos. Y no encuentran asociación entre los
+      subclados genéticos y las tipologías cerámicas tradicionales
+      (saladoide, ostionoide, meillacoide, chicoide).
+    que_NO_prueba: >-
+      No excluye migración desde «un grupo continental no muestreado
+      genéticamente más parecido a la gente cerámica caribeña» que los
+      sustitutos usados — los autores lo dicen. Y no mide viajes, comercio ni
+      visitas: mide aportación reproductiva detectable.
+    lectura_para_el_proyecto: >-
+      Esto es lo que convierte el asunto en ASIMÉTRICO y hay que decirlo así:
+      entró gente de las Antillas a Curazao, y no salió gente de aquí a las
+      Antillas. Una esfera con una sola dirección medible.
+
+  - id: gen-03
+    clase: genética
+    titulo: "Lo que Schroeder 2018 dejó abierto, esta fuente lo contesta a medias"
+    obra: fernandes-2020
+    pagina: "Nature 590:107"
+    epoca: n/a — es método
+    etiqueta: reconstruido
+    que_prueba: >-
+      `4-fuentes/schroeder-2018.md` dejó escrita una pregunta: si Paraguaná
+      tiene topónimos «taínos» pero los linajes maternos de Aruba no son los
+      del taíno antillano (Martínez-Cruzado 2003, población MODERNA, n=13),
+      entonces ese estrato parecería préstamo y no población asentada. Con
+      ADN ANTIGUO de Curazao la pregunta cambia de forma: en las islas SÍ hay
+      población de origen antillano, y en cantidad. Lo que no hay es
+      población de origen antillano MAYOR.
+    que_NO_prueba: >-
+      No valida el estrato toponímico de Esteves 1989 (que el repo ya degradó
+      por otras razones: parecido de sonido sin documento). Ancestría no es
+      lengua. Y Curazao no es Paraguaná: no hay ADN antiguo de la península.
+    aviso: >-
+      Fernandes et al. citan a Toro-Labrador, Wever & Martínez-Cruzado 2003
+      —el mismo paper de Aruba que el repo tiene— como apoyo de la hipótesis
+      de que los arahuacos se partieron, unos por el Orinoco a las Antillas y
+      otros hacia la costa occidental venezolana. Es la misma fuente, usada
+      para lo mismo: **no es una corroboración independiente** (skill §8).
+
+  - id: gen-04
+    clase: genética
+    titulo: "🔴 NEGATIVO MEDIDO — Nägele et al. 2020 no es accesible"
+    obra: nagele-2020
+    pagina: n/a
+    epoca: n/a
+    etiqueta: atestiguado   # el cero está medido hoy
+    detalle: >-
+      *Genomic insights into the early peopling of the Caribbean*, Science
+      369(6502):456-460, doi:10.1126/science.aba8697. Europe PMC:
+      `isOpenAccess = N`, sin PMCID, única vía «Subscription required».
+      No se descargó. Mitiga el hueco que Fernandes et al. co-analizaron sus
+      93 individuos y discuten sus resultados en SI4 y SI13, así que lo que
+      Nägele aporta a esta parcela llega de segunda mano y así se etiqueta.
+
+  # ───────────────────────── METAL / GUANÍN ─────────────────────────
+  - id: met-01
+    clase: metal
+    titulo: "El guanín de Cuba apunta a Colombia, por iconografía, y entra por el este"
+    obra: martinon-torres-2012
+    pagina: "Journal of Anthropological Archaeology 31:449 y 31:451"
+    cita_corta: >-
+      «The strongest argument supporting Colombia as a source … comes from
+      iconographic rather than chemical data»
+    epoca: >-
+      precontacto para la pieza fechada más antigua (guanín de Maisabel,
+      Puerto Rico, primer milenio d.C.); el conjunto de El Chorro de Maíta es
+      de contacto temprano
+    etiqueta: atestiguado
+    que_prueba:
+      - >-
+        Que metal continental llegó al Caribe insular ANTES del contacto
+        europeo: la fecha del guanín de Maisabel (Puerto Rico) lo demuestra,
+        y los autores lo formulan así.
+      - >-
+        Que el origen probable de parte del guanín cubano es **Colombia**:
+        una cabeza ornitomorfa de El Chorro de Maíta corresponde al tipo que
+        coronaba los pectorales TAIRONA de la Sierra Nevada de Santa Marta, y
+        una figurilla antropomorfa de Santana Sarmiento al estilo ZENÚ. Los
+        colgantes planos perforados se relacionan con la orfebrería NAHUANGE
+        de la misma Sierra Nevada.
+      - >-
+        Que la ruta dentro de Cuba se lee de ESTE a oeste: casi todo el
+        guanín cubano aparece en el nordeste de la isla, «supporting the idea
+        of an eastern route for the movement of this metal».
+    que_NO_prueba:
+      - >-
+        NO hay análisis de procedencia geoquímico concluyente. Los autores lo
+        declaran: la composición sólo les permite inclinarse («we are
+        inclined to suggest») por un origen colombiano, y el argumento fuerte
+        es estilístico. La pregunta del encargo —«si hay análisis de
+        composición (LA-ICP-MS) de piezas antillanas, qué dicen de la
+        procedencia»— tiene por tanto respuesta NEGATIVA para 2012.
+      - >-
+        NO implica a la costa caquetía ni a las ABC en ningún punto de la
+        ruta. Ni Falcón, ni Paraguaná, ni Aruba, ni Curazao aparecen en el
+        artículo. Que la ruta pase por delante de la Guajira es geografía, no
+        dato: no hay una sola pieza intermedia publicada.
+    lectura_para_el_proyecto: >-
+      ⚠️ Aquí hay una tentación que hay que nombrar para no caer en ella.
+      Oliver liga las «piedras verdes» y las tuumás del comercio caquetío a la
+      **Sierra Nevada de Santa Marta** (cap. 3, §3.2). El guanín de Cuba
+      apunta a orfebres **de la Sierra Nevada de Santa Marta**. Eso NO es
+      contacto entre caquetíos y taínos: es que los dos eran clientes del
+      mismo taller, por caminos distintos. Mismo proveedor, no mismo trato.
+
+  - id: met-02
+    clase: metal
+    titulo: "Y el paralelo iconográfico caribe↔Tairona puede ser colonial"
+    obra: mol-2007
+    pagina: "p. 67"
+    cita_corta: >-
+      «it is also possible that these links are colonial, rather than
+      Pre-Columbian»
+    epoca: en disputa — ése es el punto
+    etiqueta: hipotetico
+    que_prueba: >-
+      Nada positivo. Lo que hace es poner la reserva de método: la semejanza
+      entre los amuletos taínos de oro y la orfebrería tairona se ha usado
+      para sostener un vínculo Antillas Mayores ↔ continente, y un
+      especialista de la región advierte expresamente que el vínculo puede
+      ser del siglo XVI.
+    lectura_para_el_proyecto: >-
+      Es la regla 3 dicha por un tercero y en la dirección contraria a la que
+      el proyecto la usa de costumbre. Vale la pena tenerla escrita.
+
+  # ───────────────────────── PIEDRA ─────────────────────────
+  - id: pie-01
+    clase: piedra
+    titulo: "La lapidaria antillana mira al ístmo-colombiano, y no toca la costa caquetía"
+    obra: queffelec-2024
+    pagina: >-
+      Revista de Arqueología Americana 41, pp. 231-232 (la comparación
+      continente/archipiélago y las placas aladas) y pp. 233-234 (la
+      conclusión)
+    cita_corta: >-
+      «the absence of an evident link … with the original Saladoid groups of
+      the lower Orinoco valley»
+    epoca: Edad Cerámica antillana, con el grueso en la temprana (~500 a.C.-500 d.C.)
+    etiqueta: atestiguado
+    que_prueba: >-
+      Síntesis sobre un corpus grande de cuentas y colgantes líticos del
+      archipiélago: la producción lapidaria saladoide del bajo Orinoco «no
+      tiene nada que ver» con la antillana ni en tipología, ni en variedad de
+      materias primas, ni en cantidad; en cambio hay proximidad estilística y
+      cronológica con las tradiciones NAHUANGE (Colombia) y con Costa Rica.
+      Las «placas aladas» se distribuyen de Costa Rica a Venezuela pasando
+      por Panamá y Colombia, y son sobre todo de los primeros siglos d.C.
+    que_NO_prueba: >-
+      No dice nada de Falcón, Paraguaná ni las ABC — que es justamente el
+      hallazgo: **en una síntesis de la lapidaria caribeña, el área caquetía
+      no aparece**. Ni como productora, ni como intermediaria, ni como
+      destino. Cero menciones de Aruba, Bonaire, dabajuroide o Guajira.
+    respuesta_a_la_prediccion: >-
+      Predicción 2 del encargo («¿alguna procedencia venezolana o de la
+      Guajira para la jadeíta y las piedras verdes antillanas?»): **no**, y la
+      literatura ni siquiera la plantea. Las fuentes de jadeíta conocidas son
+      el valle del Motagua (Guatemala), el oriente de Cuba y el norte de la
+      República Dominicana.
+    deuda: >-
+      La pieza que cerraría esto del todo —Knaf et al. 2021, la discriminación
+      Sr-Nd-Pb del jade circumcaribeño, CC-BY— está localizada y NO se pudo
+      descargar (Elsevier devuelve 403 a la descarga automática). Ver
+      `4-fuentes/knaf-2021.md`.
+
+  # ───────────────────────── CERÁMICA ─────────────────────────
+  - id: cer-01
+    clase: cerámica
+    titulo: "🔴 Cero antillano en el registro arqueológico del Golfete — medido hoy"
+    obra: urbina-jimenez-2011
+    pagina: "toda la memoria (base de datos de 192 yacimientos)"
+    epoca: precontacto agroalfarero
+    etiqueta: atestiguado   # el cero está medido
+    que_prueba: >-
+      Que en una prospección que sistematiza 192 yacimientos agroalfareros
+      prehispánicos de Falcón costero, las subtradiciones que se nombran son
+      **Tortolitana** y **Dabajurana**, y las 24 sondas de cultura material
+      antillana (ostionoide, chicoide, meillacoide, elenoide, palmetto,
+      guanín, tumbaga, jadeíta, cemí, guaíza, duho, trigonolito, Antillas
+      Mayores, Greater Antilles, Hispaniola, taíno, lucayo…) dan **cero**.
+      El control del mismo barrido sale positivo (dabajuro=29, caquet=8,
+      ceramic=34, sherd=3), así que el cero no es del extractor (regla 6).
+    corroboracion: >-
+      Zavala Reyes et al. 2018 sobre los Médanos de Coro —dos áreas de
+      recolección caquetías de los siglos XIV-XVIII, o sea la ventana
+      simulada— da el mismo cero en las 24 sondas, con control positivo
+      (dabajuro=21, caquet=21, concha=19).
+    que_NO_prueba: >-
+      Que no exista nada: sigue siendo un negativo sobre lo que el repo
+      tiene. Urbina es una memoria de máster de prospección, no un catálogo
+      de materiales, y su propia portada advierte que es un ejemplar de
+      examen sin revisar que no debería citarse sin permiso del Instituto.
+      La obra que lo zanjaría —Rouse y Cruxent 1963— sigue sin estar.
+
+  - id: cer-02
+    clase: cerámica
+    titulo: "La cerámica de Aruba es local, y su tercer grupo no se sabe de dónde es"
+    obra: casale-2024
+    pagina: "Geoarchaeology 39(6):609-627 — resumen"
+    epoca: precolonial; el grupo 3 es del Urumaco Temprano
+    etiqueta: hipotetico   # EN DUDA DEGRADAR: sólo se leyó el resumen, no el pasaje
+    que_prueba: >-
+      Análisis petrográfico de cerámica de nueve yacimientos de Aruba contra
+      fuentes de arcilla de la isla: tres composiciones mineralógicas; dos
+      grupos de vasijas sin decorar son de arcillas locales (cuarzo-diorita
+      del noroeste; mezcla calcárea-volcánica del sureste); el tercero,
+      mayoritariamente DECORADO y del Urumaco Temprano, tiene matriz calcárea
+      con pellets, vetas de arcilla y desgrasante de concha, y su origen
+      queda incierto.
+    aviso: >-
+      ⚠️ **Sólo se leyó el resumen** (Crossref), no el pasaje: Wiley devuelve
+      403 a la descarga automática aunque el artículo es CC-BY. Por la skill
+      §3 esto NO cuenta como minado y la etiqueta baja. Queda como la pieza
+      abierta más prometedora de la parcela: si el grupo 3 resultara importado,
+      la petrografía diría DE DÓNDE.
+
+  - id: cer-03
+    clase: cerámica
+    titulo: "Un sello de cerámica de Aruba con paralelos en Haití y Santo Domingo"
+    obra: dijkhoff-1997
+    pagina: "§3.5, p. 56 del PDF (la memoria no lleva paginación impresa en la capa de texto)"
+    cita_corta: >-
+      «a pottery stamp … showing typological similarities with stamps from
+      Haïti and Santo Domingo»
+    epoca: Período Cerámico de Aruba (900/1000-1500 d.C.) — dentro de la ventana
+    etiqueta: hipotetico
+    que_prueba: >-
+      Que existe al menos UN objeto cerámico arubeño para el que un
+      arqueólogo de la isla registró parecido tipológico con las Antillas
+      Mayores. Es, hasta donde llega esta parcela, la única pieza material
+      positiva en esa dirección.
+    que_NO_prueba: >-
+      Casi nada más. Es parecido tipológico dicho de pasada, sin figura, sin
+      número de catálogo, sin análisis de pasta, y en la misma página el
+      autor concluye: «Of connections with the Greater Antilles, I think not
+      much can be said yet». Un sello con motivos parecidos no es un sello
+      importado.
+
+  - id: cer-04
+    clase: cerámica
+    titulo: "🔴 Y en dirección contraria: Aruba mira al oeste y al sur, nunca al norte"
+    obra: dijkhoff-1997
+    pagina: "§3.5, p. 56 del PDF"
+    cita_corta: >-
+      «Of connections with the Greater Antilles, I think not much can be said
+      yet»
+    epoca: Período Cerámico de Aruba (900/1000-1500 d.C.)
+    etiqueta: atestiguado
+    que_prueba: >-
+      Que la lista de conexiones que la arqueología arubeña sí reconoce es:
+      Venezuela noroccidental, central y oriental; la península de la Guajira
+      en Colombia; y posiblemente el área andina interior de Venezuela — y
+      que el autor las atribuye a difusión o comercio, no a migración. La
+      cerámica estilo Savaneta (Los Médanos) «points to direct contact with
+      the Guajira Península and Coro». Los adornos de ala ancha y los
+      amuletos líticos hallados en Aruba se conocen del área andina
+      (Trujillo). La materia del comercio marítimo más temprano con el
+      continente, según Van Heekeren, era sal y cuentas de concha.
+    lectura_para_el_proyecto: >-
+      Confirma `arq-02` de la campaña 1 desde una fuente independiente y de
+      primera mano sobre la isla: cuando la esfera caquetía comercia lejos,
+      comercia al OESTE. Y cierra una deuda documental que
+      `4-fuentes/martinez-cruzado-2003.md` llevaba abierta («Versteeg y Ruiz
+      1995 · Dijkhoff 1997 | arqueología arubeña»).
+
+  - id: cer-05
+    clase: piedra / falsificación
+    titulo: "La estatuilla «taína» de Aruba se parece a lo que Rouse clasifica como falsificación"
+    obra: dijkhoff-1997
+    pagina: "§3.5, p. 56 del PDF"
+    cita_corta: >-
+      «of which Rouse says that they are Taino falsifications»
+    epoca: indeterminada — ése es el problema
+    etiqueta: hipotetico
+    que_prueba: >-
+      Que de las tres estatuillas de piedra esculpidas halladas en Aruba,
+      cuyo origen Versteeg da por desconocido y «ciertamente no hechas en
+      Aruba», la mejor documentada —un hombre sentado con ojos de grano de
+      café, caliza cristalina, 27,5 cm, de Tanki Lender— tiene un paralelo
+      llamativo con una figura de caliza coralina de la República Dominicana
+      que Rouse (1992:164-165, fig. 40b) clasifica como falsificación taína,
+      y Oliver coincide.
+    que_NO_prueba: >-
+      Nada a favor del contacto, y bastante en contra del método: el mejor
+      candidato «taíno» del archipiélago ABC se empareja con un tipo
+      sospechoso de ser moderno. Es exactamente la clase de afirmación que
+      Antolínez 1944 hacía sin catálogo (campaña 1, §4), vista de cerca.
+
+  # ───────────────────────── CONCHA ─────────────────────────
+  - id: con-01
+    clase: concha
+    titulo: "El guaíza más meridional con contexto se queda en Santa Lucía"
+    obra: mol-2007
+    pagina: "§6.7.5 (p. 122) y §6.6 (pp. 119-120)"
+    cita_corta: >-
+      «The most southern guaíza for which an archaeological context could be
+      established is STL1 from the Lavoutte site on St. Lucia»
+    epoca: Edad Cerámica tardía (800-1492 d.C.) — la ventana
+    etiqueta: atestiguado
+    que_prueba: >-
+      Que el valioso social taíno por excelencia hecho en concha —las
+      caretas de concha o guaízas, 52 en el catálogo— se distribuye por las
+      Antillas Mayores y baja por las Menores hasta Santa Lucía, y ahí para.
+      Ni una en el continente, ni una en las ABC. El autor barrió a propósito
+      la posibilidad de una distribución continental y concluye que la
+      iconografía de caras es demasiado universal para probar nada.
+    que_NO_prueba: >-
+      No prueba que no viajaran objetos de concha: prueba que ESTE tipo de
+      objeto no llegó. Y el propio autor declara los límites del corpus
+      (colecciones de museo sin procedencia, sin fechas absolutas, al menos
+      una pieza sospechosa de falsificación).
+    coincidencia_que_no_es_prueba: >-
+      ⚠️ Lavoutte (Santa Lucía) es a la vez el guaíza más meridional con
+      contexto Y uno de los dos yacimientos que componen el subclado
+      `*LesserAntilles_Ceramic` de `gen-01`. Es una coincidencia de muestreo
+      —son los yacimientos excavados—, NO un argumento. Se anota para que
+      nadie la use como si lo fuera.
+
+  - id: con-02
+    clase: concha
+    titulo: "El botuto del Golfete es comida, no mercancía antillana"
+    obra: zavala-reyes-2018
+    pagina: "Interciencia 43(6):404, Tabla II"
+    epoca: siglos XIV-XVIII — la ventana y su borde colonial
+    etiqueta: atestiguado
+    que_prueba: >-
+      Que *Lobatus gigas* está presente en los depósitos caquetíos de los
+      Médanos de Coro, pero es minoritario: 3 unidades sobre 304 fragmentos
+      de concha recogidos en las dos áreas (1,0 % del total), frente a
+      *Donax striatus* (42,4 %) y *Callista* sp. (27,0 %). El conjunto es de
+      malacofauna de consumo local.
+    que_NO_prueba: >-
+      No hay ni un objeto de concha con procedencia o estilo antillano. La
+      predicción 4 del encargo («¿hay tráfico de *Lobatus gigas* o de objetos
+      de concha entre Venezuela y las Antillas Mayores documentado?») sale
+      **negativa** con lo que se pudo abrir.
+
+  # ─────────────────── ETNOHISTÓRICA (complemento) ───────────────────
+  - id: eth-01
+    clase: etnohistórica   # ⚠️ NO es material: entra como complemento, no como prueba
+    titulo: "Y la carta de Ampíes dice que cruzar a las islas era un HÁBITO, no un episodio"
+    obra: arcaya-1920
+    pagina: "pp. 159-160 (la carta, publicada en Oviedo y Baños, ed. Fernández Duro, t. II, p. 209)"
+    cita_corta: >-
+      los indios de la costa «muchas veces se pasaban allá a holgar con ellos»
+    cita_segunda: >-
+      «un cacique que se dice D. Juan Baracoica, que está en las islas y es su
+      pariente y deudo»
+    epoca: >-
+      🔴 COLONIAL — la carta es de Santo Domingo, finales de 1525 o principios
+      de 1526. Describe un hábito que presenta como anterior, pero no lo fecha.
+    etiqueta: atestiguado (el documento) / hipotetico (su proyección al s. XV)
+    que_prueba: >-
+      Que a la altura de 1525 había hasta «doscientas personas de todas
+      edades» en Curazao, Aruba y Bonaire; que la gente de la costa de enfrente
+      —«desde Paraguachoa hasta la punta de Coquibacoa», nombrando Sauca y
+      Paraguaná— cruzaba a las islas muchas veces; y que el cacique que le
+      llevó la embajada a Ampíes, don Juan Baracoica, vivía en las islas y era
+      «pariente y deudo» de Manaure. Es decir: costa y ABC eran **una sola
+      comunidad con parentesco**, no dos orillas que se visitaban.
+    por_que_entra_aqui: >-
+      Porque es el complemento exacto de `gen-01` y cambia cómo se lee. Si las
+      ABC eran el sitio al que la gente de la costa se pasaba constantemente, y
+      la gente enterrada allí lleva dos tercios de ancestría de las Antillas
+      Menores, entonces **las islas son donde el continente y la descendencia
+      antillana convivían**. El puente no era un viaje raro; era una casa
+      compartida.
+    que_NO_prueba:
+      - >-
+        NO salta a las Antillas Mayores. En la misma carta, el único vínculo
+        con La Española es el de la armada española que se llevó a la hija de
+        Manaure y la devolución que hizo Ampíes: contacto **colonial** y en
+        barco europeo.
+      - >-
+        NO fecha nada. Es de 1525-26 y describe la costumbre como ya
+        establecida, que es lo más que un documento de contacto puede hacer.
+        Regla 3: proyectarlo al siglo XV es una decisión, no una lectura.
+      - >-
+        NO es evidencia MATERIAL, que es lo que esta parcela buscaba. Entra
+        como contexto que hace más probable lo que la genética midió, no como
+        una de las seis predicciones.
+
+  # ───────────────────────── ARTE RUPESTRE ─────────────────────────
+  - id: rup-01
+    clase: arte rupestre
+    titulo: "Las pictografías ABC se parecen a las de las Antillas Mayores y no a las del continente"
+    obra: dijkhoff-1997
+    pagina: "§3.7, p. 60 del PDF (citando a Dubelaar 1991:613 y Versteeg y Ruiz 1995:34)"
+    cita_corta: >-
+      «Pictographs are found on Aruba, Bonaire and Curaçao and the Greater
+      Antilles, while none has been found in the Lesser Antilles»
+    epoca: >-
+      🔴 SIN FECHAR — «The pictographs have not been ascribed to the
+      Preceramic or Ceramic Period»
+    etiqueta: hipotetico
+    que_prueba: >-
+      Que hay un rasgo de cultura material compartido entre las ABC y las
+      Antillas Mayores y ausente de las Menores, y que el continente enfrente
+      tiene pocas pictografías, lo que «distingue a las islas de Sotavento
+      neerlandesas del continente en su registro arqueológico».
+    que_NO_prueba: >-
+      Prácticamente nada mientras no estén fechadas, y no lo están. Además,
+      el propio autor traza la conexión posible por el CONTINENTE —
+      concentraciones por el Orinoco hasta el Apure, al noroeste por el
+      Portuguesa o el Guanare y por el Tocuyo hasta las islas (Haviser
+      1991:97)—, no por el mar. Pintar en roca es una práctica demasiado
+      extendida para que una distribución compartida sea contacto. Se anota
+      porque es el único rasgo material compartido ABC↔Mayores que aparece en
+      toda la parcela, y porque tiene una vía de resolución barata:
+      Versteeg y Van Leeuwen recogieron material orgánico para datar por AMS.
+
+# ══════════════════════════════════════════════════════════════════
+# 3. LA TABLA DE PREDICCIONES
+# ══════════════════════════════════════════════════════════════════
+# Las seis del encargo, cada una con si se vio, dónde, y con qué fuerza.
+predicciones:
+
+  - n: 1
+    prediccion: "El guanín: ¿de dónde del continente, y pasa la ruta por Falcón o las ABC?"
+    vista: "parcialmente — y NO por aquí"
+    donde: met-01 (martinon-torres-2012)
+    fuerza: media
+    resumen: >-
+      El guanín llegó a las Antillas antes de 1492 (Maisabel, Puerto Rico,
+      primer milenio d.C.). Su origen probable es Colombia —Tairona, Zenú,
+      Nahuange—, por argumento ICONOGRÁFICO, no geoquímico. La ruta dentro de
+      Cuba se lee de este a oeste. Ni Falcón ni las ABC aparecen. No hay
+      análisis LA-ICP-MS que resuelva procedencia.
+
+  - n: 2
+    prediccion: "Las piedras verdes: ¿alguna procedencia venezolana o guajira?"
+    vista: "no"
+    donde: pie-01 (queffelec-2024)
+    fuerza: alta (como negativo)
+    resumen: >-
+      La lapidaria antillana se emparenta con el área ístmo-colombiana, no
+      con el bajo Orinoco; las fuentes de jadeíta conocidas son Motagua, el
+      oriente de Cuba y el norte dominicano. El área caquetía no figura en la
+      síntesis ni como productora ni como intermediaria. Pendiente: Knaf
+      et al. 2021 (Sr-Nd-Pb), localizada y no descargada.
+
+  - n: 3
+    prediccion: "La cerámica: ¿tiestos dabajuroides/valencioides en las Antillas Mayores, u ostionoides/chicanos en Falcón, las ABC o Los Roques?"
+    vista: "no en un sentido; un caso dudoso en el otro"
+    donde: cer-01, cer-02, cer-03, cer-04
+    fuerza: alta (como negativo), muy baja (el positivo)
+    resumen: >-
+      Cero sondas antillanas en Urbina 2011 (192 yacimientos de Falcón
+      costero) y en Zavala Reyes et al. 2018 (Médanos de Coro), con control
+      positivo. Cero en Antczak 2015 (Las Aves) salvo una mención
+      bibliográfica. El único positivo es un sello de cerámica de Aruba con
+      «similitudes tipológicas» con sellos de Haití y Santo Domingo, dicho de
+      pasada y sin catálogo, por un autor que en la misma página concluye que
+      de conexiones con las Antillas Mayores «no se puede decir mucho
+      todavía». La petrografía de Aruba (Casale 2024) deja un tercer grupo
+      cerámico decorado de origen incierto: es el hilo vivo.
+
+  - n: 4
+    prediccion: "Las conchas y el botuto: ¿tráfico documentado Venezuela ↔ Antillas Mayores?"
+    vista: "no"
+    donde: con-01, con-02
+    fuerza: media-alta (como negativo)
+    resumen: >-
+      El botuto del Golfete es consumo local (1,0 % de la malacofauna en
+      Médanos de Coro). El valioso de concha taíno —el guaíza— no baja del
+      sur de las Antillas Menores. No se halló ni un objeto de concha con
+      procedencia antillana en el área caquetía.
+
+  - n: 5
+    prediccion: "La genética: ¿flujo continente↔islas DESPUÉS de la migración cerámica inicial?"
+    vista: "⭐⭐ SÍ, y en dirección islas→continente"
+    donde: gen-01, gen-02
+    fuerza: alta
+    resumen: >-
+      Sí: ~2/3 de la ancestría de los caquetíos de Curazao viene de las
+      Antillas MENORES, en un flujo posterior a la llegada del dabajuroide, y
+      los autores lo llaman «major gene flow from the Antilles». Y no al
+      revés: ninguna migración continental posterior entró en las Antillas,
+      con potencia declarada de ~2-8 %. Poblaciones de referencia del norte
+      de Suramérica usadas: `Venezuela_Ceramic` (Las Locas, Quíbor), y entre
+      las actuales piapoco, wayuu, yukpa y arara. Ningún individuo antillano
+      con ancestría continental reciente.
+
+  - n: 6
+    prediccion: "El puente ABC: ¿qué dice la arqueología de Aruba, Curazao y Bonaire de contactos hacia el NORTE?"
+    vista: "dice que no sabe, y en huesos dice que sí"
+    donde: cer-04, rup-01, gen-01
+    fuerza: alta
+    resumen: >-
+      La arqueología arubeña publicada reconoce conexiones al oeste
+      (Guajira, Coro), al sur (Venezuela central y oriental) y quizá al
+      interior andino, y sobre las Antillas Mayores dice literalmente que no
+      se puede decir mucho todavía. El único rasgo compartido con las Mayores
+      son las pictografías, y están sin fechar. Pero el ADN antiguo de
+      Curazao dice que por ahí pasó gente de las Antillas Menores. El puente
+      existió; no se ve en los objetos.
+
+# ══════════════════════════════════════════════════════════════════
+# 4. LO QUE NO SE ENCONTRÓ (las negativas valen — skill §6)
+# ══════════════════════════════════════════════════════════════════
+no_encontrado:
+  - "Ni un tiesto ostionoide, chicoide, meillacoide, elenoide ni palmetto en Falcón, Paraguaná, las ABC, Los Roques o Las Aves, en ninguna de las obras abiertas."
+  - "Ni un tiesto dabajuroide ni valencioide en las Antillas Mayores."
+  - "Ni una pieza de guanín, tumbaga, jadeíta, cemí, trigonolito, duho ni guaíza al sur de Santa Lucía."
+  - "Ningún análisis de procedencia geoquímico (LA-ICP-MS o equivalente) que ligue metal antillano a una fuente venezolana — ni a ninguna otra de forma concluyente."
+  - "Ninguna fecha para el evento de mezcla de Curazao: los autores declaran que no la pudieron obtener."
+  - "El número exacto de individuos de Curazao analizados (está en un .xlsx que PMC no sirve)."
+  - "Nägele et al. 2020 (Science): sin versión abierta; no descargado."
+  - "Rouse y Cruxent 1963: préstamo digital controlado en archive.org; no descargable sin saltarse el control."
+  - "Oliver 2000, «Gold symbolism among Caribbean chiefdoms»: capítulo de libro sin versión abierta; no obtenido."
+  - "Knaf et al. 2021 (jade Sr-Nd-Pb, CC-BY) y Casale et al. 2024 (petrografía de Aruba, CC-BY): localizadas, abiertas por licencia, bloqueadas a la descarga automática por el editor. Sólo se leyó el resumen de Casale."
+  - "Boomert 2000 sobre Trinidad y el bajo Orinoco, Keegan y Hofman 2017, Rouse 1992 y Haviser 1987 (la monografía de Curazao): sin versión abierta localizada."
+  - "Ningún objeto arubeño o curazoleño publicado con análisis de pasta o de isótopos que diga de dónde vino."
+
+# ══════════════════════════════════════════════════════════════════
+# 5. DESCARGAS (regla del encargo: URL, fecha, derechos, tamaño, sha256)
+# ══════════════════════════════════════════════════════════════════
+# Lo que entra al repo: SÓLO lo que lleva licencia CC impresa en el propio
+# documento. El resto se descargó, se minó y se anota con su receta exacta,
+# porque redistribuirlo no está permitido por su licencia.
+descargas:
+
+  en_el_repo:
+    - obra: fernandes-2020-preprint
+      archivo: fuentes_caquetios/Fernandes_et_al_2020_biorxiv_preprint_CCBYNCND.pdf
+      url: https://www.biorxiv.org/content/10.1101/2020.06.01.126730v1.full.pdf
+      fecha: '2026-09-22'
+      licencia: CC-BY-NC-ND 4.0 (impresa en cada página del PDF; confirmada en api.biorxiv.org)
+      bytes: 5228503
+      sha256: eb0b507028851675737d3ff7c45dbb287bcc2c9afefb60130a739131e3d13fd4
+      aviso: >-
+        Es el PREPRINT de junio de 2020, NO el artículo de Nature. Le falta el
+        yacimiento de Santa Cruz, el subclado `*LesserAntilles_Ceramic` y todo
+        el material suplementario donde está el hallazgo de `gen-01`. Sirve
+        para el texto general y para las tablas de datos extendidos; para
+        citar `gen-01` hay que ir a la versión publicada.
+
+  en_disco_no_redistribuibles:
+    - obra: fernandes-2020 (versión publicada, texto completo)
+      via: "Europe PMC REST — https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7864882/fullTextXML"
+      fecha: '2026-09-22'
+      derechos: >-
+        Nature author manuscript en PMC. «Users may view, print, copy, and
+        download text and data-mine the content … for the purposes of academic
+        research». No es CC. Minable, no redistribuible.
+      bytes: 231604
+      sha256: 305aba14a91d4d6bf9a222417abfc0c54c2f7ec3a35b430ffad87c587628862f
+      nota: "El PDF de PMC devuelve una página HTML «Preparing to download»: no se obtuvo."
+
+    - obra: fernandes-2020 (Supplementary Information)
+      via: "https://reich.hms.harvard.edu/sites/reich.hms.harvard.edu/files/inline-files/2020_FernandesSirak_Nature_Caribbean_Supplement.pdf"
+      fecha: '2026-09-22'
+      derechos: publicado abierto por el laboratorio autor; sin licencia declarada
+      bytes: 11391687
+      sha256: bf69f9f2e9771230e49be6f8920706ce5777869420d4141ed8c1f668d09eb33f
+      nota: "Aquí están SI2 (Curazao, fechas de contexto) y SI9 (Tablas S14-S15). Es la pieza clave de la parcela."
+
+    - obra: dijkhoff-1997
+      via: "archive.org, ítem MANA-DIG-TESIS-DIJKHOFF-1997 (subido por la Biblioteca Nacional Aruba); https://dn760004.eu.archive.org/0/items/MANA-DIG-TESIS-DIJKHOFF-1997/Dijkhoff-tesis-Tanki-Flip-1997.pdf"
+      fecha: '2026-09-22'
+      derechos: sin restricción de acceso ni `licenseurl` declarados en los metadatos
+      bytes: 14582071
+      sha256: ea0e2e451e9b586b3b2a0e8a0971fc11748be7c1da93e29b151c17f69d9f84c9
+
+    - obra: haviser-1990
+      via: "https://ufdcimages.uflib.ufl.edu/AA/00/06/19/61/00343/11-21.pdf (University of Florida Digital Collections)"
+      fecha: '2026-09-22'
+      derechos: sin declaración de derechos en el propio PDF
+      bytes: 1308271
+      sha256: 2f6e8c59b9e365edcb611382b793744538e6be8e3ec4f9e1512e9a808063d8b2
+
+    - obra: martinon-torres-2012
+      via: "https://discovery.ucl.ac.uk/id/eprint/1361950/1/1361950.pdf (UCL Discovery)"
+      fecha: '2026-09-22'
+      derechos: >-
+        OpenAlex lo da como CC-BY híbrido, pero el PDF del repositorio es la
+        versión de Elsevier y NO lleva licencia CC impresa. En duda, degradar:
+        no se redistribuye.
+      bytes: 2144405
+      sha256: 2b06fe5f0628486ba2c6e71cc0da2763035f7f5e7d60a9db32f7c1d3a79c0b22
+
+    - obra: mol-2007
+      via: "https://www.sidestone.com/openaccess/9789088900020.pdf (Sidestone Press, acceso abierto)"
+      fecha: '2026-09-22'
+      derechos: acceso abierto del editor; sin licencia CC impresa
+      bytes: 4514865
+      sha256: 1316874758889bb231c3c54f63d92919b5dcc80d07d94523113d45866045a52a
+
+    - obra: queffelec-2024
+      via: "https://revistasipgh.org/index.php/rearam/article/download/4308/6464"
+      fecha: '2026-09-22'
+      derechos: >-
+        Revista de Arqueología Americana (IPGH), acceso abierto, **CC BY-NC-SA
+        4.0** declarada en la primera página del artículo
+      bytes: 5991165
+      sha256: a564955001a9c94912a2bfc6a6256a15b40e4c3876bc893286b016644933be1c
+      nota: >-
+        Por licencia SÍ podría entrar al repo. No se metió por no ser central
+        para el proyecto; la decisión es de Miguel.
+
+    - obra: falci-2020-tesis
+      via: "https://scholarlypublications.universiteitleiden.nl/access/item%3A2968688/download"
+      fecha: '2026-09-22'
+      derechos: repositorio institucional de Leiden; licencia de depósito, no CC explícita
+      bytes: 15148074
+      sha256: 6bc8f3aca4e6eada4977b5c9772d3c79320415f5b72a0607678e5747f47cc0d1
+      nota: "Consultada, poco rendimiento para esta parcela (el área caquetía no aparece)."
+
+  no_descargadas:
+    - {obra: "Nägele et al. 2020, Science 369(6502):456-460", doi: "10.1126/science.aba8697", motivo: "sin acceso abierto; Europe PMC isOpenAccess=N"}
+    - {obra: "Rouse & Cruxent 1963, Venezuelan Archaeology, Yale UP", motivo: "en copyright; archive.org sólo en préstamo digital controlado"}
+    - {obra: "Oliver 2000, Gold symbolism among Caribbean chiefdoms, en McEwan (ed.) Precolumbian Gold, British Museum Press, pp. 196-219", motivo: "capítulo de libro sin versión abierta"}
+    - {obra: "Knaf et al. 2021, JAS 135:105466", doi: "10.1016/j.jas.2021.105466", motivo: "CC-BY pero Elsevier devuelve 403 a la descarga automática"}
+    - {obra: "Casale et al. 2024, Geoarchaeology 39(6):609-627", doi: "10.1002/gea.22017", motivo: "CC-BY pero Wiley devuelve 403; sólo se leyó el resumen vía Crossref"}
+    - {obra: "Rouse 1992, The Tainos, Yale UP", motivo: "en copyright"}
+    - {obra: "Keegan & Hofman 2017, The Caribbean before Columbus, OUP", motivo: "en copyright"}
+    - {obra: "Boomert 2000, Trinidad, Tobago and the Lower Orinoco Interaction Sphere", motivo: "en copyright"}
+    - {obra: "Haviser 1987, The Amerindian Cultural Geography of Curaçao (tesis)", motivo: "no localizada en abierto; es la fuente primaria de las fechas de contexto de de Savaan y Santa Cruz"}
+
+# ══════════════════════════════════════════════════════════════════
+# 6. LO QUE PROPONGO — y lo decide Miguel (regla 5)
+# ══════════════════════════════════════════════════════════════════
+propuesta:
+
+  - id: prop-01
+    donde: 6-fusion/taino_en_la_esfera_2026-09-21.yaml
+    que: >-
+      Corregir `gen-03` («DOS NEGATIVOS MEDIDOS en la clase genética») y el
+      `aviso` de `arq-01`. El primero ya no es un negativo: Fernandes 2020 es
+      accesible y habla, y lo que dice cambia el cuadro. El segundo sigue en
+      pie pero ahora tiene un contrapeso genético.
+    por_que: >-
+      Es la misma campaña. Dejar en `6-fusion/` dos documentos que se
+      contradicen sin decirlo es lo que la regla 1 evita para las cifras y
+      debería evitarse también para los veredictos.
+
+  - id: prop-02
+    donde: 3-mundo/etnias.yaml
+    que: >-
+      Si Miguel fusiona la `etnia-009` que propuso la campaña 1 (taíno,
+      `tipo_de_contacto: ninguno`), la ficha se sostiene **tal cual** con lo
+      medido hoy: la evidencia nueva es de las Antillas MENORES, no del
+      taíno. Pero esta parcela propone ADEMÁS una ficha distinta para el
+      vecino que sí aparece.
+    ficha_propuesta:
+      id: etnia-010
+      nombre: "arahuacos de las Antillas Menores"
+      etiqueta: atestiguado
+      familia_linguistica: arahuaca
+      polity_caquetia: costera        # por sus islas: Curazao está dentro
+      tipo_de_contacto: "poblacional — flujo génico mayor hacia las islas ABC"
+      intensidad: alta
+      epoca_propuesta: precontacto   # el campo sigue sin existir: ver el 🔴 de la campaña 1
+      procedencia: {obra: fernandes-2020, pagina: "Nature 590:106; SI2 y SI9"}
+      aviso_epoca: >-
+        Los INDIVIDUOS son de 1160-1522 d.C.; el EVENTO de mezcla no está
+        fechado y los autores declaran que no pudieron fecharlo. Si se
+        fusiona, la etiqueta de época es del contexto funerario, no del
+        contacto.
+    aviso: >-
+      🔴 Vuelve a chocar con el problema de esquema que la campaña 1 levantó:
+      `etnias.yaml` no tiene campo `epoca` y el 9.º guardián no lo valida.
+      Aquí muerde más que allí, porque esta ficha SÍ es `atestiguado` y sin
+      época diría que el elenco del siglo XV tenía vecinos antillanos
+      documentados, cuando lo documentado es ancestría sin fecha.
+
+  - id: prop-03
+    donde: 3-mundo/corpus/ecologia.yaml (o geografia_politica.yaml — lo decide Miguel)
+    que: >-
+      Un hecho nuevo: «el límite septentrional de la serie dabajuroide en las
+      ABC es un límite de CACHARROS, no de gente». La cerámica para en las
+      islas; los genes de las islas vienen en buena parte de más al este.
+    procedencia: {obra: fernandes-2020}
+    por_que: >-
+      Es el matiz que `ecologia-013` no tiene y que cambia cómo se lee la
+      frase «y ahí se detiene».
+
+  - id: prop-04
+    donde: 5-experimento/
+    que: >-
+      NADA. Esta parcela no propone tocar `ESFERA_DE_CONTACTO`, ni el prompt,
+      ni el scorer. El hallazgo es de las Antillas Menores, y las voces de la
+      esfera que el motor enseña son taínas: no se toca una etiqueta de
+      lengua con un dato de ancestría. La auditoría de las 25 voces taínas que
+      la campaña 1 dejó abierta (opción B) sigue abierta y sigue siendo la
+      siguiente.
+
+# ══════════════════════════════════════════════════════════════════
+# 7. LO QUE VI DE PASO
+# ══════════════════════════════════════════════════════════════════
+de_paso:
+  - >-
+    `4-fuentes/martinez-cruzado-2003.md` pedía Dijkhoff 1997 como deuda
+    documental. Está descargada y minada: la deuda se cierra. También pedía
+    Versteeg y Ruiz 1995 y Hartog 1961, que siguen sin localizarse en abierto.
+  - >-
+    Dijkhoff 1997 trae el episodio de la deportación con **otra tercera
+    versión** de la fecha y el nombre: «In 1515 Diego de Salazar, in order of
+    the Spanish underking of Hispaniola Diego Colón, took about 2000 Indians
+    of Aruba, Bonaire and Curaçao» (Hartog 1953:28). Arcaya daba 1513 y
+    Salazar; Oliver, 1515 y Martín Baso Zabala. Dijkhoff da 1515 y Salazar.
+    La discrepancia que la campaña 1 marcó como «NO se promedia» tiene ahora
+    tres lecturas, y las tres bajan de Hartog o de Oliver.
+  - >-
+    Dijkhoff sostiene, citando a Oliver 1989:306, que **Aruba pudo funcionar
+    como puesto comercial o asentamiento de frontera** del caquetío costero, y
+    que el contacto entre los caquetíos de la Guajira y los de Paraguaná
+    pasaba, entre otras vías, por Aruba. Es geografía política y es de otra
+    parcela, pero está sin entrar al corpus.
+  - >-
+    Dijkhoff también anota que el contacto entre Aruba y Curazao «possibly
+    went for a great deal via the mainland», porque las corrientes entre las
+    islas son traicioneras. Si eso es cierto, la esfera insular no es un arco
+    isla-a-isla sino un radio desde la costa — y eso sí toca cómo se imagina
+    el mar en el motor.
+  - >-
+    Haviser 1990 da la fecha de C-14 de los dos esqueletos de de Savaan
+    exhumados en 1980: 1.500 ± 200 a.p. sobre hueso. El suplemento de
+    Fernandes da para el yacimiento un contexto de 1160-1500 d.C. (o sea,
+    ~790-450 a.p.). **No son la misma fecha ni de lejos.** O los individuos
+    secuenciados no son los de 1980, o hay dos fechados del mismo sitio que
+    no se han conciliado. Es una discrepancia real, no se promedia, y quien
+    quiera afinar la época de `gen-01` tiene que resolverla.
+  - >-
+    La mayoría de estas obras están en congresos de la IACA digitalizados y
+    abiertos en la University of Florida Digital Collections (ufdc.ufl.edu) y
+    en el fondo `mana.aw` / Biblioteca Nacional Aruba de archive.org. Son dos
+    filones de arqueología insular abierta que el repo no había tocado.

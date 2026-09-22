@@ -90,6 +90,20 @@ la región.
 > mtDNA modernos y coloniales. Es una pregunta bien planteada, no una conclusión.
 > Escrita aquí para que alguien la persiga cuando haya con qué.
 
+### ✅ 2026-09-22: alguien la persiguió, y hay ADN antiguo de las islas
+
+[[fernandes-2020]] —que hasta ayer era un archivo de 0 bytes— trae genomas de
+**dos aldeas caquetías de Curazao** fechadas 1160-1500 y 1443-1522 d.C. La
+pregunta de arriba cambia de forma: **en las islas SÍ hay población de origen
+antillano, y es la mayor parte** (~74,5 % de ancestría emparentada con las
+Antillas Menores). Lo que no hay es población de origen antillano **MAYOR**:
+el texto principal dice que la ancestría se comparte con las Antillas Menores
+«but not the Greater Antilles».
+
+Dos cautelas que siguen en pie: ancestría no es lengua, y **Curazao no es
+Paraguaná** — de la península sigue sin haber ADN antiguo. El estrato
+toponímico de Esteves no se valida por esta vía.
+
 ## Qué NO da
 
 - Nada sobre el caquetío, Aruba, Curazao, Paraguaná ni la costa de Falcón.
