@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 69
-  en_repo: 46
-  solo_citadas: 23
+  obras: 80
+  en_repo: 48
+  solo_citadas: 32
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
@@ -224,6 +224,24 @@ obras:
   - Camacho et al. 2011
   - Camacho 2011
   en_repo: true
+- id: casale-2024
+  obra: Petrographic insight into the sourcing and production of pre-colonial ceramics from Aruba
+  autor: Casale, Simone; Groot, Niels; Dijkhoff, Raymundo A. C. F.; Kelly, Harold J.; Jacobs, Loe; Degryse,
+    Patrick y Hofman, Corinne L.
+  anio: 2024
+  publicacion: Geoarchaeology 39(6), pp. 609-627. doi:10.1002/gea.22017
+  genero: arqueometria
+  paginas: 19
+  acceso: '🔴 **Acceso abierto CC-BY 4.0** (confirmado en el registro Crossref: licencia `creativecommons.org/licenses/by/4.0/`
+    sobre la versión de registro), pero **Wiley devuelve 403 a la descarga automática**, y también a la
+    lectura del HTML. Verificado el 2026-09-22. URL del PDF: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/gea.22017
+    Lo único que se pudo leer es el **resumen**, vía la API de Crossref. Por la skill `minar-fuente` §3
+    eso NO es minar, y todo lo que esta nota diga de la obra queda degradado a `hipotetico` hasta que
+    alguien la abra de verdad (basta con un navegador).'
+  aliases:
+  - Casale et al. 2024
+  - petrografía Aruba
+  en_repo: false
 - id: castellanos-elegias
   obra: Elegías de varones ilustres de Indias (partes I-II)
   autor: Castellanos, Juan de
@@ -259,6 +277,23 @@ obras:
   - Coll y Toste 1897
   - Vocabulario indo-antillano
   en_repo: true
+- id: dijkhoff-1997
+  obra: 'Tanki Flip / Henriquez: an Early Urumaco Site in Aruba'
+  autor: Dijkhoff, Raymundo A. C. F.
+  anio: 1997
+  publicacion: Tesis de máster, Archaeology and Culture History of Indigenous America, Universiteit Leiden
+  genero: arqueologia
+  paginas: 268
+  acceso: 'Libre en archive.org, ítem `MANA-DIG-TESIS-DIJKHOFF-1997`, subido por la Biblioteca Nacional
+    Aruba (colecciones `mana.aw`, `arubathesis`); sin `access-restricted-item` ni `licenseurl` declarados.
+    Descargado el 2026-09-22 de https://dn760004.eu.archive.org/0/items/MANA-DIG-TESIS-DIJKHOFF-1997/Dijkhoff-tesis-Tanki-Flip-1997.pdf
+    (14.582.071 bytes, sha256 ea0e2e451e9b586b3b2a0e8a0971fc11748be7c1da93e29b151c17f69d9f84c9). ⚠️ **No
+    está en el repo**: acceso abierto sin licencia CC explícita, así que se guarda en disco y se anota
+    (política de Miguel, 2026-09-22).'
+  aliases:
+  - Dijkhoff 1997
+  - Tanki Flip
+  en_repo: false
 - id: esteves-1989
   obra: esteves-1989
   autor: Juan de la Cruz Esteves
@@ -295,15 +330,25 @@ obras:
   en_repo: false
 - id: fernandes-2020
   obra: A genetic history of the pre-contact Caribbean
-  autor: Fernandes, Daniel M. et al.
+  autor: Fernandes, Daniel M.; Sirak, Kendra A. et al.
   anio: 2020
-  publicacion: Nature 590 (2021), publicado online 2020
+  publicacion: Nature 590, pp. 103-110 (2021); publicado online el 23-XII-2020. doi:10.1038/s41586-020-03053-2
   genero: genetica
   local:
   - fuentes_caquetios/Fernandes_et_al_2020_Nature_Genetic_History_Caribbean.pdf
-  paginas: — (archivo vacío)
+  - fuentes_caquetios/Fernandes_et_al_2020_biorxiv_preprint_CCBYNCND.pdf
+  paginas: 8
+  acceso: 'Texto completo publicado, libre: Europe PMC / PMC7864882 — https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7864882/fullTextXML
+    (licencia de Nature: se puede ver, imprimir, copiar y minar para investigación académica; NO es CC,
+    no se redistribuye). Material suplementario, abierto y completo: https://reich.hms.harvard.edu/sites/reich.hms.harvard.edu/files/inline-files/2020_FernandesSirak_Nature_Caribbean_Supplement.pdf
+    Preprint de bioRxiv, CC-BY-NC-ND 4.0, SÍ en el repo: https://www.biorxiv.org/content/10.1101/2020.06.01.126730v1.full.pdf
+    (sha256 eb0b507028851675737d3ff7c45dbb287bcc2c9afefb60130a739131e3d13fd4, 5.228.503 bytes, descargado
+    el 2026-09-22). ⚠️ El PDF de PMC devuelve una página HTML «Preparing to download»: no se obtuvo, y
+    el archivo de Nature del repo **sigue en 0 bytes a propósito**.'
   aliases:
   - Fernandes et al. 2020
+  - Fernandes et al. 2021
+  - genética Caribe precontacto
   en_repo: true
 - id: gatschet-1885
   obra: The Aruba Language and the Papiamento Jargon
@@ -387,6 +432,21 @@ obras:
   - Joseph Gumilla
   - El Orinoco Ilustrado
   en_repo: false
+- id: haviser-1990
+  obra: Prehistoric Human Remains on Curaçao
+  autor: Haviser, Jay B. Jr.
+  anio: 1990
+  publicacion: Proceedings of the International Congress for Caribbean Archaeology, pp. 224-237
+  genero: arqueologia
+  paginas: 14
+  acceso: 'Libre en la University of Florida Digital Collections: https://ufdcimages.uflib.ufl.edu/AA/00/06/19/61/00343/11-21.pdf
+    Descargado el 2026-09-22 (1.308.271 bytes, sha256 2f6e8c59b9e365edcb611382b793744538e6be8e3ec4f9e1512e9a808063d8b2).
+    Sin declaración de derechos en el propio PDF → se guarda en disco, **no en el repo** (política de
+    Miguel, 2026-09-22).'
+  aliases:
+  - Haviser 1990
+  - restos humanos Curazao
+  en_repo: false
 - id: jahn-1927
   obra: Los aborígenes del occidente de Venezuela
   autor: Jahn, Alfredo
@@ -410,6 +470,22 @@ obras:
   acceso: NO consultado en texto completo — identificado vía resúmenes de búsqueda
   aliases:
   - Keegan 1989
+  en_repo: false
+- id: knaf-2021
+  obra: 'Trace-elemental and multi-isotopic (Sr-Nd-Pb) discrimination of jade in the circum-Caribbean:
+    implications for pre-colonial inter-island exchange networks'
+  autor: Knaf, Alice C. S. et al.
+  anio: 2021
+  publicacion: Journal of Archaeological Science 135, 105466. doi:10.1016/j.jas.2021.105466
+  genero: arqueometria
+  paginas: 17
+  acceso: '🔴 **Acceso abierto CC-BY** según OpenAlex, pero **Elsevier devuelve 403 a la descarga automática**
+    (https://www.sciencedirect.com/science/article/pii/S0305440321001369/pdf). Verificado el 2026-09-22.
+    Con un navegador debería abrirse sin más: es abierto, no de pago. Copia también en el repositorio
+    institucional de Leiden (NEXUS 1492) y en ResearchGate.'
+  aliases:
+  - Knaf et al. 2021
+  - jade Sr-Nd-Pb
   en_repo: false
 - id: laguna-guaranao-parque
   obra: Parque metropolitano Laguna de Guaranao — entrada enciclopédica
@@ -436,6 +512,20 @@ obras:
   aliases:
   - Las Casas 1875
   - Historia de las Indias
+  en_repo: true
+- id: las-casas-apologetica
+  obra: Apologética historia sumaria (Historiadores de Indias, tomo I)
+  autor: Casas, Bartolomé de las
+  anio: 1909 [c. 1527-1559]
+  genero: cronica
+  local:
+  - fuentes_caquetios/LasCasas_Apologetica_NBAE13_Serrano_1909.pdf
+  paginas: 725
+  aliases:
+  - Las Casas Apologética
+  - Apologética historia sumaria
+  - NBAE 13
+  - Historiadores de Indias tomo I
   en_repo: true
 - id: maria-lionza-culto
   obra: Bibliografía del culto de María Lionza — Ferrándiz 1999 · Fernández Quintana 2016 · Pollak-Eltz
@@ -465,6 +555,23 @@ obras:
   - Martínez-Cruzado et al. 2003
   - mtDNA Aruba 2003
   en_repo: true
+- id: martinon-torres-2012
+  obra: 'Metallic encounters in Cuba: the technology, exchange and meaning of metals before and after
+    Columbus'
+  autor: Martinón-Torres, Marcos; Valcárcel Rojas, Roberto; Sáenz Samper, Juanita y Guerra, María Filomena
+  anio: 2012
+  publicacion: Journal of Anthropological Archaeology 31(4), pp. 439-454. doi:10.1016/j.jaa.2012.03.006
+  genero: arqueometria
+  paginas: 16
+  acceso: 'Abierta en UCL Discovery: https://discovery.ucl.ac.uk/id/eprint/1361950/1/1361950.pdf Descargada
+    el 2026-09-22 (2.144.405 bytes, sha256 2b06fe5f0628486ba2c6e71cc0da2763035f7f5e7d60a9db32f7c1d3a79c0b22).
+    ⚠️ OpenAlex la da como CC-BY híbrida, pero el PDF del repositorio es la versión del editor y **no
+    lleva licencia CC impresa**. En duda, degradar: se guarda en disco, **no en el repo**.'
+  aliases:
+  - Martinón-Torres et al. 2012
+  - Metallic encounters in Cuba
+  - guanín Cuba
+  en_repo: false
 - id: medina-colina-sxx
   obra: Del Habla Paraguanera. Siglo XX
   autor: Medina Colina, Juan Bautista
@@ -480,6 +587,22 @@ obras:
   - Del Habla Paraguanera
   - habla paraguanera
   en_repo: true
+- id: mol-2007
+  obra: 'Costly Giving, Giving Guaízas: towards an organic model of the exchange of social valuables in
+    the Late Ceramic Age Caribbean'
+  autor: Mol, Angus A. A.
+  anio: 2007
+  publicacion: Sidestone Press, Leiden. ISBN 978-90-8890-002-0
+  genero: arqueologia
+  paginas: 176
+  acceso: 'Acceso abierto del editor: https://www.sidestone.com/openaccess/9789088900020.pdf Descargado
+    el 2026-09-22 (4.514.865 bytes, sha256 1316874758889bb231c3c54f63d92919b5dcc80d07d94523113d45866045a52a).
+    Sin licencia CC impresa → se guarda en disco, **no en el repo**.'
+  aliases:
+  - Mol 2007
+  - guaízas
+  - Costly Giving
+  en_repo: false
 - id: montecano-reserva
   obra: Reserva Biológica Montecano — descripción de INFALCOSTA y entrada enciclopédica
   autor: Tulio Arends (INFALCOSTA); Wikipedia en español (colaborativa)
@@ -556,6 +679,21 @@ obras:
   - Guillermo Morón
   - Morón Historia de Venezuela
   - Los orígenes históricos de Venezuela
+  en_repo: false
+- id: nagele-2020
+  obra: Genomic insights into the early peopling of the Caribbean
+  autor: Nägele, Kathrin et al.
+  anio: 2020
+  publicacion: Science 369(6502), pp. 456-460. doi:10.1126/science.aba8697
+  genero: genetica
+  paginas: 5
+  acceso: '🔴 SIN acceso abierto, verificado el 2026-09-22. Europe PMC: `isOpenAccess = N`, sin PMCID,
+    y la única vía que lista es el DOI con «Subscription required». No hay depósito en PubMed Central.
+    No se descargó (el encargo autoriza repositorios abiertos, no saltar muros de pago). Dónde conseguirla:
+    compra del artículo en science.org, o vía una biblioteca universitaria. Preimpresión: no localizada.'
+  aliases:
+  - Nägele et al. 2020
+  - Nagele et al. 2020
   en_repo: false
 - id: neira-ribero-1762
   obra: Arte y vocabulario de la lengua achagua
@@ -671,6 +809,25 @@ obras:
   - Oliver 1989 cap. 4
   - Oliver Chapter 4 Archaeology
   en_repo: true
+- id: oliver-2000-guanin
+  obra: 'Gold symbolism among Caribbean chiefdoms: of feathers, çibas and guanín power among Taíno elites'
+  autor: Oliver, José R.
+  anio: 2000
+  publicacion: 'En Colin McEwan (ed.), Precolumbian Gold: Technology, Style and Iconography, British Museum
+    Press, Londres, pp. 196-219'
+  genero: arqueologia
+  paginas: 24
+  acceso: '🔴 **Sin versión de acceso abierto**, verificado el 2026-09-22. Es un capítulo de un libro editado
+    de British Museum Press; no hay depósito en repositorio institucional (ni en UCL Discovery, donde
+    el autor sí tiene otros trabajos). **No se descargó.** Dónde conseguirlo: el volumen *Precolumbian
+    Gold* (British Museum Press, 2000, ISBN 0-7141-2542-9), de segunda mano o por préstamo interbibliotecario.
+    ⚠️ Ojo con la referencia: Martinón-Torres et al. 2012 lo citan con el título del volumen como *Pre-Columbian
+    Gold in South America*; McEwan lo publicó como *Precolumbian Gold: Technology, Style and Iconography*.
+    Mismo capítulo, mismas páginas.'
+  aliases:
+  - Oliver 2000
+  - guanín Oliver
+  en_repo: false
 - id: osm-kaketiana
   obra: OpenStreetMap — el mapa vivo de la Kaketiana (volcado por regiones)
   autor: OpenStreetMap contributors
@@ -718,14 +875,48 @@ obras:
   - fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1.pdf
   paginas: '766 en el PDF · 618 impresas de cuerpo + índice (619-648). Desfase: impresa = pdf − 118'
   acceso: 'El PDF local está TRUNCADO pero es legible con MuPDF en modo reparación (ver más abajo). La
-    imagen escaneada sólo sobrevive hasta la impresa 154. Para lo que falta, la ed. Amador de los Ríos
-    es libre en Internet Archive: tomo II https://archive.org/details/historiageneral01fernguat · tomo
-    IV https://archive.org/details/historiageneral04fernguat'
+    imagen escaneada sólo sobrevive hasta la impresa 154. Los tomos II, III y IV están en el repo desde
+    el 2026-09-22: ver [[oviedo-y-valdes-1852-1855]]. Para la imagen íntegra de ESTE tomo, la misma digitalización
+    lo tiene completo: https://archive.org/details/historiageneral00fernguat (55.449.811 B) — sin descargar
+    todavía'
   aliases:
   - Oviedo y Valdés
   - Oviedo 1851
   - Historia general y natural
   - Oviedo vol. I
+  en_repo: true
+- id: oviedo-y-valdes-1852-1855
+  obra: Historia general y natural de las Indias, tomos II, III y IV
+  autor: Fernández de Oviedo y Valdés, Gonzalo
+  anio: 1852-1855 [s. XVI]
+  publicacion: Madrid, Imprenta de la Real Academia de la Historia. Tomo II (segunda parte, libros XX-XXVIII)
+    1852 · tomo III (segunda parte, libros XXIX-XXXVIII) 1853 · tomo IV (tercera parte, libros XXXIX-L,
+    + glosario e índices) 1855. Ed. José Amador de los Ríos, cotejada con el códice original
+  edicion_del_ejemplar: digitalización de la Biblioteca Ludwig von Mises, Universidad Francisco Marroquín
+    (colección Shook), en Internet Archive
+  genero: cronica
+  local:
+  - fuentes_caquetios/Oviedo_Valdes_1852_Historia_General_Indias_vol2.pdf
+  - fuentes_caquetios/Oviedo_Valdes_1853_Historia_General_Indias_vol3.pdf
+  - fuentes_caquetios/Oviedo_Valdes_1855_Historia_General_Indias_vol4.pdf
+  paginas: 't. II: 544 pdf / 530 impresas, desfase 13 · t. III: 680 pdf / 646 impresas, desfase 13 hasta
+    la pdf ~150 y 15 desde ahí · t. IV: 656 pdf / 622 impresas, desfase 15'
+  acceso: 'Dominio público, descargados el 2026-09-22 de Internet Archive (los tres registros llevan `possible-copyright-status:
+    NOT IN COPYRIGHT`). t. II https://archive.org/details/historiageneral01fernguat (45.433.954 B, sha256
+    a9fb3477b3e5250ea8147343b9b10e90c66c7f9018291187b6892615a14fbbd7) · t. III https://archive.org/details/historiageneral02fernguat
+    (54.727.062 B, sha256 3e795e42f22785ab1007147023113c0881f22fc9dad545302ec407e3fffcfa77) · t. IV https://archive.org/details/historiageneral04fernguat
+    (53.090.352 B, sha256 0d5dcc0270726c2b376e658ac53e856246c30375a8dd0eb958986171719f4a40). Los tres
+    pesan menos de 95 MB y están commiteados. El tomo I de la misma digitalización, con la imagen íntegra,
+    es `historiageneral00fernguat` (55.449.811 B) y sigue sin descargar'
+  aliases:
+  - Oviedo t. II
+  - Oviedo t. III
+  - Oviedo t. IV
+  - Oviedo 1852
+  - Oviedo 1855
+  - Historia general y natural tomos II-IV
+  - Apéndice del tomo IV
+  - Voces americanas empleadas por Oviedo
   en_repo: true
 - id: pane-c1498
   obra: Relación acerca de las antigüedades de los indios
@@ -820,6 +1011,23 @@ obras:
   - glosario del maíz
   - polar-el-maiz-glosario
   en_repo: false
+- id: queffelec-2024
+  obra: Diversity and similarity in the Ceramic Age lapidary production in the Caribbean islands
+  autor: Queffelec, Alain
+  anio: 2024
+  publicacion: Revista de Arqueología Americana 41 (2023), pp. 191-244; recibido 2023, aceptado 2024.
+    doi:10.35424/rearam.v0i41.4308
+  genero: arqueologia
+  paginas: 54
+  acceso: Acceso abierto, **CC BY-NC-SA 4.0** declarada en la primera página. https://revistasipgh.org/index.php/rearam/article/download/4308/6464
+    Descargado el 2026-09-22 (5.991.165 bytes, sha256 a564955001a9c94912a2bfc6a6256a15b40e4c3876bc893286b016644933be1c).
+    ⚠️ Por licencia SÍ podría entrar al repo; no se metió por no ser central para el proyecto. La decisión
+    es de Miguel.
+  aliases:
+  - Queffelec 2024
+  - Queffelec 2023
+  - lapidaria caribeña
+  en_repo: false
 - id: ramos-perez-1978
   obra: Reseña (Persée)
   autor: Ramos Pérez, Demetrio
@@ -847,10 +1055,17 @@ obras:
   obra: Venezuelan Archaeology
   autor: Rouse, Irving y Cruxent, José María
   anio: 1963
+  publicacion: Yale University Press, New Haven
   genero: arqueologia
   local:
   - fuentes_caquetios/Rouse_Cruxent_1963_Venezuelan_Archaeology.pdf
-  paginas: — (archivo vacío)
+  paginas: — (archivo vacío; el ejemplar digitalizado tiene 268 imágenes)
+  acceso: '🔴 **No descargable legalmente.** Hay dos ejemplares en archive.org — `venezuelanarchae0000rous`
+    y `venezuelanarchae0000irvi`—, los dos con `access-restricted-item: true` y en las colecciones `inlibrary`
+    / `printdisabled`: eso es **préstamo digital controlado**, que exige cuenta y préstamo, no descarga.
+    Ninguno declara `licenseurl` ni `rights`. Verificado el 2026-09-22; tampoco respondió el servicio
+    de «search inside», así que no se pudo ni sondear por dentro. En copyright (Yale UP). Dónde conseguirla:
+    préstamo en archive.org con cuenta, préstamo interbibliotecario, o compra de segunda mano.'
   aliases:
   - Rouse & Cruxent 1963
   - Venezuelan Archaeology

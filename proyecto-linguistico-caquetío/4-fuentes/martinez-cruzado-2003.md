@@ -131,7 +131,8 @@ de contacto simultáneas, continente y Guajira.
 |---|---|
 | **Hartog 1961** | la historia de las deportaciones y retornos, que es de lo mejor de esta minería |
 | **Oliver 1995** | Macro-Dabajuroide (también lo pide [[zavala-reyes-2018]]) |
-| **Versteeg y Ruiz 1995** · **Dijkhoff 1997** | arqueología arubeña |
+| **Versteeg y Ruiz 1995** | arqueología arubeña — sigue sin localizarse en abierto |
+| ~~**Dijkhoff 1997**~~ | ✅ **cerrada el 2026-09-22** — descargada de archive.org y minada: ver [[dijkhoff-1997]] |
 | **Exquemelin** (s. XVII) | descripción de la vida arubeña, indios hispanohablantes y católicos |
 | **Fortique 1989** | los caquetíos de El Carrizal bajo jurisdicción de Coro |
 | **Rouse 1986** | el origen proto-arahuaco y las rutas de migración |

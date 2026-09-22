@@ -11,7 +11,8 @@ capa_texto: si
 acceso: "Libre — Redalyc: https://www.redalyc.org/journal/339/33957447002/33957447002.pdf · Dialnet: https://dialnet.unirioja.es/servlet/articulo?codigo=6457604. Verificado en el rastreo de 2026-08-14."
 estado_minado: minado
 prioridad: alta
-verificado: 2026-08-14
+verificado: 2026-09-22
+minado: 2026-09-22
 aliases: ["Zavala Reyes et al. 2018", "Leal et al. 2018", "Médanos de Coro 2018"]
 ---
 
@@ -166,6 +167,27 @@ pobre / mar rico*: la tierra era pobre, y donde vivieron la enriquecieron ellos.
   léxico aquí, que no gaste la noche.
 - **Ninguna fecha propia** (ver arriba).
 - **Ningún topónimo indígena nuevo** más allá de los ya conocidos del área.
+
+## ⭐ Lo que dio en la segunda campaña del taíno (T8, 2026-09-22)
+
+Se le hicieron dos preguntas nuevas, las dos de cultura material.
+
+**1. ¿Hay cultura material antillana en los Médanos de Coro?** Barrido de 24
+sondas (ostionoide, chicoide, meillacoide, guanín, tumbaga, jadeíta, cemí,
+guaíza, duho, trigonolito, Antillas Mayores, taíno, lucayo…) sobre los 50.410
+caracteres del `pdftotext`: **cero, en las 24**, con control positivo
+(dabajuro 21, caquet 21, concha 19). Y esto pesa más que el mismo cero en
+[[urbina-jimenez-2007-2011]], porque aquí el conjunto está **fechado en los
+siglos XIV-XVIII** — la ventana del motor y su borde colonial.
+
+**2. ¿Y el botuto?** La Tabla II (p. 404) da la malacofauna recogida:
+***Lobatus gigas*** aparece con **3 unidades sobre 304 fragmentos** de las dos
+áreas, el **1,0 %** del total, frente a *Donax striatus* (42,4 %) y *Callista*
+sp. (27,0 %). Es consumo local, no mercancía: ni un objeto de concha con
+procedencia o estilo antillano. La predicción del tráfico de botuto
+Venezuela ↔ Antillas Mayores sale **negativa** con esta fuente.
+
+Lo mide `python 6-fusion/scripts/medir_taino2_evidencia_material.py`.
 
 ## Deuda documental que abre
 
