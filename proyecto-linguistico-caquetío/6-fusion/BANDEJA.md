@@ -13,9 +13,9 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-21**.
+<!--GENERADO--> Generado el **2026-09-22**.
 
-**3140 ítems propuestos** en 94 propuestas, más **20 issue(s)/comentario(s) redactados sin publicar**.
+**3820 ítems propuestos** en 101 propuestas, más **26 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -40,6 +40,7 @@ editar_a_mano: no
 | `computo_d11_2026-08-31.yaml` | ? | 4 |  |
 | `cruce_achagua_caquetio_2026-09-13.yaml` | neira-ribero-1762 | 188 |  |
 | `cruce_taino_caquetio_2026-09-21.yaml` | ? | 180 |  |
+| `cruce_taino_caquetio_2026-09-22.yaml` | ? | 182 |  |
 | `curacion_glosas_pares_2026-09-19.yaml` | ? | 11 |  |
 | `decisiones_campanas_2026-09-21.yaml` | ? | 0 |  |
 | `decisiones_colisiones_d5_2026-08-31.yaml` | ? | 3 |  |
@@ -100,11 +101,17 @@ editar_a_mano: no
 | `tabla_a2_transcripcion.yaml` | oliver-1989-apendice-a | 101 |  |
 | `tabla_a8_jirajarano.yaml` | oliver-1989-apendice-a | 33 |  |
 | `tabla_a9_oliver.yaml` | oliver-1989-cap2 | 49 |  |
+| `taino2_etnohistoria_contacto.yaml` | ? | 27 |  |
+| `taino2_evidencia_material_contacto.yaml` | ? | 16 |  |
+| `taino2_las_casas_apologetica.yaml` | las-casas-apologetica | 35 |  |
+| `taino_bachiller_morales_1883.yaml` | ? | 12 |  |
 | `taino_brinton_1871.yaml` | brinton-1871 | 0 |  |
 | `taino_en_la_esfera_2026-09-21.yaml` | ? | 9 |  |
 | `taino_fuentes_mapa_2026-09-21.yaml` | ? | 13 |  |
+| `taino_goeje_1939.yaml` | ? | 145 |  |
 | `taino_inventario_2026-09-21.yaml` | ? | 0 |  |
 | `taino_las_casas_1875.yaml` | las-casas-1875 | 26 |  |
+| `taino_lista_maestra_2026-09-22.yaml` | ? | 263 |  |
 | `taino_pane_c1498.yaml` | pane-c1498 | 24 |  |
 | `toponimia_coro_espina.yaml` | gonzalez-batista-nombre-de-coro | 5 |  |
 | `toponimia_paraguana_miguel.yaml` | ? | 5 |  |
@@ -124,6 +131,7 @@ Vistas generadas en `6-fusion/` (no cuentan: juntan lo que ya está arriba):
 - `medicion_politica_atestiguado_manda_2026-09-19.yaml` — generado por `6-fusion/scripts/medir_politica_atestiguado_manda.py`
 - `pares_atestiguado_reconstruido_2026-09-19.yaml` — generado por `6-fusion/scripts/medir_pares_atestiguado_reconstruido.py`
 - `tainismos_en_medina.yaml` — generado por `6-fusion/scripts/tainismos_medina_a_caquetio.py`
+- `taino2_oviedo_venezuela.yaml` — generado por `lectura del escriba sobre la capa de texto de los tres PDF descargados hoy de Internet Archive, con verificación POR IMAGEN de cada forma que se propone. La imagen está entera en los tres tomos: aquí no hay el problema del tomo I (escaneo roto desde la impresa 155).`
 - `taino_oviedo_valdes_1851.yaml` — generado por `lectura del escriba (agente Opus 5) sobre la capa de texto del PDF local, con verificación por imagen de cada forma allí donde la página todavía tiene imagen (impresas 1-154).`
 - `toponimos_mapa_kaketiana.yaml` — generado por `curiana_sim/barrer_mapa.py`
 - `toponimos_por_fuente.yaml` — generado por `curiana_sim/juntar_toponimos.py`
@@ -170,6 +178,12 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `taino-inventario-y-fuentes-2026-09-21.md` | --- |
 | `taino-lascasas-pane-brinton-2026-09-21.md` | --- |
 | `taino-oviedo-2026-09-21.md` | Campaña del taíno — T1: Oviedo y Valdés 1851, vol. I |
+| `taino2-apologetica-2026-09-22.md` | La *Apologética* de Las Casas: 24 entradas del lexicón reciben cita, 3 entran en conflicto |
+| `taino2-etnohistoria-contacto-2026-09-22.md` | Lo que sabían unos de otros en 1492-1500 — y qué hace eso con la hipótesis |
+| `taino2-evidencia-material-2026-09-22.md` | Sí hubo contacto, y no fue con el taíno: los caquetíos de Curazao llevan dos tercios de sa |
+| `taino2-oviedo-ii-iv-2026-09-22.md` | 2ª campaña del taíno — T6: Oviedo y Valdés, tomos II, III y IV |
+| `taino2-prueba-linguistica-2026-09-22.md` | La prueba lingüística del contacto: cómo se distingue un préstamo de un cognado |
+| `taino2-vocabularios-2026-09-22.md` | T10 — Los vocabularios antillanos: la lista taína con cadena de custodia |
 
 ---
 
