@@ -1,0 +1,1536 @@
+# ══════════════════════════════════════════════════════════════════════
+# TAÍNO — Las Casas, *Apologética historia sumaria* (NBAE 13, Serrano y
+# Sanz 1909 [c. 1527-1559])
+# PROPUESTA (regla 5). Comparanda de la ESFERA DE CONTACTO, no caquetío.
+# SEGUNDA campaña del taíno, parcela T9. 2026-09-22.
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  obra: las-casas-apologetica
+  campana: taino2-2026-09-22
+  parcela: T9
+  advertencia: >-
+    ESTO NO ES CAQUETÍO. Es taíno de La Española (y algo de Cuba y los
+    lucayos) y entra como COMPARANDA de la esfera de contacto
+    (CLAUDE.md, «El préstamo de esfera no es una fuga»). Ninguna voz de
+    aquí se proyecta al caquetío. Lo que hace es dar CITA PRIMARIA a
+    entradas taínas del lexicón que hasta hoy no citaban a nadie, y
+    poner al lado del canon caquetío un paralelo institucional medido.
+  colonial_por_definicion: >-
+    Regla 3. Las Casas escribe c. 1527-1559 sobre lo que vio desde 1502
+    y sobre lo que le contaron de 1492-1500. TODO es post-contacto. No
+    se proyecta nada al precontacto caquetío: se señala el paralelo y
+    se dice quién lo afirma.
+  regla_8: >-
+    `procedencia.obra` de cualquier fusión que salga de aquí apunta a
+    `las-casas-apologetica` en 4-fuentes/bibliografia.yaml, id creado
+    en esta misma rama.
+
+  # ── §0 lo que de ESTE ENCARGO resultó falso al medirlo ─────────────
+  correcciones_al_encargo:
+  - afirmacion: «lo que la primera campaña dejó incluye
+      `6-fusion/decisiones_campanas_2026-09-21.yaml` §dc.4»
+    medido: >-
+      Ese archivo NO EXISTE en main. `ls 6-fusion/decisiones_*` devuelve
+      once ficheros y ninguno se llama `decisiones_campanas`; el de la
+      fecha es `decisiones_tanda_2026-09-21.yaml`, y un grep
+      insensible por «taino|taíno|apologet» sobre él devuelve 0. La cola
+      de decisión de la primera campaña del taíno vive en
+      `6-fusion/issues-pendientes/taino-*-2026-09-21.md` (cinco ficheros).
+      No se pudo leer «§dc.4» porque no hay dónde.
+  - afirmacion: «el desfase pdf ↔ impresa hay que calcularlo, como en la
+      *Historia* de 1875, donde iba de +8 a +69»
+    medido: >-
+      Aquí el desfase es CONSTANTE: impresa = pdf − 14, y se sostiene en
+      367 de las 388 páginas donde el número impreso se lee en la
+      cabecera (las 21 restantes son ruido de OCR, no otro desfase).
+      Esta edición imprime su propia foliación en la cabecera de cada
+      página, así que la cita se ancla en la página impresa EXACTA y no
+      por interpolación dentro del capítulo. Es la diferencia práctica
+      más grande con la fuente de la parcela T2.
+  - afirmacion: «areítos» (el encargo los pide como institución a buscar)
+    medido: >-
+      **La palabra `areíto` no aparece NI UNA VEZ en toda la obra.**
+      Medido con los tres extractores y cuatro grafías del XVI
+      (`areito`, `areyto`, `areit`, `areyt`): 0, 0, 0. Lo que SÍ hay es
+      la INSTITUCIÓN descrita con todo detalle y sin nombrarla
+      (pp. 537-538): ver `instituciones.i05`. Es el caso inverso al de
+      `macana` en la *Historia* tomo I, donde estaba el nombre y no la
+      cosa.
+  - afirmacion: «la sucesión matrilineal de La Española, si aparece,
+      aparecerá donde el encargo la buscó (parentesco/gobierno)»
+    medido: >-
+      Aparece, pero el primer barrido la dio por ausente porque se buscó
+      «sobrino». Las Casas NO escribe «sobrino»: escribe «no los hijos
+      de los señores, sino los de sus hermanas sucedían en sus estados»
+      (p. 521). Un grep por `sobrino` sobre La Española da 0 y es
+      la consulta, no la fuente — regla 6 otra vez. El pasaje se
+      encontró leyendo el capítulo entero (skill §3).
+  - afirmacion: «Brinton cita Apol. cap. 204 para los numerales
+      (1 hequeti, 2 yamosa, 3 cauocum, 4 yaraoucobre)»
+    medido: >-
+      El capítulo es correcto (CCIV, p. impresa 538) y el primer numeral
+      también, pero **tres de los cuatro no coinciden con esta edición**.
+      NBAE 13 lee `hequetí`, `yamocá`, `canocúm`, `yamoncobre`.
+      Verificado en IMAGEN, no sólo en la capa de texto. Nuestro lexicón
+      tiene `yamosa` 'dos' vía Brinton: queda como conflicto de forma
+      para Miguel (`conflictos.c02`), no se reescribe (skill §8).
+  - afirmacion: «taíno»
+    medido: >-
+      **Las Casas nunca llama taínos a los taínos en esta obra.** Los
+      dos únicos casos de `taino/tayno` son `Titano` y `Jano` partidos
+      por el OCR, y `taheño` (p. 37) es 'pelirrojo' en castellano. El
+      etnónimo que la bibliografía moderna usa no está en su fuente
+      principal.
+
+  # ── §1 desconfiar del extractor ────────────────────────────────────
+  extraccion:
+    herramientas: [pdftotext -enc UTF-8, pdftotext -enc UTF-8 -layout, djvu.txt de archive.org]
+    plano_bytes: 3478376
+    layout_bytes: 5566091
+    djvu_bytes: 4244300
+    paginas_pdf: 725
+    imagecount_archive: 726
+    por_que_los_tres: >-
+      Los tres dan conteos DISTINTOS de la misma voz. Medido:
+      `behique` 6 / 4 / 4, `guaoxeri` 0 / 0 / 1, `dujo` 21 / 21 / 24,
+      `macorix` 8 / 8 / 9, `xaragua` 19 / 18 / 20, `opia` 85 / 84 / 84.
+      **`guaoxerí` —uno de los tres tratamientos de rango, que es de lo
+      más valioso de la parcela— sale SÓLO en el djvu de archive.org y
+      en la imagen; los dos pdftotext lo pierden.** Si se hubiera
+      trabajado con un extractor, faltaría.
+    columnas_zipeadas: >-
+      El cuerpo va a dos columnas y pdftotext entrelaza CARÁCTER A
+      CARÁCTER las líneas de columnas vecinas en las zonas apretadas.
+      No es la trampa de CLAUDE.md («tablas a dos columnas») sino su
+      versión peor: `-layout` NO la arregla. Ejemplo real, p. 516:
+      «elááloslmoasByaoshreañroírseesñloordlelqatumíeatlbulaonp;rdiemceeir--a».
+      Ahí estaban las glosas de `baharí` y `matunherí`. Se resolvió
+      leyendo la IMAGEN.
+    imagenes: >-
+      archive.org sirve la página por hoja:
+      https://archive.org/download/historiadoresdei01serr/page/n<HOJA>.jpg
+      (hoja = página pdf − 1), a 2412×3631 px. Ocho páginas se leyeron
+      así. Las citas marcadas `verificado: imagen` salen de ahí; las
+      marcadas `verificado: capa-de-texto` sólo de pdftotext.
+
+  paginacion:
+    que_es_el_pdf: >-
+      facsímil escaneado por la University of Toronto (2011) del
+      impreso de 1909, con capa de texto ABBYY. No es un ebook
+      re-compuesto: es el libro.
+    desfase: impresa = pdf_1based − 14  (CONSTANTE)
+    como_se_midio: >-
+      se extrajo el número suelto de la cabecera de cada página; 388
+      páginas lo dan legible y en 367 el desfase es exactamente 14. Las
+      21 restantes son lecturas basura del OCR (−36, −486, +104…), no
+      otro desfase.
+    indice_original: pdf 711-725 (impresas 697-704), tabla a dos columnas; necesita -layout
+    como_se_cita_aqui: >-
+      `pagina_impresa` es EXACTA en todas las entradas de este fichero.
+      `capitulo` se da cuando la cabecera del capítulo se leyó en la
+      misma página o en la anterior; cuando se deduce del mapa
+      automático va con `~`.
+
+  # ── §2 medir la ortografía ANTES de contar ─────────────────────────
+  ortografia_medida:
+    nota: >-
+      conteos sobre el texto NFD sin diacríticos, minúsculas, de los
+      tres extractores. La edición de Serrano y Sanz moderniza a medias:
+      acentúa «á», «ó», «é», conserva la ç en voz indígena y escribe
+      «munchos» donde hoy «muchos».
+    ce_cedilla_viva: >-
+      `çibas` (p. 521) y `çabanas` (p. 39) llevan cedilla en el
+      impreso; los dos pdftotext las devuelven como `yibas`/`ribas`/
+      `f'ibas` y `abanas`. **Un grep por `ciba` o `sabana` se pierde la
+      entrada entera.**
+    grafias_que_hay_frente_a_las_que_se_esperaban:
+      cemi: "`cemi` 9, `cemies` 2, `çemi` 9 · `zemi` 0 · en el cuerpo la forma es «Cemí»"
+      behique: "`behique(s)` 6, `bohique(s)` 2, `behico(s)` 2 · `buhuitihu` 0, `buhiti` 0, `bohiti` 0"
+      areito: "`areito` 0, `areyto` 0, `areit` 0, `areyt` 0 — CERO en los tres extractores"
+      haiti: "`Haytí` 1 y `Haití` 1 (misma voz, dos grafías, pp. 17 y 516)"
+      caribe: "`caribes` 8 · `canníbales`/`caníbales` 2 — y Las Casas declara que son la MISMA gente con dos nombres en dos momentos"
+      macorix: "`Macorix` 8-9, `Maçorix`, `macoriges` 1 · `macoriz` 0, `mazorix` 0"
+      ciguayo: "`ciguayos` 3 · `cyguayo` 0 — al revés que en la *Historia* de 1875, donde `cyguayo` era la mayoritaria. La misma voz cambia de grafía entre las dos obras del MISMO autor"
+      atabey: "`atabey` 0 — la forma de esta edición es **`Atabex`** (p. 321). Un cero que mide la consulta"
+      yocahu: "`Yocahu` 1, y es parte de `Yocahu Yagua Maorocotí`; `Yocahuguama` aparte (p. 447)"
+      guatiao: "`guatiao` 0, `guaitiao` 0, `datihao` 0 — cero REAL, ver `negativos.n01`"
+      naboria: "`naboría` 3, siempre en el mismo pasaje (p. 447)"
+      duho: "el impreso lee **`duohos`** (p. 446, verificado en imagen); `duho` 1 y `dujo` 21-24 son ruido de OCR sobre «dijo»/«dicho»"
+    conteos_de_control:
+      penultima: 38        # en la *Historia* 1875 era 0
+      ultima_silaba: 33
+      luenga: 127
+      aguda: 47
+      silaba: 83
+      vocablo: 45
+      lengua: 257
+      lenguaje: 21
+      interprete: 14
+      quiere_decir: 109
+      universal: 122
+
+  cobertura_real:
+    capitulos_de_la_obra: 267
+    capitulos_localizados_por_cabecera: 169
+    paginas_impresas_del_cuerpo: 696
+    leido_pasaje_a_pasaje:
+      - "caps. CXX-CXXI (pp. 321-325): religión de La Española, cemíes, behiques, las tres lenguas"
+      - "cap. CXXX (p. 345): el caney como único «templo»"
+      - "caps. CLXVI-CLXVII (pp. 444-448): sacrificios, cohoba, ayuno, Yocahuguama, naboría daca"
+      - "caps. CXCVI-CXCIX (pp. 514-523): los cinco reyes, los tres tratamientos, las tres lenguas, matrimonio, herencia, çibas y guanín"
+      - "caps. CCIII-CCV (pp. 535-540): hupía, cura por soplo, comida, canoas, bailes, batey, numerales, caribes"
+      - "cap. XLIV (pp. 114-121): esclavos exbuneyes y el batey como plaza"
+      - "caps. X-XIII (pp. 26-39): mantenimientos, cazabi, conuco, yuca, bohíos, çabanas"
+      - "cap. LXV (p. 177) y cap. LXX (p. 181): «vocablos desta isla» y los tabacos"
+      - "cap. CCXLI (pp. 631-635): coincidencias de lenguas y la herencia en Panamá"
+    barrido_por_patron_sobre_el_tomo_entero:
+      - "(penultima|ultima silaba|silaba (luenga|aguda|breve)|acento|se pronuncia|pronunciaci) → 107 bloques leídos"
+      - "voz + marca prosódica, red automática → 108 ocurrencias, 97 formas distintas"
+      - "guatiao|datihao|trocar nombres|tomar el nombre → 0"
+      - "areito|areyto|bailes y danzas|cantares|cantaban → 45 bloques"
+      - "canoa|caribe|behique|cacique|naboria|cemi|conuco|caney|duho|hupia|batey|tabaco|taino → 180 líneas"
+      - "las 52 claves taínas del lexicón, con grafías del XVI declaradas"
+    no_leido_pasaje_a_pasaje: >-
+      El grueso del libro: los ~180 capítulos de erudición clásica
+      (Grecia, Roma, Egipto, la India) y los bloques de Nueva España y
+      del Perú, salvo donde el patrón los tocó. Es ~75 % de la obra y
+      NO alimenta esta parcela, pero sí alimentaría una de
+      «cómo compara Las Casas» que nadie ha pedido.
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. LÉXICO — voces dadas como de la lengua de La Española (u otra isla)
+#    Esquema heredado de 6-fusion/taino_las_casas_1875.yaml.
+#    `marca_prosodica` es el aporte propio de esta obra: Las Casas
+#    acentúa sistemáticamente, cosa que en la *Historia* hace 3 veces.
+# ══════════════════════════════════════════════════════════════════════
+lexico:
+
+# --- gobierno y rango -------------------------------------------------
+- id: lx.01
+  forma_fuente: nitaynos
+  glosa_fuente: "nobles y principales"
+  cita_verbatim: >-
+    «Habia en esta Isla y en cada reino della munchos nobles y estimados
+    por de mejor sangre que los demas, y que tenian cargo sobre otros
+    como de regillos y guiallos; éstos, en la lengua comun desta Isla,
+    se llamaban nitaynos, la y letra luenga, nobles y principales.»
+  marca_prosodica: "la y letra luenga"
+  capitulo: CXCVII
+  pagina_impresa: 516
+  pagina_pdf: 530
+  atribucion: declarada           # «en la lengua comun desta Isla»
+  campo: jerarquia
+  en_el_lexicon: "nitaino 'nitaíno, noble, principal, hombre de rango' (fuente: taíno, sin procedencia.obra)"
+  verificado: imagen
+
+- id: lx.02
+  forma_fuente: Guaoxerí
+  glosa_fuente: "el menor de los tres grados de señor; equivale a «vuestra merced»"
+  cita_verbatim: >-
+    «Tres vocablos tenian con que pronunciaban el grado y la dignidad ó
+    estado de los señores: el uno era Guaoxerí, la última sílaba luenga,
+    el cual ser el menor de los tres grados, como nosotros decimos á los
+    caballeros «vuestra merced», significaba»
+  marca_prosodica: "la última sílaba luenga"
+  capitulo: CXCVII
+  pagina_impresa: 516
+  pagina_pdf: 530
+  atribucion: declarada
+  campo: jerarquia
+  en_el_lexicon: NO
+  verificado: imagen
+  aviso_de_extractor: >-
+    los dos pdftotext devuelven 0 ocurrencias de `guaoxeri`; el djvu da 1.
+    La forma se leyó en la imagen.
+
+- id: lx.03
+  forma_fuente: Baharí
+  glosa_fuente: "grado medio; equivale a «señoría», para los señores de título"
+  cita_verbatim: >-
+    «el segundo era Baharí, la misma última luenga, y éste como á mayor
+    señor quel primero, como cuando á los señores de título decimos
+    «señoría», ellos Baharí lo llamaban»
+  marca_prosodica: "la misma última luenga"
+  capitulo: CXCVII
+  pagina_impresa: 516
+  pagina_pdf: 530
+  atribucion: declarada
+  campo: jerarquia
+  en_el_lexicon: NO
+  verificado: imagen
+
+- id: lx.04
+  forma_fuente: Matunherí
+  glosa_fuente: "grado supremo; sólo para los reyes; equivale a «Vuestra Alteza»"
+  cita_verbatim: >-
+    «era el tercero y supremo Matunherí, asimismo el acento en la
+    postrera sílaba, que á solos los reyes supremos, como nosotros á los
+    reyes decimos «Vuestra Alteza», ellos Matunherí lo aplicaban.»
+  marca_prosodica: "el acento en la postrera sílaba"
+  capitulo: CXCVII
+  pagina_impresa: 516
+  pagina_pdf: 530
+  atribucion: declarada
+  campo: jerarquia
+  en_el_lexicon: NO
+  verificado: imagen
+  nota: >-
+    Los tres son TRATAMIENTOS, no títulos de cargo: Las Casas los traduce
+    por la escala castellana merced / señoría / alteza. Eso los pone al
+    lado del `kudanga`/`kuté` caquetío (registro formal, d21.10) y no al
+    lado de `cacique`.
+
+- id: lx.05
+  forma_fuente: naboría
+  glosa_fuente: "sirviente o criado"
+  cita_verbatim: >-
+    «decian á grandes voces: «Dios naboría daca, Dios naboría daca», que
+    quiere decir, en la lengua más comun y más universal desta Isla, «yo
+    soy sirviente y criado de Dios» […] Naboría queria decir sirviente ó
+    criado, y daca quiere decir yo.»
+  capitulo: CLXVII
+  pagina_impresa: 447
+  pagina_pdf: 461
+  atribucion: declarada           # «en la lengua más comun y más universal desta Isla»
+  campo: jerarquia
+  en_el_lexicon: "naboria 'naboría, servidor permanente, trabajador dependiente del cacique' (taíno, sin procedencia.obra)"
+  verificado: imagen
+  nota: >-
+    Es la ÚNICA frase taína completa de toda la obra: tres palabras con
+    traducción palabra por palabra dada por el cronista.
+
+- id: lx.06
+  forma_fuente: daca
+  glosa_fuente: "yo"
+  cita_verbatim: "«y daca quiere decir yo.»"
+  capitulo: CLXVII
+  pagina_impresa: 447
+  pagina_pdf: 461
+  atribucion: declarada
+  campo: gramatica
+  en_el_lexicon: "daca 'mano' (taíno-reconstruido desde Lok. daka) — GLOSA DISTINTA, ver conflictos.c01"
+  verificado: imagen
+
+- id: lx.07
+  forma_fuente: exbuneyes
+  glosa_fuente: "los de Cuba tenidos por esclavos por los de La Española"
+  cita_verbatim: >-
+    «cuando pasó la gente de esta isla Española, y poco á poco sojuzgó á
+    la de aquella […] tuviéronlos como por esclavos y llamábanlos
+    exbuneyes, la penúltima sílaba luenga, pero ninguna ó cuasi ninguna
+    diferencia habia entre los hijos y aquellos que habian sojuzgado.»
+  marca_prosodica: "la penúltima sílaba luenga"
+  capitulo: XLIV
+  pagina_impresa: 115
+  pagina_pdf: 129
+  atribucion: declarada
+  campo: jerarquia
+  en_el_lexicon: NO
+  verificado: capa-de-texto
+  nota: >-
+    En la misma página Las Casas declara que **en La Española no hubo
+    esclavos entre los indios** («porque en esta isla ninguno hovo entre
+    los indios»): la voz es de un régimen INTER-INSULAR de conquista, no
+    de una clase interna. Dato de contacto además de léxico.
+
+# --- religión ---------------------------------------------------------
+- id: lx.08
+  forma_fuente: Cemí
+  glosa_fuente: "los ídolos o estatuas; «el que hace llover y hace que haya sol, y nos da los hijos»"
+  cita_verbatim: >-
+    «tenian algunos ídolos ó estatuas de las dichas, y éstas
+    generalmente llamaban Cemí, la última sílaba luenga y aguda; éstas
+    creían que les daban el agua, y el viento y el Sol cuando lo habían
+    menester» (p. 322) · «Preguntando yo á los indios algunas veces:
+    ¿quién es aqueste Cemí que nombráis? respondíanme: el que hace
+    llover y hace que haya sol, y nos da los hijos, y los otros bienes
+    que deseamos» (p. 445)
+  marca_prosodica: "la última sílaba luenga y aguda"
+  capitulo: CXX y CLXVI
+  pagina_impresa: [322, 445]
+  pagina_pdf: [336, 459]
+  atribucion: declarada
+  campo: cosmos
+  en_el_lexicon: "cemi 'cemí, ídolo sagrado, espíritu materializado' (taíno, sin procedencia.obra)"
+  verificado: capa-de-texto
+  nota: >-
+    La segunda cita es de PRIMERA MANO y en estilo directo: Las Casas
+    preguntando y el indio respondiendo. Es la mejor atestación de la
+    entrada que hay en el repo.
+
+- id: lx.09
+  forma_fuente: cohoba
+  glosa_fuente: "los polvos que se sorben por las narices, y el acto o ceremonia de tomarlos"
+  cita_verbatim: >-
+    «Estos polvos y estas cerimonias ó actos se llamaban cohoba, la
+    media sílaba luenga, en su lenguaje» · «tomada su cohoba (que es
+    sorber por las narices aquellos polvos, como está dicho)»
+  marca_prosodica: "la media sílaba luenga"
+  capitulo: CLXVI (y la variante del ms. en nota de CXX)
+  pagina_impresa: [445, 446, 323]
+  pagina_pdf: [459, 460, 337]
+  atribucion: declarada
+  campo: ritual
+  en_el_lexicon: "NO como `cohoba`. El lexicón tiene `cohiba` 'tabaco' (taíno, vía Brinton). Son dos lemas distintos: ver conflictos.c03"
+  verificado: imagen
+
+- id: lx.10
+  forma_fuente: behiques · bohiques · behicos
+  glosa_fuente: "sacerdotes; sus teólogos, profetas y adivinos; y médicos"
+  cita_verbatim: >-
+    «Estos, pues, sacerdotes, que en la lengua destas Islas se llamaban
+    behiques, que eran sus teólogos, profetas y adivinos, hacían á estas
+    gentes algunos engaños, mayormente cuando se hacían médicos»
+    (p. 323) · «los sacerdotes que tenían y llamaban bohiques, eran los
+    hechiceros y agoreros y médicos» (p. 365)
+  capitulo: CXX, CXXXV, CLXVI-CLXVII, CCIII
+  pagina_impresa: [322, 323, 365, 445, 446, 447, 535]
+  pagina_pdf: [336, 337, 379, 459, 460, 461, 549]
+  atribucion: declarada           # «en la lengua destas Islas»
+  campo: cosmos
+  en_el_lexicon: "bejique 'bejique, chamán taíno, mediador ritual' (taíno, sin procedencia.obra)"
+  verificado: capa-de-texto
+  nota: >-
+    Tres grafías en la misma obra y ninguna es la moderna `bejique`.
+    La glosa de Las Casas es CUÁDRUPLE —teólogo, profeta, adivino,
+    médico— y es más rica que la nuestra.
+
+- id: lx.11
+  forma_fuente: duohos
+  glosa_fuente: "banquetes bajos muy bien labrados, donde se sienta el señor para la cohoba"
+  cita_verbatim: >-
+    «y tomábase asentados en unos banquetes bajos, pero muy bien
+    labrados, que llamaban duohos (la primera sílaba luenga)»
+  marca_prosodica: "la primera sílaba luenga"
+  capitulo: CLXVI
+  pagina_impresa: 446
+  pagina_pdf: 460
+  atribucion: declarada
+  campo: utiles
+  en_el_lexicon: "dujo 'dujo, asiento de madera tallado del cacique' — FORMA DISTINTA, ver conflictos.c02"
+  verificado: imagen
+
+- id: lx.12
+  forma_fuente: Vaybrama (Yaybrama)
+  glosa_fuente: "el Cemí de Buyayba, «buen Cemí»; causaba enfermedades"
+  cita_verbatim: >-
+    «lo que contaban del Cemí de Buyayba (que creo que era un pueblo), y
+    el Cemí nombraban Vaybrama, la penúltima sílaba luenga»
+  marca_prosodica: "la penúltima sílaba luenga"
+  capitulo: CLXVI
+  pagina_impresa: 446
+  pagina_pdf: 460
+  atribucion: declarada
+  campo: cosmos
+  en_el_lexicon: NO
+  verificado: capa-de-texto
+  nota: en la misma página el editor lo reimprime «Yaybrama». Dos grafías a doce líneas de distancia.
+
+- id: lx.13
+  forma_fuente: Yocahu Yagua Maorocotí
+  glosa_fuente: "el nombre del Dios único, inmortal e invisible, que mora en el cielo — SIN GLOSA: Las Casas declara que no supo qué significa"
+  cita_verbatim: >-
+    «La gente desta isla Española tenia cierta fe y cognoscimiento de un
+    verdadero y solo Dios, el cual era inmortal é invisible […] cuya
+    morada y habitación es el cielo, y nombráronlo Yocahu Yagua
+    Maorocotí; no sé lo que por este nombre quisieron significar, porque
+    cuando lo pudiera bien saber, no lo advertí.»
+  capitulo: CXX
+  pagina_impresa: 321
+  pagina_pdf: 335
+  atribucion: declarada
+  campo: cosmos
+  en_el_lexicon: NO
+  verificado: capa-de-texto
+  nota: >-
+    Etiqueta epistémica regalada por el propio cronista: forma
+    atestiguada, glosa DECLARADA DESCONOCIDA. Cualquier glosa que se le
+    ponga viene de otra parte y hay que decir de cuál.
+
+- id: lx.14
+  forma_fuente: Atabex
+  glosa_fuente: "la madre de Dios (en el error que Las Casas les atribuye); y Guaca, un hermano suyo"
+  cita_verbatim: >-
+    «se les mezclaron estos errores, conviene á saber: que Dios tenia
+    madre, cuyo nombre era Atabex, y un hermano suyo Guaca»
+  capitulo: CXX
+  pagina_impresa: 321
+  pagina_pdf: 335
+  atribucion: declarada
+  campo: cosmos
+  en_el_lexicon: NO
+  verificado: capa-de-texto
+  nota: "`atabey` da 0 en la obra. La forma de esta edición es `Atabex`."
+
+- id: lx.15
+  forma_fuente: Yocahuguama
+  glosa_fuente: "el Cemí que profetizó la llegada de la gente vestida"
+  cita_verbatim: >-
+    «habiendo hablado con cierto Cemí, que habia dicho por nombre
+    Yocahuguama, que los que después que él fuese muerto fuesen vivos,
+    poco gozarían de sus tierras y casas, porque vernia una gente
+    vestida que los señorearía y mataría»
+  capitulo: CLXVII
+  pagina_impresa: 447
+  pagina_pdf: 461
+  atribucion: declarada (vía fray Ramón Pané)
+  campo: cosmos
+  en_el_lexicon: NO
+  verificado: capa-de-texto
+  advertencia_de_independencia: >-
+    Skill §8. Las Casas lo atribuye explícitamente a fray Ramón: **no es
+    una segunda atestación independiente de Pané**, es Pané citado. La
+    propuesta `taino_pane_c1498.yaml` de la primera campaña y ésta
+    comparten origen aquí.
+
+- id: lx.16
+  forma_fuente: hupías
+  glosa_fuente: "las fantasmas de noche; «hupía no era otra cosa sino el ánima del hombre, porque así llamaban al ánima»"
+  cita_verbatim: >-
+    «el gran miedo que tenian de los fantasmas de noche, y éstas
+    llamaban hupías, la penúltima luenga, y hupía no era otra cosa sino
+    el ánima del hombre, porque así llamaban al ánima»
+  marca_prosodica: "la penúltima luenga"
+  capitulo: CCIII
+  pagina_impresa: 535
+  pagina_pdf: 549
+  atribucion: declarada
+  campo: cosmos
+  en_el_lexicon: "NO como `hupia`. El lexicón tiene `maboya` 'espíritu maligno nocturno', que da 0 en esta obra"
+  verificado: capa-de-texto
+  aviso_de_grafia: >-
+    pdftotext devuelve `Impías` en la primera ocurrencia (mayúscula I
+    por h). El grep útil es `hupia`, no `opia`: `opia` da 85 y es todo
+    «propia/copia».
+
+# --- casa, conuco, comida --------------------------------------------
+- id: lx.17
+  forma_fuente: caney (pl. caneyas)
+  glosa_fuente: "la casa del señor principal; la casa grande de los señores y caciques"
+  cita_verbatim: >-
+    «no eran los templos […] sino las mismas casas de los caciques y
+    señores, que eran mayores que las de los demás, y éstas llamaban
+    caneyas, la sílaba de en medio larga. No miré cuando pudiera
+    preguntar qué por este vocablo significaban, más de lo que todos
+    entendíamos que caney era la casa del señor principal.» (p. 345)
+  marca_prosodica: "la sílaba de en medio larga"
+  capitulo: CXXX y CLXVI
+  pagina_impresa: [345, 445]
+  pagina_pdf: [359, 459]
+  atribucion: declarada
+  campo: arquitectura
+  en_el_lexicon: "caney 'caney, bohío rectangular del cacique' (taíno, sin procedencia.obra)"
+  verificado: capa-de-texto
+  nota: >-
+    Otra etiqueta epistémica del cronista: dice que NUNCA PREGUNTÓ qué
+    significaba. Y **«rectangular», que está en nuestra glosa, no está
+    en Las Casas**: viene de otra parte y el lexicón no dice de cuál.
+
+- id: lx.18
+  forma_fuente: bohíos
+  glosa_fuente: "las casas de los indios, cubiertas de yerba"
+  cita_verbatim: >-
+    «con la cual cobrian los indios sus casas, que llamaban bohíos, la
+    penúltima luenga»
+  marca_prosodica: "la penúltima luenga"
+  capitulo: XIII
+  pagina_impresa: 39
+  pagina_pdf: 53
+  atribucion: declarada
+  campo: arquitectura
+  en_el_lexicon: "bohio / bohío (dos claves, misma voz), sin procedencia.obra"
+  verificado: capa-de-texto
+
+- id: lx.19
+  forma_fuente: conuco
+  glosa_fuente: "la labranza"
+  cita_verbatim: >-
+    «Esta labranza, en el lenguaje de los indios desta isla se llamaba
+    conuco, la penúltima luenga, y las raíces yuca, luenga la primera
+    sílaba, y la planta yucubia»
+  marca_prosodica: "la penúltima luenga"
+  capitulo: X
+  pagina_impresa: 28
+  pagina_pdf: 42
+  atribucion: declarada
+  campo: agricultura
+  en_el_lexicon: "kunuku (sin procedencia.obra)"
+  verificado: capa-de-texto
+  nota: "la misma frase atestigua `yuca` (raíz) y `yucubia` (planta), que el lexicón no tiene."
+
+- id: lx.20
+  forma_fuente: cazabi (çaçabí)
+  glosa_fuente: "el pan de raíces"
+  cita_verbatim: >-
+    «Tornando al pan que llamaron los indios cazabi, la penúltima
+    luenga, este es el mejor pan que creo yo haber en el mundo después
+    del de trigo»
+  marca_prosodica: "la penúltima luenga"
+  capitulo: X
+  pagina_impresa: 27
+  pagina_pdf: 41
+  atribucion: declarada
+  campo: alimentos
+  en_el_lexicon: "casabe y cazabi (dos claves), sin procedencia.obra"
+  verificado: capa-de-texto
+
+- id: lx.21
+  forma_fuente: axí
+  glosa_fuente: "la pimienta"
+  cita_verbatim: >-
+    «echaban de la pimienta que llamaban axí, la última sílaba aguda, la
+    cual ya es en toda España conocida» · «aquella pimienta que en
+    lengua desta Isla se llamaba axí, la última sílaba aguda, y en la
+    mejicana chile, la primera sílaba luenga» (p. 90)
+  marca_prosodica: "la última sílaba aguda"
+  capitulo: X, XXXI, CCIV
+  pagina_impresa: [27, 90, 537]
+  pagina_pdf: [41, 104, 551]
+  atribucion: declarada
+  campo: alimentos
+  en_el_lexicon: "aji (sin procedencia.obra)"
+  verificado: capa-de-texto
+  nota: "p. 90 es además un par mínimo interlingüístico declarado: axí (Española) vs. chile (mexicana)."
+
+- id: lx.22
+  forma_fuente: mahíz
+  glosa_fuente: "el grano"
+  cita_verbatim: >-
+    «llamábanlo mahíz y desta isla salió este nombre» (p. 32) · «Estos
+    vocablos cotaras, macanas, bixa, y maiz, y maguey, fueron vocablos
+    desta isla y no de la Tierra Firme, porque por otros vocablos allá
+    estas cosas llaman.» (p. 177)
+  capitulo: XII y LXV
+  pagina_impresa: [32, 177]
+  pagina_pdf: [46, 191]
+  atribucion: declarada
+  campo: alimentos
+  en_el_lexicon: "maisi y maíz (dos claves), sin procedencia.obra"
+  verificado: imagen (p. 177)
+
+- id: lx.23
+  forma_fuente: batatas
+  glosa_fuente: "raíces comestibles, de más delicada naturaleza que los ajes"
+  cita_verbatim: "«Estas raíces de ajes y batatas, la sílaba de en medio luenga, no tienen cosa de ponzoña»"
+  marca_prosodica: "la sílaba de en medio luenga"
+  capitulo: XI
+  pagina_impresa: 29
+  pagina_pdf: 43
+  atribucion: declarada
+  campo: alimentos
+  en_el_lexicon: "batata (sin procedencia.obra)"
+  verificado: capa-de-texto
+
+- id: lx.24
+  forma_fuente: tabacos
+  glosa_fuente: "los mosquetes de humo que se toman por la boca"
+  cita_verbatim: >-
+    «lo cual les causaba un adormicimiento en las carnes y en todo el
+    cuerpo, de manera que ni sentían hambre ni cansancio, y estos
+    mosquetes llamaban tabacos, la medía sílaba luenga»
+  marca_prosodica: "la media sílaba luenga"
+  capitulo: LXX
+  pagina_impresa: 181
+  pagina_pdf: 195
+  atribucion: declarada
+  campo: ritual
+  en_el_lexicon: "tabako (sin procedencia.obra)"
+  verificado: capa-de-texto
+  nota: >-
+    **`tabaco` es el CANUTO, no la planta ni la hoja.** Es la glosa
+    original y no la moderna. Quien fusione debe decidir si la entrada
+    del lexicón sigue glosándose como la planta.
+
+# --- cuerpo, naturaleza, mercancía ------------------------------------
+- id: lx.25
+  forma_fuente: guanín
+  glosa_fuente: "cierta especie de oro bajo, que ellos olían y tenían por joyas preciosas, colgadas de las orejas"
+  cita_verbatim: >-
+    «Daban también por precio ciertas hojas de guanín, que era cierta
+    especie de oro bajo que ellos olian y tenian por joyas preciosas,
+    para ponerse colgadas de las orejas […] y en tanto grado era
+    estimado este guanín, la última luenga, destas gentes, por el olor
+    que en él sentian, ó por alguna virtud que haber en él creían»
+  marca_prosodica: "la última luenga"
+  capitulo: CXCIX
+  pagina_impresa: 521
+  pagina_pdf: 535
+  atribucion: declarada
+  campo: comercio
+  en_el_lexicon: "guanin (sin procedencia.obra)"
+  verificado: imagen
+
+- id: lx.26
+  forma_fuente: taguaguas
+  glosa_fuente: "las hojas y joyas de guanín que se cuelgan de las orejas"
+  cita_verbatim: >-
+    «llamaban en su lengua á estas hojas y joyas de las orejas
+    taguaguas, la media sílaba luenga»
+  marca_prosodica: "la media sílaba luenga"
+  capitulo: CXCIX
+  pagina_impresa: 521
+  pagina_pdf: 535
+  atribucion: declarada
+  campo: comercio
+  en_el_lexicon: NO
+  verificado: capa-de-texto
+
+- id: lx.27
+  forma_fuente: çibas
+  glosa_fuente: "piedras; y por excelencia las sartas de cuentas que se dan por precio de la novia"
+  cita_verbatim: >-
+    «enviándoles por paga ciertas sartas de cuentas que llamaban çibas,
+    por excelencia, que quiere decir piedras, porque çibas llamaban á
+    todas las piedras, y çibas á estas cuentas, por excelencia, como
+    cosa que tenian por muy preciosa y de gran estima»
+  capitulo: CXCIX
+  pagina_impresa: 521
+  pagina_pdf: 535
+  atribucion: declarada
+  campo: comercio
+  en_el_lexicon: NO
+  verificado: imagen
+  aviso_de_extractor: >-
+    los dos pdftotext leen `yibas` / `ribas` / `f'ibas`. La ç se leyó en
+    la imagen. Es el caso de manual del §2 de la skill.
+
+- id: lx.28
+  forma_fuente: bixa
+  glosa_fuente: "la color bermeja con que se untaban"
+  cita_verbatim: >-
+    «llamaban esta color los indios bixa» (p. 36) · «Estos vocablos
+    cotaras, macanas, bixa, y maiz, y maguey, fueron vocablos desta isla
+    y no de la Tierra Firme» (p. 177)
+  capitulo: XIII y LXV
+  pagina_impresa: [36, 177]
+  pagina_pdf: [50, 191]
+  atribucion: declarada
+  campo: utiles
+  en_el_lexicon: "bixa (sin procedencia.obra)"
+  verificado: imagen (p. 177)
+
+- id: lx.29
+  forma_fuente: huracanes
+  glosa_fuente: "las tempestades o tormentas"
+  cita_verbatim: "«huracanes llamaban los indios desta isla las dichas tempestades ó tormentas»"
+  capitulo: XXXVII
+  pagina_impresa: 95
+  pagina_pdf: 109
+  atribucion: declarada
+  campo: clima
+  en_el_lexicon: "huracan (sin procedencia.obra)"
+  verificado: capa-de-texto
+
+- id: lx.30
+  forma_fuente: manatíes
+  glosa_fuente: "pez grande de boca de río, sin pies, con aletas"
+  cita_verbatim: "«los que llamaban los indios manatíes, la penúltima sílaba luenga»"
+  marca_prosodica: "la penúltima sílaba luenga"
+  capitulo: X
+  pagina_impresa: 27
+  pagina_pdf: 41
+  atribucion: declarada
+  campo: fauna
+  en_el_lexicon: "manati (sin procedencia.obra)"
+  verificado: capa-de-texto
+
+- id: lx.31
+  forma_fuente: hutías
+  glosa_fuente: "conejos de hechura y cola de ratones; una de las cuatro especies (con quemí, mohíes y curies)"
+  cita_verbatim: >-
+    «una se llamaba quemí, la última sílaba aguda, y eran los mayores y
+    más duros; la otra especie era los que se llamaban hutías, la
+    penúltima luenga; la tercera los mohíes, la misma sílaba luenga; la
+    cuarta era como gazapitos, que llamaban curies»
+  marca_prosodica: "la penúltima luenga"
+  capitulo: X
+  pagina_impresa: [26, 536]
+  pagina_pdf: [40, 550]
+  atribucion: declarada
+  campo: fauna
+  en_el_lexicon: "hutia (sin procedencia.obra); `quemí`, `mohíes` y `curies` NO están"
+  verificado: capa-de-texto
+
+- id: lx.32
+  forma_fuente: guabinas
+  glosa_fuente: "pescado de río, cuasi con el parecer de truchas"
+  cita_verbatim: "«hay otros que llaman guabinas, la media sílaba breve»"
+  marca_prosodica: "la media sílaba breve"
+  capitulo: VI
+  pagina_impresa: 17
+  pagina_pdf: 31
+  atribucion: declarada
+  campo: fauna
+  en_el_lexicon: "guabina (sin procedencia.obra)"
+  verificado: capa-de-texto
+
+- id: lx.33
+  forma_fuente: guayabas
+  glosa_fuente: "fruta muy odorífera"
+  cita_verbatim: "«Habia las que llamaban guayabas, la penúltima sílaba luenga»"
+  marca_prosodica: "la penúltima sílaba luenga"
+  capitulo: XII
+  pagina_impresa: 32
+  pagina_pdf: 46
+  atribucion: declarada
+  campo: flora
+  en_el_lexicon: "guayaba (sin procedencia.obra)"
+  verificado: capa-de-texto
+
+- id: lx.34
+  forma_fuente: batéy
+  glosa_fuente: "la pelota; el juego; y el mismo lugar — y la plaza delante de la casa real"
+  cita_verbatim: >-
+    «la pelota llamaban en su lengua batéy, la letra e luenga, y al
+    juego, y tambien al mismo lugar, batéy nombraban.» (p. 538) ·
+    «ante la casa real estaba en todos una plaza grande más barrida y
+    más llana, más luenga que cuadrada, que llamaban en la lengua destas
+    islas batey, la penúltima sílaba luenga, que quiere decir el juego
+    de la pelota» (p. 121)
+  marca_prosodica: "p. 538: «la letra e luenga» · p. 121: «la penúltima sílaba luenga» — SE CONTRADICEN"
+  capitulo: XLIV y CCIV
+  pagina_impresa: [121, 538]
+  pagina_pdf: [135, 552]
+  atribucion: declarada
+  campo: arquitectura
+  en_el_lexicon: "batey 'batey, plaza central del poblado, cancha de juego ritual' (sin procedencia.obra)"
+  verificado: imagen (p. 538)
+  nota: >-
+    Doble atestación DENTRO de la misma obra, y el acento no coincide
+    consigo mismo. La glosa del lexicón («plaza… cancha…») coincide con
+    p. 121 y es sólo dos tercios de p. 538, donde la voz es también la
+    PELOTA. Quien fusione tiene las dos páginas.
+
+# --- numerales (cap. CCIV) --------------------------------------------
+- id: lx.35
+  forma_fuente: hequetí · yamocá · canocúm · yamoncobre
+  glosa_fuente: "uno, dos, tres, cuatro"
+  cita_verbatim: >-
+    «hasta diez tenia cada número su nombre, como á uno decian hequetí,
+    la última luenga; por dos decian yamocá; por tres, canocúm, las
+    últimas luengas tambien; por cuatro, yamoncobre, la penúltima
+    luenga, etc.; los otros, hasta diez, se me han olvidado»
+  marca_prosodica: "1, 2 y 3 últimas luengas; 4 penúltima luenga"
+  capitulo: CCIV
+  pagina_impresa: 538
+  pagina_pdf: 552
+  atribucion: declarada
+  campo: gramatica
+  en_el_lexicon: "yamosa 'dos' (vía Brinton) — FORMA DISTINTA, ver conflictos.c02. `abba` 'uno' es taíno-reconstruido y su rival atestiguado es `hequetí`"
+  verificado: imagen
+  nota: >-
+    El sistema es de base 20 y Las Casas declara que olvidó del 5 al 10.
+    Lo que hay es lo que hay: cuatro numerales, no diez.
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. LA LENGUA MISMA
+# ══════════════════════════════════════════════════════════════════════
+metalinguistico:
+
+- id: ml.01
+  tema: cuántas lenguas había en La Española — LA VERSIÓN NÍTIDA
+  cita_verbatim: >-
+    «Tres lenguas habia en esta Isla distintas, que la una á la otra no
+    se entendía: la una era de la gente que llamábamos el Macoríx de
+    abajo, y la otra de los vecinos del Macoríx de arriba, que arriba
+    pusimos en el capítulo… y capítulo… por cuarta y por sexta
+    provincias; la otra lengua fué la universal de toda la tierra, y
+    ésta era más elegante y más copiosa de vocablos y más dulce el
+    sonido; en ésta, la de Xaraguá, como dije arriba, en todo llevaba
+    ventaja y era muy más prima.»
+  capitulo: CXCVII
+  pagina_impresa: 517
+  pagina_pdf: 531
+  verificado: capa-de-texto
+  por_que_importa: >-
+    Es lo que la parcela T2 predijo que estaría aquí: en la *Historia*
+    tomo I la tripartición es floja y Las Casas «no se acuerda» si
+    macoriges y ciguayos diferían entre sí. Aquí es tajante: TRES
+    lenguas mutuamente ininteligibles.
+  ⚠️_corrige_lo_que_se_creia: >-
+    **La tripartición NO es «taíno / macorix / ciguayo».** Las tres son
+    *Macorix de abajo*, *Macorix de arriba* y *la universal*. El
+    ciguayo no entra en esta lista. La fórmula corriente en la
+    bibliografía (y en el encargo de esta campaña) no es lo que dice el
+    pasaje.
+
+- id: ml.02
+  tema: «Macorix» es un GLOSÓNIMO, no un etnónimo opaco
+  cita_verbatim: >-
+    «Macorix quiere decir como lenguaje extraño, cuasi bárbaro, porque
+    eran estas lenguas diversas entre sí y diferentes de la general
+    desta isla.»
+  capitulo: III
+  pagina_impresa: 9
+  pagina_pdf: 23
+  verificado: capa-de-texto
+  por_que_importa: >-
+    El nombre de las provincias es la palabra taína para «el que habla
+    raro». Es el mismo mecanismo que `guaycarí`/`jirajara` en nuestro
+    lado de la esfera: el vecino se nombra por cómo suena. Hipótesis
+    NUESTRA, no de Las Casas.
+
+- id: ml.03
+  tema: prestigio dialectal declarado — Xaraguá
+  cita_verbatim: >-
+    «Excedían todas las destas Isla en la lengua ser más delgada y de
+    mejores y suaves vocablos polida […] habia entre nosotros tal manera
+    de decir, que aquel reino de Xaraguá era la corte desta Isla.»
+  capitulo: CXCVII
+  pagina_impresa: 516
+  pagina_pdf: 530
+  verificado: imagen (parcial)
+  por_que_importa: >-
+    Un cronista del XVI declarando una variedad de PRESTIGIO dentro de
+    una lengua indígena. Es exactamente el mecanismo que
+    `curiana_social.py` pondera con `prestigio_de()` y el que
+    `DISENO_KOINE` §4 quiere ver emerger. NO es prueba de nada
+    caquetío: es un precedente documentado de que el fenómeno existía
+    en la esfera.
+
+- id: ml.04
+  tema: quién sabía la lengua — y la calidad del dato de Pané
+  cita_verbatim: >-
+    «Este fray Ramón escudriñó lo que pudo, según lo que alcanzó de las
+    lenguas, que fueron tres las que habia en esta Isla; pero no supo
+    sino la una de una chica provincia que arriba dejimos llamarse
+    Maçorix de abajo, y aquélla no perfectamente, y de la universal supo
+    no mucho, como los demás, aunque más que otros, porque ninguno,
+    clérigo, ni fraile, ni seglar, supo ninguna perfectamente dellas si
+    no fué un marinero de Palos ó de Moguer, que se llamó Cristóbal
+    Rodríguez»
+  capitulo: CXX
+  pagina_impresa: 321-322
+  pagina_pdf: 335-336
+  verificado: capa-de-texto
+  por_que_importa: >-
+    **Las Casas descalifica su propia fuente principal de religión
+    taína.** Pané sabía bien una lengua MINORITARIA (el macorix de
+    abajo) y mal la general, y además —dice Las Casas en p. 447— «no
+    hablaba del todo bien nuestra castellana lengua, como fuese catalán
+    de nación». Esto le pone un techo a `taino_pane_c1498.yaml`, de la
+    primera campaña, que hay que escribir en su nota.
+
+- id: ml.05
+  tema: por qué nadie aprendió la lengua
+  cita_verbatim: >-
+    «Y esto de no saber alguno las lenguas desta Isla, no fué porque
+    ellas fuesen muy difíciles de aprender, sino porque ninguna persona
+    eclesiástica ni seglar tuvo en aquel tiempo cuidado, chico ni
+    grande, de dar doctrina ni cognoscimiento de Dios á estas gentes,
+    sino sólo de servirse todos dellas, para lo cual no se aprendían más
+    vocablos de las lenguas, de «daca pan», «ve á las minas», «saca
+    oro»»
+  capitulo: CXX
+  pagina_impresa: 322
+  pagina_pdf: 336
+  verificado: capa-de-texto
+  por_que_importa: >-
+    Es la explicación del propio cronista de por qué el corpus taíno es
+    tan pobre. Y da de paso un uso más de `daca` en boca castellana
+    («daca pan»), que es el castellano *daca* 'dame acá' y NO la voz
+    taína: coincidencia de forma, no préstamo. Ojo a quien cuente.
+
+- id: ml.06
+  tema: el acento, sistemáticamente
+  medida: >-
+    La obra marca la prosodia de la voz indígena **97 formas distintas**
+    (108 ocurrencias) con las fórmulas «la última / penúltima / media /
+    primera sílaba luenga / aguda / breve» o «la letra e luenga».
+    `penúltima` sale 38 veces; en la *Historia de las Indias* tomo I
+    salía **0** (parcela T2). Es LA diferencia entre las dos obras.
+  ejemplos_de_las_cuatro_fórmulas:
+    - "«la última sílaba aguda» — axí, Guanahaní, Haytí, Samaná, quemí, maní"
+    - "«la penúltima luenga» — cazabi, conuco, bohíos, hutías, guayabas, hupías, Vaybrama, exbuneyes"
+    - "«la media sílaba luenga» — cohoba, tabacos, taguaguas, libupa"
+    - "«la letra e luenga» / «la y letra luenga» — batéy, nitaynos, Higuéy, ceybas, caoban"
+  verificado: capa-de-texto (la red) + imagen (los casos citados arriba)
+  advertencia: >-
+    La red automática NO es exhaustiva: pierde los tratamientos de rango
+    (`guaoxerí`, `baharí`, `matunherí`) porque la columna venía zipeada,
+    y pierde `batéy` p. 538 porque la fórmula es «la letra e luenga».
+    97 es un SUELO, no un total.
+
+- id: ml.07
+  tema: coincidencias de forma entre lenguas — y el aviso de Las Casas
+  cita_verbatim: >-
+    «en la lengua de Popayán decían umbra por cierta provincia, y en la
+    del Perú, michi por el pastor, y homo por sacerdote. Ítem, en la
+    lengua general de la Española decían batea por dornajo, y en
+    Cataluña hay una villa que se llama Batea»
+  capitulo: CCXLI
+  pagina_impresa: 633
+  pagina_pdf: 647
+  verificado: capa-de-texto
+  por_que_importa: >-
+    Las Casas está haciendo, en 1559, exactamente lo que la skill §2
+    manda no hacer: enumerar parecidos de FORMA entre lenguas sin
+    parentesco — y lo hace **para desmontarlos** (su tesis es que no
+    prueban que los indios vinieran de los judíos). Es un precedente
+    metodológico citable. De paso atestigua `batea` 'dornajo' en la
+    lengua general de La Española, que el lexicón no tiene.
+
+- id: ml.08
+  tema: intérpretes
+  medida: "`intérprete` sale 14 veces en la obra; ninguna en los capítulos de La Española."
+  verificado: capa-de-texto
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. EL MUNDO — instituciones que el canon caquetío también tiene
+#    Para cada una: qué dice Las Casas (con página), qué dice nuestro
+#    canon (con id) y QUIÉN afirma el paralelo. SIN proyectar.
+# ══════════════════════════════════════════════════════════════════════
+instituciones:
+
+- id: i01
+  institucion: sucesión por la hermana (matrilineal)
+  lo_que_dice_las_casas: >-
+    «Lo mismo de las herencias, del todo punto no lo penetramos, más de
+    haber entendido que **no los hijos de los señores, sino los de sus
+    hermanas sucedian en sus estados**; la razon que daban era porque no
+    eran tan ciertos ser sus hijos los que por hijos tenian, como los
+    que parian sus proprias hermanas, y de las hermanas eran ciertos ser
+    sus hermanas, pues habia parido á ellos y á ellas una sola madre.»
+  capitulo: CXCIX
+  pagina_impresa: 521
+  pagina_pdf: 535
+  verificado: imagen
+  lo_que_dice_nuestro_canon: >-
+    `3-mundo/corpus/parentesco.yaml` declara el precontacto caquetío
+    MATRILINEAL (memoria del proyecto: «precontacto = matrilineal, el
+    dato patrilineal de Oliver es del cacicazgo colonial»).
+  quien_afirma_el_paralelo: >-
+    **NADIE. Lo vemos nosotros.** Las Casas no menciona a los caquetíos
+    en este pasaje. Lo que tenemos son dos pueblos arahuacos de la misma
+    esfera con la misma regla y —esto es lo notable— **la misma razón
+    declarada**: la certeza de la maternidad. Que la razón coincida es
+    más fuerte que que coincida la regla, porque la regla puede
+    converger y el argumento es cultural.
+  ⚠️_advertencia: >-
+    Las Casas abre con «del todo punto no lo penetramos». Es un dato que
+    su propio autor marca como flojo. Y en p. 635 da la MISMA regla y la
+    MISMA razón para **Panamá**, que no es arahuaco: el argumento no es
+    exclusivo de la familia y no sirve como prueba de filiación.
+
+- id: i02
+  institucion: el señor que es también el que adivina (nuestro díao/boratio)
+  lo_que_dice_las_casas: >-
+    «El primero que la comenzaba era el señor, y en tanto que él la
+    hacia todos callaban; tomada su cohoba […] estaba un rato la cabeza
+    á un lado vuelta y los brazos puestos encima de las rodillas, y
+    despues alzaba la cara hácia el cielo hablando sus ciertas palabras
+    […] El les daba cuenta de su visión, diciendo que el Cemí le habia
+    hablado» (p. 446) · «en éstas se cree que á los sacerdotes, que
+    llamaban behicos, hablaba el diablo, **y también los señores ó reyes
+    cuando para ello se disponían**» (p. 445)
+  capitulo: CLXVI
+  pagina_impresa: [445, 446]
+  pagina_pdf: [459, 460]
+  verificado: capa-de-texto
+  lo_que_dice_nuestro_canon: "`3-mundo/corpus/creencia.yaml` → **creencia-001b** (el cacique que es también piache: nuestro díao/boratio)"
+  quien_afirma_el_paralelo: >-
+    **NADIE. Lo vemos nosotros.** Y es el paralelo más limpio de la
+    parcela: no es que el señor tenga un adivino, es que el señor
+    ADIVINA, en público, el primero, y los demás responden «cuasi como
+    cuando nosotros respondemos Amen». La función es la misma que
+    creencia-001b describe. Que la sustancia sea distinta (allá polvo
+    por la nariz, acá el ayuno) no rompe el paralelo de FUNCIÓN.
+
+- id: i03
+  institucion: el ayuno del que adivina
+  lo_que_dice_las_casas: >-
+    «cierto cacique y rey dellos hizo cierta abstinencia al Señor Grande
+    que vive en el cielo […] el abstinencia fué que seis ó siete días
+    estaban encerrados sin comer cosa alguna, sino cierto zumo de
+    yerbas, para no del todo desfallecer […] Durante aquel ayuno, con la
+    flaqueza de la cabeza les venian ó les aparecían ciertas formas ó
+    imaginaciones de lo que deseaban saber» (p. 446) · en Cuba,
+    «ayunaban cuatro meses, y más, continos» (p. 447)
+  capitulo: CLXVII
+  pagina_impresa: [446, 447]
+  pagina_pdf: [460, 461]
+  verificado: capa-de-texto
+  lo_que_dice_nuestro_canon: "el ayuno del **boratio** en `creencia.yaml`"
+  quien_afirma_el_paralelo: >-
+    **NADIE. Lo vemos nosotros.** Nota epistémica: Las Casas explica la
+    visión por la debilidad del ayuno —«con la flaqueza de la cabeza les
+    venian»— y no por lo sobrenatural. Es una explicación NATURALISTA
+    del trance, en 1559, y la misma que serviría para el boratio.
+  ⚠️_advertencia: >-
+    El ayuno de La Española lo INICIA un cacique según fray Ramón, y por
+    tanto cuelga de la misma cadena que ml.04 descalifica en parte.
+
+- id: i04
+  institucion: la cura por el soplo y el estregar
+  lo_que_dice_las_casas: >-
+    «los sacerdotes ó hechiceros, que arriba dejimos llamarse behicos,
+    les tomaban los brazos desde los hombros con ambas manos
+    estregándolos y soplando, y lo mismo las piernas y por todo el
+    cuerpo, cuasi como que con aquel estregar y soplar echasen el mal
+    fuera» · y «sacaban» piedras de los cuerpos de los enfermos, de tres
+    clases, cada una con su virtud: las sementeras, el buen parto, el
+    agua (p. 323)
+  capitulo: CXX y CCIII
+  pagina_impresa: [323, 535]
+  pagina_pdf: [337, 549]
+  verificado: capa-de-texto
+  lo_que_dice_nuestro_canon: "la cura del piache en `creencia.yaml`"
+  quien_afirma_el_paralelo: >-
+    **NADIE. Lo vemos nosotros.** El soplo curativo es panamericano y
+    precisamente por eso NO prueba contacto ni filiación: es la trampa
+    del `picure` (skill §3) en clave de rito. Se anota como paralelo de
+    la esfera, no como derivación.
+
+- id: i05
+  institucion: el areíto — la COSA sin el NOMBRE
+  lo_que_dice_las_casas: >-
+    «Eran muy amigos de sus bailes, al son de los cantos que cantaban y
+    algunos atabales roncos de madera, hechos todos sin cuero ni otra
+    cosa pegada; era cosa de ver su compás, así en las voces como en los
+    pasos, porque se juntaban trecientos ó cuatrocientos hombres, los
+    brazos de los unos puestos por los hombros de los otros, que ni una
+    punta de alfiler salia un pié más que el otro, y así de todos. Las
+    mujeres por sí bailaban con el mismo compás, tono y orden; **la
+    letra de sus cantos era referir cosas antiguas**, y otras veces
+    niñerías, como «tal pescadillo se tomó desta manera y se huyó» […]
+    Cuando se juntaban munchas mujeres á rallar las raíces de que hacian
+    el pan caçabí, cantaban cierto canto que tenia muy buena sonada.»
+  capitulo: CCIV
+  pagina_impresa: [537, 538]
+  pagina_pdf: [551, 552]
+  verificado: capa-de-texto
+  lo_que_dice_nuestro_canon: "`areito` está en el lexicón como voz taína, glosada «danza ritual narrativa, celebración colectiva»"
+  quien_afirma_el_paralelo: "no aplica: aquí el problema es la PALABRA, no la institución"
+  ⚠️_hallazgo: >-
+    **La institución está entera y la palabra no está.** `areito` = 0 en
+    toda la obra, en tres extractores y cuatro grafías. Nuestra glosa
+    —«danza ritual narrativa»— es exactamente lo que Las Casas describe
+    («la letra de sus cantos era referir cosas antiguas»), así que la
+    glosa es buena; lo que no hay es la forma. La cita primaria de
+    `areito` sigue debiéndose y hay que buscarla en Oviedo (que sí la
+    usa) o en la *Historia* lib. III.
+  y_ademas: >-
+    Dos datos que nadie pidió y que el canon caquetío sí puede usar:
+    (a) el canto de trabajo de las mujeres rallando yuca — un género
+    aparte del baile; (b) los bailes son de hombres Y de mujeres, pero
+    **por separado**.
+
+- id: i06
+  institucion: el caney como único «templo»
+  lo_que_dice_las_casas: >-
+    «no eran los templos, si en algo á religión ó superstición se
+    enderezaban, sino las mismas casas de los caciques y señores» — y
+    las primicias de la cosecha «poníanla en la casa grande de los
+    señores y Caciques, que llamaban Caney, ofreciéndola y dedicándola
+    al Cemí»
+  capitulo: CXXX y CLXVI
+  pagina_impresa: [345, 445]
+  pagina_pdf: [359, 459]
+  verificado: capa-de-texto
+  lo_que_dice_nuestro_canon: >-
+    la casa del díao en `3-mundo/corpus/` y los sitios de
+    `6-fusion/sitios_era2.yaml`
+  quien_afirma_el_paralelo: >-
+    **NADIE. Lo vemos nosotros.** Lo aprovechable no es la palabra sino
+    la ESTRUCTURA: una sociedad sin edificio de culto, donde la casa del
+    señor hace de templo y de granero ritual a la vez. Si el canon
+    caquetío tiene que decidir dónde pasa el rito, éste es el precedente
+    documentado más cercano de la esfera.
+
+- id: i07
+  institucion: matrimonio y precio de la novia
+  lo_que_dice_las_casas: >-
+    «no entendimos que tomasen por mujer, hermana, ni prima hija de
+    hermanos, ni que tuviesen los particulares más de una» ·
+    «Los reyes y señores tenian munchas mujeres; no supe hasta qué
+    tantas; del rey Behechío se dijo que tuvo treinta» ·
+    «Los señores y los demás compraban á los padres las hijas que habian
+    de ser sus mujeres, enviándoles por paga ciertas sartas de cuentas
+    que llamaban çibas […] Daban tambien por precio ciertas hojas de
+    guanín»
+  capitulo: CXCIX
+  pagina_impresa: [520, 521]
+  pagina_pdf: [534, 535]
+  verificado: imagen
+  lo_que_dice_nuestro_canon: "`parentesco.yaml` (poligamia del díao, alianza entre casas)"
+  quien_afirma_el_paralelo: "**NADIE. Lo vemos nosotros.**"
+  ⚠️_advertencia: >-
+    Las Casas declara TRES veces en tres líneas que no sabe: «no
+    entendimos», «tampoco alcancé», «tampoco caímos en inquirir con
+    cuáles ó con cuántas cerimonias se casaban». El pasaje es una lista
+    de huecos con dos datos dentro. **Monogamia del común + poligamia
+    del señor** es el dato firme; lo demás es su confesión de ignorancia
+    y así hay que citarlo.
+
+- id: i08
+  institucion: las causas de la guerra
+  lo_que_dice_las_casas: >-
+    «las causas dellas eran, según entendimos, por alguna de tres […]
+    la una, porque algunos de otros reinos venían á cazar en los campos,
+    dentro de los términos del otro reino; la otra, si venían á pescar
+    en los ríos; la tercera, cuando algún rey ó señor se concertaba con
+    el otro que le diese su hija ó hermana por mujer, y le enviaba por
+    ello ciertas preseas, y el otro, por alguna razón que le movía no se
+    la enviaba, ó la daba á otro»
+  capitulo: CXCVIII
+  pagina_impresa: 520
+  pagina_pdf: 534
+  verificado: capa-de-texto
+  lo_que_dice_nuestro_canon: "las tensiones declaradas de `6-fusion/elenco_era2.yaml` y `geografia_politica.yaml`"
+  quien_afirma_el_paralelo: >-
+    **NADIE. Lo vemos nosotros.** Dos de las tres causas son de
+    TERRITORIO DE SUBSISTENCIA (caza y pesca ajenas) y la tercera es una
+    alianza rota. Si el motor tuviera que generar un conflicto entre
+    nodos, ésta es la tipología documentada más cercana.
+
+- id: i09
+  institucion: el guatiao (intercambio de nombres)
+  lo_que_dice_las_casas: NADA. Ver `negativos.n01`.
+
+# ══════════════════════════════════════════════════════════════════════
+# 4. EL CONTACTO — islas ↔ Tierra Firme
+# ══════════════════════════════════════════════════════════════════════
+contacto:
+
+- id: co.01
+  tema: UNA sola área religiosa, de la Florida a Paria y hasta Veragua
+  cita_verbatim: >-
+    «las gentes desta Española, y la de Cuba, y la que llamamos de San
+    Juan, y la de Jamayca, y todas las islas de los Lucayos, y
+    comunmente en todas las demás que están en cuasi renglera desde
+    cerca de la Tierra Firme que se dice la Florida, hasta la punta de
+    Paria, que es en la Tierra Firme […] **y también por la costa de la
+    mar las gentes de la Tierra Firme, por aquella ribera de Paria, y
+    todo lo de allí abajo hasta Veragua, cuasi toda era una manera de
+    religión**»
+  capitulo: CXX
+  pagina_impresa: 321
+  pagina_pdf: 335
+  verificado: capa-de-texto
+  por_que_importa: >-
+    **Es el hallazgo de contacto más grande de la parcela.** Un cronista
+    del XVI declarando un ÁREA CULTURAL única que va de las Antillas a
+    la costa continental, y el tramo «Paria → Veragua» **contiene la
+    Kaketiana**. No dice «los caquetíos»; dice la costa entera. Es una
+    afirmación de esfera hecha por la fuente, no por nosotros, y es
+    exactamente el marco de `3-mundo/esfera-de-interaccion.md`.
+  ⚠️_lo_que_NO_dice: >-
+    No dice que sea la misma GENTE, ni la misma LENGUA, ni que hubiera
+    tráfico. Dice «una manera de religión». Y lo dice para sostener su
+    tesis apologética de que estas gentes tenían noticia natural de
+    Dios: hay interés. Degradar en consecuencia.
+
+- id: co.02
+  tema: la cohoba también en Tierra Firme
+  cita_verbatim: >-
+    «las cohobas, que eran como sus sacrificios ó servicios, las
+    celebraban desta manera, **y algo más se ha hallado desto en la
+    tierra firme, hacia las provincias de Popayan**»
+  capitulo: CXXX
+  pagina_impresa: 345
+  pagina_pdf: 359
+  verificado: capa-de-texto
+  por_que_importa: >-
+    Segunda afirmación de continuidad isla ↔ continente, esta vez de un
+    RITO concreto y nombrado. Popayán está lejos de la Kaketiana, así
+    que no es nuestro nodo; lo que prueba es que el complejo de los
+    polvos inhalados no se detiene en el mar.
+
+- id: co.03
+  tema: guanín — qué es y por qué lo valoraban
+  cita_verbatim: "ver lx.25: «cierta especie de oro bajo que ellos olian», valorado POR EL OLOR"
+  capitulo: CXCIX
+  pagina_impresa: 521
+  ⚠️_lo_que_NO_dice: >-
+    **Las Casas NO dice de dónde venía el guanín.** No hay una sola
+    palabra sobre su origen continental, ni sobre comercio de guanín, ni
+    sobre quién lo traía. La cadena guanín → Tierra Firme, que es la que
+    la arqueología usa, NO está en esta obra. Un cero verificado
+    (regla 6) con `guanin` y `guanín` sobre el texto entero: 4
+    ocurrencias, todas en la misma página 521, todas sobre el uso y el
+    olor.
+
+- id: co.04
+  tema: canoas
+  cita_verbatim: >-
+    «Tenian sus barcos, como queda dicho, hechos de un madero cavado,
+    que llamaban canoas, donde cabian cincuenta y cient hombres, y
+    destos se usan en todas estas Indias» (p. 537) · «Habíalas en esta
+    isla Española y en la de Cuba muy grandes, que cabían ochenta
+    personas […] **El nombre de canoas es desta isla**» (p. 182)
+  capitulo: LXX y CCIV
+  pagina_impresa: [182, 537]
+  pagina_pdf: [196, 551]
+  verificado: capa-de-texto
+  ⚠️_lo_que_NO_dice: >-
+    **Nada de navegación de altura.** Ni una travesía entre islas, ni
+    una ruta, ni un viaje a Tierra Firme en canoa. Las canoas salen
+    descritas como objeto (tamaño, remos, material) y como el medio de
+    la laguna de México. Un barrido por «canoa» + mar/navegar/isla da 0.
+    Lo que hay son barcos grandes; lo que no hay es a dónde iban.
+
+- id: co.05
+  tema: los caribes — una gente, dos nombres, y la ola que llega a los dos lados
+  cita_verbatim: >-
+    «las naciones que habitaban, y habitan hoy en aquellas islas, que á
+    los principios que á estas tierras venimos llamábamos caníbales, y
+    agora se nombran caribes […] infestan y salen de sus proprias islas
+    y tierras por hacer guerra **á los de otras partes, islas y Tierra
+    Firme**» (p. 539) · «creyeron ellos que aquella gente debia ser los
+    que llamamos caribes, y entonces los llamaban y llamábamos
+    canníbales» (p. 447)
+  capitulo: CLXVII y CCV
+  pagina_impresa: [447, 539]
+  pagina_pdf: [461, 553]
+  verificado: capa-de-texto
+  por_que_importa: >-
+    `caribe` y `caníbal` son el MISMO referente con dos nombres en dos
+    momentos, y lo declara el cronista. Y la presión caribe se describe
+    tocando islas Y Tierra Firme: es el único mecanismo de contacto
+    inter-regional que la obra describe en movimiento.
+  ⚠️_lo_que_NO_dice: >-
+    **Los caribes NO aparecen como intermediarios de nada.** No hay
+    comercio, ni transporte, ni trueque: sólo razzia. La hipótesis del
+    caribe como correa de transmisión de la esfera no tiene apoyo aquí.
+  y_ademas: >-
+    p. 583: «los indios que llamamos caribes, cuyas mujeres son tan
+    varoniles […] sea corriendo en tierra, sea nadando en la mar,
+    acometen y persiguen á los enemigos». Mujeres combatientes caribes,
+    declarado.
+
+- id: co.06
+  tema: movilidad de personas entre islas
+  cita_verbatim: >-
+    «[Caonabó] según entendimos los que á los principios á esta Isla
+    venimos, **era de nación Lucayo, natural de las islas de los
+    Lucayos, que se pasó dellas acá, y por ser varón en las guerras y en
+    la paz señalado, llegó á ser rey de aquella provincia**»
+  capitulo: CXCVII
+  pagina_impresa: 515
+  pagina_pdf: 529
+  verificado: capa-de-texto
+  por_que_importa: >-
+    Un extranjero llega de otra isla y acaba siendo uno de los cinco
+    reyes de La Española, y se casa con la hermana del rey de Xaraguá.
+    Es movilidad personal de largo alcance con ascenso social, no
+    comercio. Si el elenco de la era 2 necesita un precedente para un
+    foráneo que llega y sube, es éste.
+  y_ademas: >-
+    lx.07 (exbuneyes) es la otra cara: gente de La Española conquista
+    Cuba y le pone nombre a los sometidos. Las islas no estaban quietas.
+
+# ══════════════════════════════════════════════════════════════════════
+# 5. CONFLICTOS con lo que el lexicón ya tiene (skill §8: NO se reescribe)
+# ══════════════════════════════════════════════════════════════════════
+conflictos:
+
+- id: c01
+  clave_lexicon: daca
+  glosa_lexicon: "mano"
+  etiqueta_lexicon: taíno-reconstruido (desde Lok. daka)
+  lo_que_dice_la_fuente: "«daca quiere decir yo» — Apologética cap. CLXVII, p. 521→447"
+  gravedad: ALTA
+  por_que: >-
+    No es una variante ortográfica: es OTRO SIGNIFICADO para la MISMA
+    forma. Y el lado atestiguado es el de Las Casas, mientras el lado
+    del lexicón es una reconstrucción del lokono. La política
+    «la atestiguada manda» (2026-09-19) está escrita para el caquetío,
+    pero el criterio —glosa normalizada idéntica— aquí ni siquiera se
+    aplica, porque las glosas **no coinciden**: 'mano' ≠ 'yo'.
+  lo_que_propongo: >-
+    NO tocar la entrada. Levantar la pregunta: ¿el taíno `daca` es
+    'yo' (atestiguado) y nuestro `daca` 'mano' es una reconstrucción
+    homógrafa que hay que renombrar o retirar? Lo decide Miguel.
+
+- id: c02
+  claves_lexicon: [dujo, yamosa]
+  lo_que_dice_la_fuente:
+    dujo: "el impreso lee **duohos** (p. 446, verificado en imagen)"
+    yamosa: "el impreso lee **yamocá** para 'dos' (p. 538, verificado en imagen)"
+  gravedad: MEDIA
+  por_que: >-
+    Las dos entradas citan a Brinton 1871 en `notas`, y Brinton cita a
+    la *Apologética*. Si nuestra fuente última es esta obra, las formas
+    que tenemos no son las que esta edición imprime. O Brinton leyó otro
+    testimonio del manuscrito, o hay un salto en la cadena. En los
+    numerales el desacuerdo es de tres sobre cuatro: `yamosa`/`yamocá`,
+    `cauocum`/`canocúm`, `yaraoucobre`/`yamoncobre`; sólo `hequeti`
+    coincide.
+  lo_que_propongo: >-
+    NO tocar. Anotar en `notas` que NBAE 13 lee otra forma, con página,
+    y dejar la decisión de cuál manda para cuando se pueda comparar con
+    la edición de O'Gorman 1967 (que no tenemos y está en copyright).
+
+- id: c03
+  clave_lexicon: cohiba
+  glosa_lexicon: "tabaco"
+  lo_que_dice_la_fuente: >-
+    `cohiba` = **0** ocurrencias. Lo que la obra atestigua son DOS
+    lemas distintos: `cohoba` (los polvos que se sorben por la nariz y
+    la ceremonia, p. 445) y `tabacos` (los canutos de humo que se toman
+    por la boca, p. 181).
+  gravedad: MEDIA
+  por_que: >-
+    La entrada `cohiba` 'tabaco' funde en una lo que la fuente separa en
+    dos, y su forma no está en la fuente que la sostiene por interpósita
+    persona. Además el lexicón ya tiene `tabako`.
+  lo_que_propongo: >-
+    NO tocar. Preguntar si `cohiba` debe (a) quedarse con su cita de
+    Brinton y una nota de que la Apologética no la trae, (b) ceder ante
+    `cohoba` con esta cita, o (c) archivarse por duplicar `tabako`.
+
+- id: c04
+  clave_lexicon: caney
+  glosa_lexicon: "caney, bohío rectangular del cacique"
+  lo_que_dice_la_fuente: >-
+    «caney era la casa del señor principal», y Las Casas declara que
+    **nunca preguntó qué significaba el vocablo** (p. 345).
+  gravedad: BAJA
+  por_que: "«rectangular» no está en la fuente. Es un dato que el lexicón afirma y no cita."
+  lo_que_propongo: "añadir la cita de p. 345 y marcar «rectangular» como `deuda: sin-procedencia` (regla 8)."
+
+- id: c05
+  clave_lexicon: higuana
+  glosa_lexicon: "iguana"
+  lo_que_dice_la_fuente: >-
+    **0** atestaciones para La Española. Las tres ocurrencias de
+    `iguana/yguana/higuana` son: el zoo de Moctezuma (p. 133), y dos
+    veces la reina **Higuanamá** (pp. 47 y 516), que es un antropónimo.
+  gravedad: MEDIA
+  por_que: "la entrada está etiquetada `taíno` atestiguado y esta obra no la atestigua."
+  lo_que_propongo: "dejarla como está y anotar el cero medido; su cita sigue siendo Brinton."
+
+- id: c06
+  clave_lexicon: macana
+  etiqueta_actual: caquetío-reconstruido
+  lo_que_dice_la_fuente: >-
+    «Estos vocablos cotaras, **macanas**, bixa, y maiz, y maguey, fueron
+    vocablos desta isla y no de la Tierra Firme, porque por otros
+    vocablos allá estas cosas llaman.» — cap. LXV, p. 177, verificado en
+    imagen.
+  gravedad: ALTA
+  por_que: >-
+    La campaña abierta en `6-fusion/issues-pendientes/macana-etiqueta-2026-09-21.md`
+    midió que el apoyo achagua de `macana` **no existe** (las tres formas
+    de Neira y Ribero significan 'dormidera', 'mazorca de maíz' e
+    'indecible'). Aquí aparece un dato NUEVO y de signo contrario: Las
+    Casas declara `macana` **voz de La Española y explícitamente NO de
+    Tierra Firme**. Si eso es así, `macana` en el habla caquetía sería
+    un préstamo de la ESFERA (taíno), no una raíz propia reconstruida.
+  lo_que_propongo: >-
+    NO tocar. Llevar esta cita al issue de macana como tercer dato, y
+    que la decisión de etiqueta se tome con las tres piezas a la vez:
+    (a) el achagua no apoya, (b) la cita actual es de otra glosa,
+    (c) Las Casas la declara antillana y no continental.
+
+# ══════════════════════════════════════════════════════════════════════
+# 6. NEGATIVOS VERIFICADOS (regla 6: un cero se verifica)
+# ══════════════════════════════════════════════════════════════════════
+negativos:
+
+- id: n01
+  que_se_buscaba: el guatiao — intercambio de nombres entre señores
+  grafias_y_paráfrasis_probadas:
+    ["guatiao", "guaitiao", "datihao", "trocar nombres", "trocaban … nombre",
+     "tomar el nombre", "se nombraban … nombre"]
+  resultado: "**0 en los tres extractores.**"
+  por_que_importa: >-
+    El encargo lo pedía como el paralelo institucional principal con el
+    `datihao` de Oviedo. **La Apologética no lo conoce.** Eso no lo
+    niega —Oviedo lo trae— pero sí dice que la etnografía taína más
+    detallada del XVI, escrita por quien vivió allí cincuenta años, no
+    lo registra. Quien apoye el paralelo caquetío en el guatiao tiene
+    que apoyarlo en Oviedo y sólo en Oviedo.
+
+- id: n02
+  que_se_buscaba: la palabra `areíto`
+  grafias_probadas: ["areito", "areyto", "areit", "areyt", "aeryto"]
+  resultado: "**0 en los tres extractores.** La institución sí está (i05)."
+
+- id: n03
+  que_se_buscaba: el etnónimo `taíno`
+  grafias_probadas: ["taino", "tayno", "taheno"]
+  resultado: >-
+    2 falsos (`Titano`, `Jano` partidos por el OCR) y `taheño`
+    'pelirrojo', castellano. **El etnónimo no está.**
+
+- id: n04
+  que_se_buscaba: "`maboya`, `mabuya` — el espíritu maligno del lexicón"
+  resultado: >-
+    **0.** Lo que la obra tiene es `hupía` 'el ánima del hombre'
+    (p. 535), que no es lo mismo: no es maligno, es el alma del muerto.
+
+- id: n05
+  que_se_buscaba: el origen del guanín / comercio con Tierra Firme
+  resultado: "**0.** Ver co.03."
+
+- id: n06
+  que_se_buscaba: canoas de altura, travesías entre islas o al continente
+  resultado: "**0.** Ver co.04."
+
+- id: n07
+  que_se_buscaba: "claves del lexicón sin rastro alguno"
+  lista: ["akcicyaa", "cai", "manigua", "mayani", "papaya", "thigisi", "wacusi", "wagulo"]
+  resultado: "**0 cada una**, con las grafías del XVI que se declaran en el script de medida."
+  nota: >-
+    `abba`, `acoa`, `aduri`, `agari`, `cobo`, `taita`, `tuna`, `cayo`,
+    `caiman` y `piragua` dan ocurrencias de substring pero **ninguna es
+    la voz**: son ruido («aba», «cayó», «Lucayos»), un río llamado Tuna,
+    un epígrafe del editor moderno («Pescados y caimanes») o Tierra
+    Firme (`piraguas` en Chiribichi, p. 645). Se cuentan como cero.
+
+- id: n08
+  que_se_buscaba: religión taína en boca de alguien que no sea fray Ramón
+  resultado: >-
+    Parcial. El **cemí** (p. 445) y la **cohoba** (pp. 445-446) los
+    cuenta Las Casas como testigo de vista («Preguntando yo á los
+    indios», «Yo los vi algunas veces celebrar su cohoba»). El
+    **Yocahuguama**, el **ayuno** y el **Vaybrama** los atribuye
+    explícitamente a fray Ramón. La cadena no es única: hay dos capas y
+    conviene no mezclarlas al citar.
+
+# ══════════════════════════════════════════════════════════════════════
+# 7. VEREDICTO MEDIDO sobre las 52 entradas taínas del lexicón
+#    Cifras emitidas por el script de medida, no a mano (regla 1).
+# ══════════════════════════════════════════════════════════════════════
+veredicto_cobertura:
+  universo: >-
+    las 52 claves de `VOCABULARIO_BASE` con `fuente: taíno` o
+    `taíno-reconstruido` que mide
+    `6-fusion/taino_inventario_2026-09-21.yaml` §a_censo. El mismo
+    fichero mide que **0 de 52** tienen hoy `procedencia.obra`.
+  script: 6-fusion/scripts/medir_taino2_apologetica.py
+  A_atestacion_primaria_limpia:
+    n: 24
+    definicion: "forma + glosa o marca prosódica + atribución declarada a la lengua de La Española o de las islas"
+    claves: [aji, batata, batey, bejique, bixa, bohio, "bohío", caney, casabe,
+             cazabi, cemi, guabina, guanin, guayaba, huracan, hutia, kunuku,
+             maisi, manati, "maíz", naboria, nitaino, tabako, yuca]
+    aviso: >-
+      3 de esas 24 son pares de claves duplicadas en el lexicón para la
+      misma voz (bohio/bohío, casabe/cazabi, maisi/maíz): **21 voces
+      distintas**, 24 claves.
+  B_misma_glosa_otra_forma: {n: 2, claves: [dujo, yamosa]}
+  C_misma_forma_otra_glosa: {n: 1, claves: [daca]}
+  D_usada_sin_marca_metalinguistica: {n: 2, claves: [cacique, cacike]}
+  E_cero:
+    n: 23
+    claves: [abba, acoa, aduri, agari, akcicyaa, areito, cai, caiman, cayo,
+             cobo, cohiba, higuana, iwana, maboya, manigua, mayani, papaya,
+             piragua, taita, thigisi, tuna, wacusi, wagulo]
+  resumen_en_una_linea: >-
+    **24 de las 52 pasan de «cero cita primaria» a tener una, con página
+    impresa exacta; 3 más reciben cita pero con conflicto de forma o de
+    glosa; 25 siguen sin cita después de esta parcela.**
+  voces_nuevas_que_la_obra_da_y_el_lexicon_no_tiene:
+    n: 17
+    lista: ["Guaoxerí", "Baharí", "Matunherí", "exbuneyes", "cohoba",
+            "Vaybrama", "Yocahu Yagua Maorocotí", "Atabex", "Guaca",
+            "Yocahuguama", "hupía", "taguaguas", "çibas", "batea",
+            "hequetí", "canocúm", "yamoncobre"]
+    nota: >-
+      No se proponen para fusión. Son comparanda de la esfera y la
+      decisión de si entran —y con qué etiqueta— es de Miguel. Tres de
+      ellas (`Guaoxerí`, `Baharí`, `Matunherí`) son tratamientos de
+      registro, que es la categoría donde el caquetío ya tiene
+      `kudanga`/`kuté`.
