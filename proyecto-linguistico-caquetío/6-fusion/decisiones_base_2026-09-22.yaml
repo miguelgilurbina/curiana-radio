@@ -47,3 +47,50 @@ db.1_raiz_inventada:
     Es una decisión de era, con su propio diseño en `5-experimento/disenos/`.
     No entra en la base.
   se_aplica_en: 'la tanda de la base (C + el agujero de kira, medidos); el criterio futuro, en el issue'
+
+db.2_datihao_y_diao:
+  tipo: re-etiqueta de lexicón + corte de serie (cambia la muestra del prompt)
+  propuesta: 6-fusion/taino2_oviedo_venezuela.yaml §4 (campaña del taíno 2, T6, #195)
+  pregunta: >-
+    La «atestación venezolana» de `datihao` que citan Oliver, Jahn y Arcaya es una
+    entrada del GLOSARIO DEL EDITOR de 1855 (Oviedo t. IV, impresa 598: «Datihao:
+    señor: el que presta su nombre al esclavo. (Lengua de Venezuela.)»), no un
+    pasaje de Oviedo: en el cuerpo de los cuatro tomos aparece UNA vez, en San
+    Juan (t. I p. 473, en boca de Agüeybana). `diao` sí es de Oviedo con
+    atribución (t. II p. 299, «en algunas partes desta gobernación de Venezuela
+    el señor principal… llámanle diao»). ¿`datihao` pasa a taíno y `diao` carga
+    con la voz caquetía para 'señor'?
+  decision_literal: '«vale, dale con el punto 2., y comentame más sobre el punto 1.»'
+  el_punto_2_era: >-
+    «`datihao` a `taíno-atestiguado`, con `diao` como la voz caquetía. Es cambio
+    de prompt, porque hoy `datihao` está en el vocabulario base como caquetía y
+    puede salir en la muestra.» (el escriba, 2026-09-22)
+  eleccion: A de T6 — `datihao` → `taíno`; `diao` se queda `caquetío-atestiguado` con Oviedo como cita primaria
+  lectura_operativa: >-
+    `taíno` a secas es la etiqueta del lexicón para la voz taína atestiguada (43
+    entradas), y está en FUENTES_CANONICAS; «taíno-atestiguado» no existe como
+    valor. `datihao` sale de la muestra caquetía y pasa a ser voz de la esfera
+    (no penaliza, se mide aparte). No se cambian `sig` ni la forma: la glosa del
+    lexicón es la del EDITOR («el que presta su nombre al esclavo») y la de
+    Oviedo en el pasaje es otra («mi señor, ó el que, como yo, se nombra») —
+    se escribe en `notas` y se le lleva a Miguel; cambiar una glosa es otra
+    decisión. `diao` y `boratio` reciben su cita primaria en `notas` sin mover
+    etiqueta: Oviedo t. II pp. 298-299, y el alcance que Oviedo declara, «en
+    algunas partes desta gobernación de Venezuela» (regla 4: la gobernación,
+    no sólo Coro). `creencia-001` cita la fuente primaria de `boratio`.
+  saltado_y_llevado_a_miguel:
+    waitiao: >-
+      `waitiao` 'amigo ritual, aliado de alianza' (forma_fuente `guaitiao`) está
+      como `caquetío-atestiguado` citando «Oliver 1989 cap. 2 p. 147, sobre
+      Oviedo y Valdés». Medido hoy: `guaitiao`/`guatiao` 0 en el tomo II de
+      Oviedo, 0 en la Apologética; la lista maestra taína la tiene sólo en
+      secundarias (Brinton, Goeje) sin cronista. Es el mismo caso que `datihao`
+      y NO se toca sin decisión.
+    ecologia_gatiao: >-
+      La `lectura` del hecho de `gatiao` (ecologia.yaml) usa `datihao` y
+      `waitiao` como ejemplos de «-ao que en el caquetío atestiguado marca
+      palabras de filiación propia». Con `datihao` fuera y `waitiao` en duda,
+      la regla práctica se apoya en `diao` y `waranao`. No se reescribe una
+      lectura de corpus de paso.
+    la_glosa: 'la de Oviedo (namesake, «el que como yo se nombra») frente a la del editor (padrino de cautivo)'
+  se_aplica_en: '6-fusion/scripts/reetiquetar_datihao_diao.py, en la tanda de la base (no se mergea sin medir)'
