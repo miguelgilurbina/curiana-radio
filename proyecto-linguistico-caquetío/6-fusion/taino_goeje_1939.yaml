@@ -1,0 +1,2205 @@
+# ══════════════════════════════════════════════════════════════════════
+# GOEJE 1939 — *Nouvel examen des langues des Antilles*
+# Journal de la Société des Américanistes, t. 31, pp. 1-120.
+#
+# PROPUESTA (regla 5). Comparanda. Segunda campaña del taíno, parcela T10.
+# 2026-09-22. Insumo directo para `6-fusion/scripts/consolidar_taino.py`.
+#
+# ⚠️ DERECHOS. Goeje murió en 1955: la obra NO es de dominio público en todas
+# las jurisdicciones. Aquí se transcribe **dato lexicográfico** —la forma, su
+# glosa de una a cuatro palabras, la página y la lengua que el autor declara—
+# y se PARAFRASEA todo lo demás. No se copia su prosa. Las dos citas literales
+# que quedan tienen menos de 15 palabras y son, las dos, citas que el propio
+# Goeje toma de Las Casas (s. XVI, dominio público).
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  obra_id_propuesto: goeje-1939
+  autor: Goeje, Claudius H. de
+  anio: 1939
+  publicacion: Journal de la Société des Américanistes, t. 31, pp. 1-120
+  doi: 10.3406/jsa.1939.1984
+  campana: taino2-2026-09-22
+  parcela: T10
+  idioma_de_la_obra: francés
+  advertencia: >-
+    ESTO NO ES CAQUETÍO y NO es fuente primaria del taíno. Goeje es un
+    arawakista de 1939 que reúne lo que escribieron los cronistas y lo compara
+    con el arawak de Guayana, el caribe insular y una treintena de lenguas
+    arahuacas del continente. Lo que vale como procedencia de una voz taína es
+    el cronista, con Goeje de intermediario declarado. Ver
+    `cadena_de_custodia`.
+
+  # ── lo que resultó FALSO al medirlo ────────────────────────────────
+  correcciones_al_encargo:
+  - afirmacion: '«Goeje 1939 … en Persée, gratis»'
+    medido: >-
+      gratis de LEER, no de descargar: el PDF de Persée está detrás de un
+      captcha (`pdf-download-captcha-widget` en el HTML del artículo,
+      comprobado el 2026-09-22) y no se salta. La página HTML del artículo sólo
+      sirve la primera página del texto (2.763 caracteres útiles). El PDF
+      completo se consiguió en la **Biblioteca Digital Curt Nimuendajú**
+      (etnolinguistica.org), que aloja copia del MISMO PDF de Persée — el
+      fichero lleva impreso «Fichier pdf généré le 04/05/2018». Ésa es la vía
+      abierta, y es la que hay que apuntar para la próxima sesión.
+  - afirmacion: '«pp. 1-128»'
+    medido: >-
+      **pp. 1-120**. Lo dice la cita canónica del propio Persée y lo confirma
+      el PDF: 122 páginas de PDF, desfase constante impresa = pdf − 1 (medido
+      sobre 89 encabezados con número; hay 4 lecturas espurias del OCR).
+  - afirmacion: '«junta taíno, kalinago (lengua de hombres y de mujeres) y lokono con correspondencias»'
+    medido: >-
+      cierto, y con una trampa de término igual a la de Brinton: **`lokono`
+      aparece 0 veces en el texto** y `Arawak` 29. Goeje escribe `A` = Arawak
+      (de Guayana) en toda la tabla. Quien busque «lokono» en esta fuente
+      encontrará cero y concluirá mal (regla 6). Aquí se conserva su
+      abreviatura y se traduce a `lokono` sólo en §correspondencias, donde se
+      dice.
+  - afirmacion: >-
+      «(del mapa de fuentes de ayer) es la obra que decide … si `caiman`,
+      `piragua`, `papaya` o `maboya` son taínas o caribes insulares»
+    medido: >-
+      decide tres de las cuatro, y dos salen del taíno: `piragua` la pone en
+      **caribe insular** y duda de que sea indígena; `maboya` la da como
+      **caribe** (`G ma-poya`, `Cf mapoya`), no como taína; `papaya` sí es
+      taína (T papaya); y para 'caimán' la forma taína que trae no es `caiman`
+      sino **`hatmane`**. Ver §lo_que_goeje_saca_del_taino.
+
+  # ── §1 la descarga ─────────────────────────────────────────────────
+  descarga:
+    url: >-
+      http://www.etnolinguistica.org/local--files/biblio:goeje-1939-antilles/de_Goeje_1939_Nouvel_examen_des_langues_des_Antilles.pdf
+    pagina_de_la_ficha: http://www.etnolinguistica.org/biblio:goeje-1939-antilles
+    fecha: '2026-09-22'
+    estado_de_derechos: >-
+      acceso abierto en Persée (el editor lo publica libre) y espejo en la
+      Biblioteca Digital Curt Nimuendajú. La obra sigue bajo derechos de autor
+      (Goeje †1955): se cita corto y se parafrasea.
+    tamano_bytes: 6281894
+    sha256: 988761c9c4ce3990370e89228178f58e849418ae3bd41394d52b031ea07e2f78
+    local: fuentes_caquetios/Goeje_1939_Nouvel_examen_langues_Antilles.pdf
+    no_conseguido: >-
+      la **errata de 1940** (`de_Goeje_1940_..._Errata.pdf` en la misma ficha)
+      devuelve HTTP 500. Queda pendiente: una errata de un vocabulario es
+      exactamente lo que no se puede dar por leído.
+
+  # ── §2 el extractor y la ortografía, ANTES de contar ───────────────
+  extraccion:
+    herramienta: pdftotext -enc UTF-8
+    salida: fuentes_caquetios/Goeje_1939_Nouvel_examen_langues_Antilles.txt
+    bytes: 242554
+    calidad: >-
+      el PDF de Persée TIENE capa de texto, pero es OCR de 1939 sin corregir y
+      con un alfabeto fonético denso. Falla sistemáticamente en: cursivas
+      (media columna comparativa sale como cirílico o basura — `T я7>л` por
+      `T siba`), `ï`/`i`, `n`/`ii`, `c`/`e`, y los diacríticos checos que Goeje
+      usa (`š`, `ň`, `ž`). Toda forma que este archivo marca `ocr: dudoso` está
+      leída de un texto ambiguo.
+    lo_que_esto_implica: >-
+      **el cuerpo francés se lee bien y las formas taínas también** (van en
+      redonda); lo que se rompe es la columna de comparandas en cursiva. Como
+      lo que esta parcela necesita es la forma taína + su glosa + la
+      correspondencia arawak, se transcribe lo primero con confianza y lo
+      segundo con reserva marcada.
+  ortografia_medida:
+    metodo: raíz corta y sin acentos sobre el txt entero (skill `minar-fuente` §2)
+    conteos:
+      Taino/taino: 52
+      Tain (raíz): 43
+      Arawak: 29
+      lokono: 0
+      Aruac: 0
+      Caribe: 64
+      Caraibe: 5
+      Shebayo: 8
+      Ciguayo: 1
+      Macorix: 2
+      Zayas: 7
+      Oviedo: 5
+      'Las Casas': 5
+      Pane: 5
+      Brinton: 3
+      Rafinesque: 4
+      Pichardo: 1
+      Bachiller: 0
+    lo_que_dice_el_conteo: >-
+      `Bachiller` 0 y `Pichardo` 1: Goeje NO usa la tradición cubana salvo de
+      pasada, y a Zayas sí (7 menciones, varias con página). Su fuente de
+      formas taínas son los cronistas y Lovén 1935. Quien busque en Goeje una
+      corroboración de Bachiller no la va a encontrar.
+  paginacion:
+    desfase: impresa = pdf − 1
+    como_se_midio: >-
+      contando los números sueltos de los encabezados corridos página a página:
+      89 observaciones dan desfase 1 y 4 son ruido del OCR. NO es una cifra a
+      mano (regla 1); la calcula `6-fusion/scripts/consolidar_taino.py`
+      al releer el txt.
+  cobertura:
+    leido_entrada_a_entrada: >-
+      el VOCABULARIO TAÍNO entero, secciones I a VII (pp. 6-17), más «Mots
+      taino d'origine espagnole» (p. 18) y la parte del s. XV-XVI de «Caribe
+      des Iles» (pp. 18-19).
+    no_leido_entrada_a_entrada: >-
+      la parte gramatical (pp. 21-30), el vocabulario del caribe insular y del
+      caribe de Honduras (pp. 31-110, que es más de la mitad de la obra), los
+      vocabularios shebayo y guayana, y el suplemento comparado arahuaco
+      (`2 am`) donde no toca al taíno. Barridos por patrón. **Ahí está el
+      kalinago** —las 23 entradas kalinago del lexicón— y es una sesión entera
+      que esta parcela no hizo.
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. LAS ABREVIATURAS DE GOEJE — sin esto no se lee una sola línea
+# ══════════════════════════════════════════════════════════════════════
+abreviaturas:
+  T: taíno
+  A: Arawak de Guayana — es el LOKONO. Goeje nunca escribe «lokono»
+  C: caribe insular (kalinago). En 1928 lo abreviaba `IK`
+  Cf: caribe insular, **habla de MUJERES** (`parler des femmes`)
+  Ch: caribe insular, **habla de HOMBRES** (`parler des hommes`)
+  G: caribe de Honduras (el garífuna de su tiempo)
+  K / Kal: kalina (caribe continental de Guayana)
+  Ach: achagua
+  W: warao
+  "At, Par, P, Arua, Gu, Bare, Maip, Pia, Mand, Kar, Kat, Si, Tar, Uar, Yuk, Ipu, Piro, Mach, Moxo, B": >-
+    lenguas arahuacas y vecinas del continente; su lista está en Goeje 1928
+    §182 y en la nota 3 de la p. 5
+  '1 am': su vocabulario comparado arahuaco-maipure de 1928
+  '2 am': el suplemento a ese vocabulario que este artículo publica
+  e: '⚠️ marca del propio Goeje: «palabra taína que PASÓ a lenguas europeas o
+    a dialectos criollos». Es su propia señal de tainismo panhispánico, y vale
+    como tal: es la trampa 1 de esta campaña marcada por la fuente'
+  Fr.: Friederici, *Hilfswörterbuch für den Amerikanisten*, Halle 1926
+  'Lovén': Sven Lovén, *Origins of the Tainan culture*, Göteborg 1935
+  'Zayas': Alfredo Zayas y Alfonso, *Lexicografía Antillana*, La Habana 1914
+  aviso_de_lectura: >-
+    el margen izquierdo del artículo lleva, para cada entrada, una columna de
+    siglas (`T, 2 am 6`, `e, T, C, A?`…) que dice en qué lenguas la reconoce y
+    a qué número de su vocabulario de 1928 remite. El OCR la arranca del sitio
+    y la apila en bloques: por eso en este archivo esa columna NO se
+    transcribe salvo donde se pudo emparejar sin duda.
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. 🔴 CADENA DE CUSTODIA (skill §8) — lo primero que hay que leer
+# ══════════════════════════════════════════════════════════════════════
+cadena_de_custodia:
+  lo_que_declara_goeje:
+    de_donde_saca_las_formas_tainas: >-
+      lo dice en la p. 5: el material taíno son **unas doscientas palabras y
+      unas pocas frases** desperdigadas por los escritos españoles e italianos
+      de los siglos XV y XVI. Él vuelve a sacarlas de ahí, no de listas
+      posteriores.
+    quien_hizo_listas_antes_que_el: >-
+      Gilij, Rafinesque, von Martius, «Richardo (Pichardo?)», Brinton,
+      Tavera-Acosta y Zayas y Alfonso.
+    su_juicio_sobre_esas_listas: >-
+      (parafraseado) el intento de Rafinesque acabó en fantasías; Brinton
+      acertó al ver el parentesco taíno-arawak pero sus etimologías fallan a
+      menudo; y Adam usó el vocabulario de Rafinesque-Martius **sin darse
+      cuenta de que es poco seguro y de que contiene palabras tomadas de un
+      diccionario caribe**.
+  por_que_esto_importa_aqui: >-
+    ese último juicio es la regla §8 de la skill escrita por el especialista
+    del campo en 1939: una lista taína del XIX puede no ser una segunda
+    atestación sino **la misma lista contaminada de caribe**. Y nombra al
+    culpable: Rafinesque — el mismo que, según Brinton, inventó el nombre
+    «taíno» truncando `nitayno`.
+  jerarquia_que_esto_impone:
+  - nivel: 1
+    quien: el cronista del XVI (Colón, Pané, Mártir, Oviedo, Las Casas)
+    valor: atestación
+  - nivel: 2
+    quien: Goeje 1939 y Brinton 1871
+    valor: >-
+      intermediarios que dicen QUIÉN atestigua. Cuando los dos dan la misma
+      voz citando cronistas DISTINTOS, hay dos atestaciones; cuando citan al
+      mismo, hay una.
+  - nivel: 3
+    quien: Rafinesque 1836 y quien copie de él
+    valor: >-
+      **no cuenta**, por el aviso del propio Goeje: mezcla caribe. Es el
+      mismo criterio que la cuarentena de la campaña aplica a las listas
+      contemporáneas, doscientos años antes.
+  goeje_contra_brinton:
+    coinciden_en: >-
+      que la lengua de las Antillas Mayores es arahuaca, y que «taíno» no era
+      el nombre de un pueblo ni de su lengua.
+    goeje_es_mas_explicito: >-
+      (parafraseado, p. 5) dice que no se atrevería a afirmar que el taíno
+      fuera idéntico a la lengua antigua de las Antillas Menores, **ni que
+      todas las palabras llamadas taínas pertenecieran a una sola lengua**; y
+      que a falta de algo mejor se puede seguir usando el nombre.
+    lo_que_esto_le_da_al_proyecto: >-
+      es la autoridad citable —y de dominio abierto— para lo que el encargo
+      esperaba sólo de Granberry y Vescelius 2004: **el taíno tampoco era una
+      sola lengua**. Con una diferencia: Granberry asigna cada voz a una
+      variedad; Goeje se niega a hacerlo y dice por qué. Las dos cosas sirven,
+      y la segunda es gratis.
+  remite_a_la_tierra_firme:
+    que_dice: >-
+      (parafraseado, p. 5) que las palabras de 'indio caribe', 'canoa',
+      'ananás' —y quizá las de sonajero del médico, cliente, escabel, ceiba y
+      onoto— dan testimonio de **relaciones antiguas de los taínos con la
+      tierra firme de Sudamérica**.
+    para_nosotros: >-
+      esto es la ESFERA DE CONTACTO dicha por un arawakista en 1939, y nombra
+      justo los campos que el lexicón tiene marcados como préstamo de esfera.
+      Es apoyo externo para `ESFERA_DE_CONTACTO`, no un dato de lengua nuevo.
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. EL VOCABULARIO TAÍNO
+#
+# Esquema del proyecto. `glosa_fuente` es la glosa de Goeje, en su francés y
+# verbatim, de una a cuatro palabras. `fuente_que_declara_el_autor` es lo que
+# ÉL cita para esa voz; `no-declarada` cuando no cita a nadie en la entrada —
+# que es lo más frecuente, y es un dato.
+# `campo` usa el vocabulario del proyecto, no el de Goeje.
+# `en_el_lexicon` es la clave del lexicón si la hay, medida contra las 52 del
+# censo de `taino_inventario_2026-09-21.yaml` §a.
+# ══════════════════════════════════════════════════════════════════════
+fuente_de_las_paginas: >-
+  medidas, no escritas a mano: línea del txt → página de PDF → impresa
+  (pdf − 1). Lo recalcula `consolidar_taino.py --check`.
+
+vocabulario:
+
+  # ── I. Partes del cuerpo y enfermedades (pp. 6-7) ───────────────────
+  - forma_fuente: simu
+    glosa_fuente: "front (aussi: commencement)"
+    pagina_impresa: 6
+    seccion: I. Parties du corps et maladies
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: cuerpo
+    en_el_lexicon: null
+    correspondencia_lokono: 'A sibu ''visage'''
+    nota: >-
+      Brinton p. 12 da la misma voz (`Cimu / simu`, 'the front, forehead; a
+      beginning') citando a Pedro Mártir p. 302. Goeje NO cita a nadie: es la
+      misma voz por dos manos, y la atestación sigue siendo la de Mártir.
+  - forma_fuente: bu-ti-k-ako
+    glosa_fuente: "anda, para zarco de los ojos"
+    pagina_impresa: 6
+    seccion: I. Parties du corps et maladies
+    fuente_que_declara_el_autor: no-declarada (es un insulto recogido en castellano)
+    variedad_o_isla: no-declarada
+    campo: cuerpo
+    en_el_lexicon: null
+    nota: >-
+      Goeje agrupa tres INSULTOS taínos con glosa castellana de época. Son
+      material morfológico: `bu-` 2ª persona, `ti` atributo, `k-ako` 'ojo'
+      (comp. `aku` en el resto de las arahuacas).
+  - forma_fuente: xey-ti-k-ako
+    glosa_fuente: "anda, para negro de los ojos"
+    pagina_impresa: 6
+    seccion: I. Parties du corps et maladies
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: cuerpo
+    en_el_lexicon: null
+    nota: "`xey` es 'negro' (ver §IV, donde Goeje remite a estos insultos)."
+  - forma_fuente: m-ahi-te
+    glosa_fuente: "anda, que te falte un diente"
+    pagina_impresa: 6
+    seccion: I. Parties du corps et maladies
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: cuerpo
+    en_el_lexicon: null
+    nota: >-
+      🔴 el PRIVATIVO `ma-` taíno en un enunciado real: `m-ahi-te` = 'sin
+      diente'. Ver §morfologia_comparada.
+  - forma_fuente: too
+    glosa_fuente: mamelle
+    pagina_impresa: 6
+    seccion: I. Parties du corps et maladies
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: cuerpo
+    en_el_lexicon: null
+    correspondencia_lokono: "A idyo"
+  - forma_fuente: (ni)arima ~ tarima
+    glosa_fuente: fesses
+    pagina_impresa: 7
+    seccion: I. Parties du corps et maladies
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: cuerpo
+    en_el_lexicon: null
+    ocr: dudoso
+  - forma_fuente: karakaro-l
+    glosa_fuente: galeux
+    pagina_impresa: 7
+    seccion: I. Parties du corps et maladies
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: cuerpo
+    en_el_lexicon: null
+    correspondencia_lokono: "A araka 'lépreux'"
+
+  # ── II a. Religión y magia (pp. 7-8) ────────────────────────────────
+  - forma_fuente: buhuitihu ~ buhili ~ bohiti
+    glosa_fuente: homme-médecin
+    pagina_impresa: 7
+    seccion: II a. Religion, Magie
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: creencia
+    en_el_lexicon: bejique (con reserva — ver abajo)
+    nota: >-
+      🔴 Goeje da TRES formas para 'hombre-médico' aquí, y aparte, en la
+      sección del CARIBE INSULAR del s. XV-XVI, pone `behiko` con la
+      anotación «à Haïti, selon Las Casas». O sea: la forma que nuestro
+      lexicón tiene (`bejique`) él la clasifica como **caribe insular usado en
+      Haití**, no como taína, y la taína sería `buhuitihu`. Es el caso de
+      etiqueta más caro de esta parcela y **lo decide Miguel**.
+  - forma_fuente: Biberoci Guahagiona
+    glosa_fuente: nom du dieu Guahagiona après sa guérison
+    pagina_impresa: 7
+    seccion: II a. Religion, Magie
+    fuente_que_declara_el_autor: Pané (el ciclo de Guahagiona es suyo)
+    variedad_o_isla: La Española
+    campo: creencia
+    en_el_lexicon: null
+  - forma_fuente: maiohaua ~ maguey
+    glosa_fuente: hochet de l'homme-médecin
+    pagina_impresa: 8
+    seccion: II a. Religion, Magie
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: [creencia, objeto]
+    en_el_lexicon: null
+    correspondencia_lokono: "A maraka"
+    nota: >-
+      ⚠️ `maguey` aquí NO es el agave: es el sonajero. Y `maguey` 'agave' está
+      además en la lista de 46 plantas que Goeje deja sin identificar, y en
+      `6-fusion/tainismos_en_medina.yaml`. Dos cosas distintas con la misma
+      grafía — ojo al cruzar por forma.
+  - forma_fuente: guanara
+    glosa_fuente: un lieu séparé (lieu d'initiation ?)
+    pagina_impresa: 8
+    seccion: II a. Religion, Magie
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: creencia
+    en_el_lexicon: null
+    nota: >-
+      Brinton p. 12 la da como 'a retired spot; a species of dove' citando
+      «Pane, p. 444; Richardo». Goeje coincide en el sentido de 'lugar
+      apartado' y NO recoge la paloma. Dos intermediarios, un solo cronista
+      (Pané): **una atestación, no dos**.
+  - forma_fuente: ka-hoba ~ k-ohoba ~ k-ogioba
+    glosa_fuente: poudre ou fumée de tabac
+    pagina_impresa: 8
+    seccion: II a. Religion, Magie
+    fuente_que_declara_el_autor: Friederici p. 32 y 71; Lovén p. 387
+    variedad_o_isla: no-declarada
+    campo: [creencia, flora]
+    en_el_lexicon: cohiba
+    correspondencia_lokono: null
+    nota: >-
+      🔴 Goeje la segmenta `ka-hoba`, con el ATRIBUTIVO `ka-` delante. Si eso
+      es así, la raíz es `hoba` y `cohiba` de nuestro lexicón lleva el prefijo
+      pegado. Y confirma la nota de Brinton de la primera campaña: no es la
+      planta, es el polvo. Comparanda: Maipure `nupa`, achagua `nuba` («yopa»).
+  - forma_fuente: tabako
+    glosa_fuente: instrument pour respirer cette poudre
+    pagina_impresa: 8
+    seccion: II a. Religion, Magie
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: [creencia, objeto]
+    en_el_lexicon: tabako
+    nota: >-
+      la glosa de Goeje es la MISMA que la tradición da desde Oviedo: `tabako`
+      es el instrumento (el canuto) y no la planta. El lexicón glosa la voz
+      como la planta. Discrepancia de glosa, no de forma: va a curación, no se
+      reescribe aquí (skill §8).
+  - forma_fuente: digo
+    glosa_fuente: herbe pour se laver ou se purifier
+    pagina_impresa: 8
+    seccion: II a. Religion, Magie
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: [creencia, flora]
+    en_el_lexicon: null
+  - forma_fuente: semi
+    glosa_fuente: dieux ou esprits qui leur apparaissent dans l'état de transe
+    pagina_impresa: 8
+    seccion: II a. Religion, Magie
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: creencia
+    en_el_lexicon: cemi
+    correspondencia_lokono: "A seme(-he)"
+    nota: >-
+      🔴 Goeje enlaza `semi` con la raíz arahuaca de 'dulce, bueno de comer'
+      (A `seme`, G `bime`): el cemí sería «el dulce/el bueno». Es análisis
+      SUYO, de 1939, no atestación — pero es la etimología que falta en
+      nuestra entrada, que hoy no cita a nadie.
+  - forma_fuente: Bimini
+    glosa_fuente: l'île de la fontaine de jouvence
+    pagina_impresa: 8
+    seccion: II a. Religion, Magie
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: archipiélago de las Bahamas
+    campo: toponimo
+    en_el_lexicon: null
+  - forma_fuente: atabai ~ itibatahuaa
+    glosa_fuente: mère des dieux
+    pagina_impresa: 8
+    seccion: II a. Religion, Magie
+    fuente_que_declara_el_autor: Pané (Atabey es del ciclo de Pané)
+    variedad_o_isla: La Española
+    campo: creencia
+    en_el_lexicon: null
+    correspondencia_lokono: "achagua tabü-mina-ro 'diosa'"
+  - forma_fuente: cacibûgiagua ~ caçibaxagua
+    glosa_fuente: grotte d'où sont sortis la plupart des hommes
+    pagina_impresa: 8
+    seccion: II a. Religion, Magie
+    fuente_que_declara_el_autor: Pané (Cacibajagua es del cap. I de Pané)
+    variedad_o_isla: La Española
+    campo: [creencia, toponimo]
+    en_el_lexicon: null
+    nota: >-
+      Goeje la segmenta: `ka-` + `siba` 'piedra' + `xagua` 'cueva'. Es la
+      misma `siba` de §IV y el mismo `ka-` atributivo.
+  - forma_fuente: amaiaua ~ amaiauna
+    glosa_fuente: grotte d'où sont sortis les autres hommes
+    pagina_impresa: 8
+    seccion: II a. Religion, Magie
+    fuente_que_declara_el_autor: Pané
+    variedad_o_isla: La Española
+    campo: [creencia, toponimo]
+    en_el_lexicon: null
+  - forma_fuente: hupia ~ opia ~ operito
+    glosa_fuente: esprit de mort
+    pagina_impresa: 8
+    seccion: II a. Religion, Magie
+    fuente_que_declara_el_autor: Pané (el opía es del cap. XII)
+    variedad_o_isla: La Española
+    campo: creencia
+    en_el_lexicon: null
+    nota: >-
+      🔴 Y AQUÍ ESTÁ `maboya`: Goeje pone 'diable' `ma-poya` como forma del
+      CARIBE DE HONDURAS (`G`), y en el vocabulario caribe insular da
+      `mapoya`, `mafuiya`, `mafia` con la misma glosa. La forma taína para el
+      espíritu del muerto es `hupia`, no `maboya`. Ver
+      §lo_que_goeje_saca_del_taino.
+  - forma_fuente: goeiz
+    glosa_fuente: âme
+    pagina_impresa: 8
+    seccion: II a. Religion, Magie
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: creencia
+    en_el_lexicon: null
+    ocr: dudoso
+    nota: >-
+      Brinton p. 12 la da como `Goeiz`, 'the spirit of the living', citando
+      «Pane, p. 444». Misma voz, mismo cronista: **una atestación**.
+  - forma_fuente: guaisa
+    glosa_fuente: masque
+    pagina_impresa: 8
+    seccion: II a. Religion, Magie
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: [creencia, objeto]
+    en_el_lexicon: null
+  - forma_fuente: koaibai
+    glosa_fuente: place où vont les morts
+    pagina_impresa: 8
+    seccion: II a. Religion, Magie
+    fuente_que_declara_el_autor: Pané (Coaybay, cap. XII)
+    variedad_o_isla: La Española
+    campo: creencia
+    en_el_lexicon: null
+  - forma_fuente: giovovaua
+    glosa_fuente: grotte sainte
+    pagina_impresa: 8
+    seccion: II a. Religion, Magie
+    fuente_que_declara_el_autor: Pané
+    variedad_o_isla: La Española
+    campo: [creencia, toponimo]
+    en_el_lexicon: null
+    ocr: dudoso
+  - forma_fuente: guabaza
+    glosa_fuente: les morts mangent des fruits
+    pagina_impresa: 8
+    seccion: II a. Religion, Magie
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: creencia
+    en_el_lexicon: null
+    ocr: dudoso
+    nota: >-
+      ⚠️ NO es `guabina` (pez) del lexicón ni la `guaba` de Brinton. Glosas
+      distintas: no es par (skill §2).
+  - forma_fuente: guaymaro
+    glosa_fuente: parfums qu'ils offrent à leurs idoles
+    pagina_impresa: 8
+    seccion: II a. Religion, Magie
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: 'Cuba — Goeje escribe «langue de Cuba»'
+    campo: creencia
+    en_el_lexicon: null
+    nota: 🔴 UNA DE LAS DOS ÚNICAS VOCES DEL VOCABULARIO CON ISLA DECLARADA.
+  - forma_fuente: areyto
+    glosa_fuente: poème historique, chant, danse
+    pagina_impresa: 8
+    seccion: II a. Religion, Magie
+    fuente_que_declara_el_autor: Oviedo (cita su pasaje en castellano)
+    variedad_o_isla: no-declarada
+    campo: [rito, transmision]
+    en_el_lexicon: areito
+    nota: >-
+      Goeje reproduce el pasaje de Oviedo sobre el areíto como memoria de las
+      cosas pasadas — el mismo que la primera campaña transcribió en
+      `taino_oviedo_valdes_1851.yaml` (libro V cap. I). **No es una segunda
+      atestación: es la misma, citada dos veces** (skill §8).
+
+  # ── II b. Familia y tribu (pp. 9-10) ────────────────────────────────
+  - forma_fuente: Ana-kaona
+    glosa_fuente: nom de l'épouse du roi Caonabo
+    pagina_impresa: 9
+    seccion: II b. Famille et tribu
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: La Española
+    campo: antroponimo
+    en_el_lexicon: null
+    nota: "Goeje segmenta `Ana-` 'mujer' + `kaona` 'oro' (ver `ka-ona`, §III)."
+  - forma_fuente: Ana-kakugia
+    glosa_fuente: nom de la femme qui accompagnait le dieu Guacugiona
+    pagina_impresa: 9
+    seccion: II b. Famille et tribu
+    fuente_que_declara_el_autor: Pané
+    variedad_o_isla: La Española
+    campo: antroponimo
+    en_el_lexicon: null
+  - forma_fuente: gu-aroko-el
+    glosa_fuente: grand-père (notre)
+    pagina_impresa: 9
+    seccion: II b. Famille et tribu
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: parentesco
+    en_el_lexicon: null
+    correspondencia_lokono: "A aduku-ti"
+    nota: >-
+      🔴 `gua-` de 1ª persona plural EN UNA FORMA TAÍNA REAL, más el
+      formativo `-el`. Ver §morfologia_comparada: es la pieza que la campaña
+      de `-gua` del repo estaba buscando.
+  - forma_fuente: ameši
+    glosa_fuente: seigneur
+    pagina_impresa: 9
+    seccion: II b. Famille et tribu
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: jerarquia
+    en_el_lexicon: null
+    nota: "caribe insular (habla de mujeres) `amasi`: Goeje los empareja."
+  - forma_fuente: Machetaurie Guaiaua
+    glosa_fuente: seigneur du pays des morts
+    pagina_impresa: 9
+    seccion: II b. Famille et tribu
+    fuente_que_declara_el_autor: Pané (Maquetaurie Guayaba, cap. XII)
+    variedad_o_isla: La Española
+    campo: creencia
+    en_el_lexicon: null
+  - forma_fuente: kasike
+    glosa_fuente: chef supérieur
+    pagina_impresa: 9
+    seccion: II b. Famille et tribu
+    fuente_que_declara_el_autor: no-declarada — y la marca `e` (pasó al español)
+    variedad_o_isla: no-declarada
+    campo: jerarquia
+    en_el_lexicon: cacique · cacike
+    nota: >-
+      Goeje lo descompone `ka-` (atributivo) + raíz emparentada con `isiri`
+      'nariz' / `isiraman` 'primogénito' en caribe y arawak. Brinton p. 12
+      propone otra cosa (`hassiquan` < `ussequa` 'casa'). **Dos etimologías
+      incompatibles del s. XIX-XX sobre la misma forma**: ninguna es
+      atestación, y el lexicón no debe adoptar ninguna.
+  - forma_fuente: matunheri
+    glosa_fuente: "«Vuestra Alteza»"
+    pagina_impresa: 9
+    seccion: II b. Famille et tribu
+    fuente_que_declara_el_autor: no-declarada (la glosa castellana es de Las Casas)
+    variedad_o_isla: no-declarada
+    campo: jerarquia
+    en_el_lexicon: null
+    correspondencia_lokono: "achagua manuika-si 'alteza'"
+  - forma_fuente: bahari
+    glosa_fuente: "«Señoría»"
+    pagina_impresa: 9
+    seccion: II b. Famille et tribu
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: jerarquia
+    en_el_lexicon: null
+    correspondencia_lokono: "A basari 'indio kalina'; achagua bakari 'señor'"
+  - forma_fuente: guaoxeri
+    glosa_fuente: "«Vuestra merced»"
+    pagina_impresa: 9
+    seccion: II b. Famille et tribu
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: jerarquia
+    en_el_lexicon: null
+    nota: >-
+      🔴 CONFLICTO CON BRINTON, y es grave. Brinton p. 12 glosa `Guaoxeri` como
+      «a term applied to the lowest class of the inhabitants» citando Las Casas
+      *Hist. Apol.* cap. 197, y lo compara con arawak `wakaijaru` 'worthless,
+      dirty'. Goeje lo da como **tratamiento de respeto**, el tercer escalón de
+      `matunheri` / `bahari` / `guaoxeri`. Los dos leen el mismo capítulo de Las
+      Casas y sacan lo contrario. Hay que leer Las Casas cap. 197 antes de que
+      esto entre a ningún sitio.
+  - forma_fuente: nitayno
+    glosa_fuente: homme d'importance
+    pagina_impresa: 9
+    seccion: II b. Famille et tribu
+    fuente_que_declara_el_autor: no-declarada — y lleva la marca `e`
+    variedad_o_isla: no-declarada
+    campo: jerarquia
+    en_el_lexicon: nitaino
+    nota: >-
+      🔴 Goeje pone «Taino» entre comillas en el margen de ESTA entrada y
+      remite a Brinton p. 13: el nombre de la lengua sale de aquí. Segunda
+      atestación INDEPENDIENTE de la tesis, aunque cite a Brinton: la FORMA
+      `nitayno` la sacan los dos de los cronistas, no uno del otro. Él la
+      segmenta `ni-` (mi) + `tayno`.
+  - forma_fuente: Matinino ~ Madanina
+    glosa_fuente: l'île des femmes
+    pagina_impresa: 9
+    seccion: II b. Famille et tribu
+    fuente_que_declara_el_autor: no-declarada — marca `e` («la Martinique»)
+    variedad_o_isla: Antillas Menores
+    campo: toponimo
+    en_el_lexicon: null
+    nota: "Goeje la segmenta `ma-ti-nin` 'sin padre' — privativo `ma-` otra vez."
+  - forma_fuente: naboria
+    glosa_fuente: client, serviteur
+    pagina_impresa: 9
+    seccion: II b. Famille et tribu
+    fuente_que_declara_el_autor: >-
+      Pané — reproduce la frase `Dios naboria daca` y su variante
+      `Dio aboria-dasa`
+    variedad_o_isla: 'Macorix, según Pané (Goeje no lo repite aquí)'
+    campo: organizacion-social
+    en_el_lexicon: naboria
+    ocr: 'el OCR la da como `natoria`; la frase de al lado la desambigua'
+    nota: >-
+      🔴 Goeje trae la MISMA frase que `taino_pane_c1498.yaml` pv01 y además
+      una **segunda lectura del manuscrito**: `Dio aboria-dasa`. Eso es
+      filología de la frase, no una segunda atestación: sigue siendo Pané.
+      Pero la variante importa porque mueve el corte de palabra, y con él la
+      lectura de `daca`.
+  - forma_fuente: guatiao
+    glosa_fuente: ami, compagnon
+    pagina_impresa: 9
+    seccion: II b. Famille et tribu
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: organizacion-social
+    en_el_lexicon: null
+    ocr: 'el OCR la da como `gnatiao`'
+    nota: >-
+      Brinton p. 12 la da citando a «Richardo», que es **Pichardo, un
+      diccionario del español de Cuba del s. XIX**. Goeje no cita a nadie. Dos
+      intermediarios y ningún cronista: clase (ii) como mucho.
+  - forma_fuente: Macorix
+    glosa_fuente: >-
+      peuples d'Haïti parlant une autre langue — «quiere decir como lenguaje
+      extraño»
+    pagina_impresa: 9
+    seccion: II b. Famille et tribu
+    fuente_que_declara_el_autor: Las Casas, *Apologética Historia*, cap. III
+    variedad_o_isla: La Española
+    campo: etnonimia
+    en_el_lexicon: null
+    nota: >-
+      🔴 LA VARIEDAD, DICHA POR LA FUENTE. La cita castellana es de Las Casas
+      (s. XVI, dominio público) y Goeje la reproduce. Goeje añade que la
+      negación taína `ma-` está detrás del nombre.
+  - forma_fuente: Ciguayo
+    glosa_fuente: >-
+      id. (otro pueblo de Haití de lengua distinta) — «porque traian todos los
+      cabellos muy luengos»
+    pagina_impresa: 9
+    seccion: II b. Famille et tribu
+    fuente_que_declara_el_autor: Las Casas (misma serie de capítulos)
+    variedad_o_isla: La Española
+    campo: etnonimia
+    en_el_lexicon: null
+    nota: >-
+      🔴 LA OTRA VARIEDAD. Con Macorix y lucayo, Goeje nombra **tres** de las
+      siete comunidades de habla que el encargo esperaba sólo de Granberry y
+      Vescelius 2004.
+  - forma_fuente: lukayo ~ yukayo
+    glosa_fuente: Indien de l'archipel de Bahama
+    pagina_impresa: 9
+    seccion: II b. Famille et tribu
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: archipiélago de las Bahamas
+    campo: etnonimia
+    en_el_lexicon: null
+    correspondencia_lokono: "A loko 'hombre'"
+    nota: >-
+      la misma descomposición que Brinton p. 15 (`lukku kairi` 'hombres de las
+      islas') y que Las Casas v01. Tres manos, un análisis: **no son tres
+      atestaciones**.
+  - forma_fuente: kanibale ~ karibe
+    glosa_fuente: Indien Caribe des Iles ou Indien Kalina de la terre ferme
+    pagina_impresa: 10
+    seccion: II b. Famille et tribu
+    fuente_que_declara_el_autor: no-declarada — marca `e`
+    variedad_o_isla: no-declarada
+    campo: etnonimia
+    en_el_lexicon: null
+  - forma_fuente: kariiaba
+    glosa_fuente: la terre ferme
+    pagina_impresa: 10
+    seccion: II b. Famille et tribu
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: geografia
+    en_el_lexicon: null
+    ocr: dudoso
+    nota: >-
+      🔴 Goeje conecta esta voz con el topónimo «puerto de Caraybana» **en
+      Haití**, y dice que lleva el nombre de una población que estuvo allí. Es
+      el nombre de la tierra firme desde las islas: la esfera vista desde el
+      otro lado.
+
+  # ── III. Poblado y casa (pp. 10-12) ─────────────────────────────────
+  - forma_fuente: anaki
+    glosa_fuente: ennemi
+    pagina_impresa: 10
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: 'Zayas, p. 33'
+    variedad_o_isla: no-declarada
+    campo: guerra
+    en_el_lexicon: null
+    nota: >-
+      🔴 UNA DE LAS CUATRO VOCES QUE GOEJE APOYA EN ZAYAS CON PÁGINA. Es la
+      prueba de que Zayas 1914 es fuente citable y de que Goeje la usó.
+  - forma_fuente: guasabara
+    glosa_fuente: bataille
+    pagina_impresa: 10
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: Friederici p. 46
+    variedad_o_isla: no-declarada
+    campo: guerra
+    en_el_lexicon: null
+  - forma_fuente: tureigua hobin
+    glosa_fuente: "«rex resplendens uti oricalchium»"
+    pagina_impresa: 10
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: Pedro Mártir (la glosa está en latín)
+    variedad_o_isla: no-declarada
+    campo: jerarquia
+    en_el_lexicon: null
+    nota: >-
+      🔴 TÍTULOS DE CACIQUE EN LATÍN. La glosa latina delata a Pedro Mártir,
+      que es la fuente que el repo YA TIENE sin minar (`angleria-1892`).
+  - forma_fuente: starei
+    glosa_fuente: "«relucens»"
+    pagina_impresa: 10
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: Pedro Mártir
+    variedad_o_isla: no-declarada
+    campo: jerarquia
+    en_el_lexicon: null
+    nota: "Goeje remite a §IV `turei` 'cielo': el título sería 'el del cielo'."
+  - forma_fuente: ka-ona
+    glosa_fuente: or
+    pagina_impresa: 10
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: materiales
+    en_el_lexicon: null
+    correspondencia_lokono: "A iauna 'de valeur'"
+    nota: >-
+      otra vez `ka-` atributivo: 'que tiene valor'. Brinton p. 12 da
+      `Caona / cauni` citando «Pet. Martyr, Decad. p. 26». Misma voz, y
+      Brinton SÍ dice de dónde: la atestación es de Mártir.
+  - forma_fuente: guan-in
+    glosa_fuente: bijou en or
+    pagina_impresa: 10
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: materiales
+    en_el_lexicon: guanin
+    nota: >-
+      Goeje la separa `guan-in` y la agrupa con `ka-ona`. Brinton p. 12 la da
+      como 'an impure sort of gold' sin cronista. Dos intermediarios, ningún
+      cronista citado: la entrada del lexicón sigue sin atestación primaria.
+  - forma_fuente: ka-k-ona
+    glosa_fuente: prix, récompense, marchandise
+    pagina_impresa: 10
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: comercio
+    en_el_lexicon: null
+  - forma_fuente: buhio
+    glosa_fuente: maison
+    pagina_impresa: 10
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: arquitectura
+    en_el_lexicon: bohio · bohío
+    correspondencia_lokono: "caribe insular (mujeres) ubonoko, obogne"
+  - forma_fuente: bajareke ~ bajarake
+    glosa_fuente: maison
+    pagina_impresa: 10
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: arquitectura
+    en_el_lexicon: null
+    correspondencia_lokono: "A baba (en composición)"
+    nota: >-
+      Brinton p. 11 la da como `Bajaraque`, 'a large house holding several
+      hundred persons', sin cronista, y la deriva de `baju` 'casa'. Misma voz,
+      misma etimología, ninguna atestación primaria en ninguno de los dos.
+  - forma_fuente: kaney
+    glosa_fuente: maison
+    pagina_impresa: 10
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: arquitectura
+    en_el_lexicon: caney
+    nota: >-
+      ⚠️ Goeje le da la glosa genérica 'maison', sin la forma cónica que
+      Brinton p. 12 especifica ('a house of conical shape'). El lexicón sigue a
+      Brinton. **Goeje no lo contradice: no lo dice.** Ausencia, no conflicto.
+  - forma_fuente: kausi
+    glosa_fuente: maison du chef
+    pagina_impresa: 11
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: arquitectura
+    en_el_lexicon: null
+  - forma_fuente: barbakoa
+    glosa_fuente: affût dans un arbre
+    pagina_impresa: 11
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: 'Friederici p. 9 — y añade «bai bacoa para guardar mais»'
+    variedad_o_isla: no-declarada
+    campo: [arquitectura, agricultura]
+    en_el_lexicon: null
+    correspondencia_lokono: "achagua parabakoa, patamakoa"
+    nota: >-
+      🔴 ES EL `-bakoa` DEL CANON (D5, `REGLAS_TOPONIMICAS`). Goeje trae la
+      comparanda achagua `parabakoa` para la misma cosa. Brinton p. 11 la
+      atestigua en Oviedo lib. VII cap. 1 con la glosa 'a loft for drying
+      maize'. Las dos glosas se tocan y la de Oviedo es la primaria.
+  - forma_fuente: duho
+    glosa_fuente: escabeau en bois
+    pagina_impresa: 11
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: [objeto, autoridad]
+    en_el_lexicon: dujo
+    correspondencia_lokono: "achagua daba; W taub 'poste, apoyo'"
+    nota: >-
+      TERCERA mano sobre la misma voz: Oviedo la atestigua dos veces (libro V
+      cap. I, pp. 125 y 165, `taino_oviedo_valdes_1851.yaml`), Brinton la da
+      citando a Las Casas Y a Oviedo, y Goeje la compara. **La atestación es
+      de Oviedo y Las Casas; los otros dos no suman.**
+  - forma_fuente: nahe
+    glosa_fuente: rame
+    pagina_impresa: 11
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: navegacion
+    en_el_lexicon: null
+  - forma_fuente: hamaka
+    glosa_fuente: hamac (prob. = dormir)
+    pagina_impresa: 11
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: no-declarada — marca `e`
+    variedad_o_isla: no-declarada
+    campo: objeto
+    en_el_lexicon: null
+    nota: >-
+      ⚠️ Goeje avisa en nota al pie que `piragua`, `kanoa` y `hamaka` llegaron
+      a los vocabularios de muchas tribus **por vía del español**. Es decir: su
+      presencia en otra lengua indígena no prueba contacto precolombino. Eso
+      muerde directamente cualquier cruce por forma.
+  - forma_fuente: hike
+    glosa_fuente: corde
+    pagina_impresa: 11
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: objeto
+    en_el_lexicon: null
+    nota: >-
+      es el `hico` de `6-fusion/tainismos_en_medina.yaml`, que se fusionó en
+      2026-09-12 como `caquetío-reconstruido`. Aquí está la forma antillana.
+  - forma_fuente: henequeu
+    glosa_fuente: corde, fibres de Bromélia
+    pagina_impresa: 11
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: >-
+      Friederici p. 48, y duda: ¿de una lengua de Yucatán, o del neerlandés
+      *hennep* 'cáñamo'?
+    variedad_o_isla: no-declarada
+    campo: objeto
+    en_el_lexicon: null
+    nota: 🔴 el propio Goeje duda de que sea antillana. Clase (iii) por su autor.
+  - forma_fuente: daguita
+    glosa_fuente: ficelle, corde
+    pagina_impresa: 11
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: objeto
+    en_el_lexicon: null
+    correspondencia_lokono: "A ahera 'nouer, lier'"
+  - forma_fuente: pataka
+    glosa_fuente: panier
+    pagina_impresa: 11
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: objeto
+    en_el_lexicon: null
+  - forma_fuente: garusa
+    glosa_fuente: propulseur
+    pagina_impresa: 11
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: [objeto, guerra]
+    en_el_lexicon: null
+    ocr: dudoso
+  - forma_fuente: makána
+    glosa_fuente: sabre en bois, massue
+    pagina_impresa: 11
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: no-declarada — marca `e`
+    variedad_o_isla: no-declarada
+    campo: guerra
+    en_el_lexicon: null
+    correspondencia_lokono: "A sapakana; G guaika; achagua bakaba, guakaba"
+    nota: >-
+      🔴 TOCA `6-fusion/propuesta_macana_etiqueta_2026-09-21.yaml`. Y hay más:
+      la frase taína del §VII trae `mayani-makana` 'no me mates' con la propia
+      duda de Goeje «(III sabre ?)». O sea, la misma raíz en la única frase
+      taína con verbo que él recoge.
+  - forma_fuente: manaya
+    glosa_fuente: couteau en pierre
+    pagina_impresa: 11
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: 'Pané; Zayas, p. 78 — y duda: ¿palabra italiana?'
+    variedad_o_isla: no-declarada
+    campo: objeto
+    en_el_lexicon: null
+    nota: >-
+      🔴 EL CASO DE CUSTODIA MÁS FINO DE LA OBRA. Goeje sospecha que `manaya`
+      no es taína sino **italiana**, colada por el camino: el texto de Pané se
+      conserva en la traducción italiana de Ulloa (1571) del original
+      castellano perdido — la cadena que `4-fuentes/pane-c1498.md` ya
+      declaraba. Aquí un especialista dice que la cadena dejó residuo.
+  - forma_fuente: koa
+    glosa_fuente: pieu à pointe (houe)
+    pagina_impresa: 11
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: [agricultura, objeto]
+    en_el_lexicon: null
+    correspondencia_lokono: "A kala"
+    nota: >-
+      es la `coa` de `tainismos_en_medina.yaml`. Segunda vía de entrada de la
+      misma voz al repo, por el lado antillano.
+  - forma_fuente: batea
+    glosa_fuente: godet
+    pagina_impresa: 11
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: 'Friederici p. 10: **palabra española**'
+    variedad_o_isla: no-declarada
+    campo: objeto
+    en_el_lexicon: null
+    nota: >-
+      🔴 Brinton p. 12 la da como taína citando Las Casas *Hist. Apol.* cap.
+      241. Goeje dice que es castellana. **Conflicto declarado entre los dos
+      intermediarios**: no entra a ningún sitio sin leer el cap. 241.
+  - forma_fuente: guariketeu
+    glosa_fuente: râpe à manioc
+    pagina_impresa: 11
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: 'Las Casas V, p. 312, *Apol. Hist.* cap. XI'
+    variedad_o_isla: no-declarada
+    campo: [alimentacion, objeto]
+    en_el_lexicon: null
+    nota: >-
+      Goeje añade la variante hecha de piel de pez, `libusa`, con esa misma
+      cita. Es atestación con capítulo: clase (i).
+  - forma_fuente: sibukan
+    glosa_fuente: couleuvre (presse) à manioc
+    pagina_impresa: 11
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: no-declarada — marca `e`
+    variedad_o_isla: no-declarada
+    campo: [alimentacion, objeto]
+    en_el_lexicon: null
+  - forma_fuente: hibii
+    glosa_fuente: blutoir
+    pagina_impresa: 11
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: [alimentacion, objeto]
+    en_el_lexicon: null
+  - forma_fuente: buren
+    glosa_fuente: poêle (platine) à manioc
+    pagina_impresa: 12
+    seccion: III. Village et menage
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: [alimentacion, objeto]
+    en_el_lexicon: null
+    nota: "el budare. Comparanda de caribe insular `burelet`."
+
+  # ── IV. Naturaleza (pp. 12-13) ──────────────────────────────────────
+  - forma_fuente: guarique
+    glosa_fuente: pendant d'oreille
+    pagina_impresa: 12
+    seccion: IV. Nature
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: [objeto, vestimenta]
+    en_el_lexicon: null
+  - forma_fuente: taguagua
+    glosa_fuente: pendant d'oreille (id.)
+    pagina_impresa: 12
+    seccion: IV. Nature
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: [objeto, vestimenta]
+    en_el_lexicon: null
+  - forma_fuente: nukai ~ noçay
+    glosa_fuente: or
+    pagina_impresa: 12
+    seccion: IV. Nature
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: '🔴 archipiélago de las Bahamas — Goeje lo declara'
+    campo: materiales
+    en_el_lexicon: null
+    nota: >-
+      SEGUNDA voz con variedad declarada, y es la palabra para 'oro' de las
+      Lucayas frente a `ka-ona` de La Española. **Dos lenguas antillanas con
+      palabras distintas para lo mismo, dicho por la fuente.**
+  - forma_fuente: kotara
+    glosa_fuente: chaussure
+    pagina_impresa: 12
+    seccion: IV. Nature
+    fuente_que_declara_el_autor: 'Friederici p. 34 — y duda: ¿palabra de América Central?'
+    variedad_o_isla: no-declarada
+    campo: vestimenta
+    en_el_lexicon: null
+  - forma_fuente: batey
+    glosa_fuente: boule, jeu de pelote
+    pagina_impresa: 12
+    seccion: IV. Nature
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: rito
+    en_el_lexicon: batey
+    correspondencia_lokono: "A balala 'rond'; G bala(ka) 'rouler'"
+    nota: >-
+      Goeje lo repite en el suplemento (p. 17) emparejándolo con la raíz
+      arahuaca de 'redondo, rodar'. Es la misma etimología que Brinton
+      (`battatan` 'to be round'). **Los dos, el mismo análisis: una idea, no
+      dos apoyos.** La atestación es de Las Casas *Hist. Apol.* cap. 204.
+  - forma_fuente: hike-šuke
+    glosa_fuente: grelots
+    pagina_impresa: 12
+    seccion: IV. Nature
+    fuente_que_declara_el_autor: 'no-declarada — y duda: ¿del español *juguete*?'
+    variedad_o_isla: no-declarada
+    campo: objeto
+    en_el_lexicon: null
+  - forma_fuente: turei
+    glosa_fuente: ciel
+    pagina_impresa: 13
+    seccion: IV. Nature
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: cosmos
+    en_el_lexicon: null
+  - forma_fuente: xey
+    glosa_fuente: noir
+    pagina_impresa: 13
+    seccion: IV. Nature
+    fuente_que_declara_el_autor: no-declarada (remite a los insultos de §I)
+    variedad_o_isla: no-declarada
+    campo: color
+    en_el_lexicon: null
+    nota: >-
+      🔴 UN COLOR TAÍNO ATESTIGUADO. El criterio c2 de la cuarentena dice que
+      los cronistas «no glosaron colores»: aquí hay uno, y llega por un insulto
+      recogido en castellano. El criterio se afina, no se cae:
+      **lo que llega no es el paradigma, es la palabra suelta dentro de una
+      frase**. Cruzar con `6-fusion/colores_caquetios.yaml`.
+  - forma_fuente: hurakan
+    glosa_fuente: ouragan
+    pagina_impresa: 13
+    seccion: IV. Nature
+    fuente_que_declara_el_autor: no-declarada — marca `e`
+    variedad_o_isla: no-declarada
+    campo: clima
+    en_el_lexicon: huracan
+    nota: >-
+      🔴 NEGATIVA MEDIDA, y es de las buenas. Goeje escribe en nota al pie que
+      **no ha encontrado justificación** para la opinión de algunos estudiosos
+      de que `hurakan` tenga relación con el maya Hurakán, nombre del dios
+      «Corazón del Cielo». Es el desmentido de la etimología maya que circula
+      por toda la web, hecho por un especialista y con página.
+  - forma_fuente: arkabuko
+    glosa_fuente: forêt
+    pagina_impresa: 13
+    seccion: IV. Nature
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: geografia
+    en_el_lexicon: null
+    correspondencia_lokono: "A aboka, akuba 'jardin'; G arabu"
+    nota: >-
+      Brinton p. 11 la atestigua en Oviedo lib. VI cap. 8. Clase (i) por
+      Brinton, no por Goeje.
+  - forma_fuente: komiko
+    glosa_fuente: champ cultivé
+    pagina_impresa: 13
+    seccion: V. Animaux
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: agricultura
+    en_el_lexicon: kunuku
+    correspondencia_lokono: "Arua kanuku; achagua/Kar keniki, kenike"
+    nota: >-
+      ⚠️ la forma de Goeje es `komiko`, no `konuko`. Puede ser OCR (`n`→`m`,
+      `u`→`i`) o puede ser su lectura. Brinton p. 12 escribe `Conuco` citando
+      Oviedo lib. VII cap. 2, y ésa es la atestación. Marcada dudosa.
+  - forma_fuente: savana
+    glosa_fuente: savane
+    pagina_impresa: 13
+    seccion: V. Animaux
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: geografia
+    en_el_lexicon: null
+  - forma_fuente: magua
+    glosa_fuente: la grande plaine
+    pagina_impresa: 13
+    seccion: V. Animaux
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: La Española (Magua es una de sus provincias)
+    campo: geografia
+    en_el_lexicon: null
+  - forma_fuente: maguana
+    glosa_fuente: la petite plaine
+    pagina_impresa: 13
+    seccion: V. Animaux
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: La Española
+    campo: geografia
+    en_el_lexicon: null
+  - forma_fuente: bagua
+    glosa_fuente: la mer
+    pagina_impresa: 14
+    seccion: V. Animaux
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: geografia
+    en_el_lexicon: null
+    nota: >-
+      Brinton p. 11 la da con `bara` arawak 'the sea'. Los dos intermediarios,
+      ningún cronista citado.
+  - forma_fuente: xagueye
+    glosa_fuente: citerne naturelle
+    pagina_impresa: 14
+    seccion: V. Animaux
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: geografia
+    en_el_lexicon: null
+    nota: >-
+      🔴 es el JAGÜEY, que en Falcón es palabra viva. Toca la campaña de
+      topónimos y el dictado de Medina: aquí está su forma antillana con
+      glosa de 1939.
+  - forma_fuente: bryo ~ kaia
+    glosa_fuente: île
+    pagina_impresa: 14
+    seccion: V. Animaux
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: geografia
+    en_el_lexicon: cai · cayo
+    ocr: '`bryo` dudoso'
+    nota: >-
+      🔴 `kaia` es el `cai / cayo` del lexicón y el `cayos` de Las Casas v01
+      («porque cayos en esta lengua son islas»). **Tres manos, y la primaria es
+      Las Casas.** Brinton p. 12 da `Cai / cayo / cayco` con `kairi` arawak.
+  - forma_fuente: siba ~ dsiba
+    glosa_fuente: pierre
+    pagina_impresa: 14
+    seccion: V. Animaux
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: materiales
+    en_el_lexicon: 'no como taíno — el lexicón la tiene por el lado lokono'
+    ocr: 'el OCR la deja en cirílico; se lee por `sibao` y por `cacibûgiagua`'
+    nota: >-
+      🔴 RESUELVE UN PUNTO ABIERTO DEL INVENTARIO DE AYER: `siba` es taína
+      además de lokona, y Goeje la da como taína dos veces más (en `sibao` y
+      dentro de `caçibaxagua`). **Es dato para Miguel**, no una fusión.
+  - forma_fuente: sibao ~ sisbao ~ seboruko
+    glosa_fuente: pays pierreux
+    pagina_impresa: 14
+    seccion: V. Animaux
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: La Española (el Cibao)
+    campo: [geografia, toponimo]
+    en_el_lexicon: null
+  - forma_fuente: guabiniquinax ~ guaminiquinaje
+    glosa_fuente: Coelogenys Paca
+    pagina_impresa: 14
+    seccion: V. Animaux
+    fuente_que_declara_el_autor: Lovén p. 433
+    variedad_o_isla: no-declarada
+    campo: fauna
+    en_el_lexicon: null
+    nota: >-
+      ⚠️ NO es `guabina` del lexicón, que es un pez. Glosas distintas: no es
+      par (skill §2). Y no es `hutia`: la jutía de nuestro lexicón no aparece
+      con esa forma en toda la obra (medido: `hutia` 1 ocurrencia, y es dentro
+      de `yahutia` 'yautía').
+  - forma_fuente: mannti
+    glosa_fuente: Manatus
+    pagina_impresa: 14
+    seccion: V. Animaux
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: fauna
+    en_el_lexicon: manati
+    ocr: 'dudoso — es `manati`'
+    nota: >-
+      Goeje avisa de que el tupí del Pará y del bajo Amazonas tiene `manati`
+      igual, y marca Maipure `manati` con interrogante. Voz viajera: dominio
+      `viajero` de la tabla de la skill §3.
+  - forma_fuente: higuaka
+    glosa_fuente: perroquet vert
+    pagina_impresa: 14
+    seccion: V. Animaux
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: fauna
+    en_el_lexicon: null
+  - forma_fuente: anua
+    glosa_fuente: vautour
+    pagina_impresa: 14
+    seccion: V. Animaux
+    fuente_que_declara_el_autor: 'Zayas, p. 52; Friederici p. 6'
+    variedad_o_isla: no-declarada
+    campo: fauna
+    en_el_lexicon: null
+    ocr: dudoso
+    nota: SEGUNDA voz apoyada en Zayas con página.
+  - forma_fuente: inrire
+    glosa_fuente: pivert
+    pagina_impresa: 14
+    seccion: V. Animaux
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: fauna
+    en_el_lexicon: null
+    ocr: dudoso
+  - forma_fuente: hikotea
+    glosa_fuente: tortue
+    pagina_impresa: 14
+    seccion: V. Animaux
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: fauna
+    en_el_lexicon: null
+    nota: "es la `hicotea` de `tainismos_en_medina.yaml`."
+  - forma_fuente: hatmane
+    glosa_fuente: caïman
+    pagina_impresa: 14
+    seccion: V. Animaux
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: fauna
+    en_el_lexicon: 'no — el lexicón tiene `caiman`, que es otra forma'
+    ocr: dudoso
+    nota: >-
+      🔴 la forma taína que Goeje da para 'caimán' NO es `caiman`. Las formas
+      `kaimana` / `tšamana` las pone en achagua, guahibo, yavitero y piapoco —
+      el continente. `caiman` en castellano viene de ahí, no del taíno. Toca
+      la entrada `caiman` del lexicón, que hoy es `taíno` sin cita.
+  - forma_fuente: iguana ~ yuana
+    glosa_fuente: iguane
+    pagina_impresa: 14
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: fauna
+    en_el_lexicon: higuana · iwana
+    correspondencia_lokono: "A iuwana; Arua, P vuana"
+  - forma_fuente: kokuyo
+    glosa_fuente: luciole
+    pagina_impresa: 15
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: fauna
+    en_el_lexicon: null
+    ocr: 'el OCR da `koknyo`'
+    correspondencia_lokono: "A kokui; achagua kukni"
+  - forma_fuente: nigua
+    glosa_fuente: Pulex penetrans
+    pagina_impresa: 15
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: fauna
+    en_el_lexicon: null
+    nota: "es la `nigua` de `tainismos_en_medina.yaml`."
+
+  # ── VI. Árboles y plantas (pp. 14-17) ───────────────────────────────
+  - forma_fuente: yayagua
+    glosa_fuente: ananas
+    pagina_impresa: 15
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: 'Lovén pp. 405, 671'
+    variedad_o_isla: no-declarada
+    campo: flora
+    en_el_lexicon: null
+    nota: >-
+      Goeje dice que probablemente venga del tupí o de lenguas caribes
+      (`(a)nana`). Voz viajera con origen declarado FUERA del taíno.
+  - forma_fuente: mani
+    glosa_fuente: arachide
+    pagina_impresa: 15
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: flora
+    en_el_lexicon: null
+    nota: "Goeje la enfrenta al tupí `mand-ubi`."
+  - forma_fuente: hibuera
+    glosa_fuente: calebasse, Crescentia Cujete
+    pagina_impresa: 15
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: flora
+    en_el_lexicon: null
+    correspondencia_lokono: "A iwida"
+    nota: >-
+      🔴 EN ESTA ENTRADA GOEJE CITA UN «DIALECTE DE ARUBA»: `luaidanga`. Ver
+      §aruba — es lo más cerca de casa que llega esta obra.
+  - forma_fuente: yahutia
+    glosa_fuente: chou caraïbe, Xanthosoma, Colocasia
+    pagina_impresa: 15
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: flora
+    en_el_lexicon: 'no — ⚠️ NO es `hutia`, que es el roedor'
+    nota: >-
+      es la yautía. Homofonía peligrosa con `hutia`: si un cruce por forma las
+      junta, junta un tubérculo con un roedor.
+  - forma_fuente: kopey
+    glosa_fuente: Clusia spec.
+    pagina_impresa: 15
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: flora
+    en_el_lexicon: null
+  - forma_fuente: hagua ~ xagua
+    glosa_fuente: Genipa
+    pagina_impresa: 15
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: flora
+    en_el_lexicon: null
+    nota: >-
+      la jagua. Comparte forma con el `xagua` 'cueva' de `caçibaxagua`:
+      homónimos, no la misma voz.
+  - forma_fuente: guayabo ~ guava
+    glosa_fuente: goyave
+    pagina_impresa: 15
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada — marca `e`
+    variedad_o_isla: no-declarada
+    campo: flora
+    en_el_lexicon: guayaba
+  - forma_fuente: bexuko
+    glosa_fuente: liane
+    pagina_impresa: 15
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: flora
+    en_el_lexicon: null
+  - forma_fuente: baygua
+    glosa_fuente: liane à étourdir les poissons
+    pagina_impresa: 15
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: [flora, pesca]
+    en_el_lexicon: null
+    correspondencia_lokono: "A haya-li"
+  - forma_fuente: mahís
+    glosa_fuente: maïs
+    pagina_impresa: 15
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada — marca `e`
+    variedad_o_isla: no-declarada
+    campo: [flora, alimentacion]
+    en_el_lexicon: maisi · maíz
+    ocr: 'el OCR da `mahii`'
+    nota: >-
+      caribe insular (mujeres) `marisi`. La forma del lexicón, `maisi`, está
+      más cerca de la taína que de la caribe — bien.
+  - forma_fuente: yuka
+    glosa_fuente: racine de manioc
+    pagina_impresa: 16
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada — marca `e`
+    variedad_o_isla: no-declarada
+    campo: [flora, alimentacion]
+    en_el_lexicon: yuca
+    ocr: 'el OCR la deja en cirílico; se lee por el par con `yukubia`'
+  - forma_fuente: yukubia
+    glosa_fuente: plante de manioc
+    pagina_impresa: 16
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: [flora, alimentacion]
+    en_el_lexicon: null
+    nota: >-
+      🔴 la planta y la raíz tienen palabras DISTINTAS. El lexicón tiene una
+      sola (`yuca`). Es un hueco de glosa, no un error.
+  - forma_fuente: ha-tebia
+    glosa_fuente: manioc râpé
+    pagina_impresa: 16
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: alimentacion
+    en_el_lexicon: null
+  - forma_fuente: anaiboa
+    glosa_fuente: fleur, amidon de manioc
+    pagina_impresa: 16
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: 'Zayas, p. 32'
+    variedad_o_isla: no-declarada
+    campo: alimentacion
+    en_el_lexicon: null
+    nota: TERCERA voz apoyada en Zayas con página.
+  - forma_fuente: ka-sabi
+    glosa_fuente: gâteau de manioc
+    pagina_impresa: 16
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: alimentacion
+    en_el_lexicon: casabe · cazabi
+    correspondencia_lokono: "A a-sale-du 'retourner le pain sur la platine'"
+    nota: >-
+      🔴 OTRA VEZ EL ATRIBUTIVO: Goeje segmenta `ka-sabi`. Las Casas la
+      atestigua cuatro veces como `cazabí` (`taino_las_casas_1875.yaml` v03).
+      La atestación es de Las Casas; la segmentación es análisis de Goeje.
+  - forma_fuente: xauxau ~ xabxao
+    glosa_fuente: gâteau de manioc très fin
+    pagina_impresa: 16
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: alimentacion
+    en_el_lexicon: null
+  - forma_fuente: boniata
+    glosa_fuente: manioc non-venimeux
+    pagina_impresa: 16
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: [flora, alimentacion]
+    en_el_lexicon: null
+    correspondencia_lokono: "A bosali"
+  - forma_fuente: damahagua
+    glosa_fuente: Hibiscus Tiliaceus
+    pagina_impresa: 16
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: flora
+    en_el_lexicon: null
+    correspondencia_lokono: "A kayuwa"
+  - forma_fuente: manaka
+    glosa_fuente: palmier, prob. Euterpe oleracea
+    pagina_impresa: 16
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: flora
+    en_el_lexicon: null
+  - forma_fuente: yagua
+    glosa_fuente: feuille de palmier employée pour faire des paquets
+    pagina_impresa: 16
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: flora
+    en_el_lexicon: null
+    correspondencia_lokono: "A waya-li 'sacoche'"
+  - forma_fuente: papaya
+    glosa_fuente: papaye
+    pagina_impresa: 16
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada — marca `e`
+    variedad_o_isla: no-declarada
+    campo: flora
+    en_el_lexicon: papaya
+    correspondencia_lokono: "G ababai"
+    nota: >-
+      queda TAÍNA, contra lo que el mapa de fuentes de ayer daba por dudoso.
+      Que pasara al español la marca el propio Goeje con la `e`: las dos cosas
+      a la vez, que es justo la lección de «el producto de la esfera ES la
+      esfera».
+  - forma_fuente: asi
+    glosa_fuente: piment
+    pagina_impresa: 16
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: flora
+    en_el_lexicon: aji
+    correspondencia_lokono: "caribe insular (mujeres) ati"
+    nota: >-
+      Brinton p. 11 da `Aji` con arawak `achi`, sin cronista. Dos
+      intermediarios coinciden en forma y glosa; ninguno cita al cronista.
+  - forma_fuente: hobo ~ iobo
+    glosa_fuente: prunier Spondias
+    pagina_impresa: 16
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: flora
+    en_el_lexicon: null
+    correspondencia_lokono: "A hobui"
+    nota: >-
+      🔴 ES LA VOZ CON LA QUE GOEJE PILLA UN ERROR DE BRETON: dice (nota al
+      pie, p. 9) que el diccionario de Breton confunde `ubu` con el jobo, y que
+      sin errores así las correspondencias entre habla de mujeres y kalina
+      serían aún menos. Método de custodia aplicado a su propia comparanda.
+  - forma_fuente: hikako
+    glosa_fuente: prunier Chrysobalanus Icaco L.
+    pagina_impresa: 16
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: flora
+    en_el_lexicon: null
+  - forma_fuente: bila
+    glosa_fuente: urucu, Bixa
+    pagina_impresa: 16
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: 'Friederici p. 1 (y un artículo suyo de 1932)'
+    variedad_o_isla: no-declarada
+    campo: flora
+    en_el_lexicon: bixa
+    nota: >-
+      🔴 Goeje la conecta con el quechua `ašole` y el azteca `ašiotl` — o sea,
+      **duda de que sea antillana de origen**. Brinton p. 12 la da como taína
+      citando Las Casas *Hist. Apol.* cap. 241. Otro conflicto declarado.
+  - forma_fuente: 46 nombres de árboles y plantas sin identificar
+    glosa_fuente: >-
+      entre ellos: anón *hanon*, patata *batata*, Heliconia Bihai *bihao*,
+      guayacán *guayacan*, Mammea americana *mamey*, agave *maguey*, cactus
+      *tuna*
+    pagina_impresa: 17
+    seccion: VI. Arbres, plantes
+    fuente_que_declara_el_autor: 'Oviedo — «voir surtout Oviedo»'
+    variedad_o_isla: no-declarada
+    campo: flora
+    en_el_lexicon: 'batata · tuna (las dos, del censo de las 52)'
+    ocr: '`batata` sale `batala` en el OCR'
+    nota: >-
+      🔴 SALVA DOS FALSOS CEROS (regla 6). `batata` y `tuna` del lexicón SÍ
+      están en Goeje, pero no en el cuerpo del vocabulario: en esta lista de
+      las que deja sin analizar. **Y dice dónde están las otras 39: en
+      Oviedo.** Eso es una tarea concreta para la próxima sesión, no una
+      laguna. `guayacan` y `maguey` están además en
+      `6-fusion/tainismos_en_medina.yaml`.
+  - forma_fuente: 12 nombres de animales sin identificar
+    glosa_fuente: (no los lista)
+    pagina_impresa: 15
+    seccion: V. Animaux
+    fuente_que_declara_el_autor: 'Oviedo — «voir surtout Oviedo»'
+    variedad_o_isla: no-declarada
+    campo: fauna
+    en_el_lexicon: null
+    nota: >-
+      aquí es donde caerían `cobo`, `guabina` y `manigua` del lexicón, que no
+      aparecen en toda la obra (medido: 0 ocurrencias cada una). No están
+      desmentidas: están fuera del alcance de Goeje, y él remite a Oviedo.
+
+  # ── VII. Números, adverbios, verbos (p. 17) ─────────────────────────
+  - forma_fuente: heketi
+    glosa_fuente: un
+    pagina_impresa: 17
+    seccion: VII. Nombres, adverbes, verbes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: numeros
+    en_el_lexicon: 'no — el lexicón tiene `abba`, que es LOKONO'
+    correspondencia_lokono: "A iki-ni 'un seul'; G ligue-li 'seul'"
+    nota: >-
+      🔴 LA CONTRAPRUEBA, POR SEGUNDA MANO INDEPENDIENTE. El inventario de ayer
+      ya avisaba: Brinton dice que el 1 taíno es `hequeti` (Las Casas *Hist.
+      Apol.* cap. 204) y que `abba` es el 1 ARAWACK. Goeje, que no copia de
+      Brinton en esto, da `heketi` y pone `iki-ni` en la columna arawak. **Dos
+      intermediarios independientes, una atestación primaria (Las Casas cap.
+      204) y la misma conclusión**: el `abba` de nuestro lexicón, etiquetado
+      taíno, es lokono.
+  - forma_fuente: yamoka
+    glosa_fuente: deux
+    pagina_impresa: 17
+    seccion: VII. Nombres, adverbes, verbes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: numeros
+    en_el_lexicon: yamosa
+    correspondencia_lokono: "G biama"
+    nota: >-
+      ⚠️ el lexicón escribe `yamosa` y Goeje `yamoka`; Brinton (vía Las Casas
+      cap. 204) escribe `yamosa`. **La discrepancia es de lectura del mismo
+      pasaje**, no de fuente. Va a curación de glosa/forma, no se toca aquí.
+  - forma_fuente: kanokum
+    glosa_fuente: trois
+    pagina_impresa: 17
+    seccion: VII. Nombres, adverbes, verbes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: numeros
+    en_el_lexicon: null
+    nota: >-
+      Brinton da `cauocum` para el 3 (Las Casas cap. 204). Misma voz, misma
+      fuente primaria, dos transcripciones.
+  - forma_fuente: yamonko-bre
+    glosa_fuente: quatre
+    pagina_impresa: 17
+    seccion: VII. Nombres, adverbes, verbes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: numeros
+    en_el_lexicon: null
+    correspondencia_lokono: "C biam-buri"
+    nota: >-
+      Brinton da `yaraoucobre`. Otra vez la misma fuente leída distinto. Y
+      Goeje ve dentro el 'dos' (`yamo-`) más un formante, igual que el caribe
+      `biam-buri`: el 4 sería '2×2'.
+  - forma_fuente: -el
+    glosa_fuente: formatif, surtout dans les noms propres
+    pagina_impresa: 17
+    seccion: VII. Nombres, adverbes, verbes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: gramatica
+    en_el_lexicon: null
+    correspondencia_lokono: "A -ri, -li (formativos de nombres verbales)"
+    nota: >-
+      es el `-el` de `Mauciatiuu-el`, `gu-aroko-el`. ⚠️ El cruce del repo ya
+      sondeaba `-el final (antropónimo)` en `SONDAS_SUFIJO`: aquí está la razón
+      de que exista esa sonda, dicha por un arawakista.
+  - forma_fuente: gua-
+    glosa_fuente: préfixe de 1ère personne du pluriel
+    pagina_impresa: 17
+    seccion: VII. Nombres, adverbes, verbes
+    fuente_que_declara_el_autor: >-
+      Pedro Mártir — Goeje anota que Mártir lo tomaba por el artículo
+    variedad_o_isla: no-declarada
+    campo: gramatica
+    en_el_lexicon: null
+    correspondencia_lokono: "G, A, arahuaco común wa- 'nous'"
+    nota: >-
+      🔴 LA PIEZA MÁS CARA DE ESTA PARCELA PARA EL CANON. Brinton p. 12 da
+      `Gua`, 'a very frequent prefix', citando «Pet. Martyr, Decad. p. 285», y
+      lo marca de importancia alta. Goeje va más allá: dice QUÉ es (1ª plural)
+      y con qué corresponde (`wa-`). Y toca dos cosas abiertas del repo: el
+      sufijo `-gua` 'región' declarado `deuda: sin-procedencia`, y
+      `6-fusion/propuesta_gua_procedencia_2026-09-21.yaml`. ⚠️ **Son cosas
+      distintas: prefijo de persona ≠ sufijo locativo.** Que las dos se
+      escriban `gua` no las hace la misma. Esto no cierra la deuda: la pone
+      por escrito.
+  - forma_fuente: ka-
+    glosa_fuente: avec, présent
+    pagina_impresa: 17
+    seccion: VII. Nombres, adverbes, verbes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: gramatica
+    en_el_lexicon: 'el canon lo tiene como ATRIBUTIVO ka- (d21.5), con van Buurt y Perea'
+    correspondencia_lokono: "G, A, arahuaco común ka-"
+    nota: >-
+      🔴 SEGUNDA ATESTACIÓN, Y ES DE OTRA LENGUA DE LA ESFERA. El atributivo
+      `ka-` del canon se apoya hoy en van Buurt §8 (Casibari) y Perea p. 555,
+      los dos por el lado caquetío/lokono. Aquí está en TAÍNO, con las formas
+      reales que lo llevan: `ka-hoba`, `ka-sabi`, `ka-ona`, `ka-k-ona`,
+      `kasike`, `caçibaxagua`, `bu-ti-k-ako`. Siete formas del vocabulario.
+  - forma_fuente: ma-
+    glosa_fuente: sans, absent
+    pagina_impresa: 17
+    seccion: VII. Nombres, adverbes, verbes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: gramatica
+    en_el_lexicon: 'el canon lo tiene como PRIVATIVO ma- (d21.5)'
+    correspondencia_lokono: "G, A, arahuaco común ma-"
+    nota: >-
+      🔴 lo mismo para el privativo, y con formas taínas que lo llevan:
+      `m-ahi-te` 'sin diente', `Ma-tinino` 'sin padre', `Macorix`,
+      `amaiaua`. El par atributivo/privativo del canon queda apoyado en TRES
+      lenguas de la esfera, no en una.
+  - forma_fuente: mayani
+    glosa_fuente: rien
+    pagina_impresa: 17
+    seccion: VII. Nombres, adverbes, verbes
+    fuente_que_declara_el_autor: >-
+      no-declarada para la palabra suelta; la frase que la contiene es de
+      crónica (el episodio de Juan de Esquivel)
+    variedad_o_isla: no-declarada
+    campo: gramatica
+    en_el_lexicon: mayani
+    correspondencia_lokono: "C, A mani 'non, pas'; achagua maniyi"
+    nota: >-
+      🔴 ARREGLA UNA DE LAS TRES GLOSAS ROTAS DEL INVENTARIO DE AYER, Y NO
+      COMO SE ESPERABA. El lexicón dice 'negación'; Brinton la glosa 'of no
+      value'; **Goeje la glosa 'rien' (nada) y la pone justo detrás del
+      privativo `ma-`**, con `mani` 'no' en caribe y arawak. Y trae la frase:
+      `mayani-makana, Juan Desquivel daca` = 'no me mates, porque soy Juan de
+      Esquivel'. En esa frase `mayani` es una prohibición, no un valor. La
+      lectura que sostiene las tres cosas a la vez es `ma-` privativo + algo:
+      'sin-…', de donde 'nada' y de donde 'no [me] mates'. **Lo decide Miguel**
+      — la glosa se cura, no se reescribe aquí (skill §8).
+  - forma_fuente: 'mayani-makana, Juan Desquivel daca'
+    glosa_fuente: ne me tue pas, parce que je suis Jean d'Esquivel
+    pagina_impresa: 17
+    seccion: VII. Nombres, adverbes, verbes
+    fuente_que_declara_el_autor: crónica (episodio de Juan de Esquivel en La Española)
+    variedad_o_isla: no-declarada
+    campo: frase
+    en_el_lexicon: 'las piezas sí (`mayani`, `daca`); la frase no'
+    nota: >-
+      🔴 **SEGUNDA ORACIÓN TAÍNA CON GLOSA QUE ENTRA AL REPO**, y confirma la
+      primera. Pané daba `Dios naboria daca` 'yo soy siervo de Dios'
+      (`taino_pane_c1498.yaml` pv01) y se dijo que era de MACORIX. Ésta es
+      otra frase, otro episodio, y repite la misma estructura: predicado +
+      `daca` pospuesto. **Dos frases independientes con `daca` = 'yo'
+      pospuesto.** La entrada `daca` del lexicón está etiquetada
+      `taíno-reconstruido` y glosada 'mano': las dos cosas son insostenibles
+      con esto delante. Lo decide Miguel. Goeje además duda de si `makana` en
+      la frase es el 'sabre' de §III.
+  - forma_fuente: ita
+    glosa_fuente: je ne sais pas
+    pagina_impresa: 17
+    seccion: VII. Nombres, adverbes, verbes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: gramatica
+    en_el_lexicon: null
+  - forma_fuente: nakan
+    glosa_fuente: au milieu
+    pagina_impresa: 17
+    seccion: VII. Nombres, adverbes, verbes
+    fuente_que_declara_el_autor: no-declarada
+    variedad_o_isla: no-declarada
+    campo: gramatica
+    en_el_lexicon: null
+    correspondencia_lokono: "A anaka; caribe insular anakua"
+  - forma_fuente: huiho
+    glosa_fuente: "«altitudo» (titre d'honneur)"
+    pagina_impresa: 17
+    seccion: VII. Nombres, adverbes, verbes
+    fuente_que_declara_el_autor: Pedro Mártir (la glosa va en latín)
+    variedad_o_isla: no-declarada
+    campo: jerarquia
+    en_el_lexicon: null
+  - forma_fuente: manikato
+    glosa_fuente: "«courage !»"
+    pagina_impresa: 17
+    seccion: VII. Nombres, adverbes, verbes
+    fuente_que_declara_el_autor: 'Oviedo, I, pp. 435-499'
+    variedad_o_isla: no-declarada
+    campo: gramatica
+    en_el_lexicon: null
+    correspondencia_lokono: "A manikai ka-ci 'homme courageux'"
+    nota: >-
+      🔴 CITA A OVIEDO CON TOMO Y PÁGINAS, y el repo TIENE ese tomo
+      (`Oviedo_Valdes_1851_Historia_General_Indias_vol1.pdf`). Verificable hoy
+      mismo. Goeje añade que el jargon franco-caribe de Breton da `manigat`.
+  - forma_fuente: teitoka ~ teitoka techeta cynaio
+    glosa_fuente: tiens-toi tranquille (Dieu serait fort irrité)
+    pagina_impresa: 17
+    seccion: VII. Nombres, adverbes, verbes
+    fuente_que_declara_el_autor: crónica (contexto de evangelización)
+    variedad_o_isla: no-declarada
+    campo: frase
+    en_el_lexicon: null
+    nota: >-
+      TERCERA frase. Goeje la analiza: `guamechyna` = `gua-` 'nuestro' +
+      `amechy` 'señor'. Otra vez el `gua-` de 1ª plural, esta vez dentro de una
+      frase real.
+  - forma_fuente: guaiba
+    glosa_fuente: va ! (que m'importe la colère de Dieu)
+    pagina_impresa: 17
+    seccion: VII. Nombres, adverbes, verbes
+    fuente_que_declara_el_autor: crónica (mismo episodio)
+    variedad_o_isla: no-declarada
+    campo: frase
+    en_el_lexicon: null
+    nota: >-
+      CUARTA frase: `cynato machabuka guamechyna`. Con `teitoka` y la de
+      Esquivel, **Goeje recoge cuatro enunciados taínos con glosa**. El
+      inventario de ayer daba por única la de Pané.
+
+# ══════════════════════════════════════════════════════════════════════
+# 4. MORFOLOGÍA COMPARADA — lo que Goeje afirma como sistema
+# ══════════════════════════════════════════════════════════════════════
+morfologia_comparada:
+  aviso: >-
+    ESTO NO ES CAQUETÍO y NO se fusiona. Es lo que un arawakista dice del
+    TAÍNO, y vale como apoyo externo de una decisión ya tomada sobre el
+    caquetío (d21.5) y como aviso sobre otra abierta (`-gua`).
+  cuadro:
+  - morfema: 'ka-'
+    valor_segun_goeje: avec, présent (atributivo)
+    corresponde_con: "G, A y el arahuaco común ka-"
+    formas_tainas_que_lo_llevan: [ka-hoba, ka-sabi, ka-ona, ka-k-ona, kasike, caçibaxagua, bu-ti-k-ako]
+    que_dice_el_canon_del_repo: >-
+      ATRIBUTIVO `ka-` (hay X, tiene X), decidido en d21.5 → C, apoyado en van
+      Buurt §8 y Perea p. 555.
+    lectura: >-
+      apoyo externo en una TERCERA lengua de la esfera. No mueve la decisión:
+      la sostiene.
+  - morfema: 'ma-'
+    valor_segun_goeje: sans, absent (privativo)
+    corresponde_con: "G, A y el arahuaco común ma-"
+    formas_tainas_que_lo_llevan: [m-ahi-te, Matinino, Macorix, amaiaua, mayani]
+    que_dice_el_canon_del_repo: 'PRIVATIVO `ma-` (sin X), mismo d21.5'
+    lectura: ídem.
+  - morfema: 'gua-'
+    valor_segun_goeje: 1ª persona del plural (nuestro)
+    corresponde_con: "G, A, arahuaco común wa-"
+    formas_tainas_que_lo_llevan: [gu-aroko-el, guamechyna, guaoxeri]
+    que_dice_el_canon_del_repo: >-
+      `-gua` 'región' como SUFIJO toponímico, `deuda: sin-procedencia`, campaña
+      abierta (`propuesta_gua_procedencia_2026-09-21.yaml`).
+    lectura: >-
+      ⚠️ **NO es lo mismo y no cierra la deuda.** Goeje habla de un PREFIJO de
+      persona; el canon tiene un SUFIJO locativo. Lo que esto aporta es que la
+      sílaba `gua` en una forma antillana puede ser el posesivo de 1ª plural, y
+      por tanto **la sonda `gua-/wa-` del cruce puede estar contando
+      posesivos**. Es un aviso metodológico, no una procedencia.
+  - morfema: '-el'
+    valor_segun_goeje: formativo, sobre todo en nombres propios
+    corresponde_con: "G -ri, A -ri / -li (formativos de nombres verbales)"
+    formas_tainas_que_lo_llevan: [gu-aroko-el, Mauciatiuu-el]
+    que_dice_el_canon_del_repo: nada — no está en `morfemas.yaml`
+    lectura: >-
+      la sonda `-el final (antropónimo)` del cruce del repo tiene aquí su
+      justificación bibliográfica. No es propuesta de morfema: es la fuente de
+      la sonda.
+  el_orden_de_la_frase:
+    dato: >-
+      las dos frases con pronombre de 1ª persona que Goeje recoge lo ponen
+      DETRÁS: `Dios naboria daca` y `Juan Desquivel daca`.
+    lectura: >-
+      predicado nominal sin cópula y pronombre pospuesto. `taino_pane_c1498`
+      pv01 ya lo decía de la primera y advertía de que es MACORIX; la segunda
+      no lleva variedad declarada, así que el patrón deja de depender de la
+      lengua de Pané. **Sigue siendo material de morfología taína, no
+      caquetía.**
+
+# ══════════════════════════════════════════════════════════════════════
+# 5. LO QUE GOEJE SACA DEL TAÍNO — las negativas, que valen igual
+# ══════════════════════════════════════════════════════════════════════
+lo_que_goeje_saca_del_taino:
+  mots_taino_d_origine_espagnole:
+    donde: p. 18, sección propia
+    que_es: >-
+      voces que circulan como taínas y que él declara de otro origen. Es la
+      trampa 1 de esta campaña, marcada por la fuente.
+    entradas:
+    - forma: kabuya
+      glosa: cordes du hamac, plante fibreuse
+      origen_segun_goeje: español *cabuya / cabre*
+    - forma: tiburon
+      glosa: requin
+      origen_segun_goeje: >-
+        español, tomado a su vez del tupí del Brasil (cita Friederici 1930)
+    - forma: name
+      glosa: igname
+      origen_segun_goeje: 'africano (Friederici pp. 51, 71)'
+    para_el_proyecto: >-
+      ninguna de las tres está en el lexicón como taína. Cero hallazgos y es
+      buena noticia: el lexicón no tiene esa contaminación.
+  voces_que_pasan_al_caribe_insular:
+    donde: 'pp. 18-19, sección «Caribe des Iles, 15e et 16e siècle»'
+    aviso: >-
+      🔴 ESTA SECCIÓN ES LA QUE MÁS DUELE. Son voces que la tradición da por
+      taínas y que Goeje coloca en el CARIBE INSULAR.
+    entradas:
+    - forma: behiko
+      glosa: homme-médecin
+      que_dice_goeje: 'caribe insular, usado «à Haïti, selon Las Casas»'
+      comparanda: "C boyahiku, boye; kalina puyei"
+      en_el_lexicon: bejique
+      consecuencia: >-
+        la etiqueta `taíno` de `bejique` queda en duda. Regla 2: en duda,
+        degradar. **Pero no se degrada aquí** — esto PROPONE. La forma taína
+        que Goeje sí da para lo mismo es `buhuitihu`.
+    - forma: piragua
+      glosa: grand canot à voile
+      que_dice_goeje: >-
+        la atestigua en Oviedo I p. 171; dice que los kalina de Guayana llaman
+        así a sus canoas de mar, que **no existe en garífuna ni en caribe de
+        Honduras**, y que quizá sea composición con el español *vela*
+      en_el_lexicon: piragua
+      consecuencia: >-
+        `piragua` está en el lexicón como `taíno`. Su propio especialista de
+        referencia (a) no la pone entre las taínas, (b) sospecha que lleva
+        dentro una palabra castellana, y (c) avisa aparte de que `piragua`,
+        `kanoa` y `hamaka` viajaron a otras lenguas indígenas **por vía del
+        español**. Tres razones para mirarla. Lo decide Miguel.
+    - forma: tuob
+      glosa: or
+      que_dice_goeje: '«lengua Macorix de arriba?», de Colón, 13 de enero de 1493'
+      en_el_lexicon: null
+      consecuencia: >-
+        TERCERA palabra para 'oro' en las Antillas (`ka-ona`, `nukai`, `tuob`),
+        cada una de una variedad distinta. Es la prueba en tres piezas de que
+        «el taíno» de una lista es varias lenguas.
+    - forma: mabi / nabi
+      glosa: igname, Dioscorea
+      que_dice_goeje: >-
+        de Chanca y Colón en Guadalupe; cita la frase de época «a este age
+        llaman los de Caribi nabi»
+      en_el_lexicon: null
+    - forma: tabunuko
+      glosa: arbre à résine pour calfater
+      que_dice_goeje: 'Gómara, Puerto Rico; Friederici p. 90'
+      en_el_lexicon: null
+    - forma: baeza
+      glosa: négation
+      que_dice_goeje: >-
+        «lengua Macorix de arriba», Las Casas *Apol. Hist.* cap. CCXLI; compara
+        con el sufijo `-pa` de caribe y kalina
+      en_el_lexicon: null
+      consecuencia: >-
+        🔴 hay DOS negaciones antillanas atestiguadas y son de lenguas
+        distintas: `mayani` (taíno, §VII) y `baeza` (macorix de arriba). Quien
+        meta las dos en una lista «taína» borra la distinción que la fuente
+        hace.
+  maboya:
+    que_dice_goeje: >-
+      da `ma-poya` como forma del caribe de Honduras y `mapoya` / `mafuiya` /
+      `mafia` 'diable' en el caribe insular; la voz taína para el espíritu del
+      muerto es `hupia`. Propone que `ma-poya` sea 'sin-alma'.
+    en_el_lexicon: maboya (fuente `taíno`)
+    consecuencia: >-
+      `maboya` es una de las nueve voces de arqueología antillana que el
+      encargo daba por sin cita. Ésta es su cita: y no dice lo que la entrada
+      dice. **Lo decide Miguel.**
+  hutia:
+    medido: >-
+      `hutia` aparece **1 vez en toda la obra** y es dentro de `yahutia`, que
+      es la yautía (tubérculo), no el roedor. El roedor antillano que Goeje sí
+      recoge es `guabiniquinax` (Coelogenys paca).
+    consecuencia: >-
+      `hutia` del lexicón no tiene apoyo en Goeje. No está desmentida: está
+      entre los 12 nombres de animales que él deja sin identificar y manda
+      buscar en Oviedo.
+
+# ══════════════════════════════════════════════════════════════════════
+# 6. ARUBA — lo más cerca de casa que llega esta obra
+# ══════════════════════════════════════════════════════════════════════
+aruba:
+  hallazgo: >-
+    Goeje cita dos veces un «dialecte de Aruba» dentro de sus columnas
+    arahuacas: `luaidanga` 'calabaza, Crescentia Cujete' (p. 15, junto al
+    lokono `iwida` y al taíno `hibuera`) y `hanuhana` 'hormiga' (en el
+    vocabulario caribe).
+  por_que_importa_aqui: >-
+    Aruba está en la Kaketiana. Un arawakista que en 1939 tiene material de un
+    «dialecto de Aruba» es una pista de fuente para el proyecto **por el lado
+    caquetío**, no por el taíno — y no estaba en el mapa de fuentes de ayer.
+  que_no_dice: >-
+    no dice de dónde lo saca. Su lista de literatura (pp. 19-20 y el
+    suplemento de la p. 110) hay que leerla para saberlo. **No se ha leído.**
+  siguiente_paso_propuesto: >-
+    buscar la fuente arubana de Goeje en su bibliografía, y cruzarla con
+    `Gatschet_1885_Aruba_texto.txt` y con `VanBuurt_2014_CaquetioWords_Papiamentu.txt`,
+    que ya están en el repo. Si es Gatschet, no hay nada nuevo; si no lo es,
+    hay una fuente arubana que el proyecto no conoce.
+
+# ══════════════════════════════════════════════════════════════════════
+# 7. NEGATIVAS MEDIDAS (regla 6: un cero se verifica)
+# ══════════════════════════════════════════════════════════════════════
+negativas:
+  metodo: >-
+    búsqueda sobre el txt aplanado (espacios colapsados, para que el salto de
+    línea no rompa la palabra), con raíz corta y sin acentos.
+  resultados:
+  - busqueda: caquetío / caiquetío / Curiana / Coriana / Paraguaná
+    resultado: 0
+    lectura: >-
+      esta obra NO habla del caquetío. Se mina por el taíno y por la esfera,
+      no por la lengua de casa.
+  - busqueda: 'cobo'
+    resultado: 0
+    lectura: sin apoyo en Goeje; ver los 12 animales sin identificar.
+  - busqueda: 'guabina'
+    resultado: 0
+    lectura: >-
+      ⚠️ `guabiniquinax` no cuenta: glosa distinta (paca, no pez). Sin apoyo.
+  - busqueda: 'manigua'
+    resultado: 0
+    lectura: sin apoyo en Goeje.
+  - busqueda: 'taita'
+    resultado: 0
+    lectura: >-
+      la única atestación conocida de `taita` sigue siendo la de Brinton vía
+      «Richardo» = Pichardo, un diccionario del español de Cuba del s. XIX.
+      Goeje no la recoge. El inventario de ayer ya la señalaba como candidata
+      a degradar; esto lo refuerza sin cerrarlo.
+  - busqueda: 'batata'
+    resultado: 'aparente 0 — FALSO'
+    lectura: >-
+      🔴 el OCR la escribe `batala` dentro de la lista de las 46 plantas sin
+      identificar. **Cero de consulta, no de fuente** (regla 6). Igual
+      `tuna`, que sí sale con su grafía.
+  - busqueda: 'lokono'
+    resultado: 'aparente 0 — FALSO'
+    lectura: >-
+      Goeje escribe `Arawak` (29 veces) y `A` en la tabla. Mismo caso que
+      Brinton.
+  - busqueda: 'acoa, aduri, agari, akcicyaa, thigisi, wacusi, wagulo'
+    resultado: 0 (las siete)
+    lectura: >-
+      son las formas `taíno-reconstruido` que el propio proyecto generó desde
+      el lokono con `reconstruir_taino()`. Que no estén aquí **es lo esperado
+      y es la contraprueba del método**: un vocabulario taíno real no las
+      tiene, porque nunca fueron taínas.
+
+# ══════════════════════════════════════════════════════════════════════
+# 8. LO QUE ESTA OBRA NO DIO
+# ══════════════════════════════════════════════════════════════════════
+lo_que_no_dio:
+- >-
+  **ni una glosa caquetía.** 0 menciones. Esperado, y hay que decirlo para que
+  nadie vuelva a mirar aquí buscándolas.
+- >-
+  **la asignación voz a voz a una variedad.** Goeje nombra Macorix, Ciguayo,
+  lucayo y «lengua de Cuba», pero sólo declara la isla o la variedad en **4**
+  de las voces del vocabulario (`guaymaro` Cuba, `nukai` Bahamas, `Macorix` y
+  `Ciguayo` como etnónimos) más las tres de la sección caribe (`tuob`, `baeza`
+  macorix de arriba; `mabi` Guadalupe). Para el resto escribe `T` a secas. **La
+  obra que asigna cada voz a su variedad sigue siendo Granberry y Vescelius
+  2004, y sigue sin conseguirse.**
+- >-
+  **el kalinago.** Está —pp. 31-110, con habla de hombres y de mujeres— y no se
+  leyó entrada a entrada. Las 23 entradas kalinago del lexicón siguen sin
+  tocar. Es la sesión siguiente más obvia de toda la campaña.
+- '**la errata de 1940**: el enlace devuelve 500.'
+
+# ══════════════════════════════════════════════════════════════════════
+# 9. PROPUESTA (regla 5 — esto NO toca canon)
+# ══════════════════════════════════════════════════════════════════════
+propuesta:
+  para_miguel:
+  - id: g1
+    asunto: '`bejique` — ¿taíno o caribe insular?'
+    evidencia: >-
+      Goeje p. 18 pone `behiko` en el caribe insular del s. XV-XVI y anota que
+      en Haití se usaba «según Las Casas»; la forma taína que él da para
+      'hombre-médico' es `buhuitihu`. Brinton p. 12 la da como antillana sin
+      cronista, comparándola con `piaye` arawak.
+    opciones: >-
+      (A) dejarla `taíno` y anotar la duda en `notas`; (B) degradarla a
+      `kalinago` con cita de Goeje; (C) dejarla `taíno` y añadir `buhuitihu`
+      como forma taína aparte. Regla 2 empuja hacia A o B.
+  - id: g2
+    asunto: '`piragua` — tres razones para mirarla'
+    evidencia: >-
+      Goeje la clasifica en el caribe insular, sospecha composición con el
+      español *vela*, y avisa de que ella, `kanoa` y `hamaka` viajaron por vía
+      del español.
+    opciones: >-
+      (A) dejarla `taíno`; (B) pasarla a `kalinago`; (C) marcarla
+      `esfera-indecidible` en `notas` y sacarla de los cruces.
+  - id: g3
+    asunto: '`maboya` — la única cita que aparece la da como caribe'
+    evidencia: 'Goeje p. 8: `ma-poya` es G (caribe de Honduras); la taína es `hupia`.'
+    opciones: '(A) dejarla; (B) pasarla a `kalinago`; (C) añadir `hupia` como la taína.'
+  - id: g4
+    asunto: '`abba` ''uno'' — segunda mano independiente contra'
+    evidencia: >-
+      Goeje da `heketi` como el 1 taíno y `iki-ni` como el 1 arawak. Brinton
+      dice lo mismo por otro camino y cita Las Casas cap. 204.
+    opciones: >-
+      (A) reetiquetar `abba` como lokono; (B) archivarla en `FUERA_DEL_HABLA` y
+      proponer `heketi` con cita de Las Casas; (C) dejarla hasta leer el cap.
+      204 en la *Apologética*, que no está en el repo.
+    recomendacion_del_minador: >-
+      C primero y B después. Es literalmente el caso de la política «donde hay
+      forma atestiguada, manda la atestiguada», aplicada al taíno; pero el
+      capítulo hay que leerlo, y no lo tenemos.
+  - id: g5
+    asunto: '`daca` — dos frases independientes, y la etiqueta no aguanta'
+    evidencia: >-
+      `Dios naboria daca` (Pané, Macorix) y `mayani-makana, Juan Desquivel
+      daca` (Goeje p. 17) ponen las dos `daca` = 'yo' pospuesto. El lexicón la
+      tiene `taíno-reconstruido` con glosa 'mano'.
+    opciones: >-
+      (A) corregir glosa a 'yo' y capa a `taíno` con cita doble; (B) corregir
+      sólo la glosa; (C) archivarla.
+  - id: g6
+    asunto: '`mayani` — la glosa'
+    evidencia: >-
+      lexicón 'negación'; Brinton 'of no value'; Goeje 'rien', detrás del
+      privativo `ma-`, con la frase de Esquivel donde es una prohibición.
+    opciones: >-
+      (A) glosar 'nada' y anotar el uso prohibitivo; (B) dejar 'negación' y
+      anotar; (C) partir en dos entradas.
+  - id: g7
+    asunto: 'el atributivo/privativo `ka-`/`ma-` tiene ahora apoyo taíno'
+    evidencia: 'Goeje p. 17, con siete formas taínas que llevan `ka-` y cinco que llevan `ma-`.'
+    opciones: >-
+      (A) añadir la cita de Goeje a la evidencia de d21.5 en
+      `2-lengua/morfologia.md`; (B) no tocar nada, ya está decidido.
+    recomendacion_del_minador: >-
+      A. No mueve el motor ni el scorer, y convierte una decisión apoyada en
+      dos fuentes en una apoyada en tres lenguas de la esfera.
+  lo_que_este_archivo_NO_propone: >-
+    ni un cognado nuevo a `cognados.yaml`, ni una entrada nueva a
+    `curiana_lexicon.py`, ni un morfema a `morfemas.yaml`. Esto es comparanda
+    taína con su cadena de custodia. Lo que decide qué entra es Miguel.
