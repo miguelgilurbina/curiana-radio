@@ -1,0 +1,208 @@
+# Decisiones de Miguel sobre las CAMPAÑAS del 2026-09-21
+#
+# Ocho campañas con agentes (#184-#192): `macana`, `-gua`, el nominalizador y las
+# cinco del taíno. Cada una dejó su propuesta en `6-fusion/` con opciones con
+# letra; aquí se registra lo que Miguel decide, UNA A UNA, con su cita literal —
+# como la tanda del 21. Lo que cambia el prompt NO se aplica al decidirse: se
+# junta en un solo corte de serie con una sola medición.
+#
+# Regla de lectura: `decision_literal` es lo que Miguel escribió, entero. Si la
+# cita es una pregunta, no es una decisión (lección del 2026-09-17).
+
+dc.1_macana:
+  tipo: decisión de canon (sin corte)
+  pregunta: >-
+    El apoyo achagua que el escriba propuso para `macana` no existe. ¿Se queda
+    `caquetío-reconstruido` (A), vuelve a `taíno` (C) o baja a retroabstraído con
+    la glosa de Medina (D)?
+  decision_literal: '«Si voy con tu recomendación.»'
+  la_recomendacion_que_acepta: >-
+    «Recomiendo A ahora. La opción C la dejaría dentro de la conversación del
+    taíno, porque es la misma pregunta: qué hacemos con las voces que sabemos
+    taínas en boca de gente del siglo XV. No conviene resolverla palabra a
+    palabra.»
+  eleccion: A — y C queda DENTRO de la decisión de clase sobre los tainismos
+  medido: >-
+    Cero fuentes la dan como caquetía (Zavala, van Buurt, Gatschet, Neira y
+    Ribero, Perea, Pané). Neira y Ribero 1762: `Macana → Guacaba`; las tres
+    formas que se citaban glosan «Dormidera», «Mazorca de mais» e «Yndecible».
+    Alvarado 1921 p. 189: «voz taína». Medina: 'algo muy grande o
+    desproporcionado', página sin dictar.
+  lectura_operativa: >-
+    La etiqueta no se mueve. En `notas` de la entrada consta que el achagua NO la
+    sostiene y cuál es la voz atestiguada para el arma. Los dos textos que
+    afirmaban el apoyo falso (d21.8 y el comentario de la regla `-kana`) quedan
+    corregidos.
+  verificado_que_no_mueve_nada: >-
+    `notas` no llega al prompt: la huella de los 378 prompts del pre-vuelo
+    (control, escena y Capubana) es la misma antes y después, sha256
+    faa1a03902b2cd42. `fuente` y `categoria` intactas.
+  lo_que_el_escriba_dijo_mal_al_preguntar: >-
+    Al presentar la decisión se dijo que `macana` «es la única entrada de la
+    categoría armas; si sale, el lexicón se queda sin voz de arma». Es cierto
+    del CAMPO `categoria` y falso del lexicón: `poporo` es
+    caquetío-ATESTIGUADO — Alvarado 1921 p. 255, «Arma, a manera de porra,
+    usada por los antiguos Caquetíos y los Guagiros», ref. Castellanos,
+    Elegías — y no lleva `categoria`. Verificado en el PDF. La elección A no
+    dependía de eso (A no saca nada), pero sí cambia lo que viene después: ver
+    `abre`.
+  abre: >-
+    `macana` frente a `poporo` repite el patrón de `kali` frente a `kasi`: en
+    la base, `macana` 45 usos de 32 agentes; `poporo`, 2 usos de 2. Por la
+    política d19.b NO es par automático —las glosas no son idénticas ('maza-porra,
+    arma de combate ceremonial' ≠ 'macana, garrote de madera dura, arma de
+    combate'), solapamiento parcial = curación—, pero por d19.c («lo
+    reconstruido lo usemos para nuestros blind spots») el garrote NO es un punto
+    ciego: hay voz atestiguada. Queda para la decisión de clase de los tainismos.
+  se_aplica_en: 'curiana_lexicon.py (`notas` de `macana`); #193'
+
+dc.2_gua:
+  tipo: decisión de canon + corte de serie
+  pregunta: >-
+    `-gua` tiene fuente para la FORMA (Oliver 1989 cap. 2 p. 148, «f) -wa
+    [gua-]») y ninguna para la glosa que el motor enseña («región de»); la única
+    glosa atestiguada es la contraria (Zavala #122, «Conuco, heredad, terreno
+    cercado»). ¿A se queda · B se re-glosa con Zavala · C se enseña sin glosa · D
+    se retira? Y aparte, ¿E: el lema pasa a `-wa`?
+  decision_literal: '«Pensaba que ya habíamos resuelto está. Sigamos tu recomendación»'
+  y_antes: >-
+    «Ok, me gustaría seguir tus recomendaciones, pero hay que mergear primero.»
+    — dicho con las tres primeras campañas sobre la mesa y sus recomendaciones
+    escritas. Miguel la daba por resuelta desde ahí; el escriba volvió a
+    preguntar y no hacía falta.
+  la_recomendacion_que_acepta: C + E
+  eleccion: C + E
+  lectura_operativa: >-
+    (C) `-gua` se enseña SIN GLOSA, como `-ana` desde d21.6: desinencia
+    toponímica atestiguada cuyo valor nadie anotó; el agente puede proponer el
+    suyo entre corchetes. La forma pasa a citar a Oliver 1989 cap. 2 p. 148 y
+    deja de ser `deuda: sin-procedencia`. NO se re-glosa con Zavala #122 (B): que
+    el sustantivo `gua` «conuco» y el sufijo toponímico `-wa` sean el mismo
+    morfema es inferencia del proyecto, no de una fuente — el error de
+    `macana`/`-kana` y de `apopo`/`-po`. (E) El lema pasa a `-wa`, su forma
+    fonémica (D5): Oliver escribe «gua=/wa/» y el lexicón ya lematiza `parawa`,
+    `kiwa`, `siwa`. Mismo movimiento que `-bacoa` → `-bakoa` (d21.14 A).
+  lo_que_hay_que_medir_antes: >-
+    E cambia una clave de `TODAS_LAS_REGLAS` → mueve `_SUFIJOS_CAQ` →
+    `nucleo_de_token()`: se mide como `-bakoa`, contando cuántas formas cambian
+    de borde y cuántas cambian `es_raiz_de_ninguna_parte()` o
+    `_familia_de_token()`. Ojo con el posesivo `wa-` («nuestro», PREFIJO) y el
+    sustantivo `wa` «conuco»: son otra posición y otra clase, pero la campaña
+    del cruce con el taíno contó cuatro lecturas de la sílaba `wa` sin declarar
+    una frente a otra.
+  se_aplica_en: 'NO aplicado: va a la próxima tanda, en un solo corte con una sola medición'
+
+dc.3_nominalizador:
+  tipo: decisión de canon (A, B, E, F — sin corte) + corte de serie (enseñar la derivación cero)
+  pregunta: >-
+    La campaña de retroabstracción (d21.11 C) cerró en negativo. ¿A cerrar la
+    pregunta · B declarar la derivación cero · C dejarla abierta · D proponer un
+    `-po` agentivo? Y sobre §11: ¿E actualizar la cifra · F partirla en dos?
+  decision_literal: '«Ok, me gustaría seguir tus recomendaciones, pero hay que mergear primero.»'
+  reafirmada: '«Pensaba que ya habíamos resuelto está. Sigamos tu recomendación»'
+  la_recomendacion_que_acepta: '«A + B… Aparte, corregir la §11 para separar las dos invenciones.»'
+  eleccion: A + B, y E + F para §11
+  lectura_operativa: >-
+    (A) La opción A de d21.11 deja de ser provisional: no se retroabstrae ningún
+    nominalizador y sigue sin importarse el `-hù`/`-hi` lokono. (B) Se declara en
+    `morfologia.md` que el atestiguado registra DERIVACIÓN CERO —`jusual` #180
+    «Sembrar, siembra, sembradío. Conuco», `jacuque` #170, `beceremicore` #39,
+    `etamo` #120, y `quiricias` #217—, con la reserva de que eso describe lo que
+    la FUENTE registra, no lo que la lengua hacía. (E, F) §11 pasa de «la
+    nominalización con el posesivo, 1.107 usos» a DOS invenciones: posesivo
+    sobre verbo (470 usos, 48 formas: nominalización) y privativo/atributivo
+    sobre verbo (490 usos, 44 formas: no lo es; d21.5 ya dijo que `ma-`/`ka-` no
+    son posesivos). 960 usos, 92 formas.
+  lo_que_queda_para_la_tanda: >-
+    Que la PLANTILLA enseñe la derivación cero es cambio de prompt: no aplicado.
+  de_paso_sin_decidir: >-
+    H campaña del prefijo `ja-` (7 de 13 lemas en J- son verbos, p = 7,4e-05) ·
+    I `cazebo` = `cazi` + `ebo` a la mesa de `-ebo` · J curar `cumaragua`
+    (Arcaya p. 75 escribe «viruela», Zavala leyó «ciruela»; cambiar una glosa
+    mueve canon). Y una deuda grande: Angulo Molina, de quien salen los 19
+    verbos de acción del glosario, no está en el repo.
+  se_aplica_en: '2-lengua/morfologia.md §10 (fila «Nominalización») y §11; #193'
+
+dc.4_taino_el_episodio_de_la_hija_y_datihao:
+  tipo: corrección de Miguel al escriba + hipótesis declarada (SIN decidir la etiqueta)
+  lo_que_dijo_miguel: >-
+    «Ojo porque aunque no sepamos de contacto precolombino conocemos que durante
+    la conquista Manaure supo de parientes (incluso de su hija) que fue raptada
+    y llevada a la Española. Y él mandó gentes a contactarlos y recuperarlos.
+    Por lo que debe haber habido contacto precolombino. Y diao y diaitao que son
+    símiles son las versiones caquetías de la versión Taína. Un cognado que hace
+    match.»
+  lo_que_las_fuentes_del_repo_dicen:
+    el_episodio: >-
+      ES CIERTO Y ESTÁ EN EL REPO, y la campaña del taíno (T5) sólo recogió la
+      mitad (la saca de 1513; no la embajada ni la hija). Carta del Factor Juan
+      de Ampíes al Rey, desde Santo Domingo, c. 1525-1526, copiada por Arcaya
+      1920 pp. 160-161 (publicada en Oviedo y Baños, ed. Fernández Duro, II p.
+      209): (1) los indios de la costa —«desde Paraguachoa hasta la punta de
+      Coquibacoa… Sauca e Paraguaná»— «muchas veces se pasaban allá [a Curazao,
+      Aruba y Bonaire] a holgar con ellos»; (2) «acordaron de me enviar un
+      cacique que se dice D. Juan Baracoica, que está en las islas y es su
+      pariente y deudo, con otro indio… y esto principalmente me enviaba a decir
+      un gran cacique que está diez leguas la tierra adentro en la provincia de
+      Coro, y el dicho Cacique se llama Naure o Anaure»; (3) Ampíes manda una
+      carabela con cinco cristianos, esos indios «e una india que en mi casa se
+      ha criado… para que les hablase»; (4) «aportó allí una armada de
+      cristianos, e tomó parte de aquellos indios e una india hija del gran
+      cacique de Coro, e los trujeron a esta isla por esclavos»; Ampíes se queja,
+      los jueces castigan y mandan «volver los indios»; «este gran cacique al
+      cual trujeron una hija suya con su marido». Arcaya pp. 166-167, con
+      Castellanos p. 185: la identifica con Doña Juana, mujer del «señor» de
+      Hurehurebo (Jurijurebo, Paraguaná), apadrinada y libertada por Ampíes, que
+      «vinieron con él en un navío a sus vasallos y a su señorío»; y Federmann
+      halla en Paraguaná en 1531 a una india llevada a Santo Domingo y rescatada
+      por Ampíes.
+    lo_que_prueba: >-
+      (a) Contacto costa ↔ islas ABC por cuenta propia, habitual, y con
+      PARENTESCO a través del agua (Baracoica, «pariente y deudo» de Manaure, vive
+      en las islas): la esfera llega a las islas, y esto sí es de antes del
+      contacto. (b) Manaure MANDÓ embajada, con un pariente a la cabeza: Miguel
+      tiene razón. (c) Contacto costa/islas ↔ La Española entre 1513 y 1526, en
+      barcos castellanos y por el canal de Ampíes.
+    lo_que_no_prueba_por_si_solo: >-
+      Que hubiera viaje o noticia de La Española ANTES de 1499. El paso de (c) a
+      «contacto precolombino» es una inferencia. Regla 3 del proyecto:
+      precontacto ≠ colonial, no se proyecta sin decidirlo. Arqueología (el
+      dabajuroide se detiene en las ABC) y genética siguen sin dar nada.
+  datihao:
+    correccion_al_escriba: >-
+      El escriba dijo el 2026-09-21 que `datihao` «es taíno de Boriquén, no
+      caquetío» y que «nuestro `diao` cuelga de ahí». Las dos cosas estaban mal
+      dichas. `diao` es OTRO lexema, con atestación caquetía propia (Zavala 2015
+      p. 67; Oliver 1989 cap. 3 p. 251, «the main diao or great cacique») y otra
+      etimología en Oliver (`/d-ia(o)/`, sobre la raíz lokona `/d-ai-/`); no
+      cuelga del pasaje de San Juan. Y `datihao` tiene en Oviedo DOS
+      atestaciones: la de San Juan (tomo I p. 473, en boca de Agüeybana, hallada
+      hoy) y la de «los indios de la Provincia de Venezuela», que es de donde el canon
+      la tiene y que está en otro tomo —el repo la cita por Jahn 1927 p. 213 n. 29
+      como «apéndice t. IV», y el díao por «t. II p. 299»; ninguno de los dos
+      tomos está en el repo—. Oliver, n. 42 p. 146,
+      tras dudar, concluye que fue probablemente «equally shared by both Taíno
+      and Caquetío»; p. 147: `/da-/` 1ª sg. + `/-(i)tiao/` sobre la raíz de
+      parentesco `/atti/` (lokono `da-tti`).
+    por_que_el_cruce_dio_cero: >-
+      El cruce taíno↔caquetío (#192) midió 0 parejas porque `datihao` estaba sólo
+      del lado caquetío: su gemela taína entró hoy con la transcripción de Oviedo
+      (#189). Es la pareja léxica mejor atestiguada entre las dos lenguas, y
+      nombra una INSTITUCIÓN —el intercambio de nombres, el guatiao—. Está hecha
+      con morfología heredada en las dos (`da-` 1ª sg.), lo que apunta a
+      cognado; y es palabra de alianza entre señores, que es justo lo que
+      viajaría por contacto. Las dos lecturas acercan el taíno; ninguna prueba el
+      viaje.
+  etiqueta_propuesta_pendiente_de_miguel: >-
+    Tres afirmaciones, tres etiquetas: costa ↔ ABC con parentesco =
+    atestiguado (de época colonial temprana, describe un hábito); costa/islas ↔
+    La Española 1513-1526 = atestiguado, COLONIAL; contacto precolombino con las
+    Antillas Mayores = hipotético, con el argumento de Miguel escrito (el
+    parentesco a través del agua, la embajada, la institución y la voz
+    compartidas). Miguel decide si sube.
+  deuda: >-
+    Oviedo y Valdés, tomos II y IV: ahí están el díao (t. II p. 299, el libro de
+    la Provincia de Venezuela) y —según Jahn— el `datihao` caquetío (apéndice del
+    t. IV, que la campaña de Oviedo no pudo localizar). Dominio público; no está en el
+    repo. Y el cruce de #192 se re-corre con #189 y #190 dentro.
+  se_aplica_en: 'nada aplicado; enmienda la lectura de 6-fusion/taino_en_la_esfera_2026-09-21.yaml'

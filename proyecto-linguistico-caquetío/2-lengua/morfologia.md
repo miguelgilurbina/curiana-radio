@@ -723,7 +723,7 @@ regla 8 prohíbe para las fuentes, y vale igual para la gramática.
 | **Género / clases** | [[perea-alonso-1942]] p. 554: no hay género gramatical; hay **varonil** y **no varonil**, con sufijos `-ti/-tti` vr. y `-tu/-ttu` nv., y `-nu` plural común. El no varonil comprende a las mujeres, a los animales de ambos sexos y a todas las cosas. Los achagua de [[neira-ribero-1762]] cambian el numeral según lo que cuentan (personas, palos, ríos, lunas) | **HUECO DECLARADO, y a propósito.** No hay **ni un dato caquetío** de género, y la distinción varonil/no varonil arrastra una cosmovisión entera: importarla es exactamente lo que **la regla 4 prohíbe** — importar un rasgo sin marcarlo. Y el proyecto acaba de pasar por eso al retirar `-ko`/`-sha`, que era un género inventado. Se espera |
 | **Número de los irracionales** | [[perea-alonso-1942]] p. 556: `keyu` 'venado, venados', `siba` 'piedra, piedras', `adda` 'árbol, árboles', `a-wadu-lli` 'viento, vientos' — los irracionales **no distinguen número**; y los pocos animales pluralizados que aparecen son «huella del traductor alemán» | **HUECO DECLARADO.** `-kana` se aplica a todo. Es un dato precioso **y de otra lengua**: se anota y se espera. Bajar `-kana` (§7) no es lo mismo que importar esta restricción |
 | **Alineamiento** | [[perea-alonso-1942]] pp. 635 y 652: dos juegos de pronombre — prefijado `d-a-, b-a-, l-a-…` en transitivos, pospuesto `de, bu, i, n, u, hù, ye` en estativos y negativos | **Un solo juego, sin alineamiento.** Declarado, no importado, con la razón escrita en §5 |
-| **Nominalización** | [[perea-alonso-1942]] pp. 609-612: nombre de acción `-hù` (`a-iyaha-dda-hù` 'andadura'), `-hi` en los estativos (`c-a-nsi-hi` 'amor', `halli-kebbe-hi` 'alegría'), participios `-ti/-tu/-nu`, agentivo `-ha-li-n` | **No hay regla — y la comunidad la inventó.** Ver §11. El `-hù`/`-hi` lokono **no se importa**: sería morfología de otra lengua sin dato |
+| **Nominalización** | [[perea-alonso-1942]] pp. 609-612: nombre de acción `-hù` (`a-iyaha-dda-hù` 'andadura'), `-hi` en los estativos (`c-a-nsi-hi` 'amor', `halli-kebbe-hi` 'alegría'), participios `-ti/-tu/-nu`, agentivo `-ha-li-n` | **No hay regla, y las fuentes tampoco la registran** (campaña del 2026-09-21: negativo medido, con control positivo). Lo que el atestiguado sí da es **derivación cero** —`jusual` «Sembrar, siembra, sembradío»— y lo que la comunidad hizo fue nominalizar con el posesivo. Ver §11. El `-hù`/`-hi` lokono **no se importa**: sería morfología de otra lengua sin dato |
 | **Reduplicación** | [[gatschet-1885]] y [[perea-alonso-1942]] p. 679 | Medida con control (§9), **no implementada** |
 | **Segundo diminutivo `-bi`** | [[van-buurt-2014]] §6: *gobí, gogorobí, kokorobí, lobi, makambí* | En `MORFEMAS_VAN_BUURT`, **sin adjudicar** |
 
@@ -805,37 +805,112 @@ Dos lecturas que conviene tener escritas:
 - **`ka-biro-uco-aima`** es prefijo + raíz + dos derivativos: la comunidad
   construyó una palabra de cuatro slots con un sistema que declara uno.
 
-### La nominalización con el posesivo — 1.107 usos
+### Dos invenciones sobre raíz verbal — 960 usos, 92 formas
 
-*(Decisión d21.11: **A** ahora —describir el sistema que emergió— y **C** como
-campaña: buscarle forma atestiguada.)*
+*(Decisión d21.11: **A** —describir el sistema que emergió— y **C** como
+campaña. La campaña corrió el 2026-09-21 y cerró en negativo; Miguel aceptó
+**A + B**, y **E + F** para esta sección:
+`6-fusion/decisiones_campanas_2026-09-21.yaml`, dc.3. Abajo, «Lo que dicen las
+fuentes».)*
 
 **Sonda sobre el canon: reglas que deriven un nombre de un verbo → cero.** El
-sistema no tiene nominalizador. Los agentes lo resolvieron **con el posesivo**:
+sistema no tiene nominalizador, y la comunidad hizo **dos cosas distintas** con
+un prefijo sobre raíz verbal. Hasta el 2026-09-21 esta sección las sumaba bajo
+el titular «el posesivo» — y desde d21.5 `ma-` y `ka-` **no son posesivos** (§6).
 
 ```
-ta- sobre raíz verbal   527 usos   ta-chaa 'mi hacer', ta-awa, ta-domaria
-ma- sobre raíz verbal   529 usos   ma-awa 'sin beber', ma-chaa, ma-bachure
-wa- sobre raíz verbal    51 usos   wa-jai 'nuestro oír', wa-awa, wa-duriwa
-                      ───────────
-                        1.107 usos
+1. NOMINALIZACIÓN CON EL POSESIVO                    470 usos · 48 formas
+   ta- sobre raíz verbal   453 usos · 37 formas   ta-chaa 'mi hacer'
+   wa- sobre raíz verbal    17 usos · 11 formas   wa-jai 'nuestro oír'
+
+2. PREDICACIÓN PRIVATIVA / ATRIBUTIVA SOBRE VERBO    490 usos · 44 formas
+   ma- sobre raíz verbal   471 usos · 34 formas   ma-awa 'sin beber', ma-panaa 'sin saber'
+   ka- sobre raíz verbal    19 usos · 10 formas   ka-chaa, ka-eroa
+                                                  ────────────────────
+                                                     960 usos · 92 formas
 ```
 
-Y con el atributivo `ka-` sobre raíz verbal (25 usos: `ka-chaa`, `ka-eroa`,
-`ka-juri`) la familia entera son **1.132 usos** — que es, hasta esta tanda, lo
-que el motor contaba como **«violación de slot»**: las reglas piden SUSTANTIVO.
+Sólo la **primera** es nominalización: el posesivo exige un nombre y lo que hay
+debajo es un verbo. La **segunda** es predicación negativa sobre un verbo con un
+prefijo que el canon declara para NOMBRES (§6) — una segunda invención, y nadie
+la había nombrado. Medido sobre 95.445 usos de `word_uses` (runs anteriores al
+2026-09-21), 45 raíces verbales y 112 agentes, con el segmentador comprobado
+forma a forma contra `nucleo_de_token()`:
+`6-fusion/medicion_nominalizacion_emergente_2026-09-21.yaml`.
 
-**Se saca «posesivo sobre verbo» de la lista de violaciones y se declara que el
+> **Las cifras anteriores de esta sección (1.107 y 1.132) eran de ANTES de #178**,
+> que sacó 30 raíces de `v_raiz`: con menos raíces verbales hay menos «prefijo
+> sobre verbo». No estaban mal medidas; medían otro lexicón.
+
+**De quién viene.** El campo es mental —saber, pensar, querer, decir—, no
+manual. Y viene de arriba: en la era 2 la casa del Manaure dice 143 de esos usos
+y **el Manaure solo, 59** — es el hablante que más lo hace. Por nodo, la tasa
+por hablante posible es 7,1 en GUARANAO y 4,2 en AMUAY. **Ninguna** de las 29
+entradas de koiné fijadas en la base es de este tipo: el invento circula y no se
+ha fijado.
+
+**Se sacó «posesivo sobre verbo» de la lista de violaciones y se declara que el
 posesivo nominaliza.** Es describir el sistema que emergió, no sancionarlo. Es
 una solución razonable y **no es la arahuaca** —el lokono nominaliza con `-hù`
 y `-hi`—, y eso es precisamente lo que la hace un dato: la comunidad llenó un
 hueco por su cuenta, con lo que tenía a mano.
 
-**La campaña de retroabstracción (C)**, abierta: buscar en Zavala, Alvarado y
-Arcaya **nombres de acción que compartan terminación con un verbo**, a la manera
-de `matakán`. Si sale algo, entra atestiguado; si no sale nada, se queda A. **No
-se importa el nominalizador lokono `-hù`/`-hi`**: sería morfología de otra
-lengua sin dato caquetío, que es justo lo que el proyecto decidió no hacer.
+#### Lo que dicen las fuentes: no hay nominalizador que retroabstraer (A), y sí derivación cero (B)
+
+La campaña (`6-fusion/propuesta_nominalizador_2026-09-21.yaml`,
+`6-fusion/medicion_nominalizador_2026-09-21.yaml`) trabajó con la **glosa
+verbatim** de las 288 entradas de [[zavala-reyes-2015]], no con la curada:
+30 verbos (19 de acción, 11 estativos) y 46 nombres de acción, agente,
+instrumento o resultado (34 sin las dudosas).
+
+- **El negativo, medido.** De 66 parejas «lema + resto = lema», **una sola** es
+  verbo + resto = nombre: `apo` #11 «Grande» + `-po` = `apopo` #12. Muere: el
+  verbo lleva el mismo final, n = 2, y la reduplicación parcial (§9, medida con
+  control) lo explica sin morfema nuevo — compartir sílaba no es compartir
+  morfema. De 23 terminaciones que aparecen a la vez en verbos y en nombres,
+  ninguna aguanta. `-ba` salía significativa (×4,47, p = 0,0014) y **desaparece**
+  al quitar las glosas dudosas.
+- **Y el método no es ciego.** Sobre un grupo de control —nombres de
+  lugar-de-cosa, n = 11— sí detecta `-ebo` (×13,09, p = 0,00079). Ve donde hay;
+  el cero es real.
+- **Dónde más se miró, y no hay**: [[oliver-1989-apendice-a]] tabla A-9 (0 de
+  49), [[medina-colina-sxx]] (0 de 66), [[alvarado-1921]] (sólo verbos
+  castellanos denominales). [[arcaya-1920]] p. 75 declara que no dejó
+  vocabulario ni frases con que conocer la estructura gramatical.
+
+**La opción A de d21.11 deja de ser provisional**: no se retroabstrae ningún
+nominalizador, y **sigue sin importarse el `-hù`/`-hi` lokono** —sería morfología
+de otra lengua sin dato caquetío—. El hueco queda **declarado** (regla 8).
+
+**Lo que el material SÍ registra: derivación cero** (capa
+`caquetío-atestiguado`, [[zavala-reyes-2015]], compilador AM). Cuatro entradas
+glosan con **una sola forma** el verbo y su nombre, más una dudosa:
+
+| forma | # | glosa verbatim |
+|---|---|---|
+| `jusual` | 180 | «Sembrar, siembra, sembradío. Conuco» — infinitivo, nombre de acción y nombre de lugar en UNA forma: si hubiera nominalizador, aquí se vería |
+| `jacuque` | 170 | «Regar, regadío» |
+| `beceremicore` | 39 | «Dominar, triunfar, victoria» |
+| `etamo` | 120 | «Feroz, feo, espanto» (`v_estativo` en el canon) |
+| `siguruba` | 228 | «Salvar. Caserío, sitio» — *dudosa*: la segunda mitad puede ser un topónimo |
+
+Y del lado del nombre, `quiricias` #217: «Sangre, sangrado».
+
+> ⚠️ **La reserva, que no es menor.** Una glosa que enumera «sembrar, siembra,
+> sembradío» puede ser el compilador diciendo *de qué va* la palabra, no una
+> afirmación sobre las clases de palabra del caquetío. Lo que se afirma es: **el
+> material atestiguado no registra ninguna marca de nominalización, y donde da
+> las dos cosas las da con la misma forma.** Lo que NO se afirma es que «el
+> caquetío no marcaba la nominalización». Y un límite más: **los 19 verbos de
+> acción del glosario son los 19 de Angulo Molina** — todo el verbo caquetío del
+> proyecto es una sola lista, que no está en el repo. Una corroboración dentro
+> de ella no es independiente.
+
+Que la plantilla ENSEÑE la derivación cero («un verbo puede decirse como nombre
+tal cual») es cambio de prompt: **no está aplicado**, va con la próxima tanda.
+Y lo emergente **no es evidencia** de lo atestiguado, ni al revés: que los
+agentes nominalicen con `ta-` y que Zavala glose «sembrar, siembra» con una sola
+forma son dos hechos de dos mundos.
 
 > Y una propuesta que salió de aquí y no es de esta tanda: que **«qué inventaron
 > ellos que el sistema no tiene» pase a ser un informe del cierre de día**, en
@@ -847,7 +922,7 @@ lengua sin dato caquetío, que es justo lo que el proyecto decidió no hacer.
 > movió 30 de las 49 raíces de Zavala, y la tanda de la categoría `adj` (§5)
 > podría mover hasta once más. En total la medición contó **13 casos y 1.778
 > usos**:
-> 1.132 de posesivo/atributivo sobre raíz verbal, 484 de aspecto sobre raíz no
+> 1.132 de posesivo/atributivo sobre raíz verbal (hoy 960, tras #178), 484 de aspecto sobre raíz no
 > verbal y 162 de número sobre raíz verbal. Léanse como **la pregunta, no como
 > el veredicto**.
 

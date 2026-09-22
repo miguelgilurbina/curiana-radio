@@ -71,11 +71,46 @@ def _forzar_utf8() -> None:
                 flujo.buffer, encoding="utf-8", errors="replace", line_buffering=True))
 
 
+class ClaveDuplicada(ValueError):
+    """El frontmatter de una nota repite una clave de primer nivel."""
+
+
+_CLAVE_FM = re.compile(r"^([A-Za-z_][\w-]*):(\s|$)")
+
+
+def claves_duplicadas(texto_fm: str) -> list:
+    """Las claves de primer nivel que el frontmatter trae más de una vez.
+
+    `yaml.safe_load` no avisa: se queda con la ÚLTIMA y sigue. Pasó el
+    2026-09-21 al mezclar dos campañas que escribieron bitácora en la misma
+    obra (`oliver-1989-cap2`): `main` no tenía `cobertura`, cada rama la añadió
+    en una línea distinta, git aceptó las dos SIN conflicto, y la nota quedó
+    con dos `cobertura` y dos `minado` — con los guardianes en verde. Con
+    varios agentes escribiendo a la vez en `4-fuentes/` va a volver a pasar.
+    """
+    vistas, repetidas = set(), []
+    for linea in texto_fm.splitlines():
+        m = _CLAVE_FM.match(linea)
+        if not m:
+            continue
+        k = m.group(1)
+        if k in vistas and k not in repetidas:
+            repetidas.append(k)
+        vistas.add(k)
+    return repetidas
+
+
 def frontmatter(path):
     with open(path, encoding="utf-8") as fh:
         m = _FM.match(fh.read())
     if not m:
         return {}
+    repetidas = claves_duplicadas(m.group(1))
+    if repetidas:
+        raise ClaveDuplicada(
+            f"{os.path.basename(path)}: clave(s) repetida(s) en el frontmatter: "
+            f"{', '.join(repetidas)} — YAML se queda con la última en silencio; "
+            f"deja una sola (suele ser una mezcla de dos ramas sin conflicto)")
     datos = yaml.safe_load(m.group(1))
     return datos if isinstance(datos, dict) else {}
 
@@ -134,7 +169,11 @@ def main(argv=None) -> int:
                     help="exit 1 si el archivo de disco no coincide")
     args = ap.parse_args(argv)
 
-    obras = recolectar()
+    try:
+        obras = recolectar()
+    except ClaveDuplicada as e:
+        print(f"  ✗ {e}")
+        return 1
     texto = volcar(documento(obras))
 
     if args.stdout:

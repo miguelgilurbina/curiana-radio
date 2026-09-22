@@ -325,7 +325,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "naboria":    {"es": "naboría, servidor permanente, trabajador dependiente del cacique", "fuente": "taíno", "notas": "Tno. naboría; clase social arahuaca", "categoria": "jerarquia"},
     "nitaino":    {"es": "nitaíno, noble, principal, hombre de rango", "fuente": "taíno", "notas": "Tno. nitaíno; clase intermedia entre cacique y naboría", "categoria": "jerarquia"},
     "dujo":       {"es": "dujo, asiento de madera tallado del cacique", "fuente": "taíno", "notas": "Tno. dujo; trono ritual arahuaco", "categoria": "utiles"},
-    "macana":     {"es": "macana, garrote de madera dura, arma de combate", "fuente": "caquetío-reconstruido", "notas": "Decisión de Miguel 2026-09-12: tainismo panhispánico que Medina Colina recoge en el habla paraguanera (s.v. macana, página no dictada) → `caquetío-reconstruido`, forma justificada por cognado en taíno, como kanoa/hamaca/konuko; NO atestiguada porque la vía pudo ser el español. Etimología: DRAE: macana, del taíno; panamericana; en Venezuela también. Etiqueta anterior: `taíno` · Tno. macana; arma arahuaca; análoga al poporo caquetío", "categoria": "armas"},
+    "macana":     {"es": "macana, garrote de madera dura, arma de combate", "fuente": "caquetío-reconstruido", "notas": "Decisión de Miguel 2026-09-12: tainismo panhispánico que Medina Colina recoge en el habla paraguanera (s.v. macana, página no dictada) → `caquetío-reconstruido`, forma justificada por cognado en taíno, como kanoa/hamaca/konuko; NO atestiguada porque la vía pudo ser el español. Etimología: DRAE: macana, del taíno; panamericana; en Venezuela también. Etiqueta anterior: `taíno` · Tno. macana; arma arahuaca; análoga al poporo caquetío · Campaña 2026-09-21 (#184), decisión de Miguel → A («Si voy con tu recomendación»): la etiqueta SE QUEDA, y consta que el achagua NO la sostiene — Neira y Ribero 1762 da `Macana → Guacaba` (pliego 73 der.), y `Macanasi`/`Macanayi`/`Mamacanayisa` glosan «Dormidera», «Mazorca de mais» e «Yndecible». Cero fuentes la dan como caquetía (Zavala, van Buurt, Gatschet, Perea, Pané); Alvarado 1921 p. 189: «voz taína». Medina la recoge como 'algo muy grande o desproporcionado', no como garrote. La voz caquetía ATESTIGUADA para el arma es `poporo` (Alvarado 1921 p. 255: «usada por los antiguos Caquetíos», ref. Castellanos). Volverla a `taíno` (opción C) queda dentro de la decisión de clase sobre los tainismos", "categoria": "armas"},
     "cayo":       {"es": "cayo, islote bajo y arenoso, escollo costero", "fuente": "taíno", "notas": "Tno. cayo → español cayo; rasgos costeros del Golfete", "categoria": "geografia"},
     "manigua":    {"es": "manigua, matorral denso, monte bajo", "fuente": "taíno", "notas": "Tno. manigua; vegetación de transición sabana-bosque", "categoria": "geografia"},
     "bixa":       {"es": "bija, onoto, achiote (Bixa orellana), pigmento corporal rojo", "fuente": "taíno", "notas": "Tno. bixa/bija; pigmento ritual rojo; análogo al bariki caquetío", "categoria": "materiales"},
@@ -7227,11 +7227,16 @@ REGLAS_NUMERO: dict[str, dict] = {
     # FUERA_DEL_HABLA desde D10).
     #
     # Nota de Miguel, medida y descartada como apoyo: `macana` «también
-    # existe, es lo mismo». No sostiene este `-kana` — el achagua de Neira y
-    # Ribero 1762 trae `Macanasi`, `Macanayi` y `Mamacanayisa`, o sea raíz
-    # `macana-` con SUS propios sufijos. Comparten sílaba, no morfema. (Esas
-    # tres formas sí son apoyo arahuaco independiente para `macana` misma, y
-    # revisar su etiqueta va propuesto aparte.)
+    # existe, es lo mismo». No sostiene este `-kana`: comparten sílaba, no
+    # morfema. ⚠ CORREGIDO el 2026-09-21 (campaña de `macana`, #184): aquí se
+    # decía que el achagua de Neira y Ribero 1762 traía `Macanasi`, `Macanayi`
+    # y `Mamacanayisa` como una raíz `macana-` con sus propios sufijos, y que
+    # eran apoyo arahuaco independiente para `macana`. ES FALSO. Las tres
+    # formas están en la fuente, pero glosan «Dormidera», «Mazorca de mais» e
+    # «Yndecible»; la entrada del Arte para el arma es `Macana → Guacaba`, que
+    # no es cognada. Se buscó la cadena en la columna achagua y no se leyó la
+    # castellana: leer el conteo y no la glosa (skill minar-fuente §3). La
+    # conclusión sobre `-kana` sigue en pie; su razón escrita no lo estaba.
     "-kana": {
         "nombre": "plural colectivo",
         "desc": "Grupo de, el pueblo de, todos los X.",
