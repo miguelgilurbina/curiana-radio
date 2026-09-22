@@ -397,6 +397,20 @@ obras:
   - Las Casas 1875
   - Historia de las Indias
   en_repo: true
+- id: las-casas-apologetica
+  obra: Apologética historia sumaria (Historiadores de Indias, tomo I)
+  autor: Casas, Bartolomé de las
+  anio: 1909 [c. 1527-1559]
+  genero: cronica
+  local:
+  - fuentes_caquetios/LasCasas_Apologetica_NBAE13_Serrano_1909.pdf
+  paginas: 725
+  aliases:
+  - Las Casas Apologética
+  - Apologética historia sumaria
+  - NBAE 13
+  - Historiadores de Indias tomo I
+  en_repo: true
 - id: maria-lionza-culto
   obra: Bibliografía del culto de María Lionza — Ferrándiz 1999 · Fernández Quintana 2016 · Pollak-Eltz
     1972 · Barreto 1987/1989-90 · Clarac de Briceño 1970
