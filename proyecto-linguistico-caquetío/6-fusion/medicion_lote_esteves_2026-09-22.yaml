@@ -1,0 +1,1898 @@
+# GENERADO por 6-fusion/scripts/medir_lote_esteves_2026-09-22.py — no editar a mano.
+# La medición del lote de Esteves del 2026-09-22; la propuesta es
+# 6-fusion/toponimos_esteves_lote_2026-09-22.yaml.
+meta:
+  generado_por: 6-fusion/scripts/medir_lote_esteves_2026-09-22.py
+  editar_a_mano: no — se edita la propuesta o el script y se regenera
+  propuesta: 6-fusion/toponimos_esteves_lote_2026-09-22.yaml
+cobertura:
+  cola_del_indice: 127
+  tratadas: 127
+  sin_tratar: []
+  ya_en_canon_segun_la_forma: []
+  cabecera_distinta_del_indice:
+  - Buchaquiba → buchaquiva
+  - Capacheruda → capacherua
+  - Duraguaco → duracuaco
+  - Suriquiva → suriquiba
+recuentos:
+  por_nivel:
+    A: 14
+    B: 14
+    C: 55
+    descartado: 46
+  entradas_glosadas: 83
+  de_ellas_cambio_sobre_una_entrada_del_canon: 3
+  descartes_por_grupo:
+    sin_glosa: 31
+    no_indigena_segun_esteves: 12
+    estrato_no_caquetio_sin_glosa: 3
+  por_filiacion_declarada:
+    ninguna (caquetío por omisión): 78
+    'no indígena según Esteves: castellano': 6
+    cumanagoto (según Esteves): 3
+    'no indígena según Esteves: hibrido': 3
+    'no indígena según Esteves: no-indigena': 2
+    andina (según Esteves, citando a Febres Cordero): 1
+    papiamento (según Esteves): 1
+    'no indígena según Esteves: transplantado': 1
+    ayamán (según Esteves): 1
+    'timote-cuica (según Esteves: «no hay dudas»)': 1
+    taíno (según Esteves): 1
+  entradas_glosadas_por_verificacion:
+    imagen: 82
+    ocr: 1
+  fauna: 26
+  fauna_con_sonido: 5
+  fauna_con_especie: 10
+  flora: 36
+  correcciones: 11
+formantes:
+  aco:
+    en_entradas: 2
+    en_descartes: 2
+    entradas:
+    - guachaco
+    - michaco
+    descartes:
+    - duracuaco
+    - muaco
+  ana:
+    en_entradas: 2
+    en_descartes: 1
+    entradas:
+    - cariguariana
+    - maracapana
+    descartes:
+    - cujicana
+  are:
+    en_entradas: 1
+    en_descartes: 2
+    entradas:
+    - tiguadare
+    descartes:
+    - manichare
+    - peticuare
+  bakoa:
+    en_entradas: 2
+    en_descartes: 1
+    entradas:
+    - caibacoa
+    - tutubacoa
+    descartes:
+    - pipiacoa
+  bana:
+    en_entradas: 4
+    en_descartes: 1
+    entradas:
+    - cubiano
+    - chichibana
+    - pipiribana
+    - tausabana
+    descartes:
+    - cucurubano
+  dito:
+    en_entradas: 1
+    en_descartes: 0
+    entradas:
+    - guanadito
+    descartes: []
+  ebo:
+    en_entradas: 2
+    en_descartes: 0
+    entradas:
+    - curaidebo
+    - gisebo
+    descartes: []
+  ey-ay:
+    en_entradas: 0
+    en_descartes: 3
+    entradas: []
+    descartes:
+    - misaray
+    - perabay
+    - tumatey
+  gua:
+    en_entradas: 12
+    en_descartes: 3
+    entradas:
+    - barisigua
+    - urupagua
+    - guaranao
+    - urupaguaduco
+    - caradacagua
+    - cumaraguas
+    - dibaragua
+    - guaruguaja
+    - maquigua
+    - paguara
+    - sacuragua
+    - tiguadare
+    descartes:
+    - bajarigua
+    - juroguagua
+    - quiyegua
+  ima:
+    en_entradas: 0
+    en_descartes: 4
+    entradas: []
+    descartes:
+    - carajaima
+    - güima
+    - yaguarima
+    - yaima
+  kiva:
+    en_entradas: 3
+    en_descartes: 1
+    entradas:
+    - buchaquiva
+    - quibarute
+    - tiquiba
+    descartes:
+    - suriquiba
+  quire:
+    en_entradas: 1
+    en_descartes: 0
+    entradas:
+    - sanajaquí
+    descartes: []
+  reduplicacion:
+    en_entradas: 3
+    en_descartes: 0
+    entradas:
+    - barabara
+    - guaruguaja
+    - pury
+    descartes: []
+  uco:
+    en_entradas: 5
+    en_descartes: 1
+    entradas:
+    - quibarute
+    - tacaduto
+    - urupaguaduco
+    - coduto
+    - matuto
+    descartes:
+    - camoruco
+  ure:
+    en_entradas: 4
+    en_descartes: 1
+    entradas:
+    - asubure
+    - babahuro
+    - bibidure
+    - chunaure
+    descartes:
+    - guaricure
+  uru:
+    en_entradas: 2
+    en_descartes: 0
+    entradas:
+    - babahuro
+    - tijuro
+    descartes: []
+lexicon:
+  voces_del_lote: 77
+  en_el_lexicon_caquetio: 56
+  con_cita_de_zavala: 48
+  de_ellas_solo_sigla_E: 27
+  de_ellas_solo_sigla_E_y_sin_otra_obra_en_la_nota: 23
+  fuera_del_lexicon:
+  - camare
+  - cuji
+  - jiracha
+  - guanajo
+  - asubure
+  - guani
+  - camuare
+  - caramata
+  - caigua
+  - cude
+  - achechive
+  - chujaro
+  - guaraba
+  - guara
+  - jague
+  - manare
+  - mora
+  - paguara
+  - puripuri
+  - quipito
+  - sicagua
+  todo_el_lexicon:
+    caquetio_atestiguado: 228
+    cuyas_citas_de_zavala_son_todas_E: 43
+    y_sin_otra_obra_nombrada_en_la_nota: 39
+    nota: 'sigla (E) = Juan Esteves (Zavala p. 64): para un topónimo de Esteves es control de transmisión, no segunda
+      atestación. Nombrar otra obra en la nota no es apoyo por sí solo (saruro nombra a Oliver para decir que no
+      lo tiene).'
+  por_voz:
+  - voz: bara
+    en:
+    - barabara
+    - buenevara
+    lexicon: bara
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota:
+    - van buurt
+  - voz: barabara
+    en:
+    - barabara
+    lexicon: barabara
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - A
+    zavala_con_sigla_no_E: true
+    otras_obras_nombradas_en_la_nota: null
+  - voz: barisigua
+    en:
+    - barisigua
+    lexicon: barisiwa
+    capa: caquetío-retroabstraido
+    siglas_zavala: null
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota:
+    - medina
+  - voz: buche
+    en:
+    - buchaquiva
+    lexicon: buche
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - AM+E
+    zavala_con_sigla_no_E: true
+    otras_obras_nombradas_en_la_nota: null
+  - voz: kiba
+    en:
+    - buchaquiva
+    - quibarute
+    - tiquiba
+    lexicon: kiba
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    - PMA
+    - AM
+    zavala_con_sigla_no_E: true
+    otras_obras_nombradas_en_la_nota:
+    - van buurt
+    - arcaya
+  - voz: cayude
+    en:
+    - cayude
+    lexicon: kayude
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: chaure
+    en:
+    - chaure
+    lexicon: chaure
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - HB+E
+    zavala_con_sigla_no_E: true
+    otras_obras_nombradas_en_la_nota: null
+  - voz: cegue
+    en:
+    - chaure
+    lexicon: cege
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - HB
+    zavala_con_sigla_no_E: true
+    otras_obras_nombradas_en_la_nota: null
+  - voz: chuchube
+    en:
+    - chuchube
+    lexicon: chuchube
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - HB
+    zavala_con_sigla_no_E: true
+    otras_obras_nombradas_en_la_nota: null
+  - voz: kokuy
+    en:
+    - cucuy
+    lexicon: kokuy
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - HB+CGB+A
+    zavala_con_sigla_no_E: true
+    otras_obras_nombradas_en_la_nota: null
+  - voz: guache
+    en:
+    - guachaco
+    lexicon: wache
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E+AM
+    zavala_con_sigla_no_E: true
+    otras_obras_nombradas_en_la_nota: null
+  - voz: aco
+    en:
+    - guachaco
+    lexicon: ako
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E+AM
+    zavala_con_sigla_no_E: true
+    otras_obras_nombradas_en_la_nota: null
+  - voz: isiro
+    en:
+    - isiro
+    - isito
+    lexicon: isiro
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - A
+    zavala_con_sigla_no_E: true
+    otras_obras_nombradas_en_la_nota: null
+  - voz: laguari
+    en:
+    - laguarí
+    lexicon: lawari
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E+A+PMA
+    zavala_con_sigla_no_E: true
+    otras_obras_nombradas_en_la_nota: null
+  - voz: saruro
+    en:
+    - saruro
+    lexicon: saruro
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota:
+    - oliver
+  - voz: taque
+    en:
+    - taque
+    - tacaduto
+    - tacal
+    lexicon: take
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: urupagua
+    en:
+    - urupagua
+    - urupaguaduco
+    lexicon: urupagua
+    capa: caquetío-atestiguado
+    siglas_zavala: null
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota:
+    - alvarado
+    - medina
+  - voz: yacure
+    en:
+    - yacure
+    lexicon: yakure
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - AM+E
+    zavala_con_sigla_no_E: true
+    otras_obras_nombradas_en_la_nota: null
+  - voz: dara
+    en:
+    - adaro
+    lexicon: dara
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - HB+E
+    zavala_con_sigla_no_E: true
+    otras_obras_nombradas_en_la_nota: null
+  - voz: guay
+    en:
+    - caibacoa
+    lexicon: way
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E+A
+    zavala_con_sigla_no_E: true
+    otras_obras_nombradas_en_la_nota: null
+  - voz: bacoa
+    en:
+    - caibacoa
+    - tutubacoa
+    lexicon: bakoa
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - AM+E
+    zavala_con_sigla_no_E: true
+    otras_obras_nombradas_en_la_nota: null
+  - voz: camare
+    en:
+    - camare
+    lexicon: null
+  - voz: carapa
+    en:
+    - cararapa
+    lexicon: karapa
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: cuji
+    en:
+    - cubiano
+    lexicon: null
+  - voz: bana
+    en:
+    - cubiano
+    - chichibana
+    - tausabana
+    lexicon: bana
+    capa: caquetío-reconstruido
+    siglas_zavala: null
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: cuna
+    en:
+    - cunacho
+    - iticuna
+    lexicon: kuna
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: cunaro
+    en:
+    - cunacho
+    lexicon: kunaro
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: curari
+    en:
+    - curaidebo
+    lexicon: kurari
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: ebo
+    en:
+    - curaidebo
+    lexicon: ebo
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: jiracha
+    en:
+    - chirache
+    - jariaca
+    lexicon: null
+  - voz: guanajo
+    en:
+    - guanadito
+    - manadí
+    lexicon: null
+  - voz: guaranaro
+    en:
+    - guaranao
+    lexicon: waranaro
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - HB+E
+    zavala_con_sigla_no_E: true
+    otras_obras_nombradas_en_la_nota: null
+  - voz: hayo
+    en:
+    - hayo
+    lexicon: hayo
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - HB
+    - E
+    zavala_con_sigla_no_E: true
+    otras_obras_nombradas_en_la_nota:
+    - oviedo
+  - voz: juri
+    en:
+    - tura
+    lexicon: juri
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: guacoa
+    en:
+    - acaboa
+    lexicon: wakoa
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - HB
+    zavala_con_sigla_no_E: true
+    otras_obras_nombradas_en_la_nota: null
+  - voz: guaco
+    en:
+    - aguaque
+    lexicon: wako
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: asubure
+    en:
+    - asubure
+    lexicon: null
+  - voz: baba
+    en:
+    - babahuro
+    lexicon: baba
+    capa: caquetío-reconstruido
+    siglas_zavala: null
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: ure
+    en:
+    - babahuro
+    - bibidure
+    lexicon: ure
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: dividive
+    en:
+    - bibidure
+    lexicon: dibidibe
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: guani
+    en:
+    - buenevara
+    - buenibativa
+    lexicon: null
+  - voz: camuare
+    en:
+    - camunare
+    lexicon: null
+  - voz: caramata
+    en:
+    - caradacagua
+    lexicon: null
+  - voz: caigua
+    en:
+    - caradacagua
+    lexicon: null
+  - voz: cari
+    en:
+    - cariguariana
+    lexicon: kari
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota:
+    - van buurt
+  - voz: guariana
+    en:
+    - cariguariana
+    lexicon: wariana
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: caujaro
+    en:
+    - caujarito
+    lexicon: kaujaro
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: cude
+    en:
+    - cude
+    lexicon: null
+  - voz: cumaragua
+    en:
+    - cumaraguas
+    lexicon: kumarawa
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - HB+E
+    zavala_con_sigla_no_E: true
+    otras_obras_nombradas_en_la_nota:
+    - alvarado
+    - arcaya
+  - voz: curubo
+    en:
+    - cuzubitos
+    lexicon: kurubo
+    capa: caquetío-retroabstraido
+    siglas_zavala: null
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota:
+    - medina
+  - voz: achechive
+    en:
+    - chichibana
+    lexicon: null
+  - voz: chujaro
+    en:
+    - chujaro
+    lexicon: null
+  - voz: naure
+    en:
+    - chunaure
+    lexicon: naure
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: guaraba
+    en:
+    - dibaragua
+    lexicon: null
+  - voz: guanepe
+    en:
+    - guachunepe
+    lexicon: wanepe
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota:
+    - alvarado
+  - voz: guara
+    en:
+    - guaruguaja
+    lexicon: null
+  - voz: guica
+    en:
+    - güica
+    lexicon: gika
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: huaymujo
+    en:
+    - imujo
+    lexicon: huaymujo
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: jague
+    en:
+    - jagüe
+    lexicon: null
+  - voz: judereque
+    en:
+    - juderecal
+    lexicon: judereke
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: manare
+    en:
+    - manare
+    lexicon: null
+  - voz: mora
+    en:
+    - maquigua
+    lexicon: null
+  - voz: quigua
+    en:
+    - maquigua
+    lexicon: kiwa
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E+AM
+    zavala_con_sigla_no_E: true
+    otras_obras_nombradas_en_la_nota: null
+  - voz: matacan
+    en:
+    - matacán
+    lexicon: matakán
+    capa: caquetío-retroabstraido
+    siglas_zavala: null
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota:
+    - alvarado
+    - medina
+  - voz: paguara
+    en:
+    - paguara
+    lexicon: null
+  - voz: puripuri
+    en:
+    - pury
+    lexicon: null
+  - voz: quipito
+    en:
+    - quipital
+    lexicon: null
+  - voz: susucure
+    en:
+    - sacuragua
+    lexicon: susukure
+    capa: caquetío-retroabstraido
+    siglas_zavala: null
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota:
+    - medina
+  - voz: sicagua
+    en:
+    - sicaname
+    lexicon: null
+  - voz: tauta
+    en:
+    - tausabana
+    lexicon: tauta
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: tigui
+    en:
+    - ticuí
+    lexicon: tigi
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: tigua
+    en:
+    - tiguadare
+    lexicon: tiwa
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: tijua
+    en:
+    - tijuro
+    lexicon: tijua
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: tuba
+    en:
+    - tubarao
+    lexicon: tuba
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: rao
+    en:
+    - tubarao
+    lexicon: rao
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - E
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota: null
+  - voz: tuturuto
+    en:
+    - tutubacoa
+    lexicon: tuturuto
+    capa: caquetío-retroabstraido
+    siglas_zavala: null
+    zavala_con_sigla_no_E: false
+    otras_obras_nombradas_en_la_nota:
+    - medina
+  - voz: dato
+    en:
+    - tutubacoa
+    lexicon: dato
+    capa: caquetío-atestiguado
+    siglas_zavala:
+    - HB
+    zavala_con_sigla_no_E: true
+    otras_obras_nombradas_en_la_nota: null
+mapa_vivo:
+  nombres: 129
+  con_exacto: 50
+  solo_aproximado: 12
+  sin_nada_en_osm_2026: 67
+  ceros:
+  - buchaquiva
+  - chuchube
+  - guachaco
+  - laguarí
+  - saruro
+  - yacure
+  - camare
+  - cunacho
+  - hayo
+  - quibarute
+  - urupaguaduco
+  - aguaque
+  - bibidure
+  - buenibativa
+  - camunare
+  - caradacagua
+  - cariguariana
+  - cude
+  - cuzubitos
+  - chichibana
+  - chujaro
+  - gisebo
+  - guachunepe
+  - guaruguaja
+  - güica
+  - jagüe
+  - juderecal
+  - manadí
+  - manare
+  - maracapana
+  - michaco
+  - oboque
+  - pipiribana
+  - pury
+  - quipital
+  - sanajaquí
+  - ticuí
+  - tijuro
+  - tiquiba
+  - tubarao
+  - tutubacoa
+  - avotuca
+  - biniche
+  - carajaima
+  - cucurubano
+  - cujicana
+  - duracuaco
+  - guaricure
+  - güima
+  - jabe
+  - juroguagua
+  - manichare
+  - perabay
+  - quipayú
+  - saguatumo
+  - sarabón
+  - supideo
+  - tobagía
+  - yaguarima
+  - yarí
+  - bucuruy
+  - camoruco
+  - capacherúa
+  - cimiro
+  - peticuare
+  - suriquiba
+  - nonocoti
+  nota: 'un cero en OSM no es un cero en el terreno (regla 6): depende de quién mapeó'
+  por_nombre:
+  - forma: barabara
+    osm:
+    - osm: Cerro La Taratara
+      tipo: cerro
+      region: golfete-de-coro
+      lat: 11.4669
+      lon: -69.4235
+      como: aproximado:taratara
+    - osm: Quebrada Taratara
+      tipo: río
+      region: golfete-de-coro
+      lat: 11.4551
+      lon: -69.4227
+      como: aproximado:taratara
+    - osm: Taratara
+      tipo: poblado
+      region: golfete-de-coro
+      lat: 11.4859
+      lon: -69.5019
+      como: aproximado:taratara
+    - osm: Parasasa
+      tipo: sector
+      region: islas-abc
+      lat: 12.1213
+      lon: -68.9662
+      como: aproximado:parasasa
+    - osm: Paradera
+      tipo: poblado
+      region: islas-abc
+      lat: 12.5354
+      lon: -70.005
+      como: aproximado:paradera
+    - osm: Santa Barbara
+      tipo: sector
+      region: islas-abc
+      lat: 12.072
+      lon: -68.8332
+      como: aproximado:barbara
+    - osm: Santa Barbara Beach
+      tipo: playa
+      region: islas-abc
+      lat: 12.0669
+      lon: -68.8522
+      como: aproximado:barbara
+    - osm: Santa Barbara Crowns
+      tipo: sector
+      region: islas-abc
+      lat: 12.1974
+      lon: -68.3025
+      como: aproximado:barbara
+    - osm: Santa Barbara Tafelberg
+      tipo: cerro
+      region: islas-abc
+      lat: 12.0697
+      lon: -68.8325
+      como: aproximado:barbara
+    - osm: Barabara
+      tipo: lugar
+      region: paraguana
+      lat: 11.9107
+      lon: -69.8149
+      como: exacto
+    - osm: Varacara
+      tipo: poblado
+      region: paraguana
+      lat: 11.7983
+      lon: -69.9744
+      como: aproximado:varacara
+  - forma: barisigua
+    osm:
+    - osm: Barigua Abajo
+      tipo: lugar
+      region: golfete-de-coro
+      lat: 11.4213
+      lon: -69.5067
+      como: aproximado:barigua
+    - osm: Barigua Arriba
+      tipo: lugar
+      region: golfete-de-coro
+      lat: 11.3914
+      lon: -69.4927
+      como: aproximado:barigua
+    - osm: Cerro Barigua
+      tipo: cerro
+      region: golfete-de-coro
+      lat: 11.3927
+      lon: -69.5084
+      como: aproximado:barigua
+  - forma: buchaquiva
+    osm: null
+  - forma: cayude
+    osm:
+    - osm: El Cayude
+      tipo: poblado
+      region: paraguana
+      lat: 11.7006
+      lon: -69.9568
+      como: exacto
+    - osm: Retorno de Cayude
+      tipo: lugar
+      region: paraguana
+      lat: 11.6949
+      lon: -69.9569
+      como: exacto
+  - forma: chaure
+    osm:
+    - osm: Morro de Chaure
+      tipo: punta
+      region: paraguana
+      lat: 12.1727
+      lon: -70.0672
+      como: exacto
+  - forma: chuchube
+    osm: null
+  - forma: cucuy
+    osm:
+    - osm: Punta Cocuy
+      tipo: punta
+      region: paraguana
+      lat: 11.6576
+      lon: -69.9442
+      como: aproximado:cocuy
+    - osm: Punta de Cocuy
+      tipo: poblado
+      region: paraguana
+      lat: 11.9395
+      lon: -70.2702
+      como: aproximado:cocuy
+  - forma: guachaco
+    osm: null
+  - forma: isiro
+    osm:
+    - osm: Embalse El Isiro
+      tipo: laguna
+      region: golfete-de-coro
+      lat: 11.3361
+      lon: -69.6218
+      como: exacto
+    - osm: Isiro
+      tipo: lugar
+      region: paraguana
+      lat: 11.9477
+      lon: -70.0986
+      como: exacto
+    - osm: Isito
+      tipo: lugar
+      region: paraguana
+      lat: 11.9826
+      lon: -70.0928
+      como: aproximado:isito
+  - forma: laguarí
+    osm: null
+  - forma: saruro
+    osm: null
+  - forma: taque
+    osm:
+    - osm: Estanquecitos de Los Taques
+      tipo: lugar
+      region: paraguana
+      lat: 11.768
+      lon: -69.8494
+      como: aproximado:taques
+    - osm: Los Taques
+      tipo: poblado
+      region: paraguana
+      lat: 11.8246
+      lon: -70.2518
+      como: aproximado:taques
+    - osm: Sector El Tanque
+      tipo: sector
+      region: paraguana
+      lat: 11.7077
+      lon: -69.8177
+      como: aproximado:tanque
+    - osm: Sector El Taque
+      tipo: sector
+      region: paraguana
+      lat: 11.7005
+      lon: -69.8926
+      como: exacto
+  - forma: urupagua
+    osm:
+    - osm: La Urupagua
+      tipo: lugar
+      region: paraguana
+      lat: 12.1046
+      lon: -70.0071
+      como: exacto
+  - forma: yacure
+    osm: null
+  - forma: adaro
+    osm:
+    - osm: Adaro
+      tipo: lugar
+      region: paraguana
+      lat: 11.7365
+      lon: -70.2293
+      como: exacto
+    - osm: Azaro
+      tipo: poblado
+      region: paraguana
+      lat: 11.9693
+      lon: -69.9602
+      como: aproximado:azaro
+    - osm: Punta Adaro
+      tipo: punta
+      region: paraguana
+      lat: 11.738
+      lon: -70.2343
+      como: exacto
+  - forma: caibacoa
+    osm:
+    - osm: Guaibacoa
+      tipo: poblado
+      region: golfete-de-coro
+      lat: 11.417
+      lon: -69.4793
+      como: aproximado:guaibacoa
+    - osm: Punta Barbacoa
+      tipo: punta
+      region: golfete-de-coro
+      lat: 11.4975
+      lon: -69.7317
+      como: aproximado:barbacoa
+    - osm: Divacoa
+      tipo: poblado
+      region: paraguana
+      lat: 11.783
+      lon: -69.9362
+      como: aproximado:divacoa
+  - forma: camare
+    osm: null
+  - forma: cararapa
+    osm:
+    - osm: Cerro Lauaraba
+      tipo: cerro
+      region: golfete-de-coro
+      lat: 11.2876
+      lon: -69.3213
+      como: aproximado:lauaraba
+    - osm: Cararapa
+      tipo: caserío
+      region: paraguana
+      lat: 11.6587
+      lon: -69.7491
+      como: exacto
+  - forma: cubiano
+    osm:
+    - osm: Cubiano
+      tipo: lugar
+      region: paraguana
+      lat: 11.85
+      lon: -70.1725
+      como: exacto
+  - forma: cunacho
+    osm: null
+  - forma: curaidebo
+    osm:
+    - osm: Cumairebo
+      tipo: lugar
+      region: paraguana
+      lat: 12.003
+      lon: -69.9197
+      como: aproximado:cumairebo
+  - forma: chirache
+    osm:
+    - osm: Chivuche
+      tipo: lugar
+      region: paraguana
+      lat: 12.0258
+      lon: -70.0335
+      como: aproximado:chivuche
+  - forma: guanadito
+    osm:
+    - osm: Guanadito
+      tipo: poblado
+      region: paraguana
+      lat: 11.7779
+      lon: -70.181
+      como: exacto
+  - forma: guaranao
+    osm:
+    - osm: Las Guarabas
+      tipo: caserío
+      region: falcon-occidental
+      lat: 11.0191
+      lon: -70.2335
+      como: aproximado:guarabas
+    - osm: Quebrada Guaraba
+      tipo: río
+      region: falcon-occidental
+      lat: 10.9793
+      lon: -70.2632
+      como: aproximado:guaraba
+    - osm: Cerro Las Guarabas
+      tipo: cerro
+      region: golfete-de-coro
+      lat: 11.2745
+      lon: -69.3269
+      como: aproximado:guarabas
+    - osm: Las Guarabas
+      tipo: lugar
+      region: golfete-de-coro
+      lat: 11.2763
+      lon: -69.3191
+      como: aproximado:guarabas
+    - osm: Guaranao
+      tipo: sector
+      region: paraguana
+      lat: 11.6748
+      lon: -70.1883
+      como: exacto
+    - osm: Laguna de Guaranao
+      tipo: laguna
+      region: paraguana
+      lat: 11.6825
+      lon: -70.1959
+      como: exacto
+    - osm: Distribuidor Guaranao
+      tipo: lugar
+      region: paraguana
+      lat: 11.6684
+      lon: -70.1916
+      como: exacto
+  - forma: hayo
+    osm: null
+  - forma: quibarute
+    osm: null
+  - forma: tacaduto
+    osm:
+    - osm: Tacaduto
+      tipo: poblado
+      region: paraguana
+      lat: 11.8413
+      lon: -70.0426
+      como: exacto
+  - forma: tura
+    osm:
+    - osm: Tura
+      tipo: lugar
+      region: paraguana
+      lat: 11.8257
+      lon: -69.8263
+      como: exacto
+  - forma: urupaguaduco
+    osm: null
+  - forma: acaboa
+    osm:
+    - osm: Acaboa
+      tipo: lugar
+      region: paraguana
+      lat: 12.0076
+      lon: -70.1474
+      como: exacto
+    - osm: San Antonio de Acaboa
+      tipo: lugar
+      region: paraguana
+      lat: 11.994
+      lon: -70.0666
+      como: exacto
+    - osm: San José de Acaboa
+      tipo: lugar
+      region: paraguana
+      lat: 12.0132
+      lon: -70.1144
+      como: exacto
+  - forma: aguaque
+    osm: null
+  - forma: asubure
+    osm:
+    - osm: Asubure
+      tipo: poblado
+      region: paraguana
+      lat: 12.058
+      lon: -69.8555
+      como: exacto
+  - forma: babahuro
+    osm:
+    - osm: Dabajuro
+      tipo: poblado
+      region: falcon-occidental
+      lat: 11.0239
+      lon: -70.6776
+      como: aproximado:dabajuro
+  - forma: bibidure
+    osm: null
+  - forma: buenevara
+    osm:
+    - osm: Buenevara
+      tipo: poblado
+      region: paraguana
+      lat: 11.9775
+      lon: -69.9882
+      como: exacto
+  - forma: buenibativa
+    osm: null
+  - forma: camunare
+    osm: null
+  - forma: caradacagua
+    osm: null
+  - forma: cariguariana
+    osm: null
+  - forma: caujarito
+    osm:
+    - osm: Caujarito
+      tipo: lugar
+      region: paraguana
+      lat: 11.6427
+      lon: -70.1277
+      como: exacto
+  - forma: coduto
+    osm:
+    - osm: Coduto
+      tipo: poblado
+      region: paraguana
+      lat: 11.8174
+      lon: -70.2133
+      como: exacto
+    - osm: Coduto
+      tipo: lugar
+      region: paraguana
+      lat: 11.6259
+      lon: -69.7379
+      como: exacto
+    - osm: Punta Coduto
+      tipo: punta
+      region: paraguana
+      lat: 11.6159
+      lon: -69.7687
+      como: exacto
+  - forma: cude
+    osm: null
+  - forma: cumaraguas
+    osm:
+    - osm: Las Cumaraguas
+      tipo: poblado
+      region: paraguana
+      lat: 12.1031
+      lon: -69.894
+      como: exacto
+  - forma: cuzubitos
+    osm: null
+  - forma: chichibana
+    osm: null
+  - forma: chujaro
+    osm: null
+  - forma: chunaure
+    osm:
+    - osm: Morro de Chaure
+      tipo: punta
+      region: paraguana
+      lat: 12.1727
+      lon: -70.0672
+      como: aproximado:chaure
+  - forma: dibaragua
+    osm:
+    - osm: Río Baragua
+      tipo: quebrada
+      region: falcon-occidental
+      lat: 10.5756
+      lon: -70.1421
+      como: aproximado:baragua
+    - osm: Río Baragua
+      tipo: río
+      region: falcon-occidental
+      lat: 10.5847
+      lon: -70.0751
+      como: aproximado:baragua
+    - osm: Sibarigua
+      tipo: lugar
+      region: paraguana
+      lat: 11.9913
+      lon: -69.8787
+      como: aproximado:sibarigua
+  - forma: gisebo
+    osm: null
+  - forma: guachunepe
+    osm: null
+  - forma: guaruguaja
+    osm: null
+  - forma: güica
+    osm: null
+  - forma: imujo
+    osm:
+    - osm: El Imujo
+      tipo: lugar
+      region: paraguana
+      lat: 12.1393
+      lon: -70.0076
+      como: exacto
+  - forma: isito
+    osm:
+    - osm: Embalse El Isiro
+      tipo: laguna
+      region: golfete-de-coro
+      lat: 11.3361
+      lon: -69.6218
+      como: aproximado:isiro
+    - osm: Isiro
+      tipo: lugar
+      region: paraguana
+      lat: 11.9477
+      lon: -70.0986
+      como: aproximado:isiro
+    - osm: Isito
+      tipo: lugar
+      region: paraguana
+      lat: 11.9826
+      lon: -70.0928
+      como: exacto
+  - forma: iticuna
+    osm:
+    - osm: Iticuna
+      tipo: poblado
+      region: paraguana
+      lat: 11.9396
+      lon: -70.1267
+      como: exacto
+  - forma: jagüe
+    osm: null
+  - forma: jariaca
+    osm:
+    - osm: Jariaca
+      tipo: lugar
+      region: paraguana
+      lat: 11.8749
+      lon: -69.8992
+      como: exacto
+  - forma: juderecal
+    osm: null
+  - forma: macama
+    osm:
+    - osm: Macama
+      tipo: lugar
+      region: paraguana
+      lat: 12.1057
+      lon: -70.1401
+      como: exacto
+    - osm: Punta Macama
+      tipo: punta
+      region: paraguana
+      lat: 12.1118
+      lon: -70.1449
+      como: exacto
+  - forma: manadí
+    osm: null
+  - forma: manare
+    osm: null
+  - forma: maquigua
+    osm:
+    - osm: Maquigua
+      tipo: poblado
+      region: paraguana
+      lat: 11.8498
+      lon: -69.8575
+      como: exacto
+  - forma: maracapana
+    osm: null
+  - forma: matacán
+    osm:
+    - osm: Matacán
+      tipo: lugar
+      region: paraguana
+      lat: 11.6397
+      lon: -70.0694
+      como: exacto
+  - forma: matuto
+    osm:
+    - osm: Rosa Matuto
+      tipo: lugar
+      region: paraguana
+      lat: 11.914
+      lon: -69.8775
+      como: exacto
+  - forma: michaco
+    osm: null
+  - forma: oboque
+    osm: null
+  - forma: paguara
+    osm:
+    - osm: Cerro Paguara
+      tipo: cerro
+      region: golfete-de-coro
+      lat: 11.516
+      lon: -69.6779
+      como: exacto
+  - forma: pipiribana
+    osm: null
+  - forma: pury
+    osm: null
+  - forma: quipital
+    osm: null
+  - forma: sacuragua
+    osm:
+    - osm: Acurigua
+      tipo: poblado
+      region: golfete-de-coro
+      lat: 11.3049
+      lon: -69.4614
+      como: aproximado:acurigua
+    - osm: Cerro Acurigua
+      tipo: cerro
+      region: golfete-de-coro
+      lat: 11.3875
+      lon: -69.3897
+      como: aproximado:acurigua
+    - osm: Río Acurigua
+      tipo: río
+      region: golfete-de-coro
+      lat: 11.3732
+      lon: -69.4248
+      como: aproximado:acurigua
+    - osm: Sacuragua
+      tipo: poblado
+      region: paraguana
+      lat: 11.9152
+      lon: -69.9237
+      como: exacto
+  - forma: sanajaquí
+    osm: null
+  - forma: sicaname
+    osm:
+    - osm: Sicaname
+      tipo: lugar
+      region: paraguana
+      lat: 11.9023
+      lon: -70.0632
+      como: exacto
+  - forma: tacal
+    osm:
+    - osm: Río Tacal
+      tipo: río
+      region: falcon-occidental
+      lat: 10.9702
+      lon: -70.5971
+      como: exacto
+    - osm: El Tacal
+      tipo: poblado
+      region: paraguana
+      lat: 11.8524
+      lon: -70.2055
+      como: exacto
+  - forma: tausabana
+    osm:
+    - osm: Cerro Tausabana
+      tipo: cerro
+      region: paraguana
+      lat: 11.7841
+      lon: -69.8803
+      como: exacto
+  - forma: ticuí
+    osm: null
+  - forma: tiguadare
+    osm:
+    - osm: Tiguadare
+      tipo: poblado
+      region: paraguana
+      lat: 11.6227
+      lon: -70.1414
+      como: exacto
+  - forma: tijuro
+    osm: null
+  - forma: tiquiba
+    osm: null
+  - forma: tubarao
+    osm: null
+  - forma: tumarusa
+    osm:
+    - osm: Tumarusa
+      tipo: poblado
+      region: paraguana
+      lat: 11.7949
+      lon: -69.9877
+      como: exacto
+  - forma: tutubacoa
+    osm: null
+  - forma: arajó
+    osm:
+    - osm: Barigua Abajo
+      tipo: lugar
+      region: golfete-de-coro
+      lat: 11.4213
+      lon: -69.5067
+      como: aproximado:abajo
+    - osm: Cerro Arajó
+      tipo: cerro
+      region: paraguana
+      lat: 11.7905
+      lon: -70.0226
+      como: exacto
+    - osm: Guaquira Abajo
+      tipo: poblado
+      region: paraguana
+      lat: 11.9319
+      lon: -69.8932
+      como: aproximado:abajo
+    - osm: Hato Abajo
+      tipo: lugar
+      region: paraguana
+      lat: 11.9356
+      lon: -70.2446
+      como: aproximado:abajo
+  - forma: avotuca
+    osm: null
+  - forma: bajarigua
+    osm:
+    - osm: Barigua Abajo
+      tipo: lugar
+      region: golfete-de-coro
+      lat: 11.4213
+      lon: -69.5067
+      como: aproximado:barigua
+    - osm: Barigua Arriba
+      tipo: lugar
+      region: golfete-de-coro
+      lat: 11.3914
+      lon: -69.4927
+      como: aproximado:barigua
+    - osm: Cerro Barigua
+      tipo: cerro
+      region: golfete-de-coro
+      lat: 11.3927
+      lon: -69.5084
+      como: aproximado:barigua
+    - osm: Bajarigua
+      tipo: lugar
+      region: paraguana
+      lat: 12.0965
+      lon: -69.9715
+      como: exacto
+  - forma: biniche
+    osm: null
+  - forma: carajaima
+    osm: null
+  - forma: cucurubano
+    osm: null
+  - forma: cujicana
+    osm: null
+  - forma: duracuaco
+    osm: null
+  - forma: guaricure
+    osm: null
+  - forma: güima
+    osm: null
+  - forma: jabe
+    osm: null
+  - forma: juroguagua
+    osm: null
+  - forma: manichare
+    osm: null
+  - forma: matividiro
+    osm:
+    - osm: Matividiro
+      tipo: poblado
+      region: paraguana
+      lat: 11.8572
+      lon: -69.9009
+      como: exacto
+  - forma: misaray
+    osm:
+    - osm: Misaray
+      tipo: poblado
+      region: paraguana
+      lat: 11.8425
+      lon: -69.9265
+      como: exacto
+  - forma: muaco
+    osm:
+    - osm: Río Muáco
+      tipo: río
+      region: golfete-de-coro
+      lat: 11.4673
+      lon: -69.5552
+      como: exacto
+  - forma: niraba
+    osm:
+    - osm: Cerro La Miraba
+      tipo: cerro
+      region: paraguana
+      lat: 11.8496
+      lon: -70.0463
+      como: aproximado:miraba
+    - osm: La Miraba
+      tipo: poblado
+      region: paraguana
+      lat: 11.8336
+      lon: -70.054
+      como: aproximado:miraba
+    - osm: Siraba
+      tipo: lugar
+      region: paraguana
+      lat: 11.8004
+      lon: -69.9409
+      como: aproximado:siraba
+  - forma: perabay
+    osm: null
+  - forma: pipiacoa
+    osm:
+    - osm: Divacoa
+      tipo: poblado
+      region: paraguana
+      lat: 11.783
+      lon: -69.9362
+      como: aproximado:divacoa
+  - forma: quipayú
+    osm: null
+  - forma: saguatumo
+    osm: null
+  - forma: sarabón
+    osm: null
+  - forma: sarinao
+    osm:
+    - osm: Sarinao
+      tipo: poblado
+      region: paraguana
+      lat: 11.7432
+      lon: -70.0794
+      como: exacto
+    - osm: Retorno de Sarinao
+      tipo: lugar
+      region: paraguana
+      lat: 11.6865
+      lon: -70.0675
+      como: exacto
+  - forma: siraba
+    osm:
+    - osm: Cerro La Miraba
+      tipo: cerro
+      region: paraguana
+      lat: 11.8496
+      lon: -70.0463
+      como: aproximado:miraba
+    - osm: La Miraba
+      tipo: poblado
+      region: paraguana
+      lat: 11.8336
+      lon: -70.054
+      como: aproximado:miraba
+    - osm: Siraba
+      tipo: lugar
+      region: paraguana
+      lat: 11.8004
+      lon: -69.9409
+      como: exacto
+  - forma: supideo
+    osm: null
+  - forma: tacuato
+    osm:
+    - osm: Tacuato
+      tipo: poblado
+      region: paraguana
+      lat: 11.7076
+      lon: -69.8411
+      como: exacto
+  - forma: tiraya
+    osm:
+    - osm: Playa Tiraya
+      tipo: playa
+      region: paraguana
+      lat: 12.049
+      lon: -69.8526
+      como: exacto
+    - osm: Tiraya
+      tipo: poblado
+      region: paraguana
+      lat: 12.0464
+      lon: -69.8538
+      como: exacto
+  - forma: tobagía
+    osm: null
+  - forma: yaguarima
+    osm: null
+  - forma: yaima
+    osm:
+    - osm: Playa Yaima
+      tipo: playa
+      region: paraguana
+      lat: 12.0841
+      lon: -69.8699
+      como: exacto
+    - osm: Yaima
+      tipo: poblado
+      region: paraguana
+      lat: 12.0842
+      lon: -69.8724
+      como: exacto
+  - forma: yarí
+    osm: null
+  - forma: antuní
+    osm:
+    - osm: Antuní
+      tipo: lugar
+      region: paraguana
+      lat: 12.0088
+      lon: -70.01
+      como: exacto
+  - forma: barbasco
+    osm:
+    - osm: Punta Barbacoa
+      tipo: punta
+      region: golfete-de-coro
+      lat: 11.4975
+      lon: -69.7317
+      como: aproximado:barbacoa
+    - osm: El Barbasco
+      tipo: poblado
+      region: paraguana
+      lat: 11.9445
+      lon: -70.0014
+      como: exacto
+  - forma: bucuruy
+    osm: null
+  - forma: camoruco
+    osm: null
+  - forma: capacherúa
+    osm: null
+  - forma: cimiro
+    osm: null
+  - forma: garrapata
+    osm:
+    - osm: Cerro Garrapata
+      tipo: cerro
+      region: golfete-de-coro
+      lat: 11.4667
+      lon: -69.4745
+      como: exacto
+  - forma: peticuare
+    osm: null
+  - forma: quitaire
+    osm:
+    - osm: Quitaire
+      tipo: poblado
+      region: paraguana
+      lat: 11.747
+      lon: -70.1068
+      como: exacto
+  - forma: quiyegua
+    osm:
+    - osm: Quiragua
+      tipo: poblado
+      region: golfete-de-coro
+      lat: 11.4439
+      lon: -69.3449
+      como: aproximado:quiragua
+  - forma: sanquinche
+    osm:
+    - osm: Zanquiche
+      tipo: lugar
+      region: golfete-de-coro
+      lat: 11.3034
+      lon: -69.2663
+      como: aproximado:zanquiche
+  - forma: suriquiba
+    osm: null
+  - forma: cuara
+    osm:
+    - osm: Punta Cuara
+      tipo: punta
+      region: paraguana
+      lat: 11.6488
+      lon: -69.925
+      como: exacto
+    - osm: Sector Cuara
+      tipo: sector
+      region: paraguana
+      lat: 11.6983
+      lon: -69.9165
+      como: exacto
+  - forma: nonocoti
+    osm: null
+  - forma: tumatey
+    osm:
+    - osm: Playa De Tumatey
+      tipo: playa
+      region: paraguana
+      lat: 12.172
+      lon: -69.9398
+      como: exacto
