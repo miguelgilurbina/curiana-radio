@@ -15,6 +15,12 @@
 # no se proyecta al s. XIV-XV sin decidirlo.
 # ══════════════════════════════════════════════════════════════════════
 meta:
+  fusionado: >-
+    PARCIAL (2026-09-22, db.2 de 6-fusion/decisiones_base_2026-09-22.yaml, en la
+    rama de la tanda de la base, sin medir): `datihao` → `taíno`; cita primaria a
+    `diao` y `boratio`; `creencia-001` con la referencia primaria. Por
+    6-fusion/scripts/reetiquetar_datihao_diao.py. Queda sin fusionar el resto de la
+    propuesta, y `waitiao` llevado a Miguel.
   parcela: "T6 — Oviedo y Valdés, tomos II-IV (el libro de la Provincia de Venezuela)"
   fecha: 2026-09-22
   campana: Segunda campaña del taíno

@@ -18,6 +18,11 @@ from curiana_perfiles import cargar_perfil
 from curiana_state import ComunidadState, estado_inicial
 
 
+
+# Tanda de la base (2026-09-23): `kali` está ARCHIVADA desde el 2026-09-19 y
+# una raíz archivada ya no avala una acuñación (db.1, el agujero de `kira`).
+# Las formas de ejemplo de este archivo acuñan sobre `kasi`, la atestiguada.
+
 def test_un_run_nuevo_empieza_la_secuencia():
     state = estado_inicial("CURIANA")
     assert state.referentes_introducidos == []
@@ -106,12 +111,12 @@ def _alterna(formas):
     turno de nombramiento salen las dos y la competencia nace con dos
     variantes, como en un día de verdad."""
     ciclo = itertools.cycle(formas)
-    return lambda *a, **k: f"Taya wana-ka arima. [{next(ciclo)}: kali + uco = algo]."
+    return lambda *a, **k: f"Taya wana-ka arima. [{next(ciclo)}: kasi + uco = algo]."
 
 
 # Cuatro rivales, como en el día 1 de la serie C: con el soporte repartido
 # ninguna llega al umbral del 55 % y el día cierra en disputa.
-RIVALES = ("kali-uco-aima", "ucibo-kali-duruco", "kali-boro", "kali-rua")
+RIVALES = ("kasi-uco-aima", "ucibo-kasi-duruco", "kasi-boro", "kasi-rua")
 
 
 def _correr_un_dia(monkeypatch, tmp_path, formas, turnos, continuar):
