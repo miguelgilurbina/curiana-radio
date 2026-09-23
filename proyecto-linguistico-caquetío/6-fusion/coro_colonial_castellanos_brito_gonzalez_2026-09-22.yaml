@@ -30,7 +30,7 @@ meta:
   estado: sin-fusionar
   obras:
     - castellanos-elegias
-    - gonzalez-batista-2002-fundacion        # NUEVA: descargada hoy (HEVILA/UNAM, acceso abierto)
+    - gonzalez-batista-2002-fundacion        # NUEVA: descargada hoy (HEVILA/UNAM, acceso abierto); copia LOCAL, no en git (obra con derechos, repo público)
     - gonzalez-batista-nombre-de-coro
     - brito-figueroa-poblacion-economia
   script_de_paginas: 6-fusion/scripts/castellanos_pagina.py
@@ -648,6 +648,26 @@ castellanos:
         epoca: contacto-temprano
         etiqueta: atestiguado
         polity: occidental / fuera de la Kaketiana
+
+    cruce_con_otra_parcela:
+      - id: m7-cast-031
+        afirmacion: >-
+          Cruce pedido por el coordinador: Pérez de Tolosa 1546 (en Fernández
+          Duro, t. II p. 234, minado por otro agente) dice de los caquetíos de
+          los llanos que «algo difieren en la habla» de los de Coro.
+          Castellanos no contradice y da el mismo cuadro por otro lado: los
+          caquetíos «estiéndense por tierras muy distantes» y son «en el
+          lenguaje todos elegantes» (p. 185); hay caquetíos en el interior
+          (Sarasaragua, p. 201; el pueblo de Uriorebuí, p. 200) y en los llanos
+          junto a los jaguas (Parte I, p. 137); y Espira lleva a Joan de la
+          Puente, «lengua de caquetíos», a su jornada de los llanos (p. 211):
+          una sola lengua franca sirve tierra adentro, con diferencias que
+          Tolosa llama «algo».
+        obra: castellanos-elegias
+        pagina_impresa: '137; 185; 200-201; 211'
+        epoca: contacto-temprano
+        etiqueta: atestiguado   # los dos testimonios; que sean dialectos de una lengua, reconstruido
+        destino: '2-lengua (variación dialectal) y regla 4: dos testigos independientes de que costa e interior hablaban lo mismo con diferencias'
 
   poporo:
     pregunta: ¿Castellanos sostiene un poporo caquetío (arma)?
