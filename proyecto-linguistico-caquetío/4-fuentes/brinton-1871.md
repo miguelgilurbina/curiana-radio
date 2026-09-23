@@ -126,3 +126,12 @@ un nombre único.**
 ## Enlaces
 
 [[oliver-1989-cap2]] · [[perea-alonso-1942]]
+
+## Bitácora 2026-09-22 — fauna del mar (FA3)
+
+Se le preguntó por el mar en la cosmovisión arahuaca. **p. 18**: el mito de
+Orehu, el espíritu de las aguas, que sale de las olas y le da a Arawanili la
+maraca del piache (lokono de Guayana, s. XIX; Brinton no dice de qué misionero
+lo toma). Va como comparanda —no como dato caquetío— en
+`6-fusion/fauna_paraguana_mar_2026-09-22.yaml` §cosmovision_marina (cm-c1).
+Nada de fauna marina con nombre.
