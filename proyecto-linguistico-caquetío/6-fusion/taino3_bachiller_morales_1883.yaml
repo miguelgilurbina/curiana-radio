@@ -1,0 +1,409 @@
+# ══════════════════════════════════════════════════════════════════════
+# BACHILLER Y MORALES 1883 — *Cuba primitiva* — lo que la parcela T10 dejó a medias
+#
+# PROPUESTA (regla 5). Tercera campaña de minería, parcela M5. 2026-09-23.
+# DOMINIO PÚBLICO: se transcribe literal.
+#
+# Complementa `6-fusion/taino_bachiller_morales_1883.yaml` (T10, 2026-09-22), que
+# sólo transcribió del apéndice (A) las entradas que tocaban el lexicón, y las leyó
+# en el OCR, que en los apéndices ENTRELAZA las dos columnas. Aquí va el apéndice
+# (A) ENTERO y el bloque «eyeri» ENTERO, leídos en la IMAGEN (pp. 388-389 = pdf
+# 392-393), columna a columna.
+#
+# El cotejo de su retraducción de Pané va aparte, porque lo emite un script:
+# `6-fusion/taino3_pane_bachiller_cotejo.yaml` (`scripts/cotejar_pane_bachiller.py`).
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  obra_id: bachiller-morales-1883
+  campana: tercera campaña de minería — parcela M5
+  medido: '2026-09-23'
+  como_se_leyo: >-
+    en imagen, con `pymupdf` a 230 ppp, cada columna por separado. El OCR de
+    archive.org de estas dos páginas no se usa para nada: entrelaza las
+    columnas línea a línea (es lo que ya avisaba T10).
+  pagina_impresa: 388-389
+  que_es_la_lista: >-
+    la de Rafinesque (1836), «recogidas por Rafinesque de los cronistas y
+    viajeros», con cada voz marcada por isla — C. Cuba, J. Jamaica, L.
+    Lucayas — y con las correcciones de Bachiller entre corchetes o
+    paréntesis. ⚠️ Rafinesque es el compilador del que Goeje 1939 (p. 5)
+    avisa que mezcló voces de un diccionario caribe: todo lo que sólo tiene
+    esta lista detrás es clase (ii) como mucho, y la regla del consolidador
+    lo marca como conjetura salvo que Bachiller nombre al cronista.
+
+  # ── 🔴 lo que resultó FALSO al medirlo (de la parcela T10, ayer) ─────
+  correcciones_a_T10:
+  - afirmacion: '«`piragua` … Rafinesque vía Bachiller la marca EYERI» (T10, issue §7 y YAML b3)'
+    medido: >-
+      **FALSO.** En la imagen de la p. 389 la entrada es «Bote, *Piraguas*,
+      **B.**» — y en la misma lista, «Bote, *Canoa*, *Payes*, **E.**». El
+      bloque lleva DOS marcas, no una: `E.` (eyeri) y `B.`, que la cabecera no
+      define y que por el contenido es **Borinquen** (voces del taíno de Puerto
+      Rico: `Ceiba`, `Maga`, `Guage`, `Yocana`). Rafinesque pone `piragua` en
+      Borinquen y `canoa` en el eyeri — al revés de lo que se leía en el OCR.
+      Con esto `piragua` pierde uno de los «tres» apoyos para sacarla del
+      taíno: quedan Goeje (caribe insular, sospecha del español *vela*) y la
+      distinción funcional de Bachiller (p. 245). Dos manos, no tres.
+  - afirmacion: '«`Ditaino` … aparece también en la lista eyeri» (T10)'
+    medido: >-
+      **FALSO.** «Noble, *Ditaino*, **B.**». Es de la lista de Borinquen, no de
+      la eyeri. Lo que sí es eyeri es `Nucu-chilli`/`Nucu-churon` (padre/madre),
+      `Mabuya`, `Uragan`, `Boyez`, `Chemin`, `Opoyun`, `Kati`, `Kachi`, `Balana`.
+  - afirmacion: '«Perro "Aleo" (C)»; «Gusano "casi" (J)» (T10, erratas)'
+    medido: '`Alco` y `cusi` en la imagen. Lecturas del OCR.'
+  - afirmacion: '«Hutía / Quinaxes: Quinaxes = C; Hutía = L» (T10)'
+    medido: >-
+      la línea es «Conejo, *Usias. Hutia*, *Quinaxes*, C., *Hutia*, L.»: la
+      marca C. va detrás de las TRES primeras formas (`Usias`, `Hutia`,
+      `Quinaxes`), y L. detrás de la segunda `Hutia`. `hutia` es de Cuba Y de
+      las Lucayas según esta lista, no sólo de las Lucayas.
+  - afirmacion: '«Opoyem» (T10)'
+    medido: '`Opoyun` en la imagen («Espíritu, *Opoyun*, E.»).'
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. EL APÉNDICE (A) ENTERO — la lista de Rafinesque con las islas (pp. 388-389)
+#
+# `concepto_fuente` = la palabra castellana de la lista, verbatim.
+# `formas` = cada voz con la isla que la lista le pone. Una forma sin isla propia
+# toma la que viene detrás en la misma línea (así escribe la lista), y se dice.
+# `bachiller` = su corrección, verbatim, cuando la hay.
+# ══════════════════════════════════════════════════════════════════════
+apendice_a_completo:
+- concepto_fuente: Tierra, Comarca
+  formas: [{forma: Katos, isla: L}, {forma: Xai, isla: J}, {forma: Nacan, isla: C}, {forma: Guaca, isla: C}]
+  pagina_impresa: 388
+- concepto_fuente: Isla
+  formas: [{forma: caya, isla: L}, {forma: cayo, isla: C}, {forma: caic, isla: J}]
+  pagina_impresa: 388
+  nota: >-
+    ⚠️ T10 leyó «cayo, caic = J»: en la imagen `cayo` lleva C. (Cuba) y `caic`
+    J. La asignación «yucaya» de Las Casas vía Bello (Bachiller p. 245) sigue
+    en pie para `caya`/`cayo`, pero Rafinesque pone `cayo` en Cuba.
+- concepto_fuente: Extranjero
+  formas: [{forma: Guachinango, isla: C}]
+  pagina_impresa: 388
+  nota: 'Coll y Toste (cap. XII, s. v.) la saca como «vocablo de origen azteca».'
+- concepto_fuente: Casa
+  formas: [{forma: Bohio, isla: C}]
+  pagina_impresa: 388
+- concepto_fuente: Rémora
+  formas: [{forma: Revés, isla: C}]
+  pagina_impresa: 388
+  nota: '«revés» es castellano (el pez que se pega «al revés»): una voz española en una lista de voces indígenas.'
+- concepto_fuente: Perdiz
+  formas: [{forma: Lizas, isla: C}]
+  pagina_impresa: 388
+  bachiller: '[Esta significacion que copia, dice de Ocamqo, es una equivocacion, pues ni hay perdices en Cuba ni la lisa es un ave, sino pez.]'
+- concepto_fuente: Flamenco
+  formas: [{forma: Babiayas, isla: C}]
+  pagina_impresa: 388
+- concepto_fuente: Papagayo
+  formas: [{forma: Maxa, isla: C}, {forma: Macan, isla: J}]
+  pagina_impresa: 388
+  bachiller: '(En Cuba maxa, majá? no se aplica sino á la mayor de sus culebras ú ofidianos.)'
+- concepto_fuente: Conejo
+  formas: [{forma: Usias, isla: C}, {forma: Hutia, isla: C}, {forma: Quinaxes, isla: C}, {forma: Hutia, isla: L}]
+  pagina_impresa: 388
+  nota: 'línea: «Usias. Hutia, Quinaxes, C., Hutia, L.» — la marca C. cubre las tres primeras.'
+- concepto_fuente: Opuntia
+  formas: [{forma: Tuna, isla: C}]
+  pagina_impresa: 388
+- concepto_fuente: Señor, Príncipe
+  formas: [{forma: Guami, isla: C}]
+  pagina_impresa: 388
+- concepto_fuente: Cacao
+  formas: [{forma: Cacao, isla: C}]
+  pagina_impresa: 388
+  nota: 'Coll y Toste (cap. XII) lo saca: «de origen mexicano … Los indo-antillanos no conocían este árbol».'
+- concepto_fuente: Sacerdote
+  formas: [{forma: Behique, isla: C y L}, {forma: Bohique, isla: C y L}]
+  pagina_impresa: 388
+- concepto_fuente: Rio
+  formas: [{forma: Agua, isla: C}]
+  pagina_impresa: 388
+  bachiller: 'La palabra es española y no muy segura su aplicacion].'
+- concepto_fuente: Trigo, grano
+  formas: [{forma: Maysi, isla: C}]
+  pagina_impresa: 388
+- concepto_fuente: Pan
+  formas: [{forma: zabi, isla: C}]
+  pagina_impresa: 388
+- concepto_fuente: Dios
+  formas: [{forma: Yocahuna, isla: C}, {forma: Guama-coti, isla: C}, {forma: Guama-exocotio, isla: C}]
+  pagina_impresa: 388
+- concepto_fuente: Supremo, uno
+  formas: [{forma: Attabex, isla: C}]
+  pagina_impresa: 388
+- concepto_fuente: Alma
+  formas: [{forma: Dupi, isla: J}]
+  pagina_impresa: 388
+- concepto_fuente: Vida
+  formas: [{forma: Bi, isla: C y L}]
+  pagina_impresa: 388
+- concepto_fuente: Fuente
+  formas: [{forma: Mini, isla: C y L}]
+  pagina_impresa: 388
+- concepto_fuente: Madera, bosque
+  formas: [{forma: Maica, isla: J}]
+  pagina_impresa: 388
+- concepto_fuente: Cedro
+  formas: [{forma: cauvana, isla: C}]
+  pagina_impresa: 388
+- concepto_fuente: Perro
+  formas: [{forma: Alco, isla: C}]
+  pagina_impresa: 388
+  bachiller: '(No es exacto, Véase Alco en la primera seccion de la segunda parte).'
+- concepto_fuente: Cocodrilo
+  formas: [{forma: Caiman, isla: C}]
+  pagina_impresa: 388
+  bachiller: '[C. Escribe Cayaman).'
+- concepto_fuente: Bolsa
+  formas: [{forma: cucato, isla: J}]
+  pagina_impresa: 388
+- concepto_fuente: Cocuyo
+  formas: [{forma: Locuyos, isla: C}, {forma: Zievas, isla: L}]
+  pagina_impresa: 389
+- concepto_fuente: Noble
+  formas: [{forma: To, isla: C}, {forma: Mato, isla: C}]
+  pagina_impresa: 389
+- concepto_fuente: Cáscara, cubierta, concha
+  formas: [{forma: cohobas, isla: C}]
+  pagina_impresa: 389
+  nota: >-
+    🔴 `cohoba` es en Pané, Goeje y Bachiller el polvo/humo del rito; aquí
+    Rafinesque la glosa «cáscara, concha». Un ejemplo de por qué Goeje dice
+    que la lista es poco segura.
+- concepto_fuente: Guayacan
+  formas: [{forma: Guacum, isla: C}]
+  pagina_impresa: 389
+- concepto_fuente: Colorado
+  formas: [{forma: Rei, isla: C}]
+  pagina_impresa: 389
+- concepto_fuente: Gusano
+  formas: [{forma: cusi, isla: J}]
+  pagina_impresa: 389
+  bachiller: '[Tambien trae por indígena la palabra piojo, como usada en Jamaica; pero es un error.)'
+- concepto_fuente: Rey
+  formas: [{forma: Caxicus, isla: C}]
+  pagina_impresa: 389
+- concepto_fuente: Dentro
+  formas: [{forma: Hiqui, isla: C}, {forma: Nacan, isla: C}]
+  pagina_impresa: 389
+- concepto_fuente: Oro
+  formas: [{forma: Nucay, isla: C y L}]
+  pagina_impresa: 389
+  cronista_que_nombra: Colón
+  bachiller: '(Colon.)'
+- concepto_fuente: Names
+  formas: [{forma: Yames, isla: C}, {forma: Ñames, isla: C}]
+  pagina_impresa: 389
+  bachiller: 'Pone Yames porque escribe en inglés.'
+- concepto_fuente: (la última palabra de la lista)
+  formas: [{forma: uberos, isla: C}]
+  pagina_impresa: 389
+  bachiller: >-
+    La última palabra, que supone de orígen cubana, es uberos y á mi me parece
+    hasta ubí de orígen español, por la semejanza de las uvas de España, que
+    aplicaban los europeos á los objetos del país.
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. EL BLOQUE «EYERI» ENTERO (p. 389) — con sus DOS marcas
+#
+# Cabecera, verbatim: «Fragmentos de la lengua ó dialecto Eyeri de Borinquen (E.)
+# Dialecto de las mujeres caribes, segun la diferencia que observa Rochefort.»
+# `marca` = la que lleva la voz en la lista: E. (eyeri) o B. (no definida en la
+# cabecera; por el contenido, Borinquen). Una sola voz lleva N. («El, Ni, N.»).
+# ══════════════════════════════════════════════════════════════════════
+fragmentos_eyeri_y_borinquen:
+- {concepto_fuente: Tierra, forma: Kati, marca: E}
+- {concepto_fuente: Tierra, forma: Ca, marca: B}
+- {concepto_fuente: Tierra, forma: Ay, marca: B}
+- {concepto_fuente: Noble, forma: Ditaino, marca: B}
+- {concepto_fuente: Dios, forma: Yocana, marca: B}
+- {concepto_fuente: Dios, forma: Guama-nomocon, marca: B}
+- concepto_fuente: Culebra
+  forma: Boba
+  marca: B
+  bachiller: >-
+    (La palabra boba no me parece indígena. Es palabra castellana y por lo
+    inofensivo del animal se le aplicó por los españoles.)
+- concepto_fuente: Nublado
+  forma: Furzidi
+  marca: B
+  bachiller: (En otra parte he dicho que no la acepto.)
+- {concepto_fuente: Caoba, forma: Maga, marca: B}
+- {concepto_fuente: Manzanilla, forma: Manzanila, marca: B, nota: 'castellano'}
+- {concepto_fuente: Arbol algodon, forma: Ceiba, marca: B}
+- {concepto_fuente: Violeta, forma: Qaibey, marca: B}
+- {concepto_fuente: Plátano, forma: Camois, marca: E}
+- {concepto_fuente: Coco, forma: Coquillas, marca: B, nota: 'castellano (coquillo)'}
+- {concepto_fuente: Guayacan, forma: Guage, marca: B}
+- concepto_fuente: Puerco
+  forma: Saine
+  marca: B
+  bachiller: (No se conocia el animal y no puede ser original ó primitivo el nombre.)
+- {concepto_fuente: Bote, forma: Piraguas, marca: B}
+- {concepto_fuente: 'Leña, árbol, arco', forma: Chimala, marca: E}
+- {concepto_fuente: Angel, forma: Chemin, marca: E}
+- {concepto_fuente: ángeles, forma: Chemiquem, marca: E}
+- {concepto_fuente: Espíritu, forma: Opoyun, marca: E}
+- {concepto_fuente: Luna, forma: Mona, marca: E}
+- {concepto_fuente: Luna, forma: Kati, marca: E}
+- {concepto_fuente: Tempestad, forma: Uragan, marca: E}
+- {concepto_fuente: Sangre, forma: Moinalu, marca: E}
+- {concepto_fuente: Cielo ó arriba, forma: Ubec, marca: E}
+- {concepto_fuente: Hombre, forma: Eyeri, marca: E}
+- {concepto_fuente: hombres, forma: Eyerium, marca: E}
+- {concepto_fuente: Mujer, forma: Inara, marca: E}
+- {concepto_fuente: Mujeres, forma: Inayura, marca: E}
+- {concepto_fuente: Enemigo, forma: Akani, marca: E}
+- {concepto_fuente: Casa, forma: Tuhonoco, marca: E}
+- concepto_fuente: Pequeñez
+  forma: Nianti
+  marca: E
+  bachiller: ¿No será el niente italiano?
+- {concepto_fuente: Choza, forma: tuhonoco, marca: E}
+- {concepto_fuente: Bote, forma: Canoa, marca: E}
+- {concepto_fuente: Bote, forma: Payes, marca: E}
+- {concepto_fuente: Jardin, forma: Chali, marca: E}
+- {concepto_fuente: Guerra, forma: Nihuche, marca: E}
+- {concepto_fuente: Padre, forma: Baba, marca: E}
+- {concepto_fuente: Padre, forma: Nucu-chilli, marca: E}
+- {concepto_fuente: Madre, forma: Bibi, marca: E}
+- {concepto_fuente: Madre, forma: Nucu-churon, marca: E}
+- {concepto_fuente: Abuelo, forma: Naryuti, marca: E}
+- {concepto_fuente: Mujer, forma: Liani, marca: E}
+- {concepto_fuente: Hijo, forma: Rahe, marca: E}
+- {concepto_fuente: Hija, forma: Rahen, marca: E}
+- {concepto_fuente: El, forma: Ni, marca: N}
+- {concepto_fuente: Corazon, forma: Nanichi, marca: E}
+- {concepto_fuente: Vasallo, forma: Labuyu, marca: E}
+- {concepto_fuente: Mar, forma: Balana, marca: E}
+- {concepto_fuente: Cama, forma: Nekera, marca: E}
+- {concepto_fuente: Sol, forma: Kachi, marca: E}
+- {concepto_fuente: Sol, forma: Cochi, marca: E}
+- {concepto_fuente: Moneda, forma: Agucat, marca: E}
+- {concepto_fuente: Palma, forma: Caico, marca: E}
+- {concepto_fuente: Colorado, forma: Pu, marca: E}
+- {concepto_fuente: Pueblo, forma: Ibas, marca: B}
+- {concepto_fuente: Pueblo, forma: Cabres, marca: E}
+- {concepto_fuente: Sacerdote, forma: Boyez, marca: E}
+- {concepto_fuente: Diablo, forma: Mabuya, marca: E}
+- {concepto_fuente: 'Tunantes, vagabundos', forma: Umekua, marca: E}
+
+lectura_del_bloque:
+  el_eyeri_es_el_habla_de_mujeres_de_goeje: >-
+    🔴 cruzado con Goeje 1939 (ver `kalinago_goeje_1939.yaml`), casi todo el
+    «eyeri» de Rafinesque es el HABLA DE MUJERES del caribe insular de Breton:
+    `Eyeri` 'hombre' = Goeje p. 40 `f eyeri`; `Inara` 'mujer' = `f inharu`;
+    `Kati` 'luna' = `f kati` (p. 54); `Kachi` 'sol' = `f kaši` (p. 54);
+    `Ubec` 'cielo' = `ubeku` (p. 53); `Balana` 'mar' = `h balana` (p. 55, esa
+    es de HOMBRES); `Nekera` 'cama' = `f ek(ê)ra` 'hamaca' (p. 46); `Boyez` =
+    `boye, boyei` (p. 37); `Tuhonoco` 'casa' ~ `f ubonoko` (p. 45). O sea: la
+    cabecera tiene razón al llamarlo «dialecto de las mujeres caribes», y es
+    caribe insular, no taíno. **Lo único que Rafinesque añade es el error de
+    llamarlo «de Borinquen».**
+  la_lista_B_es_otra_cosa: >-
+    las voces `B.` son taíno o castellano de las Antillas Mayores (`Ceiba`,
+    `Maga`, `Guage` ~ guayacán, `Yocana` ~ Yocahu, `Ditaino` ~ nitaíno,
+    `Piraguas`, `Coquillas`, `Manzanila`). Bachiller mismo descarta tres
+    (`Boba`, `Furzidi`, `Saine`). No es eyeri.
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. FAUNA (preámbulo común) — los animales de las dos listas
+# ══════════════════════════════════════════════════════════════════════
+fauna:
+- nombre_en_fuente: Revés
+  especie_probable: null
+  texto: 'Rémora, Revés, C.'
+  obra: bachiller-morales-1883
+  pagina_impresa: 388
+  lugar: Cuba (según la lista de Rafinesque)
+  epoca: colonial
+  sonido: null
+- nombre_en_fuente: Lizas
+  especie_probable: null
+  texto: 'Perdiz, Lizas. C. [Esta significacion que copia, dice de Ocamqo, es una equivocacion, pues ni hay perdices en Cuba ni la lisa es un ave, sino pez.]'
+  obra: bachiller-morales-1883
+  pagina_impresa: 388
+  lugar: Cuba
+  epoca: colonial
+  sonido: null
+- nombre_en_fuente: Babiayas
+  especie_probable: null
+  texto: 'Flamenco, Babiayas, C.'
+  obra: bachiller-morales-1883
+  pagina_impresa: 388
+  lugar: Cuba (según Rafinesque)
+  epoca: colonial
+  sonido: null
+- nombre_en_fuente: 'Maxa · Macan'
+  especie_probable: null
+  texto: 'Papagayo, Maxa, C., Macan, J., (En Cuba maxa, majá? no se aplica sino á la mayor de sus culebras ú ofidianos.)'
+  obra: bachiller-morales-1883
+  pagina_impresa: 388
+  lugar: 'Cuba (Maxa), Jamaica (Macan)'
+  epoca: colonial
+  sonido: null
+- nombre_en_fuente: 'Usias · Hutia · Quinaxes'
+  especie_probable: null
+  texto: 'Conejo, Usias. Hutia, Quinaxes, C., Hutia, L.'
+  obra: bachiller-morales-1883
+  pagina_impresa: 388
+  lugar: 'Cuba; Lucayas (Hutia)'
+  epoca: colonial
+  sonido: null
+- nombre_en_fuente: Alco
+  especie_probable: null
+  texto: 'Perro, Alco, C. (No es exacto, Véase Alco en la primera seccion de la segunda parte).'
+  obra: bachiller-morales-1883
+  pagina_impresa: 388
+  lugar: Cuba
+  epoca: colonial
+  sonido: null
+- nombre_en_fuente: Caiman
+  especie_probable: null
+  texto: 'Cocodrilo, Caiman, [C. Escribe Cayaman).'
+  obra: bachiller-morales-1883
+  pagina_impresa: 388
+  lugar: Cuba
+  epoca: colonial
+  sonido: null
+- nombre_en_fuente: 'Locuyos · Zievas'
+  especie_probable: null
+  texto: 'Cocuyo, Locuyos, C. Zievas, L.'
+  obra: bachiller-morales-1883
+  pagina_impresa: 389
+  lugar: 'Cuba; Lucayas'
+  epoca: colonial
+  sonido: null
+- nombre_en_fuente: cusi
+  especie_probable: null
+  texto: 'Gusano, cusi, J. [Tambien trae por indígena la palabra piojo, como usada en Jamaica; pero es un error.)'
+  obra: bachiller-morales-1883
+  pagina_impresa: 389
+  lugar: Jamaica
+  epoca: colonial
+  sonido: null
+- nombre_en_fuente: Boba
+  especie_probable: null
+  texto: 'Culebra, Boba, B. (La palabra boba no me parece indígena. Es palabra castellana y por lo inofensivo del animal se le aplicó por los españoles.)'
+  obra: bachiller-morales-1883
+  pagina_impresa: 389
+  lugar: Borinquen (marca B.)
+  epoca: colonial
+  sonido: null
+- nombre_en_fuente: Saine
+  especie_probable: null
+  texto: 'Puerco, Saine, B. (No se conocia el animal y no puede ser original ó primitivo el nombre.)'
+  obra: bachiller-morales-1883
+  pagina_impresa: 389
+  lugar: Borinquen (marca B.)
+  epoca: colonial
+  sonido: null
+
+negativas:
+- que: la marca `B.` definida en alguna parte de la obra
+  como_se_midio: >-
+    la cabecera del bloque sólo define `(E.)`. «Borinquen» es la lectura por
+    contenido, no la de Bachiller: se declara como inferencia.
