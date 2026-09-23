@@ -49,11 +49,12 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "wayuu":      {"sig": "persona, gente, ser humano",                     "cat": "sust",  "fuente": "wayunaiki"},
     "anüiki":     {"sig": "habla, palabra, lengua",                         "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `adija` 'hablar, decir; palabra' — otra raíz. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
     "anasa":      {"sig": "bueno, bien, bello (< anasü Wayunaiki)",         "cat": "adj",   "fuente": "caquetío-reconstruido", "notas": "F8 (2026-09-12): forma derivada de la hermana que cita la glosa, etiquetada `wayunaiki-cogn`; entra en la deuda de D11 fase 3 (núcleo reconstruido desde el wayuu)"},
-    "taya":       {"sig": "yo (1ra persona singular)",                      "cat": "pron",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `de`/`dai` 1sg — en el lexicón y en Perea 1942. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
-    "waya":       {"sig": "nosotros (1ra persona plural)",                  "cat": "pron",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `we`/`wai` 1pl — PARECIDA; `wai` sale 231 veces en Perea. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
-    "pia":        {"sig": "tú (2da persona singular)",                      "cat": "pron",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `bi`/`bui` 2sg — en el lexicón y en Perea 1942. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
-    "nüma":       {"sig": "él/ella (pronombre 3ra persona)",                "cat": "pron",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `li`/`tho` 3sg. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
-    "naya":       {"sig": "ellos, ellas (3ra persona plural)",              "cat": "pron",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `na-` 3pl. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
+    "dai":        {"sig": "yo (1ra persona singular)",                      "cat": "pron",  "fuente": "caquetío-reconstruido", "notas": "D11 fase 3 (tf.1, 2026-09-23, «Los pronombres, ok»): las formas reconstruidas desde el wayuu salen del habla; ésta entra desde las hermanas que Miguel nombró (cc.12: lokono, taíno, achagua). Propuesta: 6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml. Lokono «Sg. 1 cm. da- i , da-kia = yo» (Perea Alonso 1942 p. 573; igual en los tres moravos, p. 581); el taíno comparte el prefijo `da-` (`daca` 'yo', Pané cap. XXV con la glosa de Las Casas, Apologética p. 447). C1 de Oliver 1989 p. 136 (*/nV-/ > /dA-/ en lokono y taíno, «and perhaps Caquetío»; traza caquetía en `dare`). Reconstruido por «dos de las tres hermanas» (tf.1). La base -i es la lokona: por C9 las vocales no se derivan. Sustituye a `taya`, archivada"},
+    "bui":        {"sig": "tú (2da persona singular)",                      "cat": "pron",  "fuente": "caquetío-hipotético", "notas": "D11 fase 3 (tf.1, 2026-09-23, «Los pronombres, ok»): las formas reconstruidas desde el wayuu salen del habla; ésta entra desde las hermanas que Miguel nombró (cc.12: lokono, taíno, achagua). Propuesta: 6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml. Lokono «bu-i, bo-kia = tú» (Perea Alonso 1942 p. 573; p. 581). La *b* por C3 (Oliver 1989 pp. 119, 150: el caquetío tiene la *b* lokona donde el wayuu tiene *p*). Una sola hermana: hipotético. Sustituye a `pia`, archivada. El trato formal sigue siendo `kudanga` (d21.10)"},
+    "lihi":       {"sig": "él (3ra persona singular, varón)",               "cat": "pron",  "fuente": "caquetío-hipotético", "notas": "D11 fase 3 (tf.1, 2026-09-23, «Los pronombres, ok»): las formas reconstruidas desde el wayuu salen del habla; ésta entra desde las hermanas que Miguel nombró (cc.12: lokono, taíno, achagua). Propuesta: 6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml. Lokono «li-hi» varonil (Perea Alonso 1942 p. 573). Las tres hermanas distinguen el género en el pronombre (lokono, achagua «Ria»/«Ruya», kalinago): ninguna tiene un 3sg sin género, así que un pronombre único sería convención nuestra. Reabre d21.13 SÓLO en el pronombre: el género de los nombres sigue sin importarse. Con `tuhu`, sustituye a `nüma`, archivada"},
+    "tuhu":       {"sig": "ella, ello (3ra persona singular, no varón: mujer, animal, cosa)", "cat": "pron",  "fuente": "caquetío-hipotético", "notas": "D11 fase 3 (tf.1, 2026-09-23, «Los pronombres, ok»): las formas reconstruidas desde el wayuu salen del habla; ésta entra desde las hermanas que Miguel nombró (cc.12: lokono, taíno, achagua). Propuesta: 6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml. Lokono «tu-hu» no varonil (Perea Alonso 1942 p. 573), que en lokono es la clase amplia (p. 554): mujer, animal, cosa. La clave lokono `tuhu` 'aquel…' pasa a `tuhu-lokono`. Con `lihi`, sustituye a `nüma`, archivada"},
+    "waya":       {"sig": "nosotros (1ra persona plural)",                  "cat": "pron",  "notas": "D11 fase 3 (tf.1, 2026-09-23): LA FORMA SE QUEDA Y CAMBIA DE DÓNDE SALE. achagua «Guaya» = /waya/ por D5c, letra por letra (Neira y Ribero 1762, arte p. 3); el lokono concuerda en el prefijo (Perea Alonso 1942 p. 573). Reconstruido desde las hermanas, ya no desde el wayuu. Propuesta: 6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml · Antes: núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `we`/`wai` 1pl — PARECIDA; `wai` sale 231 veces en Perea. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
+    "naya":       {"sig": "ellos, ellas (3ra persona plural)",              "cat": "pron",  "notas": "D11 fase 3 (tf.1, 2026-09-23): LA FORMA SE QUEDA Y CAMBIA DE DÓNDE SALE. achagua «Naya», letra por letra (Neira y Ribero 1762, arte p. 3); el lokono concuerda en el prefijo (Perea Alonso 1942 p. 573). Reconstruido desde las hermanas, ya no desde el wayuu. Propuesta: 6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml · Antes: núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `na-` 3pl. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
 
     # ── Taíno (familia arahuaca, préstamos a todas las lenguas caribeñas) ──
     "cacique":    {"sig": "jefe, señor principal de la comunidad",          "cat": "sust",  "fuente": "taíno"},
@@ -927,10 +928,10 @@ VOCABULARIO_BASE: dict[str, dict] = {
         "notas": "Lok. -koana; nominalizador instrumental 'cosa que hace X'; dalhidi-koana 'vehículo'; da-dalhidi-koana 'mi auto'; Pet 1987",
         "categoria": "gramatica"
     },
-    "kuba": {
+    "kuba-lokono": {
         "es": "signo de tiempo pasado (prefijo/sufijo temporal)",
         "fuente": "lokono",
-        "notas": "Lok. kuba-/-kuba; 'tiempo pasado indefinido'; dayahaddakuba 'yo caminé (hace tiempo)'; Brinton 1871",
+        "notas": "Lok. kuba-/-kuba; 'tiempo pasado indefinido'; dayahaddakuba 'yo caminé (hace tiempo)'; Brinton 1871 · CLAVE CAMBIADA 2026-09-23 (D11 fase 3, tf.2): era `kuba`; el sufijo caquetío `-kuba` 'ya pasó' sale de aquí y del kalinago, y un `kuba` suelto no puede contar como voz lokona",
         "categoria": "gramatica"
     },
     "lhin": {
@@ -6426,7 +6427,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "ttu": {"sig": "cual (y 1 acepción/es más)", "cat": "sust", "fuente": "lokono", "notas": "Perea Alonso 1942, Filología Comparada Arawak, tomo I — lokono de 1802 (Schultz), anterior al de Brett 1849 y al de Goeje. Raíz `ttu` con 2 atestaciones; acepción principal «cual» (p. 205, 1 atestaciones). Otras acepciones: hija (p.51). `cat` INFERIDA de la glosa castellana (infinitivo → v_raiz, resto → sust): la fuente no da categoría gramatical. Fusión fase 1 de D11, 2026-09-11."},
     "tturku": {"sig": "desechar (y 1 acepción/es más)", "cat": "v_raiz", "fuente": "lokono", "notas": "Perea Alonso 1942, Filología Comparada Arawak, tomo I — lokono de 1802 (Schultz), anterior al de Brett 1849 y al de Goeje. Raíz `tturku` con 2 atestaciones; acepción principal «desechar» (p. 299, 1 atestaciones). Otras acepciones: rempujar (p.436). `cat` INFERIDA de la glosa castellana (infinitivo → v_raiz, resto → sust): la fuente no da categoría gramatical. Fusión fase 1 de D11, 2026-09-11."},
     "ttùdda": {"sig": "huir", "cat": "sust", "fuente": "lokono", "notas": "Perea Alonso 1942, Filología Comparada Arawak, tomo I — lokono de 1802 (Schultz), anterior al de Brett 1849 y al de Goeje. Raíz `ttùdda` con 3 atestaciones; acepción principal «huir» (p. 357, 3 atestaciones). `cat` INFERIDA de la glosa castellana (infinitivo → v_raiz, resto → sust): la fuente no da categoría gramatical. Fusión fase 1 de D11, 2026-09-11."},
-    "tuhu": {"sig": "aquel, aquella, aquello, aquellos, aquellas (y 2 acepción/es más)", "cat": "sust", "fuente": "lokono", "notas": "Perea Alonso 1942, Filología Comparada Arawak, tomo I — lokono de 1802 (Schultz), anterior al de Brett 1849 y al de Goeje. Raíz `tuhu` con 5 atestaciones; acepción principal «aquel, aquella, aquello, aquellos, aquellas» (p. 197, 2 atestaciones). Otras acepciones: ello, lo (p.187); éste , ésta, esto, éstos, éstas (p.148). `cat` INFERIDA de la glosa castellana (infinitivo → v_raiz, resto → sust): la fuente no da categoría gramatical. Fusión fase 1 de D11, 2026-09-11."},
+    "tuhu-lokono": {"sig": "aquel, aquella, aquello, aquellos, aquellas (y 2 acepción/es más)", "cat": "sust", "fuente": "lokono", "notas": "CLAVE CAMBIADA 2026-09-23 (D11 fase 3, tf.1): era `tuhu`; la voz sin etiqueta es ahora el pronombre caquetío 'ella, ello' · Perea Alonso 1942, Filología Comparada Arawak, tomo I — lokono de 1802 (Schultz), anterior al de Brett 1849 y al de Goeje. Raíz `tuhu` con 5 atestaciones; acepción principal «aquel, aquella, aquello, aquellos, aquellas» (p. 197, 2 atestaciones). Otras acepciones: ello, lo (p.187); éste , ésta, esto, éstos, éstas (p.148). `cat` INFERIDA de la glosa castellana (infinitivo → v_raiz, resto → sust): la fuente no da categoría gramatical. Fusión fase 1 de D11, 2026-09-11."},
     "tullu-du": {"sig": "abrir", "cat": "v_raiz", "fuente": "lokono", "notas": "Perea Alonso 1942, Filología Comparada Arawak, tomo I — lokono de 1802 (Schultz), anterior al de Brett 1849 y al de Goeje. Raíz `tullu-du` con 2 atestaciones; acepción principal «abrir» (p. 220, 2 atestaciones). `cat` INFERIDA de la glosa castellana (infinitivo → v_raiz, resto → sust): la fuente no da categoría gramatical. Fusión fase 1 de D11, 2026-09-11."},
     "tuyucu": {"sig": "anciano", "cat": "sust", "fuente": "lokono", "notas": "Perea Alonso 1942, Filología Comparada Arawak, tomo I — lokono de 1802 (Schultz), anterior al de Brett 1849 y al de Goeje. Raíz `tuyucu` con 4 atestaciones; acepción principal «anciano» (p. 9, 4 atestaciones). `cat` INFERIDA de la glosa castellana (infinitivo → v_raiz, resto → sust): la fuente no da categoría gramatical. Fusión fase 1 de D11, 2026-09-11."},
     "uma": {"sig": "con (y 1 acepción/es más)", "cat": "sust", "fuente": "lokono", "notas": "Perea Alonso 1942, Filología Comparada Arawak, tomo I — lokono de 1802 (Schultz), anterior al de Brett 1849 y al de Goeje. Raíz `uma` con 15 atestaciones; acepción principal «con» (p. 502, 13 atestaciones). Otras acepciones: acompañar (p.222). `cat` INFERIDA de la glosa castellana (infinitivo → v_raiz, resto → sust): la fuente no da categoría gramatical. Fusión fase 1 de D11, 2026-09-11."},
@@ -6841,62 +6842,63 @@ del _forma, _entrada
 # II. REGLAS MORFOLÓGICAS
 # ══════════════════════════════════════════════════════════════════════
 
+# ⚠️ D11 FASE 3 (tf.2, 2026-09-23, «aspectos. Ok»). Hasta hoy: `-ka`
+# completivo, `-ni` continuativo, `-da` prospectivo, los tres reconstruidos
+# desde el WAYUU y sin apoyo caquetío. Y el `-ka` además con el valor al revés
+# del de las hermanas: en lokono `-ca` vale igual en presente y pretéritos
+# (Perea p. 628), en kalinago es «Présent -ka» (Goeje p. 26). Ahora:
+#   · el presente NO SE MARCA — el verbo solo es lo que pasa, el tiempo lo
+#     dice el adverbio (Perea p. 606; Neira p. 28: «el pres.te de Indicativo
+#     es el q.e hace el gasto»);
+#   · `-kuba` = ya pasó (lokono `-cuba`, Perea p. 606; kalinago «Parfait
+#     -kuba», Goeje p. 26);
+#   · `-ba` = vendrá (achagua `ba`, Neira pliego 24; kalinago «Futur -u-ba»,
+#     Goeje p. 26; lokono de Goeje, col. A).
+# Los tres HIPOTÉTICOS: el taíno no atestigua ni una marca, y las dos
+# gramáticas que dan paradigma sospechan del suyo (Perea p. 606). Los viejos
+# `-ka`/`-ni`/`-da` pasan a REGLAS_EN_DESUSO: no se enseñan, pero el
+# desafijador los sigue pelando (medido: así ningún veredicto cambia).
+# Propuesta y coste: 6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml
 REGLAS_ASPECTO: dict[str, dict] = {
-    "-ka": {
+    "-kuba": {
         "nombre": "completivo",
-        "desc": "Acción terminada, resultado alcanzado. Equivale al pretérito perfecto.",
-        "uso": "VERBO_RAIZ + -ka  →  acción completada",
+        "desc": "Lo que ya pasó, la acción terminada.",
+        "uso": "VERBO_RAIZ + -kuba  →  ya pasó",
         "ejemplos": [
-            "naa-ka = ya fui / ya se fue",
-            # `paa-ka` hasta el 2026-09-19: `paa` quedó archivada por la
-            # política «manda la atestiguada» y el paradigma se muda a `were`
-            # (Zavala #149), que es también `v_raiz`. Este dict NO llega al
-            # prompt —`AFIJOS_ATESTIGUADOS` sólo renderiza REGLAS_ZAVALA y
-            # REGLAS_TOPONIMICAS—, pero es documentación del módulo y una
-            # referencia muerta aquí es deuda igual.
-            "were-ka = ya di / ya entregué",
-            "pescado-ka = ya pescé (hispanismo con sufijo caquetío)",
+            "naa-kuba = ya fui / ya se fue",
+            "were-kuba = ya di / ya entregué",
         ],
-        "wayunaiki": "Triad A (-shi/-sü/-shii) en contexto de pasado",
-        "instruccion_agente": (
-            "Para indicar que algo ya terminó, agrega -ka al final: "
-            "'Llegado-ka Manaure' = Manaure ya llegó. "
-            "'Chaa-ka wa-buco' = nuestra represa ya está construida."
-        ),
+        "capa": "hipotético · lokono -cuba (Perea p. 606, pasado remoto) = kalinago -kuba (Goeje p. 26)",
     },
-    "-ni": {
-        "nombre": "continuativo / imperfectivo",
-        "desc": "Acción en progreso ahora mismo. Proceso activo.",
-        "uso": "VERBO_RAIZ + -ni  →  acción en curso",
+    "-ba": {
+        "nombre": "prospectivo",
+        "desc": "Lo que vendrá, lo que se va a hacer.",
+        "uso": "VERBO_RAIZ + -ba  →  vendrá / haré",
         "ejemplos": [
-            "naa-ni = estoy yendo / va yendo",
-            "pescando-ni = estoy pescando ahora",
-            "maa-ni = estoy hablando",
+            "naa-ba = iré",
+            "were-ba = daré",
         ],
-        "wayunaiki": "-iraa (imperfective suffix)",
-        "instruccion_agente": (
-            "Para describir lo que haces ahora mismo, agrega -ni: "
-            "'Naa-ni taya orilla' = Voy hacia la orilla ahora. "
-            "'Maa-ni Shaboro' = Shaboro está hablando."
-        ),
+        "capa": "hipotético · achagua ba (Neira y Ribero pliego 24) = kalinago -u-ba (Goeje p. 26) = lokono de Goeje col. A",
     },
-    "-da": {
-        "nombre": "prospectivo / intencional",
-        "desc": "Acción futura o intención firme. Lo que se planea hacer.",
-        "uso": "VERBO_RAIZ + -da  →  intención / futuro",
-        "ejemplos": [
-            "naa-da = voy a ir / iré",
-            # `paa-da` hasta el 2026-09-19: ver la nota de `-ka`.
-            "were-da = daré / voy a dar",
-            "cudan-da = serviré / tengo intención de servir",
-        ],
-        "wayunaiki": "-ee (desiderative) + triad C (future intentive)",
-        "instruccion_agente": (
-            "Para expresar lo que harás o planeas, agrega -da: "
-            "'Naa-da taya salinar' = Iré al salinar. "
-            "'Maa-da taya Manaure' = Le hablaré a Manaure."
-        ),
-    },
+}
+
+# Lo que el prompt YA NO ENSEÑA pero el desafijador SIGUE PELANDO (D11 fase
+# 3, tf.2 y tf.3). No es REGLAS_RETIRADAS (-ko, -sha, -naiki), que ya no cuenta
+# como regla en ninguna puerta: estas cuatro siguen en `TODAS_LAS_REGLAS`
+# porque la base entera está dicha con ellas, y sacarlas del desafijador
+# movería 498 formas (34.051 usos) de núcleo y haría pasar 30 formas de «raíz
+# de ninguna parte» a raíz conocida (`ka` y `ni` son claves del lexicón).
+# Pelándolas cambian de núcleo 5 formas y ningún veredicto. Medido en
+# 6-fusion/medicion_d11_fase3_2026-09-23.yaml.
+REGLAS_EN_DESUSO: dict[str, dict] = {
+    "-ka": {"nombre": "completivo (retirado del prompt)", "hasta": "2026-09-23",
+            "por": "reconstruido desde el wayuu; lo sustituye -kuba (D11 fase 3, tf.2)"},
+    "-ni": {"nombre": "continuativo (retirado del prompt)", "hasta": "2026-09-23",
+            "por": "reconstruido desde el wayuu; el presente pasa a no marcarse (tf.2)"},
+    "-da": {"nombre": "prospectivo (retirado del prompt)", "hasta": "2026-09-23",
+            "por": "reconstruido desde el wayuu; lo sustituye -ba (tf.2)"},
+    "ta-": {"nombre": "posesivo 1ra singular (retirado del prompt)", "hasta": "2026-09-23",
+            "por": "su único apoyo era el wayuu; lo sustituye da- (tf.3, «Sí, porque viene del [wayuu]»)"},
 }
 
 REGLAS_LOCATIVAS: dict[str, dict] = {
@@ -7050,19 +7052,21 @@ REGLAS_RETIRADAS: dict[str, dict] = {
 }
 
 REGLAS_POSESIVAS: dict[str, dict] = {
-    "ta-": {
+    # D11 fase 3 (tf.3, 2026-09-23): era `ta-`, cuyo único apoyo era el wayuu.
+    # `da-` es el mismo prefijo que el pronombre `dai` (C1): el mismo «yo» no
+    # se enseña con dos consonantes. `ta-` sigue en el desafijador
+    # (REGLAS_EN_DESUSO).
+    "da-": {
         "nombre": "posesivo 1ra singular",
         "desc": "Mi, mío/mía. Del hablante.",
-        "uso": "ta- + SUSTANTIVO  →  mi X",
+        "uso": "da- + SUSTANTIVO  →  mi X",
         "ejemplos": [
-            "ta + barsure = ta-barsure (mi alma)",
-            "ta + korie = ta-korie (mi armadillo)",
-            "ta + anüiki = ta-anüiki (mi habla, mi lengua)",
+            "da + barsure = da-barsure (mi alma)",
+            "da + korie = da-korie (mi armadillo)",
+            "da + anüiki = da-anüiki (mi habla, mi lengua)",
         ],
-        "wayunaiki": "ta- (1ra persona singular posesivo, cognado directo)",
-        "deuda": "sin-procedencia — el único apoyo escrito es el cognado wayunaiki, "
-                 "que es el andamio que D11 retiró como hermana por defecto. "
-                 "Auditoría de morfología 2026-09-20 §1 y §2(d)",
+        "capa": "reconstruido · lokono da-si-kua 'mi casa' (Perea Alonso 1942 p. 587) = "
+                "taíno da- (C1, Oliver 1989 p. 136)",
     },
     "wa-": {
         "nombre": "posesivo 1ra plural",
@@ -7364,6 +7368,7 @@ REGLAS_TOPONIMICAS: dict[str, dict] = {
 #     6-fusion/medicion_tanda_base_2026-09-23.yaml §desafijador.
 TODAS_LAS_REGLAS = {
     **REGLAS_ASPECTO,
+    **REGLAS_EN_DESUSO,     # D11 fase 3: no se enseñan, se siguen pelando
     **REGLAS_LOCATIVAS,
     # REGLAS_AGENTIVAS (-ko, -sha) retiradas el 2026-09-14: ver REGLAS_RETIRADAS
     **REGLAS_POSESIVAS,
@@ -8426,7 +8431,12 @@ def _aspectos_morfologicos(tokens: list) -> list:
     igual que una acción, y eso lo decide `CATS_VERBALES`, no esta función.
     """
     encontrados = []
-    mapa = {"ka": "completivo", "ni": "continuativo", "da": "prospectivo"}
+    # D11 fase 3 (tf.2, 2026-09-23): el mapa se SUSTITUYE, no se une — con la
+    # unión, el scorer seguiría premiando `-ni`, que ya no se enseña. El
+    # presente no se marca, así que no hay tercera entrada. Leída con este
+    # mapa, la base vieja tiene aspecto en 1 de 3.811 respuestas: los runs
+    # anteriores no se re-leen (6-fusion/medicion_d11_fase3_2026-09-23.yaml).
+    mapa = {"kuba": "completivo", "ba": "prospectivo"}
     verbales = raices_verbales_caquetias()
     for tok in tokens:
         # forma con guion: raiz-sufijo
@@ -8498,6 +8508,12 @@ FUERA_DEL_HABLA: dict[str, dict] = {
     "thigisi": {"sig": "diente", "cat": "sust", "categoria": "cuerpo", "fuente": "taíno-reconstruido", "archivada": "2026-09-23 · db.3 · taíno-reconstruido desde el lokono", "notas": "Reconstrucción hipotética Taíno desde Lok. thibisi; método comparativo arahuacano; Reconstrucción desde Lok. thibisi (diente); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces · ARCHIVADA DEL HABLA 2026-09-23 (db.3, «Te doy el si a todos los defectos»): forma que reconstruir_taino() generó desde el lokono; ningún cronista la atestigua. Con la etiqueta `taíno-reconstruido` circulaba como voz de la esfera de contacto —que no penaliza— y es el andamio lokono con otra grafía, que sí penaliza. El cruce de la campaña del taíno ya la dejaba fuera (6-fusion/cruce_taino_caquetio_2026-09-21.yaml, `taino_reconstruido_excluido: 9`). LA CAPA NO SE TOCA: sigue siendo `taíno-reconstruido`"},
     "wacusi": {"sig": "ojo", "cat": "sust", "categoria": "cuerpo", "fuente": "taíno-reconstruido", "archivada": "2026-09-23 · db.3 · taíno-reconstruido desde el lokono", "notas": "Reconstrucción hipotética Taíno desde Lok. wakusi; método comparativo arahuacano; Reconstrucción desde Lok. wakusi (ojo); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces · ARCHIVADA DEL HABLA 2026-09-23 (db.3, «Te doy el si a todos los defectos»): forma que reconstruir_taino() generó desde el lokono; ningún cronista la atestigua. Con la etiqueta `taíno-reconstruido` circulaba como voz de la esfera de contacto —que no penaliza— y es el andamio lokono con otra grafía, que sí penaliza. El cruce de la campaña del taíno ya la dejaba fuera (6-fusion/cruce_taino_caquetio_2026-09-21.yaml, `taino_reconstruido_excluido: 9`). LA CAPA NO SE TOCA: sigue siendo `taíno-reconstruido`"},
     "wagulo": {"sig": "tortuga", "cat": "sust", "categoria": "fauna", "fuente": "taíno-reconstruido", "archivada": "2026-09-23 · db.3 · taíno-reconstruido desde el lokono", "notas": "Reconstrucción hipotética Taíno desde Lok. wabulo; método comparativo arahuacano; Reconstrucción desde Lok. wabulo (tortuga); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces · ARCHIVADA DEL HABLA 2026-09-23 (db.3, «Te doy el si a todos los defectos»): forma que reconstruir_taino() generó desde el lokono; ningún cronista la atestigua. Con la etiqueta `taíno-reconstruido` circulaba como voz de la esfera de contacto —que no penaliza— y es el andamio lokono con otra grafía, que sí penaliza. El cruce de la campaña del taíno ya la dejaba fuera (6-fusion/cruce_taino_caquetio_2026-09-21.yaml, `taino_reconstruido_excluido: 9`). LA CAPA NO SE TOCA: sigue siendo `taíno-reconstruido`"},
+    # ── D11 fase 3 (tf.1, 2026-09-23): los pronombres reconstruidos desde el wayuu ──
+    # «no podemos seguir teniendo reconstrucciones desde el Wayu» (cc.12). LA
+    # CAPA NO SE TOCA. Los sustituyen `dai`, `bui`, `lihi`/`tuhu`.
+    "taya": {"sig": "yo (1ra persona singular)", "cat": "pron", "fuente": "caquetío-reconstruido", "archivada": "2026-09-23 · D11 fase 3 · manda dai", "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `de`/`dai` 1sg — en el lexicón y en Perea 1942. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ARCHIVADA DEL HABLA 2026-09-23 (D11 fase 3, tf.1): el pronombre reconstruido desde el wayuu deja su sitio a `dai`, que sale de las hermanas (6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml). LA CAPA NO SE TOCA"},
+    "pia": {"sig": "tú (2da persona singular)", "cat": "pron", "fuente": "caquetío-reconstruido", "archivada": "2026-09-23 · D11 fase 3 · manda bui", "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `bi`/`bui` 2sg — en el lexicón y en Perea 1942. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ARCHIVADA DEL HABLA 2026-09-23 (D11 fase 3, tf.1): el pronombre reconstruido desde el wayuu deja su sitio a `bui`, que sale de las hermanas (6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml). LA CAPA NO SE TOCA"},
+    "nüma": {"sig": "él/ella (pronombre 3ra persona)", "cat": "pron", "fuente": "caquetío-reconstruido", "archivada": "2026-09-23 · D11 fase 3 · manda lihi / tuhu", "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `li`/`tho` 3sg. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ARCHIVADA DEL HABLA 2026-09-23 (D11 fase 3, tf.1): el pronombre reconstruido desde el wayuu deja su sitio a `lihi` / `tuhu`, que sale de las hermanas (6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml). LA CAPA NO SE TOCA"},
 }
 
 
@@ -9043,7 +9059,7 @@ def forma_de_la_esfera(token: str) -> str:
     """
     if token in FORMA_DE_LA_ESFERA:
         return FORMA_DE_LA_ESFERA[token]
-    for pref in ("ta", "wa", "ma", "ka"):
+    for pref in ("da", "ta", "wa", "ma", "ka"):
         if token.startswith(pref + "-"):
             base = token.split("-", 1)[1]
             if base in FORMA_DE_LA_ESFERA:
@@ -9112,7 +9128,9 @@ def score_linguistico(texto: str, lexico: "LexicoComunitario") -> dict:
         # `-uto` —se enseña y no se cuenta—, que es justo lo que esta tanda
         # está arreglando. Los cinco prefijos son los mismos que
         # `_PREFIJOS_CAQ`, escritos aquí sin el guion.
-        for pref in ("ta", "wa", "ma", "ka", "u"):
+        # `da-` entra con D11 fase 3 (tf.3); `ta-` se queda: la base entera
+        # está dicha con él y el desafijador lo sigue pelando.
+        for pref in ("da", "ta", "wa", "ma", "ka", "u"):
             if tok.startswith(pref + "-") and tok.split("-", 1)[1] in activos:
                 return True
         # ⚠️ d21.2 («Si, A», 2026-09-21): esta rama admitía cualquier token

@@ -1017,7 +1017,14 @@ def run_turn(
                             form=neo.forma,
                             components=getattr(neo, "componentes", ""),
                             meaning=neo.significado,
-                            morphological_rule=getattr(neo, "regla_aplicada", "desconocida"),
+                            # Una raíz que admitió la puerta onomatopéyica
+                            # (db.6) se marca aquí, para que la lectura
+                            # posterior (`analizar_nodos`) la reconozca: la
+                            # lista viva sólo está en el JSON del run.
+                            morphological_rule=(
+                                f"onomatopeya:{neo.raiz_onomatopeyica}"
+                                if getattr(neo, "raiz_onomatopeyica", None)
+                                else getattr(neo, "regla_aplicada", "desconocida")),
                         )
                     except Exception:
                         # No interrumpir por neologismo fallido, pero contarlo:
