@@ -176,3 +176,31 @@ db.5_waitiao:
   estado: APLICADA en la rama tanda/base-2026-09-22 (2026-09-22)
   aplicado_por: [6-fusion/scripts/anotar_waitiao.py]
   verificado_que_no_mueve_nada: 'huella de los 378 prompts igual antes y después (adb3da5d)'
+
+db.6_la_onomatopeya_de_los_animales:
+  tipo: corte de serie (cambia la puerta de raíces y el estímulo)
+  decision_literal: '«Vale retomemos lo recordato y sigamos tu recomendación con lo de lo de las onomatopeyas animales.»'
+  la_recomendacion_que_acepta: >-
+    «B + el sonido descrito»: (B) una puerta estrecha sólo para los referentes de
+    animal — se admite una raíz nueva si responde al estímulo de un animal y pasa
+    el filtro de forma caquetía; y el sonido va DESCRITO en el estímulo (cuántas
+    veces, grave o agudo, a qué hora), no transcrito.
+  por_que: >-
+    El caquetío atestiguado ya nombra aves por su canto (`dara`, `wakoa`,
+    `chuchubi`, `warawara`, `chogogo`, `tijua`: campaña de aves, #205), así que
+    nombrar por el sonido es lo que hacían. Con db.1 A + C a secas, la raíz
+    onomatopéyica de un agente se rechazaría y los animales del catálogo no
+    llegarían a fijarse. El criterio de Miguel en db.1 — «el que invente tiene
+    que ser el agente caquetío, no el agente español-inglés-latín-caquetío» —
+    es el filtro: la raíz nueva tiene que tener forma caquetía.
+  lectura_operativa: >-
+    (1) La excepción vale SÓLO dentro de la competencia de un referente marcado
+    `animal: true` y sólo para la forma que ese turno propone para ESE referente;
+    fuera de ahí, db.1 A + C sin cambios. (2) El filtro: `neologismo_valido()`
+    (blocklist castellana, marcas ortográficas, bigramas) más la fonotáctica del
+    proyecto; una raíz con marca castellana o que sea palabra castellana cae
+    igual. (3) La raíz admitida se registra marcada `raiz_onomatopeyica`, para
+    poder medirla aparte. (4) `se_oye` describe; la transcripción de fuente se
+    queda en los YAML de fauna. Es la puerta que db.1 reservaba para la era 3,
+    abierta sólo una rendija: la amplia sigue reservada.
+  se_aplica_en: 'la tanda de la base, medida con todo lo demás'
