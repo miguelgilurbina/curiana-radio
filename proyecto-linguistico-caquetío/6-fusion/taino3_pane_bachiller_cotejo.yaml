@@ -1,0 +1,480 @@
+meta:
+  pregunta: ¿las formas indígenas de la retraducción de Pané de Bachiller (1883, pp. 165-184) coinciden
+    con las de la Pané que usa el repo (Wikisource)?
+  medido: '2026-09-23'
+  script: 6-fusion/scripts/cotejar_pane_bachiller.py
+  estado: PROPUESTA (regla 5)
+  lo_que_declara_bachiller: 'p. 166: traduce de nuevo sobre la edición italiana de Milán (1614) y «restituye»
+    los nombres indios «teniendo presente á Oviedo, P. Mártir, Rafinesque y Brasseur de Bourbourg». No
+    vio la edición de Venecia (1571) y rechaza la de Bárcia.'
+  umbral: 0.8
+  aviso: OCR de archive.org sin corregir; `no-esta` puede ser una forma restituida hasta no parecerse
+    (ver LEIDO_A_MANO).
+resumen:
+  difiere-restituida: 12
+  igual: 19
+  no-esta: 8
+  variante: 10
+filas:
+- pane_wikisource: Dios naboria daca
+  capitulo: XXV
+  tipo: voz
+  bachiller: Dio Aboriadacha
+  pagina_impresa: 182
+  veredicto: difiere-restituida
+  como: leído a mano
+  nota: 'la frase entera en una palabra, y `dacha` por `daca`: es la forma que su vocabulario (p. 270)
+    atribuye a Pané'
+- pane_wikisource: yahu
+  en_la_forma: yahu naboriu
+  capitulo: XXV
+  tipo: voz
+  bachiller: null
+  pagina_impresa: null
+  parecido: 0.57
+  veredicto: no-esta
+  contexto_en_bachiller: null
+- pane_wikisource: naboriu
+  en_la_forma: yahu naboriu
+  capitulo: XXV
+  tipo: voz
+  bachiller: null
+  pagina_impresa: null
+  parecido: 0.73
+  veredicto: no-esta
+  contexto_en_bachiller: null
+- pane_wikisource: cemíes
+  capitulo: proemio
+  tipo: voz
+  bachiller: semis
+  pagina_impresa: 167
+  veredicto: difiere-restituida
+  como: leído a mano
+  nota: con s-, como en Pedro Mártir; ningún `cemí` en las veinte páginas
+- pane_wikisource: cohoba
+  en_la_forma: null
+  capitulo: XI
+  tipo: voz
+  bachiller: cojoba
+  pagina_impresa: 171
+  parecido: 1.0
+  veredicto: igual
+  contexto_en_bachiller: nariz y le lanzó un gaangiiio sobre las espaldas, que estaba lleno de cojoba
+    que tenia para el dia. Es el cojoba un polvo que usan para purgarse y
+- pane_wikisource: buhitihu
+  en_la_forma: buhitihu / buhuitihu / bohutis
+  capitulo: XIV-XX (la glosa, en XVII)
+  tipo: voz
+  bachiller: Buchus-itíhu
+  pagina_impresa: 175
+  parecido: 0.84
+  veredicto: variante
+  contexto_en_bachiller: edad y siempre atribuyen éstas á — aquellos. XVI. De lo que hacen los Buchus-itíhu.
+    Cuando van á visitar á un enfermo, antes de salir de sus casas sacan
+- pane_wikisource: buhuitihu
+  en_la_forma: buhitihu / buhuitihu / bohutis
+  capitulo: XIV-XX (la glosa, en XVII)
+  tipo: voz
+  bachiller: Buchus-itíhu
+  pagina_impresa: 175
+  parecido: 0.9
+  veredicto: variante
+  contexto_en_bachiller: edad y siempre atribuyen éstas á — aquellos. XVI. De lo que hacen los Buchus-itíhu.
+    Cuando van á visitar á un enfermo, antes de salir de sus casas sacan
+- pane_wikisource: bohutis
+  en_la_forma: buhitihu / buhuitihu / bohutis
+  capitulo: XIV-XX (la glosa, en XVII)
+  tipo: voz
+  bachiller: null
+  pagina_impresa: null
+  parecido: 0.71
+  veredicto: no-esta
+  contexto_en_bachiller: null
+- pane_wikisource: conucos
+  en_la_forma: null
+  capitulo: IX
+  tipo: voz
+  bachiller: conuco
+  pagina_impresa: 171
+  parecido: 0.92
+  veredicto: variante
+  contexto_en_bachiller: s huesos. Determinaron comérseUn los.  dia en que Yaya había ido á su conuco,
+    es decir,  á su heredad, vivían cuatro hijos de un solo parto de  un
+- pane_wikisource: cazabi
+  en_la_forma: null
+  capitulo: XI
+  tipo: voz
+  bachiller: casabi
+  pagina_impresa: 171
+  parecido: 1.0
+  veredicto: igual
+  contexto_en_bachiller: 'onto como llegaron á la puerta de Basa-Manaco, y que oyeron que traía casabi
+    dijeron: "Ayacauo-Guaracoel, es decir, conocemos al que es nuestro ab'
+- pane_wikisource: guanines
+  en_la_forma: null
+  capitulo: VI
+  tipo: voz
+  bachiller: Guanin
+  pagina_impresa: 168
+  parecido: 0.83
+  veredicto: variante
+  contexto_en_bachiller: ' donde las dejó; y el siguió á otra región designada por la tierra de Guanin.
+    Dejaron á los niños cerca de un arroyo; y cuando tuvieron hambre emp'
+- pane_wikisource: cibas
+  en_la_forma: null
+  capitulo: VI
+  tipo: voz
+  bachiller: sibas
+  pagina_impresa: 169
+  parecido: 1.0
+  veredicto: igual
+  contexto_en_bachiller: 'na y Gabonito-, le regaló muchos guanini [joyas de oro de poca ley] y sibas
+    [piedras] para que las llevase atadas al brazo: en el país los colesi'
+- pane_wikisource: cobo
+  en_la_forma: null
+  capitulo: V
+  tipo: voz
+  bachiller: cobo
+  pagina_impresa: 169
+  parecido: 1.0
+  veredicto: igual
+  contexto_en_bachiller: ' ámbos se embarcaron en una canoa y dijo aquél á éste; "Mira el bello cobo"
+    [caracol de mar] y siguiendo la designación mientras lo miraba, Guag'
+- pane_wikisource: guanara
+  en_la_forma: null
+  capitulo: VI
+  tipo: voz
+  bachiller: Guanara
+  pagina_impresa: 169
+  parecido: 1.0
+  veredicto: igual
+  contexto_en_bachiller: ' úlceras, que nosotros llamamos mal francés. Estos lo pusieron en una Guanara,
+    quiere decir lugar retirado y allí se curó. Ella le pidió licencia p'
+- pane_wikisource: operito
+  en_la_forma: null
+  capitulo: XIII
+  tipo: voz
+  bachiller: operito
+  pagina_impresa: 173
+  parecido: 1.0
+  veredicto: igual
+  contexto_en_bachiller: ' reconocerles el vientre con la mano y si no tienen ombligo les dicen operito,
+    que es muerto, pues creen que los muertos no tienen ombligo. Suelen '
+- pane_wikisource: goeiz
+  en_la_forma: null
+  capitulo: XIII
+  tipo: voz
+  bachiller: Goeis
+  pagina_impresa: 173
+  parecido: 1.0
+  veredicto: igual
+  contexto_en_bachiller: 'o que creen los indios. Cuando una persona vive, su espíritu se llama Goeis,
+    cuando muere Opta: piensan que á veces aparece el espíritu: agregan '
+- pane_wikisource: opia
+  en_la_forma: null
+  capitulo: XIII
+  tipo: voz
+  bachiller: null
+  pagina_impresa: null
+  parecido: 0.75
+  veredicto: no-esta
+  contexto_en_bachiller: null
+- pane_wikisource: caracaracol
+  en_la_forma: null
+  capitulo: VII
+  tipo: voz
+  bachiller: caracaracol
+  pagina_impresa: 170
+  parecido: 1.0
+  veredicto: igual
+  contexto_en_bachiller: l de estos caracol, que eran los de manos ásperas. Encontraron cuatro caracaracol
+    y los presentaron al casique [caracaracol es el plural de caracolee l
+- pane_wikisource: inriri
+  en_la_forma: inriri / inrire cahuvayal
+  capitulo: VIII
+  tipo: voz
+  bachiller: Inrire
+  pagina_impresa: 170
+  parecido: 0.83
+  veredicto: variante
+  contexto_en_bachiller: ron el medio de que fuesen — mujeres. Buscaron un pájaro que se llama Inrire,
+    y ántes Inrire-Caimiaiel que perfora los árboles y se dice en nuestr
+- pane_wikisource: inrire
+  en_la_forma: inriri / inrire cahuvayal
+  capitulo: VIII
+  tipo: voz
+  bachiller: Inrire
+  pagina_impresa: 170
+  parecido: 1.0
+  veredicto: igual
+  contexto_en_bachiller: ron el medio de que fuesen — mujeres. Buscaron un pájaro que se llama Inrire,
+    y ántes Inrire-Caimiaiel que perfora los árboles y se dice en nuestr
+- pane_wikisource: cahuvayal
+  en_la_forma: inriri / inrire cahuvayal
+  capitulo: VIII
+  tipo: voz
+  bachiller: null
+  pagina_impresa: null
+  parecido: 0.63
+  veredicto: no-esta
+  contexto_en_bachiller: null
+- pane_wikisource: mayohavau
+  en_la_forma: null
+  capitulo: XIV
+  tipo: voz
+  bachiller: null
+  pagina_impresa: null
+  parecido: 0.67
+  veredicto: no-esta
+  contexto_en_bachiller: null
+- pane_wikisource: gueyo
+  en_la_forma: gueyo (por otro nombre zacón)
+  capitulo: XVII
+  tipo: voz
+  bachiller: gueyo
+  pagina_impresa: 176
+  parecido: 1.0
+  veredicto: igual
+  contexto_en_bachiller: el médico por falta de dieta como le previno, toman una yerba llamada gueyo,
+    que tiene las hojas gruesas y largas, que también llaman sacón. Toma
+- pane_wikisource: zacón
+  en_la_forma: gueyo (por otro nombre zacón)
+  capitulo: XVII
+  tipo: voz
+  bachiller: sacón
+  pagina_impresa: 176
+  parecido: 1.0
+  veredicto: igual
+  contexto_en_bachiller: amada gueyo, que tiene las hojas gruesas y largas, que también llaman sacón.
+    Toman el jugo de las hojas,  cortan al muerto las uñas y cabellos de
+- pane_wikisource: digo
+  en_la_forma: null
+  capitulo: II
+  tipo: voz
+  bachiller: digo
+  pagina_impresa: 168
+  parecido: 1.0
+  veredicto: igual
+  contexto_en_bachiller: oniana (1) encargó á otro llamado Giadrauaua que fuera á buscar yerba digo, con
+    que se lavaban el cuerpo cuando querían asearse. Fué antes de se
+- pane_wikisource: tona
+  capitulo: IV
+  tipo: voz
+  bachiller: toa, toa (madre, madre) … convertidos en ranas
+  pagina_impresa: 170
+  veredicto: difiere-restituida
+  como: leído a mano
+  nota: 'la voz de la rana (`tona`) no está: queda sólo el grito `toa` de los niños'
+- pane_wikisource: guabaza
+  capitulo: XIII
+  tipo: voz
+  bachiller: guanaba
+  pagina_impresa: 173
+  veredicto: difiere-restituida
+  como: leído a mano
+  nota: '🔴 SUSTITUCIÓN DECLARADA: «guanaba (así lo dice Pedro Mártir:) el texto que traduzco dice guabasa,
+    lo que creo error»'
+- pane_wikisource: jobos
+  en_la_forma: null
+  capitulo: I
+  tipo: voz
+  bachiller: jobos
+  pagina_impresa: 167
+  parecido: 1.0
+  veredicto: igual
+  contexto_en_bachiller: edaron convertidos en árboles, que se conocen con el nombre de liobi (jobos,
+    kobos) ó mirabolanos. "La razón por la cual Macocael velaba era para
+- pane_wikisource: ajes
+  en_la_forma: null
+  capitulo: XXVI
+  tipo: voz
+  bachiller: null
+  pagina_impresa: null
+  parecido: 0.67
+  veredicto: no-esta
+  contexto_en_bachiller: null
+- pane_wikisource: yuca
+  en_la_forma: null
+  capitulo: XIX
+  tipo: voz
+  bachiller: yuca
+  pagina_impresa: 179
+  parecido: 1.0
+  veredicto: igual
+  contexto_en_bachiller: o negro. Otras tienen tres puntas y créen que ciertamente producen la yuca-,
+    tienen raices parecidas al rábano silvestre. La hoja de la xutola t
+- pane_wikisource: Yocahu Vagua Maorocoti
+  capitulo: proemio
+  tipo: teonimo
+  bachiller: Yocauna-Gua-Maonocon
+  pagina_impresa: 167
+  veredicto: difiere-restituida
+  como: leído a mano
+  nota: 'restituida: Coll y Toste (p. 260) la cita así de Bachiller'
+- pane_wikisource: Atabex, Iermaoguacar, Apito y Zuimaco
+  capitulo: proemio
+  tipo: teonimo
+  bachiller: Atabeira Mamona, Gna-cara-pita, Lidia, Guimasoa
+  pagina_impresa: 167
+  veredicto: difiere-restituida
+  como: leído a mano
+  nota: 'cinco nombres, y ninguno igual: `Atabeira` es la forma de Pedro Mártir, no la de Pané-Ulloa'
+- pane_wikisource: Maquetaurie Guayaba
+  capitulo: XII
+  tipo: teonimo
+  bachiller: Maqnetaurie Guayaría
+  pagina_impresa: 172
+  veredicto: difiere-restituida
+  como: leído a mano
+  nota: el primer nombre igual (con la u leída n por el OCR); el segundo, otro
+- pane_wikisource: Guabancex
+  en_la_forma: null
+  capitulo: XXIII
+  tipo: teonimo
+  bachiller: Guabancex
+  pagina_impresa: 181
+  parecido: 1.0
+  veredicto: igual
+  contexto_en_bachiller: s, y el otro de convocar á los semis en los casos necesarios]. Cuando Guabancex
+    se incomoda muéve las aguas y los vientos y derriba las casas y arran
+- pane_wikisource: Boinayol
+  en_la_forma: Boinayol y Maroya
+  capitulo: XI
+  tipo: teonimo
+  bachiller: Boinoel
+  pagina_impresa: 172
+  parecido: 0.8
+  veredicto: variante
+  contexto_en_bachiller: estimados y cuando no llueA ve los visitan y luego llueve. uno llaman Boinoel,
+    al úúo Maroyo (Pedro Mártir escribe Biuthltely Marohii).  "XII. Délo
+- pane_wikisource: Maroya
+  en_la_forma: Boinayol y Maroya
+  capitulo: XI
+  tipo: teonimo
+  bachiller: Maroyo
+  pagina_impresa: 172
+  parecido: 0.83
+  veredicto: variante
+  contexto_en_bachiller: do no llueA ve los visitan y luego llueve. uno llaman Boinoel, al úúo Maroyo
+    (Pedro Mártir escribe Biuthltely Marohii).  "XII. Délo que estas gent
+- pane_wikisource: 'Vaibrama (título: Buyayba)'
+  capitulo: XX
+  tipo: teonimo
+  bachiller: Baidrama … Bujay
+  pagina_impresa: 179
+  veredicto: difiere-restituida
+  como: leído a mano
+  nota: Baidrama por Vaibrama; y `Bujay` como otro nombre del mismo ídolo, que Pané da como título
+- pane_wikisource: Corocote
+  en_la_forma: null
+  capitulo: XXI
+  tipo: teonimo
+  bachiller: Corocoto
+  pagina_impresa: 180
+  parecido: 0.88
+  veredicto: variante
+  contexto_en_bachiller: n por sus hijos). Durante una guerra los enemigos quemaron la casa de Corocoto
+    y este se fue" á tiro de arbaieta cerca de donde había agua. Se cuent
+- pane_wikisource: Opiyelguoviran
+  capitulo: XXII
+  tipo: teonimo
+  bachiller: Epilegaaanita
+  pagina_impresa: 180
+  veredicto: difiere-restituida
+  como: leído a mano
+  nota: '🔴 SUSTITUCIÓN DECLARADA: «así lo llama P. Mártir: un texto dice Opigielqaouiran que es visible
+    errata». Pone el nombre de Mártir y manda el de Pané a la errata'
+- pane_wikisource: Faraguvaol
+  en_la_forma: null
+  capitulo: XXIV
+  tipo: teonimo
+  bachiller: Faragauaol
+  pagina_impresa: 181
+  parecido: 0.84
+  veredicto: variante
+  contexto_en_bachiller: á la tierra. Todo lo creen firmemente. ' 'XXIV. Lo que creen del semi Faragauaol
+    [debe ser Taragabaol, como escribe Eafinesque, ó mejor GuarayoneT\. "
+- pane_wikisource: Cacibayagua y Amayauba
+  capitulo: I
+  tipo: lugar
+  bachiller: Caji-Bajagua … Amayauna
+  pagina_impresa: 167
+  veredicto: difiere-restituida
+  como: leído a mano
+  nota: 'nota de Bachiller: «Pedro Mártir escribe Casi-Baxagua»'
+- pane_wikisource: Canta
+  en_la_forma: null
+  capitulo: I
+  tipo: lugar
+  bachiller: Canta
+  pagina_impresa: 167
+  parecido: 1.0
+  veredicto: igual
+  contexto_en_bachiller: a que se llama Caimana, en donde se halla una montaña que se denomina Canta,
+    en donde hay dos grutas ó cuevas dichas Caji-Bajagua (1) Amayauna. D
+- pane_wikisource: Caonao
+  capitulo: I
+  tipo: lugar
+  bachiller: Caimana
+  pagina_impresa: 167
+  veredicto: difiere-restituida
+  como: leído a mano
+  nota: la provincia de la gruta; Bachiller la restituye como `Caimana`
+- pane_wikisource: Yobovava
+  en_la_forma: null
+  capitulo: XI
+  tipo: lugar
+  bachiller: null
+  pagina_impresa: null
+  parecido: 0.71
+  veredicto: no-esta
+  contexto_en_bachiller: null
+- pane_wikisource: Coaibai
+  en_la_forma: null
+  capitulo: XII
+  tipo: lugar
+  bachiller: coaibai
+  pagina_impresa: 172
+  parecido: 1.0
+  veredicto: igual
+  contexto_en_bachiller: ntes créen sóbrelos — muertos. Piensan que hay un lugar que se llama  coaibai
+    á donde van los muertos en un punto de la isla  que le dicen Soraya (
+- pane_wikisource: Bouhi
+  capitulo: V
+  tipo: lugar
+  bachiller: Bulii [Bohi, ¿casas? ó ¿habitaciones?]
+  pagina_impresa: 169
+  veredicto: difiere-restituida
+  como: leído a mano
+  nota: 'OCR `Bulii`/`BoM`; Bachiller lo glosa él mismo como ''casas'', con interrogación: conjetura suya,
+    no de Pané'
+- pane_wikisource: Haití
+  en_la_forma: null
+  capitulo: V
+  tipo: lugar
+  bachiller: Haití
+  pagina_impresa: 169
+  parecido: 1.0
+  veredicto: igual
+  contexto_en_bachiller: speto su fábulas como las oigo. "VIL De como hubo otra vez mujeres en Haití.
+    ~Ellos dicen que un dia se fueron á bañar los hom
+- pane_wikisource: Matinino
+  en_la_forma: Matinino / Matanino
+  capitulo: IV y V
+  tipo: lugar
+  bachiller: Matinino
+  pagina_impresa: 169
+  parecido: 1.0
+  veredicto: igual
+  contexto_en_bachiller: e esta manera se posesionó de todas las mujeres para sí y las dejó en Matinino,
+    en que se recordará que solo quedaron mujeres; y se fué á la isla de
+- pane_wikisource: Matanino
+  en_la_forma: Matinino / Matanino
+  capitulo: IV y V
+  tipo: lugar
+  bachiller: Matinino
+  pagina_impresa: 169
+  parecido: 0.88
+  veredicto: variante
+  contexto_en_bachiller: e esta manera se posesionó de todas las mujeres para sí y las dejó en Matinino,
+    en que se recordará que solo quedaron mujeres; y se fué á la isla de

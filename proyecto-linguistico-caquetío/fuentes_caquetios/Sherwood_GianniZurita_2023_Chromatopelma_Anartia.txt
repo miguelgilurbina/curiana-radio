@@ -1,0 +1,288 @@
+ANARTIA D. Sherwood & R. Gianni-Zurita
+Publicación del Museo de Biología de la Universidad del Zulia ISSN 1315-642X (impresa) / ISSN 2665-0347 (digital)
+
+Anartia, 36 (junio 2023): 36-50
+
+Leveraging citizen science data to preliminarily infer the distribution and habitat associations of the Venezuelan endemic
+Chromatopelma cyaneopubescens (Strand, 1907) (Araneae: Theraphosidae)
+Aprovechando datos de ciencia ciudadana para inferir preliminarmente la distribución y las asociaciones de hábitat de la especie endémica venezolana Chromatopelma cyaneopubescens (Strand, 1907) (Araneae: Theraphosidae)
+Danniella Sherwood1,2,* & Rafael Gianni-Zurita3
+1Arachnology Research Association, 124 City Road, London, EC1V 2NX, United Kingdom 2Fundación Ariguanabo, 4111, Calle 58, e/ave. 41 y ave. 43, San Antonio de los Baños, Provincia Artemisa c.p. 18100, Cuba 3Provita A.C. Calle La Joya con avenida Libertador, edificio Unidad Técnica del Este, piso 10, oficina 29-30, urbanización Chacao,
+municipio Chacao, ZP 1060, Caracas, Venezuela
+* Correspondence: danni.sherwood@hotmail.com
+(Received: 24-08-2023 / Accepted: 08-11-2023 / On line: 24-12-2023)
+ABSTRACT The theraphosid Chromatopelma cyaneopubescens (Strand, 1907), known as the Green Bottle Blue Tarantula worldwide, but in Venezuela under the common name Tarántula Azul de Paraguaná, is a charismatic species endemic to Venezuela. Hitherto, almost all information known about this species comes from data gathered in captivity. Through utilizing verified citizen science data from the website iNaturalist, we discuss the biogeographical significance of these preliminary data for showing the in situ distribution and habitat associations of this iconic spider, including a notable record from inland Venezuela in the state of Lara. Keywords: biogeography, citizen science, ecology, iNaturalist, species occurrence.
+RESUMEN La araña terafósida Chromatopelma cyaneopubescens (Strand, 1907), conocida en Venezuela como Tarántula Azul de Paraguaná, es una especie carismática endémica de Venezuela. Hasta el momento, casi toda la información conocida sobre esta especie proviene de datos recopilados en cautiverio. Al utilizar datos científicos depositados por ciudadanos en la base de datos iNaturalist, reconocemos la importancia biogeográfica de estos registros preliminares para mostrar la distribución in situ y las asociaciones de hábitat de esta icónica araña, incluyendo uno notable del interior de Venezuela en el estado Lara. Palabras clave: biogeografía, ciencia ciudadana, ecología, iNaturalist, presencia de especie.
+
+INTRODUCTION
+Chromatopelma cyaneopubescens (Strand, 1907) is a large and colourful spider belonging to the family Theraphosidae Thorell, 1869, and is endemic to Venezuela (World Spi-
+
+der Catalog 2023). This unique species has been assessed as Endangered in the Red Book of Venezuelan Fauna (Colmenares 2015). Since its original description in the genus Eurypelma C. L. Koch, 1842 from “Venezuela, Paraguara [sic]” by Strand (1907) [the syntype male and female are
+
+36
+
+New insights on Chromatopelma
+
+lost, destroyed during WWII bombing campaigns (see World Spider Catalog, 2023)], this species endured several generic transfers in the Twentieth Century.
+Petrunkevitch (1939) transferred this species to the newly-created genus Delopelma Petrunkevitch, 1939 but gave no specific reasons for this new combination. The synonymy of Delopelma with the enigmatic Rhechostica Simon, 1892 was proposed by Raven (1985). This was one of several genera questionably synonymised with Rhechostica by Raven (1985), with one more prominent genus – Aphonopelma Pocock, 1901– being the catalyst that led to a suppression of the name Rhechostica by the International Commission on Zoological Nomenclature (ICZN 1991), which was welcomed by the arachnological community.
+Schmidt (1995) transferred Aphonopelma cyaneopubescens, created indirectly by the validation of Aphonopelma over Rhechostica, to the newly-created Chromatopelma Schmidt, 1995 where it has since remained. Redescriptions of the male and depictions of the female spermathecae came at the end of the first millennium and the first years of the second millennium (Schmidt & Herzig 1997, Vol. 1999, Schmidt 2000, 2003) based entirely on material from the pet trade. Most recently, the ontogenetic colour change found in C. cyaneopubescens, a striking aspect of its life history, was discussed by Gabriel & Sherwood (2019) based on reared captive-bred specimens. Despite being discussed by many works, a satisfactory modern taxonomic redescription of the male and full description of the female has been lacking. This may be due to the ease of recognising this species based on habitus (Fig. 1), in contrast to many theraphosids, which require careful examination of the genitalia (Sherwood 2020).
+Following the original description by Strand (1907) which indicated this species was distributed from the unclear locality “Venezuela: Paraguara [sic]” many subsequent works only referred to the spider as coming from an unspecified or general locality in Venezuela. Petrunkevitch (1939) simply states “Venezuela”. Schmidt (1995) and Schmidt & Herzig (1997)1 give no detail on distribution despite the former work describing a new genus to house this species and the latter describing the male for the first time. Schmidt (1997) states the distribution of C. cyaneopubescens as “Venezuela” without precise locality. Peters (2000)2 assumes that C. cyaneopubescens is from the
+1 Schmidt frequently used the incorrect subsequent spelling “cyanopubescens” in his works.
+2 It is important to note that much of the information contained in the self-published hobbyist books by Peters (2000, 2003) are considered erroneous and/or dubious by many arachnologists, including the senior author of the present contribution.
+
+Figure 1. A. Chromatopelma cyaneopubescens (Strand, 1907) adult male. Photo courtesy of and © Andy J. Boyce. Licenced under Creative Common License Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). See also: https://www. inaturalist.org/observations/14470887. B. Chromatopelma cyaneopubescens (Strand, 1907), adult female. Photo courtesy of and © Pedro D. Vernet P. Licenced under Creative Common License Attribution-Non Commercial 4.0 International (CC BY-NC 4.0). See also: https://www.inaturalist.org/observations/52260208. C. Chromatopelma cyaneopubescens (Strand, 1907), large juvenile. Photo courtesy of and © Pedro D. Vernet P. Licenced under Creative Common License AttributionNon Commercial 4.0 International (CC BY-NC 4.0). See also: https://www.inaturalist.org/observations/52270529
+
+37
+
+D. Sherwood & R. Gianni-Zurita
+
+Venezuelan Amazon, an opinion also apparently shared by Schmidt at the time although he did not publish this ( Jorge M. González pers. comm.). However, he also indicates the Península de Paraguaná in red on a map, thus providing the first indication this species occurred there. Peters (2003) also gives a distribution from “North Venezuela”, including the Amazonian region, referencing parts of the Essequibo Territory and Brazil. Nonetheless, like his previous work, he also provides a map marking the Península de Paraguaná as a point of distribution for this species. It is important to note that even though he shows a Venezuelan map and points to the Península de Paraguaná, both works do not mention it specifically in their texts.
+Klaas (2003) provides photos of this species and its habitat, and its retreats in Península de Paraguaná, as well as general comments on its ecology, but as for locality he only indicates that it is found in “Northern Venezuela”. The precise location of the in situ observations and photographs –which we now know were made in the Península de Paraguaná ( Jorge M. González pers. comm.)– were obscured as “Northern Venezuela” by Klaas as he knew the book would be read by collectors and wanted to deter them from knowing the location of specimens or damaging the fragile habitat ( Jorge M. González pers. comm.). Years later, Colmenares (2015) explicitly notes that C. cyaneopubescens is endemic to the Península de Paraguaná. Thus, it is clear that Strand’s type locality “Paraguara [sic]” is simply a misspelling of Paraguaná.
+Ecological data was unknown until Klaas (2003) who provided details of the habitat and semi-arboreal lifestyle of this species (see above). Colmenares (2015) also gives more updated ecological information from the Península de Paraguaná. Chromatopelma cyaneopubescens has a clear preference for making retreats in holes on trees or fallen logs, and in crevices of bark (Klaas 2003, Jorge M. González pers. comm.).
+The Península de Paraguaná and surrounding parts of the mainland have many unique flora and fauna elements (Rodríguez et al. 2015). Indeed, it is biogeographically distinct as it has its own ecoregion: the Paraguaná xeric scrub ecoregion (per Dinerstein et al. 2017) which covers the entirety of the Península de Paraguaná, plus some extended habitat on the mainland of northwest Venezuela, extending into the foothills of the Venezuelan Andes (Dinerstein et al. 2017). Outside Venezuela, this ecoregion also covers the south Caribbean islands of Aruba, Bonaire, and Curaçao.
+
+The online database iNaturalist is an important platform for citizen scientists, who provide observation data that can be assessed by specialist researchers. Through the two community projects ‘Arañas de Venezuela Araneae (registros ‘Grado de investigación’)’ (Gianni 2023a) and ‘Arañas de Venezuela Araneae (registros Ni-Casuales)’ (Gianni 2023b), the senior author (DS) has been able to evaluate theraphosid records from across Venezuela. Since this includes a small but important dataset relating to C. cyaneopubescens, we present that data here.
+In this work, utilising Research Grade3 records from citizen scientists that we have assessed, we provide a muchneeded preliminary update on the known distribution to include several new areas including the state of Lara, and habitat associations of C. cyaneopubescens and discuss continuing knowledge gaps that could be addressed by future researchers.
+MATERIALS AND METHODS
+Unlike many theraphosid spiders, Chromatopelma cyaneopubescens is readily distinguished by habitus at all life stages from spiderling (see Gabriel & Sherwood 2019) to large juveniles/subadults (Fig. 1C) to adult male/female (Figs. 1A, 1B, respectively) based on colouration of the carapace, legs, and opisthosoma. Therefore, we examined two datasets (Gianni 2023a,b) from iNaturalist (California Academy of Sciences and National Geographic Society, 2023) exploring records of Venezuelan theraphosids and verifying identifications of specimens of C. cyaneopubescens. These verified records were then used for analyses. The general map of Venezuela is the Official Map of the Bolivarian Republic of Venezuela and map layers are derived from the Instituto Geográfico de Venezuela “Simón Bolívar” (IGVSB). Maps showing the distribution of C. cyaneopubescens were made using QGIS (Quantum Geographic Information System), and ecoregional classification follows Dinerstein et al. (2017). Base layers for maps are adapted from the Basic Digital Cartography of the Protected Natural Areas of Venezuela.
+RESULTS
+Analysis of the datasets from iNaturalist demonstrated that 10 out of 11 records (Figs. 2-6) were from the Paraguaná xeric scrub ecoregion (Figs. 3, 5, 16). The vast majority (eight) of these records were from central and
+
+3 On iNaturalist, records are labelled as “Research Grade” when the community agrees on species-level ID or lower, i.e. when more than 2/3 of the record identifiers agree on a taxon. Such records are linked to online infrastructure such as the GBIF (Global Biodiversity Information Facility).
+38
+
+New insights on Chromatopelma
+
+Figure 2. Map of northwestern Venezuela showing known records of Chromatopelma cyaneopubescens overlain with terrain, municipality boundaries, and ecoregional classicification (the latter sensu Dinerstein et al. 2017). Records of C. cyaneopubescens are marked with black dots.
+
+southeastern parts of the Península de Paraguaná. The other records were of one specimen from the municipio Miranda, estado Falcón, in Ciudad de Coro in a neighbourhood named ‘Sur La Paz’ (Figs. 2-4) and, most interestingly, one juvenile specimen from municipio Iribarren, estado Lara, west of Durigua, close to the outskirts of Ciudad de Barquisimeto (Fig. 2). This latter record (Freitez Gassan 2023) is a significant range extension for C. cyaneopubescens and the first record from the municipio Iri-
+
+barren, Estado Lara, but it is important to note that this record is still from the contiguous southern spread of the Paraguaná xeric scrub ecoregion (Fig. 5), and thus shows that this species is strongly linked with this unique type of habitat. The record from ‘Sur La Paz’ is also new, but not of as much surprise, considering how close it is to the start of the Península de Paraguaná (Figs. 2-4).
+The single outlying record from an ecoregional perspective is of a single specimen sighted in municipio Colina,
+
+39
+
+D. Sherwood & R. Gianni-Zurita
+Figure 3. Inset close-up of terrain of the Península de Paraguaná and nearby mainland, overlain with applicable iNaturalist records of Chromatopelma cyaneopubescens. In most maps (Figs. 3-14), the areas of Monumento Natural Cerro Santa Ana (marked in red), Monumento Natural Montecano (marked in green), and Parque Nacional Médanos de Coro (marked with black hashes) are indicated consistently. Records of C. cyaneopubescens are marked with blue dots.
+Figure 4. Ibid, overlain with ecoregional classification.
+40
+
+New insights on Chromatopelma
+
+estado Falcón, between the towns of Acurigua and El Paso (Bermúdez 2022), which lies within the Lara-Falcón dry forests ecoregion (Fig. 4). This record is not very far away from the aforementioned record from municipio Miranda, estado Falcón (Figs. 2-4), but it does represent a very important record insofar as it demonstrates that C. cyaneopubescens occurs at least in part in the northern part of the Lara-Falcón dry forest. Thus, C. cyaneopubescens seems not to be endemic to the Paraguaná xeric scrub ecoregion. Nonetheless, both ecoregions are characterised by a dry climate, indicating this is an important aspect of the habitat requirements of this species.
+Two records of adult males from the Península de Paraguaná also provide the first data for the dates of the breeding season of C. cyaneopubescens. One male was observed on 15th April 2021(Nunes 2021). The later record (see Fig. 1A) was made many years prior on 17th June 2008 (Boyce 2008). When considered together, this indicates that the maturation of males occurs during April-June and that this is the main part of the breeding season for C. cyaneopubescens in the wild. Males might mature earlier or later than this, and this should be investigated by future workers (see below). Nonetheless, before the present study, nothing was known of the dates at which adult males matured and wandered in search of females in this taxon.
+Interestingly, one observation assessed herein (Fig. 1C, see also Table 1) is of a specimen found on a wooden chair4 in a house within the Natural Monument Montecano, San José de Cocodite, also observed later on the same day by the author RG-Z. This particular spider is well known to be spotted in the house in question and is often found on the chair it was photographed on (Yenifer Revilla pers. comm.), hence the silk seen on the chair. It is thus evident this species can in part live in areas of human habitation if not directly disturbed (i.e., here in a house within a national park, patrolled by park rangers) but this certainly does not mean that the species as a whole can therefore adapt to further human encroachment on its habitat (see below).
+DISCUSSION
+Despite being a small dataset of just 11 records (Table 1), the iNaturalist data allowed us to advance our knowledge of the distribution and habitat association of C. cyaneopubescens. We can demonstrate that C. cyaneopubescens is predominately distributed in the Paraguaná xeric scrub ecoregion, as expected, but that it is also present in the northern reaches of the Lara-Falcón dry forests
+
+ecoregion. The record from west of Durigua, close to the outskirts of Barquisimeto represents a range extension of more than 200 kilometres south into mainland Venezuela. Finally, the documentation obtained of two males provides basic information on the months of the breeding season.
+Notwithstanding this advance in information on C. cyaneopubescens, knowledge gaps still exist. We can build here upon the most precise former assessment of distribution (Colmenares 2015). It is important to further clarify how widely distributed this species is in the LaraFalcón dry forests ecoregion and whether it occurs in other ecoregions of northwestern Venezuela. We do not provide detailed ecological observations of its life history (e.g., burrow construction, abundance, diet), as no direct fieldwork was commenced for this purpose for the present work. Nonetheless, we direct the reader to the conference abstract of Marte (2012) who undertook such studies at the Monumento Natural Cerro Santa Ana, where this species is known to occur. As of 2023, we are not aware that this data was formally published in full yet. We hope that it will be and that it can be used in conjunction with the present work to build a fuller picture of the life history of C. cyaneopubescens and better inform its conservation needs.
+Some of the previously mentioned records are in Natural Monuments Montecano (one, Fig. 5) and Cerro Santa Ana (two, Fig. 6), in the Península de Paraguaná, which are National Protected Areas. However the rest of the observations (five elsewhere within the Península de Paraguaná, three outside of it) in areas that are not protected by national law. We suggest that further legal protections for this species in those other areas be considered, to promote the protection of this species in its natural habitat. The fact that 9 out of 11 records are from the Península de Paraguaná reinforces that this is probably the most important stronghold of this species, and it thus represents an important flagship species for the region and Venezuela as a whole.
+An analysis of the extent of urbanisation (Fig. 7, 8, 10) or lack thereof (Fig. 9) and summarising the total number of settlements of all sizes (Figs. 12-15) show that the habitat of at least one locality is under threat. Namely, habitat in the neighbourhood ‘Sur La Paz’ in municipio Miranda, estado Falcón, close to the boundaries of the Parque Nacional Médanos de Coro. Furthermore, increased expansion of other areas (i.e., Figs. 11-14) could threaten other local populations more broadly in Venezuela. This requires further investigation and long-term monitoring. Given
+
+4 It is clear that this species relies on wood for making retreats in the wild (see above), so this could be a factor in why a specimen indoors placed webbing on a wooden chair.
+41
+
+D. Sherwood & R. Gianni-Zurita
+
+Table 1. Research Grade records of Chromatopelma cyaneopubescens (Strand, 1907) from iNaturalist, verified by the authors.
+
+iNaturalist Coordinates # Date observation Latitude/
+number Longitude
+
+Locality
+
+Observer (username)
+
+Monumento Natural
+
+Cerro Santa Ana,
+
+1
+
+20/10/2007 111059867
+
+11.818419, -69.951818
+
+municipio Falcón (MF), Península de
+
+Samuel Valdes (samuelvaldes)
+
+Paraguaná (PdP),
+
+Estado Falcón (EF)
+
+2 17/06/2008 14470886
+
+PdP,EF[precise N/A locality data unable Andy J. Boyce (andyjboyce)
+to be recalled]
+
+3 17/06/2008 14470887
+
+PdP, EF [precise N/A locality data unable Andy J. Boyce (andyjboyce)
+to be recalled]
+
+4 20/09/2015 52270528
+
+11.937907, -69.993943
+
+Los Planchones, MF, PdP, EF
+
+Pedro D. Vernet P. (pedrovernet)
+
+5 20/09/2015 52260208
+
+11.936644, -69.994218
+
+Los Planchones, MF, PdP, EF
+
+Pedro D. Vernet P. (pedrovernet)
+
+6 24/04/2017 52270529 7 26/08/2017 70446564
+
+Natural Monument 11.945934, Montecano, San -69.970558 José de Cocodite,
+MF, PdP, EF
+
+Pedro D. Vernet P. (pedrovernet)
+
+Municipio Iribarren,
+
+10.178446, -69.519884
+
+estado Lara, west of Durigua, close to the outskirts of Ciudad
+
+Eduardo José Freitez Gassán (eduardo_jose_freitez_gassan)
+
+de Barquisimeto
+
+8 05/03/2019 59847258
+
+11.792704, -69.955034
+
+Monumento Natural Cerro Santa Ana, MF, PdP, estado Falcón
+
+Luis Alberto Hernández Guanipa (luisalbertohernandezguanipa)
+
+9 15/04/2021 74522551
+
+11.814838, -69.94809
+
+Monumento Natural Cerro Santa Ana, MF, PdP, estado Falcón
+
+Fernando Nunes (frnnd_ccs)
+
+10 30/01/2022 107713310
+
+11.315966, -69.459598
+
+Municipio Colina, estado Falcón, between the
+towns of Acurigua and El Paso
+
+Yaudimar Bermúdez (yaudimarjuan)
+
+Municipio Miranda,
+
+11 09/01/2023 146237618
+
+11.428263, -69.632387
+
+estado Falcón, in Ciudad de Coro,
+
+‘Sur La Paz’
+
+(andreaa04)
+
+URLs
+https://www.inaturalist.org/ observations/111059867 https://www.gbif.org/ occurrence/3759982543
+https://www.inaturalist.org/ observations/14470886 https://www.gbif.org/ occurrence/1883552636
+https://www.inaturalist.org/ observations/14470887 https://www.gbif.org/ occurrence/1883552571
+https://www.inaturalist.org/ observations/52270528 https://www.gbif.org/ occurrence/2814424083
+https://www.inaturalist.org/ observations/52260208 https://www.gbif.org/ occurrence/2814420997
+https://www.inaturalist.org/ observations/52270529 https://www.gbif.org/ occurrence/2814393215
+https://www.inaturalist.org/ observations/70446564 https://www.gbif.org/ occurrence/3059105532
+https://www.inaturalist.org/ observations/59847258 [no link to GBIF as user has restricted copyright to ‘all rights reserved’]
+https://www.inaturalist.org/ observations/74522551 https://www.gbif.org/ occurrence/3097016194
+https://www.inaturalist.org/ observations/107713310 https://www.gbif.org/ occurrence/3705456625
+https://www.inaturalist.org/ observations/146237618 https://www.gbif.org/ occurrence/4015367491
+
+42
+
+New insights on Chromatopelma
+Figure 5. Close-up of the boundaries of the Monumento Natural Cerro Santa Ana (in red) and nearby records. Figure 6. Close-up of the boundaries of the Monumento Natural Montecano (in green) and nearby records.
+43
+
+D. Sherwood & R. Gianni-Zurita
+Figure 7. Close-up of the centre and south of the Península de Paraguaná and northern strip of mainland, showing distance between C. cyaneopubescens and areas of urbanisation (in orange) sensu Centro Urbanos Capitales de Municipios (Instituto Geográfico de Venezuela Simón Bolívar).
+Figure 8. Close-up of urbanization (in orange) sensu centros urbanos capitales de municipios (Instituto Geográfico de Venezuela Simón Bolívar) near to record from Ciudad de Coro, ‘Sur La Paz’.
+44
+
+New insights on Chromatopelma
+Figure 9. Map showing absence of areas of urbanization near to record from municipio Colina, estado Falcón.
+Figure 10. Close-up of urbanization (in orange) sensu centros urbanos capitales de municipios (Instituto Geográfico de Venezuela Simón Bolívar) near to record from municipio Iribarren.
+45
+
+D. Sherwood & R. Gianni-Zurita
+Figure 11. Total number of settlements (green-black dots) in relation to records sightings on and near the Península de Paraguaná.
+Figure 12. Total number of settlements (green-black dots) in relation to record from Ciudad de Coro, ‘Sur La Paz’.
+46
+
+New insights on Chromatopelma
+Figure 13. Total number of settlements (green-black dots) in relation to record from west of Durigua, close to the outskirts of Ciudad de Barquisimeto.
+Figure 14. Total number of settlements (green-black dots) in relation to record from municipio Colina, estado Falcón.
+47
+
+D. Sherwood & R. Gianni-Zurita
+
+Figure 15. Photo of the general habitat found in the Paraguaná xeric scrub ecoregion (sensu Dinerstein et al. 2017). Photograph by ‘Vascovenezolano’ licensed under CC BY-SA 4.0.
+
+that C. cyaneopubescens is a charismatic species of Venezuelan invertebrate, restricted to certain habitat types, it is unlikely to survive if its habitat is degraded severely. The proximity of known records to human habitation demonstrates that further action may be needed to ensure its longer-term survival if urbanisation, particularly in the Península de Paraguaná, continues.
+Finally, outside of iNaturalist records, we can also cite previously published data that seems to have been
+
+overlooked in recent assessments of this species. BarrioAmorós et al. (2008) make a very interesting record of agonistic behaviour between two mature males outside the retreat of an adult female on a fallen hollow log. Through the kindness of Gilson Rivas (Maracaibo), we can also provide a hitherto unpublished additional photograph showing the female emerging from her retreat next to the two (now separated and no longer exhibiting agonistic behaviour) males (Fig. 16). This observation was made in May 2005,
+
+48
+
+New insights on Chromatopelma
+
+thank Gilson Rivas for the invitation to submit this work to the journal Anartia. The valuable comments of the reviewers, including Jorge M. González, improved the manuscript. Last, but not least, we thank citizen scientists who give their valuable time and effort to contribute records that can be used by researchers.
+
+Figure 16. Two adult males of Chromatopelma cyaneopubescens (Strand, 1907), previously exhibiting agonistic behaviour, alongside an adult female emergent from her retreat in situ on the Península de Paraguaná. Photo by and © Aurelien Miralles, courtesy of Gilson Rivas.
+falling within the month range for the breeding season (April–June) discussed above.
+ACKNOWLEDGEMENTS
+We are grateful to Pedro D. Vernet P. and Andy J. Boyce for allowing use of their excellent photographs of Chromatopelma cyaneopubescens from the Península de Paraguaná. We are very grateful to Rodrigo Lazo, who provided us with layers of Península de Paraguaná, Parque Nacional Médanos de Coro and Monumento Natural Cerro Santa Ana and archive .jpeg format of the Península de Paraguaná taken from the ESRI Imagery Basemap; and to Grisel Velásquez for providing the shape file of the Monumento Natural Montecano. Yenifer Revilla (Instituto Nacional de Parques de Venezuela-INPARQUES) is thanked for information about the habits of the particular spider often found on a chair in a house within the Natural Monument Montecano, San José de Cocodite. We warmly
+
+REFERENCES
+Barrio-Amorós, C. L., A. Miralles, G. Rivas & T. Barros. 2008. Reptiles de la península venezolana de Paraguaná. Reptilia 72: 43–48.
+Basic Digital Cartography of the Protected Natural Areas of Venezuela: National Parks, Natural Monuments, Fauna Refuges, Fauna Reserves and Biosphere Reserves. Editors: Jon Paul Rodríguez, Rodrigo Lazo, Luis Aníbal Solórzano and Franklin Rojas-Suárez. IVIC - Geographic Information Unit of the Ecology Center (ecoSIG). 2004.
+Bermúdez, Y. 2022. iNaturalist Research Grade observation 107713310. iNaturalist.org. Online at: https://www.inaturalist.org/observations/107713310. Accessed on 23 August 2023.
+Boyce, A. 2008. iNaturalist Research Grade observation 14470887. iNaturalist.org. Online at: https://www.inaturalist.org/observations/14470887. Accessed on 23 August 2023.
+California Academy of Sciences and National Geographic Society. 2023. iNaturalist. Online at: https://www.inaturalist. org/. Accessed on 23 August 2023.
+Colmenares, P.2015. Tarántula azul de Paraguaná, Chromatopelma cyaneopubescens. In: Rodríguez, J. P., A. García-Rawlins & F. Rojas-Suárez (eds.) Libro Rojo de la fauna venezolana. 4th ed. Caracas: Provita / Fundación Empresas Polar. Online at: www.especiesamenazadas.org/taxon/arthropoda/arachnida/araneae/theraphosidae/chromatopelma/tarantula-azulde-paraguana Accessed on 22 August 2023
+Dinerstein, E., D. Olson, A. Joshi, C. Vynne, N. D. Burgess, E. Wikramanayake, N. Hahn, S. Palminteri, P. Hedao, R. Noss, M. Hansen, H. Locke, E. C. Ellis, B. Jones, C. V. Barber, R. Hayes, C. Kormos, V. Martin, E. Crist, W. Sechrest, L. Price, J. E. M. Baillie, D. Weeden, K. Suckling, C. Davis, N. Sizer, R. Moore, D. Thau, T. Birch, P. Potapov, S. Turubanova, A. Tyukavina, N. De Souza, L. Pintea, J. C. Brito, O. A. Llewellyn, A.G. Miller, A. Patzelt, S. A. Ghazanfar, J. Timberlake, H. Klöser, Y. Shennan-Farpón, R. Kindt, J. B. Lillesø, P. Van Breugel, L. Graudal, M. Voge, K. F. Al-Shammari & M. Saleem. 2017. An ecoregion-based approach to protecting half the terrestrial realm. Bioscience 67: 534–545.
+Freitez Gassan, E. J. 2023. iNaturalist Research Grade observation 70446564. iNaturalist.org. Online at: https://www. inaturalist.org/observations/70446564. Accessed on 23 August 2023.
+Gabriel, R. & D. Sherwood. 2019. Ontogenetic colour change in the Venezuelan theraphosine Chromatopelma cyaneopube-
+
+49
+
+D. Sherwood & R. Gianni-Zurita
+
+scens (Strand, 1907) (Araneae: Theraphosidae). Newsletter of the British Arachnological Society 146: 8–10. Gianni, R. 2023a. Arañas de Venezuela Araneae (registros ‘Grado de investigación’). Established in 2020, iNaturalist. org. Online at: https://www.inaturalist.org/projects/aranas-de-venezuela-araneae-registros-grado-de-investigacionb32594ba-3bfb-4b05-b5c7-45ea2b2c381e. Accessed on23 August 2023. Gianni, R. 2023b. Arañas de Venezuela Araneae (registros NiCasuales). Established in 2020, iNaturalist.org. On line at: https://www.inaturalist.org/projects/aranas-de-venezuelaaraneae-registros-ni-casuales. Accessed 23 August 2023. ICZN. 1991. Opinion 1637 (Case 2662). Aphonopelma Pocock, 1901 (Arachnida, Araneae): given precedence over Rhechostica Simon, 1892. Bulletin of Zoological Nomenclature 48: 166–167. Klaas, P. 2003. Vogelspinnen. 2. Völlig neu bearbeitete Auflage. Stuttgart: Verlag Eugen Ulmer GmbH & Co., 142 pp. Koch, C. L. 1842. Die Arachniden. Nürnberg: C. H. Zeh’sche Buchhandlung, Neunter Band, pp. 57–108, pl. 307–324 (figs. 727–755); Zehnter Band, pp. 1–36, pl. 325–336 (figs. 756–776). Marte, A. 2012. Hábitat y microhábitat de la Chromatopelma cyaneopubescens en los Bosques Secos del segundo piso biótico del Cerro Santa Ana. pp. 93. In: Programa y resúmenes: III Congreso Venezolano de Diversidad Biológica. Caracas: Ministerio del Poder Popular para el Ambiente. Nunes, F. 2021. iNaturalist Research Grade observation 74522551. iNaturalist.org. Online at: https://www.inaturalist.org/observations/74522551. Accessed on 23 August 2023. Peters, H.-J. 2000. Tarantulas of the world: Kleiner Atlas der Vogelspinnen - Band 1. Wegberg, Germany: Self-published by the author, 148 pp. Peters, H.-J. 2003. Tarantulas of the world: Amerika’s Vogelspinnen. Wegberg, Germany: Self-published by the author, 328 pp.
+
+Petrunkevitch, A. 1939. Catalogue of American spiders. Part
+one. Transactions of the Connecticut Academy of Arts and Sciences 33: 133–338. Raven, R. J. 1985. The spider infraorder Mygalomorphae (Ara-
+neae): Cladistics and systematics. Bulletin of the American Museum of Natural History 182: 1–180. Rodríguez, J. P., A. García-Rawlins & F. Rojas-Suárez. 2015. Libro Rojo de la fauna venezolana. 4th ed. Caracas: Provita/ Fundación Empresas Polar. Online at: https://especiesame-
+nazadas.org. Accessed on 22 August 2023.
+Schmidt, G. 1995. Chromatopelma gen. n.; eineneue Gattung der Theraphosidae (Arachnida: Araneida: Theraphosidae:
+Theraphosinae). Arthropoda 3(2): 25–26. Schmidt, G. 1997. Bestimmungsschlüsselfür die Gattungen
+der Unterfamilie Theraphosinae (Araneae: Theraphosidae).
+Arachnologisches Magazin 3 (Sonderausgabe): 1–27. Schmidt, G. 2000. Die Spermathek von Chromatopelma
+cyanopubescens[sic] (Strand, 1907) (Araneae: Theraphosidae: Theraphosinae). Arachnologisches Magazin 8(7-8): 11–13. Schmidt, G. 2003. Die Vogelspinnen: Eineweltweite Übersicht. Hohenwarsleben: Neue Brehm-Bücherei, 383 pp.
+Schmidt, G. &V. Herzig. 1997. Das Männchen von Chromatopelma cyanopubescens[sic] (Strand, 1907) (Araneae: Theraphosidae: Theraphosinae). Arthropoda 5(3): 11–14.
+Sherwood, D. 2020. A note on morphological characters and
+their informative roles in theraphosid taxonomy (Araneae,
+Theraphosidae). Newsletter of the British Arachnological Society 147: 16–18. Simon, E. 1892. Histoire naturelle des araignées. Deuxièmeédition, tome premier. Paris: Roret, 256 pp. Strand, E. 1907. Aviculariidae und Atypidae des Kgl. Natu-
+ralienkabinetts in Stuttgart. Jahreshefte des Vereins für vaterländische Naturkunde in Württemberg 63: 1–100. Vol, F. 1999. A propos d’une spermatheque inhabituelle. Arachnides 42: 1–13.
+
+50
+
+

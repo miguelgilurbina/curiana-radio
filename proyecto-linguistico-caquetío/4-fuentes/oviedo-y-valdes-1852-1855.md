@@ -13,7 +13,7 @@ local:
 paginas: "t. II: 544 pdf / 530 impresas, desfase 13 · t. III: 680 pdf / 646 impresas, desfase 13 hasta la pdf ~150 y 15 desde ahí · t. IV: 656 pdf / 622 impresas, desfase 15"
 capa_texto: si
 estado_minado: minada-parcial
-cobertura: "t. II Libro XXV entero (el de la Provincia de Venezuela, impresas 269-332): caps. IX y XXII leídos línea a línea, el resto por barrido de las diez fórmulas de nombrar. t. IV: el glosario «Voces americanas empleadas por Oviedo» (impresas 593-607) y su bibliografía (608), enteros. t. III: sólo sondas, y dio cero. El detalle en `6-fusion/taino2_oviedo_venezuela.yaml` → `meta.cobertura_real`"
+cobertura: "T6 (2026-09-22): t. II Libro XXV entero (el de la Provincia de Venezuela, impresas 269-332): caps. IX y XXII leídos línea a línea, el resto por barrido de las diez fórmulas de nombrar. t. IV: el glosario «Voces americanas empleadas por Oviedo» (impresas 593-607) y su bibliografía (608), enteros. t. III: sólo sondas. Detalle en `6-fusion/taino2_oviedo_venezuela.yaml` → `meta.cobertura_real`. M3 (2026-09-22): la fauna del t. II lib. XXV cap. XXII (330-331), el lib. XXIV caps. III y XI-XIII (Huyapari, Camanagoto, los animales de Paria), el lib. XXVI cap. X (Santa Marta), el t. IV lib. L cap. XX (el naufragio de Sanabria en PARAGUANÁ) y todo acierto de las sondas de costa fuera del lib. XXV; detalle en `6-fusion/oviedo_restante_2026-09-22.yaml` → `meta.libros_leidos` y `meta.cobertura`"
 acceso: "Dominio público, descargados el 2026-09-22 de Internet Archive (los tres registros llevan `possible-copyright-status: NOT IN COPYRIGHT`). t. II https://archive.org/details/historiageneral01fernguat (45.433.954 B, sha256 a9fb3477b3e5250ea8147343b9b10e90c66c7f9018291187b6892615a14fbbd7) · t. III https://archive.org/details/historiageneral02fernguat (54.727.062 B, sha256 3e795e42f22785ab1007147023113c0881f22fc9dad545302ec407e3fffcfa77) · t. IV https://archive.org/details/historiageneral04fernguat (53.090.352 B, sha256 0d5dcc0270726c2b376e658ac53e856246c30375a8dd0eb958986171719f4a40). Los tres pesan menos de 95 MB y están commiteados. El tomo I de la misma digitalización, con la imagen íntegra, es `historiageneral00fernguat` (55.449.811 B) y sigue sin descargar"
 prioridad: alta
 verificado: 2026-09-22
@@ -295,11 +295,55 @@ reglas 3 y 4. No se proyecta ni se traslada al Golfete. Tres voces con glosa:
 `abas` (p.267), `pretos ó moavis` (p.266) y el topónimo `Aruacay`, del que el
 propio Oviedo duda.
 
+## 2026-09-22 — M3: la fauna, la costa fuera del libro XXV y Paraguaná en 1534
+
+**Qué se preguntó.** Todo animal de Tierra Firme y de la costa de Venezuela,
+con su sonido si lo hay (clave `fauna:` común), y todo pasaje de Coro,
+Paraguaná, Coquibacoa y las islas fuera del libro XXV. Datos en
+[`6-fusion/oviedo_restante_2026-09-22.yaml`](../6-fusion/oviedo_restante_2026-09-22.yaml).
+
+**🔴 Tres frases de esta nota que resultaron falsas al medirlo:**
+
+- **«t. IV: en el cuerpo, sólo un naufragio que acaba en Coro — cero lengua».**
+  Ese naufragio (lib. L cap. XX, 1534, contado a Oviedo «vivá voce» por
+  Chripstóbal de Sanabria) desembarca en «la provinçia é costa de Paraguana, al
+  pié de las sierras», en un ancón de manglar; los náufragos topan con «un indio
+  é una su hija que venían á la mar á pescar», que los llevan a su pueblo,
+  **Miraca**, «dos leguas la tierra adentro» y a doce de Coro; y el indio dice
+  una palabra: «Capitan». Es la segunda atestación de Miraca, por otra vía que
+  la de la p. 296, y la única escena de pesca de paraguaneros de la obra (pp.
+  532-534, verificado en imagen).
+- **«✅ Ésta sí es independiente» (el `comoho` de los tomos I y II).** Oviedo dice
+  en la p. 331 que los capítulos de esas frutas del t. I los añadió él con esta
+  misma información: una cadena, no dos.
+- **«Oviedo nunca empareja una voz venezolana con una antillana».** En los tomos
+  II-IV, no. En el I, una vez: `serra` = `uchibican` ([[oviedo-y-valdes-1851]]).
+- **«`Curiana` … 2 veces en 544 páginas, las dos en este mismo pasaje».** Son 3,
+  en dos pasajes: también la apertura del libro XXV (p. 269), que declara de
+  dónde lo saca: «la carta moderna del cosmógrapho Alonso de Chaves» (p. 270).
+  El río Curiana de Oviedo es un nombre de carta, no un testimonio oído.
+
+**Qué ha dado:** el catálogo de la fauna de Venezuela del obispo Bastidas
+(p. 330-331: osos hormigueros, venados «á manadas», puercos de dos géneros,
+conejos, la «pereça», armados, coríes, hardas, dantas, **perros gozques mudos
+que crian los indios en sus casas**, leones pardos, palomas de paso en
+**cecina**, perdices de copete, **abejas criadas en calabazas**), con la frase de
+Bastidas sobre las lenguas: «en poco término de lenguas no se entienden los unos
+con los otros». Santa Marta en 1514 vista por Oviedo (pp. 353-356): los perros
+que sólo gruñen «secreto ó baxo», las «pavas grasnaderas», las `baquiras`, los
+tambores de tronco colgados, y la comparación con Venezuela de los «canutos ó
+sendos caracoles» como vestido. El `maperiti` de Cumaná y Araya (p. 260). Y en el
+t. IV, la «isla de las aves» a un día de Coro, con su colonia de cría en mayo:
+«el estruendo é resonançia del cherriar é graznar de las aves» (p. 525).
+
+**Qué NO dio:** la gente de las islas ABC, Manaure, Ampíes; ningún canto de ave
+de la costa venezolana salvo las pavas. Las islas «de los Gigantes» no aparecen
+con ese nombre (ya lo midió T6).
+
 ## Qué falta
 
-1. **El libro XIX del tomo I** (Tierra-Firme, impresas 586-618), que T1 dejó sin
-   leer y señaló como «el libro con más costa de Venezuela». Si en algún sitio de
-   Oviedo está la gente de las islas ABC —o el episodio de Ampíes—, es ahí.
+1. ~~El libro XIX del tomo I~~ — **leído por M3**: es Cubagua y Margarita
+   (586-614) y no trae la gente de las islas ABC ni el episodio de Ampíes.
 2. **El libro XXIV del tomo II entero** (impresas 213-270): Cubagua, las perlas,
    Paria, el Huyapari. El capítulo de los aruacas salió por accidente; el resto
    del libro no se ha tocado.
@@ -329,6 +373,28 @@ propio Oviedo duda.
 | ficha `macato` ('bebida') | Jahn (⚠️ comida vs. bebida) | ✅ **Se cierra**: Oviedo dice «çierto brevaje … muy espesso como maçamorra». Las dos cosas |
 
 ⚠️ `sostiene` no se toca a mano; lo mide `medir_sostiene.py`.
+
+## Bitácora — la fauna de tierra (campaña FA1, 2026-09-22)
+
+Pregunta: ¿qué animales de tierra da Oviedo para la provincia de Venezuela?
+Leído en **imagen** el t. II, lib. XXV, cap. XXII, pp. 330-331 (pdf 344-345),
+porque el texto a dos columnas sale mezclado. Da la lista de fauna de la
+provincia (informe del obispo Bastidas): osos hormigueros, «tigres muchos»,
+venados «á manadas», puercos de dos géneros (uno el pecarí), conejos
+«menores y alebrestados», perezas, «Armados *cories*», «hardas», dantas,
+**«perros gosques que crian los indios en sus casas, é son mudos, que no
+ladran»**, leones pardos; y en insectos, **abejas sin aguijón criadas «en unos
+calabaços grandes»**, avispas de miel que se comen, y la langosta `tara`. La
+piel de «tigre» en la frente como insignia de grado está en la p. 330.
+
+⚠️ «Armados *cories*»: `cori` es en Oviedo el cuy de La Española (t. I, lib.
+XII, cap. IV, p. 390), no el armadillo. Si la Tabla A-9 de Oliver sacó `corie`
+'armadillo' de este renglón, es una mala lectura — issue
+`6-fusion/issues-pendientes/fauna-paraguana-tierra-2026-09-22.md`.
+
+Lo usa `6-fusion/fauna_paraguana_tierra_2026-09-22.yaml` (especies y
+`propuestas_ecologia`). La `cobertura` del frontmatter no se tocó para no chocar
+con la campaña de Oviedo que corre en paralelo: el cap. XXII ya estaba leído.
 
 ## Enlaces
 

@@ -1,0 +1,635 @@
+# ══════════════════════════════════════════════════════════════════════
+# EL ARTE ACHAGUA — Neira y Ribero 1762 (copia de 1788, RB II/2910), pp. 1-32
+# PROPUESTA (regla 5). Comparanda arahuaca del NORTE, de los Llanos: NO es
+# caquetío y no entra al canon costero sin marcarla (regla 4).
+# Tercera campaña de minería, parcela M4 (2026-09-22/23).
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  obra: neira-ribero-1762
+  que_se_leyo: 'el ARTE propiamente dicho, pliegos 7 der.-23 izq. = páginas 1-32 de la numeración propia del manuscrito
+    (esquina superior). Con esto el arte queda leído entero: pp. 33-42 (pliegos 23 der.-28 izq.) ya estaban minadas
+    el 2026-09-12 en `achagua_neira_ribero_1762.yaml` §arte.verbos, y la p. 33 sólo se releyó para cerrar el tratado
+    de la posesión, que empieza en la 32'
+  paginacion_medida: 'pliego N izq. = p. 2(N-7); pliego N der. = p. 2(N-7)+1. Comprobado en tres puntos: 7 der. = p. 1,
+    12 izq. = p. 10, 23 der. = p. 33. Se cita «p. X (pliego N lado)»'
+  metodo: 'lectura por visión, sin OCR y sin red: una pasada de página entera (pymupdf sobre el JPG, factor medido
+    4,1667 px/pt, recorte a 0,55-0,6 del nativo) y una segunda pasada a 0,9-3,0 del nativo sobre CADA línea que aquí
+    se cita. Lo verificado en la segunda pasada lleva `verificado_en_zoom: si`'
+  clave_de_lectura:
+    heredada: 'glifo tipo z = r (doble = rr); ʃ = s; y/i alternan (meta.ortografia_del_copista del YAML de 09-12)'
+    nueva: 'LA S LARGA MAYÚSCULA (ſ) SE PARECE A LA J. En las dos listas de sufijos (p. 12 y p. 16) la segunda persona
+      sale «Ji» y es «Si»: lo prueban los ejemplos de la misma página, en minúscula (`Nacabauʃi` ''te miran'',
+      `Vcuniucataʃi`, `Cagicunacaʃi`), y el propio copista escribe «ſing.» por «Sing.» al abrir cada paradigma.
+      Quien lea «Ji» sufijo confundirá la 2sg sufijal con la 2sg prefijal `Ji-`'
+    dos_grafias_de_la_2sg_prefijal: '`Ji-` y `Gi-` alternan en la misma página (`Jicabanicay` / `Gicabanicay`, p. 9):
+      es grafía, no morfología'
+  etiqueta_propuesta: 'comparanda achagua atestiguada, TRANSCRIPCIÓN POR VISIÓN: verificar en imagen antes de citar
+    una forma como exacta'
+  epoca: 'colonial (1762, misiones jesuitas del Meta y el Casanare). Los ejemplos son catequéticos (Dios, Misa,
+    Pilatos) y conviven con préstamos (`Apostolibeni`, `Santobeni`, `personabeni`)'
+  advertencia_de_categorias: 'el autor declara que imita la gramática latina: «iremos imitando sino en todo, à lo menos
+    en parte, el arte de Ant.o Nebrija» (p. 1, pliego 7 der.). Declinaciones, casos, pretéritos y subjuntivos son
+    rejilla de Nebrija; lo que la rejilla NO pedía y el autor anota igual (dos juegos de persona, sin plural para los
+    irracionales, ca-/ma-) es lo que más vale'
+  cifras: 'las emite 6-fusion/scripts/medir_arte_achagua.py en 6-fusion/medicion_arte_achagua_2026-09-22.yaml (regla 1)'
+  que_no_se_toco: 'curiana_lexicon.py, lexicon_achagua.py, achagua_neira_ribero_1762.yaml, 2-lengua/, 3-mundo/'
+
+indice_del_arte:
+  secciones:
+  - {p: 1, pliego: 7 der, que: 'Prólogo (Nebrija); Pronunciación; Tractatus 1.us Declinaciones de los Nombres'}
+  - {p: '2-3', pliego: 8, que: 'casos (una sola forma + posposiciones irru, yagicha); Pronombres absolutos e iniciales'}
+  - {p: '4-6', pliego: '9-10 izq', que: 'Nombres adjetivos (género sólo en racionales); Nombres relativos (-nicay, -erri)'}
+  - {p: '6-7', pliego: 10, que: 'De los plurales'}
+  - {p: '7-10', pliego: '10 der-12 izq', que: 'Práctica: siete declinaciones (Dios; -rri; -sa; -say; adjetivos; -nicay; -erri)'}
+  - {p: '10-12', pliego: '12-13 izq', que: 'Tratado 2.º Conjugaciones: la 1.ª, Vyuna «ser, estar»'}
+  - {p: '12-16', pliego: '13-15 izq', que: '2.ª Nucabau «ver», 3.ª Nuenarricu «conseguir», 4.ª Numayu «dormir»'}
+  - {p: '16-18', pliego: '15-16 izq', que: 'Pasiva, pronombres pasivos, reflexivos (-ba), recíproca (-caba), irregulares'}
+  - {p: '18-19', pliego: 16, que: 'Tratado 3.º De Generibus'}
+  - {p: '20-22', pliego: '17-18 izq', que: 'Tratado 4.º De Preteritis (las cuatro conjugaciones como cabezas)'}
+  - {p: '22-31', pliego: '18-22', que: 'Tratado 5.º Syntaxis: reglas de nombre (de, partitivos, comparativos, como, menester,
+      desnudo, diversidad, seguro) y de verbo (activa, relativo, gerundios en -cata, por, yucha, naco/yaco, dativo, adverbios de lugar)'}
+  - {p: 32, pliego: 23 izq, que: 'Colocación de los nombres; Cap. 2.º Incisión y composición: las cuatro clases de posesión'}
+  - {p: 33, pliego: 23 der, que: 'reglas 5-6 de la posesión (ya minadas el 09-12) y cierre del arte'}
+  no_hay: 'capítulo de numerales, en ninguna de las 32 páginas (verificado página a página: regla 6)'
+
+# ──────────────────────────────────────────────────────────────────────
+# LAS SIETE PREGUNTAS
+# ──────────────────────────────────────────────────────────────────────
+p1_personas:
+  pregunta: '¿prefijos y sufijos de persona? ¿da-/nu- 1sg? ¿wa- 1pl? ¿dos juegos, activos y estativos, como el lokono?'
+  respuesta: 'DOS JUEGOS, y lo dice el autor con todas las letras. Prefijos Nu-, Ji-, Ri-, Ru-, Gua-, Y-, Na- para
+    «los demás verbos»; sufijos -na, -si, -ni, -no, -bi, -y, -na para los compuestos del verbo «ser» Vyuna (sujeto de
+    estado) y, los mismos, para el OBJETO de un verbo transitivo. 1sg es nu- (no da-, no ta-); 1pl es gua- = /wa-/'
+  evidencia:
+    - p: 12
+      pliego: 13 izq
+      literal: '«los compuestos de Viuna q.e equivalen à los de sum, es, fui, las notas de las personas 1.a 2.a 3.a &c.
+        no son las iniciales Nu, Ji, Ri, Ru, Gua, Y, Na como los demas verbos, sino las finales Na, Si, Ni, No, bi, Y,
+        Na, q.e son las particulas pasivas q.e hay»'
+      verificado_en_zoom: si
+      nota: 'la lista trae «Ji» por «Si»: ver meta.clave_de_lectura.nueva'
+    - p: 10
+      pliego: 12 izq
+      literal: 'Yo soi = Viuna · tu eres = Viusi · Aq.l es = Viuni · Aquella es = Viuno · Nosotros = Viubi · Vosot. =
+        Vyuy · Aq.llos = Vyuna'
+      verificado_en_zoom: si
+    - p: 20
+      pliego: 17 izq
+      literal: '«A esta conjugacion se reducen todos los verbos compuestos, en cuia composicion entra el verbo
+        substantivo Vyuna, y se conoce en que el tal verbo no tiene pronombre inicial, y acaba en una en la 1.a
+        persona». Ejemplos: tengo calentura = Cunamisauna · tienes calentura = Cunamisausi · Estoi triste =
+        Quedacananetauna'
+    - p: 27
+      pliego: 20 der
+      literal: '«el na, el si &c es nota de la persona q.e resplandece ó luce, como el Nu en las demas Conjugac.s y por
+        esto, como en las demas conjugac.s van antes, y aqui van, en esta van desp.s». Luciendo yo = Vcuniucatana ·
+        luciendo tu = Vcuniucatasi'
+      verificado_en_zoom: si
+    - p: 16
+      pliego: 15 izq
+      literal: 'pronombres pasivos «Na = à mi = Si = à ti = Ni = à aquel = No = à aquella = Bi = à nosotros = Y = à
+        vosotros = Na = à ellos». Miranme = Nacabauna · Mirante = Nacabausi · Miranle = Nacabauni · Me mira =
+        Ricabauna · Mirame = Jicabauna'
+      verificado_en_zoom: si
+      nota: 'el SUFIJO es el objeto: na-caba-u-na «ellos-ver-me». Duda anotada: «Le mirais — Ycabausi» (se esperaría
+        -ni); el copista escribió -si'
+    - p: 2
+      pliego: 8 izq
+      literal: 'Dios nos ama = Dios riqueninauyubi'
+      verificado_en_zoom: si
+      nota: 'ri-quenina-uyu-bi: 3sg.m sujeto prefijado + 1pl objeto sufijado'
+    - p: 26
+      pliego: 20 izq
+      literal: 'Yo que te miro, te estimo = Nuya icaberrisi, niqueninausi'
+      verificado_en_zoom: si
+    - p: 11
+      pliego: 12 der
+      literal: 'P.a q.e yo sea bueno = Ribena saicauna · P.a q.e tu = Ribena saica usi'
+      nota: 'el adjetivo `saica` «bueno» (saicayi) se predica con los SUFIJOS: es el estativo conjugado'
+    - p: 3
+      pliego: 8 der
+      literal: 'Pronombres iniciales: Yo = Nu · tu = Ji · Aquel = Ri · Aquella = Ru · Nosotros = Gua · Vosotros = Y ·
+        Aquellos = Na'
+      nota: 'ya transcrito el 09-12 (arte.pronombres); se relee para la comparación'
+  contra_morfologia_md:
+    - que_declara: '§1: pronombres taya/pia/nüma/waya/naya y posesivo ta- «reconstruidos desde el wayuu»'
+      veredicto: contradice
+      detalle: 'el achagua da nu- y -na para 1sg; ni ta- ni da-. El da- que propone el issue de D11 fase 3 (traza
+        caquetía dare, Oliver p. 147) tampoco sale del achagua: el achagua conserva la n-, como ya decía ese issue'
+    - que_declara: '§1 y §7: waya / wa- 1pl'
+      veredicto: coincide
+      detalle: 'Gua- (/wa-/) prefijo y Guaya pronombre libre. Tercera hermana que lo da (y el maipure de Gilij, cuarta:
+        «uaja noi», t. III p. 186 — ver gilij_1780_1783)'
+    - que_declara: '§1: pia «tú», reconstruido desde el wayuu'
+      veredicto: 'el achagua no apoya (Jia / Ji-); el maipure de Gilij sí'
+      detalle: 'Gilij t. III p. 186: «pìa tu», y pinavà «tu vedi» (p. 187). Una hermana arahuaca del norte que no es
+        wayuu da la misma forma. No la vuelve caquetía (regla 4), pero le quita a `pia` la etiqueta de «sólo wayuu»'
+    - que_declara: '§5 «Lo que NO se importa» y §10 fila Alineamiento: un solo juego, sin alineamiento; el lokono tiene
+        dos (prefijado en transitivos, pospuesto en estativos y negativos); no se importa porque no hay dato caquetío'
+      veredicto: 'contradice lo que el sistema hace; coincide con lo que la nota declara del lokono'
+      detalle: 'con el arte, las DOS hermanas arahuacas de las que hay gramática en el repo parten la persona en dos
+        juegos. El achagua añade algo que la nota no dice del lokono: el juego sufijado es TAMBIÉN el del objeto
+        (Nacabauna «me miran»). La razón de no importar sigue en pie —ni un dato caquetío— pero el hueco deja de ser
+        «un rasgo del lokono» y pasa a ser «un rasgo de las dos hermanas»'
+    - que_declara: '§5: un estativo se predica con aspecto igual que una acción (-ka/-ni/-da)'
+      veredicto: contradice
+      detalle: 'en achagua el estativo se predica con los SUFIJOS de persona (saica-una «soy bueno», Cunamisa-una
+        «tengo calentura»), no con marcas de aspecto'
+    - que_declara: 'D11 fase 3: la 3sg distingue género en las dos hermanas'
+      veredicto: coincide
+      detalle: 'Ri-/Ru- prefijos y -ni/-no sufijos; y el autor precisa que la distinción es sólo para el FEMENINO
+        RACIONAL y sólo en singular: «ella mira = Rucabau. mas no en el plural» (p. 19, pliego 16 der.)'
+
+p2_aspecto_tiempo_modo:
+  pregunta: '¿qué marcas de aspecto, tiempo y modo? ¿algo parecido a -ka / -ni / -da?'
+  respuesta: 'el arte da un sistema de TIEMPO a la latina (presente, pretérito, futuro, subjuntivos, infinitivo,
+    gerundios) y el propio autor dice que casi no se usa. Las tres cadenas del proyecto existen en achagua, y ninguna
+    con el valor del proyecto: -ca es el INFINITIVO, -ni es la 3sg masculina sufijada (y parte del pretérito -nimi-), y
+    -da no es marca de tiempo sino parte de temas verbales en -dau'
+  paradigma_de_ver:
+    fuente: p. 12-13 (pliego 13)
+    presente: 'Nucabau · Jicabau · Ricabau · Rucabau · Guacabau · Ycabau · Nacabau'
+    preterito: 'Nucabanimiu «yo vi» · Jicabanimiu · Ricabanimiu …'
+    futuro: 'Nucabasu «yo veré» · Jicabasu …'
+    imperativo: 'Jicabau «vé tú» · Ycabau «ved»'
+    subjuntivo: 'Nucababita «yo vea»'
+    imperfecto_de_subjuntivo: 'Nucabauta «yo viera»'
+    pluscuamperfecto: 'Nucabanimiuta «yo huviera visto»'
+    infinitivo: 'Nucabaca «ver yo» · Jicabaca · Ricabaca (lleva persona)'
+    gerundios: 'Nucabaquebe «de ver yo» · Nucabacabani «para ver yo» · Nucabacabenã / Nucabaubenã «a ver yo» ·
+      Nucabarre / Nucabataca «por ver yo» (p. 13-14)'
+  marcas:
+    - forma: '-mi'
+      valor_del_autor: '«nota de cosa ya pasada» (p. 5, pliego 9 der.); sirve igual en el nombre: Nusaricanamí «mi
+        padre (supongo q.e murió)» (p. 33)'
+      nota: 'no es sólo verbal: marca lo terminado en nombres, relativos y verbos. Es lo más parecido a un aspecto
+        que el arte describe'
+    - forma: '-su / -sa (-saba)'
+      valor_del_autor: '«esta sylaba su que significa cosa futura» (p. 5); Nucabasu (p. 12), Vyusuna «yo seré» (p. 10)'
+    - forma: '-ca'
+      valor_del_autor: 'infinitivo: Nucabaca «ver yo» (p. 13), Nuenarricuca «conseguir yo» (p. 14), Yerrica «ser,
+        haber, ó estar» (p. 11)'
+    - forma: '-cata'
+      valor_del_autor: 'gerundio de «ando / endo»: Nucabacata Dios «viendo yo à Dios» (p. 27, pliego 20 der.); con
+        pretérito, «habiendo»: Nueminimiucata misa «habiendo yo oido Misa» (p. 28)'
+    - forma: '-ba · -caba'
+      valor_del_autor: 'reflexivo «Me miro = Nucabauba»; recíproca «Nos miramos unos à otros = Guacabacaba» (p. 17)'
+  el_autor_sobre_el_uso:
+    p: 28
+    pliego: 21 izq
+    literal: '«ut plurimum, apenas usan ni del preterito perfecto, ni del futuro, ni del subjuntivo, cong.e el pres.te
+      de Indicativo es el q.e hace el gasto, no p.r falta de la lengua q.e es bien extensa, sino por falta de
+      capacidad, ó por corruptela de los Indios»'
+    verificado_en_zoom: si
+    lectura: 'quitado el juicio colonial, es un dato de uso: el hablante resolvía con el presente y el paradigma de
+      tiempos es en buena parte del gramático. Es la MISMA sospecha que Perea tiene del lokono (p. 606, citada en
+      morfologia.md §7). Dos gramáticas misioneras de dos hermanas, independientes entre sí, dicen lo mismo'
+  contra_morfologia_md:
+    - que_declara: '§7: -ka completivo (reconstruido del wayuu, deuda D11)'
+      veredicto: 'no apoya'
+      detalle: 'en achagua -ca es el infinitivo. Formas de dos letras: no se afirma ni se niega cognación'
+    - que_declara: '§7: -ni continuativo/imperfectivo'
+      veredicto: 'no apoya'
+      detalle: 'en achagua -ni es 3sg.m del juego sufijado (Viuni «él es», Nacabauni «le miran») y el -ni- del
+        pretérito -nimi- no lo aísla el autor'
+    - que_declara: '§7: -da prospectivo'
+      veredicto: 'no dice'
+      detalle: 'el futuro achagua es -su/-sa(ba) (y la partícula ba, arte.verbos, pliego 24 izq. = p. 34); -da- sólo aparece dentro de
+        temas en -dau (Nuebedau, Nunenidau), que el autor clasifica por su final, sin valor de tiempo'
+    - que_declara: '§7: «convergencia a favor de modelar con ASPECTO y no con tiempo» (Perea p. 606)'
+      veredicto: coincide
+      detalle: 'el testimonio de uso de la p. 28 es la segunda voz, de otra lengua y otro autor. Sigue siendo juicio
+        de autor, no prueba'
+
+p3_posesion:
+  pregunta: 'posesión, posesión inalienable, el no-poseído (el proyecto importó u- desde Perea p. 587)'
+  respuesta: 'el no-poseído achagua existe y es un SUFIJO, -si (o -y), que cae al poseer. El arte da cuatro clases de
+    nombre según cómo se poseen, más una quinta —la de los nombres que NO toman prefijo y se poseen con un adjetivo
+    posesivo— y un -mi para lo poseído que ya no está'
+  clases:
+    - clase: 1
+      regla: 'nombres en -si o -y: «q.do no se les junta pronombre inicial ó posesivo, se conservan enteros» y
+        «pierden la final, q.do se les junta posesivo»'
+      literal: 'El P.e viene = Sarricanasi rinu → mi P.e viene = Nusarricana rinu · doite un cuchillo = Nuayu girru
+        besubasi → doite mi cuchillo = Nuayu girru nubesuba · En esta vida = Cabicasi naco → En mi vida = Nucabica naco'
+      p: 32
+      pliego: 23 izq
+      verificado_en_zoom: si
+    - clase: 2
+      regla: 'nombres que empiezan en gua-: al poseerse «convierten el gua en ba» y pierden el -si'
+      literal: 'Honra = Guãnisi → Mi honra = nubauni · Señor = Guacarr[eu] → mi Señor = Nucabarr[eu]'
+      p: 32
+      pliego: 23 izq
+      duda: 'el final de «Señor» entra en el lomo'
+    - clase: 3
+      regla: 'nombres en -a: «en la posesion añaden Ni»'
+      literal: 'mucura = Vrrua → Mi mucura = Nurruani · hacienda = Guarrua → mi hacienda = Nubarruani · trampa = Barra →
+        tu trampa = Jibarrani'
+      p: 32
+      pliego: 23 izq
+      verificado_en_zoom: si
+      nota: 'hay pues también un sufijo de POSEÍDO, -ni, simétrico del absoluto -si'
+    - clase: 4
+      regla: 'irregulares'
+      literal: 'Camino = Yasubasi → mi Camino = Nuasuba · Pa[j]a = Ymisi → Mia = Numide · Palo = Aycuba → mi Palo = Nucade'
+      p: 32
+      pliego: 23 izq
+    - clase: 5
+      regla: '«Quando los nombres no son de las quatro clases arriba d.has, se usa p.a la posesion de los pronombres
+        adjetivos … Nusina, Jisina, Risina …»'
+      literal: 'Cavallo = Ema. mi Cavallo = Nusina Ema'
+      p: 33
+      pliego: 23 der
+      nota: 'ya minada el 09-12 (arte.posesivos_adjetivos). El único ejemplo es el caballo, que entró al achagua con el
+        nombre de la danta (calibración de 09-12): el posesivo indirecto es la puerta del nombre nuevo'
+    - clase: 'lo que ya no está'
+      literal: '«q.do las cosas salieron del poseedor, se les pone el mi»: Nusaricanamí «mi Padre (supongo q.e murió)»'
+      p: 33
+      pliego: 23 der
+  genitivo:
+    p: 23
+    pliego: 18 der
+    literal: 'La casa de Dios = Dios banisi, ó con un posesivo, v.g. Dios isina banisi, ó con un pronombre inicial.
+      v.g. Dios ribana, vel Ybana'
+    verificado_en_zoom: 'si (la primera línea); «Ybana» sin resolver'
+    nota: 'yuxtaposición poseedor + poseído; el poseído puede quedarse en su forma absoluta (banisi) o tomar el prefijo
+      (ri-bana). El Y- de «Ybana», como el de «Ycaberri» (p. 6), el autor no lo explica: puede ser el Y- de 2pl o un
+      índice impersonal. Queda en dudas'
+  contra_morfologia_md:
+    - que_declara: '§10 fila «Posesión no-poseída»: ENTRA el índice absoluto u-/ù- del lokono (Perea p. 587), como
+        prefijo, u-si-kua-hù «LA casa»'
+      veredicto: 'coincide la categoría, contradice la forma'
+      detalle: 'el achagua marca la cosa sin poseedor, pero con un SUFIJO (-si) que se cae al poseer, no con un
+        prefijo que se antepone. Si alguna vez se pregunta «¿cómo se marca el no-poseído en las hermanas?», la
+        respuesta ya no es una sola'
+    - que_declara: '§1/§7: ta- (mi), wa- (nuestro)'
+      veredicto: 'contradice ta-, coincide wa-'
+      detalle: 'Nu-/Gua- sobre el nombre poseído, los mismos prefijos que el verbo (p. 3: «Llamanse pronombres
+        iniciales, ó posesivos»)'
+    - que_declara: '§10: posesivos absolutos lokono da-kía, wa-kía (Perea p. 586)'
+      veredicto: coincide
+      detalle: 'el achagua tiene la misma pieza: Nusina, Guasina (p. 33), para los nombres que no admiten prefijo'
+    - que_declara: 'inalienable'
+      veredicto: 'no dice'
+      detalle: 'el autor no clasifica por alienabilidad: la clase 1 mezcla padre, cuchillo y vida. Lo que sí separa es
+        el nombre que admite prefijo del que necesita posesivo adjetivo (clase 5)'
+
+p4_atributivo_privativo:
+  pregunta: '¿está en achagua el par atributivo ka- / privativo ma- que el proyecto declara con van Buurt §8 y Perea p. 555?'
+  respuesta: 'SÍ, y con un par mínimo en el propio arte. ca- «que tiene X» y ma- «sin X»; el resultado se predica con
+    los sufijos de persona del estativo; ma- se pone también sobre VERBOS (infinitivo en -ca). Lo que el achagua NO
+    hace con ca- es el existencial impersonal «hay X»: para eso usa otras piezas'
+  evidencia:
+    - p: '18-19'
+      pliego: '16 izq-16 der'
+      literal: 'masacorreyisa, cosa limpia · casacorreyisa cosa sucia · hombre limpio = Guanecataberri masacorreyisa ·
+        Muger limpia = Ynagetua masacorreyusa · hombre sucio = Guanecataberri Casacorreyisa · Muger sucia = Ynagetua
+        casacorreyusa'
+      verificado_en_zoom: si
+      nota: 'PAR MÍNIMO ma-/ca- sobre la misma base, con valores opuestos'
+    - p: 25
+      pliego: 19 der
+      literal: 'Estoi rico = Cabarruani vyuna'
+      verificado_en_zoom: si
+      nota: 'ca- + barruani, que es la forma POSEÍDA de «hacienda» (Guarrua → Nubarruani, p. 32) + «ser» con -na. El
+        vocabulario lo confirma: Hacendado = Cabarruanicayi (pliego 67 izq.), «Cabarruanicayi es el hombre q.e tiene
+        caudal» (47)'
+    - p: 25
+      pliego: 19 der
+      literal: 'Estoi seguro de mis enemigos = Camaniuna nuginay yucha … camaniuna tambien significa estar libre ·
+        Puro de toda culpa = Masacorreyi menami gicunasi yucha'
+      verificado_en_zoom: si
+    - p: 27
+      pliego: 20 der
+      literal: '«y con esto se entenderan algunos nombres verbalizados q.e tienen el cana. v.g. Yo pecador =
+        Cagicunacana. tu Pecador = Cagicunacasi»'
+      verificado_en_zoom: si
+      nota: 'ca- + gicuna (Pecado = Gicunasi, vocabulario 81 der., sin su -si) + -ca + -na 1sg: «yo con-pecado».
+        EL NOMBRE SE PREDICA CON ca- Y PERSONA. Pecar = «Catareuna, cagicunana» (81 der.)'
+    - p: 23
+      pliego: 18 der
+      literal: 'llena de gracia = Casiamutayo gracia yaca'
+    - fuente: 'vocabulario (09-12), no el arte'
+      literal: 'Sin beber = Mairracasa, mairracayisa · Sin dormir = Mamacayisa, mamaiacasa (pliego 92 izq.) · Sin comer
+        = Maiacasa, Maiacayisa (91 der.) · Sin sal = Mabayisa · Sin Padre = Masaricanayisa (92 izq.)'
+      nota: 'ma- sobre VERBO: ma- + raíz + -ca (infinitivo) + -sa / -yisa'
+  lo_que_ca_no_hace:
+    literal: 'Hay mucho calor = Amo ayusamí · Ay hambre = Ynaisí ria · Hay muchos mosquitos = Carruna anicho aiusana
+      (arte.verbos, pliego 26) · No hay = Quenia · No huvo = Queniunimiu (p. 18) · no tengo vestido = queniu nubarre (p. 25)'
+    lectura: 'el existencial impersonal y su negación van con otras piezas (ayusa / ria; quenia), no con ca-/ma-'
+  contra_morfologia_md:
+    - que_declara: '§6: ka- atributivo «tiene X», ma- privativo «sin X»; no son posesivos; «un NOMBRE se predica con ka-»'
+      veredicto: coincide
+      detalle: 'tercera hermana, y la única con par mínimo en su propia gramática (masacorreyisa / casacorreyisa) y
+        con el nombre predicado conjugado (Cagicunacana, Cabarruani vyuna)'
+    - que_declara: '§6: ka- también «existencial, hay X» — «hay viento» es ka-juri'
+      veredicto: 'no apoya'
+      detalle: 'en achagua el «hay» impersonal no es ca-. Lo que el achagua sostiene es «X tiene viento» (atributivo de
+        un sujeto: un sitio, una persona); Casibari «(sitio) que tiene rocas duras» de van Buurt cabe en esa lectura.
+        «Hay viento» como impersonal meteorológico es extensión nuestra, no de esta hermana'
+    - que_declara: '§11: «predicación privativa/atributiva sobre verbo», 490 usos, ma-awa «sin beber»: «una segunda
+        invención, y nadie la había nombrado»'
+      veredicto: 'coincide (con la emergencia, no con el canon)'
+      detalle: 'el achagua hace EXACTAMENTE esto, y con el mismo verbo: «Sin beber = Mairracasa». Como en §5 («la 4.ª
+        conjugación lokono reinventada desde el uso»), es el privativo verbal achagua reinventado desde el uso. Con
+        una diferencia: el achagua exige el infinitivo -ca entre ma- y el sufijo; la comunidad lo pone sobre la raíz
+        desnuda. Lo emergente no es evidencia de lo atestiguado, ni al revés (§11)'
+  sonda_en_el_caqueti_atestiguado:
+    que: 'formas de la capa caquetío-atestiguado que empiezan por ka-/ma- y qué dicen sus glosas verbatim'
+    cifras: 'medicion_arte_achagua_2026-09-22.yaml §sonda_ka_ma'
+    resultado: 'ninguna glosa marca «sin», «hay» o «tiene» (el único acierto del filtro es «con» en `karebe`
+      «cucharón … con mango», ruido). El ka-/ma- del canon sigue sin apoyo en el caquetío continental: su apoyo es
+      insular (van Buurt) y de las hermanas'
+    eco_registrado_no_afirmado: '`kachipo` «En voz vulgar, enojado, colérico» (Zavala #53, estativo en el canon) empieza
+      por ka- y el achagua forma ese mismo concepto con ca-: «cabareuno» «enojarse», «cabarecayi» «colérico»
+      (morfologia.md §5). Un caso, sin base `chipo` atestiguada: no es un morfema'
+
+p5_nominalizacion:
+  pregunta: '¿cómo nominaliza el achagua? (la campaña del nominalizador cerró en negativo para el caquetío)'
+  respuesta: 'con al menos cuatro recursos productivos, y el autor los declina como nombres: -erri (el que hace),
+    -nicay (lo que se hace; relativo de paciente, con el agente como prefijo), -can(si) / -si (nombre de acción y
+    abstracto) y el infinitivo -ca con persona. Además verbaliza nombres (ca- + N + persona) y hace adjetivos en -ble
+    (-nayisa, ya minado)'
+  recursos:
+    - forma: '-erri (-yerri); pl. -enay; fem. racional -echua'
+      valor: agente, «participio de presente»
+      literal: '«Quando apelan sobre la persona q.e hace, acaban en rri» (p. 4). Yo veo = Nucabau → El q.e ve =
+        Ycaberri → los q.e miran = Ycabenay (p. 6) · La muger q.e mira = Ynagetua Ycabechua (p. 19) · El q.e consigue
+        = Enarricuerri (p. 15) · El q.e duerme = Ymayerri (p. 15)'
+      pliegos: '9 izq, 10 izq, 14 der, 16 der'
+      verificado_en_zoom: si
+    - forma: '-nicay; pl. -nibenay; racionales -nicayi / -nicayo'
+      valor: 'paciente, «relativo» o «participio de pretérito»; el prefijo es el AGENTE'
+      literal: '«q.do apelan sobre la persona q.e padece, acaban en Nicay» (p. 4). yo veo: Nucabau. Cosa vista por mi =
+        Nucabanicay · Lo que tu ves = Jicabanicay · Lo q.e aquel vé = Ricabanicay (p. 5) · Nucabanibenay (p. 9) ·
+        el hombre q.e yo miro = Guanecataberri nucabanicayi (p. 19)'
+      pliegos: '9, 11 der, 16 der'
+      verificado_en_zoom: si
+      con_tiempo: 'Lo q.e yo vi = Nucabanicaymi · Lo q.e yo veré = Nucabanicaysu (p. 5)'
+    - forma: '-can(s)i · -si'
+      valor: 'nombre de acción y abstracto'
+      literal: 'Vision = Ycabecan[s]i (p. 13, pliego 13 der.) · Ser, ó esencia = Yacãsi (p. 11, pliego 12 der.) · Amo
+        la bondad de Dios = Nuqueninau Dios Saicasi (p. 2), frente a saicayi «bueno» (p. 4)'
+      verificado_en_zoom: si
+      duda: 'en «Ycabecan[s]i» la letra antes de la -i es una ʃ baja; el vocabulario de 09-12 transcribió «Vision —
+        Ycabacan» (97 der.) y da «Visibilidad = Ycabacanasí»'
+    - forma: 'infinitivo -ca con persona; gerundios'
+      valor: 'el verbo como nombre, con poseedor'
+      literal: 'ver yo = Nucabaca · tu = Jicabaca (p. 13) · De ver yo = Nucabaquebe · P.a ver yo = Nucabacabani (p. 13)'
+    - forma: 'ca- + nombre + -ca + persona («nombres verbalizados q.e tienen el cana»)'
+      valor: 'lo inverso: el nombre hecho predicado'
+      literal: 'Yo pecador = Cagicunacana (p. 27)'
+    - forma: '-nayisa «verbal en bilis»'
+      valor: adjetivo en -ble
+      literal: 'ya minado el 09-12 (arte.verbos, pliego 26 izq. = p. 38)'
+  en_texto_corrido: 'el poema de Fabo 1911 p. 115 trae «Rimedanicaimi Dios» = ri-meda-nicai-mi «lo que hizo Dios»:
+    relativo de paciente + pasado, exactamente como el arte (p. 5). Fabo atribuye el manuscrito a Rivero o a Neira: NO
+    es atestación independiente (minar-fuente §8), es la misma escuela usando su propia gramática'
+  contra_morfologia_md:
+    - que_declara: '§10 fila Nominalización y §11: el caquetío atestiguado no registra nominalizador (campaña de
+        09-21, negativo con control); lo que registra es derivación cero; el -hù/-hi lokono no se importa'
+      veredicto: 'contradice como rasgo de FAMILIA; no toca el negativo caquetío'
+      detalle: 'las dos hermanas con gramática nominalizan con sufijo. Eso refuerza la reserva que la nota ya
+        escribe —«Lo que NO se afirma es que el caquetío no marcaba la nominalización»—: el hueco es del registro
+        caquetío, no de la familia'
+    - que_declara: '§11: la comunidad nominaliza con el posesivo sobre raíz verbal (ta-chaa «mi hacer»); «no es la
+        arahuaca»'
+      veredicto: 'coincide en la idea, no en la forma'
+      detalle: 'la vía achagua para «lo que yo hago» es nu-meda-nicay (prefijo de persona + verbo + -nicay), y para
+        «mi hacer» el infinitivo nu-meda-ca: persona sobre el verbo, SÍ, pero siempre con sufijo. La frase de §11 se
+        sostiene'
+  sonda_en_el_caqueti_atestiguado:
+    que: '¿aparecen las formas -eri/-iri/-ari, -nikai/-kai o -si al final de voces caquetías atestiguadas, con glosa de
+      agente o de acción?'
+    cifras: 'medicion_arte_achagua_2026-09-22.yaml §sonda_nominalizadores'
+    resultado: 'ninguna con glosa de agente o de acción: las de -ri son un verbo (bajarí «recorrer»), un numeral, dos
+      árboles y un pantano; ninguna en -kai; las dos en -si son barici y kadushi. Cero, y cuadra con el negativo de
+      09-21, que ya había mirado -si/-ci'
+
+p6_plural:
+  pregunta: 'plural y colectivo (el -kana del proyecto bajó a reconstruido desde el wayuu)'
+  respuesta: 'lo inanimado y lo irracional NO llevan plural; la muchedumbre se dice con un adjetivo aparte, Carruna.
+    Los racionales (y «algunas irracionales pero animadas») llevan -nay, -beni/-veni o -sanã según el final. No hay
+    plural -kana'
+  evidencia:
+    - p: 6
+      pliego: 10 izq
+      literal: '«à las cosas inanimadas y irracionales no se les dà plural: y asi no se dirá muchas estrellas, sino
+        mucha estrella … Estrella = Cuni. muchas estrellas = Carruna Cuni … Carruna Amicho = mucho zancudo mosquito»'
+      verificado_en_zoom: si
+      duda: '«Amicho» en el arte; el vocabulario de 09-12 lee «Anicho» (76 der., 98 izq.)'
+    - p: 7
+      pliego: 10 der
+      literal: 'hombre = Guanecataberri. Plural - Guanecatabenay · Tonto = Babacaisa. plural - Babacaysanay · El de
+        aqui = Guayasay. plural - Guayasanã · Bueno = Saicayi. plural - Saicaveni · Niño = Quirra. plural =
+        Quirrarribeni · Muger = Ynagetua. plural = Ynabeni'
+    - p: 7
+      pliego: 10 der
+      literal: 'Nom. Dios beni · Dat. Dios beni irru · Ablat. Dios beni iagicha'
+      nota: '-beni pluraliza hasta préstamos: Apostolibeni, Judiobeni, Santobeni, personabeni (pp. 25-27 y arte.verbos)'
+    - p: 19
+      pliego: 16 der
+      literal: '«El plural no tiene distintivo» de género: Ellas miran = Nacabau'
+  contra_morfologia_md:
+    - que_declara: '§7: -kana plural colectivo, reconstruido desde el wayunaiki, aplicado a todo'
+      veredicto: contradice
+      detalle: 'el achagua no pluraliza lo inanimado ni lo irracional, y no tiene -kana'
+    - que_declara: '§10 fila «Número de los irracionales»: HUECO DECLARADO; los irracionales lokono no distinguen
+        número (Perea p. 556)'
+      veredicto: coincide
+      detalle: 'la segunda hermana dice lo mismo, con otras palabras y otro autor. El hueco declarado pasa de dato de
+        una lengua a rasgo de las dos'
+  trampa_kana:
+    que: 'el arte llama «nombres verbalizados q.e tienen el cana» a Cagicunacana (p. 27): la cadena -cana de ahí es
+      -ca + -na 1sg, no un plural'
+    cifras: 'medicion_arte_achagua_2026-09-22.yaml §trampa_kana: de todo el vocabulario achagua, las formas que
+      fonemizadas acaban en «kana» y las que de ellas tienen glosa plural (ninguna)'
+    lectura: 'quien busque -kana en el achagua lo encontrará en «maíz», «mi padre» y «vez», nunca en un plural. Es
+      la trampa de `macana`/`Macanasi` con otro morfema'
+
+p7_numerales:
+  pregunta: '¿cómo son los numerales achagua? el caquetío gudamuen «dos» no se parece a nada arahuaco: ¿y el achagua?'
+  respuesta: 'el ARTE no tiene capítulo de numerales (pp. 1-32 leídas enteras; cero verificado). Lo que da de paso es
+    matarritay «tres» (p. 25: «tres personas distintas … matarritay personabeni») y «quechasay» primero (p. 23). Los
+    cardinales y el sistema de clasificadores están en el vocabulario, ya minados el 09-12 (arte.numerales del YAML
+    viejo). Medido contra ese material, el achagua NO rescata gudamuen'
+  gudamuen:
+    cifras: 'medicion_arte_achagua_2026-09-22.yaml §numerales'
+    lectura: 'la raíz achagua de «dos» sin clasificador, juchama-, se parece a gudamuen algo más que las formas lokono
+      y wayuu, pero una de cada ocho formas achagua cualquiera se le parece igual o más (modelo nulo del mismo
+      archivo): el parecido es de azar. La sílaba «am» que comparten los cuatro «dos» (juchAMa, biAMa, piAMa,
+      gudAMuen) aparece en una fracción de las formas de cualquier lengua (mismo archivo, §silaba_am): es barata'
+    veredicto: 'no dice nada nuevo; gudamuen sigue sin filiación'
+  contar_lunas:
+    que: 'estructura, no forma. El achagua cuenta con numeral + clasificador de clase, y tiene clasificador de «luna»:
+      «Vn mes = Abacoa Querrí» (pliego 75 der.), «Si años ó lunas = Juchamacoca» (56 der.). El caquetío atestiguado
+      tiene dos voces que cuentan lunas: apana «Una luna. Medición de tiempo» (Zavala #10) y buiamati «dos lunas»
+      (Zavala #47)'
+    lectura: 'hay un paralelo de CONSTRUCCIÓN (numeral ligado + unidad de tiempo lunar); las formas no se corresponden
+      (-coa/-coca frente a -na/-mati). Se registra, no se afirma. Pregunta para quien siga: ¿son -na y -mati
+      clasificadores caquetíos? n = 2'
+  contra_morfologia_md:
+    - que_declara: 'D11 fase 3: los numerales 1-4 ya están atestiguados en caquetío (pana, gudamuen, sabuenen, katarí)'
+      veredicto: 'no dice'
+      detalle: 'el arte no los toca; el achagua no apoya ni discute ninguno de los cuatro'
+    - que_declara: '§10 fila Género/clases: «Los achagua cambian el numeral según lo que cuentan»'
+      veredicto: coincide
+      detalle: 'y el arte añade que el clasificador no es cosa del numeral: el propio Tratado 3.º dice que el género
+        sólo concierta en racionales (p. 18)'
+
+# ──────────────────────────────────────────────────────────────────────
+contraste_fabo_1911:
+  que_se_miro: 'dónde el arte duda o necesita contraste: la gramática de Fabo sobre el achagua y su texto de la p. 115'
+  gramatica: 'NO HAY. Fabo lo dice él mismo («No conozco gramática alguna achagua», p. 112, ya en la ficha). Lo único
+    morfológico que escribe del achagua es una generalización: que el sáliva, el achagua, el tunebo y el guahibo son
+    aglutinantes y que «el verbo se caracteriza de ordinario por afijos pronominales» (p. 88, pdf 90), y que lo dicho
+    del guahibo y del sáliva «es aplicable por completo al tunebo y al achagua» (p. 91, pdf 93). Juicio de segunda
+    mano, sin un solo ejemplo achagua: no contrasta nada'
+  texto_p115:
+    que: 'el poema «Masicatare yarro» (p. 115, pdf 117), verificado en imagen. Trae en uso tres piezas del arte'
+    formas: '«Rimedanicaimi Dios» (-nicay + -mi, p. 5 del arte) · «Cagicunabeni» (ca- + gicuna + plural -beni: p. 27 y
+      p. 7 del arte) · «Carruna sichay neni», «Carruna mananicai yava» (Carruna de muchedumbre ante inanimado, p. 6)
+      · «Mecucanimiu» (pretérito -nimiu, p. 12)'
+    reserva: 'Fabo atribuye el manuscrito «con mucha probabilidad» a Rivero o a Neira: es la misma escuela, no una
+      segunda atestación'
+
+gilij_1780_1783:
+  que_se_miro: 'SÓLO el tomo III (1782, «Delle lingue degli Orinochesi»), que es el lingüístico. Tomos I y IV, no'
+  como_se_leyo: '`ocr_fuente.py` devolvió 391 de 457 páginas casi vacías (render de página entera a 300 ppp). Se rehízo
+    el OCR sobre la IMAGEN incrustada (681×1174 JPX, ampliada 2× en gris, tesseract ita):
+    fuentes_caquetios/Gilij_1782_Saggio_Storia_Americana_vol3.ocr.txt. Es pista: todo lo citado se verificó en imagen'
+  paginacion: 'el desfase NO es constante (medido en la cabecera de la imagen): −19 en pdf 101 y 150 (pp. 82, 131), −15
+    en pdf 216-221 (pp. 201-206), −13 en pdf 241 (p. 228), −11 en pdf 357 (p. 346) y −21 en pdf 431 (p. 410, las
+    notas). El marcador «impresa» del .ocr.txt usa −19 en todo el tomo: vale para localizar, no para citar'
+  ortografia: '«Acciàgua» (con cc italiana y tilde), no «achagua»; la ſ larga sale f (ficha)'
+  achagua:
+    p: 205
+    pdf: 220
+    literal: '«III. La Maipùre ha i seguenti; l''Avane, il Meepùre, il Càvere, il Parène, il Guipunàve, il Chirrùpa, e
+      molti altri linguaggi nascosti nell''alto Orinoco, nel Rio-negro, e nel Maragnone. E'' certo in oggi, e così
+      pensollo ancora il Gumilla, è certo dico, che l''Acciàgua è un dialetto del Maipùre.»'
+    verificado_en_imagen: si
+    lectura: 'Gilij (y Gumilla antes) pone el achagua en la «lengua matriz» maipure, que es la rama arahuaca del
+      Orinoco: la filiación arahuaca del norte del achagua ya estaba dicha en 1782. En la misma lista (VIII-IX): «Non ho
+      cognizione della Guaraùna, e della Aruàca»: el lokono no lo conocía'
+  maipure_de_paso:
+    que: 'el cap. X del libro III, «Saggio della lingua Maipure» (pp. 185-190), es una gramática breve de OTRA lengua
+      arahuaca del norte. Fuera del encargo; se anotan sólo las dos líneas que tocan las preguntas 1 y 2, verificadas
+      en imagen, y el resto queda sin minar'
+    pronombres:
+      p: 186
+      pdf: 201
+      literal: '«Pronomi primitivi: nuja io, pìa tu, la quello, juja quella, uaja noi, nia voi, la qual voce significa
+        pure, quelli e quelle»'
+      nota: 'nu- 1sg (como el achagua), pìa 2sg (la MISMA forma que el `pia` del canon, que se dice sacada del wayuu),
+        uaja 1pl (= `waya`), y 3sg distingue quello/quella. Es la primera hermana no wayuu del repo que da `pia`'
+    dos_conjugaciones:
+      p: 187
+      pdf: 202
+      literal: '«Sono due sole le congiugazioni de'' verbi Maipuri; una degli attivi, una de'' passivi, la quale serve
+        anche pe'' neutri … I passivi son terminati in au, e prendono questa desinenza dal verbo sostantivo caniacàu,
+        essere, o stare.» Nunavà io veggo, pinavà tu vedi, navà quegli vede, uanavà noi veggiamo'
+      nota: 'la misma arquitectura que el arte achagua: los verbos de estado («neutri») se conjugan como el verbo
+        «ser». Tercera hermana con el corte activo/estativo'
+  pronombres_achagua:
+    p: '345-346'
+    pdf: '356-357'
+    literal: '«Sorella pur loro, come accennai nel terzo libro della mia storia, sembrami la lingua Acciàgua; delle cui
+      voci non essendomi riuscito di averne molte per confrontarle, pongo solo i pronomi primitivi, affinchè si vegga
+      la similitudine con quelli de'' Maipuri. Nuja io, Gijà tu (1), Pijà quegli, Rujà quella, Guajà noi, Ijà voi, Najà
+      coloro.» Nota (1): la g, a la española'
+    verificado_en_imagen: si
+    contra_el_arte: 'coincide en seis de siete con los pronombres absolutos de Neira (p. 3: Nuya, Jia/Jiya, Ruya,
+      Guaya, Ja, Naya); DIFIERE en la 3sg masculina: Gilij «Pijà», Neira «Ria». No se decide cuál: una letra impresa
+      contra una manuscrita'
+    independencia: 'DUDOSA. Gilij sabía del manuscrito: «Il P. Gio. Ribero compose l''Acciàgua MS.» (Note, p. 410,
+      pdf 431, verificado en imagen). Que su «Pijà» difiera sugiere otra vía, pero no lo prueba: se cuenta como UNA
+      atestación con la de Neira hasta que se sepa de dónde la sacó (minar-fuente §8)'
+  caquetios:
+    que_se_busco: 'caquet-, cachet-, cacchet-, caiquet-; Coro; Curiana/Coriana; Paraguaná; Barquisimeto; guajiro, sin
+      tildes y sobre el OCR entero del tomo'
+    cifras: 'medicion_arte_achagua_2026-09-22.yaml §gilij_tomo_iii (aciertos por patrón, con su pdf, y cuántas páginas
+      salieron casi vacías)'
+    resultado: 'CERO CAQUETÍOS en el tomo III. El único acierto del patrón caquet- es una voz tamanaca (pdf 26,
+      «opicaccetpe»), y de los dos «Coro», uno es otra voz tamanaca («da Tamanachi dicesi Coro», la sarna; pdf 228,
+      leído sólo en OCR) y el otro la ciudad: en el apéndice sobre la lengua «Aitina» (taíno), Gilij dice que las voces
+      antillanas pasaron al castellano sobre todo desde el Nuevo Reino y Tierra Firme, pero que afirmar «che furon
+      pigliate … da quei di Cartagena, da quei di Coro, da quei del fiume della Maddalena» es «cosa se non impossibile,
+      difficilissima» (p. 228, impresa «128» por errata; pdf 241; verificado en imagen)'
+    alcance_del_cero: 'mide este OCR del tomo III, con las páginas casi vacías que da la medición; NO mide los tomos I
+      y IV, que no se leyeron'
+
+de_paso:
+  - que: 'CIERRA LA CALIBRACIÓN DE JAHN. «león», la única de las 34 que quedó `no-esta` (el vocabulario no tiene lema
+      «Leon»), está en el ARTE: «Leon varon, ó macho = Nerrianarre assiarricaberri … Leona hembra = Nerrianarre
+      Ynagetua» (p. 19, pliego 16 der., verificado en zoom). Jahn da «mirrianare»: la misma voz con otra inicial.
+      Veredicto propuesto: difiere (consonante inicial). NO se toca el YAML del vocabulario: queda para quien fusione'
+  - que: 'el locativo distingue LÍQUIDO de no líquido: «si el lugar … es cosa liquida, usan de Yaco … Sino es cosa
+      liquida, usan de naco» — En el agua = Vni yaco · En la tierra = Cainabe naco · En la laguna = Carisa yaco · En
+      el Rio Meta = Meda yaco (pp. 29-30, pliegos 21 der.-22 izq.). Para una lengua de pescadores es una pregunta que
+      el proyecto no se ha hecho; comparanda, nada más'
+  - que: 'segunda nota dialectal del autor: «el au lo hacen en Casanare ao» (p. 21, pliego 17 der.); la primera era
+      «sic in Casanare» bajo «Mas» (vocabulario 74)'
+  - que: 'procedencia -ge: «vengo de Pauto = Nuinu Pauto ge · de afuera = Benabege · de la labranza = Caginege» (p. 23);
+      es el -ge de «Guaviare ge sana» (arte.verbos)'
+  - que: 'posposiciones de caso, no casos: «todos los casos tienen un mismo semblante»; dativo irru, ablativo yagicha
+      (p. 2)'
+
+fauna:
+  - nombre_en_fuente: Chabi
+    especie_probable: null
+    texto: 'Eres como tigre, ó semejante al tigre = Chabichu vyusi'
+    obra: neira-ribero-1762
+    pagina_impresa: 24
+    lugar: 'Llanos del Meta y Casanare (misiones jesuitas); no Paraguaná'
+    epoca: colonial
+    sonido: null
+  - nombre_en_fuente: Nerrianarre
+    especie_probable: null
+    texto: 'Leon varon, ó macho = Nerrianarre assiarricaberri. P.a decir Leona, dicen Leona hembra = Nerrianarre Ynagetua'
+    obra: neira-ribero-1762
+    pagina_impresa: 19
+    lugar: 'Llanos del Meta y Casanare'
+    epoca: colonial
+    sonido: null
+  - nombre_en_fuente: Juay
+    especie_probable: null
+    texto: 'El mico es à manera de muchacho = Juay Samarriterri chu vyuni · Doite un Mico = Nuayu girru Juay'
+    obra: neira-ribero-1762
+    pagina_impresa: 24
+    lugar: 'Llanos del Meta y Casanare'
+    epoca: colonial
+    sonido: null
+  - nombre_en_fuente: Rrabata
+    especie_probable: null
+    texto: 'A manera de Mono = Rrabatachu'
+    obra: neira-ribero-1762
+    pagina_impresa: 24
+    lugar: 'Llanos del Meta y Casanare'
+    epoca: colonial
+    sonido: null
+  - nombre_en_fuente: 'A[m]icho'
+    especie_probable: null
+    texto: 'Mosquito Zancudo = Amicho … Carruna Amicho = mucho zancudo mosquito'
+    obra: neira-ribero-1762
+    pagina_impresa: 6
+    lugar: 'Llanos del Meta y Casanare'
+    epoca: colonial
+    sonido: null
+  - nombre_en_fuente: 'Nerri- (en «Nerrinicanacau»)'
+    especie_probable: null
+    texto: 'El Venado corre mas que el hombre … = Nerrinicanacau ribicaubata guanecataberri ricanacau'
+    obra: neira-ribero-1762
+    pagina_impresa: 24
+    lugar: 'Llanos del Meta y Casanare'
+    epoca: colonial
+    sonido: null
+
+dudas:
+  - {p: 4, forma: 'Mariyi / Mariyo («Mal hombre», «Mala muger»)', resuelta: 'no', nota: 'la tercera letra puede ser r o ʃ'}
+  - {p: 13, forma: 'Ycabecan[s]i «Vision»', resuelta: parcialmente, nota: 'ʃ baja antes de -i; ver p5'}
+  - {p: 16, forma: 'Le mirais — Ycabausi', resuelta: 'no', nota: 'se esperaría -ni (3sg); el copista puso -si'}
+  - {p: 23, forma: 'Dios ribana, vel Ybana', resuelta: 'no', nota: 'Y- sin explicar: ¿2pl o impersonal? Igual en Ycaberri (p. 6)'}
+  - {p: 32, forma: 'Guacarr[eu] / Nucabarr[eu] «Señor»', resuelta: 'no', nota: 'el final entra en el lomo'}
+  - {p: 32, forma: 'Pa[j]a = Ymisi', resuelta: 'no', nota: 'el lema castellano puede ser «Paja» o «Pasa»'}
+  - {p: 6, forma: 'A[m]icho', resuelta: 'no', nota: 'el vocabulario lee Anicho'}

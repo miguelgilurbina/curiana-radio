@@ -86,7 +86,11 @@ CRONISTAS = {
     "Gómara": r"G[óo]mara",
     "Herrera": r"Herrera",
     "Benzoni": r"Benzoni",
-    "Archivo de Indias": r"Documentos In[ée]ditos|Archivo de Indias|c[ée]dula",
+    "Archivo de Indias": r"Documentos In[ée]ditos|Archivo de Indias|c[ée]dula|"
+                         r"Documento de [ée]poca|Repartimiento",
+    # M5 (2026-09-23): dos cronistas del XVI que Coll y Toste cita y la tabla no tenía
+    "Enciso": r"Enciso",
+    "Echagoian": r"Echagoi?an",
 }
 # Compiladores e intermediarios: NO atestiguan, sólo transmiten.
 INTERMEDIARIOS = ("brinton-1871", "goeje-1939", "bachiller-morales-1883",
@@ -378,13 +382,19 @@ def leer_bachiller():
                         aviso="la lista de origen es la de Rafinesque, de quien Goeje "
                               "avisa que mezcla caribe"))
     E = A.get("el_bloque_eyeri") or {}
+    marcas = marcas_del_bloque_eyeri()
     for e in E.get("voces_eyeri_que_tocan_el_lexicon") or []:
-        out.append(_reg(e.get("forma"), e.get("glosa_en_la_lista"),
+        forma = str(e.get("forma") or "")
+        es_b = marcas.get(forma.split("/")[0].strip().lower()) == "B"
+        out.append(_reg(forma, e.get("glosa_en_la_lista"),
                         "bachiller-morales-1883", "intermediario",
                         pagina=A.get("pagina_impresa"), declara="Rafinesque, vía Rochefort",
-                        variedad="eyeri (Borinquen)",
+                        variedad="Borinquen (marca B.)" if es_b else "eyeri (Borinquen)",
                         en_el_lexicon=e.get("en_el_lexicon"),
-                        sacada_del_taino="eyeri (caribe insular), en la lista de Bachiller"))
+                        aviso=("T10 la leyó como eyeri en el OCR; en la imagen lleva la marca B. "
+                               "(M5, 2026-09-23)") if es_b else None,
+                        sacada_del_taino=None if es_b else
+                        "eyeri (caribe insular), en la lista de Bachiller"))
     for e in (Y.get("apendice_c") or {}).get("entradas_que_tocan_el_lexicon") or []:
         out.append(_reg(e.get("forma_fuente"), e.get("glosa_fuente"),
                         "bachiller-morales-1883", "intermediario",
@@ -404,9 +414,83 @@ def leer_bachiller():
     return out
 
 
+# ═════════════════════════════════════════════════════════════════════════
+# Tercera campaña, parcela M5 (2026-09-23): lo que T10 dejó a medias
+# ═════════════════════════════════════════════════════════════════════════
+ISLA = {"C": "Cuba", "J": "Jamaica", "L": "Lucayas", "C y L": "Cuba y Lucayas"}
+
+
+def marcas_del_bloque_eyeri():
+    """{forma en minúsculas: 'E' | 'B' | 'N'} leído en la IMAGEN de Bachiller p. 389."""
+    Y = _y("taino3_bachiller_morales_1883.yaml") or {}
+    return {str(e["forma"]).lower(): str(e.get("marca"))
+            for e in Y.get("fragmentos_eyeri_y_borinquen") or []}
+
+
+def leer_bachiller_m5():
+    """El apéndice (A) ENTERO y el bloque eyeri ENTERO (M5), leídos en imagen."""
+    Y = _y("taino3_bachiller_morales_1883.yaml")
+    out = []
+    if not Y:
+        return out
+    for e in Y.get("apendice_a_completo") or []:
+        for f in e.get("formas") or []:
+            out.append(_reg(f.get("forma"), e.get("concepto_fuente"),
+                            "bachiller-morales-1883", "intermediario",
+                            pagina=e.get("pagina_impresa"),
+                            declara=((e.get("cronista_que_nombra") or "") +
+                                     " || lista de Rafinesque (apéndice A)"),
+                            variedad=ISLA.get(str(f.get("isla")), f.get("isla")),
+                            aviso=" ".join(x for x in (e.get("bachiller"), e.get("nota")) if x)
+                            or None))
+    for e in Y.get("fragmentos_eyeri_y_borinquen") or []:
+        marca = str(e.get("marca"))
+        out.append(_reg(e.get("forma"), e.get("concepto_fuente"),
+                        "bachiller-morales-1883", "intermediario",
+                        pagina=389, declara="lista de Rafinesque, vía Rochefort",
+                        variedad="eyeri (Borinquen)" if marca == "E" else "Borinquen (marca %s.)" % marca,
+                        aviso=" ".join(x for x in (e.get("bachiller"), e.get("nota")) if x) or None,
+                        sacada_del_taino=("eyeri = habla de mujeres del caribe insular "
+                                          "(Bachiller p. 389; Goeje 1939)") if marca == "E" else None))
+    return out
+
+
+def leer_coll_y_toste():
+    """Coll y Toste, caps. XII y X — transcripción AUTOMÁTICA sobre OCR ajeno (M5).
+    El tipo de apoyo lo decidió `transcribir_coll_y_toste.py`; aquí sólo se traduce a
+    las marcas de este consolidador."""
+    Y = _y("taino3_coll_y_toste_1897.yaml")
+    out = []
+    if not Y:
+        return out
+    for e in Y.get("voces") or []:
+        tipo = e.get("tipo_de_apoyo")
+        aviso = {"conjetura-del-autor": "conjetura del autor (%s)" % (e.get("marca") or ""),
+                 "secundaria": "sólo autoridades del XVII-XIX"}.get(tipo)
+        isla = e.get("variedad_o_isla")
+        out.append(_reg(e.get("forma_fuente"), e.get("glosa_fuente"),
+                        "coll-y-toste-1897", "intermediario",
+                        pagina=e.get("pagina_impresa"),
+                        declara=e.get("fuente_que_declara_el_autor"),
+                        variedad=", ".join(isla) if isinstance(isla, list) else None,
+                        campo=e.get("campo"), en_el_lexicon=e.get("en_el_lexicon"),
+                        aviso=aviso,
+                        sacada_del_taino=("el propio Coll y Toste la saca: «%s»" % e.get("marca"))
+                        if tipo == "sacada-por-el-autor" else None))
+    for e in Y.get("vocabulario_espanol_boriqueno") or []:
+        out.append(_reg(e.get("forma_fuente"), e.get("glosa_fuente"),
+                        "coll-y-toste-1897", "intermediario",
+                        pagina=e.get("pagina_impresa"),
+                        declara="no-declarada (cap. X, vocabulario inverso: la cita va en el cap. XII)",
+                        en_el_lexicon=e.get("en_el_lexicon")))
+    return out
+
+
 LECTORES = [("brinton-1871", leer_brinton), ("oviedo-valdes-1851", leer_oviedo),
             ("las-casas-1875", leer_las_casas), ("pane-c1498", leer_pane),
-            ("goeje-1939", leer_goeje), ("bachiller-morales-1883", leer_bachiller)]
+            ("goeje-1939", leer_goeje), ("bachiller-morales-1883", leer_bachiller),
+            ("bachiller-morales-1883 (M5)", leer_bachiller_m5),
+            ("coll-y-toste-1897 (M5)", leer_coll_y_toste)]
 
 
 # ═════════════════════════════════════════════════════════════════════════
@@ -463,6 +547,19 @@ GLOSAS_FR_ES = {
     "or": "oro", "mer": "mar", "grelots": "cascabeles", "chaussure": "calzado",
     "perroquet": "loro", "pivert": "carpintero", "palmier": "palma",
     "maïs": "maíz", "esprit": "espíritu", "sang": "sangre", "nez": "nariz",
+    # M5 (2026-09-23): lo que el vocabulario KALINAGO de Goeje glosa con una palabra y
+    # el caquetío atestiguado tiene. Se añadió mirando la lista de conceptos caquetíos,
+    # así que es una tabla DIRIGIDA: sirve para no perder un par, no para inflar el
+    # total (una glosa francesa sin par caquetío no cuenta aunque esté aquí).
+    "soleil": "sol", "lune": "luna", "femme": "mujer", "homme": "hombre",
+    "serpent": "serpiente", "poisson": "pez", "dent": "diente", "singe": "mono",
+    "vent": "viento", "chemin": "camino", "sel": "sal", "arbre": "árbol",
+    "rivière": "río", "sable": "arena", "chauve-souris": "murciélago",
+    "hibou": "lechuza", "pigeon": "paloma", "sauterelle": "langosta",
+    "cuiller": "cuchara", "flûte": "flauta", "grand": "grande", "vieux": "viejo",
+    "fils": "hijo", "donner": "dar", "entendre": "oír", "semer": "sembrar",
+    "marcher": "caminar", "garder": "guardar", "lagune": "laguna", "côte": "costa",
+    "montagne": "sierra", "blatte": "cucaracha",
 }
 
 
@@ -533,6 +630,47 @@ def medir_conceptos_comparables(voces):
              "ya_estaba_en_la_lista_vieja": c in comunes_viejo}
             for c in comunes],
         "los_que_solo_aporta_la_lista_nueva": sorted(set(comunes) - set(comunes_viejo)),
+    }
+
+
+def medir_kalinago(caq_cabezas):
+    """El cruce de las voces kalinago del lexicón con Goeje (M5) y cuántos conceptos del
+    caquetío atestiguado tienen voz kalinago transcrita. Lee
+    `6-fusion/kalinago_goeje_1939.yaml`; los veredictos son lecturas en imagen, aquí sólo
+    se CUENTAN (regla 1)."""
+    Y = _y("kalinago_goeje_1939.yaml")
+    if not Y:
+        return None
+    filas = [f for f in Y.get("cruce_con_el_lexicon") or [] if isinstance(f, dict) and f.get("veredicto")]
+    por = collections.Counter(f["veredicto"] for f in filas)
+    claves_lex = sorted(k for k, v in CL.VOCABULARIO_BASE.items() if v.get("fuente") == "kalinago")
+    cruzadas = {f["clave"] for f in filas}
+    kal = {}
+    for e in Y.get("vocabulario") or []:
+        g = str(e.get("glosa_fuente") or "")
+        if g.startswith("id."):
+            continue
+        for cab in cabezas_exactas(a_castellano(g)):
+            kal.setdefault(cab, set()).add(str(e.get("forma_fuente")))
+    for f in filas:          # las líneas leídas en imagen para el cruce cuentan también
+        for cab in cabezas_exactas(f.get("glosa_en_el_lexicon")):
+            if f["veredicto"] != "sin-apoyo":
+                kal.setdefault(cab, set()).add(f["clave"])
+    comunes = sorted(set(caq_cabezas) & set(kal))
+    return {
+        "que_mide": (
+            "las voces kalinago del lexicón leídas contra Goeje 1939 (veredictos escritos a "
+            "mano en `kalinago_goeje_1939.yaml` §cruce, leídos en imagen) y los conceptos del "
+            "caquetío atestiguado que tienen voz kalinago en lo transcrito. ⚠️ El vocabulario "
+            "kalinago está transcrito a medias (ver su §tramos): es un SUELO."),
+        "claves_kalinago_en_el_lexicon": len(claves_lex),
+        "cruzadas": len(cruzadas & set(claves_lex)),
+        "sin_cruzar": sorted(set(claves_lex) - cruzadas),
+        "por_veredicto": dict(sorted(por.items())),
+        "entradas_de_vocabulario_transcritas": len(Y.get("vocabulario") or []),
+        "conceptos_kalinago_transcritos": len(kal),
+        "comparables_con_el_caquetio_atestiguado": len(comunes),
+        "los_comparables": [{"concepto": c, "kalinago": sorted(kal[c])[:6]} for c in comunes],
     }
 
 
@@ -676,6 +814,21 @@ def construir():
     conteo_cob = collections.Counter(c["clase"] for c in cobertura)
     con_cita = [c for c in cobertura if c["atestaciones_independientes"] >= 1]
     conceptos_med = medir_conceptos_comparables(voces)
+    caq_cab = set()
+    for k, v in CL.VOCABULARIO_BASE.items():
+        if CL.capa_epistemica(v.get("fuente")) == ATESTIGUADO:
+            caq_cab |= cabezas_exactas(v.get("sig"))
+    kalinago_med = medir_kalinago(caq_cab)
+    por_campo = collections.Counter()
+    for v in voces:
+        campos = set()
+        for r in grupos[v["lema"]]:
+            c = r.get("campo")
+            for x in (c if isinstance(c, list) else [c]):
+                if x:
+                    campos.add(str(x))
+        for c in (campos or {"sin-campo"}):
+            por_campo[c] += 1
 
     salida = {
         "meta": {
@@ -718,8 +871,13 @@ def construir():
                 sum(1 for v in voces if v.get("sacada_del_taino")),
             "con_aviso_de_independencia":
                 sum(1 for v in voces if v.get("aviso_de_independencia")),
+            "por_campo_declarado": dict(sorted(por_campo.items())),
+            "aviso_de_campo": (
+                "una voz cuenta en cada campo que alguna fuente le declara; `toponimo` y "
+                "`antroponimo` salen casi todos de Coll y Toste (M5), cuyo campo lo pone una "
+                "heurística sobre la glosa"),
         },
-        "las_52_del_lexicon": {
+        "las_claves_tainas_del_lexicon": {
             "que_mide": (
                 "para cada clave taína del lexicón, qué clase le toca en la lista maestra. "
                 "`sin-voz-en-la-lista` significa que ninguna de las seis transcripciones "
@@ -739,6 +897,7 @@ def construir():
             "filas": COTEJOS_DE_CADENA,
         },
         "conceptos_comparables_con_el_caquetio_atestiguado": conceptos_med,
+        "kalinago_de_goeje": kalinago_med,
         "voces": voces,
     }
     return salida
@@ -759,7 +918,7 @@ def consola(s):
     print("  con variedad o isla declarada:", s["resumen"]["con_variedad_o_isla_declarada"])
     print("  sacadas del taíno por alguna fuente:",
           s["resumen"]["sacadas_del_taino_por_alguna_fuente"])
-    c = s["las_52_del_lexicon"]
+    c = s["las_claves_tainas_del_lexicon"]
     print("\n── las claves taínas del lexicón ──")
     print("  claves:", c["claves"], "· con al menos un cronista:", c["con_al_menos_un_cronista"])
     for k, v in c["por_clase"].items():
@@ -773,6 +932,13 @@ def consola(s):
     print("  comparables con la lista VIEJA:   ", m["comparables_con_la_lista_vieja"])
     print("  comparables con la lista MAESTRA: ", m["comparables_con_la_lista_MAESTRA"])
     print("  los que sólo aporta la nueva:", ", ".join(m["los_que_solo_aporta_la_lista_nueva"]) or "—")
+    k = s.get("kalinago_de_goeje")
+    if k:
+        print("\n── KALINAGO (Goeje 1939) ──")
+        print("  claves kalinago del lexicón:", k["claves_kalinago_en_el_lexicon"],
+              "· cruzadas:", k["cruzadas"], "·", k["por_veredicto"])
+        print("  conceptos caquetíos atestiguados con voz kalinago:",
+              k["comparables_con_el_caquetio_atestiguado"])
 
 
 def main(argv=None):
