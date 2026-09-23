@@ -107,6 +107,34 @@ def _restar(a: dict, b: dict) -> dict:
     return {k: a[k] - b.get(k, 0) for k in a if a[k] - b.get(k, 0) > 0}
 
 
+def _indice(pp: dict, esfuerzo_pp: dict) -> dict:
+    """Registros de la especie en cada período ÷ lo esperado por el esfuerzo.
+
+    1 = lo que el muestreo predice; < 1 = menos de lo esperado. Es la manera
+    de leer un mes vacío sin confundir la ausencia del ave con la del
+    observador (regla 6): eBird muestrea febrero seis veces más que junio.
+    """
+    n = sum(pp.values())
+    e = sum(esfuerzo_pp.values())
+    if not n or not e:
+        return {p: None for p in pp}
+    return {p: round((pp[p] / n) / (esfuerzo_pp[p] / e), 2) for p in pp}
+
+
+def _patron(n: int, ind: dict) -> str:
+    """Etiqueta descriptiva con umbrales declarados (no es un estatus migratorio:
+    eso lo da la literatura). n < 30 no se etiqueta."""
+    if n < 30:
+        return "pocos-registros"
+    bajos = [p for p, v in ind.items() if v is not None and v < 0.25]
+    if bajos:
+        return "casi-ausente-en-" + "+".join(sorted(bajos))
+    if all(v is not None and 0.5 <= v <= 1.6 for v in ind.values()):
+        return "todo-el-año"
+    altos = [p for p, v in ind.items() if v is not None and v > 1.6]
+    return ("concentrado-en-" + "+".join(sorted(altos))) if altos else "irregular"
+
+
 def medir(cli: Cliente) -> dict:
     base = {**AVES, **CAJA}
     total = cli.get("occurrence/search", {**base, "limit": 0,
@@ -177,11 +205,38 @@ def medir(cli: Cliente) -> dict:
             "meses": {m: meses[m] for m in sorted(meses)},
             "meses_sin_registro": [m for m in range(1, 13) if m not in meses],
             "por_periodo": _por_periodo(meses),
+            "indice_por_periodo": _indice(_por_periodo(meses), _por_periodo(esfuerzo)),
+            "patron": _patron(sum(meses.values()),
+                              _indice(_por_periodo(meses), _por_periodo(esfuerzo))),
             "anio_primero": anios[0] if anios else None,
             "anio_ultimo": anios[-1] if anios else None,
         })
 
+    # Las grabaciones de xeno-canto HECHAS EN LA CAJA: son las que se citan por
+    # su ID como «lo que se oye» (no se descarga audio). Y los especímenes de
+    # museo, que son lo más viejo que GBIF tiene (1896, 1938, 1941).
+    xc = cli.get("occurrence/search", {**base, "datasetKey": "b1047888-ae52-4179-9dd5-5448ea342a24",
+                                       "limit": 300})
+    grabaciones = sorted(({
+        "xc": r.get("catalogNumber"),
+        "especie": r.get("species"),
+        "fecha": (r.get("eventDate") or "")[:10],
+        "lugar": r.get("locality"),
+        "tipo": r.get("behavior"),
+        "autor": r.get("recordedBy"),
+    } for r in xc.get("results", [])), key=lambda g: (g["especie"] or "", g["xc"] or ""))
+    mus = cli.get("occurrence/search", {**base, "basisOfRecord": "PRESERVED_SPECIMEN", "limit": 300})
+    especimenes = sorted(({
+        "especie": r.get("species") or r.get("scientificName"),
+        "anio": r.get("year"),
+        "institucion": r.get("institutionCode"),
+        "catalogo": r.get("catalogNumber"),
+        "lugar": r.get("locality"),
+    } for r in mus.get("results", [])), key=lambda e: (e["anio"] or 0, e["especie"] or ""))
+
     return {
+        "grabaciones_xeno_canto_en_la_caja": grabaciones,
+        "especimenes_de_museo_en_la_caja": especimenes,
         "meta": {
             "medido": time.strftime("%Y-%m-%d"),
             "script": "6-fusion/scripts/medir_gbif_aves_paraguana.py",

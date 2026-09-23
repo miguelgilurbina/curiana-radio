@@ -1,4 +1,345 @@
 # GENERADO por 6-fusion/scripts/medir_gbif_aves_paraguana.py — no editar a mano.
+grabaciones_xeno_canto_en_la_caja:
+- xc: XC14835
+  especie: Cardinalis phoeniceus
+  fecha: '2006-12-17'
+  lugar: Reserva Montecano, Falcon
+  tipo: call
+  autor: Andrew Spencer
+- xc: XC837810
+  especie: Cardinalis phoeniceus
+  fecha: '2022-09-24'
+  lugar: Santa Ana (near  Machuruca), Carirubana, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC837823
+  especie: Cardinalis phoeniceus
+  fecha: '2023-09-28'
+  lugar: MN Montecano; Paraguaná, Municipio Falcón, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC9898
+  especie: Cardinalis phoeniceus
+  fecha: '2006-12-18'
+  lugar: Reserva Montecano, Falcon
+  tipo: song
+  autor: Andrew Spencer
+- xc: XC837808
+  especie: Colinus cristatus
+  fecha: '2022-09-24'
+  lugar: Santa Ana (near  Machuruca), Carirubana, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC12591
+  especie: Columbina passerina
+  fecha: '2006-12-18'
+  lugar: Reserva Montecano, Falcon
+  tipo: song
+  autor: Andrew Spencer
+- xc: XC11241
+  especie: Coryphospingus pileatus
+  fecha: '2006-12-18'
+  lugar: Reserva Montecano, Falcon
+  tipo: song
+  autor: Andrew Spencer
+- xc: XC837790
+  especie: Coryphospingus pileatus
+  fecha: '2023-09-23'
+  lugar: Santa Ana (near  Machuruca), Carirubana, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC837791
+  especie: Coryphospingus pileatus
+  fecha: '2022-09-24'
+  lugar: Santa Ana (near  Machuruca), Carirubana, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC455475
+  especie: Cyclarhis gujanensis
+  fecha: '2018-10-31'
+  lugar: Reserva Montecano, Falcon
+  tipo: song
+  autor: Francisco contreras
+- xc: XC837802
+  especie: Cyclarhis gujanensis
+  fecha: '2022-09-24'
+  lugar: Santa Ana (near  Machuruca), Carirubana, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC837830
+  especie: Cyclarhis gujanensis
+  fecha: '2023-09-28'
+  lugar: MN Montecano; Paraguaná, Municipio Falcón, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC837807
+  especie: Formicivora intermedia
+  fecha: '2022-09-23'
+  lugar: Santa Ana (near  Machuruca), Carirubana, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC837826
+  especie: Glaucidium brasilianum
+  fecha: '2023-09-28'
+  lugar: MN Montecano; Paraguaná, Municipio Falcón, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC837828
+  especie: Glaucidium brasilianum
+  fecha: '2023-09-28'
+  lugar: MN Montecano; Paraguaná, Municipio Falcón, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC837787
+  especie: Leptotila verreauxi
+  fecha: '2023-09-23'
+  lugar: Santa Ana (near  Machuruca), Carirubana, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC12183
+  especie: Leucippus fallax
+  fecha: '2006-12-18'
+  lugar: Reserva Montecano, Falcon
+  tipo: song
+  autor: Andrew Spencer
+- xc: XC837792
+  especie: Melanerpes rubricapillus
+  fecha: '2022-09-24'
+  lugar: Santa Ana (near  Machuruca), Carirubana, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC837793
+  especie: Melanerpes rubricapillus
+  fecha: '2022-09-24'
+  lugar: Santa Ana (near  Machuruca), Carirubana, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC14668
+  especie: Mimus gilvus
+  fecha: '2006-12-18'
+  lugar: Reserva Montecano, Falcon
+  tipo: song
+  autor: Andrew Spencer
+- xc: XC837788
+  especie: Mimus gilvus
+  fecha: '2023-09-23'
+  lugar: Santa Ana (near  Machuruca), Carirubana, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC837794
+  especie: Ortalis ruficauda
+  fecha: '2022-09-24'
+  lugar: Santa Ana (near  Machuruca), Carirubana, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC837796
+  especie: Ortalis ruficauda
+  fecha: '2022-09-24'
+  lugar: Santa Ana (near  Machuruca), Carirubana, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC837806
+  especie: Patagioenas corensis
+  fecha: '2022-09-23'
+  lugar: Santa Ana (near  Machuruca), Carirubana, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC14664
+  especie: Polioptila plumbea
+  fecha: '2006-12-17'
+  lugar: Reserva Montecano, Falcon
+  tipo: song
+  autor: Andrew Spencer
+- xc: XC14665
+  especie: Polioptila plumbea
+  fecha: '2006-12-17'
+  lugar: Reserva Montecano, Falcon
+  tipo: song, call
+  autor: Andrew Spencer
+- xc: XC837797
+  especie: Polioptila plumbea
+  fecha: '2022-09-24'
+  lugar: Santa Ana (near  Machuruca), Carirubana, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC837798
+  especie: Polioptila plumbea
+  fecha: '2022-09-24'
+  lugar: Santa Ana (near  Machuruca), Carirubana, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC837824
+  especie: Polioptila plumbea
+  fecha: '2023-09-28'
+  lugar: MN Montecano; Paraguaná, Municipio Falcón, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC11236
+  especie: Sakesphorus canadensis
+  fecha: '2006-12-22'
+  lugar: Reserva Montecano, Falcon
+  tipo: song
+  autor: Andrew Spencer
+- xc: XC12598
+  especie: Saltator olivascens
+  fecha: '2006-12-18'
+  lugar: Reserva Montecano, Falcon
+  tipo: song
+  autor: Andrew Spencer
+- xc: XC837805
+  especie: Saltator olivascens
+  fecha: '2022-09-25'
+  lugar: Santa Ana (near  Machuruca), Carirubana, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC14831
+  especie: Synallaxis albescens
+  fecha: '2006-12-17'
+  lugar: Reserva Montecano, Falcon
+  tipo: song
+  autor: Andrew Spencer
+- xc: XC837801
+  especie: Synallaxis albescens
+  fecha: '2022-09-24'
+  lugar: Santa Ana (near  Machuruca), Carirubana, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC9929
+  especie: Tachybaptus dominicus
+  fecha: '2006-12-18'
+  lugar: Reserva Montecano, Falcon
+  tipo: song, duet
+  autor: Andrew Spencer
+- xc: XC837809
+  especie: Thraupis glaucocolpa
+  fecha: '2022-09-24'
+  lugar: Santa Ana (near  Machuruca), Carirubana, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC837803
+  especie: Vireo olivaceus
+  fecha: '2022-09-24'
+  lugar: Santa Ana (near  Machuruca), Carirubana, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC837804
+  especie: Xiphorhynchus picus
+  fecha: '2022-09-25'
+  lugar: Santa Ana (near  Machuruca), Carirubana, Falcón
+  tipo: song
+  autor: Francisco contreras
+- xc: XC9897
+  especie: Xiphorhynchus picus
+  fecha: '2006-12-18'
+  lugar: Reserva Montecano, Falcon
+  tipo: call
+  autor: Andrew Spencer
+especimenes_de_museo_en_la_caja:
+- especie: Caracara plancus
+  anio: 1896
+  institucion: MNHN
+  catalogo: MO-1930-248
+  lugar: Paraguaná Peninsula
+- especie: Egretta rufescens
+  anio: 1896
+  institucion: MNHN
+  catalogo: MO-1930-228
+  lugar: Paraguaná Peninsula
+- especie: Egretta rufescens
+  anio: 1896
+  institucion: MNHN
+  catalogo: MO-1930-229
+  lugar: Paraguaná Peninsula
+- especie: Egretta rufescens
+  anio: 1896
+  institucion: MNHN
+  catalogo: MO-1930-230
+  lugar: Paraguaná Peninsula
+- especie: Colinus cristatus
+  anio: 1938
+  institucion: MCZ
+  catalogo: '274958'
+  lugar: Paraguana Penin., Moruy
+- especie: Colinus cristatus
+  anio: 1938
+  institucion: MCZ
+  catalogo: '274959'
+  lugar: Paraguana Penin., Moruy
+- especie: Melanerpes rubricapillus
+  anio: 1941
+  institucion: FMNH
+  catalogo: '154446'
+  lugar: Adicora, Paraguana [at sealevel]
+- especie: Melanerpes rubricapillus
+  anio: 1941
+  institucion: FMNH
+  catalogo: '154447'
+  lugar: Adicora, Paraguana [at sealevel]
+- especie: Melanerpes rubricapillus
+  anio: 1941
+  institucion: MCZ
+  catalogo: '274816'
+  lugar: Adicora
+- especie: Melanerpes rubricapillus
+  anio: 1941
+  institucion: MCZ
+  catalogo: '274817'
+  lugar: Adicora
+- especie: Setophaga petechia
+  anio: 1941
+  institucion: FMNH
+  catalogo: '154448'
+  lugar: La Boca, Adicora
+- especie: Cardinalis phoeniceus
+  anio: 1989
+  institucion: UMMZ
+  catalogo: '617'
+  lugar: Cerro Santa Ana, base of
+- especie: Cardinalis phoeniceus
+  anio: 1989
+  institucion: UMMZ
+  catalogo: '227709'
+  lugar: Cerro Santa Ana, base of
+- especie: Columbina passerina
+  anio: 1989
+  institucion: UMMZ
+  catalogo: '622'
+  lugar: Laguna de Tiraya, Boca del Cano
+- especie: Mimus gilvus
+  anio: 1989
+  institucion: UMMZ
+  catalogo: '227706'
+  lugar: Cerro Santa Ana, base of
+- especie: Setophaga petechia
+  anio: 1989
+  institucion: UMMZ
+  catalogo: '227732'
+  lugar: Laguna de Tiraya, Boca del Cano
+- especie: Setophaga petechia
+  anio: 1989
+  institucion: UMMZ
+  catalogo: '227681'
+  lugar: Laguna de Tiraya, Boca del Cano
+- especie: Setophaga petechia
+  anio: 1989
+  institucion: UMMZ
+  catalogo: '227733'
+  lugar: Laguna de Tiraya, Boca del Cano
+- especie: Setophaga petechia
+  anio: 1989
+  institucion: UMMZ
+  catalogo: '227730'
+  lugar: Laguna de Tiraya, Boca del Cano
+- especie: Setophaga petechia
+  anio: 1989
+  institucion: UMMZ
+  catalogo: '227734'
+  lugar: Laguna de Tiraya, Boca del Cano
+- especie: Setophaga petechia
+  anio: 1989
+  institucion: UMMZ
+  catalogo: '227731'
+  lugar: Laguna de Tiraya, Boca del Cano
 meta:
   medido: '2026-09-22'
   script: 6-fusion/scripts/medir_gbif_aves_paraguana.py
@@ -164,6 +505,11 @@ especies:
     P1_tiempo_de_viento: 625
     P2_seca_larga: 352
     P3_tiempo_de_siembra: 377
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.94
+    P2_seca_larga: 0.92
+    P3_tiempo_de_siembra: 1.22
+  patron: todo-el-año
   anio_primero: 1989
   anio_ultimo: 2024
 - speciesKey: 2480189
@@ -190,6 +536,11 @@ especies:
     P1_tiempo_de_viento: 687
     P2_seca_larga: 264
     P3_tiempo_de_siembra: 216
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.2
+    P2_seca_larga: 0.8
+    P3_tiempo_de_siembra: 0.81
+  patron: todo-el-año
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 5229158
@@ -216,6 +567,11 @@ especies:
     P1_tiempo_de_viento: 408
     P2_seca_larga: 256
     P3_tiempo_de_siembra: 212
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.95
+    P2_seca_larga: 1.03
+    P3_tiempo_de_siembra: 1.06
+  patron: todo-el-año
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 5789281
@@ -242,6 +598,11 @@ especies:
     P1_tiempo_de_viento: 521
     P2_seca_larga: 175
     P3_tiempo_de_siembra: 178
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.22
+    P2_seca_larga: 0.71
+    P3_tiempo_de_siembra: 0.89
+  patron: todo-el-año
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 2481942
@@ -268,6 +629,11 @@ especies:
     P1_tiempo_de_viento: 424
     P2_seca_larga: 179
     P3_tiempo_de_siembra: 206
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.07
+    P2_seca_larga: 0.78
+    P3_tiempo_de_siembra: 1.12
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 2487583
@@ -294,6 +660,11 @@ especies:
     P1_tiempo_de_viento: 346
     P2_seca_larga: 186
     P3_tiempo_de_siembra: 201
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.97
+    P2_seca_larga: 0.9
+    P3_tiempo_de_siembra: 1.2
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 2495869
@@ -320,6 +691,11 @@ especies:
     P1_tiempo_de_viento: 264
     P2_seca_larga: 239
     P3_tiempo_de_siembra: 179
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.79
+    P2_seca_larga: 1.24
+    P3_tiempo_de_siembra: 1.15
+  patron: todo-el-año
   anio_primero: 1989
   anio_ultimo: 2024
 - speciesKey: 2480327
@@ -346,6 +722,11 @@ especies:
     P1_tiempo_de_viento: 431
     P2_seca_larga: 133
     P3_tiempo_de_siembra: 94
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.34
+    P2_seca_larga: 0.71
+    P3_tiempo_de_siembra: 0.63
+  patron: todo-el-año
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 6065844
@@ -372,6 +753,11 @@ especies:
     P1_tiempo_de_viento: 314
     P2_seca_larga: 197
     P3_tiempo_de_siembra: 140
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.99
+    P2_seca_larga: 1.07
+    P3_tiempo_de_siembra: 0.94
+  patron: todo-el-año
   anio_primero: 2004
   anio_ultimo: 2024
 - speciesKey: 2481776
@@ -398,6 +784,11 @@ especies:
     P1_tiempo_de_viento: 352
     P2_seca_larga: 155
     P3_tiempo_de_siembra: 112
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.16
+    P2_seca_larga: 0.88
+    P3_tiempo_de_siembra: 0.79
+  patron: todo-el-año
   anio_primero: 1998
   anio_ultimo: 2024
 - speciesKey: 5229915
@@ -424,6 +815,11 @@ especies:
     P1_tiempo_de_viento: 277
     P2_seca_larga: 156
     P3_tiempo_de_siembra: 162
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.95
+    P2_seca_larga: 0.93
+    P3_tiempo_de_siembra: 1.19
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 2480989
@@ -450,6 +846,11 @@ especies:
     P1_tiempo_de_viento: 325
     P2_seca_larga: 136
     P3_tiempo_de_siembra: 128
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.13
+    P2_seca_larga: 0.82
+    P3_tiempo_de_siembra: 0.95
+  patron: todo-el-año
   anio_primero: 1896
   anio_ultimo: 2026
 - speciesKey: 2490404
@@ -476,6 +877,11 @@ especies:
     P1_tiempo_de_viento: 212
     P2_seca_larga: 195
     P3_tiempo_de_siembra: 181
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.74
+    P2_seca_larga: 1.17
+    P3_tiempo_de_siembra: 1.35
+  patron: todo-el-año
   anio_primero: 1989
   anio_ultimo: 2024
 - speciesKey: 5231190
@@ -502,6 +908,11 @@ especies:
     P1_tiempo_de_viento: 271
     P2_seca_larga: 152
     P3_tiempo_de_siembra: 156
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.96
+    P2_seca_larga: 0.93
+    P3_tiempo_de_siembra: 1.18
+  patron: todo-el-año
   anio_primero: 2006
   anio_ultimo: 2024
 - speciesKey: 2481748
@@ -528,6 +939,11 @@ especies:
     P1_tiempo_de_viento: 365
     P2_seca_larga: 128
     P3_tiempo_de_siembra: 78
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.31
+    P2_seca_larga: 0.79
+    P3_tiempo_de_siembra: 0.6
+  patron: todo-el-año
   anio_primero: 2004
   anio_ultimo: 2024
 - speciesKey: 2480888
@@ -554,6 +970,11 @@ especies:
     P1_tiempo_de_viento: 336
     P2_seca_larga: 138
     P3_tiempo_de_siembra: 93
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.21
+    P2_seca_larga: 0.86
+    P3_tiempo_de_siembra: 0.72
+  patron: todo-el-año
   anio_primero: 1896
   anio_ultimo: 2024
 - speciesKey: 2478125
@@ -580,6 +1001,11 @@ especies:
     P1_tiempo_de_viento: 250
     P2_seca_larga: 173
     P3_tiempo_de_siembra: 142
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.91
+    P2_seca_larga: 1.08
+    P3_tiempo_de_siembra: 1.1
+  patron: todo-el-año
   anio_primero: 1941
   anio_ultimo: 2024
 - speciesKey: 2495888
@@ -606,6 +1032,11 @@ especies:
     P1_tiempo_de_viento: 222
     P2_seca_larga: 179
     P3_tiempo_de_siembra: 164
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.8
+    P2_seca_larga: 1.12
+    P3_tiempo_de_siembra: 1.27
+  patron: todo-el-año
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 9752617
@@ -632,6 +1063,11 @@ especies:
     P1_tiempo_de_viento: 317
     P2_seca_larga: 129
     P3_tiempo_de_siembra: 112
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.16
+    P2_seca_larga: 0.82
+    P3_tiempo_de_siembra: 0.88
+  patron: todo-el-año
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 2484159
@@ -658,6 +1094,11 @@ especies:
     P1_tiempo_de_viento: 242
     P2_seca_larga: 163
     P3_tiempo_de_siembra: 113
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.96
+    P2_seca_larga: 1.11
+    P3_tiempo_de_siembra: 0.96
+  patron: todo-el-año
   anio_primero: 2006
   anio_ultimo: 2024
 - speciesKey: 9399113
@@ -684,6 +1125,11 @@ especies:
     P1_tiempo_de_viento: 301
     P2_seca_larga: 122
     P3_tiempo_de_siembra: 77
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.23
+    P2_seca_larga: 0.86
+    P3_tiempo_de_siembra: 0.68
+  patron: todo-el-año
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 2481930
@@ -710,6 +1156,11 @@ especies:
     P1_tiempo_de_viento: 284
     P2_seca_larga: 34
     P3_tiempo_de_siembra: 158
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.22
+    P2_seca_larga: 0.25
+    P3_tiempo_de_siembra: 1.46
+  patron: irregular
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 2480295
@@ -736,6 +1187,11 @@ especies:
     P1_tiempo_de_viento: 303
     P2_seca_larga: 107
     P3_tiempo_de_siembra: 58
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.32
+    P2_seca_larga: 0.81
+    P3_tiempo_de_siembra: 0.54
+  patron: todo-el-año
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 2493744
@@ -762,6 +1218,11 @@ especies:
     P1_tiempo_de_viento: 231
     P2_seca_larga: 124
     P3_tiempo_de_siembra: 107
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.02
+    P2_seca_larga: 0.95
+    P3_tiempo_de_siembra: 1.02
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 2481720
@@ -788,6 +1249,11 @@ especies:
     P1_tiempo_de_viento: 262
     P2_seca_larga: 125
     P3_tiempo_de_siembra: 70
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.17
+    P2_seca_larga: 0.97
+    P3_tiempo_de_siembra: 0.67
+  patron: todo-el-año
   anio_primero: 1998
   anio_ultimo: 2024
 - speciesKey: 2481784
@@ -814,6 +1280,11 @@ especies:
     P1_tiempo_de_viento: 257
     P2_seca_larga: 111
     P3_tiempo_de_siembra: 67
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.21
+    P2_seca_larga: 0.9
+    P3_tiempo_de_siembra: 0.68
+  patron: todo-el-año
   anio_primero: 1998
   anio_ultimo: 2024
 - speciesKey: 5789298
@@ -840,6 +1311,11 @@ especies:
     P1_tiempo_de_viento: 256
     P2_seca_larga: 109
     P3_tiempo_de_siembra: 70
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.2
+    P2_seca_larga: 0.88
+    P3_tiempo_de_siembra: 0.71
+  patron: todo-el-año
   anio_primero: 2007
   anio_ultimo: 2024
 - speciesKey: 5229939
@@ -866,6 +1342,11 @@ especies:
     P1_tiempo_de_viento: 175
     P2_seca_larga: 125
     P3_tiempo_de_siembra: 129
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.83
+    P2_seca_larga: 1.03
+    P3_tiempo_de_siembra: 1.32
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 9426540
@@ -892,6 +1373,11 @@ especies:
     P1_tiempo_de_viento: 172
     P2_seca_larga: 134
     P3_tiempo_de_siembra: 119
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.83
+    P2_seca_larga: 1.11
+    P3_tiempo_de_siembra: 1.23
+  patron: todo-el-año
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 2480873
@@ -918,6 +1404,11 @@ especies:
     P1_tiempo_de_viento: 234
     P2_seca_larga: 110
     P3_tiempo_de_siembra: 79
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.13
+    P2_seca_larga: 0.92
+    P3_tiempo_de_siembra: 0.82
+  patron: todo-el-año
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 2496060
@@ -944,6 +1435,11 @@ especies:
     P1_tiempo_de_viento: 188
     P2_seca_larga: 115
     P3_tiempo_de_siembra: 116
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.92
+    P2_seca_larga: 0.97
+    P3_tiempo_de_siembra: 1.21
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 2481745
@@ -970,6 +1466,11 @@ especies:
     P1_tiempo_de_viento: 227
     P2_seca_larga: 100
     P3_tiempo_de_siembra: 73
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.16
+    P2_seca_larga: 0.88
+    P3_tiempo_de_siembra: 0.8
+  patron: todo-el-año
   anio_primero: 1998
   anio_ultimo: 2024
 - speciesKey: 2495358
@@ -996,6 +1497,11 @@ especies:
     P1_tiempo_de_viento: 133
     P2_seca_larga: 142
     P3_tiempo_de_siembra: 111
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.7
+    P2_seca_larga: 1.3
+    P3_tiempo_de_siembra: 1.26
+  patron: todo-el-año
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 5228112
@@ -1022,6 +1528,11 @@ especies:
     P1_tiempo_de_viento: 148
     P2_seca_larga: 89
     P3_tiempo_de_siembra: 140
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.8
+    P2_seca_larga: 0.83
+    P3_tiempo_de_siembra: 1.63
+  patron: concentrado-en-P3_tiempo_de_siembra
   anio_primero: 1938
   anio_ultimo: 2024
 - speciesKey: 9691034
@@ -1048,6 +1559,11 @@ especies:
     P1_tiempo_de_viento: 215
     P2_seca_larga: 95
     P3_tiempo_de_siembra: 67
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.17
+    P2_seca_larga: 0.89
+    P3_tiempo_de_siembra: 0.78
+  patron: todo-el-año
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 2481240
@@ -1074,6 +1590,11 @@ especies:
     P1_tiempo_de_viento: 189
     P2_seca_larga: 130
     P3_tiempo_de_siembra: 52
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.04
+    P2_seca_larga: 1.24
+    P3_tiempo_de_siembra: 0.61
+  patron: todo-el-año
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 2495331
@@ -1100,6 +1621,11 @@ especies:
     P1_tiempo_de_viento: 137
     P2_seca_larga: 138
     P3_tiempo_de_siembra: 94
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.76
+    P2_seca_larga: 1.32
+    P3_tiempo_de_siembra: 1.12
+  patron: todo-el-año
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 9105847
@@ -1126,6 +1652,11 @@ especies:
     P1_tiempo_de_viento: 156
     P2_seca_larga: 102
     P3_tiempo_de_siembra: 101
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.89
+    P2_seca_larga: 1.0
+    P3_tiempo_de_siembra: 1.23
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 2480273
@@ -1152,6 +1683,11 @@ especies:
     P1_tiempo_de_viento: 172
     P2_seca_larga: 101
     P3_tiempo_de_siembra: 80
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.0
+    P2_seca_larga: 1.01
+    P3_tiempo_de_siembra: 0.99
+  patron: todo-el-año
   anio_primero: 1992
   anio_ultimo: 2026
 - speciesKey: 2481764
@@ -1178,6 +1714,11 @@ especies:
     P1_tiempo_de_viento: 201
     P2_seca_larga: 97
     P3_tiempo_de_siembra: 54
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.17
+    P2_seca_larga: 0.97
+    P3_tiempo_de_siembra: 0.67
+  patron: todo-el-año
   anio_primero: 2005
   anio_ultimo: 2024
 - speciesKey: 5229204
@@ -1204,6 +1745,11 @@ especies:
     P1_tiempo_de_viento: 160
     P2_seca_larga: 141
     P3_tiempo_de_siembra: 31
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.99
+    P2_seca_larga: 1.5
+    P3_tiempo_de_siembra: 0.41
+  patron: irregular
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 2484936
@@ -1230,6 +1776,11 @@ especies:
     P1_tiempo_de_viento: 133
     P2_seca_larga: 88
     P3_tiempo_de_siembra: 109
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.82
+    P2_seca_larga: 0.94
+    P3_tiempo_de_siembra: 1.45
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 2475165
@@ -1256,6 +1807,11 @@ especies:
     P1_tiempo_de_viento: 136
     P2_seca_larga: 84
     P3_tiempo_de_siembra: 98
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.87
+    P2_seca_larga: 0.93
+    P3_tiempo_de_siembra: 1.35
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 2480519
@@ -1282,6 +1838,11 @@ especies:
     P1_tiempo_de_viento: 134
     P2_seca_larga: 93
     P3_tiempo_de_siembra: 82
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.89
+    P2_seca_larga: 1.06
+    P3_tiempo_de_siembra: 1.16
+  patron: todo-el-año
   anio_primero: 1998
   anio_ultimo: 2024
 - speciesKey: 2490049
@@ -1308,6 +1869,11 @@ especies:
     P1_tiempo_de_viento: 151
     P2_seca_larga: 71
     P3_tiempo_de_siembra: 85
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.01
+    P2_seca_larga: 0.82
+    P3_tiempo_de_siembra: 1.21
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 2476233
@@ -1334,6 +1900,11 @@ especies:
     P1_tiempo_de_viento: 131
     P2_seca_larga: 70
     P3_tiempo_de_siembra: 102
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.88
+    P2_seca_larga: 0.82
+    P3_tiempo_de_siembra: 1.48
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 5229662
@@ -1360,6 +1931,11 @@ especies:
     P1_tiempo_de_viento: 99
     P2_seca_larga: 95
     P3_tiempo_de_siembra: 109
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.67
+    P2_seca_larga: 1.11
+    P3_tiempo_de_siembra: 1.58
+  patron: todo-el-año
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 2481742
@@ -1386,6 +1962,11 @@ especies:
     P1_tiempo_de_viento: 165
     P2_seca_larga: 98
     P3_tiempo_de_siembra: 38
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.12
+    P2_seca_larga: 1.15
+    P3_tiempo_de_siembra: 0.55
+  patron: todo-el-año
   anio_primero: 2008
   anio_ultimo: 2024
 - speciesKey: 5789285
@@ -1412,6 +1993,11 @@ especies:
     P1_tiempo_de_viento: 102
     P2_seca_larga: 183
     P3_tiempo_de_siembra: 13
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.7
+    P2_seca_larga: 2.17
+    P3_tiempo_de_siembra: 0.19
+  patron: casi-ausente-en-P3_tiempo_de_siembra
   anio_primero: 2006
   anio_ultimo: 2024
 - speciesKey: 5229678
@@ -1438,6 +2024,11 @@ especies:
     P1_tiempo_de_viento: 107
     P2_seca_larga: 85
     P3_tiempo_de_siembra: 103
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.74
+    P2_seca_larga: 1.02
+    P3_tiempo_de_siembra: 1.53
+  patron: todo-el-año
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 2481721
@@ -1464,6 +2055,11 @@ especies:
     P1_tiempo_de_viento: 149
     P2_seca_larga: 92
     P3_tiempo_de_siembra: 51
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.04
+    P2_seca_larga: 1.11
+    P3_tiempo_de_siembra: 0.77
+  patron: todo-el-año
   anio_primero: 1998
   anio_ultimo: 2024
 - speciesKey: 2480803
@@ -1490,6 +2086,11 @@ especies:
     P1_tiempo_de_viento: 145
     P2_seca_larga: 95
     P3_tiempo_de_siembra: 49
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.03
+    P2_seca_larga: 1.16
+    P3_tiempo_de_siembra: 0.74
+  patron: todo-el-año
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 2480881
@@ -1516,6 +2117,11 @@ especies:
     P1_tiempo_de_viento: 161
     P2_seca_larga: 93
     P3_tiempo_de_siembra: 35
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.14
+    P2_seca_larga: 1.14
+    P3_tiempo_de_siembra: 0.53
+  patron: todo-el-año
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 2483420
@@ -1542,6 +2148,11 @@ especies:
     P1_tiempo_de_viento: 112
     P2_seca_larga: 99
     P3_tiempo_de_siembra: 72
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.81
+    P2_seca_larga: 1.23
+    P3_tiempo_de_siembra: 1.12
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 5230154
@@ -1568,6 +2179,11 @@ especies:
     P1_tiempo_de_viento: 122
     P2_seca_larga: 75
     P3_tiempo_de_siembra: 86
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.88
+    P2_seca_larga: 0.94
+    P3_tiempo_de_siembra: 1.33
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 9367409
@@ -1594,6 +2210,11 @@ especies:
     P1_tiempo_de_viento: 124
     P2_seca_larga: 139
     P3_tiempo_de_siembra: 20
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.9
+    P2_seca_larga: 1.73
+    P3_tiempo_de_siembra: 0.31
+  patron: concentrado-en-P2_seca_larga
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 2481672
@@ -1620,6 +2241,11 @@ especies:
     P1_tiempo_de_viento: 181
     P2_seca_larga: 74
     P3_tiempo_de_siembra: 14
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.38
+    P2_seca_larga: 0.97
+    P3_tiempo_de_siembra: 0.23
+  patron: casi-ausente-en-P3_tiempo_de_siembra
   anio_primero: 2008
   anio_ultimo: 2024
 - speciesKey: 6100904
@@ -1646,6 +2272,11 @@ especies:
     P1_tiempo_de_viento: 103
     P2_seca_larga: 68
     P3_tiempo_de_siembra: 97
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.79
+    P2_seca_larga: 0.9
+    P3_tiempo_de_siembra: 1.59
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 2495414
@@ -1672,6 +2303,11 @@ especies:
     P1_tiempo_de_viento: 124
     P2_seca_larga: 78
     P3_tiempo_de_siembra: 65
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.95
+    P2_seca_larga: 1.03
+    P3_tiempo_de_siembra: 1.07
+  patron: todo-el-año
   anio_primero: 2016
   anio_ultimo: 2024
 - speciesKey: 2480726
@@ -1698,6 +2334,11 @@ especies:
     P1_tiempo_de_viento: 163
     P2_seca_larga: 23
     P3_tiempo_de_siembra: 75
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.28
+    P2_seca_larga: 0.31
+    P3_tiempo_de_siembra: 1.26
+  patron: irregular
   anio_primero: 1998
   anio_ultimo: 2024
 - speciesKey: 5229205
@@ -1724,6 +2365,11 @@ especies:
     P1_tiempo_de_viento: 119
     P2_seca_larga: 107
     P3_tiempo_de_siembra: 23
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.98
+    P2_seca_larga: 1.52
+    P3_tiempo_de_siembra: 0.41
+  patron: irregular
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 2491862
@@ -1750,6 +2396,11 @@ especies:
     P1_tiempo_de_viento: 95
     P2_seca_larga: 85
     P3_tiempo_de_siembra: 64
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.8
+    P2_seca_larga: 1.23
+    P3_tiempo_de_siembra: 1.15
+  patron: todo-el-año
   anio_primero: 2006
   anio_ultimo: 2024
 - speciesKey: 5229128
@@ -1776,6 +2427,11 @@ especies:
     P1_tiempo_de_viento: 86
     P2_seca_larga: 116
     P3_tiempo_de_siembra: 42
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.72
+    P2_seca_larga: 1.68
+    P3_tiempo_de_siembra: 0.76
+  patron: concentrado-en-P2_seca_larga
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 2496211
@@ -1802,6 +2458,11 @@ especies:
     P1_tiempo_de_viento: 105
     P2_seca_larga: 41
     P3_tiempo_de_siembra: 88
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.92
+    P2_seca_larga: 0.62
+    P3_tiempo_de_siembra: 1.65
+  patron: concentrado-en-P3_tiempo_de_siembra
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 2491988
@@ -1828,6 +2489,11 @@ especies:
     P1_tiempo_de_viento: 91
     P2_seca_larga: 58
     P3_tiempo_de_siembra: 77
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.82
+    P2_seca_larga: 0.91
+    P3_tiempo_de_siembra: 1.49
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 2483589
@@ -1854,6 +2520,11 @@ especies:
     P1_tiempo_de_viento: 59
     P2_seca_larga: 83
     P3_tiempo_de_siembra: 62
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.59
+    P2_seca_larga: 1.44
+    P3_tiempo_de_siembra: 1.33
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 2479127
@@ -1880,6 +2551,11 @@ especies:
     P1_tiempo_de_viento: 81
     P2_seca_larga: 67
     P3_tiempo_de_siembra: 55
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.82
+    P2_seca_larga: 1.17
+    P3_tiempo_de_siembra: 1.19
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 7341834
@@ -1906,6 +2582,11 @@ especies:
     P1_tiempo_de_viento: 121
     P2_seca_larga: 43
     P3_tiempo_de_siembra: 29
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.28
+    P2_seca_larga: 0.79
+    P3_tiempo_de_siembra: 0.66
+  patron: todo-el-año
   anio_primero: 1941
   anio_ultimo: 2024
 - speciesKey: 5229400
@@ -1932,6 +2613,11 @@ especies:
     P1_tiempo_de_viento: 109
     P2_seca_larga: 43
     P3_tiempo_de_siembra: 40
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.16
+    P2_seca_larga: 0.79
+    P3_tiempo_de_siembra: 0.91
+  patron: todo-el-año
   anio_primero: 2017
   anio_ultimo: 2024
 - speciesKey: 2481928
@@ -1958,6 +2644,11 @@ especies:
     P1_tiempo_de_viento: 89
     P2_seca_larga: 43
     P3_tiempo_de_siembra: 46
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.02
+    P2_seca_larga: 0.85
+    P3_tiempo_de_siembra: 1.13
+  patron: todo-el-año
   anio_primero: 2006
   anio_ultimo: 2024
 - speciesKey: 2476063
@@ -1984,6 +2675,11 @@ especies:
     P1_tiempo_de_viento: 78
     P2_seca_larga: 46
     P3_tiempo_de_siembra: 42
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.96
+    P2_seca_larga: 0.98
+    P3_tiempo_de_siembra: 1.11
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 5232118
@@ -2010,6 +2706,11 @@ especies:
     P1_tiempo_de_viento: 75
     P2_seca_larga: 33
     P3_tiempo_de_siembra: 46
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.0
+    P2_seca_larga: 0.76
+    P3_tiempo_de_siembra: 1.31
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 2484971
@@ -2036,6 +2737,11 @@ especies:
     P1_tiempo_de_viento: 83
     P2_seca_larga: 27
     P3_tiempo_de_siembra: 42
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.12
+    P2_seca_larga: 0.63
+    P3_tiempo_de_siembra: 1.21
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 9515886
@@ -2062,6 +2768,11 @@ especies:
     P1_tiempo_de_viento: 65
     P2_seca_larga: 69
     P3_tiempo_de_siembra: 9
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.93
+    P2_seca_larga: 1.7
+    P3_tiempo_de_siembra: 0.28
+  patron: concentrado-en-P2_seca_larga
   anio_primero: 2013
   anio_ultimo: 2024
 - speciesKey: 2481798
@@ -2088,6 +2799,11 @@ especies:
     P1_tiempo_de_viento: 84
     P2_seca_larga: 25
     P3_tiempo_de_siembra: 30
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.24
+    P2_seca_larga: 0.63
+    P3_tiempo_de_siembra: 0.95
+  patron: todo-el-año
   anio_primero: 2008
   anio_ultimo: 2024
 - speciesKey: 2480894
@@ -2114,6 +2830,11 @@ especies:
     P1_tiempo_de_viento: 47
     P2_seca_larga: 41
     P3_tiempo_de_siembra: 32
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.8
+    P2_seca_larga: 1.21
+    P3_tiempo_de_siembra: 1.17
+  patron: todo-el-año
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 2480410
@@ -2140,6 +2861,11 @@ especies:
     P1_tiempo_de_viento: 42
     P2_seca_larga: 30
     P3_tiempo_de_siembra: 46
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.73
+    P2_seca_larga: 0.9
+    P3_tiempo_de_siembra: 1.71
+  patron: concentrado-en-P3_tiempo_de_siembra
   anio_primero: 1998
   anio_ultimo: 2024
 - speciesKey: 2481710
@@ -2166,6 +2892,11 @@ especies:
     P1_tiempo_de_viento: 59
     P2_seca_larga: 32
     P3_tiempo_de_siembra: 24
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.05
+    P2_seca_larga: 0.98
+    P3_tiempo_de_siembra: 0.92
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 2489133
@@ -2192,6 +2923,11 @@ especies:
     P1_tiempo_de_viento: 65
     P2_seca_larga: 35
     P3_tiempo_de_siembra: 15
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.16
+    P2_seca_larga: 1.07
+    P3_tiempo_de_siembra: 0.57
+  patron: todo-el-año
   anio_primero: 2019
   anio_ultimo: 2024
 - speciesKey: 5229715
@@ -2218,6 +2954,11 @@ especies:
     P1_tiempo_de_viento: 55
     P2_seca_larga: 52
     P3_tiempo_de_siembra: 7
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.99
+    P2_seca_larga: 1.61
+    P3_tiempo_de_siembra: 0.27
+  patron: concentrado-en-P2_seca_larga
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 2480710
@@ -2244,6 +2985,11 @@ especies:
     P1_tiempo_de_viento: 47
     P2_seca_larga: 33
     P3_tiempo_de_siembra: 33
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.85
+    P2_seca_larga: 1.03
+    P3_tiempo_de_siembra: 1.28
+  patron: todo-el-año
   anio_primero: 2014
   anio_ultimo: 2024
 - speciesKey: 2481263
@@ -2270,6 +3016,11 @@ especies:
     P1_tiempo_de_viento: 25
     P2_seca_larga: 71
     P3_tiempo_de_siembra: 17
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.45
+    P2_seca_larga: 2.22
+    P3_tiempo_de_siembra: 0.66
+  patron: concentrado-en-P2_seca_larga
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 9395900
@@ -2296,6 +3047,11 @@ especies:
     P1_tiempo_de_viento: 53
     P2_seca_larga: 39
     P3_tiempo_de_siembra: 21
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.96
+    P2_seca_larga: 1.22
+    P3_tiempo_de_siembra: 0.82
+  patron: todo-el-año
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 5229146
@@ -2322,6 +3078,11 @@ especies:
     P1_tiempo_de_viento: 57
     P2_seca_larga: 36
     P3_tiempo_de_siembra: 19
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.04
+    P2_seca_larga: 1.13
+    P3_tiempo_de_siembra: 0.74
+  patron: todo-el-año
   anio_primero: 2007
   anio_ultimo: 2024
 - speciesKey: 2487404
@@ -2348,6 +3109,11 @@ especies:
     P1_tiempo_de_viento: 36
     P2_seca_larga: 21
     P3_tiempo_de_siembra: 46
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.72
+    P2_seca_larga: 0.72
+    P3_tiempo_de_siembra: 1.96
+  patron: concentrado-en-P3_tiempo_de_siembra
   anio_primero: 1999
   anio_ultimo: 2024
 - speciesKey: 2484396
@@ -2374,6 +3140,11 @@ especies:
     P1_tiempo_de_viento: 46
     P2_seca_larga: 40
     P3_tiempo_de_siembra: 7
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.01
+    P2_seca_larga: 1.52
+    P3_tiempo_de_siembra: 0.33
+  patron: irregular
   anio_primero: 2008
   anio_ultimo: 2024
 - speciesKey: 2481209
@@ -2400,6 +3171,11 @@ especies:
     P1_tiempo_de_viento: 31
     P2_seca_larga: 57
     P3_tiempo_de_siembra: 1
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.71
+    P2_seca_larga: 2.26
+    P3_tiempo_de_siembra: 0.05
+  patron: casi-ausente-en-P3_tiempo_de_siembra
   anio_primero: 2004
   anio_ultimo: 2024
 - speciesKey: 2482934
@@ -2426,6 +3202,11 @@ especies:
     P1_tiempo_de_viento: 45
     P2_seca_larga: 18
     P3_tiempo_de_siembra: 26
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.03
+    P2_seca_larga: 0.71
+    P3_tiempo_de_siembra: 1.28
+  patron: todo-el-año
   anio_primero: 2006
   anio_ultimo: 2024
 - speciesKey: 2481047
@@ -2452,6 +3233,11 @@ especies:
     P1_tiempo_de_viento: 66
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 22
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.53
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 1.1
+  patron: casi-ausente-en-P2_seca_larga
   anio_primero: 2013
   anio_ultimo: 2024
 - speciesKey: 2481765
@@ -2478,6 +3264,11 @@ especies:
     P1_tiempo_de_viento: 83
     P2_seca_larga: 5
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.93
+    P2_seca_larga: 0.2
+    P3_tiempo_de_siembra: 0.0
+  patron: casi-ausente-en-P2_seca_larga+P3_tiempo_de_siembra
   anio_primero: 1998
   anio_ultimo: 2024
 - speciesKey: 9630752
@@ -2504,6 +3295,11 @@ especies:
     P1_tiempo_de_viento: 51
     P2_seca_larga: 12
     P3_tiempo_de_siembra: 22
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.23
+    P2_seca_larga: 0.5
+    P3_tiempo_de_siembra: 1.14
+  patron: todo-el-año
   anio_primero: 2007
   anio_ultimo: 2024
 - speciesKey: 2476077
@@ -2530,6 +3326,11 @@ especies:
     P1_tiempo_de_viento: 38
     P2_seca_larga: 15
     P3_tiempo_de_siembra: 25
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.0
+    P2_seca_larga: 0.68
+    P3_tiempo_de_siembra: 1.41
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2023
 - speciesKey: 2496209
@@ -2556,6 +3357,11 @@ especies:
     P1_tiempo_de_viento: 23
     P2_seca_larga: 21
     P3_tiempo_de_siembra: 31
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.63
+    P2_seca_larga: 0.99
+    P3_tiempo_de_siembra: 1.81
+  patron: concentrado-en-P3_tiempo_de_siembra
   anio_primero: 2006
   anio_ultimo: 2023
 - speciesKey: 2480975
@@ -2582,6 +3388,11 @@ especies:
     P1_tiempo_de_viento: 17
     P2_seca_larga: 9
     P3_tiempo_de_siembra: 44
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.5
+    P2_seca_larga: 0.45
+    P3_tiempo_de_siembra: 2.76
+  patron: concentrado-en-P3_tiempo_de_siembra
   anio_primero: 2006
   anio_ultimo: 2023
 - speciesKey: 2482044
@@ -2608,6 +3419,11 @@ especies:
     P1_tiempo_de_viento: 35
     P2_seca_larga: 9
     P3_tiempo_de_siembra: 23
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.07
+    P2_seca_larga: 0.47
+    P3_tiempo_de_siembra: 1.51
+  patron: irregular
   anio_primero: 2005
   anio_ultimo: 2024
 - speciesKey: 2487430
@@ -2634,6 +3450,11 @@ especies:
     P1_tiempo_de_viento: 5
     P2_seca_larga: 20
     P3_tiempo_de_siembra: 42
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.15
+    P2_seca_larga: 1.05
+    P3_tiempo_de_siembra: 2.75
+  patron: casi-ausente-en-P1_tiempo_de_viento
   anio_primero: 1992
   anio_ultimo: 2024
 - speciesKey: 2498393
@@ -2660,6 +3481,11 @@ especies:
     P1_tiempo_de_viento: 30
     P2_seca_larga: 17
     P3_tiempo_de_siembra: 18
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.94
+    P2_seca_larga: 0.92
+    P3_tiempo_de_siembra: 1.21
+  patron: todo-el-año
   anio_primero: 2019
   anio_ultimo: 2024
 - speciesKey: 6092935
@@ -2686,6 +3512,11 @@ especies:
     P1_tiempo_de_viento: 19
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 40
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.66
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 2.97
+  patron: casi-ausente-en-P2_seca_larga
   anio_primero: 2016
   anio_ultimo: 2024
 - speciesKey: 2481119
@@ -2712,6 +3543,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 58
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 3.53
+    P3_tiempo_de_siembra: 0.0
+  patron: casi-ausente-en-P1_tiempo_de_viento+P3_tiempo_de_siembra
   anio_primero: 2021
   anio_ultimo: 2024
 - speciesKey: 5229249
@@ -2738,6 +3574,11 @@ especies:
     P1_tiempo_de_viento: 27
     P2_seca_larga: 26
     P3_tiempo_de_siembra: 1
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.02
+    P2_seca_larga: 1.7
+    P3_tiempo_de_siembra: 0.08
+  patron: casi-ausente-en-P3_tiempo_de_siembra
   anio_primero: 2006
   anio_ultimo: 2024
 - speciesKey: 9813242
@@ -2764,6 +3605,11 @@ especies:
     P1_tiempo_de_viento: 36
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 18
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.36
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 1.46
+  patron: casi-ausente-en-P2_seca_larga
   anio_primero: 1998
   anio_ultimo: 2024
 - speciesKey: 2489985
@@ -2790,6 +3636,11 @@ especies:
     P1_tiempo_de_viento: 23
     P2_seca_larga: 10
     P3_tiempo_de_siembra: 19
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.9
+    P2_seca_larga: 0.68
+    P3_tiempo_de_siembra: 1.6
+  patron: todo-el-año
   anio_primero: 2016
   anio_ultimo: 2024
 - speciesKey: 2497240
@@ -2816,6 +3667,11 @@ especies:
     P1_tiempo_de_viento: 28
     P2_seca_larga: 22
     P3_tiempo_de_siembra: 2
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.1
+    P2_seca_larga: 1.49
+    P3_tiempo_de_siembra: 0.17
+  patron: casi-ausente-en-P3_tiempo_de_siembra
   anio_primero: 2013
   anio_ultimo: 2026
 - speciesKey: 9685907
@@ -2842,6 +3698,11 @@ especies:
     P1_tiempo_de_viento: 30
     P2_seca_larga: 5
     P3_tiempo_de_siembra: 16
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.2
+    P2_seca_larga: 0.35
+    P3_tiempo_de_siembra: 1.38
+  patron: irregular
   anio_primero: 1998
   anio_ultimo: 2023
 - speciesKey: 5959208
@@ -2868,6 +3729,11 @@ especies:
     P1_tiempo_de_viento: 18
     P2_seca_larga: 16
     P3_tiempo_de_siembra: 14
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.77
+    P2_seca_larga: 1.18
+    P3_tiempo_de_siembra: 1.28
+  patron: todo-el-año
   anio_primero: 1999
   anio_ultimo: 2023
 - speciesKey: 2495858
@@ -2894,6 +3760,11 @@ especies:
     P1_tiempo_de_viento: 14
     P2_seca_larga: 16
     P3_tiempo_de_siembra: 11
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.7
+    P2_seca_larga: 1.38
+    P3_tiempo_de_siembra: 1.18
+  patron: todo-el-año
   anio_primero: 2012
   anio_ultimo: 2024
 - speciesKey: 6093856
@@ -2920,6 +3791,11 @@ especies:
     P1_tiempo_de_viento: 20
     P2_seca_larga: 5
     P3_tiempo_de_siembra: 16
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.0
+    P2_seca_larga: 0.43
+    P3_tiempo_de_siembra: 1.71
+  patron: concentrado-en-P3_tiempo_de_siembra
   anio_primero: 2016
   anio_ultimo: 2024
 - speciesKey: 2474393
@@ -2946,6 +3822,11 @@ especies:
     P1_tiempo_de_viento: 16
     P2_seca_larga: 9
     P3_tiempo_de_siembra: 10
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.94
+    P2_seca_larga: 0.91
+    P3_tiempo_de_siembra: 1.25
+  patron: todo-el-año
   anio_primero: 2021
   anio_ultimo: 2024
 - speciesKey: 2480863
@@ -2972,6 +3853,11 @@ especies:
     P1_tiempo_de_viento: 9
     P2_seca_larga: 21
     P3_tiempo_de_siembra: 5
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.53
+    P2_seca_larga: 2.12
+    P3_tiempo_de_siembra: 0.63
+  patron: concentrado-en-P2_seca_larga
   anio_primero: 2012
   anio_ultimo: 2024
 - speciesKey: 2481756
@@ -2998,6 +3884,11 @@ especies:
     P1_tiempo_de_viento: 19
     P2_seca_larga: 8
     P3_tiempo_de_siembra: 7
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.14
+    P2_seca_larga: 0.83
+    P3_tiempo_de_siembra: 0.9
+  patron: todo-el-año
   anio_primero: 2004
   anio_ultimo: 2024
 - speciesKey: 5230618
@@ -3024,6 +3915,11 @@ especies:
     P1_tiempo_de_viento: 25
     P2_seca_larga: 5
     P3_tiempo_de_siembra: 4
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.5
+    P2_seca_larga: 0.52
+    P3_tiempo_de_siembra: 0.52
+  patron: todo-el-año
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 2498090
@@ -3050,6 +3946,11 @@ especies:
     P1_tiempo_de_viento: 20
     P2_seca_larga: 6
     P3_tiempo_de_siembra: 7
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.24
+    P2_seca_larga: 0.64
+    P3_tiempo_de_siembra: 0.93
+  patron: todo-el-año
   anio_primero: 2018
   anio_ultimo: 2024
 - speciesKey: 9539567
@@ -3076,6 +3977,11 @@ especies:
     P1_tiempo_de_viento: 14
     P2_seca_larga: 7
     P3_tiempo_de_siembra: 10
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.92
+    P2_seca_larga: 0.8
+    P3_tiempo_de_siembra: 1.42
+  patron: todo-el-año
   anio_primero: 2008
   anio_ultimo: 2021
 - speciesKey: 9422220
@@ -3102,6 +4008,11 @@ especies:
     P1_tiempo_de_viento: 15
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 15
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.02
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 2.19
+  patron: casi-ausente-en-P2_seca_larga
   anio_primero: 1998
   anio_ultimo: 2023
 - speciesKey: 2480830
@@ -3128,6 +4039,11 @@ especies:
     P1_tiempo_de_viento: 17
     P2_seca_larga: 5
     P3_tiempo_de_siembra: 4
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.34
+    P2_seca_larga: 0.68
+    P3_tiempo_de_siembra: 0.67
+  patron: pocos-registros
   anio_primero: 2008
   anio_ultimo: 2023
 - speciesKey: 2491741
@@ -3154,6 +4070,11 @@ especies:
     P1_tiempo_de_viento: 15
     P2_seca_larga: 6
     P3_tiempo_de_siembra: 5
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.18
+    P2_seca_larga: 0.81
+    P3_tiempo_de_siembra: 0.84
+  patron: pocos-registros
   anio_primero: 1991
   anio_ultimo: 2024
 - speciesKey: 2481817
@@ -3180,6 +4101,11 @@ especies:
     P1_tiempo_de_viento: 16
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 9
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.31
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 1.58
+  patron: pocos-registros
   anio_primero: 2020
   anio_ultimo: 2024
 - speciesKey: 2483318
@@ -3206,6 +4132,11 @@ especies:
     P1_tiempo_de_viento: 12
     P2_seca_larga: 5
     P3_tiempo_de_siembra: 8
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.98
+    P2_seca_larga: 0.71
+    P3_tiempo_de_siembra: 1.4
+  patron: pocos-registros
   anio_primero: 2017
   anio_ultimo: 2024
 - speciesKey: 5229693
@@ -3232,6 +4163,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 24
     P3_tiempo_de_siembra: 1
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 3.39
+    P3_tiempo_de_siembra: 0.18
+  patron: pocos-registros
   anio_primero: 2020
   anio_ultimo: 2023
 - speciesKey: 2481174
@@ -3258,6 +4194,11 @@ especies:
     P1_tiempo_de_viento: 20
     P2_seca_larga: 2
     P3_tiempo_de_siembra: 2
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.7
+    P2_seca_larga: 0.29
+    P3_tiempo_de_siembra: 0.37
+  patron: pocos-registros
   anio_primero: 2016
   anio_ultimo: 2023
 - speciesKey: 2481744
@@ -3284,6 +4225,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 14
     P3_tiempo_de_siembra: 10
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 2.06
+    P3_tiempo_de_siembra: 1.83
+  patron: pocos-registros
   anio_primero: 2019
   anio_ultimo: 2022
 - speciesKey: 2496287
@@ -3310,6 +4256,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 24
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 4.39
+  patron: pocos-registros
   anio_primero: 2019
   anio_ultimo: 2024
 - speciesKey: 2488633
@@ -3336,6 +4287,11 @@ especies:
     P1_tiempo_de_viento: 8
     P2_seca_larga: 11
     P3_tiempo_de_siembra: 4
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.71
+    P2_seca_larga: 1.69
+    P3_tiempo_de_siembra: 0.76
+  patron: pocos-registros
   anio_primero: 2017
   anio_ultimo: 2022
 - speciesKey: 6093209
@@ -3362,6 +4318,11 @@ especies:
     P1_tiempo_de_viento: 11
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 11
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.02
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 2.19
+  patron: pocos-registros
   anio_primero: 2016
   anio_ultimo: 2021
 - speciesKey: 2481236
@@ -3388,6 +4349,11 @@ especies:
     P1_tiempo_de_viento: 14
     P2_seca_larga: 5
     P3_tiempo_de_siembra: 2
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.36
+    P2_seca_larga: 0.84
+    P3_tiempo_de_siembra: 0.42
+  patron: pocos-registros
   anio_primero: 2009
   anio_ultimo: 2022
 - speciesKey: 2498003
@@ -3414,6 +4380,11 @@ especies:
     P1_tiempo_de_viento: 16
     P2_seca_larga: 1
     P3_tiempo_de_siembra: 4
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.56
+    P2_seca_larga: 0.17
+    P3_tiempo_de_siembra: 0.84
+  patron: pocos-registros
   anio_primero: 2019
   anio_ultimo: 2021
 - speciesKey: 5229447
@@ -3440,6 +4411,11 @@ especies:
     P1_tiempo_de_viento: 10
     P2_seca_larga: 9
     P3_tiempo_de_siembra: 2
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.97
+    P2_seca_larga: 1.51
+    P3_tiempo_de_siembra: 0.42
+  patron: pocos-registros
   anio_primero: 1999
   anio_ultimo: 2022
 - speciesKey: 6093374
@@ -3466,6 +4442,11 @@ especies:
     P1_tiempo_de_viento: 9
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 11
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.92
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 2.41
+  patron: pocos-registros
   anio_primero: 2006
   anio_ultimo: 2024
 - speciesKey: 7676017
@@ -3492,6 +4473,11 @@ especies:
     P1_tiempo_de_viento: 15
     P2_seca_larga: 2
     P3_tiempo_de_siembra: 3
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.53
+    P2_seca_larga: 0.35
+    P3_tiempo_de_siembra: 0.66
+  patron: pocos-registros
   anio_primero: 2020
   anio_ultimo: 2024
 - speciesKey: 2490726
@@ -3518,6 +4504,11 @@ especies:
     P1_tiempo_de_viento: 8
     P2_seca_larga: 8
     P3_tiempo_de_siembra: 3
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.86
+    P2_seca_larga: 1.49
+    P3_tiempo_de_siembra: 0.69
+  patron: pocos-registros
   anio_primero: 1998
   anio_ultimo: 2022
 - speciesKey: 5229606
@@ -3544,6 +4535,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 6
     P3_tiempo_de_siembra: 12
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.11
+    P2_seca_larga: 1.11
+    P3_tiempo_de_siembra: 2.77
+  patron: pocos-registros
   anio_primero: 1992
   anio_ultimo: 2021
 - speciesKey: 2482786
@@ -3570,6 +4566,11 @@ especies:
     P1_tiempo_de_viento: 15
     P2_seca_larga: 3
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.7
+    P2_seca_larga: 0.59
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2022
 - speciesKey: 8346347
@@ -3596,6 +4597,11 @@ especies:
     P1_tiempo_de_viento: 8
     P2_seca_larga: 2
     P3_tiempo_de_siembra: 8
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.91
+    P2_seca_larga: 0.39
+    P3_tiempo_de_siembra: 1.95
+  patron: pocos-registros
   anio_primero: 2013
   anio_ultimo: 2024
 - speciesKey: 5229564
@@ -3622,6 +4628,11 @@ especies:
     P1_tiempo_de_viento: 14
     P2_seca_larga: 3
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.68
+    P2_seca_larga: 0.62
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2012
   anio_ultimo: 2024
 - speciesKey: 5789280
@@ -3648,6 +4659,11 @@ especies:
     P1_tiempo_de_viento: 5
     P2_seca_larga: 10
     P3_tiempo_de_siembra: 2
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.6
+    P2_seca_larga: 2.08
+    P3_tiempo_de_siembra: 0.52
+  patron: pocos-registros
   anio_primero: 2006
   anio_ultimo: 2023
 - speciesKey: 6093345
@@ -3674,6 +4690,11 @@ especies:
     P1_tiempo_de_viento: 13
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 4
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.56
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 1.03
+  patron: pocos-registros
   anio_primero: 2008
   anio_ultimo: 2017
 - speciesKey: 2480951
@@ -3700,6 +4721,11 @@ especies:
     P1_tiempo_de_viento: 10
     P2_seca_larga: 2
     P3_tiempo_de_siembra: 3
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.36
+    P2_seca_larga: 0.47
+    P3_tiempo_de_siembra: 0.88
+  patron: pocos-registros
   anio_primero: 1998
   anio_ultimo: 2020
 - speciesKey: 2482755
@@ -3726,6 +4752,11 @@ especies:
     P1_tiempo_de_viento: 6
     P2_seca_larga: 5
     P3_tiempo_de_siembra: 4
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.82
+    P2_seca_larga: 1.18
+    P3_tiempo_de_siembra: 1.17
+  patron: pocos-registros
   anio_primero: 2013
   anio_ultimo: 2024
 - speciesKey: 2483647
@@ -3752,6 +4783,11 @@ especies:
     P1_tiempo_de_viento: 6
     P2_seca_larga: 2
     P3_tiempo_de_siembra: 7
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.82
+    P2_seca_larga: 0.47
+    P3_tiempo_de_siembra: 2.05
+  patron: pocos-registros
   anio_primero: 2008
   anio_ultimo: 2023
 - speciesKey: 2484254
@@ -3778,6 +4814,11 @@ especies:
     P1_tiempo_de_viento: 3
     P2_seca_larga: 6
     P3_tiempo_de_siembra: 6
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.41
+    P2_seca_larga: 1.41
+    P3_tiempo_de_siembra: 1.75
+  patron: pocos-registros
   anio_primero: 2022
   anio_ultimo: 2024
 - speciesKey: 2488602
@@ -3804,6 +4845,11 @@ especies:
     P1_tiempo_de_viento: 4
     P2_seca_larga: 2
     P3_tiempo_de_siembra: 9
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.55
+    P2_seca_larga: 0.47
+    P3_tiempo_de_siembra: 2.63
+  patron: pocos-registros
   anio_primero: 1998
   anio_ultimo: 2023
 - speciesKey: 2495853
@@ -3830,6 +4876,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 2
     P3_tiempo_de_siembra: 12
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 0.5
+    P3_tiempo_de_siembra: 3.76
+  patron: pocos-registros
   anio_primero: 1992
   anio_ultimo: 2023
 - speciesKey: 2480824
@@ -3856,6 +4907,11 @@ especies:
     P1_tiempo_de_viento: 5
     P2_seca_larga: 6
     P3_tiempo_de_siembra: 2
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.79
+    P2_seca_larga: 1.63
+    P3_tiempo_de_siembra: 0.67
+  patron: pocos-registros
   anio_primero: 2009
   anio_ultimo: 2024
 - speciesKey: 2487413
@@ -3882,6 +4938,11 @@ especies:
     P1_tiempo_de_viento: 12
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2017
   anio_ultimo: 2024
 - speciesKey: 2490363
@@ -3908,6 +4969,11 @@ especies:
     P1_tiempo_de_viento: 8
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 4
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.36
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 1.46
+  patron: pocos-registros
   anio_primero: 2020
   anio_ultimo: 2023
 - speciesKey: 5229213
@@ -3934,6 +5000,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 9
     P3_tiempo_de_siembra: 3
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 2.65
+    P3_tiempo_de_siembra: 1.1
+  patron: pocos-registros
   anio_primero: 2008
   anio_ultimo: 2024
 - speciesKey: 2480320
@@ -3960,6 +5031,11 @@ especies:
     P1_tiempo_de_viento: 3
     P2_seca_larga: 6
     P3_tiempo_de_siembra: 2
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.56
+    P2_seca_larga: 1.93
+    P3_tiempo_de_siembra: 0.8
+  patron: pocos-registros
   anio_primero: 2010
   anio_ultimo: 2023
 - speciesKey: 2489160
@@ -3986,6 +5062,11 @@ especies:
     P1_tiempo_de_viento: 5
     P2_seca_larga: 4
     P3_tiempo_de_siembra: 2
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.93
+    P2_seca_larga: 1.28
+    P3_tiempo_de_siembra: 0.8
+  patron: pocos-registros
   anio_primero: 2017
   anio_ultimo: 2023
 - speciesKey: 2491367
@@ -4012,6 +5093,11 @@ especies:
     P1_tiempo_de_viento: 10
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2021
 - speciesKey: 2479081
@@ -4038,6 +5124,11 @@ especies:
     P1_tiempo_de_viento: 3
     P2_seca_larga: 6
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.68
+    P2_seca_larga: 2.35
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2013
   anio_ultimo: 2023
 - speciesKey: 2481846
@@ -4064,6 +5155,11 @@ especies:
     P1_tiempo_de_viento: 2
     P2_seca_larga: 7
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.45
+    P2_seca_larga: 2.75
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2011
   anio_ultimo: 2024
 - speciesKey: 5228199
@@ -4090,6 +5186,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 8
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.23
+    P2_seca_larga: 3.14
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2024
 - speciesKey: 2480953
@@ -4116,6 +5217,11 @@ especies:
     P1_tiempo_de_viento: 5
     P2_seca_larga: 3
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.28
+    P2_seca_larga: 1.32
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2024
 - speciesKey: 2482077
@@ -4142,6 +5248,11 @@ especies:
     P1_tiempo_de_viento: 2
     P2_seca_larga: 6
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.51
+    P2_seca_larga: 2.65
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2024
   anio_ultimo: 2024
 - speciesKey: 5959118
@@ -4168,6 +5279,11 @@ especies:
     P1_tiempo_de_viento: 5
     P2_seca_larga: 1
     P3_tiempo_de_siembra: 2
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.28
+    P2_seca_larga: 0.44
+    P3_tiempo_de_siembra: 1.1
+  patron: pocos-registros
   anio_primero: 2007
   anio_ultimo: 2021
 - speciesKey: 5959228
@@ -4194,6 +5310,11 @@ especies:
     P1_tiempo_de_viento: 6
     P2_seca_larga: 2
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.53
+    P2_seca_larga: 0.88
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2020
   anio_ultimo: 2024
 - speciesKey: 2480328
@@ -4220,6 +5341,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 6
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 4.39
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2023
 - speciesKey: 2481794
@@ -4246,6 +5372,11 @@ especies:
     P1_tiempo_de_viento: 3
     P2_seca_larga: 3
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.02
+    P2_seca_larga: 1.77
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2019
   anio_ultimo: 2022
 - speciesKey: 2484103
@@ -4272,6 +5403,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 6
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 3.53
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2024
   anio_ultimo: 2024
 - speciesKey: 2497365
@@ -4298,6 +5434,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 3
     P3_tiempo_de_siembra: 2
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.34
+    P2_seca_larga: 1.77
+    P3_tiempo_de_siembra: 1.46
+  patron: pocos-registros
   anio_primero: 2012
   anio_ultimo: 2022
 - speciesKey: 5229389
@@ -4324,6 +5465,11 @@ especies:
     P1_tiempo_de_viento: 6
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2024
   anio_ultimo: 2024
 - speciesKey: 5230759
@@ -4350,6 +5496,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 6
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 3.53
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2024
   anio_ultimo: 2024
 - speciesKey: 2480283
@@ -4376,6 +5527,11 @@ especies:
     P1_tiempo_de_viento: 5
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2018
   anio_ultimo: 2018
 - speciesKey: 2481621
@@ -4402,6 +5558,11 @@ especies:
     P1_tiempo_de_viento: 2
     P2_seca_larga: 3
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.82
+    P2_seca_larga: 2.12
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2019
   anio_ultimo: 2022
 - speciesKey: 2483283
@@ -4428,6 +5589,11 @@ especies:
     P1_tiempo_de_viento: 3
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 2
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.23
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 1.75
+  patron: pocos-registros
   anio_primero: 2005
   anio_ultimo: 2023
 - speciesKey: 2483511
@@ -4454,6 +5620,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 4
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.41
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 3.51
+  patron: pocos-registros
   anio_primero: 1991
   anio_ultimo: 2015
 - speciesKey: 2489169
@@ -4480,6 +5651,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 5
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 3.53
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2019
   anio_ultimo: 2021
 - speciesKey: 2489208
@@ -4506,6 +5682,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 3
     P3_tiempo_de_siembra: 2
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 2.12
+    P3_tiempo_de_siembra: 1.75
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2023
 - speciesKey: 2489871
@@ -4532,6 +5713,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 5
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 4.39
+  patron: pocos-registros
   anio_primero: 2008
   anio_ultimo: 2016
 - speciesKey: 9803471
@@ -4558,6 +5744,11 @@ especies:
     P1_tiempo_de_viento: 5
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2023
 - speciesKey: 2474639
@@ -4584,6 +5775,11 @@ especies:
     P1_tiempo_de_viento: 2
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 2
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.02
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 2.19
+  patron: pocos-registros
   anio_primero: 2022
   anio_ultimo: 2024
 - speciesKey: 2489590
@@ -4610,6 +5806,11 @@ especies:
     P1_tiempo_de_viento: 2
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 2
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.02
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 2.19
+  patron: pocos-registros
   anio_primero: 1991
   anio_ultimo: 2022
 - speciesKey: 2489613
@@ -4636,6 +5837,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 4
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 4.39
+  patron: pocos-registros
   anio_primero: 2019
   anio_ultimo: 2019
 - speciesKey: 2490494
@@ -4662,6 +5868,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 3
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.51
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 3.29
+  patron: pocos-registros
   anio_primero: 2016
   anio_ultimo: 2019
 - speciesKey: 2491041
@@ -4688,6 +5899,11 @@ especies:
     P1_tiempo_de_viento: 2
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 2
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.02
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 2.19
+  patron: pocos-registros
   anio_primero: 1999
   anio_ultimo: 2007
 - speciesKey: 5230925
@@ -4714,6 +5930,11 @@ especies:
     P1_tiempo_de_viento: 3
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 1
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.53
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 1.1
+  patron: pocos-registros
   anio_primero: 2017
   anio_ultimo: 2023
 - speciesKey: 2480967
@@ -4740,6 +5961,11 @@ especies:
     P1_tiempo_de_viento: 2
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 1
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.36
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 1.46
+  patron: pocos-registros
   anio_primero: 2020
   anio_ultimo: 2024
 - speciesKey: 2496286
@@ -4766,6 +5992,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 3
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 4.39
+  patron: pocos-registros
   anio_primero: 2019
   anio_ultimo: 2019
 - speciesKey: 2496990
@@ -4792,6 +6023,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 3
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 3.53
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2017
   anio_ultimo: 2021
 - speciesKey: 4408523
@@ -4818,6 +6054,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 2
     P3_tiempo_de_siembra: 1
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 2.35
+    P3_tiempo_de_siembra: 1.46
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2022
 - speciesKey: 5229743
@@ -4844,6 +6085,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 3
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 4.39
+  patron: pocos-registros
   anio_primero: 2022
   anio_ultimo: 2022
 - speciesKey: 9512459
@@ -4870,6 +6116,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 3
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 3.53
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2022
 - speciesKey: 2474337
@@ -4896,6 +6147,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 1
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.02
+    P2_seca_larga: 1.77
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2021
 - speciesKey: 2480367
@@ -4922,6 +6178,11 @@ especies:
     P1_tiempo_de_viento: 2
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2019
   anio_ultimo: 2019
 - speciesKey: 2480812
@@ -4948,6 +6209,11 @@ especies:
     P1_tiempo_de_viento: 2
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2024
   anio_ultimo: 2024
 - speciesKey: 2481937
@@ -4974,6 +6240,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 2
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 3.53
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2008
   anio_ultimo: 2008
 - speciesKey: 2483410
@@ -5000,6 +6271,11 @@ especies:
     P1_tiempo_de_viento: 2
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2021
 - speciesKey: 2483531
@@ -5026,6 +6302,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 2
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 3.53
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2021
 - speciesKey: 2483597
@@ -5052,6 +6333,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 2
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 4.39
+  patron: pocos-registros
   anio_primero: 2019
   anio_ultimo: 2019
 - speciesKey: 2484109
@@ -5078,6 +6364,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 2
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 4.39
+  patron: pocos-registros
   anio_primero: 2023
   anio_ultimo: 2023
 - speciesKey: 2484340
@@ -5104,6 +6395,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 1
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.02
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 2.19
+  patron: pocos-registros
   anio_primero: 2019
   anio_ultimo: 2024
 - speciesKey: 2487463
@@ -5130,6 +6426,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 2
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 4.39
+  patron: pocos-registros
   anio_primero: 2020
   anio_ultimo: 2020
 - speciesKey: 2487963
@@ -5156,6 +6457,11 @@ especies:
     P1_tiempo_de_viento: 2
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2013
   anio_ultimo: 2013
 - speciesKey: 2488485
@@ -5182,6 +6488,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 1
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.02
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 2.19
+  patron: pocos-registros
   anio_primero: 2018
   anio_ultimo: 2020
 - speciesKey: 2488583
@@ -5208,6 +6519,11 @@ especies:
     P1_tiempo_de_viento: 2
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2021
 - speciesKey: 2497052
@@ -5234,6 +6550,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 2
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 3.53
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2022
   anio_ultimo: 2022
 - speciesKey: 5231480
@@ -5260,6 +6581,11 @@ especies:
     P1_tiempo_de_viento: 2
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2021
 - speciesKey: 5844398
@@ -5286,6 +6612,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 2
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 4.39
+  patron: pocos-registros
   anio_primero: 2015
   anio_ultimo: 2021
 - speciesKey: 6093350
@@ -5312,6 +6643,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 1
+  indice_por_periodo:
+    P1_tiempo_de_viento: 1.02
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 2.19
+  patron: pocos-registros
   anio_primero: 2006
   anio_ultimo: 2017
 - speciesKey: 6100757
@@ -5338,6 +6674,11 @@ especies:
     P1_tiempo_de_viento: 2
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2021
 - speciesKey: 7341088
@@ -5364,6 +6705,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 2
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 3.53
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2017
   anio_ultimo: 2017
 - speciesKey: 9393917
@@ -5390,6 +6736,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 2
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 4.39
+  patron: pocos-registros
   anio_primero: 2019
   anio_ultimo: 2019
 - speciesKey: 2479612
@@ -5416,6 +6767,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 1
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 3.53
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2021
 - speciesKey: 2479666
@@ -5442,6 +6798,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 1
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 4.39
+  patron: pocos-registros
   anio_primero: 1998
   anio_ultimo: 1998
 - speciesKey: 10941997
@@ -5468,6 +6829,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2021
 - speciesKey: 11006952
@@ -5494,6 +6860,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2018
   anio_ultimo: 2018
 - speciesKey: 2475472
@@ -5520,6 +6891,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 1
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 4.39
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2021
 - speciesKey: 2476346
@@ -5546,6 +6922,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2017
   anio_ultimo: 2017
 - speciesKey: 2477082
@@ -5572,6 +6953,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2023
   anio_ultimo: 2023
 - speciesKey: 2480541
@@ -5598,6 +6984,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 1
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 3.53
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2008
   anio_ultimo: 2008
 - speciesKey: 2480655
@@ -5624,6 +7015,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 1
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 4.39
+  patron: pocos-registros
   anio_primero: 2015
   anio_ultimo: 2015
 - speciesKey: 2480720
@@ -5650,6 +7046,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 1999
   anio_ultimo: 1999
 - speciesKey: 2480773
@@ -5676,6 +7077,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 1
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 4.39
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2021
 - speciesKey: 2480921
@@ -5702,6 +7108,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2018
   anio_ultimo: 2018
 - speciesKey: 2480972
@@ -5728,6 +7139,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 1
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 4.39
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2021
 - speciesKey: 2481609
@@ -5754,6 +7170,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 1
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 3.53
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2009
   anio_ultimo: 2009
 - speciesKey: 2481684
@@ -5780,6 +7201,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2022
   anio_ultimo: 2022
 - speciesKey: 2482082
@@ -5806,6 +7232,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 1
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 4.39
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2021
 - speciesKey: 2483497
@@ -5832,6 +7263,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2007
   anio_ultimo: 2007
 - speciesKey: 2484076
@@ -5858,6 +7294,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2016
   anio_ultimo: 2016
 - speciesKey: 2490327
@@ -5884,6 +7325,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2020
   anio_ultimo: 2020
 - speciesKey: 2491310
@@ -5910,6 +7356,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2007
   anio_ultimo: 2007
 - speciesKey: 2495922
@@ -5936,6 +7387,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 1
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 4.39
+  patron: pocos-registros
   anio_primero: 1998
   anio_ultimo: 1998
 - speciesKey: 2496432
@@ -5962,6 +7418,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 1
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 4.39
+  patron: pocos-registros
   anio_primero: 2015
   anio_ultimo: 2015
 - speciesKey: 2498155
@@ -5988,6 +7449,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2021
   anio_ultimo: 2021
 - speciesKey: 2498396
@@ -6014,6 +7480,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2005
   anio_ultimo: 2005
 - speciesKey: 5229716
@@ -6040,6 +7511,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2018
   anio_ultimo: 2018
 - speciesKey: 5230928
@@ -6066,6 +7542,11 @@ especies:
     P1_tiempo_de_viento: 1
     P2_seca_larga: 0
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 2.05
+    P2_seca_larga: 0.0
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 1991
   anio_ultimo: 1991
 - speciesKey: 7342291
@@ -6092,6 +7573,11 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 1
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 3.53
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2022
   anio_ultimo: 2022
 - speciesKey: 9476062
@@ -6118,5 +7604,10 @@ especies:
     P1_tiempo_de_viento: 0
     P2_seca_larga: 1
     P3_tiempo_de_siembra: 0
+  indice_por_periodo:
+    P1_tiempo_de_viento: 0.0
+    P2_seca_larga: 3.53
+    P3_tiempo_de_siembra: 0.0
+  patron: pocos-registros
   anio_primero: 2016
   anio_ultimo: 2016
