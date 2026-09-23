@@ -58,6 +58,16 @@ POLITICA = [
 ARCHIVADAS = [d for _n, _g, _a, d in POLITICA]
 MANDAN = [a for _n, _g, a, _d in POLITICA]
 
+# El par 16 «viento» DEJÓ DE SER un caso de la política el 2026-09-23 (cc.4 /
+# tf.0, respuestas 1-B y 2-a del issue sigla-E-zavala-canon-2026-09-23.md):
+# la (E) de Zavala #178 es Esteves 1989 y `juri` pasó a hipotética, así que ya
+# no hay atestiguada que mande. `joutai` SIGUE archivada —no vuelve: es wayuu
+# y cc.12 manda no reconstruir desde el wayuu—, con el motivo reescrito. Se
+# queda en POLITICA porque todo lo que los tests (b)-(d) exigen de una
+# archivada le sigue valiendo; lo que cambia se dice aquí.
+YA_NO_MANDA_POR_ATESTIGUADA = {"juri": "caquetío-hipotético"}
+MOTIVO_REESCRITO = {"joutai": "2026-09-23 · D11 / cc.12"}
+
 # La capa con la que cada archivada entró al archivo. Archivar NO la cambia.
 CAPA_AL_ARCHIVAR = {
     "kali": "caquetío-reconstruido", "paa": "caquetío-reconstruido",
@@ -68,8 +78,12 @@ CAPA_AL_ARCHIVAR = {
 
 # Reconstruidas del núcleo SIN rival atestiguado: la política no las toca.
 # Si alguna apareciera archivada, la política se habría comido el núcleo.
-NUCLEO_INTACTO = ("taya", "pia", "nüma", "waya", "naya",
-                  "naa", "waa", "kaa", "maa", "chaa", "wana", "suna",
+# Tanda final (2026-09-23): `taya`, `pia`, `nüma` y `wana` salieron del habla,
+# pero NO por esta política —no tenían rival atestiguado—, sino por D11 fase 3
+# (cc.12: nada reconstruido desde el wayuu). Lo que este test fija sigue
+# valiendo: la política d19.b no los alcanzaba. Salen de la lista con su nota.
+NUCLEO_INTACTO = ("waya", "naya",
+                  "naa", "waa", "kaa", "maa", "chaa", "suna",
                   "kuru", "arima", "bara", "sima", "duna", "amana", "dali")
 
 
@@ -96,6 +110,12 @@ def test_a_la_archivada_sale_del_habla_y_conserva_su_procedencia(
         "la procedencia se conserva entera — regla 8")
     assert "ARCHIVADA DEL HABLA" in e["notas"], (
         "el archivo se declara en la propia entrada, con su porqué")
+    if archivada in MOTIVO_REESCRITO:
+        # el motivo nuevo delante, y el del 2026-09-19 conservado detrás
+        assert e["archivada"].startswith(MOTIVO_REESCRITO[archivada])
+        assert "2026-09-19 · política atestiguado-manda" in e["archivada"]
+        assert "MOTIVO DEL ARCHIVO CAMBIADO 2026-09-23" in e["notas"]
+        return
     assert e.get("archivada", "").startswith("2026-09-19"), (
         "la marca de archivo lleva su fecha y su par")
 
@@ -112,6 +132,11 @@ def test_a_la_que_manda_es_atestiguada_y_con_cita(par, glosa, manda, archivada):
     """Regla 8: «atestiguado» es la etiqueta MÁS la cita, no la etiqueta."""
     assert manda in VOCABULARIO_BASE, f"`{manda}` tiene que estar en el habla"
     e = VOCABULARIO_BASE[manda]
+    if manda in YA_NO_MANDA_POR_ATESTIGUADA:
+        # par 16: la capa es la que decidió la sigla E, y sigue citando
+        assert e["fuente"] == YA_NO_MANDA_POR_ATESTIGUADA[manda]
+        assert "Esteves" in e["notas"]
+        return
     assert e["fuente"] == "caquetío-atestiguado", (
         f"`{manda}` manda por atestiguada: su capa tiene que decirlo")
     assert str(e.get("notas") or "").strip(), (
@@ -242,9 +267,12 @@ def test_d_el_scorer_cuenta_la_que_manda_y_no_la_archivada(
     """El scorer NO se tocó —`score_linguistico`, `pct_*` y `capas_de_score`
     son los mismos—: lo que cambió es el lexicón del que lee."""
     lex = LexicoComunitario()
-    assert manda in set(score_linguistico(f"taya {manda} yama", lex)["palabras_caquetias"])
+    # Tanda final: el marco era «taya … yama», y las dos voces se archivaron
+    # (D11 fase 3). Con vecinos que ya no son arahuacos, `para` se leía como la
+    # preposición castellana. El marco pasa a `dai` … `popoi`.
+    assert manda in set(score_linguistico(f"dai {manda} popoi", lex)["palabras_caquetias"])
     assert archivada not in set(
-        score_linguistico(f"taya {archivada} yama", lex)["palabras_arahuacas"])
+        score_linguistico(f"dai {archivada} popoi", lex)["palabras_arahuacas"])
 
 
 def test_d_no_queda_hueco_funcional_el_paradigma_se_muda_de_raiz():
@@ -307,23 +335,13 @@ def test_e_sima_sigue_viva_porque_es_pregunta_de_miguel():
     assert "sima-bana" in lx.formas_en_texto(completo)
 
 
-def test_e_la_colision_kasi_kashi_esta_declarada_donde_se_lee():
-    """`kasi` 'sol' y `kashi` 'ahora' dan el MISMO esqueleto fonémico bajo la
-    `fonemizar` del proyecto, y desde esta tanda las dos están en
-    `prompt_reglas_completo`. El motor no las confunde —son dos claves
-    distintas y todo lookup es exacto—, pero la colisión existe y tiene que
-    estar escrita donde alguien la lea."""
-    from curiana_fonotactica import fonemizar
-
-    assert fonemizar("kasi") == fonemizar("kashi"), (
-        "si dejaran de colisionar, esta declaración sobra")
+def test_e_la_colision_kasi_kashi_quedo_resuelta():
+    """Tanda final (2026-09-23): `kashi` 'ahora' era reconstruida desde el
+    wayuu y se archivó (tf.5); el ahora es `danu`. La colisión que el test de
+    abajo declaraba ya no está en la plantilla: se comprueba que no vuelva."""
     completo = lx.prompt_reglas_completo()
     tokens = lx.formas_en_texto(completo)
-    assert "kasi" in tokens and "kashi" in tokens, (
-        "la plantilla enseña las dos: es lo que hay que tener declarado")
-    # el motor las distingue: mismo esqueleto, claves distintas
-    assert lx._familia_de_token("kasi") == lx._familia_de_token("kashi") == "caquetío"
-    lex = LexicoComunitario()
-    dichas = set(score_linguistico("taya kasi wana-ka ka kashi naa-da",
-                                   lex)["palabras_caquetias"])
-    assert {"kasi", "kashi"} <= dichas, "el scorer cuenta las dos por separado"
+    assert "kasi" in tokens and "kashi" not in tokens and "danu" in tokens
+    assert "kashi" in FUERA_DEL_HABLA
+
+

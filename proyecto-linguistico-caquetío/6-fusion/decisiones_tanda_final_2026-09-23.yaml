@@ -1,0 +1,95 @@
+# Decisiones de Miguel para la ÚLTIMA TANDA antes de la corrida base (2026-09-23)
+#
+# El escriba le propuso un paquete con lo recomendado por los seis agentes de
+# cierre (PRs #226-#229, más #222) y le preguntó si lo aceptaba entero. Su
+# respuesta, dictada, lo recorre punto por punto. La frase que lo ordena:
+#
+#   «hagamos esto antes de arrancar la corrida porque no quiero que hagamos
+#   una, una sesión para luego tener que repetirla»
+#
+# Las citas son del mensaje dictado, tal como llegó. Donde pide que se le
+# explique de dónde sale algo, lo acepta y pide la fuente: se le explica en la
+# conversación y la fuente está en la propuesta de origen.
+
+tf.0_el_paquete:
+  decision_literal: '«Vale, vale, vale, vale, vale, vamos.»'
+  lectura: >-
+    Acepta el paquete entero. Lo que no comentó punto por punto —`baperon`/
+    `raporon` a los pemenos y la sigla (E) en la opción B con lo que marcó el
+    agente— entra por esta aceptación; el escriba se lo dice expresamente al
+    responder, por si quiere pararlo.
+
+tf.1_pronombres:
+  decision_literal: '«Los pronombres, ok. ¿Dónde sacan, sacan los pronombres? ¿Me puedes comentar eso?»'
+  eleccion: >-
+    D11 fase 3, opción A en las cinco casillas: `dai` (yo), `bui` (tú), `lihi`
+    (él) / `tuhu` (ella, ello), y se quedan `waya` (nosotros) y `naya` (ellos)
+    con su nueva justificación. Criterio (a) leído como «dos de las tres
+    hermanas». `taya`, `pia` y `nüma` al archivo con su capa. `kudanga`/`kuté`
+    no se tocan.
+  fuente: 6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml (#226)
+
+tf.2_aspectos:
+  decision_literal: '«aspectos. Ok. También, en eh, cuanto a los aspectos, también coméntame de dónde sale eso.»'
+  eleccion: >-
+    el presente sin marca; `-kuba` = ya pasó; `-ba` = vendrá. `-ka`, `-ni` y
+    `-da` dejan de enseñarse; el desafijador los sigue pelando (medido: así
+    ningún veredicto cambia). El detector de aspecto se SUSTITUYE, no se une.
+    Todo el aspecto queda hipotético.
+  fuente: la misma (#226)
+
+tf.3_posesivo:
+  decision_literal: '«posesivo, pasa. Sí, porque viene del moño [wayuu].»'
+  eleccion: '`ta-` → `da-` (lokono da-si-kua ''mi casa'', Perea p. 587); `ta-` se sigue pelando'
+
+tf.4_plural:
+  decision_literal: '«Lural Kana se queda como duda declarada.»'
+  eleccion: '`-kana` se queda, como deuda declarada: ninguna hermana da un sustituto limpio'
+
+tf.5_las_16_voces_wayuu:
+  decision_literal: '«Las 16 voces guayu que quedan. Kashi llama a Zulu Wano. Una gente más le busca las sustitutas en el mismo. Sí, me parece eso. Eso está bien.»'
+  eleccion: 'un agente más les busca sustitutas con el método de D11 y entran en ESTA tanda'
+
+tf.6_la_tanda_de_fuentes:
+  decision_literal: '«Lo de la tanda de fuentes. Poporo fuera. Notas de Macana y Coro Coibe. Coba. Las etiquetas de Sayas y la corrección de DACA. Vale, me parece que está bien. […] Solamente coméntame eh, eh, de dónde salen esas proposiciones.»'
+  eleccion: >-
+    `poporo` sale del habla (español colonial, 'calabacito de la cal'); notas
+    nuevas de `macana` y `coro` («viento» descartada, de Castellanos); `cohiba`
+    → `cohoba`; las etiquetas de Zayas (manati, tabako y bagua taínas; anaki y
+    manaya sin atestiguar; anua no existe); `daca` con UN testigo (Pané), la
+    glosa 'yo' de Las Casas.
+  fuente: 6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml (#227)
+
+tf.7_canon_del_mundo:
+  decision_literal: '«lo del cano del mundo, Manaure A, Guayquería A más B más E. También explícame eso. Cronología C.»'
+  eleccion: >-
+    Manaure A (se declara: la casa de Moruy es canon-simulación sin fuente; la
+    residencia en Todariquiba pasa a reconstruida). Guaiqueríes A + B + E
+    (etnia-002 con Federmann directo; ficha nueva de los guaiqueríes de
+    Margarita, con un valor de polity nuevo en compilar_etnias.py; toponimo-082
+    corregido con Oviedo y Baños p. 168). Cronología: C regional.
+  fuente: 6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml (#228)
+
+tf.8_merges:
+  decision_literal: '«Eh, sí, por favor, eh, coordina el, el, el merge de los PRs.»'
+  eleccion: el agente de merges integra #226-#229
+
+tf.9_el_orden:
+  decision_literal: '«y obviamente hagamos esto antes de arrancar la corrida porque no quiero que hagamos una, una sesión para luego tener que repetirla»'
+  eleccion: todo esto entra en UNA tanda, medida una vez; la corrida base arranca después
+
+estado_de_la_tanda:
+  aplicada: 'rama tanda/final-2026-09-23 (2026-09-23), con las ramas tanda/final-lexicon y tanda/final-mundo integradas'
+  medida: >-
+    6-fusion/medicion_tanda_final_2026-09-23.yaml (control 216/216 en los dos
+    brazos; system prompt +4,38 %; la serie C re-leída con el instrumento nuevo
+    cae de 7,4 a 4,0 — no comparable, no es predicción). Bitácora, punto 15 del
+    «Cambio de instrumento».
+  prevuelo: verde en los cuatro casos
+  guardianes: '9 en verde; 965 tests'
+  decidido_al_aplicar_sin_pedirlo: >-
+    La frase del viento de [Tu tierra] («el juri sopla firme del este») pasa a
+    «sopla firme del este»: `juri` quedó hipotética por la sigla (E) y la
+    frase fija la seguía enseñando como la palabra conocida. Cambian 45 de 126
+    bloques en el Tiempo de Viento. Se revierte en una línea de
+    clima_era2.yaml si Miguel prefiere que se diga.

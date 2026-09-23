@@ -227,12 +227,18 @@ entradas:
   # ── CERÁMICA / SUELOS ───────────────────────────────────────────
   - id: ecologia-013
     contenido: >
-      La cerámica dabajuroide es el marcador arqueológico del pueblo caquetío: serie
-      originaria de la costa occidental de Falcón, distribuida por todo el estado y
-      hasta las Antillas Neerlandesas (~1300 km de litoral), fechada c. 800–1600 d.C.
-      y correlacionada con una única unidad étnica y lingüística: el caquetío.
+      La cerámica dabajurana —la sub-tradición de la costa de Falcón, Paraguaná y las
+      Antillas Neerlandesas dentro de la tradición dabajuroide, de Túcua (c. 800 d.C.) a
+      Los Médanos (hasta 1600/1650)— es el marcador arqueológico de los caquetíos de la
+      costa: Oliver correlaciona las sub-tradiciones Dabajurana, Bachaquerana y Tierrana
+      con las polities caquetías de la costa y de Barquisimeto-Yaracuy. «Dabajuroide» no
+      es sinónimo de «caquetío»: la tradición incluye también la sub-tradición Campomana
+      de Cumaná, Barcelona y Margarita. En la ventana simulada conviven dos lozas
+      dabajuranas, el Urumaco Tardío y Los Médanos A, sin corte fijo entre ellas: qué hay
+      en cada lugar lo dice asentamientos.yaml §cronologia_dabajurana.
     fuente: atestiguado
-    referencia: "Atlas del Arte Precolombino Venezolano (serie Dabajuroide); Antczak & Antczak 2015"
+    referencia: "Oliver 1989, cap. 4, pp. 422-424 (clasificación y fechas; la correlación con las polities en la p. 424, vista en imagen) y p. 427 (la Campomana, vista en imagen); Casale et al. 2024, Tabla 1 p. 3 (Aruba). Corregido el 2026-09-23 (tf.7, «Cronología C» regional): citaba el Atlas del Arte Precolombino Venezolano (web) y Antczak & Antczak 2015, y decía que la cerámica dabajuroide estaba «correlacionada con una única unidad étnica y lingüística: el caquetío», que Oliver sólo sostiene para la Dabajurana, la Bachaquerana y la Tierrana. Datos: 6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml §pregunta_3"
+    procedencia: {obra: oliver-1989-cap4, pagina: "422-424"}
     dominios: [ecologia, ceramica, comercio]
     agentes_relacionados: [Saruro-sha, Kahu-sha, Pira-sha]
     palabra_lexicon: null

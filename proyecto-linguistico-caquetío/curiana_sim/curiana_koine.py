@@ -114,7 +114,11 @@ _DISPOSICION_ETNIA = {
     "caribe":    "distancia del extraño que mide antes de hablar",
 }
 
-_ASPECTO_SUFIJO = {"completivo": "-ka", "continuativo": "-ni", "prospectivo": "-da"}
+# D11 fase 3 (tf.2, 2026-09-23): `-ka`/`-ni`/`-da` eran del wayuu. El
+# completivo es `-kuba`, el prospectivo `-ba`, y el CONTINUATIVO no se marca:
+# el presente es el verbo solo (Perea p. 606; Neira p. 28). Un agente de
+# aspecto continuativo siembra y lee su verbo sin sufijo.
+_ASPECTO_SUFIJO = {"completivo": "-kuba", "continuativo": "", "prospectivo": "-ba"}
 
 # Formas-firma por agente: vocabulario caquetío característico que ancla su
 # idiolecto desde el día 1 (varias provienen de la línea "Vocabulario que usas"
@@ -134,27 +138,32 @@ _ASPECTO_SUFIJO = {"completivo": "-ka", "continuativo": "-ni", "prospectivo": "-
 # reparto entre ellos quedan idénticos, así que la divergencia inicial que
 # DISENO_KOINE §4 pide sigue siendo la misma; lo que cambia es la forma con la
 # que cada uno arranca. Los idiolectos de los runs ya corridos no se reescriben.
+# D11 fase 3 (tf.2, 2026-09-23): el aspecto de cada forma escrita se muda al
+# paradigma nuevo — `-ka`→`-kuba`, `-da`→`-ba`, y `-ni` desaparece (el presente
+# es el verbo solo). Mismo número de formas por agente; la forma cambia. Y
+# las voces reconstruidas desde el wayuu (tf.5) se mudan a sus sustitutas:
+# `wana` → `diki`, `naba` → `kuburuku`.
 FORMAS_SEED: dict[str, list[str]] = {
-    "Manaure":    ["biro", "barsure", "kasi", "kati", "chiriware", "maa-ka", "naa-ka"],
-    "Shaboro":    ["urari", "barsure", "boratio", "saruro", "kati", "suna-ni", "naba-ni"],
-    "Nubiri-sha": ["ama", "buri", "arua", "biro", "konuko", "were-da", "raka-da"],
-    "Watapana":   ["biro", "maure", "kanoa", "para", "arima", "naa-da", "wana-da"],
-    "Dara-ko":    ["kuru", "kanoa", "bara", "arima", "kunaro", "bagre", "wana-ni"],
-    "Paugis-sha": ["urari", "arua", "buri", "ama", "kabo", "kono-ka", "wana-ka"],
-    "Biro-ko":    ["biro", "para", "dali", "sima", "naa-ka", "were-ka"],
-    "Tawaka":     ["chiriware", "kabo", "arima", "para", "wana-da", "naa-da"],
-    "Saruro-sha": ["maure", "arua", "naure", "kuru", "kono-ni", "chaa-ni"],
-    "Chiriware": ["chiriware", "sima", "para", "kabo", "wana-ka", "naa-ka"],
-    "Buio-sha":   ["barsure", "boratio", "kati", "suka", "urari", "naba-ni"],
-    "Korie-ko":   ["konuko", "buko", "kuru", "dali", "kaya", "kono-ni"],  # buco→buko: fusión D5b, tanda 2026-08-30
-    "Dare-nu":    ["kanoa", "arima", "bara", "kuru", "naa-da", "wana-da"],
-    "Kadushi":    ["para", "kanoa", "biro", "kasi", "maure", "naa-ni"],
-    "Marokoto-ni":["biro", "para", "kanoa", "arima", "naa-da"],
-    "Tariwa":     ["arima", "para", "bara", "biro", "kanoa", "wana-ni"],
-    "Kawa-ni":    ["arima", "para", "bara", "masa-ni", "naa-ni"],
-    "Piru-sha":   ["ama", "buri", "arua", "konuko", "masa-ni"],
-    "Nabaraka":   ["maure", "naure", "sima", "biro", "kuru", "were-da"],
-    "Raka-bi":    ["biro", "sima", "para", "naa-ni", "were-ni"],
+    "Manaure":    ["biro", "barsure", "kasi", "kati", "chiriware", "maa-kuba", "naa-kuba"],
+    "Shaboro":    ["urari", "barsure", "boratio", "saruro", "kati", "suna", "kuburuku"],
+    "Nubiri-sha": ["ama", "buri", "arua", "biro", "konuko", "were-ba", "raka-ba"],
+    "Watapana":   ["biro", "maure", "kanoa", "para", "arima", "naa-ba", "diki-ba"],
+    "Dara-ko":    ["kuru", "kanoa", "bara", "arima", "kunaro", "bagre", "diki"],
+    "Paugis-sha": ["urari", "arua", "buri", "ama", "kabo", "kono-kuba", "diki-kuba"],
+    "Biro-ko":    ["biro", "para", "dali", "sima", "naa-kuba", "were-kuba"],
+    "Tawaka":     ["chiriware", "kabo", "arima", "para", "diki-ba", "naa-ba"],
+    "Saruro-sha": ["maure", "arua", "naure", "kuru", "kono", "chaa"],
+    "Chiriware": ["chiriware", "sima", "para", "kabo", "diki-kuba", "naa-kuba"],
+    "Buio-sha":   ["barsure", "boratio", "kati", "suka", "urari", "kuburuku"],
+    "Korie-ko":   ["konuko", "buko", "kuru", "dali", "kaya", "kono"],  # buco→buko: fusión D5b, tanda 2026-08-30
+    "Dare-nu":    ["kanoa", "arima", "bara", "kuru", "naa-ba", "diki-ba"],
+    "Kadushi":    ["para", "kanoa", "biro", "kasi", "maure", "naa"],
+    "Marokoto-ni":["biro", "para", "kanoa", "arima", "naa-ba"],
+    "Tariwa":     ["arima", "para", "bara", "biro", "kanoa", "diki"],
+    "Kawa-ni":    ["arima", "para", "bara", "masa", "naa"],
+    "Piru-sha":   ["ama", "buri", "arua", "konuko", "masa"],
+    "Nabaraka":   ["maure", "naure", "sima", "biro", "kuru", "were-ba"],
+    "Raka-bi":    ["biro", "sima", "para", "naa", "were"],
 }
 
 # Núcleo caquetío compartido (último recurso, para quien no tiene formas-firma
@@ -162,7 +171,8 @@ FORMAS_SEED: dict[str, list[str]] = {
 # Se combina con el aspecto del emocionar. Es lo que corrió la era 1 en 40 de
 # sus 60 agentes (medido 2026-09-16) y por eso allí sólo había 21 vectores-
 # semilla distintos de 60.
-_NUCLEO_FALLBACK = ["taya", "pia", "nüma", "naa", "wana", "maa", "ka", "mara"]
+# D11 fase 3 (tf.1): los pronombres del núcleo son los de las hermanas.
+_NUCLEO_FALLBACK = ["dai", "bui", "lihi", "tuhu", "naa", "diki", "maa", "ka", "mara"]
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -486,7 +496,7 @@ def formas_derivadas(agente: str, emo: dict) -> list[str]:
             pool = [p for p in todas if p not in formas]
             formas.extend(_sortear(pool, faltan, agente, "sin-campo"))
 
-    suf = _ASPECTO_SUFIJO.get(emo.get("aspecto", "continuativo"), "-ni")
+    suf = _ASPECTO_SUFIJO.get(emo.get("aspecto", "continuativo"), "")
     raices = _sortear(verbos, N_VERBOS_DE_ASPECTO, agente, "verbos")
     formas.extend(f"{r}{suf}" for r in raices)
 
@@ -654,9 +664,9 @@ def formas_semilla(agente: str, emo: dict) -> list[str]:
     derivadas = formas_derivadas(agente, emo)
     if derivadas:
         return derivadas
-    suf = _ASPECTO_SUFIJO.get(emo.get("aspecto", "continuativo"), "-ni")
+    suf = _ASPECTO_SUFIJO.get(emo.get("aspecto", "continuativo"), "")
     base = list(_NUCLEO_FALLBACK)
-    base += [f"naa{suf}", f"wana{suf}"]   # verbos base con su aspecto
+    base += [f"naa{suf}", f"diki{suf}"]   # verbos base con su aspecto
     return list(dict.fromkeys(base))
 
 
@@ -1107,8 +1117,15 @@ def prompt_emocionar(agente: str, etnia: Optional[str] = None) -> str:
     """Línea de emocionar (Maturana): disposición + firma morfológica.
     Moldea CÓMO lenguajea; el agente nunca habla DE su emoción."""
     emo = emocionar_de(agente, etnia)
-    suf = _ASPECTO_SUFIJO.get(emo.get("aspecto", ""), "")
-    extra = f" Tu aspecto natural es {suf}." if suf else ""
+    aspecto = emo.get("aspecto", "")
+    suf = _ASPECTO_SUFIJO.get(aspecto, "")
+    if suf:
+        extra = f" Tu aspecto natural es {suf}."
+    elif aspecto == "continuativo":
+        # D11 fase 3: el presente no se marca, así que la firma es el verbo solo.
+        extra = " Tu tiempo natural es el presente: el verbo solo, sin marca."
+    else:
+        extra = ""
     return f"[Tu emocionar — moldea cómo hablas, no lo menciones]: {emo['disposicion']}.{extra}"
 
 

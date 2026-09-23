@@ -126,8 +126,16 @@ def test_el_catalogo_no_pierde_voces_por_accidente():
     # 'espíritu vital' y `wagulo` 'tortuga'. Las otras siete eran de categorías
     # que no se prestan (cuerpo, gramática). `daca` se queda en el lexicón como
     # taíno 'yo', que tampoco se presta.
-    assert len(formas) == 42
+    # 42 → 44 el 2026-09-23 (tf.0): `baperon` y `raporon` 'calabaza con cal'
+    # pasaron de caquetío-atestiguado a `caribe-pemeno` —en el cuerpo de
+    # Oviedo (t. II pp. 286 y 294) son de los pemenos de la laguna, y «(Lengua
+    # de Venezuela)» es del editor, como en `datihao`—, y el caribe continental
+    # es esfera. El mismo día `cohiba` se archivó y entró `cohoba` (tf.6):
+    # una sale y otra entra, el total no se mueve por eso.
+    assert len(formas) == 44
     assert "datihao" in formas
+    assert {"baperon", "raporon", "cohoba"} <= formas
+    assert "cohiba" not in formas
     assert not {"akcicyaa", "wagulo"} & formas
     for clave in L.SIN_FORMA_DE_LA_ESFERA:
         assert clave not in formas
@@ -197,12 +205,18 @@ def test_el_mock_construye_exactamente_las_mismas_filas():
 # espanol_funcional, palabras_caquetias, palabras_arahuacas,
 # palabras_otro_arahuaco, aspectos_usados ni prestamos_de_esfera. Estas cuatro
 # son las del informe; si el número se mueve, el instrumento se movió.
+# ⚠️ Tanda final (2026-09-23, D11 fase 3): el instrumento SE MOVIÓ, y a
+# propósito — `-ka`/`-ni` dejan de contar como aspecto (el detector se
+# sustituyó) y `taya`, `pia` y `wana` se archivaron. Las cuatro frases son las
+# mismas; los números, los del scorer de hoy (antes: 7,2 · 6,1 · 8,4 · 8,5).
+# Lo que este test vigila sigue igual: `prestamos_de_esfera` devuelve la
+# clave castellana y la normalización no mueve el score.
 ANTES = [
-    ("Casabe kaa-ni wara amana-ni", 7.2, 0.750, 0.500, ["casabe"]),
+    ("Casabe kaa-ni wara amana-ni", 6.2, 0.750, 0.500, ["casabe"]),
     ("Maíz, yuca ta-kana", 6.1, 1.000, 0.333, ["maíz", "yuca"]),
-    ("Taya naa-ka casabe wana-ni, ta-casabe para-ko", 8.4, 0.833, 0.500,
+    ("Taya naa-ka casabe wana-ni, ta-casabe para-ko", 5.1, 0.500, 0.167,
      ["casabe", "ta-casabe"]),
-    ("Pia naa-ka maisi, cazabi kaa-ni wara", 8.5, 1.000, 0.667,
+    ("Pia naa-ka maisi, cazabi kaa-ni wara", 6.4, 0.833, 0.500,
      ["maisi", "cazabi"]),
 ]
 

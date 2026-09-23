@@ -63,6 +63,7 @@ TABLAS = [
     ("REGLAS_ATRIBUTIVAS", "atributivo"),
     ("REGLAS_NUMERO",      "número"),
     ("REGLAS_ZAVALA",      "derivativo"),
+    ("REGLAS_ESTEVES",     "derivativo"),   # -iro, -uco desde el 2026-09-23 (sigla E, 4-a)
     ("REGLAS_TOPONIMICAS", "toponímico"),
     ("REGLAS_RETIRADAS",   "agentivo"),
 ]

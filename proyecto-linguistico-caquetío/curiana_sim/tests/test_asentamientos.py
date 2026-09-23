@@ -78,6 +78,35 @@ def test_id_duplicado_es_error():
     assert any(x["codigo"] == "id-duplicado" for x in p)
 
 
+# ── la cronología de la loza (tf.7, «Cronología C» regional, 2026-09-23) ──
+
+def test_la_tabla_de_fases_vive_con_su_fuente():
+    """Una fecha sin obra es una cifra a mano: cada fila cita obra y página."""
+    crono = {"fases": [{"complejo": "Urumaco", "desde": 1100}]}
+    p = CA.validar_cronologia(crono, [_nodo()], {"oliver-1989-cap4"})
+    assert any(x["codigo"] == "cronologia-sin-fuente" for x in p)
+
+
+def test_la_cronologia_cita_obras_y_nodos_que_existen():
+    crono = {"por_lugar": [{"obra": "inventada-1999", "pagina": "1",
+                            "etiqueta": "atestiguado", "nodos": ["nodo-999"]}]}
+    p = CA.validar_cronologia(crono, [_nodo()], {"oliver-1989-cap4"})
+    codigos = {x["codigo"] for x in p}
+    assert {"obra-fantasma", "nodo-fantasma"} <= codigos
+
+
+def test_la_cronologia_real_dice_lugar_por_lugar():
+    """La C regional: no se fija un corte, se dice qué hay en cada lugar. Si
+    un lugar pierde su fuente o su nodo, salta `test_el_registro_real_valida`;
+    éste vigila que la decisión siga siendo por lugar y con los dos esquemas."""
+    crono = CA.cargar_cronologia()
+    assert crono.get("ventana") == [1300, 1500]
+    assert {f["esquema"] for f in crono["fases"]} == {"oliver-1989", "casale-2024"}
+    lugares = crono["por_lugar"]
+    assert len(lugares) >= 3
+    assert all(l.get("nodos") and l.get("obra") for l in lugares)
+
+
 # ── el registro real ──────────────────────────────────────────────────
 
 def test_el_registro_real_valida():

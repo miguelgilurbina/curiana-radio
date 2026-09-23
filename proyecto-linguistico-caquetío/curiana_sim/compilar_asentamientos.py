@@ -279,14 +279,70 @@ def validar_corpus(nodos: list, ids) -> list:
     return problemas
 
 
+def cargar_cronologia(ruta: str = REGISTRO) -> dict:
+    """El bloque `cronologia_dabajurana` del registro, o {} si no está.
+
+    Vive en el mismo archivo que los nodos porque dice qué loza hay EN ellos
+    (tf.7, «Cronología C» regional, 2026-09-23), pero no es un nodo: `cargar()`
+    no lo devuelve y su firma no cambia."""
+    if not os.path.exists(ruta):
+        return {}
+    try:
+        with open(ruta, encoding="utf-8") as fh:
+            doc = yaml.safe_load(fh) or {}
+    except yaml.YAMLError:
+        return {}                         # ya lo reporta cargar()
+    bloque = doc.get("cronologia_dabajurana") if isinstance(doc, dict) else None
+    return bloque if isinstance(bloque, dict) else {}
+
+
+def validar_cronologia(cronologia: dict, nodos: list, obras) -> list:
+    """La tabla de fases vive con su fuente (tf.7): cada fase y cada lugar
+    citan `obra` —clave foránea a la bibliografía— y `pagina`, y cada lugar
+    apunta a nodos que existen. Una fecha sin obra es una cifra a mano."""
+    if not cronologia:
+        return []
+    problemas = []
+    ids = {n.get("id") for n in nodos}
+    for seccion in ("fases", "por_lugar"):
+        filas = cronologia.get(seccion) or []
+        if not isinstance(filas, list):
+            problemas.append(_error("cronologia-mal-formada", f"cronologia.{seccion}",
+                                    "tiene que ser una lista"))
+            continue
+        for i, fila in enumerate(filas):
+            donde = f"cronologia.{seccion}[{i}]"
+            if not isinstance(fila, dict):
+                problemas.append(_error("cronologia-mal-formada", donde, "se esperaba dict"))
+                continue
+            obra = fila.get("obra")
+            if not obra or not fila.get("pagina"):
+                problemas.append(_error("cronologia-sin-fuente", donde,
+                                        "cada fila cita `obra` y `pagina`"))
+            elif obras is not None and obra not in obras:
+                problemas.append(_error("obra-fantasma", donde,
+                                        f"cita `{obra}`, que no está en la bibliografía"))
+            if seccion == "por_lugar":
+                if fila.get("etiqueta") not in ETIQUETAS:
+                    problemas.append(_error("etiqueta-ilegal", donde,
+                                            f"`etiqueta: {fila.get('etiqueta')}` no es legal"))
+                for nid in fila.get("nodos") or []:
+                    if nid not in ids:
+                        problemas.append(_error("nodo-fantasma", donde,
+                                                f"cita `{nid}`, que no está en el registro"))
+    return problemas
+
+
 def compilar(ruta: str = REGISTRO):
     """Carga, valida y devuelve `(nodos, huecos, problemas)`."""
     nodos, huecos, problemas = cargar(ruta)
+    obras = _obras_de_la_bibliografia()
     problemas += validar_estructura(nodos)
     problemas += validar_vocabularios(nodos)
     problemas += validar_precontacto(nodos)
-    problemas += validar_procedencia(nodos, _obras_de_la_bibliografia())
+    problemas += validar_procedencia(nodos, obras)
     problemas += validar_corpus(nodos, _ids_del_corpus())
+    problemas += validar_cronologia(cargar_cronologia(ruta), nodos, obras)
     return nodos, huecos, problemas
 
 

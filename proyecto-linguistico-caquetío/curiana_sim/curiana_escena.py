@@ -356,8 +356,12 @@ _FIN_DE_FRASE = re.compile(r"[.!?;\n]+")
 # pronombres: el marcador más barato de que una oración va en caquetío y no en
 # castellano. No es el scorer y no lo toca — no puntúa nada, sólo elige qué
 # oración de la respuesta se repite en voz alta.
+# D11 fase 3 (2026-09-23): entran los pronombres de las hermanas (`dai`, `bui`,
+# `lihi`, `tuhu`); los viejos se quedan porque un agente puede seguir
+# diciéndolos, y lo que se mira aquí es si la oración va en caquetío.
 _MARCA_CAQUETIA = re.compile(
-    r"\b(?:taya|pia|nüma|numa|waya|naya)\b|\w+-\w+", re.IGNORECASE)
+    r"\b(?:dai|bui|lihi|tuhu|taya|pia|nüma|numa|waya|naya)\b|\w+-\w+",
+    re.IGNORECASE)
 
 
 def frase_dicha(texto: str, tope: int = TOPE_FRASE) -> str:

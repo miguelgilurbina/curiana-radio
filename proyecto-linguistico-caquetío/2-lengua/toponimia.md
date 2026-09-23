@@ -68,6 +68,19 @@ Un solo topónimo archivado como inservible confirmó dos palabras y abrió una
 regla. Segunda atestación independiente de `ebo`: *cumarebo* = "Camino del
 cacique Cumare".
 
+> ⚠️ **Corregido el 2026-09-23** (tf.0: la sigla (E) de Zavala es Esteves
+> 1989; opción 5-a del issue `sigla-E-zavala-canon-2026-09-23.md`). La vía
+> **no era independiente**: `juri` (#178), `ebo` (#117), la glosa de
+> *jurijurebo* (#179) y la de *cumarebo* (#94) llevan todas la sigla (E), y
+> son Esteves partiendo esos mismos nombres (pp. 47 y 105). El topónimo no
+> corroboró las palabras: las palabras salieron de él. **Jurijurebo y Cumarebo
+> bajan de A a C** (conservan su id, `toponimo-001` y `toponimo-004`), y con
+> ellos Judibana A → B y Carirubana B → C. Lo que se sostiene es la ciudad:
+> *Hurehurebo* está en Castellanos (1589) y *Hurihurebo* en la carta de
+> Bastidas (1538). La reduplicación como regla es otra pregunta
+> ([[morfologia]] §4). Medido en
+> `6-fusion/medicion_sigla_E_zavala_2026-09-23.yaml` §toponimos.
+
 ## El método, en cuatro pasos
 
 1. **Segmentar** contra el inventario de morfemas conocido (`AFIJOS_ZAVALA`,
@@ -130,10 +143,14 @@ que el método falle.
 
 ## Casos de nivel A
 
+Los del análisis original (F11). `jurijurebo` y `cumarebo` estaban aquí y
+bajaron a C el 2026-09-23 (sigla E, 5-a: arriba); el nivel vigente de cada
+uno lo da `toponimos.yaml`, no esta tabla.
+
 | Topónimo | Glosa de la fuente | Segmentación |
 |---|---|---|
-| `jurijurebo` | "Paso de los vientos" | `juri~juri` + `ebo` |
-| `cumarebo` | "Camino del cacique Cumare" | *Cumare* + `ebo` |
+| ~~`jurijurebo`~~ → C | "Paso de los vientos" | `juri~juri` + `ebo` |
+| ~~`cumarebo`~~ → C | "Camino del cacique Cumare" | *Cumare* + `ebo` |
 | `yacarebacoa` | "Pueblo del bosque" | `yacare` + `bacoa` |
 | `quibacoas` | "Bosques pedregosos" | `quiba` + `(b)acoa`, haplología |
 | `guacaubana` | "Río escondido" | `waka` 'subterráneo' + `-ubana` |

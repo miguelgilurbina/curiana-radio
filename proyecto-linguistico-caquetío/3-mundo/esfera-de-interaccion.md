@@ -181,16 +181,21 @@ un solo asentamiento difuso, «convergencia» solo puede medirse entre individuo
 De la carta del obispo Rodrigo de Bastidas a Carlos V (1538), vía Oliver 1989
 cap.3 pp.251, 261-262 (`geografia_politica-003`):
 
-> **Todariquiba** (el poblado de Manaure, ~1 legua de Coro) · **Guaibacoa** ·
-> **Cumarebo** · **Tomodore** · **Caujarao** · **Zazárida** · **Capatárida**
+> **Todariquiba** (el pueblo de Don Alexandre, hijo de Manaure, a una o dos
+> leguas de Coro) · **Guaibacoa** · **Cumarebo** · **Tomodore** · **Caujarao** ·
+> **Zazárida** · **Capatárida**
 
 De esos, dos rinden mucho más que los otros cinco:
 
-- **Todariquiba** es el poblado de Manaure y el mejor candidato a lo que la
-  simulación llama «la Curiana». Su ubicación **sigue en debate**: no aparece
+- **Todariquiba** es el pueblo donde Oliver reasienta a Manaure tras el pacto
+  de 1527 —residencia **reconstruida** (1527-1531), no atestiguada: tf.7 A,
+  2026-09-23; Cey lo pone en Coro— y el mejor candidato a lo que la era 1
+  llamaba «la Curiana». Su ubicación **sigue en debate**: no aparece
   sitio arqueológico del tamaño correspondiente en la periferia de Coro.
-- **Cumarebo** tiene etimología resuelta —`Cumare` (antropónimo de cacique) +
-  `ebo` ('camino', atestiguado) = *'camino de Cumare'*, nivel A— y, sobre todo,
+- **Cumarebo** tiene etimología —`Cumare` (antropónimo de cacique) +
+  `ebo` ('camino') = *'camino de Cumare'*; era nivel A y desde el 2026-09-23
+  es C (tf.0, la sigla E, 5-a): la glosa y `ebo` son sólo de Esteves, vía la
+  (E) de Zavala— y, sobre todo,
   una ensenada **justo al este** llamada **«Puerto de los Indios Curaçao»**,
   punto de partida documentado desde el que los caquetíos de Curazao cruzaban a
   la isla en canoa (van Buurt 2014, citando a Hartog 1968).
@@ -286,6 +291,16 @@ Honestidad primero, porque son huecos reales:
   (2026-09-07: el registro de pueblos en contacto ya existe, `etnias.yaml`,
   con los guayqueríes como etnia-002 y el caribe del elenco como etnia-008,
   canon-simulación; el hueco de los guaycaríes sigue.)
+  (2026-09-23, tf.7 A + B: son DOS grupos con el mismo nombre y ninguno está
+  en la costa de Falcón. etnia-002 son los guaycaríes de Federmann, en los
+  llanos del Cojedes en 1531 —pescadores que viven mezclados en el territorio
+  con los caquetíos de esa polity, cada nación en sus pueblos, con mercado,
+  bilingüismo y alianza—, citados de la primaria; etnia-009, los guaiqueríes
+  de Margarita, vecinos de la esfera sin contacto documentado con ninguna
+  polity caquetía. Que sean el mismo pueblo es hipótesis. Los guaycaríes de
+  la orilla de la Curiana que cambian pescado por sal son, entonces,
+  canon-simulación de la era 1 sin fuente costera; la era 2 ya los dejó
+  fuera. Detalle: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`.)
 
 Los tres son trabajo de minería, no de diseño. **Ninguno se resuelve
 decidiéndolo.**

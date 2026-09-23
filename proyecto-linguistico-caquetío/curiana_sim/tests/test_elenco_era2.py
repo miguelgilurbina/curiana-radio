@@ -112,10 +112,26 @@ def test_las_raices_de_los_nombres_son_caquetio_del_lexicon():
     from curiana_lexicon import VOCABULARIO_BASE
     mapa = yaml.safe_load(io.open(
         os.path.join(RAIZ, "6-fusion", "mapa_nombres_era2.yaml"), encoding="utf-8"))
+    # La regla a se aplicó el día de NOMBRAR (2026-09-14), con la capa de ese
+    # día. El 2026-09-23 (cc.4 / tf.0, opción B) la sigla (E) de Zavala resultó
+    # ser Esteves 1989 y 40 voces bajaron de capa; doce de ellas son raíz de un
+    # nombre del elenco (Kunaro-bana, Naure, Akaure, Jachos, Wanepe, Tijua,
+    # Karama, Saruro, Siwa, Tauta, Waru, Tigi). «El agente no cambia, la voz
+    # sí» (issue sigla-E-zavala-canon-2026-09-23.md §7): el nombre se queda, y
+    # lo que se exige de esas doce es que la bajada sea LA DECIDIDA, leída de
+    # la medición, y no cualquier otra.
+    medicion = yaml.safe_load(io.open(
+        os.path.join(RAIZ, "6-fusion", "medicion_sigla_E_zavala_2026-09-23.yaml"),
+        encoding="utf-8"))
+    capa_b = dict(medicion["por_opcion"]["B"]["voces"])
+    capa_b["jachos"] = "español-colonial"          # la 6-a, verificada en el DLE
     assert len(mapa["nombres"]) == 63
     for fila in mapa["nombres"]:
         entrada = VOCABULARIO_BASE.get(fila["raiz"])
         assert entrada is not None, fila["raiz"]
+        if fila["raiz"] in capa_b:
+            assert entrada["fuente"] == capa_b[fila["raiz"]], fila
+            continue
         assert entrada["fuente"] in ("caquetío-atestiguado", "caquetío-reconstruido"), fila
         esperado = fila.get("nombre") if fila["nombre_nuevo"] == "se conserva" else fila["nombre_nuevo"]
         assert esperado in era2.ALL_AGENTS, esperado

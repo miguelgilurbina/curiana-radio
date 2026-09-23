@@ -455,9 +455,13 @@ def test_la_era_1_no_cambia_byte_a_byte():
     assert len(sin_semilla) == 40
     for agente in sin_semilla:
         emo = emocionar_de(agente, A.ALL_AGENTS[agente].get("etnia"))
-        suf = _ASPECTO_SUFIJO.get(emo.get("aspecto", "continuativo"), "-ni")
+        # Tanda final (D11 fase 3): el núcleo y el aspecto son los de las
+        # hermanas —el continuativo es el verbo solo—, así que la era 1 deja
+        # de ser byte a byte con sus runs, como con el ejemplo de identidad
+        # del 2026-09-19: es UNA koiné y los dos mundos la leen.
+        suf = _ASPECTO_SUFIJO.get(emo.get("aspecto", "continuativo"), "")
         assert formas_semilla(agente, emo) == \
-            _NUCLEO_FALLBACK + [f"naa{suf}", f"wana{suf}"], agente
+            list(dict.fromkeys(_NUCLEO_FALLBACK + [f"naa{suf}", f"diki{suf}"])), agente
 
     vectores = {tuple(sorted(formas_semilla(n, emocionar_de(n, a.get("etnia")))))
                 for n, a in A.ALL_AGENTS.items()}

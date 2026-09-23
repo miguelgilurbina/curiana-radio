@@ -99,7 +99,12 @@ def test_db3_batey_es_el_juego():
 
 def test_db3_tabako_es_el_canuto_no_la_hierba():
     sig = _sig("tabako")
-    assert sig.startswith("cañuto") and "no la hierba" in sig
+    # db.3 la dejó en «cañuto con que se toma el humo…». El 2026-09-23 (cc.7 /
+    # tf.6) la glosa se AMPLIÓ con lo que Zayas dejaba abierto: Las Casas
+    # (Apologética p. 181) llama tabacos a los ROLLOS de hoja encendidos, y
+    # Oviedo t. IV p. 96 igual. El cañuto sigue; entra primero el rollo.
+    assert sig.startswith("el rollo de hojas")
+    assert "cañuto" in sig and "no la hierba" in sig
     assert "Nicotiana" not in sig
 
 
@@ -114,7 +119,9 @@ def test_db3_voces_de_fuera_pierde_las_dos_que_salian():
     assert not {"akcicyaa", "wagulo"} & formas
     glosas = {f: g for _p, f, g, _fam in L.voces_de_fuera_posibles()}
     assert glosas["batey"].startswith("juego de pelota")
-    assert glosas["tabako"].startswith("cañuto")
+    # «cañuto» hasta el 2026-09-23: cc.7 / tf.6 amplió la glosa y el bloque
+    # enseña ahora su primera parte, el rollo de hojas (Las Casas p. 181).
+    assert glosas["tabako"].startswith("el rollo de hojas")
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -197,9 +204,13 @@ def test_d21_6_el_ejemplo_ya_no_glosa_ana_como_lugar():
 
 def test_db1_c_perdona_la_casi_raiz_larga():
     assert L.LARGO_MINIMO_CASI_RAIZ == 6
-    assert L.casi_raiz_de("pütshi") == "pütchi"
-    assert not es_raiz_de_ninguna_parte("pütshi-bana")
-    assert LexicoComunitario().registrar_neologismo(_neo("pütshi-bana")) is True
+    # El ejemplo era `pütshi` → `pütchi`; `pütchi` se archivó en la tanda
+    # final (tf.5, reconstruida desde el wayuu), y una raíz archivada no
+    # perdona. El caso del perdón es el mismo con una atestiguada:
+    assert L.casi_raiz_de("cudanga") == "kudanga"
+    assert not es_raiz_de_ninguna_parte("cudanga-bana")
+    assert LexicoComunitario().registrar_neologismo(_neo("cudanga-bana")) is True
+    assert L.casi_raiz_de("pütshi") is None, "la raíz archivada ya no perdona"
 
 
 @pytest.mark.parametrize("forma", ["lumina-bana-iro", "duma-bana", "uyama-ni", "karu-bana"])
@@ -212,8 +223,8 @@ def test_db1_c_no_perdona_lo_que_es_otra_palabra(forma):
 
 def test_db1_la_forma_perdonada_se_guarda_como_la_escribio():
     lex = LexicoComunitario()
-    lex.registrar_neologismo(_neo("pütshi-bana"))
-    assert [n.forma for n in lex._neologismos] == ["pütshi-bana"]
+    lex.registrar_neologismo(_neo("cudanga-bana"))
+    assert [n.forma for n in lex._neologismos] == ["cudanga-bana"]
 
 
 def test_db1_el_agujero_de_kira_se_cierra_en_la_puerta_y_no_en_el_clasificador():

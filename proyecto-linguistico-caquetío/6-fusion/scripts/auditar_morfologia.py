@@ -285,6 +285,9 @@ TABLAS = [
     ("REGLAS_ATRIBUTIVAS", "atributivo", "curiana_sim/curiana_lexicon.py"),
     ("REGLAS_NUMERO",      "número",     "curiana_sim/curiana_lexicon.py"),
     ("REGLAS_ZAVALA",      "derivativo", "curiana_sim/curiana_lexicon.py"),
+    # `-iro` y `-uco` salieron de REGLAS_ZAVALA el 2026-09-23 (sigla E, 4-a):
+    # sin esta fila el inventario perdería dos morfemas que el motor enseña.
+    ("REGLAS_ESTEVES",     "derivativo", "curiana_sim/curiana_lexicon.py"),
     ("REGLAS_TOPONIMICAS", "toponímico", "curiana_sim/curiana_lexicon.py"),
     ("REGLAS_RETIRADAS",   "agentivo",   "curiana_sim/curiana_lexicon.py"),
 ]
@@ -314,6 +317,11 @@ def capa_de_regla(regla: dict) -> str:
     """
     if regla.get("retirada"):
         return "retirada"
+    # Una capa DECLARADA manda sobre la que se deduce del texto de la cita
+    # (REGLAS_ESTEVES, 2026-09-23: su cita dice «Zavala #166», y por el texto
+    # saldría atestiguada, que es justo lo que la sigla E corrigió).
+    if regla.get("capa"):
+        return str(regla["capa"]).replace("caquetío-", "")
     if regla.get("atestiguado"):
         return "atestiguado"
     ev = regla.get("evidencia") or ""
@@ -328,7 +336,7 @@ def capa_de_regla(regla: dict) -> str:
 
 def apoyo_de_regla(regla: dict) -> str:
     return (regla.get("atestiguado") or regla.get("evidencia")
-            or regla.get("wayunaiki") or "")
+            or regla.get("esteves") or regla.get("wayunaiki") or "")
 
 
 def morfemas_del_motor(L) -> dict[str, dict]:

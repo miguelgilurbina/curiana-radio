@@ -188,11 +188,12 @@ def test_debe_es_castellano_y_no_fuga_a_otra_lengua_arahuaca():
 
     assert "debe" in ES_STOPWORDS
     assert "debe" in VOCABULARIO_BASE, "la entrada achagua sigue en la comparanda"
-    r = score_linguistico("taya debe buko", _lexico())
+    # Tanda final (D11 fase 3): el pronombre de la frase es `dai`.
+    r = score_linguistico("dai debe buko", _lexico())
     assert r["palabras_otro_arahuaco"] == [] and r["otro_arahuaco"] == 0
     assert "debe" not in r["palabras_arahuacas"]
     assert r["espanol_funcional"] == 1
-    assert r["palabras_caquetias"] == ["taya", "buko"]
+    assert r["palabras_caquetias"] == ["dai", "buko"]
 
 
 # ── los falsos positivos del cierre del día 2 de la era 2 (2026-09-16) ──
@@ -316,12 +317,15 @@ def test_el_arreglo_no_toca_una_frase_de_canon_puro():
                                  GLOTONIMOS_DE_LA_COMPARANDA, _tokenizar)
 
     lex = _lexico()
+    # Tanda final (D11 fase 3): las mismas cinco frases dichas con el canon
+    # de hoy —pronombres y aspecto de las hermanas, sin las voces que se
+    # reconstruyeron desde el wayuu—. La invariante es la misma.
     canon = [
-        "Taya wana-ka ta-barsure. Waya naa-ni para-bana.",
-        "Pia suna-da wa-duna kashi. Nüma masa-ka arima-kana.",
-        "Taya maa-ni: saa kali-bana wara tüshi-ni, naka waya naa-da para.",
-        "Wa-para-ubana juri wana-ka. Taya kaa-ni hayo, naba-ni boratio.",
-        "Nüma panaa-ni chakamba. Kanoa-kana, pia wana-ka?",
+        "Dai diki-kuba da-barsure. Waya naa para-bana.",
+        "Bui suna-ba wa-duna danu. Lihi masa-kuba arima-kana.",
+        "Dai maa: saa kasi-bana wara kasalini, naka waya naa-ba para.",
+        "Wa-para-ubana juri diki-kuba. Dai kaa hayo, kuburuku boratio.",
+        "Lihi panaa chakamba. Kanoa-kana, bui diki-kuba?",
     ]
     for frase in canon:
         tokens = set(_tokenizar(frase))

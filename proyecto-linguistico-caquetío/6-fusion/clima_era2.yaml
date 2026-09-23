@@ -13,6 +13,16 @@
 # que Miguel lo fusione.
 # Compañero: 6-fusion/sitios_era2.yaml (el mismo mundo, por lugar).
 # Mide: 6-fusion/scripts/verificar_sitios_era2.py
+#
+# 2026-09-23 — la sigla (E) de Zavala es Esteves (tf.0, 1-B y 3-a): cada
+# `voz_caquetia` copia la capa de su voz en el lexicón, y las que dependían
+# sólo de la (E) llevan ahora su etiqueta de la opción B
+# (6-fusion/medicion_sigla_E_zavala_2026-09-23.yaml, `etiqueta_por_opcion.B`):
+# juri, kari y rao → hipotético; kunaro y kayude → retroabstraído. `jachos`
+# deja de ser voz caquetía (6-a: es «hacho», castellano; DLE) y pasa a
+# `voz_castellana`. La línea de P3 que citaba `joutai`, archivada el
+# 2026-09-19, cita `juri` (2-a). Y la frase del Tiempo de Viento ya no dice
+# «el juri» (ver su nota).
 # ─────────────────────────────────────────────────────────────────────────
 meta:
   recogido: '2026-09-14'
@@ -129,8 +139,17 @@ meta:
 # bloque entero ≤ 320).
 frases_del_cargador:
   viento:
-    periodo: 'Tiempo de Viento: el juri sopla firme del este y el agua está clara.'
+    periodo: 'Tiempo de Viento: sopla firme del este y el agua está clara.'
     sostiene: 'periodos[P1].viento, .mar'
+    nota_2026-09-23: >-
+      Decía «el juri sopla firme del este». Con la sigla E (tf.0: 1-B y 3-a)
+      `juri` 'viento' pasa a caquetío-hipotético —sus tres etimologías son de
+      Esteves, vía la (E) de Zavala— y el perfil era2 esconde la capa
+      hipotética (decisión del 2026-09-14): esta frase la enseñaba igual, en
+      los 42 bloques de [Tu tierra] del Tiempo de Viento y en el [El mundo]
+      del Director, por una puerta que el filtro de capas no ve (la frase es
+      texto, no `voz_caquetia`). Se quita la voz y no se pone otra: el viento
+      se queda sin nombre caquetío, como el período (p2).
     nota_2026-09-17: >-
       La frase de la TARDE decía «el Golfete» y entraba igual en los siete
       sitios: se la oían Carirubana y Caseto, cuya agua es la costa oeste
@@ -249,7 +268,7 @@ periodos:
         procedencia: {obra: camacho-2011, pagina: '9 y 15'}
         apoyo_en_repo: [ecologia-005, ecologia-020]
         estacion: 'seca'
-        voz_caquetia: {clave: juri, capa: caquetío-atestiguado}
+        voz_caquetia: {clave: juri, capa: caquetío-hipotético}
       - dato: >-
           «El cual le viene bien, pues Coro viento / Quiere decir en lengua
           generosa, / Y ansí es aquella tierra muy ventosa.»
@@ -257,7 +276,7 @@ periodos:
         capa: 'colonial: Castellanos publica en 1589 lo que vio hacia 1540'
         procedencia: {obra: castellanos-elegias, pagina: 'líneas 48209-48219 del txt (Parte II, Introducción)'}
         estacion: 'todo el año'
-        voz_caquetia: {clave: juri, capa: caquetío-atestiguado}
+        voz_caquetia: {clave: juri, capa: caquetío-hipotético}
         nota: >-
           Arcaya p. 170 rechaza la etimología («el viento reinante en Coro es,
           al contrario, el que sopla del Noreste») y con eso confirma el dato
@@ -270,7 +289,7 @@ periodos:
         capa: s. XX
         procedencia: {obra: esteves-1989, pagina: '47'}
         estacion: 'todo el año'
-        voz_caquetia: {clave: juri, capa: caquetío-atestiguado}
+        voz_caquetia: {clave: juri, capa: caquetío-hipotético}
     lluvia:
       - dato: >-
           En este tramo del año no llueve: la lluvia se concentra en un pulso
@@ -354,8 +373,8 @@ periodos:
         procedencia: {obra: camacho-2011, pagina: '8-9'}
         apoyo_en_repo: [ecologia-005, ecologia-006]
         estacion: 'todo el año'
-        voz_caquetia: {clave: tüshi, capa: caquetío-reconstruido}
-        nota: '`tüshi` «frío» existe en el lexicón y en este mundo casi no tiene referente: es una palabra para la noche y para el agua, no para el año'
+        voz_caquetia: {clave: kasalini, capa: caquetío-hipotético}
+        nota: '`kasalini` «frío» (achagua; sustituye desde el 2026-09-23 a `tüshi`, reconstruida desde el wayuu y archivada por D11, tf.5) existe en el lexicón y en este mundo casi no tiene referente: es una palabra para la noche y para el agua, no para el año'
     el_dia:
       amanecer:
         - dato: 'El viento amanece flojo; la corriente del Golfete es la más suave del día. Es la ventana de la canoa y del calado del chinchorro.'
@@ -363,7 +382,8 @@ periodos:
           procedencia: {obra: camacho-2011, pagina: '(vía ecologia-026: el viento «arrecia en el curso del día»)'}
           apoyo_en_repo: [ecologia-026]
           estacion: 'seca — amanecer'
-          voz_caquetia: {clave: kapua, capa: caquetío-reconstruido}
+          # tf.5 (2026-09-23): era `kapua`, reconstruida desde el wayuu y archivada.
+          voz_caquetia: {clave: mautia, capa: caquetío-hipotético}
       mañana:
         - dato: 'El alisio va montando. La sal de la noche está seca y es la hora del raspado; el conuco se trabaja antes del sol alto.'
           etiqueta: canon-simulacion
@@ -392,7 +412,7 @@ periodos:
           procedencia: {obra: camacho-2011, pagina: '(vía ecologia-026)'}
           apoyo_en_repo: [ecologia-026]
           estacion: 'seca — tarde'
-          voz_caquetia: {clave: juri, capa: caquetío-atestiguado}
+          voz_caquetia: {clave: juri, capa: caquetío-hipotético}
       anochecer:
         - dato: >-
             Se untan los jachos: «Cuna, Cunaro, "promicrops guasa", pez lábrido
@@ -403,7 +423,7 @@ periodos:
           capa: 's. XX; Esteves no fecha la técnica'
           procedencia: {obra: esteves-1989, pagina: '33 (entrada Cunacho)'}
           estacion: 'seca — anochecer'
-          voz_caquetia: {clave: jachos, capa: caquetío-atestiguado}
+          voz_castellana: jachos   # «hacho»: leño resinoso para alumbrar (DLE, hacho¹, 2.ª acep.), con la h aspirada; no es voz caquetía (sigla E, 6-a, 2026-09-23)
       noche:
         - dato: >-
             La pesca nocturna a la luz de los jachos, sobre el agua calma y
@@ -413,7 +433,7 @@ periodos:
           capa: 's. XX; sin fecha de origen'
           procedencia: {obra: esteves-1989, pagina: '33'}
           estacion: 'seca — noche'
-          voz_caquetia: {clave: kunaro, capa: caquetío-atestiguado}
+          voz_caquetia: {clave: kunaro, capa: caquetío-retroabstraido}
 
   - id: P2
     nombre_canon: la seca larga
@@ -441,7 +461,7 @@ periodos:
         procedencia: {obra: camacho-2011, pagina: '8-9 y 15'}
         apoyo_en_repo: [ecologia-005, ecologia-020]
         estacion: 'seca larga'
-        voz_caquetia: {clave: juri, capa: caquetío-atestiguado}
+        voz_caquetia: {clave: juri, capa: caquetío-hipotético}
     lluvia:
       - dato: >-
           «Los frutos menores se cultivan de secano en todas las serranías, y aun
@@ -586,7 +606,7 @@ periodos:
         procedencia: {obra: camacho-2011, pagina: '9 y 15'}
         apoyo_en_repo: [ecologia-020, ecologia-010]
         estacion: 'lluvias'
-        voz_caquetia: {clave: joutai, capa: caquetío-reconstruido}
+        voz_caquetia: {clave: juri, capa: caquetío-hipotético}   # era joutai, archivada el 2026-09-19; con la sigla E (2-a) juri queda como la voz del viento, hipotética
     lluvia:
       - dato: >-
           «La lluvia no se reparte: se concentra en un pulso corto (aprox.
@@ -640,7 +660,7 @@ periodos:
         procedencia: {obra: camacho-2011, pagina: '16-17'}
         apoyo_en_repo: [ecologia-027, ecologia-007]
         estacion: 'lluvias'
-        voz_caquetia: {clave: rao, capa: caquetío-atestiguado}
+        voz_caquetia: {clave: rao, capa: caquetío-hipotético}
     agua_dulce:
       - dato: >-
           Los cauces efímeros corren: «Al bajar a la llanura sus cauces se secan,
@@ -735,7 +755,7 @@ abre_y_cierra:
       capa: 's. XX, sin fecha de origen'
       procedencia: {obra: esteves-1989, pagina: '33'}
       estacion: 'seca — noche'
-      voz_caquetia: {clave: jachos, capa: caquetío-atestiguado}
+      voz_castellana: jachos   # «hacho»: leño resinoso para alumbrar (DLE, hacho¹, 2.ª acep.), con la h aspirada; no es voz caquetía (sigla E, 6-a, 2026-09-23)
     - dato: 'ABRE en P3 — el conuco, con el agua del jagüey que Oliver describe para esta costa y que el casting ya ancló aquí (Korie-ko reanclado a los jagüeyes de Tacuato, decisión del 2026-09-14).'
       etiqueta: canon-simulacion
       procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 245 (pdf 63)'}
@@ -748,13 +768,13 @@ abre_y_cierra:
       deuda: sin-procedencia
       apoyo_en_repo: [ecologia-015, ecologia-026]
       estacion: 'seca'
-      voz_caquetia: {clave: kari, capa: caquetío-atestiguado}
+      voz_caquetia: {clave: kari, capa: caquetío-hipotético}
     - dato: 'CIERRA en P2 — el fundo se llama por un árbol frutal («Cayude: árbol frutal»; en Falcón, «árbol anonáceo, turagua»), y el fruto no es de la seca larga.'
       etiqueta: atestiguado
       capa: s. XX
       procedencia: {obra: esteves-1989, pagina: '30 y 100'}
       estacion: 'seca larga'
-      voz_caquetia: {clave: kayude, capa: caquetío-atestiguado}
+      voz_caquetia: {clave: kayude, capa: caquetío-retroabstraido}
 
   Moruy:
     - dato: 'ABRE en P1, al final — la chicha del merejuy y la fiesta de fin de seca: «cierta levadura o preparación agria que usaban para acelerar la fermentación del maíz cocido con que elaboraban la chicha embriagadora, que consumían en ceremonias religiosas».'

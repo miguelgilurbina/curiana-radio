@@ -173,10 +173,19 @@ def test_los_74_originales_conservan_id_y_nivel():
     assert len(originales) == 74
     # 2026-09-07: quiquiba (toponimo-034) se rehabilitó de descartado a C con
     # su id de siempre (mecanismo `reubicados` del migrador). Era 13/47.
-    assert Counter(r["nivel"] for r in originales) == {"A": 6, "B": 8, "C": 14, "descartado": 46}
+    # 2026-09-23 (tf.0, la sigla (E) de Zavala es Esteves, opción 5-a):
+    # jurijurebo (001) y cumarebo (004) bajan de A a C — sus piezas y sus
+    # glosas son sólo de Esteves. Conservan el id con el talón `reubicado` del
+    # migrador. Era A 6 / C 14.
+    assert Counter(r["nivel"] for r in originales) == {"A": 4, "B": 8, "C": 16, "descartado": 46}
+    por_id = {r["id"]: r for r in originales}
+    for rid, forma in (("toponimo-001", "jurijurebo"), ("toponimo-004", "cumarebo")):
+        assert (por_id[rid]["forma"], por_id[rid]["nivel"]) == (forma, "C"), rid
+    # y los originales que venían detrás en NIVEL_A no corrieron su id
+    assert por_id["toponimo-002"]["forma"] == "yacarebacoa"
+    assert por_id["toponimo-005"]["forma"] == "guacaubana"
     # Y los cuatro Quicer- (030-033) son antropónimos de Barquisimeto, no
     # topónimos: la reclasificación conserva los ids.
-    por_id = {r["id"]: r for r in originales}
     for rid in ("toponimo-030", "toponimo-031", "toponimo-032", "toponimo-033"):
         assert por_id[rid]["clase"] == "antropónimo", rid
         assert por_id[rid]["polity"] == "barquisimeto", rid

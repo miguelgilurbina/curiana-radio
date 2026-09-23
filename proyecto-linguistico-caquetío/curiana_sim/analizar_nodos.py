@@ -1241,10 +1241,33 @@ def brazo_de_la_cadena(cadena: list[dict]) -> dict:
     }
 
 
+def admitir_raices_de_la_cadena(run_ids: list[str]) -> list[str]:
+    """Las raíces que la puerta onomatopéyica admitió en esta cadena (db.6).
+
+    El motor las guarda en `neologisms.morphological_rule` como
+    `onomatopeya:<raíz>` (tanda final, 2026-09-23), porque la lista viva está
+    en el `curiana_lexico.json` del run, que aquí no se lee. Se admiten ANTES
+    de clasificar nada: sin esto, `tororo-bana` saldría «de ninguna parte» y el
+    análisis dejaría fuera justo los nombres de animales que queremos ver
+    cruzar de un nodo a otro."""
+    from curiana_lexicon import admitir_raiz_onomatopeyica
+    filas = q(f"""
+        select distinct substring(morphological_rule from 13) as raiz
+        from neologisms
+        where run_id in ({_lista_sql(run_ids)})
+          and morphological_rule like 'onomatopeya:%'
+    """)
+    raices = sorted(f["raiz"] for f in filas if f.get("raiz"))
+    for r in raices:
+        admitir_raiz_onomatopeyica(r)
+    return raices
+
+
 def analizar_cadena(cadena: list[dict], umbral: float = UMBRAL_INCLINACION,
                     min_hablantes: int = MIN_HABLANTES,
                     con_lugar: bool = False) -> dict:
     run_ids = [r["id"] for r in cadena]
+    admitir_raices_de_la_cadena(run_ids)
     nodo_de, casa_de, posibles = elenco_por_nodo()
     excluidas = formas_excluidas()
     usos = cargar_usos(run_ids)

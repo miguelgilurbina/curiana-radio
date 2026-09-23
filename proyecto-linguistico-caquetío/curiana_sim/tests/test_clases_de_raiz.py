@@ -128,7 +128,11 @@ def test_popoi_es_adverbio_porque_lo_dice_la_fuente():
     assert "Adverbio de lugar" in e["glosa_fuente"]
     assert e["cat"] == "part", (
         "`popoi` es la clase de `yama` 'aquí' y `kana-pa` 'allá'")
-    assert VOCABULARIO_BASE["yama"]["cat"] == "part", (
+    # Tanda final (tf.5): `yama` se archivó —reconstruida desde el wayuu— y
+    # `popoi` ocupa su sitio en la plantilla. El precedente de la clase sigue
+    # en el archivo, con su `cat` intacta.
+    from curiana_lexicon import FUERA_DEL_HABLA
+    assert FUERA_DEL_HABLA["yama"]["cat"] == "part", (
         "el precedente de la clase se movió: revisar `popoi`")
 
 
@@ -161,9 +165,14 @@ def test_la_via_arahuaca_sigue_abierta():
         assert _reconoce(tok), f"`{tok}` debería seguir contando"
 
 
-def test_juri_a_secas_sigue_siendo_caquetio_atestiguado():
+def test_juri_a_secas_sigue_siendo_caquetio():
     e = VOCABULARIO_BASE["juri"]
-    assert e["fuente"] == "caquetío-atestiguado"
+    # Era `caquetío-atestiguado` hasta el 2026-09-23: la (E) de Zavala #178 es
+    # Esteves 1989, que saca 'viento' de partir tres topónimos (cc.4 / tf.0,
+    # opción B → hipotética). Lo que este test vigila no se mueve: `juri` a
+    # secas sigue siendo CAQUETÍO (la capa no es la lengua) y sigue contando.
+    assert e["fuente"] == "caquetío-hipotético"
+    assert lx.capa_epistemica(e["fuente"]) is not None
     assert _reconoce("juri")
     assert lx._familia_de_token("juri-ni") == "caquetío", (
         "la raíz SÍ es caquetía: lo que está mal es el molde, no la lengua")
@@ -190,9 +199,17 @@ def test_la_glosa_verbatim_de_la_fuente_sigue_entera():
 
 
 def test_la_capa_epistemica_no_se_movio():
-    for forma in CLASES_DE_RAIZ_ZAVALA:
-        assert GLOSARIO_ZAVALA[forma]["fuente"] == "caquetío-atestiguado", (
-            f"`{forma}` cambió de capa: esto era una corrección de `cat`")
+    """La corrección de `cat` no movió ninguna capa. Desde el 2026-09-23 la
+    capa SÍ se mueve en algunas de estas raíces, pero por otra decisión y por
+    otra puerta: `M.FUENTE_CURADA` (tf.0, los pemenos de `baperon`/`raporon`;
+    cc.4, la sigla (E) de Zavala es Esteves). Lo que este test sigue vigilando
+    es que ninguna capa cambie SIN fila declarada en esa tabla."""
+    for forma, fila in CLASES_DE_RAIZ_ZAVALA.items():
+        curada = M.FUENTE_CURADA.get(fila["forma_zavala"])
+        esperada = curada["fuente"] if curada else "caquetío-atestiguado"
+        assert GLOSARIO_ZAVALA[forma]["fuente"] == esperada, (
+            f"`{forma}` cambió de capa sin fila en FUENTE_CURADA: esto era una "
+            "corrección de `cat`")
 
 
 def test_las_49_siguen_en_el_vocabulario_activo():

@@ -1,0 +1,827 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — D11 · las voces wayuu que quedan en el habla (tf.5)
+#
+# Miguel, 2026-09-23 (tf.5, 6-fusion/decisiones_tanda_final_2026-09-23.yaml en
+# la rama tanda/final-2026-09-23): «Las 16 voces guayu que quedan. Kashi llama
+# a Zulu Wano [kashi, yama, sulu, wana…]. Una gente más le busca las
+# sustitutas en el mismo [método]. Sí, me parece eso. Eso está bien.» — y la
+# de fondo, cc.12: «no podemos seguir teniendo reconstrucciones desde el Wayu,
+# tendría que ser desde el Locono. O el Taíno […] o el Achagua».
+#
+# Es decisión TOMADA (tf.5: «entran en ESTA tanda»). Esto es la propuesta con
+# la que se aplica: qué pasa con cada voz, con qué cita y a qué coste.
+#
+# Regla 5: PROPONE. No toca curiana_sim/, 2-lengua/, 3-mundo/, CLAUDE.md ni la
+#   BANDEJA. La aplica el coordinador en la tanda final, medida.
+# Regla 1: toda cifra sale de 6-fusion/medicion_d11_voces_wayuu_2026-09-23.yaml,
+#   que emite 6-fusion/scripts/medir_d11_voces_wayuu.py contra el curiana_sim
+#   de main en 4f20c14 (#229) y la base local (sólo SELECT). `--check` verifica
+#   que las cifras de `coste_medido` de aquí son las de la medición.
+# Regla 2: una etiqueta por forma; en duda, degradar.
+# Regla 3: todo esto es FORMA DE LENGUA, sacada de fuentes coloniales de otras
+#   lenguas (Schultz 1802 vía Perea, Neira y Ribero 1762, Goeje 1939). Que el
+#   lokono diga «la mañana» no dice cuándo se levantaba un caquetío.
+# Regla 4: el achagua es de los Llanos, el lokono de las Guayanas; nada de aquí
+#   es dato caquetío salvo lo que cita a Zavala.
+# Borrador legible: issues-pendientes/d11-voces-wayuu-2026-09-23.md
+# Método: el de D11 fase 3 (#226), issues-pendientes/d11-fase3-pronombres-aspectos-2026-09-23.md
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-09-23'
+  estado: sin-fusionar — propuesta de aplicación de una decisión tomada (tf.5 sobre cc.12)
+  rama: campana/d11-voces-wayuu
+  obras: >-
+    perea-alonso-1942 · neira-ribero-1762 · goeje-1939 · zavala-reyes-2015 ·
+    brinton-1871 · oliver-1989-apendice-a · guerra-curvelo-palabrero
+  material_de_esta_semana_que_se_usa:
+    - '6-fusion/lokono_perea_1942.yaml (el Fraseario de Schultz 1802 con página impresa por entrada)'
+    - '6-fusion/achagua_neira_ribero_1762.yaml (el vocabulario castellano→achagua, por pliego y lado)'
+    - '6-fusion/taino_lista_maestra_2026-09-22.yaml (1.039 voces; sólo cuenta la que tiene cronista)'
+    - '6-fusion/kalinago_goeje_1939.yaml (M5): el caribe insular con las formas lokono de Goeje en la columna A'
+    - '6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml (#226): el método y lo que tf.1-tf.3 ya decidieron'
+  medido_con: 6-fusion/scripts/medir_d11_voces_wayuu.py → 6-fusion/medicion_d11_voces_wayuu_2026-09-23.yaml
+  verificado_en_imagen_en_esta_campana:
+    - 'Goeje 1939 pp. 24, 34 y 87 (PDF de fuentes_caquetios/, página impresa = PDF − 1)'
+    - 'Neira y Ribero, pliegos 61 izq. (Yrrico) y 64 der. (Casalinibe), sobre fuentes_caquetios/neira_ribero_1762/'
+    - 'Zavala Reyes 2015 pp. 65, 68 y 70 (capa de texto del PDF)'
+
+# ══════════════════════════════════════════════════════════════════════
+# LO QUE RESULTÓ FALSO AL MEDIRLO (antes de proponer nada)
+# ══════════════════════════════════════════════════════════════════════
+falso_al_medirlo:
+  - dicho: '«las 16 voces wayuu que quedan»'
+    medido: >-
+      Son 11. De las 23 voces con «DEUDA D11» en sus notas, 16 siguen en el
+      habla y 15 las enseña alguna plantilla (`bana` 'hígado' ninguna) — eso es
+      cierto —, pero cinco de las 16 son los pronombres que tf.1 ya decidió
+      (`taya`, `pia`, `nüma`, `waya`, `naya`). Las de esta campaña son
+      `anüiki`, `bana`, `kapua`, `kashi`, `naba`, `pütchi`, `sulu`, `tüshi`,
+      `wana`, `wanü` y `yama` (medicion §la_lista).
+  - dicho: '«kashi 3.187, yama 1.814, sulu 1.577 y wana» como las cargadas'
+    medido: >-
+      Por la palabra SUELTA, sí. Pero las dos raíces más usadas son verbos que
+      casi nunca salen sueltos: `wana` 'ver' tiene 71 usos sueltos y 5.274 como
+      núcleo de 95 formas (`wana-ka`, `wana-ni`…), y `naba` 'pensar' 40 y
+      3.863 en 66 formas. `wana` sale en 3.335 de las 3.811 respuestas y `naba`
+      en 3.103. Y `naba` está TAMBIÉN en el ejemplo de IDENTIDAD que reciben los
+      63 («Ta-barsure naba-ni»), no sólo `wana` (medicion §voces_viejas).
+  - dicho: 'las once son voces wayuu sin hermana (la nota D11: «el lokono del lexicón no cubre ''hígado''»)'
+    medido: >-
+      FALSO para `bana` 'hígado'. Goeje 1939 p. 34 (verificado en imagen): «1 am
+      113 — foie u-bana, 6, A id.»: el caribe insular dice `u-bana`, el
+      garífuna (6) y el lokono (A) lo mismo, y la sigla dice que está en su
+      vocabulario comparado arahuaco-maipure. La nota medía el lexicón, no la
+      lengua. La forma se queda; cambia la justificación.
+  - dicho: 'ninguna de las once tiene rival atestiguado (por eso la política d19.b no las tocó)'
+    medido: >-
+      Dos lo tienen, con otra glosa. `wanü` 'anciano, mayor' frente a `wasima`
+      'Viejo, anciano' (Zavala Reyes 2015 #145 (AM), p. 68), que ya está en el
+      canon y ya lo enseña la plantilla breve. Y `yama` 'aquí' frente a `popoi`
+      'Ahí. Adverbio de lugar' (#201 (AM), p. 70), dicho ya 397 veces en la
+      base. d19.b no los alcanzó porque exige glosa idéntica; el encargo de
+      tf.5 pide que mande la atestiguada que CUBRA el concepto.
+  - dicho: 'la forma lokona es la sustituta natural de cada voz'
+    medido: >-
+      Choca en tres casos, medido: `yaha` 'aquí' tiene bajo `fonemizar` el
+      mismo esqueleto que el wayuu `yaa` (la h es «muda castellana» en el
+      filtro) y queda a una letra de siete voces del núcleo (`kaa`, `naa`,
+      `maa`…); `luccu` 'dentro' choca con `lukku` 'hombre' —lo avisa el propio
+      Perea, p. 546—, así que se toma su variante `ruccu`; y `dia` 'palabra'
+      es el castellano «día» (está en las listas del motor y
+      `neologismo_valido` la rechaza).
+  - dicho: '(de paso) el lokono `bute` del lexicón es «ahora»'
+    medido: >-
+      No es un adverbio. Brinton 1871 lo glosa «nota praesentis» en su
+      traducción interlineal de Hechos 14:11, y Perea segmenta ese mismo
+      `-bu-te` como terminación verbal: «d-a-ditta-bu-te = AHORA entiendo» (p.
+      493), donde el «ahora» traduce el tiempo del verbo. El «ahora» lokono es
+      `dannu-hu` (pp. 492-493).
+  - dicho: '(de paso) las once son caquetío «reconstruido»'
+    medido: >-
+      Cuatro ni pasan el filtro fonotáctico del caquetío atestiguado: `anüiki`,
+      `pütchi`, `tüshi` y `wanü` llevan `ü`, que no está en su inventario
+      (medicion §voces_viejas).
+
+# ══════════════════════════════════════════════════════════════════════
+# CRITERIO — el de D11 fase 3 (#226), aplicado a raíces
+# ══════════════════════════════════════════════════════════════════════
+criterio:
+  etiquetas:
+    caquetío-atestiguado: >-
+      una fuente caquetía da una forma cuya glosa CUBRE el concepto: entonces
+      manda ella (d19.b, con el alcance que tf.5 le da) y la voz wayuu se
+      archiva sin sustituta nueva
+    caquetío-reconstruido: >-
+      dos de las tres hermanas de cc.12 —lokono, taíno, achagua— concuerdan en
+      la raíz (consonantes Y vocales, con las correspondencias que el repo
+      declara) y la forma está documentada tal cual en una de ellas (el
+      criterio (a) que Miguel aceptó en tf.1)
+    caquetío-hipotético: 'una sola hermana; composición nuestra; o concordancia parcial. En duda, aquí'
+  aplicado_a_raices: >-
+    En el pronombre la concordancia la daba el paradigma alineado casilla por
+    casilla; en una raíz léxica no hay paradigma, así que se exige lo mismo que
+    al prefijo: consonante y vocal. Resultado medido: NINGUNA de las once llega
+    a reconstruido. La que más se acerca es 'dentro' (lokono `ruccu`, achagua
+    `yrrico`: las consonantes r-k coinciden, las vocales no), y se queda en
+    hipotético.
+  taino: >-
+    Sólo con cronista (taino_lista_maestra_2026-09-22.yaml, clase i). Para los
+    once conceptos el cero está verificado voz por voz: `nacan` es «medio ó en
+    medio» en Las Casas —el «Dentro» es de Coll y Toste, sin cronista—; `gua`
+    'He aquí' no tiene cronista para esa glosa (Pedro Mártir da el prefijo);
+    `Hiqui` 'Dentro' es de la lista de Rafinesque (clase iii). Ninguna entra.
+  cuarta_voz: >-
+    El caribe insular (Goeje 1939) se cita como APOYO, no como base, igual que
+    en #226: Miguel no lo nombró. Pero su columna «A» es lokono (Goeje 1928):
+    donde Goeje da «A id.», eso SÍ es dato lokono.
+  estratos_lokono: >-
+    Schultz 1802 vía el Fraseario de Perea (página impresa verificada en el
+    .txt contra la cabecera de cada página), Goeje 1939 columna A, Brinton
+    1871, Oliver 1989 Tabla A-2, Pet 1987 (vía el lexicón, SIN clave en
+    bibliografia.yaml: lo que sólo se apoya en Pet lleva deuda).
+  achagua: >-
+    Neira y Ribero 1762, TRANSCRIPCIÓN POR VISIÓN (09-12). El vocabulario no
+    tiene página impresa medida: se cita por pliego y lado. Lo que aquí decide
+    una opción recomendada se verificó en imagen en esta campaña; el resto se
+    cita de achagua_neira_ribero_1762.yaml tal cual.
+
+correspondencias_del_repo_que_se_usan:
+  # Sólo las que el repo YA declara (curiana_sim/cognados_oliver.py). En esta
+  # campaña no hizo falta C1 ni C3: ninguna raíz propuesta depende de ellas.
+  - id: C8
+    que: 'r ~ l indecidible'
+    cita: 'Oliver 1989 cap. 2 p. 105: «The discrimination of l, r, rr and lr is rarely consistent»'
+    usa: [sulu]
+    nota: 'Perea lo dice del propio lokono de los moravos, p. 546: «la alternación r/l en el vocablo ruccu, luccu, ambos en, dentro»'
+  - id: C9
+    que: 'las vocales quedan fuera del método comparativo de Oliver'
+    cita: 'Oliver 1989 cap. 2 p. 105'
+    consecuencia: 'la forma se toma documentada de UNA hermana, nunca se deriva ni se promedia'
+    usa: [sulu, kashi, wana, naba, kapua, tüshi]
+  - id: D5c
+    que: '<gu> ante vocal = /w/'
+    cita: 'D5 (2026-08-31); Oliver 1989 cap. 2 p. 142 «gua=/wa/»'
+    usa: [yama]
+
+# ══════════════════════════════════════════════════════════════════════
+# LAS ONCE VOCES
+# `coste_medido` lo compara `--check` con medicion §coste_por_opcion.
+# ══════════════════════════════════════════════════════════════════════
+voces:
+
+  # ───────────────────────────── ADVERBIOS ─────────────────────────────
+  - voz: kashi
+    glosa: 'ahora, en este momento (temporal presente)'
+    cat: part
+    actual:
+      origen: 'wayuu (nota del lexicón: «wayunaiki-cogn»)'
+      uso: '3.187 usos sueltos (51 runs de 51), 59 como núcleo de 12 formas; 3.299 respuestas'
+      ensenanza: '`prompt_reglas_breve` (CONECTORES, los 63) y `prompt_reglas_completo` ×2 (conectores y el ejemplo ideal); en la lista de conectores de `prompt_refuerzo` (posición 5, ver §como_se_aplica); 17 apariciones en 6 tests'
+      choque: 'bajo `fonemizar` da `kasi`, el esqueleto de `kasi` ''sol'' atestiguado (colisión declarada el 2026-09-19)'
+    atestiguada_caquetia: 'ninguna'
+    lokono:
+      - forma: 'dannu-hu'
+        cita: '«AHORA ; L: nunc […] 7-4 ca-lluccu-mùn-ni-bu DANNU-HU h-a-dumki-n = donde habitáis AHORA.» · «26-6 DANNU-HU yaha-doa [=] AHORA estoy aquí.» · «DANNU-HU-waria = desde AHORA.»'
+        obra: perea-alonso-1942
+        pagina: '492-493'
+        estrato: 'Schultz 1802 (Fraseario)'
+      - forma: 'dannu'
+        cita: '«HOY ; L : hodie […] 13-33 DANNU-HU da-i ca-sá bu = yo te he engendrado HOY . […] 23-1 DANNU-HU muniru man = hasta el día de HOY .»'
+        obra: perea-alonso-1942
+        pagina: 517
+        nota: 'el mismo dannu-hu vale «hoy» y «ahora»; lokono_perea_1942.yaml le cuenta 4 atestaciones en HOY'
+      - forma: 'wacanu-hu'
+        cita: '«-52 WACANU-HU kebe-ru-cuba-lihu-uria i = AHORA lo habéis desechado de vosotros.»'
+        obra: perea-alonso-1942
+        pagina: 492
+        nota: 'segunda forma, una sola atestación (lokono_perea_1942.yaml): no se propone'
+      - forma: 'bute (lexicón)'
+        nota: 'NO es «ahora»: Brinton 1871 lo glosa «nota praesentis» (ver §falso_al_medirlo)'
+    taino: 'ninguna con cronista (§criterio.taino)'
+    achagua:
+      - forma: Chabacasade
+        cita: '«Agora — Chabacasade» · «Agora poco ha — Chabacasadeca»'
+        obra: neira-ribero-1762
+        pagina: 'pliego 32 izq.'
+      - forma: 'Chabaca-chu'
+        cita: '«Como ahora = Chabacachu» (en el ejemplo de «Con (de compañia)»)'
+        obra: neira-ribero-1762
+        pagina: 'pliego 49 izq.'
+      - forma: Guarege
+        cita: '«Oy — Guarege»'
+        obra: neira-ribero-1762
+        pagina: 'pliego 78 der.'
+    concordancia: 'NO — lokono dannu / achagua chabaca-: ni consonantes ni vocales'
+    opciones:
+      - letra: A
+        formas: [danu]
+        etiqueta: caquetío-hipotético
+        derivacion: >-
+          La forma lokona `dannu` (Schultz), sin la geminada: la `nn` de los
+          moravos no pasa la fonotáctica del caquetío atestiguado («clusters no
+          atestiguados: nn», medido). Una sola hermana.
+        coste: >-
+          Clave libre, esqueleto propio (`danu` ≠ `dannu`): se acaba la
+          colisión con `kasi`. Pasa la fonotáctica. Choque DE LECTURA, no de
+          clave: empieza por `da`, que tf.3 hace posesivo de 1sg — «danu» se
+          puede leer «da-nu» 'mi nu'. Un agente que escriba `dannu` sigue
+          puntuando lokono.
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 3187, usos_como_nucleo_de_otra_forma: 59, respuestas_que_la_dicen: 3299, plantillas_a_tocar: 2, formas_de_la_base_a_raiz_de_ninguna_parte: 6}
+      - letra: B
+        formas: [chabaka]
+        etiqueta: caquetío-hipotético
+        derivacion: 'la raíz achagua `chabaca-` de «Agora» y «Como ahora»; una sola hermana'
+        coste: >-
+          Clave libre y fonotáctica que pasa, pero bajo `fonemizar` da
+          `kabaka` (la ch se lee k) y queda a una letra de `kabana` 'sabana',
+          atestiguada. Y es achagua cuando el lokono da la forma.
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 3187, usos_como_nucleo_de_otra_forma: 59, respuestas_que_la_dicen: 3299, plantillas_a_tocar: 2, formas_de_la_base_a_raiz_de_ninguna_parte: 6}
+      - letra: C
+        formas: []
+        etiqueta: '(archivar sin sustituta)'
+        derivacion: 'se archiva y nada la sustituye'
+        coste: >-
+          No la recomiendo: con tf.2 el presente va SIN MARCA y el tiempo lo
+          dice el adverbio; sin `kashi` no queda adverbio de 'ahora' (`puna`
+          'antes' y `naka` 'después' sí quedan).
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 3187, usos_como_nucleo_de_otra_forma: 59, respuestas_que_la_dicen: 3299, plantillas_a_tocar: 2, formas_de_la_base_a_raiz_de_ninguna_parte: 6}
+    recomendacion: A
+    por_que: >-
+      Es el «ahora» de la hermana que Oliver pone más cerca del caquetío, en el
+      estrato más antiguo, atestiguado en las dos entradas del Fraseario que
+      lo piden (AHORA y HOY); y separa por fin el adverbio del 'sol'.
+
+  - voz: yama
+    glosa: 'aquí, en este lugar (deíctico proximal)'
+    cat: part
+    actual:
+      origen: 'wayuu (nota: «wayunaiki-cogn»)'
+      uso: '1.814 usos sueltos (51 runs), 16 como núcleo de 4 formas; 1.904 respuestas'
+      ensenanza: '`prompt_reglas_completo` (conectores); en la lista de `prompt_refuerzo` (posición 7); 12 apariciones en 5 tests'
+    atestiguada_caquetia:
+      - forma: popoi
+        cita: '«201.- Popoi (AM): Ahí. Adverbio de lugar.»'
+        obra: zavala-reyes-2015
+        pagina: 70
+        en_el_lexicon: 'caquetío-atestiguado, cat part; 397 usos sueltos en 23 runs'
+        cadena: 'Zavala la toma de Angulo Molina (AM), que no está en el repo (4-fuentes/zavala-reyes-2015.md)'
+        glosa_frente_a_la_voz: '«ahí» (deíctico medio) frente a «aquí» (proximal): cubre el concepto de lugar cercano, no lo iguala'
+    lokono:
+      - forma: yaha
+        cita: '«AQUÍ ; L : hic, P : aquí, F : ici, ci, I : here. 16-28 wa-makua YAHA-coa u = todos nosotros estamos AQUÍ . 25-24 hu-makua YAHA-coa-mutti = y todos los que estáis AQUÍ.»'
+        obra: perea-alonso-1942
+        pagina: 496
+      - forma: 'ya-ha (Goeje, col. A)'
+        cita: '«ici, être ici ya-ka. 6 id., 2, A ya-ha»'
+        obra: goeje-1939
+        pagina: 24
+        verificado: imagen
+        nota: 'la misma línea da el caribe insular ya-ka: apoyo'
+    taino: 'ninguna con cronista (§criterio.taino)'
+    achagua:
+      - forma: 'Guayare, así, amí'
+        cita: '«Aqui — Guayare, así, amí»'
+        obra: neira-ribero-1762
+        pagina: 'pliego 37 izq.'
+      - forma: 'Guaiare, sarra, Agiani, Agiabi'
+        cita: '«Aca, aqui — Guaiare, sarra, Agiani, Agiabi»'
+        obra: neira-ribero-1762
+        pagina: 'pliego 30 izq.'
+    concordancia: 'NO declarable — lokono ya-ha / achagua (gua)ya-re: comparten una sílaba de dos letras, y para eso #226 heredó la cautela de las formas cortas'
+    opciones:
+      - letra: A
+        formas: [popoi]
+        etiqueta: 'caquetío-atestiguado (la voz ya existe; se archiva `yama`)'
+        derivacion: >-
+          Manda la atestiguada. `popoi` es el único deíctico de lugar caquetío
+          con cita, y el agente ya lo usa. La glosa de la fuente NO se cambia:
+          la plantilla enseñaría `popoi (ahí)` donde hoy enseña `yama (aquí)`.
+        coste: >-
+          Cero formas nuevas, cero colisiones, pasa la fonotáctica. El coste es
+          de significado, y se declara: el caquetío del canon pasa a tener un
+          solo deíctico cercano, «ahí», sin el contraste aquí/ahí del
+          castellano.
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 1814, usos_como_nucleo_de_otra_forma: 16, respuestas_que_la_dicen: 1904, plantillas_a_tocar: 1, formas_de_la_base_a_raiz_de_ninguna_parte: 5}
+      - letra: B
+        formas: [yaha]
+        etiqueta: caquetío-hipotético
+        derivacion: 'la forma lokona tal cual (Perea p. 496; Goeje col. A, p. 24), con el caribe insular ya-ka de apoyo. Una sola hermana'
+        coste: >-
+          Es clave lokono (`yaha` 'aquí'): hay que renombrarla. Bajo
+          `fonemizar` da `yaa`, el esqueleto del wayuu `yaa` — o sea, sale del
+          wayuu por la puerta y vuelve por el esqueleto —, y queda a una letra
+          de siete voces del núcleo: seis verbos (chaa, kaa, maa, naa, taa,
+          waa) y el conector saa.
+          Conserva el contraste aquí/ahí.
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 1814, usos_como_nucleo_de_otra_forma: 16, respuestas_que_la_dicen: 1904, plantillas_a_tocar: 1, formas_de_la_base_a_raiz_de_ninguna_parte: 5}
+      - letra: C
+        formas: [wayare]
+        etiqueta: caquetío-hipotético
+        derivacion: 'achagua Guayare con D5c (gu = /w/). Una sola hermana'
+        coste: 'mismo esqueleto que la clave achagua `guayare` (renombrarla); empieza como `waya` ''nosotros'''
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 1814, usos_como_nucleo_de_otra_forma: 16, respuestas_que_la_dicen: 1904, plantillas_a_tocar: 1, formas_de_la_base_a_raiz_de_ninguna_parte: 5}
+    recomendacion: A
+    por_que: >-
+      «Sí o sí tenemos que usar los atestiguados por sobre los reconstruidos»
+      (d19.b), y tf.5 pide que mande la atestiguada que cubra el concepto. Si
+      Miguel quiere conservar el contraste aquí/ahí, B — con sus dos choques.
+
+  - voz: sulu
+    glosa: 'adentro, dentro de, en el interior de'
+    cat: part
+    actual:
+      origen: 'wayuu (nota: «wayunaiki»)'
+      uso: '1.577 usos sueltos (51 runs), 271 como núcleo de 32 formas; 2.007 respuestas'
+      ensenanza: '`prompt_reglas_completo` (conectores)'
+    atestiguada_caquetia: 'ninguna (`wamipa` es «hueco, profundidad», un nombre)'
+    lokono:
+      - forma: 'ruccu ~ luccu'
+        cita: '«la alternación r/l en el vocablo ruccu, luccu, ambos en, dentro, da lugar en su última forma a una grave interferencia con el término luccu = hombre, persona, indio.»'
+        obra: perea-alonso-1942
+        pagina: 546
+        estrato: 'Compendio gramatical de Perea sobre el lokono de los moravos'
+      - forma: '-lluccu-mùn'
+        cita: '«DENTRO, (Adentro) […] 5-23 halli-ca-i cuiu tu-LLUCCU-MÙN-ni-cano = nadie DENTRO (adentro). 19-8 kerki U-LLUCCU-MÙN = DENTRO del templo»'
+        obra: perea-alonso-1942
+        pagina: 508
+      - forma: 'o-loko (Goeje, col. A)'
+        cita: '«dans, le dedans A o-loko»'
+        obra: goeje-1939
+        pagina: 87
+        verificado: imagen
+      - forma: 'loko (lexicón)'
+        nota: 'Pet 1987 vía el lexicón; Pet no tiene clave en bibliografia.yaml'
+    taino: 'ninguna con cronista — `nacan` es «en medio» en Las Casas (§criterio.taino)'
+    achagua:
+      - forma: Yrrico
+        cita: '«En q.do significa dentro = Yrrico. V.g. En el cielo = Erri irrico, id est, dentro del cielo.»'
+        obra: neira-ribero-1762
+        pagina: 'pliego 61 izq.'
+        verificado: 'imagen, esta campaña'
+      - forma: Lirrico
+        cita: '«Dentro — Lirrico» · «Adentro — Lirrico»'
+        obra: neira-ribero-1762
+        pagina: 'pliegos 53 der. y 31 izq.'
+    otras_de_la_esfera:
+      kalinago: '«dedans de la bouche l-ium-ulugu», «fenêtre uluko» (Goeje 1939 p. 87, verificado en imagen)'
+    concordancia: >-
+      PARCIAL — la mejor del bloque. Lokono `ruccu` y achagua `(y)rrico`
+      comparten las consonantes r-k (y la r/l del lokono es la de C8); las
+      vocales no (u-u / i-o), y por C9 no se derivan. Por el criterio no llega
+      a reconstruido.
+    opciones:
+      - letra: A
+        formas: [ruku]
+        etiqueta: caquetío-hipotético
+        derivacion: >-
+          La variante con r del lokono (`ruccu`, Perea p. 546) en grafía
+          fonémica. Se elige la r y no la l por dos razones escritas: la l
+          choca con `luccu` 'hombre' (lo dice Perea) y la r es la consonante
+          que el achagua comparte.
+        coste: 'clave libre, 0 colisiones, pasa la fonotáctica; en el texto de la base sale 4 veces (2 respuestas), sin reconocer'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 1577, usos_como_nucleo_de_otra_forma: 271, respuestas_que_la_dicen: 2007, plantillas_a_tocar: 1, formas_de_la_base_a_raiz_de_ninguna_parte: 11}
+      - letra: B
+        formas: [loko]
+        etiqueta: caquetío-hipotético
+        derivacion: 'la forma lokona de Goeje (col. A) y de Pet'
+        coste: 'es clave lokono (renombrarla); y un lector la lee «loco»'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 1577, usos_como_nucleo_de_otra_forma: 271, respuestas_que_la_dicen: 2007, plantillas_a_tocar: 1, formas_de_la_base_a_raiz_de_ninguna_parte: 11}
+      - letra: C
+        formas: []
+        etiqueta: '(archivar sin sustituta)'
+        derivacion: 'se archiva y nada la sustituye'
+        coste: 'no la recomiendo: la escena por lugar hace que el agente diga dónde está; ninguna voz del canon dice «dentro»'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 1577, usos_como_nucleo_de_otra_forma: 271, respuestas_que_la_dicen: 2007, plantillas_a_tocar: 1, formas_de_la_base_a_raiz_de_ninguna_parte: 11}
+    recomendacion: A
+    por_que: 'es la única voz de las once con dos hermanas detrás, aunque no lleguen al criterio, y no choca con nada'
+    descartada: '`iriko` (el achagua tal cual): una sola hermana y lleva dentro el castellano «rico»'
+
+  # ─────────────────────────────── VERBOS ───────────────────────────────
+  - voz: wana
+    glosa: 'ver, observar, mirar'
+    cat: v_raiz
+    actual:
+      origen: 'wayuu (nota: «lokono/wayunaiki»; el lokono del lexicón no la sostiene: su «ver» es otra raíz)'
+      uso: '71 usos sueltos, 5.274 como núcleo de 95 formas (wana-ka, wana-ni, wana-da…); 3.335 respuestas'
+      ensenanza: 'el ejemplo de IDENTIDAD (los 63: «Taya wana-ka arima wara kari»), `prompt_reglas_completo` ×4, `prompt_refuerzo` ×4, `FORMAS_SEED` ×7 y `_NUCLEO_FALLBACK` de la koiné; 57 apariciones en 15 tests'
+    atestiguada_caquetia: 'ninguna (`jai` es «oír, escuchar»)'
+    lokono:
+      - forma: 'a-ddiki-n'
+        cita: '«VER; L: videre […] 2-17 h-ibiki-ddu-llia-nnu A-DDIKI-N m-a-ppa Ù-RAIYA = vuestros mancebos VERÁN VISIONES . -31 kia A-DDIKI-N l-a-ni-ca VIÉNDO-lo él .»'
+        obra: perea-alonso-1942
+        pagina: 479
+        estrato: 'Schultz 1802'
+      - forma: 'a-ddiki-n (mirar)'
+        cita: '«hamma a-dina-ma-coa-ba A-DDIKI-N casaccu-muni-ru ? = qué estáis MIRANDO al cielo ?»'
+        obra: perea-alonso-1942
+        pagina: 389
+      - forma: dikhin
+        obra: oliver-1989-apendice-a
+        pagina: 'Tabla A-2, fila 57 «see»'
+      - forma: 'addin'
+        cita: '«addin to see» (glosa interlineal de Hechos 14:11)'
+        obra: brinton-1871
+        pagina: 'sin página medida en el .txt'
+      - forma: 'dykhyn (lexicón)'
+        nota: 'Pet 1987, sin clave en bibliografia.yaml'
+    taino: 'ninguna con cronista'
+    achagua:
+      - forma: 'Nucabau (nu-caba-u)'
+        cita: '«Ver — Nucabau» · «Mirar — Nucabau»'
+        obra: neira-ribero-1762
+        pagina: 'pliegos 97 izq. y 76 izq.'
+        nota: 'el arte lo confirma: «Nacabauʃi» ''te miran'' (achagua_arte_neira_ribero_2026-09-22.yaml, p. 12)'
+    otras_de_la_esfera:
+      kalinago: '«voir ene, eni» con sigla K: origen caribe, no arahuaco (kalinago_goeje_1939.yaml, p. 93)'
+    concordancia: 'NO — lokono d-k / achagua k-b'
+    opciones:
+      - letra: A
+        formas: [diki]
+        etiqueta: caquetío-hipotético
+        derivacion: 'la raíz lokona, la misma en los cuatro estratos citados (Schultz, Brinton, Oliver A-2, Pet), en grafía fonémica (sin la dd de los moravos). Una sola hermana'
+        coste: 'clave libre, 0 colisiones, pasa la fonotáctica. Es el verbo más enseñado del bloque: IDENTIDAD, koiné y 15 tests'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 71, usos_como_nucleo_de_otra_forma: 5274, respuestas_que_la_dicen: 3335, plantillas_a_tocar: 3, formas_de_la_base_a_raiz_de_ninguna_parte: 43}
+      - letra: B
+        formas: [kaba]
+        etiqueta: caquetío-hipotético
+        derivacion: 'la raíz achagua `caba`. Una sola hermana'
+        coste: 'termina en `-ba`, el futuro de tf.2, y queda a una letra de once voces del caquetío del habla (kabo, naba, kaa, kana…)'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 71, usos_como_nucleo_de_otra_forma: 5274, respuestas_que_la_dicen: 3335, plantillas_a_tocar: 3, formas_de_la_base_a_raiz_de_ninguna_parte: 43}
+      - letra: C
+        formas: []
+        etiqueta: '(archivar sin sustituta)'
+        derivacion: '`nii` ''ojo, mirada, visión'' cubriría la mirada, no el verbo; dc.3 hace nombre al verbo, no verbo al nombre'
+        coste: 'no la recomiendo'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 71, usos_como_nucleo_de_otra_forma: 5274, respuestas_que_la_dicen: 3335, plantillas_a_tocar: 3, formas_de_la_base_a_raiz_de_ninguna_parte: 43}
+    recomendacion: A
+
+  - voz: naba
+    glosa: 'pensar, reflexionar, meditar'
+    cat: v_raiz
+    actual:
+      origen: 'wayuu (nota: «lokono/wayunaiki»; el lokono no la sostiene)'
+      uso: '40 usos sueltos, 3.863 como núcleo de 66 formas (naba-ni, naba-ka…); 3.103 respuestas'
+      ensenanza: 'el ejemplo de IDENTIDAD (los 63: «Ta-barsure naba-ni»), `prompt_reglas_completo` ×2, `FORMAS_SEED` ×2; 9 apariciones en 6 tests'
+    atestiguada_caquetia: 'ninguna (`panaa` ''saber, entender'' es reconstruida y es otro verbo)'
+    lokono:
+      - forma: 'cubu-ruccu-a'
+        cita: '«Pensar · 12-9 a-raiya-ttoa-ru isibu u-raiya ti-dia t-a cubá LU-CUBU-RUCCU-A-MONNUA = PENSABA que sería la visión que se le aparecía. […] 16-27 d-ikitta-sia-nnu a-ttùdda hidda l-a LU-CUBU-RUCCU-A-MONNUA = PENSANDO él : mis presos se han huído.»'
+        obra: perea-alonso-1942
+        pagina: 413
+        estrato: 'Schultz 1802'
+      - forma: 'cubu-ruccu'
+        cita: '«ÁNIMO, (v. mente, pensamiento) […] 14-22 n-a-tatta-doa n-a-malli-cutta-sia-nnu U-CCUBURUCCU-WA = fortalecieron los ÁNIMOS de sus [discípulos]»'
+        obra: perea-alonso-1942
+        pagina: 10
+      - forma: ikisi
+        cita: '«14-19 N-IKISI-DA haica hinna-i Paulus = PENSANDO ELLOS que Pablo estaba muerto.»'
+        obra: perea-alonso-1942
+        pagina: 413
+        nota: 'una sola vez para «pensar»; su acepción principal es «escoger» y «acordar» (p. 224)'
+    taino: 'ninguna con cronista'
+    achagua:
+      - forma: 'Nuedacananiuba'
+        cita: '«Pensar — Nuedacananiuba» (ej.: «Hacerle pensar = Nuedacananedau») · «Pensar ó acordarse — Nuedacananiuba»'
+        obra: neira-ribero-1762
+        pagina: 'pliegos 82 izq. y 25 izq. (arte)'
+    concordancia: 'NO'
+    opciones:
+      - letra: A
+        formas: [kuburuku]
+        etiqueta: caquetío-hipotético
+        derivacion: 'el tema lokono `cubu-ruccu` (sale en 12-9 y 16-27 para «pensar», y lokono_perea_1942.yaml le cuenta 2 atestaciones en ÁNIMO), en grafía fonémica. Una sola hermana'
+        coste: 'clave libre, 0 colisiones, pasa la fonotáctica. Larga (8 letras). Lleva dentro `ruku` (la opción A de ''dentro''): en lokono es lo mismo, «lo de dentro»'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 40, usos_como_nucleo_de_otra_forma: 3863, respuestas_que_la_dicen: 3103, plantillas_a_tocar: 2, formas_de_la_base_a_raiz_de_ninguna_parte: 39}
+      - letra: B
+        formas: [ikisi]
+        etiqueta: caquetío-hipotético
+        derivacion: 'la otra raíz lokona de «pensar», con una sola atestación'
+        coste: 'es clave lokono (`ikisi` ''escoger''): renombrarla'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 40, usos_como_nucleo_de_otra_forma: 3863, respuestas_que_la_dicen: 3103, plantillas_a_tocar: 2, formas_de_la_base_a_raiz_de_ninguna_parte: 39}
+      - letra: C
+        formas: []
+        etiqueta: '(archivar sin sustituta)'
+        derivacion: '`panaa` ''saber, conocer, entender'' cubre una parte'
+        coste: 'no la recomiendo: el ejemplo de IDENTIDAD es justamente «mi alma piensa»'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 40, usos_como_nucleo_de_otra_forma: 3863, respuestas_que_la_dicen: 3103, plantillas_a_tocar: 2, formas_de_la_base_a_raiz_de_ninguna_parte: 39}
+    recomendacion: A
+
+  # ───────────────────────────── NOMBRES Y ESTADOS ─────────────────────
+  - voz: tüshi
+    glosa: 'frío, temperatura baja'
+    cat: adj
+    actual:
+      origen: 'wayuu (nota: «wayunaiki-cogn»)'
+      uso: '324 usos sueltos, 848 como núcleo de 63 formas; 1.708 respuestas'
+      ensenanza: '`prompt_reglas_completo` (cuerpo); un evento de `curiana_eventos.py` («tüshi-juri»); 7 apariciones en 2 tests'
+      fonotactica: 'no pasa (ü)'
+    atestiguada_caquetia: 'ninguna'
+    lokono: 'ninguna en las fuentes del repo: el Fraseario y el Compendio de Perea no tienen «frío», el lexicón tampoco, y el «froid» de Goeje (amoi, kamoi) es de sigla K, caribe (p. 92). Es un cero de ESTAS fuentes, no de la lengua'
+    taino: 'ninguna con cronista'
+    achagua:
+      - forma: 'Casalinibe (casalini-)'
+        cita: '«Fresco, frio — Casalinibe» · «Fresca agua = Casaliniatai» · «Frio = Casalinibe. tenerlo = Casaliniuna» · «Friam.te — Casalinita»'
+        obra: neira-ribero-1762
+        pagina: 'pliego 64 der.'
+        verificado: 'imagen, esta campaña'
+    concordancia: 'no evaluable (una sola hermana)'
+    opciones:
+      - letra: A
+        formas: [kasalini]
+        etiqueta: caquetío-hipotético
+        derivacion: 'la raíz achagua `casalini-`, la misma en las cuatro entradas citadas, en grafía fonémica. Una sola hermana; se declara `v_estativo` (d21.4: el estado es verbo)'
+        coste: 'clave libre, 0 colisiones, pasa la fonotáctica. Tiene que cambiarse el evento «tüshi-juri»'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 324, usos_como_nucleo_de_otra_forma: 848, respuestas_que_la_dicen: 1708, plantillas_a_tocar: 1, formas_de_la_base_a_raiz_de_ninguna_parte: 23}
+      - letra: B
+        formas: []
+        etiqueta: '(archivar sin sustituta)'
+        derivacion: 'se archiva y nada la sustituye'
+        coste: 'el canon se queda sin «frío»; el viento (`juri`, atestiguado) no lo cubre'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 324, usos_como_nucleo_de_otra_forma: 848, respuestas_que_la_dicen: 1708, plantillas_a_tocar: 1, formas_de_la_base_a_raiz_de_ninguna_parte: 23}
+    recomendacion: A
+    por_que: 'es un hueco sin atestación: para eso está lo reconstruido (d19.c). Achagua porque es la única hermana que lo da en el repo'
+
+  - voz: kapua
+    glosa: 'amanecer, alba, primera luz del día'
+    cat: sust
+    actual:
+      origen: 'wayuu (nota: «wayunaiki-cogn»)'
+      uso: '537 usos sueltos (49 runs), 14 como núcleo de 2 formas; 1.148 respuestas'
+      ensenanza: '`prompt_reglas_completo` ×2 (naturaleza y el ejemplo ideal)'
+    atestiguada_caquetia: 'ninguna (`kasikure` es «levante, este»: dirección, no momento)'
+    lokono:
+      - forma: mauttia
+        cita: '«MAÑANA (La ; L: mane […] 5-21 n-a-cudoa hidda MAUTTIA-BU-REN = entraron DE MAÑANA. 28-23 MAUTTI-CA u-waria ma bakkùlla-ma muniru ren = desde LA MAÑANA hasta la tarde.»'
+        obra: perea-alonso-1942
+        pagina: 520
+        nota: 'también en p. 65 (MAÑANA, entre los nombres)'
+      - forma: wulisebeyu
+        cita: '«ALBA ; L : alba, P : alva, F : aube, I : dawn. 20-11 WULISEBEYU ibiti = hasta el ALBA.»'
+        obra: perea-alonso-1942
+        pagina: 8
+        nota: 'el concepto exacto, pero una sola atestación y diez letras: no se propone'
+      - forma: 'mothi (lexicón)'
+        nota: 'Pet 1987 ''mañana (tiempo futuro próximo)'': el mañana de «mañana», no el alba'
+    taino: 'ninguna con cronista'
+    achagua:
+      - forma: Tucamarraumi
+        cita: '«Amanecer — Tucamarraumi» · «Al Alba — tucamarracatasa» · «Aurora — errí camarra»'
+        obra: neira-ribero-1762
+        pagina: 'pliegos 34 der., 33 der. y 39 der.'
+      - forma: Manurecasa
+        cita: '«Alba, aurora — Manurecasa»'
+        obra: neira-ribero-1762
+        pagina: 'pliego 33 der.'
+    concordancia: 'NO'
+    opciones:
+      - letra: A
+        formas: [mautia]
+        etiqueta: caquetío-hipotético
+        derivacion: 'la forma lokona de «la mañana» (5-21 «de mañana» y 28-23), sin la geminada. Una sola hermana. La glosa se corre de «alba» a «mañana temprana»: se declara'
+        coste: 'clave libre, 0 colisiones, pasa la fonotáctica'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 537, usos_como_nucleo_de_otra_forma: 14, respuestas_que_la_dicen: 1148, plantillas_a_tocar: 1, formas_de_la_base_a_raiz_de_ninguna_parte: 3}
+      - letra: B
+        formas: [tukamara]
+        etiqueta: caquetío-hipotético
+        derivacion: 'el tema achagua de «Amanecer» y «Al Alba», que es el concepto exacto. Una sola hermana'
+        coste: 'clave libre, 0 colisiones, pasa la fonotáctica. Achagua cuando el lokono da una forma'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 537, usos_como_nucleo_de_otra_forma: 14, respuestas_que_la_dicen: 1148, plantillas_a_tocar: 1, formas_de_la_base_a_raiz_de_ninguna_parte: 3}
+      - letra: C
+        formas: []
+        etiqueta: '(archivar sin sustituta)'
+        derivacion: 'se archiva y nada la sustituye'
+        coste: 'no la recomiendo: el día de la era 2 tiene seis momentos y el primero es este'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 537, usos_como_nucleo_de_otra_forma: 14, respuestas_que_la_dicen: 1148, plantillas_a_tocar: 1, formas_de_la_base_a_raiz_de_ninguna_parte: 3}
+    recomendacion: A
+    por_que: 'la hermana más cercana y el estrato más antiguo, como en #226. Si pesa más el concepto exacto que la hermana, B'
+
+  - voz: anüiki
+    glosa: 'habla, palabra, lengua'
+    cat: sust
+    actual:
+      origen: 'wayuu (nota: «wayunaiki»)'
+      uso: '109 usos sueltos, 157 como núcleo de 4 formas (ma-anüiki, ta-anüiki…); 348 respuestas'
+      ensenanza: '`prompt_reglas_completo` ×3 y 6 veces en los ejemplos de las reglas de posesivo y privativo'
+      fonotactica: 'no pasa (ü)'
+    atestiguada_caquetia: 'ninguna'
+    en_el_canon_que_ya_lo_cubre:
+      forma: maa
+      entrada: '`maa` ''decir, hablar, comunicar'' (caquetío-reconstruido, «cognado en proto-arahuaco»; NO es de la deuda D11)'
+      regla: 'dc.3 B, ya enseñada: «un verbo es también su nombre, sin marca» — `maa` es hablar Y el habla'
+      deuda: '`maa` no cita a nadie: lo que se gana es no tener una voz wayuu, no ganar evidencia'
+    lokono:
+      - forma: 'a-dia-n'
+        cita: '«PALABRA (v. hablar, decir) […] a-canna-bu-té D-A-DIA-N hu-mùn = oíd estas MIS PALABRAS (mi decir) a vosotros.» · «LENGUA, idioma (v. decir) […] n-a-usa baddia abba-nu A-DIA-N u lluccu a-haca-n = y comenzaron a hablar en otras LENGUAS»'
+        obra: perea-alonso-1942
+        pagina: '75 y 57'
+    taino: 'ninguna con cronista'
+    achagua:
+      - forma: Chuanisí
+        cita: '«Palabra — Chuanisí»'
+        obra: neira-ribero-1762
+        pagina: 'pliego 80 izq.'
+    concordancia: 'NO'
+    opciones:
+      - letra: A
+        formas: []
+        etiqueta: '(archivar sin sustituta: lo cubre `maa`)'
+        derivacion: 'se archiva; «el habla, la lengua» es `maa` por dc.3'
+        coste: 'cero formas nuevas. Hay que reescribir los ejemplos de las reglas (`ta-anüiki`, `ma-anüiki` → `ta-maa`, `ma-maa`)'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 109, usos_como_nucleo_de_otra_forma: 157, respuestas_que_la_dicen: 348, plantillas_a_tocar: 1, formas_de_la_base_a_raiz_de_ninguna_parte: 5}
+      - letra: B
+        formas: [dia]
+        etiqueta: caquetío-hipotético
+        derivacion: 'la raíz lokona de palabra, lengua y voz'
+        coste: 'es clave lokono, es el castellano «día» (está en las listas del motor) y `neologismo_valido` la rechaza'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 109, usos_como_nucleo_de_otra_forma: 157, respuestas_que_la_dicen: 348, plantillas_a_tocar: 1, formas_de_la_base_a_raiz_de_ninguna_parte: 5}
+      - letra: C
+        formas: [chuani]
+        etiqueta: caquetío-hipotético
+        derivacion: 'la raíz achagua de «Palabra»; una sola hermana'
+        coste: 'clave libre, 0 colisiones, pasa la fonotáctica'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 109, usos_como_nucleo_de_otra_forma: 157, respuestas_que_la_dicen: 348, plantillas_a_tocar: 1, formas_de_la_base_a_raiz_de_ninguna_parte: 5}
+    recomendacion: A
+
+  - voz: pütchi
+    glosa: 'mensaje, palabra sagrada, voz del espíritu'
+    cat: sust
+    actual:
+      origen: 'wayuu (nota: «wayunaiki»)'
+      uso: '530 usos sueltos (51 runs), 525 como núcleo de 27 formas; 1.213 respuestas'
+      ensenanza: '`prompt_reglas_completo` (personas: «pütchi (mensaje/voz)»); 2 tests'
+      fonotactica: 'no pasa (ü, y el grupo tk tras fonemizar)'
+      lo_que_arrastra: >-
+        Es la palabra wayuu de la institución del palabrero: «Pütchikalü
+        (palabra-significado)» (guerra-curvelo-palabrero, pp. 28-29 impresas)
+        y «el Palabrero, orador e intermediario, Pütchipü'üi» (pp. 30-31). La ficha
+        de la fuente ya avisa que la Curiana es un cacicazgo y «Manaure no es
+        un palabrero». Con la voz entraba el marco.
+    atestiguada_caquetia: 'ninguna'
+    en_el_canon_que_ya_lo_cubre:
+      forma: maa
+      entrada: 'la palabra es `maa` (dc.3); «del espíritu» se compone con `barsure` ''alma'', atestiguada — `barsure-maa` ya lo acuñan los agentes'
+    lokono:
+      - forma: 'a-dia-hù'
+        cita: '«Jehowah A-DIA-HÙ a-sica-hù-sia lu-mùn = fué echa a él la VOZ de Jehová» · «ù-sa-ttu A-DIA-HÙ = santas PALABRAS»'
+        obra: perea-alonso-1942
+        pagina: '104 y 75-76'
+        nota: 'la misma raíz que la de anüiki: el lokono no separa la palabra sagrada de la palabra'
+    taino: 'ninguna con cronista'
+    achagua: 'ninguna para «mensaje»; «Voz — Bitaman» (pliego 98 izq.) y «Palabra — Chuanisí» (pliego 80 izq.)'
+    concordancia: 'NO'
+    opciones:
+      - letra: A
+        formas: []
+        etiqueta: '(archivar sin sustituta: lo cubren `maa` y `barsure`)'
+        derivacion: 'se archiva; el concepto se dice con voces del canon'
+        coste: 'cero formas nuevas'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 530, usos_como_nucleo_de_otra_forma: 525, respuestas_que_la_dicen: 1213, plantillas_a_tocar: 1, formas_de_la_base_a_raiz_de_ninguna_parte: 12}
+      - letra: B
+        formas: [dia]
+        etiqueta: caquetío-hipotético
+        derivacion: 'la raíz lokona'
+        coste: 'los mismos tres choques que en anüiki.B'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 530, usos_como_nucleo_de_otra_forma: 525, respuestas_que_la_dicen: 1213, plantillas_a_tocar: 1, formas_de_la_base_a_raiz_de_ninguna_parte: 12}
+      - letra: C
+        formas: [chuani]
+        etiqueta: caquetío-hipotético
+        derivacion: 'la achagua «Palabra»; si se elige también para anüiki, las dos voces pasan a ser una'
+        coste: 'clave libre, 0 colisiones'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 530, usos_como_nucleo_de_otra_forma: 525, respuestas_que_la_dicen: 1213, plantillas_a_tocar: 1, formas_de_la_base_a_raiz_de_ninguna_parte: 12}
+    recomendacion: A
+    por_que: 'ninguna hermana tiene una voz aparte para la palabra sagrada, y la que había traía un oficio wayuu'
+
+  - voz: wanü
+    glosa: 'anciano, mayor, persona de saber acumulado'
+    cat: sust
+    actual:
+      origen: 'wayuu (nota: «wayunaiki-cogn»)'
+      uso: '126 usos sueltos, 16 como núcleo de 3 formas; 339 respuestas'
+      ensenanza: '`prompt_reglas_completo` (personas) y 2 veces en las reglas'
+      fonotactica: 'no pasa (ü)'
+    atestiguada_caquetia:
+      - forma: wasima
+        cita: '«145.- Guasima (AM): Viejo, anciano.»'
+        obra: zavala-reyes-2015
+        pagina: 68
+        en_el_lexicon: 'caquetío-atestiguado, cat v_estativo; ya en `prompt_reglas_breve` (ESTADO: «usera, waranao, wasima son verbos»)'
+        cadena: 'Angulo Molina vía Zavala (AM)'
+      - forma: baharuko
+        cita: '«22. Baharuco (AM): Abuelo, viejo.»'
+        obra: zavala-reyes-2015
+        pagina: 65
+    lokono: 'tuyucu «ANCIANO» (Perea p. 9) y hebbe-n «ser viejo» (p. 638): no se proponen, manda la atestiguada'
+    taino: 'ninguna con cronista'
+    achagua: '«Viejo — Salirrerrí» (pliego 97 der.): no se propone'
+    opciones:
+      - letra: A
+        formas: [wasima]
+        etiqueta: 'caquetío-atestiguado (la voz ya existe; se archiva `wanü`)'
+        derivacion: 'manda la atestiguada: «Viejo, anciano» cubre «anciano, mayor». Por d21.4 el estado es verbo y por dc.3 el verbo es su nombre: `wasima` es ser viejo y el viejo'
+        coste: >-
+          Cero formas nuevas. Homógrafo declarado: `Wasima` es la matriarca de
+          los Guasicures de Caseto (era 2, tier 2). La regla de la MAYÚSCULA ya
+          lo resuelve; el residuo conocido es que `wasima` abriendo frase no
+          cuenta. «persona de saber acumulado» lo cubre `kibakibi`
+          'baquiano, conocedor' (Zavala #205 (AM), p. 70), también del canon
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 126, usos_como_nucleo_de_otra_forma: 16, respuestas_que_la_dicen: 339, plantillas_a_tocar: 1, formas_de_la_base_a_raiz_de_ninguna_parte: 4}
+      - letra: B
+        formas: [baharuko]
+        etiqueta: 'caquetío-atestiguado (la voz ya existe; se archiva `wanü`)'
+        derivacion: '«Abuelo, viejo»: es nombre, pero de parentesco'
+        coste: 'cero formas nuevas, sin homógrafo'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 126, usos_como_nucleo_de_otra_forma: 16, respuestas_que_la_dicen: 339, plantillas_a_tocar: 1, formas_de_la_base_a_raiz_de_ninguna_parte: 4}
+    recomendacion: A
+
+  - voz: bana
+    glosa: 'hígado'
+    cat: sust
+    actual:
+      origen: 'wayuu (nota: «el lokono del lexicón no cubre ''hígado''»)'
+      uso: '372 usos sueltos y 551 como núcleo de 49 formas — pero la muestra de la base la usa como el LOCATIVO: «kali-juri-bana = resplandor-que-corre-cerro-alto»'
+      ensenanza: 'ninguna plantilla la enseña como «hígado»; 5 veces en las reglas (el locativo), 9 en 3 tests'
+      homonimo: '-bana ''cerro, sitio alto'' (D9) y cuatro nombres del elenco (Dara-bana, Suri-bana…)'
+    atestiguada_caquetia: 'ninguna'
+    lokono:
+      - forma: 'u-bana (Goeje, col. A: «id.»)'
+        cita: '«1 am 113 — foie u-bana, 6, A id.»'
+        obra: goeje-1939
+        pagina: 34
+        verificado: 'imagen (M5 y esta campaña)'
+        lectura: 'el caribe insular dice u-bana, el garífuna (6) y el lokono (A) lo mismo; «1 am 113» es la entrada 113 del vocabulario comparado arahuaco-maipure de Goeje 1928'
+    taino: 'ninguna con cronista'
+    achagua:
+      - forma: Charidesí
+        cita: '«Higado — Charidesí»'
+        obra: neira-ribero-1762
+        pagina: 'pliego 68 izq.'
+        nota: 'otra raíz: el achagua NO la sostiene'
+    concordancia: 'una sola de las tres hermanas (lokono), con el caribe insular de apoyo'
+    opciones:
+      - letra: A
+        formas: [bana]
+        etiqueta: caquetío-hipotético
+        derivacion: >-
+          SE CONSERVA LA FORMA; CAMBIA LA JUSTIFICACIÓN y baja la etiqueta: deja
+          de ser «reconstruida desde el wayuu» y pasa a ser la forma lokona de
+          Goeje, con una sola hermana. Como `waya` y `naya` en tf.1.
+        coste: 'cero: ni forma nueva, ni plantilla, ni uso que deje de contar'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 0, usos_como_nucleo_de_otra_forma: 0, respuestas_que_la_dicen: 0, plantillas_a_tocar: 0, formas_de_la_base_a_raiz_de_ninguna_parte: 0}
+      - letra: B
+        formas: []
+        etiqueta: '(archivar sin sustituta)'
+        derivacion: 'la simulación no necesita «hígado» y el homónimo confunde con el locativo'
+        coste: 'las 8 formas de la base con `bana` de núcleo pasan a «raíz de ninguna parte» en la puerta; el locativo -bana no se toca'
+        coste_medido: {usos_de_la_voz_vieja_que_dejan_de_contar: 372, usos_como_nucleo_de_otra_forma: 551, respuestas_que_la_dicen: 1201, plantillas_a_tocar: 0, formas_de_la_base_a_raiz_de_ninguna_parte: 8}
+    recomendacion: A
+
+# ══════════════════════════════════════════════════════════════════════
+# LO QUE NO SABEMOS
+# ══════════════════════════════════════════════════════════════════════
+lo_que_no_sabemos:
+  - 'Ninguna de las once tiene forma caquetía propia salvo las dos que cubre una atestiguada. Todo lo demás sale de una sola hermana.'
+  - 'Si el caquetío distinguía aquí/ahí/allí. Zavala da un solo deíctico, `popoi` «Ahí», y la cadena pasa por Angulo Molina, que no está en el repo.'
+  - 'El «frío» lokono: las fuentes del repo no lo tienen. Un cero de ESTAS fuentes (regla 6).'
+  - 'El achagua es la lectura por visión de un solo lector; sólo Yrrico y Casalinibe se re-verificaron en imagen aquí.'
+  - 'La página propia del vocabulario achagua: en la esquina de algunos pliegos hay un número (p. ej. «37.» en 64 der.) que nadie ha medido; se cita por pliego y lado.'
+  - 'Brinton 1871 no tiene página medida en el .txt del repo.'
+
+# ══════════════════════════════════════════════════════════════════════
+# CÓMO SE APLICA SIN ROMPER EL INSTRUMENTO
+# ══════════════════════════════════════════════════════════════════════
+como_se_aplica:
+  - 'Es parte del mismo corte de serie de la tanda final (tf.9): nada de lo dicho se reescribe.'
+  - 'Se archivan en FUERA_DEL_HABLA, con la capa intacta: kashi, yama, sulu, wana, naba, tüshi, kapua, anüiki, pütchi y wanü. Quedan en la puerta y no se pueden reacuñar.'
+  - 'Entran seis formas hipotéticas nuevas: danu, ruku, diki, kuburuku, kasalini, mautia. `bana` cambia de nota y baja a hipotético.'
+  - 'Las plantillas: la lista de conectores de la completa y de la breve; personas, naturaleza y cuerpo de la completa; el EJEMPLO de IDENTIDAD (que tf.1-tf.3 ya obligan a reescribir: «Dai diki-kuba…», «Da-barsure kuburuku»); el ejemplo ideal de la completa.'
+  - '⚠️ `prompt_refuerzo` enseña por RECORTE (`[:4]`): `kashi` y `yama` están en su lista de conectores (posiciones 5 y 7, y `kashi` también en el respaldo «ka, mara, kashi, wara») y `naba` en la de verbos (posición 7); la medición estática, con `palabras_usadas=[]`, sólo ve `wana`, que va primera. Hay que cambiar las LISTAS, como se hizo con `kira`/`kali` el 2026-09-19.'
+  - 'La koiné: `FORMAS_SEED` (7 `wana-*` y 2 `naba-*`) y `_NUCLEO_FALLBACK` (`wana`).'
+  - 'El evento «tüshi-juri» de curiana_eventos.py; y los otros sitios que las nombran fuera del motor medido (seed_demo_run.py, la lista de prueba de curiana_database.py).'
+  - 'Las reglas: los ejemplos con `anüiki` (6) y con `wanü` (2).'
+  - 'Los tests: 105 apariciones de las diez voces que cambian (57 son de `wana`).'
+  - 'Renombrar ninguna clave lokono si se aceptan las recomendadas. Sí, si se elige B en yama (`yaha`), sulu (`loko`) o naba (`ikisi`), o C en yama (la achagua `guayare`).'
+  - >-
+    ⚠️ La capa. Las seis nuevas son hipotéticas, como `bui`, `lihi` y `tuhu` en
+    tf.1. El perfil `era2` NO muestra la capa hipotética en el muestreador
+    (5-experimento/perfiles_de_run.yaml): allí sólo llegan por la plantilla.
+    Hoy `sulu`, `yama`, `kapua` y `tüshi` son reconstruidas y el muestreador
+    del perfil era2 las puede sacar; sus sustitutas no. Si la corrida base va
+    con el perfil era2, hay que medir que la plantilla las enseña a los tiers
+    que hoy las ven por muestra.
+  - 'No se midió el score entero con el motor nuevo: hace falta la tanda aplicada.'
+
+# ══════════════════════════════════════════════════════════════════════
+# LAS PREGUNTAS PARA MIGUEL, CON LETRA
+# ══════════════════════════════════════════════════════════════════════
+preguntas:
+  - 'kashi (ahora): A danu · B chabaka · C archivar. (recomiendo A)'
+  - 'yama (aquí): A popoi, la atestiguada «ahí» · B yaha · C wayare. (recomiendo A; B si quieres el contraste aquí/ahí)'
+  - 'sulu (adentro): A ruku · B loko · C archivar. (recomiendo A)'
+  - 'wana (ver): A diki · B kaba · C archivar. (recomiendo A)'
+  - 'naba (pensar): A kuburuku · B ikisi · C archivar. (recomiendo A)'
+  - 'tüshi (frío): A kasalini · B archivar. (recomiendo A)'
+  - 'kapua (amanecer): A mautia · B tukamara · C archivar. (recomiendo A)'
+  - 'anüiki (habla, lengua): A archivar, lo cubre maa · B dia · C chuani. (recomiendo A)'
+  - 'pütchi (palabra sagrada): A archivar, lo cubren maa y barsure · B dia · C chuani. (recomiendo A)'
+  - 'wanü (anciano): A wasima, la atestiguada · B baharuko. (recomiendo A)'
+  - 'bana (hígado): A se queda, justificada por el lokono de Goeje y en hipotético · B archivar. (recomiendo A)'

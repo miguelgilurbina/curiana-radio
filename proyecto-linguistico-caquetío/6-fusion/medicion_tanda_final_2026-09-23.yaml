@@ -1,0 +1,1216 @@
+# Generado por 6-fusion/scripts/medir_tanda_final.py — NO editar a mano.
+medicion: tanda-final-antes-de-la-base
+fecha: 2026-09-23
+ref_de_antes: 1a97628
+ref_del_run: 114c991
+decide: 6-fusion/decisiones_tanda_final_2026-09-23.yaml
+instrumento:
+  vocabulario_base:
+    antes: 5500
+    hoy: 5496
+  fuera_del_habla:
+    antes: 21
+    hoy: 36
+  formas_de_plantilla:
+    antes: 5980
+    hoy: 5985
+  capas:
+    caquetío-atestiguado:
+      antes: 227
+      hoy: 184
+    caquetío-hipotético:
+      antes: 37
+      hoy: 58
+    caquetío-reconstruido:
+      antes: 80
+      hoy: 69
+    caquetío-retroabstraido:
+      antes: 49
+      hoy: 75
+    caribe-pemeno:
+      antes: 0
+      hoy: 2
+    español-colonial:
+      antes: 2
+      hoy: 3
+  claves_de_todas_las_reglas:
+    salen: []
+    entran:
+      - -ba
+      - -kuba
+      - da-
+    antes: 19
+    hoy: 22
+  prefijos:
+    salen: []
+    entran:
+      - da-
+    antes: 5
+    hoy: 6
+  sufijos:
+    salen: []
+    entran:
+      - -ba
+      - -kuba
+    antes: 14
+    hoy: 16
+  voces_de_fuera:
+    salen:
+      - cohiba
+    entran:
+      - baperon
+      - cohoba
+      - raporon
+    antes: 42
+    hoy: 44
+  formas_de_plantilla_salen:
+    - amanecer
+    - aquí
+    - completivo
+    - continuativo
+    - costa
+    - durmiendo
+    - extranjero
+    - haciendo
+    - haré
+    - hice
+    - kaa-ni
+    - ma-anüiki
+    - maa-da
+    - maa-ni
+    - masa-ka
+    - mensaje
+    - naa-da
+    - naa-ka
+    - naa-ni
+    - naba-ni
+    - pensando
+    - pronto
+    - prospectivo
+    - quiero
+    - raka-da
+    - salado
+    - suna-ni
+    - ta
+    - ta-barsure
+    - ta-hamaka
+    - ta-nii
+    - verbo-aspecto
+    - voz
+    - wa-anüiki
+    - wana-ka
+    - wana-ni
+  formas_de_plantilla_entran:
+    - ahí
+    - ba
+    - bui
+    - cohoba
+    - da-barsure
+    - da-hamaka
+    - da-nii
+    - dai
+    - danu
+    - deducidos
+    - diki
+    - diki-kuba
+    - duermo
+    - ello
+    - kasalini
+    - kuba-lokono
+    - kuburuku
+    - leídos
+    - lihi
+    - ma-maure
+    - maa-ba
+    - masa-kuba
+    - mautia
+    - mañana
+    - naa-ba
+    - naa-kuba
+    - nombres
+    - oyó
+    - pasa
+    - pasó
+    - pienso
+    - presente
+    - raka-ba
+    - ruku
+    - solos
+    - temprana
+    - tener
+    - tuhu-lokono
+    - va
+    - voces
+    - wa-maa
+raiz:
+  formas_de_la_base: 2928
+  usos: 106754
+  nucleo:
+    formas: 5
+    usos: 6
+    detalle:
+      - "naa-da-ba: ['naa', 'da', 'ba'] → ['naa'] (2 usos)"
+      - "wana-ka-ba: ['wana', 'ka', 'ba'] → ['wana'] (1 usos)"
+      - "waa-da-ba: ['waa', 'da', 'ba'] → ['waa'] (1 usos)"
+      - "wana-da-ba: ['wana', 'da', 'ba'] → ['wana'] (1 usos)"
+      - "maa-ba: ['maa', 'ba'] → ['maa'] (1 usos)"
+  ninguna_parte:
+    formas: 1
+    usos: 4
+    detalle:
+      - "pütshi-bana: False → True (4 usos)"
+  familia:
+    formas: 15
+    usos: 66
+    detalle:
+      - "jachos: caquetío → español-colonial (28 usos)"
+      - "jachos-ana: caquetío → español-colonial (13 usos)"
+      - "raporon-ka: caquetío → caribe-continental (4 usos)"
+      - "pütshi-bana: caquetío → desconocida (4 usos)"
+      - "tüshi-ima: caquetío → lokono (3 usos)"
+      - "baperon-ni: caquetío → caribe-continental (2 usos)"
+      - "kuba-bana: lokono → caquetío (2 usos)"
+      - "raporon-ni: caquetío → caribe-continental (2 usos)"
+      - "ta-raporon: caquetío → caribe-continental (2 usos)"
+      - "baperon-iro: caquetío → caribe-continental (1 usos)"
+      - "raporon-da: caquetío → caribe-continental (1 usos)"
+      - "ta-jachos: caquetío → español-colonial (1 usos)"
+      - "baperon-ka: caquetío → caribe-continental (1 usos)"
+      - "raporon: caquetío → caribe-continental (1 usos)"
+      - "wa-jachos: caquetío → español-colonial (1 usos)"
+prompt:
+  plantillas:
+    IDENTIDAD_LINGUISTICA:
+      antes: 1252
+      hoy: 1335
+      cambia: true
+    prompt_reglas_completo:
+      antes: 5152
+      hoy: 5211
+      cambia: true
+    prompt_reglas_breve:
+      antes: 1263
+      hoy: 1459
+      cambia: true
+    prompt_afijos_atestiguados:
+      antes: 639
+      hoy: 734
+      cambia: true
+    prompt_afijos_atestiguados_breve:
+      antes: 167
+      hoy: 187
+      cambia: true
+    "prompt_refuerzo[1.0]":
+      antes: 193
+      hoy: 189
+      cambia: true
+    "prompt_refuerzo[3.0]":
+      antes: 175
+      hoy: 175
+      cambia: true
+    "prompt_refuerzo[5.0]":
+      antes: 150
+      hoy: 150
+      cambia: true
+    "prompt_refuerzo[6.5]":
+      antes: 81
+      hoy: 81
+      cambia: true
+    "prompt_rescate[0]":
+      antes: 970
+      hoy: 1008
+      cambia: true
+    "prompt_rescate[1]":
+      antes: 772
+      hoy: 810
+      cambia: true
+    "prompt_rescate[2]":
+      antes: 688
+      hoy: 726
+      cambia: true
+  system_prompt_de_los_63:
+    prompts:
+      antes: 63
+      hoy: 63
+    medio:
+      antes: 7541.0
+      hoy: 7871.2
+    mediana:
+      antes: 6559
+      hoy: 6872
+    min:
+      antes: 4892
+      hoy: 5295
+    max:
+      antes: 11509
+      hoy: 11924
+    cambio_medio_pct: 4.38
+  tu_emocionar_cambia_en: 63
+  semilla_de_idiolecto_cambia_en: 63
+  agentes: 63
+score:
+  con_escena:
+    runs:
+      - ce7cd2a9
+      - 591d12d8
+      - 59aad1c3
+    control:
+      n: 216
+      desvios: 0
+      verde: true
+      detalle: []
+    del_run_a_antes:
+      n: 216
+      cambian: 12
+      a_la_baja: 12
+      al_alza: 0
+      delta_max_abs: 0.4
+      delta_medio_de_las_que_cambian: -0.2
+      score_medio_antes: 7.4486
+      score_medio_hoy: 7.4375
+      caquetias_cambian: 18
+      neos_cambian: 0
+      aspecto_medio_antes: 1.9815
+      aspecto_medio_hoy: 1.9815
+      aspecto_tope: 2.0
+      respuestas_con_aspecto_al_tope_antes: 212
+      respuestas_con_aspecto_al_tope_hoy: 212
+      respuestas_sin_aspecto_antes: 0
+      respuestas_sin_aspecto_hoy: 0
+    antes_a_hoy:
+      n: 216
+      cambian: 216
+      a_la_baja: 216
+      al_alza: 0
+      delta_max_abs: 5.6
+      delta_medio_de_las_que_cambian: -3.4352
+      score_medio_antes: 7.4375
+      score_medio_hoy: 4.0023
+      caquetias_cambian: 216
+      neos_cambian: 0
+      aspecto_medio_antes: 1.9815
+      aspecto_medio_hoy: 0.0
+      aspecto_tope: 2.0
+      respuestas_con_aspecto_al_tope_antes: 212
+      respuestas_con_aspecto_al_tope_hoy: 0
+      respuestas_sin_aspecto_antes: 0
+      respuestas_sin_aspecto_hoy: 216
+      por_run:
+        ce7cd2a9:
+          antes: 7.3833
+          hoy: 4.1458
+        591d12d8:
+          antes: 7.4306
+          hoy: 4.1028
+        59aad1c3:
+          antes: 7.4986
+          hoy: 3.7583
+      detalle:
+        -
+          run: ce7cd2a9
+          dia: 1
+          turno: 1
+          agente: Manaure
+          antes: 6.1
+          hoy: 3.6
+          delta: -2.5
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - naba-ni
+            - pia
+            - taya
+            - wana-da
+          formas_que_empiezan_a_contar: []
+        -
+          run: ce7cd2a9
+          dia: 1
+          turno: 1
+          agente: Sawaka
+          antes: 6.8
+          hoy: 3.1
+          delta: -3.7
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-da
+            - naba-ka
+            - naba-ni
+            - nüma
+            - pia
+            - poporo
+            - taya
+          formas_que_empiezan_a_contar: []
+        -
+          run: ce7cd2a9
+          dia: 1
+          turno: 1
+          agente: Patapati
+          antes: 9.8
+          hoy: 6.3
+          delta: -3.5
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - ma-pia
+            - naba-ni
+            - pia
+            - taya
+            - wana-da
+            - wana-ka
+          formas_que_empiezan_a_contar: []
+        -
+          run: ce7cd2a9
+          dia: 1
+          turno: 1
+          agente: Kunaro-bana
+          antes: 6.7
+          hoy: 3.4
+          delta: -3.3
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-ka
+            - naba-ni
+            - nüma
+            - pia
+            - sulu
+            - taya
+            - wana-ka
+          formas_que_empiezan_a_contar: []
+        -
+          run: ce7cd2a9
+          dia: 1
+          turno: 1
+          agente: Birokoa
+          antes: 5.0
+          hoy: 2.2
+          delta: -2.8
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - naba-ni
+            - nüma
+            - pia
+            - taya
+            - wana-ka
+            - yama
+          formas_que_empiezan_a_contar: []
+        -
+          run: ce7cd2a9
+          dia: 1
+          turno: 1
+          agente: Jachos
+          antes: 9.0
+          hoy: 6.8
+          delta: -2.2
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-ni
+            - nüma
+            - pia
+            - pütchi
+            - sulu
+            - taya
+            - wana-ka
+          formas_que_empiezan_a_contar: []
+        -
+          run: ce7cd2a9
+          dia: 1
+          turno: 1
+          agente: Karebe
+          antes: 6.5
+          hoy: 3.5
+          delta: -3.0
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-ni
+            - nüma
+            - pia
+            - sulu
+            - taya
+            - wana-ka
+            - yama
+          formas_que_empiezan_a_contar: []
+        -
+          run: ce7cd2a9
+          dia: 1
+          turno: 1
+          agente: Simaure
+          antes: 8.9
+          hoy: 6.8
+          delta: -2.1
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kapua
+            - kashi
+            - naba-ni
+            - pia
+            - taya
+            - wana-ka
+          formas_que_empiezan_a_contar: []
+        -
+          run: ce7cd2a9
+          dia: 1
+          turno: 1
+          agente: Apoaure
+          antes: 9.4
+          hoy: 5.0
+          delta: -4.4
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-ni
+            - nüma
+            - pia
+            - sulu
+            - taya
+            - wana-ni
+            - yama
+          formas_que_empiezan_a_contar: []
+        -
+          run: ce7cd2a9
+          dia: 1
+          turno: 1
+          agente: Hayo
+          antes: 5.6
+          hoy: 2.7
+          delta: -2.9
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kapua
+            - kashi
+            - naba-ni
+            - nüma
+            - pia
+            - sulu
+            - taya
+            - wana-ka
+          formas_que_empiezan_a_contar: []
+        -
+          run: ce7cd2a9
+          dia: 1
+          turno: 1
+          agente: Tebekoa
+          antes: 6.9
+          hoy: 3.6
+          delta: -3.3
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kapua
+            - kashi
+            - naba-da
+            - naba-ni
+            - nüma
+            - pia
+            - sulu
+            - taya
+          formas_que_empiezan_a_contar: []
+        -
+          run: ce7cd2a9
+          dia: 1
+          turno: 1
+          agente: Kasebo
+          antes: 6.9
+          hoy: 3.7
+          delta: -3.2
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kapua
+            - kashi
+            - naba-ni
+            - nüma
+            - pia
+            - sulu
+            - taya
+            - wana-ka
+          formas_que_empiezan_a_contar: []
+        -
+          run: ce7cd2a9
+          dia: 1
+          turno: 2
+          agente: Manaure
+          antes: 5.6
+          hoy: 2.1
+          delta: -3.5
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - ma-anüiki
+            - naba-da
+            - naba-ni
+            - nüma
+            - pia
+            - pütchi
+            - sulu
+          formas_que_empiezan_a_contar: []
+        -
+          run: ce7cd2a9
+          dia: 1
+          turno: 2
+          agente: Karebe
+          antes: 7.8
+          hoy: 4.1
+          delta: -3.7
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-ni
+            - nüma
+            - pia
+            - sulu
+            - taya
+            - wana-ka
+            - yama
+          formas_que_empiezan_a_contar: []
+        -
+          run: ce7cd2a9
+          dia: 1
+          turno: 2
+          agente: Patapati
+          antes: 8.3
+          hoy: 5.0
+          delta: -3.3
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - naba-ni
+            - pia
+            - sulu
+            - taya
+            - wana-da
+            - wana-ka
+            - wana-ni
+            - yama
+          formas_que_empiezan_a_contar: []
+        -
+          run: ce7cd2a9
+          dia: 1
+          turno: 2
+          agente: Saruro
+          antes: 9.0
+          hoy: 5.4
+          delta: -3.6
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-ka
+            - naba-ni
+            - nüma
+            - pia
+            - sulu
+            - taya
+            - wana-ka
+          formas_que_empiezan_a_contar: []
+        -
+          run: ce7cd2a9
+          dia: 1
+          turno: 2
+          agente: Kiwakoa
+          antes: 7.5
+          hoy: 4.0
+          delta: -3.5
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-ni
+            - nüma
+            - pia
+            - sulu
+            - taya
+            - wana-ka
+            - yama
+          formas_que_empiezan_a_contar: []
+        -
+          run: ce7cd2a9
+          dia: 1
+          turno: 2
+          agente: Paugis
+          antes: 9.0
+          hoy: 5.1
+          delta: -3.9
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-ni
+            - nüma
+            - pia
+            - ta-anüiki
+            - taya
+            - wana-ka
+            - wanü
+          formas_que_empiezan_a_contar: []
+        -
+          run: ce7cd2a9
+          dia: 1
+          turno: 2
+          agente: Isiro
+          antes: 5.0
+          hoy: 2.4
+          delta: -2.6
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-da
+            - naba-ni
+            - sulu
+            - taya
+            - wana-ni
+            - yama
+          formas_que_empiezan_a_contar: []
+        -
+          run: ce7cd2a9
+          dia: 1
+          turno: 2
+          agente: Dakawa
+          antes: 9.8
+          hoy: 7.0
+          delta: -2.8
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-da
+            - naba-ka
+            - naba-ni
+            - pia
+            - taya
+            - wana-da
+            - wana-ka
+          formas_que_empiezan_a_contar: []
+    adoptadas:
+      antes:
+        - biro-uco
+        - duna-ima
+        - gudamuen-apo
+        - jachos-ana
+        - kasi-bwara-bana
+        - kasi-pütchi-bana
+        - kasuta-iro-kana
+        - kira-barsure-uco
+        - mütsia-barsure-uco
+        - mütsia-kasi
+        - mütsia-kasi-bwara-bana
+        - mütsia-kasi-uco
+        - nii-uco-bana ta-rua-ni
+        - pütchi-rana
+      hoy:
+        - biro-uco
+        - duna-ima
+        - gudamuen-apo
+        - jachos-ana
+        - kasi-bwara-bana
+        - kasi-pütchi-bana
+        - kasuta-iro-kana
+        - kira-barsure-uco
+        - mütsia-barsure-uco
+        - mütsia-kasi
+        - mütsia-kasi-bwara-bana
+        - mütsia-kasi-uco
+        - nii-uco-bana ta-rua-ni
+    fijadas:
+      antes: []
+      hoy: []
+  control:
+    runs:
+      - 4e3eef64
+      - fafdce5b
+      - 104673f6
+    control:
+      n: 216
+      desvios: 0
+      verde: true
+      detalle: []
+    del_run_a_antes:
+      n: 216
+      cambian: 0
+      a_la_baja: 0
+      al_alza: 0
+      delta_max_abs: 0.0
+      delta_medio_de_las_que_cambian: 0.0
+      score_medio_antes: 7.387
+      score_medio_hoy: 7.387
+      caquetias_cambian: 0
+      neos_cambian: 0
+      aspecto_medio_antes: 1.9537
+      aspecto_medio_hoy: 1.9537
+      aspecto_tope: 2.0
+      respuestas_con_aspecto_al_tope_antes: 206
+      respuestas_con_aspecto_al_tope_hoy: 206
+      respuestas_sin_aspecto_antes: 0
+      respuestas_sin_aspecto_hoy: 0
+    antes_a_hoy:
+      n: 216
+      cambian: 216
+      a_la_baja: 216
+      al_alza: 0
+      delta_max_abs: 5.8
+      delta_medio_de_las_que_cambian: -3.2778
+      score_medio_antes: 7.387
+      score_medio_hoy: 4.1093
+      caquetias_cambian: 216
+      neos_cambian: 3
+      aspecto_medio_antes: 1.9537
+      aspecto_medio_hoy: 0.0
+      aspecto_tope: 2.0
+      respuestas_con_aspecto_al_tope_antes: 206
+      respuestas_con_aspecto_al_tope_hoy: 0
+      respuestas_sin_aspecto_antes: 0
+      respuestas_sin_aspecto_hoy: 216
+      por_run:
+        4e3eef64:
+          antes: 7.5222
+          hoy: 4.3153
+        fafdce5b:
+          antes: 7.6861
+          hoy: 4.3764
+        104673f6:
+          antes: 6.9528
+          hoy: 3.6361
+      detalle:
+        -
+          run: 4e3eef64
+          dia: 1
+          turno: 1
+          agente: Manaure
+          antes: 5.0
+          hoy: 1.9
+          delta: -3.1
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kapua
+            - kashi
+            - naba-ni
+            - nüma
+            - pia
+            - sulu
+            - taya
+            - wana-ka
+          formas_que_empiezan_a_contar: []
+        -
+          run: 4e3eef64
+          dia: 1
+          turno: 1
+          agente: Sawaka
+          antes: 6.1
+          hoy: 2.9
+          delta: -3.2
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-da
+            - naba-ni
+            - nüma
+            - pia
+            - sulu
+            - taya
+            - wana-da
+          formas_que_empiezan_a_contar: []
+        -
+          run: 4e3eef64
+          dia: 1
+          turno: 1
+          agente: Patapati
+          antes: 9.0
+          hoy: 7.0
+          delta: -2.0
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - naba-da
+            - naba-ni
+            - pia
+            - taya
+            - wana-ka
+            - wana-ni
+            - yama
+          formas_que_empiezan_a_contar: []
+        -
+          run: 4e3eef64
+          dia: 1
+          turno: 1
+          agente: Kunaro-bana
+          antes: 8.6
+          hoy: 5.5
+          delta: -3.1
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-ni
+            - nüma
+            - pia
+            - sulu
+            - taya
+            - wana-ka
+          formas_que_empiezan_a_contar: []
+        -
+          run: 4e3eef64
+          dia: 1
+          turno: 1
+          agente: Birokoa
+          antes: 5.9
+          hoy: 3.0
+          delta: -2.9
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-ni
+            - nüma
+            - pia
+            - pütchi
+            - taya
+            - wana-ni
+            - yama
+          formas_que_empiezan_a_contar: []
+        -
+          run: 4e3eef64
+          dia: 1
+          turno: 1
+          agente: Jachos
+          antes: 8.6
+          hoy: 5.9
+          delta: -2.7
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - naba-ni
+            - nüma
+            - pia
+            - sulu
+            - taya
+            - wana-ka
+            - yama
+          formas_que_empiezan_a_contar: []
+        -
+          run: 4e3eef64
+          dia: 1
+          turno: 1
+          agente: Karebe
+          antes: 9.0
+          hoy: 5.4
+          delta: -3.6
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-ni
+            - sulu
+            - taya
+            - wana-da
+            - wana-ka
+          formas_que_empiezan_a_contar: []
+        -
+          run: 4e3eef64
+          dia: 1
+          turno: 1
+          agente: Simaure
+          antes: 8.5
+          hoy: 6.0
+          delta: -2.5
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-ni
+            - nüma
+            - pia
+            - sulu
+            - ta-anüiki
+            - taya
+            - wana-da
+          formas_que_empiezan_a_contar: []
+        -
+          run: 4e3eef64
+          dia: 1
+          turno: 1
+          agente: Apoaure
+          antes: 8.8
+          hoy: 5.9
+          delta: -2.9
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-ni
+            - nüma
+            - pia
+            - sulu
+            - taya
+            - wana-da
+            - wana-ka
+          formas_que_empiezan_a_contar: []
+        -
+          run: 4e3eef64
+          dia: 1
+          turno: 1
+          agente: Hayo
+          antes: 8.7
+          hoy: 5.3
+          delta: -3.4
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - ma-pia
+            - naba-ni
+            - nüma
+            - pütchi
+            - taya
+            - wana-ka
+            - wana-ni
+          formas_que_empiezan_a_contar: []
+        -
+          run: 4e3eef64
+          dia: 1
+          turno: 1
+          agente: Tebekoa
+          antes: 7.4
+          hoy: 3.8
+          delta: -3.6
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-ni
+            - nüma
+            - pia
+            - sulu
+            - taya
+            - wana-ka
+          formas_que_empiezan_a_contar: []
+        -
+          run: 4e3eef64
+          dia: 1
+          turno: 1
+          agente: Kasebo
+          antes: 8.1
+          hoy: 4.8
+          delta: -3.3
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-ni
+            - nüma
+            - pia
+            - sulu
+            - ta-pütchi
+            - taya
+            - wana-da
+          formas_que_empiezan_a_contar: []
+        -
+          run: 4e3eef64
+          dia: 1
+          turno: 2
+          agente: Turicha
+          antes: 8.9
+          hoy: 4.9
+          delta: -4.0
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-da
+            - naba-ka
+            - naba-ni
+            - nüma
+            - pütchi
+            - taya
+          formas_que_empiezan_a_contar: []
+        -
+          run: 4e3eef64
+          dia: 1
+          turno: 2
+          agente: Amaka
+          antes: 4.2
+          hoy: 2.0
+          delta: -2.2
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - naba-ni
+            - pia
+            - taya
+          formas_que_empiezan_a_contar: []
+        -
+          run: 4e3eef64
+          dia: 1
+          turno: 2
+          agente: Paugis
+          antes: 9.0
+          hoy: 6.2
+          delta: -2.8
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - naba-ni
+            - nüma
+            - pia
+            - sulu
+            - ta-pütchi
+            - taya
+            - wana-ka
+            - wana-ni
+          formas_que_empiezan_a_contar: []
+        -
+          run: 4e3eef64
+          dia: 1
+          turno: 2
+          agente: Saruro
+          antes: 9.0
+          hoy: 6.0
+          delta: -3.0
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-ni
+            - pia
+            - sulu
+            - taya
+            - wana-ka
+            - yama
+          formas_que_empiezan_a_contar: []
+        -
+          run: 4e3eef64
+          dia: 1
+          turno: 2
+          agente: Kiwakoa
+          antes: 6.2
+          hoy: 2.8
+          delta: -3.4
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - ma-pütchi
+            - naba-da
+            - naba-ni
+            - nüma
+            - pia
+            - taya
+            - wa-wanü
+            - wana-da
+          formas_que_empiezan_a_contar: []
+        -
+          run: 4e3eef64
+          dia: 1
+          turno: 2
+          agente: Isiro
+          antes: 5.7
+          hoy: 1.9
+          delta: -3.8
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-ni
+            - nüma
+            - pia
+            - pütchi
+            - sulu
+            - ta-anüiki
+            - taya
+          formas_que_empiezan_a_contar: []
+        -
+          run: 4e3eef64
+          dia: 1
+          turno: 2
+          agente: Dakawa
+          antes: 5.4
+          hoy: 2.4
+          delta: -3.0
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - naba-ni
+            - nüma
+            - pia
+            - pütchi
+            - sulu
+            - taya
+            - wana-da
+          formas_que_empiezan_a_contar: []
+        -
+          run: 4e3eef64
+          dia: 1
+          turno: 2
+          agente: Dabuda
+          antes: 4.4
+          hoy: 2.2
+          delta: -2.2
+          aspecto_antes: 2.0
+          aspecto_hoy: 0.0
+          formas_que_dejan_de_contar:
+            - kashi
+            - taya
+          formas_que_empiezan_a_contar: []
+    adoptadas:
+      antes:
+        - brilu-kara-biro
+        - brilu-kara-biro-iro
+        - duna-kari
+        - duna-kari-ima
+        - jagey-uco
+        - kachi-sulu
+        - kari-barsure-sunu-ana
+        - kasi-kachipo-sunu-ana
+        - korie-sulu
+        - ma-korie-ana
+        - tüshi-naba
+        - tüshi-naba-ni
+        - u-brilu-kara-biro-iro
+        - waranao-ima
+        - yama-ana
+      hoy:
+        - brilu-kara-biro
+        - brilu-kara-biro-iro
+        - duna-kari
+        - duna-kari-ima
+        - jagey-uco
+        - kari-barsure-sunu-ana
+        - kasi-kachipo-sunu-ana
+        - ma-korie-ana
+        - u-brilu-kara-biro-iro
+        - waranao-ima
+    fijadas:
+      antes:
+        -
+          run: fafdce5b
+          concepto: cometa
+          forma: kari-barsure-sunu-ana
+        -
+          run: 104673f6
+          concepto: eclipse
+          forma: kasi-kachipo-sunu-ana
+      hoy:
+        -
+          run: fafdce5b
+          concepto: cometa
+          forma: kari-barsure-sunu-ana
+        -
+          run: 104673f6
+          concepto: eclipse
+          forma: kasi-kachipo-sunu-ana
