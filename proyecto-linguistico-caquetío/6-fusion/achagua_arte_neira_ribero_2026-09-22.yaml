@@ -118,7 +118,12 @@ p1_personas:
         caquetía dare, Oliver p. 147) tampoco sale del achagua: el achagua conserva la n-, como ya decía ese issue'
     - que_declara: '§1 y §7: waya / wa- 1pl'
       veredicto: coincide
-      detalle: 'Gua- (/wa-/) prefijo y Guaya pronombre libre. Tercera hermana que lo da'
+      detalle: 'Gua- (/wa-/) prefijo y Guaya pronombre libre. Tercera hermana que lo da (y el maipure de Gilij, cuarta:
+        «uaja noi», t. III p. 186 — ver gilij_1780_1783)'
+    - que_declara: '§1: pia «tú», reconstruido desde el wayuu'
+      veredicto: 'el achagua no apoya (Jia / Ji-); el maipure de Gilij sí'
+      detalle: 'Gilij t. III p. 186: «pìa tu», y pinavà «tu vedi» (p. 187). Una hermana arahuaca del norte que no es
+        wayuu da la misma forma. No la vuelve caquetía (regla 4), pero le quita a `pia` la etiqueta de «sólo wayuu»'
     - que_declara: '§5 «Lo que NO se importa» y §10 fila Alineamiento: un solo juego, sin alineamiento; el lokono tiene
         dos (prefijado en transitivos, pospuesto en estativos y negativos); no se importa porque no hay dato caquetío'
       veredicto: 'contradice lo que el sistema hace; coincide con lo que la nota declara del lokono'
@@ -488,7 +493,45 @@ contraste_fabo_1911:
     reserva: 'Fabo atribuye el manuscrito «con mucha probabilidad» a Rivero o a Neira: es la misma escuela, no una
       segunda atestación'
 
-gilij_1780_1783: 'ver el campo `gilij` al final; se escribe cuando termine el OCR del tomo III'
+gilij_1780_1783:
+  que_se_miro: 'SÓLO el tomo III (1782, «Delle lingue degli Orinochesi»), que es el lingüístico. Tomos I y IV, no'
+  como_se_leyo: '`ocr_fuente.py` devolvió 391 de 457 páginas casi vacías (render de página entera a 300 ppp). Se rehízo
+    el OCR sobre la IMAGEN incrustada (681×1174 JPX, ampliada 2× en gris, tesseract ita):
+    fuentes_caquetios/Gilij_1782_Saggio_Storia_Americana_vol3.ocr.txt. Es pista: todo lo citado se verificó en imagen'
+  paginacion: 'el desfase NO es constante: pdf 101 = p. 82 y pdf 150 = p. 131 (−19), pero pdf 216-221 = pp. 201-206
+    (−15). El marcador «impresa» del .ocr.txt usa −19 en todo el tomo: vale para localizar, no para citar. Se cita
+    la página impresa leída en la cabecera de la imagen'
+  ortografia: '«Acciàgua» (con cc italiana y tilde), no «achagua»; la ſ larga sale f (ficha)'
+  achagua:
+    p: 205
+    pdf: 220
+    literal: '«III. La Maipùre ha i seguenti; l''Avane, il Meepùre, il Càvere, il Parène, il Guipunàve, il Chirrùpa, e
+      molti altri linguaggi nascosti nell''alto Orinoco, nel Rio-negro, e nel Maragnone. E'' certo in oggi, e così
+      pensollo ancora il Gumilla, è certo dico, che l''Acciàgua è un dialetto del Maipùre.»'
+    verificado_en_imagen: si
+    lectura: 'Gilij (y Gumilla antes) pone el achagua en la «lengua matriz» maipure, que es la rama arahuaca del
+      Orinoco: la filiación arahuaca del norte del achagua ya estaba dicha en 1782. En la misma lista (VIII-IX): «Non ho
+      cognizione della Guaraùna, e della Aruàca»: el lokono no lo conocía'
+  maipure_de_paso:
+    que: 'el cap. X del libro III, «Saggio della lingua Maipure» (pp. 185-190), es una gramática breve de OTRA lengua
+      arahuaca del norte. Fuera del encargo; se anotan sólo las dos líneas que tocan las preguntas 1 y 2, verificadas
+      en imagen, y el resto queda sin minar'
+    pronombres:
+      p: 186
+      pdf: 201
+      literal: '«Pronomi primitivi: nuja io, pìa tu, la quello, juja quella, uaja noi, nia voi, la qual voce significa
+        pure, quelli e quelle»'
+      nota: 'nu- 1sg (como el achagua), pìa 2sg (la MISMA forma que el `pia` del canon, que se dice sacada del wayuu),
+        uaja 1pl (= `waya`), y 3sg distingue quello/quella. Es la primera hermana no wayuu del repo que da `pia`'
+    dos_conjugaciones:
+      p: 187
+      pdf: 202
+      literal: '«Sono due sole le congiugazioni de'' verbi Maipuri; una degli attivi, una de'' passivi, la quale serve
+        anche pe'' neutri … I passivi son terminati in au, e prendono questa desinenza dal verbo sostantivo caniacàu,
+        essere, o stare.» Nunavà io veggo, pinavà tu vedi, navà quegli vede, uanavà noi veggiamo'
+      nota: 'la misma arquitectura que el arte achagua: los verbos de estado («neutri») se conjugan como el verbo
+        «ser». Tercera hermana con el corte activo/estativo'
+  caquetios: 'PENDIENTE: se escribe al terminar el OCR del tomo'
 
 de_paso:
   - que: 'CIERRA LA CALIBRACIÓN DE JAHN. «león», la única de las 34 que quedó `no-esta` (el vocabulario no tiene lema
