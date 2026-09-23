@@ -9,8 +9,8 @@ local: "fuentes_caquetios/Esteves_1989_Toponimos_Paraguana_1..6.pdf"
 capa_texto: ocr  # sin capa propia (medido 2026-08-16); OCR local con ocr_fuente.py desde 2026-09-06 (Esteves_1989_..._N.ocr.txt, pista no cita)
 estado_minado: parcial
 prioridad: alta
-cobertura: "Parte I (Paraguaná, pp. 11-67): TODA leída — lotes 1-7 al canon (2026-09-06/10) y la cola restante propuesta entera, casi toda verificada en imagen (2026-09-23, 6-fusion/toponimos_esteves_lote_2026-09-22.yaml, sin fusionar) + Parte II (pp. 81-144) parseada, glosas extraídas (2026-09-10) pero sólo lo del dictado en el canon + campaña -gua (2026-09-21). Falta: fusionar el lote; la Parte II a la cola; el apéndice pp. 73-80 más allá de Adícora y tuba"
 minado: 2026-09-23
+cobertura: "Parte I (Paraguaná, pp. 11-67): TODA leída — lotes 1-7 al canon (2026-09-06/10) y la cola restante propuesta entera, casi toda verificada en imagen (2026-09-23, 6-fusion/toponimos_esteves_lote_2026-09-22.yaml, sin fusionar) + Parte II (pp. 81-144) parseada, glosas extraídas (2026-09-10) pero sólo lo del dictado en el canon + campaña -gua (2026-09-21). Falta: fusionar el lote; la Parte II a la cola; el apéndice pp. 73-80 más allá de Adícora y tuba"
 medido: 2026-08-11
 sostiene: []
 ---
@@ -1525,6 +1525,28 @@ Llevan página impresa y hay que verlas en imagen antes de sacarlas del repo.
 > Medición entera: `6-fusion/propuesta_gua_procedencia_2026-09-21.yaml`
 > (la escribe `6-fusion/scripts/medir_gua_procedencia.py`). Opciones para
 > Miguel: `6-fusion/issues-pendientes/gua-procedencia-2026-09-21.md`.
+
+## Bitácora 2026-09-22 — las aves de los topónimos (campaña de fauna, FA2)
+
+Barrido del OCR del repo por nombre de ave, para la parcela de aves
+(`6-fusion/fauna_paraguana_aves_2026-09-22.yaml`). Lo que dio: Adaro/Adaure
+< *Dara*, «ave vocinglera de estas sabanas» (p. 12); Acaboa < *Guacoa*, «paloma
+de tamaño mayor que la torcaz… plumones blancos en la punta de las alas»
+(p. 12); Caradacagua, donde Esteves recoge y RECHAZA que el nombre venga «de la
+voz onomatopéyica de la estridente dara» (p. 28); Chuchube, «la paraulata
+chulinga, pájaro de canto melodioso» (p. 36); Tausabana < *Tautabana*, «el
+cerro de las palomas tautas», palomitas «de hábitos ictiófagos» que en
+bandadas buscan los pececillos de las albuferas (p. 62); Ticuí < *Tigüí*,
+«palomita que se alimenta de peces», y Tijuro < *Tijúa*, «paloma de canto
+onomatopéyico», con la misma copla que Alvarado 1921 p. 290 (p. 63).
+
+🔴 **Corrección verificada en imagen (p. 134, Parte II).** El lema es
+**TOGOCO** («Aldea del municipio Jacura, Acosta») y la glosa «(Togogo: ave
+ansérida)». `6-fusion/esteves_parte2_falcon.yaml` §conflictos decía que
+«Togogo» era un error de OCR por Tococo: es al revés, el OCR leyó TOCOCO donde
+la página dice TOGOCO. *Togogo* es una voz real de Falcón.
+
+---
 
 ## Bitácora — la cola de la Parte I, entera (2026-09-22/23, tercera campaña, M6)
 

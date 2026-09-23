@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 88
-  en_repo: 61
-  solo_citadas: 27
+  obras: 91
+  en_repo: 62
+  solo_citadas: 29
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
@@ -172,6 +172,23 @@ obras:
   - Erythrina en Venezuela
   - avendano-castillo-2014-erythrina
   en_repo: true
+- id: aves-punteros-web-2026
+  obra: 'Punteros web de la campaña de aves: páginas de Wikipedia que remiten a Birds of the World, xeno-canto
+    y Ferrer-Paris et al. 2014'
+  autor: 'Wikipedia en inglés y en español (colaborativa); fuentes primarias citadas por ellas: Brewer
+    2020 y Burger 2020 (Birds of the World, Cornell Lab of Ornithology), xeno-canto XC220411, Ferrer-Paris
+    et al. 2014, Rojas-Suárez 2014'
+  anio: 2014-2026
+  publicacion: Wikipedia en «Vermilion cardinal», «Venezuelan troupial», «Laughing gull», «Grey plover»;
+    Wikipedia es «Amazona barbadensis»; consultadas el 2026-09-22
+  genero: datos
+  paginas: — (páginas web)
+  acceso: 'Libre en línea (Wikipedia). Las primarias: Birds of the World es de pago y NO se abrió; xeno-canto
+    XC220411 no se abrió; Ferrer-Paris et al. 2014, Biological Conservation 173: 133-143, no se abrió'
+  aliases:
+  - punteros web aves
+  - aves-punteros-web-2026
+  en_repo: false
 - id: bachiller-morales-1883
   obra: Cuba primitiva. Origen, lenguas, tradiciones e historia de los indios de las Antillas Mayores
     y las Lucayas
@@ -196,6 +213,21 @@ obras:
   - Ballesteros 1550
   - Obispo Ballesteros
   - Miguel Gerónimo de Ballesteros
+  en_repo: false
+- id: bisbal-1990
+  obra: Inventario preliminar de la fauna del Cerro Santa Ana (Península de Paraguaná, estado Falcón,
+    Venezuela)
+  autor: Bisbal, Francisco J.
+  anio: 1990
+  publicacion: 'Acta Científica Venezolana 41(3): 177-185. Leído POR INTERMEDIARIO: la lista de aves que
+    reproduce Wikipedia es, «Vertebrados terrestres del Cerro Santa Ana (Paraguaná)», consultada el 2026-09-22'
+  genero: inventario
+  paginas: 177-185 (no leídas)
+  acceso: 'El artículo original no se localizó en acceso abierto en esta sesión. Puntero: https://es.wikipedia.org/wiki/Vertebrados_terrestres_del_Cerro_Santa_Ana_(Paraguan%C3%A1)'
+  aliases:
+  - Bisbal 1990
+  - Inventario preliminar de la fauna del Cerro Santa Ana
+  - bisbal-1990
   en_repo: false
 - id: brett-martinez-aquella-paraguana
   obra: Aquella Paraguaná
@@ -426,6 +458,26 @@ obras:
   - Gatschet 1885
   - Pinart 1882
   - The Aruba Language
+  en_repo: true
+- id: gbif-aves-paraguana-2026
+  obra: Registros de aves de la península de Paraguaná en GBIF (eBird, xeno-canto, iNaturalist y colecciones
+    de museo), consulta del 2026-09-22
+  autor: GBIF.org; Cornell Lab of Ornithology (EOD – eBird Observation Dataset); Xeno-canto Foundation;
+    iNaturalist; MNHN, MCZ, FMNH, UMMZ
+  anio: 1896-2026
+  publicacion: 'API abierta de GBIF, https://api.gbif.org/v1/occurrence/search?classKey=212&decimalLatitude=11.5,12.22&decimalLongitude=-70.32,-69.78
+    — cada dataset con su DOI y su licencia en 6-fusion/medicion_gbif_aves_paraguana_2026-09-22.yaml (eBird:
+    doi 10.15468/aomfnb, CC BY 4.0; xeno-canto: doi 10.15468/qv0ksn, CC BY-NC 4.0; iNaturalist: doi 10.15468/ab3s5x,
+    CC BY-NC 4.0)'
+  genero: datos
+  local:
+  - 6-fusion/medicion_gbif_aves_paraguana_2026-09-22.yaml (medición, no descarga)
+  paginas: — (datos)
+  acceso: Libre en línea, sin clave. Reproducible con python 6-fusion/scripts/medir_gbif_aves_paraguana.py
+  aliases:
+  - GBIF aves Paraguaná
+  - eBird Paraguaná
+  - gbif-aves-paraguana-2026
   en_repo: true
 - id: gilij-1780-1783
   obra: Saggio di Storia Americana, vols. 1, 3 y 4
