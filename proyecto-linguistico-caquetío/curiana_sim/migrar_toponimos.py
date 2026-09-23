@@ -103,10 +103,20 @@ def toponimos(T):
     # lecturas, asentamientos): tienen que ser ESTABLES. Los 74 originales se
     # numeran por orden, como siempre; toda entrada nueva trae su `id`
     # explícito (toponimo-075 en adelante) y no mueve el contador.
+    # Un original que CAMBIA DE NIVEL se mueve al contenedor nuevo con su id
+    # explícito y deja en el viejo un talón `{"reubicado": "<a dónde>"}`: el
+    # talón gasta su turno del contador y no se emite. Es el mismo mecanismo
+    # que `reubicados` en DESCARTES (abajo), para los niveles. Lo estrenaron
+    # jurijurebo (001) y cumarebo (004), que bajaron de A a C el 2026-09-23
+    # (tf.0, la sigla E de Zavala, 5-a): sin el talón, los setenta originales
+    # que vienen detrás habrían corrido su id.
     registros = []
     n = 0
     for nivel, contenedor in (("A", T.NIVEL_A), ("B", T.NIVEL_B), ("C", T.NIVEL_C)):
         for forma, e in contenedor.items():
+            if e.get("reubicado"):
+                n += 1
+                continue
             if e.get("id"):
                 rid = e["id"]
             else:

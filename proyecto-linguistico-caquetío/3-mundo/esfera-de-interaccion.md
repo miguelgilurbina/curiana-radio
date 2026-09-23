@@ -192,8 +192,10 @@ De esos, dos rinden mucho más que los otros cinco:
   2026-09-23; Cey lo pone en Coro— y el mejor candidato a lo que la era 1
   llamaba «la Curiana». Su ubicación **sigue en debate**: no aparece
   sitio arqueológico del tamaño correspondiente en la periferia de Coro.
-- **Cumarebo** tiene etimología resuelta —`Cumare` (antropónimo de cacique) +
-  `ebo` ('camino', atestiguado) = *'camino de Cumare'*, nivel A— y, sobre todo,
+- **Cumarebo** tiene etimología —`Cumare` (antropónimo de cacique) +
+  `ebo` ('camino') = *'camino de Cumare'*; era nivel A y desde el 2026-09-23
+  es C (tf.0, la sigla E, 5-a): la glosa y `ebo` son sólo de Esteves, vía la
+  (E) de Zavala— y, sobre todo,
   una ensenada **justo al este** llamada **«Puerto de los Indios Curaçao»**,
   punto de partida documentado desde el que los caquetíos de Curazao cruzaban a
   la isla en canoa (van Buurt 2014, citando a Hartog 1968).
