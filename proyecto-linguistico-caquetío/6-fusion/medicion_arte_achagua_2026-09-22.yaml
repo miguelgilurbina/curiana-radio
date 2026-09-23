@@ -1,0 +1,279 @@
+# GENERADO por 6-fusion/scripts/medir_arte_achagua.py — no editar a mano
+meta:
+  que_es: Cifras de la parcela M4 (arte achagua de Neira y Ribero 1762). Las emite 6-fusion/scripts/medir_arte_achagua.py;
+    no se editan a mano (regla 1).
+  fecha: '2026-09-22'
+  capa_caquetia_leida: caquetío-atestiguado
+  entradas_de_la_capa: 228
+  normalizacion: curiana_fonotactica.fonemizar (la del cruce de 2026-09-13), geminadas colapsadas; en achagua, antes,
+    la clave del copista (V/J iniciales ante consonante = u/i)
+  aviso: 'una forma que empieza por ka-/ma- o acaba en -eri/-si NO es un morfema: es la pregunta. El juicio, forma
+    a forma y con la glosa verbatim, está en el YAML de la parcela'
+sonda_ka_ma:
+- forma: chakamba
+  fonemica: kakamba
+  prefijo_aparente: ka-
+  glosa_verbatim: ¿cómo? (pregunta de estado)
+  marca_en_la_glosa: null
+- forma: chaure
+  fonemica: kaure
+  prefijo_aparente: ka-
+  glosa_verbatim: 'Cegue. Lechuza que anida en cuevas de terrenos arenosos [Zavala Reyes 2015 #81 (HB+E)]'
+  marca_en_la_glosa: null
+- forma: chawanko
+  fonemica: kawanko
+  prefijo_aparente: ka-
+  glosa_verbatim: 'Zorro [Zavala Reyes 2015 #80 (A)]'
+  marca_en_la_glosa: null
+- forma: kabana
+  fonemica: kabana
+  prefijo_aparente: ka-
+  glosa_verbatim: 'Sabana [Zavala Reyes 2015 #51 (HB)]'
+  marca_en_la_glosa: null
+- forma: kachikamo
+  fonemica: kakikamo
+  prefijo_aparente: ka-
+  glosa_verbatim: armadillo (Dasypus novemcinctus)
+  marca_en_la_glosa: null
+- forma: kachipo
+  fonemica: kakipo
+  prefijo_aparente: ka-
+  glosa_verbatim: 'En voz vulgar, enojado, colérico [Zavala Reyes 2015 #53 (A)]'
+  marca_en_la_glosa: null
+- forma: kaduchi
+  fonemica: kaduki
+  prefijo_aparente: ka-
+  glosa_verbatim: fruto del cardón (Cereus spp.)
+  marca_en_la_glosa: null
+- forma: kadushi
+  fonemica: kadusi
+  prefijo_aparente: ka-
+  glosa_verbatim: cactus columnar (Cereus hexagonus)
+  marca_en_la_glosa: null
+- forma: kaketillo
+  fonemica: kaketilo
+  prefijo_aparente: ka-
+  glosa_verbatim: 'Árbol. Madera de construcción, resistente a la humedad [Zavala Reyes 2015 #63 (E+A)]'
+  marca_en_la_glosa: null
+- forma: kakuro
+  fonemica: kakuro
+  prefijo_aparente: ka-
+  glosa_verbatim: 'Pequeña avispa negra [Zavala Reyes 2015 #54 (E+A)]'
+  marca_en_la_glosa: null
+- forma: kamaroa
+  fonemica: kamaroa
+  prefijo_aparente: ka-
+  glosa_verbatim: 'Árbol lactescente, de hojas parecidas al papayo [Zavala Reyes 2015 #56 (A)]'
+  marca_en_la_glosa: null
+- forma: kana
+  fonemica: kana
+  prefijo_aparente: ka-
+  glosa_verbatim: 'Demonio [Zavala Reyes 2015 #57 (HB)]'
+  marca_en_la_glosa: null
+- forma: kapo
+  fonemica: kapo
+  prefijo_aparente: ka-
+  glosa_verbatim: 'Duende, ente sobrenatural [Zavala Reyes 2015 #59 (E)]'
+  marca_en_la_glosa: null
+- forma: kapu
+  fonemica: kapu
+  prefijo_aparente: ka-
+  glosa_verbatim: 'Demonio. Señala Galeotto Cey la pronunciación “cap” [Zavala Reyes 2015 #60 (HB)]'
+  marca_en_la_glosa: null
+- forma: kapubana
+  fonemica: kapubana
+  prefijo_aparente: ka-
+  glosa_verbatim: 'Duende del cerro [Zavala Reyes 2015 #61 (HB)]'
+  marca_en_la_glosa: null
+- forma: karama
+  fonemica: karama
+  prefijo_aparente: ka-
+  glosa_verbatim: 'Ramazón [Zavala Reyes 2015 #64 (E)]'
+  marca_en_la_glosa: null
+- forma: karapa
+  fonemica: karapa
+  prefijo_aparente: ka-
+  glosa_verbatim: 'Árbol resinoso [Zavala Reyes 2015 #65 (E)]'
+  marca_en_la_glosa: null
+- forma: karebe
+  fonemica: karebe
+  prefijo_aparente: ka-
+  glosa_verbatim: cuchara, cucharón de media tapara con mango de madera
+  marca_en_la_glosa:
+  - con
+- forma: kari
+  fonemica: kari
+  prefijo_aparente: ka-
+  glosa_verbatim: orilla del mar, costa
+  marca_en_la_glosa: null
+- forma: karuka
+  fonemica: karuka
+  prefijo_aparente: ka-
+  glosa_verbatim: 'Paja, da consistencia al barro que se aplica a paredes y techos [Zavala Reyes 2015 #67 (E)]'
+  marca_en_la_glosa: null
+- forma: kasebo
+  fonemica: kasebo
+  prefijo_aparente: ka-
+  glosa_verbatim: poniente, oeste
+  marca_en_la_glosa: null
+- forma: kaseto
+  fonemica: kaseto
+  prefijo_aparente: ka-
+  glosa_verbatim: 'Planta herbácea [Zavala Reyes 2015 #68 (E)]'
+  marca_en_la_glosa: null
+- forma: kasi
+  fonemica: kasi
+  prefijo_aparente: ka-
+  glosa_verbatim: sol
+  marca_en_la_glosa: null
+- forma: kasikure
+  fonemica: kasikure
+  prefijo_aparente: ka-
+  glosa_verbatim: levante, este
+  marca_en_la_glosa: null
+- forma: kaskito
+  fonemica: kaskito
+  prefijo_aparente: ka-
+  glosa_verbatim: 'Agrio, fermentado [Zavala Reyes 2015 #69 (HB)]'
+  marca_en_la_glosa: null
+- forma: kasá
+  fonemica: kasa
+  prefijo_aparente: ka-
+  glosa_verbatim: puche de maíz, atole
+  marca_en_la_glosa: null
+- forma: katarí
+  fonemica: katari
+  prefijo_aparente: ka-
+  glosa_verbatim: cuatro
+  marca_en_la_glosa: null
+- forma: kati
+  fonemica: kati
+  prefijo_aparente: ka-
+  glosa_verbatim: luna
+  marca_en_la_glosa: null
+- forma: kaujaro
+  fonemica: kaujaro
+  prefijo_aparente: ka-
+  glosa_verbatim: 'Árbol de madera blanda, fruta mucilaginosa, del género cordia [Zavala Reyes 2015 #72 (E)]'
+  marca_en_la_glosa: null
+- forma: kayude
+  fonemica: kayude
+  prefijo_aparente: ka-
+  glosa_verbatim: 'Árbol frutal, guanábano silvestre, turagua [Zavala Reyes 2015 #73 (E)]'
+  marca_en_la_glosa: null
+- forma: manaure
+  fonemica: manaure
+  prefijo_aparente: ma-
+  glosa_verbatim: título laudatorio del señor principal (var. managuanare, managuarire)
+  marca_en_la_glosa: null
+- forma: masato
+  fonemica: masato
+  prefijo_aparente: ma-
+  glosa_verbatim: bebida de harinas fermentada
+  marca_en_la_glosa: null
+- forma: maure
+  fonemica: maure
+  prefijo_aparente: ma-
+  glosa_verbatim: fibra de algodón, hilo para tejer
+  marca_en_la_glosa: null
+sonda_nominalizadores:
+  -eri / -iri / -ari (agentivo achagua -erri, arte p. 4-6, 9, 19):
+    formas: 5
+    con_glosa_de_agente_o_de_accion: 0
+    detalle:
+    - forma: bajarí
+      fonemica: bajari
+      final: -ari
+      glosa_verbatim: recorrer, caminar
+      glosa_de_agente_o_de_accion: false
+    - forma: katarí
+      fonemica: katari
+      final: -ari
+      glosa_verbatim: cuatro
+      glosa_de_agente_o_de_accion: false
+    - forma: kurari
+      fonemica: kurari
+      final: -ari
+      glosa_verbatim: 'Árbol de roble, tecoma [Zavala Reyes 2015 #97 (E)]'
+      glosa_de_agente_o_de_accion: false
+    - forma: lawari
+      fonemica: lawari
+      final: -ari
+      glosa_verbatim: 'Acacia Espinoza, acacia. Lauadrí [Zavala Reyes 2015 #182 (E+A+PMA)]'
+      glosa_de_agente_o_de_accion: false
+    - forma: pariri
+      fonemica: pariri
+      final: -iri
+      glosa_verbatim: pantano, ciénaga
+      glosa_de_agente_o_de_accion: false
+  -nikai / -kai (relativo de paciente -nicay, arte p. 4-5, 8-9):
+    formas: 0
+    con_glosa_de_agente_o_de_accion: 0
+    detalle: []
+  -si (nombre abstracto y absoluto -si, arte p. 2, 11, 13, 32):
+    formas: 2
+    con_glosa_de_agente_o_de_accion: 0
+    detalle:
+    - forma: barici
+      fonemica: barisi
+      final: -si
+      glosa_verbatim: agua turbia, tierras coloradas rojizas
+      glosa_de_agente_o_de_accion: false
+    - forma: kadushi
+      fonemica: kadusi
+      final: -si
+      glosa_verbatim: cactus columnar (Cereus hexagonus)
+      glosa_de_agente_o_de_accion: false
+trampa_kana:
+  entradas_achagua: 3569
+  formas_que_acaban_en_kana_fonemizadas: 12
+  de_ellas_con_glosa_plural_o_colectiva: 0
+  muestra:
+  - forma: Bichana
+    glosa: Barnis
+  - forma: chana
+    glosa: Catorze veces
+  - forma: Nuchana
+    glosa: Encensar fuego
+  - forma: Ridugicana
+    glosa: Gota
+  - forma: Cana
+    glosa: Mais
+  - forma: Riolugicana
+    glosa: Borron
+  - forma: chana
+    glosa: Mil
+  - forma: Nuchana
+    glosa: Poner la olla (y 1 acepción/es más)
+  - forma: Nusaricana
+    glosa: Por local, no lo hay
+  - forma: Ridecuchana
+    glosa: trecho
+  - forma: Chana
+    glosa: Vez
+  - forma: gisaricana?
+    glosa: Donde está tu Padre?
+  muestra_de_las_de_glosa_plural: []
+numerales:
+  gudamuen_fonemica: gudamuen
+  similitud_difflib:
+    achagua juchama- (raíz de 'dos' sin clasificador; arte/vocab. pliego 56-57): 0.429
+    achagua Juchamata ('dos' general, pliego 56 der.): 0.375
+    achagua Juchamana ('dos' hombres, pliego 56 der.): 0.5
+    lokono bian (Pet 1987, lexicón): 0.333
+    lokono biama (Brinton 1871, lexicón): 0.308
+    wayuu piama (el que enseñaba el canon; D11): 0.308
+  modelo_nulo:
+    que_mide: similitud de gudamuen contra cada forma achagua distinta (tokens de >= 4 fonemas, fonemizados con
+      la clave del copista), para saber si el parecido con juchama- es raro
+    formas_achagua: 3429
+    mediana: 0.286
+    percentil_95: 0.471
+    maximo: 0.706
+    formas_achagua_tan_o_mas_parecidas_que_juchama: 424
+    proporcion: 0.1237
+  silaba_am:
+    que_mide: 'porcentaje de formas (>= 4 fonemas) que contienen «am»: el elemento que ''dos'' comparte en achagua
+      (juchAMa), lokono (biAMa), wayuu (piAMa) y caquetío (gudAMuen)'
+    caquetio_atestiguado_pct: 6.0
+    achagua_pct: 9.6
