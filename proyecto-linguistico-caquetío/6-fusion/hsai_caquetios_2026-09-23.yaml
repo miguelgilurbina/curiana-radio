@@ -58,7 +58,39 @@ meta:
     páginas (pdf 20, 45, 463, 464, 473, 509, 598, 600, 605-610, 735). El OCR
     escribe una vez «Caguetio» (p. 474) y «Jivajara» por Jirajara (pp. 469,
     472): se añadieron a las sondas. En el .txt: `Caquet` 38, `caiquet` 2,
-    `Paraguan` 7, `Manaur` 2, `Jirajar` 22, `Curiana` 8 (sin leer), `Aruba` 4.
+    `Paraguan` 7, `Manaur` 2, `Jirajar` 22, `Curiana` 8, `Aruba` 4.
+
+  # ─────────────────────────────────────────────────────────────────
+  # §0. LO PRIMERO: qué del encargo y de las fichas resultó falso al medir
+  # ─────────────────────────────────────────────────────────────────
+  lo_que_resulto_falso:
+  - afirmacion: "«86.300 y 144.000» son las cifras de «Venezuela, north of Orinoco» (ficha steward-1949 y encargo §4)"
+    medido: "Verificado en imagen (p. 663): 86.300 es el total de OTRA fila, «Northwestern South America» (motilones, guajiros, costa pacífica de Colombia). La de Venezuela al norte del Orinoco es sólo 144.000 — y sale de la densidad de Humboldt hacia 1800 subida de 38 a 45 (p. 660). Ver v5-01, v5-02."
+  - afirmacion: "Steward parte el poblamiento venezolano en tres áreas y la «Costero-Montañosa» tiene «aldeas de elevada densidad … riego sistemático» (ficha steward-1949; prop-polity-016)"
+    medido: "No está en Steward (Parte 3 leída en las cuatro páginas donde sale Venezuela). Es de Brito Figueroa. El 350.000 de prop-polity-015 sí está (tabla 3, p. 666). Ver v5-03, v5-04."
+  - afirmacion: "el tiempo medido «when such and such fruits ripen» es un dato del caquetío (ficha steward-1948-hsai-4, p. 474)"
+    medido: "La sección no cita nada, y no se encontró en ninguna primaria del repo. Sus vecinas son de la Relación de Nueva Segovia (BARQUISIMETO, 1579) vía Antolínez 1943. Hipotético, y probablemente del interior. Ver hda-28."
+  - afirmacion: "Kirchhoff, «Tribes north of the Orinoco» (pp. 481-493), habla de los caquetíos (encargo §2)"
+    medido: "Ese capítulo no los nombra (cero en pdf 611-734). Kirchhoff habla de ellos en los guamo (pp. 464-466), el guayupé (p. 385) y, con Métraux, la extensión andina (pp. 353, 363). Su «overlords» es lectura suya: Federmann 1916 pp. 89-90 dice paz, necesidad mutua y aldeas separadas. Lo que «Tribes north of the Orinoco» sí trae es la CURIANA, y la pone en la costa oriental caribe (k-03, #33)."
+  - afirmacion: "casi todo lo que el Handbook dice de los caquetíos viene de Oviedo, Castellanos, Federmann y Pérez de Tolosa (añadido del coordinador)"
+    medido: "Casi todo, sí, y lo de Oviedo t. II cap. IX sin citarlo. Pero hay una segunda vena que no es costera: la Relación de Nueva Segovia 1579 (Barquisimeto) vía Antolínez 1943 — casas en pares, casa del piache, Capu, y el sol, la luna y el sacrificio de la niña, que la Relación da de los AXAGUAS (Arcaya p. 102). Y el poder de Manaure sobre los temporales viene de Aguado (no está en el repo) y de Ampíes (sí está, en Oviedo y Baños 1885 t. II p. 212)."
+  - afirmacion: "citas del propio capítulo de Hernández de Alba"
+    medido: "Cuatro citas no dicen lo que se les atribuye: Oramas 1916 (no trata el caquetío; y el jirajara no es arahuaco), Pérez de Tolosa 1546 («casas pobres y hamacas»: dice «ropa de hamacas», y «pobres» es de oro y de otros caquetíos), Oviedo y Baños («diaos» como jefes menores: el díao es el de arriba) y Antolínez 1943 (sol, luna y sacrificio: axaguas). Ver hda-03, hda-07, hda-12, hda-21, hda-22."
+
+  cobertura:
+    hecho:
+      - "§1 Hernández de Alba, noroeste (pp. 469-474): entero, 28 afirmaciones, cada una contra las primarias del repo"
+      - "§1b resumen de Steward (pp. 21-22): la parte del noroeste"
+      - "§2 Kirchhoff: guamo (pp. 463-468), guayupé (p. 385), Métraux y Kirchhoff (pp. 353, 363), «north of the Orinoco» (pp. 481-493) leído por caquetíos, Curiana, comercio y fauna"
+      - "§3 Kidder: el noroeste (pp. 425-429) y la síntesis (pp. 434-437)"
+      - "§4 vol. 5: Parte 3 (pp. 655-668) por Venezuela; Parte 4 por cada rasgo con «Caquetio» o «northwestern Venezuela»"
+      - "§5 Rouse: sondas sobre sus cuatro capítulos; negativo"
+      - "§6 fauna de los capítulos anteriores"
+    no_hecho:
+      - "Hernández de Alba, «north central Venezuela» (pp. 475-480): sin leer (los vecinos del este)"
+      - "Kirchhoff «north of the Orinoco»: sólo lo dicho arriba; su religión, parentesco y guerra, sin leer"
+      - "Parte 4 del vol. 5: sólo los pasajes que nombran caquetíos o el noroeste de Venezuela"
+      - "fuentes sin localizar: hda-05 (datos, cocuy), hda-10 (canoas), hda-14 (clases), hda-17 (poliginia), hda-18 (tabaco y oro), hda-20 (maguey, bocinas), hda-28 (frutas), k-02 (intérprete de Spira), k-04 (Chiguará)"
 
 # ══════════════════════════════════════════════════════════════════════
 # §1. HERNÁNDEZ DE ALBA, «THE TRIBES OF NORTHWESTERN VENEZUELA»
@@ -1046,6 +1078,152 @@ kidder_noroeste:
     reemplaza a rouse-cruxent-1963: sólo confirma que en 1948 ya se sabía
     que Falcón, Lara y las ABC eran un mismo horizonte cerámico con
     variantes.
+
+# ══════════════════════════════════════════════════════════════════════
+# §4. HSAI 5 (1949), STEWARD: LA POBLACIÓN (Parte 3) Y LOS RASGOS
+#     «CIRCUM-CARIBEÑOS» (Parte 4)
+# ══════════════════════════════════════════════════════════════════════
+steward_1949:
+  obra: steward-1949
+  poblacion:
+    - id: v5-01
+      pagina_impresa: 663
+      pdf_extracto: 19
+      verificado_en_imagen: true
+      cita: >-
+        Tabla 2, «Sub-Andean Tribes: Venezuela, north of Orinoco» —
+        Population 144,000 · Size in units of 100 km² 3,200 · Persons per 100
+        km² 45 · «Humboldt's estimates (1822-27) give 38 persons per 100 km.²
+        in 1800.»
+      lectura: >-
+        ❌ La ficha y el encargo daban «86.300 y 144.000» como las dos cifras
+        de «Venezuela, north of Orinoco». Mirado en imagen: 86.300 es OTRA
+        fila, «Total Northwestern South America» (motilones 40.000 + guajiros
+        31.300 + costa pacífica de Colombia 15.000). La única cifra de
+        Venezuela al norte del Orinoco es 144.000, sobre 320.000 km² a 45 por
+        cada 100 km². Y Steward la clasifica como «Sub-Andean», no como
+        «Circum-Caribbean».
+    - id: v5-02
+      pagina_impresa: 660
+      tema: método
+      cita: >-
+        «The best source for Venezuela is Humboldt (1862), whose observations
+        made about 1800 give sample densities of 38 per 100 km.². The native
+        population was greater, but it is impossible to say how much greater
+        without utilization of Contact Period sources. It is allowed a density
+        of 45.»
+      lectura: >-
+        El 144.000 no sale de ninguna fuente del contacto: es la densidad de
+        HUMBOLDT hacia 1800 subida a ojo de 38 a 45 y multiplicada por el área.
+        Steward lo declara él mismo. Nivel máximo `hipotetico`, como decía la
+        ficha, y con una razón más: la base es de 1800.
+    - id: v5-03
+      pagina_impresa: 666
+      verificado_en_imagen: true
+      cita: >-
+        Tabla 3, «South American Indian population» — Venezuela: 1500,
+        350,000; 1940, 103,000; 3.7 por ciento de la población nacional (1946).
+      lectura: >-
+        El 350.000 que el vault atribuye a Steward (prop-polity-015 en
+        6-fusion/polities_no_costeras_federmann.yaml, vía Brito Figueroa, «pp.
+        665-668») SÍ está, en la p. 666, como población de 1500. La página que
+        da el vault es buena; la cifra, también.
+    - id: v5-04
+      pagina_impresa: "655-668"
+      tema: "las «tres áreas demográficas» y el «Área Costero-Montañosa»"
+      lectura: >-
+        ❌ NO están en Steward. La ficha steward-1949 cita como suyo el
+        «Área Costero-Montañosa … aldeas de elevada densidad demográfica en
+        las zonas de agricultura intensiva y riego sistemático», y
+        prop-polity-016 lo atribuye a steward-1949 pp. 665-668. Medido:
+        «Venezuel*» sale en la Parte 3 sólo en las pp. 660 (método), 663
+        (tabla 2), 666 (tabla 3) y 667 (supervivientes en las montañas del
+        oeste); ninguna partición en tres áreas, ninguna mención de riego.
+        La partición es de Brito Figueroa, que discute a Steward en ese mismo
+        pasaje. Lo más cercano de Steward es genérico (p. 665): «The next
+        greatest densities were in the Circum-Caribbean area, where the people
+        relied on ocean resources as much as on farming.»
+      propuesta: >-
+        prop-polity-016: cambiar la procedencia a brito-figueroa-poblacion-economia
+        como lectura PROPIA del autor, no «vía» Steward. Y corregir la ficha
+        steward-1949 (hecho en esta rama, bitácora 2026-09-23).
+  rasgos_caquetios_parte_4:
+    # Cada rasgo con el nombre «Caquetio» en la síntesis de Steward, y de dónde
+    # sale. Medido: caquet|caiquet|caguet en el extracto → pp. 720, 721 y 724
+    # (la p. 702 es «Caquetá», el río de Colombia).
+    - id: v5-10
+      pagina_impresa: 720
+      cita: "«Northern Venezuela is inadequately known, but considerable intervillage solidarity seems indicated for the Timoteans, Caquetio, Cumanagoto, and Aruacay.»"
+      fuente_real: "el jefe general de hda-12 (Oviedo y Baños p. 27; Castellanos pp. 185-186; Oviedo t. II p. 299, díao)"
+      polity: costera
+    - id: v5-11
+      pagina_impresa: 720
+      cita: "«by being carried in a hammock or gold-adorned litter (Chibcha and other Colombia tribes, Caquetio, Unaré River in Venezuela, Antillean Arawak)»"
+      fuente_real: "Oviedo y Baños p. 27 (hamaca, en hombros de caciques); Castellanos pp. 185-186 («en unas andas / con chapas de oro»; Arcaya p. 113 lo cita como «Elegías, pág. 183», de otra edición); Aguado vía Arcaya p. 115 (hamaca)"
+      polity: costera
+    - id: v5-12
+      pagina_impresa: 721
+      cita: "«desiccated, placed in a hammock, later cremated, and the ashes drunk (Caquetio)» · «The custom of cremating the ashes and drinking them with chicha occurs among a few Venezuela tribes, but is more characteristic of the Tropical Forests, especially of the western Amazon.»"
+      fuente_real: "Oviedo t. II pp. 299-300 (el díao). Oviedo dice huesos molidos, no «cenizas»: aparta los huesos antes de que se hagan ceniza"
+      lectura: >-
+        Lo útil es la segunda frase: para Steward, beber los huesos NO es un
+        rasgo circum-caribeño sino de la selva tropical. Eso pesa en la
+        lectura de creencia-010d, que busca el porqué en la analogía wayuu.
+      polity: costera
+    - id: v5-13
+      pagina_impresa: 724
+      cita: "«often he had political power equal to that of the chief or he was the chief (Northern Venezuela, Caquetio, Island Arawak)»"
+      fuente_real: "Oviedo t. II p. 299 (el díao, señor y boratio); Arcaya pp. 113-118"
+      polity: costera
+    - id: v5-14
+      pagina_impresa: "724-726"
+      cita: >-
+        «celestial beings, especially the sun and moon (… northwestern and
+        northern Venezuela …)» (p. 724) · «There was a special temple among …
+        the tribes of northwestern Venezuela» (p. 725) · «to supplicate the sun
+        for rain with the blood of young girls (northwestern Venezuela)»
+        (p. 726)
+      fuente_real: >-
+        ❌ Sin el nombre «Caquetio», pero es el dato AXAGUA de la Relación de
+        Nueva Segovia (hda-21, hda-22) ya disuelto en «northwestern Venezuela».
+        Y la p. 723 del mismo texto dice que el culto de sacerdote-templo-ídolo
+        «seems to have been entirely absent from Northern Venezuela».
+      polity: "axaguas de Nueva Segovia, generalizado"
+      etiqueta_maxima: "no atribuible a los caquetíos"
+    - id: v5-15
+      pagina_impresa: 727
+      cita: "«Pearls were probably used by most Coastal tribes, including … the peoples of northwestern and northern Venezuela.» · «the tribes of northern Venezuela and perhaps the Island Arawak used a wild species [of cotton]»"
+      fuente_real: "perlas: Oviedo y Baños p. 27 (brazaletes del séquito de Manaure). El algodón silvestre: no se cotejó"
+      polity: "costera / norte de Venezuela"
+  que_no_da: >-
+    Ninguna cifra para la costa caquetía ni para el Golfete: la unidad
+    mínima de Steward es «Venezuela, north of Orinoco». Y ningún rasgo
+    caquetío que no venga, por Hernández de Alba, de las mismas crónicas.
+
+# ══════════════════════════════════════════════════════════════════════
+# §5. ROUSE, «THE WEST INDIES» Y «THE ARAWAK» (HSAI 4, pp. 495 ss.)
+# ══════════════════════════════════════════════════════════════════════
+rouse:
+  obra: steward-1948-hsai-4
+  capitulos_medidos: "The West Indies: an introduction (pdf 631-632), The Ciboney (pdf 633), The Arawak (pdf 651-691), The Carib (pdf 699 ss.)"
+  medido: >-
+    Sondas sobre pdf 630-720: Venezuel* 1, Cura[cçgz]ao/Corazao 0, Aruba/Oruba
+    0, Bonaire/Buinare 0, Coro 0, Paraguan* 0, caquet|caiquet 0, Tierra Firme
+    0, Maracaibo 0. «Dutch» sale 2 veces y son Saba, San Eustaquio y la
+    colonización del XVII. La única mención de Venezuela es cerámica (p. 510,
+    pdf 654): la alfarería modelada-incisa antillana «is more like» la del
+    nivel bajo de Los Tamarindos (Maracay, Kidder II 1944) y la de Los
+    Barrancos en el bajo Orinoco.
+  veredicto: >-
+    NEGATIVO bien medido: Rouse no trata la esfera de contacto con la costa
+    caquetía ni las ABC; su puente antillano con el continente es por el
+    Orinoco y el centro-norte, no por Falcón. Encaja con lo que ya
+    concluyeron las dos campañas del taíno. Visto de paso y FUERA del HSAI:
+    el documento que sí liga ABC y costa está en el repo, la carta de
+    Ampíes (Oviedo y Baños 1885 t. II pp. 209-213: las islas declaradas
+    «inútiles», don Juan Baracoica, cacique en las islas y «pariente y
+    deudo» de los de la costa, que «muchas veces se pasaban allá á holgar
+    con ellos»).
 
 # ══════════════════════════════════════════════════════════════════════
 # §6. FAUNA (esquema común del preámbulo)
