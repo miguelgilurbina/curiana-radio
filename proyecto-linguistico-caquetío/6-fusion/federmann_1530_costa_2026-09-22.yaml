@@ -16,7 +16,7 @@
 # ══════════════════════════════════════════════════════════════════════
 meta:
   parcela: "Minería 3 — Federmann (1530-1531): Paraguaná y Coro"
-  fecha: 2026-09-22
+  fecha: 2026-09-22  # empezada el 22, cerrada el 23
   encargo: 6-fusion/issues-pendientes/encargo-mineria-federmann.md
   obra: federmann-1916          # clave foránea → 4-fuentes/bibliografia.yaml (regla 8)
   ficha: 4-fuentes/federmann-1916.md
@@ -45,7 +45,7 @@ meta:
         Klüpfel 1859 marca en su texto ([n]) y por la IMAGEN del PDF (1-based).
       desfase_medido: >-
         imagen = [n] + 10 entre [9] y [48] (medido en [9], [13], [14], [19],
-        [46], [47], [48]) e imagen = [n] + 12 en [111]-[112]: NO es constante,
+        [24], [35], [46], [47], [48]) e imagen = [n] + 12 en [111]-[112]: NO es constante,
         entran láminas o blancos entre medias. Se mira la imagen, no se suma.
     - eslabon: 1b
       que: "reedición alemana de Klüpfel, Stuttgart 1859, tipo romano"
@@ -84,8 +84,8 @@ meta:
     I-V), 56-64 (fin del VII y cap. VIII), 107-110 (cap. XII) y 119-126 (fin
     del XIII, XIV y principio del XV). Alemán Klüpfel de corrido pp. 9-18,
     34-37, 70-72 y 79-81, y por sondas el resto del tramo de Federmann
-    (pp. 5-82). 1557 en imagen: [9], [13], [14], [19], [46], [47], [48],
-    [111], [112].
+    (pp. 5-82). 1557 en imagen: [9], [13], [14], [19], [24], [35], [46],
+    [47], [48], [111], [112].
   que_no_se_leyo: >-
     De corrido NO: caps. VI-VII (Cayones, Xaguas) salvo su final, IX-XI
     (Cuybas, Guaycaríes, la laguna) y XIII salvo su final; se barrieron sólo
@@ -792,6 +792,9 @@ lengua:
           ⚠️ Pregunta abierta: `Oyama` se parece más a *auyama/ahuyama*
           (calabaza, voz de Venezuela) que a *ñame*. La equivalencia «ñames»
           es de Ternaux o de Arcaya. No se decide aquí.
+      - forma: Macana
+        uso: "«mit ainer Macana, also haißt…» — la maza con que un indio le parte el escudo (Klüpfel p. 75); la 1916 p. 113 «su macana o maza»"
+        lugar: "valle de Vararida (interior)"
       - forma: Weschuco
         uso: "«ein Weschuco, dorn es vil inn den wälden hat, das ist ein zehe gewechs wie die weiden» (Klüpfel p. 77); la 1916 p. 118 escribe «weshuco (bejuco)»"
         lugar: "sierra de los Cyparicotes (interior)"
@@ -839,3 +842,387 @@ lengua:
       Cacaridi, Variquecemeto, Vararida, Cuybas, Hacarigua, Guaycaries,
       Cyparicotes, Itabana, Curahamara, Coahery, Carahao…) no se cotejaron
       uno a uno en 1557.
+
+# ══════════════════════════════════════════════════════════════════════
+# 4. EL SERETÓN — pregunta de Miguel del 2026-09-11
+#    (6-fusion/ceret_on_hipotesis_miguel.yaml)
+# ══════════════════════════════════════════════════════════════════════
+sereton:
+  pregunta: >-
+    ¿Hay en Federmann un hombre que se transforma, o una palabra parecida a
+    seretón/ceretón? Miguel: «el ceretón está presente tanto por Federmann y
+    se mantiene hasta el día de hoy en mitos».
+  veredicto: >-
+    CERO de la palabra y CERO del concepto de transformación, medidos en los
+    dos idiomas. Lo que Federmann SÍ trae —y es casi seguro la raíz de la
+    asociación «Welser → enano de la sierra de Falcón» que el barrido web del
+    2026-09-09 le atribuyó al ceretón— son los ENANOS (`Zwergen`) de la
+    nación ayamán, en la sierra al sur de la de Coro, y una mujer enana que
+    Federmann se llevó a Coro y allí dejó.
+  lo_que_se_busco:
+    por_la_forma:
+      regex: "[csz]h?[ae]r+[ae]t | [csz]er+[eé]t[oó]n | tscher+et"
+      en: [1916 entera, alemán Klüpfel entero]
+      resultado: 0 y 0
+    por_el_concepto_1916:
+      regex: "transform · convert[íi]a · diabl · demoni · brujo · hechic · encant · sombrero · enan[oa] · piache · sacerdot · [íi]dolo · supersti · creencia"
+      resultado: >-
+        21 aciertos; ninguno es una transformación. Son: los enanos ayamanes
+        (pp. 31, 37-38, 39, 41-44), los indios que toman a los españoles por
+        demonios (pp. 44, 53, 55, 90), la etimología guaraní de «Ayamán» que
+        propone Arcaya ('diablo' + 'parientes', p. 34 n.) y una frase de
+        Federmann sobre «las supersticiones de sus padres ni su religión y
+        creencias diabólicas» de los ayamanes (p. 37), sin contenido.
+    por_el_concepto_aleman:
+      regex: "verw[aä]nd · gestalt · zauber · teu?ff?el · tiger · hexe · gespenst · geist · h[uü]t · kapp · zwerg · wandl · th[iy]er"
+      resultado: >-
+        `gestalt` sólo como 'forma/estatura' («zierlicher Proportz und
+        gestalt»), `verwandle` como 'pariente' (Klüpfel p. 69), `Teuffel` =
+        los españoles a ojos de los indios, `Tigerthier` = el jaguar, `hüt` =
+        'guardia'. Ningún hombre-animal, ningún sombrero.
+    no_se_leyo_de_corrido: "caps. VI-VII y IX-XI (ver meta.que_no_se_leyo); cubiertos sólo por estas sondas"
+  lo_que_si_hay:
+    - id: fed-ser-001
+      que: los Ayamanes, «nación» de enanos
+      afirmacion: >-
+        Los de Hittova (la última aldea xidehara) le dicen que a dos jornadas
+        vive otra nación, los Ayamanes, «pequeños y enanos, pero valientes»,
+        en tierra áspera y montañosa. Encuentra gente de cinco o seis palmos;
+        los mismos ayamanes le explican que los de talla normal que hay entre
+        ellos vienen de casarse con sus enemigos xideharas después de una
+        mortandad antigua, y que a cuatro jornadas sólo hay enanos «sin ninguna
+        mezcla».
+      pagina_impresa: "31, 37-38"
+      aleman: "«were auch ein klain volck, und Zwergen, jedoch streitbar» (Klüpfel p. 18, [21]) · «der Nation Ayamanes oder Zwergen» (p. 29)"
+      eslabon_que_lo_da: Klüpfel
+      lugar: >-
+        sierra al sur de la de Coro/San Luis, pasado Churuguara (Arcaya
+        p. 31 n. c y p. 33 n. a: hoy sierras de Parupano y Moroturo, San
+        Miguel, Lara, «y un tiempo del Estado Falcón»)
+      polity: ayaman (NO caquetía)
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      nota: >-
+        Arcaya (p. 43 n. d) lo llama «pura fábula» que Federmann tomó de las
+        ideas de su época. Sea cual sea su verdad, ES lo que el texto dice, y
+        es el enano de la sierra de Falcón con un Welser detrás.
+    - id: fed-ser-002
+      que: la enana que se quedó en Coro
+      afirmacion: >-
+        Un cacique ayamán le regala una mujer enana «de cuatro palmos», que
+        dice que es su mujer, como prenda de paz; ella llora creyendo que la
+        entregan «no a hombres sino a diablos»; Federmann la lleva a Coro y
+        allí se queda.
+      pagina_impresa: 44
+      aleman: "«mir ein zwergin bei vier spannen lang […] dann sie nicht mainet menschen / sonder teüflen / darfür sie uns halten / geschenckt sein / Dise zwergin habe ich mit mir biß gen Coro gefürt / daselbst sie bliben ist» (1557 [35], imagen 45, verificado en imagen; al margen: «Die Christen von den Indios nicht menschen / für teüffel geacht werden»)"
+      eslabon_que_lo_da: 1557
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      nota: >-
+        ⭐ Un enano de la sierra, traído por el Welser, VIVIENDO EN CORO desde
+        1530-31. Si la memoria falconiana guarda un «enano de los Welser», éste
+        es el candidato documental más directo — sin nombre, sin sombrero y sin
+        transformación.
+  que_significa_para_la_hipotesis: >-
+    La hipótesis de Miguel tenía dos partes. (1) «ceretón y seretón son el
+    mismo ente con dos grafías»: Federmann no la toca — no trae la palabra
+    en ninguna grafía. (2) «los Welser se contactaron con uno y en la memoria
+    quedó este otro»: Federmann da el ENANO (y la estancia de una enana en
+    Coro) pero no el HOMBRE QUE SE TRANSFORMA. Si el ceretón de la
+    divulgación es «un enano de sombrero de la Sierra de Falcón atribuido a
+    los Welser», su «Welser» sale probablemente de aquí; el seretón de Medina
+    (el que se desnuda y se vuelve animal) no tiene apoyo en Federmann. Queda
+    `hipotetico`, y la frase «el ceretón está presente en Federmann» no se
+    sostiene tal cual: está el enano, no el nombre.
+  etiqueta: hipotetico
+
+# ══════════════════════════════════════════════════════════════════════
+# 5. FAUNA — esquema común del preámbulo (con `lugar` siempre declarado:
+#    casi todo es del interior; la costa sólo da PECES)
+# ══════════════════════════════════════════════════════════════════════
+fauna:
+  - nombre_en_fuente: "vischen (de.) · pescado (1916)"
+    especie_probable: null
+    texto: "«mit allerley vischen, dern sie vast vil und gutt haben» — «pescado excelente y abundante»"
+    obra: federmann-1916
+    pagina_impresa: 19
+    lugar: "aldehuela de tres casas de Paraguaná (costa norte)"
+    epoca: contacto-temprano
+    sonido: null
+    nota: "1557 [13], imagen 23, verificado. «allerley» = de toda clase: hay variedad, no se nombra ninguna especie."
+
+  - nombre_en_fuente: "vischen / vischereien (de.) · pescar (1916)"
+    especie_probable: null
+    texto: "«fewr, wölche die Indios … darbei zu vischen, alls sie pflegen zuthun brenten» — «tres hogueras que los indios habían encendido para pescar como es su costumbre»"
+    obra: federmann-1916
+    pagina_impresa: 16
+    lugar: "costa norte de Paraguaná, de noche (Arcaya: La Macolla)"
+    epoca: contacto-temprano
+    sonido: null
+    nota: "Pesca con luz desde la orilla (ver fed-par-001)."
+
+  - nombre_en_fuente: "Roß, Ochsen, Schaaff und ander viech (de.) · caballos, bueyes y carneros (1916)"
+    especie_probable: "Equus caballus, Bos taurus, Ovis aries — EUROPEOS"
+    texto: "«Tomé a bordo cuantos caballos, bueyes y carneros pude colocar» en San Germán (Puerto Rico), rumbo a Coro"
+    obra: federmann-1916
+    pagina_impresa: 21
+    lugar: "embarcados en Puerto Rico y desembarcados en Coro el 8 de marzo de 1530; antes, diez caballos desde Santo Domingo (p. 15)"
+    epoca: contacto-temprano
+    sonido: null
+    nota: "Fecha y puerto de una entrada de ganado europeo en Coro: dato de «fauna moderna ≠ s. XV» (ver project_corpus-cultural-ecologia)."
+
+  - nombre_en_fuente: "hanen / hennen (de.) · gallo / gallinas (1916)"
+    especie_probable: "Gallus gallus domesticus — EUROPEO"
+    texto: "«oímos cacarear un gallo y algunas gallinas, lo que no había sucedido desde que dejamos a Coro, porque no las tienen los indios»; venían de Hamadoa, compradas a cristianos"
+    obra: federmann-1916
+    pagina_impresa: 93
+    lugar: "cerca de Itabana (tierra guaycarí, llanos: interior); por contraste, en Coro sí había"
+    epoca: contacto-temprano
+    sonido: "«ainen hanen krehen» (Klüpfel p. 59) — «cacarear un gallo» (1916)"
+    nota: "Los indios de la ruta no tienen gallinas en 1530; las de Coro serían de los españoles."
+
+  - nombre_en_fuente: "Hirschen und Ellendt (de.) · venados y dantas (1916)"
+    especie_probable: "venado: null (Odocoileus o Mazama, no decidible); «Ellendt» (alce) es el nombre europeo que el escribano da a un animal grande — la 1916 lo hace «danta» (¿Tapirus terrestris?)"
+    texto: "«vasl vil und gut wildtpret, von Hirschen und Ellendt, dessen es an den enden ain überfluß hat» — «cacería abundante, especialmente venados y dantas»"
+    obra: federmann-1916
+    pagina_impresa: 43
+    lugar: "aldea ayamán de la sierra (interior, no caquetía)"
+    epoca: contacto-temprano
+    sonido: null
+
+  - nombre_en_fuente: "Hirschen (de.) · venados (1916)"
+    especie_probable: null
+    texto: "«maíz y venados que no corren mucho porque no están acostumbrados a temer a los indios, que carecen de caballos y perros»"
+    obra: federmann-1916
+    pagina_impresa: 71
+    lugar: "tierra cuyba, llanos (interior)"
+    epoca: contacto-temprano
+    sonido: null
+    nota: "⭐ «die weder Roß noch hund haben» (Klüpfel p. 44): los indios de ahí no tienen PERROS. Es de los llanos; para la costa no hay dato."
+
+  - nombre_en_fuente: "löwen und Tigerthier (de.) · leones y tigres (1916)"
+    especie_probable: "Puma concolor y Panthera onca (probables; «león» y «tigre» son nombres del escribano)"
+    texto: "el cacique guaycarí venía armado «por causa de los leones y tigres muy numerosos en esas comarcas»"
+    obra: federmann-1916
+    pagina_impresa: 90
+    lugar: "tierra guaycarí, junto a la laguna (interior)"
+    epoca: contacto-temprano
+    sonido: null
+
+  - nombre_en_fuente: "Tigerthier (de.) · tigre (1916)"
+    especie_probable: "Panthera onca"
+    texto: "«el tigre mayor que haya visto yo en las Indias» … del tamaño de «un becerro» (alemán: «bei eines halbjärigen kalbs grosse»); se enreda en un «weshuco (bejuco)»; lo comen de hambre «aunque es carne malsana»"
+    obra: federmann-1916
+    pagina_impresa: "117-118"
+    lugar: "sierra de los Cyparicotes, camino a la costa (interior)"
+    epoca: contacto-temprano
+    sonido: null
+
+  - nombre_en_fuente: "wildes Schwein (de.) · jabalí (1916)"
+    especie_probable: "pecarí (Tayassuidae), no decidible entre especies; «jabalí» es el nombre europeo"
+    texto: "«un jabalí, animal que abunda en el país»"
+    obra: federmann-1916
+    pagina_impresa: 117
+    lugar: "sierra de los Cyparicotes (interior)"
+    epoca: contacto-temprano
+    sonido: null
+
+  - nombre_en_fuente: "visch (de.) · pescado (1916)"
+    especie_probable: null
+    texto: "los guaycaríes viven de la pesca y cambian pescado por frutas y víveres con los caquetíos; «Los pescados … me pertenecen»"
+    obra: federmann-1916
+    pagina_impresa: "90-92, 95"
+    lugar: "laguna y río de los guaycaríes (interior, llanos)"
+    epoca: contacto-temprano
+    sonido: null
+    nota: "Pesca como especialidad de una nación que la intercambia con los caquetíos: modelo de esfera, pero del interior."
+
+  - nombre_en_fuente: "wildpret (de.) · cacería (1916)"
+    especie_probable: null
+    texto: "los caquetíos de Barquisimeto traen «cacería y otros víveres»"
+    obra: federmann-1916
+    pagina_impresa: 61
+    lugar: "Barquisimeto (interior)"
+    epoca: contacto-temprano
+    sonido: null
+
+fauna_ceros: >-
+    Para la COSTA (Paraguaná y Coro) Federmann no nombra ni un animal de
+    tierra, ni un ave, ni un reptil, ni un marisco, ni una especie de pez:
+    sólo «peces de toda clase». Sondas en la 1916: pez/peces, venado, danta,
+    tigre, león, perro, gallina, ave, pájaro, papagayo, loro, guacamaya,
+    iguana, tortuga, caimán, culebra, serpiente, mono, puerco, báquiro,
+    conejo, lagarto, mosquito, murciélago, pato, garza, cangrejo, manatí,
+    cacería, hormiga, abeja, miel, ostra, perla — todos los aciertos de la
+    costa son «pescar/pescado». Para contraste, Pérez de Tolosa 1546 da en
+    Paraguaná «venados, conejos, perdices, tórtolas, pescado» (Fernández Duro
+    1885 t. II p. 228) — otra parcela.
+
+# ══════════════════════════════════════════════════════════════════════
+# 6. EL INTERIOR — caps. VIII (Barquisimeto) y XII (valle del Yaracuy)
+#    🔴 polity: interior. Nada de aquí es dato de la costa (regla 4).
+#    Se minó lo que la ficha ya citaba de segunda mano y poco más.
+# ══════════════════════════════════════════════════════════════════════
+interior:
+
+  - id: fed-int-001
+    polity: interior
+    comarca: Barquisimeto (Variquecemeto)
+    esfera: geografia_politica
+    afirmacion: >-
+      Unas veinte aldeas a la vista en una llanura junto a un gran río; en la
+      primera, «cerca de cuatro mil hombres»; en total veintitrés aldeas a la
+      orilla, a media legua o una legua una de otra; quince días entre ellas;
+      les dan más de 3.000 pesos de oro «de buena voluntad»: «pueblo rico y
+      comerciante», sin herramientas de hierro.
+    pagina_impresa: "59-62"
+    aleman: "«ob zweintzig» aldeas a la vista (1557 [47], imagen 57, verificado); «deren 23 waren» (Klüpfel p. 38, [50])"
+    eslabon_que_lo_da: Klüpfel
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: "Es prop-polity-001 con la página buena (62, no 109-110)."
+
+  - id: fed-int-002
+    polity: interior
+    comarca: Barquisimeto
+    esfera: geografia_politica
+    afirmacion: >-
+      Aldeas «muy fortificadas» y lo más juntas posible, porque tienen
+      enemigos por los cuatro lados: los Xaguas (con quienes sin embargo
+      comercian SAL), los Cyparicotes, los Cuibas y «una tribu de su nación»,
+      la del valle de Vararida. «En ninguna parte encontramos una población
+      tan numerosa en tan pequeño territorio.»
+    pagina_impresa: "62-63"
+    aleman: "«So haben sie zu der vierdten seitten ir eigne nation, auch Caquetios, in dem valle Poblado […] gehaissen Vararida, […] auch für feinde» (Klüpfel p. 39, [52])"
+    eslabon_que_lo_da: Klüpfel
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: "prop-polity-002 con la página buena (62-63)."
+
+  - id: fed-int-003
+    polity: interior
+    comarca: Barquisimeto / Xaguas
+    esfera: geografia_politica
+    afirmacion: >-
+      Los Xaguas de las últimas aldeas «viven en paz» con los caquetíos de
+      Barquisimeto y comercian con ellos sal, aunque en otro pasaje los da
+      por enemigos.
+    pagina_impresa: "60, 63"
+    aleman: "«mit den Caquetios / dern lande und flecken / wir jetzt ahnreisten / umb saltz fridtlich Contractirn und handlen» (1557 [48], imagen 58, verificado)"
+    eslabon_que_lo_da: 1557
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: "La sal circula tierra adentro entre naciones enemigas. De dónde sale esa sal, Federmann no lo dice."
+
+  - id: fed-int-004
+    polity: interior
+    comarca: valle de Vararida (= valle del Yaracuy, según Meléndez vía Arcaya p. 107 n. a)
+    esfera: geografia_politica
+    afirmacion: >-
+      ⭐ Los caquetíos del valle, «aunque sean de una nación» con los de
+      Barquisimeto, «no son amigos»: entre los dos hay jornada y media de
+      tierra despoblada con ruinas de aldeas quemadas. Los de Barquisimeto no
+      les dan guías por miedo a no volver.
+    pagina_impresa: 108
+    aleman: "«besitzen die Caquetios, die aber dem zu Varyquecimeto, ob sie wol einer Nation seind, so seind sie doch nit freündt» (Klüpfel p. 70, [97])"
+    eslabon_que_lo_da: Klüpfel
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: >-
+      Es la frase más limpia de todo Federmann para la regla 4: misma
+      nación, dos polities, y enemigas. Mejor sostén del modelo que la cita
+      elidida de prop-polity-004.
+
+  - id: fed-int-005
+    polity: interior
+    comarca: valle de Vararida
+    esfera: geografia_politica
+    afirmacion: >-
+      «Creo que les sería fácil reunir en un día hasta veinte mil guerreros.
+      Aunque los habitantes de todas estas aldeas son de la misma nación, no
+      están bajo el dominio de un solo señor.» Y a renglón seguido: los demás
+      habitantes del valle no están todos aliados y forman confederaciones de
+      dos, tres o cuatro aldeas, menos temibles que los de Barquisimeto.
+    cita_1916: "Aunque los habitantes de todas estas aldeas son de la misma nación, no están bajo el dominio de un solo señor."
+    pagina_impresa: 109
+    aleman: "«ob sie schon einer Nation, nit alle under eines herren herrschung […] sonder yhe zwen, drey, oder vier Pueblos mit einander Confederiert oder verbunden, derhalben sie weniger gewaltig seind, dann die in Varyquecimeto» (Klüpfel p. 71, [99]-[100])"
+    eslabon_que_lo_da: Klüpfel
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: >-
+      prop-polity-003/004 con la página buena (109, no 62-63). El alemán
+      tiene la misma ambigüedad que la francesa sobre a qué aldeas se
+      refieren los 20.000 («diser Pueblos»): se deja dicha.
+
+  - id: fed-int-006
+    polity: interior
+    comarca: valle de Vararida
+    esfera: familia
+    afirmacion: >-
+      Aldeas de hasta media legua de largo con una o dos calles; en una casa
+      viven «cinco y hasta ocho familias» — el alemán dice «cinco, seis, hasta
+      ocho clases de gente de casa, con mujer e hijos».
+    pagina_impresa: 110
+    aleman: "«Auch gewonlich inn einem hauß, fünff, sechs, biß in achterlai haußvolck mit weib und kinden» (Klüpfel p. 72)"
+    eslabon_que_lo_da: Klüpfel
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: >-
+      prop-polity-005 con la página buena. Compárese con la costa:
+      dieciséis personas en una casa de la aldehuela de Paraguaná
+      (fed-par-003). Dos polities, el mismo patrón de casa grande.
+
+  - id: fed-int-007
+    polity: interior
+    comarca: Barquisimeto
+    esfera: transmision
+    afirmacion: >-
+      Del Mar del Sur, los de Barquisimeto dicen que no han estado allí pero
+      que «habían oído hablar a sus antepasados»; Federmann lo toma por
+      excusa.
+    pagina_impresa: "63-64"
+    aleman: "«allein (sagten sie) von ihren altern also gehört haben» (Klüpfel p. 40)"
+    eslabon_que_lo_da: Klüpfel
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: "Saber geográfico transmitido por los mayores. Del interior."
+
+  - id: fed-int-008
+    polity: interior
+    comarca: valle de Vararida
+    esfera: ecologia
+    afirmacion: >-
+      En la casa, un tablado alto sobre cuatro postes, «tres hombres de alto»,
+      donde guardan el maíz: la `Barbacoa`; desde él doce indios resisten a
+      los españoles.
+    pagina_impresa: 113
+    cita_1916: "la barbacoa, como llaman ellos esa especie de troje; […] se elevaba sobre cuatro postes y era bastante alta para que un hombre pudiera estar parado"
+    aleman: "«ein hohe prucken so mitten im hauß uff vier pfeilern, und dreier männer hoch stunde, darinn sie ihr korn oder Mahys pflegen zuhaben» (Klüpfel p. 74)"
+    eslabon_que_lo_da: Klüpfel
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: >-
+      La altura no casa: «tres hombres de alto» en alemán, «que un hombre
+      pudiera estar parado» en la 1916. Manda el alemán. En el mismo pasaje un
+      indio le rompe el escudo con «ainer Macana, also haißt…» (Klüpfel p. 75):
+      otra voz de la esfera en boca del escribano (fed-len-005).
+
+  - id: fed-int-009
+    polity: ayaman (NO caquetía)
+    comarca: sierra ayamán
+    esfera: transmision
+    afirmacion: >-
+      Los ayamanes explican la mezcla de tallas por lo que «sus antepasados
+      les habían explicado»: una mortandad antigua los obligó a casarse con
+      sus enemigos xideharas.
+    pagina_impresa: 38
+    eslabon_que_lo_da: 1916
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: "Memoria oral de un vecino no caquetío; va aquí por la sierra que comparte con Coro."
+
+interior_no_se_mino: >-
+    Caps. IX-XI (Cuybas, Guaycaríes, Hacarigua, Itabana, la laguna) y el
+    resto del XII-XIII salvo lo citado: sólo por sondas. Lo que dieron las
+    sondas está arriba (lengua, fauna). Si se modela una segunda polity
+    (#83, D14), esos capítulos son los que faltan.
