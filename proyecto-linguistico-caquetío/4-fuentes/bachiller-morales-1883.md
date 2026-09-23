@@ -134,3 +134,13 @@ enteros; y si su retraducción de Pané coincide con la del repo.
   Mártir, Rafinesque y Brasseur.
 
 **Qué NO.** La sección 3ª (cubano del XIX) y la primera parte siguen sin leer.
+
+---
+
+## Bitácora: la *manaia* de Pané (2026-09-23, cc.7)
+
+**p. 192**, ✅ imagen: «y tomando una *manaia* lo abrieron y saltó una tortuga
+hembra y viva». Bachiller dice que trabaja sobre la «versión en italiano» de
+Pané. De paso, cita a Oviedo para `bagua` 'mar' («no digo baygua…»), que fue
+la pista para encontrarla en el cuerpo de Oviedo t. I p. 436. Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml`
+§zayas.manaya y §zayas.bagua.

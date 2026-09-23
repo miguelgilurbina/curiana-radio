@@ -1,7 +1,7 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 102
-  en_repo: 67
+  obras: 103
+  en_repo: 68
   solo_citadas: 35
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
@@ -334,6 +334,30 @@ obras:
   - Elegías de varones ilustres de Indias
   - Juan de Castellanos
   - castellanos-elegias
+  en_repo: true
+- id: castellanos-nuevo-reino-1886
+  obra: Historia del Nuevo Reino de Granada (Elegías de varones ilustres de Indias, Parte IV)
+  autor: Castellanos, Juan de
+  anio: 1886-1887 [c. 1601]
+  publicacion: Madrid, Imprenta de A. Pérez Dubrull, 1886-1887, 2 tomos (Colección de Escritores Castellanos).
+    «Publícala por primera vez Antonio Paz y Mélia». Es la Parte IV de las Elegías, que la BAE no imprimió;
+    la ficha de las partes I-III es [[castellanos-elegias]]
+  genero: cronica
+  local:
+  - fuentes_caquetios/Castellanos_1886_Historia_Nuevo_Reino_Granada_t1.pdf
+  - fuentes_caquetios/Castellanos_1886_Historia_Nuevo_Reino_Granada_t1.txt
+  - fuentes_caquetios/Castellanos_1886_Historia_Nuevo_Reino_Granada_t2.pdf
+  - fuentes_caquetios/Castellanos_1886_Historia_Nuevo_Reino_Granada_t2.txt
+  paginas: 't. I: 520 pdf, impresa = índice pymupdf (desde 0) − 63 en el cuerpo (medido: doc[109] = p.
+    46, doc[128] = p. 65, doc[187] = p. 124) · t. II: 464 pdf, impresa = índice pymupdf − 3 en el glosario
+    (doc[384] = p. 381, doc[388] = p. 385)'
+  aliases:
+  - Castellanos 1886
+  - Historia del Nuevo Reino de Granada
+  - N. Reino
+  - Elegías Parte IV
+  - Parte IV de Castellanos
+  - castellanos-nuevo-reino-1886
   en_repo: true
 - id: coll-y-toste-1897
   obra: Prehistoria de Puerto Rico (con el Vocabulario indo-antillano)
