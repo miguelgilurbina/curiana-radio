@@ -93,13 +93,29 @@ pp. 33-42 que se minaron el 09-12, **el arte está leído entero**.
   no toca ese YAML)*
 - **F — Nada de esto ahora.** *(siempre disponible)*
 
-**Mi recomendación: A + B + E**, y C como pregunta abierta en el tablero.
+**Mi recomendación: A + B + E + G**, H como campaña corta, y C como pregunta abierta en el tablero.
 
-## 5. Gilij
+## 5. Gilij (tomo III, 1782)
 
-Resultado en el YAML de la parcela (`gilij_1780_1783`) y en su ficha. El OCR del tomo III
-con `ocr_fuente.py` salió vacío en la mayoría de las páginas (render de página entera);
-se rehízo sobre la imagen incrustada.
+El OCR con `ocr_fuente.py` salió casi vacío (391 de 457 páginas); se rehízo sobre la
+imagen incrustada y lo citado se verificó en imagen. Detalle en el YAML
+(`gilij_1780_1783`) y en la ficha.
+
+- **El achagua es maipure**: «è certo dico, che l'Acciàgua è un dialetto del Maipùre»
+  (p. 205), con Gumilla. La filiación arahuaca del norte del achagua ya estaba escrita en
+  1782. Del arahuaco lokono («Aruàca») dice que no sabe nada.
+- **De paso, el maipure** (cap. X, pp. 185-190; fuera del encargo, sin minar entero):
+  «nuja io, pìa tu … uaja noi» (p. 186) y dos conjugaciones, activa y «passiva, la quale
+  serve anche pe' neutri», ésta sacada del verbo «ser» (p. 187). Es la **tercera
+  hermana con el corte activo/estativo** y la **primera no wayuu que da `pia`**.
+- **Caquetíos**: ver abajo, en la ficha (§ Gilij) — el cero medido o lo que haya.
+
+**Opción G — `pia` deja de ser «sólo wayuu»**: anotar en `morfologia.md` §1 que el maipure
+de Gilij da `pìa` «tú». No lo vuelve caquetío ni cambia su capa (sigue reconstruido), pero
+es el único pronombre del juego wayuu que una hermana del norte no wayuu repite letra por
+letra. *(recomendada, con A)*
+- **H — Minar el cap. X de Gilij** (gramática maipure, pp. 185-190) como comparanda del
+  norte para D11. *(recomendada como campaña corta aparte)*
 
 ## 6. Lo que no cupo, declarado
 
