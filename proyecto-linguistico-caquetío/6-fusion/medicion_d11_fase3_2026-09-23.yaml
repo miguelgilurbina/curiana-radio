@@ -1,0 +1,1593 @@
+# MEDICIÓN — D11 fase 3 (cc.12): el coste de sacar del wayuu pronombres y aspecto.
+# GENERADO por 6-fusion/scripts/medir_d11_fase3.py — no se edita a mano (regla 1).
+# La propuesta que lo usa: 6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml
+meta:
+  medido: '2026-09-23'
+  script: 6-fusion/scripts/medir_d11_fase3.py
+  motor_medido: curiana_sim de origin/tanda/base-2026-09-22 @ ff16aa1 (#202, el motor sobre el que caería la tanda)
+  vocabulario_base: 5500
+  fuera_del_habla: 21
+  todas_las_reglas: 19
+  elenco:
+    era1: 60
+    era2: 63
+  base:
+    word_uses: 105792
+    agent_responses: 3811
+    simulation_runs: 51
+    formas_distintas: 2805
+  fonotactica:
+    formas_base: 227
+    gu_es_w: false
+    nota: el filtro del módulo tal cual (medir()); los esqueletos de colisión sí usan gu→w (D5c)
+formas_actuales:
+  taya:
+    uso:
+      word_uses:
+        usos: 3750
+        respuestas: 3750
+        runs: 51
+      texto_de_respuestas:
+        respuestas: 3750
+        runs: 51
+        apariciones: 10728
+    colisiones:
+      clave_exacta:
+      - - taya
+        - caquetío-reconstruido
+        - yo (1ra persona singular)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+  pia:
+    uso:
+      word_uses:
+        usos: 2068
+        respuestas: 2068
+        runs: 51
+      texto_de_respuestas:
+        respuestas: 2069
+        runs: 51
+        apariciones: 3770
+    colisiones:
+      clave_exacta:
+      - - pia
+        - caquetío-reconstruido
+        - tú (2da persona singular)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+  nüma:
+    uso:
+      word_uses:
+        usos: 2680
+        respuestas: 2680
+        runs: 51
+      texto_de_respuestas:
+        respuestas: 2681
+        runs: 51
+        apariciones: 6232
+    colisiones:
+      clave_exacta:
+      - - nüma
+        - caquetío-reconstruido
+        - él/ella (pronombre 3ra persona)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: 'letras fuera del inventario: ü'
+  waya:
+    uso:
+      word_uses:
+        usos: 747
+        respuestas: 747
+        runs: 50
+      texto_de_respuestas:
+        respuestas: 748
+        runs: 50
+        apariciones: 974
+    colisiones:
+      clave_exacta:
+      - - waya
+        - caquetío-reconstruido
+        - nosotros (1ra persona plural)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico:
+      - - guaya
+        - achagua
+        - VOCABULARIO_BASE
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+  naya:
+    uso:
+      word_uses:
+        usos: 924
+        respuestas: 924
+        runs: 47
+      texto_de_respuestas:
+        respuestas: 924
+        runs: 47
+        apariciones: 1617
+    colisiones:
+      clave_exacta:
+      - - naya
+        - caquetío-reconstruido
+        - ellos, ellas (3ra persona plural)
+      archivada: []
+      clave_con_desambiguador:
+      - - naya-achagua
+        - achagua
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+  kudanga:
+    uso:
+      word_uses:
+        usos: 72
+        respuestas: 72
+        runs: 14
+      texto_de_respuestas:
+        respuestas: 73
+        runs: 15
+        apariciones: 83
+    colisiones:
+      clave_exacta:
+      - - kudanga
+        - caquetío-atestiguado
+        - usted, vos (2da persona formal)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+  kuté:
+    uso:
+      word_uses:
+        usos: 55
+        respuestas: 55
+        runs: 16
+      texto_de_respuestas:
+        respuestas: 56
+        runs: 17
+        apariciones: 70
+    colisiones:
+      clave_exacta:
+      - - kuté
+        - caquetío-atestiguado
+        - a usted, para usted (dativo formal)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+  -ka:
+    uso:
+      word_uses_con_el_afijo:
+        formas: 153
+        usos: 8466
+      texto_de_respuestas:
+        respuestas: 3730
+        runs: 51
+        apariciones: 16749
+    colisiones:
+      clave_exacta:
+      - - ka
+        - caquetío-reconstruido
+        - y, también, además, con (conector aditivo)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico:
+      - - ca-lokono
+        - lokono
+        - VOCABULARIO_BASE
+      - - -ca
+        - achagua
+        - VOCABULARIO_BASE
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+      ya_es_afijo_del_motor: true
+      afijo_suelto_reclasifica: null
+      fonotactica_en_compuesto:
+        naaka: pasa
+  -ni:
+    uso:
+      word_uses_con_el_afijo:
+        formas: 237
+        usos: 16315
+      texto_de_respuestas:
+        respuestas: 3811
+        runs: 51
+        apariciones: 36735
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador:
+      - - ni-lokono
+        - lokono
+      - - ni-achagua
+        - achagua
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre:
+      - Buko-ni
+      - Kawa-ni
+      - Marokoto-ni
+      - Wata-ni
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+      ya_es_afijo_del_motor: true
+      afijo_suelto_reclasifica: null
+      fonotactica_en_compuesto:
+        naani: pasa
+  -da:
+    uso:
+      word_uses_con_el_afijo:
+        formas: 195
+        usos: 9569
+      texto_de_respuestas:
+        respuestas: 3598
+        runs: 51
+        apariciones: 17104
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+      ya_es_afijo_del_motor: true
+      afijo_suelto_reclasifica: null
+      fonotactica_en_compuesto:
+        naada: pasa
+  ta-:
+    uso:
+      word_uses_con_el_afijo:
+        formas: 299
+        usos: 7590
+      texto_de_respuestas:
+        respuestas: 3631
+        runs: 51
+        apariciones: 15496
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+      ya_es_afijo_del_motor: true
+      afijo_suelto_reclasifica: null
+      fonotactica_en_compuesto:
+        tabiro: pasa
+  wa-:
+    uso:
+      word_uses_con_el_afijo:
+        formas: 111
+        usos: 479
+      texto_de_respuestas:
+        respuestas: 820
+        runs: 48
+        apariciones: 1137
+    colisiones:
+      clave_exacta:
+      - - wa
+        - caquetío-atestiguado
+        - conuco, heredad, terreno cercado cultivado
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+      ya_es_afijo_del_motor: true
+      afijo_suelto_reclasifica: null
+      fonotactica_en_compuesto:
+        wabiro: pasa
+  -kana:
+    uso:
+      word_uses_con_el_afijo:
+        formas: 91
+        usos: 404
+      texto_de_respuestas:
+        respuestas: 2354
+        runs: 50
+        apariciones: 5769
+    colisiones:
+      clave_exacta:
+      - - kana
+        - caquetío-atestiguado
+        - demonio
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico:
+      - - cana-achagua
+        - achagua
+        - VOCABULARIO_BASE
+      - - chana
+        - achagua
+        - VOCABULARIO_BASE
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+      ya_es_afijo_del_motor: true
+      afijo_suelto_reclasifica: null
+      fonotactica_en_compuesto:
+        naakana: pasa
+  u-:
+    uso:
+      word_uses_con_el_afijo:
+        formas: 55
+        usos: 252
+      texto_de_respuestas:
+        respuestas: 192
+        runs: 6
+        apariciones: 533
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: true
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+      ya_es_afijo_del_motor: true
+      afijo_suelto_reclasifica: null
+      fonotactica_en_compuesto:
+        ubiro: pasa
+aspecto_del_canon_en_la_base:
+  formas_con_alguno_de_los_tres: 538
+  usos: 34213
+  suma_de_los_tres_por_separado: 34350
+formas_candidatas:
+  dai:
+    casillas:
+    - pron-1sg.A
+    uso:
+      word_uses:
+        usos: 0
+        respuestas: 0
+        runs: 0
+      texto_de_respuestas:
+        respuestas: 0
+        runs: 0
+        apariciones: 0
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+  daka:
+    casillas:
+    - pron-1sg.B
+    uso:
+      word_uses:
+        usos: 0
+        respuestas: 0
+        runs: 0
+      texto_de_respuestas:
+        respuestas: 0
+        runs: 0
+        apariciones: 0
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico:
+      - - daca
+        - taíno
+        - VOCABULARIO_BASE
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+  daya:
+    casillas:
+    - pron-1sg.C
+    uso:
+      word_uses:
+        usos: 0
+        respuestas: 0
+        runs: 0
+      texto_de_respuestas:
+        respuestas: 0
+        runs: 0
+        apariciones: 0
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+  daca:
+    casillas:
+    - pron-1sg.D
+    uso:
+      word_uses:
+        usos: 0
+        respuestas: 0
+        runs: 0
+      texto_de_respuestas:
+        respuestas: 0
+        runs: 0
+        apariciones: 0
+    colisiones:
+      clave_exacta:
+      - - daca
+        - taíno
+        - yo
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+  bui:
+    casillas:
+    - pron-2sg.A
+    uso:
+      word_uses:
+        usos: 0
+        respuestas: 0
+        runs: 0
+      texto_de_respuestas:
+        respuestas: 0
+        runs: 0
+        apariciones: 0
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+  bia:
+    casillas:
+    - pron-2sg.B
+    uso:
+      word_uses:
+        usos: 0
+        respuestas: 0
+        runs: 0
+      texto_de_respuestas:
+        respuestas: 0
+        runs: 0
+        apariciones: 0
+    colisiones:
+      clave_exacta:
+      - - bia
+        - lokono
+        - in (y 1 acepción/es más)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+  pia:
+    casillas:
+    - pron-2sg.C
+    uso:
+      word_uses:
+        usos: 2068
+        respuestas: 2068
+        runs: 51
+      texto_de_respuestas:
+        respuestas: 2069
+        runs: 51
+        apariciones: 3770
+    colisiones:
+      clave_exacta:
+      - - pia
+        - caquetío-reconstruido
+        - tú (2da persona singular)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+  lihi:
+    casillas:
+    - pron-3sg.A
+    - pron-3sg.C
+    uso:
+      word_uses:
+        usos: 0
+        respuestas: 0
+        runs: 0
+      texto_de_respuestas:
+        respuestas: 0
+        runs: 0
+        apariciones: 0
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+  tuhu:
+    casillas:
+    - pron-3sg.A
+    - pron-3sg.B
+    uso:
+      word_uses:
+        usos: 0
+        respuestas: 0
+        runs: 0
+      texto_de_respuestas:
+        respuestas: 0
+        runs: 0
+        apariciones: 0
+    colisiones:
+      clave_exacta:
+      - - tuhu
+        - lokono
+        - aquel, aquella, aquello, aquellos, aquellas (y 2 a
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+  waya:
+    casillas:
+    - pron-1pl.A
+    uso:
+      word_uses:
+        usos: 747
+        respuestas: 747
+        runs: 50
+      texto_de_respuestas:
+        respuestas: 748
+        runs: 50
+        apariciones: 974
+    colisiones:
+      clave_exacta:
+      - - waya
+        - caquetío-reconstruido
+        - nosotros (1ra persona plural)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico:
+      - - guaya
+        - achagua
+        - VOCABULARIO_BASE
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+  wai:
+    casillas:
+    - pron-1pl.B
+    uso:
+      word_uses:
+        usos: 0
+        respuestas: 0
+        runs: 0
+      texto_de_respuestas:
+        respuestas: 4
+        runs: 4
+        apariciones: 5
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico:
+      - - way
+        - caquetío-atestiguado
+        - VOCABULARIO_BASE
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+  naya:
+    casillas:
+    - pron-3pl.A
+    uso:
+      word_uses:
+        usos: 924
+        respuestas: 924
+        runs: 47
+      texto_de_respuestas:
+        respuestas: 924
+        runs: 47
+        apariciones: 1617
+    colisiones:
+      clave_exacta:
+      - - naya
+        - caquetío-reconstruido
+        - ellos, ellas (3ra persona plural)
+      archivada: []
+      clave_con_desambiguador:
+      - - naya-achagua
+        - achagua
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+  nai:
+    casillas:
+    - pron-3pl.B
+    uso:
+      word_uses:
+        usos: 0
+        respuestas: 0
+        runs: 0
+      texto_de_respuestas:
+        respuestas: 1
+        runs: 1
+        apariciones: 1
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+  -kuba:
+    casillas:
+    - asp-completivo.A
+    uso:
+      word_uses_con_el_afijo:
+        formas: 0
+        usos: 0
+      texto_de_respuestas:
+        respuestas: 0
+        runs: 0
+        apariciones: 0
+    colisiones:
+      clave_exacta:
+      - - kuba
+        - lokono
+        - signo de tiempo pasado (prefijo/sufijo temporal)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+      ya_es_afijo_del_motor: false
+      afijo_suelto_reclasifica:
+      - kuba
+      - lokono
+      fonotactica_en_compuesto:
+        naakuba: pasa
+  -bi:
+    casillas:
+    - asp-completivo.B
+    uso:
+      word_uses_con_el_afijo:
+        formas: 1
+        usos: 3
+      texto_de_respuestas:
+        respuestas: 1
+        runs: 1
+        apariciones: 1
+    colisiones:
+      clave_exacta:
+      - - bi
+        - lokono
+        - tú (pronombre libre 2sg)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre:
+      - Raka-bi
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+      ya_es_afijo_del_motor: false
+      afijo_suelto_reclasifica:
+      - bi
+      - lokono
+      fonotactica_en_compuesto:
+        naabi: pasa
+  -mi:
+    casillas:
+    - asp-completivo.C
+    uso:
+      word_uses_con_el_afijo:
+        formas: 0
+        usos: 0
+      texto_de_respuestas:
+        respuestas: 22
+        runs: 10
+        apariciones: 24
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: true
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+      ya_es_afijo_del_motor: false
+      afijo_suelto_reclasifica: null
+      fonotactica_en_compuesto:
+        naami: pasa
+  -kata:
+    casillas:
+    - asp-continuativo.B
+    uso:
+      word_uses_con_el_afijo:
+        formas: 3
+        usos: 8
+      texto_de_respuestas:
+        respuestas: 22
+        runs: 7
+        apariciones: 24
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico:
+      - - cata-achagua
+        - achagua
+        - VOCABULARIO_BASE
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+      ya_es_afijo_del_motor: false
+      afijo_suelto_reclasifica: null
+      fonotactica_en_compuesto:
+        naakata: pasa
+  -ka:
+    casillas:
+    - asp-continuativo.C
+    uso:
+      word_uses_con_el_afijo:
+        formas: 153
+        usos: 8466
+      texto_de_respuestas:
+        respuestas: 3730
+        runs: 51
+        apariciones: 16749
+    colisiones:
+      clave_exacta:
+      - - ka
+        - caquetío-reconstruido
+        - y, también, además, con (conector aditivo)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico:
+      - - ca-lokono
+        - lokono
+        - VOCABULARIO_BASE
+      - - -ca
+        - achagua
+        - VOCABULARIO_BASE
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+      ya_es_afijo_del_motor: true
+      afijo_suelto_reclasifica: null
+      fonotactica_en_compuesto:
+        naaka: pasa
+  -bo:
+    casillas:
+    - asp-continuativo.D
+    uso:
+      word_uses_con_el_afijo:
+        formas: 0
+        usos: 0
+      texto_de_respuestas:
+        respuestas: 1
+        runs: 1
+        apariciones: 1
+    colisiones:
+      clave_exacta:
+      - - bo
+        - lokono
+        - sufijo continuativo / presente progresivo (-bo)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+      ya_es_afijo_del_motor: false
+      afijo_suelto_reclasifica:
+      - bo
+      - lokono
+      fonotactica_en_compuesto:
+        naabo: pasa
+  -ba:
+    casillas:
+    - asp-prospectivo.A
+    uso:
+      word_uses_con_el_afijo:
+        formas: 5
+        usos: 6
+      texto_de_respuestas:
+        respuestas: 26
+        runs: 13
+        apariciones: 33
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador:
+      - - ba-achagua
+        - achagua
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+      ya_es_afijo_del_motor: false
+      afijo_suelto_reclasifica: null
+      fonotactica_en_compuesto:
+        naaba: pasa
+  -pa:
+    casillas:
+    - asp-prospectivo.B
+    uso:
+      word_uses_con_el_afijo:
+        formas: 0
+        usos: 0
+      texto_de_respuestas:
+        respuestas: 0
+        runs: 0
+        apariciones: 0
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+      ya_es_afijo_del_motor: false
+      afijo_suelto_reclasifica: null
+      fonotactica_en_compuesto:
+        naapa: pasa
+  -su:
+    casillas:
+    - asp-prospectivo.C
+    uso:
+      word_uses_con_el_afijo:
+        formas: 1
+        usos: 1
+      texto_de_respuestas:
+        respuestas: 15
+        runs: 13
+        apariciones: 17
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico:
+      - - -su
+        - achagua
+        - VOCABULARIO_BASE
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: true
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+      ya_es_afijo_del_motor: false
+      afijo_suelto_reclasifica: null
+      fonotactica_en_compuesto:
+        naasu: pasa
+  da-:
+    casillas:
+    - pos-1sg.A
+    uso:
+      word_uses_con_el_afijo:
+        formas: 0
+        usos: 0
+      texto_de_respuestas:
+        respuestas: 41
+        runs: 26
+        apariciones: 47
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+      ya_es_afijo_del_motor: false
+      afijo_suelto_reclasifica: null
+      fonotactica_en_compuesto:
+        dabiro: pasa
+  ta-:
+    casillas:
+    - pos-1sg.B
+    uso:
+      word_uses_con_el_afijo:
+        formas: 299
+        usos: 7590
+      texto_de_respuestas:
+        respuestas: 3631
+        runs: 51
+        apariciones: 15496
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_stopword_castellana: false
+      castellano_corriente: false
+      fonotactica_atestiguada: pasa
+      ya_es_afijo_del_motor: true
+      afijo_suelto_reclasifica: null
+      fonotactica_en_compuesto:
+        tabiro: pasa
+desafijador:
+  recomendado (-kuba/Ø/-ba) · los viejos salen:
+    formas_con_guion: 2395
+    cambian_de_nucleo:
+      formas: 498
+      usos: 34051
+    cambian_de_veredicto_raiz:
+      formas: 30
+      usos: 351
+      pasan_a_raiz_de_ninguna_parte: 0
+      ejemplos:
+      - puri-ka
+      - karu-bana-ni
+      - karu-puri-ni
+      - kabakani-ni
+      - duka-ni
+      - güere-ni
+      - uyama-ni
+      - jacuque-ni
+    ejemplos_de_nucleo:
+    - naba-ni → naba-ni (antes naba)
+    - wana-ka → wana-ka (antes wana)
+    - kaa-ni → kaa-ni (antes kaa)
+    - naa-ni → naa-ni (antes naa)
+    - naa-da → naa-da (antes naa)
+    - wana-ni → wana-ni (antes wana)
+  recomendado (-kuba/Ø/-ba) · los viejos se siguen pelando:
+    formas_con_guion: 2395
+    cambian_de_nucleo:
+      formas: 5
+      usos: 6
+    cambian_de_veredicto_raiz:
+      formas: 0
+      usos: 0
+      pasan_a_raiz_de_ninguna_parte: 0
+      ejemplos: []
+    ejemplos_de_nucleo:
+    - naa-da-ba → naa (antes naa-da-ba)
+    - maa-ba → maa (antes maa-ba)
+    - waa-da-ba → waa (antes waa-da-ba)
+    - wana-da-ba → wana (antes wana-da-ba)
+    - wana-ka-ba → wana (antes wana-ka-ba)
+  tres marcas (-kuba/-kata/-ba) · los viejos salen:
+    formas_con_guion: 2395
+    cambian_de_nucleo:
+      formas: 501
+      usos: 34059
+    cambian_de_veredicto_raiz:
+      formas: 30
+      usos: 351
+      pasan_a_raiz_de_ninguna_parte: 0
+      ejemplos:
+      - puri-ka
+      - karu-bana-ni
+      - karu-puri-ni
+      - kabakani-ni
+      - duka-ni
+      - güere-ni
+      - uyama-ni
+      - jacuque-ni
+    ejemplos_de_nucleo:
+    - naba-ni → naba-ni (antes naba)
+    - wana-ka → wana-ka (antes wana)
+    - kaa-ni → kaa-ni (antes kaa)
+    - naa-ni → naa-ni (antes naa)
+    - naa-da → naa-da (antes naa)
+    - wana-ni → wana-ni (antes wana)
+  tres marcas (-kuba/-kata/-ba) · los viejos se siguen pelando:
+    formas_con_guion: 2395
+    cambian_de_nucleo:
+      formas: 8
+      usos: 14
+    cambian_de_veredicto_raiz:
+      formas: 0
+      usos: 0
+      pasan_a_raiz_de_ninguna_parte: 0
+      ejemplos: []
+    ejemplos_de_nucleo:
+    - biro-rua-kata → biro-rua (antes biro-rua-kata)
+    - naa-da-ba → naa (antes naa-da-ba)
+    - rua-kata → rua (antes rua-kata)
+    - ka-biro-rua-kata → biro-rua (antes biro-rua-kata)
+    - maa-ba → maa (antes maa-ba)
+    - waa-da-ba → waa (antes waa-da-ba)
+  presente -ka (-kuba/-ka/-ba) · los viejos salen:
+    formas_con_guion: 2395
+    cambian_de_nucleo:
+      formas: 389
+      usos: 25790
+    cambian_de_veredicto_raiz:
+      formas: 24
+      usos: 275
+      pasan_a_raiz_de_ninguna_parte: 0
+      ejemplos:
+      - karu-bana-ni
+      - karu-puri-ni
+      - kabakani-ni
+      - duka-ni
+      - güere-ni
+      - uyama-ni
+      - jacuque-ni
+      - suave-bana-ni
+    ejemplos_de_nucleo:
+    - naba-ni → naba-ni (antes naba)
+    - kaa-ni → kaa-ni (antes kaa)
+    - naa-ni → naa-ni (antes naa)
+    - naa-da → naa-da (antes naa)
+    - wana-ni → wana-ni (antes wana)
+    - maa-ni → maa-ni (antes maa)
+  presente -ka (-kuba/-ka/-ba) · los viejos se siguen pelando:
+    formas_con_guion: 2395
+    cambian_de_nucleo:
+      formas: 5
+      usos: 6
+    cambian_de_veredicto_raiz:
+      formas: 0
+      usos: 0
+      pasan_a_raiz_de_ninguna_parte: 0
+      ejemplos: []
+    ejemplos_de_nucleo:
+    - naa-da-ba → naa (antes naa-da-ba)
+    - maa-ba → maa (antes maa-ba)
+    - waa-da-ba → waa (antes waa-da-ba)
+    - wana-da-ba → wana (antes wana-da-ba)
+    - wana-ka-ba → wana (antes wana-ka-ba)
+  lokono de Schumann y Pet (-bi/-bo/-pa) · los viejos salen:
+    formas_con_guion: 2395
+    cambian_de_nucleo:
+      formas: 494
+      usos: 34048
+    cambian_de_veredicto_raiz:
+      formas: 30
+      usos: 351
+      pasan_a_raiz_de_ninguna_parte: 0
+      ejemplos:
+      - puri-ka
+      - karu-bana-ni
+      - karu-puri-ni
+      - kabakani-ni
+      - duka-ni
+      - güere-ni
+      - uyama-ni
+      - jacuque-ni
+    ejemplos_de_nucleo:
+    - naba-ni → naba-ni (antes naba)
+    - wana-ka → wana-ka (antes wana)
+    - kaa-ni → kaa-ni (antes kaa)
+    - naa-ni → naa-ni (antes naa)
+    - naa-da → naa-da (antes naa)
+    - wana-ni → wana-ni (antes wana)
+  lokono de Schumann y Pet (-bi/-bo/-pa) · los viejos se siguen pelando:
+    formas_con_guion: 2395
+    cambian_de_nucleo:
+      formas: 1
+      usos: 3
+    cambian_de_veredicto_raiz:
+      formas: 0
+      usos: 0
+      pasan_a_raiz_de_ninguna_parte: 0
+      ejemplos: []
+    ejemplos_de_nucleo:
+    - raka-bi → raka (antes raka-bi)
+  achagua (-mi/-kata/-su) · los viejos salen:
+    formas_con_guion: 2395
+    cambian_de_nucleo:
+      formas: 497
+      usos: 34054
+    cambian_de_veredicto_raiz:
+      formas: 30
+      usos: 351
+      pasan_a_raiz_de_ninguna_parte: 0
+      ejemplos:
+      - puri-ka
+      - karu-bana-ni
+      - karu-puri-ni
+      - kabakani-ni
+      - duka-ni
+      - güere-ni
+      - uyama-ni
+      - jacuque-ni
+    ejemplos_de_nucleo:
+    - naba-ni → naba-ni (antes naba)
+    - wana-ka → wana-ka (antes wana)
+    - kaa-ni → kaa-ni (antes kaa)
+    - naa-ni → naa-ni (antes naa)
+    - naa-da → naa-da (antes naa)
+    - wana-ni → wana-ni (antes wana)
+  achagua (-mi/-kata/-su) · los viejos se siguen pelando:
+    formas_con_guion: 2395
+    cambian_de_nucleo:
+      formas: 4
+      usos: 9
+    cambian_de_veredicto_raiz:
+      formas: 0
+      usos: 0
+      pasan_a_raiz_de_ninguna_parte: 0
+      ejemplos: []
+    ejemplos_de_nucleo:
+    - biro-rua-kata → biro-rua (antes biro-rua-kata)
+    - rua-kata → rua (antes rua-kata)
+    - ka-biro-rua-kata → biro-rua (antes biro-rua-kata)
+    - suna-ka-su → suna (antes suna-ka-su)
+  ta- → da- · ta- sale:
+    formas_con_guion: 2395
+    cambian_de_nucleo:
+      formas: 299
+      usos: 7590
+    cambian_de_veredicto_raiz:
+      formas: 5
+      usos: 433
+      pasan_a_raiz_de_ninguna_parte: 5
+      ejemplos:
+      - ta-bana
+      - ta-ana
+      - ta-kana
+      - ta-ka
+      - ta-wa
+    ejemplos_de_nucleo:
+    - ta-barsure → ta-barsure (antes barsure)
+    - ta-nii → ta-nii (antes nii)
+    - ta-bana → ta (antes bana)
+    - ta-corie → ta-corie (antes corie)
+    - ta-pütchi → ta-pütchi (antes pütchi)
+    - ta-buri → ta-buri (antes buri)
+  ta- → da- · ta- se sigue pelando:
+    formas_con_guion: 2395
+    cambian_de_nucleo:
+      formas: 0
+      usos: 0
+    cambian_de_veredicto_raiz:
+      formas: 0
+      usos: 0
+      pasan_a_raiz_de_ninguna_parte: 0
+      ejemplos: []
+    ejemplos_de_nucleo: []
+detector_de_aspecto:
+  control_contra_el_motor:
+    respuestas: 3811
+    desvios: 0
+  actual (-ka/-ni/-da):
+    respuestas_con_aspecto: 3802
+    respuestas_en_el_tope_2: 3648
+    media_del_componente: 1.9549
+    tope_alcanzable: 2
+  recomendado (-kuba/Ø/-ba):
+    respuestas_con_aspecto: 1
+    respuestas_en_el_tope_2: 0
+    media_del_componente: 0.0003
+    tope_alcanzable: 2
+  tres marcas (-kuba/-kata/-ba):
+    respuestas_con_aspecto: 13
+    respuestas_en_el_tope_2: 0
+    media_del_componente: 0.0034
+    tope_alcanzable: 2
+  presente -ka (-kuba/-ka/-ba):
+    respuestas_con_aspecto: 3450
+    respuestas_en_el_tope_2: 1
+    media_del_componente: 0.9055
+    tope_alcanzable: 2
+  lokono de Schumann y Pet (-bi/-bo/-pa):
+    respuestas_con_aspecto: 0
+    respuestas_en_el_tope_2: 0
+    media_del_componente: 0.0
+    tope_alcanzable: 2
+  achagua (-mi/-kata/-su):
+    respuestas_con_aspecto: 12
+    respuestas_en_el_tope_2: 0
+    media_del_componente: 0.0031
+    tope_alcanzable: 2
+  unión (actual + recomendado), para una transición:
+    respuestas_con_aspecto: 3802
+    respuestas_en_el_tope_2: 3648
+    media_del_componente: 1.9549
+    tope_alcanzable: 2
+ensenanza:
+  taya:
+    plantillas_que_la_ensenan: 3
+    apariciones_en_plantillas: 6
+    por_plantilla:
+      IDENTIDAD_LINGUISTICA (todos): 2
+      prompt_reglas_completo (tier I): 3
+      prompt_refuerzo (4 tramos): 1
+    en_reglas_del_motor: 3
+    koine:
+      _NUCLEO_FALLBACK: 1
+    escena_marca_caquetia: true
+    cableado_en_el_scorer: false
+    apariciones_en_tests: 82
+    tests_que_la_nombran: 20
+    en_fichas_del_elenco: 0
+  pia:
+    plantillas_que_la_ensenan: 1
+    apariciones_en_plantillas: 4
+    por_plantilla:
+      prompt_reglas_completo (tier I): 4
+    en_reglas_del_motor: 0
+    koine:
+      _NUCLEO_FALLBACK: 1
+    escena_marca_caquetia: true
+    cableado_en_el_scorer: false
+    apariciones_en_tests: 9
+    tests_que_la_nombran: 6
+    en_fichas_del_elenco: 0
+  nüma:
+    plantillas_que_la_ensenan: 2
+    apariciones_en_plantillas: 2
+    por_plantilla:
+      IDENTIDAD_LINGUISTICA (todos): 1
+      prompt_reglas_completo (tier I): 1
+    en_reglas_del_motor: 0
+    koine:
+      _NUCLEO_FALLBACK: 1
+    escena_marca_caquetia: true
+    cableado_en_el_scorer: false
+    apariciones_en_tests: 10
+    tests_que_la_nombran: 7
+    en_fichas_del_elenco: 0
+  waya:
+    plantillas_que_la_ensenan: 1
+    apariciones_en_plantillas: 1
+    por_plantilla:
+      prompt_reglas_completo (tier I): 1
+    en_reglas_del_motor: 0
+    koine: {}
+    escena_marca_caquetia: true
+    cableado_en_el_scorer: false
+    apariciones_en_tests: 5
+    tests_que_la_nombran: 3
+    en_fichas_del_elenco: 0
+  naya:
+    plantillas_que_la_ensenan: 1
+    apariciones_en_plantillas: 1
+    por_plantilla:
+      prompt_reglas_completo (tier I): 1
+    en_reglas_del_motor: 0
+    koine: {}
+    escena_marca_caquetia: true
+    cableado_en_el_scorer: false
+    apariciones_en_tests: 3
+    tests_que_la_nombran: 3
+    en_fichas_del_elenco: 0
+  kudanga:
+    plantillas_que_la_ensenan: 1
+    apariciones_en_plantillas: 2
+    por_plantilla:
+      prompt_reglas_completo (tier I): 2
+    en_reglas_del_motor: 0
+    koine: {}
+    escena_marca_caquetia: false
+    cableado_en_el_scorer: false
+    apariciones_en_tests: 5
+    tests_que_la_nombran: 1
+    en_fichas_del_elenco: 0
+  kuté:
+    plantillas_que_la_ensenan: 1
+    apariciones_en_plantillas: 1
+    por_plantilla:
+      prompt_reglas_completo (tier I): 1
+    en_reglas_del_motor: 0
+    koine: {}
+    escena_marca_caquetia: false
+    cableado_en_el_scorer: false
+    apariciones_en_tests: 3
+    tests_que_la_nombran: 1
+    en_fichas_del_elenco: 0
+  -ka:
+    plantillas_que_la_ensenan: 4
+    apariciones_en_plantillas: 12
+    por_plantilla:
+      IDENTIDAD_LINGUISTICA (todos): 1
+      prompt_reglas_completo (tier I): 7
+      prompt_reglas_breve: 1
+      prompt_rescate (3 motivos): 3
+    en_reglas_del_motor: 7
+    koine:
+      FORMAS_SEED: 8
+      _ASPECTO_SUFIJO: 1
+    escena_marca_caquetia: false
+    cableado_en_el_scorer: true
+    apariciones_en_tests: 83
+    tests_que_la_nombran: 20
+  -ni:
+    plantillas_que_la_ensenan: 5
+    apariciones_en_plantillas: 13
+    por_plantilla:
+      IDENTIDAD_LINGUISTICA (todos): 1
+      prompt_reglas_completo (tier I): 7
+      prompt_reglas_breve: 1
+      prompt_refuerzo (4 tramos): 1
+      prompt_rescate (3 motivos): 3
+    en_reglas_del_motor: 7
+    koine:
+      FORMAS_SEED: 14
+      _ASPECTO_SUFIJO: 1
+    escena_marca_caquetia: false
+    cableado_en_el_scorer: true
+    apariciones_en_tests: 89
+    tests_que_la_nombran: 17
+  -da:
+    plantillas_que_la_ensenan: 3
+    apariciones_en_plantillas: 13
+    por_plantilla:
+      prompt_reglas_completo (tier I): 9
+      prompt_reglas_breve: 1
+      prompt_rescate (3 motivos): 3
+    en_reglas_del_motor: 7
+    koine:
+      FORMAS_SEED: 10
+      _ASPECTO_SUFIJO: 1
+    escena_marca_caquetia: false
+    cableado_en_el_scorer: true
+    apariciones_en_tests: 19
+    tests_que_la_nombran: 9
+  ta-:
+    plantillas_que_la_ensenan: 4
+    apariciones_en_plantillas: 9
+    por_plantilla:
+      IDENTIDAD_LINGUISTICA (todos): 1
+      prompt_reglas_completo (tier I): 6
+      prompt_reglas_breve: 1
+      prompt_refuerzo (4 tramos): 1
+    en_reglas_del_motor: 6
+    koine: {}
+    escena_marca_caquetia: false
+    cableado_en_el_scorer: true
+    apariciones_en_tests: 39
+    tests_que_la_nombran: 11
+  -kana:
+    plantillas_que_la_ensenan: 2
+    apariciones_en_plantillas: 2
+    por_plantilla:
+      prompt_reglas_completo (tier I): 1
+      prompt_reglas_breve: 1
+    en_reglas_del_motor: 6
+    koine: {}
+    escena_marca_caquetia: false
+    cableado_en_el_scorer: false
+    apariciones_en_tests: 8
+    tests_que_la_nombran: 4
+deuda_d11_las_23:
+  aviso: '`apariciones_en_plantillas` no cuenta el locativo -bana escrito `sima+bana`: `bana` ''hígado'' (la de
+    la deuda) y -bana ''cerro'' (D9) son dos entradas'
+  total: 23
+  siguen_en_el_habla: 16
+  ensenadas_por_alguna_plantilla: 15
+  voces:
+    anüiki:
+      en_el_habla: true
+      glosa: habla, palabra, lengua
+      cat: sust
+      apariciones_en_plantillas: 1
+      word_uses: 109
+    apünüin:
+      en_el_habla: false
+      glosa: tres (numeral)
+      cat: num
+      apariciones_en_plantillas: 0
+      word_uses: 87
+    bana:
+      en_el_habla: true
+      glosa: hígado
+      cat: sust
+      apariciones_en_plantillas: 0
+      word_uses: 372
+    jarai:
+      en_el_habla: false
+      glosa: cinco (numeral)
+      cat: num
+      apariciones_en_plantillas: 0
+      word_uses: 21
+    kapua:
+      en_el_habla: true
+      glosa: amanecer, alba, primera luz del día
+      cat: sust
+      apariciones_en_plantillas: 2
+      word_uses: 537
+    kasha:
+      en_el_habla: false
+      glosa: luna
+      cat: sust
+      apariciones_en_plantillas: 0
+      word_uses: 146
+    kashi:
+      en_el_habla: true
+      glosa: ahora, en este momento (temporal presente)
+      cat: part
+      apariciones_en_plantillas: 3
+      word_uses: 3187
+    kira:
+      en_el_habla: false
+      glosa: escuchar, oír, atender
+      cat: v_raiz
+      apariciones_en_plantillas: 0
+      word_uses: 27
+    naba:
+      en_el_habla: true
+      glosa: pensar, reflexionar, meditar
+      cat: v_raiz
+      apariciones_en_plantillas: 1
+      word_uses: 40
+    naya:
+      en_el_habla: true
+      glosa: ellos, ellas (3ra persona plural)
+      cat: pron
+      apariciones_en_plantillas: 1
+      word_uses: 924
+    nüma:
+      en_el_habla: true
+      glosa: él/ella (pronombre 3ra persona)
+      cat: pron
+      apariciones_en_plantillas: 2
+      word_uses: 2680
+    pia:
+      en_el_habla: true
+      glosa: tú (2da persona singular)
+      cat: pron
+      apariciones_en_plantillas: 4
+      word_uses: 2068
+    piama:
+      en_el_habla: false
+      glosa: dos (numeral)
+      cat: num
+      apariciones_en_plantillas: 0
+      word_uses: 219
+    pienchi:
+      en_el_habla: false
+      glosa: cuatro (numeral)
+      cat: num
+      apariciones_en_plantillas: 0
+      word_uses: 46
+    pütchi:
+      en_el_habla: true
+      glosa: mensaje, palabra sagrada, voz del espíritu
+      cat: sust
+      apariciones_en_plantillas: 1
+      word_uses: 530
+    sulu:
+      en_el_habla: true
+      glosa: adentro, dentro de, en el interior de
+      cat: part
+      apariciones_en_plantillas: 1
+      word_uses: 1577
+    taya:
+      en_el_habla: true
+      glosa: yo (1ra persona singular)
+      cat: pron
+      apariciones_en_plantillas: 6
+      word_uses: 3750
+    tüshi:
+      en_el_habla: true
+      glosa: frío, temperatura baja
+      cat: adj
+      apariciones_en_plantillas: 1
+      word_uses: 324
+    wana:
+      en_el_habla: true
+      glosa: ver, observar, mirar
+      cat: v_raiz
+      apariciones_en_plantillas: 4
+      word_uses: 71
+    wanee:
+      en_el_habla: false
+      glosa: uno (numeral)
+      cat: num
+      apariciones_en_plantillas: 0
+      word_uses: 276
+    wanü:
+      en_el_habla: true
+      glosa: anciano, mayor, persona de saber acumulado
+      cat: sust
+      apariciones_en_plantillas: 1
+      word_uses: 126
+    waya:
+      en_el_habla: true
+      glosa: nosotros (1ra persona plural)
+      cat: pron
+      apariciones_en_plantillas: 1
+      word_uses: 747
+    yama:
+      en_el_habla: true
+      glosa: aquí, en este lugar (deíctico proximal)
+      cat: part
+      apariciones_en_plantillas: 1
+      word_uses: 1814
