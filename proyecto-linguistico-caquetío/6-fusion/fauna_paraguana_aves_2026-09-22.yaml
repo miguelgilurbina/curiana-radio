@@ -1,0 +1,3429 @@
+# FAUNA DE PARAGUANÁ — LAS AVES (parcela FA2 de la campaña de fauna, 2026-09-22)
+# Propuesta sin fusionar. Las cifras (`gbif`, `escuchar_en_la_caja`, `fonotactica`,
+# `meta.medido`) las escribe 6-fusion/scripts/ensamblar_fauna_aves.py: no se editan a mano.
+meta:
+  recogido: '2026-09-22'
+  estado: sin-fusionar
+  parcela: FA2 — las aves de Paraguaná en el s. XV, residentes y migratorias (campaña de fauna, tercera
+    minería)
+  quien: minador de fauna FA2 (Claude Opus 5.5), a pedido de Miguel
+  encargo: «buscar todos los animales que son de la ecología de Paraguaná, sean migratorios, endémicos
+    o que sean simplemente de la ecología de la región, y luego va a realizar una campaña para describirlos
+    visualmente, y si es posible encontrar la onomatopeya que hacen» (Miguel, 2026-09-22).
+  para_que: Los referentes del experimento (REFERENTES_NOVEDOSOS) empiezan por los animales sin nombre
+    caquetío conocido. Cada ave llega al agente con algo que VER (descripcion_visual) y algo que OÍR (sonido).
+  respuesta_corta: 'El cardonal, el cerro, la salina y la costa de la península tienen hoy unas doscientas
+    treinta especies de aves con registro (GBIF, `meta.medido`). De las que un hablante del s. XV veía
+    u oía a diario, las del monte y las de la orilla, una parte grande YA tiene voz caquetía atestiguada
+    —y casi siempre es un nombre que imita el canto: dara, wakoa, chuchubi, warawara, chogogo, tijua—.
+    Los huecos de verdad son pocos y concretos: el cardenal, el turpial, la guacharaca, el pitirre, el
+    carpintero, el colibrí, el alcatraz, la gaviota, el corocoro y el chirito. Esos son los candidatos.'
+  como_se_midio:
+  - GBIF por la caja de la península (6-fusion/scripts/medir_gbif_aves_paraguana.py → 6-fusion/medicion_gbif_aves_paraguana_2026-09-22.yaml),
+    con las AUSENCIAS de PANGAEA restadas.
+  - Alvarado 1921 extraído con pdftotext (704 KB) y barrido por entrada con glosa de ave; cada onomatopeya
+    que se cita, verificada en imagen (pymupdf) salvo donde se dice.
+  - 'Esteves 1989 (OCR del repo): los topónimos con nombre de ave; Togoco verificado en imagen.'
+  - 'Medina Colina (6-fusion/medina_colina_dictado.yaml): las voces de ave del dictado de Miguel.'
+  - 'van Buurt 2014 y Gatschet 1885 (textos del repo): los nombres insulares.'
+  - 'El lexicón (curiana_lexicon.py, sólo lectura): las voces caquetías, wayuu, lokono y achagua de ave.'
+  - Punteros web (Wikipedia es/en) sólo para llegar a la fuente primaria; cuando no se leyó la primaria,
+    se dice.
+  periodos_del_canon:
+    fuente: 6-fusion/clima_era2.yaml §periodos
+    P1_tiempo_de_viento: enero-mayo
+    P2_seca_larga: junio-septiembre
+    P3_tiempo_de_siembra: octubre-diciembre
+  como_leer_gbif: '`gbif.indice_por_periodo` = registros de la especie en el período ÷ lo esperado por
+    el esfuerzo de observación (1 = lo esperado). Un índice < 0,25 en un período, con n ≥ 30, es la firma
+    de un ave que se va. El estatus migratorio lo pone la literatura, no el índice.'
+  criterios_presencia_s_xv:
+    segura: 'nativa, con hábitat que existía en el s. XV y con un indicio viejo propio de la esfera: voz
+      indígena atestiguada (caquetía o insular), cita colonial o espécimen anterior a 1950.'
+    probable: nativa, regular hoy en la península y con hábitat que existía en el s. XV (cardonal, cerro,
+      salina, playa, arrecife); sin indicio viejo propio.
+    dudosa: 'pocos registros, errante, hábitat reciente (el manglar de Guaranao es de 1985: laguna-guaranao-parque)
+      o posible colonización moderna.'
+    excluida: introducida o llegada después de 1500.
+  regla_3: 'Todo registro moderno (GBIF, Bisbal 1990, Medina) dice que el ave CABE en este medio, no que
+    estuviera en el s. XV. Y al revés (ecologia-037/039): el monte del s. XV era más rico que el de hoy;
+    la cotorra de hombros amarillos y la yaguaza se perdieron en el s. XX.'
+  convenciones:
+    es_hueco: true si NO hay voz caquetía en el lexicón para ESE referente (ni atestiguada ni reconstruida).
+      Una voz insular o viva sin fusionar se anota en nombres, pero no tapa el hueco.
+    nombre_onomatopeyico: el nombre, en cualquier lengua, que la fuente dice que imita el canto; es el
+      sitio donde una palabra indígena pudo sobrevivir por el sonido.
+    onomatopeya_documentada: literal como está en la fuente; transcripción moderna, NO palabra caquetía.
+    silabeo_propuesto: 'HIPOTÉTICO: el sonido pasado por la fonotáctica del caquetío atestiguado (2-lengua/fonotactica.md).
+      No es un nombre ni se propone como tal: 2-lengua/morfologia.md §9 advierte que un agente no debería
+      reduplicar para inventar un ave.'
+  compartidas_con_FA3: las marinas y costeras (ambiente costa/mar/salina) son de esta parcela; FA3 las
+    cita por su id.
+  medido:
+    entradas: 51
+    por_presencia_s_xv:
+      probable: 33
+      segura: 12
+      dudosa: 3
+      excluida: 3
+    es_hueco: 33
+    con_voz_caquetia_en_el_lexicon: 18
+    con_onomatopeya_documentada: 9
+    con_descripcion_de_fuente: 23
+    candidatos_referente: 10
+    silabeos_propuestos: 9
+    silabeos_que_pasan_la_fonotactica: 8
+    silabeos_que_chocan_con_el_lexicon: 2
+    gbif_total_registros_aves: 35828
+    gbif_especies_en_la_caja: 230
+lo_que_resulto_falso_al_medirlo:
+- dato: 'La cotorra de hombros amarillos (Amazona barbadensis) «está» en GBIF en la península: 60 filas.'
+  medido: 'Las 60 filas son del dataset de PANGAEA «Detection histories for eight species of Amazona parrots…
+    NeoMaps 2010» y llevan organismQuantity = 0: son NO-detecciones publicadas como PRESENT. Las otras
+    siete amazonas de Venezuela salen igual, a 60 filas cada una, incluidas A. farinosa y A. mercenaria,
+    que no viven en un cardonal. Presencias reales en la caja: 0. Lo corrige el script.'
+  y_sin_embargo: 'La especie SÍ estuvo: Ferrer-Paris et al. 2014 (vía Wikipedia es) da por extinta la
+    población de Paraguaná en los años cincuenta, y Medina recuerda la «cota», lora mayor que el perico
+    (p. 82). Presencia s. XV: segura. Es el caso que ecologia-037 buscaba: el censo moderno la borra,
+    la memoria no.'
+- dato: El alcaraván es ave de todos los días en la península (Medina p. 89; Esteves p. 12).
+  medido: 'GBIF: 0 registros de Burhinus bistriatus en la caja, 1 en una caja más ancha. No prueba que
+    falte (es nocturna y de sabana, y eBird se hace en la costa de día): mide la consulta, regla 6. Lo
+    que sí tiene registros (desde 2007) es Vanellus chilensis, al que el resto del país llama «alcaraván».'
+- dato: «Togogo» es un error de OCR por Tococo (6-fusion/esteves_parte2_falcon.yaml §conflictos).
+  medido: 'Al revés. Verificado en imagen (Esteves 1989 p. 134): el lema es TOGOCO y la glosa «(Togogo:
+    ave ansérida)»; el OCR leyó «TOCOCO». Y Alvarado 1921 p. 292, verificado en imagen, pregunta «¿Es
+    el TOGOGO de Coro?». Togogo es una voz de tierra firme hermana de chogogo (ver ave-040 y el issue).'
+- dato: 'Maraquita: «su canto reza: tii-tu-cú» (texto de pdftotext de Alvarado p. 212).'
+  medido: La imagen dice «tu-tu-cú». El OCR de 1921 falla justo en la cursiva, como avisa el preámbulo.
+- dato: La laguna de Guaranao, con su manglar, es hábitat de aves del s. XV.
+  medido: 'No: laguna y manglar son de 1985 (laguna-guaranao-parque, corrección del 2026-09-16). Las aves
+    de manglar se proyectan al s. XV por el manglar de Tiraya/Boca de Caño, no por Guaranao.'
+especies:
+- id: ave-001
+  cientifico: Cardinalis phoeniceus
+  familia: Cardinalidae
+  castellano_regional:
+  - cardenal coriano
+  - cardenal guajiro
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu:
+      forma: iisho
+      fuente: lexicón (Captain & Captain 2005; sin ficha en 4-fuentes)
+    lokono: null
+    taino: null
+    otras:
+      achagua: riarrumi «Cardenal» (lexicon_achagua, Neira y Ribero 1762) — otra especie de cardenal,
+        de los Llanos
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - cardonal
+  - espinar
+  - pie-del-cerro
+  residencia: residente
+  presencia_s_xv: probable
+  porque_presencia: Endémica de la franja seca de la Guajira a Paraguaná (Brewer 2020 vía Wikipedia en).
+    Es de las más registradas en la caja y hay especímenes de 1989 al pie del cerro; sin indicio anterior
+    a 1950.
+  descripcion_visual: Pájaro del tamaño de un puño con un penacho alto siempre erguido. El macho, rojo
+    entero, de pico grueso gris; la hembra, gris parda con el vientre canela y sólo el penacho rojo.
+  descripcion_fuente:
+    obra: aves-punteros-web-2026
+    pagina: Vermilion cardinal (Wikipedia en), que cita Brewer 2020, Birds of the World — primaria no
+      leída
+  sonido:
+    descripcion: canto agradable de silbidos repetidos; llamada, un «chip» seco
+    onomatopeya_documentada: cheer o-weet-toweet toweet toweet
+    fuente:
+      obra: aves-punteros-web-2026
+      pagina: Vermilion cardinal (Wikipedia en), que remite a xeno-canto XC220411 — la ficha de XC no
+        se abrió
+    silabeo_propuesto:
+      forma: chiwi-tuwi
+      capa: hipotetico
+      nota: el remate «toweet toweet» en sílabas CV
+      fonotactica:
+        pasa: true
+        motivos: null
+        choca_con_el_lexicon: null
+    escuchar_en_la_caja:
+    - XC14835
+    - XC837810
+    - XC837823
+    - XC9898
+  notas: Candidato a referente (ref-aves-01). Es el ave-símbolo del cardonal coriano y no tiene nombre
+    caquetío.
+  gbif:
+  - cientifico: Cardinalis phoeniceus
+    registros: 588
+    anios: 1989-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.74
+      P2_seca_larga: 1.17
+      P3_tiempo_de_siembra: 1.35
+    patron: todo-el-año
+- id: ave-002
+  cientifico: Icterus icterus
+  familia: Icteridae
+  castellano_regional:
+  - turpial
+  - turupial (Paraguaná)
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu:
+      forma: ului
+      fuente: lexicón (Captain & Captain 2005)
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - cardonal
+  - espinar
+  - conuco
+  residencia: residente
+  presencia_s_xv: probable
+  porque_presencia: Nativa del norte seco de Sudamérica, regular en la caja; Medina la da como «ave canora
+    de nuestros montes» (p. 288).
+  descripcion_visual: Pájaro grande de cola larga, anaranjado vivo con la cabeza, el pecho alto y la espalda
+    negros; ala negra con una raya blanca; ojo amarillo rodeado de piel azul desnuda.
+  descripcion_fuente:
+    obra: alvarado-1921
+    pagina: 302
+    nota: 'TURPIÁL: amarillo y negro, «región circunocular desnuda… de un gris azulado»; la piel azul
+      y el naranja, vía Wikipedia en (Venezuelan troupial)'
+  sonido:
+    descripcion: 'canto fuerte de silbidos: Medina la llama «ave canora»; el nombre viejo tenía una u
+      intercalada (turupial)'
+    onomatopeya_documentada: null
+    fuente:
+      obra: medina-colina-sxx
+      pagina: 288
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: Candidato a referente (ref-aves-02). Wikipedia en no trae transcripción del canto; la onomatopeya
+    queda como deuda.
+  gbif:
+  - cientifico: Icterus icterus
+    registros: 595
+    anios: 1991-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.95
+      P2_seca_larga: 0.93
+      P3_tiempo_de_siembra: 1.19
+    patron: todo-el-año
+- id: ave-003
+  cientifico: Icterus nigrogularis
+  familia: Icteridae
+  castellano_regional:
+  - gonzalito
+  - toche
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu:
+      forma: si'ya
+      fuente: 'lexicón (Captain & Captain 2005): «gonzalito, toche»'
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - cardonal
+  - espinar
+  residencia: residente
+  presencia_s_xv: probable
+  porque_presencia: Nativa, regular en la caja.
+  descripcion_visual: Pájaro amarillo gualda con la garganta, la cara, las alas y la cola negras; algo
+    menor que el turpial. Cuelga su nido como una bolsa larga.
+  descripcion_fuente:
+    obra: alvarado-1921
+    pagina: 293
+    nota: 'TOCHE: «de color gualda y negro, algo menor que el turpial»; el nido colgante no está en la
+      fuente'
+  sonido:
+    descripcion: ave oscina, como el turpial (Alvarado)
+    onomatopeya_documentada: null
+    fuente:
+      obra: alvarado-1921
+      pagina: 293
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: 'Hueco, pero se prefiere al turpial como candidato: es el mismo tipo de ave y el turpial tiene
+    voz viva paraguanera.'
+  gbif:
+  - cientifico: Icterus nigrogularis
+    registros: 429
+    anios: 1991-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.83
+      P2_seca_larga: 1.03
+      P3_tiempo_de_siembra: 1.32
+    patron: todo-el-año
+- id: ave-004
+  cientifico: Mimus gilvus
+  familia: Mimidae
+  castellano_regional:
+  - paraulata
+  - paraulata llanera
+  - chuchube (Paraguaná)
+  - chulinga (Margarita)
+  nombres:
+    caquetio:
+      clave: chuchubi
+      capa: caquetío-atestiguado
+      cita: 'Zavala #85 «Chuchube» (HB); Gatschet 1885 p. 302 «shushubi»; van Buurt 2014 p. 29'
+    papiamento:
+      forma: chuchubi
+      fuente: van Buurt 2014 p. 29 (A, C, B)
+    wayuu:
+      forma: wainpirai
+      fuente: 'lexicón (Captain & Captain 2005): «ave paraulata llanera»'
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: false
+  nombre_onomatopeyico:
+    forma: chuchubi / chuchube
+    lengua: caquetío
+    fuente: 'reduplicación de fauna (2-lengua/morfologia.md §9; Gatschet 1885 p. 302: la duplicación indica
+      onomatopeya)'
+  ambiente:
+  - cardonal
+  - espinar
+  - conuco
+  - orilla
+  residencia: residente
+  presencia_s_xv: segura
+  porque_presencia: 'Triple atestación indígena (continente, islas, habla viva: Medina p. 74, Esteves
+    p. 36) y el ave más registrada de la caja.'
+  descripcion_visual: Pájaro gris de cola larga que menea, ceja blanca y alas oscuras con bordes blancos;
+    canta desde lo alto del cardón.
+  descripcion_fuente:
+    obra: esteves-1989
+    pagina: 36
+    nota: 'Esteves: «la paraulata chulinga, pájaro de canto melodioso»; el plumaje no está en las fuentes
+      leídas (conocimiento general, sin cita)'
+  sonido:
+    descripcion: «pájaro de canto melodioso» (Esteves); canta mucho y variado
+    onomatopeya_documentada: null
+    fuente:
+      obra: esteves-1989
+      pagina: 36
+    silabeo_propuesto: null
+    escuchar_en_la_caja:
+    - XC14668
+    - XC837788
+  notas: 'Voz atestiguada y onomatopéyica: no es candidato.'
+  gbif:
+  - cientifico: Mimus gilvus
+    registros: 1354
+    anios: 1989-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.94
+      P2_seca_larga: 0.92
+      P3_tiempo_de_siembra: 1.22
+    patron: todo-el-año
+- id: ave-005
+  cientifico: Polioptila plumbea
+  familia: Polioptilidae
+  castellano_regional:
+  - chirito (Paraguaná)
+  - chirito de chaparrales
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu:
+      forma: seruma
+      fuente: 'lexicón (Captain & Captain 2005): «ave chirito»'
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico:
+    forma: chirito
+    lengua: castellano regional
+    fuente: 'hipótesis: el nombre imita la llamada; ni Medina ni Bisbal lo dicen'
+  ambiente:
+  - cardonal
+  - espinar
+  - cerro
+  residencia: residente
+  presencia_s_xv: probable
+  porque_presencia: Nativa, una de las más registradas de la caja; grabada en Montecano y en Santa Ana.
+  descripcion_visual: Pajarito blanco grisáceo, apenas mayor que un colibrí, de cola larga negra con bordes
+    blancos que abre y cierra; anda entre las ramas altas.
+  descripcion_fuente:
+    obra: medina-colina-sxx
+    pagina: 73
+    nota: «pequeño pájaro de color blanco grisáceo, un poco mayor del tamaño del colibrí»; la cola, conocimiento
+      general sin cita
+  sonido:
+    descripcion: «da su sonido en árboles altos» (Medina)
+    onomatopeya_documentada: null
+    fuente:
+      obra: medina-colina-sxx
+      pagina: 73
+    silabeo_propuesto:
+      forma: chiri-chiri
+      capa: hipotetico
+      nota: sólo si se acepta que «chirito» imita la llamada; reduplicado, con la advertencia de §9
+      fonotactica:
+        pasa: true
+        motivos: null
+        choca_con_el_lexicon: null
+    escuchar_en_la_caja:
+    - XC14664
+    - XC14665
+    - XC837797
+    - XC837798
+    - XC837824
+  notas: Candidato a referente (ref-aves-10).
+  gbif:
+  - cientifico: Polioptila plumbea
+    registros: 733
+    anios: 1991-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.97
+      P2_seca_larga: 0.9
+      P3_tiempo_de_siembra: 1.2
+    patron: todo-el-año
+- id: ave-006
+  cientifico: Melanerpes rubricapillus
+  familia: Picidae
+  castellano_regional:
+  - carpintero habado
+  - chamaco (Paraguaná)
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino:
+      forma: inriri / inrire cahuvayal
+      fuente: 'Pané c. 1498 vía 6-fusion/taino_lista_maestra_2026-09-22.yaml: «un pájaro… que vive en
+        los árboles, y en nuestro idioma se llama pico»'
+    otras:
+      achagua: aycuba «Carpintero» (lexicon_achagua)
+      medina: chamaco (p. 67), voz viva sin fusionar; ver 6-fusion/scripts/buscar_chamaco.py
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - cardonal
+  - cerro
+  - conuco
+  residencia: residente
+  presencia_s_xv: segura
+  porque_presencia: Especímenes de Adícora de 1941 (FMNH, MCZ); nativo; y con nombre vivo propio en Paraguaná
+    (Medina).
+  descripcion_visual: Pájaro de espalda rayada en negro y blanco, cara parda clara y coronilla roja; pico
+    recto y fuerte con el que taladra el cardón para anidar.
+  descripcion_fuente:
+    obra: medina-colina-sxx
+    pagina: 67
+    nota: 'Medina: «por poseer un pico muy fuerte, construye sus nidos en los huecos que taladra»; el
+      plumaje, conocimiento general sin cita'
+  sonido:
+    descripcion: 'el golpeteo del pico contra la madera (Medina: taladra)'
+    onomatopeya_documentada: null
+    fuente:
+      obra: medina-colina-sxx
+      pagina: 67
+    silabeo_propuesto: null
+    escuchar_en_la_caja:
+    - XC837792
+    - XC837793
+  notas: Candidato a referente (ref-aves-05). El canon no tiene nombre para el carpintero (así lo dice
+    ya el dictado de Medina).
+  gbif:
+  - cientifico: Melanerpes rubricapillus
+    registros: 565
+    anios: 1941-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.91
+      P2_seca_larga: 1.08
+      P3_tiempo_de_siembra: 1.1
+    patron: todo-el-año
+- id: ave-007
+  cientifico:
+  - Columbina squammata
+  - Columbina passerina
+  familia: Columbidae
+  castellano_regional:
+  - maraquita
+  - paloma maraquera
+  - potoca
+  - tortolita
+  nombres:
+    caquetio:
+      clave: tijua
+      capa: caquetío-atestiguado
+      cita: 'Zavala #248 (E) «Paloma de canto onomatopéyico»; Esteves p. 63 (Tijuro < Tijúa)'
+    papiamento: null
+    wayuu:
+      forma: wawaachi
+      fuente: 'lexicón (Captain & Captain 2005): «tortolita»'
+    lokono: null
+    taino: null
+    otras:
+      achagua: bimbicu «tortola» (lexicon_achagua)
+  es_hueco: false
+  nombre_onomatopeyico:
+    forma: tijua (caq.); maraquita (cast., por el ruido de las alas)
+    lengua: caquetío / castellano
+    fuente: 'Zavala #248; Alvarado p. 212'
+  ambiente:
+  - cardonal
+  - conuco
+  - orilla
+  residencia: residente
+  presencia_s_xv: probable
+  porque_presencia: 'Nativas y de las más registradas; la voz tijua la da Esteves como paraguanera, pero
+    Alvarado p. 290 localiza TIJÚA en el E. de Lara con la MISMA copla que Esteves: puede ser una sola
+    atestación copiada (minar-fuente §8).'
+  descripcion_visual: Palomitas del tamaño de un puño que corren por el suelo; la maraquera, gris con
+    escamas, enseña el rojizo de las alas al volar; la tortolita, gris rosada y pintada.
+  descripcion_fuente:
+    obra: alvarado-1921
+    pagina: 256
+    nota: 'POTOCA: «parte encimera del cuerpo gris habado»; TIJÚA p. 290: «pequeña paloma de color grisáceo,
+      y párpados, pico y lengua negros»'
+  sonido:
+    descripcion: al levantar el vuelo, un ruido de castañuelas con las alas; el canto, tres notas
+    onomatopeya_documentada: tu-tu-cú
+    fuente:
+      obra: alvarado-1921
+      pagina: 212
+      nota: 'MARAQUÍTA, verificado en imagen (pdf 242): «Su canto reza: tu-tu-cú». El pdftotext da «tii-tu-cú»'
+    silabeo_propuesto:
+      forma: tutuku
+      capa: hipotetico
+      nota: la onomatopeya de Alvarado en sílabas del atestiguado
+      fonotactica:
+        pasa: true
+        motivos: null
+        choca_con_el_lexicon: null
+    escuchar_en_la_caja:
+    - XC12591
+  notas: 'No es hueco: la paloma pequeña tiene tijua (y quizá chenga/tobeka/iwira, retroabstraídos). Qué
+    paloma es cada voz queda abierto.'
+  gbif:
+  - cientifico: Columbina squammata
+    registros: 565
+    anios: 1992-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.8
+      P2_seca_larga: 1.12
+      P3_tiempo_de_siembra: 1.27
+    patron: todo-el-año
+  - cientifico: Columbina passerina
+    registros: 682
+    anios: 1989-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.79
+      P2_seca_larga: 1.24
+      P3_tiempo_de_siembra: 1.15
+    patron: todo-el-año
+- id: ave-008
+  cientifico: Patagioenas corensis
+  familia: Columbidae
+  castellano_regional:
+  - guacoa
+  - paloma ala blanca
+  - torcaza cardonera
+  nombres:
+    caquetio:
+      clave: wakoa
+      capa: caquetío-atestiguado
+      cita: 'Zavala #127 (HB) «Paloma»; Alvarado p. 143 GUACÓA; topónimo Bacóa en Coro'
+    papiamento:
+      forma: warwacowa / barbacoa
+      fuente: 'van Buurt 2014 p. 37: «Caquetio wakoa, Lokono wakokwa»'
+    wayuu:
+      forma: mo'uwa
+      fuente: 'lexicón: «paloma (silvestre)» — especie no precisada'
+    lokono:
+      forma: wakokwa
+      fuente: van Buurt 2014 p. 37
+    taino: null
+    otras:
+      caribe: calínago uakukua, cumanagoto húakúa «paloma zurita», chaima guakúa (Alvarado p. 143)
+  es_hueco: false
+  nombre_onomatopeyico:
+    forma: wakoa ~ uakukua ~ wakokwa
+    lengua: arahuaco y caribe
+    fuente: 'Alvarado p. 143: las formas «imitan por lo demás el canto de esta ave» (verificado en imagen)'
+  ambiente:
+  - cardonal
+  - cerro
+  residencia: residente
+  presencia_s_xv: segura
+  porque_presencia: Voz caquetía atestiguada, topónimos (Bacóa, Acaboa < Guacoa, Esteves p. 12) y cognados
+    en cinco lenguas; nativa del Caribe seco.
+  descripcion_visual: Paloma grande, parda gris con el cuello tornasolado y una mancha blanca en el ala
+    que destella al volar; ave de cacería.
+  descripcion_fuente:
+    obra: esteves-1989
+    pagina: 12
+    nota: 'Acaboa: «paloma de tamaño mayor que la torcaz y que se distingue de ésta por unos plumones
+      blancos en la punta de las alas»'
+  sonido:
+    descripcion: arrullo; el nombre mismo lo imita
+    onomatopeya_documentada: uakukua (calínago); húakúa (cumanagoto); guakúa (chaima)
+    fuente:
+      obra: alvarado-1921
+      pagina: 143
+    silabeo_propuesto: null
+    escuchar_en_la_caja:
+    - XC837806
+  notas: 'Contradicción a la vista: Medina (pp. 129-130) la da por «hoy casi extinta» en el monte paraguanero
+    y eBird la registra común en la caja. O se recuperó, o la guacoa de Medina es otra paloma. Abierto.'
+  gbif:
+  - cientifico: Patagioenas corensis
+    registros: 369
+    anios: 1992-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.76
+      P2_seca_larga: 1.32
+      P3_tiempo_de_siembra: 1.12
+    patron: todo-el-año
+- id: ave-009
+  cientifico: Leptotila verreauxi
+  familia: Columbidae
+  castellano_regional:
+  - paloma turca
+  - paloma perdiz?
+  nombres:
+    caquetio: null
+    papiamento:
+      forma: yiwiri
+      fuente: van Buurt 2014 p. 39 (A, B) — «likely Caquetío»
+    wayuu: null
+    lokono: null
+    taino: null
+    otras:
+      medina: 'chenga / tobeca «paloma perdiz» (pp. 70, 279) e igüira (retroabstraídos: chenga, tobeka,
+        iwira)'
+  es_hueco: false
+  nombre_onomatopeyico: null
+  ambiente:
+  - cardonal
+  - cerro
+  residencia: residente
+  presencia_s_xv: probable
+  porque_presencia: Nativa, regular; la voz insular yiwiri y las paraguaneras apuntan a una paloma de
+    suelo nombrada.
+  descripcion_visual: Paloma de suelo parda, pecho rosado grisáceo y puntas blancas en la cola; camina
+    por la sombra del monte y sale en vuelo ruidoso.
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+    nota: conocimiento general; van Buurt sólo da la especie
+  sonido:
+    descripcion: arrullo grave de una nota
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja:
+    - XC837787
+  notas: 'No es hueco en sentido estricto: la retroabstraída iwira/chenga puede ser ésta. Identificación
+    abierta.'
+  gbif:
+  - cientifico: Leptotila verreauxi
+    registros: 419
+    anios: 1991-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.92
+      P2_seca_larga: 0.97
+      P3_tiempo_de_siembra: 1.21
+    patron: todo-el-año
+- id: ave-010
+  cientifico: Colinus cristatus
+  familia: Odontophoridae
+  castellano_regional:
+  - perdiz
+  - perdiz encrestada
+  - tobeca / chenga (Paraguaná)
+  nombres:
+    caquetio:
+      clave: tobeka
+      capa: caquetío-retroabstraido
+      cita: Medina p. 279 «tobeca… la perdiz, también llamada chenga»
+    papiamento: null
+    wayuu:
+      forma: peerü
+      fuente: 'lexicón: «perdiz»'
+    lokono: null
+    taino: null
+    otras:
+      achagua: chacami «Perdiz ó codorniz» (lexicon_achagua)
+  es_hueco: false
+  nombre_onomatopeyico: null
+  ambiente:
+  - cardonal
+  - conuco
+  - sabana
+  residencia: residente
+  presencia_s_xv: segura
+  porque_presencia: Especímenes de Moruy de 1938 (MCZ); nativa; con nombre vivo paraguanero.
+  descripcion_visual: Ave redonda de suelo, parda moteada, con un copete fino; anda en bandadas que estallan
+    en vuelo a los pies del caminante.
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+    nota: conocimiento general
+  sonido:
+    descripcion: silbido de reunión del bando al atardecer
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja:
+    - XC837808
+  notas: Pico de registros en el Tiempo de Siembra (gbif.patron).
+  gbif:
+  - cientifico: Colinus cristatus
+    registros: 377
+    anios: 1938-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.8
+      P2_seca_larga: 0.83
+      P3_tiempo_de_siembra: 1.63
+    patron: concentrado-en-P3_tiempo_de_siembra
+- id: ave-011
+  cientifico: Ortalis ruficauda
+  familia: Cracidae
+  castellano_regional:
+  - guacharaca
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico:
+    forma: guacharaca
+    lengua: castellano regional, de origen indígena
+    fuente: 'Alvarado p. 143: el grito articula «en cierto modo el nombre que se les ha dado»'
+  ambiente:
+  - cerro
+  residencia: residente
+  presencia_s_xv: probable
+  porque_presencia: Nativa; hoy sólo en el Cerro Santa Ana (monumento-cerro-santa-ana; Bisbal 1990), el
+    Capubana del canon; grabada en Santa Ana (xeno-canto).
+  descripcion_visual: Ave del tamaño de una gallina, parda aceitunada, de cola larga y cara desnuda con
+    papada roja; salta pesada de rama en rama y corre bien por el suelo.
+  descripcion_fuente:
+    obra: alvarado-1921
+    pagina: 143
+    nota: «pardo aceitunado»; «carúnculas del pescuezo rojas»; «cola larga»; «salta de rama en rama por
+      ser pesado su vuelo, pero corre bien en el suelo»
+  sonido:
+    descripcion: grito estrepitoso por la tráquea; «con ese cacareo resonante anuncian mui temprano la
+      llegada del día»
+    onomatopeya_documentada: ua-chará-cá
+    fuente:
+      obra: alvarado-1921
+      pagina: 143
+      nota: verificado en imagen (pdf 173); el pdftotext da «ííízchará-cá»
+    silabeo_propuesto:
+      forma: wa-cha-ra-ka
+      capa: hipotetico
+      nota: 'la onomatopeya de Alvarado en sílabas del atestiguado; ojo: es casi el nombre castellano'
+      fonotactica:
+        pasa: true
+        motivos: null
+        choca_con_el_lexicon: null
+    escuchar_en_la_caja:
+    - XC837794
+    - XC837796
+  notas: Candidato a referente (ref-aves-03). El ave que canta el amanecer en el cerro.
+  gbif:
+  - cientifico: Ortalis ruficauda
+    registros: 21
+    anios: 1999-2022
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.97
+      P2_seca_larga: 1.51
+      P3_tiempo_de_siembra: 0.42
+    patron: pocos-registros
+- id: ave-012
+  cientifico:
+  - Eupsittula pertinax
+  - Aratinga pertinax
+  familia: Psittacidae
+  castellano_regional:
+  - perico cara sucia
+  - perico
+  nombres:
+    caquetio:
+      clave: koro
+      capa: caquetío-atestiguado
+      cita: 'Zavala #181 (HB) «Cotorra»; también waka «Ave, cotorra» (#123, E) — el referente exacto (perico
+        o cotorra) queda abierto'
+    papiamento:
+      forma: prikichi
+      fuente: 'deuda: sin-procedencia (no está en van Buurt §6)'
+    wayuu:
+      forma: kalekale
+      fuente: 'lexicón: «perico (cara sucia)» — reduplicado'
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: false
+  nombre_onomatopeyico:
+    forma: kalekale
+    lengua: wayuu
+    fuente: reduplicación; que imite la llamada es hipótesis
+  ambiente:
+  - cardonal
+  - conuco
+  residencia: residente
+  presencia_s_xv: probable
+  porque_presencia: Nativo, regular en la caja; bandadas en el conuco.
+  descripcion_visual: Perico verde de cola larga y puntiaguda, cara y garganta pardas «sucias» y ojo con
+    anillo claro; vuela en bandadas chillonas.
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+  sonido:
+    descripcion: chillidos ásperos en vuelo, de bandada
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: 'No hueco: el canon tiene koro/waka «cotorra».'
+  gbif:
+  - cientifico: Aratinga pertinax
+    registros: 203
+    anios: 1991-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.82
+      P2_seca_larga: 1.17
+      P3_tiempo_de_siembra: 1.19
+    patron: todo-el-año
+- id: ave-013
+  cientifico: Amazona barbadensis
+  familia: Psittacidae
+  castellano_regional:
+  - cotorra cabeciamarilla
+  - cotorra margariteña
+  - cota (Paraguaná)
+  nombres:
+    caquetio:
+      clave: koro
+      capa: caquetío-atestiguado
+      cita: 'Zavala #181 (HB) «Cotorra» — que sea ESTA cotorra es inferencia'
+    papiamento:
+      forma: lora
+      fuente: 'deuda: sin-procedencia'
+    wayuu: null
+    lokono: null
+    taino: null
+    otras:
+      medina: cota «especie de lora más grande que el perico y más pequeña que la guacamaya» (p. 82)
+      esteves: Guacabana «el cerro de las cotas» (Falcón, Parte II)
+  es_hueco: false
+  nombre_onomatopeyico: null
+  ambiente:
+  - cardonal
+  - cerro
+  residencia: residente — EXTINTA en la península hacia 1950
+  presencia_s_xv: segura
+  porque_presencia: 'Ferrer-Paris et al. 2014 (vía Wikipedia es) da por extintas en los años cincuenta
+    las poblaciones de Aruba, Curazao, Paraguaná y el este de Margarita; Medina recuerda la cota. GBIF:
+    0 presencias reales (las 60 filas son ausencias, ver lo_que_resulto_falso_al_medirlo).'
+  descripcion_visual: Cotorra verde de escamas oscuras, cara y frente amarillas y los hombros del ala
+    amarillos; más grande que el perico.
+  descripcion_fuente:
+    obra: aves-punteros-web-2026
+    pagina: Amazona barbadensis (Wikipedia es), que cita Rojas-Suárez 2014; el tamaño relativo, Medina
+      p. 82
+  sonido:
+    descripcion: null
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: 'El caso modelo de ecologia-037: el censo moderno la borra y el s. XV la tenía.'
+  gbif:
+  - cientifico: Amazona barbadensis
+    registros: 0
+    nota: solo filas de AUSENCIA (organismQuantity 0) en PANGAEA NeoMaps 2010
+- id: ave-014
+  cientifico: Coereba flaveola
+  familia: Thraupidae
+  castellano_regional:
+  - reinita común
+  - azucarero
+  nombres:
+    caquetio: null
+    papiamento:
+      forma: chibichibi
+      fuente: van Buurt 2014 p. 29 (B) — lista «likely to be of Caquetío origin»; sin fusionar (lexicon_van_buurt.py)
+    wayuu: null
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico:
+    forma: chibichibi
+    lengua: papiamento, ¿caquetío insular?
+    fuente: reduplicación de fauna; que imite el canto es hipótesis
+  ambiente:
+  - cardonal
+  - conuco
+  - cerro
+  residencia: residente
+  presencia_s_xv: probable
+  porque_presencia: Nativa, regular en la caja; nombre insular reduplicado.
+  descripcion_visual: Pajarito negro y amarillo de pico curvo, con ceja blanca; mete el pico en las flores
+    del cardón y de los arbustos.
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+  sonido:
+    descripcion: chillido fino y repetido
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: 'Hueco con voz insular propuesta: si Miguel fusiona chibichibi, deja de serlo.'
+  gbif:
+  - cientifico: Coereba flaveola
+    registros: 462
+    anios: 1991-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.02
+      P2_seca_larga: 0.95
+      P3_tiempo_de_siembra: 1.02
+    patron: todo-el-año
+- id: ave-015
+  cientifico:
+  - Leucippus fallax
+  - Chlorostilbon gibsoni
+  - Chlorostilbon mellisugus
+  familia: Trochilidae
+  castellano_regional:
+  - colibrí
+  - tucusito
+  - chupaflor
+  - sunsún
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu:
+      forma: chünü'ü
+      fuente: 'lexicón: «colibrí»'
+    lokono:
+      forma: bimiti
+      fuente: 'lexicón (Goeje 1928): «colibrí, picaflor»'
+    taino: null
+    otras:
+      macusi_taulipan: tucuchi «pájaro-mosca» (Alvarado p. 297)
+  es_hueco: true
+  nombre_onomatopeyico:
+    forma: sunsún
+    lengua: castellano de Venezuela
+    fuente: 'Alvarado p. 279: «Colibrí. Voz onomatopéyica, referente al zumbido que hacen en el vuelo
+      estas avecillas» (texto de pdftotext, no verificado en imagen)'
+  ambiente:
+  - cardonal
+  - cerro
+  - conuco
+  residencia: residente
+  presencia_s_xv: probable
+  porque_presencia: Tres especies nativas regulares en la caja; el colibrí anteado es del matorral seco.
+  descripcion_visual: Pájaro diminuto de pico largo y fino que se queda quieto en el aire frente a la
+    flor; verde brillante o pardo claro, con alas que no se ven de rápidas.
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+    nota: conocimiento general
+  sonido:
+    descripcion: el zumbido de las alas en vuelo
+    onomatopeya_documentada: sunsún
+    fuente:
+      obra: alvarado-1921
+      pagina: 279
+    silabeo_propuesto:
+      forma: sunsun
+      capa: hipotetico
+      nota: sólo si la fonotáctica admite la coda -n
+      fonotactica:
+        pasa: false
+        motivos:
+        - 'clusters no atestiguados: ns'
+        choca_con_el_lexicon: null
+    escuchar_en_la_caja:
+    - XC12183
+  notas: Candidato a referente (ref-aves-06).
+  gbif:
+  - cientifico: Leucippus fallax
+    registros: 303
+    anios: 1991-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.88
+      P2_seca_larga: 0.82
+      P3_tiempo_de_siembra: 1.48
+    patron: todo-el-año
+  - cientifico: Chlorostilbon gibsoni
+    registros: 166
+    anios: 1991-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.96
+      P2_seca_larga: 0.98
+      P3_tiempo_de_siembra: 1.11
+    patron: todo-el-año
+  - cientifico: Chlorostilbon mellisugus
+    registros: 78
+    anios: 1991-2023
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.0
+      P2_seca_larga: 0.68
+      P3_tiempo_de_siembra: 1.41
+    patron: todo-el-año
+- id: ave-016
+  cientifico:
+  - Tyrannus melancholicus
+  - Tyrannus dominicensis
+  familia: Tyrannidae
+  castellano_regional:
+  - pitirre
+  - pitirre chicharrero
+  - pitirre gris
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu:
+      forma: katipirüin
+      fuente: 'lexicón: «ave atrapamoscas» — especie no precisada'
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico:
+    forma: pitirrí
+    lengua: castellano de Venezuela y Antillas
+    fuente: 'Alvarado p. 255: «Pájaro así llamado por el sonido de su canto» (pdftotext, no verificado
+      en imagen)'
+  ambiente:
+  - cardonal
+  - conuco
+  - orilla
+  residencia: residente (T. melancholicus); el pitirre gris (T. dominicensis) con parte de la población
+    de paso
+  presencia_s_xv: probable
+  porque_presencia: Nativos y regulares; Bisbal 1990 los da en el cerro.
+  descripcion_visual: Pájaro de cabeza gris y antifaz oscuro, espalda gris verdosa y vientre amarillo
+    (el gris, blanco); se posa a la vista y sale en vuelo corto a cazar insectos.
+  descripcion_fuente:
+    obra: alvarado-1921
+    pagina: 255
+    nota: Alvarado describe el género (cresta, pico ganchudo); los colores, conocimiento general sin cita
+  sonido:
+    descripcion: trino agudo que da el nombre
+    onomatopeya_documentada: pitirrí (el nombre)
+    fuente:
+      obra: alvarado-1921
+      pagina: 255
+    silabeo_propuesto:
+      forma: pitiri
+      capa: hipotetico
+      fonotactica:
+        pasa: true
+        motivos: null
+        choca_con_el_lexicon: null
+    escuchar_en_la_caja: null
+  notas: Candidato a referente (ref-aves-04).
+  gbif:
+  - cientifico: Tyrannus melancholicus
+    registros: 303
+    anios: 1992-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.67
+      P2_seca_larga: 1.11
+      P3_tiempo_de_siembra: 1.58
+    patron: todo-el-año
+  - cientifico: Tyrannus dominicensis
+    registros: 295
+    anios: 1992-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.74
+      P2_seca_larga: 1.02
+      P3_tiempo_de_siembra: 1.53
+    patron: todo-el-año
+- id: ave-017
+  cientifico: Pitangus sulphuratus
+  familia: Tyrannidae
+  castellano_regional:
+  - cristofué
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico:
+    forma: cristofué / bichofué / pitogüé
+    lengua: castellano de América
+    fuente: nombres vernáculos de GBIF (species/2482755/vernacularNames); que imiten el canto es lectura
+      corriente, sin cita leída
+  ambiente:
+  - conuco
+  - orilla
+  residencia: residente
+  presencia_s_xv: dudosa
+  porque_presencia: 'Pocos registros en la caja frente a miles en la caja ancha: hoy es rara en la península.'
+  descripcion_visual: Pájaro de antifaz negro con ceja blanca, espalda parda y vientre amarillo intenso;
+    más grande y cabezón que el pitirre.
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+  sonido:
+    descripcion: grito de tres sílabas
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: 'Buen sonido, mala presencia: no es candidato.'
+  gbif:
+  - cientifico: Pitangus sulphuratus
+    registros: 15
+    anios: 2013-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.82
+      P2_seca_larga: 1.18
+      P3_tiempo_de_siembra: 1.17
+    patron: pocos-registros
+- id: ave-018
+  cientifico: Burhinus bistriatus
+  familia: Burhinidae
+  castellano_regional:
+  - dara (Paraguaná, Venezuela)
+  - alcaraván (otras partes)
+  nombres:
+    caquetio:
+      clave: dara
+      capa: caquetío-atestiguado
+      cita: 'Zavala #102 (HB+E) «Alcaraván»; Medina p. 89; Esteves p. 12 (Adaro)'
+    papiamento: null
+    wayuu:
+      forma: kaarai; teitei
+      fuente: 'lexicón: «alcaraván (dara)» y «alcaraván» — teitei reduplicado'
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: false
+  nombre_onomatopeyico:
+    forma: dara (?)
+    lengua: caquetío
+    fuente: Esteves p. 28 recoge y RECHAZA que Caradacagua venga «de la voz onomatopéyica de la estridente
+      dara»
+  ambiente:
+  - sabana
+  - cardonal abierto
+  - conuco
+  residencia: residente
+  presencia_s_xv: segura
+  porque_presencia: 'Voz caquetía atestiguada y viva, topónimos (Adaro, Adaure); Bisbal 1990 la lista
+    en el cerro como «Dara». GBIF 0: ver lo_que_resulto_falso_al_medirlo.'
+  descripcion_visual: Ave zancuda parda rayada, de patas largas y ojos grandes amarillos, que corre por
+    la sabana en vez de volar y se queda inmóvil agachada.
+  descripcion_fuente:
+    obra: esteves-1989
+    pagina: 109
+    nota: 'Esteves Parte II: «ave corredora, muy ruidosa»; los ojos y el plumaje, conocimiento general
+      sin cita'
+  sonido:
+    descripcion: «ave vocinglera de estas sabanas» (Esteves p. 12); «estridente», «muy ruidosa»
+    onomatopeya_documentada: null
+    fuente:
+      obra: esteves-1989
+      pagina: 12
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: 'Identificación: dara = Burhinus bistriatus (Bisbal 1990 vía Wikipedia; Esteves «Charadius»).
+    La otra lectura, Vanellus chilensis (ave-019), queda declarada. Esteves p. 12 sugiere que la dara
+    «fuera el ave totémica de la tribu» (Adaure): conjetura del autor, no dato.'
+  gbif:
+  - cientifico: Burhinus bistriatus
+    registros: 0
+    nota: 'sin registro en la caja: un cero mide también el esfuerzo (regla 6)'
+- id: ave-019
+  cientifico: Vanellus chilensis
+  familia: Charadriidae
+  castellano_regional:
+  - alcaraván (el resto del país)
+  - güira
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - sabana
+  - orilla de charca
+  residencia: residente
+  presencia_s_xv: dudosa
+  porque_presencia: En la caja sólo desde 2007 (gbif.anios); no se midió si colonizó la península con
+    el pasto y las charcas del s. XX. En duda, degradar.
+  descripcion_visual: Ave de patas rojizas, dorso gris pardo con brillo verde, frente y pecho negros y
+    un moño corto; espolones en el ala.
+  descripcion_fuente:
+    obra: alvarado-1921
+    pagina: 169
+    nota: 'GÜÍRA (Vanellus cayennensis): moño corto, alas con espolones, frente y pecho negros'
+  sonido:
+    descripcion: «Cuando se alarma o topa con algún traseunte, alza el vuelo lanzando un grito estridente
+      y repetido»
+    onomatopeya_documentada: null
+    fuente:
+      obra: alvarado-1921
+      pagina: 169
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: Si la dara de Medina fuera ésta, dejaría de ser hueco. No se decide aquí.
+  gbif:
+  - cientifico: Vanellus chilensis
+    registros: 112
+    anios: 2007-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.04
+      P2_seca_larga: 1.13
+      P3_tiempo_de_siembra: 0.74
+    patron: todo-el-año
+- id: ave-020
+  cientifico: Caracara plancus
+  familia: Falconidae
+  castellano_regional:
+  - caricare
+  - caricare encrestado
+  - dorodoro
+  nombres:
+    caquetio:
+      clave: warawara
+      capa: caquetío-atestiguado
+      cita: van Buurt 2014 p. 37; Gatschet 1885 p. 302 (como Cathartes); topónimo Sero Warawara (Aruba)
+    papiamento:
+      forma: warawara
+      fuente: van Buurt 2014 p. 37 (A, C, B)
+    wayuu:
+      forma: mashale'e
+      fuente: 'lexicón: «ave caricare»'
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: false
+  nombre_onomatopeyico:
+    forma: warawara
+    lengua: caquetío insular
+    fuente: reduplicación de fauna (morfologia.md §9); el nombre científico Caracara también se tiene
+      por imitación de la voz (sin cita leída)
+  ambiente:
+  - cardonal
+  - sabana
+  - orilla
+  residencia: residente
+  presencia_s_xv: segura
+  porque_presencia: Voz insular atestiguada; espécimen de 1896 (MNHN, «Paraguaná Peninsula»).
+  descripcion_visual: Rapaz grande de gorro negro alzable como moño, cara desnuda roja, cuello blanquecino,
+    pecho barrado y patas amarillas; camina por el suelo.
+  descripcion_fuente:
+    obra: alvarado-1921
+    pagina: 65
+    nota: 'CARICÁRE, citando a Codazzi: cabeza negra «susceptible de alzarse como moño», cara desnuda
+      roja, garganta blanca, pies amarillos'
+  sonido:
+    descripcion: null
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: No hueco.
+  gbif:
+  - cientifico: Caracara plancus
+    registros: 589
+    anios: 1896-2026
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.13
+      P2_seca_larga: 0.82
+      P3_tiempo_de_siembra: 0.95
+    patron: todo-el-año
+- id: ave-021
+  cientifico:
+  - Buteo albicaudatus
+  - Parabuteo unicinctus
+  familia: Accipitridae
+  castellano_regional:
+  - gavilán tejé
+  - gavilán andapié
+  - chiriguare (Paraguaná, rapaz grande)
+  nombres:
+    caquetio:
+      clave: chiriware
+      capa: caquetío-retroabstraido
+      cita: 'Zavala #84 (HB) «Gavilán», con atribución débil; Medina: rapaz casi del tamaño del zamuro,
+        «muy temido por los criadores de gallinas»'
+    papiamento:
+      forma: falki; partawela (Curazao, de patalewa)
+      fuente: van Buurt 2014 p. 35
+    wayuu:
+      forma: tüitüi
+      fuente: 'lexicón: «halcón»'
+    lokono: null
+    taino: null
+    otras:
+      alvarado: 'CHIRI GUARE p. 126: «Grande halcón… lomo, alas y cola de un pardo fuliginoso» — casa
+        con Milvago chimachima, que tiene 0 registros en la caja'
+  es_hueco: false
+  nombre_onomatopeyico: null
+  ambiente:
+  - cardonal
+  - sabana
+  residencia: residente
+  presencia_s_xv: probable
+  porque_presencia: Nativos y regulares; qué rapaz es el chiriguare paraguanero no está decidido.
+  descripcion_visual: 'Gavilán grande de alas anchas que planea en círculos sobre el monte: el tejé, gris
+    con el pecho blanco y la cola blanca de banda negra.'
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+  sonido:
+    descripcion: null
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: 'Refrán en Alvarado p. 126: «Después que samuro come, chiriguare roe».'
+  gbif:
+  - cientifico: Buteo albicaudatus
+    registros: 309
+    anios: 1998-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.89
+      P2_seca_larga: 1.06
+      P3_tiempo_de_siembra: 1.16
+    patron: todo-el-año
+  - cientifico: Parabuteo unicinctus
+    registros: 118
+    anios: 1998-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.73
+      P2_seca_larga: 0.9
+      P3_tiempo_de_siembra: 1.71
+    patron: concentrado-en-P3_tiempo_de_siembra
+- id: ave-022
+  cientifico: Falco sparverius
+  familia: Falconidae
+  castellano_regional:
+  - halcón primito
+  - cernícalo
+  nombres:
+    caquetio: null
+    papiamento:
+      forma: kinikini
+      fuente: van Buurt 2014 p. 45 (§11, nombres NO atribuidos al caquetío); Gatschet 1885 p. 302 «kinikini»
+        en la lista arubana de Pinart (como Cymindes illigeri)
+    wayuu: null
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico:
+    forma: kinikini
+    lengua: arubano (Pinart 1882)
+    fuente: 'reduplicación de fauna (Gatschet p. 302: la duplicación indica onomatopeya); que imite la
+      llamada del cernícalo es hipótesis de esta sesión'
+  ambiente:
+  - cardonal
+  - sabana
+  residencia: 'residente, con refuerzo invernal (gbif.patron: menos en la seca larga)'
+  presencia_s_xv: probable
+  porque_presencia: Nativo; voz arubana de 1882.
+  descripcion_visual: Halconcito del tamaño de una paloma, espalda rojiza barrada, alas azul gris en el
+    macho y dos rayas negras en la cara; se cierne quieto en el viento.
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+  sonido:
+    descripcion: chillido agudo y repetido
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: Si kinikini se lee caquetío (Gatschet lo trae en la lista del «Aruba language»), deja de ser
+    hueco. La ficha gatschet-1885 lo gradúa C, plausible.
+  gbif:
+  - cientifico: Falco sparverius
+    registros: 51
+    anios: 1998-2023
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.2
+      P2_seca_larga: 0.35
+      P3_tiempo_de_siembra: 1.38
+    patron: irregular
+- id: ave-023
+  cientifico: Coragyps atratus
+  familia: Cathartidae
+  castellano_regional:
+  - zamuro
+  - samuro
+  - gurugúso (Margarita)
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu:
+      forma: samulu
+      fuente: 'lexicón: «buitre, zamuro»'
+    lokono: null
+    taino: null
+    otras:
+      achagua: guachuri «Gallinazo» (lexicon_achagua)
+      ojo: la clave `samuro` del lexicón es «punta hacia el mar» (homógrafo), no el ave
+  es_hueco: true
+  nombre_onomatopeyico:
+    forma: gurugúso
+    lengua: castellano de Margarita
+    fuente: 'Alvarado p. 170: «quizá onomatopéyica»'
+  ambiente:
+  - todas
+  residencia: residente
+  presencia_s_xv: probable
+  porque_presencia: Nativo y de las aves más registradas; carroñero de toda la costa.
+  descripcion_visual: Ave negra grande de cabeza pelada y arrugada, gris negruzca; planea en círculos
+    con las puntas de las alas blanquecinas y baja en grupo a la carroña.
+  descripcion_fuente:
+    obra: alvarado-1921
+    pagina: 270
+    nota: 'SAMURO: piel de la cabeza con arrugas, plumaje negro, pico blanquecino en la punta'
+  sonido:
+    descripcion: casi mudo; sólo resopla
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: 'Hueco muy visible pero sin sonido que dar: reserva de referente.'
+  gbif:
+  - cientifico: Coragyps atratus
+    registros: 809
+    anios: 1991-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.07
+      P2_seca_larga: 0.78
+      P3_tiempo_de_siembra: 1.12
+    patron: todo-el-año
+- id: ave-024
+  cientifico: Cathartes aura
+  familia: Cathartidae
+  castellano_regional:
+  - oripopo
+  - cataneja (Paraguaná)
+  - guara
+  nombres:
+    caquetio:
+      clave: waru
+      capa: caquetío-atestiguado
+      cita: 'Zavala #143 (E) «Volturido, cataneja. Ave mayor que el zamuro»'
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino: null
+    otras:
+      medina: cataneja «ave carroñera, muy parecida al zamuro, pero con la cabeza sin plumas» (p. 65)
+  es_hueco: false
+  nombre_onomatopeyico: null
+  ambiente:
+  - todas
+  residencia: 'residente, con una llegada de invierno: casi ausente en la seca larga (gbif.patron)'
+  presencia_s_xv: segura
+  porque_presencia: Voz caquetía atestiguada de fuente paraguanera (E = Esteves); nativa.
+  descripcion_visual: Ave negra más grande que el zamuro, de cabeza pelada roja y pico claro; vuela bamboleándose
+    con las alas en V y la cara inferior de las plumas plateada.
+  descripcion_fuente:
+    obra: alvarado-1921
+    pagina: 233
+    nota: 'ORIPÓPO: cabeza desnuda roja, pico amarillo claro; el vuelo en V, conocimiento general sin
+      cita'
+  sonido:
+    descripcion: mudo
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: 'Reloj: el waru abunda más del Tiempo de Siembra al de Viento.'
+  gbif:
+  - cientifico: Cathartes aura
+    registros: 476
+    anios: 1991-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.22
+      P2_seca_larga: 0.25
+      P3_tiempo_de_siembra: 1.46
+    patron: irregular
+- id: ave-025
+  cientifico: Athene cunicularia
+  familia: Strigidae
+  castellano_regional:
+  - mochuelo de hoyo
+  - lechuza de los arenales
+  nombres:
+    caquetio:
+      clave: chaure
+      capa: caquetío-atestiguado
+      cita: 'Zavala #81 (HB+E) «Cegue. Lechuza que anida en cuevas de terrenos arenosos»'
+    papiamento:
+      forma: shoco, choco
+      fuente: 'van Buurt 2014 p. 36: «very likely the original Caquetío name»'
+    wayuu:
+      forma: shokóhin
+      fuente: van Buurt 2014 p. 36, citando Jusayú & Zubiri 1977
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: false
+  nombre_onomatopeyico: null
+  ambiente:
+  - médano
+  - sabana arenosa
+  residencia: residente
+  presencia_s_xv: segura
+  porque_presencia: Voz caquetía atestiguada y voz insular hermana (shoco ~ shokóhin); nativa de los arenales.
+  descripcion_visual: Lechucita parda moteada de blanco, de patas largas, que vive en un hoyo en la arena
+    y se para de día a la boca de su cueva.
+  descripcion_fuente:
+    obra: zavala-reyes-2015
+    pagina: '#81'
+    nota: el hoyo en la arena, Zavala; el plumaje, conocimiento general sin cita
+  sonido:
+    descripcion: null
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: 'Alvarado p. 116 identifica CHÁURE con Strix flammea (la lechuza de campanario, ave-026): dos
+    lecturas del mismo nombre. La de Zavala casa con la conducta; la de Alvarado, con el taxón.'
+  gbif:
+  - cientifico: Athene cunicularia
+    registros: 52
+    anios: 2013-2026
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.1
+      P2_seca_larga: 1.49
+      P3_tiempo_de_siembra: 0.17
+    patron: casi-ausente-en-P3_tiempo_de_siembra
+- id: ave-026
+  cientifico: Tyto alba
+  familia: Tytonidae
+  castellano_regional:
+  - lechuza
+  - lechuza de campanario
+  nombres:
+    caquetio:
+      clave: cege
+      capa: caquetío-atestiguado
+      cita: 'Zavala #78 (HB) «Lechuza» — genérico'
+    papiamento:
+      forma: patalewa (Curazao, antiguo); palabrua
+      fuente: van Buurt 2014 p. 35
+    wayuu:
+      forma: monkulonseerü
+      fuente: 'lexicón: «búho»'
+    lokono: null
+    taino: null
+    otras:
+      achagua: ibida «Lechuza» (lexicon_achagua)
+  es_hueco: false
+  nombre_onomatopeyico: null
+  ambiente:
+  - cardonal
+  - cuevas
+  - casas
+  residencia: residente
+  presencia_s_xv: probable
+  porque_presencia: 'Cosmopolita y presente en Curazao (van Buurt); GBIF 0 en la caja y en la caja ancha:
+    ave nocturna, cero que mide la consulta.'
+  descripcion_visual: Ave nocturna blanca y dorada de cara en forma de corazón, sin orejas de pluma; pasa
+    silenciosa de noche.
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+  sonido:
+    descripcion: chillido ronco nocturno
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: null
+  gbif:
+  - cientifico: Tyto alba
+    registros: 0
+    nota: 'sin registro en la caja: un cero mide también el esfuerzo (regla 6)'
+- id: ave-027
+  cientifico: Bubo virginianus
+  familia: Strigidae
+  castellano_regional:
+  - titirijí (Paraguaná)
+  - búho
+  - lechuzón orejudo
+  nombres:
+    caquetio:
+      clave: cege
+      capa: caquetío-atestiguado
+      cita: 'Zavala #78 «Lechuza» — genérico; no hay voz para el búho grande'
+    papiamento: null
+    wayuu:
+      forma: monkulonseerü
+      fuente: 'lexicón: «búho»'
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: false
+  nombre_onomatopeyico:
+    forma: titirijí
+    lengua: castellano de Venezuela
+    fuente: 'Alvarado p. 291: «Canta como su nombre suena» (verificado en imagen, pdf 321)'
+  ambiente:
+  - cardonal
+  - cerro
+  residencia: residente
+  presencia_s_xv: probable
+  porque_presencia: Nativo; Medina lo da «común en nuestros montes, hoy desaparecida» (p. 279); pocos
+    registros recientes en la caja.
+  descripcion_visual: Ave de rapiña nocturna grande, gris parda moteada, de cabeza redonda con dos orejas
+    de pluma y ojos amarillos.
+  descripcion_fuente:
+    obra: alvarado-1921
+    pagina: 291
+    nota: 'TITIRIJÍ: «Cabeza grande y redonda con dos penachos u orejuelas… Color pardo con numerosas
+      pintas blancas»; Medina: gris oscuro'
+  sonido:
+    descripcion: «en tono ventrílocuo y ronco, por las noches» (Alvarado)
+    onomatopeya_documentada: ti-tiri-gi-gí
+    fuente:
+      obra: alvarado-1921
+      pagina: 291
+      nota: verificado en imagen
+    silabeo_propuesto:
+      forma: titiriji
+      capa: hipotetico
+      fonotactica:
+        pasa: true
+        motivos: null
+        choca_con_el_lexicon: null
+    escuchar_en_la_caja: null
+  notas: 'Identificación: Alvarado dice Asio accipitrinus; Bisbal 1990 (vía Wikipedia) da «Titirijí» a
+    Bubo virginianus; Medina lo describe grande. Se toma Bubo con la otra lectura declarada. No es hueco
+    estricto (cege), pero su onomatopeya es de las mejores documentadas.'
+  gbif:
+  - cientifico: Bubo virginianus
+    registros: 8
+    anios: 2007-2021
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.28
+      P2_seca_larga: 0.44
+      P3_tiempo_de_siembra: 1.1
+    patron: pocos-registros
+- id: ave-028
+  cientifico: Crotophaga sulcirostris
+  familia: Cuculidae
+  castellano_regional:
+  - garrapatero
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - conuco
+  - espinar
+  residencia: residente
+  presencia_s_xv: probable
+  porque_presencia: Nativo, regular; más registros en el Tiempo de Siembra.
+  descripcion_visual: Pájaro negro entero de cola larga y floja y pico alto surcado; anda en grupo, torpe
+    al volar.
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+  sonido:
+    descripcion: null
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: 'Hueco sin sonido documentado: no se propone.'
+  gbif:
+  - cientifico: Crotophaga sulcirostris
+    registros: 234
+    anios: 1991-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.92
+      P2_seca_larga: 0.62
+      P3_tiempo_de_siembra: 1.65
+    patron: concentrado-en-P3_tiempo_de_siembra
+- id: ave-029
+  cientifico:
+  - Sakesphorus canadensis
+  - Thamnophilus doliatus
+  familia: Thamnophilidae
+  castellano_regional:
+  - hormiguero copetón
+  - pavita hormiguera
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - espinar
+  - cerro
+  residencia: residente
+  presencia_s_xv: probable
+  porque_presencia: Nativos; la pavita hormiguera es de las que el cerro conserva (monumento-cerro-santa-ana).
+  descripcion_visual: 'Pajaritos de monte bajo: el macho barrado en negro y blanco o con capucha negra
+    y copete; la hembra rojiza.'
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+  sonido:
+    descripcion: serie de notas que se aceleran
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja:
+    - XC11236
+  notas: null
+  gbif:
+  - cientifico: Sakesphorus canadensis
+    registros: 307
+    anios: 1991-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.01
+      P2_seca_larga: 0.82
+      P3_tiempo_de_siembra: 1.21
+    patron: todo-el-año
+  - cientifico: Thamnophilus doliatus
+    registros: 48
+    anios: 1999-2023
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.77
+      P2_seca_larga: 1.18
+      P3_tiempo_de_siembra: 1.28
+    patron: todo-el-año
+- id: ave-030
+  cientifico: Dendrocygna autumnalis
+  familia: Anatidae
+  castellano_regional:
+  - yaguaza
+  - güirirí
+  nombres:
+    caquetio:
+      clave: yawasa
+      capa: caquetío-reconstruido
+      cita: 'Medina p. 305 «hoy extinguida en nuestra península»; DRAE: del taíno'
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino:
+      forma: yaguasa
+      fuente: DRAE vía la nota del lexicón; Alvarado p. 310 YAGUASA «voz genérica… en especial del género
+        Dendrocygna»
+    otras: null
+  es_hueco: false
+  nombre_onomatopeyico:
+    forma: güirirí / güire
+    lengua: castellano de Venezuela
+    fuente: Alvarado p. 169 (GÜÍRE = güirirí) y p. 170 («escucho el güiriri cantar corriendo por la playa»);
+      que imite el silbido es lectura, no la dice Alvarado
+  ambiente:
+  - charca
+  - laguna
+  residencia: residente irregular
+  presencia_s_xv: probable
+  porque_presencia: Medina la da por extinguida en la península en el s. XX; GBIF la registra otra vez
+    desde 2019.
+  descripcion_visual: Pato de patas largas rosadas y pico rojo, pecho castaño y vientre negro; se posa
+    en los árboles y vuela en bandadas.
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+    nota: Alvarado p. 310 describe el género (pico, uña, alas cortas) sin colores
+  sonido:
+    descripcion: silbido agudo de bandada
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: null
+  gbif:
+  - cientifico: Dendrocygna autumnalis
+    registros: 65
+    anios: 2019-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.94
+      P2_seca_larga: 0.92
+      P3_tiempo_de_siembra: 1.21
+    patron: todo-el-año
+- id: ave-040
+  cientifico: Phoenicopterus ruber
+  familia: Phoenicopteridae
+  castellano_regional:
+  - flamenco
+  - togogo (Coro, Falcón)
+  nombres:
+    caquetio:
+      clave: chogogo
+      capa: caquetío-atestiguado
+      cita: van Buurt 2014 p. 29 (B, C; Aruba chògògò)
+    papiamento:
+      forma: chogogo [chògògò en Aruba]
+      fuente: van Buurt 2014 p. 29
+    wayuu: null
+    lokono:
+      forma: tukkuku «corocoro» (aruaco en Alvarado p. 292)
+      fuente: otra ave roja
+    taino: null
+    otras:
+      tierra_firme: 'togogo «¿Es el TOGOGO de Coro?» (Alvarado p. 292) y «Togogo: ave ansérida» (Esteves
+        p. 134) — ambos verificados en imagen'
+      caribe: galibi tokoka «flamenco» (Alvarado p. 292)
+  es_hueco: false
+  nombre_onomatopeyico:
+    forma: chogogo ~ togogo
+    lengua: caquetío
+    fuente: reduplicación parcial de fauna (morfologia.md §9); que imite el graznido es hipótesis
+  ambiente:
+  - salina
+  - laguna
+  residencia: visitante de todo el año (no anida en la península)
+  presencia_s_xv: segura
+  porque_presencia: Voz caquetía insular y su hermana de tierra firme; salinas precontacto (Arcaya 1920
+    p. 22).
+  descripcion_visual: Ave altísima rosada de cuello y patas largos, pico doblado hacia abajo con punta
+    negra; se alimenta con la cabeza al revés en el agua salada; negro bajo el ala al volar.
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+    nota: conocimiento general
+  sonido:
+    descripcion: graznido nasal de bandada, como gansos
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: 'HALLAZGO: la forma de tierra firme «togogo» (t- donde las islas tienen ch-) sale en dos fuentes
+    independientes del s. XX. Si es la misma voz, chogogo deja de ser sólo insular. Y `tokoko` (lexicón,
+    hipotético «sin cita») encuentra su cadena: gal. tokoka, car. tokóko, ar. tukkuku (Alvarado p. 292).'
+  gbif:
+  - cientifico: Phoenicopterus ruber
+    registros: 377
+    anios: 1992-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.17
+      P2_seca_larga: 0.89
+      P3_tiempo_de_siembra: 0.78
+    patron: todo-el-año
+- id: ave-041
+  cientifico: Eudocimus ruber
+  familia: Threskiornithidae
+  castellano_regional:
+  - corocoro
+  - corocoro colorado
+  - coco
+  nombres:
+    caquetio:
+      clave: tokoko
+      capa: caquetío-hipotético
+      cita: lexicón «flamenco o ibis, ave roja de la laguna» — acuñación sin cita (F8); su cadena comparada
+        está en Alvarado p. 292
+    papiamento: null
+    wayuu: null
+    lokono:
+      forma: tukkuku
+      fuente: Alvarado p. 292 («ar. tukkuku (corocoro)»)
+    taino: null
+    otras:
+      caribe: car. tokóko (corocoro); mac. korrokorro, bacaíri korokóro (Alvarado pp. 92, 292)
+  es_hueco: true
+  nombre_onomatopeyico:
+    forma: corocoro
+    lengua: caribe (vía Gilij) y castellano de Venezuela
+    fuente: 'Alvarado p. 92: «Canta imitando la palabra coró repetida» (verificado en imagen)'
+  ambiente:
+  - manglar
+  - laguna
+  - salina
+  residencia: residente irregular; menos en el Tiempo de Siembra (gbif)
+  presencia_s_xv: probable
+  porque_presencia: Nativo; manglar de Tiraya/Boca de Caño; ecologia-022 lo da en el humedal falconiano.
+  descripcion_visual: Ave zancuda rojo escarlata entera, de pico largo curvado hacia abajo y puntas de
+    las alas negras; vuela en bandadas en fila.
+  descripcion_fuente:
+    obra: alvarado-1921
+    pagina: 82
+    nota: 'COCO: «plumaje escarlata brillante, excepto en las puntas de las remeras, donde es de un negro
+      azulado»'
+  sonido:
+    descripcion: la palabra «coró» repetida
+    onomatopeya_documentada: coró (repetida)
+    fuente:
+      obra: alvarado-1921
+      pagina: 92
+    silabeo_propuesto:
+      forma: koro-koro
+      capa: hipotetico
+      nota: 'CHOCA con `koro` «cotorra» del lexicón: el sonido del corocoro y la cotorra caquetía serían
+        homófonos'
+      fonotactica:
+        pasa: true
+        motivos: null
+        choca_con_el_lexicon:
+        - coro (caquetío-hipotético)
+        - koro (caquetío-atestiguado)
+    escuchar_en_la_caja: null
+  notas: 'Candidato a referente (ref-aves-09). Hueco para lo atestiguado: `tokoko` es hipotético.'
+  gbif:
+  - cientifico: Eudocimus ruber
+    registros: 332
+    anios: 1992-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.99
+      P2_seca_larga: 1.5
+      P3_tiempo_de_siembra: 0.41
+    patron: irregular
+- id: ave-042
+  cientifico:
+  - Ardea alba
+  - Egretta thula
+  - Egretta rufescens
+  - Egretta tricolor
+  familia: Ardeidae
+  castellano_regional:
+  - garza blanca
+  - garcita blanca
+  - chusmita
+  - garza rojiza
+  - garza pechiblanca
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino: null
+    otras:
+      achagua: cumintui «Garzo de ojos» (lexicon_achagua)
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - salina
+  - laguna
+  - manglar
+  - orilla
+  residencia: residentes
+  presencia_s_xv: segura
+  porque_presencia: Especímenes de 1896 de la garza rojiza (MNHN, «Paraguaná Peninsula»); nativas.
+  descripcion_visual: Zancudas de cuello largo en S, blancas (la grande de pico amarillo; la chica de
+    patas negras y dedos amarillos) o pardas rojizas, que pescan quietas en la orilla.
+  descripcion_fuente:
+    obra: alvarado-1921
+    pagina: 130
+    nota: 'CHUSMITA: «Árdea candidissima. Garza del Llano»; los rasgos, conocimiento general sin cita'
+  sonido:
+    descripcion: graznido ronco al levantar el vuelo
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: 'Hueco visible, sin sonido documentado: reserva.'
+  gbif:
+  - cientifico: Ardea alba
+    registros: 558
+    anios: 1992-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.16
+      P2_seca_larga: 0.82
+      P3_tiempo_de_siembra: 0.88
+    patron: todo-el-año
+  - cientifico: Egretta thula
+    registros: 423
+    anios: 1992-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.13
+      P2_seca_larga: 0.92
+      P3_tiempo_de_siembra: 0.82
+    patron: todo-el-año
+  - cientifico: Egretta rufescens
+    registros: 567
+    anios: 1896-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.21
+      P2_seca_larga: 0.86
+      P3_tiempo_de_siembra: 0.72
+    patron: todo-el-año
+  - cientifico: Egretta tricolor
+    registros: 289
+    anios: 1992-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.14
+      P2_seca_larga: 1.14
+      P3_tiempo_de_siembra: 0.53
+    patron: todo-el-año
+- id: ave-043
+  cientifico: Platalea ajaja
+  familia: Threskiornithidae
+  castellano_regional:
+  - garza paleta
+  - espátula
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - salina
+  - laguna
+  residencia: residente irregular
+  presencia_s_xv: probable
+  porque_presencia: Nativa; ecologia-022.
+  descripcion_visual: Zancuda rosada de pico largo y aplastado en cuchara, que barre el agua de lado a
+    lado.
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+  sonido:
+    descripcion: null
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: null
+  gbif:
+  - cientifico: Platalea ajaja
+    registros: 289
+    anios: 1992-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.03
+      P2_seca_larga: 1.16
+      P3_tiempo_de_siembra: 0.74
+    patron: todo-el-año
+- id: ave-044
+  cientifico: Himantopus mexicanus
+  familia: Recurvirostridae
+  castellano_regional:
+  - viuda patilarga
+  - soldadito
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - salina
+  - laguna
+  residencia: residente; más en la seca larga (gbif.patron)
+  presencia_s_xv: probable
+  porque_presencia: Nativa de las salinas.
+  descripcion_visual: Ave blanca y negra de patas rojas larguísimas y pico fino recto; chilla sobre quien
+    se acerca a su nido en la salina.
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+  sonido:
+    descripcion: chillido insistente de alarma
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: null
+  gbif:
+  - cientifico: Himantopus mexicanus
+    registros: 244
+    anios: 1992-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.72
+      P2_seca_larga: 1.68
+      P3_tiempo_de_siembra: 0.76
+    patron: concentrado-en-P2_seca_larga
+- id: ave-045
+  cientifico: Tachybaptus dominicus
+  familia: Podicipedidae
+  castellano_regional:
+  - tigua
+  - patico zambullidor
+  nombres:
+    caquetio:
+      clave: tigi
+      capa: caquetío-atestiguado
+      cita: 'Zavala #247 (E) «Pequeña paloma que se alimenta de peces»; Esteves p. 63 (Ticuí < Tigüí)
+        — la IDENTIFICACIÓN con esta ave es hipótesis de esta sesión'
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino: null
+    otras:
+      alvarado: 'TIGÜITÍGÜE p. 290: «Avecica zancuda, gris por encima, blanca por debajo, de cola corta.
+        Aliméntase de pececillos que coge en las orillas» (Oriente, Guayana)'
+  es_hueco: false
+  nombre_onomatopeyico: null
+  ambiente:
+  - charca
+  - laguna
+  residencia: residente
+  presencia_s_xv: dudosa
+  porque_presencia: Pocos registros; agua dulce estable escasa en la península.
+  descripcion_visual: Ave acuática pequeña y gris, de ojo amarillo y pico fino, que se zambulle y reaparece
+    lejos.
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+  sonido:
+    descripcion: null
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja:
+    - XC9929
+  notas: 'Ver el issue §tigi-tauta: tres lecturas de «la palomita que come peces».'
+  gbif:
+  - cientifico: Tachybaptus dominicus
+    registros: 67
+    anios: 2005-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.07
+      P2_seca_larga: 0.47
+      P3_tiempo_de_siembra: 1.51
+    patron: irregular
+- id: ave-050
+  cientifico: Pelecanus occidentalis
+  familia: Pelecanidae
+  castellano_regional:
+  - alcatraz
+  - pelícano
+  - tococo
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino: null
+    otras:
+      calinago: túguku (Alvarado p. 292)
+      ojo: el lexicón `tokoko` es «flamenco o ibis», no el pelícano
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - costa
+  - mar
+  residencia: residente
+  presencia_s_xv: probable
+  porque_presencia: Nativo y de los más registrados de la costa.
+  descripcion_visual: Ave grande parda de pico larguísimo con bolsa debajo; vuela en fila rozando el agua
+    y cae de golpe al mar sobre el pescado.
+  descripcion_fuente:
+    obra: alvarado-1921
+    pagina: 292
+    nota: 'TOCOCO, citando a Codazzi: «Se balancea ligeramente en el aire y cae como un plomo sobre el
+      pescado»; «Debajo del pico tiene un saco» (verificado en imagen)'
+  sonido:
+    descripcion: adulto casi mudo; lo que se oye es el golpe contra el agua
+    onomatopeya_documentada: null
+    fuente:
+      obra: alvarado-1921
+      pagina: 292
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: Candidato a referente (ref-aves-07).
+  gbif:
+  - cientifico: Pelecanus occidentalis
+    registros: 876
+    anios: 1992-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.95
+      P2_seca_larga: 1.03
+      P3_tiempo_de_siembra: 1.06
+    patron: todo-el-año
+- id: ave-051
+  cientifico: Fregata magnificens
+  familia: Fregatidae
+  castellano_regional:
+  - tijereta de mar
+  - fragata
+  nombres:
+    caquetio: null
+    papiamento:
+      forma: makuaku
+      fuente: van Buurt 2014 p. 45 (§11, NO atribuido al caquetío)
+    wayuu: null
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - mar
+  - costa
+  residencia: residente
+  presencia_s_xv: probable
+  porque_presencia: Nativa, la segunda ave más registrada de la caja.
+  descripcion_visual: Ave negra de alas larguísimas en ángulo y cola de tijera abierta, que cuelga quieta
+    en el viento sobre la costa; el macho infla un buche rojo.
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+  sonido:
+    descripcion: muda en vuelo
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: 'El hueco más visible de la costa, pero sin sonido: reserva.'
+  gbif:
+  - cientifico: Fregata magnificens
+    registros: 1167
+    anios: 1992-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.2
+      P2_seca_larga: 0.8
+      P3_tiempo_de_siembra: 0.81
+    patron: todo-el-año
+- id: ave-052
+  cientifico: Phalacrocorax brasilianus
+  familia: Phalacrocoracidae
+  castellano_regional:
+  - cotúa
+  nombres:
+    caquetio: null
+    papiamento:
+      forma: deklá
+      fuente: van Buurt 2014 p. 55 (lámina P41, «Some names»)
+    wayuu: null
+    lokono: null
+    taino: null
+    otras:
+      caribe: tamanaco y cumanagoto kutuá (Alvarado p. 96)
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - costa
+  - laguna
+  residencia: residente
+  presencia_s_xv: probable
+  porque_presencia: Nativa, regular.
+  descripcion_visual: Ave acuática negra de cuello largo y pico ganchudo que bucea para pescar y luego
+    se seca con las alas abiertas en una rama.
+  descripcion_fuente:
+    obra: alvarado-1921
+    pagina: 96
+    nota: COTÚA describe la aninga; el secado con alas abiertas, conocimiento general
+  sonido:
+    descripcion: null
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: null
+  gbif:
+  - cientifico: Phalacrocorax brasilianus
+    registros: 500
+    anios: 1992-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.23
+      P2_seca_larga: 0.86
+      P3_tiempo_de_siembra: 0.68
+    patron: todo-el-año
+- id: ave-053
+  cientifico: Leucophaeus atricilla
+  familia: Laridae
+  castellano_regional:
+  - gaviota guanaguare
+  - guanaguare
+  - gaviota reidora
+  nombres:
+    caquetio: null
+    papiamento:
+      forma: kahela
+      fuente: van Buurt 2014 p. 45 (§11, NO atribuido al caquetío)
+    wayuu: null
+    lokono: null
+    taino: null
+    otras:
+      castellano_indigena: guanaguare (Alvarado p. 151); cf. tamanaco uanauanári, otra gaviota (p. 150)
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - costa
+  - playa
+  - salina
+  residencia: todo el año; capucha negra en la cría
+  presencia_s_xv: probable
+  porque_presencia: Nativa, regular; «golondrina de mar de nuestras costas» (Alvarado).
+  descripcion_visual: Gaviota de lomo gris oscuro, alas de punta negra y pico y patas rojos; con capucha
+    negra en la cría, que pierde casi toda el resto del año.
+  descripcion_fuente:
+    obra: alvarado-1921
+    pagina: 151
+    nota: 'GUANAGUÁRE: «Su cabeza, cuello y lomo son aplomados… remeras negras; pico y pies de un rojo
+      de laca»; la capucha, vía Wikipedia en'
+  sonido:
+    descripcion: grito ronco que suena a risa aguda
+    onomatopeya_documentada: kee-agh; ha... ha... ha...
+    fuente:
+      obra: aves-punteros-web-2026
+      pagina: Laughing gull (Wikipedia en), que cita Burger 2020, Birds of the World — primaria no leída
+    silabeo_propuesto:
+      forma: kia-ja-ja
+      capa: hipotetico
+      fonotactica:
+        pasa: true
+        motivos: null
+        choca_con_el_lexicon:
+        - kia (lokono)
+    escuchar_en_la_caja: null
+  notas: Candidato a referente (ref-aves-08).
+  gbif:
+  - cientifico: Leucophaeus atricilla
+    registros: 651
+    anios: 2004-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.99
+      P2_seca_larga: 1.07
+      P3_tiempo_de_siembra: 0.94
+    patron: todo-el-año
+- id: ave-054
+  cientifico:
+  - Thalasseus maximus
+  - Thalasseus sandvicensis
+  - Sterna hirundo
+  familia: Laridae
+  castellano_regional:
+  - tirra
+  - gaviota real
+  - charrán
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - costa
+  - mar
+  residencia: todo el año (T. maximus); el charrán común, más en la seca larga
+  presencia_s_xv: probable
+  porque_presencia: Nativas o de paso regular.
+  descripcion_visual: Aves marinas blancas de ala fina y cola de horquilla, con gorro negro y pico naranja
+    o negro; se lanzan de cabeza al agua.
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+  sonido:
+    descripcion: chillidos ásperos
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: null
+  gbif:
+  - cientifico: Thalasseus maximus
+    registros: 874
+    anios: 1992-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.22
+      P2_seca_larga: 0.71
+      P3_tiempo_de_siembra: 0.89
+    patron: todo-el-año
+  - cientifico: Thalasseus sandvicensis
+    registros: 371
+    anios: 1992-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.04
+      P2_seca_larga: 1.24
+      P3_tiempo_de_siembra: 0.61
+    patron: todo-el-año
+  - cientifico: Sterna hirundo
+    registros: 283
+    anios: 1992-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.9
+      P2_seca_larga: 1.73
+      P3_tiempo_de_siembra: 0.31
+    patron: concentrado-en-P2_seca_larga
+- id: ave-055
+  cientifico:
+  - Sternula antillarum
+  - Rynchops niger
+  familia: Laridae
+  castellano_regional:
+  - gaviotica
+  - pico de tijera
+  nombres:
+    caquetio:
+      clave: tauta
+      capa: caquetío-atestiguado
+      cita: 'Zavala #244 (E); Esteves p. 62 (Tausabana < Tautabana): «pequeña paloma de hábitos ictiófagos,
+        que en numerosas bandadas frecuentan el lugar, atraídas por los pececillos… de las albuferas»
+        — la identificación con la gaviotica es hipótesis de esta sesión'
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: false
+  nombre_onomatopeyico: null
+  ambiente:
+  - salina
+  - playa
+  - laguna
+  residencia: 'visitantes de cría: concentradas en la seca larga, casi ausentes en el Tiempo de Siembra
+    (gbif.patron)'
+  presencia_s_xv: probable
+  porque_presencia: Crían en playas y salinas; el patrón estacional es de visitante reproductor.
+  descripcion_visual: 'La gaviotica: ave marina pequeña, blanca, de gorro negro y frente blanca y pico
+    amarillo; revolotea y cae al agua. El pico de tijera: negro y blanco, de pico rojo desparejo que corta
+    el agua.'
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+  sonido:
+    descripcion: null
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: Si tauta es la gaviotica, el reloj de la seca larga ya tiene nombre caquetío. Issue §tigi-tauta.
+  gbif:
+  - cientifico: Sternula antillarum
+    registros: 298
+    anios: 2006-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.7
+      P2_seca_larga: 2.17
+      P3_tiempo_de_siembra: 0.19
+    patron: casi-ausente-en-P3_tiempo_de_siembra
+  - cientifico: Rynchops niger
+    registros: 89
+    anios: 2004-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.71
+      P2_seca_larga: 2.26
+      P3_tiempo_de_siembra: 0.05
+    patron: casi-ausente-en-P3_tiempo_de_siembra
+- id: ave-056
+  cientifico: Sula leucogaster
+  familia: Sulidae
+  castellano_regional:
+  - boba
+  - bubia
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - mar
+  residencia: de mar abierto; más en el Tiempo de Siembra (gbif.patron)
+  presencia_s_xv: probable
+  porque_presencia: Nativa del Caribe; ecologia-038 ya la usa («las bobas vuelan al norte»).
+  descripcion_visual: Ave marina parda oscura con el vientre blanco limpio y pico amarillento; se clava
+    en picado en el mar.
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+  sonido:
+    descripcion: null
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: null
+  gbif:
+  - cientifico: Sula leucogaster
+    registros: 70
+    anios: 2006-2023
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.5
+      P2_seca_larga: 0.45
+      P3_tiempo_de_siembra: 2.76
+    patron: concentrado-en-P3_tiempo_de_siembra
+- id: ave-057
+  cientifico: Pandion haliaetus
+  familia: Pandionidae
+  castellano_regional:
+  - águila pescadora
+  nombres:
+    caquetio: null
+    papiamento:
+      forma: patalewa
+      fuente: 'van Buurt 2014 p. 35: en Bonaire el águila pescadora se llama Patalewa (Prins et al. 2009)'
+    wayuu: null
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - costa
+  - laguna
+  residencia: 'migratoria boreal: casi ausente en la seca larga (gbif.patron)'
+  presencia_s_xv: probable
+  porque_presencia: Migrante de ruta antigua; voz insular.
+  descripcion_visual: Rapaz grande parda por encima y blanca por debajo, con antifaz oscuro; se cierne
+    sobre el agua y entra con las patas por delante.
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+  sonido:
+    descripcion: silbidos cortos y agudos
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: 'Reloj: llega con el Tiempo de Siembra y se va al empezar la seca larga.'
+  gbif:
+  - cientifico: Pandion haliaetus
+    registros: 261
+    anios: 1998-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.28
+      P2_seca_larga: 0.31
+      P3_tiempo_de_siembra: 1.26
+    patron: irregular
+- id: ave-058
+  cientifico:
+  - Pluvialis squatarola
+  - Arenaria interpres
+  - Calidris alba
+  - Calidris pusilla
+  - Calidris mauri
+  - Calidris minutilla
+  - Charadrius semipalmatus
+  - Numenius phaeopus
+  - Tringa melanoleuca
+  - Tringa semipalmata
+  - Tringa flavipes
+  - Limnodromus griseus
+  - Calidris canutus
+  - Actitis macularius
+  familia: Charadriidae y Scolopacidae
+  castellano_regional:
+  - playeros
+  - chorlos
+  - tigüitígüe (Oriente, Alvarado)
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino: null
+    otras:
+      alvarado: TIGÜITÍGÜE p. 290 (avecica zancuda que come pececillos en la orilla); ¿el tigi de Zavala?
+        — issue §tigi-tauta
+  es_hueco: true
+  nombre_onomatopeyico:
+    forma: tigüitígüe
+    lengua: castellano del Oriente
+    fuente: Alvarado p. 290; reduplicado, sin decir que imite
+  ambiente:
+  - playa
+  - salina
+  - laguna
+  residencia: 'migratorios boreales de ruta antigua: se ven casi todo el año por los que se quedan, con
+    la bandada grande de agosto a mayo'
+  presencia_s_xv: segura
+  porque_presencia: La ruta migratoria del Atlántico occidental es anterior a la gente; las salinas y
+    playas existían (ecologia-002).
+  descripcion_visual: Bandadas de aves pequeñas grises y blancas, de patas y pico finos, que corren con
+    la ola y levantan el vuelo todas a una girando en el aire.
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+  sonido:
+    descripcion: silbidos finos de bandada
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: 'El «reloj» de ecologia-038. Reserva de referente: falta una transcripción de fuente para su
+    voz.'
+  gbif:
+  - cientifico: Pluvialis squatarola
+    registros: 658
+    anios: 1992-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.34
+      P2_seca_larga: 0.71
+      P3_tiempo_de_siembra: 0.63
+    patron: todo-el-año
+  - cientifico: Arenaria interpres
+    registros: 619
+    anios: 1998-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.16
+      P2_seca_larga: 0.88
+      P3_tiempo_de_siembra: 0.79
+    patron: todo-el-año
+  - cientifico: Calidris alba
+    registros: 571
+    anios: 2004-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.31
+      P2_seca_larga: 0.79
+      P3_tiempo_de_siembra: 0.6
+    patron: todo-el-año
+  - cientifico: Calidris pusilla
+    registros: 352
+    anios: 2005-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.17
+      P2_seca_larga: 0.97
+      P3_tiempo_de_siembra: 0.67
+    patron: todo-el-año
+  - cientifico: Calidris mauri
+    registros: 301
+    anios: 2008-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.12
+      P2_seca_larga: 1.15
+      P3_tiempo_de_siembra: 0.55
+    patron: todo-el-año
+  - cientifico: Calidris minutilla
+    registros: 400
+    anios: 1998-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.16
+      P2_seca_larga: 0.88
+      P3_tiempo_de_siembra: 0.8
+    patron: todo-el-año
+  - cientifico: Charadrius semipalmatus
+    registros: 468
+    anios: 1992-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.32
+      P2_seca_larga: 0.81
+      P3_tiempo_de_siembra: 0.54
+    patron: todo-el-año
+  - cientifico: Numenius phaeopus
+    registros: 435
+    anios: 1998-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.21
+      P2_seca_larga: 0.9
+      P3_tiempo_de_siembra: 0.68
+    patron: todo-el-año
+  - cientifico: Tringa melanoleuca
+    registros: 457
+    anios: 1998-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.17
+      P2_seca_larga: 0.97
+      P3_tiempo_de_siembra: 0.67
+    patron: todo-el-año
+  - cientifico: Tringa semipalmata
+    registros: 435
+    anios: 2007-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.2
+      P2_seca_larga: 0.88
+      P3_tiempo_de_siembra: 0.71
+    patron: todo-el-año
+  - cientifico: Tringa flavipes
+    registros: 292
+    anios: 1998-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.04
+      P2_seca_larga: 1.11
+      P3_tiempo_de_siembra: 0.77
+    patron: todo-el-año
+  - cientifico: Limnodromus griseus
+    registros: 269
+    anios: 2008-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.38
+      P2_seca_larga: 0.97
+      P3_tiempo_de_siembra: 0.23
+    patron: casi-ausente-en-P3_tiempo_de_siembra
+  - cientifico: Calidris canutus
+    registros: 88
+    anios: 1998-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.93
+      P2_seca_larga: 0.2
+      P3_tiempo_de_siembra: 0.0
+    patron: casi-ausente-en-P2_seca_larga+P3_tiempo_de_siembra
+  - cientifico: Actitis macularius
+    registros: 139
+    anios: 2008-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.24
+      P2_seca_larga: 0.63
+      P3_tiempo_de_siembra: 0.95
+    patron: todo-el-año
+- id: ave-059
+  cientifico: Haematopus palliatus
+  familia: Haematopodidae
+  castellano_regional:
+  - caracolero
+  - ostrero
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - playa
+  - costa rocosa
+  residencia: residente
+  presencia_s_xv: probable
+  porque_presencia: Nativo de las playas.
+  descripcion_visual: Ave de playa negra y blanca, de pico largo rojo como una varilla y ojo amarillo;
+    abre conchas en la orilla.
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+  sonido:
+    descripcion: silbido fuerte y agudo
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: null
+  gbif:
+  - cientifico: Haematopus palliatus
+    registros: 353
+    anios: 1992-2026
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.0
+      P2_seca_larga: 1.01
+      P3_tiempo_de_siembra: 0.99
+    patron: todo-el-año
+- id: ave-070
+  cientifico:
+  - Setophaga striata
+  - Setophaga petechia
+  - Setophaga ruticilla
+  - Parkesia noveboracensis
+  familia: Parulidae
+  castellano_regional:
+  - reinitas
+  - canarito de manglar (S. petechia)
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - manglar
+  - espinar
+  residencia: S. petechia residente del manglar (especímenes de Adícora 1941 y Tiraya 1989); las otras,
+    migratorias boreales del Tiempo de Siembra al de Viento
+  presencia_s_xv: probable
+  porque_presencia: Ruta migratoria antigua; el canarito de manglar con espécimen de 1941.
+  descripcion_visual: Pajaritos amarillos o rayados que saltan entre las hojas; el del manglar, amarillo
+    entero con la cabeza rojiza.
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+  sonido:
+    descripcion: null
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: null
+  gbif:
+  - cientifico: Setophaga striata
+    registros: 59
+    anios: 2016-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.66
+      P2_seca_larga: 0.0
+      P3_tiempo_de_siembra: 2.97
+    patron: casi-ausente-en-P2_seca_larga
+  - cientifico: Setophaga petechia
+    registros: 193
+    anios: 1941-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.28
+      P2_seca_larga: 0.79
+      P3_tiempo_de_siembra: 0.66
+    patron: todo-el-año
+  - cientifico: Setophaga ruticilla
+    registros: 52
+    anios: 2016-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.9
+      P2_seca_larga: 0.68
+      P3_tiempo_de_siembra: 1.6
+    patron: todo-el-año
+  - cientifico: Parkesia noveboracensis
+    registros: 41
+    anios: 2016-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.0
+      P2_seca_larga: 0.43
+      P3_tiempo_de_siembra: 1.71
+    patron: concentrado-en-P3_tiempo_de_siembra
+- id: ave-071
+  cientifico:
+  - Hirundo rustica
+  - Tyrannus savana
+  familia: Hirundinidae y Tyrannidae
+  castellano_regional:
+  - golondrina
+  - atrapamoscas tijereta
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - sabana
+  - costa
+  residencia: 'la golondrina, de paso; la tijereta, migratoria AUSTRAL: sólo en la seca larga (gbif.indice_por_periodo)'
+  presencia_s_xv: probable
+  porque_presencia: Rutas migratorias antiguas.
+  descripcion_visual: 'La tijereta: pájaro gris y blanco de gorro negro con una cola larguísima en horquilla
+    que ondea al volar.'
+  descripcion_fuente:
+    obra: null
+    deuda: sin-procedencia
+  sonido:
+    descripcion: null
+    onomatopeya_documentada: null
+    fuente:
+      obra: null
+      deuda: sin-procedencia
+    silabeo_propuesto: null
+    escuchar_en_la_caja: null
+  notas: 'El único reloj del sur: la tijereta llega cuando el año se seca.'
+  gbif:
+  - cientifico: Hirundo rustica
+    registros: 143
+    anios: 2013-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.93
+      P2_seca_larga: 1.7
+      P3_tiempo_de_siembra: 0.28
+    patron: concentrado-en-P2_seca_larga
+  - cientifico: Tyrannus savana
+    registros: 25
+    anios: 2020-2023
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.0
+      P2_seca_larga: 3.39
+      P3_tiempo_de_siembra: 0.18
+    patron: pocos-registros
+- id: ave-090
+  cientifico: Passer domesticus
+  familia: Passeridae
+  castellano_regional:
+  - gorrión
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - pueblo
+  residencia: residente
+  presencia_s_xv: excluida
+  porque_presencia: 'Introducido de Europa; en la caja sólo desde 2006 (gbif.anios). Fecha de llegada
+    a Venezuela: deuda: sin-procedencia.'
+  descripcion_visual: null
+  descripcion_fuente: null
+  sonido: null
+  notas: null
+  gbif:
+  - cientifico: Passer domesticus
+    registros: 579
+    anios: 2006-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.96
+      P2_seca_larga: 0.93
+      P3_tiempo_de_siembra: 1.18
+    patron: todo-el-año
+- id: ave-091
+  cientifico: Columba livia
+  familia: Columbidae
+  castellano_regional:
+  - paloma doméstica
+  - paloma casera
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu:
+      forma: toomasü
+      fuente: 'lexicón: «paloma (doméstica)» — préstamo del castellano (Tomás)'
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - pueblo
+  residencia: residente
+  presencia_s_xv: excluida
+  porque_presencia: 'Doméstica del Viejo Mundo. Medina mide las palomas silvestres «del tamaño de la casera»
+    (igüira): la casera es colonial.'
+  descripcion_visual: null
+  descripcion_fuente: null
+  sonido: null
+  notas: null
+  gbif:
+  - cientifico: Columba livia
+    registros: 267
+    anios: 2016-2024
+    indice_por_periodo:
+      P1_tiempo_de_viento: 0.95
+      P2_seca_larga: 1.03
+      P3_tiempo_de_siembra: 1.07
+    patron: todo-el-año
+- id: ave-092
+  cientifico: Bubulcus ibis
+  familia: Ardeidae
+  castellano_regional:
+  - garcita reznera
+  - garza del ganado
+  nombres:
+    caquetio: null
+    papiamento: null
+    wayuu: null
+    lokono: null
+    taino: null
+    otras: null
+  es_hueco: true
+  nombre_onomatopeyico: null
+  ambiente:
+  - potrero
+  residencia: residente
+  presencia_s_xv: excluida
+  porque_presencia: 'Llegó de África a América por sí sola a fines del s. XIX y sigue al ganado, que es
+    colonial. Fecha: deuda: sin-procedencia (dato general, no leído en esta sesión).'
+  descripcion_visual: null
+  descripcion_fuente: null
+  sonido: null
+  notas: null
+  gbif:
+  - cientifico: Bubulcus ibis
+    registros: 26
+    anios: 2008-2023
+    indice_por_periodo:
+      P1_tiempo_de_viento: 1.34
+      P2_seca_larga: 0.68
+      P3_tiempo_de_siembra: 0.67
+    patron: pocos-registros
+candidatos_referente:
+  criterio: es_hueco true; presencia segura o probable; visible o audible a diario en su ambiente; con
+    descripción y sonido de fuente (o su hueco declarado). Ordenados por la fuerza de la evidencia del
+    sonido.
+  tono: 'el de REFERENTES_NOVEDOSOS (curiana_koine.py): algo que se ve y se oye siempre y que hay que
+    nombrar, sin nombre moderno ni castellano dentro.'
+  lista:
+  - id: ref-aves-03
+    especie: ave-011
+    referente: guacharaca
+    desc_referente: un ave parda del tamaño de una gallina, de cola larga y papada roja, que desde los
+      árboles del cerro grita al amanecer antes que todas
+    se_oye: 'un grito de tráquea, fuerte y repetido: «ua-chará-cá»'
+    periodo: todo el año; al amanecer
+    donde: el cerro (Capubana, Moruy)
+    fuerza: onomatopeya literal verificada en imagen (Alvarado p. 143)
+    largo:
+      desc_referente: 134
+      se_oye: 53
+  - id: ref-aves-09
+    especie: ave-041
+    referente: corocoro
+    desc_referente: unas aves zancudas rojas como la sangre, de pico largo y curvo, que cruzan en fila
+      sobre la laguna y el manglar
+    se_oye: una voz que repite «coró, coró»
+    periodo: todo el año; menos en el Tiempo de Siembra
+    donde: manglar y laguna (Tiraya / Boca de Caño)
+    fuerza: 'onomatopeya verificada (Alvarado p. 92); ojo: el silabeo choca con koro «cotorra»'
+    largo:
+      desc_referente: 111
+      se_oye: 31
+  - id: ref-aves-06
+    especie: ave-015
+    referente: colibrí
+    desc_referente: un pájaro diminuto de pico como una espina que se queda quieto en el aire frente a
+      la flor del cardón, con alas que no se ven
+    se_oye: el zumbido de sus alas, como un insecto grande
+    periodo: todo el año
+    donde: cardonal y conuco
+    fuerza: Alvarado p. 279 da «sunsún» como onomatopeya del zumbido (sin imagen)
+    largo:
+      desc_referente: 125
+      se_oye: 46
+  - id: ref-aves-04
+    especie: ave-016
+    referente: pitirre
+    desc_referente: un pájaro de vientre amarillo y cabeza gris que espera en la rama más alta y sale
+      de golpe a cazar insectos en el aire
+    se_oye: un trino agudo que parece decir su propio nombre
+    periodo: todo el año
+    donde: cardonal, conuco, orilla
+    fuerza: nombre onomatopéyico según Alvarado p. 255 (sin imagen)
+    largo:
+      desc_referente: 118
+      se_oye: 48
+  - id: ref-aves-08
+    especie: ave-053
+    referente: gaviota guanaguare
+    desc_referente: unas aves blancas de lomo gris y pico rojo que siguen a la canoa y se pelean el pescado
+      en la orilla; en la cría llevan la cabeza negra
+    se_oye: 'un grito ronco que suena a risa: «ja, ja, ja»'
+    periodo: todo el año; capucha negra en la cría
+    donde: costa, playa, salina
+    fuerza: transcripción vía Wikipedia de Birds of the World (primaria no leída)
+    largo:
+      desc_referente: 135
+      se_oye: 45
+  - id: ref-aves-01
+    especie: ave-001
+    referente: cardenal coriano
+    desc_referente: un pájaro rojo entero con un penacho alto siempre erguido, que canta desde la punta
+      del cardón; su hembra es gris y sólo lleva rojo el penacho
+    se_oye: 'silbidos claros que suben y se repiten: «chío, chuí, chuí»'
+    periodo: todo el año
+    donde: cardonal y pie del cerro
+    fuerza: transcripción vía Wikipedia de XC220411 (ficha no abierta); grabado en la caja (escuchar_en_la_caja
+      de ave-001)
+    largo:
+      desc_referente: 142
+      se_oye: 58
+  - id: ref-aves-07
+    especie: ave-050
+    referente: alcatraz
+    desc_referente: un ave grande y parda de pico larguísimo con una bolsa debajo, que vuela en fila sobre
+      el agua y cae de golpe al mar sobre el pescado
+    se_oye: 'no canta: se oye el golpe de su cuerpo contra el agua'
+    periodo: todo el año
+    donde: costa y mar
+    fuerza: descripción de la conducta de fuente (Alvarado p. 292 citando a Codazzi); sin voz
+    largo:
+      desc_referente: 133
+      se_oye: 53
+  - id: ref-aves-02
+    especie: ave-002
+    referente: turpial
+    desc_referente: un pájaro grande anaranjado y negro, de ojo amarillo rodeado de piel azul, que canta
+      fuerte desde el espinar
+    se_oye: silbidos largos y sonoros, como alguien que llama desde lejos
+    periodo: todo el año
+    donde: cardonal, espinar, conuco
+    fuerza: la voz viva «turupial» y «ave canora» (Medina p. 288); sin transcripción de fuente
+    largo:
+      desc_referente: 108
+      se_oye: 61
+  - id: ref-aves-05
+    especie: ave-006
+    referente: carpintero
+    desc_referente: un pájaro de espalda rayada en blanco y negro y coronilla roja que taladra el cardón
+      con el pico para hacer su nido
+    se_oye: golpes secos y rápidos de pico contra la madera
+    periodo: todo el año
+    donde: cardonal, cerro
+    fuerza: conducta de fuente (Medina p. 67); el golpeteo no está transcrito; voz viva paraguanera «chamaco»
+      sin fusionar
+    largo:
+      desc_referente: 115
+      se_oye: 47
+  - id: ref-aves-10
+    especie: ave-005
+    referente: chirito
+    desc_referente: un pajarito blanco grisáceo, apenas mayor que un colibrí, de cola larga que abre y
+      cierra, que anda por las ramas altas del monte
+    se_oye: un hilo de voz fino y repetido desde lo alto
+    periodo: todo el año
+    donde: cardonal, espinar, cerro
+    fuerza: Medina p. 73 («da su sonido en árboles altos»); sin transcripción
+    largo:
+      desc_referente: 129
+      se_oye: 44
+  reserva:
+  - especie: ave-058
+    referente: los playeros migratorios
+    por_que_no: es el reloj del año (ecologia-038), pero su voz no tiene transcripción de fuente
+  - especie: ave-051
+    referente: la tijereta de mar
+    por_que_no: el hueco más visible de la costa, pero es muda
+  - especie: ave-023
+    referente: el zamuro
+    por_que_no: visible siempre, casi mudo
+  - especie: ave-042
+    referente: las garzas
+    por_que_no: sin sonido de fuente
+propuestas_ecologia:
+  nota: Propuestas con el esquema de 3-mundo/corpus/ecologia.yaml; los id son provisionales y los pone
+    quien fusione.
+  entradas:
+  - id: ecologia-P-aves-01
+    contenido: 'Las aves del monte y de la orilla que un habitante oía a diario tienen en buena parte
+      nombre caquetío, y casi siempre el nombre imita la voz: dara (el alcaraván), wakoa (la paloma, cuyas
+      formas en cinco lenguas «imitan… el canto»), chuchubi (la paraulata), warawara (el caricare), chogogo
+      (el flamenco), tijua («paloma de canto onomatopéyico»). La lengua nombró al ave por lo que se oye
+      de ella.'
+    fuente: reconstruido
+    referencia: 'Zavala Reyes 2015 #85, #102, #127, #248; Alvarado 1921 p. 143; van Buurt 2014 pp. 29,
+      37; 2-lengua/morfologia.md §9'
+    procedencia:
+      obra: alvarado-1921
+      pagina: 143
+    dominios:
+    - ecologia
+    - fauna
+    - lengua
+    agentes_relacionados: []
+    palabra_lexicon: wakoa
+    locacion: matorral
+    implicacion_simulacion: 'Un agente que tenga que nombrar un ave sin nombre tiene en su propia lengua
+      el modelo: nombrarla por lo que se oye. Por eso el referente llega con `se_oye`.'
+  - id: ecologia-P-aves-02
+    contenido: 'El año se oye y se ve en las aves: el waru (oripopo) y el águila pescadora abundan del
+      Tiempo de Siembra al de Viento y casi desaparecen en la seca larga; la gaviotica y el pico de tijera
+      llegan a criar en las salinas justo en la seca larga; la tijereta del sur sólo aparece en la seca
+      larga; las bandadas de playeros llegan del norte hacia el final de la seca y se van con el viento.'
+    fuente: reconstruido
+    referencia: GBIF, índice por período (6-fusion/medicion_gbif_aves_paraguana_2026-09-22.yaml, campo
+      patron), proyectado al s. XV por la antigüedad de las rutas migratorias
+    procedencia:
+      obra: gbif-aves-paraguana-2026
+    dominios:
+    - ecologia
+    - fauna
+    - clima
+    agentes_relacionados: []
+    palabra_lexicon: waru
+    locacion: orilla
+    implicacion_simulacion: Concreta ecologia-038 («las aves son un reloj») con especies y períodos del
+      canon de la era 2.
+  - id: ecologia-P-aves-03
+    contenido: 'La guacharaca «con ese cacareo resonante anuncian mui temprano la llegada del día»: en
+      el cerro, el amanecer tiene voz propia antes que la luz.'
+    fuente: atestiguado
+    referencia: 'Alvarado 1921 p. 143 (verificado en imagen); presencia en el cerro: monumento-cerro-santa-ana'
+    procedencia:
+      obra: alvarado-1921
+      pagina: 143
+    dominios:
+    - ecologia
+    - fauna
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    implicacion_simulacion: Frase candidata para el momento «amanecer» de los sitios del cerro (Capubana,
+      Moruy) en [Tu tierra].
+  - id: ecologia-P-aves-04
+    contenido: La cotorra de hombros amarillos vivió en Paraguaná hasta mediados del s. XX, cuando se
+      extinguió allí como en Aruba y Curazao; en el habla quedó la «cota», lora mayor que el perico.
+    fuente: atestiguado
+    referencia: Ferrer-Paris et al. 2014 vía Wikipedia es (aves-punteros-web-2026); Medina Colina p. 82
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 82
+    dominios:
+    - ecologia
+    - fauna
+    agentes_relacionados: []
+    palabra_lexicon: koro
+    locacion: matorral
+    implicacion_simulacion: 'Caso demostrativo de la regla de ecologia-037: el s. XV era más rico que
+      el censo moderno.'
+  - id: ecologia-P-aves-05
+    contenido: La forma de tierra firme del nombre del flamenco es «togogo» (Coro y Falcón), frente a
+      «chogogo» de las islas.
+    fuente: hipotetico
+    referencia: 'Alvarado 1921 p. 292 («¿Es el TOGOGO de Coro?») y Esteves 1989 p. 134 («Togogo: ave ansérida»),
+      ambos verificados en imagen; la identidad con el flamenco es inferencia'
+    procedencia:
+      obra: alvarado-1921
+      pagina: 292
+    dominios:
+    - ecologia
+    - fauna
+    - lengua
+    agentes_relacionados: []
+    palabra_lexicon: chogogo
+    locacion: salina
+    implicacion_simulacion: Si se confirma, chogogo tiene hermana continental y deja de ser una voz sólo
+      insular.
+fauna:
+- nombre_en_fuente: GUACHARACA
+  especie_probable: Ortalis ruficauda
+  texto: articulando con él en cierto modo el nombre… suena más o menos. ua-chará-cá
+  obra: alvarado-1921
+  pagina_impresa: 143
+  lugar: Venezuela
+  epoca: moderno
+  sonido: ua-chará-cá
+- nombre_en_fuente: GUACÓA
+  especie_probable: Patagioenas corensis
+  texto: Especies de paloma de Coro y el Zulia… formas idénticas, que imitan por lo demás el canto de
+    esta ave
+  obra: alvarado-1921
+  pagina_impresa: 143
+  lugar: Coro y el Zulia
+  epoca: moderno
+  sonido: uakukua / húakúa / guakúa
+- nombre_en_fuente: COROCÓRO
+  especie_probable: Eudocimus ruber
+  texto: Canta imitando la palabra coró repetida
+  obra: alvarado-1921
+  pagina_impresa: 92
+  lugar: los Llanos
+  epoca: moderno
+  sonido: coró repetida
+- nombre_en_fuente: MARAQUÍTA
+  especie_probable: Columbina squammata
+  texto: 'Paloma pequeña así llamada por el ruido de castañuelas que hace con las alas al levantar el
+    vuelo. Su canto reza: tu-tu-cú'
+  obra: alvarado-1921
+  pagina_impresa: 212
+  lugar: null
+  epoca: moderno
+  sonido: tu-tu-cú
+- nombre_en_fuente: TITIRIJÍ
+  especie_probable: 'Bubo virginianus (Alvarado: Asio accipitrinus)'
+  texto: Canta como su nombre suena, en tono ventrílocuo y ronco, por las noches, ululando más o menos
+    ti-tiri-gi-gí
+  obra: alvarado-1921
+  pagina_impresa: 291
+  lugar: null
+  epoca: moderno
+  sonido: ti-tiri-gi-gí
+- nombre_en_fuente: PITIRRÍ
+  especie_probable: Tyrannus melancholicus
+  texto: Pájaro así llamado por el sonido de su canto
+  obra: alvarado-1921
+  pagina_impresa: 255
+  lugar: null
+  epoca: moderno
+  sonido: pitirrí (el nombre)
+- nombre_en_fuente: SUNSÚN
+  especie_probable: Trochilidae
+  texto: Colibrí. Voz onomatopéyica, referente al zumbido que hacen en el vuelo estas avecillas
+  obra: alvarado-1921
+  pagina_impresa: 279
+  lugar: null
+  epoca: moderno
+  sonido: zumbido
+- nombre_en_fuente: TOCOCO
+  especie_probable: Pelecanus occidentalis
+  texto: cae como un plomo sobre el pescado… ¿Es el TOGOGO de Coro?
+  obra: alvarado-1921
+  pagina_impresa: 292
+  lugar: costas del mar; Coro
+  epoca: moderno
+  sonido: null
+- nombre_en_fuente: GÜÍRA
+  especie_probable: Vanellus chilensis
+  texto: alza el vuelo lanzando un grito estridente y repetido
+  obra: alvarado-1921
+  pagina_impresa: 169
+  lugar: null
+  epoca: moderno
+  sonido: grito estridente y repetido
+- nombre_en_fuente: Dara
+  especie_probable: Burhinus bistriatus
+  texto: ave vocinglera de estas sabanas, conocida en otras partes con el nombre de Alcaraván (Charadius)
+  obra: esteves-1989
+  pagina_impresa: 12
+  lugar: Punta Adaro, Paraguaná
+  epoca: moderno
+  sonido: vocinglera
+- nombre_en_fuente: Tauta
+  especie_probable: null
+  texto: pequeña paloma de hábitos ictiófagos, que en numerosas bandadas frecuentan el lugar, atraídas
+    por los pececillos
+  obra: esteves-1989
+  pagina_impresa: 62
+  lugar: Tausabana, al este del Cerro Santa Ana
+  epoca: moderno
+  sonido: null
+- nombre_en_fuente: Tigüí
+  especie_probable: null
+  texto: el nombre de una palomita que se alimenta de peces
+  obra: esteves-1989
+  pagina_impresa: 63
+  lugar: Ticuí, Maquigua (Baraived)
+  epoca: moderno
+  sonido: null
+- nombre_en_fuente: Togogo
+  especie_probable: Phoenicopterus ruber (inferencia)
+  texto: 'Togogo: ave ansérida'
+  obra: esteves-1989
+  pagina_impresa: 134
+  lugar: Togoco, municipio Jacura (Falcón)
+  epoca: moderno
+  sonido: null
+- nombre_en_fuente: cota
+  especie_probable: Amazona barbadensis (inferencia)
+  texto: la especie de lora más grande que el perico y más pequeña que la guacamaya
+  obra: medina-colina-sxx
+  pagina_impresa: 82
+  lugar: Paraguaná
+  epoca: moderno
+  sonido: null
+- nombre_en_fuente: chirito
+  especie_probable: Polioptila plumbea
+  texto: un pequeño pájaro de color blanco grisáceo, un poco mayor del tamaño del colibrí, y que da su
+    sonido en árboles altos
+  obra: medina-colina-sxx
+  pagina_impresa: 73
+  lugar: Paraguaná
+  epoca: moderno
+  sonido: da su sonido en árboles altos
+- nombre_en_fuente: titirijí
+  especie_probable: Bubo virginianus
+  texto: ave de rapiña nocturna, común en nuestros montes, hoy desaparecida
+  obra: medina-colina-sxx
+  pagina_impresa: 279
+  lugar: Paraguaná
+  epoca: moderno
+  sonido: null
+- nombre_en_fuente: kinikini
+  especie_probable: 'Falco sparverius (Gatschet: Cymindes illigeri)'
+  texto: 'Names of birds: kinikini Cymindes illigeri'
+  obra: gatschet-1885
+  pagina_impresa: 302
+  lugar: Aruba (material de Pinart, 1882)
+  epoca: moderno
+  sonido: null
+fuentes:
+- obra: alvarado-1921
+  uso: descripciones y onomatopeyas; pp. 65, 82, 92, 96, 116, 126, 130, 143, 150-151, 169-170, 212, 233,
+    255-256, 270, 279, 290-293, 302, 310
+- obra: esteves-1989
+  uso: 'topónimos con nombre de ave: pp. 12, 28, 36, 62, 63, 109, 134'
+- obra: medina-colina-sxx
+  uso: 'voces vivas de ave: pp. 65, 67, 70, 73, 74, 82, 89, 129-130, 279, 288, 305'
+- obra: zavala-reyes-2015
+  uso: voces caquetías atestiguadas de ave (vía lexicon_zavala.py)
+- obra: van-buurt-2014
+  uso: 'nombres insulares: pp. 29, 35-39, 45, 55'
+- obra: gatschet-1885
+  uso: lista arubana de aves, p. 302
+- obra: monumento-cerro-santa-ana
+  uso: fauna actual del cerro
+- obra: laguna-guaranao-parque
+  uso: 'la fecha del manglar (1985): qué NO se proyecta'
+- obra: gbif-aves-paraguana-2026
+  uso: inventario moderno, estacionalidad, grabaciones y especímenes (ficha nueva)
+- obra: bisbal-1990
+  uso: inventario del Cerro Santa Ana, leído por intermediario (ficha nueva)
+- obra: aves-punteros-web-2026
+  uso: descripciones y transcripciones que Wikipedia toma de Birds of the World y xeno-canto; Ferrer-Paris
+    et al. 2014 (ficha nueva)
