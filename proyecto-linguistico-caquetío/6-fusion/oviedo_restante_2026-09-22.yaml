@@ -1,0 +1,1487 @@
+# ══════════════════════════════════════════════════════════════════════
+# OVIEDO Y VALDÉS — LO QUE QUEDABA DE LOS CUATRO TOMOS
+# ed. José Amador de los Ríos, Real Academia de la Historia, 1851-1855.
+# Tercera campaña de minería, parcela M3, 2026-09-22.
+#
+# PROPUESTA (regla 5). Nada de aquí entra al canon sin que Miguel lo fusione.
+# No repite lo ya hecho: el vocabulario taíno del tomo I está en
+# `taino_oviedo_valdes_1851.yaml` (T1) y el libro XXV de Venezuela en
+# `taino2_oviedo_venezuela.yaml` (T6). Aquí va lo que esas dos parcelas
+# dejaron sin leer: la HISTORIA NATURAL (libros VIII-XV del t. I, con la
+# clave `fauna:` del preámbulo común), el LIBRO XIX (Cubagua y Margarita),
+# los pasajes de la costa de Venezuela, Paraguaná y las islas fuera del
+# libro XXV, y la medición de `guaitiao`.
+#
+# ⚠️ NADA DE ESTO ES PRECONTACTO (regla 3). Oviedo escribe entre 1514 y 1548;
+# lo que cuenta de Tierra Firme es de 1498-1548. Todo lleva `epoca`.
+# ⚠️ Y CASI NADA ES DE LA POLITY COSTERA (regla 4): Cubagua, Margarita,
+# Araya, Paria y Santa Marta son otras orillas de la esfera o de fuera de
+# ella. Cada entrada declara su lugar tal como la fuente lo declara.
+#
+# Las cifras de `meta.cobertura` las emite
+# `6-fusion/scripts/medir_oviedo_restante.py` (regla 1).
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  parcela: "M3 — Oviedo y Valdés, los cuatro tomos, lo que queda"
+  fecha: 2026-09-22
+  campana: Tercera campaña de minería
+  obras:
+    # claves foráneas → 4-fuentes/bibliografia.yaml (regla 8)
+    - oviedo-y-valdes-1851          # tomo I (libros I-XIX)
+    - oviedo-y-valdes-1852-1855     # tomos II, III y IV
+  generado_por: >-
+    lectura del minador (agente Opus 5.5) sobre la capa de texto de los cuatro
+    PDF, con verificación en IMAGEN de cada forma en cursiva que se propone y de
+    cada descripción de sonido que se marca `imagen`. El tomo I se lee ahora en
+    la copia íntegra descargada hoy (ver `meta.descarga`), que sí renderiza las
+    impresas 155-614.
+  convencion_de_citas: >-
+    Las citas `verificacion: imagen` reproducen la página tal como está impresa
+    (con su ç, su é conjunción y sus acentos del editor). Las `ocr-limpio` son la
+    capa de texto con una sola corrección, la de la ç que el OCR da como g/f/r
+    en posiciones donde el patrón está medido (`deçir`, `çierto`, `paresçe`);
+    ninguna otra. Las voces en cursiva no se citan nunca sólo por OCR.
+
+  cobertura: {}
+  # ← lo escribe 6-fusion/scripts/medir_oviedo_restante.py (regla 1)
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. FAUNA — el esquema común del preámbulo, más `tomo`, `libro`,
+#    `capitulo` y `verificacion`.
+#    Va PRIMERO porque la esperan tres agentes de fauna.
+#    Orden: (a) Paraguaná y la provincia de Venezuela; (b) Cubagua,
+#    Margarita y las islas de la costa; (c) la costa de Tierra Firme
+#    (Santa Marta, Paria, Cumaná, Huyapari); (d) el mar y las aves marinas;
+#    (e) los animales de tierra de Tierra Firme del libro XII; (f) lo de La
+#    Española que sirve de comparación, separado y marcado.
+#    `sonido` es verbatim o null: si Oviedo no dice cómo suena, no se inventa.
+#    `especie_probable` sólo cuando la DESCRIPCIÓN de la fuente lo permite; si
+#    no, null. Ninguna identificación de aquí es canon.
+# ══════════════════════════════════════════════════════════════════════
+fauna:
+
+# ── (a) PARAGUANÁ Y LA PROVINCIA DE VENEZUELA ─────────────────────────
+
+  - nombre_en_fuente: "perdiçes de las de la tierra"
+    especie_probable: null
+    texto: >-
+      «é hízole dar muy bien de comer á él é á todos los que con él fueron,
+      assi muchas perdiçes de las de la tierra como conexos frescos é salados,
+      é pan de mahiz»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: IV
+    libro: L
+    capitulo: "XX, §XIII"
+    pagina_impresa: 534
+    lugar: "Miraca, pueblo de Paraguaná a dos leguas de la costa y doce de Coro (junio de 1534)"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+    ojo: >-
+      Es la ÚNICA mesa de Paraguaná que Oviedo describe, y la sirve un capitán
+      español (Pedro de Arranguiz) que vivía allí con otros cristianos: seis
+      años después de la fundación de Coro. Qué comían los paraguaneros, sí;
+      cómo se lo daban a los españoles, también. Informante: Chripstóbal de
+      Sanabria, «vivá voce».
+
+  - nombre_en_fuente: "conexos frescos é salados"
+    especie_probable: null
+    texto: "(la misma frase de arriba) «…como conexos frescos é salados, é pan de mahiz»"
+    obra: oviedo-y-valdes-1852-1855
+    tomo: IV
+    libro: L
+    capitulo: "XX, §XIII"
+    pagina_impresa: 534
+    lugar: "Miraca, Paraguaná (1534)"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+    ojo: "conejo SALADO: conservación de la carne de caza en Paraguaná, 1534 (cf. las çeçinas de palomas de la p. 331 del t. II)"
+
+  - nombre_en_fuente: "un indio é una su hija que venían á la mar á pescar"
+    especie_probable: null
+    texto: >-
+      «Ydos estos compañeros á lo ques dicho, toparon un indio é una su hija
+      que venían á la mar á pescar, é tomáronlos é lleváronlos adonde
+      Chripstóbal de Sanabria y el piloto estaban con los demás echados á la
+      sombra de los manglares»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: IV
+    libro: L
+    capitulo: "XX, §XII"
+    pagina_impresa: 533
+    lugar: "costa de Paraguaná, un ancón de manglares al pie de las sierras (1534)"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: imagen
+    por_que_va_en_fauna: >-
+      No nombra el pez, pero es la única escena de PESCA de paraguaneros en toda
+      la obra: un hombre y su hija bajan de Miraca a la mar a pescar, y en la
+      orilla hay «dos canoas» varadas (p. 532). La costa tiene manglar (p. 532).
+
+  - nombre_en_fuente: "ossos hormigueros"
+    especie_probable: null
+    texto: >-
+      «Los animales de la tierra, son los que hay por la mayor parte en toda la
+      Tierra-Firme … de los que mas puntual mençion se haçe de esta provinçia
+      son ossos hormigueros, tigres muchos, venados en grand número, é á
+      manadas…»; y en el t. I: «También los hay en la provinçia de Veneçuela, y
+      allí son estos animales de mucha fuerça, tanto que ha acaesçido derribar
+      á un hombre de caballo y maltractarle; y en el año que passó de mill é
+      quinientos é quarenta y uno … fué muerto un oso destos é le hallaron las
+      canillas de los braços é de las piernas maçiças, lo qual yo supe del mismo
+      obispo»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXV
+    capitulo: XXII
+    pagina_impresa: 330
+    tambien_en: "oviedo-y-valdes-1851, t. I, lib. XII cap. XXI, p. 411 (misma fuente: el obispo Bastidas)"
+    lugar: "provinçia de Veneçuela (informe del obispo Rodrigo de Bastidas)"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: imagen
+
+  - nombre_en_fuente: "venados en grand número, é á manadas"
+    especie_probable: null
+    texto: "«venados en grand número, é á manadas, como en otras partes se suelen ver»"
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXV
+    capitulo: XXII
+    pagina_impresa: 330
+    tambien_en: >-
+      t. I lib. XII cap. XIX, p. 408: «en la gobernaçión de Castilla del Oro é
+      Veneçuela é Sancta Marta … hay muchos çiervos é gamos é corços … é los
+      indios señores é prinçipales son grandes monteros»; y t. II p. 303, los
+      çaquitios de Coativa con «grandes pesquerías y savánas y muchos venados»
+    lugar: "provinçia de Veneçuela"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: imagen
+
+  - nombre_en_fuente: "puercos … de dos géneros"
+    especie_probable: "Tayassuidae (el del «ombligo en el espinazo»)"
+    texto: >-
+      «ovejas, puercos muchos y de dos géneros: los unos tienen el ombligo en el
+      espinaço, y los otros son como los nuestros»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXV
+    capitulo: XXII
+    pagina_impresa: 330
+    lugar: "provinçia de Veneçuela"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: imagen
+    ojo: >-
+      «ovejas» en la misma enumeración, sin más: no se sabe qué animal nombra.
+      Se deja literal. El sonido del puerco del espinazo está en el t. I (ver
+      `baquira`, más abajo).
+
+  - nombre_en_fuente: "conejos … menores y alebrestados"
+    especie_probable: null
+    texto: >-
+      «conejos tantos ó mas que en nuestra España; pero son estos menores y
+      alebrestados»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXV
+    capitulo: XXII
+    pagina_impresa: 330
+    lugar: "provinçia de Veneçuela"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: imagen
+
+  - nombre_en_fuente: "pereça / perico ligero"
+    especie_probable: "perezoso (Bradypodidae) — la descripción del t. I lo permite"
+    texto: >-
+      t. II p. 330: «Hay otros, que los españoles llaman la pereça y
+      meritamente, y otros llaman perico ligero». t. I p. 412: «le pusieron el
+      nombre muy apartado de su ser, pues seyendo espaçiosíssimo, le llamaron
+      ligero, y en la provinçia de Veneçuela le llaman la pereza»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XII
+    capitulo: XXIV
+    pagina_impresa: [412, 413]
+    lugar: "descrito en Castilla del Oro (el Darién); el nombre «pereza» es el que se le da en la provinçia de Veneçuela"
+    epoca: contacto-temprano
+    sonido: >-
+      «Su voz es muy diferente de todas las de los otros animales del mundo (y
+      de noche solamente suena), y toda la noche en continuado canto de rato en
+      rato, ó con medida de pausas, cantando seys puntos uno mas alto que otro
+      siempre baxando, assi que el mas alto punto es el primero, é de aquel
+      baxa, disminuyendo la voz ó menos sonando, como quien dixesse la… sol…
+      fa… mi… re… ut…, assi este animal diçe ha… ha… ha… ha… ha… ha… Y tanto
+      quanto tarda en cantar estos seys puntos, otro tanto espaçio ó pausa
+      calla, é torna á cantar en el mismo tono é medida otra vez é á callar, é
+      por esta orden passa la noche toda en esta su música»
+    verificacion: ocr-limpio
+    ojo: >-
+      La descripción de SONIDO más precisa de toda la obra: seis notas
+      descendentes de un tono cada una, pausa igual a la frase, sólo de noche,
+      «ha» seis veces. Pero la oyó en el Darién, no en Venezuela: de Venezuela
+      es sólo el NOMBRE «pereza» (castellano). Si vive o no en la esfera es
+      pregunta para los agentes de fauna.
+
+  - nombre_en_fuente: "armados / coríes"
+    especie_probable: null
+    texto: >-
+      «Armados cories hay, pero son mayores que los desta isla y el pelage
+      tiénenlo mas áspero y de la forma el pelo de las hardas»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXV
+    capitulo: XXII
+    pagina_impresa: [330, 331]
+    lugar: "provinçia de Veneçuela"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: imagen
+    lectura: >-
+      En la página sólo `cories` va en cursiva. Leo DOS animales sin coma entre
+      ellos: `armados` (así llama Oviedo a los armadillos en el t. II p. 221,
+      «animales de los que llaman armados ó encubertados») y `coríes`, «mayores
+      que los desta isla», es decir el `cori` de La Española (t. I p. 390). En
+      duda: podría leerse «coríes armados». No se decide aquí.
+
+  - nombre_en_fuente: hardas
+    especie_probable: "ardilla (Sciuridae) — «harda» es el nombre castellano de la ardilla"
+    texto: "«muchas hardas por los boscajes»"
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXV
+    capitulo: XXII
+    pagina_impresa: 331
+    lugar: "provinçia de Veneçuela"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: imagen
+
+  - nombre_en_fuente: "dantas … vacas … beoris"
+    especie_probable: "tapir (Tapirus)"
+    texto: >-
+      «dantas en mucha cantidad, é otros las llaman vacas, é los indios en la
+      provinçia de Cueva las diçen beoris; pero assi estos como los otros
+      animales todos, los nombran en diversas provinçias diferençiadamente,
+      porque son muy apartadas lenguas las de los indios, y en poco término de
+      lenguas no se entienden los unos con los otros»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXV
+    capitulo: XXII
+    pagina_impresa: 331
+    lugar: "provinçia de Veneçuela (el nombre `beori` es de Cueva, en el Darién)"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: imagen
+    ojo: >-
+      La frase final es un dato de LENGUA, no de fauna, y va también a
+      `hallazgos_de_mundo`: el obispo Bastidas describe la provincia como un
+      mosaico de lenguas que no se entienden «en poco término».
+
+  - nombre_en_fuente: "perros gozques que crian los indios en sus casas"
+    especie_probable: "perro doméstico indígena (Canis familiaris)"
+    texto: "«Hay perros gosques que crian los indios en sus casas, é son mudos, que no ladran»"
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXV
+    capitulo: XXII
+    pagina_impresa: 331
+    lugar: "provinçia de Veneçuela"
+    epoca: contacto-temprano
+    sonido: "«son mudos, que no ladran»"
+    verificacion: imagen
+    ver_tambien: "Santa Marta (t. II p. 355) y La Española (t. I pp. 390-391), abajo: allí sí dice qué ruido hacen"
+
+  - nombre_en_fuente: "leones pardos"
+    especie_probable: "puma (Puma concolor) — «rasos … todos bermejos»"
+    texto: >-
+      «leones pardos llaman á çiertos animales, que en efeto son como leones,
+      assi en feroçidad é armas como en el tamaño. Mas aquestos no tienen
+      aquellas barbas luengas que los leones de África, y son estos rasos, el
+      pelo como de un lebrel, é todos bermejos é muy çeñidos»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXV
+    capitulo: XXII
+    pagina_impresa: 331
+    lugar: "provinçia de Veneçuela"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: imagen
+
+  - nombre_en_fuente: "palomas … de passo"
+    especie_probable: null
+    texto: >-
+      «mayormente palomas en çierto tiempo del año, porque son de passo; y
+      matan innumerables y en tanta cantidad, que los indios haçen çeçinas
+      dellas para algund tiempo»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXV
+    capitulo: XXII
+    pagina_impresa: 331
+    lugar: "provinçia de Veneçuela"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: imagen
+    ojo: "palomas MIGRATORIAS con temporada de caza y conservación en cecina: calendario y técnica"
+
+  - nombre_en_fuente: perdiçes
+    especie_probable: "codorniz crestada (Colinus cristatus) — la descripción del copete lo permite"
+    texto: >-
+      «Perdiçes hay muchas, y son del grandor de las codorniçes y de la misma
+      pluma, salvo que tienen las cabeças como las cogujadas assi levantada la
+      pluma, mas el sabor es mejor que de las codorniçes; pero sean codorniçes,
+      ó perdiçes, ó cogujadas, este nombre de perdiçes les dan allí los
+      españoles»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXV
+    capitulo: XXII
+    pagina_impresa: 331
+    lugar: "provinçia de Veneçuela"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: imagen
+    ojo: "el nombre «perdiz» es de los españoles, y lo dice: no hay voz indígena en el pasaje"
+
+  - nombre_en_fuente: "abejas … que crian los indios en sus casas en unos calabaços"
+    especie_probable: "abeja sin aguijón (Meliponini) — «no pican ni tienen ponçoña»"
+    texto: >-
+      «Abejas hay muchas por los bosques salvajes, y la miel algo agria y rala
+      la çera: algunas la haçen amarilla é otras la haçen negra; pero la miel de
+      la çera amarilla es mas dulçe que la otra. Algunas crian los indios en sus
+      casas en unos calabaços grandes: no pican ni tienen ponçoña, é son mucho
+      menores que las de España é mas vellosas: y los vasillos de los panales …
+      son cada uno tan grande como una bellota»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXV
+    capitulo: XXII
+    pagina_impresa: 331
+    lugar: "provinçia de Veneçuela"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+    ojo: "MELIPONICULTURA doméstica: colmenas en calabazas dentro de las casas. Va también a `hallazgos_de_mundo`"
+
+  - nombre_en_fuente: abispas
+    especie_probable: null
+    texto: >-
+      «Abispas hay muchas é muy malas y ponçoñosas, y de lo que mas me maravillo
+      dellas es que haçen alguna miel y buena, y la comen los indios, assi como
+      la de las abejas»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXV
+    capitulo: XXII
+    pagina_impresa: 331
+    lugar: "provinçia de Veneçuela"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+
+  - nombre_en_fuente: tara
+    especie_probable: "langosta (Orthoptera: Acrididae)"
+    texto: >-
+      «Hay mucha langosta, que los indios llaman tara … algunos años hay tanta,
+      que cubre el ayre á no se poder ver el çielo … también los indios en su
+      venganza las toman y embanastan y se las comen asadas»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXV
+    capitulo: XXII
+    pagina_impresa: 331
+    lugar: "provinçia de Veneçuela"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+    ya_propuesto_en: "taino2_oviedo_venezuela.yaml (T6): la glosa `tara` = langosta. Aquí sólo entra en la clave `fauna:`"
+
+  - nombre_en_fuente: "papagayos y gatos monillos"
+    especie_probable: null
+    texto: >-
+      «De papagayos y gatos monillos y tales cosas, como son ordinarias en la
+      Tierra-Firme, no hay para qué deçirlo aquí»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXV
+    capitulo: XXII
+    pagina_impresa: 331
+    lugar: "provinçia de Veneçuela"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+
+  - nombre_en_fuente: "venado pegado en … los manantiales del betún"
+    especie_probable: null
+    texto: >-
+      «hallaron un venado pegado en aquellos ojos ó manantiales deste betún,
+      como páxaro que está assido de la liga, y le tomaron»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXV
+    capitulo: IX
+    pagina_impresa: 301
+    lugar: "los manantiales de `mene` a 25 leguas de Maracaibo"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+
+# ── (b) CUBAGUA, MARGARITA Y LAS ISLAS DE LA COSTA ────────────────────
+
+  - nombre_en_fuente: flamencos
+    especie_probable: "flamenco del Caribe (Phoenicopterus ruber) — la descripción lo permite"
+    texto: >-
+      «Hay unas aves que los españoles llaman flamencos, porque en España
+      llaman assi á çiertas aves; pero estas de acá no lo son: antes la
+      diferençia es aquesta. Son las de Cubagua tan grandes como un pavo; el
+      plumaje es de color como encarnado: las piernas delgadas é de quatro
+      palmos de altura: el cuello de otros quatro palmos luengo, y delgado, como
+      el dedo pulgar de la mano de un hombre: el pico de la hechura que le
+      tienen los papagayos. Aliméntanse estas aves de pescado chiquito é marisco
+      que andan buscando por las lagunas y estaños, é al rebalaje de la mar
+      metidas en el agua lo que pueden apear por la costa»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIX
+    capitulo: II
+    pagina_impresa: [591, 592]
+    lugar: "isla de Cubagua"
+    epoca: contacto-temprano
+    sonido: "«Graznan como ánsares é crian çerca de los lagos»"
+    verificacion: imagen
+    ojo: >-
+      El único SONIDO de ave de la costa venezolana en toda la obra, y el de un
+      ave que vive en las lagunas de Paraguaná. Cubagua es la orilla oriental
+      (regla 4): el ave es la misma, la gente no.
+
+  - nombre_en_fuente: "alcatraçes grandes del papo"
+    especie_probable: "pelícano pardo (Pelecanus occidentalis) — ver la descripción larga del t. I p. 445"
+    texto: "«Hay de los alcatraçes grandes del papo é de otros de otras maneras. Otras aves hay pequeñas de agua y muchas dellas»"
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIX
+    capitulo: II
+    pagina_impresa: 592
+    lugar: "isla de Cubagua"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: imagen
+
+  - nombre_en_fuente: "halcones neblíes … alcotanes … guaraguaos"
+    especie_probable: null
+    texto: >-
+      «En çierto tiempo del año van á aquella isla de passo algunos halcones
+      neblíes é otras aves de rapiña de otras raleas, é alcotanes, é otros que
+      llaman acá guaraguaos, que son como milanos y de aquel offiçio de hurtar é
+      tomar pollos donde los pueden aver, é por falta dellos se çeban en
+      lagartijas»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIX
+    capitulo: II
+    pagina_impresa: 592
+    lugar: "isla de Cubagua, de paso estacional"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: imagen
+    ojo: >-
+      `guaraguaos` (cursiva) es el nombre que se usa «acá» — en La Española,
+      desde donde escribe Oviedo —, no en Cubagua: es voz taína (el guaraguao
+      de la Española, t. I p. 442, «tienen los ojos colorados»). Rapaces
+      MIGRATORIAS que pasan por las islas de la costa en una estación.
+
+  - nombre_en_fuente: conejos
+    especie_probable: null
+    texto: >-
+      «Hay conejos en aquella isla, de buen sabor é muchos, como los de
+      Castilla, aunque el pelo es mas montesino ó áspero»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIX
+    capitulo: II
+    pagina_impresa: 591
+    lugar: "isla de Cubagua"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: imagen
+
+  - nombre_en_fuente: yuanas
+    especie_probable: "iguana (Iguana iguana)"
+    texto: "«Hay muchas yuanas y buenas»"
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIX
+    capitulo: II
+    pagina_impresa: 591
+    lugar: "isla de Cubagua"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: imagen
+    ver_tambien: "el sonido (el silencio) de la iguana, en La Española, t. I p. 393 — abajo"
+
+  - nombre_en_fuente: "arañas muy chiquitas"
+    especie_probable: null
+    texto: >-
+      «Hay unas arañas muy chiquitas en su tamaño, pero el dolor es tan grande
+      que no tiene otra comparaçión igual … hasta el dia siguiente á la propria
+      hora que fué picado»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIX
+    capitulo: II
+    pagina_impresa: 592
+    tambien_en: "t. I lib. VI cap. XXIV, p. 209 (el mismo relato, «depósito» de Oviedo)"
+    lugar: "isla de Cubagua"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+
+  - nombre_en_fuente: tatara
+    forma_ocr_cruda: talara
+    especie_probable: null
+    texto: >-
+      «Hay un pescado ó animal en la mar, que no es mayor que un dedo pulgar, y
+      al que pica en el agua, como acaesçe algunas veçes picar algún indio, el
+      que está herido haçe las mismas vascas … é el pescado ques dicho se llama
+      tatara, y es pintadillo de rayas é pecas blancas é amarillas»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIX
+    capitulo: II
+    pagina_impresa: 592
+    tambien_en: "t. I lib. VI cap. XXIV, p. 209: «é llámase tatara» (imagen: también `tatara`)"
+    lugar: "la mar de Cubagua"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: imagen
+    ojo: >-
+      🔴 El OCR da `talara` en los DOS pasajes y la página dice `tatara` en los
+      dos (cursiva, verificado con zoom). Sin la imagen íntegra del t. I esta
+      voz habría entrado mal. No dice de quién es la voz.
+
+  - nombre_en_fuente: tortugas
+    especie_probable: null
+    texto: >-
+      «Hay en la isla de Cubagua y en las otras islas sus comarcanas muchas y
+      grandes tortugas … Estas tortugas salen de la mar á tierra á desovar en su
+      tiempo, y haçen un hoyo en el arena … é ponen allí mill é mill é quinientos
+      huevos … Matan los indios estas tortugas con unos harponçillos de un clavo,
+      pequeños, que ligan á un buen volantín ó cordel reçio … el indio se echa al
+      agua é trastorna la tortuga haçia arriba … la meten los indios en la canoa»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIX
+    capitulo: II
+    pagina_impresa: [592, 593]
+    lugar: "Cubagua y las islas comarcanas"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+    ojo: >-
+      Técnica de caza marina indígena (harpón pequeño con cordel, el cazador se
+      tira al agua y vuelca la tortuga): va también a `hallazgos_de_mundo`. El
+      «clavo» del harpón es ya hierro europeo en 1540.
+
+  - nombre_en_fuente: "ostias … que produçen las perlas"
+    especie_probable: "ostra perlera (Pinctada)"
+    texto: >-
+      «A la redonda de Cubagua … es todo plaçeles, é en ellos se crian las
+      perlas en las ostias ó pescados assi llamados que las produçen … en çierto
+      tiempo produçen las ostias de las perlas un çierto humor roxo ó sanguino
+      en tanta abundançia, que tiñen el agua y la turban en la misma color»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIX
+    capitulo: [II, X]
+    pagina_impresa: [593, 609]
+    lugar: "isla de Cubagua"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+    voz_indigena_para_la_perla: "`thenocas` y `coçixas` (p. 591) — ver `voces_de_tierra_firme`"
+
+  - nombre_en_fuente: "baquiras de la Tierra-Firme (llevadas a Cubagua)"
+    especie_probable: "pecarí (Tayassuidae)"
+    texto: >-
+      «En aquella isla han metido los españoles algunos puercos … de la raça ó
+      casta de Castilla, y también de los que llaman baquiras de la
+      Tierra-Firme; é á los unos é los otros les cresçen allí tanto las uñas …»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIX
+    capitulo: II
+    pagina_impresa: 593
+    lugar: "Cubagua (animales introducidos desde la costa)"
+    epoca: colonial
+    sonido: null
+    verificacion: imagen
+
+  - nombre_en_fuente: "culebras … de los cascabeles"
+    especie_probable: "cascabel (Crotalus durissus) — «cinco ó siete ñudos» en la cola"
+    texto: >-
+      «En la isla Margarita hay unas culebras ponçoñosíssimas que dentro de
+      terçero dia muere aquel á quien muerden … Son pintadas; pero mirada assi á
+      primera vista ó desde lexos toda junta, paresçe que tira su color á pardo
+      … La mayor de aquestas culebras es de çinco ó seys pies de luengo … Tiene
+      esta serpiente en la cola çinco ó siete ñudos redondos é destintos, que
+      paresçen que están como ensartados»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: VI
+    capitulo: XXIII
+    pagina_impresa: [208, 209]
+    lugar: "isla Margarita (testigos: vecinos de Margarita que viven en Santo Domingo)"
+    epoca: contacto-temprano
+    sonido: >-
+      «é quando anda este animal, suenan como proprios é verdaderos cascabeles
+      sordos, el qual sonido paresçe que la benigna natura (y mejor diçiendo
+      Dios) con su misericordia le dió, para aviso de los hombres humanos,
+      porque se guarden della, oyendo aquellos cascabeles»
+    verificacion: imagen
+
+  - nombre_en_fuente: "aves marinas de la isla de las aves (naufragio de Sanabria)"
+    especie_probable: null
+    texto: >-
+      «ninguna cosa ni fructa hallaron, puesto que innumerables árboles avia …
+      é eran de tantos géneros diverssos, que era cosa de mucha admiraçión, y
+      imposible cosa contar sus diferençias y plumages … É cómo esto era en el
+      mes de mayo, estaban criando sus hijos, é los árboles llenos dellas é de sus
+      nidos con muchos pollos … y algunas y muchas dellas tan çelosas de sus
+      hijos, que se venían á los ojos é á la cara de los hombres á picarlos»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: IV
+    libro: L
+    capitulo: "XX, §§VII-VIII"
+    pagina_impresa: [525, 526, 527]
+    lugar: >-
+      «la isla de las aves», una isla con bajos que «no estaba en la carta de
+      navegar», a UN DÍA de navegación al poniente de la costa de Coro y
+      Paraguaná (mayo de 1534). Oviedo no la nombra; que sea Las Aves o Los
+      Roques es inferencia del minador, no de la fuente
+    epoca: contacto-temprano
+    sonido: >-
+      «mas era tanto el estruendo é resonançia del cherriar é graznar de las
+      aves, que les paresçia que todas juntas las del mundo debían estar allí
+      allegadas … y diverssas voçes»
+    verificacion: ocr-limpio
+    ojo: >-
+      Paisaje sonoro de una colonia de cría de aves marinas en una isla de la
+      costa, en la estación (mayo). Los náufragos comían «páxaros bobos é
+      alcatraçes é de otros géneros é algunas tortugas, de que hiçieron
+      tassajos, assados en barbacoas» (p. 530).
+
+  - nombre_en_fuente: "tortugas … é en algunas hembras hallaban mill é dos mill huevos"
+    especie_probable: null
+    texto: >-
+      «yban çinco ú seys compañeros por la playa de la isla é poníanse en
+      çelada, donde sospechaban que saldrían de la mar á desovar … corrían
+      juntos contra ellas con sendas estacas ó palos é las trastornaban de
+      espaldas … muchas dellas eran mayores que grandes adargas … y en algunas
+      hembras hallaban mill é dos mill huevos ó más»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: IV
+    libro: L
+    capitulo: "XX, §VIII"
+    pagina_impresa: 528
+    lugar: "la misma «isla de las aves», al poniente de Coro (1534)"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+
+  - nombre_en_fuente: "lobos marinos (en una isleta comarcana)"
+    especie_probable: "foca monje del Caribe (Neomonachus tropicalis) — probable, extinta"
+    texto: >-
+      «y en una isleta de las comarcanas avia innumerables lobos marinos,
+      passaron á ella en el batel é truxeron dos dellos bien grandes, el lardo de
+      los quales sirvió … por muy bastante olio»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: IV
+    libro: L
+    capitulo: "XX, §IX"
+    pagina_impresa: 529
+    lugar: "isleta junto a la «isla de las aves», al poniente de Coro (1534)"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+    ver_tambien: "el sonido del lobo marino, t. I p. 428 — abajo, sección (d)"
+
+# ── (c) LA COSTA DE TIERRA FIRME: SANTA MARTA, CUMANÁ, PARIA, HUYAPARI ─
+
+  - nombre_en_fuente: "perrillos pequeños, gosques y mudos"
+    especie_probable: "perro doméstico indígena"
+    texto: >-
+      «Este dia mataron los españoles tres ó quatro perrillos pequeños, gosques
+      y mudos, porque no saben ladrar … Y destos tales perros gosques ovo muchos
+      en todas estas islas y mas en la Tierra-Firme»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXVI
+    capitulo: X
+    pagina_impresa: 355
+    lugar: "provinçia de Sancta Marta (testigo de vista: el propio Oviedo, 1514)"
+    epoca: contacto-temprano
+    sonido: >-
+      «y aunque les daban de palos y cuchilladas, no se quexaban sino con çierto
+      gruñir secreto ó baxo que apenas se oye»
+    verificacion: imagen
+
+  - nombre_en_fuente: "puercos salvajes, que los indios llaman baquiras"
+    especie_probable: "pecarí (Tayassuidae)"
+    texto: >-
+      «Este dia se mataron çinco ó seys venados que atravessaban entre los
+      chripstianos, porque hay muchos en aquella tierra … é essa noche en el
+      real se comieron con otros dos puercos salvajes, que los indios llaman
+      baquiras»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXVI
+    capitulo: X
+    pagina_impresa: 354
+    lugar: "provinçia de Sancta Marta (1514)"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: imagen
+    ojo: "`baquiras` en cursiva y dicho «que los indios llaman»: la voz se atestigua en Santa Marta, en Cubagua (t. I p. 593, «de la Tierra-Firme») y en el Huyapari (t. II p. 221, `váquiras`)"
+
+  - nombre_en_fuente: "pavas de las grasnaderas prietas y de las leonadas"
+    especie_probable: null
+    texto: >-
+      «Viéronse muchas tórtolas é codorniçes y palomas torcaçes y çoritas, y
+      muchas pavas de las grasnaderas prietas y de las leonadas, y otras aves que
+      llaman los chripstianos faysanes; pero no lo son, puesto que en su gentil
+      sabor no son inferiores á buenas perdiçes, y tal tienen el plumaje, pero
+      las colas largas»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXVI
+    capitulo: X
+    pagina_impresa: 354
+    lugar: "provinçia de Sancta Marta (1514)"
+    epoca: contacto-temprano
+    sonido: "«pavas de las grasnaderas» — el nombre que les da Oviedo ES su sonido: las que graznan"
+    verificacion: imagen
+    ojo: >-
+      No describe el grito, lo usa para clasificar: hay pavas «grasnaderas»
+      prietas y leonadas. Para los agentes de fauna: una pava de costa seca del
+      Caribe que se nombra por lo que grazna.
+
+  - nombre_en_fuente: "aves de rapiña … neblíes y gavilanes, esmerejones y cernícalos"
+    especie_probable: null
+    texto: >-
+      «Hay aves de rapiña en aquella provinçia, assi como neblíes y gavilanes,
+      esmerejones y cernícalos; y todas estas aves son comunes en la
+      Tierra-Firme … Yo hallé un açor en un pueblo desta tierra … suelto y
+      çercado de cañas en tanto espaçio como diez ó doçe pies de cada parte …
+      pero nunca oí después … que los indios caçassen con aves»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXVI
+    capitulo: X
+    pagina_impresa: 355
+    lugar: "provinçia de Sancta Marta (1514)"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+    ojo: "una rapaz CAUTIVA en un corral de cañas dentro de un pueblo: tenencia de aves, no cetrería"
+
+  - nombre_en_fuente: "raya (púa de flecha)"
+    especie_probable: null
+    texto: "«el hierro de la qual era un huesso de pescado, que llamamos raya. Mas la hierva era tal …»"
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXVI
+    capitulo: X
+    pagina_impresa: 353
+    lugar: "provinçia de Sancta Marta (1514)"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+    ojo: "el animal marino como materia prima de arma: la púa de raya en la flecha envenenada"
+
+  - nombre_en_fuente: maperiti
+    especie_probable: "mofeta (Conepatus) — la descripción del hedor lo permite"
+    texto: >-
+      «Esfe animal es de color bermejo y de mal pelo é de quatro piés, tamaño
+      como una raposa … é si este animal passa á barlovento … hiede mucho á
+      monte, de un tal olor aborresçible … Todo esto he visto yo de este animal,
+      y es muy notorio en muchas partes de la Tierra-Firme: al qual llaman en la
+      costa de Cumaná y Araya y por allí maperiti, y en otras partes le dan otro
+      nombre»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXIV
+    capitulo: XIII
+    pagina_impresa: [259, 260]
+    tambien_en: "t. I lib. XII cap. XVII, p. 408 («çorrillas hidiondas de la Tierra-Firme») y lib. VI cap. XXXIV, p. 224"
+    lugar: "costa de Cumaná y Araya (el nombre); visto por Oviedo en Nicaragua"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+
+  - nombre_en_fuente: bivana
+    especie_probable: null
+    texto: >-
+      «En la provinçia de Paria é en otras partes de la Tierra-Firme, hay un
+      animal llamado bivana, pequeño é de buen paresçer, tamaño como un gato …
+      la cola luenga é mas gruesa que la de los gatos é mas poblada … la
+      corriente del pelo la tiene al revés de todos los otros animales … Todo el
+      dia duerme sin despertar … En aquella costa de las perlas que llaman
+      Paria, llaman los indios en su lengua á este animal bivana»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XII
+    capitulo: XXIX
+    pagina_impresa: [417, 418]
+    tambien_en: "t. II lib. XXIV cap. XIII, pp. 260-261 (el mismo animal, visto por Oviedo en Santo Domingo)"
+    lugar: "costa de Paria"
+    epoca: contacto-temprano
+    sonido: "«é toda la noche vela é no çesa de andar buscando que comer, é anda silvando en un tono baxo»"
+    verificacion: ocr-limpio
+
+  - nombre_en_fuente: "zorrillos pardos … su prinçipal manjar … son cangrejos"
+    especie_probable: "mapache cangrejero (Procyon cancrivorus) — hocico y «medios braços é piernas» negros, come cangrejos"
+    texto: >-
+      «Zorrillos pardos hay en muchas partes de la Tierra-Firme, en especial en
+      las provinçias de Sancta Marta é Cartajena, no mayores que los gozques
+      pequeños; é tienen el hoçico é los medios braços é piernas negros … é su
+      prinçipal manjar é de que con mejor voluntad comen son cangrejos … Yo tuve
+      uno dellos que una caravela mia me truxo de la costa de Cartajena … que lo
+      dieron los indios flecheros á trueco de dos anzuelos para pescar»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XII
+    capitulo: XXV
+    pagina_impresa: 414
+    lugar: "provinçias de Sancta Marta é Cartajena"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+
+  - nombre_en_fuente: "venados … codorniçes y conexos y tórtolas … váquiras … armados ó encubertados"
+    especie_probable: null
+    texto: >-
+      «Hay muchos venados en la costa de aqueste rio, y para matarlos tienen
+      esta forma. Ponen fuego por muchas partes á la savána çircuyéndola, y
+      dexan una parte que no ençienden por donde salgan los venados, é allí
+      aguárdanlos muchos flecheros … Toman codorniçes y conexos y tórtolas en
+      mucha cantidad con lazos y redes: assi también zorras y raposos, como
+      muchos puercos salvajes de los que llaman váquiras. Hay muchos animales de
+      los que llaman armados ó encubertados»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXIV
+    capitulo: III
+    pagina_impresa: 221
+    lugar: "río Huyapari (Orinoco), junto al pueblo de Aruacay"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+    ojo: "caza con FUEGO en la sabana y trampas de lazo y red: técnica, va también a `hallazgos_de_mundo`. Orinoco, lejos (regla 4)"
+
+  - nombre_en_fuente: "aves … muy mayores que cigüeñas"
+    especie_probable: null
+    texto: >-
+      «unas aves hay muy hermosas en aquellas costas deste rio de Huyapari, muy
+      mayores que cigüeñas y de aquella hechura en todo, assi en el pico como en
+      las piernas y cuello, pero son todas blancas, y de la mitad del cuerpo
+      arriba muy negras»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXIV
+    capitulo: III
+    pagina_impresa: 222
+    lugar: "río Huyapari (Orinoco)"
+    epoca: contacto-temprano
+    sonido: "«é graznan mucho y recio de noche, é óyense de muy lexos»"
+    verificacion: ocr-limpio
+
+  - nombre_en_fuente: "bozinas de caracoles grandes"
+    especie_probable: null
+    texto: >-
+      «un escuadrón en que habría setenta hombres ó mas de indios, muy bien
+      adereçados con arcos é flechas é macanas é rodelas, y con muchos penachos
+      hermosos é sus bozinas de caracoles grandes que se oyen é suenan mucho»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXIV
+    capitulo: III
+    pagina_impresa: 219
+    lugar: "río Huyapari (Orinoco)"
+    epoca: contacto-temprano
+    sonido: "«bozinas de caracoles grandes que se oyen é suenan mucho»"
+    verificacion: ocr-limpio
+    ojo: "el caracol marino hecho trompeta de guerra. No es la voz del animal: es el animal como instrumento"
+
+  - nombre_en_fuente: "coches, que son çiervos … baquiras"
+    especie_probable: null
+    texto: >-
+      «Este rio es de mucho é buen pescado, é hay mucha carne de coches, que
+      son çiervos, ó de baquiras, que son çierta manera de puercos monteses en
+      grand cantidad»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXIV
+    capitulo: XI
+    pagina_impresa: 250
+    lugar: "Tierra Firme, la entrada de la gente de Hierónimo Dortal (Paria adentro)"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+    ojo: "`coches` como nombre del ciervo: forma sin atribución de lengua; se anota, no se atribuye"
+
+  - nombre_en_fuente: "pocas aves … salvo papagayos … tigres muchos y çiervos innumerables"
+    especie_probable: null
+    texto: >-
+      «En estas provinçias ya dichas hay muy pocas aves generalmente, salvo
+      papagayos de muchas maneras, tigres muchos y çiervos innumerables. La
+      provinçia de Camanagoto es muy falta de agua»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: II
+    libro: XXIV
+    capitulo: XII
+    pagina_impresa: 255
+    lugar: "provinçias de Camanagoto, Paripamota y Rajetó (costa de Cumaná adentro)"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+
+# ── (d) EL MAR Y LAS AVES MARINAS ─────────────────────────────────────
+
+  - nombre_en_fuente: "lobos marinos"
+    especie_probable: "foca monje del Caribe (Neomonachus tropicalis) — probable, extinta"
+    texto: >-
+      «Muchos lobos marinos é muy grandes hay en estas mares destas Indias,
+      assi por entre aquestas islas, como en las costas de la Tierra-Firme …
+      Salen los lobos á dormir en tierra en muchas isletas ó partes de las
+      costas … Tienen el pelo de sobre sí muy hermoso, como un terçiopelo muy
+      lindo é muy negro, é otros de color bermejo, é otros pardos … é todas las
+      mudanças que la mar haçe, se conosçen en el pelo destos animales»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIII
+    capitulo: V
+    pagina_impresa: [428, 429]
+    lugar: "«por entre aquestas islas, como en las costas de la Tierra-Firme»"
+    epoca: contacto-temprano
+    sonido: "«é tienen tan profundo é pesado sueño é roncan tan reçio, que desde lexos se oyen; é assi, muchas veçes durmiendo, los matan de noche»"
+    verificacion: ocr-limpio
+    tambien_en: "t. IV lib. L cap. XXVIII, p. 585: en un isleo sin nombre de la ruta Cabo de la Vela–Santo Domingo (1548), «dormian roncando, como es costumbre, tan altamente, que desde lexos se oian»"
+
+  - nombre_en_fuente: "tortugas de la mar … é hicoteas"
+    especie_probable: null
+    texto: >-
+      «En la costa de la Tierra-Firme, y en especial en la villa de Acla é otras
+      partes, las he visto de siete y de ocho palmos de luengo en la concha …
+      Salen de la mar á poner sus huevos en tierra en los arenales de las
+      playas … Quando los chripstianos ó los indios hallan rastro destas
+      tortugas por el arena … trastórnanla con un palo»; y «Las hicoteas ó
+      menores tortugas … se hallan en los lagos … á estas pequeñas llaman los
+      indios hicoteas»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIII
+    capitulo: VIII
+    pagina_impresa: [432, 433]
+    lugar: "costa de Tierra Firme (Acla, en el Darién) — las tortugas; La Española — las hicoteas"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+    ojo: "`hikotea` ya está en el lexicón (vía Medina). Esta es la atestación de Oviedo, de LA ESPAÑOLA, «llaman los indios»"
+
+  - nombre_en_fuente: manatí
+    especie_probable: "manatí (Trichechus manatus)"
+    texto: >-
+      «assi como en esta Isla Española le quitaron su nombre é le dieron este,
+      assi en la Tierra-Firme que hay muchos destos pescados, los nombran
+      diverssamente, segund la diferençia de los lenguajes de las provinçias»;
+      «En Tierra-Firme matan los ballesteros estos animales … desde una barca ó
+      canoa … con una saeta con un harpon»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIII
+    capitulo: IX
+    pagina_impresa: [433, 434]
+    lugar: "Tierra Firme (muchos, con nombres distintos según la lengua) y La Española"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+    ya_en: "T1 cita la p. 433 por la caza; no recoge la frase de los nombres distintos en Tierra Firme"
+
+  - nombre_en_fuente: "pexe reverso"
+    especie_probable: "rémora (Echeneidae)"
+    texto: >-
+      «Quando los indios quieren guardar é criar algunos destos reversos para su
+      pesquería, tómanlo pequeño é tiénenlo siempre en agua salada de la mar, é
+      allí le dan á comer … é quando veen algún pescado grande, assi como
+      tortuga ó sávalo … ó alguno destos manatís … toma el indio en la mano este
+      pescado reverso é halágalo con la otra é díçele en su lengua que sea
+      manicato, que quiere deçir esforçado é de buen coraçón»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIII
+    capitulo: IX
+    pagina_impresa: [435, 436]
+    lugar: "«en la isla de Jamáyca y en la de Cuba»; y «se cree» que en La Española"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: imagen
+    ojo: "el pez CRIADO como herramienta de pesca y HABLADO: va a `hallazgos_de_mundo` (cosmovisión marina). Antillano, no de Tierra Firme"
+
+  - nombre_en_fuente: "pescados … de la mar"
+    especie_probable: null
+    texto: >-
+      «acá los hay muy buenos; assi como lisas grandes y pequeñas, é xureles, é
+      bermejuelas, é moxarras, guabinas, palometas, dihahacas, sávalos,
+      robalos, parguetes, corbinetas, cornudas, pulpos, tollos, caçones,
+      sardinetas, agujas, lenguados, acedías, salmonados … hostias, almejas, é
+      marisco de muchas maneras; langostas, cangrejos, xaybas, camarones, rayas
+      muchas … anguilas, morenas … tiburones, lobos marinos, tortugas … muchas
+      doradas … pexe vihuela, pescados voladores … Muchos marraxos é votos,
+      toñinas, ballenas asaz»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIII
+    capitulo: I
+    pagina_impresa: 424
+    lugar: "«estas mares é islas» (La Española y en general), sin separar Tierra Firme"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+    ojo: "INVENTARIO castellano de la pesca, no voces indígenas (salvo `guabinas`). Sirve de lista de referentes para los agentes de fauna"
+
+  - nombre_en_fuente: "pexe vihuela"
+    especie_probable: "pez sierra (Pristidae) — «una espada orlada de unos colmillos … de una parte é de otra»"
+    texto: >-
+      «la mandíbula ú hoçico alto ó superior dél es una espada orlada de unos
+      colmillos ó navajas de una parte é de otra, tan luenga como un braço de un
+      hombre … Yo le he visto en el Darien, en la Tierra-Firme, tan grande que un
+      carro con un par de bueyes tenia harta carga … Y también hay estos
+      pescados en las costas desta é de las otras islas»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIII
+    capitulo: III
+    pagina_impresa: 426
+    lugar: "el Darién (Tierra Firme) y las costas de las islas"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+
+  - nombre_en_fuente: "peçes … que llaman roncadores, porque roncan"
+    especie_probable: "roncador (Haemulidae) — probable"
+    texto: >-
+      «se mataron muchos peçes de los que llaman roncadores, porque roncan, é son
+      bien armados de dientes y es buen pescado»
+    obra: oviedo-y-valdes-1852-1855
+    tomo: III
+    libro: XXIX
+    capitulo: XXI
+    pagina_impresa: 111
+    tambien_en: >-
+      t. IV p. 12, el mismo puerto: «echados en una caldera una doçena dellos,
+      no haçen menos ruido que otros tantos cochinos gruñidores … é llámanlos acá
+      los hombres de la mar roncadores, é sónlo en tanta manera que yo no he
+      visto cosa semejante, segund su mucho gruñir ó roncar»
+    lugar: "puerto de la Possesion, costa de Nicaragua en la mar del Sur"
+    epoca: contacto-temprano
+    sonido: "«roncan»; «no haçen menos ruido que otros tantos cochinos gruñidores … segund su mucho gruñir ó roncar»"
+    verificacion: ocr-limpio
+    ojo: "Pacífico, no Caribe: el nombre castellano del pez sale de su sonido. Se anota por el sonido"
+
+  - nombre_en_fuente: rabihorcados
+    especie_probable: "rabihorcado (Fregata) — la descripción lo permite"
+    texto: >-
+      «Estas son grandes aves al paresçer é vuelan mucho, é lo mas continuo
+      andan altos; son negros é quassi de rapiña … Tienen la cola mayor é mucho
+      mas hendida que los milanos, é por esto los llamaron rabihorcados … Yo he
+      visto estas aves mas de doscientas leguas dentro en la mar; pero en la
+      Tierra-Firme hay muchos mas sin comparaçión que no en estas islas. Diçen
+      los indios de la provinçia de Cueva, que el unto y enxundias de aquestas
+      aves es muy bueno, para deshaçer las señales del rostro é de las heridas»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIV
+    capitulo: I
+    pagina_impresa: [440, 441]
+    lugar: "la mar abierta y, sobre todo, Tierra Firme («muchos mas sin comparaçión»); el uso medicinal es de Cueva"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+
+  - nombre_en_fuente: "páxaros bobos"
+    especie_probable: "piquero / bobo (Sulidae) — la descripción lo permite"
+    texto: >-
+      «Estos son menores que gaviotas: tienen los pies como ánades é pósanse en
+      el agua … é son tan bobas y esperan tanto que las toman muchas veçes á
+      manos … Tómanse muchos entre estas islas é la Tierra-Firme»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIV
+    capitulo: I
+    pagina_impresa: 441
+    lugar: "«entre estas islas é la Tierra-Firme»"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+
+  - nombre_en_fuente: "alcatraçes (varias maneras) … gavinas é gaviotas"
+    especie_probable: null
+    texto: >-
+      «Topan assi mesmo las naos, desque están ya çerca de las Indias, otras
+      aves que llaman alcatraçes: estos son de muchas maneras … todas tienen los
+      pies como ánsares ó ánades, porque son aves marítimas y exerçitadas en la
+      pesquería … demás de muchas gaviotas é algunas gavinas; pero çerca … de
+      acá de las Indias y en las costas de la Tierra-Firme, porque las gavinas é
+      gaviotas no se apartan mucho de la tierra»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIV
+    capitulo: I
+    pagina_impresa: [441, 442]
+    lugar: "la mar de las Indias y las costas de Tierra Firme"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+
+  - nombre_en_fuente: "alcatraçes grandes … del papo"
+    especie_probable: "pelícano pardo (Pelecanus occidentalis)"
+    texto: >-
+      «Son estos alcatraçes … como grandes ansarones, é son todos pardos … Tiene
+      un pico tan grande como dos palmos … é la mandíbula baxa se abre tanto é
+      haçe un papo que le va hasta el pecho … Los quales, quando vuelan, se
+      suben en alto é tienen muy buena vista, é déxanse caer juntadas las alas
+      en la mar, é viene hecho un ovillo, y del golpe que dá, como es grande,
+      salta mucho el agua para arriba, y él toma el pexe é sale luego para suso
+      sentado en el agua, é trágaselo»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIV
+    capitulo: VI
+    pagina_impresa: [444, 445]
+    lugar: "«en esta Isla Española y en todas las otras islas y costas de la Tierra-Firme»"
+    epoca: contacto-temprano
+    sonido: "no de voz: «del golpe que dá … salta mucho el agua para arriba» (el ruido del zambullido)"
+    verificacion: ocr-limpio
+
+  - nombre_en_fuente: "passo de las aves"
+    especie_probable: null
+    texto: >-
+      «Yo las he visto passar sobre el Darien … é sobre el Nombre de Dios é
+      Panamá en la Tierra-Firme, en diversos años: é paresçe que va el çielo
+      cubierto dellas, y tardan en passar un mes ó mas … Este viaje haçen en el
+      mes de março … Las que destas aves mas baxan para tierra, son unas
+      aguilillas negras é otras medianas, pero también águilas reales, é otras
+      aves de muchas maneras … é todas ellas paresçen de rapiña»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIV
+    capitulo: IX
+    pagina_impresa: [447]
+    lugar: "sobre el Darién, Nombre de Dios y Panamá (Tierra Firme), viniendo de Cuba"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+    ojo: "MIGRACIÓN de rapaces en marzo, con cronología: dato de calendario para los agentes de fauna. Istmo, no Venezuela"
+
+# ── (e) LOS ANIMALES DE TIERRA DE TIERRA FIRME (t. I, libro XII) ───────
+
+  - nombre_en_fuente: "puercos … los llaman chuche … lo llaman baquira"
+    especie_probable: "pecarí (Tayassuidae) — «el ombligo en medio del espinaço»"
+    texto: >-
+      «Muchas é grandes manadas de puercos hay naturales de la Tierra-Firme, y
+      en Castilla del Oro, en la provinçia de Cueva, los llaman chuche, é los
+      indios en otras provinçias lo llaman baquira … tienen el ombligo en medio
+      del espinaço»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XII
+    capitulo: XX
+    pagina_impresa: 409
+    lugar: "Tierra Firme: `chuche` en Cueva, `baquira` «en otras provinçias»"
+    epoca: contacto-temprano
+    sonido: >-
+      «é quando se embraveçen ó están enojados, baten las quixadas ú hoçico tan
+      apriessa, como suelen las cigüeñas sonar el pico, dando tabletadas»
+    verificacion: ocr-limpio
+
+  - nombre_en_fuente: "ochí … tigre"
+    especie_probable: "jaguar (Panthera onca)"
+    texto: >-
+      «aquellos animales que en aquella tierra los indios llaman ochí, llamáronles
+      ellos tigre … Tiene la hechura de la cabeça como león ú onza … pintado de
+      manchas negras»; «los indios llaman ochís en la lengua de Cueva, y en la de
+      Nicaragua se diçe teguantí»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XII
+    capitulo: X
+    pagina_impresa: [401, 402, 405]
+    lugar: "Castilla del Oro (Cemaco, el Darién); Nombre de Dios; Nicaragua"
+    epoca: contacto-temprano
+    sonido: >-
+      acosado por el perro: «y él regañando, mostrando los dientes» (p. 402);
+      preso en el lazo: «dió un bramido … é cómo se sintió herido, dió otro
+      bramido é un tirón» (p. 405)
+    verificacion: ocr-limpio
+
+  - nombre_en_fuente: "leones rasos / leones pardos / gato çerval"
+    especie_probable: null
+    texto: >-
+      «Leones hay en la Tierra-Firme reales, pero son rasos, que en todo
+      paresçen lebreles grandes escoçeses … son de color leonado» (p. 406);
+      «Leones pardos hay en Tierra-Firme, bermejos é pintados de manchas negras»
+      (p. 407); «Gato çerval es animal fiero é de la manera y hechura y color
+      que los gatos pardillos pequeños … es el mas feroz animal que hay en la
+      Tierra-Firme» (p. 406)
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XII
+    capitulo: [XII, XIII, XIV]
+    pagina_impresa: [406, 407]
+    lugar: "Castilla del Oro, costas del Norte y del Sur"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+
+  - nombre_en_fuente: raposas
+    especie_probable: null
+    texto: >-
+      «Raposas hay en la Tierra-Firme, en las gobernaçiones de Castilla del Oro é
+      en otras, en ambas costas del Norte é del Sur, é son bermejas; y otras hay
+      tan negras como un terçiopelo muy negro, é son muy ligeras é maliçiosas, é
+      algo menores que las de España»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XII
+    capitulo: XV
+    pagina_impresa: 407
+    lugar: "Castilla del Oro y otras gobernaciones de Tierra Firme"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+
+  - nombre_en_fuente: "encubertados"
+    especie_probable: "armadillo (Dasypodidae)"
+    texto: >-
+      «Estos son animales de quatro pies, é está cubierto todo de una cobertura
+      ó pellejo de una sola concha duríssima … del tamaño de un perrillo gozque …
+      é con aquellas [uñas] cavan tan apriessa … Son exçelente manjar é tómanlos
+      con redes … é las mas veçes se toman, quando se queman los campos»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XII
+    capitulo: XXIII
+    pagina_impresa: [411, 412]
+    lugar: "Tierra Firme (sin provincia)"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+    sonido_en_otra_parte: >-
+      t. II lib. XX caps. IX-X, p. 46, el «caballo encubertado» del río de Sancta
+      Cruz (Patagonia): «é gruñía como puerco»; Oviedo añade que él los había
+      comido «en la Tierra-Firme, en la provinçia de Cueva y en la de
+      Nicaragua». El gruñido es del animal austral, no del de Tierra Firme
+
+  - nombre_en_fuente: "conejos é liebres"
+    especie_probable: null
+    texto: >-
+      «Conejos é liebres hay en la Tierra-Firme … tienen el lomo é pelo como de
+      liebre, é lo demas es blanco … Tómanse las mas veçes, quando se queman los
+      montes, y assi mismo con lazos. Mas en Nicaragua … los indios los salan é
+      tienen mucho tiempo assi en çeçina»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XII
+    capitulo: XXII
+    pagina_impresa: 411
+    lugar: "Castilla del Oro (lengua de Cueva) y Nicaragua"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+
+  - nombre_en_fuente: churcha
+    especie_probable: "zarigüeya / rabipelado (Didelphis) — la bolsa marsupial lo permite"
+    texto: >-
+      «hay un animal pequeño del tamaño de un conejo mediano, el hoçico muy
+      agudo … la cola luenga é de la manera que la tiene el ratón … Aquestas
+      churchas … se vienen de noche á las casas á comerse las gallinas … Por
+      medio de la barriga, al luengo, abre un seno que haçe de su misma piel …
+      é aquella hendedura … aprieta tanto que ninguno de los hijos se le cae»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XII
+    capitulo: XXVII
+    pagina_impresa: 416
+    lugar: "Castilla del Oro, «en especial en el Darien é en muchas partes de la lengua de Cueva»"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+
+  - nombre_en_fuente: "hardas"
+    especie_probable: "ardilla (Sciuridae)"
+    texto: >-
+      «Hardas hay en Tierra-Firme algo mayores que las de España, é no tan
+      peludas ni tan bermejas … Estas de acá son muy buen manjar … é muerden
+      mucho»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XII
+    capitulo: XXVIII
+    pagina_impresa: 417
+    lugar: "Castilla del Oro, provincias de la lengua de Cueva"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+
+  - nombre_en_fuente: "gatos monillos … gatos grandes é negros"
+    especie_probable: null
+    texto: >-
+      «Quando los hombres de guerra … passan por algún bosque, donde hay de unos
+      gatos grandes é negros … assi como ven á los chripstianos … vienen por
+      ençima de los árboles, saltando de rama en rama … é arrojar sobre los
+      chripstianos [ramas] por descalabrarlos»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XII
+    capitulo: XXVI
+    pagina_impresa: [414, 415, 416]
+    lugar: "Castilla del Oro"
+    epoca: contacto-temprano
+    sonido: >-
+      «los gatos dan voçes que paresçe que se apellidan … saltando de rama en
+      rama é gritando»; el herido «dando muchos gritos, á los quales se juntaron
+      un gran número de gatos»
+    verificacion: ocr-limpio
+
+  - nombre_en_fuente: "sapos … que comen"
+    especie_probable: null
+    texto: >-
+      «aunque en la Tierra-Firme los comen en muchas partes é islas de la costa
+      austral … Críanlos é ténenlos atados á çebo en algunas partes de la
+      Tierra-Firme, para los comer después por muy presçiado manjar»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIII
+    capitulo: X
+    pagina_impresa: [437, 438]
+    lugar: "Tierra Firme (sin provincia) y las islas de la costa austral"
+    epoca: contacto-temprano
+    sonido: null
+    verificacion: ocr-limpio
+    cero_verificado: "el capítulo de «ranas é sapos» NO describe su canto: se buscó `canta*`, `vo[zç]`, `ruydo` en las dos páginas"
+
+# ── (f) LA ESPAÑOLA, SÓLO COMO COMPARACIÓN (y marcado así) ────────────
+#    Entran porque describen SONIDO de animales que también viven en la
+#    costa de Venezuela o de un pariente cercano. No son dato de la esfera.
+
+  - nombre_en_fuente: "perros … mudos (La Española)"
+    especie_probable: "perro doméstico indígena"
+    texto: >-
+      «Eran todos estos perros aquí en esta é las otras islas mudos, é aunque los
+      apaleassen ni los matassen, no sabían ladrar»; y el experimento de Oviedo:
+      llevó uno de Nicaragua a Panamá y «allí también estuvo mudo»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XII
+    capitulo: V
+    pagina_impresa: [390, 391]
+    lugar: "La Española (y el de Nicaragua)"
+    epoca: contacto-temprano
+    sonido: "«algunos gañen ó gimen baxo, quando les haçen mal»"
+    verificacion: ocr-limpio
+    solo_comparacion: true
+
+  - nombre_en_fuente: "yvana (La Española)"
+    especie_probable: "iguana"
+    texto: "«y es tan callado animal, que ni grita, ni gime, ni suena, y está atado á do quier que le pongan, sin haçer mal alguno ni ruydo diez ó veynte dias é mas»"
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XII
+    capitulo: VII
+    pagina_impresa: 393
+    lugar: "La Española"
+    epoca: contacto-temprano
+    sonido: "«ni grita, ni gime, ni suena»"
+    verificacion: ocr-limpio
+    solo_comparacion: true
+    ya_en: "T1 tiene `yvana` como voz; no el silencio"
+
+  - nombre_en_fuente: "aves noturnas (La Española)"
+    especie_probable: null
+    texto: >-
+      «Hay en esta isla unas aves mayores que vençejos … É no salen ni se veen
+      sino al tiempo que el sol se entra debaxo del horizonte … é andan toda la
+      noche … No sé como los llaman los indios en esta tierra; pero he visto
+      muchas aves destas en la Tierra-Firme, salvo que en el plumaje son algo
+      diferentes»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIV
+    capitulo: VII
+    pagina_impresa: 446
+    lugar: "La Española; «muchas … en la Tierra-Firme», con otro plumaje"
+    epoca: contacto-temprano
+    sonido: "«é de quando en quando algunas veçes chillan en çierta forma que se oyen desde lexos dellos»"
+    verificacion: ocr-limpio
+    solo_comparacion: true
+
+  - nombre_en_fuente: "ruyseñores, golondrinas, páxaros que cantan (La Española)"
+    especie_probable: null
+    texto: >-
+      «golondrinas, mayores que las de España … y el canto de las golondrinas de
+      acá es mas sordo»; «Muchos páxaros hay acá de los que en España andan por
+      los sotos, é cantan bien (que no les saben acá los nombres), é también hay
+      ruyseñores»; «Otros páxaros hay de muchas colores é que cantan muy bien é
+      de diferentes voçes»; y concluye: «todas ellas las hay en estas islas, y en
+      la Tierra-Firme estas é otras muy mas en abundançia»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIV
+    capitulo: [II, IV]
+    pagina_impresa: [442, 443, 444]
+    lugar: "La Española (y la extensión genérica a Tierra Firme)"
+    epoca: contacto-temprano
+    sonido: >-
+      golondrinas: «el canto … es mas sordo»; ruyseñores: «en el canto son cosa
+      de oyr y de muy dulçe melodía, aunque no haçen tantas diferençias, como
+      los de España, en el cantar»
+    verificacion: ocr-limpio
+    solo_comparacion: true
+
+  - nombre_en_fuente: "páxaros comuneros (La Española)"
+    especie_probable: null
+    texto: >-
+      «haçen un nido tan grande ó mayor que los que suelen haçer las cigüeñas …
+      é si por caso atraviessa por ahí çerca alguna ave de las grandes, aunque
+      sea de rapiña … salen á esquadrones estos páxaros»
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XIV
+    capitulo: V
+    pagina_impresa: 444
+    lugar: "La Española"
+    epoca: contacto-temprano
+    sonido: "«salen á esquadrones estos páxaros con gran ruydo»"
+    verificacion: ocr-limpio
+    solo_comparacion: true
+
+  - nombre_en_fuente: "cori (La Española)"
+    especie_probable: null
+    texto: "«Son mudos animales é no enojosos é muy domésticos, é ándanse por casa é tiénenla limpia é no chillan ni dan ruydo ni roen»"
+    obra: oviedo-y-valdes-1851
+    tomo: I
+    libro: XII
+    capitulo: IV
+    pagina_impresa: 390
+    lugar: "La Española"
+    epoca: contacto-temprano
+    sonido: "«no chillan ni dan ruydo»"
+    verificacion: ocr-limpio
+    solo_comparacion: true
+    por_que: "el `cori` es el término de comparación de los `coríes` de Venezuela (t. II p. 330)"
