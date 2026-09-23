@@ -1,0 +1,294 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — Rivero 1883 (escrita hacia 1736): los caquetíos del Casanare,
+# el continuo achagua y voces achaguas con glosa.
+#
+# 🔴 REGLA 4. Nada de este archivo es dato de la polity COSTERA. Los caquetíos
+#    de Rivero son de los Llanos del Casanare (piedemonte de Pauto, Tame) y
+#    del Airico/Guaviare, y los datos son del s. XVII-XVIII (época colonial,
+#    misión jesuita). Son comparanda INTERNA del caquetío, nunca voz ni rasgo
+#    de la Kaketiana. Los achaguas son OTRO pueblo arahuaco (comparanda).
+# 🔴 REGLA 3. Todo lleva `epoca: colonial`: nada de aquí se proyecta al
+#    s. XIV-XV sin decidirlo.
+# 🔴 REGLA 5. Minar propone: nada toca el corpus, el lexicón ni
+#    curiana_polities.py. Lo que pide decisión va en `para_miguel`.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  obra: rivero-1883
+  minado: '2026-09-23'
+  minador: agente Opus 5.5, campaña minería 3 (rama campana/mineria3-rivero)
+  encargo: 6-fusion/issues-pendientes/encargo-mineria-rivero.md
+  estado: sin-fusionar
+  aviso_polity: "NO es la polity costera simulada: Llanos del Casanare y Airico, s. XVII-XVIII"
+  texto: >-
+    fuentes_caquetios/Rivero_1883_Historia_Misiones_Casanare.txt (OCR del ítem
+    de archive.org, un salto de página por hoja: la página del PDF se cuenta
+    igual que con pdftotext). Toda cita marcada `verificado_en_imagen: true`
+    se leyó en un recorte del PDF renderizado con pymupdf (leer-fuente §3);
+    las demás van con el texto del OCR y lo dicen.
+  desfase_pdf_impresa: >-
+    Medido en la cabecera impresa de cada página citada: pdf − 21 en las
+    pp. 21-201 (pdf 42→21, 48→27, 50→29, 75→54, 78→57, 103→82, 121→100,
+    165→144, 172→151, 222→201) y pdf − 19 en el tramo final (pdf 411→392,
+    439→420). El OCR lee mal algunos números de cabecera (pdf 75 dice «64»,
+    la imagen dice 54): se citó siempre el número de la IMAGEN.
+  ortografia_medida: >-
+    Antes de contar (minar-fuente §2). Con el texto des-guionado (el guion de
+    fin de línea parte `Caque-\ntíos`, `Ca-\ncatíos`), la raíz
+    `[CcGOQ][aá][qgc]u?[eéa][tlf]` da 12 aciertos en 9 páginas: `Caquetíos`
+    (pdf 48, 50 ×3, 165, 222, 411), `Cacatíos` (pdf 75 ×2), `Caquetá`
+    (pdf 172, y pdf 10, que es el prólogo del editor de 1883 y habla del río
+    Caquetá de Colombia: no cuenta) y un falso positivo (`caguales`, pdf 160).
+    ⚠️ Un grep de `caquet` da 6 y se come las dos de `Cacatíos` (p. 54), que
+    son justo las que dicen qué gente era la de Pauto. Rivero no escribe
+    nunca `caquetía`/`caquetío` en singular. Leídas las 12 en contexto.
+
+# ═════════════════════════════════════════════════════════════════════════
+# 1. ⭐ LOS CAQUETÍOS DE LOS LLANOS EN RIVERO
+#    Dos grupos que Rivero no relaciona entre sí:
+#    (a) Pauto / Tame, piedemonte del Casanare, reducidos desde antes de 1629;
+#    (b) Barragua / Airico / Guaviare, al sur del Meta, «gentiles».
+# ═════════════════════════════════════════════════════════════════════════
+caquetios_llanos:
+
+  - id: riv-cq-01
+    grupo: pauto
+    polity: llanos   # grupo del Casanare: ver para_miguel.polity
+    epoca: colonial
+    fecha_del_dato: 'hacia 1625 (primer entable jesuita, «antes del año de 1629», p. 58) y el presente de Rivero (hacia 1736)'
+    esfera: geografia_politica
+    etiqueta: atestiguado
+    pagina_impresa: 54
+    pdf: 75
+    verificado_en_imagen: true
+    cita: >-
+      «A la falda de la Sierra están los Támaras á la orilla del río Pauto, y
+      estaban los Cacatíos y otros por ese tiempo; pero se mudaron poco há á
+      otro sitio mejor de la Sierra, no muy distante del antiguo.»
+    lectura: >-
+      Ortografía `Cacatíos`. En la primera misión (antes de 1629) los caquetíos
+      vivían al pie de la sierra, a orillas del río Pauto, junto a los Támaras;
+      «poco ha» (≈ 1730) se mudaron a otro sitio de la sierra. Y el gentío de
+      Morcote, Pauto y Támara, con Tunebos y Chita, era «difícil de doctrinar,
+      por la variedad de lenguas» (misma página).
+
+  - id: riv-cq-02
+    grupo: pauto
+    polity: llanos   # grupo del Casanare: ver para_miguel.polity
+    epoca: colonial
+    fecha_del_dato: 'hacia 1625, y «perseveran todavía muchos» hacia 1736'
+    esfera: mundo (etnografía de misionero)
+    etiqueta: atestiguado
+    pagina_impresa: 54
+    pdf: 75
+    verificado_en_imagen: true
+    cita: >-
+      «los más señalados en esta docilidad y mansedumbre son los que se
+      hallaron en Pauto, Cacatíos de nación, de los cuales perseveran todavía
+      muchos; es Nación de lindo natural, de color algo blanco, bien parecidos
+      tanto los hombres como las mujeres, muestran nobleza y generosidad de
+      ánimo […] se precian de tener buenos vestidos y de salir con lucimiento
+      á la calle»
+    lectura: >-
+      El pueblo de Pauto era de caquetíos «de nación». Es un retrato de
+      misionero (docilidad, color, vestido) y del s. XVII-XVIII, ya bajo
+      doctrina: vale como dato de quién vivía en Pauto, no como etnografía
+      precontacto. ⚠️ Es la cita que Jahn 1927 (pp. 208-209) copia entera: Jahn
+      NO es una segunda atestación (minar-fuente §8).
+
+  - id: riv-cq-03
+    grupo: pauto
+    polity: llanos   # grupo del Casanare: ver para_miguel.polity
+    epoca: colonial
+    fecha_del_dato: 'antes de 1629'
+    esfera: lengua (situación sociolingüística) · transmision
+    etiqueta: atestiguado
+    pagina_impresa: 57
+    pdf: 78
+    verificado_en_imagen: true
+    cita: >-
+      «Los que estaban algo más de asiento eran los indios de Pauto; pero todo
+      tan sin orden, que estaba repartida esa doctrina en cinco ó seis
+      pueblecitos, distantes unos de otros […] cuatro á cinco días de camino,
+      y en cada pueblo se hablaba distinta lengua»
+    lectura: >-
+      La doctrina de Pauto NO era monolingüe caquetía: cinco o seis
+      pueblecitos, «en cada pueblo […] distinta lengua». Cuáles, no lo dice.
+      Misma página: ochenta años de curas «no habían aprendido […] ni una
+      palabra de su lengua», y los intérpretes «no interpretan aquello que el
+      Padre dice, sino lo que les parece mejor».
+
+  - id: riv-cq-04
+    grupo: pauto
+    polity: llanos   # grupo del Casanare: ver para_miguel.polity
+    epoca: colonial
+    fecha_del_dato: 'antes de 1629'
+    esfera: lengua (documentación perdida) · transmision
+    etiqueta: atestiguado
+    pagina_impresa: '59-60'
+    pdf: '80-81'
+    verificado_en_imagen: true
+    cita: >-
+      «No había ni una palabra escrita sobre el idioma de estos indios, con que
+      su primer cuidado fué la aplicación á estas lenguas, formando
+      vocabularios, y componiendo directorios […] compusieron gramáticas […]
+      tradujeron los catecismos de doctrina cristiana, cada cual en el
+      lenguaje de su partido y departamento.»
+    lectura: >-
+      El Padre José de Tabalina tuvo a su cargo Pauto (p. 59). Si «cada cual»
+      tradujo el catecismo «en el lenguaje de su partido», hubo un catecismo,
+      notas y quizá gramática en alguna lengua de Pauto hacia 1625. ⚠️ Rivero
+      no dice que fuera caquetío (Pauto tenía cinco o seis lenguas, riv-cq-03)
+      ni qué fue de esos papeles: la Compañía dejó estas doctrinas hacia 1629,
+      «cuando con sudores de sangre habían logrado la traducción de catecismos»
+      (p. 62, OCR, no visto en imagen). Lo que Rivero dice «sepultado en los
+      desiertos de Morcote y Chita» (p. 60) son las NOTICIAS de lo que hicieron,
+      no los catecismos. Es una PISTA archivística, no un documento.
+
+  - id: riv-cq-05
+    grupo: pauto
+    polity: llanos   # grupo del Casanare: ver para_miguel.polity
+    epoca: colonial
+    fecha_del_dato: 'a la entrada del P. Ignacio Cano, después de la exploración de 1659 (p. 82)'
+    esfera: lengua · transmision
+    etiqueta: atestiguado
+    pagina_impresa: 100
+    pdf: 121
+    verificado_en_imagen: true
+    cita: >-
+      «estaban los indios tan ignorantes en un todo, después de tantos años de
+      asistencia, que ni las cosas necesarias para la salvación sabían,
+      porque ignoraba el doctrinero su lengua»
+    lectura: >-
+      En Pauto, con cura clérigo desde la salida de los jesuitas (≈ 1629), el
+      doctrinero no sabía la lengua de sus feligreses treinta años después: el
+      castellano no la había desplazado.
+
+  - id: riv-cq-06
+    grupo: pauto
+    polity: llanos   # grupo del Casanare: ver para_miguel.polity
+    epoca: colonial
+    fecha_del_dato: 'hacia 1667 (P. Dionisio Meland; la revuelta de los Guagibos es de principios de 1668, p. 152)'
+    esfera: lengua
+    etiqueta: atestiguado
+    pagina_impresa: 151
+    pdf: 172
+    verificado_en_imagen: true
+    cita: >-
+      «Mucha carga era esta para un misionero solo, y más cuando estaba el
+      Padre Dionisio, como lo estaba entonces, lidiando con la lengua
+      *Caquetá* de su pueblo de Pauto»
+    lectura: >-
+      ⭐ La única mención de una LENGUA caquetía en toda la obra. ⚠️ La
+      IMPRESIÓN de 1883 dice «*Caquetá*», en cursiva — no es el OCR: la imagen
+      lo confirma. Que se refiera a los caquetíos es inferencia (fuerte): Pauto
+      era «Cacatíos de nación» (p. 54) y en la lista de 1666 figura el pueblo
+      «*Caquetíos de Pauto*» (p. 201). Si el manuscrito decía «Caquetía» y el
+      cajista de 1883 lo cambió, o si Rivero lo escribió así, no se puede saber
+      desde esta edición (la de 1956 no se bajó). Lo que la frase dice: en
+      Pauto, hacia 1667, se hablaba una lengua con nombre propio, distinta de
+      la achagua que el P. Neira trabajaba en Casanare, y que costaba
+      aprender. Lo que NO dice: nada de su parecido con el achagua, ninguna
+      voz, ningún catecismo, ningún intérprete.
+
+  - id: riv-cq-07
+    grupo: pauto
+    polity: llanos   # grupo del Casanare: ver para_miguel.polity
+    epoca: colonial
+    fecha_del_dato: '22 de enero de 1666 (carta del P. Antonio de Monteverde)'
+    esfera: geografia_politica
+    etiqueta: atestiguado
+    pagina_impresa: 201
+    pdf: 222
+    verificado_en_imagen: true
+    cita: >-
+      «Los nueve pueblos que expresa en su carta, y que subsisten todavía […]:
+      *San-Salvador de Casanare; El Pilar de Patute; Nuestra Señora de Tame;
+      San-Javier de Macaguane; Caquetíos de Pauto; San-Ignacio de Curama;
+      Chiricoas de Ariporo; San-José de Aritagua y San-Joaquín de Onocutare*.
+      […] á ellos se podía añadir también el pueblo de Pauto»
+    lectura: >-
+      Un pueblo misional se llamaba por su nación: «Caquetíos de Pauto», como
+      «Chiricoas de Ariporo». Y se distingue del «pueblo de Pauto» (la
+      doctrina jesuita). La lista es de Rivero resumiendo la carta; «subsisten
+      todavía» es su presente (≈ 1736).
+
+  - id: riv-cq-08
+    grupo: tame
+    polity: llanos   # grupo del Casanare: ver para_miguel.polity
+    epoca: colonial
+    fecha_del_dato: 'marzo de 1663'
+    esfera: geografia_politica
+    etiqueta: atestiguado
+    pagina_impresa: 144
+    pdf: 165
+    verificado_en_imagen: true
+    cita: >-
+      «daban por cierto y averiguado que habían quemado los Giraras la iglesia
+      para matar á su Cura, y á los Tunebos y Caquetíos, y huirse después á
+      los montes»
+    lectura: >-
+      Caquetíos reducidos en Tame (o en su órbita) junto a Tunebos, en 1663.
+      Es la cita que Jahn 1927 remite a «Rivero obra citada pag. 144».
+
+  - id: riv-cq-09
+    grupo: barragua-airico
+    polity: llanos   # grupo del Airico/Guaviare: ver para_miguel.polity
+    epoca: colonial
+    fecha_del_dato: 'antes de 1657 (la entrada de Juan López Picón, 1657, fue «después de la que va referida», p. 29)'
+    esfera: geografia_politica · lengua (etnónimo)
+    etiqueta: atestiguado
+    pagina_impresa: 29
+    pdf: 50
+    verificado_en_imagen: true
+    cita: >-
+      «dieron con otra Nación que los Achaguas llaman *Tamudes* y los
+      españoles *Caquetíos*, de los cuales aprisionaron veinte, y por ellos
+      supieron los soldados, que eran sin número los indios de Barragua ó
+      Airico.»
+    lectura: >-
+      ⭐ El etnónimo achagua de los caquetíos: *Tamudes* (en cursiva, plural
+      castellano). Es la entrada de Antonio de Tapia desde Guayana, por el
+      Vichada, a la serranía de Barragua (al sur del Meta, hacia el Orinoco);
+      en la misma entrada toman «presas de Caquetíos y Achaguas» (p. 27) y se
+      llevan «más de trescientos veinte prisioneros de Achaguas y Caquetíos»
+      (p. 29). ⚠️ Rivero NO glosa *Tamudes* ni lo relaciona con ninguna voz
+      achagua aquí. Ver `cruces.tamude` para lo que el canon hizo con esto.
+
+  - id: riv-cq-10
+    grupo: barragua-airico
+    polity: llanos   # grupo del Airico/Guaviare: ver para_miguel.polity
+    epoca: colonial
+    fecha_del_dato: 'abril de 1723 («en que lo dicho se escribe»)'
+    esfera: geografia_politica
+    etiqueta: atestiguado
+    pagina_impresa: 392
+    pdf: 411
+    verificado_en_imagen: true
+    cita: >-
+      «entraron al río Guaviare, en donde tenían noticia de que vivían algunos
+      indios *Caquetíos* y *Cajuanacenis*, y volvieron el 15 de Abril de 1723
+      con algunos nuevos»
+    lectura: >-
+      Caquetíos «gentiles» en el Guaviare en 1723, la misma región (Airico,
+      al otro lado del Guaviare) donde vivían los achaguas del cacique
+      Irrijirre que Rivero visitó (pp. 418-421). Ni una palabra de su lengua.
+
+# ─── Lo que Rivero NO dice de los caquetíos (regla 6: medido, no supuesto) ──
+no_encontrado:
+  - que: nombre de la lengua caquetía distinto de «Caquetá» (p. 151)
+    medido: las 12 menciones de la raíz leídas en contexto; ninguna otra toca lengua
+  - que: parecido o diferencia entre la lengua de los caquetíos y la achagua
+    medido: >-
+      ni en las 12 menciones ni en las 133 de `lengua`/27 de `idioma` leídas
+      en contexto (6-fusion no guarda el volcado; se regenera con el patrón de
+      meta.ortografia_medida)
+  - que: intérpretes caquetíos, catecismo caquetío nombrado, voces caquetías
+    medido: 0. Los catecismos de hacia 1625 se hicieron «cada cual en el lenguaje de su partido» (riv-cq-04), sin nombrar la lengua
+  - que: caquetíos en el Sinaruco
+    medido: >-
+      0 en las pp. 240-252 (pdf 259-271, las reducciones de Sinareuco, que son
+      de Salivas). Jahn 1927 p. 209 pone «tribus caquetías» junto al río
+      Sinareuco en el mismo párrafo en que cita a Rivero; ese dato no sale de
+      esta edición de Rivero (¿de Gilij?).
+  - que: Manare
+    medido: 0 (`Manar` sólo da «Manarí», pdf 262, nombre de una empresa misional del Orinoco)
