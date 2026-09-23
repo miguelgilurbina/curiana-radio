@@ -736,3 +736,223 @@ hernandez_de_alba_noroeste:
       Histórico Larense n.º 11, 1942 — ver la ficha nueva-segovia-1579) o en
       Antolínez 1943 (Acta Americana vol. 1 n.º 4, 1943). Si está allí, es de
       Barquisimeto y la regla 4 manda marcarlo.
+
+# ══════════════════════════════════════════════════════════════════════
+# §1b. EL VEHÍCULO: EL RESUMEN DE STEWARD (HSAI 4, pp. 21-22, pdf 45-46)
+#
+# Por aquí viaja el capítulo de Hernández de Alba a quien no lee el
+# capítulo: Steward lo condensa en su introducción al volumen, sin citas.
+# ══════════════════════════════════════════════════════════════════════
+steward_resumen_noroeste:
+  autor: "Julian H. Steward (introducción al volumen)"
+  paginas: "21-22 (pdf 45-46)"
+  obra: steward-1948-hsai-4
+  afirmaciones:
+  - id: st-01
+    cita: >-
+      «In religion and political organization the Arawakan Jirajara and
+      Caquetio have certain specific resemblances to the Arawakan Taino of the
+      Antilles.»
+    lectura: >-
+      Es la tesis que las dos campañas del taíno midieron y no sostuvieron
+      («ni vecino ni pariente medible»). Aquí va sin argumento ni cita, y con
+      el mismo error de hda-03 (el jirajara no es arahuaco). Útil sólo como
+      origen posible del lugar común.
+    polity: general
+    etiqueta_maxima: "no usar como dato"
+  - id: st-02
+    cita: >-
+      «The Caquetio chief was accredited with supernatural power to control
+      natural phenomena and plant growth, he was carried in a hammock, and he
+      received special treatment at death. Under the chief were nobles,
+      warriors, and rich men, each forming a special class.»
+    lectura: "repite hda-12, hda-13 y hda-14; lo sostenido está en hda-13 (Ampíes, Aguado)"
+    polity: costera
+  - id: st-03
+    cita: >-
+      «There was some kind of community temple (adoratorio) where offerings were
+      made by shamans to the sun and moon … Human sacrifice was practiced: young
+      girls were beheaded and their blood offered to the sun in order to obtain
+      rain.»
+    lectura: >-
+      ❌ Aquí el dato AXAGUA de Nueva Segovia (hda-21, hda-22) ya aparece como
+      rasgo del noroeste en general, sin nombre de nación. Es el camino por el
+      que un rito ajeno y colonial (1579, «después que poblamos lo hacen … de
+      escondidas») llegaría al vault como caquetío.
+    polity: "axaguas de Nueva Segovia, generalizado"
+    etiqueta_maxima: "no atribuible a los caquetíos"
+
+# ══════════════════════════════════════════════════════════════════════
+# §2. KIRCHHOFF (y Métraux y Kirchhoff): LOS CAQUETÍOS VISTOS DESDE LOS
+#     VECINOS — llanos, Andes y la costa oriental
+# ══════════════════════════════════════════════════════════════════════
+kirchhoff:
+  obra: steward-1948-hsai-4
+  medido: >-
+    El encargo mandaba a Kirchhoff, «Tribes north of the Orinoco» (pp.
+    481-493), por los caquetíos. Ese capítulo NO los nombra (sondas
+    caquet|caiquet|caguet sobre las páginas del PDF: ninguna página entre la
+    pdf 611 y la 734). Donde Kirchhoff habla de caquetíos es en OTROS tres
+    capítulos: los recolectores de los llanos (pp. 463-468), el guayupé
+    (p. 385) y, con Métraux, la extensión nororiental de la cultura andina
+    (pp. 353 y 363). Y «Tribes north of the Orinoco» sí trae algo que toca al
+    proyecto de frente: la CURIANA (k-03).
+
+  afirmaciones:
+
+  - id: k-01
+    capitulo: "The Guamontey, Guamo, Taparita and Ature (en «Food-gathering tribes of the Venezuelan Llanos»)"
+    autor: Paul Kirchhoff
+    pagina_impresa: "464 y 466"
+    cita: >-
+      «Some sources called the Guamo, both in the east and the west, Guaikeri
+      (Guayquiri, Gaiqueri, Guaycari) … (The name Guaikeri occurs also outside
+      of our region as a designation of tribes that live exclusively or largely
+      by fishing.)» · «The westermost Guamo (Federmann's Guaycari) had retained
+      their fishing culture, but their settlements were intermingled with those
+      of the Caquetio, who seem to have been their overlords, and these tribes
+      carried on an active exchange of their respective products.» (p. 464) ·
+      «The western Guamo, who lived in the same territory as that of their
+      Caquetio overlords, though in separate settlements, seem to have had
+      permanent villages.» (p. 466)
+    cita_el_autor: "Federmann 1840 (ed. francesa); Castellanos 1852; Gilij 1780-84"
+    fuente_real: >-
+      Federmann 1916 (en el repo), pp. 89-90: los guaycaríes, «gentes
+      completamente negras», al otro lado del río; «Allí hacen mercado con los
+      Caquetíos, que cambian frutas y otros víveres por pescado, porque es la
+      pesca su única industria y hanse adueñado del río. Viven estas dos
+      naciones en paz en el mismo territorio porque se necesitan mutuamente,
+      pero cada una habita aldeas distintas». Y p. 92: el cacique de Itabana
+      «era también señor de la mayor parte de las aldeas por donde había yo
+      cruzado y le está sujeta una gran parte de la nación Caquetia». El
+      «overlords» es LECTURA de Kirchhoff: Federmann dice paz y necesidad
+      mutua, y que los dueños del río son los guaycaríes.
+    en_repo: {federmann-1916: true, gilij-1780-1783: "ficha en el repo, sin cotejar aquí"}
+    vault: >-
+      Es una respuesta —de 1948 y como hipótesis— a un hueco que el vault tiene
+      declarado: `3-mundo/esfera-de-interaccion.md` §6, «si los guaycaríes eran
+      un grupo distinto o una denominación de otra cosa», y a la rareza de
+      `3-mundo/etnias.yaml` etnia-002 (guayquerí en el Cojedes, «geográficamente
+      rara: los guayqueríes se documentan en Margarita»). Según Kirchhoff,
+      «Guaikeri» era un nombre GENÉRICO para pueblos pescadores, y los
+      guaycaríes de Federmann eran los guamos del oeste, en el Portuguesa,
+      Pao, Cojedes, Guanare y Acarigua.
+    polity: "LLANOS (Cojedes-Portuguesa) — regla 4"
+    epoca: "contacto (1530-1531)"
+    nuevo: >-
+      Sí: (1) «Guaikeri» como designación genérica de pueblos pescadores; (2)
+      la filiación de los guaycaríes de Federmann con los GUAMO, que Kirchhoff
+      emparenta lingüísticamente con el taparita y el otomaco (p. 464); (3) el
+      marco de la relación caquetío-guaycarí como simbiosis de agricultores y
+      pescadores en el mismo territorio y en aldeas separadas, que Federmann
+      sí sostiene.
+    consecuencia_para_el_elenco: >-
+      Los guaycaríes de la era 1 («en la orilla» de la Curiana) no tienen
+      fuente COSTERA: la única atestación es la de Federmann, en los llanos,
+      y el nombre sería el de cualquier pescador. Eso no obliga a nada (son
+      `canon-simulacion`), pero el día que se les busque fuente, la fuente
+      dice llanos y pescadores de río. Lo decide Miguel.
+    etiqueta_maxima: "atestiguado para los llanos (Federmann); la filiación guamo, hipotetico (Kirchhoff)"
+
+  - id: k-02
+    capitulo: "The Guayupé and Sae"
+    autor: Paul Kirchhoff
+    pagina_impresa: 385
+    cita: >-
+      «The Guayupé and Sae had relations with the Caquetio to the north (Speyer
+      came to the Guayupé with a Caquetio interpreter)»
+    cita_el_autor: null
+    fuente_real: "sin cita en la frase; es la entrada de Spira (1535-1538). No se cotejó."
+    en_repo: null
+    vault: "no"
+    polity: "LLANOS del sur (Meta-Guaviare): los caquetíos como intérpretes de la entrada"
+    epoca: contacto
+    nuevo: "el caquetío como lengua de paso hacia el guayupé — hipotetico hasta ver la fuente"
+    etiqueta_maxima: hipotetico
+
+  - id: k-03
+    capitulo: "The tribes north of the Orinoco River"
+    autor: Paul Kirchhoff
+    pagina_impresa: "481, 483, 485-486"
+    cita: >-
+      «All tribes, with the exception of one town on the eastern fringe of the
+      area, Aruacay, probably Arawakan, belong to the Cariban family. …
+      "Provinces" mentioned … are Aruacay, Paria, Cumana, Chiribichi, Piriti,
+      Maracapana, Anoantal, Guacharuco, Paripamotu, and Curiana.» (p. 481) ·
+      «In Curiana at least two kinds of domesticated ducks, or ducklike birds,
+      were known, one of them possibly being the Muscovy duck.» (p. 483) · «The
+      Curiana obtained gold, in exchange for pearls, from a country 6 days'
+      travel to the west, called Cauchieta. … According to Petrus Martyr …
+      however, the Curiana were headhunters» (pp. 485-486)
+    cita_el_autor: "Pedro Mártir (Anghiera 1912), Gómara 1552-53"
+    fuente_real: >-
+      Anglería (en el repo, angleria-1892): el viaje de Niño y Guerra,
+      1499-1500 («curianenses», Cauchieto «hacia el Occidente … seis soles»,
+      vol. 1 p. 310, según la ficha). Gómara no está en el repo.
+    en_repo: {angleria-1892: true, gomara: false}
+    vault: >-
+      El vault tiene abierta la identidad de la Curiana (#33; fichas
+      angleria-1892 y navarrete-1829-viages-menores: Navarrete separa DOS
+      Curianas y pone la de Niño en Cumaná-Cariaco). Kirchhoff 1948 es una
+      tercera voz en el mismo sentido: mete la Curiana de Niño en el bloque
+      CARIBE de la costa oriental, entre Paria y Cabo Codera. No es
+      independiente de Anglería (lo lee a él), pero es la clasificación de
+      referencia de la etnología de 1948.
+    polity: "costa ORIENTAL según Kirchhoff — si #33 no decide que la Curiana de Niño es la de Coro, nada de esto es caquetío"
+    epoca: "contacto (1499-1500)"
+    nuevo: >-
+      Los patos domésticos (quizá el pato real, *Cairina moschata*) y la
+      deformación craneal frontooccipital con cojines de algodón atribuidos a
+      la Curiana — datos que el vault no tiene, y que NO deben entrar a la
+      Kaketiana sin resolver #33.
+    etiqueta_maxima: "hipotetico para la Kaketiana"
+
+  - id: k-04
+    capitulo: "The northeastern extension of Andean culture"
+    autor: "Alfred Métraux y Paul Kirchhoff"
+    pagina_impresa: 353
+    cita: >-
+      «the Chiguará, on the slopes north of Lagunillas; ethnographically
+      unknown but important because of being mentioned in the traditions of the
+      ruling family of the Caquetio of Coro, who claimed to have come from this
+      region; … the Torondoy, like the Chiguará, are mentioned in the traditions
+      of a Caquetio group, far to the northeast, in this case those of Yaracuay»
+    cita_el_autor: null
+    fuente_real: >-
+      Sin cita en la frase. CERO en el repo: sondas chiguar|torondoy|lagunillas
+      en Oviedo y Baños (sólo el río Torondoy y la montaña de Lagunillas de
+      Terepaima, sin relación), Castellanos, Federmann 1916 y Arcaya; y cero en
+      3-mundo/ y 4-fuentes/. Por la materia (Mérida) apunta a fray Pedro Simón
+      o a Aguado, que son fuentes principales del capítulo.
+    en_repo: false
+    vault: "no — es lo más nuevo del volumen para la geografía política de la esfera"
+    polity: "costera (la familia gobernante de Coro) con origen declarado en los Andes de Mérida"
+    epoca: "tradición recogida en el contacto; lo que dice es de antes"
+    nuevo: >-
+      Una tradición de ORIGEN de la casa gobernante de Coro en el Chiguará
+      (vertiente norte de Lagunillas, Mérida), y otra de un grupo caquetío de
+      Yaracuy en el Torondoy. Si se localiza la fuente, alimenta geografía
+      política (de dónde decía venir la casa del Manaure) y creencia.
+    etiqueta_maxima: hipotetico
+    como_verificar: "buscar «Chiguará» en Simón, Noticias historiales (la parte de Mérida), y en Aguado; ninguno está en el repo"
+
+  - id: k-05
+    capitulo: "The northeastern extension of Andean culture"
+    autor: "Alfred Métraux y Paul Kirchhoff"
+    pagina_impresa: 363
+    cita: >-
+      «The Lache, in contrast to all the other tribes of this area and almost
+      certainly through the influence of their neighbors and friends, the
+      Arawakan Caquetio, publicly recognized male homosexuals, whom they married
+      and buried as if they were women.»
+    cita_el_autor: null
+    fuente_real: >-
+      Sin cita; la influencia caquetía es inferencia de los autores («almost
+      certainly»). Los lache están en la sierra del Cocuy: los caquetíos
+      vecinos son los de los LLANOS de Casanare-Apure, no los de Coro.
+    en_repo: null
+    vault: "no"
+    polity: "LLANOS — regla 4"
+    epoca: contacto
+    nuevo: "sí, pero es inferencia sobre los caquetíos llaneros; no para la costa"
+    etiqueta_maxima: hipotetico
